@@ -1,0 +1,75 @@
+---
+title: ベストプラクティス
+seo-title: ベストプラクティス
+description: オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+seo-description: オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
+contentOwner: Chris Bohnert
+products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: page-authoring
+content-type: reference
+discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
+translation-type: tm+mt
+source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+
+---
+
+
+# ベストプラクティス{#best-practices}
+
+オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+
+次の領域について、ベストプラクティスに関するドキュメントが提供されています。
+
+* [アセット](#assets)
+* [サイト](#sites)
+* [フォーム](#forms)
+
+管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
+
+* [ベストプラクティスの管理](/help/sites-administering/administer-best-practices.md)
+* [ベストプラクティスの作成](/help/sites-developing/best-practices.md)
+* [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
+
+以降の表では、特定のドキュメントの説明とリンクを示します。
+
+## アセット {#assets}
+
+ダイナミックメディア機能やダイナミックメディアクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明します。
+
+<table>
+ <tbody>
+  <tr>
+   <td>ファイル形式</td>
+   <td><a href="/help/assets/assets-file-format-best-practices.md">Assets のファイル形式に関するベストプラクティス</a></td>
+   <td>AEM Assets でサポートするファイル形式に関するベストプラクティスについて説明しています。</td>
+  </tr>
+  <tr>
+   <td>ビデオエンコーディング</td>
+   <td><a href="/help/assets/video.md#best-practices-for-encoding-videos">エンコーディングのベストプラクティス</a></td>
+   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを示します。</td>
+  </tr>
+  <tr>
+   <td>ダイナミックイメージング</td>
+   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td>
+   <td><p>ダイナミックメディア機能を使用している場合や、Dynamic Media Classicと統合している場合に、最良の結果を得るために画像にシャープを適用する方法と、画像の品質を最適化する最適な方法について説明します。 </p> </td>
+  </tr>
+  <tr>
+   <td>多言語のアセット</td>
+   <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻訳のベストプラクティス</a></td>
+   <td>AEM のアセットの効率的な翻訳に関するベストプラクティスを示します。</td>
+  </tr>
+ </tbody>
+</table>
+
+## Sites {#sites}
+
+Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
+
+オーサリング：作成者 [環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
+
+## Forms {#forms}
+
+アダプティブフォーム：アダプテ [ィブフォームを使用するためのベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスを説明します。
+
+HTML5フォーム：HTML5フォ [ームデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作するためのベストプラクティスを説明します。
