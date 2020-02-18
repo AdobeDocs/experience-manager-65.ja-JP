@@ -1,0 +1,305 @@
+---
+title: 翻訳プロジェクトの作成
+description: AEM で翻訳プロジェクトを作成する方法を学習します。
+contentOwner: AG
+translation-type: tm+mt
+source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+
+---
+
+
+# 翻訳プロジェクトの作成 {#creating-translation-projects}
+
+言語コピーを作成するには、AEMユーザーインターフェイスの参照レールで使用できる次の言語コピーワークフローのいずれかを実行します。
+
+* **作成と翻訳**:このワークフローでは、翻訳対象のアセットが、翻訳先の言語の言語ルートにコピーされます。 また、選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
+
+* **言語コピーの更新**:このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。 この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
+
+>[!NOTE]
+>
+>アセットバイナリは、翻訳サービスプロバイダーがバイナリの翻訳をサポートしている場合にのみ翻訳されます。
+
+>[!NOTE]
+>
+>PDFファイルやInDesignファイルなど、複雑なアセットに対して翻訳ワークフローを起動した場合、そのサブアセットやレンディション（存在する場合）は翻訳用に送信されません。
+
+## 作成と翻訳ワークフロー {#create-and-translate-workflow}
+
+作成と翻訳のワークフローを使用して、特定の言語の言語コピーを初めて生成します。 ワークフローには次のオプションがあります。
+
+* 構造のみを作成
+* 新しい翻訳プロジェクトを作成
+* 既存の翻訳プロジェクトに追加
+
+### 構造のみを作成 {#create-structure-only}
+
+Use the **[!UICONTROL Create structure only]** option to create a target folder hierarchy within the target language root to match the hierarchy of the source folder within the source language root. この場合、ソースアセットが宛先フォルダーにコピーされます。ただし、翻訳プロジェクトは生成されません。
+
+1. Assets UI で、ターゲット言語ルート内に構造を作成するソースフォルダーを選択します。
+1. **[!UICONTROL 参照]**&#x200B;パネルを開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップします。
+
+   ![chlimage_1-57](assets/chlimage_1-57.png)
+
+1. Click/tap **[!UICONTROL Create &amp; Translate]** at the bottom.
+
+   ![chlimage_1-58](assets/chlimage_1-58.png)
+
+1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
+
+   ![chlimage_1-59](assets/chlimage_1-59.png)
+
+1. From the **[!UICONTROL Project]** list, choose **[!UICONTROL Create structure only]**.
+
+   ![chlimage_1-60](assets/chlimage_1-60.png)
+
+1. 「**[!UICONTROL 作成]**」をクリックまたはタップします。The new structure for the target language is listed under **[!UICONTROL Language Copies]**.
+
+   ![chlimage_1-61](assets/chlimage_1-61.png)
+
+1. このリストで構造をクリックまたはタップしてから、「**[!UICONTROL アセットで表示]**」をクリックまたはタップしてターゲット言語内のフォルダー構造に移動します。
+
+   ![chlimage_1-62](assets/chlimage_1-62.png)
+
+### 新しい翻訳プロジェクトを作成 {#create-a-new-translation-project}
+
+このオプションを使用すると、翻訳されるアセットは、翻訳先言語の言語ルートにコピーされます。選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
+
+1. Assets UI で、言語コピーを作成しようとするソースフォルダーを選択します。
+1. **[!UICONTROL 参照]**&#x200B;パネルを開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップします。
+
+   ![chlimage_1-63](assets/chlimage_1-63.png)
+
+1. Click/tap **[!UICONTROL Create &amp; Translate]** at the bottom.
+
+   ![chlimage_1-64](assets/chlimage_1-64.png)
+
+1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
+
+   ![chlimage_1-65](assets/chlimage_1-65.png)
+
+1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 新しい翻訳プロジェクトを作成]**」を選択します。
+
+   ![chlimage_1-66](assets/chlimage_1-66.png)
+
+1. 「**[!UICONTROL プロジェクトタイトル]**」フィールドに、プロジェクトのタイトルを入力します。
+
+   ![chlimage_1-67](assets/chlimage_1-67.png)
+
+1. 「**[!UICONTROL 作成]**」をクリックまたはタップします。ソースフォルダーのアセットが、手順 4 で選択したロケールのターゲットフォルダーにコピーされます。
+
+   ![chlimage_1-68](assets/chlimage_1-68.png)
+
+1. そのフォルダーに移動するには、言語コピーを選択してから「**[!UICONTROL アセットで表示]**」をクリックします。
+
+   ![chlimage_1-69](assets/chlimage_1-69.png)
+
+1. プロジェクトコンソールに移動します。翻訳フォルダーはプロジェクトコンソールにコピーされます。
+
+   ![chlimage_1-70](assets/chlimage_1-70.png)
+
+1. フォルダーを開くと翻訳プロジェクトが表示されます。
+
+   ![chlimage_1-71](assets/chlimage_1-71.png)
+
+1. プロジェクトをクリックまたはタップして詳細ページを開きます。
+
+   ![chlimage_1-72](assets/chlimage_1-72.png)
+
+1. 翻訳ジョブのステータスを表示するには、「**[!UICONTROL 翻訳ジョブ]**」タイルの一番下にある省略記号をクリックします。
+
+   ![chlimage_1-73](assets/chlimage_1-73.png)
+
+   ジョブステータスの詳細については、[翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
+
+1. Assets UI に移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
+
+   ![chlimage_1-74](assets/chlimage_1-74.png)
+
+   >[!NOTE]
+   >
+   >この機能は、アセットに対してもフォルダーに対しても使用できます。フォルダーではなくアセットを選択すると、言語ルートまでのフォルダーの全階層がコピーされて、アセットの言語コピーが作成されます。
+
+### 既存の翻訳プロジェクトに追加 {#add-to-existing-translation-project}
+
+このオプションを使用すると、前の翻訳ワークフローの実行後にユーザーがソースフォルダーに追加したアセットに対して、翻訳ワークフローが実行されます。新しく追加されたアセットのみが、既に翻訳済みのアセットを含むターゲットフォルダーにコピーされます。この場合、新しい翻訳プロジェクトは作成されません。
+
+1. Assets UI で、翻訳されていないアセットを含むソースフォルダーに移動します。
+1. Select an asset you want to translate, and open the **[!UICONTROL Reference pane]**. The **[!UICONTROL Language Copies]** section displays the number of translation copies that are currently available.
+1. Click/tap **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 使用可能な翻訳コピーのリストが表示されます。
+1. Click/tap **[!UICONTROL Create &amp; Translate]** at the bottom.
+
+   ![chlimage_1-75](assets/chlimage_1-75.png)
+
+1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
+
+   ![chlimage_1-76](assets/chlimage_1-76.png)
+
+1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択して、翻訳ワークフローをフォルダーに対して実行します。
+
+   ![chlimage_1-77](assets/chlimage_1-77.png)
+
+   >[!NOTE]
+   >
+   >「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」オプションを選択すると、プロジェクトの設定が既存のプロジェクトの設定と完全に一致する場合にのみ、翻訳プロジェクトが既存のプロジェクトに追加されます。それ以外の場合は、新しいプロジェクトが作成されます。
+
+1. 「**[!UICONTROL 既存の翻訳プロジェクト]**」リストで、翻訳のためのアセットを追加するプロジェクトを選択します。
+
+   ![chlimage_1-78](assets/chlimage_1-78.png)
+
+1. 「**[!UICONTROL 作成]**」をクリックまたはタップします。翻訳されるアセットがターゲットフォルダーに追加されます。更新されたフォルダーが、「**[!UICONTROL 言語コピー]**」セクションに表示されます。
+
+   ![chlimage_1-79](assets/chlimage_1-79.png)
+
+1. プロジェクトコンソールに移動し、追加先の既存の翻訳プロジェクトを開きます。
+1. 翻訳プロジェクトをクリックまたはタップして、プロジェクトの詳細ページを表示します。
+
+   ![chlimage_1-80](assets/chlimage_1-80.png)
+
+1. Click/tap the ellipsis at the bottom of the **Translation Job** tile to view the assets in the translation workflow. 翻訳ジョブリストには、アセットのメタデータとタグのエントリも表示されます。これらのエントリは、アセットのメタデータとタグも翻訳されることを意味します。
+
+   >[!NOTE]
+   >
+   >タグまたはメタデータのエントリを削除した場合は、どのアセットのタグまたはメタデータも翻訳されません。
+
+   >[!NOTE]
+   >
+   >機械翻訳を使用する場合は、アセットのバイナリは翻訳されません。
+
+   >[!NOTE]
+   >
+   >翻訳ジョブに追加したアセットがサブアセットを含んでいる場合は、問題を避けるために、サブアセットを選択して翻訳から除外してください。
+
+1. To start the translation for the assets, click/tap the arrow on the **[!UICONTROL Translation Job]** tile and select **[!UICONTROL Start]** from the list.
+
+   ![chlimage_1-81](assets/chlimage_1-81.png)
+
+   翻訳ジョブの開始を通知するメッセージが表示されます。
+
+   ![chlimage_1-82](assets/chlimage_1-82.png)
+
+1. 翻訳ジョブのステータスを表示するには、「**[!UICONTROL 翻訳ジョブ]**」タイルの一番下の省略記号をクリックまたはタップします。
+
+   ![chlimage_1-83](assets/chlimage_1-83.png)
+
+   For more details, see [Monitoring the Status of a Translation Job](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
+
+1. 翻訳が完了すると、ステータスが「レビューへの準備完了」に変更されます。Assets UI に移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
+
+## 言語コピーを更新 {#update-language-copies}
+
+このワークフローを実行すると、追加のアセットのセットが翻訳され、特定のロケールの言語コピーに含められます。この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。オプションの選択に応じて、翻訳プロジェクトが作成されるか、既存の翻訳プロジェクトが新しいアセットを含むように更新されます。「言語コピーを更新」ワークフローには次のオプションがあります。
+
+* 新しい翻訳プロジェクトを作成
+* 既存の翻訳プロジェクトに追加
+
+### 新しい翻訳プロジェクトを作成 {#create-a-new-translation-project-1}
+
+このオプションを使用すると、言語コピーを更新するアセットのセットに対して翻訳プロジェクトが作成されます。
+
+1. Assets UI で、アセットを追加したソースフォルダーを選択します。
+1. Open the **[!UICONTROL References]** pane, and click/tap **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
+1. 「**[!UICONTROL 言語コピー]**」の前のチェックボックスを選択し、適切なロケールに対応するターゲットフォルダーを選択します。
+
+   ![chlimage_1-84](assets/chlimage_1-84.png)
+
+1. 下部の「**[!UICONTROL 言語コピーを更新]**」をクリックまたはタップします。
+
+   ![chlimage_1-85](assets/chlimage_1-85.png)
+
+1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 新しい翻訳プロジェクトを作成]**」を選択します。
+
+   ![chlimage_1-86](assets/chlimage_1-86.png)
+
+1. 「**[!UICONTROL プロジェクトタイトル]**」フィールドに、プロジェクトのタイトルを入力します。
+
+   ![chlimage_1-87](assets/chlimage_1-87.png)
+
+1. 「**[!UICONTROL 開始]**」をクリックまたはタップします。
+1. プロジェクトコンソールに移動します。翻訳フォルダーはプロジェクトコンソールにコピーされます。
+
+   ![chlimage_1-88](assets/chlimage_1-88.png)
+
+1. フォルダーを開くと翻訳プロジェクトが表示されます。
+
+   ![chlimage_1-89](assets/chlimage_1-89.png)
+
+1. プロジェクトをクリックまたはタップして詳細ページを開きます。
+
+   ![chlimage_1-90](assets/chlimage_1-90.png)
+
+1. アセットの翻訳を開始するには、「**[!UICONTROL 翻訳ジョブ]**」タイルの矢印をクリックし、リストから「**[!UICONTROL 開始]**」を選択します。
+
+   ![chlimage_1-91](assets/chlimage_1-91.png)
+
+   翻訳ジョブの開始を通知するメッセージが表示されます。
+
+   ![chlimage_1-92](assets/chlimage_1-92.png)
+
+1. 翻訳ジョブのステータスを表示するには、「**[!UICONTROL 翻訳ジョブ]**」タイルの一番下の省略記号をクリックまたはタップします。
+
+   ![chlimage_1-93](assets/chlimage_1-93.png)
+
+   ジョブステータスの詳細については、[翻訳ジョブのステータスの監視](../sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
+
+1. Assets UI に移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
+
+### 既存の翻訳プロジェクトに追加 {#add-to-existing-translation-project-1}
+
+このオプションを使用すると、アセットのセットが既存の翻訳プロジェクトに追加され、選択したロケールの言語コピーが更新されます。
+
+1. Assets UI で、アセットフォルダーを追加したソースフォルダーを選択します。
+1. Open the **[!UICONTROL References pane]**, and click/tap **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
+
+   ![chlimage_1-94](assets/chlimage_1-94.png)
+
+1. Select the check box before **[!UICONTROL Language Copies]**, which selects all language copies. 翻訳先のロケールに対応する言語コピーを除き、他のコピーの選択を解除します。
+
+   ![chlimage_1-95](assets/chlimage_1-95.png)
+
+1. 下部の「**[!UICONTROL 言語コピーを更新]**」をクリックまたはタップします。
+
+   ![chlimage_1-96](assets/chlimage_1-96.png)
+
+1. From the **[!UICONTROL Project]** list, choose **[!UICONTROL Add to existing translation project]**.
+
+   ![chlimage_1-97](assets/chlimage_1-97.png)
+
+1. 「**[!UICONTROL 既存の翻訳プロジェクト]**」リストで、翻訳のためのアセットを追加するプロジェクトを選択します。
+
+   ![chlimage_1-98](assets/chlimage_1-98.png)
+
+1. 「**[!UICONTROL 開始]**」をクリックまたはタップします。
+1. See steps 9-14 of [Add to existing translation project](translation-projects.md#add-to-existing-translation-project) to complete the rest of the procedure.
+
+## 一時言語コピーの作成 {#creating-temporary-language-copies}
+
+翻訳ワークフローを実行して、元のアセットを編集したバージョンで言語コピーを更新するとき、翻訳済みアセットをユーザーが承認するまで、既存の言語コピーが維持されます。AEM Assets は、新たに翻訳されたアセットを一時的な場所に格納しておき、ユーザーがアセットを明示的に承認した後で既存の言語コピーを更新します。ユーザーがアセットを承認しないと、言語コピーは変更されません。
+
+1. Click/tap the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click/tap **[!UICONTROL Reveal in Assets]** to open the folder in AEM Assets.
+
+   ![chlimage_1-99](assets/chlimage_1-99.png)
+
+1. Assets UI で、既に翻訳したアセットを選択し、ツールバーの「**[!UICONTROL 編集]**」アイコンをクリックまたはタップしてアセットを編集モードで開きます。
+1. アセットを編集して、変更内容を保存します。
+1. Perform steps 2-14 of the [Add to existing translation project](#add-to-existing-translation-project) procedure to update the language copy.
+1. Click/tap the ellipsis at the bottom of the **[!UICONTROL Translation Job]** tile. **[!UICONTROL 翻訳ジョブ]**&#x200B;ページのアセットのリストで、翻訳済みバージョンのアセットが格納されている一時的な場所を確認できます。
+
+   ![chlimage_1-101](assets/chlimage_1-101.png)
+
+1. 「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにします。
+1. From the toolbar, click/tap **[!UICONTROL Accept Translation]** and then click/tap **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
+
+   ![chlimage_1-102](assets/chlimage_1-102.png)
+
+   >[!NOTE]
+   >
+   >翻訳ワークフローが対象のアセットを更新できるようにするには、アセットとメタデータの両方を承認します。
+
+   Click/tap **[!UICONTROL Reject Translation]** to retain the originally translated version of the asset in the target locale root and reject the edited version.
+
+   ![chlimage_1-103](assets/chlimage_1-103.png)
+
+1. Assets コンソールに移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
+
+For tips on translating metadata for assets efficiently, see [5 Steps for Efficiently Translating Metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
