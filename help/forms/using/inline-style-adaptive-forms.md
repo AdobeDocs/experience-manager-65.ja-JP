@@ -9,12 +9,12 @@ topic-tags: author
 discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
 
-# アダプティブフォームコンポーネントのインラインスタイリング{#inline-styling-of-adaptive-form-components}
+# アダプティブフォームコンポーネントのインラインスタイリング {#inline-styling-of-adaptive-form-components}
 
 アダプティブフォームの全体的な外観とスタイルは、[テーマエディター](../../forms/using/themes.md)でスタイルを指定することによって定義できます。また、アダプティブフォームの個々のコンポーネントにインライン CSS スタイルを適用し、即座に変更をプレビューすることもできます。インラインスタイルは、テーマで提供されているスタイル設定よりも優先されます。
 
