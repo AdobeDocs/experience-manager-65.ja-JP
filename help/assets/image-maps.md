@@ -3,7 +3,7 @@ title: デジタル画像へのハイパーリンクを含む画像マップの�
 description: ハイパーリンクを含む画像マップを画像に追加する方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: e547dde53011003a2db4814916c3e923da947cce
 
 ---
 
