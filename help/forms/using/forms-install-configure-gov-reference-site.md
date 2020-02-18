@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93f3696242c681a019c2252364fe7cee510cb933
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
@@ -312,11 +312,15 @@ AEM Forms We.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip **
 
 **参照:**
 
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html)
+* [Adobe Analytics との統合](../../sites-administering/adobeanalytics.md)
+
+* [Adobe Analytics への接続とフレームワークの作成](../../sites-administering/adobeanalytics-connect.md)
+
+* [ページ分析データの表示](../../sites-authoring/pa-using.md)
+
+* [Analytics とレポートの設定](configure-analytics-forms-documents.md)
+
+* [AEM Forms の分析レポートの確認方法と詳細](view-understand-aem-forms-analytics-reports.md)
 
 ### Adobe Analytics cloud service configuration {#adobe-analytics-cloud-service-configuration}
 
@@ -432,7 +436,7 @@ AEM Forms We.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip **
 
 このパッケージに含まれるテンプレートは、次のスタイルシステムもサポートします。
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[スタイルシステム](../../sites-authoring/style-system.md)
 
 #### テンプレートロゴ {#template-logos}
 
@@ -446,7 +450,7 @@ AEM Forms We.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip **
 
 詳しくは、「ページコンテンツの編集」を参照してください。
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32)
+[ページのコンテンツの編集](../../sites-authoring/editing-content.md)
 
 ### サイトページのカスタマイズ {#sites-pages-customization}
 
@@ -458,7 +462,7 @@ AEM Forms We.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip **
 
 このパッケージに含まれるページは、次のスタイルシステムもサポートします。
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[スタイルシステム](../../sites-authoring/style-system.md)
 
 また、サポートされているスタイルに関するドキ [ュメントについては](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 、「Templates customization style system」を参照してください。
 
@@ -480,8 +484,8 @@ AEM Forms We.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip **
 
 アダプティブフォームは、スタイルエディターまたはテーマエディターを使用してスタイルを設定することもできます。
 
-* [https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html)
-* [https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html](https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html)
+* [アダプティブフォームコンポーネントのインラインスタイリング](inline-style-adaptive-forms.md)
+* [テーマを作成して使用する](themes.md)
 
 ### ワークフローのカスタマイズ {#workflow-customization}
 
