@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd0b8e1605f6d8f6cc04a4173731351df002a67d
+source-git-commit: 37d0225f69800225e82f253ad9dbab8b2b30ac5e
 
 ---
 
@@ -163,6 +163,8 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * アセットのジョブの詳細をポーリング中に、AEMに例外が表示されます(CQ-4283569)。
 
+* DAMのXSS脆弱性(NPR-31654)。
+
 #### Sites {#sites}
 
 * LiveCopyの継承が壊れている場合、ライブコピーページには、LiveCopyリンクの代わりに言語コピーリンクが表示されます(NPR-30980)。
@@ -175,6 +177,9 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 * ResponsiveGridExporter APIは、com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporterインターフェイスを返しません。 com.day.cq.wcm.foundation.model.implパッケージがプライベートパッケージとして宣言されています(NPR-31398)。
 * 一部のExperienceFragmentsを含むページがエディター以外のモードで（プレフィックスが付いていない作成者で、または発行者で）開かれると、要求はHTTPステータスエラーコード500(NPR-30743)で終了します。 `editor.html``wcmmode=disabled`
 * ユーザーはパスワードを変更したり、自分のプロファイルページにアクセスしたりできません(NPR-31161)。
+* ユーザデータを含むJavaScriptファイルがサーバ側で生成される(NPR-30822)。
+* AEMオーサリングUIでは、外部コンテンツ(NPR-29745)を使用したフィッシングが可能です。
+* AEM 6.5メタデータエディター(NPR-31017)のエクスプレッション言語注入脆弱性。
 
 #### 検索とユーザーインターフェイス {#search-ui-interface}
 
