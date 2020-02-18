@@ -185,7 +185,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
 1. Navigate to **[!UICONTROL Tools > Workflow > Models]**. 「アクテ **[!UICONTROL ィベーションのリクエスト]**」を選択し、「編集」を **[!UICONTROL 選択します]**。
 
-1. 「 **[!UICONTROL Edit]**」を選択し、 **[!UICONTROL Page Information]** （ページ情報）メニューを開き、「 **[ICONTROL Open Properties]** 」を選択して「Basic Unitation（まだ開いていない場合）」 **** タブに移動します。
+1. 「編集 **[!UICONTROL 」を選択し]**、ページ情報メニューを開き、「プロパ **[!UICONTROL ティを開く]** 」を選択して「基本」タブに移動します(まだ開いてい ******** ない場合)。
 
 1. 「タグ」フ `Workflow : DAM` ィー **[!UICONTROL ルドに追加]** 。 チェックマークを付けて選択を確定します。
 
