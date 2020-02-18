@@ -10,12 +10,12 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 617e42c6a9ca2e27f64b24073948e8accd1f5d1f
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
 
-# テーマを作成して使用する{#creating-and-using-themes}
+# テーマを作成して使用する {#creating-and-using-themes}
 
 ## 概要 {#introduction}
 
