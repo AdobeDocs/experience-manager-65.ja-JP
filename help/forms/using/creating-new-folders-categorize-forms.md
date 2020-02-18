@@ -1,0 +1,55 @@
+---
+title: フォームを分類するための新しいフォルダーの作成
+seo-title: フォームを分類するための新しいフォルダーの作成
+description: フォルダーを使用して、フォームテンプレート、PDF、リソース、およびアダプティブフォームを整理します。
+seo-description: フォルダーを使用して、フォームテンプレート、PDF、リソース、およびアダプティブフォームを整理します。
+uuid: 63fcb807-c9cf-49ae-ad69-6b1187543470
+content-type: reference
+products: SG_EXPERIENCEMANAGER/6.5/FORMS
+topic-tags: forms-manager
+discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
+translation-type: tm+mt
+source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+
+---
+
+
+# フォームを分類するための新しいフォルダーの作成 {#create-new-folders-to-categorize-forms}
+
+フォルダーを使用することでアセットをより良く整理できます。AEM Forms はさまざまなタイプのアセット（フォームテンプレート、PDF、ドキュメント、リソース、およびアダプティブフォームと、さまざまなメタデータ）をサポートしているので、フォルダーを使用して必要な条件に基づきフォームを分類できます。
+
+AEM Forms では、フォルダーのタイトルを変更できます。タイトルは、フォルダーがリポジトリ内で保存されるノードの名前と同じではありません。タイトルはフォルダーのメタデータとして保持されます。フォルダーのタイトルを変更しても、フォルダー内にあるアセットのパスは影響されません。
+
+## フォルダーの作成 {#create-a-folder}
+
+次のいずれかの方法で、AEM Forms でフォルダーを作成できます。
+
+* アセットを含む ZIP ファイルを必要なフォルダー構造にアップロードする（[AEM Forms での XDP および PDF ドキュメントの取得](/help/forms/using/get-xdp-pdf-documents-aem.md)を参照）
+
+* 新しい空白フォルダーを作成する
+
+1. Log in to the AEM Forms user interface at `https://<server>:<port>/aem/forms.html`.
+1. フォルダーを作成する場所に移動します。
+1. Click the ![aem6forms_add](assets/aem6forms_add.png) icon in the toolbar and then select **[!UICONTROL Create Folder]**.
+
+1. 次の詳細を入力します。
+
+   * **** タイトル：フォルダの表示名
+   * **名前：***（必須）*&#x200B;リポジトリ内のフォルダーを保存するノード名
+   >[!NOTE]
+   >
+   >デフォルトでは、nameフィールドの値はタイトルから自動的に入力されます。 名前には、英数字、ハイフン（-）、下線（_）のみを含めることができます。タイトルにその他の特殊文字を入力すると、それらは自動的にハイフンに置換され、この新しい名前を確認するよう指示されます。提示された名前をそのまま使用するか、あるいはそれを編集することができます。
+
+1. 「**[!UICONTROL 送信]」をクリックします。**
+
+   定義したタイトルを持つ新しいフォルダーは、アセットリスト内の現在の場所に表示されます。
+
+   指定した名前を持つフォルダーがすでに存在する場合は、送信はエラーになり失敗します。You can view the error message by hovering over the error ![aem6forms_error_alert](assets/aem6forms_error_alert.png) icon that appears beside the name field.
+
+### フォルダータイトルの編集 {#edit-the-folder-title-br}
+
+1. タイトルを編集するフォルダーを選択します。
+1. ツールバー ![のaem6forms_edit](assets/aem6forms_edit.png) アイコンをクリックします。
+1. 新しいタイトルを入力します。テキストフィールドは、フォルダータイトルの現在の値で自動入力されます。それを新しい値に変更できます。
+1. 「**[!UICONTROL 送信]」をクリックします。**
+
