@@ -1,0 +1,164 @@
+---
+title: プロジェクトの管理
+seo-title: プロジェクトの管理
+description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにし、プロジェクトを整理できます
+seo-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにし、プロジェクトを整理できます
+uuid: ac937582-181f-429b-9404-3c71d1241495
+contentOwner: Guillaume Carlino
+products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: projects
+content-type: reference
+discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
+translation-type: tm+mt
+source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+
+---
+
+
+# プロジェクトの管理{#managing-projects}
+
+プロジェクトを使用すると、リソースを 1 つのエンティティにグループ化して整理できます。
+
+**プロジェクト**&#x200B;コンソールで、プロジェクトにアクセスし、アクションを実行することができます。
+
+![chlimage_1-255](assets/chlimage_1-255.png)
+
+プロジェクトコンソールでは、プロジェクトを作成し、リソースとプロジェクトを関連付け、プロジェクトまたはリソースリンクを削除することもできます。タイルを開いてその内容を表示したり、アイテムをタイルに追加したりできます。このトピックで詳しい手順を説明します。
+
+>[!NOTE]
+>
+>AEM 6.2 では、プロジェクトをフォルダーに整理する機能が導入されました。プロジェクトページで、プロジェクトまたはフォルダーを作成できます。
+>
+>フォルダーを作成した場合は、そのフォルダー内に別のフォルダーまたはプロジェクトを作成できます。この機能を使用して、製品キャンペーン、場所、翻訳言語などのカテゴリに基づいてプロジェクトをフォルダーに整理できます。
+>
+>プロジェクトとフォルダーは、リスト形式で表示することも、検索することもできます。
+
+>[!CAUTION]
+>
+>For users in projects to see other users/groups while using Projects functionality like creating projects, creating tasks/workflows, seeing and managing the team, those users need to have read access on **/home/users** and **/home/groups**. The easiest way to implement this is to give the **projects-users** group read access to **/home/users** and **/home/groups**.
+
+## プロジェクトの作成 {#creating-a-project}
+
+AEM には次の既製のテンプレートが用意されていて、プロジェクトの作成時に選択できます。
+
+* シンプルなプロジェクト
+* メディアプロジェクト
+* 製品撮影プロジェクト
+* 翻訳プロジェクト
+
+プロジェクトの作成手順は、どのプロジェクトでも同じです。プロジェクトのタイプによって異なるものとしては、使用可能な[ユーザーの役割](/help/sites-authoring/projects.md)と[ワークフロー](/help/sites-authoring/projects-with-workflows.md)があります。新しいプロジェクトを作成するには：
+
+1. **プロジェクト**&#x200B;で「**作成**」をタップまたはクリックして「**プロジェクトを作成**」ウィザードを開きます。
+1. テンプレートを選択します。Out of the box, Simple Project, Media Project, [Translation Project](/help/sites-administering/tc-manage.md), and [Product Photo Shoot Product](/help/sites-authoring/managing-product-information.md) are available and click **Next**.
+
+   ![chlimage_1-256](assets/chlimage_1-256.png)
+
+1. Define the **Title** and **Description** and add a **Thumbnail** image if required. ユーザーおよびユーザーが属するグループを追加または削除することもできます。さらに、「**詳細**」をクリックして、URL で使用する名前を追加します。
+
+   ![chlimage_1-257](assets/chlimage_1-257.png)
+
+1. 「**作成**」をタップまたはクリックします。新しいプロジェクトを開くか、コンソールに戻るかを確認するメッセージが表示されます。
+
+### リソースとプロジェクトの関連付け {#associating-resources-with-your-project}
+
+プロジェクトではリソースを 1 つのエンティティにグループ化できるので、リソースをプロジェクトに関連付けできます。これらのリソースは「**タイル**」と呼ばれます。追加できるリソースのタイプについては、[プロジェクトタイル](/help/sites-authoring/projects.md#project-tiles)で説明します。
+
+リソースとプロジェクトを関連付けるには：
+
+1. **プロジェクト**&#x200B;コンソールからプロジェクトを開きます。
+1. 「**タイルを追加**」をタップまたはクリックして、プロジェクトにリンクするタイルを選択します。複数のタイプのタイルを選択できます。
+
+   ![chlimage_1-258](assets/chlimage_1-258.png)
+
+   >[!NOTE]
+   >
+   >プロジェクトに関連付けることができるプロジェクトタイルの詳細については、[プロジェクトタイル](/help/sites-authoring/projects.md#project-tiles)で説明します。
+
+1. 「**作成**」をタップまたはクリックします。リソースはプロジェクトにリンクされ、今後はプロジェクトからアクセスできます。
+
+### プロジェクトまたはリソースリンクの削除 {#deleting-a-project-or-resource-link}
+
+同じ方法を使用して、プロジェクトをコンソールから削除したり、リンクされたリソースをプロジェクトから削除したりすることができます。
+
+1. 該当する場所に移動します。
+
+   * プロジェクトを削除するには、**プロジェクト**&#x200B;コンソールの最上位レベルに移動します。
+   * プロジェクト内のリソースリンクを削除するには、**プロジェクト**&#x200B;コンソールでプロジェクトを開きます。
+
+1. 「**選択**」をクリックし、プロジェクトまたはリソースリンクを選択して、選択モードに入ります。
+1. 「**削除**」をタップまたはクリックします。
+
+1. 削除を確定するかどうかを確認するダイアログが表示されます。確定すると、プロジェクトまたはリソースリンクが削除されます。「**選択を解除**」をタップまたはクリックし、選択モードを終了します。
+
+>[!NOTE]
+>
+>プロジェクトを作成してユーザーを各種役割に追加すると、関連する権限を管理するために、プロジェクトに関連付けられたグループが自動的に作成されます。例えば、Myproject というプロジェクトには **Myproject Owners**、**Myproject Editors**、**Myproject Observers** という 3 つのグループがあります。ただし、プロジェクトを削除しても、これらのグループは自動的には削除されません。**ツール**／**セキュリティ**／**グループ**&#x200B;で、管理者が手動でグループを削除する必要があります。
+
+### タイルへの項目の追加 {#adding-items-to-a-tile}
+
+タイルによっては、複数の項目を追加できます。例えば、一度に複数のワークフローを実行したり、複数のエクスペリエンスを持ったりすることができます。
+
+タイルに項目を追加するには：
+
+1. In **Projects**, navigate to the project and click the Add + icon on the tile you want to add an item to.
+
+   ![chlimage_1-259](assets/chlimage_1-259.png)
+
+1. 新しいタイルの作成時と同様にして、タイルに項目を追加します。プロジェクトタイルについては、[こちら](/help/sites-authoring/projects.md#project-tiles)で説明します。この例では、別のワークフローが 1 つ追加されました。
+
+   ![chlimage_1-260](assets/chlimage_1-260.png)
+
+### タイルを開く {#opening-a-tile}
+
+現在のタイルにどのような項目が含まれているかを表示したり、タイル内の項目を変更または削除したりできます。
+
+項目を表示または変更するためにタイルを開くには：
+
+1. プロジェクトコンソールで、省略記号（...）をタップまたはクリックします。
+
+   ![chlimage_1-261](assets/chlimage_1-261.png)
+
+1. そのタイル内の項目が表示されます。選択モードに入って、項目を変更または削除できます。
+
+   ![chlimage_1-262](assets/chlimage_1-262.png)
+
+## プロジェクト統計の表示 {#viewing-project-statistics}
+
+プロジェクト統計を表示するには、**プロジェクト**&#x200B;コンソールで「**統計ビューを表示**」をクリックします。各プロジェクトの完了レベルが表示されます。Click **Show Statistics View** again to go to the **Projects** console.
+
+![chlimage_1-263](assets/chlimage_1-263.png)
+
+### プロジェクトタイムラインの表示 {#viewing-a-project-timeline}
+
+プロジェクトタイムラインは、プロジェクト内のアセットが最後にいつ使用されたかを示します。To view the project timeline, click/tap **Timeline**, then enter selection mode and select the project. アセットが左パネルに表示されます。Click/tap **Timeline** to return to the **Projects** console.
+
+![chlimage_1-264](assets/chlimage_1-264.png)
+
+### アクティブ／非アクティブなプロジェクトの表示 {#viewing-active-inactive-projects}
+
+To toggle between your active and inactive projects, in the **Projects** console, click **Toggle Active Projects**. アイコンの横にチェックマークがある場合は、アクティブなプロジェクトが表示されています。
+
+![chlimage_1-265](assets/chlimage_1-265.png)
+
+アイコンの横に「x」がある場合は、非アクティブなプロジェクトが表示されています。
+
+![chlimage_1-266](assets/chlimage_1-266.png)
+
+## プロジェクトの非アクティブ化またはアクティブ化 {#making-projects-inactive-or-active}
+
+プロジェクトが完了しても、そのプロジェクトに関する情報をまだ保持する必要がある場合は、プロジェクトを非アクティブにすることができます。
+
+プロジェクトを非アクティブ（またはアクティブ）にするには：
+
+1. **プロジェクト**&#x200B;コンソールで、プロジェクトを開き、**プロジェクト情報**&#x200B;タイルを探します。
+
+   >[!NOTE]
+   このタイルがプロジェクトにまだない場合は、追加する必要があります。[タイルの追加](#adding-items-to-a-tile)を参照してください。
+
+1. 「**編集**」をタップまたはクリックします。
+1. セレクターを「**アクティブ**」から「**非アクティブ**」（またはその逆）に変更します。
+
+   ![chlimage_1-267](assets/chlimage_1-267.png)
+
+1. 「**完了**」をタップまたはクリックして、変更内容を保存します。
+
