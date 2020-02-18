@@ -1,0 +1,80 @@
+---
+title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
+seo-title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
+description: AEM 翻訳ワークフローを使用してアダプティブフォームとレコードのドキュメントをローカライズする方法について説明します。
+seo-description: AEM 翻訳ワークフローを使用してアダプティブフォームとレコードのドキュメントをローカライズする方法について説明します。
+uuid: 6c87a283-0203-4cf7-989a-3770ddbbbd6e
+content-type: reference
+topic-tags: develop
+discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
+noindex: true
+translation-type: tm+mt
+source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+
+---
+
+
+# AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ {#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
+
+フォームのローカライズにより、さまざまな地域の幅広い対象者に向けてフォームを提供できるようになります。アダプティブフォームおよびレコードのドキュメントをローカライズするには、Adobe Experience Manager 翻訳ワークフローが役立ちます。アダプティブフォームのローカライズには、**機械翻訳**&#x200B;または&#x200B;**人による翻訳**&#x200B;を使用することができます。
+
+この記事では、アダプティブフォームおよびレコードのドキュメントに対する AEM 翻訳ワークフローの使用手順を説明します。
+
+## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
+
+機械翻訳サービスを使用すると、アダプティブフォームおよびレコードのドキュメントを即座に翻訳することができます。AEM Forms では、機械翻訳に Microsoft Translator の体験版を使用することが事前に定義されています。アダプティブフォームおよびレコードのドキュメントの機械翻訳を有効にするには、次の手順を実行します。
+
+1. AEM Forms UI 上でフォームを選択し、「**辞書の追加**」オプションをタップします。
+1. **辞書を翻訳プロジェクトに追加**&#x200B;画面で、「**新しい翻訳プロジェクトを作成**」または「**既存の翻訳プロジェクトを追加**」オプションを選択します。
+1. 「**プロジェクトタイトル**」フィールドでタイトルを指定します。例：`Government Reference Site - German locale.`
+1. In the **Target Languages** field, specify a locale (For example, `German(de)`), and click **Done**. ロケールは複数指定できます。フォームが「**ターゲット言語**」フィールドで指定されたすべてのロケールに翻訳されます。
+1. 辞書が追加された際のダイアログボックスで、「**プロジェクトを開く**」をクリックします。プロジェクト画面で、新しく作成されたプロジェクトを開きます。
+1. **翻訳の概要**&#x200B;タイルの下部にある「**三点リーダー**」をクリックします。翻訳の概要画面が開きます。
+1. **翻訳の概要**&#x200B;画面の上部にある「**編集**」アイコンをクリックします。「**翻訳**」タブを開き、**翻訳方法**&#x200B;画面で機械翻訳を選択します。Select the appropriate **Translation Provider** and **Cloud Configuration**. 画面の上部にある「**完了**」アイコンをクリックします。
+1. On the **Translation Job** tile, click the ![aem62forms_downarrow](assets/aem62forms_downarrow.png) icon, and click **Start**. タイルのステータスがドラフトに変わります。翻訳を完了すると、ステータスは&#x200B;**レビューへの準備完了**&#x200B;に変わります。数分待ってからページを更新し、ステータスを確認してください。
+1. After the status changes to **Ready for review** on the **Translation Job** tile, open the form in a browser window. ローカライズバージョンのフォームが表示されます。
+
+   >[!NOTE]
+   >
+   >* ブラウザーウィンドウでローカライズバージョンのフォームを開く前に、ブラウザーのロケールがフォームと同じロケールに設定されていることを確認してください。例えば、フォームがドイツ語（de）に翻訳されているときは、ブラウザーのロケールをドイツ語（de）に設定します。
+   >* アダプティブフォームコンポーネントは右から左(RTL)言語をサポートしていません。 例えば、ヘブライ語。
+
+
+   アダプティブフォームと共に、自動生成されるレコードのドキュメントもローカライズされます。
+
+   レコードのドキュメントの設定と設定について詳しくは、次を参照してください。
+
+   [レコードのドキュメントテンプレート設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-template-configuration-p)
+
+   [レコードのドキュメントの設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
+
+1. [レコードのドキュメントのブランディング情報をカスタマイズ](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)し、ブラウザーのロケールを、機械語を使用してアダプティブフォームをローカライズしたのと同じ言語に設定します。ブラウザーのロケールは、レコードのドキュメントにあるブランディング情報のローカライズに役立ちます。
+1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」をタップします。レコードのドキュメントPDFが生成され、ブラウザーの新しいタブで開かれます。
+
+## 人による翻訳を使用したアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
+
+人による翻訳を使用すると、コンテンツは翻訳プロバイダーに送信され専門の翻訳者によって翻訳が行われます。完了すると、翻訳コンテンツが返されて、AEM に読み込まれます。翻訳プロバイダーが AEM と統合されると、AEM と翻訳プロバイダーとの間でコンテンツが自動的に送信されます。
+
+翻訳の際には、専門の翻訳者各自の間で XLIFF 形式のファイルが含まれている辞書が共有されます。この辞書には、各ロケールに対して個別の XLIFF ファイルが含まれます。各 XLIFF には、エンドユーザーに表示されるテキストと、対応するローカライズ済みのテキストのプレースホルダ―が含まれます。
+
+人による翻訳を使用してフォームとレコードのドキュメントをローカライズするには、次の手順を実行します。
+
+1. [AEM を翻訳プロバイダーサービスに接続](/help/sites-administering/tc-tic.md)して、[翻訳統合フレームワーク設定を作成](/help/sites-administering/tc-tic.md)します。
+
+1. 翻訳サービスとフレームワークの設定に[言語マスターのページを関連付け](/help/sites-administering/tc-tic.md)ます。
+
+1. [翻訳するコンテンツのタイプを](/help/sites-administering/tc-rules.md) 「識別」します。
+
+1. [翻訳するコンテンツを準備](/help/sites-administering/tc-prep.md)します。そのためには、言語マスターをオーサリングして、言語コピーのルートページを作成します。
+
+1. [翻訳プロジェクトを作成し](/help/sites-administering/tc-manage.md) 、翻訳するコンテンツを収集し、翻訳プロセスを準備します。
+
+1. 翻訳プロジェクトを使用して、[コンテンツの翻訳プロセスを管理](/help/sites-administering/tc-manage.md)します。
+
+>[!NOTE]
+>
+>* アダプティブフォームコンポーネントは右から左(RTL)言語をサポートしていません。 例えば、ヘブライ語。
+>
+
+
+
