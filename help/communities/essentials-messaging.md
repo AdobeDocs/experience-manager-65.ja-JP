@@ -103,16 +103,13 @@ source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
+>次に例を示します。
 >
-次に例を示します。
->
->
-```>
+>```
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
->```>
-
-
+>```
+>
 
 ### コミュニティサイト {#community-site}
 

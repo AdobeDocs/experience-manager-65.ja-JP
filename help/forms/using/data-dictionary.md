@@ -423,7 +423,7 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 1. Tap **OK** in the alert. Correspondence Managementは、DataDictionary-&lt;DDname>.zipという名前のzipファイルをコンピューターにダウンロードします。
 1. Zip ファイルには、.properties ファイルが含まれています。このファイルでは、ダウンロードされたデータディクショナリを定義します。プロパティファイルのコンテンツは次のようになります。
 
-   # 2015年5月20日（水）16:06:23
+   &#x200B;# 2015年5月20日（水）16:06:23
    DataDictionary.EmployeeDD.description=DataDictionary.EmployeeDD.displayName=EmployeeDataDictionaryDataDictionaryElement.name.description=DataDictionaryElement.person.description=DataDictionaryElement.person.displayDisplayNamename=person
 
    プロパティファイルは、データディクショナリの内容と表示名およびデータディクショナリ内の各データディクショナリ要素を各行で定義する構造になっています。さらに、プロパティファイルは各データディクショナリ要素の列挙値セットを 1 行で定義します。データディクショナリと同様に、対応するプロパティファイルは複数のデータディクショナリ要素の定義を持つことができます。さらに、ファイルには 1 つ以上の列挙値セットの定義を含めることができます。

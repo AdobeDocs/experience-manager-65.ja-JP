@@ -265,12 +265,10 @@ Dynamic Media Classicコンテンツブラウザーを使用すると、Dynamic 
 >* セキュ [アプレビューを有効にすると](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)、Dynamic Media Classicの公開済みアセットと未公開アセットの両方がDynamic Media Classicコンテンツブラウザーに表示されます。
 >* If you do not see **[!UICONTROL Dynamic Media Classic]** or the **[!UICONTROL S7]** icon as an option in the content browser, you need to [configure Dynamic Media Classic to work with AEM](/help/sites-administering/scene7.md).
 >* ビデオの場合、Dynamic Media Classicコンテンツブラウザーは次の機能をサポートします。
-   >
-   >  
-* アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
+>
+>  * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
 >  * 単一の MP4 ビデオ
 >  * 単一の F4V ビデオ
-
 
 ### Browsing content in the touch-optimized UI {#browsing-content-in-the-touch-optimized-ui}
 

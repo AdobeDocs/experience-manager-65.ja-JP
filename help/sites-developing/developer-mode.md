@@ -36,15 +36,12 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
-   >
-   >    
-   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
 >
-* 次の適切な権限を必要とします。
-
-   * Access to Developer Mode is given to users who have write access on `/apps`.
-
-
+>    * ウィンドウの幅が 1024 px 未満の場合は使用できません。
+>
+>* 次の適切な権限を必要とします。
+>
+>    * Access to Developer Mode is given to users who have write access on `/apps`.
 
 
 >[!CAUTION]

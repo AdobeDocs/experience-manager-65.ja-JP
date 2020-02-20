@@ -415,6 +415,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1.  ファイルを保存して閉じます。
 
 ### フォントマネージャーサービスの設定  {#configuring-the-font-manager-service}

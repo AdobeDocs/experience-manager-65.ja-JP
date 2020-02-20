@@ -282,19 +282,18 @@ Example of a valid `htmlPasteRules` structure:
 >
 >リッチテキストエディターでは、`CQrte` という ID を持つコンテナ DOM 要素を使用します。これを使用して、表示や編集用に様々なスタイルを提供できます。
 >
->
-```>
+>```
 >#CQ td {
 > // defines the style for viewing
 > }
->```>
->```>
+>```
+>
+>```
 >#CQrte td {
 > // defines the style for editing
 > }
->```>
-
-
+>```
+>
 
 ### ポップアップリストで使用可能なスタイルの指定 {#stylesindropdown}
 

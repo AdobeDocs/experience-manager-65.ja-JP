@@ -52,10 +52,10 @@ Process Reportingサービスは、AEM FormsデータベースからProcess Repo
 >AEM Forms実装をクラスター上で実行する場合は、クラスターの各ノードで次の手順を実行します。
 
 1. AEM formsサーバーインスタンスを停止します。
-1. 
+1.
 
-   * （Windowsの場合）ファイルをエデ `[JBoss root]/bin/run.conf.bat` ィターで開きます。
-   * （Linux、AIXおよびSolarisの場合）エディタ `[JBoss root]/bin/run.conf.sh` ー内のファイル。
+    * （Windowsの場合）ファイルをエデ `[JBoss root]/bin/run.conf.bat` ィターで開きます。
+    * （Linux、AIXおよびSolarisの場合）エディタ `[JBoss root]/bin/run.conf.sh` ー内のファイル。
 
 1. JVM引数の追加 `-Dreporting.publisher.cron = <expression>.`
 

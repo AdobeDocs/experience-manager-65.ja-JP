@@ -1316,11 +1316,11 @@ N:apps
    >
    >これは定義と同じです。
    >
-   >
-   ```
+   >```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
+   >
    >関数は、受け取った値を返すだけです。
 
 1. レポートデザインを定義します。例えば、 `osgireport[cq:Page]` の下で `/etc/designs/reports`す。
@@ -1387,13 +1387,13 @@ N:apps
    >
    >この例ではグループ化可能な列がないので、グラフは使用できません。 グラフを表示するには、次のように `groupable` 設定しま `true`す。
    >
-   >
-   ```
+   >```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
+   >
 
 ## レポートフレームワークサービスの設定 {#configuring-the-report-framework-services}
 

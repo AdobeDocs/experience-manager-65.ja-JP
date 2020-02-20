@@ -183,16 +183,16 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
 * スコアおよびバッジのプロパティを追加します。
 
-   ```
-       scoringRules = [/etc/community/scoring/rules/comments-scoring,
-        /etc/community/scoring/rules/forums-scoring]
-       ```
-   
-       ```
-       badgingRules =[/etc/community/badging/rules/comments-scoring,
-        /etc/community/badging/rules/forums-scoring]
-       ```
-   
+      ```
+      scoringRules = [/etc/community/scoring/rules/comments-scoring,
+       /etc/community/scoring/rules/forums-scoring]
+      ```
+
+      ```
+      badgingRules =[/etc/community/badging/rules/comments-scoring,
+       /etc/community/badging/rules/forums-scoring]
+      ```
+
 * フォーラムコンポーネントノードを探します。
 
    * `/content/community-components/en/forum/jcr:content/content/forum`

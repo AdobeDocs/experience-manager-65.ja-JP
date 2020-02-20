@@ -190,6 +190,7 @@ Javaサーブレットをデプロイする前に、インタラクティブな�
           <scope>provided</scope>
        </dependency>
    ```
+
 1. Javaプロジェクトを開き、CCMBatchServlet.javaなどの.javaファイルを作成します。 次のコードを ファイルに追加します。
 
    ```java
