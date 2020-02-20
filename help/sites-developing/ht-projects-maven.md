@@ -586,6 +586,7 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 >  </resource>  
 >```
 >
+
 ### SCM システムを使用する方法 {#how-to-work-with-scm-systems}
 
 ソース設定管理（SCM）を使用する場合は、次のことを確認する必要があります。
