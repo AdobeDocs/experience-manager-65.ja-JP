@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 3ba9308f7a6252f7ea6ae0de6455ab3e97e3b8dd
+source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
 
 ---
 
@@ -174,6 +174,22 @@ Javaサーブレットをデプロイする前に、インタラクティブな�
 
 1. AEMインスタンスにログインし、Interactive Communicationを作成します。 以下のサンプルコードで説明したインタラクティブな通信を使用するには、ここをク [リックしま](assets/SimpleMediumIC.zip)す。
 1. [AEMインスタンスでApache Mavenを使用してAEMプロジェクトを構築](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) 、デプロイします。
+1. AEMプ [ロジェクトのPOmファイルの依存関係リストに、](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) AEM Forms Client SDKバージョン6.0.12 [](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) 以降および最新のAEM Uber Jarを追加します。 例：
+
+   ```XML
+       <dependency>
+           <groupId>com.adobe.aemfd</groupId>
+           <artifactId>aemfd-client-sdk</artifactId>
+           <version>6.0.122</version>
+       </dependency>
+       <dependency>
+          <groupId>com.adobe.aem</groupId>
+          <artifactId>uber-jar</artifactId>
+          <version>6.5.0</version>
+          <classifier>apis</classifier>
+          <scope>provided</scope>
+       </dependency>
+   ```
 1. Javaプロジェクトを開き、CCMBatchServlet.javaなどの.javaファイルを作成します。 次のコードを ファイルに追加します。
 
    ```java
@@ -271,7 +287,7 @@ Javaサーブレットをデプロイする前に、インタラクティブな�
                            throw new Exception("Invalid JSON Data. File name : " + filePath, ex);
                        }
                    }
-                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/testsample/mediumic").build();
+                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/[path of the interactive communcation]").build();
                    BatchConfig batchConfig = batchBuilderFactory.getBatchConfigBuilder().setBatchType(BatchType.WEB_AND_PRINT).build();
                    BatchResult batchResult = batchGeneratorService.generateBatch(batchInput, batchConfig);
                    List<RecordResult> recordList = batchResult.getRecordResults();
@@ -338,9 +354,7 @@ Javaサーブレットをデプロイする前に、インタラクティブな�
    * PRINTとWEBの両方のオプションを指定すると、レコードごとにPDFドキュメントとJSONファイルの両方が生成されます。
 
 1. [mavenを使用して、更新したコードをAEMインスタンスにデプロイします](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)。
-1. バッチAPIを呼び出して、インタラクティブ通信を生成します。 バッチAPIは、レコード数に応じてPDFファイルと.jsonファイルのストリームを印刷します。 このJSONファイルを使用して、Webテンプ [レートに事前入力できます](#web-template)。
-
-   上記のコードを使用する場合、APIはにデプロイされま `http://localhost:4502/bin/batchServlet`す。 手順1で提供されたインタラクティブ通信の例を使用する場合は、 [records.jsonを使用してインタラクティブ通信を生成できます](assets/records.json) 。 例えば、PDF `http://localhost:4502/bin/batchServlet?filePath=C:/aem/records.json>.` とJSONファイルのストリームを印刷して返します。
+1. バッチAPIを呼び出して、インタラクティブ通信を生成します。 バッチAPIは、レコード数に応じてPDFファイルと.jsonファイルのストリームを印刷します。 このJSONファイルを使用して、Webテンプ [レートに事前入力できます](#web-template)。 上記のコードを使用する場合、APIはにデプロイされま `http://localhost:4502/bin/batchServlet`す。 このコードは、PDFとJSONファイルのストリームを印刷して返します。
 
 ### Webテンプレートの事前入力 {#web-template}
 
