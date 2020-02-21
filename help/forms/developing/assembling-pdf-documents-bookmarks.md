@@ -80,7 +80,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->この節を読む前に、Assemblerサービスを使用したPDFドキュメントのアセンブリについて詳しく知ることをお勧めします。 ここでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されるコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません。 ( [Programmatically Assembling PDF Documents](/help/forms/developing/programmatically-assembling-pdf-documents-programmatical-assembling-pdf-documents-programmatics.md#programmatically-assembling-pdf-documents)を参照)。
+>この節を読む前に、Assemblerサービスを使用したPDFドキュメントのアセンブリについて詳しく知ることをお勧めします。 ここでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されるコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません。 ( [Programmatically Assembling PDF Documents](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照)。
 
 >[!NOTE]
 >
