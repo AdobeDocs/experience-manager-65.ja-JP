@@ -225,7 +225,7 @@ AEM 6.5.2.0 フォームの主なハイライトは次のとおりです。
 * Dynamic Media Scene 7 で 360 度ビデオアセットの配信がサポートされるようになりました。
 * Enabled *Japanese Word Wrap* feature via the styles plugin of Rich Text Editor. For more information, see [Configure Japanese word wrap](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)
 
-### Assets
+### アセット
 
 * DAM DMGateway インターフェイスが更新されて、S3 マルチパートがサポートされるようになりました。NPR-29740：CQ-4226303 のホットフィックス
 * AEM 6.5にアップグ `Only empty tenantId is currently supported` レードした後、レンディションプレビューでエラーが発生する。 NPR-29986：CQ-4272353 のホットフィックス
