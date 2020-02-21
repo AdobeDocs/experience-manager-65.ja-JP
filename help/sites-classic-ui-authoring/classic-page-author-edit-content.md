@@ -1,5 +1,5 @@
 ---
-title: ページのコンテキストの編集
+title: ページのコンテンツの編集
 seo-title: ページのコンテンツの編集
 description: コンテンツは、ページにドラッグ可能なコンポーネントを使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
 seo-description: コンテンツは、ページにドラッグ可能なコンポーネントを使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 71b1301faf3ea3d881bcbf34eac101f3ed5c514c
 
 ---
 
@@ -152,7 +152,6 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 >[!NOTE]
 >
 >[グローバル編集ツールバーを表示するためのユーザープロパティ](/help/sites-classic-ui-authoring/author-env-user-props.md)を設定している場合、表示される「**コピー**」、「**切り取り**」、「**貼り付け**」、「**削除**」の各ボタンを使用して、段落に対する特定の操作を実行できます。
-
 >
 >様々な[キーボードショートカット](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)も利用できます。
 
@@ -161,8 +160,9 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 [コンポーネントの削除](#deleting-a-component)と同様に、コンテキストメニューを使用してコンポーネントのコピー、切り取り、貼り付けをおこなうことができます。
 
 >[!NOTE]
-[グローバル編集ツールバーを表示するためのユーザープロパティ](/help/sites-classic-ui-authoring/author-env-user-props.md)を設定している場合、表示される「**コピー**」、「**切り取り**」、「**貼り付け**」、「**削除**」の各ボタンを使用して、段落に対する特定の操作を実行できます。
-
+>
+>[グローバル編集ツールバーを表示するためのユーザープロパティ](/help/sites-classic-ui-authoring/author-env-user-props.md)を設定している場合、表示される「**コピー**」、「**切り取り**」、「**貼り付け**」、「**削除**」の各ボタンを使用して、段落に対する特定の操作を実行できます。
+>
 >様々な[キーボードショートカット](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)も利用できます。
 
 >[!NOTE]
