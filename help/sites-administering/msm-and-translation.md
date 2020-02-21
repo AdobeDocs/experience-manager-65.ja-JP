@@ -10,7 +10,7 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 0885fb6eb6b6a6b8fefd522b2656c8f64e0a537e
 
 ---
 
@@ -60,8 +60,10 @@ Web サイトとページを管理するための以下の管理ツールが用�
 >いずれの使用例の場合も、次のベストプラクティスをお読みになることをお勧めします。
 >
 >* [MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md)（特に次の事項）
->
->  * [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
->  * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+   >
+   >   
+   * [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
+   >   * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻訳のベストプラクティス](/help/sites-administering/tc-bp.md)
+
