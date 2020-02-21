@@ -34,7 +34,7 @@ AEM デスクトップアプリケーションを使用して、フォームテ�
 AEMデスクトップアプリケーションは、Microsoft WindowsではWebDAVプロトコルを使用し、Mac OS xではSMB1を使用してAEM Formsサーバーに接続します。 AEM Formsサーバーは、バイナリファイルやその他のアセットをWebDAVまたはSMBクライアントと同期できません。 AEM Forms for AEM Desktop appを有効にするには、次の手順を実行します。
 
 1. 管理者として AEM Forms にログインします。
-1. In the author instance, click ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager > Tools **![hammer](assets/hammer.png)**> Deployment > Operations > Web Console]**. をクリックします。新しいウィンドウが Web コンソールに表示されます。
+1. In the author instance, click ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager > Tools]** ![hammer](assets/hammer.png) **[!UICONTROL > Deployment > Operations > Web Console]**. をクリックします。新しいウィンドウが Web コンソールに表示されます。
 1. Web コンソールウィンドウで、「**[!UICONTROL FormsManager アドオン設定]**」オプションを探して選択します。
 1. FormsManager アドオン設定ダイアログで「**[!UICONTROL 非同期リソース]**」チェックボックスの選択を解除して「**[!UICONTROL 保存]**」をクリックします。
 1. AEM Forms サーバーを再起動します。再起動後、AEM Formsサーバーは、AEMデスクトップアプリケーションに対するコンテンツの受け入れと共有を有効にします。
