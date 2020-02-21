@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 
 ---
 
@@ -37,9 +37,11 @@ Web サイトをセットアップするために、後述の手順では、次�
 >* CRXDEに表示される名前は、アドレス指定可能なコンテンツへのパスを形成するノード名です
 >* ノード名にはスペースを含めることができますが、URIで使用する場合は、スペースを「%20」または「+」としてエンコードする必要があります
 >* ノード名にはハイフンやアンダースコアを含めることができますが、Javaファイル内でパッケージ名として参照する場合はエンコードする必要があります。 ハイフンとアンダースコアは共に、アンダースコアでエスケープされ、その後にUnicode値が続きます。
->
->  * ハイフンが「_002d」になる
->  * アンダースコアは「_005f」になります。
+   >
+   >   
+   * ハイフンが「_002d」になる
+   >   * アンダースコアは「_005f」になります。
+
 
 ## アプリケーションディレクトリ(/apps)の設定 {#setup-the-application-directory-apps}
 
