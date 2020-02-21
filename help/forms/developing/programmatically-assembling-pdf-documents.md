@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 868936e0fd20d3867e31f0351d7b388149472fd2
 
 ---
 
@@ -100,7 +100,7 @@ map.pdfファイルとdirections.pdfファイルは、両方ともコレクシ�
 
 >[!NOTE]
 >
->操作を `AssemblerResult` 呼び出すと、コレクションオブジェクトを含むオブジェクトが返さ `invokeDDX` れます。 この操作は、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合に使用されます。 ただし、Assemblerサービスに1つの入力PDFのみを渡し、戻りドキュメントが1つだけ必要な場合は、操作を呼び出 `invokeOneDocument` します。 この操作を呼び出すと、1つのドキュメントが返されます。 この操作の使用について詳しくは、 [Assembling Encrypted PDF Documents](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)を参照してください。
+>操作を `AssemblerResult` 呼び出すと、コレクションオブジェクトを含むオブジェクトが返さ `invokeDDX` れます。 この操作は、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合に使用されます。 ただし、Assemblerサービスに1つの入力PDFのみを渡し、戻りドキュメントが1つだけ必要な場合は、操作を呼び出 `invokeOneDocument` します。 この操作を呼び出すと、1つのドキュメントが返されます。 この操作の使用に関する詳細は、暗号化されたPDFドキュメ [ントのアセンブリを参照してくださ](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)い。
 
 **実行時オプションの設定**
 
