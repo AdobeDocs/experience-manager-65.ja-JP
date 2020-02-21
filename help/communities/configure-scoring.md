@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d522c5ec6c72a9fd391d021f2fac37f88c686bd9
 
 ---
 
@@ -153,16 +153,16 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
 * スコアおよびバッジのプロパティを追加します。
 
-       &quot;スコアリングルール=
- &quot;     /etc/community/scoring/rules/coring/rules-scoring,/etc/community/scoring/rules/forums/
- &quot;     forums/
-    
-    
-    
-    
-    
-    badging rules/et/badding/coring/comumity/coring/coring/coring/coring/coring/coring/coring/coring/coring/coring/coring/comumumumity/coring/coring/coring/coring/coring/corininininity/coring/coring/coring/coring/coring/corininininini/coring/coring/comumum
-   
+   ```
+   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   /etc/community/scoring/rules/forums-scoring]
+   ```
+
+   ```
+   badgingRules =[/etc/community/badging/rules/comments-scoring,
+   /etc/community/badging/rules/forums-scoring]
+   ```
+
 * フォーラムコンポーネントノードを探します。
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
@@ -183,15 +183,15 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
 * スコアおよびバッジのプロパティを追加します。
 
-      ```
-      scoringRules = [/etc/community/scoring/rules/comments-scoring,
-       /etc/community/scoring/rules/forums-scoring]
-      ```
+   ```
+   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   /etc/community/scoring/rules/forums-scoring]
+   ```
 
-      ```
-      badgingRules =[/etc/community/badging/rules/comments-scoring,
-       /etc/community/badging/rules/forums-scoring]
-      ```
+   ```
+   badgingRules =[/etc/community/badging/rules/comments-scoring,
+   /etc/community/badging/rules/forums-scoring]
+   ```
 
 * フォーラムコンポーネントノードを探します。
 
