@@ -576,8 +576,7 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 >
 >E.g. if you include `/libs/foundation/global.jsp`, you can use the following configuration for the `maven-resources-plugin` instead of the configuration above which completely skips over `/libs`.
 >
->
-```
+>```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
 >           <includes>  
@@ -586,6 +585,7 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 >       </includes>  
 >   </resource>  
 >```
+>
 
 ### SCM システムを使用する方法 {#how-to-work-with-scm-systems}
 
