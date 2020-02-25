@@ -3,7 +3,7 @@ title: 接続されたアセットを使用してAdobe Experience Manager Sites�
 description: 別のExperience Manager siteデプロイメントでWebページを作成する場合は、リモートのAdobe Experience Manager Assetsデプロイメントで使用できるアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a107f3d3f10e2f5b5aed7722aee467a838f9d13d
+source-git-commit: a7082bc47bea1b8514121f482911da44919da73c
 
 ---
 
@@ -27,9 +27,9 @@ AEM Sites は Web ページの作成機能を備え、AEM Assets は Web サイ�
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
 * Adobe Experience Managerの展開タイプでは、サポートされている条件の1つが満たされます。 AEM 6.5 Assetsは、AEMをクラウドサービスとして使用できます。 詳しくは、クラウドサービスと [してのAEMの接続されたアセット機能を参照してください](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
-   |  | クラウドサービスとしてのAEMサイト | AMS上のAEM 6.5サイト | AEM 6.5オンプレミスサイト |
+   |  | AEM Sites as a Cloud Service | AMS上のAEM 6.5サイト | AEM 6.5オンプレミスサイト |
    |---|---|---|---|
-   | **クラウドサービスとしてのAEM Assets** | サポート対象 | サポート対象 | サポート対象 |
+   | **AEM Assets as a Cloud Service** | サポート対象 | サポート対象 | サポート対象 |
    | **AMS上のAEM 6.5アセット** | サポートなし | サポート対象 | サポート対象 |
    | **AEM 6.5アセットオンプレミス** | サポートなし | サポートなし | サポートなし |
 
@@ -171,7 +171,7 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 * Sites 作成者は全員、リモート DAM デプロイメントへのアクセス権限を持っていなくても、取得されたコピーに対する読み取り権限を持ちます。
 * 統合をカスタマイズするための API サポートはありません。
 * この機能は、リモートアセットのシームレスな検索および使用をサポートします。多くのリモートアセットをローカルデプロイメントで一度に利用できるようにするには、リモートアセットの移行を検討します。[Assets 移行ガイド](assets-migration-guide.md)を参照してください。
-* 「画像を選択」をクリックして、ページのプロパティの「サムネール」タブでWebページのサムネ [!UICONTROL ール] としてリモ [!UICONTROL ートアセットを使用] できません 。
+* リモートアセットをページプロパティユーザーインターフェイスのページサムネールとして [!UICONTROL 使用することは] できません。 Webページのサムネールは、「画像を選択」をクリックして、「ページのプ [!UICONTROL ロパティ] 」ユーザインターフェイ [!UICONTROL スで設] 定できます 。
 
 **セットアップとライセンス**
 
