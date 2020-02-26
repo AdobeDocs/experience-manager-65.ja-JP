@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -788,13 +788,13 @@ We.Finance Wealth Managementシナリオには、次の人物が含まれます�
 
 #### 仕組み {#how-it-works-17}
 
-ブルーチップ・グローズ・ファンドの趣意書は対話型のコミュニケーションです テキスト、画像、グラフ、表コンポーネント（ドキュメントフラグメント）を使用して、製品概要、株式スタイル、資金実績、資金詳細、その他の関連情報を表示します。 [ インタラクティブな通信は、https://]authorHost[:authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html
+ブルーチップ・グローズ・ファンドの趣意書は対話型のコミュニケーションです テキスト、画像、グラフ、表コンポーネント（ドキュメントフラグメント）を使用して、製品概要、株式スタイル、資金実績、資金詳細、その他の関連情報を表示します。 インタラクティブな通信は、 `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`
 
-グラフとテーブルは、フォームデータモデルからデータを取得します。 フォームデータモデルは、このチュートリアルのデータベースである設定済みのデータソースに接続して、基金に固有の情報を取得します。 フォームデータモデルは、https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-managementで確認できます。
+グラフとテーブルは、フォームデータモデルからデータを取得します。 フォームデータモデルは、このチュートリアルのデータベースである設定済みのデータソースに接続して、基金に固有の情報を取得します。 フォームデータモデルは、 `https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management`
 
 #### 実際の動作確認  {#see-it-yourself-15}
 
-We.Financeポータル(https://[publishHost]:[publishPort]/wefinance)に移動し、「Wealth Management」をタップし、「Funds by Asset Class」を展開し、「We.Finance Blue Chip Growth Fund」をタップします。 We.Finance Blue Chip Growth Fundの目論見書が開館します。
+We.Financeポータル()に移動し、「財 `https://[publishHost]:[publishPort]/wefinance`務管理」をタップし、「資産クラス別資金」をタップし、「We.Finance Blue Chip Growth Fund」をタップします。 We.Finance Blue Chip Growth Fundの目論見書が開館します。
 
 ### Sarahは、Blue Chip Growth Fundの目論見書を調査して、この基金について知る {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
@@ -806,11 +806,11 @@ Sarahは、目論見書の概要、価格とパフォーマンス、ポートフ
 
 Blue Chip Growth Fundの対話型コミュニケーションでは、親パネルと子パネルを使用して、関連情報を別々のセクションに分けます。 親パネルは、すべての子パネルをタブに編成します。
 
-すべての子パネルをタブに変換するには、親タブのレイアウトを「上のタブ」に設定します。 [ インタラクティブ通信のパネルは、https://]authorHostで編集モードで確認できます[。authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html.
+すべての子パネルをタブに変換するには、親タブのレイアウトを「上のタブ」に設定します。 インタラクティブ通信のパネルは、の編集モードで確認できま `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`す。
 
 #### 実際の動作確認  {#see-it-yourself-16}
 
-[ Blue Chip Growth Fundのインタラクティブコミュニケーションhttps://]publishHost[:publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled. すべてのタブを表示します。
+Blue Chip Growth Fundのインタラクティブ・コミュニケーション()に進みま `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled`す。 すべてのタブを表示します。
 
 ### SarahはPDF版のBlue Chip Growth Fundページを表示し、電子メールで送信します。 {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
 
@@ -820,15 +820,15 @@ Sarahは週末に田舎に旅行中です。 彼女は、ブルーチップス�
 
 #### 仕組み {#how-it-works-19}
 
-ブルーチップ・グローズ・ファンドの趣意書は対話型のコミュニケーションです WebチャネルとPDFチャネルがあります。 このインタラクティブな通信はAEM Workflowsと統合され、PDFバージョンを電子メールで送信します。 [ ワークフローモデルはhttps://]authorHost[:authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html.
+ブルーチップ・グローズ・ファンドの趣意書は対話型のコミュニケーションです WebチャネルとPDFチャネルがあります。 このインタラクティブな通信はAEM Workflowsと統合され、PDFバージョンを電子メールで送信します。 ワークフローモデルは、で確認できま `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html`す。
 
 ![資産管理](assets/wealth-management.png)
 
 #### 実際の動作確認  {#see-it-yourself-17}
 
-[ PDFバージョンをダウンロードするには、Blue Chip Growth Fundインタラクティブコミュニケーションhttps://]publishHost[:publishPort /content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html]、「PDFのダウンロード」をタップします。
+PDFバージョンをダウンロードするには、Blue Chip Growth Fundインタラクティブコミュニケーションに移動し、「PDFのダウンロ `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`ード」をタップします。
 
-[ PDFを電子メールで送信するには、Blue Chip Growth Fundインタラクティブコミュニケーションhttps://]publishHost[:publishPort /content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html]、「EMAIL PDF」をタップします。 「フルネ **ーム」と「電子メー** ルアドレス **」を指定します**。 「電子メール **を送信」をクリックしま**&#x200B;す。
+PDFを電子メールで送信するには、Blue Chip Growth Fundのインタラクティブコミュニケーションに移動し、「EMAIL PDF」 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`をタップします。 「フルネ **ーム」と「電子メー** ルアドレス **」を指定します**。 「電子メール **を送信」をクリックしま**&#x200B;す。
 
 ## 自動保険申込のチュートリアル {#auto-insurance-application-walkthrough}
 
@@ -849,13 +849,13 @@ ConradはAEMインスタンスにログインし、Auto Insuranceダッシュボ
 
 #### 仕組み {#how-it-works-20}
 
-保険証書更新通信は対話型の通信です。 Conrad Simmsは、エージェントUIを使用して、保険証書更新通信をSarahに送信します。 通信は、印刷(PDF)と、インタラクティブ通信のウェブチャネルへのリンクとを含む。 インタラクティブな通信は、AEM Workflowを使用して電子メールを送信します。 [ ワークフローはhttps://]authorHost[:authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
+保険証書更新通信は対話型の通信です。 Conrad Simmsは、エージェントUIを使用して、保険証書更新通信をSarahに送信します。 通信は、印刷(PDF)と、インタラクティブ通信のウェブチャネルへのリンクとを含む。 インタラクティブな通信は、AEM Workflowを使用して電子メールを送信します。 ワークフローは、 `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html`
 
 ![自動保険のワークフロー](assets/auto-insurance-workflow.png)
 
 #### 実際の動作確認  {#see-it-yourself-18}
 
-We.Finance Auto Insurance Dashboardに **Conrad Simms(csimms** /password)としてログインします。 URLはhttps://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.htmlです。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシー **を更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、ポリシードキュメントが添付された電子メールを送信する有効な電子メールアドレスを入力し、「送信」をクリ **ックしま**&#x200B;す。 「送信開始」というメッセージが画面に表示され、数秒後に「送信に成功しました」というメッセージが表示されます。 自動保険の更新の件名を **含む電子メールが** 、指定した電子メールアドレスに送信されます。 Sarah Roseに提供されるポリシーはプレミアムポリシーです。
+We.Finance Auto Insurance Dashboardに **Conrad Simms(csimms** /password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシー **を更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、ポリシードキュメントが添付された電子メールを送信する有効な電子メールアドレスを入力し、「送信」をクリ **ックしま**&#x200B;す。 「送信開始」というメッセージが画面に表示され、数秒後に「送信に成功しました」というメッセージが表示されます。 自動保険の更新の件名を **含む電子メールが** 、指定した電子メールアドレスに送信されます。 Sarah Roseに提供されるポリシーはプレミアムポリシーです。
 
 自動保険のチュートリアルには、別の顧客であるAlison Jonesも含まれています。 Alison Jonesの顧客IDは900002です。 インタラクティブな通信をAlison Jonesに送信すると、標準のポリシーが送信されます。 標準ポリシーとプレミアムポリシーの違いは次のとおりです。
 
@@ -863,18 +863,18 @@ We.Finance Auto Insurance Dashboardに **Conrad Simms(csimms** /password)とし�
 * 標準ポリシーは、プレミアムポリシーよりも低コストです。
 * プレミアムポリシーは盗難防止の報酬を受け、標準的なポリシーはスマートな乗り物報酬を受け取る
 
-両方のポリシーで同じインタラクティブ通信が使用されます。 ポリシー内のセクションは、ポリシータイプの条件に基づいて変更または非表示になります。 You can access and review the auto insurance renewal interactive communication directly from https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal
+両方のポリシーで同じインタラクティブ通信が使用されます。 ポリシー内のセクションは、ポリシータイプの条件に基づいて変更または非表示になります。 You can access and review the auto insurance renewal interactive communication directly from `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **Microsoft Dynamicsをデータソースとして使用する**
 
 リファレンスサイトでは、Microsoft Dynamicsをフォームデータモデルのデータソースとして使用するインタラクティブな通信も提供しています。 自動保険のチュートリアル用にインタラクティブな通信を設定するには、次の手順を実行します。
 
-1. 管理者としてhttps://[author]:[port]/crx/deにログインします。
+1. `https://[author]:[port]/crx/de as an administrator` にログインします。
 1. Open the `/apps/we-finance/components/ccrui/ccrui.jsp`file.
 1. の値を `FormFieldRequestParameter``/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. 「**すべて保存**」をタップします。リファレンスサイトは、MS Dynamicsをデータソースとして使用するインタラクティブ通信を使用するように構成されている。
 
-次に、 **We.Finance Auto Insurance DashboardにConrad Simms** (csimms/password)としてログインします。 URLはhttps://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.htmlです。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシー **を更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、ポリシードキュメントが添付された電子メールを送信する有効な電子メールアドレスを入力し、「送信」をクリ **ックしま**&#x200B;す。 「送信開始」というメッセージが画面に表示され、数秒後に「送信に成功しました」というメッセージが表示されます。 「自動保険の更新」の件名 **を持つ電子メールが** 、指定した電子メールアドレスに送信されます。
+次に、 **We.Finance Auto Insurance DashboardにConrad Simms** (csimms/password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシー **を更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、ポリシードキュメントが添付された電子メールを送信する有効な電子メールアドレスを入力し、「送信」をクリ **ックしま**&#x200B;す。 「送信開始」というメッセージが画面に表示され、数秒後に「送信に成功しました」というメッセージが表示されます。 「自動保険の更新」の件名 **を持つ電子メールが** 、指定した電子メールアドレスに送信されます。
 
 >[!NOTE]
 >
@@ -902,7 +902,7 @@ PDF が添付された電子メールを受信します。PDFは、自動保険�
 
 The **Renew Now** button in the email directs Sarah to the web version of the policy. 次の URL にアクセスできます。
 
-https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&amp;customerId=900001
+`https://[publishServer]:[publishPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=900001`
 
 You can check the detailed summary of your auto insurance renewal and click **Renew Now** at the bottom of the page.
 
@@ -920,6 +920,6 @@ Sarahが「 **Renew Now** 」をクリックすると、インタラクティブ
 
 「**今すぐ更新する**」をクリックして支払いページにアクセスします。Fill in your Credit Card information, and click **Make Payment**. オーサリングインスタンスの支払いページには、次の場所でアクセスできます。
 
-https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&amp;schema=fdm&amp;customerId=900001
+`https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&schema=fdm&customerId=900001`
 
 「お支払い」ボタンをクリックすると、「ありがとうございます」というメッセージが表示されます。
