@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -220,8 +220,8 @@ To learn more about how to use packages and package share, see [How to Work With
 
 パッケージをインストールして、オーサーインスタンスとパブリッシュインスタンスを開始したら、ブラウザーで以下の URL にアクセスします。
 
-* https://[server]:[port]/wegov
-* https://[server]:[port]/wefinance
+* `https://[server]:[port]/wegov`
+* `https://[server]:[port]/wefinance`
 
 インストールが正常に完了すると、 と We.Finance のリファレンスサイトのランディングページにアクセスできるようになります。
 
@@ -231,12 +231,12 @@ To learn more about how to use packages and package share, see [How to Work With
 
 自動保険申込用にカスタム・エンティティをインポートする手順は、次のとおりです。
 
-1. Download the **WeFinanceAutoInsurance_1_0.zip** solution package from https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip on your AEM author instance.
+1. Download the **WeFinanceAutoInsurance_1_0.zip** solution package from `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` on your AEM author instance.
 1. In your Microsoft Dynamics instance, go to **Settings > Solutions** and click **Import**. パッケージを選択して読み込みます。
 
 自動保険申込用にカスタム・エンティティをインポートする手順は、次のとおりです。
 
-1. https:// **author** :[port/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zipからAEMFormsFSIRefsite_1_0.zipパッケージをダウンロードし]ます[]。 パッケージを選択して読み込みます。
+1. AEMFormsFSIRefsite_1_0.zip **パッケージをからダウンロードし** ます `https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`。 パッケージを選択して読み込みます。
 
 1. In your Microsoft Dynamics instance, go to **Settings > Solutions** and click **Import**. パッケージを選択して読み込みます。
 
@@ -244,9 +244,9 @@ To learn more about how to use packages and package share, see [How to Work With
 
 1. Download the **We.Finance Customers.csv, We.Finance Auto Insurance Renewals.csv**, and **home mortgage** data files from the following locations on your AEM author instance:
 
-   * https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv
-   * https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv
-   * https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv`
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv`
+   * `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
 1. Microsoft Dynamicsインスタンスで、次の操作を行います。
 
@@ -273,7 +273,7 @@ AEM formsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft
 
 オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
-1. Go to AEM Web Configuration console at https://[server]:[host]/system/console/configMgr.
+1. Go to AEM Web Configuration console at `https://[server]:[host]/system/console/configMgr`.
 1. Find and tap **[!UICONTROL Adobe Sign Configuration Service]** to open it for configuration.
 1. 「**[!UICONTROL ステータス更新スケジューラーの式]**」で「**0 0/2 * * * ?**」を指定します。
 
