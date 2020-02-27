@@ -3,7 +3,7 @@ title: カスケードメタデータ
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -83,7 +83,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
    >
    >値があらかじめ手動で定義されているドロップダウンメニューは、ルールと一緒に使用できます。設定済みの JSON パスを含むドロップダウンメニューは、事前定義された値を使用して条件を適用するルールと一緒には使用できません。値が実行時に JSON から読み込まれる場合は、事前定義されたルールを適用することはできません。
 
-1. Under **[!UICONTROL Visibility]**, choose the **[!UICONTROL Visible, based on new rule]** option.
+1. 「**[!UICONTROL 表示]**」の下で、「**[!UICONTROL 表示可、新しいルールに基づく]**」オプションを選択します。
 
 1. 「**[!UICONTROL ルールを追加]**」をタップまたはクリックし、「**[!UICONTROL アセットタイプ]**」フィールドを選択して依存関係を作成します。また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。「**[!UICONTROL 完了]**」をタップまたはクリックして、変更内容を保存します。
 
@@ -104,7 +104,9 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 1. メタデータスキーマを適用したフォルダーに移動して、アセットのプロパティページを開きます。「アセットタイプ」フィールドでの選択に応じて、関連するカスケードメタデータのフィールドが表示されます。
 
    ![ビデオアセットのカスケードメタデータ](assets/video_asset.png)
+
    *図：ビデオのカスケードメタデータ*
 
    ![ドキュメントアセットのカスケードメタデータ](assets/doc_type_fields.png)
+
    *図：ドキュメントのカスケードメタデータ*
