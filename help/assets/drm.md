@@ -3,12 +3,12 @@ title: アセットのデジタル著作権管理
 description: AEM でライセンスされているアセットの状態と有効期限の情報を管理する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
 
-# デジタルアセット向けデジタル著作権管理 {#digital-rights-management-in-assets}
+# Digital Rights Management for digital assets {#digital-rights-management-in-assets}
 
 多くの場合、デジタルアセットはライセンスに関連付けられています。ライセンスは、利用条件とその期間を指定します。Adobe Experience Manager(AEM)AssetsはAEMプラットフォームと完全に統合されているので、アセットの有効期限情報とアセットの状態を効率的に管理できます。 ライセンス情報をアセットに関連付けることもできます。
 
@@ -18,11 +18,15 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 アセットの有効期限ステータスは、カード表示とリスト表示の両方のアセットコンソールで確認できます。
 
-![expired_flag_card](assets/expired_flag_card.png)<br> *図：カード表示では、カード上のフラグは期限切れアセットを示します。*
+![expired_flag_card](assets/expired_flag_card.png)
+
+*図：カード表示では、カード上のフラグは期限切れアセットを示します。*
 
 **リスト表示**
 
-![expired_flag_list](assets/expired_flag_list.png)*図：リスト表示では、「**[!UICONTROL Status]**」列に期限切れのバナーが表&#x200B;**[!UICONTROL 示されます]**。*
+![expired_flag_list](assets/expired_flag_list.png)
+
+*図：リスト表示では、「[!UICONTROL Status]」列に期限切れのバナーが表[!UICONTROL 示されます]。*
 
 タイムラインで、アセットの有効期限切れのステータスを確認できます。アセットを選択してグローバルナビゲーションメニューから「タイムライン」を選択します。
 
@@ -73,14 +77,14 @@ When you choose the **Expired** option, the Assets console only displays the exp
 
 さらに、何らかの誤作動やエラーによりスケジューラーが現在のサイクルの有効期限切れアセットを検出できない場合、スケジューラーはこれらのアセットを次回のサイクルで再確認し、有効期限切れのステータスを検出します。
 
-To enable the Assets console to display the referencing compound assets along with the expired subassets, configure an **Adobe CQ DAM Expiry Notification** workflow in AEM Configuration Manager.
+アセットコンソールに有効期限切れのサブアセットとともに参照元の複合アセットを表示するには、AEM Configuration Manager で **Adobe CQ DAM Expiry Notification** ワークフローを設定します。
 
 1. AEM Configuration Manager を開きます。
 1. Choose **[!UICONTROL Adobe CQ DAM Expiry Notification]**. By default, **[!UICONTROL Time based Scheduler]** is selected, which schedules a job to check at a specific time whether an asset has expired subassets. ジョブが完了すると、期限切れのサブアセットと参照アセットを含むアセットが検索結果に期限切れとして表示されます。
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
-1. To run the job periodically, clear the **[!UICONTROL Time Based Scheduler Rule]** field and modify the time in seconds in the **[!UICONTROL Periodic Scheduler]** field. 例えば、式&#39;0 0 0 &amp;ast；の例&amp;ast;?」 ジョブが 00 時間でトリガーされます。
+1. ジョブを定期的に実行するには、「**[!UICONTROL 時間ベースのスケジューラールール]**」フィールドをクリアして、「**[!UICONTROL 定期的なスケジューラー]**」フィールドの時間（秒数）を変更します。例えば、式「0 0 0 &amp;ast; &amp;ast; ?」の場合、ジョブが 00 時間でトリガーされます。
 1. Select **[!UICONTROL send email]** to receive emails when an asset expires.
 
    >[!NOTE]
@@ -134,15 +138,15 @@ Adobe Experience Manager（AEM）Assets のアセットコンソールには、�
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
 1. Returnキーを押し、「GlobalNav」をタ **[!UICONTROL ップして]** 、検索パネルを表示します。
-1. In the Search panel, tap/click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in AEM Assets.
+1. 検索パネルで、「**[!UICONTROL 公開ステータス]**」をタップまたはクリックして「**[!UICONTROL 公開済み]**」を選択し、AEM Assets で公開済みのアセットを検索します。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. Tap/click **[!UICONTROL Approval Status]** and click the appropriate option to search for approved or rejected assets.
+1. 「**[!UICONTROL 承認ステータス]**」をタップまたはクリックし、適切なアイコンをクリックして承認済みまたは却下されたアセットを検索します。
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. To search for assets based on their expiration status, select **[!UICONTROL Expiry Status]** in the Search panel and choose the appropriate option.
+1. 有効期限切れのステータスに基づいてアセットを検索するには、検索パネルで「**[!UICONTROL 有効期限ステータス]**」を選択して適切なオプションを選択します。
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -177,7 +181,7 @@ If you select a protected asset and tap **[!UICONTROL Download]**, you are redir
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Download]** button is enabled only when you choose to agree to the license agreement for a protected asset. However, if your selection comprises both protected and unprotected assets, only the protected assets are listed in the left pane and the **[!UICONTROL Download]** button is enabled to download the unprotected assets. To simultaneously accept license agreements for multiple protected assets, select the assets from the list and then choose **[!UICONTROL Agree]**.
+   >「**[!UICONTROL ダウンロード]**」ボタンは、保護されたアセットの使用許諾契約に同意した場合にのみ有効になります。ただし、選択範囲が保護されたアセットと保護されていないアセットの両方で構成されている場合は、保護されたアセットのみが左パネルに表示され、「**[!UICONTROL ダウンロード]**」ボタンが有効になって保護されていないアセットをダウンロードのダウンロードが可能になります。保護された複数のアセットの使用許諾契約に同時に承諾するには、リストからアセットを選択して「**[!UICONTROL 同意する]**」を選択します。
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
