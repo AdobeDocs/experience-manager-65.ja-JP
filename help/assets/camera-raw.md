@@ -3,7 +3,7 @@ title: Camera Raw サポート
 description: Adobe Experience Manager AssetsでCamera rawサポートを有効にする方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0b8472dbfbfe326b4b5fe0d43b0f361318b37d16
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -53,11 +53,9 @@ Adobe Experience Manager AssetsでCamera rawのサポートを有効にするに
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-
 *図：サイドペインのオプション。*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
-
 
 *図：画像に軽量な編集を行う場合は、このオプションを使用します。*
 
