@@ -3,7 +3,7 @@ title: 重複アセットの検出の有効化
 description: AEM で重複アセットの検出を有効にする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -17,7 +17,6 @@ Adobe Experience Manager（AEM）Assets に存在するアセットをアップ�
 1. Select the **[!UICONTROL detect duplicate]** option, and click/tap **[!UICONTROL Save]**.
 
    ![サーブレットで「重複項目の検出」オプションを選択](assets/chlimage_1-377.png)
-
 
    *図：サーブレットで「重複を検出」オプションを選択*
 
