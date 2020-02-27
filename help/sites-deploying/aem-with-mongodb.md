@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 56006a1f49e4d357cd7ee44a4a1dd1af7189e70a
 
 ---
 
@@ -41,7 +41,7 @@ MongoDB は通常、次のいずれかの条件を満たす AEM オーサーの�
 
 ### AEM における MongoDB の最小デプロイメント {#minimal-mongodb-deployment-for-aem}
 
-MongoDB での AEM の最小デプロイメントは次のとおりです。簡潔にするために、SSL ターミネーションおよび HTTP プロキシコンポーネントは一般化されています。これは、1 つのプライマリと 2 つのセカンダリを含む単一の MongoDB レプリカセットで構成されています。
+MongoDB での AEM の最小デプロイメントは次のとおりです。簡潔にするために、SSL ターミネーションおよび HTTP プロキシコンポーネントは一般化されています。1つのMongoDBレプリカ・セットと1つのプライマリ・レプリカと2つのセカンダリ・レプリカで構成されます。
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
