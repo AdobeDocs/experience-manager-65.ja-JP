@@ -57,3 +57,8 @@ DOS などの状況を防ぐため、AEM では Sling 要求でサポートさ�
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
 制限を変更するには、Web コンソール（**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**）にアクセスし、**[!UICONTROL Apache Sling Request Parameter Handling]** OSGi 設定で&#x200B;**[!UICONTROL 最大 POST パラメーター]**&#x200B;の値を変更します。
+
+>[!MORELIKETHIS]
+>
+>* [複数のコレクションのメタデータプロパティの編集](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+
