@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: c5e6098b62ff7e3e787b5f0f3c3b32a35e3981c6
 
 ---
 
@@ -362,13 +362,15 @@ Offloading などのサービスがプライマリとスタンバイを個別に
 
 ## コールドスタンバイリポジトリのメンテナンス {#cold-standby-repository-maintenance}
 
+### リビジョンクリーンアップ {#revision-clean}
+
 >[!NOTE]
-プライマリインスタンスで[オンラインリビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md)を実行した場合は、以下に示す手動での手順は必要ありません。Addittionally, if you are using Online Revision Cleanup, the `cleanup ()` operation on the standby instance will pe performed automatically.
+プライマリインスタンスで[オンラインリビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md)を実行した場合は、以下に示す手動での手順は必要ありません。Additionally, if you are using Online Revision Cleanup, the `cleanup ()` operation on the standby instance will pe performed automatically.
 
 >[!NOTE]
 スタンバイでオフラインリビジョンクリーンアップを実行しないでください。オフラインコンパクションは不要であり、segmentstore のサイズは縮小されません。
 
-アドビでは、リポジトリが時間の経過と共に過剰に増加するのを防ぐために、定期的にメンテナンスを実行することをお勧めします。 コールドスタンバイリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
+アドビでは、リポジトリが時間の経過と共に過剰に増加するのを防ぐため、定期的にメンテナンスを実行することをお勧めします。 コールドスタンバイリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
 
 1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: Status（&quot;Standby&quot;）** bean を使用して、スタンバイインスタンスでスタンバイプロセスを停止します。この方法について詳しくは、[監視](/help/sites-deploying/tarmk-cold-standby.md#monitoring)に関する前述の節を参照してください。
 
