@@ -3,7 +3,7 @@ title: アセットインサイトの設定
 description: AEM Assetsでのアセットインサイトの設定を参照してください。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -25,7 +25,6 @@ Adobe Experience Manager（AEM）Assets は、サードパーティの Web サ�
 
    ![AEM のアセットインサイト用に Adobe Analytics を設定する](assets/insights_config2.png)
 
-
    *図：AEMでのアセットインサイト用のAdobe Analyticsの設定*
 
 1. 「**[!UICONTROL 認証]**」をクリックまたはタップします。
@@ -40,5 +39,5 @@ Adobe Analyticsアカウントを設定すると、ページトラッカーコ�
 
    ![chlimage_1-73](assets/chlimage_1-214.png)
 
-1. From the **[!UICONTROL Navigation]** page, click the **[!UICONTROL Insights Page Tracker]** card.
+1. **[!UICONTROL ナビゲーション]**&#x200B;ページで、「**[!UICONTROL インサイトページトラッカー]**」カードをクリックします。
 1. Click **[!UICONTROL Download]** to download the page tracker code.
