@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 37d0225f69800225e82f253ad9dbab8b2b30ac5e
+source-git-commit: fdcd9173b02347a7a9527b292635d63e8aa9ce19
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 ### 変更点の一覧 {#list-of-changes}
 
-#### アセット {#assets-6530-enhancements}
+#### Assets {#assets-6530-enhancements}
 
 **製品の機能強化**
 
@@ -291,6 +291,12 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 **Foundation JEE**
 
 * アクションの設定で、「Invoke a Forms Workflow submit action」(NPR-31478)のプロセス名が読み込まれません。
+* JEE上のAEM Formsユーザーが、.lcaファイルの読み込み中、または管理コンソールでのLDAPの設定中に、次のようなエラーが発生します。
+
+   `com.ibm.ws.webcontainer.filter.FilterInstanceWrapper doFilter SRVE8109W: Uncaught exception thrown by filter um: java.lang.NoClassDefFoundError: org/apache/commons/io/IOUtils at org.apache.commons.fileupload.util.Streams.copy`
+
+   `Error 500: javax.servlet.ServletException: java.lang.NoClassDefFoundError: org.apache.commons.io.IOUtils` (NPR-30931)
+
 
 ### 含まれている機能パック {#feature-packs-included-6530}
 
