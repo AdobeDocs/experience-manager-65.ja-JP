@@ -3,7 +3,7 @@ title: 共有アセットへのURLの生成
 description: この記事では、AEM Assets 内のアセット、フォルダーおよびコレクションを URL として外部の関係者と共有する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
 
    ![「リンクを共有」と表示されたダイアログ](assets/Link-sharing-dialog-box.png)
 
-   *図：リンク共有を使用したダイアログ*
+   *図：リンク共有のダイアログ*
 
    または、この手順の 3～7 に進んで電子メールの受信者を追加し、リンクの有効期限を設定して、ダイアログから送信することもできます。
 
@@ -47,7 +47,7 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
    >[!NOTE]
    共有アセットが別の場所に移動されると、そのリンクは機能しなくなります。リンクを再作成し、ユーザーと再共有します。
 
-1. From the web console, open the **[!UICONTROL Day CQ Link Externalizer]** configuration and modify the following properties in the **[!UICONTROL Domains]** field with the values mentioned against each:
+1. Web コンソールで、**[!UICONTROL Day CQ Link Externalizer]** 設定を開き、「**[!UICONTROL ドメイン]**」フィールドで次のプロパティの値をそれぞれ変更します。
 
    * local
    * author
@@ -85,7 +85,7 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
 
    リスト表示に切り替えるには、ツールバーのレイアウトオプションをクリックまたはタップします。
 
-1. アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。To close the preview and return to the **[!UICONTROL Marketing Cloud]** page, click/tap **[!UICONTROL Back]** in the toolbar. フォルダーを共有している場合は、「**[!UICONTROL 親フォルダー]**」をクリックまたはタップして親フォルダーに戻ります。
+1. アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。プレビューを閉じて **[!UICONTROL Experience Cloud]** ページに戻るには、ツールバーの「**[!UICONTROL 戻る]**」をクリックまたはタップします。フォルダーを共有している場合は、「**[!UICONTROL 親フォルダー]**」をクリックまたはタップして親フォルダーに戻ります。
 
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
@@ -118,9 +118,9 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
 
 リンク共有機能を使用して共有されているリンクからアセットをダウンロードすると、AEM は、リポジトリのアセットの階層を圧縮して、ZIP ファイルにしてアセットを返します。ただし、ZIP ファイルとして圧縮できるデータ量に制限がないと、膨大なデータが圧縮の対象となり、JVM のメモリ不足エラーの原因となります。To secure the system from a potential denial of service attack due to this situation, configure the maximum size using the **[!UICONTROL Max Content Size (uncompressed)]** parameter for [!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet] in Configuration Manager. アセットの未圧縮時のサイズが設定値を超えていると、アセットのダウンロード要求は拒否されます。デフォルト値は 100 MB です。
 
-1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL Web コンソール]**&#x200B;に移動します。
+1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;に移動します。
 1. From the Web Console, locate the **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** configuration.
-1. Open the **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** configuration in edit mode, and modify the value of the **[!UICONTROL Max Content Size (uncompressed)]** parameter.
+1. 「**[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]**」設定を編集モードで開き、「**[!UICONTROL 最大コンテンツサイズ（非圧縮）]**」パラメーターの値を変更します。
 
    ![chlimage_1-264](assets/chlimage_1-549.png)
 
