@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: 9d7dd160cd4a9a1bfac9628498efae2e1f98023f
+source-git-commit: 86257dd8a54a0f25ed4365990a678bb794f18744
 
 ---
 
@@ -4471,11 +4471,10 @@ GeneratePDFService は、さまざまなファイル形式（.doc、.docx、.ppt
    <td><strong>✓</strong></td>
   </tr>
   <tr>
-   <td>exportPDF</td>
+   <td>htmlToPDF</td>
    <td><strong>✓</strong></td>
    <td><strong>✓</strong></td>
   </tr>
-  <tr>
    <td>optimizePDF</td>
    <td><strong>✓</strong></td>
    <td>✖</td>
