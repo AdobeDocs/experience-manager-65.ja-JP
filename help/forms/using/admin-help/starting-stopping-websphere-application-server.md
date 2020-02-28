@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: bcd16691-67ab-4694-9e6b-c9d3e0c7bf0b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## WebSphere Application Server のステータスの表示 {#view-the-status-of-websphere-application-server}
 
-1. From a command prompt, go to the *[appserver root]*/bin directory.
+1. From a command prompt, go to the `[appserver root]/bin` directory.
 1. 次のコマンドを入力します。*server_name* には、WebSphere Application Server の名前を指定します。
 
    * (Windows) `serverStatus.bat`*server_name *
@@ -29,7 +29,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## WebSphere Application Server の起動 {#start-websphere-application-server}
 
-1. From a command prompt, go to the *[appserver root]*/bin directory.
+1. From a command prompt, go to the `[appserver root]/bin` directory.
 1. 次のコマンドを入力します。*server_name* には、WebSphere Application Server の名前を指定します。
 
    * (Windows) `startServer.bat`*server_name *
@@ -37,7 +37,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## WebSphere Application Server の停止 {#stop-websphere-application-server}
 
-1. From a command prompt, go to the *[appserver root]*/bin directory.
+1. From a command prompt, go to the `[appserver root]/bin` directory.
 1. 次のコマンドを入力します。*server_name* には、WebSphere Application Server の名前を指定します。
 
    * (Windows) `stopServer.bat`*server_name *
