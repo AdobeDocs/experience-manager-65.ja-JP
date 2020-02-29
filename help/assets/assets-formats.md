@@ -3,7 +3,7 @@ title: Assets でサポートされるファイル形式
 description: AEM Assets でサポートされているファイル形式と、各形式でサポートされている機能のリスト。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
+source-git-commit: 8a701d98fed79648104c39816482ff94997ba2e6
 
 ---
 
@@ -87,13 +87,13 @@ See [Imaging Transcoding Library](imaging-transcoding-library.md).
 
 ## Supported camera raw {#supported-camera-raw}
 
-Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。See [Camera Raw Support](camera-raw.md).
+Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。See [Camera Raw support](camera-raw.md).
 
 ## サポートされるドキュメント形式 {#supported-document-formats}
 
 アセット管理機能でサポートされるドキュメント形式は次のとおりです。
 
-| 形式 | ストレージ | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | インサイト | Connected Assets |
+| 形式 | ストレージ | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | [インサイト](touch-ui-asset-insights.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
