@@ -4,7 +4,7 @@ seo-title: AEM 6.5 Assetsユーザーガイド
 description: このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのAEM Assetsタスクについて説明します。
 seo-description: デジタルアセットの作成、管理、配信、最適化の方法など、AEM Assetsのすべてのタスクについて説明します。
 translation-type: tm+mt
-source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
+source-git-commit: b90343874d5afd9858d8a6d82828eabdfa1d3ccd
 
 ---
 
@@ -39,11 +39,11 @@ source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
 
 ## 主なAEMリソース
 
-* [AEMチュートリアル](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEMビデオチュートリアル](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [GDPR 対応](/help/managing/data-protection-and-privacy.md)
+* [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
+* [AEM Assetsコミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [ディスパッチャーユーザーガイド](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTLユーザーガイド](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
-* [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
-* [AEMコミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
