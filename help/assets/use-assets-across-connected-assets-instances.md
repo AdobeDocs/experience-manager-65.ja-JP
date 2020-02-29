@@ -3,7 +3,7 @@ title: 接続されたアセットを使用してAdobe Experience Manager Sites�
 description: 別のExperience Manager siteデプロイメントでWebページを作成する場合は、リモートのAdobe Experience Manager Assetsデプロイメントで使用できるアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
+source-git-commit: bcc51ca9cc98af0141824e0f1ea6c3c0fd9fa888
 
 ---
 
@@ -35,7 +35,10 @@ AEM Sites は Web ページの作成機能を備え、AEM Assets は Web サイ�
 
 ### サポートされているファイル形式 {#mimetypes}
 
-作成者は、コンテンツファインダーで画像や次の種類のドキュメントを検索し、検索したアセットをページエディターで使用できます。 Documents can be added to the `Download` component and images can be added to the `Image` component. Authors can also add the remote assets in any custom AEM component that extends the default `Download` or `Image` components. サポートされる形式のリストについては、接続されているアセットでサ [ポートされる形式を参照してくださ](assets-formats.md#supported-document-formats)い。
+作成者は、コンテンツファインダーで画像や次の種類のドキュメントを検索し、検索したアセットをページエディターで使用できます。 Documents can be added to the `Download` component and images can be added to the `Image` component. Authors can also add the remote assets in any custom AEM component that extends the default `Download` or `Image` components. サポートされる形式は次のとおりです。
+
+* **画像形式**:画像コンポーネントでサポートされる画像 [形式は](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) 、接続されたアセットでサポートされます。 ダイナミックメディアコンポーネントはサポートされていません。
+* **ドキュメントの形式**:詳しくは、接続さ [れたアセットでサポートされるドキュメント形式を参照してくださ](assets-formats.md#supported-document-formats)い。
 
 ### 関連するユーザーとグループ {#users-and-groups-involved}
 
