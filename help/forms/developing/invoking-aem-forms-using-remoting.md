@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -963,7 +963,7 @@ AEM Forms複合型の完全修飾データ型がaliasタグに割り当てられ
 ActionScriptクラスのフィールドは、AEM Forms複合型に属するフィールドと一致します。 Customer ActionScriptクラス内の6つのフィールドは、に属するフィールドと一致しま `com.adobe.livecycle.sample.customer.Customer`す。
 
 >[!NOTE]
-Forms複合型に属するフィールド名を判断する良い方法は、サービスのWSDLをWebブラウザーで表示することです。 WSDLは、サービスの複合型と対応するデータメンバーを指定します。 Customerサービスでは、次のWSDLが使用されます。https:// *[yourServer]:[yourPort]/soap/services/CustomerService?wsdl*
+Forms複合型に属するフィールド名を判断する良い方法は、サービスのWSDLをWebブラウザーで表示することです。 WSDLは、サービスの複合型と対応するデータメンバーを指定します。 Customerサービスでは、次のWSDLが使用されます。 `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 Customer ActionScriptクラスは、customerという名前のパッケージに属しています。 複雑なAEM Formsデータ型にマップするすべてのActionScriptクラスを、それぞれのパッケージに配置することをお勧めします。 次の図に示すように、Flexプロジェクトのsrcフォルダーにフォルダーを作成し、そのフォルダーにActionScriptファイルを配置します。
 
