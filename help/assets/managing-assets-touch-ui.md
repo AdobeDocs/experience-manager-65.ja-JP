@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0f086ed9d1674149888d2921820eacce1aed9e24
+source-git-commit: 68692e7b82aecd81a21f3a970f3707f2ff39792a
 
 ---
 
@@ -626,7 +626,7 @@ You can view, navigate through, and select assets with any of the available view
 
 ![select_quick_action](assets/select_quick_action.png)
 
-ブラウザーのアセットユーザーインターフェイスでフォルダーまたはコレクションを参照する場合、右上隅の「すべて選択  」オプションを使用して、すべてのアセットを選択できます。
+ブラウザーのアセットユーザーインターフェイスでフォルダーまたはコレクションを参照する場合、右上隅の「すべて選択」オプションを使用して、表示または読み込まれたすべてのアセットを選択できます  。 下にスクロールしないと、100個のアセットのみがカード表示に読み込まれ、200個のアセットがリスト表示に読み込まれます。 「すべてを選択」オプションを選択すると、多数のアセットのみが選択されます。
 
 For more information, see [view and selecting your resources](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 
