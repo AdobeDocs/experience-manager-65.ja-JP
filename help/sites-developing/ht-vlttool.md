@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
-source-git-commit: 049e28176c9b98eeb3c2c6764cb868c51f1141bb
+source-git-commit: a7c3848704ee2b4b984fafcd82e29a75ea8d3443
 
 ---
 
@@ -215,7 +215,7 @@ Options:
 
 VLT で実行される一般的なタスクの一部を以下に示します。各コマンドについて詳しくは、個々の[コマンド](#vlt-commands)を参照してください。
 
-### オーブツリーのチェックアウト {#checking-out-a-subtree}
+### Checking Out a Subtree {#checking-out-a-subtree}
 
 If you only want to check out a subtree of the repository for example, `/apps/geometrixx`, you can do so by typing the following:
 
