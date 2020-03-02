@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -368,7 +368,7 @@ JAX-WSを使用して、FormsサービスのWSDLをJavaプロキシクラスに�
 1. JDK 1.6以降をインストールします。
 
    * JDK binディレクトリをクラスパスに追加します。
-   * JRE binディレクトリをクラスパスに追加します。 このbinは、 [*JDK_INSTALL_LOCATION*]/jreディレクトリにあります。
+   * JRE binディレクトリをクラスパスに追加します。 このbinはディレクトリ内にあ `[JDK_INSTALL_LOCATION]/jre` ります。
    * 環境変数を `JAVA_HOME` 、JDKをインストールしたディレクトリに設定します。
    JDK 1.6には、build.xmlファイルで使用されるwsimportプログラムが含まれています。 JDK 1.5には、このプログラムは含まれていません。
 
@@ -558,7 +558,7 @@ Apache Axis WSDL2Javaツールを使用して、FormsサービスをJavaプロ�
    * xalan.jar
    * xbean.jar
    * xercesImpl.jar
-   これらのJARファイルは、 *[installディレクトリ]*/Adobe/Adobe Experience Manager Forms/sdk/lib/thirdpartyディレクトリにあります。
+   これらのJARファイルは、ディレクトリにあ `[install directory]/Adobe/Adobe Experience Manager Forms/sdk/lib/thirdparty` ります。
 
 **関連トピック**
 
