@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -43,7 +43,7 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
 
 >[!NOTE]
 >
->AEM FormsリポジトリはWebブラウザーを使用して参照できます。 リポジトリを参照するには、Webブラウザーhttps://[server name]:[server port]/repositoryに次のURLを入力します。 「AEM Formsリポジトリでの作業」セクションに関連付けられているクイックスタート結果は、Webブラウザーを使用して確認できます。 例えば、AEM Formsリポジトリにコンテンツを追加すると、Webブラウザーでそのコンテンツを表示できます。 (See [Quick Start (SOAP mode): Writing a resource using the Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>AEM FormsリポジトリはWebブラウザーを使用して参照できます。 リポジトリを参照するには、Webブラウザーに次のURLを入力しま `https://[server name]:[server port]/repository`す。 「AEM Formsリポジトリでの作業」セクションに関連付けられているクイックスタート結果は、Webブラウザーを使用して確認できます。 例えば、AEM Formsリポジトリにコンテンツを追加すると、Webブラウザーでそのコンテンツを表示できます。 (See [Quick Start (SOAP mode): Writing a resource using the Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
 リポジトリAPIは、リポジトリに情報を保存し、リポジトリから情報を取得するために使用できる多くの操作を提供します。 例えば、リソースのリストを取得したり、アプリケーションの処理の一部としてリソースが必要な場合にリポジトリに保存される特定のリソースを取得したりできます。
 
