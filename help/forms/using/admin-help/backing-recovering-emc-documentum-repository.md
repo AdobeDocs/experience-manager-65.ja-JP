@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -189,22 +189,22 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 設定ファイルのパスワードを、次のように設定します。
 
-   * Open a command prompt, and change to *[NetWorker_root]*\Legato\nsr\bin.
+   * Open a command prompt, and change to `[NetWorker_root]\Legato\nsr\bin`.
    * Run the following command: `-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
 
 1. データベースのバックアップに使用する実行可能なバッチファイル（.bat）を作成します（NetWorker のマニュアルを参照）。インストールされている状態に応じて、バッチファイルの詳細を設定します。
 
    * 完全なデータベースバックアップ（nsrnmddbf.bat）：
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[username ]*password`-P`*[password password]*`-l full`*database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P`*[password ]*`-l full`*&lt;database_name>*
 
    * 増分データベースバックアップ（nsrnmddbi.bat）：
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[username ]*password`-P`*[password password]*`-l 1 -R`*database_name>*
+      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P``[password]``-l 1 -R`*&lt;database_name>*
 
    * データベースログバックアップ（nsrnmddbl.bat）： 
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[username ]*password`-P`*[password password]*`-l incr -R`*database_name>*
+      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>``-U``[username]``-P``[password]``-l incr -R`*&lt;データベース名>*
 
       ここで、
 
@@ -240,7 +240,7 @@ AEM forms データの完全バックアップを完了してから、以下の�
 >
 >コマンドスクリプトには、[EMC Document Content Server のバックアップおよび復元の準備](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery)で作成した nsrnmd_win.cfg ファイルへのフルパスが必要です。
 
-1. Open a command prompt, and change to *[NetWorker_root]*\Legato\nsr\bin.
+1. Open a command prompt, and change to `[NetWorker_root]\Legato\nsr\bin`.
 1. 次のコマンドを実行します。
 
    ```as3
@@ -266,4 +266,3 @@ AEM forms データの完全バックアップを完了してから、以下の�
    ```as3
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
    ```
-
