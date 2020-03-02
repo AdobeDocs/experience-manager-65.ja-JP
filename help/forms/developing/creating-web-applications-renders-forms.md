@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -383,7 +383,7 @@ WARファイルは、AEM FormsがデプロイされるJ2EEアプリケーショ�
 
 **WARファイルをJ2EEアプリケーションサーバーにデプロイするには：**
 
-* 書き出しパスのWARファイルを *[Forms Install]*\Adobe\Adobe Experience Manager Forms\jboss\server\all\deployにコピーします。
+* エクスポートパスからにWARファイルをコピーしま `[Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\all\deploy`す。
 
 ### Webアプリケーションのテスト {#testing-your-web-application}
 
