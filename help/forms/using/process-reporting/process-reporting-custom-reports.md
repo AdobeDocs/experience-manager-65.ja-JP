@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -32,7 +32,7 @@ QueryBuilderのRESTインターフェイスを使用するか、QueryBuilder API
 
 CRX queryBuilder RESTインターフェイスは、Java APIとREST APIを通じてアセット共有クエリビルダーの機能を公開します。 次の手順を実行する前に、 [CRX queryBuilder RESTインターフェイスの使用方法を](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)、次に示します。
 
-1. URL https://[server]:port/lc/bin/querybuilder.jsonを参照し[ます]。
+1. URLの参照 `https://[server]:[port]/lc/bin/querybuilder.json`
 1. Process Reportingのストレージノード構造とノードプロパティに基づいてクエリーを作成します。
 
    オプションのパラメーターを指定して、オフセット、制限、ヒットおよびプロパティを指定できます。 静的レポートの引数をハードコードし、動的レポートのUIからパラメーターを取得できます。
