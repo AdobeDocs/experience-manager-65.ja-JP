@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -191,7 +191,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのディスアセンブリ {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、AssemblerResultPDF.pdfというPDFドキュメントを *逆アセンブリします*。 DDXドキュメントの名前は *shell_disassemble.xmlです*。 分解された各PDFドキュメントの名前 *[はResultPDFNumber].pdfです*。 つまり、最初にディスアセンブリされたPDFドキュメントの名前 *はResultPDF1.pdfです。* このコード例で使用され *る* shell_disassemble.xml [DDXドキュメントについて詳しくは、「PDFドキュメントのプログラムによるディスアセンブリ」](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)を参照してください。
+次のJavaコードの例は、AssemblerResultPDF.pdfというPDFドキュメントを *逆アセンブリします*。 DDXドキュメントの名前は *shell_disassemble.xmlです*。 分解された各PDFドキュメントには名前が付けられま `ResultPDF[Number].pdf`す。 つまり、最初にディスアセンブリされたPDFドキュメントの名前 *はResultPDF1.pdfです。* このコード例で使用され *る* shell_disassemble.xml [DDXドキュメントについて詳しくは、「PDFドキュメントのプログラムによるディスアセンブリ」](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)を参照してください。
 
 ```as3
  /*
