@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -702,7 +702,7 @@ Generate PDFサービスで、前述のファイルのいずれにも記述さ�
 
 次の問題に注意してください。
 
-* Microsoft Spy\+\+は、キャプションをアンパサンド(&amp;)を使用してキャプションのホットキーを識別して表示します。 例えば、Spy\+\+は、1つの印刷ダイアログボックスのキャプションを表示します。これは、ホ `Pri&nt`ットキーがnであることを示 *します*。 スクリプトおよびダイアログのXMLファイルのキャプションタイトルでは、アンパサンドを省略する必要があります。
+* Microsoft Spy++は、キャプションをアンパサンド(&amp;)を使用してキャプションのホットキーを識別して表示します。 例えば、Spy++は、1つの印刷ダイアログボックスのキャプションを表示します。これは、ホ `Pri&nt`ットキーがnであることを示 *します*。 スクリプトおよびダイアログのXMLファイルのキャプションタイトルでは、アンパサンドを省略する必要があります。
 * 一部のキャプションには改行が含まれます。 generate PDFサービスは改行を識別できません。 キャプションに改行が含まれる場合は、キャプションを他のメニュー項目と区別するのに十分な量含め、省略した部分に正規表現を使用します。 An example is ( `^Long caption title$`).]. (キャプショ [ン属性での正規表現の使用を参照](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes))。
 * 予約されたXML文字には、文字エンティティ（エスケープシーケンスとも呼ばれます）を使用します。 例えば、アンパサン `&` ド、より小さい `<` 記号とより `>` 大きい記号、アポストロフィ、引用符 `&apos;` には、を `&quot;` 使用します。
 
@@ -713,7 +713,7 @@ Generate PDFサービスで、前述のファイルのいずれにも記述さ�
 ダイアログファイルとスクリプトファイルは、appmondata.jarファイルに格納されています。 これらのファイルを変更したり、新しいスクリプトやダイアログファイルを追加したりする前に、このJARファイルのパッケージを解除する必要があります。 例えば、EditPlusアプリケーションのサポートを追加するとします。 2つのXMLファイル（appmon.editplus.script.en_US.xmlおよびappmon.editplus.script.addition.en_US.xml）を作成します。 次に示すように、これらのXMLスクリプトは、adobe-appmondata.jarファイルの2か所に追加する必要があります。
 
 * adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon adobe-livecycle-native-jboss-x86_win32.earファイルは、次の場所にあるexportフォルダーにあります `[AEM forms install directory]\configurationManager`。 （AEM formsを別のJ2EEアプリケーションサーバーにデプロイする場合は、adobe-livecycle-native-jboss-x86_win32.earファイルを、ご使用のJ2EEアプリケーションサーバーに対応するEARファイルに置き換えます）。
-* adobe-generatepdf-dsc.jar/adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jarファイルは、adobe-generatepdf-dsc.jarファイル内にあります）。 adobe-generatepdf-dsc.jarファイルは、 *[AEM formsのinstall directory]*\deployフォルダーにあります。
+* adobe-generatepdf-dsc.jar/adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jarファイルは、adobe-generatepdf-dsc.jarファイル内にあります）。 adobe-generatepdf-dsc.jarファイルは、このフォルダーにあり `[AEM forms install directory]\deploy` ます。
 
 これらのXMLファイルをadobe-appmondata.jarファイルに追加した後、GeneratePDFコンポーネントを再デプロイする必要があります。 adobe-appmondata.jarファイルにダイアログおよびスクリプトXMLファイルを追加するには、次のタスクを実行します。
 
@@ -741,7 +741,7 @@ Generate PDFサービスで、前述のファイルのいずれにも記述さ�
 
 ファイルを新しいネイティブアプリケーションに転送する場合は、そのアプリケーション用のスクリプトXMLファイルを作成する必要があります。 既にサポートされているネイティブアプリケーションとGenerate PDFサービスとのやり取りを変更する場合は、そのアプリケーションのスクリプトを変更する必要があります。
 
-スクリプトには、ネイティブアプリケーションのウィンドウ要素間を移動し、それらの要素に対して特定の応答を提供する手順が含まれています。 この情報を含むファイルはappmonです。*[appname]*.script.*[locale]*.xml. 例えば、appmon.notepad.script.en_US.xmlなどです。
+スクリプトには、ネイティブアプリケーションのウィンドウ要素間を移動し、それらの要素に対して特定の応答を提供する手順が含まれています。 この情報を含むファイルはです `appmon.[appname]``.script.[locale].xml`。 例えば、appmon.notepad.script.en_US.xmlなどです。
 
 #### スクリプトが実行する必要のある手順の識別 {#identifying-steps-the-script-must-execute}
 
@@ -836,16 +836,16 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
->この場合、「追加」とはアプリの内容を意味します。[applicationname].addition.[locale].xmlファイル。 このようなファイルは、ダイアログXMLファイルへの上書きと追加を指定します。
+>この場合、「追加」とはファイルの内容を意味し `appmon.[applicationname].addition.[locale].xml` ます。 このようなファイルは、ダイアログXMLファイルへの上書きと追加を指定します。
 
 ネイティブアプリケーション用の追加のダイアログXMLファイルは、次の目的で変更することもできます。
 
 * 別の応答を持つアプリケーションのダイアログXMLファイルを上書きするには
 * そのアプリケーションのダイアログXMLファイルで指定されていないダイアログボックスに応答を追加するには
 
-追加のdialogXMLファイルを識別するファイル名はappmonです。*[appname]*.addition.*[locale]*.xml. 例えば、appmon.excel.addition.en_US.xmlなどがあります。
+追加のdialogXMLファイルを識別するファイル名はです `appmon.[appname].addition.[locale].xml`。 例えば、appmon.excel.addition.en_US.xmlなどがあります。
 
-追加のダイアログXMLファイルの名前は、appmonの形式を使用する必要があります。*[applicationname]*.addition.*[locale]*.xml。ここで、 *applicationnameは* 、XML設定ファイルおよびスクリプトで使用されるアプリケーション名と完全に一致する必要があります。
+追加のダイアログXMLファイルの名前は、形式を使用する必要があります。 `appmon.[applicationname].addition.[locale].xml`*applicationnameは* 、XML設定ファイルおよびスクリプトで使用されるアプリケーション名と完全に一致する必要があります。
 
 >[!NOTE]
 >
@@ -898,7 +898,7 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 
 #### ネイティブアプリケーションを検索するための環境変数の作成 {#creating-an-environment-variable-to-locate-the-native-application}
 
-ネイティブアプリケーション実行可能ファイルの場所を指定する環境変数を作成します。 この変数は、applicationname *[_PATHの形式を使用する必要があります。]*** applicationnameは、XML設定ファイルおよびスクリプトで使用されるアプリケーション名と完全に一致し、パスには実行可能ファイルのパスが二重引用符で囲まれている必要があります。 このような環境変数の例を次に示します `Photoshop_PATH`。
+ネイティブアプリケーション実行可能ファイルの場所を指定する環境変数を作成します。 この変数は、形式を使用する必要があり `[applicationname]_PATH`ます。 ** applicationnameは、XML設定ファイルおよびスクリプトで使用されるアプリケーション名と完全に一致し、パスには実行可能ファイルへのパスが二重引用符で囲まれている必要があります。 このような環境変数の例を次に示します `Photoshop_PATH`。
 
 新しい環境変数を作成した後、Generate PDFサービスをデプロイするサーバーを再起動する必要があります。
 
@@ -907,7 +907,7 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 1. コントロ **ールパネル/システムを選択しま**&#x200B;す。
 1. [システムプロパティ]ダイアログボックスで、[詳細設定]タブを **クリックし** 、[環境変数]を **クリックします**。
 1. Environment Variablesダイアログボックスの「System Variables」で、「 **New」をクリックします**。
-1. 「New System Variable」ダイアログ・ボックスの「 **Variable name** 」ボックスに、applicationname *[]*_PATHという形式を使用する名前を入力します。
+1. New System Variableダイアログボックスの「 **Variable name** 」ボックスに、形式を使用する名前を入力します `[applicationname]_PATH`。
 1. 「 **Variable value** 」ボックスに、アプリケーションの実行可能ファイルのフルパスとファイル名を入力し、「 **OK」をクリックします**。 For example, type: `c:\windows\Notepad.exe`
 1. Environment Variablesダイアログボックスで、「 **OK」をクリックします**。
 
