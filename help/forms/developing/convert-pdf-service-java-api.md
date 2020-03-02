@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: bdd9bb56-14f6-448b-be4a-7c11f670e901
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -144,7 +144,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのJPEGファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-次のJavaコードの例では、 *Loan.pdfというPDFドキュメントを一連のJPEGファイルに変換し* 、C:\Adobe directoryフォルダーに保存します。 各ファイルの名前 *[はtempFileindex].jpgです*。最初の画像ファイルの名前は *tempFile0.jpgです*。 (PDF文書 [の画像形式への変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats))。
+次のJavaコードの例では、 *Loan.pdfというPDFドキュメントを一連のJPEGファイルに変換し* 、C:\Adobe directoryフォルダーに保存します。 各ファイルには名 `tempFile[index].jpg`前が付けられ、最初の画像ファイルの名 *前はtempFile0.jpgです*。 (PDF文書 [の画像形式への変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats))。
 
 ```as3
  /*
