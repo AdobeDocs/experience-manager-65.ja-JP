@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 新しいアーキテクチャでは、AEM は、マスターアセットを担当し、アセットの処理および公開のための Dynamic Media と同期します。
 
-1. マスターアセットが AEM にアップロードされると、Dynamic Media にレプリケートされます。その時点で、Dynamic Media は、ビデオエンコーディングおよび画像の動的バリアントなど、すべてのアセットの処理とレンディションの生成を扱います。（ダイナミックメディア — Scene7モードでは、ファイルサイズが2 GB以下のアセットのみをアップロードできます）。
+1. マスターアセットが AEM にアップロードされると、Dynamic Media にレプリケートされます。その時点で、Dynamic Media は、ビデオエンコーディングおよび画像の動的バリアントなど、すべてのアセットの処理とレンディションの生成を扱います。 <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
 1. レンディションが生成されると、AEM は、リモートの Dynamic Media レンディションに安全にアクセスおよびプレビューできます（バイナリは AEM インスタンスに送り返されません）。
 1. コンテンツを公開および承認する準備ができると、Dynamic Media サービスがトリガーされ、コンテンツが配信サーバーにプッシュされて、CDN にコンテンツがキャッシュされます。
 
@@ -188,7 +188,7 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 画像を要求する際にカラー補正を有効にするためのデフォルトのカラープロパティを設定するには：
 
 1. プロビジョニング中に提供された資格情報を使用して、[Dynamic Media Classic にログイン](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)します。Navigate to **[!UICONTROL Setup > Application Setup]**.
-1. 「**[!UICONTROL 公開設定]**」領域を展開して、「**[!UICONTROL Image Server]**」を選択します。Set **[!UICONTROL Publish Context]** to **[!UICONTROL Image Serving]** when setting defaults for publish instances.
+1. 「**[!UICONTROL 公開設定]**」領域を展開して、「**[!UICONTROL Image Server]**」を選択します。パブリッシュインスタンスのデフォルトを設定する際に、「**[!UICONTROL 公開コンテキスト]**」を「**[!UICONTROL 画像サービング]**」に設定します。
 1. Scroll to the property you need to change, for example a property in the **[!UICONTROL Color Management Attributes]** area.
 
    次のカラー補正プロパティを設定できます。
@@ -200,7 +200,7 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
-For example, you could set the **[!UICONTROL RGB Default Color Space]** to *sRGB*, and **[!UICONTROL CMYK Default Color Space]** to *WebCoated*.
+例えば、**[!UICONTROL RGB の初期設定カラースペース]**&#x200B;を *sRGB* に、**[!UICONTROL CMYK の初期設定カラースペース]**&#x200B;を *WebCoated* に設定できます。
 
 それには、次のようにします。
 
@@ -246,7 +246,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 #### サポートされていない形式に対するカスタムMIMEタイプの追加 {#adding-custom-mime-types-for-unsupported-formats}
 
-AEM Assetsでサポートされていない形式のカスタムMIMEタイプを追加できます。 CRXDE Liteで追加する新しいノードがAEMによって削除されないようにするには、MIMEタイプを移動する前に必ずMIMEタイプを移動し、その有効値が `image_` falseに設定されている必要があります ****。
+AEM Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Lite で追加する新しいノードが AEM によって削除されないようにするには、必ず MIME タイプを `image_` の前に移動し、その有効値を **[!UICONTROL false]** に設定する必要があります 。
 
 **サポートされていない形式にカスタムMIMEタイプを追加するには**
 
@@ -258,7 +258,7 @@ AEM Assetsでサポートされていない形式のカスタムMIMEタイプを
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. ページ上で、 *Adobe CQ Scene7 Asset MIME type Serviceという名前まで下にスクロールします* 。次のスクリーンショットを参照してください。 名前の右側にある「設定値を編集」 **** （鉛筆アイコン）をタップします。
+1. ページで、「*Adobe CQ Scene7 Asset MIME type Service*」という名前が表示されるまで下にスクロールします。次のスクリーンショットを参照してください。名前の右側にある「**[!UICONTROL 設定値を編集]**」（鉛筆アイコン）をタップします。
 
    ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
 
@@ -289,7 +289,7 @@ AEM Assetsでサポートされていない形式のカスタムMIMEタイプを
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
-1. 「プロパティ」タブの `image_vnd.dwg` Value **[!UICONTROL （値）列見出しの]** 行で **[!UICONTROL Value]** (ダブルダウン)列の値を選択したまま、有効になっている **[!UICONTROL Double]****** -down（ダブルダウン）列を開くMIME値をクリックします。
+1. MIME タイプ `image_vnd.dwg` を選択したまま、「**[!UICONTROL プロパティ]**」タブから、「**[!UICONTROL 有効]**」行の「**[!UICONTROL 値]**」列見出しで値をダブルクリックして&#x200B;**[!UICONTROL 値]**&#x200B;ドロップダウンリストを開きます。
 1. フィー `false` ルドに入力します(または、ド **[!UICONTROL ロップダウンリストから]** 「false」を選択します)。
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
