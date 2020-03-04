@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 68692e7b82aecd81a21f3a970f3707f2ff39792a
+source-git-commit: f191f90f7a417387930d2d4cf7b9482aabbd6156
 
 ---
 
@@ -19,7 +19,9 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
 >[!NOTE]
 >
->`sling:OrderedFolder` タイプの Assets フォルダーの共有は、Marketing Cloud との共有時はサポートされません。If you want to share a folder, do not select [!UICONTROL Ordered] when creating a folder.
+>* `sling:OrderedFolder` タイプの Assets フォルダーの共有は、Marketing Cloud との共有時はサポートされません。If you want to share a folder, do not select [!UICONTROL Ordered] when creating a folder.
+>* Experience Managerでは、フォルダーの名前とし `subassets` てwordを使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
+
 
 1. 新しいフォルダーを作成するデジタルアセットフォルダーの場所に移動します。メニューで、「**[!UICONTROL 作成]**」をクリックします。Select **[!UICONTROL New Folder]**.
 1. In the **[!UICONTROL Title]** field, provide a folder name. デフォルトでは、フォルダー名として指定したタイトルが使用されます。フォルダーが作成されると、デフォルトのフォルダー名を上書きして、別のフォルダー名を指定できます。
