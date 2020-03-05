@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -24,7 +24,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
    * AEM UI 内の様々な場所で作成することもできます（例えば、**プロジェクト**）。
    * **タスクを作成**&#x200B;または&#x200B;**プロジェクトタスクを作成**&#x200B;ワークフローのステップから通知することができます。
 
-* ワークフロー：
+* ワークフロー:
 
    * ページのコンテンツに対して実行する必要があるアクションを表す作業項目。
 
@@ -75,16 +75,16 @@ AEM 通知インボックスを開くには：
 
 1. ツールバーのインジケーターをクリックまたはタップします。
 
-1. 「**すべて表示**」を選択します。**AEM インボックス**&#x200B;が開きます。インボックスには、ワークフロー、プロジェクトおよびタスクの項目が表示されます。
+1. 「**すべて表示**」を選択します。**AEM インボックス**&#x200B;が開きます。インボックスには、ワークフロー、プロジェクトおよびタスクからの項目が表示されます。
 1. デフォルトの表示は[リスト表示](#inbox-list-view)ですが、[カレンダー表示](#inbox-calendar-view)に切り替えることもできます。これは、表示セレクター（ツールバーの右上部分）を使用しておこないます。
 
    両方の表示について、[設定を表示](#inbox-view-settings)を定義することもできます。使用可能なオプションは現在の表示によって異なります。
 
-   ![wf-79](assets/wf-79.png)
+   ![wf-79](assets/inbox-list-view.png)
 
 >[!NOTE]
 >
->The Inbox operates as a console, so use [Global Navigation](/help/sites-authoring/basic-handling.md#global-navigation) or [Search](/help/sites-authoring/search.md) to navigate to another location when you are finished.
+>インボックスはコンソールとして機能するため、完了したら[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)または[検索](/help/sites-authoring/search.md)を使用して、別の場所に移動します。
 
 ### インボックス - リスト表示 {#inbox-list-view}
 
@@ -109,7 +109,7 @@ AEM 通知インボックスを開くには：
 
 ![wf-91](assets/wf-91.png)
 
-### インボックス - 表示設定 {#inbox-view-settings}
+### Inbox - Settings {#inbox-view-settings}
 
 両方の表示（リストとカレンダー）について、設定を定義できます。
 
@@ -118,7 +118,7 @@ AEM 通知インボックスを開くには：
    **カレンダー表示**&#x200B;の場合は、次の項目を設定できます。
 
    * **グループ化の条件**
-   * **予定**&#x200B;または&#x200B;**なし**
+   * **スケジュール**&#x200B;または&#x200B;**なし**
    * **カードサイズ**
    ![wf-92](assets/wf-92.png)
 
@@ -126,9 +126,29 @@ AEM 通知インボックスを開くには：
 
    **リスト表示**&#x200B;の場合は、並べ替えメカニズムを設定できます。
 
-   * **並べ替えの基準**
+   * **並べ替えフィールド**
    * **並べ替え順序**
-   ![wf-83](assets/wf-83.png)
+   ![wf-83](assets/inbox-settings.png)
+
+### インボックス — 管理者コントロール {#inbox-admin-control}
+
+ワークフロー管理者グループに属す **るユーザーは** 、「管理者コントロール」オプションをリストに表示できます。 このオプションを使用すると、管理者は次のことができます。
+
+* ヘッダーで使用できるテキストとロゴのカスタマイズを定義します。
+
+* ヘッダーで使用できるナビゲーションオプションの表示を制御し、ワークフローオーサリングモードに切り替えたり、ヘルプや他のソリューションリンクに移動したりできるように制限します。
+
+![管理制御](assets/admin-control.png)
+
+* **ブランディングのカスタマイズ**
+
+   * **ヘッダーテキストのカスタマイズ：** ヘッダーに表示される既存の **Adobe Experience Managerのテキストを置き換えるには** 、このフィールドのテキストを指定します。
+
+   * **ロゴのカスタマイズ：** Digital Asset Management(DAM)で画像をアップロードし、このフィールドを使用してその画像を参照して、ヘッダーに表示されるAdobe Experience Managerのロゴを置き換えます。
+
+* **ユーザーナビゲーション**
+   * **ナビゲーションオプションを非表示にする：** 他のソリューション、ヘルプリンク、Adobe Experience Managerのロゴやテキストをタップしたときに表示されるオプションなど、ヘッダーで使用できるナビゲーションオプションを非表示にするには、このオプションを選択します。
+* **保存：** このオプションをタップまたはクリックして、設定を保存します。
 
 ## 項目に対するアクションの実行 {#taking-action-on-an-item}
 
