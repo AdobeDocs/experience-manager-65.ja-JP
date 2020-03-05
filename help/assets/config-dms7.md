@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7029d6e7047680880ef89365826dd47af478c0b6
+source-git-commit: a986eb3154fba51de20e31b87e9082631f057d27
 
 ---
 
@@ -68,11 +68,13 @@ The installation of feature pack 18912 is *optional*.
 
 詳しくは [、一括アセット移行の機能パック18912のインストールを参照](/help/assets/bulk-ingest-migrate.md) してください。
 
-## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
+## ダイナミックメディア設定の作成 {#configuring-dynamic-media-cloud-services}
 
-**Dynamic Media クラウドサービスを設定する前**：Dynamic Media の資格情報を含んだプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)して、パスワードを変更する必要があります。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media クラウドサービスが正しい資格情報で設定されるように、パスワードを更新することが重要です。
+**ダイナミックメディアを設定する前に**、ダイナミックメディアの資格情報を含むプロビジョニング電子メールを受け取ったら、 [Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) にログインしてパスワードを変更する必要があります。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media クラウドサービスが正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
-Dynamic Media クラウドサービスを設定するには：
+![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
+
+**ダイナミックメディア設定を作成するには**
 
 1. In AEM, tap the AEM logo to access the global navigation console and tap or click the Tools icon, then tap **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. Dynamic Media 設定ブラウザーページの左側のパネルで、「**[!UICONTROL グローバル]**」をタップし（「**[!UICONTROL グローバル]**」の左側にあるフォルダーアイコンをタップまたは選択しないでください）、次に、「**[!UICONTROL 作成]**」をタップします。
@@ -109,8 +111,6 @@ Dynamic Media クラウドサービスを設定するには：
    >
    >
    >アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
-
-   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 1. Dynamic Media コンテンツを公開する前に安全にプレビューするには、AEM オーサーインスタンスを「ホワイトリストに登録」して、Dynamic Media に接続する必要があります。
