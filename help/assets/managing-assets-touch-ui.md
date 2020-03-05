@@ -1,6 +1,6 @@
 ---
 title: AEM Assetsを使用したデジタルアセットの管理
-description: デジタルアセットのアップロード、ダウンロード、編集、検索、削除、注釈の追加、バージョン化などのアセット管理タスクについて説明します。
+description: デジタルアセットのアップロード、ダウンロード、編集、検索、削除、注釈の追加、バージョン化など、アセット管理のタスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
@@ -11,7 +11,7 @@ source-git-commit: f191f90f7a417387930d2d4cf7b9482aabbd6156
 
 # デジタルアセットの管理 {#managing-assets-with-the-touch-optimized-ui}
 
-この記事では、Adobe Experience Manager(AEM)Assetsでアセットを管理および編集する方法について説明します。 ユーザーインターフェイスとレイアウトの使用を開始するには、タッチ操作対応UI [の基本的な処理を参照してください](/help/sites-authoring/basic-handling.md)。 コンテンツフラグメントを管理するには、「コンテンツフラグメ [ントアセットの管理](content-fragments-managing.md) 」を参照してください。
+この記事では、Adobe Experience Manager(AEM)Assetsでアセットを管理および編集する方法について説明します。 ユーザーインターフェイスとレイアウトの使用を開始するには、タッチ操作対応UI [の基本的な処理を参照してくださ](/help/sites-authoring/basic-handling.md)い。 コンテンツフラグメントを管理する方法については、「コンテ [ンツフラグメント](content-fragments-managing.md) 」アセットの管理を参照してください。
 
 ## フォルダーの作成 {#creating-folders}
 
@@ -20,7 +20,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 >[!NOTE]
 >
 >* `sling:OrderedFolder` タイプの Assets フォルダーの共有は、Marketing Cloud との共有時はサポートされません。If you want to share a folder, do not select [!UICONTROL Ordered] when creating a folder.
->* Experience Managerでは、フォルダーの名前とし `subassets` てwordを使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
+>* Experience Managerでは、単語をフォルダーの名 `subassets` 前として使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
 
 
 1. 新しいフォルダーを作成するデジタルアセットフォルダーの場所に移動します。メニューで、「**[!UICONTROL 作成]**」をクリックします。Select **[!UICONTROL New Folder]**.
@@ -56,9 +56,9 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    * On the toolbar, tap the **[!UICONTROL Create]** icon. Then on the menu, tap **[!UICONTROL Files]**. 表示されたダイアログで、必要に応じてファイル名を変更できます。
    * HTML5をサポートするブラウザーで、アセットをアセットユーザーインターフェイスに直接ドラッグします。 ファイル名を変更するためのダイアログは表示されません。
-   ![aemでのオプションの作成](assets/create-options.png)
+   ![aemでオプションを作成](assets/create-options.png)
 
-   複数のファイルを選択するには、CtrlキーまたはCommandキーを押しながら、ファイル選択ダイアログでアセットを選択します。 iPadを使用する場合は、一度に1つのファイルのみを選択できます。
+   複数のファイルを選択するには、CtrlキーまたはCommandキーを押し、ファイル選択ダイアログでアセットを選択します。 iPadを使用する場合は、一度に1つのファイルのみを選択できます。
 
    サイズの大きなアセット（500 MB 超）のアップロードを一時停止して、同じページから後で再開できます。Tap the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
 
@@ -74,7 +74,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    ![chlimage_1-212](assets/chlimage_1-6.png)
 
-   To cancel an ongoing upload, click close (`X`) next to the progress bar. アップロード操作をキャンセルすると、AEM Assetsはアセットの部分的にアップロードされた部分を削除します。
+   To cancel an ongoing upload, click close (`X`) next to the progress bar. アップロード操作をキャンセルすると、AEM Assetsはアセットの一部がアップロードされた部分を削除します。
 
    アップロードを再開する機能は、帯域幅が狭く、ネットワークの誤作動によりサイズの大きなアセットのアップロードに時間がかかるシナリオで特に便利です。アップロード処理を一時停止して、後で状況が改善したときに処理を再開できます。再開すると、処理を一時停止した箇所からアップロードが開始されます。
 
@@ -84,7 +84,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    アセットのアップロード先に既に存在するアセットと同じ名前のアセットをアップロードすると、警告ダイアログが表示されます。
 
-   既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、既存のアセットに対して行った以前の変更（注釈や切り抜きなど）が削除されます。 If you choose to keep both assets, the new asset is renamed with number `1` appended to its name.
+   既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、既存のアセットに対して行った以前の変更（注釈や切り抜きなど）がすべて削除されます。 If you choose to keep both assets, the new asset is renamed with number `1` appended to its name.
 
    ![chlimage_1-213](assets/chlimage_1-7.png)
 
@@ -92,9 +92,9 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
    >
    >When you select **[!UICONTROL Replace]** in the [!UICONTROL Name Conflict] dialog, the asset ID is regenerated for the new asset. この ID は以前のアセットの ID とは異なります。
    >
-   >アセットインサイトがAdobe Analyticsでインプレッション数/クリック数の追跡を有効にしている場合、再生成されたアセットIDは、Analyticsでアセットに対して取得されたデータを無効にします。
+   >Adobe Analyticsでアセットインサイトがインプレッション数/クリック数の追跡を有効にしている場合、再生成されたアセットIDは、Analyticsでアセットに対して取り込まれたデータを無効にします。
 
-   If the asset you upload exists in AEM Assets, the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. The dialog appears only if the `SHA 1` checksum value of the binary of the existing asset matches the checksum value of the asset you upload. この場合、アセットの名前は問題になりません。
+   If the asset you upload exists in AEM Assets, the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. The dialog appears only if the `SHA 1` checksum value of the binary of the existing asset matches the checksum value of the asset you upload. この場合、アセットの名前は関係ありません。
 
    >[!NOTE]
    >
@@ -102,9 +102,9 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    ![chlimage_1-214](assets/chlimage_1-8.png)
 
-   AEM Assetsで重複したアセットを保持するには、「保持」をタップまたはクリック **[!UICONTROL します]**。 アップロードした重複アセットを削除するには、「削除」をタップまたはクリ **[!UICONTROL ックしま]**&#x200B;す。
+   AEM Assetsで重複したアセットを保持するには、「保持」をタップまたはクリッ **[!UICONTROL クします]**。 アップロードした複製アセットを削除するには、「削除」をタップまたはクリ **[!UICONTROL ックしま]**&#x200B;す。
 
-   AEM Assetsでは、ファイル名に使用できない文字を使用してアセットをアップロードすることはできません。 不許可の文字を含むファイル名を持つアセットをアップロードしようとすると、AEM Assetsは警告メッセージを表示し、これらの文字を削除するか、許可された名前を持つアップロードを行うまでアップロードを停止します。
+   AEM Assetsでは、ファイル名に使用できない文字を使用してアセットをアップロードすることはできません。 許可されていない文字以上を含むファイル名のアセットをアップロードしようとすると、AEM Assetsは警告メッセージを表示し、これらの文字を削除するか、許可されている名前のアップロードを行うまで、アップロードを停止します。
 
    To suit specific file naming conventions for your organization, the [!UICONTROL Upload Assets] dialog lets you specify long names for the files that you upload.
 
@@ -173,7 +173,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 | オプション |  | Tap/ click **[!UICONTROL Job Options]** to open the [!UICONTROL Upload Job Options] dialog box and choose options that affect the entire upload job. これらのオプションはすべてのファイルタイプで同じです。<br>アプリケーションの全般設定ページから、ファイルのアップロード用のデフォルトオプションを選択できます。このページを開くには、**[!UICONTROL セットアップ]**／**[!UICONTROL アプリケーション設定]**&#x200B;を選択します。Tap the **[!UICONTROL Default Upload Options]** button to open the [!UICONTROL Upload Job Options] dialog box. |
 |  | 実行時 | 「一時」または「定期」を選択します。定期ジョブを設定するには、繰り返しオプション（毎日、毎週、またはカスタム）を選択し、FTP アップロードジョブを反復する頻度を指定します。次に、必要に応じてスケジューリングオプションを指定します。 |
 |  | サブフォルダーを含める | アップロードしたいフォルダー内のすべてのサブフォルダーをアップロードします。アップロードするフォルダーとそのサブフォルダーの名前は AEM Assets に自動的に登録されます。 |
-|  | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。次に、画像のいずれかの辺または各辺から切り抜くピクセル数を入力します。画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。例えば、画像が 150 ppi で表示されている場合に、「上」、「右」、「下」、「左」テキストボックスに 75 と入力すると、各辺から 0.5 inch ずつ切り抜かれます。<br>画像からホワイトスペースを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」フィールドに画像の各辺から切り抜くピクセル数を入力します。また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**Color** - 「カラー」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色を最も表現している色の画像の角を選択します。</li><li>****&#x200B;透明度 - 「透明度」オプションを選択します。<br> **Tolerance** — スライダをドラッグして、許容値を0 ～ 1の範囲で指定します。カラーに基づくトリミングの場合は、0に設定すると、画像の隅で選択した色と正確に一致するピクセルのみが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。1 に近いほど、不透明さに対する許容度が高くなります。</li></ul><br>これらの切り抜きツールオプションは、非破壊です（何度でも修正できます）。 |
+|  | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。次に、画像のいずれかの辺または各辺から切り抜くピクセル数を入力します。画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。例えば、画像が 150 ppi で表示されている場合に、「上」、「右」、「下」、「左」テキストボックスに 75 と入力すると、各辺から 0.5 inch ずつ切り抜かれます。<br>画像からホワイトスペースを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」フィールドに画像の各辺から切り抜くピクセル数を入力します。また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**色** - 「色」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色を最も表現している色の画像の角を選択します。</li><li>****&#x200B;透明度 - 「透明度」オプションを選択します。<br> **許容値** — スライダをドラッグして、許容値を0 ～ 1の範囲で指定します。色に基づいてトリミングする場合は、0を指定すると、画像の隅で選択した色と正確に一致する場合にのみピクセルが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。1 に近いほど、不透明さに対する許容度が高くなります。</li></ul><br>これらの切り抜きツールオプションは、非破壊です（何度でも修正できます）。 |
 |  | カラープロファイルオプション | 配信に使用される最適なファイルを作成するときのカラー変換を選択します。<ul><li>デフォルトの色保存：画像にカラースペース情報が含まれる場合はソース画像の色を保持します。カラー変換はおこなわれません。今日ほぼすべての画像に適切なカラープロファイルが埋め込まれています。ただし、CMYK のソース画像にカラープロファイルが埋め込まれていないと、色が standard Red Green Blue（sRGB）カラースペースに変換されます。sRGB は Web ページでの画像表示に最適なカラースペースです。</li><li>オリジナルカラースペースを維持：アップロード時にカラー変換をおこなわずに元の色を保持します。カラープロファイルが埋め込まれていない画像の場合、カラー変換はすべて、公開設定で設定したデフォルトのカラープロファイルを使用しておこなわれます。このカラープロファイルは、このオプションで作成したファイルのカラーと一致しない可能性があります。したがって、「デフォルトの色保存」オプションを使用することをお勧めします。</li><li>カスタム アップロード元／アップロード先<br> アップロード元とアップロード先のカラースペースを選択できるメニューが開きます。この詳細オプションは、ソースファイルに埋め込まれたカラー情報より優先されます。送信するすべての画像のカラープロファイルデータが正しくないか不足している場合に、このオプションを選択します。</li></ul> |
 |  | 画像編集オプション | 画像のクリッピングマスクを保持し、カラープロファイルを選択できます。<br>[アップロード時の画像編集オプションの設定](#setting-image-editing-options-at-upload)を参照してください。 |
 |  | Postscript オプション | PostScript® ファイルのラスタライズ、ファイルの切り抜き、透明背景の維持、解像度の選択、カラースペースの選択をおこなうことができます。<br>[PostScript および Illustrator のアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
@@ -226,7 +226,7 @@ PostScript（EPS）または Illustrator（AI）画像ファイルのアップ�
 
 #### Photoshopのアップロードオプションの設定 {#setting-photoshop-upload-options}
 
-Photoshopドキュメント(PSD)ファイルは、画像テンプレートの作成に最もよく使用されます。 When you upload a PSD file, you can create an image template automatically from the file (select the [!UICONTROL Create Template] option on the Upload screen).
+Photoshop Document(PSD)ファイルは、画像テンプレートの作成に最もよく使用されます。 When you upload a PSD file, you can create an image template automatically from the file (select the [!UICONTROL Create Template] option on the Upload screen).
 
 レイヤーの含まれる PSD ファイルをテンプレートの作成に使用すると、Dynamic Media はこのファイルから複数の画像を作成します。1 レイヤーにつき 1 画像作成されます。
 
@@ -277,9 +277,9 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 | Option | サブオプション | 説明 |
 |---|---|---|
-| アダプティブビデオ |  | モバイル、タブレットおよびデスクトップに配信するビデオを作成するための、任意の縦横比で機能する単一のエンコーディングプリセットです。 このプリセットでエンコードされたアップロード済みソースビデオは、固定の高さに設定されます。ただし、幅はビデオの縦横比を保持して自動的に拡大・縮小します。<br>ベストプラクティスは、アダプティブビデオエンコーディングを使用することです。 |
-| シングルエンコーディングプリセット | エンコードプリセットの並べ替え | 「名前」または「サイズ」を選択して、「デスクトップ」、「モバイル」および「タブレット」に一覧表示されたエンコーディングプリセットを名前順または解像度サイズ順に並べ替えます。 |
-|  | デスクトップ | ストリーミングビデオまたはプログレッシブビデオをデスクトップコンピュータに配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを持つ1つ以上の縦横比を選択します。 |
+| アダプティブビデオ |  | モバイル、タブレットおよびデスクトップに配信するビデオを作成するための、任意の縦横比で機能する単一のエンコーディングプリセットです。 このプリセットでエンコードされたアップロード済みソースビデオは、固定の高さに設定されます。ただし、幅はビデオの縦横比を保持して自動的に拡大・縮小します。<br>ベストプラクティスは、アダプティブビデオのエンコーディングを使用することです。 |
+| シングルエンコーディングプリセット | エンコードプリセットの並べ替え | 「名前」または「サイズ」を選択して、「デスクトップ」、「モバイル」および「タブレット」の下に表示されるエンコーディングプリセットを、名前または解像度サイズで並べ替えます。 |
+|  | デスクトップ | デスクトップコンピュータにストリーミングビデオまたはプログレッシブビデオを配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを持つ1つ以上の縦横比を選択します。 |
 |  | Mobile | iPhoneまたはAndroid携帯端末に配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを使用して、1つ以上の縦横比を選択します。 |
 |  | タブレットなど）のアクティブマーカーを確認する。 | iPadまたはAndroidタブレットデバイスに配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを使用して、1つ以上の縦横比を選択します。 |
 
@@ -291,11 +291,11 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 ### ストリーミングアップロード {#streamed-uploads}
 
-AEMに多数のアセットをアップロードする場合、サーバーへのI/O要求が大幅に増加するので、アップロードの効率が低下し、一部のアップロードタスクがタイムアウトする場合もあります。 AEM Assets はアセットのストリーミングアップロードをサポートします。ストリームアップロードは、リポジトリにコピーする前にサーバ上の一時フォルダにアセットを保存するのを避け、アップロード操作中のディスクI/Oを削減します。 代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。AEM Assets では、ストリーミングアップロードはデフォルトで有効になっています。
+AEMに多数のアセットをアップロードする場合、サーバーへのI/O要求が大幅に増加するので、アップロードの効率が低下し、一部のアップロードタスクがタイムアウトする場合もあります。 AEM Assets はアセットのストリーミングアップロードをサポートします。ストリームアップロードは、リポジトリにコピーする前にサーバ上の一時フォルダにアセットを保存しないようにすることで、アップロード操作中のディスクI/Oを削減します。 代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。AEM Assets では、ストリーミングアップロードはデフォルトで有効になっています。
 
 >[!NOTE]
 >
->バージョン3.1より前のservlet-apiを持つJEEサーバー上で実行しているAEMでは、ストリーミングアップロードが無効になっています。
+>バージョン3.1より前のservlet-apiを持つJEEサーバー上で実行されているAEMでは、ストリーミングアップロードが無効になっています。
 
 ### アセットが含まれている ZIP アーカイブの抽出 {#extractzip}
 
@@ -351,11 +351,11 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
    ![chlimage_1-217](assets/chlimage_1-12.png)
 
-1. To deactivate the asset after a particular duration, choose the deactivation date/time from the date picker beside the **[!UICONTROL Off Time]** field. アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。オフ時間の後 [!UICONTROL は]、アセットとそのレンディションは、アセットWebインターフェイスまたはHTTP API経由では使用できません。
+1. To deactivate the asset after a particular duration, choose the deactivation date/time from the date picker beside the **[!UICONTROL Off Time]** field. アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。「オフ」の [!UICONTROL 後は]、アセットとそのレンディションは、アセットWebインターフェイスまたはHTTP API経由では使用できなくなります。
 
    ![chlimage_1-218](assets/chlimage_1-13.png)
 
-1. 「**[!UICONTROL タグ]**」フィールドで、タグを 1 つ以上選択します。カスタムタグを追加するには、ボックスにタグの名前を入力し、Enter キーを押します。新しいタグが AEM に保存されます。YouTubeに投稿するにはタグが必要です。 See [publish videos to YouTube](video.md#publishing-videos-to-youtube).
+1. 「**[!UICONTROL タグ]**」フィールドで、タグを 1 つ以上選択します。カスタムタグを追加するには、ボックスにタグの名前を入力し、Enter キーを押します。新しいタグが AEM に保存されます。YouTubeにはタグが必要です。 See [publish videos to YouTube](video.md#publishing-videos-to-youtube).
 
    >[!NOTE]
    >
@@ -385,7 +385,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 アセットの特定のコピーに一意に関連付けられる属性は継承されません。例えば、以下のものが該当します。
 
-* アセットID、作成日時、バージョンおよびバージョン履歴。 Some of these properties are indicated by the properties `jcr:uuid`, `jcr:created`, and `cq:name`.
+* アセットID、作成日時、バージョンとバージョン履歴。 Some of these properties are indicated by the properties `jcr:uuid`, `jcr:created`, and `cq:name`.
 
 * 作成時間と参照パスは、各アセットとその各レンディションに対して一意です。
 
@@ -523,7 +523,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
       * アセットに参照がある場合は、「**1 つ以上のアセットが参照されています。**」というエラーメッセージが表示されます。「**[!UICONTROL 削除を強制]**」または「**[!UICONTROL キャンセル]**」を選択できます。
    >[!NOTE]
    >
-   >アセットを削除するには、ユーザーはに対する削除権限が必要で `dam/asset`す。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
+   >アセットを削除するには、ユーザーがに対する削除権限が必要で `dam/asset`す。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
 
    >[!NOTE]
    >
@@ -548,7 +548,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
    >[!NOTE]
    >
-   >空のフォルダ（発行したフォルダの一部）は、発行されません。
+   >公開したフォルダの一部である空のフォルダは、公開されません。
 
 1. 「**[!UICONTROL 公開]**」をタップまたはクリックして、アセットのアクティベートを確認します。
 
@@ -574,7 +574,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 1. 確認ダイアログで、次のいずれかをタップまたはクリックします。
 
    * **[!UICONTROL キャンセル]**：アクションを停止します。
-   * **[!UICONTROL 「非公開]** 」を選択すると、指定した日にアセットが非公開（公開環境で使用できなくなった）になることを確認できます。
+   * **[!UICONTROL 非公開]** ：指定した日にアセットが非公開（公開環境で使用できなくなった）であることを確認します。
    >[!NOTE]
    >
    >複雑なアセットを非公開にする場合は、アセットだけを非公開にします。参照は他の公開済みアセットから参照されている可能性があるので、非公開にしないでください。
@@ -618,17 +618,17 @@ CUG は、アセットへのアクセスを制限する追加の方法です。�
 
 You can view, navigate through, and select assets with any of the available views (Card, Column, and List) using the **[!UICONTROL Select]** option.
 
-リストビューと列ビューで、アセットのサムネ **[!UICONTROL ールにポインターを]** 置くと、「選択」オプションが表示されます。
+リストビューと列ビューで、アセットのサムネ **[!UICONTROL ールに]** （ポインターを合わせたとき）「選択」オプションが表示されます。
 
 ![select_quick_in_listview](assets/select_quick_in_listview.png)
 
 ![select_quick_in_columnview](assets/select_quick_in_columnview.png)
 
-カード表示では、「選択」オプ **[!UICONTROL ションが]** 、クイックアクションとして表示されます。
+カード表示では、「選択」オ **[!UICONTROL プションが]** 、クイックアクションとして表示されます。
 
 ![select_quick_action](assets/select_quick_action.png)
 
-ブラウザーのアセットユーザーインターフェイスでフォルダーまたはコレクションを参照する場合、右上隅の「すべて選択」オプションを使用して、表示または読み込まれたすべてのアセットを選択できます  。 下にスクロールしないと、100個のアセットのみがカード表示に読み込まれ、200個のアセットがリスト表示に読み込まれます。 「すべてを選択」オプションを選択すると、多数のアセットのみが選択されます。
+ブラウザのアセットユーザインターフェイスでフォルダまたはコレクションを参照する場合、右上隅の「すべて選択」オプションを使用して、表示または読み込まれたすべてのアセットを  「選択」で選択できます。 下にスクロールしないと、100個のアセットのみがカード表示に読み込まれ、200個のアセットがリスト表示に読み込まれます。 「すべてを選択」オプションを選択すると、多数のアセットのみが選択されます。
 
 For more information, see [view and selecting your resources](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 
@@ -702,11 +702,11 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 >
 >タイムラインには、[コンテンツフラグメントに固有のオプション](/help/assets/content-fragments-managing.md#timeline-for-content-fragments)がいくつか含まれています。
 
-## アセットへの注釈の追加 {#annotating}
+## アセットに注釈を付ける {#annotating}
 
-注釈とは、画像やビデオに追加するコメントまたは注記です。注釈を使用すると、マーケターはアセットに関する共同作業やフィードバックの送信を行うことができます。
+注釈とは、画像やビデオに追加するコメントまたは注記です。注釈を使用すると、マーケターはアセットに関する共同作業やフィードバックを残すことができます。
 
-ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。AEM Assetsがサポートするビデオ形式は、ブラウザーによって異なります。
+ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。AEM Assetsでサポートされるビデオ形式は、ブラウザーによって異なります。
 
 >[!NOTE]
 >
@@ -778,7 +778,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 ### 注釈の印刷 {#printing-annotations}
 
-アセットに注釈が含まれている場合や、アセットがレビューワークフローの対象となっている場合は、注釈と共にアセットを印刷し、オフラインレビュー用のPDFファイルとしてステータスをレビューできます。
+アセットに注釈が含まれている場合や、アセットがレビューワークフローの対象になっている場合は、アセットを注釈と共に印刷し、オフラインレビュー用のPDFファイルとしてステータスを確認できます。
 
 注釈またはレビューステータスのみ印刷することも選択できます。
 
@@ -843,7 +843,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 1. Access the Annotation PDF configuration from the URL `https://[aem_server]:[4502]/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig`.
 1. 以下のように、正しいフォントファミリのセットを使用して注釈 PDF を設定します。
 
-   * 文字列をfont-family `<font_family_name_of_custom_font, sans-serif>` オプション内に含めます。 For example, if you want to print annotations in CJK (Chinese, Japanese and Korean), include the string `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` in the font-family option. ヒンディー語で注釈を印刷する場合は、適切なフォントをダウンロードし、フォントファミリーをArial Unicode MS、Not Sans、Not Sans CJK JP、Not Sans Devanagari、sans-serifとして設定します。
+   * 文字列をfont-family `<font_family_name_of_custom_font, sans-serif>` オプション内に含めます。 For example, if you want to print annotations in CJK (Chinese, Japanese and Korean), include the string `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` in the font-family option. ヒンディー語で注釈を印刷する場合は、適切なフォントをダウンロードし、フォントファミリーをArial Unicode MS、Noto Sans、Noto Sans CJK JP、Noto Sans Devanagari、sans-serifとして設定します。
 
 1. AEM インスタンスを再起動します。
 
@@ -949,7 +949,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 ## コレクション {#collections}
 
-コレクションとは、一連のアセットを順序よく並べたものです。コレクションを使用して、関連するアセットをユーザー間で共有したり、類似するアセットをクラスター化して、簡単に見つけることができます。
+コレクションとは、一連のアセットを順序よく並べたものです。コレクションを使用して、関連するアセットをユーザー間で共有したり、類似のアセットをクラスター化して、簡単に見つけることができます。
 
 * 1 つのコレクションにはアセットへの参照のみが含まれるので、様々な場所のアセットを含めることができます。各コレクションは、アセットの参照整合性を維持します。
 * コレクションは、権限レベル（編集、表示など）の異なる複数のユーザー間で共有できます。
