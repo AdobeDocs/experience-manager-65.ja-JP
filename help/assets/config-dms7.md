@@ -9,14 +9,14 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
+source-git-commit: 7029d6e7047680880ef89365826dd47af478c0b6
 
 ---
 
 
 # Dynamic Media - Scene7 モードの設定{#configuring-dynamic-media-scene-mode}
 
-開発用、ステージング用、実稼働用など、様々な環境にAdobe Experience Managerを設定する場合は、それらの環境ごとにDynamic Media Cloud Servicesを設定する必要があります。
+開発用、ステージング用、実稼動用など、様々な環境用に設定されたAdobe Experience Managerを使用する場合は、これらの環境のそれぞれに対してDynamic Media Cloud Servicesを設定する必要があります。
 
 ## Dynamic Media - Scene7 モードのアーキテクチャ図 {#architecture-diagram-of-dynamic-media-scene-mode}
 
@@ -36,7 +36,7 @@ source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
 
 >[!NOTE]
 >
->ダイナミックメディア — Scene7モードは、AEM作成者インスタンス専用です。 したがって、AEM発行インスタンスで `runmode=dynamicmedia_scene7` はなく、AEM作成者インスタンス *で* 設定する必要があります。
+>ダイナミックメディア — Scene7モードは、AEM作成者インスタンスのみを対象としています。 そのため、AEM発行インスタンスではな `runmode=dynamicmedia_scene7` く、AEM作成者インスタン *スで* 設定する必要があります。
 
 Dynamic Media を有効にするには、ターミナルウィンドウで次を入力することで、コマンドラインから `dynamicmedia_scene7` 実行モードを使用して AEM を開始する必要があります（例で使用しているポートは 4502）。
 
@@ -64,7 +64,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 The installation of feature pack 18912 is *optional*.
 
-機能パック18912では、FTPを使用してアセットを一括インジェストしたり、AEM上のダイナミックメディア — ハイブリッドモードまたはダイナミックメディアクラシックからダイナミックメディア — Scene7モードにアセットを移行したりできます。 これは [Adobe Professional Servicesから入手できます](https://www.adobe.com/experience-cloud/consulting-services.html)。
+機能パック18912では、FTPを使用してアセットを一括インジェストするか、AEMのダイナミックメディア — ハイブリッドモードまたはダイナミックメディアクラシックからダイナミックメディア — Scene7モードにアセットを移行できます。 Adobe Professional Servicesから入 [手できます](https://www.adobe.com/experience-cloud/consulting-services.html)。
 
 詳しくは [、一括アセット移行の機能パック18912のインストールを参照](/help/assets/bulk-ingest-migrate.md) してください。
 
@@ -84,7 +84,7 @@ Dynamic Media クラウドサービスを設定するには：
    >
    >Dynamic Media の資格情報を含むプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)して、パスワードを変更してください。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media クラウドサービスが正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
-1. 接続に成功すると、次も設定できます。
+1. 接続が成功した場合は、次の設定も可能です。
 
    * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。様々なサブブランド、部門、異なるステージング/実稼働環境に対して、複数のダイナミックメディアアカウントを持つことができます。
 
@@ -93,6 +93,16 @@ Dynamic Media クラウドサービスを設定するには：
    * **[!UICONTROL アセットを公開]** - 「**[!UICONTROL 即時]**」オプションは、アセットがアップロードされると、システムによってアセットが取り込まれ、URL／埋め込みがすぐに提供されることを意味します。アセットを公開するためにユーザーが操作する必要はありません。「**[!UICONTROL アクティベーション時]**」オプションは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。
 
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成されると、AEM は、リモートのDynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリは AEM インスタンスに送り返されません）。 自社のサーバーまたは特別なサーバーを使用する特別な取り決めがない 限り、この設定を指定されたとおりにしておくことをお勧めします。
+
+   * **[!UICONTROL すべてのコンテンツを同期]** — デフォ <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->ルトで選択されています。 ダイナミックメディアとの同期にアセットを選択的に含めるか除外する場合は、このオプションの選択を解除します。 このオプションの選択を解除すると、次の2つのダイナミックメディア同期モードから選択できます。
+
+   * **[!UICONTROL ダイナミックメディア同期モード]**
+      * **[!UICONTROL 有効(デフォルト]** ) — フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+      * **[!UICONTROL デフォルトで無効]** — 選択したフォルダーをダイナミックメディアと同期するように明示的にマークするまで、設定はどのフォルダーにも適用されません。
+選択したフォルダーをダイナミックメディアと同期するようにマークするには、アセットフォルダーを選択し、ツールバーで「プロパティ」をクリ **[!UICONTROL ックしま]**&#x200B;す。 「詳細」タ **[!UICONTROL ブの]** 「ダイナミックメ **[!UICONTROL ディアの同期モード]** 」ドロップダウンリストで、次の3つのオプションから選択します。 When you are done tap **[!UICONTROL Save]**. *注意：これらの3つのオプションは、「すべてのコンテンツを同期」を選択し&#x200B;**た場合は使用できません**。*
+         * **[!UICONTROL 継承]** — フォルダーに明示的な同期値がありません。代わりに、フォルダーは、上位フォルダーの1つ、またはクラウド設定のデフォルトモードから同期値を継承します。 継承された番組の詳細なステータスは、ツールヒントを通じて表示されます。
+         * **[!UICONTROL サブフォルダーを有効にする]** — ダイナミックメディアと同期するために、このサブツリー内のすべてを含めます。 フォルダー固有の設定は、クラウド設定のデフォルトのモードより優先されます。
+         * **[!UICONTROL サブフォルダーに対して無効]** — このサブツリー内のすべての項目をダイナミックメディアとの同期から除外します。
    >[!NOTE]
    >
    >DMS7 ではバージョン管理はサポートされていません。また、遅延アクティベーションは、Dynamic Media 設定を編集ページの「**[!UICONTROL アセットを公開]**」が「**[!UICONTROL アクティベーション時]**」に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
@@ -138,7 +148,7 @@ Some of the tasks above require that you log into Dynamic Media Classic (Scene7)
 * [アプリケーション全般設定の指定](#configuring-application-general-settings)
 * [カラーマネジメントの設定](#configuring-color-management)
 * [アセット処理の設定](#configuring-asset-processing)
-* [サポートされていない形式に対するカスタムMIMEタイプの追加](#adding-custom-mime-types-for-unsupported-formats)
+* [サポートされていない形式のカスタムMIMEタイプの追加](#adding-custom-mime-types-for-unsupported-formats)
 * [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
 #### Image Server の公開設定 {#publishing-setup-for-image-server}
@@ -149,21 +159,21 @@ Some of the tasks above require that you log into Dynamic Media Classic (Scene7)
 
 Image Server 画面では、画像を配信するためのデフォルト設定を指定します。各設定の説明については、UI 画面を参照してください。
 
-* **[!UICONTROL 要求属性]** — これらの設定は、サーバーから配信できる画像に制限を設けます。
+* **[!UICONTROL 属性のリクエスト]** — これらの設定は、サーバーから配信できる画像に制限を設けます。
 * **[!UICONTROL 初期設定の要求属性]** - これらの設定は、画像のデフォルトの表示に関係します。
 * **[!UICONTROL 共通のサムネール属性]** - これらの設定は、サムネール画像のデフォルトの表示に関係します。
-* **[!UICONTROL カタログフィールドの初期設定]**— これらの設定は、画像の解像度と初期設定のサムネールタイプに関係します。
-* **[!UICONTROL カラーマネジメント属性]** — これらの設定によって、使用するICCカラープロファイルが決まります。
-* **[!UICONTROL 互換性属性]** — この設定により、テキストレイヤーの先頭と末尾の段落が、後方互換性を確保するためにバージョン3.6の場合と同様に扱われるようになります。
+* **[!UICONTROL カタログフィールドの初期設定]**— これらの設定は、画像の解像度と初期設定のサムネールの種類に関係します。
+* **[!UICONTROL カラーマネジメント属性]** — 使用するICCカラープロファイルは、次の設定によって決まります。
+* **[!UICONTROL 互換性属性]** — この設定により、テキストレイヤーの先頭と末尾の段落が、後方互換性を保つためにバージョン3.6の場合と同じように扱われます。
 * **[!UICONTROL ローカリゼーションサポート]** — これらの設定を使用して、複数のロケール属性を管理できます。 また、ロケールマップ文字列を指定することもできます。これにより、ビューアのツールチップで使用する言語を指定できます。For more information about setting up **Localization Support]**, see [Considerations when setting up localization of assets](https://help.adobe.com/en_US/scene7/using/WS997f1dc4cb0179f034e07dc31412799d19a-8000.html).
 
 #### アプリケーション全般設定の指定 {#configuring-application-general-settings}
 
 To open the Application General Settings page, in Dynamic Media Classic Global Navigation bar, click **[!UICONTROL Setup > Application Setup > General Settings]**.
 
-**サーバー — **アカウントのプロビジョニング時に、ダイナミックメディアは自動的に貴社に割り当てられたサーバーを提供します。 これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。AEMサポートから明示的に指示されない限り、サーバー名は変更しないでください。
+**サーバー — **アカウントのプロビジョニング時に、Dynamic Mediaは自動的に貴社に割り当てられたサーバーを提供します。 これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。AEMサポートから明示的に指示されない限り、サーバー名は変更しないでください。
 
-**[!UICONTROL 画像を上書き]** — ダイナミックメディアでは、2つのファイルに同じ名前を付けることはできません。 各項目の URL ID（ファイル名から拡張子を取り除いた部分）は一意である必要があります。次のオプションでは、置換アセットのアップロード方法を指定します。オリジナルを置き換えるか、複製するか。 重複するアセット名には「-1」が付けられます（例えば、chair.tif は chair-1.tif に変更されます）。これらのオプションは、元のアセットとは別のフォルダにアップロードされたアセット、または元のアセットとは異なるファイル名拡張子（JPG、TIF、PNGなど）を持つアセットに影響を与えます。
+**[!UICONTROL 画像を上書き]** — ダイナミックメディアでは、2つのファイルに同じ名前を付けることはできません。 各項目の URL ID（ファイル名から拡張子を取り除いた部分）は一意である必要があります。次のオプションでは、置換アセットのアップロード方法を指定します。オリジナルを置き換えるか、複製するか。 重複するアセット名には「-1」が付けられます（例えば、chair.tif は chair-1.tif に変更されます）。これらのオプションは、元のアセットとは別のフォルダにアップロードされたアセットや、元のアセットとは異なるファイル名拡張子（JPG、TIF、PNGなど）を持つアセットに影響を与えます。
 
 * **[!UICONTROL 現在のフォルダでベース名と拡張子が同じファイルを上書き]** — このオプションは、置き換えの最も厳格なルールです。 置き換え画像を元の画像と同じフォルダーにアップロードし、置き換え画像と元の画像のファイル名拡張子が同じになっている必要があります。これらの要件が満たされない場合は、複製が作成されます。
 
@@ -171,10 +181,10 @@ To open the Application General Settings page, in Dynamic Media Classic Global N
 >
 >To maintain consistency with AEM, always choose this setting: **Overwrite in current folder, same base image name/extension**
 
-* **[!UICONTROL 任意のフォルダーでベース名と拡張子が同じファイルを上書き]** — 置換画像のファイル名拡張子が元の画像と同じである必要があります（例えば、chair.jpgはchair.jpgで置き換え、chair.tifでは置き換えません）。 ただし、置き換え画像を、元の画像と別のフォルダーにアップロードできます。更新された画像は新しいフォルダーにあり、元の場所のファイルはなくなります。
-* **[!UICONTROL 任意のフォルダでベース名が同じフォルダを上書き]** — このオプションは最も包括的な置換ルールです。 置き換え画像を、元の画像と別のフォルダーにアップロードでき、ファイル名拡張子が異なるファイルをアップロードして、元のファイルと置き換えることができます。元のファイルが別のフォルダーにある場合、置き換え画像は、アップロード先の新しいフォルダーに存在します。
+* **[!UICONTROL 任意のフォルダでベース名と拡張子が同じファイルを上書き]** — 置換画像と元の画像のファイル名拡張子が同じである必要があります（例えば、chair.jpgはchair.jpgを置き換え、chair.tifは置き換えません）。 ただし、置き換え画像を、元の画像と別のフォルダーにアップロードできます。更新された画像は新しいフォルダーにあり、元の場所のファイルはなくなります。
+* **[!UICONTROL 任意のフォルダでベース名が同じアセットを上書き(拡張子に関係なく]** ) — このオプションは、最も包括的な置き換えルールです。 置き換え画像を、元の画像と別のフォルダーにアップロードでき、ファイル名拡張子が異なるファイルをアップロードして、元のファイルと置き換えることができます。元のファイルが別のフォルダーにある場合、置き換え画像は、アップロード先の新しいフォルダーに存在します。
 
-**[!UICONTROL 初期設定のカラープロファイル]** — 詳し [くは、カラーマネジメントの設定](#configuring-color-management) を参照してください。
+**[!UICONTROL 初期設定のカラープロファイル]** — 詳し [くは、カラーマネジメントの設定](#configuring-color-management) （英語のみ）を参照してください。
 
 >[!NOTE]
 >
@@ -196,7 +206,7 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
    * **[!UICONTROL CMYK初期設定カラースペース]** — 初期設定のCMYKカラープロファイルの名前
    * **[!UICONTROL Gray-Scale Default Color Space]** — デフォルトのグレーカラープロファイルの名前
    * **[!UICONTROL RGB Default Color Space]** — 初期設定のRGBカラープロファイルの名前
-   * **[!UICONTROL Color Conversion Rendering Intent]** — レンダリングインテントを指定します。 Acceptable values are: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric]**. Adobe recommends **[!UICONTROL relative]]**as the default.
+   * **[!UICONTROL [カラー変換レンダリングインテント]** ]：レンダリングインテントを指定します。 Acceptable values are: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric]**. Adobe recommends **[!UICONTROL relative]]**as the default.
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
@@ -207,12 +217,12 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 * RGB および CMYK 画像のカラー補正を有効にします。
 * RGB images that do not have a color profile will be assumed to be in the *sRGB* color space.
 * CMYK images that do not have a color profile will be assumed to be in *WebCoated* color space.
-* RGB出力を返す動的レンディションは、*sRGB *カラースペースに返します。
+* RGB出力を返すダイナミックレンディションは、*sRGB *カラースペースで返します。
 * Dynamic renditions that return CMYK output, will return it in the *WebCoated* color space.
 
 #### アセット処理の設定 {#configuring-asset-processing}
 
-Dynamic Media によって処理されるアセットタイプを定義して、高度なアセット処理パラメーターをカスタマイズできます。例えば、次の操作を行うためにアセット処理パラメータを指定できます。
+Dynamic Media によって処理されるアセットタイプを定義して、高度なアセット処理パラメーターをカスタマイズできます。例えば、次の操作を行うために、アセット処理パラメータを指定できます。
 
 * Adobe PDF を eCatalog アセットに変換する。
 * Adobe Photoshop ドキュメント（.PSD）をパーソナライズ用のバナーテンプレートアセットに変換する。
@@ -244,11 +254,11 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 1. In the upper-left corner of the page, tap **[!UICONTROL CRXDE Lite]** to return to AEM.
 
-#### サポートされていない形式に対するカスタムMIMEタイプの追加 {#adding-custom-mime-types-for-unsupported-formats}
+#### サポートされていない形式のカスタムMIMEタイプの追加 {#adding-custom-mime-types-for-unsupported-formats}
 
 AEM Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Lite で追加する新しいノードが AEM によって削除されないようにするには、必ず MIME タイプを `image_` の前に移動し、その有効値を **[!UICONTROL false]** に設定する必要があります 。
 
-**サポートされていない形式にカスタムMIMEタイプを追加するには**
+**サポートされていない形式のカスタムMIMEタイプを追加するには**
 
 1. From AEM, tap **[!UICONTROL Tools > Operations > Web Console]**.
 
@@ -262,7 +272,7 @@ AEM Assets でサポートされていない形式のカスタム MIME タイプ
 
    ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
 
-1. Adobe CQ Scene7 Asset MIME **type Serviceページで、任意のプラス記号アイコン** &lt;+>をクリックします。 新しいMIMEタイプを追加する場合にプラス記号をクリックするテーブル内の場所は簡単です。
+1. Adobe CQ Scene7 Asset MIME **type Serviceページで** 、任意のプラス記号アイコン&lt;+>をクリックします。 新しいMIMEタイプを追加するプラス記号をクリックしたテーブル内の場所は簡単です。
 
    ![2019-08-02_16-27-27](assets/2019-08-02_16-27-27.png)
 
@@ -285,12 +295,12 @@ AEM Assets でサポートされていない形式のカスタム MIME タイプ
 
    `conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
 
-1. MIMEタイプをドラッグし、 `image_vnd.dwg` 次のスクリーンショットに `image_` 示すように、ツリーの真上にドロップします。
+1. MIMEタイプをドラッグし、 `image_vnd.dwg` 次のスクリーンショッ `image_` トに示すように、ツリーの真上にドロップします。
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
 1. MIME タイプ `image_vnd.dwg` を選択したまま、「**[!UICONTROL プロパティ]**」タブから、「**[!UICONTROL 有効]**」行の「**[!UICONTROL 値]**」列見出しで値をダブルクリックして&#x200B;**[!UICONTROL 値]**&#x200B;ドロップダウンリストを開きます。
-1. フィー `false` ルドに入力します(または、ド **[!UICONTROL ロップダウンリストから]** 「false」を選択します)。
+1. フィー `false` ルドに入力します(ま **[!UICONTROL たはドロップダウン]** ・リストから「false」を選択します)。
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
 
@@ -344,7 +354,7 @@ AEM Assets でサポートされていない形式のカスタム MIME タイプ
 
 Dynamic Media では、バッチセットプリセットを使用して、アセットをビューアで表示するための画像のセット（代替画像、カラーオプション、360 スピン）に整理します。バッチセットプリセットは、Dynamic Media でのアセットアップロード処理と同時に自動的に実行されます。
 
-バッチセットプリセットを作成、編集および管理できます。バッチセットプリセット定義には2つの形式があります。1つは、設定済みのデフォルトの命名規則用で、もう1つはその場で作成するカスタムの命名規則用です。
+バッチセットプリセットを作成、編集および管理できます。バッチセットプリセット定義には、次の2つの形式があります。1つは、設定済みのデフォルトの命名規則、もう1つは、その場で作成するカスタムの命名規則です。
 
 バッチセットプリセットを定義するフォームフィールドメソッドとコードメソッドのどちらかを使用できます（正規表現を使用できます）。デフォルトの名前では、「フォームを表示」での定義と同時に「コードを表示」を選択して、正規表現を使用して定義を作成できます。また、どちらかの表示をオフにして、一方の表示のみを使用することもできます。
 
@@ -467,7 +477,7 @@ spin-01-01
 To keep Dynamic Media (with `dynamicmedia_scene7` run mode) running smoothly, Adobe recommends the following synchronization performance/scalability fine-tuning tips:
 
 * 事前定義済みの Granite のワークフロー（ビデオアセット）キューワーカースレッドを更新する。
-* 定義済みのGranite一時ワークフロー（画像および非ビデオアセット）キューワーカースレッドを更新します。
+* 定義済みのGranite一時ワークフロー（画像および非ビデオアセット）のキューワーカースレッドを更新します。
 * Dynamic Media Classicサーバーへの最大アップロード接続数を更新します。
 
 #### Granite の一時的なワークフローキューの更新 {#updating-the-granite-transient-workflow-queue}
@@ -494,7 +504,7 @@ The Granite Transit Workflow queue is used for the **[!UICONTROL DAM Update Asse
 
 #### Granite のワークフローキューの更新 {#updating-the-granite-workflow-queue}
 
-Graniteワークフローキューは、非一過性のワークフローに使用されます。 In Dynamic Media, it used to to process video with the **[!UICONTROL Dynamic Media Encode Video]** workflow.
+Graniteワークフローキューは、非一過性のワークフローで使用されます。 In Dynamic Media, it used to to process video with the **[!UICONTROL Dynamic Media Encode Video]** workflow.
 
 **Graniteワークフローキューを更新するには**
 
@@ -516,16 +526,16 @@ Graniteワークフローキューは、非一過性のワークフローに使�
 
 #### Scene7 アップロード接続の更新 {#updating-the-scene-upload-connection}
 
-Scene7アップロード接続設定では、AEMアセットがDynamic Media Classicサーバーに同期されます。
+「Scene7アップロード接続」設定を使用すると、AEMアセットがDynamic Media Classicサーバに同期されます。
 
-**Scene7アップロード接続を更新するには**
+**Scene7のアップロード接続を更新するには**
 
 1. `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl` に移動します。
 1. 「**[!UICONTROL Number of connections]**」フィールドおよび「**[!UICONTROL Active job timeout]**」フィールドで、必要に応じて数値を変更します。
 
    「**[!UICONTROL Number of connections]**」設定は、AEM が Dynamic Media へのアップロードで許可される HTTP 接続の最大数を制御します。通常、事前定義済みの値の 10 接続で十分です。
 
-   The **[!UICONTROL Active job timeout]** setting determines the wait time for uploaded Dynamic Media assets to be published in delivery server. この値は、デフォルトで2100秒または35分です。
+   The **[!UICONTROL Active job timeout]** setting determines the wait time for uploaded Dynamic Media assets to be published in delivery server. この値は、デフォルトで2100秒（35分）です。
 
    ほとんどの事例では、2100 の設定で十分です。
 
@@ -535,9 +545,9 @@ Scene7アップロード接続設定では、AEMアセットがDynamic Media Cla
 
 ### （オプション）レプリケーション用のアセットのフィルタリング{#optional-filtering-assets-for-replication}
 
-In non-Dynamic Media deployments, you replicate *all* assets (both images and video) from your AEM author environment to the AEM publish node. AEMパブリッシュサーバーもアセットを配信するので、このワークフローは必要です。
+In non-Dynamic Media deployments, you replicate *all* assets (both images and video) from your AEM author environment to the AEM publish node. AEMパブリッシュサーバーがアセットも配信するので、このワークフローは必要です。
 
-ただし、ダイナミックメディアデプロイメントでは、アセットはクラウドサービスを介して配信されるので、同じアセットをAEM発行ノードに複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴う余分なストレージコストと処理時間を回避します。 サイトページなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
+ただし、ダイナミックメディアデプロイメントでは、アセットはクラウドサービスを通じて配信されるので、AEM発行ノードに同じアセットを複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴う余分な保存コストと処理時間を回避します。 サイトページなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
 
 フィルターによって、アセットを AEM パブリッシュノードへのレプリケート対象から&#x200B;**&#x200B;除外することができます。
 
@@ -568,7 +578,7 @@ In non-Dynamic Media deployments, you replicate *all* assets (both images and vi
    <td><strong>video/</strong> で始まる</td>
    <td>標準提供の「filter-video」では、次のようになります。
     <ul>
-     <li><br /> 元のビデオと静的サムネールレンディションを複製から除外します。 <br /> </li>
+     <li>Exclude from replication the original video and static thumbnail renditions.<br /> <br /> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -587,7 +597,7 @@ In non-Dynamic Media deployments, you replicate *all* assets (both images and vi
 
 1. フィルターの MIME タイプを定義するために、次のように MIME タイプを特定することができます。
 
-   左側のレールでを展開し、 `content > dam > <locate_your_asset> > jcr:content > metadata`次にテーブルでを見つけます `dc:format`。
+   左のレールでを展開し、 `content > dam > <locate_your_asset> > jcr:content > metadata`次にテーブルでを見つけます `dc:format`。
 
    The following graphic is an example of an asset&#39;s path to `dc:format`.
 
@@ -599,7 +609,7 @@ In non-Dynamic Media deployments, you replicate *all* assets (both images and vi
 
    To have the filter apply only to images of the type JPEG, enter a value of `image/jpeg`.
 
-1. レプリケーションに含める、または除外するレンディションを定義します。
+1. レプリケーションに含めるレンディションまたは除外するレンディションを定義します。
 
    レプリケーション用のフィルターに使用できる文字は次のとおりです。
 
