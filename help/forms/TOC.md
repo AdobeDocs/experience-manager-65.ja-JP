@@ -5,7 +5,7 @@ sub-product: forms
 audience: end-user
 user-guide-title: AEM 6.5 Forms User Guide
 translation-type: tm+mt
-source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
+source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
 
 ---
 
@@ -16,7 +16,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [リリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/release-notes.html#experience-manager-forms)
    + [新機能の概要](using/whats-new.md)
    + [廃止された機能](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/deprecated-removed-features.html)
-+ はじめに{#getting-started}
++ 概要 {#getting-started}
    + [AEM Forms の概要](using/introduction-aem-forms.md)
    + [アダプティブフォームのオーサリングの概要](using/introduction-forms-authoring.md)
    + [Interactive Communicationsの概要](using/interactive-communications-overview.md)
@@ -62,7 +62,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [Automated Forms Conversionサービスのインストールと設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Install AEM Forms on JEE {#jee-installation}
       + [JEE上のAEM formsでサポートされるプラットフォーム](using/aem-forms-jee-supported-platforms.md)
-      + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss自動インストールを使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
+      + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss自動インストールを使用）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
       + [AEM Forms Document Securityサーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
       + [AEM Formsシングルサーバーのインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
       + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
@@ -80,19 +80,19 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [Connector for Microsoft SharePoint の設定](http://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
-      + [AEM forms用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
-+ AEM formsのアップグレード {#upgrade-aem-forms}
+      + [AEM Forms用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
++ AEM Formsのアップグレード {#upgrade-aem-forms}
    + [有効なアップグレードパス](using/upgrade.md)
-   + OSGiでのAEM formsのアップグレード {#aem-forms-osgi-upgrade}
-      + [OSGi上のAEM 6.5 formsへのアップグレード](using/upgrade-forms-osgi.md)
+   + OSGiでのAEM Formsのアップグレード {#aem-forms-osgi-upgrade}
+      + [OSGi上のAEM 6.5 Formsへのアップグレード](using/upgrade-forms-osgi.md)
       + [互換性パッケージをインストールする](using/compatibility-package.md)
       + [AEM Forms のアセットとドキュメントの移行](using/migration-utility.md)
    + JEE上のAEM Formsのアップグレード {#aem-forms-jee-upgrade}
       + [AEM Formsのアップグレードの準備](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
       + [アップグレードのチェックリストと計画](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
-      + [JEE上のAEM 6.5 formsへのアップグレード](using/upgrade-forms-jee.md)
-      + [JEE上のAEM 6.5 FormsリリースからJBoss版AEM 6.5 Formsへのアップグレード](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-      + [JEE上のAEM 6.5 FormsへのAEM Forms自動アップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+      + [JEE上のAEM 6.5 Formsへのアップグレード](using/upgrade-forms-jee.md)
+      + [JEE上のAEM 6.5 FormsへのAEM Formsリリースからのアップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
+      + [JEE上のAEM 6.5 FormsへのAEM Formsリリースからの自動アップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
       + [AEM FormsリリースからJEE上のAEM 6.5 Formsへのアップグレード（WebSphere版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
 + AEM Forms の管理 {#manage-administer-aem-forms}
    + [OSGi 上の AEM Forms のグループと権限](using/forms-groups-privileges-tasks.md)
@@ -106,7 +106,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [アダプティブフォームのローカリゼーション用に新しいロケールをサポート](using/supporting-new-language-localization.md)
    + Handling user data {#handling-user-data}
       + [OSGi でのフォームに特化したワークフロー](using/forms-workflow-osgi-handling-user-data.md)
-      + [Formsのユーザー管理](using/user-management-handling-user-data.md)
+      + [フォームのユーザー管理](using/user-management-handling-user-data.md)
       + [Forms JEEワークフロー](using/forms-workflow-jee-handling-user-data.md)
       + [フォームポータル](using/forms-portal-handling-user-data.md)
       + [Correspondence Management](using/correspondence-management-handling-user-data.md)
@@ -175,7 +175,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [アダプティブフォームと XFA フォームテンプレートとの同期](using/synchronizing-adaptive-forms-xfa.md)
    + [Adobe Sign を AEM Forms に統合する](using/adobe-sign-integration-adaptive-forms.md)
    + [フォームのアセットのレビューの作成と管理](using/create-reviews-forms.md)
-   + [AEMサイトのシングルページアプリケーションにアダプティブフォームまたはインタラクティブ通信を埋め込む](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
+   + [AEM Sitesのシングルページアプリにアダプティブフォームまたはインタラクティブ通信を埋め込む](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
    + [アダプティブフォームの標準検証エラーメッセージ](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + インタラクティブコミュニケーション {#interactive-communications}
    + [インタラクティブ通信オーサリング UI の概要](using/introduction-interactive-communication-authoring.md)
@@ -302,6 +302,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [Correspondence Management の概要](using/cm-overview.md)
    + [レイアウトデザイン](using/layout-design-details.md)
    + [データディクショナリ](using/data-dictionary.md)
+   + [ドキュメントフラグメント](using/document-fragments.md)
    + [レターの作成](using/create-letter.md)
    + [通信を作成](using/create-correspondence.md)
    + [式ビルダーのリモート関数](using/expression-builder.md)
@@ -388,10 +389,10 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [使用するテンプレートに基づいたコンポーネントの表示](using/displaying-components-based-on-template.md)
    + [カスタムアダプティブフォームテーマの作成](using/creating-custom-adaptive-form-themes.md)
 + トランザクションレポート {#transaction-reports}
-   + [トランザクションレポートの概要](using/transaction-reports-overview.md)
+   + [取引レポートの概要](using/transaction-reports-overview.md)
    + [取引レポートの表示と理解](using/viewing-and-understanding-transaction-reports.md)
-   + [トランザクションレポート請求可能API](using/transaction-reports-billable-apis.md)
-   + [カスタム実装用のトランザクションの記録](using/record-transaction-custom-implementation.md)
+   + [取引レポート請求可能API](using/transaction-reports-billable-apis.md)
+   + [カスタム実装のトランザクションの記録](using/record-transaction-custom-implementation.md)
 + JEE上のAEM Formsの管理者ヘルプ {#administrator-help}
    + はじめに {#get-started}
       + [AEM Forms の一般設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
@@ -567,7 +568,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [プロセスレポートの事前定義済みレポート](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md)
    + [プロセスレポートのカスタムレポート](/help/forms/using/process-reporting/process-reporting-custom-reports.md)
    + [プロセスレポートのアドホッククエリ](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
-   + [トラブルシューティングプロセスレポート](/help/forms/using/process-reporting/troubleshooting-process-management.md)
+   + [プロセスレポートのトラブルシューティング](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開発者向けリファレンス {#developer-reference}
    + [開発者の基本事項](https://docs.adobe.com/content/help/en/experience-manager-65/developing/home.html)
    + [HTML テンプレート言語](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
@@ -577,38 +578,38 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
    + [Assembler サービスおよび DDX リファレンス](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
    + [Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_65)
-   + JEE上のAEM formsによるプログラミング {#programming-aem-forms-jee}
+   + JEE上のAEM Formsによるプログラミング {#programming-aem-forms-jee}
       + JEE上のAEM Formsによるプログラミングの概要 {#introduction-programming-aem-forms-jee}
-         + [Java API quickStartの概要](developing/introducing-java-api-soap-quick.md)
+         + [Java APIクイックスタートの概要](developing/introducing-java-api-soap-quick.md)
          + [APIを使用したAEM Formsの呼び出し](developing/invoking-aem-forms-using-apis.md)
          + [AEM Formsプロセスについて](developing/aem-forms-processes.md)
          + [サービスコンテナ](developing/service-container.md)
       + Java APIクイックスタート — コード例 {#java-api-quick-start-code-examples}
          + [Application ManagerクライアントJavaAPIクイックスタート(SOAP)](developing/application-manager-client-java-api.md)
-         + [Application ManagerサービスJavaAPIクイックスタート(SOAP)](developing/application-manager-service-java-api.md)
-         + [Assembler Service Java API quickStart(SOAP)](developing/assembler-service-java-api-quick.md)
-         + [Acrobat Reader DC ExtensionsサービスJava APIクイックスタート(SOAP)](developing/acrobat-reader-dc-extensions-service.md)
+         + [Application Manager Service JavaAPI Quick Start(SOAP)](developing/application-manager-service-java-api.md)
+         + [Assembler Service Java API QuickStart(SOAP)](developing/assembler-service-java-api-quick.md)
+         + [Acrobat Reader DC Extensions ServiceJava APIクイックスタート(SOAP)](developing/acrobat-reader-dc-extensions-service.md)
          + [バックアップと復元サービスAPIQuickの開始](developing/backup-restore-service-api-quick.md)
          + [Barcoded Forms Service Java APIQuick Start(SOAP)](developing/barcoded-forms-service-java-api.md)
          + [コンポーネントとサービスJava APIQuick Start(SOAP)](developing/components-services-java-api-quick.md)
-         + [Convert PDF Service Java API quickStart(SOAP)](developing/convert-pdf-service-java-api.md)
-         + [Credential Service Java API quickStart(SOAP)](developing/credential-service-java-api-quick.md)
-         + [Distiller Service Java API quickStart(SOAP)](developing/distiller-service-java-api-quick.md)
-         + [DocConverterサービスJava API quickStart(SOAP)](developing/docconverter-service-java-api-quick.md)
+         + [Convert PDF Service Java API QuickStart(SOAP)](developing/convert-pdf-service-java-api.md)
+         + [Credential Service Java API QuickStart(SOAP)](developing/credential-service-java-api-quick.md)
+         + [Distiller Service Java API QuickStart(SOAP)](developing/distiller-service-java-api-quick.md)
+         + [DocConverterサービスJava API QuickStart(SOAP)](developing/docconverter-service-java-api-quick.md)
          + [Document Management Service（非推奨）Java APIクイックスタート(SOAP)](developing/document-management-service-deprecated-java.md)
-         + [Document Security Service javaAPIクイックスタート(SOAP)](developing/document-security-service-java-api.md)
-         + [Encryption Service Java API quickStart(SOAP)](developing/encryption-service-java-api-quick.md)
-         + [エンドポイントレジストリJava API quickStart(SOAP)](developing/endpoint-registry-java-api-quick.md)
-         + [Form Data Integration Service javaAPI Quick Start(SOAP)](developing/form-data-integration-service-java.md)
+         + [Document Security Service JavaAPI Quick Start(SOAP)](developing/document-security-service-java-api.md)
+         + [Encryption Service Java API QuickStart(SOAP)](developing/encryption-service-java-api-quick.md)
+         + [Endpoint Registry Java API QuickStart(SOAP)](developing/endpoint-registry-java-api-quick.md)
+         + [Form Data Integration Service JavaAPI Quick Start(SOAP)](developing/form-data-integration-service-java.md)
          + [FormsサービスAPIのクイックスタート](developing/forms-service-api-quick-starts.md)
-         + [Generate PDF Service Java API quickStart(SOAP)](developing/generate-pdf-service-java-api.md)
+         + [Generate PDF Service Java API QuickStart(SOAP)](developing/generate-pdf-service-java-api.md)
          + [呼び出しAPIのクイックスタート](developing/invocation-api-quick-starts.md)
          + [LiveCycleProcess Java API(SOAP)クイックスタート](developing/livecycleprocess-java-api-soap-quick.md)
-         + [Output Service Java API Quick Start(SOAP)](developing/output-service-java-api-quick.md)
+         + [Output Service Java APIクイックスタート(SOAP)](developing/output-service-java-api-quick.md)
          + [PDF UtilitiesサービスJava APIQuick Start(SOAP)](developing/pdf-utilities-service-java-api.md)
-         + [Repository Service APIクイックスタート](developing/repository-service-api-quick-starts.md)
-         + [SignatureサービスJava API quickStart(SOAP)](developing/signature-service-java-api-quick.md)
-         + [Task Manager Service Java API quickStart(SOAP)](developing/task-manager-service-java-api.md)
+         + [Repository Service APIのクイックスタート](developing/repository-service-api-quick-starts.md)
+         + [SignatureサービスJava API QuickStart(SOAP)](developing/signature-service-java-api-quick.md)
+         + [Task Manager Service Java API QuickStart(SOAP)](developing/task-manager-service-java-api.md)
          + [User Manager Java APIクイックスタート(SOAP)](developing/user-manager-java-api-quick.md)
          + [XMP UtilitiesサービスJava APIQuick Start(SOAP)](developing/xmp-utilities-service-java-api.md)
       + APIを使用したJEE上のAEM Formsの呼び出し {#invoking-aem-forms-jee-apis}
@@ -634,7 +635,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
          + [PDFポートフォリオのアセンブリ](developing/assembling-pdf-portfolios.md)
          + [フォームデータの計算](developing/calculating-form-data.md)
          + [フォームをレンダリングするWebアプリケーションの作成](developing/creating-web-applications-renders-forms.md)
-         + [送信済みXMLデータを使用したPDFドキュメントの作成](developing/creating-pdf-documents-submitted-xml.md)
+         + [送信されたXMLデータを使用したPDFドキュメントの作成](developing/creating-pdf-documents-submitted-xml.md)
          + [WebサービスAPIを使用したPDFドキュメントのディスアセンブリ](developing/disassemble-pdf-document-using-web.md)
          + [ドキュメントがPDF/Aに準拠しているかどうかの確認](developing/determining-whether-documents-pdf-a.md)
          + [DDXドキュメントの動的な作成](developing/dynamically-creating-ddx-documents.md)
@@ -649,7 +650,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
          + [カスタムCSSファイルを使用したHTMLフォームのレンダリング](developing/rendering-html-forms-using-custom.md)
          + [カスタムツールバーを使用したHTMLフォームのレンダリング](developing/rendering-html-forms-custom-toolbars.md)
          + [インタラクティブPDFフォームのレンダリング](developing/rendering-interactive-pdf-forms.md)
-         + [使用権限を付与されたフォームのレンダリング](developing/rendering-rights-enabled-forms.md)
+         + [権限を付与されたフォームのレンダリング](developing/rendering-rights-enabled-forms.md)
          + [DDXドキュメントの検証](developing/validating-ddx-documents.md)
          + [PDFからPostscriptおよび画像ファイルへの変換](developing/converting-pdf-postscript-image-files.md)
          + [PostscriptからPDFドキュメントへの変換](developing/converting-postscript-pdf-documents.md)
@@ -660,10 +661,10 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
          + [ユーザーの管理](developing/users.md)
          + [AEM Formsリポジトリの操作](developing/aem-forms-repository.md)
          + [バーコードフォームの操作](developing/barcoded-forms.md)
-         + [秘密鍵証明書の操作](developing/credentials.md)
+         + [秘密鍵証明書の使用](developing/credentials.md)
          + [PDF/Aドキュメントの操作](developing/pdf-a-documents.md)
          + [PDFユーティリティの操作](developing/pdf-utilities.md)
-         + [XMPユーティリティの操作](developing/xmp-utilities.md)
+         + [XMPユーティリティの使用](developing/xmp-utilities.md)
          + [AEM Formsのバックアップの準備](developing/preparing-aem-forms-backup.md)
          + [エンドポイントのプログラムによる管理](developing/programmatically-endpoints.md)
          + [環境設定ノードのプログラム管理](developing/programmatically-preferences-nodes.md)
