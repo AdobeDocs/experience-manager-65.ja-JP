@@ -12,7 +12,7 @@ discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -31,7 +31,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 * [アップグレード後のチェックおよびトラブルシューティング](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)
 * [持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)
 * [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)
-* [AEM 6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring-in-aem65.md)
+* [AEM 6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)
 
 この手順に出てくる AEM インスタンスをわかりやすく区別するために、以下のように呼ぶことにします。
 
@@ -87,5 +87,5 @@ There was a big focus in 6.5 to keep all the new features backward compatible, b
 
 Finally, in your 6.5 development cycle, features introduced under Sustainable Upgrades(see [Sustainable Upgrades](/help/sites-deploying/sustainable-upgrades.md)) help you follow best practices to make future upgrades even more efficient and seamless.
 
-![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
+![6_4_upgrade_overviewflowhart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
 
