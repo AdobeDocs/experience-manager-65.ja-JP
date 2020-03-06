@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -124,13 +124,13 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 1. JDBC が設定された後で既存のデプロイメントにインストールする場合は、Web コンソールから JDBC 設定を再保存することで、JDBC を新しいコネクタに再バインドします。
 
    * 例：https://localhost:4502/system/console/configMgr
-   * 配置構 `Day Commons JDBC Connections Pool` 成
+   * 配置の `Day Commons JDBC Connections Pool` 場所
    * 選択して開きます。
    * select `Save`
 
 1. 手順 3 および 4 をすべてのオーサーおよびパブリッシュインスタンスで繰り返します。
 
-Further information on installing bundles is found on the [Web Console](/help/sites-deploying/configuring-web-console.md#bundles) page.
+Further information on installing bundles is found on the [Web Console](/help/sites-deploying/web-console.md) page.
 
 #### 例：インストール済みの MySQL コネクタバンドル {#example-installed-mysql-connector-bundle}
 
@@ -146,7 +146,7 @@ AEM Communities SCORM エンジンは[イネーブルメント](/help/communitie
 
 **SCORMパッケージをインストールするには**
 
-1. パッケージ共 [有からcq-social-scorm-package、バージョン2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) をインストールします。
+1. パッケージ共有から [cq-social-scorm-package、バージョン2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) をインストールします。
 1. Download `/libs/social/config/scorm/database_scormengine_data.sql` from cq instance and execute it in mysql server to create an upgraded scormEngineDB schema.
 1. Add `/content/communities/scorm/RecordResults` in Excluded Paths property in CSRF filter from `https://<hostname>:<port>/system/console/configMgr` on publishers.
 
@@ -296,7 +296,7 @@ When using the author environment to [create sites](/help/communities/sites-cons
 
 AEM Communities には、すべての AEM サーバーインスタンスで同じ暗号鍵を使用する必要がある機能が 2 つあります。These are [Analytics](/help/communities/analytics.md) and [ASRP](/help/communities/asrp.md).
 
-AEM 6.3では、主要な資料はファイルシステムに保存され、リポジトリには保存されません。
+AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されなくなります。
 
 オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
 
@@ -328,7 +328,7 @@ AEM 6.3では、主要な資料はファイルシステムに保存され、リ�
 
 #### リポジトリのレプリケーション {#repository-replication}
 
-AEM 6.2以前と同様に、主要な材料をリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定する（初期リポジトリを作成する）ことで保存できます。
+AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（初期リポジトリを作成します）。
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
@@ -342,7 +342,7 @@ AEM 6.2以前と同様に、主要な材料をリポジトリに保存する場�
 
 * browse to [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
 * select `/etc/key`
-* 「開く」 `Replication` タブ
+* タブを `Replication` 開く
 * select `Replicate`
 
 * [Granite 暗号バンドルを更新](#refresh-the-granite-crypto-bundle)します。
@@ -360,7 +360,7 @@ AEM 6.2以前と同様に、主要な材料をリポジトリに保存する場�
 
 ![](/help/communities/assets/chlimage_1-131.png)
 
-* しばらくすると、**Success **ダイアログが表示されます。
+* しばらくすると、**成功**ダイアログが表示されます。
    `Operation completed successfully.`
 
 ### Apache HTTP サーバー {#apache-http-server}
