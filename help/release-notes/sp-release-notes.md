@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
+source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
 | バージョン | 6.5.4.0 |
 | タイプ | Service Pack のリリース |
 | 日付 | 2020年3月5日 |
-| ダウンロード URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0) |
+| ダウンロード URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0), [Software Distribution（ベータ版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.4.zip) |
 
 ## Adobe Experience Manager 6.5.4.0の機能 {#what-s-included-in-aem}
 
@@ -128,8 +128,6 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 
 * 同じフォルダー内のコンテンツを移動すると、ページ移動オプションが無効になります(NPR-31840)。
 
-* /_jcr_content/.htmlまたは/jcr:content/.htmlで終わるURLにアクセスすると、CPUのスパイクとAEMの応答が停止します(NPR-31837)。
-
 * 編集可能なテンプレート構造モードでは、レイアウトコンテナの許可されたコンポーネントリストに正しくない結果が表示されます。 デザインダイアログを持つコンポーネントのみがレイアウトコンテナ(NPR-31816)に表示されます。
 
 * ページにユーザーの読み取り専用権限がある場合、「プロパティを開く」オプションはsites.htmlには表示されますが、editor.htmlには表示されません(NPR-31770)。
@@ -179,8 +177,6 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 ### WCMテンプレートエディター {#wcm-template-editor-6540}
 
 * 編集可能なテンプレート構造モードで、レイアウトコンテナ内の許可されたコンポーネントリストにリンクボタンコンポーネントが表示されない(CQ-4282099)。
-
-* URLがで終わるか、またはで終わるURLにアクセスすると、CPUのスパイクとExperience Manager `/_jcr_content/.html` が応 `/jcr:content/.html` 答しなくなります(CQ-4280770)。
 
 ### WCM Page Editor {#wcm-page-editor-6540}
 
