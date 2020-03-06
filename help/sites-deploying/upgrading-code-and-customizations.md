@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -28,14 +28,14 @@ source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
 
 ## 概要 {#overview}
 
-1. **パターンディテクター**[](/help/sites-deploying/pattern-detector.md) — アップグレード計画の説明に従ってパターンディテクターを実行し、このページで詳しく説明します。パターンディテクターレポートには、AEMのTargetバージョンで使用できないAPI/バンドルに加え、対処する必要がある領域の詳細が含まれます。 パターン検出レポートは、コードに互換性のない問題を示します。デプロイメントが既に6.5と互換性がない場合でも、6.5の機能を利用する新しい開発を行うことはできますが、互換性を維持するためだけでは必要ありません。 互換性の問題が報告された場合は、a)「互換性モードで実行し、新しい6.5機能や互換性の開発を延期する」、b)アップグレード後に開発を行い、手順2に進みます。 Please see please see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) for more details.
+1. **パターンディテクター**[](/help/sites-deploying/pattern-detector.md) — アップグレード計画の説明とこのページの詳細に従ってパターンディテクターを実行し、AEMのTargetバージョンの使用できないAPI/バンドルに加え、対処する必要がある領域の詳細を含むパターンディテクターレポートを取得します。 パターン検出レポートは、コードに互換性のない問題を示します。デプロイが既に6.5と互換性がない場合は、6.5の機能を利用する新しい開発を選択できますが、互換性を維持するためだけでは不要です。 非互換性がレポートされる場合は、a)互換モードで実行し、新しい6.5機能や互換性の開発を延期する、b)アップグレード後に開発を行う、手順2に進みます。 Please see please see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) for more details.
 
-1. ** 6.5用のコードベースの開発**- targetバージョンのコードベース用の専用のブランチまたはリポジトリを作成します。 アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
+1. ** 6.5用のコードベースの開発**- Targetバージョンのコードベース用の専用のブランチまたはリポジトリを作成します。 アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
 1. ** 6.5 Uber jarでコンパイル**- 6.5 uber jarを指すようにコードベースのPOMを更新し、これに対してコードをコンパイルします。
-1. **AEMカスタマイズの更新*** - *AEMのカスタマイズや拡張が6.5で動作するように更新または検証し、6.5コードベースに追加する必要があります。 UI 検索フォーム、カスタマイズされているアセット、/mnt/overlay を使用するすべてのものを含めます。
+1. **AEMカスタマイズの更新*** - * AEMのカスタマイズや拡張が6.5で動作するように更新または検証し、6.5コードベースに追加する必要があります。 UI 検索フォーム、カスタマイズされているアセット、/mnt/overlay を使用するすべてのものを含めます。
 
-1. **6.5環境へのデプロイ** — 開発/QA環境でAEM 6.5（作成者と発行）のクリーンインスタンスを立ち上げる必要があります。 更新されたコードベースおよび（現在の実稼動環境の）コンテンツの代表的なサンプルをデプロイする必要があります。
-1. **QA検証とバグ修正** - 6.5の作成者インスタンスと発行インスタンスの両方で、QAがアプリケーションを検証する必要があります。見つかったバグは修正し、6.5コードベースにコミットする必要があります。 すべてのバグが修正されるまで、必要に応じて開発サイクルを繰り返します。
+1. **6.5環境へのデプロイ** - AEM 6.5（作成者と発行）のクリーンインスタンスは、開発/QA環境で立ち上げる必要があります。 更新されたコードベースおよび（現在の実稼動環境の）コンテンツの代表的なサンプルをデプロイする必要があります。
+1. **QA検証とバグ修正** - QAでは、6.5の作成者インスタンスと発行インスタンスの両方でアプリケーションを検証する必要があります。見つかったバグは修正し、6.5コードベースにコミットする必要があります。 すべてのバグが修正されるまで、必要に応じて開発サイクルを繰り返します。
 
 アップグレードに進む前に、アプリケーションコードベースを AEM のターゲットバージョンに対して十分テストし、安定したものにしておく必要があります。テストで得られた見解に基づいて、様々な方法でカスタムコードを最適化できます。リポジトリの走査を回避するためのコードのリファクタリング、検索を最適化するカスタムインデックス作成、JCR での順序なしノードの使用などが含まれます。
 
@@ -66,7 +66,7 @@ AEM Uber jar によって、すべての AEM API が単一の依存関係とし�
 
 ### 管理リソースリゾルバの使用の段階的廃止 {#phase-out-use-of-administrative-resource-resolver}
 
-The use of an administrative session through `SlingRepository.loginAdministrative()` and `ResourceResolverFactory.getAdministrativeResourceResolver()` was quite prevalent in code bases prior to AEM 6.0. These methods have been deprecated for security reasons as they give too broad of a level of access. [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザーと管理セッシ [ョンのフェーズアウト方法について詳しくは]、こちらを参照してください(/help/sites-administering/security-service-users.md#how to phase out admin sessions)。
+The use of an administrative session through `SlingRepository.loginAdministrative()` and `ResourceResolverFactory.getAdministrativeResourceResolver()` was quite prevalent in code bases prior to AEM 6.0. These methods have been deprecated for security reasons as they give too broad of a level of access. [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザーと管理セッシ [ョンをフェーズアウトする方法について詳しくは、](/help/sites-administering/security-service-users.md#how to phase out admin sessions)を参照してください。
 
 ### クエリと Oak インデックス {#queries-and-oak-indexes}
 
@@ -86,9 +86,9 @@ AEM 6.5 でも引き続きクラシック UI オーサリングを利用でき�
 
 ## 6.5 のリポジトリ構造への準拠 {#align-repository-structure}
 
-アップグレードを容易にし、アップグレード中に設定が上書きされないようにするため、リポジトリは6.4で再構造化され、設定とコンテンツが分離されます。
+アップグレードを容易にし、アップグレード時に設定が上書きされないようにするため、リポジトリは6.4で再構造化され、設定とコンテンツを分離します。
 
-Therefore, a number of settings must be moved to no longer reside under `/etc` as had been the case in the past. To review the full set of repository restructuring concerns that must be reviewed and accomodated in the updated to AEM 6.4, see [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring-in-aem65.md).
+Therefore, a number of settings must be moved to no longer reside under `/etc` as had been the case in the past. To review the full set of repository restructuring concerns that must be reviewed and accomodated in the updated to AEM 6.4, see [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring.md).
 
 ## AEM のカスタマイズ  {#aem-customizations}
 
@@ -146,7 +146,7 @@ Adobe recommends putting custom scripts at `/apps/settings/dam/indesign/scripts`
 
 ### ContextHub 設定の復元 {#recovering-contexthub-configurations}
 
-ContextHub 設定は、アップグレードの影響を受けます。既存のContextHub設定を回復する方法については、こちらを参照して [ください](/help/sites-administering/contexthub-config.md#recovering contexthub configurations after upgrade)。
+ContextHub 設定は、アップグレードの影響を受けます。既存のContextHub設定の回復方法については、こちらを参照して [ください](/help/sites-administering/contexthub-config.md#recovering contexthub configurations after upgrading)。
 
 ### ワークフローのカスタマイズ {#workflow-customizations}
 
