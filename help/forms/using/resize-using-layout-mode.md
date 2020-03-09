@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 
 ---
 
@@ -81,11 +81,11 @@ source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 次の手順を実行して、パネルの列数を定義します。
 
-1. 編集モ **[!UICONTROL ードで]** 、パネルをタップし、「設定 ![」を選択し、「レスポンシブ — ナビゲー](assets/configure_icon.png)ションオプションなしでページ上のすべて **** 」を選択します。
+1. 編集モ **[!UICONTROL ードで]** 、パネルをタップし、「設定 ![」を選択し、「パネルレイアウトドロップダウン」リストから「ナビゲーションなしでページ上のすべての要素](assets/configure_icon.png)「レスポンシブ — ******** レスポンシブ」を選択します。
 
 1. 「![保存](assets/save_icon.svg)」をタップして、プロパティを保存します。
 
-1. レイアウ **[!UICONTROL トモードで]**![](assets/select_parent_icon.svg)、パネル内のサイズを変更するコンポーネントのいずれかをタップし、「親を選択」を選択します。パネルがコンポーネントの直接の親である場合は、ドロップダウンリストで最初のオプションを選択します。
+1. レイアウト **[!UICONTROL モードで]** 、パネル内の任意のコンポーネントをタップし、「親を選択」 ![を選択して](assets/select_parent_icon.svg)、パネルを選択します。
 
 1. 複数列 ![をタップし](assets/multi-column.svg) 、ドロップダウンリストから列数を選択します。 列数の範囲は1 ～ 12です。 パネルが複数列のレイアウトに分割されます。
 
