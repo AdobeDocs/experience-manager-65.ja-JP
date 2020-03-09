@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
+source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
 
 ---
 
@@ -112,7 +112,7 @@ AEMヘッダーで利用できるオプションをカスタマイズする必�
 
 AEM 6.5 Service Pack 4には、新機能に加え、次の主なハイライトが含まれています。
 
-* 一部のコンテンツサブツリーのみを、すべてではなくScene7と同期できるようになりまし `content/dam`た。
+* 一部のコンテンツサブツリーのみを、すべての同期ではなく *Dynamic Media - Scene7モード* に同期できるようになりまし `content/dam`た。
 
 * SOAP Webサービスを使用したフォームデータモデルの統合で、要素の選択グループまたは属性がサポートされるようになりました。
 
