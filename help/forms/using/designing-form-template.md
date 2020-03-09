@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 
 ---
 
@@ -41,6 +41,6 @@ HTML5 フォームの主な対象はタッチデバイスです。そのため�
 
 #### Rich text format {#rich-text-format}
 
-レンダリングされたHTML5フォームのテキストフィールドに形式設定オプションのリストを追加するには、Forms Designerでテキストフィールドのフィールド形式を定義します。 デザインビューでテキストフィールド **[!UICONTROL をタップしま]**&#x200B;す。 「フィール **[!UICONTROL ド]** 」タブで、「フ **[!UICONTROL ィールドの形式]** 」ドロップダウンリストから **** 「リッチテキスト」を選択し、設定を適用します。 テキストフィールドは、HTML5フォームでレンダリングされる際に、形式設定オプションを表示します。
+Forms Designerでテキストフィールドのリッチテキストフィールド形式を定義し、レンダリングされたHTML5フォームのフィールドに形式設定オプションのリストを追加します。 設定を適用するには、デザインビューでテキストフィールド **[!UICONTROL をタップします]**。 「フィール **[!UICONTROL ド]** 」タブで、「フ **[!UICONTROL ィールドの形式]** 」ドロ **[!UICONTROL ップダウンリストから「リッチテキスト]** 」を選択します。 テキストフィールドは、HTML5フォームでレンダリングされる際に、形式設定オプションを表示します。
 
 [サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
