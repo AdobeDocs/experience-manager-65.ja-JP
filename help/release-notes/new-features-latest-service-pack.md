@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d0038181326037ab71f4df9b509d2f0827191c86
+source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
 
 ---
 
@@ -19,15 +19,15 @@ Adobe Experience Manager (AEM) 6.5は、今年の四半期別のService Packで�
 
 ### 各領域のパフォーマンスの向上 {#performance-improvements}
 
-* サイト内のContextHubの読み込みと初期化に要する時間を短縮しました(contexthub.kernel.js)。 その結果、サイト訪問中のページの読み込みが速くなります。
+* サイト内のContextHubの読み込みと初期化に要する時間を短縮しました(contexthub.kernel.js)。 サイト訪問中のページ読み込みが速くなります。
 
-* ページエディターのキャンバスでエクスペリエンスフラグメントをドラッグ&amp;ドロップした後に、ページを更新する時間を短縮しました。
+* エクスペリエンスフラグメントをサイトのページエディターにドラッグ&amp;ドロップした後に、ページを更新する時間を短縮しました。
 
 * ライブコピーの概要で200を超えるライブコピーが含まれるサイトページのエントリの読み込み時間を短縮。
 
-* テンプレートエディターの表示速度が遅くなる可能性がある、不完全または無効なURLの処理を改善しました。
+* 不完全または無効なURLの処理を改善。 このようなURLを使用すると、テンプレートエディターの動作が遅くなる可能性があります。
 
-また、AEM 6.5 Service Pack 4には、スタイルシステムの機能強化が含まれています。 コンポーネントダイアログ内でスタイルを選択することもできるようになりました。
+また、AEM 6.5.4.0では、スタイルシステムの機能が強化されています。 コンポーネントダイアログ内でスタイルを選択できるようになりました。
 
 ## AEM Assets {#aem-assets}
 
