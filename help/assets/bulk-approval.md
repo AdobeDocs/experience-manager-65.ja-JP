@@ -3,7 +3,7 @@ title: フォルダーのアセットとコレクションのレビュー
 description: フォルダーまたはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -58,7 +58,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![review_task](assets/review_task.png)
 
 1. ツールバー **[!UICONTROL から]** 「完了」をタップします。 In the dialog, enter a comment and tap/click  **[!UICONTROL Complete]** to confirm.
-1. アセットユーザーインターフェイスに移動し、フォルダーを開きます。 アセットの承認ステータスアイコンが、カード表示とリスト表示に表示されます。
+1. アセットユーザーインターフェイスに移動し、フォルダを開きます。 アセットの承認ステータスアイコンが、カード表示とリスト表示に表示されます。
 
    **カード表示**
 
@@ -66,7 +66,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
 
    **リスト表示**
 
-   ![リスト表示でのレビューステータス](assets/review_status_listview.png)
+   ![リスト表示でのステータスの確認](assets/review_status_listview.png)
 
 ## Create a review task for collections {#creating-a-review-task-for-collections}
 
