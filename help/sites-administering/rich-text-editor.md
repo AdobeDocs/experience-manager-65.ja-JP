@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 2cde81d3-5fc1-4a32-a307-7dc592f37162
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -20,15 +20,21 @@ RTE の設定をおこなうことで、オーサリングコンポーネント�
 
 以下に、RTE 設定タスクの推奨されるワークフローを示します。
 
-![ルート図の設定方法を学ぶ手順のシーケ](assets/rte_workflow_v1.png)*ンス：RTEの設定方法を学ぶ手順のシーケンス*
+![ルートの設定方法を学ぶ手順のシーケンス](assets/rte_workflow_v1.png)
+
+*図：RTEの設定方法を学ぶ手順のシーケンス*
 
 ## タッチ操作 UI とクラシック UI について {#understand-touch-enabled-ui-and-classic-ui}
 
-タッチ対応UIは、AEMの標準的なユーザーインターフェイスです。 Adobe introduced Touch UI with [responsive design](/help/sites-authoring/responsive-layout.md) for authoring environment. The Touch UI is designed for touch and desktop devices. 元のクラシック UI とは大きく異なります。
+タッチ対応UIは、AEMの標準のユーザーインターフェイスです。 Adobe introduced Touch UI with [responsive design](/help/sites-authoring/responsive-layout.md) for authoring environment. The Touch UI is designed for touch and desktop devices. 元のクラシック UI とは大きく異なります。
 
-![タッチ対応UI図のリッチテキストエディターツールバー](assets/chlimage_1-35.png)*:タッチ対応UIのリッチテキストエディターツールバー*
+![タッチ操作 UI のリッチテキストエディターツールバー](assets/chlimage_1-35.png)
 
-![クラシックUI図のリッチテキストエディタツールバー](assets/rtedefault.png)*:クラシックUIのリッチテキストエディタツールバー*
+*図：タッチ対応UIのリッチテキストエディターツールバー*
+
+![クラシック UI のリッチテキストエディターツールバー](assets/rtedefault.png)
+
+*図：クラシックUIのリッチテキストエディタのツールバー*
 
 >[!MORELIKETHIS]
 >
@@ -51,13 +57,15 @@ AEM では、コンポーネントの各種モードを使用して、テキス�
 
 >[!NOTE]
 >
->タッチ対応UIのインライン編集モードでは、ソース編集機能は使用できません。 フルスクリーンモードでは画像をドラッグできません。その他の機能はすべて全モードで使用できます。
+>タッチ対応UIのインライン編集モードでは、ソース編集機能を使用できません。 フルスクリーンモードでは画像をドラッグできません。その他の機能はすべて全モードで使用できます。
 
 ### インライン編集 {#inline-editing}
 
 （ゆっくりしたダブルタップ／ダブルクリックで）開いた場合、コンテンツはページ内で編集できます。非常に基本的なオプションを備えたコンパクトツールバーが表示されます。
 
-![タッチ対応UI図の基本ツールバーを使用したインライン](assets/chlimage_1-36.png)*編集：タッチ対応UIの基本ツールバーを使用したインライン編集*
+![タッチ操作 UI の基本ツールバーを使用したインライン編集](assets/chlimage_1-36.png)
+
+*図：タッチ対応UIの基本ツールバーを使用したインライン編集*
 
 クラシック UI では、コンポーネントをゆっくりダブルクリックするとインライン編集が可能になり、オレンジ色の輪郭でコンテンツが強調表示されます。コンテンツファインダーが開くと、使用可能な RTE フォーマットオプションを備えたツールバーがウィンドウ上部に表示されます。コンテンツファインダーが開かない場合は、フォーマットオプションは表示されず、基本的なテキスト編集のみおこなうことができます。
 
@@ -67,21 +75,27 @@ AEM コンポーネントをフルスクリーン表示で開くことができ�
 
 ダイアログフルスクリーンモードでは、詳細な RTE ツールバーのほかに、ダイアログ内で使用可能なオプションとコンポーネントも提供されます。このモードは、他のコンポーネントと共に RTE を含むダイアログにのみ適用されます。
 
-![タッチ対応UI図でフルスクリーンモードで編集する場合の詳細なRTEツールバー](assets/chlimage_1-37.png)*です。タッチ対応UIでフルスクリーンモードで編集する場合の詳細なRTEツールバー*
+![タッチ操作 UI のフルスクリーンモードで編集するときに表示される、詳細な RTE ツールバー](assets/chlimage_1-37.png)
+
+*図：タッチ対応UIでフルスクリーンモードで編集する場合の詳細なRTEツールバー*
 
 ### ダイアログ編集 {#dialog-editing}
 
-コンポーネントをダブルクリックすると、コンテンツ編集用のダイアログボックスが開きます。既存のページの上面に開きます。一部のシナリオでは、ポップアップウィンドウとして開くこともあります。例えば、テキストコンポーネントが複数列のページレイアウトの列の一部で、ダイアログで使用できる領域が少ない場合、
+コンポーネントをダブルクリックすると、コンテンツ編集用のダイアログボックスが開きます。既存のページの上面に開きます。一部のシナリオでは、ポップアップウィンドウとして開くこともあります。例えば、複数列のページレイアウトで、テキストコンポーネントが列の一部で、ダイアログで使用できる領域が少ない場合、
 
-![タッチ対応UI図のダイアログ編集モ](assets/dialog_editing_modetouchui.png)*ード：タッチ対応UIのダイアログ編集モード*
+![タッチ操作向け UI のダイアログ編集モード](assets/dialog_editing_modetouchui.png)
 
-![図を編集するための詳細ツールバーを含む、クラシックUIのダイアログ](assets/chlimage_1-38.png)*ボックス：編集用の詳細ツールバーが含まれるクラシックUIのダイアログボックス*
+*図：タッチ対応UIのダイアログ編集モード*
+
+![編集用の詳細なツールバーを含む、クラシック UI のダイアログボックス](assets/chlimage_1-38.png)
+
+*図：編集用の詳細ツールバーを含むクラシックUIのダイアログボックス*
 
 ## RTE プラグインと関連機能について {#aboutplugins}
 
 この機能は、一連のプラグインを介して使用可能になります。各プラグインには以下が含まれます。
 
-* プロ `features` パティ：
+* プロパ `features` ティ：
 
    * プラグインの基本機能をアクティベートまたはアクティベート解除するために使用
    * 標準化された手順を使用して設定可能
@@ -102,7 +116,7 @@ RTE の基本機能は、該当するプラグインのノードにある `featu
 | edit | cut copy paste-default paste-plaintext paste-wordhtml | [切り取り、コピーおよび 3 つの貼り付けモード](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)。 |
 | [findreplace](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | find replace | 検索と置換. |
 | [format](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | bold italic underline | [基本的なテキストフォーマット](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)。 |
-| [画像](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | image | 基本的な画像のサポート（コンテンツまたはコンテンツファインダーからのドラッグ）。 サポートされる動作は、ブラウザーによって異なります |
+| [画像](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | 画像 | 基本的な画像のサポート（コンテンツまたはコンテンツファインダーからのドラッグ）。 ブラウザーに応じて、サポートの動作が異なります |
 | [keys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | この値を定義するには、[タブサイズ](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize)を参照してください。 |
 | [justify](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justifyleft justifycenter justifyright | 段落の整列。 |
 | [links](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | modifylink unlink anchor | [ハイパーリンクおよびアンカー](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles)。 |
@@ -142,7 +156,7 @@ RTE 設定ノードの名前を `config` にしないでください。Otherwise
 
 ダイアログ編集モードで適用される次のプロパティを設定します（タッチ UI のみ）。
 
-* `useFixedInlineToolbar`:RTEノード（sling:resourceType=を持つもの）で定義されているこのBooleanプロパティをに設定し `cq/gui/components/authoring/dialog/richtext`て、RTEツ `True`ールバーをフローティングではなく固定にします。
+* `useFixedInlineToolbar`:RTEノード（sling:resourceType=のあるもの）で定義されているこのBooleanプロパティをに設定し `cq/gui/components/authoring/dialog/richtext`、RTEツー `True`ルバーをフローティングではなく固定します。
 
     このプロパティが true のときは、デフォルト動作により、リッチテキスト編集が「foundation-contentloaded」イベントで開始します。
 
@@ -160,7 +174,7 @@ RTE 設定ノードの名前を `config` にしないでください。Otherwise
 
 RTE プラグインの設定について詳しくは、[RTE プラグインのアクティベートおよび設定方法に関する説明](/help/sites-administering/configure-rich-text-editor-plug-ins.md)を参照してください。
 
-**サンプル**:RTEの設定 [方法を説明する](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) 、次のサンプル設定をダウンロードします。 このパッケージではすべての機能が有効になっています。
+**サンプル**:RTEの設定方 [法を説明する](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) 、次のサンプル設定をダウンロードしてください。 このパッケージではすべての機能が有効になっています。
 
 >[!NOTE]
 >
@@ -240,7 +254,7 @@ Separators (`|`) between a group of buttons can be specified with `-`.
 RTE フローで使用可能なオプションに関するユーザーインターフェイス設定がコンテンツポリシーに影響します。
 
 * ユーザーインターフェイス設定では、コンテンツポリシーで使用可能なオプションを定義します。
-* RTEのユーザーインターフェイス設定が削除された場合、またはアイテムを有効にしていない場合、コンテンツポリシーはアイテムを設定できません。
+* RTEのユーザーインターフェイス設定が削除された場合、または項目が有効になっていない場合、コンテンツポリシーは項目を設定できません。
 * オーサーは、ユーザーインターフェイス設定およびコンテンツポリシーによって使用可能となっている機能にのみアクセスできます。
 
 例については、[テキストコアコンポーネントのドキュメント](https://docs.adobe.com/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)を参照してください。
@@ -287,15 +301,15 @@ Below is a sample snippet to map the command Bold to the Coral icon named `textI
 >CoralUI RTE のカスタムプラグインを使用する場合は、`rte.coralui3`3 ライブラリを使用してください。
 
 
-1. ノードを下にオーバ `/libs/cq/gui/components/authoring/editors/clientlibs/core` ーレイ `/apps`し、次の操作を行います。
+1. ノードを下にオー `/libs/cq/gui/components/authoring/editors/clientlibs/core` バーレ `/apps`イし、次の操作を行います。
 
    * Replace `rte.coralui3` with `rte.coralui2` for the dependencies property.
    * Replace `cq.authoring.editor.core.inlineediting.rte.coralui3` with `cq.authoring.editor.core.inlineediting.rte.coralui2` for the embed property.
    * Replace `cq.authoring.rte.coralui3` with `cq.authoring.rte.coralui2` for the embed property.
 
-1. ノードをオーバーレイし、 `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` その下に `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2` 重ねま `/apps`す。
+1. ノードを下に重ね `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` て表示 `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2` しま `/apps`す。
 
-   カテゴリをか `cq.authoring.dialog` ら削除し `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` 、に追加しま `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`す。
+   カテゴリを `cq.authoring.dialog` から削 `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` 除し、に追加しま `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`す。
 
 1. ページに含まれている他の依存関係を `rte.coralui3` から `rte.coralui2` に変更します。For example, after overlaying the node `/libs/mcm/campaign/components/touch-ui/clientlibs/rte` under `/apps`, change any dependency on it from `rte.coralui3` to `rte.coralui2`.
 
