@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
 
 ---
 
@@ -35,7 +35,7 @@ Adobe PhoneGap と連携して AEM Mobile を使用するには、以下のリ�
 * [AEM Mobile コンテンツサービス：概要](/help/mobile/develop-content-as-a-service.md)
 
    * To enable Content Services and Data Models, see [Administering Content Services](/help/mobile/developing-content-services.md)
-   * To learn about Creating Models, see [Developing Models](/help/mobile/models-in-repository.md)
+   * To learn about Creating Models, see [Developing Models](/help/mobile/administer-mobile-apps.md)
    * To learn about Rendering and Delivery, see [Rendering and Delivery of Content Services](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
