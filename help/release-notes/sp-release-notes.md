@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ff006375b9ac958c7a5f9adf122990bf23808834
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -243,6 +243,8 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 * Designer:タグ付けオプションが有効な場合、生成されたPDF出力(NPR-32547、NPR-31983、NPR-31950)でサブフォームの境界線が消えます。
 
 * Designer:表に結合されたセルがある場合、アクセシビリティテストは、出力サービスを使用してXDPフォームから変換された出力PDFファイルに対して失敗します。(CQ-4285372)
+
+* Foundation JEE:クラスターから切断されたサーバーは、キャッシュの問題が原因で再接続に失敗します(NPR-32412)。
 
 ## Install 6.5.4.0 {#install}
 
