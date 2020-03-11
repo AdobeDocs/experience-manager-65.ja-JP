@@ -4,7 +4,7 @@ description: AEM のフィルターパネルを使用した必要なアセット
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d09e02c451c01955b93bc3149fc663754435fdf
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -52,7 +52,7 @@ AEMの検索機能では、コレクションの検索と、コレクション�
 
 ![検索ファセットで検索結果をフィルタリングしない場合のアセット概数の表示](assets/asset_search_results_in_facets_filters.png)
 
-*図：検索結果を検索ファセットでフィルタリングせずに、およその数のアセットを確認します。*
+*図：検索結果を検索ファセットでフィルタリングせずに、およその数のアセットを確認する*
 
 ## 検索結果と行動を理解する {#searchbehavior}
 
