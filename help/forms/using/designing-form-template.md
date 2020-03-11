@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -41,6 +41,6 @@ HTML5 フォームの主な対象はタッチデバイスです。そのため�
 
 #### Rich text format {#rich-text-format}
 
-Forms Designerでテキストフィールドのリッチテキストフィールド形式を定義し、レンダリングされたHTML5フォームのフィールドに形式設定オプションのリストを追加します。 設定を適用するには、デザインビューでテキストフィールド **[!UICONTROL をタップします]**。 「フィール **[!UICONTROL ド]** 」タブで、「フ **[!UICONTROL ィールドの形式]** 」ドロ **[!UICONTROL ップダウンリストから「リッチテキスト]** 」を選択します。 テキストフィールドは、HTML5フォームでレンダリングされる際に、形式設定オプションを表示します。
+テキストフィールドをリッチテキストフィールドに変換できます。 テキストフィールドに書式設定オプションのリストを追加します。 変換するには、Forms Designerを開き、デザインビューでテキストフィールドをタ **[!UICONTROL ップします]**。 「フィール **[!UICONTROL ド]** 」タブで、「フ **[!UICONTROL ィールドの形式]** 」ドロ **[!UICONTROL ップダウンリストから「リッチテキスト]** 」を選択します。 現在は、XFAフォームがHTML5フォームとしてレンダリングされると、フィールドはリッチテキストフィールドとしてレンダリングされます。
 
 [サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
