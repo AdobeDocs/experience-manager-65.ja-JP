@@ -3,7 +3,7 @@ title: アセットのデジタル著作権管理
 description: AEM でライセンスされているアセットの状態と有効期限の情報を管理する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -16,23 +16,23 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 アセットの有効期限は、アセットのライセンス要件を徹底する有効な方法です。公開済みアセットの有効期限が切れたらアセットを非公開にすることで、ライセンス違反が発生する可能性を回避します。管理者権限のないユーザーは、有効期限切れのアセットを編集、コピー、移動、公開、ダウンロードできません。
 
-アセットの有効期限ステータスは、カード表示とリスト表示の両方のアセットコンソールで確認できます。
+アセットの有効期限ステータスは、カード表示とリスト表示の両方のアセットコンソールで表示できます。
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*図：カード表示では、カード上のフラグは期限切れアセットを示します。*
+*図：カード表示では、カード上のフラグは期限切れのアセットを示します*
 
 **リスト表示**
 
 ![expired_flag_list](assets/expired_flag_list.png)
 
-*図：リスト表示では、「[!UICONTROL Status]」列に期限切れのバナーが表[!UICONTROL 示されます]。*
+*図：リスト表示では、「[!UICONTROL Status]」列に「[!UICONTROL Expired]」バナーが表示されます。*
 
 タイムラインで、アセットの有効期限切れのステータスを確認できます。アセットを選択してグローバルナビゲーションメニューから「タイムライン」を選択します。
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
-You can also view the expiration status of assets in the **[!UICONTROL References]** rail. アセットの有効期限のステータスと、複合アセットと参照先のサブアセット、コレクション、プロジェクト間の関係を管理します。
+You can also view the expiration status of assets in the **[!UICONTROL References]** rail. アセットの有効期限のステータスと、複合アセットと、参照されるサブアセット、コレクション、プロジェクトとの関係を管理します。
 
 1. 参照元の Web ページと複合アセットを表示するアセットに移動します。
 1. アセットとExperience Managerのロゴを選択します。
@@ -55,11 +55,11 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
 1. In the Assets console, click the **[!UICONTROL Search]** in the toolbar to display the Omnisearch box.
 
-1. 「Omnisearch」ボックスにカーソルを置き、Returnキーを押して検索結果ページを表示します。
+1. 「Omnisearch」ボックスにカーソルを置き、Returnキーを押して、検索結果ページを表示します。
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-1. Experience Managerロゴをクリックして検索パネルを表示します。
+1. 「Experience Managerロゴ」をクリックして検索パネルを表示します。
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -80,7 +80,7 @@ When you choose the **Expired** option, the Assets console only displays the exp
 アセットコンソールに有効期限切れのサブアセットとともに参照元の複合アセットを表示するには、AEM Configuration Manager で **Adobe CQ DAM Expiry Notification** ワークフローを設定します。
 
 1. AEM Configuration Manager を開きます。
-1. Choose **[!UICONTROL Adobe CQ DAM Expiry Notification]**. By default, **[!UICONTROL Time based Scheduler]** is selected, which schedules a job to check at a specific time whether an asset has expired subassets. ジョブが完了すると、期限切れのサブアセットと参照アセットを含むアセットが検索結果に期限切れとして表示されます。
+1. Choose **[!UICONTROL Adobe CQ DAM Expiry Notification]**. By default, **[!UICONTROL Time based Scheduler]** is selected, which schedules a job to check at a specific time whether an asset has expired subassets. ジョブが完了すると、期限切れのサブアセットと参照アセットを含むアセットが、検索結果に期限切れとして表示されます。
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
@@ -105,7 +105,7 @@ Adobe Experience Manager（AEM）Assets のアセットコンソールには、�
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. ツールバー **[!UICONTROL から]** 「公開」をタップします。 ツールバーに「公開」が表示されな **い場合は** 、ツールバーの「その他」をタ **[!UICONTROL ップし]** 、「公開 **** 」オプションを探します。
+1. ツールバー **[!UICONTROL から]** 「公開」をタップします。 ツールバーに「公開」が表示されな **い場合は** 、ツールバーの「その他」をタ **[!UICONTROL ップし]** 、「公開」オプション **** を見つけます。
 
    ![chlimage_1-156](assets/chlimage_1-156.png)
 
@@ -137,7 +137,7 @@ Adobe Experience Manager（AEM）Assets のアセットコンソールには、�
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. Returnキーを押し、「GlobalNav」をタ **[!UICONTROL ップして]** 、検索パネルを表示します。
+1. Returnキーを押し、GlobalNavをタッ **[!UICONTROL プして]** 、検索パネルを表示します。
 1. 検索パネルで、「**[!UICONTROL 公開ステータス]**」をタップまたはクリックして「**[!UICONTROL 公開済み]**」を選択し、AEM Assets で公開済みのアセットを検索します。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
@@ -173,7 +173,7 @@ If you select a protected asset and tap **[!UICONTROL Download]**, you are redir
 >
 >If you create or modify licence pages, or port them from previous AEM releases, Adobe recommends that you store them under `/apps/settings/dam/drm/licenses` or `/conf/&ast;/settings/dam/drm/licenses`.
 
-### DRM保護されたアセットのダウンロード {#downloading-drm-assets}
+### DRM保護アセットのダウンロード {#downloading-drm-assets}
 
 1. In the Card view, select the assets you want to download and click **[!UICONTROL Download]**.
 1. **[!UICONTROL 著作権管理]**&#x200B;ページで、ダウンロードするアセットをリストから選択します。
