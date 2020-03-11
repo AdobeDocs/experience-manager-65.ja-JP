@@ -3,7 +3,7 @@ title: AEM からのアセットのダウンロード
 description: AEM からアセットをダウンロードする方法とダウンロード機能を有効または無効にする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -20,13 +20,15 @@ To download assets, navigate to an asset, select the asset, and tap **[!UICONTRO
 
 画像セット、スピンセット、混在メディアセット、カルーセルセットの各アセットタイプはダウンロードできません。
 
-![AEM Assets図からアセットをダウンロードする際に使用できるオプ](assets/asset_download_dialog.png)*ション：AEM Assetsからアセットをダウンロードする際に使用できるオプション*
+![AEM Assets からアセットをダウンロードする際に使用できるオプション](assets/asset_download_dialog.png)
+
+*図：AEM Assetsからアセットをダウンロードする際に使用できるオプション*
 
 次に、書き出し／ダウンロードのオプションを示します。動的レンディションは Dynamic Media 特有の機能であり、選択したアセットに加えてレンディションもその場で生成できます。このオプションは、Dynamic Media を有効にしている場合のみ利用できます。
 
 | 書き出しまたはダウンロードのオプション | 説明 |
 |---|---|
-| [!UICONTROL アセット] | レンディションを含めずに、元の形式でアセットをダウンロードする場合に選択します。 |
+| [!UICONTROL Assets] | レンディションを含めずに、元の形式でアセットをダウンロードする場合に選択します。 |
 | [!UICONTROL レンディション] | レンディションは、アセットのバイナリ表現です。アセットは、（アップロードされたファイルの）一次表現を持ちます。アセットは任意の数の追加の表現を持つことができます。<br>このオプションを選択すると、ダウンロードするレンディションを選択できます。使用できるレンディションは、選択したアセットによって異なります。 |
 | [!UICONTROL 動的レンディション] | 動的レンディションでは、他のレンディションをその場で生成します。When you select this option, you also select the renditions you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>さらに、サイズ、測定単位、形式、カラースペース、解像度および画像の修飾子（例：画像の反転用）を選択できます。 |
 | [!UICONTROL 電子メール] | ユーザーに電子メール通知が送信されます。次の場所にある標準の電子メールテンプレートを利用できます。<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> デプロイ時にカスタマイズするテンプレートは、次の場所に存在している必要があります。 <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul>テナント固有のカスタムテンプレートは、次の場所に保存できます。<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> |
@@ -46,7 +48,7 @@ AEM のデフォルトサーブレットを使用すると、認証されたユ�
 
    `/apps/<your-app-name>/config.publish`
 
-   実行モードの設定プロパティを定義するには、 [Run Modes](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode) （実行モード）を参照してください。
+   実行モードの設定プロパティを定義するには、「実行モ [ード](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode) 」を参照してください。
 
 1. In the config folder, create a new file of type `nt:file` named `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`.
 1. Populate `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` with the following. ダウンロードの最大サイズ（バイト単位）を `asset.download.prezip.maxcontentsize` の値として設定します。以下のサンプルでは、ZIP ダウンロードの最大サイズを 100 KB を超えないように設定しています。
@@ -69,5 +71,5 @@ The `Asset Download Servlet` can be disabled on an AEM Publish instances by upda
 >[!MORELIKETHIS]
 >
 >* [DRM で保護されたアセットのダウンロード](drm.md)
->* [WinまたはMacデスクトップでAEMデスクトップアプリケーションを使用してアセットをダウンロードする](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
->* [サポートされているAdobe Creative cloudアプリケーションから「Adobe Assets Link」を使用してアセットをダウンロードします](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [WinまたはMacデスクトップでAEMデスクトップアプリを使用してアセットをダウンロードする](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
+>* [サポートされているAdobe Creative Cloudアプリケーション内から、「Adobe Assets」リンクを使用してアセットをダウンロードします。](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
