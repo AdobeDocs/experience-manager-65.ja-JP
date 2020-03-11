@@ -3,7 +3,7 @@ title: 接続されたアセットを使用して、Adobe Experience Manager Sit
 description: 別のExperience Manager SiteデプロイメントでWebページを作成する場合、リモートのAdobe Experience Manager Assetsデプロイメントで使用できるアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 04789dc662bc935277f392aefde4146f1a79f747
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -139,7 +139,7 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
    ![バックグラウンドで発生するアセットの非同期取得に関する通知。](assets/assets_async_transfer_fails.png)
 
-   *図：バックグラウンドで発生するアセットの非同期フェッチに関する通知。*
+   *図：バックグラウンドで発生するアセットの非同期フェッチに関する通知*
 
 1. ページを公開すると、ページで使用されているアセットの完全なリストが AEM に表示されます。公開時にリモートアセットが正常に取得されることを確認します。取得した各アセットのステータスを確認するには、[非同期ジョブ](/help/assets/asynchronous-jobs.md)ユーザーインターフェースをご覧ください。
 
