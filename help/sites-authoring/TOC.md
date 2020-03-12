@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Authoring User Guide
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
 
 ---
 
@@ -14,6 +14,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 + [オーサリングユーザーガイドの概要](home.md)
 + AEMオーサリングにとって重要なタスク、ツールおよび概念 {#essentials}
    + [作成者が行う最初の手順](first-steps.md)
+   + [ページオーサリング](page-authoring.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
    + [オーサリングの概念](author.md)
    + [基本操作](basic-handling.md)
@@ -27,12 +28,12 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [ページ編集時の注釈](annotations.md)
    + [ページの作成と整理](managing-pages.md)
    + [ページのコンテンツの編集](editing-content.md)
-   + [リッチテキストエディターを使用したコンテンツのオーサリング](rich-text-editor.md)
+   + [リッチテキストエディタを使用したコンテンツの作成](rich-text-editor.md)
    + [ページプロパティの編集](editing-page-properties.md)
    + [ページの公開](publishing-pages.md)
    + [コンテンツフラグメントを使用したページのオーサリング](content-fragments.md)
    + [エクスペリエンスフラグメント](experience-fragments.md)
-   + [CSV に書き出し](csv-export.md)
+   + [CSV ファイルへの書き出し](csv-export.md)
    + [コンポーネント](default-components.md)
    + [モバイルデバイス用のページのオーサリング](mobile.md)
    + [オーサリング時の AEM のトラブルシューティング](troubleshooting.md)
@@ -56,7 +57,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 + プロジェクト {#projects}
    + [プロジェクト](projects.md)
    + [プロジェクトの管理](touch-ui-managing-projects.md)
-   + [タスクの使用](task-content.md)
+   + [タスクの操作](task-content.md)
    + [クリエイティブプロジェクトと PIM 統合](managing-product-information.md)
    + [プロジェクトワークフローの操作](projects-with-workflows.md)
 + ローンチ {#launches}
@@ -75,7 +76,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [ページ分析データの表示](pa-using.md)
    + [ページへの Search&amp;Promote 機能の追加](search-and-promote.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライズパーソナライゼーション](personalization.md)
+   + [パーソナライゼーション](personalization.md)
    + [ContextHub データを使用したページのプレビュー](ch-previewing.md)
    + [ターゲットモードを使用したターゲットコンテンツのオーサリング](content-targeting-touch.md)
    + [マルチサイトでのターゲットコンテンツの操作](multisite-support-targeted-content.md)
