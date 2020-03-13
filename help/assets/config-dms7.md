@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a986eb3154fba51de20e31b87e9082631f057d27
+source-git-commit: 9871cbf48a01298ab2b6fb1b79bb290714b84ab1
 
 ---
 
@@ -99,7 +99,7 @@ The installation of feature pack 18912 is *optional*.
    * **[!UICONTROL すべてのコンテンツを同期]** — デフォ <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->ルトで選択されています。 ダイナミックメディアとの同期にアセットを選択的に含めるか除外する場合は、このオプションの選択を解除します。 このオプションの選択を解除すると、次の2つのダイナミックメディア同期モードから選択できます。
 
    * **[!UICONTROL ダイナミックメディア同期モード]**
-      * **[!UICONTROL 有効(デフォルト]** ) — フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+      * **[!UICONTROL デフォルトで有効]** — フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL デフォルトで無効]** — 選択したフォルダーをダイナミックメディアと同期するように明示的にマークするまで、設定はどのフォルダーにも適用されません。
 選択したフォルダーをダイナミックメディアと同期するようにマークするには、アセットフォルダーを選択し、ツールバーで「プロパティ」をクリ **[!UICONTROL ックしま]**&#x200B;す。 「詳細」タ **[!UICONTROL ブの]** 「ダイナミックメ **[!UICONTROL ディアの同期モード]** 」ドロップダウンリストで、次の3つのオプションから選択します。 When you are done tap **[!UICONTROL Save]**. *注意：これらの3つのオプションは、「すべてのコンテンツを同期」を選択し&#x200B;**た場合は使用できません**。*
          * **[!UICONTROL 継承]** — フォルダーに明示的な同期値がありません。代わりに、フォルダーは、上位フォルダーの1つ、またはクラウド設定のデフォルトモードから同期値を継承します。 継承された番組の詳細なステータスは、ツールヒントを通じて表示されます。
