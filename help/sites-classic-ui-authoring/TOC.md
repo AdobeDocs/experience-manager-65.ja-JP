@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Classic UI Authoring User Guide
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
 
 ---
 
@@ -74,6 +74,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Adobe Campaign の使用](classic-personalization-ac.md)
    + [Adobe Campaign コンポーネント](classic-personalization-ac-components.md)
    + [Adobe Campaign のターゲット設定](classic-personalization-ac-target.md)
+   + [AEM での Adobe Campaign フォームの作成](classic-personalization-ac-forms.md)
 + クラシックUIでのアセットのオーサリング {#assets}
    + [アセットの操作](classicui-assets.md)
    + [Dynamic Media アセットの配信](dynamic-media-assets-delivering.md)
