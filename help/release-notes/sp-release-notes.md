@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7cc22c6558394c5e12ea2477bb07ff02dabc8dbc
+source-git-commit: 82ded190d4fee4e4ef9849dc34372774c529844f
 
 ---
 
@@ -331,7 +331,7 @@ To use UberJar in a Maven project, refer to the article, [How to use UberJar](/h
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.5.4.0</version>
+      <version>6.5.4</version>
       <classifier>apis</classifier>
       <scope>provided</scope>
 </dependency>
