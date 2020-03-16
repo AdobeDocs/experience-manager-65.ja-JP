@@ -12,7 +12,7 @@ discoiquuid: c5dcc90a-05d2-4701-a625-2b655ad0b458
 docset: aem65
 pagetitle: Deploying eCommerce with hybris
 translation-type: tm+mt
-source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
+source-git-commit: 9e39868768d2fc70f587b18d36042e742d5fae45
 
 ---
 
@@ -23,11 +23,11 @@ source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
 >
 >このページには hybris Web サイトへのリンクが含まれています。ページによっては、ログインアカウントが必要となる場合があります。
 
-## SAP Commerce cloudでのeコマースのデプロイ {#deploying-ecommerce-with-sap-commerce-cloud}
+## SAP Commerce Cloudを使用したeコマースのデプロイ {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
->AEM 6.5用コネクタの準備ができていません。
+>AEM 6.5用のコネクタの準備ができていません。
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ This is available under the English (US) branch ( `/content/geometrixx-outdoors/
 
 ### 技術的要件 - hybris サーバー {#technical-requirements-hybris-server}
 
-The hybris extension of the eCommerce Integration Framework has been updated to support Hybris 5 (as default), while maintaining backward compatibility with [Hybris 4](/help/sites-developing/hybris.md#developing-for-hybris).
+The hybris extension of the eCommerce Integration Framework has been updated to support Hybris 5 (as default), while maintaining backward compatibility with Hybris 4 <!--[Hybris 4](/help/sites-developing/hybris.md#developing-for-hybris). -->
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ e コマース機能をインストールするには、以下が必要です。
 >
 >この手順を完了するには、システムに [Groovy](https://groovy-lang.org/) がインストールされている必要があります。
 
-1. **hybris Commerce Suite **distributionを、hybrisダウンロードサイトからダウンロードします。
+1. **hybris Commerce Suite **配布版をダウンロードします。
 
    >[!CAUTION]
    >
@@ -236,7 +236,7 @@ e コマース機能をインストールするには、以下が必要です。
 
 1. 次の読み込みファイルをアップロードします。********
 
-   [Get File](assets/base-store.csv)For hybris 5.7、以下を使用してください。
+   [Get File](assets/base-store.csv)For hybris 5.7。次を使用してください。
 
    [ファイルを入手](assets/base-store-5_7.csv)
 
