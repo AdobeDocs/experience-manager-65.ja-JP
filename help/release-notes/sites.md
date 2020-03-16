@@ -1,13 +1,13 @@
 ---
 title: AEM Sites リリースノート
-description: Adobe Experience Manager 6.4 Sites 固有のリリースノート
+description: Adobe Experience Manager 6.5 Sites 固有のリリースノート
 uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
@@ -22,7 +22,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 * 新規プロジェクト用の単一ページアプリ Maven プロジェクトアーキタイプ 1.0.6 以上（[リリースノートの GitHub](https://github.com/adobe/aem-spa-project-archetype/releases) を参照）。
 * HTL バージョン 1.4（[リリースノートの GitHub](https://github.com/adobe/htl-spec/releases/tag/1.4) を参照）。
 
-   * 文字列、配列、オブジェクトの&quot;in&quot;演算子：
+   * 文字列、配列、オブジェクトの&quot;in&quot;演算子
 
       ```
       ${'a' in 'abc’}
@@ -30,13 +30,13 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
        ${'a' in myObject}
       ```
 
-   * 変数宣言のデータスリルセット：
+   * 変数宣言のデータセキュリティセット：
       `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
    * 制御パラメーターのリストと繰り返し：begin, step, end:
       `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
-   * データに対する非ラップの識別子：
+   * データに含まれない非ラップの識別子：
 
       ```
       <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
@@ -48,17 +48,17 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
 * コアコンポーネント 2.3.2 以上（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases) を参照）。
 * レイアウトコンテナのグリッドシステム（[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid) を参照）。
-* Clientlibマネージャ：google Closure CompilerをデフォルトでJavaScript clientlibsの縮小（旧デフォルトはYahoo YUI）に設定し、Google Closure Compilerをバージョンv20190121に更新
+* Clientlibマネージャ：Google Closure CompilerのデフォルトをJavaScriptクライアントlibsの縮小（旧デフォルトはYahoo YUI）に設定し、Google Closure Compilerのバージョンをv20190121に更新
 * テンプレートエディターとポリシー
 
-   * JS SDK（別名SPAエディター）を使用するシングルページアプリ用のテンプレートの作成と編集
+   * JS SDK（SPAエディターとも呼ばれる）を使用するシングルページアプリ用のテンプレートの作成と編集
 
 * 参照サイト We.Retail 4.0（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) を参照）。
 * Toolkit to upgrade existing sites to leverage the latest editor capabilities, see [Github repository](https://github.com/adobe/aem-modernize-tools)
 
 >[!CAUTION]
 >
->AEMには、既存のカスタムコードとの互換性を最大限に保つために、jQueryライブラリのバージョン1.12.4が含まれています。 セキュリティに関する既知の問題に対処するため、アドビによる修正がおこなわれました。
+>AEMには、既存のカスタムコードとの互換性を最大限に高めるため、jQueryライブラリのバージョン1.12.4が含まれています。 セキュリティに関する既知の問題に対処するため、アドビによる修正がおこなわれました。
 
 ## サイト管理 {#site-administration}
 
@@ -88,16 +88,16 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 ## 翻訳 {#translation}
 
 * プロジェクトマスターを使用して、翻訳プロジェクトを手軽に作成できます。
-* 翻訳ジョブをデフォルトで承認済みステータスに設定することで、翻訳プロジェクトの実行を簡素化します。
+* 翻訳ジョブをデフォルトの承認済みステータスに設定することで、翻訳プロジェクトの実行を簡略化します。
 * サードパーティ翻訳メモリの変更点に合わせて翻訳済みページを更新できます。
 * 翻訳ジョブを JSON 形式で書き出すことができます。
-* V3 APIを使用するようにMicrosoft Translation統合を更新
+* V3 APIを使用するようにMicrosoft Translation統合を更新する
 
 ## Multi-Site Management (MSM) {#multi-site-management-msm}
 
-* PushOnModifyを使用するロールアウト設定の場合、ページ移動操作の処理が改善され、状態の不整合を回避できます。
+* PushOnModifyを使用するロールアウト設定の場合は、ページ移動操作の処理が改善され、一貫性のない状態が回避されます。
 * ライブコピー構造内に新しいページを作成すると、デフォルトでスタンドアロンページが作成されるようになりました。
-* JS SDK（別名SPAエディター）を使用するシングルページアプリでMSM機能を使用する
+* JS SDK（SPAエディターとも呼ばれる）を使用するシングルページアプリでMSM機能を使用する
 
 ## ローンチ {#launches}
 
@@ -120,7 +120,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
 ## AEMとAdobe Analytics {#aem-amp-adobe-analytics}
 
-* `s_code.js` H.27.5が含まれます。 実装を `AppMeasurement.js`
+* `s_code.js` H.27.5が含まれます。 導入を `AppMeasurement.js`
 * `AppMeasurement.js` v1.8.0が含まれます。 Adobe recommends to use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision AppMeasurement.js into the site.
 
 ## AEMとコマース {#aem-commerce}
@@ -133,7 +133,7 @@ Improvements to the Commerce Integration Framework are on a faster release cycle
 
 ## Screens アドオン {#screens-add-on}
 
-* 起動を使用した署名コンテンツの将来のコンテンツ変更の計画
+* 起動回数を使用した、署名コンテンツの将来のコンテンツ変更の計画
 * シーケンスチャンネルでのメーター制再生が可能になりました。
 * ソースファイル（Excel シートなど）を使用してプロジェクト構造を自動作成できるようになりました。
 
