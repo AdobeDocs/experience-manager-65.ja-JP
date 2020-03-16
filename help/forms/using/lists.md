@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
@@ -60,7 +60,7 @@ Correspondence Management Solution は、動的データアイテム（可変デ
 
    [ ![ツールバー](assets/advancedediting.png)
 
-   * **リンク**：テキストにハイパーリンクを挿入します。「リン **[!UICONTROL ク]**」をタップし、「 **[!UICONTROL URL]** 」フィールドにリンクを指定し、「 **[!UICONTROL Alt]** Text ![」フィールドからデフォルトのオブジェクト名を削除し、「](assets/save_icon.svg)SaveText」をタップします。
+   * **リンク**[](#insert-hyperlink)：テキストにハイパーリンクを挿入します。
    * **繰り返し**:繰り返し：区切り文字を使用して、データディクショナリのコレクション要素を印刷します。
    * **条件**：タップして条件を挿入します。条件に基づいてテキストを挿入します。条件が true の場合はレターにテキストが表示されます。そうでない場合は表示されません。
    * **説明の追加**:テキストに注釈を追加します。 これは作成者に表示されるメタデータで、作成したレターには含まれません。
@@ -131,6 +131,18 @@ Correspondence Management Solution は、動的データアイテム（可変デ
 
 1. インライン条件と繰り返しを使用して、文脈に応じて変化する適切に構造化されたレターにすることができます。For more information on inline condition and repeat, see [Inline conditions and repeat in letters](/help/forms/using/cm-inline-condition.md).
 1. 「**保存**」をタップします。
+
+#### テキストへのハイパーリンクの挿入 {#insert-hyperlink}
+
+次の手順を実行して、テキストアセット内にハイパーリンクを作成します。
+
+1. テキストエディターで、テキストまたはデータモデルオブジェクトを選択します。
+
+2. 「リンク」 **[!UICONTROL をタップしま]**&#x200B;す。 「代替テキ **[!UICONTROL スト]** 」フィールドをタップして、既存のデータモデルオブジェクトの名前またはテキストを削除します。
+
+3. URLを指定し、「保存」をタッ ![プします](assets/save_icon.svg)。
+
+![テキストアセット内にハイパーリンクを作成する](assets/text-create-hyperlink.png)
 
 #### テキストの検索と置換 {#searching-and-replacing-text}
 
