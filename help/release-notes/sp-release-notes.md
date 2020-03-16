@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 82ded190d4fee4e4ef9849dc34372774c529844f
+source-git-commit: cc72581f0de6f47cd1d7e207f228e64ba7c9e842
 
 ---
 
@@ -38,7 +38,7 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 
 * HTML5フォー [ムでのリッチ](../forms/using/designing-form-template.md) ・テキストのサポート。
 
-* アセットのアクセシビリティの強化。
+* [Experience Manager Assetsのアクセシビリティ](new-features-latest-service-pack.md#accessibility-enhancements) が強化されました。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.10.8 に更新しました。
 
