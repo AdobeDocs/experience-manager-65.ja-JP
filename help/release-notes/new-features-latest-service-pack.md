@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
+source-git-commit: ed756d785864131c2e031aec4331388bc057576b
 
 ---
 
@@ -39,15 +39,17 @@ Adobe I/Oコンソールを使用して、AEM AssetsをBrand Portalで設定で�
 
 ### Accessibility enhancements {#accessibility-enhancements}
 
-* 混合状態のチェックボックスの属性の値が「mixed」に設定され、混合状態がスクリーンリーダーに表示されるようになりました。
+Experience Manager Assetsには、次のアクセシビリティ機能の強化が含まれています。
 
-* キーボードベースのコントロールが、パスベースのジェスチャーとは別に、ズームされた画像内を移動できるようになりました。
+* キーボードの矢印キーを使用して、ズームされた画像内の領域を移動およびパンできます。 詳しくは、キーボードキーを使用したア [セットのプレビューのみを参照してくださ](../assets/managing-assets-touch-ui.md#previewing-assets)い。
 
-* キーボードのみのユーザーが手動で日付を入力できるように、日付形式の制約がフィールドラベルに追加されました。
+* フィルターパネルの混合状態のチェックボックス（ネストされた述語をすべて選択しない限り、最初のレベルのチェックボックスは選択されず、読み取られます）は、スクリーンリーダーで読み取り可能です。
 
-* Alt属性が装飾アイコンに追加され、role=img属性が削除され、そのようなアイコンや画像がスクリーンリーダーユーザーに表示されなくなりました。
+* 日付と時間の形式の制約は、ユーザーがキーボードを使用して正しい形式で日付を入力できるように、日付フィールドのフィールドラベルに設定されています。
 
-* Alt属性が閉じるアイコンに追加され、Tabキーでスクリーンリーダーユーザーに通知できるようになりました。
+   For example, `On Time (MM-DD-YYYY HH:mm)`. ここで、MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍用形式の時、mmは分です。
+
+* 現在選 `X` 択されているタグを削除するボタン上のシンボルが、選択されているタグの数と共にスクリーンリーダーによって通知されるようになりました。
 
 ## AEM Forms {#aem-forms}
 
