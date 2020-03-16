@@ -1,13 +1,13 @@
 ---
 title: 既知の問題
-description: Adobe Experience Manager 6.3の既知の問題に関するリリースノート
+description: Adobe Experience Manager 6.5の既知の問題に関するリリースノート
 uuid: 8fbdb167-833a-4179-aad1-0a26a4e5b3a7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0ae42d9f81df89a7e1c08fac5cce5240f14e8c60
+source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
 
 ---
 
