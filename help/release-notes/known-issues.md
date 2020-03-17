@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
+source-git-commit: 86dbd52d44a78401aa50cce299850469c51b691c
 
 ---
 
@@ -20,15 +20,33 @@ source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
 
 ## プラットフォーム {#platform}
 
-CRX-Quickstartとその内容が削除される問題が報告されます。
+* CRX-Quickstartとその内容が削除される問題が報告されます。
 
-これらの各アクションで、「*htmllibmanager.fileSystemOutputCacheLocation」プロパティが空の文字列でないことを確認してください*。
+   これらの各アクションで、「*htmllibmanager.fileSystemOutputCacheLocation」プロパティが空の文字列でないことを確認してください*。
 
-1. &quot;*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*&quot;を呼び出します。
-2. AEM 6.5 へのアップグレード.
-3. AEM 6.5での「遅延コンテンツ移行」の実行。
+   1. &quot;*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*&quot;を呼び出します。
+   2. AEM 6.5 へのアップグレード.
+   3. AEM 6.5での「遅延コンテンツ移行」の実行。
+   ナレッジ [ベースの記事に](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) 、この問題の詳細と回避策が記載されています。
 
-ナレッジ [ベースの記事に](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) 、この問題の詳細と回避策が記載されています。
+* JDK 11とAEM 6.5インスタンスを使用している場合、一部のパッケージを展開すると、一部のページが空白として表示されることがあります。 ログファイルには、次のエラーメッセージが表示されます。
+
+   ```
+   *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
+   java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+   ```
+
+このエラーを解決するには：
+
+1. AEM インスタンスを停止します。に移動し、 `<aem_server_path_on_server>crx-quickstart\conf` ファイルを開 `sling.properties` きます。 アドビでは、このファイルのバックアップを作成することをお勧めします。
+
+2. Search for `org.osgi.framework.bootdelegation=`. 結果を次のよ `jdk.internal.reflect,jdk.internal.reflect.*` うに表示するプロパティを追加します。
+
+   ```
+   org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.internal.reflect.*
+   ```
+
+3. ファイルを保存し、AEMインスタンスを再起動します。
 
 ## Assets {#assets}
 
@@ -39,7 +57,7 @@ CRX-Quickstartとその内容が削除される問題が報告されます。
 ## Forms {#forms}
 
 * AEM Forms が Linux オペレーティングシステムにインストールされている場合、ハードウェアセキュリティモジュールを使用した電子署名が機能しない（CQ-4266721）
-* (AEM Forms on WebSphere only) The **Forms Workflow **> **Task Search** option does not return any result if you search for an **Administrator** with **Username** as the search criteria. （CQ-4266457）
+* （WebSphere 上のAEM Forms のみ）**ユーザー名**&#x200B;を検索条件として&#x200B;**管理者**&#x200B;を検索する場合、**Forms のワークフロー**／**タスクの検索**&#x200B;を実行しても結果が返されない（CQ-4266457）
 
 * AEM Forms で、JPEG 圧縮の .tif および.tiff ファイルを PDF ドキュメントに変換できない（CQ-4265972）
 * **AEM Forms の移行**&#x200B;ページの「**AEM Forms アセットスキャナー**」オプションと「**レターからインタラクティブコミュニケーションへの移行**」オプションが機能しない（CQ-4266572）
