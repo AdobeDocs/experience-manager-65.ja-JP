@@ -3,7 +3,7 @@ title: Assets でサポートされるファイル形式
 description: AEM Assets でサポートされているファイル形式と、各形式でサポートされている機能のリスト。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a701d98fed79648104c39816482ff94997ba2e6
+source-git-commit: 08ea08fc2f8c36d509509f761a76a428d6df7e6a
 
 ---
 
@@ -24,7 +24,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 ## Supported Raster image formats {#supported-raster-image-formats}
 
-アセット管理機能でサポートされるラスターイメージ形式は次のとおりです。
+アセット管理機能でサポートされるラスターイメージ形式は、次のとおりです。
 
 | 形式 | ストレージ | メタデータの管理 | メタデータの抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -42,7 +42,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-ダイナミックメディア機能でサポートされるラスターイメージ形式は次のとおりです。
+ダイナミックメディア機能でサポートされるラスターイメージ形式は、次のとおりです。
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -55,11 +55,11 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-&amp;ast;結合した画像がPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+&amp;ast;結合された画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にする方法については、「コマンドラインベースのメ [ディアハンドラ」を参照してくださ](media-handlers.md#command-line-based-media-handler)い。
+* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にする方法については、コマンドラインベースのメ [ディアハンドラを参照してくださ](media-handlers.md#command-line-based-media-handler)い。
 
 * Metadata writeback works for PSB file format when it is added to the `NComm` handler.
 
@@ -79,7 +79,7 @@ See [Using PDF Rasterizer](aem-pdf-rasterizer.md).
 
 ## Supported Image Transcoding library {#supported-image-transcoding-library}
 
-Adobe Imaging Transcodingライブラリは、エンコード、トランスコード、リサンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
+Adobe Imaging Transcodingライブラリは、エンコーディング、トランスコード、リサンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
 画像トランスコーディングライブラリは、JPG／JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF／圧縮 TIFF（32 ビット TIFF ファイルおよび PTIFF ファイルを除く）、ICO、および ICN MIME タイプをサポートします。
 
@@ -114,7 +114,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-ダイナミックメディアの機能でサポートされるドキュメント形式は次のとおりです。
+ダイナミックメディア機能でサポートされるドキュメント形式は次のとおりです。
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -170,7 +170,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | MTS | AVCHD | H264/AVC |  |
 | MKV | Matroska | H264/AVC |  |
 | R3D、RM | Red Raw Video | MJPEG 2000 |  |
-| RAM、RM | RealVideo | Unsupported | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
+| RAM、RM | RealVideo | 未サポート | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
 | FLAC | Native Flac | Free lossless audio codec |  |
 | MJ2 | Motion JPEG2000 | Motion JPEG 2000 codec |  |
 
@@ -188,24 +188,23 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
-他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。
+他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。ダイナミックメディア配信を除く通常のDAM機能は、すべてのファイルでサポートされます。
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| * | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（独自の配信ドメインで設定する場合） |  |  |  |  |  | ✓ |
 
-**** &amp;ast;その他の形式は、DAMでの保存、バージョン管理、ACL、ワークフロー、投稿、およびメタデータ管理に対応しています。
+**&amp;ast;** その他の形式は、DAMでの保存、バージョン管理、ACL、ワークフロー、投稿、およびメタデータ管理に対してサポートされています。
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、AEMはファイル拡張子を使用してファイルタイプを検出します。 AEMは、ファイルの内容からそれを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
+デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容からこのファイルを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
 
-サポートされるMIMEタイプのリストは、CRXDE Lite()で入手できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
+CRXDE Liteでは、サポートされているMIMEタイプのリストを次の場所で使用できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
 
 [アップロードジョブパラメーターサポートの MIME タイプベースの設定](config-dynamic.md)を参照してください。
 
