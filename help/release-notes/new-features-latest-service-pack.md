@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed756d785864131c2e031aec4331388bc057576b
+source-git-commit: 1fde7fc5dd32b5a2a83fe6c01cfa2b24be32a899
 
 ---
 
@@ -31,11 +31,12 @@ Adobe Experience Manager (AEM) 6.5は、今年の四半期別のService Packで�
 
 ## AEM Assets {#aem-assets}
 
-### Adobe I/Oコンソールを通じたBrand Portalとの統合 {#assets-integration-bp}
+### AEM Assets と Brand Portal の連携の設定 {#configure-assets-bp}
 
-Adobe I/Oコンソールを使用して、AEM AssetsをBrand Portalで設定できるようになりました。 Adobe I/Oコンソールは、Brand Portalテナントの認証用にIMSトークンを調達します。 以前は、レガシーOAuth Gatewayを介して、AEM AssetsはクラシックUIのブランドポータルを使用して設定されていました。 レガシーOAuth Gatewayを使用した設定は、2020年4月6日までサポートされます。 統合を変更しない場合、既存の設定は引き続き機能します。
+AEM AssetsとBrand Portalの間の認証チャネルが変更されました。 これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。AEM Assets と Brand Portal の連携が、Adobe I/O を通じて設定されるようになりました。Adobe I/O が Brand Portal テナントの認証用の IMS トークンを取得します。
 
-新しい統合を作成するか、統合設定をAdobe I/Oコンソールにアップグレードできます。
+Brand PortalでAEM Assetsを設定する手順は、AEMのバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 See [Configure AEM Assets with Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) for details.
+
 
 ### Accessibility enhancements {#accessibility-enhancements}
 
