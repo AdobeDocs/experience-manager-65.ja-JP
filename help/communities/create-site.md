@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -20,12 +20,12 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 ## コミュニティサイトの作成 {#create-a-community-site}
 
-作成者インスタンスを使用して、コミュニティサイトを作成します。 AEM作成者インスタンス上：
+作成者インスタンスを使用してコミュニティサイトを作成します。 AEM作成者インスタンスで：
 
 1. 管理者権限でサインインします。
 1. From global navigation, go to **Navigation, Communities, Sites.**
 
-コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を案内するウィザードが提供されます。It is possible to move forward to the `Next`step or `Back`to the previous step before committing the site in the final step.
+コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を案内するウィザードが提供されます。It is possible to move forward to the `Next` step or `Back` to the previous step before committing the site in the final step.
 
 新しいコミュニティサイトの作成を開始するには：
 
@@ -43,32 +43,32 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 * **コミュニティサイトの説明**: `A site for engaging with the community.`
 * **コミュニティサイトのルート**:(デフォルトのルートの場合は空白のままにし `/content/sites`ます)。
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンリストを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ以上のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**:(単一言語の場合は手を加えないでください。英語)ドロップダウンリストを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ以上のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**：engage
 
-   * 名前はサイトの作成後には容易に変更できないので、再確認してください
-   * 初期 URL は、コミュニティサイト名の下に表示されます。
-   * 有効な URL に、ベース言語コード + 「.html」を追加します。
+   * サイトの作成後に簡単に変更できない名前を再確認します。
+   * コミュニティサイト名の下に最初のURLが表示されます。
+   * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
    * *例えば*、https://localhost:4502/content/sites/ `engage/en.html`
 
-* **テンプレート**:引っ張って選ぶ `Reference Site`
+* **テンプレート**:引っ張って～を選ぶ `Reference Site`
 
 「**次へ**」を選択します。
 
 ### 手順 2：デザイン {#step-design}
 
-デザインの手順は、テーマとブランドバナーを選択するための2つのセクションに分かれています。
+デザインの手順は、テーマとブランドバナーを選択するための次の2つのセクションに分かれています。
 
 #### コミュニティサイトテーマ {#community-site-theme}
 
-目的のスタイルを選択し、テンプレートに適用します。選択すると、テーマはチェックマークでオーバーレイされます。
+目的のスタイルを選択し、テンプレートに適用します。選択すると、テーマはチェックマークで重ねて表示されます。
 
 #### コミュニティサイトブランディング {#community-site-branding}
 
-（オプション）サイトページに表示するバナー画像をアップロードします。バナーは、ブラウザーの左端（コミュニティサイトのヘッダーとナビゲーションリンクの間）に固定されます。 バナーの高さは 120 ピクセルに切り詰められます。バナーがブラウザーの幅や 120 ピクセルの高さに合わせてリサイズされることはありません。
+（オプション）サイトページ全体に表示するバナー画像をアップロードします。 バナーは、ブラウザーの左端（コミュニティサイトのヘッダーとナビゲーションリンクの間）に固定されます。 バナーの高さは 120 ピクセルに切り詰められます。バナーがブラウザーの幅や 120 ピクセルの高さに合わせてリサイズされることはありません。
 
-![chlimage_1-58](assets/chlimage_1-58.png) ![chlimage_1-59](assets/chlimage_1-59.png)
+![chlimage_1-58](assets/chlimage_1-58.png)![chlimage_1-59](assets/chlimage_1-59.png)
 
 「**次へ**」を選択します。
 
@@ -82,11 +82,11 @@ Visit the [Getting Started with AEM Communities for Enablement](/help/communitie
 
 「[ユーザー管理](/help/communities/sites-console.md#user-management)」タブのチェックボックスをすべてオンにします。
 
-* サイト訪問者の自己登録を許可します。
-* サイト訪問者がサインインせずにサイトを閲覧できるようにするには
-* メンバーが他のコミュニティメンバーからのメッセージを送受信することを許可します。
-* 登録やプロファイル作成をせずに Facebook でサインインすることを許可します。
-* 登録やプロファイル作成をせずに Twitter でサインインすることを許可します。
+* サイト訪問者が自己登録を行えるようにするには
+* サイトの訪問者がサインインせずにサイトを表示できるようにするには
+* コミュニティの他のメンバーからのメッセージの送受信をメンバーに許可するには
+* プロファイルの登録と作成を行う代わりに、Facebookでのログインを許可するには
+* プロファイルの登録と作成を行う代わりに、Twitterでのログインを許可するには
 
 >[!NOTE]
 >
@@ -100,8 +100,8 @@ The tags which may be applied to community content are controlled by selecting A
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
-* 「tut」と入力します
-* select `Tutorial`
+* タイプ `tut`
+*  `Tutorial`
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -109,18 +109,18 @@ The tags which may be applied to community content are controlled by selecting A
 
 [コミュニティメンバの役割は](/help/communities/users.md) 、[役割]セクションの設定を通じて割り当てられます。
 
-コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先読み検索を使用し、ドロップダウンのオプションからメンバー名またはグループ名を選択します。
+コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先読み検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
 例：
 
-* 「q」と入力します。
-* 「[Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)」を選択します。
+* タイプ `q`
+* Select [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
 >[トンネルサービス](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) では、パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
 
-![新しいサイトでのユーザーの役割](assets/site-admin-1.png)
+![新しいサイトでのユーザの役割](assets/site-admin-1.png)
 
 #### モデレート {#moderation}
 
@@ -140,12 +140,12 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 [翻訳設定](/help/communities/sites-console.md#translation)では、サイトの基本言語に加えて、UGC の翻訳を許可するかどうかと、どの言語に翻訳するかを指定します。
 
-* 「**機械翻訳を許可**」をオンにします。
-* デフォルトの機械翻訳サービスで翻訳するデフォルト言語は、そのままにします。
-* デフォルトの翻訳プロバイダーと設定はそのままにします
-* 言語コピーはないので、グローバルストアは不要です
-* 「**ページ全体を翻訳**」を選択します。
-* デフォルトの保持オプションはそのままにします
+* Check **Allow Machine Translation**
+* デフォルトの機械翻訳サービスで翻訳用にデフォルトの言語を選択したままにする
+* デフォルトの翻訳プロバイダーとconfigをそのまま使用
+* 言語コピーが存在しないので、グローバルストアは必要ありません。
+* Select **Translate entire page**
+* デフォルトの永続性オプションをそのまま使用
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -165,7 +165,7 @@ Select **Create.**
 
 プロセスが完了すると、新しいサイトのフォルダーがコミュニティサイトコンソールに表示されます。
 
-![communitiesitesconsole](assets/communitiessitesconsole.png)
+![communitiesconsole](assets/communitiessitesconsole.png)
 
 ## Publish the Community Site {#publish-the-community-site}
 
@@ -181,15 +181,25 @@ Select **Create.**
 
 各アイコンの機能は次のとおりです（左から右の順に説明）。
 
-* **サイトを開く**&#x200B;鉛筆のアイコンを選択すると、コミュニティサイトをオーサリング編集モードで開いて、ページコンポーネントを追加したり設定したりできます。
+* **サイトを開く**
 
-* **サイトを編集**&#x200B;プロパティアイコンを選択すると、コミュニティサイトを開いて、タイトルなどのプロパティを変更したり、テーマを変更したりできます。
+   鉛筆アイコンを選択して、コミュニティサイトを作成者編集モードで開き、ページコンポーネントを追加または設定します。
 
-* **サイトを公開**&#x200B;世界地図のアイコンを選択すると、コミュニティサイトを公開できます（例えば、パブリッシュサーバーがローカルマシン上で実行されている場合、コミュニティサイトはデフォルトで localhost:4503 に公開されます）。
+* **サイトを編集**
 
-* **サイトを書き出し**&#x200B;書き出しアイコンを選択すると、コミュニティサイトのパッケージが作成され、[パッケージマネージャー](/help/sites-administering/package-manager.md)に保存されて、ダウンロードされます。UGC はサイトパッケージに含まれていません。
+   プロパティアイコンを選択して、タイトルやテーマの変更など、プロパティの変更用にコミュニティサイトを開きます
 
-* **サイトの削除**コミュニティ/サイトコンソールからコミュニティサイトを削除するには、削除アイコンを選択します。 サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
+* **サイトを公開**
+
+   コミュニティサイトを公開する世界のアイコンを選択します（例えば、公開サーバーがローカルマシンで実行されている場合は、デフォルトでlocalhost:4503）。
+
+* **サイトを書き出し**
+
+   書き出しアイコンを選択して、コミュニティサイトのパッケージを作成します。このパッケージが、[パッケージマネージャー](/help/sites-administering/package-manager.md)に格納され、ダウンロード可能になります。UGC はサイトパッケージに含まれていません。
+
+* **サイトを削除**
+
+   Select the delete icon to delete the community site from within **[UIControl Communities > Sites console]**. サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
 
 ![siteactions](assets/siteactions.png)
 
@@ -199,15 +209,17 @@ Select **Create.**
 >
 >オーサーインスタンスで、メインメニューから：
 >
->1. [ツール] > [操作] > [複製]メニューに移動します。
-1. 「作成者のエージェント」を選択します。
-1. 「デフォルトエージェント（公開）」を選択します。
-1. 「設定」の横にある「編集」を選択します。
-1. エージェント設定のポップアップダイアログで、「トランスポート」タブを選択します。
-1. URIで、ポート番号4503を目的のポート番号に変更し、
-   * 例えば、ポート6103を使用するには：https://localhost:6103/bin/receive?sling:authRequestLogin=1
-1. 「OK」を選択します。
-1. （オプション）複製キューをリセットするには、「クリア」または「強制再試行」を選択します。
+>1. Navigate to **[UIControl Tools > Operations > Replication]** menu.
+>1. 「作成者の **[UIControlエージェント」を選択します]**。
+>1. 「UIControl Default Agent ( **[publish)」を選択します]**。
+>1. 「 **[UIControl Settings」の横にある]**「UIControl Edit」を **[選択します]**。
+>1. エージェント設定のポップアップダイアログで、「 **[UIControl Transport]** 」タブを選択します。
+>1. URIで、ポート番号4503を目的のポート番号に変更し、
+   >    * 例えば、ポート6103を使用するには：
+      >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>
+1. 「 **[UIControl OK」を選択します]**。
+1. (Optional) Select **[UIControl Clear]** or **[UIControl Force Retry]** to reset the replication queue.
 
 
 
@@ -229,11 +241,11 @@ Select **Create.**
 この新しいコミュニティサイトでは、手順 1 で「engage」というサイト名を指定したので、[グループコンソール](/help/communities/members.md)（グローバルナビゲーション：コミュニティ／グループ）で以下に示す 4 つの新しいユーザーグループを確認できます。
 
 * コミュニティ管理者の関与
-* コミュニティソーシャルグループ管理者
+* コミュニティソーシャルグループの管理者
 * コミュニティ Engage メンバー
 * コミュニティ Engage モデレーター
-* コミュニティエンゲージメント特権メンバー
-* Community Engage Site Content Manager
+* コミュニティに参加する特権メンバー
+* Community Engage Siteコンテンツマネージャ
 
 Note that [Aaron McDonald](/help/communities/tutorials.md#demo-users) is a member of
 
@@ -249,11 +261,11 @@ Note that [Aaron McDonald](/help/communities/tutorials.md#demo-users) is a membe
 
 ## 認証エラーの設定 {#configure-for-authentication-error}
 
-Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されない場合、認証エラーはコミュニティサイトのログインページを再表示し、エラーメッセージが表示されるという利点があります。
+Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されない場合、認証エラーによりコミュニティサイトのログインページが再度表示され、エラーメッセージが表示されるという利点があります。
 
 名前を付けて `Login Page Mapping` 追加
 
-* /content/sites/engage/en/signin:/content/sites/engage/en
+* `/content/sites/engage/en/signin:/content/sites/engage/en`
 
 ## オプションの手順 {#optional-steps}
 
@@ -263,7 +275,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the [resource-mapping](/help/sites-deploying/resource-mapping.md) table on publish.
 
-使用を開始するには：
+開始するには：
 
 1. 発行インスタンスで、管理者権限でサインインします。
 1. Browse to [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
@@ -272,9 +284,9 @@ To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the 
 
    * Select **Create Node:**
 
-      * **名前** localhost.4503( *&#39;* :&#39;を使用しないでください)
+      * **localhost** .4503(「:」 *を使用しな* いでください)。
 
-      * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **タイプ**[sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
 1. With newly created `localhost.4503` node selected:
 
@@ -294,10 +306,11 @@ To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the 
 1. （オプション）閲覧履歴を削除します。
 1. https://localhost:4503/を参照します。
 
-   * https://localhost:4503/content/sites/engage/en.htmlに到着する
+   * https://localhost:4503/content/sites/engage/en.htmlにアクセス
 
 >[!NOTE]
-To disable, simply prefix the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
+>
+>To disable, simply prefix the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -309,7 +322,7 @@ If unable to save changes, be sure that the node name is `localhost.4503`, with 
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prefixed to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると失敗します。
+The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prefixed to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ### サイトの変更 {#modify-the-site}
 
@@ -320,5 +333,6 @@ The &#39;**$**&#39; at the end of the regular expression `sling:match`string is 
 変更後は、必ず&#x200B;**保存**&#x200B;して再&#x200B;**公開**&#x200B;してください。
 
 >[!NOTE]
-AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
+>
+>AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
 
