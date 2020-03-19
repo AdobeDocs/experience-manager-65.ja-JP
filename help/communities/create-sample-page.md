@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -41,8 +41,8 @@ From global navigation on an author instance select **[!UICONTROL Tools > Commun
 * 基本情報
 
    * `Name`:単一ページのテンプレート
-   * `Description`:単一のページ関数で構成されるテンプレートです。
-   * select `Enabled`
+   * `Description`:単一のページ関数で構成されるテンプレート。
+   *  `Enabled`
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
@@ -72,7 +72,7 @@ After creating the site template, from global navigation select **[!UICONTROL Co
 * 手順 `1 - Site Template`
 
    * `Title`:簡易コミュニティサイト
-   * `Description`:実験用の単一ページで構成されるコミュニティサイト。
+   * `Description`:実験用の単一ページから成るコミュニティサイト。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
    * `Name`: sample
