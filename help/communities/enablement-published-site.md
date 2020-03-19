@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -27,8 +27,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 まず、サイト作成時に表示された URL を参照します。ただし、このとき参照するのはパブリッシュサーバー上の URL です。次に例を示します。
 
-* author URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
-* publish URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
+* Author URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
+* Publish URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
 
 [デフォルトホームページを設定](enablement-create-site.md#changethedefaulthomepage)した場合は、[http://localhost:4503/](http://localhost:4503/) を参照するだけでサイトが開きます。
 
@@ -40,7 +40,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 匿名のサイト訪問者 {#anonymous-site-visitor}
 
-匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。自己登録やFacebookやTwitterへのログインのオプションはありません。
+匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。自己登録やFacebookやTwitterへのログインは選択できません。
 
 Notice this  home page  shows four menu items: `Assignments, Ski Catalog, What's New` and `Discussions`, but none may be reached without signing in.
 
@@ -51,9 +51,9 @@ Notice this  home page  shows four menu items: `Assignments, Ski Catalog, What's
 
 ### JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、 **[!UICONTROL サイトのコンテンツに対して]** 「匿名アクセスを許可」は無効になっています。 ただし、この動作は「Slingの制限」を回避策として使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、 **[!UICONTROL 匿名アクセスを許可]** (Allow Anonymous Access)はサイトのコンテンツに対して無効になります。 ただし、この動作はSlingの制限を回避策として使用して制御できます。
 
-jcrコンテンツとjsonを介した匿名ユーザーによるコミュニティサイトのコンテンツへのアクセスを保護するには、次の手順に従います。
+コミュニティサイトのコンテンツを、jcrコンテンツとjsonを通じて匿名ユーザーによるアクセスから保護するには、次の手順に従います。
 
 1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
 
@@ -61,7 +61,7 @@ jcrコンテンツとjsonを介した匿名ユーザーによるコミュニテ�
    >
    >ローカライズされたサイトには移動しないでください。
 
-1. 「ページプロパ **[!UICONTROL ティ」に移動]**。
+1. 「ページのプロ **[!UICONTROL パティ」に移動]**。
 
    ![page-properties-1](assets/page-properties-1.png)
 
@@ -157,11 +157,11 @@ Once signed in, notice there is a new menu item, `Administration`, which appears
 
 ![chlimage_1-441](assets/chlimage_1-441.png)
 
-ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinは、モデレーターおよびイネーブルメントリソースの連絡先で、イネーブルメントリソースまたは学習パスに登録されていなかったため、表示するものはありません。
+ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinは、モデレーターおよびイネーブルメントリソースの連絡先で、イネーブルメントリソースまたは学習パスに登録されていなかったので、表示するものはありません。
 
 ### Administration {#administration}
 
-2人の学習者によるアクティビティがあり、モデレートコンソ `Riley Taylor` ールにア `Sidney Croft. By s`クセ `Administration`スするためのリンクを選択すると、Quinは一括モデレートコンソールを使用して [投稿をモデレートできます](moderation.md) 。
+What there is, is activity by the two learners, `Riley Taylor` and `Sidney Croft`. By selecting the `Administration` link to access the Moderation Console, Quinn is able to use the [bulk moderation console](moderation.md) to moderate their posts.
 
 サイドパネルのアイコンを選択すると、コミュニティコンテンツの検索に使用するフィルターの展開／折りたたみが切り替わります。
 
@@ -176,15 +176,15 @@ Once signed in, notice there is a new menu item, `Administration`, which appears
 On author, navigate to the **Communities,[Resources console](resources.md)**, where the enablement resources are managed, and after selecting a community site, it is possible to generate reports for
 
 * すべてのイネーブルメントリソースと学習パス
-* 1つの特定の実施可能リソースまたは学習パス
+* 特定のイネーブルメントリソースまたはラーニングパス
 
 Navigate to the **Communities,[Reports console](reports.md)**, and generate reports according to
 
 * 実施可能なリソースと学習パスへの割り当て
-* 特定の期間におけるコミュニティサイトへの投稿
+* 特定の期間のコミュニティサイトへの投稿
 * 特定の期間におけるコミュニティサイトの表示（サイト訪問）
 
-* 投稿と表示は、すべてのコンテンツに対して行うことも、特定のコンテンツに対して行うこともできます。
+* 投稿と表示は、すべてのコンテンツに対して、または特定のコンテンツに対して行うことができます。
 
    * フォーラム
    * フォーラムトピック
@@ -203,8 +203,8 @@ Navigate to the **Communities,[Reports console](reports.md)**, and generate repo
 * 管理者権限でサインイン
 * Navigate from the main menu to **[!UICONTROL Communities > Resources]**
 * サイトの `Enablement Tutorial` 選択
-* Select the `Report`icon for a summary of all Resources
-* Select a Resource and then the `Report`icon for a report on that Resource
+* Select the `Report` icon for a summary of all Resources
+* Select a Resource and then the `Report` icon for a report on that Resource
 
 Adobe Analytics のデータを表示するには時期尚早のようです。データが表示されるには 1 時間から 12 時間かかります。ただし、基本的なSCORMレポートは既に使用可能です。
 
@@ -218,7 +218,7 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 * Open card `Enablement Tutorial`
 * Open card `Ski Lessons`
-* `select Report, User Report`
+*  `Report > User Report`
 
 ![chlimage_1-444](assets/chlimage_1-444.png)
 
