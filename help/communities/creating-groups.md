@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: d94708ee-ca6b-420c-9536-6889d752f9de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
 
-# コミュニティグループ{#community-groups}
+# コミュニティグループ {#community-groups}
 
-コミュニティグループ機能は、サブコミュニティが発行環境および作成者環境から許可されたユーザー（コミュニティメンバーおよび作成者）によってコミュニティサイト内に動的に作成される機能です。
+コミュニティグループ機能は、サブコミュニティを、発行環境および作成者環境から許可されたユーザ（コミュニティのメンバーと発言者）によってコミュニティサイト内に動的に作成する機能です。
 
 This ability is present when the [groups function](/help/communities/functions.md#groups-function) is present in the [community site](/help/communities/sites-console.md) structure.
 
 A [community group template](/help/communities/tools-groups.md) provides the design of the community group page when a community group is dynamically created.
 
-グループ機能をコミュニティサイトの構造またはコミュニティサイトテンプレートに追加すると、1 つ以上のテンプレートがグループ機能用に選択されます。このグループテンプレートのリストは、コミュニティサイトから動的に新しいグループを作成するメンバーまたは作成者に表示されます。
+グループ機能をコミュニティサイトの構造またはコミュニティサイトテンプレートに追加すると、1 つ以上のテンプレートがグループ機能用に選択されます。このグループテンプレートのリストは、コミュニティサイト内から動的に新しいグループを作成するメンバーまたは作成者に表示されます。
 
 ## 新しいグループの作成 {#creating-a-new-group}
 
@@ -32,33 +32,46 @@ The ability to create a new community group relies on the existence of a communi
 
 The examples that follow use the community site created from the `Reference Site Template` as described in the [Getting Started with AEM Communities](/help/communities/getting-started.md) tutorial.
 
-**Groups **メニュー項目が選択されている場合に発行時に読み込まれるページを示します。
+This is the page that loads on publish when the **Groups** menu item is selected:
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
 「**新しいグループ**」アイコンを選択すると、編集ダイアログが開きます。
 
-「**設定**」タブで、グループの基本機能を指定します。
+「**設定**」タブでは、グループの基本機能を指定します。
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-* **グループ名**&#x200B;コミュニティサイトに表示するグループのタイトルです。
+* **Group Name**
 
-* **説明**&#x200B;コミュニティサイトに表示するグループの説明です。
+   コミュニティサイトに表示するグループのタイトル。
 
-* **招待**&#x200B;グループに参加するように招待するメンバーのリストです。先行入力検索によって、招待する推奨コミュニティメンバーが表示されます。
+* **説明**
 
-* **グループ URL 名** URL の一部になるグループページの名前です。
+   コミュニティサイトに表示するグループの説明。
 
-* **「グループを開く**」 `Open Group` 選択は、匿名サイトの訪問者がコンテンツを表示できることを示し、選択を解除しま `Member Only Group`す。
+* **招待**
 
-* **「メンバーのみのグ**&#x200B;ループ `Member Only Group` の選択」は、グループのメンバーのみがコンテンツを表示できることを示し、選択を解除しま `Open Group`す。
+   グループに参加するよう招待するメンバーのリストです。 先行入力検索によって、招待する推奨コミュニティメンバーが表示されます。
 
-「**Template **」タブの下には、コミュニティサイトの構造にグループ機能が含まれている場合や、コミュニティサイトのテンプレートにグループ機能が含まれていた場合に指定されたコミュニティグループテンプレートのリストから選択できます。
+* **グループ URL 名**
+
+   URLの一部となるグループページの名前。
+
+* **オープングループ**
+
+   を選択す `Open Group` ると、匿名サイト訪問者がコンテンツを表示でき、選択が解除されま `Member Only Group`す。
+
+* **メンバーのみのグループ**
+
+   を選択す `Member Only Group` ると、グループのメンバーのみがコンテンツを表示でき、選択が解除されま `Open Group`す。
+
+Under the **Template** tab is the ability to
+select from the list of community group templates that were specified when the groups function was included in the community site&#39;s structure or in a community site template.
 
 ![chlimage_1-87](assets/chlimage_1-87.png)
 
-「**画像**」タブの下には、コミュニティサイトのグループページにグループ用に表示する画像をアップロードする機能があります。 初期設定のスタイルシートでは、画像のサイズが170 x 90ピクセルに設定されます。
+「**画像**」タブでは、コミュニティサイトのグループページにグループ用に表示する画像をアップロードできます。初期設定のスタイルシートでは、画像のサイズが170 x 90ピクセルに設定されます。
 
 ![chlimage_1-88](assets/chlimage_1-88.png)
 
@@ -74,7 +87,7 @@ Selecting the `Focus Group` link will open the Focus Group page in the browser, 
 
 ### コミュニティグループメンバーのリストコンポーネント {#community-group-member-list-component}
 
-このコン `Community Group Member List` ポーネントは、グループテンプレートの開発者が使用することを目的としています。
+このコンポ `Community Group Member List` ーネントは、グループテンプレートの開発者が使用することを意図しています。
 
 ### 追加情報 {#additional-information}
 
