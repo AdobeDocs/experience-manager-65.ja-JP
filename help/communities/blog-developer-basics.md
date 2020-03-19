@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ---
 
 
-# ブログの基本事項{#blog-essentials}
+# ブログの基本事項 {#blog-essentials}
 
-AEM 6.1 Communitiesでは、ブログはコミュニティ活動です。 ブログ記事は公開環境から投稿されるようになりました。以前は、ブログ記事は作成者環境でのみ作成でき、公開されていました。
+AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティです。 ブログ記事は公開環境から投稿されるようになりました。以前は、ブログ記事は作成者環境でのみ作成され、公開されていました。
 
-特権を持つメンバーに制限されない限り、コミュニティのメンバーがブログ記事を作成できるようになりました。
+特権を持つメンバーに制限されない限り、どのコミュニティメンバーでもブログ記事が作成できるようになりました。
 
 このページでは、ブログ機能の操作に関する基本情報をまとめています。
 
@@ -116,7 +116,7 @@ AEM プラットフォームでは、次に説明するように、XSS 攻撃を
 
 AEM 6.2以降、以前は手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれます。
 
-リッチメディアは、次のアイコンを選択してブログ記事に埋め込 `Embed Media from External Sites` みます。
+リッチメディアは、次のアイコンを選択してブログ記事に埋め込ま `Embed Media from External Sites` れます。
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
