@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -35,7 +35,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 以下をセットアップします。
 
-* **コミュニティマ**&#x200B;ネージャーコミュニティを有効にする場合、ユーザーグループのメンバーのみにロールを割り当てることができます。権限には、公開環境でのコンテンツの作成、割り当て、メンバ `Community Enablement Managers``*Community Site* Enablement Manager`ー管理が含まれます。
+* **コミュニティマ**&#x200B;ネージャーコミュニティを有効にする場合は、ユーザーグループのメンバーのみがの役割を割り当てられます。権限には、公開環境でのコンテンツの作成、割り当て、メンバー管理が含まれ `Community Enablement Managers``Community Site Enablement Manager`る場合があります。
 
 オプションで以下を設定します。
 
@@ -51,37 +51,37 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[mysqlを使用Webコンソール用JDBCドライ](deploy-communities.md#jdbc-driver-for-mysql)**バーのインストール（バンドル）:*http://localhost:4502/system/console/bundles*Install *before install*before installing SCORM package
+1. **[MySQL](deploy-communities.md#jdbc-driver-for-mysql)**Use Web Console用のJDBCドライバーをインストールします（バンドル）。*http://localhost:4502/system/console/bundles*Install *before install*SCORM package
 
-1. **[scormパッケージをインストール](deploy-communities.md#scorm-package)**Package Managerを使用します。http://localhost:4502/crx/packmgr/**
+1. **[SCORMパッケージのインストール](deploy-communities.md#scorm-package)**パッケージマネージャーの使用：http://localhost:4502/crx/packmgr/**
 
 **任意のサーバーで、次の手順を実行します。**
 
-1. **[MySQL、MySQL Workbench をインストール](mysql.md)**
+1. **[MySQL、MySQL Workbenchのインストール](mysql.md)**
 
-1. **[mysqlデータベースのインストール](mysql.md#database-setup)**作成者インスタンスからダウンロードしたSQLスクリプトの実行MySQL Workbenchの使用
+1. **[MySQLデータベースのインストール](mysql.md#database-setup)**作成者インスタンスからダウンロードしたSQLスクリプトの実行MySQL Workbenchの使用
 
 **オーサーインスタンスをホストしている同じサーバーで、次の手順を実行します。**
 
-1. **[FFmpeg をインストール](ffmpeg.md)**
+1. **[FFmpeg のインストール](ffmpeg.md)**
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[jdbc接続プールの設定](mysql.md#configure-jdbc-connections)**Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+1. **[JDBC接続プールの設定](mysql.md#configure-jdbc-connections)**Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
 
-1. **[scormエンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**Webコンソールを使用する(configMgr):http://localhost:4502/system/console/configMgr **
+1. **[SCORMエンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**Webコンソールを使用する(configMgr):http://localhost:4502/system/console/configMgr **
 
-1. **[csrfフィルタの設定](mysql.md#adobe-granite-csrf-filter)**Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+1. **[CSRFフィルタの設定](mysql.md#adobe-granite-csrf-filter)**Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
 
 **オーサーインスタンスで、次の手順を実行します。**
 
-1. (*optional*) **[configure Analytics service](analytics.md)**Use Tools, Deployment, Cloud Services console:*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+1. (*Optional*) **[Configure Analytics service](analytics.md)**Use Tools, Deployment, Cloud Services console:*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
-1. **[fmpegUse Workflow](ffmpeg.md#configure-ffmpeg-transcoding-service)**/Modelsコンソールの設定
+1. **[FmpegUse Workflow](ffmpeg.md#configure-ffmpeg-transcoding-service)**/Modelsコンソールの設定
 
-1. **[トンネルサービス](deploy-communities.md#tunnel-service-on-author)**Webコンソールを使用(configMgr)を有効にします。http://localhost:4502/system/console/configMgr **
+1. **[Enable Tunnel Service](deploy-communities.md#tunnel-service-on-author)**Use Web Console (configMgr):http://localhost:4502/system/console/configMgr **
 
-1. **[コミュニティ管理者の作成](users.md#creating-community-members)**作成者環境では、クラシックUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*パス= /home/users/communityを使用してユーザーを作成
+1. **[コミュニティ管理者の作成](users.md#creating-community-members)**作成者環境では、従来のUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*パス= /home/users/communityを使用してユーザーを作成
 
    * 次のグループにメンバーを追加します。
 
@@ -90,4 +90,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Dispatcher {#dispatcher}
 
-When the deployment includes [AEM&#39;s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html), in order for the enablement features to work properly, the `clientheader`and `filter`sections need modification. [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
+When the deployment includes [AEM&#39;s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html), in order for the enablement features to work properly, the `clientheader` and `filter` sections need modification. [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
