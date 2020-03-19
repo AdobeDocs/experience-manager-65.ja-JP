@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ---
 
 
-# バッジコンソール{#badges-console}
+# バッジコンソール {#badges-console}
 
 ## バッジについて {#about-badges}
 
@@ -34,7 +34,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 オーサー環境でバッジコンソールに接続するには
 
-* グローバルナビゲーションから：**ツール／コミュニティ／バッジ**
+* グローバルナビゲーションから、 **[UIControl Tools/Communities/Badgesに移動します。]**
 
 このコンソールでは、現在利用可能なバッジが表示され、新しいバッジを追加できます。
 
@@ -48,13 +48,21 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
-* **画像をアップロ**&#x200B;ード(必須&#x200B;**)バッジの画像で、推奨サイズが32 x 32ピクセル、72 dpi、JPEGまたはPNG形式です。
+* **画像をアップロード**
 
-* **名前**(必&#x200B;*須*)バッジの名前。 It is the default `Display Name` as well as the repository node name. If the `Name` is not a valid repository node name, it will be modified.
+   (*Required*) A badge image with a recommended size of 32 x 32 pixels at 72dpi in either the JPEG or PNG format.
 
-* **表示名**(オ&#x200B;*プション*) UIにバッジに表示する名前。 Default is the unaltered text entered for the `Name`.
+* **名前**
 
-* **説明**(オ&#x200B;*プション*)バッジの説明。
+   (*Required*) The badge name. It is the default `Display Name` as well as the repository node name. If the `Name` is not a valid repository node name, it will be modified.
+
+* **表示名**
+
+   (*Optional*) The name to display for the badge in the UI. Default is the unaltered text entered for the `Name`.
+
+* **説明**
+
+   (*Optional*) A description for the badge.
 
 ## 追加情報 {#additional-information}
 
