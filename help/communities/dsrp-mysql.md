@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -29,7 +29,7 @@ MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用でき�
 
    * [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Serverバージョン5.6以降
 
-      * AEMと同じホスト上で実行することも、リモートで実行することもできます。
+      * AEMと同じホストで実行するか、リモートで実行できます。
    * [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
 
 
@@ -71,7 +71,7 @@ SQL では大文字と小文字が区別されます。大文字と小文字が�
 
 MySQL Workbench には、スキーマと初期データをインストールする SQL スクリプトを実行するための UI が用意されています。
 
-MySQL Workbenchは、ターゲットOSの指示に従ってダウンロードし、インストールする必要があります。
+MySQL Workbenchは、ターゲットOSの手順に従ってダウンロードし、インストールする必要があります。
 
 ## Communities の接続 {#communities-connection}
 
@@ -84,7 +84,7 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 1. Select the `+` icon to the right of `MySQL Connections`.
 1. ダイアログで、プ `Setup New Connection`ラットフォームに適した値を入力します
 
-   デモ用に、作成者のAEMインスタンスとMySQLを同じサーバー上に配置します。
+   デモ用に、作成者のAEMインスタンスとMySQLを同じサーバー上に置きます。
 
    * 接続名: `Communities`
    * 接続方法： `Standard (TCP/IP)`
@@ -123,10 +123,10 @@ SQL スクリプトは、AEM リポジトリから取得されます。
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-スキーマをダウンロードする1つの方法は、
+スキーマをダウンロードする方法の1つは、
 
-* Select the `jcr:content`node for the sql file
-* Notice the value for the `jcr:data`property is a view link
+* Select the `jcr:content` node for the sql file
+* Notice the value for the `jcr:data` property is a view link
 
 * データをローカルファイルに保存するには、ビューリンクを選択します
 
@@ -155,7 +155,7 @@ In the Workbench window for the file opened in Step 1, select the `lightening (f
 
 #### 更新 {#refresh}
 
-Once the script is executed, it is necessary to refresh the `SCHEMAS`section of the `Navigator` in order to see the new database. 以下のように、「SCHEMAS」の右側にある更新アイコンを使用します。
+Once the script is executed, it is necessary to refresh the `SCHEMAS` section of the `Navigator` in order to see the new database. 以下のように、「SCHEMAS」の右側にある更新アイコンを使用します。
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
@@ -168,12 +168,12 @@ Once the script is executed, it is necessary to refresh the `SCHEMAS`section of 
 MySQLをAEMとは異なるサーバーで実行する場合、JDBCコネクタの「localhost」の代わりにサーバーのホスト名を指定する必要があります。
 
 * 各作成者および発行AEMインスタンス
-* 管理者権限でサインインしています
+* 管理者権限でサインイン
 * Access the [web console](../../help/sites-deploying/configuring-osgi.md)
 
    * For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
-* Folio Builderで `Day Commons JDBC Connections Pool`
+* を検索します。 `Day Commons JDBC Connections Pool`
 * Select the `+` icon to create a new connection configuration
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
@@ -183,19 +183,19 @@ MySQLをAEMとは異なるサーバーで実行する場合、JDBCコネクタ�
    * **[!UICONTROL JDBC ドライバークラス]**: `com.mysql.jdbc.Driver`
    * **[!UICONTROL JDBC 接続 URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      MySQLサーバーが「this」AEMサーバーと同じでない場合は、localhostの代わりにサーバーを指定します
+      MySQLサーバーが「this」AEMサーバーと同じでない場合は、localhostの代わりにサーバーを指定します。
 
       *communitiesは* 、デフォルトのデータベース（スキーマ）名です。
 
    * **[!UICONTROL ユーザー名]**: `root`
 
-      または、MySQLサーバー用に設定されたユーザー名を入力します（「root」でない場合）。
+      または、MySQLサーバーの設定済みのユーザー名（「root」でない場合）を入力します。
 
    * **[!UICONTROL パスワード]**:
 
       MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。
 
-      それ以外の場合は、MySQLユーザー名用に設定されたパスワードを入力してください
+      それ以外の場合は、MySQLユーザー名用に設定されたパスワードを入力します。
    * **[!UICONTROL Datasource name]**： [MySQL connection](#new-connection-settings) に入力した名前（例：「communities」）
 
 * Select **[!UICONTROL Save]**
