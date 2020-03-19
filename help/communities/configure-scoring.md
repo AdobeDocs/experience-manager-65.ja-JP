@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d522c5ec6c72a9fd391d021f2fac37f88c686bd9
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# スコアおよびバッジの基本事項{#scoring-and-badges-essentials}
+# スコアおよびバッジの基本事項 {#scoring-and-badges-essentials}
 
 AEM Communities のスコアおよびバッジ機能を使用すると、コミュニティメンバーを分類して報奨を与えることができます。
 
@@ -26,9 +26,9 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 このページには、次の技術詳細が別途まとめられています。
 
-* 画像またはテキストとして[バッジを表示](#displaying-badges)する方法
-* 広範な[デバッグログ](#debug-log-for-scoring-and-badging)を有効化する方法
-* how to [access UGC](#ugc-for-scoring-and-badging) related to scoring and badging
+* How to [display a badge](#displaying-badges) as either image or text
+* How to turn on extensive [debug logging](#debug-log-for-scoring-and-badging)
+* How to [access UGC](#ugc-for-scoring-and-badging) related to scoring and badging
 
 >[!CAUTION]
 >
@@ -38,7 +38,7 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 バッジをテキストと画像のいずれで表示するかは、クライアント側の HBS テンプレートを使用して制御します。
 
-例えば、「 `this.isAssigned` in, `/libs/social/forum/components/hbs/topic/list-item.hbs`:」と検索します。
+例えば、次を検索し `this.isAssigned` ます `/libs/social/forum/components/hbs/topic/list-item.hbs`。
 
 ```
 {{#each author.badges}}
@@ -80,40 +80,40 @@ isAssigned が false の場合、獲得されたスコアに対する報奨と�
 
 slinglog ファイルをすばやく設定するには、次の手順に従います。
 
-1. 次の例に示すように、「**Adobe Experience Manager Web Console Log Support**」にアクセスします。
+1. Access the **Adobe Experience Manager Web Console Log Support**, for example
 
    * https://localhost:4502/system/console/slinglog
 
-1. 「**Add new logger**」を選択します。
+1. Select **Add new logger**
 
-   1. select `DEBUG`for **Log Level**
+   1. Select `DEBUG` for **Log Level**
 
-   1. 「**Log File**」に次のような名前を入力します。
+   1. Enter a name for **Log File**, for example
 
       * logs/scoring-debug.log
-   1. enter two **Logger **(class) entries (using `+` icon)
+   1. Enter two **Logger** (class) entries (using `+` icon)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
-   1. 「**Save**」を選択します。
+   1. Select **Save**
 
 
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
-ログエントリを参照する方法は次のとおりです。
+ログエントリを表示するには：
 
-* Web コンソールから
+* Webコンソールから
 
-   * 「**ステータス**」メニューの下
-   * 「**Log Files**」を選択
-   * 「`scoring-debug`」などのログファイル名を検索
+   * Under the **Status** menu
+   * Select **Log Files**
+   * Search for your Log File name, such as `scoring-debug`
 
-* サーバーのローカルディスク上
+* サーバのローカルディスク上
 
-   * ログファイルの場所は &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
+   * The log file is at &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
-   * for example, `.../crx-quickstart/logs/scoring-debug.log`
+   * 例：`.../crx-quickstart/logs/scoring-debug.log`
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -123,9 +123,9 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 ここでは、JSRP を例に挙げて、スコアおよびバッジデータにアクセスする方法を説明しています。この場合、[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して UGC に容易にアクセスできます。
 
-**作成者のJSRP** :作成者環境で実験を行うと、UGCは作成者環境からのみ表示されます。
+**作成者のJSRP**:作成者環境で実験を行うと、UGCが作成者環境からのみ表示されます。
 
-**JSRP on publish** :同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](/help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**JSRP on publish**:同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](/help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
@@ -146,12 +146,12 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
 1. An AEM site *with* a unique id (community site created using wizard) :
 
-* [使用の手引きのチュートリアル](/help/communities/getting-started.md)で作成された使用の手引きのチュートリアル（engage）サイトを使用します。
-* フォーラムページノードを探します。
+   * Using the Getting Started Tutorial (engage) site created during the [getting started tutorial](/help/communities/getting-started.md)
+   * フォーラムページのノードを見つけます。
 
-   * `/content/sites/engage/en/forum/jcr:content`
+      `/content/sites/engage/en/forum/jcr:content`
 
-* スコアおよびバッジのプロパティを追加します。
+   * スコアリングおよびバッジングのプロパティの追加
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -163,25 +163,26 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* フォーラムコンポーネントノードを探します。
+   * フォーラムコンポーネントノードを検索します。
 
-   * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+      `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* バッジを表示するためのプロパティを追加します。
+   * バッジを表示するプロパティの追加
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* ユーザーがサインインし、フォーラムトピックを作成し、報奨としてブロンズバッジをもらいます。
+   * ユーザーがログインし、フォーラムトピックを作成し、青銅のバッジを受け取ります
+
 
 1. An AEM site *without* a unique id :
 
-* [コミュニティコンポーネントガイド](/help/communities/components-guide.md)を使用します。
-* フォーラムページノードを探します。
+   * Using the [Community Components guide](/help/communities/components-guide.md)
+   * フォーラムページのノードを見つけます。
 
-   * `/content/community-components/en/forum/jcr:content`
+      `/content/community-components/en/forum/jcr:content`
 
-* スコアおよびバッジのプロパティを追加します。
+   * スコアリングおよびバッジングのプロパティの追加
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -193,24 +194,25 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* フォーラムコンポーネントノードを探します。
+   * フォーラムコンポーネントノードを検索します。
 
-   * `/content/community-components/en/forum/jcr:content/content/forum`
+      `/content/community-components/en/forum/jcr:content/content/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* バッジを表示するためのプロパティを追加します。
+   * バッジを表示するプロパティの追加
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* ユーザーがサインインし、フォーラムトピックを作成し、報奨としてブロンズバッジをもらいます。
+   * ユーザーがログインし、フォーラムトピックを作成し、青銅のバッジを受け取ります
+
 
 1. ユーザーにcURLを使用してモデレーターバッジが割り当てられました。
 
-```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
-```
+   ```shell
+   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
+   ```
 
-ユーザーが2つの青銅バッジを獲得し、モデレーターバッジを授与されたので、ユーザーは次のようにフォーラムエントリと共に表示されます。
+   ユーザーが銅のバッジを2つ獲得し、モデレーターバッジを与えられたので、ユーザーはこのようにフォーラムエントリを表示します。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -219,12 +221,12 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 >この例では次のベストプラクティスに従っていません。
 >
 >* スコアルールの名前はグローバルレベルで一意にする必要があり、末尾を同じ名前にしてはなりません。
-   >  what *not *to doの例：
+   >  実行しな *い* :
    >  /etc/community/scoring/rules/site1/forums-scoring
    >  /etc/community/scoring/rules/site2/forums-scoring
    >
    >
-* 異なる AEM Sites にはそれぞれ一意のバッジ画像を作成します。
+* 異なるAEMサイト用の一意のバッジ画像の作成
 >
 
 
@@ -237,7 +239,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコアリングルール名はグローバルに一意になることがベストプラクティスです。
+`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコアリングルール名は、グローバルに一意になることがベストプラクティスです。
 
 For the Geometrixx Engage site, the user and their score is in a path contstructed with the scoring rule name, community site&#39;s site id ( `engage-ba81p`), an unique id, and the user&#39;s id :
 
@@ -257,17 +259,17 @@ The score is stored in the property `scoreValue_tl` which may directonly contain
 
 例えば JSRP を使用する場合、割り当てられたバッジまたは報奨として与えられたバッジについての情報が格納される基本フォルダーは次のとおりです。
 
-* /content/usergenerated/asi/jcr
+* `/content/usergenerated/asi/jcr`
 
 次のように、ユーザーのプロファイルのパスが続き、最後が badges フォルダーになります。
 
-* /home/users/community/w271OOup2Z4DjnOQrviv/profile/badges
+* `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
-#### 報奨として与えられたバッジ {#awarded-badge}
+#### Awarded badge {#awarded-badge}
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-#### 割り当てられたバッジ {#assigned-badge}
+#### Assigned badge {#assigned-badge}
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
