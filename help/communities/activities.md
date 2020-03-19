@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# アクティビティストリーム機能{#activity-streams-feature}
+# アクティビティストリーム機能 {#activity-streams-feature}
 
 ## 概要 {#introduction}
 
@@ -24,10 +24,10 @@ The activities of a signed in community member, such as posting to a forum or bl
 
 コミュニティメンバーが関心のある投稿をフォローしたり、他のコミュニティメンバーのアクティビティをフォローしているときは、フォロー機能によって、アクティビティを別の見方で捉えることができます。
 
-本書では、以下の内容を説明しています。
+このドキュメントでは、次の内容を説明しています。
 
-* アクティビティストリームコンポーネントを AEM サイトに追加
-* アクティビティストリームコンポーネントを設定
+* AEMサイトへのActivity Streamsコンポーネントの追加
+* Activity Streamsコンポーネントの設定
 
 ### アクティビティストリームをページに追加 {#adding-activity-streams-to-a-page}
 
@@ -53,15 +53,25 @@ Select the placed `Activity Streams` component to access and select the `Configu
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-* **アクティビティの最大数**&#x200B;表示するアクティビティの数
+* **アクティビティの最大数**
 
-* **ストリームリソースパス**&#x200B;空白のままにすると、コミュニティサイトまたはコミュニティグループがデフォルトになります。ストリームリソースパスは、アクティビティのソースを識別します。 初期設定は空白です。
+   表示するアクティビティの数
 
-* **ユーザーアクティビティビューを表示**&#x200B;オンにすると、アクティビティページに、現在のメンバーがコミュニティ内で生成するアクティビティに基づいてアクティビティをフィルタリングできるタブが表示されます。初期設定はオンです。
+* **ストリームリソースパス**
 
-* **すべてのアクティビティビューを表示**&#x200B;オンにすると、アクティビティページに、現在のメンバーがアクセス権を持つコミュニティ内で生成された全アクティビティを含むタブが表示されます。初期設定はオンです。
+   コミュニティサイトまたはコミュニティグループをデフォルトにする場合は、空白のままにします。 ストリームリソースパスは、アクティビティのソースを識別します。 初期設定は空白です。
 
-* **次のビューを表示**&#x200B;オンにすると、アクティビティページに、現在のメンバーがフォローしているアクティビティに基づいてアクティビティをフィルタリングできるタブが表示されます。初期設定はオンです。
+* **ユーザーアクティビティビューを表示**
+
+   オンにすると、アクティビティページに、現在のメンバーによってコミュニティ内で生成されたアクティビティに基づいてアクティビティをフィルタリングするタブが含まれます。 初期設定はオンです。
+
+* **すべてのアクティビティビューを表示**
+
+   オンにすると、アクティビティページにタブが含まれ、現在のメンバーがアクセス権を持つコミュニティ内で生成されたすべてのアクティビティが含まれます。 初期設定はオンです。
+
+* **次のビューを表示**
+
+   オンにすると、アクティビティページに、現在のメンバーがフォローしているアクティビティに基づいてアクティビティをフィルタリングするタブが含まれます。 初期設定はオンです。
 
 ### フォロービュー {#following-view}
 
@@ -69,11 +79,11 @@ Select the placed `Activity Streams` component to access and select the `Configu
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-The **Follow **button provides a means to follow entries as activities, [notifications](/help/communities/notifications.md), or [subscriptions](/help/communities/subscriptions.md). 「**Follow **」ボタンを選択するたびに、選択のオン/オフを切り替えることができます。 The `Email Subscriptions` selection is only present when configured.
+The **Follow** button provides a means to follow entries as activities, [notifications](/help/communities/notifications.md), or [subscriptions](/help/communities/subscriptions.md). Each time the **Follow** button is selected, it is possible to toggle on or off a selection. The `Email Subscriptions` selection is only present when configured.
 
 フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 For convenience, it is possible to select `Unfollow All` to toggle off all methods.
 
-「**Follow **」ボタンが表示されます。
+The **Follow** button will appear
 
 * 別のメンバーのプロファイルを表示したとき
 * フォーラム、Q&amp;A およびブログなど、メイン機能のページ上で
