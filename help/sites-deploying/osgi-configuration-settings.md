@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0849cfdd0e4f9a614c455214e6520ead07ae6da0
 
 ---
 
@@ -36,7 +36,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 >[!NOTE]
 >
->[AEM OSGi Config Details](https://www.aemstuff.com/osgi.html) ツールを使用すると、デフォルトの OSGi 設定を一覧表示できます。
+>OSGi設定の相違ツール( [AEM Toolsの一部)は](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)、デフォルトのOSGi設定のリストに使用できます。
 
 >[!NOTE]
 >
@@ -50,14 +50,14 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **AEM Repository Change Listener** Configure:
 
-* パス ****（配布の準備ができているリポジトリイベントをリッスンする場所）。
+* パス ****（配信準備が整ったリポジトリイベントをリッスンする場所）。
 
-**CRX Sling Client Repository** 基になるコンテンツリポジトリへのアクセスを設定します。
+**CRX Sling Client Repository基盤となるコンテンツ** ・リポジトリへのアクセスを設定します。
 
-* インス **タンスのセキュリティを確保するために、** 「管理者パスワード」はインストール後 [に変更する必要があります](/help/sites-administering/security-checklist.md) 。
+* インスタ **ンスのセキュリティを確保するために、** 「管理者パスワード」はインストール後 [に変更する](/help/sites-administering/security-checklist.md) 必要があります。
 * その他の変更は必要なく、リポジトリへのアクセスに影響を与える可能性があるので、注意が必要です。
 
-**Wikiメールサービス** wikiから送信される電子メールの電子メール設定を構成します。
+**Wikiメールサービス** :Wikiから送信される電子メールの電子メール設定を構成します。
 
 **Apache Felix OSGi Management Console** Configure:
 
@@ -74,10 +74,9 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 >
 >この設定は起動時に必要なので、リポジトリが使用可能になる前に、Felix コンソールを使用して設定する必要があります。
 
-**Apache Sling Customizable Request Data Logger** Configure:
+**Apache Slingのカスタマイズ可能な要求データロガーの設定** :
 
-* **Logger Name** and **Log Format** ：リクエストおよびアクセスログの場所と形式を設定します(デフォルト：
-     `request.log`)。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に不可欠です。
+* **Logger Name** and **Log Format** （ロガー名とログ形式）を参照して、リクエストおよびアクセスログの場所と形式を設定します(デフォルト： `request.log`)。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に重要です。
 これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
 
 詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
@@ -92,7 +91,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 * テストを実施して、状況に応じた値を確立する必要があります。
 * これらの設定はインスタンスのパフォーマンスに影響を及ぼす可能性があるので、変更の際は十分な理由と検討が必要です。
 
-**Apache Sling GET Servlet** レンダリングのいくつかの側面を設定：
+**Apache Sling GET Servletレンダリングのいくつかの要素を設定します** 。
 
 * **Auto Index**：閲覧のためのディレクトリのレンダリングを有効または無効にします。
 * **Enable**（または Disable）：デフォルトのレンディション（**HTML**、**Plain Text**、**JSON**、**XML** など）を有効または無効にします。JSON を無効にしないでください。
@@ -101,7 +100,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 >
 >AEM を[実稼動準備完了モード](/help/sites-administering/production-ready.md)で実行している場合は、この設定は自動的に実稼動インスタンス用に設定されます。
 
-**Apache Sling Java Script Handler** .javaファイルのコンパイルに関する設定をスクリプト（サーブレット）として設定します。
+**Apache Sling Java Script Handler** .javaファイルのコンパイルの設定をスクリプト（サーブレット）として設定します。
 
 特定の設定がパフォーマンスに影響を及ぼす可能性があります。可能な場合（特に、実稼動インスタンスの場合）は、それらを無効にしてください。
 
@@ -111,19 +110,19 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
    * 「**Generate Debug Info**」を無効化
 
-**Apache Sling JCR Installer** これらのパラメーターは、おそらく設定は必要ありませんが、開発時やデバッグ時に知っておくと役に立ちます。 例えば、インストールフォルダーはパッケージのチェックイン／チェックアウトまたは作成に役立つ場合があります。
+**Apache Sling JCR Installer** これらのパラメーターは、おそらく設定は必要ありませんが、開発やデバッグの際に知っておくと役に立ちます。 例えば、インストールフォルダーはパッケージのチェックイン／チェックアウトまたは作成に役立つ場合があります。
 
-* **インストールフォルダ名regexp** 、 **Max hierarchy depth of install folders** — インストールするリソースをリポジトリフォルダ内で検索する場所と深さを指定します。ワイルドカードを使用する場合(.*/install)は、とのように、該当するすべての一致を検索し `/libs/sling/install` ます `/libs/cq/core/install`。
+* **インストールフォルダ名regexp** と **Max hierarchy depth of install folders** — インストールするリソースをリポジトリフォルダで検索する場所と深さを指定します。ワイルドカードを使用する場合(.*/install)は、およびなど、該当するすべての一致を検索し `/libs/sling/install` ます `/libs/cq/core/install`。
 
 * **Search Path**：インストールするリソースを jcrinstall が検索するパスのリストです。そのパスの重み付け係数を示す数値も表示されます。
 
-**Apache Slingジョブイベントハンドラ** ：ジョブスケジュールを管理するパラメーターを設定します。
+**Apache Slingジョブイベントハンドラ** ：ジョブのスケジュールを管理するパラメータを設定します。
 
-* **再試行間隔**、 **最大再試行回数**、最大並列ジョ **ブ数**、待機時間の確認など ****。
+* **再試行間隔**、 **最大再試行回数**、最大並列ジ **ョブ数、待機時**&#x200B;間の確認など ****。
 
 * これらの設定を変更すると、ジョブ数が多いシナリオでのパフォーマンスが向上します。例えば、AEM DAMとワークフローの使用量が多いとします。
 * テストを実施して、状況に応じた値を確立する必要があります。
-* これらの設定は理由なく変更しないでください。変更するのは、適切な考慮が必要な後にのみ行ってください。
+* これらの設定は理由なく変更しないでください。変更は、適切な検討が終わった後にのみ行ってください。
 
 **Apache Sling JSP Script Handler** JSPスクリプトハンドラのパフォーマンス関連の設定を行います。 パフォーマンスを向上するには、可能な限り設定を無効にしてください。
 
@@ -180,7 +179,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * **MIME Types**：プロジェクトで必要な MIME タイプをシステムに追加します。これにより、ファイルに対する `GET` 要求において、ファイル形式とアプリケーションをリンクするための適切な content-type ヘッダーを設定できます。
 
-**Apache Slingリファラーフィルタ** CRX webDAVとApache Slingのクロスサイト要求偽造(CSRF)に関する既知のセキュリティ問題に対処するには、リファラーフィルターを設定する必要があります。
+**Apache Slingリファラーフィルタ** CRX WebDAVおよびApache Slingのクロスサイト要求偽造(CSRF)に関する既知のセキュリティ問題を解決するには、リファラーフィルタを設定する必要があります。
 
 リファラーフィルターサービスは OSGi のサービスの 1 つであり、次の設定が可能です。
 
@@ -205,13 +204,13 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
 
-**Apache Sling Resource Resolver Factory** Slingリソース解決の中心的側面を設定します。
+**Apache Sling Resource Resolver Factory** Slingリソース解決の中心要素を設定します。
 
-* **リソース検索パス**（複数可）を追加し、プロジェクト固有のパスを追加します(削除はしな `/libs` いでく `/apps`ださい)。
+* **リソース検索パス**（複数可）を追加し、プロジェクト固有のパスを追加します(削除や削除は `/libs` しないでく `/apps`ださい)。
 
 * **Virtual URLs**：バニティー URL のマッピングを定義します。
 
-* **URL Mappings** （エイリアスを定義）例えば、から `/content` にです `/`。
+* **URL Mappings** （任意のエイリアスを定義）例えば、から `/content` にです `/`。
 
 * **マッピングの場所**（で外部化されたマッパー設定） `/etc/map`。
 
@@ -225,7 +224,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 >
 >そうしないと、Felix コンソールでおこなった「**URL Mappings**」に対する変更が、次回の起動時に AEM によって上書きされる可能性があります。
 
-**Apache Slingサーブレット/スクリプトリゾルバーとSlingサーブレット** /スクリプトリゾルバーには複数のタスクがあります。
+**Apache Slingサーブレット/スクリプトリゾルバーと、Slingサーブレット** /スクリプトリゾルバーのエラーハンドラーには複数のタスクがあります。
 
 1. `ServletResolver` として使用され、要求を処理するために呼び出す Servlet または Script を選択します。
 
@@ -248,7 +247,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 * Define the **Font Path** to be searched for project specific fonts.
 For example, `/apps/myapp/fonts`.
 
-**Apache HTTPコンポーネントプロキシ設定** : Apache HTTPクライアントを使用するすべてのコードのプロキシ設定。HTTPが作成された場合に使用されます。例えば、複製時に。
+**Apache HTTPコンポーネントプロキシ設定** : HTTPを作成する際に使用される、Apache HTTPクライアントを使用するすべてのコードのプロキシ設定。例えば、複製時に
 
 When creating a new configuration, do not make changes to the factory configuration but instead create a new factory configuration for this component using the configuration manager available here: **https://localhost:4502/system/console/configMgr/**. The proxy configuration is available in **org.apache.http.proxyconfigurator.**
 
@@ -262,7 +261,7 @@ When creating a new configuration, do not make changes to the factory configurat
 * **API キー**
 * **登録済みの URL**
 
-**Adobe Granite HTML Library Manager** クライアントライブラリ（cssまたはjs）の処理を制御するように設定します。例えば、基になる構造がどのように見えるかを含む。
+**Adobe Granite HTML Library Manager** クライアントライブラリ（cssまたはjs）の処理を制御するように設定します。例えば、基になる構造体の見え方を含む。
 
 * 実稼動インスタンスの場合：
 
@@ -286,7 +285,7 @@ When creating a new configuration, do not make changes to the factory configurat
 >
 >AEM を[実稼動準備完了モード](/help/sites-administering/production-ready.md)で実行している場合は、この設定は自動的に実稼動インスタンス用に設定されます。
 
-**Day CQ HTTP Header Authentication Handler** System全体で、HTTP要求の基本認証方法を設定します。
+**Day CQ HTTP Header Authentication Handler** System wide settings for the basic authentication method of the HTTP request.
 
 [閉じられたユーザーグループ](/help/sites-administering/cug.md)を使用すると、（特に）以下を設定できます。
 
@@ -306,7 +305,7 @@ When creating a new configuration, do not make changes to the factory configurat
 
 * リンクをチェックする際に外部アクセスのために必要な、インターネットアクセスおよび NTLM 用のプロキシに関連する様々なパラメーターを設定します。
 
-**Day CQ Mail Serviceメールサービス** ：メールサーバーのホスト名とアクセスの詳細を設定します。 「メールサービスの設定」の項を参照してください。
+**Day CQ Mail Serviceメールサーバーのホスト名** 、およびアクセスの詳細を設定します。 「メールサービスの設定」の節を参照してください。
 
 **Day CQ MCMニュースレター** ：ニュースレターで使用する様々な設定を指定します。
 
@@ -337,13 +336,13 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 >
 >標準インストールでは、タッチ操作向け UI がデフォルトの UI です。
 
-**Adobe Granite SSO認証ハンドラー** ：シングルサインオン(SSO)の設定の詳細これは、企業向けの作成者の設定で、多くの場合LDAPと組み合わせて使用する必要があります。
+**Adobe Granite SSO認証ハンドラー** ：シングルサインオン(SSO)の設定の詳細これらは、多くの場合、LDAPと組み合わせて、企業向けの作成者の設定で必要となります。
 
 様々な設定プロパティがあります。
 
 * **Path**&#x200B;この認証ハンドラーをアクティブにする対象のパス。このパラメーターを空のままにすると、認証ハンドラーは無効になります。例えば、/ というパスを指定すると、認証ハンドラーはリポジトリ全体に対して使用されます。
 
-* **Service Ranking** OSGi Framework Service Ranking値は、このサービスの呼び出しに使用される注文を示すために使用されます。 This is an `int` value where higher values designate higher precedence.
+* **Service Ranking** OSGi Framework Service Ranking値は、このサービスの呼び出しに使用される順序を示すために使用されます。 This is an `int` value where higher values designate higher precedence.
 デフォルト値は `0` です。
 
 * **Header Names**
@@ -355,7 +354,7 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 * **Parameter Names**
 ユーザー ID を指定する可能性のある要求パラメーターの名前です。
 
-* **ユーザーマ**&#x200B;ップ選択したユーザーに対して、HTTP要求から抽出したユーザー名を、credentialsオブジェクト内の別のユーザー名に置き換えることができます。マッピングはここで定義します。 ユーザ名がマッ `admin` プのどちらかの側に表示される場合、マッピングは無視されます。 「=」の文字は、先頭に「\」を付けてエスケープする必要があります。
+* **ユーザマッ**&#x200B;プ選択したユーザーの場合、HTTP要求から抽出されたユーザー名を、credentialsオブジェクト内の別のユーザー名に置き換えることができます。マッピングはここで定義します。 ユーザ名がマップの `admin` 両側に表示される場合、マッピングは無視されます。 「=」の文字は、先頭に「\」を付けてエスケープする必要があります。
 
 * **Format**
 ユーザー ID を指定する際の形式を示します。次のいずれかを使用します。
@@ -363,15 +362,15 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
    * `Basic`：ユーザー ID が HTTP Basic 認証形式でエンコードされている場合
    * `AsIs`：ユーザー ID がプレーンテキストで指定されている場合や、正規表現が適用されている値をそのまま、または正規表現として使用する必要がある場合
 
-**Day CQ WCM Debug Filter** ：ページにアクセスする際に？debug=layoutなどのサフィックスを使用できるので、開発時に便利です。 例えば、https://localhost:4502/cf#/content/geometrixx/en/support.html?debug=layoutは開発者にとって興味のあるレイアウト情報を提供します。
+**Day CQ WCM Debug Filter** ：これは、ページにアクセスする際に？debug=layoutなどのサフィックスを使用できるように開発する場合に便利です。 例えば、https://localhost:4502/cf#/content/geometrixx/en/support.html?debug=layoutは開発者にとって興味のあるレイアウト情報を提供します。
 
 * パフォーマンスとセキュリティを確保するために、実稼動インスタンスではこれを無効にします。
 
 **Day CQ WCM Filter** Configure:
 
 * **WCMモード**を使用して、デフォルトのモードを定義します。
-* オーサーインスタンスでは、またはの `edit`場合が `disable,preview` ありま `analytics`す。
-その他のモードはサイドキックからアクセスでき、サフィックスを使用して実 `?wcmmode=disabled` 稼働環境をエミュレートできます。
+* オーサーインスタンスでは、またはの `edit`場合があ `disable,preview` りま `analytics`す。
+その他のモードはサイドキックからアクセスでき、またはサフィックスを使用し `?wcmmode=disabled` て実稼働環境をエミュレートできます。
 
 * パブリッシュインスタンスでは、`disabled` に設定して、その他のモードにアクセスできないようにする必要があります。
 
@@ -379,7 +378,7 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 >
 >AEM を[実稼動準備完了モード](/help/sites-administering/production-ready.md)で実行している場合は、この設定は自動的に実稼動インスタンス用に設定されます。
 
-**Day CQ WCM Link Checker Configurator** Configurator:
+**Day CQ WCM Link Checker Configurator設定** :
 
 * **書き換え設定のリスト**：コンテンツベースのリンクチェックツール設定の場所のリストを指定します。設定は実行モードに基づくことができます。これはオーサー環境とパブリッシュ環境を区別するために重要です。それぞれの環境でリンクチェッカーの設定が異なる場合があるからです。
 
@@ -433,18 +432,18 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 * **HTTPSを有効にする** （HTTPSが有効かどうか）。デフォルトはfalseです。
 * **Session Timeout**（セッションタイムアウト）。HTTPセッションのデフォルトの有効期間（分単位）。タイムアウトが0以下の場合、セッションはタイムアウトしません。デフォルトは10分です。
 * **Debug Logging**（デバッグレベルのメッセージを書き込むかどうか）。デフォルトはfalseです。
-* **Request Buffer Size**（要求バッファーサイズ）、要求のバッファーサイズ（バイト単位）。初期設定は8 KBです。
-* **スレッドの最大数**、要求の処理に使用するスレッドの最大数。初期設定は200です。
+* **Request Buffer Size**（リクエストのバッファーサイズ）。バイト単位。初期設定は8 KBです。
+* **スレッドの最大数**、リクエストの処理に使用するスレッドの最大数。初期設定は200です。
 
 以下のプロパティは、HTTPS が有効な場合にのみ適用されます。
 
 * **HTTPS Port**（HTTPS要求をリッスンするポート）。初期設定は433です。
 * **HTTPSのNIO**。HTTPにNIOを使用するかどうか。HTTPプロパティのNIOの値をデフォルトにします。
-* **キーストア**、HTTPSに使用するキーストアの絶対パス。HTTPSが有効な場合は必須です。
+* **キーストア**。HTTPSに使用するキーストアの絶対パスです。HTTPSが有効な場合は必須です。
 * **キーストアパスワード**、キーストアにアクセスするためのパスワード。
-* **Key Alias**、キーストア内の秘密鍵のエイリアス。
-* **キーパスワード**、キーストア内の秘密キーのロックを解除するためのパスワード。
-* **クライアント証明書**、クライアントが有効な証明書を提供するための要件。初期設定はnoneです。
+* **Key Alias**（キーストア内の秘密鍵のエイリアス）。
+* **キーパスワード**、キーストアの秘密キーのロックを解除するパスワード。
+* **クライアント証明書**。有効な証明書を提供するためのクライアントの要件。初期設定はなしです。
 
 See also [Enabling HTTP Over SSL](/help/sites-administering/ssl-by-default.md) for details on the SSL-related options and a complete description on how to enable HTTPS for CQSE.
 
@@ -453,17 +452,17 @@ See also [Enabling HTTP Over SSL](/help/sites-administering/ssl-by-default.md) f
 CQ リライターの HTML パーサーを制御します。
 
 * **Additional Tags to Process** - パーサーで処理する HTML タグを追加または削除できます。デフォルトで処理されるタグは、A、IMG、AREA、FORM、BASE、LINK、SCRIPT、BODY、HEAD です。
-* **キャメルケースを保持** — デフォルトでは、HTMLパーサーはキャメルケース（eBayなど）の属性を小文字（ebayなど）に変換します。 キャメルケースの属性を保持するには、これをオフにします。これは、Angular 2 などのフロントエンドフレームワークを使用する際に役立ちます。
+* **キャメルケースを保持** — デフォルトでは、HTMLパーサーはキャメルケース（eBayなど）の属性を小文字（eBayなど）に変換します。 キャメルケースの属性を保持するには、これをオフにします。これは、Angular 2 などのフロントエンドフレームワークを使用する際に役立ちます。
 
-**Day Commons JDBC Connections Pool** ：コンテンツのソースとして使用する外部データベースへのアクセスを設定します。
+**Day Commons JDBC Connections Pool** ：コンテンツのソースとして使用される外部データベースへのアクセスを設定します。
 
 これはファクトリ設定なので、複数のインスタンスを設定できます。
 
-**Adobe CQ Media DPS Sessions Service** Manage DPS Sessions for use with Publications.
+**Adobe CQ Media DPS Sessions Service** パブリケーションで使用するDPSセッションを管理します。
 
 具体的には、`dps.session.service.url.name`、  を定義できます。デフォルトは [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions) に設定されています。
 
-**AEMとCDNの間のCDNリライタ** ー通信は、アセット/バイナリが安全な方法でエンドユーザーに配信されるように、確実に行う必要があります。 この方法では 2 つのタスクをおこないます。
+**AEMとCDNの間のCDN Rewriter** Communicationは、アセット/バイナリが安全な方法でエンドユーザーに配信されるように、確実に行う必要があります。 この方法では 2 つのタスクをおこないます。
 
 * 最初（またはキャッシュ内のリソースが期限切れになった後）に、CDN を介して AEM からリソースにアクセスします。
 * CDN にリソースがキャッシュされた後は、CDN にキャッシュされたリソースに安全にアクセスします。要求は AEM に送信されず、そのリソースにアクセスできるすべてのユーザーの処理は CDN でおこなわれます。
@@ -473,7 +472,7 @@ AEM は、内部アセットの URL を外部の CDN URL に書き直すリラ�
 全体的なフローは次のとおりです。
 
 1. ユーザーが AEM で認証をおこない、アセットを含むページを要求します。
-1. リクエストされたページに、 `/content/dam/geometrixx-media/articles/paladin_trailer.jpg/jcr:content/renditions/cq5dam.thumbnail.319.319.png`
+1. 要求されたページに、 `/content/dam/geometrixx-media/articles/paladin_trailer.jpg/jcr:content/renditions/cq5dam.thumbnail.319.319.png`
 1. リライターは、JWS署名を含むCDN URLにリンクを変換します。
    `CDN_domain/content/dam/geometrixx-media/articles/paladin_trailer.jpg/_jcr_content/renditions/cq5dam.thumbnail.319.319.png?cdn_sign=JWS_SIGNATURE`
 
