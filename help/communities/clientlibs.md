@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# コミュニティコンポーネントの clientlib{#clientlibs-for-communities-components}
+# コミュニティコンポーネントの clientlib {#clientlibs-for-communities-components}
 
 ## 概要 {#introduction}
 
@@ -65,21 +65,21 @@ For example, at the very top of the [Reviews page](https://localhost:4502/conten
 
 To add a clientlib for a community site using [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
-* browse to [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* locate the `clientlibslist` node for the page on which you wish to add the component
+* Browse to [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
+* Locate the `clientlibslist` node for the page on which you wish to add the component
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* with `clientlibslist` node selected
+* With `clientlibslist` node selected
 
-   * stringプロパティの検索[] (R) `scg:requiredClientLibs`
-   * select its `Value` to access the String array dialog
+   * Stringプロパティの検索[]`scg:requiredClientLibs`
+   * Select its `Value` to access the String array dialog
 
-      * 必要に応じて下にスクロールします。
-      * + を選択して、新しいクライアントライブラリを入力します。
+      * 必要に応じて下にスクロール
+      * 「+」を選択して新しいクライアントライブラリを入力します。
 
-         * 同じ手順を繰り返して、別のクライアントライブラリを追加します。
-      * select** OK**
+         * 繰り返してクライアントライブラリを追加
+      * 「**OK**」を選択します。
    * 「**すべて保存**」を選択します。
 
 
