@@ -10,12 +10,12 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# イネーブルメントのための初期設定 {#initial-setup-for-enablement}
+# イネーブルメントのための初期設定  {#initial-setup-for-enablement}
 
 ## オーサーインスタンスおよびパブリッシュインスタンスの開始 {#start-author-and-publish-instances}
 
@@ -23,22 +23,22 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Follow the basic AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) instructions which will result in
 
-* オーサー環境（[localhost:4502](http://localhost:4502/) 上）
-* パブリッシュ環境（[localhost:4503](http://localhost:4503/) 上）
+* Author environment on [localhost:4502](http://localhost:4502/)
+* Publish environment on [localhost:4503](http://localhost:4503/)
 
 AEM Communities では、各環境を次の目的で使用します。
 
 * 作成者環境は
 
    * サイト、テンプレート、コンポーネント、イネーブルメントリソース、学習パスの開発
-   * 有効化リソースと学習パスへのメンバーとメンバーのグループの割り当て
-   * 割り当て、表示および投稿に関するレポートの生成
+   * 有効化リソースと学習パスへのメンバーおよびメンバーのグループの割り当て
+   * 割り当て、表示、投稿に関するレポートの生成
    * 管理および設定のタスク
 
 * 公開環境は
 
    * イネーブルメントマネージャが管理するトピックに基づく学習/トレーニング
-   * コメント作成と評価の有効化リソースと学習パス
+   * コメント化と評価の有効化リソースと学習パス
    * リソースの連絡先との連絡
 
 >[!NOTE]
@@ -107,7 +107,7 @@ For an enablement community site, site visitors should not be able to [self-regi
 
 Instead, with the [tunnel service](#enable-the-tunnel-service) enabled, the [Members console](members.md) is used to register new members in the publish environment.
 
-このチュートリアルでは、パブリッシュ環境で 3 人のメンバーを作成します。2人のメンバーは学習パスに割り当てられたユーザーグループのメンバーになり、3人目のメンバーはイネーブルメントリソースの連絡先になります。
+このチュートリアルでは、パブリッシュ環境で 3 人のメンバーを作成します。2人のメンバーは、学習パスに割り当てられたユーザーグループのメンバーになり、3人目のメンバーはイネーブルメントリソースの連絡先になります。
 
 さらに、4 人目のメンバーをオーサー環境で作成し、コミュニティ管理者およびコミュニティイネーブルメントマネージャーの役割を割り当てます。
 
@@ -143,7 +143,7 @@ Community Ski Class という名前の学習者グループに追加される[�
 
 ### Quinn Harper - イネーブルメントリソースの連絡先およびモデレーター {#quinn-harper-enablement-resource-contact-and-moderator}
 
-[サイトの作成後](members.md#create-new-member) 、コミュニティサイトのメンバーグループに追加されるメンバーを作成します。 This membership will allow the member to be assigned as the enablement [Resource Contact](resources.md#settings) when an enablement resource is created for the site.
+[サイトの作成後](members.md#create-new-member) 、コミュニティサイトのメンバグループに追加されるメンバを作成します。 This membership will allow the member to be assigned as the enablement [Resource Contact](resources.md#settings) when an enablement resource is created for the site.
 
 * **ID**:クイン
 * **電子メール**：quinn.harper@mailinator.com
@@ -195,7 +195,7 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
 * ダイアログで、次のよ `Create New User` うに入力します。
 
-   * **IDアンプ(&amp;A);ast;**:シリウス
+   * **IDアンプ(&amp;A);ast;**:シリア
    * **電子メールアドレス**：sirius.nilson@mailinator.com
    * **パスワード(&amp;A)；末尾；**:password
    * **パスワードの確認(&amp;A);ast;**:password
@@ -204,9 +204,9 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
-下にスクロールし `Add User to Groups`ます。
+下にスクロールして次の操作を行い `Add User to Groups`ます。
 
-* &#39;C&#39;を入力して検索してください
+* 検索するには&#39;C&#39;と入力してください
 
    *  `Community Administrators`
    *  `Community Enablement Managers`
