@@ -11,27 +11,27 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# イネーブルメントのための新しいコミュニティサイトの作成{#author-a-new-community-site-for-enablement}
+# イネーブルメントのための新しいコミュニティサイトの作成 {#author-a-new-community-site-for-enablement}
 
 ## コミュニティサイトを作成 {#create-community-site}
 
-[コミュニティサイトの作成](/help/communities/sites-console.md) (Community Site Creation)では、コミュニティサイトの作成手順を案内するウィザードを使用します。 It is possible to move forward to the `Next`step or `Back`to the previous step before committing the site in the final step.
+[コミュニティサイトの作成](/help/communities/sites-console.md) (Community Site Creation)では、コミュニティサイトの作成手順を案内するウィザードを使用します。 It is possible to move forward to the `Next` step or `Back` to the previous step before committing the site in the final step.
 
 新しいコミュニティサイトの作成を開始するには：
 
 [オーサーインスタンス](https://localhost:4502/)を使用します。
 
-* 管理者権限でサインインします。
-* navigate to **Communities,** **Sites**
+* 管理者権限でのログイン
+* Navigate to **[UIControl Communities > Sites]**
 
 * 「**作成**」を選択します。
 
-### 手順 1：サイトテンプレート {#step-site-template}
+### Step 1 : Site Template {#step-site-template}
 
 ![有効化サイトテンプレート](assets/enablement-site-template.png)
 
@@ -44,21 +44,21 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 * **コミュニティサイトのルート**:(デフォルトのルートの場合は空白のままにし `/content/sites`ます)。
 
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**:(単一言語の場合は手を付けないでください。英語)ドロップダウンを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ以上のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでおきます）。英語)ドロップダウンを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ以上のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**: `enable`
 
-   * 初期 URL は、コミュニティサイト名の下に表示されます。
-   * 有効な URL に、ベース言語コード + 「.html」を追加します。
+   * コミュニティサイト名の下に最初のURLが表示されます。
+   * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
       *例えば*、https://localhost:4502/content/sites/ `enable/en.html`
 
-* **リファレンスサイトテンプレート**:引っ張って選ぶ `Reference Structured Learning Site Template`
+* **リファレンスサイトテンプレート**:引っ張って～を選ぶ `Reference Structured Learning Site Template`
 
 「**次へ**」を選択します。
 
 ### 手順 2：デザイン {#step-design}
 
-デザインの手順は、テーマとブランディングバナーを選択するための2つのセクションで示されます。
+デザインの手順は、テーマとブランドバナーを選択するための2つのセクションに分かれています。
 
 #### コミュニティサイトテーマ {#community-site-theme}
 
@@ -84,11 +84,11 @@ It is recommended that [enablement communities](/help/communities/overview.md#en
 
 Ensure most checkboxes are deselected for [User Management](/help/communities/sites-console.md#user-management) :
 
-* サイト訪問者の自己登録を禁止します。
-* 匿名のサイト訪問者によるサイト表示を禁止します。
-* コミュニティメンバー間のメッセージングを許可するかどうかは任意とします。
-* Facebook を使用したログインを禁止します。
-* Twitter を使用したログインを禁止します。
+* サイト訪問者が自己登録を行うことを許可しない
+* 匿名サイトの訪問者がサイトを閲覧することを許可しない
+* コミュニティメンバー間でのメッセージングを許可するかどうか（オプション）
+* Facebookへのログインを許可しない
+* Twitterでのログインを許可しない
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
 
@@ -100,8 +100,8 @@ The tags which may be applied to community content are controlled by selecting A
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
-* 「tut」と入力します
-* select `Tutorial`
+* タイプ `tut`
+*  `Tutorial`
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
@@ -109,12 +109,12 @@ The tags which may be applied to community content are controlled by selecting A
 
 [コミュニティメンバの役割は](/help/communities/users.md) 、[役割]セクションの設定を通じて割り当てられます。
 
-コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先読み検索を使用し、ドロップダウンのオプションからメンバー名またはグループ名を選択します。
+コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先読み検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
 例：
 
-* 「q」と入力します。
-* 「[Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)」を選択します。
+* タイプ `q`
+* Select [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
@@ -140,8 +140,8 @@ The tags which may be applied to community content are controlled by selecting A
 
 [翻訳設定](/help/communities/sites-console.md#translation)では、UGC の翻訳を許可するかどうかと、どの言語に翻訳するかを指定します。
 
-* 「**機械翻訳を許可**」をオンにします。
-* デフォルト設定を使用します。
+* Check **Allow Machine Translation**
+* デフォルト設定の使用
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
@@ -149,12 +149,12 @@ The tags which may be applied to community content are controlled by selecting A
 
 1 つのイネーブルメントコミュニティに対し、1 人以上のコミュニティ実施可能マネージャーを指定する必要があります。
 
-* **有効化マネージャ**（必須）グループのメンバーを `Community Enablement Managers` 選択して、このコミュニティサイトを管理できます。
+* **有効化マネージャ**（必須）グループのメンバ `Community Enablement Managers` ーを選択して、このコミュニティサイトを管理できます。
 
-   * 「s」と入力します。
-   * select `Sirius Nilson`
+   * タイプ `s`
+   *  `Sirius Nilson`
 
-* **Marketing cloud組織ID**（オプション）有効化レポートにビデオハートビート分析を含める [場合に必要なAdobe AnalyticsアカウントのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
+* **Marketing Cloud組織ID**（オプション）有効化レポートにビデオハートビート分析を含める [場合に必要なAdobe AnalyticsアカウントのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -166,7 +166,7 @@ Select **Create.**
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-プロセスが完了すると、新しいサイトのフォルダーがコミュニティサイトコンソールに表示されます。
+処理が完了すると、新しいサイトのフォルダーがコミュニティ/サイトコンソールに表示されます。
 
 ![enablementsitecreated](assets/enablementsitecreated.png)
 
@@ -184,15 +184,25 @@ Select **Create.**
 
 各アイコンの機能は次のとおりです（左から右の順に説明）。
 
-* **サイトを開く**&#x200B;鉛筆のアイコンを選択すると、コミュニティサイトをオーサリング編集モードで開いて、ページコンポーネントを追加したり設定したりできます。
+* **サイトを開く**
 
-* **サイトを編集**&#x200B;プロパティアイコンを選択すると、コミュニティサイトを開いて、タイトルなどのプロパティを変更したり、テーマを変更したりできます。
+   鉛筆アイコンを選択して、コミュニティサイトを作成者編集モードで開き、ページコンポーネントを追加または設定します。
 
-* **サイトを公開**&#x200B;地球のアイコンを選択すると、コミュニティサイトが（デフォルトでは localhost:4503 に）公開されます。
+* **サイトを編集**
 
-* **サイトを書き出し**&#x200B;書き出しアイコンを選択すると、コミュニティサイトのパッケージが作成され、[パッケージマネージャー](/help/sites-administering/package-manager.md)に保存されて、ダウンロードされます。UGC はサイトパッケージに含まれていません。
+   プロパティアイコンを選択して、タイトルやテーマの変更など、プロパティの変更用にコミュニティサイトを開きます
 
-* **サイトを削除**&#x200B;コミュニティサイトを削除するには、サイトを削除アイコンを選択します。このアイコンは、コミュニティサイトコンソール内でサイトにマウスポインターを置くと表示されます。サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
+* **サイトを公開**
+
+   コミュニティサイトを公開する（デフォルトでlocalhost:4503に）ワールドアイコンを選択します。
+
+* **サイトを書き出し**
+
+   書き出しアイコンを選択して、コミュニティサイトのパッケージを作成します。このパッケージが、[パッケージマネージャー](/help/sites-administering/package-manager.md)に格納され、ダウンロード可能になります。UGC はサイトパッケージに含まれていません。
+
+* **サイトを削除**
+
+   コミュニティサイトを削除するには、サイトを削除アイコンを選択します。このアイコンは、コミュニティサイトコンソール内でサイトにマウスポインターを置くと表示されます。サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
 
 ![enablesiteactions](assets/enablesiteactions.png)
 
@@ -224,14 +234,14 @@ On author, with the tunnel service enabled, it is possible to assign the [users 
 
 In this example, the group `Community Ski Class` is added as a member of the group `Community Enable Members` as well as member `Quinn Harper`.
 
-* **コミュニティ／グループ**&#x200B;コンソールに移動します。
-* select *Community Enable Members* group
-* 「**メンバーをグループに追加**」検索ボックスに「ski」と入力します。
-* select *Community Ski Class* (group of learners)
-* 検索ボックスに「quinn」と入力します。
-* 「*Quinn Harper*」（イネーブルメントリソース連絡先）を選択します。
+* Navigate to **Communities, Groups** console
+* Select *Community Enable Members* group
+* Enter &#39;ski&#39; into the **Add Members To Group** search box
+* Select *Community Ski Class* (group of learners)
+* 検索ボックスに「quin」と入力します。
+* Select *Quinn Harper* (enablement resource contact)
 
-* 「**保存**」を選択します。
+* Select **Save**
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -243,7 +253,7 @@ In this example, the group `Community Ski Class` is added as a member of the gro
 
 ### 認証エラーの設定 {#configure-for-authentication-error}
 
-Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されない場合、認証エラーはコミュニティサイトのログインページを再表示し、エラーメッセージが表示されるという利点があります。
+Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されない場合、認証エラーによりコミュニティサイトのログインページが再度表示され、エラーメッセージが表示されるという利点があります。
 
 名前を付けて `Login Page Mapping` 追加
 
@@ -257,42 +267,42 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 開始するには、次のようにします。
 
-1. 公開時に CRXDE にアクセスし、管理者権限を使用してサインインします
+1. 公開時に、CRXDEにアクセスし、管理者権限でログインします。
 
    * 例えば、https://localhost:4503/crx/deを参照し [て](https://localhost:4503/crx/de) 、 `admin/admin`
 
-1. in the project browser, expand `/etc/map`
-1. select the `http` node
+1. In the project browser, expand `/etc/map`
+1. Select the `http` node
 
-   * 「**ノードを作成**」を選択します。
+   * Select **Create Node**
 
       * **名前** localhost.4503
 
          (do *not* use &#39;:&#39;)
 
-      * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **タイプ**[sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. with newly created `localhost.4503` node selected
+1. With newly created `localhost.4503` node selected
 
-* プロパティを追加します。
+   * プロパティの追加
 
-   * **名前**：sling:match
-   * **タイプ**：String
-   * **値**：localhost.4503/$
+      * **名前**：sling:match
+      * **タイプ**：String
+      * **値**：localhost.4503/$
+   （「$」文字で終わる必要があります）
 
-      （「$」文字で終わる必要があります）
+   * プロパティの追加
 
-* プロパティを追加します。
+      * **名前**：sling:internalRedirect
+      * **タイプ**：String
+      * **値**：/content/sites/enable/en.html
 
-   * **名前**：sling:internalRedirect
-   * **タイプ**：String
-   * **値**：/content/sites/enable/en.html
 
 1. 「**すべて保存**」を選択します。
-1. （オプション）ブラウジング履歴を削除します。
+1. （オプション）閲覧履歴の削除
 1. https://localhost:4503/を参照します。
 
-* https://localhost:4503/content/sites/enable/en.htmlに到着する
+   * https://localhost:4503/content/sites/enable/en.htmlにアクセス
 
 >[!NOTE]
 >
@@ -308,7 +318,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると失敗します。
+The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ## コミュニティサイトの変更 {#modifying-the-community-site}
 
@@ -330,7 +340,7 @@ The &#39;**$**&#39; at the end of the regular expression `sling:match`string is 
 
 サイト構造にカタログ機能が既に含まれている場合、タイトルが変わることがあります。
 
-To modify the site&#39;s structure, navigate to the **Communities, Sites** console, open the `enable` folder, and select the **Edit Site **icon to access the properties of `Enablement Tutorial`.
+To modify the site&#39;s structure, navigate to the **Communities, Sites** console, open the `enable` folder, and select the **Edit Site** icon to access the properties of `Enablement Tutorial`.
 
 構造パネルを選択し、カタログを追加するか、既存のカタログを変更します。
 
