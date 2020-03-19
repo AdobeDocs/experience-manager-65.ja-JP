@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 72d4022c-43ba-49e0-b94c-f2beabaef64d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# SRP による UGC へのアクセス{#accessing-ugc-with-srp}
+# SRP による UGC へのアクセス {#accessing-ugc-with-srp}
 
 ## SRP について {#about-srp}
 
