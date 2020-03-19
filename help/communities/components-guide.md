@@ -10,12 +10,12 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
 
-# コミュニティコンポーネントガイド {#community-components-guide}
+# コミュニティコンポーネントガイド  {#community-components-guide}
 
 コミュニティコンポーネントガイドは、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)のインタラクティブ開発ツールです。利用可能なAEM Communitiesのコンポーネントや、複数のコンポーネントで構築されたより複雑な機能のリストを提供します。
 
@@ -23,26 +23,26 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 各コンポーネントに関連する開発の基本事項については、[コンポーネントと機能の基本事項](essentials.md)を参照してください。
 
-## はじめに{#getting-started}
+## 概要 {#getting-started}
 
 このガイドは、オーサーインスタンス（localhost:4502）とパブリッシュインスタンス（localhost:4503）の開発用インストール環境での使用を意図しています。
 
 コミュニティコンポーネントサイトには以下からアクセスします。
 
-* [https://&lt;server>:&lt;port>/content/community-components/en.html](http://localhost:4502/content/community-components/en.html)
+* [https://&lt;サーバー>:&lt;ポート>/content/community-components/en.html](http://localhost:4502/content/community-components/en.html)
 
 コミュニティコンポーネントとのインタラクションは次の状況によって変わります。
 
 * サーバー（作成者または発行）
 * サイト訪問者がサインインしているかどうか
-* ログインした場合、メンバーに割り当てられる権限
+* ログインした場合、メンバーに割り当てられた権限
 * Whether or not the default SRP, [JSRP](jsrp.md), is in use
 
 On author, to enter edit mode, insert either `editor.html` or `cf#` as the first path segment after the server name:
 
 * 標準 UI:
 
-   [https://&lt;server>:&lt;port>/editor.html/content/community-components/en.html](http://localhost:4502/editor.html/content/community-components/en.html)
+   [https://&lt;サーバー>:&lt;ポート>/editor.html/content/community-components/en.html](http://localhost:4502/editor.html/content/community-components/en.html)
 
 * クラシック UI：
 
@@ -78,13 +78,13 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 1. タイトル：選択したコンポーネントの名前
 1. [クライアント側ライブラリ](#client-side-libraries):1つ以上の必須カテゴリのリスト
-1. [含める](scf.md#add-or-include-a-communities-component):コンポーネントを動的に含めることができる場合は、作成者編集モードで状態を切り替えることができます。
+1. [含める](scf.md#add-or-include-a-communities-component):コンポーネントが動的に含まれる場合は、オーサー編集モードで状態を切り替えることができます。
 
    * 追加した場合、表示されるテキストは次のとおりです。「このコンポーネントは、その各ノードを介して含まれます。」
    * 含まれる場合、表示されるテキストは次のとおりです。「このコンポーネントは動的に含まれます。」
-   * 含めることができない場合、テキストは表示されません
+   * 含めない場合、テキストは表示されません
 
-1. サンプルコンポーネントまたは機能：コンポーネントまたは機能のアクティブインスタンスです。コンポーネントは、タブセクションで提供されるテンプレート、CSS、データに対する変更によって変更される場合があります。
+1. サンプルコンポーネントまたは機能：コンポーネントまたは機能のアクティブインスタンスです。コンポーネントの場合は、タブセクションで提供されるテンプレート、CSS、データに対する変更によって変更できます。
 
 >[!NOTE]
 >
@@ -118,7 +118,7 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 >[!NOTE]
 >
->Be aware, if the SRP is left defaulted to [JSRP](jsrp.md), then UGC entered on the publish instance will only be visible on publish, and will *not *be visible from the [moderation](moderate-ugc.md) console on the author instance.
+>SRP がデフォルトの [JSRP](jsrp.md) のままになっている場合、パブリッシュインスタンスで生成された UGC はパブリッシュインスタンスでのみ表示され、オーサーインスタンスの[モデレート](moderate-ugc.md)コンソールからは表示できない&#x200B;**&#x200B;ことに留意してください。
 
 ## クライアント側ライブラリ {#client-side-libraries}
 
@@ -128,19 +128,19 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 ## 偽装 {#impersonation}
 
-管理者または開発者としてサインインすることが多いオーサーインスタンスで、別のユーザーとしてログインしてコンポーネントを操作するには、「**[!UICONTROL 偽装]**」ボタンの左側にあるテキストボックスにユーザー名を入力するか、プルダウンリストから選択してボタンをクリックします。「Revert」をクリックして、他のユーザーとしてサインアウトし、終了します。
+管理者または開発者としてサインインすることが多いオーサーインスタンスで、別のユーザーとしてログインしてコンポーネントを操作するには、「**[!UICONTROL 偽装]**」ボタンの左側にあるテキストボックスにユーザー名を入力するか、プルダウンリストから選択してボタンをクリックします。「復帰」をクリックしてサインアウトし、仮装を終了します。
 
 パブリッシュインスタンスではこのような偽装操作は不要です。Simply use the Login/Logout link to impersonate various users, such as the [demo users](tutorials.md#demo-users).
 
 ## カスタマイズ {#customization}
 
-有効にすると、各SCFコンポーネントは、コンポーネントのテンプレート、CSSおよびデータを一時的に変更することで、可能なカスタマイズのプロトタイプ化に使用できます。
+有効にすると、各SCFコンポーネントは、コンポーネントのテンプレート、CSS、およびデータを一時的に変更することで、可能なカスタマイズのプロトタイプ化に使用できます。
 
 ### カスタマイズの有効化 {#enabling-customization}
 
 >[!NOTE]
 >
->**このツールは読み取り専用です**。テンプレート、CSSまたはデータに対して行った編集はリポジトリに保存されません。
+>**このツールは読み取り専用です**。テンプレート、CSSまたはデータに対して行われた編集はリポジトリに保存されません。
 
 To quickly experiment with customizations, the `scg:showIde`property must be added to the component page&#39;s content JCR node and set to true.
 
@@ -150,7 +150,7 @@ To quickly experiment with customizations, the `scg:showIde`property must be add
 
    例：[http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
-1. コンポーネントのノードを選択し `jcr:content` ます
+1. コンポーネントのノードを選 `jcr:content` 択
 
    例：`/content/community-components/en/comments/jcr:content`
 
@@ -165,7 +165,7 @@ To quickly experiment with customizations, the `scg:showIde`property must be add
 
    [http://localhost:4503/content/community-components/en/comments.html](http://localhost:4503/content/community-components/en/comments.html)
 
-1. テンプレート、CSS、データの3つのタブが用意されています。
+1. テンプレート、CSS、データの3つのタブが表示されるようになりました。
 
 ![chlimage_1-408](assets/chlimage_1-408.png) ![chlimage_1-409](assets/chlimage_1-409.png)
 
