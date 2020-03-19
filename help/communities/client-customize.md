@@ -10,12 +10,12 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# クライアント側のカスタマイズ {#client-side-customization}
+# クライアント側のカスタマイズ  {#client-side-customization}
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
@@ -33,9 +33,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 コンポーネントのオーバーレイは、デフォルトのコンポーネントに変更を加え、デフォルトを使用するすべてのインスタンスに影響を与える方法です。
 
-The overlay is accomplished by modifying a copy of the default component in the /**apps** directory, rather than modifying the original component in the /**libs** directory. コンポーネントは、同じ相対パスを使用して構築されますが、「libs」は「apps」に置き換えられます。
+The overlay is accomplished by modifying a copy of the default component in the /**apps** directory, rather than modifying the original component in the /**libs** directory. コンポーネントは、「libs」が「apps」に置き換えられる以外、同じ相対パスを使用して構築されます。
 
-/appsディレクトリは、リクエストを解決するために最初に検索される場所で、見つからない場合は、/libsディレクトリ内のデフォルトのバージョンが使用されます。
+リクエストを解決するために検索されるのは/appsディレクトリが最初で、見つからない場合は/libsディレクトリにあるデフォルトのバージョンが使用されます。
 
 /libs ディレクトリ内のデフォルトコンポーネントは変更しないでください。/libs ディレクトリは、今後のパッチおよびアップグレードによって、公開インターフェイスのメンテナンス中に必要な方法で自由に変更されます。
 
@@ -61,7 +61,7 @@ The value of the `data-scf-component` attribute may be the default, such as **`s
 
 * `data-component-id`=&quot;{{id}}&quot;
 
-   コンテキストからidプロパティに解決されます。
+   コンテキストのidプロパティに解決されます。
 
 * `data-scf-component`=&quot;*&lt;resourceType>*
 
@@ -91,7 +91,7 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 コンポーネントにスキンを適用するには、次の手順に従います。
 
-1. 変更する要素（例：コンポーザー領域、ツールバーボタン、メッセージフォントなど）を指定します。
+1. 変更する要素（コンポーザー領域、ツールバーボタン、メッセージフォントなど）を指定します。
 1. これらの要素に影響する CSS クラス／ルールを識別します。
 1. スタイルシートファイル（.css）を作成します。
 1. Include the stylesheet in a client library folder ([clientlibs](#clientlibs-for-scf)) for your site and make sure it is included from your templates and pages with [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
@@ -102,17 +102,17 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 >[!CAUTION]
 >
->** scf-js-&amp;ast;**というプリフィックスが付いたCSSクラス名は、JavaScriptコードで特定の用途を持ちます。 これらのクラスは、コンポーネントの状態に影響を与え（例えば、非表示から表示に切り替える）、上書きも削除もしないでください。
+>Any CSS class name that is prefixed with `scf-js` has a specific use in javascript code. これらのクラスは、コンポーネントの状態（例えば、非表示から表示に切り替える）に影響し、上書きも削除も不要です。
 >
->While the scf-js-amp;ast;クラスはスタイルに影響を与えません。クラス名は、要素の状態を制御するので、副作用が生じる可能性があることを示す注意を払ってスタイルシートで使用できます。
+>While the `scf-js` classes do not affect styles, the class names may be used in stylesheets with the caveat that, as they control the states of elements, there may be side effects.
 
 ## JavaScript の拡張 {#extending-javascript}
 
 コンポーネントの JavaScript 実装を拡張するには、以下のことのみが必要です。
 
-1. jcr:resourceSuperTypeを拡張コンポーネントのjcr:resourceTypeの値に設定したアプリ用のコンポーネントを作成します（例：social/forum/components/hbs/forum）。
+1. jcr:resourceSuperTypeを拡張コンポーネントのjcr:resourceTypeの値（例：social/forum/components/hbs/forum）に設定して、アプリ用のコンポーネントを作成します。
 1. デフォルトのSCFコンポーネントのJavaScriptを調べて、SCF.registerComponent()を使用して登録する必要があるメソッドを判断します。
-1. 拡張コンポーネントのJavaScriptをコピーするか、最初から開始する
+1. 拡張コンポーネントのJavaScriptをコピーするか、または最初から開始します
 1. メソッドの拡張
 1. SCF.registerComponent()を使用して、すべてのメソッドをデフォルトまたはカスタマイズされたオブジェクトとビューのいずれかに登録します。
 
@@ -143,9 +143,9 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 ## スクリプトタグ {#script-tags}
 
-スクリプトタグは、クライアント側のフレームワークに固有の機能です。 これらは、サーバー側で生成されたマークアップをクライアント側のモデルおよびビューにバインドするために役立ちます。
+スクリプトタグは、クライアント側のフレームワークに固有の要素です。 これらは、サーバー側で生成されたマークアップをクライアント側のモデルおよびビューにバインドするために役立ちます。
 
-コンポーネントをオーバーレイまたは優先するときに SCF スクリプト内のスクリプトタグを削除しないでください。SCF script tags auto created for injecting JSON in the HTML are identified with the attribute `data-scf-json=`true.
+コンポーネントをオーバーレイまたは優先するときに SCF スクリプト内のスクリプトタグを削除しないでください。SCF script tags auto created for injecting JSON in the HTML are identified with the attribute `data-scf-json=true`.
 
 ## SCF の clientlib {#clientlibs-for-scf}
 
@@ -156,7 +156,7 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 | clientlib のバリアント | カテゴリプロパティのパターン |
 |--- |--- |
 | 完全 clientlib | cq.social.hbs.&lt;component name> |
-| オーサー clientlib | cq.social.author.hbs.&lt;component name> |
+| オーサー clientlib | cq.social.author.hbs&lt;component name> |
 
 ### 完全 clientlib {#complete-clientlibs}
 
@@ -164,12 +164,12 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 これらのバージョンは、次の場所にあります。
 
-* /etc/clientlibs/social/hbs/&lt;component name>
+* `/etc/clientlibs/social/hbs/&lt;component name&gt;`
 
 次に例を示します。
 
-* クライアントフォルダーノード：/etc/clientlibs/social/hbs/forum
-* Categoriesプロパティ：cq.social.hbs.forum
+* クライアントフォルダーノード： `/etc/clientlibs/social/hbs/forum`
+* Categoriesプロパティ： `cq.social.hbs.forum`
 
 [コミュニティコンポーネントガイド](components-guide.md)によって、各 SCF コンポーネントに必要なすべての clientlib が一覧表示されます。
 
@@ -183,12 +183,12 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 これらのバージョンは、SCF libs フォルダー内にあります。
 
-* /libs/social/&lt;feature>/components/hbs/&lt;component name>/clientlibs
+* `/libs/social/&lt;feature&gt;/components/hbs/&lt;component name&gt;/clientlibs`
 
 次に例を示します。
 
-* クライアントフォルダーノード：/libs/social/forum/hbs/forum/clientlibs
-* Categoriesプロパティ：cq.social.author.hbs.forum
+* クライアントフォルダーノード： `/libs/social/forum/hbs/forum/clientlibs`
+* Categoriesプロパティ： `cq.social.author.hbs.forum`
 
 注意：オーサー clientlib によって他のライブラリは埋め込まれませんが、依存関係は示されます。他のライブラリに埋め込む場合、依存関係は自動的に取り込まれず、埋め込む必要があります。
 
@@ -196,9 +196,9 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 ### 使用上の考慮事項 {#usage-considerations}
 
-サイトによってクライアントライブラリの管理方法は異なります。以下に様々な要因を示します。
+サイトによってクライアントライブラリの管理方法は異なります。次のような要因が考えられます。
 
-* 全体的な速度：応答の速いサイトが目的ですが、最初のページのロードが少し遅いことは受け入れられる場合があります。多くのページが同じJavaScriptを使用している場合、様々なJavaScriptを1つのclientlibに埋め込み、最初のページから参照して読み込むことができます。 この1回のダウンロードでJavaScriptがキャッシュされたままになり、後続のページでダウンロードするデータ量が最小限に抑えられます。
+* 全体的な速度：応答の速いサイトが目的ですが、最初のページのロードが少し遅いことは受け入れられる場合があります。多くのページが同じJavascriptを使用している場合、様々なJavascriptを1つのclientlibに埋め込み、最初のページから参照して読み込むことができます。 この単一のダウンロードでのJavaScriptはキャッシュされたままとなり、後続のページでダウンロードするデータ量を最小限に抑えます。
 * 迅速な最初のページ：最初のページが迅速にロードされることが目的である場合があります。この場合、JavaScriptは複数の小さなファイルに含まれ、必要な場所でのみ参照されます。
 * 最初のページのロードと後続のダウンロードとの間のバランス。
 
