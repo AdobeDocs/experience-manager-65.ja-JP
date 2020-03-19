@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -27,9 +27,9 @@ This tutorial describes how to setup [MSRP](msrp.md) for *one author* instance a
 
 **実稼動環境では、以下のことが必要です。****
 
-* レプリカ・セットでMongoDBを実行
+* MongoDBをレプリカ・セットと共に実行
 * SolrCloudの使用
-* 複数のパブリッシャーインスタンスを含む
+* 複数の発行者インスタンスを含む
 
 ## MongoDB {#mongodb}
 
@@ -44,17 +44,17 @@ This tutorial describes how to setup [MSRP](msrp.md) for *one author* instance a
       * Windows 7
    * バージョンの選択：
 
-      * 少なくともバージョン2.6を使用してください。
+      * 少なくとも、バージョン2.6を使用してください。
 
 
 * 基本設定
 
    * MongoDBのインストール手順に従います。
-   * Mongod用の設定
+   * mongodに設定
 
       * モンゴや共有を設定する必要がない
    * インストールされたMongoDBフォルダは、&lt;mongo-install>と呼ばれます。
-   * 定義されたデータ・ディレクトリ・パスは、&lt;mongo-dbpath>と呼ばれます。
+   * 定義されたデータ・ディレクトリのパスは、&lt;mongo-dbpath>と呼ばれます。
 
 
 * MongoDB は AEM と同じホストか、リモートで実行できます。
@@ -69,7 +69,7 @@ This tutorial describes how to setup [MSRP](msrp.md) for *one author* instance a
 
 >[!NOTE]
 >
->*AEMの後に*MongoDBを起動した場合、**restart **all **AEM **インスタンスはMongoDBに正しく接続できるようにします。
+>If MongoDB is started *after* AEM, **restart** all **AEM** instances so they properly connect to MongoDB.
 
 ### 実稼動デモのオプション：MongoDB レプリカセットのセットアップ {#demo-production-option-setup-mongodb-replica-set}
 
@@ -176,11 +176,11 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
 ### UGC が表示されない {#no-ugc-appears}
 
-1. MongoDBがインストールされ、正しく動作していることを確認します。
+1. MongoDBが正しくインストールされ、動作していることを確認します。
 
 1. MSRPがデフォルトのプロバイダーに設定されていることを確認します。
 
-   * すべての作成者および発行AEMインスタンスで、ストレージ設定コンソ [ールに再度アクセスします](srp-config.md)
+   * すべての作成者インスタンスと発行AEMインスタンスで、ストレージ設定コンソ [ールに再度アクセスします](srp-config.md)
    または、AEMリポジトリを確認します。
 
    * In JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
