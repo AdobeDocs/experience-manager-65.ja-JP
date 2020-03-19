@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 2de88b55-dda9-4ccf-ad4d-dd67943ef610
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# 割り当て機能{#assignments-feature}
+# 割り当て機能 {#assignments-feature}
 
 コンポーネントブラウザーのコミュニティグループにあるイネーブルメント割り当てコンポーネントと[イネーブルメントカタログ](/help/communities/catalog.md)コンポーネントは、[イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)のコンポーネントです。
 
