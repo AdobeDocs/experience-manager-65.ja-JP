@@ -10,16 +10,16 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# コミュニティの開発 {#developing-communities}
+# コミュニティの開発  {#developing-communities}
 
 ## 概要 {#overview}
 
-AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能により、ユーザ生成コンテンツ(UGC)が発行環境に入ります。
+AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能により、ユーザ生成コンテンツ(UGC)が公開環境に入力されます。
 
 The foundation of a [community site](overview.md#communitiessites) is the [social component framework](scf.md) (SCF). Creation of a community site begins with the selection of a [community site template](sites-console.md) that is composed of [community functions](functions.md).
 
@@ -41,10 +41,10 @@ The foundation of a [community site](overview.md#communitiessites) is the [socia
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
 * [Social Component Framework](scf.md):フレームワークとAPIの概要
-* [SCFハンドルヘルパー](handlebars-helpers.md):デフォルトヘルパーとカスタムヘルパーの作成方法
+* [SCFハンドルバーヘルパー](handlebars-helpers.md):デフォルトヘルパーとカスタムヘルパーの作成方法
 * [クライアント側のカスタマイズ](client-customize.md):ブラウザーで実行するコードのカスタマイズ
-* [サーバー側のカスタマイズ](server-customize.md):サーバーで実行するコードのカスタマイズ
-* [ストレージリソースプロバイダー(SRP)](srp.md):コミュニティコンテンツストレージの概要
+* [サーバ側のカスタマイズ](server-customize.md):サーバーで実行するコードのカスタマイズ
+* [記憶域リソースプロバイダー(SRP)](srp.md):コミュニティコンテンツストレージの概要
 * [Coding Guidelines](code-guide.md):ガイドライン、ヒント、テクニック
 * [コミュニティコンポーネントガイド](components-guide.md):対話型開発ツール
 
@@ -76,7 +76,7 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 ## データの管理 {#managing-data}
 
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
-* [Tag Essentials](tag.md) — コミュニティメンバーがUGCやカタログ化された実施可能リソースにタグ付けする機能
+* [Tag Essentials](tag.md) — コミュニティメンバーがUGCやカタログ化された有効化リソースにタグ付けする機能
 
 ## チュートリアル {#tutorials}
 
