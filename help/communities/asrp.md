@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# ASRP - Adobe ストレージリソースプロバイダー{#asrp-adobe-storage-resource-provider}
+# ASRP - Adobe ストレージリソースプロバイダー {#asrp-adobe-storage-resource-provider}
 
 ## ASRP について {#about-asrp}
 
-AEM CommunitiesがASRPを共通ストアとして使用するように設定されている場合、ユーザー生成コンテンツ(UGC)は、同期や複製を必要とせずに、すべての作成者インスタンスとパブリッシュインスタンスからアクセスできます。
+AEM CommunitiesがASRPを共通ストアとして使用するように設定されている場合、ユーザー生成コンテンツ(UGC)は、同期や複製を必要とせずに、すべての作成者インスタンスと発行インスタンスからアクセスできます。
 
 [SRP オプションの特性](/help/communities/working-with-srp.md#characteristics-of-srp-options)と[推奨されるトポロジ](/help/communities/topologies.md)も参照してください。
 
@@ -28,7 +28,7 @@ AEM CommunitiesがASRPを共通ストアとして使用するように設定さ�
 
 ASRP の使用には追加ライセンスが必要です。
 
-AEM CommunitiesサイトでUGCにASRPを使用するように設定するには、次の点についてアカウント担当者にお問い合わせください。
+UGCでASRPを使用するようにAEM Communitiesサイトを設定するには、次の点についてアカウント担当者にお問い合わせください。
 
 * データセンター URL（ASRP エンドポイントのアドレス）
 * 消費者キー
@@ -43,28 +43,30 @@ AEM CommunitiesサイトでUGCにASRPを使用するように設定するには�
 
 The [Storage Configuration console](/help/communities/srp-config.md) allows for the selection of the default storage configuration, which identifies which implementation of SRP to use.
 
-**AEM作成者インスタンス上：**
+**AEM作成者インスタンスで：**
 
-* グローバルナビゲーション（ツール、コミュニティ、ストレージ設定）から、「** Adobe Storage Resource Provider (ASRP)」を選択します。**
+* グローバルナビゲーションから、 **[UIControl Tools/Communities/Storage Configuration]** （ストレージ設定）に移動し、「 **[UIControl Adobe Storage Resource Provider(ASRP)」を選択します]**。
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
 次の情報は、プロビジョニングプロセスから得られます。
 
-* **データセンターのURL**プルダウンして、アカウント担当者が指定した本番データセンターを選択します。
-* **デフォルトのレポートスイート**デフォルトのレポートスイート名を入力します。
-* **Consumer Key**。コンシューマーキーを入力します。
-* **暗号鍵. **シークレットを入力します。
-* Select **Submit.**
+* **データセンターのURL**:プルダウンして、アカウント担当者が指定した実稼働データセンターを選択します。
+* **デフォルトのレポートスイート**:デフォルトのレポートスイートの名前を入力します。
+* **Consumer Key**:コンシューマーキーを入力します。
+* **秘密**:秘密を入力します。
+* 「**送信**」を選択します。
 
 以下を実行してパブリッシュインスタンスを用意します。
 
-* [暗号鍵のレプリケーション](#replicate-the-crypto-key)
-* [設定のレプリケーション](#publishing-the-configuration)
+* [暗号鍵を複製する](#replicate-the-crypto-key)
+* [設定の複製](#publishing-the-configuration)
 
 設定を送信したら、以下の手順で接続をテストします。
 
-* Select **Test Config**. For each author and publish instance, test the connection to the data center from the Storage Configuration console.
+* 「 **Test Config**」を選択
+
+   作成者インスタンスと発行インスタンスごとに、ストレージ構成コンソールからデータセンターへの接続をテストします。
 
 * Ensure that the site URLs for profile data are routable from the Data Center by [externalizing links](#externalize-links).
 
@@ -90,21 +92,21 @@ ASRP エンドポイントでの認証を正常におこなうには、[ネッ�
 
 パブリッシュ環境で同一の設定を使用できるようにするには：
 
-AEM作成者インスタンス上：
+AEM作成者インスタンスで：
 
-* メインメニューから `Tools > Operations > Replication.`
-* Select **Activate Tree.**
-* **開始パス：**/etc/socialconfig/srpc/を参照します。
-* 「変更済みの **み」の選択を解除します。**
-* Select **Activate.**
+* Navigate from main menu to **[UIControl Tools > Operations > Replication]**.
+* Select **Activate Tree**
+* **開始パス**:参照 `/etc/socialconfig/srpc/`
+* 「変更済みの **み」の選択を解除**
+* Select **Activate**
 
 ## AEM 6.0 からのアップグレード {#upgrading-from-aem}
 
 >[!CAUTION]
 >
->If you enable ASRP on a published community site, any UGC already stored in [JCR](/help/communities/jsrp.md)is no longer visible, as there is no synchronization of data between on-premise storage and cloud storage.
+>If you enable ASRP on a published community site, any UGC already stored in [JCR](/help/communities/jsrp.md) is no longer visible, as there is no synchronization of data between on-premise storage and cloud storage.
 
-**`AEM Communities Extension`**was previously introduced in AEM 6.0 social communities as a cloud service. As of AEM 6.1 Communities, no cloud configuration is necessary, simply select ASRP from the [storage configuration console](/help/communities/srp-config.md).
+**`AEM Communities Extension`** は、以前はクラウドサービスとしてAEM 6.0ソーシャルコミュニティで導入されていました。 As of AEM 6.1 Communities, no cloud configuration is necessary, simply select ASRP from the [storage configuration console](/help/communities/srp-config.md).
 
 新しいストレージ構造により、ソーシャルコミュニティからコミュニティにアップグレードするときは、[アップグレード](/help/communities/upgrade.md#adobe-cloud-storage)手順に従う必要があります。
 
@@ -135,12 +137,12 @@ The Adobe cloud storage infrastructure uses *eventual consistency* to achieve it
 
 ### UGC が ASRP で表示されない {#ugc-not-visible-in-asrp}
 
-ストレージオプションの設定を確認して、ASRPがデフォルトプロバイダーに設定されていることを確認します。 デフォルトでは、ストレージリソースプロバイダーはASRPではなくJSRPです。
+ストレージオプションの設定を確認し、ASRPがデフォルトのプロバイダーに設定されていることを確認します。 デフォルトでは、ストレージリソースプロバイダーはASRPではなくJSRPです。
 
 すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
 In JCR, if [/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
-* does not contain an [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) node, it means that the storage provider is JSRP.
+* Does not contain an [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) node, it means that the storage provider is JSRP.
 * If the srpc node exists and contains node [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties define ASRP to be the default provider.
 
