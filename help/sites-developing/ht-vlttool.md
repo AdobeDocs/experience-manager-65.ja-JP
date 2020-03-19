@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
-source-git-commit: a7c3848704ee2b4b984fafcd82e29a75ea8d3443
+source-git-commit: 2da3da1a36f074593e276ddd15ed8331239ab70f
 
 ---
 
@@ -23,7 +23,7 @@ VLT ツールはコマンドラインから実行します。このドキュメ�
 
 ## 概念およびアーキテクチャ {#concepts-and-architecture}
 
-Filevaultツールの概 [念と構造の詳細については、](https://jackrabbit.apache.org/filevault/overview.html) Apache Jackrabbit Filevault [社の公式ドキュメントのFilevault Overview](https://jackrabbit.apache.org/filevault/vaultfs.html) and [](https://jackrabbit.apache.org/filevault/index.html) Vault FS（Filevaultの概要とVault FS）ページを参照してください。
+Filevaultツールの概 [念と構造の詳細については、](https://jackrabbit.apache.org/filevault/overview.html) Apache Jackrabbit Filevaultの公式ドキュメント [](https://jackrabbit.apache.org/filevault/vaultfs.html) (英語のみ [)のFilevault Overview and](https://jackrabbit.apache.org/filevault/index.html) Vault FS（Filevaultの概要とVault FS）ページを参照してください。
 
 ## VLT の導入 {#getting-started-with-vlt}
 
@@ -37,9 +37,9 @@ VLT の使用を開始するには、次の手順を実行する必要があり�
 
 ### Installing the VLT Tool {#installing-the-vlt-tool}
 
-VLT ツールを使用するには、まず VLT ツールをインストールする必要があります。このツールは追加のツールなので、デフォルトではインストールされません。 また、システムの環境変数を設定する必要があります。
+VLT ツールを使用するには、まず VLT ツールをインストールする必要があります。追加のツールなので、デフォルトではインストールされません。 また、システムの環境変数を設定する必要があります。
 
-1. FileVaultアーカイブファイルを [Apache Jackrabbit webサイトからダウンロードします。](https://jackrabbit.apache.org/jcr/downloads.html#vlt)
+1. FileVaultアーカイブファイルを [Mavenアーティファクトリポジトリからダウンロードします。](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
    >VLTツールのソースはGitHubで使 [用できます。](https://github.com/apache/jackrabbit-filevault)
@@ -141,7 +141,7 @@ filevault とリポジトリを同期する必要があります。次の手順�
 1. Edit something in `text.jsp`.
 1. See the modified files by typing `vlt st`
 1. See the changes by typing `vlt diff text.jsp`
-1. 変更を確定します。 `vlt ci test.jsp`.
+1. 変更をコミットします。 `vlt ci test.jsp`.
 1. テキストコンポーネントを含むページを再読み込みして、変更が反映されているかどうかを確認します。
 
 ## VLT ツールのヘルプの表示 {#getting-help-with-the-vlt-tool}
@@ -849,7 +849,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 * `vault.sync.syncroots`：同期のルートを定義する 1 つまたは複数のローカルファイルシステムのパス。
 
-* `vault.sync.fscheckinterval`:ファイル・システムで変更をスキャンする頻度（秒）。 デフォルト値は 5 秒です。
+* `vault.sync.fscheckinterval`:ファイル・システムで変更がスキャンされる頻度（秒）。 デフォルト値は 5 秒です。
 * `vault.sync.enabled`：サービスを有効または無効にする一般的なフラグ。
 
 >[!NOTE]
@@ -864,19 +864,19 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 * `.vlt-sync-config.properties`:設定ファイル。
 
-* `.vlt-sync.log`:同期中に実行される操作に関する情報を含むログファイル。
-* `.vlt-sync-filter.xml`:リポジトリの同期する部分を定義するフィルター。 The format of this file is decribed by the [Performing a filtered checkout](#performing-a-filtered-checkout) section.
+* `.vlt-sync.log`:同期中に実行された操作に関する情報を含むログファイル。
+* `.vlt-sync-filter.xml`:リポジトリのどの部分を同期するかを定義するフィルター。 The format of this file is decribed by the [Performing a filtered checkout](#performing-a-filtered-checkout) section.
 
 The `.vlt-sync-config.properties` file allows you to configure the following properties:
 
 **disabled** 同期のオン/オフを切り替えます。 デフォルトでは、このパラメーターは false に設定されており、同期が許可されます。
 
-**sync-once** ：空でない場合、次のスキャンで指定した方向にフォルダが同期され、パラメータがクリアされます。 次の 2 つの値がサポートされています。
+**sync-once空でない場合** 、次のスキャンで指定した方向のフォルダが同期され、パラメータがクリアされます。 次の 2 つの値がサポートされています。
 
 * `JCR2FS`：JCR リポジトリ内のコンテンツをすべて書き出して、ローカルディスクに書き込みます。
 * `FS2JCR`：ディスクから JCR リポジトリにすべてのコンテンツを読み込みます。
 
-**sync-logログ** ：ログファイル名を定義します。 デフォルト値は .vlt-sync.log です。
+**sync-logログ** ：ログのファイル名を定義します。 デフォルト値は .vlt-sync.log です。
 
 ### 開発のための VLT 同期の使用 {#using-vlt-sync-for-development}
 
