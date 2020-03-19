@@ -10,12 +10,12 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# サンドボックスアプリケーションの開発 {#develop-sandbox-application}
+# サンドボックスアプリケーションの開発  {#develop-sandbox-application}
 
 [初期アプリケーション](initial-app.md)の節でテンプレートをセットアップし、[初期コンテンツ](initial-content.md)の節で初期ページを設定したので、ここでは、作成時にコミュニティコンポーネントを使用できるようにするとともに、基盤スクリプトを使用してアプリケーションを開発できます。この節の最後に、Webサイトが機能するようになります。
 
@@ -30,9 +30,9 @@ The first step is to add a resource super type property to the `/apps/an-scf-san
 CRXDE Lite を使用して、次の手順を実行します。
 
 <!--Resolve steps below-->
-    *名前：`sling:resourceSuperType`
-    *種類：`文字列`
-    *値：`foundation/components/page`
+    名前：`sling:resourceSuperType`
+    Type:`文字列`
+    値：`foundation/components/page`
 
 1. Click the green **[!UICONTROL [+]Add]**
 1. Click **[!UICONTROL Save All]**
@@ -41,7 +41,7 @@ CRXDE Lite を使用して、次の手順を実行します。
 
 ### Head and body scripts {#head-and-body-scripts}
 
-1. In **CRXDE Lite** explorer pane, navigate to `/apps/an-scf-sandbox/components/playpage` and double-click the file `playpage.jsp` to open it in the edit pane.
+1. **CRXDE Lite** Explorerウィンドウで、フ `/apps/an-scf-sandbox/components/playpage` ァイルに移動し、ダブルクリックし `playpage.jsp` て編集ウィンドウで開きます。
 
 #### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp}
 
@@ -86,9 +86,9 @@ CRXDE Lite を使用して、次の手順を実行します。
 
    To setup for authoring, overlay `body.jsp` with a local script and include a paragraph system (parsys) in the body:
 
-   1. navigate to `/apps/an-scf-sandbox/components`
-   1. select the `playpage`node
-   1. 右クリックして選択 `Create > Create File...`
+   1. `/apps/an-scf-sandbox/components` に移動します。
+   1. Select the `playpage`node
+   1. Right-click and select `Create > Create File...`
 
       * 名前：**body.jsp**
    1. Click **[!UICONTROL Save All]**
@@ -159,11 +159,11 @@ In addition, choose **[!UICONTROL General]** components, such as
 
 多言語環境では、クライアントからの要求を解析して優先言語を特定するスクリプトがルートページに含まれます。
 
-この単純な例では、ルートページは静的に英語のページにリダイレクトするように設定されています。英語のページは、今後、再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
+この簡単な例では、ルートページが静的に設定されて英語ページにリダイレクトされ、今後、再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
 
 ブラウザーの URL をルートページ [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html) に変更します。
 
-* ページ情報アイコンを選択します。
+* ページ情報アイコンの選択
 * Select **[!UICONTROL Open Properties]**
 * 「詳細」タブ
 
@@ -174,4 +174,4 @@ In addition, choose **[!UICONTROL General]** components, such as
 
 サイトを公開した後、パブリッシュインスタンスでルートページを参照すると、英語のページにリダイレクトされます。
 
-コミュニティ SCF コンポーネントを使用して作業する前の最後の手順は、クライアントライブラリフォルダー（clientlibs）を追加することです。**[⇒](add-clientlibs.md)**
+コミュニティのSCFコンポーネントを再生する前の最後の手順は、クライアントライブラリフォルダー(clientlibs)を追加することです。. [クライアントの追加](add-clientlibs.md)
