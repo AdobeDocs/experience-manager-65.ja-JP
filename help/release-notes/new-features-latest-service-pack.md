@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f50369f269040bf7f1a30b018acbc1b441abdb15
+source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
 
 ---
 
@@ -17,6 +17,8 @@ Adobe Experience Manager (AEM) 6.5では、四半期ごとのService Packを通�
 
 ## AEM Sites {#aem-sites}
 
+AEM 6.5.4.0では、スタイルシステムの機能が強化されています。 コンポーネントダイアログ内でスタイルを選択できるようになりました。
+
 ### 各領域のパフォーマンスの向上 {#performance-improvements}
 
 * サイト内のContextHubの読み込みと初期化に要する時間を短縮しま`contexthub.kernel.js`した()。 サイト訪問中のページ読み込みが速くなります。
@@ -26,8 +28,6 @@ Adobe Experience Manager (AEM) 6.5では、四半期ごとのService Packを通�
 * ライブコピーの概要で200を超えるライブコピーが含まれるサイトページのエントリの読み込み時 **[!UICONTROL 間を短縮しました]**。
 
 * 不完全または無効なURLの処理を改善。 このようなURLを使用すると、テンプレートエディターの動作が遅くなる可能性があります。
-
-また、AEM 6.5.4.0では、スタイルシステムの機能が強化されています。 コンポーネントダイアログ内でスタイルを選択できるようになりました。
 
 ## AEM Assets {#aem-assets}
 
@@ -116,16 +116,19 @@ Assets ユーザーは、視覚的に類似した画像を検索できます。A
 
 Batch APIを使用すると、テンプレートから複数のインタラクティブな通信を作成できます。 テンプレートは、データのないインタラクティブな通信です。 Batch APIは、データをテンプレートと組み合わせて、インタラクティブな通信を生成します。 このAPIは、インタラクティブ通信の大量生産に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 Batch APIを使用 [した複数のインタラクティブ通信の生成を参照してくださ](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)い。
 
-
-
 ## AEM 6.5 SP3以降の主なリリース
 
 2019年12月12日から2020年3月5日まで、アドビは、AEMの主要な成果物以外の次の機能をリリースしました。
 
-* AEM Cloud Manager 2020.1.0および2020.2.0このリリースアップデートでは、パイプラインのステータスと様々な手順でログをダウンロードする機能が向上しました。 詳しくは、次を参照してください。
+* AEM Cloud Manager 2020.1.0および2020.2.0
+
+   リリースの更新により、パイプラインのステータスが改善され、様々な手順でログをダウンロードできるようになりました。 詳しくは、次を参照してください。
+
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
+
    * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+
 
 * AEM Cloud Manager CLIの更新
 
