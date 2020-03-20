@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 7d2ba937710e5931356512b812a8b8fbe3a52072
 
 ---
 
@@ -37,30 +37,12 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 以下の表に、プログラムによってワークフローとやり取りする際に使用するいくつかの重要な Java オブジェクトの参照ドキュメントへのリンクを示します。以降の例では、コード内でクラスオブジェクトを取得および使用する方法を示します。
 
-<table>
- <tbody>
-  <tr>
-   <th>機能<a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html"></a></th>
-   <th>オブジェクト<br /> </th>
-  </tr>
-  <tr>
-   <td>ワークフローへのアクセス<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html"><code>WorkflowSession</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>ワークフローインスタンスの実行とクエリー<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html"><code>Workflow</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html"><code>WorkItem</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html"><code>WorkflowData</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>ワークフローモデルの管理<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html"><code>WorkflowModel</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html"><code>WorkflowNode</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html"><code>WorkflowTransition</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>ワークフロー内の（またはそうでない）ノードの情報 </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html"><code>WorkflowStatus</code></a></td>
-  </tr>
- </tbody>
-</table>
+| 機能 | オブジェクト |
+|---|---|
+| ワークフローへのアクセス | [`WorkflowSession`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html) |
+| ワークフローインスタンスの実行とクエリー | [`Workflow`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html)</br>[`WorkItem`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html)</br>[`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) |
+| ワークフローモデルの管理 | [`WorkflowModel`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html)</br>[`WorkflowNode`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html)</br>[`WorkflowTransition`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html) |
+| ワークフローに含まれる（または含まれない）ノードの情報 | [`WorkflowStatus`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) |
 
 ## ECMA スクリプトでのワークフローオブジェクトの取得 {#obtaining-workflow-objects-in-ecma-scripts}
 
@@ -74,11 +56,11 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 ## ワークフロー REST API の使用 {#using-the-workflow-rest-api}
 
-ワークフローコンソールはREST APIを多用しています。このページでは、ワークフローのREST APIについて説明します。
+ワークフローコンソールは、REST APIを多用します。したがって、このページでは、ワークフローのREST APIについて説明します。
 
 >[!NOTE]
 >
->curlコマンドラインツールを使用すると、ワークフローREST APIを使用してワークフローオブジェクトにアクセスし、インスタンスライフサイクルを管理できます。 このページの例では、curl コマンドラインツールから REST API を使用する方法を示します。
+>curlコマンドラインツールを使用すると、ワークフローREST APIを使用してワークフローオブジェクトにアクセスし、インスタンスのライフサイクルを管理できます。 このページの例では、curl コマンドラインツールから REST API を使用する方法を示します。
 
 REST APIでは、次のアクションがサポートされています。
 
@@ -115,7 +97,7 @@ In this page it is assumed that AEM runs on localhost at port `4502` and that th
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>新しいワークフローインスタンスを作成します。パラメーターを以下に示します。<br /> - <code>model</code>:各ワークフローモデルのID(URI<br /> )- <code>payloadType</code>:ペイロードのタイプ（例えば、URL） <code>JCR_PATH</code> を含みます。<br /> ペイロードはパラメーターとして送信されま <code>payload</code>す。 A <code>201</code> (<code>CREATED</code>) response is sent back with a location header containing the URL of the new workflow instance resource.</p> </td>
+   <td><p>新しいワークフローインスタンスを作成します。パラメーターを以下に示します。<br /> - <code>model</code>:各ワークフローモデルのID(URI<br /> ) - <code>payloadType</code>:ペイロードのタイプ（例えば、URL）を含 <code>JCR_PATH</code> んでいます。<br /> ペイロードはパラメーターとして送信されま <code>payload</code>す。 A <code>201</code> (<code>CREATED</code>) response is sent back with a location header containing the URL of the new workflow instance resource.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -171,7 +153,7 @@ In this page it is assumed that AEM runs on localhost at port `4502` and that th
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>新しいワークフローモデルを作成します. If the parameter <code>title</code> is sent, a new model is created with the specified title. Attaching a JSON model definition as parameter <code>model</code> creates a new workflow model according to the provided definition.<br /> 応答 <code>201</code> (<code>CREATED</code>)が、新しいワークフローモデルリソースのURLを含む場所ヘッダーと共に返されます。<br /> モデル定義がというファイルパラメータとしてアタッチされている場合も同じことが起こりま <code>modelfile</code>す。<br /> とのどちらの場合も、シリアル化 <code>model</code> 形式を定 <code>modelfile</code> 義するには、という追加の <code>type</code> パラメーターが必要です。 新しいシリアル化フォーマットは、OSGI API を使用して統合できます。標準の JSON シリアライザーは、ワークフローエンジンに付属しています。そのタイプは JSON です。フォーマットの例は、以下を参照してください。</td>
+   <td>新しいワークフローモデルを作成します. If the parameter <code>title</code> is sent, a new model is created with the specified title. Attaching a JSON model definition as parameter <code>model</code> creates a new workflow model according to the provided definition.<br /> 応答( <code>201</code> )が<code>CREATED</code>、新しいワークフローモデルリソースのURLを含む場所ヘッダーと共に返送されます。<br /> モデル定義がというファイルパラメータとしてアタッチされた場合も同様で <code>modelfile</code>す。<br /> とのどちらの場合も、シリアル化 <code>model</code> 形式を定 <code>modelfile</code> 義するには、という追加のパ <code>type</code> ラメーターが必要です。 新しいシリアル化フォーマットは、OSGI API を使用して統合できます。標準の JSON シリアライザーは、ワークフローエンジンに付属しています。そのタイプは JSON です。フォーマットの例は、以下を参照してください。</td>
   </tr>
  </tbody>
 </table>
@@ -427,7 +409,7 @@ The `uri` displayed in the results can be used as the instance `id` in other com
 * 使用するパラメーター：
 
    * `action`:値は次のとおりです。 `UPDATE`
-   * `workflowTitle`:ワークフロータイトル
+   * `workflowTitle`:ワークフローのタイトル
 
 #### ワークフローのタイトルを変更する方法 - curl を使用した REST {#how-to-change-the-workflow-title-rest-using-curl}
 
@@ -495,7 +477,7 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 例では以下を実行します。
 
-1. モデルを作成します(IDを使用 `/var/workflow/models/mymodel/jcr:content/model`)。
+1. （IDを使用して）モデルを作成 `/var/workflow/models/mymodel/jcr:content/model`します。
 1. モデルを削除します。
 
 >[!NOTE]
