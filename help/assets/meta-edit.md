@@ -3,7 +3,7 @@ title: メタデータの編集と追加
 description: AEM Assets のアセットメタデータを編集する様々な方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91818198032de0580fe04d09fdd567dc470c021d
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -24,7 +24,8 @@ source-git-commit: 91818198032de0580fe04d09fdd567dc470c021d
    * From the asset thumbnail, select the **[!UICONTROL View Properties]** quick action.
    * From the asset page, click/tap the **[!UICONTROL View Properties]** icon from the toolbar.
       ![chlimage_1-168](assets/chlimage_1-168.png)
-      *図：プロパティアイコン*
+   *図：プロパティアイコン*
+
    アセットページに、アセットのメタデータがすべて表示されます。このメタデータは、AEM Assets にアップロードされた（取り込まれた）ときに、自動的に抽出されたものです。
 
    ![アセットのプロパティを選択してメタデータを表示](assets/asset-metadata.png)
