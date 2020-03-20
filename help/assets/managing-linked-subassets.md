@@ -3,7 +3,7 @@ title: Experience Managerで、参照と複数ページのアセットを含む�
 description: InDesign、IllustratorおよびPhotoshopからAEMアセットへの参照を作成する方法を説明します。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページのファイルの個々のサブアセットページを表示します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b13fe70c4b67b27e0f18bdb557c52e25d21e7f75
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -14,7 +14,7 @@ Adobe Experience Manager（AEM） Assets では、アップロードされたフ
 
 Adobe Creative Cloud アプリケーションで AEM アセットを参照することで、冗長性を排除するだけでなく、コラボレーションを強化し、ユーザーの作業効率と生産性を高めることができます。
 
-AEM Assetsは、双方向参照をサポートしています。 参照されたアセットは、アップロードされたファイルのアセットの詳細ページで検索できます。 さらに、AEM アセットの参照元のファイルは、参照先のアセットのアセットの詳細ページで確認できます。
+AEM Assetsでは、双方向の参照がサポートされています。 参照されたアセットは、アップロードされたファイルのアセットの詳細ページで検索できます。 さらに、AEM アセットの参照元のファイルは、参照先のアセットのアセットの詳細ページで確認できます。
 
 参照は、参照先のアセットのパス、ドキュメント ID およびインスタンス ID に基づいて解決されます。
 
@@ -24,7 +24,9 @@ AEM Assetsは、双方向参照をサポートしています。 参照された
 
 1. Using [AEM desktop app](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html), mount AEM Assets repository as a drive on your local machine. マウントしたドライブ内で、参照するアセットの場所に移動します。
 1. マウントしたドライブから Illustrator ファイルにアセットをドラッグします。
+
 1. Save the Illustrator file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the AEM repository.
+
 1. ワークフローが完了したら、アセットのアセットの詳細ページに移動します。 既存の AEM アセットへの参照は、「**[!UICONTROL 参照]**」列の「**[!UICONTROL 依存関係]**」に一覧表示されます。
 
    ![chlimage_1-84](assets/chlimage_1-258.png)
@@ -35,7 +37,9 @@ AEM Assetsは、双方向参照をサポートしています。 参照された
 
 1. Click **[!UICONTROL View Properties]** from the toolbar. In the [!UICONTROL Properties] page, the list of files that reference the current asset appear under the **[!UICONTROL References]** column in the **[!UICONTROL Basic]** tab.
 
-   ![chlimage_1-86](assets/chlimage_1-260.png)
+   ![アセットの詳細の「参照」列にExperience Managerアセットの参照を表示します。](assets/asset-references.png)
+
+   *図：アセットの詳細のアセット参照*
 
 ## Adobe InDesign 内で AEM アセットを参照として追加 {#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -80,23 +84,23 @@ Adobe InDesign ではドキュメントおよびリンクされたアセット�
 
 ## サブアセットの作成 {#generate-subassets}
 
-複数ページ形式のサポートされているアセットの場合 — PDFファイル、AIファイル、Microsoft powerPointおよびApple Keynoteファイル、Adobe inDesignファイル — AEMは、元のアセットの個々のページに対応するサブアセットを生成できます。 これらのサブアセットは親アセットにリ *ンクされ* 、複数ページの表示が容易になります。 その他の目的では、サブアセットはAEMでは通常のアセットと同様に扱われます。
+複数ページ形式のサポートされているアセットの場合 — PDFファイル、AIファイル、Microsoft PowerPointおよびApple Keynoteファイル、Adobe InDesignファイル — AEMは、元のアセットの個々のページに対応するサブアセットを生成できます。 これらのサブアセットは親アセットにリ *ンクされ* 、複数ページの表示が容易になります。 その他の目的では、サブアセットはAEMでは通常のアセットと同様に扱われます。
 
 サブアセットの生成はデフォルトでは無効になっています。サブアセットの生成を有効にするには、次の手順に従います。
 
 1. 管理者としてExperience Managerにログインします。 Access **[!UICONTROL Tools > Workflow > Models]**.
 1. 「 **[!UICONTROL DAM Update Asset]** workflow」を選択し、「 **[!UICONTROL Edit」をクリックします]**。
-1. 「サイドパ **[!UICONTROL ネルを切り替え]** 」をクリックし、「サブア **[!UICONTROL セットを作成」ステップを見つけま]** す。 ワークフローに手順を追加します。 「同期」をク **[!UICONTROL リックしま]**&#x200B;す。
+1. 「サイドパ **[!UICONTROL ネルを切り替え]** 」をクリックし、「サブア **[!UICONTROL セットを作成」ステップを見つ]** けます。 ワークフローに手順を追加します。 「同期」をク **[!UICONTROL リックしま]**&#x200B;す。
 
 サブアセットを生成するには、次のいずれかの操作を行います。
 
-* 新しいアセット：DAMアセ [!UICONTROL ットの更新ワークフローは] 、AEMにアップロードされた新しいアセットに対して実行されます。 サブアセットは、新しい複数ページアセット用に自動生成されます。
+* 新しいアセット：DAMアセ [!UICONTROL ットの更新ワークフローは] 、AEMにアップロードされた新しいアセットに対して実行されます。 サブアセットは、新しい複数ページのアセット用に自動生成されます。
 * 既存の複数ページアセット：次の手順に従って、 [!UICONTROL DAMアセットの更新ワークフロー] (DAM Update Assets)を手動で実行します。
 
-   * アセットを選択し、「タイムラ [!UICONTROL イン] 」をクリックして左のパネルを開きます。 または、キーボードショートカットを使用しま `alt + 3`す。 「ワークフ [!UICONTROL ローを開始]」をクリックし、「 [!UICONTROL DAM Update Asset]」を選択して「 [!UICONTROL Start]」をクリックし、「 Proceed Proced Workflow」をクリックします。
-   * アセットを選択し、ツールバー [!UICONTROL で作成/ワークフロー] をクリックします。 ポップアップダイアログで「 [!UICONTROL DAM Update Asset] workflow」を選択し、「 [!UICONTROL Start]」をクリックし、「 [!UICONTROL Proceed]」をクリックします。
+   * アセットを選択し、「タイムラ [!UICONTROL イン] 」をクリックして左のパネルを開きます。 または、キーボードショートカットを使用しま `alt + 3`す。 「ワークフ [!UICONTROL ローを開始]」をクリックし、「 [!UICONTROL DAM Update Asset]」を選択し、「開始」をクリックして [!UICONTROL 、「続行」をク]リックします。
+   * アセットを選択し、ツールバ [!UICONTROL ーで作成/ワークフロー] をクリックします。 ポップアップダイアログで、「 [!UICONTROL DAM Update Asset] workflow」を選択し、「 [!UICONTROL Start]」をクリックし、「 [!UICONTROL Proceed]」をクリックします。
 
-特にMicrosoft wordドキュメントの場合は、 **[!UICONTROL DAM Parse wordドキュメントワークフローを実行します]** 。 Microsoft wordドキュメント `cq:Page` のコンテンツからコンポーネントを生成します。 The images extracted from the document are referenced from the `cq:Page` component. これらの画像は、サブアセットの生成が無効な場合も抽出されます。
+特にMicrosoft Wordドキュメントの場合は、 **[!UICONTROL DAM Parse Wordドキュメントワークフローを実行します]** 。 Microsoft Word文書のコ `cq:Page` ンテンツからコンポーネントを生成します。 The images extracted from the document are referenced from the `cq:Page` component. これらの画像は、サブアセットの生成が無効な場合も抽出されます。
 
 ## View subassets {#viewing-subassets}
 
@@ -106,20 +110,20 @@ Adobe InDesign ではドキュメントおよびリンクされたアセット�
 
 ## 複数ページファイルのページの表示 {#view-pages-of-a-multi-page-file}
 
-AEM Assetsのページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページのファイルを表示できます。 複数ページのアセットを開き、ページの **[!UICONTROL 左上隅にある]** 「ページを表示」をクリックします。 アセットのページが開くページビューア、および各ページを参照してズームするためのコントロール。
+AEM Assetsのページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページのファイルを表示できます。 複数ページのアセットを開き、ペ **[!UICONTROL ージの左上隅]** 「ページを表示」をクリックします。 アセットのページが表示されるページビューアと、各ページを参照およびズームするコントロールです。
 
 ![複数ページのアセットのページの表示と表示](assets/view_multipage_asset_fmr.gif)
 
 InDesign では、InDesign サーバーを使用してページを抽出できます。InDesign ファイルの作成中にページのプレビューが保存されている場合は、ページを抽出するために InDesign サーバーを使用する必要はありません。
 
-ツールバー、左側のレールおよびページビューアコントロールでは、次のオプションを使用できます。
+ツールバー、左側のナビゲーションバーおよびページビューアのコントロールで、次のオプションを使用できます。
 
 * **[!UICONTROL デスクトップアクション]** :AEMデスクトップアプリを使用して特定のサブアセットを開いたり、表示したりします。 AEMデスクトップアプリを使 [用する場合は](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) 、Desktop Actionsを設定する方法を参照してください。
 
-* **[!UICONTROL 「プロパティ]** 」オプションは、特定 [!UICONTROL のサブアセットの] 「プロパティ」ページを開きます。
+* **[!UICONTROL 「プロパティ]** 」オプションは、特定の [!UICONTROL サブアセットの] 「プロパティ」ページを開きます。
 
-* **[!UICONTROL 「注釈]** 」オプションを使用すると、特定のサブアセットに注釈を付けることができます。 別のサブアセットで使用する注釈は、親アセットを表示用に開くときに収集され、一緒に表示されます。
+* **[!UICONTROL Annotate]** （注釈）オプションを使用すると、特定のサブアセットに注釈を付けることができます。 別のサブアセットで使用する注釈は、親アセットを表示用に開いたときに収集され、一緒に表示されます。
 
 * **[!UICONTROL 「ページの概要]** 」オプションを選択すると、すべてのサブアセットが同時に表示されます。
 
-* **[!UICONTROL 左側のレール]** アイコンをクリックした後の左側のレールからタ ![イムラインオプションで](assets/do-not-localize/aem_leftrail_contentonly.png) 、ファイルのアクティビティストリームを表示します。
+* **[!UICONTROL 左側のパネル]** （左側のパネル）アイコンをクリックした後に、左側のパネル ![からタイムラインオプションを選択すると](assets/do-not-localize/aem_leftrail_contentonly.png) 、ファイルのアクティビティストリームが表示されます。
