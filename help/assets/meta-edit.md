@@ -3,7 +3,7 @@ title: メタデータの編集と追加
 description: AEM Assets のアセットメタデータを編集する様々な方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 91818198032de0580fe04d09fdd567dc470c021d
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 メタデータは、検索可能なアセットに関する追加情報です。画像をアップロードすると自動的に抽出されます。既存のメタデータを編集したり、新しいメタデータプロパティを既存のフィールドに追加する（例えば、メタデータフィールドが空白の場合など）ことができます。
 
-会社は制御され、信頼性の高いメタデータ語彙を必要とするので、AEM Assetsでは新しいメタデータプロパティをアドホックに追加できません。 作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。See [Create new metadata property for assets](meta-edit.md#editing-metadata-schema).
+会社は制御され、信頼性の高いメタデータの語彙を必要とするので、AEM Assetsでは、新しいメタデータプロパティをアドホックに追加することはできません。 作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。See [Create new metadata property for assets](meta-edit.md#editing-metadata-schema).
 
 ## Edit metadata for an asset {#editing-metadata-for-an-asset}
 
@@ -24,17 +24,21 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
    * From the asset thumbnail, select the **[!UICONTROL View Properties]** quick action.
    * From the asset page, click/tap the **[!UICONTROL View Properties]** icon from the toolbar.
       ![chlimage_1-168](assets/chlimage_1-168.png)
+      *図：プロパティアイコン*
    アセットページに、アセットのメタデータがすべて表示されます。このメタデータは、AEM Assets にアップロードされた（取り込まれた）ときに、自動的に抽出されたものです。
 
-   ![chlimage_1-169](assets/chlimage_1-169.png)
+   ![アセットのプロパティを選択してメタデータを表示](assets/asset-metadata.png)
 
-1. Make edits to the metadata under the various tabs, as required, and when completed, click/tap **[!UICONTROL Save]** from the toolbar to save your changes. Click/tap **[!UICONTROL Close]** to return to the Assets web interface.
+
+   *図：アセットのプロパティページでのメタデータの編集または追加*
+
+1. 必要に応じて、様々なタブの下でメタデータを編集したら、ツールバーの「**[!UICONTROL 保存]**」をクリックまたはタップして、変更内容を保存します。「**[!UICONTROL 閉じる]**」をクリックまたはタップして、Assets Web インターフェイスに戻ります。
 
    >[!NOTE]
    >
    >テキストフィールドが空の場合、現在設定されているメタデータはありません。フィールドに値を入力して保存すると、そのメタデータプロパティを追加できます。
 
-アセットのメタデータに対する変更は、XMPデータの一部として元のバイナリに書き戻されます。 これは、AEMメタデータの書き戻しワークフローを介して行われます。 既存のプロパティ（`dc:title` など）への変更は上書きされ、新しく作成されたプロパティ（`cq:tags` などのカスタムプロパティを含む）はスキーマとともに追加されます。
+アセットのメタデータに対する変更は、XMPデータの一部として元のバイナリに書き戻されます。 これは、AEMメタデータの書き込みバックワークフローを介して行われます。 既存のプロパティ（`dc:title` など）への変更は上書きされ、新しく作成されたプロパティ（`cq:tags` などのカスタムプロパティを含む）はスキーマとともに追加されます。
 
 XMP write-back is supported and enabled for the platforms and file formats described in [technical requirements.](/help/sites-deploying/technical-requirements.md)
 
