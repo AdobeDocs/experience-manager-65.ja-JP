@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 76fe7f99273139243e8944448ccfb013408b38de
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -217,7 +217,7 @@ PostScript（EPS）または Illustrator（AI）画像ファイルのアップ�
 |---|---|---|
 | 処理中 |  | **[!UICONTROL ラスタライズ]**&#x200B;を選択して、ファイル内のベクターグラフィックスをビットマップ形式に変換します。 |
 | レンダリングされた画像で透明な背景を保持する |  | ファイルの背景の透明度を維持します。 |
-| 解像度 |  | 解像度設定を決定します。この設定により、ファイル内の 1 inch あたりに表示するピクセル数を決定します。 |
+| 解決方法 |  | 解像度設定を決定します。この設定により、ファイル内の 1 inch あたりに表示するピクセル数を決定します。 |
 | カラースペース |  | 「カラースペース」メニューを選択し、次のカラースペースオプションから選択します。 |
 |  | 自動検出 | ファイルのカラースペースを保持します。 |
 |  | RGB として強制 | RGB カラースペースに変換します。 |
@@ -264,7 +264,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 | 抽出 | 検索ワード | PDF ファイルから単語を抽出し、eCatalog ビューア内でこのファイルをキーワード検索できるようにします。 |
 |  | リンク | PDF ファイルからリンクを抽出し、eCatalog ビューアで使用できる画像マップに変換します。 |
 | 複数ページの PDFから eCatalog を自動生成 |  | PDF ファイルから eCatalog を自動的に作成します。eCatalog の名前は、アップロードした PDF ファイルと同じになります。（このオプションは、アップロード時に PDF ファイルをラスタライズする場合にのみ使用できます。） |
-| 解像度 |  | 解像度設定を決定します。この設定により、PDF ファイル内の 1 inch あたりに表示するピクセル数を決定します。デフォルトは 150 です。 |
+| 解決方法 |  | 解像度設定を決定します。この設定により、PDF ファイル内の 1 inch あたりに表示するピクセル数を決定します。デフォルトは 150 です。 |
 | カラースペース |  | 「カラースペース」メニューを選択し、PDF ファイルのカラースペースを選択します。ほとんどの PDF ファイルには、RGB と CMYK の両方のカラー画像が含まれています。RGB カラースペースはオンラインでの表示に適しています。 |
 |  | 自動検出 | PDF ファイルのカラースペースを保持します。 |
 |  | RGB として強制 | RGB カラースペースに変換します。 |
@@ -335,11 +335,10 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 キーボードを使用してアセットをプレビューするには、次の手順に従います。
 
-1. アセットユーザインターフェイスで、および矢印キーを使用して、プレビューするアセットの場所 `Tab` に移動します。
+1. アセットユーザーインターフェイスから、および矢印キーを使用して目的のア `Tab` セットに移動します。
 
-1. 目的のアセットを開きます。
+1. 目的の `Enter` アセットのキーを押して開きます。 プレビューモードでアセットをズームインできます。
 
-   In the preview mode, zoom and reset options are available for [supported Image types](/help/assets/assets-formats.md#supported-raster-image-formats) (with interactive editing).
 1. アセットをズームインするには：
    1. ズームイ `Tab` ンアイコンにフォーカスを移動するには、Keyキーを使用します。
    1. キーを使 `Enter` 用して画像をズームインします。
@@ -367,11 +366,15 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. アセットをアクティベートする特定の日付と時間をスケジュールするには、「**[!UICONTROL オンタイム]**」フィールドの横にある日付選択を使用します。
 
-   ![chlimage_1-217](assets/chlimage_1-12.png)
+   ![オン時間フィールドで日付の時間選択またはキーボードキーを使用して、アセットのアクティブ化の日時を追加します。](assets/schedule-activation.png)
+
+   *図：アセットの有効化のスケジュール*
 
 1. To deactivate the asset after a particular duration, choose the deactivation date/time from the date picker beside the **[!UICONTROL Off Time]** field. アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。「オフ」の [!UICONTROL 後は]、アセットとそのレンディションは、アセットWebインターフェイスまたはHTTP API経由では使用できなくなります。
 
-   ![chlimage_1-218](assets/chlimage_1-13.png)
+   ![「オフ時間」フィールドの日付の時間選択またはキーボードキーを使用して、アセットの非アクティブ化の日時を追加します。](assets/schedule-deactivation.png)
+
+   *図：アセットの非アクティブ化のスケジュール*
 
 1. 「**[!UICONTROL タグ]**」フィールドで、タグを 1 つ以上選択します。カスタムタグを追加するには、ボックスにタグの名前を入力し、Enter キーを押します。新しいタグが AEM に保存されます。YouTubeにはタグが必要です。 See [publish videos to YouTube](video.md#publishing-videos-to-youtube).
 
