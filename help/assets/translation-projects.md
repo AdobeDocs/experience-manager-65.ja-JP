@@ -3,14 +3,14 @@ title: 翻訳プロジェクトの作成
 description: AEM で翻訳プロジェクトを作成する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
 
 # 翻訳プロジェクトの作成 {#creating-translation-projects}
 
-言語コピーを作成するには、AEMユーザーインターフェイスの参照レールで使用できる次の言語コピーワークフローのいずれかを実行します。
+言語コピーを作成するには、AEMユーザーインターフェイスの参照レールで使用できる次のいずれかの言語コピーワークフローをトリガーします。
 
 * **作成と翻訳**:このワークフローでは、翻訳対象のアセットが、翻訳先の言語の言語ルートにコピーされます。 また、選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
 
@@ -22,7 +22,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 >[!NOTE]
 >
->PDFファイルやInDesignファイルなど、複雑なアセットに対して翻訳ワークフローを起動した場合、そのサブアセットやレンディション（存在する場合）は翻訳用に送信されません。
+>PDFやInDesignファイルなどの複雑なアセットに対して翻訳ワークフローを起動した場合、そのサブアセットやレンディション（存在する場合）は翻訳用に送信されません。
 
 ## 作成と翻訳ワークフロー {#create-and-translate-workflow}
 
@@ -34,7 +34,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ### 構造のみを作成 {#create-structure-only}
 
-Use the **[!UICONTROL Create structure only]** option to create a target folder hierarchy within the target language root to match the hierarchy of the source folder within the source language root. この場合、ソースアセットが宛先フォルダーにコピーされます。ただし、翻訳プロジェクトは生成されません。
+「**[!UICONTROL 構造のみを作成]**」オプションを使用して、ソース言語ルート内のソースフォルダーの階層と一致するように、ターゲット言語ルート内にターゲットフォルダー階層を作成します。この場合、ソースアセットが宛先フォルダーにコピーされます。ただし、翻訳プロジェクトは生成されません。
 
 1. Assets UI で、ターゲット言語ルート内に構造を作成するソースフォルダーを選択します。
 1. **[!UICONTROL 参照]**&#x200B;パネルを開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップします。
@@ -49,7 +49,7 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 
-1. From the **[!UICONTROL Project]** list, choose **[!UICONTROL Create structure only]**.
+1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 構造のみを作成]**」を選択します。
 
    ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -114,7 +114,10 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 
 1. Assets UI に移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
 
-   ![chlimage_1-74](assets/chlimage_1-74.png)
+   ![アセットのプロパティページで変換済みメタデータを表示](assets/translated-metadata-asset-properties.png)
+
+   *図：アセットプロパティページの変換済みメタデータ*
+
 
    >[!NOTE]
    >
@@ -125,8 +128,8 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 このオプションを使用すると、前の翻訳ワークフローの実行後にユーザーがソースフォルダーに追加したアセットに対して、翻訳ワークフローが実行されます。新しく追加されたアセットのみが、既に翻訳済みのアセットを含むターゲットフォルダーにコピーされます。この場合、新しい翻訳プロジェクトは作成されません。
 
 1. Assets UI で、翻訳されていないアセットを含むソースフォルダーに移動します。
-1. Select an asset you want to translate, and open the **[!UICONTROL Reference pane]**. The **[!UICONTROL Language Copies]** section displays the number of translation copies that are currently available.
-1. Click/tap **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 使用可能な翻訳コピーのリストが表示されます。
+1. 翻訳するアセットを選択して、**[!UICONTROL 参照ペイン]**&#x200B;を開きます。「**[!UICONTROL 言語コピー]**」セクションには、現在使用可能な翻訳コピーの数が表示されます。
+1. 「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップします。使用可能な翻訳コピーのリストが表示されます。
 1. Click/tap **[!UICONTROL Create &amp; Translate]** at the bottom.
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
@@ -135,7 +138,7 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択して、翻訳ワークフローをフォルダーに対して実行します。
+1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択して、フォルダーで翻訳ワークフローを実行します。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -198,7 +201,7 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 このオプションを使用すると、言語コピーを更新するアセットのセットに対して翻訳プロジェクトが作成されます。
 
 1. Assets UI で、アセットを追加したソースフォルダーを選択します。
-1. Open the **[!UICONTROL References]** pane, and click/tap **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
+1. **[!UICONTROL 参照]**&#x200B;パネルを開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップして言語コピーのリストを表示します。
 1. 「**[!UICONTROL 言語コピー]**」の前のチェックボックスを選択し、適切なロケールに対応するターゲットフォルダーを選択します。
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
@@ -249,11 +252,11 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 このオプションを使用すると、アセットのセットが既存の翻訳プロジェクトに追加され、選択したロケールの言語コピーが更新されます。
 
 1. Assets UI で、アセットフォルダーを追加したソースフォルダーを選択します。
-1. Open the **[!UICONTROL References pane]**, and click/tap **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
+1. **[!UICONTROL 参照パネル]**&#x200B;を開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップして言語コピーのリストを表示します。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. Select the check box before **[!UICONTROL Language Copies]**, which selects all language copies. 翻訳先のロケールに対応する言語コピーを除き、他のコピーの選択を解除します。
+1. 「**[!UICONTROL 言語コピー]**」の前のチェックボックスを選択します。これによりすべての言語コピーが選択されます。翻訳先のロケールに対応する言語コピーを除き、他のコピーの選択を解除します。
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
@@ -276,7 +279,7 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 
 翻訳ワークフローを実行して、元のアセットを編集したバージョンで言語コピーを更新するとき、翻訳済みアセットをユーザーが承認するまで、既存の言語コピーが維持されます。AEM Assets は、新たに翻訳されたアセットを一時的な場所に格納しておき、ユーザーがアセットを明示的に承認した後で既存の言語コピーを更新します。ユーザーがアセットを承認しないと、言語コピーは変更されません。
 
-1. Click/tap the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click/tap **[!UICONTROL Reveal in Assets]** to open the folder in AEM Assets.
+1. 先ほど言語コピーを作成した「**[!UICONTROL 言語コピー]**」でソースルートフォルダーをクリックまたはタップしてから、「**[!UICONTROL Assets で表示]**」をクリックまたはタップすると、AEM Assets でフォルダーが開きます。
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -288,7 +291,7 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにします。
-1. From the toolbar, click/tap **[!UICONTROL Accept Translation]** and then click/tap **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
+1. ツールバーの「**[!UICONTROL 翻訳を承認]**」をクリックまたはタップし、ダイアログの「**[!UICONTROL 確定]**」をクリックまたはタップすると、ターゲットフォルダー内の翻訳済みアセットが、編集されたアセットの翻訳済みバージョンで上書きされます。
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
