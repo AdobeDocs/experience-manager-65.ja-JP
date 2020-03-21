@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
+source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
 
 ---
 
@@ -16,6 +16,8 @@ Adobe Experience Manager (AEM) 6.5では、四半期ごとのService Packを通�
 最新のAEM Service Pack 4(6.5.4.0)は、2020年3月6日にリリ **ースされます**。 この記事では、AEMの遍歴をより豊かにするために最新のService Packが提供する機能に焦点を当てています。
 
 ## AEM Sites {#aem-sites}
+
+### スタイルシステムの強化
 
 AEM 6.5.4.0では、スタイルシステムの機能が強化されています。 コンポーネントダイアログ内でスタイルを選択できるようになりました。
 
@@ -122,7 +124,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * AEM Cloud Manager 2020.1.0および2020.2.0
 
-   リリースの更新により、パイプラインのステータスが改善され、様々な手順でログをダウンロードできるようになりました。 詳しくは、次を参照してください。
+   パイプラインのステータスを改善し、様々な手順でログをダウンロードする機能を改善。 次のページを参照してください。
 
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
@@ -132,7 +134,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * AEM Cloud Manager CLIの更新
 
-   リリースの更新には、コマンドラインツールを使用したCloud Managerのタスクの自動化が含まれます。 GitHubを参照 [してください](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   コマンドラインツールを使用して、Cloud Managerのタスクを自動化します。 GitHubを参照 [してください](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEMサイト：プロジェクトのアーキタイプ23
 
@@ -148,7 +150,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * AEM Assets:デスクトップアプリ2.0.1.1
 
-   詳しくは、アセットへのデスクト [ップアクセスの取得を参照してください](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
+   詳しくは、ア [セットへのデスクトップアクセスの取得を参照してくださ](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)い。
 
 * AEM Screens:機能パック202001
 
