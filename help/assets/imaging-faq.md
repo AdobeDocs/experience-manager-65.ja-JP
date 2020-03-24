@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 9807bd4366315ad470128911cb67a31e7e9fd288
+source-git-commit: d690bcc80052f356425cd85c498aa48b1caf44bc
 
 ---
 
@@ -44,7 +44,7 @@ source-git-commit: 9807bd4366315ad470128911cb67a31e7e9fd288
 * スマートイメージングは、「bfc」 URLパラメータを使用してオフにできます。
 * TTL(Time To Live)非依存。 以前は、スマートイメージングを機能させるには、最小TTL値の12時間が必要でした。
 * 以前は、元の画像と派生画像の両方がキャッシュされ、キャッシュを無効にする2つの手順が必要でした。 最新のスマートイメージングでは、派生物のみがキャッシュされ、1ステップのキャッシュ無効化プロセスが可能です。
-* ルールセットにカスタムヘッダーを使用するお客様(例：画像応答へのカスタムヘッダー値の追加|Dynamic Media Classic [](https://helpx.adobe.com/in/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html))は、以前のバージョンのスマートイメージングとは異なり、最新のスマートイメージングを利用できます。
+* ルールセットにカスタムヘッダーを使用するお客様(例：画像応答へのカスタムヘッダー値の追加|Dynamic Media Classic [](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html))は、以前のバージョンのスマートイメージングとは異なり、最新のスマートイメージングを利用できます。
 
 ## Are there any licensing costs associated with smart imaging? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
