@@ -4,22 +4,22 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
+source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4の新機能 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager (AEM) 6.5では、四半期ごとのService Packを通じて、機能と継続的な改善を提供しています。 この新しいアプローチは、お客様がより迅速に革新的な技術を導入できるように、お客様にメリットをもたらします。
+Adobe Experience Manager (AEM) 6.5では、四半期ごとのService Packを通じて、機能と継続的な改善を提供しています。 このアプローチは、イノベーションを導入しやすくなるため、お客様にとってメリットがあります。
 
-最新のAEM Service Pack 4(6.5.4.0)は、2020年3月6日にリリ **ースされます**。 この記事では、AEMの遍歴をより豊かにするために最新のService Packが提供する機能に焦点を当てています。
+AEM Service Pack 4(6.5.4.0)は2020年3月6日にリ **リースされます**。 この記事では、AEMの遍歴をより豊かにするために6.5 Service Packが提供する主な機能に焦点を当てます。
 
 ## AEM Sites {#aem-sites}
 
 ### スタイルシステムの強化
 
-AEM 6.5.4.0では、スタイルシステムの機能が強化されています。 コンポーネントダイアログ内でスタイルを選択できるようになりました。
+拡張されたスタイルシステムを使用して、コンポーネントダイアログ内のスタイルを選択できるようになりました。
 
 ### 各領域のパフォーマンスの向上 {#performance-improvements}
 
@@ -58,7 +58,7 @@ Experience Manager Assetsには、次のアクセシビリティ機能の強化�
 
 ### AEM Formsワークフローでの印刷可能出力の生成 {#generate-printable-output}
 
-新しい印刷可能出力の生成ワークフローの手順では、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの異なるコピーを印刷または保存できます。 例えば、印刷のたびに異なる名前でソースフォームを印刷できます。 データファイルに名前を保存し、データファイルを標準のテンプレートファイルと統合します。 この機能について詳しくは、「 [Forms中心のOSGi上のワークフロー — 手順リファレンス」を参照してください](../forms/using/aem-forms-workflow-step-reference.md)。
+印刷可能出力の生成ワークフローの手順を使用すると、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの異なるコピーを印刷または保存できます。 この手順で、PCL、PostScript、ZPL、IPL、TPCLまたはDPL出力が生成されます。 この機能について詳しくは、「 [Forms中心のOSGi上のワークフロー — 手順リファレンス」を参照してください](../forms/using/aem-forms-workflow-step-reference.md)。
 
 ![印刷可能な出力を生成](assets/generate-print-output-demo.gif)
 
@@ -66,10 +66,7 @@ Experience Manager Assetsには、次のアクセシビリティ機能の強化�
 
 アダプティブフォームとインタラクティブな通信で、パネルの列数を定義できるようになりました。 レイアウトモードに切り替えて、新しい複数列オプションを使用します。 詳しくは、レイアウトモードを使用してコ [ンポーネントのサイズを変更するを参照してくださ](../forms/using/resize-using-layout-mode.md)い。
 
-
 ![複数列レイアウト](assets/multi-column-layout.gif)
-
-
 
 ### AEM受信トレイのカスタマイズ {#aem-inbox}
 
@@ -83,7 +80,7 @@ Experience Manager Assetsには、次のアクセシビリティ機能の強化�
 
 ### HTML5フォームでのリッチテキストのサポート {#rich-text-support}
 
-HTML5フォームでレンダリングする際に、XFAフォームのテキストフィールドをリッチテキストフィールドに変換できるようになりました。 その結果、テキストフィールドには、HTML5フォームの他の形式設定オプションのリストが表示されます。 詳しくは、「HTML5フォーム用のフ [ォームテンプレートのデザイン」を参照してください](../forms/using/designing-form-template.md)。
+XFAフォームのテキストフィールドをHTML5フォームのリッチテキストフィールドに変換します。 詳しくは、「HTML5フォーム用のフ [ォームテンプレートのデザイン」を参照してください](../forms/using/designing-form-template.md)。
 
 ### Accessibility enhancements {#forms-accessibility-enhancements-6540}
 
@@ -105,16 +102,16 @@ Experience Manager Formsには、次のアクセシビリティの強化が含�
 
 Assets ユーザーは、視覚的に類似した画像を検索できます。AEM は、ユーザーが選択した画像に類似した、DAM リポジトリのスマートタグ付き画像を表示します。See [Visual search](../assets/search-assets.md).
 
-### ユーザーのインボックス項目の共有とアクセスの要求(6.5.3.0) {#share-request-access}
+### AEM Formsユーザー(6.5.3.0)のインボックス項目の共有とアクセスの要求 {#share-request-access}
 
 受信トレイの項目を別のユーザーと共有できます。 別のユーザーが受信トレイの項目にアクセスしたら、そのユーザーは共有項目を要求し、適切なアクションを実行できます。 同様に、他のユーザーから受信トレイ項目へのアクセスを要求できます。 詳しくは、 [ユーザーのインボックス項目の共有とアクセスの要求を参照してくださ](../forms/using/configure-shared-queues-osgi.md)い。
 
-### 受信トレイ項目の不在設定(6.5.3.0) {#configure-out-of-office}
+### AEM Formsユーザー(6.5.3.0)の「Inbox」項目の不在設定の指定 {#configure-out-of-office}
 
 不在にする予定がある場合は、その期間に割り当てられた品目に対して何が起こるかを指定できます。
 不在設定が実施される開始日と時刻および終了日と時刻を指定するオプションがあります。すべてのアイテムを送信するデフォルトのユーザーを設定できます。 「不在 [時の設定」を参照してください](../forms/using/configure-out-of-office-settings.md)。
 
-### Batch API(6.5.3.0)を使用した複数のインタラクティブな通信の生成 {#generate-multiple-ic}
+### AEM Forms用のBatch API(6.5.3.0)を使用して複数のインタラクティブな通信を生成する {#generate-multiple-ic}
 
 Batch APIを使用すると、テンプレートから複数のインタラクティブな通信を作成できます。 テンプレートは、データのないインタラクティブな通信です。 Batch APIは、データをテンプレートと組み合わせて、インタラクティブな通信を生成します。 このAPIは、インタラクティブ通信の大量生産に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 Batch APIを使用 [した複数のインタラクティブ通信の生成を参照してくださ](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)い。
 
