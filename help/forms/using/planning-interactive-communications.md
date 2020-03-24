@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
 
 ---
 
@@ -31,7 +31,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 * **バックエンドシステムが作成元のデータ（フォームデータモデル）**&#x200B;は、顧客固有で、インタラクティブ通信と動的にマージされます。例えば、ポリシー番号や住所はフォームデータモデルを使用することができます。
 * 印刷および Web 版のインタラクティブ通信用の&#x200B;**レイアウトまたはテンプレート**。
 * インタラクティブ通信に配置する多様なテキスト段落の&#x200B;**順序**。
-* **通信を送信する前にカスタマイズする最前線の従業員** （エージェントUI）が入力したデータ。 例えば、支払期日です。
+* **通信を送信する前に通信をカスタマイズする最前線の従業員(エージェントUI** )が入力したデータ。 例えば、支払期日です。
 
 * **条件付きデータ**&#x200B;は、事前定義された条件に基づいて作成されます。例えば、インタラクティブな通信が生成された日付です。
 * ロゴや署名画像など&#x200B;**リポジトリに保存された画像**。会社ロゴなどの画像は、ほとんど、またはすべての通信に表示されます。
@@ -40,8 +40,6 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 ## インタラクティブ通信の分析 {#anatomy-of-the-interactive-communication}
 
 インタラクティブ通信の作成に使用する内容および要素が確定したら、インタラクティブ通信の分析を作成することができます。分析には、「[計画の考慮事項](/help/forms/using/planning-interactive-communications.md#planning-considerations)」セクションに記載されている詳細が必要です。ユースケースに基づいて、通信会社が顧客に送る毎月の請求書の分析事例は次のとおりです。
-
-解剖ビデオのプレースホルダー
 
 分析には、次の入力モードでのデータが含まれます。
 
@@ -111,7 +109,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
   </tr>
   <tr>
    <td>請求概要</td>
-   <td><p>通話料金</p> <p>会議通話料金</p> <p>SMS 料金 </p> <p>携帯インターネット料金</p> <p>国内ローミング料金</p> <p>国際ローミング料金</p> <p>付加価値サービス料金</p> <p>合計請求金額</p> <p>合計支払金額</p> <p>付加価値サービス料金フィールドの条件</p> </td>
+   <td><p>通話料金</p> <p>会議通話料金</p> <p>SMS 料金 </p> <p>携帯インターネット料金</p> <p>国内ローミング料金</p> <p>国際ローミング料金</p> <p>付加価値サービス料金</p> <p>合計請求金額</p> <p>合計支払金額</p> <p>付加価値サービス料フィールドの条件</p> </td>
    <td><p>次のフィールドに値を入力します。</p>
     <ul>
      <li>通話料金</li>
