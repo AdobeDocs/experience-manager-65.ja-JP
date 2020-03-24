@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: d690bcc80052f356425cd85c498aa48b1caf44bc
+source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
 
 ---
 
@@ -88,7 +88,7 @@ URLに記載されているその他の形式については、スマートイ�
 
 ## Will I have to change any URLs, image presets, or deploy any new code on my site for Smart Imaging? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-スマートイメージングは、既存の画像URLや画像プリセットとシームレスに連携します。 また、スマートイメージングでは、ユーザのブラウザを検出するためにWebサイトにコードを追加する必要はありません。 これらはすべて自動的に処理されます。
+いいえ. スマートイメージングは、既存の画像URLや画像プリセットとシームレスに連携します。 また、スマートイメージングでは、ユーザのブラウザを検出するためにWebサイトにコードを追加する必要はありません。 これらはすべて自動的に処理されます。
 
 前述のとおり、スマートイメージングはJPEGおよびPNG画像形式のみをサポートします。 その他の形式の場合は、前述のようにURLに修 `bfc=off` 飾子を追加する必要があります。
 
@@ -115,11 +115,11 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 「**[!UICONT
 
 スマートイメージングを使用するためのリクエストを開始する必要があります。自動的には有効になりません。
 
-1. テクニカルサポートリクエストを開始します（電子メール：s7support@adobe.com）。
+1. Initiate a Technical Support request (email: `s7support@adobe.com`).
 1. サポートリクエストには、以下の情報を記入してください。
 
    1. 主要連絡先の氏名、電子メールアドレス、電話番号。
-   1. スマートイメージングを有効にする全ドメイン（images.company.com や mycompany.scene7.com）。
+   1. All domains to be enabled for smart imaging (that is, `images.company.com` or `mycompany.scene7.com`).
 
        自社のドメインを調べるには、会社のアカウントにログインします。
 
