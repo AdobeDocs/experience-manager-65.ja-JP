@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
+source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
 ページに必要なプロパティを定義できます。これらはページの特性に応じて異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 
-## ページプロパティ {#page-properties}
+## ページのプロパティ {#page-properties}
 
 プロパティは次のタブに分散しています。
 
@@ -92,7 +92,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
    >* 既存のページに設定しないでください。
 
 
-   また、バニティURLへのアクセスを有効にするには、ディスパッチャーを設定する必要があります。 詳しく [は、「バニティURLへのアクセスの有効化](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 」を参照してください。
+   また、バニティURLへのアクセスを有効にするために、ディスパッチャーを設定する必要があります。 詳しくは [、「バニティURLへのアクセスの有効化](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 」を参照してください。
 
 * **バニティ URL をリダイレクト**
 
@@ -122,9 +122,9 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    >[!NOTE]
    >
-   >「Alias」は、プロパ `sling:alias` ティーを設定して、リソースのエイリアス名を定義します（これはリソースにのみ影響し、パスには影響しません）。
+   >「Alias」は、リソ `sling:alias` ースのエイリアス名を定義するプロパティーを設定します（これは、パスではなく、リソースにのみ影響します）。
    >
-   >例：ノードノードのエイリアスを定義 `latin-lang` した場合、こ `/content/we-retail/spanish` のページは、 `/content/we-retail/latin-language`
+   >例：ノードノードのエイリアスを `latin-lang` 定義した場合 `/content/we-retail/spanish` 、このページは、 `/content/we-retail/latin-language`
    >
    >詳しくは、「SEOとURL管理のベ [ストプラクティス」の「ローカライズされたページ名」を参照してください](/help/managing/seo-and-url-management.md#localized-page-names)。
 
@@ -199,7 +199,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
-### パーソナライズパーソナライゼーション {#personalization}
+### パーソナライゼーション {#personalization}
 
 * **ContextHub 設定**
 
@@ -208,6 +208,9 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 * **ターゲティング設定**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-authoring/target-adobe-campaign.md)します。
+
+   >[!NOTE]
+   >このオプションを使用するには、ユーザーアカウントがグループに属している必要 `Target Adminstrators`があります。
 
 ### 権限 {#permissions}
 
@@ -259,9 +262,9 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
       * 単一のページ
       * 複数のページ（まとめて編集する場合は、プロパティのサブセットのみを使用できます）
 
-* ページエディターから：
+* ページエディターから、次の操作をおこないます。
 
-   * Using **Page Information** (then **Open Properties**)
+   * 「**ページ情報**」を使用します（その後、「**プロパティを開く**」をクリック）
 
 ### サイトコンソールから - 単一のページ {#from-the-sites-console-single-page}
 
@@ -298,7 +301,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
 ### サイトコンソールから - 複数のページ {#from-the-sites-console-multiple-pages}
 
-**サイト**&#x200B;コンソールから、複数のページを選択し、「**プロパティを表示**」を使用してページのプロパティを表示および編集することができます。この操作は、ページのプロパティの一括編集と呼ばれます。
+**Sites** コンソールから、複数のページを選択し、「**プロパティを表示**」を使用してページのプロパティを表示および編集することができます。これは、ページプロパティの一括編集と呼ばれます。
 
 >[!NOTE]
 >
@@ -313,7 +316,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
 ![epp-01](assets/epp-01.png)
 
-After selecting the pages and then clicking or tapping the **Properties option**, the bulk properties will be shown:
+ページを選択して「**プロパティ**」オプションをクリックまたはタップすると、一括プロパティが表示されます。
 
 ![epp-02](assets/epp-02.png)
 
