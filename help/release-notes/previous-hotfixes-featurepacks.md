@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7ae0055e09c3ae2ff2898ac4f6c537a825dc0cf0
+source-git-commit: 7345d629aa628c2e2e094a8194d9306d7c3d2d60
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.10.6 に更新しました。
 
-* Experience Manager Assetsで、Deflate 64アルゴリズムを使用して作成されたZIPアーカイブがサポートされるようになりました。
+* Adobe Experience Manager Assetsで、Deflate64アルゴリズムを使用して作成されたZIPアーカイブがサポートされるようになりました。
 
 * 作成日の新しい列（並べ替え可能）が、DAMリストビューおよびリストビューのアセット検索結果に追加されました。
 
