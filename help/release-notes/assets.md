@@ -1,58 +1,53 @@
 ---
-title: AEM Assets リリースノート
+title: Adobe Experience Manager Assetsリリースノート
 description: Adobe Experience Manager 6.5 Assets の新機能と強化機能について説明します。
-uuid: f785029d-e0fd-494f-b215-7b4caca4e806
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: 1ab34a42-2f0e-4b05-a7b6-2fc8dca07ef5
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 95d9ed8a0ccfa7651b83058d337511dd6b15665f
+source-git-commit: 23f838b681d4d9eda55e287519f330addf7928aa
 
 ---
 
 
-# AEM Assets リリースノート{#aem-assets-release-notes}
+# Adobe Experience Manager Assetsリリースノート {#aem-assets-release-notes}
 
-AEM 6.5 Assets リリースの主要な機能を以下に示します。
+Adobe Experience Manager 6.5 Assetsリリースの主な機能と主な特徴を以下に示します。
 
-## Adobe Creative Cloud およびクリエイティブワークフローとの連携 {#integration-with-adobe-creative-cloud-and-creative-workflows}
+## Integration with [!DNL Adobe Creative Cloud] and creative workflows {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
-AEM では、様々な方法で Adobe Creative Cloud と連携し、クリエイティブチームとマーケティングチームが密接に共同作業するワークフローでアセットを共有できます。AEM 6.5 では連携を引き続き改善し効率化して、より多くのチャンスを明らかにし、既存の手段の無駄も省きます。
+[!DNL Adobe Experience Manager] では、様々な方法で と連携し、クリエイティブチームとマーケティングチームが密接に共同作業するワークフローでアセットを共有できます。[!DNL Adobe Creative Cloud][!DNL Experience Manager] 6.5 では連携を引き続き改善し効率化して、より多くのチャンスを明らかにし、既存の手段の無駄も省きます。
 
-コンテンツ速度の使用事例の最適サポートに活用できる、AEM 6.5 の特定の機能と連携について説明します。
+Read on to know the specific capabilities and integrations of [!DNL Experience Manager] 6.5 that you can leverage to best support your content velocity use cases.
 
 ### Adobe Asset Link {#aal}
 
-Adobe Asset Link を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケティング担当者のコラボレーションを強化できます。クリエイティブ担当者は、最も使い慣れたアプリから直接、Adobe Experience Manager Assets（AEM Assets）に保存されているコンテンツにアクセスできます。また、Photoshop、Illustrator、InDesign などのアプリ内のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることができます。
+[!DNL Adobe Asset Link] コンテンツ作成プロセスにおけるクリエイティブとマーケティング担当者のコラボレーションを強化します。 クリエイティブは、に保存されているコン [!DNL Experience Manager Assets]テンツに、最もなじみのあるアプリを残さずにアクセスできます。 Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign] apps.
 
-Adobe Asset Link は ](https://www.adobe.com/creativecloud/business/enterprise.html)Creative Cloud エンタープライズ版[に含まれています。AEM デプロイメントの必要な設定など、詳細については、](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)Adobe Asset Link[ を参照してください。
+[!DNL Adobe Asset Link] は、 [Creative Cloudエンタープライズ版の一部です](https://www.adobe.com/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
-![Photoshop でのアセット検索](assets/asset_search_photoshop.png)
+![Adobe Photoshopでのアセットの検索](assets/asset_search_photoshop.png)
 
-### Adobe Stock との連携 {#stock}
+### [!DNL Adobe Stock] 統合 {#stock}
 
-組織は、AEM Assets内でAdobe Stockエンタープライズプランを使用して、ライセンスを取得したアセットがクリエイティブプロジェクトやマーケティングプロジェクトで広く利用できるようにします。 AEMの強力なDAM機能を使用して、AEMに保存されたAdobe stockアセットをすばやく検索、プレビューおよびライセンス認証できます。
+Your organization can use its [!DNL Adobe Stock] enterprise plan within [!DNL Experience Manager Assets] to ensure that licensed assets are broadly available for your creative and marketing projects. You can quickly find, preview, and license [!DNL Adobe Stock] assets that are saved in Experience Manager, using the powerful DAM capabilities of [!DNL Experience Manager].
 
-Adobe Stock サービスは、あらゆるクリエイティブプロジェクトに使用できる、何百万点もの質の高い選ばれた著作権使用料不要の写真、ベクター、イラスト、ビデオ、テンプレートおよび 3D アセットを提供します。
+[!DNL Adobe Stock] サービスは、あらゆるクリエイティブプロジェクトに使用できる、何百万点もの質の高い選ばれた著作権使用料不要の写真、ベクター、イラスト、ビデオ、テンプレートおよび 3D アセットを提供します。
 
-詳しくは、[AEM Assets での Adobe Stock アセットの使用](/help/assets/aem-assets-adobe-stock.md)を参照してください。
+For more info, see [Use DNL Adobe Stock assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
-![AEM Assets 内での Adobe Stock 画像およびライセンスのプレビュー](assets/stock_image_preview_license_options.png)
+![Experience Manager Assets内からAdobe Stock画像とライセンスをプレビューする](assets/stock_image_preview_license_options.png)
 
-AEM Assets 内での Adobe Stock 画像およびライセンスのプレビュー
+*図：内から画[!DNL Adobe Stock]像をプレビューし、ライセンスを取得しま[!DNL Experience Manager Assets]す。*
 
-![AEM でのライセンス取得済み Adobe Stock 画像の検索とフィルタリング](assets/aem-search-filters2.jpg)
+![Experience Managerでのライセンス済みのAdobe Stock画像の検索とフィルター](assets/aem-search-filters2.jpg)
 
-AEM でのライセンス取得済み Adobe Stock 画像の検索とフィルタリング
+*図：でライセンス画像を検索し、フィ[!DNL Adobe Stock]ルターしま[!DNL Experience Manager]す。*
 
-### Dynamic references in Adobe InDesign {#dynamic-references-in-indesign}
+### Dynamic references in [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
-Adobe InDesign ファイルで使用される AEM Assets は動的です。参照先アセットが JCR 階層内で移動すると、参照が自動的に更新されます。詳しくは、[複合アセットの管理](/help/assets/managing-linked-subassets.md)を参照してください。
+[!DNL Experience Manager Assets] ファイルで使用さ [!DNL Adobe InDesign] れる動的な動作。 参照先のアセットがリポジトリ内で移動すると、参照が自動的に更新されます。 詳しくは、複合アセットの管 [理方法を参照してください](/help/assets/managing-linked-subassets.md)。
 
 ## Brand Portal の機能 {#brand-portal-capabilities}
 
-AEM Assets Brand Portal では、承認済みアセットを容易に取得、効果的に制御し、それらのアセットを様々なデバイスをまたいで外部のベンダー／代理店、および内部のビジネスユーザーへと安全に配布できます。アセットの共有を効率化し、アセットの市場投入時間を短縮し、コンプライアンスに違反した使用や不正アクセスのリスクをなくすことができます。
+[!DNL Experience Manager Assets Brand Portal] では、承認済みアセットを容易に取得、効果的に制御し、それらのアセットを様々なデバイスをまたいで外部のベンダー／代理店、および内部のビジネスユーザーへと安全に配布できます。アセットの共有を効率化し、アセットの市場投入時間を短縮し、コンプライアンスに違反した使用や不正アクセスのリスクをなくすことができます。
 
 詳細については、](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)AEM Assets Brand Portal の新機能[を参照してください。
 
@@ -60,23 +55,21 @@ AEM Assets Brand Portal では、承認済みアセットを容易に取得、�
 
 大規模企業では、Web サイトの作成に必要なインフラストラクチャを分散させることができます。しかし、Web サイトの作成機能と必要なデジタルアセットが、分断させた状態で別々の場所に存在する場合があります。
 
-AEM Sites は Web ページの作成機能を備え、AEM Assets は Web サイトに必要なアセットを提供するデジタルアセット管理（DAM）システムです。AEM では、AEM Sites と AEM Assets の統合により、上記の使用事例をサポートできるようになりました。
+[!DNL Experience Manager Sites] は Web ページの作成機能を備え、 は Web サイトに必要なアセットを提供するデジタルアセット管理（DAM）システムです。[!DNL Experience Manager Assets][!DNL Experience Manager] とを統合することで、上記の使用例をサポートするように [!DNL Sites] なりまし [!DNL Assets]た。 接続され [たアセット機能の設定方法と使用方法を参照してください](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-詳しくは、[Connected Assets からのアセットの使用](/help/assets/use-assets-across-connected-assets-instances.md)を参照してください。
+![別の展開のページに、展 [!DNL Experience Manager] 開からアセ [!DNL Sites] ットをドラッグ [!DNL Experience Manager] する](assets/connected-assets-drag-and-drop-only.gif)
 
-![ある AEM インスタンスの DAM アセットを別の AEM インスタンスの Sites ページにドラッグ＆ドロップします](assets/connected-assets-drag-and-drop-only.gif)
-
-異なる AEM インスタンス間での Sites 内の DAM アセットのドラッグ＆ドロップ
+*図：別の展開上のページに、展[!DNL Experience Manager]開からアセッ[!DNL Sites]トをドラッグして配置[!DNL Experience Manager]します。*
 
 ## Dynamic Media {#dynamic-media}
 
-Dynamic Media により、リッチメディアのオーサリングと AEM Assets での配信が強化され、臨場感あふれるパーソナライズされた最先端のエクスペリエンスが促進されます。1 つの高品質なマスターアセットをアップロードし、高度なクラウドレンダリングおよびビューアを使用することで、所属組織のメディア戦略をサポートするレンディションの任意の組み合わせをその場で提供できます。
+[!DNL Dynamic Media] リッチメディアのオーサリングと配信が強化され、没入型でパーソナ [!DNL Experience Manager Assets] ライズされた最新のエクスペリエンスを実現します。 高品質のマスターアセットを1つアップロードし、アドビの高度なクラウドレンダリングとビューアを使用することで、任意のレンディションを組み合わせて、組織のメディア戦略をサポートできます。
 
-新しい Dynamic Media 機能の詳細については、](https://marketing.adobe.com/resources/help/en_US/s7/release_notes/)Dynamic Media のリリースノート[を参照してください。
+For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://marketing.adobe.com/resources/help/en_US/s7/release_notes/).
 
 ### 360 ビデオのサポート {#video-support}
 
-Dynamic Media の最先端ビューアを使用してデスクトップ、モバイルおよび VR ヘットセットに VR エクスペリエンスを提供することで、360 ビデオファイルを AEM で直接管理できます。詳しくは、[360 ビデオ の使用](/help/assets/360-video.md)を参照してください。
+Manage your 360-video files directly in [!DNL Experience Manager] using the cutting edge viewers to deliver VR-experiences to desktops, mobile and VR-headsets. 詳しくは、[360 ビデオ の使用](/help/assets/360-video.md)を参照してください。
 
 ### カスタムビデオのサムネール {#custom-video-thumbnails}
 
@@ -84,30 +77,30 @@ DAM に保存されているビデオそのものまたは他のコンテンツ�
 
 ### アクセシビリティの強化 {#accessibility-enhancements}
 
-Dynamic Media ビューアでは、Aria フォントのサポート、スクリーンリーダー、代替テキストなどの拡張アクセシビリティ機能をサポートするようになりました。詳細については、[Dynamic Media ビューアのリリースノート](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/index.html)を参照してください。
+[!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどのアクセシビリティ機能が強化されました。 詳細については、[Dynamic Media ビューアのリリースノート](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/index.html)を参照してください。
 
 ## 検索エクスペリエンスの強化 {#search-experience-enhancement}
 
-AEM 6.5以降では、マーケターは検索結果ページから目的のアセットをより迅速に見つけることができます。 検索フィルターのアセット数は、検索フィルターを適用する前でも更新されます。フィルターに対するアセット数を確認すると、検索結果を効率的にナビゲートすることができます。詳しくは、[AEM でのアセットの検索](../assets/search-assets.md)を参照してください。
+[!DNL Experience Manager] 6.5以降では、マーケターは検索結果ページから目的のアセットをより迅速に見つけることができます。 検索フィルターのアセット数は、検索フィルターを適用する前でも更新されます。フィルターに対するアセット数を確認すると、検索結果を効率的にナビゲートすることができます。For more information, see [Search assets in Experience Manager](../assets/search-assets.md).
 
 ![検索ファセットで検索結果をフィルタリングしない場合のアセット数の表示](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
-検索ファセットで検索結果をフィルタリングしない場合のアセット数の表示
+*図：検索結果を検索ファセットでフィルタリングせずに、アセットの数を確認する。*
 
 ## 使いやすさの向上 {#usability-enhancement}
 
-フォルダー内または検索結果からすべてのアセットを一括選択できるようになりました。複数のアセットをすばやく管理するのに役立ちます。チェックボックスをオンにすると、AEM インターフェイスに表示されるアセットだけでなく、シナリオに合致するすべてのアセット（検索結果）が選択されます。
+フォルダ内または検索結果から、読み込まれたすべてのアセットを1回で選択できるようになりました。 複数のアセットをすばやく管理するのに役立ちます。The check box selects all the assets that fits the scenario, say a search result and not just the assets that are visible in the [!DNL Experience Manager] interface.
 
-![「すべてを選択」オプションを使用してすべてのアセットをワンクリックで選択](assets/select-all-in-aem-assets.gif)
+![「すべて選択」オプションを使用すると、読み込まれたすべてのアセットを1回のクリックで選択できます。](assets/select-all-in-aem-assets.gif)
 
-「すべてを選択」オプションを使用してすべてのアセットをワンクリックで選択
+*図：「すべて選択」オプションを使用すると、読み込まれたすべてのアセットを1回のクリックで選択できます。*
 
 ## メタデータの機能強化 {#metadata-enhancements}
 
-Assets では、フォルダープロパティページに表示されるレイアウトおよびメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。既存のフォルダーまたは新規作成するフォルダーにフォルダーメタデータスキーマを割り当てることができるようになりました。詳しくは、](/help/assets/folder-metadata-schema.md)フォルダーメタデータスキーマ[を参照してください。
+[!DNL Assets] では、フォルダープロパティページに表示されるレイアウトおよびメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。既存のフォルダーまたは新規作成するフォルダーにフォルダーメタデータスキーマを割り当てることができるようになりました。詳しくは、](/help/assets/folder-metadata-schema.md)フォルダーメタデータスキーマ[を参照してください。
 
 カスケードメタデータを指定すると、選択肢をフォームに手動で入力するのではなく、実行時に JSON ファイルから読み込むことができます。詳しくは、[カスケードメタデータ](/help/assets/cascading-metadata.md)を参照してください。
 
 ## レポート機能の強化 {#reporting-enhancements}
 
-「ダウンロードされたアセット」レポートに、コンテンツフラグメントとリンク共有が含まれるようになりました。詳しくは、[AEM Assets レポート](/help/assets/asset-reports.md)を参照してください。
+ダウンロードしたレポートに、コンテンツフラグメントとリンク共有が含まれるようになりました。 詳しくは、[AEM Assets レポート](/help/assets/asset-reports.md)を参照してください。
