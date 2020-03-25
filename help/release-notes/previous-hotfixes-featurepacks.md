@@ -7,34 +7,34 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7345d629aa628c2e2e094a8194d9306d7c3d2d60
+source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 
 ---
 
 
 # 以前のサービスパックに含まれていたホットフィックスと機能パック {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## AEM 6.5.3.0
+## Adobe Experience Manager 6.5.3.0
 
-Adobe Experience Manager 6.5.3.0 is an important release that includes performance, stability, security, and key customer fixes and enhancements released since the general availability of 6.5 release in **April 2019**. Adobe Experience Manager (AEM) 6.5の上にインストールできます。
+[!DNL Adobe Experience Manager] 6.5.3.0は、パフォーマンス、安定性、セキュリティ、お客様向けの主要な修正、および2019年4月のGAリリース(GA)以降にリリースされた機能強化を含む重要なリリ **ースです**。 6.5の上にインストールで [!DNL Adobe Experience Manager] きます。
 
 このサービスパックリリースの主なハイライトは次のとおりです。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.10.6 に更新しました。
 
-* Adobe Experience Manager Assetsで、Deflate64アルゴリズムを使用して作成されたZIPアーカイブがサポートされるようになりました。
+* [!DNL Experience Manager Assets] deflate64アルゴリズムを使用して作成されたZIPアーカイブをサポートするようになりました。
 
 * 作成日の新しい列（並べ替え可能）が、DAMリストビューおよびリストビューのアセット検索結果に追加されました。
 
 * 「名前」列に基づくアセットの並べ替えがリストビューで有効になりました。
 
-* ダイナミックメディアで、スマート切り抜きビデオアセットがサポートされるようになりました。 スマート切り抜きは、機械学習を中心とした機能で、フレームを移動しながらビデオを再切り抜きし、シーンの焦点に合わせて移動します。
+* [!DNL Dynamic Media] スマート切り抜きビデオアセットがサポートされるようになりました。 スマート切り抜きは、機械学習を中心とした機能で、フレームを移動しながらビデオを再切り抜きし、シーンの焦点に合わせて移動します。
 
-* ダイナミックメディアはスマートイメージングをサポートします。
+* [!DNL Dynamic Media] は、スマートイメージングをサポートしています。
 
-* AEMワークフ [ローでの不在環境設定](../forms/using/configure-out-of-office-settings.md) の設定が可能。
+* ワークフロ [ーでの不在環境設定](../forms/using/configure-out-of-office-settings.md) の設定が可能 [!DNL Experience Manager] です。
 
-* AEMワークフロ [ーで、「受信トレイ」または](../forms/using/configure-shared-queues-osgi.md) 「受信トレイ」項目を他のユーザーと共有できます。
+* ワークフロー [内の他のユーザーと受信トレイ](../forms/using/configure-shared-queues-osgi.md) 、または受信トレイの項目を共有で [!DNL Experience Manager] きます。
 
 * バッチ・モ [ードでのインタラクティブ通信の生成](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
@@ -44,7 +44,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 **製品の機能強化**
 
-* Experience Manager Assetsで、Deflate 64アルゴリズム(NPR-27573)を使用して作成されたZIPアーカイブがサポートされるようになりました。
+* [!DNL Experience Manager Assets] deflate64アルゴリズム(NPR-27573)を使用して作成されたZIPアーカイブをサポートするようになりました。
 
 * 作成日の新しい列（並べ替え可能）が、DAMのリスト表示とリスト表示のアセット検索結果に追加されました(NPR-31312)。
 
@@ -52,11 +52,11 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * GLB、GLTF、OBJおよびSTLアセットファイルは、DAMの「アセットの詳細」ページでのアセットのプレビューをサポートします(CQ-4282277)。
 
-* ダイナミックメディアでのチャンクのアップロード中に、チャンクノードに対してReplicationOnModifyListenerイベントがトリガーされます。(CQ-4281279)
+* ReplicationOnModifyListenerイベントは、(CQ-4281279)でのチャンクのアップロード中に、チャンクノ [!DNL Dynamic Media] ードに対してトリガーされます。
 
-* ダイナミックメディアで、スマート切り抜きビデオアセットがサポートされるようになりました。 スマート切り抜きは、機械学習を中心とした機能で、フレームを移動しながらビデオを再切り抜きし、シーンの焦点に合わせて調整します(CQ-4278995)。
+* [!DNL Dynamic Media] スマート切り抜きビデオアセットがサポートされるようになりました。 スマート切り抜きは、機械学習を中心とした機能で、フレームを移動しながらビデオを再切り抜きし、シーンの焦点に合わせて調整します(CQ-4278995)。
 
-* ダイナミックメディアは、スマートイメージング(CQ-4222249)をサポートしています。
+* [!DNL Dynamic Media] は、スマートイメージング(CQ-4222249)をサポートしています。
 
 * クエリパラメーターが要求で渡された場合、検索/参照ビューがFoundationピッカーのデフォルトのビューとして設定されました(NPR-31601)。
 
@@ -92,27 +92,27 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * アセットの一括移動が失敗し、警告メッセージが表示されている(NPR-30610)。
 
-* Dynamic Media Scene 7ランモード(NPR-31630)で実行されているAEMで、アセットを別のフォルダーに移動すると、アセット名が小文字に変更されます。
+* Scene 7実行モード(NPR-31630)で実行中にアセットを別のフォルダに移動すると、ア [!DNL Experience Manager] セット名が [!DNL Dynamic Media] 小文字に変更されます。
 
 * Scene 7の会社名(NPR-31340)と同じ名前のフォルダに存在する画像に関して、リモート画像セットの編集中にエラーが発生する。
 
-* 参照を含むダイナミックメディアアセットが公開されない(NPR-31180)。
+* [!DNL Dynamic Media] 参照を含むアセットが公開されない(NPR-31180)。
 
-* AEMダイナミックメディア — Scene 7ランモードからScene 7へのアップロードが、完了するのに時間がかかりすぎています(NPR-31048)。
+* - Scene 7ラン [!DNL Experience Manager Dynamic Media] モードからScene 7へのアップロードが完了するまでに時間がかかりすぎています(NPR-31048)。
 
 * 画像アセットに追加されたホットスポットは、アセットの詳細ページのインタラクティブ画像ビューアでは表示されません(NPR-30979)。
 
-* AEM Assetsで行われたアクションがScene 7(NPR-30947)に渡されると、大量のスリングジョブが作成され、「処理」バナーが再び表示されます。
+* 大量のスリングジョブが作成され、でアセットに対して行われたアクションがScene 7に渡されると、「処理」 [!DNL Experience manager Assets] バナーが再び表示されます(NPR-30947)。
 
 * アセットとアセットの言語コピーを作成する際に競合が発生し、Scene 7(NPR-30932)にアップロードされません。
 
-* ダイナミックメディアハイブリッドモードで実行されているAEMからダウンロードされたダイナミックレンディションが壊れる（画像コンテンツタイプではなく、コンテンツが「画像が見つかりません」のテキストタイプ）(NPR-30876)。
+* ハイブリッドモードで実行 [!DNL Experience Manager][!DNL Dynamic Media] した状態でダウンロードされた動的レンディションが壊れる（画像コンテンツタイプではなく、コンテンツが「画像が見つかりません」のテキストタイプ）(NPR-30876)。
 
-* Dynamic Media Encode Videoワークフローで、Scene 7からDynamic Media - Scene 7実行モードに移行したビデオのサムネールの生成に失敗する。(CQ-4282011)
+* [!DNL Dynamic Media] ビデオのエンコードワークフローで、Scene 7から [!DNL Dynamic Media] - Scene 7実行モードに移行したビデオのサムネールの生成に失敗する(CQ-4282011)。
 
 * 異なるScene7会社IDを使用して、あるインスタンスから別のインスタンスにアセットを移行中にIpsApiExceptionが発生する問題を修正しました。(CQ-4280548)
 
-* 3Dアセットのサムネールは、サポートされている3DモデルがAEMに取り込まれた場合には情報とはなりません(CQ-4283701)。
+* 3Dアセットのサムネールは、サポートされている3Dモデルが(CQ-4283701)に取り込まれ [!DNL Experience Manager] る場合には情報になりません。
 
 * 3Dアセットのカメラビューが少ない場合は、スクロールボタンがビューアに表示されます(CQ-4283322)。
 
@@ -120,7 +120,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * Internet Explorer 11およびSafariのSmartCropVideoViewerではビデオを再生できません(CQ-4281422)。
 
-* 複数のアセットを1つのフォルダから別のフォルダに移動するための移動ボタンの使用は、ダイナミックメディア — scene7 runmodeで実行されているAEMで失敗します(CQ-4280384)。
+* 複数のアセットを1つのフォルダから別のフォルダに移動するための移動ボタンの使用は、 [!DNL Experience Manager][!DNL Dynamic Media] -scene7ランモードでの実行に失敗します(CQ-4280384)。
 
 * MIMEタイプがMP4以外の場合、アセットの詳細にビデオが歪んで表示される(CQ-4279704)。
 
@@ -150,7 +150,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * すべてを選択した後で、タッチ操作対応UI(NPR-31118)で一部の項目（フォルダー/個々のアセット）の選択を解除しても、アクションバーとアセット数が更新されない。
 
-* アセットのジョブの詳細をポーリング中に、AEMに例外が表示されます(CQ-4283569)。
+* アセットのジョブの詳 [!DNL Experience Manager] 細をポーリング中に、に例外が表示されます(CQ-4283569)。
 
 ### Sites {#sites}
 
@@ -169,7 +169,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * 検索結果ページでカード表示からリスト表示に切り替えると、ページがスクロールされるまでに遅延が生じます(NPR-31286)。
 
-* 「すべて選択」チェックボックスは、サイトUIのリスト表示(NPR-31614)で非表示になっています。
+* 「すべてを選択」チェックボックスは、 [!DNL Sites] UIのリスト表示(NPR-31614)で非表示になっています。
 
 * 検索結果ページの「すべて選択」の数が正しくありません(NPR-31120)。
 
@@ -189,13 +189,13 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 * QueryBuilderで、xpathクエリでorderbyがサ ``fn:name()`` ポートされるようになりました(NPR-31322)。
 
-* AEM 6.3(NPR-31513)からのアップグレード時に、アクティベーションツリーが複製されます。
+* 6.3(NPR-31513)からのアップグレード時に、アクテ [!DNL Experience Manager] ィベーションツリーが複製されます。
 
 * 転送された要求は、Sling認証(NPR-30013)中に設定された応答ヘッダーを保持しません。
 
 * ピッカーコンポーネント内の検索が機能しない(NPR-31692)。
 
-* Apache POIとApache Tikaバンドル(NPR-31018)の異なるバージョンが原因で、ZIPファイルをAEM Communitiesの投稿に添付すると、エラーが表示されます。
+* Apache POIとApache Tikaバンドル(NPR-31018)の異なるバージョンが原 [!DNL Experience Manager Communities] 因で、ZIPファイルを投稿に添付すると、エラーが表示されます。
 
 * バンド ``org.apache.sling.distribution.api`` ルは設定マネージャーで非表示になっているので、カスタムバンドル(NPR-31720)では使用できません。
 
@@ -207,15 +207,15 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 **製品の機能強化**
 
-* AEM Assetsのアセットソーシングの読み込みワークフローが変更され、新しく作成したアセットのみがBrand PortalからAEMに取得され、複製を避けるために、新しいフォルダーに既に存在するアセットをスキップするようになりました。(CQ-4278527)
+* のアセットソーシング読み込みワ [!DNL Experience Manager Assets][!DNL Brand Portal][!DNL Experience Manager]ークフローが、からに新しく作成されたアセットのみを取り込むように変更され、複製を避けるために、NEWフォルダーに既に存在するアセットをスキップします(CQ-4278527)。
 
 **安定性および**
 
 * アセットソーシング機能で新しい貢献度フォルダーを作成すると、誤ったアイコンが表示される(CQ-4282825)。
 * 新しい貢献度フォルダーを作成すると、1つまたは両方のサブフォルダー（NEWおよびSHARED）が貢献度フォルダー(CQ-4282424)内に表示されません。
-* Brand Portalの最後からContributionフォルダーの新しいアセットを受け取った後に、ユーザーがAEMからBrand Portalに貢献度フォルダーを再公開しようとすると、システムで例外がスローされます。(CQ-4279740)
+* 貢献度フォルダー内の新しいアセットを最後から受け取った後に、貢献度フ [!DNL Experience Manager] ォルダーをからに再 [!DNL Brand Portal] 公開しようとすると、システムで例外がス [!DNL Brand Portal] ローされます(CQ-4279740)。
 * 貢献度フォルダー（ネストされたフォルダー）内に貢献度フォルダーを作成することは、複雑さを避けるために禁止されています(CQ-4278391)。
-* AEM管理コンソールから読み込んだBrand Portalユーザーリスト（.csvファイル）のアップロード時に例外が発生する。 .csvファイル内の「電子メール」、「FirstName」、「LastName」フィールドのみが必須です(CQ-4278390)。
+* 管理コンソールから読み込んだユーザーリ [!DNL Brand Portal] スト（.csvファイル）のアップロード時に例外がス [!DNL Experience Manager] ローされます。 .csvファイル内の「電子メール」、「FirstName」、「LastName」フィールドのみが必須です(CQ-4278390)。
 
 ### Communities {#communities}
 
@@ -224,11 +224,11 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 * グループを管理するクイックリンク（「開く」、「編集」、「公開」、「削除」の各グループ）は、コミュニティ管理者（グループ管理者/サイト管理者）(NPR-31627)には表示されません。
 * 送信されたブログは、ページを手動で更新または再読み込みしない限り表示されません(NPR-31599)。
 * 「メンション」機能で使用されるJCRクエリでは、大文字と小文字が区別され、結果を返すのに時間がかかりすぎます(NPR-31475)。
-* AEM 6.5 UberJarファイルで例外がスローされ、AEM 6.5 UberJar `cq-social-translation` ファイル(NPR-31186)にバンドルが見つかりません。
+* [!DNL Experience Manager] 6.5 UberJarファイルで例外がスローされ、バ `cq-social-translation` ンドルが6.5 UberJarフ [!DNL Experience Manager] ァイルに存在しない(NPR-31186)。
 * 新しい脆弱性(NPR-30967)に対処するために、Jackson Databindライブラリがバージョン2.9.9.3に更新されました。
 * アクティビティと通知タイトルに一貫性がない。（NPR-30941）
-* Communities ブログでページネーションが正しく機能していない。（NPR-30914）
-* 分析レポートが AEM のオーサー環境に入力されず、空白ページが表示される（NPR-30913）。
+* Pagination is not working properly in [!DNL Communities] Blogs (NPR-30914).
+* Analytics reports are not populated in [!DNL Experience Manager] author environment, blank page appears (NPR-30913).
 
 ### Oak {#oak}
 
@@ -238,7 +238,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 >[!NOTE]
 >
->AEM サービスパックには、AEM Forms の修正は含まれません。別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
+>[!DNL Experience Manager] Service Packにはの修正が含まれていませ [!DNL Experience Manager Forms]ん。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「Experience Manager Formsのインスト [ール」アドオンおよび「JEE上の](#install-aem-forms-add-on-package) Experience Manager Formsのイ [ンストール」を参照してください](#install-aem-forms-jee-installer)。
 
 #### Forms アドオンパッケージ {#forms-add-on-package-6530}
 
@@ -254,7 +254,7 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 **Correspondence Management**
 
-* LiveCycle ES4SP1からAEM 6.5(NPR-31615)にレターを移行する際に、キャプションとツールチップが表示されない。
+* LiveCycle ES4SP1から6.5(NPR-31615)にレターを移行する際に、キャプションとツールチッ [!DNL Experience Manager] プが表示されない。
 
 * **レターをドラフトとして保存する際に** 、テキストフローの書式設定がサポートされなくなりました。(NPR-30463)
 
@@ -280,27 +280,27 @@ Adobe Experience Manager 6.5.3.0 is an important release that includes performan
 
 >[!NOTE]
 >
->AEM Forms ユーザーは、AEM サービスパック、累積修正パック、機能パックのいずれかをインストールした後で、AEM Forms アドオンパッケージをインストールすることが不可欠です。
+>For [!DNL Experience Manager Forms] customers, it is essential to install [!DNL Experience Manager Forms] add-on package after installing any [!DNL Experience Manager] Service Pack, Cumulative Fix Pack, or Feature Pack.
 
 #### Forms - Foundation JEE {#forms-foundation-jee-feature}
 
-* AEM FormsはOracle 18c(NPR-29155)をサポートします。
+* [!DNL Experience Manager] Oracle 18c(NPR-29155)のフォームサポート。
 
-## AEM 6.5.2.0
+## Adobe Experience Manager 6.5.2.0
 
-AEM 6.5.2.0 is an important release that includes performance, stability, security, and key customer fixes and enhancements released since the general availability of AEM 6.5 in **April 2019**. It can be installed on top of AEM 6.5.
+[!DNL Adobe Experience Manager] 6.5.2.0は、パフォーマンス、安定性、セキュリティ、お客様向けの主要な修正、および2019年4月のGA(General Availability)以降にリリースされた機能強化を含む重要なリリ [!DNL Adobe Experience Manager] ースで ****&#x200B;す。 6.5の上にインストールで [!DNL Experience Manager] きます。
 
 このサービスパックリリースの主なハイライトは次のとおりです。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）がバージョン 1.10.3 に更新されました。
-* エクスペリエンスフラグメントを Adobe Target のユーザー定義ワークスペースに直接書き出せるようにする設定プロパティが追加されました。
-* Assets ユーザーは、視覚的に類似した画像を検索できます。AEM は、ユーザーが選択した画像に類似した、DAM リポジトリのスマートタグ付き画像を表示します。[ビジュアル検索](../assets/search-assets.md#visualsearch)を参照してください。
+* Added a configuration property to allow exporting Experience Fragments directly to user-defined workspaces for [!DNL Adobe Target].
+* Assets ユーザーは、視覚的に類似した画像を検索できます。[!DNL Experience Manager] は、ユーザーが選択した画像に類似した、DAM リポジトリのスマートタグ付き画像を表示します。[ビジュアル検索](../assets/search-assets.md#visualsearch)を参照してください。
 
 * Connected Assets 機能が強化されて、リモート DAM デプロイメントからドキュメントを取得できるようになりました。サイト作成者は、サポートされているドキュメントタイプをコンテンツファインダーで検索およびフィルタリングできるようになりました。リモートドキュメントは、Web ページのダウンロードコンポーネントに追加できます。[Connected Assets の使用](../assets/use-assets-across-connected-assets-instances.md)を参照してください。
 
 * 複数値のオプションをサポートするために、より多くのMIMEタイプでEnhanceDocument型フィルタを使用します。
 * 外部の再処理ワークフローが導入されて、複数のリソースがサポートされるようになりました。
-* レプリケーションにデフォルトのアセットフィルターを使用して、Dynamic Media のパフォーマンスを最適化しました。
+* レプリケーシ [!DNL Dynamic Media] ョンにデフォルトのアセットフィルターを使用して、パフォーマンスを最適化。
 * DMS7（Dynamic Media Scene7）の切り抜きおよび回転のアセット編集オプションが復活しました。
 * VideoPlayer で読み込み時にビデオをミュートするオプションが実装されました。
 * アセット UI の列表示にテナント固有のコンテンツのみ表示されるように修正しました。
@@ -312,12 +312,12 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 
 * Connected Assets 機能が強化されて、リモート DAM デプロイメントからドキュメントを取得できるようになりました。サイト作成者は、サポートされているドキュメントタイプをコンテンツファインダーで検索およびフィルタリングできるようになりました。リモートドキュメントは、Web ページのダウンロードコンポーネントに追加できます。CQ-4270245 のホットフィックス. [Connected Assets の使用](/help/assets/use-assets-across-connected-assets-instances.md)を参照してください。
 
-* Assets ユーザーは、視覚的に類似した画像を検索できます。AEM は、ユーザーが選択した画像に類似した、DAM リポジトリのスマートタグ付き画像を表示します。[ビジュアル検索](../assets/search-assets.md#visualsearch)を参照してください。
+* [!DNL Experience Manager Assets] ユーザーは、視覚的に類似した画像を検索できます。[!DNL Experience Manager] は、ユーザーが選択した画像に類似した、DAM リポジトリのスマートタグ付き画像を表示します。[ビジュアル検索](../assets/search-assets.md#visualsearch)を参照してください。
 
 **安定性および**
 
 * ACP API で生成された URL およびフォルダーメタデータのアセットパスが URL エンコードされません。GRANITE-26198：CQ-4271814 のホットフィックス
-* 名前にパーセント記号（％）が付いたフォルダーを含むアーカイブを解凍すると、Assets インターフェイスで開けない。NPR-29989：CQ-4270467 のホットフィックス
+* Unzipping an archive with a folder having a percent sign (%) in its name can not be opened using [!DNL Experience Manager Assets] interface. NPR-29989：CQ-4270467 のホットフィックス
 * タッチ操作対応UI:パブリケーションの管理ウィザードでは、参照がポストリクエスト本文のページの後に追加され、ページの後にすべてのアセットが発行され、ページがレンダリングされると、発行インスタンスの一部のアセットが失われます。 NPR-29985：CQ-4270724 のホットフィックス
 * 名前に特殊文字（URI エンコードされる文字）を含む関連アセットに対して、アセットの関連付け解除機能が機能しません。NPR-30387：CQ-4274446 のホットフィックス
 * コンテンツフラグメントを編集すると、間違ったユーザーでバージョンが作成されます。
@@ -335,11 +335,11 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 * 名前にスペースや「&amp;」文字が含まれるフォルダーのアセット共有リンクで、一部のアセットに対して空白の灰色カードが表示されます。NPR-30557：CQ-4270187 のホットフィックス
 * フォルダーメタデータスキーマフォームでデータ型が自動的に検出されないので、フォーム送信で関連するタイプヒントが作成されません。NPR-30599：CQ-4275227 のホットフィックス
 * DMS7 のオーサリング UI で切り抜きと回転のアセット編集オプションが無効になっています。NPR-30118：CQ-4273221 のホットフィックス
-* DMS7 設定の AEM インスタンスで共有リンク機能が機能しません。NPR-30080、NPR-30492：CQ-4273651 のホットフィックス
-* Dynamic Media Scene7 コンポーネントをページに追加してからページを公開しても、dmscene7 設定がトリガーされない場合があります。NPR-30641：CQ-4275962 のホットフィックス
-* AEM に IPSJobJournal が追加されて、処理プロファイルごとに侵入防止システム（IPS）ジョブが 1 つだけ作成されるようになりました。NPR-30490：CQ-4273614 のホットフィックス
-* ダイナミックメディア：AEM発行ノードにアセットが複製されないようにするデフォルトのフィルターを追加しました。 NPR-30538：CQ-4274678 のホットフィックス
-* 外部の再処理ワークフローが導入されて、複数のリソースがサポートされ、フォルダーをペイロードとして使用できるようになりました。ワークフローには 2 つのステップがあります。次のステップへのメタデータマップを通じてハンドルなしでアセットを再処理するステップと、単一の IPS ジョブですべてのアセットをアセットハンドルなしで S7 に再アップロードするステップです。詳しくは、Dynamic Media クラウドサービスの設定を参照してください。NPR-30489：CQ-4272903 のホットフィックス
+* Share Link feature is not working on [!DNL Experience Manager] instance with DMS7 configuration. NPR-30080、NPR-30492：CQ-4273651 のホットフィックス
+* Adding the [!DNL Dynamic Media] Scene7 component to the page, and then publishing the page does not trigger the dmscene7 configuration every time. NPR-30641：CQ-4275962 のホットフィックス
+* Added an IPSJobJournal in [!DNL Experience Manager] to create only one Intrusion Prevention Systems (IPS) job per processing profile. NPR-30490：CQ-4273614 のホットフィックス
+* [!DNL Dynamic Media]:公開ノードへのアセットの複製を除外するデフォルトのフィルターを [!DNL Experience Manager] 追加しました。 NPR-30538：CQ-4274678 のホットフィックス
+* 外部の再処理ワークフローが導入されて、複数のリソースがサポートされ、フォルダーをペイロードとして使用できるようになりました。ワークフローには 2 つのステップがあります。次のステップへのメタデータマップを通じてハンドルなしでアセットを再処理するステップと、単一の IPS ジョブですべてのアセットをアセットハンドルなしで S7 に再アップロードするステップです。For more details, see Configuring [!DNL Dynamic Media] Cloud Services. NPR-30489：CQ-4272903 のホットフィックス
 * 正しい CSV の後に間違った CSV をアップロードすると、正しい CSV が消去されます。CQ-4277694、CQ-4277814 のホットフィックス
 * 削除する投稿フォルダーに固有のアイコンが間違っています。CQ-4277580 のホットフィックス
 * 「アセット投稿」タブのユーザーピッカーでユーザーを選択しても、ユーザーの名前がテーブルに表示されず、プロパティページのユーザーの削除ダイアログに間違ったテキストが表示されます。CQ-4277875 のホットフィックス
@@ -348,11 +348,11 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 * 管理者以外のユーザーでも、アセット投稿フォルダーの新しいフォルダーにアセットを公開できます。CQ-4278200 のホットフィックス
 * 投稿者をアセット投稿フォルダーに追加するオプションが dam-user（管理者以外）にありません。CQ-4278192 のホットフィックス
 * アセット投稿フォルダーに「作成」ボタンが表示されます。CQ-4277560 のホットフィックス
-* 検索クエリを関連度で並べ替えると、InDesign ドキュメントと InDesign テンプレートが一緒に返されます。CQ-4273864 のホットフィックス
+* Sorting search query by relevance returns [!DNL InDesign] documents along with [!DNL InDesign] templates. CQ-4273864 のホットフィックス
 * ユーザーのメール ID が大文字の場合、以前にチェックアウトしたアセットをチェックインできません。CQ-4276575 のホットフィックス
 * 削除操作は、選択されているプリセットにのみ適用され、操作後に画面上のリストが自動的に更新されると、既に更新されている他のプリセットが表示されます。CQ-4261461 のホットフィックス
-* Dynamic Media クラウドサービスを DM ハイブリッドモードで設定すると、空のレポートスイートが Analytics に複数作成され、AEM にはレポートスイート ID が保存されません。その結果、レポートスイートが重複します。CQ-4249780 のホットフィックス
-* AEM アセットの名前を重複した名前に変更すると、Scene7 と同期できなくなります。CQ-4276763 のホットフィックス
+* Configuring [!DNL Dynamic Media] Cloud Services in DMHybrid mode results in multiple empty report suites created in [!DNL Analytics], and with no report suite id stored in [!DNL Experience Manager], resulting in report suite duplication. CQ-4249780 のホットフィックス
+* Rename operation in [!DNL Experience Manager] asset to duplicated name fails to synchronize to Scene7. CQ-4276763 のホットフィックス
 * ユーザー生成コンテンツが検索フィルターパネルに正しく表示されません。CQ-4273875 のホットフィックス
 * 類似検索オプションが TIFF 画像に使用できません。CQ-4278238 のホットフィックス
 * VideoPlayer で読み込み時にビデオをミュートするオプションが実装されました。CQ-4266465 のホットフィックス
@@ -389,8 +389,8 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 ### UI - 基礎 {#ui-foundation}
 
 * 特定のユーザーインターフェイス内でユーザーが「m」、「p」、「e」を使用できないようにするショートカットトリガー。NPR-30355：GRANITE-26346 のホットフィックス
-* アセット検索UIを閉じても、左のレールがコンテンツ選択にリセットされず、その後2回目にフィルターレールを開くことができません。 NPR-30509：CQ-4274716 のホットフィックス
-* マルチテナント環境：アセット UI の上部ナビゲーションが使用できず、JavaScript エラーが発生します。NPR-30104：GRANITE-26344 のホットフィックス
+* Closing [!DNL Experience Manager Assets] Search UI does not reset the left rail to Content selection preventing the user from opening the filter rail the second time subsequently. NPR-30509：CQ-4274716 のホットフィックス
+* Multi-tenant environment: [!DNL Experience Manager Assets] UI top navigation is not available and throwing JavaScript error. NPR-30104：GRANITE-26344 のホットフィックス
 
 ### 翻訳 {#translation-6520}
 
@@ -398,7 +398,7 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 
 ### プラットフォーム {#platform-6520}
 
-* AEM のデフォルトメール送信者が TLS v1.2 を介してリモート SMTP サーバーにメールを送信できません。NPR-30476：GRANITE-26605 のホットフィックス
+* [!DNL Experience Manager] のデフォルトメール送信者が TLS v1.2 を介してリモート SMTP サーバーにメールを送信できません。NPR-30476：GRANITE-26605 のホットフィックス
 
 ### プロジェクト {#projects-6520}
 
@@ -422,11 +422,11 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 
 >[!NOTE]
 >
->AEM サービスパックには、AEM Forms の修正は含まれません。別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、[AEM Forms アドオンのインストール](#install-aem-forms-add-on-package)および [AEM Forms JEE インストーラーのインストール](#forms-jee-installer)を参照ください。
+>[!DNL Experience Manager] Service Packにはの修正が含まれていませ [!DNL Experience Manager Forms]ん。 They are delivered using a separate [!DNL Forms] add-on package. In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. For more information, see [Install Experience Manager Forms add-on](#install-aem-forms-add-on-package) and [Install Experience Manager Forms JEE installer](#forms-jee-installer).
 
-AEM 6.5.2.0 フォームの主なハイライトは次のとおりです。
+The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
-* AEM Forms OSGi の `RenderAtClient` API の `PDFFormRenderOptions` に「Auto」設定を追加しました。
+* Added &#39;Auto&#39; setting to `RenderAtClient` in `PDFFormRenderOptions` API for [!DNL Experience Manager] Forms OSGi.
 
 #### Forms アドオンパッケージ {#forms-add-on-package}
 
@@ -471,58 +471,58 @@ AEM 6.5.2.0 フォームの主なハイライトは次のとおりです。
 **Forms - Foundation JEE**
 
 * HTMLtoPDFサービスで、JMXコンソールにmaxReuseCountが表示されない。 NPR-30134、NPR-30304：CQ-4273763 のホットフィックス
-* AEM Forms WorkbenchからWebサービスを呼び出してWebサービス接続を追加または編集すると、次のエラーがスローされます。ClassNotFoundException org.apache.axis.message.SOAPBodyElement. NPR-30105：CQ-4273217 のホットフィックス
+* Adding or editing a Web Service connection by invoking web services from [!DNL Experience Manager Forms] Workbench throws an error: ClassNotFoundException org.apache.axis.message.SOAPBodyElement. NPR-30105：CQ-4273217 のホットフィックス
 
 ### 含まれている機能パック {#feature-packs-included}
 
 >[!NOTE]
 >
->AEM Forms ユーザーは、AEM サービスパック、累積修正パック、機能パックのいずれかをインストールした後で、AEM Forms アドオンパッケージをインストールすることが不可欠です。
+>For [!DNL Experience Manager Forms] customers, it is essential to install [!DNL Experience Manager Forms] add-on package after installing any [!DNL Experience Manager] Service Pack, Cumulative Fix Pack, or Feature Pack.
 
 #### Sites {#sites-feature-packs-included}
 
-* エクスペリエンスフラグメントを Adobe Target のユーザー定義ワークスペースに直接書き出せるようにする設定プロパティが追加されました。NPR-29189：CQ-4249782 のホットフィックス
+* Added a configuration property to allow exporting Experience Fragments directly to user-defined workspaces for [!DNL Adobe Target]. NPR-29189：CQ-4249782 のホットフィックス
 
 #### Forms - ドキュメントサービス {#forms-document-services-1}
 
-* AEM Forms OSGi の `RenderAtClient` API の `PDFFormRenderOptions` に「Auto」設定を追加しました。NPR-30759：CQ-4278193 のホットフィックス
+* Added &#39;Auto&#39; setting to `RenderAtClient` in `PDFFormRenderOptions` API for [!DNL Experience Manager Forms] OSGi. NPR-30759：CQ-4278193 のホットフィックス
 
-## AEM 6.5.1.0 {#release-6510}
+## Adobe Experience Manager 6.5.1.0 {#release-6510}
 
-AEM 6.5.1.0 is an important release that includes performance, stability, security, and key customer fixes and enhancements released since the general availability of AEM 6.5 in *April 2019.* It can be installed on top of AEM 6.5.
+[!DNL Adobe Experience Manager] 6.5.1.0は、パフォーマンス、安定性、セキュリティ、お客様向けの主要な修正、および2019年4月のGA(General Availability)以降にリリースされた機能強化を含む重要なリリ [!DNL Adobe Experience Manager]*ースです。* 6.5の上にインストールで [!DNL Experience Manager] きます。
 
 このサービスパックリリースの主なハイライトは次のとおりです。
 
 * 追跡イベントに dynamic-UI-state をカスタム属性として含めることが可能になりました。
-* Dynamic Media Scene 7 で 360 度ビデオアセットの配信がサポートされるようになりました。
+* Included support for the delivery of 360-degree video assets in [!DNL Dynamic Media] Scene 7.
 * Enabled *Japanese Word Wrap* feature via the styles plugin of Rich Text Editor. For more information, see [Configure Japanese word wrap](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)
 
 ### Assets
 
 * DAM DMGateway インターフェイスが更新されて、S3 マルチパートがサポートされるようになりました。NPR-29740：CQ-4226303 のホットフィックス
-* AEM 6.5にアップグ `Only empty tenantId is currently supported` レードした後、レンディションのプレビューでエラーが発生する。 NPR-29986：CQ-4272353 のホットフィックス
+* レンディションのプレビ `Only empty tenantId is currently supported` ューで、 [!DNL Experience Manager] 6.5にアップグレードした後にエラーが発生する。NPR-29986:CQ-4272353の修正プログラム
 * ジョブの削除を許可する削除ダイアログが表示されません。NPR-29720：CQ-4271074 のホットフィックス
-* プロパティページにアセットタイトルを追加した後、ページを閉じようとすると、プロパティページが再度開かれます。NPR-29627：CQ-4264929 のホットフィックス
+* After adding asset title in the properties page, when a user attempts to close the page, [!DNL Experience Manager] opens the properties page again. NPR-29627：CQ-4264929 のホットフィックス
 * VersioningTimelineEventProvider は、nt:version タイプのノードと共にルートバージョンを提供する必要があります。GRANITE-26063 のホットフィックス
-* AEM DM-Scene7 モードで 360 度の球面ビデオをアップロードおよび再生する機能が実装されました。CQ-4265131 のホットフィックス
+* Implemented the ability to upload and play 360 spherical videos in [!DNL Experience Manager] DM-Scene7 mode. CQ-4265131 のホットフィックス
 * ソースが編集されている場合、ライブコピーが間違ったステータスを取得します。CQ-4265451 のホットフィックス
-* Assets のマルチサイトマネージャーのサポートが有効になりました。CQ-4271453、CQ-4268621、CQ-4257491 のホットフィックス
-* AEM インターフェイスには、アセットの現在のバージョンの追加エントリがタイムライン履歴に表示され、Adobe Asset Link からの最新のチェックインコメントが表示される必要があります。CQ-4262864 のホットフィックス
+* Enabled Multi-Site Manager support for [!DNL Experience Manager Assets]. CQ-4271453、CQ-4268621、CQ-4257491 のホットフィックス
+* [!DNL Experience Manager] インターフェイスには、タイムラインヒストリーの現在のバージョンのアセットに対する追加のエントリが表示され、最新のチェックインコメントが表示されま [!DNL Adobe Asset Link]す。 CQ-4262864 のホットフィックス
 * プロパティが見つからない場合、コンテンツフラグメントのタイムラインにエラーメッセージが表示されます。 CQ-4272560 のホットフィックス
 * Scene 7 ビデオプレーヤーで全画面表示に拡大すると問題が発生します。CQ-4266700 のホットフィックス
 * ZoomVerticalViewer：使用されている画像アセットが 1 つだけの場合に、パンボタンが表示されることがあります。CQ-4264795 のホットフィックス
 * ライブコピーの子ノードを削除すると、liveRelationship の接続が解除される必要があります。CQ-4270395 のホットフィックス
 * メタデータスキーマにグローバル設定のアイテムのみが含まれ、アクティブテナントのアイテムが欠落しています。URL の formPath 値が変更されても、デフォルト値に戻ります。NPR-29945：CQ-4262898 のホットフィックス
-* Brand Portal に画像プリセットを公開すると、エラーコード 500 で失敗します。NPR-29510：CQ-4268659 のホットフィックス
+* Publish image presets to [!DNL Brand Portal] fails with 500 error code. NPR-29510：CQ-4268659 のホットフィックス
 
 ### Sites
 
 * ロールアウト時に空のプロパティと複数のプロパティがブループリントから伝播されません。ブループリントを使用したライブコピーのリセットは、コンポーネントでは機能しません。NPR-29253：CQ-4264928、CQ-4264926、CQ-4267722 のホットフィックス
 * CoralUI, when used with `Multifield`, stores the `fileReferenceParameter` at the component level instead of multifield level. NPR-29537：CQ-4266129 のホットフィックス
-* AEM テキストコンポーネントとテキストエディターの日本語への拡張。NPR-29785：CQ-4265090 のホットフィックス
+* Enhancement of [!DNL Experience Manager] text component and Text Editor to Japanese. NPR-29785：CQ-4265090 のホットフィックス
 * タイムワープで復元されたページは、バージョン管理時に正しい画像を参照する必要があります。NPR-29431：CQ-4262638 のホットフィックス
 * 親から子へのスタイルシステムノードの継承に関する問題。 NPR-29516：CQ-4270330 のホットフィックス
-* Facebook 認証へのソーシャル投稿の設定中にエラーメッセージが表示されます。NPR-29211：CQ-4266630 のホットフィックス
+* An error message while setting up the social posting to [!DNL Facebook] authentication. NPR-29211：CQ-4266630 のホットフィックス
 * コンテンツフラグメントにレンダリングされたサムネールに、日時フィールドの内部カレンダー表現が表示されます。NPR-29531：CQ-4269362 のホットフィックス
 * Coral2 実装で「権限」タブを開いても、ボタンが表示されません。CQ-4269419 のホットフィックス
 
@@ -536,7 +536,7 @@ AEM 6.5.1.0 is an important release that includes performance, stability, securi
 
 ### エクスペリエンスフラグメント
 
-* Adobe Target への AEM エクスペリエンスフラグメントの書き出し。CQ-4265469 のホットフィックス
+* エクスペリエン [!DNL Experience Manager] スフラグメントの書き出し先 [!DNL Adobe Target]: CQ-4265469 のホットフィックス
 * ターゲットへのエクスペリエンスフラグメントの書き出しが、スマート画像で失敗しました。 CQ-4269606 のホットフィックス
 
 * カード表示で Omnisearch を通じてエクスペリエンスフラグメントを移動しようとすると、行き詰まります。CQ-4263848 のホットフィックス
@@ -560,13 +560,13 @@ AEM 6.5.1.0 is an important release that includes performance, stability, securi
 
 ### WCM - MSM
 
-* AEM 6.4.3 にアップグレードすると、マルチサイトマネージャーの展開に時間がかかります。CQ-4271410 のホットフィックス
+* Upgrade to [!DNL Experience Manager] 6.4.3 makes Multi-Site Manager take a long time to roll out. CQ-4271410 のホットフィックス
 
 ### 統合
 
 * BrightEdge 認証情報が失敗し、接続エラーが発生します。NPR-29168：CQ-4265872 のホットフィックス
 
-* AEM 起動設定を編集して保存しようとすると、例外メッセージが表示されます。NPR-29176：CQ-4265782／CQ-4266153 のホットフィックス
+* An exception message is displayed when trying to edit and save the [!DNL Experience Manager] launch configuration. NPR-29176：CQ-4265782／CQ-4266153 のホットフィックス
 
 ### ユーザーインターフェイス
 
@@ -584,11 +584,11 @@ AEM 6.5.1.0 is an important release that includes performance, stability, securi
 
 * レプリケーションエージェントコンポーネントは、権限のないユーザーに機密情報が開示される脆弱性の影響を受けやすくなっています。NPR-29611：GRANITE-25070 のホットフィックス
 
-* Brand Portal へのレプリケーションのたびに、OAuth 認証でセッションリークが発生します。NPR-30001：GRANITE-26196 のホットフィックス
+* Session leak during OAuth for every replication to [!DNL Brand Portal]. NPR-30001：GRANITE-26196 のホットフィックス
 
 ### プロジェクト
 
-* AEM Author の /content/dam/mac フォルダーから Brand Portal へのアセットの公開が機能しません。NPR-29819：CQ-4271118 のホットフィックス
+* Publish [!DNL Experience Manager Assets] from [!DNL Experience Manager] Author /content/dam/mac folder to [!DNL Brand Portal] doesn&#39;t work. NPR-29819：CQ-4271118 のホットフィックス
 
 ### プラットフォーム
 
@@ -600,7 +600,7 @@ AEM 6.5.1.0 is an important release that includes performance, stability, securi
 
 ### Forms
 
-AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
+The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 * OSGi only: Added a new attribute `PAGECOUNT` in Output and Forms Service.
 
@@ -613,7 +613,7 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 **バックエンド統合**
 
 * 保護された Web サービス定義言語（WSDL）の取得に失敗します。NPR-29944：CQ-4270777 のホットフィックス
-* AEM Forms を IBM WebSphere にインストールすると、SOAP に基づいたフォームデータモデルの作成が失敗します。CQ-4251134 のホットフィックス
+* When [!DNL Experience Manager Forms]  is installed on IBM WebSphere, creating a form data model based on SOAP fails. CQ-4251134 のホットフィックス
 * Microsoft Dynamics オンプレミス統合で Active Directory Federation Services（ADFS）v3.0 がサポートされるようになりました。CQ-4270586 のホットフィックス
 * データソースのタイトルが変更されても、更新されたタイトルがフォームデータモデルに表示されません。CQ-4265599 のホットフィックス
 * エンティティまたは属性の名前にハイフンまたはスペースが含まれている場合、式はそのようなエンティティや属性を評価できません。 CQ-4225129 のホットフィックス
@@ -627,10 +627,10 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 * 遅延読み込み中にアダプティブフォームフラグメントに新しいインスタンスを追加できません。NPR-29818：CQ-4269875 のホットフィックス
 * 検証コンポーネントが「レコードのドキュメント」テンプレートのエラーを記録または表示しません。CQ-4272999 のホットフィックス
 * アダプティブフォームのレイアウトエディターを無効にできるようになりました。CQ-4270810 のホットフィックス
-* AEM 6.5でアダプティブフォームの検証手順を復元しました。CQ-4269583の修正プログラム
+* Restored the verify step for Adaptive Forms in [!DNL Experience Manager] 6.5. Hotfix for CQ-4269583
 
-* アダプティブフォームフィールド検証が失敗すると、Adobe Sign が機能しなくなります。CQ-4269463 のホットフィックス
-* AEM Forms インスタンスに 20 を超えるアダプティブフォームフラグメントがあり、すべてのフォームフラグメントの名前が同じ文字列で始まる場合、検索しても、フラグメントがまったく返されないか、最近作成された 20 個のフラグメントのみ返されます。CQ-4264414、CQ-4264914 のホットフィックス
+* Adaptive Form field validation failure breaks [!DNL Adobe Sign]. CQ-4269463 のホットフィックス
+* When an [!DNL Experience Manager Forms] instance has more than 20 adaptive form fragments and name of all the form fragments starts with the same string, the search returns no or only recent 20 created fragments. CQ-4264414、CQ-4264914 のホットフィックス
 
 * アダプティブフォームアプリケーションを大きなデータセットと共に使用すると、パフォーマンスの問題が発生する。. CQ-4235310 のホットフィックス
 
@@ -651,8 +651,8 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 
 * アダプティブフォームアプリのアウトボックスからフォームを再送信すると、データが失われます。NPR-28345：CQ-4260929 のホットフィックス
 * 非可変ケースの場合、保存中にドキュメントが閉じられません。CQ-4269784 のホットフィックス
-* アダプティブフォームアプリケーションは、Microsoft Windows 8.1のサポートを終了しました。CQ-4265274の修正プログラム
-* Android 版の AEM Forms アプリで、2 MB を超える画像がフィールドレベルの添付ファイルとしてフォームに添付されると、アプリがクラッシュします。CQ-4265578 のホットフィックス
+* アダプティブフォームアプリでは、Microsoft Windows 8.1 のサポートを終了しました。CQ-4265274 のホットフィックス
+* When an image of more than 2 MB is attached as a field level attachment to a form in the Android version of [!DNL Experience Manager Forms] app, the app crashes. CQ-4265578 のホットフィックス
 
 * タスクの割り当てでインタラクティブコミュニケーション印刷チャネルの事前入力オプションを有効にしました。CQ-4265577 のホットフィックス
 * タスクの割り当て先グループのメンバーになるまで、共有タスクを表示できません。CQ-4248733 のホットフィックス
@@ -668,7 +668,7 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 
 **Forms - Correspondence Management**
 
-* AEM 6.3 Forms で作成された通信を AEM 6.5 Forms の「通信を作成」UI（CCR UI）で開くことができません。CQ-4266392 のホットフィックス
+* [!DNL Experience Manager Forms] 6.5通信を作成UI(CCR UI)は、6.3で作成された通信を開くことがで [!DNL Experience Manager Forms] きません。CQ-4266392の修正プログラム
 * DDE データ型が数値型の場合、XDP の Sum 関数が機能しません。CQ-4227403 のホットフィックス
 * アセットの公開時にアセットの最終変更時刻が更新されないので、メモリ内キャッシュの無効化ロジックを更新する必要があります。CQ-4250465 のホットフィックス
 * DD およびレターのドキュメントフラグメントを公開できません。CQ-4272893 のホットフィックス
@@ -683,7 +683,7 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 
 **Forms - Designer**
 
-* AEM Forms Designer を使用して作成された静的 PDF で完全なアクセシビリティチェックを実行すると、言語属性がないので、プライマリ言語チェックが失敗します。CQ-4272923、CQ-4271002 のホットフィックス
+* When a full accessibility check is performed on the static PDF created using [!DNL Experience Manager Forms Designer], the Primary Language check fails due to missing language attribute. CQ-4272923、CQ-4271002 のホットフィックス
 
 **Forms - Document Security**
 
@@ -697,9 +697,9 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 * PDFは、フォームフィールドを使用したPDF/A-1bへの変換に失敗し、表示方法が示されません。 NPR-29940：CQ-4269618 のホットフィックス
 
 * OSGi:レンダリング中に生成されたページ数を特定できません。 NPR-28922：CQ-4270870 のホットフィックス
-* AEM Forms OSGiのFormsサービスを使用したスタティックPDFファイルのサポートを有効にしました。 NPR-28572：CQ-4270869 のホットフィックス
+* のFormsサービスを使用したスタティックPDFファイルのサポートを有効にしまし [!DNL Experience Manager Forms OSGi]た。 NPR-28572：CQ-4270869 のホットフィックス
 * XMLForm.exe の権限を変更できません。NPR-29828、NPR-29237：CQ-4267080 のホットフィックス
-* AEM Forms サーバーの出力モジュールで作成された静的 PDF の言語属性／タグに、作成されたドキュメントの言語が設定されません。NPR-27332：CQ-4271002 のホットフィックス
+* The static PDF created by the [!DNL Experience Manager Forms] server’s output module does not populate the language attribute/tag with the language of the document created. NPR-27332：CQ-4271002 のホットフィックス
 
 **Forms - Foundation JEE**
 
@@ -711,11 +711,11 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 
 #### Assets  — 含まれる
 
-* Assets のマルチサイトマネージャーのサポートが有効になりました。For more information, see [Reuse assets using MSM for Assets](https://helpx.adobe.com/experience-manager/6-5/help/assets/reuse-assets-using-msm.html). NPR-29199：CQ-4259922 のホットフィックス
+* Enabled Multi-Site Manager support for [!DNL Experience Manager Assets]. For more information, see [Reuse assets using MSM for Experience Manager Assets](https://helpx.adobe.com/experience-manager/6-5/help/assets/reuse-assets-using-msm.html). NPR-29199：CQ-4259922 のホットフィックス
 
 #### サイト — 含まれる
 
-* Adobe Target への AEM エクスペリエンスフラグメントの書き出し。For more details, see [The Experience Fragment Link Rewriter Provider - HTML](https://helpx.adobe.com/experience-manager/6-5/help/sites-developing/experience-fragments.html#TheExperienceFragmentLinkRewriterProviderHTML). CQ-4265469 のホットフィックス
+* エクスペリエン [!DNL Experience Manager] スフラグメントの書き出し先 [!DNL Adobe Target]: For more details, see [The Experience Fragment Link Rewriter Provider - HTML](https://helpx.adobe.com/experience-manager/6-5/help/sites-developing/experience-fragments.html#TheExperienceFragmentLinkRewriterProviderHTML). CQ-4265469 のホットフィックス
 
 #### Forms - ドキュメントサービス  — 含まれる
 
@@ -725,12 +725,12 @@ AEM 6.5.1.0 フォームの主なハイライトは次のとおりです。
 
 ### OSGi バンドルとコンテンツパッケージ
 
-次のドキュメントには、AEM 6.5.1.0 に含まれている OSGi バンドルとコンテンツパッケージの一覧が記載されています。
+The following text documents list the OSGi bundles and Content Packages included in [!DNL Experience Manager] 6.5.1.0
 
-AEM 6.5.1.0 に含まれている OSGi バンドルの一覧
+List of OSGi bundles included in [!DNL Experience Manager] 6.5.1.0
 
 [ファイルを入手](assets/6_5-bundle-list.txt)
 
-AEM 6.5.1.0 に含まれているコンテンツパッケージの一覧
+List of Content Packages included in [!DNL Experience Manager] 6.5.1.0
 
 [ファイルを入手](assets/6_5-content-package-list.txt)
