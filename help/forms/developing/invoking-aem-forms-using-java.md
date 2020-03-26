@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
 
 ---
 
@@ -63,6 +63,9 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 * 呼び出す AEM Forms サービス。クライアントアプリケーションは 1 つ以上のサービスを呼び出すことができます。
 * AEM Forms サービスを呼び出すモード。EJB モードまたは SOAP モードを使用できます。（[接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+
+>[!NOTE] （自動オプションのみ）EJB用のサーバーIPを指定するコマンドを使用し `standalone.bat -b <Server IP> -c lc_turnkey.xml` て、AEM Formsサーバーを起動します。
+
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
 ### サービス固有の JAR ファイル {#service-specific-jar-files}
@@ -257,7 +260,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
-   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照先のjarが共存していない場合、必要なクラスはクラスローダーで見つかりません。</p> </td>
+   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照先のjarが共存していない場合、必須のクラスはクラスローダーで見つかりません。</p> </td>
    <td><p>JBoss クライアントの lib ディレクトリ</p> <p>クライアントアプリケーションを同じ J2EE アプリケーションサーバー上にデプロイする場合は、このファイルを含める必要はありません。</p> </td>
   </tr>
   <tr>
@@ -1039,7 +1042,7 @@ Java 呼び出し API を使用して短時間のみ有効なプロセスの `My
 
 1. Create an `InvocationRequest` object by invoking the `ServiceClientFactory` object’s `createInvocationRequest` method and passing the following values:
 
-   * 長期間有効なプロセスを指定する文字列値。プロセスを呼び出すに `MyApplication/EncryptDocument` は、を指定しま `MyApplication/EncryptDocument`す。
+   * 長期間有効なプロセスを指定する文字列値。プロセスを呼び出す `MyApplication/EncryptDocument` には、を指定しま `MyApplication/EncryptDocument`す。
    * プロセス操作名を表す文字列値。通常、短時間のみ有効なプロセス操作の名前は `invoke` です。
    * サービス操作に必要なパラメーター値を含む `java.util.HashMap` オブジェクト。
    * `true` を指定するブール値。これを渡すと同期要求が作成されます（この値は、短時間のみ有効なプロセスを呼び出すために適用されます）。
