@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
+source-git-commit: 7c937b425d909a1f3a9af0a1c3357c44220af0f2
 
 ---
 
@@ -50,7 +50,7 @@ Experience Manager Assetsには、次のアクセシビリティ機能の強化�
 
 * 日付と時間の形式の制約は、ユーザーがキーボードを使用して正しい形式で日付を入力できるように、日付フィールドのフィールドラベルに設定されています。
 
-   For example, `On Time (MM-DD-YYYY HH:mm)`. ここで、MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍用形式の時、mmは分です。
+   例： `On Time (MM-DD-YYYY HH:mm)`ここで、MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍用形式の時、mmは分です。
 
 * 現在選 `X` 択されているタグを削除するボタン上のシンボルが、選択されているタグの数と共にスクリーンリーダーによって通知されるようになりました。
 
@@ -86,8 +86,6 @@ XFAフォームのテキストフィールドをHTML5フォームのリッチテ
 
 Experience Manager Formsには、次のアクセシビリティの強化が含まれています。
 
-* アダプティブフォームのUltramarine-Accessible参照テーマに関する問題なく、タブのフォーカスを移動できます。
-
 * スクリーンリーダーは、アダプティブフォームでチェックボックス、リンク、日付選択、日付入力の各フィールドを正しく読み上げます。
 
 * アダプティブフォームの各ページに、1つのタイトルと1つのメインのランドマークラベルが含まれるようになりました。
@@ -121,7 +119,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * AEM Cloud Manager 2020.1.0および2020.2.0
 
-   パイプラインのステータスを改善し、様々な手順でログをダウンロードする機能を改善。 次のページを参照してください。
+   パイプラインのステータスを改善し、様々な手順でログをダウンロードする機能を改善。 参照先：
 
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
