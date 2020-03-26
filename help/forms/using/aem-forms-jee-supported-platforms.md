@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29a94f3ece1b96b24e1b77f4abe6f6f28924ae7b
+source-git-commit: 6cf69dc86ce70a43e77b00d6b3986fa40ae0a4ec
 
 ---
 
@@ -69,14 +69,14 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 >
 >AEM Forms をご利用のお客様がオーナーシップのコストを削減し、開発アーキテクチャを簡略化し、開発スタックを近代化できるようにするために、Adobe Experience Manager のエンタープライズプラットフォームはアプリケーションサーバーベースのデプロイメントから、スタンドアロンの OSGi ベースのデプロイメントに移行します。対応するインフラストラクチャコンポーネントは削減されますが、アドビは引き続き AEM Forms JEE スタックをサポートします。
 >
->6.5のリリースでは、お客様の中で最も使用率の低いインフラストラクチャコンポーネントは、次のようなサポート対象外となりました。
->・ Oracle webLogicアプリケーションサーバー
+>6.5のリリースでは、お客様の中で最も使用率の低いインフラストラクチャコンポーネントは、次のようにサポートされなくなりました。
+>・ Oracle WebLogicアプリケーション・サーバ
 >・ IBM DB2データベース
->・ IBM AIXおよびSun Solarisオペレーティングシステム
+>・ IBM AIXおよびSun Solarisオペレーティング・システム
 >
 >新規インストールに関しては、可能な場合は AEM Forms を最新の OSGi スタックでデプロイし、モバイル向けのレスポンシブなアダプティブフォーム、マルチチャネルのインタラクティブ通信、そしてフォームデータモデルを使用したバックエンドのデータ統合などの最新技術を活用することが推奨されます。
 >
->既存のユーザーは、引き続きJEE上のAEM formsスタックをデプロイする必要があることを認識します。 そのような場合は、AEM Forms JEE を本文書に記載されている対応インフラストラクチャでデプロイしていただく必要があります。前回の AEM Forms リリースをサポート対象ではないプラットフォームでご使用で、AEM 6.5 Forms にアップグレードされる場合は、アドビサポートにご連絡ください。サポート対象のプラットフォームへのアップグレードをお手伝いします。
+>既存のユーザーは、引き続きJEE上のAEM Formsスタックのデプロイを行う必要があることを認識します。 そのような場合は、AEM Forms JEE を本文書に記載されている対応インフラストラクチャでデプロイしていただく必要があります。前回の AEM Forms リリースをサポート対象ではないプラットフォームでご使用で、AEM 6.5 Forms にアップグレードされる場合は、アドビサポートにご連絡ください。サポート対象のプラットフォームへのアップグレードをお手伝いします。
 
 ### Java 仮想マシン (JVM) {#java-virtual-machines-jvm}
 
@@ -122,8 +122,6 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 
 ### データベースと CRX の永続性 {#databases-and-crx-persistence}
 
-#### AEM の永続性サポート {#aem-persistence-support}
-
 <table>
  <tbody>
   <tr>
@@ -137,7 +135,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td><p>サポート対象</p> </td>
   </tr>
   <tr>
-   <td><p>MongoDB Enterprise 4.0</p> </td>
+   <td><p>MongoDB Enterprise 4.0 </p> </td>
    <td><p>リポジトリ Microkernel</p> </td>
    <td><p>サポート対象</p> </td>
   </tr>
@@ -154,7 +152,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 
 <tr>
    <td>Oracle Database 19c </td>
-   <td>リポジトリ Microkernel</td>
+   <td>リポジトリ</td>
    <td>サポート対象</td>
   </tr>
   <tr>
@@ -165,6 +163,11 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
   <tr>
    <td>IBM DB2 11.1</td>
    <td>リポジトリ Microkernel</td>
+   <td>R：制限サポート</td>
+  </tr>
+    <tr>
+   <td>MySQL 5.7.19 </td>
+   <td>-</td>
    <td>R：制限サポート</td>
   </tr>
  </tbody>
@@ -172,7 +175,6 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 
 * IBM DB2 への新規インストールはサポートされていません。AEM 6.5 Forms にアップグレードされる既存のお客様の場合のみサポートされます。
 * MongoDB はサードパーティソフトウェアであり、AEM ライセンスパッケージには含まれていません。詳しくは、[MongoDB のライセンスポリシー](https://www.mongodb.org/about/licensing/)ページを参照してください。
-
 * AEM デプロイメントを最大限活用するために、アドビは、プロフェッショナルサポートを受けられる MongoDB Enterprise バージョンのライセンスを取得することを推奨しています。
 * アドビカスタマーケアは、AEM での MongoDB の使用に関する問題の絞り込みを支援します。詳しくは、[MongoDB for Adobe Experience Manager のページ](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)を参照してください。
 * 「ファイルシステム」には、POSIX 準拠のブロックストレージが含まれます。ブロックストレージには、ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスが状況に応じて変化し、全体的なパフォーマンスに影響を及ぼす可能性があることに注意してください。ネットワークやリモートファイルシステムと一緒に AEM の負荷テストを行うことを推奨します。
@@ -180,50 +182,8 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 * MongoDB Sharding は AEM ではサポートされていません。
 * JEE 上の AEM Forms はRDBMK 永続性タイプの MySQL をサポートしません。
 * Document Security モジュールは、Content Repository を使用しません。Document Security のみを使用して、HTML Workspace、HTML5 フォーム、アダプティブフォームを使用しない場合は、Content Repository をインストールしないでください。
+* JEE上のAEM Formsは、AEMリポジトリ(CRX-Repository)の永続化にMySQLを使用することをサポートしていません。
 
-#### データベースのサポート {#database-support}
-
-<table>
- <tbody>
-  <tr>
-   <td><p><strong>プラットフォーム</strong></p> </td>
-   <td><p><strong> 説明</strong></p> </td>
-   <td><p><strong>サポートレベル</strong></p> </td>
-  </tr>
-  <tr>
-   <td>IBM DB2 11.1</td>
-   <td>リポジトリ Microkernel</td>
-   <td>R：制限サポート</td>
-  </tr>
-  <tr>
-   <td><p>Oracle Database 12c リリース 1</p> </td>
-   <td><p>リポジトリ Microkernel</p> </td>
-   <td><p>サポート対象</p> </td>
-  </tr>
-  <tr>
-   <td>Oracle Database 18c</td>
-   <td>リポジトリ Microkernel</td>
-   <td>サポート対象</td>
-  </tr>
-    <tr>
-   <td>Oracle Database 19c</td>
-   <td>リポジトリ Microkernel</td>
-   <td>サポート対象</td>
-  </tr>
-  <tr>
-   <td><p>MySQL 5.7.19<br /> </p> </td>
-   <td><p>リポジトリ Microkernel</p> </td>
-   <td><p>サポート対象</p> </td>
-  </tr>
-  <tr>
-   <td><p>Microsoft SQL Server 2016</p> </td>
-   <td><p>リポジトリ Microkernel</p> </td>
-   <td><p>サポート対象</p> </td>
-  </tr>
- </tbody>
-</table>
-
-* IBM DB2 への新規インストールはサポートされていません。AEM 6.5 Forms にアップグレードされる既存のお客様の場合のみサポートされます。
 
 ### データベースドライバー {#database-drivers}
 
@@ -319,7 +279,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 
 #### 視覚化環境 {#virtualized-environment}
 
-JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実行できます。ただし、バーチャル環境での AEM Forms の使用に問題が発生した場合は、その問題の物理マシン上での再現を試みてください。物理マシン上で問題が解決しない場合は、アドビサポートにお問い合わせください。 物理マシン上で再現することができない問題に関しては、バーチャル環境のベンダーにお問い合わせください。
+JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実行できます。ただし、バーチャル環境での AEM Forms の使用に問題が発生した場合は、その問題の物理マシン上での再現を試みてください。問題が物理マシン上で引き続き発生する場合は、アドビサポートに問い合わせて解決してください。 物理マシン上で再現することができない問題に関しては、バーチャル環境のベンダーにお問い合わせください。
 
 #### 開発環境 {#development-environments}
 
@@ -342,11 +302,11 @@ JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実�
 
 JEE サーバーでの AEM Forms の設置でプラットフォームを選択するときは、次の例外事項を考慮してください。
 
-1. JEE上のAEM formsは、IBM® webSphere®をMySQLでサポートしていません。
+1. JEE上のAEM Formsは、IBM® WebSphere®をMySQLでサポートしていません。
 1. JEE 上の AEM Forms では、SUSE Linux Enterprise Server 12 上での および JBoss をサポートしていません。SUSE Linux Enterprise Server 12 上では、IBM WebSphere のみがサポートされています。
 1. JEE 上の AEM Forms は、JBoss® では Oracle Java™ SE 以外のいかなる JDK もサポートしていません。
 1. JEE 上の AEM Forms は、IBM® WebSphere® では IBM® JDK 以外のいかなる JDK もサポートしていません。
-1. CRX-repositoryは、TarMK、MongoDB、およびリレーショナルデータベース(RDBMK)の永続性タイプをサポートします。 アプリケーションサーバーとCRX-repositoryの間に2つの異なるデータベースシステムを置くことはできません。 ただし、JEE上のAEM Forms環境では、MongoMKをCRXリポジトリと共に使用し、サポートされているリレーショナルデータベースをアプリケーションサーバーと共に使用できます。
+1. CRX-repositoryは、TarMK、MongoDB、およびリレーショナルデータベース(RDBMK)の永続性タイプをサポートします。 アプリケーションサーバーとCRX-repositoryの間に2つの異なるデータベースシステムを置くことはできません。 ただし、JEE上のAEM Forms環境では、MongoMKをCRXリポジトリで使用し、サポートされているリレーショナルデータベースをアプリケーションサーバーで使用できます。
 1. JEE 上の AEM Forms は CentOS 上の WebSphere Application Server をサポートしていません。
 1. JEE 上の AEM Forms では、JBoss ロールベースのアクセス制御（RBAC）をサポートしていません。
 
@@ -425,7 +385,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 
 ### Cordova のサポート {#support-for-cordova}
 
-AEM FormsアプリケーションでApache Cordovaがサポートされるようになりました。サポートされるCordovaのプラットフォーム固有のバージョンを次に示します。
+AEM FormsアプリケーションでApache Cordovaがサポートされるようになりました。次に、サポートされるCordovaのプラットフォーム固有のバージョンを示します。
 
 * Apache Cordova 6.4.0
 * Cordova iOS 4.3.0
@@ -466,7 +426,7 @@ AEM FormsアプリケーションでApache Cordovaがサポートされるよう
   </tr>
   <tr>
    <td>OpenOffice 4.1.2</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、TIF、TIFF、TIFF、TIFF、TIFF、TIFF、TIFFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTFおよびTXT</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPG、TIF、TIFF、TIFF、TIFF、TIF、TIFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
   </tr>
  </tbody>
 </table>
@@ -534,7 +494,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 上記以外の要件については、以下を参照してください。
 
-* [JEE上のシングルサーバーAEM Formsのデプロイメントに必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
+* [JEE上のシングルサーバーAEM Formsの導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
 * [JEE 上でのクラスター化された AEM Forms の導入に必要なシステム構成
    ](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
 
@@ -661,7 +621,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >* Safari は Macintosh OS X でのみサポートされています。
 >* Acrobat DC 以降のバージョンでは、Workspace は Macintosh OS X 10.6 および 10.7 上の Safari 5.1 をサポートしています。For more information about Safari 5.1 compatibility with Adobe Reader, Acrobat, see [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
 >* Administration Console は Safari ではサポートされていません。
->* Correspondence Managementは、AEM 6.1 Forms向けのWindows® Internet Explorer 9.0をサポートしていません。
+>* Correspondence Managementは、AEM 6.1 FormsのWindows® Internet Explorer 9.0をサポートしていません。
 >* Forms ポータルは、アクセシビリティのために、JAWS 14.0 画面読み上げソフトウェアを Internet Explorer 11 でサポートしています。
 >
 
@@ -709,9 +669,9 @@ AEM Forms アプリケーションは次のプラットフォームで利用可�
 
 | **プラットフォーム** | **サポートされているデバイス** |
 |---|---|
-| Apple iOS 以上 | Apple iPhone、iPad、iPad Air、iPad mini [iOS 11以降] |
-| Google Android | Android 5.1 以降。AEM Formsアプリは、7インチと10インチのSamsung Galaxyタブレットと人気のスマートフォンで動作確認されています。 |
-| Microsoft Windows | Microsoft Windows 10オペレーティングシステムを実行するMicrosoft Surfaceデバイス、タブレット、ノートパソコン、およびデスクトップ。 |
+| Apple iOS 以上 | iOS 11以降を実行するApple iPhone、iPad、iPad Air、iPad mini。 |
+| Google Android | Android 5.1 以降。AEM Formsアプリは、7インチと10インチのSamsung Galaxyタブレットと人気のあるスマートフォンで認定されています。 |
+| Microsoft Windows | Microsoft Windows 10オペレーティングシステムを実行するMicrosoft Surfaceデバイス、タブレット、ラップトップ、およびデスクトップ。 |
 
 ### Adobe Flash Player {#adobe-flash-player}
 
