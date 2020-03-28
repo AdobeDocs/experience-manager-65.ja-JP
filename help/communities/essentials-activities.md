@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# アクティビティストリームの基本事項{#activity-stream-essentials}
+# アクティビティストリームの基本事項 {#activity-stream-essentials}
 
 フォーラムまたはブログへの投稿など、サインインしているコミュニティメンバーのアクティビティを 1 つのストリームにまとめ、アクティビティストリームコンポーネントの設定を使用して、さまざまな方法でフィルタリングしたり、表示したりできます。
 
@@ -32,7 +32,7 @@ An *activity stream* is the list of recent activities performed by a member or a
 
 ニュースフィード&#x200B;**&#x200B;とは、メンバーがフォローしている複数のアクティビティストリームを単一のストリームに統合したものです。
 
-A * [social graph](/help/communities/essentials-socialgraph.md)* captures the following relationships of one member to another.
+*[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)*とは、メンバー間のフォロー関係を表したものです。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
