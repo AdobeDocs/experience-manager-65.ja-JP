@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# 割り当ての基本事項{#assignments-essentials}
+# 割り当ての基本事項 {#assignments-essentials}
 
-イネーブルメントコミュニティサイトの割り当て機能を使用するために必要な情報につ [いて説明し](/help/communities/overview.md#enablement-community) ます。
+イネーブルメントコミュニティサイトの割り当て機能を使用するための重要な情報につ [いて説明し](/help/communities/overview.md#enablement-community) ます。
 
 割り当て機能を使用すると、イネーブルメントコミュニティのメンバーに実施可能リソースおよびイネーブルメント学習パスを割り当てることができます。
 
@@ -48,7 +48,7 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>see <a href="/help/communities/assignments.md">Assignments Feature</a></td>
+   <td>See, <a href="/help/communities/assignments.md">Assignments Feature</a></td>
   </tr>
  </tbody>
 </table>
