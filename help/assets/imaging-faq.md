@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 582b7e9f36d3b9599058b4cfbe83897822b26d05
+source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 582b7e9f36d3b9599058b4cfbe83897822b26d05
 
 次の画像アセットの例は、追加されたスマートイメージングの最適化を示しています。
 
-| Image<br>(URL) | サムネール | サイズ<br> (JPEG) | サイズ(WebP)<br> (スマー ***トイメージング***) | %削減 |
+| Image<br>(URL) | サムネール | サイズ<br> (JPEG) | サイズ(WebP)<br> （スマートイメージングを使用） | %削減 |
 |---|---|---|---|---|
 | [画像 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
 | [画像 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
@@ -44,7 +44,7 @@ source-git-commit: 582b7e9f36d3b9599058b4cfbe83897822b26d05
 * スマートイメージングは、「bfc」 URLパラメータを使用してオフにできます。
 * TTL(Time To Live)非依存。 以前は、スマートイメージングを機能させるには、最小TTL値の12時間が必要でした。
 * 以前は、元の画像と派生画像の両方がキャッシュされ、キャッシュを無効にする2つの手順が必要でした。 最新のスマートイメージングでは、派生物のみがキャッシュされ、1ステップのキャッシュ無効化プロセスが可能です。
-* ルールセットにカスタムヘッダーを使用するお客様(例：画像応答へのカスタムヘッダー値の追加|Dynamic Media Classic [](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html))は、以前のバージョンのスマートイメージングとは異なり、最新のスマートイメージングを利用できます。
+* ルールセットでカスタム接触チャネルを使用するお客様(例： [Adding a custom header value to image responses|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html))は、以前のバージョンのスマートイメージングとは異なり、ブロックされないので、最新のスマートイメージングを利用できます。
 
 ## スマートイメージングにはライセンス費用がかかりますか？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
@@ -100,14 +100,14 @@ Also, see [Am I eligible to use Smart Imaging?](#am-i-eligible-to-use-smart-imag
 
 ## スマートイメージングを使用するための資格を私は満たしていますか？ {#am-i-eligible-to-use-smart-imaging}
 
-スマートイメージングを使用するには、会社のAEMアカウントのダイナミックメディアクラシックまたはダイナミックメディアが次の要件を満たしている必要があります。
+スマートイメージングを使用するには、会社のAEMアカウント上のダイナミックメディアクラシックまたはダイナミックメディアが次の要件を満たしている必要があります。
 
 * ライセンスの一部としてアドビによってバンドルされている CDN（コンテンツ配信ネットワーク）を使用している。
 * 汎用ドメイン(、、、など `images.company.com` )ではな `mycompany.scene7.com`く、専用ドメイン(例えば、ま `s7d1.scene7.com`たは `s7d2.scene7.com`)を使用し `s7d13.scene7.com`ます。
 
  自社のドメインを調べるには、会社のアカウントにログインします。
 
-**[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をタップします。「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在汎用ドメインを使用している場合は、テクニカルサポートチケットを送信する際に、この移行の一環として、独自のカスタムドメインへの移行をリクエストできます。
+**[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をタップします。「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在汎用トランジションを使用している場合は、テクニカルサポートチケットを送信する際に、このドメインの一部として独自のカスタムドメインに移動するように要求できます。
 
 最初のカスタムドメインは、ダイナミックメディアライセンスを使用する場合に追加費用はかかりません。
 
@@ -136,7 +136,7 @@ Also, see [Am I eligible to use Smart Imaging?](#am-i-eligible-to-use-smart-imag
       「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
    1. HTTP/2でも動作させる必要があるかどうかを示します。
 
-1. テクニカルサポートは、要求が送信された順序に基づいて、スマートイメージングの顧客の待機リストに追加します。
+1. テクニカルサポートは、要求が送信された順序に基づいて、スマートイメージングの顧客待機リストにユーザーを追加します。
 1. 要求を処理する準備が整った時点で、テクニカルサポートから連絡を差し上げ、調整と日取り設定をおこないます。
 1. **オプション**:アドビが新機能を実稼働環境にプッシュする前に、ステージングでスマートイメージングをテストするオプションがあります。
 1. 完了後、サポートから通知があります。
@@ -154,7 +154,7 @@ Also, see [Am I eligible to use Smart Imaging?](#am-i-eligible-to-use-smart-imag
 
 ## What are the risks with switching over to use Smart Imaging? {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
-顧客のWebページが表示されるリスクはありません。 ただし、AEM上のDynamic Media Classicまたはダイナミックメディアの新しい設定に移行するので、スマートイメージングへの移行によってCDNのキャッシュがクリアされることに注意してください。
+顧客のWebページが表示されるリスクはありません。 ただし、AEM上のDynamic Media Classicまたはダイナミックメディアの新しい設定に移行するので、スマートイメージングのトランジションによってCDNのキャッシュがクリアされることに注意してください。
 
 最初の切り替え中、キャッシュが再構築されるまでの間は、アドビの起点サーバーにあるキャッシュされない画像が直接ヒットします。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。ほとんどのお客様につきましては、CDN のキャッシュが完全に再構築されるまでに要する時間は 1～2 日です。
 
