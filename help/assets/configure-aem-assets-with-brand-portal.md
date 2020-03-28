@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f3928558641af89d138bfbf85ba099a4286b2f3
+source-git-commit: bdb26ba817e0599f811d7f4e131ec6ab356a4785
 
 ---
 
@@ -26,10 +26,15 @@ Adobe Experience Manager（AEM）Assets と Brand Portal の連携が、Adobe I/
 >これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。
 >
 >旧来の OAuth を使用した設定は、2020 年 4 月 6 日以降はサポートされなくなり、Adobe I/O を使用した設定に変更されます。
+
+
+>[!TIP]
 >
->旧来の OAuth ゲートウェイを使用して設定された Brand Portal を既に使用している場合は、既存の設定を削除し、Adobe I/O で新しい設定を作成することをお勧めします。
+>***既存のお客様のみ***
 >
->ただし、設定を変更しない場合、既存の設定が引き続き機能します。
+>既存のレガシーOAuth Gateway設定を引き続き使用することをお勧めします。 レガシーOAuth Gatewayの設定に問題が発生した場合は、既存の設定を削除し、Adobe I/Oを使用して新しい設定を作成します。
+
+
 
 このヘルプでは、次の2つの使用例について説明します。
 * [新しい設定](#configure-new-integration-65):新しいBrand Portalユーザーで、AEM Assets作成者インスタンスをBrand Portalで設定する場合は、Adobe I/Oで新しい設定を作成できます。
@@ -60,7 +65,7 @@ AEM 6.5を使用してAEM作成者インスタンスを設定することをお�
 
 * AEMをご利用の場合は、 [Adobe Licensing WebサイトからAEM 6.5をダウンロードします](http://licensing.adobe.com)。
 
-* アドビパートナーの場合は、 [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) （アドビパートナートレーニングプログラム）を使用してAEM 6.5をリクエストします。
+* アドビパートナーの場合は、 [Adobe Partner Trainingプログラムを使用し](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) 、AEM 6.5をリクエストします。
 
 AEMをダウンロードした後、AEMオーサーインスタンスを設定する手順については、デプロイと管理 [を参照してください](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
 
@@ -141,7 +146,7 @@ Adobe I/O統合により、IMSアカウント設定の設定で必要なAPIキ�
 
 1. 新しい統合ページを作成します。
 
-   ドロップダウンリストから組織を選択します。
+   ドロップダウンオプションから組織をリストします。
 
    **[!UICONTROL Experience Cloud]**、 **[!UICONTROL AEM Brand Portalを選択し、「続行]** 」をクリッ **[!UICONTROL クします]**。
 
@@ -153,9 +158,9 @@ Adobe I/O統合により、IMSアカウント設定の設定で必要なAPIキ�
 
 1. 組織のプロファイルを選択します。
 
-   または、デフォルトのプロファイル「 **[!UICONTROL Assets Brand Portal]** 」を選択し、「統合を作成」 **[!UICONTROL をクリックします]**。 統合が作成されます。
+   または、デフォルトのプロファイル **[!UICONTROL Assets Brand Portalを選択し]** 、「統合を作成」を **[!UICONTROL クリックします]**。 統合が作成されます。
 
-1. 統合の詳 **[!UICONTROL 細を表示するには、]** 「統合の詳細」をクリックします。
+1. 「統合の詳 **[!UICONTROL 細を続行」をクリックして]** 、統合情報を表示します。
 
    **[!UICONTROL APIキーのコピー]**
 
