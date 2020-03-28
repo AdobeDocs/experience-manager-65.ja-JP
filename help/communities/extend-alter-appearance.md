@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# 外観の変更 (HBS){#alter-the-appearance-hbs}
+# 外観の変更 (HBS) {#alter-the-appearance-hbs}
 
 カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ（/apps）に配置され、デフォルトのコメントシステムおよびカスタムモデル／ビューを参照する resourceSuperType が登録されたので、実装を変更できるようになりました。
 
@@ -30,9 +30,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)を開きます。
+* Open [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * コメント投稿のアバターを含むタグをコメントアウトします（～行21）。
+   * コメント投稿用のアバターを含むタグ（～行21）をコメントアウトします。
 
       ```
       <!--
@@ -40,9 +40,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
        -->
       ```
 
-* [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)を開きます。
+* Open [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
-   * 次のコメントエントリ用のアバターを含むタグをコメントアウトします（～行44）。
+   * 次のコメントエントリ（～行44）のアバターを含むタグをコメントアウトします。
 
       ```
       <!--
