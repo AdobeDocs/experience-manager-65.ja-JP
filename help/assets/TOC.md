@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assets User Guide
 translation-type: tm+mt
-source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
+source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
 
 ---
 
@@ -12,11 +12,11 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 # AEM 6.5 Assets User Guide {#assets}
 
 + [アセットユーザーガイド](home.md)
-+ [AEM 6.5 Assetsリリースノート](../release-notes/assets.md)
++ [AEM 6.5 Assetsリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
 + AEM Assetsの使用 {#using}
-   + [AEM Assetsのホームページエクスペリエンス](assets-home-page.md)
+   + [AEM Assetsのホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [多言語アセット](multilingual-assets.md)
    + [AEM Assets での Adobe Stock アセットの使用](aem-assets-adobe-stock.md)
@@ -24,7 +24,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
    + [アセットへのワークフローの適用](assets-workflow.md)
-   + [画像マップの追加](image-maps.md)
+   + [画像追加マップ](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
    + [AEMサイトとの接続されたアセット](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
@@ -71,7 +71,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
    + [AEM Assetsのカスタマイズと拡張](extending-assets.md)
-   + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
+   + [メディアハンドラーとメディアを使用したアセットの処理ワークフロー](media-handlers.md)
    + [検索機能の拡張](searchx.md)
    + [AEM Assets と連携するための ImageMagick のインストールと設定](best-practices-for-imagemagick.md)
    + [アセットとアクティビティストリームの統合](extending-activity-stream.md)
@@ -87,7 +87,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [アセットのリンク共有](link-sharing.md)
    + [アセットレポート](asset-reports.md)
    + [拡張スマートタグ](enhanced-smart-tags.md)
-   + [メタデータ、画像およびビデオを処理するプロファイル](processing-profiles.md)
+   + [プロファイルを使用して、メタデータ、画像およびビデオを処理します。](processing-profiles.md)
    + [カスケードメタデータ](cascading-metadata.md)
    + [アセットエディタページの作成と設定](assets-finder-editor.md)
    + [アセットサイズガイド](assets-sizing-guide.md)
@@ -121,7 +121,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [フォルダーメタデータスキーマ](folder-metadata-schema.md)
    + [スマートタグの管理](managing-smart-tags.md)
 + Brand Portal {#brandportal}
-   + [Brand PortalでのAEM Assetsの設定](configure-aem-assets-with-brand-portal.md)
+   + [AEM Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)
    + [Brand Portal へのアセットの公開](brand-portal-publish-assets.md)
    + [Brand Portal へのフォルダーの公開](brand-portal-publish-folder.md)
    + [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
