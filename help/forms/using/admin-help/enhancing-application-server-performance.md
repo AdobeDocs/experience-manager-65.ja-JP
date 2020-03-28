@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a26bc4e4ea10370dd2fc3403500004b9e378c418
 
 ---
 
@@ -105,11 +105,11 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 
    >[!NOTE]
    >
-   >JEE上のAEM Forms環境ではDocument Max Inline sizeプロパティの値が同じである必要があります。JEE上のAEM Formsは、JEE上のAEM Formsバンドルに含まれているOSGi上のAEM Forms環境です。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
+   >JEE上のAEM Forms環境ではDocument Max Inline Sizeプロパティの値が同じである必要があり、JEE上のAEM FormsをバンドルしてOSGi上のAEM Forms環境に含める場合は同じである必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
-   com.adobe.idp.defaultDocumentMaxInlineSize=[*value specified in Step 2*]
+   com.adobe.idp.defaultDocumentMaxInlineSize=`[value specified in Step 2]`
 
    >[!NOTE]
    >
@@ -173,7 +173,7 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 ### 接続プールを使用するための Windows Server の設定 {#configure-your-windows-server-for-connection-pooling}
 
 1. スタート／ファイル名を指定して実行をクリックし、「名前」ボックスに `regedit` と入力して「OK」をクリックし、レジストリエディターを起動します。
-1. レジストリキーに移動します `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
+1. レジストリキーに移動します。 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 1. レジストリエディターの右側のウィンドウで、TcpTimedWaitDelay という値の名前を探します。値の名前が表示されない場合は、メニューバーから編集／新規／DWORD 値を選択して名前を追加します。
 1. 「名前」ボックスにフラグメント名として「`TcpTimedWaitDelay`
 
