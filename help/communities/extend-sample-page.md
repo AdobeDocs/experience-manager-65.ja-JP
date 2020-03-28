@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: a5040371-3bc2-43bc-a103-7175c4c6252d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# サンプルページへのコメントの追加 {#add-comment-to-sample-page}
+# サンプルページへのコメントの追加  {#add-comment-to-sample-page}
 
-カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ(/apps)に配置されたので、拡張コンポーネントを使用できます。 影響を受けるWebサイト内のコメントシステムのインスタンスでは、そのresourceTypeをカスタムコメントシステムに設定し、必要なすべてのクライアントライブラリを含める必要があります。
+これで、カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ(/apps)に配置され、拡張コンポーネントを使用できます。 影響を受けるWebサイト内のコメントシステムのインスタンスは、そのresourceTypeをカスタムコメントシステムに設定し、必要なすべてのクライアントライブラリを含める必要があります。
 
 ## 必要な clientlib の識別 {#identify-required-clientlibs}
 
 デフォルトのコメントのスタイルと機能に必要なクライアントライブラリは、拡張されたコメントにも必要です。
 
-The [Community Components Guide](/help/communities/components-guide.md) identifies the required client libraries. コンポーネントガイドを参照し、次に示すようにコメントコンポーネントを表示します。
+The [Community Components Guide](/help/communities/components-guide.md) identifies the required client libraries. コンポーネントガイドを参照し、表示のCommentsコンポーネントを参照します。例：
 
 [https://localhost:4502/content/community-components/en/comments.html](https://localhost:4502/content/community-components/en/comments.html)
 
@@ -60,9 +60,9 @@ You can verify the resourceType in CRXDE by viewing the properties of the commen
 
 #### パブリッシュ環境：サンプルページでの Alt Comment {#publish-alt-comment-on-sample-page}
 
-カスタムアプリケーションとサンプルページの両方を公開した後に、コメントを入力できます。 When signed in, either with a [demo user](/help/communities/tutorials.md#demo-users) or admin, it is possible to post a comment.
+カスタムアプリとサンプルページの両方を公開した後、コメントを入力できます。 When signed in, either with a [demo user](/help/communities/tutorials.md#demo-users) or admin, it is possible to post a comment.
 
-aaron.mcdonald@mailinator.comコメントの投稿を次に示します。
+次に、aaron.mcdonald@mailinator.comコメントの投稿を示します。
 
 ![chlimage_1-83](assets/chlimage_1-83.png) ![chlimage_1-84](assets/chlimage_1-84.png)
 
