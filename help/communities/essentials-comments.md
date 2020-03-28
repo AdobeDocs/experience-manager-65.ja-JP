@@ -10,16 +10,16 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
 # コメントの基本事項 {#comments-essentials}
 
-このページでは、コメントシステム（コメントコンポーネント）と、メンバーがコメントや返信を投稿する際に生成されるユーザー生成コンテンツ(UGC)を管理するためのオプションを操作する際の基本的な作業を提供します。
+このページでは、コメントシステム（コメントコンポーネント）と、メンバーがコメントや返信を投稿する際に生成されるユーザー生成コンテンツ(UGC)を管理するためのオプションを操作する際の基本事項を説明します。
 
-個々の投稿がそれぞれ単一のコメントコンポーネントで表されるように、コメントシステムが確立されます。ページに含まれるコメントシステムです。 コメントシステムを呼び出すと、個々のコメントが作成されます。
+個々の投稿がそれぞれ単一のコメントコンポーネントで表されるように、コメントシステムが確立されます。これは、ページに含まれるコメントシステムです。 コメントシステムを呼び出すと、個々のコメントが作成されます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -34,7 +34,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
    <td>はい - プロパティは<i>デザイン</i>モードで編集可能</td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>Clientlibs</strong></a></td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs </strong></a></td>
    <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.voting</td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 フラグ設定理由リストは、アプリケーションに flagreasonlist.hbs を追加して内容を上書きすることによってカスタマイズできます。
 
-* /libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs
+* `/libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs`
 
 これは、コメントシステムのすべての拡張コンポーネントに適用されます。
 
@@ -91,10 +91,10 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+参照先：
 
-* [ストレージ・リソース・プロバイダの概要](srp.md) — 概要とリポジトリの使用状況の概要
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリの使用の概要
 * [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
 * [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtilsリファクタリング](socialutils.md) — 廃止されたユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
+* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
 
