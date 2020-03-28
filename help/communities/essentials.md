@@ -10,12 +10,12 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
-source-git-commit: 941ffeb40805c991eec6a601d01796cfc2cc95e4
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
+# コンポーネントおよび機能の基本事項  {#component-function-and-feature-essentials}
 
 サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。Thus, [community site templates](sites.md), from which a community site is [created](sites-console.md), are designed to include a login feature as well as user profiles, messaging, search, moderation, and translation.
 
@@ -32,7 +32,7 @@ A community site will support members creating community groups when the [commun
    * [「いいね!」の設定](essentials-liking.md)
    * [評価](rating-basics.md)
    * [投票](essentials-voting.md)
-   * *投票（利用できなくなりました）*
+   * *投票（使用できなくなりました）*
 
 ## 機能のあるコンポーネント {#components-with-functions}
 
@@ -61,7 +61,7 @@ A community site will support members creating community groups when the [commun
 * [スコアとバッジ](configure-scoring.md)
 * [検索](search-implementation.md)
 * [ソーシャルグラフ](essentials-socialgraph.md)
-* [Storage Resource Provider](srp-and-ugc.md)`(SRP)`
+* [ストレージリソースプロバイダ](srp-and-ugc.md)`(SRP)`
 
 * [タグ付け](tag.md)
 
