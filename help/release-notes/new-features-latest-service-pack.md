@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 61d1531c020b5a25207b5e3f1c2b0c14e2974e02
+source-git-commit: 5fc75e3dcb0ca107605c456d0f41be861dabc0eb
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 61d1531c020b5a25207b5e3f1c2b0c14e2974e02
 
 Adobe Experience Manager (AEM) 6.5では、四半期ごとのService Packを通じて、機能と継続的な改善を提供しています。 このアプローチは、イノベーションを導入しやすくなるため、お客様にとってメリットがあります。
 
-AEM Service Pack 4(6.5.4.0)は2020年3月6日にリ **リースされます**。 この記事では、AEMの遍歴をより豊かにするために6.5 Service Packが提供する主な機能に焦点を当てます。
+AEM Service Pack 4(6.5.4.0)は2020年3月6日にリ **リースされます**。 この記事では、AEMの遍歴をより豊かにするために6.5 Service Packのオファーが持つ主な機能に焦点を当てています。
 
 ## AEM Sites {#aem-sites}
 
@@ -35,18 +35,22 @@ AEM Service Pack 4(6.5.4.0)は2020年3月6日にリ **リースされます**。
 
 ### AEM Assets と Brand Portal の連携の設定 {#configure-assets-bp}
 
-AEM AssetsとBrand Portalの間の認証チャネルが変更されました。 これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。AEM Assets と Brand Portal の連携が、Adobe I/O を通じて設定されるようになりました。Adobe I/O が Brand Portal テナントの認証用の IMS トークンを取得します。
+AEM AssetsとBrand Portalの間の認証チャネルが変更されます。 これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。AEM Assets と Brand Portal の連携が、Adobe I/O を通じて設定されるようになりました。Adobe I/O が Brand Portal テナントの認証用の IMS トークンを取得します。
 
 Brand PortalでAEM Assetsを設定する手順は、AEMのバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 See [Configure AEM Assets with Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) for details.
 
+
+### 既知の問題 {#known-issues-bp}
+
+* Brand Portalユーザーは、AEM 6.5.4上のAdobe I/Oにアップグレードする際に、貢献度フォルダーのアセットをAEM Assetsに公開できません。
 
 ### Accessibility enhancements {#accessibility-enhancements}
 
 Experience Manager Assetsには、次のアクセシビリティ機能の強化が含まれています。
 
-* キーボードの矢印キーを使用して、ズームされた画像内の領域を移動およびパンできます。 詳しくは、キーボードキーを使用したア [セットのプレビューのみを参照してくださ](../assets/managing-assets-touch-ui.md#previewing-assets)い。
+* キーボードの矢印キーを使用して、ズームされた画像内の領域を移動およびパンできます。 詳しくは、キーボードキーを使用した [プレビューアセットのみを参照してくださ](../assets/managing-assets-touch-ui.md#previewing-assets)い。
 
-* フィルターパネルの混合状態のチェックボックス（ネストされた述語をすべて選択しない限り、最初のレベルのチェックボックスは選択されず、読み取られます）は、スクリーンリーダーで読み取り可能です。
+* フィルターパネルの混在状態のチェックボックス（ネストされた述語をすべて選択しない限り、最初のレベルのチェックボックスは選択されず、読み込まれます）は、スクリーンリーダーで読み取り可能です。
 
 * 日付と時間の形式の制約は、ユーザーがキーボードを使用して正しい形式で日付を入力できるように、日付フィールドのフィールドラベルに設定されています。
 
@@ -56,7 +60,7 @@ Experience Manager Assetsには、次のアクセシビリティ機能の強化�
 
 ## AEM Forms {#aem-forms}
 
-### AEM Formsワークフローでの印刷可能出力の生成 {#generate-printable-output}
+### AEM Formsでの印刷可能出力の生成ワークフロー {#generate-printable-output}
 
 印刷可能出力の生成ワークフローの手順を使用すると、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの異なるコピーを印刷または保存できます。 この手順で、PCL、PostScript、ZPL、IPL、TPCLまたはDPL出力が生成されます。 この機能について詳しくは、「 [Forms中心のOSGi上のワークフロー — 手順リファレンス」を参照してください](../forms/using/aem-forms-workflow-step-reference.md)。
 
@@ -129,11 +133,11 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * AEM Cloud Manager CLIの更新
 
-   コマンドラインツールを使用して、Cloud Managerのタスクを自動化します。 GitHubを参照 [してください](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   コマンドラインツールを使用して、Cloud Managerタスクを自動化します。 GitHubを参照 [してください](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEMサイト：プロジェクトのアーキタイプ23
 
-   新しいAEMプロジェクトを開始する最良の方法です。 アーキタイプ23は、SPAと通 [常のサイトのプロジェクトアーキタイプを1つに結合し](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23) 、フロントエンド開発を開始するためのデフォルトのテーマを提供します。
+   新しいAEMプロジェクトを開始する最良の方法です。 アーキタイプ23は、SPAと通常のサ [イトのプロジェクトアーキタイプを1つに結合し](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23) 、フロントエンド開発をキック開始するためのデフォルトのテーマを提供します。
 
 * AEMサイト：WKNDリファレンスサイト
 
