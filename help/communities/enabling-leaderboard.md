@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# リーダーボード機能{#leaderboard-feature}
+# リーダーボード機能 {#leaderboard-feature}
 
 ## 概要 {#introduction}
 
@@ -26,8 +26,8 @@ The `Leaderboard` component provides the ability to obtain a sense of how member
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* adding the `Leaderboard` component to a [community site](/help/communities/overview.md#community-sites)
-* configuration settings for the `Leaderboard` component
+* Adding the `Leaderboard` component to a [community site](/help/communities/overview.md#community-sites)
+* Configuration settings for the `Leaderboard` component
 
 ### リーダーボードをページに追加 {#adding-a-leaderboard-to-a-page}
 
@@ -51,26 +51,26 @@ Select the placed `Leaderboard` component to access and select the `Configure` i
 
 #### 「設定」タブ{#settings-tab}
 
-「**設定**」タブで、メンバーに関連する情報を指定します。
+「**設定**」タブで、メンバーに関連して表示する情報を指定します。
 
 * **表示名**
 
-   ボードに表示する説明的な名前。バッジとスコアの表示に選択したルールを反映します。
+   ボードに表示するわかりやすい名前。バッジやスコアの表示に選択したルールを反映します。
 Default is `Leaderboard`, if nothing entered.
 
 * **バッジ**
 
-   オンの場合、バッジアイコンの列がリーダーボードに含まれます。
+   チェックすると、バッジアイコンの列がリーダーボードに含まれます。
 初期設定はオフです。
 
 * **バッジ名**
 
-   オンの場合、バッジ名の列がリーダーボードに含まれます。
+   チェックすると、バッジ名の列がリーダーボードに含まれます。
 初期設定はオフです。
 
 * **ユーザーアバター**
 
-   選択すると、メンバーのアバター画像がリーダーボードに含まれ、メンバープロファイルへの名前リンクの隣に表示されます。
+   オンにすると、メンバーのアバター画像がリーダーボードに含まれ、メンバーのプロファイルへの名前リンクの横に表示されます。
 初期設定はオフです。
 
 #### 「ルール」タブ{#rules-tab}
@@ -91,9 +91,7 @@ Default is `Leaderboard`, if nothing entered.
 
 * **最大表示数**
 
-   1ページに表示するメンバーの数。
-
-   初期設定は 10 です。
+   1ページに表示するメンバの数。デフォルトは10です。
 
 ### 例：参加者のリーダーボード {#example-participants-leaderboard}
 
