@@ -2,7 +2,7 @@
 title: Adobe Experience Manager Assetsリリースノート
 description: Adobe Experience Manager 6.5 Assets の新機能と強化機能について説明します。
 translation-type: tm+mt
-source-git-commit: 23f838b681d4d9eda55e287519f330addf7928aa
+source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
 
 ---
 
@@ -31,11 +31,11 @@ Your organization can use its [!DNL Adobe Stock] enterprise plan within [!DNL Ex
 
 [!DNL Adobe Stock] サービスは、あらゆるクリエイティブプロジェクトに使用できる、何百万点もの質の高い選ばれた著作権使用料不要の写真、ベクター、イラスト、ビデオ、テンプレートおよび 3D アセットを提供します。
 
-For more info, see [Use DNL Adobe Stock assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
+For more info, see [Use [!DNL Adobe Stock] assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
-![Experience Manager Assets内からAdobe Stock画像とライセンスをプレビューする](assets/stock_image_preview_license_options.png)
+![Experience Manager Assets内からのプレビューAdobe Stock画像とライセンス](assets/stock_image_preview_license_options.png)
 
-*図：内から画[!DNL Adobe Stock]像をプレビューし、ライセンスを取得しま[!DNL Experience Manager Assets]す。*
+*図：プレビュー[!DNL Adobe Stock]の画像とライセンスを[!DNL Experience Manager Assets]。*
 
 ![Experience Managerでのライセンス済みのAdobe Stock画像の検索とフィルター](assets/aem-search-filters2.jpg)
 
@@ -63,7 +63,7 @@ For more info, see [Use DNL Adobe Stock assets in Experience Manager Assets](/he
 
 ## Dynamic Media {#dynamic-media}
 
-[!DNL Dynamic Media] リッチメディアのオーサリングと配信が強化され、没入型でパーソナ [!DNL Experience Manager Assets] ライズされた最新のエクスペリエンスを実現します。 高品質のマスターアセットを1つアップロードし、アドビの高度なクラウドレンダリングとビューアを使用することで、任意のレンディションを組み合わせて、組織のメディア戦略をサポートできます。
+[!DNL Dynamic Media] リッチメディアのオーサリングと配信が強化され、没入型で [!DNL Experience Manager Assets] パーソナライズされた最新のエクスペリエンスを実現します。 高品質のマスターアセットを1つアップロードし、アドビの高度なクラウドレンダリングとビューアを使用することで、任意のレンディションを組み合わせて、組織のメディア戦略をサポートできます。
 
 For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://marketing.adobe.com/resources/help/en_US/s7/release_notes/).
 
