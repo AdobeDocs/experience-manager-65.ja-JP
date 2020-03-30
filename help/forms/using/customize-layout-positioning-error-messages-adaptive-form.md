@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 136ac7e3-9d1f-4d58-bd4f-9dbe09eeafee
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -50,7 +50,7 @@ AEM Forms では、テーマを作成してフォームに適用できるよう�
 
 ## カスタムフィールドレイアウトを作成 {#create-a-custom-field-layout}
 
-1. CRXDE Lite を開きます。The default URL is https://[Server]:[Port]/crx/de.
+1. CRXDE Lite を開きます。The default URL is https://&#39;[server]:[port]&#39;/crx/de.
 1. /libs/fd/af/layouts/field node からフィールドレイアウト（例えば、defaultFieldLayout）を /apps node（例えば、/apps/af-field-layout）にコピーします。
 1. コピーしたノードの名前と defaultFieldLayout.jsp ファイルの名前を変更します。例えば、errorOnRight.jsp。 
 
