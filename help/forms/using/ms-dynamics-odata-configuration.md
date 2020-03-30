@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,13 +18,13 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 
 ![データ統合](assets/data-integeration.png)
 
-Microsoft Dynamics は、顧客関係管理（CRM）および企業資源計画（ERP）用のソフトウェアで、顧客の口座や連絡先、潜在顧客、顧客機会、顧客事例を作成して管理する企業ソリューションを提供します。[AEM Forms のデータ統合機能](../../forms/using/data-integration.md)の OData クラウドサービス設定を使用して、オンラインの Microsoft Dynamics サービスとオンプレミスの Microsoft Dynamics サービスの両方に Forms を統合することができます。これにより、Microsoft Dynamics サービスで定義されているエンティティ、属性、サービスに基づいて、フォームデータモデルを作成できるようになります。フォームデータモデルを使用して、Microsoft Dynamics serverとやり取りするアダプティブフォームを作成し、ビジネスワークフローを有効にすることができます。 次に例を示します。
+Microsoft Dynamics は、顧客関係管理（CRM）および企業資源計画（ERP）用のソフトウェアで、顧客の口座や連絡先、潜在顧客、顧客機会、顧客事例を作成して管理する企業ソリューションを提供します。[AEM Forms のデータ統合機能](../../forms/using/data-integration.md)の OData クラウドサービス設定を使用して、オンラインの Microsoft Dynamics サービスとオンプレミスの Microsoft Dynamics サービスの両方に Forms を統合することができます。これにより、Microsoft Dynamics サービスで定義されているエンティティ、属性、サービスに基づいて、フォームデータモデルを作成できるようになります。フォームデータモデルを使用して、Microsoft Dynamics Serverとやり取りするアダプティブフォームを作成し、ビジネスワークフローを可能にできます。 次に例を示します。
 
-* Microsoft Dynamics Serverにデータのクエリを実行し、アダプティブフォームを事前入力する
+* クエリMicrosoft Dynamics Serverでのデータの取得とアダプティブフォームの自動埋め込み
 * アダプティブフォームの送信時にMicrosoft Dynamicsにデータを書き込む
-* フォームデータモデルで定義されたカスタムエンティティを使用してMicrosoft Dynamicsにデータを書き込む（逆も同様）
+* フォームデータモデルで定義されたカスタムエンティティを通じてMicrosoft Dynamicsでデータを書き込む、またはその逆
 
-AEM formsアドオンパッケージには、Microsoft DynamicsとAEM formsをすばやく統合するために利用できる参照OData設定も含まれています。
+AEM Formsアドオンパッケージには、Microsoft DynamicsとAEM Formsをすばやく統合するために利用できる参照OData設定も含まれています。
 
 パッケージがインストールされると、AEM Forms インスタンス上で以下のエンティティとサービスを使用できるようになります。
 
@@ -43,7 +43,7 @@ Microsoft Dynamics の設定を開始する前に、以下の項目が使用可�
    * オンプレミス環境の Microsoft Dynamics 365
    * オンプレミス環境の Microsoft Dynamics 2016
 
-* [Microsoft Azure Active DirectoryにMicrosoft Dynamicsオンラインサービス用のアプリケーションを登録しました](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory)。 登録済みサービスのクライアントID（アプリケーションIDとも呼ばれる）とクライアントシークレットの値を控えておきます。 これらの値は [Microsoft Dynamics サービス用にクラウドサービスを設定する](../../forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service)時に使用します。
+* [Microsoft Azure Active DirectoryにMicrosoft Dynamics Onlineサービス用のアプリケーションを登録しました](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory)。 登録済みサービスのクライアントID(アプリケーション ID)とクライアントシークレットの値を控えておきます。 これらの値は [Microsoft Dynamics サービス用にクラウドサービスを設定する](../../forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service)時に使用します。
 
 ## 登録された Microsoft Dynamics アプリケーションの応答 URL を設定する {#set-reply-url-for-registered-microsoft-dynamics-application}
 
@@ -55,7 +55,7 @@ Microsoft Dynamics の設定を開始する前に、以下の項目が使用可�
 
 1. Go to Microsoft Azure Active Directory account and add the following cloud service configuration URL in **Reply URLs** settings for your registered application:
 
-   `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+   `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
    ![Azureディレクトリ](assets/azure_directory_new.png)
 
@@ -97,7 +97,7 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
 
    * `Client-ID` は、任意の GUID ジェネレーターを使用して生成できるクライアント ID です。
    * `redirect-uri` は、AEM Forms 上の Microsoft Dynamics OData クラウドサービスに対する URL です。AEM Formsパッケージと共にインストールされるデフォルトのクラウドサービスは、次のURLにデプロイされます。
-      `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. 以下のコマンドを実行して、AD FS マシン上でアクセス権を設定します。
 
@@ -111,7 +111,7 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
 
 ## Microsoft Dynamics サービス用にクラウドサービスを設定する {#configure-cloud-service-for-your-microsoft-dynamics-service}
 
-The **MS Dynamics OData Cloud Service (OData Service)** configuration comes with default OData configuration. Odata サービスを設定して Microsoft Dynamics サービスに接続するには、以下の手順を実行します。
+**MS Dynamics OData Cloud Service (OData Service)の構成には、既定のOData構成が含まれています** 。 Odata サービスを設定して Microsoft Dynamics サービスに接続するには、以下の手順を実行します。
 
 1. **[!UICONTROL ツール／クラウドサービス／データソース]**&#x200B;に移動し、`global` 設定フォルダーをタップします。
 1. **MS Dynamics OData Cloud Service（OData サービス）**&#x200B;の設定を選択して「**[!UICONTROL プロパティ]**」をタップします。クラウドサービスの設定プロパティを表示するダイアログが開きます。
@@ -120,13 +120,13 @@ The **MS Dynamics OData Cloud Service (OData Service)** configuration comes with
 
    1. 「**サービスルート**」フィールドの値を入力します。Go to the Dynamics instance and navigate to **Developer Resources** to view the value for the Service Root field. 例：https://&lt;tenant-name>/api/data/v9.1/
 
-   1. 「**クライアント ID**」（「**アプリケーション ID**」とも呼ばれます）、「**クライアントの秘密鍵**」、「**OAuth URL**」、「**更新トークン URL**」、「**アクセストークン URL**」、「**リソース**」の各フィールドのデフォルト値を、Microsoft Dynamics サービス設定の値と置き換えます。It is mandatory to specify the dynamics instance URL in the **Resource** field to configure Microsoft Dynamics with a form data model. サービスルートURLを使用して、ダイナミクスインスタンスURLを派生します。 For example, [https://org.crm.dynamics.com](https://org.crm.dynamics.com/).
+   1. 「**クライアント ID**」（「**アプリケーション ID**」とも呼ばれます）、「**クライアントの秘密鍵**」、「**OAuth URL**」、「**更新トークン URL**」、「**アクセストークン URL**」、「**リソース**」の各フィールドのデフォルト値を、Microsoft Dynamics サービス設定の値と置き換えます。It is mandatory to specify the dynamics instance URL in the **Resource** field to configure Microsoft Dynamics with a form data model. サービスルートURLを使用して、ダイナミクスインスタンスURLを取得します。 For example, [https://org.crm.dynamics.com](https://org.crm.dynamics.com/).
 
    1. Specify **openid** in the **Authorization Scope** field for authorization process on Microsoft Dynamics.
    ![認証の設定](assets/dynamics_authentication_settings_new.png)
 
 1. 「**[!UICONTROL OAuth に接続]**」をクリックします。Microsoft Dynamics のログインページにリダイレクトされます。
-1. Microsoft Dynamics資格情報を使用してログインし、に同意して、クラウドサービスの構成からMicrosoft Dynamicsサービスへの接続を許可します。 このサービスとクラウドサービスとの間に接続を確立する操作は 1 回だけ行います。
+1. Microsoft Dynamicsの資格情報を使用してログインし、承認して、クラウドサービスの設定をMicrosoft Dynamicsサービスに接続できるようにします。 このサービスとクラウドサービスとの間に接続を確立する操作は 1 回だけ行います。
 
    クラウドサービス設定のページに切り替わります。このページには、OData の設定が正常に保存されたことを示すメッセージが表示されます。
 
@@ -140,13 +140,13 @@ When you install the AEM Forms package, a form data model,**Microsoft Dynamics F
 
 フォームデータモデルを確認するには、**[!UICONTROL フォーム／データ統合]**&#x200B;に移動します。**Microsoft Dynamics FDM** を選択し、「**編集**」をクリックしてフォームデータモデルを編集モードで開きます。または、次のURLから直接フォームデータモデルを開くこともできます。
 
-`https://[server]:[port]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
+`https://'[server]:[port]'/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
 
 ![default-fdm-1](assets/default-fdm-1.png)
 
 次に、フォームデータモデルに基づいてアダプティブフォームを作成し、次のような様々なアダプティブフォームの使用例で使用できます。
 
-* Microsoft Dynamicsのエンティティとサービスから情報をクエリして、アダプティブフォームに事前入力する
+* Microsoft Dynamicsのエンティティやサービスから情報を照会して、アダプティブフォームに事前入力する
 * アダプティブフォームルールを使用して、フォームデータモデルで定義されたMicrosoft Dynamicsサーバー操作を呼び出す
 * 送信されたフォームデータを Microsoft Dynamics のエンティティに書き込む
 
