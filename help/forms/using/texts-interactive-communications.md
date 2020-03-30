@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,14 +18,14 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
 ## 概要 {#overview}
 
-テキストドキュメントフラグメントは、1 つ以上のテキスト段落で構成されています。段落は静的または動的にすることができます。動的な段落には、フォームデータモデルのプロパティと変数を含めることができます。また、ルールを適用し、テキストドキュメントフラグメント内で繰り返すこともできます。 例えば、挨拶の顧客名は、フォームデータモデル(FDM)のプロパティで、実行時に値が使用可能になります。 これらの値を変更すると、エージェントUIを使用して、異なる顧客向けに同じInteractive Communicationを使用してInteractive Communicationを準備できます。
+テキストドキュメントフラグメントは、1 つ以上のテキスト段落で構成されています。段落は静的または動的にすることができます。動的な段落には、フォームデータモデルのプロパティと変数を含めることができます。また、ルールを適用し、テキストドキュメントフラグメント内で繰り返します。 例えば、挨拶の顧客名は、フォームデータモデル(FDM)のプロパティで、実行時に値が使用可能になります。 これらの値を変更することで、エージェントUIを使用して、同じInteractive Communicationを使用して異なる顧客向けのInteractive Communicationを準備できます。
 
-インタラクティブ通信のテキストドキュメントフラグメントは、次の種類のダイナミックデータをサポートします。
+インタラクティブドキュメントのテキスト通信フラグメントは、次のタイプのダイナミックデータをサポートします。
 
 * **データモデルオブジェクト**:データプロパティはバックエンドデータソースを使用します。
-* **ルールベースのコンテンツ**：ルールに基づいて表示と非表示が切り替わる、テキスト内の特定のコンテンツ。また、フォームデータモデルのプロパティと変数に基づいてルールを作成することもできます。
-* **変数**：テキストドキュメントフラグメントでは、バックエンドのデータソースに変数が連結されることはありません。エージェントは、変数の値を入力/選択したり、データソースに変数を連結したりし、インタラクティブ通信を後処理に送信する準備を行います。
-* **繰り返し**:クレジットカード明細のトランザクションなど、生成された各インタラクティブコミュニケーションとの間で発生する可能性のある動的な情報をインタラクティブコミュニケーションに含めることができます。 繰り返し構造を使用すると、このような動的な情報の書式設定と構造化を行うことができます。For more information, see [Inline condition and repeat](https://helpx.adobe.com/experience-manager/6-3/forms/using/cm-inline-condition.html).
+* **ルールベースのコンテンツ**：ルールに基づいて表示と非表示が切り替わる、テキスト内の特定のコンテンツ。ルールは、フォームデータモデルのプロパティと変数に基づくこともできます。
+* **変数**：テキストドキュメントフラグメントでは、バックエンドのデータソースに変数が連結されることはありません。エージェントは、変数の値を入力/選択したり、データソースに変数をバインドしたりして、後処理に送信するためのインタラクティブ通信を準備します。
+* **繰り返し**:クレジット・カード明細のトランザクションなど、生成された各インタラクティブ・コミュニケーションとのオカレンスの変化が続く可能性のある、インタラクティブ・コミュニケーションに動的な情報が含まれる場合があります。 繰り返し構造を使用すると、このような動的な情報の書式設定と構造化を行うことができます。For more information, see [Inline condition and repeat](https://helpx.adobe.com/experience-manager/6-3/forms/using/cm-inline-condition.html).
 
 ## テキストの作成 {#createtext}
 
@@ -33,8 +33,8 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 1. Select **[!UICONTROL Create]** > **[!UICONTROL Text]**.
 1. 次の情報を指定します。
 
-   * **[!UICONTROL タイトル]**:（オプション）テキストドキュメントフラグメントのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。テキストは、そのタイトル（利用可能な場合）によって、サムネールやプロパティとして参照されます。
-   * **[!UICONTROL 名前]**:フォルダー内のテキストの一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英語以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
+   * **[!UICONTROL タイトル]**:（オプション）テキストドキュメントフラグメントのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。テキストは、そのタイトル（利用可能な場合）によって、サムネールやプロパティで参照されます。
+   * **[!UICONTROL 名前]**:フォルダー内のテキストの一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
 
    * **[!UICONTROL 説明]**：テキストの説明を入力します。
    * **[!UICONTROL フォームデータモデル]**：（任意）フォームデータモデルに基づいてテキストを作成する場合は、「フォームデータモデル」ラジオボタンを選択します。When you select Form Data Model radio button, **[!UICONTROL Form Data Model]** field appears. フォームデータモデルを参照して選択します。インタラクティブ通信用のテキストを作成する場合は、そのインタラクティブ通信で使用するものと同じデータモデルを使用する必要があります。For more information on Form Data Model, see [Data Integration](/help/forms/using/data-integration.md).
@@ -61,7 +61,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
    * [ショートカットキー](/help/forms/using/keyboard-shortcuts.md)
    >[!NOTE]
    >
-   >テキストエディターで@記号を使用して、フォームデータモデルの要素、データディクショナリの要素および変数を追加できます。 テキストエディターで先頭に@が付いた文字列を入力すると、すべてのデータモデル要素、データディクショナリ要素および変数が検索され、検索された文字列を含む要素または変数が表示されます。 検索結果内を移動して、要素または変数を選択できます。 一致する結果がない場合は、「一致する結果が見つか *りません* 」というメッセージが表示されます。
+   >テキストエディターで@記号を使用して、フォームデータモデルの要素、データディクショナリの要素および変数を追加できます。 テキストエディターで先頭に@が付いた文字列を入力すると、すべてのデータモデル要素、データディクショナリ要素および変数が検索され、検索された文字列を含む要素または変数が表示されます。 検索結果内を移動し、要素または変数を選択できます。 一致する結果がない場合は、「一致する結果が見つ *かりません* 」というメッセージが表示されます。
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
@@ -79,15 +79,15 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
 ## フォームデータモデルのプロパティを使用してテキストドキュメントフラグメントをカスタマイズする {#formdatamodel}
 
-フォームデータモデルのプロパティを挿入することにより、テキストドキュメントフラグメントをカスタマイズすることができます。フォームデータモデルのプロパティをテキストに挿入すると、インタラクティブ通信をプレビューしながら、関連するデータソースから受信者固有のデータを取得して入力できます。 For more information on form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+フォームデータモデルのプロパティを挿入することにより、テキストドキュメントフラグメントをカスタマイズすることができます。フォームデータモデルのプロパティをテキストに挿入すると、Interactive Communicationをプレビューしながら、関連するデータソースから受信者固有のデータを取得し、入力できます。 For more information on form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
-テキストの作成中にフォームデータモデルを指定した場合は、フォームデータモデルのプロパティがテキストエディターの左ペインに表示されます。 指定するフォームデータモデルは、テキストドキュメントフラグメントと、そのフラグメントを含むインタラクティブ通信に対して同じである必要があります。
+テキストの作成時にフォームデータモデルを指定した場合は、フォームデータモデルのプロパティがテキストエディターの左ペインに表示されます。 指定するフォームデータモデルは、テキストドキュメントフラグメントと、それを含むインタラクティブ通信に対して同じである必要があります。
 
 ![insertfdmelementtext](assets/insertfdmelementtext.png)
 
 * To insert an form data model property into text, place the cursor where you want to insert the property, then select the **[A]** property in the left pane by tapping on it, and tap **[!UICONTROL [B]Add Selected]**. You can also just double-tap the property to insert it at the**[ C ]**cursor position. フォームデータモデルのプロパティは、茶色がかった背景色でハイライト表示されます。
 
-また、テキストエディターで@記号を使用して、フォームデータモデルのプロパティを検索して追加することもできます。 プロパティを挿入する位置にカーソルを置きます。 @の後に検索文字列を入力します。 検索操作は、ドキュメントフラグメントで使用可能なすべてのフォームデータモデルプロパティと変数に対して実行されます。 検索文字列を含むプロパティまたは変数が取得され、コンボボックスとして表示されます。 検索結果内を移動し、カーソル位置に挿入するプロパティをクリックします。 検索結果を非表示にするには、Escキーを押します。
+また、テキストエディターで@記号を使用して、フォームデータモデルのプロパティを検索し、追加することもできます。 プロパティを挿入する位置にカーソルを置きます。 @の後に検索文字列を入力します。 検索操作は、フォームデータモデルのすべてのプロパティと、フォームフラグメントで使用可能なドキュメントに対して実行されます。 検索文字列を含むプロパティまたは変数が取得され、ドロップダウンリストとして表示されます。 検索結果内を移動し、カーソル位置に挿入するプロパティをクリックします。 検索結果を非表示にするには、Escキーを押します。
 
 * To allow the agents to edit an form data model property&#39;s value in the agent UI while [Prepare and send Interactive Communication](/help/forms/using/prepare-send-interactive-communication.md) using the Agent UI, tap the **[D]** lock icon for that property and ensure it is in an unlocked state. プロパティのデフォルトの状態はロックされ、エージェントはエージェントUIでプロパティを編集できません。
 
@@ -134,7 +134,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
    変数が明るい青の背景色でハイライト表示され、フォームデータモデルのプロパティが茶色の背景色でハイライト表示されます。
 
-   また、テキストエディターで@記号を使用して変数を検索し、追加することもできます。 変数を挿入する場所にカーソルを置きます。 @の後に検索文字列を入力します。 検索操作は、ドキュメントフラグメントで使用可能なすべてのフォームデータモデルプロパティと変数に対して実行されます。 検索文字列を含むプロパティと変数が取得され、コンボボックスとして表示されます。 検索結果内を移動し、カーソル位置に挿入する変数をクリックします。 検索結果を非表示にするには、Escキーを押します。
+   また、テキストエディターの@記号を使用して、変数を検索して追加することもできます。 変数を挿入する場所にカーソルを置きます。 @の後に検索文字列を入力します。 検索操作は、フォームデータモデルのすべてのプロパティと、フォームフラグメントで使用可能なドキュメントに対して実行されます。 検索文字列を含むプロパティと変数が取得され、ドロップダウンリストとして表示されます。 検索結果内を移動し、カーソル位置に挿入する変数をクリックします。 検索結果を非表示にするには、Escキーを押します。
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
@@ -167,7 +167,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
    >[!NOTE]
    >
-   >コレクションプロパティは、テキストを条件付けおよび表示するルールの作成に対してはサポートされていません。
+   >コレクションプロパティは、テキストを条件付きで表示するルールの作成に対してはサポートされていません。
 
 1. 「次の値と等しい」、「次の値を含む」、「次の値で始まる」など、ルールを評価するための適切な演算子を選択します。
 
@@ -216,9 +216,9 @@ While creating or editing text, the toolbar changes depending on the type of edi
 
 ![textbackgroundcolorapplied-1](assets/textbackgroundcolorapplied-1.png)
 
-You can either directly tap a basic color **[A]** present in the Basic Colors palette or tap **Select** after using the slider **[B]** to choose the appropriate shade of the color.
+You can either directly tap a basic color `**[A]**` present in the Basic Colors palette or tap **Select** after using the slider `**[B]**` to choose the appropriate shade of the color.
 
-Optionally, you can also go to the Advanced tab to select the appropriate Hue, Lightness, and Saturation **[C]** to create the precise color and then tap Select **[D]** to apply the color to highlight the text.
+Optionally, you can also go to the Advanced tab to select the appropriate Hue, Lightness, and Saturation `**[C]**` to create the precise color and then tap Select `**[D]**` to apply the color to highlight the text.
 
 ![textbackgroundcolor-2](assets/textbackgroundcolor-2.png)
 
@@ -244,7 +244,7 @@ Optionally, you can also go to the Advanced tab to select the appropriate Hue, L
 
 * 通貨記号（€、¥、£など）
 * 数学記号（∑、√、∂、^など）
-* 「」や「」などの句‟読点記号
+* やなどの句読‟記号
 
 ![specialcharacters-2](assets/specialcharacters-2.png)
 
@@ -252,7 +252,7 @@ Optionally, you can also go to the Advanced tab to select the appropriate Hue, L
 
 ## テキストの検索と置換 {#searching}
 
-大量のテキストを含むテキストドキュメントフラグメントを処理する場合は、特定のテキスト文字列を検索する必要があります。 また、特定のテキスト文字列を別の文字列に置き換える必要がある場合もあります。
+大量のテキストを含むテキストドキュメントフラグメントを使用する場合は、特定のテキスト文字列を検索する必要があります。 また、特定のテキスト文字列を別の文字列で置き換える必要がある場合もあります。
 
 「検索と置換」機能により、テキストドキュメントフラグメント内の任意のテキスト文字列を検索して置き換えることができます。この機能には、強力な正規表現検索も含まれています。
 
