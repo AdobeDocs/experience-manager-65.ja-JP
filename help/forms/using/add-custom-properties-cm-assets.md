@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,7 +33,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
 
 ### シナリオ：すべてのアセットタイプへの共通フィールド（プロパティ）の追加 {#scenario-adding-a-common-field-property-to-all-the-asset-types}
 
-このシナリオでは、すべてのアセットタイプ（テキスト、リスト、条件およびレイアウトフラグメント）およびレターにカスタムプロパティを追加する方法について説明します。このシナリオを使用して、すべてのアセットとレターにプロパティ「受信者の場所」を追加できます。 Location of recipientsプロパティは、アセットやレターの配信の地理的な領域を特定するのに役立ちます。
+このシナリオでは、すべてのアセットタイプ（テキスト、リスト、条件およびレイアウトフラグメント）およびレターにカスタムプロパティを追加する方法について説明します。このシナリオを使用して、すべてのアセットとレターにプロパティ(受信者の場所)を追加できます。 Location of Location of Assetsプロパティは、アセットや受信者が関連する配信の地理的領域を特定するのに役立ちます。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
 
 すべてのアセットタイプおよびレターにカスタムプロパティを追加するには、次の手順を実行します。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. 次の手順を使用して、appsフォルダーに、ccruiフォルダー内のcssフォルダーに類似したパス/構造でcssという名前のフォルダーを作成します。
 
    1. Right-click the items folder at the following path and select **Overlay Node**:
@@ -54,11 +54,11 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items
+      **パス：** /libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
       ![ノードをオーバーレイ](assets/cmmetapropertiesoverlaynode.png)
 
@@ -74,9 +74,9 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
 
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：GeoLocation（またはこのプロパティに付ける名前）
+      **名前：** GeoLocation（またはこのプロパティに付ける名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
       ![ノードを作成：GeoLocation](assets/geographicallocationcreatenode.png)
 
@@ -86,7 +86,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       | **名前** | **種類** | **値** |
       |---|---|---|
       | fieldLabel | 文字列 | フィールド／プロパティに与える任意の名前。（ここでは「Location of recipients」） |
-      | name | 文字列 | `./extendedproperties/GeoLocation` （値は、itemsノードの下に作成したフィールド名と同じにします）。 |
+      | name | 文字列 | `./extendedproperties/GeoLocation` （値は、itemsノードの下に作成したフィールド名と同じにします） |
       | renderReadOnly | Boolean | true |
       | sling:resourceType | 文字列 | `granite/ui/components/coral/foundation/form/textfield` |
 
@@ -186,8 +186,8 @@ Create a node for each of the properties (fields) for which you need to create a
 
 次の手順を使用して、すべてのアセットにフィールド付きのタブを追加できます。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
-1. 次の手順を使用して、appsフォルダーにcmmetadatapropertiesという名前のフォルダーを作成し、（コンテンツフォルダー内の）cmmetadatapropertiesフォルダーに類似したパスや構造を持たせます。
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
+1. 次の手順を使用して、「cmmetadataproperties」という名前のフォルダーをappsフォルダーに作成し、（コンテンツフォルダー内の）cmmetadatapropertiesフォルダーに類似したパスや構造で作成します。
 
    1. Right-click the cmmetadataproperties folder at the following path and select **Overlay Node**:
 
@@ -197,11 +197,11 @@ Create a node for each of the properties (fields) for which you need to create a
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/content/cmmetadataproperties
+      **パス：** /libs/fd/cm/ma/gui/content/cmmetadataproperties
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
@@ -209,7 +209,7 @@ Create a node for each of the properties (fields) for which you need to create a
 
       「**すべて保存**」をクリックします。
 
-1. cmmetadatapropertiesフォルダーの下で、すべてのアセットに対してカスタムタブを作成するためのノードを追加します(例：commontab)を使用します。
+1. cmmetadatapropertiesフォルダーの下で、すべてのアセットのカスタムタブを作成するためのノードを追加します(例：commontab)を次の手順で使用します。
 
    1. cmmetadataproperties フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
 
@@ -217,9 +217,9 @@ Create a node for each of the properties (fields) for which you need to create a
 
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：commontab（またはこのプロパティに付ける名前）
+      **名前：** commontab（またはこのプロパティに付ける名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは「commontab」）。CRX にノードのプロパティが表示されます。
    1. このノード（ここでは「commontab」）に次のプロパティを追加します。
@@ -253,18 +253,18 @@ Create a node for each of the properties (fields) for which you need to create a
 
       **名前：** items
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. Click **Save All:**
 
-1. 前の手順（「commontab」の下）で作成した項目ノードで、次の手順（列を追加するには、この手順を繰り返します）を使用して、カスタムタブ(「commontab」)に列を作成するノード（ここでは「Column1」）を追加します。
+1. 前の手順（「commontab」の下）で作成した項目ノードで、次の手順（列を追加するには、この手順を繰り返します）を使用して、列を作成するノード（ここでは「Column1」）をカスタムタブ(「commontab」)に追加します。
 
    1. items ノードを右クリックし、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：列1（またはノードに付ける名前 — この名前はユーザーインターフェイスに表示されません）
+      **名前：** 列1（またはノードに付ける名前。この名前はユーザーインターフェイスに表示されません）。
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. Add the following property to the node (Here Column1) and then click **Save All**:
 
@@ -283,14 +283,14 @@ Create a node for each of the properties (fields) for which you need to create a
          </tbody>
        </table>
 
-1. 前の手順で作成したノード（ここでは「Column1」）で、次の手順を使用して「items」というノードを追加します。
+1. 前の手順（ここでは「Column1」）で作成したノードで、次の手順を使用して「items」というノードを追加します。
 
    1. ノード（ここでは「Column1」）を右クリックし、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
       **名前：** items
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 「**すべて保存**」をクリックします。
 
@@ -301,7 +301,7 @@ Create a node for each of the properties (fields) for which you need to create a
 
       **名前：** GeographicalLocation（または、フィールドプロパティの別の名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 次のプロパティをフィールドノード（ここでは GeographicalLocation）に追加し、「**すべて保存**」をクリックします。
 
@@ -328,20 +328,20 @@ Create a node for each of the properties (fields) for which you need to create a
 
       **パス:** `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items`
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。フォルダーが作成されます。「**すべて保存**」をクリックします。
 
-1. 次の手順を使用して、新しく作成したitemsフォルダーに、アセット内のカスタムタブのノードを追加します（ここではmytab — この名前はユーザーインターフェイスに表示されません）。
+1. 次の手順を使用して、新しく作成したitemsフォルダーに、アセット内のカスタムタブのノード（ここではmytab — この名前はユーザーインターフェイスに表示されません）を追加します。
 
    1. items フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
       **名前：** mytab（または、このプロパティに与える任意の名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは「mytab」）。CRX にノードのプロパティが表示されます。
    1. このノード（ここでは「customtab」）に次の 2 つのプロパティを追加します。
@@ -354,7 +354,7 @@ Create a node for each of the properties (fields) for which you need to create a
            <td><strong>値</strong></td>
          </tr>
          <tr>
-           <td>path<br /> </td>
+           <td>パス<br /> </td>
            <td>文字列</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
@@ -387,16 +387,16 @@ Create a node for each of the properties (fields) for which you need to create a
 * データディクショナリ
 * レター
 
-例えば、テキストアセットにのみ、アセットが関連する地理的な領域を識別するプロパティ「受信者の場所」を追加するとします。  ![アセットに追加されたカスタムプロパティ](assets/newtabui.png)
+例えば、テキストアセットにのみプロパティ「受信者の場所」を追加して、アセットが関連する地理的な領域を識別します。  ![アセットに追加されたカスタムプロパティ](assets/newtabui.png)
 
 アセットタイプにプロパティを追加するには、次の手順を実行します。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. アセットタイプ（テキストなど）でタブを作成するには、appsフォルダーに次のフォルダー構造を作成します。
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items`
 
-   [AssetType] = text, condition, list, letter, datadictionary, or fragment
+   [AssetType] = text, condition, letter, datadictionary, or fragment
 
    次の手順に従って、このフォルダー構造を作成します。
 
@@ -412,24 +412,24 @@ Create a node for each of the properties (fields) for which you need to create a
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items
+      **パス：** /libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
       「**すべて保存**」をクリックします。
 
-1. 新しく作成したitemsフォルダーに、アセットのカスタムタブのノードを追加します(例：customtab)を次の手順で使用します。
+1. 新しく作成したitemsフォルダーで、アセットのカスタムタブのノードを追加します(例：customtab)を次の手順で使用します。
 
    1. items フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
       **名前：** customtab（または、このプロパティに与える任意の名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは「customtab」）。CRX にノードのプロパティが表示されます。
    1. このノード（ここでは「customtab」）に次の 2 つのプロパティを追加します。
@@ -448,18 +448,18 @@ Create a node for each of the properties (fields) for which you need to create a
 
       **名前：** items
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 「**すべて保存**」をクリックします。
 
-1. 前の手順（「customtab」の下）で作成した「items」ノードで、次の手順を使用して、カスタムタブに列を作成するノード（ここでは「Column1」）を追加します（列を追加するには、この手順を繰り返します）。
+1. 前の手順（customtabの下）で作成したitemsノードで、次の手順を使用して、列（ここではColumn1）を作成するためのノードをカスタムタブに追加します（列を追加するには、この手順を繰り返します）。
 
    1. items ノードを右クリックし、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：列1（またはノードに付ける名前）
+      **名前：** 列1（またはノードに付ける名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. Add the following property to the node (Here Column1) and then click **Save All**.
 
@@ -478,14 +478,14 @@ Create a node for each of the properties (fields) for which you need to create a
          </tbody>
        </table>
 
-1. 作成する各列（前の手順 — ここでは「Column1」で指定）に対して、次の手順を使用して「item」というノードを作成します。
+1. 作成する各列（前の手順 — ここではColumn1）に対して、次の手順を使用してitemというノードを作成します。
 
    1. 関連する列ノード（ここでは「Column1」）を右クリックし、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
       **名前：** items
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. Click **Save All:**
 
@@ -494,9 +494,9 @@ Create a node for each of the properties (fields) for which you need to create a
    1. 関連ノード（ここでは「Column1」の下の「items」）を右クリックし、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：選択した名前（ここでは「GeoLocation」）
+      **名前：** 選択した名前（ここではGeoLocation）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 次のプロパティをノードに追加して、「**すべて保存**」をクリックします。
 
@@ -525,11 +525,11 @@ Create a node for each of the properties (fields) for which you need to create a
 
 1. ノードをオーバーレイダイアログで、レターに次の値が表示されていることを確認します。他のアセットタイプのパスは以下の表に示されています。
 
-   **** パス：/libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items
+   **パス：** /libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items
 
-   **** 場所：/apps/
+   **場所：** /apps/
 
-   **** ノードタイプの一致：選択
+   **ノードタイプを一致：** 選択
 
    アセットの種類に応じたパスを使用する必要があります。
 
@@ -585,7 +585,7 @@ Correspondence Management アセットにカスタムプロパティを追加し
 
 次の手順を実行して、Correspondence ManagementのアセットリストUIにカスタムプロパティを表示します。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. apps フォルダーに以下のフォルダー構造を作成します。
 
    `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns`
@@ -598,11 +598,11 @@ Correspondence Management アセットにカスタムプロパティを追加し
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns
+      **パス：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/表示/リスト/columns
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
@@ -613,9 +613,9 @@ Correspondence Management アセットにカスタムプロパティを追加し
    1. 関連ノード（ここでは「columns」）を右クリックし、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：選択した名前（ここではGeographicalLocation）
+      **名前：** 選択した名前（ここではGeographicalLocation）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 次のプロパティをノードに追加して、「**すべて保存**」をクリックします。
 
@@ -656,17 +656,17 @@ Correspondence Management アセットにカスタムプロパティを追加し
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/components/admin/childpagerenderer/childlistpage
+      **パス：** /libs/fd/cm/ma/gui/components/admin/childpagerenderer/childlistpage
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
       「**すべて保存**」をクリックします。
 
-1. childlistpage.jspファイルを次の場所からコピーします。
+1. 次の場所からchildlistpage.jspファイルをコピーします。
 
    /libs/fd/cm/ma/gui/components/admin/childpagerenderer/childlistpage/childlistpage.jsp
 
@@ -698,7 +698,7 @@ Correspondence Management アセットにカスタムプロパティを追加し
       %>
       ```
 
-   1. &lt;tr>タグ(&lt;tr &lt;%= attrs.build() %>)の先頭の前に、次を追加します。
+   1. 追加&lt;tr>タグ(&lt;tr &lt;%= attrs.build() %>>)の開始前に、次のように記述します。
 
       ```
       <%
@@ -728,7 +728,7 @@ Correspondence Management アセットにカスタムプロパティを追加し
 
    この手順で追加した UI 列およびプロパティは、すべてのアセットタイプで表示されます。ただし、これらのプロパティの値は、最初にカスタムプロパティを追加したアセットタイプに対してのみ入力および表示できます。
 
-   例えば、シナリオを使用する場合は、次のように指定します。特定のアセットタイプに対してカスタムプロパティを追加し、カスタムプロパティをテキストアセットに追加する場合は、カスタムプロパティを入力できるのはテキストアセットに対してのみです。 ただし、そのカスタムプロパティを UI に表示する場合、列はすべてのアセットタイプで表示されます。
+   例えば、シナリオの使用：特定のアセットタイプに対してカスタムプロパティを追加し、カスタムプロパティをテキストアセットに追加する場合は、カスタムプロパティをテキストアセットにのみ入力できます。 ただし、そのカスタムプロパティを UI に表示する場合、列はすべてのアセットタイプで表示されます。
 
    ![custompropertyinlistview](assets/custompropertyinlistview.png)
 
@@ -764,7 +764,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
 カスタムプロパティのインデックス作成を可能にするには、次の手順を実行します。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. Go to `/oak:index/cmLucene`and add a node named **aggregates** under it.
 
    1. cmLucene フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
@@ -772,23 +772,23 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
       **名前：** aggregates
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 「**すべて保存**」をクリックします。
 
-1. 新しく作成されたaggregatesフォルダーの下に、ノードcm:resourceを追加します。 cm:resource の下に、include0 という名前のノードを追加します。
+1. 新しく作成した集計フォルダーの下に、ノードcm:resourceを追加します。 cm:resource の下に、include0 という名前のノードを追加します。
 
    1. aggregates フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：cm:resource
+      **名前：** cm:resource
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. Right click the cm:resource folder and select **Create** > **Create Node**. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：include0
+      **名前：** include0
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは「include0」）。CRX にノードのプロパティが表示されます。
    1. このノード（ここでは「include0」）に次のプロパティを追加します。
@@ -817,9 +817,9 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
    1. properties フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：場所（または検索に追加するカスタムプロパティの名前）
+      **名前：** 場所（または検索に追加するカスタムプロパティの名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 作成した新しいノード（ここでは「location」）をクリックします。CRX にノードのプロパティが表示されます。
    1. このノード（ここでは「location」）に次のプロパティを追加します。
@@ -837,14 +837,14 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
 >[!NOTE]
 >
->まだ検索できない場合は、インデックス作成の問題が原因の可能性があります。インデックスを再作成する場合は、次のノードに移動し、「re-index」プロパティの値をtrueに変更します。
+>まだ検索できない場合は、インデックス作成の問題が原因の可能性があります。インデックスを再作成するには、次のノードに移動し、プロパティ「re-index」の値をtrueに変更します。
 >
 >/oak:index/cmLucene およびプロパティの値の変更
 
 ## 検索ページのデフォルト表示の変更 {#change-default-view-of-the-search-page}
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
-1. appsフォルダーで、/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/viewsにあるlistフォルダーに類似したパス/構造を持つlistという名前のフォルダーを作成します。
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
+1. appsフォルダーで、/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/リスト内の表示フォルダーに類似したパス/構造を持つ「リスト」という名前のフォルダーを作成します。
 
    1. Right-click the items folder at the following path and select **Overlay Node**:
 
@@ -852,11 +852,11 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views/list
+      **パス：** /libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/表示/リスト
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
@@ -887,8 +887,8 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 >
 >以下の手順は、フォームとドキュメント、アセット、サイトなどのすべてのコンソールのデフォルト表示を変更します。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
-1. appsフォルダーで、listという名前のフォルダーを作成し、次の場所にあるリストフォルダーに類似したパスや構造を指定します。
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
+1. appsフォルダーで、次の場所にあるフォルダーフォルダーと同様のパス/構造で「リスト」という名前のリストーを作成します。
 
    /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/
 
@@ -898,11 +898,11 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/list
+      **パス：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/表示/リスト
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
@@ -931,7 +931,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
 カスタムプロパティを表示または非表示にするには、次の手順を実行します。
 
-1. geographicallocationなどのカスタムプロパティノードの下で、「granite:rendercondition」という名前で「nt:unstructured」というタイプの新しいノードを作成します。
+1. 地理的割り当てなどのカスタムプロパティノードの下で、「granite:rendercondition」という名前の「nt:unstructured」というタイプの新しいノードを作成します。
 1. 次のプロパティをノードに追加し、「**すべて保存**」をクリックします。
 
    <table>
