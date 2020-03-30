@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 * 目的のデータソースから取得した XML データの URL（cmDataUrl パラメーターを使用）
 
 例えば、カスタムポータルでは、URLを\
-`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`に含まれている場合は、ポータル上のリンクからのhrefを指定できます。
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`に含まれていない場合は、ポータル上のリンクからのhrefになります。
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## インラインデータベースの呼び出し {#inline-data-based-invocation}
 
-Another (and a more secure) way to call the Create Correspondence application could be to simply hit the URL at https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html, while sending the parameters and data to call the Create Correspondence application as a POST request (hiding them from the end user). つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
+Another (and a more secure) way to call the Create Correspondence application could be to simply hit the URL at https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html, while sending the parameters and data to call the Create Correspondence application as a POST request (hiding them from the end user). つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
 
 ### レターを指定するパラメーター {#parameters-for-specifying-letter}
 
@@ -104,4 +104,4 @@ Another (and a more secure) way to call the Create Correspondence application co
  </tbody>
 </table>
 
-cmDataURLにhttpまたはcqプロトコルを使用している場合、http/cqのURLは匿名でアクセスできる必要があります。
+cmDataURLにhttpまたはcqプロトコルを使用する場合、http/cqのURLは匿名でアクセスできる必要があります。
