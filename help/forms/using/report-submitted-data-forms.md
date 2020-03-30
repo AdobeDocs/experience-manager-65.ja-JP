@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -92,7 +92,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (オプション)</td>
-   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。<br /> デフォルトのプロパティは次のとおりです。 <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code><code>jcr:lastModified</code>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, <code>owner</code></td>
+   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは次のとおりです。<br /><code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (オプション)</td>
@@ -148,7 +148,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 **要求 URL**
 
 ```
-https://[host:[port]/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
+https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
 ```
 
 **応答**
@@ -186,7 +186,7 @@ https://[host:[port]/content/forms/portal/submission.review.json?func=addComment
 **要求 URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
+https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
 ```
 
 **応答**
@@ -218,7 +218,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getCommen
 **要求 URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
+https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
 ```
 
 **応答**
