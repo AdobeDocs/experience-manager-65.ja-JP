@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,9 +33,9 @@ Document Security では、ユーザー情報を探す際に組織の既存の�
 
 ブラウザーを使用して Web ページにログインするには、Document Security URL とアカウントが必要です。ユーザー用の URL と管理者用の URL は異なります。管理者はユーザーページにログインして、ポリシーを作成することもできます。
 
-Document Security の複数のインストール環境にアクセスする場合は、アクセスする Document Security のインスタンスに該当する URL が必要です。この情報を持っていない場合は、管理者に問い合わせてください。The default URL for the user pages is https://*[host]*:*[port]*/edc. 場合によっては、ポート番号が必要でないことがあります。詳しくは、システム管理者に確認してください。
+Document Security の複数のインストール環境にアクセスする場合は、アクセスする Document Security のインスタンスに該当する URL が必要です。この情報を持っていない場合は、管理者に問い合わせてください。The default URL for the user pages is `https://[host]:[port]/edc`. 場合によっては、ポート番号が必要でないことがあります。詳しくは、システム管理者に確認してください。
 
-The default URL for administrators is https://*[host]*:*[port]*/adminui.
+The default URL for administrators is `https://[host]:[port]/adminui`.
 
 管理者の場合、インストール時にデフォルトの上級管理者アカウントが作成されます。Document Security を最初にインストールするときは、このアカウントを使用してログインできます。
 
@@ -45,9 +45,9 @@ The default URL for administrators is https://*[host]*:*[port]*/adminui.
 
 1. ブラウザーに URL を入力します。
 
-   Document security URL: `https://`*[host ]*`:`*[port]* `/edc`
+   ドキュメントセキュリティURL: `https://[host]:[port]/edc`
 
-   or Administration Console URL: `https://`*[host ]*`:`*[port]* `/adminui`
+   または管理コンソールのURL: `https://[host]:[port]/adminui`
 
 1. ログインウィンドウで、ユーザー名とパスワードを入力して「OK」をクリックします。
 1. 管理コンソールで、サービス／Document Security をクリックします。
