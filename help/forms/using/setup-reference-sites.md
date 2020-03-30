@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ We.Financeリファレンスサイトは、既存の顧客や見込み客との�
 
 AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の主要な機能を参照することができます。
 
-* 魅力的でレスポンシブなアダプティブフォームとインタラクティブな通信のオーサリング体験をシンプル化。
+* 魅力的でレスポンシブなアダプティブフォームとインタラクティブな通信のオーサリングエクスペリエンスがシンプルになりました。
 * Interactive Communicationsを使用すると、デバイスの設定とレイアウトに合わせて、インタラクティブでパーソナライズされたレスポンシブな顧客通信を作成できます。
 * データを統合して各種のデータソースに接続し、データをフォームに事前に取り込み、フォームデータモデル経由でフォームを送信。
 * ビジネスの各種プロセスとワークフローを自動化するためのフォームワークフロー。
@@ -49,7 +49,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
 
 * **Adobe Sign 開発者アカウントと Adobe Sign API アプリケーション** 電子署名機能を使用するには、Adobe Sign 開発者アカウントが必要になります。詳しくは、「[Adobe Sign](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)」を参照してください。
 
-* AEM Formsと統合するMicrosoft Dynamics 365の実行中のインスタンス。 リファレンスサイトを実行するには、サンプルデータをMicrosoft Dynamicsインスタンスに読み込み、リファレンスサイトで使用される対話型通信に事前入力します。
+* AEM Formsと統合するMicrosoft Dynamics 365の実行中のインスタンス。 リファレンスサイトを実行するには、サンプルデータをMicrosoft Dynamicsインスタンスに読み込み、リファレンスサイトで使用されるインタラクティブな通信を事前入力します。
 * Formsアドオンパッケージを含むAEMの実行中のインスタンス。 詳しくは、「[AEM Forms のインストールと設定](../../forms/using/installing-configuring-aem-forms-osgi.md)」を参照してください。
 
 リファレンスサイトのセットアップと構成を行うには、以下の手順を実行します。以下に記載されているとおりの順序で実行することをお勧めします。
@@ -84,7 +84,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
   <tr>
    <td><a href="#xss">デフォルトの XSS 設定の上書き</a></td>
    <td>公開</td>
-   <td>XSSセキュリティでブロックされている$、{、}文字を上書きするために使用します。</td>
+   <td>XSSセキュリティでブロックされた$、{、}文字を上書きするために使用します。</td>
   </tr>
   <tr>
    <td><a href="#aemds">AEM DS の設定</a></td>
@@ -104,7 +104,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
   <tr>
    <td><a href="../../forms/using/setup-reference-sites.md#configure-oauth-cloud-service-for-microsoft-dynamics">OAuth クラウドサービスを Microsoft Dynamics 用に設定する</a></td>
    <td>オーサーインスタンスとパブリッシュインスタンス</td>
-   <td>AEM formsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft Dynamics間の通信を有効にします。 </td>
+   <td>AEM FormsでOAuthクラウドサービスを設定し、AEM FormsとMicrosoft Dynamicsの間の通信を有効にします。 </td>
   </tr>
   <tr>
    <td><a href="#scheduler">Adobe Sign スケジューラーの設定</a></td>
@@ -119,7 +119,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
   <tr>
    <td><a href="#anonymous">匿名ユーザー用のフォーム共通設定サービスの構成</a></td>
    <td>公開</td>
-   <td>この設定では、匿名ユーザーに対して、送信、署名、およびレコードの生成のドキュメントを許可します。</td>
+   <td>この設定では、匿名ユーザーに対してレコードの生成の送信、署名、ドキュメントを行うことができます。</td>
   </tr>
   <tr>
    <td><a href="#fdm">フォームデータモデルに対する REST サービス Swagger ファイルの修正</a></td>
@@ -203,7 +203,7 @@ SMTP サーバーを設定したら、Sarah Rose のペルソナを使ってフ�
 
 リファレンスサイトの使用例では、電子メール通信の発行インスタンスでAEM DSサービスの設定が必要です。 発行インスタンスでAEM DS Serviceを設定する詳しい手順については、AEM DS設定の設定を [参照してください](../../forms/using/configuring-the-processing-server-url-.md)。
 
-AEM Formsリファレンスサイトの場合、AEM DS Settings Serviceで、処理サーバーのURLではなく、パブリッシュサーバーのURLを指定します。
+AEM Formsリファレンスサイトの場合、AEM DS Settingsサービスで、処理サーバーのURLではなく、パブリッシュサーバーのURLを指定します。
 
 >[!CAUTION]
 >
@@ -220,23 +220,23 @@ To learn more about how to use packages and package share, see [How to Work With
 
 パッケージをインストールして、オーサーインスタンスとパブリッシュインスタンスを開始したら、ブラウザーで以下の URL にアクセスします。
 
-* `https://[server]:[port]/wegov`
-* `https://[server]:[port]/wefinance`
+* `https://'[server]:[port]'/wegov`
+* `https://'[server]:[port]'/wefinance`
 
 インストールが正常に完了すると、 と We.Finance のリファレンスサイトのランディングページにアクセスできるようになります。
 
 ## (Optional) Import sample data into Microsoft Dynamics {#optional-import-sample-data-into-microsoft-dynamics}
 
-住宅ローン申込書および自動保険申込書リファレンスサイトは、Microsoft Dynamicsのレコードを使用するように構成されています。 リファレンスサイトパッケージは、Microsoft Dynamicsにインポートしてリファレンスサイトを実行できるカスタムエンティティとサンプルレコードをインストールします。 サンプルデータを移行して設定するには、次の手順を実行します。
+住宅ローン申し込みサイトと自動保険申込みリファレンスサイトは、Microsoft Dynamicsのレコードを使用するように構成されています。 リファレンスサイトパッケージは、Microsoft Dynamicsにインポートしてリファレンスサイトを実行できるカスタムエンティティとサンプルレコードをインストールします。 次の手順を実行して、サンプルデータを移行し、設定します。
 
-自動保険申込用にカスタム・エンティティをインポートする手順は、次のとおりです。
+自動保険申込用にカスタムエンティティをインポートする手順は、次のとおりです。
 
-1. Download the **WeFinanceAutoInsurance_1_0.zip** solution package from `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` on your AEM author instance.
+1. Download the **WeFinanceAutoInsurance_1_0.zip** solution package from `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` on your AEM author instance.
 1. In your Microsoft Dynamics instance, go to **Settings > Solutions** and click **Import**. パッケージを選択して読み込みます。
 
-自動保険申込用にカスタム・エンティティをインポートする手順は、次のとおりです。
+自動保険申込用にカスタムエンティティをインポートする手順は、次のとおりです。
 
-1. AEMFormsFSIRefsite_1_0.zip **パッケージをからダウンロードし** ます `https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`。 パッケージを選択して読み込みます。
+1. AEMFormsFSIRefsite_1_0.zip **パッケージをからダウンロードし** ます `https://[author]:'port'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`。 パッケージを選択して読み込みます。
 
 1. In your Microsoft Dynamics instance, go to **Settings > Solutions** and click **Import**. パッケージを選択して読み込みます。
 
@@ -244,9 +244,9 @@ To learn more about how to use packages and package share, see [How to Work With
 
 1. Download the **We.Finance Customers.csv, We.Finance Auto Insurance Renewals.csv**, and **home mortgage** data files from the following locations on your AEM author instance:
 
-   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv`
-   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv`
-   * `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
+   * `https://'server':[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv`
+   * `https://'server':[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv`
+   * `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
 1. Microsoft Dynamicsインスタンスで、次の操作を行います。
 
@@ -258,13 +258,13 @@ To learn more about how to use packages and package share, see [How to Work With
 
 ## OAuth クラウドサービスを Microsoft Dynamics 用に設定する {#configure-oauth-cloud-service-for-microsoft-dynamics}
 
-AEM formsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft Dynamics間の通信を有効にします。 AEM作成者インスタンスと発行インスタンスでOAuthクラウドサービスを設定するには、次の手順を実行します。
+AEM FormsでOAuthクラウドサービスを設定し、AEM FormsとMicrosoft Dynamicsの間の通信を有効にします。 次の手順を実行して、AEM作成者インスタンスと発行インスタンスでOAuthクラウドサービスを設定します。
 
 1. On AEM author instance, go to **Tools** > **Cloud Services** > **Data Sources** > **global**. 「Dynamics統合をリフ **ァレンス」アイコンをタップし** 、「プロパティ」をタップします。
 1. Microsoft Azure Active Directory のアカウントに移動します。登録済みアプリケーションの「**応答 URL**」設定に、コピーしたクラウドサービス設定の URL を追加します。設定を保存します。
 1. In the Authentication Settings tab, specify **Service Root**, **Client Id**, **Client Secret**, and **Resource URL** for your Microsoft Dynamics instance. Click **Connect to OAuth** that redirects to the Microsoft Dynamics login page.
-1. ログイン情報を入力します。ログインすると、AEM Formsクラウドサービスの設定ページにリダイレクトされます。 「**保存して閉じる**」をクリックします。クラウドサービス設定が保存されます。
-1. Go to **Forms** > **Data Integrations** > **We.Finance**. 「自動保険(Dynamics)」を選択し、「編集」をクリックします。 Microsoft Dynamicsエンティティは、「データソース」タブの下に表示されます。 すべてのエンティティがMicrosoft Dynamicsから取得され、データソースタブの下に表示されるまで待ちます。
+1. ログイン情報を入力します。ログインすると、AEM Formsクラウドサービスの設定ページにリダイレクトされます。 「**保存して閉じる**」をクリックします。クラウドサービスの設定が保存されます。
+1. Go to **Forms** > **Data Integrations** > **We.Finance**. 「自動保険(Dynamics)」を選択し、「編集」をクリックします。 Microsoft Dynamicsエンティティは、「データソース」タブに表示されます。 すべてのエンティティがMicrosoft Dynamicsから取得され、データソースタブの下に表示されるまで待ちます。
 1. Select the **AutoInsuranceRenewal entity** and click **Test Model Object**. In the input request section, specify the value for customer ID as “900001” and click **Test**. 「出力」セクションには、顧客ID 900001用にMicrosoft Dynamicsから取得したレコードが表示されます。
 1. In the input request section, specify the value for customer ID as “900001” and click **Test**. 「出力」セクションには、顧客ID 900001用にMicrosoft Dynamicsから取得したレコードが表示されます。
 1. 発行インスタンスで手順1 ～ 6を繰り返します。
@@ -273,7 +273,7 @@ AEM formsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft
 
 オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
-1. Go to AEM Web Configuration console at `https://[server]:[host]/system/console/configMgr`.
+1. Go to AEM Web Configuration console at `https://'[server]:[port]'system/console/configMgr`.
 1. Find and tap **[!UICONTROL Adobe Sign Configuration Service]** to open it for configuration.
 1. 「**[!UICONTROL ステータス更新スケジューラーの式]**」で「**0 0/2 * * * ?**」を指定します。
 
@@ -287,7 +287,7 @@ AEM formsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft
 
 オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
-1. Go to **Tools** > **Cloud Services** > **Adobe Sign** > **global**. 「 **AEM Formsリファレンスサイトへの署名** 」を選択し、「プロパティ」をタップします。
+1. Go to **Tools** > **Cloud Services** > **Adobe Sign** > **global**. 「 **AEM Forms Reference Site Sign** 」を選択し、「Properties」をタップします。
 
    >[!CAUTION]
    >
@@ -301,7 +301,7 @@ AEM formsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft
 
 匿名ユーザーによるアクセスを許可するには、パブリッシュインスタンス上で以下の手順を実行します。
 
-1. Go to AEM Web Configuration console at `https://[server]:[port]/system/console/configMgr`.
+1. Go to AEM Web Configuration console at `https://'[server]:[port]'/system/console/configMgr`.
 1. Find and tap **[!UICONTROL Forms Common Configuration Service]** to open it for configuration.
 1. Configure the **[!UICONTROL Allow]** field for **[!UICONTROL All Users]**.
 1. 「**[!UICONTROL 保存]**」をタップします。
@@ -310,30 +310,30 @@ AEM formsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft
 
 オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
-1. CRXDE()に移動しま `https://[server]:[port]/crx/de/index.jsp`す。
-1. /conf/global/settings/cloudconfigs/fdm/roi-rest/jcr:content/swaggerFileに移動し **、swaggerファイルを開きます** 。
-1. 環境に応じてホストとポートの設定を更新します。
+1. CRXDE()に移動しま `https://'[server]:[port]'/crx/de/index.jsp`す。
+1. /conf/global/settings/cloudconfigs/fdm/roi-rest/jcr:content/swaggerFileに移動し、swaggerフ **ァイルを開きます** 。
+1. ホストとポートの設定を、ご使用の環境に合わせて更新します。
 1. 設定を保存します。
-1. (オーサ&#x200B;**ーインスタンスのみ**)ツール/ **サービス** /データソース/グ ************&#x200B;ローバルクラウドインスタンスに移動します。 「 **roi-rest** 」を選択し、「 **Properties**.Tap Authentication Settings」をタップして、「Authentication Type **Type********** To Basic Authentication Settings」を設定します。 サービ `admin`スにア `admin`クセスするためのユーザー名/パスワードを/と指定します。 Tap **Save &amp; Close**.
+1. (**Only**)ツール/サービス **/データソース/グ** ローバル ************&#x200B;作成者インスタンスに移動します。 「 **roi-rest** 」を選択し、「 **Properties**.Tap Authentication settings」をタップし、「Authentication Type **」を「Basic Authentication********** Authentication」に設定します。 サービ `admin`スにア `admin`クセスするユーザー名/パスワードを「/」と指定します。 Tap **Save &amp; Close**.
 
-## Marketing cloudとの統合 {#integrate-with-marketing-cloud}
+## Marketing Cloudとの統合 {#integrate-with-marketing-cloud}
 
-AEM FormsをAdobe AnalyticsおよびAdobe targetと統合できます。 Adobe Analyticsはアダプティブフォームのレポートを生成し、パフォーマンスを分析するのに役立ちますが、Adobe targetはパーソナライズされたエクスペリエンスを提供し、アダプティブフォームのA/Bテストを実行するのに役立ちます。
+AEM FormsをAdobe AnalyticsおよびAdobe Analyticsと統合できます。ターゲット Adobe Analyticsは、アダプティブフォームのレポートの生成やパフォーマンスの分析に役立ちますが、アドビのターゲットは、パーソナライズされたエクスペリエンスを提供し、アダプティブフォームのA/Bテストを実行するのに役立ちます。
 
-AEM FormsでAdobe AnalyticsとAdobe targetを設定するには、次の手順を実行します。
+AEM FormsでAdobe AnalyticsとAdobeターゲットを設定するには、次の手順を実行します。
 
 ### Adobe Analytics の設定 {#configureanalytics}
 
-AEM Forms を Adobe Analytics に統合することで、フォームやドキュメントに顧客がどう対応するか監視および分析できます。問題のある領域を特定して修正し、コンバージョン率を上げるための対策を行うのに役立ちます。
+AEM Forms を Adobe Analytics に統合することで、フォームやドキュメントに顧客がどう対応するか監視および分析できます。問題のある領域を特定して修正し、問題の発生を防ぐための対策を講じるのに役立ちます。コンバージョン率の向上
 
 この機能をリファレンスサイトで使用するには、「[分析とレポートの設定](../../forms/using/configure-analytics-forms-documents.md)」の手順に従って、Analytics アカウントを設定します。
 
 レポートを生成するために、シードデータはリファレンスサイトにバンドルされます。 シードデータを使用する前に、次の操作を行います。
 
-1. AEMクラウドサービスでWe.Finance解析の設定が使用可能であることを確認します。 クラウドサービスは、次のいずれかの方法で検索できます。
+1. AEMクラウドサービスでWe.Finance分析の設定が使用可能であることを確認します。 クラウドサービスは、次のいずれかの方法で検索できます。
 
    * ツール/ク **[!UICONTROL ラウドサービス/レガシーのクラウドサービスに移動するか]** 、https://&lt;host>:&lt;port>/libs/cq/core/content/tools/cloudservices.htmlを参照します。
-   * In the **[!UICONTROL Cloud Services]** page, under **[!UICONTROL Adobe Analytics]** section, click `Show Configurations`. We.Financeの設定が利用可能です。 クリックして設定を開きます。設定ページで「**[!UICONTROL 編集]**」をクリックします。有効な会社名、ユーザー名、共有暗号鍵（パスワード）およびデータセンターを入力し、「Analyticsに接続」 **[!UICONTROL をクリックします]**。 接続が成功したときのダイアログが表示されたら、設定ダ **[!UICONTROL イアログで]** 「OK」をクリックします。 Analyticsとレポートの設定の説明に従って、Analytics設定でフレ [ームワークを設定します](../../forms/using/configure-analytics-forms-documents.md)。
+   * In the **[!UICONTROL Cloud Services]** page, under **[!UICONTROL Adobe Analytics]** section, click `Show Configurations`. We.Financeの設定が利用可能であることがわかります。 クリックして設定を開きます。設定ページで「**[!UICONTROL 編集]**」をクリックします。有効な会社、ユーザー名、Shared Secret（パスワード）およびデータセンターを入力し、「 **[!UICONTROL Analyticsに接続」をクリックします]**。 接続が成功したときのダイアログが表示されたら、設定ダ **[!UICONTROL イアログで]** 「OK」をクリックします。 Analyticsとレポートの設定の説明に従って、Analyticsの設定でフレ [ームワークを設定します](../../forms/using/configure-analytics-forms-documents.md)。
 
 1. https://&lt;*host*>:&lt;*port*>/system/console/configMgrに移動し、次の操作を行います。
 
@@ -342,11 +342,11 @@ AEM Forms を Adobe Analytics に統合することで、フォームやドキ�
    * AEM Forms Analytics設定ダ **[!UICONTROL イアログの「SiteCatalystフレームワーク]** 」フィールドで、「we-finance(we-finance)」または「we-gov(we-gov)」を選択します。
    * 「**[!UICONTROL 保存]**」をクリックして、ページを更新します。
 
-1. https://&lt;ホスト>:&lt;ポート>/aem/formsのForms Managerに移動し、次の操作を行います。
+1. https://&lt;ホスト>:&lt;ポート>/aem/formsのForms Managerに移動し、次の手順を実行します。
 
    * We.Financeフォルダーを開き、レポートを表示するフォームを選択します。
-   * アクションツールバーで「Analyticsを有効にする」をクリックします。 フォームの分析を有効にしたら、「Analytics レポート」をクリックします。空白のレポートが生成されたことを確認できます。空白のレポートが生成された後、デモ用の分析レポートを生成するには、リファレンスサイトパッケージに付属のシードデータを提供する必要があります。
-   リファレンスサイトでは、クレジットカード、住宅ローン、チャイルドサポートの使用例のシードデータを使用して分析レポートを提供します。
+   * アクションツールバーで「Analyticsを有効にする」をクリックします。 フォームの分析を有効にしたら、「Analytics レポート」をクリックします。空白のレポートが生成されたことを確認できます。空のレポートが生成された後、デモ用の分析レポートを生成するには、リファレンスサイトパッケージに付属のシードデータを提供する必要があります。
+   リファレンスサイトは、分析レポートにクレジットカード、住宅ローン、チャイルドサポートの使用例のシードデータを提供します。
 
 ### Target の設定 {#configure-target}
 
@@ -355,25 +355,25 @@ AEM Forms を Adobe Analytics に統合することで、フォームやドキ�
 リファレンスサイトで統合を利用するには、AEM で次のように Target を設定します。
 
 1. Start the author quickstart with the jvm argument `-Dabtesting.enabled=true` to enable A/B testing on the server.
-   **注意**:AEMインスタンスがJBossで実行され、自動インストールからサービスとして開始される場合は、ファイルの次のエントリに `-Dabtesting.enabled=true` パラメーターを追加 `jboss\bin\standalone.conf.bat` します。
+   **注意**:AEMインスタンスがJBossで実行され、自動インストールからサービスとして開始される場合は、ファイルの次のエ `-Dabtesting.enabled=true` ントリにパラメーターを追加 `jboss\bin\standalone.conf.bat` します。
    `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
 1. アクセス `https://<hostname>:<port>/libs/cq/core/content/tools/cloudservices.html`.
 
-1. In the **[!UICONTROL Adobe Target]** section, click **[!UICONTROL Show Configurations]**. We.Finance target設定が利用可能であることがわかります。 クリックして設定を開きます。設定ページで「**[!UICONTROL 編集]**」をクリックします。The **[!UICONTROL Edit Component]** dialog for the configuration opens.
+1. In the **[!UICONTROL Adobe Target]** section, click **[!UICONTROL Show Configurations]**. We.Financeターゲット設定 クリックして設定を開きます。設定ページで「**[!UICONTROL 編集]**」をクリックします。The **[!UICONTROL Edit Component]** dialog for the configuration opens.
 
 1. Target アカウントに関連付けるクライアントコード、電子メール、パスワードを指定します。APIタイプを **[!UICONTROL RESTとして選択します]**。
-1. 「**[!UICONTROL Adobe Target に接続]**」をクリックします。Targetアカウントが正常に設定されたら、「 **[!UICONTROL OK」をクリックします]**。 パッケージ化された設定にTarget Frameworkが含まれていることがわかります。
+1. 「**[!UICONTROL Adobe Target に接続]**」をクリックします。ターゲットアカウントが正常に設定されたら、「 **[!UICONTROL OK」をクリックしま]**&#x200B;す。 パッケージ化された設定にターゲットフレームワークがある。
 
-1. 移動 `https://<hostname>:<port>/system/console/configMgr`.
+1. `https://<hostname>:<port>/system/console/configMgr` にアクセスします。
 
 1. 「**[!UICONTROL AEM Forms Target の設定]**」をクリックします。
-1. Targetフレームワークを選択します。
-1. 「**[!UICONTROL Target URLs]**」フィールドに、AEM Forms への URL を指定します。For example: `https://<hostname>:<port>/`.
+1. フレームワークをターゲットします。
+1. 「**[!UICONTROL Target URLs]**」フィールドに、AEM Forms への URL を指定します。例えば、次のように入力します。`https://<hostname>:<port>/`
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
-クレジットカード申し込みと住宅ローン申し込みの使用例では、A/Bテストの実行方法とデモ用のレポートの表示方法を示します。 チュートリアルについては、 [We.Financeリファレンスサイトのチュートリアルを参照してください](../../forms/using/finance-reference-site-walkthrough.md)。
+クレジットカード申し込みと住宅ローン申し込みの使用例では、A/Bテストの実行方法とデモ用のレポートの表示方法を示しています。 チュートリアルについては、 [We.Financeリファレンスサイトのチュートリアルを参照してくださ](../../forms/using/finance-reference-site-walkthrough.md)い。
 
 ## 次の手順 {#next-step}
 
