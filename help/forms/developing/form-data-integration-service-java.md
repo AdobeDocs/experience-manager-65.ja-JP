@@ -1,6 +1,6 @@
 ---
-title: Form Data Integration Service javaAPI Quick Start(SOAP)
-seo-title: Form Data Integration Service javaAPI Quick Start(SOAP)
+title: Form Data Integration Service JavaAPI Quick開始(SOAP)
+seo-title: Form Data Integration Service JavaAPI Quick開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: bde8e83d-56d3-4331-a025-82b327c219b7
@@ -10,26 +10,26 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Form Data Integration Service Java API Quick Start(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
+# Form Data Integration Service Java API Quick開始(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
 
-Form Data Integrationサービスでは、以下のクイックスタートを使用できます。
+Form Data Integrationサービスでは、次のクイック開始を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application serverおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-次のJavaコードの例では、PDFフォームにデータを読み込みます。 データは *Loan_data.xmlというXMLファイルに格納され、PDFフォームは* ResultLoanForm.pdfというPDFファイルとして保 *存されます*。 (Importing Form [Dataを参照](/help/forms/developing/importing-exporting-data.md#importing-form-data))。
+次のJavaコードの例を使用して、PDFフォームにデータを読み込みます。 データは *Loan_data.xmlというXMLファイルに格納され、* PDFフォームはResultLoanForm.pdfというPDFファイルとして *保存されます*。 (Importing Form [Dataを参照](/help/forms/developing/importing-exporting-data.md#importing-form-data))。
 
 ```as3
  /*
@@ -94,7 +94,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -129,9 +129,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したフォームデータの書き出し {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したフォームデータの書き出し {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
-次のJavaコードの例は、PDFフォームからデータを書き出します。 フォームデータは、 *Loan_data.xmlというXMLファイルとして保存されます*。 (Exporting Form [Dataを参照](/help/forms/developing/importing-exporting-data.md#exporting-form-data))。
+次のJavaコードの例を使用して、PDFフォームからデータを書き出します。 フォームデータは、 *Loan_data.xmlというXMLファイルとして保存されます*。 (Exporting Form [Dataを参照](/help/forms/developing/importing-exporting-data.md#exporting-form-data))。
 
 ```as3
  /*
@@ -196,7 +196,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
