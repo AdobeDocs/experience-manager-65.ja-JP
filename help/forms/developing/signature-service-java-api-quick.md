@@ -1,6 +1,6 @@
 ---
-title: SignatureサービスJava API quickStart(SOAP)
-seo-title: SignatureサービスJava API quickStart(SOAP)
+title: SignatureサービスJava API QuickStart(SOAP)
+seo-title: SignatureサービスJava API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
@@ -10,40 +10,40 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 translation-type: tm+mt
-source-git-commit: 9678b4979580bab23dea8ca7493b48b63d5bcfa6
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# SignatureサービスJava APIクイックスタート(SOAP) {#signature-service-java-api-quickstart-soap}
+# SignatureサービスJava APIクイック開始(SOAP) {#signature-service-java-api-quickstart-soap}
 
-SignatureサービスでJava API Quick Start(SOAP)を使用できます。
+Java API Quick開始(SOAP)は、Signatureサービスで使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへの署名フィールドの追加](signature-service-java-api-quick.md#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントへの署名フィールドの追加](signature-service-java-api-quick.md#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した署名フィールド名の取得](signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した署名フィールド名の取得](signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した署名フィールドの変更](signature-service-java-api-quick.md#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した署名フィールドの変更](signature-service-java-api-quick.md#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへの電子署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのデジタル署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したXFAベースのフォームへのデジタル署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したXFAベースのフォームへの電子署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの認証](signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの認証](signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した電子署名の削除](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した電子署名の削除](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application serverとMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへの署名フィールドの追加 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントへの署名フィールドの追加 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、SignatureField1という名前の署名フィールドを *Loan.pdfというPDFファイルに基づくPDFドキュメ* ントに追加します&#x200B;**。 新しい署名フィールドを含むPDFドキュメントは、LoanSig.pdfというPDFファイルとして *保存されます*。 (Adding [Signature Fieldsを参照](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields))。
+次のJavaコードの例は、 *SignatureField1という名前の署名フィールドを* 、Loan.pdfというPDFファイルに基づくPDFドキュメントに追&#x200B;*加します*。 新しい署名フィールドを含むPDFドキュメントは、LoanSig.pdfというPDFファイル *として保存されます*。 (Adding Signature Fields [](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields)を参照)。
 
 ```as3
  /*
@@ -107,7 +107,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
           //Set connection properties required to invoke AEM Forms using SOAP mode
           Properties connectionProps = new Properties();
-          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -157,7 +157,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した署名フィールド名の取得 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した署名フィールド名の取得 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
 
 The following Java code example retrieves the names of signature fields located in a PDF document named *LoanSig.pdf*. (署名フィ [ールド名の取得を参照](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names))。
 
@@ -224,7 +224,7 @@ The following Java code example retrieves the names of signature fields located 
      {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -263,9 +263,9 @@ The following Java code example retrieves the names of signature fields located 
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した署名フィールドの変更 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した署名フィールドの変更 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
 
-次のJavaコードの例では、署名フィールドに署名が適用されるときにフォーム内のすべてのフィールドをロックし、変更が許可されないようにして、SignatureField1という名前の署名フィールドを変更します。 Signatureサービスが、変更された署名フィールドを含むPDFドキュメントを返した後、PDFドキュメントはLoanSig.pdfというPDFファイルとして保存されます。 （この例は、Signatureサービスに渡されるPDFファイルを上書きします）。(Modifying Signature Fields [を参照](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields))。
+次のJavaコードの例では、署名フィールドに署名が適用されたときにフォーム内のすべてのフィールドをロックし、変更が許可されていないことを確認して、SignatureField1という名前の署名フィールドを変更します。 Signatureサービスが、変更された署名フィールドを含むPDFドキュメントを返した後、PDFドキュメントはLoanSig.pdfというPDFファイルとして保存されます。 （この例では、Signatureサービスに渡されるPDFファイルを上書きします）。(Modifying Signature Fields [](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)を参照)。
 
 ```as3
  /*
@@ -333,7 +333,7 @@ The following Java code example retrieves the names of signature fields located 
      {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -391,9 +391,9 @@ The following Java code example retrieves the names of signature fields located 
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへの電子署名 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのデジタル署名 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、LoanSig.pdfというPDFファイルに基づいてPDFドキュメントに電子署 *名を行います*。 セキュリティ証明書に対して指定されたエイリアスはセキュリティで保護され、失効確認が実行されます。 CRLまたはOCSPサーバー情報が指定されていないので、PDFドキュメントのデジタル署名に使用された証明書からサーバー情報が取得されます。 署名済みのドキュメントは、LoanSigned.pdfというPDFファイル *として保存されます*。 (See [Digitally Signing PDF Documents](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+次のJavaコードの例は、LoanSig.pdfというPDFファイルに基づいてPDFドキュメントに電子署名 *を行います*。 セキュリティ証明書に対して指定されたエイリアスは安全で、失効確認が実行されます。 CRLまたはOCSPサーバー情報が指定されていないので、サーバー情報は、PDFサーバーのデジタル署名に使用された証明書から取得されます。ドキュメント 署名済みドキュメントは、LoanSigned.pdfというPDFファイル *として保存されます*。 (See [Digitally Signing PDF Documents](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
 ```as3
  /*
@@ -461,7 +461,7 @@ The following Java code example retrieves the names of signature fields located 
      {
        //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -540,9 +540,9 @@ The following Java code example retrieves the names of signature fields located 
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したXFAベースのフォームへのデジタル署名 {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したXFAベースのフォームへの電子署名 {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
 
-次のJavaコードの例は、Formsサービスによってレンダリングされるインタラクティブフォームに署名します。 Formsサ `com.adobe.idp.Document` ービスから返されるインスタンスは、Signatureサービスに渡されます。 署名済みのインタラクティブフォームは、LoanXFASigned.pdfというPDFファイル *として保存されます*。
+次のJavaコードの例は、Formsサービスによってレンダリングされるインタラクティブフォームに署名します。 Formsサ `com.adobe.idp.Document` ービスから返されるインスタンスは、Signatureサービスに渡されます。 署名済みのインタラクティブフォームは、 *LoanXFASigned.pdfというPDFファイルとして保存されます*。
 
 ```as3
  /*
@@ -615,7 +615,7 @@ The following Java code example retrieves the names of signature fields located 
  
       //Set connection properties required to invoke AEM Forms using SOAP mode
       Properties connectionProps = new Properties();
-      connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+      connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -752,9 +752,9 @@ The following Java code example retrieves the names of signature fields located 
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの認証 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの認証 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
 
-The following Java code example certifies a PDF document that is based on a PDF file named *LoanSig.pdf*. セキュリティ証明書に対して指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。 認証済みのドキュメントは、 *LoanCertified.pdfというPDFファイルとして保存されます*。 (See [Certifying PDF Documents](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+The following Java code example certifies a PDF document that is based on a PDF file named *LoanSig.pdf*. セキュリティ証明書に指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。 認証済みドキュメントは、 *LoanCertified.pdfというPDFファイルとして保存されます*。 (See [Certifying PDF Documents](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
 
 ```as3
  /*
@@ -821,7 +821,7 @@ The following Java code example certifies a PDF document that is based on a PDF 
      {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -901,9 +901,9 @@ The following Java code example certifies a PDF document that is based on a PDF 
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した電子署名の検証 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した電子署名の検証 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
 
-次のJavaコードの例では、LoanSigned.pdfというPDFファイルに基づいて、署名済みPDFドキュメント内の電子署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションはベストエフォートに設定されます。 (電子署名 [の検証を参照](#verifying-digital-signatures))。
+次のJavaコードの例を使用すると、LoanSigned.pdfというPDFファイルに基づく署名済みPDFドキュメント内の電子署名を検証できます。 検証時間は現在の時間に設定され、失効確認オプションはベストエフォートに設定されます。 (電子署名 [の検証を参照](#verifying-digital-signatures))。
 
 ```as3
  /*
@@ -966,7 +966,7 @@ The following Java code example certifies a PDF document that is based on a PDF 
      {
        //Set connection properties required to invoke AEM Forms using SOAP mode
        Properties connectionProps = new Properties();
-       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1065,7 +1065,7 @@ The following Java code example certifies a PDF document that is based on a PDF 
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した複数の電子署名の検証 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した複数の電子署名の検証 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
 
 次のJavaコードの例では、LoanAllSigs.pdfというPDFファイルに基づいて、署名済みPDFドキュメント内にある複数の電子署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションはベストエフォートに設定されます。 (See [Verifying Multiple Digital Signatures](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api).)
 
@@ -1134,7 +1134,7 @@ The following Java code example certifies a PDF document that is based on a PDF 
      {
        //Set connection properties required to invoke AEM Forms using SOAP mode
        Properties connectionProps = new Properties();
-       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1227,9 +1227,9 @@ The following Java code example certifies a PDF document that is based on a PDF 
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した電子署名の削除 {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した電子署名の削除 {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}
 
-The following Java code example removes a digital signature from a signature field named *SignatureField1*. 署名フィールドが含まれるPDFファイルの名前は *LoanSigned.pdfです*。 (電子署名 [の削除を参照](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures))。
+The following Java code example removes a digital signature from a signature field named *SignatureField1*. 署名フィールドを含むPDFファイルの名前は *LoanSigned.pdfです*。 (電子署名 [の削除を参照](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures))。
 
 ```as3
  /*
@@ -1296,7 +1296,7 @@ The following Java code example removes a digital signature from a signature fie
      {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
