@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
 以下の方法のいずれか 1 つを使用して、監視フォルダーをファイルシステムに作成できます。
 
 * 監視フォルダー設定ノードのプロパティを設定する際に、folderPathプロパティに親ディレクトリのフルパスを入力し、作成する監視フォルダーの名前を追加します。次に例を示します。 `C:/MyPDFs/MyWatchedFolder`\
-   フォ `MyWatchedFolder`ルダーが存在しない場合、AEM Formsは指定されたパスにフォルダーを作成しようとします。
+   フォル `MyWatchedFolder`ダーが存在しない場合、AEM Formsは指定されたパスでフォルダーの作成を試みます。
 
 * ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
 
@@ -34,7 +34,7 @@ source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
 
 ## 監視フォルダー設定ノードの作成 {#create-watched-folder-configuration-node}
 
-監視フォルダーを設定するには、監視フォルダー設定ノードを作成します。次の手順を実行して設定ノードを作成します。
+監視フォルダーを設定するには、監視フォルダー設定ノードを作成します。次の手順を実行して、設定ノードを作成します。
 
 1. CRX-DE lite に管理者としてログインし、/etc/fd/watchfolder/config フォルダーに移動します。 
 
@@ -97,8 +97,8 @@ source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
    * 特定の文字列をファイル名に持つファイル。例えば data* を指定すると、data1、data2 などの名前を持つファイルおよびフォルダーが除外されます。
    * 次のような名前および拡張子が混在する式に一致するファイル。
 
-      * Data[0-9][0-9][0-9].[dD][aA][tT]
-      * *.[dD][Aa][Tt]
+      * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+      * *.[dD][Aa]&#39;port&#39;
       * *.[Xx][Mm][Ll]
 
 ファイルパターンについて詳しくは、「[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
@@ -110,9 +110,9 @@ source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
 
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * Data[0-9][0-9][0-9].[dD][aA][tT]
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
 
-      * *.[dD][Aa][Tt]
+      * *.[dD][Aa]&#39;port&#39;
       * *.[Xx][Mm][Ll]
 
 ファイルパターンについて詳しくは、「[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
@@ -216,7 +216,7 @@ source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
 
 #### ContentProcessor インターフェイスのカスタム実装 {#custom-implementation-of-the-contentprocessor-interface}
 
-カスタム実装は、処理コンテキスト（com.adobe.aemfd.watchfolder.service.api.ProcessorContext型のオブジェクト）を受け入れ、コンテキストから入力ドキュメントと設定パラメーターを読み取り、入力を処理し、出力を\
+カスタム実装は、処理コンテキスト（com.adobe.aemfd.watchfolder.service.api.ProcessorContext型のオブジェクト）を受け入れ、コンテキストから入力ドキュメントーと設定パラメーターを読み取り、入力を処理し、出力を\
 コンテキスト。 ProcessorContext には、以下の API が用意されています。
 
 * **getWatchFolderId**：監視フォルダーの ID を返します。
@@ -225,7 +225,7 @@ source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
    監視フォルダーの設定パラメーター。
 
 * **setResult**:ContentProcessorの実装\
-   apiを使用して、出力ドキュメントを結果フォルダーに書き込みます。 setResult API には出力ファイルの名前を指定できます。この API は、指定された出力フォルダーパターンまたは出力ファイルパターンに応じて、提供されたファイルを使用または無視する場合があります。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
+   apiを使用して、出力フォルダーを結果ドキュメントーに書き込みます。 setResult API には出力ファイルの名前を指定できます。この API は、指定された出力フォルダーパターンまたは出力ファイルパターンに応じて、提供されたファイルを使用または無視する場合があります。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
 
 例えば、以下のコードはカスタムの foo=bar プロパティを持つ ContentProcessor インターフェイスのカスタム実装です。
 
@@ -284,9 +284,9 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 デフォルトでは、コンテナフォルダーが提供されており、ユーザーはこのフォルダーにスクリプトを配置することができます。また、監視フォルダーのフレームワークによって使用されるデフォルトのサービスユーザーには、この場所からスクリプトを読み取るために必要な権限が付与されています。
 
-カスタムの場所にスクリプトを配置する予定がある場合は、デフォルトのサービスユーザーがカスタムの場所に対する読み取り権限を持っていない可能性があります。 その場合、次の手順を実行して必要な権限をカスタムの場所に入力します。
+スクリプトをカスタムの場所に配置する予定の場合、デフォルトのサービスユーザーには、カスタムの場所に対する読み取り権限がない可能性があります。 その場合、次の手順を実行して必要な権限をカスタムの場所に入力します。
 
-1. Create a system user programmatically or via the console https://[server]:[port]/crx/explorer. 既存のシステムユーザーを使用することもできます。ここでは、通常のユーザーではなく、システムユーザーを使用することが重要です。
+1. Create a system user programmatically or via the console https://&#39;[server]:[port]&#39;/crx/explorer. 既存のシステムユーザーを使用することもできます。ここでは、通常のユーザーではなく、システムユーザーを使用することが重要です。
 1. カスタムの場所（ここにスクリプトが保存されます）にある新規作成したシステムユーザーまたは既存のシステムユーザーに読み取り権限を与えます。カスタムの場所は複数持つことができます。すべてのカスタムの場所に少なくとも読み取り権限を付与します。
 1. Felix Configuration Console（/system/console/configMgr）で、監視フォルダーのサービスユーザーマッピングを検索します。このマッピングは「Mapping: adobe-aemds-core-watch-folder=...」のようになります。
 1. このマッピングをクリックします。「adobe-aemds-core-watch-folder:scripts=fd-service」というエントリで、fd-serviceをカスタムシステムユーザーのIDに変更します。 「保存」をクリックします。
@@ -299,7 +299,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 * ワークフローを作成する前に、次の点を考慮してください。
 * 任意のステップの出力は、すべての後続のステップで使用できるようにしておく必要があります。\
-   この手順では、前の手順で生成された既存の出力を更新（または削除）できる必要があります。
+   前の手順で生成された既存の出力を更新（または削除）できる必要があります。
 * 可変変数は、各ステップ間におけるカスタムダイナミックデータの受け渡しに使用されます。
 
 ワークフローを使用してファイルを処理するには、次の手順を実行します。
@@ -337,7 +337,7 @@ processWorkflowContext() へ渡される引数は、タイプ com.adobe.aemfd.wa
 * getConfigParameters：タイプ Map&lt;String, Object> の不変マップを返します。マップには監視フォルダーの設定パラメーターが含まれています。
 * setResult：この API は、ContentProcessor 実装が出力ドキュメントを結果フォルダーに書き出す際に使用されます。setResult API には出力ファイルの名前を指定できます。この API は、指定された出力フォルダーパターンまたは出力ファイルパターンに応じて、提供されたファイルを使用または無視する場合があります。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
 
-ワークフローでsetResult APIを使用する場合の考慮事項：
+setResult APIの考慮事項(ワークフローで使用する場合):
 
 * ワークフローの出力全体に影響する新しい出力ドキュメントを追加するには、setResult API を呼び出す際に、以前のステップで出力ファイル名として使用されていないファイル名を指定します。
 * 以前のステップで生成された出力を更新するには、setResult API を呼び出す際に、以前のステップで使用したファイル名を指定します。
@@ -559,8 +559,8 @@ log.info("Exiting workflow script!")
 * data.*
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * Data[0-9][0-9][0-9].[dD][aA][tT]
-   * *.[dD][Aa][Tt]
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * *.[dD][Aa]&#39;port&#39;
    * *.[Xx][Mm][Ll]
 
 * 結果を保存する出力フォルダーのファイルパターンを定義できます。出力フォルダー（結果、保存および失敗）には、次のファイルパターンのいずれでも指定できます。
@@ -598,7 +598,7 @@ PDF Generator と連携するように監視フォルダーを設定するには
 
 ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word ドキュメント（.docx）を PDF ドキュメントに変換します。そのようなスクリプトを作成するには、以下の手順を実行します。
 
-1. ブラウザーウィンドウで CRXDE lite を開きます。The URL is https://[server]:[port]/crx/de.
+1. ブラウザーウィンドウで CRXDE lite を開きます。The URL is https://&#39;[server]:[port]&#39;/crx/de.
 
 1. /etc/workflow/scripts に移動し、PDFG という名前のフォルダーを作成します。
 
@@ -632,7 +632,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 ### ワークフローの作成 {#create-a-workflow}
 
 1. ブラウザーウィンドウで「AEM ワークフロー」UI を開きます。\
-   https://[servername]:[port]/worklow
+   https://[servername]:&#39;port&#39;/worklow
 
 1. モデルビューで、「**新規**」をクリックします。新しいワークフローダイアログで、「**タイトル**」を指定し、「**OK**」をクリックします。
 
@@ -652,7 +652,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 ### 監視フォルダーの設定 {#configure-the-watched-folder}
 
-1. ブラウザーウィンドウで CRXDE lite を開きます。https://[server]:[port]/crx/de/
+1. ブラウザーウィンドウで CRXDE lite を開きます。https://&#39;[server]:[port]&#39;/crx/de/
 
 1. /etc/fd/watchfolder/config/フォルダーに移動し、nt:unstructuredというタイプのノードを作成します。
 
