@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -21,10 +21,10 @@ AEM Forms では、AEM Forms アプリケーションの完全なソースコー
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. パッケージshareURLに移動します。 `https://<server>:<port>/crx/packageshare`.
+1. パッケージshareURLに移動： `https://<server>:<port>/crx/packageshare`.
 
 1. ソースパッケージをダウンロードします。パッケージをダウンロードすると、AEM Forms パッケージマネージャーに追加されます。
-1. ダウンロード後、次の場所に移動します。を `https://<server>:<port>/crx/packmgr/index.jsp`選択し、インストールしま `adobe-aemfd-forms-app-src-pkg-<version>.zip`す。
+1. ダウンロード後、次の場所に移動します。をクリ `https://<server>:<port>/crx/packmgr/index.jsp`ックし、をインストールし `adobe-aemfd-forms-app-src-pkg-<version>.zip`ます。
 
 1. ソースコードアーカイブをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開いてください。
 ソースパッケージがデバイスにダウンロードされます。
@@ -70,7 +70,7 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 
 1. Copy the `adobe-lc-mobileworkspace-src-<version>.zip` archive from the downloads folder to `[User_Home]/Projects/`.
 1. Extract the archive in the `[User_Home]/Projects/[your-project]`directory.
-1. your-projectディレク ` [User_Home]/Projects/ `[トリに移動します]`/adobe-lc-mobileworkspace-src-[version]/ios` 。
+1. プロジェクトデ ` [User_Home]/Projects/ `[ィレクトリに移動]`/adobe-lc-mobileworkspace-src-[version]/ios` します。
 1. Xcode で `AEM Forms.xcodeproj` プロジェクトを開きます。
 1. 「**TARGETS**」の「**AEM Forms**」をクリックし、**AEM Forms**」を選択します。Select the **Build Settings **tab, locate the **Code Signing Entitlement** section, and in Debug and Release fields do one of the following:
 
@@ -123,7 +123,7 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 
 1. Under **PROJECT**, select **AEM Forms** and ensure that the appropriate signature is selected for **Code Signing Identity**, **Debug**, **Release** and **Any iOS SDK**.
 1. プロビジョニング済み iPad を Mac マシンに接続します。
-1. **AEM Formsプロジェクトのプロビジョニング済みデバイスを選択します** 。
+1. **AEM Formsプロジェクトのプロビジョニングされたデバイスを選択します** 。
 
    ![ipad](assets/ipad.png)
 
@@ -137,7 +137,7 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
  Xcode プロジェクトをアーカイブして、インストーラー（.ipa ファイル）とプロパティリストファイル（.plist ファイル）を構築する必要があります。プロパティリストファイルには、アプリケーションの名前やホストしているロケーションなど、ホストされているインハウスアプリケーションの設定情報が含まれます。 プロパティリストファイルについての詳細は、「[情報プロパティリストファイルについて](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)」を参照してください。
 
 1. プロビジョニングされた iPad の Mac マシンへの接続For detailed information about provisioning an iPad, see [Creating and Downloading Development Provisioning Profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/CreatingYourTeamProvisioningProfile/CreatingYourTeamProvisioningProfile.html)
-1. **AEM Formsプロジェクトのプロビジョニング済みデバイスを選択します** 。
+1. **AEM Formsプロジェクトのプロビジョニングされたデバイスを選択します** 。
 
    ![ipad-1](assets/ipad-1.png)
 
@@ -150,7 +150,7 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 1. 「**Save for Enterprise or Ad-Hoc Deployment**」を配布手段として選択し、「**Next**」をクリックします。
 1. 適切な「**Code Signing Identity**」を選択し、「**Next**」をクリックします。「**Allow**」をクリックして署名を適用します。
 1. アプリケーションに名前をつけて、「**Save for Enterprise Distribution**」を選択します。
-1. アプリケーションに&#x200B;**アプリケーション URL** を指定します。 For example, to host the app on a CRX server, provide URL `https://[LC_host]:[port]/lc/content/distribution/mobileworkspace/APP_NAME.ipa`.
+1. アプリケーションに&#x200B;**アプリケーション URL** を指定します。 For example, to host the app on a CRX server, provide URL `https://[LC_host]:'port'/lc/content/distribution/mobileworkspace/APP_NAME.ipa`.
 1. 「**タイトル**」フィールドで、AEM Forms を指定します。
 1. 「**保存**」をクリックして Xcode を閉じます。
 
