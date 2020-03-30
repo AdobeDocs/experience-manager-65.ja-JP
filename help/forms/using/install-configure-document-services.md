@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: a7ef7682df1dc627565f1cc30047ed775d2dbd13
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,7 +28,7 @@ PDF ドキュメントを PostScript または画像ファイル（JPEG、JPEG 2
 
 ドキュメントの暗号化および復号化を有効にします。ドキュメントを暗号化すると、その内容は判読できなくなります。許可されたユーザーはドキュメントを解読して、コンテンツにアクセスできます。For more information, see [Encryption Service](/help/forms/using/overview-aem-document-services.md#p-encryption-service-p).
 
-通常は Forms Designer で作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。Formsサービスは、PDFドキュメントに開発したフォームデザインをすべてレンダリングします。 For more information, see [Forms Service](/help/forms/using/forms-service.md).
+通常は Forms Designer で作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。Formsサービスは、PDFフォームに作成したフォームデザインをすべてレンダリングします。ドキュメント For more information, see [Forms Service](/help/forms/using/forms-service.md).
 
 PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成できます。レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。For more information, see [Output Service](/help/forms/using/output-service.md).
 
@@ -44,7 +44,7 @@ AEM サーバーで電子署名とドキュメントを扱うことができま�
 
 Signature サービスは、Trust Store に格納されている証明書および秘密鍵証明書にアクセスしますFor more information, see [Signature Service](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Formsは強力なエンタープライズクラスのプラットフォームで、ドキュメントサービスはAEM Formsの機能の1つにすぎません。 機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
+AEM Formsは強力なエンタープライズクラスのプラットフォームで、ドキュメントサービスはAEM Formsの機能の1つに過ぎません。 機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
 
 ## デプロイメントトポロジ {#deployment-topology}
 
@@ -81,7 +81,7 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 >[!NOTE]
 >
 >* Microsoft Windowsの場合、PDF Generatorは、HTMLファイルをPDFドキュメントに変換するためのWebKit、Acrobat WebCapture、PhantomJSの変換ルートをサポートします。
->* UNIXベースのオペレーティングシステムでは、PDF Generatorは、HTMLファイルをPDFドキュメントに変換するためのWebKitおよびPhantomJS変換ルートをサポートしています。
+>* UNIXベースのオペレーティングシステムでは、PDF Generatorは、HTMLファイルをPDFドキュメントに変換するWebKitおよびPhantomJS変換ルートをサポートします。
 >
 
 
@@ -204,7 +204,7 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 
 ### 環境変数の設定 {#setup-environment-variables}
 
-32 ビットおよび 64 ビットの Java Development Kit、サードパーティアプリケーション、Adobe Acrobat の環境変数を設定します。環境変数には、対応するアプリケーションを起動するために使用される実行可能ファイルの絶対パスを含める必要があります。例えば、次の表に、いくつかのアプリケーションの環境変数を示します。
+32 ビットおよび 64 ビットの Java Development Kit、サードパーティアプリケーション、Adobe Acrobat の環境変数を設定します。環境変数には、対応するアプリケーションの開始に使用される実行可能ファイルの絶対パスを含める必要があります。例えば、次の表は、いくつかのアプリケーションのリスト環境変数を示しています。
 
 <table> 
  <tbody> 
@@ -246,7 +246,7 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 >* すべての環境変数とそれぞれのパスでは、大文字と小文字が区別されます。
 >* JAVA_HOME、JAVA_HOME_32およびAcrobat_PATH（Windowsのみ）は必須の環境変数です。
 >* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
->* Word、PowerPoint、Excel、ProjectなどのMicrosoft OfficeアプリケーションやAutoCAD用の環境変数を設定しないでください。 これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
+>* Word、PowerPoint、Excel、ProjectなどのMicrosoft OfficeアプリケーションやAutoCAD用の環境変数は設定しないでください。 これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
 >* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
 >* UNIXベースのプラットフォームでOpenOfficeを使用している場合は、次のコマンドを実行してパス変数を設定します。\
    >  `export OpenOffice_PATH=/opt/openoffice.org4`
@@ -337,7 +337,7 @@ Microsoft Office のセキュリティセンターの設定を変更して、PDF
 
 ### エラーレポートサービスを無効にする {#disable-error-reporting-service}
 
-Windows Server上のPDF Generatorサービスを使用してドキュメントをPDFに変換する際、Windows Serverは、実行ファイルで問題が発生し、閉じる必要があると報告する場合があります。 ただし、PDF 変換はバックグラウンドで続行されるため、影響を与えません。
+Windows Server上のPDF Generatorサービスを使用してドキュメントをPDFに変換する際、Windows Serverで、実行ファイルに問題が発生し、閉じる必要があると報告されることがあります。 ただし、PDF 変換はバックグラウンドで続行されるため、影響を与えません。
 
 エラーを受信しないようにするために、Windows エラー報告を無効にすることができます。For more information on disabling error reporting, see [https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx).
 
@@ -409,7 +409,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
 
-1. （AIXのみ）次のプロパティをsling.propertiesファイルに追加します。
+1. （AIXのみ）sling.properties追加ファイルの次のプロパティ。
 
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
@@ -476,7 +476,7 @@ PDF Generator サービスを実行するには、ローカルユーザーのア
 Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用して、サポートされているファイル形式を PDF ドキュメントに変換します。次の手順を実行して、PDF Generatorサービス用のAdobe Acrobatを設定します。
 
 1. Acrobat を開き、**[!UICONTROL 編集]**／**[!UICONTROL 環境設定／]** Updater **[!UICONTROL を選択します]**。In Check for updates, deselect **[!UICONTROL Automatically install updates]**, and click **[!UICONTROL OK]**. Acrobat を終了します。
-1. システム上のPDFドキュメントをダブルクリックします。 Acrobat の初回起動時に、ログインのダイアログボックス、スタートアップスクリーンおよび EULA が表示されます。PDF Generator を使用できるすべてのユーザーに対して、このダイアログボックスを閉じます。
+1. 重複上のPDFドキュメントをクリックします。 Acrobat の初回起動時に、ログインのダイアログボックス、スタートアップスクリーンおよび EULA が表示されます。PDF Generator を使用できるすべてのユーザーに対して、このダイアログボックスを閉じます。
 1. PDF Generator ユーティリティバッチファイルを実行して、Adobe Acrobat を PDF Generator サービス用に設定します。
 
    1. [AEM Package Managerを開き](http://localhost:4502/crx/packmgr/index.jsp) 、パッケージマネージ `adobe-aemfd-pdfg-common-pkg-[version].zip` ャーからファイルをダウンロードします。
@@ -519,7 +519,7 @@ Trust Store の管理では、電子署名の検証および証明書認証の�
 
 ### Reader 拡張機能および Encription サービス用の証明書を設定します。{#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance サービスは PDF ドキュメントに使用権限を適用できます。PDFドキュメントに使用権限を適用するには、証明書を設定します。
+DocAssurance サービスは PDF ドキュメントに使用権限を適用できます。PDF証明書に使用権限を適用するには、ドキュメントを設定します。
 
 証明書の設定前に、以下が揃っていることを確認します。
 
@@ -527,7 +527,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
 * 証明書ファイルとともに提供する秘密鍵パスワード。
 
-* 秘密鍵のエイリアス。 Java keytoolコマンドを実行して、秘密鍵のエイリアスを表示できます。
+* 秘密鍵のエイリアス。 Java keytoolコマンドを実行して、秘密鍵エイリアスを表示できます。
    `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * キーストアファイルのパスワード。アドビの Reader Extensions 証明書を使用している場合、キーストアファイルのパスワードは常に秘密鍵のパスワードと同一です。
@@ -554,7 +554,7 @@ PDF ファイルに AES 256 暗号化を使用するには、Java Cryptography E
 
 Assembler サービスは、Reader Extensions サービス、Signature サービス、Forms サービス、Output サービスに依存します。次の手順を実行し、必要なサービスが起動および実行していることを確認します。
 
-1. Log in to URL `https://[server]:[port]/system/console/bundles` as an administrator.
+1. Log in to URL `https://'[server]:[port]'/system/console/bundles` as an administrator.
 1. 次のサービスを検索し、サービスが起動および実行していることを確認します。
 
 <table> 
@@ -602,7 +602,7 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
 
 ## 次の手順 {#next-steps}
 
-これで、AEM Forms ドキュメントサービスの動作環境が用意できました。ドキュメントサービスは、次の方法で使用できます。
+これで、AEM Forms ドキュメントサービスの動作環境が用意できました。次の方法でドキュメントサービスを使用できます。
 
 * [OSGi 上の Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)
 * [監視フォルダー](/help/forms/using/watched-folder-in-aem-forms.md)
