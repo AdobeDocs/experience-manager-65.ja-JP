@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -46,7 +46,7 @@ forms-power-users グループに追加されたユーザーは、新しいス�
 
 ルールエディタで「**When**」ルールタイプを使用することで、条件=アクションの構文が適用されます。
 
-**Action-Conditionこの構文では** 、トリガーするアクションを最初に定義し、次に評価の条件を定義します。 この構文の別の様式は、「アクション=条件=代替アクション」型です。この中では、条件がFalse を返した場合にトリガする代替アクションも定義します。
+**Action-Conditionこの構文では** 、最初にトリガーするアクションを定義し、次に評価の条件を定義します。 この構文の別の様式は、「アクション=条件=代替アクション」型です。この中では、条件がFalse を返した場合にトリガする代替アクションも定義します。
 
 ルールエディタで「Show」、「Hide」、「Enable」、「Disable」、「Set Value Of」、「Validate 」の各ルールを設定すると、「アクション=条件」ルール構文が適用されます。デフォルトでは、「Show」の代替アクションは「Hide」、「Enable」の代替アクションは「Disable」（それらの逆も同様）です。デフォルトの代替アクションは変更できません。
 
@@ -111,7 +111,7 @@ Action 2 on Object B; AND Action 3 on Object C;
 
 _
 
-ラジオボタンやリストなどの複数値のコンポーネントがある場合、そのコンポーネントのルールを作成すると、オプションが自動的に取得され、ルール作成者が使用できるようになります。 これらのオプションの値を再入力する必要はありません。
+ラジオボタンやリストなど複数の値を持つコンポーネントがある場合、そのコンポーネントのルールを作成すると、オプションが自動的に取得され、ルールクリエイターが使用できるようになります。 これらのオプションの値を再入力する必要はありません。
 
 例えばリストの場合、赤、青、緑、黄という 4 つのオプションがあります。ルールを作成する場合、オプション（ラジオボタン）が自動的に取得され、これらのオプションを使用してルールを作成することができます。以下に例を示します。
 
@@ -123,9 +123,9 @@ When ルールを記述するときに、「Clear Value Of」アクションを�
 
 **[非表示** ]指定したオブジェクトを非表示にします。
 
-**[表示** ]指定したオブジェクトを表示します。
+**表示** ：指定したオブジェクトを表示します。
 
-**Enable** ：指定したオブジェクトを有効にします。
+**有効** ：指定したオブジェクトを有効にします。
 
 **[無効** ]指定したオブジェクトを無効にします。
 
@@ -135,27 +135,27 @@ When ルールを記述するときに、「Clear Value Of」アクションを�
 
 For more information about configuring services in form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
-**Set value of** Specifiedオブジェクトの値を計算し、設定します。 オブジェクトの値は、文字列、別のオブジェクトの値、数式または関数を使用して計算された値、オブジェクトのプロパティの値、または設定済みのフォームデータモデルサービスからの出力値に設定できます。 Webサービスのオプションを選択すると、AEMインスタンス上のすべてのフォームデータモデルに設定されたすべてのサービスが表示されます。 フォームデータモデルサービスを選択すると、追加のフィールドが表示され、指定したサービスに対する入力パラメータと出力パラメータを使用して、ここでフォームオブジェクトをマップすることができます。
+**[値の設定]** [指定したオブジェクトの値を計算し、設定します。 オブジェクト値は、文字列、別のオブジェクトの値、数学式や関数を使用して計算された値、オブジェクトのプロパティの値、または設定済みのフォームデータモデルサービスの出力値に設定できます。 Webサービスのオプションを選択すると、AEMインスタンス上のすべてのフォームデータモデルで設定されたすべてのサービスが表示されます。 フォームデータモデルサービスを選択すると、追加のフィールドが表示され、指定したサービスに対する入力パラメータと出力パラメータを使用して、ここでフォームオブジェクトをマップすることができます。
 
 For more information about configuring services in form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
 「 **Set Property** 」のルールタイプを使用すると、条件アクションに基づいて、指定したオブジェクトのプロパティの値を設定できます。
 
-これにより、アダプティブフォームにチェックボックスを動的に追加するルールを定義できます。 カスタム関数、フォームオブジェクト、またはオブジェクトプロパティを使用して、ルールを定義できます。
+これにより、アダプティブフォームにチェックボックスを動的に追加するルールを定義できます。 ルールの定義には、カスタム関数、フォームオブジェクトまたはオブジェクトプロパティを使用できます。
 
 ![プロパティを設定](assets/set_property_rule_new.png)
 
-カスタム関数に基づいてルールを定義するには、ドロップダウンリストから「 **Function Output** 」を選択し、「Functions **** （関数）」タブからカスタム関数をドラッグ&amp;ドロップします。 条件アクションが満たされると、カスタム関数で定義されたチェックボックスの数がアダプティブフォームに追加されます。
+カスタム関数に基づいてルールを定義するには、ドロップダウンリストから「 **Function Output** 」を選択し、「関数」タブからカスタム関数をドラッグ&amp;ドロップ **します** 。 条件アクションが満たされると、カスタム関数で定義されたチェックボックスの数がアダプティブフォームに追加されます。
 
-フォームオブジェクトに基づいてルールを定義するには、ドロップダウンリストから「 **Form Object** 」を選択し、「フォームオブジェクト」タブからフォームオブジェクトをドラッグ&amp;ド **ロップします** 。 条件アクションが満たされると、フォームオブジェクトに定義されたチェックボックスの数がアダプティブフォームに追加されます。
+フォームオブジェクトに基づいてルールを定義するには、ドロップダウンリストから「 **Form Object** 」を選択し、「フォームオブジェクト」タブからフォームオブジェクトをドラッグ&amp;ドロ **ップします** 。 条件アクションが満たされると、フォームオブジェクトで定義されたチェックボックスの数がアダプティブフォームに追加されます。
 
-オブジェクトプロパティに基づくプロパティの設定ルールを使用すると、アダプティブフォームに含まれる別のオブジェクトプロパティに基づいて、アダプティブフォーム内のチェックボックスの数を追加できます。
+オブジェクトプロパティに基づく「プロパティを設定」ルールを使用すると、アダプティブフォームに含まれる別のオブジェクトプロパティに基づいて、アダプティブフォーム内のチェックボックスの数を追加できます。
 
 次の図は、アダプティブフォーム内のドロップダウンリストの数に基づいて、チェックボックスを動的に追加する例を示しています。
 
 ![オブジェクトプロパティ](assets/object_property_set_property_new.png)
 
-**Clear Value Of** ：指定したオブジェクトの値をクリアします。
+**[値をクリア]** [値]指定したオブジェクトの値をクリアします。
 
 **[フォーカスを設定** ]指定したオブジェクトにフォーカスを設定します。
 
@@ -163,15 +163,15 @@ For more information about configuring services in form data model, see [AEM For
 
 **Submit Forms** ：フォームを送信します。
 
-**フォームのリセット** ：フォームをリセットします。
+**フォームをリセット** ：フォームをリセットします。
 
 **Validate Form** ：フォームを検証します。
 
-**インスタンスの追加** ：指定した繰り返し可能なパネルまたはテーブル行のインスタンスを追加します。
+**追加 Instance** ：指定した繰り返し可能なパネルまたはテーブル行のインスタンスを追加します。
 
 **インスタンスの削除** ：指定した繰り返し可能なパネルまたはテーブル行のインスタンスを削除します。
 
-**「他のインタラクティブ** コミュニケーション、アダプティブフォーム、画像やドキュメントフラグメントなどの他のアセット、外部URLに移動」に移動します。 詳しくは、「インタラクティブコミュニケー [ションにボタンを追加する」を参照してくださ](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel)い。
+**「他のInteractive** Communications、アダプティブフォーム、画像やドキュメントフラグメントなどの他のアセット、または外部URLに移動」に移動します。 詳しくは、「インタラクティブ通信 [追加のボタン」を参照してください](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel)。
 
 ### Set Value of {#set-value-of}
 
@@ -183,7 +183,7 @@ The **[!UICONTROL Set Value of]** rule type allows you to set the value of a for
 
 Set value of Object A to:
 
-(string ABC) OR（Object CのオブジェクトプロパティX） OR（関数の値） OR（数式式の値） OR（データモデルサービスまたはWebサービスの出力値）;
+(string ABC) OR（Object CのオブジェクトプロパティX） OR（関数の値） OR(数学式の値) OR（データモデルサービスまたはWebサービスの出力値）;
 
 When (任意):
 
@@ -301,7 +301,7 @@ When (任意):
 
 「 **Set Options Of** 」のルールタイプを使用すると、アダプティブフォームにチェックボックスを動的に追加するルールを定義できます。 フォームデータモデルまたはカスタム関数を使用して、ルールを定義できます。
 
-カスタム関数に基づいてルールを定義するには、ドロップダウンリストから「 **Function Output** 」を選択し、「Functions **** （関数）」タブからカスタム関数をドラッグ&amp;ドロップします。 カスタム関数で定義されたチェックボックスの数がアダプティブフォームに追加されます。
+カスタム関数に基づいてルールを定義するには、ドロップダウンリストから「 **Function Output** 」を選択し、「関数」タブからカスタム関数をドラッグ&amp;ドロップ **します** 。 カスタム関数で定義されたチェックボックスの数がアダプティブフォームに追加されます。
 
 ![カスタム関数](assets/custom_functions_set_options_new.png)
 
@@ -309,10 +309,10 @@ When (任意):
 
 フォームデータモデルに基づいてルールを定義するには：
 
-1. ドロッ **プダウンリストから** 「Service Output」を選択します。
+1. ドロッ **プダウン** ・リストから「Service Output」を選択します。
 1. データモデルオブジェクトを選択します。
-1. 「表示値」ドロップダウンリストからデータモデルオ **ブジェクト** ・プロパティを選択します。 アダプティブフォーム内のチェックボックスの数は、データベース内のそのプロパティに対して定義されたインスタンスの数から得られます。
-1. 「値を保存」ドロップダウンリストからデータモデル **オブジェクト** ・プロパティを選択します。
+1. 「表示値」ドロップダウンリストからデータモデ **ルオブジェクト** ・プロパティを選択します。 アダプティブフォーム内のチェックボックスの数は、データベース内のそのプロパティに対して定義されたインスタンスの数から得られます。
+1. 「値を保存」ドロップダウンリストからデータモデ **ルオブジェクト** ・プロパティを選択します。
 
 ![FDM設定オプション](assets/fdm_set_options_new.png)
 
@@ -323,7 +323,7 @@ When (任意):
 ルールエディターのユーザインターフェイスを起動するには：
 
 1. アダプティブフォームをオーサリングモードで開きます。
-1. Tap the form object for which you want to write a rule, and in Component Toolbar tap ![edit-rules](assets/edit-rules.png). ルールエディターのユーザーインターフェイスが表示されます。
+1. Tap the form object for which you want to write a rule, and in Component Toolbar tap ![edit-rules](assets/edit-rules.png). ルールエディタのユーザインターフェイスが表示されます。
 
    ![create-rules](assets/create-rules.png)
 
@@ -343,7 +343,7 @@ When (任意):
 
 ルールエディタのユーザーインターフェイスの左側のペインには、「**[!UICONTROL フォームオブジェクト]**」と「**[!UICONTROL 関数]**」の2つのタブが含まれています。
 
-「フォームオブジェクト」タブには、アダプティブフォームに含まれているオブジェクトがすべて階層表示されます。ここには、オブジェクトのタイトルとタイプが表示されます。ルールの作成時は、フォームオブジェクトをルールエディターまでドラッグ＆ドロップすることができます。オブジェクトや関数をプレースホルダーにドラッグ&amp;ドロップすると、ルールの作成時または編集時に、プレースホルダーは自動的に適切な値の種類に従います。
+「フォームオブジェクト」タブには、アダプティブフォームに含まれているオブジェクトがすべて階層表示されます。ここには、オブジェクトのタイトルとタイプが表示されます。ルールの作成時は、フォームオブジェクトをルールエディターまでドラッグ＆ドロップすることができます。オブジェクトや関数をプレースホルダーにドラッグ&amp;ドロップする際に、ルールを作成または編集するときに、プレースホルダーは自動的に適切な値の種類を使用します。
 
 1つ以上の有効なルールが適用されているフォームオブジェクトには、緑のドットが付いています。フォームオブジェクトに適用されているルールのいずれかが無効な場合、フォームオブジェクトには黄色のドットが付きます。
 
@@ -373,7 +373,7 @@ forms-power-users グループに含まれるユーザーは、コードエデ�
 
 AEM Forms では、ルールを記述するために最後に使用したルールエディタモードを記憶します。これにより、ルールエディタの次回起動時も同じモードで開きます。ただし、デフォルトモードを設定することで、ルールエディタを指定されたモードで開くこともできます。この作業を行うには：
 
-1. Go to AEM web console at https://[host]:[port]/system/console/configMgr.
+1. Go to AEM web console at `https://[host]:[port]/system/console/configMgr`.
 1. Click to edit **[!UICONTROL Adaptive Form Configuration Service]**.
 1. 「**[!UICONTROL ルールエディターのデフォルトモード]**」のドロップダウンから、「**[!UICONTROL ビジュアルエディター]**」または「**[!UICONTROL コードエディター]**」を選択します。
 
@@ -544,15 +544,15 @@ For more information, see [usejsdoc.org](https://usejsdoc.org/).
 
 サポートさ `jsdoc` れるタグ：
 
-* **プライベ**&#x200B;ート構文：プライ `@private`ベート関数は、カスタム関数としては含まれません。
+* **プライベ**&#x200B;ート構文：プライベ `@private`ート関数は、カスタム関数としては含まれません。
 
-* **名前**&#x200B;構文：または、 `@name funcName <Function Name>`次の `,` 方法を使用することもできます。ま `@function funcName <Function Name>` た ****`@func``funcName <Function Name>`は
+* **名前**&#x200B;構文：または、 `@name funcName <Function Name>`次のよ `,` うに使用することもできます。ま `@function funcName <Function Name>` た ****`@func``funcName <Function Name>`は
    `funcName` ：関数の名前です（スペースは使用不可）。
    `<Function Name>` は、関数の表示名です。
 
-* **メンバ**&#x200B;ー構文：関数 `@memberof namespace`に名前空間をアタッチします。
+* **メンバ**&#x200B;ーの構文：関数に `@memberof namespace`名前空間をアタッチします。
 
-* **パラメータ**&#x200B;ー構文：ま `@param {type} name <Parameter Description>`た、次の方法を使用できます。ま `@argument` たは `{type} name <Parameter Description>`****`@arg``{type}``name <Parameter Description>`.
+* **パラメー**&#x200B;ターの構文：ま `@param {type} name <Parameter Description>`た、次の方法を使用できます。ま `@argument` たは `{type} name <Parameter Description>`****`@arg``{type}``name <Parameter Description>`.
 関数で使用されるパラメータを表示します。関数には、複数のパラメータタグを設けることができます。各パラメーターは、実行順序に応じて 1 個のタグを設けることができます。
    `{type}` は、パラメータータイプを表します。 許可されているパラメータータイプは、以下のとおりです。
 
@@ -561,7 +561,7 @@ For more information, see [usejsdoc.org](https://usejsdoc.org/).
    1. ブール型
    他のすべてのパラメータの種類は、上記のいずれかに分類されます。「なし」はサポートされていません。上記のタイプのいずれかを選択していることを確認してください。タイプでは、大文字と小文字は区別されません。Spaces are not allowed in the parameter `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
-* **戻り値の型**&#x200B;構文：ま `@return {type}`たは、を使用できます `@returns {type}`。
+* **戻り値の型の**&#x200B;構文：また `@return {type}`は、を使用できま `@returns {type}`す。
 目的など、関数に関する情報を追加します。
 {type}は、関数の戻り値の型を表します。 許可されている戻り値のタイプは次のとおりです。
 
@@ -585,7 +585,7 @@ For more information, see [usejsdoc.org](https://usejsdoc.org/).
 
    >[!NOTE]
    >
-   >`customfunction`はカテゴリの例です。 You can choose any name for the category you create in the `clientlib`folder.
+   >`customfunction`はサンプルカテゴリです。 You can choose any name for the category you create in the `clientlib`folder.
 
 CRXリポジトリにクライアントライブラリを追加した後は、アダプティブフォームでそれを使用します。これにより、カスタム関数をルールとしてフォーム内で使用することができます。次の手順を実行して、アダプティブフォームにクライアントライブラリを追加します。
 
@@ -596,8 +596,8 @@ CRXリポジトリにクライアントライブラリを追加した後は、�
    ![カスタム関数をクライアントライブラリを追加する](assets/clientlib.png)
 
 1. Select the input numeric box, and tap ![edit-rules](assets/edit-rules.png) to open the rule editor.
-1. Tap **Create Rule**. 以下に示すオプションを使用して、フォームの「出力」フィールドに入力の2乗値を保存するルールを作成します。
-   [ カスタム ![関数を使用したルールの作成「完](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)了」をタ **ップしま**&#x200B;す。 カスタム関数が追加されます。
+1. Tap **Create Rule**. フォームの「出力」フィールドに入力の2乗値を保存するルールを、次に示すオプションを使用して作成します。
+   [ カスタ ![ム関数を使用したルールの作成「](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)完了」 **をタップ**。 カスタム関数が追加されます。
 
 #### 関数の宣言でサポートされる型 {#function-declaration-supported-types}
 
@@ -666,7 +666,7 @@ var c = {
 
 Any existing rules on a form object are listed when you tap the object and tap ![edit-rules1](assets/edit-rules1.png). ここでは、タイトルを表示し、ルール概要をプレビュー表示することができます。また、UI からルール概要を拡大して全体を表示したり、ルール順序を変更したり、ルールを編集・削除したりすることもできます。
 
-![list-rules](assets/list-rules.png)
+![リスト規則](assets/list-rules.png)
 
 ルールに対しては、以下の操作を実行できます。
 
@@ -716,13 +716,13 @@ Any existing rules on a form object are listed when you tap the object and tap !
 
 ルール内で条件をドラッグアンドドロップして編集することもできます。Tap and hover over the handle ( ![handle](assets/handle.png)) before a condition. 次に示すようにポインタが手の形になったら、ルール内の任意の場所に条件をドラッグアンドドロップします。ルール構造が変化します。
 
-![ドラッグアンドドロップ](assets/drag-and-drop.png)
+![ドラッグ&amp;ドロップ](assets/drag-and-drop.png)
 
 ## 日付式の条件 {#dateexpression}
 
 ルールエディターでは、日付比較を使用して条件を作成できます。
 
-以下の例は、住宅ローンが既に取得済みの場合にスタティックテキストオブジェクトを表示する条件で、ユーザーは日付フィールドに入力することでこれを示します。
+次の例は、住宅ローンが既に取得済みの場合にスタティックテキストオブジェクトを表示する条件で、ユーザーは日付フィールドに入力することでそのことを示します。
 
 ユーザーが入力した物件の住宅ローンの日付が過去のものである場合、アダプティブフォームは収入計算に関する注記を表示します。次のルールは、ユーザーが入力した日付を現在の日付と比較し、ユーザーが入力した日付が現在の日付より前の場合、フォームは（Income という名前の）テキストメッセージを表示します。
 
@@ -736,7 +736,7 @@ Any existing rules on a form object are listed when you tap the object and tap !
 
 ルールエディターでは、2 つの数値を比較する条件を作成できます。
 
-次の例は、申込者が現在の住所に滞在する月数が36未満の場合にスタティックテキストオブジェクトを表示する条件です。
+次の例では、申込者が現在の住所に滞在する月数が36未満の場合にスタティックテキストオブジェクトを表示します。
 
 ![数比較条件](assets/numbercomparisoncondition.png)
 
@@ -792,7 +792,7 @@ Web サービス `GetInterestRates` で、ローン総額、加入年数、申�
 
 ![example-function-table](assets/example-function-table.png)
 
-******A.Row1** B.数 **量C.** 合計数量
+**A.** Row1 **B.** 数 **量C.** 合計数量
 
 ここでは、「Product Quantity（製品数量）」列で指定された数量を全製品について合計し、「Total Quantity（合計数量）」セルに合計値を表示する必要があります。この動作は、以下に示すように、「Total Quantity（合計数量）」セルに「Set Value Of」ルールを記述することにより実装できます。
 
