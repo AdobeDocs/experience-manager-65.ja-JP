@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -38,7 +38,7 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 ![フォームデータモデル](assets/form_data_model_callouts_new.png)
 
-**A.** 設定済みのデータソ **ースB。** データソーススキ **ーマC.** Available services **D.** データモデルのオブジェ **クトE.** 設定済みのサービス
+**A.** 設定済みのデータソ **ースB。** データソースのスキーマ **C.** 利用可能なサー **ビスD.** データモデルのオブジェ **クトE.** 設定済みのサービス
 
 ## 前提条件 {#prerequisites}
 
@@ -135,7 +135,7 @@ MySQL データベースを設定するには、以下の手順を実行しま�
 
       * **JDBC driver class**：JDBC ドライバーの Java クラス名を指定します。For MySQL database, specify **com.mysql.jdbc.Driver**.
 
-      * **JDBC connection URI**：データベースの接続 URL を指定します。For MySQL database running on port 3306 and schema teleca, the URL is: `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC connection URI**：データベースの接続 URL を指定します。For MySQL database running on port 3306 and schema teleca, the URL is: `jdbc:mysql://'server':3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **借用時のテスト：** [借用時にテ **スト]オプションを有効** にします。
@@ -264,7 +264,7 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**サービス**」ドロップダウンリストから **get** を選択します。
 
    * Tap **Add** to link the **customer** data model object to **calls** data model object using a property. ユースケースに基づいて、通話データモデルオブジェクトは顧客データモデルオブジェクトの携帯電話番号プロパティにリンクされている必要があります。The **Add Argument** dialog box opens.
-   ![関連付けの追加](assets/add_association_new.png)
+   ![追加連合](assets/add_association_new.png)
 
 1. **引数を追加**&#x200B;ダイアログボックスで、
 
@@ -276,11 +276,11 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**連結値**」ドロップダウンリストから「**mobilenum**」を選択します。
 
    * 「**追加**」をタップします。
-   ![引数に対する関連付けの追加](assets/add_association_argument_new.png)
+   ![議追加論の関連](assets/add_association_argument_new.png)
 
    mobilenum プロパティが&#x200B;**引数**&#x200B;セクションに表示されます。
 
-   ![引数の関連付けの追加](assets/add_argument_association_new.png)
+   ![追加議論結合](assets/add_argument_association_new.png)
 
 1. Tap **Done** to create a 1:n association between customer and calls data model objects.
 
@@ -302,7 +302,7 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**連結値**」ドロップダウンリストから「**customerplan**」を選択します。
 
    * Tap **Done** to create a binding between the billplan and customerplan properties.
-   ![顧客請求書の関連付けの追加](assets/add_association_customer_bills_new.png)
+   ![顧追加客手形協会](assets/add_association_customer_bills_new.png)
 
    以下の画像は、データモデルオブジェクト間の関連付けと、関連付けの作成に使用されているプロパティを示します。
 
@@ -348,7 +348,7 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**出力モデルオブジェクト**」ドロップダウンリストから「**顧客**」を選択します。
 
    * Tap **Done** to save the properties.
-   ![プロパティを編集](assets/edit_properties_get_details_new.png)
+   ![プロパティの編集](assets/edit_properties_get_details_new.png)
 
 1. Select the **update** service and tap **Edit Properties**. **プロパティを編集**&#x200B;ペインが開きます。
 1. **プロパティを編集**&#x200B;ペインで、
