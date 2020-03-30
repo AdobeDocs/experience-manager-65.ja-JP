@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,7 +31,7 @@ source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 * Request parameter `afAcceptLang`
 To override the browser locale of users, you can pass the `afAcceptLang` request parameter to force the locale. 例えば、次のURLは日本語ロケールでのフォームのレンダリングを強制します。
-   `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * The browser locale set for the user, which is specified in the request using the `Accept-Language` header.
 
@@ -43,7 +43,7 @@ To override the browser locale of users, you can pass the `afAcceptLang` request
 
 ## サポートされていないロケールにローカリゼーションのサポートを追加する {#add-localization-support-for-non-supported-locales}
 
-AEM Formsは、現在、アダプティブフォームのコンテンツのローカライズを英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語 — 台湾(zh-TW)、韓国語(ko-KR)でサポートしています。
+AEM Formsでは、現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語(taiwan)ロケール(zh-TW)、韓国語(ko-KR)のアダプティブフォームコンテンツのローカライゼーションをサポートしています。.
 
 アダプティブフォーム実行時に新しいロケールのサポートを追加するには、次を参照してください。
 
@@ -57,7 +57,7 @@ AEM Formsは、現在、アダプティブフォームのコンテンツのロ�
 
 ### Add a locale to the Guide Localization service {#add-a-locale-to-the-guide-localization-service-br}
 
-1. 移動 `https://[server]:[port]/system/console/configMgr`.
+1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。
 1. **Guide Localization Service**&#x200B;をクリックしてコンポーネントを編集します。
 1. 追加するロケールを、サポート対象のロケールの一覧に追加します。
 
@@ -65,7 +65,7 @@ AEM Formsは、現在、アダプティブフォームのコンテンツのロ�
 
 ### XFA クライアントライブラリをロケール用に追加する {#add-xfa-client-library-for-a-locale-br}
 
-次のタイプのノードを、 `cq:ClientLibraryFolder` category `etc/<folderHierarchy>`を持つ下に作 `xfaforms.I18N.<locale>`成し、クライアントライブラリに追加します。
+次のタイプのノードを、 `cq:ClientLibraryFolder` カテゴリ `etc/<folderHierarchy>`を含 `xfaforms.I18N.<locale>`むで作成し、クライアントライブラリに追加します。
 
 * **の定義に従って** 、I18N.js `xfalib.locale.Strings` が `<locale>` を定義しています `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`。
 
@@ -79,7 +79,7 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-の下にタイプのノードを作成し、 `cq:ClientLibraryFolder` カテゴ `etc/<folderHierarchy>`リをと、依存関係をと `guides.I18N.<locale>` して、ととと共に `xfaforms.3rdparty`ノードを `xfaforms.I18N.<locale>` 作成しま `guide.common`す。&quot;
+の下にタイプのノードを作成し、の `cq:ClientLibraryFolder` ノードを、のノードと、の `etc/<folderHierarchy>`カテゴリと依存関係を `guides.I18N.<locale>` 持たせて `xfaforms.3rdparty`くださ `xfaforms.I18N.<locale>``guide.common`い。&quot;
 
 クライアントライブラリに次のファイルを追加します。
 
@@ -99,11 +99,11 @@ Perform this step only if the `<locale>` you are adding is not among `en`, `de`,
 1. Create an `nt:unstructured` node `languages` under `etc`, if not present already.
 
 1. すでに存在しない場合は、複数の値を持つ文字列プロパティ `languages` をノードに追加します。
-1. デフォルトのロケ `<locale>``de``es``fr``it``pt-br``zh-cn``zh-tw``ja``ko-kr`ール値、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、を追加します。
+1. デフ追加ォルト `<locale>` のロケール値， `de`, `es`, `fr`, `it`, , `pt-br`, `zh-cn``zh-tw``ja``ko-kr`notは既に存在します。
 
 1. Add the `<locale>` to the values of the `languages` property of `/etc/languages`.
 
-がに表 `<locale>` 示されま `https://[server]:[port]/libs/cq/i18n/translator.html`す。
+がに表 `<locale>` 示されま `https://'[server]:[port]'/libs/cq/i18n/translator.html`す。
 
 ### サーバーの再起動 {#restart-the-server}
 
