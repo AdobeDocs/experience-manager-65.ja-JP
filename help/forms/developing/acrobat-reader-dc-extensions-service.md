@@ -1,6 +1,6 @@
 ---
-title: Acrobat Reader DC ExtensionsサービスJava APIクイックスタート(SOAP)
-seo-title: Acrobat Reader DC ExtensionsサービスJava APIクイックスタート(SOAP)
+title: Acrobat Reader DC ExtensionsサービスJava APIクイック開始(SOAP)
+seo-title: Acrobat Reader DC ExtensionsサービスJava APIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
@@ -9,28 +9,28 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 687cdacc2868de16a4df968dddedd330ce3317bb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Acrobat Reader DC ExtensionsサービスJava APIクイックスタート(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC ExtensionsサービスJava APIクイック開始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DC Extensionsサービスでは、次のクイックスタートを利用できます。
+Acrobat Reader DC Extensionsサービスでは、次のクイック開始を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[PDFドキュメントからの使用権限の削除](/help/forms/developing/acrobat-reader-dc-extensions-service.md#main-pars-heading-1)
+[PDFの使用権限の削除ドキュメント](/help/forms/developing/acrobat-reader-dc-extensions-service.md#main-pars-heading-1)
 
-[クイックスタート（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、Formsサーバーオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfというPDFドキュメントに使用権限を適用します*。 使用権限を付与されたPDFドキュメントは、LoanUsageRights.pdfというPDFファイル *として保存されます*。 このPDFドキュメントには、次の使用権限が適用されます。 `enabledComments`、 `enabledFormFillIn`、、 `enabledDigitalSignatures`、 (See [Applying Usage Rights to PDF Documents](/help/forms/developing/assigning-usage-rights.md).)
+次のJavaコードの例は、 *Loan.pdfというPDFドキュメントに使用権限を適用します*。 使用権限を付与されたPDFドキュメントは、LoanUsageRights.pdfというPDFファイル *として保存されます*。 このPDFドキュメントには、次の使用権限が適用されます。 `enabledComments`、、 `enabledFormFillIn`および `enabledDigitalSignatures`。 (See [Applying Usage Rights to PDF Documents](/help/forms/developing/assigning-usage-rights.md).)
 
 
 ```as3
@@ -90,7 +90,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
                    
            //Set connection properties required to invoke AEM Forms using SOAP mode                                 
            Properties connectionProps = new Properties(); 
-           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
@@ -141,9 +141,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントから使 *用権限を削除します*。 (PDFドキュメ [ントからの使用権限の削除を参照](/help/forms/developing/assigning-usage-rights.md))。
+次のJavaコードの例では、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントから使 *用権限を削除します*。 (PDFドキュメント [からの使用権限の削除を参照](/help/forms/developing/assigning-usage-rights.md))。
 
 ```as3
  /* 
@@ -208,7 +208,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
        try{ 
            //Set connection properties required to invoke AEM Forms                                 
            Properties connectionProps = new Properties(); 
-           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
@@ -241,9 +241,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-次のJavaコードの例は、LoanUsageRights.pdfという名前の使用権限を付与されたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報 *を取得します*。 (Retrieving [Credential Information](/help/forms/developing/assigning-usage-rights.md)を参照)。
+次のJavaコードの例を使用すると、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取 *得できます*。 (Retrieving [Credential Information](/help/forms/developing/assigning-usage-rights.md)を参照)。
 
 ```as3
  /* 
@@ -308,7 +308,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
                    
            //Set connection properties required to invoke AEM Forms                             
            Properties connectionProps = new Properties(); 
-           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
