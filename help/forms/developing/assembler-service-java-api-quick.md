@@ -1,6 +1,6 @@
 ---
-title: Assembler Service Java API quickStart(SOAP)
-seo-title: Assembler Service Java API quickStart(SOAP)
+title: Assembler Service Java API QuickStart(SOAP)
+seo-title: Assembler Service Java API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 33ad5f7a-4f4c-4e72-937d-85891498a80e
@@ -10,44 +10,44 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Assembler Service Java API quickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
+# Assembler Service Java API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
 
-AssemblerサービスでJava API Quick Start(SOAP)を使用できます
+Java APIクイック開始(SOAP)は、Assemblerサービスで使用できます
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのディスアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのディスアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した暗号化されたPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した暗号化されたPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したベイツナンバリングを使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したベイツナンバリングを使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した非インタラクティブPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した非インタラクティブPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したドキュメントがPDF/Aに準拠しているかどうかの判定](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したドキュメントがPDF/Aに準拠しているかどうかの判定](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したDDXドキュメントの検証](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したDDXドキュメントの検証](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したブックマークを使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントとしおりのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したDDXドキュメントの動的な作成](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したDDXドキュメントの動的な作成](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFポートフォリオの集成](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFポートフォリオの集成](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した複数のXDPフラグメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した複数のXDPフラグメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application serverとMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、 *map.pdfとdirections.pdfという名前の2つのPDFソースドキュメントを*** 1つのPDFドキュメントにマージします。 単一のPDFドキュメントの名前は *AssemblerResultPDF.pdfです*。 DDXドキュメントの名前は *shell.xmlです*。 (「プログラ [ムによるPDFドキュメントの集成](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)」を参照)。
+次のJavaコードの例は、 *map.pdfとdirections.pdfという2つのPDFソースドキュメントを* 1つのPDFドキュメントにマージします ** 。 単一のPDFドキュメントの名前は *AssemblerResultPDF.pdfです*。 DDXドキュメントの名前は *shell.xmlです*。 (「プログラムに [よるPDFドキュメントの組み立て](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)」を参照)。
 
 ```as3
  /*
@@ -120,7 +120,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -189,9 +189,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのディスアセンブリ {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのディスアセンブリ {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、AssemblerResultPDF.pdfというPDFドキュメントを *逆アセンブリします*。 DDXドキュメントの名前は *shell_disassemble.xmlです*。 分解された各PDFドキュメントには名前が付けられま `ResultPDF[Number].pdf`す。 つまり、最初にディスアセンブリされたPDFドキュメントの名前 *はResultPDF1.pdfです。* このコード例で使用され *る* shell_disassemble.xml [DDXドキュメントについて詳しくは、「PDFドキュメントのプログラムによるディスアセンブリ」](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)を参照してください。
+次のJavaコードの例は、AssemblerResultPDF.pdfというPDFドキュメントを *逆アセンブリします*。 DDXドキュメントの名前は *shell_disassemble.xmlです*。 アセンブリ解除された各PDFドキュメントに名前が付けられま `ResultPDF[Number].pdf`す。 つまり、最初にアセンブリ解除されたPDFドキュメントの名前は *ResultPDF1.pdfです。* このコード例で使用され *る* shell_disassemble.xml [DDXドキュメントについて詳しくは、「PDFドキュメントのプログラムによるディスアセンブリ」を](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)参照してください。
 
 ```as3
  /*
@@ -263,7 +263,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -328,9 +328,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した暗号化されたPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した暗号化されたPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、パスワードで暗号化されたPDFドキュメントをアセンブルします。 保護されていないPDFドキュメントの名前 *はLoan.pdfです*。 DDXドキュメントの名前は *shell_Encrypt.xmlです*。 暗号化されたPDFドキュメントの名 *前はAssemblerEncryptedPDF.pdfです*。 (暗号化されたPDF [ドキュメントのアセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents))。
+次のJavaコードの例は、パスワードで暗号化されたPDFパスワードをドキュメントします。 保護されていないPDFドキュメントの名前 *はLoan.pdfです*。 DDXドキュメントの名前は *shell_Encrypt.xmlです*。 暗号化されたPDFドキュメントの名前 *はAssemblerEncryptedPDF.pdfです*。 (暗号化されたPDF [ドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents))。
 
 ```as3
  /*
@@ -406,7 +406,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -451,9 +451,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したベイツナンバリングを使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したベイツナンバリングを使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
 
-次のJavaコードの例は、一意のページ識別子（ベイツナンバリング）を使用してPDFドキュメントをアセンブリします。 DDXドキュメントの名前は *shell_Bates.xmlです*。 Assemblerサービスから返されたPDFドキュメントは、AssemblerResultBatesPDF.pdfというPDFファイル *として保存されます*。 (ベイツナンバ [リングを使用したドキュメントのアセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering))。
+次のJavaコードの例は、一意のページ識別子（ベイツナンバリング）を使用してPDFドキュメントをアセンブルします。 DDXドキュメントの名前は *shell_Bates.xmlです*。 Assemblerサービスから返されるPDFドキュメントは、AssemblerResultBatesPDF.pdfというPDFファイル *として保存されます*。 (ベイツナンバ [リングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering))。
 
 ```as3
  /*
@@ -535,7 +535,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -609,9 +609,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した非インタラクティブPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した非インタラクティブPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、非インタラクティブPDFドキュメントをアセンブルします。 Assemblerサービスに渡されるインタラクティブPDFドキュメントの名前は *Loan.pdfです*。 DDXドキュメントの名前は *shell_XFA.xmlです*。 非インタラクティブPDFドキュメントは、AssembleNonInteractivePDF.pdfというPDFファイル *として保存されます*。 (非インタラ [クティブPDFドキュメントのアセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents))。
+次のJavaコードの例は、非インタラクティブPDFアセンブリをドキュメントします。 Assemblerサービスに渡されるインタラクティブPDFドキュメントの名前は *Loan.pdfです*。 DDXドキュメントの名前は *shell_XFA.xmlです*。 非インタラクティブPDFドキュメントは、AssembleNonInteractivePDF.pdfというPDFファイル *として保存されます*。 (非インタラ [クティブPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents))。
 
 ```as3
  /*
@@ -684,7 +684,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -733,9 +733,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したドキュメントがPDF/Aに準拠しているかどうかの判定 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したドキュメントがPDF/Aに準拠しているかどうかの判定 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-次のJavaコードの例は、入力PDFドキュメントがPDF/Aに準拠しているかどうかを判定します。 Assemblerサービスに渡される入力PDFドキュメントの名前は *Loan.pdfです*。 DDXドキュメントの名前はshell_PDFA.xmlです。 Assemblerサービスから返され、入力PDFドキュメントがPDF/Aに準拠しているかどうかを指定するXMLドキュメントを、result.xmlというXMLファイルとして保存します。 このコード例で使用さ *れる* shell_PDFA.xml [DDXドキュメントについて詳しくは、](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)Determining Whether Documents Are PDF/A-Compliantを参照してください。
+次のJavaコードの例は、入力PDFドキュメントがPDF/Aに準拠しているかどうかを判定します。 Assemblerサービスに渡される入力PDFドキュメントの名前は *Loan.pdfです*。 DDXドキュメントの名前はshell_PDFA.xmlです。 Assemblerサービスから返され、入力PDFドキュメントがPDF/Aに準拠しているかどうかを指定するXMLドキュメント。result.xmlというXMLファイルとして保存されます。 このコード例で使用さ *れる* shell_PDFA.xml [DDXドキュメントについて詳しくは、「ドキュメントがPDF/Aに準拠しているかどうかの確認」を参照してください](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)。
 
 ```as3
  /*
@@ -808,7 +808,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -879,9 +879,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したDDXドキュメントの検証 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したDDXドキュメントの検証 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
 
-次のJavaコードの例では、bookmarkDDX.xmlという名前のファイルに基づいてDDXドキュメ *ントを検証します*。 (DDXドキュメ [ントの検証を参照](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents))。
+次のJavaコードの例では、bookmarkDDX.xmlという名前のファイルに基づいてDDXドキュメントを検 *証しています*。 (DDXの検 [証ドキュメント](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents))。
 
 ```as3
  /*
@@ -958,7 +958,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1010,9 +1010,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したブックマークを使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントとしおりのアセンブリ {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
 
-次のJavaコードの例は、しおりを含むPDFドキュメントをアセンブルします。 DDXドキュメントの名前は、 *bookmarkDDX.xmlです*。 PDFドキュメントに追加するブックマークを記述するブックマークXMLドキュメントの名前は、bookmarks.xmlです。 結果のPDFドキュメントは、AssemblerResultBookmarks.pdfというPDFファイルとして保存されます。 (「しおりを使 [用したPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)」を参照)。
+次のJavaコードの例は、しおりを含むPDFドキュメントをアセンブルします。 DDXドキュメントの名前は *bookmarkDDX.xmlです*。 PDFドキュメントに追加するしおりを示すしおりXMLドキュメントの名前は、bookmarks.xmlです。 結果のPDFドキュメントは、AssemblerResultBookmarks.pdfというPDFファイルとして保存されます。 (「しおりを使 [用したPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)」を参照)。
 
 ```as3
  /*
@@ -1109,7 +1109,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1180,14 +1180,14 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したDDXドキュメントの動的な作成 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したDDXドキュメントの動的な作成 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
 
-以下のJavaコードの例を使用すると、PDFドキュメントをディスアセンブリするDDXドキュメントを動的に作成できます。 入力PDFドキュメントのレベル1のブックマークごとに新しいPDFドキュメントが作成されます。 このコードの例には、次の2つのユーザー定義メソッドが含まれています。
+次のJavaコードの例を使用すると、PDFドキュメントを分解するDDXアセンブリを動的に作成できます。ドキュメント 新しいPDFドキュメントが、入力PDFドキュメントのレベル1のブックマークごとに作成されます。 このコードの例には、次の2つのユーザー定義メソッドが含まれています。
 
 * `createDDX`:Assemblerサービス `org.w3c.dom.Document` に送信されるDDXドキュメントを表すオブジェクトを作成します。 このユーザー定義メソッドは、オブジェクトを返 `org.w3c.dom.Document` します。
-* `convertDDX`:オブジェクト `org.w3c.dom.Document` をオブジェクトに変換 `com.adobe.idp.Document` します。 このメソッドは、オブジェクトを `org.w3c.dom.Document` 入力パラメーターとして受け取り、オブジェクトを返 `com.adobe.idp.Document` します。
+* `convertDDX`:オブジェクト `org.w3c.dom.Document` をオブジェクトに変換 `com.adobe.idp.Document` します。 このメソッドは、オブジェクト `org.w3c.dom.Document` を入力パラメーターとして受け取り、オブジェクトを返 `com.adobe.idp.Document` します。
 
-   このクイックスタートでは、これらのメソッドの両方が呼び出されます。 ( [Dynamically Creating DDX Documents](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents))」
+   これらのメソッドは、両方ともこのクイック開始で呼び出されます。 (「DDX [ドキュメントの動的作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)」を参照)。
 
 ```java
 /*
@@ -1267,7 +1267,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
     //Set connection properties required to invoke AEM Forms using SOAP mode
     Properties connectionProps = new Properties();
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT,
-     "https://[server]:[port]");
+     "https://'[server]:[port]'");
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL, ServiceCl ientFactoryProperties.DSC_SOAP_PROTOCOL);
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE,
      "JBoss");
@@ -1376,9 +1376,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFポートフォリオの集成 {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFポートフォリオの集成 {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
-次のJavaコードの例は、PDFポートフォリオを作成します。 PDFポートフォリオは、AssemblerResultPortfolio.pdfという名前のPDFフ *ァイルとして保存されます*。 (PDFポートフ [ォリオの集成を参照](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios))。
+次のJavaコードの例を使用して、PDFポートフォリオを作成します。 PDFポートフォリオは、AssemblerResultPortfolio.pdfというPDFファイル *として保存されます*。 (PDFポートフ [ォリオの集成を参照](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios))。
 
 ```as3
  /*
@@ -1447,7 +1447,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1527,9 +1527,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した複数のXDPフラグメントのアセンブリ {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した複数のXDPフラグメントのアセンブリ {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
 
-次のJavaコードの例は、以下のXDPファイルに基づいてXDPフラグメントをアセンブリします。 *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp*、および* tuc018_patient.xdp*。 すべてのフラグメントを含むアセンブリ済みのXDPドキュメントは、AssemblerResultXDP.xdpという名前のXDPフ *ァイルとして保存されます*。 (複数のXDPフ [ラグメントのアセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments))。
+次のJavaコードの例は、次のXDPファイルに基づいてXDPフラグメントをアセンブリします。 *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp*、および* tuc018_patient.xdp*。 すべてのフラグメントを含むアセンブリ済みのXDPドキュメントは、 *AssemblerResultXDP.xdpという名前のXDPファイルとして保存されます*。 (複数のXDPフ [ラグメントのアセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments))。
 
 ```as3
  /*
@@ -1605,7 +1605,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1680,13 +1680,13 @@ public class AssemblePDFWithDynamicDDXSOAP {
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの修正 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの修正 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
 次のコード例は、を使用してPDFドキュメントを修正しま `PDFUtility`す。
 
 >[!NOTE]
 >
->`PDFUtility` Acrobatを使用して修正用にマークされたPDFのみを修正できます。
+>`PDFUtility` 修正対象としてマークされたPDFのみをAcrobatで修正できます。
 
 ```as3
 /*
@@ -1740,7 +1740,7 @@ public class RedactPDF
         {
             //Set connection properties required to invoke AEM Forms
             Properties connectionProps = new Properties();
-            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
