@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43780682ba27d9c7d578393df04267ed8be4f1de
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -32,7 +32,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 
 AEM Web Console Configuration を使用してリレーショナルデータベースを設定することができます。以下の操作を実行してください。
 
-1. Go to AEM web console at https://[server]:[host]/system/console/configMgr.
+1. AEM Webコンソール(https://server:host/system/console/configMgr)に移動します。
 1. 「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」という設定を探し、その設定をタップして編集モードで開きます。
 1. 設定ダイアログで、設定するデータベースの詳細を指定します。例えば、以下のような詳細を指定します。
 
@@ -47,7 +47,7 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    >
    >    
    >    
-   >    1. Go to https://[server]:[port]/system/console/crypto.
+   >    1. Go to https://&#39;[server]:[port]&#39;/system/console/crypto.
    >    1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をクリックします。
    >    
    >    
@@ -66,7 +66,7 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
 
 AEM Web コンソールでユーザープロファイルコネクター設定を使用して、AEM のユーザープロファイルを設定することができます。以下の操作を実行してください。
 
-1. Go to AEM web console at https://[server]:[host]/system/console/configMgr.
+1. Go to AEM web console at https://&#39;[server]:[port]&#39;system/console/configMgr.
 1. Look for **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** and tap to open the configuration in edit mode.
 1. ユーザープロファイルコネクター設定ダイアログで、ユーザープロファイルプロパティの追加、削除、更新を行うことができます。ここで指定したプロパティは、フォームデータモデルで使用することができます。次の形式を使用して、ユーザープロファイルのプロパティを指定します。
 
@@ -105,7 +105,7 @@ All cloud service configurations in AEM are consolidated in the `/conf` folder i
 
 ## RESTful Web サービスの設定 {#configure-restful-web-services}
 
-RESTful web service can be described using [Swagger specifications](https://swagger.io/specification/) in JSON or YAML format in a Swagger definition file. AEMクラウドサービスでRESTful webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認します。
+RESTful web service can be described using [Swagger specifications](https://swagger.io/specification/) in JSON or YAML format in a Swagger definition file. AEMクラウドサービスでRESTful Webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認します。
 
 RESTful サービスを設定するには、以下の手順を実行します。
 
@@ -117,14 +117,14 @@ RESTful サービスを設定するには、以下の手順を実行します。
 1. 以下に示す RESTful サービスの詳細情報を指定します。
 
    * 「Swaggerソース」ドロップダウンから「URL」または「ファイル」を選択し、それに応じてSwagger URLをSwagger定義ファイルに指定するか、ローカルファイルシステムからSwaggerファイルをアップロードします。
-   * Swaggerソースの入力に基づいて、次のフィールドに値が事前に入力されます。
+   * Swaggerソースの入力に基づいて、次のフィールドに値が事前入力されます。
 
       * スキーム：REST APIで使用される転送プロトコルです。 ドロップダウンリストに表示されるスキームの種類の数は、Swaggerソースで定義されているスキームによって異なります。
       * ホスト：REST APIを提供するホストのドメイン名またはIPアドレス。 このフィールドは必須です。
       * ベースパス：すべてのAPIパスのURLプレフィックス。 これはオプションのフィールドです。\
-         必要に応じて、これらのフィールドの事前入力された値を編集します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、APIキーまたはカスタム認証 — を使用してRESTfulサービスにアクセスし、認証の詳細を指定します。
-   認証タイプとし **[!UICONTROL て「APIキー]** 」を選択した場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。 「場所」ドロップダウンリストから **[!UICONTROL 次のオプションの1つを選択し、それに応じて「パラメーター名」フィールドにヘッダーの名前またはクエリーパラ]** メーターを指定します **** 。
+         必要に応じて、これらのフィールドの事前入力値を編集します。
+   * 認証タイプの選択 — なし、OAuth2.0、基本認証、APIキー、またはカスタム認証 — を使用してRESTfulサービスにアクセスし、認証の詳細を指定します。
+   認証タイプとして **[!UICONTROL APIキー]** を選択する場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはパラメーターとしてクエリできます。 「場所」ドロップダウンリストから **[!UICONTROL 、次のいずれかのオプションを選択し、「クエリ名」フィールドにヘッダーの名前またはパラメーターのパラ]** メーターを指定します **** 。
 
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
 
@@ -140,8 +140,8 @@ SOAP ベースの Web サービスは、[Web Services Description Language（WSD
 1. 以下に示す SOAP Web サービスの詳細情報を指定します。
 
    * Web サービスの WSDL URL を指定します。
-   * サービスエンドポイント. WSDLで指定されているサービスエンドポイントを上書きするには、このフィールドに値を指定します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — を使用してSOAPサービスにアクセスし、認証の詳細を指定します。
+   * サービスエンドポイント. WSDLで指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
+   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — SOAPサービスにアクセスし、認証の詳細を指定します。
 
 1. 「**[!UICONTROL 作成]**」をタップして、SOAP Web サービス用のクラウド設定を作成します。
 
@@ -160,7 +160,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 1. 以下に示す OData サービスの詳細情報を指定します。
 
    * 設定する OData サービスのルート URL を指定します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — を使用してODataサービスにアクセスし、それに従って認証の詳細を指定します。
+   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — を使用してODataサービスにアクセスし、それに従って認証の詳細を提供します。
    >[!NOTE]
    OData エンドポイントをサービスルートとして使用して Microsoft Dynamics サービスに接続する場合は、OAuth 2.0 認証を選択する必要があります。
 
