@@ -1,6 +1,6 @@
 ---
-title: Distiller Service Java API quickStart(SOAP)
-seo-title: Distiller Service Java API quickStart(SOAP)
+title: Distiller Service Java API QuickStart(SOAP)
+seo-title: Distiller Service Java API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 7781f074-cea4-4109-892b-118cfad4ec36
@@ -10,24 +10,24 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 59dd61d1-c6b1-4bea-b666-4aa7897384a1
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Distiller Service Java APIクイックスタート(SOAP) {#distiller-service-java-api-quickstart-soap}
+# DistillerサービスJava APIクイック開始(SOAP) {#distiller-service-java-api-quickstart-soap}
 
-Distiller®サービスでJava API Quick Start(SOAP)を使用できます。
+Distiller®サービスでは、Java APIクイック開始(SOAP)を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application serverとMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
-次のコード例は、 *Loan.psというPostScriptファイルを* Loan.pdfというPDFファイルに変 *換します*。 (PostScriptドキュメント [のPDFドキュメントへの変換を参照](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents))。
+次のコード例は、 *Loan.psというPostScriptファイルを* Loan.pdfというPDFファイルに変 *換します*。 (PostScriptからPDF [への変換ドキュメント](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents))。
 
 ```as3
  /*
@@ -95,7 +95,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
