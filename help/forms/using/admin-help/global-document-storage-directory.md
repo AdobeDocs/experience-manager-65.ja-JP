@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 translation-type: tm+mt
-source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -46,7 +46,7 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   </tr>
   <tr>
    <td><p>Document Manager </p></td>
-   <td><p>いいえ</p></td>
+   <td><p>非対応</p></td>
    <td><p>対応</p></td>
   </tr>
   <tr>
@@ -61,7 +61,7 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   </tr>
   <tr>
    <td><p>監視フォルダー</p></td>
-   <td><p>いいえ</p></td>
+   <td><p>非対応</p></td>
    <td><p>Yes</p></td>
   </tr>
  </tbody>
@@ -72,8 +72,8 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
 GDS ディレクトリの場所は、AEM Forms のインストール時に手動で設定できます。インストール時に場所を指定しないと、次に示すアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
 
 * (JBoss) `[appserver root]/server/[type]/svcnative/DocumentStorage`
-* (WebLogic) `[appserverdomain]/[server]/adobe/DocumentServer/DocumentStorage`
-* (WebSphere) `[appserver root]/installedApps/adobe/[server]/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
+* (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 ## GDS のデフォルトの場所の変更 {#change-the-default-gds-location}
 
