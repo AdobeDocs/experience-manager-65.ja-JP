@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,9 +19,9 @@ source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
 
 AEM 6.3 Forms と AEM 6.4 Forms の場合、AEM 6.5 Forms へ直接アップグレードすることができます。
 
-**AEM 6.0 Forms、AEM 6.1 Forms**、 **** AEM 6.2 FormsからAEM 6.5 formsへの直接アップグレードパスは使用できません。 Perform an intermediate [upgrade to AEM 6.2 Forms](https://helpx.adobe.com/experience-manager/6-2/forms/using/upgrade.html), [upgrade to AEM 6.3 Forms](https://helpx.adobe.com/experience-manager/6-3/forms/using/upgrade.html), or [upgrade to AEM 6.4 Forms](/help/forms/using/upgrade.md) and then upgrade from AEM 6.3 Forms, or AEM 6.4 Forms to AEM 6.5 Forms.
+**AEM 6.0 Forms、AEM 6.1 Forms**、 **** AEM 6.2 FormsからAEM 6.5 Formsへの直接アップグレードパスは使用できません。 Perform an intermediate [upgrade to AEM 6.2 Forms](https://helpx.adobe.com/experience-manager/6-2/forms/using/upgrade.html), [upgrade to AEM 6.3 Forms](https://helpx.adobe.com/experience-manager/6-3/forms/using/upgrade.html), or [upgrade to AEM 6.4 Forms](/help/forms/using/upgrade.md) and then upgrade from AEM 6.3 Forms, or AEM 6.4 Forms to AEM 6.5 Forms.
 
-AEM 6.3 formsまたはAEM 6.4 FormsからAEM 6.5 formsにアップグレードするには、次の手順を実行します。
+AEM 6.3 FormsまたはAEM 6.4 FormsからAEM 6.5 Formsにアップグレードするには、次の手順を実行します。
 
 1. 既存の AEM インスタンスを AEM 6.5 にアップグレードします。手順は次のとおりです。
 
@@ -38,11 +38,11 @@ AEM 6.3 formsまたはAEM 6.4 FormsからAEM 6.5 formsにアップグレード�
 
       >[!NOTE]
       >
-      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。The bundles are listed at https://[server]:[port]/system/console/.
+      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。The bundles are listed at https://&#39;[server]:[port]&#39;/system/console/.
 
 1. AEM Forms アドオンパッケージのインストール. 手順は次のとおりです。
 
-   1. AEM サーバーに管理者としてログインし、パッケージ共有を開きます。The default URL of the package share is `https://[server]:[port]/crx/packageshare`.
+   1. AEM サーバーに管理者としてログインし、パッケージ共有を開きます。The default URL of the package share is `https://'[server]:[port]'/crx/packageshare`.
    1. パッケージ共有で **AEM 6.5 Forms add-on packages** を検索し、お使いのオペレーティングシステムに対応するパッケージをクリックして、「**ダウンロード**」をクリックします。ライセンス使用許諾契約書を読んでから同意し、「**OK**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**ダウンロード済み**」というテキストが表示されます。
 
       Alternately, you can also use the hyperlinks listed in [AEM Forms releases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) to manually download a package.
@@ -77,16 +77,16 @@ AEM 6.3 formsまたはAEM 6.4 FormsからAEM 6.5 formsにアップグレード�
       WHERE `key` = 'dataType'
       ```
 
-   * **（AEM 6.2 Formsまたは以前のバージョンからアップグレードした場合のみ）Adobe signの再設定**
+   * **（AEM 6.2 Formsまたは以前のバージョンからアップグレードした場合のみ）Adobe Signの再設定**
 
       Adobe Sign を以前のバージョンの AEM Forms で設定してある場合は、AEM Cloud サービスから Adobe Sign を再設定します。詳細については、「[Adobe Sign を AEM Forms に統合する](../../forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
 
    * **jQueryのサポート**
 
-      AEM 6.5 Formsでは、jQueryのバージョンが3.2.1に更新され、jQuery UIのバージョンが1.12.1に更新されます。AEM Formは、noConflictモードでJQueryを **使用します** 。 したがって、他のjQueryバージョンを使用している場合は、アップグレードの実行中に問題は表示されません。 ただし、AEM 6.5 Formsにアップグレードする場合は、次の手順を実行します。
+      AEM 6.5 Formsでは、jQueryのバージョンが3.2.1に更新され、jQuery UIのバージョンが1.12.1に更新されます。AEM Formは、noConflictモードでJQueryを **使用します** 。 そのため、他のjQueryバージョンを使用している場合、アップグレードの実行中に問題は表示されません。 ただし、AEM 6.5 Formsにアップグレードする場合は、次の手順を実行します。
 
-      * カスタムコンポーネントがサポートされているjQueryバージョンと互換性がある場合は、それを確認します。
-      * サポートされていないAPIをカスタムコンポーネントから削除します。 削除され [たAPIのリストについては](https://jquery.com/upgrade-guide/3.0/) 、アップグレードガイドを参照してください。 例えば、load()、.unload()、および.error() APIのサポートは削除されました。 前述のAPIの代わりに.on()メソッドを使用します。 例えば、$(&quot;img&quot;).load(fn)を$(&quot;img&quot;).on(&quot;load&quot;, fn)に変更します。
+      * カスタムコンポーネントが存在する場合は、そのコンポーネントがサポートされているjQueryバージョンと互換性があることを確認します。
+      * サポートされていないAPIをカスタムコンポーネントから削除します。 削除されたAPI [のリストについては](https://jquery.com/upgrade-guide/3.0/) 、アップグレードガイドを参照してください。 例えば、load()、.unload()、および.error() APIのサポートは削除されました。 前述のAPIの代わりに.on()メソッドを使用します。 例えば、$(&quot;img&quot;).load(fn)を$(&quot;img&quot;).on(&quot;load&quot;, fn)に変更します。
    * **分析機能とレポートの再設定（バージョン 6.2 以前の AEM Forms をアップグレードする場合のみ）** 
 
       AEM 6.4 Forms では、ソースのトラフィック変数とインプレッションの成功イベントは利用できません。そのため、バージョン 6.2 以前の AEM Forms をアップグレードすると、AEM Forms から Adobe Analytics サーバーにデータが送信されなくなり、アダプティブフォームの分析レポートが使用できなくなります。また、AEM 6.4 Forms には、フォームバージョン分析用のトラフィック変数と、フィールドの処理時間に関する成功イベントが導入されています。このため、AEM Forms 環境で分析とレポートを再設定してください。詳しい手順については、「[分析とレポートの設定](../../forms/using/configure-analytics-forms-documents.md)」を参照してください。
@@ -98,9 +98,9 @@ AEM 6.3 formsまたはAEM 6.4 FormsからAEM 6.5 formsにアップグレード�
    * **複製と逆複製を確認：**&#x200B;移行されたフォームをいくつか発行、記入、送信します。送信済みデータも確認します。
    * **管理者および開発者のユーザーインターフェースへのアクセスを確認：**&#x200B;管理者アカウントで AEM インスタンスにログインし、次の URL にアクセスできるか確認します。
 
-      * `https://[server]:[port]/crx/packmgr`
-      * `https://[server]:[port]/crx/de`
-      * `https://[server]:[port]/aem/forms.html/content/dam/formsanddocuments`
+      * `https://'[server]:[port]'/crx/packmgr`
+      * `https://'[server]:[port]'/crx/de`
+      * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
    >[!NOTE]
-   AEM 6.4 Forms では crx-repository の構造が変更されています。6.3 formsからAEM 6.5 formsにアップグレードする場合は、新しく作成するカスタマイズ用に変更されたパスを使用します。 変更後のパスの一覧については、「[AEM Forms におけるリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)」を参照してください。
+   AEM 6.4 Forms では crx-repository の構造が変更されています。6.3 FormsからAEM 6.5 Formsにアップグレードする場合は、新しく作成するカスタマイズ用に、変更したパスを使用します。 変更後のパスの一覧については、「[AEM Forms におけるリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)」を参照してください。
 
