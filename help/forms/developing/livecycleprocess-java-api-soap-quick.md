@@ -1,6 +1,6 @@
 ---
-title: LiveCycleProcess Java API(SOAP)クイックスタート
-seo-title: LiveCycleProcess Java API(SOAP)クイックスタート
+title: LiveCycleProcess Java API(SOAP)クイック開始
+seo-title: LiveCycleProcess Java API(SOAP)クイック開始
 description: 'null'
 seo-description: 'null'
 uuid: ad14fb50-8dd5-44e0-9e48-f0f0334e04d6
@@ -10,34 +10,34 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# LiveCycleProcess Java API(SOAP)クイックスタート {#livecycleprocess-java-api-soap-quick-start}
+# LiveCycleProcess Java API(SOAP)のクイック開始 {#livecycleprocess-java-api-soap-quick-start}
 
-Java API(SOAP)クイックスタートは、プロセスで使用できます。 プロ *セスインスタンス* は、呼び出しAPIなどの呼び出しメソッドによって開始された、またはWorkspace内から開始された特定のプロセスのオカレンスです。
+Java API(SOAP)クイック開始は、プロセスで使用できます。 プロ *セスインスタンス* は、呼び出しAPIなどの呼び出しメソッドによって、またはWorkspace内から開始された特定のプロセスの発生です。
 
-[クイックスタート（SOAPモード）:Java APIを使用したプロセスインスタンスの検索](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの検索](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したプロセスインスタンスの休止](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの休止](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した中断されたプロセスインスタンスの開始](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した中断されたプロセスインスタンスの開始](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したプロセスインスタンスの終了](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの終了](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したプロセスデータの削除](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したプロセスデータの削除](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したジョブのステータスの取得](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したジョブのステータスの取得](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイックスタートは、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づいています。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+>「AEM Formsによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
-## クイックスタート（SOAPモード）:Java APIを使用したプロセスインスタンスの検索 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの検索 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
 次のJavaコードの例では、MortgageLoan - Prebuiltプロセスに基づくプロセスインスタ *ンスを検索します* 。
 
@@ -108,7 +108,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue");
@@ -155,9 +155,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したプロセスインスタンスの休止 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの休止 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
 
-次のJavaコードの例では、プロセスインスタンスを中断します。 プロセスインスタンスを正常に休止するには、呼び出しAPIを使用して長期間有効なプロセスを呼び出すときに取得できるプロセス呼び出し識別子が必要です。
+次のJavaコードの例は、プロセスインスタンスを中断します。 プロセスインスタンスを正常に休止するには、呼び出しAPIを使用して長期間有効なプロセスを呼び出す際に取得できるプロセス呼び出し識別子が必要です。
 
 ```as3
  /*
@@ -220,7 +220,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
                   //Set connection properties required to invoke AEM Forms
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue");
@@ -247,9 +247,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した中断されたプロセスインスタンスの開始 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した中断されたプロセスインスタンスの開始 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
 
-次のJavaコードの例は、休止されたプロセスインスタンスを開始します。
+次のJavaコードの例では、休止されたプロセス開始をインスタンスとして扱います。
 
 ```as3
  /*
@@ -310,7 +310,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue");
@@ -335,7 +335,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したプロセスインスタンスの終了 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの終了 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
 
 次のJavaコードの例では、識別子の値が756c22860a242fb101ec7a5bc0977fd6のプロセスインスタンスを終了します。
 
@@ -398,7 +398,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue");
@@ -426,9 +426,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したプロセスデータの削除 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したプロセスデータの削除 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
-次のJavaコードは、SecureDocumentという名前のプロセスからデータを削除 *します*。 inValueという名前のプロセス変数が200より大きいプロセスインスタンスのデータを削除するように指 *定するフ* ィルターが使用されます。
+次のJavaコードは、SecureDocumentという名前のプロセスからデータを削除 *します*。 inValueという名前のプロセス変数が200より大きいプロセスインスタンスのデータをパージするように指 *定するフ* ィルターが使用されます。
 
 ```as3
  /*
@@ -489,7 +489,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
             {
               //Set connection properties required to invoke AEM Forms
               Properties connectionProps = new Properties();
-              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -533,9 +533,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したジョブのステータスの取得 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したジョブのステータスの取得 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
 
-次のコード例は、10個のAEM formsジョブのステータスを取得します。
+次のコード例は、10個のAEM Formsジョブのステータスを取得します。
 
 ```as3
  /*
@@ -604,7 +604,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
