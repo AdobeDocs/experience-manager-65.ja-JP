@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,7 +40,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
 ### 通信を作成ユーザーインターフェイスへのボタンの追加 {#add-the-button-to-the-create-correspondence-user-interface}
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. In the apps folder, create a folder named `defaultApp` with path/structure similar to the defaultApp folder (located in config folder). フォルダーの作成手順は次のとおりです。
 
    1. Right-click the **defaultApp** folder at the following path and select **Overlay Node**:
@@ -51,11 +51,11 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/config/defaultApp/
+      **パス：** /libs/fd/cm/config/defaultApp/
 
-      **** オーバーレイの場所：/apps/
+      **オーバーレイの場所：** /apps/
 
-      **** ノードタイプの一致：チェック済み
+      **ノードタイプを一致：** チェック済み
 
       ![ノードをオーバーレイ](assets/2_defaultappoverlaynode.png)
 
@@ -90,7 +90,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
    </extensionsConfig>
    ```
 
-1. レターを電子メールで送信するには、LiveCycle Forms ワークフローを使用します。次のように、acmExtensionsConfig.xmlのmodelExtensionタグの下にcustomActionタグを追加します。
+1. レターを電子メールで送信するには、LiveCycle Forms ワークフローを使用します。次のよ追加うに、acmExtensionsConfig.xmlのmodelExtensionタグの下にあるcustomActionタグ。
 
    ```xml
     <customAction name="Letter Review" label="Letter Review" tooltip="Letter Review" styleName="" permissionName="forms-users" actionHandler="CM.domain.CCRCustomActionHandler">
@@ -115,9 +115,9 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    | **名前** | **説明** |
    |---|---|
-   | serviceName | customActionにserviceNameという名前の子タグが含まれている場合、関連するボタン/リンクをクリックすると、serviceNameタグで表される名前でプロセスが呼び出されます。 このプロセスの署名がレターポストプロセスと同じであることを確認します。 サービス名に「Forms Workflow ->」プレフィックスを追加します。 |
-   | タグ名にcm_プレフィックスを含むパラメーター | customActionにcm_で始まる子タグが含まれている場合、後処理（レター後処理またはserviceNameタグで表される特別なプロセス）では、これらのパラメーターが、cm_プレフィックスが削除された関連タグの下の入力XMLコードで使用できます。 |
-   | actionName | クリックが後処理の原因となる場合は常に、送信されたXMLには、ユーザーアクションの名前を持つタグの下に名前の付いた特別なタグが含まれます。 |
+   | serviceName | customActionにserviceNameという名前の子タグが含まれている場合、関連するボタンまたはリンクをクリックすると、serviceNameタグで表される名前でプロセスが呼び出されます。 このプロセスの署名がレターポストプロセスと同じであることを確認します。 サービス名に「Forms Workflow ->」プレフィックスを追加します。 |
+   | タグ名にcm_プレフィックスを含むパラメータ | customActionにcm_で始まる子タグが含まれている場合、後処理（Letter Post ProcessまたはserviceNameタグで表される特別なプロセス）では、これらのパラメーターが、cm_プレフィックスが削除された関連タグの下の入力XMLコードで使用できます。 |
+   | actionName | クリックによる後処理の場合、送信されたXMLには、ユーザーアクションの名前を持つタグの下に、名前の付いた特別なタグが含まれます。 |
 
 1. 「**すべて保存**」をクリックします。
 
@@ -131,11 +131,11 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
 1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-   **** パス：/libs/fd/cm/config/defaultApp/locale
+   **パス：** /libs/fd/cm/config/defaultApp/locale
 
-   **** オーバーレイの場所：/apps/
+   **オーバーレイの場所：** /apps/
 
-   **** ノードタイプの一致：チェック済み
+   **ノードタイプを一致：** チェック済み
 
 1. 「**OK**」をクリックします。
 1. 「**すべて保存**」をクリックします。
@@ -167,7 +167,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 >
 >ブラウザーのキャッシュをクリアする必要が生じる場合があります。
 
-1. 移動 `https://[host]:[port]/system/console/bundles`. 必要に応じて、管理者としてログインします。
+1. `https://[host]:'port'/system/console/bundles` にアクセスします。必要に応じて、管理者としてログインします。
 
 1. Adobe Asset Composer 構築ブロックバンドルを検索します。バンドルを再起動します。「停止」をクリックした後、「開始」をクリックします。
 
@@ -186,10 +186,10 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 アクション/ボタンをクリックしたときのアクション/ボタンの処理には、次のロジックが含まれます。
 
 * 新しく追加したアクションを表示または非表示にする：actionVisible() 関数をオーバーライドして実行します。
-* 新しく追加されたアクションの有効化/無効化：actionenabled()関数をオーバーライドして実行します。
+* 新しく追加したアクションの有効化/無効化：actionenabled()関数をオーバーライドして実行します。
 * ユーザーがボタンをクリックした場合の実際のアクションの処理：handleAction()関数の実装をオーバーライドして実行します。
 
-1. 移動 `https://[server]:[port]/[ContextPath]/crx/de`. 必要に応じて、管理者としてログインします。
+1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスします。必要に応じて、管理者としてログインします。
 
 1. apps フォルダーに、次のフォルダーに類似した構造で、CRX の /apps branch に `js` という名前のフォルダーを作成します。
 
@@ -203,11 +203,11 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
+      **パス：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
 
-      **** オーバーレイの場所：/apps/
+      **オーバーレイの場所：** /apps/
 
-      **** ノードタイプの一致：チェック済み
+      **ノードタイプを一致：** チェック済み
 
    1. 「**OK**」をクリックします。
    1. 「**すべて保存**」をクリックします。
@@ -337,13 +337,13 @@ components.zipファイルをダウンロードして解凍し、DSCSample.jar�
 
 LCA プロセスは LiveCycle サーバー上で実行され、サーバーアドレスとログイン情報が必要になります。
 
-1. Go to `https://[server]:[port]/system/console/configMgr` and login as Administrator.
+1. Go to `https://'[server]:[port]'/system/console/configMgr` and login as Administrator.
 1. Adobe LiveCycle Client SDK Configuration を見つけて、「**編集**」（編集アイコン）をクリックします。「設定」パネルが開きます。
 
 1. Enter the following details and click **Save**:
 
-   * **Server Url**:アクションハンドラーコードが使用するSend For reviewサービスのLCサーバーのURLです。
-   * **ユーザ名**:LCサーバーの管理者ユーザー名
+   * **Server Url**:アクションハンドラーコードが使用するSend For ReviewサービスのLCサーバーのURLです。
+   * **Username**:LCサーバーの管理者ユーザー名
    * **パスワード**：管理者ユーザー名のパスワード
    ![Adobe LiveCycle Client SDK Configuration](assets/3_clientsdkconfiguration.png)
 
@@ -379,9 +379,9 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
 AEM サーバーにアクセスする必要のある LiveCycle サービスを AEM サーバーで指定します。
 
-1. に管理者としてログインしま `https:/[host]/:[port]/system/console/configMgr`す。
+1. に管理者としてログインしま `https:/[host]:'port'/system/console/configMgr`す。
 
-1. Locate and click **Adobe LiveCycle Client SDK Configuration**. Adobe liveCycle Client SDK Configurationパネルが表示されます。
+1. Locate and click **Adobe LiveCycle Client SDK Configuration**. Adobe LiveCycle Client SDK Configurationパネルが表示されます。
 1. In the Service Name list, click + icon and add a serviceName **SendLetterForReview/SendLetterForReviewProcess**.
 
 1. 「**保存**」をクリックします。
@@ -402,17 +402,17 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 #### DSC サービスの設定 {#configure-the-dsc-service}
 
-Correspondence Management APIを使用するには、DSCSample.jar（このドキュメントに添付されているcomponents.zipの一部として添付）をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされると、AEMサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
+Correspondence Management APIを使用するには、DSCSample.jar(このドキュメントに添付されているcomponents.zipの一部として添付)をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされた後、AEMサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
 
 For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
-1. DSCSample.jarのcmsa.propertiesのAEMサーバーURLを更新します。この場所は次の場所です。
+1. 次の場所にあるDSCSample.jarのcmsa.propertiesのAEMサーバーURLを更新します。
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
 1. 設定ファイルに次のパラメーターを指定します。
 
-   * **crx.serverUrl**=https:/[host]/:[port]/[context path]/[AEM URL]
+   * **crx.serverUrl**=https:/host:port/[context path]/[AEM URL]
    * **crx.username**= AEM ユーザー名
    * **crx.password**= AEMパスワード
    * **crx.appRoot**=/content/apps/cm
@@ -420,14 +420,14 @@ For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/form
    >
    >サーバー側で変更を加えるたびに LiveCycle サーバーは再起動します。独自の LiveCycle コンポーネントの作成について詳しくは、「[カスタムの DSC 開発を通じた LiveCycle ES ソフトウェアの拡張](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html)」を参照してください。
 
-   DSCSample.jarファイルはrenderLetter APIを使用します。 For more Information about the renderLetter API, see [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
+   DSCSample.jarファイルは、renderLetter APIを使用します。 For more Information about the renderLetter API, see [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
 
 #### LiveCyle への DSC の読み込み {#import-dsc-to-livecyle}
 
-DSCSample.jarファイルは、renderLetter APIを使用して、Cが入力として与えるXMLデータからのPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
+DSCSample.jarファイルは、renderLetter APIを使用して、Cが入力として与えるXMLデータからPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 
 1. Livecycle Workbenchを起動してログインします。
-1. Select **Window > Show Views > Components**. コンポーネントビューがWorkbench ES2に追加されます。
+1. Select **Window > Show Views > Components**. コンポーネント表示がWorkbench ES2に追加されます。
 
 1. Right-click **Components** and select **Install Component**.
 
