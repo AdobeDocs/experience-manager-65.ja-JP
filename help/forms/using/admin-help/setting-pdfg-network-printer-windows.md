@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7620e5e4-022e-49b2-8cfe-d5eec8ab99d7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -60,7 +60,7 @@ PDFG 管理者ロールまたは PDFG ユーザーロールのいずれかを持
 
 1. （PDFG 管理者の場合）管理コンソールで、サービス／PDF Generator／PDFG ネットワークプリンターをクリックします。
 
-   (PDFG Users) Go to `http(s)://[host]:[port]/pdfgui` and click the link under PDFG Network Printer Installation.
+   (PDFG Users) Go to `http(s)://[host]:'port'/pdfgui` and click the link under PDFG Network Printer Installation.
 
 1. 「PDFG ネットワークプリンターのインストール」にあるリンクをクリックします。ユーザーアカウント情報が求められたら、手順 1 で使用したユーザー名とパスワードを指定してログインします。プリンターが正常にインストールされたことを示すメッセージが表示されます。
 
