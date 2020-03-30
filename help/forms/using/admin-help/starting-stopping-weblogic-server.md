@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -78,7 +78,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * (Windows) `startWebLogic.cmd`
    * (Linux、UNIX) ./ `startWebLogic.sh`
 
-1. Access WebLogic Server administration console by typing `https://*[host name]:`[Port] `/console` in the URL line of a web browser, where *[Port]* is the non-secure listening port. デフォルトでは、このポート番号は 7001 です。
+1. Access WebLogic Server administration console by typing `https://[host name]:[port]/console` in the URL line of a web browser, where *[port]* is the non-secure listening port. デフォルトでは、このポート番号は 7001 です。
 1. ログイン画面で、管理者のユーザー名とパスワードを入力して「Log In」をクリックします。
 
 ## Node Manager の起動 {#start-node-manager}
@@ -101,7 +101,7 @@ WebLogic Server を停止した後、Node Manager を呼び出したコマンド
 >WebLogic 管理対象サーバーの起動は、WebLogic ドメインと管理対象サーバーを作成した後にのみ実行できます。
 
 1. WebLogic Server と Node Manager が実行されていることを確認します。
-1. Start WebLogic Server administration console by typing `https://`*[host name]:[port ]*`/console`in the URL line of a web browser.
+1. Start WebLogic Server administration console by typing `https://host name]:[port]`/console` in the URL line of a web browser.
 1. 「Domain Structure」で、Environment／Servers をクリックします。
 1. 右側のウィンドウで、「Control」タブをクリックします。
 1. 起動する管理対象サーバーを選択します。
