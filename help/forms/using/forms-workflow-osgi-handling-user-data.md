@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -80,7 +80,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
 ワークフローインスタンスに格納されているユーザーデータを特定してアクセスするには、次の手順を実行します。
 
-1. On AEM author instance, go to `https://[server]:[port]/crx/de` and navigate to **[!UICONTROL Tools > Query]**.
+1. On AEM author instance, go to `https://'[server]:[port]'/crx/de` and navigate to **[!UICONTROL Tools > Query]**.
 
    「**[!UICONTROL SQL2]**」を「**[!UICONTROL タイプ]**」ドロップダウンから選択します。
 
@@ -133,7 +133,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
 1. Perform this step for workflow instances in **RUNNING**, **SUSPENDED**, or **STALE** status:
 
-   1. Go to `https://[server]:[port]/aem/start.html` and log in with administrator credentials.
+   1. Go to `https://'[server]:[port]'/aem/start.html` and log in with administrator credentials.
    1. **[!UICONTROL ツール／ワークフロー／インスタンス]**&#x200B;の順に移動します。
    1. ユーザーの関連ワークフローインスタンスを選択し、「**[!UICONTROL 終了]**」をタップして実行中のインスタンスを終了します。
    For more information about working with workflow instances, see [Administering Workflow Instances](/help/sites-administering/workflows-administering.md).
