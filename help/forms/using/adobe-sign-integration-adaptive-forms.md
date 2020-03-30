@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Sign により、アダプティブフォームの電子署名ワークフ
 
 Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは受信した申込フォームを確認し、Adobe Sign を使用してそのフォームを承認します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
-AEM formsでAdobe signを使用するには、AEMクラウドサービスでAdobe signを設定します。
+AEM FormsでAdobe Signを使用するには、AEMクラウドサービスでAdobe Signを設定します。
 
 ## 前提条件 {#prerequisites}
 
@@ -81,33 +81,33 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    「**[!UICONTROL 作成]**」をタップして、Adobe Sign 設定を作成します。
 
-1. AEM Web コンソールを開きます。URLは `https://[server]:[port]/system/console/configMgr`
+1. AEM Web コンソールを開きます。URLは `https://'[server]:[port]'/system/console/configMgr`
 1. **Forms 共通設定サービス**&#x200B;を開きます。
 1. In the **Allow** field, **select** All users - All the users, anonymous or logged in, can preview attachments, verify and sign forms, and click **Save.**&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
 1. [パブリッシュ](/help/sites-deploying/deploy.md)インスタンスにログインし、以下の URL を開きます。
 
    `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`
 
-1. 手順 1 ～ 12 を繰り返して、AEM Forms で Adobe Sign を設定します。設定に同じタイトル（手順3で指定）を使用し、同じ名前（手順6で指定）を使用して、作成者インスタンスに設定された設定を複製します。
+1. 手順 1 ～ 12 を繰り返して、AEM Forms で Adobe Sign を設定します。設定に同じタイトル（手順3で指定）を使用し、同じ名前（手順6で指定）を使用して、作成者インスタンスで設定された設定を複製します。
 
    これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。To [use Adobe Sign service in an adaptive form](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form), specify the configuration container created above in adaptive form properties.
 
 ## Adobe Sign スケジューラーを設定して署名ステータスを同期する {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
-Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。Adobe Sign スケジューラーサービスは、デフォルトで、署名者からの応答を 24 時間ごとにチェック（ポーリング）するように設定されています。現在の環境に合わせて、このデフォルト値を変更することができます。デフォルトの間隔を変更するには、次の手順を実行します。
+Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。Adobe Sign スケジューラーサービスは、デフォルトで、署名者からの応答を 24 時間ごとにチェック（ポーリング）するように設定されています。現在の環境に合わせて、このデフォルト値を変更することができます。次の手順を実行して、デフォルトの間隔を変更します。
 
 1. 管理者の資格情報を使用して AEM Forms サーバーにログインし、**ツール**／**操作**／**Web コンソール**&#x200B;に移動します。
 
-   また、ブラウザーウィンドウで次のURLを開くこともできます。
-   `https://[localhost]:[port]/system/console/configMgr`
+   次のURLをブラウザーウィンドウで開くこともできます。
+   `https://[localhost]:'port'/system/console/configMgr`
 
-1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前0時に設定サービスを実行するには、「ステータス更新スケジューラ `0 0 0 1/1 * ? *` ー式」フ **ィールドにを指定します** 。
+1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前0時に設定サービスを実行するには、「ステータス更新の `0 0 0 1/1 * ? *` スケジューラー式 **** 」フィールドに
 
 これで、Adobe Sign のステータスを同期するデフォルトの間隔が変更されました。
 
 ## 関連記事 {#related-articles}
 
 * [アダプティブフォームで Adobe Sign を使用する](../../forms/using/working-with-adobe-sign.md)
-* [AEM FormsでのAdobe signの使用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [AEM FormsでのAdobe Signの使用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
 * [Adobe Sign を AEM Forms に統合する](../../forms/using/adobe-sign-integration-adaptive-forms.md)
 
