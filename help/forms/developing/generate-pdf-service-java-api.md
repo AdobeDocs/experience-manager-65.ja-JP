@@ -1,6 +1,6 @@
 ---
-title: Generate PDF Service Java API quickStart(SOAP)
-seo-title: Generate PDF Service Java API quickStart(SOAP)
+title: Generate PDF Service Java API QuickStart(SOAP)
+seo-title: Generate PDF Service Java API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: f8c4a476-de5e-440a-b419-0bd1d7fde5ca
@@ -10,28 +10,28 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a7c0c4cf-7476-41e7-8d4e-564e6a21458d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Generate PDF Service Java API Quick Start(SOAP) {#generate-pdf-service-java-api-quickstart-soap}
+# Generate PDF Service Java API Quick開始(SOAP) {#generate-pdf-service-java-api-quickstart-soap}
 
-Generate PDFサービスでは、Java API Quick Start(SOAP)を使用できます。
+Generate PDFサービスでは、Java APIクイック開始(SOAP)を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したMicrosoft word文書のPDF文書への変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
+[クイック開始（SOAPモード）:Java API(SOAPドキュメント)を使用したPDFモードからRTFファイルへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application serverとMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したMicrosoft word文書のPDF文書への変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
-次のコード例は、 *Loan.docというWordファイルを* Loan.pdfというPDFドキュメントに変換 *します*。 (Word文書 [のPDF文書への変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents))。
+次のコード例は、 *Loan.docというWordファイルを* Loan.pdfというPDFドキュメントに変換 *します*。 (Wordドキュメント [のPDFドキュメントへの変換](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents))。
 
 ```as3
  /*
@@ -98,7 +98,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -143,9 +143,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例では、https://www.adobe.comにあるHTMLコンテンツを *AdobeHTML.pdfというPDFドキュメントに変換します*。 (HTMLドキュ [メントのPDFドキュメントへの変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents))。
+次のJavaコードの例は、https://www.adobe.comにあるHTMLコンテンツを、 *AdobeHTML.pdfというPDFドキュメントに変換します*。 (HTMLドキュメント [のPDFドキュメントへの変換](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents))。
 
 ```as3
  /*
@@ -210,7 +210,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -249,9 +249,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
+## クイック開始（SOAPモード）:Java API(SOAPドキュメント)を使用したPDFモードからRTFファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
-次のコード例は、 *Loan.pdfというPDF文書を* Loan.rtfというRTF文書に変換 *します*。 (詳しく [は、PDF文書の画像以外の形式への変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats))。
+次のコード例は、 *Loan.pdfというPDFドキュメントを* Loan.rtfというRTFドキュメントに変換 *します*。 (PDF画 [像を非ドキュメント形式に変換するを参照](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats))。
 
 ```as3
  /*
@@ -319,7 +319,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
