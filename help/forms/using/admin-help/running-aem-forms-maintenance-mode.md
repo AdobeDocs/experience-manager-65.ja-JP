@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname ]*`:`*[port]* administrator username `/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=`*[]*`&password=`*[password]*
+   `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=[administrator username]&password=[password]`
 
    ブラウザーウィンドウに「一時停止中」のメッセージが表示されます。
 
@@ -40,7 +40,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname]:[port ]*administrator username`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[]*`&password=`*[password ]*
+   `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=[administrator username]&password=[password]`
 
    ブラウザーウィンドウにステータスが表示されます。「true」のステータスはサーバーがメンテナンスモードで動作中であることを示し、「false」はサーバーがメンテナンスモードではないことを示します。
 
@@ -48,7 +48,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname]:[port ]*administrator username`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[]*`&password=`*[password ]*
+   `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=[administrator username]&password=[password]`
 
    ブラウザーウィンドウに「実行中」のメッセージが表示されます。
 
