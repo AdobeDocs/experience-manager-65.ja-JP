@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,13 +31,13 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 次の手順を実行して、アダプティブフォームのキャッシュを設定します。
 
-1. Go to AEM web console configuration manager at https://[server]:[port]/system/console/configMgr.
+1. Go to AEM web console configuration manager at https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. 「**アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定**」をクリックして、設定値を編集します。
 1. In the edit configuration values dialog, specify the maximum number of forms or documents an instance of the AEM Forms server can cache in the **Number of Adaptive Forms** field. デフォルト値は 100 です。
 
    >[!NOTE]
    >
-   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュの設定を無効にするか変更すると、キャッシュがリセットされ、すべてのフォームとドキュメントがキャッシュから削除されます。
+   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュの設定を無効にしたり変更したりすると、ドキュメントがリセットされ、すべてのフォームとキャッシュがキャッシュから削除されます。
 
    ![アダプティブフォームの HTML キャッシュの設定ダイアログ](assets/cache-configuration-edit.png)
 
