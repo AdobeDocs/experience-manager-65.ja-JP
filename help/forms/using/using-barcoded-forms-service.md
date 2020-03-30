@@ -10,7 +10,7 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -130,7 +130,7 @@ Barcoded Forms サービスを使用するときは、次の制限事項につ�
 
 ## Configure properties of the service   {#configureproperties}
 
-AEM コンソールにある **AEMFD Barcoded Forms サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。The default URL of AEM console is `https://[host]:[port]/system/console/configMgr`.
+AEM コンソールにある **AEMFD Barcoded Forms サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。The default URL of AEM console is `https://[host]:'port'/system/console/configMgr`.
 
 ## サービスの使用 {#using}
 
@@ -142,7 +142,7 @@ Barcoded Forms サービスには次の 2 つの API があります。
 
 ### JSP またはサーブレットを使用した BCF サービスの使用 {#using-bcf-service-with-a-jsp-or-servlets}
 
-次のサンプルコードは、ドキュメント内のバーコードをデコードし、出力XMLをディスクに保存します。
+次のサンプルコードは、バーコードをデコードしてドキュメントに保存し、出力XMLをディスクに保存します。
 
 ```java
 <%@ page import="java.util.List,
@@ -233,7 +233,7 @@ Barcoded Forms サービスには次の 2 つの API があります。
 
 ワークフローから Barcoded Forms サービスを実行することは、JSP またはサーブレットからサービスを実行することに似ています。唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントオブジェクトが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。
 
-ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、Documentオブジェクトは、指定されたResourceResolverオブジェクトを使用して、リポジトリからコンテンツを読み取ります。
+ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、ドキュメントオブジェクトは、指定されたResourceResolverオブジェクトを使用してリポジトリからコンテンツを読み取ります。
 
 次のサンプルワークフロープロセスは、ドキュメント内のバーコードをデコードして結果をディスクに保存します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
