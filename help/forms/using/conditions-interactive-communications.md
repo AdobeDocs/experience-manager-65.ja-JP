@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -42,8 +42,8 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 1. Select **[!UICONTROL Create]** > **[!UICONTROL Condition]**.
 1. 次の情報を指定します。
 
-   * **[!UICONTROL タイトル]**:（オプション）条件のタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。条件は、そのタイトル（利用可能な場合）によって、サムネールやプロパティとして参照されます。
-   * **[!UICONTROL 名前]**:フォルダー内の条件の一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英語以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
+   * **[!UICONTROL タイトル]**:（オプション）条件のタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。条件は、（利用可能な場合に）そのタイトル（サムネールやプロパティなど）によって参照されます。
+   * **[!UICONTROL 名前]**:フォルダー内の条件の一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
 
    * **[!UICONTROL 説明]**：ドキュメントフラグメントの説明を入力します。
    * **[!UICONTROL フォームデータモデル]**：（任意）フォームデータモデルに基づいて条件を作成する場合は、「フォームデータモデル」ラジオボタンを選択します。When you select Form Data Model radio button, **[!UICONTROL Form Data Model]** field appears. フォームデータモデルを参照して選択します。インタラクティブ通信用の条件を作成する場合は、そのインタラクティブ通信で使用するものと同じデータモデルを使用する必要があります。For more information on form data model, see [Data Integration](../../forms/using/data-integration.md).
@@ -74,13 +74,13 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[拒否の変更]。**このアイコンをタップして、アセットと条件のルールに対して行った変更を拒否します。   **[B]Accept Change。**このアイコンをタップして、条件のアセットおよびルールに対して行った変更を受け入れます。   **[アセットを複製]」を参照してください。**適用対象のルール（存在する場合）と共に条件内のアセットのコピーを作成する場合は、このアイコンをタップします。その後、複製されたアセットで、ルールとアセットの編集を行うことができます。特定のコンテキストに基づいて代替のアセットを表示するための類似のルールを作成する場合は、アセットを複製すると便利です。   **[プレビュー]を表示します。**このアイコンをタップして、「条件を作成/編集」ページ内にアセットのプレビューを表示します。   **[順序を変更]。**このアイコンを長押しして、アセットをドラッグ&amp;ドロップし、条件内で並べ替えます。
+   **[拒否の変更]。**このアイコンをタップすると、アセットと条件のルールに対して行った変更が拒否されます。   **[B]Accept Change。**このアイコンをタップして、条件のアセットおよびルールに加えた変更を受け入れます。   **[C]重複資産&#x200B;**適用対象のルール（存在する場合）と共に条件内のアセットのコピーを作成する場合は、このアイコンをタップします。その後、複製されたアセットで、ルールとアセットの編集を行うことができます。特定のコンテキストに基づいて代替のアセットを表示するための類似のルールを作成する場合は、アセットを複製すると便利です。   **[D表示]プレビュー&#x200B;**このアイコンをタップすると、プレビューの作成/条件の編集ページにアセットのアイコンが表示されます。   **&#39;server&#39;順序を変更します。** このアイコンを長押しして、アセットをドラッグ&amp;ドロップし、条件内で並べ替えます。
 
    条件の実行時の動作を指定するには、次のオプションを選択します。
 
    * **複数の結果評価を無効化 / 複数の結果評価を有効化**：「複数の結果評価を有効化」オプションを選択すると、すべての条件が評価され、その結果として、すべての true ルールの要約が表示されます。「複数の結果評価を無効化」オプションを選択すると、true と判断された最初のルールだけが評価され、そのルールが条件の出力になります。
 
-   * **改ページ**:条件のアセット間に改 ![ページを追加するには、このオプション](assets/break.png)（改ページ）を選択します。 When this option is not selected ( ![nobreak](assets/nobreak.png)), if a condition is overflowing to the next page in the print output, the whole condition is shifted to the next page instead of breaking in the page between the assets in the condition.
+   * **改ページ**:条件のアセット間に改 ![ページを追加するには](assets/break.png)、このオプション（改ページ）を選択します。 When this option is not selected ( ![nobreak](assets/nobreak.png)), if a condition is overflowing to the next page in the print output, the whole condition is shifted to the next page instead of breaking in the page between the assets in the condition.
 
 1. 「**[!UICONTROL ルールを作成]**」をタップして、アセットの表示と非表示を切り替えるためのルールを必要に応じて追加します。ルール内で変数を使用する方法については、「[変数の作成](#variables)」を参照してください。For more information, see [Adding rules to condition](#ruleeditor).
 
@@ -102,7 +102,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
 ## 条件の編集 {#edit-a-condition}
 
-以下の手順により、条件を編集することができます。ポップアップメニューで「フラグメントを編集」を選択して、インタラクティブ通信内から条件を編集することもできます。
+以下の手順により、条件を編集することができます。ポップアップメニューで「フラグメントを編集」を選択して、インタラクティブ通信内で条件を編集することもできます。
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. 目的の条件に移動して、その条件を選択します。
@@ -144,7 +144,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
    ポリシータイプが「標準」の場合にアセットを表示するためのルール
 
-   * While creating or editing a rule, you can also tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule/Edit Rule dialog. ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルールを作成ダイアログに戻ります。
+   * While creating or editing a rule, you can also tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule/Edit Rule dialog. ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルールの作成ダイアログに戻ります。
 
    * 1 つのルールで複数の条件を作成することもできます。
 
@@ -157,7 +157,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 While creating or editing a rule in a condition, you can tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule\Edit Rule dialog. ダイアログを拡張して全画面表示にすると、以下の操作を実行できるようになります。
 
 * ルール内で変数を作成して使用する
-* フォームデータモデルのプロパティと変数をルールにドラッグ&amp;ドロップ
+* ルール内でのフォームデータモデルのプロパティと変数のドラッグ&amp;ドロップ
 
 サイズ変更アイコンをもう一度タップすると、通常のサイズのダイアログに戻ります。
 
