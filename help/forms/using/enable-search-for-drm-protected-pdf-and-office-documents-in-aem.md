@@ -10,22 +10,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7eebef08-83b9-4b56-90ec-35ab3b0c27e8
 noindex: true
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする{#enable-aem-to-search-document-security-protected-pdf-and-microsoft-office-documents}
 
-Adobe Experience Manager には、AEM に保存された様々なアセットを検索し、その場所を特定するためのユーザーインターフェイスが用意されています。ネイティブ検索機能を使用して AEM アセットを検索し  テキスト検索は、プレーンテキストファイル、Microsoft officeドキュメント、PDFドキュメントなど、一般的に使用される様々なドキュメント形式で行います。 ネイティブ検索を拡張して有効にし、DRM保護されたPDFおよびMicrosoft officeドキュメントで全文検索を実行することもできます。
+Adobe Experience Manager には、AEM に保存された様々なアセットを検索し、その場所を特定するためのユーザーインターフェイスが用意されています。ネイティブ検索機能を使用して AEM アセットを検索し  テキスト検索は、プレーンテキストファイル、Microsoft Officeドキュメント、PDFドキュメントなど、一般的に使用される様々な形式のドキュメントです。 また、ネイティブ検索を拡張して有効にし、DRM保護されたPDFおよびMicrosoft Officeドキュメントで全文検索を実行できます。
 
 次の手順を実行し、Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にします。
 
 ## 事前準備 {#before-you-start}
 
 * AEM Forms Document Security をインストールして設定します。
-* sun.util.calendar パッケージを&#x200B;**デシリアライゼーションファイアウォール設定** 設定の一覧をに示しま `https://[server]:[port]/system/console/configMgr`す。
-* すべての AEM バンドルが正常に実行していることを確認します。バンドルは、に一覧表示されま `https://[server]:[port]/system/console/bundles`す。 アクティブ状態になっていないバンドルが存在する場合、数分間待ってからバンドルの状態を確認してください。
+* sun.util.calendar パッケージを&#x200B;**デシリアライゼーションファイアウォール設定** 設定の一覧をに示しま `https://'[server]:[port]'/system/console/configMgr`す。
+* すべての AEM バンドルが正常に実行していることを確認します。バンドルはに一覧表示されま `https://'[server]:[port]'/system/console/bundles`す。 アクティブ状態になっていないバンドルが存在する場合、数分間待ってからバンドルの状態を確認してください。
 
 ## Establish a secure connection within AEM Forms workflow (AEM Forms on JEE) {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
 
@@ -36,7 +36,7 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 
 ### JEE 上の AEM Forms の管理者資格情報を使用して AEM Forms Client SDK Bundle を設定します {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
-1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトのURLはhttps://&lt;serverName>:&lt;port>/lc/system/console/configMgrです。
+1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトのURLは、https://&lt;serverName>:&lt;port>/lc/system/console/configMgrです。
 1. AEM Forms Client SDK Bundle を探して開きます。次の各プロパティの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTP URL を指定します。HTTPS経由の通信を有効にするには、-Djavax.net.ssl.trustStore=&lt;JEEキーストアファイル上のAEM Formsのパス>パラメーターを使用して、JEEサーバー上のAEM Formsを再起動します。
@@ -48,7 +48,7 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 ### 相互認証を使用して AEM Forms Client SDK Bundle を設定します {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
 
 1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
-1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトのURLはhttps://&lt;serverName>:&lt;port>/lc/system/console/configMgrです。
+1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトのURLは、https://&lt;serverName>:&lt;port>/lc/system/console/configMgrです。
 1. AEM Forms Client SDK Bundle を探して開きます。次の各プロパティの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS経由の通信を有効にするには、-Djavax.net.ssl.trustStore=&lt;JEEキーストアファイル上のAEM Formsのパス>パラメーターを使用して、JEEサーバー上のAEM Formsを再起動します。
@@ -63,5 +63,5 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 ## サンプルポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
 
 1. 管理者として AEM Assets にログインします。
-1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントをアップロードします。これで AEM 検索を使用してポリシーで保護されたドキュメントのコンテンツを検索できます。検索したテキストを含むドキュメントを返す必要があります。
+1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントをアップロードします。これで AEM 検索を使用してポリシーで保護されたドキュメントのコンテンツを検索できます。検索されたテキストを含むドキュメントを返す必要があります。
 
