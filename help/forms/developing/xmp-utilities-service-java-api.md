@@ -1,6 +1,6 @@
 ---
-title: XMP UtilitiesサービスJava APIQuick Start(SOAP)
-seo-title: XMP UtilitiesサービスJava APIQuick Start(SOAP)
+title: XMP UtilitiesサービスJava APIQuick開始(SOAP)
+seo-title: XMP UtilitiesサービスJava APIQuick開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 5db4c623-75db-4a34-9ad2-3c917619e296
@@ -10,26 +10,26 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 1b229ddf-9350-40b6-8056-dcbe0c5afd5b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# XMP UtilitiesサービスJava APIクイックスタート(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
+# XMP UtilitiesサービスJava APIクイック開始(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
 
-XMP Utilitiesサービスでは、次のクイックスタートを使用できます。
+XMP Utilitiesサービスでは、次のクイック開始を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したXMPメタデータの書き出し](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの書き出し](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したXMPメタデータの読み込み](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの読み込み](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、UNIXなど別のオペレーティングシステムを使用している場合は、Formsサーバーに基づいています。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、UNIXなど別のオペレーティングシステムを使用している場合、Formsサーバーに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされるパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したXMPメタデータの書き出し {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの書き出し {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
-次のコード例は、XMPメタデータを取得、調査、および保存します。 (PDFドキュメント [からのメタデータの書き出しを参照](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents))。
+次のコード例は、XMPメタデータを取得、調査および保存します。 (PDFメタデ [ータの書き出しドキュメント](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents))。
 
 ```as3
  /*
@@ -95,7 +95,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -132,9 +132,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したXMPメタデータの読み込み {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの読み込み {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-次のコード例では、XMPメタデータを読み込み、新しいPDFファイルをディスクに保存します。 PDFドキュメントは、Loan.pdfというPDFファイルに基づいています。 PDFドキュメントに読み込むメタデータを含むXMLドキュメントは、LoanMetaData.xmlというXMLファイルに基づ *いています*。 このXMLファイルについて詳しくは、PDFドキュメントへのメタデ [ータの読み込みを参照してくださ](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents)い。
+次のコード例では、XMPメタデータを読み込み、新しいPDFファイルをディスクに保存します。 PDFドキュメントは、Loan.pdfというPDFファイルに基づいています。 PDFドキュメントに読み込むメタデータを含むXMLドキュメントは、LoanMetaData.xmlというXMLファイルに基づ *いています*。 このXMLファイルについて詳しくは、PDFへのメタデータの読み込 [みを参照してください](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents)。
 
 ```as3
  /*
@@ -200,7 +200,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
