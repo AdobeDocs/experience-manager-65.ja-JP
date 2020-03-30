@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: a81cdd53-f0fb-4ac5-b2ec-c19aeee7186e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,7 +33,7 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 1. エージェント署名画像の名前と、AEMのユーザ名が一致することを確認してください。（画像のファイル名に拡張子は不要です）。
 1. CRXで、コンテンツフォルダ内に「`cmUserRoot`」フォルダを作成します。
 
-   1. 移動 `https://[server]:[port]/crx/de`. 必要に応じて、管理者としてログインします。
+   1. `https://'[server]:[port]'/crx/de` にアクセスします。必要に応じて、管理者としてログインします。
 
    1. 「**content**」フォルダーを右クリックし、「**作成**」／「**フォルダの作成**」を選択します。
 
@@ -47,7 +47,7 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
 1. Content Explorer で cmUserRoot フォルダに移動し、その中にエージェント署名画像を追加します。
 
-   1. 移動 `https://[server]:[port]/crx/explorer/index.jsp`. 必要に応じて、管理者としてログインします。
+   1. `https://'[server]:[port]'/crx/explorer/index.jsp` にアクセスします。必要に応じて、管理者としてログインします。
    1. 「**Content Explorer**」をクリックします。Content Explorerが新しいウィンドウで開きます。
    1. Content Explorerでユーザーのルートフォルダに移動し、それを選択します。**cmUserRoot** フォルダを右クリックし、「**新規ノード**」を選択します。
 
@@ -55,13 +55,13 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
       新しいノードの行に以下のエントリを作成した後、緑色のチェックマークをクリックします。
 
-      **** 名前：JohnDoe（またはエージェント署名ファイルの名前）
+      **名前：** JohnDoe（またはエージェント署名ファイルの名前）
 
       **タイプ：** nt:file
 
       Under the `cmUserRoot` folder, a new folder called `JohnDoe` (or the name you have given in the previous step) is created.
 
-   1. 新しく作成したフォルダをクリックします（ここでは「`JohnDoe`」）。Content Explorerでは、フォルダーの内容がグレー表示で表示されます。
+   1. 新しく作成したフォルダをクリックします（ここでは「`JohnDoe`」）。フォルダの内容がグレー表示で表示されます。
 
    1. Double-click the **jcr:content** property, set its type as **nt:resource**, and then click the green check mark to save the entry.
 
