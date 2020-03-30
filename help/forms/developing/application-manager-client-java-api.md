@@ -1,6 +1,6 @@
 ---
-title: Application ManagerクライアントJavaAPIクイックスタート(SOAP)
-seo-title: Application ManagerクライアントJavaAPIクイックスタート(SOAP)
+title: Application ManagerクライアントJavaAPIクイック開始(SOAP)
+seo-title: Application ManagerクライアントJavaAPIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 043f1c08-c7de-4e2d-88ca-b46428b1b551
@@ -10,36 +10,36 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2ec2a75e-4191-4660-a6f2-26cc667720b3
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Application ManagerクライアントJavaAPIクイックスタート(SOAP) {#application-manager-client-javaapi-quick-start-soap}
+# Application ManagerクライアントJavaAPIクイック開始(SOAP) {#application-manager-client-javaapi-quick-start-soap}
 
-Application Managerクライアントでは、次のJava APIクイックスタート(SOAP)を使用できます。
+Application Managerクライアントでは、次のJava APIクイック開始(SOAP)を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したアプリケーションバージョンの作成](#quick-start-soap-mode-creating-application-version-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したアプリケーションバージョンの作成](#quick-start-soap-mode-creating-application-version-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したアプリケーションの書き出し](#quick-start-soap-mode-exporting-applications-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したアプリケーションの書き出し](#quick-start-soap-mode-exporting-applications-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したアプリケーションの読み込み](#quick-start-soap-mode-importing-applications-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したアプリケーションの読み込み](#quick-start-soap-mode-importing-applications-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したAEM Formsアプリケーションの取得](application-manager-client-java-api.md#quick-start-soap-mode-getting-a-application-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したAEM Formsアプリケーションの取得](application-manager-client-java-api.md#quick-start-soap-mode-getting-a-application-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したアプリケーションの取得](application-manager-client-java-api.md#quick-start-soap-mode-getting-the-applications-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したアプリケーションの取得](application-manager-client-java-api.md#quick-start-soap-mode-getting-the-applications-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したアプリケーションのステータスの取得](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したアプリのステータスの取得](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したAEM Forms以降のアプリケーションアーカイブのプレビュー](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したAEM Forms以降のアプリケーションアーカイブのプレビュー](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したAEM Formsアプリケーションアーカイブの削除](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したAEM Formsアプリケーションアーカイブの削除](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、Unixなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、Unixなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションバージョンの作成 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリケーションバージョンの作成 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
 次のJavaコードの例は、JAVA APIを使用してアプリケーションを作成します。
 
@@ -92,7 +92,7 @@ public class CreateApplicationVersion_SOAP {
         // Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
         connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT",
-                "https://[server]:[port]");
+                "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL",
                 ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE",
@@ -138,9 +138,9 @@ public class CreateApplicationVersion_SOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションの書き出し {#quick-start-soap-mode-exporting-applications-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリケーションの書き出し {#quick-start-soap-mode-exporting-applications-using-the-java-api}
 
-次のJavaコードの例は、JAVA APIを使用してアプリケーションをエクスポートします。
+次のJavaコードの例は、JAVA APIを使用してアプリケーションを書き出します。
 
 ```as3
 /*
@@ -191,7 +191,7 @@ public class ExportLCA_SOAP {
         // Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
         connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT",
-                "https://[server]:[port]");
+                "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL",
                 ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE",
@@ -241,13 +241,13 @@ public class ExportLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションの読み込み {#quick-start-soap-mode-importing-applications-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリケーションの読み込み {#quick-start-soap-mode-importing-applications-using-the-java-api}
 
-次のJavaコードの例は、JAVA APIを使用してアプリケーションをインポートします。
+次のJavaコードの例は、JAVA APIを使用してアプリケーションを読み込みます。
 
 >[!NOTE]
 >
->Java API importApplication()は、同じ名前の既存のアプリケーションを新しいアプリケーションに置き換えます。 既存のアプリケーションを更新するには、API updateApplication()の代わりにAPI importApplication()を使用します。
+>Java API importApplication()は、同じ名前の既存のアプリケーションを新しいアプリケーションで置き換えます。 既存のアプリケーションを更新するには、API updateApplication()の代わりにAPI importApplication()を使用します。
 
 ```as3
 /*
@@ -295,7 +295,7 @@ public class ImportLCA_SOAP {
         // Set connection properties required to invoke AEM FOrms
         Properties connectionProps = new Properties();
         connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT",
-                "https://[server]:[port]");
+                "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL",
                 ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE",
@@ -328,9 +328,9 @@ public class ImportLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションの取得 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリケーションの取得 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
 
-以下のJavaコードの例は、Java APIを使用してアプリケーションを取得します。
+次のJavaコードの例は、Java APIを使用してアプリケーションを取得します。
 
 ```as3
 /*
@@ -384,7 +384,7 @@ public class GetApplication_SOAP {
     public static void main(String[] args) {
         //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL", ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
         connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -435,11 +435,11 @@ public class GetApplication_SOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションの取得 {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリケーションの取得 {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
 
-以下のJavaコードの例は、Java APIを使用してアプリケーションを取得します。
+次のJavaコードの例は、Java APIを使用してアプリケーションを取得します。
 
-**注意**:AEM Forms Application APIのgetApplications()を取得すると、デプロイ済みのアプリケーションのみが返されます。
+**注意**:AEM FormsアプリケーションAPIのgetApplications()を取得すると、デプロイ済みのアプリケーションのみが返されます。
 
 ```as3
 /*
@@ -492,7 +492,7 @@ public class GetApplications_SOAP {
     public static void main(String[] args) {
         //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL", ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
         connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -534,7 +534,7 @@ public class GetApplications_SOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションのステータスの取得 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリのステータスの取得 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
 
 ```as3
 /*
@@ -588,7 +588,7 @@ public class GetApplicationStatus_SOAP {
     public static void main(String[] args) {
         //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL", ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
         connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -639,7 +639,7 @@ public class GetApplicationStatus_SOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したLiveCycle ES2以降のアプリケーションアーカイブのプレビュー {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したLiveCycle ES2以降のアプリケーションアーカイブのプレビュー {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
 
 次のJavaコードの例は、Java APIを使用してAEM Forms以降のアプリケーションアーカイブをプレビューするためのものです。
 
@@ -686,7 +686,7 @@ public class PreviewLCA_SOAP {
     public static void main(String[] args) {
         //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL", ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
         connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -718,7 +718,7 @@ public class PreviewLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションアーカイブの削除 {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリケーションアーカイブの削除 {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
 
 次のJavaコードの例は、アプリケーションアーカイブの削除を示しています。
 
@@ -771,7 +771,7 @@ public class DeleteApplication_SOAP {
     public static void main(String[] args) {
         //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+        connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
         connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL", ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
         connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
