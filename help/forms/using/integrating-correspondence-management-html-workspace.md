@@ -9,7 +9,7 @@ topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -24,9 +24,9 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-まず、AEM Forms WorkspaceにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成します。 For more details, see [Create a letter template](../../forms/using/create-letter.md).
+AEM Forms WorkspaceでレンダリングされるサンプルのCorrespondence Managementテンプレートを作成することによる開始。 For more details, see [Create a letter template](../../forms/using/create-letter.md).
 
-URLでCorrespondence Managementテンプレートにアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
+URLでCorrespondence Managementテンプレートにアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
 ここで、`encodedLetterId` は URL エンコードされたレター ID です。Workbench で Workspace タスクにレンダリングプロセスを定義する場合は、同じレター ID を指定します。
 
@@ -48,7 +48,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
 
-      ![usearcxasset](assets/useacrxasset.png)
+      ![useacrxasset](assets/useacrxasset.png)
 
    1. アセットを参照します。フォームアセットの選択ダイアログの「レター」タブに、サーバーのすべてのレターが表示されます。
 
@@ -99,12 +99,12 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [Get File](assets/dscsample.zip)Download DSC:サンプルDSCは、上記に添付したDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Get File](assets/dscsample.zip)Download DSC:サンプルDSCは、上述のDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
 1. アプリケーションをデプロイします。指示があったら、アセットをチェックインして保存します。
-1. Log in to the AEM forms workspace at https://[server]:[port]/lc/content/ws.
+1. Log in to the AEM forms workspace at https://&#39;[server]:[port]&#39;/lc/content/ws.
 1. 追加したタスク CMRenderer を開きます。Correspondence Management レターが表示されます。
 
    ![cminworkspace](assets/cminworkspace.png)
