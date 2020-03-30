@@ -1,6 +1,6 @@
 ---
-title: Document Security Service javaAPIクイックスタート(SOAP)
-seo-title: Document Security Service javaAPIクイックスタート(SOAP)
+title: ドキュメントセキュリティサービスJavaAPIクイック開始(SOAP)
+seo-title: ドキュメントセキュリティサービスJavaAPIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: f3823a95-c8c2-42c8-8edc-3ab8ab4311dc
@@ -10,46 +10,46 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Document Security Service Java API Quick Start(SOAP) {#document-security-service-javaapi-quick-start-soap}
+# ドキュメントセキュリティサービスJava APIクイック開始(SOAP) {#document-security-service-javaapi-quick-start-soap}
 
-Rights Managementサービスでは、Java API Quick Start(SOAP)を使用できます。
+Java API Quick開始(SOAP)は、Rights Managementサービスで使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したポリシーの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーの変更](#quick-start-soap-mode-modifying-a-policy-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したポリシーの変更](#quick-start-soap-mode-modifying-a-policy-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-deleting-a-policy-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-deleting-a-policy-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへのポリシーの適用](#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントへのポリシーの適用](#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したドキュメントの失効](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したドキュメントの取り消し](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した失効したドキュメントへのアクセスの復元](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した失効したドキュメントへのアクセスの復元](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーで保護されたPDFドキュメントの検査](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したポリシーで保護されたPDFドキュメントの検査](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した透かしの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した透かしの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した透かしの変更](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した透かしの変更](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したイベントの検索](document-security-service-java-api.md#quick-start-soap-mode-searching-for-events-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したイベントの検索](document-security-service-java-api.md#quick-start-soap-mode-searching-for-events-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したWordドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したWordドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、Formsサーバーオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したポリシーの作成 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したポリシーの作成 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
-次のJavaコードの例は、 *Allow Copyという名前の新しいポリシーを作成します*。 ポリシーが追加されるポリシーセットには、「グローバルポリシーセット」と *いう名前が付けられます*。 このポリシーセットはデフォルトで存在します。 (ポリシー [の作成を参照](/help/forms/developing/protecting-documents-policies.md#creating-policies))。
+次のJavaコードの例は、 *Allow Copy*. ポリシーが追加されるポリシーセットは、「グローバルポリシーセ *ット」という名前です*。 このポリシーセットはデフォルトで存在します。 (ポリシー [の作成を参照](/help/forms/developing/protecting-documents-policies.md#creating-policies))。
 
 ```as3
  /*
@@ -116,7 +116,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -176,9 +176,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したポリシーの変更 {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したポリシーの変更 {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
 
-次のJavaコードの例では、オフラインリース期間を40日に設 *定して* 、「Allow Copy」という名前のポリシーを変更しています。 ( [Modifying Policies](/help/forms/developing/protecting-documents-policies.md#modifying-policies)を参照)。
+次のJavaコードの例では、オフラインリース期間を40日に設 *定して* 、「Allow Copy」という名前のポリシーを変更しています。 (ポリシー [の変更を参照](/help/forms/developing/protecting-documents-policies.md#modifying-policies))。
 
 ```as3
  /*
@@ -236,7 +236,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
            {
                  //Set connection properties required to invoke AEM Forms using SOAP mode
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -277,7 +277,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したポリシーの削除 {#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したポリシーの削除 {#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
 
 次のJavaコードの例は、 *Allow Copyという名前のポリシーを削除します*。 (ポリシー [の削除を参照](/help/forms/developing/protecting-documents-policies.md#deleting-policies))。
 
@@ -342,7 +342,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
        {
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -369,9 +369,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへのポリシーの適用 {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントへのポリシーの適用 {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、 *Allow Copy* （コピーを許可）という名前のポリシーを *Loan.pdfというPDFドキュメントに適用します*。 ポリシーが追加されるポリシーセットには、「グローバルポリシーセット」と *いう名前が付けられます*。 ポリシーで保護されたドキュメントは、*PolicyProtectedLoanDoc.pdfというPDFファイルとして保存されます。 *(PDFドキュメント [へのポリシーの適用を参照](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents))。
+次のJavaコードの例は、 *Allow Copy* （コピーを許可）という名前のポリシーを *Loan.pdfというPDFドキュメントに適用します*。 ポリシーが追加されるポリシーセットは、「グローバルポリシーセ *ット」という名前です*。 ポリシーで保護されたドキュメントは、*PolicyProtectedLoanDoc.pdfというPDFファイルとして保存されます。 *(PDFポリシ [ーの適用を参照](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents))。
 
 ```as3
  /*
@@ -431,7 +431,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
       {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -475,9 +475,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントからのポリシーの削除 {#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからのポリシーの削除 {#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api}
 
-次のコード例は、PolicyProtectedLoanDoc.pdfという名前のPDFドキュメントからポリシー *を削除します*。 保護されていないPDFドキュメントは、 *unProtectedLoan.pdfとして保存されます*。 (PDFドキュメ [ントからのポリシーの削除を参照](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents))。
+次のコード例は、PolicyProtectedLoanDoc.pdfという名前のPDFドキュメントからポリシー *を削除します*。 保護されていないPDFドキュメントは、 *unProtectedLoan.pdfとして保存されます*。 (PDFポリシ [ーの削除を参照](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents))。
 
 ```as3
  /*
@@ -546,7 +546,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -582,9 +582,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したドキュメントの失効 {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したドキュメントの取り消し {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
 
-次のJavaコードの例は、PolicyProtectedLoanDoc.pdfという名前のポリシーで保護されたドキュメ *ントを失効させます*。 変更後のPDFドキュメントは、次のURLの場所にありま `https://[server]:[port]/RightsManagement/UpdatedLoan.pdf`す。 (ドキュメ [ントへのアクセス権限の失効](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents)を参照)。
+次のJavaコードの例は、PolicyProtectedLoanDoc.pdfという名前のポリシーで保護されたドキュメント *を失効させます*。 変更後のPDFドキュメントは、次のURLにあります `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`。 (「アクセ [スの失効](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents)」を参照)。
 
 ```as3
  /*
@@ -656,7 +656,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -682,7 +682,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          LicenseManager licManager = rightsClient.getLicenseManager();
  
          //Specify the URL to where an updated document is located
-         URL myURL = new URL("https://[server]:[port]/RightsManagement/UpdatedLoan.pdf");
+         URL myURL = new URL("https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf");
  
          //Revoke the policy-protected PDF document
          licManager.revokeLicense(revokeLic, License.DOCUMENT_REVISED, myURL);
@@ -696,9 +696,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したポリシーで保護されたPDFドキュメントの検査 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したポリシーで保護されたPDFドキュメントの検査 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
-次のJavaコードの例は、PolicyProtectedLoanDoc. ** pdfという名前のポリシーで保護されたPDFドキュメントを調べます。(ポリシーで保護 [されたPDFドキュメントの検査を参照](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents))。
+次のJavaコードの例は、PolicyProtectedLoanDoc. ** pdfという名前のポリシーで保護されたPDFドキュメントを調べます。(ポリシーで保 [護されたPDFドキュメントの検査](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)を参照)。
 
 ```as3
  /*
@@ -769,7 +769,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
            {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -814,9 +814,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した失効したドキュメントへのアクセスの復元 {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した失効したドキュメントへのアクセスの復元 {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}
 
-次のJavaコードの例は、PolicyProtectedLoanDoc.pdfという名前の失効したPDFドキュメントへのアク *セス権を復元します*。 (取り消さ [れたドキュメントへのアクセス権の復元を参照](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents))。
+次のJavaコードの例は、PolicyProtectedLoanDoc.pdfという名前の失効したPDFドキュメントへのアク *セス権を復元します*。 (取り消された [ドキュメントへのアクセス権の復元](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents)を参照)。
 
 ```as3
  /*
@@ -883,7 +883,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -920,9 +920,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDF透かしの作成 {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDF透かしの作成 {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}
 
-次のJavaコードの例では、「Sample PDF Watermark」という名前の新しいPDF透かしを作成します。 この透かしには、1つの要素が含まれます(「透かし [の作成](/help/forms/developing/protecting-documents-policies.md#creating-watermarks)」を参照)。
+次のJavaコードの例を使用して、「Sample PDF Watermark」という名前の新しいPDF透かしを作成します。 この透かしには、1つの要素が含まれます(透かしの [作成を参照](/help/forms/developing/protecting-documents-policies.md#creating-watermarks))。
 
 ```as3
 /*
@@ -990,7 +990,7 @@ public class PDFWatermarksSOAPMode {
             Properties connectionProps = new Properties();
             connectionProps.setProperty(
                     ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT,
-                    "https://[server]:[port]/");
+                    "https://'[server]:[port]'/");
             connectionProps.setProperty(
                     ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,
                     ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -1053,9 +1053,9 @@ public class PDFWatermarksSOAPMode {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したテキスト透かしの作成 {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したテキスト透かしの作成 {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
 
-次のJavaコードの例は、Sample Text Watermarkという名前の新しいテキスト透か *しを作成します*。 この透かしには1つの要素が含まれます。
+次のJavaコードの例は、 *Sample Text Watermarkという名前の新しいテキスト透かしを作成します*。 この透かしには、1つの要素が含まれます。
 
 ```as3
 /*
@@ -1120,7 +1120,7 @@ public class TextWatermarks {
             Properties connectionProps = new Properties();
             connectionProps.setProperty(
                     ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT,
-                    "https://[server]:[port]/");
+                    "https://'[server]:[port]'/");
             connectionProps.setProperty(
                     ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,
                     ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -1202,7 +1202,7 @@ public class TextWatermarks {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したテキスト透かしの変更 {#quick-start-soap-mode-modifying-a-text-watermark-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したテキスト透かしの変更 {#quick-start-soap-mode-modifying-a-text-watermark-using-the-java-api}
 
 次のJavaコードの例では、「Sample Text Watermark」という名前の透かしを変更し、最初の要素の不透明度を100に設定しています。
 
@@ -1265,7 +1265,7 @@ public class ModifyWatermarks {
             Properties connectionProps = new Properties();
             connectionProps.setProperty(
                     ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT,
-                    "https://[server]:[port]");
+                    "https://'[server]:[port]'");
             connectionProps.setProperty(
                     ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,
                     ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -1314,9 +1314,9 @@ public class ModifyWatermarks {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した透かしの変更 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した透かしの変更 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
 
-次のJavaコードの例では、属性の値を *80に変更して* 、Confidentialという名前の透かし `opacity` を変更します。
+次のJavaコードの例では、属性の値を *80に変更し* 、Confidentialという名前の透かしを変 `opacity` 更しています。
 
 ```as3
  /*
@@ -1378,7 +1378,7 @@ public class ModifyWatermarks {
          {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1412,9 +1412,9 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したイベントの検索 {#quick-start-soap-mode-searching-for-events-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したイベントの検索 {#quick-start-soap-mode-searching-for-events-using-the-java-api}
 
-次のJavaコードの例では、create policyイベントを検索します。
+次のJavaコードの例では、create policyパラメーターを検索しています。イベント
 
 ```as3
  /*
@@ -1481,7 +1481,7 @@ public class ModifyWatermarks {
          {
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1525,9 +1525,9 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート(SOAP):Java APIを使用したWordドキュメントへのポリシーの適用 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
+## クイック開始(SOAP):Java APIを使用したWordドキュメントへのポリシーの適用 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
 
-次のJavaコードの例は、 *Allow Copy* （コピーを許可）という名前のポリシーを *Loan.docというWordドキュメントに適用します*。 ポリシーが追加されるポリシーセットには、「グローバルポリシーセット」と *いう名前が付けられます*。 ポリシーで保護されたドキュメントは、*PolicyProtectedLoanDoc.docという名前のDOCファイルとして保存されます。 *(PDFドキュメント [へのポリシーの適用を参照](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents))。
+次のJavaコードの例は、 *Allow Copy* （コピーを許可）という名前のポリシーを *Loan.docというWordドキュメントに適用します*。 ポリシーが追加されるポリシーセットは、「グローバルポリシーセ *ット」という名前です*。 ポリシーで保護されたドキュメントは、*PolicyProtectedLoanDoc.docという名前のDOCファイルとして保存されます。 *(PDFポリシ [ーの適用を参照](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents))。
 
 ```as3
  /*
@@ -1595,7 +1595,7 @@ public class ModifyWatermarks {
       {
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1640,9 +1640,9 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したWordドキュメントからのポリシーの削除 {#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したWordドキュメントからのポリシーの削除 {#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api}
 
-次のコード例は、PolicyProtectedLoanDoc.docという名前のWordドキュメントからポリシーを *削除します*。 保護されていないWord文書は、unProtectedLoan.doc *として保存されます*。 (Wordドキュメ [ントからのポリシーの削除を参照](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents))。
+次のコード例は、PolicyProtectedLoanDoc.docという名前のWordドキュメントからポリシー *を削除します*。 保護されていないWordドキュメントは、 *unProtectedLoan.docとして保存されます*。 (Wordドキュメント [からのポリシーの削除を参照](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents))。
 
 ```as3
  /*
@@ -1711,7 +1711,7 @@ public class ModifyWatermarks {
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1748,7 +1748,7 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した抽象ポリシーの作成 {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した抽象ポリシーの作成 {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}
 
 次のJavaコードの例は、AllowCopyという名前の新しい抽象ポリシーを作成します。 ポリシーが追加されるポリシーセットには、「グローバルポリシーセット」という名前が付けられます。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
 
@@ -1811,7 +1811,7 @@ public class CreateAbstractPolicySoap {
 
         //Set connection properties required to invoke forms server using SOAP mode
         Properties connectionProps = new Properties();
-        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "Jboss");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1865,9 +1865,9 @@ public class CreateAbstractPolicySoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した抽象ポリシーの変更 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した抽象ポリシーの変更 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
 
-次のJavaコードの例は、AllowCopyという名前の抽象ポリシーを変更しています。 ポリシーが変更されるポリシーセットの名前は、「グローバルポリシーセット」です。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
+次のJavaコードの例は、AllowCopyという名前の抽象ポリシーを変更しています。 ポリシーが変更されるポリシーセットは、「グローバルポリシーセット」という名前が付けられます。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
 
 ```as3
 /*
@@ -1927,7 +1927,7 @@ public class ModifyingAbstractPolicySoap {
 
         //Set connection properties required to invoke forms server using SOAP mode
         Properties connectionProps = new Properties();
-        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "Jboss");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1964,9 +1964,9 @@ public class ModifyingAbstractPolicySoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した抽象ポリシーの削除 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した抽象ポリシーの削除 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
 
-次のJavaコードの例は、AllowCopyという名前の抽象ポリシーを削除します。 ポリシーが削除されるポリシーセットの名前は「グローバルポリシーセット」です。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
+次のJavaコードの例は、AllowCopyという名前の抽象ポリシーを削除します。 ポリシーの削除元のポリシーセットには、「グローバルポリシーセット」という名前が付けられます。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
 
 ```as3
 /*
@@ -2025,7 +2025,7 @@ public class DeleteAbstractPolicySoap {
 
         //Set connection properties required to invoke AEM Forms using SOAP mode
         Properties connectionProps = new Properties();
-        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "Jboss");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2051,9 +2051,9 @@ public class DeleteAbstractPolicySoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した既存ユーザーのステートメントワークフローでのPDFの保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した既存のユーザーのステートメントワークフローでのPDFの保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
 
-次のJavaコードの例は、既存のユーザーに対してステートメントワークフローでドキュメントを保護する方法を示しています。
+次のJavaコードの例は、既存のユーザーに対してステートメントワークフローのドキュメントを保護する方法を示しています。
 
 ```as3
 /*
@@ -2116,7 +2116,7 @@ public class protectStatementWorkFlowExistingUserSoap {
 
             //Set connection properties required to invoke forms server using SOAP mode
             Properties connectionProps = new Properties();
-            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "Jboss");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2159,12 +2159,12 @@ public class protectStatementWorkFlowExistingUserSoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した、新しいユーザー向けのステートメントワークフローでのPDFの保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した、新しいユーザー向けのステートメントワークフローでのPDFの保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
 
 次のJavaコードの例は、ステートメントワークフローでドキュメントを保護する方法を示しています。 次に、2つの手順を示します。
 
 * 新しいユーザー、ライセンス、ポリシーが作成されます。
-* ユーザーがライセンスとポリシーに関連付けられ、ドキュメントは保護されています。
+* ユーザーはライセンスとポリシーに関連付けられ、ドキュメントは保護されます。
 
 ```as3
 /*
@@ -2233,7 +2233,7 @@ public class protectStatementWorkFlowSoap {
 
             //Set connection properties required to invoke forms server using SOAP mode
             Properties connectionProps = new Properties();
-            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "Jboss");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
