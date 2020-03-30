@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -27,7 +27,7 @@ Convert PDF サービスを使用すると、次のタスクを実行できま�
 
 ## サービスのプロパティの設定 {#properties}
 
-AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。The default URL of AEM console is `https://[host]:[port]/system/console/configMgr`.
+AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。The default URL of AEM console is `https://[host]:'port'/system/console/configMgr`.
 
 ## サービスの使用 {#using-the-service}
 
@@ -132,7 +132,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 ワークフローから Convert PDF サービスを実行することは、JSP またはサーブレットから実行することに似ています。
 
-唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、Documentオブジェクトは、指定されたResourceResolverオブジェクトを使用して、リポジトリからコンテンツを読み取ります。
+唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、このドキュメントオブジェクトは、指定されたResourceResolverオブジェクトを使用してリポジトリからコンテンツを読み取ります。
 
 以下に示したサンプルワークフロープロセスは、入力ドキュメントを PostScript ドキュメントに変換します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
