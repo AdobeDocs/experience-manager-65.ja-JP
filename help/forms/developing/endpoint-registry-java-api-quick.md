@@ -1,6 +1,6 @@
 ---
-title: エンドポイントレジストリJava API quickStart(SOAP)
-seo-title: エンドポイントレジストリJava API quickStart(SOAP)
+title: Endpoint Registry Java API QuickStart(SOAP)
+seo-title: Endpoint Registry Java API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 986c55d0-e199-46f8-a3cc-a6baf5cce316
@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# エンドポイントレジストリJava APIクイックスタート(SOAP) {#endpoint-registry-java-api-quickstart-soap}
+# Endpoint Registry Java API Quick開始(SOAP) {#endpoint-registry-java-api-quickstart-soap}
 
-Endpoint RegistryでJava API Quick Start(SOAP)を使用できます。
+Java API Quick開始(SOAP)は、Endpoint Registryで使用できます。
 
 [QuickStart:Java APIを使用したEJBエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
@@ -37,15 +37,15 @@ Endpoint RegistryでJava API Quick Start(SOAP)を使用できます。
 
 [QuickStart:Java APIを使用したエンドポイントコネクタ情報の取得](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づいています。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づいています。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
 **注意**:Webサービスを使用してエンドポイントを操作することはできません。
 
 ## QuickStart:Java APIを使用したEJBエンドポイントの追加 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
 
-次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスにEJBエンドポイントを追 *加します*。 (「EJBエンド [ポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints)」を参照)。
+次のJavaコードの例は、EJBエンドポイントを *MyApplication/EncryptDocumentという名前のサービスに追加します*。 (「EJBエンド [ポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints)」を参照)。
 
 ```as3
  /*
@@ -109,7 +109,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
  
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -144,7 +144,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## QuickStart:Java APIを使用したSOAPエンドポイントの追加 {#quickstart-adding-a-soap-endpoint-using-the-java-api}
 
-次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスにSOAPエンドポイン *トを追加します*。 (SOAPエンドポ [イントの追加を参照](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints))。
+次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスにSOAPエンドポイ *ントを追加します*。 (SOAPエンドポ [イントの追加を参照](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints))。
 
 ```as3
  /*
@@ -208,7 +208,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -244,11 +244,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## QuickStart:Java APIを使用した監視フォルダーエンドポイントの追加 {#quickstart-adding-a-watched-folder-endpoint-using-the-java-api}
 
-次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスに監視フォルダーエンドポイン *トを追加します*。 (See [Adding Watched Folder Endpoints](/help/forms/developing/programmatically-endpoints.md#adding-watched-folder-endpoints).)
+次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスに監視フォルダーエンドポイ *ントを追加します*。 (See [Adding Watched Folder Endpoints](/help/forms/developing/programmatically-endpoints.md#adding-watched-folder-endpoints).)
 
 >[!NOTE]
 >
->次のクイックスタートをコンパイルして実行するには、プロジェクトにWatchedFolderEndpointConfigConstants.javaファイルを含める必要があります。 (監視フォ [ルダー設定値の定数ファイルを参照](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file))。
+>次のクイック開始をコンパイルして実行するには、WatchedFolderEndpointConfigConstants.javaファイルをプロジェクトに含める必要があります。 (監視フォ [ルダー設定値の定数ファイルを参照](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file))。
 
 ```as3
  /*
@@ -311,7 +311,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -379,11 +379,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## QuickStart:Java APIを使用した電子メールエンドポイントの追加 {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスに電子メールエンドポイ *ントを追加*&#x200B;します。(電子メールエ [ンドポイントの追加を参照](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints))。
+次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスに電子メールエンドポイ *ントを追加*&#x200B;します。(電子メールエ [ンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)を参照)。
 
 >[!NOTE]
 >
->次のクイックスタートをコンパイルして実行するには、プロジェクトにEmailEndpointConfigConstants.javaファイルを含める必要があります。 (電子メール [設定値定数ファイルを参照](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file))。
+>次のクイック開始をコンパイルして実行するには、EmailEndpointConfigConstants.javaファイルをプロジェクトに含める必要があります。 (電子メール [設定値定数ファイルを参照](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file))。
 
 ```as3
  /*
@@ -446,7 +446,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -590,7 +590,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
  
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -627,7 +627,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## QuickStart:Java APIを使用したTaskManagerエンドポイントの追加 {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
 
-次のJavaコードの例は、TaskManagerエンドポイントをMyApplication/EncryptDocumentという名前のサービス *に追加します*。 カテゴリの名前はEncryptProcessです **。 (TaskManagerエンドポ [イントの追加を参照](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints))。
+次のJavaコードの例は、TaskManagerエンドポイントをMyApplication/EncryptDocumentという名前のサービス *に追加します*。 カテゴリの名前はEncryptProcess *です*。 (TaskManagerエンドポ [イントの追加を参照](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints))。
 
 ```as3
  /*
@@ -693,7 +693,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
  
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -736,7 +736,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## QuickStart:Java APIを使用したエンドポイントの変更 {#quickstart-modifying-an-endpoint-using-the-java-api}
 
-次のJavaコードの例では、監視フォルダーエンドポイントを変更します。エンドポイントは *MyApplication/EncryptDocument* プロセス用です。 監視フォルダーがに変更されま `C:\NewWatchedFolder`す。 (エンドポ [イントの変更](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints)を参照)。
+次のJavaコードの例では、監視フォルダーエンドポイントを変更しています。エンドポイントは *MyApplication/EncryptDocument* プロセス用です。 監視フォルダーがに変更されま `C:\NewWatchedFolder`す。 (エンドポ [イントの変更](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints)を参照)。
 
 ```as3
  /*
@@ -804,7 +804,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -886,7 +886,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 ## QuickStart:Java APIを使用したエンドポイントの削除 {#quickstart-removing-an-endpoint-using-the-java-api}
 
-次のJavaコードは、MyApplication/EncryptDocumentという名前のサービスからEJBエンドポイント *を削除します*。 (エンドポイ [ントの削除を参照](/help/forms/developing/programmatically-endpoints.md#removing-endpoints))。
+次のJavaコードは、MyApplication/EncryptDocumentという名前のサービスからEJBエンドポイ *ントを削除します*。 (エンドポイ [ントの削除を参照](/help/forms/developing/programmatically-endpoints.md#removing-endpoints))。
 
 ```as3
  /*
@@ -956,7 +956,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1070,7 +1070,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
