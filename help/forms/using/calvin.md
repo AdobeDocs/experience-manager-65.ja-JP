@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 1cb54c8a-9322-4b5a-b5a7-0eef342cee54
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
 
 ## 概要 {#overview}
 
-アダプティブフォームは、顧客とのやり取りを行う上で欠かすことができないものです。新しい修正パックの展開中やフォーム内のルールの変更中など、アダプティブフォームに加えたすべての変更をテストすることが重要です。 しかしながら、アダプティブフォームの機能テストおよびすべてのフィールドの機能テストは面倒な作業です。
+アダプティブフォームは、顧客とのやり取りを行う上で欠かすことができないものです。新しい修正パックの展開時やフォーム内のルールの変更時など、アダプティブフォームに加えたすべての変更をテストすることが重要です。 しかしながら、アダプティブフォームの機能テストおよびすべてのフィールドの機能テストは面倒な作業です。
 
 Calvin を使用すれば Web ブラウザーでアダプティブフォームの自動テストを実行できます。Calvin utilizes [Hobbes](/help/sites-developing/hobbes.md)&#39;s user interface for running the tests and provides the following tools:
 
@@ -94,7 +94,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
 次の例では、複数のアダプティブフォームのテスト用にテストスイートを作成する手順を説明しています。テストする必要のある各フォームに対して個別のテストケースを作成します。以下の手順と同じ手順に従って、手順 11 の JavaScript コードを変更し、独自のテストスイートを作成してアダプティブフォームをテストすることができます。
 
-1. Go to CRXDE Lite in your web browser: `https://[server]:[port]/crx/de`.
+1. Go to CRXDE Lite in your web browser: `https://'[server]:[port]'/crx/de`.
 1. /etc/clientlibs サブフォルダーを右クリックして、**作成**／**ノードを作成**&#x200B;をクリックします。名前（ここでは afTestRegistration）を入力し、ノードのタイプを cq:ClientLibraryFolder と指定して「**OK**」をクリックします。
 
    clientlibs フォルダーには、使用するアプリケーション（JS および Init）の登録機能が含まれています。clientlibs フォルダーには、フォームに固有の Hobbes のすべてのテストスイートオブジェクトを登録することをお勧めします。
@@ -116,7 +116,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
   <tr>
    <td><p>dependencies</p> </td>
    <td><p>文字列[]</p> </td>
-   <td><p>granite.testing.hobes.testrunner、granite.testing.calvin、apps.testframework.all</p> </td>
+   <td><p>granite.testing.hobbes.testrunner、granite.testing.calvin、apps.testframework.all</p> </td>
   </tr>
  </tbody>
 </table>
@@ -128,7 +128,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 ![1_aftestregistration](assets/1_aftestregistration.png)
 
 1. Right-click the test node (here **afTestRegistration)** and then click **Create** > **Create File**. ファイル名にjs.txtと入力して、「**OK**」をクリックします。
-1. js.txtファイルに、次のテキストを追加します。
+1. js.txtファイルに次のテキストを追加します。
 
    ```
    #base=.
@@ -160,11 +160,11 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
    * 名前：testForm（使用するフォーム名）
    * タイプ：cq:ClientLibraryFolder
 
-1. 次のプロパティを新しく作成したノード（ここではtestForm）に追加して、アダプティブフォームをテストします。
+1. 新し追加く作成されたノード（ここではtestForm）に対して、次のプロパティを設定し、アダプティブフォームをテストします。
 
-   | **プロパティ** | **種類** | **値** |
+   | **プロパティ** | **タイプ** | **値** |
    |---|---|---|
-   | categories | String[] | granite.testing.hobes.tests, granite.testing.hobes.tests.testForm |
+   | categories | String[] | granite.testing.hobbes.tests, granite.testing.hobbes.tests.testForm |
    | dependencies | String[] | granite.testing.calvin.tests |
 
    >[!NOTE]
@@ -269,7 +269,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
     }(window, window.hobs));
    ```
 
-   テストケースが作成されます。テストケースを実行して、Hobbes経由でアダプティブフォームをテストします。 For steps for running the test cases, see [Executing Tests in Testing Your UI Using Automated Tests](/help/sites-developing/hobbes.md).
+   テストケースが作成されます。Hobbes経由でアダプティブフォームをテストする場合は、テストケースの実行に進みます。 For steps for running the test cases, see [Executing Tests in Testing Your UI Using Automated Tests](/help/sites-developing/hobbes.md).
 
 また、添付ファイル SampleTestPackage.zip に含まれるパッケージをインストールすれば、「例： Hobbes をテスト用フレームワークとして使用してアダプティブフォームのテストスイートを作成する」で説明した手順の結果と同じ結果を得ることができます。
 
@@ -289,7 +289,7 @@ An &quot;X&quot; icon indicates a failed test: ![cross](assets/cross.png)
 
 1. テストパネルで、実行するテストケースの名前をクリックまたはタップして、アクションの詳細を展開します。
 
-   ![1_tapnameoftestcase](assets/1_tapnameoftestcase.png)
+   ![1.tapnameoftestcase](assets/1_tapnameoftestcase.png)
 
 1. 「テストを実行」ボタンをクリックまたはタップします。 ![runtestcase](assets/runtestcase.png)
 
