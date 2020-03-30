@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -27,7 +27,7 @@ User Management は、AEM Forms にアクセスするために AEM Forms ユー�
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 
-User Management は、My Sql、Oracle、MS SQL Server、IBM DB2 などのデータベースにユーザーデータを格納します。In addition, any user who has logged in at least once in Forms applications on AEM author at `https://[server]:[host]/lc`, the user gets created in AEM repository. したがって、User Management のデータは、次のデータストアに格納されます。
+User Management は、My Sql、Oracle、MS SQL Server、IBM DB2 などのデータベースにユーザーデータを格納します。In addition, any user who has logged in at least once in Forms applications on AEM author at `https://'[server]:[port]'lc`, the user gets created in AEM repository. したがって、User Management のデータは、次のデータストアに格納されます。
 
 * データベース
 * AEM リポジトリ
@@ -86,7 +86,7 @@ User Management では、次のデータベーステーブルにユーザーデ�
 
 ### AEM リポジトリ {#aem-repository}
 
-User management data for users who have at least once accessed the Forms applications under `https://[server]:[host]/lc` is stored in AEM repository as well.
+User management data for users who have at least once accessed the Forms applications under `https://'[server]:[port]'lc` is stored in AEM repository as well.
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
@@ -178,14 +178,14 @@ Forms JEE ユーザーは、AEM Forms オーサーインスタンスに少なく
 
 #### ユーザーデータへのアクセス {#access-user-data}
 
-To view user created in AEM repository, log into `https://[server]:[port]/lc/useradmin` with AEM administrator credentials. URL の `server` と `port` は、AEM オーサーインスタンスのサーバーとポートであることに注意してください。ここでは、ユーザー名でユーザーを検索できます。ユーザーをダブルクリックすると、ユーザーのプロパティ、権限、グループなどの情報が表示されます。ユーザーの `Path` プロパティは、AEM リポジトリで作成されたユーザーノードへのパスを指定します。
+To view user created in AEM repository, log into `https://'[server]:[port]'/lc/useradmin` with AEM administrator credentials. URL の `server` と `port` は、AEM オーサーインスタンスのサーバーとポートであることに注意してください。ここでは、ユーザー名でユーザーを検索できます。ユーザーをダブルクリックすると、ユーザーのプロパティ、権限、グループなどの情報が表示されます。ユーザーの `Path` プロパティは、AEM リポジトリで作成されたユーザーノードへのパスを指定します。
 
 #### ユーザーデータの削除 {#delete-aem}
 
 ユーザを削除するには：
 
-1. AEM管理者の資 `https://[server]:[port]/lc/useradmin` 格情報を使用してに移動します。
+1. AEM管理者の資 `https://'[server]:[port]'/lc/useradmin` 格情報を使用してに移動します。
 1. ユーザーを検索してユーザー名をダブルクリックし、ユーザープロパティを開きます。Copy the `Path` property.
-1. Go to AEM CRX DELite at `https://[server]:[port]/lc/crx/de/index.jsp` and navigate or search the user path.
+1. Go to AEM CRX DELite at `https://'[server]:[port]'/lc/crx/de/index.jsp` and navigate or search the user path.
 1. Delete the path and click **[!UICONTROL Save All]** to permanently delete the user from AEM repository.
 
