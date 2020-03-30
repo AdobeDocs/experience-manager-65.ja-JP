@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -27,7 +27,7 @@ FormBridge API を使用して、HTML ページからフォームフィールド
 
 1. **プロファイルの選択またはプロファイルの作成**
 
-   1. In the CRX DE interface, navigate to: `https://[server]:[port]/crx/de`.
+   1. In the CRX DE interface, navigate to: `https://'[server]:[port]'/crx/de`.
    1. 管理者の資格情報を使用してログインします。
    1. プロファイルを作成するか、既存のプロファイルを選択します。
 
