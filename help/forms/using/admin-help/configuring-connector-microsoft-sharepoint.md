@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0ec881c9-8dcc-4847-9edf-24d9e6c4a7ea
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,13 +22,13 @@ Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間�
 1. 管理コンソールで、サービス／Connector for Microsoft SharePoint をクリックします。
 1. SharePoint Server の次の設定を指定します。
 
-   **** SharePoint serverホスト名：SharePointサーバー上のWebアプリケーションのホスト名のポート番号を、形式で指定しま `[hostname]:[port]`す。
+   **SharePoint Serverホスト名：** SharePointサーバー上のWebアプリケーションのホスト名のポート番号を、形式で指定しま `[hostname]:'port'`す。
 
-   **** ユーザー名：SharePointサーバーへの接続に使用するユーザーアカウント。
+   **ユーザー名：** SharePointサーバーへの接続に使用するユーザーアカウント。
 
-   **** パスワード：SharePointサーバーへの接続に使用するユーザーアカウントのパスワード
+   **パスワード：** SharePointサーバーへの接続に使用するユーザーアカウントのパスワード
 
-   **** ドメイン名：SharePointサーバーが存在するドメイン。
+   **ドメイン名：** SharePointサーバーが存在するドメイン。
 
 1. 「保存」をクリックします。
 
