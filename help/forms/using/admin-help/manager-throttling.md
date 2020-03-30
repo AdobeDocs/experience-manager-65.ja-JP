@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9a8b4e3a-f416-4dc6-a90a-9018df5c844e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -84,7 +84,7 @@ AEM forms 管理者は、ヘルスモニターを使用してワークマネー�
 
 **WebLogic への Java オプションの追加**
 
-1. Start the WebLogic Administration Console by typing `https://`*[host name ]*`:`*[port]* `/console` in a web browser.
+1. Start the WebLogic Administration Console by typing `https://[host name]:[port]/console` in a web browser.
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
