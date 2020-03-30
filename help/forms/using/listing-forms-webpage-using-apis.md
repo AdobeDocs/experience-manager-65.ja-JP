@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
-source-git-commit: db69c393fc44ca2fcb30f9fcb0c5ca456ba35ed5
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: db69c393fc44ca2fcb30f9fcb0c5ca456ba35ed5
 
 AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリーを実行し、検索条件に合う一連のフォームを取得できます。API を使用することで、様々なフィルターに基づいてフォームを検索できます。応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
 
-To search forms using the REST API, send a GET request to the server at `https://[server]:[port]/libs/fd/fm/content/manage.json` with query parameters described below.
+To search forms using the REST API, send a GET request to the server at `https://'[server]:[port]'/libs/fd/fm/content/manage.json` with query parameters described below.
 
 ## クエリーパラメーター {#query-parameters}
 
@@ -30,7 +30,7 @@ To search forms using the REST API, send a GET request to the server at `https:/
   </tr>
   <tr>
    <td>func<br /> </td>
-   <td><p>呼び出す関数を指定します。フォームを検索するには、<code>func </code> 属性の値を <code>searchForms</code> に設定します。</p> <p>例： <code class="code">
+   <td><p>呼び出す関数を指定します。フォームを検索するには、<code>func </code> 属性の値を <code>searchForms</code> に設定します。</p> <p>例えば、次のように入力します。 <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
        entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong><em>このパラメーターは必須です。</em><br /> </p> </td>
   </tr>
@@ -40,10 +40,10 @@ To search forms using the REST API, send a GET request to the server at `https:/
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定する場合はパイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>： </p>
+   <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定する場合はパイプ（|）演算子を使用します。 </p> <p>例えば、次のように入力します。 <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>： </p>
     <ul>
      <li><em>ID、パス、名前などのプロパティは、常に取得されます。 </em></li>
-     <li><em>アセットごとにプロパティのセットが異なります。formUrl、pdfUrl、guideUrl などのプロパティは cutPoints 属性に依存しません。これらのプロパティはアセットタイプに依存し、それに従って取得されます。 </em></li>
+     <li><em>アセットごとにプロパティのセットが異なります。formUrl、pdfUrl、guideUrl などのプロパティは cutPoints 属性に依存しません。これらのプロパティは、アセットのタイプに応じて取得されます。 </em></li>
     </ul> </td>
   </tr>
   <tr>
@@ -69,7 +69,7 @@ To search forms using the REST API, send a GET request to the server at `https:/
   </tr>
   <tr>
    <td>statements</td>
-   <td><p>文のリストを指定します。クエリーは、JSON 形式で指定した文のリストに対して実行されます。 </p> <p>例：</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td><p>文のリストを指定します。クエリーは、JSON 形式で指定した文のリストに対して実行されます。 </p> <p>例えば、次のように入力します。</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
@@ -96,7 +96,7 @@ To search forms using the REST API, send a GET request to the server at `https:/
   </tr>
   <tr>
    <td>orderings<br /> </td>
-   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、フィールドがクエリー内で表示されている順番のとおりに並べ替えられています。</p> <p>例：</p> <p>titleプロパティで昇順に並べ替えたクエリー結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、フィールドがクエリー内で表示されている順番のとおりに並べ替えられています。</p> <p>例えば、次のように入力します。</p> <p>タイトルプロパティで昇順に並べられたクエリの結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
