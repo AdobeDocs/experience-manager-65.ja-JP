@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 金融業界をリードする We.Finance 社は、幅広い顧客プロフィール要件に合わせてパーソナライズされた包括的な金融ソリューションを提供しています。クレジットカード、住宅ローンおよび住宅保険のサービスを提供しています。
 
-目標は、希望するデバイス上の既存のお客様と見込み客に連絡を取り、サービスのメリットを説明し、サービスへの登録を支援することです。 さらに同社は、アドオンのカードなど、顧客が興味を抱きそうな金融商品を宣伝していきたいと考えています。
+お客様の目標は、お客様の希望するデバイスで既存のお客様と見込み客に連絡し、サービスのメリットを説明し、サービスへの登録を支援することです。 さらに同社は、アドオンのカードなど、顧客が興味を抱きそうな金融商品を宣伝していきたいと考えています。
 
 We.Finance 社のユースケースの詳細なチュートリアルをお読みいただき、金融機関が目標を達成するのに AEM Forms がどのように貢献しているかご確認ください。以下のチュートリアルをご覧ください。
 
@@ -34,7 +34,7 @@ We.Finance 社のユースケースの詳細なチュートリアルをお読み
 * [Microsoft Dynamics を使用した住宅ローンの申し込みのチュートリアル](#home-mortgage-application-walkthrough-with-microsoft-dynamics)
 * [住宅保険申し込みのチュートリアル](#home-insurance-application-walkthrough)
 * [資産管理のチュートリアル](#wealthmanagementwalkthrough)
-* [自動保険申込のチュートリアル](#autoinsuranceapplicationwalkthrough)
+* [自動保険申し込みのチュートリアル](#autoinsuranceapplicationwalkthrough)
 
 ## クレジットカードの申し込みのチュートリアル {#credit-card-application-walkthrough}
 
@@ -77,7 +77,7 @@ Sarah は利用可能なオプションからクレジットカードを選択�
 
 ![login-ssn](assets/login-ssn.png)
 
-Sarah は We.Finance 社の既存の顧客です。Sarah が We.Finance 社のアカウントの資格情報でログインすると、個人情報の詳細がフォームに自動で入力されます。Sarahは申込フォームへの入力を続けます。その後、Sarahは出席が必要な会議に関するリマインダーをポップアップします。 She clicks **[!UICONTROL Save my progress]** on the application form. このボタンをクリックすると、その時点までに入力されたすべての情報が保存されます。さらに、ダイアログポップアップが表示され、途中まで入力していたドラフトの内容を後で完成するために申込フォームへのリンクを電子メールで受け取ることを希望するかどうか尋ねられます。
+Sarah は We.Finance 社の既存の顧客です。Sarah が We.Finance 社のアカウントの資格情報でログインすると、個人情報の詳細がフォームに自動で入力されます。Sarahは申込フォームへの入力を続けます。その際、Sarahは出席する必要のある会議に関するリマインダをポップアップします。 She clicks **[!UICONTROL Save my progress]** on the application form. このボタンをクリックすると、その時点までに入力されたすべての情報が保存されます。さらに、ダイアログポップアップが表示され、途中まで入力していたドラフトの内容を後で完成するために申込フォームへのリンクを電子メールで受け取ることを希望するかどうか尋ねられます。
 
 Sarah は「**[!UICONTROL Send mail]**」をクリックします。彼女はクレジットカードの申込フォームを再開するためのリンクが表示された電子メールを受け取ります。
 
@@ -91,17 +91,17 @@ Sarah がモバイルデバイスからクレジットカードの申込フォ�
 
 **仕組み**
 
-「**Apply Now**」ボタンから、Sarah は直接クレジットカードの申込フォームにアクセスできます。The application is an adaptive form, which you can review in the authoring instances at `https://[host]:[Port]/editor.html/content/forms/af/we-finance/cc-app.html`.
+「**Apply Now**」ボタンから、Sarah は直接クレジットカードの申込フォームにアクセスできます。The application is an adaptive form, which you can review in the authoring instances at `https://[host]:'port'/editor.html/content/forms/af/we-finance/cc-app.html`.
 
 アダプティブフォームで確認できるいくつかの主な機能は、次のとおりです。
 
 * XSD スキーマに基づいている。
-* スタイル設定は We Finance Theme A を使用し、レイアウトは We.Finance テンプレートを使用して構築されている。また、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されています。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 テンプレートはで確認でき、テ `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` ーマはで確認できま `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-a/jcr:content`す。
-* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。You can review the Form Data Models and their services at `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* スタイル設定は We Finance Theme A を使用し、レイアウトは We.Finance テンプレートを使用して構築されている。また、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されています。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 テンプレートは、および `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance` で確認できま `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-a/jcr:content`す。
+* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。You can review the Form Data Models and their services at `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * さまざまなアダプティブフォームコンポーネントを使用して入力内容を取得し、ユーザーレスポンスに適合する。HTML5 入力タイプをサポートする電子メールなどのコンポーネントも使用します。
 * 署名ステップコンポーネントを使用して、入力が完了したフォームを表示し、フォーム上で電子署名を行うことができる。
 * 「Save my progress」ボタンをクリックすると、ユーザーに対して一意の ID が生成され、AEM リポジトリのノード内に一部入力済みの申込フォームが下書きとして保存される。また、同じアクションによって、申込フォームの下書きを含むノードへのリンクを電子メールで送信する許可を求めるダイアログが表示されます。確認ダイアログの「Send mail」ボタンをクリックすると、下書きを含むノードへのリンクを持つ電子メールが自動送信されます。
-* AEM ワークフローを起動する送信アクションを使用して、クレジットカードの承認ワークフローをトリガーする。You can review the workflow used in this form at `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-credit-card-workflow.html`
+* AEM ワークフローを起動する送信アクションを使用して、クレジットカードの承認ワークフローをトリガーする。You can review the workflow used in this form at `https://[host]:'port'/editor.html/conf/global/settings/workflow/models/we-finance-credit-card-workflow.html`
 
 フォームを確認して、フォームの作成に使用したスキーマ、コンポーネント、ルール、フォームデータモデル、Forms ワークフロー、送信アクションを理解することをお勧めします。
 
@@ -163,7 +163,7 @@ OSGi 上の AEM Forms によって Forms 中心のワークフローが提供さ
 
 #### 実際の動作確認 {#see-it-yourself-2}
 
-we.financeサイトのAEMインボックスには、https://&lt;*hostname*>:&lt;*PublishPort*>/content/we-finance/global/en.htmlからアクセスできます。 ページで「 **Sign In**」をタップし、「 **Login as representate**`grios/password` 」チェックボックスを選択し、Gloria Riosのユーザー名/パスワードとしてAEMインボックスにログインし、クレジットカード申込書を承認します。 For information about using AEM Inbox for forms-centric workflow tasks, see [Manage Forms applications and tasks in AEM Inbox](../../forms/using/manage-applications-inbox.md).
+we.financeサイトのAEMインボックスには、https://&lt;*hostname*>:&lt;*PublishPort*>/content/we-finance/global/en.htmlからアクセスできます。 ページで、「 **Sign In**」をタップし、「 **Login as representative**`grios/password` 」チェックボックスを選択し、Gloria Riosのユーザー名/パスワードを使用してAEMインボックスにログインし、クレジットカード申込を承認します。 For information about using AEM Inbox for forms-centric workflow tasks, see [Manage Forms applications and tasks in AEM Inbox](../../forms/using/manage-applications-inbox.md).
 
 ![inbox-1](assets/inbox-1.png)
 
@@ -171,7 +171,7 @@ we.financeサイトのAEMインボックスには、https://&lt;*hostname*>:&lt;
 
 ### Sarah がウェルカムキットを受信し、アドオンカードに適用 {#sarah-receives-the-welcome-kit-and-applies-for-an-add-on-card}
 
-Sarah のクレジットカード申込が承認されると、彼女はウェルカムキットへのリンクを含む電子メールを受信します。ウェルカムキットには彼女のクレジットカードアカウントの詳細情報が記載されています。ウェルカムキットには、Sarah向けにパーソナライズされたプロモーションキャンペーン情報も表示されます。 スクロールダウンすると、埋め込みフォームからアドオンカードへの申し込みができるようになっています。Sarahはウェルカムキットの中から必要な情報を素早く入力し、アドオンカードの申し込みを行います。 アドオンカード申込の確認ダイアログが表示されます。
+Sarah のクレジットカード申込が承認されると、彼女はウェルカムキットへのリンクを含む電子メールを受信します。ウェルカムキットには彼女のクレジットカードアカウントの詳細情報が記載されています。ウェルカムキットには、Sarah向けにパーソナライズされたプロモーションオファーも表示されます。 スクロールダウンすると、埋め込みフォームからアドオンカードへの申し込みができるようになっています。Sarahはウェルカムキットの中から必要な情報を素早く入力し、アドオンカードの申し込みを行います。 アドオンカード申込の確認ダイアログが表示されます。
 
 ![サラ用ウェルカムキット](assets/welcome-kit-for-sara.png)
 
@@ -191,11 +191,11 @@ The welcome kit is an interactive communication included in the `cq-we-finance-c
 
 #### 実際の動作確認 {#see-it-yourself-3}
 
-前の手順で受け取った電子メールの「Resume」ボタンをクリックします。 申込書の下書きが開きます。各項目に詳細を入力し、申込書を送信します。するとウェルカムキットを受信するので、その内容を確認します。
+前の手順で受け取った電子メールの「再開」ボタンをクリックします。 申込書の下書きが開きます。各項目に詳細を入力し、申込書を送信します。するとウェルカムキットを受信するので、その内容を確認します。
 
 次の URL でもウェルカムキットが表示されます。
 
-https://&lt;*host*> :&lt;*port*>/content/aemforms-refsite/doclink.html?document=/content/forms/af/we-finance/credit-card/creditcardwelcomekit&amp;customerId=197&amp;channel=web
+https://&lt;*host*> :&lt;*port*>/content/aemforms-refsite/doclink.html?ドキュメント=/content/forms/af/we-finance/credit-card/creditcardwelcomekit&amp;customerId=197&amp;チャネル=web
 
 作成者インスタンスと発行インスタンスでアクセスできます。
 
@@ -203,9 +203,9 @@ https://&lt;*host*> :&lt;*port*>/content/aemforms-refsite/doclink.html?document=
 
 Sarah は、クレジットカードの使用開始後に、自らのクレジットカード明細を含む別の電子メールを We.Finance 社から受信します。以下の画像では、クレジットカード明細へのリンクを含む電子メールのモバイルバージョンを紹介しています。
 
-![statement-email](assets/statement-email.png)
+![電子メール — 明細](assets/statement-email.png)
 
-Sarah は「View Statement」（明細を表示）ボタンをクリックし、クレジットカード明細を確認します。この文は対話型の通信です。 Web版と印刷版(PDF)版の両方があります。 このステートメントは、Forms Data modelと統合され、顧客に固有のデータをデータベースから取得します。 この明細はインタラクティブステートメントであり、様々な要素から構成されています。
+Sarah は「View Statement」（明細を表示）ボタンをクリックし、クレジットカード明細を確認します。この文は対話型の通信です。 Web版と印刷版(PDF)版の両方があります。 このステートメントは、Formsデータモデルと統合され、顧客に固有のデータをデータベースから取得します。 この明細はインタラクティブステートメントであり、様々な要素から構成されています。
 
 * 明細概要
 * 支払細目レポート
@@ -215,13 +215,13 @@ Sarah は「View Statement」（明細を表示）ボタンをクリックし、
 
 ![クレジットカード明細の別の部分](assets/sara-rose-statement.png)
 
-Sarahは、ポータルにアクセスしたり、オフラインアーカイブ用のクレジットカード明細のPDF版に関する電子メールを検索したりする必要はありません。 「Download Statement」をクリックするだけで、PDF版のステートメントをダウンロードできます。
+Sarahは、ポータルや電子メールで、オフラインアーカイブ用のクレジットカード明細のPDF版を検索する必要はありません。 「Download Statement」をクリックするだけで、PDF版のステートメントをダウンロードできます。
 
-詳細なステートメントがレスポンシブテーブルにレイアウトされます。 明細書には、明細内から一部または全額を支払うオプションも用意されています。
+詳細なステートメントがレスポンシブテーブルにレイアウトされます。 明細には、明細の中から一部または全額を支払うオプションも用意されています。
 
 ![詳細明細](assets/statement-details.png)
 
-Sarahは明細の中から支払いを予定します。 Sarahは、「Flexi Pay」オプションを使用して、支払を均等な部分に分割することもできます。
+Sarahは明細の中から支払いを予定します。 また、Sarahは「Flexi Pay」オプションを使用して、支払いを均等な部分に分割することもできます。
 
 #### 仕組み {#how-it-works-4}
 
@@ -231,11 +231,11 @@ Sarahは明細の中から支払いを予定します。 Sarahは、「Flexi Pay
 
 インタラクティブなクレジットカード明細を確認するには、次の URL を参照します。
 
-https://&lt;*hostname*>:&lt;*port*>/content/aemforms-refsite/doclink.html?document=/content/forms/af/we-finance/credit-card/credit-card-statement&amp;customerId=197&amp;channel=web
+https://&lt;*hostname*>:&lt;*port*>/content/aemforms-refsite/doclink.html?ドキュメント=/content/forms/af/we-finance/credit-card/credit-card-statement&amp;customerId=197&amp;チャネル=web
 
 作成者インスタンスと発行インスタンスでアクセスできます。
 
-クレジットカード明細には、明細の終わりに向けてプロモーションオファーが表示されます。 Adobe targetをAEM Forms Interactive Communicationと統合して、特定の顧客セグメントに基づくプロモーションターゲットオファーを提供できます。 Adobe targetを使用してカスタマイズされたターゲットオファーを作成するようにインタラクティブな通信を設定するには、「ターゲットを設定したエク [スペリエンスを作成する](/help/forms/using/experience-targeting-forms.md)」を参照してください。
+クレジットカード明細には、明細の最後に向けて販促オファーが表示されます。 AdobeターゲットをAEM Forms Interactive Communicationと統合して、特定の顧客セグメントに基づいたプロモーションのターゲットオファーを提供できます。 インタラクティブな通信を設定して、カスタマイズされたターゲットオファーにAdobeターゲットを使用するには、ターゲットを設定したエクスペリエ [ンスの作成を参照してくださ](/help/forms/using/experience-targeting-forms.md)い。
 
 ![](do-not-localize/offers.png)
 
@@ -258,9 +258,9 @@ Analytics レポートを閲覧および検討したい方のために、リフ�
 1. Go to **Forms &amp; Documents** UI at https://&lt;*hostname*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
 
 1. **We.Finance** フォルダーをクリックし、開きます。
-1. 「クレジ **ットカード申込み** 」アダプティブフォームを選択し、ツールバーで「解析を有効にする」を **[!UICONTROL クリックします]**。
+1. 「Application for Credit Card **」アダプティブフォームを選択し、ツールバーで「Analyticsを有効にする」を** クリックします ****。
 
-1. アダプティブフォームを再度選択し、ツールバー **[!UICONTROL の「分析レポート]** 」をクリックして、レポートを生成します。 最初は空白のレポートが表示されます。
+1. アダプティブフォームを再度選択し、ツールバ **[!UICONTROL ーの]** 「Analyticsレポート」をクリックしてレポートを生成します。 最初は空白のレポートが表示されます。
 
 シードデータを使用してAnalyticsレポートを生成するには：
 
@@ -271,7 +271,7 @@ Analytics レポートを閲覧および検討したい方のために、リフ�
 1. In CRXDE, navigate to: `/content/dam/formsanddocuments/we-finance/cc-app/jcr:content/analyticsdatanode/lastsevendays`
 1. In the **[!UICONTROL analyticsdata]** field under **[!UICONTROL Properties]**, paste the copied content of the seed data file.
 
-1. 「クレジ **ットカード申込み** 」アダプティブフォームを選択し、ツールバーの「 **[!UICONTROL Analyticsレポート]** 」をクリックして、シードデータを含むレポートを生成します。
+1. 「Application for Credit Card **** 」アダプティブフォームを選択し、ツールバーの「 **[!UICONTROL Analytics Report]** 」をクリックして、シードデータを含むレポートを生成します。
 
 **クレジットカード申込書の A/B テスト**
 
@@ -300,13 +300,13 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 
    `https://&lt;*hostname*&gt;:&lt;*port*&gt;/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
 
-   >[!NOTE] 注意：次回フォームを開く前に、 **mbox** という名前のCookieをブラウザーのCookie永続性から削除します。 そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
+   >[!NOTE] 注意：次回フォームを開く前に、 **mbox** という名前のCookieをブラウザーのCookieの永続性から削除します。 そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
 
 1. フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。テスト開始直後には、レポートに多くのデータが表示されることはありません。シードデータを使用して、A/B テストレポートがどのように表示されるか確認しましょう。
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 上記のファイル内の関 `onReportLoadSuccess` 数の定義を、次のファイル内の関数の定義に置き換えます。/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：これらの変更はデモ専用です。 この手順を完了した後、必ずファイルの中身を元に戻してください。
+   注意：これらの変更は、デモの目的でのみ行われます。 この手順を完了した後、必ずファイルの中身を元に戻してください。
 
 1. 生成したレポートを更新すると、以下のような画面が表示されます。レポートダッシュボードを確認します。
 
@@ -356,7 +356,7 @@ Go to We.Finance portal at `https://<publishHost>:<publishPort>/content/we-finan
 
 Sarah chooses to apply for home mortgage and clicks **[!UICONTROL Apply Now]** on home mortgage calculator results. 住宅ローンの申込フォームが開きます。
 
-Sarah がモバイルデバイスから住宅ローンの申込フォームにアクセスした場合は、申込フォームはモバイルデバイスの表示用に最適化されたビューで開かれます。このビューでは、アプリケーションフォームは一度に1つのセクションをレンダリングします。 そのため、Sarah は申込フォームを移動するたびに、順を追って情報の表示および入力を行うことができます。
+Sarah がモバイルデバイスから住宅ローンの申込フォームにアクセスした場合は、申込フォームはモバイルデバイスの表示用に最適化されたビューで開かれます。この表示では、アプリケーションフォームは一度に1つのセクションをレンダリングします。 そのため、Sarah は申込フォームを移動するたびに、順を追って情報の表示および入力を行うことができます。
 
 以下の画像では、Sarah が住宅ローンの申し込み時にモバイルデバイス上で閲覧したワークフローを紹介します。
 
@@ -374,20 +374,20 @@ Sarah が住宅ローン計算機に入力した情報に基づいて、いく�
 
 #### 仕組み {#how-it-works-7}
 
-「**Apply Now**」ボタンから、Sarah は直接住宅ローンの申込フォームにアクセスできます。The application is an adaptive form, which you can review in the authoring instances at `https://[host]:[Port]/editor.html/content/forms/af/we-finance/hm-app.html`.
+「**Apply Now**」ボタンから、Sarah は直接住宅ローンの申込フォームにアクセスできます。The application is an adaptive form, which you can review in the authoring instances at `https://[host]:'port'/editor.html/content/forms/af/we-finance/hm-app.html`.
 
 アダプティブフォームで確認できるいくつかの主な機能は、次のとおりです。
 
 * XSD スキーマ、`homeMortgageApplication.xsd` に基づいている。
 * スタイル設定は We Finance Theme B を使用し、レイアウトは We.Finance テンプレートを使用して構築されている。また、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されています。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 アダプティブフォームで使用されるテンプレートおよびテーマは、AEM オーサーインスタンスの次の場所で確認できます。
 
-   * `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance`
-   * `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
+   * `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance`
+   * `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
 
-* 申込フォームにある最初のタブの「Getting Started」は、動的な住宅ローン計算機で、ユーザーの選択内容に基づいてオプションを表示する。例えば、購入のオプションと借り換えのオプションではフィールドおよび値が異なります。この機能は、表示または非表示のルールを使用して実行されます。さらに、「Continue」をクリックして「Plans」タブを初期化すると、フォームデータモデルで設定された Web サービスが呼び出され、住宅ローンプランが取得されて表示されます。You can review the Form Data Models and configured services at `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* 申込フォームにある最初のタブの「Getting Started」は、動的な住宅ローン計算機で、ユーザーの選択内容に基づいてオプションを表示する。例えば、購入のオプションと借り換えのオプションではフィールドおよび値が異なります。この機能は、表示または非表示のルールを使用して実行されます。さらに、「Continue」をクリックして「Plans」タブを初期化すると、フォームデータモデルで設定された Web サービスが呼び出され、住宅ローンプランが取得されて表示されます。You can review the Form Data Models and configured services at `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * さまざまなアダプティブフォームコンポーネントを使用して入力内容を取得し、ユーザーレスポンスに適合する。HTML5 入力タイプをサポートする電子メールなどのコンポーネントも使用します。
 * 署名ステップコンポーネントを使用して、入力が完了したフォームを表示し、フォーム上で電子署名を行うことができる。
-* AEM ワークフローを起動する送信アクションを使用して、We Finance 住宅ローン AEM ワークフローをトリガーする。You can review the workflow used in this form at `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-home-mortgage-workflow.html`
+* AEM ワークフローを起動する送信アクションを使用して、We Finance 住宅ローン AEM ワークフローをトリガーする。You can review the workflow used in this form at `https://[host]:'port'/editor.html/conf/global/settings/workflow/models/we-finance-home-mortgage-workflow.html`
 
 フォームを確認して、フォームの作成に使用したスキーマ、コンポーネント、ルール、フォームデータモデル、Forms ワークフロー、送信アクションを理解することをお勧めします。
 
@@ -403,7 +403,7 @@ Sarah が住宅ローン計算機に入力した情報に基づいて、いく�
 
 #### 実際の動作確認 {#see-it-yourself-6}
 
-Go to `https://[server]:[port]/content/we-finance/global/en/all-forms.html` and click the **Apply now** button on Home Mortgage Application. 「Getting Started」タブに詳細を入力し、さまざまなオプションを試して、申込書を送信します。
+Go to `https://'[server]:[port]'/content/we-finance/global/en/all-forms.html` and click the **Apply now** button on Home Mortgage Application. 「Getting Started」タブに詳細を入力し、さまざまなオプションを試して、申込書を送信します。
 
 申込フォームで有効な電子メール ID を指定し、インボックスで確認のメールを受信します。
 
@@ -459,7 +459,7 @@ The welcome kit is an interactive communication included in the `cq-we-finance-c
 
 これは次の URL にある AEM パブリッシュインスタンスに表示されます。
 
-`https://[host]:[port]/content/forms/af/we-finance/mortgage-loan-welcome-kit.html`
+`https://[host]:'port'/content/forms/af/we-finance/mortgage-loan-welcome-kit.html`
 
 ### Sarah が取引明細書を受信 {#sarah-receives-an-account-statement}
 
@@ -511,7 +511,7 @@ Analytics レポートを閲覧および検討したい方のために、リフ�
 1. **we-finance** フォルダーをクリックし、開きます。
 1. 「 **[!UICONTROL Application for Home Mortgage]** 」アダプティブフォームを選択し、ツールバーで「Analyticsを有効にする」を **[!UICONTROL クリックします]**。
 
-1. フォームを再度選択し、ツールバーの **[!UICONTROL 「Analyticsレポート]** 」をクリックして、レポートを生成します。 最初は空白のレポートが表示されます。
+1. フォームを再度選択し、ツールバーの **[!UICONTROL 「]** Analyticsレポート」をクリックして、レポートを生成します。 最初は空白のレポートが表示されます。
 
 シードデータを使用してAnalyticsレポートを生成するには：
 
@@ -520,7 +520,7 @@ Analytics レポートを閲覧および検討したい方のために、リフ�
 1. 選択されたファイルをダブルクリックして、右側のパネルでファイルのコンテンツを開きます。
 1. シードデータファイル内のすべてのコンテンツをコピーします。
 1. In CRXDE, navigate to: `/content/dam/formsanddocuments/we-finance/hm-app/jcr:content/analyticsdatanode/lastsevendays`
-1. Analyticsデータフィールドの「プロパティ」の下で、シードデータファイルのコピーした内容を貼り付けます。
+1. 「プロパティ」の下のAnalyticsデータフィールドに、シードデータファイルのコピーした内容を貼り付けます。
 1. 住宅ローン申し込みフォームの分析レポートを再生成します。 シードデータを含むレポートが表示されます。
 
 **住宅ローン申込書の A/B テスト**
@@ -555,7 +555,7 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 上記のファイル内の関 `onReportLoadSuccess` 数の定義を、次のファイル内の関数の定義に置き換えます。/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：これらの変更はデモ専用です。 この手順を完了した後、必ずファイルの中身を元に戻してください。
+   注意：これらの変更は、デモの目的でのみ行われます。 この手順を完了した後、必ずファイルの中身を元に戻してください。
 
 1. 生成したレポートを更新すると、以下のような画面が表示されます。レポートダッシュボードを確認します。
 
@@ -572,7 +572,7 @@ Microsoft Dynamics を使用した We.Finance 社の住宅ローンのシナリ�
 * Sarah Rose（We.Finance 社の顧客）
 * We.Finance Microsoft Dynamics インスタンスの管理者
 
-Microsoft Dynamicsのホーム住宅ローン申し込みチュートリアルでは、リファレンスサイトでMicrosoft Dynamicsのデータ統合を使用する場合に、We.Financeのお客様がサイトを使用してホーム住宅ローンを申し込む方法を示します。 このチュートリアルは、Microsoft Dynamics で受信されたユーザーがデータ入力を完了するところで終わります。Before you proceed with this scenario, you need to complete the [Microsoft Dynamics 365 configuration for the home mortgage workflow of the We.Finance reference site](/help/forms/using/ms-dynamics-configuration-home-mortgage.md).
+Microsoft Dynamicsとのホーム住宅ローン申し込みのチュートリアルでは、リファレンスサイトでデータ統合用のMicrosoft Dynamicsを使用する場合に、We.Financeのお客様がサイトを使用して住宅ローンの申し込みを行う方法を示します。 このチュートリアルは、Microsoft Dynamics で受信されたユーザーがデータ入力を完了するところで終わります。Before you proceed with this scenario, you need to complete the [Microsoft Dynamics 365 configuration for the home mortgage workflow of the We.Finance reference site](/help/forms/using/ms-dynamics-configuration-home-mortgage.md).
 
 ### Sarah は We.Finance 社の Web サイトにアクセスして住宅ローンを申し込む {#sarah-visits-we-finance-website-and-applies-for-home-mortgage-1}
 
@@ -600,7 +600,7 @@ Go to We.Finance portal at `https://<publishHost>:<publishPort>/content/we-finan
 
 Sarah chooses to apply for home mortgage and clicks **[!UICONTROL Apply Now]** on home mortgage calculator results. 住宅ローンの申込フォームが開きます。
 
-Sarah がモバイルデバイスから住宅ローンの申込フォームにアクセスした場合は、申込フォームはモバイルデバイスの表示用に最適化されたビューで開かれます。このビューでは、アプリケーションフォームは一度に1つのセクションをレンダリングします。 そのため、Sarah は申込フォームを移動するたびに、順を追って情報の表示および入力を行うことができます。
+Sarah がモバイルデバイスから住宅ローンの申込フォームにアクセスした場合は、申込フォームはモバイルデバイスの表示用に最適化されたビューで開かれます。この表示では、アプリケーションフォームは一度に1つのセクションをレンダリングします。 そのため、Sarah は申込フォームを移動するたびに、順を追って情報の表示および入力を行うことができます。
 
 以下の画像では、Sarah が住宅ローンの申し込み時にモバイルデバイス上で閲覧したワークフローを紹介します。
 
@@ -618,17 +618,17 @@ Sarah が住宅ローン計算機に入力した情報に基づいて、いく�
 
 #### 仕組み {#how-it-works-13}
 
-「**Apply Now**」ボタンから、Sarah は直接住宅ローンの申込フォームにアクセスできます。The application is an adaptive form, which you can review in the authoring instances at `https://[host]:[Port]/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
+「**Apply Now**」ボタンから、Sarah は直接住宅ローンの申込フォームにアクセスできます。The application is an adaptive form, which you can review in the authoring instances at `https://[host]:'port'/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
 
 アダプティブフォームで確認できるいくつかの主な機能は、次のとおりです。
 
 * XSD スキーマ、`homeMortgageApplication.xsd` に基づいている。
 * スタイル設定は We Finance Theme B を使用し、レイアウトは We.Finance テンプレートを使用して構築されている。また、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されています。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 アダプティブフォームで使用されるテンプレートおよびテーマは、AEM オーサーインスタンスの次の場所で確認できます。
 
-   * `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance`
-   * `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
+   * `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance`
+   * `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
 
-* 申込フォームにある最初のタブの「Getting Started」は、動的な住宅ローン計算機で、ユーザーの選択内容に基づいてオプションを表示する。例えば、購入のオプションと借り換えのオプションではフィールドおよび値が異なります。この機能は、表示または非表示のルールを使用して実行されます。さらに、「Continue」をクリックして「Plans」タブを初期化すると、フォームデータモデルで設定された Web サービスが呼び出され、住宅ローンプランが取得されて表示されます。You can review the Form Data Models and configured services at `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* 申込フォームにある最初のタブの「Getting Started」は、動的な住宅ローン計算機で、ユーザーの選択内容に基づいてオプションを表示する。例えば、購入のオプションと借り換えのオプションではフィールドおよび値が異なります。この機能は、表示または非表示のルールを使用して実行されます。さらに、「Continue」をクリックして「Plans」タブを初期化すると、フォームデータモデルで設定された Web サービスが呼び出され、住宅ローンプランが取得されて表示されます。You can review the Form Data Models and configured services at `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * さまざまなアダプティブフォームコンポーネントを使用して入力内容を取得し、ユーザーレスポンスに適合する。HTML5 入力タイプをサポートする電子メールなどのコンポーネントも使用します。
 * 署名ステップコンポーネントを使用して、入力が完了したフォームを表示し、フォーム上で電子署名を行うことができる。
 
@@ -678,7 +678,7 @@ Sarah はニュースレターに載っていた住宅保険プランが気に�
 
 ![insurance-ssn](assets/insurance-ssn.png)
 
-Sarah は We.Finance 社の既存の顧客です。Sarah が We.Finance 社のアカウントの資格情報でログインすると、個人情報の詳細がフォームに自動で入力されます。彼女は引き続き申込書に記入して提出する。
+Sarah は We.Finance 社の既存の顧客です。Sarah が We.Finance 社のアカウントの資格情報でログインすると、個人情報の詳細がフォームに自動で入力されます。彼女は申込書に記入し、提出し続ける。
 
 Sarah がモバイルデバイスから申込書を送信した場合は、次の画面で順に進んで行きます。
 
@@ -686,17 +686,17 @@ Sarah がモバイルデバイスから申込書を送信した場合は、次�
 
 #### 仕組み {#how-it-works-15}
 
-ニュースレターの「**Apply Now**」をクリックすると、We.Finance 社のポータルサイトの住宅保険の申込フォームに移動します。The application is an adaptive form, which you can review in the authoring instance at `https://[host]:[Port]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
+ニュースレターの「**Apply Now**」をクリックすると、We.Finance 社のポータルサイトの住宅保険の申込フォームに移動します。The application is an adaptive form, which you can review in the authoring instance at `https://[host]:'port'/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
 
 アダプティブフォームで確認できるいくつかの主な機能は、次のとおりです。
 
 * XSD スキーマ、`insurance.xsd` に基づいている。
-* スタイルに保険テーマを使用して構築されており、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されている。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 テンプレートはで確認でき、テ `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` ーマはで確認できま `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/insurance/jcr:content`す。
+* スタイルに保険テーマを使用して構築されており、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されている。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 テンプレートは、および `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance` で確認できま `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/insurance/jcr:content`す。
 
-* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。You can review the Form Data Models and their services at `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。You can review the Form Data Models and their services at `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * さまざまなアダプティブフォームコンポーネントを使用して入力内容を取得し、ユーザーレスポンスに適合する。HTML5 入力タイプをサポートする電子メールなどのコンポーネントも使用します。
 * 「Save my progress」ボタンをクリックすると、ユーザーに対して一意の ID が生成され、AEM リポジトリのノード内に一部入力済みの申込フォームが下書きとして保存される。また、同じアクションによって、申込フォームの下書きを含むノードへのリンクを電子メールで送信する許可を求めるダイアログが表示されます。確認ダイアログの「Send mail」ボタンをクリックすると、下書きを含むノードへのリンクを持つ電子メールが自動送信されます。
-* AEM ワークフローを起動する送信アクションを使用して、住宅保険の承認ワークフローをトリガーする。You can review the workflow used in this form at `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-insurance-workflow.html`
+* AEM ワークフローを起動する送信アクションを使用して、住宅保険の承認ワークフローをトリガーする。You can review the workflow used in this form at `https://[host]:'port'/editor.html/conf/global/settings/workflow/models/we-finance-insurance-workflow.html`
 
 フォームを確認して、フォームの作成に使用したスキーマ、コンポーネント、ルール、フォームデータモデル、Forms ワークフロー、送信アクションを理解することをお勧めします。
 
@@ -714,7 +714,7 @@ Sarah がモバイルデバイスから申込書を送信した場合は、次�
 
 電子メールで受信したニュースレターの「**Apply now**」ボタンをクリックします。Alternatively, go to `https://[publishHost]:[publishPort]/content/we-finance/global/en/all-forms.html` and click **[!UICONTROL Apply]** on the insurance application. 「Social Security Number」フィールドで `123456789` を指定します。プロンプトが表示されたら、ユーザー名とパスワードに `srose/srose` と入力してログインします。
 
-詳細を入力し、様々なアダプティブフォームコンポーネントを調査し、アプリを送信します。 アダプティブフォームは、で確認できま `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`す。
+詳細を入力し、さまざまなアダプティブフォームコンポーネントを調査し、申込書を送信します。 アダプティブフォームは、で確認できま `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`す。
 
 ### We.Finance 社が申し込みを承認し、Sarah が契約書に署名 {#we-finance-approves-the-application-and-a-contract-is-signed}
 
@@ -722,9 +722,9 @@ Sarah によって送信された住宅保険申込書を、We.Finance 社が受
 
 ![insurance-inbox-grios](assets/insurance-inbox-grios.png)
 
-Gloria が Sarah の住宅保険の申し込みを承認すると、Frank De Costa の AEM インボックスにタスクが作成されます。Frankはタスクをレビューします。 Frank は Sarah 用に住宅保険の保険契約書を準備し、この契約書を Sarah の申込書に添付して彼女に送信して、契約書に署名をしてもらいます。エージェントUIに表示される契約は、インタラクティブ通信の印刷バージョンです。
+Gloria が Sarah の住宅保険の申し込みを承認すると、Frank De Costa の AEM インボックスにタスクが作成されます。フランクはタスクを Frank は Sarah 用に住宅保険の保険契約書を準備し、この契約書を Sarah の申込書に添付して彼女に送信して、契約書に署名をしてもらいます。エージェントUIに表示される契約は、インタラクティブ通信の印刷版です。
 
-![保険連絡書](assets/insurance-contact-letter.png)
+![保険連絡状](assets/insurance-contact-letter.png)
 
 Sarah は、署名を行う住宅保険の保険契約書へのリンクを含む電子メールを受信します。Sarah は契約書を確認して、署名します。
 
@@ -732,7 +732,7 @@ Sarah は、署名を行う住宅保険の保険契約書へのリンクを含�
 
 #### 仕組み {#how-it-works-16}
 
-Sarah が住宅保険の申込フォームを送信すると、Forms ワークフローがトリガーされ、Gloria の AEM インボックスにタスクが作成されます。Gloria が申込書を確認して承認したため、タスクは Frank De Costa に割り当てられます。ある個人から別の個人へのタスクのフローは、保険申込書に関連付けられたAEMワークフローで定義されます。 For more information about workflows, see [Forms-centric workflow on OSGi](../../forms/using/aem-forms-workflow.md).
+Sarah が住宅保険の申込フォームを送信すると、Forms ワークフローがトリガーされ、Gloria の AEM インボックスにタスクが作成されます。Gloria が申込書を確認して承認したため、タスクは Frank De Costa に割り当てられます。ある個人から別のタスクへの訪問者のフローは、保険申込書に関連付けられたAEMワークフローで定義されます。 For more information about workflows, see [Forms-centric workflow on OSGi](../../forms/using/aem-forms-workflow.md).
 
 以下の図は、保険の申し込みに関連する AEM ワークフローを図式化したものです。
 
@@ -747,7 +747,7 @@ Frank は Correspondence Management を使用して、住宅保険の保険契�
 1. Go to AEM Inbox, `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`, and log in with `grios/grios` as username password for Gloria&#39;s persona. Sarah の住宅保険の申し込みを承認します。
 
 1. 次に、Frank のユーザー名とパスワード（`fdcosta/password`）を使用して AEM インボックスにログインします。タスクが表示されます。
-1. 次に、に進み、HomeInsuranceWelcomeKitのレ `https://[authorHost]:[authorPort]/aem/forms.html/content/dam/formsanddocuments/we-finance/insurance` ターテンプレートをプレビューします。
+1. 次に、HomeInsuranceWelcomeKitのレターテンプ `https://[authorHost]:[authorPort]/aem/forms.html/content/dam/formsanddocuments/we-finance/insurance` レートをに移動し、プレビューします。
 1. 「Data」パネルで情報を指定します。「**[!UICONTROL Preview]**」をクリックして、PDF をローカルのファイルシステムにダウンロードします。この PDF ファイルは、contract.pdf filename という名前で保存するようにしてください。
 1. Frank の AEM インボックスに移動してタスクを開き、ダウンロードした契約書の PDF を添付して「**[!UICONTROL Send Contract]**」をクリックします。
 1. 契約書が含まれる電子メールを開き、ドキュメントに署名します。
@@ -756,11 +756,11 @@ Frank は Correspondence Management を使用して、住宅保険の保険契�
 
 Sarah が住宅保険の契約書に署名すると、保険契約の詳細が含まれる電子メールを受信します。
 
-![保険証券詳細](assets/insurance-policy-details.png)
+![保険証券の詳細](assets/insurance-policy-details.png)
 
 つまり、彼女は保険契約のウェルカムキットを使用して We.Finance 社から別の電子メールを受信します。ウェルカムキットから、Sarah は契約ドキュメントにアクセスしてステートメントを確認することができます。
 
-![insurance-welcome-kit](assets/insurance-welcome-kit.png)
+![保険ウェルカムキット](assets/insurance-welcome-kit.png)
 
 #### 実際の動作確認 {#see-it-yourself-14}
 
@@ -768,127 +768,127 @@ Sarah が住宅保険の契約書に署名すると、保険契約の詳細が�
 
 ![insurance-welcome-kit-email](assets/insurance-welcome-kit-email.png)
 
-## 資産管理の目論見書のチュートリアル {#wealth-management-prospectus-walkthrough}
+## 資産管理の見通しのチュートリアル {#wealth-management-prospectus-walkthrough}
 
 We.Finance Wealth Managementシナリオには、次の人物が含まれます。
 
 * Sarah Rose（We.Finance 社の顧客）
 
-ウェルス・マネジメントのチュートリアルでは、We.Financeのお客様が、このサイトを使用して、投資信託であるBlue Chip Growth Fundについて学ぶ方法を示します。 リファレンスサイトは、インタラクティブな通信を用いて、ファンドに関する情報を表示する。 この情報は、Web形式とPDF形式の両方で利用できます。 チュートリアルは、最後に顧客がPDFバージョンの情報を兄に電子メールで送信する形で終了します。
+ウェルス・マネジメントのチュートリアルでは、We.Financeのお客様が、このサイトをどのように使用して、投資信託であるBlue Chip Growth Fundを学ぶかを示しています。 リファレンスサイトは、インタラクティブな通信を用いて、ファンドに関する情報を表示する。 この情報は、Web形式とPDF形式の両方で利用できます。 チュートリアルは、最後に顧客がPDFバージョンの情報を弟に電子メールで送信することによって終了します。
 
-次の画像は、資産管理のチュートリアルのワークフローを示しています。
+次の画像は、ウェルス管理のチュートリアルのワークフローを示しています。
 
 ![wealth management-prospectus-walkthrough](assets/wealth-management-prospectus-walkthrough.png)
 
-### SarahはWe.FinanceのWebサイトを訪れ、Blue Chip Growth Fundの案内書を開きます。 {#sarah-visits-we-finance-website-and-opens-the-blue-chip-growth-fund-prospectus}
+### SarahはWe.FinanceのWebサイトを訪れ、Blue Chip Growth Fundの目論見書を開く {#sarah-visits-we-finance-website-and-opens-the-blue-chip-growth-fund-prospectus}
 
-サラ・ローズは、投資信託に投資する予定です。 We.Financeの既存の顧客であるため、We.Financeポータルにアクセスして、利用可能なミューチュアルファンドを調べます。 We.Finance Blue Chip Growth Fundのページを開きます このページには、現在と過去の価格、月間の業績、セクター別多様化、費用、手数料、税金など、資金に関する詳細を含む目論見書へのリンクが含まれています。
+サラ・ローズは、投資信託に投資する予定だ。 We.Financeの既存の顧客であるため、We.Financeポータルにアクセスして、利用可能なミューチュアルファンドを調べます。 We.Finance Blue Chip Growth Fundのページを開きます。 このページには、現在と過去の価格、月別の業績、部門別の多様化、費用、手数料、税金など、資金に関する詳細を含む目論見書へのリンクが含まれています。
 
 ![slide1](assets/slide1.png)
 
 #### 仕組み {#how-it-works-17}
 
-ブルーチップ・グローズ・ファンドの趣意書は対話型のコミュニケーションです テキスト、画像、グラフ、表コンポーネント（ドキュメントフラグメント）を使用して、製品概要、株式スタイル、資金実績、資金詳細、その他の関連情報を表示します。 インタラクティブな通信は、 `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`
+ブルーチップ・グループ・ファンドの目論見書は対話型のコミュニケーションです テキスト、画像、グラフ、表のコンポーネント(ドキュメントフラグメント)を使用して、製品概要、株式スタイル、資金実績、資金詳細、その他の関連情報が表示されます。 インタラクティブな通信は、 `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`
 
-グラフとテーブルは、フォームデータモデルからデータを取得します。 フォームデータモデルは、このチュートリアルのデータベースである設定済みのデータソースに接続して、基金に固有の情報を取得します。 フォームデータモデルは、 `https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management`
+グラフと表は、フォームデータモデルからデータを取得します。 フォームデータモデルは、このチュートリアルのデータベースである設定済みのデータソースに接続して、その資金に固有の情報を取得します。 フォームデータモデルは、 `https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management`
 
 #### 実際の動作確認  {#see-it-yourself-15}
 
-We.Financeポータル()に移動し、「財 `https://[publishHost]:[publishPort]/wefinance`務管理」をタップし、「資産クラス別資金」をタップし、「We.Finance Blue Chip Growth Fund」をタップします。 We.Finance Blue Chip Growth Fundの目論見書が開館します。
+We.Financeポータル()に移動し、「財 `https://[publishHost]:[publishPort]/wefinance`産管理」をタップし、「資産区分別資金」をタップし、「We.Finance Blue Chip Growth Fund」をタップします。 We.Finance Blue Chip Growth Fundの目論見書が開館します。
 
-### Sarahは、Blue Chip Growth Fundの目論見書を調査して、この基金について知る {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
+### Sarahは、Blue Chip Growth Fundの目論見書を調査し、この基金について学びます。 {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
-Sarahは、目論見書の概要、価格とパフォーマンス、ポートフォリオ管理、手数料と最小、税金と支払いの各タブを調査し、現在と過去の価格、成長履歴、S&amp;P 500指数との比較、部門別多様化、資金の管理者、資金に関連する費用を調べます。 関連情報は、異なるタブに分離される。 目論見書は対話型のコミュニケーションです インタラクティブな通信にはレスポンシブなデザインがあります。 デバイスの画面サイズに関係なくインタラクティブなコミュニケーションを開くことができ、インタラクティブなコミュニケーションは、基になるデバイスに合わせてデザインを再フローします。
+S&amp;P 500指数との比較、S&amp;P 500指数との比較、分野別の多様化、資金の管理者、資金に関連する費用について、目論見書の概要、価格、ポートフォリオ管理、手数料、最小、税金、支払いの各タブを調べます。 関連情報は、異なるタブに分離される。 目論見書は対話型のコミュニケーションです インタラクティブな通信にはレスポンシブなデザインがあります。 Sanaはあらゆる画面サイズのデバイスで対話型通信を開くことができ、対話型通信は基礎となるデバイスに合わせてデザインを再フローします。
 
 ![slide1-1](assets/slide1-1.png)
 
 #### 仕組み {#how-it-works-18}
 
-Blue Chip Growth Fundの対話型コミュニケーションでは、親パネルと子パネルを使用して、関連情報を別々のセクションに分けます。 親パネルは、すべての子パネルをタブに編成します。
+Blue Chip Growth Fundは、親パネルと子パネルを使用して、関連する情報を別々のセクションに分けている。 親パネルでは、すべての子パネルがタブ別に整理されています。
 
-すべての子パネルをタブに変換するには、親タブのレイアウトを「上のタブ」に設定します。 インタラクティブ通信のパネルは、の編集モードで確認できま `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`す。
+親タブのレイアウトは「上のタブ」に設定され、すべての子パネルがタブに変換されます。 インタラクティブ通信のパネルは、の編集モードで確認できま `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`す。
 
 #### 実際の動作確認  {#see-it-yourself-16}
 
-Blue Chip Growth Fundのインタラクティブ・コミュニケーション()に進みま `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled`す。 すべてのタブを表示します。
+Blue Chip Growth Fundのインタラクティブ・コミュニケーション（英語）に進みま `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled`す。 すべてのタブを表示します。
 
-### SarahはPDF版のBlue Chip Growth Fundページを表示し、電子メールで送信します。 {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
+### Sarah表示は、Blue Chip Growth FundページのPDF版を電子メールで送信します。 {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
 
-Sarahは週末に田舎に旅行中です。 彼女は、ブルーチップス・グループ・ファンドについて兄と話し合う予定だ。 彼女の兄は銀行と仕事をし、金融に関する決断を手伝う。 Sarahは、オフラインでの閲覧用に、Blue Chip Growth FundページのPDF版を自分のノートパソコンにダウンロードします。 彼女はまた、PDF版のコピーを兄にメールする。
+Sarahは週末に田舎へ旅行中です。 彼女は、ブルーチップス・グループ・ファンドについて兄と話し合う予定だ。 彼女の兄は銀行と仕事をし、彼女の金融に関する決断を手伝う。 Sarahは、オフラインで読むために、Blue Chip Growth FundページのPDF版を自分のノートパソコンにダウンロードします。 彼女はまた、弟にPDF版のコピーをメールする。
 
 ![blue-chip-pdf](assets/blue-chip-pdf.gif)
 
 #### 仕組み {#how-it-works-19}
 
-ブルーチップ・グローズ・ファンドの趣意書は対話型のコミュニケーションです WebチャネルとPDFチャネルがあります。 このインタラクティブな通信はAEM Workflowsと統合され、PDFバージョンを電子メールで送信します。 ワークフローモデルは、で確認できま `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html`す。
+ブルーチップ・グループ・ファンドの目論見書は対話型のコミュニケーションです WebおよびPDFチャネル。 インタラクティブな通信はAEMワークフローと統合され、PDFバージョンを電子メールで送信します。 ワークフローモデルは、で確認できま `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html`す。
 
-![資産管理](assets/wealth-management.png)
+![財産管理](assets/wealth-management.png)
 
 #### 実際の動作確認  {#see-it-yourself-17}
 
-PDFバージョンをダウンロードするには、Blue Chip Growth Fundインタラクティブコミュニケーションに移動し、「PDFのダウンロ `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`ード」をタップします。
+PDFバージョンをダウンロードするには、Blue Chip Growth Fundのインタラクティブコミュニケーションに移動し、「PDFのダ `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`ウンロード」をタップします。
 
-PDFを電子メールで送信するには、Blue Chip Growth Fundのインタラクティブコミュニケーションに移動し、「EMAIL PDF」 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`をタップします。 「フルネ **ーム」と「電子メー** ルアドレス **」を指定します**。 「電子メール **を送信」をクリックしま**&#x200B;す。
+PDFを電子メールで送信するには、Blue Chip Growth Fundのインタラクティブコミュニケーションに移動し、「EMAIL PDF」 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`をタップします。 「フルネ **ーム」と「電子メー** ルアドレス」を指定しま ****&#x200B;す。 「電子メール **を送信」をクリックしま**&#x200B;す。
 
-## 自動保険申込のチュートリアル {#auto-insurance-application-walkthrough}
+## 自動保険申し込みのチュートリアル {#auto-insurance-application-walkthrough}
 
-We.Finance自動保険申込シナリオには、次の人物が含まれます。
+We.Financeの自動保険申込シナリオには、次の人物が含まれます。
 
 * Sarah Rose（We.Finance 社の顧客）
-* We.Finance社、保険代理店、Conrad Simms氏
+* We.Finance社、保険代理店、Conrad Simms
 
-Sarah Rose は We.Finance 社の既存の顧客で、自動保険契約を購入しています。今が保険契約更新の時だ Conrad Simms（保険代理店、We.Finance）は、Sarahにポリシー更新に関するリマインダーを送信します。 リマインダーの電子メールには、ポリシー更新の詳細とインタラクティブ通信のWebバージョンへのリンクを含むPDFが含まれています。 インタラクティブな通信は、モバイルに優しくレスポンシブなデザインを備えています。 デバイス上でインタラクティブな通信を開くことができ、インタラクティブな通信は基になるデバイスの画面サイズに合わせてリフローされます。 PDF版のインタラクティブ通信は、電子メールに添付され、オフラインでの読み取りに役立ちます。
+Sarah Rose は We.Finance 社の既存の顧客で、自動保険契約を購入しています。今が保険の更新の時だ Conrad Simms（保険代理店、We.Finance社）が、Sarahにポリシーの更新に関するリマインダーを送信します。 リマインダーの電子メールには、ポリシー更新の詳細を含むPDFと、インタラクティブ通信のWebバージョンへのリンクが含まれています。 インタラクティブな通信は、モバイルに優しくレスポンシブなデザインを備えています。 どのデバイスでも対話型通信を開くことができ、対話型通信は、基になるデバイスの画面サイズに合わせてリフローされます。 電子メールに添付されたインタラクティブ通信のPDFバージョンは、オフラインでの読み取りに役立ちます。
 
-Sarahは電子メールに記載された指示に従い、プロセスを正常に更新します。 次の画像は、自動保険申込のチュートリアルのワークフローを示しています。 自動保 ![険申込みチュートリアル](assets/auto-insurance-application-walkthrough.png)
+Sarahは、電子メールに記載された指示に従ってプロセスを更新します。 次の画像は、自動保険申込のチュートリアルのワークフローを示しています。 自動保 ![険申し込みチュートリアル](assets/auto-insurance-application-walkthrough.png)
 
 ### Conrad sends an insurance policy renewal communication from We.Finance {#conrad-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-ConradはAEMインスタンスにログインし、Auto Insuranceダッシュボードを開いてSarahの顧客IDを指定し、「 **Renew Policy**」をク **リックします**。 エージ **ェントUIが開き** 、Sarah Roseのポリシーの詳細が既に入力済みで表示されます。 Sarahの電子メールアドレスを指定し、「 **Submit」をクリックします**。 Sarah receives an email with the subject **Your Auto Insurance Renewal**.
+ConradはAEMインスタンスにログインし、Auto InsuranceダッシュボードがSarahの顧客IDを指定し、「 **Renew Policy**」をク **リックします**。 エージ **ェントUIが開き** 、Sarah Roseのポリシーの詳細が既に入力済みで表示されます。 ConradがSarahの電子メールアドレスを指定し、「 **Submit」をクリックします**。 Sarah receives an email with the subject **Your Auto Insurance Renewal**.
 
-![cc-dashboard](assets/cc-dashboard.png)
+![cc-ダッシュボード](assets/cc-dashboard.png)
 
 #### 仕組み {#how-it-works-20}
 
-保険証書更新通信は対話型の通信です。 Conrad Simmsは、エージェントUIを使用して、保険証書更新通信をSarahに送信します。 通信は、印刷(PDF)と、インタラクティブ通信のウェブチャネルへのリンクとを含む。 インタラクティブな通信は、AEM Workflowを使用して電子メールを送信します。 ワークフローは、 `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html`
+保険証券の更新コミュニケーションは対話型コミュニケーションです。 Conrad Simmsは、エージェントUIを使用して、保険証書の更新に関する通信をSarahに送信します。 通信は、印刷(PDF)及びインタラクティブ通信のWfcチャネルへのリンクを含む。 インタラクティブな通信は、AEM Workflowを使用して電子メールを送信します。 ワークフローは、 `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html`
 
 ![自動保険のワークフロー](assets/auto-insurance-workflow.png)
 
 #### 実際の動作確認  {#see-it-yourself-18}
 
-We.Finance Auto Insurance Dashboardに **Conrad Simms(csimms** /password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシー **を更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、ポリシードキュメントが添付された電子メールを送信する有効な電子メールアドレスを入力し、「送信」をクリ **ックしま**&#x200B;す。 「送信開始」というメッセージが画面に表示され、数秒後に「送信に成功しました」というメッセージが表示されます。 自動保険の更新の件名を **含む電子メールが** 、指定した電子メールアドレスに送信されます。 Sarah Roseに提供されるポリシーはプレミアムポリシーです。
+We.Finance Auto Insurance **ダッシュボードにConrad Simms** (csimms/password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシーを **更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、有効な電子メールアドレスを入力し、ポリシードキュメントが添付された電子メールを送信し **ます**。 「送信が開始されました」というメッセージが画面に表示され、数秒後に「送信に成功しました」という別のメッセージが表示されます。 自動保険の更新の件名が記載さ **れた電子メールが** 、指定の電子メールアドレスで送信されます。 Sarah Roseに提供されるポリシーはプレミアムポリシーです。
 
 自動保険のチュートリアルには、別の顧客であるAlison Jonesも含まれています。 Alison Jonesの顧客IDは900002です。 インタラクティブな通信をAlison Jonesに送信すると、標準のポリシーが送信されます。 標準ポリシーとプレミアムポリシーの違いは次のとおりです。
 
-* プレミアムポリシーはバナー画像を持ち、標準ポリシーはアドレスブロックの下にテキストのみを持ちます。
+* プレミアムポリシーにはバナー画像が含まれ、標準ポリシーにはアドレスブロックの下にテキストのみが含まれます。
 * 標準ポリシーは、プレミアムポリシーよりも低コストです。
-* プレミアムポリシーは盗難防止の報酬を受け、標準的なポリシーはスマートな乗り物報酬を受け取る
+* プレミアムポリシーは盗難防止の報酬を受け、標準的なポリシーはスマートな乗り物の報酬を受け取ります。
 
 両方のポリシーで同じインタラクティブ通信が使用されます。 ポリシー内のセクションは、ポリシータイプの条件に基づいて変更または非表示になります。 You can access and review the auto insurance renewal interactive communication directly from `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **Microsoft Dynamicsをデータソースとして使用する**
 
-リファレンスサイトでは、Microsoft Dynamicsをフォームデータモデルのデータソースとして使用するインタラクティブな通信も提供しています。 自動保険のチュートリアル用にインタラクティブな通信を設定するには、次の手順を実行します。
+リファレンスサイトでは、Microsoft Dynamicsをフォームデータモデルのデータソースとして使用するインタラクティブな通信も提供されています。 次の手順を実行して、自動保険のウォークスルー用の対話型通信を設定します。
 
-1. `https://[author]:[port]/crx/de as an administrator` にログインします。
+1. `https://[author]:'port'/crx/de as an administrator` にログインします。
 1. Open the `/apps/we-finance/components/ccrui/ccrui.jsp`file.
-1. の値を `FormFieldRequestParameter``/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
-1. 「**すべて保存**」をタップします。リファレンスサイトは、MS Dynamicsをデータソースとして使用するインタラクティブ通信を使用するように構成されている。
+1. の値を次の値に設 `FormFieldRequestParameter`定 `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
+1. 「**すべて保存**」をタップします。リファレンスサイトは、MS Dynamicsをデータソースとして使用する対話型通信を使用するように構成されている。
 
-次に、 **We.Finance Auto Insurance DashboardにConrad Simms** (csimms/password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシー **を更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、ポリシードキュメントが添付された電子メールを送信する有効な電子メールアドレスを入力し、「送信」をクリ **ックしま**&#x200B;す。 「送信開始」というメッセージが画面に表示され、数秒後に「送信に成功しました」というメッセージが表示されます。 「自動保険の更新」の件名 **を持つ電子メールが** 、指定した電子メールアドレスに送信されます。
+次に、 **We.Finance Auto InsuranceダッシュボードにConrad Simms** (csimms/password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシーを **更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、有効な電子メールアドレスを入力し、ポリシードキュメントが添付された電子メールを送信し **ます**。 「送信が開始されました」というメッセージが画面に表示され、数秒後に「送信に成功しました」という別のメッセージが表示されます。 「Auto Insurance Renewal **** 」という件名の電子メールが、指定した電子メールアドレスに送信されます。
 
 >[!NOTE]
 >
->Microsoft Dynamicsをデータソースとして使用する対話型通信を使用する場合、Sarahに送信される電子メール内のリンクは、Microsoft Dynamicsを使用しない対話型通信を指し示します。 この問題を修正するには、電子メールテンプレート内のリンクを手動で変更します。
+>Microsoft Dynamicsをデータソースとして使用するインタラクティブな通信を使用する場合、Sarahに送信される電子メール内のリンクは、Microsoft Dynamicsを使用しないインタラクティブな通信を指し示します。 この問題を修正するには、電子メールテンプレートのリンクを手動で変更します。
 
 ![agent_ui_email](assets/agent_ui_email.png)
 
 ### Sarah は We.Finance 社から保険契約の更新通知を受信し、更新を決める {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
-SarahはWe.Financeから添付ファイルを添付した電子メールを受信し、自動保険の期限が切れる前に通知します。 添付ファイルは、自動保険の更新詳細の印刷バージョンです。
+Sarahは、We.Financeから添付ファイルを添付した電子メールを受信します。この電子メールにより、自動保険の期限が切れることを知らせるメッセージが表示されます。 添付ファイルは、自動保険の更新の詳細を印刷したバージョンです。
 
-Sarah clicks **Renew Now** and is directed to the web version of her auto insurance letter. このレターの上に、Sarahはポリシーの有効期限が切れるまでの日数が残っていることを確認します。 このページには、Sarahが保険契約の詳細（Policy Number、Amount Dueなど）の概要と、割引オファーや忠誠度の報酬などのその他の情報が記載されています。 Sarah again clicks **Renew Now** at the bottom of the policy.
+Sarah clicks **Renew Now** and is directed to the web version of her auto insurance letter. このレターの上に、Sarahはポリシーの有効期限が切れるまでの日数が残っていることを見つけます。 このページには、Sarahが保険契約の詳細（Policy Number、Amount Dueなど）と、割引オファーや忠誠度の報酬などの情報の概要が表示されます。 Sarah again clicks **Renew Now** at the bottom of the policy.
 
-![自動保険更新電子メール](assets/auto-insurance-renewal-email.png)
+![保険更新の電子メール](assets/auto-insurance-renewal-email.png)
 
 #### 仕組み  {#how-it-works-21}
 
@@ -898,7 +898,7 @@ Sarah clicks **Renew Now** and is directed to the web version of her auto insura
 
 #### 実際の動作確認  {#see-it-yourself-19}
 
-PDF が添付された電子メールを受信します。PDFは、自動保険レターの印刷版です。 Click **Renew Now** to reach to the web version of the policy. 個人情報とポリシーの詳細を確認し、「今すぐ更新」をク **リックします**。 支払いのためにアダプティブフォームに移動します。
+PDF が添付された電子メールを受信します。このPDFは、自動保険のレターを印刷したバージョンです。 Click **Renew Now** to reach to the web version of the policy. 個人情報とポリシーの詳細を確認し、「今すぐ更新」をク **リックします**。 支払いのためにアダプティブフォームに移動します。
 
 The **Renew Now** button in the email directs Sarah to the web version of the policy. 次の URL にアクセスできます。
 
@@ -908,9 +908,9 @@ You can check the detailed summary of your auto insurance renewal and click **Re
 
 ### Sarahが支払いページを開き、支払いを行い、処理を完了します。 {#sarah-opens-the-payment-page-and-makes-the-payment-and-completes-the-process}
 
-Sarahが「 **Renew Now** 」をクリックすると、インタラクティブコミュニケーションのWebバージョンが開きます。 Sarahは、自分のレコードと共に「Policy Number」と「Date of Expiration」を再確認します。 ページの右側で、Sarahは更新の「Payment Summary」をチェックし、合計金額に対して10%のプレミアム割引を適用します。 Sarah fills her Credit Card details and clicks **Make Payment**.
+SarahがWebバージョ **ンの対話型通信で** 「Renew Now」をクリックすると、支払いページが開きます。 Sarahは、Policy NumberとDate of Expirationをレコードと共に再確認します。 ページの右側で、Sarahは更新の「Payment Summary」をチェックし、合計金額に対して10%のプレミアム割引を適用します。 Sarah fills her Credit Card details and clicks **Make Payment**.
 
-![payment-adaptive-form](assets/payment-adaptive-form.png)
+![支払アダプティブフォーム](assets/payment-adaptive-form.png)
 
 #### 仕組み  {#how-it-works-22}
 
