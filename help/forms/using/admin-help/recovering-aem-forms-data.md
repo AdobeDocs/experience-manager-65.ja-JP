@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 translation-type: tm+mt
-source-git-commit: 3e83611f6b30cee774b72194bee1d03e323a6a57
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -67,17 +67,17 @@ AEM Forms は、以下の障害から安全な方法で回復します。
    >
    >/restore ディレクトリが既に存在する場合、それをバックアップし、最新データを含む /backup ディレクトリを名前変更する前に削除します。
 
-   * (JBoss)名前を次の名前 `[appserver root]/server/[server]/svcnative/DocumentStorage/backup` に変更：
+   * (JBoss)名前を次の名前に `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` 変更：
 
-      `[appserver root]/server/[server]/svcnative/DocumentStorage/restore` です。
+      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore` です。
 
-   * (WebLogic)名前を次の名前 `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/backup` に変更：
+   * (WebLogic)名前を次の名前に `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` 変更：
 
-      `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/restore` です。
+      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore` です。
 
-   * (WebSphere)名前を次のよ `[appserver root]/installedApps/adobe/[server]/DocumentStorage/backup` うに変更：
+   * (WebSphere)名前を次の名前 `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` に変更：
 
-      `[appserver root]/installedApps/adobe/[server]/DocumentStorage/restore` です。
+      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore` です。
 
 1. コンテンツ保存場所のルートディレクトリを回復します。そのためには、最初に AEM Forms の既存のインストール環境にあるコンテンツ保存場所のルートディレクトリの内容を削除し、スタンドアロン環境またはクラスター環境のいずれかのタスクに従って、このルートディレクトリの内容を回復します。
 
@@ -106,7 +106,7 @@ AEM Forms は、以下の障害から安全な方法で回復します。
       クラスター環境での復元については、[クラスター環境でのバックアップと復元の方策](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment)を参照してください。
 
 1. java.io.temp ディレクトリまたは Adobe temp ディレクトリに作成された AEM forms の一時ファイルをすべて削除します。
-1. AEM formsを起動します(「サ [ービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)」を参照<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->)。
+1. 開始AEM forms(「サ [ービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)」を参照<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->)。
 
 ## 回復中の GDS の場所の変更 {#changing-the-gds-location-during-recovery}
 
