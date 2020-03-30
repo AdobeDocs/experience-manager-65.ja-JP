@@ -1,6 +1,6 @@
 ---
-title: PDF UtilitiesサービスJava APIQuick Start(SOAP)
-seo-title: PDF UtilitiesサービスJava APIQuick Start(SOAP)
+title: PDF UtilitiesサービスJava APIQuick開始(SOAP)
+seo-title: PDF UtilitiesサービスJava APIQuick開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 96bb2bd5-b274-43d4-a664-49cc1c526b3f
@@ -10,32 +10,32 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 4ec4c674-d7d3-4988-9d77-78d274970672
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# PDF UtilitiesサービスJava APIクイックスタート(SOAP) {#pdf-utilities-service-java-apiquick-start-soap}
+# PDF UtilitiesサービスJava APIクイック開始(SOAP) {#pdf-utilities-service-java-apiquick-start-soap}
 
-PDF Utilitiesサービスでは、次のクイックスタートを使用できます。
+PDF Utilitiesサービスでは、次のクイック開始を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントからXDPドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからXDPドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したXDPドキュメントからPDFドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したXDPドキュメントからPDFドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのプロパティの取得](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのプロパティの取得](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの保存スタイルの設定](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの保存スタイルの設定](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:PDFドキュメントのサニタイズ](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
+[クイック開始（SOAPモード）:PDFのサニタイズドキュメント](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、Formsサーバーオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Forms Serverオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントからXDPドキュメントへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからXDPドキュメントへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
-次のコード例は、PDFドキュメントをXDPドキュメントに変換します。 (PDFドキュメ [ントのXDPドキュメントへの変換を参照](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents))。
+次のコードの例は、PDFドキュメントをXDPドキュメントに変換します。 (PDFドキュメント [のXDPへの変換を参照](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents))。
 
 ```as3
  /*
@@ -102,7 +102,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -134,9 +134,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したXDPドキュメントからPDFドキュメントへの変換 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したXDPドキュメントからPDFドキュメントへの変換 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
 
-次のコード例は、XDPドキュメントをPDFドキュメントに変換します。 (XDPドキュ [メントのPDFドキュメントへの変換を参照](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents))。
+次のコード例は、XDPドキュメントをPDFドキュメントに変換します。 (XDPドキュメント [のPDFドキュメントへの変換](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents))。
 
 ```as3
  /*
@@ -202,7 +202,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -234,9 +234,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのプロパティの取得 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのプロパティの取得 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
 
-次のコード例は、ドキュメントがPDFドキュメントであるかどうかを判定し、その場合は、最も古いバージョンのAcrobatが読み取れるかどうかを判定します。 (PDFドキュメ [ントのプロパティの取得を参照](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties))。
+次のコード例は、ドキュメントがPDFドキュメントかどうかを判定し、PDFバージョンの場合は、最も古いAcrobatバージョンで読み取ることができます。 (PDFドキュメント [プロパティの取得](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties))。
 
 ```as3
  /*
@@ -302,7 +302,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -351,9 +351,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの保存スタイルの設定 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの保存スタイルの設定 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
 
-次のコード例は、Web表示用に保存モードを設定し、PDFドキュメントを暗号化されたEncryptionサービスに渡す方法を示しています。 Web表示用に保存された暗号化されたPDFドキュメントは、* fastWebViewLoan.pdf*というPDFファイルとして保存されます。 (PDFドキュメ [ントの保存モードの設定を参照](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes))。
+次のコード例は、Web表示用の保存モードを設定し、PDFドキュメントを暗号化されたEncryptionサービスに渡します。 Web表示用に保存された暗号化されたPDFドキュメントは、* FastWebViewLoan.pdf*というPDFファイルとして保存されます。 (PDFドキュメント [の保存モードの設定を参照](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes))。
 
 ```as3
  /*
@@ -424,7 +424,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -491,9 +491,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDF/A-2bドキュメントへのドキュメントの変換 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したドキュメントからPDF/A-2bドキュメントへの変換 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfというPDFドキュメントを、LoanArchive.pdfというPDFファイルとして保存されるPDF* /A-2bドキュメントに変換 *します*。 (Converting Documents [to PDF/A Documentsを参照](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents))。
+次のJavaコードの例は、 *Loan.pdfというPDFドキュメントを* PDF/A-2bドキュメントに変換し、LoanArchive.pdfというPDFファイルとして保存 *します*。 (PDF/A [ドキュメントへのドキュメント](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents))。
 
 ```as3
 /*
@@ -543,7 +543,7 @@ public class CreatePDFADocument {
     try{
         //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -579,9 +579,9 @@ public class CreatePDFADocument {
 }
 ```
 
-## クイックスタート（SOAPモード）:PDFドキュメントのサニタイズ {#quick-start-soap-mode-sanitizing-pdf-documents}
+## クイック開始（SOAPモード）:PDFのサニタイズドキュメント {#quick-start-soap-mode-sanitizing-pdf-documents}
 
-次のJavaコードの例は、 *Loan.pdfというPDFドキュメントをサンイズします*。
+次のJavaコードの例は、 *Loan.pdfというPDFドキュメントの状態を維持します*。
 
 ```as3
 /*
@@ -628,7 +628,7 @@ public class Sanitization {
         try {
             //Set connection properties required to invoke AEM Forms
             Properties connectionProps = new Properties();
-            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
