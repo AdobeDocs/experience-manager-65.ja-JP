@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 次の手順を実行して、サーバーサイドログを構成します。
 
-1. 移動 `https://[server]:[port]/system/console/configMgr`. Locate and open the *Apace Sling logging logger configuration* option. ダイアログボックスが表示されます。
+1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。Locate and open the *Apace Sling logging logger configuration* option. ダイアログボックスが表示されます。
 
    ![ Apace Sling ロギングのロガー設定オプションのダイアログボックス](assets/logconfig.png)
 
@@ -49,7 +49,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 ### 要求パラメーターの使用によるログの有効化 {#enabling-logging-using-request-parameter}
 
-この方法を使用して、特定の要求に対するログを生成できます。リクエストパラメータの名前は&#39;logです。 ログURLは次のとおりです。
+この方法を使用して、特定の要求に対するログを生成できます。リクエストパラメータの名前は「log」です。 ログURLは次のとおりです。
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -168,15 +168,15 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 >[!NOTE]
 >
 >a（xfa）、b（xfaView）、および c（xfaPerf）のそれぞれのログカテゴリに対するデフォルトログレベルは 2（エラー）です。そのため、ログ設定 2-b6 では、異なるカテゴリのログレベルは：
->a(xfa):2（デフォルトのレベルERROR）
+>a (xfa):2（デフォルトのレベルERROR）
 >b (xfaView):6（ユーザー指定のTRACE）
 >a (xfaPerf):2（デフォルトのレベルERROR）
 
 ### Configuration Manager の使用によるログの有効化 {#enabling-logging-using-configuration-manager}
 
-Configuration Managerを使用してログを有効にすると、ログが再び無効になるまで、すべてのレンダリング要求に対してログが生成されます。
+ログを有効にするためにConfiguration Managerを使用する場合、ログが再び無効になるまで、すべてのレンダリング要求に対してログが生成されます。
 
-1. Log in to CQ Configuration Manager at `https://[server]:[port]/system/console/configMgr` and log in with admin credentials.
+1. Log in to CQ Configuration Manager at `https://'[server]:[port]'/system/console/configMgr` and log in with admin credentials.
 1. **「LC Forms Configurations」**&#x200B;を探してクリックします。
 1. 「Debug Options」テキストボックスで、前のセクションで説明されたとおりにログ設定を入力します。例：**2-a4-b5-c6**
 
@@ -186,13 +186,13 @@ Configuration Managerを使用してログを有効にすると、ログが再�
 
 ## ログのアップロード {#uploading-logs}
 
-宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 At this level, all logs are collected in a JS object on client side and if form is rendered with default Profile then a **Send Logs** button appears to the left of **Highlight Existing Fields** button in toolbar. ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーにポストされ、サーバー上の設定済みのエラーログファイルにログインされます。
+宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 At this level, all logs are collected in a JS object on client side and if form is rendered with default Profile then a **Send Logs** button appears to the left of **Highlight Existing Fields** button in toolbar. ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーにポストされ、サーバー上の設定済みのエラーログファイルに記録されます。
 
 デフォルトでは、すべての情報が /crx-repository/logs/ ディレクトリに保存されている error.log ファイルに追加されます。
 
 ログファイルの場所と名前を変更するには、次の操作を実行します。
 
-1. 管理者として「Configuration Manager」にログインします。Configuration ManagerのデフォルトのURLはです `https://[Server]:[Port]/system/console/configMgr`。
+1. 管理者として「Configuration Manager」にログインします。Configuration ManagerのデフォルトのURLはです `https://'[server]:[port]'/system/console/configMgr`。
 1. **「Apace Sling ロギングロガー設定」**&#x200B;をクリックします。ダイアログボックスが表示されます。
 
    ![logconfig-1](assets/logconfig-1.png)
