@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: a7ce63433f7e46feae8b0d23778e36d10c33972a
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -30,7 +30,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 1. In a command prompt, navigate to *[JAVA HOME]*/bin and type the following command to create the credential and keystore:
 
-   `keytool -genkey -dname "CN=`*Host Name Group Group *`, OU=`*Name* Name `, O=`*Name Capyny Name State Country Code Country Country Code Key_password Keystorecourt KeystorecountryGroup Group Name *Name`,L=`**`, S=`**`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**Name Contry County Cour Code`.keystore`
+   `keytool -genkey -dname "CN=`*Host Name Group *Group`, OU=`**`, O=`*Password Name *Name Name Name Name State Country Code Country Country Code Key_password Keystore_`,L=`**`, S=`**`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**password Keystore Keystore Group Name Courtname Name Name Name`.keystore`
 
    >[!NOTE]
    >
@@ -158,7 +158,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 
 
-1. To access administration console using SSL, type `https://[host name]:[port]/adminui` in a web browser:
+1. To access administration console using SSL, type `https://[host name]:'port'/adminui` in a web browser:
 
    JBoss のデフォルト SSL ポートは 8443 です。以降 AEM Forms にアクセスするときはこのポートを指定します。
 
@@ -166,7 +166,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 1. In a command prompt, navigate to *[JAVA HOME]*/bin and type the following command to create the keystore and the key:
 
-   `keytool -genkey -dname "CN=`*Host Name Group *Group`, OU=`*Name* City Name `, O=`*City Name Name Company State Country Country Code Country *Key_Password`, L=`**`, S=`**`, C=`**`-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**Name Password Key_Name Key Password Rename KeyName`.keystore`
+   `keytool -genkey -dname "CN=`*Host Name Group Group *`, OU=`*City Name City Name City Name NameName* Name NameCountry Country Country `, O=`*Code *`, L=`**`, S=`**`, C=`**`-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**Password Key_Password Rename Key Password RenameKeyName PasswordName`.keystore`
 
    >[!NOTE]
    >
