@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 8c8b1998-eab4-4230-b24f-5e96883ba599
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
 
 次の手順を実行して、同期スケジューラーの間隔を変更します。
 
-1. AEM Configuration Manager にログインします。Configuration ManagerのURLは `https://[Server]:[Port]/lc/system/console/configMgr`
+1. AEM Configuration Manager にログインします。Configuration ManagerのURLは、 `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. **FormsManagerConfiguration** バンドルを探して開きます。 
 
@@ -35,26 +35,26 @@ source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
 
 「**リポジトリからアセットを同期**」オプションを使用すると、アセットを手動で同期できます。次の手順を実行して、アセットを手動で同期します。
 
-1. AEM Forms にログインします。The default URL is `https://[Server]:[Port]/lc/aem/forms/`.
+1. AEM Forms にログインします。The default URL is `https://'[server]:[port]'/lc/aem/forms/`.
 
    ![AEM Forms ユーザーインターフェイス](assets/aem_forms_ui.png)
 
-   **** 図： *AEM formsユーザーインターフェイス*
+   **図：***AEM Formsユーザーインターフェイス*
 
 1. ツールバ ![ーのaem6forms_sync](assets/aem6forms_sync.png) アイコンをクリックします。 最後に設定したパスにアセットが存在しない場合は、下の図に示すダイアログボックスが表示されます。「**開始**」をクリックして同期を開始します。
 
    ![同期ダイアログボックス](assets/migrate-and-syncronize.png)
 
-   **** 図：同期ダイ *アログボックス*
+   **図：** 同期ダイ *アログボックス*
 
 ## 同期エラーのトラブルシューティング {#troubleshooting-synchronization-error}
 
 ワークフローデザイナー（LiveCycle Workbench）で新しいアプリケーションを作成できます。
 
-If the newly created application and a folder at /content/dam/formsanddocuments has identical name, an error &quot;*An asset with the same name as this application already exists at root level.*」がログに記録されます。
+If the newly created application and a folder at /content/dam/formsanddocuments has identical name, an error &quot;*An asset with the same name as this application already exists at root level.*」がログに記録される。
 
 競合を解決するには、アプリケーションの名前を変更し、アセットを手動で同期します。
 
 ![アセット同期の競合ダイアログボックス](assets/sync-conflict.png)
 
-**** 図：アセット *同期の競合ダイアログボックス*
+**図：** アセット *同期の競合ダイアログボックス*
