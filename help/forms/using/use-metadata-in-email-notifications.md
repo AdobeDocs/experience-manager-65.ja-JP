@@ -8,7 +8,7 @@ topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -155,7 +155,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。この言語は、クライアント側のスクリプト作成とサーバーアプリケーションに使用されます。次の手順を実行して、ECMAScrip を使用して電子メールテンプレートにカスタムメタデータを追加します。
 
-1. 管理者アカウントを使用して CRX DE にログインします。The URL is https://[server]:[port]/crx/de/index.jsp
+1. 管理者アカウントを使用して CRX DE にログインします。The URL is https://&#39;[server]:[port]&#39;/crx/de/index.jsp
 
 1. /apps/fd/dashboard/scripts/metadataScripts に移動します。拡張子が .ecma のファイルを作成します。例えば、usermetadata.ecma です。
 
@@ -181,7 +181,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 1. （オプション）スクリプトのタイトルの指定：
 
-   タイトルを自分で指定しない場合、カスタムメタデータフィールドには、ECMAScript ファイルの完全なパスが表示されます。スクリプトに意味のあるタイトルを指定するには、次の手順を実行します。
+   タイトルを自分で指定しない場合、カスタムメタデータフィールドには、ECMAScript ファイルの完全なパスが表示されます。次の手順を実行して、スクリプトに意味のあるタイトルを指定します。
 
    1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]**&#x200B;ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
    1. Mixin を編集ダイアログに mix:title と入力して、「**+**」をクリックします。
