@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ## このチュートリアルについて {#about-the-tutorial}
 
-AEM Formsデータ統合モジュールを使用すると、AEMユーザープロファイル、RESTful webサービス、SOAPベースのWebサービス、ODataサービス、リレーショナルデータベースなど、異なるバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、そのフォームデータモデルをアダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。フォームデータモデル内のサービスを使用して、アダプティブフォームに事前にデータを取り込み、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
+AEM Formsデータ統合モジュールを使用すると、AEMユーザープロファイル、RESTful Webサービス、SOAPベースのWebサービス、ODataサービス、リレーショナルデータベースなど、異なるバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、そのフォームデータモデルをアダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。フォームデータモデル内のサービスを使用して、アダプティブフォームに事前にデータを取り込み、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
 
 フォームデータの統合機能とフォームデータモデルについて詳しくは、「[AEM Forms のデータ統合機能](../../forms/using/data-integration.md)」を参照してください。
 
@@ -37,7 +37,7 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 ![form-data-model_l](assets/form-data-model_l.png)
 
-**********A.設定済みのデータソ**&#x200B;ースB。データソーススキ **ーマC.** Available services **D.データモデルオブジェ**&#x200B;クトE.設定済みサービス
+**A.** 設定済みのデータソ **ースB。** データソースのスキーマ **C.** 利用可能なサー **ビスD.** データモデルのオブジェ **クトE.** 設定済みのサービス
 
 ## 前提条件 {#prerequisites}
 
@@ -70,11 +70,11 @@ MySQL データベースを設定するには、以下の手順を実行しま�
       * **Datasource name**：任意のデータソース名を指定します。For example, specify **WeRetailMySQL**.
       * **DataSource service property name**：データソース名を保管するサービスプロパティの名前を指定します。この名前は、データソースインスタンスを OSGi サービスとして登録する際に指定されます。例えば、「**datasource.name**」などを指定します。
       * **JDBC driver class**：JDBC ドライバーの Java クラス名を指定します。For MySQL database, specify **com.mysql.jdbc.Driver**.
-      * **JDBC connection URI**：データベースの接続 URL を指定します。For MySQL database running on port 3306 and schema weretail, the URL is: `jdbc:mysql://[server]:3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC connection URI**：データベースの接続 URL を指定します。For MySQL database running on port 3306 and schema weretail, the URL is: `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
-      * **** 借入のテスト：[借用時にテ **スト** ]オプションを有効化
-      * **** リターン時のテスト：「リターン時にテ **スト」オプションを有効にします** 。
+      * **借用時のテスト：** [借用時にテ **スト]オプションを有効** にします。
+      * **リターン時のテスト：** 「リターン時にテ **スト」オプションを有効** にします。
       * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例えば、「**select * from customerdetails**」などを指定します。
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
       Leave other properties with default [values](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) and tap **Save**.
@@ -93,7 +93,7 @@ AEM Forms には、設定済みデータソースを使用して[フォームデ
 1. フォームデータモデル作成ダイアログで、フォームデータモデルの&#x200B;**名前**&#x200B;を指定します。例えば、「**customer-shipping-billing-details**」などを指定します。「**次へ**」をタップします。
 1. データソース選択画面に、すべての設定済みデータソースが一覧表示されます。Select **WeRetailMySQL** data source and tap **Create**.
 
-   ![data-source-selection](assets/data-source-selection.png)
+   ![データソースの選択](assets/data-source-selection.png)
 
 The **customer-shipping-billing-details** form data model is created.
 
@@ -138,9 +138,9 @@ The **customer-shipping-billing-details** form data model is created.
 1. 以下の手順により、データモデルオブジェクトの読み取りサービスと書き込みサービスを設定します。
 
    1. 「**customerdetails**」データモデルオブジェクトを選択して「**プロパティの編集**」をタップします。
-   1. 「読み取りサービス」ドロップダウンで「**get**」を選択します。**id引数は** 、customerdetailsデータモデルオブジェクトの主キーです。 aem_6_3_ ![editをタップし](assets/aem_6_3_edit.png) 、次のように引数を設定します。
+   1. 「読み取りサービス」ドロップダウンで「**get**」を選択します。**id引数は** 、customerdetailsデータモデルオブジェクトの主キーです。 aem_6_3 ![_editをタップし](assets/aem_6_3_edit.png) 、次のように引数を設定します。
 
-      ![read-default](assets/read-default.png)
+      ![読み取りデフォルト](assets/read-default.png)
 
    1. 同様に、書き込みサービスとして「**update**」を選択します。**customerdetails** オブジェクトが引数として自動的に追加されます。この引数を以下のように設定します。
 
@@ -168,13 +168,13 @@ The **customer-shipping-billing-details** form data model is created.
 
       * **出力モデルオブジェクト**：顧客データを保管するスキーマを選択します。次に例を示します。
 
-         customerdetailスキーマ
+         顧客詳細スキーマ
 
       * **配列を返す**：「**配列を返す**」オプションを無効にします。
       * **引数**：**ID** という引数を選択します。
       「**Done**」をタップします。これで、顧客の詳細情報を MySQL データベースから取得するサービスが設定されました。
 
-      ![shiping-address-retrieval](assets/shiiping-address-retrieval.png)
+      ![シピングアドレス検索](assets/shiiping-address-retrieval.png)
 
    1. Select the **update** service and tap **Edit Properties**. プロパティダイアログが開きます。
 
@@ -187,7 +187,7 @@ The **customer-shipping-billing-details** form data model is created.
 
       * **入力モデルオブジェクト**：顧客データを保管するスキーマを選択します。次に例を示します。
 
-         customerdetailスキーマ
+         顧客詳細スキーマ
 
       * **出力タイプ**：「**ブール演算式**」を選択します。
 
@@ -218,7 +218,7 @@ The **customer-shipping-billing-details** form data model is created.
 
    以下の例では、データベース内で 7102715 という ID が設定されている住所情報が、update サービスによって正しく更新されています。
 
-   ![test-write-model](assets/test-write-model.png)
+   ![テスト・ライト・モデル](assets/test-write-model.png)
 
    この状態で、7102715 という ID に対して読み取りモデルサービスのテストをもう一度実行すると、以下のように、更新後の顧客情報が画面に表示されます。
 
