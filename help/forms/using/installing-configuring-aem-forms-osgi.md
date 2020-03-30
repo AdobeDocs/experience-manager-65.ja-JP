@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -36,7 +36,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ## システム要件 {#system-requirements}
 
-AEM Formsのデータ取得機能をインストールおよび設定する前に、次の事項を確認します。
+AEM Formsのデータ取得機能をインストールおよび設定する前に、次のことを確認します。
 
 * ハードウェアとソフトウェアのインフラが正しく設定されていること。サポート対象のハードウェアおよびソフトウェアの詳細な一覧については、「[技術的要件](/help/sites-deploying/technical-requirements.md)」を参照してください。
 
@@ -54,7 +54,7 @@ AEM Formsのデータ取得機能をインストールおよび設定する前�
 * オーサーインスタンスとパブリッシュインスタンスに対して複製と逆複製が設定されていること。詳しくは、「[複製](/help/sites-deploying/replication.md)」を参照してください。
 * UNIXベースのシステムの場合：
 
-   * インストールメディアから次の32ビットパッケージをインストールします。
+   * 次の32ビットパッケージをインストールメディアからインストールします。
 
 <table>
  <tbody>
@@ -94,7 +94,7 @@ AEM Formsのデータ取得機能をインストールおよび設定する前�
 >[!NOTE]
 >
 >* OpenSSLが既にサーバーにインストールされている場合は、最新バージョンにアップグレードします。
->* libcurl.so、libcrypto.so、libssl.soの各シンボリンクを、それぞれ最新バージョンのlibcurl、libcrypto、libsslライブラリを指すように作成します。
+>* libcurl.so、libcrypto.so、libssl.soの各シンボリックリンクを作成し、それぞれlibcurl、libcrypto、libsslの最新バージョンを参照します。
 >
 
 
@@ -116,7 +116,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    「[AEM Forms リリース](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)」記事に記載された直接リンクからパッケージを手動でダウンロードする場合は、パッケージマネージャーにログインし、「**パッケージをアップロード**」をクリックし、ダウンロード済みパッケージを選択して「アップロード」をクリックします。パッケージのアップロードが完了したら、パッケージ名をクリックし、「**インストール**」をクリックします。
 
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージがファイルに表示されなくなるまで待ち、ログ `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` は安定しています。
+1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDおよびServiceEvent UNREGISTEREDメッセージがファイルに表示されなくなり、ログが安定 `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` するまで待ちます。
 1. 手順 1 から 4 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
 ## インストール後の設定 {#post-installation-configurations}
@@ -127,12 +127,12 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### RSA ライブラリと BouncyCastle ライブラリの設定  {#configure-rsa-and-bouncycastle-libraries}
 
-すべての作成者インスタンスと発行インスタンスで次の手順を実行し、ライブラリの委任を起動します。
+すべての作成者インスタンスと発行インスタンスで次の手順を実行し、ライブラリをブート委任します。
 
 1. 基になる AEM インスタンスを停止します。
-1. Open the [AEM installation directory]\crx-quickstart\conf\sling.properties file for editing.
+1. Open the `[AEM installation directory]\crx-quickstart\conf\sling.properties` file for editing.
 
-   If you used [AEM installation directory]\crx-quickstart\bin\start.bat to start AEM, then edit the sling.properties located at [AEM_root]\crx-quickstart\.
+   AEMの開始に `[AEM installation directory]\crx-quickstart\bin\start.bat` 使用していた場合は、にあるsling.propertiesを編集しま `[AEM_root]\crx-quickstart\`す。
 
 1. 以下のプロパティを sling.properties ファイルに追加します。 
 
@@ -148,8 +148,8 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで次の手順を実行し、パッケージをホワイトリストに登録します。
 
-1. ブラウザーウィンドウで、AEM Configuration Manager を開きます。The default URL is `https://[server]:[port]/system/console/configMgr`.
-1. com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name **を検索し、設定を開きます** 。
+1. ブラウザーウィンドウで、AEM Configuration Manager を開きます。The default URL is `https://'[server]:[port]'/system/console/configMgr`.
+1. com.adobe.cq.deserializationFirewallImpl.name **を検索し、設定を開きます** 。
 1. **sun.util.calendar**&#x200B;パッケージを&#x200B;**ホワイトリスト**&#x200B;フィールドに追加します。「**保存**」をクリックします。
 1. 手順 1 から 3 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
@@ -169,7 +169,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 1. リファラーフィルターサービスの設定：
 
-   管理者として Apache Felix Configuration Manager にログインします。The Default URL of the configuration manager is https://[server]:[port_number]/system/console/configMgr. In the **Configurations **menu, select the **Apache Sling Referrer Filter** option. 「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。The format of the entry is https://[server]:[port].
+   管理者として Apache Felix Configuration Manager にログインします。Configuration ManagerのデフォルトURLはです `https://[server]:[port_number]/system/console/configMgr`。 **Configurations**&#x200B;メニューで「**Apache Sling Referrer Filter**」を選択します。「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。The format of the entry is `https://[server]:[port]&#39;.
 
 #### キャッシュの設定 {#configure-cache}
 
@@ -180,12 +180,12 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 次の手順を実行して、アダプティブフォームのキャッシュを設定します。
 
-1. Go to AEM web console configuration manager at https://[server]:[port]/system/console/configMgr.
+1. Go to AEM web console configuration manager at https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. 「**アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定**」をクリックして、設定値を編集します。In the edit configuration values dialog, specify the maximum number of forms or documents an instance of the AEM Forms server can cache in the **Number of Adaptive Forms** field. デフォルト値は 100 です。「**保存**」をクリックします。
 
    >[!NOTE]
    >
-   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュの設定を無効にするか変更すると、キャッシュがリセットされ、すべてのフォームとドキュメントがキャッシュから削除されます。
+   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュの設定を無効にしたり変更したりすると、ドキュメントがリセットされ、すべてのフォームとキャッシュがキャッシュから削除されます。
 
 #### フォームデータモデルに SSL 通信を設定する {#configure-ssl-communcation-for-form-data-model}
 
