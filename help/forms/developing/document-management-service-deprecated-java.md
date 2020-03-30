@@ -1,6 +1,6 @@
 ---
-title: Document Management Service（非推奨）Java APIクイックスタート(SOAP)
-seo-title: Document Management Service（非推奨）Java APIクイックスタート(SOAP)
+title: ドキュメント管理サービス（非推奨）Java APIクイック開始(SOAP)
+seo-title: ドキュメント管理サービス（非推奨）Java APIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 967c282a-ccde-4489-a4d5-53c6a1a0cac0
@@ -10,42 +10,42 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Document Management Service（非推奨）Java APIクイックスタート(SOAP) {#document-management-service-deprecated-java-api-quick-start-soap}
+# ドキュメント管理サービス（非推奨）Java APIクイック開始(SOAP) {#document-management-service-deprecated-java-api-quick-start-soap}
 
-Document Managementサービス（非推奨）では、以下のクイックスタートを利用できます。
+次のクイック開始は、ドキュメント管理サービス（非推奨）で使用できます。
 
 >[!NOTE]
 >
->2011年8月5日以降、Content Services ESのお客様は、Adobe Digital Enterprise Platform Experience Servicesに移行されます。 Content Servicesを使用するお客様向けの製品ロードマップは、AdobeによるDay Softwareの買収に伴い買収された最新のモジュラー型CRXアーキテクチャに基づいて構築されたネイティブのContent Repositoryを含む、新しいADEP Experience Services - coreに移行することです。
+>2011年8月5日以降、Content Services ESのお客様は、Adobe Digital Enterprise Platform Experience Servicesに移行されます。 Content Servicesを使用するお客様向けの製品ロードマップは、新しいADEP Experience Services - Coreに移行することです。このコアには、アドビがDay Softwareを買収した際に入手した最新のモジュラー型CRXアーキテクチャに基づいて構築されたネイティブのContent Repositoryが含まれています。
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Servicesスペースの作成](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使用したContent Servicesスペースの作成](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Servicesコンテンツの削除](document-management-service-deprecated-java.md#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使用したContent Servicesコンテンツの削除](document-management-service-deprecated-java.md#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated)
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Servicesへのコンテンツの追加](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使追加用してContent Servicesにコンテンツを送信する](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Servicesからのコンテンツの取得](document-management-service-deprecated-java.md#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使用したContent Servicesからのコンテンツの取得](document-management-service-deprecated-java.md#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated)
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Servicesコンテンツの移動](document-management-service-deprecated-java.md#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使用したContent Servicesコンテンツの移動](document-management-service-deprecated-java.md#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated)
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Servicesコンテンツの一覧表示](document-management-service-deprecated-java.md#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使用したリストContent Servicesコンテンツ](document-management-service-deprecated-java.md#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated)
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Servicesコンテンツの検索](document-management-service-deprecated-java.md#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使用したContent Servicesコンテンツの検索](document-management-service-deprecated-java.md#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated)
 
-[クイックスタート（SOAPモード）:Java APIを使用したContent Services権限の設定](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
+[クイック開始（SOAPモード）:Java APIを使用したContent Services権限の設定](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Servicesスペースの作成 {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesスペースの作成 {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
-次のJavaコードの例では、Company homeに *Test Directoryという名前の新しいスペース* を作成します。 新しいスペースのID値がコンソールに書き込まれます。
+次のJavaコードの例では、 *Test Directoryという名前の新しいスペースを* 会社ホームに作成します。 新しいスペースのID値がコンソールに書き込まれます。
 
 ```as3
  /*
@@ -109,7 +109,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -139,9 +139,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの削除 {#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの削除 {#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
 
-次のJavaコードの例は、/Company Home/Test Directoryという名前のスペースを削除します。
+次のJavaコードの例は、/Java Home/Test Directoryという名前の会社を削除します。
 
 ```as3
  /*
@@ -205,7 +205,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -239,9 +239,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Servicesへのコンテンツの追加 {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API(追加非推奨)を使用したContent Servicesへのコンテンツ {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-次のJavaコードの例では、 *MortgageForm.pdfというPDFファイルを/Company Home* /Test Directoryという名前のフォルダーに追加します。 作成者と説明の属性が設定されます。 新しいコンテンツの識別値がコンソールに書き込まれます。
+次のJavaコードの例では、 *MortgageForm.pdfというPDFファイルを/* 会社ホーム/テストディレクトリという名前のフォルダーに追加します。 作成者属性と説明属性が設定されます。 新しいコンテンツのID値がコンソールに書き込まれます。
 
 ```as3
  /*
@@ -308,7 +308,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -362,9 +362,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Servicesからのコンテンツの取得 {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesからのコンテンツの取得 {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-次のJavaコードの例は、/Company homeから *MortgageForm.pdfという名前のPDFファイルを取得します* 。 PDFファイルはローカルファイルシステムに保存され、UpdatedMortgageForm.pdfとい *う名前が付けられます*。
+次のJavaコードの例は、 *MortgageForm.pdfというPDFファイルを/* 会社ホームから取得します。 PDFファイルはローカルファイルシステムに保存され、UpdatedMortgageForm.pdfとい *う名前が付けられます*。
 
 ```as3
  /*
@@ -430,7 +430,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -468,9 +468,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの移動 {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの移動 {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
 
-次のJavaコードの例では、 *MortgageForm.pdfというPDFファイルを/Company Home/Test Directoryから* /Company homeに移動します。 移動されたコンテンツの識別値をコンソールに書き込む。
+次のJavaコードの例では、 *MortgageForm.pdfというPDFファイルを/* 会社ホーム/テストディレクトリから/会社ホームに移動します。 移動されたコンテンツの識別値がコンソールに書き込まれる。
 
 ```as3
  /*
@@ -534,7 +534,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -569,9 +569,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツのリスト表示 {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したリストContent Servicesコンテンツ {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
 
-次のJavaコードの例は、/Company homeにあるコンテンツを示しています。 各ノードタイプとノード名が表示されます。
+次のJavaコードの例は、/会社ホームにあるリストのコンテンツを示しています。 各ノードタイプとノード名が表示されます。
 
 ```as3
  /*
@@ -636,7 +636,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -682,9 +682,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの検索 {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの検索 {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
 
-次のJavaコードは、/Company homeでテキストMortgageFormを含むドキュメントを検索します。 サブフォルダも検索されます。
+次のJavaコードは、/会社ホームを検索し、MortgageFormというテキストを含むドキュメントを探します。 サブフォルダも検索されます。
 
 ```as3
  /*
@@ -750,7 +750,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -792,9 +792,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用したContent Services権限の設定 {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Services権限の設定 {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-次のJavaコードの例は、tony blueという名前のユーザーに権限を設定します。 指定するドメインがデフォルトのドメインです。 Consumer権限が指定され、ノードは `/Company Home/Test Directory`。
+次のJavaコードの例は、tony blueという名前のユーザーに権限を設定します。 指定するドメインがデフォルトのドメインです。 Consumer権限が指定され、ノードが `/Company Home/Test Directory`。
 
 ```as3
  /*
@@ -860,7 +860,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -902,9 +902,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API（非推奨）を使用した関連付けの作成 {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用した関連付けの作成 {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
 
-次のJavaコードは、関連付け、XMLデータファイル、PDFフォームを作成します。 この種類の関連付けはLinkedByという名前です。PDFドキュメントには、アスペクトリンク可能なアスペクトが適用されている必要があります。
+次のJavaコードは、関連付け、XMLデータファイル、およびPDFフォームを作成します。 この種類の関連付けは、LinkedByという名前です。PDFドキュメントには、アスペクトリンク可能が適用されている必要があります。
 
 ```as3
  /*
@@ -968,7 +968,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
