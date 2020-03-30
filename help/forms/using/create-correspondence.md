@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -35,7 +35,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    >[!NOTE]
    >
-   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。レターがデータディクショナリベースの場合、Correspondence Managementのプレビューメニューに「プレビュー」と「カスタム」オプションが表示され、2つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。When the [Data Dictionary has associated test data](../../forms/using/data-dictionary.md#p-working-with-test-data-p), then on selecting the preview option, the normal preview opens with the test data populated.
+   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。レターがデータディクショナリベースの場合、Correspondence Managementでは、プレビューメニューに「プレビュー」と「カスタム」のオプションが表示され、2つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。When the [Data Dictionary has associated test data](../../forms/using/data-dictionary.md#p-working-with-test-data-p), then on selecting the preview option, the normal preview opens with the test data populated.
 
 1. 通信をプレビュー中にレンダリングするには、管理者か、次のいずれかのグループの一部である必要があります。
 
@@ -71,7 +71,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
 「コンテンツ」タブで、ドキュメントのフラグメントやレター内のコンテンツ変数などのコンテンツを管理します。
 
-1. 「**コンテンツ**」を選択します。Correspondence Managementにレターのコンテンツタブが表示されます。
+1. 「**コンテンツ**」を選択します。Correspondence Managementにレターの「コンテンツ」タブが表示されます。
 
    ![「コンテンツ」タブ - コンテンツ内のモジュールをハイライト](assets/3_content.png)
 
@@ -113,7 +113,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    Tab キーを使用してレターのテキストや数値をインデントできます。例えば、Tab キーを使用してリスト内の複数のテキスト列を表形式に整列させることができます。
 
-   ![tabspaces](assets/tabspaces.png)
+   ![タブスペース](assets/tabspaces.png)
 
    例：Tab キーを使用して複数のテキスト列を表形式に整列させる
 
@@ -125,7 +125,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    * 通貨記号（€、¥、£など）
    * 数学記号（∑、√、∂、^など）
-   * 「」や「」などの句‟読点記号
+   * やなどの句読‟記号
    ![特殊文字](assets/specialcharacters.png)
 
    Correspondence Managementhas では、210 種類の特殊文字に初期状態から対応しています。The admin can [add support for more/custom special characters by customization](../../forms/using/custom-special-characters.md).
@@ -134,9 +134,9 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    ![letterbackgroundcolor](assets/letterbackgroundcolor.png)
 
-   You can either directly tap a basic color **[A]** present in the Basic Colors palette or tap **Select** after using the slider **[B]** to choose the appropriate shade of the color.
+   You can either directly tap a basic color `**[A]**` present in the Basic Colors palette or tap **Select** after using the slider `**[B]**` to choose the appropriate shade of the color.
 
-   Optionally, you can also go to the Advanced tab to select the appropriate Hue, Lightness, and Saturation **[C]** to create the precise color and then tap Select **[D]** to apply the color to highlight the text.
+   Optionally, you can also go to the Advanced tab to select the appropriate Hue, Lightness, and Saturation `**[C]**` to create the precise color and then tap Select `**[D]**` to apply the color to highlight the text.
 
    ![textbackgroundcolor](assets/textbackgroundcolor.png)
 
@@ -158,14 +158,14 @@ After a [letter template is created in Correspondence Management](../../forms/us
    * 一意の変数インスタンスのみ。モジュール、ターゲット領域、またはレターテンプレートに、同じ変数の 2 つ以上のインスタンスが含まれている場合、カウントは 1 と表示されます。ただし、各インスタンスに対してカウントは 1 と表示されます。
    未入力変数のカウントには、未選択のモジュールは含まれません。モジュールがレターテンプレートには含まれているがレターには含まれていない場合は、このモジュール内の未入力変数のカウントは表示されません。
 
-   ターゲット領域、モジュール、および変数の場合、カウントは、レターテンプレート内の各オブジェクトの右に表示されます。ただし、完全なテンプレートの場合は、通信を作成ステータスバーにカウントが表示されます。
+   ターゲット領域、モジュール、および変数の場合、カウントは、レターテンプレート内の各オブジェクトの右に表示されます。ただし、完全なテンプレートの場合、通信を作成ステータスバーにカウントが表示されます。
 
    レターテンプレート内のモジュールは、未入力変数カウントを以下のように表示します。
 
    * **テキスト** ：テキストモジュールに含まれる一意の未入力プレースホルダー変数とデータディクショナリ要素の合計を表示します。
    * **条件** ：条件に含まれる一意の未入力条件変数と、結果のモジュールに含まれる変数の合計を表示します。
-   * **リスト** ：リストに割り当てられたモジュールに含まれる一意の未入力変数の合計を表示します。
-   * **ターゲット領域** ：ターゲット領域に割り当てられたモジュールに含まれる一意の未入力変数の合計を表示します。
+   * **リスト** ：モジュールに割り当てられたモジュールに含まれるすべての一意の未入力変数の合計をリストします。
+   * **ターゲット領域** ：モジュール領域に割り当てられたモジュールに含まれるすべての一意の未入力変数の合計をターゲットします。
    デフォルト値を持つ変数について次のことに留意してください。
 
    * A Boolean variable field defaults to *false*. ただし、この変数は未入力として解釈されます。This implies that the variable count includes all Boolean variable fields with value *false*.
@@ -188,7 +188,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 * 選択（目のアイコン）： レターにモジュールを含めたり除外したりします。
 * 箇条書きをスキップ（リストモジュールとその子モジュールに適用可能）： 特定のモジュール内の箇条書きをスキップします。
 * 直前に改ページ（ターゲット領域の子モジュールに適用可能）： モジュールの前に改ページを挿入します。
-* 後で改ページ（ターゲット領域の子モジュールに適用）:モジュールの前に改ページを挿入します。
+* 後で改ページ(モジュール領域の子ターゲットに適用):モジュールの前に改ページを挿入します。
 * 未入力値（情報）： ターゲット領域の未入力変数の個数を示します。
 * 編集（テキストモジュールのみ）： テキストモジュールを編集するためにリッチテキストエディターを開きます。
 * データパネル（テキストと条件モジュール）： モジュールのすべての変数を開きます。
@@ -197,12 +197,12 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
 * 空白行を挿入： 空白行を挿入します。
 * コンテンツライブラリ： コンテンツライブラリを開き、リストにモジュールを追加します。
-* リスト設定（ネストされたリストのみ）:
+* リスト設定(ネストされたリストのみ):
 * 順序ロック（情報）： リスト項目の順序が変更できないことを示します。
 
 ### 添付ファイルの管理 {#manage-attachments}
 
-1. Select **Attachments**. Correspondence Managementには、レターテンプレートの作成時に設定した、使用可能な添付ファイルが表示されます。
+1. Select **Attachments**. Correspondence Managementに、レターテンプレートの作成時に設定された、使用可能な添付ファイルが表示されます。
 1. ビューアイコンをタップすることで、レターの添付ファイルを送信しないように選択できます。また、添付ファイルの × 印をタップすると、添付ファイルをレターから削除できます。指定された添付ファイルがレターテンプレートの作成時に必須として設定されたものに対しては、ビューアイコンと削除アイコンは表示されません。
 1. Tap the Library Access ( ![libraryaccess](assets/libraryaccess.png)) icon to access Content Library to insert DAM assets as attachments.
 
@@ -244,7 +244,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
 1. レターをドラフトとして保存して後で作業を続けるには、「ドラフトとして保存」をタップします。このオプションを使用するには、レターが[発行済み](../../forms/using/publishing-unpublishing-forms.md#publishanasset)になっている必要があります。詳しくは、「[ドラフトの保存とレターインスタンスの送信](#savingdrafts)」の「ドラフトインスタンス」を参照してください。
 
-   ![保険料](assets/saveasdraft.png)
+   ![保存ドラフト](assets/saveasdraft.png)
 
    ドラフトレター名ダイアログにレターインスタンス ID が表示されます。この ID はオプションで編集することができます。レター ID をメモした後、「**完了**」をタップします。後でこの ID を使用して、[ドラフトレターを再読み込み](../../forms/using/submit-letter-topostprocess.md#main-pars-header-1)できます。
 
@@ -335,7 +335,7 @@ HTML および PDF プレビューの利点と使用できる機能は以下の�
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`  **PDF プレビューの利点**
 
-* **改ページ**:PDFプレビューでは、レターの改ページが出力に与える影響を正確に確認できます。
+* **改ページ**:PDFプレビューでは、レターの改ページが出力に与える影響を正確に表示できます。
 * **最終プレビュー**： PDF プレビューでは、レターが出力に表示されるため、レターの書式や表示をそのまま確認できます。
 
 For information on scripting support in PDF forms, see [Scripting Support](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
@@ -344,13 +344,13 @@ For more information on scripting support in HTML5 forms, see [Scripting support
 
 ### レターのレンディションモードの変更 {#changerenditionmode}
 
-デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レターのプレビューモードをPDFに変更できます。 ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
+デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レターモードをPDFにプレビューできます。 ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
 
 For more information on browser compatibility with letter preview, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
 
 レターのプレビューモードを変更するには、次の手順を完了してください。
 
-1. Go to `https://[system]:[port]/system/console/configMgr` and, if necessary, log in as Admin.
-1. Go to **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** and select **HTML Rendition** (Default) or **PDF Rendition**.
+1. Go to `https://[system]:'port'/system/console/configMgr` and, if necessary, log in as Admin.
+1. **[!UICONTROL Correspondence Management Configurations]** /Rendition Type **[!UICONTROL （レンディションの種類）に移動し、「]** HTMLレンディション **（デフォルト）」または「****** PDFレンディション」を選択します。
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
