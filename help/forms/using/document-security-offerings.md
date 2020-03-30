@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 91e85e86-2361-4d1d-aa73-c3cce46ab1f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: e45e335d433f17a48ba1bf27a93c5b1003369512
 
 ---
 
@@ -42,7 +42,7 @@ Document Security サーバーでは、ポリシーの作成、ポリシーで�
 
 AEM Forms Document Security には、セキュリティポリシーに適用できるさまざまなツールが用意されています。ニーズや仕様に応じて、ツールを選ぶことができます。
 
-![document-security-offerings](assets/document-security-offerings.png)
+![ドキュメントセキュリティ](assets/document-security-offerings.png)
 
 Document Security SDK、Adobe Acrobat、Document Security Extension for Microsoft Office、またはポータブル保護ライブラリを使用して、セキュリティポリシーを適用、トラッキングすることができます。
 
@@ -56,13 +56,13 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
 * **Document Security Extension for Microsoft Office**：Document Security Extension for Microsoft Office を使用して、Microsoft Office プログラム内から、事前に定義されたポリシーを Microsoft Office ファイルに適用できます。この拡張機能を使用することで、許可されたユーザーだけがポリシーで保護された Microsoft Word、Excel および PowerPoint ファイルを使用できるようになります。このプラグインをインストールした、権限を持つユーザーのみがポリシーで保護されたファイルを使用することができます。﻿
 
-   この Document Security の拡張機能は Microsoft Office プラグインととして使用できます。You can contact [AEM support team](https://helpx.adobe.com/ca/marketing-cloud/contact-support.html) to procure the extension. その後、[Document Security Extension for Microsoft Office](https://helpx.adobe.com/aem-forms/aem-document-security/aem-document-security-extension-help.html)のヘルプを参照することで、インストール方法、設定方法、拡張機能の使用方法を確認できます。
+   この Document Security の拡張機能は Microsoft Office プラグインととして使用できます。You can contact [AEM support team](https://helpx.adobe.com/ca/marketing-cloud/contact-support.html) to procure the extension. その後、[Document Security Extension for Microsoft Office](https://helpx.adobe.com/aem-forms/aem-document-security/download-installer.html)のヘルプを参照することで、インストール方法、設定方法、拡張機能の使用方法を確認できます。
 
 * **ポータブル保護ライブラリ：**&#x200B;ポータブル保護ライブラリ（PLL）は、ドキュメントを AEM Forms サーバーに送ることなく、ローカルにドキュメントを保護します。ネットワークに送信されるのは、セキュリティの証明書とポリシーの詳細のみです。また、PPLでは、ポリシーの取得アクセスをログインしたユーザーのみに制限することもできます。 AEM にログインしているユーザーについて、ポリシーを取得することができます。
 
-   上記に加えて、ポータブル保護ライブラリには、Document Security SDKのすべての機能が含まれています。 ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。ポータブル保護ライブラリ（PPL）で、AEM Forms Document Security クライアント SDK（CSDK）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
+   上記に加え、ポータブル保護ライブラリには、ドキュメントセキュリティSDKのすべての機能があります。 ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。ポータブル保護ライブラリ（PPL）で、AEM Forms Document Security クライアント SDK（CSDK）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
 
-   ポータブル保護ライブラリは、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。また、OSGi上のAEM FormsのOSGiバンドルとしても使用できます。 C++ PPLは、Microsoft Visual Studio 2013でコンパイルできます。 AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://helpx.adobe.com/marketing-cloud/contact-support.html) サポートチームに問い合わせて、ポータブル保護ライブラリを入手することができます。後から、ポータブル保護ライブラリヘルプ（ライブラリに付属）を参照することで、ポータブル保護ライブラリのセットアップ方法および使用方法を確認することができます。
+   ポータブル保護ライブラリは、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。また、OSGi上のAEM Forms用のOSGiバンドルとしても使用できます。 C++ PPLは、Microsoft Visual Studio 2013でコンパイルできます。 AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://helpx.adobe.com/marketing-cloud/contact-support.html) サポートチームに問い合わせて、ポータブル保護ライブラリを入手することができます。後から、ポータブル保護ライブラリヘルプ（ライブラリに付属）を参照することで、ポータブル保護ライブラリのセットアップ方法および使用方法を確認することができます。
 
 ### 保護されたドキュメントの表示および編集 {#view-or-edit-protected-documents}
 
@@ -76,5 +76,5 @@ Microsoft Windows の全文検索エンジン（SharePoint インデックスサ
 
 * **iFilter インデクサー：** iFilter インデクサーを使用することで、保護された PDF ドキュメントのインデックスを作成し、Microsoft Windows の全文検索エンジン（デスクトップインデックスサービスとSharePoint インデックスサーバー）を有効にします。これにより、保護された PDF ドキュメントを検索することができます。詳しくは、「[保護済みドキュメントに対する AEM SharePoint IFilter の使用](assets/sharepoint-ifilter-doc-security.pdf)」を参照してください。 
 
-* **AEM Forms ドキュメントセキュリティインデクサー：** AEM Forms ドキュメントセキュリティインデクサーを使用することで、保護された PDF ドキュメントのインデックスを作成し、Adobe Experience Manager での保護された PDF ドキュメントの検索を有効にします。インデクサーは、AEM Forms Document Securityの機能の一部です。 これらは、JEE 上の AEM Forms インストーラーに含まれています。
+* **AEM Forms ドキュメントセキュリティインデクサー：** AEM Forms ドキュメントセキュリティインデクサーを使用することで、保護された PDF ドキュメントのインデックスを作成し、Adobe Experience Manager での保護された PDF ドキュメントの検索を有効にします。インデクサーは、AEM Formsのドキュメントセキュリティ機能の一部です。 これらは、JEE 上の AEM Forms インストーラーに含まれています。
 
