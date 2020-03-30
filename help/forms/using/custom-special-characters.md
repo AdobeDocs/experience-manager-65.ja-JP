@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 08e53eec26e29c2403cdfc3239da3ea23da3f321
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,7 +25,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
 * 通貨記号（€、¥、£など）
 * 数学記号（∑、√、∂、^など）
-* ANDの句読点‟記号
+* 句読点の記‟号と
 
 レターでは、次の場所で特殊文字を挿入することができます。
 
@@ -40,7 +40,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
 カスタム特殊文字の追加手順は次のとおりです。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. In the apps folder, create a folder named **[!UICONTROL specialcharacters]** with path/structure similar to the specialcharacters folder (located in the textEditorConfig folder under libs):
 
    1. Right-click the **specialcharacters** folder at the following path and select **Overlay Node**:
@@ -49,11 +49,11 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
+      **パス：** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
 
-      **** オーバーレイの場所：/apps/
+      **オーバーレイの場所：** /apps/
 
-      **** ノードタイプの一致：チェック済み
+      **ノードタイプを一致：** チェック済み
 
       >[!NOTE]
       >
@@ -97,7 +97,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>カスタマイズした特殊文字を追加する</td>
    <td>
     <ol>
-     <li>必須のプロパティを持つ子ノードを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に追加します。</li>
+     <li>「/追加apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に必須のプロパティを持つ子ノード。</li>
      <li>「すべて保存」をクリックします。</li>
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。</li>
     </ol> </td>
@@ -117,7 +117,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>
     <ol>
      <li>非表示にするノードを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下にオーバーレイします。</li>
-     <li>非表示にするノード（アプリケーションの下）にsling:hideResource (Boolean)プロパティを追加します。 </li>
+     <li>非表示にす追加るノード（アプリケーションの下）に対するsling:hideResource (Boolean)プロパティ。 </li>
      <li>「すべて保存」をクリックします。 </li>
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。<br /> </li>
     </ol> </td>
@@ -126,7 +126,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>複数の特殊文字を非表示にする</td>
    <td>
     <ol>
-     <li>「sling:hideChildren (String or String[])」プロパティを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」に追加します。 </li>
+     <li>追加「sling:hideChildren (String or String[])」プロパティを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」に設定します。 </li>
      <li>ノード名（非表示にする特殊文字）を「sling:hideChildren」プロパティの値として追加します。 </li>
      <li>「すべて保存」をクリックします。 </li>
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。<br /> </li>
@@ -136,7 +136,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>特殊文字の並び替え</td>
    <td>
     <ol>
-     <li>必須のプロパティを持つ子ノードを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に追加します。 </li>
+     <li>「/追加apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に必須のプロパティを持つ子ノード。 </li>
      <li>新しく作成された子ノードに sling:orderBefore (String) プロパティを追加します。 </li>
      <li>新たに追加した特殊文字の前に、ノード名を値として追加します。 </li>
      <li>「すべて保存」をクリックします。 </li>
