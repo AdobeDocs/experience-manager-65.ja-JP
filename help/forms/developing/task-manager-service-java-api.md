@@ -1,6 +1,6 @@
 ---
-title: Task Manager Service Java API quickStart(SOAP)
-seo-title: Task Manager Service Java API quickStart(SOAP)
+title: タスクマネージャーサービスJava API QuickStart(SOAP)
+seo-title: タスクマネージャーサービスJava API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: fd6fceb1-865e-47a7-83fc-a63dcc2c21de
@@ -10,38 +10,38 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Task Manager Service Java API Quick Start(SOAP) {#task-manager-service-java-api-quickstart-soap}
+# タスクマネージャーサービスJava APIクイック開始(SOAP) {#task-manager-service-java-api-quickstart-soap}
 
-Task Managerサービスでは、以下のクイックスタートを使用できます。
+Managerサービスでは、次のクイック開始を使用できます。タスクマネージャーサービス
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクの割り当て](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したタスクの割り当て](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクのロック](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したタスクのロック](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用してユーザーに割り当てられたタスクの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用してタスクに割り当てられたユーザーを取得する](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの変更](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフォームデータの変更](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクからの添付ファイルの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したタスクからの添付ファイルの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスク情報の取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したタスク情報の取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:WebサービスAPIを使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを実行するために必要なメソッド呼び`taskList`出しであるメソッドを呼び出すことができないためです。*
+***注意&#x200B;**:WebサービスAPIを使用して、タスクに割り当てられたユーザーを検索することはできません。 このメソッドを実行するために必要な`taskList`メソッド呼び出しである、メソッドを呼び出せないためです。タスク&#x200B;*
 
-***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、Formsサーバーオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したタスクの割り当て {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したタスクの割り当て {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
-次のJavaコードの例は、Tony Blueという名前のユーザーにタスクを割り当てています。
+次のJavaコードの例では、Tony Blueという名前のタスクを割り当てています。
 
 ```as3
  /*
@@ -110,7 +110,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue");
@@ -172,9 +172,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したタスクのロック {#quick-start-soap-mode-locking-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したタスクのロック {#quick-start-soap-mode-locking-tasks-using-the-java-api}
 
-次のJavaコードの例は、タスク識別子の値2に対応するタスクをロックします。
+次のJavaコードの例では、2のタスク識別子の値に対応するタスクをロックします。
 
 ```as3
  /*
@@ -236,7 +236,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue");
@@ -261,9 +261,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用してユーザーに割り当てられたタスクの取得 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用してタスクに割り当てられたユーザーを取得する {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-次のJavaコードの例は、 *tony blueという名前のユーザーに割り当てられているすべてのタスクを取得*&#x200B;します。 このユーザーは、接続プロパティで指定されています。 識別子の値や説明など、返されるタスクに関する情報が表示されます。
+次のJavaコードの例は、 *tony blueという名前のタスクに割り当てられているすべてのユーザーを取得*&#x200B;します。 このユーザーは、接続プロパティで指定されています。 識別子の値やタスクなど、返される識別子に関する情報が表示されます。
 
 ```as3
  /*
@@ -327,7 +327,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
               //Set connection properties required to invoke AEM Forms
                Properties connectionProps = new Properties();
-               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -387,9 +387,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
-次のJavaコードの例は、識別子の値が304のフォームデータをタスクから取得します。 フォームデータは、C:\Adobeにある *FormData.xmlというXMLファイルに書き込まれます* 。
+次のJavaコードの例は、識別子の値が304のタスクからフォームデータを取得します。 フォームデータは、C:\Adobeにある *FormData.xmlというXMLファイルに書き込まれます* 。
 
 ```as3
  /*
@@ -455,7 +455,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
               //Set connection properties required to invoke AEM Forms
                Properties connectionProps = new Properties();
-               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -493,9 +493,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したフォームデータの変更 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したフォームデータの変更 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-次のJavaコードの例では、FormData.xmlファイル内のデータを使用してフォームを更 *新します* 。
+次のJavaコードの例は、 *FormData.xmlファイル内のデータを使用してフォームを更新します* 。
 
 ```as3
  /*
@@ -562,7 +562,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue");
@@ -603,9 +603,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したタスクからの添付ファイルの取得 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したタスクからの添付ファイルの取得 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
 
-次のJavaコードの例は、添付ファイルを取得します。 各添付ファイルはTXTファイルとして保存されます。
+次のJavaコードの例を使用して、添付ファイルを取得します。 各添付ファイルはTXTファイルとして保存されます。
 
 ```as3
  /*
@@ -670,7 +670,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
               //Set connection properties required to invoke AEM Forms
                Properties connectionProps = new Properties();
-               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -707,9 +707,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したタスク情報の取得 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したタスク情報の取得 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
-次のJavaコードの例を使用すると、MortgageLoan - Prebuiltという名前のプロセスに基づくすべてのタスクを取 *得できます*。 返された各タスクのステータスが、完了したタスクであることを確認します。 タスクを完了したユーザーの名前やタスクが完了した日付などの情報が取得され、表示されます。
+次のJavaコードの例を使用すると、MortgageLoan - Prebuiltという名前のプロセスに基づくすべてのタスク *を取得できます*。 返された各タスクのステータスがチェックされ、完了したタスクであることが確認されます。 タスクを完了したタスクの名前やユーザーが完了した日付などの情報が取得され、表示されます。
 
 ```as3
  /*
@@ -776,7 +776,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
