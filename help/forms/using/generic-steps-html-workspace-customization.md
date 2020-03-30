@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 カスタマイズを実行するための一般的な手順を以下に示します。
 
-1. にアクセスしてCRXDE Liteにログインしま `https://[server]:[port]/lc/crx/de/index.jsp`す。
+1. にアクセスしてCRXDE Liteにログインしま `https://'[server]:[port]'/lc/crx/de/index.jsp`す。
 1. Create a folder named `ws`at `/apps`, if it does not exist. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. Browse to `/apps/ws`, and navigate to the **[!UICONTROL Access Control]** tab.
 1. In the **[!UICONTROL Access Control]** list, click **[!UICONTROL +]** to add a new entry. もう一度「**[!UICONTROL +]**」をクリックします。
@@ -97,6 +97,6 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
 
-   URLにアクセスし、管 `https://[server]:[port]/lc/ws` 理者/パスワードの資格情報を使用してログインします。 ブラウザーがにリダイレクトされま `https://[server]:[port]/lc/apps/ws/index.html`す。
+   URLにアクセスし、管 `https://'[server]:[port]'/lc/ws` 理者/パスワードの資格情報を使用してログインします。 ブラウザーがにリダイレクトされま `https://'[server]:[port]'/lc/apps/ws/index.html`す。
 
 [サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
