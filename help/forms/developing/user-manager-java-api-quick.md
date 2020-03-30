@@ -1,6 +1,6 @@
 ---
-title: User Manager Java APIクイックスタート(SOAP)
-seo-title: User Manager Java APIクイックスタート(SOAP)
+title: User Manager Java APIクイック開始(SOAP)
+seo-title: User Manager Java APIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 0a2aa4ab-9329-485f-a30e-47bb471ce1b5
@@ -10,36 +10,36 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# User Manager Java APIクイックスタート(SOAP) {#user-manager-java-api-quick-start-soap}
+# User Manager Java APIクイック開始(SOAP) {#user-manager-java-api-quick-start-soap}
 
-Java APIクイックスタート(SOAP)は、User Manager APIで使用できます。
+Java APIクイック開始(SOAP)は、User Manager APIで使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したユーザの追加](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したユーザーの追加](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したユーザの削除](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したユーザの削除](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したグループの作成](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したグループの作成](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したユーザーとグループの管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したユーザーとグループの管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したロールと権限の管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したロールと権限の管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したプログラムによるユーザーの同期](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したプログラムによるユーザーの同期](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した環境設定ノードのプログラム管理](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した環境設定ノードのプログラム管理](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイックスタートは、Unixなど別のオペレーティングシステムを使用している場合は、ドキュメントに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合、ドキュメントに基づいて、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したユーザの追加 {#quick-start-soap-mode-adding-users-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したユーザーの追加 {#quick-start-soap-mode-adding-users-using-the-java-api}
 
-次のコード例は、Wendy Blueという名前のユーザーをAEM Formsに追加します。 (Adding Users [を参照](/help/forms/developing/users.md#adding-users))。
+次のコード例は、Wendy Blueという名前のユーザーをAEM Formsに追加します。 (ユーザ [の追加を参照](/help/forms/developing/users.md#adding-users))。
 
 ```as3
  /*
@@ -103,7 +103,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try {
              //Set connection properties required to invoke AEM Forms
                 Properties connectionProps = new Properties();
-                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -155,9 +155,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したユーザの削除 {#quick-start-soap-mode-deleting-users-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したユーザの削除 {#quick-start-soap-mode-deleting-users-using-the-java-api}
 
-次のコード例は、Wendy Blueという名前のユーザーをAEM Formsから削除します。 (Deleting Users [を参照](/help/forms/developing/users.md#deleting-users))。
+次のコード例は、Wendy Blueという名前のユーザーをAEM Formsから削除します。 (ユーザの [削除を参照](/help/forms/developing/users.md#deleting-users))。
 
 ```as3
  /*
@@ -220,7 +220,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL, ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -251,9 +251,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したユーザーとグループの管理 {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したユーザーとグループの管理 {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
 
-次のコード例は、ユーザーが属するローカルユーザーとローカルグループを検索します。 (「ユーザ [ーとグループの管理](/help/forms/developing/users.md#managing-users-and-groups)」を参照)。
+次のコード例は、ローカルユーザーと、そのユーザーが属するローカルグループを検索します。 (Managing Users [and Groupsを参照](/help/forms/developing/users.md#managing-users-and-groups))。
 
 ```as3
  /*
@@ -316,7 +316,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -375,9 +375,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したロールと権限の管理 {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したロールと権限の管理 {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
 
-次のコード例は、プリンシパルにサービスユーザーロールを割り当て、プリンシパルが持つロールを印刷し、プリンシパルからロールを削除する役割を表します。 このクイックスタート用に2つのサービスが呼び出されます。directorymanagerサービスとAuthorizationManagerサービス。(ロールと [権限の管理を参照](/help/forms/developing/users.md#managing-roles-and-permissions))。
+次のコード例では、サービスユーザーロールをプリンシパルに割り当て、プリンシパルが持つロールを印刷し、その後プリンシパルからロールを削除します。 このクイック開始では、directorymanagerサービスとAuthorizationManagerサービス。(ロールと [権限の管理を参照](/help/forms/developing/users.md#managing-roles-and-permissions))。
 
 ```as3
  /*
@@ -442,7 +442,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -518,9 +518,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したプログラムによるユーザーの同期 {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したプログラムによるユーザーの同期 {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
-次のJavaコードの例では、User Management APIを使用してユーザーを同期します。 (「プログラ [ムによるユーザの同期](/help/forms/developing/users.md#programmatically-synchronizing-users)」を参照)。
+次のJavaコードの例では、User Management APIを使用してユーザーを同期します。 (「プログラム [によるユーザの同期](/help/forms/developing/users.md#programmatically-synchronizing-users)」を参照)。
 
 ```as3
  /*
@@ -587,7 +587,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms
                 Properties connectionProps = new Properties();
-                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -627,9 +627,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したユーザの追加 {#quick_start_soap_mode_adding_users_using_the_java_api-1}
+## クイック開始（SOAPモード）:Java APIを使用したユーザーの追加 {#quick_start_soap_mode_adding_users_using_the_java_api-1}
 
-次のコード例は、Wendy Blueという名前のユーザーをAEM Formsに追加します。 (Adding Users [を参照](/help/forms/developing/users.md#adding-users))。
+次のコード例は、Wendy Blueという名前のユーザーをAEM Formsに追加します。 (ユーザ [の追加を参照](/help/forms/developing/users.md#adding-users))。
 
 ```as3
  /*
@@ -693,7 +693,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try {
              //Set connection properties required to invoke AEM Forms
                 Properties connectionProps = new Properties();
-                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -745,7 +745,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したグループの作成 {#quick-start-soap-mode-creating-groups-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したグループの作成 {#quick-start-soap-mode-creating-groups-using-the-java-api}
 
 次のコード例では、AdobeGroupという名前のグループをAEM Formsに作成します。 (「グループ [の作成](/help/forms/developing/users.md#creating-groups)」を参照)。
 
@@ -816,7 +816,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
           //Set connection properties that are required to invoke AEM Forms
           Properties connectionProps = new Properties();
-                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -897,9 +897,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）環境設定ノードの管理 {#quick-start-soap-mode-managing-preferences-nodes}
+## クイック開始（SOAPモード）環境設定ノードの管理 {#quick-start-soap-mode-managing-preferences-nodes}
 
-以下のJavaコードモデルは、User Management APIを使用した環境設定ノードの管理です。 (「環境設定ノ [ードのプログラムによる管理](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)」を参照)。
+次のJavaコードモデルは、User Management APIを使用した環境設定ノードの管理です。 (環境設定ノ [ードのプログラムによる管理を参照](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))。
 
 ```as3
 /*
@@ -959,7 +959,7 @@ public class ManagePreferences {
     public static void main(String[] args) {
     //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1000,9 +1000,9 @@ public class ManagePreferences {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した環境設定ノードのプログラム管理 {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した環境設定ノードのプログラム管理 {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
-次のJavaコードモデルは、User Management APIを使用した環境設定ノードの管理(環境設定ノードのプ [ログラム管理を参照](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+次のJavaコードモデルは、User Management APIを使用した環境設定ノードの管理(環境設定ノードのプ [ログラムによる管理を参照](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))。
 
 ```as3
 /*
@@ -1046,7 +1046,7 @@ public class ManagePreferences {
     public static void main(String[] args) {
     //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
