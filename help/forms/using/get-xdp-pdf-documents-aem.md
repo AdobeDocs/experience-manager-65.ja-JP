@@ -10,7 +10,7 @@ topic-tags: forms-manager
 discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,7 +33,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 
 ## フォームのアップロード {#uploading-forms}
 
-1. Log in to the AEM Forms user interface by accessing `https://[server]:[port]/aem/forms.html`.
+1. Log in to the AEM Forms user interface by accessing `https://'[server]:[port]'/aem/forms.html`.
 1. フォームまたはフォームを含むフォルダーをアップロードしたいフォルダーに移動します。
 1. アクションツールバーで、**作成／ファイルのアップロード**&#x200B;をタップします。
 
@@ -65,9 +65,9 @@ AEM Forms サーバーを使用することで、JavaScript コードを実行�
 
 保護モードは、デフォルトではオンになっています。必要に応じて、保護モードを無効にすることができます。
 
-1. AEM Web コンソールに管理者としてログインします。The URL is https://[server]:[port]/system/console/configMgr
+1. AEM Web コンソールに管理者としてログインします。The URL is https://&#39;[server]:[port]&#39;/system/console/configMgr
 1. Mobile Forms の設定を編集用に開きます。
-1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードは無効になっています。
+1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードは無効です。
 
 ## 参照先 XFA フォームの更新 {#updating-referenced-xfa-forms}
 
