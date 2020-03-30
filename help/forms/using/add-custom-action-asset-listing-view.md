@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -26,7 +26,7 @@ Correspondence Management ソリューションでは、「アセットを管理
 * 1 つ以上のアセットタイプまたはレター。
 * 1 つまたは複数のアセット／レター選択時の実行アクション（アクション／コマンドをアクティブにする）、または非選択時の実行アクション。
 
-このカスタマイズの使用事例として、レターのアセット一覧表示画面に「Download Flat PDF」コマンドを追加するシナリオが示されます。このカスタマイズシナリオを使用すると、選択した1つのレターのフラットなPDFをユーザーがダウンロードできます。
+このカスタマイズの使用事例として、レターのアセット一覧表示画面に「Download Flat PDF」コマンドを追加するシナリオが示されます。このカスタマイズシナリオを使用すると、選択した1つのレターのフラットなPDFをダウンロードできます。
 
 ### 前提条件 {#prerequisites}
 
@@ -42,7 +42,7 @@ Correspondence Management ソリューションでは、「アセットを管理
 
 Correspondence Management をカスタマイズしてレターのフラットな PDF のダウンロードをユーザーに許可するには、以下の手順を実行します。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 
 1. 次の手順を使用して、appsフォルダーに、selectionフォルダー内のitemsフォルダーに類似したパス/構造でitemsという名前のフォルダーを作成します。
 
@@ -61,11 +61,11 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
+      **パス：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
       ![ノードをオーバーレイ](assets/2_createnodedownloadflatpdf.png)
 
@@ -79,9 +79,9 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：downloadFlatPDF（またはこのプロパティに付ける名前）
+      **名前：** downloadFlatPDF（またはこのプロパティに付ける名前）
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは downloadFlatPDF）。CRX にノードのプロパティが表示されます。
 
@@ -145,11 +145,11 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
+      **パス：** /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。「**すべて保存**」をクリックします。
 
@@ -235,25 +235,25 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
+      **パス：** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
 
-      **** 場所：/apps/
+      **場所：** /apps/
 
-      **** ノードタイプの一致：選択
+      **ノードタイプを一致：** 選択
 
    1. 「**OK**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
    1. 「**すべて保存**」をクリックします。
 
-1. 新しく作成されたitemsノードの下で、特定のアセットのカスタムボタン/アクションのノードを追加します(例：letterpdfdownloaderを参照)を次の手順で使用します。
+1. 新しく作成したitemsノードの下で、特定のアセットのカスタムボタン/アクションのノードを追加します(例：letterpdfdownloaderを参照)を次の手順で使用します。
 
    1. items フォルダーを右クリックして、「**作成／ノードを作成**」を選択します。
 
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **** 名前：letterpdfdownloader(または、このプロパティに付ける名前は一意である必要があります。 ここで別の名前を使用する場合は、formaction.jsファイルのACTION_URL変数でも同じ名前を指定します。)
+      **名前：** letterpdfdownloader(または、このプロパティに付ける名前。一意の名前を指定する必要があります。 ここで別の名前を使用する場合は、formaction.jsファイルのACTION_URL変数でも同じ名前を指定します)。
 
-      **** タイプ：nt:unstructured
+      **タイプ：** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは downloadFlatPDF）。CRX にノードのプロパティが表示されます。
 
@@ -263,7 +263,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
       |---|---|---|
       | sling:resourceType | 文字列 | fd/cm/ma/gui/components/admin/clientlibs/admin |
 
-1. 次の場所に、コマンドのアクション処理用のコードを持つPOST.jspという名前のファイルを作成します。
+1. 次の場所に、コマンドのアクション処理用のコードを含むPOST.jspという名前のファイルを作成します。
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
@@ -271,7 +271,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-      ファイルに POST.jsp という名前を付けます。（ファイル名はPOST.jspのみにする必要があります）。
+      ファイルに POST.jsp という名前を付けます。（ファイル名はPOST.jspのみである必要があります）。
 
    1. Double-click the **POST.jsp** file to open it in CRX.
    1. POST.jsp ファイルに次のコードを追加して、「**すべて保存**」をクリックします。
@@ -349,7 +349,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
 レターのフラットなPDFをダウンロードするカスタム機能を追加した後、次の手順を使用して、選択したレターのフラットなPDFバージョンをダウンロードできます。
 
-1. に移動し、 `https://[server]:[port]/[ContextPath]/projects.html` ログインします。
+1. に移動し、ロ `https://'[server]:[port]'/[ContextPath]/projects.html` グインします。
 
 1. 「**フォーム／レター**」を選択します。Correspondence Management によってシステムで使用可能なレターが一覧表示されます。
 1. Click **Select** and then click a letter to select it.
