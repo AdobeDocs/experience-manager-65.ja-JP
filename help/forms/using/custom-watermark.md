@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: adc7ec13-0675-4071-9c4c-e238202d9d85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ Create Correspondence UI を使用するエージェントユーザーは、電�
 
 PDF データの不正使用を防ぐため、プレビューの PDF に透かしを付けることができます。デフォルトのウォーターマークは「プレビュー」で、PDF 全体に表示されます。
 
-To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark]** During Preview option in **[!UICONTROL Correspondence Management Configurations]** at https://[server]:[port]/system/console/configMgr.
+To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark]** During Preview option in **[!UICONTROL Correspondence Management Configurations]** at https://&#39;[server]:[port]&#39;/system/console/configMgr.
 
 ![default-watermark](assets/default-watermark.png)
 
@@ -31,7 +31,7 @@ To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark
 
 ## Create Correspondence UI で PDF プレビュー内の透かしをカスタマイズする {#customizewatermark-}
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. In the apps folder, create a folder named **[!UICONTROL previewwatermark]** with path/structure similar to the previewwatermark folder in the libs folder:
 
    1. Right-click the **previewwatermark** folder at the following path and select **Overlay Node**:
@@ -40,11 +40,11 @@ To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/configFiles/previewwatermark
+      **パス：** /libs/fd/cm/configFiles/previewwatermark
 
-      **** オーバーレイの場所：/apps/
+      **オーバーレイの場所：** /apps/
 
-      **** ノードタイプの一致：チェック済み
+      **ノードタイプを一致：** チェック済み
 
       >[!NOTE]
       >
