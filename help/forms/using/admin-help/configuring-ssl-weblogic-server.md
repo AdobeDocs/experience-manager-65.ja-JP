@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -90,11 +90,11 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
    <td><p><code>"CN=</code><code>[User name]</code><code>,OU=</code><code>[Group Name]</code><code>, O=</code><code>[Company Name]</code><code>, L=</code><code>[City Name]</code><code>, S=</code><code>[State or province]</code><code>, C=</code><code>[Country Code]</code><code>"</code></p>
     <ul>
      <li><p><code><i>[User name]</i></code> は、キーストアを所有するユーザーのIDです。</p></li>
-     <li><p><code><i>[Group Name]</i></code> は、キーストアの所有者が属する会社グループのIDです。</p></li>
+     <li><p><code><i>[Group Name]</i></code> は、キーストアの所有者が属する企業グループのIDです。</p></li>
      <li><p><code><i>[Company Name]</i></code> は組織の名前です。</p></li>
      <li><p><code><i>[City Name]</i></code> は、組織の所在地の市区町村です。</p></li>
-     <li><p><code><i>[State or province]</i></code> は、組織が存在する都道府県です。</p></li>
-     <li><p><code><i>[Country Code]</i></code> は、組織の所在地の2文字のコードです。</p></li>
+     <li><p><code><i>[State or province]</i></code> は、組織の所在地の都道府県です。</p></li>
+     <li><p><code><i>[Country Code]</i></code> は、組織の所在国を示す2文字のコードです。</p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -156,14 +156,14 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [appserverdomain]/adobe/[server] directory.
+The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [appserverdomain]/adobe/&#39;server&#39; directory.
 
 作成したカスタム ID キーストアとカスタム信頼キーストアを使用するように、WebLogic を設定します。また、キーストアファイルの作成に使用する識別名には、WebLogic Server をホストするコンピューターの名前が含まれていないので、WebLogic のホスト名の検証機能を無効にします。
 
 ## SSL を使用する WebLogic の設定 {#configure-weblogic-to-use-ssl}
 
 1. Start the WebLogic Server administration console by typing `https://`*[host name ]*`:7001/console`in the URL line of a web browser.
-1. Under Environment, in Domain Configurations, select **Servers >[server]> Configuration > General**.
+1. Under Environment, in Domain Configurations, select **Servers > &#39;server&#39; > Configuration > General**.
 1. 「General」の「Configuration」で、「**Listen Port Enabled**」と「**SSL Listen Port Enabled**」が選択されていることを確認します。有効でない場合は、次の手順を実行します。
 
    1. 「Change Center」で、「**Lock &amp; Edit**」をクリックし、選択内容と値を変更します。
@@ -185,7 +185,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 
 1. 「Trust」で、次の値を指定します。
 
-   **Custom Trust Keystore File Name**: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`は、 `*[appserverdomain]*` 実際のパス
+   **Custom Trust Keystore File Name**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`は、 `*[appserverdomain]*` 実際のパス
 
    **Custom Trust Keystore Type**：JKS
 
