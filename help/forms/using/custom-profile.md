@@ -9,30 +9,30 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # HTML5 フォームのカスタムプロファイルの作成 {#creating-a-custom-profile-for-html-forms}
 
-A profile is a resource node in [Apache Sling](https://sling.apache.org/). HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、およびやりとりをカスタマイズできます。 A profile node exists in the `/content` folder in the JCR repository. You can place the node directly under the `/content` folder or any subfolder of the `/content` folder.
+A profile is a resource node in [Apache Sling](https://sling.apache.org/). HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、および操作をカスタマイズできます。 A profile node exists in the `/content` folder in the JCR repository. You can place the node directly under the `/content` folder or any subfolder of the `/content` folder.
 
-Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。ノードのレンダリングスクリプトは/libs/xfaforms/profileにあります。
+Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。ノードのレンダリングスクリプトは/libs/xfaforms/nodeにあります。プロファイル
 
-Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。These Sling scripts are also referred as **Profile Renderer scripts**. プロファイルレンダラーはForms OSGiサービスを呼び出して、要求されたフォームをレンダリングします。
+Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。These Sling scripts are also referred as **Profile Renderer scripts**. プロファイルレンダラーは、要求されたフォームをレンダリングするためにForms OSGiサービスを呼び出します。
 
-GETおよびPOST要求の場合、プロファイルスクリプトはhtml.jspおよびhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、そのような変更が上書きされます。
+プロファイルスクリプトは、GETおよびPOST要求の場合、html.jspとhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、このような変更が上書きされます。
 
 プロファイルにはさまざまなモジュールが含まれています。これらのモジュールは、formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp、および footer.jsp です。
 
 ## formRuntime.jsp {#formruntime-jsp-br}
 
-formRuntime.jspモジュールには、クライアントライブラリの参照が含まれています。 これは、リクエストからロケール情報を抽出したし、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。formRuntime.jspには、独自のカスタムjavascriptライブラリまたはスタイルを含めることができます。
+formRuntime.jspモジュールには、クライアントライブラリの参照が含まれています。 これは、リクエストからロケール情報を抽出したし、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。formRuntime.jspに独自のJavaScriptライブラリまたはスタイルを含めることができます。
 
 ## config.jsp {#config-jsp}
 
-config.jsp モジュールには、ロギング、プロキシサービス、動作バージョンなど、さまあまな設定が含まれています。独自の設定およびウィジェットカスタマイズを config.jsp モジュールに追加することができます。また、カスタムウィジェット登録などの設定をconfig.jspモジュールに追加することもできます。
+config.jsp モジュールには、ロギング、プロキシサービス、動作バージョンなど、さまあまな設定が含まれています。独自の設定およびウィジェットカスタマイズを config.jsp モジュールに追加することができます。config.jspモジュールにカスタムウィジェット登録などの設定を追加することもできます。
 
 ## toolbar.jsp {#toolbar-jsp}
 
@@ -56,7 +56,7 @@ footer.jsp モジュールは空です。ユーザーの操作にのみ使用す
 
 ### プロファイルノードの作成 {#create-profile-node}
 
-1. Navigate to the CRX DE interface at the URL: `https://[server]:[port]/crx/de` and log in to the interface with administrator credentials.
+1. Navigate to the CRX DE interface at the URL: `https://'[server]:[port]'/crx/de` and log in to the interface with administrator credentials.
 
 1. 左のペインで */content/xfaforms/profiles* の場所に移動します。
 
@@ -78,7 +78,7 @@ footer.jsp モジュールは空です。ユーザーの操作にのみ使用す
 1. Paste **html.jsp** node into the `/apps/hrform/demo` folder created above with same name **html.jsp** and click **Save**.
 1. プロファイルスクリプトのその他のコンポーネントを持っている場合は、手順 1 から 6 に従って、/apps/hrform/demo フォルダーにそのコンポーネントをコピーします。
 
-1. To verify that th profile is created, open URL `https://[server]:[port]/content/xfaforms/profiles/hrform.html`
+1. To verify that th profile is created, open URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
 フォームを検証するには、ローカルファイルシステムから AEM Forms に[フォームを読み込み](/help/forms/using/get-xdp-pdf-documents-aem.md)、AEM サーバーオーサーインスタンスで[フォームをプレビュー](/help/forms/using/previewing-forms.md)します。
 
