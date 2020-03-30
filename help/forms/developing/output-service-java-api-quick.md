@@ -1,6 +1,6 @@
 ---
-title: Output Service Java API Quick Start(SOAP)
-seo-title: Output Service Java API Quick Start(SOAP)
+title: Output Service Java API Quick開始(SOAP)
+seo-title: Output Service Java API Quick開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 34cb1fc7-50a9-4db8-aed1-dbd3480d1323
@@ -10,44 +10,44 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Output Service Java API Quick Start(SOAP) {#output-service-java-api-quick-start-soap}
+# Output Service Java API Quick開始(SOAP) {#output-service-java-api-quick-start-soap}
 
-OutputサービスでJava API Quick Start(SOAP)を使用できます。
+Outputサービスでは、Java API Quick開始(SOAP)を使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したドキュメントXDPファイルに基づくPDFアプリケーションの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDF/Aドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDF/Aドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用してOutputサービスにドキュメントを渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用してドキュメントをOutputサービスに渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用してAEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用してAEM Formsドキュメント内のリポジトリをOutputサービスに渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したファイルへの印刷](#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したファイルへの印刷](#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したネットワークプリンターへの印刷ストリームの送信](output-service-java-api-quick.md#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したネットワークプリンターへの印刷ストリームの送信](output-service-java-api-quick.md#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した複数のPDFファイルの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した複数のPDFファイルの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した検索ルールの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した検索ルールの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの変換](output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの変換](output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードをSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-* ***注意&#x200B;**:「AEM formsによるプログラミング」にあるクイックスタートは、Formsサーバーオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+* ***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Forms Serverオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* Loan.xmlという名前のXMLデータファイルに基 *づいています*。 *Loan.pdfは* 、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメ [ントの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
+次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 *Loan.pdfは、クライアントコンピューターではなく* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメント [の作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
 
 ```as3
  /*
@@ -114,7 +114,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -163,13 +163,13 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したドキュメントXDPファイルに基づくPDFアプリケーションの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* Loan.xmlという名前のXMLデータファイルに基 *づいています*。 このXDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされま `Applications/FormsApplication`す。 URIパスが表示されます `repository:///Applications/FormsApplication/1.0/FormsFolder/`。 *Loan.pdfは* 、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメ [ントの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
+次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 このXDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされま `Applications/FormsApplication`す。 URIパスは、です `repository:///Applications/FormsApplication/1.0/FormsFolder/`。 *Loan.pdfは、クライアントコンピューターではなく* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメント [の作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
 
 >[!NOTE]
 >
->このクイックスタートを実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 FormsFolderという名前のアプリケーション内にフォルダーを作成し、そのフォルダーにXDPファイルを配置します。 詳しくは、「PDFドキュメントの [生成」を参照してください](/help/forms/developing/creating-document-output-streams.md)*。*
+>このクイック開始を実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 FormsFolderという名前のアプリケーション内にフォルダーを作成し、そのフォルダーにXDPファイルを配置します。 詳しくは、「PDFの生成」を [参照してください](/help/forms/developing/creating-document-output-streams.md)*。*
 
 ```as3
  /*
@@ -234,7 +234,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -286,25 +286,25 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用してリポジトリ内のドキュメントをOutputサービスに渡す {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用して、ドキュメント内のリポジトリをOutputサービスに渡す {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
 
-次のJavaコードは、XDPファイルをリポジトリから取得し、インスタンス内でOutputサービスに渡し `com.adobe.idp.Document` ます。 このXDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされま `Applications/FormsApplication`す。 URIパスが表示されます `repository:///Applications/FormsApplication/1.0/FormsFolder/`。
-
->[!NOTE]
->
->Repository APIは、この場所からXDPファイルを取得するために使用します。 ( [Reading Resources](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照)。
-
-また、コンテンツのルート値がオ `repository:///Applications/FormsApplication/1.0/FormsFolder/` ブジェクトのメソッド(2 `OutputClient` 番目のパ `generatePDFOutput2` ラメーター)に渡されます。 この値は、画像などのフォームコラテラルがこの場所に保存されることをOutputサービスに通知するためにOutputサービスに渡されます。
+次のJavaコードは、XDPファイルをリポジトリから取得し、インスタンス内でOutputサービスに渡し `com.adobe.idp.Document` ます。 このXDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされま `Applications/FormsApplication`す。 URIパスは、です `repository:///Applications/FormsApplication/1.0/FormsFolder/`。
 
 >[!NOTE]
 >
->メソッドを呼び出すときと同じ方法で、コンテンツのルート値を設定でき `generatePrintedOutput2` ます。
+>リポジトリAPIは、この場所からXDPファイルを取得するために使用されます。 ( [Reading Resources](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照)。
 
-*Loan.pdfは* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (「リポジトリ [内のドキュメントをOutputサービスに渡す」を参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service))。
+また、コンテンツのルート値が `repository:///Applications/FormsApplication/1.0/FormsFolder/` オブジェクトのメソッ `OutputClient` ド(2番目のパ `generatePDFOutput2` ラメーター)に渡されます。 この値は、画像などのフォームコラテラルがこの場所に保存されることをOutputサービスに通知するためにOutputサービスに渡されます。
 
 >[!NOTE]
 >
->このクイックスタートを実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 FormsFolderという名前のアプリケーション内にフォルダーを作成し、そのフォルダーにXDPファイルを配置します。
+>メソッドを呼び出すときと同じ方法で、コンテンツのルート値を設定で `generatePrintedOutput2` きます。
+
+*Loan.pdfは* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (リポジトリ [内のドキュメントをOutputサービスに渡すを参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service))。
+
+>[!NOTE]
+>
+>このクイック開始を実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 FormsFolderという名前のアプリケーション内にフォルダーを作成し、そのフォルダーにXDPファイルを配置します。
 
 ```as3
  /*
@@ -358,7 +358,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -438,9 +438,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの作成 {#quick_start_soap_mode_creating_a_pdf_document_using_the_java_api-1}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの作成 {#quick_start_soap_mode_creating_a_pdf_document_using_the_java_api-1}
 
-次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* Loan.xmlという名前のXMLデータファイルに基 *づいています*。 *Loan.pdfは* 、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメ [ントの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
+次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 *Loan.pdfは、クライアントコンピューターではなく* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメント [の作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
 
 ```as3
  /*
@@ -500,7 +500,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -548,9 +548,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDF/Aドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDF/Aドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api}
 
-次のJavaコードの例は、LoanArchive.pdfという名前のPDF/Aドキュメ *ントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* Loan.xmlという名前のXMLデータファイルに基 *づいています*。 LoanArchive.pdfは *、クライアントコンピューターではなく* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDF/A [ドキュメントの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents))。
+次のJavaコードの例は、 *LoanArchive.pdfという名前のPDF/Aドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 LoanArchive.pdfは ** 、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDF/A [ドキュメントの作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents))。
 
 ```as3
  /*
@@ -616,7 +616,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -666,9 +666,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用してOutputサービスにドキュメントを渡す {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用してドキュメントをOutputサービスに渡す {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
 
-次のJavaクイックスタートは、Content Servicesから *Loan.xdp* . このXDPファイルは、内にあります `space /Company Home/Form Designs`。 XDPファイルがインスタンスで返さ `com.adobe.idp.Document` れます。 インス `com.adobe.idp.Document` タンスがOutputサービスに渡されます。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf*というPDFファイルとして保存されます。 「ファイルURI」オプションが設定されているので、PDFファイル*Loan.pdf *もAEM formsをホストするJ2EEアプリケーションサーバーに保存されます。 (Content Services ES2 [にあるドキュメントをOutputサービスに渡すを参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service))。
+次のJavaクイック開始は、 *Content Servicesから* Loan.xdpファイルを取得します。 このXDPファイルは、内にあります `space /Company Home/Form Designs`。 XDPファイルがインスタンスで返さ `com.adobe.idp.Document` れます。 インス `com.adobe.idp.Document` タンスがOutputサービスに渡されます。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf*というPDFファイルとして保存されます。 「ファイルのURI」オプションが設定されているので、PDFファイル*Loan.pdf *もAEM FormsをホストするJ2EEアプリケーションサーバーに保存されます。 (Content Services ES2 [にあるドキュメントをOutputサービスに渡すを参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service))。
 
 ```as3
  /*
@@ -723,7 +723,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -805,9 +805,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api}
 
-次のJavaコードの例は、Assemblerサービスによってアセンブリされたフォームデザインに基づいてPDFドキュメントを作成します。 Assemblerサービスは、複数のXDPファイル内のフラグメントを1つのフォームデザインにアセンブリします。 Assemblerサービスを呼び出すアプリケーションロジックは、という名前のユーザー定義メソッドにありま `GetFormDesign`す。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf*というPDFファイルとして保存されます。 (フラグメント [を使用したPDFドキュメントの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments))。
+次のJavaコードの例は、Assemblerサービスによってドキュメントされたフォームデザインに基づいてPDFアセンブリを作成します。 Assemblerサービスは、複数のXDPファイルにあるフラグメントを1つのフォームデザインにアセンブリします。 Assemblerサービスを呼び出すアプリケーションロジックは、という名前のユーザー定義メソッドにありま `GetFormDesign`す。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf*というPDFファイルとして保存されます。 (フラグメント [を使用したPDFドキュメントの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments))。
 
 ```as3
  /*
@@ -891,7 +891,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1013,9 +1013,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したファイルへの印刷 {#quick-start-soap-mode-printing-to-a-file-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したファイルへの印刷 {#quick-start-soap-mode-printing-to-a-file-using-the-java-api}
 
-次のJavaコードの例は、MortgageForm.psという名前のPostScriptファイルに出力ストリームを *印刷します*。 (Printing to [Filesを参照](/help/forms/developing/creating-document-output-streams.md#printing-to-files))。
+次のJavaコードの例は、MortgageForm.psという名前のPostScriptファイルに出力ストリームを *印刷します*。 (ファイル [への印刷を参照](/help/forms/developing/creating-document-output-streams.md#printing-to-files))。
 
 ```as3
  /*
@@ -1081,7 +1081,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1125,7 +1125,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したネットワークプリンターへの印刷ストリームの送信 {#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したネットワークプリンターへの印刷ストリームの送信 {#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api}
 
 次のJavaコードの例は、PostScript印刷ストリームを\\Printer1\Printerという名前のネットワークプリンターに送信 *します*。 2部がプリンターに送信されます。 (Sending Print Streams [to Printersを参照](/help/forms/developing/creating-document-output-streams.md#sending-print-streams-to-printers))。
 
@@ -1192,7 +1192,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1250,7 +1250,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した複数のPDFファイルの作成 {#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した複数のPDFファイルの作成 {#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api}
 
 次のJavaコードは、 *Loan_data_batch.xmlというXMLデータファイル内の各データレコードに対して複数のPDFファイルを作成します*。 ファイルがC:\Adobe directoryフォルダーに書き込まれます。 PDFファイルは、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (複数の出 [力ファイルの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-multiple-output-files))。
 
@@ -1318,7 +1318,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1371,9 +1371,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用した検索ルールの作成 {#quick-start-soap-mode-creating-search-rules-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した検索ルールの作成 {#quick-start-soap-mode-creating-search-rules-using-the-java-api}
 
-次のJavaコードの例は、Outputサービスが検索する2つのテキストパターンを作成します。 最初のテキストパターンは「住宅ローン」です。 見つかった場合、Outputサービスは *Mortgage.xdpという名前のフォームデザインを使用します*。 2つ目のテキストパターンは自動車です。 見つかった場合、OutputサービスはAutomobileLoan.xdpという名前のフォームデザ *インを使用します*。 テキストパターンが見つからない場合、Outputサービスは、* Loan.xdpという名前のデフォルトのフォームデザインを使用します。 *(「検索ル [ールの作成](/help/forms/developing/creating-document-output-streams.md#creating-search-rules)」を参照)。
+次のJavaコードの例を使用すると、Outputサービスで検索する2つのテキストパターンを作成できます。 最初のテキストパターンは「住宅ローン」です。 見つかった場合、Outputサービスは *Mortgage.xdpという名前のフォームデザインを使用します*。 2つ目のテキストパターンは自動車です。 見つかった場合、Outputサービスは *AutomobileLoan.xdpという名前のフォームデザインを使用します*。 どちらのテキストパターンも見つからない場合、Outputサービスは、* Loan.xdpという名前のデフォルトのフォームデザインを使用します。 *(「検索ル [ールの作成](/help/forms/developing/creating-document-output-streams.md#creating-search-rules)」を参照)。
 
 ```as3
  /*
@@ -1439,7 +1439,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1503,9 +1503,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの変換 {#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの変換 {#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例を使用すると、 *Loan.pdfという名前のインタラクティブPDFドキュメントを* NonInteractiveLoan.pdfという名前の非インタラクティブPDFドキュメントに変 *換できます*。 (PDFドキュメ [ントの統合を参照](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents))。
+次のJavaコードの例は、 *Loan.pdfという名前のインタラクティブPDFドキュメントを* 、NonInteractiveLoan.pdfという名前の非インタラクティブPDFドキュメントに変 *換します*。 (PDFドキュメント [の統合](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)を参照)。
 
 ```as3
  /*
@@ -1571,7 +1571,7 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
