@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,8 +28,8 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. OSGiで実行 `https://[server]:[port]/system/console/configMgr` 中のAEM Formsへの移動または
-   `https://[server]:[port]/lc/system/console/configMgr` （JEE上で実行されているAEM forms上）。
+1. OSGiで実行さ `https://'[server]:[port]'/system/console/configMgr` れているAEM Formsに移動または
+   `https://'[server]:[port]'/lc/system/console/configMgr` JEE上で実行されているAEM Formsの場合。
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
 1. AEM Forms を OSGi または JEE のどちらで実行しているかにより、**Authentication Requirements** フィールドで以下を追加します。
@@ -55,8 +55,8 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 1. 管理者として AEM Web コンソールにログインします。
 
-   * URL for AEM Forms on OSGi is `https://[server]:[port]/system/console/configMgr`
-   * JEE上のAEM FormsのURLは `https://[server]:[port]/lc/system/console/configMgr`
+   * URL for AEM Forms on OSGi is `https://'[server]:[port]'/system/console/configMgr`
+   * JEE上のAEM FormsのURLは `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. **[!UICONTROL Mobile Forms の設定]**&#x200B;を編集用に開きます。
 1. 「**[!UICONTROL 保護モード]**」オプションの選択を解除して「**[!UICONTROL 保存]**」をクリックします。
@@ -69,7 +69,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
    * **Server URL**：AEM Forms サーバーの URL です。
 
    * **HTTP port number**：AEM サーバーポート。デフォルト値は 4502 です。
-   * **** HTML Preview Context:XFAフォームのレンダリング用のプロファイルのパス。 次のデフォルトのプロファイルを使用して、Designerでフォームをプレビューします。 ただし、カスタムプロファイルへのパスを指定することもできます。
+   * **HTMLプレビューコンテキスト：** XFAフォームをレンダリングするプロファイルのパスです。 次のデフォルトのプロファイルを使用して、Designerでフォームのプレビューを行います。 ただし、カスタムプロファイルへのパスを指定することもできます。
 
       * `/content/xfaforms/profiles/default.html` (OSGi 上の AEM Forms)
 
@@ -97,7 +97,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
    >[!CAUTION]
    >
-   >実際のエンドユーザーエクスペリエンスをテストするには、外部ブラウザー（Google Chrome、Microsoft Edge、Mozilla Firefoxなど）でもフォームをプレビューします。 各ブラウザーは、HTMLのレンダリングに別々のエンジンを使用するので、Designerと外部ブラウザーでのフォームのプレビュー方法に多少の違いが生じる場合があります。
+   >実際のエンドユーザーエクスペリエンスをテストするには、外部ブラウザー（Google Chrome、Microsoft Edge、Mozilla Firefoxなど）でフォームをプレビューします。 各ブラウザーは、HTMLのレンダリングに別々のプレビューを使用するので、Designerと外部ブラウザーでのフォームエンジンの違いが生じる場合があります。
 
 ## サンプルデータを使用してフォームをプレビューするには {#to-preview-a-form-using-sample-data}
 
