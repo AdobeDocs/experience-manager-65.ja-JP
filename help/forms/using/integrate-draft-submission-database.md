@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -78,7 +78,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    データテーブルに別の名前を設定するには、以下の手順を実行してください。
 
    * Web コンソール設定で、「Forms Portal Data Service Sample Implementation」を見つけてクリックします。データソースおよびデータテーブル名の値は変更できます。
-   **注意**:テーブル名を変更する場合は、フォームポータル設定で名前を指定します。
+   **注意**:テーブル名を変更する場合は、フォームポータル設定で指定します。
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
 
@@ -302,12 +302,12 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、mysql-connector-java-5.1.39-bin.jar ファイルをインストールします。
 
-1. com.mysql.jdbc `https://[server]:[port]/system/console/depfinder` パッケージに移動し、検索します。
+1. com.mysql.jdbc `https://'[server]:[port]'/system/console/depfinder` パッケージに移動し、検索します。
 1. 「次による書き出し」列で、パッケージがバンドルで書き出されているかどうかを確認します。
 
    パッケージがバンドルで書き出されていない場合は、先に進みます。
 
-1. に移動し、「イン `https://[server]:[port]/system/console/bundles` ストール/更 **[!UICONTROL 新」をクリックします]**。
+1. に移動し、「イン `https://'[server]:[port]'/system/console/bundles` ストール/更 **[!UICONTROL 新」をクリックしま]**&#x200B;す。
 1. Click **[!UICONTROL Choose File]** and browse to select the mysql-connector-java-5.1.39-bin.jar file. Also, select **[!UICONTROL Start Bundle]** and **[!UICONTROL Refresh Packages]** checkboxes.
 1. Click **[!UICONTROL Install or Update]**. 完了したら、サーバーを再起動します。
 1. (*Windows only*) Turn off the system firewall for your operating system.
@@ -325,7 +325,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 次の手順を実行して[クライアントライブラリ](/help/sites-developing/clientlibs.md)を作成し、次のスクリプトを使用します。
 
 1. CRXDE にログインし、/etc/clientlibs/ に移動します。
-1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。For example, `validation`.
+1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。例えば、次のように入力します。`validation`
 
    「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -340,7 +340,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。Create a folder named `util`. 「**[!UICONTROL すべて保存]**」をクリックします。`util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。Create a file named `util.js`. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。ファイル名のコード検証長。
+1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。ファイル名の検証長のコード。
 
    ```
    /*
@@ -415,5 +415,5 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    >
    >guideRuntimeおよびguideRuntimeWithXfaクライアントライブラリの代わりにカスタムクライアントライブラリを使用する場合は、カテゴリ名を使用して、この手順で作成したクライアントライブラリを実行時に読み込むカスタムライブラリに埋め込みます。
 
-1. 「**[!UICONTROL すべて保存」をクリックします。]** 現在は、ファイル名が150文字（拡張子を含む）を超える場合に、メッセージが表示されます。
+1. 「**[!UICONTROL すべて保存」をクリックします。]** 現在は、ファイル名が150文字（拡張子を含む）を超える場合、メッセージが表示されます。
 
