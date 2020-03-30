@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -46,7 +46,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 次の手順を使用して公開インスタンスの文字キャッシュをリセットし、レターのプレビューを再試行します。
 
-1. に移動し、管 **`https://[server]:[port]/[contextPath]/system/console/configMgr`** 理者としてログインします。
+1. に移動し、管 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 理者としてログインします。
 1. Select **Correspondence Management Configurations**.
 1. 「**Correspondence Management の設定**」で、「**レターのキャッシュを有効にする**」を無効にして「**保存**」をクリックします。
 1. Enable **Enable Letter Cache** and then click **Save**.
