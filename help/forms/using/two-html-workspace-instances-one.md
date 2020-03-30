@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,12 +18,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Forms のデフォルトのインストールと設定では、1 つの AEM Forms ワークスペースのみがサーバー上で使用できます。ただし、AEM Forms ワークスペースの 2 つの異なるインスタンスを 1 つの AEM Forms サーバーにホストしたい場合があります。これら 2 つのインスタンスは異なる URL によってアクセス可能です。
 
-AEM Forms 管理者はワークスペースをカスタマイズして、2 つの異なる URL を作成し、 2 つのワークスペースを同じサーバー上で使用できるようにします。In this customization article, we assume the two workspaces are accessible at `https://[server]:[port]/lc/ws` and `https://[server]:[port]:/lc/ws2`.
+AEM Forms 管理者はワークスペースをカスタマイズして、2 つの異なる URL を作成し、 2 つのワークスペースを同じサーバー上で使用できるようにします。In this customization article, we assume the two workspaces are accessible at `https://'[server]:[port]'/lc/ws` and `https://'[server]:[port]':/lc/ws2`.
 
 以下の手順に従って AEM Forms ワークスペースを設定します。
 
 1. AEM Forms ワークスペースの dev パッケージをサーバーにインストールします。作成方法については、[dev パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を参照してください。
-1. Login to CRXDE Lite as an administrator, by accessing `https://[server]:[port]/lc/crx/de/index.jsp`.
+1. Login to CRXDE Lite as an administrator, by accessing `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. /content の node ws をコピーし、それを /content にペーストします。node の名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。このノードのプロパティで、`sling:resourceType` の値を ws2 に変更します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
 1. /libs にあるフォルダー ws を /apps にペーストします。このフォルダーの名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。
@@ -79,9 +79,9 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
    }
    ```
 
-1. atと `userinfo.js` で、string `/apps/ws2/js/runtime/models` を `/apps/ws2/js/runtime/views`に変更し `/lc/content/ws` ます `lc/content/ws2`。
+1. atおよ `userinfo.js` びで、string `/apps/ws2/js/runtime/models` を `/apps/ws2/js/runtime/views`に変更し `/lc/content/ws` ます `lc/content/ws2`。
 
-1. で、関 `/apps/ws2/js/runtime/services/service.js`数内のパスをポイン `getLocalizationData` トするように変更しま `/lc/apps/ws2/Locale.html`す。
+1. で、関 `/apps/ws2/js/runtime/services/service.js`数内のパスをに変 `getLocalizationData` 更します `/lc/apps/ws2/Locale.html`。
 
 1. To refer to `pdf.html` of the new Workspace, change the path of `pdf.html` in `/apps/ws2/js/runtime/views/forms/pdftaskform.js`.
 
