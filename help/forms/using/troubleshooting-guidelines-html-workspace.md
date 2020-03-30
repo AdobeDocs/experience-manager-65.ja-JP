@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,12 +25,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 While installling the package, if you encounter an error `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`, perform the following steps:
 
-1. CRX DE Lite にログインします。The default url is `https://[localhost]:[port]/lc/crx/de/index.jsp`
+1. CRX DE Lite にログインします。The default url is `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. 次のノードを削除します。
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. Package Manager に移動します。The default URL is `https://[localhost]:[port]/lc/crx/packmgr/index.jsp.`
+1. Package Manager に移動します。The default URL is `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
 1. Search and install the `adobe-lc-workspace-pkg-[version].zip` package.
 1. アプリケーションサーバーを再起動します。
 
@@ -153,9 +153,9 @@ AEM Forms Workspace では次の操作が可能です。
 
 スクリプトおよびスタイルは異なるブラウザーにデバッグすることができます。
 
-* **IEでのデバッグ**:IEでAEM Forms Workspaceをデバッグするには、次を参照してください。https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx [](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
+* **IEでのデバッグ**:IEでAEM Forms Workspaceをデバッグするには、次を参照してください。 [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx)。
 
-* **Chromeでのデバッグ**:Chromeでデバッガーを開くには、次のショートカットを使用します。Ctrl + Shift + I。詳しくは、次を参照してください。https://developer.chrome.com/extensions/tut_debugging.html [](https://developer.chrome.com/extensions/tut_debugging.html).
+* **Chromeでのデバッグ**:Chromeでデバッガーを開くには、次のショートカットを使用します。Ctrl + Shift + I。詳しくは、次を参照してください。 [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html)。
 
 * **Firefox でのデバッグ**：複数のアドオンを Firefox でスクリプトおよびスタイルのデバッグに使用することができます。For example, Firebug is one such debugging utility ([https://getfirebug.com](https://getfirebug.com)).
 
