@@ -3,7 +3,7 @@ title: Assets でサポートされるファイル形式
 description: AEM Assetsおよびダイナミックメディアでサポートされるファイル形式のリストと、各形式でサポートされる機能です。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 84c6cc47d84656be587cc6a268b8ddc2e1e39635
+source-git-commit: 593c1e1954a1c8e0355ede9889caed05ff72f3f9
 
 ---
 
@@ -20,11 +20,11 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 |:---:|---|
 | ✓ | 対応 |
 | * | アドオン機能により対応 |
-| - | 適用なし |
+| − | 適用なし |
 
 ## AEM Assetsでサポートされるラスター画像形式 {#supported-raster-image-formats}
 
-| 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
+| ファイル形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
@@ -35,27 +35,27 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD ‡ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-**§** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+‡ PSDファイルから、結合された画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 ## ダイナミックメディアでサポートされているラスターイメージ形式(#supported-raster-image-formats-dynamic-media)
 
-| 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
+| ファイル形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
-| PSD **¹** | ✓ |  |  |  |  |
+| PSD **‡** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-**§** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**‡ PSDフ** ァイルから、結合された画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
@@ -71,7 +71,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 次の表に、ダイナミックメディアでサポートされていないラスターイメージ *形式の* 、サブタイプを示します。 この表では、このようなファイルを検出するために使用できる推奨方法についても説明します。
 
-| 形式 | サポートされていない機能 | 推奨検出方法 |
+| ファイル形式 | サポートされていない機能 | 推奨検出方法 |
 |---|---|---|
 | JPEG | 最初の3バイトが正しくないファイル。 | JPEFファイルを識別するには、最初の3バイトをにする必要がありま `ff d8 ff`す。 その他のものは、JPEGとして分類されません。<br>・この問題を解決するソフトウェアツールはありません。<br>・ファイルの最初の3バイトを読み取る小さなC++/javaプログラムは、この種のファイルを検出できる必要があります。<br>・このようなファイルのソースを追跡し、ファイルを生成するツールを確認した方がよい場合があります。 |
 | PNG | 100 MBを超えるIDATチャンクサイズを持つファイル。 | この問題は、C++の [libpng](http://www.libpng.org/pub/png/libpng.html) (libpng)を使用して検出できます。 |
@@ -109,7 +109,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 ドキュメント管理機能でサポートされるアセット形式は次のとおりです。
 
-| 形式 | ストレージ | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | [インサイト](touch-ui-asset-insights.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
+| ファイル形式 | ストレージ | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | [インサイト](touch-ui-asset-insights.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
@@ -130,9 +130,9 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## ダイナミックドキュメントでサポートされるドキュメント形式(##supported-media-formats-dynamic-media)
+## ダイナミックドキュメント(#supported-ドキュメント形式 — ダイナミックメディア)でサポートされている形式
 
-| 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
+| ファイル形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ |  |  |  |  |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -150,16 +150,16 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 |  | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | FFMPEG トランスコーディング |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | - | * |
-| MIDI | ✓ | ✓ |  | - | * |
-| 3GP | ✓ | ✓ |  | - | * |
-| MP3 | ✓ | ✓ | ✓ | - | * |
-| MPG | ✓ | ✓ |  | - | * |
-| OGA | ✓ | ✓ |  | - | * |
-| OGG | ✓ | ✓ |  | - | * |
-| RA | ✓ | ✓ |  | - | * |
-| WAV | ✓ | ✓ |  | - | * |
-| WMA | ✓ | ✓ |  | - | * |
+| AAC | ✓ | ✓ |  | − | * |
+| MIDI | ✓ | ✓ |  | − | * |
+| 3GP | ✓ | ✓ |  | − | * |
+| MP3 | ✓ | ✓ | ✓ | − | * |
+| MPG | ✓ | ✓ |  | − | * |
+| OGA | ✓ | ✓ |  | − | * |
+| OGG | ✓ | ✓ |  | − | * |
+| RA | ✓ | ✓ |  | − | * |
+| WAV | ✓ | ✓ |  | − | * |
+| WMA | ✓ | ✓ |  | − | * |
 | DVI | ✓ | ✓ |  | * | * |
 | FLV | ✓ | ✓ |  | * | * |
 | M4V | ✓ | ✓ |  | * | * |
