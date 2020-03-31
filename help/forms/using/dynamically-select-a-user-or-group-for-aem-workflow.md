@@ -8,7 +8,7 @@ content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 997a35b331385738a8d4a3fcab89c950ed4b7d33
 
 ---
 
@@ -155,8 +155,8 @@ function getAdobeSignRecipients() {
        <dependencies>
            <dependency>
                <groupId>com.adobe.aemfd</groupId>
-               <artifactId>aemfd-client-sdk-test</artifactId>
-               <version>4.0.70</version>
+               <artifactId>aemfd-client-sdk</artifactId>
+               <version>6.0.138</version>
            </dependency>
            <dependency>
                <groupId>com.adobe.granite</groupId>
