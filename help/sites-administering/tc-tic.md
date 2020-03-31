@@ -10,7 +10,7 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 98dd2d3e7445ceda6d96f0dd11b39d8361f1f402
 
 ---
 
@@ -29,6 +29,7 @@ For an overview of the content translation features in AEM, see [Translating Con
 
 AEM を翻訳サービスプロバイダーに接続するためのクラウド設定を作成します。AEM には、Microsoft Translator にデフォルトで接続する機能が用意されています。その他の翻訳プロバイダーについては、[パッケージ共有](/help/sites-administering/package-manager.md#package-share)からコネクターパッケージをダウンロードしてください。 次の翻訳ベンダーは翻訳プロジェクト用の新しい API の実装を提供します。統合とパッケージ共有からダウンロードする方法については、次のリンクを参照してください。
 
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premiere Partner)
 * [Clay Tablet Technologies](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/clay-tablet-translation-connector-for-aem.html)（パッケージ共有にはないので、ベンダーに直接お問い合わせください）
 * [Lionbridge](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lionbridge-for-adobe-experience-manager.html)
 * [Cloudwords](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/cloudwords-for-adobe-translations-connector.html)
@@ -36,7 +37,6 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 * [Lingotek](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lingotek-for-adobe-experience-manager.html)
 * Microsoft（Microsoft Translator は AEM にプリインストールされています）
 * [Smartling](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/smartling-connector-for-adobe-experience-manager.html)
-* [Translations.com](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/globallink-connect-for-adobe-experience-manager.html)
 * [SDL WorldServer](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdlworldserver-connector.html)
 * [SDL TMS](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdl-tms-translation-connector-for-adobe-experience-manager.html)
 * [Systran](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/systran-for-adobe-experience-manager.html)
@@ -102,7 +102,7 @@ After you configure a translation integration framework, you can [associate it w
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。カテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える場合があります。</td>
+   <td>（機械翻訳のみ）カテゴリする内容を説明する翻訳。このカテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える可能性があります。</td>
   </tr>
   <tr>
    <td>タグを翻訳</td>
@@ -131,7 +131,7 @@ After you configure a translation integration framework, you can [associate it w
 | プロパティ | 説明 |
 |---|---|
 | 翻訳プロバイダー | 翻訳を実行する翻訳プロバイダーを選択します。クラウド設定の作成対象となるプロバイダーがリストに表示されます。 |
-| コンテンツのカテゴリ | 翻訳するコンテンツを説明するカテゴリ。カテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える場合があります。 |
+| コンテンツのカテゴリ | カテゴリする内容を説明する翻訳。このカテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える可能性があります。 |
 | グローバル共有ストアとして使用するロケールを選択 | (Optional) By selecting a locale for storing UGC, posts from all language copies will appear in one global conversation. By convention, choose the locale for the [base language](/help/communities/sites-console.md#translation) for the website. Choosing No Common Store will disable global translation. By default, global translation is disabled. |
 
 ### 「アセット」の設定プロパティ{#assets-configuration-properties}
@@ -159,7 +159,7 @@ Assets properties control how to configure assets. For more information about tr
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。カテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える場合があります。</td>
+   <td>（機械翻訳のみ）カテゴリする内容を説明する翻訳。このカテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える可能性があります。</td>
   </tr>
   <tr>
    <td>アセットを翻訳</td>
