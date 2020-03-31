@@ -1,14 +1,14 @@
 ---
 title: Assets でサポートされるファイル形式
-description: AEM Assets でサポートされているファイル形式と、各形式でサポートされている機能のリスト。
+description: AEM Assetsおよびダイナミックメディアでサポートされるファイル形式のリストと、各形式でサポートされる機能です。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d7d25c75c1023383e07c36252ece2e85425a95be
+source-git-commit: 84c6cc47d84656be587cc6a268b8ddc2e1e39635
 
 ---
 
 
-# Assets でサポートされるファイル形式 {#assets-supported-formats}
+# サポートされるアセット形式 {#assets-supported-formats}
 
 AEM Assets は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。
 
@@ -22,11 +22,9 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | * | アドオン機能により対応 |
 | - | 適用なし |
 
-## Supported Raster image formats {#supported-raster-image-formats}
+## AEM Assetsでサポートされるラスター画像形式 {#supported-raster-image-formats}
 
-アセット管理機能でサポートされるラスターイメージ形式は、次のとおりです。
-
-| 形式 | ストレージ | メタデータの管理 | メタデータの抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
+| 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
@@ -44,7 +42,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 **§** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-ダイナミックメディア機能でサポートされるラスターイメージ形式は、次のとおりです。
+## ダイナミックメディアでサポートされているラスターイメージ形式(#supported-raster-image-formats-dynamic-media)
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -69,6 +67,22 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
+## ダイナミックメディアでサポートされていないラスターイメージ形式(#unsupported-image-formats-dynamic-media)
+
+次の表に、ダイナミックメディアでサポートされていないラスターイメージ *形式の* 、サブタイプを示します。 この表では、このようなファイルを検出するために使用できる推奨方法についても説明します。
+
+| 形式 | サポートされていない機能 | 推奨検出方法 |
+|---|---|---|
+| JPEG | 最初の3バイトが正しくないファイル。 | JPEFファイルを識別するには、最初の3バイトをにする必要がありま `ff d8 ff`す。 その他のものは、JPEGとして分類されません。<br>・この問題を解決するソフトウェアツールはありません。<br>・ファイルの最初の3バイトを読み取る小さなC++/javaプログラムは、この種のファイルを検出できる必要があります。<br>・このようなファイルのソースを追跡し、ファイルを生成するツールを確認した方がよい場合があります。 |
+| PNG | 100 MBを超えるIDATチャンクサイズを持つファイル。 | この問題は、C++の [libpng](http://www.libpng.org/pub/png/libpng.html) (libpng)を使用して検出できます。 |
+| PSB |  | ファイルタイプがPSBの場合は、exiftoolを使用します。<br>ExifToolログの例：<br>1 ファイルタイプ: `PSB` |
+| PSD | CMYK、RGB、グレースケール、ビットマップ以外のカラースペースを持つファイルはサポートされていません。<br>DuoTone、Lab、インデックスカラースペースはサポートされていません。 | カラーモードがダブルトーンの場合は、ExifToolを使用します。<br>ExifToolログの例：<br>1 カラーモード： `Duotone` |
+|  | 急に終わるファイル。 | アドビはこの状態を検出できません。 また、このようなファイルはAdobe PhotoShopで開くことができません。 このようなファイルの作成に使用したツールを調べ、ソースでのトラブルシューティングを行うことをお勧めします。 |
+|  | ビット数が16を超えるファイル。 | ビット数が16より大きい場合は、ExifToolを使用します。<br>ExifToolログの例：<br>1 ビット深度： `32` |
+|  | Labカラースペースを持つファイル。 | カラーモードがLabの場合は、exiftoolを使用します。<br>ExifToolログの例：<br>1 カラーモード： `Lab` |
+| TIFF | 浮動小数点データを持つファイル。 つまり、32ビットの深さのTIFFファイルはサポートされていません。 | MIMEタイプがで、SampleFormatの値が `image/tiff` ExifToolの場合、ExifToolを使 `Float` 用します。 ExifToolログの例：<br>1 MIMEタイプ：サン `image/tiff`<br>プル形式： `Float #`<br>2. MIMEタイプ：サン `image/tiff`<br>プル形式： `Float; Float; Float; Float` |
+|  | Labカラースペースを持つファイル。 | カラーモードがLabの場合は、ExifToolを使用します。<br>ExifToolログの例：<br>1 カラーモード： `Lab` |
+
 ## サポートされている PDF Rasterizer ライブラリ {#supported-pdf-rasterizer-library}
 
 Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い Adobe Illustrator ファイルおよび PDF ファイルの高品質のサムネールとプレビューを生成します。次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
@@ -91,9 +105,9 @@ See [Imaging Transcoding Library](imaging-transcoding-library.md).
 
 Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。See [Camera Raw support](camera-raw.md).
 
-## サポートされるドキュメント形式 {#supported-document-formats}
+## サポートされるアセットドキュメント形式 {#supported-document-formats}
 
-アセット管理機能でサポートされるドキュメント形式は次のとおりです。
+ドキュメント管理機能でサポートされるアセット形式は次のとおりです。
 
 | 形式 | ストレージ | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | [インサイト](touch-ui-asset-insights.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -116,7 +130,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-ダイナミックメディア機能でサポートされるドキュメント形式は次のとおりです。
+## ダイナミックドキュメントでサポートされるドキュメント形式(##supported-media-formats-dynamic-media)
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -134,7 +148,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 ## サポートされるマルチメディア形式 {#supported-multimedia-formats}
 
-|  | ストレージ | メタデータの管理 | メタデータの抽出 | サムネールの生成 | FFMPEG トランスコーディング |
+|  | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | FFMPEG トランスコーディング |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | AAC | ✓ | ✓ |  | - | * |
 | MIDI | ✓ | ✓ |  | - | * |
@@ -155,7 +169,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | WMV | ✓ | ✓ |  | * | * |
 | SWF | ✓ | ✓ |  |  |  |
 
-## Supported input video formats for Dynamic Media Transcoding {#supported-input-video-formats-for-dynamic-media-transcoding}
+## Supported input video formats in Dynamic Media for transcoding {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | ビデオファイルの拡張子 | コンテナ | 推奨されるビデオコーデック | サポートされないビデオコーデック |
 |---|---|---|---|
@@ -190,7 +204,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
-他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。ダイナミックメディア配信を除く、ストレージ、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理など、通常のDAM機能は、すべてのファイルでサポートされます。
+他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。ダイナミックメディア配信を除く、ストレージ、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理などの通常のDAM機能は、すべてのファイルでサポートされます。
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -204,7 +218,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容からこのファイルを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
 
-CRXDE Liteでは、サポートされているMIMEタイプのリストを次の場所で使用できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
+サポートされるMIMEタイプのリストは、CRXDE Lite()で入手できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
 
 [アップロードジョブパラメーターサポートの MIME タイプベースの設定](config-dynamic.md)を参照してください。
 
