@@ -1,11 +1,11 @@
 ---
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: e3f12a9bbcb111e9a174e6bc3a0ec634df73c60f
 translation-type: tm+mt
 
 ---
-# AEM 6.5ドキュメント
+# Adobe Experience Manager 6.5 ドキュメント
 
-これは、Adobe Experience Manager 6.5ドキュメントのリポジトリです。 このドキュメントでは、インストール、管理、オーサリングの使用、およびAEMのカスタマイズ方法について説明します。
+これは、Adobe Experience Manager 6.5ドキュメントのリポジトリです。 このドキュメントには、インストール、管理、オーサリングの使用、およびAEMのカスタマイズ方法が含まれます。
 
 ドキュメントに対する貢献を歓迎します。次のリソースを参照してください。
 
