@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
+source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 
 ---
 
@@ -62,7 +62,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 >
 >ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
 
-ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべての設定は作成者環境で行われますが、各手順では、作成者と発行のどちらで実行するかが明確に示されます。
+ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべての設定は作成者の環境で行われ、各手順で作成者と発行のどちらで実行するかが明確に示されます。
 
 次にユーザー同期の有効化に必要な手順と、[トラブルシューティング](#troubleshooting)の節を示します。
 
@@ -86,7 +86,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * for example, [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
    * locate `Apache Sling Distribution Agent - Sync Agents Factory`
 
       * select the existing configuration to open for edit (pencil icon)
@@ -139,7 +139,7 @@ Verify `name`: **`socialpubsync`**
 * select the `+` button to add an ACL entry
 
    * **プリンシパル**：ユーザー同期用に作成されたユーザーを検索&#x200B;**
-   * **タイプ**: `Allow`
+   * **Type**: `Allow`
    * **権限**: `jcr:all`
    * **制限** :rep:glob: `*/activities/*`
    * 「**OK**」を選択します。
@@ -164,12 +164,12 @@ Once an authorized user, a member of the **`administrators`**user group, has bee
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * for example, [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
    * locate `Apache Sling Distribution Transport Credentials - User Credentials based DistributionTransportSecretProvider`
    * select the existing configuration to open for edit (pencil icon)
 Verify `property name`: **`socialpubsync-publishUser`**
 
-   * 手順 2 でパブリッシュ環境で作成した[承認済みユーザー](#createauthorizeduser)のユーザー名とパスワードを設定します
+   * 手順 2 でパブリッシュ環境で作成した[承認済みユーザー](#createauthuser)のユーザー名とパスワードを設定します
 
       * for example, `usersync-admin`
 
@@ -185,7 +185,7 @@ Verify `property name`: **`socialpubsync-publishUser`**
    * 管理者権限でサインインします。
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * for example, [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+      * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
    * locate `Apache Sling Distribution Agent - Queue Agents Factory`
 
       * select the existing configuration to open for edit (pencil icon)
@@ -208,7 +208,7 @@ Verify `Name`: `socialpubsync-reverse`
    * 管理者権限でサインインします。
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * for example, [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+      * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
    * locate **`Adobe Social Sync - Diff Observer Factory`**
 
       * 編集する既存の設定を選択します（鉛筆アイコン）
@@ -232,7 +232,7 @@ Verify `Name`: `socialpubsync-reverse`
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * for example, [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
    * locate `Apache Sling Distribution Trigger - Scheduled Triggers Factory`
 
       * 編集する既存の設定を選択します（鉛筆アイコン）
@@ -258,7 +258,7 @@ Verify `Name`: `socialpubsync-reverse`
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * for example, [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
    * locate `Apache Sling Distribution Agent - Sync Agents Factory`
 
       * select the existing configuration to open for edit (pencil icon)
@@ -347,7 +347,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
       * 例えば、Windowsシステムの場合：
          `use windows explorer and search for *sling.id.file*`
 
-1. 発行インスタンスの開始
+1. 開始発行インスタンス
 
    * スタートアップ時に新しい Sling ID が割り当てられる
 
@@ -362,7 +362,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 * 各 AEM パブリッシュインスタンスで
 * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-   * for example, [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
 * 見つける `Apache Sling Distribution Packaging - Vault Package Builder Factory`
 
@@ -451,7 +451,7 @@ On author, simply navigate from the main console through **Tools, Operations, Di
 
 When the diagnostic is run from the author environment, the pass/fail results will include an [INFO] section displaying the list of configured publish instances for confirmation.
 
-このリストには、診断が実行される各パブリッシュインスタンスの URL が記載されています。The url param `syncUser` is appended to the diagnostics URL with its value set to the *authorized sync user* created in [Step 2](/help/sites-administering/sync.md#2createauthorizeduser).
+このリストには、診断が実行される各パブリッシュインスタンスの URL が記載されています。The url param `syncUser` is appended to the diagnostics URL with its value set to the *authorized sync user* created in [Step 2](#createauthuser).
 
 **注意**：URL を起動するには、承認済み同期ユーザー&#x200B;**&#x200B;がそのパブリッシュインスタンスに既にログインしている必要があります。
 
@@ -491,7 +491,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Then verify that the section [2. 認証ユーザーの作成](/content/docs/en/aem/6-1/administer/security/security/sync.md#2. 認証されたユーザーの作成を参照)が正しく実行されていることを確認します。
+Then verify that the section [2. Create Authorized User](#createauthuser) was properly followed.
 
 この節では、すべてのパブリッシュインスタンスに存在する承認済みユーザーを作成し、それらをオーサー環境の「秘密鍵プロバイダー」OSGi 設定で特定する方法について説明します。By default, the user is `admin`.
 
@@ -499,7 +499,7 @@ Then verify that the section [2. 認証ユーザーの作成](/content/docs/en/a
 
 承認済みユーザーは、すべてのパブリッシュインスタンスに対する次の権限および制限を明示的に保持している必要があります。
 
-| **path** | **jcr:all** | **rep:glob** |
+| **パス** | **jcr:all** | **rep:glob** |
 |---|---|---|
 | /home | X | */activities/* |
 | /home/users | X | */activities/* |
@@ -507,7 +507,7 @@ Then verify that the section [2. 認証ユーザーの作成](/content/docs/en/a
 
 As a member of the `administrators` group, the authorized user should have the following privileges on all publish instances:
 
-| **path** | **jcr:all** | **jcr:read** | **rep:write** |
+| **パス** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |
@@ -545,7 +545,7 @@ To configure or enable user sync, go to step 1: [Apache Sling Distribution Agent
 
 パブリッシュインスタンスが使用不能になっても、今後オンラインに戻る場合は削除しないでください。変更は発行者に対してキューアップされ、オンラインに戻ると、変更が処理されます。
 
-パブリッシュインスタンスがオンラインに戻らない場合は、完全にオフラインの場合は、キューの構築によって作成者環境でディスク領域の使用が著しく増加するので、インスタンスを削除する必要があります。
+パブリッシュインスタンスがオンラインに戻らない場合は、完全にオフラインの場合は、キューの構築によって作成者環境のディスク領域の使用が著しく増加するので、インスタンスを削除する必要があります。
 
 パブリッシャーが停止した場合、オーサー環境のログに次のような例外が記録されます。
 
