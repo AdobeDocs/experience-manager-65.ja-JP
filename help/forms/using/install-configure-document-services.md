@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: ba4e4908c0564af6e7f0759c5119a5c02f274dbd
 
 ---
 
@@ -398,9 +398,9 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### RSA/BouncyCastle ライブラリ用のブート委任の設定  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
 
-1. AEM インスタンスを停止します。[AEMのインストールディレクトリ\crx-quickstart\conf\ folderに移動]します。sling.propertiesファイルを開いて編集します。
+1. AEM インスタンスを停止して [AEMのインストールディレクトリ\crx-quickstart\conf\ folderに移動]します。sling.propertiesファイルを開いて編集します。
 
-   If you use `[AEM installation directory]\crx-quickstart\bin\start.bat` to start an AEM instance, edit the sling.properties located at `[AEM_root]\crx-quickstart\`.
+   `[AEM installation directory]\crx-quickstart\bin\start.bat` を使用して AEM インスタンスを起動する場合は、`[AEM_root]\crx-quickstart\` フォルダー内の sling.properties ファイルを編集用として開きます。
 
 1. 以下のプロパティを sling.properties ファイルに追加します。 
 
@@ -414,6 +414,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1.  ファイルを保存して閉じます。
 
 ### フォントマネージャーサービスの設定  {#configuring-the-font-manager-service}
@@ -489,7 +490,7 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 
 1. System Readiness Tool（SRT）を実行して、Acrobat インストールを検証します。このツールは、PDF Generatorの変換を実行するように装置が適切に設定されているかどうかを確認し、指定されたパスでレポートを生成します。
 
-   1. コマンドプロンプトを開きます。Navigate to the `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt` folder. コマンドプロンプトから次のコマンドを実行します。
+   1. コマンドプロンプトを開きます。`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt` フォルダーに移動し、コマンドプロンプトから次のコマンドを実行します。
 
       `cscript SystemReadinessTool.vbs [Path_of_reports_folder] en`
 
