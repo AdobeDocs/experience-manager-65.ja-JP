@@ -8,7 +8,7 @@ discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
 mini-toc-levels: 1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 42c268396940144a217ff09f49fe3f6d6791a533
+source-git-commit: ac4c5ec920ed768002da1b4598590bfd9ca301f6
 
 ---
 
@@ -45,18 +45,18 @@ By default, `format`, `link`, `list`, `justify`, and `control` plugins and all t
    * いずれも以下のプロパティを持ちます。
 
       * **名前** `name`
-      * **タイプ** `String`
+      * **Type** `String`
       * **値** `./text`
 
 
 1. Depending on the interface you are configuring for, create a node `<rtePlugins-node>`, if it does not exist:
 
    * **名前** `rtePlugins`
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. 次の手順で、アクティブにする各プラグインのノードを作成します。
 
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
    * **名前** 必要なプラグインのプラグイン ID
 
 After activating a plug-in, follow these guidelines to configure the `features` property.
@@ -64,7 +64,7 @@ After activating a plug-in, follow these guidelines to configure the `features` 
 |  | すべての機能を有効化 | 一部の特定の機能を有効化 | すべての機能を無効化 |
 |---|---|---|---|
 | 名前 | features | features | features |
-| タイプ | 文字列 | String[] (multi-string; set Type to String and click Multi in CRXDE Lite) | 文字列 |
+| タイプ | String | String[] (multi-string; set Type to String and click Multi in CRXDE Lite) | String |
 | 値 | `*` （アスタリスク） | 1 つまたは複数の機能値を設定 | - |
 
 ## findreplace プラグインの理解 {#findreplace}
@@ -95,7 +95,7 @@ RTE では、次の 3 つのいずれかのモードで、コンテンツを貼�
 
 必須アイコンを表示するように RTE を設定するには、以下の手順に従います。
 
-1. 例えば、コンポーネントに移動します `/apps/<myProject>/components/text`。
+1. 例えば、コンポーネントに移動しま `/apps/<myProject>/components/text`す。
 1. Navigate to the node `rtePlugins/edit`. このノードが存在しない場合は、[プラグインのアクティベート](#activateplugin)を参照してください。
 1. `features` ノードの `edit` プロパティを作成し、1 つ以上の機能を追加します。すべての変更を保存します。
 
@@ -115,7 +115,7 @@ RTE では、次の 3 つのいずれかのモードで、コンテンツを貼�
 1. `edit` ノード内で、次の詳細情報を使用してプロパティを作成します。
 
    * **名前** `defaultPasteMode`
-   * **タイプ** `String`
+   * **Type** `String`
    * **値** ：必要な貼り付けモードの1 `browser`つ、 `plaintext`または `wordhtml`。
 
 ### コンテンツの貼り付け時に使用可能な書式の設定 {#pasteformats}
@@ -135,12 +135,12 @@ The paste-as-Microsoft-Word (`paste-wordhtml`) mode can be further configured so
 1. `edit` ノードの下に、HTML 貼り付けルールを格納するノードを作成します。
 
    * **名前** `htmlPasteRules`
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. `htmlPasteRules` の下に、使用可能な基本書式の詳細を格納するノードを作成します。
 
    * **名前** `allowBasics`
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. 受け入れられる個々の書式を制御するには、以下のうち 1 つまたは複数のプロパティを `allowBasics` ノードで作成します。
 
@@ -166,8 +166,8 @@ The paste-as-Microsoft-Word (`paste-wordhtml`) mode can be further configured so
   </tr>
   <tr>
    <td>allowBlockTags</td>
-   <td>文字列[]</td>
-   <td><p>使用可能なブロックタグのリストを定義します。</p> <p>次に、可能なブロックタグをいくつか示します。</p>
+   <td>String[]</td>
+   <td><p>使用可能なブロックタグのリストを定義します。</p> <p>次のようなブロックタグが考えられます。</p>
     <ul>
      <li>見出し（h1、h2、h3）</li>
      <li>段落（p）</li>
@@ -177,24 +177,24 @@ The paste-as-Microsoft-Word (`paste-wordhtml`) mode can be further configured so
   </tr>
   <tr>
    <td>fallbackBlockTag</td>
-   <td>文字列</td>
+   <td>String</td>
    <td><p>allowBlockTags に含まれていないブロックタグを含むブロックに使用されるブロックタグを定義します。</p> <p> ほとんどの場合は p で十分です。</p> </td>
   </tr>
   <tr>
    <td>table</td>
    <td>nt:unstructured</td>
-   <td><p>テーブルを貼り付けるときの動作を定義します。<br /> </p> <p>このノードには、テーブルの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設 <code>allow</code> 定した場 <code>false</code>合、貼り付けたテーブルコンテンツの <code>ignoreMode</code> 処理方法を定義するプロパティ(type<code> String</code>)を指定する必要があります。 有効な値は次のとお <code>ignoreMode</code> りです。</p>
+   <td><p>テーブルを貼り付けるときの動作を定義します。<br /> </p> <p>このノードには、テーブルの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設 <code>allow</code> 定した場合 <code>false</code>、貼り付けたテーブルコンテンツの処理方法 <code>ignoreMode</code> を定義するプロパティ(タイプ<code> String</code>)を指定する必要があります。 有効な値は次のと <code>ignoreMode</code> おりです。</p>
     <ul>
-     <li><code>remove</code>:テーブルのコンテンツを削除します。</li>
+     <li><code>remove</code>:表の内容を削除します。</li>
      <li><code>paragraph</code>:表のセルを段落に変換します。</li>
     </ul> </td>
   </tr>
   <tr>
    <td>list</td>
    <td>nt:unstructured</td>
-   <td><p>リストを貼り付けるときの動作を定義します。<br /> </p> <p>リストの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設 <code>allow</code> 定した場合、貼り <code>false</code>付けたリストコンテンツの処理方法を <code>ignoreMode</code> 定義するプロパ <code>String</code>ティ（タイプ）を指定する必要があります。 有効な値は次のとお <code>ignoreMode</code> りです。</p>
+   <td><p>リストを貼り付けるときの動作を定義します。<br /> </p> <p>リストの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設定 <code>allow</code> した場合、貼り付 <code>false</code>けるリストコンテンツの処理方法を定義する <code>ignoreMode</code> プロパティ( <code>String</code>タイプ)を指定する必要があります。 有効な値は次のと <code>ignoreMode</code> おりです。</p>
     <ul>
-     <li><code>remove</code>:リストの内容を削除します。</li>
+     <li><code>remove</code>:リストの内容を削除</li>
      <li><code>paragraph</code>:リスト項目を段落に変換します。</li>
     </ul> </td>
   </tr>
@@ -251,8 +251,8 @@ Example of a valid `htmlPasteRules` structure:
 1. Create the `features` property on the `styles` node:
 
    * **名前** `features`
-   * **タイプ** `String`
-   * **Value** (ア `*` スタリスク)
+   * **Type** `String`
+   * **値** (ア `*` スタリスク)
 
 1. すべての変更を保存します。
 
@@ -268,7 +268,7 @@ Example of a valid `htmlPasteRules` structure:
 1. Add the property `externalStyleSheets` to the parent node of `<rtePlugins-node>`:
 
    * **名前** `externalStyleSheets`
-   * **Type** ( `String[]` 複数文字列；crxdeで **Multi** （複数）をクリック
+   * **Type** ( `String[]` 複数文字列、「 **Multi** in CRXDE」をクリックします。
    * **値** 使用する各スタイルシートのパスとファイル名。リポジトリパスを使用します。
    >[!NOTE]
    >
@@ -282,18 +282,19 @@ Example of a valid `htmlPasteRules` structure:
 >
 >リッチテキストエディターでは、`CQrte` という ID を持つコンテナ DOM 要素を使用します。これを使用して、表示や編集用に様々なスタイルを提供できます。
 >
->```
+>
+```
 >#CQ td {
 > // defines the style for viewing
 > }
 >```
 >
->```
+>
+```
 >#CQrte td {
 > // defines the style for editing
 > }
 >```
->
 
 ### ポップアップリストで使用可能なスタイルの指定 {#stylesindropdown}
 
@@ -301,23 +302,23 @@ Example of a valid `htmlPasteRules` structure:
 1. `styles` ノードの下に、選択可能にするリストを格納する新しいノード（同じく `styles` という名前）を作成します。
 
    * **名前** `styles`
-   * **タイプ** `cq:WidgetCollection`
+   * **Type** `cq:WidgetCollection`
 
 1. `styles` ノードの下に、個別のスタイルを表す新しいノードを作成します。
 
    * **名前** 実際のスタイルに適した名前を指定可能
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. CSS クラスを参照する `cssName` プロパティをこのノードに追加します。
 
    * **名前** `cssName`
-   * **タイプ** `String`
-   * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代 `cssClass` わりに `.cssClass`)
+   * **Type** `String`
+   * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代わ `cssClass` りに `.cssClass`)
 
 1. `text` プロパティを同じノードに追加します。これは、選択ボックスに表示されるテキストを定義します。
 
    * **名前** `text`
-   * **タイプ** `String`
+   * **Type** `String`
    * **値** スタイルの説明。この説明は、「スタイル」ドロップダウン選択ボックスに表示されます。
 
 1. 変更内容を保存します。
@@ -341,7 +342,7 @@ AEM を使用して日本語コンテンツを作成する作成者は、改行�
 1. CSS クラスを参照する `cssName` プロパティをノードに追加します。このクラス名は日本語のワードラップ機能のための予約名です。
    * 名前: `cssName`
    * タイプ: `String`
-   * 値： `jpn-word-wrap` (先行な `.`し)
+   * 値： `jpn-word-wrap` (先行なし `.`)
 
 1. プロパティテキストを同じノードに追加します。値は、スタイルを選択するときに作成者に表示されるスタイルの名前です。
    * Name: `text`
@@ -375,7 +376,7 @@ Any text authored in RTE is placed within a block tag, the default being `<p>`. 
 
 段落書式プラグインを初めて有効にしたときは、使用可能なデフォルトの段落書式はありません。ポップアップリストは空です。段落書式を使用できるようにするには、次の操作をおこないます。
 
-* 「フォーマット」ドロップダウンセレクターリストを有効にします。
+* 「フォーマット」ドロップダウンセレクターリストを有効化
 * ドロップダウンから段落書式として選択できるブロックタグを指定します。
 
 後で（再）設定する場合、例えば書式を追加する場合は、関連する手順にのみ従います。
@@ -388,8 +389,8 @@ Any text authored in RTE is placed within a block tag, the default being `<p>`. 
 1. Create the `features` property on the `paraformat` node:
 
    * **名前** `features`
-   * **タイプ** `String`
-   * **Value** (ア `*` スタリスク)
+   * **Type** `String`
+   * **値** (ア `*` スタリスク)
 
 >[!NOTE]
 プラグインをこれ以上設定しない場合は、次のデフォルトの書式が有効になります。
@@ -411,25 +412,25 @@ RTE の段落書式を設定する際に、書式オプションとしての段�
 1. `paraformat` ノードの下に、書式のリストを格納する新しいノードを作成します。
 
    * **名前** `formats`
-   * **タイプ** `cq:WidgetCollection`
+   * **Type** `cq:WidgetCollection`
 
 1. `formats` ノードの下に、個別の書式の詳細を格納する新しいノードを作成します。
 
    * **名前** 実際の書式に適した名前（myparagraph、myheading1 など）を指定可能です。
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. このノードに、使用するブロックタグを定義するプロパティを追加します。
 
    * **名前** `tag`
-   * **タイプ** `String`
-   * **Value** ：書式のブロックタグ例：p、h1、h2など
+   * **Type** `String`
+   * **値** ：形式のブロックタグ例：p、h1、h2など
 
-      区切りの山括弧を入力する必要はありません。
+      区切り文字の山括弧を入力する必要はありません。
 
 1. 同じノードに、説明テキストをドロップダウンリストに表示するための別のプロパティを追加します。
 
    * **名前** `description`
-   * **タイプ** `String`
+   * **Type** `String`
    * **値** この書式の説明テキスト。例えば、段落、見出し 1、見出し 2 など。このテキストは「フォーマット」選択リストに表示されます。
 
 1. 変更内容を保存します。
@@ -454,7 +455,7 @@ If you define custom formats, the default formats (`<p>`, `<h1>`, `<h2>`, and `<
 1. Create the `features` property on the `misctools` node:
 
    * **名前** `features`
-   * **タイプ** `String[]`
+   * **Type** `String[]`
    * **値** `specialchars`
 
           (or `String / *` if applying all features for this plug-in)
@@ -462,23 +463,23 @@ If you define custom formats, the default formats (`<p>`, `<h1>`, `<h2>`, and `<
 1. `misctools` の下に、特殊文字の設定を格納するノードを作成します。
 
    * **名前** `specialCharsConfig`
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. `specialCharsConfig` の下に、文字のリストを格納する別のノードを作成します。
 
    * **名前** `chars`
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. `chars` の下に、個々の文字定義を格納する新しいノードを追加します。
 
    * **名前** 文字を反映する名前（half など）を指定可能
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. このノードに、以下のプロパティを追加します。
 
    * **名前** `entity`
-   * **タイプ** `String`
-   * **必要な** 文字のHTML表現の値。例えば、分数 `&189;` の場合は半分です。
+   * **Type** `String`
+   * **必要な** 文字のHTML表現の値。例えば、分数 `&189;` の半分を表します。
 
 1. 変更内容を保存します。
 
@@ -492,17 +493,17 @@ CRXDEでは、プロパティが保存されると、表示される文字が表
 1. `chars` の下に、文字範囲の定義を格納する新しいノードを追加します。
 
    * **名前** 文字範囲を反映する名前（pencils など）を指定可能
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. このノード（特殊文字の範囲に従って命名）の下に、次の 2 つのプロパティを追加します。
 
    * **名前** `rangeStart`
-      **タイプ** `Long`
-      **範囲内の** 最初の文字のUnicode [](https://unicode.org/) （10進数）表現の値
+      **Type** `Long`
+      **範囲内** の最初の文字のUnicode [](https://unicode.org/) （10進数）表現の値
 
    * **名前** `rangeEnd`
-      **タイプ** `Long`
-      **範囲内** の最後の文字のUnicode [](https://unicode.org/) （10進数）表現の値
+      **Type** `Long`
+      **範囲内** の最後の文字のUnicode [](https://unicode.org/) （10進数）表現を値として指定します。
 
 1. 変更内容を保存します。
 
@@ -512,7 +513,7 @@ CRXDEでは、プロパティが保存されると、表示される文字が表
 
    *図：CRXDEで、RTEで使用可能にする文字の範囲を定義します。*
 
-   ![RTEで使用できる特殊文字はポップアップウィンドウで作成者に表示されま](assets/rtepencil.png "す。RTEで使用できる特殊文字はポップアップウィンドウで作成者に表示されます")
+   ![RTEで使用できる特殊文字は、ポップアップウィンドウで作成者に表示さ](assets/rtepencil.png "れます。RTEで使用できる特殊文字は、ポップアップウィンドウで作成者に表示されます")
 
 ## テーブルスタイルの設定 {#tablestyles}
 
@@ -522,21 +523,21 @@ CRXDEでは、プロパティが保存されると、表示される文字が表
 テーブルとセルのスタイルはクラシック UI 用にのみ定義できます。
 
 >[!NOTE]
-RTE コンポーネント内または RTE コンポーネントからのテーブルのコピーおよび貼り付けはブラウザーに依存します。デフォルトでは一部のブラウザーしかサポートされていません。結果はテーブルの構造やブラウザーに応じて様々です。例えば、Mozilla FirefoxのRTEコンポーネントで表をコピーして貼り付けると、Classic UIとTouch UIで表のレイアウトが保持されません。
+RTE コンポーネント内または RTE コンポーネントからのテーブルのコピーおよび貼り付けはブラウザーに依存します。デフォルトでは一部のブラウザーしかサポートされていません。結果はテーブルの構造やブラウザーに応じて様々です。例えば、Mozilla FirefoxのClassic UIとTouch UIでRTEコンポーネントの表をコピーして貼り付けた場合、表のレイアウトは保持されません。
 
 1. Within your component navigate to the node `<rtePlugins-node>/table`. このノードが存在しない場合は作成します。詳しくは、[プラグインのアクティベート](#activateplugin)を参照してください。
 1. Create the `features` property on the `table` node:
 
    * **名前** `features`
-   * **タイプ** `String`
+   * **Type** `String`
    * **値** `*`
    >[!NOTE]
    テーブルの機能をすべて有効にはしない場合は、`features` プロパティを次のように作成します。
-   * **タイプ** `String[]`
+   * **Type** `String[]`
 
    * **値** 必要に応じて、以下のいずれかまたは両方：
-      * `table` を使用して、テーブルプロパティの編集を許可します。スタイルを含めます。
-      * `cellprops` を使用して、スタイルなどのセルのプロパティを編集できます。
+      * `table` を使用して、テーブルプロパティの編集を許可します。スタイルを含める。
+      * `cellprops` を使用して、スタイルを含むセルのプロパティを編集できます。
 
 
 1. 参照する CSS スタイルシートの場所を定義します。これは、[テキストのスタイル](#textstyles)を定義する場合と同じなので、[スタイルシートの場所の指定](#locationofstylesheet)を参照してください。他のスタイルを定義済みであれば、場所は定義されている可能性があります。
@@ -545,29 +546,29 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
    * テーブル全体のスタイルを定義するには（**テーブルのプロパティ**&#x200B;の下）：
 
       * **名前** `tableStyles`
-      * **タイプ** `cq:WidgetCollection`
+      * **Type** `cq:WidgetCollection`
    * 個々のセルのスタイルを定義するには（**セルのプロパティ**&#x200B;の下）：
 
       * **名前** `cellStyles`
-      * **タイプ** `cq:WidgetCollection`
+      * **Type** `cq:WidgetCollection`
 
 
 1. Create a new node (under the `tableStyles` or `cellStyles` node as appropriate) to represent an individual style:
 
    * **名前は** 、名前を指定できますが、スタイルを反映している必要があります。
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. このノードで、以下のプロパティを作成します。
 
    * 参照する CSS スタイルを定義するには
 
       * **名前** `cssName`
-      * **タイプ** `String`
-      * **CSS** クラスの名前(例えば、 `.`の代わりに前 `cssClass` 付き `.cssClass`)
+      * **Type** `String`
+      * **CSS** クラスの名前(前には `.`付けず、代わりに `cssClass` 付け `.cssClass`)
    * ドロップダウンセレクターに表示する説明テキストを定義するには
 
       * **名前** `text`
-      * **タイプ** `String`
+      * **Type** `String`
       * **値** 選択リストに表示するテキスト
 
 
@@ -579,14 +580,14 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 
 列ヘッダーの目的が他の列との関係性によって暗示される場合に、目に見えるテキストを列ヘッダーに含まないデータテーブルを作成することがあります。その場合は、ヘッダーセル内に非表示の内部テキストを指定し、様々な補助を必要とするユーザーがスクリーンリーダーやその他補助テクノロジーを利用して列の目的を理解できるようにする必要があります。
 
-このようなシナリオでアクセシビリティを向上させるために、RTE は非表示のヘッダーセルをサポートします。また、テーブルの非表示のヘッダーに関連する設定が用意されています。これらの設定を使用すると、編集モードとプレビューモードで非表示のヘッダーにCSSスタイルを適用できます。 作成者が編集モードで非表示のヘッダーを特定できるように、コードに次のパラメーターを追加してください。
+このようなシナリオでアクセシビリティを向上させるために、RTE は非表示のヘッダーセルをサポートします。また、テーブルの非表示のヘッダーに関連する設定が用意されています。これらの設定を使用すると、編集モードとヘッダーモードで、非表示のヘッダーにCSSスタイルをプレビューできます。 作成者が編集モードで非表示のヘッダーを特定できるように、コードに次のパラメーターを追加してください。
 
-* `hiddenHeaderEditingCSS`:RTEを編集する際にhidden-headerセルに適用されるCSSクラスの名前を指定します。
-* `hiddenHeaderEditingStyle`:RTEの編集時に非表示ヘッダーセルに適用するスタイル文字列を指定します。
+* `hiddenHeaderEditingCSS`:RTEを編集する際に、hidden-headerセルに適用されるCSSクラスの名前を指定します。
+* `hiddenHeaderEditingStyle`:RTEの編集時に非表示ヘッダーのセルに適用するスタイル文字列を指定します。
 
 コードに CSS とスタイル文字列の両方を指定すると、CSS がスタイル文字列に優先され、スタイル文字列によって加えられたすべての設定の変更が上書きされることがあります。
 
-プレビューモードで非表示のヘッダーにCSSを適用する際に役立つように、コードに次のパラメーターを含めることができます。
+作成者がプレビューモードで非表示のヘッダーにCSSを適用する際に役立つように、コードに次のパラメーターを含めることができます。
 
 * `hiddenHeaderClassName`：プレビューモードで非表示のヘッダーセルに適用される CSS クラスの名前を指定します。
 * `hiddenHeaderStyle`：プレビューモードで非表示のヘッダーセルに適用されているスタイル文字列を指定します。
@@ -632,7 +633,7 @@ RTE では、以前の編集を取り消す、またはやり直すことがで�
 1. `undo` ノードで、以下のプロパティを作成します。
 
    * **名前** `maxUndoSteps`
-   * **タイプ** `Long`
+   * **Type** `Long`
    * **値** 履歴に保存する取り消しステップ数。デフォルトは 50 です。元に戻す/ `0` やり直しを完全に無効にする場合に使用します。
 
 1. 変更内容を保存します。
@@ -647,7 +648,7 @@ RTE では、以前の編集を取り消す、またはやり直すことがで�
 1. `keys` ノードで、以下のプロパティを作成します。
 
    * **名前** `tabSize`
-   * **タイプ** `String`
+   * **Type** `String`
    * **値** タブに使用するスペース文字の数.
 
 1. 変更内容を保存します。
@@ -663,20 +664,20 @@ RTE では、以前の編集を取り消す、またはやり直すことがで�
 1. On the `lists` node create the `identSize` parameter:
 
    * **名前**: `identSize`
-   * **タイプ**: `Long`
+   * **Type**: `Long`
    * **値**：インデントの余白に必要なピクセル数.
 
 ## 編集可能な領域の高さの設定 {#editablespace}
 
 >[!NOTE]
-これは、ダイアログでRTEを使用する場合にのみ適用されます（クラシックUIでのインプレイス編集では適用されません）。
+これは、ダイアログでRTEを使用する場合にのみ適用されます（クラシックUIのインプレイス編集では適用されません）。
 
 コンポーネントダイアログ内に表示される編集可能な領域の高さを定義できます。
 
 1. On the `../items/text` node in the dialog definition for the component, create a new property:
 
    * **名前** `height`
-   * **タイプ** `Long`
+   * **Type** `Long`
    * **値** 編集キャンバスの高さ（ピクセル単位）.
    >[!NOTE]
    これによってダイアログウィンドウの高さが変わることはありません。
@@ -696,11 +697,11 @@ AEM にリンクを追加する場合、次の定義が可能です。
 1. Create a new node at the same level as `<rtePlugins-node>`, that is, create the node under the parent node of `<rtePlugins-node>`:
 
    * **名前** `htmlRules`
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
    >[!NOTE]
    The `../items/text` node has the property:
    * **名前** `xtype`
-   * **タイプ** `String`
+   * **Type** `String`
    * **値** `richtext`
    The location of the `../items/text` node can vary, depending on the structure of your dialog; two examples include:
    * `/apps/myProject>/components/text/dialog/items/text`
@@ -710,43 +711,43 @@ AEM にリンクを追加する場合、次の定義が可能です。
 1. `htmlRules` の下に、新しいノードを作成します。
 
    * **名前** `links`
-   * **タイプ** `nt:unstructured`
+   * **Type** `nt:unstructured`
 
 1. `links` ノードの下で、必要に応じてプロパティを定義します。
 
    * 内部リンクの CSS スタイル：
 
       * **名前** `cssInternal`
-      * **タイプ** `String`
-      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代 `cssClass` わりに `.cssClass`)
+      * **Type** `String`
+      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代わ `cssClass` りに `.cssClass`)
    * 外部リンクの CSS スタイル：
 
       * **名前** `cssExternal`
-      * **タイプ** `String`
-      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代 `cssClass` わりに `.cssClass`)
+      * **Type** `String`
+      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代わ `cssClass` りに `.cssClass`)
    * Array of valid **protocols** (including https://, https:// file://, mailto:, amongst others)
 
       * **名前** `protocols`
-      * **タイプ** `String[]`
+      * **Type** `String[]`
       * **値** 1 つまたは複数のプロトコル
    * **defaultProtocol**（型が **String** のプロパティ）：ユーザーが明示的に指定しなかった場合に使用されるプロトコル。
 
       * **名前** `defaultProtocol`
-      * **タイプ** `String`
+      * **Type** `String`
       * **値** 1 つまたは複数のデフォルトプロトコル
    * リンクのターゲット属性の処理方法の定義。新しいノードを作成します。
 
       * **名前** `targetConfig`
-      * **タイプ** `nt:unstructured`
+      * **Type** `nt:unstructured`
       `targetConfig` ノード上：必要なプロパティを定義します。
 
       * ターゲットモードを指定：
 
          * **名前** `mode`
-         * **タイプ** `String`)
+         * **Type** `String`)
          * **値**：
 
-            * `auto`:自動ターゲットが選択されることを意味する
+            * `auto`:自動ターゲット
 
                (外部リンクまたは `targetExternal` 内部リンクのプロパテ `targetInternal` ィで指定)。
 
@@ -755,12 +756,12 @@ AEM にリンクを追加する場合、次の定義が可能です。
       * 内部リンクのターゲット：
 
          * **名前** `targetInternal`
-         * **タイプ** `String`
-         * **内部リンク** （「モード」の場合にのみ使用）のターゲットを設定しま `auto`す。
+         * **Type** `String`
+         * **内部リンクの** ターゲットを値に設定(「モード」の場合のみ使用 `auto`)
       * 外部リンクのターゲット：
 
          * **名前** `targetExternal`
-         * **タイプ** `String`
+         * **Type** `String`
          * **値** 外部リンクのターゲット（モードが `auto` の場合にのみ使用）
 
 
