@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 78133b41e1c99f8f86f4c0d51961287735423fe2
 
 ---
 
@@ -39,7 +39,7 @@ CRXDE Lite は AEM に搭載されており、これを使用してブラウザ�
 CRXDE Lite の使用を開始するには、次の手順に従ってください。
 
 1. AEM をインストールします。
-1. ブラウザーに、と入力しま `https://<host>:<port>/crx/de`す。デフォルトではです `https://localhost:4502/crx/de`。
+1. ブラウザで、と入力しま `https://<host>:<port>/crx/de`す。デフォルトでは、です `https://localhost:4502/crx/de`。
 1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。By default it is `admin` and `admin`.
 
 1. 「**OK**」をクリックします。
@@ -98,10 +98,10 @@ CRXDE Lite には以下の機能があります。
   </tr>
   <tr>
    <td>すべて保存</td>
-   <td><p><strong>すべて保存</strong>：<br /> </p> <p>おこなわれたすべての変更を保存します。「保存」をクリックするまで変更は一時的なものと見なされ、コンソールを終了すると失われます。</p> <p><strong>元に戻す</strong>：</p> <p>前回の保存アクションの後に、選択したノードに対しておこなった変更をすべて破棄し、選択したノード用にリポジトリの現在の状態を再読み込みします。</p> <p><strong>すべて元に戻す</strong>：</p> <p>前回の保存アクションの後に、リポジトリ全体でおこなった変更をすべて破棄し、リポジトリの現在の状態を再読み込みします。</p> </td>
+   <td><p><strong>すべて保存</strong>：<br /> </p> <p>おこなわれたすべての変更を保存します。「保存」をクリックするまで変更は一時的なものと見なされ、コンソールを終了すると失われます。</p> <p><strong>元に戻す</strong>:</p> <p>前回の保存アクションの後に、選択したノードに対しておこなった変更をすべて破棄し、選択したノード用にリポジトリの現在の状態を再読み込みします。</p> <p><strong>すべて元に戻す</strong>：</p> <p>前回の保存アクションの後に、リポジトリ全体でおこなった変更をすべて破棄し、リポジトリの現在の状態を再読み込みします。</p> </td>
   </tr>
   <tr>
-   <td>作成<br /> </td>
+   <td>作成 ...<br /> </td>
    <td><p>選択したノードの下に次の項目を作成するためのドロップダウンメニューです。<br /> </p> <p>- <strong>ノード</strong>：任意のノードタイプを持つノード<br /> </p> <p>- <strong>File</strong>: nt:file node and its nt:resource subnode</p> <p>- <strong>フォルダー</strong>：nt:folder ノード</p> <p>- <strong>テンプレート</strong>：AEM テンプレート</p> <p>- <strong>コンポーネント</strong>：AEM コンポーネント</p> <p>- <strong>ダイアログ</strong>：AEM ダイアログ</p> </td>
   </tr>
   <tr>
@@ -117,11 +117,11 @@ CRXDE Lite には以下の機能があります。
    <td>Pastes the copied node under the selected node.<br /> </td>
   </tr>
   <tr>
-   <td>移動<br /> </td>
+   <td>移動 ...<br /> </td>
    <td>選択したノードを、ダイアログを使用して設定されたノードに移動します。</td>
   </tr>
   <tr>
-   <td>名前を変更<br /> </td>
+   <td>名前を変更 ...<br /> </td>
    <td>選択したノードの名前を変更します。<br /> </td>
   </tr>
   <tr>
@@ -150,8 +150,8 @@ CRXDE Lite では、クリック 3 回で作業用プロジェクトを作成で
 CRXDE Lite でプロジェクトを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. **ナビゲーションペインでノードを右クリックし、「作成…」**&#x200B;を選択して&#x200B;**、「プロジ**ェクトを作成…」を選択します。.
-注意：ツリーナビゲーションでノードを右クリックすると、新しいプロジェクトノードが設計上、およびの下に作成され `/apps,` ま `/content``/etc/packages`す。
+1. ナビゲーションペインでノードを右クリックし、「 **作成…」を選択し**&#x200B;て、「プロジ **ェクトを作成…」を選択します。**.
+注意：との下に新しいプロジェクトノードが設計上作成されているのと同じように、ツリーナビゲーションで任意のノードを右クリック `/apps,` でき `/content` ま `/etc/packages`す。
 
 1. 以下を定義します。
 
@@ -171,12 +171,12 @@ CRXDE Lite でプロジェクトを作成するには：
 以下のノードが作成されます。
 
 * `/apps/<project-name>`:アプリケーションコンテナ。
-* `/apps/<project-name>/components`:ページのレンダリングに使用するサンプルhtml.jspファイルを含むコンポーネントコンテナ。
+* `/apps/<project-name>/components`:コンポーネントコンテナ。ページのレンダリングに使用するサンプルhtml.jspファイルを含みます。
 
-* `/apps/<project-name>/src`:バンドルコンテナ。サンプルプロジェクトバンドルが含まれます。
+* `/apps/<project-name>/src`:バンドルコンテナ。サンプルのプロジェクトバンドルが含まれます。
 
 * `/apps/<project-name>/install`:コンパイル済みのバンドルコンテナ。コンパイル済みのサンプルプロジェクトバンドルが含まれます。
-* `/content/<project-name>`:コンテンツコンテナです。
+* `/content/<project-name>`:コンテンツコンテナ。
 * /etc/packages/&lt;java-suffix>/&lt;project-name>.zip：プロジェクトのアプリケーションとコンテンツをすべてラップするパッケージです。このパッケージを使用して、追加のデプロイメント用（例：他の環境へのデプロイメント）またはパッケージ共有を使用した共有用のプロジェクトを再ビルドできます。
 
 **myproject** という名前のプロジェクトと **mycompany** という Java パッケージのサフィックスを含む構造は、CRXDE Lite では次のように表示されます。
@@ -190,7 +190,7 @@ CRXDE Lite でプロジェクトを作成するには：
 CRXDE Lite でフォルダーを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. **ナビゲーションペインで、新しいフォルダを作成するフォルダを右クリックし、[作成…**]、[フォルダの&#x200B;****&#x200B;作成…]の順に選択します。.
+1. In the Navigation pane, right-click the folder under which you want to create the new folder, select **Create ...**, then **Create Folder ...**.
 
 1. フォルダーの&#x200B;**名前**&#x200B;を入力して、「**OK**」をクリックします。
 
@@ -251,7 +251,7 @@ CRXDE Lite でコンポーネントを作成するには：
 CRXDE Lite でダイアログを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. **ナビゲーションペインで、ダイアログを作成するコンポーネントを右クリックし、「** Create ...**」、「** Create Dialog ...」の順に選択します。.
+1. In the Navigation pane, right-click the component where you want to create the dialog, select **Create ...**, then **Create Dialog ...**.
 
 1. **ラベル**&#x200B;と&#x200B;**タイトル**&#x200B;を入力します。「**OK**」をクリックします。
 
@@ -309,7 +309,7 @@ CRXDE Lite でプロパティを作成するには：
 
 CRXDE Lite では、OSGi バンドルの作成、OSGi バンドルへの Java クラスの追加および OSGi バンドルのビルドを簡単におこなうことができます。その後で、バンドルは OSGi コンテナに自動的にインストールされ、起動されます。
 
-この節では、 `Test``HelloWorld`**Hello World!** がブラウザーに表示されます。
+この節では、 `Test``HelloWorld`**Hello World!** をブラウザーに表示します。
 
 ### バンドルの作成 {#creating-a-bundle}
 
@@ -320,7 +320,7 @@ CRXDE Lite で Test バンドルを作成するには：
    * `/apps/myapp/src`
    * `/apps/myapp/install`
 
-1. `/apps/myapp/src`バンドルを含むフォルダ `Test` ーを右クリックし、「作 **成…」**&#x200B;を選択して、「バンドルを&#x200B;****&#x200B;作成…」を選択します。.
+1. Right-click the folder `/apps/myapp/src` that will contain the `Test` bundle, select **Create ...**, then **Create Bundle ...**.
 
 1. バンドルのプロパティを次のように設定します。
 
@@ -354,7 +354,7 @@ CRXDE Lite で Test バンドルを作成するには：
 
    * `src/main/resources` です。バンドル内で使用されるリソースが格納されます。
 
-* ファ `Activator.java` イル。 これは、バンドルの開始イベントと停止イベントが通知されるオプションのリスナークラスです。
+* ファイ `Activator.java` ルです。 これは、バンドルの開始イベントと停止イベントが通知されるオプションのリスナークラスです。
 
 次の表は、.bnd ファイルのすべてのプロパティと、その値および説明を示しています。
 
@@ -362,7 +362,7 @@ CRXDE Lite で Test バンドルを作成するには：
  <tbody>
   <tr>
    <td><strong>プロパティ</strong></td>
-   <td><strong>値（バンドル作成時）<br /> </strong></td>
+   <td><strong>値 （バンドルの作成時）<br /> </strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
@@ -416,7 +416,7 @@ bnd 形式について詳しくは、OSGi バンドルを作成するために C
 Test バンドル内に `HelloWorld` Java クラスを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. `Activator.java`ナビゲーションペインで、ファイルを含むノード( `/apps/myapp/src/com.mycompany.test.TestBundle/src/main/java` )を右クリックし、「作成… **」を選択し、「フ******&#x200B;ァイルを作成…」を選択します。.
+1. In the Navigation pane, right-click the node containing the `Activator.java` file ( `/apps/myapp/src/com.mycompany.test.TestBundle/src/main/java`), select **Create ...**, then **Create File ...**.
 
 1. Name the file `HelloWorld.java`. 「**OK**」をクリックします。
 
