@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34f5cfc692241da4b9f5330e5abc324998fadb23
+source-git-commit: a83def358e026b516add577f968dcc709357e458
 
 ---
 
@@ -94,7 +94,7 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 
 * インボックス(CQ-4282168)を使用してワークフロー情報を表示中に、エラーメッセージが表示されます。
 
-### Assets {#assets-6540-enhancements}
+### アセット {#assets-6540-enhancements}
 
 * アセット収集ページでワークフローをトリガーするボタンが無効になっています(NPR-32471)。
 
@@ -131,8 +131,6 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 * タッチUI検索（Omnisearchを通じて行われる）の結果ページは、自動的に上にスクロールし、ユーザーのスクロール位置が失われます(NPR-31307)。
 
 * PDFアセットのアセットの詳細ページに、Dynamic Media Scene7の実行モードで実行されるExperience Managerの「コレクションへ」と「レンディションへ」のボタンを除き、アクションボタンが表示されません。(CQ-4286705)
-
-* 2 GBを超えるアセットをダイナミックメディア —Scene7(CQ-4286561)にアップロードできるようになりました。
 
 * Scene7のバッチアップロード処理では、アセットの処理に時間がかかりすぎます(CQ-4286445)。
 
@@ -350,7 +348,7 @@ To use UberJar in a Maven project, refer to the article, [How to use UberJar](/h
 </dependency>
 ```
 
-## Deprecated features {#removed-deprecated-features}
+## 非推奨（廃止予定）の機能 {#removed-deprecated-features}
 
 この節では、AEM 6.5.4.0で非推奨とマークされた機能に関するリストを説明します。今後のリリースで削除される予定の機能は、まず非推奨に設定され、別のオプションを使用するようになります。
 
