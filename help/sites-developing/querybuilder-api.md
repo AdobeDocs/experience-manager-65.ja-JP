@@ -12,7 +12,7 @@ discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: a491d4e9bd9ffc68c4ba7cac3149f48cf7576ee8
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 
 サーバー側 Query Builder（[`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)）はクエリの記述を受け入れ、XPath クエリを作成して実行します。オプションで結果セットのフィルタリング、必要に応じてファセットの抽出もおこないます。
 
-クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。Examples include a full-text predicate, which corresponds to the `jcr:contains()` function in XPath, and an image size predicate that looks for width and height properties in the DAM asset subtree.
+クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。例としては、XPathの関数に対応するフルテキスト述語が `jcr:contains()` あります。
 
 各述語タイプに、1 つのエバリュエーターコンポーネント（[`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)）があります。これらのコンポーネントは、XPath、フィルタリングおよびファセットの抽出に対してその特定の述語を処理する方法を理解しています。OSGi コンポーネントのランタイムによってプラグインされる、カスタムのエバリュエーターを作成するのは簡単です。
 
@@ -119,7 +119,7 @@ AEM 6.0 SP2 の時点では、数値を使用してカスタムの最大結果�
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.guessTotal=50&orderby=path`
 
-0オフセットを持つ結果10件と同じデフォルトの制限値を返しますが、表示される結果は最大50件までです。
+デフォルトの10件の結果と同じ数値が返され、0件のオフセットが返されますが、表示される結果は最大50件までです。
 
 ```xml
 "success": true,
@@ -338,13 +338,13 @@ p.properties=sling:resourceType jcr:primaryType
 p.nodedepth=n
 ```
 
-ここ `n` では、クエリーが返すレベルの数を指定します。 子ノードを返すには、そのノードをプロパティセレクターで指定する必要があります
+は、 `n` 返すレベルの数をクエリに指定します。 子ノードを返すには、プロパティセレクターで子ノードを指定する必要があります
 
 ```
 p.hits=full
 ```
 
-例:
+例：
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=full&p.nodedepth=5&property=jcr%3atitle&property.value=Triangle`
 
@@ -512,7 +512,7 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 1. Query Builder Debugger で Query Buidler クエリを指定します。
 1. 検索を実行します。
 1. 生成された XPath を取得します。
-1. XPathクエリをXPathとしてExplain queryに貼り付けて、クエリプランを取得します
+1. XPathクエリをXPathとしてExplainクエリに貼り付けて、クエリ計画を取得します
 
 >[!NOTE]
 >
