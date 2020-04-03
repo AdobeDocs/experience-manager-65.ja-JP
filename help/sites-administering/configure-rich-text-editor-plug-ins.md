@@ -8,7 +8,7 @@ discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
 mini-toc-levels: 1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ac4c5ec920ed768002da1b4598590bfd9ca301f6
+source-git-commit: 72cdeff04e18c13e4b31543bafcbd5ffa65a78a7
 
 ---
 
@@ -69,7 +69,9 @@ After activating a plug-in, follow these guidelines to configure the `features` 
 
 ## findreplace プラグインの理解 {#findreplace}
 
-The `findreplace` plug-in does not need any configuration. そのままの状態で期待どおりに動作します。
+The `findreplace` plug-in does not need any configuration. それは既製です。
+
+置換機能を使用する場合は、置換する置換文字列を検索文字列と同時に入力する必要があります。 ただし、置き換える前に「検索」をクリックして文字列を検索することはできます。 「検索」をクリックした後に置換文字列を入力すると、検索はテキストの先頭にリセットされます。
 
 検索と置換ダイアログは、「検索」をクリックすると透明になり、「置換」をクリックすると不透明になります。これにより、作成者は、置換されるテキストを確認できます。「すべてを置換」をクリックすると、ダイアログが閉じて、実行された置換の回数が表示されます。
 
