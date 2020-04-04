@@ -4,16 +4,18 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5fc75e3dcb0ca107605c456d0f41be861dabc0eb
+source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4の新機能 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager (AEM) 6.5では、四半期ごとのService Packを通じて、機能と継続的な改善を提供しています。 このアプローチは、イノベーションを導入しやすくなるため、お客様にとってメリットがあります。
+Adobe Experience Manager(6.5)を使用すると、四半期ごとのService Packリリースで新機能や継続的な機能強化を利用できます。 このアプローチを使えば、イノベーションを簡単に導入できます。
 
-AEM Service Pack 4(6.5.4.0)は2020年3月6日にリ **リースされます**。 この記事では、AEMの遍歴をより豊かにするために6.5 Service Packのオファーが持つ主な機能に焦点を当てています。
+Experience Manager Service Pack 4(6.5.4.0)は2020年3月6日にリリースされました。 2019年4月のGAリリース(GA)以降にリリースされた、新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートです。 Experience Manager 6.5.4.0は、Adobe Experience Manager 6.5の上部にインストールできます。
+
+この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Packに含まれる主な機能 [、およびExperience Manager 6.5.3.0以降の主なリリースの一部について説明し](#key-features-previous-service-packs)ます [](#key-features-sice-sp3)。
 
 ## AEM Sites {#aem-sites}
 
@@ -54,7 +56,7 @@ Experience Manager Assetsには、次のアクセシビリティ機能の強化�
 
 * 日付と時間の形式の制約は、ユーザーがキーボードを使用して正しい形式で日付を入力できるように、日付フィールドのフィールドラベルに設定されています。
 
-   例： `On Time (MM-DD-YYYY HH:mm)`ここで、MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍用形式の時、mmは分です。
+   例えば、`On Time (MM-DD-YYYY HH:mm)` のようになります。ここで、MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍用形式の時、mmは分です。
 
 * 現在選 `X` 択されているタグを削除するボタン上のシンボルが、選択されているタグの数と共にスクリーンリーダーによって通知されるようになりました。
 
@@ -94,7 +96,7 @@ Experience Manager Formsには、次のアクセシビリティの強化が含�
 
 * アダプティブフォームの各ページに、1つのタイトルと1つのメインのランドマークラベルが含まれるようになりました。
 
-## 以前のAEM 6.5サービスパックの主な機能
+## 以前のAEM 6.5サービスパックの主な機能 {#key-features-previous-service-packs}
 
 ### ダイナミックメディア向けスマートイメージング(6.5.3.0) {#smart-imaging}
 
@@ -117,13 +119,13 @@ Assets ユーザーは、視覚的に類似した画像を検索できます。A
 
 Batch APIを使用すると、テンプレートから複数のインタラクティブな通信を作成できます。 テンプレートは、データのないインタラクティブな通信です。 Batch APIは、データをテンプレートと組み合わせて、インタラクティブな通信を生成します。 このAPIは、インタラクティブ通信の大量生産に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 Batch APIを使用 [した複数のインタラクティブ通信の生成を参照してくださ](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)い。
 
-## AEM 6.5 SP3以降の主なリリース
+## AEM 6.5 SP3以降の主なリリース {#key-features-sice-sp3}
 
 2019年12月12日から2020年3月5日まで、アドビは、AEMの主要な成果物以外の次の機能をリリースしました。
 
 * AEM Cloud Manager 2020.1.0および2020.2.0
 
-   パイプラインのステータスを改善し、様々な手順でログをダウンロードする機能を改善。 参照先：
+   パイプラインのステータスを改善し、様々な手順でログをダウンロードする機能を改善。 次のページを参照してください。
 
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
