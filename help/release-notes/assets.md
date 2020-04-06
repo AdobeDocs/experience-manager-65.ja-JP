@@ -2,7 +2,7 @@
 title: Adobe Experience Manager Assetsリリースノート
 description: Adobe Experience Manager 6.5 Assets の新機能と強化機能について説明します。
 translation-type: tm+mt
-source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -21,7 +21,7 @@ Read on to know the specific capabilities and integrations of [!DNL Experience M
 
 [!DNL Adobe Asset Link] コンテンツ作成プロセスにおけるクリエイティブとマーケティング担当者のコラボレーションを強化します。 クリエイティブは、に保存されているコン [!DNL Experience Manager Assets]テンツに、最もなじみのあるアプリを残さずにアクセスできます。 Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign] apps.
 
-[!DNL Adobe Asset Link] は、 [Creative Cloudエンタープライズ版の一部です](https://www.adobe.com/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
+[!DNL Adobe Asset Link] は、 [Creative Cloudエンタープライズ版の一部です](https://www.adobe.com/jp/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html).
 
 ![Adobe Photoshopでのアセットの検索](assets/asset_search_photoshop.png)
 
@@ -29,7 +29,7 @@ Read on to know the specific capabilities and integrations of [!DNL Experience M
 
 Your organization can use its [!DNL Adobe Stock] enterprise plan within [!DNL Experience Manager Assets] to ensure that licensed assets are broadly available for your creative and marketing projects. You can quickly find, preview, and license [!DNL Adobe Stock] assets that are saved in Experience Manager, using the powerful DAM capabilities of [!DNL Experience Manager].
 
-[!DNL Adobe Stock] サービスは、あらゆるクリエイティブプロジェクトに使用できる、何百万点もの質の高い選ばれた著作権使用料不要の写真、ベクター、イラスト、ビデオ、テンプレートおよび 3D アセットを提供します。
+[!DNL Adobe Stock] サービスは、あらゆるクリエイティブプロジェクトに使用できる、適切にキュレーションされ、著作権使用料が不要で質の高い何百万点もの写真、ベクター、イラスト、ビデオ、テンプレートおよび 3D アセットを提供します。
 
 For more info, see [Use [!DNL Adobe Stock] assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
@@ -65,7 +65,7 @@ For more info, see [Use [!DNL Adobe Stock] assets in Experience Manager Assets](
 
 [!DNL Dynamic Media] リッチメディアのオーサリングと配信が強化され、没入型で [!DNL Experience Manager Assets] パーソナライズされた最新のエクスペリエンスを実現します。 高品質のマスターアセットを1つアップロードし、アドビの高度なクラウドレンダリングとビューアを使用することで、任意のレンディションを組み合わせて、組織のメディア戦略をサポートできます。
 
-For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://marketing.adobe.com/resources/help/en_US/s7/release_notes/).
+For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
 ### 360 ビデオのサポート {#video-support}
 
@@ -77,7 +77,7 @@ DAM に保存されているビデオそのものまたは他のコンテンツ�
 
 ### アクセシビリティの強化 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどのアクセシビリティ機能が強化されました。 詳細については、[Dynamic Media ビューアのリリースノート](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/index.html)を参照してください。
+[!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどのアクセシビリティ機能が強化されました。 詳細については、[Dynamic Media ビューアのリリースノート](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)を参照してください。
 
 ## 検索エクスペリエンスの強化 {#search-experience-enhancement}
 
