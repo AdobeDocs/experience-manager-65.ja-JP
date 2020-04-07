@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a83def358e026b516add577f968dcc709357e458
+source-git-commit: fbe85c70ef993e4728bd76a327e1a27365cf1021
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: a83def358e026b516add577f968dcc709357e458
 | バージョン | 6.5.4.0 |
 | タイプ | Service Pack のリリース |
 | 日付 | 2020年3月5日 |
-| ダウンロード URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0), [Software Distribution（ベータ版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.4.zip) |
+| ダウンロード URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/AEM-6.5.4.0-Service-Pack), [Software Distribution（ベータ版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.4.zip) |
 
 ## Adobe Experience Manager 6.5.4.0の機能 {#what-s-included-in-aem}
 
@@ -275,7 +275,7 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 
 既存の AEM 6.5 インスタンスに Service Pack をインストールするには、次の手順を実行します。
 
-1. Login to Package Share from within AEM or directly from your browser and download the [AEM 6.5.4.0 package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0).
+1. Login to Package Share from within AEM or directly from your browser and download the [AEM 6.5.4.0 package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/AEM-6.5.4.0-Service-Pack).
 
 1. パッケージマネージャーを使用してダウンロードしたパッケージをインストールします。
 
@@ -317,7 +317,7 @@ In order to see what platforms are certified to run with this release, please re
 >AEM 6.5.4.0 includes a new version of [AEM Forms Compatibility package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/AEM-FORMS-6.5.3.0-COMPAT). 古いバージョンのAEM Forms互換性パッケージを使用し、AEM 6.5.4.0にアップデートする場合は、Formsアドオンパッケージのインストール後に、最新バージョンのAEM Forms互換性パッケージをインストールします。
 
 1. AEM Service Pack がインストールされていることを確認してください。
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) for your operating system.
+1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) for your operating system.
 1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
 ### Install AEM Forms on JEE {#install-aem-forms-jee-installer}
@@ -326,7 +326,7 @@ In order to see what platforms are certified to run with this release, please re
 >
 >JEE で AEM Forms を使用していない場合はスキップします。JEE上のAEM Formsに関する修正は、別のインストーラーを使用して提供されます。
 
-For information about installing the cumulative installer for AEM Forms on JEE and post-deployment configuration, see the [release notes for patch 0011](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0011.html).
+For information about installing the cumulative installer for AEM Forms on JEE and post-deployment configuration, see the [release notes for patch 0011](https://helpx.adobe.com/jp/aem-forms/quick-fixes/6-5/jee-patch-0011.html).
 
 #### Workbench インストーラー
 
@@ -335,6 +335,8 @@ For information about installing the cumulative installer for AEM Forms on JEE a
 ### UberJar {#uber-jar}
 
 The UberJar for AEM 6.5.4.0 is available in the [Adobe Public Maven repository](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4/).
+
+**com.fasterxml.jackson.core.asyncパッケージを含む、6.5.4.0用のUberJarの更新バージョンは、** Adobe Public Mavenリポジトリで入手できます [](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4-1.0/)。
 
 To use UberJar in a Maven project, refer to the article, [How to use UberJar](/help/sites-developing/ht-projects-maven.md) and include the following dependency in your project POM:
 
@@ -385,12 +387,12 @@ AEM 6.5.4.0 に含まれているコンテンツパッケージの一覧
 以下のサイトは既存ユーザーのみが参照できます。アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com からの製品ダウンロード](https://licensing.adobe.com/)
-* [カスタマーサポート](https://daycare.day.com/public/contact.html)へのお問い合わせサポートポータルへのアクセスについて詳しくは、「サポートポ [ータルへのアクセス](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html)」を参照してください。
+* [カスタマーサポート](https://daycare.day.com/public/contact.html)へのお問い合わせサポートポータルへのアクセスについて詳しくは、「サポートポ [ータルへのアクセス](https://helpx.adobe.com/jp/experience-manager/kb/accessing-aem-support-portal.html)」を参照してください。
 
 >[!MORE 気に入った]
 >
 >* [AEM 6.5 リリースノート](/help/release-notes/release-notes.md)
 >* [AEM 製品ページ](https://www.adobe.com/solutions/web-experience-management.html)
->* [AEM 6.5 ドキュメント](https://helpx.adobe.com/support/experience-manager/6-5.html)
+>* [AEM 6.5 ドキュメント](https://helpx.adobe.com/jp/support/experience-manager/6-5.html)
 >* Subscribe to [Adobe priority product updates](https://www.adobe.com/subscription/priority-product-update.html)
 
