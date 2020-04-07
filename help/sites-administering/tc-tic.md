@@ -10,7 +10,7 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: 98dd2d3e7445ceda6d96f0dd11b39d8361f1f402
+source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
 
 ---
 
@@ -75,7 +75,7 @@ After you configure a translation integration framework, you can [associate it w
 
 **注意：** AEM のコンテンツ翻訳機能の概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
-フレームワークの単一の設定によって、ページのコンテンツ、コミュニティのコンテンツおよびアセットの翻訳方法が制御されます。![chlimage_1-386](assets/chlimage_1-386.png)
+フレームワークの単一の設定によって、ページのコンテンツ、コミュニティのコンテンツおよびアセットの翻訳方法が制御されます。![chlimage_1-386](assets/translation-config-65.jpg)
 
 ### 「サイト」の設定プロパティ{#sites-configuration-properties}
 
