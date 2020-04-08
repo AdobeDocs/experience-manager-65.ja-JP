@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fbe85c70ef993e4728bd76a327e1a27365cf1021
+source-git-commit: 4bda1be676ab357c68b541dbd41f108f274dd2d7
 
 ---
 
@@ -80,7 +80,7 @@ source-git-commit: fbe85c70ef993e4728bd76a327e1a27365cf1021
 
    コンポーネントのプロパティを編集できます。 コンポーネントに応じて、プロパティは異なります。アダプティブフォームのプロパティを表示するには、次のコンテナを実行します。
 
-   コンポーネントを選択し、フィール ![ドレベル](assets/field-level.png) /アダプティブフ **ォームコンテナ**&#x200B;をタップし ![ます](assets/cmppr.png)。
+   コンポーネントを選択し、フィール ![ドレベル](assets/field-level.png) /アダプティブフ **[!UICONTROL ォームコンテナ]**&#x200B;をタップし ![ます](assets/cmppr.png)。
 
 * **アセットブラウザー**
 
@@ -287,9 +287,9 @@ source-git-commit: fbe85c70ef993e4728bd76a327e1a27365cf1021
 * Specify values for Radio Button and Check Box items in `{value}={text}` format in component properties.
 * 添付ファイルコンポーネントの場合、デフォルトで添付できるファイルの数は 1 つだけです。ただし、複数のファイルを添付できるようにコンポーネントプロパティを設定することができます。複数のファイルを同じ名前で添付すると、問題が発生する場合があります。そのため、フォームを送信する際に、一意の ID を各添付ファイルに関連付けることをお勧めします。この作業を行うには：
 
-   1. On your AEM Forms server, navigate to **Adobe Experience Manager > Tools > Operations > Web Console**.
-   1. Find and tap **Adaptive Forms Configuration Service**.
-   1. In the Adaptive Forms Configuration Service dialog, enable **Make File Names Unique**. このオプションは、デフォルトで無効になっています。
+   1. On your AEM Forms server, navigate to **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+   1. Find and tap **[!UICONTROL Adaptive Forms Configuration Service]**.
+   1. In the Adaptive Forms Configuration Service dialog, enable **[!UICONTROL Make File Names Unique]**. このオプションは、デフォルトで無効になっています。
 
 * Safari ブラウザーを使用して PDF ファイルを添付できるようにするには、添付ファイルコンポーネントの「サポート対象ファイルタイプ」プロパティに **application/pdf** を追加します。旧バージョンの AEM Forms で作成されたアダプティブフォームでは、**application/pdf** ではなく **.pdf** が、「サポート対象ファイルタイプ」プロパティに設定される場合があります。
 
@@ -309,7 +309,7 @@ For more best practices around adaptive forms, see [Best practices for working w
 
 * **エミュレータ**![ルーラ](assets/ruler.png):タブレットやスマートフォンなど、様々な画面サイズでのフォームの外観をエミュレートします。
 
-* **編集**:次のような他のモードを選択できます。編 **集、スタイル、開発者、デザイン**。
+* **編集**:次のような他のモードを選択できます。編集 **[!UICONTROL 、スタ]**&#x200B;イル **[!UICONTROL 、]**&#x200B;開発者 **[!UICONTROL 、]**&#x200B;デザイン ****&#x200B;の各要素
 
    * **編集**：フォームとフォームのコンポーネントのプロパティを編集します。例えば、コンポーネントの追加、画像の削除、必須フィールドの指定などを行うことができます。
    * **スタイル**：フォームのコンポーネントのスタイルを調整します。例えば、スタイルモードでパネルを選択して、パネルの背景色を指定することができます。
@@ -329,7 +329,7 @@ For more best practices around adaptive forms, see [Best practices for working w
 
 コンポーネントを選択すると、以下の機能を使用できるツールバーが表示されます。切り取り、貼りつけ、移動、およびコンポーネントのプロパティを指定するオプションを使用することができます。次のオプションがあります。
 
-A. **設定**：「**設定**」をタップすると、サイドバーにコンポーネントの各種プロパティが表示されます。これらのプロパティを設定することで、データ取得の方法をカスタマイズすることができます。コンポーネントのタイトルフィールドのラベルテキストを指定して、コンポーネントの要素名を変更することができます。要素名によって、ユーザーがコンポーネントを使用して入力した値を取得することができます。コンポーネントのプロパティでは、コンポーネントの動作を指定し、ユーザーの入力を管理することができます。サイドバーでプロパティを設定し、ユーザーデータを取得して、そのデータをその後の処理に使用することができます。アダプティブフォームコンテナのプロパティを使用すると、クライアントライブラリ、レイアウト、テーマ、レコードのドキュメント、保存設定、送信設定、メタデータの設定を指定できます。
+A. **設定**：「**[!UICONTROL 設定]**」をタップすると、サイドバーにコンポーネントの各種プロパティが表示されます。これらのプロパティを設定することで、データ取得の方法をカスタマイズすることができます。コンポーネントのタイトルフィールドのラベルテキストを指定して、コンポーネントの要素名を変更することができます。要素名によって、ユーザーがコンポーネントを使用して入力した値を取得することができます。コンポーネントのプロパティでは、コンポーネントの動作を指定し、ユーザーの入力を管理することができます。サイドバーでプロパティを設定し、ユーザーデータを取得して、そのデータをその後の処理に使用することができます。アダプティブフォームコンテナのプロパティを使用すると、クライアントライブラリ、レイアウト、テーマ、レコードのドキュメント、保存設定、送信設定、メタデータの設定を指定できます。
 
 B. **コピー**：コピーのオプションでは、コンポーネントをコピーしてフォーム内の別の場所にペーストすることができます。コンポーネントを貼り付けると、貼り付けられたコンポーネントには新しい要素名が付けられますが、コピーされたコンポーネントのプロパティは保持されます。
 
@@ -347,7 +347,7 @@ H. **Group**: Lets you select multiple components if you want to cut, copy, or p
 
 I. **親**：コンポーネントの親を選択します。例えば、テキストフィールド行がセクション内のサブセクションの中にある場合、そのセクションはガイドのルートパネル内に位置し、アダプティブフォームコンテナはガイドのルートパネルの親にあたります。コンポーネントでは、すべてのオプションは下位階層から順に表示されます。
 
-For example, if you tap **Parent** for a text box, you can see:
+For example, if you tap **[!UICONTROL Parent]** for a text box, you can see:
 
 * サブセクション
 * セクション
@@ -370,7 +370,7 @@ J. **その他**： 選択したコンポーネントを操作するためのそ
 
 コンテンツ構造は一般に、次の一次コンポーネントを含みます。
 
-* **guideContainer**: アダプティブフォームのルートです。これは、アダプティブフォーム UI 内で&#x200B;**アダプティブフォームの開始**&#x200B;としてマークされています。このコンポーネントでは、次のことを指定できます。
+* **guideContainer**: アダプティブフォームのルートです。これは、アダプティブフォーム UI 内で&#x200B;**[!UICONTROL アダプティブフォームの開始]**&#x200B;としてマークされています。このコンポーネントでは、次のことを指定できます。
 
    * *アダプティブフォームのモバイルレイアウト*： モバイルデータにおけるフォームの外観を定義します。
    * *ありがとうページ*： フォームの送信後にユーザーがリダイレクトされるページを定義します。
@@ -379,7 +379,7 @@ J. **その他**： 選択したコンポーネントを操作するためのそ
 
 * **rootPanel:** アダプティブフォームのルートパネル。 これは項目ノードの下にサブパネルを含むことができます。ルートパネルを含む各パネルは、それに関連付けられたレイアウトを持つことができます。パネルのレイアウトは、フォームをレイアウトする方法を指示します。例えば、アコーディオンレイアウトでは、その項目はアコーデオン手順としてレイアウトされます。
 
-* **ツールバー**： アダプティブフォームコンテナは関連付けられたグローバルツールバーを持ち、これはフォームに対してグローバルです。This toolbar can be added using the **Add Toolbar** action in the edit bar, which allows authors to add actions, such as Submit, Save, Reset, and so on.
+* **ツールバー**： アダプティブフォームコンテナは関連付けられたグローバルツールバーを持ち、これはフォームに対してグローバルです。This toolbar can be added using the **[!UICONTROL Add Toolbar]** action in the edit bar, which allows authors to add actions, such as Submit, Save, Reset, and so on.
 
 * **アセット：**&#x200B;このノードは、フォームのオーサリングのために使用する追加情報を含みます。例えば、フォームモデルの詳細、ローカリゼーションの詳細など。
 
