@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -28,9 +28,9 @@ source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ## 概要 {#overview}
 
-1. **パターンディテクター**[](/help/sites-deploying/pattern-detector.md) — アップグレード計画の説明とこのページの詳細に従ってパターンディテクターを実行し、AEMのTargetバージョンの使用できないAPI/バンドルに加え、対処する必要がある領域の詳細を含むパターンディテクターレポートを取得します。 パターン検出レポートは、コードに互換性のない問題を示します。デプロイが既に6.5と互換性がない場合は、6.5の機能を利用する新しい開発を選択できますが、互換性を維持するためだけでは不要です。 非互換性がレポートされる場合は、a)互換モードで実行し、新しい6.5機能や互換性の開発を延期する、b)アップグレード後に開発を行う、手順2に進みます。 Please see please see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) for more details.
+1. **パターンディテクター**[](/help/sites-deploying/pattern-detector.md) — アップグレード計画の説明に従ってパターンディテクターを実行し、このページで詳しく説明します。パターンディテクターレポートには、AEMのターゲット版で使用できないAPI/バンドルに加え、対処する必要がある領域の詳細が含まれます。 パターン検出レポートは、コードに互換性のない問題を示します。デプロイが既に6.5と互換性がない場合は、6.5の機能を利用する新しい開発を選択できますが、互換性を維持するためだけでは不要です。 非互換性がレポートされる場合は、a)互換モードで実行し、新しい6.5機能や互換性の開発を延期する、b)アップグレード後に開発を行う、手順2に進みます。 Please see please see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) for more details.
 
-1. ** 6.5用のコードベースの開発**- Targetバージョンのコードベース用の専用のブランチまたはリポジトリを作成します。 アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
+1. ** 6.5のコードベースの開発**-ターゲットバージョンのコードベース用の専用のブランチまたはリポジトリを作成します。 アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
 1. ** 6.5 Uber jarでコンパイル**- 6.5 uber jarを指すようにコードベースのPOMを更新し、これに対してコードをコンパイルします。
 1. **AEMカスタマイズの更新*** - * AEMのカスタマイズや拡張が6.5で動作するように更新または検証し、6.5コードベースに追加する必要があります。 UI 検索フォーム、カスタマイズされているアセット、/mnt/overlay を使用するすべてのものを含めます。
 
@@ -66,7 +66,7 @@ AEM Uber jar によって、すべての AEM API が単一の依存関係とし�
 
 ### 管理リソースリゾルバの使用の段階的廃止 {#phase-out-use-of-administrative-resource-resolver}
 
-The use of an administrative session through `SlingRepository.loginAdministrative()` and `ResourceResolverFactory.getAdministrativeResourceResolver()` was quite prevalent in code bases prior to AEM 6.0. These methods have been deprecated for security reasons as they give too broad of a level of access. [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザーと管理セッシ [ョンをフェーズアウトする方法について詳しくは、](/help/sites-administering/security-service-users.md#how to phase out admin sessions)を参照してください。
+The use of an administrative session through `SlingRepository.loginAdministrative()` and `ResourceResolverFactory.getAdministrativeResourceResolver()` was quite prevalent in code bases prior to AEM 6.0. These methods have been deprecated for security reasons as they give too broad of a level of access. [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザー、および[管理セッションを段階的に廃止する方法について詳しくは、こちらを参照してください](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)。
 
 ### クエリと Oak インデックス {#queries-and-oak-indexes}
 
@@ -146,13 +146,13 @@ Adobe recommends putting custom scripts at `/apps/settings/dam/indesign/scripts`
 
 ### ContextHub 設定の復元 {#recovering-contexthub-configurations}
 
-ContextHub 設定は、アップグレードの影響を受けます。既存のContextHub設定の回復方法については、こちらを参照して [ください](/help/sites-administering/contexthub-config.md#recovering contexthub configurations after upgrading)。
+ContextHub設定は、アップグレードの影響を受けます。 Instructions on how to recover existing ContextHub configurations can be found [here](/help/sites-administering/contexthub-config.md#recovering-contexthub-configurations-after-upgrading).
 
 ### ワークフローのカスタマイズ {#workflow-customizations}
 
 必要な機能を追加したり、必要のない機能を削除したりするには、標準のワークフローを更新または変更することが一般的な方法です。カスタマイズ対象として一般的なワークフローは、DAM アセットの更新ワークフローです。カスタム実装に必要なすべてのワークフローは、アップグレード中に上書きされる可能性があるので、バックアップしてバージョン管理に保存する必要があります。
 
-### 編集可能テンプレート {#editable-templates}
+### 編集可能なテンプレート {#editable-templates}
 
 >[!NOTE]
 >
