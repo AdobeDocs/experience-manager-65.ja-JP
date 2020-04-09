@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -39,12 +39,12 @@ Experience Manager Service Pack 4(6.5.4.0)は2020年3月6日にリリースさ�
 
 AEM AssetsとBrand Portalの間の認証チャネルが変更されます。 これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。AEM Assets と Brand Portal の連携が、Adobe I/O を通じて設定されるようになりました。Adobe I/O が Brand Portal テナントの認証用の IMS トークンを取得します。
 
-Brand PortalでAEM Assetsを設定する手順は、AEMのバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 See [Configure AEM Assets with Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) for details.
+Brand PortalでAEM Assetsを設定する手順は、AEMのバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 詳しくは、[AEM Assets と Brand Portal の連携の設定](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)を参照してください。
 
 
 ### 既知の問題 {#known-issues-bp}
 
-* Brand Portalユーザーは、AEM 6.5.4上のAdobe I/Oにアップグレードする際に、貢献度フォルダーのアセットをAEM Assetsに公開できません。
+* Brand Portal ユーザーが AEM 6.5.4 の Adobe I/O にアップグレードする際に、投稿フォルダーのアセットを AEM Assets に公開できない。
 
 ### Accessibility enhancements {#accessibility-enhancements}
 
@@ -98,9 +98,13 @@ Experience Manager Formsには、次のアクセシビリティの強化が含�
 
 ## 以前のAEM 6.5サービスパックの主な機能 {#key-features-previous-service-packs}
 
-### ダイナミックメディア向けスマートイメージング(6.5.3.0) {#smart-imaging}
+### ダイナミックメディア向けスマートイメージング {#smart-imaging}
 
 スマートイメージングでは、各ユーザーの独自の表示特性を使用して、エクスペリエンスに最適化された適切な画像を自動的に提供し、パフォーマンスとエンゲージメントを向上させます。 スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。スマートイメ [ージングを参照](../assets/imaging-faq.md)。
+
+### ダイナミックメディア用のビデオプロファイルのスマート切り抜き(6.5.3.0) {#smart-crop-video}
+
+ビデオのスマート切り抜き（ビデオプロファイルで使用できるオプション機能）は、Adobe Sensei の人工知能機能を使用して、サイズに関係なく、アップロードしたアダプティブビデオやプログレッシブビデオの重要な部分を自動的に検出して切り抜くツールです。See [About using smart crop in video profiles](../assets/video-profiles.md).
 
 ### AEM Assetsのビジュアル検索(6.5.2.0) {#visual-search}
 
@@ -143,7 +147,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * AEMサイト：WKNDリファレンスサイト
 
-   [AEMを使用してサイトを構築する方法に関する](https://www.wknd.site/) 、ベストプラクティスが詰め込まれた新しいリファレンスプロジェクトです。 詳しくは、最新の [WKNDチュートリアルを参照してください](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)。 GitHubから最新のコードを取得で [きます](https://github.com/adobe/aem-guides-wknd/releases)。
+   [AEMを使用してサイトを構築する方法に関する](https://www.wknd.site/) 、ベストプラクティスが詰め込まれた新しいリファレンスプロジェクトです。 詳しくは、最新の [WKNDチュートリアルを参照してください](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)。 GitHubから最新のコードを取得で [きます](https://github.com/adobe/aem-guides-wknd/releases)。
 
 * AEMサイト：コマースCIFコアコンポーネント0.7.0および0.9.0
 
