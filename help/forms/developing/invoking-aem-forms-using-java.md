@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -64,7 +64,9 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 * 呼び出す AEM Forms サービス。クライアントアプリケーションは 1 つ以上のサービスを呼び出すことができます。
 * AEM Forms サービスを呼び出すモード。EJB モードまたは SOAP モードを使用できます。（[接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
->[!NOTE] （自動オプションのみ）EJB用のサーバーIPを指定するコマンドを使用し `standalone.bat -b <Server IP> -c lc_turnkey.xml` て、AEM Formsサーバーを起動します。
+>[!NOTE]
+>
+>（自動オプションのみ）AEM Formsサーバーを開始し、EJB用のサー `standalone.bat -b <Server IP> -c lc_turnkey.xml` バーIPを指定するコマンドを使用します。
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
@@ -471,7 +473,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
 1. To set the `DSC_SERVER_TYPE` connection property, invoke the `java.util.Properties` object’s `setProperty` method and pass the following values:
 
-   * The `ServiceClientFactoryProperties.DSC_SERVER_TYPE`enumeration value
+   * `ServiceClientFactoryProperties.DSC_SERVER_TYPE`定義済みリスト値
    * AEM Forms をホストする J2EE アプリケーションサーバーを指定する文字列値（例えば、AEM Forms が にデプロイされている場合は `JBoss`JBoss を指定します）。
 
       1. To set the `DSC_CREDENTIAL_USERNAME` connection property, invoke the `java.util.Properties` object’s `setProperty` method and pass the following values:
@@ -886,7 +888,7 @@ Determine the MIME type of a `com.adobe.idp.Document` object by invoking the `co
 <table>
  <thead>
   <tr>
-   <th><p>MIME type</p></th>
+   <th><p>MIME タイプ</p></th>
    <th><p>説明</p></th>
   </tr>
  </thead>
