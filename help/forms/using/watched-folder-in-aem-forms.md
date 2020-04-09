@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -23,8 +23,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 以下の方法のいずれか 1 つを使用して、監視フォルダーをファイルシステムに作成できます。
 
-* 監視フォルダー設定ノードのプロパティを設定する際に、folderPathプロパティに親ディレクトリのフルパスを入力し、作成する監視フォルダーの名前を追加します。次に例を示します。 `C:/MyPDFs/MyWatchedFolder`\
-   フォル `MyWatchedFolder`ダーが存在しない場合、AEM Formsは指定されたパスでフォルダーの作成を試みます。
+* 監視フォルダー設定ノードのプロパティの設定中に、親ディレクトリのフルパスを folderPath プロパテイに入力し、作成する監視フォルダーの名前を追加します（例：`C:/MyPDFs/MyWatchedFolder`）。`MyWatchedFolder` フォルダーが存在しない場合、AEM Forms は指定したパスでフォルダの作成を試みます。
 
 * ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
 
@@ -90,8 +89,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 * **deleteExpiredStageFileOnlyWhenThrottled（ブール型、デフォルト値は true）**：監視フォルダーに制限がある場合にのみタイムアウト機能を有効にするかどうか指定します。この機能は制限のある監視フォルダーにはより重要です。制限が有効になっている場合、（ジョブまたはワークフローの断続的失敗により）未処理状態で待機している少数のファイルが、バッチ全体の処理を停止させるおそれがあるためです。このプロパティの値に true（デフォルト値）を指定すると、制限のない監視フォルダーに対して時間制限が有効になりません。このプロパティの値に false を指定すると、stageFileExpirationDuration プロパティの値が正の数になっている限り、この機能が常に有効になります。
 
 * **pollInterval（長整数型）**：入力用の監視フォルダーをスキャンする間隔（秒）。「ジョブ数を制限」設定が無効になっている場合、平均的なジョブの処理にかかる時間よりも長い時間を pollInterval に指定する必要があります。そうしないと、システムが過負荷になるおそれがあります。デフォルト値は 5 です。詳しくは、batchSize の説明を参照してください。pollInterval には 1 以上の値を指定する必要があります。
-* **excludeFilePattern（文字列型）**：スキャンおよび取得の対象から除外するファイルとフォルダーを決めるために監視フォルダーで使用されるパターンのセミコロン（;）区切りのリストです。このパターンに当てはまるファイルまたはフォルダーは、スキャンの対象外となります。この設定は、複数のファイルが存在するフォルダーが入力に使用される場合に便利です。フォルダーの内容を任意の名前のフォルダーにコピーし、監視フォルダーの取得対象に含めることができます。これにより、フォルダーが入力フォルダーに完全にコピーされる前に監視フォルダーがフォルダーを取得することを回避できます。デフォルト値は null です。\
-   You can use [file patterns](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) to exclude:
+* **excludeFilePattern（文字列型）**：スキャンおよび取得の対象から除外するファイルとフォルダーを決めるために監視フォルダーで使用されるパターンのセミコロン（;）区切りのリストです。このパターンに当てはまるファイルまたはフォルダーは、スキャンの対象外となります。この設定は、複数のファイルが存在するフォルダーが入力に使用される場合に便利です。フォルダーの内容を任意の名前のフォルダーにコピーし、監視フォルダーの取得対象に含めることができます。これにより、フォルダーが入力フォルダーに完全にコピーされる前に監視フォルダーがフォルダーを取得することを回避できます。デフォルト値は null です。You can use [file patterns](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) to exclude:
 
    * 特定の拡張子をファイル名に持つファイル。例えば *.dat、*.xml、*.pdf、*
    * 特定の文字列をファイル名に持つファイル。例えば data* を指定すると、data1、data2 などの名前を持つファイルおよびフォルダーが除外されます。
@@ -216,16 +214,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 #### ContentProcessor インターフェイスのカスタム実装 {#custom-implementation-of-the-contentprocessor-interface}
 
-カスタム実装は、処理コンテキスト（com.adobe.aemfd.watchfolder.service.api.ProcessorContext型のオブジェクト）を受け入れ、コンテキストから入力ドキュメントーと設定パラメーターを読み取り、入力を処理し、出力を\
-コンテキスト。 ProcessorContext には、以下の API が用意されています。
+カスタム実装は、処理のコンテキスト（タイプ com.adobe.aemfd.watchfolder.service.api.ProcessorContext のオブジェクト）を受け取り、入力ドキュメントと設定パラメーターをコンテキストから読み取って入力を処理し、出力をコンテキストに追加します。ProcessorContext には、以下の API が用意されています。
 
 * **getWatchFolderId**：監視フォルダーの ID を返します。
 * **getInputMap**：Map 型のマップを返します。マップのキーは、入力ファイルのファイル名と、ファイルのコンテンツを含むドキュメントオブジェクトです。入力ファイルを読み取るには、getinputMap API を使用します。
-* **getConfigParameters**：Map 型の不変マップを返します。マップに\
-   監視フォルダーの設定パラメーター。
+* **getConfigParameters**：Map 型の不変マップを返します。マップには監視フォルダーの設定パラメーターが含まれています。
 
-* **setResult**:ContentProcessorの実装\
-   apiを使用して、出力フォルダーを結果ドキュメントーに書き込みます。 setResult API には出力ファイルの名前を指定できます。この API は、指定された出力フォルダーパターンまたは出力ファイルパターンに応じて、提供されたファイルを使用または無視する場合があります。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
+* **setResult**：この API は、ContentProcessor 実装が出力ドキュメントを結果フォルダーに書き出す際に使用されます。setResult API には出力ファイルの名前を指定できます。この API は、指定された出力フォルダーパターンまたは出力ファイルパターンに応じて、提供されたファイルを使用または無視する場合があります。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
 
 例えば、以下のコードはカスタムの foo=bar プロパティを持つ ContentProcessor インターフェイスのカスタム実装です。
 
@@ -276,7 +271,7 @@ var inputMap = processorContext.getInputMap();
 var params = processorContext.getConfigParameters();
 var entry = inputMap.entrySet().iterator().next();
 var tempFile = new Packages.java.io.File(params.get("tempDir"), params.get("outPrefix") + entry.getKey());
-entry.getValue().copyToFile(tempFile);    
+entry.getValue().copyToFile(tempFile);
 processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docmanager.Document(tempFile, true));
 ```
 
@@ -298,8 +293,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 ワークフローにより、Experience Manager のアクティビティを自動化できます。ワークフローは、特定の順序で実行される一連のステップで構成されます。各ステップで、ページのアクティベートや電子メールメッセージの送信など、個別のアクティビティが実行されます。ワークフローでは、リポジトリ内のアセット、ユーザーアカウントおよび Experience Manager サービスとやり取りができます。したがって、ワークフローでは複雑な連携を行わせることができます。
 
 * ワークフローを作成する前に、次の点を考慮してください。
-* 任意のステップの出力は、すべての後続のステップで使用できるようにしておく必要があります。\
-   前の手順で生成された既存の出力を更新（または削除）できる必要があります。
+* 任意のステップの出力は、すべての後続のステップで使用できるようにしておく必要があります。前の手順で生成された既存の出力を更新（または削除）できる必要があります。
 * 可変変数は、各ステップ間におけるカスタムダイナミックデータの受け渡しに使用されます。
 
 ワークフローを使用してファイルを処理するには、次の手順を実行します。
@@ -347,8 +341,7 @@ setResult APIの考慮事項(ワークフローで使用する場合):
 >
 >他のシナリオにおいて setResult API の呼び出し時に null コンテンツを指定すると、エラーが発生します。
 
-以下は、ワークフローのステップの実装例です。この例では、ECMAscript で可変の stepCount を使用して、現在のワークフローインスタンスにおけるステップの呼び出し回数を追跡しています。\
-出力フォルダー名は、現在のステップの呼び出し回数、元のファイル名、outPrefix パラメーターに指定したプレフィックスを組み合わせたものになっています。
+以下は、ワークフローのステップの実装例です。この例では、ECMAscript で可変の stepCount を使用して、現在のワークフローインスタンスにおけるステップの呼び出し回数を追跡しています。出力フォルダー名は、現在のステップの呼び出し回数、元のファイル名、outPrefix パラメーターに指定したプレフィックスを組み合わせたものになっています。
 
 ECMAScript により、ワークフローコンテキストサービスの参照が取得され、WorkflowContextProcessor インターフェイスの実装が作成されます。WorkflowContextProcessor の実装は入力ファイルを受け取り、ファイルを一時領域にコピーし、コピーされたファイルに相当するドキュメントを返します。現在のワークフローインスタンスにおいて同じステップの開始時に生成されていた直近の出力を、ブール型変数 purgePrevious の値に基づいて現在のステップで削除します。最後に、wfSvc.execute メソッドを呼び出して WorkflowContextProcessor 実装を実行します。出力ドキュメントのコンテンツは、監視フォルダー設定ノードで指定された物理パスの結果フォルダーに保存されます。
 
@@ -366,8 +359,8 @@ var impl = { processWorkflowContext: function (wfContext) {
     log.info("Inputs: " + inputMap); // Input map of type Map<String, Document>
     log.info("Params: " + paramMap); // Config params of type Map<String, Object>
     log.info("Old results: " + preResults);
-    log.info("Old variables: " + preVars);            
-    var currStepNumber = new Packages.java.lang.Long(new Packages.java.lang.Long(preVars.get("stepCount")).longValue() + 1);    
+    log.info("Old variables: " + preVars);
+    var currStepNumber = new Packages.java.lang.Long(new Packages.java.lang.Long(preVars.get("stepCount")).longValue() + 1);
     log.info("Current step number: " + currStepNumber);
     wfContext.setVariable("stepCount", currStepNumber);
     var entry = inputMap.entrySet().iterator().next();
@@ -378,7 +371,7 @@ var impl = { processWorkflowContext: function (wfContext) {
     wfContext.setResult(tempFile.getName(), outDoc);
     var prevStepOutName = paramMap.get("outPrefix") + "STEP-" + (currStepNumber - 1) + "-" + entry.getKey();
     if (preResults.containsKey(prevStepOutName) && paramMap.get("purgePrevious").booleanValue()) {
-        log.info("Purging previous step output " + prevStepOutName);        
+        log.info("Purging previous step output " + prevStepOutName);
         wfContext.setResult(prevStepOutName, null);
     }
 } }
@@ -631,8 +624,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 ### ワークフローの作成 {#create-a-workflow}
 
-1. ブラウザーウィンドウで「AEM ワークフロー」UI を開きます。\
-   https://[servername]:&#39;port&#39;/worklow
+1. ブラウザーウィンドウで「AEM ワークフロー」UI を開きます。https://[servername]:&#39;port&#39;/worklow
 
 1. モデルビューで、「**新規**」をクリックします。新しいワークフローダイアログで、「**タイトル**」を指定し、「**OK**」をクリックします。
 
@@ -642,7 +634,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 1. デフォルトのワークフローステップを削除します。サイドキックから「プロセスステップ」をワークフローにドラッグ＆ドロップします。
 
-   ![create-a-workflow-pdf-(2)](assets/create-a-workflow-pdf-(2).png)
+   ![create-a-workflow-pdf2](assets/create-a-workflow-pdf2.png)
 
 1. 「プロセスステップ」を右クリックし、「**編集**」を選択します。ステップのプロパテイウィンドウが表示されます。
 
@@ -660,8 +652,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 1. この  ノードに次のプロパティを追加します。
 
-   * folderPath（文字列型）：定義した時間間隔でスキャンする対象のフォルダーパスです。フォルダーが共有場所に存在し、すべてのサーバーが対象のサーバーに対するフルアクセス権を持っている必要があります。\
-      inputProcessorType（文字列型）：開始するプロセスのタイプです。このチュートリアルでは、workflow を指定します。
+   * folderPath（文字列型）：定義した時間間隔でスキャンする対象のフォルダーパスです。フォルダーが共有場所に存在し、すべてのサーバーが対象のサーバーに対するフルアクセス権を持っている必要があります。inputProcessorType（文字列型）：開始するプロセスのタイプです。このチュートリアルでは、workflow を指定します。
 
    * inputProcessorId（文字列型）：inputProcessorId プロパティの動作は、inputProcessorType プロパティに指定した値に基づきます。この例では、inputProcessorType プロパテイの値は workflow です。そのため inputProcessorId プロパティに PDFG ワークフローの次のパスを指定します。/etc/workflow/models/pdfg/jcr:content/model
 
