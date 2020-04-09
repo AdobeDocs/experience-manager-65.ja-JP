@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -298,9 +298,9 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. 「フォームとドキュメント」UI へ進み、フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。
 1. 次のURLを使用して、Chromeブラウザーでフォームを数回開きます。
 
-   `https://&lt;*hostname*&gt;:&lt;*port*&gt;/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
 
-   >[!NOTE] 注意：次回フォームを開く前に、 **mbox** という名前のCookieをブラウザーのCookieの永続性から削除します。 そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
+   >[!NOTE]次回以降、フォームを開く前に **mbox** という名前を持つ Cookie を、ブラウザーの Cookie パーシステンスから削除してください。そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
 
 1. フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。テスト開始直後には、レポートに多くのデータが表示されることはありません。シードデータを使用して、A/B テストレポートがどのように表示されるか確認しましょう。
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
@@ -546,7 +546,7 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. 必要に応じてフォームを修正し、デフォルトのエクスペリエンス A とは異なるエクスペリエンスを作成します。
 1. 「フォームとドキュメント」UI へ進み、フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。
 1. 次のURLを使用して、Chromeブラウザーでフォームを数回開きます。
-   `https://&lt;hostname&gt;:&lt;port&gt;/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
 
    >[!NOTE]
    > 次回以降、フォームを開く前に **mbox** という名前を持つ Cookie を、ブラウザーの Cookie パーシステンスから削除してください。そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
@@ -855,7 +855,7 @@ ConradはAEMインスタンスにログインし、Auto Insuranceダッシュボ
 
 #### 実際の動作確認  {#see-it-yourself-18}
 
-We.Finance Auto Insurance **ダッシュボードにConrad Simms** (csimms/password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシーを **更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、有効な電子メールアドレスを入力し、ポリシードキュメントが添付された電子メールを送信し **ます**。 「送信が開始されました」というメッセージが画面に表示され、数秒後に「送信に成功しました」という別のメッセージが表示されます。 自動保険の更新の件名が記載さ **れた電子メールが** 、指定の電子メールアドレスで送信されます。 Sarah Roseに提供されるポリシーはプレミアムポリシーです。
+We.Finance Auto Insurance **ダッシュボードにConrad Simms** (csimms/password)としてログインします。 The URL is `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`. 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシーを **更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、有効な電子メールアドレスを入力し、ポリシードキュメントが添付された電子メールを送信し **ます**。 「送信が開始されました」というメッセージが画面に表示され、数秒後に「送信に成功しました」という別のメッセージが表示されます。 自動保険の更新の件名が記載さ **れた電子メールが** 、指定の電子メールアドレスで送信されます。 Sarah Roseに提供されるポリシーはプレミアムポリシーです。
 
 自動保険のチュートリアルには、別の顧客であるAlison Jonesも含まれています。 Alison Jonesの顧客IDは900002です。 インタラクティブな通信をAlison Jonesに送信すると、標準のポリシーが送信されます。 標準ポリシーとプレミアムポリシーの違いは次のとおりです。
 
@@ -874,7 +874,7 @@ We.Finance Auto Insurance **ダッシュボードにConrad Simms** (csimms/passw
 1. の値を次の値に設 `FormFieldRequestParameter`定 `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. 「**すべて保存**」をタップします。リファレンスサイトは、MS Dynamicsをデータソースとして使用する対話型通信を使用するように構成されている。
 
-次に、 **We.Finance Auto InsuranceダッシュボードにConrad Simms** (csimms/password)としてログインします。 URLはです `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシーを **更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、有効な電子メールアドレスを入力し、ポリシードキュメントが添付された電子メールを送信し **ます**。 「送信が開始されました」というメッセージが画面に表示され、数秒後に「送信に成功しました」という別のメッセージが表示されます。 「Auto Insurance Renewal **** 」という件名の電子メールが、指定した電子メールアドレスに送信されます。
+次に、 **We.Finance Auto InsuranceダッシュボードにConrad Simms** (csimms/password)としてログインします。 The URL is `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`. 顧客IDを **指定します**。 Sarah Roseの顧客IDは900001です。 「ポリシーを **更新」をクリックしま**&#x200B;す。 エージェント UI でインタラクティブ通信が開きます。エージェントUIで、有効な電子メールアドレスを入力し、ポリシードキュメントが添付された電子メールを送信し **ます**。 「送信が開始されました」というメッセージが画面に表示され、数秒後に「送信に成功しました」という別のメッセージが表示されます。 「Auto Insurance Renewal **** 」という件名の電子メールが、指定した電子メールアドレスに送信されます。
 
 >[!NOTE]
 >
