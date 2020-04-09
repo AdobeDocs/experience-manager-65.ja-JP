@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e46f0d6b842ff1a295d411c770f36dd82001bcb2
+source-git-commit: 4244ebbe8ceb3bef8d47e1e32817edbd11db4d9a
 
 ---
 
@@ -151,8 +151,8 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 
 例を以下に示します。
 
-* **Shirts** のバージョンは、バージョンの期間が 2 日間を超えているので、パージされます。
-* **Tonga Fashions!** のバージョンは、バージョンの数が 5 を超えているので、パージされます。
+* **[!DNL Shirts]** のバージョンは、バージョンの期間が 2 日間を超えているので、パージされます。
+* The **[!DNL Tonga Fashions!]** versions are purged because their number of versions is greater than 5.
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
 
@@ -1033,7 +1033,7 @@ To determine the total size of the `/var/dam` folder:
 
 このような場合は、以下をチェックします。
 
-* [AEM の起動](/help/sites-deploying/deploy.md#getting-started)の際に使用している JVM 設定
+* The JVM settings used to [start AEM](/help/sites-deploying/deploy.md#getting-started)
 * ナレッジベース
 
    * [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
