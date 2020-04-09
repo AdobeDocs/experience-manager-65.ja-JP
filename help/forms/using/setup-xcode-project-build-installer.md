@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -72,7 +72,7 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 1. Extract the archive in the `[User_Home]/Projects/[your-project]`directory.
 1. プロジェクトデ ` [User_Home]/Projects/ `[ィレクトリに移動]`/adobe-lc-mobileworkspace-src-[version]/ios` します。
 1. Xcode で `AEM Forms.xcodeproj` プロジェクトを開きます。
-1. 「**TARGETS**」の「**AEM Forms**」をクリックし、**AEM Forms**」を選択します。Select the **Build Settings **tab, locate the **Code Signing Entitlement** section, and in Debug and Release fields do one of the following:
+1. 「**TARGETS**」の「**AEM Forms**」をクリックし、**AEM Forms**」を選択します。Select the **Build Settings** tab, locate the **Code Signing Entitlement** section, and in Debug and Release fields do one of the following:
 
    * 標準 Mobile Workspace アプリケーションを作成するための各フィールドを未指定のままにする。
    * Specify the fields to as explained in [Building a Secure AEM Forms app for iOS](/help/forms/using/building-secure-mobile-workspace-app.md) to build a secure AEM Forms app.
