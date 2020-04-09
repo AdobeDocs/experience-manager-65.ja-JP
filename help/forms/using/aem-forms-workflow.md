@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -67,7 +67,7 @@ AEM には、提供されているワークフローステップを使用して�
 
 1. ワークフローモデルコンソールを開きます。The default URL is https://&#39;[server]:[port]&#39;/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models
 1. 「**作成**」を選択してから、「**モデルを作成**」を選択します。ワークフローモデルを追加ダイアログが表示されます。
-1. 「**タイトル**」と「**名前**」（オプション）を入力します。例えば、住宅ローン申し込みと入力します。「**Done**」をタップします。
+1. 「**タイトル**」と「**名前**」（オプション）を入力します。例えば、住宅ローン申し込みと入力します。「**完了**」をタップします。
 1. Select the newly created workflow model and tap **Edit**. 」をクリックします。これで、ワークフローステップを追加してビジネスロジックを構築できます。新しいワークフローモデルを初めて作成する場合、次のものが含まれます。
 
    * フローの開始ステップと終了ステップ。これらのステップは、ワークフローの始まりと終わりを表します。これらのステップは必須で、編集または削除できません。
@@ -77,7 +77,7 @@ AEM には、提供されているワークフローステップを使用して�
 
    1. Go to AEM configuration manager at https://&#39;[server]:[port]&#39;/system/console/configMgr.
    1. **[!UICONTROL Day CQ 電子メールサービス]**&#x200B;の設定を開きます。「**[!UICONTROL SMTP サーバーのホスト名]**」、「**[!UICONTROL SMTP サーバーポート]**」、「**[!UICONTROL 送信元アドレス]**」フィールドの値を指定します。「**[!UICONTROL 保存]**」をクリックします。
-   1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. 「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
+   1. 「**[!UICONTROL Day CQ Link Externalizer]**」の設定を開きます。「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
 1. ワークフローステージを作成します。ワークフローには複数のステージが含まれることがあります。これらのステージは、AEM インボックスに表示され、ワークフローの進捗をレポートします。
 
@@ -267,8 +267,8 @@ AEM ワークフローの「タスクを割り当て」ステップと「電子�
 
 1. Go to AEM configuration manager at https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. **[!UICONTROL Day CQ 電子メールサービス]**&#x200B;の設定を開きます。「**[!UICONTROL SMTP サーバーのホスト名]**」、「**[!UICONTROL SMTP サーバーポート]**」、「**[!UICONTROL 送信元アドレス]**」フィールドの値を指定します。「**[!UICONTROL 保存]**」をクリックします。
-1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. 「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
+1. 「**[!UICONTROL Day CQ Link Externalizer]**」の設定を開きます。「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
 ### ワークフローインスタンスの削除 {#purge-workflow-instances}
 
-ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。詳しくは、「ワークフローインスタ [ンスの定期的な削除](/help/sites-administering/workflows-administering.md#regular purging of workflow instances)」を参照してください。
+ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。詳しくは、「[ワークフローインスタンスの定期的な削除](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)」を参照してください。
