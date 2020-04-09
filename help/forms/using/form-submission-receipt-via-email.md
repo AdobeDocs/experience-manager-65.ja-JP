@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -35,7 +35,7 @@ For example, the **Email action** submit action sends an email on successful sub
 
 >[!NOTE]
 >
->電子メールアクションを使用するには、「メールサービスの設定」 [](/help/sites-administering/notification.md#configuring the mail service)の説明に従ってAEMメールサービスを設定する必要があります。
+>電子メールアクションを使用するには、[電子メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service)で説明されているように AEM メールサービスを設定する必要があります。
 
 ### アダプティブフォームでの電子メールアクションの有効化 {#enabling-email-action-on-an-adaptive-form}
 
