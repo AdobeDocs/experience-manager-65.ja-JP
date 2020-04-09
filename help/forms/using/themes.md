@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -91,19 +91,19 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   <tr>
    <td>1.</td>
    <td>タイトル</td>
-   <td>はい</td>
+   <td>可</td>
    <td>テーマの名前を表示します。</td>
   </tr>
   <tr>
    <td>2.</td>
    <td>説明</td>
-   <td>はい</td>
+   <td>可</td>
    <td>テーマについての説明です。</td>
   </tr>
   <tr>
    <td>3.</td>
    <td>タイプ</td>
-   <td>いいえ</td>
+   <td>不可</td>
    <td>
     <ul>
      <li>アセットのタイプ。</li>
@@ -113,43 +113,43 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   <tr>
    <td>4.</td>
    <td>作成日</td>
-   <td>いいえ</td>
+   <td>不可</td>
    <td>テーマの作成日</td>
   </tr>
   <tr>
    <td>5.</td>
    <td>作成者名</td>
-   <td>はい</td>
+   <td>可</td>
    <td>テーマの作成者。テーマの作成時に計算されます。</td>
   </tr>
   <tr>
    <td>6.</td>
    <td>最終変更日</td>
-   <td>いいえ</td>
+   <td>不可</td>
    <td>テーマが最後に変更された日付。</td>
   </tr>
   <tr>
    <td>7.</td>
    <td>ステータス</td>
-   <td>いいえ</td>
+   <td>不可</td>
    <td>テーマの状態（変更済み／発行済み）。</td>
   </tr>
   <tr>
    <td>8.</td>
    <td>Publish On Time</td>
-   <td>はい</td>
+   <td>可</td>
    <td>テーマを自動で発行する時間。</td>
   </tr>
   <tr>
    <td>9.</td>
    <td>Publish Off Time</td>
-   <td>はい</td>
+   <td>可</td>
    <td>テーマを自動で非公開にする時間。</td>
   </tr>
   <tr>
    <td>10.</td>
    <td>タグ</td>
-   <td>はい</td>
+   <td>可</td>
    <td>検索の向上のため、識別用にテーマに付加されるラベル。</td>
   </tr>
   <tr>
@@ -165,7 +165,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   <tr>
    <td>12.</td>
    <td>Clientlib の場所</td>
-   <td>はい</td>
+   <td>可</td>
    <td>
     <ul>
      <li>このテーマに対応する clientlib が保存される、「/etc」内のユーザー定義のリポジトリのパスです。</li>
@@ -177,7 +177,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   <tr>
    <td>13.</td>
    <td>Clientlib カテゴリ名</td>
-   <td>はい</td>
+   <td>可</td>
    <td>
     <ul>
      <li>このテーマのユーザー定義の clientlib カテゴリ名です。</li>
@@ -553,7 +553,7 @@ TypeKit 設定を使用するようにテーマを設定するには、次の手
 
    サイドバーのフォームのプロパティを編集することができます。
 
-1. In the sidebar, under** Basic**, select your theme from the **Theme** drop-down and click **Done** ![check-button](assets/check-button.png)
+1. In the sidebar, under **Basic**, select your theme from the **Theme** drop-down and click **Done** ![check-button](assets/check-button.png)
 
 ### 実行時にフォームのテーマを変更する {#change-theme-of-a-form-at-runtime}
 
