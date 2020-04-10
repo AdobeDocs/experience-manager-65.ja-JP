@@ -91,9 +91,9 @@ Connected Assets とローカル Sites の接続を構成するには、次の�
    1. プロパティウィザードで、「**[!UICONTROL パス]**」フィールドを次のマッピングに従って変更し、マウントポイント **[!UICONTROL connectedassets]** が除外されるように正規表現を更新します。
    | 前 | 後 |
    |---|---|
-   | /content/dam(/((?!/subassets).)*/)renditions/original | /content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original |
-   | /content/dam(/.*/)renditions/original | /content/dam(/((?!connectedassets).)*/)renditions/original |
-   | /content/dam(/.*)/jcr:content/metadata | /content/dam(/((?!connectedassets).)*/)jcr:content/metadata |
+   | /content/dam(/((?!/subassets).)&#42;/)renditions/original | /content/dam(/((?!/subassets)(?!connectedassets).)&#42;/)renditions/original |
+   | /content/dam(/.&#42;/)renditions/original | /content/dam(/((?!connectedassets).)&#42;/)renditions/original |
+   | /content/dam(/.&#42;)/jcr:content/metadata | /content/dam(/((?!connectedassets).)&#42;/)jcr:content/metadata |
 
    >[!NOTE]
    >
