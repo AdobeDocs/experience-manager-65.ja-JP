@@ -9,7 +9,7 @@ topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -114,5 +114,3 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    >[!NOTE]
    >
    >「送信」ボタンはレターの必須変数がすべて入力されるまで有効になりません。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
