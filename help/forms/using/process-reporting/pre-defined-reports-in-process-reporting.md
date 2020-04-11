@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d93375e-ec37-4445-96ea-d315676787b4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -123,5 +123,3 @@ AEM Formsプロセスレポートには、次の *既成のレポートが付属
    * **更新**:レポートを最新のデータで更新します。ストレージ
    * **凡例の色を変更**:レポートの凡例の色を選択して変更する
    * **CSVに書き出し**:レポートからデータを書き出し、コンマ区切りファイルにダウンロードする
-
-[サポートへのお問い合わせ](https://www.adobe.com/jp/account/sign-in.supportportal.html)
