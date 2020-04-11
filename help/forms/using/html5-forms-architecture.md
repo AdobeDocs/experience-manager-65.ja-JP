@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -182,4 +182,4 @@ Profile ノードに **xfaforms/profile** の値を持つ **sling:resourceSuperT
 
 上記のとおり、プロファイルレンダラー JPS は Sling include をとおして Forms サービスをを呼び出します。また、この JSP は管理設定または要求パラメーターに応じて、さまざまなデバッグオプションも設定します。
 
-HTML5 フォームを使用することで、開発者はプロファイルとプロファイルレンダラーを作成してフォームの外観をカスタマイズできるようになります。例えば、HTML5 フォームでは、開発者はフォームをパネル内または既存の HTML ポータルの &lt;div> セクションに統合できます。カスタムフォームの作成について詳しくは、「[カスタムプロファイルの作成](/help/forms/using/custom-profile.md)」を参照してください。[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
+HTML5 フォームを使用することで、開発者はプロファイルとプロファイルレンダラーを作成してフォームの外観をカスタマイズできるようになります。例えば、HTML5 フォームでは、開発者はフォームをパネル内または既存の HTML ポータルの &lt;div> セクションに統合できます。カスタムフォームの作成について詳しくは、「[カスタムプロファイルの作成](/help/forms/using/custom-profile.md)」を参照してください。
