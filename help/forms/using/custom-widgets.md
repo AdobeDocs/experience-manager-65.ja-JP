@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -32,7 +32,7 @@ Mobile Forms でカスタムウィジェットをプラグインできます。�
 
 ### ウィジェットを作成します {#create-a-widget}
 
-HTML5フォームは、新しいウィジェットを作成するために拡張できるウィジェットフレームワークの実装を提供します。 この実装は jQuery ウィジェット *abstractWidget* です。これを拡張して新しいウィジェットを作成することができます。新しいウィジェットは、以下に記述する関数を拡張 / 上書きすることによって機能させることができます。
+HTML5フォームは、新しいウィジェットを作成するために拡張可能なウィジェットフレームワークの実装を提供します。 この実装は jQuery ウィジェット *abstractWidget* です。これを拡張して新しいウィジェットを作成することができます。新しいウィジェットは、以下に記述する関数を拡張 / 上書きすることによって機能させることができます。
 
 <table>
  <tbody>
@@ -42,11 +42,11 @@ HTML5フォームは、新しいウィジェットを作成するために拡張
   </tr>
   <tr>
    <td>render</td>
-   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、&lt;a&gt;、&lt;input&gt;、&lt;li&gt; などです。返された要素は $userControl として使用されます。$userControlで上記の制約を指定した場合、AbstractWidgetクラスの関数は期待どおりに動作します。そうでない場合は、一般的なAPI（フォーカス、クリック）の一部に変更が必要です。 </td>
+   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、&lt;a&gt;、&lt;input&gt;、&lt;li&gt; などです。返された要素は $userControl として使用されます。$userControlで上記の制約を指定した場合、AbstractWidgetクラスの関数は期待どおりに動作します。そうでない場合、一般的なAPI（フォーカス、クリック）の一部は変更が必要です。 </td>
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> blur:XFA_EXIT_EVENT,<br /> }<br /> ：この例は、blurがHTMLイベントで、XFA_EXIT_EVENTが対応するXFAイベントであることを示しています。 </td>
+   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> blur:XFA_EXIT_イベント,<br /> }<br /> この例は、blurがHTMLイベントで、XFA_EXIT_イベントが対応するXFAイベントであることを示しています。 </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -54,7 +54,7 @@ HTML5フォームは、新しいウィジェットを作成するために拡張
   </tr>
   <tr>
    <td>getCommitValue</td>
-   <td>ウィジェットフレームワークは、ウィジェットの値が XFAModel に保存されたときに（例えば textField の exit イベント時に）毎回この関数を読み込みます。実装は、ウィジェットに保存された値を返す必要があります。 ハンドラーには、オプションの新しい値が指定されます。</td>
+   <td>ウィジェットフレームワークは、ウィジェットの値が XFAModel に保存されたときに（例えば textField の exit イベント時に）毎回この関数を読み込みます。実装は、ウィジェットに保存された値を返す必要があります。 ハンドラーは、オプションの新しい値を指定します。</td>
   </tr>
   <tr>
    <td>showValue</td>
@@ -96,12 +96,10 @@ window.formBridge.registerConfig("widgetConfig",
 ..
 }*
 
-ここで「identifier」は、特定のフィールド、特定のタイプのフィールドのセット、またはすべてのフィールドを表すjQuery CSSセレクターです。 次に、様々なケースでの識別子の値を示します。
+&quot;identifier&quot;は、特定のフィールド、特定のタイプのフィールドのセット、またはすべてのフィールドを表すjQuery CSSセレクターです。 次のリストは、異なるケースでの識別子の値です。
 
 | 識別子のタイプ | 識別子 | 説明 |
 |---|---|---|
 | fieldname の名前を持つ特定のフィールド | 識別子:&quot;div.fieldname&quot; | 「fieldname」の名前を持つすべてのフィールドはウィジェットの使用によりレンダリングされます。 |
-| 「type」タイプのすべてのフィールド（typeはNumericField、DateFieldなど）： | 識別子:&quot;div.type&quot; | TimefieldとDateTimeFieldの場合、タイプはtextfieldです。これらのフィールドはサポートされていません。 |
+| 「type」（typeはNumericField、DateFieldなど）タイプのすべてのフィールド： | 識別子:&quot;div.type&quot; | TimefieldおよびDateTimeFieldの場合、タイプはtextfieldです。これらのフィールドはサポートされていないためです。 |
 | すべてのフィールド | 識別子：&quot;div.field&quot; |  |
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
