@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -105,9 +105,9 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>TaskManager の送信 API を使用してタスクに関連付けられたフォームデータ（文字列として渡された）を送信します。TaskManager の送信 API を呼び出さないフレックスフォームに使用されます。</td>
   </tr>
   <tr>
-   <td>save</td>
+   <td>保存</td>
    <td>ProcessManagementTaskService</td>
-   <td>save</td>
+   <td>保存</td>
    <td>タスクをサーバーに保存します。</td>
   </tr>
   <tr>
@@ -353,7 +353,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>removeProperty</td>
    <td>WorkspacePropertyService</td>
-   <td> を削除します。</td>
+   <td>delete</td>
    <td>ユーザーのワークスペースプロパティを削除します。</td>
   </tr>
   <tr>
@@ -400,6 +400,3 @@ AEM Forms ワークスペースでは次の API が使用されています。
   </tr>
  </tbody>
 </table>
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
-
