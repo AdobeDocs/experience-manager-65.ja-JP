@@ -11,7 +11,7 @@ topic-tags: designer
 discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -63,7 +63,7 @@ source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
 
 ![geolocation](assets/geolocation.png)
 
-******** A.ブラ **シB消しゴム** C.**Geolocation** D.位置情報
+**A.** ブラ **シB** 消しゴ **ムC.** Geolocation **D.** 位置情報
 
 ### ジオタグ付け {#geo-tagging}
 
@@ -101,5 +101,3 @@ While using this feature, a user can click the **Eraser** icon to clear the fiel
 
 * （モバイルデバイス）署名フィールドを長押しし、確認ダイアログで「**はい**」をタップします。
 * （デスクトップ）署名フィールドにマウスポインターを置いて「**キャンセル**」アイコンをクリックし、確認ダイアログで「**はい**」をクリックします。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
