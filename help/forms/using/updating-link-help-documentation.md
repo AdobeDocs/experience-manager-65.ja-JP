@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -26,7 +26,7 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
 
 オンラインドキュメントの URL を更新するには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」の後に以下の手順に従います。
 
-1. ファイルをから `userinfo.html` にコピ `/libs/ws/js/runtime/templates` ーしま `/apps/ws/js/runtime/templates`す。
+1. Copy the `userinfo.html` file from `/libs/ws/js/runtime/templates` to `/apps/ws/js/runtime/templates`.
 1. 変更点:
 
    ```
@@ -49,5 +49,3 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
 
    1. /apps/ws/js/registry.js を開いて編集します。
    1. Search and replace `text!/lc/libs/ws/js/runtime/templates/userinfo.html` with `text!/lc/apps/ws/js/runtime/templates/userinfo.html`.
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
