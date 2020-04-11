@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -26,14 +26,14 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
   <tr>
    <th>プロパティ </th>
    <th>説明<br /> </th>
-   <th>Exception</th>
+   <th>例外</th>
   </tr>
   <tr>
    <td><code>prevText</code></td>
    <td>ユーザーの操作に応じて変更される前のフィールドのコンテンツを指定します。この値は「元に戻す」と同様に、再び呼び出すことができます。</td>
    <td><p>ドロップダウンリストとリストボックスでは機能しません。次の場合、<code>PrevText </code> は正常に機能しません。</p>
     <ul>
-     <li>iPadの数値フィールドに一部の特殊文字キー(例えば、$、(、)、&amp;、@など)を入力する際、および </li>
+     <li>iPadの数値フィールドに一部の特殊文字キー(例えば、$、(、)、&amp;、@など)を入力すると、 </li>
      <li>日付フィールド（カレンダーをとおして日付が入力される場合）<br /> </li>
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td>
   </tr>
@@ -60,7 +60,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
   <tr>
    <td>change</td>
    <td>ユーザーがフィールドに入力したり貼り付けたりした直後の値を表します。 </td>
-   <td><p>changeプロパティは、次の場合には正しく機能しません。</p>
+   <td><p>次の場合、changeプロパティは正しく機能しません。</p>
     <ul>
      <li>テキストを選択置換するとき。</li>
      <li>テキストの削除、コピー、およびペーストするとき。</li>
@@ -99,7 +99,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
   <tr>
    <td><code>name</code></td>
    <td>現在のアプリケーションの名前を返します。</td>
-   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、次の値が返されます。 <code>Chrome &lt;version&gt;.</code></td>
+   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、 <code>Chrome &lt;version&gt;.</code></td>
   </tr>
   <tr>
    <td><code>numPages</code></td>
@@ -1325,7 +1325,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr>
    <td>app.formsVersion</td>
    <td>ビューアフォームソフトウェアのバージョン番号。スクリプトで下位互換性を保つ場合、このプロパティを確認して、ソフトウェアの新しいバージョンにあるオブジェクト、プロパティ、またはメソッドが使用できるかどうかを特定します。</td>
-   <td>11.001常に。</td>
+   <td>11.001常に</td>
   </tr>
   <tr>
    <td>app.language</td>
@@ -1351,5 +1351,3 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
 >[!NOTE]
 >
 >HTML5 フォームはクライアント側（ブラウザー）でレンダリングされます。サーバー側のスクリプトではなく、クライアント側の **validate** スクリプトおよび **calculate** スクリプトの使用をお勧めします。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
