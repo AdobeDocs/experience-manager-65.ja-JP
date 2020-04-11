@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -166,7 +166,7 @@ ProcessDataPublisherサービスは、AEM Formsデータベースからプロセ
 
 1. 管理者の資格情報を使 **用して** 、管理コンソールにログインします。
 
-   The default URL is `https://'server':port]/adminui/`.
+   デフォルトの URL は `https://'server':port]/adminui/` です。
 
 1. ホーム/サービ **ス** /アプリケーション **/サービス** /サービスに移動し、デ ************ ータ・パブリッシャ・データ・サービスに移動します。
 
@@ -279,5 +279,3 @@ AEM Forms環境には、データが設定された時点の環境が含まれ�
 * **[!UICONTROL 同期]**:埋め込みのプロセスレポートリポジトリをAEM Formsデータベースと同期します。
 * **[!UICONTROL ヘルプ]**:表示プロセスのレポート。
 * **[!UICONTROL ログアウト]**:「Log out of Process」レポート
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
