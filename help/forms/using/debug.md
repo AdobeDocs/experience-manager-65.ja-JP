@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -60,14 +60,14 @@ In the exception details, search for word **caused by**.
    * adobe-lc-forms-content-pkg-&lt;version>.zip
    * adobe-lc-forms-runtime-pkg-&lt;version>.zip
 
-1. https://&lt;server>:&lt;port>/system/console/bundlesにあるCQ webコンソール（Felixコンソール）にログインします。
+1. CQ Web Console(Felix Console)(https://&lt;server>:&lt;port>/system/console/bundles)にログインします。
 
    次のバンドルのステータスが「アクティブ」であることを確認します。
 
    * scala-lang.bundle [osgi]
    (com.adobe.livecyclescala-lang.bundle)
 
-   * Adobe XFA Forms Renderer
+   * Adobe XFA Formsレンダラー
    (com.adobe.livecycle.adobe-lc-forms-core)
 
    * Adobe XFA Forms LC Connector
@@ -76,7 +76,7 @@ In the exception details, search for word **caused by**.
 ## 問題：フォームがスタイルなしでレンダリングされる {#problem-form-renders-without-styles}
 
 1. In your browser, open **Developer Tools**. Ensure that profile.css is available.
-1. profile.cssファイルが使用できない場合は、https://&lt;server>:&lt;port>/crx/deでCRX DEにログインします。
+1. プロファイル.cssファイルが使用できない場合は、https://&lt;server>:&lt;port>/crx/deでCRX DEにログインします。
 1. 左のフォルダー階層で、/etc/clientlibs/fd/xfaforms/ に移動します。フォルダーにリストされている css.txt ファイルを開きます。
 
    * プロファイル
@@ -100,20 +100,20 @@ In the exception details, search for word **caused by**.
 
 ### 問題：予期しないエラーが発生した {#problem-unexpected-error-encountered}
 
-1. フォームのURLに、クエリパラメーターdebugClientLibsを追加し、値をtrueに設定します(例：https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
+1. フォームのURLに、クエリパラメーターdebugClientLibsを追加し、値をtrueに設定します(例：https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;xdpファイルの名前>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
 1. Chrome のようなデスクトップブラウザーでデベロッパーツール／Console に移動します。
 1. ログを開いて、エラーのタイプを特定します。ログの詳細については、「[HTML5 フォームのログ](/help/forms/using/enable-logs.md)」を参照してください。
 1. デベロッパーツール／Console に移動します。スタックトレースを使用して、エラーを起こしているコードを探します。エラーをデバッグして問題を解決します。
 
    >[!NOTE]
    >
-   >スクリプティングの失敗の場合は、フォームの PDF レンダリングでも問題が発生するかを確認します。「はい」の場合、フォームスクリプティングロジックに問題があります。
+   >スクリプティングの失敗の場合は、フォームの PDF レンダリングでも問題が発生するかを確認します。「はい」の場合、フォームのスクリプティングロジックに問題があります。
 
 ## 問題：フォームを送信できない {#problem-unable-to-submit-the-form}
 
 1. AEM サーバーにアクセスする権限を持っていること、およびサーバーに接続されていることを確認します。
 1. パラメーター submitUrl が正しいことを確認します。
-1. Enable the client side logs as mentioned at [Logs for the HTML5 forms](/help/forms/using/enable-logs.md) using debug option as **1-a5-b5-c5**. 次に、フォームをレンダリングし、送信を確認します。ブラウザーのデバッグコンソールを開き、エラーがあるかどうかを確認します。
+1. Enable the client side logs as mentioned at [Logs for the HTML5 forms](/help/forms/using/enable-logs.md) using debug option as **1-a5-b5-c5**. 次に、フォームをレンダリングし、送信を確認します。ブラウザーのデバッグコンソールを開き、エラーが発生したかどうかを確認します。
 1. 「[HTML5 フォームのログ](/help/forms/using/enable-logs.md)」に記載されている通りに、サーバーログを見つけます。サーバーログで送信の際にエラーが発生したかを確認します。
 
 ## 問題：ローカライズされたエラーメッセージが表示されない {#problem-localized-error-messages-do-not-display}
@@ -143,7 +143,7 @@ In the exception details, search for word **caused by**.
 ## 問題：画像が表示されない {#problem-image-not-showing-up}
 
 1. 画像 URL が正しいことを確認します。
-1. お使いのブラウザーがこのタイプの画像をサポートしているかどうかを確認します。
+1. お使いのブラウザがこのタイプの画像をサポートしているかどうかを確認します。
 1. In the exception details, search for word **caused by**.
 
    推定原因は、URL にある 1 つ以上のパラメーターが間違っていることです。
@@ -179,5 +179,3 @@ In the exception details, search for word **caused by**.
 1. デスクトップブラウザーで、デベロッパーツール／Resources に移動します。
 
    画像が表示されるか、左側で「Frames」を確認します。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
