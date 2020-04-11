@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 9950288c-b5a2-4945-afad-be9ce2abc8e9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 You can [update the form](/help/forms/using/working-with-form.md), [annotate it](/help/forms/using/add-attachments.md) with photographs, and scribble notes. フォームの更新を続ける際は、ドラフトとして保存することをお勧めします。記入したフォームを後で送信する場合は、ドラフトとして保存しておくと便利です。
 
 To enable save as draft feature for forms saved on forms portal, see [Saving an HTML5 form as a draft](/help/forms/using/saving-html5-form-draft.md).
-To configure submission of adaptive forms, see [Drafts and submissions component](/help/forms/using/draft-submission-component.md). （AEM Forms JEEサーバーと同期したフォームに対しては無効です）。
+To configure submission of adaptive forms, see [Drafts and submissions component](/help/forms/using/draft-submission-component.md). （AEM Forms JEEサーバーと同期されたフォームに対しては無効です）。
 
 To create a draft, open the form and tap the **Save as Draft** ![save-as-draft](assets/save-as-draft.png). ドラフトの名前を入力して、「**保存**」をタップします。ドラフトは Drafts フォルダーに保存され、サーバーと同期されます。アプリケーションがオフラインの場合は、Outbox フォルダーに保存されます。
 
@@ -43,5 +43,3 @@ Drafts フォルダーにはすべてのドラフトが一覧表示されます�
 1. Select **Drafts** from the drop-down next to Search.
 1. A form with the edit icon ![edit-draft-app](assets/edit-draft-app.png) denotes a draft. ドラフトの横にある水平省略記号をタップします。
 1. 水平省略記号をタップして表示されたオプションの一覧から、「**ドラフトを削除**」をタップします。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
