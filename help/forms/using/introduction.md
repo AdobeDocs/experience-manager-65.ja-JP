@@ -9,7 +9,7 @@ topic-tags: hTML5_forms
 discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -45,5 +45,3 @@ HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを�
 ### フォームのカスタマイズ {#forms-customization}
 
 HTML5 フォームは、標準 HTML5 構成を使用してフォームテンプレートをレンダリングします。これにより、Web テクノロジ、主にCSS および JavaScript を使用した、HTML5 形式のフォームの拡張およびカスタマイズが容易になります。 既存のウィジェットの外観を簡単にカスタマイズし、独自のウィジェットを作成するか、フォームのカスタムスタイルを使用できます。 For more information about creating custom widgets and customizing existing widgets, see [Plug in custom widgets with HTML5 forms](../../forms/using/custom-widgets.md).
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
