@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 プロセスインスタンスリストは、AEM Forms Workspace のトラッキングタブに表示されます。
 
-プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティが各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスコンポーネントモデルに属性として保存され、そのビューとテンプレートで使用できます。
+プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティが各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスコンポーネントモデルに属性として保存され、その表示とテンプレートで使用できます。
 
 <table>
  <tbody>
@@ -73,7 +73,7 @@ To display the `description` property of the process instance in the process ins
 1. 以下の操作を実行してください。
 
    1. 存在しない場合は、/libs/ws/js/runtime/templates/processinstance.html を /apps/ws/js/runtime/templates/ にコピーします。「**すべて保存**」をクリックします。
-   1. プロセス説明divを、class = &#39;processDescription&#39;のprocessinstance.htmlに追加します。
+   1. プロセ追加スの説明div(class = &#39;processDescription&#39;)がprocessinstance.html内にある。
 
    ```
    <div class="processDescription" title="<%= description%>"><%= description%></div>
@@ -82,7 +82,7 @@ To display the `description` property of the process instance in the process ins
 1. 以下の操作を実行してください。
 
    1. /apps/ws/js/registry.js を開いて編集します。
-   1. /ws/js/runtime/templates/processinstance.htmlで検索して置 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`換し `text!/lc/`**ま&#x200B;**す。
+   1. 検索して、apps `text!/lc/libs/ws/js/runtime/templates/processinstance.html`/ws/js/runtime/templates/processinstance.htmlに置 `text!/lc/`**き換&#x200B;**えます。
 
 1. 上記の変更には、次のようにしてスタイルシート /apps/ws/css/newStyle.css にエントリを追加することによって、CSS ファイルを更新する必要があります。
 
@@ -94,5 +94,3 @@ To display the `description` property of the process instance in the process ins
        padding : 2px;
    }
    ```
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
