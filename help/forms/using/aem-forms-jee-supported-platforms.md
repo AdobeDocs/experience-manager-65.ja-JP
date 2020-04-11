@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b41060207a1fb522905259a0d33df690d606929d
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -245,7 +245,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
  <tbody>
   <tr>
    <th><p><strong> プラットフォーム</strong></p> </th>
-   <th><p><strong>サポート レベル</strong></p> </th>
+   <th><p><strong>サポートレベル</strong></p> </th>
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
   </tr>
   <tr>
@@ -571,7 +571,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
  <tbody>
   <tr>
    <th><p><strong>ブラウザー（ベース）</strong></p> </th>
-   <th><p><strong>サポート レベル</strong></p> </th>
+   <th><p><strong>サポートレベル</strong></p> </th>
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
   </tr>
   <tr>
@@ -616,7 +616,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >
 >以下にデスクトップに対する一部のブラウザー関連の例外事項を示します。
 >
->* 多くの最新のブラウザーは現在、NPAPI ベースのプラグインをサポートしていません。For information about how it impacts AEM Forms applications and workflows, see [Discontinuation of NPAPI browser plugins and its impact](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
+>* 多くの最新のブラウザーは現在、NPAPI ベースのプラグインをサポートしていません。For information about how it impacts AEM Forms applications and workflows, see [Discontinuation of NPAPI browser plugins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
 >* Safari は Macintosh OS X でのみサポートされています。
 >* Acrobat DC 以降のバージョンでは、Workspace は Macintosh OS X 10.6 および 10.7 上の Safari 5.1 をサポートしています。For more information about Safari 5.1 compatibility with Adobe Reader, Acrobat, see [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
 >* Administration Console は Safari ではサポートされていません。
@@ -707,12 +707,10 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 アドビシステムズ社では、サードパーティベンダーがリリース時に JEE 上の AEM Forms がサポートするバージョンとの後方互換性を保証していると仮定して、サードパーティベンダーの緊急および推奨パッチをサポートします。アドビシステムズ社は、JEE 上の AEM Forms ドキュメントに記載の最小パッチレベル後にリリースされたパッチのみをサポートします。
 
-場合によっては、アドビシステムズ社は、主要な機能を変更しそのために完全な後方互換性をサポートしなくなったサードパーティアップデートをサポートしません。For details on the supported updates, see [Supported patch definitions](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) for specific vendor products and the patch types Adobe supports.
+場合によっては、アドビシステムズ社は、主要な機能を変更しそのために完全な後方互換性をサポートしなくなったサードパーティアップデートをサポートしません。For details on the supported updates, see [Supported patch definitions](https://helpx.adobe.com/jp/aem-forms/aem-forms-third-party-software-patch.html) for specific vendor products and the patch types Adobe supports.
 
 アドビシステムズ社の管理の及ばない状況においては、後方互換性を主張しているサードパーティ製パッチは、アドビ製品またはお客様の環境に悪い影響を及ぼす可能性があります。このような場合、アドビシステムズ社は、お客様がサードパーティからの緊急パッチを重要なシステムに適用する前にその影響を評価することを推奨します。アドビシステムズ社はサードパーティと共に妥当なビジネス努力を払って、通常のアドビサポートプログラムを通してあるいはサードパーティがパッチの問題を修正することによって、そのような問題を解決します。このことは、アドビによってサポートされる新たにリリースされたサードパーティ製パッチが、ベンダーによってマニュアルに記載されているようにまたは JEE 上の AEM Forms と機能することを保証するものではありません。
 
 アドビシステムズ社は、任意の時点で、JEE 上の AEM Forms リリースおよびそれらのサポートされているパッチ定義によってサポートされているサードパーティリファレンスプラットフォームを変更する権利を保留します。
 
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
