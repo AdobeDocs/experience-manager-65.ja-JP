@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -25,7 +25,7 @@ AEM Forms Workspace では、複数のフォームタイプをシームレスに
 * 画像
 * サードパーティアプリケーション（たとえば、Correspondence Management など）
 
-このドキュメントでは、表示を中断することなく顧客の要件を満たすように、セマンティックカスタマイゼーションおよびコンポーネントの再利用の観点からこれらのレンダラーの動作を説明します。AEM Forms Workspaceではユーザーインターフェイスやセマンティックの変更が可能ですが、様々なフォームタイプのレンダリングロジックを変更しないことをお勧めします。そうしないと、予期しない結果が生じる可能性があります。 このドキュメントは、別々のポータルで同じワークスペースコンポーネントを使用する、同じフォームのレンダリングをサポートするためのガイド／ナレッジであり、レンダリングロジック自体を変更するためのものではありません。
+このドキュメントでは、表示を中断することなく顧客の要件を満たすように、セマンティックカスタマイゼーションおよびコンポーネントの再利用の観点からこれらのレンダラーの動作を説明します。AEM Forms Workspaceではユーザーインターフェイスやセマンティックの変更が許可されますが、様々なフォームタイプのレンダリングロジックを変更しないことをお勧めします。変更しないと、予期しない結果が生じる場合があります。 このドキュメントは、別々のポータルで同じワークスペースコンポーネントを使用する、同じフォームのレンダリングをサポートするためのガイド／ナレッジであり、レンダリングロジック自体を変更するためのものではありません。
 
 ## PDF フォーム {#pdf-forms}
 
@@ -37,13 +37,13 @@ In AEM Forms workspace, PDFTaskForm view communicates with the `FormBridge`javas
 
 **PDFTaskForm 表示 - pdf.html**
 
-/を使用した `window.postMessage` 通信 `window.attachEvent('message')`
+/を使用した通 `window.postMessage` 信 `window.attachEvent('message')`
 
 このメソッドは、親フレームと I フレーム間の標準的な通信方法です。以前に開いていた PDF フォームからの既存のイベントリスナーは、新しく追加する前に削除されます。この削除では、タスクの詳細表示でフォームタブと履歴タブを切り替えることも考慮しています。
 
 **レンダリングされた PDF 内の pdf.html -`FormBridge`javascript**
 
-/を使用した `pdfObject.postMessage` 通信 `pdfObject.messageHandler`
+/を使用した通 `pdfObject.postMessage` 信 `pdfObject.messageHandler`
 
 このメソッドは、HTML からの PDF javascript との標準的な通信方法です。PdfTaskForm 表示は、フラット PDF にも対応していて、平面的にレンダリングします。
 
@@ -61,7 +61,7 @@ XDP フォームが CRX にデプロイされたモバイルフォームのパ�
 
 >[!NOTE]
 >
->NewHTMLTaskForm表示の内容を変更することはお勧めしません。
+>NewHTMLTaskFormフォルダーの内容は変更しないことをお勧めします。表示
 
 ## Flex フォームおよびガイド {#flex-forms-and-guides}
 
@@ -85,15 +85,12 @@ The communication happens using `swfObject.postMessage` / `window.flexMessageHan
 
 AEM Forms workspace listens on `window.global.postMessage([Message],[Payload])`
 
-[]`SubmitMessage``CancelMessage`Message`ErrorMessage` は、||| `actionEnabledMessage`を含めま `runtimeMap`す。 サードパーティアプリケーションは、必要に応じてAEM Forms Workspaceに通知するには、このインターフェイスを使用する必要があります。 AEM Forms Workspaceは、タスクウィンドウをクリーンアップできるように、タスクが送信されたことを知る必要があるので、このインターフェイスの使用は必須です。
+[Messageは] 、 `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`を含めま `runtimeMap`す。 サードパーティアプリケーションは、必要に応じてAEM Forms Workspaceに通知するために、このインターフェイスを使用する必要があります。 AEM Forms Workspaceは、タスクウィンドウをクリーンアップできるように、タスクが送信されたことを知る必要があるので、このインターフェイスの使用は必須です。
 
 **AEM Forms Workspaceからサードパーティアプリケーションへの通信**
 
-AEM Forms Workspaceのダイレクトアクションボタンが表示されている場合は、[が呼び出さ `window.[External-App-Name].getMessage([Action])`れます。ここで、[ `Action]` はから読み取られま `routeActionMap`す。 The third-party application must listen on this interface, and then notify AEM Forms workspace via the `postMessage ()` API.
+AEM Forms Workspaceの直接アクションボタンが表示されている場合は、[が呼び出 `window.[External-App-Name].getMessage([Action])`されます。こ `Action]``routeActionMap`の[は、 The third-party application must listen on this interface, and then notify AEM Forms workspace via the `postMessage ()` API.
 
 For example, a Flex application can define `ExternalInterface.addCallback('getMessage', listener)` to support this communication. If the third-party application wants to handle form submission via its own buttons, then you should specify `hideDirectActions = true() in the runtimeMap` and you may skip this listener. 従って、この構築はオプションです。
 
 サードパーティアプリケーションの Correspondence Management との統合の詳細については、「[AEM Forms Workspace での Correspondence Management の統合](/help/forms/using/integrating-correspondence-management-html-workspace.md)」を参照してください。
-
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
