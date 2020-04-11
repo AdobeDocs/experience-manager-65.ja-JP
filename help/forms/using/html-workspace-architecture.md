@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c3a312fb-f684-477d-916d-2d3c99aa7607
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -28,11 +28,9 @@ AEM Forms Workspace は、CRX™ にホスティングされている Web アプ
 
 AEM Forms サーバーは、JDBC を通して AEM Forms データベースにアクセスします。データベースは、タスク、プロセスとそのインスタンス、ユーザー、および関連情報を維持します。
 
-AEM Forms Workspaceは、モジュール式のJavaScript™コンポーネントに組み込まれており、これらのコンポーネントは、他のWebアプリケーションで個別にカスタマイズしたり再利用したりできます。 コンポーネントは Web アプリケーションに構造を提供する JavaScript ライブラリである BackBone に基づいています。コンポーネントと BackBone とのインタラクションを説明する記事の詳細については、[ここ](/help/forms/using/backbone-interaction.md)を参照してください。CRX フォルダー構造のコンポーネントの組織については、[この記事](/help/forms/using/folder-structure.md)で説明しています。
+AEM Forms Workspaceは、モジュール式のJavaScript™コンポーネントで構成されており、これらのコンポーネントは、他のWebアプリケーションで個別にカスタマイズしたり、再利用したりできます。 コンポーネントは Web アプリケーションに構造を提供する JavaScript ライブラリである BackBone に基づいています。コンポーネントと BackBone とのインタラクションを説明する記事の詳細については、[ここ](/help/forms/using/backbone-interaction.md)を参照してください。CRX フォルダー構造のコンポーネントの組織については、[この記事](/help/forms/using/folder-structure.md)で説明しています。
 
 AEM Forms Workspace のために配信されるパッケージを以下に示しています。
 
 * `adobe-lc-workspace-pkg-<version>.zip`：これは CRX パッケージです。すなわち、Package Manager を使用して CRX 内にデプロイできます。
 * `adobe-lc-workspace-<version>-src.zip`:これは、デプロイパッケージ（Ship、Debug、Devの各パッケージ）を作成するためのAEM Forms Workspaceとスクリプトの完全なコードを含むアーカイブです。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
