@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -45,12 +45,12 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   <tr>
    <td>画像</td>
    <td>データ URI スキームは画像の表示に使用されます。すべてのブラウザーの最新バージョンはこのスキームをサポートしていますが、それぞれのブラウザーでサポートされる画像形式の範囲に違いがあります。<br /> </td>
-   <td>.gif、.png、.jpeg、.bmp、および.tiff形式がサポートされています。</td>
+   <td>.gif、.png、.jpeg、.bmp、.tiff形式がサポートされています。</td>
   </tr>
   <tr>
    <td>ページネーション<br /> </td>
    <td><p>HTML5 フォームは、PDF フォームと同様の外観を提供するためにパネルとボックスに分けられています。ページのサイズは動的に計算されます。HTML5 フォーム内のページのすべてのコンテンツが削除されたか非表示としてマークされた場合、空白ページは非表示になり、ページ間にある空白ページの空白スペースは表示されません。</p> <p>データをマージするかスクリプトのコンテンツをページに追加した場合、新しく追加したコンテンツを取り込めるようにページの長さが拡張されます。新しく追加したコンテンツを取り込むために新しいページがフォームに追加されることはありません。 </p> <p><strong>注意：</strong>HTML5 フォーム内のページのすべてのコンテンツが削除されたか非表示としてマークされた場合、1 ページと 2 ページ間にある空白ページ（空白スペース）は表示されますが、その他のページ間にある空白ページ（空白スペース）は表示されません。</p> </td>
-   <td>PDFのページ番号は、結合されたデータコンテンツまたはユーザーコンテンツに依存し、ページ数はそれに基づいて増減します。</td>
+   <td>PDFのページ番号は、結合されたデータコンテンツまたはユーザーコンテンツに依存し、それに基づいてページ数が増減されます。</td>
   </tr>
   <tr>
    <td>ヘッダー/フッター </td>
@@ -64,7 +64,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   </tr>
   <tr>
    <td>XFA スクリプト API</td>
-   <td>最も一般的に使用されるXFAスクリプト構成要素をサポートします。 For details list of supported constructs, see <a href="/help/forms/using/scripting-support.md">scripting support</a>.</td>
+   <td>最も一般的に使用されるXFAスクリプト構成をサポートします。 For details list of supported constructs, see <a href="/help/forms/using/scripting-support.md">scripting support</a>.</td>
    <td>すべての XFA スクリプトの構成要素をサポート。</td>
   </tr>
   <tr>
@@ -81,5 +81,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 </table>
 
 <!--Follow the best practices to enable a form template for HTML5 renditions and ensure that the behavior and appearance of HTML5 forms and XFA-based PDF is consistent. For detailed list of best practices, see [Best practices to design an HTML5 form.](/help/forms/using/best-practices-design-html5-forms.md)-->
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
