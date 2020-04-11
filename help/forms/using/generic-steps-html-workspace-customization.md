@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -98,5 +98,3 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
 
    URLにアクセスし、管 `https://'[server]:[port]'/lc/ws` 理者/パスワードの資格情報を使用してログインします。 ブラウザーがにリダイレクトされま `https://'[server]:[port]'/lc/apps/ws/index.html`す。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
