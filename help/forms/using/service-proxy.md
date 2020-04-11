@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: 081f7c17-4e5d-4c7e-a5c3-5541a29b9d55
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -43,7 +43,7 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
 
 #### サーバー側スクリプトと Web サービスの実行 {#execute-server-sided-scripts-and-web-services}
 
-サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、サーバー側スクリプトおよびWebサービスで使用されるすべてのパラメーターを示します。
+サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、リスト側スクリプトとWebサービスで使用されるすべてのパラメーターを示します。
 
 <table>
  <tbody>
@@ -133,5 +133,3 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
 * If proxy posts the data, the proxy service passes all the parameters except submitUrl to the */bin/xfaforms/submitaction* end point and receives xml bytes in response stream. 次に、プロキシサービスはデータ xml バイトを submitUrl に投稿して処理します。
 
 * データ（POST リクエスト）をサーバーに送信する前に、HTML5 forms はサーバーに接続していて使用できることを確認します。接続と可用性を確認するために、HTML forms は空のヘッドリクエストをサーバーに送信します。サーバーが使用できる場合は、HTML5 forms はデータ（POST リクエスト）をサーバーに送信します。If the server is not available, an error message, *Could’t connect to the server,* is displayed. この事前の検出により、ユーザーがフォームに再記入するなどの問題を回避できます。プロキシサーブレットはヘッドリクエストを処理し、例外をスローしません。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
