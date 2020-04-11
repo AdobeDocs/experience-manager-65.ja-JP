@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -262,7 +262,7 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
 
 ### タスクの詳細タスクアクションポップアップメニュー {#task-details-task-action-pop-up-menu}
 
-「詳細」タスクアクションポップアップメニューをカスタマイズするには、次の手順を実行します。
+次の手順を実行して、詳細タスクアクションポップアップメニューをカスタマイズします。
 
 * Copy the /libs/ws/js/runtime/templates/taskdetails.html file to the `/apps/ws/js/runtime/templates/` folder:
 * テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。For example, the *new code* listed below encapsulates the icon tag inside the anchor tag:
@@ -359,5 +359,3 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
 * /apps/ws/js/registry.js ファイルを開いて編集します。
 * 次のテキストを探します。 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
 * Replace the located text with the following text: `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
