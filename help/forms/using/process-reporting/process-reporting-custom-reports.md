@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -30,7 +30,7 @@ QueryBuilderのRESTインターフェイスを使用するか、QueryBuilder API
 
 ## QueryBuilderのRESTインターフェイスの使用 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じて、アセット共有クエリビルダーの機能を公開します。 次の手順を実行する前に、 [CRX QueryBuilder RESTインターフェイスの使用方法](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)（英語のみ）を学習します。
+CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じて、アセット共有クエリビルダーの機能を公開します。 次の手順を実行する前に、 [CRX QueryBuilder RESTインターフェイスの使用方法](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)（英語のみ）を説明します。
 
 1. URLの参照 `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. プロセスクエリノードの構造とレポートのプロパティに基づいてストレージを作成します。
@@ -658,4 +658,4 @@ response.setCharacterEncoding("utf-8");
 
 記事で説明し `sample-report-pkg-1.zip` ているカスタムレポートとUIをプロセス管理UIに統合するには、パッケージを読み込みます。
 
-[Get File](assets/sample-report-pkg-1.zip)[Contact Support](https://www.adobe.com/account/sign-in.supportportal.html)
+[ファイルを入手](assets/sample-report-pkg-1.zip)
