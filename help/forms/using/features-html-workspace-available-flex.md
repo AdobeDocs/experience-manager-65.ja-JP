@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # Flex Workspace では利用できない AEM Forms Workspace の機能 {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
 
-AEM Forms Workspaceは、FlexベースのWorkspaceを凌ぐ革新的な機能を備え、ビジネス統合とユーザー生産性の向上に役立つ機能と機能を提供します。
+AEM Forms Workspaceは、FlexベースのWorkspaceを凌ぐ革新的なワークスペースであり、オファー機能や、ビジネス統合とユーザーの生産性の向上に役立つ機能を備えています。
 
 これらの機能の概要を以下に簡単に説明します。詳細については、この記事の最後にある関連項目を参照してください。
 
@@ -35,10 +35,8 @@ AEM Forms Workspaceは、FlexベースのWorkspaceを凌ぐ革新的な機能を
 
 ## サードパーティアプリケーションを統合するためのサポート {#support-for-integrating-third-party-applications}
 
-サードパーティアプリケーションに統合できる機能を使用し、ワークフローを完全に AEM Forms Workspace で利用できます。例えば、Correspondence ManagementのレターテンプレートをAEM Forms Workspaceウィンドウ自体のタスクとしてレンダリングできます。 このようにして、AEM Forms Workspace を終了することなく、タスクを完了することができます。See [Integrating Correspondence Management in AEM Forms workspace](/help/forms/using/integrating-correspondence-management-html-workspace.md) for detailed instructions.
+サードパーティアプリケーションに統合できる機能を使用し、ワークフローを完全に AEM Forms Workspace で利用できます。例えば、Correspondence ManagementのレターテンプレートをAEM Forms Workspaceウィンドウ内のタスクとしてレンダリングできます。 このようにして、AEM Forms Workspace を終了することなく、タスクを完了することができます。See [Integrating Correspondence Management in AEM Forms workspace](/help/forms/using/integrating-correspondence-management-html-workspace.md) for detailed instructions.
 
 ## エンドユーザーのデバイスに基づくカスタムタスクレンダリングのサポート {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
 AEM Forms Workspaceは、XDPフォームのHTMLレンダリングをサポートします。 このサポートにより、デバイスまたはユーザーエージェントに基づいて XDP の異なる表示にルーティングするレンダリングプロセスで使用した場合、ユーザーは XDP フォームをモバイルデバイスでは HTML として表示し、デスクトップでは PDF として表示することができます。これにより、さまざまなデバイス上でさまざまな環境で作業をするユーザーに対して、プロセス管理をシームレスに提供することが可能となります。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
