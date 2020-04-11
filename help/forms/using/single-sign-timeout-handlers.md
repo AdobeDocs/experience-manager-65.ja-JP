@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -38,5 +38,3 @@ AEM Forms Workspaceでのタイムアウトは、次のように処理されま�
 >[!NOTE]
 >
 >何も行われない場合、ユーザーはセッションの有効期限が切れる3秒前に、AEM Forms Workspaceから自動的にログアウトされます。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
