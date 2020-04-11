@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -24,7 +24,7 @@ HTML5 フォームは、日付、テキスト、および数値記号の表示�
 
 >[!NOTE]
 >
->現在 Mobiles Forms はパターン形式文字列の編集をサポートしていません。また、DateTimeとTimeのパターン形式文字列の記号はサポートされていません。
+>現在 Mobiles Forms はパターン形式文字列の編集をサポートしていません。また、日付時刻と時刻のパターン形式文字列の記号はサポートされていません。
 
 ## サポートされている日付フィールドの記号 {#supported-date-field-symbols}
 
@@ -104,7 +104,7 @@ HTML5 フォームは、数値のパターン形式文字列の記号をサポ�
 
 PDF フォームでは 1000000 の数値は 1,000,000 として形式設定されます。ただし、HTML フォームではその数値は 1000000 として形式設定されていないままになります。
 
-Supported expressions for Numeric Picture clause in **HTML Forms** are:
+**HTMLフォームでサポートされる数値のパターン形式文字列の式** :
 
 * num.integer{}
 * num.decimal{}
@@ -210,5 +210,3 @@ HTML5 フォームは、次のテキストのパターン形式文字列の式�
 | O | 英数字 1 文字。 |
 | 0（ゼロ） | 英数字 1 文字。 |
 | 9 | 1 桁の数値. |
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
