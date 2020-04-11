@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: d5976ed2-4482-495c-bf77-6d192379cfef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -77,7 +77,7 @@ The **Notes** option lets you add freehand scribbles and text attachments in you
    * **クリア**：スクリーンをクリアします。
    * **「完了」ボタン**：現在の手書きメモを添付します。
    * **キャンセルボタン**: 現在の手書きメモを破棄し、「手書きメモ」ユーザーインターフェイスを閉じます。
-   * ![キーボード](assets/keyboard.png):手書きメモをクリアし、テキストメモを追加できます。
+   * ![キーボード](assets/keyboard.png):手書きメモをクリアし、テキストメモを追加できるようにします。
    ![AEM Forms アプリの手書きメモ画面に表示されたキーボード](assets/keyboard-inapp.png)
 
 ## Attachments in forms synced with the AEM Forms servers without AEM Forms Workflow (AEM Forms on OSGi) {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
@@ -87,6 +87,3 @@ AEM Forms OSGi サーバーと同期するモバイル向けフォームの添�
 フォームレベルの添付ファイルは、アプリ上で AEM Forms OSGi サーバーから読み込んだアダプティブフォームではサポートされません。画像やテキストメモを添付するには、フォームの作成時に、フィールドレベルの添付ファイルを有効にします。ファイルの添付コンポーネントを、コンポーネントブラウザーからフィールド上にドラッグ＆ドロップします。
 
 アダプティブフォームでは、添付されたファイルをレコードのドキュメント（DoR）に表示することができます。See, [Generate Document of Record for non-XFA adaptive forms](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
-
