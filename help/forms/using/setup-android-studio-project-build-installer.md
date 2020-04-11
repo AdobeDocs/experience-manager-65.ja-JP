@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 discoiquuid: fabc981e-0c9e-4157-b0a1-0c13717fb6cd
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -27,7 +27,7 @@ AEM Forms アプリケーションソースを入手するには、以下の手�
    URL: `https://<server>:<port>/crx/packageshare`.
 
 1. ソースパッケージをダウンロードします。パッケージをダウンロードすると、AEM Forms パッケージマネージャーに追加されます。
-1. ダウンロード後、次の場所に移動します。を `https://<server>:<port>/crx/packmgr/index.jsp`選択し、インストールしま `adobe-aemfd-forms-app-src-pkg-<version>.zip`す。
+1. ダウンロード後、次の場所に移動します。をクリ `https://<server>:<port>/crx/packmgr/index.jsp`ックし、をインストールし `adobe-aemfd-forms-app-src-pkg-<version>.zip`ます。
 
 1. ソースコードアーカイブをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開いてください。
 
@@ -69,9 +69,9 @@ The following image displays the directory structure of the `android`folder in t
 
 1. Android™ Studio を起動します。
 
-   **MACユーザーの場合**:フォルダー内 `local.properties` のファイルを更新し、 `[User_Home]/Projects/[your-project]/android` デスクトップ上の場所 `sdk.dir` を変数 `SDK` で指定してください。
+   **MACユーザーの場合**:フォルダー `local.properties` 内のファイルを更 `[User_Home]/Projects/[your-project]/android` 新し、デスクトップ上 `sdk.dir` の場所を変 `SDK` 数で指定してください。
 
-   **Windows®ユーザーの場合**:フォルダー内 `local.properties` のファイルを更新し、 `%HOMEPATH%\Projects\[your-project]\android` デスクトップ上の場所 `sdk.dir` を変数 `SDK` で指定してください。
+   **Windows®ユーザーの場合**:フォルダー `local.properties` 内のファイルを更 `%HOMEPATH%\Projects\[your-project]\android` 新し、デスクトップ上 `sdk.dir` の場所を変 `SDK` 数で指定してください。
 
 1. プロジェクトをビルドするには、「**[!UICONTROL 完了]**」をクリックします。
 
@@ -82,9 +82,9 @@ The following image displays the directory structure of the `android`folder in t
 1. Android™ Studio で、「**[!UICONTROL Import Project (Eclipse ADT, Gradle, Etc.)]**」を選択します。
 1. In the project explorer, select the root directory of the project that you want to build in the **Root Directory** text box:
 
-   **** Macユーザーの場合： [User_Home]/Projects/MobileWorkspace/src/android
+   **Macユーザーの場合：**[User_Home]/Projects/MobileWorkspace/src/android
 
-   **** Windows®ユーザーの場合：%HOMEPATH%\Projects\MobileWorkspace\src\android
+   **Windows®ユーザーの場合：** %HOMEPATH%\Projects\MobileWorkspace\src\android
 
 1. プロジェクトの読み込みが完了すると、ポップアップが表示されます。このポップアップには、Android™ プラグインの Gradle を更新するためのオプションが表示されます。要件に応じて、適切なボタンをクリックします。
 
@@ -92,7 +92,7 @@ The following image displays the directory structure of the `android`folder in t
 
 1. Gradle が正しく作成されると、以下の画面が表示されます。Connect the appropriate device or emulator with the system and click **[!UICONTROL Run Android™]**.
 
-   ![等級コンソール](assets/gradleconsole.png)
+   ![格子底](assets/gradleconsole.png)
 
 1. Android™ Studio に、接続デバイスと使用可能なエミュレーターが表示されます。アプリケーションを実行するデバイスを選択して「**OK**」をクリックします。
 
@@ -107,5 +107,3 @@ The following image displays the directory structure of the `android`folder in t
 **MACユーザーの場合**: `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
 **Windows®ユーザーの場合**: `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
