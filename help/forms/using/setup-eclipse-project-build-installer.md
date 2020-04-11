@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f5d6d9bd-4f36-4a4f-8008-15fb853a9219
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -28,7 +28,7 @@ AEM Forms App Source Code Package refers to the `adobe-lc-mobileworkspace-src-<v
 
 Perform the following steps to download the `adobe-aemfd-forms-app-src-pkg-<version>.zip` file:
 
-1. Log in to the author instance of the [AEM server](http://localhost:4502/) as an administrator and open [package share](http://localhost:4502/crx/packageshare). パッケージ共有にログインするには、Adobe ID が必要です。
+1. [AEMサーバーの作成者インスタンスに管理者としてログインし](http://localhost:4502/) 、パッケージ共有を [開きます](http://localhost:4502/crx/packageshare)。 パッケージ共有にログインするには、Adobe ID が必要です。
 1. In [AEM package share](http://localhost:4502/crx/packageshare/login.html), search `adobe-aemfd-forms-app-src-pkg-<version>.zip`, click the package applicable to your operating system, and click **Download**. ライセンス使用許諾契約書を読んでから同意し、「**OK**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**ダウンロード済み**」というテキストが表示されます。
 1. ダウンロードが完了したら、「**ダウンロード済み**」をクリックします。パッケージマネージャーに切り替わります。In the package manager, search the downloaded package, and click **Install**.
 1. To download the source-code archive, open **https://&lt;server>:&lt;port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-&lt;version>.zip** in your browser. Androidアプリの.zipファイルがデバイスにダウンロードされます。
@@ -66,7 +66,7 @@ Android Studio を使用して AEM Forms アプリケーションを構築する
    ![android_folder_studio](assets/android_folder_studio.png)
 
 1. Select **android** from the left pane and click **Run** > **Run &#39;android&#39;**.
-1. Select Deployment targetダイアログボックスの「Connected Devices」セクションからAndroidデバイスを選択し、「OK」をクリックします。
+1. Select Deployment Devicesダイアログボックスの「Connected Devices」セクションからAndroidターゲットを選択し、「OK」をクリックします。
 
     開発環境を正しく構築すると、アプリケーションをカスタマイズできるようになります。アプリケーションをカスタマイズする場合は、次の記事を参照してください。
 
@@ -93,8 +93,6 @@ Android Studio を使用して .apk ファイルを生成するには、次の�
 
 Once the .apk file has been generated, execute the following command to install the application on an Android device using the [Android Debug Bridge](https://developer.android.com/tools/help/adb.html).
 
-**** Windowsユーザー： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
+**Windowsユーザー：** `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
 
-**** MACユーザー： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
+**MACユーザー：** `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
