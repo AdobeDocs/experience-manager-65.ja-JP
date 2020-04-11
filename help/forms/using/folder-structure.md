@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 7427858d-8eec-423d-a0a9-444140420620
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -27,7 +27,7 @@ AEM Forms Workspace は Backbone を使用して MVC アーキテクチャ上で
 
 **models** ：バックボーンモデルを含みます。
 
-**views** Backboneビューを含みます。
+**表示** ：バックボーン表示を含む。
 
 **templates** ：コンポーネントのHTMLテンプレートのみが含まれます。
 
@@ -36,5 +36,3 @@ AEM Forms Workspace は Backbone を使用して MVC アーキテクチャ上で
 **services** RESTエンドポイントでAdobe Experience ManagerサーバーAPIを呼び出すためのサービスインターフェイスが含まれます。
 
 **util** ：複数のコンポーネントで使用できる汎用ユーティリティを含みます。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
