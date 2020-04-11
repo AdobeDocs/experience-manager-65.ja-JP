@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 Adobe Experience Manager(6.5)を使用すると、四半期ごとのService Packリリースで新機能や継続的な機能強化を利用できます。 このアプローチを使えば、イノベーションを簡単に導入できます。
 
-Experience Manager Service Pack 4(6.5.4.0)は2020年3月6日にリリースされました。 2019年4月のGAリリース(GA)以降にリリースされた、新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートです。 Experience Manager 6.5.4.0は、Adobe Experience Manager 6.5の上部にインストールできます。
+Experience Manager Service Pack 4(6.5.4.0)は重要なアップデートです。 2019年4月のAEM 6.5リリース以降にリリースされた、お客様から要望のあった機能強化、パフォーマンス、安定性、セキュリティの向上をすべて含みます。 このサービスパックは、AEM 6.5以降のリリースにインストールできます。
 
 この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Packに含まれる主な機能 [、およびExperience Manager 6.5.3.0以降の主なリリースの一部について説明し](#key-features-previous-service-packs)ます [](#key-features-sice-sp3)。
 
