@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -37,11 +37,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 #### iOS の場合 {#for-ios}
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
-1. （***アイコンのカスタマイズの場合***）キャプチャのナビゲータービューで、**[!UICONTROL キャプチャ／キャプチャ／サポートするファイル／Capture-info.plist]** に移動します。アイコンファイルの横のドロップダウンをクリックします。 アイコンファイル（.png）の名前を指定し、**[!UICONTROL キャプチャ／キャプチャ／リソース／アイコン]**&#x200B;でファイルをアップロードします。現在サポートされているディメンションは次のとおりです。29x29、50x50、58x58、72x72、100x100、144x144。
+1. （***アイコンのカスタマイズの場合***）キャプチャのナビゲータービューで、**[!UICONTROL キャプチャ／キャプチャ／サポートするファイル／Capture-info.plist]** に移動します。アイコンファイルの横にあるドロップダウンをクリックします。 アイコンファイル（.png）の名前を指定し、**[!UICONTROL キャプチャ／キャプチャ／リソース／アイコン]**&#x200B;でファイルをアップロードします。現在サポートされているディメンションは次のとおりです。29x29、50x50、58x58、72x72、100x100、144x144。
 1. （***起動画像のカスタマイズの場合***）画像のファイル名が次のいずれかであることを確認します。
 
-   * 縦向きの場合： `Default-Portrait~ipad.png` と `Default-Portrait@2x~ipad.png`
-   * 横置きの場合： `Default-Landscape~ipad.png` と `Default-Landscape@2x~ipad.png`
+   * 縦向きの場合： `Default-Portrait~ipad.png` および `Default-Portrait@2x~ipad.png`
+   * 横置きの場合： `Default-Landscape~ipad.png` および `Default-Landscape@2x~ipad.png`
    これらのファイルをキャプチャプロジェクトにアップロードして、プロジェクトの既存のファイルと置き換えます。
 
    >[!NOTE]
@@ -90,9 +90,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 ### iOS の場合 {#for-ios-1}
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
-1. Captureのナビゲータビューで、 **[!UICONTROL Capture/Capture/Supporting Files/InfoPlist.stringsに移動します]**。
+1. Captureのナビゲータ表示で、Capture/Capture/ **[!UICONTROL Supporting Files/InfoPlist.stringsに移動します]**。
 
-   属性の値を、アプ `CFBundleDisplayName` リに表示する名前に更新します。
+   属性の値を、アプリ `CFBundleDisplayName` に表示する名前に更新します。
 
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
 
@@ -122,7 +122,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## ログインページの画像のカスタマイズ {#customizing-images-on-the-login-page}
 
-AEM Formsアプリケーションのログインページには、ロゴと背景の画像が含まれています。 ロゴはログインダイアログボックスの上に配置されており、背景の画像はログインダイアログボックスの下に配置されています。次の手順を実行してログインページのデフォルトの画像をカスタマイズします。
+AEM Formsアプリケーションのログインページには、ロゴと背景の画像が表示されます。 ロゴはログインダイアログボックスの上に配置されており、背景の画像はログインダイアログボックスの下に配置されています。次の手順を実行してログインページのデフォルトの画像をカスタマイズします。
 
 **事前準備**
 
@@ -152,7 +152,7 @@ AEM Formsアプリケーションのログインページには、ロゴと背�
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
 
-1. Navigate to the `www/wsmobile/images`folder.
+1. `www/wsmobile/images` フォルダーに移動し、
 1. ロゴを変更するには、デフォルトの `LC-logo.png` ファイルをカスタムの `LC-logo.png` ファイルに置き換えます。
 1. To change background, replace the default `Landing_bg.jpeg` file with the custom `Landing_bg.jpeg`file.
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
@@ -161,7 +161,7 @@ AEM Formsアプリケーションのログインページには、ロゴと背�
 
 1. EclipseでAndroidプロジェクトを開きます。
 
-1. Navigate to the `assets/www/wsmobile/images`folder.
+1. `assets/www/wsmobile/images` フォルダーに移動し、
 1. ロゴを変更するには、デフォルトの `LC-logo.png` ファイルをカスタムの `LC-logo.png` ファイルに置き換えます。
 1. To change background, replace the default `Landing_bg.jpeg` file with the custom `Landing_bg.jpeg`file.
 1. Android デバイス上で AEM Forms アプリケーションを構築して実行します。
@@ -170,7 +170,7 @@ AEM Formsアプリケーションのログインページには、ロゴと背�
 
 1. Open the `MWSWindows.sln` project in Visual Studio.
 
-1. Navigate to the `MWSWindows\www\wsmobile\images`folder.
+1. `MWSWindows\www\wsmobile\images` フォルダーに移動し、
 1. ロゴを変更するには、デフォルトの `LC-logo.png` ファイルをカスタムの `LC-logo.png` ファイルに置き換えます。
 1. To change background, replace the default `Landing_bg.jpeg` file with the custom `Landing_bg.jpeg`file.
 1. Windows デバイス上で AEM Forms アプリケーションを構築して実行します。
@@ -202,7 +202,7 @@ AEM Forms アプリケーションにログインしてメニューボタンを�
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
 
-1. Navigate to the `www/wsmobile/images`folder.
+1. `www/wsmobile/images` フォルダーに移動し、
 1. To change the logo, replace the default `aem_icon.png` file with the custom `aem_icon.png` file.
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
 
@@ -210,7 +210,7 @@ AEM Forms アプリケーションにログインしてメニューボタンを�
 
 1. EclipseでAndroidプロジェクトを開きます。
 
-1. Navigate to the `assets/www/wsmobile/images`folder.
+1. `assets/www/wsmobile/images` フォルダーに移動し、
 1. To change the logo, replace the default `aem_icon.png` file with the custom `aem_icon.png` file.
 1. Android デバイス上で AEM Forms アプリケーションを構築して実行します。
 
@@ -218,8 +218,6 @@ AEM Forms アプリケーションにログインしてメニューボタンを�
 
 1. Open the `MWSWindows.sln` project in Visual Studio.
 
-1. Navigate to the `MWSWindows\www\wsmobile\images`folder.
+1. `MWSWindows\www\wsmobile\images` フォルダーに移動し、
 1. To change the logo, replace the default `aem_icon.png` file with the custom `aem_icon.png` file.
 1. Windows デバイス上で AEM Forms アプリケーションを構築して実行します。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
