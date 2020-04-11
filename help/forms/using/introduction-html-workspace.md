@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 4c89d017-0d4b-4fa2-b648-342f3c755350
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -30,5 +30,3 @@ AEM Forms Workspaceは、より多くのデバイスやフォームファクタ�
 * Workspace コンポーネントを Web アプリケーションで容易に統合できます。AEM Forms Workspaceはコンポーネントベースのソフトウェアなので、簡単にカスタマイズして再利用できます。
 * AEM Forms Workspace アプリケーションを使用し、オンラインおよびオフラインのモバイル作業者にビジネスプロセスを拡張します。
 * レポートを表示してバックログ、作業クエリ、KPIs (key performance indicators)をモニタリングします。 APIs を使用して、第三者報告ツールによる将来の分析のためのデータ抽出が可能です。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
