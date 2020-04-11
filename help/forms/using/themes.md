@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -292,7 +292,7 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 
 スタイルにカスタム名を付けると、スタイルはテーマに関連付けられて、他のテーマには使用できなくなります。保存したスタイルを削除するには、次の手順を実行します。
 
-1. On the CANVAS toolbar, click **Theme Options** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/theme-options.png) > **Manage Styles**.
+1. On the CANVAS toolbar, click **Theme Options** ![](assets/theme-options.png) > **Manage Styles**.
 1. In the Manage Styles dialog, select a saved style, click **Delete**.
 
    ![保存したスタイルの削除](assets/manage-styles.png)
