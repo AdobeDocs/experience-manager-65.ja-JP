@@ -8,7 +8,7 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 ## このチュートリアルについて  {#about-the-tutorial}
 
-テーマを使用すると、アダプティブフォームに独自の外観やスタイルを設定できます。アダプティブフォームエディターの初期設定済みテーマを適用することも、独自のカスタムテーマを作成することもできます。AEM Forms はカスタムテーマを作成するための[テーマエディター](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)を提供します。単一のテーマを使用すると、モバイル、タブレット、デスクトップで開いた同一のアダプティブフォームに異なる外観を設定できます。テーマエディターを使用する場合、CSS や LESS の予備知識は特に必要ありません。
+テーマを使用すると、アダプティブフォームに独自の外観やスタイルを設定できます。アダプティブフォームエディターの初期設定済みテーマを適用することも、独自のカスタムテーマを作成することもできます。AEM Forms はカスタムテーマを作成するための[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を提供します。単一のテーマを使用すると、モバイル、タブレット、デスクトップで開いた同一のアダプティブフォームに異なる外観を設定できます。テーマエディターを使用する場合、CSS や LESS の予備知識は特に必要ありません。
 
 このチュートリアルを終了すると、以下の操作を実行できるようになります。
 
@@ -57,11 +57,11 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 ![デフォルトのテーマを使用したアダプティブフォーム](assets/default-adaptive-form.png)
 
-**** 図：デフォル *トテーマを持つアダプティブフォーム*
+**図：** デフォル *トテーマを持つアダプティブフォーム*
 
 ![調査テーマを使用したアダプティブフォーム](assets/adaptive-form-with-survey-theme.png)
 
-**** 図：調査テ *ーマを含むアダプティブフォーム*
+**図：** アダプティブ *フォームと調査テーマ*
 
 ## 手順 2：アダプティブフォームの更新 {#step-update-your-adaptive-form}
 
@@ -75,14 +75,14 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
    1. Tap logo image in the header component and tap ![cmppr](assets/cmppr.png) properties. 画像のプロパティで X をタップし、既存のロゴの画像を削除します。
    1. Tap upload, select the logo.png, and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) to save the changes. The image was downloaded in the [Before you start](/help/forms/using/style-your-adaptive-form.md#before-you-start) section.
-   1. ヘッダーテキストを `We.Retail`タップし、 ![aem_6_3_edit](assets/aem_6_3_edit.png) をタ **ップします**。 Change header text to `we retail`. Apply bold formatting only to `we`in `we retail`.
+   1. ヘッダーテキストを `We.Retail`タップし、 ![aem_6_3_edit](assets/aem_6_3_edit.png)**をタップします**。 Change header text to `we retail`. Apply bold formatting only to `we`in `we retail`.
    ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. タイトルを削除してプレースホルダーテキストを追加します。
 
    1. Tap the Customer ID field and tap ![cmppr](assets/cmppr.png) properties.
    1. 「**タイトル**」フィールドの内容を「**プレースホルダーテキスト**」フィールドにコピーします。
-   1. 「タイトル」フィールド **の内容を削除し** 、「 ![aem_6_3_forms_save」をタップします](assets/aem_6_3_forms_save.png)。
+   1. 「タイトル」フィールドの **内容を** 削除し、「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
    1. フォーム内のすべてのテキストボックス、数値ボックス、電子メールフィールドで、上記の 3 つの手順を繰り返します。
    ![更新されたアダプティブフォーム](assets/updated-adaptive-form.png)
 
@@ -99,8 +99,8 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 1. Log in to the AEM author instance and navigate to **Adobe Experience Manager** > **Forms** > **Themes**. The default URL is [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
 1. 「**[!UICONTROL 作成]**」をタップし、「**[!UICONTROL テーマ]**」を選択します。テーマの作成が必要なフィールドが含まれた「テーマを作成」ページが表示されます。「タイトル」と「ドキュメント名」の各フィールドは入力が必須です。
 
-   * **** タイトル：テーマのタイトルを指定します。 （**グローバルテーマ**&#x200B;など）。タイトルはテーマのリストから目的のテーマを見つけるのに役立ちます。
-   * **** 名前：テーマの名前を指定します。 （**グローバルテーマ**&#x200B;など）。指定された名前のノードがリポジトリに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用することができます。無効な入力はすべてハイフンに置き換えられます。
+   * **タイトル：** テーマのタイトルを指定します。 （**グローバルテーマ**&#x200B;など）。タイトルはテーマのリストから目的のテーマを見つけるのに役立ちます。
+   * **名前：** テーマの名前を指定します。 （**グローバルテーマ**&#x200B;など）。指定された名前のノードがリポジトリに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用することができます。無効な入力はすべてハイフンに置き換えられます。
 
 1. 「**作成**」をタップします。テーマが作成され、フォームを編集用に開くためのダイアログが表示されます。Tap **Open** to open the newly created theme in a new tab. テーマがテーマエディターで開きます。スタイルを設定する際、テーマエディターは AEM Forms に付属している初期設定済みアダプティブフォームを使用します。
 
@@ -110,17 +110,17 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
    ![カスタムテーマ](assets/custom-theme.png)
 
-   **** 図：配送先住 *所 — 追加 — 更新 — フォームアダプティブフォームを含むテーマエディター*
+   **図：** 配送先住 *所 — 追加 — 更新 — フォームのアダプティブフォームを含むテーマエディター*
 
-   ![テーマを作成する](assets/create-a-theme.png)
+   ![テーマを作成](assets/create-a-theme.png)
 
-   **** 図：デフォル *トフォームを含むアダプティブフォーム*
+   **図：** デフォル *トフォームを含むアダプティブフォーム*
 
 ### ヘッダーとフッターのスタイル設定 {#style-header-and-footer}
 
 ヘッダーとフッターをアダプティブフォームで使用すると、独特な外観を作成できます。通常、ヘッダーには組織のロゴと名前が含まれ、フッターには著作権情報が含まれます。これらは組織の複数のフォーム間で統一されます。shipping-address-add-update-form アダプティブフォームのヘッダーとフッターのスタイルを設定するには、次の手順を実行します。
 
-1. セレクターパネルで&#x200B;**ヘッダー**／**テキスト**&#x200B;オプションに移動します。セレクターパネルはテーマエディターの左側にあります。パネルが表示されない場合は、「![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/toggle-side-panel.png)サイドパネルを切り替え」をタップします。
+1. セレクターパネルで&#x200B;**ヘッダー**／**テキスト**&#x200B;オプションに移動します。セレクターパネルはテーマエディターの左側にあります。パネルが表示されない場合は、「![](assets/toggle-side-panel.png)サイドパネルを切り替え」をタップします。
 
 1. Set the following properties in the **Text** accordion and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
@@ -130,14 +130,14 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
    | フォントカラー | FFFFFF |
    | フォントサイズ | 54 px |
 
-1. ヘッダーウィジェットをタップし、「**ヘッダー**」をタップします。ヘッダーウィジェットのスタイルを設定するオプションが左側に表示されます。「寸法 **と位置」アコーディオンを展開し** 、「高さ **」を「** 」に設定し、「 `120px`aem_6_3_forms_save ![](assets/aem_6_3_forms_save.png)」をタップします。
+1. ヘッダーウィジェットをタップし、「**ヘッダー**」をタップします。ヘッダーウィジェットのスタイルを設定するオプションが左側に表示されます。「寸法 **と位置** 」アコーディオンを展開し、「 **Height** 」を「 `120px`」に設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
 1. ヘッダーウィジェットの「背景」アコーディオンを展開し、「**背景色**」を `F6921E.` に設定します。
 
    Hover over **Image &amp; Gradient** > **+ Add**, tap **Image**. 次のプロパティを設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
 
    | プロパティ | 値 |
    |---|---|
-   | image | header-style.png をアップロードします。The image was downloaded in the [Before you start](/help/forms/using/style-your-adaptive-form.md#before-you-start) section. |
+   | 画像 | header-style.png をアップロードします。The image was downloaded in the [Before you start](/help/forms/using/style-your-adaptive-form.md#before-you-start) section. |
    | 位置 | 右下 |
    | タイル | 繰り返しなし |
 
@@ -165,7 +165,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
  </tbody> 
 </table>
 
-1. フッターウィジェットをタップし、「**フッター**」をタップします。背景アコ **ーディオンを展開し** 、 **背景色をに設定し** て、aem_6_3_forms_saveをタップします `F6921E`![](assets/aem_6_3_forms_save.png)。
+1. フッターウィジェットをタップし、「**フッター**」をタップします。背景アコ **ーディオンを展開し** 、「 **背景色** 」を「」に設定し、 `F6921E`aem_6_3_forms_saveをタップします ![](assets/aem_6_3_forms_save.png)。
 
 ### データ取得コンポーネントのスタイル設定とアダプティブフォームの背景の適用 {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
@@ -227,7 +227,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
  </tbody> 
 </table>
 
-1. 「顧客 ID」フィールドの上部で空白領域をタップし、「**レスポンシブパネルコンテナ**」をタップします。**背景**／**背景色**&#x200B;を F1F2F2 に設定します。aem_ ![6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+1. 「顧客 ID」フィールドの上部で空白領域をタップし、「**レスポンシブパネルコンテナ**」をタップします。**背景**／**背景色**&#x200B;を F1F2F2 に設定します。aem_6_3_forms_save ![をタップします](assets/aem_6_3_forms_save.png)。
 
    ![](do-not-localize/responsive-panel-container.png)
 
@@ -283,7 +283,7 @@ You can use a custom theme to apply an identical style to all the buttons of the
  </tbody> 
 </table>
 
-1. アダプティブフォームに[カスタムテーマを適用](/help/forms/using/style-your-adaptive-form.md#step-apply-a-theme-to-your-adaptive-form)するか、グローバルテーマを適用します。スタイルがアダプティブフォームに反映されない場合は、ブラウザーのキャッシュをクリーンアップしてから、もう一度お試しください。
+1. アダプティブフォームに[カスタムテーマを適用](/help/forms/using/style-your-adaptive-form.md#step-apply-a-theme-to-your-adaptive-form)するか、グローバルテーマを適用します。スタイルがアダプティブフォームに反映されない場合は、ブラウザーのキャッシュを消去してから、もう一度やり直してください。
 
    ![style-data-capture-components](assets/style-data-capture-components.png)
 
@@ -434,13 +434,13 @@ You can use a custom theme to apply an identical style to all the buttons of the
 
 ## 手順 5：オプション：カスタムテーマでの Web フォントの使用 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
 
-アダプティブフォームは各種フォントを使用してデザインできます。アダプティブフォームのデザインに使用するフォントが、アダプティブフォームを表示するデバイスに存在しない場合があります。Webフォントサービスを使用して、必要なフォントをターゲットデバイスに配信できます。
+アダプティブフォームは各種フォントを使用してデザインできます。アダプティブフォームのデザインに使用するフォントが、アダプティブフォームを表示するデバイスに存在しない場合があります。Webフォントサービスを使用して、必要なフォントをデバイスにターゲットできます。
 
 Adobe Typekit は Web フォントサービスです。アダプティブフォームでこのサービスを設定、使用できます。アダプティブフォームでAdobe Typekitを使用するには：
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) TypekitはAdobe Fontsと呼ばれ、Creative cloudおよび他の購読に含まれています。 [詳細情報](https://fonts.adobe.com/)を参照してください。
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) Typekitは、Adobe Fontsと呼ばれ、Creative Cloudやその他の購読に含まれています。 [詳細情報](https://fonts.adobe.com/)を参照してください。
 
 1. Create an [Adobe Typekit](https://typekit.com/) account, create a kit, add font Myriad Pro to the kit, publish the kit, and obtain the Kit ID. アダプティブフォームでAdobe Typekitフォント（Webフォント）を使用する必要があります。
 1. In the AEM Forms server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Tools** ![hammer](assets/hammer.png) > **Deployment** > **Cloud Services**. On the Cloud Services page, navigate to **Third Party Services** > **Typekit**, and click **Configure** Now under Typekit. 設定が既に使用可能な場合は、「+」ボタンをクリックして新しいインスタンスを作成します。
