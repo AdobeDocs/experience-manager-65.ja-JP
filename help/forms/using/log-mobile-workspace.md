@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: fb2b7ff6-6b29-425b-a86e-d1f80faab9e0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -37,5 +37,3 @@ AEM Forms アプリケーションを起動するときは、最初にログイ�
 >[!NOTE]
 >
 >オフラインモードでは、最後にログインしたユーザーのみがアプリケーションにログインできます。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
