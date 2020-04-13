@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: be619b71dd0bb1addc10f4dbdbd2f00bc86dd003
+source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
 
 ---
 
@@ -901,9 +901,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
    ![タイムライン](assets/timeline.png)
 
-1. 下にある&#x200B;**[!UICONTROL アクション]**（矢印）アイコンをタップまたはクリックして、アセットで実行できるアクションを表示します。
-
-   ![chlimage_1-249](assets/chlimage_1-45.png)
+1. Click the **[!UICONTROL Actions]** at the bottom to view the available actions you can perform on the asset.
 
 1. 「**[!UICONTROL 保存するバージョン]**」をタップまたはクリックして、アセットのバージョンを作成します。
 
