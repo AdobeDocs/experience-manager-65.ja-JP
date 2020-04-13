@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Assets User Guide
+user-guide-title: AEM 6.5 Assetsユーザガイド
 translation-type: tm+mt
-source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
+source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
 
 ---
 
@@ -18,12 +18,12 @@ source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
 + AEM Assetsの使用 {#using}
    + [AEM Assetsのホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
-   + [多言語アセット](multilingual-assets.md)
+   + [多言語のアセット](multilingual-assets.md)
    + [AEM Assets での Adobe Stock アセットの使用](aem-assets-adobe-stock.md)
-   + [3Dアセットのプレビュー](previewing-3d-assets.md)
+   + [3D アセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
-   + [アセットへのワークフローの適用](assets-workflow.md)
+   + [アセットの処理](assets-workflow.md)
    + [画像追加マップ](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
    + [AEMサイトとの接続されたアセット](use-assets-across-connected-assets-instances.md)
@@ -97,11 +97,11 @@ source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
    + [メタデータの追加と編集](meta-edit.md)
    + [アセット移行ガイド](assets-migration-guide.md)
    + [XMP メタデータ](xmp.md)
-   + [アセットネットワークに関する考慮事項](assets-network-considerations.md)
+   + [Assets のネットワークに関する考慮事項](assets-network-considerations.md)
    + [AEM AssetsとAEM MediaLibrary](medialibrary.md)
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
-   + [AEMとCreative Cloudの統合のベストプラクティス](aem-cc-integration-best-practices.md)
+   + [AEM と Creative Cloud の統合のベストプラクティス](aem-cc-integration-best-practices.md)
    + [InDesignサーバーとの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセット内のDigital Rights Management](drm.md)
@@ -144,7 +144,7 @@ source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
    + [デジタルアセットの整理](organize-assets.md)
    + [ビデオアセットの管理](managing-video-assets.md)
    + [翻訳プロジェクトの作成](translation-projects.md)
-   + [翻訳用のアセットの準備](preparing-assets-for-translation.md)
+   + [翻訳するアセットの準備](preparing-assets-for-translation.md)
    + [AEM からのアセットのダウンロード](download-assets-from-aem.md)
    + [非同期操作](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
@@ -152,10 +152,10 @@ source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
    + [DTMを使用したアセットのインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
    + [アセットのインサイトの設定](touch-ui-configuring-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
-   + [翻訳クラウドサービスのフォルダーへの適用](transition-cloud-services.md)
+   + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
    + [Webページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)
    + [複合アセットの管理](managing-linked-subassets.md)
-   + [関連資産](related-assets.md)
+   + [関連アセット](related-assets.md)
    + [プライベートフォルダーの共有](private-folder.md)
    + [Smart Content Serviceのトレーニングガイドライン](smart-tags-training-guidelines.md)
    + [ビデオレンディション](video-renditions.md)
