@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
+source-git-commit: d1331c8c023a1e414e0231d082667d67c4adf17a
 
 ---
 
@@ -877,65 +877,61 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 1. フォントファミリパラメーターを `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` に設定して、注釈 PDF ファイルを設定します。この設定はデフォルトで使用でき、すべての欧文および CJK 言語で機能します。
 1. 選択した言語が手順 2 の言語と異なる場合は、デフォルトフォントファミリに適切なエントリを（コンマで区切って）追加してください。
 
-## アセットのバージョン {#asset-versioning}
+## アセットのバージョンの作成、管理、プレビューおよび元に戻す {#asset-versioning}
 
 バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。バージョン管理を使用すると、後で、以前の状態にアセットを復元できます。例えば、アセットに対しておこなった変更を取り消したい場合、バージョン管理を使用して未編集のバージョンにアセットを復元できます。
 
-バージョンを作成するシナリオは次のとおりです。
+次のシナリオで、Experience Managerでバージョンを作成できます。
 
-* 別のアプリケーションで画像を変更し、AEM Assets にアップロードします。元の画像が上書きされないように画像のバージョンが作成されます。
+* 同じ場所に存在するのと同じファイル名でアセットをアップロードします。 新しいアセット、または同じアセットの変更済みバージョンを使用できます。
+* Experience Managerで画像を編集し、変更を保存します。
 * アセットのメタデータを編集します。
-* 既存のアセットをチェックアウトしたり変更を保存したりするには、AEM デスクトップアプリケーションを使用します。アセットが保存されるたびに、新しいバージョンが作成されます。
+* AEMデスクトップアプリを使用して、既存のアセットをチェックアウトし、編集して、変更をア [ップロードします](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
 
 また、ワークフローを使用して、自動バージョン管理を有効にすることもできます。アセットのバージョンを作成すると、バージョンと共にメタデータとレンディションが保存されます。レンディションによって、同じ画像の代替となる画像が表示されます（例えば、アップロードされた JPEG ファイルの PNG レンディション）。
 
-バージョン管理機能を使用すると、次の操作を実行できます。
+Experience Managerでは、次の操作を実行できます。
 
 * アセットのバージョンを作成する。
 * アセットの現在のリビジョンを表示する。
 * 以前のバージョンにアセットを復元する。
 
-1. バージョンを作成するアセットの場所に移動し、アセットをタップまたはクリックしてそのアセットのページを開きます。
+1. バージョンを作成するアセットの場所に移動し、そのアセットをクリックして開きます。プレビュー ページの左上隅からメニューを開き、「タイムライン」を選択し **[!UICONTROL ます]**。
 
-1. グローバルナビゲーションアイコンをタップまたはクリックし、メニューから「**[!UICONTROL タイムライン]**」を選択します。
+   ![左側のナビゲーションメニューで、タイムラインオプションを選択します](assets/timeline.png)
 
-   ![タイムライン](assets/timeline.png)
+*図：ページの左上の領域からメニューを開き、「タイムライン」オプション[!UICONTROL を選択し]ます。*
 
-1. Click the **[!UICONTROL Actions]** at the bottom to view the available actions you can perform on the asset.
+1. アセットのバージョンを作成するには：
 
-1. 「**[!UICONTROL 保存するバージョン]**」をタップまたはクリックして、アセットのバージョンを作成します。
+   * Click the **[!UICONTROL Actions]** at the bottom.
+   * 「**[!UICONTROL 保存するバージョン]**」をクリックして、アセットのバージョンを作成します。オプションで、ラベルとコメントを追加します。
+   * Click **[!UICONTROL Create]** to create a version.
 
-   ![chlimage_1-250](assets/chlimage_1-46.png)
+      ![chlimage_1-251](assets/create-new-version-from-timeline.png)
 
-1. ラベルとコメントを追加し、「**[!UICONTROL 作成]**」をクリックしてバージョンを作成します。または、「**キャンセル**」をタップまたはクリックして操作を終了します。
+1. アセットの表示を行うには：
 
-   ![chlimage_1-251](assets/chlimage_1-47.png)
+   * タイムライ **[!UICONTROL ンで「すべてを表示]** 」をク [!UICONTROL リックしま]す。
+   * 「バージョン」 **[!UICONTROL をクリックしま]**&#x200B;す。 アセット用に作成されたすべてのバージョンが左側のサイドバーに表示されます。
 
-1. 新しいバージョンを表示するには、アセットの詳細ページまたは Assets UI からタイムラインの「**[!UICONTROL すべて表示]**」リストを開き、「**[!UICONTROL バージョン]**」を選択します。アセット用に作成したすべてのバージョンが「タイムライン」タブに表示されます。リストにフィルターを適用して「バージョン」表示できます。そのためには、下向きの矢印をクリックして、リストから「**[!UICONTROL バージョン]**」を選択します。
+      ![versions_option](assets/versions_option.png)
 
-   ![versions_option](assets/versions_option.png)
+   * アセットの特定のバージョンを選択し、「バージョン」をク **[!UICONTROL プレビューしま]**&#x200B;す。
 
-1. アセットの特定のバージョンを選択してプレビューするか、Assets UI に表示されるように設定します。
+1. 古いバージョンのアセットに戻すには、次の手順を実行します。 元に戻すと、このバージョンがインターフェイスに表示 [!DNL Assets] され、使用できるようになります。
 
-   ![select_version](assets/select_version.png)
+   * アセットのバージョンをクリックします。 オプションで、ラベルとコメントを追加します。
+   * Click **[!UICONTROL Revert to this Version]**.
 
-   >[!NOTE]
-   >
-   >You can also select the asset from the [List view](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) or the [Column view](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+      ![select_version](assets/select_version.png)
 
-1. Assets UI で特定のバージョンに戻すバージョンに、ラベルとコメントを追加します。
+1. 2つのバージョンの画像を比較するには、次の手順に従います。
+   * 現在のバージョンと比較するバージョンをクリックします。
+   * スライダを左にドラッグして、このバージョンを現在のバージョンに重ねて比較します。
+   ![スライダを使用して、選択したバージョンのアセットと現在のバージョンを比較します。](assets/version-slider.gif)
 
-   ![save_version](assets/save_version.png)
-
-1. バージョンのプレビューを生成するには、「**[!UICONTROL バージョンをプレビュー]**」をタップまたはクリックします。
-1. Assets UI でこのバージョンを表示するには、「**[!UICONTROL このバージョンに戻す]**」を選択します。
-1. 2 つのバージョンを比較するには、アセットのアセットページに移動し、現在のバージョンと比較するバージョンをタップまたはクリックします。
-
-   ![select_version_tocompare](assets/select_version_tocompare.png)
-
-1. タイムラインで、比較するバージョンを選択し、スライダーを左にドラッグして、現在のバージョンの上にこのバージョンを重ねて表示して比較します。
-
-   ![compare_versions](assets/compare_versions.png)
+   *図：スライダを使用して、選択したバージョンのアセットと現在のバージョンを簡単に比較できます。*
 
 ### Start a workflow on an asset {#starting-a-workflow-on-an-asset}
 
