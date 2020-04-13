@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: be4a8a78b8555149809b8026bfd059f4cc9e9401
+source-git-commit: 9daad219d885c1c6972ace0b247f3537dcdc38a9
 
 ---
 
@@ -178,6 +178,8 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 
 * LiveFyre関連の項目の処理中にエラーメッセージが表示されます(FYR-12420)。
 
+* ReportSuitesServletはSSRF(NPR-32156)に対して脆弱です。
+
 ### WCMテンプレートエディター {#wcm-template-editor-6540}
 
 * 編集可能なテンプレートの構造モードで、レイアウトコンテナで許可されたコンポーネントのリストにリンクボタンコンポーネントが表示されない(CQ-4282099)。
@@ -194,9 +196,9 @@ AEM 6.5.4.0で導入された主な機能と強化された機能の一部を次
 
 * Brand Portalユーザーは、AEM 6.5.4上のAdobe I/Oにアップグレードする際に、貢献度フォルダーのアセットをAEM Assetsに公開できません(CQDOC-15655)。
 
-   この問題は、次のサービスパックAEM 6.5.5で修正されます。
+   この問題は、次のサービスパック AEM 6.5.5 で修正されます。
 
-   AEM 6.5.4の即時修正を行うには、ホットフィックスをダウンロードし [て作成者インスタンス](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) にインストールすることをお勧めします。
+   AEM 6.5.4 の即時修正をおこなうには、[ホットフィックスをダウンロード](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)して、オーサーインスタンスにインストールすることをお勧めします。
 
 
 * メタデータスキーマのドロップダウン値がアセットのプロパティに表示されない(CQ-4283287)。
