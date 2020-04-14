@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -47,7 +47,7 @@ Perform the following steps to add support for a language *New* and the browser 
 
 ## 折りたたまれているカテゴリ、キュー、およびプロセスのローカライズ {#localizing-collapsed-categories-queues-and-processes}
 
-AEM Forms Workspaceは、画像、キュー、プロセスのヘッダーを表示するカテゴリを使用します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](../../forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
+AEM Forms Workspaceは、画像、キュー、プロセスのヘッダーを表示するカテゴリを使用します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 次の手順では、新しくローカライズされた画像ファイルは&#x200B;*Categories_nw.png*、*Queue_nw.png*、および *Processes_nw.png* であると想定しています。画像の推奨幅は19pxです。
 
@@ -106,7 +106,7 @@ AEM Forms Workspaceは、画像、キュー、プロセスのヘッダーを表�
 
 ## 日付選択のローカライズ {#localizing-date-picker}
 
-*日付選択* API をローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code](../../forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3).
+*日付選択* API をローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
 1. [jQuery UI パッケージ](https://jqueryui.com/download/all/)をダウンロードして抽出し、*&lt;抽出された jquery UI パッケージ>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n に移動します。
 1. ロケールコード nw の jquery.ui.datepicker-nw.js ファイルを apps/ws/js/libs/jqueryui にコピーして、ファイルにロケール固有の変更を行います。
