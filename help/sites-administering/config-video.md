@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -51,7 +51,7 @@ The Video Component relies on the third-party open-source product FFmpeg for pro
 
       `sudo port install ffmpeg`
 
-      `FFmpeg` は、AEMがコマンドラ `PATH` インを使用してそれを取得できるようにに含まれている必要があります。
+      `FFmpeg` は、AEMがコマンドラ `PATH` インを使用して取得できるように、に含まれている必要があります。
 
 * **OS X 10.6 用のコンパイル済みバージョンの使用：**
 
@@ -88,5 +88,5 @@ The Video Component relies on the third-party open-source product FFmpeg for pro
 
 >[!NOTE]
 >
->AEMインスタンスをアップグレードする際に、OOTBワークフローモデルは保持されません。 OOTBワークフローモデルは、編集する前にコピーすることをお勧めします。 例えば、DAM Update AssetモデルのFmpeg Transcoding手順を編集する前にOOTB DAM Update Assetモデルをコピーし、アップグレード前のビデオプロファイル名を選択します。 Then, you can overlay the `/apps` node to let AEM retrieve the custom changes to the OOTB model.
+>OOTBワークフローモデルは、AEMインスタンスをアップグレードする際に保持されません。 OOTBワークフローモデルは、編集する前にコピーすることをお勧めします。 For example, copy the OOTB [!UICONTROL DAM Update Asset] model before editing the FFmpeg Transcoding step in the [!UICONTROL DAM Update Asset] model to pick video-profile names that existed before the upgrade. Then, you can overlay the `/apps` node to let AEM retrieve the custom changes to the OOTB model.
 
