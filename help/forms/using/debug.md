@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -52,9 +52,9 @@ In the exception details, search for word **caused by**.
  </tbody>
 </table>
 
-## Problem: Unable to render a form (an error message is displayed) {#problem-unable-to-render-a-form-an-error-message-is-displayed}
+## Problem: Unable to render a form (an error message is displayed) {#problem-unable-to-render-form}
 
-1. 指定したパラメーターが正しいことを確認します。パラメーター関する詳しい情報については、[パラメーターのレンダリング](/help/forms/using/debug.md#main-pars-table)を参照してください。
+1. 指定したパラメーターが正しいことを確認します。パラメーター関する詳しい情報については、[パラメーターのレンダリング](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)を参照してください。
 1. CRX Package Manager(https://&lt;server>:&lt;port>/crx/packmgr/index.jsp)にログインし、次のパッケージが正しくインストールされているかどうかを確認します。
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
