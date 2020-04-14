@@ -4,7 +4,7 @@ description: AEM のフィルターパネルを使用した必要なアセット
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 25acffc6a0101be4ea6811b92c40bc76f554f5f0
+source-git-commit: fc4d8f98047fe727c11aa7a932ecc46a1a60d076
 
 ---
 
@@ -147,7 +147,7 @@ AEM のユーザーインターフェイス内から [Adobe Stock アセット](
 
 ### Dynamic Media アセット {#dmassets}
 
-**[!UICONTROL フィルター]**&#x200B;パネルから **[!UICONTROL Dynamic Media／セット]**&#x200B;を選択して、Dynamic Media 画像をフィルタリングすることができます。画像セット、カルーセル、混在メディアセット、スピンセットなどのアセットがフィルタリングされて表示されます。
+**[!UICONTROL フィルター]**&#x200B;パネルから **[!UICONTROL Dynamic Media]**／**[!UICONTROL セット]**&#x200B;を選択して、Dynamic Media 画像をフィルタリングすることができます。画像セット、カルーセル、混在メディアセット、スピンセットなどのアセットがフィルタリングされて表示されます。
 
 ### メタデータフィールドの特定の値を使用した検索 {#gqlsearch}
 
@@ -339,7 +339,7 @@ AEM Assets の検索機能には、次の制限事項があります。
 
    * 値を追加持つタイ `name` プのプロパテ `String``jcr:content/metadata/imageFeatures/haystack0`ィ。
 
-   * の値追加を持つタ `nodeScopeIndex` イプのプロパティで `Boolean``true`す。
+   * の値追加を持つタ `nodeScopeIndex` イプのプロパティ `Boolean``true`。
 
    * の値追加を持つタ `propertyIndex` イプのプロパティで `Boolean``true`す。
 
