@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -150,7 +150,7 @@ ContextHub設定は、アップグレードの影響を受けます。 Instructi
 
 ### ワークフローのカスタマイズ {#workflow-customizations}
 
-必要な機能を追加したり、必要のない機能を削除したりするには、標準のワークフローを更新または変更することが一般的な方法です。カスタマイズ対象として一般的なワークフローは、DAM アセットの更新ワークフローです。カスタム実装に必要なすべてのワークフローは、アップグレード中に上書きされる可能性があるので、バックアップしてバージョン管理に保存する必要があります。
+必要な機能を追加したり、必要のない機能を削除したりするには、標準のワークフローを更新または変更することが一般的な方法です。A common workflow that is customized is the [!UICONTROL DAM Update Asset] workflow. カスタム実装に必要なすべてのワークフローは、アップグレード中に上書きされる可能性があるので、バックアップしてバージョン管理に保存する必要があります。
 
 ### 編集可能なテンプレート {#editable-templates}
 
