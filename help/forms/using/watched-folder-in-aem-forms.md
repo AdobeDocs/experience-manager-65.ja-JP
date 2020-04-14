@@ -10,14 +10,14 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
 
 # AEM Forms の監視フォルダー{#watched-folder-in-aem-forms}
 
-管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトについて詳しくは、「[さまざまなファイル処理方法](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-4)」を参照してください。
+管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトについて詳しくは、「[さまざまなファイル処理方法](#variousmethodsforprocessingfiles)」を参照してください。
 
 ## 監視フォルダーの作成 {#create-a-watched-folder}
 
@@ -25,7 +25,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 * 監視フォルダー設定ノードのプロパティの設定中に、親ディレクトリのフルパスを folderPath プロパテイに入力し、作成する監視フォルダーの名前を追加します（例：`C:/MyPDFs/MyWatchedFolder`）。`MyWatchedFolder` フォルダーが存在しない場合、AEM Forms は指定したパスでフォルダの作成を試みます。
 
-* ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
+* ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-   サポートされているプロパティの完全なリストについては、「[監視フォルダーのプロパティ](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
+   サポートされているプロパティの完全なリストについては、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
 1. 「**すべて保存**」をクリックします。ノードの作成後、プロパティが保存されます。The `input`, `result`, `failure`, `preserve`, and `stage`folders are created at the path specified in the `folderPath` property.
 
@@ -657,5 +657,5 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
    * inputProcessorId（文字列型）：inputProcessorId プロパティの動作は、inputProcessorType プロパティに指定した値に基づきます。この例では、inputProcessorType プロパテイの値は workflow です。そのため inputProcessorId プロパティに PDFG ワークフローの次のパスを指定します。/etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern（文字列型）：出力ファイルのパターンです。フォルダーパターンまたはファイルパターンを 1 つ指定できます。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
-   上記の必須プロパティに加えて、監視フォルダーはオプションのプロパティもいくつかサポートしています。オプションのプロパティの完全な一覧と説明については、「[監視フォルダーのプロパティ](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
+   上記の必須プロパティに加えて、監視フォルダーはオプションのプロパティもいくつかサポートしています。オプションのプロパティの完全な一覧と説明については、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
