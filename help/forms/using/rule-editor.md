@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -305,7 +305,7 @@ When (任意):
 
 ![カスタム関数](assets/custom_functions_set_options_new.png)
 
-カスタム関数を作成するには、「ルールエディタ [ーでのカスタム関数」を参照してくださ](../../forms/using/rule-editor.md#main-pars-header-296220653)い。
+カスタム関数を作成するには、「ルールエディタ [ーでのカスタム関数」を参照してくださ](#custom-functions)い。
 
 フォームデータモデルに基づいてルールを定義するには：
 
@@ -347,7 +347,7 @@ When (任意):
 
 1つ以上の有効なルールが適用されているフォームオブジェクトには、緑のドットが付いています。フォームオブジェクトに適用されているルールのいずれかが無効な場合、フォームオブジェクトには黄色のドットが付きます。
 
-「関数」タブには、「合計」、「最小値」、「最大値」、「平均値」、「個数」や「検査フォーム」などの組み込み関数のセットが含まれます。これらの関数を使用して、繰り返し可能なパネルやテーブル行の値を計算し、ルールを記述する際のアクションや条件文で値を使用できます。 You can, however, create [custom functions](../../forms/using/rule-editor.md#custom-functions) too.
+「関数」タブには、「合計」、「最小値」、「最大値」、「平均値」、「個数」や「検査フォーム」などの組み込み関数のセットが含まれます。これらの関数を使用して、繰り返し可能なパネルやテーブル行の値を計算し、ルールを記述する際のアクションや条件文で値を使用できます。 You can, however, create [custom functions](#custom-functions) too.
 
 ![「関数」タブ](assets/functions.png)
 
@@ -518,7 +518,7 @@ The **[!UICONTROL Done]** button is used to save a rule. ルールは、不完�
 
 forms-power-users グループに追加されたユーザーは、コードエディターを使用できます。ルールエディターでは、ビジュアルエディターを使用して作成したルールの JavaScript コードを自動的に生成します。生成されたコードを表示するには、ビジュアルエディターからコードエディターに切り替えます。ただし、コードエディターでルールコードを変更した場合、ビジュアルエディターに戻すことはできません。ビジュアルエディターではなく、コードエディターでルールを記述することを希望する場合は、コードエディターで新たにルールを記述することもできます。これら2つのモードは、ビジュアルコードエディターの切り替えボタンから切り替えることができます。
 
-コードエディターのJavaScriptは、アダプティブフォームの式言語です。 すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの数式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
+コードエディターのJavaScriptは、アダプティブフォームの式言語です。 すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの数式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
 
 コードエディターでルールを記述する際の詳細なガイドラインは、「[アダプティブフォームの数式](/help/forms/using/adaptive-form-expressions.md)」を参照してください。
 
