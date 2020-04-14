@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -339,7 +339,7 @@ prefill-page component.zip
 事前入力サービスは OSGi サービスで、OSGi バンドルを使用してパッケージ化します。OSGi バンドルを作成し、アップロードし、AEM Forms バンドルにインストールします。バンドルの作成を開始する前に、以下を行います。
 
 * [AEM Forms Client SDK をダウンロードします](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)
-* [ボイラープレートパッケージをダウンロードします](../../forms/using/prepopulate-adaptive-form-fields.md#main-pars-download-section-711716493)
+* ボイラープレートパッケージをダウンロードします
 
 * データ（事前入力データ）ファイルを crx-repository に配置します。ファイルは crx-repository の \contents フォルダー内の任意の場所に配置できます。
 
