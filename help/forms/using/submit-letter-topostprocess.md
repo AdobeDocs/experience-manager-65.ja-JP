@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -23,11 +23,11 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 ![後処理](assets/ppoverview.png)
 
-後処理をレターとインタラクティブ通信に関連付けるには、まず後処理を設定する必要があります。送信済みのレターに対しては、次の2種類のワークフローを実行できます。
+後処理をレターとインタラクティブ通信に関連付けるには、まず後処理を設定する必要があります。送信済みのレターに対してワークフローを実行するには、次の2種類があります。
 
-1. **** フォームワークフロー：JEE上のAEM Formsのプロセス管理ワークフローは次のとおりです。 Instructions for setting up [Forms Workflow](../../forms/using/submit-letter-topostprocess.md#main-pars-header-3).
+1. **フォームワークフロー：** JEE上のAEM Formsのプロセス管理ワークフロー。 Instructions for setting up [Forms Workflow](#formsworkflow).
 
-1. **** AEMワークフロー：AEMワークフローは、送信済みレターの後処理としても使用できます。 [AEM Workflowの設定手順](../../forms/using/aem-forms-workflow.md)。
+1. **AEMワークフロー：** AEMワークフローは、送信済みレターの後処理としても使用できます。 [AEM Workflowの設定手順です](../../forms/using/aem-forms-workflow.md)。
 
 ## Forms のワークフロー {#formsworkflow}
 
@@ -41,11 +41,11 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
    ![Livecycle サーバーの名前を入力します。](assets/1cofigmanager.png)
 
 1. ユーザー名とパスワードを指定します。
-1. sun.util.calendarがデシリアル化ファイアウォール構成に追加されていることを確認します。
+1. sun.util.calendarが「ファイアウォールのデシリアライゼーション設定」に追加されていることを確認します。
 
-   「ファイアウォール設定のデシリアル化」に移動し、「パッケージプリフィックスのホワイトリストクラス」の下にsun.util.calendarを追加します。
+   「ファイアウォールの設定のデシリアライゼーション」に移動し、「パッケージプリフィックスのホワイトリストクラス」の下で、sun.util.calendarを追加します。
 
-1. これで、サーバーがマッピングされ、JEE上のAEM Formsの後処理が、レターの作成中にAEMユーザーインターフェイスで使用できるようになります。
+1. これで、サーバーがマッピングされ、JEE上のAEM Formsの後処理が、レターの作成時にAEMユーザーインターフェイスで使用できるようになります。
 
    ![リスト表示された後処理を使ってレター画面を作成します](assets/0configmanager.png)
 
@@ -57,11 +57,11 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
    Go to the Adobe Experience Manager Web Console Configurations page > **[!UICONTROL Correspondence Management Configurations]** and set up the following parameters:
 
-   1. **** inPDFDoc （PDFドキュメントパラメータ）:入力としてのPDFドキュメント。 この入力はレンダリングされたレターを入力として含みます。示されたパラメータ名は設定可能です。 Correspondence Management設定から設定できます。
-   1. **** inXMLDoc （XMLデータパラメータ）:入力としてのXMLドキュメント。 この入力には、XMLの形式でユーザーが入力したデータが含まれます。
-   1. **** inXDPDoc （XDPドキュメントパラメータ）:入力としてのXMLドキュメント。 この入力には、基になるレイアウト(XDP)が含まれます。
-   1. **** inAttachmentDocs （Attachment Documentsパラメーター）:リスト入力パラメーター。 この入力には、すべての添付ファイルが入力として含まれます。
-   1. **** redirectURL（リダイレクトURL出力）:リダイレクト先のURLを示す出力タイプ。
+   1. **inPDFDoc (PDFドキュメントパラメータ):** 入力としてのPDFドキュメント。 この入力はレンダリングされたレターを入力として含みます。示されたパラメータ名は設定可能です。 Correspondence Management設定から設定できます。
+   1. **inXMLDoc （XMLデータパラメータ）:** 入力としてのXMLドキュメント。 この入力には、XML形式でユーザーが入力したデータが含まれます。
+   1. **inXDPDoc (XDPドキュメントパラメータ):** 入力としてのXMLドキュメント。 この入力には、基になるレイアウト(XDP)が含まれます。
+   1. **inAttachmentDocs (Attachmentドキュメントパラメータ):** リスト入力パラメータ。 この入力には、すべての添付ファイルが入力として含まれます。
+   1. **redirectURL（リダイレクトURLの出力）:** リダイレクト先のURLを示す出力タイプ。
    フォームワークフローでは、「**[!UICONTROL Correspondence Management の設定]**」で指定した名前を使用して、PDF ドキュメントパラメーターまたは XML データパラメーターのいずれかを入力値として指定する必要があります。これは、後処理ドロップダウンにリスト表示する処理に対しては必須です。
 
 ## パブリッシュインスタンスでの設定 {#settings-on-the-publish-instance}
@@ -91,19 +91,19 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
    <td>指定したレターインスタンスを取得します </td>
   </tr>
   <tr>
-   <td>パブリックvoid deleteLetterInstance(String letterInstanceId)がICCException；をスロー </td>
+   <td>公開ボイドdeleteLetterInstance(String letterInstanceId)がICCException；をスロー </td>
    <td>deleteLetterInstance </td>
    <td>指定したレターインスタンスを削除しました </td>
   </tr>
   <tr>
-   <td>List getAllLetterInstances(Query) throws ICCException; </td>
+   <td>リストgetAllLetterInstances(クエリ)がICCException；をスロー </td>
    <td>getAllLetterInstances </td>
-   <td>このAPIは、入力クエリパラメーターに基づいてレターインスタンスを取得します。 すべてのレターインスタンスを取得するには、クエリパラメーターをヌルとして渡すことができます。<br /> </td>
+   <td>このAPIは、入力パラメーターに基づいてレターインスタンスをクエリします。 すべてのレターインスタンスを取得するには、クエリパラメーターをヌルとして渡すことができます。<br /> </td>
   </tr>
   <tr>
    <td>公開ブールletterInstanceExists(String letterInstanceName)がICCException；をスロー </td>
    <td>letterInstanceExists </td>
-   <td>LetterInstanceが指定した名前で存在するかどうかを確認します </td>
+   <td>LetterInstanceが指定した名前で存在するかどうかを確認します。 </td>
   </tr>
  </tbody>
 </table>
