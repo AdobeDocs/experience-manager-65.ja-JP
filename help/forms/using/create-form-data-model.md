@@ -1,15 +1,15 @@
 ---
 title: '"チュートリアル：フォームデータモデルの作成 "'
 seo-title: フォームデータモデルの作成チュートリアル
-description: フォームデータモデルの作成
-seo-description: フォームデータモデルの作成
+description: フォームデータモデルを作成する
+seo-description: フォームデータモデルを作成する
 uuid: b9d2bb1b-90f0-44f4-b1e3-0603cdf5f5b8
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -84,12 +84,12 @@ MySQL データベースを設定するには、以下の手順を実行しま�
 
 ## 手順 2：フォームデータモデルを作成する {#create-fdm}
 
-AEM Forms には、設定済みデータソースを使用して[フォームデータモデルを作成](../../forms/using/data-integration.md#main-pars-header-1524967585)するための直感的なユーザーインターフェイスが用意されています。1 つのフォームデータモデル内で複数のデータソースを使用することができます。このユースケースでは、既に設定されている MySQL データソースを使用します。
+AEM Forms provides an intuitive user interface to [create a form data model](data-integration.md) from configured data sources. 1 つのフォームデータモデル内で複数のデータソースを使用することができます。このユースケースでは、既に設定されている MySQL データソースを使用します。
 
 フォームデータモデルを作成するには、以下の手順を実行します。
 
-1. In AEM author instance, navigate to **Forms** > **Data Integrations**.
-1. Tap **Create** > **Form Data Model**.
+1. AEM オーサーインスタンスで、**フォーム**／**データ統合**&#x200B;に移動します。
+1. **作成**／**フォームデータモデル**&#x200B;の順にタップします。
 1. フォームデータモデル作成ダイアログで、フォームデータモデルの&#x200B;**名前**&#x200B;を指定します。例えば、「**customer-shipping-billing-details**」などを指定します。「**次へ**」をタップします。
 1. データソース選択画面に、すべての設定済みデータソースが一覧表示されます。Select **WeRetailMySQL** data source and tap **Create**.
 
@@ -172,7 +172,7 @@ The **customer-shipping-billing-details** form data model is created.
 
       * **配列を返す**：「**配列を返す**」オプションを無効にします。
       * **引数**：**ID** という引数を選択します。
-      「**Done**」をタップします。これで、顧客の詳細情報を MySQL データベースから取得するサービスが設定されました。
+      「**完了**」をタップします。これで、顧客の詳細情報を MySQL データベースから取得するサービスが設定されました。
 
       ![シピングアドレス検索](assets/shiiping-address-retrieval.png)
 
@@ -192,7 +192,7 @@ The **customer-shipping-billing-details** form data model is created.
       * **出力タイプ**：「**ブール演算式**」を選択します。
 
       * **引数**：**ID** という引数と **customerdetails** という引数を選択します。
-      「**Done**」をタップします。これで、MySQL データベース内の顧客の詳細情報を更新する **update** サービスが設定されました。
+      「**完了**」をタップします。これで、MySQL データベース内の顧客の詳細情報を更新する **update** サービスが設定されました。
 
       ![shiping-address-update](assets/shiiping-address-update.png)
 
