@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -84,7 +84,7 @@ AEM Formsを使用すると、アダプティブフ [](../../forms/using/embed-a
 
 #### アダプティブフォームのテンプレートの可用性を特定のパスに制限する {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-アダプティブフォームでは、cq:allowedPathsプロパティのサポートが追加されました。 このプロパティは、 [アダプティブフォームのテンプレートの利用を特定のパスに制限しま](../../forms/using/creating-adaptive-form.md#main-pars-text)す。
+アダプティブフォームでは、cq:allowedPathsプロパティのサポートが追加されました。 このプロパティは、 [アダプティブフォームのテンプレートの利用を特定のパスに制限しま](creating-adaptive-form.md#adaptive-form-templates)す。
 
 #### ダイナミ追加ックなアダプティブフォームのチェックボックス {#add-check-boxes-to-the-adaptive-form-dynamically}
 
