@@ -3,7 +3,7 @@ title: メタデータスキーマ
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
+source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
 
 ---
 
@@ -16,24 +16,23 @@ Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使
 
 1. アセットのプロパティページを表示するには、カード表示のアセットタイル上のクイックアクションで&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコンをクリックまたはタップします。
 
-   ![chlimage_1-34](assets/chlimage_1-170.png)
+   ![アセットタイルのクイックアクション](assets/chlimage_1-170.png)
 
    または、UI でアセットを選択し、ツールバーの「**[!UICONTROL プロパティ]**」アイコンをクリックまたはタップします。
 
-   ![chlimage_1-35](assets/chlimage_1-171.png)
+   ![上部のツールバーのプロパティアイコン](assets/chlimage_1-171.png)
 
 1. 様々なタブで様々なメタデータプロパティを編集できます。ただし、プロパティページではアセットタイプを変更できません。
 
-   ![アセットのプロパティの「基本」タブでアセットタイプを変更することはできません。](assets/asset-properties-basic-tab.png)
+   ![アセットのプロパティの「基本」タブ。アセットタイプを変更できません。](assets/asset-properties-basic-tab.png)
 
    *図：アセットのプロパティの「基本」タブ*
-
 
    アセットの MIME タイプを変更するには、カスタムメタデータスキーマフォームを使用するか、既存のフォームを変更します。See [Edit Metadata Schema Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) for more information. 特定の MIME タイプのメタデータスキーマを変更すると、現在の MIME タイプのアセットおよびすべてのアセットサブタイプのプロパティページのレイアウトが変更されます。例えば、`default/image` 配下の jpeg スキーマを変更すると、MIME タイプが `image/jpeg` のアセットのメタデータのレイアウト（アセットプロパティ）のみが変更されます。ただし、デフォルトスキーマを編集する場合は、すべてのタイプのアセットのメタデータのレイアウトを変更します。
 
 1. フォームやテンプレートのリストを表示するには、AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。
 
-   ![chlimage_1-37](assets/chlimage_1-173.png)
+   ![メタデータリストフォームのスキーマを示すページ](assets/chlimage_1-173.png)
 
    AEM では次のテンプレートが用意されています。
    * **デフォルト**：アセットのメタデータスキーマの基本フォームです。
@@ -67,7 +66,7 @@ Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使
 
 1. ダイアログで、スキーマフォームのタイトルを入力し、「**[!UICONTROL 作成]**」をクリックして、フォーム作成プロセスを完了します。
 
-   ![chlimage_1-38](assets/chlimage_1-174.png)
+   ![タイトルの指定とメタデータスキーマフォームの作成](assets/chlimage_1-174.png)
 
 ## メタデータスキーマフォームの編集 {#edit-metadata-schema-forms}
 
@@ -82,12 +81,11 @@ Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使
 
 1. スキーマフォームページで、フォームの前のチェックボックスをオンにし、ツールバーの編集アイコンをクリックします。
 
-   ![chlimage_1-39](assets/chlimage_1-175.png)
+   ![メタデータアイコンフォームのツールバーにある編集スキーマ](assets/chlimage_1-175.png)
 
 1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、アセットのプロパティページをカスタマイズします。それには、「**[!UICONTROL フォームを作成]**」タブのコンポーネントタイプのリストから「**[!UICONTROL 基本]**」タブに、1 つ以上のコンポーネントをドラッグします。
 
-   ![ビルドフォームからメタデータスキーマエディタにコンポーネントを追加し、アセットのプロパティをカスタマイズ](assets/metadata-schema-editor.png)
-
+   ![メタデータスキーマエディタでアセットのプロパティページをカスタマイズ](assets/metadata-schema-editor.png)
 
    *図：メタデータスキーマエディタの「基本」タブ*
 
@@ -148,7 +146,7 @@ Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使
 
 **削除**:コンポーネントを削除するには、このアイコンをクリックします。スキーマフォームから
 
-![chlimage_1-41](assets/chlimage_1-177.png)
+![メタデータアイコンフォームの削除スキーマ](assets/chlimage_1-177.png)
 
 >[!NOTE]
 >
@@ -156,15 +154,15 @@ Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使
 
 「**[!UICONTROL 必須]**」オプションを選択した場合、必須のメタデータが設定されていないアセットを検索できます。**[!UICONTROL フィルター]**&#x200B;パネルで、「**[!UICONTROL メタデータの検証]**」述語を展開して、「**[!UICONTROL 無効]**」オプションを選択します。検索結果に、スキーマフォームで設定した必須のメタデータが設定されていないアセットが表示されます。
 
-![chlimage_1-42](assets/chlimage_1-178.png)
+![オプションパネルのMetadata Validation predicateで無効なオプションがフィルターされました ](assets/chlimage_1-178.png)
 
 スキーマフォームのいずれかのタブにコンテキストメタデータコンポーネントを追加した場合、コンポーネントは、その特定のスキーマが適用されているアセットのプロパティページに  リストとして表示されます。このリストには、コンテキストメタデータコンポーネントを適用したタブを除く、他のすべてのタブが含まれます。現在、この機能は、コンテキストに応じてメタデータの表示を制御する基本的な機能を提供しています。
 
-![chlimage_1-43](assets/chlimage_1-179.png)
+![アセットプロパティのタブを一覧表示するコンテキストメタデータコンポーネント](assets/chlimage_1-179.png)
 
 プロパティページにタブを表示するには、コンテキストメタデータコンポーネントが適用されるタブに加えて、任意のタブを表示するには、リストからタブを選択します。 タブがプロパティページに追加されます。
 
-![プロパティページに表示するコンテキストメタデータリストからタブを選択](assets/contextual-metadata-asset-properties.png)
+![コンテキストメタデータリストで選択したタブが、アセットプロパティページに表示されます](assets/contextual-metadata-asset-properties.png)
 
 *図：アセットプロパティページのコンテキストメタデータ*
 
@@ -174,15 +172,15 @@ Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使
 
 #### スキーマフォームでのタブの追加または削除 {#adding-deleting-a-tab-in-the-schema-form}
 
-スキーマエディターで、タブを追加または削除できます。デフォルトのスキーマフォームには、「**[!UICONTROL 基本]**」、「**[!UICONTROL 詳細]**」、「**[!UICONTROL IPTC]**」および「**[!UICONTROL IPTC 拡張]**」の各タブがデフォルトで含まれています。
+スキーマエディターで、タブを追加または削除できます。The default schema form includes the **[!UICONTROL Basic]**, **[!UICONTROL Advanced]** , **[!UICONTROL IPTC]**, and **[!UICONTROL IPTC Extension]** tabs.
 
-![chlimage_1-45](assets/chlimage_1-181.png)
+![メタデータスキーマフォームのデフォルトタブ](assets/chlimage_1-181.png)
 
 「`+`」をクリックすると、スキーマフォームに新しいタブを追加できます。新しいタブにはデフォルトで「`Unnamed-1`」という名前が付けられます。この名前は、「**[!UICONTROL 設定]**」タブで編集できます。
 
 タブを削除するには、「`X`」をクリックします。
 
-![chlimage_1-46](assets/chlimage_1-182.png)
+![または、メタデ追加ータスキーマエディタを使用してタブを削除](assets/chlimage_1-182.png)
 
 ## メタデータスキーマフォームの削除 {#delete-metadata-schema-forms}
 
@@ -190,7 +188,8 @@ AEM では、カスタムのスキーマフォームのみを削除できます�
 
 フォームを削除するには、フォームを選択して削除アイコンをクリックします。
 
-![chlimage_1-47](assets/chlimage_1-183.png)
+![削除アイコンを使用して、カスタムメタデータスキーマフォームを削除](assets/chlimage_1-183.png)
+
 <!--![chlimage_1-47](assets/chlimage_1-177.png) -->
 >[!NOTE]
 >
@@ -255,26 +254,26 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
 1. AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
 1. フォーム（デフォルトのメタデータフォームなど）の前にあるチェックボックスをオンにし、コピーアイコンをクリックまたはタップしてカスタムフォームとして保存します。そのフォームに `my_default` などの名前を付けます。カスタムフォームを作成することもできます。
-   ![chlimage_1-184](assets/chlimage_1-184.png)
+   ![「コピー」アイコンを使用してデフォルトのフォームをコピーし、メタデータスキーマフォームページにカスタムフォームとして保存](assets/chlimage_1-184.png)
 
 1. **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページで、`my_default` フォームを選択し、「**[!UICONTROL 編集]**」アイコンをクリックします。
 
-   ![chlimage_1-49](assets/chlimage_1-185.png)
+   ![編集アイコンをクリックして、メタデータスキーマエディタを開き、スキーマフォームを編集](assets/chlimage_1-185.png)
 
 1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、スキーマフォームにテキストフィールドを追加します。例えば、「**[!UICONTROL カテゴリ]**」というラベルのフィールドを追加します。
 
-   ![メタデータスキーマフォームエディターへのテキストフィールドの追加](assets/text-field-metadata-schema-editor.png)
+   ![メタデータフォームエディターに追加されたテキストスキーマフィールド](assets/text-field-metadata-schema-editor.png)
 
    *図：メタデータスキーマフォームエディターに追加されたテキストフィールド*
 
 1. 「**[!UICONTROL 保存]**」をクリックします。変更されたフォームは&#x200B;**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページにリストされます。
 1. ツールバーの「**[!UICONTROL フォルダーに適用]**」をクリックまたはタップしてカスタムメタデータをフォルダーに適用します。
 
-   ![chlimage_1-51](assets/chlimage_1-187.png)
+   ![フォルダにカスタムメタデータを適用するには、フォルダに適用アイコンをクリックします。](assets/chlimage_1-187.png)
 
 1. 変更されたスキーマを適用するフォルダーを選択し、「**[!UICONTROL 適用]**」をクリックまたはタップします。
 
-   ![chlimage_1-52](assets/chlimage_1-188.png)
+   ![メタデータを適用するフォルダを選択スキーマ](assets/chlimage_1-188.png)
 
 1. フォルダーに他のメタデータが適用されている場合は、既存のメタデータスキーマを上書きする旨の警告メッセージが表示されます。「**上書き**」をクリックします。
 1. 「**OK**」をクリックして、成功メッセージを閉じます。
@@ -291,21 +290,21 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 1. AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
 1. デフォルトのメタデータフォームをカスタムフォームとして保存します。例えば、`my_default` として保存します。
 
-   ![chlimage_1-53](assets/chlimage_1-189.png)
+   ![カスタムフォームとして保存されるデフォルトのメタデータフォーム](assets/chlimage_1-189.png)
 
 1. カスタムフォームを編集します。必須フィールドを追加します。例えば、「**[!UICONTROL カテゴリ]**」フィールドを追加して、それを必須フィールドにします。
 
-   ![メタデータフォームにフィールドを追加し、「ルール」タブで「必須」を選択して必須にします](assets/mandatory-field-metadata-schema-editor.png)
+   ![メタデ追加ータスキーマフォームエディタの「ルール」タブで「必須」を選択して、メタデータフォームに必須のフィールドを追加します。](assets/mandatory-field-metadata-schema-editor.png)
 
    *図：メタデータスキーマフォームエディターの必須フィールド*
 
 1. 「**[!UICONTROL 保存]**」をクリックします。変更されたフォームは&#x200B;**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページにリストされます。フォームを選択し、ツールバーの「**[!UICONTROL フォルダーに適用]**」をクリックまたはタップしてカスタムメタデータをフォルダーに適用します。
 
-   ![chlimage_1-55](assets/chlimage_1-191.png)
+   ![カスタムメタデータフォームをフォルダーに適用するには、フォルダーに適用アイコン](assets/chlimage_1-191.png)
 
 1. フォルダーに移動し、カスタムフォームに追加した必須フィールドにメタデータが指定されていないアセットをアップロードします。必須フィールドの指定されていないメタデータに関するメッセージが、アセットのカード表示に表示されます。
 
-   ![chlimage_1-56](assets/chlimage_1-192.png)
+   ![フォルダー内のアセットのアップロード時に、アセットカード表示に必須のメタデータが見つからないというメッセージ](assets/chlimage_1-192.png)
 
 1. （オプション）`https://[server]:[port]/system/console/components/` にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。AEM がアセット上にあるメタデータの妥当性をチェックする頻度を設定します。
 
