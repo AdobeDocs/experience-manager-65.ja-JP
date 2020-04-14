@@ -11,7 +11,7 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -29,7 +29,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>タスク</td> 
   </tr>
   <tr>
-   <td>forms-user <sup><a href="#main-pars-text">[1]</a></sup></td> 
+   <td>forms-user <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>アダプティブフォームを作成、プレビュー、パブリッシュ、送信する</li> 
@@ -59,7 +59,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup><a href="#main-pars-text">[2]</a></sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>アダプティブフォームやインタラクティブ通信テンプレートを作成およびプレビューする</li> 
@@ -70,7 +70,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>
     <ul> 
      <li>アダプティブフォームやインタラクティブ通信テンプレートを作成およびプレビューする</li> 
-     <li>コードエディターを使用して、アダプティブフォームまたはインタラクティブな通信テンプレート用のスクリプトを作成する</li> 
+     <li>コードエディターを使用して、アダプティブフォームまたはインタラクティブな通信テンプレートのスクリプトを作成する</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -99,7 +99,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>AEMインボックスアプリケーションを使用<br /><strong>する注意：AEMのインボ </strong>ックスでInteractive Communications Agent UIにアクセスするには、cm-agent-usersとworkflow-usersのグループ割り当てが必要です。</li> 
+     <li>AEMインボックスアプリケーションを使用<br /><strong>する注意：AEMのイン </strong>ボックスでInteractive Communications Agent UIにアクセスするには、cm-agent-usersおよびworkflow-usersグループの割り当てが必要です。</li> 
      <li>ワークフローインスタンスを管理する</li> 
     </ul> </td> 
   </tr>
