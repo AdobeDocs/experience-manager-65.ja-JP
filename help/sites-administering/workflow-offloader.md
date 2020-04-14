@@ -10,7 +10,7 @@ topic-tags: content
 content-type: reference
 discoiquuid: 91f0fd7d-4b49-4599-8f0e-fc367d51aeba
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -21,7 +21,7 @@ Assets ワークフローオフローダーを使用すると、Adobe Experience
 
 ## オフローダートポロジの設定 {#configure-offloader-topology}
 
-Configuration Managerを使用して、リーダーインスタンスのURLと、リーダーインスタンス上の接続要求に対するオフローダーインスタンスのホスト名を追加します。
+Configuration Managerを使用して、リーダーインスタンスのURLと、リーダーインスタンス上の接続要求のオフローダーインスタンスのホスト名を追加します。
 
 1. Tap/click the AEM logo, and choose **Tools** > **Operations** > **Web Console** to open Configuration Manager.
 1. From the Web Console, select **Sling** >  **Topology Management**.
@@ -54,7 +54,7 @@ Configuration Managerを使用して、リーダーインスタンスのURLと�
 
 ## リーダーインスタンスでのワークフローランチャーの設定 {#configure-workflow-launchers-on-the-leader-instance}
 
-Configure workflow launchers to use the **DAM Update Asset Offloading** workflow on the leader instance instead of the **Dam Update Asset** workflow.
+Configure workflow launchers to use the [!UICONTROL DAM Update Asset Offloading] workflow on the leader instance instead of the **Dam Update Asset** workflow.
 
 1. Tap/click the AEM logo, and choose, **Tools** > **Workflow** > **Launchers** to open the **Workflow Launchers** console.
 
@@ -65,12 +65,12 @@ Configure workflow launchers to use the **DAM Update Asset Offloading** workflow
 
    ![chlimage_1-51](assets/chlimage_1-51a.png)
 
-1. From the **Workflow** list, choose **DAM Update Asset Offloading** and tap/click **Save**.
+1. From the **Workflow** list, choose [!UICONTROL DAM Update Asset Offloading] and tap/click **Save**.
 
    ![chlimage_1-52](assets/chlimage_1-52a.png)
 
 1. Tap/click the AEM logo, and choose, **Tools** > **Workflow** > **Models** to open the **Workflow Models** page.
-1. Select the **DAM Update Asset Offloading** workflow, and tap/click **Edit** from the toolbar to display its details.
+1. Select the [!UICONTROL DAM Update Asset Offloading] workflow, and tap/click **Edit** from the toolbar to display its details.
 
    ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -78,7 +78,7 @@ Configure workflow launchers to use the **DAM Update Asset Offloading** workflow
 
    ![chlimage_1-54](assets/chlimage_1-54a.png)
 
-## オフローダーインスタンスでのワークフローランチャーの無効化 {#disable-the-workflow-launchers-on-the-offloader-instances}
+## オフローダーインスタンスのワークフローランチャーの無効化 {#disable-the-workflow-launchers-on-the-offloader-instances}
 
 Disable the workflow launchers that run the **DAM Update Asset** workflow on the leader instance.
 
@@ -95,5 +95,5 @@ Disable the workflow launchers that run the **DAM Update Asset** workflow on the
 
    ![chlimage_1-57](assets/chlimage_1-57a.png)
 
-1. タイプがimageのアセットをリーダーインスタンスにアップロードします。 オフロードされたインスタンスによって、アセットに対して生成および移植されたサムネールを確認します。
+1. リーダーインスタンスで画像タイプのアセットをアップロードします。 オフロードされたインスタンスによって、アセットに対して生成され、移植されたサムネールを確認します。
 
