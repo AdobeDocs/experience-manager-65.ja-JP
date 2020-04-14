@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -34,7 +34,7 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 1. OS の手順に従って FFmpeg をインストールします。
 
-1. システムパスにFFmpeg実行可能ファイルが設定されていることを確認します。
+1. FFmpeg実行可能ファイルがシステムパスに設定されていることを確認します。
 
    システム内の任意のディレクトリからFFmpegを実行できるはずです。
 
@@ -42,23 +42,23 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 ## FFmpeg トランスコーディングサービスの設定 {#configure-ffmpeg-transcoding-service}
 
-デフォルトでは、FFmpeg をインストールすると、DAM アセットの更新のワークフロー定義どおりに複数のレンディションが設定されます（トランスコーディング）。
+By default, when FFmpeg is installed, multiple renditions are configured (transcodings) as per the [!UICONTROL DAM Update Asset] workflow definition.
 
 トランスコーディングは CPU を集中的に使用するので、対象レンディションのリストを変更することを推奨します。ほとんどの場合、トランスコードは必要ありません。
 
-DAM アセットの更新のワークフローを変更するには（この例ではトランスコーディングをオフにするには）、次のようにします。
+To modify the [!UICONTROL DAM Update Asset] workflow, and in this example, to turn off transcoding:
 
-* 管理者権限で作成者インスタンスにサインインします
+* 管理者権限を持つ作成者インスタンスにサインインします
 * From global navigation: **[!UICONTROL Tools > Workflow > Models]**
 * Locate **[!UICONTROL DAM Update Asset]**
-* ダブルクリックして、編集用のワークフローをクラシックUIで開きます
+* 重複キーを押しながらクリックして、編集用のワークフローをクラシックUIで開きます
 
    Resulting location: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
 * Double-click the **[!UICONTROL FFmpeg transcoding]** step to access the Step Properties dialog
 * Under the **[!UICONTROL Process]** tab:
 
-   * **[!UICONTROL 歩調]**:すべてのエントリを消去して、トランスコードのデフォルト値を無効にします。 `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL 歩調]**:トランスコードを無効にするすべてのエントリを消去します。初期設定値： `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
 ![chlimage_1-372](assets/chlimage_1-372.png)
 
