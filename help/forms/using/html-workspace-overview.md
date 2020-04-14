@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -49,7 +49,7 @@ AEM Forms Workspace では、以下のタスクを実行できます。
 
 Flex Workspace ユーザーが AEM Forms を使用することはできません。Flex Workspace を使用しているすべてのユーザーは AEM Forms Workspace に移行する必要があります。
 
-AEM Forms Workspace では、デフォルトのアクションプロファイルで XDP フォームに関連付けられているデフォルトのレンダリング／送信サービスが変更され、新しいサービスが導入されました。詳しくは、「[新しいレンダリングと送信サービス](/help/forms/using/new-render-submit-service.md)」を参照してください。XDP フォームを使用する既存のプロセスを移行してこれらのサービスを使用するには、[この手順](/help/forms/using/new-render-submit-service.md#main-pars-faq)に従います。
+AEM Forms Workspace では、デフォルトのアクションプロファイルで XDP フォームに関連付けられているデフォルトのレンダリング／送信サービスが変更され、新しいサービスが導入されました。詳しくは、「[新しいレンダリングと送信サービス](/help/forms/using/new-render-submit-service.md)」を参照してください。XDP フォームを使用する既存のプロセスを移行してこれらのサービスを使用するには、[この手順](new-render-submit-service.md)に従います。
 
 **Flex Workspace カスタマイズと AEM Forms Workspace のマッピング**
 
@@ -120,11 +120,11 @@ AEM Forms Workspace では、幅広く様々なカスタマイズをサポート
 * セマンティックのカスタマイズを使用した機能
 * 他の Web アプリケーションでの HTML コンポーネントの再利用
 
-「[カスタマイズ](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-0)」の記事では、このようなカスタマイズのタイプについて説明しています。
+「[カスタマイズ](introduction-customizing-html-workspace.md#types-of-customizations)」の記事では、このようなカスタマイズのタイプについて説明しています。
 
 ### 開発者環境の設定 {#set-up-the-developer-environment}
 
-AEM Forms Workspace の成果物には、CRX にデプロイされる CRX パッケージ、完全なソースコードが含まれている SDK アーカイブ、サードパーティの JavaScript ライブラリ、AEM Forms Workspace のビルドスクリプトが含まれます。これらを使用して、上述したカスタマイズを実行するための開発者環境を設定します。詳しくは、「[AEM Forms Workspace コードの構築](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)」を参照してください。
+AEM Forms Workspace の成果物には、CRX にデプロイされる CRX パッケージ、完全なソースコードが含まれている SDK アーカイブ、サードパーティの JavaScript ライブラリ、AEM Forms Workspace のビルドスクリプトが含まれます。これらを使用して、上述したカスタマイズを実行するための開発者環境を設定します。詳しくは、「[AEM Forms Workspace コードの構築](introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照してください。
 
 主要なインターフェイスやコア機能をカスタマイズできます。これには、フォント、カラースキーム、ロゴ、ログイン画面、エラーダイアログ、サードパーティアプリケーションとの統合、サードパーティアプリケーションのコンポーネントの再利用などが含まれます。また、タスクの概要ページに表示するコンテンツの補正、タスクルートアクションのイメージの表示のほか、AEM Forms Workspace アプリケーションを作成する低レベルのバックポーンモデルやバックボーンビューの変更を行うこともできます。
 
