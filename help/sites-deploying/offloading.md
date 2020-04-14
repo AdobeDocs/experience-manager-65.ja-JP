@@ -10,7 +10,7 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: 4ccaf401d561087f864c95e2be4c594cf34a7cb7
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -135,7 +135,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
   <tr>
    <td>最小イベント遅延（秒）</td>
    <td>minEventDelay</td>
-   <td><p>トポロジに変更が発生した場合、状態の変更をTOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDに遅延する時間です。状態がTOPOLOGY_CHANGINGの場合に発生する各変更は、この時間だけ遅延を増やします。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td>
+   <td><p>トポロジに変更が発生した場合、TOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDへの状態の変更を遅延する時間です。状態がTOPOLOGY_CHANGINGの場合に発生する各変更は、この時間だけ遅延を増やします。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td>
    <td>3</td>
   </tr>
   <tr>
@@ -164,7 +164,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
 1. Main／Topology Management をクリックします。
 1. 「 Configure Discovery Service」をクリックします。
-1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URLはhttps://rootservername:4502/libs/sling/topology/connectorの形式で指定します。
+1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URLの形式はhttps://rootservername:4502/libs/sling/topology/connectorです。
 
 トポロジのルートメンバーで以下の手順を実行します。この手順では、その Discovery Service ホワイトリストに他のトポロジメンバーの名前を追加します。
 
@@ -205,9 +205,9 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 
 | ジョブトピック | サービス PID | 説明 |
 |---|---|---|
-| / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling とともにインストールされます。下位互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
+| ／ | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling とともにインストールされます。下位互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
 | com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
-| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | DAM アセット更新オフローダーワークフローによって生成されたジョブを処理します。 |
+| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | [!UICONTROL DAM Update Asset Offloaderワークフローで生成されるジョブを処理します] 。 |
 
 ### インスタンスのトピックの無効化と有効化 {#disabling-and-enabling-topics-for-an-instance}
 
@@ -275,7 +275,7 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト値は |
+   | 設定／シリアル化の種類 | デフォルト |
    | トランスポート／トランスポート URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
    | トランスポート／トランスポートユーザー | ターゲットインスタンスのレプリケーションユーザー |
    | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーパスワード |
@@ -289,7 +289,7 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト値は |
+   | 設定／シリアル化の種類 | デフォルト |
    | トランスポート／トランスポート URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
    | トランスポート／トランスポートユーザー | ターゲットインスタンスのレプリケーションユーザー |
    | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーパスワード |
@@ -302,7 +302,7 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト値は |
+   | 設定／シリアル化の種類 | デフォルト |
    | トランスポート／トランスポート URI | repo://var/replication/outbox |
    | トリガー／デフォルトを無視 | True |
 
@@ -317,11 +317,11 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
 DAM で追加または更新されたアセットのバックグラウンド処理が特定のインスタンスによって実行されるように、トポロジのインスタンスを設定します。
 
-デフォルトでは、DAM アセットが変更されるか DAM に追加されると、Experience Manager によって DAM アセット更新ワークフローが実行されます。Experience Manager によって DAM アセット更新オフローダーワークフローが実行されるように、デフォルトの動作を変更します。This workflow generates a JobManager job that has a topic of `com/adobe/granite/workflow/offloading`. 次に、ジョブが専用のワーカーにオフロードされるようにトポロジを設定します。
+By default, Experience Manager executes the [!UICONTROL DAM Update Asset] workflow when a DAM asset changes or one is added to DAM. Change the default behavior so that Experience Manager instead executes the [!UICONTROL DAM Update Asset Offloader] workflow. This workflow generates a JobManager job that has a topic of `com/adobe/granite/workflow/offloading`. Then, configure the topology so that the job is offloaded to a dedicated worker.
 
 >[!CAUTION]
 >
->ワークフローのオフロードで使用する場合、ワークフローは一時的ではありません。 例えば、アセットのオフロードに対して使用するときに DAM アセット更新ワークフローを一時的にすることはできません。To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
+>ワークフローのオフロードで使用する場合、ワークフローは一時的ではありません。 For example, the [!UICONTROL DAM Update Asset] workflow must not be transient when used for asset offloading. To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
 
 以下の手順では、次の特徴を持つオフロードトポロジを想定しています。
 
@@ -334,14 +334,14 @@ DAM で追加または更新されたアセットのバックグラウンド処�
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
-1. DAM アセットをアップロードまたは変更するためにユーザーがやり取りする各インスタンスで、DAM アセット更新オフロードワークフローを使用するようにワークフローランチャーを設定します。
+1. On each instance that users interact with to upload or change DAM assets, configure workflow launchers to use the [!UICONTROL DAM Update Asset Offloading] workflow:
 
    1. ワークフローコンソールを開きます。
    1. 「ランチャー」タブをクリックします。
-   1. DAM アセット更新ワークフローを実行する 2 つのランチャー設定を見つけます。ランチャー設定イベントタイプの 1 つは Node Created、もう 1 つのタイプは Node Modified です。
-   1. DAM アセット更新オフロードワークフローが実行されるように、両方のイベントタイプを変更します（ランチャーの設定について詳しくは、[ノード変更時のワークフローの開始](/help/sites-administering/workflows-starting.md)を参照してください）。
+   1. [!UICONTROL DAM Update Assetワークフローを実行する2つのランチャー設定を見つけます] 。1つのランチャー設定イベントタイプは「作成されたノード」、もう1つのタイプは「変更されたノード」です。
+   1. Change both event types so that they execute the [!UICONTROL DAM Update Asset Offloading] workflow. (For information about launcher configurations, see [Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md).)
 
-1. DAM アセットのバックグラウンド処理を実行するインスタンスで、DAM アセット更新ワークフローを実行するワークフローランチャーを無効にします。
+1. On the instances that perform the background processing of DAM assets, disable the workflow launchers that execute the [!UICONTROL DAM Update Asset] workflow.
 
 ## 参考情報 {#further-reading}
 
