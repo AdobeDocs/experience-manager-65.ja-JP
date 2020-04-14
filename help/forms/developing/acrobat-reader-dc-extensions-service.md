@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -20,13 +20,15 @@ Acrobat Reader DC Extensionsサービスでは、次のクイック開始を使�
 
 [クイック開始（SOAPモード）:Java APIを使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[PDFの使用権限の削除ドキュメント](/help/forms/developing/acrobat-reader-dc-extensions-service.md#main-pars-heading-1)
+[PDFの使用権限の削除ドキュメント](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
 [クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+>[!NOTE]
+>
+>「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）:Java APIを使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
