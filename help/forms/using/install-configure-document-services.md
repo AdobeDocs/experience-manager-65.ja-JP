@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: ba4e4908c0564af6e7f0759c5119a5c02f274dbd
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -32,7 +32,7 @@ PDF ドキュメントを PostScript または画像ファイル（JPEG、JPEG 2
 
 PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成できます。レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。For more information, see [Output Service](/help/forms/using/output-service.md).
 
-PDF Generator サービスは、ネイティブファイル形式を PDF に変換する API を提供します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。For more information, see [PDF Generator Service](/help/forms/using/aem-document-services-programmatically.md#main-pars-header-27).
+PDF Generator サービスは、ネイティブファイル形式を PDF に変換する API を提供します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。For more information, see [PDF Generator Service](aem-document-services-programmatically.md#pdfgeneratorservice).
 
 追加の使用権限で Adobe Reader の機能を拡張して、組織内でインタラクティブ PDF ドキュメントを簡単に共有することができます。このサービスにより、PDF ドキュメントを Adobe Reader で開いた場合には使用できない機能（ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など）がアクティブになります。For more information, see [Reader Extension Service](/help/forms/using/overview-aem-document-services.md#p-reader-extension-service-p).
 
@@ -328,7 +328,7 @@ Microsoft Office のセキュリティセンターの設定を変更して、PDF
 1. スライダーを「通知しない」のレベルに設定します。完了したら、コマンドウィンドウを閉じ、システム構成ウィンドウを閉じます。
 1. レジストリ設定で UAC が 0 に設定されていることを検証します。次の手順を実行して確認します。
 
-   1. Microsoft は、レジストリを変更する前にバックアップをとっておくことを推奨しています。詳しい手順については、「[Windows でのレジストリのバックアップと復元方法](https://support.microsoft.com/en-us/help/322756)」を参照してください。
+   1. Microsoft は、レジストリを変更する前にバックアップをとっておくことを推奨しています。詳しい手順については、「[Windows でのレジストリのバックアップと復元方法](https://support.microsoft.com/ja-jp/help/322756)」を参照してください。
    1. Microsoft Windows のレジストリエディターを開きます。レジストリエディターを開くには、「スタート／ファイル名を指定して実行」に移動し、「regedit」と入力して「OK」をクリックします。
    1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\` に移動します。EnableLUA の値が 0 に設定されていることを確認します。
    1. **EnableLUA** の値が 0 に設定されていることを確認します。値が 0 に設定されていない場合は、0 に変更します。レジストリエディターを終了します。
@@ -386,11 +386,11 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 1. [AEM パッケージ共有](http://localhost:4502/crx/packageshare/login.html)で **[!UICONTROL AEM 6.4 Forms add-on packages]** を検索し、お使いのオペレーティングシステムに対応するパッケージをクリックして、「**[!UICONTROL ダウンロード]**」をクリックします。ライセンス使用許諾契約書を読んでから同意し、「**[!UICONTROL OK]**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**[!UICONTROL ダウンロード済み]**」というテキストが表示されます。
 
-   バージョン番号を使用してアドオンパッケージを検索することもできます。最新のパッケージのバージョン番号については、「[AEM Forms リリース](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)」の記事を参照してください。
+   バージョン番号を使用してアドオンパッケージを検索することもできます。最新のパッケージのバージョン番号については、「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」の記事を参照してください。
 
 1. ダウンロードが完了したら、「**[!UICONTROL ダウンロード済み]**」をクリックします。パッケージマネージャーに切り替わります。In the package manager, search the downloaded package, and click **[!UICONTROL Install]**.
 
-   「[AEM Forms リリース](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)」記事に記載された直接リンクからパッケージを手動でダウンロードする場合は、パッケージマネージャーにログインし、「**[!UICONTROL パッケージをアップロード]**」をクリックし、ダウンロード済みパッケージを選択して「アップロード」をクリックします。After the package is uploaded, click package name, and click **[!UICONTROL Install]**.
+   「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」記事に記載された直接リンクからパッケージを手動でダウンロードする場合は、パッケージマネージャーにログインし、「**[!UICONTROL パッケージをアップロード]**」をクリックし、ダウンロード済みパッケージを選択して「アップロード」をクリックします。After the package is uploaded, click package name, and click **[!UICONTROL Install]**.
 
 1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**その際、すぐにサーバーを停止しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDおよびServiceEvent UNREGISTEREDメッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error`.logファイルに表示されなくなり、ログが安定するまで待ちます。
 
@@ -429,7 +429,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### PDF Generator サービスを実行するためのローカルユーザーアカウントの設定  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
-PDF Generator サービスを実行するには、ローカルユーザーのアカウントが必要です。For steps to create a local user, see [Create a user account in Windows](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) or [create a user account in UNIX-based platforms](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-starting-create-account.html).
+PDF Generator サービスを実行するには、ローカルユーザーのアカウントが必要です。For steps to create a local user, see [Create a user account in Windows](https://support.microsoft.com/ja-jp/help/13951/windows-create-user-account) or [create a user account in UNIX-based platforms](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-starting-create-account.html).
 
 1. Open the [AEM Forms PDF Generator Configuration](http://localhost:4502/libs/fd/pdfg/config/ui.html) page.
 
