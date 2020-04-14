@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -45,16 +45,16 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 アダプティブフォームでは、式を記述して、動的なフィールドやパネルの表示/非表示などの動作を追加できます。 また、計算フィールドの追加、式の読み取り専用化、検証ロジックの追加など、様々な機能を備えたフィールドを作成することもできます。 アダプティブフォームは次の数式をサポートします:
 
-* **[アクセス数式](../../forms/using/adaptive-form-expressions.md#main-pars-header-4)**：フィールドを有効化/無効化します。
-* **[数式の計算](../../forms/using/adaptive-form-expressions.md#p-calculate-expression-p)**：フィールドの値を自動計算します。
-* **[クリック式](../../forms/using/adaptive-form-expressions.md#p-click-expression-p)**:をクリックして、ボタンのクリックイベントの操作を処理します。
-* **[初期化スクリプト](../../forms/using/adaptive-form-expressions.md#p-initialization-script-p)：**フィールドの初期化で操作を実行します。
-* **[オプション式](../../forms/using/adaptive-form-expressions.md#p-options-expression-p)**：ドロップダウンリストを動的に埋めます。
+* **[アクセス数式](#access-expression-enablement-expression)**：フィールドを有効化/無効化します。
+* **[数式の計算](#calculate-expression)**：フィールドの値を自動計算します。
+* **[クリック式](#click-expression)**:をクリックして、ボタンのクリックイベントの操作を処理します。
+* **[初期化スクリプト](#initialization-script)：**フィールドの初期化で操作を実行します。
+* **[オプション式](#options-expression)**：ドロップダウンリストを動的に埋めます。
 * **[要約式](#summary)**：アコーディオンのタイトルを動的に計算します。
-* **[検証数式](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)**：フィールドを検証します。
-* **[値コミットスクリプト](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p):**を使用して、フィールドの値が変更された後にフォームのコンポーネントを変更します。
-* **[視認性の数式](../../forms/using/adaptive-form-expressions.md#p-visibility-expression-p)**：フィールドおよびパネルの視認性をコントロールします。
-* **[ステップ完了式](../../forms/using/adaptive-form-expressions.md#p-step-completion-expression-p)**:ユーザがウィザードの次のステップに進むのを防ぐ。
+* **[検証数式](#validate-expression)**：フィールドを検証します。
+* **[値コミットスクリプト](#value-commit-script):**を使用して、フィールドの値が変更された後にフォームのコンポーネントを変更します。
+* **[視認性の数式](#visibility-expression)**：フィールドおよびパネルの視認性をコントロールします。
+* **[ステップ完了式](#step-completion-expression)**:ユーザがウィザードの次のステップに進むのを防ぐ。
 
 ### アクセス式(イネーブルメント式) {#access-expression-enablement-expression}
 
@@ -68,7 +68,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ### 数式の計算 {#calculate-expression}
 
-数式の計算は、式を使ってフィールドの値を自動計算するのに使用されます。通常、この式には、他のフィールドの値プロパティを使用します。例えば、次のように入力します。`field2.value + field3.value`Whenever value of the `field2`or `field3`changes, the expression is retriggered and the value is recomputed.
+数式の計算は、式を使ってフィールドの値を自動計算するのに使用されます。通常、この式には、他のフィールドの値プロパティを使用します。例えば、`field2.value + field3.value` のようになります。Whenever value of the `field2`or `field3`changes, the expression is retriggered and the value is recomputed.
 
 **適用性：**&#x200B;フィールド
 
@@ -79,7 +79,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ### クリック式 {#click-expression}
 
-クリック式は、数式をクリック：ボタンのクリックイベント上で実行された操作を処理します。GuideBridgeは、送信や検証などのクリック式と共に使用される様々な機能を実行するためにAPIをデフォルトで提供します。For complete list of the APIs, see [GuideBridge APIs](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
+クリック式は、数式をクリック：ボタンのクリックイベント上で実行された操作を処理します。GuideBridgeは、送信や検証などのクリック式と共に使用される様々な機能を実行するためにAPIをデフォルトで提供します。For complete list of the APIs, see [GuideBridge APIs](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html).
 
 **適任性**：ボタンフィールド
 
@@ -255,7 +255,7 @@ To use GuideBridge after the form is initialized (the `bridgeInitializeComplete`
 
 #### GuideBridgeイベント {#guidebridge-events}
 
-またGuideBridgeは、ホストページ内の外部スクリプトのために特定のイベントも提供します。外部スクリプトは、これらのイベントを聞いて様々な操作を行います。例えば、フォームのユーザー名が変更される場合は、ページのヘッダー部分に表示される名前も常に変更されます。For more details about such events, see [JavaScript Library API reference for adaptive forms](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
+またGuideBridgeは、ホストページ内の外部スクリプトのために特定のイベントも提供します。外部スクリプトは、これらのイベントを聞いて様々な操作を行います。例えば、フォームのユーザー名が変更される場合は、ページのヘッダー部分に表示される名前も常に変更されます。For more details about such events, see [JavaScript Library API reference for adaptive forms](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html).
 
 次のコードを使ってハンドラーを登録してください：
 
