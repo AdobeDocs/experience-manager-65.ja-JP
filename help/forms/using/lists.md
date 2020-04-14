@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -406,7 +406,7 @@ For a detailed example of using static and dynamic tables in layout fragments, s
    * **フッター**：フッターとして表示するテキスト
    * **タイプ**：追加する列のタイプ。フィールドまたはターゲット領域を設定します。「タイプ」は静的プレースホルダーテーブルで有効です。「タイプ」は列のレベルで指定でき、セルのレベルでは指定できません。拡張された列のセルはすべて同じタイプになります。動的テーブルの場合、すべての列がフィールドタイプになります。プレースホルダー以外のテーブルの場合、追加する列のタイプは指定できません。この場合、拡張された列で追加されたセルのタイプは、その行の最後の列のタイプと同じになり、追加された行のセルのタイプは、その列の最後のセルのタイプと同じになります。
    * **幅の比率：テーブル列の幅の比率。**
-   For a detailed example of using static and dynamic tables in layout fragments, see [Example with sample files: using static and dynamic tables in a letter](#main-pars-header-28).
+   For a detailed example of using static and dynamic tables in layout fragments, see [Example with sample files: using static and dynamic tables in a letter](#examplewithsamplefiles).
 
 1. 「**保存**」をタップします。
 
