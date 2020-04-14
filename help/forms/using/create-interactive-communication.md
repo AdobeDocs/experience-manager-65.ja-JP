@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -127,7 +127,7 @@ For more information on the Interactive Communication authoring interface, see [
  </tbody>
 </table>
 
-また、「アセット」タブを使用して新しいフラグメントをターゲット領域にドロップすることで、ターゲット領域とドキュメントフラグメントの間の連結を置き換えるこ **ともでき** ます。 フラグメントをドラッグする際のターゲット領域の青い色の陰影は、ドキュメントフラグメントをドロップ可能な領域であることを示しています。
+また、「アセット」タブを使用して新しいフラグメントをターゲット領域にドロップすることで、ターゲット領域とドキュメントフラグメントの間の連結を置き換えるこ **[!UICONTROL ともでき]** ます。 フラグメントをドラッグする際のターゲット領域の青い色の陰影は、ドキュメントフラグメントをドロップ可能な領域であることを示しています。
 
 For more information on document fragments, see [Document Fragments](/help/forms/using/document-fragments.md).
 
@@ -178,11 +178,11 @@ For more information on document fragments, see [Document Fragments](/help/forms
 
 1. Switch to **[!UICONTROL Web Channel]**. WebチャネルがInteractive Communicationエディタに表示されます。 印刷チャネルからWebチャネルに初めて切り替えると、自動同期が行われます。 For more information, see [Synchronizing web channel from the print channel](../../forms/using/create-interactive-communication.md#synchronize).
 
-   この例では、Web チャネルのマスターとして印刷チャネルを使用しているため、印刷チャネルのプレースホルダー、コンテンツ、データ連結が Web チャネルに同期されます。ただし、Webチャネルの特定のコンテンツを変更およびカスタマイズできます。 [印刷ターゲットを使用して](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) 、コンテンツをカスタマイズできるように生成されたチャネル領域と変数の継承をキャンセルします。
+   この例では、Web チャネルのマスターとして印刷チャネルを使用しているため、印刷チャネルのプレースホルダー、コンテンツ、データ連結が Web チャネルに同期されます。ただし、Webチャネルの特定のコンテンツを変更およびカスタマイズできます。 [印刷ターゲットを使用して](#cancelinheritance) 、コンテンツをカスタマイズできるように生成されたチャネル領域と変数の継承をキャンセルします。
 
    ![webchannelassets](assets/webchannelassets.png)
 
-   ドキュメントフラグメントをタッ ![プし、](assets/configure_icon.png) configure_icon **[!UICONTROL （設定）をタップし、次にInteractive Communicationのサイドキックから「]** Properties」をタップします。 「変数 **[!UICONTROL とデータモデルオブジェクト]** 」セクションでは、変数（非表示の変数を含む）と、ドキュメントフラグメントで使用されるデータモデルオブジェクトをリストします。 各データモデ ![ルオブジェクト](assets/edit.svg) または変数の横にある編集（編集）アイコンを使用して、プロパティを編集します。 また、印刷チャネルを使用して [](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) Webチャネルで自動生成されたドキュメントフラグメントの場合は、各データモデルオブジェクトと変数の横にある ![](assets/cancelinheritance.png) （継承をキャンセル）アイコンを使用して継承をキャンセルし、編集できます [](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) 。
+   ドキュメントフラグメントをタッ ![プし、](assets/configure_icon.png) configure_icon **[!UICONTROL （設定）をタップし、次にInteractive Communicationのサイドキックから「]** Properties」をタップします。 「変数 **[!UICONTROL とデータモデルオブジェクト]** 」セクションでは、変数（非表示の変数を含む）と、ドキュメントフラグメントで使用されるデータモデルオブジェクトをリストします。 各データモデ ![ルオブジェクト](assets/edit.svg) または変数の横にある編集（編集）アイコンを使用して、プロパティを編集します。 また、印刷チャネルを使用して [](#synchronize) Webチャネルで自動生成されたドキュメントフラグメントの場合は、各データモデルオブジェクトと変数の横にある ![](assets/cancelinheritance.png) （継承をキャンセル）アイコンを使用して継承をキャンセルし、編集できます [](#cancelinheritance) 。
 
 1. Web チャネルにコンポーネントを追加するには、Web チャネルを選択した状態で「**[!UICONTROL コンポーネント]**」をタップします。必要に応じて、Interactive CommunicationのWebチャネルにコンポーネントをドラッグ&amp;ドロップし、設定に進みます。
 
@@ -581,9 +581,9 @@ Webチャネル用のマスターとして印刷を使用し、印刷チャネ�
 * **親：** コンポーネントの親を選択します。
 * **表示SOM式:** 表示 [のSOM式](../../forms/using/using-som-expressions-adaptive-forms.md) 。
 
-* **パネル内のオブジェクトをグループ化：** パネル内のコンポーネントをグループ化して、それらのコンポーネントに対する操作を同時に実行できるようにします。 詳しくは、パネルでのオブジェクトのグ **[ループ化を参照してくださ](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**い。
+* **パネル内のオブジェクトをグループ化：** パネル内のコンポーネントをグループ化して、それらのコンポーネントに対する操作を同時に実行できるようにします。 詳しくは、パネルでのオブジェクトのグ [ループ化を参照してくださ](#groupobjectspanel)い。
 
-* **継承のキャンセル：** コンポーネン [トを編集するには](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) 、コンポーネント領域内のターゲットをキャンセルします。
+* **継承のキャンセル：** コンポーネン [トを編集するには](#cancelinheritance) 、コンポーネント領域内のターゲットをキャンセルします。
 
 ### Group objects in Panel {#groupobjectspanel}
 
