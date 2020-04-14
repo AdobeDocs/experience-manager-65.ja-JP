@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -43,7 +43,7 @@ Adobe Developer の Web サイトには、Java API を使用して AEM Forms サ
 
 [AEM Forms Java ライブラリファイルを含める](#including-aem-forms-java-library-files)
 
-[人間中心の長期間有効なプロセスの呼び出し](/help/forms/developing/invoking-human-centric-long-lived.md#main-pars-text-0)
+[人間中心の長期間有効なプロセスの呼び出し](invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
 [Web サービスを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md)
 
