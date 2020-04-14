@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -107,7 +107,7 @@ AEM には、提供されているワークフローステップを使用して�
 
    ![OR分割の例](assets/orsplit_branch1_active_new.png)
 
-   **ルーティング式2**
+   **ルーティング式1**
 
    When a user taps **Reject** in AEM Inbox, Branch 2 is activated.
 
@@ -121,7 +121,7 @@ AEM には、提供されているワークフローステップを使用して�
 
    サンプルの住宅ローン申し込みに設定されているタスクの割り当て手順、レコードのドキュメント手順、ドキュメントの署名手順のすべてのフィールドの値セットは、セクションの始めに示す場所からダウンロードできます。
 
-   ワークフローモデルが準備できました。ワークフローを様々な方法で起動することができます。詳しくは、「[OSGi 上での Forms 中心のワークフローの起動](../../forms/using/aem-forms-workflow.md#main-pars-header)」を参照してください。
+   ワークフローモデルが準備できました。ワークフローを様々な方法で起動することができます。詳しくは、「[OSGi 上での Forms 中心のワークフローの起動](#launch)」を参照してください。
 
    ![ワークフロー編集者の住宅ローン](assets/workflow-editor-mortgage.png)
 
