@@ -3,7 +3,7 @@ title: 接続されたアセットを使用して、Adobe Experience Manager Sit
 description: 別のExperience Manager SiteデプロイメントでWebページを作成する場合、リモートのAdobe Experience Manager Assetsデプロイメントで使用できるアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
+source-git-commit: 04fef21d6027dcfcb6a67a1121e0d1570926db41
 
 ---
 
@@ -95,7 +95,7 @@ Connected Assets とローカル Sites の接続を構成するには、次の�
 
    >[!NOTE]
    >
-   >作成者がアセットを取得する際に、リモートAEMデプロイメントで使用可能なすべてのレンディションが取得されます。 取得したアセットのレンディションをさらに作成したい場合は、この設定手順をスキップしてください。DAM アセットの更新ワークフローが開始され、追加のレンディションが作成されます。これらのレンディションは、ローカルの Sites デプロイメントでのみ使用でき、リモート DAM デプロイメントでは使用できません。
+   >作成者がアセットを取得する際に、リモートAEMデプロイメントで使用可能なすべてのレンディションが取得されます。 取得したアセットのレンディションをさらに作成したい場合は、この設定手順をスキップしてください。The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
 1. AEM Sites インスタンスを、リモート AEM Assets の CORS 設定の「**[!UICONTROL 許可されたオリジン]**」の 1 つとして追加します。
 
@@ -111,7 +111,7 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
 作成者は、ローカル DAM インスタンスで利用可能なアセットとリモート DAM インスタンスで利用可能なアセットの両方を、単一の Web ページ内で使用できます。コンテンツファインダーを使用すれば、ローカル DAM の検索とリモート DAM の検索を切り替えることができます。
 
-ローカルのSitesインスタンスで使用できる、完全に対応するタグ（同じ分類階層を持つ）を持つリモートアセットのタグのみが取得されます。 その他のタグは破棄されます。 作成者は、AEMオファーが全文検索を行うので、リモートAEMデプロイメントに存在するすべてのタグを使用して、リモートアセットを検索できます。
+リモートアセットのタグのみが取得され、ローカルのSitesインスタンスで使用できる、同じ分類階層と完全に対応するタグを持つようになります。 その他のタグは破棄されます。 作成者は、AEMオファーが全文検索を行うので、リモートAEMデプロイメントに存在するすべてのタグを使用して、リモートアセットを検索できます。
 
 ### 使用手順 {#walk-through-of-usage}
 
