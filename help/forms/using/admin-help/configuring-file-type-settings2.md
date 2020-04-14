@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: adbe8416-c8d7-4581-940b-df62eadf0e26
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -21,7 +21,7 @@ PDF Generator では、サポートされるファイルタイプについてア
 
 ファイルタイプごとの設定ページでは、次のタスクを実行できます。
 
-* [ファイルタイプ設定の作成または編集](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)
+* [ファイルタイプ設定の作成または編集](#create-or-edit-file-type-settings)
 * デフォルトで使用するファイルタイプ設定の指定（[PDF Generator 設定ファイルの読み込みおよび書き出し](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)を参照）
 * [デフォルト設定の変更](/help/forms/using/admin-help/configuring-file-type-settings2.md#change-the-default-settings)
 * [PDF/A サポートの有効化](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
@@ -50,15 +50,15 @@ PDF Generator では、サポートされるファイルタイプについてア
 
    [PDF Generator 設定ファイルの読み込みおよび書き出し](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
 
-   [Adobe PDF の書き出し設定（Windows のみ）](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-2)
+   [Adobe PDF の書き出し設定（Windows のみ）](#adobe-pdf-export-settings-windows-only)
 
-   [HTML から PDF の設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-3)
+   [HTML から PDF の設定](#html-to-pdf-settings)
 
-   [Flash Video から PDF の設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-9)
+   [Flash Video から PDF の設定](#flash-videos-to-pdf-settings)
 
-   [XPS から PDF の設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-10)
+   [XPS から PDF の設定](#xps-to-pdf-settings)
 
-   [PDF の最適化設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-11)
+   [PDF の最適化設定](#pdf-optimizer-settings)
 
    [Microsoft Excel の設定（Windows のみ）](/help/forms/using/admin-help/configuring-file-type-settings2.md#microsoft-excel-settings-windows-only)
 
@@ -398,7 +398,7 @@ PDF 文書の最適化で透明効果を設定するには、**透明効果**&#x
 
 ## Microsoft Excel の設定（Windows のみ）{#microsoft-excel-settings-windows-only}
 
-以下に示すように、これらのオプションでは、Microsoft Excel ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)を参照してください。
+以下に示すように、これらのオプションでは、Microsoft Excel ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](#create-or-edit-file-type-settings)を参照してください。
 
 **OpenOfficeをフォールバックコンバーターとして試す**:このオプションを選択した場合に、Microsoft Excelを使用した変換が失敗または指定のタイムアウト制限に達すると、PDF GeneratorはOpenOfficeを使用した変換を試行します。 OpenOffice を使用した変換が失敗または指定のタイムアウト制限に達すると、ログファイルに例外が書き込まれます。
 
@@ -462,7 +462,7 @@ PDF 文書の最適化で透明効果を設定するには、**透明効果**&#x
 
 ## Microsoft Project の設定（Windows のみ） {#microsoft-project-settings-windows-only}
 
-以下に示すように、これらのオプションでは、Microsoft Project ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)を参照してください。
+以下に示すように、これらのオプションでは、Microsoft Project ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](#create-or-edit-file-type-settings)を参照してください。
 
 1. **[!UICONTROL ファイル名の拡張子：]** このアプリケーションで受け入れられるファイルタイプのファイル拡張子をコンマで区切って指定します。 デフォルトは、`mpp` です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
@@ -473,7 +473,7 @@ PDF 文書の最適化で透明効果を設定するには、**透明効果**&#x
 
 ## Microsoft Word の設定（Windows のみ）{#microsoft-word-settings-windows-only}
 
-以下に示すように、これらのオプションでは、Microsoft Word ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)を参照してください。
+以下に示すように、これらのオプションでは、Microsoft Word ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](#create-or-edit-file-type-settings)を参照してください。
 
 **[!UICONTROL OpenOffice をフォールバックコンバーターとして試行]**：このオプションを選択している場合に、Microsoft Word による変換が失敗または指定のタイムアウト制限に達すると、PDF Generator は、OpenOffice を使用した変換を試行します。OpenOffice を使用した変換が失敗または指定のタイムアウト制限に達すると、ログファイルに例外が書き込まれます。
 
@@ -533,7 +533,7 @@ Microsoft Word のスタイル名にコンマ（,）または等号（=）が含
 
 ## Microsoft Publisher の設定（Windows のみ）{#microsoft-publisher-settings-windows-only}
 
-以下に示すように、これらのオプションでは、Microsoft Publisher ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)を参照してください。
+以下に示すように、これらのオプションでは、Microsoft Publisher ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](#create-or-edit-file-type-settings)を参照してください。
 
 **[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`pub` です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
