@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -24,7 +24,7 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
 
 * [AEM Forms のデータ統合機能](/help/forms/using/data-integration.md)
 * [データソースの設定](/help/forms/using/configure-data-sources.md)
-* [フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)
+* [フォームデータモデルを作成する](/help/forms/using/create-form-data-models.md)
 
 ここからは、フォームデータモデルエディターを使用して各種の操作や設定を行う方法について説明します。
 
@@ -34,14 +34,14 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
 
 ## データモデルオブジェクトとサービスの追加 {#add-data-model-objects-and-services}
 
-データソースを使用してフォームデータモデルを作成した場合は、フォームデータモデルエディターを使用して、データモデルのオブジェクトとサービスの追加、プロパティの設定、データモデルオブジェクト間の関連付けの構築、フォームデータモデルとサービスのテストを行えます。
+データソースを使用してフォームデータモデルを作成した場合、フォームデータモデルエディターを使用して、データモデルのオブジェクトとサービスの追加、プロパティの設定、データモデルオブジェクト間の関連付けの構築、フォームデータモデルとサービスのテストを行えます。
 
 フォームデータモデル内の有効なデータソースを使用して、データモデルオブジェクトとサービスを追加することができます。追加したデータモデルオブジェクトは「モデル」タブに表示され、追加したサービスは「サービス」タブに表示されます。
 
-データ・モデルのオブジェクトおよびサービスを追加する手順は、次のとおりです：
+データモデルのオブジェクトおよびサービスを追加するには：
 
 1. AEM オーサーインスタンスにログインして&#x200B;**[!UICONTROL フォーム／データ統合]**&#x200B;に移動し、データモデルオブジェクトを追加するフォームデータモデルを開きます。
-1. データソースウィンドウで、データソースを展開して、使用可能なデータモデルオブジェクトおよびサービスを表示します。
+1. Data Sourcesウィンドウで、データソースを展開し、使用可能な表示データモデルのオブジェクトおよびサービスにします。
 1. フォームデータモデルに追加するデータモデルオブジェクトとサービスを選択して、「**[!UICONTROL 選択項目を追加]**」をタップします。
 
    ![選択オブジェクト](assets/selected-objects.png)
@@ -56,7 +56,7 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
 
    >[!NOTE] {graybox=&quot;true&quot;}
    >
-   >データモデルオブジェクトのボックスを選択してドラッグすると、コンテンツ領域内にデータモデルオブジェクトを配置することができます。フォームデータモデルに追加されたデータモデルオブジェクトは、データソースパネルではすべて灰色表示になっています。
+   >データモデルオブジェクトのボックスを選択してドラッグすると、コンテンツ領域内にデータモデルオブジェクトを配置することができます。フォームデータモデルに追加されたデータモデルオブジェクトは、すべてデータソースパネルで灰色表示になっています。
 
    「サービス」タブには、追加されたサービスが一覧表示されます。
 
@@ -84,7 +84,7 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
 
 1. AEM オーサーインスタンスにログインして&#x200B;**[!UICONTROL フォーム／データ統合]**&#x200B;に移動し、データモデルオブジェクトまたはデータモデルエンティティを作成するフォームデータモデルを開きます。
 1. 「**[!UICONTROL エンティティを作成]**」をタップします。
-1. フォームデータモデル作成ダイアログで、データモデルオブジェクトの名前を指定して「**[!UICONTROL 追加]**」をタップします。データモデルオブジェクトがフォームデータモデルに追加されます。次の図に示すように、新しく追加されたデータモデルオブジェクトはデータソースに連結されず、プロパティも持たないことに注意してください。
+1. フォームデータモデル作成ダイアログで、データモデルオブジェクトの名前を指定して「**[!UICONTROL 追加]**」をタップします。データモデルオブジェクトがフォームデータモデルに追加されます。新しく追加されたデータモデルオブジェクトは、データソースに連結されず、次の図に示すようなプロパティも持たないことに注意してください。
 
    ![new-entity](assets/new-entity.png)
 
@@ -118,7 +118,7 @@ When the data sources you want to integrate with the form data model are availab
    ![select-object](assets/select-object.png)
 
 1. データソースツリーを展開し、連結するデータモデルオブジェクトを選択してチェックマークアイコンをタップします。
-1. 「**[!UICONTROL 完了]**」をタップしてプロパティを保存し、「**[!UICONTROL 保存]**」をタップしてフォームデータモデルを保存します。これで、データモデルオブジェクトがデータソースに連結されました。データモデルオブジェクトが「連結なし」とマークされなくなりました。
+1. 「**[!UICONTROL 完了]**」をタップしてプロパティを保存し、「**[!UICONTROL 保存]**」をタップしてフォームデータモデルを保存します。これで、データモデルオブジェクトがデータソースに連結されました。データモデルオブジェクトが「連結解除」とマークされなくなりました。
 
    ![bound-model-object](assets/bound-model-object.png)
 
@@ -155,42 +155,42 @@ When the data sources you want to integrate with the form data model are availab
 
    従業員データソースに対して設定されている読み取りサービスと書き込みサービス
 
-1. Tap ![aem_6_3_edit](assets/aem_6_3_edit.png) for the read service argument to [bind the argument to a User Profile Attribute, Request Attribute, or Literal value](../../forms/using/work-with-form-data-model.md#main-pars-header-2140694395) and specify the binding value.
+1. Tap ![aem_6_3_edit](assets/aem_6_3_edit.png) for the read service argument to [bind the argument to a User Profile Attribute, Request Attribute, or Literal value](#bindargument) and specify the binding value.
 1. 「**[!UICONTROL 完了]**」をタップして引数を保存し、もう一度「**[!UICONTROL 完了]**」をタップしてプロパティを保存します。次に、「**[!UICONTROL 保存]**」をタップしてフォームデータモデルを保存します。
 
-### Bind readサービスの引数 {#bindargument}
+### Bind Readサービスの引数 {#bindargument}
 
-Bind Readサービス引数を、バインディング値に基づいてUser Profile属性、Request属性またはLiteral値に渡します。 この値は引数としてサービスに渡され、指定した値に関連付けられた詳細がデータソースから取得されます。
+Bind Readサービスの引数を、バインディング値に基づいて、Userプロファイル属性、Request属性またはLiteral値に対して設定します。 この値は引数としてサービスに渡され、指定した値に関連付けられた詳細がデータソースから取得されます。
 
 #### リテラル値 {#literal-value}
 
-「 **[!UICONTROL Binding To]** 」ドロップダウンメ **[!UICONTROL ニューから「Literal]** 」を選択し、「 **[!UICONTROL Binding Value]** 」フィールドに値を入力します。 値に関連付けられた詳細がデータソースから取得されます。 静的な値に関連付けられた詳細を取得するには、このオプションを使用します。
+「 **[!UICONTROL Binding To]** 」ドロッ **[!UICONTROL プダウンメニューから「Literal]** 」を選択し、「 **[!UICONTROL Binding Value]** 」フィールドに値を入力します。 値に関連付けられた詳細がデータソースから取得されます。 静的な値に関連付けられた詳細を取得するには、このオプションを使用します。
 
-この例では、引数の値として **4367655678**&#x200B;に関連付けられた詳細がデ `mobilenum` ータソースから取得されます。 モバイル番号引数の値を渡す場合、関連する詳細には、顧客名、顧客住所、市区町村などのプロパティを含めることができます。
+この例では、引数の値として **4367655678**&#x200B;に関連付けられた詳細がデ `mobilenum` ータソースから取得されます。 モバイル番号の引数に値を渡す場合、関連する詳細には、顧客名、顧客住所、市区町村などのプロパティを含めることができます。
 
 ![リテラル値](assets/fdm_binding_literal_new.png)
 
 #### ユーザープロファイルの属性 {#user-profile-attribute}
 
-「連結先 **[!UICONTROL 」ドロップダウンメニューから「ユ]** ーザープロファイル属性 **[!UICONTROL 」を選択し、「連結値]** 」フィールドに属性名を入力します **** 。 AEMインスタンスにログインしたユーザーの詳細は、属性名に基づいてデータソースから取得されます。
+「連結先 **[!UICONTROL 」ドロップダウンメニューから]** 「ユーザ **[!UICONTROL ープロファイル属性」を選択し、「連結値」フィールドに]** 属性名を入力します **** 。 AEMインスタンスにログインしたユーザーの詳細は、属性名に基づいてデータソースから取得されます。
 
-「連結値」フィールドで指定する **[!UICONTROL 属性名には]** 、ユーザーの属性名までの完全な連結パスを含める必要があります。 次のURLを開いて、CRXDEのユーザーの詳細にアクセスします。
+「連結値」フィールドで指定 **[!UICONTROL する属性名には]** 、ユーザーの属性名までの完全な連結パスを含める必要があります。 次のURLを開いて、CRXDEのユーザーの詳細にアクセスします。
 
 https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 ![ユーザープロファイル](assets/binding_crxde_user_profile_new.png)
 
-この例では、ユーザーの「 `profile.empid` 連結値」 **[!UICONTROL フィールドに]** 「連結値」を指定 `grios` します。
+この例では、ユーザーの「 `profile.empid` 連結値」フ **[!UICONTROL ィールドに]** 「連結値」を指定し `grios` ます。
 
 ![引数を編集](assets/edit_argument_user_profile_new.png)
 
-The `id` argument takes the value of the `empid` attribute of the user profile and pass it as an argument to the Read service. ログインしたユーザーに関連付けられた従業員データモデルオブジェクトから関連付けられたプロ `empid` パティの値を読み取って返します。
+The `id` argument takes the value of the `empid` attribute of the user profile and pass it as an argument to the Read service. ログインしたユーザーに関連付けられた従業員データモデルオブジェクトから、関連付けられたプロ `empid` パティの値を読み取って返します。
 
 #### 属性を要求 {#request-attribute}
 
 リクエスト属性を使用して、データソースから関連するプロパティを取得します。
 
-1. 「連結先 **[!UICONTROL 」ドロップダウンメニューから]** 「属性をリクエスト」を選択し、「連結値 **[!UICONTROL 」フィールドに属性名を入]** 力します **** 。
+1. 「属性の **[!UICONTROL 連結先]** 」ドロップダ **[!UICONTROL ウンメニューから「属性の要]** 求」を選択し、「連結値 **** 」フィールドに属性名を入力します。
 
 1. head.jspを開き、CRXDEの属性の詳細を定義します。\
    `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
@@ -203,7 +203,7 @@ The `id` argument takes the value of the `empid` attribute of the user profile a
     request.setAttribute("paramMap",paraMap);%>
    ```
 
-詳細は、リクエストで指定された属性名に基づいて、データソースから取得されます。
+詳細は、リクエストで指定された属性名に基づいてデータソースから取得されます。
 
 例えば、リクエストでattributeを指定す `petid=100` ると、属性値に関連付けられたプロパティがデータソースから取得されます。
 
@@ -221,7 +221,7 @@ The `id` argument takes the value of the `empid` attribute of the user profile a
 
 1. データモデルオブジェクト上部のチェックボックスを選択して「**[!UICONTROL 関連付けを追加]**」をタップします。関連付けを追加ダイアログが表示されます。
 
-   ![追加関連](assets/add-association.png)
+   ![関連付け](assets/add-association.png)
 
    >[!NOTE]
    >
@@ -264,7 +264,7 @@ The `id` argument takes the value of the `empid` attribute of the user profile a
 
 ![付加結合](assets/added-association.png)
 
-## プロパティを編集 {#properties}
+## プロパティの編集 {#properties}
 
 フォームデータモデル内で追加されたデータモデルオブジェクトとサービスのプロパティを編集することができます。
 
@@ -386,7 +386,7 @@ In this example, you can also choose the output model object as Person and navig
 
    フォームデータモデルをテストウィンドウが表示されます。
 
-   ![test-data-model](assets/test-data-model.png)
+   ![テストデータモデル](assets/test-data-model.png)
 
 1. 上記のウィンドウの入力ペインで、テストするデータモデルオブジェクトまたはサービスを選択します。
 
@@ -398,17 +398,17 @@ In this example, you can also choose the output model object as Person and navig
 
 ## 入力データの自動検証 {#automated-validation-of-input-data}
 
-フォームデータモデルは、DateriBridge APIを呼び出す際に、入力として受け取ったデータを検証します（フォームデータモデルで使用可能な検証条件に基づきます）。 検証は、APIの呼び出しに使用 `ValidationOptions` されるクエリオブジェクトに設定されたフラグに基づいて行われます。
+フォームデータモデルは、DareamBridge APIを呼び出す際に、入力として受け取ったデータを検証します（フォームデータモデルで使用可能な検証基準に基づきます）。 検証は、APIの呼び出しに使用 `ValidationOptions` されるクエリオブジェクトに設定されたフラグに基づいて行われます。
 
-このフラグは、次のいずれかの値に設定できます。
+フラグは、次のいずれかの値に設定できます。
 
 * **FULL**:FDMは、すべての制約に基づいて検証を実行します
 * **オフ**:検証なし
 * **基本**:FDMは、「必須」制約と「NULL許容」制約に基づいて検証を実行します
 
-フラグに値が設定されていな `ValidationOptions`い場合、 **入力データに対してBASIC** 検証が実行されます。
+フラグに値が設定されていな `ValidationOptions`い場合、 **入力データに対して** BASIC検証が実行されます。
 
-検証フラグを **FULLに設定する例を次に示します**。
+次に、検証フラグを **FULLに設定する例を示します**。
 
 ```java
 operationOptions.setValidationOptions(ValidationOptions.FULL);
@@ -416,12 +416,12 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
 
 >[!NOTE]
 >
->入力データで属性に指定する値は、メタデータドキュメント内の属性に対して定義されているデータタイプと一致する必要があります。\
+>入力データの属性に指定する値は、メタデータドキュメントの属性に対して定義されたデータタイプと一致する必要があります。\
 >値が属性に対して定義されたデータ型と一致しない場合、DateriBridge APIはフラグの値に関係なく例外を表示し `ValidationOptions` ます。 ログレベルがDebugに設定されている場合、エラーが **error.logファイルに記録されます** 。
 
 フォームデータモデルは、データ型制約のリストに基づいて入力データを検証します。 入力データの制約のリストは、データソースによって異なる場合があります。
 
-次の表に、データソースに基づく入力データの制約を示します。
+次の表に、リストソースに基づく入力データの制約を示します。
 
 <table>
  <tbody> 
@@ -432,17 +432,17 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
   </tr> 
   <tr> 
    <td>必須</td> 
-   <td>trueの場合、パラメーターは入力データに含める必要があります。</td> 
+   <td>trueの場合、パラメーターを入力データに含める必要があります。</td> 
    <td>Swagger、WSDLおよびデータベース</td> 
   </tr> 
   <tr> 
    <td>nullable</td> 
-   <td>trueの場合、入力データでパラメーターの値をNullに設定できます。</td> 
+   <td>trueの場合、入力データ内のパラメーターの値をNullに設定できます。</td> 
    <td>WSDL、Odata、およびデータベース</td> 
   </tr> 
   <tr> 
    <td>maximum</td> 
-   <td>数値の上限を指定します。 上限として指定した最大値を、入力データ内のパラメーターに割り当てることもできます。</td> 
+   <td>数値の上限を指定します。 上限として指定した最大値は、入力データのパラメーターにも割り当てることができます。</td> 
    <td>SwaggerとWSDL</td> 
   </tr> 
   <tr> 
@@ -452,12 +452,12 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
   </tr> 
   <tr> 
    <td>exclusiveMaximum</td> 
-   <td>数値の上限を指定します。 上限として指定する最大値を、入力データのパラメーターに割り当ててはなりません。</td> 
+   <td>数値の上限を指定します。 上限として指定した最大値を入力データのパラメーターに割り当てないでください。</td> 
    <td>SwaggerとWSDL</td> 
   </tr> 
   <tr> 
    <td>exclusiveMinimum</td> 
-   <td>数値の下限を指定します。 下限として指定する最小値を、入力データ内のパラメーターに割り当てないでください。</td> 
+   <td>数値の下限を指定します。 下限として指定する最小値を、入力データのパラメーターに割り当てないでください。</td> 
    <td>SwaggerとWSDL</td> 
   </tr> 
   <tr> 
@@ -467,22 +467,22 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
   </tr> 
   <tr> 
    <td>maxLength</td> 
-   <td>文字列に含まれる文字数の上限を指定します。 上限として指定した最大値を、入力データ内のパラメーターに割り当てることもできます。</td> 
+   <td>文字列に含まれる文字数の上限を指定します。 上限として指定した最大値は、入力データのパラメーターにも割り当てることができます。</td> 
    <td>Swagger、WSDL、Odataおよびデータベース</td> 
   </tr> 
   <tr> 
    <td>pattern</td> 
-   <td>文字の固定シーケンスを指定します。 入力文字列は、指定したパターンに文字が準拠している場合にのみ正常に検証されます。</td> 
+   <td>文字の固定シーケンスを指定します。 入力文字列は、文字が指定されたパターンに従っている場合にのみ正常に検証されます。</td> 
    <td>スワガー</td> 
   </tr> 
   <tr> 
    <td>minItems</td> 
-   <td>配列内の最小項目数を指定します。 下限として指定した最小値は、入力データのパラメーターにも割り当てることができます。</td> 
+   <td>配列内の項目の最小数を指定します。 下限として指定した最小値は、入力データのパラメーターにも割り当てることができます。</td> 
    <td>SwaggerとWSDL</td> 
   </tr> 
   <tr> 
    <td>maxItems</td> 
-   <td>配列内の最大項目数を指定します。 上限として指定した最大値を、入力データ内のパラメーターに割り当てることもできます。</td> 
+   <td>配列の最大項目数を指定します。 上限として指定した最大値は、入力データのパラメーターにも割り当てることができます。</td> 
    <td>SwaggerとWSDL</td> 
   </tr> 
   <tr> 
@@ -491,19 +491,19 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
    <td>スワガー</td> 
   </tr> 
   <tr> 
-   <td>enum (string)<br /><br /> </td> 
-   <td>入力データ内のパラメーターの値を固定文字列値のセットに制限します。 要素が1つ以上ある配列であり、各要素は一意である必要があります。</td> 
-   <td>Swagger、WSDLおよびOdata</td> 
+   <td>enum （文字列）<br /><br /> </td> 
+   <td>入力データ内のパラメーターの値を固定文字列値のセットに制限します。 要素が1つ以上ある配列で、各要素は一意である必要があります。</td> 
+   <td>Swagger、WSDL、Odata</td> 
   </tr> 
   <tr> 
    <td>enum (number)<br /><br /> </td> 
-   <td>入力データ内のパラメーターの値を固定数値のセットに制限します。 要素が1つ以上ある配列であり、各要素は一意である必要があります。</td> 
+   <td>入力データ内のパラメーターの値を固定数値のセットに制限します。 要素が1つ以上ある配列で、各要素は一意である必要があります。</td> 
    <td>WSDL</td> 
   </tr> 
  </tbody> 
 </table>
 
-この例では、Swaggerファイルで定義されている最大制約、最小制約、必須制約に基づいて、入力データが検証されます。 入力データが検証条件を満たすのは、注文IDが存在し、その値が1 ～ 10の場合のみです。
+この例では、Swaggerファイルで定義されている最大制約、最小制約および必須制約に基づいて、入力データが検証されます。 入力データが検証条件を満たすのは、注文IDが存在し、その値が1 ～ 10の場合のみです。
 
 ```xml
 parameters: [
@@ -520,7 +520,7 @@ format: "int64"
 ]
 ```
 
-入力データが検証条件を満たさない場合は、例外が表示されます。 ログレベルが **Debug**&#x200B;に設定されている場合、エラーが **error.logファイルに記録されます** 。 例：
+入力データが検証条件を満たさない場合は、例外が表示されます。 ログレベルが **Debug**&#x200B;に設定されている場合、エラーが **error.logファイルに記録されます** 。 以下に例を示します。
 
 ```java
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}
