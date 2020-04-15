@@ -3,14 +3,14 @@ title: AEM Assets と連携するための ImageMagick のインストールと�
 description: ImageMagick ソフトウェアの概要と、インストール方法、コマンドラインプロセスのステップの設定方法、ImageMagick を使用して画像の編集、組み立て、サムネール生成をおこなう方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
 # AEM Assets と連携するための ImageMagick のインストールと設定{#install-and-configure-imagemagick-to-work-with-aem-assets}
 
-ImageMagickは、ビットマップ画像を作成、編集、構成または変換するソフトウェアプラグインです。 PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF、SVGなど、様々な形式（200以上）で画像の読み取りと書き込みが可能です。 ImageMagick は、画像のサイズ変更、反転、ミラー、回転、変形、剪断および変換をおこなう場合に使用します。ImageMagick を使用して、画像の色を調整したり、各種特殊効果を適用したりすることもできます。また、テキスト、直線、多角形、楕円および曲線を描画することもできます。
+ImageMagickは、ビットマップ画像の作成、編集、構成または変換を行うソフトウェアプラグインです。 PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF、SVGなど、様々な形式（200以上）の画像の読み取りと書き込みが可能です。 ImageMagick は、画像のサイズ変更、反転、ミラー、回転、変形、剪断および変換をおこなう場合に使用します。ImageMagick を使用して、画像の色を調整したり、各種特殊効果を適用したりすることもできます。また、テキスト、直線、多角形、楕円および曲線を描画することもできます。
 
 ImageMagick で画像を処理するには、コマンドラインから Adobe Experience Manager（AEM）メディアハンドラーを使用します。ImageMagick を使用して様々なファイル形式を取り扱うには、[Assets のファイル形式に関するベストプラクティス](/help/assets/assets-file-format-best-practices.md)を参照してください。すべてのサポートされるファイル形式については、[Assets でサポートされるファイル形式](/help/assets/assets-formats.md)を参照してください。
 
@@ -34,8 +34,8 @@ ImageMagick を使用して大きなファイルを処理する場合は、必�
 
 特定の使用例に応じてコマンドラインプロセスのステップを設定できます。Perform these steps to generate a flipped image and thumbnails (140x100, 48x48, 319x319, and 1280x1280) each time you add a JPEG image file to `/content/dam` on the AEM server:
 
-1. On the AEM server, go to the Workflow console ( `https://[*AEM server*]:[*Port*]/workflow`) and open the **[!UICONTROL DAM Update Asset]** workflow model.
-1. From the **[!UICONTROL DAM Update Asset]** workflow model, open the **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** step.
+1. On the AEM server, go to the Workflow console (`https://[aem_server]:[port]/workflow`) and open the **[!UICONTROL DAM Update Asset]** workflow model.
+1. **[!UICONTROL DAM Update Assetワークフローモデルから]** 、 **[!UICONTROL EPSサムネール(]** powered by ImageMagick)の手順を開きます。
 1. In the **[!UICONTROL Arguments tab]**, add `image/jpeg` to the **[!UICONTROL Mime Types]** list.
 
    ![mime_types_jpeg](assets/mime_types_jpeg.png)
@@ -48,11 +48,11 @@ ImageMagick を使用して大きなファイルを処理する場合は、必�
 
    ![select_flags](assets/select_flags.png)
 
-1. 「**[!UICONTROL Web に対応した画像]**」タブで、1280 x 1280 ピクセルというサイズでレンディションの詳細を指定します。In addition, specify i *mage/jpeg* in the **[!UICONTROL Mimetype]** box.
+1. 「**[!UICONTROL Web に対応した画像]**」タブで、1280 x 1280 ピクセルというサイズでレンディションの詳細を指定します。さらに、「Mimetype」ボッ `image/jpeg` クスでを **[!UICONTROL 指定し]** ます。
 
    ![web_enabled_image](assets/web_enabled_image.png)
 
-1. 「**[!UICONTROL OK]**」をタップまたはクリックして、変更内容を保存します。
+1. 「**[!UICONTROL OK]**」をクリックして、変更を保存します。
 
    >[!NOTE]
    >
@@ -65,7 +65,7 @@ ImageMagick を使用して大きなファイルを処理する場合は、必�
 
    ![skip_mime_types](assets/skip_mime_types.png)
 
-1. In the **[!UICONTROL Web Enabled Image]** tab, add the MIME type `image/jpeg` under the **[!UICONTROL Skip List]**. 「**[!UICONTROL OK]**」をタップまたはクリックして、変更内容を保存します。
+1. In the **[!UICONTROL Web Enabled Image]** tab, add the MIME type `image/jpeg` under the **[!UICONTROL Skip List]**. 「**[!UICONTROL OK]**」をクリックして、変更を保存します。
 
    ![web_enabled](assets/web_enabled.png)
 
