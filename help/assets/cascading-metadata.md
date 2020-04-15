@@ -3,7 +3,7 @@ title: カスケードメタデータ
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -17,9 +17,9 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 次に、カスケードメタデータを定義できるいくつかの使用例を示します。
 
 * ユーザーの場所が必要な場合に、ユーザーが選択した国および都道府県に基づいて、関連する都市名を表示します。
-* ユーザーが選択した製品カテゴリーに基づいて、関連するブランド名をリストに読み込みます。
+* ユーザーが選択した製品カテゴリに基づいて、関連するブランド名をリストに読み込みます。
 * 別のフィールドに指定された値に基づいて、特定のフィールドの表示と非表示を切り替えます。例えば、ユーザーが別の住所への配送を希望した場合に、別の発送先住所フィールドを表示します。
-* 別のフィールドで指定した値に基づいて、フィールドを必須として指定します。
+* 別のフィールドに指定された値に基づいて、特定のフィールドを必須として指定します。
 * 別のフィールドに指定された値に基づいて、特定のフィールドに表示されるオプションを変更します。
 * 別のフィールドに指定された値に基づいて、特定のフィールドにデフォルトのメタデータ値を設定します。
 
@@ -32,14 +32,14 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 選択したアセットタイプに関係なく、著作権情報を必須フィールドとして表示します。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。
-1. **[!UICONTROL スキーマフォーム]**&#x200B;ページでスキーマフォームを選択し、ツールバーの「**[!UICONTROL 編集]**」をタップまたはクリックしてスキーマを編集します。
+1. Experience Managerインターフェイスで、ツール/アセッ **[!UICONTROL ト]** /メタデ **[!UICONTROL ータ]** スキーマ **[!UICONTROL に移動します]**。
+1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
 
 1. （オプション）メタデータスキーマエディターで、条件化する新しいフィールドを作成します。「**[!UICONTROL 設定]**」タブで、名前およびプロパティのパスを指定します。
 
-   To create a new tab, tap/click `+` to add a tab and then add a metadata field.
+   To create a new tab, click `+` to add a tab and then add a metadata field.
 
    ![add_tab](assets/add_tab.png)
 
@@ -49,7 +49,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 1. キーと値のペアは、フォームユーザーに提供されるオプションです。キーと値のペアは手動でも JSON ファイルからも指定できます。
 
-   * 値を手動で指定するには、「**[!UICONTROL 手動で追加]**」を選択し、「**[!UICONTROL 選択肢を追加]**」をタップまたはクリックした後、オプションのテキストと値を指定します。例えば、ビデオ、PDF、Word、画像などのアセットタイプを指定します。
+   * To specify the values manually, select **[!UICONTROL Add Manually]**, and click **[!UICONTROL Add Choice]** and specify the option text and value. 例えば、ビデオ、PDF、Word、画像などのアセットタイプを指定します。
 
    * JSON ファイルから値を動的に取得するには、「**[!UICONTROL JSON パスで追加]**」を選択し、JSON ファイルのパスを指定します。AEM は、フォームがユーザーに提供されたときに、キーと値のペアをリアルタイムで取得します。
    両方のオプションは同時には使用できません。オプションを JSON ファイルから読み込んで手動で編集することはできません。
@@ -66,7 +66,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 1. （オプション）他の必須フィールドを追加します。例えば、アセットタイプが「ビデオ」の場合、形式、コーデックおよび期間のフィールドがあります。
 
-   同様に、他のアセットタイプの依存フィールドを追加します。例えば、PDFやWordファイルなどのドキュメントアセットに対して、ページ数と作成者のフィールドを追加します。
+   同様に、他のアセットタイプの依存フィールドを追加します。例えば、PDF ファイルや Word ファイルなどのドキュメントアセットには、ページ数や作成者のフィールドを追加します。
 
    ![video_dependent_fields](assets/video_dependent_fields.png)
 
@@ -75,7 +75,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
    ![select_dependentfield](assets/select_dependentfield.png)
 
 1. 「**[!UICONTROL 要件]**」から、「**[!UICONTROL 必須、新しいルールに基づく]**」オプションを選択します。
-1. 「**[!UICONTROL ルールを追加]**」をタップまたはクリックし、「**[!UICONTROL アセットタイプ]**」フィールドを選択して依存関係を作成します。また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。「**[!UICONTROL 完了]**」をタップまたはクリックして、変更内容を保存します。
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。Click **[!UICONTROL Done]** to save the changes.
 
    ![define_rule](assets/define_rule.png)
 
@@ -83,23 +83,23 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
    >
    >値があらかじめ手動で定義されているドロップダウンメニューは、ルールと一緒に使用できます。設定済みの JSON パスを含むドロップダウンメニューは、事前定義された値を使用して条件を適用するルールと一緒には使用できません。値が実行時に JSON から読み込まれる場合は、事前定義されたルールを適用することはできません。
 
-1. 「**[!UICONTROL 表示]**」の下で、「**[!UICONTROL 表示可、新しいルールに基づく]**」オプションを選択します。
+1. 「**[!UICONTROL 視認性]**」の下で、「**[!UICONTROL 表示可、新しいルールに基づく]**」オプションを選択します。
 
-1. 「**[!UICONTROL ルールを追加]**」をタップまたはクリックし、「**[!UICONTROL アセットタイプ]**」フィールドを選択して依存関係を作成します。また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。「**[!UICONTROL 完了]**」をタップまたはクリックして、変更内容を保存します。
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。Click **[!UICONTROL Done]** to save the changes.
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
    >[!NOTE]
    >
-   >空白（または値以外の場所）をタップ/クリックすると、値がリセットされます。 発生した場合は、値を再選択します。
+   >空白（または値以外の場所）をクリックすると、値がリセットされます。 発生した場合は、値を再度選択します。
 
    >[!NOTE]
    >
    >**[!UICONTROL 要件]**&#x200B;条件と&#x200B;**[!UICONTROL 視認性]**&#x200B;条件は互いに関係なく適用できます。
 
-1. 同様に、「アセットタイプ」フィールドの値「ビデオ」と、「コーデック」や「長さ」などの他のフィールドとの間に依存関係を作成します。
-1. Repeat the steps to create dependency between document assets (PDF and Word) in the [!UICONTROL Asset Type] field and fields such as [!UICONTROL Page Count] and [!UICONTROL Author].
-1. 「**[!UICONTROL 保存]**」をクリックします。メタデータスキーマをフォルダに適用します。
+1. 同様に、「アセットタイプ」フィールドのビデオという値と、「コーデック」や「期間」などの他のフィールドとの依存関係を作成します。
+1. 手順を繰り返して、「[!UICONTROL アセットタイプ]」フィールドのドキュメントアセット（PDF、Word）と、「[!UICONTROL ページ数]」や「[!UICONTROL 作成者]」などのフィールドとの依存関係を作成します。
+1. 「**[!UICONTROL 保存]**」をクリックします。メタデータスキーマをフォルダーに適用します。
 
 1. メタデータスキーマを適用したフォルダーに移動して、アセットのプロパティページを開きます。「アセットタイプ」フィールドでの選択に応じて、関連するカスケードメタデータのフィールドが表示されます。
 
@@ -109,4 +109,4 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
    ![ドキュメントアセットのカスケードメタデータ](assets/doc_type_fields.png)
 
-   *図：ドキュメントのカスケードメタデータ*
+   *図：メタデータのカスケードドキュメント*
