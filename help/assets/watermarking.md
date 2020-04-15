@@ -1,25 +1,26 @@
 ---
-title: デジタルアセットに透かしを追加します。
+title: デジタルアセットへの透かしの追加.
 description: 透かし処理機能を使用して、アセットにデジタル透かしを追加する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
 # デジタルアセットの透かし {#watermarking}
 
-Adobe Experience Manager (AEM)Assetsを使用すると、アセットの信頼性と著作権の所有権をユーザーが確認できるように、アセットに電子透かしを追加できます。 AEM Assets では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
+Adobe Experience Manager (AEM)Assetsを使用すると、アセットに電子透かしを追加して、アセットの信頼性と著作権の所有権を確認できます。 AEM Assets では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
 
 To be able to apply watermark on assets, add the watermarking step in the [!UICONTROL DAM Update Asset] workflow.
 
-1. AEMユーザーインターフェイスにアクセスし、ツール/ワ **[!UICONTROL ークフ]** ロー **[!UICONTROL /モデ]** ルに移動し **[!UICONTROL ます]**。
+1. AEMユーザーインターフェイスにアクセスし、ツール/ワ **[!UICONTROL ークフロ]** ー **[!UICONTROL /モデルに移]** 動します ****。
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Update Asset]** workflow and click **[!UICONTROL Edit]**.
 
 1. From the side panel, drag the **[!UICONTROL Add Watermark]** step to the [!UICONTROL DAM Update Asset] workflow.
 
-   ![透かしを追加ステップをドラッグし、DAM更新アセットワークフローに追加します](assets/add_watermark_step_aem_assets.png)
+   ![透かしステ [!UICONTROL 追加ップをドラッグし] 、 [!UICONTROL DAM更新アセットのワークフロー]](assets/add_watermark_step_aem_assets.png)2に追加します。
+   *図：透かしステッ[!UICONTROL 追加プをドラッグし]、[!UICONTROL DAM更新アセットのワークフローに追加しま]す*
 
    >[!NOTE]
    >
@@ -30,5 +31,7 @@ To be able to apply watermark on assets, add the watermarking step in the [!UICO
 
    ![Assets における「透かしを追加」ステップの引数の指定](assets/arguments_add_watermark_aem_assets.png)
 
+   *図：アセットの透かしの追加手順の引数を指定します。*
+
 1. Save the **[!UICONTROL DAM Update Asset]** workflow with the watermark step.
-1. アセットユーザーインターフェイスから、サンプルアセットをアップロードします。 透かしがフォントサイズやカラーなどと共に、上記手順で設定した位置に表示されます。
+1. Assets ユーザーインターフェイスから、サンプルアセットをアップロードします。透かしがフォントサイズやカラーなどと共に、上記手順で設定した位置に表示されます。
