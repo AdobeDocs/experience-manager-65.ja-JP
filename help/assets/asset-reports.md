@@ -3,7 +3,7 @@ title: デジタルアセットに関するレポート
 description: AEM Assets内のアセットに関するレポートを理解し、デジタルアセットの使用、アクティビティ、共有を把握します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a839ec71e02ee5d92f054a686b7bb52142058ae9
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -36,12 +36,12 @@ AEM Assets では、次の標準レポートが生成されます。
 
 AEM 管理者は、これらのレポートを手軽に生成し、実装に合わせて容易にカスタマイズできます。レポートを生成するには、以下の手順に従います。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL レポート]**&#x200B;に移動します。
+1. Experience Managerインターフェイスで、ツール/アセ **[!UICONTROL ット]** /レ **[!UICONTROL ポート]** をクリ **[!UICONTROL ックします]**。
 
 ![アセットレポートに移動するツールページ](assets/AssetsReportNavigation.png)
 
-1. アセットレポートページで、ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。
-1. **[!UICONTROL レポートを作成]**&#x200B;ページで、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をタップまたはクリックします。
+1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
+1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
 
    ![レポートタイプの選択](assets/choose_report.png)
 
@@ -53,7 +53,7 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
    >
    >デフォルトで、「ダウンロードされたアセット」レポートにはコンテンツフラグメントとリンク共有が含まれています。適切なオプションを選択して、リンク共有のレポートを作成するか、ダウンロードレポートからコンテンツフラグメントを除外します。
 
-1. タイトル、説明、サムネール、CRX リポジトリ内のフォルダーパス（レポートの保存場所）など、レポートの詳細を設定します。デフォルトでは、フォルダーパスは */content/dam* ですが、別のパスを指定することもできます。
+1. タイトル、説明、サムネール、CRX リポジトリ内のフォルダーパス（レポートの保存場所）など、レポートの詳細を設定します。By default, the folder path is `/content/dam`. 別のパスを指定することもできます。
 
    ![レポートの詳細を追加するページ](assets/report_configuration.png)
 
@@ -83,7 +83,7 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 
    ![リンク共有レポートの詳細ページ](assets/link_share.png)
 
-1. ツールバーの「**[!UICONTROL 次へ]**」をタップまたはクリックします。
+1. Click **[!UICONTROL Next]** from the toolbar.
 
 1. **[!UICONTROL 列を構成]**&#x200B;ページでは、いくつかの列がデフォルトでレポートに表示されるように選択されています。さらに列を選択できます。 選択されている列の選択を解除すると、その列はレポートから除外されます。
 
@@ -91,14 +91,14 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 
    カスタムの列名やプロパティパスを表示するには、CRX の jcr:content ノード下のアセットバイナリのプロパティを設定します。または、プロパティパスピッカーを使用してパスを追加します。
 
-   ![レポートのカスタム列の作成](assets/custom_columns.png)
+   ![レポート列の選択または選択解除](assets/custom_columns.png)
 
-1. ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。レポートの生成が開始されたことを通知するメッセージが表示されます。
-1. アセットレポートページのレポート生成ステータスは、レポートジョブの現在の状態（「成功」、「失敗」、「待機中」、「スケジュール済み」など）に基づきます。通知のインボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをタップまたはクリックします。 Alternatively, select the report, and tap **[!UICONTROL View]** from the toolbar.
+1. Click **[!UICONTROL Create]** from the toolbar. レポートの生成が開始されたことを通知するメッセージが表示されます。
+1. アセットレポートページのレポート生成ステータスは、レポートジョブの現在の状態（「成功」、「失敗」、「待機中」、「スケジュール済み」など）に基づきます。通知のインボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。 Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
 
    ![生成されたレポート](assets/report_page.png)
 
-   Tap **[!UICONTROL Download]** from the toolbar to download the report in CSV format.
+   Click **[!UICONTROL Download]** from the toolbar to download the report in CSV format.
 
 ## カスタム列の追加 {#add-custom-columns}
 
@@ -112,10 +112,10 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 * Brand Portal 公開
 * ファイル
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL レポート]**&#x200B;に移動します。
-1. アセットレポートページで、ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。
+1. Experience Managerインターフェイスで、ツール/アセッ **[!UICONTROL ト]** /レポ **[!UICONTROL ートをクリ]** ックします ****。
+1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
 
-1. **[!UICONTROL レポートを作成]**&#x200B;ページで、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をタップまたはクリックします。
+1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
 1. 必要に応じて、タイトル、説明、サムネール、フォルダーパス、日付範囲などのレポートの詳細を設定します。
 
 1. カスタム列を表示するには、「**[!UICONTROL カスタム列]**」で列の名前を指定します。
@@ -126,9 +126,9 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 
    ![jcr:content内のパスからプロパティパスをマップします。](assets/property_picker.png)
 
-   カスタム列をさらに追加するには、「**[!UICONTROL 追加]**」をタップまたはクリックし、手順 5 および 6 を繰り返します。
+   To add more custom columns, click **[!UICONTROL Add]** and repeat steps 5 and 6.
 
-1. ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。レポートの生成が開始されたことを通知するメッセージが表示されます。
+1. Click **[!UICONTROL Create]** from the toolbar. レポートの生成が開始されたことを通知するメッセージが表示されます。
 
 ## パージサービスの設定 {#configure-purging-service}
 
