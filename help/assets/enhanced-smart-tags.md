@@ -3,7 +3,7 @@ title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -22,9 +22,9 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 タグのトレーニングが完了して準備が整ったら、サービスは、タグ付けワークフローを通じてこれらのタグをアセットに適用できるようになります。
 
-スマートコンテンツサービスでは、バックグラウンドで Adobe Sensei の AI フレームワークを使用して、タグ構造およびビジネス上の分類に基づいてその画像認識アルゴリズムのトレーニングをおこないます。その後、このコンテンツインテリジェンスを使用して、アセットの個々のセットに関連性の高いタグが適用されます。
+背景には、スマートコンテンツサービスは、Adobe Sensei AIフレームワークを使用して、タグ構造とビジネス分類に関する画像認識アルゴリズムをトレーニングしています。 その後、このコンテンツインテリジェンスを使用して、アセットの個々のセットに関連性の高いタグが適用されます。
 
-スマートコンテンツサービスは、Adobe I/O 上にホストされるクラウドサービスです。このサービスを Adobe Experience Manager（AEM）で使用するには、システム管理者が AEM インスタンスを Adobe I/O と統合する必要があります。
+スマートコンテンツサービスは、Adobe I/O上でホストされるクラウドサービスです。Adobe Experience Managerで使用するには、システム管理者がExperience ManagerインスタンスをAdobe I/Oと統合する必要があります。
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
@@ -44,15 +44,15 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 ## 使用開始 {#onboarding}
 
-Smart Content Serviceは、AEMのアドオンとして購入できます。購入後、Adobe IOへのリンクを含む電子メールが組織の管理者に送信されます。
+スマートコンテンツサービスは、Adobe Experience Manager のアドオンとして購入できます。購入後、Adobe IOへのリンクを含む電子メールが組織の管理者に送信されます。
 
-管理者は、そのリンクにアクセスしてスマートコンテンツサービスを AEM と統合することができます。このサービスを AEM Assets と統合するには、](config-smart-tagging.md)スマートタグの設定[を参照してください。
+管理者は、このリンクをたどって、Smart Content ServiceをExperience Managerと統合できます。 To integrate the service with Experience Manager Assets, see [Configure Smart Tags](config-smart-tagging.md).
 
-管理者がサービスを設定し、AEM でユーザーを追加すると、使用開始プロセスは完了です。
+管理者がサービスを設定し、Experience Managerでユーザーを追加すると、オンボーディングプロセスが完了します。
 
 >[!NOTE]
 >
->AEM 6.3以前のバージョンを使用し、アセットのタグ付けサービスが必要な場合は、「スマートタグ」を参照 [してください](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 スマートタグは最新のAI機能を使用しないので、強化されたスマートタグサービスに比べて精度が低くなります。
+>Experience Manager 6.3以前のバージョンを使用し、アセットのタグ付けサービスが必要な場合は、「スマートタグ」を参照 [してください](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 スマートタグは最新のAI機能を使用しないので、強化されたスマートタグサービスに比べて正確性が低くなります。
 
 ## アセットとタグの確認 {#reviewing-assets-and-tags}
 
@@ -83,20 +83,20 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 
 ### 定期的なトレーニング {#periodic-training}
 
-スマートコンテンツサービスを有効にして、フォルダー内のアセットおよび関連するタグに関する定期的なトレーニングを実施することができます。Open the properties page of your asset folder, select **[!UICONTROL Enable Smart Tags]** under the **[!UICONTROL Details]** tab, and save the changes.
+スマートコンテンツサービスを有効にして、フォルダー内のアセットおよび関連するタグに関する定期的なトレーニングを実施することができます。Open the [!UICONTROL Properties] page of your asset folder, select **[!UICONTROL Enable Smart Tags]** under the **[!UICONTROL Details]** tab, and save the changes.
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-フォルダーに対してこのオプションを選択すると、トレーニングワークフローが自動的に実行され、フォルダーのアセットおよびそのタグに関するスマートコンテンツサービスのトレーニングが実施されます。デフォルトでは、トレーニングワークフローは週に 1 回、土曜日の午前 0 時 30 分に実行されます。
+フォルダーに対してこのオプションを選択すると、Experience Managerはトレーニングワークフローを自動的に実行し、フォルダーアセットとそのタグに関するスマートコンテンツサービスのトレーニングを行います。 デフォルトでは、トレーニングワークフローは週に 1 回、土曜日の午前 0 時 30 分に実行されます。
 
 ### オンデマンドのトレーニング {#on-demand-training}
 
 ワークフローコンソールから、必要に応じていつでもスマートコンテンツサービスのトレーニングをおこなうことができます。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;に移動します。
-1. **[!UICONTROL ワークフローモデル]**&#x200B;ページで、「**[!UICONTROL スマートタグトレーニング]**」ワークフローを選択し、ツールバーの「**[!UICONTROL ワークフローを開始]**」をタップまたはクリックします。
+1. Experience Managerインターフェイスで、ツール/ワークフ **[!UICONTROL ロー/モデルに移動します]**。
+1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 1. **[!UICONTROL ワークフローを実行]**&#x200B;ダイアログで、サービスのトレーニングに使用するタグ付けされたアセットが格納されているペイロードフォルダーを参照します。
-1. ワークフローのタイトルを指定し、コメントを追加します。次に、「**[!UICONTROL 実行]**」をタップまたはクリックします。アセットとタグがトレーニングのために送信されます。
+1. ワークフローのタイトルを指定し、コメントを追加します。Then, click **[!UICONTROL Run]**. アセットとタグがトレーニングのために送信されます。
 
    ![workflow_dialog](assets/workflow_dialog.png)
 
@@ -104,22 +104,22 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 >
 >フォルダー内のアセットがトレーニング用に処理されると、変更されたアセットのみが後続のトレーニングサイクルで処理されます。
 
-### トレーニングレポートの表示 {#viewing-training-reports}
+### 表示トレーニングレポート {#viewing-training-reports}
 
 アセットのトレーニングセット内のタグに関するスマートコンテンツサービスのトレーニングが実施されたかどうかを確認するには、レポートコンソールでトレーニングワークフローレポートを調べます。
 
-1. Tap/click the AEM logo, and go to **[!UICONTROL Tools > Assets > Reports]**.
-1. **[!UICONTROL アセットレポート]**&#x200B;ページで、「**[!UICONTROL 作成]**」をタップまたはクリックします。
-1. Select the **[!UICONTROL Smart Tags Training]** report, and then tap/click **[!UICONTROL Next]** from the toolbar.
-1. レポートのタイトルと説明を指定します。「**[!UICONTROL レポートをスケジュール]**」で、「**[!UICONTROL 今すぐ]**」オプションを選択したままにします。レポートを後で生成するようにスケジュールするには、「**[!UICONTROL 後で]**」を選択し、日時を指定します。次に、ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。
-1. **[!UICONTROL アセットレポート]**&#x200B;ページで、生成したレポートを選択します。To view the report, tap **[!UICONTROL View]** from the toolbar.
+1. Experience Managerインターフェイスで、ツール/アセ **[!UICONTROL ット/レポートに移動します]**。
+1. In the **[!UICONTROL Asset Reports]** page, click **[!UICONTROL Create]**.
+1. Select the **[!UICONTROL Smart Tags Training]** report, and then click **[!UICONTROL Next]** from the toolbar.
+1. レポートのタイトルと説明を指定します。「**[!UICONTROL レポートをスケジュール]**」で、「**[!UICONTROL 今すぐ]**」オプションを選択したままにします。レポートを後で生成するようにスケジュールするには、「**[!UICONTROL 後で]**」を選択し、日時を指定します。Then, click **[!UICONTROL Create]** from the toolbar.
+1. **[!UICONTROL アセットレポート]**&#x200B;ページで、生成したレポートを選択します。To view the report, click **[!UICONTROL View]** from the toolbar.
 1. レポートの詳細をレビューします。
 
-   レポートには、トレーニングしたタグのトレーニングステータスが表示されます。The green color in the **[!UICONTROL Training Status]** column indicates that the Smart Content Service is trained for the tag. 黄色は、特定のタグに関するサービスのトレーニングが完全には実施されていないことを示します。この場合、特定のタグを含む画像をさらに追加し、トレーニングワークフローを実行して、そのタグに関するサービスのトレーニングを完全に実施します。
+   レポートには、トレーニングしたタグのトレーニングステータスが表示されます。「**[!UICONTROL トレーニングステータス]**」列の緑色は、そのタグについて、スマートコンテンツサービスのトレーニングが実施されたことを示します。黄色は、特定のタグに関するサービスのトレーニングが完全には実施されていないことを示します。この場合、特定のタグを含む画像をさらに追加し、トレーニングワークフローを実行して、そのタグに関するサービスのトレーニングを完全に実施します。
 
    このレポートにタグが表示されない場合は、それらのタグに関するトレーニングワークフローを再度実行してください。
 
-1. To download the report, select it from the list, and tap **[!UICONTROL Download]** from the toolbar. レポートが Excel ファイルとしてダウンロードされます。
+1. To download the report, select it from the list, and click **[!UICONTROL Download]** from the toolbar. レポートはMicrosoft Excelスプレッドシートとしてダウンロードされます。
 
 ## アセットの自動タグ付け {#tagging-assets-automatically}
 
@@ -150,13 +150,13 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 
 #### Tag assets from the workflow console {#tagging-assets-from-the-workflow-console}
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;に移動します。
-1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then tap/click **[!UICONTROL Start Workflow]** from the toolbar.
+1. Experience Managerインターフェイスで、ツール/ワークフ **[!UICONTROL ロー/モデルに移動します]**。
+1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
 
 1. In the **[!UICONTROL Run Workflow]** dialog, browse to the payload folder containing assets on which you want to apply your tags automatically.
-1. ワークフローのタイトルとオプションのコメントを指定します。次に、「**[!UICONTROL 実行]**」をタップまたはクリックします。
+1. ワークフローのタイトルとオプションのコメントを指定します。「**[!UICONTROL 実行]**」をクリックします。
 
    ![tagging_dialog](assets/tagging_dialog.png)
 
@@ -165,18 +165,14 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 #### Tag assets from the timeline {#tagging-assets-from-the-timeline}
 
 1. Assets のユーザーインターフェイスで、スマートタグを適用するアセットが格納されているフォルダーまたは特定のアセットを選択します。
-1. Experience Managerのロゴをタップし、タイムラインを開きます。
-1. Tap the arrow at the bottom, and then tap/click **[!UICONTROL Start Workflow]**.
+1. 左上隅から、タイムラインを開き **[!UICONTROL ます]**。
+1. 左側のサイドバーの下部にあるアクションを開き、「アクションワークフロー」を **[!UICONTROL 開始しま]**&#x200B;す。
 
-   ![start_workflow](assets/start_workflow.png)
+   ![開始_ワークフロー](assets/start_workflow.png)
 
 1. 「**[!UICONTROL DAM スマートタグアセット]**」ワークフローを選択し、ワークフローのタイトルを指定します。
-1. 「**[!UICONTROL 開始]**」をタップまたはクリックします。ワークフローによってアセットにタグが適用されます。アセットフォルダーに移動してタグをレビューし、スマートコンテンツサービスによってアセットが適切にタグ付けされているかどうかを確認します。For details, see [Managing Smart Tags](managing-smart-tags.md).
+1. 「**[!UICONTROL 開始]**」をクリックします。ワークフローによってアセットにタグが適用されます。アセットフォルダーに移動してタグをレビューし、スマートコンテンツサービスによってアセットが適切にタグ付けされているかどうかを確認します。For details, see [manage Smart Tags](managing-smart-tags.md).
 
 >[!NOTE]
 >
->後続のタグ付けサイクルでは、変更されたアセットのみが、新しくトレーニングされたタグで再度タグ付けされます。
->
->ただし、タグ付けワークフローの最後のタグ付けサイクルと現在のタグ付けサイクルの間のギャップが24時間を超える場合は、変更されていないアセットにもタグが付けられます。
->
->定期的なタグ付けワークフローについては、間隔が 6 ヶ月を超えると、変更されていないアセットがタグ付けされます。
+>後続のタグ付けサイクルでは、変更されたアセットのみが新しくトレーニングされたタグで再度タグ付けされます。ただし、タグ付けワークフローの最後のタグ付けサイクルと現在のタグ付けサイクルの間のギャップが24時間を超える場合は、変更されていないアセットもタグ付けされます。 定期的なタグ付けワークフローの場合、時間差が6か月を超えると、変更されていないアセットにタグが付けられます。
