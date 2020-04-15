@@ -4,12 +4,12 @@ description: AEMの設定、ハードウェア、ソフトウェア、および�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
-<!-- TBD: Formatting using backticks. Add UICONTROL tag. Redundant info as reviewed by engineering. -->
+<!-- TBD: Get reviewed by engineering. -->
 
 # Assets performance tuning guide {#assets-performance-tuning-guide}
 
@@ -29,11 +29,11 @@ AEM は数々のプラットフォームでサポートされていますが、L
 
 ### 一時フォルダ {#temp-folder}
 
-アセットのアップロード時間を短縮するには、Javaの一時ディレクトリに高いストレージを使用してください。 Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。For example in Amazon EC2, an [&#39;ephemeral drive&#39;](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) drive can be used for the temporary folder.
+アセットのアップロード時間を短縮するには、Javaの一時ディレクトリに高いストレージを使用してください。 Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。For example in Amazon EC2, an [ephemeral drive](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) drive can be used for the temporary folder.
 
 サーバーに十分なメモリがあるという前提で、RAM ドライブを設定します。Linux の場合、8GB RAM ドライブを作成するには、次のコマンドを実行します。
 
-```
+```shell
 mkfs -q /dev/ram1 800000
  mkdir -p /mnt/aem-tmp
  mount /dev/ram1 /mnt/aem-tmp
@@ -58,7 +58,7 @@ Once the high performance temporary volume is ready, set the JVM parameter `-Dja
 
 ### JVM パラメーター {#jvm-parameters}
 
-次の JVM パラメーターを設定してください。
+次のJVMパラメーターを設定します。
 
 * `-XX:+UseConcMarkSweepGC`
 * `-Doak.queryLimitInMemory`=500000
@@ -88,7 +88,7 @@ S3 または共有ファイルデータストアの実装は、ディスク領�
 
 次の S3 データストアの設定（`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`）は、アドビが 12.8 TB のバイナリラージオブジェクト（BLOB）を既存のファイルデータストアから顧客サイトの S3 データストアに抽出するのに役立ちました。
 
-```
+```conf
 accessKey=<snip>
  secretKey=<snip>
  s3Bucket=<snip>
@@ -126,18 +126,17 @@ accessKey=<snip>
 
 Wherever possible, set the [!UICONTROL DAM Update Asset] workflow to Transient. この設定にすると、ワークフローが通常のトラッキングやアーカイブ処理をパススルーする必要がなくなるので、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。
 
->[!NOTE]
->
->By default, the [!UICONTROL DAM Update Asset] workflow is set to Transient in AEM 6.3. In this case, you can skip the following procedure.
-
 1. AEMインスタ `/miscadmin` ンス内のに移動しま `https://[aem_server]:[port]/miscadmin`す。
+
 1. ツール/ワ **[!UICONTROL ークフ]** ロー **[!UICONTROL /モデル]** / **[!UICONTROL dam]** dam **** leversを展開します。
+
 1. Open **[!UICONTROL DAM Update Asset]**. フローティングツールパネルで、「**[!UICONTROL ページ]**」タブに切り替えて「**[!UICONTROL ページプロパティ]**」をクリックします。
+
 1. Select **[!UICONTROL Transient Workflow]** and click **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
-   >一部の機能は一時的なワークフローをサポートしません。AEM Assets のデプロイメントにこれらの機能が必要な場合は、一時的なワークフローを設定しないでください。
+   >一部の機能は一時的なワークフローをサポートしません。If your [!DNL Assets] deployment requires these features, do not configure transient workflows.
 
 In cases where transient workflows cannot be used, run workflow purging regularly to delete archived [!UICONTROL DAM Update Asset] workflows to ensure system performance does not degrade.
 
@@ -147,14 +146,16 @@ In cases where transient workflows cannot be used, run workflow purging regularl
 
 パージの実行時間が長すぎる場合、タイムアウトします。このため、ワークフローの数が多すぎることが原因でパージワークフローが終わらない状況を避けるために、パージジョブが確実に終わるようにする必要があります。
 
-For example, after executing numerous non-transient workflows (that creates workflow instance nodes), you can run [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) on an ad-hoc basis. これにより、冗長および完了したワークフローのインスタンスが即座に削除されるので、Adobe Granite のワークフローのパージスケジューラーが実行されるのを待つ必要がありません。
+For example, after executing numerous non-transient workflows (that creates workflow instance nodes), you can execute [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) on an ad-hoc basis. これにより、冗長および完了したワークフローのインスタンスが即座に削除されるので、Adobe Granite のワークフローのパージスケジューラーが実行されるのを待つ必要がありません。
 
 ### 並列ジョブの最大数 {#maximum-parallel-jobs}
 
 デフォルトでは、AEM は最大でサーバー上のプロセッサーと同じ数の並列ジョブを実行できます。The problem with this setting is that during periods of heavy load, all of the processors are occupied by [!UICONTROL DAM Update Asset] workflows, slowing down UI responsiveness and preventing AEM from running other processes that safeguard server performance and stability. 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
-1. AEM作成者で、に移動します `https://[aem_server]:[port]/system/console/slingevent`。
+1. Experience Manager Authorで、に移動します `https://[aem_server]:[port]/system/console/slingevent`。
+
 1. Click **[!UICONTROL Edit]** on each workflow queue that is relevant to your implementation, for example **[!UICONTROL Granite Transient Workflow Queue]**.
+
 1. Update the value of **[!UICONTROL Maximum Parallel Jobs]** and click **[!UICONTROL Save]**.
 
 まずは、キューを使用できるプロセッサーの半分に設定してください。ただし、場合によっては最大のスループットを得るためにこの値をお使いの環境に合わせて増減させる必要があります。一時的および一時的でないワークフローには別個のキューが用意されているほか、外部ワークフローなどその他の処理も存在します。プロセッサーの 50％に設定された複数のキューが同時にアクティブになると、システムはすぐにオーバーロードします。頻繁に使用されるキューは、ユーザーの実装により大きく異なります。このため、サーバーの安定性を損なうことなく効率を最大化するには、これらを慎重に設定する必要が生じる場合があります。
@@ -256,11 +257,15 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 1. 参照しま `/oak:index/damAssetLucene`す。 値を追加持つプ `String[]` ロパティ `includedPaths``/content/dam`。
 1. 保存.
 
-（AEM 6.1 および 6.2 のみ）ntBaseLucene インデックスを更新して、アセットの削除および移動のパフォーマンスを向上させます。
+<!-- TBD: Review by engineering if required in 6.5 docs or not.
 
-1. 参照先 `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-1. 追加2 nt：非構造化ノード `slingResource` と `damResolvedPath` 下 `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-1. ノード上で以下のプロパティを設定します(とのプ `ordered` ロパテ `propertyIndex` ィのタイプは次のとおりで `Boolean`す)。
+(AEM6.1 and 6.2 only) Update the `ntBaseLucene` index to improve asset delete and move performance:
+
+1. Browse to `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
+
+1. Add two nt:unstructured nodes `slingResource` and `damResolvedPath` under `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
+
+1. Set the properties below on the nodes (where `ordered` and `propertyIndex` properties are of type `Boolean`:
 
    ```
    slingResource
@@ -275,25 +280,24 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
    type="String"
    ```
 
-1. On the `/oak:index/ntBaseLucene` node, set the property `reindex=true`. 「**[!UICONTROL すべて保存]**」をクリックします。
-1. error.log で次のメッセージを監視して、インデックス構築が完了したかどうかを確認します。
-Reindexing completed for indexes: [/oak:index/ntBaseLucene]
-1. CRXDe で /oak:index/ntBaseLucene ノードを更新すると reindex プロパティが false に戻るので、インデックス構築が完了したかどうかを確認することもできます。
-1. インデックスの構築が完了したら、CRXDe に戻り、次の 2 つのインデックスに対して &quot;type&quot; プロパティを disabled に設定します。
+1. On the `/oak:index/ntBaseLucene` node, set the property `reindex=true`. Click **[!UICONTROL Save All]**.
+1. Monitor the error.log to see when indexing is completed:
+   Reindexing completed for indexes: [/oak:index/ntBaseLucene]
+1. You can also see that indexing is completed by refreshing the /oak:index/ntBaseLucene node in CRXDe as the reindex property would go back to false
+1. Once indexing is completed then go back to CRXDe and set the "type" property to disabled on these two indexes
 
-   * */oak:index/slingResource*
-   * */oak:index/damResolvedPath*
+    * */oak:index/slingResource*
+    * */oak:index/damResolvedPath*
 
-1. 「すべて保存」をクリックします。
+1. Click "Save All"
+-->
 
 Lucene テキスト抽出の無効化：
 
-ユーザーがアセットのコンテンツを検索（PDF ドキュメントに含まれるテキストの検索など）できる必要がない場合は、この機能を無効にして、インデックスのパフォーマンスを向上させることができます。
+例えば、PDFドキュメント内のテキストを検索する場合など、アセットの全文検索を行う必要がない場合は、無効にします。 フルテキストインデックスを無効にすることで、インデックスのパフォーマンスを向上できます。
 
-1. AEM パッケージマネージャー（/crx/packmgr/index.jsp）に移動します。
-1. 以下のパッケージをアップロードしてインストールします。
-
-[ファイルを入手](assets/disable_indexingbinarytextextraction-10.zip)
+1. Go to the AEM package manager `/crx/packmgr/index.jsp`.
+1. disable_indexingbinarytextraction-10.zipで入手可能なパッケ [ージをアップロードしてインストールします](assets/disable_indexingbinarytextextraction-10.zip)。
 
 ### guessTotal {#guess-total}
 
