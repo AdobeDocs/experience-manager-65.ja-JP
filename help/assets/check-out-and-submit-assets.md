@@ -1,16 +1,16 @@
 ---
-title: デジタルアセットをチェックインして編集用にチェックアウトする
+title: デジタルアセットをチェックインし、編集用にチェックアウトする
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
-# AEM DAMのチェックインおよびチェックアウトファイル {#check-in-and-check-out-files-in-assets}
+# AEM DAMのファイルのチェックインとチェックアウト {#check-in-and-check-out-files-in-assets}
 
-Adobe Experience Manager（AEM） Assets では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。アセットをチェックアウトした後は、その人だけがアセットを編集、注釈、公開、移動、削除できるようになります。アセットをチェックアウトすると、アセットがロックされます。 他のユーザーは、アセットをAEM Assetsに再度チェックインするまで、アセットに対してこれらの操作を実行できません。 ただし、ロックされたアセットのメタデータは変更することができます。
+Adobe Experience Manager (AEM) Assets では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。アセットをチェックアウトした後は、その人だけがアセットを編集、注釈、公開、移動、削除できるようになります。アセットのチェックアウトでアセットにロックがかかることになります。他のユーザーは、アセットをAEM Assetsに再度チェックインするまで、アセットに対してこれらの操作を実行できません。 ただし、ロックされたアセットのメタデータは変更することができます。
 
 アセットをチェックイン／チェックアウトするには、アセットへの書き込み権限が必要です。
 
@@ -19,8 +19,8 @@ Adobe Experience Manager（AEM） Assets では、編集のためにアセット
 ## アセットのチェックアウト {#checking-out-assets}
 
 1. Assets の UI でチェックアウトしたいアセットを選択します。チェックアウトしたいアセットは複数選択することもできます。
-1. From the toolbar, click/tap **[!UICONTROL Checkout]**.
-「チェッ **[!UICONTROL クアウト]** 」オプションが「チェックイン」に切 **[!UICONTROL り替わりま]**す。
+1. ツールバーで、「チェックアウト」をクリ **[!UICONTROL ックしま]**す。
+「チェッ **[!UICONTROL クアウト]** 」オプションが「チェッ **[!UICONTROL クイン]**」に切り替わります。
 チェックアウトしたアセットを他のユーザーが編集できるかを確認するには、別のユーザーとしてログインします。チェックアウトしたアセットのサムネールにロック記号が表示されます。
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
@@ -29,9 +29,9 @@ Adobe Experience Manager（AEM） Assets では、編集のためにアセット
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   You can, however, tap **[!UICONTROL View Properties]** to edit the metadata for the locked asset.
+   You can click **[!UICONTROL View Properties]** to edit the metadata for the locked asset.
 
-1. 「編集」 **[!UICONTROL をタップし]** 、アセットを編集モードで開きます。
+1. 「編集」 **[!UICONTROL をクリックし]** 、アセットを編集モードで開きます。
 
    ![chlimage_1-473](assets/chlimage_1-473.png)
 
@@ -41,18 +41,18 @@ Adobe Experience Manager（AEM） Assets では、編集のためにアセット
 
    アセットに注釈を付けたり公開したりすることもできます。
 
-1. Select the edited asset from the Assets UI, and tap **[!UICONTROL Checkin]** from the toolbar. 変更されたアセットは AEM Assets にチェックインされ、他のユーザーが編集できるようになります。
+1. インターフェイスから編集したアセッ [!DNL Assets] トを選択し、ツールバーの「 **[!UICONTROL Checkin]** 」をクリックします。 変更されたアセットは AEM Assets にチェックインされ、他のユーザーが編集できるようになります。
 
 ## Forced check in {#forced-check-in}
 
-管理者は、他のユーザーがチェックアウトしたアセットをチェックインできます。
+管理者は他のユーザーがチェックアウトしたアセットをチェックインできます。
 
 1. 管理者として AEM Assets にログインします。
 1. Assets UI で他のユーザーにチェックアウトされているアセットを 1 つ以上選択します。
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. ツールバーで、「ロックを解除」 **[!UICONTROL をタップします]**。 アセットはチェックインされ、他のユーザーが編集できるようになります。
+1. ツールバーで、「ロックを解除」を **[!UICONTROL クリックしま]**&#x200B;す。 アセットはチェックインされ、他のユーザーが編集できるようになります。
 
 >[!MORELIKETHIS]
 >
