@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Authoring User Guide
+user-guide-title: AEM 6.5オーサリングユーザーガイド
 translation-type: tm+mt
-source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
+source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
 # AEM 6.5 Authoring User Guide {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEMオーサリングにとって重要なタスク、ツールおよび概念 {#essentials}
++ AEMオーサリングに必要なタスク、ツールおよび概念 {#essentials}
    + [作成者が行う最初の手順](first-steps.md)
    + [ページオーサリング](page-authoring.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
@@ -28,7 +28,7 @@ source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
    + [ページ編集時の注釈](annotations.md)
    + [ページの作成と整理](managing-pages.md)
    + [ページのコンテンツの編集](editing-content.md)
-   + [リッチテキストエディタを使用したコンテンツの作成](rich-text-editor.md)
+   + [リッチテキストエディターを使用したコンテンツのオーサリング](rich-text-editor.md)
    + [ページプロパティの編集](editing-page-properties.md)
    + [ページの公開](publishing-pages.md)
    + [コンテンツフラグメントを使用したページのオーサリング](content-fragments.md)
@@ -48,7 +48,7 @@ source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
    + [コンポーネントコンソール](default-components-console.md)
    + [レスポンシブレイアウト](responsive-layout.md)
    + [コンテンツインサイト](content-insights.md)
-   + [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成](creating-accessible-content.md)
+   + [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成 ](creating-accessible-content.md)
    + [基礎モード](scaffolding.md)
    + [デザインモードでのコンポーネントの設定](default-components-designmode.md)
    + [基盤コンポーネント](default-components-foundation.md)
@@ -76,8 +76,8 @@ source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
    + [ページ分析データの表示](pa-using.md)
    + [ページへの Search&amp;Promote 機能の追加](search-and-promote.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライゼーション](personalization.md)
-   + [ContextHub データを使用したページのプレビュー](ch-previewing.md)
+   + [パーソナライズ機能](personalization.md)
+   + [ContextHub データを使用したページのプレビュー ](ch-previewing.md)
    + [ターゲットモードを使用したターゲットコンテンツのオーサリング](content-targeting-touch.md)
    + [マルチサイトでのターゲットコンテンツの操作](multisite-support-targeted-content.md)
    + [ターゲットコンテンツ用マルチサイト管理の構造](technical-multisite-targeted.md)
@@ -85,7 +85,7 @@ source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
    + [オーディエンスの管理](managing-audiences.md)
    + [オファーの作成と管理](offerlib.md)
    + [セグメント化について](segmentation-overview.md)
-+ AEMとAdobe Campaign {aem-adobe-campaign}
++ AEMとAdobe Campaign {#aem-adobe-campaign}
    + [Adobe Campaign の使用](adobe-campaign.md)
    + [Adobe Campaign Classic および Adobe Campaign Standard の使用](campaign.md)
    + [Adobe Campaign のターゲット設定](target-adobe-campaign.md)
