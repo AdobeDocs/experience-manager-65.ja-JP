@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -25,17 +25,23 @@ Generate PDF サービスは、以下のファイル形式を PDF に変換す�
 
 * DOC、DOCX、RTF、TXT、XLS、XLSX、PPT、PPTX、VSD、MPP、MPPX、XPS、PUBの変換（Windowsのみ）
 
-   **注意**:Microsoft XPS形式をPDFに変換するには、Acrobat® 9.2以降が必要です。*
+>[!NOTE]
+>
+>Microsoft XPS形式をPDFに変換するには、Acrobat® 9.2以降が必要です。
 
 * DWF、DWG、DXWを変換するAutodesk AutoCAD 2005、2006、2007、2008、2009（英語のみ）
 * WPD、QPW、SHWを変換するCorel WordPerfect 12およびX4（英語のみ）
 * OpenOffice 2.0、2.4、3.0.1および3.1:ODT、ODP、ODG、ODF、SXW、SXI、SXC、SXD、DOC、DOCX、RTF、TXT、XLS、XLSX、PPT、pptx、VSD、MPP、MPPX、PUB
 
-   ***注意&#x200B;**:Generate PDFサービスは、64ビットバージョンのOpenOfficeをサポートしていません。*
+>[!NOTE]
+>
+>Generate PDFサービスは、64ビットバージョンのOpenOfficeをサポートしていません。
 
 * PSDを変換するAdobe Photoshop® CS2（Windowsのみ）
 
-   *注&#x200B;**意**:Photoshop CS3およびCS4は、Windows Server 2003またはWindows Server 2008をサポートしていないので、サポートされていません。*
+>[!NOTE]
+>
+>Photoshop CS3およびCS4は、Windows Server 2003またはWindows Server 2008をサポートしていないので、サポートされていません。
 
 * FM変換用のAdobe FrameMaker® 7.2および8（Windowsのみ）
 * PMD、PM6、P65、PM の変換：Adobe PageMaker® 7.0（Windows のみ）
@@ -56,7 +62,7 @@ Generate PDF サービスでは、PDF を次のファイル形式に変換しま
 * RTF
 * テキスト（アクセス可能およびプレーンの両方）
 * XML
-* DeviceRGBカラースペースのみを使用するPDF/A-1a
+* PDF/A-1a that uses only the DeviceRGB color space
 * DeviceRGBカラースペースのみを使用するPDF/A-1b
 
 Generate PDF サービスを使用するには、以下の管理タスクを実行する必要があります。
@@ -634,7 +640,7 @@ WinIDがテキスト、サブウィンドウ、ウィンドウクラスIDなど�
 
 #### ダイアログボックスとウィンドウ要素の用語 {#dialog-box-and-window-element-terminology}
 
-この節と次の節では、説明するパースペクティブに応じて、ダイアログボックスとその中のコンポーネントに対して異なる用語を使用します。 ダイアログボックスのコンポーネントは、ボタン、フィールド、コンボボックスなどの項目です。
+この節と次の節では、説明するパースペクティブに応じて、ダイアログボックスとそれらに含まれるコンポーネントに対して異なる用語を使用します。 ダイアログボックスのコンポーネントは、ボタン、フィールド、コンボボックスなどの項目です。
 
 この節と次の節では、ユーザの視点からダイアログボックスとそのコンポーネントについて説明する場合、ダイアログボックス *、ボタンフィールド*、コンボボ *ックス、コンボボック***** スが使用されます。
 
