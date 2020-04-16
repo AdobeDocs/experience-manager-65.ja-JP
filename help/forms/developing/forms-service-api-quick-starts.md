@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -51,9 +51,11 @@ Formsサービスでは、次のクイック開始を使用できます。
 
 FormsサービスAPIを使用するアプリケーションロジックは、Javaサーブレットとして実装されます。 AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-* **注意**:「vによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用しているformsサーバーに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+>[!NOTE]
+>
+>「vによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用しているformsサーバーに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-   **ヒント**:Adobe Developer Webサイトには、Formsサービスを呼び出してフォームをレンダリングするASP.NETアプリケーションの作成方法を説明する次の記事が含まれています。 フォーム [レンダリングASP.NETアプリケーションの作成を参照してくださ](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)い。
+**ヒント**:Adobe Developer Webサイトには、Formsサービスを呼び出してフォームをレンダリングするASP.NETアプリケーションの作成方法を説明する次の記事が含まれています。 フォーム [レンダリングASP.NETアプリケーションの作成を参照してくださ](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)い。
 
 ## クイック開始（SOAPモード）:Java APIを使用したインタラクティブPDFフォームのレンダリング {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
