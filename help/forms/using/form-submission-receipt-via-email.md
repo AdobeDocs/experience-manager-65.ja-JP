@@ -10,72 +10,66 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: acc2a3977353386d7e1dfd1344a61d78812fe3fc
 
 ---
 
 
-# 電子メールによるフォーム送信確認の送信{#sending-a-form-submission-acknowledgement-via-email}
+# 電子メールによるフォーム送信確認の送信 {#sending-a-form-submission-acknowledgement-via-email}
 
 ## アクティビティフォームデータ送信 {#adaptive-form-data-submission}
 
 アクティビティフォームでは、あらかじめ用意されたいくつかの[送信アクション](../../forms/using/configuring-submit-actions.md)が使用でき、フォームデータを複数のエンドポイントに送信できます。
 
-For example, the **Email action** submit action sends an email on successful submission of an adaptive form. これは、フォームデータと PDF を電子メールで送信するように設定することもできます。
+For example, the **[!UICONTROL Send email]** submit action sends an email on successful submission of an adaptive form. これは、フォームデータと PDF を電子メールで送信するように設定することもできます。
 
 この記事では、アダプティブフォームで電子メールアクションを有効にする手順や、さまざまな設定について詳しく説明します。
 
 >[!NOTE]
 >
->You can also use the **Email PDF action** to send the completed form by email as a PDF attachment. このアクションで使用できる設定オプションは、電子メールアクションで使用できるオプションと同じです。PDF のメール送信アクションは、XFA ベースのアダプティブフォームに対してのみ使用できます。
+>You can also use the **[!UICONTROL Send PDF via email]** option to send the completed form by email as a PDF attachment. The configuration options available for this action are the same as the options available for the **[!UICONTROL Send email]** action. PDF のメール送信アクションは、XFA ベースのアダプティブフォームに対してのみ使用できます。
 
-## メール送信アクション {#email-action}
+## 電子メール送信アクション {#email-action}
 
-電子メールアクションを使用すると、アダプティブフォームの送信に成功したときに、1 人または複数の受信者に電子メールを自動的に送信できます。
+「電子メールの送信」アクションを使用すると、アダプティブフォームの送信が成功した場合に、作成者が1人または複数の受信者に自動的に電子メールを送信できます。
 
 >[!NOTE]
 >
->電子メールアクションを使用するには、[電子メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service)で説明されているように AEM メールサービスを設定する必要があります。
+>To use the Send email action, you need to configure the AEM mail service as described in [Configuring the mail service](/help/sites-administering/notification.md#configuring-the-mail-service).
 
-### アダプティブフォームでの電子メールアクションの有効化 {#enabling-email-action-on-an-adaptive-form}
+### Enabling Send email action on an adaptive form {#enabling-email-action-on-an-adaptive-form}
 
-1. アダプティブフォームを編集モードで開きます。
+1. Open an adaptive form in **[!UICONTROL edit]** mode.
 
-1. **アダプティブフォームの開始**&#x200B;ツールバーの横にある&#x200B;**編集**&#x200B;をクリックします。
+1. 「コンテンツ **[!UICONTROL 」タブで、「フォーム]** コンテナ **[!UICONTROL 」をタップし、「設定]**![](assets/configure-icon.svg) 」をタップして、アダプティブフォームのプロパティを表示します。
 
-   コンポーネントを編集ダイアログが開きます。
+1. In the **[!UICONTROL Submission]** section, select **[!UICONTROL Send email]** from the **[!UICONTROL Submit Action]** drop-down list.
 
-   ![アダプティブフォームのコンポーネントの編集ダイアログ](assets/start_of_adp_form.png)
+   ![送信アクション](assets/submission-actions.png)
 
-1. Select the **Submit actions** tab and choose **Email action** from the Submit action drop-down list.
+1. Specify valid email IDs in the **[!UICONTROL To]**, **[!UICONTROL CC]**, and **[!UICONTROL BCC]** fields.
 
-   このタブには、現在のフォームに対して電子メールアクションを設定するためのオプションが表示されます。
-
-   ![送信アクションタブ](assets/dialog.png)
-
-1. 宛先、CC、および BCC フィールドに有効な電子メール ID を指定します。
-
-   件名および電子メールテンプレートフィールドに、それぞれ件名と電子メール本文を指定します。
+   Specify the subject and the body of the email in the **[!UICONTROL Subject]** and **[!UICONTROL Email Template]** fields, respectively.
 
    フィールドに変数プレースホルダーを指定することもできます。この場合、フィールドの値は、フォームがエンドユーザーによって正しく送信されたときに処理されます。詳細については、「[アダプティブフォームのフィールド名を使用した電子メールコンテンツの動的作成](../../forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p)」を参照してください。
 
-   フォームに添付ファイルがありそれを電子メールに添付する場合は、添付ファイルを含めるを選択してください。
+   Select **[!UICONTROL Include attachments]** if the form includes file attachments and you want to attach these files in the email.
 
    >[!NOTE]
    >
-   >**PDF のメール送信アクション**&#x200B;を選択した場合は、添付ファイルを含めるオプションを選択する必要があります。
+   >If you choose the **[!UICONTROL Send PDF via Email]** option, you must select the Include attachments option.
 
-1. 「**OK**」をクリックして、変更を保存します。
+1. Click ![save](assets/save_icon.svg) to save the changes.
 
 ### アダプティブフォームのフィールド名を使用した電子メールコンテンツの動的作成 {#using-adaptive-form-field-names-to-dynamically-create-email-content}
 
 アダプティブフォームのフィールド名はプレースホルダーと呼ばれ、ユーザーがフォームを送信した後にそのフィールドの値によって置き換えられます。
 
-電子メールアクションタブでは、アクションが実行されたときに処理されるプレースホルダーを使用できます。すなわち、電子メールのヘッダー（例えば宛先、CC、BCC、件名）を、ユーザーがフォームを送信したときに生成するようにできることを意味します。
+In the **[!UICONTROL Send email]** action, you can use placeholders that are processed when the action is performed. It implies that the headers of the email (such as **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]**, **[!UICONTROL Subject]**) are generated when the user submits the form.
 
-To define a placeholder, specify `${<field name>}` in a field in the Submit actions tab.
+プレースホルダーを定義するには、「電子メ `${<field name>}` ールを送信」を送信アクシ **[!UICONTROL ョンとして選択し]** 、フィールドに指定します。
 
-例えば、フォームが **** という`email_addr`電子メールアドレスフィールドを持っている場合、ユーザーの電子メール ID を取得するために、宛先、CC、または BCC フィールドに次のプレースホルダーを指定できます。
+For example, if the form contains the **[!UICONTROL Email address]** field, named `email_addr`, for capturing the email ID of a user, you can specify the following in the **[!UICONTROL To]**, **[!UICONTROL CC]**, or **[!UICONTROL BCC]** fields.
 
 `${email_addr}`
 
@@ -83,9 +77,9 @@ To define a placeholder, specify `${<field name>}` in a field in the Submit acti
 
 >[!NOTE]
 >
->フィールドの&#x200B;**編集**&#x200B;ダイアログにフィールドの名前があります。
+>フィールドの&#x200B;**[!UICONTROL 編集]**&#x200B;ダイアログにフィールドの名前があります。
 
-変数プレースホルダーは、**件名**&#x200B;や&#x200B;**電子メールテンプレート**&#x200B;フィールドにも使用できます。
+Variable placeholders can also be used in the **[!UICONTROL Subject]** and **[!UICONTROL Email Template]** fields.
 
 次に例を示します。
 
