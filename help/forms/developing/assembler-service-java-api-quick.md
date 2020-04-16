@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -43,7 +43,9 @@ Java APIクイック開始(SOAP)は、Assemblerサービスで使用できます
 
 AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+>[!NOTE]
+>
+>「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -1529,7 +1531,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## クイック開始（SOAPモード）:Java APIを使用した複数のXDPフラグメントのアセンブリ {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
 
-次のJavaコードの例は、次のXDPファイルに基づいてXDPフラグメントをアセンブリします。 *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp*、および* tuc018_patient.xdp*。 すべてのフラグメントを含むアセンブリ済みのXDPドキュメントは、 *AssemblerResultXDP.xdpという名前のXDPファイルとして保存されます*。 (複数のXDPフ [ラグメントのアセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments))。
+次のJavaコードの例は、次のXDPファイルに基づいてXDPフラグメントをアセンブルします。 *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp*、および* tuc018_patient.xdp*。 すべてのフラグメントを含むアセンブリ済みのXDPドキュメントは、 *AssemblerResultXDP.xdpという名前のXDPファイルとして保存されます*。 (複数のXDPフ [ラグメントのアセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments))。
 
 ```as3
  /*
