@@ -11,7 +11,7 @@ topic-tags: interactive-communications
 discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
 Open the **Adobe Experience Manager Web Console Configuration** page using the following URL:
 
-`https://&lt;server&gt;:&lt;port&gt;/&lt;contextPath&gt;/system/console/configMgr`
+`https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
 設定プロパティには次のものが含まれます。
 
@@ -33,19 +33,19 @@ Open the **Adobe Experience Manager Web Console Configuration** page using the f
 
 ## ドキュメントフラグメントの設定 {#document-fragments-configuration}
 
-Tap **Document Fragments configuration** on the **Adobe Experience Manager Web Console Configuration** page to view the configuration properties for document fragments.
+**Adobe Experience Manager Web Console Configuration** ( **Adobe Experience Manager Web Console Configuration** )ページで「ドキュメントフラグメントの設定」をタップし、ドキュメントフラグメントの設定プロパティを表示します。
 
 <table>
  <tbody> 
   <tr> 
    <td>プロパティ</td> 
    <td>説明</td> 
-   <td>デフォルト値は</td> 
+   <td>デフォルト</td> 
    <td>指定できる値</td> 
   </tr> 
   <tr> 
    <td>データの表示形式</td> 
-   <td>印刷チャネルおよびWebチャネル用のインタラクティブ通信の作成時に使用できる、フィールド、変数およびフォームデータモデル要素のロケール固有の表示形式。</td> 
+   <td>印刷およびWebチャネル用のInteractive Communicationを作成する際に使用できる、フィールド、変数およびフォームデータモデル要素のロケール固有の表示形式。</td> 
    <td> 
     <ul> 
      <li>locale = en_US、de_DE、fr_FRおよびja_JP</li> 
@@ -60,13 +60,13 @@ Tap **Document Fragments configuration** on the **Adobe Experience Manager Web C
    <td>インデント</td> 
    <td>リストドキュメントフラグメント内のテキストに適用される単一ユニットのインデント幅。</td> 
    <td>12.7 mm</td> 
-   <td>番号</td> 
+   <td>数値</td> 
   </tr> 
   <tr> 
    <td>最小幅のローマ数字</td> 
    <td>リストドキュメントフラグメント内でローマ数字を使用する際に、箇条書きフィールドまたは番号フィールドに適用される最小幅。 </td> 
    <td>12.7 mm</td> 
-   <td>番号</td> 
+   <td>数値</td> 
   </tr> 
   <tr> 
    <td>最小幅の数字</td> 
@@ -86,7 +86,7 @@ Tap **Create Correspondence Configuration** on the **Adobe Experience Manager We
   <tr> 
    <td>プロパティ</td> 
    <td>説明</td> 
-   <td>デフォルト値は</td> 
+   <td>デフォルト</td> 
    <td>指定できる値</td> 
   </tr> 
   <tr> 
@@ -102,8 +102,8 @@ Tap **Create Correspondence Configuration** on the **Adobe Experience Manager We
    <td>適用なし</td> 
   </tr> 
   <tr> 
-   <td>PDFへのフォントの埋め込みの有効化</td> 
-   <td><p>PDFドキュメントにフォントを埋め込む場合は、このチェックボックスを選択します。 このオプションを選択した後、エージェントUIを使用してPDFドキュメントを生成またはプレビューした後に、新しいフォントを埋め込むことができます。 PDFドキュメントを生成およびプレビューするには、Interactive Communicationの印刷チャネルを使用します。</p> <p>PDFの生成に使用され、PDFにアクセスするクライアントコンピューターで使用できないフォントがある場合、PDFドキュメントにフォントを埋め込むと便利です。</p> <p>フォントの埋め込みについて詳しくは、テキストエディターのカスタマ <a href="../../forms/using/customize-text-editor.md" target="_blank">イズを参照してくださ</a>い。</p> </td> 
+   <td>PDFへのフォントの埋め込みを有効にする</td> 
+   <td><p>PDFオプションにフォントを埋め込む場合は、このチェックボックスをドキュメントします。 このオプションを選択した後、エージェントUIを使用してPDFフォントを生成またはプレビューした後に、新しいドキュメントを埋め込むことができます。 Interactive Communicationの印刷チャネルを使用して、PDF画像を生成し、プレビューします。</p> <p>PDFの生成に使用され、PDFにアクセスするクライアントコンピューターで使用できないフォントがある場合、PDFドキュメントにフォントを埋め込むと便利です。</p> <p>フォントの埋め込みについて詳しくは、テキストエディターのカスタ <a href="../../forms/using/customize-text-editor.md" target="_blank">マイズを参照してくださ</a>い。</p> </td> 
    <td>未選択</td> 
    <td>該当なし</td> 
   </tr> 
@@ -114,10 +114,10 @@ Tap **Create Correspondence Configuration** on the **Adobe Experience Manager We
 
 Tap **Adaptive Form and Interactive Communication Web Channel Configuration** on the **Adobe Experience Manager Web Console Configuration** page to view the configuration properties for Adaptive Forms and Interactive Communications Web channel. 次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
 
-| プロパティ | 説明 | デフォルト値は | 指定できる値 |
+| プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
 | プレースホルダーを表示 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に含まれているフィールドのプレースホルダー表示を有効にします。 | 選択 | 適用なし |
-| 最大キャッシュエントリ数 | キャッシュメモリを使用して取得できるアダプティブフォームおよびインタラクティブ通信の最大数を設定します。 | 100 | 番号 |
+| 最大キャッシュエントリ数 | キャッシュメモリを使用して取得できるアダプティブフォームおよびインタラクティブ通信の最大数を設定します。 | 100 | 数値 |
 | 一意のファイル名を作成 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に添付ファイルとして含まれているファイルに一意の名前を付けます。 | 未選択 | 該当なし |
 
 ## アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
@@ -129,7 +129,7 @@ Tap **Adaptive Form and Interactive Communication Web Channel Theme Configuratio
   <tr> 
    <td>プロパティ</td> 
    <td>説明</td> 
-   <td>デフォルト値は</td> 
+   <td>デフォルト</td> 
    <td>指定できる値</td> 
   </tr> 
   <tr> 
