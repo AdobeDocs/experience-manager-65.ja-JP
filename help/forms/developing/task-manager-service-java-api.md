@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -35,9 +35,13 @@ Managerサービスでは、次のクイック開始を使用できます。タ�
 
 AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:WebサービスAPIを使用して、タスクに割り当てられたユーザーを検索することはできません。 このメソッドを実行するために必要な`taskList`メソッド呼び出しである、メソッドを呼び出せないためです。タスク&#x200B;*
+>[!NOTE]
+>
+>WebサービスAPIを使用して、タスクに割り当てられたユーザーを検索することはできません。 このメソッドを実行するために必要な `taskList` メソッド呼び出しである、メソッドを呼び出せないためです。タスク
 
-***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+>[!NOTE]
+>
+>「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）:Java APIを使用したタスクの割り当て {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
