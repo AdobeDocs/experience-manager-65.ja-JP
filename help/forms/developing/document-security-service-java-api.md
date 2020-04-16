@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -45,7 +45,9 @@ Java API Quick開始(SOAP)は、Rights Managementサービスで使用できま�
 
 AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+>[!NOTE]
+>
+>「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）:Java APIを使用したポリシーの作成 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
@@ -2161,7 +2163,7 @@ public class protectStatementWorkFlowExistingUserSoap {
 
 ## クイック開始（SOAPモード）:Java APIを使用した、新しいユーザー向けのステートメントワークフローでのPDFの保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
 
-次のJavaコードの例は、ステートメントワークフローでドキュメントを保護する方法を示しています。 次に、2つの手順を示します。
+次のJavaコードの例は、ステートメントワークフローでドキュメントを保護する方法を示しています。 次の2つの手順で構成されます。
 
 * 新しいユーザー、ライセンス、ポリシーが作成されます。
 * ユーザーはライセンスとポリシーに関連付けられ、ドキュメントは保護されます。
