@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -39,9 +39,13 @@ Java API Quick開始(SOAP)は、Endpoint Registryで使用できます。
 
 AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
 
-***注意&#x200B;**:「AEM Formsによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づいています。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）*
+>[!NOTE]
+>
+>「AEM Formsによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づいています。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-**注意**:Webサービスを使用してエンドポイントを操作することはできません。
+>[!NOTE]
+>
+>Webサービスを使用してエンドポイントを操作することはできません。
 
 ## QuickStart:Java APIを使用したEJBエンドポイントの追加 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
 
