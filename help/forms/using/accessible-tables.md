@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 HTML5 フォームでのテーブルのデフォルト実装では、テーブルのレンダリングに HTML DIV 要素が使用されます。さらに、アクセシビリティ要件を満たす目的で ARIA ロールも使用されます。
 
-データテーブルで使用されるARIAロールを完全にサポートしていないスクリーンリーダーでのアクセシビリティの問題を回避するため、HTML5 formsではテーブル用の代替レンディションを提供しています。 これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
+データテーブルで使用されるARIAの役割を完全にサポートしていないスクリーンリーダーでのアクセシビリティの問題を回避するため、HTML5フォームでは、テーブルの代替レンディションを提供しています。 これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
 
 * 行ヘッダー
 * 行幅
@@ -33,7 +33,9 @@ HTML5 フォームで新しい形式を使用するには、テーブルを複�
 
 The tables which are marked as *complexTable* follow the native HTML rendition, and provide better accessibility support for certain screen readers.  行幅を作成するには、テーブル内の 1 つの列で連続する複数のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL セルの結合]**」をクリックします。
 
-***注：**行幅の作成は一番左のセルでのみ機能します。*
+>[!NOTE]
+>
+>行幅の作成は、一番左のセルに対してのみ機能します。
 
 行を行ヘッダーとしてマークするには、その行のすべてのセルを選択し、選択範囲を右クリックして、「**[!UICONTROL ヘッダーをマーク]**」をクリックします。
 
