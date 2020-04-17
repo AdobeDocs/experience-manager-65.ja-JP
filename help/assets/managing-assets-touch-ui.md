@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
+source-git-commit: dea9bf9387cf4b69e7054e03c5906ecf25cb0d59
 
 ---
 
@@ -305,7 +305,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 抽出が完了すると、AEM は通知領域にメッセージを表示します。AEM が ZIP を抽出している間、抽出を中断することなく作業に戻ることができます。
 
-![郵便抽出](assets/Zip-extraction-notification.png)
+![ZIPファイルの通知抽出](assets/Zip-extraction-notification.png)
 
 この機能には、いくつかの制限があります。
 
@@ -325,11 +325,9 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    アセットにズームインするには、`+` をタップまたはクリック（またはアセット上の虫眼鏡アイコンをタップまたはクリック）します。ズームアウトするには、`-` をタップまたはクリックします。ズームインすると、パンニングによって画像の任意の場所を詳細に確認できます。「ズームをリセット」矢印をクリックすると、元の表示に戻ります。
 
-   ![uploadicon](assets/uploadicon.png)
-
    **[!UICONTROL リセット]**&#x200B;をタップすると、表示を元のサイズに戻すことができます。
 
-   ![chlimage_1-216](assets/chlimage_1-11.png)
+   ![リセットアイコンを使用して元の表示](assets/chlimage_1-11.png)
 
 **プレビューキーのみを使用したキーボードアセット**
 
@@ -356,7 +354,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. アセットを選択し、ツールバーの「**[!UICONTROL プロパティ]**」をタップまたはクリックして、アセットのプロパティを表示します。または、アセットカードで&#x200B;**[!UICONTROL プロパティ]**&#x200B;クイックアクションを選択します。
 
-   ![properties_quickaction](assets/properties_quickaction.png)
+   ![アセットカードのプロパティクイックアクション表示](assets/properties_quickaction.png)
 
 1. [!UICONTROL プロパティ]ページの様々なタブで、メタデータのプロパティを編集します。例えば、「**[!UICONTROL 基本]**」タブでは、タイトルや説明などを編集します。
 
@@ -366,13 +364,13 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. アセットをアクティベートする特定の日付と時間をスケジュールするには、「**[!UICONTROL オンタイム]**」フィールドの横にある日付選択を使用します。
 
-   ![オン時間フィールドで日付の時間選択またはキーボードキーを使用して、アセットのアクティベーション](assets/schedule-activation.png)
+   ![日付の時間選択または「時間」フィールドのキーボードキーを使用して、アセットのアクティベーション](assets/schedule-activation.png)
 
    *図：スケジュールアセットのアクティベーション*
 
 1. 特定の期間の後にアセットのアクティベートを解除するには、「**[!UICONTROL オフタイム]**」フィールドの横にある日付選択を使用して、アクティベートを解除する日付と時間を選択します。アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。[!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、Assets Web インターフェイスでも HTTP API でも使用できません。
 
-   ![「オフ時間」フィールドで日付の時間選択またはキーボードのキーを使用して、アセットのアクティベーション解除の日時を追加します。](assets/schedule-deactivation.png)
+   ![日付の時間選択または「オフ時間」フィールドのキーボードキーを使用して、アセットのアクティベーション解除の日時を追加](assets/schedule-deactivation.png)
 
    *図：アセットの非アクティブ化のスケジュール*
 
@@ -384,7 +382,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. アセットに評価を指定するには、「**[!UICONTROL 詳細]**」タブをタップまたはクリックし、適切な位置の星をタップまたはクリックして、目的の評価を割り当てます。
 
-   ![評価](assets/ratings.png)
+   ![評価を割り当てるアセットのプロパティの「詳細」タブ](assets/ratings.png)
 
    アセットに割り当てた評価スコアは、「**[!UICONTROL あなたの評価]**」の下に表示されます。ユーザーによるアセットの評価の平均スコアは、「**[!UICONTROL 評価]**」の下に表示されます。さらに、平均評価スコアの評価スコアの内訳は、「**[!UICONTROL 評価分類]**」の下に表示されます。平均評価スコアに基づいてアセットを検索できます。
 
@@ -413,7 +411,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 その他のプロパティとメタデータ情報は保持されます。アセットをコピーするときに、部分的なコピーが作成されることはありません。
 
 1. Assets UI から 1 つ以上のアセットを選択し、ツールバーの「**[!UICONTROL コピー]**」アイコンをタップまたはクリックします。または、アセットカードから&#x200B;**[!UICONTROL コピー]**   クイックアクションを選択します。
-   ![copy_icon](assets/copy_icon.png)
+   ![アセットUIツールバーのコピーアイコン](assets/copy_icon.png)
 
    >[!NOTE]
    >
@@ -427,7 +425,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. Click/ tap the **[!UICONTROL Paste]** asset icon from the toolbar.
 
-   ![chlimage_1-219](assets/chlimage_1-14.png)Assetsがこの場所にコピーされます。
+   ![アセットのUIツールバーの貼り付けアイコン](assets/chlimage_1-14.png)アセットがこの場所にコピーされます。
 
    >[!NOTE]
    >
@@ -438,7 +436,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 1. 移動するアセットの場所に移動します。
 
 1. アセットを選択し、ツールバーの&#x200B;**[!UICONTROL 移動]**アイコン   をタップまたはクリックします。
-   ![move_icon](assets/move_icon.png)
+   ![アセットUIツールバーの移動アイコン](assets/move_icon.png)
 
 1. アセットを移動ウィザードで、次のいずれかの操作をおこないます。
 
