@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -43,11 +43,11 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
 
 リファレンスサイトを設定する前に、次の事項を確認します。
 
-* **AEM の必須要素** AEM QuickStart、AEM Forms のアドオンパッケージ、リファレンスサイトパッケージ。See [AEM Forms releases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) for add-on and reference sites packages details.
+* **AEM の必須要素** AEM QuickStart、AEM Forms のアドオンパッケージ、リファレンスサイトパッケージ。See [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) for add-on and reference sites packages details.
 
 * **SMTP サービス** 任意の SMTP サービスを使用することができます。
 
-* **Adobe Sign 開発者アカウントと Adobe Sign API アプリケーション** 電子署名機能を使用するには、Adobe Sign 開発者アカウントが必要になります。詳しくは、「[Adobe Sign](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)」を参照してください。
+* **Adobe Sign 開発者アカウントと Adobe Sign API アプリケーション** 電子署名機能を使用するには、Adobe Sign 開発者アカウントが必要になります。詳しくは、「[Adobe Sign](https://acrobat.adobe.com/jp/ja/why-adobe/developer-form.html)」を参照してください。
 
 * AEM Formsと統合するMicrosoft Dynamics 365の実行中のインスタンス。 リファレンスサイトを実行するには、サンプルデータをMicrosoft Dynamicsインスタンスに読み込み、リファレンスサイトで使用されるインタラクティブな通信を事前入力します。
 * Formsアドオンパッケージを含むAEMの実行中のインスタンス。 詳しくは、「[AEM Forms のインストールと設定](../../forms/using/installing-configuring-aem-forms-osgi.md)」を参照してください。
@@ -59,7 +59,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
   <tr>
    <th><strong>ステップ</strong></th>
    <th><strong>設定</strong></th>
-   <th><strong>メモ</strong></th>
+   <th><strong>備考</strong></th>
   </tr>
   <tr>
    <td><a href="#installandconfigureaemform">AEM Forms のインストールと設定</a></td>
@@ -187,7 +187,7 @@ In AEM, the **Externalizer** is an OSGI service that allows you to programmatica
 
 We.Finance リファレンスサイトの電子メールテンプレートには、電子メール内で使用するカスタマイズされた各種リンクが用意されています。These links have placeholder as `${placeholder}`. プレースホルダーは、電子メールの送信前に実際の値に置き換えられます。AEM のデフォルトの XSS 保護設定では、HTML コンテンツ内の URL に波括弧（**{ }**）を使用できません。ただし、パブリッシュインスタンスで以下の手順を実行することにより、デフォルトの設定を上書きすることができます。
 
-1. にコピ `/libs/cq/xssprotection/config.xml` ーしま `/apps/cq/xssprotection/config.xml`す。
+1. `/libs/cq/xssprotection/config.xml` を `/apps/cq/xssprotection/config.xml` にコピーします。
 1. 開く `/apps/cq/xssprotection/config.xml`.
 1. In the `common-regexps` section, modify the `onsiteURL` entry as follows and save the file.
 
@@ -314,7 +314,7 @@ AEM FormsでOAuthクラウドサービスを設定し、AEM FormsとMicrosoft Dy
 1. /conf/global/settings/cloudconfigs/fdm/roi-rest/jcr:content/swaggerFileに移動し、swaggerフ **ァイルを開きます** 。
 1. ホストとポートの設定を、ご使用の環境に合わせて更新します。
 1. 設定を保存します。
-1. (**Only**)ツール/サービス **/データソース/グ** ローバル ************&#x200B;作成者インスタンスに移動します。 「 **roi-rest** 」を選択し、「 **Properties**.Tap Authentication settings」をタップし、「Authentication Type **」を「Basic Authentication********** Authentication」に設定します。 サービ `admin`スにア `admin`クセスするユーザー名/パスワードを「/」と指定します。 Tap **Save &amp; Close**.
+1. (**Only**)ツール/サービス **/データソース/グ** ローバル ************&#x200B;作成者インスタンスに移動します。 「 **roi-rest** 」を選択し、「 **Properties**.Tap Authentication settings」をタップし、「Authentication Type **」を「Basic Authentication********** Authentication」に設定します。 サービ `admin`スにア `admin`クセスするユーザー名/パスワードを「/」と指定します。 「**保存して閉じる**」をタップします。
 
 ## Marketing Cloudとの統合 {#integrate-with-marketing-cloud}
 
@@ -355,10 +355,13 @@ AEM Forms を Adobe Analytics に統合することで、フォームやドキ�
 リファレンスサイトで統合を利用するには、AEM で次のように Target を設定します。
 
 1. Start the author quickstart with the jvm argument `-Dabtesting.enabled=true` to enable A/B testing on the server.
-   **注意**:AEMインスタンスがJBossで実行され、自動インストールからサービスとして開始される場合は、ファイルの次のエ `-Dabtesting.enabled=true` ントリにパラメーターを追加 `jboss\bin\standalone.conf.bat` します。
+
+   >[!NOTE]
+   >
+   >AEMインスタンスがJBossで実行され、自動インストールからサービスとして開始される場合は、ファイルの次のエ `-Dabtesting.enabled=true` ントリにパラメーターを追加 `jboss\bin\standalone.conf.bat` します。
    `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
-1. アクセス `https://<hostname>:<port>/libs/cq/core/content/tools/cloudservices.html`.
+1. `https://<hostname>:<port>/libs/cq/core/content/tools/cloudservices.html` にアクセスします。
 
 1. In the **[!UICONTROL Adobe Target]** section, click **[!UICONTROL Show Configurations]**. We.Financeターゲット設定 クリックして設定を開きます。設定ページで「**[!UICONTROL 編集]**」をクリックします。The **[!UICONTROL Edit Component]** dialog for the configuration opens.
 
