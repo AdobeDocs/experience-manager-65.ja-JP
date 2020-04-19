@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -42,8 +42,8 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 >[!NOTE]
 >
->[]AEM_Installation_Directory\crx-quickstart\temp\datamanager\ASM folderフォルダーが
->が存在するかを確認します。ディレクトリは、添付ファイルを一時的に保存するために必要になります。ディレクトリが存在しない場合は作成します。
+>[AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM folder
+>が存在するかを確認します。ディレクトリは、添付ファイルを一時的に保存するために必要になります。ディレクトリが存在しない場合は、作成します。
 
 >[!CAUTION]
 >
@@ -102,7 +102,8 @@ The **Send Email** submit action sends an email to one or more recipients on suc
 
 「**電子メールで PDF を送信**」送信アクションでは、フォームの送信が完了すると同時に、1 人または複数の受信者にフォームデータを含む PDF が添付された電子メールが送信されます。
 
-**注意：**&#x200B;この送信アクションは、レコードのドキュメントテンプレートを持つ XFA ベースのアダプティブフォームおよび XSD ベースのアダプティブフォームに使用することができます。
+>[!NOTE]
+この送信アクションは、レコードテンプレートのドキュメントを持つXFAベースのアダプティブフォームおよびXSDベースのアダプティブフォームで使用できます。
 
 ## Forms ワークフローを起動 {#invoke-a-forms-workflow}
 
