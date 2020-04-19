@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -31,11 +31,13 @@ Adobe Experience Manager (AEM) は AEM Forms の統合機能の一部です。�
 
 AEM Forms のバックアップ方法には、次の 2 種類のバックアップがあります。
 
-**** システムイメージ：ハードドライブまたはコンピューター全体の動作が停止した場合に、コンピューターの内容を復元するために使用できる完全なシステムバックアップです。 システムイメージバックアップは、AEM Forms の実稼働用デプロイメントより前にのみ必要です。社内ポリシーで、システムイメージバックアップが必要な頻度を示します。
+**システムイメージ：** ハードドライブまたはコンピューター全体の動作が停止した場合に、コンピューターの内容を復元するために使用できる完全なシステムバックアップです。 システムイメージバックアップは、AEM Forms の実稼働用デプロイメントより前にのみ必要です。社内ポリシーで、システムイメージバックアップが必要な頻度を示します。
 
-**** AEM Forms固有のデータ：アプリケーションデータは、データベース、グローバルドキュメントストレージ(GDS)およびAEMリポジトリに存在し、リアルタイムでバックアップする必要があります。 GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。該当するファイルには、PDF、ポリシー、フォームテンプレートなどがあります。
+**AEM Forms固有のデータ：** アプリケーションデータは、データベース、グローバルドキュメントストレージ(GDS)およびAEMリポジトリに存在し、リアルタイムでバックアップする必要があります。 GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。該当するファイルには、PDF、ポリシー、フォームテンプレートなどがあります。
 
-***注意&#x200B;**：Content Services（非推奨）をインストールする場合、コンテンツ保存場所のルートディレクトリもバックアップします。（[コンテンツ保存場所のルートディレクトリ（Content Servicesのみ）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)を参照）。*
+>[!NOTE]
+>
+>Content Services（非推奨）をインストールする場合、コンテンツ保存場所のルートディレクトリもバックアップしますSee [Content Storage Root directory (Content Services only)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only).
 
 データベースは、フォームの生成結果、サービス設定、プロセスの状態、および GDS ファイルへのデータベース参照を保存するために使用されます。データベースへのドキュメントの保存を有効にすると、GDS 内の永続データと永続ドキュメントもデータベースに保存されます。データベースは、次の方法でバックアップおよび回復できます。
 
@@ -43,11 +45,13 @@ AEM Forms のバックアップ方法には、次の 2 種類のバックアッ�
 
    * 管理コンソールのバックアップ設定ページを使用します。スナップショットモードを開始するには、「セーフバックアップモードで稼動する」チェックボックスを選択します。スナップショットモードを終了するには、このチェックボックスの選択を解除します。
    * LCBackupMode スクリプト（[データベース、GDS およびコンテンツ保存場所のルートディレクトリのバックアップ](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)を参照）を使用します。スナップショットバックアップモードを終了するには、スクリプトの引数で `continuousCoverage` パラメーターを `false` に設定するか、`leaveContinuousCoverage` オプションを使用します。
-   * 提供されているバックアップ/回復APIを使用します。 <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
+   * 提供されているバックアップ/リカバリAPIを使用します。 <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
 
 * **ローリングバックアップ**&#x200B;モードでは、システムが常にバックアップモードになり、前のセッションが解放されるとすぐに新しいバックアップモードセッションが初期化されます。ローリングバックアップモードにはタイムアウトは関連付けられません。LCBackupMode スクリプトまたは API を呼び出してローリングバックアップモードを終了すると、新しいローリングバックアップモードセッションが開始します。このモードでは継続的なバックアップがサポートされ、GDS ディレクトリから古いドキュメントや不要なドキュメントを消去できるので便利です。ローリングバックアップモードは、「Backup and Recovery」ページではサポートされません。回復シナリオの後、ローリングバックアップモードは引き続き有効になります。継続的なバックアップモード（ローリングバックアップモード）を終了するには、LCBackupMode スクリプトで `leaveContinuousCoverage` オプションを使用します。
 
-***Note**: Leaving rolling backup mode immediately causes a new backup mode session to begin. ローリングバックアップモードを完全に無効にするには、スクリプトで `leaveContinuousCoverage` オプションを使用します。これによって、既存のローリングバックアップセッションが上書きされます。スナップショットバックアップモードの場合は、通常どおりバックアップモードを終了できます。*
+>[!NOTE]
+>
+>ローリングバックアップモードを終了すると、すぐに新しいバックアップモードセッションが開始します。ローリングバックアップモードを完全に無効にするには、スクリプトで `leaveContinuousCoverage` オプションを使用します。これによって、既存のローリングバックアップセッションが上書きされます。スナップショットバックアップモードでは、バックアップモードを通常の操作と同じように終了できます。
 
 データ損失を防ぐために、AEM forms 固有のデータは、GDS およびコンテンツ保存場所のルートディレクトリのドキュメントがデータベース参照と関連付けられるような方法でバックアップする必要があります。
 
