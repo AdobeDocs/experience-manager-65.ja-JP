@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -528,7 +528,9 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 ### Designer {#designer}
 
-**注：** Windows に Designer をインストールするには、インストーラーを管理者権限のある状態で実行してください。
+>[!NOTE]
+>
+>WindowsにDesignerをインストールするには、管理者権限でインストーラーを実行します。
 
 * Microsoft® Windows® 2016 Server、Microsoft Windows 10
 
