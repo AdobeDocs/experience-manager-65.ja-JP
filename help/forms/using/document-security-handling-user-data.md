@@ -8,14 +8,14 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 66a3db6cd50ae25849dc173e0714df7c140c1774
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
 
 # Document Security | ユーザーデータの処理 {#document-security-handling-user-data}
 
-AEM Forms Document Securityを使用すると、あらかじめ定義されたセキュリティ設定を作成、保存、ドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントを保護するには、ポリシーを使用します。ポリシーは、セキュリティ設定および許可されたユーザーの一覧を含む情報の集合です。1 つまたは複数のドキュメントにポリシーを適用して、AEM Forms JEE User Management に追加されるユーザーを許可します。
+AEM Formsのドキュメントセキュリティを使用すると、事前定義済みのセキュリティ設定を作成、保存およびドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントを保護するには、ポリシーを使用します。ポリシーは、セキュリティ設定および許可されたユーザーの一覧を含む情報の集合です。1 つまたは複数のドキュメントにポリシーを適用して、AEM Forms JEE User Management に追加されるユーザーを許可します。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
@@ -49,7 +49,7 @@ Document Security は保護されたドキュメントに関するポリシー�
   </tr>
   <tr>
    <td><p><code>EdcRevokationEntity</code></p> </td>
-   <td>保護されたドキュメントの失効および復元に関する情報が格納されます。</td>
+   <td>保護されたユーザーの失効および復元に関する情報が格納されます。ドキュメント</td>
   </tr>
   <tr>
    <td><code>EdcMyPolicyListEntity</code></td>
@@ -201,7 +201,9 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. Users who have personal policies log into their document security web page at https://[*server*]:[*port*]/edc.
    1. Navigate to **[!UICONTROL Services > Document Security > My Policies]**.
    1. ポリシーを開き、ポリシーからユーザーを削除します。
-   **注意**:管理者は、管理コンソールを使用して、 **[!UICONTROL Services/Document Security/マイポリシーで、他のユーザーの個人用ポリシーのユーザーデータを検索、アクセスおよび削除できます]** 。
+   >[!NOTE]
+   >
+   >Administrators can search, access, and delete user data from personal policies of other users in **[!UICONTROL Services > Document Security > My Policies]** using administration console.
 
 1. プリンシパル ID のデータを User Management のデータベースから削除します。For detailed steps, see [Forms User Management | Handling user data](/help/forms/using/user-management-handling-user-data.md).
 1. AEM Forms サーバーを開始します。
