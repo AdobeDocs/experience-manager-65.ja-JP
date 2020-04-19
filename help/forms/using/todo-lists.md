@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -213,7 +213,11 @@ AEM Forms Workspace には以下の 3 つのタイプの TODO リストがあり
 * 任意のタブで利用可能なアクションを使用
 * フォーム自体に組み込まれているアクションを使用
 * タスクを開かずに、TODO リストから
-Note: This option is available if `isMustOpenToComplete` field is not selected in the `Assign Task` step in Workbench, while designing a process.
+
+>[!NOTE]
+>
+>This option is available if `isMustOpenToComplete` field is not selected in the `Assign Task` step in Workbench, while designing a process.
+
 * 電子メール通知を受信する場合は電子メールで
 
 タスクが完了すると、タスクに応じて、操作を再確認するための確認ダイアログボックスが表示されます。例えば、提供した情報が有効であることを保証するように要求するダイアログボックスが表示されます。
@@ -271,7 +275,9 @@ TODO リストからは複数のタスクを送信できます。タスク名と
 
 電子メールメッセージには、AEM Forms Workspace でタスクを開くためのリンク、タスクに使用するフォームの添付ファイル、または電子メールを使用してタスクを完了するためのアクションが含まれます。電子メールメッセージにフォームが含まれている場合、タスクを完了するためのボタンがフォームに組み込まれていれば、フォームを開いてタスクを完了できます。タスクを完了するためのアクションが電子メールメッセージに含まれている場合は、電子メールでアクションをクリックするか、電子メール本文の 1 行目にアクションを入力して返信することにより、タスクを完了できます。
 
-**注意**：適切な電子メールのテンプレートを使用するように Workspace を設定するには、『[AEM Forms JEE 管理者ガイド](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/)』を参照してください。
+>[!NOTE]
+>
+>To configure the workspace to use the appropriate email templates, see the [AEM Forms JEE Administrator Guide](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
 
 電子メールを使用してタスクを完了すると、そのタスクは AEM Forms Workspace の TODO リストから削除されます。
 
