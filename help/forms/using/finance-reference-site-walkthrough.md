@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -306,7 +306,9 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 上記のファイル内の関 `onReportLoadSuccess` 数の定義を、次のファイル内の関数の定義に置き換えます。/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：これらの変更は、デモの目的でのみ行われます。 この手順を完了した後、必ずファイルの中身を元に戻してください。
+   >[!NOTE]
+   >
+   >これらの変更はデモのためだけに行われます。この手順を完了した後、必ずファイルの中身を元に戻してください。
 
 1. 生成したレポートを更新すると、以下のような画面が表示されます。レポートダッシュボードを確認します。
 
@@ -555,7 +557,9 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 上記のファイル内の関 `onReportLoadSuccess` 数の定義を、次のファイル内の関数の定義に置き換えます。/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：これらの変更は、デモの目的でのみ行われます。 この手順を完了した後、必ずファイルの中身を元に戻してください。
+   >[!NOTE]
+   >
+   >これらの変更はデモのためだけに行われます。この手順を完了した後、必ずファイルの中身を元に戻してください。
 
 1. 生成したレポートを更新すると、以下のような画面が表示されます。レポートダッシュボードを確認します。
 
