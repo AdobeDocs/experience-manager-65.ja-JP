@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -123,7 +123,7 @@ Assets ユーザーは、視覚的に類似した画像を検索できます。A
 
 Batch APIを使用すると、テンプレートから複数のインタラクティブな通信を作成できます。 テンプレートは、データのないインタラクティブな通信です。 Batch APIは、データをテンプレートと組み合わせて、インタラクティブな通信を生成します。 このAPIは、インタラクティブ通信の大量生産に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 Batch APIを使用 [した複数のインタラクティブ通信の生成を参照してくださ](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)い。
 
-## AEM 6.5 SP3以降の主なリリース {#key-features-sice-sp3}
+## AEM 6.5 SP3以降の主なリリース {#key-features-since-sp3}
 
 2019年12月12日から2020年3月5日まで、アドビは、AEMの主要な成果物以外の次の機能をリリースしました。
 
