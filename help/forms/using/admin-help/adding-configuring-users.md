@@ -8,7 +8,7 @@ contentOwner: admin
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 discoiquuid: 20ca99e3-4843-4254-b3e9-0255cc752363
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -128,10 +128,12 @@ MySQL を使用する場合は、ユーザー ID に拡張文字が含まれる�
 
    * Click **[!UICONTROL Find Group]** and complete the search information.
    * To add the user to a new group, select the check box for the group, click **[!UICONTROL OK]**, and then click **[!UICONTROL Save]**.
-
-      ***注意&#x200B;**：ローカルユーザーをディレクトリグループに追加することはできません。ただし、ディレクトリユーザーをローカルグループに追加することはできます。*
+   >[!NOTE]
+   >
+   >ローカルユーザーをディレクトリグループに追加することはできません。ただし、ディレクトリユーザーをローカルグループに追加することはできます。
 
    * To remove the user from a group, select the check box for the group, click **[!UICONTROL Delete]**, and then click **[!UICONTROL Save]**.
+
 
 1. To edit the user’s roles, click the **[!UICONTROL Role Assignments]** tab and do these tasks:
 
