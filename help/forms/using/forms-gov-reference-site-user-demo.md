@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -116,7 +116,9 @@ Ayaは、携帯電話で短いアダプティブフォームに入力し、適�
 
 1. 各ドロップダウンフィールドを選択します。
 
-   1. 注意：年間200,000ドルを超える金額を獲得した場合は、その資格はありません。
+   >[!NOTE]
+   >
+   >年間200,000ドルを超える金額を獲得した場合は、その資格はありません。
 
 1. 「Am **I Elight?**” button.
 1. 「**Apply Now**」ボタンをクリックして続行します。
