@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -115,7 +115,9 @@ PDF Generator では、サポートされるファイルタイプについてア
 
 **フォールバックコンバータの試行：** PDF Generatorでは、Java™またはAcrobatを使用して画像ファイルをPDFに変換できます。 このオプションを選択している場合に、変換が失敗するかまたは指定のタイムアウト制限に達すると、PDF Generator は、変換を別の方法で試行します。別の方法が失敗または指定のタイムアウト制限に達すると、ログファイルに例外が書き込まれます。
 
-***注意&#x200B;**：JPEG 2000 ファイルは、Acrobat を使用しないと変換できません。*
+>[!NOTE]
+>
+>JPEG 2000 ファイルは、Acrobat を使用しないと変換できません。
 
 **OCRを使用：** PDFにOCR（光学式文字認識）を適用するかどうかを指定します。 OCR ソフトウェアでは、PDF 内のテキストを検索、修正およびコピーできます。
 
