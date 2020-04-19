@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1453d70ee75768057403c5cc93f5c7bad8ed918
+source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
 
 ---
 
@@ -346,7 +346,11 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. 矢印キーを使用して、ズームされた画像の周りを移動します。
 
-See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
+>[!MORELIKETHIS]
+>
+>* [プレビューダイナミックメディアアセット](/help/assets/previewing-assets.md)。
+>* [サブアセットの表示](managing-linked-subassets.md#viewing-subassets).
+
 
 ## プロパティとメタデータの編集 {#editing-properties}
 
