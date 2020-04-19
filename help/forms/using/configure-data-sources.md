@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -84,7 +84,8 @@ AEM Web コンソールでユーザープロファイルコネクター設定を
 
 ## クラウドサービス設定用フォルダーの構成 {#cloud-folder}
 
-**注**：RESTful サービス、SOAP サービス、OData サービスを設定するには、クラウドサービス用のフォルダーを構成する必要があります。
+>[!NOTE]
+RESTful、SOAPおよびODataサービス用のクラウドサービスを設定するには、クラウドサービスフォルダーの設定が必要です。
 
 All cloud service configurations in AEM are consolidated in the `/conf` folder in AEM repository. デフォルトの場合、`conf` フォルダーには `global` フォルダーが含まれています。このフォルダーで、クラウドサービスの設定を作成することができます。ただし、このフォルダーを手動でクラウド設定用に有効にする必要があります。追加のフォルダーを `conf` フォルダー内に作成して、クラウドサービスの作成と編集を行うこともできます。
 
