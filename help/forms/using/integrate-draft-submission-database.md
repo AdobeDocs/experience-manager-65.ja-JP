@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -25,14 +25,14 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 >[!NOTE]
 >
 >* このドキュメントで説明されている例および設定は、MySQL 5.6.24 に基づいているため、お使いのデータベースシステムに合わせてそれらを適切に置き換える必要があります。
->* 最新バージョンの AEM Forms のアドオンパッケージをインストールしていることを確認してください。使用可能なパッケージのリストについては、[AEM Forms リリース](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)の記事を参照してください。
+>* 最新バージョンの AEM Forms のアドオンパッケージをインストールしていることを確認してください。使用可能なパッケージのリストについては、[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事を参照してください。
 >
 
 
 
 ## サンプルのセットアップおよび設定 {#set-up-and-configure-the-sample}
 
-すべての作成者インスタンスと発行インスタンスで次の手順を実行し、サンプルをインストールして設定します。
+すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、サンプルをインストールして設定します。
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** をファイルシステムにダウンロードします。
 
@@ -53,11 +53,11 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    | **プロパティ** | **説明** | **値** |
    |---|---|---|
    | フォームポータル ドラフトデータサービス | ドラフトデータサービスの識別子 | formsportal.sampledataservice |
-   | フォームポータル ドラフトメタデータサービス | ドラフトメタデータサービス の識別子 | formsportal.samplemetadataservice |
-   | フォームポータル 送信データサービス | 送信データサービス の識別子 | formsportal.sampledataservice |
-   | フォームポータル 送信メタデータサービス | 送信メタデータサービス の識別子 | formsportal.samplemetadataservice |
-   | フォームポータル 保留中署名データサービス | 保留中の署名データサービスの識別子 | formsportal.sampledataservice |
-   | フォームポータル 保留中署名メタデータサービス | 保留中の署名メタデータサービスの識別子 | formsportal.samplemetadataservice |
+   | フォームポータル ドラフトメタデータサービス | ドラフトメタデータサービスの識別子 | formsportal.samplemetadataservice |
+   | フォームポータル 送信データサービス | 送信データサービスの識別子 | formsportal.sampledataservice |
+   | フォームポータル 送信メタデータサービス | 送信メタデータサービスの識別子 | formsportal.samplemetadataservice |
+   | フォームポータル 保留中署名データサービス | 保留中署名データサービスの識別子 | formsportal.sampledataservice |
+   | フォームポータル 保留中署名メタデータサービス | 保留中署名メタデータサービスの識別子 | formsportal.samplemetadataservice |
 
    >[!NOTE]
    >
@@ -78,7 +78,9 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    データテーブルに別の名前を設定するには、以下の手順を実行してください。
 
    * Web コンソール設定で、「Forms Portal Data Service Sample Implementation」を見つけてクリックします。データソースおよびデータテーブル名の値は変更できます。
-   **注意**:テーブル名を変更する場合は、フォームポータル設定で指定します。
+   >[!NOTE]
+   >
+   >テーブル名を変更する場合は、フォームポータル設定で指定します。
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
 
@@ -298,18 +300,18 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 データおよびメタデータをデータベースに保存しながら、ドラフトと送信をリスト表示するために使用できるサンプル実装が設定されました。サンプルでデータサービスとメタデータサービスがどのように設定されているか見てみましょう。
 
-## mysql-connector-java-5.1.39-bin.jar ファイルのインストール {#install-mysql-connector-java-bin-jar-file}
+## mysql-connector-java-5.1.39-bin.jar ファイルをインストールする {#install-mysql-connector-java-bin-jar-file}
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、mysql-connector-java-5.1.39-bin.jar ファイルをインストールします。
 
-1. com.mysql.jdbc `https://'[server]:[port]'/system/console/depfinder` パッケージに移動し、検索します。
+1. `https://'[server]:[port]'/system/console/depfinder` にアクセスして com.mysql.jdbc パッケージを検索します。
 1. 「次による書き出し」列で、パッケージがバンドルで書き出されているかどうかを確認します。
 
    パッケージがバンドルで書き出されていない場合は、先に進みます。
 
-1. に移動し、「イン `https://'[server]:[port]'/system/console/bundles` ストール/更 **[!UICONTROL 新」をクリックしま]**&#x200B;す。
-1. Click **[!UICONTROL Choose File]** and browse to select the mysql-connector-java-5.1.39-bin.jar file. Also, select **[!UICONTROL Start Bundle]** and **[!UICONTROL Refresh Packages]** checkboxes.
-1. Click **[!UICONTROL Install or Update]**. 完了したら、サーバーを再起動します。
+1. `https://'[server]:[port]'/system/console/bundles` に移動して「**[!UICONTROL Install/Update]**」をクリックします。
+1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
+1. 「**[!UICONTROL Install」または「Update]**」をクリックします。完了したら、サーバーを再起動します。
 1. (*Windows only*) Turn off the system firewall for your operating system.
 
 ## フォームポータルデータおよびメタデータサービスのサンプルコード {#sample-code-for-forms-portal-data-and-metadata-service}
@@ -325,7 +327,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 次の手順を実行して[クライアントライブラリ](/help/sites-developing/clientlibs.md)を作成し、次のスクリプトを使用します。
 
 1. CRXDE にログインし、/etc/clientlibs/ に移動します。
-1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。例えば、次のように入力します。`validation`
+1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。例： `validation`
 
    「**[!UICONTROL すべて保存]**」をクリックします。
 
