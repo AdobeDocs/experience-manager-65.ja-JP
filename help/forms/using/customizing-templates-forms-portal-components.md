@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13cc8ba8fda8fa0e5fac6bb92d1d4fc4849492eb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -45,8 +45,12 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
    * Link コンポーネント：&quot;/libs/fd/fp/formTemplate&quot;
    レイアウトテンプレートを選択する際に表示したいタイトルを追加します。
 
-   *注意：タイトルは、作成したsling:Folderのノード名とは異なる場合があります。*
-   *次の画像は、Search &amp; Listerコンポーネントの構成を示します。* ![sling:Folderの作成](assets/1.png)
+   >[!NOTE]
+   >
+   >タイトルは、作成したsling:Folderのノード名とは異なる場合があります。
+
+   次の画像は、Search &amp; Listerコンポーネントの構成を示します。
+   ![sling:Folderの作成](assets/1.png)
 
 1. このフォルダー内に template.html ファイルを作成して、カスタムテンプレートとして使用します。
 1. 以下のようにカスタムテンプレートを作成して、カスタムメタデータを使用します。
@@ -102,18 +106,20 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 
 * **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は「**__FP_display_none**」または空白です。
 
-   **** 注意：カスタムスタイルシートで__FP_display_noneクラスを必ず使用してください
+>[!NOTE]
+>
+>カスタムスタイルシートでは__FP_display_noneクラスを必ず使用してください。
 
 * **downloadUrl**:アセットをダウンロードするURL。
 
 ローカリゼーション、ソート、ユーザーインターフェイス上での設定プロパティ使用のサポート（Search &amp; Lister のみ）:
 
-1. **ローカリゼーションサポート**:静的テキストをローカライズするには、属性を使 `${localize-YOUR_TEXT}` 用し、ローカライズされた値が存在しない場合は、その値を使用可能にします。
+1. **ローカライゼーションサポート**:スタティックテキストをローカライズするには、属 `${localize-YOUR_TEXT}` 性を使用し、ローカライズされた値が存在しない場合は、その値を使用可能にします。
    *説明した例では、属性と属性を使用し`${localize-Apply}`て、「適`${localize-Download}`用」と「ダウンロード」のテキストをローカライズします。*
 
 1. **ソートのサポート**：HTML要素をクリックして検索結果をソートします。テーブルレイアウトでのソートを実行するには、特定のテーブルヘッダーに&quot;data-sortKey&quot; 属性を追加します。さらに、ソートしたいメタデータとしてその値を加えます。例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして、特定の列の値を並べ替えます。
 
-1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。For example, to display HTML ToolTip text saved through the edit dialog, use the `${config-htmlLinkText}` attribute. **同様に、PDFのツールヒントテキストにも属性を使用します**`${config-pdfLinkText}` 。
+1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。For example, to display HTML ToolTip text saved through the edit dialog, use the `${config-htmlLinkText}` attribute. **同様に、PDFのツールヒントテキストにも属性を使用し**`${config-pdfLinkText}` ます。
 
 ### リンクコンポーネント {#link-component}
 
@@ -146,22 +152,22 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 
 ![ドラフトと送信ノード](assets/raw-image-with-index.png)
 
-**A**. コンテナ要素
+**A**. コンテナ素子
 
-**** B.固定階層の「パス」メタデータ。各フォームに保存されたサムネールを取得します。
+**B.** 「パス」メタデータを固定階層で取得し、各フォームに保存されたサムネールを取得します。
 
-**C.** Data-repeatable属性。各フォームのテンプレートセクションに使用
+**C.各フォームのテンプレート** ・セクションに使用されるデータ繰り返し可能な属性
 
-**** D.&quot;Apply&quot;文字列をローカライズするには
+**D.** &quot;Apply&quot;文字列をローカライズするには
 
-**** E.設定プロパティpdfLinkTextの使用
+**E.** pdfLinkText設定プロパティの使用
 
-**** F.「pdfUrl」メタデータの使用
+**F.** 「pdfUrl」メタデータの使用
 
 ## ヒント、テクニックおよび既知の問題 {#tips-tricks-and-known-issues}
 
 1. カスタムテンプレートでは一重引用符（‘）を使用しないでください。
-1. For custom metadata, store this property on the **jcr:content/metadata** node only. 他の場所に保存した場合、フォームポータルはメタデータを表示できません。
+1. For custom metadata, store this property on the **jcr:content/metadata** node only. 他の場所に保存すると、フォームポータルはメタデータを表示できません。
 1. すべてのカスタムメタデータまたは既存のメタデータの名前にコロン（:）が含まれていないことを確認してください。含まれている場合、ユーザーインターフェイスに表示することができません。
 1. **data-repeatable** （繰り返し可能なデータ）は、 **Link** （リンク）コンポーネントにとって重要ではありません。 アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
 
