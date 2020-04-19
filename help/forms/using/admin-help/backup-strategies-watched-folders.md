@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -165,7 +165,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * **ステージ 5：**&#x200B;結果が返されています。
    ファイルがステージ 1 にある場合、ファイルは操作されます。ファイルがステージ 2 または 3 にある場合、再操作用に入力フォルダーに配置されます。
 
-   **注意**:ファイルの操作が複数回発生した場合、データの損失は防げますが、結果が重複する場合があります。*
+   >[!NOTE]
+   >
+   >ファイルの操作が複数回発生した場合は、データ損失は防げますが、結果が重複する場合があります。
 
 ## まとめ {#conclusion}
 
