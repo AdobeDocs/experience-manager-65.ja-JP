@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -26,7 +26,9 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 IPv6 を使用している場合は、コンピューター名または DNS 名としてベース URL を入力します。数値の IP アドレスを使用すると、ポリシーで保護されたファイルを Acrobat で開くことができません。また、サーバーの HTTP セキュア（HTTPS）URL を使用してください。
 
-***注意&#x200B;**：ベース URL は、ポリシーで保護されたファイルに埋め込まれており、クライアントアプリケーションがサーバーに接続する際に使用されます。保護されたファイルには、後から変更が加えられた場合でも、引き続きベース URL が格納されます。ベース URL を変更する場合は、接続しているすべてのクライアントに対して設定情報を更新する必要があります。*
+>[!NOTE]
+>
+>ベース URL は、ポリシーで保護されたファイルに埋め込まれており、クライアントアプリケーションがサーバーに接続する際に使用されます。保護されたファイルには、後から変更が加えられた場合でも、引き続きベース URL が格納されます。ベース URL を変更する場合は、接続しているすべてのクライアントに対して設定情報を更新する必要があります。
 
 **デフォルトのオフラインリース期間：** ユーザーが保護されたユーザーをオフラインで使用できるデフォルトのドキュメント時間です。 この設定により、ポリシーを作成するときに自動オフラインリース期間設定の初期値が決まります（ポリシーの作成および編集を参照）。リース期間が終了した後、ドキュメントを引き続き使用するには、受信者がそのドキュメントを再び同期する必要があります。
 
@@ -853,7 +855,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
    * Apple OS X
    * Sun Solaris
    * HP-UX
-   `SDKVersions` は、クライアントアプリケーションで使用される Document Security C++ Client API のバージョンを指定します。例えば、次のように入力します。`"8.2"`
+   `SDKVersions` は、クライアントアプリケーションで使用される Document Security C++ Client API のバージョンを指定します。例： `"8.2"`
 
    `APPFamilies` は、クライアント API によって定義されます。
 
@@ -961,7 +963,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 多くの Document Security ユーザーは、Right Management ユーザーインターフェイスを使用している間、**www.adobe.com** などの外部リンクへのアクセス権を持っていません。
 
 * `https://[host]:'port'/adminui`
-* `https://[host]:'port'/edc` です。
+* `https://[host]:'port'/edc`.
 
 次の config.xml への変更は、すべての外部リンクを Right Management ユーザーインターフェイスから無効化します。
 
