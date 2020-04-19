@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -55,7 +55,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:PermSize=256m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 ```
 
-**注意**：推奨設定は、Windows 2008 R2 8 コアおよび Oracle HotSpot 1.7（64 ビット）JDK に対するもので、ご使用のシステム設定に従ってスケールアップまたはスケールダウンする必要があります。
+>[!NOTE]
+>
+>推奨設定は、Windows 2008 R2 8 CoreおよびOracle HotSpot 1.7 （64ビット） JDK用で、システム構成に従って拡大または縮小する必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
@@ -63,7 +65,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 例えば、次の手順を実行して、JBoss 搭載の Apache Web Server 2.0 32 ビット上で圧縮を有効にします。
 
-***注意&#x200B;**：次の手順は Apache Web Server 2.0 32 ビット以外のサーバーには適用されません。その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。*
+>[!NOTE]
+>
+>次の手順は、Apache Web Server 2.0 32ビット以外のサーバーには適用されません。 その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。
 
 次の手順では、Apache Web サーバーで圧縮を有効にするために必要な変更を示します。
 
