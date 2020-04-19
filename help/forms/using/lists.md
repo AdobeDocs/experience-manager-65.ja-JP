@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -170,7 +170,9 @@ Correspondence Management Solution は、動的データアイテム（可変デ
 
 **単語全体：** 検索では単語全体のみが返されます。
 
-**注意：**「検索」テキストボックスに特殊文字を入力すると、「単語全体」オプションは無効になります。
+>[!NOTE]
+>
+>「検索」テキストボックスに特殊文字を入力すると、「単語全体」オプションは無効になります。
 
 **正規表現：** 正規式。 例えば、次の正規表現はテキストモジュール内の電子メールアドレスを検索します。
 
