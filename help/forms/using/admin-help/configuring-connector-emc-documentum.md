@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -59,13 +59,15 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 
 Documentum と共に使用するリポジトリサービスプロバイダーを設定できます。リポジトリサービスの呼び出しは、設定したプロバイダーに対して委任されます。以下のオプションが利用できます。
 
-**** 現在のリポジトリサービスプロバイダー名：現在のリポジトリサービスプロバイダーの名前
+**現在のリポジトリサービスプロバイダー名：** 現在のリポジトリサービスプロバイダー名
 
-**** ECM Documentumリポジトリプロバイダー：Documentumリポジトリプロバイダーをリポジトリのプロバイダーにします。 このオプションは非推奨です。
+**ECM Documentumリポジトリプロバイダ：** Documentumリポジトリプロバイダーをリポジトリのプロバイダーにします。 このオプションは非推奨です。
 
-**** リポジトリプロバイダー：ネイティブリポジトリプロバイダーをリポジトリのプロバイダーにします。
+**リポジトリプロバイダー：** ネイティブリポジトリプロバイダーをリポジトリのプロバイダーにします。
 
-***注意&#x200B;**：リストに表示された以外のリポジトリサービスプロバイダーを選択するには、アプリケーションおよびサービス／サービスの管理で「RepositoryService」を設定します。<!-- Fix broken link (See Managing Services) -->*
+>[!NOTE]
+>
+>To select a repository service provider other than those listed, configure RepositoryService in Applications and Services > Service Management. <!-- Fix broken link (See Managing Services) -->.
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 「リポジトリサービスプロバイダー」領域で、代替リポジトリサービスプロバイダーを選択します。
