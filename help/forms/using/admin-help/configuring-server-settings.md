@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -197,13 +197,15 @@ If your solution is deployed in a clustered environment, replace `@@notification
 
 **JBoss：** 8080
 
-**** Oracle webLogic Server:7001
+**Oracle WebLogic Server:** 7001
 
-**** IBM webSphere:9080
+**IBM WebSphere:** 9080
 
 To make these URLs function correctly, replace `<`*PORT *`>`with the port number that is appropriate for your environment.
 
-***注意&#x200B;**：Forms 以外のカスタム Web アプリケーションを使用して、タスクへのアクセスをユーザーに提供する場合は、そのカスタムアプリケーションに適した URL 形式を使用する必要があります。*
+>[!NOTE]
+>
+>Forms 以外のカスタム Web アプリケーションを使用して、タスクへのアクセスをユーザーに提供する場合は、そのカスタムアプリケーションに適した URL 形式を使用する必要があります。
 
 ### 変数選択 {#variable-picker}
 
@@ -211,9 +213,9 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 ユーザーまたはグループへのリマインダー、タスクの割り当て、およびデッドラインの場合、「件名」ボックスと「通知テンプレート」ボックスで以下の変数を使用できます。
 
-**description** :Workbenchのプロセスのユーザーステップ（スタートポイント、Assign task操作またはAssign Multiple tasks操作）で定義される、Descriptionプロパティの内容。
+**説明** :Workbenchのプロセスの開始手順(タスクポイント、「タスクの割り当て」操作または「複数のユーザーの割り当て」操作)で定義される、説明プロパティの内容。
 
-**instructions** Workbenchのプロセスのユーザー手順で定義される、Task Instructionsプロパティの内容。
+**instructions** :Workbenchのプロセスのタスク手順で定義される、ユーザー手順のプロパティの内容。
 
 **notification-host** :AEM formsアプリケーションサーバーのホスト名。
 
@@ -221,21 +223,23 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 **operation-name** ：ステップの名前。
 
-**taskid** 現在のタスクの一意の識別子。
+**taskid** 現在のタスク。
 
-**actions** ：受信者がクリックできる有効なルート（例えば、Approve、Reject）の番号付きリストを作成します。
+**actions** :受信者がクリックできる有効なルート（Approve、Rejectなど）の番号付きリストを生成します。
 
 また、グループリマインダー、グループタスクの割り当ておよびグループのデッドラインの場合、次の変数も使用できます。
 
-**group-name** ：作業項目に割り当てられているグループの名前。
+**group-name** ：作業項目を割り当てたグループの名前。
 
-**注意**:変 *数に値がない場合、何も返されません。*
+>[!NOTE]
+>
+>変数に値が設定されていない場合は、何も返されません。
 
 停止したブランチの場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
 **branch-id** ：ブランチの識別子。
 
-**process-id** ：プロセスインスタンス識別子。
+**process-id** ：プロセスインスタンスの識別子。
 
 **notification-host** :AEM formsアプリケーションサーバーのホスト名。
 
@@ -245,7 +249,7 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 **branch-id** ：ブランチの識別子。
 
-**process-id** ：プロセスインスタンス識別子。
+**process-id** ：プロセスインスタンスの識別子。
 
 **notification-host** :AEM formsアプリケーションサーバーのホスト名。
 
