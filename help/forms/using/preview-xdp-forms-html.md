@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -78,7 +78,9 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
-   **注：**&#x200B;サーバーが起動および実行されていることを確認してください。The HTML preview connects to the CRX server to *generate* a preview.
+   >[!NOTE]
+   >
+   >AEM Formsサーバーが起動および実行中であることを確認します。 The HTML preview connects to the CRX server to *generate* a preview.
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
 
