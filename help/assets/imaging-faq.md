@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
+source-git-commit: 7daf89f7e69d3e2e938780ff98fd2df46723e708
 
 ---
 
@@ -25,10 +25,10 @@ source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
 
 | Image<br>(URL) | サムネール | サイズ<br> (JPEG) | サイズ(WebP)<br> （スマートイメージングを使用） | %削減 |
 |---|---|---|---|---|
-| [画像 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
-| [画像 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
-| [画像 3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
-| [画像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
+| [画像 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
+| [画像 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
+| [画像 3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
+| [画像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
 |  |  |  |  | 平均= 51% |
 
 上記と同様に、アドビでは、7,009 URLのテストも実施し、スマートイメージングの機能により、JPEGのファイルサイズ最適化を平均で38%、WebP形式のPNGのファイルサイズ最適化を31%向上させました。
@@ -72,25 +72,24 @@ source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
 * JPEG
 * PNG
 
-URLに記載されているその他の形式については、スマートイメージングを明示的にオフにする必要があります。  JPEGおよびPNG `bfc=off` 以外のファイル形式のURLに修飾子を追加します。 これは、次のいずれかの方法を使用して実行できます。
+<!-- For any other format mentioned in a URL, you should explicity turn off Smart Imaging.  Append modifier `bfc=off` to the URL for file formats other than JPEG and PNG. You can accomplish this by using either one of the following methods:
 
-* URLに修飾子が含まれている場 `fmt` 合は、ルールセットを使用します。
-* 該当するプリセットのURL修飾子フィールドに追加します。
+* Use a ruleset if the `fmt` modifier is mentioned in the URL. 
+* Append in URL modifiers field of the presets concerned.
 
-またはに追加する必要のない恒久的な修正に取り組んで `bfc=off` い `fmt !=JPEG` ます `fmt !=PNG`。 このトピックは、修正が行われた後に更新されます。
-
+Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
 ## How does Smart Imaging work with our existing image presets that are already in use? {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
 スマートイメージングは既存の「画像プリセット」と連携し、要求されたファイル形式がJPEGまたはPNGの場合、画質(qlt)と形式(fmt)を除くすべての画像設定を監視します。 形式変換の場合、画像プリセットの設定で定義されているとおりの完全な視覚的忠実性が維持されますが、ファイルサイズは小さくなります。元の画像のサイズがスマートイメージングの生成サイズより小さい場合は、元の画像が提供されます。
 
-また、画像プリセットを使用してまたはを返す場合は、必ずプリセ `fmt !=JPEG` ット修 `fmt !=PNG`飾子フィールドを `bfc=off` 追加して、要求されたファイル形式を返すようにしてください。
+<!-- In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
 ## Will I have to change any URLs, image presets, or deploy any new code on my site for Smart Imaging? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
 いいえ。スマートイメージングは、既存の画像URLや画像プリセットとシームレスに連携します。 また、スマートイメージングでは、ユーザのブラウザを検出するためにWebサイトにコードを追加する必要はありません。 これらはすべて自動的に処理されます。
 
-前述のとおり、スマートイメージングはJPEGおよびPNG画像形式のみをサポートします。 その他の形式の場合は、前述のようにURLに修 `bfc=off` 飾子を追加する必要があります。
+<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
 Also, see [Am I eligible to use Smart Imaging?](#am-i-eligible-to-use-smart-imaging) スマートイメージングの前提条件を理解する。
 
