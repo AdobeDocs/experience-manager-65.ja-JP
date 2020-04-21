@@ -1,14 +1,9 @@
 ---
 title: リッチテキストエディタープラグインの設定
-description: AEM リッチテキストエディタープラグインを設定して、個々の機能を有効にする方法について説明します。
-uuid: 012552b7-5e32-4d74-be07-b441c3d4b47b
+description: 個々の機能を有効にするAdobe Experience Managerリッチテキストエディタープラグインの設定について説明します。
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
-mini-toc-levels: 1
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 72cdeff04e18c13e4b31543bafcbd5ffa65a78a7
+source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
 
 ---
 
@@ -21,7 +16,7 @@ source-git-commit: 72cdeff04e18c13e4b31543bafcbd5ffa65a78a7
 
 >[!NOTE]
 >
->CRXDE Lite を使用する場合は、「すべて保存」を使用して、変更を定期的に保存することをお勧めします。
+>When working with CRXDE Lite, it is recommended to save the changes regularly using [!UICONTROL Save All] option.
 
 ## プラグインのアクティベートと features プロパティの設定 {#activateplugin}
 
@@ -601,20 +596,18 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 スペルチェックプラグインがアクティベートされると、RTE ではそれぞれ該当する言語の辞書を使用します。その後、サブツリーの言語プロパティを取得するか、URL から言語を抽出することによって、Web サイトの言語に従って辞書が選択されます。the `/en/` branch is checked as English, the `/de/` branch as German.
 
 >[!NOTE]
-インストールされていない言語に関してチェックを試みると、「スペルチェックできませんでした。」というメッセージが表示されます。
+The message `Spell checking failed` is seen if a check is attempted for a language that is not installed. The standard dictionaries are located at `/libs/cq/spellchecker/dictionaries`, along with the appropriate readme files. これらのファイルを修正しないでください。
 
-標準の AEM インストールには、以下の辞書が含まれます。
-
-* アメリカ英語（en_us）
-* イギリス英語（en_gb）
-
->[!NOTE]
-The standard dictionaries are located at `/libs/cq/spellchecker/dictionaries`, along with the appropriate readme files. これらのファイルを修正しないでください。
-
-必要に応じて辞書を追加するには、次の手順に従います。
+標準のAEMインストールには、米国英語(`en_us`)と英語(`en_gb`)の辞書が含まれます。 辞書を追加するには、次の手順に従います。
 
 1. ページ [https://extensions.openoffice.org/](https://extensions.openoffice.org/) に移動します。
-1. 必要な言語を選択して、スペル定義を含む ZIP ファイルをダウンロードします。アーカイブの内容をファイルシステム上に抽出します。
+
+1. 次のいずれかの操作を行って、選択した言語の辞書を検索します。
+
+   * 選択した言語の辞書を検索します。 辞書ページで、元のソースまたは発言者のWebページへのリンクを探します。 該当するページ上のv2.xのディクショナリファイルを探します。
+   * v2.xディクショナリファイルは、https://wiki.openoffice.org/wiki/User:Khirano/Dictionariesで検索してく [ださい](https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries)。
+
+1. スペルの定義を含むアーカイブをダウンロードします。 アーカイブの内容をファイルシステム上に抽出します。
 
    >[!CAUTION]
    OpenOffice.org v2.0.1 以前の `MySpell` 形式の辞書のみがサポートされています。辞書は現在アーカイブファイルなので、ダウンロード後にアーカイブを確認することをお勧めします。
@@ -623,9 +616,8 @@ The standard dictionaries are located at `/libs/cq/spellchecker/dictionaries`, a
 1. Load the .aff and .dic files in the repository at `/apps/cq/spellchecker/dictionaries`.
 
 >[!NOTE]
-RTE スペルチェッカーは、オンデマンドで使用できます。テキストの入力を開始しても自動的に実行されません。
-スペルチェッカーを実行するには、ツールバーの「スペルチェッカー」ボタンをタップまたはクリックします。RTE は、単語のスペルをチェックし、スペルミスした単語をハイライト表示します。
-スペルチェッカーが提案した変更を組み込むと、テキストの状態が変更され、スペルミスした単語はハイライト表示されなくなります。スペルチェッカーを実行するには、「スペルチェッカー」ボタンをもう一度タップまたはクリックします。
+RTE スペルチェッカーは、オンデマンドで使用できます。テキストの入力を開始しても自動的に実行されません。To run the spell checker, click [!UICONTROL Spellchecker] from the toolbar. RTEは単語のスペルをチェックし、スペルミスのある単語をハイライトします。
+スペルチェックで提案される変更を組み込むと、テキストの状態が変更され、スペルミスのある単語はハイライト表示されなくなります。 スペルチェッカーを実行するには、「スペルチェッカー」ボタンをもう一度タップまたはクリックします。
 
 ## 取り消しおよびやり直し操作の履歴サイズの設定 {#undohistory}
 
