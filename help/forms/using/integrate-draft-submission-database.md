@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 070d4e105c94548dda1098bf47cab83e0847f24d
 
 ---
 
@@ -26,8 +26,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 >
 >* このドキュメントで説明されている例および設定は、MySQL 5.6.24 に基づいているため、お使いのデータベースシステムに合わせてそれらを適切に置き換える必要があります。
 >* 最新バージョンの AEM Forms のアドオンパッケージをインストールしていることを確認してください。使用可能なパッケージのリストについては、[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事を参照してください。
->
-
+> * サンプルパッケージは、アダプティブフォームの送信アクションでのみ機能します。
 
 
 ## サンプルのセットアップおよび設定 {#set-up-and-configure-the-sample}
