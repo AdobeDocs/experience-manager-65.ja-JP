@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7aba1f3b492a07fe502f95535a94c8054a044eb5
+source-git-commit: f466193a259d9e8869d7f79eafda1be20869e4af
 
 ---
 
