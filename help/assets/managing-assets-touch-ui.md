@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
+source-git-commit: 6d26a708ac2073eb7ceff62e65c6aaafdb727639
 
 ---
 
@@ -477,15 +477,15 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. アセットをタップまたはクリックして、そのアセットページを開きます。
 
-   ![chlimage_1-220](assets/chlimage_1-15.png)
+   ![レンディションを管理するアセットの詳細ページ](assets/chlimage_1-15.png)
 
 1. グローバルナビゲーションアイコンをタップまたはクリックし、リストから「**[!UICONTROL レンディション]**」を選択します。
 
-   ![renditions_menu](assets/renditions_menu.png)
+   ![左側のパネルでメニューを開き、「レンディション」オプションを選択](assets/renditions_menu.png)
 
 1. **[!UICONTROL レンディション]**&#x200B;パネルで、アセットに生成されたレンディションのリストを表示します。
 
-   ![renditions_panel](assets/renditions_panel.png)
+   ![アセットの詳細ページのレンディションパネル](assets/renditions_panel.png)
 
    >[!NOTE]
    >
@@ -503,7 +503,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    アセットの詳細ページに移動し、ツールバーの「**[!UICONTROL レンディションを追加]**」アイコンをタップまたはクリックして、アセットの新しいレンディションをアップロードします。
 
-   ![chlimage_1-221](assets/chlimage_1-16.png)
+   ![新しいレン追加ディションをアップロードするレンディションアイコン](assets/chlimage_1-16.png)
 
    >[!NOTE]
    >
@@ -515,7 +515,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    同様に、`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker` をオーバーレイして注釈ページの画像をカスタマイズできます。
 
-   ![chlimage_1-222](assets/chlimage_1-17.png)
+   ![CRXDEのオーバーレイレンディションピッカーノードを使用してAnnotationページの画像をカスタマイズ](assets/chlimage_1-17.png)
 
    ビデオアセットのレンディションサイズを設定するには、CRX リポジトリ内の `videopicker` ノード（`/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`）に移動し、ノードをオーバーレイし、該当するプロパティを編集します。
 
@@ -535,7 +535,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. アセットを選択し、ツールバーの「**[!UICONTROL 削除]**」アイコンをタップまたはクリックします。
 
-   ![delete_icon](assets/delete_icon.png)
+   ![削除アイコン](assets/delete_icon.png)
 
 1. 確認ダイアログで、次のいずれかをクリックします。
 
@@ -583,11 +583,11 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. 非公開にするアセットまたはフォルダーを選択し、ツールバーの「**[!UICONTROL 公開を管理]**」アイコンをタップまたはクリックします。
 
-   ![manage_publication](assets/manage_publication.png)
+   ![パブリケーションの管理アイコン](assets/manage_publication.png)
 
 1. リストから「**[!UICONTROL 非公開]**」アクションを選択します。
 
-   ![unpublish_action](assets/unpublish_action.png)
+   ![非公開アクション](assets/unpublish_action.png)
 
 1. 後でアセットを非公開にするには、「**[!UICONTROL 後で非公開にする]**」を選択して、アセットを非公開にする日付を選択します。
 1. パブリッシュ環境でアセットを非公開にする日付をスケジュールします。
@@ -609,11 +609,11 @@ CUG は、アセットへのアクセスを制限する追加の方法です。�
 1. Assets UI からフォルダーを選択し、ツールバーの「プロパティ」アイコンをタップまたはクリックして、プロパティページを表示します。
 1. 「**[!UICONTROL 権限]**」タブで、「**[!UICONTROL 閉じられたユーザーグループ]**」の下でメンバーまたはグループを追加します。
 
-   ![add_user](assets/add_user.png)
+   ![閉じた追加ユーザーグループのユーザー](assets/add_user.png)
 
 1. ユーザーがフォルダーにアクセスしたときにログイン画面を表示するには、「**[!UICONTROL 有効]**」オプションを選択します。次に、AEM 内のログインページへのパスを選択し、変更を保存します。
 
-   ![login_page](assets/login_page.png)
+   ![ユーザーがフォルダーにアクセスしたときに表示するログインページを有効にし、選択します。](assets/login_page.png)
 
    >[!NOTE]
    >
@@ -641,13 +641,13 @@ You can view, navigate through, and select assets with any of the available view
 
 リスト表示と列表示で、アセッ **[!UICONTROL トのサムネールに]** （ポインターを合わせたとき）「選択」オプションが表示されます。
 
-![select_quick_in_listview](assets/select_quick_in_listview.png)
+![アセットの選択リスト表示](assets/select_quick_in_listview.png)
 
-![select_quick_in_columnview](assets/select_quick_in_columnview.png)
+![列内のアセットの選択表示](assets/select_quick_in_columnview.png)
 
 カード表示では、「 **[!UICONTROL Select]** 」オプションがクイックアクションとして表示されます。
 
-![select_quick_action](assets/select_quick_action.png)
+![カードのクイックアクションの表示](assets/select_quick_action.png)
 
 ブラウザのアセットユーザインターフェイスでフォルダまたはコレクションを参照する場合、右上隅の「すべて選択」オプションを使用して、表示または読み込まれたすべてのアセットを  「選択」で選択できます。 最初は、100個のアセットのみがカード表示に読み込まれ、200個のアセットがリスト表示に読み込まれます。 検索結果ページをスクロールすると、表示に読み込まれるアセットが増えます。 「すべて [!UICONTROL 選択] 」オプションは、読み込まれたアセットのみを選択します。
 
@@ -666,36 +666,36 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
    * アセットを選択し、ツールバーの「**[!UICONTROL 編集]**」アイコンをクリックまたはタップします。
    * カード表示で、アセットに表示される「**[!UICONTROL 編集]**」アイコンをタップまたはクリックします。
    * アセットページで、ツールバーの「**[!UICONTROL 編集]**」アイコンをタップまたはクリックします。
-   ![edit_icon](assets/edit_icon.png)
+   ![ツールバーの編集アイコン](assets/edit_icon.png)
 
 1. 画像を切り抜くには、**切り抜き**&#x200B;アイコンをタップまたはクリックします。
 
-   ![chlimage_1-226](assets/chlimage_1-22.png)
+   ![切り抜きアイコン](assets/chlimage_1-22.png)
 
 1. リストから必要なオプションを選択します。選択したオプションに基づいて、画像に切り抜き領域が表示されます。「**フリーハンド**」オプションを使用すると、縦横比の制限に関係なく画像を切り抜くことができます。
 
-   ![chlimage_1-227](/help/assets/assets/chlimage_1-23.png)
+   ![切り抜きツールオプション](/help/assets/assets/chlimage_1-23.png)
 
 1. 切り抜く領域を選択し、画像上でそのサイズまたは位置を変更します。
 1. **完了**&#x200B;アイコン（右上隅）を使用して、画像を切り抜きます。**完了**&#x200B;アイコンをクリックすると、レンディションの再生成もおこなわれます。
 
-   ![chlimage_1-228](assets/chlimage_1-24.png)
+   ![完了アイコン](assets/chlimage_1-24.png)
 
 1. 切り抜く前の画像に戻すには、右上の&#x200B;**取り消し**&#x200B;アイコンを使用します。切り抜いた画像を保持するには、右上の&#x200B;**やり直し**&#x200B;アイコンを使用します。
 
-   ![chlimage_1-229](assets/chlimage_1-25.png)
+   ![元に戻す/やり直しアイコン](assets/chlimage_1-25.png)
 
 1. 適切な回転アイコンをタップまたはクリックして、画像を時計回りまたは反時計回りに回転します。
 
-   ![chlimage_1-230](assets/chlimage_1-26.png)
+   ![右回りおよび左回りに回転するアイコン](assets/chlimage_1-26.png)
 
 1. 適切な反転アイコンをタップまたはクリックして、画像を水平方向または垂直方向に反転します。
 
-   ![chlimage_1-231](assets/chlimage_1-27.png)
+   ![画像を左右または上下に反転するアイコン](assets/chlimage_1-27.png)
 
 1. **完了**&#x200B;アイコンをタップまたはクリックして変更を保存します。
 
-   ![chlimage_1-232](assets/chlimage_1-28.png)
+   ![完了アイコン](assets/chlimage_1-28.png)
 
 >[!NOTE]
 >
@@ -738,11 +738,11 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
    * [クイックアクション](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * アセットを選択した後またはアセットページに移動した後に、ツールバーから
-   ![chlimage_1-233](assets/chlimage_1-29.png)
+   ![注釈アイコン](assets/chlimage_1-29.png)
 
 1. タイムラインの一番下の&#x200B;**[!UICONTROL コメント]**&#x200B;ボックスにコメントを追加します。または、画像内の任意の領域をマークアップし、**[!UICONTROL 注釈を追加]**&#x200B;ダイアログに注釈を追加します。
 
-   ![chlimage_1-234](assets/chlimage_1-30.png)
+   ![注釈ダイアログの追加コメントボックス](assets/chlimage_1-30.png)
 
 1. 注釈についてユーザーに通知するには、ユーザーの電子メールアドレスを指定して、コメントを追加します。例えば、注釈について Aaron MacDonald というユーザーに通知するには、@aa と入力します。一致するすべてのユーザーに関するヒントがリストに表示されます。Aaron の電子メールアドレスをリストから選択し、コメントを使用してタグ付けします。同様に、注釈内の任意の場所、またはコメントの前後で追加のユーザーにタグ付けできます。
 
@@ -750,11 +750,11 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
    >
    >管理者以外のユーザーには、Crx-de で */home* に読み取り権限がある場合にのみ候補が表示されます。
 
-   ![chlimage_1-235](assets/chlimage_1-31.png)
+   ![ユーザーの電子メールアドレスを指定し、ユーザーに通知するコメントを追加します](assets/chlimage_1-31.png)
 
 1. 注釈を追加したら、「**[!UICONTROL 追加]**」をクリックして注釈を保存します。注釈に関する通知が Aaron に送信されます。
 
-   ![chlimage_1-236](assets/chlimage_1-32.png)
+   ![注追加釈を保存するボタン](assets/chlimage_1-32.png)
 
    >[!NOTE]
    >
@@ -785,15 +785,15 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 1. グローバルナビゲーションアイコンをタップまたはクリックし、リストから「**[!UICONTROL タイムライン]**」を選択します。
 
-   ![chlimage_1-239](assets/chlimage_1-35.png)
+   ![GlobalNavアイコンで使用できるオプション](assets/chlimage_1-35.png)
 
 1. タイムラインの「**[!UICONTROL すべて表示]**」のリストから「**[!UICONTROL コメント]**」を選択し、注釈に基づいて結果にフィルターを適用します。
 
-   ![chlimage_1-240](assets/chlimage_1-36.png)
+   ![タイムラインにすべてのリストを表示](assets/chlimage_1-36.png)
 
    **[!UICONTROL タイムライン]**&#x200B;パネルでコメントをタップまたはクリックし、対応する画像の注釈を表示します。
 
-   ![chlimage_1-241](assets/chlimage_1-37.png)
+   ![画像上のタイムラインパネルから表示への注釈](assets/chlimage_1-37.png)
 
    特定のコメントを削除するには、「**[!UICONTROL 削除]**」をタップまたはクリックします。
 
@@ -813,15 +813,15 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 1. 特定の注釈を印刷するには、タイムラインから注釈を選択します。
 
-   ![chlimage_1-242](assets/chlimage_1-38.png)
+   ![タイムラインから注釈を選択して印刷します](assets/chlimage_1-38.png)
 
    レビューステータスのみを印刷するには、タイムラインからレビューステータスを選択します。
 
-   ![chlimage_1-243](assets/chlimage_1-39.png)
+   ![注釈のレビューステータスのみを印刷するには、タイムラインから選択します](assets/chlimage_1-39.png)
 
 1. ツールバーの&#x200B;**[!UICONTROL 印刷]**&#x200B;アイコンをタップまたはクリックします。
 
-   ![chlimage_1-244](assets/chlimage_1-40.png)
+   ![ツールバーの印刷アイコン](assets/chlimage_1-40.png)
 
 1. 印刷ダイアログから、注釈／レビューステータスを PDF のどこに表示したいかを選択します。例えば、印刷する画像が含まれるページの右上に注釈／ステータスを印刷したい場合は、「**左上**」設定を使用します。デフォルトで選択されています。
 
@@ -835,11 +835,11 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 1. 「**[!UICONTROL 印刷]**」をタップまたはクリックします。手順 2 で選択したオプションに応じて、生成される PDF の特定の位置に注釈／ステータスが表示されます。例えば、注釈とレビューステータスの両方を「**左上**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
 
-   ![chlimage_1-246](assets/chlimage_1-42.png)
+   ![生成されたPDFの注釈とレビューステータス](assets/chlimage_1-42.png)
 
 1. 右上のオプションを使用して PDF をダウンロードまたは印刷します。
 
-   ![chlimage_1-247](assets/chlimage_1-43.png)
+   ![PDFのダウンロードと印刷のオプション](assets/chlimage_1-43.png)
 
    >[!NOTE]
    >
@@ -847,7 +847,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
    レンダリングされた PDF ファイルの外観を変更するには、Configuration Manager から&#x200B;**[!UICONTROL 注釈 PDF の設定]**&#x200B;を開き、必要なオプションを変更します。例えば、コメントとステータスのフォントカラー、サイズ、スタイル、背景色を変更できます。例えば、承認済みステータスの表示色を変更したり、対応フィールドのカラーコードを変更したりします。注釈のフォントカラーの変更について詳しくは、[注釈](/help/assets/managing-assets-touch-ui.md#annotating)を参照してください。
 
-   ![chlimage_1-248](assets/chlimage_1-44.png)
+   ![PDFにアセット注釈を印刷するための設定ドキュメント](assets/chlimage_1-44.png)
 
    レンダリングされた PDF ファイルに戻り、更新します。更新された PDF に、変更が反映されています。
 
@@ -904,7 +904,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
    * 「**[!UICONTROL 保存するバージョン]**」をクリックして、アセットのバージョンを作成します。オプションで、ラベルとコメントを追加します。
    * Click **[!UICONTROL Create]** to create a version.
 
-      ![chlimage_1-251](assets/create-new-version-from-timeline.png)
+      ![サイドバーからアセットのバージョンを作成する](assets/create-new-version-from-timeline.png)
 
       *図：タイムラインの左側のサイドバーからアセットのバージ[!UICONTROL ョンを]作成します。*
 
@@ -913,7 +913,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
    * タイムライ **[!UICONTROL ンで「すべてを表示]** 」をク [!UICONTROL リックしま]す。
    * 「バージョン」 **[!UICONTROL をクリックしま]**&#x200B;す。 アセット用に作成されたすべてのバージョンが左側のサイドバーに表示されます。
 
-      ![versions_option](assets/versions_option.png)
+      ![ タイムラインから「バージョン」オプションを選択します。](assets/versions_option.png)
 
    * アセットの特定のバージョンを選択し、「バージョン」をク **[!UICONTROL プレビューしま]**&#x200B;す。
 
@@ -922,7 +922,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
    * アセットのバージョンをクリックします。 オプションで、ラベルとコメントを追加します。
    * Click **[!UICONTROL Revert to this Version]**.
 
-      ![select_version](assets/select_version.png)
+      ![元に戻すバージョンを選択](assets/select_version.png)
 
       *図：バージョンを選択し、元に戻します。 DAMユーザーが使用できる現在のバージョンになります。*
 
