@@ -4,14 +4,14 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assetsユーザガイド
 translation-type: tm+mt
-source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
+source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
 
 ---
 
 
 # AEM 6.5 Assets User Guide {#assets}
 
-+ [アセットユーザーガイド](home.md)
++ [[!DNL Assets]ユーザーガイド](home.md)
 + [AEM 6.5 Assetsリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
@@ -19,7 +19,7 @@ source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
    + [AEM Assetsのホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [多言語のアセット](multilingual-assets.md)
-   + [AEM Assets での Adobe Stock アセットの使用](aem-assets-adobe-stock.md)
+   + [AEM Assetsで[!DNL Adobe Stock]アセットを使用](aem-assets-adobe-stock.md)
    + [3D アセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
@@ -74,7 +74,7 @@ source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
    + [AEM Assetsのカスタマイズと拡張](extending-assets.md)
    + [メディアハンドラーとメディアを使用したアセットの処理ワークフロー](media-handlers.md)
    + [検索機能の拡張](searchx.md)
-   + [AEM Assets と連携するための ImageMagick のインストールと設定](best-practices-for-imagemagick.md)
+   + [AEM Assetsで動作する[!DNL ImageMagick]をインストールし、設定します](best-practices-for-imagemagick.md)
    + [アセットとアクティビティストリームの統合](extending-activity-stream.md)
    + [アセットエディタの拡張](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
