@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ---
 
@@ -31,10 +31,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 コンテンツをおすすめに設定する機能は、コンポーネントごとに許可または禁止できます。
 
-ドキュメントのこのセクションでは、以下の内容について説明します。
+ドキュメントのこのセクションでは、以下の内容について説明します。：
 
-* コミュニティサイトへの重点コンテンツの追加
-* Configuration settings for the `Featured Content`component
+* コミュニティサイトへの特集コンテンツの追加
+* Configuration settings for the `Featured Content` component
 
 ## おすすめコンテンツをページに追加 {#adding-featured-content-to-a-page}
 
@@ -46,7 +46,7 @@ To add a `Featured Content` component to a page in author mode, use the componen
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](essentials-featured.md#essentials-for-client-side) are included, this is how the `Featured Content`component will appear:
+When the [required client-side libraries](essentials-featured.md#essentials-for-client-side) are included, this is how the `Featured Content` component will appear:
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -60,7 +60,7 @@ Select the placed `Featured Content` component to access and select the `Configu
 
 「**[!UICONTROL 設定]**」タブの下で、おすすめに設定するコンテンツを指定します。
 
-* **[!UICONTROL 表示名]**&#x200B;おすすめコンテンツのリストのタイトル。For example `Featured Questions` or `Featured Ideas`. 初期設定は、空 `Featured Content` 白のままの場合です。
+* **[!UICONTROL 表示名]**&#x200B;おすすめコンテンツのリストのタイトル。For example `Featured Questions` or `Featured Ideas`. 初期設定は、空 `Featured Content` のままの場合です。
 
 * **[!UICONTROL おすすめコンテンツの場所]**
    *（必須）* 、特集可能なコンテンツを含むページを参照します（そのページのコンポーネントは、「重点コンテンツを許可」に設定する必要があります）。 例：`/content/sites/engage/en/forum`
