@@ -1,9 +1,9 @@
 ---
-title: AEM AssetsでのAdobe Stockアセットの管理
-description: AEM内からAdobe Stockアセットを検索、取得、ライセンス認証および管理します。 ライセンスされたアセットを他のデジタルアセットとして使用します。
+title: '[!DNL Adobe Stock]の[!DNL Adobe Experience Manager Assets]アセットを管理します。'
+description: '[!DNL Adobe Stock]アセットの検索、取得、ライセンス認証、管理をAdobe Experience Manager内で行います。 ライセンスされたアセットを他のデジタルアセットとして使用します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
+source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
 
 ---
 
