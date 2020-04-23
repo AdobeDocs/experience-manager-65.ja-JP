@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -27,13 +27,13 @@ Visit the moderation overview for a description of [moderation actions](moderate
 
 ## モデレート UI {#moderation-ui}
 
-パブリッシュインスタンスで使用できるモデレーター用の UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内にあります。UIの要素は、サイト訪問者のステータス(訪問者が
+パブリッシュインスタンスで使用できるモデレーター用の UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内にあります。UIの要素は、サイト訪問者のステータス(
 
-1. コンテンツを投稿したメンバー
-1. 信頼できるメンバーのモデレーター
-1. 管理者
-1. サインイン済みですが、管理者、モデレーター、コンテンツの作成者はいません
-1. サインインしていません
+1. コンテンツを投稿したメンバー。
+1. 信頼できるメンバーのモデレーター。
+1. 管理者。
+1. サインインしましたが、管理者、モデレーター、コンテンツの作成者はいません。
+1. サインインしていません。
 
 ## 例 {#example}
 
@@ -51,9 +51,9 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 
    * フォーラムの選択
    * 新しい投稿の選択
-   * 件名を入力
+   * 件名の入力
 
-      ハミングバードフィーダーで花蜜を交換するタイミング
+      ハミングバードフィーダで花蜜を交換するタイミング
 
    * 本文を入力
 
@@ -64,10 +64,10 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 * Aaron McDonald（aaron.mcdonald@mailinator.com）としてログインします。
 
    * フォーラムの選択
-   * 「Hummingbird」のトピックで、「詳細情報を読む」を選択します。
-   * 「返信を投稿」に対するコメントを入力します
+   * 「Hummingbirdのトピック」で、「詳細情報」を選択します。
+   * 「返信を投稿」に対するコメントを入力します。
 
-      私は週に1回変更し、5月から10月までそれを受け取ります。
+      私は週に1回私の家を変え、5月から10月までそれを受け取る。
 
    * 返信の選択
    * ログアウトの選択
@@ -75,17 +75,17 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 * Andrew Schaeffer（andrew.schaeffer@trashymail.com）としてログインします。
 
    * フォーラムの選択
-   * 「Hummingbird」のトピックで、「詳細情報を読む」を選択します。
-   * 「返信を投稿」に対するコメントを入力します
+   * 「Hummingbirdのトピック」で、「詳細情報」を選択します。
+   * 「返信を投稿」に対するコメントを入力します。
 
-      私は花蜜と飼料を販売しています。https://my.viral.url/をご覧ください。
+      販売しているのは、蜜と飼料 — https://my.viral.url/を参照してください。
 
    * 返信の選択
    * ログアウトの選択
 
 ### Anonymous Site Visitor (#5) {#anonymous-site-visitor}
 
-以下は、サインインしていないサイト訪問者が閲覧したフォーラムのビューです(5)。
+以下は、サインインしていないサイト訪問者が閲覧したフォーラムの表示です(5)。
 
 匿名のサイト訪問者にできることは、フォーラムを表示することだけです。コンテンツを投稿することも、モデレートアクションを実行することもできません。
 
@@ -97,11 +97,11 @@ On author, log in as admin and add Boyd Larsen (boyd.larsen@dodgit.com) as a new
 
 On publish, log in as Boyd Larsen and access the thread by selecting `Forum`, and then `Read more` for the hummingbird post.
 
-注意
+注意:
 
-* Boyd はフォーラムに参加していません。
-* Boyd は何も削除することができません。
-* Boyd はログインしており、返信またはコンテンツにフラグを設定できます。
+* ボイドはフォーラムに参加していない。
+* ボイドは何も削除できません。
+* Boydはサインインし、コンテンツに返信またはフラグを付けることができます。
 
 Boyd としてログインした状態で「フラグ」を選択し、Andrew が投稿したコンテンツにフラグを設定します。
 
@@ -111,12 +111,12 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ### Administrator (#3) {#administrator}
 
-管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿に関しては「詳細を読む」を選択します。
+管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿の「詳細を読む」を選択します。
 
-注意
+注意:
 
-* 管理者はフラグ付け、削除、編集、拒否、切り取り、閉じる、ピン、機能を実行できます
-* 管理者は「管理」を選択してモデレートコンソールにアクセスできます。
+* 管理者は、フラグ付け、削除、編集、拒否、切り取り、閉じる、ピン、機能を使用できます。
+* 管理者は、「管理」を選択してモデレートコンソールにアクセスできます。
 
 ![communityadmin-forum](assets/communityadmin-forum.png)
 
@@ -132,14 +132,14 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ### Community Moderator (#2) {#community-moderator}
 
-コミュニティのモデレーターであるAaron mcDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「詳細情報を表示」をクリックします。
+コミュニティのモデレーターであるAaron McDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「詳細情報を読む」を選択します。
 
-注意
+注意:
 
-* Aaron は自分の投稿の返信、削除、編集または拒否を実行できます。
-* また Aaron はそれ以外のコンテンツのフラグ設定／許可、返信、削除、編集、拒否を実行できます。
-* Aaron はフォーラムトピックを切り取り、自分がモデレートしている別のフォーラムに移動できます。
-* Aaron は「管理」を選択してモデレートコンソールにアクセスできます。
+* Aaronは、自分の投稿に対する返信、削除、編集または拒否を実行できます。
+* Aaronは、他のコンテンツにフラグ/許可、返信、削除、編集、拒否を行うこともできます。
+* Aaronは、フォーラムのトピックを切り取って、モデレート対象の別のフォーラムに移動できます。
+* Aaronは、「管理」を選択してモデレートコンソールにアクセスできます。
 
 ![chlimage_1-2](assets/chlimage_1-2.png)
 
@@ -155,13 +155,13 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ### Content Author (#1) {#content-author}
 
-スレッドを開始したコミュニティメンバーRebeh Larsen (rebekah.larsen@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の詳細を参照してください。
+Rebehah Larsen(rebekah.larsen@mailinator.com)としてログインします。このスレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「詳細を読む」を選択します。
 
-注意
+注意:
 
-* Rebekah は自分の投稿を削除または編集できます。
-* また Rebekah はそれ以外のコンテンツに返信またはフラグを設定できます。
-* Rebekah はモデレートコンソールにアクセスできません。
+* Rebekahは自分の投稿を削除または編集できます。
+* Rebekahは、他のコンテンツに返信したり、他のコンテンツにフラグを付けたりすることもできます。
+* Rebekahはモデレートコンソールにアクセスできません。
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
 
