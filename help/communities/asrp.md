@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -41,11 +41,11 @@ UGCでASRPを使用するようにAEM Communitiesサイトを設定するには�
 
 ### ASRP の選択 {#select-asrp}
 
-The [Storage Configuration console](/help/communities/srp-config.md) allows for the selection of the default storage configuration, which identifies which implementation of SRP to use.
+[ストレージ設定コンソールでは](/help/communities/srp-config.md) 、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 **AEM作成者インスタンスで：**
 
-* グローバルナビゲーションから、 **[UIControl Tools/Communities/Storage Configuration]** （ストレージ設定）に移動し、「 **[UIControl Adobe Storage Resource Provider(ASRP)」を選択します]**。
+* グローバルナビゲーションから、ツ **[!UICONTROL ール/コミュニティ/ストレージ設定に移動し]** 、「 **[!UICONTROL Adobeストレージリソースプロバイダー(ASRP)」を選択します]**。
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
@@ -53,7 +53,7 @@ The [Storage Configuration console](/help/communities/srp-config.md) allows for 
 
 * **データセンターのURL**:プルダウンして、アカウント担当者が指定した実稼働データセンターを選択します。
 * **デフォルトのレポートスイート**:デフォルトのレポートスイートの名前を入力します。
-* **Consumer Key**:コンシューマーキーを入力します。
+* **Consumer key**:Consumer key
 * **秘密**:秘密を入力します。
 * 「**送信**」を選択します。
 
@@ -66,7 +66,7 @@ The [Storage Configuration console](/help/communities/srp-config.md) allows for 
 
 * 「 **Test Config**」を選択
 
-   作成者インスタンスと発行インスタンスごとに、ストレージ構成コンソールからデータセンターへの接続をテストします。
+   作成者インスタンスと発行インスタンスごとに、データセンターへの接続をストレージ設定コンソールからテストします。
 
 * Ensure that the site URLs for profile data are routable from the Data Center by [externalizing links](#externalize-links).
 
@@ -94,7 +94,7 @@ ASRP エンドポイントでの認証を正常におこなうには、[ネッ�
 
 AEM作成者インスタンスで：
 
-* Navigate from main menu to **[UIControl Tools > Operations > Replication]**.
+* Navigate from main menu to **[!UICONTROL Tools > Operations > Replication]**.
 * Select **Activate Tree**
 * **開始パス**:参照 `/etc/socialconfig/srpc/`
 * 「変更済みの **み」の選択を解除**
@@ -137,7 +137,7 @@ The Adobe cloud storage infrastructure uses *eventual consistency* to achieve it
 
 ### UGC が ASRP で表示されない {#ugc-not-visible-in-asrp}
 
-ストレージオプションの設定を確認し、ASRPがデフォルトのプロバイダーに設定されていることを確認します。 デフォルトでは、ストレージリソースプロバイダーはASRPではなくJSRPです。
+ASRPがデフォルトのプロバイダーに設定されていることを確認します。そのためには、ストレージオプションの設定を確認します。 デフォルトでは、ストレージリソースプロバイダーはASRPではなくJSRPです。
 
 すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
