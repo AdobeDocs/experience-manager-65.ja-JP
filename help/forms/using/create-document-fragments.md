@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8ae97a21-83af-4615-9be3-61e2f8065081
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
@@ -23,7 +23,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 ドキュメントフラグメントとは再利用可能な通信のコンポーネントを指し、インタラクティブ通信の作成に使用されます。ドキュメントフラグメントは、次のいずれかの種類になります。
 
 * テキスト — テキストアセットは、1つ以上の段落で構成されるコンテンツの一部です。 段落は静的または動的にすることができます。
-* リスト — リストは、テキスト、リスト、条件、画像を含む、ドキュメントフラグメントのグループです。
+* リスト-リストは、テキスト、ドキュメント、条件、画像を含むリストフラグメントのグループです。
 * 条件 — 条件を使用すると、フォームデータモデルから受信したデータに基づいて、インタラクティブ通信に含めるコンテンツを定義できます。
 
 This tutorial walks you through the steps to create multiple text document fragments based on the anatomy provided in [Plan the Interactive Communication](/help/forms/using/planning-interactive-communications.md) section. このチュートリアルを完了すると、次の操作を実行できるようになります。
@@ -32,7 +32,7 @@ This tutorial walks you through the steps to create multiple text document fragm
 * 変数の作成
 * ルールを作成して適用
 
-![text_document_fragments](assets/text_document_fragments.gif)
+![text_ドキュメント_fragments](assets/text_document_fragments.gif)
 
 このチュートリアルで作成されたドキュメントフラグメントのリストは次のとおりです。
 
@@ -60,7 +60,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
@@ -79,7 +79,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    1. 変数の名前として、**Invoicenumber** を入力します。
    1. **文字列**&#x200B;をタイプとして選択します。
    1. 「**作成**」をタップします。
-   ![String型の変数を作成します](assets/variable_create_string_new.png)
+   ![String型の変数を作成](assets/variable_create_string_new.png)
 
    手順 4 と 5 を繰り返し、次の変数を作成します。
 
@@ -122,7 +122,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
 
@@ -156,7 +156,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    * 関係番号
    * 都道府県コード
    * 接続数
-   ![顧客の詳細静的テキスト](assets/customer_details_static_text_new.png)
+   ![顧客の詳細の静的テキスト](assets/customer_details_static_text_new.png)
 
 1. Place the cursor next to the **Mobile Number** field and double-click the **customer** > **mobilenum** property.
 1. Place the cursor next to the **Alternate Contact Number** field and double-click the** customer** > **alternatemobilenumber** property.
@@ -184,7 +184,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
 
@@ -234,7 +234,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
 ## 手順 4：請求概要テキストドキュメントフラグメントの作成 {#step-create-summary-of-charges-text-document-fragment}
 
-請求の概要ドキュメントフラグメントには、次のフィールドが含まれます。
+課金の概要ドキュメントフラグメントには、次のフィールドが含まれます。
 
 | フィールド | データソース |
 |---|---|
@@ -250,7 +250,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
 スタティックテキストを作成してドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
 
@@ -273,7 +273,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    * 付加価値サービス料金
    * 合計請求金額
    * 合計支払金額
-   ![料金の概要](assets/summary_charges_static_new.png)
+   ![請求の概要](assets/summary_charges_static_new.png)
 
 1. 「**データモデルオブジェクト**」タブを選択します。
 1. Place the cursor next to the **Call Charges** field and double-click the **bills** > **callcharges** property.
