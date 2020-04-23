@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 4a2ac67b-d2c9-4703-a1cb-d454786f9e6b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
 
 ---
 
 
-# AEM Communities 使用の手引き{#getting-started-with-aem-communities}
+# AEM Communities 使用の手引き {#getting-started-with-aem-communities}
 
-AEM Communities では、サイトテンプレートのライブラリを使用して、ブランド独自のコミュニティエクスペリエンスを作成できます。フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張ユーザープロファイルをWebサイトに統合して、提案者、顧客、会社間のやりとりを促進できます。
+AEM Communities では、サイトテンプレートのライブラリを使用して、ブランド独自のコミュニティエクスペリエンスを作成できます。フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張プロファイルをWebサイトに統合し、提案、顧客、会社間のやり取りを促進できます。
 
 以下は、デモ用および開発用の[エンゲージメントコミュニティ](/help/communities/overview.md#engagement-community)を素早くセットアップする方法のチュートリアルです。
 
