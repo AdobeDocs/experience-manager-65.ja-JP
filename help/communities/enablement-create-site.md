@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 [オーサーインスタンス](https://localhost:4502/)を使用します。
 
 * 管理者権限でのログイン
-* Navigate to **[UIControl Communities > Sites]**
+* Navigate to **[!UICONTROL Communities > Sites]**
 
 * 「**作成**」を選択します。
 
@@ -84,8 +84,8 @@ It is recommended that [enablement communities](/help/communities/overview.md#en
 
 Ensure most checkboxes are deselected for [User Management](/help/communities/sites-console.md#user-management) :
 
-* サイト訪問者が自己登録を行うことを許可しない
-* 匿名サイトの訪問者がサイトを閲覧することを許可しない
+* サイト訪問者の自己登録を許可しない
+* 匿名サイトの訪問者がサイトに表示することを許可しない
 * コミュニティメンバー間でのメッセージングを許可するかどうか（オプション）
 * Facebookへのログインを許可しない
 * Twitterでのログインを許可しない
@@ -98,7 +98,7 @@ The tags which may be applied to community content are controlled by selecting A
 
 また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとイネーブルメントリソースを定義するときに表示される選択肢が制限されます。See [Tagging Enablement Resources](/help/communities/tag-resources.md) for important information.
 
-名前空間は先行入力検索で簡単に検索できます。例：
+名前空間は先行入力検索で簡単に検索できます。以下に例を示します。
 
 * タイプ `tut`
 *  `Tutorial`
@@ -111,14 +111,14 @@ The tags which may be applied to community content are controlled by selecting A
 
 コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先読み検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
-例：
+以下に例を示します。
 
 * タイプ `q`
 * Select [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
->[トンネルサービス](/help/communities/deploy-communities.md#tunnel-service-on-author) では、パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
+>[トンネルサービス](/help/communities/deploy-communities.md#tunnel-service-on-author) では、パブリッシュ環境のみに存在するメンバーとグループを選択できます。
 
 ![実施可能な役割](assets/site-admin.png)
 
@@ -154,7 +154,7 @@ The tags which may be applied to community content are controlled by selecting A
    * タイプ `s`
    *  `Sirius Nilson`
 
-* **Marketing Cloud組織ID**（オプション）有効化レポートにビデオハートビート分析を含める [場合に必要なAdobe AnalyticsアカウントのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
+* **Marketing Cloud組織ID**（オプション）有効化レポートに [Video Heartbeat Analyticsを含める場合に必要なAdobe AnalyticsアカウントのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -255,7 +255,7 @@ In this example, the group `Community Ski Class` is added as a member of the gro
 
 Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されない場合、認証エラーによりコミュニティサイトのログインページが再度表示され、エラーメッセージが表示されるという利点があります。
 
-名前を付けて `Login Page Mapping` 追加
+追加 `Login Page Mapping` ～
 
 * `/content/sites/enable/en/signin:/content/sites/enable/en`
 
@@ -284,14 +284,14 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 1. With newly created `localhost.4503` node selected
 
-   * プロパティの追加
+   * 追加特性
 
       * **名前**：sling:match
       * **タイプ**：String
       * **値**：localhost.4503/$
    （「$」文字で終わる必要があります）
 
-   * プロパティの追加
+   * 追加特性
 
       * **名前**：sling:internalRedirect
       * **タイプ**：String
