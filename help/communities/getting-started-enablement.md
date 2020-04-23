@@ -10,12 +10,12 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 341fef2b8f040848a59381b0d4996c29f352b929
 
 ---
 
 
-# イネーブルメントのための AEM Communities 使用の手引き  {#getting-started-with-aem-communities-for-enablement}
+# イネーブルメントのための AEM Communities 使用の手引き {#getting-started-with-aem-communities-for-enablement}
 
 AEM Communities では、デジタルチャネルと対面チャネルにまたがる一貫したエクスペリエンスの構築をサポートするために、様々なイネーブルメントリソースや割り当て済みコンテンツや動的なレコメンデーションを活用して、従業員や顧客のイネーブルメントを促進することができます。こうしたリソースやコンテンツは、エンゲージメントを強化するためのソーシャルコミュニティ内で提供されます。
 
@@ -26,6 +26,7 @@ AEM Communities では、デジタルチャネルと対面チャネルにまた�
 >[!NOTE]
 >
 >This tutorial assumes installation of [Communities feature pack 1](deploy-communities.md#latestfeaturepack) or later.
+
 
 * [初期設定](enablement-setup.md)
 
