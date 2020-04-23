@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,8 +19,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ここでは、次のものを作成します。
 
-* サンプル Web サイトのコンテンツページを作成する際に使用する&#x200B;**[テンプレート](#createthepagetemplate)**
-* Web サイトのページをレンダリングする際に使用する&#x200B;**[コンポーネントとスクリプト](#create-the-template-s-rendering-component)**
+* サンプル Web サイトのコンテンツページを作成する際に使用する&#x200B;**[テンプレート.](#createthepagetemplate)**
+* Web サイトのページをレンダリングする際に使用する&#x200B;**[コンポーネントとスクリプト.](#create-the-template-s-rendering-component)**
 
 ## コンテンツテンプレートの作成 {#create-the-content-template}
 
@@ -28,10 +28,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 この演習では、すべてのページを 1 つの単純なテンプレートに基づいて作成します。
 
-1. CRXDE Lite のエクスプローラーペインで、次の手順を実行します。
+1. CRXDE Lite のエクスプローラーペインで、次の手順を実行します。：
 
-   * select `/apps/an-scf-sandbox/templates`
-   * **[!UICONTROL 作成/テンプレートを作成]**
+   *  `/apps/an-scf-sandbox/templates`
+   * **[!UICONTROL 作成]** /テンプ **[!UICONTROL レートの作成]**
 
 1. テンプレートを作成ダイアログで、次の値を入力し、「**[!UICONTROL 次へ]**」をクリックします。
 
@@ -42,9 +42,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * ランキング：&lt;デフォルトのまま>
    「ラベル」は、ノード名に使用されます。
 
-   「リソースタイプ」は、`playpage` の jcr:content ノードにプロパティ `sling:resourceType` として表示されます。ブラウザーから要求された場合にコンテンツをレンダリングするコンポーネント（リソース）を識別します。
+   「リソースタイプ」は、`playpage` の jcr:content ノードにプロパティ `sling:resourceType` として表示されます。ブラウザーから要求されたときにコンテンツをレンダリングするコンポーネント（リソース）を識別します。
 
-   In this case, all pages created using the `playpage`template are rendered by the `an-scf-sandbox/components/playpage` component. By convention, the path to the component is relative, allowing Sling to search for the resource first in the `/apps` folder and, if not found, in the `/libs` folder.
+   In this case, all pages created using the `playpage` template are rendered by the `an-scf-sandbox/components/playpage` component. By convention, the path to the component is relative, allowing Sling to search for the resource first in the `/apps` folder and, if not found, in the `/libs` folder.
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
@@ -58,9 +58,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    Note: The value of the allowed path property is a *regular expression.*&#x200B;この表現と一致するパスを持つコンテンツページでテンプレートを使用できます。In this case, the regular expression matches the path of the **/content** folder and all its subpages.
 
-   When an author creates a page below `/content`, the `playpage`template titled &quot;An SCF Sandbox Page Template&quot; appears in a list of available templates to use.
+   When an author creates a page below `/content`, the `playpage` template titled &quot;An SCF Sandbox Page Template&quot; appears in a list of available templates to use.
 
-   ルートページをテンプレートから作成した後、プロパティを変更して正規表現にルートパスを含めると、テンプレートへのアクセスをその Web サイトに制限できます。次に例を示します。
+   テンプレートからルートページを作成した後、通常の式にルートパスを含めるようにプロパティを変更することで、テンプレートへのアクセスをこのWebサイトに制限できます。
 
    `/content/an-scf-sandbox(/.&ast;)?`
 
@@ -85,11 +85,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 コンテンツを定義し、[playpage テンプレート](#createthepagetemplate)に基づいて作成されたページをレンダリングするコンポーネントを作成します。**
 
 1. In CRXDE Lite, right-click **`/apps/an-scf-sandbox/components`** and click **[!UICONTROL Create > Component]**.
-1. ノードの名前（ラベル）をplaypageに設定す *ると*、コンポーネントのパスは
+1. ノードの名前（ラベル）をplaypageに設定する *と*、コンポーネントのパスは
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   これは、再生ページテンプレートの「リソースタイプ」(オプションでパスの最初 **`/apps/`** の部分を除く)に対応します。
+   これは、再生ページテンプレートのリソースタイプ(オプションでパスの最初の部 **`/apps/`** 分を除いた値)に対応します。
 
    **[!UICONTROL コンポーネントを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力します。
 
@@ -100,7 +100,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * グループ:
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. Click **[!UICONTROL Next]** until the **[!UICONTROL Allowed Children]** panel of the dialog appears
+1. Click **[!UICONTROL Next]** until the **[!UICONTROL Allowed Children]** panel of the dialog appears:
 
    * 「**[!UICONTROL OK]**」をクリックします。
    * Click **[!UICONTROL Save All]**
@@ -109,6 +109,6 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    >[!CAUTION]
    >
-   >Webサイトを正しく機能させるには、playpageコンポーネントへのパスとplaypageテンプレートのsling:resourceTypeプロパティとの対応が重要です。
+   >Webサイトを正しく機能させるには、playpageコンポーネントへのパスと、playpageテンプレートのsling:resourceTypeプロパティとの対応が重要です。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
