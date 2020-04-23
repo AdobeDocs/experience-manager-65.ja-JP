@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
@@ -36,17 +36,17 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、印刷チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**** 印刷テンプレート： [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
+**印刷テンプレート：**[create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
 
-**** Form Data Model: [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Form Data Model:**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**** ドキュメントフラグメント： [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
 **レイアウトフラグメント：** [table_lf](../../forms/using/create-templates-print-web.md)
 
 **画像：** PayNow および ValueAddedServices
 
-1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
+1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
 1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
 1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
 1. In the **Channels** wizard:
@@ -69,7 +69,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    | bill_summary_first_ic | BillSummary |
    | summary_charges_first_interactive_communication | 料金 |
 
-   ![Interactive Communications用のドキュメントフラグメント](assets/create_first_ic_doc_fragments_new.png)
+   ![Interactive Communicationsのドキュメントフラグメント](assets/create_first_ic_doc_fragments_new.png)
 
 1. Tap **Charts** target area, and tap **+** to add a **Chart** component.
 1. Tap the Chart component and select ![](assets/configure_icon.png) (Configure). グラフのプロパティが左側のペインに表示されます：
@@ -78,7 +78,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. 「**グラフのタイプ**」ドロップダウンリストから「**円グラフ**」を選択します。
    1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。タップ ![](assets/done_icon.png).
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
-   1. **Y-axisセクションのcalls** data modelオ **ブジェクトタイプから** calltypeプロパティを選択します **** 。 タップ ![](assets/done_icon.png).
+   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. タップ ![](assets/done_icon.png).
    1. Tap ![](assets/done_icon.png) to save the chart properties.
 
 1. Go to the **Assets** tab and apply the filter to display only the layout fragments in the left pane. **table_lf** レイアウトフラグメントを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。
@@ -100,15 +100,15 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、Web チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**** Webテンプレート： [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
+**Webテンプレート：**[Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
 
-**** Form Data Model: [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Form Data Model:**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**** ドキュメントフラグメント： [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
-**** 画像：PayNowWebおよびValueAddedServicesWeb
+**画像：** PayNowWebおよびValueAddedServicesWeb
 
-1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
+1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
 1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
 1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
 1. In the **Channels** wizard:
@@ -142,7 +142,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
 
-   1. **Y-axisセクションのcalls** data modelオ **ブジェクトタイプから** calltypeプロパティを選択します **** 。 タップ ![](assets/done_icon.png).
+   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. タップ ![](assets/done_icon.png).
 
    1. Tap ![](assets/done_icon.png) to save the chart properties.
 
@@ -168,7 +168,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 1. 「**プレビュー**」オプションの隣にあるドロップダウンリストから「**スタイル**」を選択します。
 
-   ![対話型通信のスタイルモードの選択](assets/select_style_ic_web_new.png)
+   ![対話型通信のスタイルモードを選択](assets/select_style_ic_web_new.png)
 
 1. ハイパーリンクテキストのスタイルを設定し、インタラクティブ通信でボタンとして表示するには次の手順を実行します。
 
@@ -177,7 +177,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
    1. 「**背景**」セクションから、ボタンの背景色に赤を選択します。
    1. 「**寸法と位置**」セクションの「**余白**」フィールドで、「**同時に編集**」アイコンをタップして、**右**&#x200B;の余白を **450px** に設定します。「上」、「下」、「左」の各フィールドは空白に設定されます。
-   ![インタラクティブコミュニケーションにハイパーリンクを挿入](assets/ic_web_hyperlink_new.png)
+   ![対話型コミュニケーションにハイパーリンクを挿入](assets/ic_web_hyperlink_new.png)
 
 1. Tap **Pay Now** target area, and tap **+** to add an **Image** component.
 1. Tap the Image component and select ![](assets/configure_icon.png) (Configure). 画像のプロパティが左側のペインに表示されます：
@@ -198,7 +198,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 印刷チャネルを使って Web チャネルのコンテンツを派生するには、次の手順を実行します。
 
-1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
+1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
 1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
 1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
 1. In the **Channels** wizard:
