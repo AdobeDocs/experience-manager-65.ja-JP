@@ -10,18 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
 
 # 「いいね!」設定の使用 {#using-liking}
 
-The `Liking`component is a useful tool that allows users to express an opinion about a particular piece of content, such as an comment within a forum. With the `Liking`component, members select the heart icon to indicate a positive opinion.
+The `Liking` component is a useful tool that allows users to express an opinion about a particular piece of content, such as an comment within a forum. With the `Liking` component, members select the heart icon to indicate a positive opinion.
 
 ## ページへの「いいね!」設定の追加 {#adding-liking-to-a-page}
 
-To add a `Liking` component to a page in author mode, use the component browser to locate
+To add a `Liking` component to a page in author mode, use the component browser to locate:
 
 * `Communities / Liking`
 
@@ -43,11 +43,17 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-* **[!UICONTROL Positive Response Label]**(必須&#x200B;**)ポジティブな応答のプロパティ名。
+* **[!UICONTROL 肯定的な返信ラベル]**
 
-* **[!UICONTROL Negative Response Label]**(必須&#x200B;**)：否定的な応答のプロパティ名です。
+   (必&#x200B;*須*)ポジティブな応答のプロパティ名。
 
-* **[!UICONTROL 集計名]**(必&#x200B;*須*)投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
+* **[!UICONTROL 否定的な返信ラベル]**
+
+   (必&#x200B;*須*)否定応答のプロパティ名。
+
+* **[!UICONTROL 集計名]**
+
+   (*Required*) The internal, identifiable property name for this instance of a voting component.
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -57,7 +63,7 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ### 匿名 {#anonymous}
 
-匿名での「いいね!」はサポートされていません。サイト訪問者が「いいね！」に参加するには、登録（会員になる）し、サインインする必要があります。
+匿名での「いいね!」はサポートされていません。サイト訪問者は登録（会員になる）し、サインインして「いいね！」に参加する必要があります。
 
 ## 追加情報 {#additional-information}
 
