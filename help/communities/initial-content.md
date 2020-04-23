@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,13 +19,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ここでは、次のページを作成します。これらのすべてのページで[ページテンプレート](initial-app.md#createthepagetemplate)を使用します。
 
-* SCF Sandbox Site。メインページの英語バージョンにリダイレクトします。
+* SCF Sandboxサイト。メインページの英語版にリダイレクトされます。
 
-   * SCF Sandbox — サイトの英語版のメインページ
+   * SCF Sandbox — サイトの英語版のメインページ。
 
-      * SCF再生 — 再生するメインページの子
+      * SCF再生 — 再生するメインページの子。
 
-このチュートリアルでは[言語コピー](../../help/sites-administering/tc-prep.md)については詳しく説明しませんが、HTML ヘッダーによるユーザーの優先言語の検出をルートページに実装し、その言語の適切なメインページにリダイレクトできるように設計されています。規則では、ページのノード名に2文字の国コードを使用します。例えば、英語の場合は「en」、フランス語の場合は「fr」などです。
+このチュートリアルでは[言語コピー](../../help/sites-administering/tc-prep.md)については詳しく説明しませんが、HTML ヘッダーによるユーザーの優先言語の検出をルートページに実装し、その言語の適切なメインページにリダイレクトできるように設計されています。ページのノード名に2文字の国コードを使用する規則です。例えば、英語の場合は「en」、フランス語の場合は「fr」などです。
 
 ## 最初のページの作成 {#create-first-pages}
 
@@ -45,7 +45,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    または、[/siteadmin](http://localhost:4502/siteadmin) を参照して、Web サイトのクラシック UI に直接アクセスします。
 
-1. In the explorer pane, select **[!UICONTROL Websites]** and then in the toolbar select **[!UICONTROL New > New Page]**.
+1. In the explorer pane, select **[!UICONTROL Websites]** and then in the toolbar select **[!UICONTROL New]** > **[!UICONTROL New Page]**.
 
    **[!UICONTROL ページを作成]**&#x200B;ダイアログで、次のように入力します。
 
@@ -55,21 +55,21 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 「**[!UICONTROL 作成]**」をクリックします。
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
-1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site`, and click **[!UICONTROL New > New Page]**:
+1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site`, and click **[!UICONTROL New]** > **[!UICONTROL New Page]**:
 
    * タイトル: `SCF Sandbox`
    * 名前: `en`
    * Select **An SCF Sandbox Play Template **
    * 「**作成&#x200B;**」をクリックします。
 
-1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site/SCF Sandbox`, and click **[!UICONTROL New > New Page]**
+1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site/SCF Sandbox`, and click **[!UICONTROL New]** > **[!UICONTROL New Page]**
 
    * タイトル: `SCF Play`
    * 名前: `play`
    * Select **[!UICONTROL An SCF Sandbox Play Template]**
    * 「**[!UICONTROL 作成]**」をクリックします。
 
-1. Web サイトコンソールに Web サイトが次のように表示されます。エクスプローラウィンドウで選択したアイテムの子ページは、右側のウィンドウに表示され、管理できます。
+1. Web サイトコンソールに Web サイトが次のように表示されます。エクスプローラウィンドウで選択した項目の子ページが、管理可能な右側のウィンドウに表示されます。
 
    ![chlimage_1-39](assets/chlimage_1-39.png)
 
@@ -105,4 +105,5 @@ When ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesig
 >[!NOTE]
 >
 >cq:designPath の使用はオプションで、[clientlib の使用](develop-app.md#includeclientlibsintemplate)とは関係ありません。SCF コンポーネントでは [clientlib](client-customize.md#clientlibs-for-scf) を使用して JS および CSS が管理されるので、clientlib の使用は基本的に必須です。
+
 
