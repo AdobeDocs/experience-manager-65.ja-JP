@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -93,7 +93,7 @@ AEM 6.5 Communities GA は、Communities パッケージと共に出荷されま
 
 AEM 6.4 以降、Communities のアップデートは、AEM 累積修正パックおよびサービスパックの一部として提供されています。
 
-For the latest updates to AEM 6.5, see [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
+For the latest updates to AEM 6.5, see [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Packs](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html).
 
 ### バージョン履歴 {#version-history}
 
@@ -115,12 +115,12 @@ MySQL コネクタを別途入手し、インストールする必要があり�
    * バージョンは5.1.38以上にする必要があります
 
 1. アーカイブからmysql-connector-java-&lt;version>-bin.jar（バンドル）を抽出します。
-1. Webコンソールを使用して、バンドルをインストールし、開始します。
+1. Webコンソールを使用して、バンドルをインストールし開始します。
 
    * 例：https://localhost:4502/system/console/bundles
    *  **`Install/Update`**
    * ダウンロードした ZIP アーカイブから抽出したバンドルを参照し、選択します。
-   * ** Oracle CorporationのMySQLcom.mysql.jdbc用JDBCドライバーがアクティブであることを確認し、アクティブでない場合は起動します（またはログを確認します）。
+   * ** Oracle CorporationのMySQLcom.mysql.jdbc用JDBCドライバーがアクティブであることを確認し、アクティブでない場合は開始します（またはログを確認します）。
 
 1. JDBCの設定後に既存のデプロイメントにインストールする場合は、WebコンソールからJDBC設定を再保存して、JDBCを新しいコネクタに再バインドします。
 
@@ -246,7 +246,7 @@ In order for some other user to have the appropriate permissions, they must be a
 
 * 作成者のレプリケーションコンソールにアクセスする
 
-   * グローバルナビゲーションから、 **[UIControl Tools/Deployment/Replication/Agents on authorに移動します。]**
+   * From global navigation, navigate to **[!UICONTROL Tools > Deployment > Replication > Agents on author]**
 
 * 両方のエージェントに対して同じ手順を実行します。
 
@@ -327,7 +327,7 @@ for example,
 
 >[!CAUTION]
 >
->既に暗号鍵に基づいて別のセキュリティ機能が設定されている場合、暗号鍵のレプリケーションをおこなうと設定が破損する可能性があります。For assistance, [contact customer care](https://helpx.adobe.com/marketing-cloud/contact-support.html).
+>既に暗号鍵に基づいて別のセキュリティ機能が設定されている場合、暗号鍵のレプリケーションをおこなうと設定が破損する可能性があります。For assistance, [contact customer care](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html).
 
 #### リポジトリのレプリケーション {#repository-replication}
 
