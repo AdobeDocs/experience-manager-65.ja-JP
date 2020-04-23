@@ -1,6 +1,6 @@
 ---
-title: CSV に書き出し
-seo-title: CSV に書き出し
+title: CSV ファイルへの書き出し
+seo-title: CSV ファイルへの書き出し
 description: ページの情報をローカルシステムの CSV ファイルに書き出します
 seo-description: ページの情報をローカルシステムの CSV ファイルに書き出します
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
 
 ---
 
 
-# CSV に書き出し{#export-to-csv}
+# CSV ファイルへの書き出し{#export-to-csv}
 
 **CSV レポートの作成**&#x200B;では、ページの情報をローカルシステムの CSV ファイルに書き出すことができます。
 
@@ -39,7 +39,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
       * ワークフロー
    * 翻訳
       * 翻訳済み
-   * Analytics
+   * 分析
       * ページ表示
       * 個別訪問者数
       * ページ滞在時間
@@ -51,7 +51,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 生成された `export.csv` ファイルは、Excel（または互換性のあるその他のアプリケーション）で開くことができます。
 
-![]() ![etc-01](assets/etc-01.png)
+![etc-01](assets/etc-01.png)
 
 The create **CSV Report** option is available when browsing the **Sites** console (in List view): it is an option of the **Create** drop down menu:
 
@@ -60,7 +60,7 @@ The create **CSV Report** option is available when browsing the **Sites** consol
 CSV の書き出しファイルを作成するには、次の手順を実行します。
 
 1. **サイト**&#x200B;コンソールを開き、必要に応じて必要な場所まで移動します。
-1. From the toolbar, select **Create** then **CSV Report** to open the wizard:
+1. ツールバーの「**作成**」をクリックし、「**CSV レポート**」を選択してウィザードを開きます。
 
    ![etc-03](assets/etc-03.png)
 
