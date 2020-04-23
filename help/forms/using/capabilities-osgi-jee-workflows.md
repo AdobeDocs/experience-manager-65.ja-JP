@@ -9,7 +9,7 @@ topic-tags: publish
 discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0a2d53aa3eab4eb4ec58fa9b28bef675715b1d09
+source-git-commit: 182043b43e9fdb2e7e6de982bceb87b43f36a3ba
 
 ---
 
@@ -79,12 +79,17 @@ AEM Inboxを使用して、OSGi上でForms中心のAEMワークフローを実�
   </tr>
   <tr>
    <td>キューを使用する（共有個人用キューの使用と、キュー内のタスクの要求）</td>
-   <td>サポートなし</td>
+   <td>サポート対象</td>
    <td>サポート対象</td>
   </tr>
   <tr>
    <td>不在通知を送信する</td>
-   <td>サポートなし</td>
+   <td>サポート対象</td>
+   <td>サポート対象</td>
+  </tr>
+    <tr>
+   <td>UI要素のカスタマイズ</td>
+   <td>サポート対象</td>
    <td>サポート対象</td>
   </tr>
   <tr>
@@ -303,6 +308,11 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>ゲートウェイ、待機なし </td>
+   <td>サポート対象</td>
+   <td>サポート対象</td>
+  </tr>
+   <tr>
+   <td>データを格納する変数 </td>
    <td>サポート対象</td>
    <td>サポート対象</td>
   </tr>
