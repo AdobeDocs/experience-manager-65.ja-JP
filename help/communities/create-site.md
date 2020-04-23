@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -47,7 +47,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 * **コミュニティサイト名**：engage
 
-   * サイトの作成後に簡単に変更できない名前を再確認します。
+   * 重複 — サイトの作成後に名前が簡単に変更されないので、名前を確認します。
    * コミュニティサイト名の下に最初のURLが表示されます。
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
    * *例えば*、https://localhost:4502/content/sites/ `engage/en.html`
@@ -82,11 +82,11 @@ Visit the [Getting Started with AEM Communities for Enablement](/help/communitie
 
 「[ユーザー管理](/help/communities/sites-console.md#user-management)」タブのチェックボックスをすべてオンにします。
 
-* サイト訪問者が自己登録を行えるようにするには
-* サイトの訪問者がサインインせずにサイトを表示できるようにするには
+* サイト訪問者が自己登録を許可するには
+* サイト訪問者がサインインせずに表示できるようにするには
 * コミュニティの他のメンバーからのメッセージの送受信をメンバーに許可するには
-* プロファイルの登録と作成を行う代わりに、Facebookでのログインを許可するには
-* プロファイルの登録と作成を行う代わりに、Twitterでのログインを許可するには
+* 登録と作成を行う代わりにFacebookでのログインを許可するプロファイル
+* 登録と作成を行う代わりにTwitterでのログインを許可するプロファイル
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ Visit the [Getting Started with AEM Communities for Enablement](/help/communitie
 
 The tags which may be applied to community content are controlled by selecting AEM namespaces previously defined through the [Tagging Console](/help/sites-administering/tags.md#tagging-console) (such as the [Tutorial namespace](/help/communities/setup.md#create-tutorial-tags)).
 
-名前空間は先行入力検索で簡単に検索できます。例：
+名前空間は先行入力検索で簡単に検索できます。以下に例を示します。
 
 * タイプ `tut`
 *  `Tutorial`
@@ -111,14 +111,14 @@ The tags which may be applied to community content are controlled by selecting A
 
 コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先読み検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
-例：
+以下に例を示します。
 
 * タイプ `q`
 * Select [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
->[トンネルサービス](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) では、パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
+>[トンネルサービス](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) では、パブリッシュ環境のみに存在するメンバーとグループを選択できます。
 
 ![新しいサイトでのユーザの役割](assets/site-admin-1.png)
 
@@ -199,7 +199,7 @@ Select **Create.**
 
 * **サイトを削除**
 
-   Select the delete icon to delete the community site from within **[UIControl Communities > Sites console]**. サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
+   Select the delete icon to delete the community site from within **[!UICONTROL Communities > Sites console]**. サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
 
 ![siteactions](assets/siteactions.png)
 
@@ -209,17 +209,17 @@ Select **Create.**
 >
 >オーサーインスタンスで、メインメニューから：
 >
->1. Navigate to **[UIControl Tools > Operations > Replication]** menu.
->1. 「作成者の **[UIControlエージェント」を選択します]**。
->1. 「UIControl Default Agent ( **[publish)」を選択します]**。
->1. 「 **[UIControl Settings」の横にある]**「UIControl Edit」を **[選択します]**。
->1. エージェント設定のポップアップダイアログで、「 **[UIControl Transport]** 」タブを選択します。
+>1. Navigate to **[!UICONTROL Tools > Operations > Replication]** menu.
+>1. Select **[!UICONTROL Agents on author]**.
+>1. Select **[!UICONTROL Default Agent (publish)]**.
+>1. Next to **[!UICONTROL Settings]**, select **[!UICONTROL Edit]**.
+>1. In pop-up dialog for Agent Settings, select **[!UICONTROL Transport]** tab.
 >1. URIで、ポート番号4503を目的のポート番号に変更し、
    >    * 例えば、ポート6103を使用するには：
       >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >
-1. 「 **[UIControl OK」を選択します]**。
-1. (Optional) Select **[UIControl Clear]** or **[UIControl Force Retry]** to reset the replication queue.
+1. 「**[!UICONTROL OK]**」を選択します。
+1. (Optional) Select **[!UICONTROL Clear]** or **[!UICONTROL Force Retry]** to reset the replication queue.
 
 
 
@@ -263,7 +263,7 @@ Note that [Aaron McDonald](/help/communities/tutorials.md#demo-users) is a membe
 
 Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されない場合、認証エラーによりコミュニティサイトのログインページが再度表示され、エラーメッセージが表示されるという利点があります。
 
-名前を付けて `Login Page Mapping` 追加
+追加 `Login Page Mapping` ～
 
 * `/content/sites/engage/en/signin:/content/sites/engage/en`
 
@@ -290,12 +290,12 @@ To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the 
 
 1. With newly created `localhost.4503` node selected:
 
-   * プロパティの追加：
+   * 追加プロパティ：
 
       * **名前**：sling:match
       * **タイプ**：String
       * **値** localhost.4503/$（「$」文字で終わる必要があります）
-   * プロパティの追加：
+   * 追加プロパティ：
 
       * **名前**：sling:internalRedirect
       * **タイプ**：String
