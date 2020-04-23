@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
 
 ---
 
@@ -27,17 +27,18 @@ Handlebars ヘルパーは、SCF コンポーネントの操作を円滑化す�
 
 AEM Communities に付属のカスタム SCF ヘルパーは、次の[クライアントライブラリ](../../help/sites-developing/clientlibs.md)に定義されています。
 
-* /etc/clientlibs/social/commons/scf/helpers.js
+* `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
 >[最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)をインストールしてください。
 
+
 ## Abbreviate {#abbreviate}
 
 maxWords および maxLength プロパティに準拠した省略形文字列を返すヘルパーです。
 
-省略対象の文字列は context で指定します。コンテキストが指定されない場合は、空の文字列が返されます。
+省略対象の文字列は context で指定します。コンテキストが指定されない場合、空の文字列が返されます。
 
 context は最初に maxLength にトリミングされ、その後、いくつかの単語に分割されてから maxWords まで縮小されます。
 
@@ -55,7 +56,7 @@ safeString を true に設定した場合は、SafeString が文字列として�
 
 * **maxWords**:数値
 
-   （オプション）デフォルトは、トリミングされた文字列内の単語の数です。
+   （オプション）デフォルトは、トリミングされた文字列内の単語数です。
 
 * **safeString**:ブール値
 
@@ -99,11 +100,11 @@ div の下に 2 つの span を追加するヘルパーです。一方はフル�
 
 * **numChars**:数値
 
-   （オプション）フルテキストを表示しない場合に表示する文字の数です。 デフォルト値は 100 です。
+   （オプション）全文を表示しない場合に表示する文字数。 初期設定は 100 です。
 
 * **moreText**:文字列
 
-   （オプション）表示するテキストが増えていることを示すテキスト。 デフォルト値は「more」です。
+   （オプション）表示するテキストが増えていることを示す表示テキストです。 デフォルト値は「more」です。
 
 * **ellipsesText**:文字列
 
@@ -135,11 +136,11 @@ Then content-loadmore would return
 
 * **context**:数値
 
-   （オプション） 1970年1月1日からのミリ秒オフセット値（エポック）。 初期設定は現在の日付です。
+   （オプション）1970年1月1日（エポック）からのミリ秒オフセット値。 初期設定は現在の日付です。
 
 * **format**:文字列
 
-   （オプション）適用する日付形式。 初期設定は「YYYY-MM-DDTHH:mm:ss.sssZ」で、結果は「2015-03-18T18:17:13-07:00」と表示されます。
+   （オプション）適用する日付形式。 初期設定は「YYYY-MM-DDTHH:mm:ss.ssssZ」で、結果は「2015-03-18T18:17:13-07:00」と表示されます。
 
 ### 例 {#examples-1}
 
@@ -163,11 +164,11 @@ Then content-loadmore would return
 
 * **lvalue**:文字列
 
-   比較する左側の値
+   比較する左側の値。
 
 * **rvalue**:文字列
 
-   比較する右側の値
+   比較する右側の値。
 
 ### 例 {#example-1}
 
@@ -191,7 +192,7 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
 * **mode**:文字列
 
-   (optional) A comma separated list of [WCM modes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) to test if set.
+   (Optional) A comma separated list of [WCM modes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) to test if set.
 
 ### 例 {#example-2}
 
@@ -219,7 +220,7 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
    （オプション）変換するデフォルトの文字列。 context を指定しない場合は必須です。
 
-* **comment**:文字列
+* **コメント**:文字列
 
    （オプション）翻訳ヒント
 
@@ -246,21 +247,21 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
    （相対パスを指定しない場合はオプション）
 
-   現在のコ `this`ンテキストを渡すために使用
+   を使用し `this` て、現在のコンテキストを渡します。
 
-   要求さ `this.id` れたresourceTypeのレンダリングに使用す `id` るリソースを取得するために使用
+   要求さ `this.id` れたresourceTypeのレンダリング用のリ `id` ソースを取得するために使用します。
 
 * **resourceType**:文字列
 
-   （オプション）リソースタイプは、コンテキストからリソースタイプにデフォルト設定されます。
+   （オプション）リソースタイプは、コンテキストからデフォルトでリソースタイプに設定されます。
 
 * **template**:文字列
 
-   コンポーネントスクリプトへのパス
+   コンポーネントスクリプトへのパス。
 
 * **path**:文字列
 
-   （必須）リソースへのパス。 パスが相対パスの場合、context を指定する必要があります。そうしないと、空の文字列が返されます。
+   （必須）リソースのパス。 パスが相対パスの場合、context を指定する必要があります。そうしないと、空の文字列が返されます。
 
 * **authoringDisabled**:ブール値
 
@@ -272,11 +273,11 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-この場合、`this.id` + /comments に新しいコメントコンポーネントがインクルードされます。
+This will include a new comments component at `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
-AEM html クライアントライブラリとして js、css、または theme の各ライブラリをインクルードするヘルパーです。jsやcssなど、様々なタイプの複数の包含タグの場合、このタグをHandlebarsスクリプトで複数回使用する必要があります。
+AEM html クライアントライブラリとして js、css、または theme の各ライブラリをインクルードするヘルパーです。jsやcssなど、異なるタイプの複数の包含タグの場合、このタグはHandlebarsスクリプトで複数回使用する必要があります。
 
 This helper, appropriate only on the server-side, provides functionality similar to [ui:includeClientLib](../../help/sites-developing/taglib.md) for JSP scripts.
 
@@ -284,19 +285,19 @@ This helper, appropriate only on the server-side, provides functionality similar
 
 * **カテゴリ**:文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
+   （オプション）クライアントライブラリのリストをコンマで区切って指定するカテゴリ。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
 
 * **テーマ**:文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
+   （オプション）クライアントライブラリのリストをコンマで区切って指定するカテゴリ。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
 
 * **js**:文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
+   （オプション）クライアントライブラリのリストをコンマで区切って指定するカテゴリ。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
 
 * **css**:文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
+   （オプション）クライアントライブラリのリストをコンマで区切って指定するカテゴリ。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
 
 ### 例 {#examples-2}
 
@@ -353,9 +354,9 @@ This helper, appropriate only on the server-side, provides functionality similar
 
    「今」と比較する過去の時間。 時間は 1970 年 1 月 1 日（epoch）からのミリ秒単位のオフセットとして表されます。
 
-* **daysCutof**:数値
+* **daysCutofof**:数値
 
-   実際の日付に切り替わる前の日数。 デフォルト値は 60 です。
+   実際の日付に切り替える前の日数。 初期設定は 60 です。
 
 ### 例 {#example-5}
 
@@ -383,7 +384,7 @@ XSS に対する保護として、HTML 要素コンテンツのソース文字�
 
 * **context**:object
 
-   エンコードするHTML
+   エンコードするHTMLです。
 
 ### 例 {#example-6}
 
@@ -401,7 +402,7 @@ XSS に対する保護として、HTML 属性値に記述するソース文字�
 
 * **context**:オブジェクト
 
-   エンコードするHTML
+   エンコードするHTMLです。
 
 ### 例 {#example-7}
 
@@ -419,7 +420,7 @@ XSS に対する保護として、JavaScript 文字列コンテンツに記述�
 
 * **context**:オブジェクト
 
-   エンコードするHTML
+   エンコードするHTMLです。
 
 ### 例 {#example-8}
 
@@ -437,7 +438,7 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 * **context**:オブジェクト
 
-   削除するURL
+   削除するURL。
 
 ### 例 {#example-9}
 
@@ -447,23 +448,23 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 ## Handlebars.js の基本的概要 {#handlebars-js-basic-overview}
 
-[Handlebars.jsドキュメントのヘルパー関数の概要を簡単に示します](https://handlebarsjs.com/expressions.html)。
+A quick overview of helper functions from [Handlebars.js documentation](https://handlebarsjs.com/expressions.html):
 
-* Handlebarsヘルパー呼び出しは、単純な識別子（ヘルパーの*name *）で、その後に0個以上の空白で区切られたパラメーターが続きます。
+* Handlebars ヘルパーを呼び出すには、単純な識別子（ヘルパーの名前&#x200B;**）を使用し、それに続けて 0 個以上のパラメーターをスペースで区切って指定します。
 * パラメーターには、単純な文字列、数値、ブール値、または JSON オブジェクトを指定し、オプションで最後のパラメーターとして一連のキー／値ペア（ハッシュ引数）を指定します。
 * ハッシュ引数内のキーは単純な識別子にする必要があります。
 * ハッシュ引数内の値は Handlebars 式（単純な識別子、パス、または文字列）です。
 * The current context, `this`, is always available to Handlebars helpers.
-* コンテキストは、文字列、数値、ブール値、またはJSONデータオブジェクトです。
+* コンテキストは、文字列、数値、ブール値、またはJSONデータオブジェクトのいずれかです。
 * `this.url` や `this.id` のように、現在のコンテキスト内にネストされているオブジェクトを context として渡すことができます（単純なヘルパーおよびブロックヘルパーを示す後述の例を参照）。
 
-* ブロックヘルパーとは、テンプレート内の任意の場所から呼び出すことができる関数です。テンプレートのブロックは、毎回異なるコンテキストを使用して0回以上呼び出すことができます。 They contain a context between {{#*name*}} and {{/*name*}}.
+* ブロックヘルパーとは、テンプレート内の任意の場所から呼び出すことができる関数です。テンプレートのブロックは、毎回異なるコンテキストで0回以上呼び出すことができます。 They contain a context between {{#*name*}} and {{/*name*}}.
 
-* Handlebars では、ヘルパーに対する最後のパラメーターとして「options」を使用します。特別なオブジェクト「options」には、
+* Handlebars では、ヘルパーに対する最後のパラメーターとして「options」を使用します。特別なオブジェクト&#39;options&#39;には、
 
    * オプションのプライベートデータ(options.data)
-   * 呼び出しからのオプションのキー値プロパティ(options.hash)
-   * 自身を呼び出す機能(options.fn())
+   * 呼び出しのオプションのキー値プロパティ(options.hash)
+   * 自動呼び出し機能(options.fn())
    * その逆関数を呼び出す機能(options.inverse())
 
 * ヘルパーから返される HTML 文字列コンテンツは SafeString になるようにすることをお勧めします。
@@ -488,7 +489,7 @@ var template = Handlebars.compile(source);
 template(context);
 ```
 
-レンダリング対象：
+レンダリング：
 
 &lt;ul>&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>投稿！&lt;/a>&lt;/li>&lt;/ul>
 
@@ -512,11 +513,11 @@ var template = Handlebars.compile(source);
 template(data);
 ```
 
-レンダリング対象：&lt;ul>&lt;li>&lt;a href=&quot;/people/1&quot;>アラン&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/people/2&quot;>イエウダ&lt;/a>&lt;/li>&lt;/ul>
+レンダリング：&lt;ul>&lt;li>&lt;a href=&quot;/people/1&quot;>アラン&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/people/2&quot;>イエウダ&lt;/a>&lt;/li>&lt;/ul>
 
 ## カスタム SCF ヘルパー {#custom-scf-helpers}
 
-カスタムヘルパーは、特にデータを渡す場合に、クライアント側だけでなくサーバー側で実装する必要があります。SCFの場合、ページが要求されたときに、指定したコンポーネントのHTMLがサーバーで生成されるので、ほとんどのテンプレートはサーバー側でコンパイルおよびレンダリングされます。
+カスタムヘルパーは、特にデータを渡す場合に、クライアント側だけでなくサーバー側で実装する必要があります。SCFの場合、ほとんどのテンプレートは、ページが要求されたときに特定のコンポーネントのHTMLを生成するので、サーバー側でコンパイルおよびレンダリングされます。
 
 ### サーバー側カスタムヘルパー {#server-side-custom-helpers}
 
@@ -566,6 +567,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >このコンポーネントは、ログインしているユーザーのクライアント側で再レンダリングされます。クライアント側ヘルパーが見つからない場合、このコンポーネントは表示されません。
 
+
 ### クライアント側カスタムヘルパー {#client-side-custom-helpers}
 
 クライアント側ヘルパーは、`Handlebars.registerHelper()` () を呼び出すことによって登録する Handlebars スクリプトです。次に例を示します。
@@ -588,9 +590,9 @@ function(Handlebars, SCF, $CQ) {
 カスタムのクライアント側ヘルパーは、カスタムのクライアントライブラリに追加する必要があります。
 clientlib の条件は次のとおりです。
 
-* Include a dependency on `cq.social.scf`
-* ハンドルを読み込んだ後に読み込む
-* Be [included](clientlibs.md)
+* Include a dependency on `cq.social.scf`.
+* ハンドルバーの読み込み後に読み込みます。
+* Be [included](clientlibs.md).
 
 Note: the SCF helpers are defined in `/etc/clientlibs/social/commons/scf/helpers.js`.
 
