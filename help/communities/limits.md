@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
@@ -21,46 +21,46 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 貢献度の制限機能を使用すると、スパムからの保護手段として、コミュニティメンバーの貢献度を制限できます。
 
-制限されているメンバーが貢献度の許可される数を超えて投稿すると、制限を超えたので、投稿が拒否されたことを伝えるアラートが表示されます。その後、コミュニティのメンバーはコミュニティメッセージセンターに行き、必要に応じて制限を解除できるコミュニティマネージャーに問い合わせることができます。
+制限されているメンバーが貢献度の許可される数を超えて投稿すると、制限を超えたので、投稿が拒否されたことを伝えるアラートが表示されます。コミュニティのメンバーは、コミュニティメッセージセンターに行き、必要に応じて制限を解除できるコミュニティマネージャーに問い合わせることができます。
 
 貢献度の制限は、[メンバーコンソール](members.md)から個別に有効にすることや、サイト訪問者が新たにメンバーになると自動的に有効になるよう設定することができます。
 
-メンバーコンソールを使用すると、コミュニティマネージャーがメンバーに対して貢献度の制限を事前に削除したり、メンバーがメッセージをコミュニティマネージャーに送信してリクエストを行った場合に積極的に削除したりできます。
+メンバーコンソールを使用すると、コミュニティマネージャーがメンバーに対して貢献度の制限を事前に削除したり、メンバーがリクエストを行ったコミュニティマネージャーにメッセージを送信する際に、貢献度の制限を再度削除したりできます。
 
 ## AEM Communities ユーザー生成コンテンツの貢献度の制限の設定 {#aem-communities-user-generated-content-contribution-limits-configuration}
 
-この OSGi 設定では、次をおこないます。
+次のOSGi設定：
 
-* 貢献度の制限（期間内の投稿数）の特性を定義します
-* 制限に達した場合にメンバーにメッセージを送信できるユーザーを識別します。
-* 制約を受ける必要のないドメインを識別します。
+* 貢献度の制限（期間内の投稿数）の特性を定義します。
+* 制限に達した場合に、メンバーが誰にメッセージを送信できるかを識別します。
+* 制限を必要としないドメインを識別します。
 
 この OSGi 設定にアクセスするには、次の手順に従います。
 
-* プライマリパブリッシャー
-* 管理者権限でサインイン
-* Access the [Web Console](../../help/sites-deploying/configuring-osgi.md)
+* プライマリパブリッシャ：
+* 管理者権限でサインインします。
+* Access the [Web Console](../../help/sites-deploying/configuring-osgi.md).
 
    * For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Locate `AEM Communities User Generated Content Contribution Limits Configuration`
-* 編集アイコンを選択します
+* Locate `AEM Communities User Generated Content Contribution Limits Configuration`.
+* 編集アイコンを選択します。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
 * **[!UICONTROL UGC貢献度制限の自動適用]**
 
-   オンにすると、コミュニティメンバーとして登録する際に、ユーザーに対して貢献度の制限を自動的に設定します。 This is reflected in the community member&#39;s profile and may be enabled/disabled from the [members console](members.md). ホワイトリストに記載されたドメインからの電子メールアドレスを持つ新しいメンバーは、制限されません。
+   このオプションを選択すると、コミュニティメンバーとして登録する際に、ユーザーに対して貢献度の制限が自動的に設定されます。 This is reflected in the community member&#39;s profile and may be enabled/disabled from the [members console](members.md). ホワイトリストに記載されたドメインの電子メールアドレスを持つ新しいメンバーは、制限されません。
 
    初期設定はオフです。
 
-* **[!UICONTROL UGC制限]**
+* **[!UICONTROL UGCの制限]**
 
-   貢献度の最大数。
+   貢献の最大数。
 
    初期設定は 10 件です。
 
-* **[!UICONTROL UGC制限周波数]**
+* **[!UICONTROL UGC制限頻度]**
 
    UGC制限を制限する期間。
 
@@ -82,4 +82,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    初期設定では、メッセージの受信者はいません。
 
-注意：デフォルト設定では、1時間以内の投稿数は10件に制限されます。
+注意：デフォルトの設定では、1時間の間に10件の投稿が制限されます。
