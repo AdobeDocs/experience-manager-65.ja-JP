@@ -3,7 +3,7 @@ title: PDFラスタライザを使用したレンディションの生成
 description: この記事では、Adobe PDF Rasterizer ライブラリを使用して、高品質のサムネールとレンディションを生成する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -14,13 +14,13 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
-* サイズが大きくコンテンツが多い AI／PDF ファイル
-* 追加設定なしでは生成されないサムネールがある AI／PDF ファイル
-* Pantone Matching System（PMS）カラーを使用した AI ファイル
+* サイズが大きくコンテンツが多い AI／PDF ファイル.
+* サムネールがあらかじめ生成されていないAIファイルおよびPDFファイル。
+* Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
 PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、何もしなくてもすぐに使用できる出力に比べて高品質です。そのため、デバイス全体で一貫した表示エクスペリエンスを得ることができます。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
 
-1. [パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)にある PDF Rasterizer パッケージを AEM インスタンスにインストールします。
+1. Install the PDF Rasterizer package on your AEM deployment from [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
 
    >[!NOTE]
    >
@@ -105,4 +105,4 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
 1. ワークフローを保存します。
-1. PDF または AI ファイルを AEM Assets にアップロードします。PDF Rasterizer により、ファイルのサムネールと Web レンディションが生成されます。
+1. PDFまたはAIファイルをAEM Assetsにアップロードします。 PDF Rasterizer により、ファイルのサムネールと Web レンディションが生成されます。
