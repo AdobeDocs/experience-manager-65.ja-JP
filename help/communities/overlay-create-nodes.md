@@ -10,18 +10,19 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 ---
 
 
 # ノードの作成 {#create-nodes}
 
-最小限の数の必要なファイルを /libs から /apps にコピーし、/apps 内で変更することにより、コメントシステムをカスタムバージョンでオーバーレイします。
+Overlay the comment system with a custom version by copying the minimal number of files necessary from `/libs` into `/apps` and modifying them in `/apps`.
 
 >[!CAUTION]
 >
 >再インストールやアップグレードをおこなうと、/libs フォルダーは削除されたり、置換されたりすることがありますが、/apps フォルダーの内容が変更されることはないので、/libs フォルダーの内容を編集することはありません。
+
 
 Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on an author instance, begin by creating a path in the /apps folder which is identical to the path to the overlaid components in the /libs folder.
 
@@ -37,7 +38,7 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `social`
 1. ノードを `social` 選択
-   * **[!UICONTROL 作成／フォルダー...]** を選択します。
+   * **[!UICONTROL 作成]** / **[!UICONTROL フォルダ…]**
       * 名前を入力: `commons`
 1. ノードを `commons` 選択
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
@@ -46,7 +47,7 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `hbs`
 1. ノードを `hbs` 選択
-   * **[!UICONTROL 作成／コンポーネントを作成...]** を選択します。
+   * **[!UICONTROL 作成]** /コ **[!UICONTROL ンポーネントを作成…]**
       * ラベルを入力： `comments`
       * Enter Title: `Comments`
       * Enter Description: `List of comments without showing avatars`
@@ -74,7 +75,7 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
 
 >[!NOTE]
 >
->In order to preserve the inheritance chain, the `Super Type` (property `sling:resourceSuperType`) of the overlay components are set to the same value as the `Super Type` of the components being overlaid, in this case
+>In order to preserve the inheritance chain, the `Super Type` (property `sling:resourceSuperType`) of the overlay components are set to the same value as the `Super Type` of the components being overlaid, in this case:
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
