@@ -11,29 +11,29 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
 
-# モデレートコンソール{#moderation-console}
+# モデレートコンソール {#moderation-console}
 
 In AEM Communities, bulk [moderation of community content](/help/communities/moderate-ugc.md) is possible from both the author and publish environments by administrators and community moderators (trusted community members assigned as moderators).
 
 Administrators and community moderators may also perform [in-context moderation](/help/communities/in-context.md) in the publish environment.
 
-A feature of all [community sites](/help/communities/sites-console.md) is an `Administration`menu item available to users who sign in with administrative privileges. The `Administration`link provides access to the Moderation console.
+A feature of all [community sites](/help/communities/sites-console.md) is an `Administration` menu item available to users who sign in with administrative privileges. The `Administration` link provides access to the Moderation console.
 
-モデレートコンソールでは、管理者とコミュニティモデレーターが、モデレート権限を持っているすべてのユーザー生成コンテンツ（UGC）にアクセスできます。複数のサイトのモデレートを許可されている場合は、すべてのサイトの投稿を表示したり、選択したコミュニティのサイトでフィルターしたりできます。
+モデレートコンソールでは、管理者とコミュニティモデレーターが、モデレート権限を持っているすべてのユーザー生成コンテンツ（UGC）にアクセスできます。複数のサイトのモデレートを許可されている場合は、すべてのサイトにわたる投稿を表示したり、選択したコミュニティのサイトでフィルターしたりできます。
 
 For more detailed information visit [Managing Users and User Groups](/help/communities/users.md).
 
 モデレートコンソールでは以下の操作を実行できます。
 
-* モデレートタスクの一括実行
-* UGC の検索
-* UGC の詳細の表示
-* UGC 作成者の詳細の表示
+* モデレートタスクの一括実行。
+* UGCの検索を参照してください。
+* UGCの詳細の表示を参照してください。
+* UGC作成者の詳細の表示。
 
 Only when signed in as an administrator, or a member with ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`, may moderation tasks be performed.
 
@@ -41,7 +41,7 @@ Only when signed in as an administrator, or a member with ` [moderator permissio
 
 公開済みのコミュニティサイトからモデレートコンソールにアクセスするには、コミュニティモデレーターがサインインしたときに表示される管理リンクからアクセスします。
 
-![publishewretail](assets/publishweretail.png)
+![publishretail](assets/publishweretail.png)
 
 管理リンクを選択すると、以下のモデレートコンソールが表示されます。
 
@@ -51,13 +51,14 @@ Only when signed in as an administrator, or a member with ` [moderator permissio
 
 オーサー環境でモデレートコンソールに移動するには、
 
-* グローバルナビゲーションから、**ナビゲーション／コミュニティ／モデレート**&#x200B;を選択します。
+* From global navigation, select **[!UICONTROL Communities]** > **[!UICONTROL Moderation]**.
 
-Only when signed in as an administrator, or as a member with ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`, may moderation tasks be performed. 表示されるコミュニティコンテンツは、サインインしたメンバーがモデレートを許可されるコンテンツのみです。
+Only when signed in as an administrator, or as a member with [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers), moderation tasks can be performed. 表示されるコミュニティコンテンツは、サインインしたメンバーがモデレートを許可されるものだけです。
 
 >[!NOTE]
 >
->パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトではストレージはJSRPで、作成者および発行用の共通のストアではありません。 See [Community Content Storage](/help/communities/working-with-srp.md).
+>パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトではストレージはJSRPで、作成者と発行の共通のストアではありません。 See [Community Content Storage](/help/communities/working-with-srp.md).
+
 
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
@@ -65,7 +66,7 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 
 左側のナビゲーションレール（オーサー環境では表示されますが、パブリッシュ環境では表示されません）の他に、モデレートコンソールの UI には次の主な領域があります。
 
-* **[上部ナビゲーションバー](#top-navigation-bar)**
+* **[トップナビゲーションバー](#top-navigation-bar)**
 * **[ツールバー](#toolbar)**
 * **[コンテンツ領域](#content-area)**
 
@@ -81,7 +82,7 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 
 上部ナビゲーションバーの下にツールバーがあり、その左側に次の切り替えスイッチがあります。
 
-![toggleswitch](assets/toggleswitch.png)
+![togglesswitch](assets/toggleswitch.png)
 
 [フィルターレール](/help/communities/moderation.md#filterrail)「検索」を選択すると、コンテンツのフィルター条件のプロパティを選択できるレールが開きます。
 
@@ -91,35 +92,37 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 
 コンテンツ領域には、投稿された UGC に関する以下の情報が表示されます。
 
-* 投稿された UGC
+* UGC投稿済み
 * メンバー名
-* メンバーのアバター
-* 投稿場所
-* 投稿日時
-* 投稿に対する返信数
-* 投稿に関連付けられている[好感度](/help/communities/moderate-ugc.md#sentiment)
-* 承認されている場合は、チェックマークが表示されます。
-* 添付ファイルがある場合は、クリップのアイコンが表示されます。
+* 会員アバター
+* 投稿の場所。
+* 投稿された日時。
+* 投稿への返信の数。
+* [投稿に関連付け](/help/communities/moderate-ugc.md#sentiment) られたセンチメント
+* 承認されると、チェックマークが表示されます。
+* 添付ファイルがある場合は、クリップが表示されます。
 
 >[!NOTE]
->
+> 
 >The content area features an *infinite scroll*, which means that it will allow you to continue scrolling until you have reached the end of the content. ツールバーは、スクロール時もコンテンツ領域の上の位置に固定されて表示されます。
+
 
 ### フィルターレール {#ootbfilters}
 
 ![chlimage_1-212](assets/chlimage_1-212.png)
 
-サイドパネルアイコンをクリックすると、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールは、異なるフィルターを提供し、それぞれがコンテンツ領域に表示される参照先のUGCに直接影響を与えます。
+サイドパネルアイコンをクリックすると、フィルターパネルが開きます。 コンテンツ領域の左側に表示されるフィルターレールは、様々なフィルターを提供し、それぞれがコンテンツ領域に表示される参照先のUGCに直接影響を与えます。
 
-The filters within each category are **OR** ed together, and the filters in different categories are **AND** ed together.
+The filters within each category are **OR**&#39;d together, and the filters in different categories are **AND**&#39;d together.
 
-For example, if you check both **Question** and **Answer**, you will see content that is either a **Question ***or* an **Answer**.
+For example, if you check both **Question** and **Answer**, you will see content that is either a **Question** *or* an **Answer**.
 
-However if you check **Question** and **Pending**, you will only see content that is a **Question **and is **Pending**.
+However if you check **Question** and **Pending**, you will only see content that is a **Question** and is **Pending**.
 
 >[!NOTE]
 >
 >コミュニティモデレーターは、モデレートコンソール UI で事前定義されたフィルターをブックマークできます。これらのフィルターは、URL の末尾に（クエリ文字列パラメーターとして）追加されるので、モデレーターはブックマークしたフィルターに戻ったり、これらのリンクを共有することもできます。
+
 
 ![searchicon](assets/searchicon.png)
 
@@ -149,6 +152,7 @@ However if you check **Question** and **Pending**, you will only see content tha
 >
 >信頼されているコミュニティメンバーが一括モデレートコンソールにアクセスしたときは、そのメンバーがモデレート権限を持つコミュニティサイト用に作成された UGC 参照のみが表示されます。これらの UGC 参照はサイトフィルターでフィルタリングできます。
 
+
 #### コンテンツタイプ {#content-type}
 
 コンテンツタイプは、表示される UGC 参照を、選択したリソースタイプの投稿のみに限定します。次に示すタイプの中から 1 つ以上選択できます。何も選択しない場合は、すべてのタイプが表示されます。
@@ -173,22 +177,22 @@ However if you check **Question** and **Pending**, you will only see content tha
 
 フィルター条件のリソースをさらに追加するには：
 
-* オーサーインスタンスに移動します。
-* 管理者としてサインインします。
-* [Web コンソール](https://localhost:4502/system/console/configMgr)を開きます。
-* locate `AEM Communities Moderation Dashboard Filters`
-* 設定を選択して編集モードを開きます。
-* フィルター条件のコンポーネントの ResourceType を入力します。
+* 作成者インスタンスに管理者としてログインします。
+* Open [Web Console](https://localhost:4502/system/console/configMgr).
+* Locate `AEM Communities Moderation Dashboard Filters`.
+* 編集モードで開く設定を選択します。
+* フィルタするコンポーネントのResourceTypeを入力します。
 
-   * 例えば、含まれる投票コンポーネントをフィルターするには、次のように入力します。
+   * 例えば、含まれる投票コンポーネントをフィルタするには、次のように入力します。
+
       `Voting=social/tally/components/hbs/voting`
 
 ![chlimage_1-215](assets/chlimage_1-215.png)
 
-* 「Save」を選択します。
-* コミュニティ - モデレートコンソールを更新します。
+* 「保存」を選択します。
+* コミュニティ — モデレートコンソールを更新します。
 
-The result is a new selectable filter for `Voting`under the `Content Type` filter group.
+The result is a new selectable filter for `Voting` under the `Content Type` filter group.
 
 このフィルターを選択すると、ダッシュボードのコンテンツに、入力した ResourceType に一致する UGC が表示されます。
 
@@ -200,13 +204,14 @@ The result is a new selectable filter for `Voting`under the `Content Type` filte
 >
 >「未回答」ステータスのみを選択すると、回答済みの質問を除く（すべてのコンテンツタイプの）すべてのコンテンツが表示されます。これは、未回答の質問とフォーラムトピックやブログ記事、コメントなどのコンテンツには、回答済みの質問に関係するプロパティが存在しないからです。
 
+
 ![ステータス](assets/statuses.png)
 
 #### フラグ設定 {#flagging}
 
 フラグ設定は、表示される UGC 参照を、フラグが付いている投稿または非表示の投稿のみに限定します。
 
-コンテンツにフラグを付けると、**Flag **ボタンを再度選択して、そのコンテンツの1つのフラグを解除するまで、フラグは付いたままになります。 フラグには重要やフォローアップなどのレベルがないことに注意してください。
+Once a piece of content is flagged, it remains flagged until you unflag that single piece of content by selecting the **Flag** button once again. フラグには重要やフォローアップなどのレベルがないことに注意してください。
 
 ![chlimage_1-216](assets/chlimage_1-216.png)
 
@@ -224,38 +229,38 @@ The result is a new selectable filter for `Voting`under the `Content Type` filte
 
 #### 好感度 {#sentiment}
 
-[好感度](/help/communities/moderate-ugc.md#sentiment) （センチメント）は、好感度値が正、負または中立の投稿に対して表示される参照UGCを制限します。
+[好感度](/help/communities/moderate-ugc.md#sentiment) （好感度）は、参照されるUGCの表示を、好感度値が正、負または中立の投稿に制限します。
 
 ![chlimage_1-219](assets/chlimage_1-219.png)
 
 ## Custom Filters {#custom-filters}
 
-フィルターパネルのデフォルトのフィルターに加え [て](/help/communities/moderation.md#ootbfilters)、メタデータに対する追加のカスタムフィルターをモデレートUIに追加できます。 開発者は、Githubのサンプルコードを使用して、既存のモデレートUIフィルターを拡張できます。
+フィルターパネルの初期設定のフィルター以外に [](/help/communities/moderation.md#ootbfilters)、メタデータの追加のカスタムフィルターをモデレートUIに追加できます。 開発者は、Githubのサンプルコードを使用して、既存のモデレートUIフィルターを拡張できます。
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-Githubのサ [ンプルプロジェクトは](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) 、タグフィルターを実装し、特定のタグがユーザー生成コンテンツに適用されるかどうかに基づいてUGCリストをフィルタリングします。 サンプルコードに従って、他の類似したUGCメタデータフィールドに類似したフィルターを作成できます。
+Githubのサ [ンプルプロジェクトは](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) 、タグフィルターを実装し、特定のタグがユーザー生成コンテンツに適用されるかどうかに基づいてUGCリストをフィルターします。 サンプルコードに従って、他の類似したUGCメタデータフィールドに類似したフィルターを作成することができます。
 
 タグフィルターのサンプルをインストールするには：
 
-1. AEM作成者(https://[aem-author]:4502/crx/packmgr/index.jsp[)インスタンスとAEM発行(https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)[](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))インスタンスでパッケージマネージャーを開きます。
+1. AEM作成者(https://[aem-author]:[4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))インスタンスとAEM発行(https://[aem-publish]:4503/crx/packmgr/index.jsp[](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))インスタンスでパッケージマネージャーを開きます。
 1. Githubコードからパッ `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` ケージを構築し、インストールして有効にします。
 1. AEM作成者()インスタンスとAEM発行( `https://[aem-author]:4502/system/console/bundles`)インスタンスでバンドルコンソールを `https://[aem-publish]:4503/system/console/bundles`開きます。
-1. Githubからパッケージを ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar` 構築し、同じパッケージをインストールして有効にします。
-1. AEM作成者(https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets **)およびAEM発行(** https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets[](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)[](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))インスタンスの/apps/social/moderation/facetsに移動します。
-1. 権限を持つ技術ユーザー **コミュニティ — ユーティリティ** — リーダーを `jcr:read` 追加します。
+1. Githubからパッケージ ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar` を構築し、インストールして有効にします。
+1. AEM Author(https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets **)およびAEM Publish(** https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets[](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)[](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))インスタンスの/apps/social/moderation/facetsノードに移動します。
+1. 権限を持追加つ技術ユー **ザー** communities `jcr:read` -utility-reader。
 
 既存のコミュニティサイトにカスタムフィルターを公開するには：
 
-1. 既存のモ `Clientlibs` デレートページの編集 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/head/clientlibs.`
+1. 既存のモデ `Clientlibs` レートページの編集 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/head/clientlibs.`
 
-   * 新しいカテゴリの追加 `cq.social.hbs.moderation.v2.`
+   * 新追加カテゴリ `cq.social.hbs.moderation.v2.`
 
-1. 移動 :`/content/we-retail/us/en/community/moderation/shell3/jcr:content/rails/searchWell/items/filters.`
+1. `/content/we-retail/us/en/community/moderation/shell3/jcr:content/rails/searchWell/items/filters.` に移動します。
 
    * 新しいコンポーネントに設定 `sling:resourceType = social/moderation/v2/filters.`
 
-1. 移動 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/views/content/items/modcontainer`.
+1. `/content/we-retail/us/en/community/moderation/shell3/jcr:content/views/content/items/modcontainer` にアクセスします。
 
    * 新しいコンポーネントに設定しま `sling:resourceType = social/moderation/v2/modcontainer`す。
 
@@ -287,24 +292,24 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 
 ### 1 つの投稿のモデレート {#moderating-a-single-post}
 
-単一選択モードでは、
+単一選択モードでは、次のことが可能です。
 
-* ユーザー名を選択してユーザーの詳細を表示
-* 投稿へのリンクを選択してコンテキスト内で投稿を表示
+* 表示ユーザーの詳細を表示するには、ユーザー名を選択します。
+* 表示するには、投稿へのリンクを選択します。
 * [返信](#reply)
 * [許可](#allow)
 * [拒否](#deny)
 * [削除](#delete)
 * [閉じる](#close)
-* [モデレート履歴](#moderation-history)を表示
+* View [Moderation History](#moderation-history)
 * [詳細を表示](#viewdetails)
 
-モデレートアクションアイコンの上のカード表示には、投稿のテキストが表示され、その下のデータは、
+モデレートアクション表示の上にあるカードアイコンは、投稿のテキストで、下のアイコンは、次を示すデータです。
 
-* 返信があるかどうか（ある場合は、返信数）
-* フラグが付いているかどうか
-* 承認されているかどうか
-* UGC の投稿日時
+* 返信がある場合は、返信数の前に返信数が表示されます。
+* フラグ付きの場合。
+* 承認されている場合。
+* UGCが投稿された日。
 
 ![singleselectmode](assets/singleselectmode.png)
 
@@ -318,13 +323,13 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 
 ![chlimage_1-221](assets/chlimage_1-221.png)
 
-1 つの投稿を操作するときに、その投稿がフラグ付きか、拒否されている場合は、許可アイコンが表示されます。フラグが設定されている場合、「許可」を選択すると、すべてのフラグがクリアされます。
+1 つの投稿を操作するときに、その投稿がフラグ付きか、拒否されている場合は、許可アイコンが表示されます。フラグが付いている場合、「許可」を選択すると、すべてのフラグがクリアされます。
 
 #### 拒否 {#deny}
 
 ![chlimage_1-222](assets/chlimage_1-222.png)
 
-「**モデレートを拒否**」アクションは、モデレートされたコンテンツに対してのみ使用でき、複数選択モード以外のモデレートされていないコンテンツには表示されません。
+The **Deny** moderation action is only available for content that is moderated, and does not appear on unmoderated content except in multi-selection mode.
 
 モデレート対象でないコンテンツは、必ず承認された状態になります。
 
@@ -336,19 +341,19 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
-単一選択モードまたは一括モードで、アイテムを選択して削除できます。削除のアクションを実行すると、確認ダイアログが表示されます。削除すると、それらの項目はコンテンツ領域からすぐに消えます。 **UGCを削除すると、リポジトリから完全に削除され、後で取得することはできません。**
+単一選択モードまたは一括モードで、アイテムを選択して削除できます。削除のアクションを実行すると、確認ダイアログが表示されます。削除すると、その項目はコンテンツ領域からすぐに消えます。 **UGCを削除すると、リポジトリから完全に削除され、後で取得できなくなります**。
 
 #### 閉じる {#close}
 
 ![chlimage_1-224](assets/chlimage_1-224.png)
 
-単一の投稿で作業する場合、UGCタイプがそのリソースのそれ以上の投稿を防ぐ機能をサポートしていると、閉じるアイコンが表示されます。
+単一の投稿で作業する場合、UGCタイプがそのリソースのそれ以上の投稿を防ぐ機能をサポートしている場合は、閉じるアイコンが表示されます。
 
 #### Moderation History {#moderation-history}
 
 ![chlimage_1-225](assets/chlimage_1-225.png)
 
-1 つの投稿を操作するときに、投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。このアイコンを選択すると、UGC投稿に関して実行されたアクションの履歴を含むペインが表示されます。
+1 つの投稿を操作するときに、投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。アイコンを選択すると、UGC投稿に関して行われたアクションの履歴を含むペインが表示されます。
 
 複数の UGC 投稿のコンテンツ領域に戻るには、表示詳細ウィンドウの右上隅の X を選択します。
 
