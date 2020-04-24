@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -19,9 +19,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 概要 {#overview}
 
-AEM Communitiesドキュメントのこのセクションには、次の内容に加えて、以下のセクションが含まれます。
+AEM Communitiesドキュメントのこのセクションには、次の内容も含まれています。
 
-* [Apache Maven を使用して AEM プロジェクトをビルドする方法](../../help/sites-developing/ht-projects-maven.md)
+* [Apache Mavenを使用したAEMプロジェクトの構築](../../help/sites-developing/ht-projects-maven.md)。
 
 現在、個々のアーティファクトに代わる 2 つの「uber」アーティファクトがあります。
 
@@ -41,21 +41,22 @@ AEM Communities API jar の GAV の例を次に示します。
 </dependency>
 ```
 
-指定したバージョンが、AEM Communities用にインストールされたCommunitiesパッケージバージョンに対応していることを確認します。 インストールされているバージョン番号を確認するには：
+指定したバージョンが、AEM Communities用にインストールされたCommunitiesパッケージのバージョンに対応していることを確認します。 インストールされているバージョン番号を確認するには：
 
 1. 管理者権限でログインします。
-2. Browse to [Package Manager](../../help/sites-administering/package-manager.md). For example, [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
+1. Browse to [Package Manager](../../help/sites-administering/package-manager.md). For example, [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-3. パッケージ *cq-socialcommunities-pkg-1.x.xxx* を探します。
-4. パッケージ名からバージョンを抽出します。
-   * AEM 6.3 の最初のバージョンは、バージョン 1.11.170 です。
-   * 機能パックはバージョン 1.12.xxx になります。
+1. Locate the package *cq-socialcommunities-pkg-1.x.xxx*
+1. パッケージ名からバージョンを抽出します。
+   * AEM 6.3の最初のバージョンは、バージョン1.11.170です。
+   * 機能パックのバージョンは1.12.xxxです。
 
 >[!NOTE]
 >
 >コミュニティのリリースを常に最新に保つことをお勧めします。
 >
 >最新バージョンを確認するには、[最新リリース](deploy-communities.md#latest-releases)の節を参照してください。
+
 
 ## Maven 依存関係の例 {#maven-dependency-example}
 
