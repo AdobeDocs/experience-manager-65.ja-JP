@@ -3,7 +3,7 @@ title: アセットプロキシの開発
 description: プロキシは、プロキシワーカーを使用してジョブを処理する AEM インスタンスです。AEM のプロキシ、サポートされている操作、プロキシコンポーネントを設定する方法と、カスタムプロキシワーカーを開発する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -106,7 +106,7 @@ API の使用例を以下に示します。
 >
 >プロキシ API の参考ドキュメントは、[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html) にあります。
 
-Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the AEM Assets **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の構成の詳細( `/etc/cloudservices/proxy` 例えば、 `/etc/cloudservices/proxy/workername`)の下にノードを追加する必要があります。
+Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the AEM Assets **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の設定の詳細( `/etc/cloudservices/proxy` 例：)の下にノードを追加する必要があ `/etc/cloudservices/proxy/workername`ります。
 
 >[!NOTE]
 >
@@ -129,9 +129,9 @@ API の使用例を以下に示します。
 
 ### カスタマイズしたプロキシワーカーの開発 {#developing-a-customized-proxy-worker}
 
-[IDSプロキシワーカーは](indesign.md) 、Indesignアセットの処理をアウトソースするために、既に標準で提供されているAEM Assetsプロキシワーカーの例です。
+[IDSプロキシワーカーは](indesign.md) 、Indesignアセットの処理をアウトソースするために、既に標準搭載されているAEM Assetsプロキシワーカーの例です。
 
-独自のAEM Assetsプロキシワーカーを開発および設定して、AEM Assets処理タスクをディスパッチおよびアウトソーシングする専用のワーカーを作成することもできます。
+独自のAEM Assetsプロキシワーカーを開発および設定して、AEM Assets処理ワーカーを送出およびアウトソースする特殊なワーカーを作成することもできます。
 
 独自のカスタムプロキシワーカーを設定するには、以下を実行する必要があります。
 
@@ -173,9 +173,9 @@ API の使用例を以下に示します。
 
 >[!NOTE]
 >
->AEM Assetsプロキシフレームワークには、プールのメカニズムが標準で用意されていません。
+>AEM Assetsプロキシフレームワークでは、プールのメカニズムがすぐに使用できます。
 >
->InDesign 統合によって、InDesign Server のプール（IDSPool）にアクセスできるようになります。このプールはIndesign統合に固有で、AEM Assetsプロキシフレームワークの一部ではありません。
+>InDesign 統合によって、InDesign Server のプール（IDSPool）にアクセスできるようになります。このプールは、AEM Assetsプロキシフレームワークの一部ではなく、Indesign統合に固有のものです。
 
 >[!NOTE]
 >
