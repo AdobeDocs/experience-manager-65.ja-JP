@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 ---
 
@@ -22,8 +22,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 新しく作成したコミュニティサイトが公開されたので、次はこのサイト作成時に表示された URL を参照します。ただし、このとき参照するのはパブリッシュサーバー上の URL です。次に例を示します。
 
-* author URL = https://localhost:4502/content/sites/engage/en.html
-* publish URL = https://localhost:4503/content/sites/engage/en.html
+* A\uthor URL = https://localhost:4502/content/sites/engage/en.html
+* 発行URL = https://localhost:4503/content/sites/engage/en.html
 
 どのメンバーがオーサーインスタンスにサインインし、どのメンバーがパブリッシュインスタンスにサインインしているかを混乱なく把握するために、インスタンスごとに異なるブラウザーを使用することを推奨します。
 
@@ -37,7 +37,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 匿名サイト訪問者のUIには、次の情報が表示されます。
 
-* サイトのタイトル。 はじめにチュートリアル
+* サイトのタイトル。 はじめにのチュートリアル
 * プロファイルリンクなし
 * メッセージリンクなし
 * 通知リンクなし
@@ -46,13 +46,13 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 * ブランドバナー
 * リファレンスサイトテンプレートに含まれるコンポーネントのメニューリンク
 
-様々なリンクを選択すると、それらは読み取り専用モードになっています。
+様々なリンクを選択すると、読み取り専用モードになります。
 
 ### JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、 **サイトのコンテンツに対して** 「匿名アクセスを許可」は無効になっています。 ただし、この動作は「Slingの制限」を回避策として使用して制御できます。
+既知の制限により、コミュニティサイトのコンテンツはjcrコンテンツとjsonを通じて匿名訪問者に表示されますが、 **匿名アクセスを許可** （サイトのコンテンツに対しては無効）。 ただし、この動作はSlingの制限を回避策として使用して制御できます。
 
-jcrコンテンツとjsonを介した匿名ユーザーによるコミュニティサイトのコンテンツへのアクセスを保護するには、次の手順に従います。
+コミュニティサイトのコンテンツを、jcrコンテンツとjsonを通じて匿名ユーザーによるアクセスから保護するには、次の手順に従います。
 
 1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
 
@@ -60,35 +60,35 @@ jcrコンテンツとjsonを介した匿名ユーザーによるコミュニテ�
    >
    >ローカライズされたサイトには移動しないでください。
 
-1. 「ページプロパ **ティ」に移動**。
+1. 「ページのプロ **パティ」に移動**。
 
    ![サイト認証](assets/site-authentication.png)
 
-1. 「**詳細**」タブに移動します。
+1. 「**詳細*」タブに移動します。
 
    ![page-properties](assets/page-properties.png)
 
 1. Enable **Authentication Requirement**.
-1. ログインページのパスを追加します。 For example,**/content/......./GetStarted**.
+1. 追加ログインページのパス。 For example,**/content/......./GetStarted**.
 1. ページを公開します。
 
 ## 信頼されているコミュニティメンバー {#trusted-community-member}
 
 This experience assumes [Aaron McDonald](/help/communities/tutorials.md#demo-users) was assigned the roles of [community manager and moderator](/help/communities/create-site.md#roles). If not, return to the author environment to [modify the site settings](/help/communities/sites-console.md#modifying-site-properties) and select Aaron McDonald as both community manager and moderator.
 
-In the upper right corner, select `Log in`, and sign with username &quot;aaron.mcdonald@mailinator.com&quot; and password &quot;password&quot;. TwitterまたはFacebookの資格情報を使用してサインインできます。
+In the upper right corner, select `Log in`, and sign with username &quot;aaron.mcdonald@mailinator.com&quot; and password &quot;password&quot;. TwitterまたはFacebookの資格情報を使用してサインインする機能に注目してください。
 
 ![chlimage_1-32](assets/chlimage_1-32.png)
 
-登録済みのコミュニティメンバーとしてサインインすると、次のメニュー項目が表示され、コミュニティサイトをクリックして参照できます。
+登録コミュニティのメンバーとしてサインインすると、次のメニュー項目が表示され、コミュニティサイトをクリックして参照できます。
 
-* **「プロファイル** 」オプションを使用すると、プロファイルを表示および編集できます。
-* [「メッセージ](/help/communities/configure-messaging.md) 」オプションを選択すると、ダイレクトメッセージングセクションに移動し、次の操作を行うことができます。
+* **プロファイル** ・オプションを使用すると、表示と編集が可能になります。
+* [「メッセージ](/help/communities/configure-messaging.md) 」オプションを選択すると、ダイレクトメッセージのセクションに移動し、次の操作を行うことができます。
 
-1. 受信したダイレクトメッセージ（[受信トレイ]）、送信済み（[送信済みアイテム]）、削除済み（[ごみ箱]）を表示します。
+1. 表示受信したダイレクトメッセージ（[受信トレイ]）、送信済み（[送信済みアイテム]）、削除済み（[ごみ箱]）。
 1. 個人やグループに送信する新しいダイレクトメッセージを作成します。
 
-* [「通知](/help/communities/notifications.md) 」オプションを選択すると、通知セクションに移動し、関心のあるイベントを表示したり、通知設定を編集したりできます。
+* [「通知](/help/communities/notifications.md) 」オプションを選択すると、通知セクションに移動し、関心のあるイベントの表示や通知設定の編集を行うことができます。
 * [モデレート権限を持つ場合は、「管理」をクリックすると](/help/communities/published-site.md#moderationlink) 、AEM Communitiesのモデレートページに移動します。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
@@ -160,13 +160,13 @@ As an example, add two n `ew groups.`
 
 * one named `Gymnastics`
 
-   * 設定を(制限付きメンバーシ `Member Only Group` ップ)に変更します
+   * 設定を(メンバーシップに `Member Only Group` 制限されて)に変更
    * 「テンプレート」タブで、 `Conversational Group`
 
 **注意 **:
 
 * 両方のグループを表示するには、ページの更新が必要になる場合があります。
-* このテンプレートにはグループ機能が含まれていない**ので、グループのこれ以上のネストは不可能です。
+* このテンプレートにはグループ機能が含まれていない**ので、グループのこれ以上のネストはできません。
 * on author, the [Groups console](/help/communities/groups.md) provides a third choice - a `Public Group` (optional membership)
 
 両方のグループが作成されたら、Baseball グループ（オープングループ）を選択し、そのリンクに注目します。
@@ -181,20 +181,20 @@ On author - with administrative privileges, navigate to the [Communities Groups 
 
 引き続きパブリッシュ環境で、Aaron McDonald としてログアウトし、次のように匿名のサイト訪問者として Sports グループ内のグループを表示します。
 
-* ホームページから
+* ホームページ
 * select `Groups`link
 * select `Sports`link
 * select the Sports&#39; `Groups`link
 
 Baseball グループのみが表示されます。
 
-Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、開いているグループとプライベ `Join` ートグル `Baseball` ープのどちらかに対 `enter or Leave` 応できることに `Gymnastics`注意。
+Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、オープングループとプライベ `Join` ートグル `Baseball` ープのどちらかを `enter or Leave` 実行でき `Gymnastics`ます。
 
 ![chlimage_1-40](assets/chlimage_1-40.png)
 
 ### Web ページリンク {#web-page-link}
 
-Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、オーサリング環境でこのページにコンテンツを追加できます。
+Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、作成者環境のこのページにコンテンツを追加できます。
 
 For example, go to **author** instance, open the `engage` folder in the [Communities Sites console](/help/communities/sites-console.md), select the **Open Site** icon to enter author edit mode. Then select preview mode to select the `Web Page`link, then select edit mode to add Title and Text components. 最後に、ページのみまたはサイト全体を再公開します。
 
@@ -217,7 +217,7 @@ When the community member has moderation privileges, then the Moderation link wi
 
 ![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
 
-デフォルトでは、電子メールアドレスがログイン ID になります。選択しない場合、訪問者は独自のログインID（ユーザー名）を入力できます。 ユーザー名は、公開環境で一意である必要があります。
+デフォルトでは、電子メールアドレスがログイン ID になります。このチェックボックスをオフにすると、訪問者は独自のログインID（ユーザー名）を入力できます。 ユーザー名は、公開ユーザーで一意である必要があります。環境
 
 After specifying the user&#39;s name, email, and password, selecting `Sign Up`will create the user and enable them to sign.
 
