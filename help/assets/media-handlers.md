@@ -3,7 +3,7 @@ title: メディアハンドラーとメディアを使用したアセットの�
 description: メディアハンドラーについて説明し、デジタルアセットに対してワークフローを使用してタスクを実行する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b600e5eaf7c61568f2559b3fb4915d433f5e13bf
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -462,7 +462,7 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 
 ### An example using ImageMagick {#an-example-using-imagemagick}
 
-以下の例は、MIME タイプが gif または tiff のアセットが AEM サーバーの /content/dam に追加されるたびに、元の画像の反転画像と 3 つの追加サムネール（140 x 100、48 x 48 および 10 x 250）が作成されるように、コマンドラインプロセスのステップを設定する方法を示します。
+次の例は、MIMEタイプgifまたはtiffを持つアセットがAEMサーバーの/content/damに追加されるたびに、元のアセットの反転画像が3つの追加のサムネール(140x100、48x48、10x250)と共に作成されるように、コマンドラインの処理手順を設定する方法を示しています。
 
 これを実現するには、ImageMagick を使用します。ImageMagick は無料のソフトウェアスイートです。ビットマップ画像の作成、編集および構成をおこなう機能があり、一般的にコマンドラインから使用されます。
 
@@ -496,7 +496,7 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 
 変更したワークフローをテストするには、`/content/dam` にアセットを追加します。
 
-1. ファイルシステムで、任意の .tiff 画像を選択します。名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
+1. ファイルシステムで、選択したTIFF画像を取得します。 名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット **[!UICONTROL myImage.tiff]** を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
@@ -516,7 +516,7 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-この場合、ワークフローを実行すると、MIME タイプが image/gif または mime:image/tiff のアセットにのみ、このステップが適用され、元の画像の反転画像が作成され、.jpg に変換され、140 x 100、48 x 48 および 10 x 250 というサイズの 3 つのサムネールが作成されます。
+then, when the workflow runs, the step only applies to assets that have `image/gif` or `mime:image/tiff` as `mime-types`, it creates a flipped image of the original, converts it into JPG and creates three thumbnails that have the dimensions: 140x100, 48x48, and 10x250.
 
 ImageMagick を使用して 3 つの標準のサムネールを作成するには、以下の[!UICONTROL プロセス引数]を使用します。
 
