@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -29,22 +29,24 @@ Using the Communities Members and Groups consoles, members and member groups reg
 
 For managing users and groups registered in the *author* environment, is is necessary to use the platform&#39;s security console:
 
-* グローバルナビゲーションから `Tools, Security, Users`
-* グローバルナビゲーションから `Tools, Security, Groups`
+* From global navigation, select **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+* From global navigation, select **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]**.
 
 >[!NOTE]
 >
 >サンプルコンテンツがデプロイされて有効になっていると、オーサー環境とパブリッシュ環境の両方に多数のサンプルユーザーが存在します。These users will not be present when running with [nosamplecontent runmode](../../help/sites-administering/production-ready.md).
 
+
 ## メンバーコンソール {#members-console}
 
 パブリッシュ環境で登録されたメンバーをオーサー環境で管理するには、次の場所にあるメンバーコンソールを使用します。
 
-* From global navigation: **[!UICONTROL Navigation > Communities > Members]**
+* From global navigation, select **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Members]**
 
 >[!CAUTION]
 >
 >It will not be possible to use the Members console if the [tunnel service](deploy-communities.md#tunnel-service-on-author) is not enabled.
+
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -52,13 +54,13 @@ For managing users and groups registered in the *author* environment, is is nece
 
 Select the side panel icon on the left side of the `Members` header to toggle open the search side panel.
 
-![chlimage_1-120](assets/chlimage_1-120.png) ![chlimage_1-121](assets/chlimage_1-121.png)
+![chlimage_1-120](assets/chlimage_1-120.png)![chlimage_1-121](assets/chlimage_1-121.png)
 
 Select the search icon on the left side of the `Members` header to toggle the search side panel closed.
 
 ### メンバーの統計 {#member-statistics}
 
-The columns displaying `Views`, `Posts`, `Follows`and `Likes` are updated when the user is a member of one or more community sites with Adobe Analytics [enabled](sites-console.md#analytics).
+The columns displaying `Views`, `Posts`, `Follows` and `Likes` are updated when the user is a member of one or more community sites with Adobe Analytics [enabled](sites-console.md#analytics).
 
 ### CSV の書き出し {#export-csv}
 
@@ -78,40 +80,56 @@ Select `Create Member` in order to create a user in the publish environment.
 
 大部分のフィールドはオプションです。メンバーは後からフィールドに自分のプロファイルを入力できます。
 
-* **[!UICONTROL ID]**(必&#x200B;*須*)許可可能IDは、メンバーのログインIDです。
-デフォルトでは、ID は必須の電子メールアドレスの値に設定されています。
-   *ID は一度作成すると変更できません。*
+* **[!UICONTROL ID]**
 
-* **[!UICONTROL 電子メールア]**&#x200B;ドレス&#x200B;**（必須）メンバーの電子メールアドレス。
-メンバーは、プロファイルの更新時に電子メールアドレスを変更できます。IDが電子メールアドレスにデフォルト設定されている場合 ** 、電子メールアドレスが変更されてもIDは変更されません。
+(*Required*) The authorizable ID is the member&#39;s sign-in ID.
+デフォルトでは、ID は必須の電子メールアドレスの値に設定されています。*IDは作成後は変更できません*。
 
-* **[!UICONTROL パスワード]**(必&#x200B;*須*)サインインパスワード。
+* **[!UICONTROL 電子メールアドレス]**
 
-* **[!UICONTROL パスワードの再入力]**(必&#x200B;*須*)確認のためにパスワードを再入力します。
+(必&#x200B;*須*)メンバーの電子メールアドレス。
+プロファイルを更新する際に、メンバーは自分の電子メールアドレスを変更できます。IDが電子メールアドレスにデフォルト設定されている場合 ** 、電子メールアドレスを変更してもIDは変更されません。
 
-* **[!UICONTROL [サイトにメンバを追加]**]*(オ*&#x200B;プション)コミュニティサイトのメンバグループにメンバを追加するには、既存のコミュニティサイトから選択します。
+* **[!UICONTROL パスワード]**
 
-* **[!UICONTROL グループにメンバーを追加]**(オ&#x200B;*プション*)既存のメンバーグループから選択して、そのグループにメンバーを追加します。
+   (*Required*) The sign-in password.
+
+* **[!UICONTROL パスワードの確認入力]**
+
+   (必&#x200B;*須*)確認のためのパスワードを再入力します。
+
+* **[!UICONTROL メンバーをサイトに追加]**
+
+   (*Optional*) Select from existing community sites in order to add the member to the community site&#39;s members group.
+
+* **[!UICONTROL メンバーをグループに追加]**
+
+   (*Optional*) Select from existing member groups in order to add the member to that group.
 
 * Select **[!UICONTROL Save]**
 
 ### 一般 - アカウント設定 {#general-account-settings}
 
-アカウント設定では、コミュニティ管理者は以下の設定をおこなうことができます。
+「アカウントの設定」では、コミュニティ管理者は次の操作を行うことができます。
 
 * **[!UICONTROL ステータス]**
-   * 禁止されたメンバーはサインインできず、ページを表示したり、ログインが必要なアクティビティに参加したりできません。 彼らは未だに匿名でオープンコミュニティサイトを訪れるかもしれない。
+   * 禁止されたメンバーはサインインできず、ページを表示できないか、ログインが必要なアクティビティに参加できません。 彼らは未だにオープンコミュニティサイトを匿名で訪問しているかもしれない。
 
    * 禁止されていないメンバーはコミュニティサイトのすべての機能にアクセスできます。
    デフォルトは `Not Banned` です。
 
-* **[!UICONTROL 貢献度の制限]**&#x200B;オンにすると、メンバーによるコンテンツの投稿が制限されます。初期設定は、貢献度の制限の設定によって異なります。[メンバーの貢献度の制限](limits.md)を参照してください。
+* **[!UICONTROL 貢献度の制限]**
 
-* **[!UICONTROL パスワードを変更]**&#x200B;既存のメンバーを変更する場合に表示されるリンク。コミュニティ管理者がメンバーのパスワードをリセットする機能を提供します。
+   オンにすると、メンバーのコンテンツを投稿する機能が制限されます。
+初期設定は、貢献度の制限の設定によって異なります。[メンバーの貢献度の制限](limits.md)を参照してください。
+
+* **[!UICONTROL パスワードを変更]**
+
+   既存のメンバーを変更する際に存在するリンク。 コミュニティ管理者がメンバーのパスワードをリセットする機能を提供します。
 
 ### 一般 - 写真 {#general-photo}
 
-メンバーのアバターを設定するには、まず「**[!UICONTROL 画像をアップロード]**」を選択して、.jpg、.png、.tif、.gif のいずれかから画像の種類を選択します。画像の推奨サイズは240 x 240ピクセル、72 dpiです。
+メンバーのアバターを設定するには、まず「**[!UICONTROL 画像をアップロード]**」を選択して、.jpg、.png、.tif、.gif のいずれかから画像の種類を選択します。画像の推奨されるサイズは、240 x 240ピクセル、72 dpiです。
 
 ### 一般 - メンバーをサイトに追加 {#general-add-member-to-sites}
 
@@ -129,11 +147,11 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
-* **[!UICONTROL バッジの追加]**
+* **[!UICONTROL バ追加ッジ]**
    * Begin typing to select from [available badges](badges.md). バッジを選択したら、各サイト、または会員のアバターと共にバッジを表示するすべてのサイトを選択します。
    * 複数のバッジとサイトを選択できます。
 * **[!UICONTROL バッジの削除]**
-   * バッジの横にあるごみ箱アイコンを選択して、削除します
+   * バッジの横にあるごみ箱アイコンを選択して、削除します。
 
 ## グループコンソール {#groups-console}
 
@@ -142,11 +160,12 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 * Group-based assignment of [enablement resources](resources.md)
 
 グループコンソールにアクセスするには：
-* From global navigation: **[!UICONTROL Navigation > Communities > Groups]**
+* From global navigation, select **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]**.
 
 >[!CAUTION]
 >
 >[トンネルサービス](deploy-communities.md#tunnel-service-on-author)が有効でない場合、グループコンソールを使用することはできません。
+
 
 ### 新しいグループを作成 {#create-new-group}
 
@@ -156,16 +175,25 @@ Select `Add Group` in order to create a group in the publish environment.
 
 パブリッシュ側の新しいメンバーグループを作成するには、以下のフィールドを指定します。
 
-* **[!UICONTROL ID]**(必&#x200B;*須*)グループ固有ID。
+* **[!UICONTROL ID]**
+
+   (*Required*) The group unique ID.
+
    *ID は一度作成すると変更できません。*
 
-* **[!UICONTROL Name]**(オプ&#x200B;*ション*)グループの表示名。
+* **[!UICONTROL 名前]**
+
+   (*Optional*) The display name for the group.
 
    デフォルトの値は ID です。
 
-* **[!UICONTROL 説明]**(オ&#x200B;*プション*)グループの目的と権限の説明。
+* **[!UICONTROL 説明]**
 
-* **[!UICONTROL グループにメンバーを追加]**(オ&#x200B;*プション*)グループの最初のメンバーとして含める公開側メンバーを選択します。
+   (*Optional*) A description of the group&#39;s purpose and permissions.
+
+* **[!UICONTROL メンバーをグループに追加]**
+
+   (*Optional*) Select publish-side members to be included as initial members of the group.
 
 * Select **[!UICONTROL Save]**
 
