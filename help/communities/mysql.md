@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -25,12 +25,12 @@ MySQL は、イネーブルメントリソースの SCORM 追跡データおよ�
 
 MySQL をコミュニティサイトのイネーブルメント機能用に設定する前に、以下をおこなう必要があります。
 
-* Install [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6
-   * バージョン5.7はSCORMではサポートされていません
-   * 作成者AEMインスタンスと同じサーバーである可能性がある
-* On all AEM instances, install the official [JDBC driver for MySQL](deploy-communities.md#jdbc-driver-for-mysql)
-* Install [MySQL workbench](https://dev.mysql.com/downloads/tools/workbench/)
-* On all AEM instances, install the [SCORM package](enablement.md#scorm)
+* Install [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6:
+   * バージョン5.7はSCORMではサポートされていません。
+   * 作成者AEMインスタンスと同じサーバーである可能性があります。
+* On all AEM instances, install the official [JDBC driver for MySQL](deploy-communities.md#jdbc-driver-for-mysql).
+* Install [MySQL workbench](https://dev.mysql.com/downloads/tools/workbench/).
+* On all AEM instances, install the [SCORM package](enablement.md#scorm).
 
 ## MySQL のインストール {#installing-mysql}
 
@@ -43,8 +43,7 @@ SQL では大文字と小文字が区別されます。大文字と小文字が�
 例えば、Linux OS でテーブル名をすべて小文字に指定するには、
 
 * ファイルの編集 `/etc/my.cnf`
-* In the `[mysqld]` section, add the following line:
-   `lower_case_table_names = 1`
+* In the `[mysqld]` section, add the following line: `lower_case_table_names = 1`
 
 ### UTF8 文字セット {#utf-character-set}
 
@@ -55,16 +54,14 @@ SQL では大文字と小文字が区別されます。大文字と小文字が�
 
 以下の操作で MySQL データベースをデフォルトから UTF8 に変更します。
 * ファイルの編集 `/etc/my.cnf`
-* In the `[client]` section, add the following line:
-   `default-character-set=utf8`
-* In the `[mysqld]` section, add the following line:
-   `character-set-server=utf8`
+* セクション `[client]` で、次を追加します。 `default-character-set=utf8`
+* セクション `[mysqld]` で、次を追加します。 `character-set-server=utf8`
 
 ## MySQL Workbench のインストール {#installing-mysql-workbench}
 
 MySQL Workbench には、スキーマと初期データをインストールする SQL スクリプトを実行するための UI が用意されています。
 
-MySQL Workbenchは、ターゲットOSの指示に従ってダウンロードし、インストールする必要があります。
+MySQL Workbenchは、ターゲットOSの手順に従ってダウンロードし、インストールします。
 
 ## イネーブルメント機能のための接続 {#enablement-connection}
 
@@ -81,13 +78,12 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
    * Hostname：`127.0.0.1`
    * ユーザー名: `root`
    * パスワード: `no password by default`
-   * デフォルトのスキーマ： `leave blank`
-1. Select `Test Connection` to verify the connection to the running MySQL service
+   * デフォルトスキーマ: `leave blank`
+1. Select `Test Connection` to verify the connection to the running MySQL service.
 
-**メモ**:
-
-* The default port is `3306`
-* The `Connection Name` chosen is entered as the `datasource` name in [JDBC OSGi configuration](#configure-jdbc-connections)
+**備考**:
+* デフォルトのポートは `3306` です。
+* The `Connection Name` chosen is entered as the `datasource` name in [JDBC OSGi configuration](#configure-jdbc-connections).
 
 #### 成功した接続 {#successful-connection}
 
@@ -107,7 +103,7 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 
 SQL スクリプトを取得するには、オーサーインスタンスで CRXDE Lite を使用します。The [SCORM package](deploy-communities.md#scorm) must be installed:
 
-1. CRXDE Liteを参照
+1. CRXDE Liteを参照：
    * 例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 1. フォルダを展開 `/libs/social/config/scorm/` する
 1. ダウンロード `database_scormengine.sql`
@@ -115,15 +111,15 @@ SQL スクリプトを取得するには、オーサーインスタンスで CRX
 
 ![chlimage_1-331](assets/chlimage_1-331.png)
 
-スキーマをダウンロードする1つの方法は、
+スキーマのダウンロード方法
 
-* Select the `jcr:content`node for the sql file
-* Notice the value for the `jcr:data`property is a view link
-* データをローカルファイルに保存するには、ビューリンクを選択します
+* Select the `jcr:content`node for the sql file.
+* Notice the value for the `jcr:data`property is a view link.
+* データを表示ファイルに保存するには、データリンクを選択します。
 
 ### SCORM データベースの作成 {#create-scorm-database}
 
-作成するイネーブルメントSCORMデータベースは次のとおりです。
+作成されるイネーブルメントSCORMデータベースは次のとおりです。
 
 * 名前: `ScormEngineDB`
 * 以下のスクリプトから作成：
@@ -135,7 +131,7 @@ Follow the steps below ([open](#step-open-sql-file), [execute](#step-execute-sql
 
 >[!CAUTION]
 >
->データベース名を変更した場合は、以下の設定で適切な名前を指定してください。
+>データベース名を変更した場合は、以下の設定で適切な名前を指定してください。：
 >
 >* [JDBC 設定](#configure-jdbc-connections)
 >* [SCORM 設定](#configure-scorm)
@@ -171,7 +167,7 @@ In the Workbench window for the file opened in Step 1, select the `lightening (f
 
 #### 結果：scormenginedb {#result-scormenginedb}
 
-After installing and refreshing SCHEMAS, the **`scormenginedb`**will be visible.
+SCHEMAS のインストールと更新が完了すると、`scormenginedb` が表示されます。
 
 ![chlimage_1-335](assets/chlimage_1-335.png)
 
@@ -184,21 +180,21 @@ After installing and refreshing SCHEMAS, the **`scormenginedb`**will be visible.
 When MySQL runs on a server different from AEM, the server hostname must be specified in place of &#39;localhost&#39; in the JDBC connector (which populates the [ScormEngine](#configurescormengineservice) config).
 
 * 各作成者および発行AEMインスタンス
-* 管理者権限でサインインしています
+* 管理者権限でサインイン
 * Access the [web console](../../help/sites-deploying/configuring-osgi.md)
    * For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-* Folio Builderで `Day Commons JDBC Connections Pool`
+* を検索します。 `Day Commons JDBC Connections Pool`
 * Select the `+` icon to create a new configuration
 
 ![chlimage_1-336](assets/chlimage_1-336.png)
 
 * 次の値を入力します。
    * **[!UICONTROL JDBC ドライバークラス]**: `com.mysql.jdbc.Driver`
-   * **DBC接続URIJ **:MySQLサ`jdbc:mysql://localhost:3306/aem63reporting`ーバーが「this」AEMサーバーと同じでない場合は、localhostの代わりにサーバーを指定します
-   * **[!UICONTROL ユーザ名]**:「root」でない場合は、MySQLサーバーの設定済みのユーザー名を入力するか、「root」でない場合は入力します
-   * **[!UICONTROL パスワード]**:MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。設定済みのMySQLユーザー名のパスワードを入力します
-   * **[!UICONTROL データソース名]**:MySQL接続に入力さ [れた名前](#new-connection-settings)（例： &#39;enablement&#39;）
-* Select **[!UICONTROL Save]**
+   * **DBC接続URIJ **:MySQLサ`jdbc:mysql://localhost:3306/aem63reporting`ーバーが「this」AEMサーバーと同じでない場合は、localhostの代わりにサーバーを指定します。
+   * **[!UICONTROL Username]**:MySQLサーバーのルートまたは設定済みのユーザー名（「root」でない場合）を入力します。
+   * **[!UICONTROL パスワード]**:MySQLのパスワードが設定されていない場合は、このフィールドをクリアします。それ以外の場合は、MySQLユーザー名に設定済みのパスワードを入力します。
+   * **[!UICONTROL データソース名]**:MySQL接続に入力さ [れた名前](#new-connection-settings)（例： &#39;enablement&#39;）。
+* 「**[!UICONTROL 保存]**」を選択します。
 
 ## SCORM の設定 {#configure-scorm}
 
@@ -213,34 +209,35 @@ When MySQL runs on a server different from AEM, the server hostname must be spec
 When MySQL runs on a server different from AEM, the server hostname must be specified in place of &#39;localhost&#39; in the ScormEngine Serivce, which is typically populated from the [JDBC Connection](#configure-jdbc-connections) config.
 
 * 各作成者および発行AEMインスタンス
-* 管理者権限でサインインしています
+* 管理者権限でサインイン
 * Access the [web console](../../help/sites-deploying/configuring-osgi.md)
    * For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-* Folio Builderで `AEM Communities ScormEngine Service`
-* 編集アイコンを選択します
+* を検索します。 `AEM Communities ScormEngine Service`
+* 編集アイコンの選択
    ![chlimage_1-337](assets/chlimage_1-337.png)
 * Verify the following parameter values are consistent with the [JDBC Connection](#configurejdbcconnectionspool) config:
    * **[!UICONTROL JDBC接続URI]**:SQLスク `jdbc:mysql://localhost:3306/ScormEngineDB`** リプトのデフォルトのデータベース名はScormEngineDBです。
-   * **[!UICONTROL ユーザ名]**:「root」でない場合は、MySQLサーバーの設定済みのユーザー名を入力するか、「root」でない場合は入力します
-   * **[!UICONTROL パスワード]**:MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。設定済みのMySQLユーザー名のパスワードを入力します
-* 次のパラメーターに関して：
+   * **[!UICONTROL Username]**:MySQLサーバーのルートアップまたは設定済みのユーザー名（「root」でない場合）を入力
+   * **[!UICONTROL パスワード]**:MySQLのパスワードが設定されていない場合は、このフィールドをクリアします。それ以外の場合は、MySQLユーザー名に設定済みのパスワードを入力します
+* 次のパラメータに関して：
    * **[!UICONTROL Scormユーザーパスワード]**:編集しない
 
-      内部でのみ使用されます。AEM CommunitiesがSCORMエンジンとの通信に使用する特別なサービスユーザー用です。
+      内部でのみ使用する場合：AEM CommunitiesがSCORMエンジンとの通信に使用する特別なサービスユーザーのためのものです。
 * Select **[!UICONTROL Save]**
 
 ### Adobe Granite CSRF Filter {#adobe-granite-csrf-filter}
 
 イネーブルメントコースがすべてのブラウザーで正しく動作するかを確認するには、Mozilla を CSRF フィルターでは確認されないユーザーエージェントとして追加する必要があります。
 
-* 各発行AEMインスタンス
-* 管理者権限でサインインしています
+* 管理者権限でAEM発行インスタンスにログインします。
 * Access the [web console](../../help/sites-deploying/configuring-osgi.md)
    * For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
-* Locate `Adobe Granite CSRF Filter`
-* 編集アイコンを選択します
+* Locate `Adobe Granite CSRF Filter`.
+* 編集アイコンを選択します。
+
    ![chlimage_1-338](assets/chlimage_1-338.png)
-* Select the `[+]` icon to add a Safe User Agent
-* Enter `Mozilla/*`
-* Select **[!UICONTROL Save]**
+
+* Select the `[+]` icon to add a Safe User Agent.
+* Enter `Mozilla/*`.
+* 「**[!UICONTROL 保存]**」を選択します。
 
