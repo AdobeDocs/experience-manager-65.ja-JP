@@ -1,86 +1,86 @@
 ---
-title: 接続されたアセットを使用して、Adobe Experience Manager SitesオーサリングワークフローでDAMアセットを共有する
-description: 別のExperience Manager SiteデプロイメントでWebページを作成する場合、リモートのAdobe Experience Manager Assetsデプロイメントで使用できるアセットを使用します。
+title: '[!DNL Adobe Experience Manager Sites]オーサリングワークフローで、接続されたアセットを使用してDAMアセットを共有します。'
+description: 別のExperience Manager SiteデプロイメントでWebページを作成する場合は、リモートの[!DNL Adobe Experience Manager Assets]デプロイメントで使用できるアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7628b5edd52a144aa4f92f8145493b9b927aeda0
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
-# Connected Assets を使用した AEM Sites での DAM アセットの共有 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
+# Connected Assets を使用した での DAM アセットの共有[!DNL Experience Manager Sites]{#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
 大規模企業では、Web サイトの作成に必要なインフラストラクチャが分散していることがあります。Web サイト作成機能と、それらの Web サイトの作成に使用されたデジタルアセットが、別のデプロイメントに格納されている場合もあります。親会社が一緒に使用したい異種インフラストラクチャにつながる、連携または買収に必要な既存の導入環境が、地理的に分散する理由がいくつか考えられます。
 
-AEM Sites は Web ページの作成機能を備え、AEM Assets は Web サイトに必要なアセットを提供するデジタルアセット管理（DAM）システムです。AEM では、AEM Sites と AEM Assets の統合により、上記の使用事例をサポートできるようになりました。
+[!DNL Adobe Experience Manager Sites] は Web ページの作成機能を備え、 は Web サイトに必要なアセットを提供するデジタルアセット管理（DAM）システムです。[!DNL Adobe Experience Manager Assets][!DNL Experience Manager] とを統合することで、上記の使用例をサポートするように [!DNL Experience Manager Sites] なりまし [!DNL Experience Manager Assets]た。
 
 ## Connected Assets の概要 {#overview-of-connected-assets}
 
-作成者は、ページエディターでページを編集しながら、別の AEM Assets デプロイメント上のアセットをシームレスに検索、参照および埋め込むことができます。AEM 管理者が実行する場合は、AEM Sites の様々なローカルデプロイメントと AEM Assets の別の（リモート）デプロイメントを一度だけ統合します。
+When editing pages in Page Editor, the authors can seamlessly search, browse, and embed assets from a different [!DNL Experience Manager Assets] deployment. To do an [!DNL Experience Manager] administrator do a one-time integration of a local deployment of [!DNL Experience Manager Sites] with a different (remote) deployment of [!DNL Experience Manager Assets].
 
-サイト作成者の場合、リモートアセットは読み取り専用のローカルアセットとして利用できます。この機能は、一度に少数のリモートアセットをシームレスに検索および使用できるようサポートします。多くのリモートアセットをローカルデプロイメントで一度に利用できるようにするには、一括でのリモートアセットの移行を検討します。[Assets 移行ガイド](/help/assets/assets-migration-guide.md)を参照してください。
+For the [!DNL Sites] authors, the remote assets are available as read-only local assets. この機能は、一度に少数のリモートアセットをシームレスに検索および使用できるようサポートします。多くのリモートアセットをローカルデプロイメントで一度に利用できるようにするには、一括でのリモートアセットの移行を検討します。詳しくは、 [Experience Manager Assets移行ガイドを参照してください](/help/assets/assets-migration-guide.md)。
 
 ### 前提条件とサポートされている導入 {#prerequisites}
 
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* Adobe Experience Managerのデプロイメントタイプでは、サポートされている条件の1つが満たされます。 AEM 6.5 Assetsは、AEMをクラウドサービスとして使用できます。 詳しくは、AEMのクラウドサー [ビスとしての接続されたアセット機能を参照してください](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* Adobe Experience Managerのデプロイメントタイプでは、サポートされている条件の1つが満たされます。 [!DNL Experience Manager] 6.5は、クラウ [!DNL Assets] ドサービス [!DNL Experience Manager] として機能します。 詳しくは、Experience Managerのクラウドサ [ービスとしての接続されたアセット機能を参照してください](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
-   |  | AEM Sites as a Cloud Service | AMS上のAEM 6.5サイト | AEM 6.5オンプレミスサイト |
+   |  | [!DNL Experience Manager Sites] クラウドサービス | AMS版Experience Manager 6.5 [!DNL Sites] | Experience Manager 6.5オンプレ [!DNL Sites] ミスの場合 |
    |---|---|---|---|
-   | **AEM Assets as a Cloud Service** | サポート対象 | サポート対象 | サポート対象 |
-   | **AMS上のAEM 6.5アセット** | サポート対象 | サポート対象 | サポート対象 |
-   | **AEM 6.5アセットオンプレミス** | サポートなし | サポートなし | サポートなし |
+   | **[!DNL Experience Manager Assets]クラウドサービス&#x200B;** | サポート対象 | サポート対象 | サポート対象 |
+   | **AMS版Experience Manager 6.5[!DNL Assets]** | サポート対象 | サポート対象 | サポート対象 |
+   | **Experience Manager 6.5オンプレ[!DNL Assets]ミスの場合** | サポートなし | サポートなし | サポートなし |
 
 ### サポートされているファイル形式 {#mimetypes}
 
-作成者は、コンテンツファインダーで画像や次のタイプのドキュメントを検索し、検索したアセットをページエディターで使用できます。 Documents can be added to the `Download` component and images can be added to the `Image` component. Authors can also add the remote assets in any custom AEM component that extends the default `Download` or `Image` components. サポートされるリストは次のとおりです。
+作成者は、コンテンツファインダーで画像や次のタイプのドキュメントを検索し、検索したアセットをページエディターで使用できます。 Documents can be added to the `Download` component and images can be added to the `Image` component. Authors can also add the remote assets in any custom Experience Manager component that extends the default `Download` or `Image` components. サポートされるリストは次のとおりです。
 
-* **画像形式**:画像コンポーネントでサポートされている [画像形式は](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html) 、接続されたアセットでサポートされています。 ダイナミックメディア画像はサポートされていません。
+* **画像形式**:画像コンポーネントでサポートされている [画像形式は](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html) 、接続されたアセットでサポートされています。 [!DNL Dynamic Media] 画像はサポートされていません。
 * **ドキュメント形式**:詳しくは、接続さ [れたアセットでサポートされるドキュメント形式を参照してくださ](assets-formats.md#supported-document-formats)い。
 
 ### 関連するユーザーとグループ {#users-and-groups-involved}
 
-この機能の設定や使用に関係する様々な役割と対応するユーザーグループについて、以下で説明します。ローカルスコープは、作成者によって Web ページが作成される使用例のために使用されます。リモートスコープは、必要なアセットをホストするDAMデプロイメントに使用されます。 Sites 作成者は、これらのリモートアセットを取得します。
+この機能の設定や使用に関係する様々な役割と対応するユーザーグループについて、以下で説明します。ローカルスコープは、作成者によって Web ページが作成される使用例のために使用されます。リモートスコープは、必要なアセットをホストするDAMデプロイメントに使用されます。 The [!DNL Sites] author fetches these remote assets.
 
 | 役割 | 対象範囲 | ユーザーグループ | ウォークスルーでのユーザ名 | 要件 |
 |---|---|---|---|---|
-| AEMサイト管理者 | ローカル | AEM管理者 | `admin` | AEM を設定し、リモート Assets デプロイメントとの統合を設定します。 |
+| [!DNL Sites] administrator | ローカル | Experience Manager管理者 | `admin` | Set up Experience Manager, configure integration with the remote [!DNL Assets] deployment. |
 | DAM ユーザー | ローカル | 作成者 | `ksaner` | Used to view and duplicate the fetched assets at `/content/DAM/connectedassets/`. |
-| AEM Sites 作成者 | ローカル | 作成者（リモート DAM での読み取りアクセス権とローカル Sites での作成者アクセス権を持つ） | `ksaner` | エンドユーザーは、この統合を使用してコンテンツの速度を向上させる Sites 作成者です。作成者は、コンテンツファインダーを使用し、ローカルWebページで必要な画像を使用して、リモートDAM内のアセットを検索および参照します。 The credentials of `ksaner` DAM user are used. |
-| AEM Assets 管理者 | リモート | AEM 管理者 | `admin` リモートAEMで | クロスオリジンリソース共有（CORS）を設定します。 |
-| DAM ユーザー | リモート | 作成者 | `ksaner` リモートAEMで | リモート AEM デプロイメントでの作成者の役割。コンテンツファインダーを使用して Connected Assets 内のアセットを検索／参照します。 |
-| DAM ディストリビューター（テクニカルユーザー） | リモート | パッケージビルダーおよびサイト作成者 | `ksaner` リモートAEMで | リモートデプロイメント上に存在するこのユーザーは、（Site 作成者役割ではなく）AEM ローカルサーバーによって、Sites 作成者.の代わりにリモートアセットを取得するために使用されます。この役割は、上の 2 つの `ksaner` の役割とは異なり、別のユーザーグループに属しています。 |
+| [!DNL Sites] 各手順で | ローカル | Author (with read access on the remote DAM and author access on local [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. 作成者は、コンテンツファインダーを使用し、ローカルWebページで必要な画像を使用して、リモートDAM内のアセットを検索および参照します。 The credentials of `ksaner` DAM user are used. |
+| [!DNL Assets] administrator | リモート | Experience Manager管理者 | `admin` リモートExperience Manager | クロスオリジンリソース共有（CORS）を設定します。 |
+| DAM ユーザー | リモート | 作成者 | `ksaner` リモートExperience Manager | リモートのExperience Managerデプロイメントでの作成者の役割。 コンテンツファインダーを使用して Connected Assets 内のアセットを検索／参照します。 |
+| DAM ディストリビューター（テクニカルユーザー） | リモート | パッケージビルダーおよびサイト作成者 | `ksaner` リモートExperience Manager | This user present on the remote deployment is used by Experience Manager local server (not the Site author role) to fetch the remote assets, on behalf of [!DNL Sites] author. この役割は、上の 2 つの `ksaner` の役割とは異なり、別のユーザーグループに属しています。 |
 
-## Sites デプロイメントと Assets デプロイメント間の接続の設定 {#configure-a-connection-between-sites-and-assets-deployments}
+## Configure a connection between [!DNL Sites] and [!DNL Assets] deployments {#configure-a-connection-between-sites-and-assets-deployments}
 
-AEM 管理者はこの統合を作成できます。作成すると、統合を使用するために必要な権限が、Sites デプロイメント上と DAM デプロイメント上で定義されたユーザーグループによって確立されます。
+この統合は、Experience Manager管理者が作成できます。 Once created, the permissions required to use it are established via user groups that are defined on the [!DNL Sites] deployment and on the DAM deployment.
 
-Connected Assets とローカル Sites の接続を構成するには、次の手順を実行します。
+To configure Connected Assets and local [!DNL Sites] connectivity, follow these steps.
 
-1. 既存の AEM Sites デプロイメントにアクセスするか、以下のコマンドを使用してデプロイメントを作成します。
+1. Access an existing [!DNL Experience Manager Sites] deployment or create a deployment using the following command:
 
-   1. JAR ファイルのフォルダーで、ターミナルから次のコマンドを実行して各 AEM サーバーを作成します。
+   1. JARファイルのフォルダー内で、ターミナルで次のコマンドを実行し、各Experience Managerサーバーを作成します。
       `java -XX:MaxPermSize=768m -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
 
-   1. 数分後に AEM サーバーが正常に起動します。この AEM Sites デプロイメントを、Web ページオーサリング用のローカルマシン（`https://[local_sites]:4502`）と見なします。
+   1. 数分後、Experience Managerサーバーの開始は正常に完了します。 Consider this [!DNL Experience Manager Sites] deployment as the local machine for web page authoring, say at `https://[local_sites]:4502`.
 
-1. ローカルスコープのユーザーと役割が、AEM Sites デプロイメント上と AMS の AEM Assets デプロイメント上に存在していることを確認します。Create a technical user on Assets deployment and add to the user group mentioned in [users and groups involved](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved).
+1. Ensure that the users and roles with local scope exist on the Experience Manager Sites deployment and on the [!DNL Experience Manager Assets] deployment on AMS. Create a technical user on [!DNL Assets] deployment and add to the user group mentioned in [users and groups involved](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved).
 
-1. Access the local AEM Sites deployment at `https://[local_sites]:4502`. **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL Connected Assets 設定]**&#x200B;をクリックし、次の値を入力します。
+1. でローカル配置にア [!DNL Experience Manager Sites] クセスしま `https://[local_sites]:4502`す。 **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL Connected Assets 設定]**&#x200B;をクリックし、次の値を入力します。
 
-   1. AEM Assetsの場所はです `https://[assets_servername_ams]:[port]`。
+   1. [!DNL Experience Manager Assets] 場所は `https://[assets_servername_ams]:[port]`、
    1. DAM ディストリビューターの資格情報（テクニカルユーザー）。
-   1. 「**[!UICONTROL マウントポイント]**」フィールドに、AEM が取得したアセットの格納先となるローカル AEM パスを入力します。For example, `remoteassets` folder.
+   1. In **[!UICONTROL Mount Point]** field, enter the local Experience Manager path where Experience Manager fetches the assets. For example, `remoteassets` folder.
    1. Adjust the values of **[!UICONTROL Original Binary transfer optimization Threshold]** depending on your network. このしきい値より大きいサイズのアセットレンディションは、非同期で転送されます。
-   1. データストアを使用してアセットを保存し、データストアが両方の AEM デプロイメント間に共通のストレージである場合は、「**[!UICONTROL Connected Assets と共有されるデータストア]**」を選択します。この場合、実際のアセットバイナリはデータストアに存在し、転送されないので、しきい値の制限は関係ありません。
+   1. Select **[!UICONTROL Datastore Shared with Connected Assets]**, if you use a datastore to store your assets and the Datastore is the common storage between both Experience Manager deployments. この場合、実際のアセットバイナリはデータストアに存在し、転送されないので、しきい値の制限は関係ありません。
       ![Connected Assets の典型的な設定](assets/connected-assets-typical-config.png)
-   *図：接続されたアセットの一般的な設定*
+   *図：接続されたアセットの一般的な設定です。*
 
-1. アセットは既に処理され、レンディションが取得されたので、ワークフローランチャーを無効にします。ローカル（AEM Sites）デプロイメントのランチャー設定を調整し、リモートアセットが取得される `connectedassets` フォルダーを除外するようにします。
+1. アセットは既に処理され、レンディションが取得されたので、ワークフローランチャーを無効にします。Adjust the launcher configurations on the local ([!DNL Experience Manager Sites]) deployment to exclude the `connectedassets` folder, in which the remote assets are fetched.
 
-   1. AEM Sites デプロイメントで、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL ランチャー]**&#x200B;をクリックします。
+   1. On [!DNL Experience Manager Sites] deployment, click **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
 
    1. **[!UICONTROL DAM アセットの更新]**&#x200B;および&#x200B;**[!UICONTROL DAM メタデータの書き戻し]**&#x200B;ワークフローを含むランチャーを検索します。
 
@@ -95,15 +95,15 @@ Connected Assets とローカル Sites の接続を構成するには、次の�
 
    >[!NOTE]
    >
-   >作成者がアセットを取得する際に、リモートAEMデプロイメントで使用可能なすべてのレンディションが取得されます。 取得したアセットのレンディションをさらに作成したい場合は、この設定手順をスキップしてください。The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
+   >作成者がアセットを取得する際に、リモートのExperience Managerデプロイメントで使用可能なすべてのレンディションが取得されます。 取得したアセットのレンディションをさらに作成したい場合は、この設定手順をスキップしてください。The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
-1. AEM Sites インスタンスを、リモート AEM Assets の CORS 設定の「**[!UICONTROL 許可されたオリジン]**」の 1 つとして追加します。
+1. Add the [!DNL Experience Manager Sites] instance as one of the **[!UICONTROL Allowed Origins]** on the remote [!DNL Experience Manager Assets] CORS configuration.
 
-   1. 管理者の資格情報を使用してログインします。「Cross-Origin」を検索します。**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスします。
+   1. 管理者の資格情報を使用してログインします。Search for `Cross-Origin`. **[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスします。
 
-   1. To create a CORS configuration for AEM Sites instance, click ![aem_assets_add_icon](assets/aem_assets_add_icon.png) icon next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
+   1. To create a CORS configuration for [!DNL Experience Manager Sites] instance, click ![aem_assets_add_icon](assets/aem_assets_add_icon.png) icon next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
-   1. フィールド「**[!UICONTROL 許可されたオリジン]**」にローカル Sites の URL、つまり `https://[local_sites]:[port]` を入力します。設定を保存します。
+   1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. 設定を保存します。
 
 ## リモートアセットの使用 {#use-remote-assets}
 
@@ -111,39 +111,39 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
 作成者は、ローカル DAM インスタンスで利用可能なアセットとリモート DAM インスタンスで利用可能なアセットの両方を、単一の Web ページ内で使用できます。コンテンツファインダーを使用すれば、ローカル DAM の検索とリモート DAM の検索を切り替えることができます。
 
-リモートアセットのタグのみが取得され、ローカルのSitesインスタンスで使用できる、同じ分類階層と完全に対応するタグを持つようになります。 その他のタグは破棄されます。 作成者は、AEMオファーが全文検索を行うので、リモートAEMデプロイメントに存在するすべてのタグを使用して、リモートアセットを検索できます。
+ローカルインスタンスで使用可能な、完全に対応するタグと同じ分類階層を持つリモートアセットのタグのみが取得さ [!DNL Sites] れます。 その他のタグは破棄されます。 作成者は、リモートExperience Managerのデプロイメントに存在するすべてのタグを使用して、リモートアセットを検索できます。Experience Managerオファーは全文検索です。
 
 ### 使用手順 {#walk-through-of-usage}
 
 上記のセットアップを使用してオーサリングエクスペリエンスを試し、機能を理解してください。リモート DAM デプロイメントで、選択したドキュメントまたは画像を使用します。
 
-1. リモートデプロイメントの Assets UI に移動するため、AEM Workspace から&#x200B;**[!UICONTROL アセット]**／**[!UICONTROL ファイル]**&#x200B;にアクセスします。または、ブラウザーで `https://[assets_servername_ams]:[port]/assets.html/content/dam` アクセスします。 選択したアセットをアップロードします。
-1. Sites インスタンスの右上隅にあるプロファイルアクティベーターで、「**[!UICONTROL 次のユーザーとして操作]**」をクリックします。ユーザー名として `ksaner` を入力し、提供されたオプションを選択し、「**[!UICONTROL OK]**」をクリックします。
+1. Navigate to the [!DNL Assets] user interface on the remote deployment by accessing **[!UICONTROL Assets]** > **[!UICONTROL Files]** from [!DNL Experience Manager] workspace. または、ブラウザーで `https://[assets_servername_ams]:[port]/assets.html/content/dam` アクセスします。 選択したアセットをアップロードします。
+1. On the [!DNL Sites] instance, in the profile activator in the upper-right corner, click **[!UICONTROL Impersonate as]**. ユーザー名として `ksaner` を入力し、提供されたオプションを選択し、「**[!UICONTROL OK]**」をクリックします。
 1. **[!UICONTROL サイト]**／**[!UICONTROL We.Retail]**／**[!UICONTROL us]**／**[!UICONTROL en]** で、We.Retail Web サイトページを開きます。ページを編集します。または、ブラウザー `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` でアクセスしてページを編集します。
 
    ページ **[!UICONTROL の左上隅にある]** 「サイドパネルを切り替え」をクリックします。
 
-1. Open the Assets tab and click **[!UICONTROL Log in to Connected Assets]**.
-1. Provide the credentials -- `ksaner` as user name and `password` as password. このユーザーには、両方の AEM デプロイメントのオーサリング権限があります。
+1. Open the [!UICONTROL Assets] tab and click **[!UICONTROL Log in to Connected Assets]**.
+1. Provide the credentials -- `ksaner` as user name and `password` as password. This user has authoring permissions on both the [!DNL Experience Manager] deployments.
 1. DAM に追加したアセットを検索します。リモートアセットは左側のパネルに表示されます。画像またはドキュメントでフィルタリングしてから、サポートされているドキュメントのタイプでさらにフィルタリングします。コンポーネント上の画像とコ `Image` ンポーネント上のドキュメントをドラ `Download` ッグします。
 
-   ローカル AEM Sites デプロイメントでは、取得されたアセットは読み取り専用です。AEM Sites コンポーネントが提供するオプションを使用して、取得したアセットを編集できます。コンポーネントによる編集は非破壊的です。
+   The fetched assets are read-only on the local [!DNL Experience Manager Sites] deployment. You can still use the options provided by your [!DNL Experience Manager Sites] components to edit the fetched asset. コンポーネントによる編集は非破壊的です。
 
    ![リモート DAM でアセットを検索するときにドキュメントタイプと画像をフィルタリングするオプション](assets/filetypes_filter_connected_assets.png)
 
-   *図：リモートDAMでドキュメントを検索する際に、アセットの種類と画像をフィルターするオプション*
+   *図：リモートDAM上のドキュメントを検索する際に、アセットの種類と画像をフィルターするオプションです。*
 
 1. アセットが非同期で取得され、取得タスクが失敗した場合、サイト作成者に通知されます。オーサリング中またはオーサリング後でも、作成者は[非同期ジョブ](/help/assets/asynchronous-jobs.md)ユーザーインターフェースで取得タスクやエラーについての詳細情報を確認できます。
 
    ![バックグラウンドで発生するアセットの非同期取得に関する通知。](assets/assets_async_transfer_fails.png)
 
-   *図：バックグラウンドで発生するアセットの非同期フェッチに関する通知*
+   *図：バックグラウンドで発生するアセットの非同期フェッチに関する通知。*
 
-1. ページを公開すると、ページで使用されているアセットの完全なリストが AEM に表示されます。公開時にリモートアセットが正常に取得されることを確認します。取得した各アセットのステータスを確認するには、[非同期ジョブ](/help/assets/asynchronous-jobs.md)ユーザーインターフェースをご覧ください。
+1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. 公開時にリモートアセットが正常に取得されることを確認します。取得した各アセットのステータスを確認するには、[非同期ジョブ](/help/assets/asynchronous-jobs.md)ユーザーインターフェースをご覧ください。
 
    >[!NOTE]
    >
-   >1 つ以上のリモートアセットが取得されない場合でも、ページは公開されます。リモートアセットを使用するコンポーネントは空で公開されます。AEM 通知領域では、非同期ジョブページに表示されるエラーの通知を確認できます。
+   >1 つ以上のリモートアセットが取得されない場合でも、ページは公開されます。リモートアセットを使用するコンポーネントは空で公開されます。The [!DNL Experience Manager] notification area displays notification for errors that show in async jobs page.
 
 >[!CAUTION]
 >
@@ -156,27 +156,27 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 **権限とアセット管理**
 
 * ローカルアセットは、リモートデプロイメントの元のアセットと同期されません。DAM デプロイメント上での編集、削除または権限の失効は、ローカル側には一切伝播されません。
-* ローカルアセットは読み取り専用のコピーです。AEM コンポーネントは、アセットに対して非破壊編集をおこないます。その他のいかなる編集もできません。
+* ローカルアセットは読み取り専用のコピーです。Experience Managerコンポーネントは、アセットに対して非破壊的な編集を行います。 その他のいかなる編集もできません。
 * ローカルで取得されたアセットは、オーサリング用途でのみ使用できます。アセット更新ワークフローの適用やメタデータの編集はおこなえません。
-* 画像とリストに表示されるドキュメント形式のみがサポートされます。 ダイナミックメディアアセット、コンテンツフラグメント、エクスペリエンスフラグメントはサポートされていません。
+* 画像とリストに表示されるドキュメント形式のみがサポートされます。 [!DNL Dynamic Media] アセット、コンテンツフラグメント、エクスペリエンスフラグメントはサポートされていません。
 * メタデータスキーマは取得されません。
-* Sites 作成者は全員、リモート DAM デプロイメントへのアクセス権限を持っていなくても、取得されたコピーに対する読み取り権限を持ちます。
+* All [!DNL Sites] authors have read permissions on the fetched copies, even if they do not have access to the remote DAM deployment.
 * 統合をカスタマイズするための API サポートはありません。
 * この機能は、リモートアセットのシームレスな検索および使用をサポートします。多くのリモートアセットをローカルデプロイメントで一度に利用できるようにするには、リモートアセットの移行を検討します。[Assets 移行ガイド](assets-migration-guide.md)を参照してください。
 * リモートアセットをページプロパティユーザーインターフェイスのページサムネールとし [!UICONTROL て使用する] ことはできません。 「画像を選択」をクリックして、「ページのプロパティ」ユーザイ [!UICONTROL ンターフェイスで] 、Webページのサムネ [!UICONTROL ール][!UICONTROL を設定できます]。
 
 **セットアップとライセンス**
 
-* AMSでのAEM Assetsのデプロイメントがサポートされます。
-* AEM Sites は一度に 1 つの AEM Assets リポジトリに接続できます。
-* リモートリポジトリとして動作する AEM Assets の 1 つのライセンス。
-* ローカルオーサリングデプロイメントとして動作する AEM Sites の 1 つ以上のライセンス。
+* [!DNL Experience Manager Assets] AMSでの展開がサポートされています。
+* [!DNL Experience Manager Sites] は、一度に1つのリポジトリ [!DNL Experience Manager Assets] に接続できます。
+* A license of [!DNL Experience Manager Assets] working as remote repository.
+* One or more licenses of [!DNL Experience Manager Sites] working as local authoring deployment.
 
 **使用方法**
 
 * リモートアセットを検索し、ローカルページ上のリモートアセットをコンテンツを作成するためにドラッグする機能のみがサポートされています。
 * 取得操作は 5 秒でタイムアウトします。アセット取得時、問題が発生する場合があります（ネットワークに問題がある場合など）。Authors can re-attempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
-* Simple edits that are non-destructive and the edit supported via the AEM `Image` component, can be done on fetched assets. アセットは読み取り専用です。
+* Simple edits that are non-destructive and the edit supported via the [!DNL Experience Manager] `Image` component, can be done on fetched assets. アセットは読み取り専用です。
 
 ## 問題のトラブルシューティング {#troubleshoot}
 
