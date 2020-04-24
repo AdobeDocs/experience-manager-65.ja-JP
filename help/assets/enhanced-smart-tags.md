@@ -3,7 +3,7 @@ title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -44,7 +44,7 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 ## 使用開始 {#onboarding}
 
-スマートコンテンツサービスは、Adobe Experience Manager のアドオンとして購入できます。購入後、Adobe IOへのリンクを含む電子メールが組織の管理者に送信されます。
+スマートコンテンツサービスは、Adobe Experience Manager のアドオンとして購入できます。購入後、Adobe I/Oへのリンクを含む電子メールが組織の管理者に送信されます。
 
 管理者は、このリンクをたどって、Smart Content ServiceをExperience Managerと統合できます。 To integrate the service with Experience Manager Assets, see [Configure Smart Tags](config-smart-tagging.md).
 
