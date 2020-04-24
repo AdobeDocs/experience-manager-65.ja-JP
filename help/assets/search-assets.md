@@ -1,19 +1,19 @@
 ---
-title: AEM でのデジタルアセットと画像の検索
-description: AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
+title: Adobe Experience Managerでのデジタルアセットと画像の検索
+description: フィルターパネルを使用して、Adobe Experience Managerで必要なアセットを検索する方法と、検索に表示されるアセットを使用する方法を説明します。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1453d70ee75768057403c5cc93f5c7bad8ed918
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
-# AEM でのアセットの検索 {#search-assets-in-aem}
+# Adobe Experience Managerでのアセットの検索 {#search-assets-in-aem}
 
-Adobe Experience Manager (AEM)Assetsは、より高いコンテンツ速度を実現するための堅牢なアセット検出方法を提供します。 標準搭載の機能とカスタム方法を使用して、シームレスでインテリジェントな検索を実現し、チームがタイム・トゥ・マーケティングを短縮します。 アセットの検索は、デジタルアセット管理システムの利用の中核を成します。用途は、クリエイティブ担当者によるさらなる利用、ビジネスユーザーやマーケティング担当者によるアセットの堅牢な管理、DAM 管理者による管理などです。AEM Assets ユーザーインターフェイスまたは他のアプリケーションやサーフェスで実行できる簡易検索、詳細検索、カスタム検索は、これらの使用目的を達成するのに役立ちます。
+Adobe Experience Manager Assetsは、より高速なコンテンツ速度を実現するための堅牢なアセット検出方法を提供します。 標準搭載の機能とカスタム方法を使用して、シームレスでインテリジェントな検索を実現し、チームがタイム・トゥ・マーケティングを短縮します。 アセットの検索は、デジタルアセット管理システムの利用の中核を成します。用途は、クリエイティブ担当者によるさらなる利用、ビジネスユーザーやマーケティング担当者によるアセットの堅牢な管理、DAM 管理者による管理などです。Experience Manager Assetsのユーザーインターフェイスや他のアプリケーションやサーフェスを介して実行できる、シンプル、高度、カスタムの検索は、これらの使用例を満たすのに役立ちます。
 
-AEM は次の使用例をサポートしています。ここでは、これらの使用例での使用法、概念、設定、制限事項、トラブルシューティングについて説明します。
+Experience Manager Assetsでは、次の使用例がサポートされています。この記事では、これらの使用例の使用方法、概念、設定、制限およびトラブルシューティングについて説明します。
 
 | アセットの検索 | 設定と管理 | 検索結果の操作 |
 |---|---|---|
@@ -23,16 +23,16 @@ AEM は次の使用例をサポートしています。ここでは、これら�
 | [検索結果および動作について](#searchbehavior) | [検索ファセットの変更](#searchfacets) | [メタデータの一括更新](#metadataupdates) |
 | [検索ランキングおよびブースト](#searchrank) | [テキスト抽出](#extracttextupload) | [スマートコレクション](#collections) |
 | [詳細検索：検索のフィルタリングと範囲](#scope) | [カスタム述語](#custompredicates) | [予期しない検索結果と検索に関連する問題のトラブルシューティング](#troubleshoot-unexpected-search-results-and-issues) |
-| [他のソリューションやアプリから検索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[AEM デスクトップアプリケーション](#desktopapp)</li><li>[Adobe Stock 画像](#adobestock)</li><li>[Dynamic Media アセット](#dynamicmedia)</li></ul> |  |  |
+| [他のソリューションやアプリから検索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Managerデスクトップアプリケーション](#desktopapp)</li><li>[Adobe Stock 画像](#adobestock)</li><li>[Dynamic Media アセット](#dynamicmedia)</li></ul> |  |  |
 | [アセットピッカー](#assetselector) |  |  |
 | [制限事項](#limitations)と[ヒント](#tips) |  |  |
 | [例を使った説明](#samples) |  |  |
 
-AEM Webインターフェイスの上部にあるOmnisearchフィールドを使用してアセットを検索します。 Go to **[!UICONTROL Assets]** > **[!UICONTROL Files]** in AEM, click search icon in top bar, enter search keyword, and press return. または、キーワードショートカット/（スラッシュ）を使用してOmnisearchフィールドを開きます。 場所：検索をDAMアセットに制限するために、アセットが事前に選択されています。 AEMは、検索キーワードを入力する開始として提案を提供します。
+Experience Manager Webインターフェイスの上部にあるOmnisearchフィールドを使用して、アセットを検索します。 Go to **[!UICONTROL Assets]** > **[!UICONTROL Files]** in Experience Manager , click search icon in top bar, enter search keyword, and press return. または、キーワードショートカット/（スラッシュ）を使用してOmnisearchフィールドを開きます。 場所：検索をDAMアセットに制限するために、アセットが事前に選択されています。 検索キーワードを入力すると、Experience Managerで開始に提案が表示されます。
 
 フィルターパネルを使用して **** 、ファイルタイプ、ファイルサイズ、最終変更日、アセットのステータス、インサイトデータ、Adobe Stockのライセンスなど、様々なオプション（予測）に基づいて検索結果をフィルタリングし、検索結果を絞り込みます。 管理者は、検索ファセットを使用して、フィルターパネルをカスタマイズし、検索述部を追加または削除することができます。 [ [!UICONTROL フィルター] ]パネルの[ファイルタイプ]フィ [!UICONTROL ルタには] 、混在状態のチェックボックスがあります。 したがって、ネストされた述語（またはフォーマット）をすべて選択しない限り、第1レベルのチェックボックスは部分的にオンになります。
 
-AEM 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
+Experience Managerの検索機能では、コレクションの検索と、コレクション内のアセットの検索がサポートされています。 詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
 
 ## 検索インターフェイスについて {#searchui}
 
@@ -46,7 +46,7 @@ AEM 検索機能では、コレクションの検索とコレクション内の�
 
 ### 動的検索ファセット {#dynamicfacets}
 
-検索ファセット内で予想される検索結果の数は動的に更新されますが、この数を使用して、検索結果ページから目的のアセットをより迅速に見つけることができます。検索フィルターを適用する前であっても、予想されるアセット数は更新されます。フィルターに対して予想されるアセット数を確認すると、検索結果をすばやく効率的にナビゲートすることができます。詳しくは、[AEM でのアセットの検索](search-assets.md)を参照してください。
+検索ファセット内で予想される検索結果の数は動的に更新されますが、この数を使用して、検索結果ページから目的のアセットをより迅速に見つけることができます。検索フィルターを適用する前であっても、予想されるアセット数は更新されます。フィルターに対して予想されるアセット数を確認すると、検索結果をすばやく効率的にナビゲートすることができます。For more info, see [Search assets in Experience Manager](search-assets.md).
 
 ![検索ファセットで検索結果をフィルタリングしない場合のアセット概数の表示](assets/asset_search_results_in_facets_filters.png)
 
@@ -58,21 +58,21 @@ AEM 検索機能では、コレクションの検索とコレクション内の�
 
 オムニサーチフィールドからキーワード検索を実行できます。キーワード検索では大文字と小文字が区別されず、（よく使用されるメタデータフィールド全体での）全文検索です。 複数のキーワードを検索する場合、キーワード間の初期設定の演算子は初期設定の検索で、アセ `AND` ットにスマートタグが付けら `OR` れている場合に検索が行われます。
 
-結果は、最も近い一致を先頭に関連性の高い順に並べ替えられます。複数のキーワードがある場合は、メタデータに含まれるキーワードが多いアセットが、より関連性の高い結果になります。メタデータ内では、スマートタグとして表示されるキーワードは、他のメタデータフィールドに表示されるキーワードより高くランク付けされます。AEM では、特定の検索用語に、より高い重みを付けることができます。Also, it is possible to [boost the rank](#searchrank) of a few targeted assets for specific search terms.
+結果は、最も近い一致を先頭に関連性の高い順に並べ替えられます。複数のキーワードがある場合は、メタデータに含まれるキーワードが多いアセットが、より関連性の高い結果になります。メタデータ内では、スマートタグとして表示されるキーワードは、他のメタデータフィールドに表示されるキーワードより高くランク付けされます。Experience Managerでは、特定の検索用語をより高い重み付けで表示。 Also, it is possible to [boost the rank](#searchrank) of a few targeted assets for specific search terms.
 
 関連性の高いアセットをすばやく見つけるために、この機能豊富なインターフェイスには、フィルタリング、並べ替え、選択のメカニズムが用意されています。複数の条件に基づいて結果をフィルタリングし、検索されたアセットの数を様々なフィルター別に確認できます。または、オムニサーチフィールドのクエリを変更して検索を再実行することもできます。検索用語やフィルターを変更しても、その他のフィルターは依然として適用され、検索のコンテキストが保たれます。
 
-結果が多数のアセットの場合、AEMは最初の100をカード表示に、200をリスト表示に表示します。 ユーザがスクロールすると、読み込まれるアセットが増えます。 これは、パフォーマンスを向上させるためです。
+結果が多数のアセットである場合、Experience Managerでは最初の100がカード表示に、200がリスト表示に表示されます。 ユーザがスクロールすると、読み込まれるアセットが増えます。 これは、パフォーマンスを向上させるためです。
 
 >[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
 
 時には、予期しないアセットが検索結果に表示される場合があります。詳しくは、[予期しない検索結果](#troubleshoot-unexpected-search-results-and-issues)を参照してください。
 
-AEM では様々なファイル形式を検索でき、ビジネス要件に合わせて検索フィルターをカスタマイズできます。DAMリポジトリで使用可能になっている検索オプションと、アカウントにどのような制限があるかについては、管理者に問い合わせてください。
+Experience Managerでは様々なファイル形式を検索でき、検索フィルターはビジネス要件に合わせてカスタマイズできます。 DAMリポジトリで使用可能になっている検索オプションと、アカウントにどのような制限があるかについては、管理者に問い合わせてください。
 
 ### 強化されたスマートタグのある場合とない場合の結果 {#withsmarttags}
 
-デフォルトでは、検索用語どうしを AND 句で組み合わせて AEM 検索がおこなわれます。例えば、「woman running」というキーワードを検索するとします。 メタデータに「woman」と「running」の両方のキーワードを含むアセットのみが、デフォルトで検索結果に表示されます。 特殊文字（ピリオド、アンダースコアまたはダッシュ）をキーワードと共に使用する場合も、同じ動作が保持されます。 次の検索クエリは同じ結果を返します。
+デフォルトでは、Experience Managerの検索では検索用語とAND句が結合されます。 例えば、「woman running」というキーワードを検索するとします。 メタデータに「woman」と「running」の両方のキーワードを含むアセットのみが、デフォルトで検索結果に表示されます。 特殊文字（ピリオド、アンダースコアまたはダッシュ）をキーワードと共に使用する場合も、同じ動作が保持されます。 次の検索クエリは同じ結果を返します。
 
 * `woman running`
 * `woman.running`
@@ -87,7 +87,7 @@ Using smart tags adds an extra `OR` clause to find any of the search terms as th
 
 ### 入力に応じて提示される検索候補 {#searchsuggestions}
 
-キーワードの開始入力時に、AEMは可能な検索キーワードまたはフレーズを提案します。 提案は、既存のアセットのメタデータに基づいて行われます。 AEM では、検索に役立つすべてのメタデータフィールドのインデックスを作成します。検索候補を提示するために、以下のいくつかのメタデータフィールドの値が使用されます。検索候補の提示をおこなう場合は、次のフィールドに適切なキーワードを入力することを検討してください。
+キーワードの開始入力時に、Experience Managerによって検索キーワードや語句の候補が表示されます。 提案は、既存のアセットのメタデータに基づいて行われます。 Experience Managerは、検索に役立つすべてのメタデータフィールドのインデックスを作成します。 検索候補を提示するために、以下のいくつかのメタデータフィールドの値が使用されます。検索候補の提示をおこなう場合は、次のフィールドに適切なキーワードを入力することを検討してください。
 
 * アセットのタグ（`jcr:content/metadata/cq:tags` にマッピングされます）
 * アセットのタイトル（`jcr:content/metadata/dc:title` にマッピングされます）
@@ -115,7 +115,7 @@ Using smart tags adds an extra `OR` clause to find any of the search terms as th
 1. 「**[!UICONTROL 昇格を検索]**」ボックスで、画像検索時の強化の対象となるキーワードを指定し、「**[!UICONTROL 追加]**」をクリックまたはタップします。同じ方法で複数のキーワードを指定できます。
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックまたはタップします。昇格したこのキーワードの対象となるアセットが、検索結果の上位に表示されます。
 
-ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。詳しくは、[AEM での検索](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html)を参照してください。
+ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。For detailed info, see [search in Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -123,7 +123,7 @@ Using smart tags adds an extra `OR` clause to find any of the search terms as th
 
 ## 詳細検索 {#scope}
 
-AEM には、検索したアセットに適用されるフィルターなど、目的のアセットをすばやく見つけるのに役立つ様々な方法が用意されています。一般的に使用されるいくつかの方法を以下で説明します。[動作例](#samples)もいくつか以下に示します。
+Experience Managerには、検索したアセットに適用されるフィルターなど、様々な方法が用意されており、目的のアセットをすばやく見つけることができます。 一般的に使用されるいくつかの方法を以下で説明します。[動作例](#samples)もいくつか以下に示します。
 
 **ファイルまたはフォルダーの検索**：検索結果には、ファイル、フォルダーまたはその両方が表示されます。**[!UICONTROL フィルター]**&#x200B;パネルから、適切なオプションを選択できます。詳しくは、[検索インターフェイス](#searchui)を参照してください。
 
@@ -135,7 +135,7 @@ AEM には、検索したアセットに適用されるフィルターなど、�
 
 ### 類似の画像の検索 {#visualsearch}
 
-ユーザーが選択した画像と視覚的に類似した画像を検索するには、画像のカード表示またはツールバーから「**[!UICONTROL 類似を検索]**」オプションをクリックします。AEM は、ユーザーが選択した画像に類似した、DAM リポジトリのスマートタグ付き画像を表示します。[類似性検索の設定方法](#configvisualsearch)を参照してください。
+ユーザーが選択した画像と視覚的に類似した画像を検索するには、画像のカード表示またはツールバーから「**[!UICONTROL 類似を検索]**」オプションをクリックします。Experience Managerに、ユーザーが選択した画像に類似した、DAMリポジトリのスマートタグ付き画像が表示されます。 [類似性検索の設定方法](#configvisualsearch)を参照してください。
 
 ![カードのオプションを使用して類似の画像を検索する表示](assets/search_find_similar.png)
 
@@ -143,7 +143,7 @@ AEM には、検索したアセットに適用されるフィルターなど、�
 
 ### Adobe Stock 画像 {#adobestock}
 
-AEM のユーザーインターフェイス内から [Adobe Stock アセット](/help/assets/aem-assets-adobe-stock.md)を検索し、必要なアセットのライセンスを取得できます。オムニサーチバーに「`Location: Adobe Stock`」を追加します。また、フィルターパネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。
+From within the Experience Manager user interface, users can search [Adobe Stock assets](/help/assets/aem-assets-adobe-stock.md) and license the required assets. オムニサーチバーに「`Location: Adobe Stock`」を追加します。また、フィルターパネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。
 
 ### Dynamic Media アセット {#dmassets}
 
@@ -191,17 +191,17 @@ path、limit、size および orderby の各プロパティを他のプロパテ
 * プロパティ値に特定の文字列が含まれるアセットを表示する（例：title=Basel Meeting Room）：`title:*Meeting*`
 * 特定の文字列が含まれ、特定のプロパティ値を持つアセットを表示する（例：title=John Doe のアセットで文字列「Adobe」を検索する）：`*Adobe* title:"John Doe"`
 
-## 他の AEM ソリューションまたはインターフェイスからのアセットの検索 {#beyondomnisearch}
+## Search assets from other Experience Manager offerings or interfaces {#beyondomnisearch}
 
-Adobe Experience Manager（AEM）では、DAM リポジトリを他の様々な AEM ソリューションに接続して、デジタルアセットにすばやくアクセスできるようにし、クリエイティブワークフローを効率化します。アセットの検出は、参照または検索で始まります。異なるサーフェスやソリューションでも、検索の動作はほとんど同じです。対象オーディエンス、使用例、ユーザーインターフェイスは AEM ソリューションによって異なるので、一部の検索方法はそれに応じて変わります。個々のソリューションの具体的な方法については、以下のリンクを参照してください。ここでは、一般に当てはまるヒントや動作について説明しています。
+Adobe Experience Managerは、DAMリポジトリを他の様々なExperience Managerソリューションに接続して、デジタルアセットへのアクセスを高速化し、クリエイティブワークフローを効率化します。 アセットの検出は、参照または検索で始まります。異なるサーフェスやソリューションでも、検索の動作はほとんど同じです。検索方法の中には、ターゲットオーディエンス、使用例、ユーザーインターフェイスがExperience Managerソリューションによって異なるので、変更されるものもあります。 個々のソリューションの具体的な方法については、以下のリンクを参照してください。ここでは、一般に当てはまるヒントや動作について説明しています。
 
 ### Adobe Asset Link パネルからのアセットの検索 {#aal}
 
-クリエイティブプロフェッショナルは、Adobe Asset Link を使用して、サポートされている Adobe Creative Cloud アプリケーション内から、AEM Assets に保存されているコンテンツにアクセスできるようになりました。また、Photoshop、Illustrator、InDesign などの Creative Cloud アプリ内のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることができます。また、Asset Link を使用すると、視覚的に類似した結果を検索できます。ビジュアル検索の表示結果は、Adobe Sensei の機械学習アルゴリズムを活用しており、見た目に類似した画像を見つけやすくなっています。詳しくは、[Adobe Asset Link を使用したアセットの検索と参照](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)を参照してください。
+クリエイティブプロフェッショナルは、Adobe Asset Linkを使用して、サポートされているAdobe Creative Cloudアプリケーションから離れることなく、Experience Manager Assetsに保存されたコンテンツにアクセスできるようになりました。 また、Photoshop、Illustrator、InDesign などの Creative Cloud アプリ内のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることができます。また、Asset Link を使用すると、視覚的に類似した結果を検索できます。ビジュアル検索の表示結果は、Adobe Sensei の機械学習アルゴリズムを活用しており、見た目に類似した画像を見つけやすくなっています。詳しくは、[Adobe Asset Link を使用したアセットの検索と参照](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)を参照してください。
 
-### AEM デスクトップアプリケーションでのアセットの検索 {#desktopapp}
+### Experience Managerデスクトップアプリでのアセットの検索 {#desktopapp}
 
-デスクトップアプリケーションを使用すると、クリエイティブプロフェッショナルは、ローカルデスクトップ（Windows または Mac）で AEM Assets を容易に検索および利用できるようになります。目的のアセットを Mac Finder や Windows エクスプローラーで表示し、デスクトップアプリケーションで開き、ローカルで変更することが容易にできます。変更内容は AEM に書き戻され、リポジトリ内に新しいバージョンが作成されます。1 つ以上のキーワード、ワイルドカード * および ？、AND 演算子を使用した基本検索がサポートされています。[デスクトップアプリケーションでのアセットの参照、検索、プレビュー](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)を参照してください。
+クリエイティブプロフェッショナルは、デスクトップアプリを使用して、Experience Manager Assetsをローカルデスクトップ（WindowsまたはMac OS）で簡単に検索および利用できるようにします。 クリエイティブは、Mac FinderまたはWindowsエクスプローラーで目的のアセットを簡単に表示し、デスクトップアプリケーションで開いてローカルで変更し、Experience Managerに保存し、リポジトリで新しいバージョンを作成して変更を反映させることができます。 1 つ以上のキーワード、ワイルドカード * および ？、AND 演算子を使用した基本検索がサポートされています。[デスクトップアプリケーションでのアセットの参照、検索、プレビュー](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)を参照してください。
 
 ### Brand Portal でのアセットの検索 {#brandportal}
 
@@ -209,7 +209,7 @@ Adobe Experience Manager（AEM）では、DAM リポジトリを他の様々な 
 
 ### Adobe Stock 画像の検索 {#adobestock-1}
 
-AEM のユーザーインターフェイス内から Adobe Stock アセットを検索し、必要なアセットのライセンスを取得できます。オムニサーチフィールドに「`Location: Adobe Stock`」を追加します。また、**[!UICONTROL フィルター]**&#x200B;パネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。詳しくは、[AEM での Adobe Stock 画像の管理](/help/assets/aem-assets-adobe-stock.md#usemanage)を参照してください。
+ユーザーは、Experience Managerユーザーインターフェイス内からAdobe Stockアセットを検索し、必要なアセットのライセンスを取得できます。 オムニサーチフィールドに「`Location: Adobe Stock`」を追加します。また、**[!UICONTROL フィルター]**&#x200B;パネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。See [manage Adobe Stock images in Experience Manager](/help/assets/aem-assets-adobe-stock.md#usemanage).
 
 ### Dynamic Media アセットの検索 {#dynamicmedia}
 
@@ -217,11 +217,11 @@ AEM のユーザーインターフェイス内から Adobe Stock アセットを
 
 ### Web ページ作成時のコンテンツファインダーでのアセットの検索 {#contentfinder}
 
-作成者は、コンテンツファインダーを使用して関連アセットを DAM リポジトリで検索し、作成中の Web ページで使用できます。作成者は、接続されたアセット機能を使用して、リモートのAEMデプロイメントで使用可能なアセットを検索することもできます。 作成者は、これらのアセットをローカルAEMデプロイメントのWebページで使用できます。 See [use remote assets](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets).
+作成者は、コンテンツファインダーを使用して関連アセットを DAM リポジトリで検索し、作成中の Web ページで使用できます。作成者は、接続されたアセット機能を使用して、リモートのExperience Managerデプロイメントで使用可能なアセットを検索することもできます。 作成者は、これらのアセットをローカルのExperience ManagerデプロイメントのWebページで使用できます。 See [use remote assets](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets).
 
 ### コレクションの検索 {#collections}
 
-AEM 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
+Experience Managerの検索機能では、コレクションの検索と、コレクション内のアセットの検索がサポートされています。 詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
 
 ## アセットピッカー {#assetselector}
 
@@ -248,18 +248,18 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ## 制限事項 {#limitations}
 
-AEM Assets の検索機能には、次の制限事項があります。
+Experience Manager Assetsの検索機能には、次の制限があります。
 
 * 検索クエリの先頭にスペースを入れないでください。スペースを入れると、検索が機能しません。
-* AEM may continue to show the search term after you select properties of an asset from searched results and then cancel the search. <!-- (CQ-4273540) -->
+* Experience Manager may continue to show the search term after you select properties of an asset from searched results and then cancel the search. <!-- (CQ-4273540) -->
 * フォルダーまたはファイルとフォルダーを検索する場合、どのパラメーターでも検索結果を並べ替えることはできません。
-* Omnisearchバーに何も入力しないでReturnキーを押すと、AEMはファイルのみのリストを返し、フォルダーは返しません。 キーワードを使用せずに特定のフォルダーを検索した場合は、結果が返されません。
+* Omnisearchバーに何も入力しないでReturnキーを押すと、Experience Managerはファイルのみのリストを返し、フォルダーは返しません。 キーワードを使用せずに特定のフォルダーを検索した場合、Experience Managerは結果を返しません。
 * 検索ペー **[!UICONTROL ジの右上隅にある]** 「すべて選択」オプションを使用して、検索したアセットを選択します。 Experience Managerでは、最初に100個のアセットがカード表示で、200個のアセットがリスト表示で表示されます。 検索結果をスクロールすると、読み込まれるアセットが増えます。 読み込まれたアセットより多くのアセットを選択できます。 選択したアセットの数が、検索結果ページの右上隅に表示されます。 選択範囲に対して操作を行うことができます。例えば、選択したアセットのダウンロード、選択したアセットのメタデータプロパティの一括更新、選択したアセットのコレクションへの追加などが可能です。 表示されている数より多くのアセットが選択されている場合は、選択したすべてのアセットにアクションが適用されるか、ダイアログに適用されたアセットの数が表示されます。 読み込まれなかったアセットにアクションを適用するには、すべてのアセットが明示的に選択されていることを確認します。
 
 ビジュアル検索または類似検索には、次の制限事項があります。
 
 * ビジュアル検索は、より大きなリポジトリで最も有効に機能します。良好な結果を得るために最低限必要な画像数はありませんが、画像の数が少ないと、一致の精度が大きなリポジトリの場合ほど良くない可能性があります。
-* モデルを変更したり、AEM をトレーニングして類似の画像を見つけることはできません。例えば、一部のアセットにスマートタグを追加または削除しても、モデルは変更されません。それらのアセットは、視覚的に類似した検索結果から除外されます。
+* モデルを変更したり、Experience Managerをトレーニングして類似の画像を見つけることはできません。 例えば、一部のアセットにスマートタグを追加または削除しても、モデルは変更されません。それらのアセットは、視覚的に類似した検索結果から除外されます。
 
 次のシナリオでは、検索機能のパフォーマンスに制限がある場合があります。
 
@@ -275,7 +275,7 @@ AEM Assets の検索機能には、次の制限事項があります。
 * 全文検索では、- や ^ などの演算子をサポートしています。これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、「Notebook - Beauty」ではなく、「&quot;Notebook - Beauty&quot;」と指定します。
 * 検索結果が多すぎる場合は、[検索範囲](#scope)を制限して、目的のアセットを絞り込みます。これは、特定のファイルタイプ、特定の場所、特定のメタデータなど、目的のアセットを検索する良い方法がある程度わかっている場合に最も効果的です。
 
-* **タグ付け**：タグを使用すると、アセットを分類して参照や検索をより効率的におこなえるようになります。タグ付けは、適切な分類を他のユーザーやワークフローに伝播するうえで役に立ちます。AEM では、使用状況データやトレーニングでアセットのタグ付けを絶えず改善する、Adobe Sensei の AI サービスを活用して、アセットに自動的にタグを付ける手段を提供しています。この機能がアカウントで有効な場合は、アセットを検索する際にスマートタグが考慮されます。AEMの組み込み検索機能と同時に機能します。 [検索動作](#searchbehavior)を参照してください。検索結果の表示順序を最適化するには、選択した一部のアセットの[検索ランキングを上げる](#searchrank)ことができます。
+* **タグ付け**：タグを使用すると、アセットを分類して参照や検索をより効率的におこなえるようになります。タグ付けは、適切な分類を他のユーザーやワークフローに伝播するうえで役に立ちます。Experience Managerのオファー方法を使用すると、Adobe Senseiの人為的にインテリジェントなサービスを使用して、アセットに自動的にタグ付けし、使用状況やトレーニングでアセットをより効率的にタグ付けできます。 この機能がアカウントで有効な場合は、アセットを検索する際にスマートタグが考慮されます。これは組み込みの検索機能と連携して機能します。[検索動作](#searchbehavior)を参照してください。検索結果の表示順序を最適化するには、選択した一部のアセットの[検索ランキングを上げる](#searchrank)ことができます。
 
 * **インデックス作成**：インデックスが作成されたメタデータおよびアセットのみが検索結果に返されます。検索範囲とパフォーマンスを向上させるには、適切なインデックス作成をおこない、ベストプラクティスに従ってください。詳しくは、[インデックス作成](#searchindex)を参照してください。
 
@@ -324,9 +324,9 @@ AEM Assets の検索機能には、次の制限事項があります。
 
 ### 視覚検索または類似性検索 {#configvisualsearch}
 
-ビジュアル検索ではスマートタグを使用し、AEM 6.5.2.0以降が必要です。 スマートタグ機能を設定した後、次の手順に従います。
+ビジュアル検索ではスマートタグを使用し、Experience Manager 6.5.2.0以降が必要です。 スマートタグ機能を設定した後、次の手順に従います。
 
-1. AEM CRXDEのノードで、 `/oak:index/lucene` 次のプロパティと値を追加し、変更を保存します。
+1. Experience Manager CRXDEのノードで、 `/oak:index/lucene` 次のプロパティと値を追加し、変更を保存します。
 
    * `costPerEntry` 値を持つタイプ `Double` のプロパティ `10`。
 
@@ -347,11 +347,11 @@ AEM Assets の検索機能には、次の制限事項があります。
    変更内容を保存します。
 
 1. の値を `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` 持つタ `similarityTags` イプのプロパテ `Boolean` ィにアクセスし、追加しま `true`す。
-1. スマートタグをAEMリポジトリ内のアセットに適用します。 スマート [タグの設定方法を参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)。
+1. スマートタグをExperience Managerリポジトリのアセットに適用します。 スマート [タグの設定方法を参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)。
 1. CRXDEのnodeで、プ `/oak-index/damAssetLucene` ロパティをに設 `reindex` 定します `true`。 変更内容を保存します。
 1. （オプション）検索フォームをカスタマイズした場合は、ノードをにコ `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` ピーしま `/conf/global/settings/dam/search/facets/assets/jcr:content/items`す。 すべての変更を保存します。
 
-関連情報については、AEMのスマー [トタグと、スマートタグの管理方法](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) ( [英語のみ)を参照してください](/help/assets/managing-smart-tags.md)。
+関連情報については、Experience Managerでのス [マートタグの理解と](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) 、スマートタ [グの管理方法を参照してください](/help/assets/managing-smart-tags.md)。
 
 ### 必須メタデータ {#mandatorymetadata}
 
@@ -359,11 +359,11 @@ AEM Assets の検索機能には、次の制限事項があります。
 
 ### 検索ファセットの変更 {#searchfacets}
 
-検出の速度を向上させるために、AEM Assetsオファーは検索ファセットを検索し、これを使用して検索結果をフィルタリングできます。 フィルターパネルには、デフォルトでいくつかの標準ファセットが含まれています。 管理者は、フィルターパネルをカスタマイズして、組み込み述語を使用してデフォルトのファセットを変更できます。 AEMは、組み込みの述語の適切なコレクションと、ファセットをカスタマイズするエディターを提供します。 検索ファセ [ットを参照](/help/assets/search-facets.md)。
+検出の速度を向上させるために、Experience Manager Assetsオファーは検索ファセットを検索し、これを使用して検索結果をフィルタリングできます。 フィルターパネルには、デフォルトでいくつかの標準ファセットが含まれています。 管理者は、フィルターパネルをカスタマイズして、組み込み述語を使用してデフォルトのファセットを変更できます。 Experience Managerには、組み込みの述語の適切なコレクションと、ファセットをカスタマイズするエディターが用意されています。 検索ファセ [ットを参照](/help/assets/search-facets.md)。
 
 ### アセットのアップロード時のテキストの抽出 {#extracttextupload}
 
-PSDやPDFファイルなどのアセットをアップロードする際に、アセットからテキストを抽出するようにAEMを設定できます。 AEMは、抽出されたテキストのインデックスを作成し、抽出されたテキストに基づいてこれらのアセットを検索するのに役立ちます。 See [upload assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+ユーザーがPSDやPDFファイルなどのアセットをアップロードする際に、アセットからテキストを抽出するようにExperience Managerを設定できます。 Experience Managerは、抽出されたテキストのインデックスを作成し、抽出されたテキストに基づいてこれらのアセットを検索するのに役立ちます。 See [upload assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
 
 ### 検索結果をフィルタするカスタム述語 {#custompredicates}
 
@@ -399,7 +399,7 @@ PSDやPDFファイルなどのアセットをアップロードする際に、�
 
 ### 検索結果の並べ替え {#sort}
 
-検索結果を並べ替えると、必要なアセットをすばやく見つけることができます。検索結果の並べ替えはリスト表示で機能し、**[!UICONTROL フィルター]**&#x200B;パネルで「**[!UICONTROL [ファイル](#searchui)]**」を選択した場合のみおこなえます。AEM Assets では、サーバー側の並べ替え機能を使用して、フォルダー内のすべてのアセット（どれだけ多くても対応可能）や検索クエリの結果をすばやく並べ替えます。サーバー側の並べ替えにより、クライアント側の並べ替えよりも高速で正確な結果が得られます。
+検索結果を並べ替えると、必要なアセットをすばやく見つけることができます。検索結果の並べ替えはリスト表示で機能し、**[!UICONTROL フィルター]**&#x200B;パネルで「**[!UICONTROL [ファイル](#searchui)]**」を選択した場合のみおこなえます。Experience Manager Assetsでは、サーバー側での並べ替えを使用して、フォルダー内のすべてのアセット（数量）や検索フォルダーの結果をすばやく並べ替えることができます。クエリ サーバー側の並べ替えにより、クライアント側の並べ替えよりも高速で正確な結果が得られます。
 
 リスト表示では、任意のフォルダー内のアセットを並べ替える場合と同じように、検索結果を並べ替えることができます。並べ替えは、「名前」、「タイトル」、「ステータス」、「ディメンション」、「サイズ」、「評価」、「使用状況」、「作成日」、「変更日」、「発行日」、「ワークフロー」、「チェックアウト済み」の各列で行われます。
 
@@ -440,19 +440,19 @@ For the assets that are available in a single folder or a collection, it is easi
 
 | エラー、問題、症状 | 考えられる理由 | 問題の修正または理解 |
 |---|---|---|
-| メタデータがないアセットを検索する際に誤った結果が生じる | 必須のメタデータがないアセットを検索すると、AEMで有効なメタデータを持つ一部のアセットが表示される場合があります。 結果は、インデックス付きのメタデータプロパティに基づいています。 | メタデータの更新後、アセットメタデータの正しい状態を反映するために、インデックスの再作成が必要です。 詳しくは、[必須メタデータ](metadata-schemas.md#define-mandatory-metadata)を参照してください。 |
+| メタデータがないアセットを検索する際に誤った結果が生じる | 必須のメタデータがないアセットを検索すると、Experience Managerで有効なメタデータを持つ一部のアセットが表示される場合があります。 結果は、インデックス付きのメタデータプロパティに基づいています。 | メタデータの更新後、アセットメタデータの正しい状態を反映するために、インデックスの再作成が必要です。 詳しくは、[必須メタデータ](metadata-schemas.md#define-mandatory-metadata)を参照してください。 |
 | 検索結果が多すぎます | 部分一致検索パラメータ。 | 検索範囲の制限 [を検討します](#scope)。 スマートタグを使用すると、予想以上に多くの検索結果が得られる場合があります。 スマートタ [グを使用した検索動作を参照してくださ](#withsmarttags)い。 |
 | 関連のない、または一部関連の検索結果 | スマートタグを使用した検索動作の変更。 | スマートタ [グ付け後の検索の変化を理解します](#withsmarttags)。 |
-| アセットのオートコンプリートの提案なし | 新しくアップロードされたアセットのインデックスはまだ作成されていません。 Omnisearchバーで検索キーワードを入力した場合、メタデータは開始候補としてすぐには使用できません。 | AEM Assets では、タイムアウト期間（デフォルトは 1 時間）が経過してから、新しくアップロードまたは更新されたすべてのアセットのメタデータにインデックスを付けるバックグラウンドジョブを実行し、その後でメタデータを候補のリストに追加します。 |
+| アセットのオートコンプリートの提案なし | 新しくアップロードされたアセットのインデックスはまだ作成されていません。 Omnisearchバーで検索キーワードを入力した場合、メタデータは開始候補としてすぐには使用できません。 | Experience Manager Assetsは、タイムアウト期間（デフォルトで1時間）が経過するまで待ってから、バックグラウンドジョブを実行し、新しくアップロードまたは更新されたすべてのアセットのメタデータのインデックスを作成し、そのメタデータを提案のリストに追加します。 |
 | 検索結果はありません | <ul><li>クエリに一致するアセットが存在しない。</li><li>検索クエリの前に空白を追加。</li><li>サポートされていないメタデータフィールドに、検索しているキーワードが含まれている。</li><li>アセットにオンタイムとオフタイムが設定されていて、アセットのオフタイム時に検索がおこなわれた。</li></ul> | <ul><li>別のキーワードを使用して検索します。 または、（スマート）タグ付けを使用して検索結果を改善します。</li><li>これは[既知の制限事項](#limitations)です。</li><li>すべてのメタデータフィールドが検索の際に考慮されるわけではありません。詳しくは、[検索範囲](#scope)を参照してください。</li><li>後で検索するか、必要なアセットのオン/オフのタイミングを変更します。</li></ul> |
-| 検索フィルター/述語が使用できません | <ul><li>検索フィルターが設定されていない。</li><li>ログインできません。</li><li>（考えにくい）検索オプションは、使用している展開でカスタマイズされません。</li></ul> | <ul><li>検索のカスタマイズが使用可能かどうかを管理者に問い合わせて確認してください。</li><li>管理者に問い合わせて、お使いのアカウントにカスタマイズを使用する権限/権限があるかどうかを確認してください。</li><li>管理者に問い合わせて、使用しているAEM Assetsデプロイメントで使用可能なカスタマイズを確認します。</li></ul> |
-| 視覚的に類似した画像を検索する場合、期待される画像が見つからない | <ul><li>画像はAEMでは使用できません。</li><li>画像のインデックスが作成されません。 通常、最近アップロードされた日時。</li><li>画像にスマートタグが付いていません。</li></ul> | <ul><li>AEM追加アセットの画像。</li><li>リポジトリのインデックスを再作成するには、管理者に問い合わせてください。 また、適切なインデックスを使用していることを確認します。</li><li>管理者に問い合わせて、関連アセットのスマートタグを付けます。</li></ul> |
-| 視覚的に類似した画像を検索する場合、無関係な画像が表示されます | ビジュアル検索の動作。 | AEM では、関連する可能性のあるアセットをできるだけ多く表示します。関連性の低い画像がある場合は、結果には追加されますが、検索のランキングは低くなります。検索結果を下にスクロールするにつれて、検索されたアセットの一致精度と関連性が低くなります。 |
+| 検索フィルター/述語が使用できません | <ul><li>検索フィルターが設定されていない。</li><li>ログインできません。</li><li>（考えにくい）検索オプションは、使用している展開でカスタマイズされません。</li></ul> | <ul><li>検索のカスタマイズが使用可能かどうかを管理者に問い合わせて確認してください。</li><li>管理者に問い合わせて、お使いのアカウントにカスタマイズを使用する権限/権限があるかどうかを確認してください。</li><li>管理者に問い合わせて、使用しているExperience Manager Assetsデプロイメントで使用可能なカスタマイズを確認します。</li></ul> |
+| 視覚的に類似した画像を検索する場合、期待される画像が見つからない | <ul><li>画像はExperience Managerでは使用できません。</li><li>画像のインデックスが作成されません。 通常、最近アップロードされた日時。</li><li>画像にスマートタグが付いていません。</li></ul> | <ul><li>Experience Manager追加 Assetsの画像。</li><li>リポジトリのインデックスを再作成するには、管理者に問い合わせてください。 また、適切なインデックスを使用していることを確認します。</li><li>管理者に問い合わせて、関連アセットのスマートタグを付けます。</li></ul> |
+| 視覚的に類似した画像を検索する場合、無関係な画像が表示されます | ビジュアル検索の動作。 | Experience Managerには、可能な限り多くの関連するアセットが表示されます。 関連性の低い画像がある場合は、結果には追加されますが、検索のランキングは低くなります。検索結果を下にスクロールするにつれて、検索されたアセットの一致精度と関連性が低くなります。 |
 | 検索結果を選択して操作する場合、検索されたすべてのアセットは操作されません。 | 「すべ [!UICONTROL て選択] 」オプションでは、カード表示の最初の100件の検索結果と、リスト表示の最初の200件の検索結果のみが選択されます。 |  |
 
 >[!MORELIKETHIS]
 >
->* [AEM検索導入ガイド](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
+>* [Experience Manager検索導入ガイド](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [複数値およびタグ検索述語の詳細設定](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html)
 >* [スマート翻訳検索の設定](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
 
