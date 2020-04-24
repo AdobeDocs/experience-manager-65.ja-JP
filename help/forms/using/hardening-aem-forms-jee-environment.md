@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: dee9f9c9d3dfb916d1feaa0d258c883686e1a1dc
 
 ---
 
@@ -38,7 +38,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 
 **Windows へのインストールと設定**
 
-自動オプションインストールを使用して JBoss に JEE 上の AEM Forms をインストールする場合、または PDF Generator をインストールする場合、Windows へのインストールは管理者として実行する必要があります。また、PDF Generator をネイティブアプリケーションサポートと共に Windows にインストールする場合は、Microsoft Office をインストールしたのと同じ Windows ユーザーとしてインストールを実行する必要があります。インストールの権限について詳しくは、お使いのアプリケーションサーバーに対応した「**JEE 上の AEM Forms のインストールおよびデプロイ**」ドキュメントを参照してください。
+自動オプションインストールを使用して JBoss に JEE 上の AEM Forms をインストールする場合、または PDF Generator をインストールする場合、Windows へのインストールは管理者として実行する必要があります。また、PDF Generator をネイティブアプリケーションサポートと共に Windows にインストールする場合は、Microsoft Office をインストールしたのと同じ Windows ユーザーとしてインストールを実行する必要があります。インストールの権限について詳しくは、使用しているアプリケーションサーバー版の『JEE上のAEM Formsのインストールおよびデプロイ』ドキュメントを参照してください。
 
 ### ネットワーク層のセキュリティ {#network-layer-security}
 
@@ -49,7 +49,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した</p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -85,7 +85,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した</p></th> 
+   <th><p>問題</p></th> 
    <th><p>説明</p></th> 
   </tr> 
  </thead> 
@@ -114,7 +114,7 @@ For additional security information for your operating system, see [“Operating
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した</p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -184,7 +184,7 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    * ローカルでログオンを拒否する
    * サービスとしてログオン（通常は既に設定済み）
 
-1. 新しく作成したユーザーアカウントに、JEE 上の AEM Forms Web コンテンツディレクトリの項目に対する「読み取りと実行」、「フォルダーの内容の一覧表示」、「読み取り」の各権限を付与します。
+1. 新しいリストアカウントに、JEE上のAEM Formsのインストールディレクトリとグローバルドキュメントストレージ(GDS)ディレクトリを完了するための読み取りと実行、書き込み、変更、フォルダーの内容、読み取りの権限を付与します。 GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 インストール時に場所の設定が空のままの場合、 [JBoss root]/server/[type]/svcnative/DocumentStorageのアプリケーションサーバーインストールの下のディレクトリがデフォルトの場所になります。
 1. アプリケーションサーバーを起動します。
 
 **Configuration Manager ブートストラップサーブレットの無効化**
@@ -258,7 +258,7 @@ JEE 上の AEM Forms をインストールすると、上級管理者ユーザ�
 1. Web ブラウザーに次の URL を入力します。
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
    デフォルトのポート番号は次のいずれかです。
@@ -278,7 +278,7 @@ JEE 上の AEM Forms をインストールすると、上級管理者ユーザ�
 
 次の手順を実行することで CRX 管理者のデフォルトパスワードの変更もお勧めします。
 
-1. デフォルトのユーザ `https://'[server]:[port]'/lc/libs/granite/security/content/useradmin.html` ー名/パスワードを使用してログインします。
+1. デフォルトのユーザ `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` ー名/パスワードを使用してログインします。
 1. 検索フィールドに「管理者」と入力し、「**移動**」をクリックします。
 1. Select **Administrator** from the search result and click the **Edit** icon at the lower right of the user interface.
 1. 「**新しいパスワード**」フィールドに新しいパスワードを、「**パスワード**」フィールドに古いパスワードを指定します。
@@ -291,7 +291,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
 1. Web ブラウザーに次の URL を入力します。
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
 1. **設定／コアシステム設定／設定**&#x200B;をクリックします。
@@ -304,7 +304,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した</p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -419,7 +419,7 @@ LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した</p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -462,163 +462,163 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/ReaderExtensions/*</p> </td> 
    <td><p>PDF ドキュメントに使用権限を適用する Acrobat Reader DC Extensions エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edc/*</p> </td> 
    <td><p>Rights Management エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edcws/*</p> </td> 
    <td><p>Rights Management の Web サービス URL</p> </td> 
-   <td><p>非対応</p> </td> 
-   <td><p>対応</p> </td> 
+   <td><p>不可</p> </td> 
+   <td><p>可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/pdfgui/*</p> </td> 
    <td><p>PDF Generator 管理 Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/CM タスク/*</p> </td> 
    <td><p>Workspace エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/workspace-server/*</p> </td> 
    <td><p>Workspace クライアントアプリケーションが必要とする Workspace サーブレットおよび Data Services</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/adobe-bootstrapper/*</p> </td> 
    <td><p>JEE 上の AEM Forms をブートストラップするサーブレット</p> </td> 
-   <td><p>いいえ</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/*</p> </td> 
    <td><p>forms サーバー Web サービスの情報ページ</p> </td> 
-   <td><p>いいえ</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/services/*</p> </td> 
    <td><p>すべての forms サーバーサービス用の Web サービス URL</p> </td> 
-   <td><p>いいえ</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edc/admin/*</p> </td> 
    <td><p>Rights Management 管理 Web アプリケーション</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/adminui/*</p> </td> 
    <td><p>管理コンソールのホームページ</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/TruststoreComponent/</p> <p>secured/*</p> </td> 
    <td><p>Trust Store Management 管理ページ</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormsIVS/*</p> </td> 
    <td><p>フォームのレンダリングのテストとデバッグを行う Forms IVS アプリケーション</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/OutputIVS/*</p> </td> 
    <td><p>Output サービスのテストとデバッグを行う Output IVS アプリケーション</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rmws/*</p> </td> 
    <td><p>Rights Management のための REST URL</p> </td> 
-   <td><p>非対応</p> </td> 
-   <td><p>対応</p> </td> 
+   <td><p>不可</p> </td> 
+   <td><p>可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/OutputAdmin/*</p> </td> 
    <td><p>Output 管理ページ</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/*</p> </td> 
    <td><p>Forms Web アプリケーションファイル</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/GetImage</p> <p>Servlet</p> </td> 
    <td><p>HTML 変換時に、JavaScript の取得に使用</p> </td> 
-   <td><p>いいえ</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServerAdmin/*</p> </td> 
    <td><p>Forms 管理ページ</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/repository/*</p> </td> 
    <td><p>WebDAV（デバッグ）アクセス用の URL</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/AACComponent/*</p> </td> 
    <td><p>アプリケーションおよびサービスユーザーインターフェイス</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/WorkspaceAdmin/*</p> </td> 
    <td><p>Workspace 管理ページ</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rest/*</p> </td> 
    <td><p>残りのサポートページ</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/CoreSystemConfig/*</p> </td> 
    <td><p>JEE 上の AEM Forms Core 設定ページ</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/um/</p> </td> 
    <td><p>User Management 認証</p> </td> 
-   <td><p>非対応</p> </td> 
-   <td><p>対応</p> </td> 
+   <td><p>不可</p> </td> 
+   <td><p>可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/um/*</p> </td> 
    <td><p>User Management 管理インターフェイス</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>いいえ</p> </td> 
+   <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/DoumentManager/*</p> </td> 
    <td><p>HTTP ドキュメント対応の SOAP トランスポートまたは EJB トランスポート経由でリモートエンドポイント、SOAP WSDL エンドポイントおよび Java SDK にアクセスするときに、処理するドキュメントをアップロードおよびダウンロードする。</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
    <td><p>Yes</p> </td> 
   </tr> 
  </tbody> 
@@ -676,7 +676,7 @@ JEE上のAEM Formsには、転送者リソースへのアクセスを許可す�
 
 **許可されている転送者リスト**
 
-許可されている転送者リストは、管理コンソールのUser Managementインターフェイスから管理できます。 User Management インターフェイスを使用すると、リストを作成、編集または削除できます。Refer to the *[Preventing CSRF attacks](/help/forms/using/admin-help/preventing-csrf-attacks.md)*section of the *administration help*for more information on working with the Allowed Referrer list.
+許可されている転送者リストは、管理コンソールのUser Managementインターフェイスから管理できます。 User Management インターフェイスを使用すると、リストを作成、編集または削除できます。Refer to the * [Preventing CSRF attacks](/help/forms/using/admin-help/preventing-csrf-attacks.md)* section of the *administration help* for more information on working with the Allowed Referrer list.
 
 **許可されている転送者の例外と許可されているURIリスト**
 
@@ -691,7 +691,7 @@ JEE上のAEM Formsには、許可されている転送者の例外リストと�
 * updateAllowedRefererExceptions
 * deleteAllowedRefererExceptions
 
-API について詳しくは、「*JEE 上の AEM Forms API リファレンス*」を参照してください。
+APIについて詳しくは、「* JEE上のAEM Forms APIリファレンス*」を参照してください。
 
 Use the ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list for Allowed Referrer Exceptions at the global level i.e. to define exceptions that are applicable to all applications. This list contains only URIs with either an absolute path (e.g. `/index.html`) or a relative path (e.g. `/sample/`). You can also append a regular expression to the end of a relative URI, e.g. `/sample/(.)*`.
 
@@ -711,7 +711,7 @@ Include the `-Dlc.um.csrffilter.disabled=true` JAVA argument in the startup scri
 
 **転送者のフィルタリングによるカスタムWARファイルの除外**
 
-管理者は、ビジネス要件に合わせて JEE 上の AEM Forms を操作するためのカスタム WAR ファイルを用意している場合があります。To enable Referrer Filtering for your custom WAR files, include ***adobe-usermanager-client.jar*** in the class path for the WAR and include a filter entry in the *web.xml* file with the following parameters:
+管理者は、ビジネス要件に合わせて JEE 上の AEM Forms を操作するためのカスタム WAR ファイルを用意している場合があります。To enable Referrer Filtering for your custom WAR files, include ***adobe-usermanager-client.jar*** in the class path for the WAR and include a filter entry in the* web.xml* file with the following parameters:
 
 **CSRF_CHECK_GETSは、GET要求の転送者チェックを制御します。** このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、GET 要求をフィルタリングする場合にのみ指定します。
 
@@ -970,10 +970,11 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
 1. ローカルセキュリティ設定ウィンドウの「ユーザー権利の割り当て」で、forms サーバーを実行しているユーザーアカウントに次の権限を付与します。
 
    * ターミナルサービスを使ったログオンを拒否する
-   * ローカルでログオンを拒否する
+   * ローカルxxでのログを拒否する
    * サービスとしてログオン（通常は既に設定済み）
 
-1. 新しく作成したユーザーアカウントに、JEE 上の AEM Forms Web コンテンツディレクトリの項目に対する「読み取りと実行」、「フォルダの内容の一覧表示」、「読み取り」の各権限を付与します。
+1. 新しいリストアカウントに、JEE上のAEM Formsのインストールディレクトリとグローバルドキュメントストレージ(GDS)ディレクトリを完了するための読み取りと実行、書き込み、変更、フォルダーの内容、読み取りの権限を付与します。 GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 インストール時に場所の設定が空のままの場合、 [JBoss root]/server/[type]/svcnative/DocumentStorageのアプリケーションサーバーインストールの下のディレクトリがデフォルトの場所になります。
+
 1. アプリケーションサーバーサービスを起動します。
 
 ### ファイルシステムのセキュリティ {#file-system-security}
@@ -1038,4 +1039,3 @@ Set the `directoryBrowsingEnabled` property in the ibm-web-ext.xml file to `fals
 1. 「**Enable application security**」および「**Use Java 2 security**」の選択を解除します。
 1. 「**OK**」または「**Apply**」をクリックします。
 1. 「**Messages**」ボックスで、「**Save directly to the master configuration**」をクリックします。
-
