@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 ---
 
@@ -20,29 +20,29 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## スクリプトの変更 {#modify-the-script}
 
-comment.hbsスクリプトは、各コメントの全体的なHTMLを作成します。
+comment.hbsスクリプトは、各コメントのHTML全体を作成します。
 
 投稿された各コメントの横のアバターを表示しないようにするには：
 
-1. ～に `comment.hbs`写 `libs`す `apps`
+1. コピー `comment.hbs`元の `libs`先 `apps`
 
-   1. select `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
-   1. 「**コピー**」を選択します。
-   1. select `/apps/social/commons/components/hbs/comments/comment`
-   1. 「**貼り付け**」を選択します
+   1.  `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
+   1. Select **Copy**
+   1.  `/apps/social/commons/components/hbs/comments/comment`
+   1. Select **Paste**
 
-1. open the overlaid `comment.hbs`
+1. Open the overlaid `comment.hbs`
 
-   * ノードをダブルクリッ `comment.hbs`ク `/apps/social/commons/components/hbs/comments/comment folder`
+   * 重複クリッ `comment.hbs` ク `/apps/social/commons/components/hbs/comments/comment folder`
 
-1. 以下の行を見つけて、削除するかコメントアウトします。
+1. 次の行を探し、削除するかコメントアウトします。
 
 ```xml
   <aside class="scf-comment-author">
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-行を削除するか、「&lt;!--」と「-->」で囲んでコメントアウトします。また、アバターの位置を視覚的に示す「xxx」が追加されています。
+Either delete the lines, or surround them with `<!--` and `-->` to comment them out. また、「xxx」という文字が、アバターの場所を視覚的に示すインジケーターとして追加されています。
 
 ```xml
    xxx
@@ -59,15 +59,16 @@ comment.hbsスクリプトは、各コメントの全体的なHTMLを作成し�
 >
 >より強固なレプリケーション形式は、パッケージマネージャーでパッケージを作成し、それを[アクティベート](/help/sites-administering/package-manager.md#replicating-packages)することです。パッケージは書き出しおよびアーカイブできます。
 
-From the global navigation, select **Tools, Deployment, Replication** and then **Activate Tree**.
 
-For the Start Path enter `/apps/social/commons`** **and select **Activate**.
+From the global navigation, select **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** and click **[!UICONTROL Activate Tree]**.
+
+For the Start Path enter `/apps/social/commons` and select **[!UICONTROL Activate]**.
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
 ### 結果の表示 {#view-results}
 
-例えば、https://localhost:4503/crx/de as admin/adminなどの管理者として発行インスタンスにログインすると、オーバーレイされたコンポーネントが存在することを確認できます。
+管理者(例：https://localhost:4503/crx/de as admin/admin)として発行インスタンスにログインすると、オーバーレイされたコンポーネントが存在することを確認できます。
 
 ログアウトして `aaron.mcdonald@mailinator.com/password` として再ログインし、ページを更新した場合は、投稿されたコメントはアバターと一緒には表示されなくなっており、代わりに単純な「xxx」が表示されることがわかります。
 
