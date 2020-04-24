@@ -3,7 +3,7 @@ title: Assets HTTP API
 description: Assets HTTP API の実装、データモデルおよび機能を学習します。Assets HTTP API を使用して、アセットに関する様々なタスクを実行できます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -12,20 +12,20 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 ## 概要 {#overview}
 
-アセットHTTP APIを使用すると、バイナリ、メタデータ、レンディション、コメントなどのアセットに対して、AEMコンテンツフラグメントを使用して構造化されたコンテンツと共に、create-read-update-delete(CRUD)操作を実行できます。 これはで公開され、REST API `/api/assets` として実装されています。 [コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
+Assets HTTP API を使用すれば、アセットに対する作成、読み取り、更新、削除（CRUD）操作を実行できます。アセットにはバイナリ、メタデータ、レンディション、コメントが含まれるほか、AEM コンテンツフラグメントを使用した構造化コンテンツも含まれます。この API は `/api/assets` で公開されており、REST API として実装されています。[コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
 
 この API にアクセスするには、次の手順を実行します。
 
-1. Open the API service document at `https://[hostname]:[port]/api.json`.
-1. Follow the Assets service link leading to `https://[hostname]:[server]/api/assets.json`.
+1. API サービスドキュメント（`https://[hostname]:[port]/api.json`）を開きます。
+1. `https://[hostname]:[server]/api/assets.json` への Assets サービスリンクをクリックします。
 
-API応答は、一部のMIMEタイプのJSONファイルで、すべてのMIMEタイプの応答コードです。 JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションをおこなう場合は、応答コードを利用します。
+API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションをおこなう場合は、応答コードを利用します。
 
-オフ時間の後 [!UICONTROL は]、アセットとそのレンディションは、アセットWebインターフェイスまたはHTTP API経由では使用できません。 オン時間が未来の場合、またはオフ時間が過去 [!UICONTROL の場合] 、APIは404エ [!UICONTROL ラーメッセージを返します] 。
+[!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、Assets Web インターフェイスでも HTTP API でも使用できません。[!UICONTROL オンタイム]が未来の場合、または[!UICONTROL オフタイム]が過去の場合、API は 404 エラーメッセージを返します。
 
 ## コンテンツフラグメント {#content-fragments}
 
-[コンテンツフラグメント](/help/assets/content-fragments.md)は特殊なタイプのアセットです。テキスト、数値、日付などの構造化データにアクセスするために使用できます。As there are several differences to `standard` assets (such as images or documents), some additional rules apply to handling content fragments.
+[コンテンツフラグメント](/help/assets/content-fragments.md)は特殊なタイプのアセットです。テキスト、数値、日付などの構造化データにアクセスするために使用できます。`standard` アセット（画像やドキュメントなど）とはいくつかの違いがあるので、コンテンツフラグメントの処理にはいくつかの追加ルールが適用されます。
 
 詳しくは、[AEM Assets HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md)を参照してください。
 
@@ -37,26 +37,26 @@ Assets HTTP API は、フォルダーとアセット（標準アセット用）�
 
 ### フォルダー {#folders}
 
-フォルダは、従来のファイルシステムのディレクトリに似ています。 フォルダーは、他のフォルダーまたはアセットのコンテナです。フォルダーには、以下のコンポーネントがあります。
+フォルダーは、従来のファイルシステムにおけるディレクトリに似ています。フォルダーは、他のフォルダーまたはアセットのコンテナです。フォルダーには、以下のコンポーネントがあります。
 
-**エンティティ**:フォルダーのエンティティは子要素で、フォルダーやアセットを指定できます。
+**エンティティ**：フォルダーのエンティティはフォルダーの子要素で、フォルダーまたはアセットです。
 
-**プロパティ**:
-* `name`   — フォルダの名前。 これは、URLパス内の最後のセグメント（拡張子なし）と同じです。
-* `title`  — 名前の代わりに表示できるフォルダのオプションのタイトル。
+**プロパティ**：
+* `name` -- フォルダーの名前です。これは、URL パスの最後のセグメント（拡張子を除く）と同じです。
+* `title` -- 名前の代わりに表示できるフォルダータイトル（オプション）です。
 
 >[!NOTE]
 >
->フォルダーまたはアセットの一部のプロパティは、異なるプレフィックスにマップされます。のプレ `jcr` フィックス、、お `jcr:title`よびはプ `jcr:description`レフィッ `jcr:language` クスに置き換 `dc` えられます。 Hence in the returned JSON, `dc:title` and `dc:description` contain the values of `jcr:title` and `jcr:description`, respectively.
+>フォルダーまたはアセットの一部のプロパティは、異なるプレフィックスにマップされます。`jcr:title`、`jcr:description`、`jcr:language` の `jcr` プレフィックスは `dc` プレフィックスに置き換えられます。したがって、返された JSON コードで、`dc:title`、`dc:description` にはそれぞれ `jcr:title`、`jcr:description` の値が含まれています。
 
-**Links** Foldersは、次の3つのリンクを公開します。
-* `self`:自身へのリンク
-* `parent`:親フォルダーへのリンク
-* `thumbnail`:（オプション）フォルダーのサムネール画像へのリンク
+**リンク**&#x200B;フォルダーは、次の 3 つのリンクを公開します。
+* `self`：自分自身へのリンク
+* `parent`：親フォルダーへのリンク
+* `thumbnail`：（オプション）フォルダーのサムネール画像へのリンク
 
 ### アセット {#assets}
 
-AEMでは、アセットに次の要素が含まれます。
+AEM では、アセットには次の要素が含まれています。
 
 * アセットのプロパティとメタデータ
 * オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加レンディションは、サイズやビデオエンコーディングの異なる画像や、PDF または InDesign から抽出されたページの場合があります。
@@ -64,15 +64,15 @@ AEMでは、アセットに次の要素が含まれます。
 
 コンテンツフラグメントの要素については、[AEM Assets HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
 
-AEMでは、フォルダーには次のコンポーネントが含まれます。
+AEM では、フォルダーには次のコンポーネントが含まれています。
 
-* エンティティ：アセットの子はレンディションです。
+* エンティティ：アセットの子はアセットのレンディションです。
 * プロパティ
 * リンク
 
 Assets HTTP API には、以下の機能が含まれます。
 
-* フォルダーの一覧の取得
+* フォルダーのリストの取得
 * フォルダーの作成
 * アセットの作成
 * アセットバイナリの更新
@@ -90,11 +90,11 @@ Assets HTTP API には、以下の機能が含まれます。
 
 **前提条件**
 
-* 移動 `https://[aem_server]:[port]/system/console/configMgr`.
+* `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 * Navigate to **Adobe Granite CSRF Filter**.
 * Make sure the property **Filter Methods** includes: POST, PUT, DELETE.
 
-## フォルダーの一覧の取得 {#retrieve-a-folder-listing}
+## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
 既存のフォルダーとその子エンティティ（サブフォルダーまたはアセット）の Siren 表現を取得します。
 
@@ -114,19 +114,19 @@ GET /api/assets/myFolder.json
 
 **応答**
 
-返されるエンティティのクラスは、assets/folderです。
+返されるエンティティのクラスは assets/folder です。
 
-含まれるエンティティのプロパティは、各エンティティの完全なプロパティセットのサブセットです。In order to obtain a full representation of the entity, clients should retrieve the contents of the URL pointed to by the link with a `rel` of `self`.
+含まれるエンティティのプロパティは、各エンティティの完全なプロパティセットのサブセットです。エンティティのすべての表現を取得するために、クライアントは `rel` が `self` となっているリンクで参照される URL のコンテンツを取得する必要があります。
 
 ## フォルダーの作成 {#create-a-folder}
 
-Creates a new `sling`: `OrderedFolder` at the given path. ノード名の代わりに*を指定した場合、サーブレットはノード名としてパラメータ名を使用します。 Accepted as request data is either a Siren representation of the new folder or a set of name-value pairs, encoded as `application/www-form-urlencoded` or `multipart`/ `form`- `data`, useful for creating a folder directly from an HTML form. さらに、フォルダーのプロパティを URL クエリパラメーターとして指定できます。
+指定されたパスに新しい `sling`:`OrderedFolder` を作成します。ノード名の代わりに*を指定した場合、サーブレットはパラメータ名をノード名として使用します。 リクエストデータとして受け入れられるのは、新しいフォルダーの Siren 表現か、`application/www-form-urlencoded` または `multipart`/`form`-`data` としてエンコードされた名前と値のペアのセットで、HTML フォームから直接フォルダーを作成するのに役立ちます。さらに、フォルダーのプロパティを URL クエリパラメーターとして指定できます。
 
-The operation will fail with a `500` response code if the parent node of the given path does not exist. If the folder already exists a `409` response code is returned.
+指定されたパスの親ノードが存在しない場合、この操作は失敗し、応答コード `500` が返されます。フォルダーが既に存在する場合、応答コード `409` が返されます。
 
 **パラメーター**
 
-* `name`  — フォルダ名
+* `name` - フォルダー名
 
 **リクエスト**
 
@@ -134,7 +134,7 @@ The operation will fail with a `500` response code if the parent node of the giv
 POST /api/assets/myFolder -H"Content-Type: application/json" -d '{"class":"assetFolder","properties":{"title":"My Folder"}}'
 ```
 
-「」または「」
+または
 
 ```
 POST /api/assets/* -F"name=myfolder" -F"title=My Folder"
@@ -156,7 +156,7 @@ POST /api/assets/* -F"name=myfolder" -F"title=My Folder"
 **パラメーター**
 
 * `name`  — アセット名
-* `file`  — ファイル参照
+* `file` - ファイル参照
 
 **リクエスト**
 
@@ -164,7 +164,7 @@ POST /api/assets/* -F"name=myfolder" -F"title=My Folder"
 POST /api/assets/myFolder/myAsset.png -H"Content-Type: image/png" --data-binary "@myPicture.png"
 ```
 
-「」または「」
+または
 
 ```
 POST /api/assets/myFolder/* -F"name=myAsset.png" -F"file=@myPicture.png"
@@ -200,7 +200,7 @@ PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @
 
 ## アセットメタデータの更新 {#update-asset-metadata}
 
-アセットメタデータのプロパティを更新します。名前空間内のプロパティを更新す `dc:` ると、APIは名前空間内の同じプロパティを更新し `jcr` ます。 APIは、2つの名前空間の下のプロパティを同期しません。
+アセットメタデータのプロパティを更新します。名前空間内のプロパティを更新すると、API `dc:` は名前空間内の同じプロパティを更新し `jcr` ます。 APIは、2つのプロパティの下のプロパティを同期しません。名前空間
 
 **リクエスト**
 
@@ -219,12 +219,12 @@ PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"cl
 
 ## アセットレンディションの作成 {#create-an-asset-rendition}
 
-アセットの新しいアセットレンディションを作成します。要求パラメーター名を指定しない場合、ファイル名がレンディション名として使用されます。
+アセットの新しいアセットレンディションを作成します。リクエストパラメーター名が指定されない場合、ファイル名がレンディション名として使用されます。
 
 **パラメーター**
 
-* `name`  — レンディション名
-* `file`  — ファイル参照
+* `name` - レンディション名
+* `file` - ファイル参照
 
 **リクエスト**
 
@@ -232,7 +232,7 @@ PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"cl
 POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"
 ```
 
-「」または「」
+または
 
 ```
 POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"
@@ -273,7 +273,7 @@ PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type:
 **パラメーター**
 
 * `message` - メッセージ
-* `annotationData`  — 注釈データ(JSON)
+* `annotationData` - 注釈データ（JSON）
 
 **リクエスト**
 
@@ -354,13 +354,13 @@ MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"
 DELETE /api/assets/myFolder
 ```
 
-「」または「」
+または
 
 ```
 DELETE /api/assets/myFolder/myAsset.png
 ```
 
-「」または「」
+または
 
 ```xml
 DELETE /api/assets/myFolder/myAsset.png/renditions/original
