@@ -3,7 +3,7 @@ title: Assets でサポートされるファイル形式
 description: AEM Assetsおよびダイナミックメディアでサポートされるファイル形式のリストと、各形式でサポートされる機能です。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5304d956161ee7edce2ad5c058eec3ac7e200abf
+source-git-commit: 7dd295a8da986c019d2ae7ea6be237eeb860ab80
 
 ---
 
@@ -137,7 +137,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 -->
 
 | ファイル形式 | ストレージ | [メタデータの管理](metadata.md) | フルテキスト<br> 抽出 | [メタデータ抽出](metadata.md) | Thumbnail<br> generation | [サブアセットの抽出](managing-linked-subassets.md) | [メタデータの書き戻し](xmp-writeback.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
 | DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
