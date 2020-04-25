@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6d26a708ac2073eb7ceff62e65c6aaafdb727639
+source-git-commit: fd5fcb7eacd3727fa62f8de10685d089ceab54ba
 
 ---
 
@@ -31,6 +31,8 @@ source-git-commit: 6d26a708ac2073eb7ceff62e65c6aaafdb727639
 
 * アセットファイル名に次の文字を含めることはできません。`* / : [ \\ ] | # % { } ? &`
 * アセットフォルダー名に次の文字を含めることはできません。`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
+アセットファイル名の拡張子に特殊文字を含めないでください。
 
 ## アセットのアップロード {#uploading-assets}
 
@@ -112,6 +114,8 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    * アセットファイル名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? &`
    * アセットフォルダー名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+   アセットファイル名の拡張子に特殊文字を含めないでください。
+
    ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルと、アップロードに失敗したファイルのステータスが表示されます。](assets/chlimage_1-10.png)
 
    さらに、Assets ユーザーインターフェイスには、アップロードした最新のアセットまたは最初に作成したフォルダーが表示されます。
