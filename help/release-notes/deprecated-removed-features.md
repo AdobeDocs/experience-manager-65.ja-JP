@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
+source-git-commit: 33fab976729baa09fdfd3725542f9e6bc7f37eeb
 
 ---
 
@@ -39,7 +39,7 @@ source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
   <tr>
    <td>Creative Cloudの統合</td>
    <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEMからCreative Cloudへのフォルダー共有は</a> 、AEM 6.2で導入され、AEMのアセットにクリエイティブユーザーがアクセスできるようになりました。これにより、AEMをCCアプリケーションで開いて新しいファイルをアップロードしたり、AEMに変更を保存したりできます。 Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。</p> <p>AEM／Creative Cloud フォルダー共有の統合機能がさらに強化される予定はありません。この機能は AEM に含まれてはいますが、代替ソリューションを使用することを強くお勧めします。</p> </td>
-   <td>Adobe Asset LinkやAEMデスクトップアプリケーションを含む、新しいCreative Cloud統合機能に切り替えることをお勧めします。 詳しくは、<a href="/help/assets/aem-cc-integration-best-practices.md">AEM と Creative Cloud の統合のベストプラクティス</a>を参照してください。</td>
+   <td>Adobe Asset LinkやAEMデスクトップアプリケーションを含む、新しいCreative Cloud統合機能に切り替えることをお勧めします。 Review <a href="/help/assets/aem-cc-integration-best-practices.md">AEM and Creative Cloud Integration Best Practices</a> for more details.</td>
   </tr>
   <tr>
    <td>Assets</td>
@@ -102,7 +102,7 @@ source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
      <li>以前のリリースからAEM 6.5 Formsにアップグレードした場合：<br />
       <ul>
        <li>この機能を既に使用しているフォームで、引き続き署名手順の手書き署名ベースの署名エクスペリエンスを使用します。<br /> </li>
-       <li>新しいフォームを作成する場合は、署名手順内で、スタンドアロンの手書き署名コンポーネントまたはAdobe Signベースの署名エクスペリエンスを使用します。 </li>
+       <li>フォームを作成する際は、署名ステップ内で、スタンドアロンの手書き署名コンポーネントまたはAdobe Signベースの署名エクスペリエンスを使用します。 </li>
       </ul> </li>
     </ul> <p> </p> <p> </p> </td>
   </tr>
@@ -165,13 +165,14 @@ source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
 
 | 領域 | 機能 | 代替手段 |
 |--- |--- |--- |
-| Analyticsアクティビティマップ | AEMに含まれるアクティビティマップのバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。Adobe Analyticsが提供 [するActivityMapプラグインを使用します](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)。 |
+| Analyticsアクティビティマップ | AEMに含まれるアクティビティマップのバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。Adobe Analytics(https://docs.adobe.complugin [/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)が提供するActivity Mapプラグイン]を使用します。 |
 | 統合 | ExactTarget統合はデフォルトの配布(Quickstart)から削除され、使用できなくなりました。 | 代替手段はありません。 |
 | 統合 | Salesforce Force API との統合はデフォルトの配布版（クイックスタート）から削除され、パッケージ共有からインストールする追加パッケージになりました。 | 機能は引き続き利用できます。 |
 | Forms | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートが削除されました。 | 代替手段はありません。 |
 | Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 代替手段はありません。 |
 | Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 代替手段はありません。 |
 | Forms | LiveCycle ES4 SP1からJEE上のAEM 6.5 Formsへのシングルホップアップグレードは利用できません | AEM Formsアップグ [レードドキュメントで](../forms/using/upgrade.md) 、利用可能なアップグレードパスを参照してください。 |
+| Forms | JEE上のAEM FormsからUPDベースのクラスタリングサポートを削除しました。 | JEE上のAEM Formsでは、TCPベースのクラスタリングのみ使用できます。 UDPマルチキャストサーバーを以前のバージョンからJEE上のAEM 5.5 Formsにアップグレードする場合は、手動設定を実行してTCPベースのGemfireクラスタリングに切り替えます。 詳しい手順については、「JEE [上のAEM 6.5 Formsへのアップグレード」を参照してください。](../forms/using/upgrade-forms-jee.md) |
 | 開発者向け | デフォルトの配布版（クイックスタート）から Firebug Lite が削除されました | ブラウザー組み込みのデベロッパーコンソールを使用してください。 |
 | 開発者向け | Remove `customJavaScriptPath` support in HTML Client Library Manager. | 代替手段はありません。 |
 | Assets | AEM 6.5では、アセットのオフロード機能が削除されました。 | 代替手段はありません。 |
