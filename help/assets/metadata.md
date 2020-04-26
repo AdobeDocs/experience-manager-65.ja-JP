@@ -1,77 +1,65 @@
 ---
-title: デジタルアセットのメタデータの管理 [!DNL Adobe Experience Manager]内。
-description: メタデータのタイプと、[!DNL Adobe Experience Manager Assets]がアセットのメタデータを管理し、アセットの分類と整理を簡単にする方法について説明します。
+title: '[!DNL Adobe Experience Manager]でデジタルアセットのメタデータを管理します。'
+description: メタデータのタイプと、[!DNL Adobe Experience Manager Assets]がアセットのメタデータを管理し、アセットの分類と整理を簡単にする方法について説明します。 [!DNL Experience Manager]を使用すると、メタデータに基づいてアセットを自動的に整理および処理できます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 9bf48a6057e08e9feafc0e18d6fa9d0145768cf2
 
 ---
 
 
 # デジタルアセットのメタデータの管理 {#managing-metadata-for-digital-assets}
 
-[!DNL Adobe Experience Manager Assets] すべてのアセットのメタデータを保持します。 したがって、アセットの分類および編成が容易にでき、特定のアセットを検索しやすくなります。With the ability to extract metadata from files uploaded to [!DNL Experience Manager Assets], metadata management integrates with the creative workflow. With the ability to keep and manage arbitrary metadata with your assets, [!DNL Experience Manager Assets] makes it possible to automatically organize and process assets based on their metadata.
+[!DNL Adobe Experience Manager Assets] すべてのアセットのメタデータを保持します。 これにより、アセットの分類と整理が容易になり、特定のアセットを探している人が役立ちます。 With the ability to extract metadata from files uploaded to [!DNL Experience Manager Assets], metadata management integrates with the creative workflow. With the ability to keep and manage metadata with your assets, [!DNL Experience Manager Assets] makes it possible to automatically organize and process assets based on their metadata.
 
-* [XMP メタデータ](xmp.md)
-* [メタデータの編集と追加](meta-edit.md)
-* [メタデータのスキーマに関する参照情報](meta-ref.md)
+* [XMP メタデータ](xmp.md).
+* [メタデータの編集と追加](meta-edit.md).
+* [メタデータのスキーマに関する参照情報](meta-ref.md).
 
 ## メタデータが必要な理由 {#why-we-need-metadata}
 
-メタデータとは、データに関する情報のことです。この場合、データとは操作するアセット（画像など）を指します。メタデータによってアセットをより効率的に管理できるので、メタデータは重要なものです。
+メタデータとは、データに関する情報のことです。この場合、データとは、画像などのデジタルアセットを指します。 メタデータは、効率的なアセット管理のために重要です。
 
-メタデータは、対象の画像で使用できるすべてのデータのコレクションですが、次のようなデータは、その画像に含まれているとは限りません。
+メタデータは、アセットで使用できるすべてのデータの集まりですが、その画像に必ずしも含まれているとは限りません。 メタデータの例を次に示します。
 
-* アセットの名前
-* 最終変更日時
-* リポジトリに格納されたときの画像のサイズ
-* アセットが含まれるフォルダーの名前
+* アセットの名前。
+* 最終変更の日時。
+* リポジトリに保存されたアセットのサイズ。
+* 格納先のフォルダの名前。
+* 関連するアセットまたは適用されたタグ。
 
 These are the basic metadata properties that [!DNL Experience Manager] can manage for assets, which allows users to see all assets, for example, ordered by their last modification date - useful when trying to discover what assets have recently been added to the repository.
 
 デジタルアセットに、次のようなデータをさらに追加できます。
 
-* アセットのタイプ（画像、ビデオ、オーディオクリップ、ドキュメントなど）
-* アセットの所有者
-* アセットのタイトル
-* アセットの説明
-* アセットに割り当てられたタグ
+* アセットのタイプ(画像、ビデオ、オーディオクリップ、ドキュメント)。
+* アセットの所有者。
+* アセットのタイトル。
+* アセットの説明。
+* アセットに割り当てられたタグ。
 
-メタデータが多いほど、アセットをより細かく分類でき、デジタル情報量が大きくなるにつれ便利です。1 人のユーザーが数百ファイルのリストをファイル名だけで管理することはできても、多数のユーザーが関係し、管理するアセットの数が多くなると、ファイル名だけの管理では不十分です。
+メタデータが多いほど、アセットをより細かく分類でき、デジタル情報量が大きくなるにつれ便利です。数百個のファイルをファイル名に基づいて管理できます。 ただし、このアプローチは拡張性が低く、関与する人の数や管理する資産の数が増えるとすぐに不足します。
 
-メタデータをアセットに追加すると、アセットは次のような特徴を持つので、アセットの価値が高まります。
+メタデータを追加すると、デジタルアセットの値が大きくなります。これは、アセットが
 
-* アクセスのしやすさ - 検索が容易になります
-* 管理のしやすさ - 一連の同じプロパティを持つアセットを容易に検索し、これらのアセットに変更を適用できます
-* より高い複雑性 - アセットに追加するメタデータが多くなるほど、メタデータの管理がより重要になります
+* アクセスしやすく — システムやユーザーが簡単に見つけられます。
+* 管理が容易 — 同じプロパティのセットを持つアセットを簡単に検索し、変更を適用できます。
+* より完全 — アセットに追加したメタデータが多いほど、より多くの情報とコンテキストが保持されます。
 
 For these reasons, [!DNL Assets] provides you with the right means of creating, managing, and exchanging metadata for your digital assets.
 
-## メタデータの基本 {#metadata-basics}
+## メタデータのタイプ {#types-of-metadata}
 
-メタデータは、アセットの読み込み（取り込み）時に抽出されます。メタデータを追加すると、アセットをより細かく分類できます。
+基本的な2種類のメタデータは、技術的なメタデータと説明的なメタデータです。
 
-この節では、メタデータおよびエンコーディング規格のタイプについて説明します。
+テクニカルメタデータは、デジタルアセットを操作しているソフトウェアアプリケーションで役に立つもので、手動で管理できません。[!DNL Experience Manager Assets] また、その他のソフトウェアは、技術的なメタデータを自動的に判定し、アセットが変更されるとメタデータが変更される場合があります。 アセットで使用可能なテクニカルメタデータは、主にアセットのファイルタイプによって決まります。技術的なメタデータの例を以下に示します。
 
-### メタデータのタイプ {#types-of-metadata}
+* ファイルのサイズ。
+* 画像の寸法（高さと幅）。
+* オーディオまたはビデオファイルのビットレート。
+* 画像の解像度（詳細レベル）。
 
-メタデータには、次の 2 つの基本的なタイプがあります。
-
-* テクニカルメタデータ
-* 記述メタデータ
-
-#### テクニカルメタデータ {#technical-metadata}
-
-テクニカルメタデータは、デジタルアセットを操作しているソフトウェアアプリケーションで役に立つもので、手動で管理できません。Technical metadata can be determined automatically by [!DNL Experience Manager Assets] and other software and may change when the asset is modified. アセットで使用可能なテクニカルメタデータは、主にアセットのファイルタイプによって決まります。テクニカルメタデータの例を次に示します。
-
-* ファイルのサイズ
-* 画像のサイズ（高さと幅）
-* オーディオファイルやビデオファイルのビットレート
-* 画像の解像度（詳細レベル）
-
-#### 記述メタデータ {#descriptive-metadata}
-
-記述メタデータは、アセットが属するビジネスなど、アプリケーションドメインに関するメタデータです。記述メタデータは自動で定義できません。手動または半自動で作成する必要があります。例えば、画像が撮影された場所の緯度と経度を GPS が有効なカメラで自動的に追跡し、その情報を画像のメタデータに追加します。
+記述メタデータは、アセットが属するビジネスなど、アプリケーションドメインに関するメタデータです。記述メタデータは自動で定義できません。手動または半自動で作成されます。 例えば、GPS対応のカメラでは、緯度と経度を自動的に追跡し、画像に地理タグを追加できます。
 
 記述メタデータ情報の作成にかかる手動作業はコストが高いので、ソフトウェアシステムと組織との間でメタデータのやり取りを容易にするための規格が確立されています。
 
@@ -79,87 +67,77 @@ For these reasons, [!DNL Assets] provides you with the right means of creating, 
 
 メタデータは重要なもので、メタデータの作成には膨大な手動作業を必要とするので、やり取りを容易にするための規格が確立されています。
 
-### エンコーディング規格 {#encoding-standards}
+## エンコーディング規格 {#encoding-standards}
 
-メタデータは、様々な方法でファイルに埋め込むことができます。エンコーディング規格は、次の中から選択できます。
+メタデータをファイルに埋め込む方法は様々です。 エンコーディング規格は、次の中から選択できます。
 
 * XMP: used by [!DNL Assets] to store the extracted metadata within the repository.
 * ID3：オーディオファイルおよびビデオファイル用の規格です。
-* EXIF：画像ファイル用の規格です。
-* その他、従来の規格：Microsoft Word、PowerPoint、Excel など
+* Exif:（画像ファイル用）。
+* その他/レガシー：Microsoft Word、PowerPoint、Excelなどから
 
-#### XMP {#xmp}
+### XMP {#xmp}
 
-XMP means Extensible Metadata Platform and is the metadata standard that is used by [!DNL Experience Manager Assets] for all metadata management. Besides offering universal metadata encoding that can be embedded into all file formats, XMP provides a rich content model and is supported by Adobe and other companies, so that users of XMP in combination with [!DNL Experience Manager Assets] have a powerful platform to build upon.
+XMP(Extensible Metadata Platform)は、すべてのメタデータ管理に使用されるオープン [!DNL Experience Manager Assets] な標準です。 標準オファーは、すべてのファイル形式に埋め込むことができるユニバーサルメタデータエンコーディングです。 アドビや他の会社は、リッチコンテンツモデルを提供するXMP標準をサポートしています。 XMP標準およびのユーザーは、 [!DNL Experience Manager Assets] 強力なプラットフォームを構築できます。 詳しくは、 [XMPを参照してください](https://www.adobe.com/products/xmp.html)。
 
-#### ID3 {#id}
+### ID3 {#id}
 
 これらの ID3 タグに格納されたデータは、コンピューターまたはポータブル MP3 プレーヤー上でデジタルオーディオファイルの再生時に表示されます。
 
 ID3 タグは、MP3 ファイルフォーマット用に設計されています。各フォーマットのその他の情報：
 
-* ID3 タグは、MP3 ファイルおよび MP3pro ファイルで使用できます。
+* ID3タグは、MP3およびmp3PROファイルで機能します。
 * WAV ではタグが使用されません。
-* WMA では独自のタグが使用され、オープンソースの実装は許可されていません。
+* WMAには、オープンソース実装を許可しない独自のタグがあります。
 * Ogg Vorbis では、Ogg コンテナに埋め込まれた Xiph コメントを使用します。
 * AAC では独自のタグフォーマットが使用されます。
 
-#### EXIF {#exif}
+### Exif {#exif}
 
-EXIF は Exchangeable image file format のことで、デジタル写真で最も一般的に使用されるメタデータフォーマットです。JPEG、TIFF、RIFF、WAVなど、様々なファイル形式でメタデータプロパティの固定語彙を埋め込む方法を提供します。
+Exif(Exchangeable image file format)は、デジタル写真で最も人気の高いメタデータ形式です。 JPEG、TIFF、RIFF、WAVなど、多くのファイル形式でメタデータプロパティの固定語彙を埋め込む方法を提供します。 Exif stores metadata as pairs of a metadata name and a metadata value. These metadata name-value-pairs are also called tags, not to be confused with the tagging in [!DNL Experience Manager]. Exifは最新のデジタルカメラで自動的に作成され、最新のグラフィックソフトウェアを通じてサポートされるので、メタデータ管理の最も低い共通要素と見なすことができます。
 
-EXIF の大きな制限は、その他の一般的な画像ファイル（BMP、GIF、PNG など）でサポートされないことです。
+Exifの主な制限は、BMP、GIF、PNGなどの一般的な画像ファイル形式ではサポートされないことです。
 
-EXIF によって、メタデータの名前と値のペアとして、メタデータが格納されます。These metadata name-value-pairs are also called tags, not to be confused with the tagging in [!DNL Experience Manager].
+通常、Exifで定義されるメタデータフィールドは技術的な性質を持ち、説明的なメタデータ管理には限られています。 このため、Exifプロパティの [!DNL Experience Manager Assets] オファーマッピングは、共通のメ [タデータスキーマ](metadata-schemas.md) と [XMPに対して行われます](xmp-writeback.md)。
 
-EXIF は最新のデジタルカメラで自動的に作成され、最新のグラフィックソフトウェアでサポートされているので、メタデータの管理では最も下位の共通項目として表示されます。
-
-EXIF で定義されるメタデータフィールドのほとんどは、高度な技術で作成されたもので、記述メタデータの管理では使用が制限されています。For this reason, [!DNL Assets] offers mapping of EXIF properties into [common metadata schemata](metadata-schemas.md) and into [XMP](xmp-writeback.md), the powerful metadata format [!DNL Assets] uses for metadata management.
-
-#### その他のメタデータ {#other-metadata}
+### Other metadata {#other-metadata}
 
 ファイルから埋め込み可能なその他のメタデータには、Microsoft Word、PowerPoint、Excel などがあります。
 
-## メタデータスキーマ {#metadata-schemata}
+## Metadata schemata {#metadata-schemata}
 
-メタデータスキーマは、様々なアプリケーションで使用できる、定義済みのメタデータプロパティ定義のセットです。プロパティは常にアセットに関連付けられます。つまり、プロパティはリソースに関するものです。
+メタデータスキーマは、様々なアプリケーションで使用できる、定義済みのメタデータプロパティ定義のセットです。 プロパティは常にアセットに関連付けられます。つまり、プロパティはリソースに関する「概要」です。
 
-ニーズに合うメタデータスキーマが存在しない場合は、独自のメタデータスキーマを設計できます（ただし、既存のスキーマを複製しないようにしてください）。組織内でスキーマを分割すると、メタデータを共有しやすくなります。
-
-[!DNL Experience Manager] では、そのままで使用できる、最も一般的なメタデータスキーマのリストが用意されています。したがってメタデータ機能をすぐに開始でき、定義済みのスキーマから必要なメタデータプロパティを選択できます。
+必要に応じて独自のメタデータスキーマが存在しない場合は、独自のメタデータスキーマを設計することもできます。 既存の情報を重複しない。 組織内でスキーマを分割すると、メタデータの共有が容易になります。 [!DNL Experience Manager] 最も頻繁に使用されるメタデータリストのデフォルトスキーマを提供します。 このリストを使用すると、メタデータ戦略をすばやく開始し、必要なメタデータプロパティをすばやく選択できます。
 
 サポートされるメタデータスキーマを以下に示します。
 
-### 標準的なメタデータ {#standard-metadata}
+### Standard metadata {#standard-metadata}
 
-* dc - Dublin Core - 最も重要で広く使用されるメタデータのセット
-* DICOM - Digital Imaging and Communications in Medicine
-* Iptc4xmpCore &amp; iptc4xmpExt - International Press Communications Standard — 多数のサブジェクト固有のメタデータ
-* rdf - Resource Description Framework - 汎用のセマンティック Web メタデータ用
-* xmp - Extensible Metadata Platform
-* xmpBJ - Basic Job Ticketing
+* dc - Dublin Core - 最も重要で広く使用されるメタデータのセット.
+* DICOM - Digital Imaging and Communications in Medicine.
+* Iptc4xmpCore &amp; iptc4xmpExt - International Press Communications Standard — 多数のサブジェクト固有のメタデータ。
+* rdf - Resource Description Framework - 汎用のセマンティック Web メタデータ用.
+* xmp - Extensible Metadata Platform.
+* xmpBJ - Basic Job Ticketing.
 
-### アプリケーション固有のメタデータ {#application-specific-metadata}
+### Application-specific metadata {#application-specific-metadata}
 
->[!NOTE]
->
->アプリケーション固有のメタデータには、テクニカルメタデータも記述メタデータも存在します。これらのメタデータを使用すると、他のアプリケーションでそのメタデータを使用することはできません。例えば、アセットが Adobe Photoshop メタデータを持つ場合、他の画像レンダリングアプリケーションでこのアセットにアクセスしようとしても失敗します。
->
->アセット内にアプリケーション固有のメタデータが数多く存在する場合、アプリケーション固有のプロパティを標準プロパティに変更するワークフロー手順を作成できます。
+アプリケーション固有のメタデータは、技術的および説明的なメタデータを含む。 これらのメタデータを使用すると、他のアプリケーションでそのメタデータを使用することはできません。For example, if you have an asset with [!DNL Adobe Photoshop] metadata and another image-rendering application tries to access the metadata, it may not be able to access the metadata. アセットに多くのアプリケーション固有のメタデータが含まれている場合は、アプリケーション固有のプロパティを標準のプロパティに変更するワークフロー手順を作成できます。
 
-* acdsee - ACDSee プログラムで管理されるメタデータ（[www.acdsee.com/](https://www.acdsee.com/)）
-* album - Adobe Photoshop アルバム
-* cq - used by [!DNL Experience Manager Assets]
-* dam - used by [!DNL Experience Manager Assets]
-* dex - Optima SC Description Explorer
-* crs - Adobe Photoshop Camera Raw
-* lr - Adobe Lightroom
-* mediapro - iView MediaPro
-* Microsoft PhotoおよびMP - Microsoft Photo
-* pdf amd pdfx
-* photoshop、psAux - Adobe Photoshop
+* acdsee - metadata managed by the ACDSee program [www.acdsee.com/](https://www.acdsee.com/).
+* album - Adobe Photoshop アルバム.
+* cq - used by [!DNL Experience Manager Assets].
+* dam - used by [!DNL Experience Manager Assets].
+* dex - Optima SC Description Explorer.
+* crs - Adobe Photoshop Camera Raw.
+* lr - Adobe Lightroom.
+* mediapro - iView MediaPro.
+* MicrosoftPhoto、MP - Microsoft Photo.
+* pdf、pdfx.
+* photoshop、psAux - Adobe Photoshop.
 
-### デジタル著作権管理メタデータ {#digital-rights-management-metadata}
+### Digital Rights Management metadata {#digital-rights-management-metadata}
 
 * cc - クリエイティブコモンズ
 * xmpRights
@@ -169,14 +147,14 @@ EXIF で定義されるメタデータフィールドのほとんどは、高度
 * pur - Prism Usage Rights
 * xmpPlus - PLUS と XMP との統合
 
-### 写真固有のメタデータ {#photography-specific-metadata}
+### Photography-specific metadata {#photography-specific-metadata}
 
 * exif - カメラからの数多くのテクニカル情報（GPS 位置など）
 * crs - Photoshop Camera Raw
 * Iptc4xmpCore、iptc4xmpExt
 * TIFF - 画像メタデータ（TIFF 画像に限りません）
 
-### 印刷固有のメタデータ {#print-specific-metadata}
+### Print-specific metadata {#print-specific-metadata}
 
 * pdf、pdfx - Adobe PDF およびサードパーティのアプリケーション
 * prism - Publishing Requirements for Industry Standard Metadata（[www.prismstandard.org](https://www.prismstandard.org)）
@@ -190,9 +168,8 @@ EXIF で定義されるメタデータフィールドのほとんどは、高度
 
 ## メタデータ駆動型のワークフロー {#metadata-driven-workflows}
 
-メタデータ駆動型のワークフローを作成することで、一部のプロセスを自動化し、効率性を高めることができます。メタデータ駆動型のワークフローでは、ワークフロー管理システムでワークフローが読み取られ、その結果、事前定義された動作が実行されます。
-
-例として、メタデータ駆動型のワークフローの使用方法をいくつか示します。
+メタデータ主導型のワークフローを作成すると、一部のプロセスを自動化でき、効率が向上します。 メタデータ駆動型のワークフローでは、ワークフロー管理システムでワークフローが読み取られ、その結果、事前定義された動作が実行されます。例として、メタデータ駆動型のワークフローの使用方法をいくつか示します。
 
 * ワークフローで、画像にタイトルがあるかどうかをチェックできます。タイトルがない場合、タイトルを追加するよう特定のユーザーに通知されます。
 * ワークフローで、アセットの著作権情報によって配布が許可されているかどうかをチェックできます。許可されている場合、アセットが 1 つのサーバーに送信されます。許可されていない場合、アセットが別のサーバーに送信されます。
+* ワークフローは、事前定義された必須のメタデータがないか、無効なメタデータが含まれているかをチェ *ックで* きます。
