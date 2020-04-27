@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
 
-# レポートコンソール{#reports-console}
+# レポートコンソール {#reports-console}
 
 ## 概要 {#overview}
 
@@ -24,11 +24,19 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 通常、レポートには以下のものがあります。
 
-* [割り当てレポート](#assignments-report) — 有効化コミ [ュニティ用に](/help/communities/overview.md#enablement-community)、SCORM標準を実装する場合の関連スコアを含む、学習者の割り当てに関する進捗の概要が表示されます。
-* [表示回数レポート](#views-report) — コミュニティメンバーやコミュニティサイトの訪問者別のコンテンツのビュー数を示すグラフが表示されます。
-* [投稿レポート](#posts-report) — コミュニティメンバーがコミュニティサイトに投稿した様々なタイプの投稿をグラフで表示します。
+* [割り当てレポート](#assignments-report)
 
-[Adobe Analyticsが有効な場合](/help/communities/sites-console.md#analytics)、レポートには各有効化リソースのビュー数、再生数、コメント数および評価数が時間の経過と共に含まれます
+   For an [enablement community](/help/communities/overview.md#enablement-community), provides an overview of learners&#39; progress on their assignments, including an associated score if implementing the SCORM standard.
+
+* [表示レポート](#views-report)
+
+   コミュニティメンバー別のコンテンツの表示と、コミュニティサイトの訪問者別のグラフを表示します。
+
+* [投稿レポート](#posts-report)
+
+   コミュニティメンバー別の様々なタイプの投稿をコミュニティサイトにグラフで表示します。
+
+[Adobe Analyticsが有効な場合](/help/communities/sites-console.md#analytics)、レポートには、有効化された各リソースの表示数、再生数、コメント数および評価数が経時的に含まれます。
 
 表形式のレポートは .csv 形式でエクスポートして別の処理に使用できます。
 
@@ -36,46 +44,46 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 ### コミュニティサイトのレポート {#reports-for-community-sites}
 
-* from global navigation : **Navigation**, **Communities, Reports**
+* From global navigation: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** >  **[!UICONTROL Reports]**
 
-* 以下の中から選択します。
+* 次の中から選択します。
 
-   * **割り当てレポート**
+   * **[!UICONTROL 割り当てレポート]**
 
-      * 選択したコミュニティサイト、コンテンツタイプ、ユーザー、グループおよび割り当てに関するレポートを生成します。
+      * 選択したコミュニティサイト、ユーザまたはグループ、および割り当てのレポートを生成します。
+   * **[!UICONTROL 投稿レポート]**
 
-      * **投稿レポート**
+      * 選択したコミュニティサイト、コンテンツタイプ、期間のレポートを生成します。
+   * **[!UICONTROL 表示レポート]**
 
-         * 選択したコミュニティサイト、コンテンツタイプおよび期間のレポートを生成します。
-      * **表示レポート**
+      * 選択したコミュニティサイト、コンテンツタイプおよび期間のレポートを生成します。。
 
-         * 選択したコミュニティサイト、コンテンツタイプおよび期間のレポートを生成します。
 
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
 ### イネーブルメントリソースと学習パスのレポート {#reports-for-enablement-resources-and-learning-paths}
 
-* from global navigation: **Navigation**, **Communities, Resources**
+* From global navigation: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** >  **[!UICONTROL Resources]**
 
-* 既存のイネーブルメントコミュニティサイトを選択します。
+* 既存の有効化コミュニティサイトを選択してください：
 
-   * 「**レポート**アイコン」を選択して、すべての有効化リソースを対象とするレポートを生成します。
-   * イネーブルメント学習パスを選択します。
-   * 「**レポート**」アイコンを選択して、レポートを生成します。
+   * Select **Report** icon to generate reports which cover all enablement resources.
+   * 有効化学習パスを選択します。
+   * Select **Report** icon to generate reports for:
 
-      * 含まれているイネーブルメントリソース
-      * 学習パスに割り当てられている学習者
+      * 使用可能なリソースが含まれています。
+      * 学習パスに割り当てられた学習者。
 
-* これらのレポートには以下の情報が含まれます。
+* 次の情報が表示されます。
 
-   * CSV 形式でダウンロードできるテーブルデータ
+   * 表データ（CSV形式でダウンロード可能）:
 
-      * 学習者の識別情報
-      * 学習者のステータス
-      * 割り当てられたものか、またはカタログを通じてアクセスするものか
-      * コメント数
-      * 与えられた星評価
+      * 学習者の識別
+      * 彼らのステータス
+      * 割り当て済みか、カタログを通じてアクセス済みか
+      * コメントの数
+      * 星評価
 
 詳しくは、リソースコンソールの[レポートセクション](/help/communities/resources.md#report)を参照してください。
 
@@ -91,16 +99,16 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 * **サイト**
 
-   実施可能コミュニティサイトの選択
+   有効化コミュニティサイトを選択します。
 
 * **ユーザーまたはグループ**
-   * 1人の学習者のレポートを生成するユーザーを選択
-   * 「グループ」を選択して、学習者グループのレポートを生成します
-   トンネルサービスは、パブリッシュ環境からメンバーとメンバーグループにアクセスします
+   * 「ユーザー」を選択して、1人の学習者のレポートを生成します。
+   * 「グループ」を選択して、学習者のグループに関するレポートを生成します。
+   トンネルサービスは、発行メンバーからメンバーおよびメンバーグループにアクセス環境します。
 
 * **代入**
 
-   選択した学習者に割り当てられた有効化リソースの中から選択します
+   選択した学習者に割り当てられている有効化リソースの中から選択します。
 
 「**生成**」を選択してレポートを作成します。
 
@@ -114,24 +122,24 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 レポートのフィルタリング条件を選択します。
 
-* **サイト**
+* **[!UICONTROL サイト]**
 
-   コミュニティサイトの選択
+   コミュニティサイトを選択します。
 
-* **コンテンツタイプ**
+* **[!UICONTROL コンテンツタイプ]**
 
-   は、すべてのコンテンツを選択するか、サイトに存在する機能の1つを選択できます
+   「すべてのコンテンツ」を選択するか、サイトに存在する機能の1つを選択できます。
 
-* 時間枠
+* **[!UICONTROL 期間]**
 
-   1つ選択
+   次のいずれかを選択します。
 
    * 過去 7 日間
    * 過去 30 日間
    * 過去 90 日間
    * 昨年
 
-「**生成**」を選択してレポートを作成します。
+Select **[!UICONTROL Generate]** to create the report.
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
@@ -143,24 +151,24 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 レポートのフィルタリング条件を選択します。
 
-* **サイト**
+* **[!UICONTROL サイト]**
 
-   コミュニティサイトの選択
+   コミュニティサイトを選択します。
 
-* **コンテンツタイプ**
+* **[!UICONTROL コンテンツタイプ]**
 
-   は、すべてのコンテンツを選択するか、サイトに存在する機能の1つを選択できます
+   「すべてのコンテンツ」を選択するか、サイトに存在する機能の1つを選択できます。
 
-* 時間枠
+* **[!UICONTROL 期間]**
 
-   1つ選択
+   次のいずれかを選択します。
 
    * 過去 7 日間
    * 過去 30 日間
    * 過去 90 日間
    * 昨年
 
-「**生成**」を選択してレポートを作成します。
+Select **[!UICONTROL Generate]** to create the report.
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
@@ -172,6 +180,6 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 ### AEM作成者インスタンスにレポートが表示されない {#reports-do-not-show-in-aem-author-instance}
 
-レポートがAEM作成者インスタンスに表示されない場合は、発行インスタンスでのURLのマッピングなど、カスタマイズ内容を確認します。 URLマッピングがコミュニティサイトのAEM発行インスタンスでのみ行われる場合は、**サイトトレンドレポートのソーシャルコンポーネントファクトリ**設定のAEM作成者インスタンスで同じ設定が行われていることを確認します。
+レポートがAEM作成者インスタンスに表示されない場合は、発行インスタンスでのURLのマッピングなど、カスタマイズの有無を確認します。 URLのマッピングがコミュニティサイトのAEM発行インスタンスでのみ行われる場合は、サイトトレンドレポートのソーシャルコンポーネントファクトリの設定で、AEM作成者インスタンスで **同じ設定が行われている** ことを確認します。
 
 ![AEM作成者のURLマッピング](assets/sitetrend.png)
