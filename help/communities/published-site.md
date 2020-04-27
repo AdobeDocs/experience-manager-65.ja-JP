@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
+source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 新しく作成したコミュニティサイトが公開されたので、次はこのサイト作成時に表示された URL を参照します。ただし、このとき参照するのはパブリッシュサーバー上の URL です。次に例を示します。
 
-* A\uthor URL = https://localhost:4502/content/sites/engage/en.html
+* 作成者URL = https://localhost:4502/content/sites/engage/en.html
 * 発行URL = https://localhost:4503/content/sites/engage/en.html
 
 どのメンバーがオーサーインスタンスにサインインし、どのメンバーがパブリッシュインスタンスにサインインしているかを混乱なく把握するために、インスタンスごとに異なるブラウザーを使用することを推奨します。
@@ -37,14 +37,14 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 匿名サイト訪問者のUIには、次の情報が表示されます。
 
-* サイトのタイトル。 はじめにのチュートリアル
-* プロファイルリンクなし
-* メッセージリンクなし
+* サイトのタイトル（はじめにのチュートリアル）
+* プロファイルリンク
+* メッセージのリンクなし
 * 通知リンクなし
 * 検索フィールド
 * ログインリンク
 * ブランドバナー
-* リファレンスサイトテンプレートに含まれるコンポーネントのメニューリンク
+* リファレンスサイトテンプレートに含まれるコンポーネントのメニューリンク。
 
 様々なリンクを選択すると、読み取り専用モードになります。
 
@@ -54,7 +54,7 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 コミュニティサイトのコンテンツを、jcrコンテンツとjsonを通じて匿名ユーザーによるアクセスから保護するには、次の手順に従います。
 
-1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
+1. AEM作成者インスタンスで、https:// hostname:port/editor.html/content/site/sitename.htmlに移動します。
 
    >[!NOTE]
    >
@@ -64,19 +64,19 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
    ![サイト認証](assets/site-authentication.png)
 
-1. 「**詳細*」タブに移動します。
+1. 「**詳細**」タブに移動します。
 
    ![page-properties](assets/page-properties.png)
 
 1. Enable **Authentication Requirement**.
-1. 追加ログインページのパス。 For example,**/content/......./GetStarted**.
+1. 追加ログインページのパス。 For example, **/content/......./GetStarted**.
 1. ページを公開します。
 
 ## 信頼されているコミュニティメンバー {#trusted-community-member}
 
 This experience assumes [Aaron McDonald](/help/communities/tutorials.md#demo-users) was assigned the roles of [community manager and moderator](/help/communities/create-site.md#roles). If not, return to the author environment to [modify the site settings](/help/communities/sites-console.md#modifying-site-properties) and select Aaron McDonald as both community manager and moderator.
 
-In the upper right corner, select `Log in`, and sign with username &quot;aaron.mcdonald@mailinator.com&quot; and password &quot;password&quot;. TwitterまたはFacebookの資格情報を使用してサインインする機能に注目してください。
+In the upper right corner, select `Log in`, and sign with username (aaron.mcdonald@mailinator.com) and password (password). TwitterまたはFacebookの資格情報を使用してサインインする機能に注目してください。
 
 ![chlimage_1-32](assets/chlimage_1-32.png)
 
@@ -85,21 +85,21 @@ In the upper right corner, select `Log in`, and sign with username &quot;aaron.m
 * **プロファイル** ・オプションを使用すると、表示と編集が可能になります。
 * [「メッセージ](/help/communities/configure-messaging.md) 」オプションを選択すると、ダイレクトメッセージのセクションに移動し、次の操作を行うことができます。
 
-1. 表示受信したダイレクトメッセージ（[受信トレイ]）、送信済み（[送信済みアイテム]）、削除済み（[ごみ箱]）。
-1. 個人やグループに送信する新しいダイレクトメッセージを作成します。
+   1. 表示受信したダイレクトメッセージ（[受信トレイ]）、送信済み（[送信済みアイテム]）、削除済み（[ごみ箱]）。
+   1. 個人やグループに送信する新しいダイレクトメッセージを作成します。
 
 * [「通知](/help/communities/notifications.md) 」オプションを選択すると、通知セクションに移動し、関心のあるイベントの表示や通知設定の編集を行うことができます。
 * [モデレート権限を持つ場合は、「管理」をクリックすると](/help/communities/published-site.md#moderationlink) 、AEM Communitiesのモデレートページに移動します。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
-カレンダーページがホームページになっていますが、これは、選択した参照サイトテンプレートの最初に含まれているのがカレンダー機能で、その後にアクティビティストリーム機能、フォーラム機能などが続いているからです。This structure is visible from the [Site Template](/help/communities/sites.md#edit-site-template) console or when modifying site properties in the author environment :
+カレンダーページがホームページになっていますが、これは、選択した参照サイトテンプレートの最初に含まれているのがカレンダー機能で、その後にアクティビティストリーム機能、フォーラム機能などが続いているからです。This structure is visible from the [Site Template](/help/communities/sites.md#edit-site-template) console or when modifying site properties in the author environment:
 
 ![chlimage_1-34](assets/chlimage_1-34.png)
 
 >[!NOTE]
 >
->コミュニティコンポーネントと機能について詳しくは、以下を参照してください。
+>コミュニティのコンポーネントと機能の詳細については、次を参照してください。
 >
 >* [コミュニティコンポーネント](/help/communities/author-communities.md)（作成者向け）
 >* [コンポーネントおよび機能の基本事項](/help/communities/essentials.md)（開発者向け）
@@ -123,51 +123,51 @@ Aaron はグループ管理者なので、グループリンクを選択する�
 
 パブリッシュ環境でグループを作成する例を次に示します。
 
-グループは、オーサー環境で作成し、オーサー環境のコミュニティサイト（[コミュニティグループコンソール](/help/communities/groups.md)）内で管理することもできます。The experience of [creating groups on author](/help/communities/nested-groups.md) is next in this tutorial.
+Groups may also be created in the author environment and managed within the community site in the author environment ([Community Groups console](/help/communities/groups.md)). The experience of [creating groups on author](/help/communities/nested-groups.md) is next in this tutorial.
 
 ![chlimage_1-36](assets/chlimage_1-36.png)
 
 参照グループの作成：
 
-1. 「**新しいグループ**」を選択します。
+1. Select **New Group**
 1. **「設定」タブ**
 
    * Group Name : `Sports`
-   * 説明 : `A parent group for various sporting groups`
+   * 説明 : `A parent group for various sporting groups`.
    * グループ URL 名 : `sports`
-   * select `Open Group` (allow any community member to participate by joining)
+   * Select `Open Group` (allow any community member to participate by joining)
 
 1. **「テンプレート」タブ**
 
-   * select `Reference Group` (contains a groups function in its structure to allow nested groups)
+   * Select `Reference Group` (contains a groups function in its structure to allow nested groups)
 
-1. 「**グループを作成**」を選択します。
+1. Select **Create Group**
 
 ![chlimage_1-37](assets/chlimage_1-37.png)
 
-新しいグループが作成されたら、その中に（ネストされる）2 つのグループを作成するために&#x200B;**新しい Sports グループを選択**&#x200B;します。サイト構造はグループ機能では始まらないので、スポーツグループを開いた後で、「グループ」リンクを選択する必要があります。
+新しいグループが作成されたら、その中に（ネストされる）2 つのグループを作成するために&#x200B;**新しい Sports グループを選択**&#x200B;します。サイト構造はグループ機能では始まらないので、スポーツグループを開いた後に、「グループ」リンクを選択する必要があります。
 
 ![chlimage_1-38](assets/chlimage_1-38.png)
 
-The second set of links, beginning with `Blog`, belong to the currently selected group, the `Sports`group. By selecting the Sports&#39; `Groups` link, it is possible to nest two groups within the Sports group.
+The second set of links, beginning with `Blog`, belong to the currently selected group, the `Sports` group. By selecting the Sports&#39; `Groups` link, it is possible to nest two groups within the Sports group.
 
-As an example, add two n `ew groups.`
+例として、2つ追加します `new groups`。
 
-* one named `Baseball`
+* One named `Baseball`
 
-   * leave it set as an `Open Group` (required membership)
-   * 「テンプレート」タブで、 `Conversational Group`
+   * Leave it set as an `Open Group` (required membership).
+   * 「テンプレート」タブで、を選択しま `Conversational Group`す。
 
-* one named `Gymnastics`
+* One named `Gymnastics`
 
-   * 設定を(メンバーシップに `Member Only Group` 制限されて)に変更
-   * 「テンプレート」タブで、 `Conversational Group`
+   * 設定を(制限付きメン `Member Only Group` バーシップ)に変更します。
+   * 「テンプレート」タブで、を選択しま `Conversational Group`す。
 
-**注意 **:
+**注意**：
 
-* 両方のグループを表示するには、ページの更新が必要になる場合があります。
-* このテンプレートにはグループ機能が含まれていない**ので、グループのこれ以上のネストはできません。
-* on author, the [Groups console](/help/communities/groups.md) provides a third choice - a `Public Group` (optional membership)
+* 両方のグループを表示する前に、ページの更新が必要な場合があります。
+* This template does *not* include the groups function, so no further nesting of groups will be possible.
+* On author, the [Groups console](/help/communities/groups.md) provides a third choice - a `Public Group` (optional membership).
 
 両方のグループが作成されたら、Baseball グループ（オープングループ）を選択し、そのリンクに注目します。
 
@@ -181,14 +181,14 @@ On author - with administrative privileges, navigate to the [Communities Groups 
 
 引き続きパブリッシュ環境で、Aaron McDonald としてログアウトし、次のように匿名のサイト訪問者として Sports グループ内のグループを表示します。
 
-* ホームページ
-* select `Groups`link
-* select `Sports`link
-* select the Sports&#39; `Groups`link
+* 開始ホームページ
+* Select `Groups` link
+* Select `Sports` link
+* Select the Sports&#39; `Groups` link
 
 Baseball グループのみが表示されます。
 
-Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、オープングループとプライベ `Join` ートグル `Baseball` ープのどちらかを `enter or Leave` 実行でき `Gymnastics`ます。
+Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、オープングループとプライベ `Join` ートグループ `Baseball` のどちらかを使用で `enter or Leave` きることに注意して `Gymnastics` ください。
 
 ![chlimage_1-40](assets/chlimage_1-40.png)
 
@@ -196,7 +196,7 @@ Weston McCall（weston.mccall@dodgit.com／password）としてログインし�
 
 Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、作成者環境のこのページにコンテンツを追加できます。
 
-For example, go to **author** instance, open the `engage` folder in the [Communities Sites console](/help/communities/sites-console.md), select the **Open Site** icon to enter author edit mode. Then select preview mode to select the `Web Page`link, then select edit mode to add Title and Text components. 最後に、ページのみまたはサイト全体を再公開します。
+For example, go to **author** instance, open the `engage` folder in the [Communities Sites console](/help/communities/sites-console.md), select the **Open Site** icon to enter author edit mode. Then select preview mode to select the `Web Page` link, then select edit mode to add Title and Text components. 最後に、ページのみまたはサイト全体を再公開します。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
@@ -212,16 +212,16 @@ When the community member has moderation privileges, then the Moderation link wi
 
 ログアウトした後に、新しいユーザー登録を作成できます。
 
-* select `Log In`
-* select `Sign up for a new account`
+*  `Log In`
+*  `Sign up for a new account`
 
 ![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
 
 デフォルトでは、電子メールアドレスがログイン ID になります。このチェックボックスをオフにすると、訪問者は独自のログインID（ユーザー名）を入力できます。 ユーザー名は、公開ユーザーで一意である必要があります。環境
 
-After specifying the user&#39;s name, email, and password, selecting `Sign Up`will create the user and enable them to sign.
+After specifying the user&#39;s name, email, and password, selecting `Sign Up` will create the user and enable them to sign.
 
-Once signed in, the first page presented is their `Profile`page, which they can personalize.
+Once signed in, the first page presented is their `Profile` page, which they can personalize.
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
