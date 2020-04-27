@@ -3,7 +3,7 @@ title: AEM Assetsを使用して、サポートされる様々なファイル形
 description: AEM Assetsを使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティスです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -16,15 +16,15 @@ AEM Assets はユーザーの様々なファイルサポート要件に対応す
 
 >[!TIP]
 >
->Adobe Managed Services(AMS)でExperience Managerを使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、アドビのサポート窓口にご連絡ください。 AMSのデプロイメントに関するこれらのベストプラクティスを実装し、アドビ独自の形式に関する最良のツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。
+>Adobe Managed Services(AMS)でExperience Managerを使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、アドビのサポート窓口にご連絡ください。 AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 3000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerでは処理されない場合があります。
 
 ## Adobe Camera Raw ライブラリ {#adobe-camera-raw-library}
 
-最適なパフォーマンスを得るために、RAWファイルとDNGファイルにはAdobe Camera rawライブラリを使用することをお勧めします。
+最適なパフォーマンスを得るために、RAWファイルとDNGファイルにはAdobe Camera Rawライブラリを使用することをお勧めします。
 
-Adobe Camera rawライブラリは、入力としてCMYKカラープロファイルをサポートしています。 ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
+Adobe Camera Rawライブラリは、入力としてCMYKカラープロファイルをサポートします。 ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
 
-詳しくは、 [Camera rawのサポートを参照してください](/help/assets/camera-raw.md)。
+詳しくは、 [Camera Rawのサポートを参照してください](/help/assets/camera-raw.md)。
 
 ## Adobe PDF Rasterizer ライブラリ {#adobe-pdf-rasterizer-library}
 
@@ -34,7 +34,7 @@ Adobe Camera rawライブラリは、入力としてCMYKカラープロファイ
 * 追加設定なしでは生成されないサムネールがある AI ファイル
 * SPOT（PMS）カラーの AI ファイル
 
-PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDF Rasterizerライブラリは、カラースペースの変換をサポートしていません。 ソースPDFファイルのカラースペースに関係なく、Adobe PDFラスタライザーはRGB出力のみを生成します。
+PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDFラスタライザライブラリは、カラースペースの変換をサポートしていません。 ソースPDFファイルのカラースペースに関係なく、Adobe PDFラスタライザーはRGB出力のみを生成します。
 
 ## Adobe InDesign Server {#adobe-indesign-server}
 
