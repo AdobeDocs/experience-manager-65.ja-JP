@@ -4,7 +4,7 @@ description: AEMの設定、ハードウェア、ソフトウェア、および�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -203,17 +203,13 @@ In addition, set the path of ImageMagick&#39;s temporary folder in the `configur
 
 >[!CAUTION]
 >
->使用可能なすべてのディスク領域を ImageMagick で使用する場合、設定を誤るとサーバーの動作が不安定になるおそれがあります。
->
->ImageMagick を使用して大きなファイルを処理するために必要なポリシー変更をおこなうと、AEM のパフォーマンスに影響する可能性があります。詳しくは、[ImageMagick のインストールと設定](/help/assets/best-practices-for-imagemagick.md)を参照してください。
+>使用可能なすべてのディスク領域を ImageMagick で使用する場合、設定を誤るとサーバーの動作が不安定になるおそれがあります。ImageMagick を使用して大きなファイルを処理するために必要なポリシー変更をおこなうと、AEM のパフォーマンスに影響する可能性があります。詳しくは、[ImageMagick のインストールと設定](/help/assets/best-practices-for-imagemagick.md)を参照してください。
 
 >[!NOTE]
 >
 >ImageMagickとファイルは、ではなく、で使用で `policy.xml` きます。 `configure.xml` 設定ファ `/usr/lib64/ImageMagick-&#42;/config/` イルの場所は `/etc/ImageMagick/`[](https://www.imagemagick.org/script/resources.php) 、ImageMagickのドキュメントを参照してください。
 
->[!TIP]
->
->Adobe Managed Services(AMS)でExperience Managerを使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、アドビのサポート窓口にご連絡ください。 AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。
+Adobe Managed Services(AMS)でExperience Managerを使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、アドビカスタマーケアにお問い合わせください。 AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 3000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerでは処理されない場合があります。
 
 ### XMP の書き戻し {#xmp-writeback}
 
