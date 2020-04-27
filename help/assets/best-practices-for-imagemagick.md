@@ -3,7 +3,7 @@ title: AEM Assets と連携するための ImageMagick のインストールと�
 description: ImageMagick ソフトウェアの概要と、インストール方法、コマンドラインプロセスのステップの設定方法、ImageMagick を使用して画像の編集、組み立て、サムネール生成をおこなう方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -18,7 +18,7 @@ ImageMagick を使用して大きなファイルを処理する場合は、必�
 
 >[!NOTE]
 >
->Adobe Managed Services（AMS）で AEM を使用しており、大きな PSD ファイルまたは PSB ファイルを大量に処理する予定がある場合は、アドビサポートにお問い合わせください。
+>AEM on Adobe Managed Services(AMS)を使用している場合は、高解像度のPSDまたはPSBファイルを多数処理する予定の場合は、アドビカスタマーケアにお問い合わせください。 3000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerでは処理されない場合があります。
 
 ## ImageMagick のインストール {#installing-imagemagick}
 
