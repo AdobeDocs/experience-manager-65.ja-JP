@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -27,9 +27,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >Communities API のパッケージの場所は、次のメジャーリリースにアップグレードされる際に変更されることがあります。
 
+
 ### SocialComponent インターフェイス {#socialcomponent-interface}
 
-SocialComponent は、AEM Communities 機能のリソースを表す POJO です。各SocialComponentは、クライアントにデータを提供するGETterを公開した特定のresourceTypeを表すので、リソースを正確に表すことが理想的です。 必要に応じて、すべてのビジネスロジックとビューロジックがSocialコンポーネントにカプセル化されます。この中には、サイト訪問者のセッション情報も含まれます。
+SocialComponent は、AEM Communities 機能のリソースを表す POJO です。各SocialComponentは、特定のresourceTypeを、公開されたGETterを使用して表し、クライアントにデータを提供して、リソースを正確に表現するのが理想的です。 必要に応じて、すべてのビジネスロジックと表示ロジックが、サイト訪問者のセッション情報を含むSocialComponentにカプセル化されます。
 
 このインターフェイスは、リソースを表すために必要な GETter の基本セットを定義します。重要なことは、インターフェイスは、Handlebars テンプレートをレンダリングしリソースの GET JSON エンドポイントを公開するために必要な、Map&lt;String, Object> getAsMap() および String toJSONString() メソッドを規定するということです。
 
@@ -39,11 +40,11 @@ All SocialComponent classes must implement the interface `com.adobe.cq.social.sc
 
 SocialCollectionComponent インターフェイスは、他のリソースのコレクションであるリソースをより適切に表すように SocialComponent インターフェイスを拡張します。
 
-すべてのSocialCollectionComponentクラスで、com.adobe.cq.soscial.scf.SocialCollectionComponentインターフェイスを実装する必要があります
+すべてのSocialCollectionComponentクラスは、com.adobe.cq.soscial.scf.SocialCollectionComponentインターフェイスを実装する必要があります
 
 ### SocialComponentFactory インターフェイス {#socialcomponentfactory-interface}
 
-SocialComponentFactory（ファクトリ）は、SocialComponent をフレームワークに登録します。ファクトリは、特定のresourceTypeに対して使用できるSocialComponentsが何か、およびその優先順位ranking&amp;ast；をフレームワークに知らせる手段を提供します。複数のSocialComponentsが識別される場合。
+SocialComponentFactory（ファクトリ）は、SocialComponent をフレームワークに登録します。ファクトリは、複数のSocialComponentsが識別された場合に、特定のresourceTypeで使用できるSocialComponentsが何であるか、およびその優先順位がフレームワークに通知する手段を提供します。
 
 SocialComponentFactory は、選択された SocialComponent のインスタンスを作成し、SocialComponent に必要なすべての依存関係をファクトリから DI パッケージを使用して挿入できるようにします。
 
@@ -51,7 +52,7 @@ SocialComponentFactory は OSGi サービスであり、コンストラクター
 
 すべての SocialComponentFactory クラスは、インターフェイス `com.adobe.cq.social.scf.SocialComponentFactory` を実装する必要があります。
 
-SocialComponentFactory.getPriority()メソッドの実装は、getResourceType()が返すように、特定のresourceTypeにファクトリを使用するために最も高い値を返す必要があります。
+SocialComponentFactory.getPriority()メソッドの実装は、getResourceType()が返す、指定されたresourceTypeにファクトリが使用されるように、最も高い値を返す必要があります。
 
 ### SocialComponentFactoryManager インターフェイス {#socialcomponentfactorymanager-interface}
 
@@ -75,9 +76,9 @@ HTTP API POST エンドポイントは、`SlingPostOperation` インターフェ
 
 #### SocialOperation クラス {#socialoperation-class}
 
-Each `SocialOperation`endpoint extends the AbstractSocialOperation class and overrides the method `performOperation().`This method performs all actions needed to complete the operation and return a `SocialOperationResult`or else throw an `OperationException`, in which case an HTTP error status with a message, if available, is returned in place of the normal JSON response or success HTTP status code.
+Each `SocialOperation` endpoint extends the AbstractSocialOperation class and overrides the method `performOperation()`. このメソッドは、操作の完了に必要なすべてのアクションを実行し、`SocialOperationResult` を返すか、または `OperationException` をスローします。後者の場合は、HTTP エラーステータスとメッセージ（使用可能な場合）が、通常の JSON 応答または成功 HTTP ステータスコードの代わりに返されます。
 
-Extending `AbstractSocialOperation`makes possible the reuse of `SocialComponents`to send JSON responses.
+Extending `AbstractSocialOperation` makes possible the reuse of `SocialComponents` to send JSON responses.
 
 #### SocialOperationResult クラス {#socialoperationresult-class}
 
@@ -87,7 +88,7 @@ Extending `AbstractSocialOperation`makes possible the reuse of `SocialComponents
 
 作成操作の場合、`SocialComponent` に含まれる `SocialOperationResult` は作成されたリソースを表し、更新操作の場合、操作によって変更されたリソースを表します。削除操作の場合は `SocialComponent` は返されません。
 
-使用される成功 HTTP ステータスコードは、以下のとおりです。
+使用される成功HTTPステータスコードは次のとおりです。
 
 * 作成操作の場合は 201
 * 更新操作の場合は 200
@@ -99,14 +100,16 @@ Extending `AbstractSocialOperation`makes possible the reuse of `SocialComponents
 
 #### OperationService クラス {#operationservice-class}
 
-The social component framework recommends that the business logic responsible for performing the operation not be implemented within the `SocialOperation`class, but instead delegated to an OSGi service. ビジネスロジックの OSGi サービスを使用すると、`SocialComponent`（`SocialOperation` エンドポイントの影響を受ける）を他のコードと統合でき、異なるビジネスロジックを適用できます。
+The social component framework recommends that the business logic responsible for performing the operation not be implemented within the `SocialOperation` class, but instead delegated to an OSGi service. ビジネスロジックの OSGi サービスを使用すると、`SocialComponent`（`SocialOperation` エンドポイントの影響を受ける）を他のコードと統合でき、異なるビジネスロジックを適用できます。
 
 すべての `OperationService` クラスは `AbstractOperationService` を拡張し、実行される操作に関連付けることができる追加拡張を可能にします。サービス内の各操作は `SocialOperation` クラスによって表されます。`OperationExtensions` クラスは、操作の実行中に以下のメソッドを呼び出すことによって呼び出すことができます。
 
 * `performBeforeActions()`
-事前確認/前処理と検証を可能にする
+
+   事前確認/前処理と検証を許可
 * `performAfterActions()`
-リソースをさらに変更したり、カスタムイベントやワークフローを呼び出したりできます。
+
+   リソースをさらに変更したり、カスタムリソースやワークフローを呼び出したりできます。
 
 #### OperationExtension クラス {#operationextension-class}
 
