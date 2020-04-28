@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: b9cc4df476ab95707284c4255f9cf35f257a1258
 
 ---
 
@@ -38,13 +38,11 @@ AEM には次の 2 種類の環境があります。
 
 >[!NOTE]
 >
->この AEM のドキュメント作成に、AEM 自体が使用されています。
->
->AEM は Dispatcher と共に、公開にも使用されています。
+>このAEMドキュメントの発行には、AEMとディスパッチャーが使用されます。
 
 ### オーサー環境 {#author-environment}
 
-The author works in what is known as the **author environment**. This provides an easy to use interface (graphical user interface (GUI or UI)) for creating the content. It is usually located behind a company&#39;s firewall that provides full protection and requires the author to login, using an account that has been assigned the appropriate access rights.
+作成者は、**オーサー環境**&#x200B;と呼ばれる環境で作業します。この環境では、便利なグラフィカルユーザーインターフェイス（GUI または UI）を使用して、コンテンツを作成できます。この環境は通常、完全に保護された企業のファイアウォールの内側に配備されるので、作成者は、適切なアクセス権限が割り当てられたアカウントを使用してログインする必要があります。
 
 >[!NOTE]
 >
@@ -72,30 +70,30 @@ The author works in what is known as the **author environment**. This provides a
 
 #### パブリッシュ環境 {#publish-environment}
 
-When ready, the AEM site&#39;s content is published to the **publish environment**. ここでは、デザインされたインターフェイスのルック&amp;フィールに従って、Webサイトのページが対象の閲覧者に提供されます。
+When ready, the AEM site&#39;s content is published to the **publish environment**. これで、対象となるオーディエンスは、設計したインターフェイスのルックアンドフィールどおりに Web サイトのページを利用できます。
 
 通常、パブリッシュ環境は保護解除された領域（DMZ）内に配置されます。つまり、インターネットで使用できますが、内部ネットワークの完全保護下にはありません。
 
-AEM サイトが[コミュニティサイト](/help/communities/overview.md)の場合、または [Communities コンポーネント](/help/communities/author-communities.md)を含む場合、サインインしたサイト訪問者（メンバー）は、Communities の機能を利用できます。例えば、フォーラムに投稿したり、コメントを投稿したり、他のメンバーに従ったりできます。 メンバーには、通常、作成者環境に限定されたアクティビティ(新しいページ（コミュニティグループ）の作成、ブログ記事の作成、他のメンバーの投稿のモデレートなど)を実行する権限が与えられます。
+AEM サイトが[コミュニティサイト](/help/communities/overview.md)の場合、または [Communities コンポーネント](/help/communities/author-communities.md)を含む場合、サインインしたサイト訪問者（メンバー）は、Communities の機能を利用できます。例えば、フォーラムへの投稿、コメントの投稿、他のメンバーのフォローなどが可能です。 メンバーには、通常、新しいページ（コミュニティグループ）の作成、ブログ記事の作成、他のメンバーの投稿のモデレートなど、作成者環境に限定されたアクティビティを実行する権限が与えられます。
 
 >[!NOTE]
 >
 >用語が一部重複して使用されている場合があります。この状況は次の用語で発生しています。
 >
->* **発行／非公開**
-   >  コンテンツを公開環境で公開できる（または公開できない）アクションの主な用語は次のとおりです。
+>* **公開／非公開**
+   >  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
    >
    >
-* **アクティブ化/非アクティブ化**
-   >  これらの用語は、発行/非公開と同義語です。
+* **アクティブ化／非アクティブ化**
+   >  公開／非公開と同義です。
    >
    >
 * **レプリケート／レプリケーション**
-   >  これらは、ある環境から別の環境へのデータの移動（ページのコンテンツ、ファイル、コード、ユーザーコメントなど）を示すために使用される技術用語です。例えば、ユーザーコメントの発行時や逆複製時など。
+   >  これらは、ある環境から別のユーザーへのデータ（ページのコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を示すために使用される技術用語です。例えば、ユーザーコメントの投稿時や逆複製時など。
 >
 
 
 
 #### Dispatcher {#dispatcher}
 
-To optimize performance for visitors to your website, the **[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)**implements load balancing and caching.
+Web サイトの訪問者に対するパフォーマンスを最適化するには、**[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)を使用してロードバランシングとキャッシングを実装します。**
