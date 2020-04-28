@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -20,13 +20,16 @@ source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 Web サイトをセットアップするために、後述の手順では、次の場所に作成するフォルダーについて説明します。
 
 * `/apps/an-scf-sandbox`
-カスタムアプリケーションとテンプレートが存在する場所
+
+   ここにカスタムアプリケーションとテンプレートが存在します。
 
 * `/etc/designs/an-scf-sandbox`
-ここはダウンロード可能なデザイン要素が存在する場所です
+
+   これは、ダウンロード可能なデザイン要素が存在する場所です。
 
 * `/content/an-scf-sandbox`
-ここにダウンロード可能なWebページがあります
+
+   ここは、ダウンロード可能なWebページがある場所です。
 
 このチュートリアル内のコードは、アプリケーション、デザインおよびコンテンツについてメインフォルダー名が同じであるという前提に基づきます。If you choose some other name for your website, then always replace `an-scf-sandbox` with the name you have chosen.
 
@@ -34,12 +37,14 @@ Web サイトをセットアップするために、後述の手順では、次�
 >
 >名前について：
 >
->* CRXDEに表示される名前は、アドレス指定可能なコンテンツへのパスを形成するノード名です
->* ノード名にはスペースを含めることができますが、URIで使用する場合は、スペースを「%20」または「+」としてエンコードする必要があります
+>* CRXDEに表示される名前は、アドレス指定可能なコンテンツへのパスを形成するノード名です。
+>* ノード名にはスペースを含めることができますが、URIで使用する場合は、スペースを「%20」または「+」としてエンコードする必要があります。
 >* ノード名にはハイフンやアンダースコアを含めることができますが、Javaファイル内でパッケージ名として参照する場合はエンコードする必要があります。 ハイフンとアンダースコアは共に、アンダースコアでエスケープされ、その後にUnicode値が続きます。
->
->   * ハイフンが「_002d」になる
->   * アンダースコアは「_005f」になります。
+   >
+   >   
+   * ハイフンが「_002d」になる
+   >   * アンダースコアは「_005f」になります。
+
 
 ## アプリケーションディレクトリ(/apps)の設定 {#setup-the-application-directory-apps}
 
@@ -51,27 +56,27 @@ Web サイトをセットアップするために、後述の手順では、次�
 
    **[!UICONTROL CRXDE Lite]** を使用して、エクスプローラーペインで次の手順を実行します。
 
-   1. Select the `/apps` folder
-   1. **[!UICONTROL [作成]****[!UICONTROL ...]を右クリックまたは「作成」を]**&#x200B;プルダウンメニュー
-   1. **[!UICONTROL [フォ]**&#x200B;ルダの作成…]を選択します。.
-   1. In the **[!UICONTROL Create Folder]** dialog, enter `an-scf-sandbox`
+   1. Select the `/apps` folder.
+   1. Right-click **[!UICONTROL Create]**... or pull down the **[!UICONTROL Create...]** menu.
+   1. Select **[!UICONTROL Create Folder...]**.
+   1. In the **[!UICONTROL Create Folder]** dialog, enter `an-scf-sandbox`.
    1. 「**[!UICONTROL OK]**」をクリックします。
 
 1. **[!UICONTROL components]** サブフォルダーを作成します。
 
-   1. Select the `/apps/an-scf-sandbox` folder
-   1. Click **[!UICONTROL Create > Create Folder]**
-   1. In the **[!UICONTROL Create Folder]** dialog, enter **[!UICONTROL components]**
+   1. Select the `/apps/an-scf-sandbox` folder.
+   1. Click **[!UICONTROL Create > Create Folder]**.
+   1. In the **[!UICONTROL Create Folder]** dialog, enter **[!UICONTROL components]**.
    1. 「**[!UICONTROL OK]**」をクリックします。
 
-1. **templates **サブフォルダーを作成します。
+1. **[!UICONTROL templates]** サブフォルダーを作成します。
 
-   1. Select the `/apps/an-scf-sandbox` folder
-   1. Click **[!UICONTROL Create > Create Folder]**
-   1. In the **[!UICONTROL Create Folder]** dialog, enter **[!UICONTROL templates]**
+   1. Select the `/apps/an-scf-sandbox` folder.
+   1. Click **[!UICONTROL Create > Create Folder]**.
+   1. In the **[!UICONTROL Create Folder]** dialog, enter **[!UICONTROL templates]**.
    1. 「**[!UICONTROL OK]**」をクリックします。
-   1. 再選択 `/apps/an-scf-sandbox`
-   1. 「**[!UICONTROL すべて保存]**」を選択します。
+   1. 再選択しま `/apps/an-scf-sandbox`す。
+   1. Select **[!UICONTROL Save All]**.
    他の編集プロセスと同様ですが、保存は頻繁におこなってください。データの入力に問題が発生した場合は、ログインがタイムアウトしたか、以前の編集内容を保存する必要がある可能性があります。
 
 1. CRXDE Lite のエクスプローラーペインでの構造は、次のようになります。
@@ -86,13 +91,13 @@ Web サイトをセットアップするために、後述の手順では、次�
 
    Note: If you use CRXDE Lite to create a Node of type `cq:Page`, the Access Control and Replication would not be set to default settings for a page.
 
-1. エクスプローラーペインで、**[!UICONTROL Designs]** フォルダーを選択し、**[!UICONTROL 新規／新しいページ]**&#x200B;をクリックします。
+1. In the explorer pane, select the **[!UICONTROL Designs]** folder and then click **[!UICONTROL New]** > **[!UICONTROL New Page]**.
 
    次のように入力します。
 
-   * Title: **An SCF Sandbox**
-   * 名前：**an-scf-sandbox**
-   * Select **Design Page Template**
+   * Title: **[!UICONTROL An SCF Sandbox]**
+   * 名前：**[!UICONTROL an-scf-sandbox]**
+   * Select **[!UICONTROL Design Page Template]**
    「**[!UICONTROL 作成]**」をクリックします。
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
@@ -109,4 +114,4 @@ Web サイトをセットアップするために、後述の手順では、次�
 
 リポジトリの /content ディレクトリには、Web サイトコンテンツが格納されます。/contentの下のパスは、ブラウザーリクエストのURLのパスを構成します。
 
-*ページ* ・テ [ンプレートを初期アプリケーションの一部として作成した後は](initial-app.md#createthepagetemplate) 、そのテンプレートに基づいて初期ページ・コンテンツを作成することができる。. [****](initial-app.md)
+*ページ* ・テ [ンプレートを初期アプリの一部として作成した後](initial-app.md#createthepagetemplate) 、そのテンプレートに基づいて初期ページ・コンテンツを作成できる。. [****](initial-app.md)
