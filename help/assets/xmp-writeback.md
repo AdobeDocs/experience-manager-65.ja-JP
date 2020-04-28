@@ -3,7 +3,7 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 33ab9845f7800c80a6beb5db06f3fadf582122d0
 
 ---
 
@@ -12,11 +12,11 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 Adobe Experience Manager（AEM）Assets のこの XMP の書き戻し機能は、アセットメタデータの変更をアセットのレンディションにレプリケートします。
 
-AEM Assets内から、またはアセットのアップロード中に、アセットのメタデータを変更すると、変更は最初にCrx-Deのアセットノード内に保存されます。
+AEM Assets内から、またはアセットのアップロード中に、アセットのメタデータを変更すると、変更はCrx-Deのアセットノード内に最初に保存されます。
 
 XMPの書き戻し機能は、アセットのすべてのレンディションまたは特定のレンディションにメタデータの変更を反映します。
 
-Consider a scenario where you modify the Title property of the asset titled `Classic Leather` to `Nylon`.
+「`Classic Leather`」というタイトルのアセットの「タイトル」プロパティを「`Nylon`」に変更するシナリオについて考えます。
 
 ![メタデータ](assets/metadata.png)
 
@@ -30,11 +30,11 @@ XMPの書き戻し機能を使用すると、メタデータの変更をアセ�
 
 ## XMP の書き戻しの有効化 {#enabling-xmp-writeback}
 
-To enable the metadata changes to be propagated to the renditions of the asset when uploading it, modify the **Adobe CQ DAM Rendition Maker** configuration in Configuration Manager.
+アセットのアップロード時にメタデータの変更をアセットのレンディションに反映させるには、設定マネージャーで「**Adobe CQ DAM Rendition Maker**」の設定を変更します。
 
-1. Configuration Managerを開くには、にアクセスしま `https://[aem_server]:[port]/system/console/configMgr`す。
-1. Open the **Adobe CQ DAM Rendition Maker** configuration.
-1. Select the **Propagate XMP** option, and then save the changes.
+1. Configuration Manager を開くには、`https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
+1. 「**Adobe CQ DAM Rendition Maker**」設定を開きます。
+1. 「**Propagate XMP**」オプションを選択し、変更を保存します。
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
@@ -44,10 +44,10 @@ XMP の書き戻し機能によって、選択されたレンディションに�
 
 XMP の書き戻し機能でメタデータをレンディションサムネール 140.100.png および 319.319.png に反映するには、次の手順を実行します。
 
-1. Tap/click the AEM logo, and then navigate to **Tools** > **Workflow** > **Models**.
-1. From the Models page, open the **DAM Metadata Writeback** workflow model.
-1. In the **DAM Metadata Writeback** properties page, open the **XMP Writeback Process** step.
-1. In the Step Properties dialog box, tap/click the **Process** tab.
+1. AEM のロゴをタップまたはクリックし、**ツール**／**ワークフロー**／**モデル**&#x200B;に移動します。
+1. モデルページで、「**DAM メタデータの書き戻し**」ワークフローモデルを開きます。
+1. **DAM メタデータの書き戻し**&#x200B;ページで、「**XMP の書き戻しプロセス**」ステップを開きます。
+1. ステップのプロパティダイアログボックスで、「**プロセス**」タブをタップまたはクリックします。
 1. In the **Arguments** box, add `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`, andd then tap/click **OK**.
 
    ![step_properties](assets/step_properties.png)
@@ -55,11 +55,11 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 1. 変更内容を保存します。
 1. To regenerate the pyramid TIF renditions for Dynamic Media images with the new attributes, add the **Dynamic Media Process Image Assets** step to the DAM Metadata Writeback workflow.
 
-   PTIFF レンディションは、Dynamic Media ハイブリッド実装でのみ、ローカルで作成および格納されます。
+   PTIFF レンディションは、Dynamic Media Hybrid 実装でのみ、ローカルで作成および格納されます。
 
 1. ワークフローを保存します。
 
-メタデータの変更は、アセットのレンディションレンディションthumbnail.140.100.pngおよびthumbnail.319.319.pngに反映され、他のレンディションレンディションレンディションには反映されません。
+メタデータの変更がアセットのレンディション thumbnail.140.100.png と thumbnail.319.319.png のみに反映され、他のレンディションには反映されなくなります。
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 
 ## XMP メタデータのフィルタリング {#filtering-xmp-metadata}
 
-AEM Assetsは、アセットバイナリから読み取られ、アセットの取り込み時にJCRに保存されるXMPメタデータのプロパティ/ノードのブラックリストフィルターとホワイトリストフィルターの両方をサポートしています。
+AEM Assets は、アセットの取得時にアセットバイナリから読み取られて JCR に保存される XMP メタデータのプロパティ／ノードのブラックリストフィルターとホワイトリストフィルターの両方をサポートしています。
 
 ブラックリストフィルターは、除外するよう指定されたプロパティを除く、すべての XMP メタデータプロパティを読み込みます。ただし、膨大な量の XMP メタデータ（例えば、10,000 個のプロパティを持つ 1,000 個のノード）を含む INDD ファイルなどのアセットタイプの場合、フィルタリングするノードの名前が必ずしも事前にわかるわけではありません。ブラックリストフィルターで、大量の XMP メタデータを含む膨大な量のアセットを読み込むと、監視キューの遅滞など、安定性に関する問題が、AEM インスタンス／クラスターで発生する可能性があります。
 
@@ -77,18 +77,18 @@ AEM Assetsは、アセットバイナリから読み取られ、アセットの�
 
 >[!NOTE]
 >
->フィルタリングは、アセットバイナリの XMP ソースから派生したプロパティに対してのみ機能します。EXIF 形式や IPTC 形式などの XMP 以外のソースから派生したプロパティについては、フィルタリングは機能しません。例えば、アセットの作成日は、`CreateDate` という名前のプロパティに EXIF TIFF 形式で格納されています。AEM では、この値を `exif:DateTimeOriginal`.という名前のメタデータフィールドに格納します。この場合は XMP 以外のソースなので、このプロパティにはフィルタリングは機能しません。
+>フィルタリングは、アセットバイナリの XMP ソースから派生したプロパティに対してのみ機能します。EXIF 形式や IPTC 形式などの XMP 以外のソースから派生したプロパティについては、フィルタリングは機能しません。例えば、アセットの作成日は、`CreateDate` という名前のプロパティに EXIF TIFF 形式で格納されています。AEM stores this value in a metadata field named `exif:DateTimeOriginal`. この場合は XMP 以外のソースなので、このプロパティにはフィルタリングは機能しません。
 
-1. Configuration Managerを開くには、にアクセスしま `https://[aem_server]:[port]/system/console/configMgr`す。
-1. Open the **Adobe CQ DAM XmpFilter** configuration.
-1. To apply whitelist filtering, select **Apply Whitelist to XMP Properties**, and specify the properties to be imported in the **Whitelisted XML Names for XMP filtering** box.
+1. Configuration Manager を開くには、`https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
+1. 「**Adobe CQ DAM XmpFilter**」設定を開きます。
+1. ホワイトリストフィルターを適用するには、「**Apply Whitelist to XMP Properties**」を選択し、「**Whitelisted XML Names for XMP filtering**」ボックスで読み込むプロパティを指定します。
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. To filter out blacklisted XMP properties after applying whitelist filtering, specify them in the **Blacklisted XML Names for XMP filtering** box.
+1. ホワイトリストフィルターを適用した後、ブラックリストに登録された XMP プロパティを除外するには、それらのプロパティを「**Blacklisted XML Names for XMP filtering**」ボックスに指定します。
 
    >[!NOTE]
    >
-   >「**Apply Blacklist to XMP Properties**」チェックボックスは、デフォルトでオンになっています。つまり、ブラックリストフィルターは、デフォルトで有効になっています。To disable blacklist filtering, unselect the **Apply Blacklist to XMP Properties** option.
+   >「**Apply Blacklist to XMP Properties**」チェックボックスは、デフォルトでオンになっています。つまり、ブラックリストフィルターは、デフォルトで有効になっています。ブラックリストフィルターを無効にするには、「**Apply Blacklist to XMP Properties**」オプションをオフにします。
 
 1. 変更内容を保存します。
