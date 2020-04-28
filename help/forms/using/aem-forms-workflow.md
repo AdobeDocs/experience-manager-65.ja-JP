@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 14a6e0c5f79ac7acb9f8bd06d3524473f1007485
 
 ---
 
@@ -65,7 +65,7 @@ AEM には、提供されているワークフローステップを使用して�
 
 [ファイルを入手](assets/example-mortgage-loan-application.zip)
 
-1. ワークフローモデルコンソールを開きます。The default URL is https://&#39;[server]:[port]&#39;/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models
+1. ワークフローモデルコンソールを開きます。The default URL is `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. 「**作成**」を選択してから、「**モデルを作成**」を選択します。ワークフローモデルを追加ダイアログが表示されます。
 1. 「**タイトル**」と「**名前**」（オプション）を入力します。例えば、住宅ローン申し込みと入力します。「**完了**」をタップします。
 1. Select the newly created workflow model and tap **Edit**. 」をクリックします。これで、ワークフローステップを追加してビジネスロジックを構築できます。新しいワークフローモデルを初めて作成する場合、次のものが含まれます。
@@ -75,7 +75,7 @@ AEM には、提供されているワークフローステップを使用して�
 
 1. 電子メール通知を有効にします。OSGiでフォーム中心のワークフローを設定し、ユーザーまたは担当者に電子メール通知を送信できます。 電子メール通知を有効にするには、以下の設定を実行します。
 
-   1. Go to AEM configuration manager at https://&#39;[server]:[port]&#39;/system/console/configMgr.
+   1. Go to AEM configuration manager at `https://[server]:[port]/system/console/configMgr`.
    1. **[!UICONTROL Day CQ 電子メールサービス]**&#x200B;の設定を開きます。「**[!UICONTROL SMTP サーバーのホスト名]**」、「**[!UICONTROL SMTP サーバーポート]**」、「**[!UICONTROL 送信元アドレス]**」フィールドの値を指定します。「**[!UICONTROL 保存]**」をクリックします。
    1. 「**[!UICONTROL Day CQ Link Externalizer]**」の設定を開きます。「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
@@ -101,13 +101,13 @@ AEM には、提供されているワークフローステップを使用して�
 
    式エディタを使用して、ブランチ1とブランチ2のルーティング式を作成します。 これらのルーティング式は、AEM Inboxのユーザーアクションに基づいて分岐を選択するのに役立ちます。
 
-   **ルーティング式1**
+   **ルーティング式2**
 
    When a user taps **Approve** in AEM Inbox, Branch 1 is activated.
 
    ![OR分割の例](assets/orsplit_branch1_active_new.png)
 
-   **ルーティング式1**
+   **ルーティング式2**
 
    When a user taps **Reject** in AEM Inbox, Branch 2 is activated.
 
@@ -265,10 +265,10 @@ AEM Forms アプリケーションは、AEM Forms サーバーと同期されま
 
 AEM ワークフローの「タスクを割り当て」ステップと「電子メールを送信」ステップを使用して、電子メールを送信することができます。電子メールを送信するために必要な電子メールサーバーと各種の設定を指定するには、以下の手順を実行します。
 
-1. Go to AEM configuration manager at https://&#39;[server]:[port]&#39;/system/console/configMgr.
+1. Go to AEM configuration manager at `https://[server]:[port]/system/console/configMgr`.
 1. **[!UICONTROL Day CQ 電子メールサービス]**&#x200B;の設定を開きます。「**[!UICONTROL SMTP サーバーのホスト名]**」、「**[!UICONTROL SMTP サーバーポート]**」、「**[!UICONTROL 送信元アドレス]**」フィールドの値を指定します。「**[!UICONTROL 保存]**」をクリックします。
 1. 「**[!UICONTROL Day CQ Link Externalizer]**」の設定を開きます。「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
 ### ワークフローインスタンスの削除 {#purge-workflow-instances}
 
-ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。詳しくは、「[ワークフローインスタンスの定期的な削除](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)」を参照してください。
+ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。詳しくは、「ワークフローインスタンスの [定期的な削除」の「ワークフローインスタンス](/help/sites-administering/workflows-administering.md#regular) の削除」を参照してください。
