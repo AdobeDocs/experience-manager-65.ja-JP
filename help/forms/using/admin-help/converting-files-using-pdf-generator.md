@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 68cd1c13fff94ac485865e50bc955548cd285b14
 
 ---
 
@@ -61,11 +61,22 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
 >[!NOTE]
 >
->HTML から PDF への変換機能を使用する場合、システムフォントディレクトリに特定のフォントが含まれている必要があります。Linux、Solaris および AIX システムでは、システムフォントディレクトリに Courier フォントが含まれている必要があります。Windows システムでは、システムフォントディレクトリに Times New Roman が含まれている必要があります。
+>* HTML から PDF への変換機能を使用する場合、システムフォントディレクトリに特定のフォントが含まれている必要があります。Linux、Solaris および AIX システムでは、システムフォントディレクトリに Courier フォントが含まれている必要があります。Windows システムでは、システムフォントディレクトリに Times New Roman が含まれている必要があります。
+   >
+   > 
+* Linux上のAEM Formsでは、次に示すデフォルトの日本語フォントが使用されます。 日本語フォントを変換するには、>systemで、これらのフォントのうち少なくとも1つを使用できる必要があります。
+   >
+   >   
+   * 『サザナミゴシック』
+   >   * 『Kozuka Gothic Pro-VI』
+   >   * 『Kozuka Mincho Pro-VI』
+   >   * 『サザナミゴシック』
+   >   * &quot;Kozuka Mincho Pr6N&quot;
+   >   * 『サザナミ民潮』
+   >   * &quot;Adobe Heiti Std&quot;
+   >   * &quot;Adobe Song Std&quot;
+>* ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
 
->[!NOTE]
->
->ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
 
 1. 管理コンソールで、サービス／PDF Generator／HTML から PDF をクリックします。
 1. 次のいずれかを実行して、変換するファイルを指定します。
