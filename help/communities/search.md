@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -19,11 +19,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 検索機能は、フォーラムなど他の様々な機能と連携して、コンテンツを検索できるようにします。
 
-When adding the ability to search posts entered by community members, referred to as user generated content (UGC), there are two components: [ `Search`](#search) and [ `Search Results`](#search-results).
+コミュニティメンバーが入力した投稿（ユーザー生成コンテンツ（UGC））を検索する機能を追加するときは、[検索](#search)と[検索結果](#search-results)という 2 つのコンポーネントを使用します。
 
 The page that includes the `Search Results` component supports both searching and the display of results.
 
-The page that includes the `Search`component provides a place to launch a search with results appearing on the `Search Results` page.
+The page that includes the `Search` component provides a place to launch a search with results appearing on the `Search Results` page.
 
 検索機能は、サイト訪問者やメンバーに向けてコンテンツを表示する他の機能と共に使用できます。
 
@@ -31,7 +31,7 @@ The page that includes the `Search`component provides a place to launch a search
 
 ### 検索をページに追加 {#add-search-to-a-page}
 
-作成者モードでペ `Search` ージにコンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを `Communities / Search` 検索し、ページ上の所定の位置にドラッグします。 の使用に `Search` は、 `Search Results.`
+作成者モードでペ `Search` ージにコンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネ `Communities / Search` ントを検索し、ページ上の所定の位置にドラッグします。 の使用に `Search` は、 `Search Results.`
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
@@ -49,7 +49,7 @@ Under the **[!UICONTROL Search Settings]** tab, specify how what paths are are s
 
 ![chlimage_1-375](assets/chlimage_1-375.png)
 
-* **[!UICONTROL 検索パス]**「項目を追加」ボタンを使用して検索パスを追加すると、コンテンツの検索が限定されます。例えば、検索を特定のフォーラムに限定するには、ページ内に配置するフォーラムコンポーネントを選択します。
+* **[!UICONTROL 検索パス]**「項目を追加」ボタンを使用して検索パスを追加すると、コンテンツの検索が限定されます。例えば、検索対象を特定のフォーラムに限定するには、ページ内に配置するフォーラムコンポーネントを選択します。
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
@@ -83,9 +83,13 @@ Under the **[!UICONTROL Search Result Settings]** tab, it is possible to specify
 
 ![chlimage_1-378](assets/chlimage_1-378.png)
 
-* **[!UICONTROL 1 ページの検索結果数]** 1 ページに表示するトピック数または投稿数を定義します。初期設定は 10 です。
+* **[!UICONTROL 1 ページの検索結果数]**
 
-* **[!UICONTROL 検索パス]**「項目を追加」ボタンを使用して検索パスを追加すると、コンテンツの検索が限定されます。
+   1ページに表示するトピック/投稿の数を定義します。 初期設定は 10 です。
+
+* **[!UICONTROL 検索パス]**
+
+   「項目」ボタンを使用して検索パスを追追加加すると、コンテンツの検索が制限されます。
 
 ## 追加情報 {#additional-information}
 
