@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -21,26 +21,27 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 開発およびデモの目的で、1つの作成者と1つの発行インスタンスを実行する必要があります。
 
-To do so, follow the basic AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) instructions, which will result in
+To do so, follow the basic AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) instructions, which will result in:
 
 * Author environment on [localhost:4502](http://localhost:4502/)
 * Publish environment on [localhost:4503](http://localhost:4503/)
 
 AEM Communities では、各環境を次の目的で使用します。
 
-* 作成者環境は
+* 作成者の環境は次の場合に使用します。
 
-   * サイト、テンプレート、およびコンポーネントの開発
-   * 管理および設定のタスク
+   * サイト、テンプレート、およびコンポーネントの開発。
+   * 管理タスクと設定
 
-* 公開環境は
+* 公開環境は次のものです。
 
-   * コンテンツの投稿とモデレートに関するコミュニティの経験
-   * コミュニティグループ、メンバーおよびメンバーグループの作成
+   * コンテンツの投稿とモデレートのコミュニティエクスペリエンス。
+   * コミュニティグループ、メンバーおよびメンバーグループの作成。
 
 >[!NOTE]
 >
 >AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
+
 
 ## Communities の最新リリースのインストール {#install-latest-communities-release}
 
@@ -90,28 +91,28 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
    * 例：ユーザー名「admin」/パスワード「admin」
 
-* From the main console, navigate to **[!UICONTROL Tools > Operations > Security > Users]**
+* From the main console, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 * From the **Edit **menu, select**[!UICONTROL Add User ]**
 
 * ダイアログで、次のよ `Create New User` うに入力します。
 
-   * **[!UICONTROL IDアンプ(&amp;A);ast;]**:シリウス
+   * **[!UICONTROL ID]**:シリア
    * **[!UICONTROL 電子メールアドレス]**：sirius.nilson@mailinator.com
-   * **[!UICONTROL パスワード(&amp;A)；末尾；]**:password
+   * **[!UICONTROL パスワード]**：password
    * **[!UICONTROL パスワードの確認(&amp;A);ast;]**:password
    * **[!UICONTROL 名]**：Sirius
-   * **[!UICONTROL 姓(&amp;A)；姓]**:ニルソン
+   * **[!UICONTROL 姓]**:ニルソン
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
-下にスクロールし `Add User to Groups`ます。
+下にスクロールして次の操作を行い `Add User to Groups`ます。
 
-* &#39;C&#39;を入力して検索してください
+* 検索するには&#39;C&#39;と入力してください
 
    *  `Community Administrators`
    *  `Community Enablement Managers`
 
-* Select **[!UICONTROL Save]**
+* 「**[!UICONTROL 保存]**」を選択します。
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 
@@ -119,8 +120,8 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
 Facebook および Twitter でデモバージョンのソーシャルログインを使用するには、先に以下をおこなう必要があります。
 
-1. Install a fix pack or [latest feature pack](deploy-communities.md#latestfeaturepack) (for March 2017 Facebook API changes)
-1. [発行環境でのOAuthプロバイダ](social-login.md#adobe-granite-oauth-authentication-handler) ーの有効化
+1. Install a fix pack or [latest feature pack](deploy-communities.md#latestfeaturepack) (for March 2017 Facebook API changes).
+1. [発行環境でOAuthプロバイダーを有効にします](social-login.md#adobe-granite-oauth-authentication-handler) 。
 
 実稼動サーバーでは、ソーシャルログインの提供に必要なクラウドサービスを作成する必要があります。
 
@@ -141,10 +142,10 @@ Use the [Tagging console](../../help/sites-administering/tags.md#tagging-console
 
 ![chlimage_1-302](assets/chlimage_1-302.png)
 
-次に、以下の操作をおこないます。
+次の手順に従います。
 
-1. [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
-1. [タグを公開する](../../help/sites-administering/tags.md#publishing-tags)
+1. [タグ権限を設定します](../../help/sites-administering/tags.md#setting-tag-permissions)。
+1. [タグを公開します](../../help/sites-administering/tags.md#publishing-tags)。
 
 AEM Communities 入門チュートリアル用に作成したタグのサンプルパッケージ
 
@@ -152,8 +153,8 @@ AEM Communities 入門チュートリアル用に作成したタグのサンプ�
 
 ## UGC 共通ストア用の MongoDB {#mongodb-for-ugc-common-store}
 
-[MSRP](msrp.md)[](working-with-srp.md) (MongoDB)を共通ストアとして設定することは、発行環境または作成者環境からすべてのUGCを柔軟にモデレートできるようにすることを推奨します（ただし、オプションです）。
+[MSRP](msrp.md) (MongoDB)を共通ストアとして設定することは推奨されますが、オプションです。これにより、発行環境または作成者 [](working-with-srp.md) （あるいはその両方）からすべてのUGCを柔軟にモデレートできます。
 
 For instructions visit [How to Setup MongoDB for Demo](demo-mongo.md).
 
-デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、UGCが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、オーサー環境に表示されないので、発行インスタンスを使用する必要のあるすべてのモデレートタスクが発生します。
+デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、UGCが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、作成者環境には表示されないので、すべてのモデレートタスクが発行インスタンスを使用する必要があります。
