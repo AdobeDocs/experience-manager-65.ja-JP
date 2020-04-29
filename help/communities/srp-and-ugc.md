@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -25,13 +25,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## StorageResourceProvider API {#storageresourceprovider-api}
 
-SocialResourceProvider API（SRP API）は、様々な Sling リソースプロバイダー API の拡張です。ページネーションとアトミック増分のサポートが含まれます（集計とスコアリングに役立ちます）。
+SocialResourceProvider API（SRP API）は、様々な Sling リソースプロバイダー API の拡張です。ページ番号割り付けとアトミック増分のサポートが含まれます（集計とスコアリングに役立ちます）。
 
-日付、有用性、投票数などによる並べ替えが必要なので、SCF コンポーネントにはクエリが必要です。すべてのSRPオプションには、バケティングに依存しない柔軟なクエリメカニズムがあります。
+日付、有用性、投票数などによる並べ替えが必要なので、SCF コンポーネントにはクエリが必要です。すべてのSRPオプションには柔軟なクエリメカニズムがあり、このメカニズムはグループ化に依存しません。
 
-SRP 格納場所には、コンポーネントのパスが組み込まれます。SRP APIは、ASRP、MSRP、JSRPなど、選択したSRPオプションに依存するルートパスなので、UGCへのアクセスに常に使用する必要があります。
+SRP 格納場所には、コンポーネントのパスが組み込まれます。ルートパスはASRP、MSRP、JSRPなど、選択したSRPオプションに依存するので、SRP APIは常にUGCにアクセスするために使用します。
 
-SRP API は、抽象クラスではなくインターフェイスです。新しいリリースにアップグレードする場合、内部実装に対する将来の改善のメリットが失われるので、カスタム実装は軽易には実施しないでください。
+SRP API は、抽象クラスではなくインターフェイスです。新しいリリースにアップグレードする場合は、内部実装に対する将来の改善のメリットが失われるので、カスタム実装は軽く実行しないでください。
 
 SRP API を使用するための手段は、提供されるユーティリティ（SocialResourceUtilities パッケージで見つかるものなど）です。
 
@@ -42,6 +42,7 @@ AEM 6.0 以前からアップグレードする場合、すべての SRP の UGC
 >以前は、UGC にアクセスするためのユーティリティは SocialUtils パッケージ内にありましたが、このパッケージはなくなりました。
 >
 >代わりのユーティリティについては、[SocialUtils リファクタリング](socialutils.md)を参照してください。
+
 
 ## UGC にアクセスするためのユーティリティメソッド {#utility-method-to-access-ugc}
 
@@ -68,7 +69,8 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->The path resourceToUGCStoragePath() returns is *not *suitable for [ACL checking](srp.md#for-access-control-acls).
+>resourceToUGCStoragePath() によって返されるパスは、**[ACL チェック](srp.md#for-access-control-acls)には適していません。
+
 
 ## Utility Method to Access ACLs {#utility-method-to-access-acls}
 
@@ -95,7 +97,8 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->The path returned by resourceToACLPath() is *not *suitable for [accessing the UGC](#utility-method-to-access-acls) itself.
+>The path returned by resourceToACLPath() is *not* suitable for [accessing the UGC](#utility-method-to-access-acls) itself.
+
 
 ## UGC 関連の格納場所 {#ugc-related-storage-locations}
 
@@ -107,27 +110,27 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 An example of such a component is the [comments component](http://localhost:4502/content/community-components/en/comments.html) that exists in the [Community Components Guide](components-guide.md) site. ローカルリポジトリ内のコメントノードのパスは次のとおりです。
 
-* Component path = */content/community-components/en/comments/jcr:content/content/includable/comments*
+* コンポーネントパス = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **シャドウノードの場所**
 
 UGC の作成によって、必要な ACL が適用される[シャドウノード](srp.md#about-shadow-nodes-in-jcr)も作成されます。ローカルリポジトリ内の対応するシャドウノードへのパスは、シャドウノードのルートパスをコンポーネントパスに先に付けた結果です。
 
-* ルートパス= /content/usergenerated
-* コメントシャドウノード= /content/usergenerated/content/community-components/ja/comments/jcr:content/content/includable/comments
+* ルートパス = `/content/usergenerated`
+* コメントシャドウノード= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC の場所**
 
 UGC はこれらの場所のどちらにも作成されず、SRP API を呼び出す[ユーティリティメソッド](#utility-method-to-access-ugc)の使用によってのみアクセスする必要があります。
 
-* ルートパス= /content/usergenerated/asi/srp-choice
-* JSRPのUGCノード= /content/usergenerated/asi/jcr/content/community-components/jn/comments/jcr:content/includable/comments/srzd-let_it_be_
+* ルートパス = `/content/usergenerated/asi/srp-choice`
+* JSRPのUGCノード= `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-** JSRP の場合、UGC ノードはそれが入力された AEM インスタンス（オーサーまたはパブリッシュ）上にのみ存在することに注意してください。**&#x200B;発行インスタンスに対して入力した場合、作成者のモデレートコンソールからモデレートを行うことはできません。
+** JSRP の場合、UGC ノードはそれが入力された AEM インスタンス（オーサーまたはパブリッシュ）上にのみ存在することに注意してください。**&#x200B;発行インスタンスに対して入力した場合、作成者のモデレートコンソールからモデレートを実行することはできません。
 
 ## 関連情報 {#related-information}
 
-* [ストレージ・リソース・プロバイダの概要](srp.md) — 概要とリポジトリの使用状況の概要
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtilsリファクタリング](socialutils.md) — 廃止されたユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリの使用方法の概要
+* [SRP](accessing-ugc-with-srp.md) - Coding Guidelinesを使用したUGCへのアクセス
+* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
