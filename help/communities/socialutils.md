@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## SocialUtils パッケージの廃止 {#socialutils-package-deprecated}
 
-The package **com.adobe.cq.social.ugcbase.SocialUtils** was deprecated in AEM 6.1.
+The package `com.adobe.cq.social.ugcbase.SocialUtils` was deprecated in AEM 6.1.
 
 以下の各表は、SocialUtils のメソッドの代わりに使用するメソッドのリストです。
 
@@ -43,7 +43,7 @@ The package **com.adobe.cq.social.ugcbase.SocialUtils** was deprecated in AEM 6.
 
 | utilities. `com.adobe.cq.social.`resource.api.SocialResourceUtilitiesのメソッド |
 |---|
-| SocialResourceProvider getSocialResourceProvider(Resource resource) | socialresourceprovider getConfiguredProvider(Resource resource)を置き換えます。 |
+| SocialResourceProvider getSocialResourceProvider(Resource resource) | socialresourceproviderの置き換えgetConfiguredProvider(Resource resource) |
 
 ## SCFUtilities パッケージ {#scfutilities-package}
 
