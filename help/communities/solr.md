@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -29,7 +29,7 @@ For production environments, [SolrCloud mode](#solrcloud-mode) provides improved
 
 Apache Solr のダウンロードとインストール：
 
-* [バージョン4.10](https://archive.apache.org/dist/lucene/solr/4.10.4/) またはバ [ージョン5](https://archive.apache.org/dist/lucene/solr/5.5.3/)
+* [バージョン4.10](https://archive.apache.org/dist/lucene/solr/4.10.4/)[またはバージョン5.x](https://archive.apache.org/dist/lucene/solr/5.5.3/)
 
 * Solr には Java 1.7 以降が必要です。
 * サービスは不要
@@ -45,12 +45,12 @@ Apache Solr のダウンロードとインストール：
 
 ## SolrCloud モード {#solrcloud-mode}
 
-[実稼働環境には](https://cwiki.apache.org/confluence/display/solr/SolrCloud) 、SolrCloudモードをお勧めします。 SolrCloudモードで実行する場合は、多言語検索(MLS)をインストールする前に、SolrCloudをインストールして設定する必要があります。
+[実稼働環境には](https://cwiki.apache.org/confluence/display/solr/SolrCloud) 、SolrCloudモードを推奨します。 SolrCloudモードで実行する場合は、多言語検索(MLS)をインストールする前に、SolrCloudをインストールして設定する必要があります。
 
 SolrCloud の手順に従い、以下をインストールすることを推奨します。
 
-* 同じサーバー上の 3 つの SolrCloud ノード
-* 外部のApache ZooKeeper
+* 同じサーバー上の 3 つの SolrCloud ノード.
+* 外部のApache ZoomKeeper。
 
 また、メモリ使用量とガベージコレクションを調整するために、JVM を設定することを推奨します。
 
@@ -69,9 +69,9 @@ SolrCloud モードで実行する場合は、MLS をインストールする前
 Reference:
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
 
-使用方法：sh./scripts/cloud-scripts/zkcli.sh \
+使用状況：sh./scripts/cloud-scripts/zkcli.sh \
 -cmd upconfig \
--zkhostサー *バー：ポート* \
+-zkhostサ *ーバ：ポート* \
 -confname *myconfig-name *\
 -solrhome *solr-home-path* \
 -confdir *config-dir*
@@ -98,9 +98,9 @@ Reference:
 Reference:
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
 
-使用方法：sh./scripts/cloud-scripts/zkcli.sh \
+使用状況：sh./scripts/cloud-scripts/zkcli.sh \
 -cmd linkconfig \
--zkhostサー *バー：ポート* \
+-zkhostサ *ーバ：ポート* \
 -collection *mycollection-name* \
 -confname *myconfig-name*
 
@@ -112,16 +112,16 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 
 標準の MLS には、以下の言語のコンテンツ検索の機能強化が含まれています。
 
-* 英語：派生語をマッチさせるためのステマーの向上
-* 日本語：日本語の半角文字のトークン化の向上
+* 英語：単語の派生に一致しようとするステマーが改善されました。
+* 日本語：半角文字の日本語のトークン化を改善。
 
 高度な MLS には、下の言語のコンテンツ検索の機能強化が含まれています。
 
-* 英語：ステマーをレマタイザーに交換
-* ドイツ語：デコンパウンダーを追加
-* フランス語：エリジオン処理を追加
-* 中国語（簡体）：よりスマートなトークナイザーを追加
-* 各言語：ステマー、停止語リスト、および正規化機能が追加されました。
+* 英語：ステマーをlemmatizerに置き換えました。
+* ドイツ語：分解装置を追加。
+* フランス語：エリジョンの処理を追加しました。
+* 中国語（簡体字）:よりスマートなトークナイザを追加。
+* 各言語：ステマー、ストップワードリスト、および正規化器を追加。
 
 高度な MLS では、合計で以下の 33 の言語がサポートされます。
 
@@ -140,7 +140,7 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 
 #### AEM 6.1 Solr 検索、標準の MLS、高度な MLS の比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
-**注意**:AEM 6.1は、AEM 6.1 CommunitiesFP3以前を指します。
+**注意**:AEM 6.1は、AEM 6.1 Communities FP3以前を指します。
 
 ![chlimage_1-283](assets/chlimage_1-283.png)
 
@@ -151,83 +151,83 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 * **schema.xml**
 * **solrconfig.xml**
 
-Solr 4.10用の標準MLSファイル(schema.xml、solrconfig.xml)
+Solr 4.10の標準MLSファイル(スキーマ.xml、solrconfig.xml)。
 
-Solr 5用の標準MLSファイル(schema.xml、solrconfig.xml)
+Solr 5.x用の標準MLSファイル(スキーマ.xml、solrconfig.xml)。
 
 標準の MLS ファイルは AEM リポジトリに格納されます。
 
 **注意**：Solr ファイルは msrp/ フォルダーに格納されていますが、DSRP にも対応します（変更不要）。
 
-**ダウンロード手順**:適切な `solrX` または `solr4` で置 `solr5` き換える
+**ダウンロード手順**:必要に応じ `solrX` て、または `solr4` で置き `solr5` 換えます。
 
-1. CRXDE|Liteを使用して、
+1. CRXDE|Liteを使用して、次の場所を検索します。
 
-   * /libs/social/config/datastore/msrp/*solrX*/**schema.xml**
-   * /libs/social/config/datastore/msrp/*solrX*/**solrconfig.xml**
+   * `/libs/social/config/datastore/msrp/solrX/schema.xml`
+   * `/libs/social/config/datastore/msrp/solrX/solrconfig.xml`
 
-1. Solrがデプロイされているローカルサーバーにダウンロードします
+1. Solrがデプロイされているローカルサーバーにダウンロードします。
 
-   * ノードのプ `jcr:content` ロパティを検索 `jcr:data` する
-   * Select `view` to start the download
+   * ノードのプロ `jcr:content` パティを見つ `jcr:data` けます。
+   * Select `view` to start the download.
    * ファイルが適切な名前とエンコーディング(UTF8)で保存されていることを確認します。
 
-1. スタンドアロンモードまたはSolrCloudモードのインストール手順に従います
+1. スタンドアロンモードまたはSolrCloudモードのインストール手順に従います。
 
 #### SolrCloud モード - 標準の MLS {#solrcloud-mode-standard-mls}
 
-1. SolrCloud モードの Solr をインストールして設定します。
+1. SolrCloudモードでSolrをインストールし、設定します。
 1. 以下の手順で新しい設定を用意します。
 
-   1. Create *new-config-dir* such as *solr-install-dir*/myconfig/
+   1. Create new-config-dir* such as `solr-install-dir*/myconfig/`
 
    1. Copy the contents of the existing Solr configuration directory to *new-config-dir*
 
-      * For Solr4: copy *solr-install-dir*/example/solr/collection1/conf/&amp;ast;
-      * For Solr5: copy *solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast;
-   1. Copy the downloaded **schema.xml** and **solrconfig.xml** to *new-config-dir* to overwrite existing files
+      * Solr4の場合：コピー `solr-install-dir/example/solr/collection1/conf/`
+      * Solr5の場合：コピー `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+   1. Copy the downloaded **schema.xml** and **solrconfig.xml** to *new-config-dir* to overwrite existing files.
 
 
 1. [新しい設定をZooKeeperにアップロードします](#upload-a-configuration-to-zookeeper) 。
 1. シャードの数、レプリカ数および設定名など、必要なパラメーターを設定して[コレクションを作成](#create-a-collection)します。
-1. If the configuration name was *not *provided during creation of the collection, [link this newly created collection](#link-a-collection-to-a-configuration-set) with the configuration uploaded to ZooKeeper
+1. If the configuration name was *not *provided during creation of the collection, [link this newly created collection](#link-a-collection-to-a-configuration-set) with the configuration uploaded to ZooKeeper.
 
-1. MSRP の場合、新規インストールである場合を除き、[MSRP インデックス再作成ツール](msrp.md#msrp-reindex-tool)を実行します。
+1. For MSRP, run [MSRP Reindex Tool](msrp.md#msrp-reindex-tool), unless this is a new installation.
 
 #### スタンドアロンモード - 標準の MLS {#standalone-mode-standard-mls}
 
-1. スタンドアロンモードの Solr をインストールします。
+1. スタンドアロンモードでSolrをインストールします。
 1. Solr5 を実行している場合、以下のコマンドで collection1 を作成します（Solr4 と同様）。
 
-   * 。/bin/solr start
-   * 。/bin/solr create_core -c collection1 -d sample_techproducts_configs
+   * `./bin/solr start`
+   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 1. 例えば以下の Solr 設定ディレクトリに **schema.xml** と **solrconfig.xml** にバックアップします。
 
-   * For Solr4: *solr-install-dir*/example/solr/collection1/conf/
-   * Created for Solr5: *solr-install-dir*/server/solr/collection1/conf/
+   * Solr4の場合： `solr-install-dir/example/solr/collection1/conf/`
+   * Solr5用に作成： `solr-install-dir/server/solr/collection1/conf/`
 
-1. ダウンロードした **schema.xml** と **solrconfig.xml** を同じディレクトリにコピーします。
+1. Copy the downloaded **schema.xml** and **solrconfig.xml** to that same directory.
 
-1. Solr を再起動します。
-1. MSRP の場合、新規インストールである場合を除き、[MSRP インデックス再作成ツール](#msrpreindextool)を実行します。
+1. Solrを再起動します。
+1. For MSRP, run [MSRP Reindex Tool](#msrpreindextool), unless this is a new installation.
 
 ### 高度な MLS のインストール {#installing-advanced-mls}
 
-高度な MLS をサポートするための SRP コレクション（MSRP または DSRP）については、カスタムスキーマと Solr 設定に加え、新しい Solr プラグインが必要です。必要な項目はすべて、ダウンロード可能なzipファイルにパッケージ化されます。 また、Solrがスタンドアロンモードでデプロイされる場合に使用するインストールスクリプトも含まれています。
+高度な MLS をサポートするための SRP コレクション（MSRP または DSRP）については、カスタムスキーマと Solr 設定に加え、新しい Solr プラグインが必要です。必要な項目はすべて、ダウンロード可能なzipファイルにパッケージ化されます。 また、Solrがスタンドアロンモードでデプロイされる場合に使用するインストールスクリプトも含まれます。
 
 To obtain the Advanced MLS package, see [AEM Advanced MLS](deploy-communities.md#aem-advanced-mls) in the deploy section of the documentation.
 
 SolrCloud モードまたはスタンドアロンモードのどちらかのインストールを開始するには：
 
 * AEM-SOLR-MLS zipアーカイブをSolrをホストするサーバーにダウンロードします。
-* アーカイブの解凍
+* アーカイブを解凍します。
 
 #### SolrCloud モード - 高度な MLS {#solrcloud-mode-advanced-mls}
 
 インストール手順 - 以下のとおり、Solr4 と Solr5 で少し違いがある点に注意してください。
 
-1. SolrCloud モードの Solr をインストールして設定します。
+1. SolrCloudモードでSolrをインストールし、設定します。
 1. 高度な MLS パッケージの内容をディスクに抽出します。内容は次のとおりです。
 
    * **schema.xml**
@@ -240,28 +240,28 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 
    1. Create a *new-config-dir*
 
-      * Such as *solr-install-dir*/myconfig/
-      * サブフォルダーstopwords/およびlang/を作成
+      * 例： `solr-install-dir/myconfig/`
+      * サブフォルダーの `stopwords/` 作成および `lang/`
    1. Copy the contents of the existing Solr config dir to *new-config-dir*
 
-      * For Solr4: Copy *solr-install-dir*/example/solr/collection1/conf/&amp;ast;
-      * For Solr5: Copy *solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast;
-   1. Copy the extracted **schema.xml** and **solrconfig.xml** to *new-config-dir* to overwrite existing files
-   1. For Solr5: Copy *solr_install_dir*/server/solr/configsets/sample_techproducts_configs/conf/lang/&amp;ast;.txt&quot; to *new-config-dir*/lang/
-   1. 抽出した **stopwords/** folderを *new-config-dir* ( *new-config-dir*/stopwords/&amp;ast;.txt)にコピーします。
+      * Solr4の場合：コピー `solr-install-dir/example/solr/collection1/conf/`
+      * Solr5の場合：コピー `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+   1. Copy the extracted **schema.xml** and **solrconfig.xml** to *new-config-dir* to overwrite existing files.
+   1. Solr5の場合：コピー `solr_install_dir/server/solr/configsets/sample_techproducts_configs/conf/lang/*.txt` 先 `new-config-dir/lang/`
+   1. Copy the extracted **stopwords/** folder to *new-config-dir* resulting in `new-config-dir/stopwords/*.txt`
 
 
 
 1. [新しい設定をZooKeeperにアップロードします](#upload-a-configuration-to-zookeeper) 。
 1. 以下のとおり、新しい **profiles/** フォルダーをコピーします。
 
-   * Solr4の場合：各ノードのresources/フォルダーにコピー
+   * Solr4の場合：各ノードのresources/folderにコピーします。
    * Solr5の場合：各Solrインストールのserver/resources/フォルダーにをコピーします。 すべてのノードが同じSolrインストールディレクトリにある場合、この手順は1回だけ実行されます。
 
-1. Create a **lib/** folder in the solr-home directory (contains solr.xml) of each node in SolrCloud. 次の場所から各ノードの新しいlib/フォルダーにjarをコピーします。
+1. Create a **lib/** folder in the solr-home directory (contains solr.xml) of each node in SolrCloud. 次の場所のjarを各ノードの新しいlib/フォルダーにコピーします。
 
    * 高度な MLS のパッケージから抽出した **extra-libs/**
-   * *solr-install-dir/contrib/extraction/lib/*.jar
+   * *solr-install-dir/contrib/抽出/lib/*.jar
    * *solr-install-dir/dist/solr-cell*.jar
    * *solr-install-dir/contrib/clustering/lib/*.jar
    * *solr-install-dir/dist/solr-clustering*.jar
@@ -269,13 +269,13 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
    * *solr-install-dir/dist/solr-langid*.jar
    * *solr-install-dir/contrib/velocity/lib/*.jar
    * *solr-install-dir/dist/solr-velocity*.jar
-   * *solr-install-dir/contrib/analysis-extras/lib/*.jar
-   * *solr-install-dir/contrib/analysis-extras/lucene-libs/*.jar
+   * *solr-install-dir/contrib/分析-extras/lib/*.jar
+   * *solr-install-dir/contrib/分析-extras/lucene-libs/*.jar
 
 1. シャードの数、レプリカ数および設定名など、必要なパラメーターを設定して[コレクションを作成](#create-a-collection)します。
-1. 設定の名前をコレクション作成中に指定しなかった&#x200B;**&#x200B;場合は、ZooKeeper にアップロードした設定に[新しく作成したこのコレクションをリンク](#link-a-collection-to-a-configuration-set)します。
+1. 設定の名前をコレクション作成中に指定しなかった&#x200B;**&#x200B;場合は、ZooKeeper にアップロードした設定に[新しく作成したこのコレクションをリンク](#link-a-collection-to-a-configuration-set)します。。
 
-1. MSRP の場合、新規インストールである場合を除き、[MSRP インデックス再作成ツール](#msrpreindextool)を実行します。
+1. For MSRP, run [MSRP Reindex Tool](#msrpreindextool), unless this is a new installation.
 
 #### スタンドアロンモード - 高度な MLS {#standalone-mode-advanced-mls}
 
@@ -283,11 +283,11 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 
 スタンドアロンの Solr サーバーをホストしているサーバーにパッケージの内容を抽出したら、必要なリソースと設定ファイルをインストールするために、インストールスクリプトを実行します。
 
-* スタンドアロンモードの Solr をインストールします。
+* スタンドアロンモードの Solr をインストールします。。
 * Solr5 を実行している場合、以下のコマンドで collection1 を作成します（Solr4 と同様）。
 
-   * 。/bin/solr start
-   * 。/bin/solr create_core -c collection1 -d sample_techproducts_configs
+   * `./bin/solr start`
+   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 * Run the install script: Install [-v 4|5] [-d solrhome] [-c collectionpath]
 where:
@@ -318,14 +318,14 @@ where:
 
 **注意**：
 
-* インストールスクリプトは、新しいバージョンをインストールする前に「.orig」を追加してschema.xmlとsolrconfig.xmlをバックアップします。
+* インストールスクリプトは、新しいスキーマをインストールする前に「.orig」を追加してバージョン.xmlとsolrconfig.xmlをバックアップします。
 
 ### solrconfig.xml について {#about-solrconfig-xml}
 
 **solrconfig.xml** は、自動コミットの間隔と検索表示を制御するファイルであり、テストと調整が必要です。
 
-&lt;autoCommit>：デフォルトでは、AutoCommit（安定ストレージへのハードコミット）の間隔は、15 秒に設定されています。検索の表示は、既定でコミット前のインデックスを使用します。
+`<autoCommit>`:デフォルトでは、AutoCommitの間隔(安定したストレージへのハードコミット)は15秒に設定されています。 検索の表示は、既定でコミット前のインデックスを使用します。
 
-コミットによる変更が反映された更新済みのインデックスを使用するよう検索を変更するには、含まれている &lt;openSearcher> を true に変更します。
+To change search to use an index updated to reflect changes due to the commit, change the contained `openSearcher` to true.
 
-&lt;autoSoftCommit>：「ソフト」コミットを使用すると、変更は表示されます（インデックスが更新されます）が、変更は安定ストレージに同期（ハードコミット）されません。その結果、パフォーマンスが向上します。 デフォルトでは、&lt;autoSoftCommit>は無効で、&lt;maxTime>は —1に設定されています。
+`autoSoftCommit`:&#39;soft&#39;コミットは、変更が表示（インデックスが更新）されることを保証しますが、変更が安定したストレージ（ハードコミット）に同期されることを保証しません。 その結果、性能が向上する。 By default, `autoSoftCommit` is disabled with the contained `maxTime` set to -1.
