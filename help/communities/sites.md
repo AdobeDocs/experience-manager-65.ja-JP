@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -23,9 +23,10 @@ The Site Templates console is very similar to the [Group Templates](tools-groups
 >
 >The consoles for the creation of [community sites](sites-console.md), [community site templates](sites.md), [community group templates](tools-groups.md) and [community functions](functions.md) are for use only in the author environment.
 
+
 ## Site Templates Console {#site-templates-console}
 
-オーサー環境でコミュニティサイトコンソールに移動するには、
+作成者環境で、コミュニティサイトコンソールにアクセスするには：
 
 * From global navigation: **[!UICONTROL Tools > Communities > Site Templates]**
 
@@ -45,11 +46,17 @@ To get started creating a new site template, select `Create`.
 
 基本情報パネルでは、名前、説明およびテンプレートを有効にするか無効にするかを設定します。
 
-* **[!UICONTROL コミュニティサイトテンプレート]**&#x200B;名テンプレート名id
+* **[!UICONTROL コミュニティサイトテンプレート名]**
 
-* **[!UICONTROL コミュニティサイトテンプレートの説明]**&#x200B;テンプレートの説明
+   テンプレート名ID。
 
-* **[!UICONTROL 無効/有効]**&#x200B;テンプレートを参照可能にするかどうかを制御する切り替えスイッチ
+* **[!UICONTROL コミュニティサイトテンプレートの説明]**
+
+   テンプレートの説明。
+
+* **[!UICONTROL 無効/有効]**
+
+   テンプレートが参照可能かどうかを制御する切り替えスイッチ。
 
 ### サムネール {#thumbnail}
 
@@ -75,6 +82,7 @@ To get started creating a new site template, select `Create`.
 >
 >他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
+
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
 ### グループ機能のためのグループテンプレート {#group-templates-for-groups-function}
@@ -84,6 +92,7 @@ To get started creating a new site template, select `Create`.
 >[!CAUTION]
 >
 >The Groups function must *not* be the *first nor the only* function in the site structure.
+
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
