@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: a417094c1d7b28ec54a6e84303d7a9747bb0c510
 
 ---
 
@@ -148,7 +148,8 @@ AEM Formsを使用すると、アダプティブフ [](../../forms/using/embed-a
    <td>アプリケーションサーバー<br /> </td>
    <td>
     <ul>
-     <li>Oracle Weblogic</li>
+    <li>WebSphere Libertyプロファイル</li>
+    <li>Oracle WebLogic ／</li>
     </ul> </td>
   </tr>
   <tr>
