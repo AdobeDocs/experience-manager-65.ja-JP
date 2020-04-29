@@ -3,7 +3,7 @@ title: Adobe Experience Managerでコンテンツをオーサリングするよ�
 description: Adobe Experience Managerでコンテンツを作成するようにAdobe Experience Managerリッチテキストエディターを設定する方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
+source-git-commit: 430994c8e9951500378e0a4d56c8004e7e81c24f
 
 ---
 
@@ -160,6 +160,15 @@ RTE 設定ノードの名前を `config` にしないでください。Otherwise
 * `rte-start`：このイベントを RTE の `contenteditable-div`（RTE の編集を開始するタイミング）で呼び出します。これは、`customStart` が true に設定されている場合にのみ機能します。
 
 タッチ操作ダイアログで RTE を使用する場合は、問題の発生を避けるために、プロパティ `useFixedInlineToolbar` に true を設定する必要があります。
+
+## インプレイス編集のカスタマイズ {#customizing-in-place-editing}
+
+次のプロパティを設定することで、どのHTMLセレクターにテキストエディターの開始を設定するかを定義できます。
+
+* **`editElementQuery`**  — 定義がオンの `cq:InplaceEditingConfig`場合、このプロパティは、テキストコンポーネントのインライン編集を開始するHTML要素のセレクターを指定するために使用されます。 指定しなかった場合、インライン編集はテキストコンポーネントのHTMLで直接開始されます。
+* **`textPropertyName`**  — このプロパティ `cq:InplaceEditingConfig`は、インライン編集後にテキストコンポーネントのHTML値が保持されるコンテンツノードに保存されるプロパティの名前を指定するために使用されます。
+
+ダイアログモードに対応するプロパティはで `name`す。
 
 ## プラグインのアクティベートによる RTE 機能の有効化 {#enable-rte-functionalities-by-activating-plug-ins}
 
