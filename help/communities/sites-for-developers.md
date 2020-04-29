@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -21,36 +21,42 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 カスタムサイトテンプレートは、コミュニティサイトの言語コピーごとに個別に指定できます。
 
-そうするには、次の手順を実行します。
+この作業を行うには：
 
-* カスタムテンプレートの作成
-* デフォルトのサイトテンプレートパスをオーバーレイする
-* オーバーレイパスへのカスタムテンプレートの追加
-* Specify the custom template by adding a `page-template` property to the `configuration` node
+* カスタムテンプレートを作成します。
+* デフォルトのサイトテンプレートパスをオーバーレイします。
+* オ追加ーバーレイパスのカスタムテンプレート。
+* Specify the custom template by adding a `page-template` property to the `configuration` node.
 
 **デフォルトのテンプレート**：
 
-/**libs**/social/console/components/hbs/sitepage/**sitepage**.hbs
+`/libs/social/console/components/hbs/sitepage/sitepage.hbs`
 
 **オーバーレイのパスのカスタムテンプレート**：
 
-/**apps**/social/console/components/hbs/sitepage/**&lt;*template-name*>**.hbs
+`/apps/social/console/components/hbs/sitepage/template-name.hbs`
 
-**プロパティ**:page-template **Type**:String **Value**:&lt;*template-name*> （拡張子なし）
+**プロパティ**:page-template
+
+**種類**：string
+
+**値**: `template-name` （拡張子なし）
 
 **設定ノード**：
 
-/content/&lt;*community site path*>/&lt;*lang*>/configuration
+`/content/community site path/lang/configuration`
 
-例：/content/sites/engage/jp/configuration
+例：`/content/sites/engage/en/configuration`
 
 >[!NOTE]
 >
 >オーバーレイされたパスのすべてのノードのタイプは、`Folder` である必要があります。
 
+
 >[!CAUTION]
 >
->If the custom template is given the name *sitepage.hbs,* then all community sites will be customized.
+>If the custom template is given the name *sitepage.hbs*, then all community sites will be customized.
+
 
 ### カスタムサイトテンプレートの例 {#custom-site-template-example}
 
@@ -58,11 +64,11 @@ As an example, `vertical-sitepage.hbs` is a site template that results in the pl
 
 [[ファイルの取得](assets/vertical-sitepage.hbs)]カスタムサイトテンプレートをオーバーレイフォルダに配置します。
 
-/**apps**/social/console/components/hbs/sitepage/**vertical-sitepage**.hbs
+`/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
 Identify the custom template by adding a `page-template` property to the configuration node:
 
-/content/sites/sample/en/configuration
+`/content/sites/sample/en/configuration`
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
@@ -82,7 +88,7 @@ To export UGC, use the [AEM Communities UGC Migration Tool](https://github.com/A
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-AEM Communities 6.3 Service Pack 1 以降では、コミュニティ／サイトコンソール内でコミュニティサイトにマウスポインターを置くと、サイトを削除アイコンが表示されます。開発中にコミュニティサイトを削除して新規に開始する場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
+As of AEM Communities 6.3 Service Pack 1, Delete Site icon appears on hovering over the community site from **[!UICONTROL Communities]** > **[!UICONTROL Sites]** console. 開発中に、コミュニティサイトと開始を新規に削除する場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
@@ -93,12 +99,13 @@ AEM Communities 6.3 Service Pack 1 以降では、コミュニティ／サイト
 
 CRXDE を使用して、コミュニティに関連付けられている一意のサイト ID を識別するには、次の手順に従います。
 
-* Navigate to the language root of the site, such as `/content/sites/*<site name>*/en/rep:policy`
+* Navigate to the language root of the site, such as `/content/sites/*<site name>*/en/rep:policy`.
 
-* Find the `allow<#>` node with a `rep:principalName` in this format `rep:principalName = *community-enable-nrh9h-members*`
+* Find the `allow<#>` node with a `rep:principalName` in this format `rep:principalName = *community-enable-nrh9h-members*`.
 
-* The site ID is the 3rd component of `rep:principalName`
-For example, if `rep:principalName = community-enable-nrh9h-members`
+* サイトIDは、 `rep:principalName`
+
+   例えば、`rep:principalName = community-enable-nrh9h-members`
 
    * **サイト名** = *enable*
    * **サイトID** = *nrh9h*
@@ -114,7 +121,7 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 次の例に示すように、特定のサイトを対象としてすべての UGC を削除できます。
 
-* path=/content/usergenerated/asi/mongo/content/sites/engage
+* `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
 この場合、（パブリッシュインスタンスで入力された）ユーザー生成コンテンツのみが削除され、（オーサーインスタンスで入力された）作成コンテンツは削除されません。Therefore, [shadow nodes](srp.md#shadownodes) are not affected.
 
@@ -122,19 +129,19 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 すべてのオーサーインスタンスおよびパブリッシュインスタンスで、[セキュリティコンソール](../../help/sites-administering/security.md)から、以下に該当する[ユーザーグループ](users.md)を検索して削除します。
 
-* 先頭に `community`
+* 接頭辞 `community`
 * Followed by [unique site id](#community-unique-site-id)
 
-For example, `community-engage-x0e11-members`.
+例： `community-engage-x0e11-members`
 
 ### イネーブルメントアセット {#enablement-assets}
 
 メインコンソールから、次の手順に従います。
 
-* Select **[!UICONTROL Assets]**
-* Enter **[!UICONTROL Select]** mode
-* Select folder named with the [unique site Id](#community-unique-site-id)
-* Select **[!UICONTROL Delete]** (may need to select from **[!UICONTROL More...]**)
+* Select **[!UICONTROL Assets]**.
+* Enter **[!UICONTROL Select]** mode.
+* Select folder named with the [unique site Id](#community-unique-site-id).
+* Select **[!UICONTROL Delete]** (may need to select from **[!UICONTROL More...]**).
 
 ### データベースレコード {#database-records}
 
