@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -25,9 +25,9 @@ Subscriptions are similar to [notifications](notifications.md) as members may su
 
 購読が通知と異なるのは以下の点です。
 
-* 会員は、他の会員をフォローする場合は、引き受けることができない
-* The only action for members to take is to select `Email Subscriptions` when following
-* 電子メールの返信を設定すると、受信した電子メールに返信するだけで、メンバーはコンテンツを効果的に投稿できます
+* 会員は、他の会員をフォローする場合は、引き受けることができない。
+* The only action for members to take is to select `Email Subscriptions` when following.
+* 電子メールの返信が設定されている場合、受信した電子メールに返信するだけで、メンバーは効果的にコンテンツを投稿できます。
 
 ### 要件 {#requirements}
 
@@ -49,15 +49,11 @@ Subscriptions are similar to [notifications](notifications.md) as members may su
 
 フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 For convenience, it is possible to select `Unfollow All` to toggle off all methods.
 
-The **Follow** button will include the `Email Subscriptions` option only when a forum, QnA, or blog is configured to enable email subscriptions. このボタンが表示されます
+The **Follow** button will include the `Email Subscriptions` option only when a forum, QnA, or blog is configured to enable email subscriptions. 次のボタンが表示されます。
 
-* 有効なフォーラム、QnAまたはブログのメイン機能ページ
+* 有効になっているフォーラム、QnAまたはブログのメイン機能ページで、その機能を使用するすべてのアクティビティに関する電子メールを送信します。
 
-   * この機能を使用するすべてのアクティビティに関する電子メールを送信します
-
-* フォーラムトピック、QnA質問、ブログ記事などの特定のエントリ
-
-   * 特定のエントリに対するアクティビティがある場合に電子メールを送信します
+* フォーラムトピック、QnA質問、ブログ記事など、特定の参加者に関するアクティビティがある場合は、その参加者に対して電子メールが送信されます。
 
 ## 電子メールによる返信 {#reply-by-email}
 
