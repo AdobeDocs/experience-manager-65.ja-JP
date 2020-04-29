@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -31,17 +31,17 @@ AEM Communities 6.1 以降、コミュニティコンテンツ（一般的にユ
 >
 >**カスタムコンポーネント**：AEM Communities の使用許諾を得たお客様の場合、SRP API は、カスタムコンポーネントの開発者が、基になるトポロジに関係なく UGC にアクセスするために使用できます。See [SRP and UGC Essentials](srp-and-ugc.md).
 
-関連トピック:
+関連トピック：
 
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtilsリファクタリング](socialutils.md) — 廃止されたユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
+* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md) - Coding Guidelinesを使用したUGCへのアクセス
+* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
 ## リポジトリについて {#about-the-repository}
 
 SRP を理解するには、AEM コミュニティサイトにおける AEM リポジトリ（OAK）の役割を理解することが必要です。
 
-**Java Content Repository（JCR）** この規格では、コンテンツリポジトリのデータモデルおよびアプリケーションプログラミングインターフェイス（[JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)）が定義されます。従来のファイル・システムの特性とリレーショナル・データベースの特性を組み合わせ、コンテンツ・アプリケーションに必要な機能を追加します。
+**Java Content Repository（JCR）** この規格では、コンテンツリポジトリのデータモデルおよびアプリケーションプログラミングインターフェイス（[JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)）が定義されます。従来のファイル・システムの特性とリレーショナル・データベースの特性を組み合わせ、コンテンツ・アプリケーションが必要とする機能を多数追加します。
 
 JCR の 1 つの実装が AEM リポジトリである OAK です。
 
@@ -53,17 +53,18 @@ JCR と OAK はどちらも、通常は AEM リポジトリを示すために使
 
 UGC の場合、コンテンツは公開のパブリッシュ環境で登録済みサイト訪問者（コミュニティメンバー）によって生成されます。これはランダムに発生します。
 
-管理およびレポートの目的では、非公開のオーサー環境から UGC にアクセスすることが有用です。SRPを使用すると、作成者からUGCへのアクセスはより一貫性があり、発行から作成者への逆複製は必要なく、パフォーマンスが向上します。
+管理およびレポートの目的では、非公開のオーサー環境から UGC にアクセスすることが有用です。SRPを使用すると、作成者からUGCへのアクセスの一貫性が高まり、発行から作成者への逆複製は不要なので、パフォーマンスが向上します。
 
 ## SRP について {#about-srp}
 
-UGC が共有ストレージに格納される場合、ほとんどのデプロイメントでオーサー環境とパブリッシュ環境の両方からアクセスできるメンバーコンテンツの単一インスタンスがあります。SRPの選択(MSRP、ASRP、JSRP)に関係なく、すべてのアクセスはSRP APIを使用してプログラム的に行う必要があります。
+UGC が共有ストレージに格納される場合、ほとんどのデプロイメントでオーサー環境とパブリッシュ環境の両方からアクセスできるメンバーコンテンツの単一インスタンスがあります。SRPの選択(MSRP、ASRP、JSRP)に関係なく、すべてSRP APIを使用してプログラム的にアクセスする必要があります。
 
 >[!NOTE]
 >
 >See [SRP and UGC Essentials](srp-and-ugc.md) for sample code and additional details.
 >
 >コーディング時のベストプラクティスについては、[SRP による UGC へのアクセス](accessing-ugc-with-srp.md)を参照してください。
+
 
 ### ASRP {#asrp}
 
@@ -93,7 +94,7 @@ See [JSRP - JCR Storage Resource Provider](jsrp.md).
 
 JSRP の場合、UGC は JCR に格納され、CRXDE Lite と JCR API の両方でアクセスできますが、JCR API は使用しないことを強くお勧めします。使用すると、今後の変更によってカスタムコードが影響を受ける可能性があります。
 
-さらに、オーサー環境とパブリッシュ環境のリポジトリは共有されません。発行インスタンスのクラスターは共有発行リポジトリになりますが、発行時に入力されたUGCは作成者に表示されないので、作成者からUGCを管理する機能はありません。 UGCは、入力されたインスタンスのAEMリポジトリ(JCR)でのみ持続します。
+さらに、オーサー環境とパブリッシュ環境のリポジトリは共有されません。発行インスタンスのクラスターは共有発行リポジトリになりますが、発行時に入力されたUGCは作成者に表示されないので、作成者からUGCを管理する機能はありません。 UGCは、入力されたインスタンスのAEMリポジトリ(JCR)でのみ保持されます。
 
 JSRP では検索に Oak インデックスが使用されます。
 
@@ -101,7 +102,7 @@ JSRP では検索に Oak インデックスが使用されます。
 
 UGC へのパスを模倣するシャドウノードは、以下の 2 つの目的のためにローカルリポジトリに存在します。
 
-1. [アクセス制御（ACL）](#for-access-control-acls)
+1. [アクセス制御(ACL)](#for-access-control-acls)
 1. [存在しないリソース（NER）](#for-non-existing-resources-ners)
 
 SRPの実装に関係なく、実際のUGCはシャドウノードと同じ場所に*表示されません。
@@ -126,17 +127,18 @@ See [SRP and UGC Essentials](srp-and-ugc.md) for sample code.
 >
 >シャドウノードには複数の用途があるので、シャドウノードの存在はコンポーネントが NER であることを意味しません。**
 
+
 ### 格納場所 {#storage-location}
 
 Following is an example of a shadow node, using the [Comments component](http://localhost:4502/content/community-components/en/comments.html) in the [Community Components Guide](components-guide.md):
 
-* コンポーネントは次の場所にローカルリポジトリに存在します：
+* コンポーネントは、次の場所にあるローカルリポジトリに存在します。
 
-   /content-community-components/jp/comments/jcr:content/content/includable/comments
+   `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 * 対応するシャドウノードは、次の場所にあるローカルリポジトリに存在します。
 
-   /content/usergenerated/content/community-components/jp/comments/jcr:content/content/includable/comments
+   `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 シャドウノードの下には UGC はありません。
 
@@ -146,6 +148,6 @@ As an example, suppose the deployment is [MSRP](msrp.md) with a TarMK publish fa
 
 When a [member](users.md) posts UGC on pub1 (stored in MongoDB), shadow nodes are created in JCR on pub1.
 
-pub2でUGCを初めて読み取る場合、何も設定されていないと、デフォルトの動作でシャドウノードが作成されます。
+pub2でUGCを初めて読み取る場合、何も設定されていないと、デフォルトの動作ではシャドウノードが作成されます。
 
 デフォルト以外の動作が必要な場合は、それをオーサーインスタンスで設定し、すべてのパブリッシュインスタンスにロールフォワードする必要があります。これは通常は手動プロセスです。
