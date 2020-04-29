@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -23,36 +23,41 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 これは、コミュニティコンポーネントがページテンプレートに存在せず、サイト訪問者の選択後に動的に追加される場合に実現されます。
 
-ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。動的に追加されたSCFコンポーネントをページの読み込み後に登録するには、SCFを呼び出してコンポーネントを「サイドロード」する必要があります。
+ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。ページの読み込み後に動的に追加されたSCFコンポーネントを登録するには、SCFを呼び出してコンポーネントを「サイドロード」する必要があります。
 
 コミュニティコンポーネントをサイドローディングするようページが設計されている場合、ページ全体をキャッシュすることができます。
 
 SCF コンポーネントを動的に追加する手順は、次のとおりです。
 
-1. [コンポーネントをDOMに追加します](#dynamically-add-component-to-dom)
+1. [DOM追加のコンポーネント](#dynamically-add-component-to-dom)
 
 1. [次の2つの方法のいずれかを使用して](#sideload-by-invoking-scf) 、コンポーネントをサイドロードします。
 
-* [動的包含](#dynamic-inclusion)
-   * 動的に追加されたすべてのコンポーネントをブートストラップ
+* [動的な埋め込み](#dynamic-inclusion)
+   * 動的に追加されたすべてのコンポーネントのブートストラップ
 * [動的読み込み](#dynamic-loading)
-   * オンデマンドでの特定のコンポーネントの追加
+   * 1つの追加特定のコンポーネントのオンデマンド
 
 >[!NOTE]
 >
 >[存在しないリソース](scf.md#add-or-include-a-communities-component)のサイドローディングはサポートされていません。
 
+
 ## DOM に対するコンポーネントの動的な追加 {#dynamically-add-component-to-dom}
 
 動的なインクルードの場合も動的なロードの場合も、最初にコンポーネントを DOM に追加する必要があります。
 
-SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCFはページが最初に読み込まれるときにのみDOMを調べるので、SCFが明示的に呼び出されるまで、DOMへのこの追加は気が付きません。
+SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCFはページが最初に読み込まれるときにのみDOMを調べるので、SCFが明示的に呼び出されるまで、DOMへの追加は気づかれません。
 
 どのタグを使用する場合も、最低限、要素が通常の SCF ルート要素パターンに準拠している必要があります。そのためには、次の 2 つの属性を含めます。
 
-* **data-component-id追加したコン**&#x200B;ポーネントへの有効パス
+* **data-component-id**
 
-* **data-scf-componentコンポーネ**&#x200B;ントのresourceType
+   追加したコンポーネントへの有効パス。
+
+* **data-scf-component**
+
+   コンポーネントのresourceType。
 
 以下に示すのは、追加されるコメントコンポーネントの例です。
 
@@ -73,7 +78,7 @@ SCF コンポーネントを追加する際に最もよく使用されるタグ�
 
 ページロード後にいつでも次のような JQuery イベントを実行して、SCF コンポーネントを初期化できます。
 
-$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);
+`$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
 ### 動的なロード {#dynamic-loading}
 
@@ -81,6 +86,6 @@ $(document).trigger(SCF.events.BOOTSTRAP_REQUEST);
 
 次の JavaScript メソッドを使用すると、DOM にあるすべての SCF コンポーネントをブートストラップする代わりに、ロードする特定の SCF コンポーネントを指定できます。
 
-SCF.addComponent(document.getElementById(*someId*));
+`SCF.addComponent(document.getElementById(*someId*));`
 
-このメソッドの *someId* は **data-component-id** 属性の値です。
+Where `someId` is the value of the `data-component-id` attribute.
