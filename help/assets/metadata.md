@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager]でデジタルアセットのメタデ�
 description: メタデータのタイプと、[!DNL Adobe Experience Manager Assets]がアセットのメタデータを管理し、アセットの分類と整理を簡単にする方法について説明します。 [!DNL Experience Manager]を使用すると、メタデータに基づいてアセットを自動的に整理および処理できます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9bf48a6057e08e9feafc0e18d6fa9d0145768cf2
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -74,11 +74,11 @@ For these reasons, [!DNL Assets] provides you with the right means of creating, 
 * XMP: used by [!DNL Assets] to store the extracted metadata within the repository.
 * ID3：オーディオファイルおよびビデオファイル用の規格です。
 * Exif:（画像ファイル用）。
-* その他/レガシー：Microsoft Word、PowerPoint、Excelなどから
+* Other/Legacy: from [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel], and so on.
 
 ### XMP {#xmp}
 
-XMP(Extensible Metadata Platform)は、すべてのメタデータ管理に使用されるオープン [!DNL Experience Manager Assets] な標準です。 標準オファーは、すべてのファイル形式に埋め込むことができるユニバーサルメタデータエンコーディングです。 アドビや他の会社は、リッチコンテンツモデルを提供するXMP標準をサポートしています。 XMP標準およびのユーザーは、 [!DNL Experience Manager Assets] 強力なプラットフォームを構築できます。 詳しくは、 [XMPを参照してください](https://www.adobe.com/products/xmp.html)。
+[!DNL Extensible Metadata Platform] (XMP)は、すべてのメタデータ管理に使用されるオープン [!DNL Experience Manager Assets] な標準です。 標準オファーは、すべてのファイル形式に埋め込むことができるユニバーサルメタデータエンコーディングです。 アドビや他の会社は、リッチコンテンツモデルを提供するXMP標準をサポートしています。 XMP標準およびのユーザーは、 [!DNL Experience Manager Assets] 強力なプラットフォームを構築できます。 詳しくは、 [XMPを参照してください](https://www.adobe.com/products/xmp.html)。
 
 ### ID3 {#id}
 
@@ -114,62 +114,62 @@ Exifの主な制限は、BMP、GIF、PNGなどの一般的な画像ファイル�
 
 ### Standard metadata {#standard-metadata}
 
-* dc - Dublin Core - 最も重要で広く使用されるメタデータのセット.
+* dc - [!DNL Dublin Core] is the most important and widely used set of metadata.
 * DICOM - Digital Imaging and Communications in Medicine.
-* Iptc4xmpCore &amp; iptc4xmpExt - International Press Communications Standard — 多数のサブジェクト固有のメタデータ。
+* Iptc4xmpCore &amp; iptc4xmpExt - International Press Communications Standardには、多くのサブジェクト固有のメタデータが含まれています。
 * rdf - Resource Description Framework - 汎用のセマンティック Web メタデータ用.
-* xmp - Extensible Metadata Platform.
+* xmp - [!DNL Extensible Metadata Platform].
 * xmpBJ - Basic Job Ticketing.
 
 ### Application-specific metadata {#application-specific-metadata}
 
 アプリケーション固有のメタデータは、技術的および説明的なメタデータを含む。 これらのメタデータを使用すると、他のアプリケーションでそのメタデータを使用することはできません。For example, if you have an asset with [!DNL Adobe Photoshop] metadata and another image-rendering application tries to access the metadata, it may not be able to access the metadata. アセットに多くのアプリケーション固有のメタデータが含まれている場合は、アプリケーション固有のプロパティを標準のプロパティに変更するワークフロー手順を作成できます。
 
-* acdsee - metadata managed by the ACDSee program [www.acdsee.com/](https://www.acdsee.com/).
-* album - Adobe Photoshop アルバム.
-* cq - used by [!DNL Experience Manager Assets].
-* dam - used by [!DNL Experience Manager Assets].
+* ACDSee - Metadata managed by the [!DNL ACDSee] program. www.acdsee.com/を参 [照してくださ](https://www.acdsee.com/)い。
+* アルバム — [!DNL Adobe Photoshop Album].
+* cq - Used by [!DNL Experience Manager Assets].
+* dam - Used by [!DNL Experience Manager Assets].
 * dex - Optima SC Description Explorer.
 * crs - Adobe Photoshop Camera Raw.
-* lr - Adobe Lightroom.
+* lr - [!DNL Adobe Lightroom].
 * mediapro - iView MediaPro.
 * MicrosoftPhoto、MP - Microsoft Photo.
 * pdf、pdfx.
-* photoshop、psAux - Adobe Photoshop.
+* photoshop &amp; psAux - [!DNL Adobe Photoshop].
 
 ### Digital Rights Management metadata {#digital-rights-management-metadata}
 
-* cc - クリエイティブコモンズ
-* xmpRights
-* plus - Picture Licensing Universal System（https://www.useplus.com/）
-* prism - Publishing Requirements for Industry Standard Metadata（https://www.idealliance.org/prism-metadata）
-* prl - Prism Rights Language
-* pur - Prism Usage Rights
-* xmpPlus - PLUS と XMP との統合
+* CC - [!DNL Creative Commons].
+* [!DNL XMPRights].
+* plus - [Picture Licensing Universal System](https://www.useplus.com).
+* prism - Publishing Requirements for Industry Standard Metadata（https://www.idealliance.org/prism-metadata）.
+* PRL - PRISM Rights Language。
+* PUR - PRISM Usage Rights。
+* xmpPlus - PLUSとXMPの統合。
 
 ### Photography-specific metadata {#photography-specific-metadata}
 
-* exif - カメラからの数多くのテクニカル情報（GPS 位置など）
-* crs - Photoshop Camera Raw
-* Iptc4xmpCore、iptc4xmpExt
-* TIFF - 画像メタデータ（TIFF 画像に限りません）
+* Exif - GPS位置を含む、カメラからの技術情報。
+* CRS - [!DNL Camera Raw] スキーマ
+* Iptc4xmpCore、iptc4xmpExt.
+* TIFF — 画像メタデータ（TIFF画像のみではありません）。
 
 ### Print-specific metadata {#print-specific-metadata}
 
-* pdf、pdfx - Adobe PDF およびサードパーティのアプリケーション
-* prism - Publishing Requirements for Industry Standard Metadata（[www.prismstandard.org](https://www.prismstandard.org)）
-* xmp
-* xmpPG - ページ化されたテキスト用の xmp
+* pdf、pdfx - Adobe PDF およびサードパーティのアプリケーション.
+* prism - Publishing Requirements for Industry Standard Metadata（[www.prismstandard.org](https://www.prismstandard.org)）.
+* xmp.
+* xmpPG — ページテキストのXMPメタデータ。
 
 ### マルチメディア固有のメタデータ {#multimedia-specific-metadata}
 
-* xmpDM - Dynamic Media
-* xmpMM - Media Management
+* xmpDM - [!DNL Dynamic Media].
+* xmpMM - Media Management.
 
 ## メタデータ駆動型のワークフロー {#metadata-driven-workflows}
 
 メタデータ主導型のワークフローを作成すると、一部のプロセスを自動化でき、効率が向上します。 メタデータ駆動型のワークフローでは、ワークフロー管理システムでワークフローが読み取られ、その結果、事前定義された動作が実行されます。例として、メタデータ駆動型のワークフローの使用方法をいくつか示します。
 
-* ワークフローで、画像にタイトルがあるかどうかをチェックできます。タイトルがない場合、タイトルを追加するよう特定のユーザーに通知されます。
-* ワークフローで、アセットの著作権情報によって配布が許可されているかどうかをチェックできます。許可されている場合、アセットが 1 つのサーバーに送信されます。許可されていない場合、アセットが別のサーバーに送信されます。
-* ワークフローは、事前定義された必須のメタデータがないか、無効なメタデータが含まれているかをチェ *ックで* きます。
+* ワークフローでは、画像にタイトルが付いているかどうかを確認できます。 タイトルが追加されない場合は、タイトルの追加が通知されます。
+* ワークフローは、アセットの著作権表示が配布を許可しているかどうかを確認できます。 したがって、システムは、アセットを一方のサーバまたは他方のサーバに送信します。
+* ワークフローでは、定義済みの必須のメタデータまたは無効なメタデータを含むアセットがないかどうかを *確認でき* ます。
