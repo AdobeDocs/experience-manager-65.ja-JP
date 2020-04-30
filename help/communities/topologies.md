@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
 # Communities 用の推奨トポロジ {#recommended-topologies-for-communities}
 
-AEM Communities 6.1では、サイト訪問者（メンバー）が発行環境から送信したユーザー生成コンテンツ(UGC)を処理するための独自のアプローチが採用されています。
+AEM Communities 6.1では、サイト訪問者（メンバー）が発行環境から送信したユーザ生成コンテンツ(UGC)を処理するための独自のアプローチが採用されています。
 
 この手法は、一般的にオーサー環境から管理されるサイトコンテンツを AEM プラットフォームで処理する方法とは根本的に異なります。
 
@@ -39,19 +39,21 @@ One other SRP option, [JSRP - JCR Storage Resource Provider](jsrp.md), does not 
 >
 >デプロイメントに[共通ストア](working-with-srp.md)がない場合、UGC は入力された AEM パブリッシュインスタンスまたはオーサーインスタンスのいずれかにのみ表示されます。
 
+
 >[!NOTE]
 >
 >AEM プラットフォームについて詳しくは、[推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md)と[AEM プラットフォームの概要](../../help/sites-deploying/data-store-config.md)を参照してください。
 
+
 ## 実稼動について {#for-production}
 
-UGCの共通ストアを確立することは不可欠です。したがって、基盤となるデプロイメントは、共通ストアをサポートする能力に左右されます。
+UGC用の共通ストアを確立することは重要なので、基盤となるデプロイメントは共通ストアをサポートする能力に左右されます。
 
 2 つの例を示します。
 
-1) If the expected volume of UGC is high and a local MongoDB instance is possible, then the choice would be [MSRP](msrp.md).
+1. If the expected volume of UGC is high and a local MongoDB instance is possible, then the choice would be [MSRP](msrp.md).
 
-2) For optimal performance for page content, the choice of a [publish farm](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) and [ASRP](asrp.md) would provide optimal scaling of UGC with relatively straightforward operations.
+1. For optimal performance for page content, the choice of a [publish farm](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) and [ASRP](asrp.md) would provide optimal scaling of UGC with relatively straightforward operations.
 
 どちらの場合も、任意の OAK マイクロカーネルを基にデプロイできます。
 
@@ -61,26 +63,26 @@ For more details on Oak microkernals, visit [Recommended Deployments](../../help
 
 ### TarMK パブリッシュファーム {#tarmk-publish-farm}
 
-次に、トポロジがパブリッシュファームの場合に重要な関連トピックを示します。
+トポロジがパブリッシュファームの場合、重要な関連トピックは次のとおりです。
 
 * [ユーザーの同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
 
 ### 推奨：DSRP、MSRP または ASRP {#recommended-dsrp-msrp-or-asrp}
 
-| マイクロカーネル | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店舗 |
+| マイクロカーネル | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店 |
 |-------------|------------------------|----------------------------------|---------------------------|---------------|
-| 任意 | JCR | MySQL | DSRP | はい |
-| 任意 | JCR | MongoDB | MSRP | はい |
+| 任意 | JCR | MySQL | DSRP | 可 |
+| 任意 | JCR | MongoDB | MSRP | 可 |
 | 任意 | JCR | アドビのオンデマンドストレージ | ASRP | Yes |
 
 ### JSRP {#jsrp}
 
 
-| デプロイメント | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店舗 |
+| デプロイメント | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店 |
 |----------------------|------------------------|----------------------------------|---------------------------|---------------------------------|
-| TarMK ファーム（デフォルト） | JCR | JCR | JSRP | いいえ |
-| Oak クラスター | JCR | JCR | JSRP | 発行環境専用 |
+| TarMK ファーム（デフォルト） | JCR | JCR | JSRP | 不可 |
+| Oak クラスター | JCR | JCR | JSRP | はい公開環境のみ |
 
 ## 開発について {#for-development}
 
@@ -92,20 +94,20 @@ If choosing [ASRP](asrp.md), [DSRP](dsrp.md) or [MSRP](msrp.md) for production, 
 
 * [ユーザーの同期](sync.md)
 
-   発行ファームインスタンス間でのユーザーデータの同期について説明します。
+   発行ファームインスタンス間でのユーザーデータの同期化を説明します。
 
 * [ユーザーとユーザーグループの管理](users.md)
 
-   作成者環境および発行環境におけるユーザーおよびユーザーグループの役割について説明します。
+   作成者および発行ユーザーのユーザーおよびユーザーグループの役割について説明します。環境
 
 * UGC共 [通店](working-with-srp.md)
 
-   サイトコンテンツとは別のコミュニティコンテンツの保存について説明します。
+   コミュニティコンテンツのストレージを、サイトコンテンツとは別に説明します。
 
 * [ノードストアとデータストア](../../help/sites-deploying/data-store-config.md)
 
-   基本的に、サイトのコンテンツはノードストアに保存されます。 アセットの場合、データストアはバイナリデータを格納するように設定できます。 Communitiesの場合、SRPを選択するように共通ストアを設定する必要があります。
+   基本的に、サイトのコンテンツはノードストアに保存されます。 アセットの場合、データストアはバイナリデータを格納するように設定できます。 コミュニティの場合、SRPを選択するように共通ストアを設定する必要があります。
 
 * [AEM 6.3 のストレージ要素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
-   2つのノードストレージの実装について説明します。TarおよびMongoDB。
+   2つのノードの実装についてストレージします。TarおよびMongoDB。
