@@ -1,43 +1,43 @@
 ---
-title: アセットインサイトの設定
-description: AEM Assetsでのアセットインサイトの設定を参照してください。
+title: デジタルアセットの使用状況分析を取得するには、アセットインサイトを設定します。
+description: '[!DNL Adobe Experience Manager Assets]でアセットインサイトを設定します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # アセットインサイトの設定 {#configure-asset-insights}
 
-Adobe Experience Manager（AEM）Assets は、サードパーティの Web サイトで使用される AEM アセットに関する使用状況データを Adobe Analytics からフェッチします。アセットインサイトでこのようなデータを取得して洞察を得るためには、最初に Adobe Analytics と統合するようにこの機能を設定します。
+[!DNL Adobe Experience Manager Assets] サードパーティのWebサイトで使用されるデジタルアセットの使用状況データをから取得しま [!DNL Adobe Analytics]す。 アセットインサイトでこのようなデータを取得して洞察を得るためには、最初に Adobe Analytics と統合するようにこの機能を設定します。
 
 >[!NOTE]
 >
->インサイトは画像に対してのみサポートおよび提供されます。
+>インサイトのサポートおよび提供がおこなわれるのは、画像に対してのみです。
 
-1. AEM で&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL アセット]**&#x200B;をクリックします。
+1. In [!DNL Experience Manager], click **[!UICONTROL Tools]** > **[!UICONTROL Assets]**.
 
    ![chlimage_1-72](assets/chlimage_1-210.png)
 
 1. 「**[!UICONTROL インサイト設定]**」カードをクリックします。
 1. ウィザードで、データセンターを選択し、会社名、ユーザー名、共有暗号鍵などの資格情報を指定します。
 
-   ![AEM のアセットインサイト用に Adobe Analytics を設定する](assets/insights_config2.png)
+   ![Experience Managerでアセットインサイト用のAdobe Analyticsの設定](assets/insights_config2.png)
 
-   *図：AEMでのアセットインサイト用のAdobe Analyticsの設定*
+   *図：でアセット[!DNL Adobe Analytics]インサイトを設定しま[!DNL Experience Manager]す。*
 
-1. 「**[!UICONTROL 認証]**」をクリックまたはタップします。
-1. AEM によって資格情報が認証されたら、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトでデータをフェッチする Adobe Analytics レポートスイートを選択します。「**[!UICONTROL 追加]**」をクリックします。
-1. After AEM sets up your report suite, click/tap **[!UICONTROL Done]**.
+1. 「認証」を **[!UICONTROL クリックしま]**&#x200B;す。
+1. After [!DNL Experience Manager] authenticates your credentials, from the **[!UICONTROL Report Suite]** list, choose an [!DNL Adobe Analytics] report suite from where you want Asset Insights to fetch data. 「**[!UICONTROL 追加]**」をクリックします。
+1. After [!DNL Experience Manager] sets up your report suite, click **[!UICONTROL Done]**.
 
 ## Page tracker {#page-tracker}
 
-Adobe Analyticsアカウントを設定すると、ページトラッカーコードが生成されます。 サードパーティの Web サイトで使用される AEM アセットをアセットインサイトで追跡できるようにするには、Web サイトコードにトラッカーコードを組み込みます。AEM Assets のページトラッカーユーティリティを使用してページトラッカーコードを生成してください。For more information on how to include your Page Tracker code in third-party web pages, see [Use page tracker and embed code in web pages](/help/assets/touch-ui-using-page-tracker.md).
+After you configure your [!DNL Adobe Analytics] account, the Page Tracker code is generated for you. To enable Assets Insights to track [!DNL Experience Manager] assets used in third-party websites, include the page tracker code in the website code. Use the [!UICONTROL Page Tracker] utility in [!DNL Experience Manager Assets] to generate the page tracker code. For more information on how to include your Page Tracker code in third-party web pages, see [Use page tracker and embed code in web pages](/help/assets/touch-ui-using-page-tracker.md).
 
-1. AEM で&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL アセット]**&#x200B;をクリックします。
+1. In [!DNL Experience Manager], click **[!UICONTROL Tools]** > **[!UICONTROL Assets]**.
 
    ![chlimage_1-73](assets/chlimage_1-214.png)
 
 1. **[!UICONTROL ナビゲーション]**&#x200B;ページで、「**[!UICONTROL インサイトページトラッカー]**」カードをクリックします。
-1. Click **[!UICONTROL Download]** to download the page tracker code.
+1. 「**[!UICONTROL ダウンロード]**」をクリックして、ページトラッカーコードをダウンロードします。
