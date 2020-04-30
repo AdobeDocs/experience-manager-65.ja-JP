@@ -1,9 +1,9 @@
 ---
-title: カスケードメタデータ
+title: '[!DNL Adobe Experience Manager Assets]のカスケードメタデータ。'
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 * 別のフィールドに指定された値に基づいて、特定のフィールドに表示されるオプションを変更します。
 * 別のフィールドに指定された値に基づいて、特定のフィールドにデフォルトのメタデータ値を設定します。
 
-## AEM でのカスケードメタデータの設定 {#configure-cascading-metadata-in-aem}
+## Configure cascading metadata in [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
 
 選択されたアセットタイプに基づいて、カスケードメタデータを表示するシナリオを検討します。いくつかの例を示します。
 
@@ -32,7 +32,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 選択したアセットタイプに関係なく、著作権情報を必須フィールドとして表示します。
 
-1. Experience Managerインターフェイスで、ツール/アセッ **[!UICONTROL ト]** /メタデ **[!UICONTROL ータ]** スキーマ **[!UICONTROL に移動します]**。
+1. インターフ [!DNL Experience Manager] ェイスで、ツール/アセッ **[!UICONTROL ト]** /メタデータ **[!UICONTROL スキーマ]******。
 1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
@@ -51,7 +51,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    * To specify the values manually, select **[!UICONTROL Add Manually]**, and click **[!UICONTROL Add Choice]** and specify the option text and value. 例えば、ビデオ、PDF、Word、画像などのアセットタイプを指定します。
 
-   * JSON ファイルから値を動的に取得するには、「**[!UICONTROL JSON パスで追加]**」を選択し、JSON ファイルのパスを指定します。AEM は、フォームがユーザーに提供されたときに、キーと値のペアをリアルタイムで取得します。
+   * JSON ファイルから値を動的に取得するには、「**[!UICONTROL JSON パスで追加]**」を選択し、JSON ファイルのパスを指定します。[!DNL Experience Manager] は、フォームがユーザーに提供されたときに、キーと値のペアをリアルタイムで取得します。
    両方のオプションは同時には使用できません。オプションを JSON ファイルから読み込んで手動で編集することはできません。
 
    ![add_choice](assets/add_choice.png)
@@ -105,8 +105,8 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![ビデオアセットのカスケードメタデータ](assets/video_asset.png)
 
-   *図：ビデオのカスケードメタデータ*
+   *図：ビデオのカスケードメタデータ。*
 
    ![ドキュメントアセットのカスケードメタデータ](assets/doc_type_fields.png)
 
-   *図：メタデータのカスケードドキュメント*
+   *図：ドキュメントのカスケードメタデータ*
