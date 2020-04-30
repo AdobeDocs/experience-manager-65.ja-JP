@@ -1,9 +1,9 @@
 ---
 title: アセットテンプレート
-description: AEM Assetsのアセットテンプレートについて、およびアセットテンプレートを使用してマーケティングコラテラルを作成する方法について説明します。
+description: '[!DNL Adobe Experience Manager Assets]のアセットテンプレートと、アセットテンプレートを使用してマーケティングコラテラルを作成する方法について説明します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -16,11 +16,11 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 グローバルな署名を保護しながら、編集を制限する柔軟性が高まると、アセットテンプレートは様々な機能のコンテンツアーティファクトとして、コンテンツの迅速な適合と配信を実現する理想的な構成要素になります。 コンテンツを再利用することで、印刷やデジタルチャネルの管理に要するコストを削減し、これらのチャネル全体で一貫性のある全体的なエクスペリエンスを提供できます。
 
-マーケティング担当者は、AEM Assets内にテンプレートを保存および管理し、単一のベーステンプレートを使用して、パーソナライズされた複数の印刷エクスペリエンスを簡単に作成できます。 顧客にマーケティングメッセージを明確に伝えるために、パンフレット、チラシ、はがき、名刺など、様々なタイプのマーケティング資料を作成できます。 また、既存の、または新しいプリント出力から複数ページのプリント出力をアセンブルできます。特に、デジタルおよびプリントエクスペリエンスを簡単に同時配信して、一貫性のある統合されたエクスペリエンスをユーザーに提供できます。
+As a marketer, you can store and manage templates within [!DNL Experience Manager Assets] and use a single base template to create multiple personalized print experiences with ease. 顧客にマーケティングメッセージを明確に伝えるために、パンフレット、チラシ、はがき、名刺など、様々なタイプのマーケティング資料を作成できます。 また、既存の、または新しいプリント出力から複数ページのプリント出力をアセンブルできます。特に、デジタルおよびプリントエクスペリエンスを簡単に同時配信して、一貫性のある統合されたエクスペリエンスをユーザーに提供できます。
 
-アセットテンプレートは主にAdobe InDesignファイルですが、Adobe InDesignに慣れていても素晴らしいアーティファクトを作成する上での障害とはなりません。 Adobe InDesignテンプレートのフィールドを、カタログの作成時に必要な製品フィールドにマップする必要はありません。 テンプレートは、Webインターフェイス上でWYSIWYGモードで直接編集できます。 ただし、Adobe InDesignで編集の変更を処理するには、まずAEM Assetsを設定してAdobe InDesignサーバーと統合する必要があります。
+While asset templates are mostly [!DNL Adobe InDesign] files, proficiency in [!DNL Adobe InDesign] is not a barrier to creating stellar artifacts. You need not map the fields of your [!DNL Adobe InDesign] template with your product fields that you otherwise require to when creating catalogs. テンプレートは、Webインターフェイス上でWYSIWYGモードで直接編集できます。 However, for [!DNL Adobe InDesign] to process your editing changes, you must first configure [!DNL Experience Manager Assets] to integrate with [!DNL Adobe InDesign Server].
 
-WebインターフェイスからAdobe InDesignテンプレートを編集できるので、クリエイティブとマーケティング担当者のコラボレーションが促進され、地域プロモーションの取り組みのタイムアウトが短縮されます。
+The ability to edit [!DNL Adobe InDesign] templates from the web interface helps foster greater collaboration between Creative and Marketing personnel, while reducing the time to market for local promotion initiatives.
 
 アセットテンプレートを使用すると、次のことができます。
 
@@ -30,7 +30,7 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 * テンプレートの編集をプレビューする
 * 複数のテンプレートファイルを統合して複数ページの成果物を作成する
 
-販促物のテンプレートを選択すると、AEM Assets は、編集可能なテンプレートのコピーを作成します。元のテンプレートは保持されるので、全体的な表記の元の状態を保つことができ、再利用してブランドの一貫性を強制できます。
+When you choose a template for your collateral, [!DNL Experience Manager Assets] creates a copy of the template that you can edit. 元のテンプレートは保持されるので、全体的な表記の元の状態を保つことができ、再利用してブランドの一貫性を強制できます。
 
 親フォルダー内の更新されたファイルを次の形式で書き出すことができます。
 
@@ -42,9 +42,9 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
 ## 資料の作成 {#creating-a-collateral}
 
-今後のキャンペーンのために、パンフレット、チラシおよび広告など、デジタルの印刷可能な販促物を作成し、世界中のアウトレットストアで共有するシナリオについて考えてみます。テンプレートに基づいた販促物の作成は、チャネルをまたいで統合されたカスタマーエクスペリエンスを実現するのに役立ちます。デザイナーは、InDesign などのクリエイティブソリューションを使用してキャンペーンテンプレート（単一ページまたは複数ページ）を作成し、テンプレートを AEM Assets にアップロードできます。コラテラルを作成する前に、1つ以上のINDDテンプレートをExperience Managerにアップロードし、Experience Managerで事前に使用できるようにします。
+今後のキャンペーンのために、パンフレット、チラシおよび広告など、デジタルの印刷可能な販促物を作成し、世界中のアウトレットストアで共有するシナリオについて考えてみます。テンプレートに基づいた販促物の作成は、チャネルをまたいで統合されたカスタマーエクスペリエンスを実現するのに役立ちます。Designers can create the campaign templates (single-page or multi-page) using a creative solution, such as [!DNL InDesign] and upload the templates to [!DNL Experience Manager Assets] for you. コラテラルを作成する前に、1つ以上のINDDテンプレートをにアップロードし、事前に使用できるよ [!DNL Experience Manager] うにします。
 
-1. Experience Managerインターフェイスで、「アセット」をク [!UICONTROL リックしま]す。
+1. インターフェ [!DNL Experience Manager] イスで「アセット」 [!UICONTROL をクリックしま]す。
 
 1. オプションから、「**[!UICONTROL テンプレート]**」を選択します。
 
@@ -54,7 +54,7 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 1つ以上のINDDテンプレートをExperience Managerにアップロードし、事前にExperience Managerで使用できるようにします。 Choose a template for your brochure, and click **[!UICONTROL Next]**.
+1. 1つ以上のINDDテンプレートをにアップロードし、事前に使用できるよ [!DNL Experience Manager] うにします。 Choose a template for your brochure, and click **[!UICONTROL Next]**.
 
    ![chlimage_1-103](assets/chlimage_1-308.png)
 
@@ -90,17 +90,17 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
    テキストエディターを使用して、テキストフィールドに表示させるテキストを変更します。タグレベルで、フォントサイズ、スタイル、カラーおよびタイプを変更できます。
 
-   アセットファインダーを使用して、AEM Assets 内の画像を参照または検索し、テンプレート内の編集可能な画像を選択した画像と置き換えることができます。
+   Using the asset finder, you can browse or search for images within [!DNL Experience Manager Assets] and replace the editable images in the template with images of your choice.
 
    ![chlimage_1-109](assets/chlimage_1-314.png)
 
-   編集可能であることは右側に表示されます。AEM Assets で編集可能なフィールドの場合、テンプレートの対応するフィールドが InDesign でタグ付けされている必要があります。つまり、InDesignで編集可能とマークする必要があります。
+   編集可能であることは右側に表示されます。For a field to be editable in [!DNL Experience Manager Assets], corresponding field in the template must be tagged in [!DNL InDesign]. In other words, they should be marked as editable in [!DNL InDesign].
 
    ![chlimage_1-110](assets/chlimage_1-315.png)
 
    >[!NOTE]
    >
-   >AEM Assets で InDesign テンプレートからデータを抽出して編集できるようにするために、AEM インスタンスが InDesign サーバーと統合されていることを確認します。For details, see [Integrating AEM Assets with InDesign Server](/help/assets/indesign.md).
+   >Ensure that your [!DNL Experience Manager] instance is integrated with an [!DNL InDesign Server] to enable [!DNL Experience Manager Assets] to extract data from the InDesign template and make it available for editing. For details, see [Integrating Experience Manager Assets with InDesign Server](/help/assets/indesign.md).
 
 1. 編集可能なフィールド内のテキストを変更するには、編集可能なフィールドのリストからテキストフィールドをクリックし、フィールド内のテキストを編集します。
 
@@ -120,7 +120,7 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
-   また、キーワード、タグおよび公開ステータスに基づいて画像を検索できます。AEM Assets リポジトリを参照して、目的の画像の場所に移動できます。
+   また、キーワード、タグおよび公開ステータスに基づいて画像を検索できます。You can browse through the [!DNL Experience Manager Assets] repository and navigate to the location of the desired image.
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
@@ -136,17 +136,17 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
    >[!NOTE]
    >
-   >「プレビュー」および「完了」アイコンは、販促物内の編集可能な画像フィールドに見つからないアイコンがない場合にのみ有効になります。販促物に見つからないアイコンがある場合、これは AEM が InDesign テンプレート内の画像を解決できないことが原因です。通常、AEM は次の場合に画像を解決できません。
+   >「プレビュー」および「完了」アイコンは、販促物内の編集可能な画像フィールドに見つからないアイコンがない場合にのみ有効になります。If there are missing icons in your collateral, it is because [!DNL Experience Manager] is unable to resolve the images in the [!DNL InDesign] template. Usually, [!DNL Experience Manager] is unable to resolve images in the following cases:
    >
-   >    * 画像は、基になるInDesignテンプレートに埋め込まれません。
-   >    * 画像がローカルファイルシステムからリンクされている
+   >    * Images are not embedded in the underlying [!DNL InDesign] template.
+   >    * 画像がローカルファイルシステムからリンクされている.
    >
-   >AEM が画像を解決できるようにするには、次の操作をおこないます。
+   >To enable [!DNL Experience Manager] to resolve images, do the following:
    >
-   >    * InDesign テンプレートを作成する際に画像を埋め込む（[リンクと埋め込みグラフィックについて](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)を参照）。
-   >    * ローカルファイルシステムに AEM をマウントして、見つからないアイコンを既存の AEM アセットにマッピングする。
+   >    * Embed images while creating [!DNL InDesign] templates (See [About links and embedded graphics](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)).
+   >    * Mount [!DNL Experience Manager] to your local file system, and then map missing icons with existing assets in [!DNL Experience Manager].
    >
-   >For more information around working with InDesign documents, see [Best Practices for Working with InDesign Documents in AEM](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html).
+   >For more information around working with [!DNL InDesign] documents, see [Best Practices for Working with InDesign Documents in Experience Manager](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html).
 
 1. パンフレットの PDF レンディションを生成するには、ダイアログで Acrobat オプションを選択し、「**[!UICONTROL 続行]**」をクリックします。
 1. 開始したフォルダーに販促物が作成されます。レンディションを表示するには、販促物を開いて、グローバルナビゲーションリストから「**[!UICONTROL レンディション]**」を選択します。
@@ -159,7 +159,7 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
 ## Merge collateral {#merge-collateral}
 
-1. Experience Managerインターフェイスで、ナビゲーションペ [!UICONTROL ージの] 「アセット」をクリックします。
+1. インターフェイス [!DNL Experience Manager] で、ナビゲー [!UICONTROL ションページの] 「アセット」をクリックします。
 
 1. オプションから、「**[!UICONTROL テンプレート]**」を選択します。
 
@@ -179,7 +179,7 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
    ![chlimage_1-123](assets/chlimage_1-328.png)
 
-   AEM Assets リポジトリまたはコレクションを参照して、目的のテンプレートの場所に移動し、統合するテンプレートを選択できます。
+   You can browse through the [!DNL Experience Manager Assets] repository or collections, and navigate to the location of the desired templates and then select them to merge.
 
    ![chlimage_1-124](assets/chlimage_1-329.png)
 
@@ -192,7 +192,7 @@ WebインターフェイスからAdobe InDesignテンプレートを編集でき
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. In the [!UICONTROL Configure Template] screen, specify a name for the collateral. オプションで、適切なタグを指定します。If you want to export the output in PDF format, select **[!UICONTROL Acrobat (.PDF)]**. デフォルトでは、販促物は JPG および InDesign 形式で書き出されます。To change the display thumbnail for the multi-page collateral, click **[!UICONTROL Change Thumbnail]**.
+1. In the [!UICONTROL Configure Template] screen, specify a name for the collateral. オプションで、適切なタグを指定します。If you want to export the output in PDF format, select **[!UICONTROL Acrobat (.PDF)]**. By default, the collateral is exported in JPG and [!DNL InDesign] format. To change the display thumbnail for the multi-page collateral, click **[!UICONTROL Change Thumbnail]**.
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
