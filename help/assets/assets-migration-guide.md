@@ -1,16 +1,16 @@
 ---
-title: アセットの一括移行
-description: アセットを AEM に移行してメタデータを適用し、レンディションを生成してそれらをパブリッシュインスタンスでアクティベートする方法について説明します。
+title: アセットを[!DNL Adobe Experience Manager Assets]に一括で移行します。
+description: アセットを[!DNL Adobe Experience Manager]に取り込み、メタデータを適用し、レンディションを生成し、それらをアクティブ化してインスタンスを公開する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # アセットを一括で移行する方法 {#assets-migration-guide}
 
-アセットを AEM に移行する際には、いくつかの手順を考慮する必要があります。現在のホームからアセットやメタデータを抽出する方法は、実装によりやり方が異なるのでこのドキュメントでは説明しません。本書では、抽出したアセットを AEM に移行してメタデータを適用し、レンディションを生成してそれらをパブリッシュインスタンスでアクティベートする方法について説明します。
+When migrating assets into [!DNL Adobe Experience Manager], there are several steps to consider. Extracting assets and metadata out of their current home is outside the scope of this document as it varies widely between implementations, but this document describes how to bring these assets into [!DNL Experience Manager], apply their metadata, generate renditions, and activate them to publish instances.
 
 ## 前提条件 {#prerequisites}
 
@@ -18,7 +18,7 @@ Before actually performing any of the steps in this methodology, please review a
 
 >[!NOTE]
 >
->次のアセット移行ツールはAEMに含まれておらず、アドビではサポートされていません。
+>The following asset migration tools are not part of [!DNL Experience Manager] and are not supported by Adobe:
 >
 >* ACS AEM ツールの Tag Maker
 >* ACS AEM ツールの CSV Asset Importer
@@ -29,9 +29,9 @@ Before actually performing any of the steps in this methodology, please review a
 >
 このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ACS AEM ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ACS AEM Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
 
-## AEMへの移行 {#migrating-to-aem}
+## 移行先 [!DNL Experience Manager]{#migrating-to-aem}
 
-AEM にアセットを移行するにはいくつかの手順を経る必要があるので、フェーズ別に処理することをお勧めします。移行のフェーズは次のとおりです。
+Migrating assets to [!DNL Experience Manager] requires several steps and should be viewed as a phased process. 移行のフェーズは次のとおりです。
 
 1. ワークフローを無効化する。
 1. タグを読み込む。
@@ -48,7 +48,7 @@ Before starting your migration, disable your launchers for the [!UICONTROL DAM U
 
 ### Load tags {#loading-tags}
 
-画像に適用するタグ分類は既に用意されていることがあります。CSV Asset ImporterやExperience Managerのメタデータプロファイルのサポートなどのツールを使用すると、アセットにタグを適用するプロセスを自動化できますが、タグをシステムに読み込む必要があります。 [ACS AEM ツールの Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 機能を使用すると、システムに読み込まれた Microsoft Excel のスプレッドシートを使用してタグを入力できます。
+画像に適用するタグ分類は既に用意されていることがあります。While tools like the CSV Asset Importer and [!DNL Experience Manager] support for metadata profiles can automate the process of applying tags to assets, the tags need to be loaded into the system. [ACS AEM ツールの Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 機能を使用すると、システムに読み込まれた Microsoft Excel のスプレッドシートを使用してタグを入力できます。
 
 ### Ingest assets {#ingesting-assets}
 
@@ -58,7 +58,7 @@ Before starting your migration, disable your launchers for the [!UICONTROL DAM U
 
 #### HTTP経由で送信 {#pushing-through-http}
 
-アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Glutton は小さな Java アプリケーションで、AEM インスタンスのあるディレクトリから別のディレクトリにすべてのアセットを読み込みます。Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
+アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Glutton is a small Java application that loads all assets from one directory into another directory on an [!DNL Experience Manager] instance. Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
 
 HTTPS を通じたプッシュのアプローチには、主に次の 2 つの欠点があります。
 
@@ -75,12 +75,12 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 ### Process renditions {#processing-renditions}
 
-After you load the assets into the system, you need to process them through the [!UICONTROL DAM Update Asset] workflow to extract metadata and generate renditions. Before performing this step, you need to duplicate and modify the [!UICONTROL DAM Update Asset] workflow to fit your needs. 既製のワークフローには、Scene7 PTIFF の生成や InDesign サーバーの統合など、ユーザーによっては必要でない手順が多く含まれています。
+After you load the assets into the system, you need to process them through the [!UICONTROL DAM Update Asset] workflow to extract metadata and generate renditions. Before performing this step, you need to duplicate and modify the [!UICONTROL DAM Update Asset] workflow to fit your needs. The out-of-the-box workflow contains many steps that may not necessary for you, such as Scene7 PTIFF generation or [!DNL InDesign Server] integration.
 
 ニーズに合わせてワークフローを設定したら、次の 2 つの方法のいずれかで実行できます。
 
 1. 最も簡単なアプローチは、[ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html) です。このツールを使用すると、クエリを実行し、クエリの結果をワークフローを通じて処理します。バッチサイズを設定するオプションも用意されています。
-1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、AEM ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
+1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。While this approach is much more involved, it lets you remove the overhead of the [!DNL Experience Manager] workflow engine while optimizing the use of server resources. さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
 
 ### Activate assets {#activating-assets}
 
@@ -88,7 +88,7 @@ After you load the assets into the system, you need to process them through the 
 
 この問題を回避するには、[Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) を使用してアセットのレプリケートを管理します。これは Sling キューを使用することなく動作し、オーバーヘッドを減らすほか、ワークロードをスロットルしてサーバーのオーバーロードを防ぎます。レプリケーションの管理に FAM を使用する例は、この機能のドキュメントページに記載しています。
 
-アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。AEM インフラストラクチャのオープンソースツール [Grabbit](https://github.com/TWCable/grabbit) を使用する方法もあります。vit よりも高いパフォーマンスを発揮すると言われています。
+アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。Another option is to use an open-sourced tool for your [!DNL Experience Manager] infrastructure called [Grabbit](https://github.com/TWCable/grabbit), which claims to have faster performance than vlt.
 
 これらのアプローチで注意すべき点は、オーサリングインスタンス上でアセットがアクティベートされていると表示されないことです。アセットのアクティベート状態を正しくフラグ設定するには、アセットをアクティベート済みとマークする別のスクリプトも実行する必要があります。
 
@@ -112,22 +112,22 @@ After you load the assets into the system, you need to process them through the 
 
 Once we have completed migration, the launchers for the [!UICONTROL DAM Update Asset] workflows should be re-enabled to support rendition generation and metadata extraction for ongoing day-to-day system usage.
 
-## AEMデプロイメント間の移行 {#migrating-between-aem-instances}
+## 複数の展開にわたる [!DNL Experience Manager] 移行 {#migrating-between-aem-instances}
 
-それほど一般的ではありませんが、ある AEM インスタンスからもう一方のインスタンスに大量のデータを移行する必要があることもあります。例えば、AEM やお使いのハードウェアをアップグレードする場合や、AMS の移行などに伴い新しいデータセンターに移行する場合などです。
+While not nearly as common, sometimes you need to migrate large amounts of data from one [!DNL Experience Manager] instance to another; for example, when you perform an [!DNL Experience Manager] upgrade, upgrade your hardware, or migrate to a new datacenter, such as with an AMS migration.
 
-このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。AEM インスタンス間で移行するには、次の手順を実行します。
+このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。When migrating between [!DNL Experience Manager] instances, you perform the following steps:
 
 1. Disable workflows: Because you are migrating renditions along with our assets, you want to disable the workflow launchers for [!UICONTROL DAM Update Asset] workflow.
 
-1. タグの移行：ソースAEMインスタンスに既にタグが読み込まれているので、コンテンツパッケージを作成し、ターゲットインスタンスにパッケージをインストールできます。
+1. Migrate tags: Because you already have tags loaded in the source [!DNL Experience Manager] instance, you can build them in a content package and install the package on the target instance.
 
-1. アセットの移行：AEMインスタンス間でアセットを移動する場合は、次の2つのツールを使用することをお勧めします。
+1. Migrate assets: There are two tools that are recommended for moving assets from one [!DNL Experience Manager] instance to another:
 
    * **Vault Remote Copy** (vlt rcp)を使用すると、ネットワークを介してvltを使用できます。 移動元と移動先のディレクトリを指定すると、vit がすべてのリポジトリデータを一方のインスタンスからダウンロードし、もう一方に読み込みます。vt rcp については、[https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html) に記載されています。
-   * **Grabbit**。Time Warner Cable が AEM の実装のために開発した、オープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
+   * **Grabbit**[!DNL Experience Manager]。Time Warner Cable が の実装のために開発した、オープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
 
-1. Activate assets: Follow the instructions for [activating assets](#activating-assets) documented for the initial migration to AEM.
+1. Activate assets: Follow the instructions for [activating assets](#activating-assets) documented for the initial migration to [!DNL Experience Manager].
 
 1. 公開のコピー：新しい移行と同様に、単一の発行インスタンスを読み込んでコピーする方が、両方のノードでコンテンツをアクティブにするよりも効率的です。 [パブリッシュインスタンスのクローン](#cloning-publish)を参照してください。
 
