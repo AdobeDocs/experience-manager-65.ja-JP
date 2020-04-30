@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Managerで、参照と複数ページのアセットを使用して複合アセットを管理します。
-description: Adobe InDesign、Adobe IllustratorおよびAdobe Photoshopからデジタルアセットへの参照を作成する方法を説明します。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。
+title: '[!DNL Adobe Experience Manager]で、参照と複数ページのアセットを含む複合アセットを管理します。'
+description: '[!DNL Adobe InDesign]、[!DNL Adobe Illustrator]、[!DNL Adobe Photoshop]からデジタルアセットへの参照を作成する方法を説明します。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 790efeaff6c8cf7e60104601e08955180dbb9600
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 複合アセットと複数ページアセットの管理 {#managing-compound-assets}
 
-[!DNL Adobe Experience Manager Assets] は、アップロードされたファイルに、リポジトリ内に既に存在するアセットへの参照が含まれているかどうかを識別できます。 この機能は、サポート対象のファイル形式でのみ使用できます。アップロードしたアセットにExperience Managerアセットへの参照が含まれている場合は、アップロードされたアセットと参照されたアセットの間に双方向リンクが作成されます。
+[!DNL Adobe Experience Manager Assets] は、アップロードされたファイルに、リポジトリ内に既に存在するアセットへの参照が含まれているかどうかを識別できます。 この機能は、サポート対象のファイル形式でのみ使用できます。If the uploaded asset contains any references to [!DNL Experience Manager] assets, a bidirectional link is created between the uploaded and referenced assets.
 
-冗長性を排除する以外に、Adobe Creative Cloudアプリケーションでアセットを参照することで、コラボレーションが強化され、ユーザーの効率と生産性が向上します。
+Besides eliminating redundancy, referencing the assets in [!DNL Adobe Creative Cloud] applications enhances collaboration and increases the efficiency and productivity of users.
 
 [!DNL Experience Manager Assets] は、双方向参照をサポートします。 参照元のアセットは、アップロードされたファイルのアセットの詳細ページで確認できます。また、参照元のアセットの表示の詳細ページに、参照元のファイルを詳細に表示することもできます。
 
@@ -25,7 +25,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 1. [Experience Managerデスクトップアプリケーションを使用して](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)、デジタルアセットをローカルファイルシステムに取り込みます。 参照するアセットのファイルシステムの場所に移動します。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
-1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the Experience Manager repository.
+1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
 
 1. ワークフローが完了したら、そのアセットのアセットの詳細ページに移動します。The references to existing digital assets are listed under **[!UICONTROL Dependencies]** in the **[!UICONTROL References]** column.
 
@@ -39,7 +39,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 
    ![表示の詳細の「参照」列にあるExperience Managerアセットの参照](assets/asset-references.png)
 
-   *図：アセットの詳細のアセット参照*
+   *図：アセットの詳細のアセット参照。*
 
 ## デジ追加タルアセット(参照元 [!DNL Adobe InDesign] ) {#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -86,7 +86,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 サブアセットの生成はデフォルトでは無効になっています。サブアセットの生成を有効にするには、次の手順に従います。
 
-1. 管理者としてExperience Managerにログインします。 Access **[!UICONTROL Tools > Workflow > Models]**.
+1. Log into [!DNL Experience Manager] as an administrator. Access **[!UICONTROL Tools > Workflow > Models]**.
 1. 「 **[!UICONTROL DAM Update Asset]** workflow」を選択し、「 **[!UICONTROL Edit」をクリックします]**。
 1. 「サイドパ **[!UICONTROL ネルを切り替え]** 」をクリックし、「サブア **[!UICONTROL セットを作成」ステップを見つ]** けます。 ワークフロー追加へのステップです。 「同期」をク **[!UICONTROL リックしま]**&#x200B;す。
 
