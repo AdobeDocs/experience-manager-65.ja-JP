@@ -3,7 +3,7 @@ title: ビジネス・プロセスの達成、監査の実施、コンプライ�
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証および実行のためのアセット処理をワークフローします。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
 
 ![一部のデフォルトワークフロー](assets/aem-default-workflows.png)
 
-*図：のデフォルトのワークフローの一部[!DNL Experience Manager]*
+*図：で使用できるデフォルトワークフローの一部で[!DNL Experience Manager]す。*
 
 ## Apply workflows to process assets {#applying-workflows-to-assets}
 
