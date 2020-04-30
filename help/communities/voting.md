@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
@@ -21,7 +21,7 @@ The `Voting` component is a useful tool that allows community members to rate a 
 
 ## 投票をページに追加 {#adding-voting-to-a-page}
 
-作成者モード `Voting``Communities / Voting` でページにコンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索し、ユーザが投票する機能に対する相対的な位置など、ページ上の配置にドラッグします。
+作成者モード `Voting` でページにコンポーネントを追加するには、コンポーネントブラウザを使用してページを検索し、そのページ上の位置（ユーザが投票する機能に対する相対位置など）に `Communities / Voting` ドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
@@ -39,11 +39,17 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
-* **[!UICONTROL Positive Response Label]**(必須&#x200B;**)ポジティブな応答の内部プロパティ名。
+* **[!UICONTROL 肯定的な返信ラベル]**
 
-* **[!UICONTROL Negative Response Label]**(必須&#x200B;**)：否定的な応答の内部プロパティ名。
+   (必&#x200B;*須*)肯定的な応答の内部プロパティ名。
 
-* **[!UICONTROL 集計名]**(必&#x200B;*須*)投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
+* **[!UICONTROL 否定的な返信ラベル]**
+
+   (必&#x200B;*須*)否定応答の内部プロパティ名。
+
+* **[!UICONTROL 集計名]**
+
+   (*Required*) The internal, identifiable property name for this instance of a voting component.
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -53,7 +59,7 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ### 匿名 {#anonymous}
 
-匿名での投票はサポートされていません。サイト訪問者は、一度投票に参加するには、登録（会員になる）し、サインインする必要があります。
+匿名での投票はサポートされていません。サイト訪問者は、一度投票に参加するには登録（会員になる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
