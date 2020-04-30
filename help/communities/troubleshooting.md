@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -31,9 +31,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 CQ 5.4 でフォーラムが作成され、トピックが投稿された後、サイトが AEM 5.6.1 以降にアップグレードされた場合、既存の投稿を表示しようとすると、ページに次のエラーが表示されることがあります。
 
-不正なパターン文字&#39;a&#39;は、このサーバーの/content/demoforums/forum-test.htmlに要求を提供できません
-
-さらに、ログには次のように記録されます。
+無効なパターン文字&#39;a&#39;Cannot serve request to `/content/demoforums/forum-test.html` on this server and the logs contain:
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -44,7 +42,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 この問題は、com.day.cq.commons.date.RelativeTimeFormat の形式文字列が 5.4 と 5.5 の間に変更され、「ago」を表す「a」が許可されなくなったというものです。
 
-したがって、RelativeTimeFormat() API を使用するコードを次のように変更する必要があります。
+したがって、RelativeTimeFormat() APIを使用するコードは、次の変更が必要になります。
 
 * 送信元: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * 次の操作を行います。`final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
@@ -59,9 +57,9 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
 
-* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; has been replaced by &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` が `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-[SCF](scf.md#handlebarsjavascripttemplatinglanguage) で使用される jknack.handlebars.Handlebars には独自の i18n ヘルパーユーティリティが用意されているので、この警告は無視しても問題ありません。起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
+This warning can be safely ignored as `jknack.handlebars.Handlebars`, used by [SCF](scf.md#handlebarsjavascripttemplatinglanguage), comes with its own i18n helper utility. 起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
 
 ### ログ内の警告：OakResourceListener の processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
