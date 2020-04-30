@@ -3,7 +3,7 @@ title: フォルダーのアセットとコレクションのレビュー
 description: フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -103,8 +103,8 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
 
-   *図：カード表示*
+   *図：カードの表示。*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
 
-   *図：リスト表示*
+   *図：リスト表示。*
