@@ -3,7 +3,7 @@ title: デジタルアセットに関するレポート
 description: AEM Assets内のアセットに関するレポートを理解し、デジタルアセットの使用、アクティビティ、共有を把握します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -38,12 +38,12 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 
 1. Experience Managerインターフェイスで、ツール/アセ **[!UICONTROL ット]** /レ **[!UICONTROL ポート]** をクリ **[!UICONTROL ックします]**。
 
-![アセットレポートに移動するツールページ](assets/AssetsReportNavigation.png)
+![](assets/AssetsReportNavigation.png)
 
 1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
 1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
 
-   ![レポートタイプの選択](assets/choose_report.png)
+   ![](assets/choose_report.png)
 
    >[!NOTE]
    >
@@ -55,7 +55,7 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 
 1. タイトル、説明、サムネール、CRX リポジトリ内のフォルダーパス（レポートの保存場所）など、レポートの詳細を設定します。By default, the folder path is `/content/dam`. 別のパスを指定することもできます。
 
-   ![レポートの詳細を追加するページ](assets/report_configuration.png)
+   ![](assets/report_configuration.png)
 
    レポートの日付範囲を選択します。
 
@@ -71,32 +71,32 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
    >
    >「**[!UICONTROL ディスク使用量]**」レポートには、現在のディスク領域使用量のみが示されます。そのため、日付範囲のフィールドはありません。
 
-   ![ディスク使用量レポートの詳細ページ](assets/disk_usage_configuration.png)
+   ![](assets/disk_usage_configuration.png)
 
    When you create the **[!UICONTROL Files]** report, you can include/exclude sub-folders. ただし、このレポートの場合、アセットレンディションを含めることはできません。
 
-   ![ファイルレポートの詳細ページ](assets/files_report.png)
+   ![](assets/files_report.png)
 
    「**[!UICONTROL リンク共有]**」レポートには、AEM Assets 内から外部ユーザーと共有されているアセットへの URL が表示されます。アセットを共有したユーザーの電子メール ID、アセットを共有しているユーザーの電子メール ID、共有の日付、リンクの有効期限なども表示されます。列をカスタマイズすることはできません。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
-   ![リンク共有レポートの詳細ページ](assets/link_share.png)
+   ![](assets/link_share.png)
 
 1. Click **[!UICONTROL Next]** from the toolbar.
 
 1. **[!UICONTROL 列を構成]**&#x200B;ページでは、いくつかの列がデフォルトでレポートに表示されるように選択されています。さらに列を選択できます。 選択されている列の選択を解除すると、その列はレポートから除外されます。
 
-   ![レポート列の選択または選択解除](assets/configure_columns.png)
+   ![](assets/configure_columns.png)
 
    カスタムの列名やプロパティパスを表示するには、CRX の jcr:content ノード下のアセットバイナリのプロパティを設定します。または、プロパティパスピッカーを使用してパスを追加します。
 
-   ![レポート列の選択または選択解除](assets/custom_columns.png)
+   ![](assets/custom_columns.png)
 
 1. Click **[!UICONTROL Create]** from the toolbar. レポートの生成が開始されたことを通知するメッセージが表示されます。
 1. アセットレポートページのレポート生成ステータスは、レポートジョブの現在の状態（「成功」、「失敗」、「待機中」、「スケジュール済み」など）に基づきます。通知のインボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。 Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
 
-   ![生成されたレポート](assets/report_page.png)
+   ![](assets/report_page.png)
 
    Click **[!UICONTROL Download]** from the toolbar to download the report in CSV format.
 
@@ -120,11 +120,11 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 
 1. カスタム列を表示するには、「**[!UICONTROL カスタム列]**」で列の名前を指定します。
 
-   ![レポートのカスタム列の名前を指定](assets/custom_columns-1.png)
+   ![](assets/custom_columns-1.png)
 
 1. プロパティパスピッカーを使用して、CRXDE の `jcr:content` ノード下にプロパティパスを追加します。または、プロパティパスフィールドにパスを入力します。
 
-   ![jcr:content内のパスからプロパティパスをマップします。](assets/property_picker.png)
+   ![](assets/property_picker.png)
 
    To add more custom columns, click **[!UICONTROL Add]** and repeat steps 5 and 6.
 
