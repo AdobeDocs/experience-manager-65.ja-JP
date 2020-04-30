@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,13 +21,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ユーザー生成コンテンツ（UGC）のタグ付けは、コミュニティメンバーが他のメンバーによるコンテンツの検索を支援するための手段です。
 
-通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグが発行環境のコミュニティメンバーによって適用される点で異なります。
+通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグが公開環境のコミュニティメンバーによって適用されるという点で一意です。
 
 タグ名前空間と分類は、どちらで適用する場合も同じです。
 
 ## Communities の機能 {#communities-features}
 
-以下に示す AEM Communities の機能は、タグ付けを許可するように設定できます。
+タグ付けを許可するように設定できるAEM Communitiesの機能は次のとおりです。
 
 * [ブログ](blog-feature.md)
 * [カレンダー](calendar.md)
@@ -51,7 +51,7 @@ See [Administering Tags](../../help/sites-administering/tags.md#tagging-console)
 
 [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)を参照してください。
 
-The following is how it appears in CRXDE when an administrator applies read permissions to `/etc/tag/discussions` for the group `*Community Engage Members*`.
+The following is how it appears in CRXDE when an administrator applies read permissions to `/etc/tag/discussions` for the group `Community Engage Members`.
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
