@@ -3,7 +3,7 @@ title: AEM AssetsとAEM Media Libraryの機能の比較
 description: AEM AssetsとAEM Media Libraryの機能を比較し、違いを確認します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 476a8acbca2f498472225fe1df220f63eafe61e5
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -70,36 +70,35 @@ AEM Assets のお客様だけが使用できる独自の機能は次のとおり
 * Adobe Asset Link（Creative Cloud エンタープライズ版への接続）
 * AEM デスクトップアプリケーション
 * 処理プロファイル
-* InDesign Server との統合
-* アセットテンプレートとカタログ作成フレームワーク
-* Adobe Photoshop、Illustrator、InDesign にリンクしたアセット
+* InDesign Serverの統合
+* アセットテンプレートとカタログプロデューサーフレームワーク
+* Adobe Photoshop、Adobe IllustratorおよびAdobe InDesignの統合
 * 多言語アセット管理
 * PIM との統合
 * Rights Management
-* Camera Raw サポート
+* Camera RAWのサポート
 * 検索ファセットの管理と設定
 * 事前定義済み DAM ワークフロー（写真撮影など）
-* アセットのレポートと分析：アセットインサイト
-* 3D アセット管理
+* 「インサイト」と呼ばれるアセットレポートと分析
+* 3次元資産管理
 * Connected Assets
 * Brand Portal
 * セルフサービスアクセス
-* 閲覧、検索、ダウンロード
-* コレクションとフォルダー共有
-* 管理ツール
+* 参照、検索、ダウンロード
+* コレクションとフォルダーの共有
+* 管理ツールとインターフェイス
 * スマートタグ
 * ビジュアル検索
-* アセット管理 UI
 
 **Media Library**
 
-* 基本的なメタデータプロパティ
-* タグ管理
+* 基本メタデータプロパティ
+* tag management
 * バージョン管理
 * 静的レンディション
-* プロジェクト、タスク、ワークフローオーサリング
+* プロジェクト，タスク，ワークフローのオーサリング
 * アクティビティストリーム（タイムライン）
 * クエリビルダー（API）
-* Marketing Cloud との統合
-* UI のカスタマイズと拡張
+* Marketing Cloudの統合
+* UIのカスタマイズと拡張機能
 * コメントと注釈
