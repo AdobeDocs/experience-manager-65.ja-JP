@@ -1,29 +1,29 @@
 ---
-title: 関連資産
-description: 特定の共通属性を共有するアセットを関連付ける方法について説明します。この機能を使用して、アセット間にソース／派生関係を作成することもできます。
+title: 関連アセット
+description: 共通の属性を共有するデジタルアセットを関連付ける方法を説明します。 また、デジタルアセット間のソースから派生する関係を作成します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
-# Related assets {#related-assets}
+# 関連アセット {#related-assets}
 
-Adobe Experience Manager (AEM)Assetsを使用すると、関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。 例えば、ライセンスファイルを、類似のトピックのアセットまたは画像／ビデオに関連付けることができます。特定の共通属性を共有するアセットを関連付けることができます。この機能を使用して、アセット間にソース／派生関係を作成することもできます。例えば、INDD ファイルから生成した PDF ファイルがある場合、その PDF ファイルをソースの INDD ファイルに関連付けることができます。
+[!DNL Adobe Experience Manager Assets] 関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。 例えば、ライセンスファイルを、類似のトピックのアセットまたは画像／ビデオに関連付けることができます。特定の共通属性を共有するアセットを関連付けることができます。この機能を使用して、アセット間にソース／派生関係を作成することもできます。例えば、INDD ファイルから生成した PDF ファイルがある場合、その PDF ファイルをソースの INDD ファイルに関連付けることができます。
 
 この機能を使用すると、ベンダーや代理店と低解像度のPDFファイルやJPGファイルを共有し、高解像度のINDDファイルを要求された場合にのみ利用できるように柔軟に調整できます。
 
 >[!NOTE] アセットの関連付けと関連付け解除を行えるのは、アセットの編集権限を持つユーザーだけです。
 >
 
-## Relate assets {#relating-assets}
+## アセットの関連付け {#relating-assets}
 
-1. From the AEM interface, open the **[!UICONTROL Properties]** page for an asset that you want to relate.
+1. From the Experience Manager interface, open the **[!UICONTROL Properties]** page for an asset that you want to relate.
 
    ![アセットのプロパティページを開き、アセットを関連付けます。](assets/asset-properties-relate-assets.png)
 
-   *図：アセットを関連付けるアセットのプロパティページ*
+   *図：アセッ[!DNL Assets]トを関連付けるプロパティページ。*
 
    または、リスト表示からアセットを選択します。
 
@@ -40,7 +40,7 @@ Adobe Experience Manager (AEM)Assetsを使用すると、関連アセット機�
 1. 次のいずれかの操作をおこないます。
 
    * アセットのソースファイルを関連付けるには、リストから「**[!UICONTROL ソース]**」を選択します。
-   * To relate a derived file, select **[!UICONTROL Derived]** from the list.
+   * 派生ファイルを関連付けるには、リストから「**[!UICONTROL 派生]**」を選択します。
    * アセット間に双方向の関係を作成するには、リストから「**[!UICONTROL その他]**」を選択します。
    ![chlimage_1-276](assets/chlimage_1-276.png)
 
@@ -49,7 +49,7 @@ Adobe Experience Manager (AEM)Assetsを使用すると、関連アセット機�
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. 「**[!UICONTROL 確認]**」アイコンをクリックまたはタップします。
-1. Click/tap **[!UICONTROL OK]** to close the dialog. 手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリーに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
+1. 「**[!UICONTROL OK]**」をクリックまたはタップして、ダイアログを閉じます。手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
@@ -65,15 +65,15 @@ Adobe Experience Manager (AEM)Assetsを使用すると、関連アセット機�
 
 ## 関連アセットの翻訳 {#translating-related-assets}
 
-関連アセット機能を使用してアセット間でソース／派生関係を作成すると、翻訳ワークフローにも役立ちます。派生アセットで翻訳ワークフローを実行すると、AEM Assets は自動的にソースファイルが参照するすべてのアセットを取得し、翻訳用に組み込みます。このようにして、ソースアセットに参照されているアセットが、ソースおよび派生アセットとともに翻訳されます。例えば、以下のように英語のコピーに派生アセットおよびそのソースファイルが含まれている場合を考えてみます。
+関連アセット機能を使用してアセット間でソース／派生関係を作成すると、翻訳ワークフローにも役立ちます。When you run a translation workflow on a derived asset, [!DNL Experience Manager Assets] automatically fetches any asset that the source file references and includes it for translation. このようにして、ソースアセットに参照されているアセットが、ソースおよび派生アセットとともに翻訳されます。例えば、以下のように英語のコピーに派生アセットおよびそのソースファイルが含まれている場合を考えてみます。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-ソースファイルが別のアセットに関連付けられている場合、Experience Manager Assetsは参照されているアセットを取得し、翻訳用に含めます。
+If the source file is related to another asset, [!DNL Experience Manager Assets] fetches the referenced asset and includes it for translation.
 
 ![アセットのプロパティページに、変換に含める関連アセットのソースファイルが表示されます。](assets/asset-properties-source-asset.png)
 
-*図：翻訳に含める関連アセットのソースアセット*
+*図：翻訳に含める関連アセットのソースアセット。*
 
 1. [新しい翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project)の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。例えば、この場合はアセットをフランス語に翻訳します。
 
@@ -97,6 +97,6 @@ Adobe Experience Manager (AEM)Assetsを使用すると、関連アセット機�
 
    ![chlimage_1-287](assets/chlimage_1-287.png)
 
-1. Select the asset that is related to the source, and then click/tap **[!UICONTROL Reveal in Assets]**. 翻訳された関連アセットが表示されます。
+1. ソースに関連付けられているアセットを選択し、「**[!UICONTROL アセットで表示]**」をクリックまたはタップします。翻訳された関連アセットが表示されます。
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
