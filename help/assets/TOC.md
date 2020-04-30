@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assetsユーザガイド
 translation-type: tm+mt
-source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -103,7 +103,7 @@ source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
    + [AEM と Creative Cloud の統合のベストプラクティス](aem-cc-integration-best-practices.md)
-   + [InDesignサーバーとの統合](indesign.md)
+   + [InDesign Serverとの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセット内のDigital Rights Management](drm.md)
    + [アセットのインサイトにデモパッケージを使用する](touch-ui-using-demo-package-for-asset-insights.md)
