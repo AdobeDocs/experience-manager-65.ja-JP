@@ -11,22 +11,22 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
-# アクティビティのトレンド{#activity-trends}
+# アクティビティのトレンド {#activity-trends}
 
 ## 概要 {#introduction}
 
 The `Community Activity List` component provides the ability to add trending information regarding posts and views by members as well as posts and views of content.
 
-本書では、以下の内容を説明しています。
+このドキュメントでは、次の内容を説明します。
 
-* adding the `Community Activity List` component to a [community site](/help/communities/overview.md#community-sites)
+* Adding the `Community Activity List` component to a [community site](/help/communities/overview.md#community-sites).
 
-* configuration settings for the `Community Activity List` component
+* Configuration settings for the `Community Activity List` component.
 
 ### 要件 {#requirement}
 
@@ -54,7 +54,7 @@ Select the placed `Community Activity List` component to access and select the `
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-「**コメント*」タブで、アップロードされたファイルに対するコメントの表示と表示を指定します。
+「**コメント**」タブでは、アップロードしたファイルに対するコメントを表示するかどうかと、その方法を指定します。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -62,7 +62,7 @@ Select the placed `Community Activity List` component to access and select the `
 
    コミュニティメンバーに関するデータを表示するか、ユーザー生成コンテンツ(UGC)を表示するかを指定します。
 
-   次から選択
+   次から選択：
 
    * `Members`
    * `Content`
@@ -75,7 +75,7 @@ Select the placed `Community Activity List` component to access and select the `
 
 * **表示数**
 
-   リストする項目数。
+   アイテムのリスト数。
 初期設定は 10 です。
 
 * **アクティビティタイプ**
@@ -102,20 +102,20 @@ Select the placed `Community Activity List` component to access and select the `
 
 * **コンテキストパス**
 
-   特定のブログなど、サイトのサブセットに対するアクティビティのスコープを設定できます。
+   特定のブログなど、アクティビティをサイトのサブセットに対してスコープできます。
 初期設定は、コミュニティサイト全体です。
 
 * **メンバー数の集計**
 
-   選択解除する（オフにする）と、最上位の投稿のみがカウントされます。 For example, if the context is the root page (the default), then an `Activity Type`of `Posts`will never show any activity as there is no ability to post content to the root page. オンにすると、すべての下位のページがカウントに含まれます。初期設定はオンです。
+   選択を解除（オフ）すると、最上位の投稿のみがカウントされます。 For example, if the context is the root page (the default), then an `Activity Type` of `Posts` will never show any activity as there is no ability to post content to the root page. オンにすると、すべての下位のページがカウントに含まれます。初期設定はオンです。
 
 ### 4 つのコンポーネントがあるページの例 {#example-page-with-components}
 
 **上位の訪問者**&#x200B;の設定：タイプ = メンバー、アクティビティタイプ = ビュー
 
-**上位の寄稿者** :タイプ=メンバー、アクティビティタイプ=投稿
+**上位の寄稿者** の設定：タイプ=メンバー、アクティビティタイプ=投稿
 
-**Top Content** config:タイプ=コンテンツ、アクティビティタイプ=ビュー
+**Top Content** config:タイプ=コンテンツ、アクティビティタイプ=表示、
 
 **Trending Content** config:タイプ=コンテンツ、アクティビティタイプ=投稿
 
