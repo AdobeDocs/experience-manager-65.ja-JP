@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,13 +21,13 @@ AEM Communities の翻訳機能は、[ソーシャルコンポーネントフレ
 
 UGC を翻訳することにより、言語の障壁が取り除かれ、サイト訪問者とメンバーがグローバルなコミュニティを体験できます。
 
-例えば以下のような場合が考えられます。、
+例えば以下のような場合が考えられます。：
 
-* フランスのメンバーは、多国籍料理のウェブサイトのコミュニティフォーラムにフランス語でレシピを投稿した
-* 日本の別の会員は、翻訳機能を使って、フランス語から日本語へのレシピの翻訳を引き起こす
-* 日本語でレシピを読んだ後、日本から来たメンバーは日本語でコメントを投稿します
-* フランスから来たメンバーは、翻訳機能を使用して日本語のコメントをフランス語に翻訳します
-* グローバルコミュニケーション！
+* フランスのメンバーは、多国籍料理のウェブサイトのコミュニティフォーラムに、フランス語でレシピを投稿した。
+* 日本の別の会員は、この翻訳機能を使って、フランス語から日本語へのレシピの翻訳を引き起こす。
+* 日本語でレシピを読んだ後、日本から来たメンバーは日本語でコメントを投稿します。
+* フランスのメンバーは、翻訳機能を使用して日本語のコメントをフランス語に翻訳します。
+* グローバルな通信。
 
 ## 概要 {#overview}
 
@@ -35,7 +35,7 @@ UGC を翻訳することにより、言語の障壁が取り除かれ、サイ�
 
 翻訳サービスプロバイダーがサイトに関連付けられているときは、そのサイトの各言語コピーで、SCF コンポーネントを通じて投稿された UGC（コメントなど）のスレッドが独自に保持されます。
 
-翻訳サービスプロバイダーに加えて翻訳フレームワークが設定されているときは、サイトの各言語コピーが UGC の 1 つのスレッドを共有できるので、言語コピー間のグローバルな情報通信を実現できます。Instead of a discussion thread segregated by language, the configured [global shared store](#global-translation-of-ugc) enables the entire thread to be visible regardless from which language copy it is being viewed. また、複数の翻訳統合設定を、地域別など、グローバル参加者の論理的なグループに対して、異なるグローバル共有ストアを指定するように設定することもできます。
+翻訳サービスプロバイダーに加えて翻訳フレームワークが設定されているときは、サイトの各言語コピーが UGC の 1 つのスレッドを共有できるので、言語コピー間のグローバルな情報通信を実現できます。Instead of a discussion thread segregated by language, the configured [global shared store](#global-translation-of-ugc) enables the entire thread to be visible regardless from which language copy it is being viewed. さらに、複数の翻訳統合設定を、地域別など、グローバル参加者の論理的なグループに対して、異なるグローバル共有ストアを指定するように設定できます。
 
 ## デフォルトの翻訳サービス {#the-default-translation-service}
 
@@ -49,6 +49,7 @@ When [creating a community site](sites-console.md), the default translation serv
 >
 >実稼動システムでは、ライセンスを取得した翻訳サービスが必要です。If not licensed, the default translation service should be [turned off](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
 
+
 ## UGC のグローバル翻訳 {#global-translation-of-ugc}
 
 Web サイトに[複数の言語コピー](../../help/sites-administering/tc-prep.md)がある場合、デフォルトの翻訳サービスでは、あるサイトで入力された UGC が別のサイトで入力された UGC と関連している可能性は認識されません。その UGC が本質的に同じコンポーネント（そのコンポーネントを含んでいるページの言語コピー）で生成された場合でも同様です。
@@ -57,7 +58,7 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 
 「1 つのグループでの会話」が必要な場合は、複数の言語コピーを持つ Web サイト全体のグローバル翻訳を有効にして、どの言語コピーからでもスレッド全体を見られるようにする必要があります。
 
-例えば、基本となるサイトにフォーラムを設け、いくつかの言語コピーを作成し、グローバル翻訳を有効にした場合は、ある言語コピーで作成されたフォーラムに投稿されたトピックは、すべての言語コピーで表示されます。これは返信の場合でも同様で、どの言語コピーから返信が入力されたかは関係ありません。その結果、トピックがどの言語コピーされているかに関係なく、トピックとその返信スレッド全体が表示されます。
+例えば、基本となるサイトにフォーラムを設け、いくつかの言語コピーを作成し、グローバル翻訳を有効にした場合は、ある言語コピーで作成されたフォーラムに投稿されたトピックは、すべての言語コピーで表示されます。これは返信の場合でも同様で、どの言語コピーから返信が入力されたかは関係ありません。その結果、トピックのコピー元の言語に関係なく、トピックと返信のスレッド全体が表示されます。
 
 >[!CAUTION]
 >
@@ -66,6 +67,7 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 >While the UGC is still in the [common store](working-with-srp.md), it is located under the language-specific UGC location, while new content, added after global translation was configured, is being retrieved from the global shared store location.
 >
 >言語別のコンテンツをグローバル共有ストアに移動または統合する移行ツールはありません。
+
 
 ### 翻訳統合の設定 {#translation-integration-configuration}
 
@@ -79,11 +81,11 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 * Select **[!UICONTROL Cloud Services]**
 * Scroll down to **[!UICONTROL Translation Integration]**
 
-![chlimage_1-65](assets/chlimage_1-65.png)
+   ![chlimage_1-65](assets/chlimage_1-65.png)
 
 * Select **[!UICONTROL Show Configurations]**
 
-![chlimage_1-66](assets/chlimage_1-66.png)
+   ![chlimage_1-66](assets/chlimage_1-66.png)
 
 * Select `[+]` icon next to **[!UICONTROL Available Configurations]** to create a new configuration
 
@@ -91,11 +93,17 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-* **[!UICONTROL 親設定]**（必須）通常はデフォルトのままにします。 デフォルトは `/etc/cloudservices/translation` です。
+* **[!UICONTROL 親設定]**
 
-* **[!UICONTROL タイトル]**（必須）選択した表示タイトルを入力します。 デフォルト値はありません。
+   （必須）通常はデフォルトのままにします。 デフォルトは `/etc/cloudservices/translation` です。
 
-* **[!UICONTROL 名前]**（オプション）設定の名前を入力します。 初期設定はタイトルをベースにしたノード名です。
+* **[!UICONTROL タイトル]**
+
+   （必須）選択した表示タイトルを入力します。 デフォルト値はありません。
+
+* **[!UICONTROL 名前]**
+
+   （オプション）設定の名前を入力します。 初期設定はタイトルをベースにしたノード名です。
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
@@ -105,20 +113,21 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 
 For detailed instructions visit [Creating a Translation Integration Configuration](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
 
-* **[!UICONTROL サイト]**&#x200B;タブ：デフォルトのままで構いません。
+* **[!UICONTROL 「サイト]** 」タブ：をデフォルトのままにすることができます。
+
 * **[!UICONTROL コミュニティ]**&#x200B;タブ：
    * **[!UICONTROL 翻訳プロバイダー]**&#x200B;ドロップダウンリストから翻訳プロバイダーを選択します。Default is `microsoft`, the trial service.
 
    * **[!UICONTROL コンテンツのカテゴリ]**&#x200B;翻訳対象のコンテンツを説明するカテゴリを選択します。初期設定は です。`General.`
 
-   * **[!UICONTROL 一般的なストアのパスとして使用するロケールを選択]**（オプション）UGC を格納するためのロケールを選択すると、すべての言語コピーからの投稿が 1 つのグローバルな会話に表示されます。By convention, choose the locale for the [base language](sites-console.md#translation) for the website. を選択する `No Common Store` と、グローバル翻訳が無効になります。 デフォルトでは、グローバル翻訳は無効です。
+   * **[!UICONTROL 一般的なストアのパスとして使用するロケールを選択]**（オプション）UGC を格納するためのロケールを選択すると、すべての言語コピーからの投稿が 1 つのグローバルな会話に表示されます。By convention, choose the locale for the [base language](sites-console.md#translation) for the website. を選択すると、 `No Common Store` グローバル翻訳が無効になります。 デフォルトでは、グローバル翻訳は無効です。
 
-* **[!UICONTROL アセット]**&#x200B;タブ：デフォルトのままで構いません。
+* **[!UICONTROL 「アセット]** 」タブ：をデフォルトのままにすることができます。
 * 「**[!UICONTROL OK]**」を選択します。
 
 #### アクティベーション {#activation}
 
-新しい翻訳統合クラウドサービスは、パブリッシュ環境に対してアクティベートする必要があります。Webサイトに関連付けられている場合、まだアクティブ化されていないと、関連付けられたページが公開される際に、アクティベートワークフローはこのクラウドサービス設定を公開するように求めます。
+新しい翻訳統合クラウドサービスは、パブリッシュ環境に対してアクティベートする必要があります。Webサイトに関連付けられている場合、まだアクティブ化されていないと、関連付けられているページが公開される際に、アクティベーションワークフローはこのクラウドサービス設定の公開を促します。
 
 ## 翻訳設定の管理 {#managing-translation-settings}
 
@@ -132,13 +141,14 @@ For detailed instructions visit [Creating a Translation Integration Configuratio
 >
 >サイト訪問者が匿名の場合、または言語設定を自分のプロファイルに登録していない場合は、ページテンプレートのベース言語が設定言語になります。
 
+
 ### ユーザーによる設定 {#user-preference}
 
 #### ユーザープロファイル {#user-profile}
 
 どのコミュニティサイトにも、メンバー用のユーザープロファイルがあります。サインインしたメンバーはこのプロファイルを編集して、自分の情報をコミュニティに公開したり、自分用の設定を保存したりできます。
 
-こうした設定の 1 つに、コミュニティコンテンツを常に指定の言語で表示するかどうかのオプションがあります。デフォルトでは、この設定は設定されておらず、デフォルトではシステム設定になります。 ユーザーは、この設定を「オン」または「オフ」に変更して、システム設定を上書きできます。
+こうした設定の 1 つに、コミュニティコンテンツを常に指定の言語で表示するかどうかのオプションがあります。デフォルトでは、この設定は設定されておらず、システム設定がデフォルトになります。 ユーザーは、この設定を「オン」または「オフ」に変更して、システム設定を上書きできます。
 
 ページが自動的にユーザーの設定言語に翻訳される場合も、元のテキストを表示したり、翻訳を改善したりするための UI を使用できます。
 
@@ -146,4 +156,4 @@ For detailed instructions visit [Creating a Translation Integration Configuratio
 
 ### コミュニティサイトの設定 {#community-site-setting}
 
-コミュニティサイトを作成すると、翻訳オプションを有効化して設定できます。コンテンツの匿名サイト訪問者が表示できる場合、翻訳設定は有効ですが、ユーザーのプロファイル設定によって上書きされます。
+コミュニティサイトを作成すると、翻訳オプションを有効化して設定できます。翻訳設定は、コンテンツの匿名サイト訪問者に対して有効ですが、表示の場合はユーザーのプロファイル設定によって上書きされます。
