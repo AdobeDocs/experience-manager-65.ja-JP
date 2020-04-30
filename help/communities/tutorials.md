@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,7 +21,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## クライアント側のカスタマイズ {#client-side-customization}
 
-[SCF のクライアント側のカスタマイズ](client-customize.md)も参照してください。
+関連トピック：
+
+* [SCFクライアント側のカスタマイズ](client-customize.md)
 
 * [コミュニティコンポーネントガイド](components-guide.md)
 
@@ -45,7 +47,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVC Demositionsでは、SCF+SRPコンポーネントを最初から開発する方法を示します。
+   ToDo MVCデモでは、SCF+SRPコンポーネントを最初から開発する方法を示します。
 
 * [AEM Communities 使用の手引き](getting-started.md)
 
@@ -59,11 +61,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Geometrixxサンプルパッケージには、デモユーザーが含まれています。 There is often a difference in experience between being a visitor (not logged in) or a member (logged in) and, as long as the Geometrixx samples packages remain installed, you may use these users to simulate a logged in state when exploring with the [Community Components guide](components-guide.md).
 
-レールを使用して、**[!UICONTROL ツール／運営／セキュリティ／ユーザー]**&#x200B;の順に移動すると、デモユーザーが一覧表示されます。Or use the Classic UI [security console](http://localhost:4502/useradmin) for managing users and groups.
+For a full list of the demo users, navigate using the Rail to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security > Users]**. Or use the Classic UI [security console](http://localhost:4502/useradmin) for managing users and groups.
 
 [コミュニティサイトが作成されている](getting-started.md)場合、その[コミュニティユーザーグループ](users.md)にデモユーザーを割り当てることができます。
 
-***ユーザーID */パ*スワード：***
+***user id */*password***:
 
 * aaron.mcdonald@mailinator.com／password
 * emily.andrews@mailinator.comパスワード
