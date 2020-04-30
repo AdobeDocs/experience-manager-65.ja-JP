@@ -3,7 +3,7 @@ title: アセットのデジタル著作権管理
 description: AEM でライセンスされているアセットの状態と有効期限の情報を管理する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*図：カード表示では、カード上のフラグが期限切れアセットを示します*
+*図：カード表示では、カードのフラグは期限切れのアセットを示します。*
 
 **リスト表示**
 
@@ -123,7 +123,7 @@ Adobe Experience Manager (AEM) Assets のアセットコンソールには、ア
    ![有効期限フィールドにアセットの有効期限の日時を設定します。](assets/asset-properties-advanced-tab.png)
 
 
-   *図：アセットの有効期限を設定するためのアセットプロパティの「詳細」タブ*
+   *図：アセッ[!UICONTROL トのプロパティ]ページの「詳細」タブで、アセットの有効期限を設定します。*
 
 1. 「**[!UICONTROL 保存]**」をクリックし、次に「**[!UICONTROL 閉じる]**」をクリックしてアセットコンソールを表示します。
 1. アセットの公開ステータスは、カード表示のアセットのサムネールの下部に、有効期限切れのステータスを示します。リスト表示では、アセットのステータスが「**[!UICONTROL 期限切れ]**」と表示されます。
