@@ -1,23 +1,23 @@
 ---
-title: アセットパフォーマンス調整ガイド
-description: AEMの設定、ハードウェア、ソフトウェア、およびネットワークコンポーネントに対する変更に関する提案とガイダンス。ボトルネックを解消し、AEM Assetsのパフォーマンスを最適化します。
+title: '[!DNL Adobe Experience Manager Assets]のパフォーマンス調整。'
+description: '[!DNL Experience Manager]の構成、ハードウェア、ソフトウェア、およびネットワークコンポーネントの変更に関する提案とガイダンス。ボトルネックを解消し、[!DNL Experience Manager Assets]のパフォーマンスを最適化します。'
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 <!-- TBD: Get reviewed by engineering. -->
 
-# Assets performance tuning guide {#assets-performance-tuning-guide}
+# [!DNL Adobe Experience Manager Assets] 性能調整ガイド {#assets-performance-tuning-guide}
 
-Adobe Experience Manager (AEM) Assets のセットアップには、数多くのハードウェア、ソフトウェアおよびネットワークコンポーネントが含まれています。導入のシナリオによっては、パフォーマンス上のボトルネックを排除するために、ハードウェア、ソフトウェアおよびネットワークコンポーネントに対して特殊な設定変更が必要になる場合があります。
+An [!DNL Experience Manager Assets] setup contains a number of hardware, software, and network components. 導入のシナリオによっては、パフォーマンス上のボトルネックを排除するために、ハードウェア、ソフトウェアおよびネットワークコンポーネントに対して特殊な設定変更が必要になる場合があります。
 
-また、特定のハードウェアおよびソフトウェアを最適化するガイドラインを識別してそれに従うことで優良な基盤を構築し、AEM Assets の導入によりパフォーマンス、スケーラビリティおよび信頼性の面で期待どおりの結果を得られます。
+In addition, identifying and adhering to certain hardware and software optimization guidelines helps build a sound foundation that enables your [!DNL Experience Manager Assets] deployment to meet expectations around performance, scalability, and reliability.
 
-AEM Assets のパフォーマンスが低下すると、インタラクティブパフォーマンス、アセット処理、ダウンロード速度などの領域におけるユーザーエクスペリエンスに影響します。
+Poor performance in [!DNL Experience Manager Assets] can impact user experience around interactive performance, asset processing, download speed, and other areas.
 
 パフォーマンスの最適化は、すべてのプロジェクトでターゲット指標を確立する前に実行する、基本的なタスクです。
 
@@ -25,7 +25,7 @@ AEM Assets のパフォーマンスが低下すると、インタラクティブ
 
 ## プラットフォーム {#platform}
 
-AEM は数々のプラットフォームでサポートされていますが、Linux や Windows ではパフォーマンスを最適化し実装を簡単にする優れたネイティブツールがサポートされています。AEM Assets のデプロイメントでは、高いメモリ要件を満たすために 64 ビットのオペレーティングシステムを採用するのが理想です。あらゆる AEM のデプロイメントにおいて、可能である場合は TarMK を実装してください。TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。TarMK オフロードインスタンスを追加すると、AEM Assets のデプロイメントのワークフローの処理能力を高めることができます。
+Experience Managerは様々なプラットフォームでサポートされていますが、LinuxおよびWindows上で最も高いサポートが見つかり、最適なパフォーマンスと実装のしやすさに貢献しています。 Ideally, you should deploy a 64-bit operating system to meet the high memory requirements of an [!DNL Experience Manager Assets] deployment. Experience Managerの導入と同様に、可能な限りTarMKを導入する必要があります。 TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。You can add TarMK offload instances to increase the workflow processing power of your [!DNL Experience Manager Assets] deployment.
 
 ### 一時フォルダ {#temp-folder}
 
@@ -42,7 +42,7 @@ mkfs -q /dev/ram1 800000
 
 Windows OSでは、サードパーティ製のドライバを使用してRAMドライブを作成するか、SSDなどの高パフォーマンスのストレージを使用します。
 
-Once the high performance temporary volume is ready, set the JVM parameter `-Djava.io.tmpdir`. For example, you could add the JVM parameter below to the `CQ_JVM_OPTS` variable in the `bin/start` script of AEM:
+Once the high performance temporary volume is ready, set the JVM parameter `-Djava.io.tmpdir`. For example, you could add the JVM parameter below to the `CQ_JVM_OPTS` variable in the `bin/start` script of [!DNLExperience Manager]:
 
 `-Djava.io.tmpdir=/mnt/aem-tmp`
 
@@ -50,7 +50,7 @@ Once the high performance temporary volume is ready, set the JVM parameter `-Dja
 
 ### Java バージョン {#java-version}
 
-パフォーマンスを最適化するために、AEM AssetsをJava 8にデプロイすることをお勧めします。
+パフォーマンスを最適化す [!DNL Experience Manager Assets] るために、Java 8へのデプロイをお勧めします。
 
 >[!NOTE]
 >
@@ -70,19 +70,19 @@ Once the high performance temporary volume is ready, set the JVM parameter `-Dja
 
 ### ファイルデータストアの設定 {#file-data-store-configuration}
 
-すべての AEM Assets のユーザーに、データストアをセグメントストアから分離することをお勧めします。また、`maxCachedBinarySize` パラメーターと `cacheSizeInMB` パラメーターを設定することでパフォーマンスを最大化するのに役立ちます。キャッシュに含めることができるように、`maxCachedBinarySize` を最小のファイルサイズに設定します。`cacheSizeInMB` 内のデータストアで使用するインメモリキャッシュのサイズを指定します。この値は合計ヒープサイズの 2～10％に設定することをお勧めします。ただし、負荷テストやパフォーマンステストが理想的な設定を決定するのに役立ちます。
+Separating the data store from the segment store is recommended for all [!DNL Experience Manager Assets] users. また、`maxCachedBinarySize` パラメーターと `cacheSizeInMB` パラメーターを設定することでパフォーマンスを最大化するのに役立ちます。キャッシュに含めることができるように、`maxCachedBinarySize` を最小のファイルサイズに設定します。`cacheSizeInMB` 内のデータストアで使用するインメモリキャッシュのサイズを指定します。この値は合計ヒープサイズの 2～10％に設定することをお勧めします。ただし、負荷テストやパフォーマンステストが理想的な設定を決定するのに役立ちます。
 
 ### バッファーされる画像キャッシュの最大サイズの設定 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-多数のアセットを Adobe Experience Manager にアップロードするときは、メモリ消費の予期しないスパイクに対応するために、また OutOfMemoryErrors による JVM エラーを避けるために、バッファーされる画像キャッシュの最大サイズを減らしてください。例えば、最大ヒープ（-`Xmx` パラメーター）が 5 GB のシステムで、Oak BlobCache が 1 GB、文書キャッシュが 2 GB に設定されているとします。このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
+When uploading large amounts of assets to [!DNLAdobe Experience Manager], to allow for unexpected spikes in memory consumption and to prevent JVM fails with OutOfMemoryErrors, reduce the configured maximum size of the buffered image cache. 例えば、最大ヒープ（-`Xmx` パラメーター）が 5 GB のシステムで、Oak BlobCache が 1 GB、文書キャッシュが 2 GB に設定されているとします。このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
 
 バッファーされるキャッシュサイズは OSGi Web コンソールで設定します。`https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache` で、プロパティ `cq.dam.image.cache.max.memory` をバイト単位で指定します。例えば、1073741824 は 1 GB です（1024 x 1024 x 1024 = 1 GB）。
 
-AEM 6.1 SP1 以降で `sling:osgiConfig` ノードを使用してこのプロパティを設定する場合は、データタイプを必ず Long にします。詳しくは、[CQBufferedImageCache がアセットのアップロード中にヒープを消費する](https://helpx.adobe.com/jp/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)を参照してください。
+From Experience Manager 6.1 SP1, if you&#39;re using a `sling:osgiConfig` node for configuring this property, make sure to set the data type to Long. 詳しくは、[CQBufferedImageCache がアセットのアップロード中にヒープを消費する](https://helpx.adobe.com/jp/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)を参照してください。
 
 ### 共有データストア {#shared-data-stores}
 
-S3 または共有ファイルデータストアの実装は、ディスク領域の節約と大規模な実装におけるネットワークスループットの向上に役立ちます。For more information on the pros and cons of using a shared datastore, see [Assets Sizing Guide](/help/assets/assets-sizing-guide.md).
+S3 または共有ファイルデータストアの実装は、ディスク領域の節約と大規模な実装におけるネットワークスループットの向上に役立ちます。For more information on the pros and cons of using a shared datastore, see [Assets sizing guide](/help/assets/assets-sizing-guide.md).
 
 ### S3 データストア {#s-data-store}
 
@@ -111,12 +111,12 @@ accessKey=<snip>
 
 ## ネットワークの最適化 {#network-optimization}
 
-多くの企業には HTTP トラフィックをスニッフィングするファイアウォールがあり、ファイルのアップロードに干渉しファイルを破損するので、HTTPS を有効にすることをお勧めします。サイズの大きなファイルのアップロードについては、Wi-Fi ネットワークでは簡単に飽和するおそれがあるので、必ず有線でネットワークに接続してください。For guidelines on identifying network bottlenecks, see [Assets Sizing Guide](/help/assets/assets-sizing-guide.md). ネットワークトポロジを分析してネットワークのパフォーマンスを評価するには、[Assets のネットワークに関する考慮事項](/help/assets/assets-network-considerations.md)を参照してください。
+多くの企業には HTTP トラフィックをスニッフィングするファイアウォールがあり、ファイルのアップロードに干渉しファイルを破損するので、HTTPS を有効にすることをお勧めします。サイズの大きなファイルのアップロードについては、Wi-Fi ネットワークでは簡単に飽和するおそれがあるので、必ず有線でネットワークに接続してください。For guidelines on identifying network bottlenecks, see [Assets sizing guide](/help/assets/assets-sizing-guide.md). To assess network performance by analyzing network topology, see [Assets network considerations](/help/assets/assets-network-considerations.md).
 
-第一に、ネットワークの最適化戦略は使用できる帯域幅や、AEM インスタンスに対する負荷によって変わります。ファイアウォールやプロキシなどの一般的な設定オプションは、ネットワークのパフォーマンスの改善に役立ちます。留意点は次のとおりです。
+Primarily, your network optimization strategy depends upon the amount of bandwidth available and the load on your [!DNLExperience Manager] instance. ファイアウォールやプロキシなどの一般的な設定オプションは、ネットワークのパフォーマンスの改善に役立ちます。留意点は次のとおりです。
 
-* インスタンスタイプ（小、中、大）によって、AEM インスタンスに十分なネットワーク帯域幅があることを確認します。AEM が AWS にホストされている場合、帯域幅が適切に分散されていることが特に重要です。
-* AEM インスタンスが AWS にホストされている場合、広い用途に対応するスケールポリシーがあると便利です。高い負荷が予想される場合は、インスタンスのサイズを大きくします。負荷が標準的または低い場合は、インスタンスのサイズを小さくします。
+* インスタンスのタイプ（小、中、大）に応じて、Experience Managerインスタンスに十分なネットワーク帯域幅があることを確認します。 Adequate bandwidth allocation is especially important if [!DNLExperience Manager] is hosted on AWS.
+* If your [!DNLExperience Manager] instance is hosted on AWS, you can benefit by having a versatile scaling policy. 高い負荷が予想される場合は、インスタンスのサイズを大きくします。負荷が標準的または低い場合は、インスタンスのサイズを小さくします。
 * HTTPS：ユーザーの多くは HTTP トラフィックをスニッフィングするファイアウォールを装備しており、ファイルのアップロード操作に干渉しファイルを破損することもあります。
 * サイズの大きなファイルのアップロード：必ず有線でネットワークに接続してください（Wi-Fi 接続は簡単に飽和するおそれがあります）。
 
@@ -126,7 +126,7 @@ accessKey=<snip>
 
 Wherever possible, set the [!UICONTROL DAM Update Asset] workflow to Transient. この設定にすると、ワークフローが通常のトラッキングやアーカイブ処理をパススルーする必要がなくなるので、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。
 
-1. AEMインスタ `/miscadmin` ンス内のに移動しま `https://[aem_server]:[port]/miscadmin`す。
+1. Experience Managerインスタ `/miscadmin` ンス( [!DNLE)で] 、に移動しま `https://[aem_server]:[port]/miscadmin`す。
 
 1. ツール/ワ **[!UICONTROL ークフ]** ロー **[!UICONTROL /モデル]** / **[!UICONTROL dam]** dam **** leversを展開します。
 
@@ -150,9 +150,9 @@ For example, after executing numerous non-transient workflows (that creates work
 
 ### 並列ジョブの最大数 {#maximum-parallel-jobs}
 
-デフォルトでは、AEM は最大でサーバー上のプロセッサーと同じ数の並列ジョブを実行できます。The problem with this setting is that during periods of heavy load, all of the processors are occupied by [!UICONTROL DAM Update Asset] workflows, slowing down UI responsiveness and preventing AEM from running other processes that safeguard server performance and stability. 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
+By default, [!DNLExperience Manager] runs a maximum number of parallel jobs equal to the number of processors on the server. The problem with this setting is that during periods of heavy load, all of the processors are occupied by [!UICONTROL DAM Update Asset] workflows, slowing down UI responsiveness and preventing [!DNLExperience Manager] from running other processes that safeguard server performance and stability. 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
-1. Experience Manager Authorで、に移動します `https://[aem_server]:[port]/system/console/slingevent`。
+1. Experience Manager [!DNLEの作成者] 、にアクセスしま `https://[aem_server]:[port]/system/console/slingevent`す。
 
 1. Click **[!UICONTROL Edit]** on each workflow queue that is relevant to your implementation, for example **[!UICONTROL Granite Transient Workflow Queue]**.
 
@@ -178,7 +178,7 @@ If you have a limited disk space and run [!UICONTROL DAM Update Asset] workflows
 
 多くの Sites のお客様はリクエストされた時点で画像のサイズを変更および切り抜く画像サーブレットを実装しています。これにより、パブリッシュインスタンスにさらに負荷がかけられます。ただし、これらの画像をキャッシュできる限り、問題を減らすことができます。
 
-もう 1 つの方法では、Scene7 テクノロジーを使用して画像の操作をすべて引き渡します。さらに、Brand Portal もデプロイできます。Brand Portal は、AEM インフラストラクチャからレンディションを生成する責務だけでなく、パブリッシュ層全体も受け継ぎます。
+もう 1 つの方法では、Scene7 テクノロジーを使用して画像の操作をすべて引き渡します。Additionally, you can deploy Brand Portal that not only takes over rendition generation responsibilities from the [!DNLExperience Manager] infrastructure, but also the entire publish tier.
 
 #### ImageMagick {#imagemagick}
 
@@ -203,17 +203,17 @@ In addition, set the path of ImageMagick&#39;s temporary folder in the `configur
 
 >[!CAUTION]
 >
->使用可能なすべてのディスク領域を ImageMagick で使用する場合、設定を誤るとサーバーの動作が不安定になるおそれがあります。ImageMagick を使用して大きなファイルを処理するために必要なポリシー変更をおこなうと、AEM のパフォーマンスに影響する可能性があります。詳しくは、[ImageMagick のインストールと設定](/help/assets/best-practices-for-imagemagick.md)を参照してください。
+>使用可能なすべてのディスク領域を ImageMagick で使用する場合、設定を誤るとサーバーの動作が不安定になるおそれがあります。The policy changes required to process large files using ImageMagick may impact the [!DNLExperience Manager] performance. 詳しくは、[ImageMagick のインストールと設定](/help/assets/best-practices-for-imagemagick.md)を参照してください。
 
 >[!NOTE]
 >
 >ImageMagickとファイルは、ではなく、で使用で `policy.xml` きます。 `configure.xml` 設定ファ `/usr/lib64/ImageMagick-&#42;/config/` イルの場所は `/etc/ImageMagick/`[](https://www.imagemagick.org/script/resources.php) 、ImageMagickのドキュメントを参照してください。
 
-Adobe Managed Services(AMS)でExperience Managerを使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、アドビカスタマーケアにお問い合わせください。 AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 3000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerでは処理されない場合があります。
+If you are using [!DNL Experience Manager] on Adobe Managed Services (AMS), reach out to Adobe Customer Care if you plan to process lots of large PSD or PSB files. AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] では、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
 
 ### XMP の書き戻し {#xmp-writeback}
 
-XMP の書き戻しにより、AEM でメタデータが変更されたときは常に元のアセットが更新されます。これにより、次のような結果になります。
+XMP writeback updates the original asset whenever metadata is modified in [!DNL Experience Manager], which results in the following:
 
 * アセット自体が変更されます
 * アセットのバージョンが作成されます
@@ -245,54 +245,16 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 ### Lucene Index の設定 {#lucene-index-configurations}
 
-一部の最適化は、AEM Assetsのパフォーマンスを向上させるために、Oakインデックスの設定で行うことができます。 インデックス設定を更新して、再インデックス作成時間を改善します。
+Some optimizations can be done on the Oak index configurations that can help improve [!DNL Experience Manager Assets] performance. インデックス設定を更新して、再インデックス作成時間を改善します。
 
-1. Open CRXDe `/crx/de/index.jsp` and log in as an administrative user
-1. 参照先 `/oak:index/lucene`
-1. 値、および追加を持つ文[] 字列プ `excludedPaths` ロ `/var`パテ `/etc/workflow/instances`ィで `/etc/replication`す。
-1. 参照しま `/oak:index/damAssetLucene`す。 値を追加持つプ `String[]` ロパティ `includedPaths``/content/dam`。
-1. 保存.
+1. Open CRXDe `/crx/de/index.jsp` and log in as an administrative user.
+1. 参照しま `/oak:index/lucene`す。
+1. 値、お `String[]` よびを `excludedPaths` 持つプロ `/var`パテ `/etc/workflow/instances`ィ `/etc/replication`です。および。
+1. 参照しま `/oak:index/damAssetLucene`す。 値を追加持つプ `String[]` ロパティ `includedPaths``/content/dam`。 変更を保存します。
 
-<!-- TBD: Review by engineering if required in 6.5 docs or not.
+例えば、PDFドキュメント内のテキストを検索する場合など、アセットの全文検索を行う必要がない場合は、無効にします。 フルテキストインデックスを無効にすることで、インデックスのパフォーマンスを向上できます。 テキスト抽出を無 [!DNL Apache Lucene] 効にするには、次の手順に従います。
 
-(AEM6.1 and 6.2 only) Update the `ntBaseLucene` index to improve asset delete and move performance:
-
-1. Browse to `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-
-1. Add two nt:unstructured nodes `slingResource` and `damResolvedPath` under `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-
-1. Set the properties below on the nodes (where `ordered` and `propertyIndex` properties are of type `Boolean`:
-
-   ```conf
-   slingResource
-   name="sling:resource"
-   ordered=false
-   propertyIndex= true
-   type="String"
-   damResolvedPath
-   name="dam:resolvedPath"
-   ordered=false
-   propertyIndex=true
-   type="String"
-   ```
-
-1. On the `/oak:index/ntBaseLucene` node, set the property `reindex=true`. Click **[!UICONTROL Save All]**.
-1. Monitor the error.log to see when indexing is completed:
-   Reindexing completed for indexes: [/oak:index/ntBaseLucene]
-1. You can also see that indexing is completed by refreshing the /oak:index/ntBaseLucene node in CRXDe as the reindex property would go back to false
-1. Once indexing is completed then go back to CRXDe and set the "type" property to disabled on these two indexes
-
-    * */oak:index/slingResource*
-    * */oak:index/damResolvedPath*
-
-1. Click "Save All"
--->
-
-Lucene テキスト抽出の無効化：
-
-例えば、PDFドキュメント内のテキストを検索する場合など、アセットの全文検索を行う必要がない場合は、無効にします。 フルテキストインデックスを無効にすることで、インデックスのパフォーマンスを向上できます。
-
-1. Go to the AEM package manager `/crx/packmgr/index.jsp`.
+1. インターフ [!DNL Experience Manager] ェイスで、 [!UICONTROL Package Managerにアクセスします]。
 1. disable_indexingbinarytextraction-10.zipで入手可能なパッケ [ージをアップロードしてインストールします](assets/disable_indexingbinarytextextraction-10.zip)。
 
 ### guessTotal {#guess-total}
@@ -303,13 +265,13 @@ Lucene テキスト抽出の無効化：
 
 ### サイズの大きなファイル {#large-files}
 
-AEM では、サイズの大きなファイルに関連する既知の問題が主に 2 つあります。ファイルのサイズが 2 GB 以上に到達すると、コールドスタンバイの同期でメモリ不足のエラーが発生することがあります。場合によっては、スタンバイの同期が実行されなくなります。また、プライマリインスタンスのクラッシュを引き起こすこともあります。このシナリオは、コンテンツパッケージを含む、AEM 内の 2 GB を超えるすべてのファイルが該当します。
+There are two major known issues related to large files in [!DNL Experience Manager]. ファイルのサイズが 2 GB 以上に到達すると、コールドスタンバイの同期でメモリ不足のエラーが発生することがあります。場合によっては、スタンバイの同期が実行されなくなります。また、プライマリインスタンスのクラッシュを引き起こすこともあります。This scenario applies to any file in [!DNL Experience Manager] that is larger than 2GB, including content packages.
 
-同様に、S3 共有データストアを使用している間にファイルのサイズが 2 GB に到達すると、キャッシュからファイルシステムにファイルが完全に保持されるまで、少し時間がかかることがあります。結果として、バイナリなしのレプリケーションを使用しているとき、レプリケーションが完了する前にバイナリデータが保持されていなかった可能性があります。この状況は、特にデータの可用性が重要な場合に問題を引き起こす可能性があります。
+同様に、共有S3データストアを使用してファイルのサイズが2 GBに達した場合、キャッシュからファイルシステムにファイルが完全に保持されるまで、しばらく時間がかかる場合があります。 結果として、バイナリなしのレプリケーションを使用しているとき、レプリケーションが完了する前にバイナリデータが保持されていなかった可能性があります。この状況は、特にデータの可用性が重要な場合に問題を引き起こす可能性があります。
 
 ## パフォーマンスのテスト {#performance-testing}
 
-すべての AEM のデプロイメントでボトルネックをすばやく特定し解決できるように、パフォーマンステストの体制を確立してください。留意点は次のとおりです。
+For every [!DNL Experience Manager] deployment, establish a performance testing regime that can identify and resolve bottlenecks quickly. 留意点は次のとおりです。
 
 ### ネットワークのテスト {#network-testing}
 
@@ -321,25 +283,25 @@ AEM では、サイズの大きなファイルに関連する既知の問題が�
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
 
-### AEM インスタンスのテスト {#aem-instance-testing}
+### [!DNL Experience Manager] インスタンス試験 {#aem-instance-testing}
 
-CPUの効率的な使用とロードシェアリングを通じて、待ち時間を最小限に抑え、高いスループットを実現するには、AEMインスタンスのパフォーマンスを定期的に監視します。 具体的には、次のことを実行します。
+To minimize latency and achieve high throughput through efficient CPU utilization and load-sharing, monitor the performance of your [!DNL Experience Manager] instance regularly. 具体的には、次のことを実行します。
 
-* AEM インスタンスに対して負荷テストを実行する
-* アップロードのパフォーマンスと UI の応答性を監視する
+* Run load tests against the [!DNL Experience Manager] instance.
+* アップロードのパフォーマンスと UI の応答性を監視する.
 
-## AEM Assets のパフォーマンスチェックリストおよびアセット管理タスクの影響 {#checklist}
+## [!DNL Experience Manager Assets] 資産管理タスクの実績チェックリストと影響 {#checklist}
 
-* HTTPS を有効化して企業の HTTP トラフィックスニッファーに対応する
-* サイズの大きなアセットのアップロードには有線接続を使用する
+* HTTPS を有効化して企業の HTTP トラフィックスニッファーに対応する.
+* サイズの大きなアセットのアップロードには有線接続を使用する.
 * Java 8 にデプロイする
-* 最適な JVM パラメーターを設定する
-* ファイルシステムデータストアまたは S3 データストアを設定する
-* 一時的なワークフローを有効化する
-* Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する
-* ImageMagick を設定してリソースの消費を制限する
-* Remove unnecessary steps from the [!UICONTROL DAM Update Asset] workflow
-* ワークフローとバージョンのパージを設定する
-* 最新のサービスパックとホットフィックスでインデックスを最適化する。その他のインデックスの最適化方法については、アドビサポートに問い合わせてください。
+* 最適な JVM パラメーターを設定する。
+* ファイルシステムのDataStoreまたはS3データストアを設定します。
+* 一時的なワークフローを有効化する.
+* Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する.
+* Configure [!DNL ImageMagick] to limit resource consumption.
+* Remove unnecessary steps from the [!UICONTROL DAM Update Asset] workflow.
+* ワークフローとバージョンのパージを設定する.
+* 最新のサービスパックとホットフィックスでインデックスを最適化する。利用可能なインデックスのその他の最適化については、アドビカスタマーケアにお問い合わせください。
 * guessTotal を使用してクエリのパフォーマンスを最適化する。
-* （**[!UICONTROL AEM Web コンソール]**&#x200B;の **[!UICONTROL Day CQ DAM Mime Type サービス]**&#x200B;を有効にすることで）ファイルのコンテンツからファイルタイプを検出するように AEM を構成している場合、大量のファイルを一括アップロードする際はリソースを大量に消費するので、ピーク時以外の時間におこないます。
+* If you configure [!DNL Experience Manager] to detect file types from the content of the files (by enabling **[!UICONTROL Day CQ DAM Mime Type Service]** in the **[!UICONTROL AEM Web Console]**), upload many files in bulk during non-peak hours as it is resource-intensive.
