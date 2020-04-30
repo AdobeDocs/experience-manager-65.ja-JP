@@ -1,28 +1,28 @@
 ---
-title: AEM Assetsを使用して、サポートされる様々なファイル形式を処理するためのベストプラクティスです。
-description: AEM Assetsを使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティスです。
+title: '[!DNL Adobe Experience Manager Assets]を使用して、サポートされる様々なファイル形式を処理するためのベストプラクティスです。'
+description: '[!DNL Experience Manager Assets]を使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティスです。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
 
-AEM Assets はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。サポート対象のアドビのライブラリには、Adobe Camera Raw、Gibson、Adobe PDF Rasterizer、Adobe InDesign Server などがあります。さらに、AEM Assets は ImageMagick や TwelveMonkeys などのサードパーティのライブラリをサポートします。
+[!DNL Adobe Experience Manager Assets] はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。The supported Adobe libraries include, [!DNL Adobe Camera Raw], Gibson, Adobe PDF Rasterizer, and [!DNL Adobe InDesign Server]. また、などのサ [!DNL Experience Manager Assets] ードパーティのライブラリもサ [!DNL ImageMagick]ポートさ [!DNL TwelveMonkeys]れています。
 
 サポートされるファイル形式については、[アセットでサポートされるファイル形式](/help/assets/assets-formats.md)を参照してください。
 
 >[!TIP]
 >
->Adobe Managed Services(AMS)でExperience Managerを使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、アドビのサポート窓口にご連絡ください。 AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 3000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerでは処理されない場合があります。
+>If you are using [!DNL Experience Manager] on Adobe Managed Services (AMS), reach out to Adobe Customer Care if you plan to process lots of large PSD or PSB files. AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] では、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
 
-## Adobe Camera Raw ライブラリ {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw] ライブラリ {#adobe-camera-raw-library}
 
-最適なパフォーマンスを得るために、RAWファイルとDNGファイルにはAdobe Camera Rawライブラリを使用することをお勧めします。
+最適なパフォーマンスを得るために、RAWファイルとDNGフ [!DNL Adobe Camera Raw] ァイルにはライブラリを使用することをお勧めします。
 
-Adobe Camera Rawライブラリは、入力としてCMYKカラープロファイルをサポートします。 ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
+[!DNL Adobe Camera Raw] ライブラリは、CMYKカラープロファイルを入力としてサポートします。 ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
 
 詳しくは、 [Camera Rawのサポートを参照してください](/help/assets/camera-raw.md)。
 
@@ -36,26 +36,26 @@ Adobe Camera Rawライブラリは、入力としてCMYKカラープロファイ
 
 PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDFラスタライザライブラリは、カラースペースの変換をサポートしていません。 ソースPDFファイルのカラースペースに関係なく、Adobe PDFラスタライザーはRGB出力のみを生成します。
 
-## Adobe InDesign Server {#adobe-indesign-server}
+## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
-IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。For more information, see [Adding AEM assets as references in Adobe InDesign](/help/assets/managing-linked-subassets.md#refai).
+Adobe recommends that you use [!DNL Adobe InDesign Server] to extract [!DNL Adobe InDesign]-specific renditions, such as IDML and HTML. For more information, see [Adding Experience Manager assets as references in Adobe InDesign](/help/assets/managing-linked-subassets.md#refai).
 
-## Dynamic Media  {#dynamic-media}
+## [!DNL Dynamic Media]  {#dynamic-media}
 
-Dynamic Media は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。Dynamic Media の有効化について詳しくは、[Dynamic Media の設定](/help/assets/config-dynamic.md)を参照してください。
+[!DNL Dynamic Media] は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。For details around enabling [!DNL Dynamic Media], see [Configuring Dynamic Media](/help/assets/config-dynamic.md).
 
-現在、Dynamic Media では、1 ファイルにつき最大 20 GB のコンテンツのビデオをサポートしています。
+Currently, [!DNL Dynamic Media] can support videos up to 20 GB of content per file.
 
 ## ImageMagick ライブラリ {#imagemagick-library}
 
 次のシナリオについては、ImageMagick ライブラリの使用をお勧めします。
 
-* EPS ファイルのサムネールのレンディションを生成するとき
-* イメージプロファイル情報を保持するとき
-* 透明性を保持するとき
-* PSD および PSB ファイルを処理するとき
+* EPS ファイルのサムネールのレンディションを生成するとき。
+* イメージプロファイル情報を保持するとき.
+* 透明性を保持するとき.
+* PSD および PSB ファイルを処理するとき.
 
-To know how to set up the ImageMagic library in AEM, see [Using ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). 最適な使用方法については、[ImageMagick の設定のベストプラクティス](/help/assets/best-practices-for-imagemagick.md)を参照してください。
+To know how to set up the [!DNL ImageMagick] library in [!DNL Experience Manager], see [Using ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). 最適な使用方法については、[ImageMagick の設定のベストプラクティス](/help/assets/best-practices-for-imagemagick.md)を参照してください。
 
 ## 画像トランスコーディングライブラリ {#image-transcoding-library}
 
