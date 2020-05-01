@@ -3,7 +3,7 @@ title: Assets でサポートされるファイル形式
 description: AEM Assetsおよびダイナミックメディアでサポートされるファイル形式のリストと、各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 134530e6e4cabc31342fc3136ec3218ba5acea4a
+source-git-commit: 2b30ab18aa22352d7ece4617d22391759592fd19
 
 ---
 
@@ -42,7 +42,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 △結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-## ダイナミックメディアでサポートされているラスターイメージ形式(#supported-raster-image-formats-dynamic-media)
+## ダイナミックメディアでサポートされるラスターイメージ形式 {#supported-raster-image-formats-dynamic-media}
 
 | ファイル形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -67,7 +67,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## ダイナミックメディアでサポートされていないラスターイメージ形式(#unsupported-image-formats-dynamic-media)
+## ダイナミックメディアでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
 次のリストでは、ダイナミックメディアでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
 
@@ -168,7 +168,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## ダイナミックメディアでサポートされているドキュメント形式(#supported-ドキュメント形式 — ダイナミックメディア)
+## ダイナミックメディアでサポートされるドキュメント形式 {#supported-document-formats-dynamic-media}
 
 | ファイル形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
