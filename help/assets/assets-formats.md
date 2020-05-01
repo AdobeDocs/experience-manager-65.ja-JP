@@ -1,14 +1,14 @@
 ---
 title: Assets でサポートされるファイル形式
-description: AEM Assetsおよびダイナミックメディアでサポートされるファイル形式のリストと、各形式でサポートされる機能です。
+description: AEM Assetsおよびダイナミックメディアでサポートされるファイル形式のリストと、各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1d16716d5fcf5b05a741b2d06d333e5f80e0d290
+source-git-commit: 134530e6e4cabc31342fc3136ec3218ba5acea4a
 
 ---
 
 
-# サポートされるアセット形式 {#assets-supported-formats}
+# サポートされるアセットの形式 {#assets-supported-formats}
 
 AEM Assets は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。
 
@@ -22,7 +22,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | * | アドオン機能により対応 |
 | − | 適用なし |
 
-## AEM Assetsでサポートされるラスター画像形式 {#supported-raster-image-formats}
+## AEM Assetsでサポートされるラスターイメージ形式 {#supported-raster-image-formats}
 
 | ファイル形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | 編集 | メタデータの書き戻し | インサイト |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -40,7 +40,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-‡ PSDファイルから、結合された画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+△結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 ## ダイナミックメディアでサポートされているラスターイメージ形式(#supported-raster-image-formats-dynamic-media)
 
@@ -55,17 +55,28 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-**‡ PSDフ** ァイルから、結合された画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**△** 結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にする方法については、コマンドラインベースのメ [ディアハンドラを参照してくださ](media-handlers.md#command-line-based-media-handler)い。
+* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にする方法については、 [コマンドラインベースのメディアハンドラを参照してください](media-handlers.md#command-line-based-media-handler)。
 
 * Metadata writeback works for PSB file format when it is added to the `NComm` handler.
 
 * EPS ファイルの動的レンディションのプレビューと生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
+
+## ダイナミックメディアでサポートされていないラスターイメージ形式(#unsupported-image-formats-dynamic-media)
+
+次のリストでは、ダイナミックメディアでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
+
+* 100 MBを超えるIDATチャンクサイズを持つPNGファイル。
+* PSBファイル。
+* CMYK、RGB、グレースケール、ビットマップ以外のカラースペースを持つPSDファイルはサポートされていません。 DuoTone、Lab、およびインデックス付きカラースペースはサポートされていません。
+* 16を超えるビット数を持つPSDファイル。
+* 浮動小数点データを持つTIFFファイル。
+* Labカラースペースを持つTIFFファイル。
 
 <!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
 ## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
@@ -89,7 +100,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い Adobe Illustrator ファイルおよび PDF ファイルの高品質のサムネールとプレビューを生成します。次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
-* 処理にリソースを大量に消費する、コンテンツを大量に消費するAI/PDFファイル。
+* 処理にリソースを大量に消費する、コンテンツを集中的に使用するAI/PDFファイル。
 * AI／PDF ファイル。デフォルトではサムネールは生成されません。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
@@ -97,7 +108,7 @@ See [Using PDF Rasterizer](aem-pdf-rasterizer.md).
 
 ## Supported Image Transcoding library {#supported-image-transcoding-library}
 
-Adobe Imaging Transcodingライブラリは、エンコーディング、トランスコード、リサンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
+Adobe Imaging Transcodingライブラリは、エンコード、トランスコード、リサンプリング、サイズ変更など、主な画像処理機能を実行する画像処理ソリューションです。
 
 画像トランスコーディングライブラリは、JPG／JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF／圧縮 TIFF（32 ビット TIFF ファイルおよび PTIFF ファイルを除く）、ICO、および ICN MIME タイプをサポートします。
 
@@ -109,7 +120,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 ## サポートされるアセットドキュメント形式 {#supported-document-formats}
 
-ドキュメント管理機能でサポートされるアセット形式は次のとおりです。
+アセット管理機能でサポートされるドキュメント形式は次のとおりです。
 
 <!--
 DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migration.
@@ -157,7 +168,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## ダイナミックドキュメント(#supported-ドキュメント形式 — ダイナミックメディア)でサポートされている形式
+## ダイナミックメディアでサポートされているドキュメント形式(#supported-ドキュメント形式 — ダイナミックメディア)
 
 | ファイル形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -213,7 +224,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 | MTS | AVCHD | H264/AVC |  |
 | MKV | Matroska | H264/AVC |  |
 | R3D、RM | Red Raw Video | MJPEG 2000 |  |
-| RAM、RM | RealVideo | 未サポート | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
+| RAM、RM | RealVideo | サポート対象外 | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
 | FLAC | Native Flac | Free lossless audio codec |  |
 | MJ2 | Motion JPEG2000 | Motion JPEG 2000 codec |  |
 
@@ -231,7 +242,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
-他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。ダイナミックメディア配信を除く、ストレージ、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理などの通常のDAM機能は、すべてのファイルでサポートされます。
+他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。ストレージ、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理など、すべてのファイルで、ダイナミックメディア配信を除く通常のDAM機能がサポートされます。
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -243,9 +254,9 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容からこのファイルを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
+デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容から検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
 
-サポートされるMIMEタイプのリストは、CRXDE Lite()で入手できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
+サポートされるMIMEタイプのリストは、CRXDE Liteので使用でき `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`ます。
 
 | ファイル拡張子 | MIME タイプ／インターネットメディアタイプ | デフォルトの jobParam 値 | 許可される jobParam 値 |
 |---|---|---|---|
@@ -308,5 +319,5 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 >[!MORELIKETHIS]
 >
 >* [MIME タイプベースの Assets／Scene7 アップロードジョブパラメーターサポートの有効化](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
->* [アップロードジョブのパラメータのサポートに対して、MIMEタイプベースの設定を行いま](config-dynamic.md)す。
+>* [アップロードジョブのパラメーターのサポートに対して、MIMEタイプベースの設定を行い](config-dynamic.md)ます。
 
