@@ -1,26 +1,28 @@
 ---
-title: AEM Assetsを使用したデジタルアセットの管理
-description: デジタルアセットのアップロード、ダウンロード、編集、検索、削除、注釈の追加、バージョンなどのアセット管理タスクについて説明します。
+title: '[!DNL Adobe Experience Manager Assets]でデジタルアセットを管理します。'
+description: デジタルアセットのアップロード、ダウンロード、編集、検索、削除、注釈の付加、バージョンなど、アセット管理タスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
 
 ---
 
 
-# デジタルアセットの管理 {#managing-assets-with-the-touch-optimized-ui}
+# デジタルアセットの管理 {#manage-digital-assets}
 
-ここでは、Adobe Experience Manager (AEM) Assets でアセットを管理および編集する方法について説明します。ユーザーインターフェイスとレイアウトの使用を開始するには、タッチ操作対応UI [の基本的な処理を参照してくださ](/help/sites-authoring/basic-handling.md)い。 To manage Content Fragments, see [Managing Content Fragments](content-fragments-managing.md) assets.
+では、アセット [!DNL Adobe Experience Manager Assets] の保存や管理だけでなく、様々な操作を行うことができます。 [!DNL Experience Manager] オファーのエンタープライズグレードのアセット管理機能。 アセットの編集と共有、高度な検索の実行、サポートされる多数のファイル形式の複数レンディションの作成、バージョンとデジタル権限の管理、アセットの処理の自動化、メタデータの管理と管理、注釈を使用した共同作業などが可能です。
+
+この記事では、作成やアップロードなど、基本的なアセット管理タスクについて説明します。 メタデータの更新； コピー、移動、削除、 アセットの公開、非公開、検索を行います。 ユーザインターフェイスについて詳しくは、「アセットユーザインターフェイス [の概要](/help/sites-authoring/basic-handling.md)」を参照してください。 To manage Content Fragments, see [manage Content Fragments](content-fragments-managing.md) assets.
 
 ## フォルダーの作成 {#creating-folders}
 
-`Nature` に関するすべての画像などの、アセットのコレクションを構成する場合に、それらを保存するフォルダーを作成できます。フォルダーを使用すると、アセットを分類および整理できます。ただし、効率向上のためには必ずアセットをフォルダーで整理しなければならないということではありません。
+`Nature` に関するすべての画像などの、アセットのコレクションを構成する場合に、それらを保存するフォルダーを作成できます。フォルダーを使用すると、アセットを分類および整理できます。[!DNL Experience Manager Assets] フォルダ内のアセットを整理して、作業を効率化する必要はありません。
 
 >[!NOTE]
 >
->* Sharing an Assets folder of the type `sling:OrderedFolder` is not supported when sharing to Marketing Cloud. フォルダーを共有する場合は、フォルダーを作成するときに [!UICONTROL Ordered] を選択しないでください。
->* Experience Managerでは、単語をフォルダーの名 `subassets` 前として使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
+>* Sharing an [!DNL Assets] folder of the type `sling:OrderedFolder` is not supported when sharing to Marketing Cloud. フォルダーを共有する場合は、フォルダーを作成するときに [!UICONTROL Ordered] を選択しないでください。
+>* [!DNL Experience Manager] フォルダーの名前として `subassets` wordを使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
 
 
 1. 新しいフォルダーを作成するデジタルアセットフォルダーの場所に移動します。メニューで、「**[!UICONTROL 作成]**」をクリックします。「**[!UICONTROL 新規フォルダ]**」を選択します。
@@ -32,7 +34,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 * アセットファイル名に次の文字を含めることはできません。`* / : [ \\ ] | # % { } ? &`
 * アセットフォルダー名に次の文字を含めることはできません。`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
 
-アセットファイル名の拡張子に特殊文字を含めないでください。
+アセットファイル名の拡張子には特殊文字を含めないでください。
 
 ## アセットのアップロード {#uploading-assets}
 
@@ -41,7 +43,7 @@ Move this section into a new article. CQDOC-14874 ticket is created for this.
 In this complete article, replace emphasis with UICONTROL where appropriate.
 -->
 
-様々な種類のアセット（画像、PDF ファイル、RAW ファイルなど）をローカルフォルダーやネットワークドライブから AEM Assets にアップロードできます。
+You can upload various types of assets (including images, PDF files, RAW files, and so on) from your local folder or a network drive to [!DNL Experience Manager Assets].
 
 >[!NOTE]
 >
@@ -51,20 +53,20 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 処理プロファイルが割り当てられているフォルダーの場合、プロファイル名がカード表示のサムネールに表示されます。リスト表示では、プロファイル名が「**処理プロファイル**」に表示されます。詳しくは、[処理プロファイル](/help/assets/processing-profiles.md)を参照してください。
 
-Before uploading an asset, ensure that it is in a [format](/help/assets/assets-formats.md) that AEM Assets supports.
+Before uploading an asset, ensure that it is in a [format](/help/assets/assets-formats.md) that [!DNL Experience Manager Assets] supports.
 
-1. Assets ユーザーインターフェイスで、デジタルアセットを追加する場所に移動します。
+1. In the [!DNL Assets] user interface, navigate to the location where you want to add digital assets.
 1. アセットをアップロードするには、以下のいずれかの操作をおこないます。
 
    * ツールバーの「**[!UICONTROL 作成]**」アイコンをタップします。Then on the menu, tap **[!UICONTROL Files]**. 表示されたダイアログで、必要に応じてファイル名を変更できます。
-   * HTML5 をサポートするブラウザーで、アセットを Assets ユーザーインターフェイスに直接ドラッグします。ファイル名を変更するためのダイアログは表示されません。
-   ![アセットをアップロードするオプションの作成](assets/create-options.png)
+   * In a browser that supports HTML5, drag the assets directly on the [!DNL Assets] user interface. ファイル名を変更するためのダイアログは表示されません。
+   ![アセットをアップロードするためのオプションを作成する](assets/create-options.png)
 
    複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPad を使用している場合、一度に選択できるファイルは 1 つだけです。
 
    サイズの大きなアセット（500 MB 超）のアップロードを一時停止して、同じページから後で再開できます。Tap the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
 
-   ![アセットのアップロードの進行状況バー](assets/chlimage_1-5.png)
+   ![アセットのアップロードプログレスバー](assets/chlimage_1-5.png)
 
    サイズが大きいと見なされるアセットのサイズは変更できます。例えば、（500 MB でなく）1000 MB を超えるサイズのアセットをサイズが大きいと見なすようにシステムを設定できます。In this case, **[!UICONTROL Pause]** appears on the progress bar when assets of size greater than 1000 MB are uploaded.
 
@@ -74,21 +76,21 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    **[!UICONTROL 一時停止]**&#x200B;アイコンをクリックすると、**[!UICONTROL 再生]**&#x200B;アイコンに切り替わります。To resume uploading, click the **[!UICONTROL Play]** icon.
 
-   ![再生アイコンを使用して、一時停止したアセットのアップロードを再開します](assets/chlimage_1-6.png)
+   ![再生アイコンを使用した一時停止したアセットのアップロードの再開](assets/chlimage_1-6.png)
 
-   進行中のアップロードをキャンセルするには、進行状況バーの横にある閉じるボタン（「`X`」）をクリックします。アップロード処理をキャンセルすると、AEM Assets はアセットのアップロード済みの部分を削除します。
+   進行中のアップロードをキャンセルするには、進行状況バーの横にある閉じるボタン（「`X`」）をクリックします。When you cancel the upload operation, [!DNL Assets] deletes the partially uploaded portion of the asset.
 
    アップロードを再開する機能は、帯域幅が狭く、ネットワークの誤作動によりサイズの大きなアセットのアップロードに時間がかかるシナリオで特に便利です。アップロード処理を一時停止して、後で状況が改善したときに処理を再開できます。再開すると、処理を一時停止した箇所からアップロードが開始されます。
 
-   アップロード処理中、AEM はアップロード中の部分のアセットをデータのチャンクとして CRX リポジトリに保存します。アップロードが完了すると、AEM はリポジトリ内のチャンクを 1 つのブロックに統合します。
+   During the upload operation, [!DNL Experience Manager] saves the portions of the asset being uploaded as chunks of data in the CRX repository. When the upload completes, [!DNL Experience Manager] consolidates these chunks into a single block of data in the repository.
 
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 
    アセットのアップロード先に既に存在するアセットと同じ名前のアセットをアップロードすると、警告ダイアログが表示されます。
 
-   既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、既存のアセットに対して行った以前の変更（注釈や切り抜きなど）がすべて削除されます。 If you choose to keep both assets, the new asset is renamed with number `1` appended to its name.
+   既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、既存のアセットに対して行った変更（注釈や切り抜きなど）がすべて削除されます。 If you choose to keep both assets, the new asset is renamed with number `1` appended to its name.
 
-   ![名前の競合ダイアログボックスを使用して、アセット名の競合を解決します。](assets/chlimage_1-7.png)
+   ![名前の競合ダイアログボックスを使用して、アセット名の競合を解決します](assets/chlimage_1-7.png)
 
    >[!NOTE]
    >
@@ -96,7 +98,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
    >
    >アセットインサイトによる Adobe Analytics でのインプレッション数やクリック数の追跡が有効になっている場合は、再生成されたアセット ID により、Analytics から取得したアセットのデータが無効になります。
 
-   If the asset you upload exists in AEM Assets, the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. The dialog appears only if the `SHA 1` checksum value of the binary of the existing asset matches the checksum value of the asset you upload. この場合、アセットの名前は関係ありません。
+   If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. The dialog appears only if the `SHA 1` checksum value of the binary of the existing asset matches the checksum value of the asset you upload. この場合、アセット名は問題になりません。
 
    >[!NOTE]
    >
@@ -104,9 +106,9 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    ![重複アセットが検出されましたダイアログ](assets/chlimage_1-8.png)
 
-   重複したアセットを AEM Assets で保持するには、「**[!UICONTROL 保持]**」をタップまたはクリックします。アップロードした重複アセットを削除するには、「**[!UICONTROL 削除]**」をタップまたはクリックします。
+   To retain the duplicate asset in [!DNL Assets], tap/click **[!UICONTROL Keep]**. アップロードした重複アセットを削除するには、「**[!UICONTROL 削除]**」をタップまたはクリックします。
 
-   AEM Assets では、ファイル名に禁止文字が含まれるアセットをアップロードできません。ファイル名に禁止文字が含まれるアセットをアップロードしようとすると、AEM Assets に警告メッセージが表示され、これらの文字を削除するか使用可能な名前でアップロードするまでアップロードが停止されます。
+   [!DNL Experience Manager Assets] では、ファイル名に禁止文字が含まれるアセットをアップロードできません。If you try to upload an asset with file name containing a disallowed character or more, [!DNL Assets] displays a warning message and stops the upload until you remove these characters or upload with an allowed name.
 
    組織固有のファイル命名規則に合うように、[!UICONTROL アセットをアップロード]ダイアログでは、アップロードするファイルに長い名前を指定できます。
 
@@ -114,27 +116,27 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    * アセットファイル名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? &`
    * アセットフォルダー名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
-   アセットファイル名の拡張子に特殊文字を含めないでください。
+   アセットファイル名の拡張子には特殊文字を含めないでください。
 
-   ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルと、アップロードに失敗したファイルのステータスが表示されます。](assets/chlimage_1-10.png)
+   ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルおよびアップロードに失敗したファイルの状態が表示されます](assets/chlimage_1-10.png)
 
-   さらに、Assets ユーザーインターフェイスには、アップロードした最新のアセットまたは最初に作成したフォルダーが表示されます。
+   In addition, the [!DNL Assets] user interface displays the most recent asset that you upload or the folder that you created first.
 
-   ファイルがアップロードされる前にアップロード操作をキャンセルすると、AEM Assets が現在のファイルのアップロードを停止し、コンテンツを更新します。ただし、既にアップロードされているファイルは削除されません。
+   If you cancel the upload operation before the files are uploaded, [!DNL Assets] stops uploading the current file and refreshes the content. ただし、既にアップロードされているファイルは削除されません。
 
-   AEM Assets のアップロード進行状況ダイアログには、アップロードが成功したファイルと失敗したファイルの数が表示されます。
+   The upload progress dialog in [!DNL Assets] displays the count of successfully uploaded files and the files that failed to upload.
 
 ### 順次アップロード {#serialuploads}
 
-一括で多数のアセットをアップロードすると、多くの I/O リソースを消費し、AEM Assets インスタンスのパフォーマンスが悪化することがあります。特に、インターネット接続が低速の場合、ディスク I/O のスパイクによりアップロード時間が非常に長くなります。さらに、Web ブラウザーでは、アセットの同時アップロードで AEM Assets が処理できる POST リクエスト数に制限が課されることがあります。その結果、アップロード操作に失敗したり、途中で終了してしまったりします。つまり、AEM Assets で多数のファイルを取り込むときに、一部のファイルを取り込めないことがあったり、まったくファイルを取り込めないことがあります。
+Uploading numerous assets in bulk consumes significant I/O resources, which may adversely impact the performance of your [!DNL Assets] instance. In particular, if you have a slow internet connection, the time to upload drastically increases due to a spike in disk I/O. Moreover, your web browser may introduce additional restrictions to the number of POST requests [!DNL Assets] can handle for concurrent asset uploads. その結果、アップロード操作に失敗したり、途中で終了してしまったりします。In other words, [!DNL Experience Manager Assets] may miss some files while ingesting a bunch of files or altogether fail to ingest any file.
 
-この状況を回避するために、AEM Assets は一括アップロード操作時にすべてのアセットを同時に取り込まず、一度に 1 つずつアセットを取り込みます（順次アップロード）。
+To overcome this situation, [!DNL Assets] ingests one asset at a time (serial upload) during a bulk upload operation, instead of the concurrently ingesting all the assets.
 
 アセットの順次アップロードは、デフォルトで有効になっています。To disable the feature and allow concurrent uploading, overlay the `fileupload` node in Crx-de and set the value of the `parallelUploads` property to `true`.
 
 ### Upload assets using FTP {#uploading-assets-using-ftp}
 
-Dynamic Media では、FTP サーバー経由でアセットをバッチアップロードできます。大きなアセット（1 GBを超える）をアップロードする場合、またはフォルダとサブフォルダ全体をアップロードする場合は、FTPを使用する必要があります。 定期的にFTPアップロードを行うように設定することもできます。
+Dynamic Media では、FTP サーバー経由でアセットをバッチアップロードできます。大きいアセット（1 GBを超える）をアップロードする場合、またはフォルダとサブフォルダ全体をアップロードする場合は、FTPを使用する必要があります。 定期的にFTPアップロードを行うように設定することもできます。
 
 >[!NOTE]
 >
@@ -142,9 +144,9 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 >[!NOTE]
 >
->ダイナミックメディア — Scene7モードでFTP経由でアセットをアップロードするには、AEM作成者インスタンスに機能パック18912をインストールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行の機 [能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
+>ダイナミックメディア — Scene7モードでFTPを使用してアセットをアップロードするには、機能パック18912をオーサーインスタンスにインスト [!DNL Experience Manager] ールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行について [は、機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
 >
->アセットのアップロードに FTP を使用する場合、AEM で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
+>If you use FTP for uploading assets, the upload settings specified in [!DNL Experience Manager] are ignored. 代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
 **FTP によりアセットをアップロードするには**
 
@@ -159,12 +161,13 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
    >[!NOTE]
    >
-   >FTP 経由でアセットをアップロードする場合、Dynamic Media Classic（S7）で設定したアップロードジョブのオプションのほうが AEM で設定した処理パラメーターより優先されます。
+   >When you upload assets via FTP, the upload job options you set in Dynamic Media Classic (S7) take precedent over asset processing parameters set in [!DNL Experience Manager].
 
 1. アップロードオプションを設定ダイアログボックスの右下隅で「**[!UICONTROL 保存]**」をタップします。
 1. アップロードページの右下隅で「**[!UICONTROL アップロードを送信]**」をタップします。
 
-   アップロードの進行状況を確認するには、グローバルナビゲーションバーの「**[!UICONTROL ジョブ]**」をタップします。ジョブページに、アップロードの進行状況が表示されます。ユーザーは、AEM で作業を続け、いつでも Dynamic Media Classic のジョブページに戻って進行中のジョブを確認できます。進行中のアップロードジョブをキャンセルするには、経過時間の横の「**[!UICONTROL キャンセル]**」をタップします。
+   アップロードの進行状況を確認するには、グローバルナビゲーションバーの「**[!UICONTROL ジョブ]**」をタップします。ジョブページに、アップロードの進行状況が表示されます。You can continue working in [!DNL Experience Manager] and return to the Jobs page in Dynamic Media Classic at any time to review an in-progress job.
+進行中のアップロードジョブをキャンセルするには、経過時間の横の「**[!UICONTROL キャンセル]**」をタップします。
 
 #### アップロードオプションを設定 {#upload-job-options}
 
@@ -176,13 +179,13 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 | アップロード時に Zip または Tar ファイルを解凍 |  |  |
 | オプション |  | Tap/ click **[!UICONTROL Job Options]** to open the [!UICONTROL Upload Job Options] dialog box and choose options that affect the entire upload job. これらのオプションはすべてのファイルタイプで同じです。<br>アプリケーションの全般設定ページから、ファイルのアップロード用のデフォルトオプションを選択できます。このページを開くには、**[!UICONTROL セットアップ]**／**[!UICONTROL アプリケーション設定]**&#x200B;を選択します。Tap the **[!UICONTROL Default Upload Options]** button to open the [!UICONTROL Upload Job Options] dialog box. |
 |  | 実行時 | 「一時」または「定期」を選択します。定期ジョブを設定するには、繰り返しオプション（毎日、毎週、またはカスタム）を選択し、FTP アップロードジョブを反復する頻度を指定します。次に、必要に応じてスケジューリングオプションを指定します。 |
-|  | サブフォルダーを含める | アップロードしたいフォルダー内のすべてのサブフォルダーをアップロードします。アップロードするフォルダーとそのサブフォルダーの名前は AEM Assets に自動的に登録されます。 |
-|  | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。次に、画像のいずれかの辺または各辺から切り抜くピクセル数を入力します。画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。例えば、画像が 150 ppi で表示されている場合に、「上」、「右」、「下」、「左」テキストボックスに 75 と入力すると、各辺から 0.5 inch ずつ切り抜かれます。<br>画像からホワイトスペースを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」フィールドに画像の各辺から切り抜くピクセル数を入力します。また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**色** - 「色」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色を最も表現している色の画像の角を選択します。</li><li>****&#x200B;透明度 - 「透明度」オプションを選択します。<br> **許容値** — スライダをドラッグして、許容値を0 ～ 1の範囲で指定します。色に基づいてトリミングする場合は、0を指定すると、画像の隅で選択した色と正確に一致する場合にのみピクセルが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。1 に近いほど、不透明さに対する許容度が高くなります。</li></ul><br>これらの切り抜きツールオプションは、非破壊です（何度でも修正できます）。 |
+|  | サブフォルダーを含める | アップロードしたいフォルダー内のすべてのサブフォルダーをアップロードします。The names of the folder and its subfolders you upload are entered automatically in [!DNL Experience Manager Assets]. |
+|  | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。次に、画像のいずれかの辺または各辺から切り抜くピクセル数を入力します。画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。例えば、画像が 150 ppi で表示されている場合に、「上」、「右」、「下」、「左」テキストボックスに 75 と入力すると、各辺から 0.5 inch ずつ切り抜かれます。<br>画像からホワイトスペースを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」フィールドに画像の各辺から切り抜くピクセル数を入力します。また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**色** - 「色」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色を最も表現している色の画像の角を選択します。</li><li>****&#x200B;透明度 - 「透明度」オプションを選択します。<br> **許容値** — スライダをドラッグして、許容値を0 ～ 1の範囲で指定します。色に基づいてトリミングする場合は、0に設定すると、画像の隅で選択した色と正確に一致するピクセルのみが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。1 に近いほど、不透明さに対する許容度が高くなります。</li></ul><br>これらの切り抜きツールオプションは、非破壊です（何度でも修正できます）。 |
 |  | カラープロファイルオプション | 配信に使用される最適なファイルを作成するときのカラー変換を選択します。<ul><li>デフォルトの色保存：画像にカラースペース情報が含まれる場合はソース画像の色を保持します。カラー変換はおこなわれません。今日ほぼすべての画像に適切なカラープロファイルが埋め込まれています。ただし、CMYK のソース画像にカラープロファイルが埋め込まれていないと、色が standard Red Green Blue（sRGB）カラースペースに変換されます。sRGB は Web ページでの画像表示に最適なカラースペースです。</li><li>オリジナルカラースペースを維持：アップロード時にカラー変換をおこなわずに元の色を保持します。カラープロファイルが埋め込まれていない画像の場合、カラー変換はすべて、公開設定で設定したデフォルトのカラープロファイルを使用しておこなわれます。このカラープロファイルは、このオプションで作成したファイルのカラーと一致しない可能性があります。したがって、「デフォルトの色保存」オプションを使用することをお勧めします。</li><li>カスタム アップロード元／アップロード先<br> アップロード元とアップロード先のカラースペースを選択できるメニューが開きます。この詳細オプションは、ソースファイルに埋め込まれたカラー情報より優先されます。送信するすべての画像のカラープロファイルデータが正しくないか不足している場合に、このオプションを選択します。</li></ul> |
 |  | 画像編集オプション | 画像のクリッピングマスクを保持し、カラープロファイルを選択できます。<br>[アップロード時の画像編集オプションの設定](#setting-image-editing-options-at-upload)を参照してください。 |
 |  | Postscript オプション | PostScript® ファイルのラスタライズ、ファイルの切り抜き、透明背景の維持、解像度の選択、カラースペースの選択をおこなうことができます。<br>[PostScript および Illustrator のアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
-|  | Photoshop オプション | Adobe® Photoshop® ファイルからのテンプレート作成、レイヤーの維持、レイヤーの命名方法の指定、テキストの抽出、テンプレートへの画像のアンカー方法の指定をおこなうことができます。<br>テンプレートは AEM ではサポートされていません。<br>[Photoshop アップロードオプションの設定](#setting-photoshop-upload-options)を参照してください。 |
-|  | PDF オプション | ファイルのラスタライズ、検索単語とリンクの抽出、eCatalog の自動生成、解像度の設定、カラースペースの選択をおこなうことができます。<br> AEMではeCatalogはサポートされていません。 <br>[PDF アップロードオプションの設定](#setting-pdf-upload-options)を参照してください。 |
+|  | Photoshop オプション | Adobe® Photoshop® ファイルからのテンプレート作成、レイヤーの維持、レイヤーの命名方法の指定、テキストの抽出、テンプレートへの画像のアンカー方法の指定をおこなうことができます。<br> では、テンプレートはサポートされていません [!DNL Experience Manager]。<br>[Photoshop アップロードオプションの設定](#setting-photoshop-upload-options)を参照してください。 |
+|  | PDF オプション | ファイルのラスタライズ、検索単語とリンクの抽出、eCatalog の自動生成、解像度の設定、カラースペースの選択をおこなうことができます。<br> ではeCatalogはサポートされていません [!DNL Experience Manager]。 <br>[PDF アップロードオプションの設定](#setting-pdf-upload-options)を参照してください。 |
 |  | Illustrator オプション | Adobe Illustrator® ファイルのラスタライズ、透明背景の維持、解像度の選択、カラースペースの選択をおこなうことができます。<br>[PostScript および Illustrator のアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
 |  | EVideo オプション | ビデオプリセットを選択して、ビデオファイルをトランスコードできます。<br>[eVideo アップロードオプションの設定](#setting-evideo-upload-options)を参照してください。 |
 |  | バッチセットプリセット | アップロードしたファイルから画像セットまたはスピンセットを作成するには、使用したいプリセットの「アクティブ」列をクリックします。複数のプリセットを選択できます。プリセットは、Dynamic Media Classic のアプリケーション設定／バッチセットプリセットページで作成します。<br>バッチセットプリセットの作成について詳しくは、[画像セットとスピンセットの自動生成用のバッチセットプリセットの設定](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を参照してください。<br>[アップロード時のバッチセットプリセットの設定](#setting-batch-set-presets-at-upload)を参照してください。 |
@@ -238,7 +241,7 @@ Use the [!UICONTROL Crop Options] and [!UICONTROL Color Profile Options], descri
 
 >[!NOTE]
 >
->テンプレートは AEM ではサポートされていません。
+>Templates are not supported in [!DNL Experience Manager].
 
 | オプション | サブオプション | 説明 |
 |---|---|---|
@@ -258,7 +261,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 >[!NOTE]
 >
->eCatalog は AEM ではサポートされていません。
+>eCatalogs are not supported in [!DNL Experience Manager].
 
 次のいずれかのオプションを選択します。
 
@@ -281,11 +284,11 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 | オプション | サブオプション | 説明 |
 |---|---|---|
-| アダプティブビデオ |  | モバイル、タブレットおよびデスクトップに配信するビデオを作成するための、任意の縦横比で機能する単一のエンコーディングプリセットです。 このプリセットでエンコードされたアップロード済みソースビデオは、固定の高さに設定されます。ただし、幅はビデオの縦横比を保持して自動的に拡大・縮小します。<br>ベストプラクティスは、アダプティブビデオのエンコーディングを使用することです。 |
-| シングルエンコーディングプリセット | エンコードプリセットの並べ替え | 「名前」または「サイズ」を選択して、「デスクトップ」、「モバイル」および「タブレット」の下に表示されるエンコーディングプリセットを、名前または解像度サイズで並べ替えます。 |
-|  | デスクトップ | デスクトップコンピュータにストリーミングビデオまたはプログレッシブビデオを配信するMP4ファイルを作成します。必要な解像度サイズとターゲットデータレートを持つ1つ以上の縦横比を選択します。 |
-|  | モバイル | iPhoneまたはAndroid携帯端末で配信用のMP4ファイルを作成します。必要な解像度サイズとターゲットデータレートを持つ1つ以上の縦横比を選択します。 |
-|  | タブレットなど）のアクティブマーカーを確認する。 | iPadまたはAndroidタブレットデバイスで配信用のMP4ファイルを作成します。解像度サイズとターゲットデータレートを指定して、1つ以上の縦横比を選択します。 |
+| アダプティブビデオ |  | モバイル、タブレットおよびデスクトップに配信するビデオを作成するための、すべての縦横比で機能する単一のエンコーディングプリセットです。 このプリセットでエンコードされたアップロード済みソースビデオは、固定の高さに設定されます。ただし、幅はビデオの縦横比を保持して自動的に拡大・縮小します。<br>ベストプラクティスは、アダプティブビデオエンコーディングを使用することです。 |
+| シングルエンコーディングプリセット | エンコーディングプリセットの並べ替え | 「名前」または「サイズ」を選択して、「デスクトップ」、「モバイル」および「タブレット」に一覧表示されたエンコーディングプリセットを名前順または解像度サイズ順に並べ替えます。 |
+|  | デスクトップ | ストリーミングビデオまたはプログレッシブビデオをデスクトップコンピュータに配信するMP4ファイルを作成します。解像度サイズとターゲットデータレートに応じて、1つ以上の縦横比を選択します。 |
+|  | モバイル | iPhoneまたはAndroid携帯端末での配信用にMP4ファイルを作成します。解像度サイズとターゲットデータレートに応じて、1つ以上の縦横比を選択します。 |
+|  | タブレットなど）のアクティブマーカーを確認する。 | iPadまたはAndroidタブレットデバイスで配信用のMP4ファイルを作成します。解像度サイズとターゲットデータレートを指定し、1つ以上の縦横比を選択します。 |
 
 #### Set Batch Set Presets at upload {#setting-batch-set-presets-at-upload}
 
@@ -295,21 +298,21 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 ### ストリーミングアップロード {#streamed-uploads}
 
-AEM に多数のアセットをアップロードする場合、サーバーへの I/O 要求が大幅に増加するので、アップロードの効率が低下し、一部のアップロードタスクがタイムアウトする場合があります。AEM Assets はアセットのストリーミングアップロードをサポートします。ストリーミングアップロードにより、リポジトリにアセットをコピーする前にサーバーの一時フォルダーのアセットストレージを回避することで、アップロード操作中のディスクの I/O が低減します。代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。AEM Assets では、ストリーミングアップロードはデフォルトで有効になっています。
+If you upload many assets to [!DNL Experience Manager], the I/O requests to server increase drastically, which reduces the upload efficiency and can even cause some upload task to time out. [!DNL Experience Manager Assets] アセットのストリームアップロードをサポートします。 ストリーミングアップロードにより、リポジトリにアセットをコピーする前にサーバーの一時フォルダーのアセットストレージを回避することで、アップロード操作中のディスクの I/O が低減します。代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。Streamed upload is enabled by default in [!DNL Assets].
 
 >[!NOTE]
 >
->ストリーミングアップロードは、servlet-api バージョンが 3.1 未満の JEE サーバー上で機能する AEM では無効です。
+>Streaming upload is disabled for [!DNL Experience Manager] running on JEE server with servlet-api version lower than 3.1.
 
 ### アセットが含まれている ZIP アーカイブの抽出 {#extractzip}
 
-ZIP アーカイブは、サポートされているその他のアセットと同じようにアップロードできます。ファイル名についても、同様のルールが ZIP ファイルに適用されます。AEM を使用すると、ZIP アーカイブを DAM の場所に抽出できます。アーカイブファイルに拡張子として ZIP が含まれていない場合、コンテンツを使用してファイルタイプの検出を有効にします。
+ZIP アーカイブは、サポートされているその他のアセットと同じようにアップロードできます。ファイル名についても、同様のルールが ZIP ファイルに適用されます。[!DNL Experience Manager] を使用すると、ZIP アーカイブを DAM の場所に抽出できます。アーカイブファイルに拡張子として ZIP が含まれていない場合、コンテンツを使用してファイルタイプの検出を有効にします。
 
 一度に 1 つの ZIP アーカイブを選択し、「**[!UICONTROL アーカイブの抽出]**」をクリックして、抽出先フォルダーを選択します。ファイルの重複に対処するためのオプションを選択します（該当する場合）。ZIP ファイル内のアセットが抽出先フォルダー内に既に存在する場合は、抽出をスキップする、既存のファイルを置き換える、名前を変更して両方のアセットを保持する、または新しいバージョンを作成する、のいずれかを選択できます。
 
-抽出が完了すると、AEM は通知領域にメッセージを表示します。AEM が ZIP を抽出している間、抽出を中断することなく作業に戻ることができます。
+After the extraction is complete, [!DNL Experience Manager] notifies you in the notification area. While [!DNL Experience Manager] extracts the ZIP, you can go back to your work without interrupting the extraction.
 
-![ZIPファイルの通知抽出](assets/Zip-extraction-notification.png)
+![ZIPファイル抽出の通知](assets/Zip-extraction-notification.png)
 
 この機能には、いくつかの制限があります。
 
@@ -322,7 +325,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 アセットをプレビューするには、次の手順に従います。
 
-1. Assets ユーザーインターフェイスで、プレビューするアセットの場所に移動します。
+1. From the [!DNL Assets] user interface, navigate to the location of the asset you want to preview.
 1. 目的のアセットをタップして開きます。
 
 1. プレビューモードでは、[サポートされている画像タイプ](/help/assets/assets-formats.md#supported-raster-image-formats)で（インタラクティブ編集中に）ズームオプションを使用できます。
@@ -331,24 +334,24 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    **[!UICONTROL リセット]**&#x200B;をタップすると、表示を元のサイズに戻すことができます。
 
-   ![リセットアイコンを使用して元の表示](assets/chlimage_1-11.png)
+   ![リセットアイコンを使用して元の表示に戻す](assets/chlimage_1-11.png)
 
-**プレビューキーのみを使用したキーボードアセット**
+**キーボードキーのみを使用したプレビューアセット**
 
-キーボードを使用してプレビューを行うには、次の手順に従います。
+キーボードを使用してアセットをプレビューするには、次の手順に従います。
 
-1. アセットユーザーインターフェイスから、および矢印キーを使用して目的のア `Tab` セットに移動します。
+1. ユーザーインターフェイスから、 [!DNL Assets] および矢印キーを使用して目的のアセットに移動 `Tab` します。
 
-1. 目的の `Enter` アセットのキーを押して開きます。 アセットをズームインするには、プレビューモードを使用します。
+1. 目的のアセット `Enter` のキーを押して開きます。 プレビューモードでアセットをズームインできます。
 
-1. アセットをズームインするには：
-   1. ズームイ `Tab` ンアイコンにフォーカスを移動するには、Keyキーを使用します。
-   1. キーを使 `Enter` 用して画像をズームインします。
-   ズームアウトするには、 `Tab` キーを使用してズームアウトアイコンにフォーカスを移動し、を押しま `Enter`す。
+1. アセットにズームインするには：
+   1. ズームインアイコンにフォーカスを移動するには、 `Tab` keyを使用します。
+   1. keyを使用して画像をズームインします。 `Enter`
+   ズームアウトするには、 `Tab` keyキーを使用してズームアウトアイコンにフォーカスを移動し、を押し `Enter`ます。
 
-1. +キーを `Shift` 使用 `Tab` して、画像にフォーカスを戻します。
+1. Ctrl + Altキーを押しながら、画像にフォーカスを戻し `Shift``Tab` ます。
 
-1. 矢印キーを使用して、ズームされた画像の周りを移動します。
+1. ズームされた画像の周りを移動するには、矢印キーを使用します。
 
 >[!MORELIKETHIS]
 >
@@ -362,7 +365,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. アセットを選択し、ツールバーの「**[!UICONTROL プロパティ]**」をタップまたはクリックして、アセットのプロパティを表示します。または、アセットカードで&#x200B;**[!UICONTROL プロパティ]**&#x200B;クイックアクションを選択します。
 
-   ![アセットカードのプロパティクイックアクション表示](assets/properties_quickaction.png)
+   ![アセットカード表示のプロパティクイックアクション](assets/properties_quickaction.png)
 
 1. [!UICONTROL プロパティ]ページの様々なタブで、メタデータのプロパティを編集します。例えば、「**[!UICONTROL 基本]**」タブでは、タイトルや説明などを編集します。
 
@@ -372,21 +375,21 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. アセットをアクティベートする特定の日付と時間をスケジュールするには、「**[!UICONTROL オンタイム]**」フィールドの横にある日付選択を使用します。
 
-   ![日付の時間選択または「時間」フィールドのキーボードキーを使用して、アセットのアクティベーション](assets/schedule-activation.png)
+   ![日付の時間選択または「時間」フィールドのキーボードキーを使用して、アセットアクティベーションの日時を追加します。](assets/schedule-activation.png)
 
-   *図：アセットのアクティベーションのスケジュール*
+   *図： アセットアクティベーションのスケジュール*
 
-1. 特定の期間の後にアセットのアクティベートを解除するには、「**[!UICONTROL オフタイム]**」フィールドの横にある日付選択を使用して、アクティベートを解除する日付と時間を選択します。アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。[!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、Assets Web インターフェイスでも HTTP API でも使用できません。
+1. 特定の期間の後にアセットのアクティベートを解除するには、「**[!UICONTROL オフタイム]**」フィールドの横にある日付選択を使用して、アクティベートを解除する日付と時間を選択します。アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。[!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、 Web インターフェイスでも HTTP API でも使用できません。[!DNL Assets]
 
-   ![日付の時間選択または「オフ時間」フィールドのキーボードキーを使用して、アセットのアクティベーション解除の日時を追加](assets/schedule-deactivation.png)
+   ![日付の時間選択または「オフ時間」フィールドのキーボードキーを使用して、アセットのアクティベーション解除の日時を追加します。](assets/schedule-deactivation.png)
 
-   *図：アセットの非アクティブ化をスケジュールします。*
+   *図： アセットの非アクティブ化をスケジュールします。*
 
-1. 「**[!UICONTROL タグ]**」フィールドで、タグを 1 つ以上選択します。カスタムタグを追加するには、ボックスにタグの名前を入力し、Enter キーを押します。新しいタグが AEM に保存されます。YouTubeにはタグが必要です。 See [publish videos to YouTube](video.md#publishing-videos-to-youtube).
+1. 「**[!UICONTROL タグ]**」フィールドで、タグを 1 つ以上選択します。カスタムタグを追加するには、ボックスにタグの名前を入力し、Enter キーを押します。The new tag is saved in [!DNL Experience Manager]. [!DNL YouTube] は、公開するタグを必要とします。 See [publish videos to YouTube](video.md#publishing-videos-to-youtube).
 
    >[!NOTE]
    >
-   >タグを作成するには、CRXリポジトリでの書き込み権 `/content/cq:tags/default` 限が必要です。
+   >タグを作成するには、CRXリポジトリで書き込み権限 `/content/cq:tags/default` が必要です。
 
 1. アセットに評価を指定するには、「**[!UICONTROL 詳細]**」タブをタップまたはクリックし、適切な位置の星をタップまたはクリックして、目的の評価を割り当てます。
 
@@ -403,8 +406,8 @@ ZIP アーカイブは、サポートされているその他のアセットと�
    * アセットが最近使用されたクリエイティブソリューション
    詳しくは、[アセットインサイト](/help/assets/touch-ui-asset-insights.md)を参照してください。
 
-1. 「**[!UICONTROL 保存して閉じる]**」をタップまたはクリックします。
-1. アセットユーザーインターフェイスに移動します。編集済みのメタデータのプロパティ（タイトル、説明、評価など）は、カード表示のアセットカードまたはリスト表示の関連する列に表示されます。
+1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。
+1. Navigate to the [!DNL Assets] user interface. 編集済みのメタデータのプロパティ（タイトル、説明、評価など）は、カード表示のアセットカードまたはリスト表示の関連する列に表示されます。
 
 ## アセットのコピー {#copying-assets}
 
@@ -412,13 +415,13 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 アセットの特定のコピーに一意に関連付けられる属性は継承されません。例えば、以下のものが該当します。
 
-* アセットID、作成日時、バージョンとバージョン履歴。 Some of these properties are indicated by the properties `jcr:uuid`, `jcr:created`, and `cq:name`.
+* アセットID、作成日時、バージョンおよびバージョン履歴。 Some of these properties are indicated by the properties `jcr:uuid`, `jcr:created`, and `cq:name`.
 
 * 作成時間と参照パスは、各アセットとその各レンディションに対して一意です。
 
 その他のプロパティとメタデータ情報は保持されます。アセットをコピーするときに、部分的なコピーが作成されることはありません。
 
-1. Assets UI から 1 つ以上のアセットを選択し、ツールバーの「**[!UICONTROL コピー]**」アイコンをタップまたはクリックします。または、アセットカードから&#x200B;**[!UICONTROL コピー]**   クイックアクションを選択します。
+1. In [!DNL Assets] interface, select one or more assets and tap/click the **[!UICONTROL Copy]** icon from the toolbar. または、アセットカードから&#x200B;**[!UICONTROL コピー]**   クイックアクションを選択します。
    ![アセットUIツールバーのコピーアイコン](assets/copy_icon.png)
 
    >[!NOTE]
@@ -429,11 +432,12 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    >[!NOTE]
    >
-   >同じ場所でアセットをコピーすると、AEM は自動的に名前のバリエーションを生成します。例えば、「`Square`」というタイトルのアセットをコピーすると、AEM は自動的にそのコピーのタイトルを「`Square1`」として生成します。
+   >If you copy an asset at the same location, [!DNL Experience Manager] automatically generates a variation of the name. For example, if you copy an asset titled `Square`, [!DNL Experience Manager] automatically generates the title for its copy as `Square1`.
 
 1. Click/ tap the **[!UICONTROL Paste]** asset icon from the toolbar.
 
-   ![アセットのUIツールバーの貼り付けアイコン](assets/chlimage_1-14.png)アセットがこの場所にコピーされます。
+   ![アセットUIツールバーにアイコンを貼り付け](assets/chlimage_1-14.png)
+   [!DNL Assets] がこの場所にコピーされます。
 
    >[!NOTE]
    >
@@ -446,7 +450,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 1. アセットを選択し、ツールバーの&#x200B;**[!UICONTROL 移動]**アイコン   をタップまたはクリックします。
    ![アセットUIツールバーの移動アイコン](assets/move_icon.png)
 
-1. アセットを移動ウィザードで、次のいずれかの操作をおこないます。
+1. In the [!UICONTROL Move Assets] wizard, do one of the following:
 
    * 移動後のアセットの名前を指定します。その後、「**[!UICONTROL 次へ]**」をタップまたはクリックして先に進みます。
 
@@ -493,7 +497,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    >[!NOTE]
    >
-   >デフォルトで、AEM Assets はプレビューモードでアセットのオリジナルレンディションを表示しません。管理者の場合、オーバーレイを使用して AEM Assets を設定し、プレビューモードでもオリジナルレンディションを表示できます。
+   >By default, [!DNL Assets] does not display the original rendition of the asset in the preview mode. If you are an administrator, you can use overlays to configure [!DNL Assets] to display original renditions in the preview mode.
 
 1. 表示または削除するレンディションを選択します。
 
@@ -507,19 +511,19 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    アセットの詳細ページに移動し、ツールバーの「**[!UICONTROL レンディションを追加]**」アイコンをタップまたはクリックして、アセットの新しいレンディションをアップロードします。
 
-   ![新しいレン追加ディションをアップロードするレンディションアイコン](assets/chlimage_1-16.png)
+   ![新しいレンディションを追加アップロードするレンディションアイコン](assets/chlimage_1-16.png)
 
    >[!NOTE]
    >
    >**[!UICONTROL レンディション]**&#x200B;パネルからレンディションを選択する場合、ツールバーのコンテキストが変わり、レンディションに関連するアクションのみが表示されます。レンディションをアップロードアイコンなどのオプションは表示されません。これらのオプションをツールバーに表示するには、アセットの詳細ページに移動します。
 
-   画像またはビデオアセットの詳細ページに表示するレンディションのサイズを設定できます。指定するサイズに基づいて、AEM Assets はレンディションを正確なサイズまたは最も近いサイズで表示します。
+   画像またはビデオアセットの詳細ページに表示するレンディションのサイズを設定できます。Based on the dimensions you specify, [!DNL Assets] displays the rendition with the exact or closest dimensions.
 
    アセットの詳細レベルで画像のレンディションのサイズを設定するには、`renditionpicker` ノード（`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`）をオーバーレイして、幅のプロパティの値を設定します。画像サイズに基づいてアセットの詳細ページでレンディションをカスタマイズするには、幅の代わりに **[!UICONTROL size (Long) in KB]** プロパティを設定します。サイズベースのカスタマイズの場合、`preferOriginal` プロパティを使用すると、一致するレンディションのサイズがオリジナルより大きい場合でも、オリジナルが優先されます。
 
    同様に、`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker` をオーバーレイして注釈ページの画像をカスタマイズできます。
 
-   ![CRXDEのオーバーレイレンディションピッカーノードを使用してAnnotationページの画像をカスタマイズ](assets/chlimage_1-17.png)
+   ![CRXDEのOverlay renditionpickerノードを使用して注釈ページの画像をカスタマイズする](assets/chlimage_1-17.png)
 
    ビデオアセットのレンディションサイズを設定するには、CRX リポジトリ内の `videopicker` ノード（`/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`）に移動し、ノードをオーバーレイし、該当するプロパティを編集します。
 
@@ -527,7 +531,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
    >
    >ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。また、ブラウザーによってサポートされるビデオ形式が異なります。
 
-サブアセットの生成と表示について詳しくは、「サブアセットの管理」を [参照してくださ](managing-linked-subassets.md#generate-subassets)い。
+サブアセットの生成と表示について詳しくは、「サブアセットの [管理](managing-linked-subassets.md#generate-subassets)」を参照してください。
 
 ## アセットの削除 {#deleting-assets}
 
@@ -550,7 +554,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
       * アセットに参照がある場合は、「**1 つ以上のアセットが参照されています。**」というエラーメッセージが表示されます。「**[!UICONTROL 削除を強制]**」または「**[!UICONTROL キャンセル]**」を選択できます。
    >[!NOTE]
    >
-   >アセットを削除するには、ユーザーがに対する削除権限が必要で `dam/asset`す。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
+   >アセットを削除するには、ユーザーがに対して削除権限を持っている必要があり `dam/asset`ます。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
 
    >[!NOTE]
    >
@@ -558,7 +562,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 ## アセットのダウンロード {#downloading-assets}
 
-[AEM からのアセットのダウンロード](/help/assets/download-assets-from-aem.md)を参照してください。
+詳しくは、Experience Managerからのアセットの [ダウンロードを参照してください](/help/assets/download-assets-from-aem.md)。
 
 ## アセットの公開 {#publishing-assets}
 
@@ -573,7 +577,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
    >[!NOTE]
    >
-   >公開したフォルダの一部である空のフォルダは、公開されません。
+   >公開したフォルダーの一部である空のフォルダーは、公開されません。
 
 1. 「**[!UICONTROL 公開]**」をタップまたはクリックして、アセットのアクティベートを確認します。
 
@@ -606,31 +610,31 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 ## 閉じられたユーザーグループ {#closed-user-group}
 
-閉じられたユーザーグループ（CUG）は、AEM から公開された特定のアセットフォルダーへのアクセスを制限するために使用します。フォルダーに対して CUG を作成すると、そのフォルダー（フォルダーのアセットとサブフォルダーを含む）へのアクセスは、割り当てられたメンバーまたはグループのみに制限されます。フォルダーにアクセスするには、セキュリティ資格情報を使用してログインする必要があります。
+A closed user group (CUG) is used to limit access to specific asset folders published from [!DNL Experience Manager]. フォルダーに対して CUG を作成すると、そのフォルダー（フォルダーのアセットとサブフォルダーを含む）へのアクセスは、割り当てられたメンバーまたはグループのみに制限されます。フォルダーにアクセスするには、セキュリティ資格情報を使用してログインする必要があります。
 
 CUG は、アセットへのアクセスを制限する追加の方法です。また、フォルダーのログインページを設定することもできます。
 
-1. Assets UI からフォルダーを選択し、ツールバーの「プロパティ」アイコンをタップまたはクリックして、プロパティページを表示します。
+1. Select a folder from the [!DNL Assets] interface, and tap/click the [!UICONTROL Properties] icon from the toolbar to display the properties page.
 1. 「**[!UICONTROL 権限]**」タブで、「**[!UICONTROL 閉じられたユーザーグループ]**」の下でメンバーまたはグループを追加します。
 
-   ![閉じた追加ユーザーグループのユーザー](assets/add_user.png)
+   ![閉じ追加たユーザーグループのユーザー](assets/add_user.png)
 
-1. ユーザーがフォルダーにアクセスしたときにログイン画面を表示するには、「**[!UICONTROL 有効]**」オプションを選択します。次に、AEM 内のログインページへのパスを選択し、変更を保存します。
+1. ユーザーがフォルダーにアクセスしたときにログイン画面を表示するには、「**[!UICONTROL 有効]**」オプションを選択します。Then, select the path to a login page in [!DNL Experience Manager], and save the changes.
 
-   ![ユーザーがフォルダーにアクセスしたときに表示するログインページを有効にし、選択します。](assets/login_page.png)
+   ![ユーザーがフォルダーにアクセスしたときに表示するログインページを有効にして選択する](assets/login_page.png)
 
    >[!NOTE]
    >
-   >ログインページへのパスを指定しないと、AEM はパブリッシュインスタンスでデフォルトのログインページを表示します。
+   >If you do not specify the path to a login page, [!DNL Experience Manager] displays the default login page in the publish instance.
 
 1. フォルダーを公開し、パブリッシュインスタンスからアクセスすると、ログイン画面が表示されます。
-1. CUG メンバーの場合は、自分のセキュリティ資格情報を入力します。AEM によって認証されると、フォルダーが表示されます。
+1. CUG メンバーの場合は、自分のセキュリティ資格情報を入力します。The folder is displayed after [!DNL Experience Manager] authenticates you.
 
 ## アセットの検索 {#assetsearch}
 
 アセットの検索は、デジタルアセット管理システムの利用の中核を成します。用途は、クリエイティブ担当者によるさらなる利用、ビジネスユーザーやマーケティング担当者によるアセットの堅牢な管理、DAM 管理者による管理などです。
 
-最も適切なアセットを検出し使用するためのシンプル検索、アドバンス検索、カスタム検索については、[AEM でのアセットの検索](search-assets.md)を参照してください。
+For simple, advanced, and custom searches to discover and use the most appropriate assets, see [search assets in Experience Manager](search-assets.md).
 
 ## クイックアクション {#quick-actions}
 
@@ -643,23 +647,23 @@ CUG は、アセットへのアクセスを制限する追加の方法です。�
 
 You can view, navigate through, and select assets with any of the available views (Card, Column, and List) using the **[!UICONTROL Select]** option.
 
-リスト表示と列表示で、アセッ **[!UICONTROL トのサムネールに]** （ポインターを合わせたとき）「選択」オプションが表示されます。
+リスト表示と列表示で、アセットのサムネールにポインタを合わせると、 **[!UICONTROL 選択]** (Select)オプションが表示されます。
 
-![アセットの選択リスト表示](assets/select_quick_in_listview.png)
+![リスト表示でのアセットの選択](assets/select_quick_in_listview.png)
 
-![列内のアセットの選択表示](assets/select_quick_in_columnview.png)
+![列表示でのアセットの選択](assets/select_quick_in_columnview.png)
 
-カード表示では、「 **[!UICONTROL Select]** 」オプションがクイックアクションとして表示されます。
+カード表示では、「 **[!UICONTROL 選択]** 」オプションがクイックアクションとして表示されます。
 
-![カードのクイックアクションの表示](assets/select_quick_action.png)
+![カード表示のクイックアクションを選択](assets/select_quick_action.png)
 
-ブラウザのアセットユーザインターフェイスでフォルダまたはコレクションを参照する場合、右上隅の「すべて選択」オプションを使用して、表示または読み込まれたすべてのアセットを  「選択」で選択できます。 最初は、100個のアセットのみがカード表示に読み込まれ、200個のアセットがリスト表示に読み込まれます。 検索結果ページをスクロールすると、表示に読み込まれるアセットが増えます。 「すべて [!UICONTROL 選択] 」オプションは、読み込まれたアセットのみを選択します。
+ブラウザの [!DNL Assets] ユーザインターフェイスでフォルダまたはコレクションを参照する場合、右上隅の「すべて選択 [!UICONTROL 」オプションを使用して、表示されているアセットまたは読み込まれているアセットをすべて] 選択できます。 最初は、100個のアセットのみがカード表示に読み込まれ、200個のアセットがリスト表示に読み込まれます。 検索結果ページをスクロールすると、表示に読み込まれるアセットが増えます。 「す [!UICONTROL べて選択] 」オプションを選択すると、読み込まれたアセットのみが選択されます。
 
 For more information, see [view and selecting your resources](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 
 ## 画像の編集 {#editing-images}
 
-AEM Assets インターフェイスの編集ツールを使用すると、画像アセットで細かい編集ジョブを実行できます。画像に対して切り抜き、回転、反転などの編集ジョブを実行できます。アセットに画像マップを追加することもできます。
+The editing tools in the [!DNL Assets] interface let you perform small editing jobs on image assets. 画像に対して切り抜き、回転、反転などの編集ジョブを実行できます。アセットに画像マップを追加することもできます。
 
 >[!NOTE]
 >
@@ -695,7 +699,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 1. 適切な反転アイコンをタップまたはクリックして、画像を水平方向または垂直方向に反転します。
 
-   ![画像を左右または上下に反転するアイコン](assets/chlimage_1-27.png)
+   ![画像を水平方向または垂直方向に反転するアイコン](assets/chlimage_1-27.png)
 
 1. **完了**&#x200B;アイコンをタップまたはクリックして変更を保存します。
 
@@ -717,7 +721,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 ![アセットのタイムラインエントリの並べ替え](assets/sort_timeline.gif)
 
-*図：アセットのタイムラインエントリを並べ替えます。*
+*図： アセットのタイムラインエントリを並べ替えます。*
 
 >[!NOTE]
 >
@@ -727,11 +731,11 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 >
 >タイムラインには、[コンテンツフラグメントに固有のオプション](/help/assets/content-fragments-managing.md#timeline-for-content-fragments)がいくつか含まれています。
 
-## アセットに注釈を付ける {#annotating}
+## アセットへの注釈の付加 {#annotating}
 
 注釈とは、画像やビデオに追加するコメントまたは注記です。マーケティング担当者は、注釈により、アセットについてコラボレーションし、フィードバックを残すことができます。
 
-ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。AEM Assets がサポートするビデオの形式は、ブラウザーによって異なります。
+ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。Video formats that [!DNL Assets] supports depend on the browser.
 
 >[!NOTE]
 >
@@ -758,14 +762,14 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 1. 注釈を追加したら、「**[!UICONTROL 追加]**」をクリックして注釈を保存します。注釈に関する通知が Aaron に送信されます。
 
-   ![注追加釈を保存するボタン](assets/chlimage_1-32.png)
+   ![注釈追加を保存するボタン](assets/chlimage_1-32.png)
 
    >[!NOTE]
    >
    >複数の注釈を追加してから、それらを保存できます。
 
 1. 「**[!UICONTROL 閉じる]**」をタップまたはクリックして注釈モードを終了します。
-1. 通知を表示するには、Aaron MacDonald の資格情報を使用して AEM Assets にログインし、「**[!UICONTROL 通知]**」アイコンをクリックします。
+1. To view the notification, log in to [!DNL Assets] with Aaron MacDonald&#39;s credentials and click the **[!UICONTROL Notifications]** icon to view the notification.
 
    >[!NOTE]
    >
@@ -773,11 +777,11 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 1. 別の色を選択してユーザーを区別できるようにするには、プロファイルアイコンをクリックまたはタップし、「**[!UICONTROL 環境設定]**」をクリックまたはタップします。
 
-   ![ユーザープロファイルアイコンを選択し、「環境設定」を選択して、「ユーザー環境設定」を開きます](assets/User-profile-preferences.png)
+   ![「ユーザープロファイル」アイコンを選択し、「環境設定」を選択して、「ユーザー環境設定」を開きます](assets/User-profile-preferences.png)
 
    **[!UICONTROL 注釈カラー]**&#x200B;ボックスに必要な色を指定し、**[!UICONTROL 確定]**&#x200B;をクリックまたはタップします。
 
-   ![ユーザ環境設定で注釈の色を選択し、ユーザペルソナの色を設定](assets/Annotation-color.png)
+   ![ユーザ環境設定で注釈の色を選択し、ユーザパーソナの色を設定します](assets/Annotation-color.png)
 
 >[!NOTE]
 >
@@ -797,7 +801,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
    **[!UICONTROL タイムライン]**&#x200B;パネルでコメントをタップまたはクリックし、対応する画像の注釈を表示します。
 
-   ![画像上のタイムラインパネルから表示への注釈](assets/chlimage_1-37.png)
+   ![画像上の表示注釈に対するタイムラインパネル](assets/chlimage_1-37.png)
 
    特定のコメントを削除するには、「**[!UICONTROL 削除]**」をタップまたはクリックします。
 
@@ -809,7 +813,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 注釈とレビューステータスを印刷するには、**[!UICONTROL 印刷]**&#x200B;アイコンをタップまたはクリックし、ウィザードの指示に従ってください。**[!UICONTROL 印刷]**&#x200B;アイコンは、アセットに注釈またはレビューステータスが少なくとも 1 つ割り当てられている場合にのみ、ツールバーに表示されます。
 
-1. Assets UI から、アセットのプレビューページを開きます。
+1. From the [!DNL Assets] interface, open the preview page for an asset.
 1. 次のいずれかの操作をおこないます。
 
    * すべての注釈とレビューステータスを印刷するには、手順 3 をスキップして手順 4 に直接進みます。
@@ -821,7 +825,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
    レビューステータスのみを印刷するには、タイムラインからレビューステータスを選択します。
 
-   ![注釈のレビューステータスのみを印刷するには、タイムラインから選択します](assets/chlimage_1-39.png)
+   ![注釈のレビュー・ステータスのみを印刷するには、タイムラインから選択します](assets/chlimage_1-39.png)
 
 1. ツールバーの&#x200B;**[!UICONTROL 印刷]**&#x200B;アイコンをタップまたはクリックします。
 
@@ -839,7 +843,7 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
 1. 「**[!UICONTROL 印刷]**」をタップまたはクリックします。手順 2 で選択したオプションに応じて、生成される PDF の特定の位置に注釈／ステータスが表示されます。例えば、注釈とレビューステータスの両方を「**左上**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
 
-   ![生成されたPDFの注釈とレビューステータス](assets/chlimage_1-42.png)
+   ![生成されたPDFの注釈とレビューのステータス](assets/chlimage_1-42.png)
 
 1. 右上のオプションを使用して PDF をダウンロードまたは印刷します。
 
@@ -851,16 +855,16 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
    レンダリングされた PDF ファイルの外観を変更するには、Configuration Manager から&#x200B;**[!UICONTROL 注釈 PDF の設定]**&#x200B;を開き、必要なオプションを変更します。例えば、コメントとステータスのフォントカラー、サイズ、スタイル、背景色を変更できます。例えば、承認済みステータスの表示色を変更したり、対応フィールドのカラーコードを変更したりします。注釈のフォントカラーの変更について詳しくは、[注釈](/help/assets/managing-assets-touch-ui.md#annotating)を参照してください。
 
-   ![PDFにアセット注釈を印刷するための設定ドキュメント](assets/chlimage_1-44.png)
+   ![PDFドキュメントにアセット注釈を印刷するための設定](assets/chlimage_1-44.png)
 
    レンダリングされた PDF ファイルに戻り、更新します。更新された PDF に、変更が反映されています。
 
-アセットに外国語（特に非ラテン言語）の注釈が含まれる場合、これらの注釈を印刷するには、まず AEM サーバーで CQ-DAM-Handler-Gibson Font Manager サービスを設定する必要があります。CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
+If an asset includes annotations in foreign languages (especially non-latin languages), you must first configure CQ-DAM-Handler-Gibson Font Manager Service on the [!DNL Experience Manager] server to be able to print these annotations. CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
 
 1. CQ-DAM-Handler-Gibson Font Manager サービスの設定ページを、URL `https://[aem_server]:[port]/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl` から開きます。
 1. CQ-DAM-Handler-Gibson Font Manager サービスを設定するには、以下のいずれかをおこないます。
 
-   * 「システムフォントディレクトリ」オプションで、システムのフォントディレクトリの完全パスを指定する。例えば Mac ユーザーの場合、「システムフォントディレクトリ」オプションで */Library/Fonts* と指定します。AEM はこのディレクトリからフォントを取得します。
+   * 「システムフォントディレクトリ」オプションで、システムのフォントディレクトリの完全パスを指定する。例えば Mac ユーザーの場合、「システムフォントディレクトリ」オプションで */Library/Fonts* と指定します。[!DNL Experience Manager] はこのディレクトリからフォントを取得します。
    * `fonts` フォルダー内に ``crx-quickstart`` という名前のディレクトリを作成する。CQ-DAM-Handler-Gibson Font Manager サービスは `crx-quickstart/fonts` からフォントを自動的に取得します。「Adobe サーバーフォントディレクトリ」オプション内でデフォルトパスを上書きすることができます。
 
    * システムにフォント用の新しいフォルダーを作成し、必要なフォントをこのフォルダーに保存する。次に、「カスタマーフォントディレクトリ」オプションにこのフォルダーへの完全パスを指定します。
@@ -870,9 +874,9 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 
    * 文字列 `<font_family_name_of_custom_font, sans-serif>` をフォントファミリオプションに含めます。例えば、注釈を CJK（中国語、日本語、韓国語）で印刷したい場合、フォントファミリオプションに文字列 `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` を含めます。ヒンディー語の注釈を印刷したい場合、適切なフォントをダウンロードし、フォントファミリを Arial Unicode MS, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif として設定します。
 
-1. AEM インスタンスを再起動します。
+1. Restart the [!DNL Experience Manager] instance.
 
-以下の例は、注釈を CJK（中国語、日本語、韓国語）で印刷する場合の AEM の設定方法を示しています。
+Here is an example of how you can configure [!DNL Experience Manager] to print annotations in CJK (Chinese, Japanese and Korean):
 
 1. 以下のリンクから Google Noto CJK フォントをダウンロードし、Font Manager サービスで設定したフォントディレクトリに保存します。
 
@@ -883,67 +887,67 @@ AEM Assets インターフェイスの編集ツールを使用すると、画像
 1. フォントファミリパラメーターを `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` に設定して、注釈 PDF ファイルを設定します。この設定はデフォルトで使用でき、すべての欧文および CJK 言語で機能します。
 1. 選択した言語が手順 2 の言語と異なる場合は、デフォルトフォントファミリに適切なエントリを（コンマで区切って）追加してください。
 
-## アセットのバージョンの作成、管理、プレビューおよび元に戻す {#asset-versioning}
+## アセットバージョンの作成、管理、プレビューおよび元に戻す {#asset-versioning}
 
-バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。バージョン管理を使用すると、後で、以前の状態にアセットを復元できます。例えば、アセットに対しておこなった変更を取り消したい場合、バージョン管理を使用して未編集のバージョンにアセットを復元できます。Experience Managerでは、表示を作成し、現在のリビジョンを表示し、画像の2つのバージョン間で画像を左右に並べて比較し、アセットを以前のバージョンに戻すことができます。
+バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。バージョン管理を使用すると、後で、以前の状態にアセットを復元できます。例えば、アセットに対しておこなった変更を取り消したい場合、バージョン管理を使用して未編集のバージョンにアセットを復元できます。では、バージョンを作成し、現在のリビジョンを表示し、2つの表示のバージョン間でを並べて比較して異なる差異を作成し、アセットを以前のバージョンに復元できます。 [!DNL Experience Manager]
 
-次のシナリオで、Experience Managerでバージョンを作成できます。
+バージョンは、次のシナリオ [!DNL Experience Manager] で作成できます。
 
-* 同じ場所に存在するのと同じファイル名でアセットをアップロードします。 新しいアセット、または同じアセットの変更済みバージョンを使用できます。
-* Experience Managerで画像を編集し、変更を保存します。
+* 同じ場所に存在するのと同じファイル名のアセットをアップロードします。 新しいアセットにすることも、同じアセットの変更済みバージョンにすることもできます。
+* で画像を編集し、変更 [!DNL Experience Manager] を保存します。
 * アセットのメタデータを編集します。
-* AEMデスクトップアプリを使用して、既存のアセットをチェックアウトし、編集して、変更をア [ップロードします](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
+* デスクトップ [!DNL Experience Manager] アプリを使用して、既存のアセットをチェックアウトし、編集して、変更内容を [アップロードします](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
 
 また、ワークフローを使用して、自動バージョン管理を有効にすることもできます。アセットのバージョンを作成すると、バージョンと共にメタデータとレンディションが保存されます。レンディションによって、同じ画像の代替となる画像が表示されます（例えば、アップロードされた JPEG ファイルの PNG レンディション）。
 
-1. バージョンを作成するアセットの場所に移動し、そのアセットをクリックして開きます。プレビュー ページの左上隅からメニューを開き、「タイムライン」を選択し **[!UICONTROL ます]**。
+1. バージョンを作成するアセットの場所に移動し、そのアセットをクリックしてプレビューを開きます。 ページの左上隅から、メニューを開き、「 **[!UICONTROL タイムライン]**」を選択します。
 
    ![左側のナビゲーションメニューで、タイムラインオプションを選択します](assets/timeline.png)
 
-   *図：ページの左上の領域からメニューを開き、「タイムライン」オプション[!UICONTROL を選択し]ます。*
+   *図： ページの左上の領域からメニューを開き、「[!UICONTROL タイムライン]」オプションを選択します。*
 
 1. アセットのバージョンを作成するには：
 
    * Click the **[!UICONTROL Actions]** at the bottom.
-   * 「**[!UICONTROL 保存するバージョン]**」をクリックして、アセットのバージョンを作成します。オプションで、ラベルとコメントを追加します。
+   * 「**[!UICONTROL 保存するバージョン]**」をクリックして、アセットのバージョンを作成します。必要に応じて、ラベルとコメントを追加します。
    * Click **[!UICONTROL Create]** to create a version.
 
-      ![サイドバーからアセットのバージョンを作成する](assets/create-new-version-from-timeline.png)
+      ![サイドバーからアセットバージョンを作成](assets/create-new-version-from-timeline.png)
 
-      *図：タイムラインの左側のサイドバーからアセットのバージ[!UICONTROL ョンを]作成します。*
+      *図： タイムライン[!UICONTROL 左サイドバーからアセットのバージョンを作成し]ます。*
 
-1. アセットの表示を行うには：
+1. アセットのバージョンを表示するには：
 
-   * タイムライ **[!UICONTROL ンで「すべてを表示]** 」をク [!UICONTROL リックしま]す。
-   * 「バージョン」 **[!UICONTROL をクリックしま]**&#x200B;す。 アセット用に作成されたすべてのバージョンが左側のサイドバーに表示されます。
+   * タイムライン **[!UICONTROL で「すべて]** を表示 [!UICONTROL 」をクリック]します。
+   * 「 **[!UICONTROL バージョン]**」をクリックします。 アセットに対して作成されたすべてのバージョンが左側のサイドバーに表示されます。
 
       ![ タイムラインから「バージョン」オプションを選択します。](assets/versions_option.png)
 
-   * アセットの特定のバージョンを選択し、「バージョン」をク **[!UICONTROL プレビューしま]**&#x200B;す。
+   * アセットの特定のバージョンを選択し、「 **[!UICONTROL プレビューのバージョン]**」をクリックします。
 
-1. 古いバージョンのアセットに戻すには、次の手順を実行します。 元に戻すと、このバージョンがインターフェイスに表示 [!DNL Assets] され、使用できるようになります。
+1. 古いバージョンのアセットに戻すには、次の操作を行います。 元に戻すと、このバージョンがインター [!DNL Assets] フェイスに表示され、使用できるようになります。
 
-   * アセットのバージョンをクリックします。 オプションで、ラベルとコメントを追加します。
+   * アセットのバージョンをクリックします。 必要に応じて、ラベルとコメントを追加します。
    * Click **[!UICONTROL Revert to this Version]**.
 
-      ![元に戻すバージョンを選択](assets/select_version.png)
+      ![元に戻すバージョンを選択します](assets/select_version.png)
 
-      *図：バージョンを選択し、元に戻します。 DAMユーザーが使用できる現在のバージョンになります。*
+      *図： バージョンを選択し、それに戻します。 これが現在のバージョンになり、DAMユーザーが使用できるようになります。*
 
 1. 2つのバージョンの画像を比較するには、次の手順に従います。
    * 現在のバージョンと比較するバージョンをクリックします。
-   * スライダを左にドラッグして、このバージョンを現在のバージョンに重ねて比較します。
-   ![スライダを使用して、選択したバージョンのアセットと現在のバージョンを比較します。](assets/version-slider.gif)
+   * スライダを左にドラッグして、このバージョンを現在のバージョンに重ね合わせ、比較します。
+   ![スライダを使用して、選択したアセットのバージョンと現在のバージョンを比較する](assets/version-slider.gif)
 
-   *図：スライダを使用して、選択したバージョンのアセットと現在のバージョンを簡単に比較できます。*
+   *図： スライダを使用すると、選択したアセットのバージョンを現在のバージョンと簡単に比較できます。*
 
 ### Start a workflow on an asset {#starting-a-workflow-on-an-asset}
 
-ワークフローを適用してアセットを処理する方法については、アセットに対する [開始ワークフローを参照してくださ](/help/assets/assets-workflow.md#apply-a-workflow-to-an-asset)い。
+ワークフローを適用してアセットを処理する方法については、アセットに対する [開始ワークフローを参照してください](/help/assets/assets-workflow.md#apply-a-workflow-to-an-asset)。
 
 ## コレクション {#collections}
 
-コレクションとは、一連のアセットを順序よく並べたものです。コレクションを使用して、関連するアセットをユーザー間で共有したり、類似のアセットをクラスター化して、簡単に見つけることができます。
+コレクションとは、一連のアセットを順序よく並べたものです。コレクションを使用して、ユーザー間で関連するアセットを共有したり、類似するアセットをまとめてクラスター化して、簡単に見つけることができます。
 
 * 1 つのコレクションにはアセットへの参照のみが含まれるので、様々な場所のアセットを含めることができます。各コレクションは、アセットの参照整合性を維持します。
 * コレクションは、特権レベル（編集、表示など）の異なる複数のユーザー間で共有できます。
