@@ -3,7 +3,7 @@ title: アセットメタデータの一括読み込みおよび書き出し.
 description: デジタルアセットのメタデータの一括読み込みと書き出し。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. メタデータが入った CSV ファイルを選択します。
 1. 以下のパラメーターを指定します。
 
-   | メタデータの読み込みパラメーター | 説明 |
+   | メタデータ読み込みパラメーター | 説明 |
    |:---|:---|
    | [!UICONTROL バッチサイズ] | メタデータを読み込むバッチ内のアセット数。デフォルト値は 50 です。最大値は 100 です。 |
    | [!UICONTROL フィールドセパレーター] | デフォルト値は `,`（コンマ）です。他の文字も指定できます。 |
@@ -35,9 +35,15 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 1. ツールバーの「**[!UICONTROL 読み込み]**」をタップまたはクリックします。After the metadata is imported, a notification is sent to your [!UICONTROL Notification] inbox. アセットのプロパティページに移動し、メタデータ値がアセットに正常に読み込まれたかどうかを確認します。
 
+メタデータの読み込み時に日付とタイムスタンプを追加するには、日付と時刻の `YYYY-MM-DDThh:mm:ss.fff-00:00` 形式を使用します。 日付と時刻は、で区切ら `T`れます。 `hh` は24時間形式の時間、 `fff` はナノ秒、 `-00:00` はタイムゾーンオフセットです。 例えば、2020年3月26日 `2020-03-26T11:26:00.000-07:00` の午前11:26:00.000 PST時などです。
+
+>[!CAUTION]
+>
+>日付形式が一致しない場合 `YYYY-MM-DDThh:mm:ss.fff-00:00`、日付値は設定されません。 書き出されたメタデータCSVファイルの日付形式は、形式になり `YYYY-MM-DDThh:mm:ss-00:00`ます。 読み込む場合は、で示すナノ秒値を追加して、有効な形式に変換し `fff`ます。
+
 ## メタデータの書き出し {#export-metadata}
 
-複数のアセットのメタデータをCSV形式で書き出すことができます。 メタデータは非同期的に書き出され、システムのパフォーマンスに影響を及ぼしません。To export metadata, [!DNL Experience Manager] traverses through the properties of the asset node `jcr:content/metadata` and its child nodes and exports the metadata properties in a CSV file.
+CSV形式で複数のアセットのメタデータを書き出すことができます。 メタデータは非同期的に書き出され、システムのパフォーマンスに影響を及ぼしません。To export metadata, [!DNL Experience Manager] traverses through the properties of the asset node `jcr:content/metadata` and its child nodes and exports the metadata properties in a CSV file.
 
 メタデータの一括書き出しの使用例は次のとおりです。
 
