@@ -1,20 +1,20 @@
 ---
-title: メタデータプロファイルを使用して、アセットのメタデータ要件をカスタマイズします。
+title: アセットのメタデータ要件をカスタマイズするメタデータプロファイル
 description: アセットのメタデータプロファイルについて理解します。また、メタデータプロファイルを作成し、フォルダーのアセットに適用する方法も学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ---
 
 
 # メタデータプロファイル {#metadata-profiles}
 
-メタデータプロファイルを使用すると、フォルダ内のアセットに初期設定のメタデータを適用できます。メタデータプロファイルを作成し、フォルダに適用します。その後フォルダにアップロードするアセットは、メタデータフォルダで設定した初期設定のメタデータが継承されます。プロファイル
+メタデータプロファイルを使用すると、フォルダー内のアセットに初期設定のメタデータを適用できます。 メタデータプロファイルを作成し、フォルダに適用します。 その後フォルダーにアップロードするアセットは、メタデータプロファイルで設定した初期設定のメタデータを継承します。
 
 ## メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
-1. ツール/アセ **[!UICONTROL ット/メタデータプロファイル]** に移動し、「作成」をタ **[!UICONTROL ップします]**。
+1. **[!UICONTROL ツール/アセット/メタデータプロファイル]** に移動し、「 **[!UICONTROL 作成]**」をタップします。
 1. Enter a title for the Metadata Profile, for example Sample Metadata, and tap **[!UICONTROL Create]**. The [!UICONTROL Edit Form] for the metadata profile is displayed.
 
    ![chlimage_1-197](assets/chlimage_1-480.png)
@@ -25,9 +25,9 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    **[!UICONTROL 説明]**&#x200B;コンポーネントについて、次のプロパティを編集します。
 
-   * **[!UICONTROL フィールドラベル]**:メタデータプロパティの表示名です。 ユーザーの参照用のみで使用します。
+   * **[!UICONTROL フィールドラベル]**: メタデータプロパティの表示名です。 ユーザーの参照用のみで使用します。
 
-   * **[!UICONTROL プロパティにマップ]**:このプロパティの値は、リポジトリに保存されるアセットノードの相対パス/名前を指定します。この値は、パスがアセットの開始 `./` の下にあることを示しているので、常にノードと一致する必要があります。
+   * **[!UICONTROL プロパティにマップ]**: このプロパティの値は、リポジトリに保存されるアセットノードの相対パス/名前を提供します。 この値は常にと開始する必要があります。これは、パスがアセットのノード下にあることを示している `./` からです。
    ![chlimage_1-199](assets/chlimage_1-482.png)
 
    「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットのメタデータノード下のプロパティとして保存されます。例えば、「**[!UICONTROL プロパティにマッピング]**」の名前として `/jcr:content/metadata/dc:desc` を指定した場合は、アセットのメタデータノードに値 `dc:desc` が保存されます。
@@ -53,7 +53,6 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 ![chlimage_1-201](assets/chlimage_1-484.png)
 
 1. 「**[!UICONTROL 完了]**」をタップまたはクリックします。メタデータプロファイルが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに追加されます。<br>
-
 
    ![メタデータプロファイルページに追加されたメタデータプロファイル](assets/MetadataProfiles-page.png)
 
@@ -102,7 +101,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 #### プロファイルユーザーインターフェイスからのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
-次の手順に従って、メタデータプロファイルを適用します。
+メタデータプロファイルを適用する手順は、次のとおりです。
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
@@ -128,13 +127,13 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 後で変更した既存のメタデータプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
-**メタデータプロファイルをグローバルに適用するには、次のいずれかをおこないます。**
+メタデータプロファイルをグローバルに適用するには、次の手順に従います。
 
 * `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` に移動して適切なプロファイル適用し、「**[!UICONTROL 保存]**」をタップします。
 
    ![chlimage_1-209](assets/chlimage_1-492.png)
 
-* CRXDE Lite で、`/content/dam/jcr:content` ノードに移動します。プロパティ `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>` を追加し、「**すべて保存**」をタップします。
+* In CRXDE Lite, navigate to the following node: `/content/dam/jcr:content`. Add the property `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>` and click **[!UICONTROL Save All]**.
 
    ![chlimage_1-210](assets/chlimage_1-493.png)
 
@@ -158,8 +157,12 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択して、「**[!UICONTROL 保存]**」をクリックします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
+## 制限事項とベストプラクティス {#limitations-best-practices-tips}
+
+* 6.5へのアップグレード以降、既存のメタデータプロファイルが存在する場合があります。アップグレード後、「メタデータプロファイル [!DNL Experience Manager][!UICONTROL 」タブのフォルダー] プロパティ  にこのプロファイルを適用すると、メタデータフォームフィールドは表示されません。 ただし、新しく作成したメタデータプロファイルを適用すると、フォームフィールドは表示されますが、期待どおりに使用できなくなります。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
+
 >[!MORELIKETHIS]
 >
->* [プロファイルを使用して、メタデータ、画像およびビデオを処理します。](processing-profiles.md)
->* [デジタルアセットを整理して処理プロファイル](/help/assets/organize-assets.md)
+>* [メタデータ、画像およびビデオの処理プロファイル](processing-profiles.md)
+>* [処理プロファイルを使用するデジタルアセットを整理するためのベストプラクティス](/help/assets/organize-assets.md)
 
