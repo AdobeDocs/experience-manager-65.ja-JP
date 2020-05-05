@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 translation-type: tm+mt
-source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
+source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
 
 ---
 
@@ -21,14 +21,22 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 これを設定するには：
 
-1. **ツール／クラウドサービス**&#x200B;で「**Adobe Analytics**」セクションに移動します。
-1. 新しい設定を追加します。「**Adobe Analytics 分類**」設定テンプレートが「**Adobe Analytics フレームワーク**」設定の下に表示されます。「**タイトル**」と「**名前**」を必要に応じて指定します。
+1. **ナビゲーション**&#x200B;を使用して、**ツール**、**クラウドサービス**&#x200B;を選択し、**従来のクラウドサービス**&#x200B;を選択します。
+1. 「 **Adobe Analytics** 」までスクロールし、「設定を **表示**」を選択します。
+1. Click the **[+]** link next to your Adobe Analytics configuration.
 
-   ![aa-25](assets/aa-25.png)
+1. **フレームワークを作成**&#x200B;ダイアログで、次の操作を実行します。
 
-1. 「**作成**」をクリックして、設定を指定します。
+   * 「**タイトル**」を指定します。
+   * オプションで、リポジトリにフレームワークの詳細を保存するノードの&#x200B;**名前**&#x200B;を指定できます。
+   * Select **Adobe Analytics Classifications**
+   「**作成**」をクリックします。
 
-   ![chlimage_1](assets/chlimage_1a.png)
+   ![フレームワークを作成ダイアログ](assets/aa-25.png)
+
+1. 編集用の **分類設定** ダイアログが開きます。
+
+   ![分類設定ダイアログ](assets/aa-classifications-settings.png)
 
    プロパティには、次が含まれています。
 
@@ -38,7 +46,7 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
    | 競合時に上書き | 「**はい**」を選択すると、データの競合が上書きされます。デフォルトでは、これは「**いいえ**」に設定されています。 |
    | 削除処理 | 「**はい**」に設定すると、書き出された後に処理したノードが削除されます。デフォルトは、「**False**」です。 |
    | ジョブの書き出しに関する説明 | Adobe Classifications ジョブの説明を入力します。 |
-   | 通知電子メール | Adobe分類通知の電子メールアドレスを入力します。 |
+   | 通知電子メール | Adobe Classifications通知の電子メールアドレスを入力します。 |
    | レポートスイート | 読み込みジョブを実行するレポートスイートを入力します。 |
    | データセット | 読み込みジョブを実行するデータセット関連 ID を入力します。 |
    | 変換サービス | ドロップダウンメニューから、変換サービスの実装を選択します。 |
@@ -51,7 +59,7 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 レコードは、ページで処理されます。デフォルトでは、Adobe分類はページサイズが1000のページを作成します。
 
-1ページは、Adobe分類の定義ごとに最大で25,000ページで、Felixコンソールから変更できます。 エクスポート中に、Adobe分類はソースノードをロックして、同時に変更されないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
+1つのページのサイズは、Adobe分類の定義ごとに最大25,000個に設定でき、Felixコンソールから変更できます。 エクスポート中、Adobe Classificationsはソースノードをロックして、同時に変更が行われないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
 
 ページサイズを変更するには：
 
@@ -69,7 +77,7 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。For Adobe Classifications, a subinterface `SAINTTransformer<String[]>` implementing the Transformer interface has been provided. This interface is used to restrict the data type to `String[]` which is used by the SAINT API and to have a marker interface to find such services for selection.
 
-デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキー、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。Namespaced properties (containing `:`) are disregarded.
+デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキーとし、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。Namespaced properties (containing `:`) are disregarded.
 
 *ノード構造：*
 
