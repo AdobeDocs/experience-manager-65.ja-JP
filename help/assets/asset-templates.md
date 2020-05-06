@@ -1,9 +1,12 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]のアセットテンプレート。'
-description: '[!DNL Adobe Experience Manager Assets]のアセットテンプレートと、アセットテンプレートを使用してマーケティングコラテラルを作成する方法について説明します。'
+title: のアセットテンプレート [!DNL Adobe Experience Manager Assets]。
+description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1553'
+ht-degree: 33%
 
 ---
 
@@ -196,4 +199,4 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
 ## Best practices and limitations {#best-practices-limitations-tips}
 
-* AEM InDesignエディターはタグレベルで機能し、1つのタグの下のすべてのテキストは単一のエンティティと見なされます。 編集時にテキストの書式設定とスタイルを保持するには、各段落（または異なるスタイルのテキスト）に個別にタグを付けます。
+* の [!DNL InDesign] エディターはタグレベルで [!DNL Experience Manager] 機能し、1つのタグの下にあるすべてのテキストは単一のエンティティと見なされます。 編集時にテキストの書式設定とスタイルを保持するには、各段落（または異なるスタイルのテキスト）に個別にタグを付けます。
