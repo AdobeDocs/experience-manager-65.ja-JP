@@ -1,9 +1,12 @@
 ---
-title: '[!DNL Adobe Experience Manager]でデジタルアセットのメタデータを管理します。'
-description: メタデータの種類と、[!DNL Adobe Experience Manager Assets]がアセットのメタデータを管理し、アセットの分類と整理を簡単にする方法について説明します。 [!DNL Experience Manager]を使用すると、メタデータに基づいてアセットを自動的に整理および処理できます。
+title: Manage metadata of your digital assets in [!DNL Adobe Experience Manager].
+description: メタデータのタイプについて説明します。メタデータに基づいてアセットを自動的に整理および処理できる [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c32e64d4921d7239d07f57ab9e12c744758faa0a
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1395'
+ht-degree: 17%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: c32e64d4921d7239d07f57ab9e12c744758faa0a
 * フォルダーの名前。
 * 関連するアセットまたは適用したタグ。
 
-上記は、Experience Managerがアセットに対して管理できる基本的なメタデータプロパティです。これにより、ユーザーはすべてのアセットを表示できます。 例えば、最終変更日にアセットを並べ替えると、最近追加したアセットを検出する場合に便利です。
+上記は、アセットに対して管理できる基本的なメタデータプロパティで [!DNL Experience Manager] す。これにより、ユーザーはすべてのアセットを表示できます。 例えば、最終変更日にアセットを並べ替えると、最近追加したアセットを検出する場合に便利です。
 
 デジタルアセットに、次のようなデータをさらに追加できます。
 
@@ -90,7 +93,7 @@ ID3 タグは、MP3 ファイルフォーマット用に設計されています
 
 ### Exif {#exif}
 
-Exchangeable Image File Format(Exif)は、デジタル写真で最も使用されるメタデータ形式です。 JPEG、TIFF、RIFF、WAVなど、多くのファイル形式でメタデータプロパティの固定語彙を埋め込む方法を提供します。 Exif stores metadata as pairs of a metadata name and a metadata value. These metadata name-value-pairs are also called tags, not to be confused with the tagging in [!DNL Experience Manager].  最新のデジタルカメラはExifメタデータを作成し、最新のグラフィックソフトウェアがそれをサポートします。 Exif形式は、特に画像に関するメタデータ管理で最も一般的な分母です。
+Exchangeable Image File Format(Exif)は、デジタル写真で最も使用されるメタデータ形式です。 JPEG、TIFF、RIFF、WAVなど、多くのファイル形式でメタデータプロパティの固定語彙を埋め込む方法を提供します。 Exif stores metadata as pairs of a metadata name and a metadata value. These metadata name-value-pairs are also called tags, not to be confused with the tagging in [!DNL Experience Manager]. 最新のデジタルカメラはExifメタデータを作成し、最新のグラフィックソフトウェアがそれをサポートします。 Exif形式は、特に画像に関するメタデータ管理で最も一般的な分母です。
 
 Exifの主な制限は、BMP、GIF、PNGなどの一般的な画像ファイル形式ではサポートされないことです。
 
@@ -98,7 +101,7 @@ Exifで定義されるメタデータフィールドは、通常、技術的な�
 
 ### Other metadata {#other-metadata}
 
-ファイルから埋め込み可能なその他のメタデータには、Microsoft Word、PowerPoint、Excel などがあります。
+Other metadata that can be embedded from files include [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel], and so on.
 
 ## Metadata schemata {#metadata-schemata}
 
