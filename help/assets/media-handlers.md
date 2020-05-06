@@ -1,18 +1,21 @@
 ---
-title: メディアハンドラーとメディアを使用したアセットの処理ワークフロー
-description: メディアハンドラーについて説明し、デジタルアセットに対してワークフローを使用してタスクを実行する方法について説明します。
+title: メディアハンドラーとワークフローを使用したアセットの処理
+description: メディアハンドラーについて、およびワークフローを使用してデジタルアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '2197'
+ht-degree: 71%
 
 ---
 
 
 # Process assets using media handlers and workflows {#processing-assets-using-media-handlers-and-workflows}
 
-Adobe Experience Manager (AEM) Assets には、アセットを処理するためのデフォルトのワークフローとメディアハンドラーのセットが付属しています。ワークフローは、アセットに対して実行するタスクを定義し、特定のタスク(サムネールの生成やメタデータの抽出など)をメディアハンドラーに委任します。
+Adobe Experience Manager（AEM）Assets には、アセットを処理するためのデフォルトのワークフローとメディアハンドラーのセットが付属しています。ワークフローは、アセットに対して実行されるタスクを定義し、特定のタスク(サムネールの生成やメタデータ抽出など)をメディアハンドラーに委任します。
 
-ワークフローは、特定のMIMEタイプのアセットがアップロードされたときに自動的に実行されるように設定できます。 処理手順は、一連のAEM Assetsメディアハンドラーに関して定義されます。 AEM には、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタムで開発](#creating-a-new-media-handler)したり、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義したりできます。
+特定のMIMEタイプのアセットがアップロードされたときに、自動的に実行されるようにワークフローを設定できます。 処理手順は、一連のAEM Assetsメディアハンドラーに関して定義されます。 AEM には、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタムで開発](#creating-a-new-media-handler)したり、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義したりできます。
 
 メディアハンドラーは、アセットに対して特定の処理を実行する AEM Assets 内のサービスです。例えば、MP3 オーディオファイルを AEM にアップロードすると、ワークフローは MP3 ハンドラーを呼び出し、MP3 ハンドラーはメタデータを抽出してサムネールを生成します。通常、メディアハンドラーはワークフローと組み合わせて使用されます。AEM 内では、よく使用される MIME タイプがサポートされています。アセットに対して特定のタスクを実行するには、ワークフローを拡張または作成するか、メディアハンドラーを拡張または作成するか、メディアハンドラーを無効または有効にします。
 
@@ -47,7 +50,7 @@ AEM Assets 内では以下のメディアハンドラーを使用できます。
 * アセットから使用できるすべてのメタデータを抽出する
 * アセットのサムネール画像の作成
 
-アクティブなメディア表示を作成するには：
+アクティブなメディアハンドラを表示するには：
 
 1. In your browser, navigate to `http://localhost:4502/system/console/components`.
 1. 「`com.day.cq.dam.core.impl.store.AssetStoreImpl`」をクリックします。
@@ -65,13 +68,13 @@ AEM には、アセットを処理するデフォルトのワークフローが�
 
 以下の例は、**[!UICONTROL AEM Assets 同期]**&#x200B;ワークフローを拡張して、PDF ドキュメント以外のすべてのアセットについてサブアセットを生成するための方法を示しています。
 
-### メディアハンドラの無効化または有効化 {#disabling-enabling-a-media-handler}
+### メディアハンドラーの無効化または有効化 {#disabling-enabling-a-media-handler}
 
 メディアハンドラーを無効または有効にするには、Apache Felix Web Management Console を使用します。メディアハンドラーを無効にすると、そのアセットに対してメディアハンドラーのタスクは実行されません。
 
 メディアハンドラーを有効または無効にするための手順
 
-1. ブラウザーで、`https://<host>:<port>/system/console/components` に移動します。
+1. ブラウザーで、`https://<host>:<port>/system/console/components` です。
 1. メディアハンドラーの名前の横にある「**[!UICONTROL Disable]**」をクリックします。例：`com.day.cq.dam.handler.standard.mp3.Mp3Handler`
 1. ページを更新します。メディアハンドラーの横に、無効であることを示すアイコンが表示されます。
 1. メディアハンドラーを有効にするには、メディアハンドラーの名前の横にある「**[!UICONTROL Enable]**」をクリックします。
@@ -103,8 +106,8 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 * `com.day.cq.dam.api.handler.AssetHandler` インターフェイス：特定の MIME タイプのサポートを追加するサービスを記述します。新しい MIME タイプを追加するには、このインターフェイスを実装する必要があります。このインターフェイスには、特定のドキュメントの読み込みと書き出し、サムネールの作成およびメタデータの抽出をおこなうメソッドがあります。
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：
-   * このクラスは、他のすべてのアセットハンドラー実装の基礎となり、共通の使用機能と、サブアセットの実装に共通の使用機能を提供します。抽出
-   * 実装を開始する最善の方法は、ほとんどの処理を行い、妥当なデフォルト動作を提供する、提供された抽象実装から継承することです。com.day.cq.dam.core.AbstractAssetHandlerクラスを参照してください。
+   * このクラスは、他のすべてのアセットハンドラーの実装の基礎として機能し、共通の使用済み機能と、サブアセット抽出の共通の使用済み機能を提供します。
+   * 実装を開始する最善の方法は、ほとんどの処理を行い、適切なデフォルト動作を提供する、提供された抽象実装から継承することです。 com.day.cq.dam.core.AbstractAssetHandlerクラス
    * このクラスには、抽象的なサービス記述子が用意されています。そのため、このクラスから継承し、maven-sling-plugin を使用する場合、inherit フラグを true に設定する必要があります。
 
 以下のメソッドを実装する必要があります。
@@ -129,11 +132,11 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 以下の手順を実行します。
 
-Mavenプラグインを使用してEclipse [](../sites-developing/dev-tools.md) をインストールおよび設定し、Mavenプロジェクトに必要な依存関係を設定する方法については、開発ツールを参照してください。
+Mavenプラグインを使用してEclipseをインストールおよび設定し、Mavenプロジェクトに必要な依存関係を設定する方法については、 [開発ツール](../sites-developing/dev-tools.md) （英語）を参照してください。
 
 以下の手順を実行した後、txt ファイルを AEM にアップロードすると、ファイルのメタデータが抽出され、透かしありの 2 つのサムネールが生成されます。
 
-1. Eclipseで、Mavenプロジェクト `myBundle` を作成します。
+1. Eclipseで、Mavenプロジェクトを作成し `myBundle` ます。
 
    1. In the Menu bar, click **[!UICONTROL File > New > Other]**.
    1. In the dialog, expand the Maven folder, select Maven Project and click **[!UICONTROL Next]**.
@@ -275,14 +278,14 @@ Mavenプラグインを使用してEclipse [](../sites-developing/dev-tools.md) 
     </dependencies>
    ```
 
-1. 次の場所でJavaクラ `com.day.cq5.myhandler` スを含むパッケージを作成しま `myBundle/src/main/java`す。
+1. 次の場所で、Javaクラス `com.day.cq5.myhandler` を含むパッケージを作成し `myBundle/src/main/java`ます。
 
    1. Under myBundle, right-click `src/main/java`, select New, then Package.
    1. Name it `com.day.cq5.myhandler` and click Finish.
 
 1. Create the Java class `MyHandler`:
 
-   1. Eclipseで、パッケージ `myBundle/src/main/java`を右クリックし、「新規」 `com.day.cq5.myhandler` 、「クラス」の順に選択します。
+   1. Eclipseの下で、 `myBundle/src/main/java``com.day.cq5.myhandler` パッケージを右クリックし、「New」、「Class」の順に選択します。
    1. ダイアログウィンドウで、この Java クラスに MyHandler という名前を付け、「Finish」をクリックします。MyHandler.java ファイルが作成され、このファイルが開きます。
    1. In `MyHandler.java` replace the existing code with the following and then save the changes:
 
@@ -448,7 +451,7 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 
 >[!NOTE]
 >
->非 Windows システムでは、ファイル名に一重引用符（&#39;）を含むビデオアセットのレンディションの生成中に FFMpeg ツールがエラーを返します。ビデオファイル名に一重引用符が含まれている場合は、AEM にアップロードする前に削除してください。
+>Windows以外のシステムでは、Fmpegツールは、ファイル名に一重引用符(&#39;)が含まれるビデオアセットのレンディションの生成中にエラーを返します。 ビデオファイル名に一重引用符が含まれている場合は、AEM にアップロードする前に削除してください。
 
 `CommandLineProcess` プロセスは、リストに表示されている順序で以下の操作を実行します。
 
@@ -462,7 +465,7 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 
 ### An example using ImageMagick {#an-example-using-imagemagick}
 
-次の例は、MIMEタイプgifまたはtiffを持つアセットがAEMサーバーの/content/damに追加されるたびに、元のアセットの反転画像が3つの追加のサムネール(140x100、48x48、10x250)と共に作成されるように、コマンドラインの処理手順を設定する方法を示しています。
+次の例は、MIMEタイプgifまたはtiffを持つアセットがAEMサーバーの/content/damに追加されるたびに、元のアセットの反転画像が3つの追加のサムネール(140x100、48x48、10x250)と共に作成されるように、コマンドライン処理手順を設定する方法を示しています。
 
 これを実現するには、ImageMagick を使用します。ImageMagick は無料のソフトウェアスイートです。ビットマップ画像の作成、編集および構成をおこなう機能があり、一般的にコマンドラインから使用されます。
 
@@ -504,13 +507,13 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 
 ここでは、[!UICONTROL CommandLineProcess] の[!UICONTROL プロセス引数]を設定する方法について説明します。
 
-「 [!UICONTROL Process Arguments] 」の値はコンマで区切り、空白で開始しないでください。
+「 [!UICONTROL Process Arguments] 」の値は、コンマで区切ります。空白で開始しないでください。
 
 | 引数のフォーマット | 説明 |
 |---|---|
 | mime:&lt;mime-type> | オプション引数。アセットの MIME タイプが引数の MIME タイプと同じ場合にプロセスが適用されます。<br>複数の MIME タイプを定義できます。 |
 | tn:&lt;width>:&lt;height> | オプション引数。プロセスにより、引数で定義されたサイズのサムネールが作成されます。<br>複数のサムネールを定義できます。 |
-| cmd: &lt;command> | 実行されるコマンドを定義します。この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます<br>`${filename}`。入力ファイルの名前（original.jpgなど） <br> `${file}`:入力ファイルのフルパス名(例：/tmp/cqdam0816.tmp/original.jpg) <br> `${directory}`:入力ファイルのディレクトリ(/tmp/cqdam0816.tmpなど) <br>`${basename}`。入力ファイルの名前（拡張子なし）。例えば、original <br>`${extension}`:入力ファイルの拡張子（jpgなど） |
+| cmd: &lt;command> | 実行されるコマンドを定義します。この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど） <br> `${file}`: 入力ファイルのフルパス名(例：/tmp/cqdam0816.tmp/original.jpg) <br> `${directory}`: 入力ファイルのディレクトリ。例：/tmp/cqdam0816.tmp <br>`${basename}`: 入力ファイルの名前（拡張子なし）。例： original <br>`${extension}`: 入力ファイルの拡張子（jpgなど） |
 
 例えば、AEM サーバーをホストするディスクに ImageMagick がインストールされており、[!UICONTROL CommandLineProcess] を実装として使用し、以下の値を[!UICONTROL プロセス引数]として使用してプロセスのステップを作成するとします。
 
@@ -528,7 +531,7 @@ ImageMagick を使用して Web 対応レンディションを作成するには
 
 >[!NOTE]
 >
->[!UICONTROL CommandLineProcess] ステップは、アセット（ノードタイプ ）またはアセットの子孫にのみ適用されます。`dam:Asset`
+>[!UICONTROL CommandLineProcess] ステップは、アセット（ノードタイプ `dam:Asset`）またはアセットの子孫にのみ適用されます。
 
 >[!MORELIKETHIS]
 >
