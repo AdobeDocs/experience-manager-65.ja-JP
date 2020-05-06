@@ -1,22 +1,25 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]のデプロイメントを監視するためのベストプラクティスです。'
-description: '[!DNL Adobe Experience Manager]の展開後に、展開の環境とパフォーマンスを監視するためのベストプラクティスです。'
+title: デプロイメントを [!DNL Adobe Experience Manager Assets] 監視するためのベストプラクティスです。
+description: Best practices to monitor the environment and performance of your [!DNL Adobe Experience Manager] deployment after it is deployed.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1673'
+ht-degree: 67%
 
 ---
 
 
-# 導入を監視するためのベストプラクテ [!DNL Adobe Experience Manager Assets] ィス {#assets-monitoring-best-practices}
+# 導入を監視するためのベストプラクティス [!DNL Adobe Experience Manager Assets] {#assets-monitoring-best-practices}
 
-監視には、 [!DNL Experience Manager Assets] 次のプロセスと技術の観察とレポートが含まれる必要があります。
+この観点から [!DNL Experience Manager Assets] 、監視には以下のプロセスと技術の観察とレポートが含まれる必要があります。
 
 * システム CPU
 * システムメモリ使用量
 * システムディスク IO および IO 待機時間
 * システムネットワーク IO
-* JMX MBeans。ヒープの使用と非同期プロセス(ワークフローなど)
+* ヒープの使用率と非同期プロセス(ワークフローなど)のためのJMX MBean
 * OSGi コンソールヘルスチェック
 
 Typically, [!DNL Experience Manager Assets] can be monitored in two ways, live monitoring and long term monitoring.
@@ -25,7 +28,7 @@ Typically, [!DNL Experience Manager Assets] can be monitored in two ways, live m
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
-* [ビジュアルVM](https://visualvm.java.net/):Visual VMを使用すると、CPU使用率、Java表示使用率など、Java VMの詳細な情報をメモリに格納できます。 また、デプロイメントで実行するコードのサンプルと評価も可能です。
+* [ビジュアルVM](https://visualvm.java.net/): Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、デプロイメントで実行するコードのサンプリングや評価を行うこともできます。
 * [Top](https://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htop can be installed on most Linux systems using `yum install htop` or `apt-get install htop`.
 
@@ -34,7 +37,7 @@ Typically, [!DNL Experience Manager Assets] can be monitored in two ways, live m
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftop can be installed on most Linux systems using `yum install iftop` or `apt-get install iftop`.
 
 * Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。For more details, see [How to Use Java Flight Recorder to Diagnose CQ Runtime Problems](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
-* [!DNL Experience Manager] `error.log` ファイル：ファイルを調べて、シ [!DNL Experience Manager] ステムに `error.log` 記録されたエラーの詳細を調べることができます。 調査するエラーを `tail -F quickstart/logs/error.log` 識別するには、コマンドを使用します。
+* [!DNL Experience Manager] `error.log` ファイル： この [!DNL Experience Manager]`error.log` ファイルを調べて、システムにログインしたエラーの詳細を調べることができます。 調査するエラー `tail -F quickstart/logs/error.log` を識別するには、コマンドを使用します。
 * [ワークフローコンソール](/help/sites-administering/workflows.md)：ワークフローコンソールを使用して、遅れているワークフローや、停止しているワークフローを監視できます。
 
 Typically, you use these tools together to obtain a comprehensive idea about the performance of your [!DNL Experience Manager] deployment.
@@ -45,17 +48,17 @@ Typically, you use these tools together to obtain a comprehensive idea about the
 
 ![chlimage_1-33](assets/chlimage_1-143.png)
 
-*図：Visual VMツールを使用したライブ監視。*
+*図： Visual VMツールを使用したライブ監視*
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
-## 長期監視 {#long-term-monitoring}
+## 長期的な監視 {#long-term-monitoring}
 
 Long term monitoring of an [!DNL Experience Manager] deployment involves monitoring for a longer duration the same portions that are monitored live. また、環境に固有のアラートも定義します。
 
 ### ログの集約とレポート {#log-aggregation-and-reporting}
 
-集計ログには、Splunk(TM)、Elastic Search、Logstash、Kabana(ELK)など、いくつかのツールが使用できます。 To evaluate the uptime of your [!DNL Experience Manager] deployment, it is important for you to understand log events specific to your system and create alerts based on them. 開発と運用の実践に関する十分な知識があれば、重要なアラートを生成するログ集計プロセスを調整する方法をより深く理解するのに役立ちます。
+集計ログには、Splunk(TM)やElastic Search、Logstash、Kabana(ELK)などのツールが使用できます。 To evaluate the uptime of your [!DNL Experience Manager] deployment, it is important for you to understand log events specific to your system and create alerts based on them. 開発と運用に関する慣習を十分に理解しておくと、重要なアラートを生成するログ集計プロセスを調整する方法をより深く理解できます。
 
 ### 環境の監視 {#environment-monitoring}
 
@@ -82,7 +85,7 @@ JMX MBean へのリモートアクセスは、デフォルトで無効になっ�
 
 As with any Java-based application stack, [!DNL Experience Manager] depends on the resources that are provided to it through the underlying Java Virtual Machine. JVM により公開されているプラットフォーム MXBean によって、それらのリソースの多くの状態を監視できます。MXBean について詳しくは、[プラットフォーム MBean サーバーおよびプラットフォーム MXBean の使用](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)を参照してください。
 
-JVMを監視できる基準パラメーターの一部を次に示します。
+JVMの基準パラメーターの一部を以下に示します。
 
 メモリ
 
@@ -94,7 +97,7 @@ JVMを監視できる基準パラメーターの一部を次に示します。
 
 >[!Note]
 >
->このBeanが提供する情報はバイト単位で表されます。
+>このBeanが提供する情報は、バイト単位で表されます。
 
 スレッド
 
@@ -146,7 +149,7 @@ Here are some baseline parameters that you can monitor for [!DNL Experience Mana
 
 * レプリケーションキュー
 
-   * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck `
+   * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * インスタンス：1 つのオーサーサーバー、およびすべてのパブリッシュサーバー
    * アラームしきい値：ステータスが OK ではない場合。
@@ -189,11 +192,11 @@ Here are some baseline parameters that you can monitor for [!DNL Experience Mana
 In the process of monitoring, if you encounter issues, here are some troubleshooting tasks that you can perform to resolve common issues with [!DNL Experience Manager] deployments:
 
 * TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。For more details, see [Maintain the repository](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* ログを確 `OutOfMemoryError` 認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
+* ログを確認 `OutOfMemoryError` します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
 
 * ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。For For best practices on optimizing query and indexing performance, see [Best practices for queries and indexing](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
 * ライブ監視を再確認し、他にボトルネックがないか、または特定のリソースを大量に使用している箇所がないかを確認します。
 * Investigate the egress points from the client network and the ingress points to the [!DNL Experience Manager] deployment network, including the dispatcher. 多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](/help/assets/assets-network-considerations.md)を参照してください。
-* サーバーのサイズを拡大 [!DNL Experience Manager] します。 You may have an inadequately sized your [!DNL Experience Manager] deployment. アドビカスタマーケアは、お使いのサーバーが小さすぎるかどうかを特定するのに役立ちます。
+* サー [!DNL Experience Manager] バーのサイズを拡大します。 You may have an inadequately sized your [!DNL Experience Manager] deployment. アドビカスタマーケアは、お使いのサーバーが小さすぎるかどうかを特定するのに役立ちます。
 * `access.log` および `error.log` ファイルで、不具合の発生した時刻付近のエントリを調査します。カスタムコードの異常の兆候となるパターンを探します。それらを監視するイベントのリストに追加します。
