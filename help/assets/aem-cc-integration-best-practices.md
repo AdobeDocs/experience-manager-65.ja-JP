@@ -1,17 +1,17 @@
 ---
-title: Adobe Creative Cloudと[!DNL Adobe Experience Manager]統合のベストプラクティス。
-description: '[!DNL Adobe Experience Manager]と[!DNL Adobe Creative Cloud]を統合するベストプラクティスにより、アセット転送ワークフローを合理化し、高いコンテンツ速度を実現します。'
+title: Adobe Creative Cloud [!DNL Adobe Experience Manager] と統合のベストプラクティス。
+description: アセット転送ワークフローを合理化し、高いコンテンツ速度を達成するための [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 統合のベストプラクティスです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '3253'
+ht-degree: 56%
 
 ---
 
 
 # [!DNL Adobe Experience Manager] および [!DNL Creative Cloud] 統合のベストプラクティス {#aem-and-creative-cloud-integration-best-practices}
-
-<!-- TBD: Reconcile with 6.4 article that's behind this article in terms of content streamlining and structuring.
--->
 
 [!DNL Adobe Experience Manager Assets] は、DAMとの統合により、DAMユーザーがクリエイティブチームと連携し、コンテンツ作成プロセスでのコラボレーション [!DNL Adobe Creative Cloud] を効率化できるデジタルアセット管理(DAM)ソリューションです。
 
@@ -47,19 +47,19 @@ source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
 
 | 使用例 | [!DNL Adobe Asset Link] | [!DNL Experience Manager] デスクトップアプリ | 備考／その他のソリューション |
 |---|---|---|---|
-| Discover - DAMフォルダーを参照 | 可 | [!DNL Experience Manager] Web UI +デスクトップアクション | ネットワーク共有を参照する場合は、アセットのバイナリファイルをダウンロードしないように、サムネールをオフにします。 |
-| Discover - DAMコレクションにアクセス | 可 | [!DNL Experience Manager] Web UI +デスクトップアクション |  |
-| Discover - DAMからのアセットの検索 | 可 | [!DNL Experience Manager] Web UI +デスクトップアクション |  |
-| 使用 - アセットを開く | 対応 | 対応 - 任意のアプリに対して | 「[Web インターフェイスから開く](managing-assets-touch-ui.md#previewing-assets)」またはファインダーから開く |
+| Discover - DAMフォルダーを参照 | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
+| Discover - DAMコレクションにアクセス | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
+| Discover - DAMからのアセットの検索 | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
+| 使用 - アセットを開く | はい | はい | 「[Web インターフェイスから開く](managing-assets-touch-ui.md#previewing-assets)」またはファインダーから開く |
 | 使用 — DAMからドキュメントにアセットを配置 | 対応 - 埋め込み | 対応 - リンクまたは埋め込み | [!DNL Experience Manager] デスクトップアプリケーションでは、ローカルファイルシステム上のファイルとしてアセットにアクセスできます。ネイティブアプリでは、これらのリンクはローカルパスで表されます。 |
 | 編集 - 編集用に開く | 対応 - チェックアウトアクション | 対応 - 「開く」アクション（ネットワーク共有内） | 「[AAL でチェックアウト](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)」の場合は、デフォルトでは、アセットをユーザーの Creative Cloud ストレージアカウント（Creative Cloud アプリで同期）に保存します。 |
 | 編集 — DAM外で作業を進めています | 対応 - デスクトップに同期しているユーザーの Creative Cloud ストレージアカウントでアセットが入手可能です。 | 対応 |  |
 | 編集 - 変更をアップロードする | 対応 - [チェックインアクション](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)（オプションコメント付き） | 対応 |  |
 | アップロード - 単一ファイル | 対応 - 現在のアクティブなドキュメントをアップロードします | 対応 | [Web インターフェイスを使用してアップロード](managing-assets-touch-ui.md#uploading-assets) |
-| アップロード - 複数ファイル／階層フォルダー構造 | 非対応 | 可 | [Web インターフェイスを使用してアップロード](managing-assets-touch-ui.md#uploading-assets);<br>カスタムスクリプティングまたはツール |
-| その他 - ユーザーとログイン | Creative Cloud デスクトップアプリケーションにログインした Creative Cloud ユーザーが認識されます（SSO） | [!DNL Experience Manager] user/login | Users of both solutions count against the [!DNL Experience Manager] user quota. |
-| その他 - ネットワークとアクセス | Requires access from user&#39;s desktop to [!DNL Experience Manager] deployment over network | Requires access from user&#39;s desktop to [!DNL Experience Manager] deployment over network | Adobe Asset Link はネットワークプロキシ環境を共有しません。 |
-| その他 - 多数のアセットを移行する | 不可 | 不可 | [移行ガイド](assets-migration-guide.md) |
+| アップロード - 複数ファイル／階層フォルダー構造 | 非対応 | 可 | [Web インターフェイスを使用してアップロード](managing-assets-touch-ui.md#uploading-assets) またはカスタムスクリプティングやツールを使用します。 |
+| その他 - ユーザーとログイン | Creative Cloud デスクトップアプリケーションにログインした Creative Cloud ユーザーが認識されます（SSO） | [!DNL Experience Manager] ユーザーと資格情報 | Users of both solutions count towards the [!DNL Experience Manager] user quota. |
+| その他 - ネットワークとアクセス | Requires access from user&#39;s desktop to [!DNL Experience Manager] deployment over network | Requires access from user&#39;s desktop to [!DNL Experience Manager] deployment over network | [!DNL Adobe Asset Link] ネットワークプロキシ環境を共有しません。 |
+| その他 - 多数のアセットを移行する | 不可 | 不可 | [アセット移行ガイド](assets-migration-guide.md) |
 
 アセット配布使用例をサポートするには、他のソリューションを考慮に入れる必要があります。
 
