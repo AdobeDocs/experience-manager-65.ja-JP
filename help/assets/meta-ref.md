@@ -1,9 +1,12 @@
 ---
 title: メタデータのスキーマに関する参照情報
-description: 'Dublin Core、IPTC などのメタデータのスキーマを含め、アセットメタデータを記述する際の標準規約を学習します。 '
+description: 'Dublin Core、IPTC などのメタデータのスキーマを含め、アセットメタデータを記述する際の標準規則を学習します。 '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 93%
 
 ---
 
@@ -14,20 +17,20 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ## Dublin Core {#dublin-core}
 
-Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規約のセットを提供します。AEM Assets では、ビデオ、音楽、画像、ドキュメントなどのデジタルアセットが Dublin Core で記述されます。
+Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規則のセットを提供します。AEM Assets では、ビデオ、音楽、画像、ドキュメントなどのデジタルアセットが Dublin Core で記述されます。
 
 シンプルな Dublin Core Metadata Element Set（DCMES）には、以下の表に示すように、15 個のメタデータ要素が含まれます。それぞれの Dublin Core 要素はオプションであり、繰り返し可能です。Dublin Core メタデータ情報は、メディアタイプ固有のメタデータと同様に、削除および追加が可能です。
 
-DCMES 以外にも、Dublin Core Metadata Initiative によって作成された他のメタデータ要素があります。詳しくは、[Dublin Core Initiative](https://dublincore.org/) を参照してください。
+In addition to the DCMES, there are other metadata elements created by the Dublin Core Initiative. See the [Dublin Core initiative](https://dublincore.org/) for more information.
 
 | プロパティ | 説明 |
-|---|---|
+| ----------- | ------------------------------------------------------------------------------------------------------------------------ |
 | contributor | コンテンツに貢献する責任を負う人または会社。 |
 | coverage | アセットの対象となる地理的な場所または期間。 |
 | creator | コンテンツを作成する責任を負う人または会社。 |
 | date | アセットに関連付けられた日付または期間。 |
 | description | アセットの詳細。 |
-| format | アセットのファイル形式、物理的な媒体またはサイズ。AEMはdc:formatを使用して、アセットのMIMEタイプを示します。 |
+| format | アセットのファイル形式、物理的な媒体またはサイズ。AEM では、`dc:format` を使用してアセットの MIME タイプを示します。 |
 | identifier | アセットの一意の参照。 |
 | language | アセットの言語（英語の場合は en、など）。 |
 | publisher | アセットを使用可能にする責任を負う人または会社。 |
