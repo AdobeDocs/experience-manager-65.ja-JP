@@ -3,10 +3,10 @@ title: での処理でサポートされるファイル形式 [!DNL Adobe Experi
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 93731c44ae6b2d8617fedea87bce10495384fc52
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 68%
+source-wordcount: '1765'
+ht-degree: 67%
 
 ---
 
@@ -23,7 +23,9 @@ ht-degree: 68%
 | * | アドオン機能により対応 |
 | − | 適用なし |
 
-## Supported raster image formats in [!DNL Assets] {#supported-raster-image-formats}
+## Supported raster image formats in [!DNL Experience Manager] {#supported-raster-image-formats}
+
+でサポートされているラスターイメージ形式 [!DNL Assets] は次のとおりです。
 
 | 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | 編集 | メタデータの書き戻し | インサイト |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
@@ -43,7 +45,7 @@ ht-degree: 68%
 
 △結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-## Supported raster image formats in [!DNL Dynamic Media] {#supported-raster-image-formats-dynamic-media}
+でサポートされているラスターイメージ形式 [!DNL Dynamic Media] は次のとおりです。
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -52,11 +54,11 @@ ht-degree: 68%
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
-| PSD **‡** | ✓ |  |  |  |  |
+| PSD ‡ | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-**△** 結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+△結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
@@ -122,31 +124,6 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 ## Supported Assets document formats {#supported-document-formats}
 
 アセット管理機能でサポートされるドキュメント形式は次のとおりです。
-
-<!--
-DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migration.
-
-| Format | Storage | Metadata management | Metadata extraction | Thumbnail generation | Interactive editing | Metadata writeback | [Insights](touch-ui-asset-insights.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | |
-| DOC | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
-| DOCX | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
-| ODT | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
-| HTML | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| RTF | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| TXT | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| XLS | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| XLSX | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
-| ODS | &#10003; | &#10003; | &#10003; | | | | | |
-| PPT | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; |
-| PPTX | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; |
-| ODP | &#10003; | &#10003; | &#10003; | | | | | |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | |
-| PS | &#10003; | &#10003; | | | | | | |
-| QXP | &#10003; | &#10003; | | | | | | |
-| EPUB | &#10003; | &#10003; | | &#10003; | &#10003; | | | |
--->
 
 | 形式 | ストレージ | [メタデータの管理](metadata.md) | フルテキスト<br> 抽出 | [メタデータ抽出](metadata.md) | Thumbnail<br> generation | [サブアセットの抽出](managing-linked-subassets.md) | [メタデータの書き戻し](xmp-writeback.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
