@@ -3,10 +3,10 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 6151c1afe3006e8d4b93648fc9eb779c73df4181
 workflow-type: tm+mt
-source-wordcount: '2688'
-ht-degree: 70%
+source-wordcount: '2741'
+ht-degree: 67%
 
 ---
 
@@ -17,7 +17,9 @@ ht-degree: 70%
 
 で [!DNL Adobe Experience Manager Assets]は、スキーマに、入力する特定の情報の特定のフィールドが含まれています。 また、メタデータフィールドをユーザにわかりやすく表示するためのレイアウト情報も含まれます。 メタデータプロパティには、タイトル、説明、MIMEタイプ、タグなどがあります。 You can use the [!UICONTROL Metadata Schema Forms] editor to modify the existing schemas or add custom metadata schemas.
 
-1. To view the [!UICONTROL Properties] page for an asset, click **[!UICONTROL View Properties]** from quick actions on the asset tile in the card view. または、インターフェイスでアセットを選択し、ツールバーで「 **[!UICONTROL プロパティ]** 」をクリックします。
+アセットのプロパティページを表示するには、次の手順に従います。
+
+1. カード表示のアセットタイルにあるクイックアクションから **[!UICONTROL 表示のプロパティ]** (Actions)アイコンをクリックまたはタップします。
 
    ![アセットタイルのクイックアクション](assets/chlimage_1-170.png)
 
@@ -25,29 +27,44 @@ ht-degree: 70%
 
    ![アセットのプロパティの「基本」タブ（アセットタイプを変更できない場合）](assets/asset-properties-basic-tab.png)
 
-   *図： アセットの[!UICONTROL プロパティの「基本」タブ]。*
+1. 使用可能なタブで、様々なメタデータプロパティを編集できます。 However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
 
-   アセットの MIME タイプを変更するには、カスタムメタデータスキーマフォームを使用するか、既存のフォームを変更します。See [Edit Metadata Schema Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) for more information. 特定の MIME タイプのメタデータスキーマを変更すると、現在の MIME タイプのアセットおよびすべてのアセットサブタイプのプロパティページのレイアウトが変更されます。例えば、`default/image` 配下の jpeg スキーマを変更すると、MIME タイプが `image/jpeg` のアセットのメタデータのレイアウト（アセットプロパティ）のみが変更されます。ただし、デフォルトスキーマを編集する場合は、すべてのタイプのアセットのメタデータのレイアウトを変更します。
+   ![アセットのプロパティの「基本」タブ（アセットタイプを変更できない場合）](assets/asset-properties-basic-tab.png)
+
+*図： アセットの[!UICONTROL プロパティの「基本」タブ]。*
+
+アセットの MIME タイプを変更するには、カスタムメタデータスキーマフォームを使用するか、既存のフォームを変更します。See [Edit Metadata Schema Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) for more information. 特定の MIME タイプのメタデータスキーマを変更すると、現在の MIME タイプのアセットおよびすべてのアセットサブタイプのプロパティページのレイアウトが変更されます。例えば、`default/image` 配下の jpeg スキーマを変更すると、MIME タイプが `image/jpeg` のアセットのメタデータのレイアウト（アセットプロパティ）のみが変更されます。ただし、デフォルトスキーマを編集する場合は、すべてのタイプのアセットのメタデータのレイアウトを変更します。
 
 1. フォーム/テンプレートのリストを表示するには、インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータスキーマに移動します]**。
 
-   [!DNL Experience Manager] では次のテンプレートが用意されています。
-   * **デフォルト**：アセットのメタデータスキーマの基本フォームです。
+## デフォルトで使用可能なメタデータスキーマフォーム {#available-metadata-schema-templates}
 
-      次の子フォームは、デフォルトフォームのプロパティを継承します。
+[!DNL Experience Manager] には次のテンプレートが用意されています。
 
-      1. **image**: MIMEタイプが「image」であるアセット（、など）のスキーマフォーム `image/jpeg``image/png`。
+### デフォルト値 {#default-template}
 
-         「image」フォームには、次の子フォームテンプレートがあります。
-         * **jpeg**: サブタイプを持つアセットのスキーマフォーム `jpeg`。
-         * **tiff**: サブタイプを持つアセットのスキーマフォーム `tiff`。
-      1. **application**：`application` や `application/pdf` など、MIME タイプが「`application/zip`」のアセットのスキーマフォーム。
+The [!UICONTROL default] is the base metadata schema form for assets. 次の子フォームは、デフォルトフォームのプロパティを継承します。
 
-         * **pdf**: サブタイプを持つアセットのスキーマフォーム `pdf`。
-      1. **video**：`video/avi` や `video/mp4` など、MIME タイプが「`video`」のアセットのスキーマフォーム。
-   * **collection**：コレクションのスキーマフォームです。
-   * **contentfragment**：コンテンツフラグメントのスキーマフォームです。
-   * **forms**: このスキーマフォームは、 [Adobe Experience Manager Formsに関連しています](/help/forms/home.md)。
+**image** は、MIMEタイプが「image」のアセットのスキーマフォームです。 例えば、 `image/jpeg`、 `image/png`などです。 「image」フォームには、次の子フォームテンプレートがあります。
+* **jpeg** は、サブタイプが指定されたアセットのスキーマフォーム `jpeg`です。
+
+* **tiff** は、サブタイプを持つアセットのスキーマフォーム `tiff`です。
+
+**application** は、MIMEタイプを持つアセットのスキーマフォーム `application`です。 例えば、 `application/pdf`、 `application/zip`などです。 **pdf** は、サブタイプを持つアセットのスキーマフォーム `pdf`です。
+
+**video** は、 `video`、な `video/avi`どのMIMEタイプを持つアセットのスキーマフォーム `video/mp4`です。
+
+### collection {#collection-template}
+
+コレク [!UICONTROL ション] は、コレクションのスキーマフォームです。
+
+### contentfragment {#contentfragment-template}
+
+contentfragment  は、コンテンツフラグメントのスキーマフォームです。
+
+### フォーム[ふぉーむ]{#forms-template}
+
+The [!UICONTROL forms] schema form relates to [Adobe Experience Manager Forms](/help/forms/home.md).
 
 >[!NOTE]
 >
