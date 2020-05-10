@@ -3,10 +3,10 @@ title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manage
 description: リ [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] モートデプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3d2f9bf9f8e83a088769507da8a46f1c9ef4e74e
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
 workflow-type: tm+mt
-source-wordcount: '2071'
-ht-degree: 53%
+source-wordcount: '2081'
+ht-degree: 51%
 
 ---
 
@@ -41,7 +41,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 作成者は、コンテンツファインダーで画像や次のタイプのドキュメントを検索し、検索したアセットをページエディターで使用できます。`Download` コンポーネントにドキュメントを追加したり、`Image` コンポーネントに画像を追加できます。Authors can also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. 次の形式がサポートされています。
 
 * **画像形式**: [画像コンポーネントがサポートする形式](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html) 。 [!DNL Dynamic Media] 画像はサポートされていません。
-* **ドキュメント形式**：詳しくは、[Connected Assets でサポートされるドキュメント形式](assets-formats.md#supported-document-formats)を参照してください。
+* **ドキュメント形式**: 接続さ [れているアセットでサポートされるドキュメント形式を参照してください](assets-formats.md#supported-document-formats)。
 
 ### 関連するユーザーとグループ {#users-and-groups-involved}
 
@@ -185,5 +185,5 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 
 一般的なエラーシナリオのトラブルシューティングをおこなうには、次の手順に従います。
 
-* If you cannot search for remote assets from the [!UICONTROL Content Finder], recheck and ensure that the required roles and permissions are in place.
-* リモート DAM から取得したアセットは、リモートに存在しない、それを取得するための適切な権限が不足している、ネットワーク障害などの理由で Web ページに公開されない場合があります。アセットがリモートDAMから削除されていないか、権限が変更されていないことを確認します。 適切な前提条件が満たされていることを確認します。 アセットをページに追加し直して、再公開してください。 アセット取得時のエラーについては、[非同期ジョブのリスト](/help/assets/asynchronous-jobs.md)を確認してください。
+* If you cannot search for remote assets from the [!UICONTROL Content Finder] then ensure that the required roles and permissions are in place.
+* リモートダムから取得したアセットは、1つ以上の理由でWebページに発行できない場合があります。 リモートサーバーに存在しない、取得する適切なアクセス許可がない、ネットワーク障害が原因の可能性があります。 アセットがリモートDAMから削除されていないことを確認してください。 適切な権限が設定され、前提条件が満たされていることを確認します。 アセットをページに追加し直して、再公開してください。 アセット取得時のエラーについては、[非同期ジョブのリスト](/help/assets/asynchronous-jobs.md)を確認してください。
