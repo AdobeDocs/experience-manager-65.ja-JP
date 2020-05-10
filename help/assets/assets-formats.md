@@ -1,34 +1,32 @@
 ---
-title: Assets でサポートされるファイル形式
-description: AEM Assetsおよびダイナミックメディアでサポートされるファイル形式のリストと、各形式でサポートされる機能。
+title: での処理でサポートされるファイル形式 [!DNL Adobe Experience Manager Assets]。
+description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 70%
+source-wordcount: '1756'
+ht-degree: 68%
 
 ---
 
 
-# サポートされるアセットの形式 {#assets-supported-formats}
+# サポートされる形式は [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-AEM Assets は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。
-
-AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリューションおよびデスクトップソフトウェアと統合するには、アドビの Extensible Metadata Platform（XMP）を使用します。
+[!DNL Experience Manager Assets] は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。To integrate [!DNL Assets] with other standards-compliant digital asset management (DAM) solutions and desktop software, use Adobe&#39;s [!DNL Extensible Metadata Platform] (XMP).
 
 凡例を使用して、サポートレベルについて理解します。
 
 | サポートレベル | 説明 |
-|:---:|---|
+| :-----------: | ------------------------------ |
 | ✓ | サポート対象 |
 | * | アドオン機能により対応 |
 | − | 適用なし |
 
-## AEM Assetsでサポートされるラスターイメージ形式 {#supported-raster-image-formats}
+## Supported raster image formats in [!DNL Assets] {#supported-raster-image-formats}
 
 | 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | 編集 | メタデータの書き戻し | インサイト |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
 | TIFF | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
@@ -45,7 +43,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 △結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-## ダイナミックメディアでサポートされるラスターイメージ形式 {#supported-raster-image-formats-dynamic-media}
+## Supported raster image formats in [!DNL Dynamic Media] {#supported-raster-image-formats-dynamic-media}
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -66,7 +64,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 * Metadata writeback works for PSB file format when it is added to the `NComm` handler.
 
-* EPS ファイルの動的レンディションのプレビューと生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
+* To use [!DNL Dynamic Media] to preview and generate dynamic renditions for EPS files, see [Adobe Illustrator (AI), Postscript (EPS), and PDF file formats.](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
