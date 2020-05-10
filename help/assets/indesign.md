@@ -1,14 +1,17 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]を[!DNL Adobe InDesign Server]と統合する'
-description: '[!DNL Adobe Experience Manager Assets]を[!DNL Adobe InDesign Server]と統合する方法を説明します。'
+title: 統合 [!DNL Adobe Experience Manager Assets] 機能 [!DNL Adobe InDesign Server]
+description: Learn how to integrate [!DNL Adobe Experience Manager Assets] with [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '1561'
+ht-degree: 33%
 
 ---
 
 
-# 統合 [!DNL Adobe Experience Manager Assets] 対象 [!DNL Adobe InDesign Server] : {#integrating-aem-assets-with-indesign-server}
+# 統合 [!DNL Adobe Experience Manager Assets] 対象 [!DNL Adobe InDesign Server] {#integrating-aem-assets-with-indesign-server}
 
 [!DNL Adobe Experience Manager Assets] 使用する:
 
@@ -19,7 +22,7 @@ To fully upload files to [!DNL Experience Manager Assets] that you have created 
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] は、2つの異なるオファーとして提供されます。 [印刷やデジタル配布用のページレイアウトをデザインするために使用されるAdobe InDesign](https://www.adobe.com/jp/products/indesign.html) デスクトップアプリケーション。 [Adobe InDesign Serverを使用すると](https://www.adobe.com/jp/products/indesignserver.html) 、で作成した内容に基づいて、自動ドキュメントをプログラムで作成できま [!DNL InDesign]す。 ExtendScriptエンジンに対するインターフェイスを提供するサービスとし [て動作します](https://www.adobe.com/jp/devnet/scripting.html) 。スクリプトは、に似た形で [!DNL ExtendScript]記述されています [!DNL JavaScript]。 For information about [!DNL InDesign] scripts see [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting).
+>[!DNL Adobe InDesign] は、2つの異なるオファーとして提供されます。 [印刷やデジタル配布のためのページレイアウトのデザインに使用するAdobe InDesign](https://www.adobe.com/jp/products/indesign.html) デスクトップアプリケーション。 [Adobe InDesign Server](https://www.adobe.com/jp/products/indesignserver.html) では、で作成した内容に基づいて、自動ドキュメントをプログラムで作成でき [!DNL InDesign]ます。 ExtendScript [エンジンに対するインターフェイスを提供するサービスとして機能します。スクリプトは](https://www.adobe.com/jp/devnet/scripting.html) 、に似た形式で記述され [!DNL ExtendScript]てい [!DNL JavaScript]ます。 For information about [!DNL InDesign] scripts see [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting).
 
 ## How the extraction works {#how-the-extraction-works}
 
@@ -34,7 +37,7 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
 このコマンドスクリプトは、次のことを実行します。
 
    * INDD ファイルを取得します。
-   * 実行コ [!DNL InDesign Server] マンド：
+   * 実行 [!DNL InDesign Server] コマンド：
 
       * 構造、テキストおよびすべてのメディアファイルが抽出されます。
       * PDF と JPG のレンディションが生成されます。
@@ -42,7 +45,7 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
    * Post the resulting files back to [!DNL Experience Manager Assets].
    >[!NOTE]
    >
-   >IDMLは、ファイルのすべてのコンテンツをレンダリングするXMLベースの形式 [!DNL InDesign] です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、 [InDesign Interchange Formats INX and IDMLを参照してください](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
+   >IDMLは、 [!DNL InDesign] ファイルのすべてのコンテンツをレンダリングするXMLベースの形式です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、InDesign Interchange Formats INX and [IDMLを参照してください](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
 
    >[!CAUTION]
    >
@@ -54,7 +57,7 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
    * The extracted text and files are stored in [!DNL Experience Manager Assets].
    * All renditions are stored in [!DNL Experience Manager Assets], in the asset itself.
 
-## AEMとの [!DNL InDesign Server] 統合 {#integrating-the-indesign-server-with-aem}
+## をAEM [!DNL InDesign Server] と統合する {#integrating-the-indesign-server-with-aem}
 
 To integrate the [!DNL InDesign Server] for use with [!DNL Experience Manager Assets] and after configuring your proxy, you need to:
 
@@ -82,9 +85,9 @@ To install and start the [!DNL InDesign Server] for use with [!DNL Experience Ma
    >ファイルに出力メッセージを保存してリダイレクトを使用する場合は、例えば Windows の場合は次のように実行します。
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
-### ワークフローの [!DNL Experience Manager Assets] 設定 {#configuring-the-aem-assets-workflow}
+### ワークフローの設定 [!DNL Experience Manager Assets] {#configuring-the-aem-assets-workflow}
 
-[!DNL Experience Manager Assets] には、次の処理手順を含む、事前設定さ **[!UICONTROL れたワークフローDAM更新アセット]**（特に次の場合）がありま [!DNL InDesign]す。
+[!DNL Experience Manager Assets] には、次の項目に特にいくつかのプロセス手順を持つ、事前設定済みのワークフロー **[!UICONTROL DAM更新アセット]**&#x200B;があり [!DNL InDesign]ます。
 
 * [メディア抽出](#media-extraction)
 * [ページ抽出](#page-extraction)
@@ -103,11 +106,11 @@ After the setup, uploading [!DNL InDesign] files into [!DNL Experience Manager A
 
 メディア抽出の引数とスクリプトパス
 
-* **ExtendScriptライブラリ**:これは、他のスクリプトで必要な、単純なhttpのget/postメソッドライブラリです。
+* **ExtendScript library**: これは、他のスクリプトで必要となる、単純なhttpのget/postメソッドライブラリです。
 
-* **スクリプトの拡張**:ここでは、異なるスクリプトの組み合わせを指定できます。 If you want your own scripts to be executed on the [!DNL InDesign Server], save the scripts at `/apps/settings/dam/indesign/scripts`.
+* **拡張スクリプト**: ここでは、異なるスクリプトの組み合わせを指定できます。 If you want your own scripts to be executed on the [!DNL InDesign Server], save the scripts at `/apps/settings/dam/indesign/scripts`.
 
-Indesignスクリプトについて詳しくは、 [InDesign開発者向けドキュメントを参照してください](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)
+Indesignスクリプトについて詳しくは、InDesign開発者ドキュメントを参照して [ください](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)
 
 >[!CAUTION]
 >
@@ -115,7 +118,7 @@ Indesignスクリプトについて詳しくは、 [InDesign開発者向けド�
 
 The `ThumbnailExport.jsx` script run by the Media Extraction workflow step generates a thumbnail rendition in JPG format. This rendition is used by the Process Thumbnails workflow step to generate the static renditions required by [!DNL Experience Manager].
 
-サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。Ensure that you do not remove the defaults, because they are required by the [!DNL Experience Manager Assets] interface. 最後に、画像プレビューレンディションを削除ワークフローステップで不要になった .jpg 形式のサムネールレンディションが削除されます。
+サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。Ensure that you do not remove the defaults, because they are required by the [!DNL Experience Manager Assets] interface. 最後に、「画像プレビューのレンディションを削除」ワークフローの手順で、JPGサムネールのレンディションが不要になったので削除されます。
 
 #### Page extraction {#page-extraction}
 
@@ -125,20 +128,20 @@ This creates an [!DNL Experience Manager] page from the extracted elements. 抽�
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **ページ抽出ハンドラ**:ポップアップリストから、使用するハンドラーを選択します。 抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。In a standard [!DNL Experience Manager] installation the following is available:
+* **ページ抽出ハンドラ**: ポップアップリストから、使用するハンドラーを選択します。 抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。In a standard [!DNL Experience Manager] installation the following is available:
    * IDML Export Extraction Handle: Operates on the `IDML` rendition generated in the MediaExtract step.
 
-* **ページ名**:結果のページに割り当てる名前を指定します。空白の場合、名前は「page」（または「page」が既に存在する場合は派生）です。
+* **ページ名**: 結果のページに割り当てる名前を指定します。 空白の場合、名前は「page」（「page」が既に存在する場合は派生）になります。
 
-* **ページタイトル**:結果のページに割り当てるタイトルを指定します。
+* **ページタイトル**: 結果のページに割り当てるタイトルを指定します。
 
-* **Page Root Path**:結果のページのルート位置へのパス。空白のままにすると、アセットのレンディションを保持するノードが使用されます。
+* **Page Root Path**: 結果のページのルート位置へのパス。 空白のままにすると、アセットのレンディションを保持するノードが使用されます。
 
-* **ページテンプレート**:結果のページの生成時に使用するテンプレートです。
+* **ページテンプレート**: 結果のページの生成時に使用するテンプレートです。
 
-* **ページデザイン**:結果のページの生成時に使用するページデザインです。
+* **ページデザイン**: 結果のページを生成するときに使用するページデザインです。
 
-### 次のプロキシワーカーの設 [!DNL InDesign Server] 定 {#configuring-the-proxy-worker-for-indesign-server}
+### 次のプロキシワーカーを設定 [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
 
 >[!NOTE]
 >
@@ -152,7 +155,7 @@ This creates an [!DNL Experience Manager] page from the extracted elements. 抽�
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
-   * **IDSプール**：との通信に使用するSOAPエンドポイントです [!DNL InDesign Server]。アイテムの追加、削除、および注文が必要な場合は、
+   * **IDS Pool**：との通信に使用するSOAPエンドポイント [!DNL InDesign Server]。 アイテムの追加、削除、および注文は必須にすることができます。
 
 1. 「OK」をクリックして保存します。
 
@@ -166,9 +169,9 @@ If the [!DNL InDesign Server] and [!DNL Experience Manager] run on different hos
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
 
-### ジョブの並列処理を有効に [!DNL InDesign Server] する {#enabling-parallel-job-processing-for-indesign-server-s}
+### 次の並列ジョブ処理を有効にする [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server-s}
 
-IDS の並列ジョブ処理を有効にすることができます。処理できる並列ジョブの最大数(`x`)を決 [!DNL InDesign Server] 定します。
+IDS の並列ジョブ処理を有効にすることができます。処理可能な並列ジョブ(`x`)の最大数を決定 [!DNL InDesign Server] します。
 
 * On a single multiprocessor machine, the maximum number of parallel jobs (`x`) that an [!DNL InDesign Server] can process is one less than the number of processors running IDS.
 * 複数のマシンで IDS を実行する場合は、すべてのマシンで使用可能なプロセッサーの総数を把握して、そこからマシン総数を減算する必要があります。
@@ -185,7 +188,7 @@ IDS 並列ジョブ数を設定するには：
    * **Maximum Parallel Jobs** - `<*x*>`（上で計算した値）
 
 1. これらの変更を保存します。
-1. Adobe CS6以降でマルチセッションのサポートを有効にするには、設定の下にあるチェ `enable.multisession.name` ックボックスをオンに `com.day.cq.dam.ids.impl.IDSJobProcessor.name` します。
+1. Adobe CS6以降でマルチセッションサポートを有効にするには、「 `enable.multisession.name``com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定」のチェックボックスをオンにします。
 1. [IDS ワーカー設定](#configuring-the-proxy-worker-for-indesign-server)に SOAP エンドポイントを追加して、`x` 個の IDS ワーカーから成るプールを作成します。
 
    If there are multiple machines running [!DNL InDesign Server], add SOAP endpoints (number of processors per machine -1) for each machine.
@@ -203,7 +206,7 @@ IDS 並列ジョブ数を設定するには：
    >
    >デフォルトでは、設定可能な（retry.interval.to.whitelist.name）時間（分）が経過した後で、IDS ワーカーが再検証されます。ワーカーがオンラインである場合は、ブラックリストから削除されます。。
 
-## 10.0以降のサ [!DNL InDesign Server] ポートを有効にする {#enabling-support-for-indesign-server-or-later}
+## 10.0以降のサポート [!DNL InDesign Server] を有効にする {#enabling-support-for-indesign-server-or-later}
 
 For [!DNL InDesign Server] 10.0 or higher, perform the following steps to enable multi-session support.
 
@@ -215,7 +218,7 @@ For [!DNL InDesign Server] 10.0 or higher, perform the following steps to enable
 >
 >For [!DNL InDesign Server] integration with [!DNL Experience Manager Assets], use a multi-core processor because the Session Support feature necessary for the integration is not supported on single core systems.
 
-## 資格情報の [!DNL Experience Manager] 設定 {#configure-aem-credentials}
+## 秘密鍵 [!DNL Experience Manager] 証明書の設定 {#configure-aem-credentials}
 
 You can change the default administrator credentials (user name and password) for accessing the [!DNL InDesign Server] from your [!DNL Experience Manager] instance without breaking the integration with the [!DNL InDesign Server].
 
