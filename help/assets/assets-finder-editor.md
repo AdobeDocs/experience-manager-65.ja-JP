@@ -3,7 +3,10 @@ title: アセットエディタページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '2147'
+ht-degree: 81%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 * アセットエディターページ（メタデータの表示と編集、およびアセットに対するアクションの実行に使用する WCM ページ）の作成とカスタマイズの方法
 * 複数のアセットを同時に編集する方法
 
-<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 OOTB samples. -->
+<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 default samples. -->
 
 >[!NOTE]
 >
@@ -26,40 +29,41 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
 デジタルアセット管理は、ますます広く使用されるようになっています。専門的な教育を受けたユーザー（写真家や分類学者など）による小規模なユーザーグループ向けの小規模なソリューションから、大規模で多様なユーザーグループ（ビジネスユーザー、WCM 作成者、ジャーナリストなど）に移行する場合、専門的なユーザー向けの Adobe Experience Manager（AEM）Assets の強力なユーザーインターフェイスでは、利用できる情報が多すぎて不便が生じることがあります。この場合、関係者にとって必要なデジタルアセットにアクセスするための目的に特化したユーザーインターフェイスやアプリケーションが求められるようになります。
 
-そのようなアセット中心型アプリケーションの例として、従業員が展示会に参加した際の写真をアップロードできるイントラネット内のシンプルな写真ギャラリーや、公開 Web サイトでのプレスセンター（Geometrixx で提供されたサンプルなど）があります。アセット中心型アプリケーションは、ショッピングカート、チェックアウト、検証プロセスを含む完全なソリューションに拡張することもできます。
+アセット中心のアプリケーションは、社員が展示会の訪問や公共のWebサイトの報道機関から写真をアップロードできる、イントラネット内の単純なフォトギャラリーです。 アセット中心のアプリケーションは、買い物かご、チェックアウト、検証プロセスなどの完全なソリューションにも拡張できます。
 
 アセット中心型アプリケーションの作成の大部分は、コーディングを必要としない設定プロセスとなります。ここでは、ユーザーグループとそのニーズ、使用されるメタデータに関する知識のみが必要となります。AEM Assets で作成されたアセット中心型アプリケーションは拡張可能です。適度なコーディング作業によって、アセットの検索、表示、変更のための再利用可能なコンポーネントを作成できます。
 
 AEM のアセット中心型アプリケーションは、特定アセットの詳細を表示するのに利用できるアセットエディターページで構成されます。アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
 
-## アセット共有ページの作成と設定 {#creating-and-configuring-an-asset-share-page}
+<!--
+## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
 
-DAM Finder 機能をカスタマイズし、必要なすべての機能を持つページを作成します。これらのページがアセット共有ページと呼ばれます。新しいアセット共有ページを作成するには、Geometrixx アセット共有テンプレートを使用してページを追加し、次にそのページに対してユーザーが実行できるアクションをカスタマイズします。さらに、アセットの表示方法と、ユーザーによるクエリの作成方法を決定します。
+You customize the DAM Finder functionality and create pages that have all the functionality you require, which are called Asset Share pages. To create a new Asset Share page, you add the page using the Geometrixx Asset Share template and then you customize the actions users can perform on that page, determine how viewers see the assets, and decide how users can build their queries.
 
-カスタマイズされたアセット共有ページを作成する用途としては次のような例が考えられます。
+Here are some use cases for creating a customized Asset Share page:
 
-* ジャーナリスト向けのプレスセンター
-* 社内ビジネスユーザー向けの画像検索エンジン
-* Web サイトユーザー向けの画像データベース
-* メタデータエディター向けのメディアタグ作成インターフェイス
+* Press Center for Journalists.
+* Image Search Engine for internal business users.
+* Image Database for website users.
+* Media Tagging Interface for metadata editors.
 
-### アセット共有ページの作成 {#creating-an-asset-share-page}
+### Create an Asset Share page {#creating-an-asset-share-page}
 
-新しいアセット共有ページを作成する方法として、Web サイトでの作業中に作成するか、Digital Asset Manager から作成することができます。
+To create a new Asset Share page, you can either create it when you are working on web sites or from the digital asset manager.
 
 >[!NOTE]
 >
->デフォルトでは、Digital Asset Manager の「**新規**」からアセット共有ページを作成すると、アセットビューアおよびアセットエディターが自動的に作成されます。
+>By default, when you create an Asset Share page from **New** in the digital asset manager, an Asset viewer and Asset editor are automatically created for you.
 
-**Web サイト**&#x200B;コンソールで新しいアセット共有ページを作成するには：
+To create an new Asset Share page in the **Websites** console:
 
-1. 「**Web サイト**」タブで、アセット共有ページを作成する場所に移動し、「**新規**」をクリックします。
+1. In the **Websites** tab, navigate to the place where you want to create an asset share page and click **New**.
 
 1. Select the **Asset Share** page and click **Create**. The new page is created and the asset share page is listed in the **Websites** tab.
 
 ![dam8](assets/dam8.png)
 
-Geometrixx DAM アセット共有テンプレートを使用して作成した基本ページは次のイメージのようになります。
+The basic page created using the Geometrixx DAM Asset Share template looks as follows:
 
 ![screen_shot_2012-04-18at115456am](assets/screen_shot_2012-04-18at115456am.png)
 
@@ -67,124 +71,123 @@ To customize your Asset Share page, you use elements from the sidekick and you a
 
 ![screen_shot_2012-04-19at123048pm](assets/screen_shot_2012-04-19at123048pm.png)
 
-Digital Asset Manager を使用して新しいアセット共有ページを作成するには：
+To create a new asset share page via the digital asset manager:
 
-1. Digital Asset Manager の「**新規**」で、「**新しいアセット共有**」を選択します。
-1. 「**タイトル**」にアセット共有ページの名前を入力します。必要に応じて、URL の名前を入力します。
+1. In the digital asset manager, in **New**, select **New Asset Share**.
+1. In the **Title**, enter the name of the asset share page. If desired, enter a name for the URL.
 
    ![screen_shot_2012-04-19at23626pm](assets/screen_shot_2012-04-19at23626pm.png)
 
-1. アセット共有ページをダブルクリックして開き、ページの設定をおこないます。
+1. Double-click the asset share page to open it and configure the page.
 
    ![screen_shot_2012-04-19at24114pm](assets/screen_shot_2012-04-19at24114pm.png)
 
-   デフォルトでは、「**新規**」からアセット共有ページを作成すると、アセットビューアおよびアセットエディターが自動的に作成されます。
+   By default, when you create an Asset Share page from **New**, an Asset viewer and Asset editor are automatically created for you.
 
-#### アクションのカスタマイズ {#customizing-actions}
+#### Customize actions {#customizing-actions}
 
-定義済みの一連のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
+You can determine what actions users can perform on selected digital assets from a selection of predefined actions.
 
-アセット共有ページにアクションを追加するには：
+To add actions to the Asset Share page:
 
-1. カスタマイズするアセット共有ページで、サイドキックの「**アクション**」をクリックします。
+1. In the Asset Share page that you want to customize, click **Actions** in the sidekick.
 
-次のアクションが使用可能です。
+The following actions are available:
 
-![assetshare2](assets/assetshare2.bmp)
+ | Action | Description |
+ |---|---|
+ | [!UICONTROL Delete Action] | Users can delete the selected assets. |
+ | [!UICONTROL Download Action] | Lets users download selected assets to their computers. |
+ | [!UICONTROL Lightbox Action] | Saves assets to a "lightbox"   where you can perform other actions on them. This comes in handy when working   with assets across multiple pages. The lightbox can also be used as a   shopping cart for assets. |
+ | [!UICONTROL Move Action] | Users can move the asset to another   location |
+ | [!UICONTROL Tags Action] | Lets users add tags to selected assets |
+ | [!UICONTROL View Asset Action] | Opens the asset in the Asset editor for   user manipulation. |
 
-| アクション | 説明 |
-|---|---|
-| [!UICONTROL アクションを削除] | ユーザーが選択したアセットを削除できます。 |
-| [!UICONTROL アクションをダウンロード] | ユーザーが選択したアセットをコンピューターにダウンロードできるようにします。 |
-| [!UICONTROL Lightbox アクション] | アセットを「Lightbox」に保存します。Lightbox では、保存されたアセットに対して他のアクションを実行できます。これは、複数のページにまたがるアセットを操作する場合に便利です。Lightbox は、アセットの買い物かごとしても使用できます。 |
-| [!UICONTROL アクションを移動] | ユーザーがアセットを別の場所に移動できます。 |
-| [!UICONTROL タグアクション] | ユーザーが選択したアセットにタグを追加できるようにします。 |
-| [!UICONTROL アセットアクションを表示] | ユーザーが変更できるように、アセットをアセットエディターで開きます。 |
-
-1. Drag the appropriate action to the **Actions** area on the page. これによって、そのアクションを実行するボタンが作成されます。
+1. Drag the appropriate action to the **Actions** area on the page. Doing so creates a button that is used to execute that action.
 
 ![chlimage_1-159](assets/chlimage_1-387.png)
 
 #### Determine how search results are presented {#determining-how-search-results-are-presented}
 
-事前定義済みのレンズリストで、結果の表示方法を指定します。
+You determine how results are displayed from a predefined list of lenses.
 
-検索結果の表示方法を変更するには：
+To change how search results are viewed:
 
-1. カスタマイズするアセット共有ページで、「検索」をクリックします。
+1. In the Asset Share page that you want to customize, click Search.
 
 ![chlimage_1](assets/assetshare3.png)
 
-1. 適切なレンズをページの上中央にドラッグします。 Press Center では、レンズは既に使用可能な状態です。ユーザーは適切なレンズアイコンをクリックして、求めるとおりの検索結果を表示します。
+1. Drag the appropriate lens to the top center of the page. In the Press Center, the lenses are already available. Users press the appropriate lens icon to display search results as desired.
 
-次のレンズが使用可能です。
+The following lenses are available:
 
-| レンズ | 説明 |
+| Lens | Description |
 |---|---|
-| **[!UICONTROL リストレンズ]** | 詳細情報を含むリスト形式でアセットを表示します。 |
-| **[!UICONTROL モザイクレンズ]** | モザイク形式でアセットを表示します。 |
+| **[!UICONTROL List Lens]** |Presents the assets in a list fashion with details. |
+| **[!UICONTROL Mosaic Lens]** |Presents assets in a mosaic fashion. |
 
-#### モザイクレンズ {#mosaic-lens}
+#### Mosaic Lens {#mosaic-lens}
 
 ![chlimage_1-160](assets/chlimage_1-388.png)
 
-#### リストレンズ {#list-lens}
+#### List Lens {#list-lens}
 
 ![chlimage_1-161](assets/chlimage_1-389.png)
 
 #### Customize the Query Builder {#customizing-the-query-builder}
 
-クエリビルダーでは、検索語句を入力し、アセット共有ページのコンテンツを作成できます。クエリビルダーの編集時に、1 ページに表示する検索結果数、アセットのダブルクリック時に開くアセットエディターおよびクエリ検索パスを指定し、ノード型をカスタマイズします。
+The query builder lets you enter search terms and create content for the Asset Share page. When you edit the query builder, you also get to determine how many search results are displayed per page, which asset editor opens when you double-click an asset, the path the query searches, and customizes nodetypes.
 
-クエリビルダーをカスタマイズするには：
+To customize the query builder:
 
-1. カスタマイズするアセット共有ページで、QueryBuilder の「**編集**」をクリックします。デフォルトでは、「**一般**」タブが開きます。
-1. ページあたりの結果数、アセットエディターのパス（カスタマイズしたアセットエディターがある場合）、およびアクションタイトルを選択します。
+1. In the Asset Share page that you want to customize, click **Edit** in the Query Builder. By default, the **General** tab opens.
+1. Select the number of results per page, the path of the asset editor (if you have a customized asset editor) and the Actions title.
 
 ![screen_shot_2012-04-23at15055pm](assets/screen_shot_2012-04-23at15055pm.png)
 
-1. Click the **Paths** tab. 検索対象とする 1 つまたは複数のパスを入力します。ユーザーがパスの述語を使用すると、これらのパスは上書きされます。
+1. Click the **Paths** tab. Enter a path or multiple paths that the search will run. These paths are overwritten if the user uses the Paths predicate.
 
 ![screen_shot_2012-04-23at15150pm](assets/screen_shot_2012-04-23at15150pm.png)
 
-1. 必要に応じて、別のノードタイプを入力します。
+1. Enter another node type, if desired.
 
-1. In the **Query Builder URL** field, you can override or wrap the query builder and enter the new servlet URLs with the existing query builder component. 「**フィード URL**」フィールドで、フィード URL を上書きすることもできます。
+1. In the **Query Builder URL** field, you can override or wrap the query builder and enter the new servlet URLs with the existing query builder component. In the **Feed URL** field, you can override the Feed URL as well.
 
 ![screen_shot_2012-04-23at15313pm](assets/screen_shot_2012-04-23at15313pm.png)
 
-1. In the **Text** field, enter the text you want to appear for results and page numbers of results. 変更作業が完了したら、「**OK**」をクリックします。
+1. In the **Text** field, enter the text you want to appear for results and page numbers of results. Click **OK** when finished making changes.
 
 ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
-#### 述語の追加 {#adding-predicates}
+#### Add predicates {#adding-predicates}
 
-AEM Assets には、アセット共有ページに追加できる多数の述語が用意されています。述語を使用すると、ユーザーが検索をさらに絞り込むことができます。一部のケースでは、指定した述語がクエリビルダーのパラメーター（「パス」パラメーターなど）よりも優先されます。
+AEM Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
 
-述語を追加するには：
+To add predicates:
 
-1. カスタマイズするアセット共有ページで、「**検索**」をクリックします。
+1. In the Asset Share page that you want to customize, click **Search**.
 
 ![assetshare3](assets/assetshare3.png)
 
-1. 適切な述部を、クエリービルダーの下のアセット共有ページにドラッグします。 これによって、適切なフィールドが作成されます。
+1. Drag the appropriate predicates to the Asset Share page underneath the query builder. Doing so creates the appropriate fields.
 
 ![assetshare4](assets/assetshare4.bmp)
 
-次の述語が使用可能です。
+The following predicates are available:
 
-| 述語 | 説明 |
+| Predicate | Description |
 |---|---|
-| **[!UICONTROL 日付の述語]** | ユーザーが特定の日付の前後に変更されたアセットを検索できるようにします。 |
-| **[!UICONTROL オプションの述語]** | サイト所有者が検索用のプロパティを指定できます（プロパティの述語などで、例えば cq:tags と指定）。また、オプションを設定するためのコンテンツツリー（タグツリーなど）を指定できます。この操作によってオプションのリストが生成され、ユーザーはこのリストから、選択されたプロパティ（タグプロパティ）に含まれる値（タグ）を選択できます。この述語を使用すれば、タグのリスト、ファイルタイプのリスト、画像の向きのリストなどのリストコントロールを作成できます。この述語は、固定数のオプションに適しています。 |
-| **[!UICONTROL パスの述語]** | ユーザーがパス（および必要に応じてサブフォルダー）を定義できるようにします。 |
-| **[!UICONTROL プロパティの述語]** | サイト所有者が検索対象のプロパティ（例：tiff:ImageLength）を指定すると、ユーザーが値（例：800）を入力できます。この例では、高さが 800 ピクセルのすべての画像が返されます。プロパティに任意の値を設定できる場合に有効な述語です。 |
+| **[!UICONTROL Date Predicate]** |Lets users search for assets that were modified before and after certain dates. |
+| **[!UICONTROL Options Predicate]** |The site owner can specify a property to search for (as in the property predicate, for example cq:tags) and a content tree to populate the options from (for example the tag tree). Doing so generates a list of options where the users can select the values (tags) that the selected property (tag property) should have. This predicate lets you build list controls like the list of tags, file types, image orientations, and so on. It is great for a fixed set of options. |
+| **[!UICONTROL Path Predicate]** |Lets users define the path and subfolders, if desired. |
+| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, e.g. tiff:ImageLength and the user can then enter a value, e.g. 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
 
 For more information, see the [predicate Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
 
-1. 述語をさらに構成するには、述語をダブルクリックします。 例えば、「パスの述語」を開いたら、ルートパスを指定する必要があります。
+1. To configure the predicate further, double-click it. For example, when you open the Path Predicate, you need to assign the root path.
 
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
+-->
 
 ## アセットエディタページの作成と設定 {#creating-and-configuring-an-asset-editor-page}
 
@@ -192,7 +195,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 >[!NOTE]
 >
->If you want to add custom fields to the DAM asset editor, add new cq:Widget nodes to `/apps/dam/content/asseteditors.`
+>If you want to add custom fields to the DAM asset editor, add new `cq:Widget` nodes to `/apps/dam/content/asseteditors.`
 
 ### Create an Asset Editor page {#creating-the-asset-editor-page}
 
@@ -213,7 +216,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 ![assetshare6](assets/assetshare6.bmp)
 
-#### アセット共有ページから開くようにアセットエディターを設定する {#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### アセットエディタを設定して、アセット共有ページから開く {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 カスタムのアセットエディターページを作成したら、アセット（作成したカスタムのアセット共有）をダブルクリックすると、カスタマイムのエディターページでアセットが開くことを確認する必要があります。
 
@@ -249,7 +252,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 | コンポーネント | 説明 |
 |---|---|
-| **[!UICONTROL Metadata Form]and[!UICONTROL Metadata Text Field]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
+| **[!UICONTROL メタデータフォーム]と[!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
 | **[!UICONTROL サブアセット]** | サブアセットをカスタマイズできるようにします。 |
 | **タグ** | ユーザーがタグを選択してアセットに追加できるようにします。 |
 | **[!UICONTROL サムネール]** | アセットのサムネールとファイル名を表示し、代替テキストを追加できるようにします。ここでは、アセットエディターのアクションを追加することもできます。 |
@@ -361,9 +364,9 @@ See [Customizing and Extending AEM Assets](/help/assets/extending-assets.md) for
 
 ![chlimage_1-164](assets/chlimage_1-392.png)
 
-#### アセットエディタの追加アクション {#adding-asset-editor-actions}
+#### ア追加セットエディタのアクション {#adding-asset-editor-actions}
 
-定義済みの一連のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
+定義済みの一部のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
 アセットエディターページにアクションを追加するには：
 
@@ -400,8 +403,8 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
 
 1. アセットを選択します。
 
-   * Windowsの場合：各アセ `Ctrl + click` ット。
-   * Macの場合：各アセ `Cmd + click` ット。
+   * Windowsの場合： `Ctrl + click` 各アセット。
+   * Macの場合： `Cmd + click` 各アセット。
    To select a range of assets: click the first asset then `Shift + click` the last asset.
 
 1. 「**Actions**」フィールド（ページの左側）の「**Edit Metadata**」をクリックします。
@@ -423,7 +426,7 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
    * **矢印**&#x200B;をクリックしてタグを選択し、すべてのアセットに新しいタグを追加します。
    「**OK**」をクリックして、変更内容をフォームに書き込みます。「**Tags**」フィールドの横にあるチェックボックスが自動的にオンになります。
 
-1. 「説明」フィールドを編集します。例えば、次のように設定します。
+1. 「説明」フィールドを編集します。 例えば、次の値に設定します。
 
    `This is a common description`
 
@@ -433,4 +436,4 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
 
 1. 「**Update Metadata**」をクリックしてフォームを送信し、すべてのアセットの変更内容を保存します。
 
-   注意：チェック済みのメタデータのみが変更されます。
+   注意： チェック済みのメタデータのみが変更されます。
