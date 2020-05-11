@@ -2,29 +2,32 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Assetsユーザガイド
+user-guide-title: AEM 6.5 Assetsユーザーガイド
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+workflow-type: tm+mt
+source-wordcount: '633'
+ht-degree: 56%
 
 ---
 
 
 # AEM 6.5 Assets User Guide {#assets}
 
-+ [[!DNL Assets]ユーザーガイド](home.md)
++ [[!DNL Assets] ユーザーガイド](home.md)
 + [AEM 6.5 Assetsリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
 + AEM Assetsの使用 {#using}
-   + [AEM Assetsのホームページ体験](assets-home-page.md)
+   + [AEM Assetsホームページエクスペリエンス](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [多言語のアセット](multilingual-assets.md)
-   + [AEM Assetsで[!DNL Adobe Stock]アセットを使用](aem-assets-adobe-stock.md)
+   + [AEM Assetsの [!DNL Adobe Stock] 使用状況](aem-assets-adobe-stock.md)
    + [3D アセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
    + [アセットの処理](assets-workflow.md)
-   + [画像追加マップ](image-maps.md)
+   + [追加画像マップ](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
    + [AEMサイトとの接続されたアセット](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
@@ -53,7 +56,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)
    + [スピンセット](spin-sets.md)
-   + [ビデオ](video.md)
+   + [ダイナミックメディアでのビデオ](video.md)
    + [カルーセルバナー](carousel-banners.md)
    + [インタラクティブ画像](interactive-images.md)
    + [インタラクティブビデオ](interactive-videos.md)
@@ -68,17 +71,17 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
    + [Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)
    + [CDN にキャッシュされたコンテンツの無効化](invalidate-cdn-cached-content.md)
-   + [一括アセット移行用の機能パック18912をインストールしています](bulk-ingest-migrate.md)
+   + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
    + [AEM Assetsのカスタマイズと拡張](extending-assets.md)
-   + [メディアハンドラーとメディアを使用したアセットの処理ワークフロー](media-handlers.md)
+   + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [検索機能の拡張](searchx.md)
-   + [AEM Assetsで動作する[!DNL ImageMagick]をインストールし、設定します](best-practices-for-imagemagick.md)
+   + [ [!DNL ImageMagick] AEM Assets と連携するための のインストールと設定](best-practices-for-imagemagick.md)
    + [アセットとアクティビティストリームの統合](extending-activity-stream.md)
    + [アセットエディタの拡張](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
-   + [AEM Assets HTTP APIでのコンテンツフラグメントのサポート](assets-api-content-fragments.md)
+   + [AEM Assets HTTP APIでサポートされるコンテンツフラグメント](assets-api-content-fragments.md)
    + [アセットプロキシの開発](proxy.md)
 + アセットの管理 {#administer}
    + [サポートされているファイル形式](assets-formats.md)
@@ -88,10 +91,10 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [アセットのリンク共有](link-sharing.md)
    + [アセットレポート](asset-reports.md)
    + [拡張スマートタグ](enhanced-smart-tags.md)
-   + [プロファイルを使用して、メタデータ、画像およびビデオを処理します。](processing-profiles.md)
+   + [メタデータ、画像およびビデオの処理プロファイル](processing-profiles.md)
    + [カスケードメタデータ](cascading-metadata.md)
    + [アセットエディタページの作成と設定](assets-finder-editor.md)
-   + [アセットサイズガイド](assets-sizing-guide.md)
+   + [アセットサイズ変更ガイド](assets-sizing-guide.md)
    + [メタデータのスキーマに関する参照情報](meta-ref.md)
    + [アセットの翻訳のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
    + [アセットパフォーマンス調整ガイド](performance-tuning-guidelines.md)
@@ -114,9 +117,9 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [トランスコーディングライブラリのイメージング](imaging-transcoding-library.md)
    + [IPTCメタデータのサポート](iptc-support.md)
    + [メタデータスキーマ](metadata-schemas.md)
-   + [コレクション、スニペット、およびスニペットテンプレートのマルチテナンシー](multi-tenancy.md)
-   + [アセットの透かし](watermarking.md)
-   + [メタデータの一括読み込みと書き出し](metadata-import-export.md)
+   + [コレクション、スニペット、スニペットテンプレートのマルチテナンシー](multi-tenancy.md)
+   + [アセットの透かしの設定](watermarking.md)
+   + [一括メタデータの読み込みと書き出し](metadata-import-export.md)
    + [アセットテンプレート](asset-templates.md)
    + [Creative Cloudとフォルダーを共有するためのベストプラクティス](aem-cc-folder-sharing-best-practices.md)
    + [フォルダーメタデータスキーマ](folder-metadata-schema.md)
@@ -140,7 +143,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [デジタルアセットの管理](managing-assets-touch-ui.md)
    + [コレクションの管理](managing-collections-touch-ui.md)
    + [複数のアセットとコレクションの管理](managing-multiple-assets.md)
-   + [Smart Content Serviceを使用したタグの設定](config-smart-tagging.md)
+   + [Smart Content Serviceを使用したタグ付けの設定](config-smart-tagging.md)
    + [重複項目の検出の有効化](duplicate-detection.md)
    + [デジタルアセットの整理](organize-assets.md)
    + [ビデオアセットの管理](managing-video-assets.md)
@@ -150,7 +153,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [非同期操作](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [アセットのインサイト](touch-ui-asset-insights.md)
-   + [DTMを使用したアセットのインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
+   + [DTMを通じたアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
    + [アセットのインサイトの設定](touch-ui-configuring-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
