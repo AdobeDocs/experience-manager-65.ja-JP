@@ -3,9 +3,9 @@ title: での処理でサポートされるファイル形式 [!DNL Adobe Experi
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 93731c44ae6b2d8617fedea87bce10495384fc52
+source-git-commit: 138c8d960ad8c1de20212b7aeebbda0a486832ee
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1779'
 ht-degree: 67%
 
 ---
@@ -73,6 +73,8 @@ ht-degree: 67%
 ## ダイナミックメディアでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
 次のリストでは、ダイナミックメディアでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
+
+ダイナミックメディアでサポートされていないファイル形式の [検出も参照してください](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
 
 * 100 MBを超えるIDATチャンクサイズを持つPNGファイル。
 * PSBファイル。
