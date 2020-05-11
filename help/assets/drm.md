@@ -3,9 +3,9 @@ title: Digital Rights Management in [!DNL Adobe Experience Manager Assets].
 description: Learn how to manage asset expiration states and information for licensed assets in [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 18862ca1ce80682a28293ca4ba6741dbdd6b12f2
+source-git-commit: 20f337ea2e4f369eb6eb760d312199fa39556513
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1428'
 ht-degree: 55%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 55%
 
 アセットの有効期限は、アセットのライセンス要件を適用するのに効果的な方法です。 公開済みアセットの有効期限が切れたらアセットを非公開にすることで、ライセンス違反が発生する可能性を回避します。管理者権限を持たないユーザーは、期限切れのアセットを編集、コピー、移動、発行およびダウンロードすることはできません。
 
-You can view the expiration status for an asset in the [!DNL Assets] console in both the card and list views.
+You can view the expiration status of an asset in the [!DNL Assets] console in both the card and list views.
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
@@ -40,7 +40,7 @@ You can view the expiration status of an asset in the [!UICONTROL Timeline] in l
 You can also view the expiration status of assets in the **[!UICONTROL References]** rail. ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
 
 1. 参照先の Web ページと複合アセットを表示するアセットに移動します。
-1. アセットと [!DNL Experience Manager] ロゴを選択します。
+1. アセットを選択し、 [!DNL Experience Manager] ロゴをクリックします。
 
 1. メニューで「**[!UICONTROL 参照]**」を選択します。
 
@@ -60,7 +60,7 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
 1. In the [!DNL Assets] console, click the **[!UICONTROL Search]** in the toolbar to display the Omnisearch box.
 
-1. 「Omnisearch」ボックスにカーソルを置き、Returnキーを押して検索結果ページを表示します。
+1. オムニサーチボックスのカーソルで、Enter キーを押して検索結果ページを表示します。
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
@@ -72,17 +72,17 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. 「**[!UICONTROL 期限切れ]**」を選択します。有効期限切れのアセットが検索結果に表示されます。
+1. 「 **[!UICONTROL 期限切れ]**」を選択します。 有効期限切れのアセットが検索結果に表示されます。
 
    ![chlimage_1-153](assets/chlimage_1-153.png)
 
-When you select the **[!UICONTROL Expired]** option, the [!DNL Assets] console only displays the expired assets and subassets that are referenced by compound assets. 有効期限切れのサブアセットを参照する複合アセットは、サブアセットの有効期限切れの直後には表示されません。Instead, they are displayed after [!DNL Experience Manager] detects that they reference expired subassets the next time the scheduler runs.
+When you choose the **[!UICONTROL Expired]** option, the [!DNL Assets] console only displays the expired assets and subassets that are referenced by compound assets. 有効期限切れのサブアセットを参照する複合アセットは、サブアセットの有効期限切れの直後には表示されません。Instead, they are displayed after [!DNL Experience Manager] detects that they reference expired subassets the next time the scheduler runs.
 
 公開済みアセットの有効期限をスケジューラーの現在のサイクルより前の日付に変更する場合、スケジューラーは次回の実行時にも引き続きこのアセットを有効期限切れのアセットとして検出し、ステータスにそれを反映させます。
 
 さらに、何らかの誤作動やエラーによりスケジューラーが現在のサイクルの有効期限切れアセットを検出できない場合、スケジューラーはこれらのアセットを次回のサイクルで再確認し、有効期限切れのステータスを検出します。
 
-To enable the [!DNL Assets] console to display the referencing compound assets along with the expired subassets, configure an **Adobe CQ DAM Expiry Notification** workflow in [!DNL Experience Manager] Configuration Manager.
+To enable the [!DNL Assets] console to display the referencing compound assets along with the expired subassets, configure an **[!UICONTROL Adobe CQ DAM Expiry Notification]** workflow in [!DNL Experience Manager] Configuration Manager.
 
 1. Open [!DNL Experience Manager] Configuration Manager.
 1. 「**[!UICONTROL Adobe CQ DAM Expiry Notification]**」を選択します。デフォルトでは、「**[!UICONTROL Time based Scheduler]**」が選択されており、指定の時間にアセットに有効期限切れのサブアセットがあるかどうかをチェックするジョブのスケジュールを設定します。ジョブが完了すると、有効期限切れのサブアセットを持つアセットと参照元のアセットが検索結果に有効期限切れと表示されます。
@@ -94,7 +94,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    >[!NOTE]
    >
-   >Only the asset creator (the person who uploads a particular asset to [!DNL Assets]) receives an email when the asset expires.  の全レベルの電子メール通知の設定に関する追加情報について詳しくは、[電子メール通知の設定](/help/sites-administering/notification.md)を参照してください。[!DNL Experience Manager]
+   >Only the asset creator (the person who uploads a particular asset to [!DNL Assets]) receives an email when the asset expires. See [how to configure email notification](/help/sites-administering/notification.md) for additional details around configuring email notifications at the overall [!DNL Experience Manager] level.
 
 1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。管理者かアセットの作成者の場合、アセットの有効期限が切れる前に、指定の時間が経過した後にアセットの有効期限が切れることを知らせるメッセージを受け取ります。
 
@@ -119,7 +119,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. インター [!DNL Assets] フェイスで、アセットを選択し、「 **[!UICONTROL プロパティ]** 」をクリックして、アセットの詳細ページを表示します。
+1. アセットの詳細ページを表示するには、インター [!DNL Assets] フェイスでアセットを選択し、「 **[!UICONTROL プロパティ]**」をクリックします。
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
@@ -144,7 +144,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. returnキーを押し、「 **[!UICONTROL GlobalNav]** 」をクリックして検索パネルを表示します。
+1. Returnキーを押し、をクリック [!DNL Experience Manager] して検索パネルを表示します。
 1. In the search panel, click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in [!DNL Assets].
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
