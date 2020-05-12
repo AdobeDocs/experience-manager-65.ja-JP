@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d948ea6e6f6983ba0ecfe05710ffa7dedb772075
+source-git-commit: d77296df73861c33720c16c14534c1b448d35d06
 workflow-type: tm+mt
-source-wordcount: '5759'
-ht-degree: 88%
+source-wordcount: '5763'
+ht-degree: 87%
 
 ---
 
@@ -501,11 +501,11 @@ PSD、PDFおよびPostscriptファイルには、次の「調整済み」ジョ�
 * 事前定義済みの Granite の一時的なワークフロー（画像および非ビデオアセット）キューワーカースレッドを更新する。
 * Dynamic Media Classic サーバーへの最大アップロード接続数を更新する。
 
-#### Granite の一時的なワークフローキューの更新 {#updating-the-granite-transient-workflow-queue}
+#### Updating the Granite transient workflow queue {#updating-the-granite-transient-workflow-queue}
 
 Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローに使用されます。Dynamic Media では、画像の取り込みおよび処理に使用されます。
 
-**Granite の一時的なワークフローキューを更新するには：**
+**Granite一時ワークフローキューを更新するには**
 
 1. [https://&lt;server>/system/console/configMgr](https://localhost:4502/system/console/configMgr) に移動して、**Queue: Granite Transient Workflow Queue** を検索します。
 
@@ -523,11 +523,11 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
-#### Granite のワークフローキューの更新 {#updating-the-granite-workflow-queue}
+#### Updating the Granite workflow queue {#updating-the-granite-workflow-queue}
 
 Granite のワークフローキューは、一時的でないワークフローに使用されます。Dynamic Media では、**[!UICONTROL Dynamic Media エンコーディングビデオ]**&#x200B;ワークフローでビデオを処理するために使用されます。
 
-**Granite のワークフローキューを更新するには：**
+**Graniteワークフローキューを更新するには**
 
 1. `https://<server>/system/console/configMgr` に移動して、**Queue: Granite Workflow Queue** を検索します。
 
@@ -545,11 +545,11 @@ Granite のワークフローキューは、一時的でないワークフロー
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
-#### Scene7 アップロード接続の更新 {#updating-the-scene-upload-connection}
+#### Dynamic Media Classicアップロード接続の更新 {#updating-the-scene-upload-connection}
 
 Scene7 アップロード接続の設定は、AEM Assets を Dynamic Media Classic サーバーと同期します。
 
-**Scene7 アップロード接続を更新するには：**
+**Dynamic Media Classicアップロード接続を更新するには**
 
 1. `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl` に移動します。
 1. 「**[!UICONTROL Number of connections]**」フィールドおよび「**[!UICONTROL Active job timeout]**」フィールドで、必要に応じて数値を変更します。
