@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd667ae10b930f6e3b97fb22b4a99b0841fac171
+source-git-commit: 86d3f14ec9e99297ede0aa1c027884d7f73665bc
+workflow-type: tm+mt
+source-wordcount: '5487'
+ht-degree: 88%
 
 ---
 
@@ -89,7 +92,7 @@ AEM WCM では複数のユーザーとグループがインストールされま
   <tr>
    <td>content-authors</td>
    <td>グループ</td>
-   <td><p>コンテンツ編集を担当するグループ。読み取り、変更、作成、削除の権限が必要です。</p> </td>
+   <td><p>コンテンツ編集を担当するグループ。読み取り、変更、作成および削除の権限が必要です。</p> </td>
    <td>読み取り、変更、作成および削除の権限を追加する場合は、プロジェクト固有のアクセス権を持つ独自のコンテンツ作成者グループを作成できます。</td>
   </tr>
   <tr>
@@ -150,7 +153,7 @@ You can change the permissions granted/denied to a given user by selecting or cl
 
 ### アクション {#actions}
 
-アクションはページ（リソース）に対して実行できます。階層内のページごとに、ユーザーがそのページに対して実行できるアクションを指定できます。[アクション](#permissions-and-acls) を許可または拒否できる権限です。
+アクションはページ（リソース）に対して実行できます。階層内のページごとに、ユーザーがそのページに対して実行できるアクションを指定できます。[アクションを許可または拒否できる権限](#permissions-and-acls) 。
 
 <table>
  <tbody>
@@ -183,7 +186,7 @@ You can change the permissions granted/denied to a given user by selecting or cl
     <ul>
      <li>ページまたはその子ページから既存の段落を削除する。</li>
      <li>ページまたは子ページを削除する。</li>
-    </ul> <p>If <strong>modify</strong> is denied any subtrees below jcr:content are specifically excluded as removing jcr:content and its child nodes is considered a page modification. This only applies to nodes defining a jcr:content child node.</p> </td>
+    </ul> <p><strong>modifyが拒否された場合</strong> 、jcr:contentの下のサブツリーは、jcr:contentの削除として特に除外され、その子ノードはページの変更と見なされます。 これは、jcr:content子ノードを定義するノードにのみ適用されます。</p> </td>
   </tr>
   <tr>
    <td>ACL 読み取り</td>
@@ -214,14 +217,14 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 >
 >ACL はサンプルに付属しています。アプリケーションに適した ACL を確認し、決定しておくことをお勧めします。To review the ACLs that are included, go to **CRXDE **and select the **Access Control** tab for the following nodes:
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:全員に読み取りアクセスを許可します。
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:全員に読み取りアクセスを許可します。
->`/home/users/geometrixx-outdoors`:すべてのユーザーが読み取りアクセスを許可し、 `*/profile*` および
+>`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`: 全員に読み取りアクセスを許可します。
+>`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`: 全員に読み取りアクセスを許可します。
+>`/home/users/geometrixx-outdoors`: すべてのユーザーが読み取りアクセスを許可し `*/profile*` 、
 >`*/social/relationships/following/*`。
 >
->カスタムアプリケーションで、またはなどの他の関係に対するアクセス権を設定で `*/social/relationships/friend/*` きま `*/social/relationships/pending-following/*`す。
+>カスタムアプリケーションで、またはなど、他の関係のアクセス権を設定でき `*/social/relationships/friend/*` ま `*/social/relationships/pending-following/*`す。
 >
->コミュニティに固有のACLを作成すると、そのコミュニティに参加するメンバーに追加の権限が与えられる場合があります。 例えば、ユーザーがまたはでコミュニティに参加する場合など `/content/geometrixx-outdoors/en/community/hiking` です `/content/geometrixx-outdoors/en/community/winter-sports`。
+>コミュニティに固有のACLを作成する場合、それらのコミュニティに参加するメンバーに追加の権限が与えられる場合があります。 例えば、 `/content/geometrixx-outdoors/en/community/hiking` またはでユーザーがコミュニティに参加する場合などで `/content/geometrixx-outdoors/en/community/winter-sports`す。
 
 ### 権限の状態 {#permission-states}
 
@@ -415,7 +418,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 | グループ | 選択したユーザーまたはグループが属するすべてのグループが表示されます。選択したユーザーまたはグループを他のグループに割り当てたり、グループから削除したりできます。[グループ](#adding-users-or-groups-to-a-group)を参照してください。 |
 | メンバー | グループについてのみ使用できます。特定のグループのメンバーが表示されます。[メンバー](#members-adding-users-or-groups-to-a-group)を参照してください。 |
 | 権限 | ユーザーまたはグループに権限を割り当てることができます。以下の権限を制御できます。<ul><li>特定のページ／ノードに関連する権限。See [Setting Permissions](#setting-permissions). </li><li>ページの作成と削除および階層の変更に関連する権限。??? を使用すると、ページを作成および削除するための[権限を割り当てる](#settingprivileges)ことができます（階層の変更など）。</li><li>（通常は作成者から公開への）パスに従った[レプリケーション権限](#setting-replication-privileges)に関連する権限。</li></ul> |
-| 実行 | 別のユーザーのアカウントを実行できます。あるユーザーが別のユーザーの代理として操作をおこなう必要がある場合に役立ちます。詳しくは、ユ [ーザーとしての動作を参照してくださ](#impersonating-another-user)い。 |
+| 実行 | 別のユーザーのアカウントを実行できます。あるユーザーが別のユーザーの代理として操作をおこなう必要がある場合に役立ちます。「 [ユーザーとしての動作](#impersonating-another-user)」を参照してください。 |
 | 環境設定 | [グループまたはユーザーの環境設定](#setting-user-and-group-preferences)を指定します。例えば、言語の環境設定などです。 |
 
 ### ユーザーとグループのフィルタリング {#filtering-users-and-groups}
@@ -449,7 +452,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 
 1. **セキュリティ**&#x200B;コンソールのツリーリストで、「**編集**」をクリックし、「**ユーザーを作成**」または「**グループを作成**」をクリックします。
 
-   ![cqseruityeditcontextmenu](assets/cqseruityeditcontextmenu.png)
+   ![cqserityeditcontextmenu](assets/cqseruityeditcontextmenu.png)
 
 1. ユーザーとグループのどちらを作成するかに従って、必要な詳細を入力します。
 
@@ -490,7 +493,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 >[!NOTE]
 >
 >You cannot use the Security console to change the admin password. To change the password for the admin account, use the [Users console](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) that Granite Operations provides.
-
+> JEE上のAEM Formsを使用している場合は、次の手順に従ってパスワードを変更しないでください。JEE上のAEM Forms管理コンソール(/adminui)を使用してパスワードを変更してください。
 
 1. **セキュリティ**&#x200B;コンソールで、パスワードを変更するユーザーの名前をダブルクリックします。
 1. 「**プロパティ**」タブをクリックします（まだアクティブでない場合）。
