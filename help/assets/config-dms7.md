@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: d948ea6e6f6983ba0ecfe05710ffa7dedb772075
 workflow-type: tm+mt
-source-wordcount: '5753'
+source-wordcount: '5759'
 ht-degree: 88%
 
 ---
@@ -479,7 +479,9 @@ spin-01-01
 
 ### （オプション）Dynamic Media - Scene7 モードのパフォーマンスの調整 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-ジョブのパラメータを調整して、ファイルをアップロードする際の処理を高速化できます。 例えば、PSDファイルをアップロードしていて、テンプレートとして処理したくない場合は、レイヤーの抽出を「false」（オフ）に設定できます。 この場合、調整されたジョブパラメータは、と表示され `process=none&createTemplate=false`ます。
+**ジョブパラメーターの最適化**
+
+ジョブのパラメータを調整して、ファイルをアップロードする際の処理を高速化できます。 例えば、PSDファイルをアップロードしていて、テンプレートとして処理したくない場合は、レイヤーの抽出を「false」（オフ）に設定できます。 この場合、調整されたジョブパラメータは、と表示され `process=None&createTemplate=false`ます。
 
 PSD、PDFおよびPostscriptファイルには、次の「調整済み」ジョブパラメーターを使用することをお勧めします。
 
@@ -491,7 +493,9 @@ PSD、PDFおよびPostscriptファイルには、次の「調整済み」ジョ�
 
 これらのパラメーターのいずれかを更新するには、MIMEタイプベースのアセットの [有効化/ダイナミックメディアクラシックアップロードジョブパラメーターのサポートの手順に従います](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
 
-また、ダイナミックメディア — Scene7モードのスムーズな動作を維持するために、次の同期パフォーマンス/スケーラビリティの最適な調整のヒントを推奨します。
+**同期のパフォーマンス/拡張性に関する最適な調整のヒント**
+
+ダイナミックメディア — Scene7モードのスムーズな動作を維持するには、次の同期パフォーマンス/スケーラビリティの微調整のヒントを推奨します。
 
 * 事前定義済みの Granite のワークフロー（ビデオアセット）キューワーカースレッドを更新する。
 * 事前定義済みの Granite の一時的なワークフロー（画像および非ビデオアセット）キューワーカースレッドを更新する。
