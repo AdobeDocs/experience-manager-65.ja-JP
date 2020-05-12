@@ -10,7 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 75%
 
 ---
 
@@ -34,7 +37,7 @@ The JSON Export is based on [Sling Models](https://sling.apache.org/documentatio
 
 >[!NOTE]
 >
->For an example of using Sling Models see the article [Developing Sling Model Exporters in AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
+>For an example of using Sling Models see the article [Developing Sling Model Exporters in AEM](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
 
 Sling Model の実装クラスに次のような注釈を付ける必要があります。
 
@@ -56,6 +59,16 @@ This ensures that your component could be exported on its own, using the `.model
 >
 >The `ExporterConstants` and `ComponentExporter` classes come from the `com.adobe.cq.export.json` bundle.
 
+### 複数のセレクターの使用 {#multiple-selectors}
+
+標準的な使用例ではありませんが、セレクターに加えて複数のセレクターを設定でき `model` ます。
+
+```
+https://<server>:<port>/content/page.model.selector1.selector2.json
+```
+
+ただし、この場合、 `model` セレクターは最初のセレクターで、拡張子は必ず指定し `.json`ます。
+
 ## Sling Model インターフェイスに注釈を付ける {#annotate-the-sling-model-interface}
 
 JSON エクスポーターフレームワークで認識されるようにするには、モデルインターフェイスに `ComponentExporter` インターフェイス（またはコンテナコンポーネントの場合は `ContainerExporter`）を実装する必要があります。
@@ -66,7 +79,7 @@ Model インターフェイスには、シリアル化されるメソッドを�
 
 ## 例 {#example}
 
-コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) からサポートされており、参照として使用できます。
+コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) からサポートされており、参照として使用できます。
 
 例えば、画像コアコンポーネントの Sling Model 実装とその注釈されたインターフェイスを参照してください。
 
@@ -86,5 +99,5 @@ GitHub のコード
 * [コンテンツフラグメントモデル](/help/assets/content-fragments-models.md)
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
 
