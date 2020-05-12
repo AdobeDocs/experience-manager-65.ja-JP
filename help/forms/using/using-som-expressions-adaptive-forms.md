@@ -9,7 +9,10 @@ topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 6b4bc58efd72900c54cb245878239e345d72ae3e
+workflow-type: tm+mt
+source-wordcount: '367'
+ht-degree: 91%
 
 ---
 
@@ -44,5 +47,5 @@ DOM ツリー
 
 パネルツールバーを使用した SOM 式の抽出
 
-[GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.md) に一覧表示されている API の一部は要素の SOM 式を使用します。例えば、アダプティブフォーム内の特定のフィールドにフォーカスを移動するには、対応する SOM 式を `getFocus` の `guideBridge` API に渡します。 
+[GuideBridge](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html) に一覧表示されている API の一部は要素の SOM 式を使用します。例えば、アダプティブフォーム内の特定のフィールドにフォーカスを移動するには、対応する SOM 式を `getFocus` の `guideBridge` API に渡します。 
 
