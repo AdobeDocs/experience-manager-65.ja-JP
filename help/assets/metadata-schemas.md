@@ -3,9 +3,9 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 530a720a5fbad906e7015aa41a650b31f09fe2c4
+source-git-commit: 39066500057d364ccee57f01f045c11d634b2d0e
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2723'
 ht-degree: 67%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 67%
 1. カード表示のアセットタイルにあるクイックアクションから **[!UICONTROL 表示のプロパティ]** (Actions)アイコンをクリックまたはタップします。
 
    ![アセットタイルのクイックアクション](assets/chlimage_1-170.png)
+
+   Alternatively, select an asset and then click or tap the [!UICONTROL Properties] icon from the toolbar.
 
 1. 使用可能なタブで、様々なメタデータプロパティを編集できます。 However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
 
