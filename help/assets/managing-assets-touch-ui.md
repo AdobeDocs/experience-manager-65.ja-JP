@@ -1,10 +1,13 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]でデジタルアセットを管理します。'
+title: Manage your digital assets in [!DNL Adobe Experience Manager Assets].
 description: デジタルアセットのアップロード、ダウンロード、編集、検索、削除、注釈の付加、バージョンなど、アセット管理タスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
+source-git-commit: 94f7f2cde3c87ed4693b9e2004f80fc5f0cd9855
+workflow-type: tm+mt
+source-wordcount: '9347'
+ht-degree: 69%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
 >[!NOTE]
 >
 >* Sharing an [!DNL Assets] folder of the type `sling:OrderedFolder` is not supported when sharing to Marketing Cloud. フォルダーを共有する場合は、フォルダーを作成するときに [!UICONTROL Ordered] を選択しないでください。
->* [!DNL Experience Manager] フォルダーの名前として `subassets` wordを使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
+>* [!DNL Experience Manager] では、`subassets` をフォルダーの名前として使用することはできません。これは、複合アセットのサブアセットを含むノード用に予約されているキーワードです.
 
 
 1. 新しいフォルダーを作成するデジタルアセットフォルダーの場所に移動します。メニューで、「**[!UICONTROL 作成]**」をクリックします。「**[!UICONTROL 新規フォルダ]**」を選択します。
@@ -389,7 +392,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    >[!NOTE]
    >
-   >タグを作成するには、CRXリポジトリで書き込み権限 `/content/cq:tags/default` が必要です。
+   >To create tags, you need write permission at `/content/cq:tags/default` in the CRX repository.
 
 1. アセットに評価を指定するには、「**[!UICONTROL 詳細]**」タブをタップまたはクリックし、適切な位置の星をタップまたはクリックして、目的の評価を割り当てます。
 
@@ -415,7 +418,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 アセットの特定のコピーに一意に関連付けられる属性は継承されません。例えば、以下のものが該当します。
 
-* アセットID、作成日時、バージョンおよびバージョン履歴。 Some of these properties are indicated by the properties `jcr:uuid`, `jcr:created`, and `cq:name`.
+* アセット ID、作成日時、バージョン、バージョン履歴。これらのプロパティの一部は、`jcr:uuid`、`jcr:created`、`cq:name` プロパティによって示されます。
 
 * 作成時間と参照パスは、各アセットとその各レンディションに対して一意です。
 
@@ -503,7 +506,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    **レンディションの削除**
 
-   **[!UICONTROL レンディション]**&#x200B;パネルからレンディションを選択し、ツールバーの「**[!UICONTROL レンディションを削除]**」アイコンをタップまたはクリックします。
+   **[!UICONTROL レンディション]**&#x200B;パネルからレンディションを選択し、ツールバーの「**[!UICONTROL レンディションを削除]**」アイコンをタップまたはクリックします。アセット処理の完了後、レンディションを一括で削除することはできません。 個々のアセットについて、レンディションをユーザインターフェイスから手動で削除できます。 複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
 
    ![レンディションを削除するオプション](assets/delete_renditionicon.png)
 
