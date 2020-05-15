@@ -3,7 +3,7 @@ title: Assets HTTP API in [!DNL Adobe Experience Manager].
 description: のHTTP APIを使用して、デジタルアセットの作成、読み取り、更新、削除、管理を行います [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 34167cd9c03c9bc26aa24e6837dbd144af8bf9bd
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 40%
@@ -95,9 +95,9 @@ Assets HTTP API には、以下の機能が含まれます。
 
 **前提条件**
 
-* `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
-* Navigate to **Adobe Granite CSRF Filter**.
-* Make sure the property **Filter Methods** includes: POST, PUT, DELETE.
+1. `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
+1. Navigate to **Adobe Granite CSRF Filter**.
+1. Make sure the property **Filter Methods** includes: POST, PUT, DELETE.
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
