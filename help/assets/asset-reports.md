@@ -1,20 +1,23 @@
 ---
 title: デジタルアセットに関するレポート
-description: AEM Assets内のアセットに関するレポートを理解し、デジタルアセットの使用、アクティビティ、共有を把握します。
+description: AEM Assets内のアセットに関するレポートを理解し、デジタルアセットの使用、アクティビティ、共有を把握するのに役立ちます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: f66be5de3bbd0051cd677430d5187ace9337b98d
+workflow-type: tm+mt
+source-wordcount: '977'
+ht-degree: 70%
 
 ---
 
 
 # アセットレポート {#asset-reports}
 
-アセットレポートは、Adobe Experience Manager (AEM) Assets デプロイメントのユーティリティを評価するための重要なツールです。AEM Assetsを使用すると、デジタルアセットに関する様々なレポートを生成できます。 レポートでは、システムの使用状況、ユーザーによるアセットの操作方法、ダウンロードされたアセットや共有されているアセットなどに関する有用な情報が提供されます。
+アセットレポートは、Adobe Experience Manager（AEM）Assets デプロイメントのユーティリティを評価するための重要なツールです。AEM Assetsを使用すると、デジタルアセットに関する様々なレポートを生成できます。 レポートでは、システムの使用状況、ユーザーによるアセットの操作方法、ダウンロードされたアセットや共有されているアセットなどに関する有用な情報が提供されます。
 
 レポートの情報を使用して重要な成功指標を導き出し、企業やお客様における AEM Assets の採用状況を測定することができます。
 
-AEM Assetsレポートフレームワークは、Slingジョブを使用して、レポート要求を順番に非同期で処理します。 このフレームワークは大規模なリポジトリに合わせて拡張することができます。レポートの非同期処理により、レポートを生成する際の効率性とスピードが向上します。
+AEM Assetsレポートフレームワークは、Slingジョブを使用して、順序に従ってレポート要求を非同期で処理します。 このフレームワークは大規模なリポジトリに合わせて拡張することができます。レポートの非同期処理により、レポートを生成する際の効率性とスピードが向上します。
 
 直観的なレポート管理インターフェイスに備わっているきめ細かなオプションやコントロールを使用すれば、アーカイブされたレポートにアクセスしたり、レポートの実行ステータス（成功、失敗および待機中）を表示したりすることができます。
 
@@ -36,9 +39,8 @@ AEM Assets では、次の標準レポートが生成されます。
 
 AEM 管理者は、これらのレポートを手軽に生成し、実装に合わせて容易にカスタマイズできます。レポートを生成するには、以下の手順に従います。
 
-1. Experience Managerインターフェイスで、ツール/アセ **[!UICONTROL ット]** /レ **[!UICONTROL ポート]** をクリ **[!UICONTROL ックします]**。
-
-![](assets/AssetsReportNavigation.png)
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートをクリックします]**。
+   ![](assets/AssetsReportNavigation.png)
 
 1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
 1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
@@ -63,9 +65,9 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 
    >[!NOTE]
    >
-   >後でレポートをスケジュールする場合は、「日付」と「時間」フィールドで日時を指定します。 値を指定しなかった場合、レポートエンジンはそのレポートをすぐに生成するものとして取り扱います。
+   >レポートを後でスケジュールする場合は、「日付と時間」フィールドで日時を必ず指定してください。 値を指定しなかった場合、レポートエンジンはそのレポートをすぐに生成するものとして取り扱います。
 
-   設定フィールドは、作成するレポートのタイプによって異なることがあります。例えば、「**[!UICONTROL ディスク使用量]**」レポートには、アセットが使用しているディスク領域を計算する際にアセットレンディションを含めるオプションが用意されています。ディスク使用量を計算するために、サブフォルダ内のアセットを含めるか除外するかを選択できます。
+   設定フィールドは、作成するレポートのタイプによって異なることがあります。例えば、「**[!UICONTROL ディスク使用量]**」レポートには、アセットが使用しているディスク領域を計算する際にアセットレンディションを含めるオプションが用意されています。ディスク使用量を計算するために、サブフォルダー内のアセットを含めるか、除外するかを選択できます。
 
    >[!NOTE]
    >
@@ -94,7 +96,7 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
    ![](assets/custom_columns.png)
 
 1. Click **[!UICONTROL Create]** from the toolbar. レポートの生成が開始されたことを通知するメッセージが表示されます。
-1. アセットレポートページのレポート生成ステータスは、レポートジョブの現在の状態（「成功」、「失敗」、「待機中」、「スケジュール済み」など）に基づきます。通知のインボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。 Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
+1. アセットレポートページのレポート生成ステータスは、レポートジョブの現在の状態（「成功」、「失敗」、「待機中」、「スケジュール済み」など）に基づきます。通知インボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。 Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
 
    ![](assets/report_page.png)
 
@@ -112,7 +114,9 @@ AEM 管理者は、これらのレポートを手軽に生成し、実装に合�
 * Brand Portal 公開
 * ファイル
 
-1. Experience Managerインターフェイスで、ツール/アセッ **[!UICONTROL ト]** /レポ **[!UICONTROL ートをクリ]** ックします ****。
+これらのレポートにカスタム列を追加するには、次の手順に従います。
+
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートをクリックします]**。
 1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
 
 1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
