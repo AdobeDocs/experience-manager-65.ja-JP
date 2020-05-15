@@ -1,30 +1,33 @@
 ---
 title: ビジネス・プロセスの達成、監査の実施、コンプライアンスの達成、基本的な健全性の維持を目的とした資産の処理
-description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証および実行のためのアセット処理をワークフローします。
+description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 94f7f2cde3c87ed4693b9e2004f80fc5f0cd9855
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 22%
 
 ---
 
 
 # デジタルアセットの処理 {#process-assets}
 
-[!DNL Adobe Experience Manager Assets] を使用すると、デジタルアセットを様々な方法で操作し、堅牢なアセット処理を実現できます。 デフォルトの処理方法またはカスタマイズされた処理方法を使用して、エンドツーエンドのビジネスプロセスの完了、監査とコンプライアンス、検出と配布、デジタルアセットの基本的な健全性を確保できます。 アセット管理のタスクを行いながら、必要な拡張とカスタマイズを実現できます。
+[!DNL Adobe Experience Manager Assets] 様々な方法でデジタルアセットを操作でき、堅牢なアセット処理が可能です。 デフォルトまたはカスタマイズされた処理方法を使用して、エンドツーエンドのビジネスプロセスの完了、監査とコンプライアンス、発見と配信、デジタルアセットの基本的な健全性を確保できます。 アセット管理のタスクを実行しながら、必要な拡大・縮小とカスタマイズを行うことができます。
 
-## 理解ワークフロー {#understand-workflows}
+## ワークフローの理解 {#understand-workflows}
 
-アセットの処理には、ワークフローを使 [!DNL Experience Manager] 用します。 ワークフローは、ビジネスロジックやアクティビティの自動化に役立ちます。 特定の手順を実行するための詳細なタスクがデフォルトで提供され、開発者は独自のカスタム手順を作成できます。 これらの手順を論理的な順序で組み合わせて、ワークフローを作成 例えば、アップロードされた画像に対して、アップロード先のフォルダーや画像の解像度など、特定の条件に基づいて透かしを適用することができます。 もう1つの例として、透かしを埋め込み、メタデータの追加、レンディションの作成、インテリジェントタグの追加、データストアへの公開を同時に行うように設定されたワークフローが挙げられます。
+アセット処理の場合、はワークフローを [!DNL Experience Manager] 使用します。 ワークフローは、ビジネスロジックやアクティビティの自動化に役立ちます。 特定のタスクを達成するための詳細な手順はデフォルトで提供され、開発者は独自のカスタム手順を作成できます。 これらの手順を組み合わせて論理的な順序でワークフローを作成できます。 例えば、ワークフローは、アップロード先のフォルダー、画像の解像度など、特定の条件に基づいて、アップロードされた画像に透かしを適用できます。 もう1つの例として、透かしを設定し、メタデータの追加、レンディションの作成、インテリジェントタグの追加、データストアへの公開を同時に行うワークフローが挙げられます。
 
-## デフォルトのワークフロー [!DNL Experience Manager] は、 {#default-workflows}
+## デフォルトのワークフローは [!DNL Experience Manager] {#default-workflows}
 
-デフォルトでは、アップロードされたすべてのアセットは [!UICONTROL DAM Update Assetワークフローを使用して処理されます] 。 ワークフローは、アップロードされた各アセットに対して実行され、レンディションの生成、メタデータの書き戻し、ページの抽出、メディアの抽出、トランスコードなどの基本的なアセット管理タスクを実行します。
+デフォルトでは、アップロードされたすべてのアセットは、 [!UICONTROL DAM Update Asset] ワークフローを使用して処理されます。 ワークフローは、アップロードされた各アセットに対して実行され、レンディションの生成、メタデータの書き戻し、ページの抽出、メディアの抽出、トランスコードなど、基本的なアセット管理タスクを実行します。
 
-デフォルトで使用可能な様々なワークフローモデルを確認するに **[!UICONTROL は、のツール/ワークフロー]** /モデルを参照しま [!DNL Experience Manager]す。
+デフォルトで使用可能な様々なワークフローモデルを確認するには、の **[!UICONTROL ツール/ワークフロー/モデル]** を参照してくだ [!DNL Experience Manager]さい。
 
 ![一部のデフォルトワークフロー](assets/aem-default-workflows.png)
 
-*図：で使用できるデフォルトワークフローの一部で[!DNL Experience Manager]す。*
+*図： で使用できるデフォルトのワークフローの一部[!DNL Experience Manager]です。*
 
 ## Apply workflows to process assets {#applying-workflows-to-assets}
 
@@ -34,7 +37,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 >[!NOTE]
 >
->If a workflow available in Classic UI is not available in Touch enabled UI, like [!UICONTROL Request to Activate] and [!UICONTROL Request to Deactivate], see [make workflow models](/help/sites-developing/workflows-models.md#classic2touchui).
+>If a workflow available in Classic UI is not available in Touch-enabled UI such as [!UICONTROL Request to Activate] and [!UICONTROL Request to Deactivate], see [make workflow models](/help/sites-developing/workflows-models.md#classic2touchui).
 
 ##  のアセットへのワークフローの適用 {#apply-a-workflow-to-an-asset}
 
@@ -43,7 +46,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 -->
 ワークフローをアセットに適用するには、次の手順に従います。
 
-1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。 メニュー **[!UICONTROL から]** 「タイムライン」を選択して、タイムラインを表示します。
+1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。 メニューから「 **[!UICONTROL タイムライン]** 」を選択して、タイムラインを表示します。
 
    ![timeline-1](assets/timeline.png)
 
@@ -65,11 +68,11 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 複数のアセットへのワークフローの適用 {#applying-a-workflow-to-multiple-assets}
 
-1. アセットコンソールから、ワークフローを開始するアセットの場所へ移動して、アセットを選択します。メニュー **[!UICONTROL から]** 「タイムライン」を選択して、タイムラインを表示します。
+1. アセットコンソールから、ワークフローを開始するアセットの場所へ移動して、アセットを選択します。メニューから「 **[!UICONTROL タイムライン]** 」を選択して、タイムラインを表示します。
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
-1. 下部の「ア **[!UICONTROL クション]** 」をクリックします。
+1. 下部の「 **[!UICONTROL アクション]** 」をクリックします。
 
    ![chlimage_1-30](assets/chlimage_1-137.png)
 
@@ -84,24 +87,28 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ワークフローを複数のフォルダーに適用する手順は、複数のアセットに適用する手順と似ています。Select the folders in the [!DNL Assets] interface, and perform steps 2-7 of the procedure [apply a workflow to multiple assets](/help/assets/assets-workflow.md#applying-a-workflow-to-multiple-assets).
 
-## Apply a workflow to a collection {#applying-a-workflow-to-a-collection}
+## コレクションへのワークフローの適用 {#applying-a-workflow-to-a-collection}
 
-詳しくは、コ [レクションへのワークフローの適用を参照してくださ](/help/assets/managing-collections-touch-ui.md#running-a-workflow-on-a-collection)い。
+コレクションへのワークフローの [適用を参照してください](/help/assets/managing-collections-touch-ui.md#running-a-workflow-on-a-collection)。
 
-## ワークフローの自動開始による、アセットの条件付き処理 {#auto-execute-workflow-on-some-assets}
+## ワークフローの自動開始によるアセットの条件付き処理 {#auto-execute-workflow-on-some-assets}
 
-管理者は、事前定義された条件に基づいてアセットを自動的に実行し、処理するワークフローを設定できます。 この機能は、例えば、基幹業務ユーザーやマーケターが特定のフォルダーにカスタムワークフローを作成する場合に役立ちます。 エージェンシーの写真からのすべてのアセットを透かし入れしたり、フリーランサーがアップロードしたすべてのアセットを処理して特定のレンディションを作成したりできるとします。
+管理者は、定義済みの条件に基づいてアセットを自動的に実行および処理するようにワークフローを設定できます。 この機能は、特定のフォルダーにカスタムワークフローを作成する場合など、基幹業務ユーザーやマーケターに役立ちます。 エージェンシーの写真からのすべてのアセットに透かしを付けたり、フリーランスがアップロードしたすべてのアセットを処理して特定のレンディションを作成したりできます。
 
-ワークフローモデルの場合、ユーザーはワークフローを実行するワークフローランチャーを作成できます。 ワークフローランチャーは、コンテンツリポジトリ内の変更を監視し、事前定義された条件が満たされた場合にワークフローを実行します。 管理者は、マーケターへのアクセスを提供して、ワークフローを作成し、ランチャーを設定できます。 ユーザーは、デフォルトの [!UICONTROL DAM Update Assetワークフローを変更し] 、特定のアセットの処理に必要な追加の手順を追加できます。 ワークフローは、新しくアップロードされたすべてのアセットに対して実行されます。 特定のアセットに対する追加の手順の実行を制限するには、次のいずれかの方法を使用します。
+ワークフローモデルの場合、ユーザーはワークフローを実行するワークフローランチャーを作成できます。 ワークフローランチャーは、コンテンツリポジトリ内の変更を監視し、定義済みの条件が満たされた場合にワークフローを実行します。 管理者は、マーケターへのアクセスを提供して、ワークフローの作成とランチャーの設定を行うことができます。 ユーザーは、デフォルトの [!UICONTROL DAM Update Asset] Workflowを変更して、特定のアセットの処理に必要な追加の手順を追加できます。 ワークフローは、新しくアップロードされたすべてのアセットに対して実行されます。 次のいずれかの方法を使用して、特定のアセットに対する追加の手順の実行を制限します。
 
-* 「 [!UICONTROL DAM Update Asset] 」ワークフローのコピーを作成し、特定のフォルダー階層で実行するように変更します。 この方法は、いくつかのフォルダで役立ちます。
-* 追加の処理手順は、必要な数のフォルダーに条件に応じて [OR分割を使用し](/help/sites-developing/workflows-step-ref.md#or-split) 、追加することができます。
+* 「 [!UICONTROL DAM Update Asset] 」ワークフローのコピーを作成し、特定のフォルダー階層で実行されるように変更します。 この方法は、いくつかのフォルダーで役立ちます。
+* 追加の処理手順は、 [OR分割を使用して、必要な数のフォルダーに条件に応じて追加できます](/help/sites-developing/workflows-step-ref.md#or-split) 。
+
+## Best practices and limitations {#best-practices-limitations-tips}
+
+* ワークフローをデザインする際は、あらゆる種類のレンディションに対するニーズを考慮します。 レンディションが今後必要になることが予測されない場合は、ワークフローからレンディションの作成手順を削除します。 レンディションは、その後一括で削除することはできません。 を長時間使用した後、不要なレンディションを使用すると、ストレージ領域が大量に消費される場合があり [!DNL Experience Manager]ます。 個々のアセットについて、レンディションをユーザインターフェイスから手動で削除できます。 複数のアセットの場合は、特定のレンディションを削除す [!DNL Experience Manager] るようにカスタマイズするか、アセットを削除して再びアップロードできます。
 
 >[!MORELIKETHIS]
 >
->* [申し込みとワークフロー](/help/sites-authoring/workflows.md)
+>* [ワークフローへの申し込みと参加](/help/sites-authoring/workflows.md)
 >* [ワークフローモデルの作成とワークフロー機能の拡張](/help/sites-developing/workflows.md)
->* [メソッドを実行するワークフロー](/help/sites-administering/workflows-starting.md)
+>* [ワークフローを実行するメソッド](/help/sites-administering/workflows-starting.md)
 >* [ワークフローのベストプラクティス](/help/sites-developing/workflows-best-practices.md)
 >* [ワークフローを使用したアセットの変更に関するコミュニティ記事](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
 
