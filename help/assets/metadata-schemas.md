@@ -3,9 +3,9 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2366abc3be015fa637621f235edb8e8d79e51372
+source-git-commit: 69506287c1c8e45d99c3229d701604387bd57ca9
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2713'
 ht-degree: 67%
 
 ---
@@ -43,9 +43,9 @@ ht-degree: 67%
 |---|---|---|
 | [!UICONTROL default] |  | アセットのベースメタデータスキーマフォーム。 |
 |  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
-|  | <ul><li> [!UICONTROL 画像]</li></ul> | MIMEタイプが「image」であるアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプが [!UICONTROL tiffのアセットのスキーマフォーム]。</li></ul> |
-|  | <ul><li> [!UICONTROL アプリケーション]</li></ul> | application/ pdf、application/ zipなど、MIMEタイプが「application」のアセットのスキーマフォーム。 <br>[!UICONTROL pdf]: サブタイプpdfのアセットのスキーマフォーム |
-|  | <ul><li>[!UICONTROL ビデオ]</li></ul> | video/avi、video/mp4など、MIMEタイプが「video」のアセットのスキーマフォーム。 |
+|  | <ul><li> [!UICONTROL 画像]</li></ul> | Schema form for assets with the MIME type &quot;image&quot;, for example, `image/jpeg`, `image/png`, and so on. <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプが [!UICONTROL tiffのアセットのスキーマフォーム]。</li></ul> |
+|  | <ul><li> [!UICONTROL アプリケーション]</li></ul> | Schema form for assets with MIME type &quot;application&quot;, for example  `application/pdf`,  `application/zip`, and so on. <br>[!UICONTROL pdf]: サブタイプpdfのアセットのスキーマフォーム |
+|  | <ul><li>[!UICONTROL ビデオ]</li></ul> | Schema form for assets with MIME type &quot;video&quot;, such as `video/avi`, `video/mp4` and so on. |
 | [!UICONTROL collection] |  | コレクションのスキーマフォーム。 |
 | [!UICONTROL contentfragment] |  | コンテンツフラグメントのスキーマフォーム。 |
 | [!UICONTROL forms] |  | This schema form relates to [Adobe Experience Manager Forms](/help/forms/home.md). |
