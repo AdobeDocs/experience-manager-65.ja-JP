@@ -3,7 +3,10 @@ title: アセットプロキシの開発
 description: プロキシは、プロキシワーカーを使用してジョブを処理する AEM インスタンスです。AEM のプロキシ、サポートされている操作、プロキシコンポーネントを設定する方法と、カスタムプロキシワーカーを開発する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+workflow-type: tm+mt
+source-wordcount: '900'
+ht-degree: 73%
 
 ---
 
@@ -12,9 +15,9 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 Adobe Experience Manager（AEM）Assets では、プロキシを使用して、特定のタスクの処理を分散させます。
 
-プロキシは、ジョブの処理および結果の作成を担当するプロセッサーとしてプロキシワーカーを使用する特定の（場合によっては個別の）AEM インスタンスです。プロキシワーカーは、幅広いタスクに使用できます。AEM Assetsプロキシの場合は、AEM Assets内でレンダリングするアセットを読み込むために使用できます。 例えば、[IDS プロキシワーカー](indesign.md)は、InDesign Server を使用して、AEM Assets 内で使用できるようにファイルを処理します。
+プロキシは、ジョブの処理および結果の作成を担当するプロセッサーとしてプロキシワーカーを使用する特定の（場合によっては個別の）AEM インスタンスです。プロキシワーカーは、幅広いタスクに使用できます。AEM Assetsプロキシの場合は、AEM Assets内でレンダリングするためにアセットを読み込むのに使用できます。 例えば、[IDS プロキシワーカー](indesign.md)は、InDesign Server を使用して、AEM Assets 内で使用できるようにファイルを処理します。
 
-プロキシが個別の AEM インスタンスである場合は、AEM オーサリングインスタンスの負荷の軽減に役立ちます。デフォルトでは、AEM Assetsは同じJVM（プロキシを介して外部化）でアセット処理タスクを実行し、AEMオーサリングインスタンスの負荷を軽減します。
+プロキシが個別の AEM インスタンスである場合は、AEM オーサリングインスタンスの負荷の軽減に役立ちます。デフォルトでは、AEM Assetsは、同じJVM（プロキシを介して外部化）でアセット処理タスクを実行し、AEMオーサリングインスタンスの負荷を軽減します。
 
 ## Proxy (HTTP Access) {#proxy-http-access}
 
@@ -35,7 +38,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **要件**:パラメーターを設 `jobid` 定する必要があります。
+   **要件**: パラメーター `jobid` を設定する必要があります。
 
    **結果**：ジョブプロセッサーによって作成されたノードの JSON 表現が返されます。
 
@@ -80,7 +83,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 API の使用例を以下に示します。
 
-```xml
+```java
 @Reference
  JobService proxyJobService;
 
@@ -106,7 +109,7 @@ API の使用例を以下に示します。
 >
 >プロキシ API の参考ドキュメントは、[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html) にあります。
 
-Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the AEM Assets **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の設定の詳細( `/etc/cloudservices/proxy` 例：)の下にノードを追加する必要があ `/etc/cloudservices/proxy/workername`ります。
+Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the AEM Assets **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の構成の詳細(例えば、 `/etc/cloudservices/proxy` ) `/etc/cloudservices/proxy/workername`の下にノードを追加する必要があります。
 
 >[!NOTE]
 >
@@ -114,7 +117,7 @@ Both proxy and proxy worker configurations are available via cloud services conf
 
 API の使用例を以下に示します。
 
-```xml
+```java
 @Reference(policy = ReferencePolicy.STATIC)
  ProxyConfig proxyConfig;
 
@@ -129,9 +132,9 @@ API の使用例を以下に示します。
 
 ### カスタマイズしたプロキシワーカーの開発 {#developing-a-customized-proxy-worker}
 
-[IDSプロキシワーカーは](indesign.md) 、Indesignアセットの処理をアウトソースするために、既に標準搭載されているAEM Assetsプロキシワーカーの例です。
+[IDSプロキシワーカーは](indesign.md) 、Indesignアセットの処理をアウトソースするために既に用意されているAEM Assetsプロキシワーカーの例です。
 
-独自のAEM Assetsプロキシワーカーを開発および設定して、AEM Assets処理ワーカーを送出およびアウトソースする特殊なワーカーを作成することもできます。
+独自のAEM Assetsプロキシワーカーを開発および設定して、AEM Assets処理タスクをディスパッチし、アウトソースする特殊なワーカーを作成することもできます。
 
 独自のカスタムプロキシワーカーを設定するには、以下を実行する必要があります。
 
@@ -173,9 +176,9 @@ API の使用例を以下に示します。
 
 >[!NOTE]
 >
->AEM Assetsプロキシフレームワークでは、プールのメカニズムがすぐに使用できます。
+>AEM Assetsプロキシフレームワークでは、すぐに使用できる機能はプールメカニズムです。
 >
->InDesign 統合によって、InDesign Server のプール（IDSPool）にアクセスできるようになります。このプールは、AEM Assetsプロキシフレームワークの一部ではなく、Indesign統合に固有のものです。
+>InDesign 統合によって、InDesign Server のプール（IDSPool）にアクセスできるようになります。このプールはIndesignの統合に固有のもので、AEM Assetsプロキシフレームワークの一部ではありません。
 
 >[!NOTE]
 >
