@@ -3,7 +3,7 @@ title: PDFラスタライザを使用して、PDFファイルのレンディシ�
 description: のAdobe PDF Rasterizerライブラリを使用して、高品質のサムネールとレンディションを生成します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 42%
@@ -63,6 +63,7 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 
 
 1. 中間レンディションを削除するには、「**[!UICONTROL 生成されたレンディションを削除]**」を選択します。
+
 1. To let PDF Rasterizer generate web renditions, select **[!UICONTROL Generate Web Rendition]**.
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
@@ -72,8 +73,11 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
 1. ワークフローを保存します。
-1. To enable PDF Rasterizer to process PDF pages with PDF libraries, open the **[!UICONTROL DAM Process Subasset]** model from the Workflow console.
+
+1. To enable PDF Rasterizer to process PDF pages with PDF libraries, open the **[!UICONTROL DAM Process Subasset]** model from the [!UICONTROL Workflow] console.
+
 1. From the side panel, drag the PDF Rasterizer Handler step under the **[!UICONTROL Create Web-Enabled Image Rendition]** step.
+
 1. Configure the following arguments for the **[!UICONTROL PDF Rasterizer Handler]** step:
 
    * MIME types: `application/pdf` または `application/postscript`
