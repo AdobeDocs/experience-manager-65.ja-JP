@@ -1,9 +1,12 @@
 ---
 title: Adobe Experience Manager Assetsの検索機能の拡張
-description: Adobe Experience Manager Assetsの検索機能をデフォルト以外に拡張します。
+description: Adobe Experience Manager Assetsの検索機能をデフォルト以外に拡張しました。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 2348df62f970d7e2ff41ad386f29c1550ea94e48
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 81%
 
 ---
 
@@ -18,7 +21,7 @@ You can also add additional tabs to the [!DNL Assets] admin panel.
 
 >[!CAUTION]
 >
->As of [!DNL Experience Manager] 6.4, Classic UI is deprecated. For announcement, see [Deprecated and removed features](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). アドビでは、タッチ対応UIの使用をお勧めします。 For customization, see [Search Facets](/help/assets/search-facets.md).
+>As of [!DNL Experience Manager] 6.4, Classic UI is deprecated. For announcement, see [deprecated and removed features](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). タッチ対応UIの使用をお勧めします。 For customization, see [search facets](/help/assets/search-facets.md).
 
 ## オーバーレイ {#overlaying}
 
@@ -32,7 +35,7 @@ To overlay the pre-configured predicates, copy the `facets` node from `/libs/dam
 
 ## タブの追加 {#adding-tabs}
 
-追加の検索タブを追加するには、AEM Assets管理者で設定します。 追加のタブは以下の手順で作成します。
+AEM Assets管理者で検索タブを設定すると、追加の検索タブを追加できます。 追加のタブは以下の手順で作成します。
 
 1. フォルダー構造 `/apps/wcm/core/content/damadmin/tabs,` がまだ存在しない場合は作成し、`tabs` ノードを `/libs/wcm/core/content/damadmin` からコピーして貼り付けます。
 1. 必要に応じて、2 つ目のタブを作成し設定します。
@@ -70,7 +73,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 1. 次の `titlepredicate.jsp`.を追加します。
 
-   ```xml
+   ```java
    <%--
    
      Sample title predicate component
@@ -163,7 +166,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 1. 次の **titlepredicate.jsp** を追加します。
 
-   ```xml
+   ```java
    <%--
    
      Sample group predicate component
@@ -269,7 +272,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 | predicateName | String | 述語の名前。デフォルト に設定`path` |
 | rootPath | String | 述語のルートパス。デフォルト に設定`/content/dam` |
 | pathFieldPredicateName | String | デフォルト に設定`folder` |
-| showFlatOption | Boolean | チェックボックスを表示するフラ `search in subfolders`グ。 デフォルトは true です |
+| showFlatOption | Boolean | チェックボックスを表示するフラグ `search in subfolders`。 デフォルトは true です |
 
 ### DatePredicate {#datepredicate}
 
