@@ -3,10 +3,10 @@ title: メタデータの編集と追加
 description: Learn about asset metadata in [!DNL Adobe Experience Manager Assets] an various ways by which you can edit asset metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 42%
+source-wordcount: '421'
+ht-degree: 33%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 42%
 
 メタデータは、検索可能なアセットに関する追加情報です。画像をアップロードすると自動的に抽出されます。既存のメタデータを編集したり、新しいメタデータプロパティを既存のフィールドに追加（例えば、メタデータフィールドが空白の場合など）したりすることができます。
 
-Because organizations need controlled and reliable metadata vocabularies, [!DNL Experience Manager Assets] does not allow for ad-hoc adding of new metadata properties. 作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。See [create new metadata property for assets](meta-edit.md#editing-metadata-schema).
+Because organizations need controlled and reliable metadata vocabularies, [!DNL Experience Manager Assets] does not allow for on demand adding of new metadata properties. 作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。詳しくは、アセットのメタデータプロパティの [作成を参照してください](meta-edit.md#editing-metadata-schema)。
 
 ## Edit metadata for an asset {#editing-metadata-for-an-asset}
 
@@ -26,19 +26,19 @@ Because organizations need controlled and reliable metadata vocabularies, [!DNL 
    * インター [!DNL Assets] フェイスでアセットを選択し、ツールバーの「 **[!UICONTROL 表示プロパティ]** 」をクリックします。
    * アセットのサムネールから、「**[!UICONTROL プロパティを表示]**」クイックアクションを選択します。
    * From the asset page, click **[!UICONTROL View Properties]** ![chlimage_1-168](assets/chlimage_1-168.png) from the toolbar.
-   アセットページに、アセットのメタデータがすべて表示されます。アセットがにアップロード（取り込む）されると、メタデータが抽出され [!DNL Experience Manager]ます。
+   アセットページには、すべてのアセットのメタデータが表示されます。 アセットがにアップロード（取り込む）されると、メタデータが抽出され [!DNL Experience Manager]ます。
 
    ![表示メタデータにアセットのプロパティを選択](assets/asset-metadata.png)
 
    *図： アセットの[!UICONTROL プロパティ]ページのメタデータを編集または追加します。*
 
-1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the Assets web interface.
+1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
    >[!NOTE]
    >
    >テキストフィールドが空の場合、現在設定されているメタデータはありません。フィールドに値を入力して保存すると、そのメタデータプロパティを追加できます。
 
-アセットのメタデータへの変更内容は、XMP データの一部として元のバイナリに書き戻されます。This is done via [!DNL Experience Manager] metadata write-back workflow. 既存のプロパティ（`dc:title` など）への変更は上書きされ、新しく作成されたプロパティ（`cq:tags` などのカスタムプロパティを含む）はスキーマとともに追加されます。
+アセットのメタデータへの変更内容は、XMP データの一部として元のバイナリに書き戻されます。メタデータ書き込みワークフローは、元のバイナリにメタデータを追加します。 Changes made to the existing properties (such as `dc:title`) are overwritten and new properties (including custom properties like `cq:tags`) are added with the schema.
 
 XMP write-back is supported and enabled for the platforms and file formats described in [technical requirements.](/help/sites-deploying/technical-requirements.md)
 
