@@ -1,16 +1,19 @@
 ---
-title: '[!DNL Adobe Experience Manager]からデジタルアセットをダウンロードします。'
-description: '[!DNL Adobe Experience Manager]からアセットをダウンロードし、ダウンロード機能を有効または無効にする方法を説明します。'
+title: デジタルアセットのダウンロード元 [!DNL Adobe Experience Manager]。
+description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d292059a865d150f7de5664eca164c542f965fcb
+source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+workflow-type: tm+mt
+source-wordcount: '766'
+ht-degree: 57%
 
 ---
 
 
 # Download assets from [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
-静的レンディションおよび動的レンディションを含むアセットをダウンロードできます。Alternatively, you can send emails with links to assets directly from [!DNL Adobe Experience Manager Assets]. ダウンロードされたアセットは、ZIP ファイルにバンドルされています。書き出しジョブ用に圧縮する ZIP ファイルの最大サイズは 1 GB です。書き出しジョブあたり、最大500個のアセットを合計できます。
+静的レンディションおよび動的レンディションを含むアセットをダウンロードできます。Alternatively, you can send emails with links to assets directly from [!DNL Adobe Experience Manager Assets]. ダウンロードされたアセットは、ZIP ファイルにバンドルされています。書き出しジョブ用に圧縮する ZIP ファイルの最大サイズは 1 GB です。書き出しジョブあたり、最大で500個のアセットの合計を指定できます。
 
 >[!NOTE]
 >
@@ -20,21 +23,21 @@ To download assets, navigate to an asset, select the asset, and tap **[!UICONTRO
 
 画像セット、スピンセット、混在メディアセット、カルーセルセットの各アセットタイプはダウンロードできません。
 
-![Experience Manager Assetsからアセットをダウンロードする際に使用できるオプション](assets/asset_download_dialog.png)
+![Experience Manager Assetsからアセットをダウンロードする場合に使用できるオプション](assets/asset_download_dialog.png)
 
-*図：からアセットをダウンロードする際に使用できるオプショ[!DNL Experience Manager Assets]ン。*
+*図： からアセットをダウンロードする場合に使用できるオプション[!DNL Experience Manager Assets]です。*
 
-次に、使用可能な書き出しまたはダウンロードのオプションを示します。 動的レンディションは、提供に固有のも [!DNL Dynamic Media] のです。 このオプションを使用すると、選択したアセットに加えて、リアルタイムで新しいレンディションを生成できます。 このオプションは、有効になっている場合にのみ使用で [!DNL Dynamic Media] きます。
+使用できる書き出しオプションとダウンロードオプションは次のとおりです。 動的レンディションは、提供するものに固有のもの [!DNL Dynamic Media] です。 このオプションを使用すると、選択したアセットに加えて、リアルタイムで新しいレンディションを生成できます。 このオプションは、有効にしている場合にのみ使用でき [!DNL Dynamic Media] ます。
 
 | 書き出しまたはダウンロードのオプション | 説明 |
 |---|---|
-| [!UICONTROL アセット] | レンディションなしで元のフォームでアセットをダウンロードする場合は、このオプションを選択します。 |
+| [!UICONTROL Assets] | レンディションなしで元の形式でアセットをダウンロードする場合は、このオプションを選択します。 |
 | [!UICONTROL レンディション] | レンディションは、アセットのバイナリ表現です。アセットは、（アップロードされたファイルの）一次表現を持ちます。アセットは任意の数の追加の表現を持つことができます。<br>このオプションを選択すると、ダウンロードするレンディションを選択できます。使用できるレンディションは、選択したアセットによって異なります。 |
 | [!UICONTROL 動的レンディション] | ダイナミックレンディションは、他のレンディションをリアルタイムで生成します。 When you select this option, you also select the renditions you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>さらに、サイズ、測定単位、形式、カラースペース、解像度および画像の修飾子（例：画像の反転用）を選択できます。 |
 | [!UICONTROL 電子メール] | ユーザーに電子メール通知が送信されます。次の場所にある標準の電子メールテンプレートを利用できます。<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> デプロイ時にカスタマイズするテンプレートは、次の場所に存在している必要があります。 <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>テナント固有のカスタムテンプレートは、次の場所に保存できます。<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
-| [!UICONTROL アセットごとに別のフォルダーを作成] | アセットのダウンロード時にフォルダー階層を保持する場合は、このオプションを選択します。 デフォルトでは、フォルダー階層は無視され、すべてのアセットがローカルファイルシステムの1つのフォルダーにダウンロードされます。 |
+| [!UICONTROL アセットごとに別のフォルダーを作成] | アセットのダウンロード時にフォルダー階層を維持する場合は、このオプションを選択します。 デフォルトでは、フォルダー階層は無視され、すべてのアセットがローカルファイルシステム内の1つのフォルダーにダウンロードされます。 |
 
-レンディションオプションは、アセットにレンディションが含まれている場合に使用できます。 元のアセットにサブアセットが含まれている場合は、「サブアセット」オプションを使用できます。
+アセットにレンディションが含まれる場合は、「レンディション」オプションを使用できます。 元のアセットにサブアセットが含まれている場合は、「サブアセット」オプションを使用できます。
 
 ダウンロードするフォルダーを選択すると、そのフォルダーの下位のアセットの階層全体がダウンロードされます。ダウンロードする各アセット（親フォルダーの下にネストされている子フォルダーのアセットを含む）を個々のフォルダーに格納するには、「**[!UICONTROL アセットごとに別のフォルダーを作成]**」を選択します。
 
@@ -44,7 +47,7 @@ The default servlet in [!DNL Experience Manager] allows authenticated users to i
 
 例えば Asset Share Commons やポータルのような実装などを使用する場合に DAM からアセットをダウンロードできるようにするには、OSGi 設定を通じてサーブレットを手動で有効にします。日常的なダウンロードの要件に影響を与えない範囲で、許容ダウンロードサイズをできるだけ小さく設定することをお勧めします。この値を大きくすれば、パフォーマンスに影響を与える可能性があります。
 
-1. Create a folder with a naming convention that targets the publish runmode (`config.publish`): `/apps/<your-app-name>/config.publish`. 実行モードの設定プロパティを定義するには、実行モードを参 [照してください](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode)。
+1. Create a folder with a naming convention that targets the publish runmode (`config.publish`): `/apps/<your-app-name>/config.publish`. 実行モードの設定プロパティを定義するには、 [実行モードを参照してください](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode)。
 
 1. In the configuration folder, create a file of type `nt:file` named `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`.
 1. `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` に以下を入力します。ダウンロードの最大サイズ（バイト単位）を `asset.download.prezip.maxcontentsize` の値として設定します。以下のサンプルでは、ZIP ダウンロードの最大サイズを 100 KB を超えないように設定しています。
@@ -58,15 +61,13 @@ The default servlet in [!DNL Experience Manager] allows authenticated users to i
 
  パブリッシュインスタンスの `Asset Download Servlet` を無効にするには、アセットダウンロード要求をすべてブロックするように Dispatcher 設定を更新します。[!DNL Experience Manager]サーブレットは、OSGi コンソールから手動で直接無効にすることもできます。
 
-1. To block asset download requests via a dispatcher configuration, edit the `dispatcher.any` configuration and add a rule to the [filter section](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter).
-
-   `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. To block asset download requests via a dispatcher configuration, edit the `dispatcher.any` configuration and add a rule to the [filter section](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
 1. Disable the OSGi component on a Publish instance by navigating to the OSGi Console at `http://[aem_server]:[port]/system/console/components`. `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` を探して、「**[!UICONTROL 無効にする]**」をクリックします。
 
 >[!MORELIKETHIS]
 >
 >* [DRM で保護されたアセットのダウンロード](drm.md)。
->* [WinまたはMacデスクトップでExperience Managerデスクトップアプリケーションを使用してアセットをダウンロードします](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)。
+>* [WinまたはMacデスクトップでExperience Managerデスクトップアプリを使用してアセットをダウンロードします](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)。
 >* [サポートされている Adobe Creative Cloud アプリ内から Adobe Asset Link を使用したアセットのダウンロード](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html).
 
