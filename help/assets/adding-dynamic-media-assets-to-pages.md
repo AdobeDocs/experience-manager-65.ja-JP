@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 202e4d5d0e3fa285b9973e4709a02ca77ccb6e71
+source-git-commit: 876589d26f17dc088531c3f34deea0fab4c7726a
+workflow-type: tm+mt
+source-wordcount: '3137'
+ht-degree: 86%
 
 ---
 
@@ -29,13 +32,14 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 Dynamic Media、インタラクティブメディア、パノラマメディア、ビデオ 360 メディアのいずれかのコンポーネントを 1 つのページに追加することは、コンポーネントを任意のページに追加することと同じです。Dynamic Media コンポーネントについては、後の節で説明します。
 
 1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
-1. 左側のウィンドウで、「**[!UICONTROL コンポーネント]**」アイコンをタップし、「Dynamic Media」でフィルタリングします。
+1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、 **[!UICONTROL コンポーネント]** アイコンをクリックします。
+1. 「 **[!UICONTROL コンポーネント]** 」見出しのドロップダウンリストで、「 **[!UICONTROL ダイナミックメディア]**」を選択します。
 
-   使用可能な Dynamic Media コンポーネントがない場合は、Dynamic Media コンポーネントを有効（オン）にする必要があります。See [Editing Page Templates](/help/sites-authoring/templates.md#editing-templates-template-authors) for more information.
+   使用可能なダイナミックメディアコンポーネントのリストがない場合は、使用するダイナミックメディアコンポーネントを有効にする必要がある可能性があります。 See [Enabling Dynamic Media components](#enabling-dynamic-media-components).
 
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
-1. **[!UICONTROL Dynamic Media]** コンポーネントをドラッグし、ページ上の目的の場所でドロップします。
+1. Drag a **[!UICONTROL Dynamic Media]** component that you want to use and drop it in the desired location on the page.
 
    以下の例では、**[!UICONTROL ビデオ 360 メディア]**&#x200B;コンポーネントが使用されています。
 
@@ -54,6 +58,33 @@ Dynamic Media、インタラクティブメディア、パノラマメディア�
    Dynamic Media ビデオ 360 メディアコンポーネント。
 
 1. 完了したら、ダイアログボックスの右上隅近くにあるチェックマークをタップして、変更を保存します。
+
+### Enabling Dynamic Media components {#enabling-dynamic-media-components}
+
+ページに追加できるダイナミックメディアコンポーネントがない場合は、まず使用するコンポーネントを有効にする必要がある可能性があります。
+
+1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
+1. ツールバーの左側で、ページ上部近くにあります。ページ情報アイコンをタップし、ドロップダウンリストから「テンプレート **[!UICONTROL の編集]** 」をタップします。
+
+   ![edit-template](/help/assets/assets-dm/edit-template.png)
+
+1. ツールバーの右側で、ページの上部に近いドロップダウンリストから「 **[!UICONTROL 構造]**」をタップします。
+
+   ![ポリシー](/help/assets/assets-dm/structure-mode.png)
+
+1. ページ下部近くにある「 **[!UICONTROL レイアウトコンテナ]** 」をタップしてツールバーを開き、ポリシーアイコンをタップします。
+1. レイ **[!UICONTROL アウトコンテナ]** ページの「 **[!UICONTROL プロパティ]** 」見出しの下で、「 **[!UICONTROL 許可されているコンポーネント]** 」タブが選択されていることを確認します。
+
+   ![許可されているコンポーネント](/help/assets/assets-dm/allowed-components.png)
+
+1. ダイナミックメディアが表示されるまでスクロ **[!UICONTROL ールし]**&#x200B;ます。
+1. ダイナミックメディア **[!UICONTROL の左にある>アイコンをタップして]** リストを展開し、有効にするダイナミックメディアコンポーネントを選択します。
+
+   ![ダイナミックメディアコンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
+
+1. レイ **[!UICONTROL アウトコンテナ]** ページの右上隅近くにある「完了」（チェックマーク）アイコンをタップします。
+
+1. ツールバーの右側のページの上部付近にあるドロップダウンリストで、「 **[!UICONTROL 初期コンテンツ]**」をタップし、通常どおりにページにダイナミックメディアコンポーネントを [追加します](#adding-a-dynamic-media-component-to-a-page) 。
 
 ## Dynamic Media コンポーネントのローカライズ {#localizing-dynamic-media-components}
 
@@ -82,7 +113,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 >[!NOTE]
 >
->これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディターで使](/help/sites-authoring/templates.md#editing-templates-template-authors)用可能になったコンポーネントは、他のAEMコンポーネントと同様に、ページに追加できます。
+>これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディタ](/help/sites-authoring/templates.md#editing-templates-template-authors)ーで使用可能になったコンポーネントは、他のAEMコンポーネントと同様にページに追加できます。
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
@@ -121,7 +152,7 @@ You *must* edit the following Dynamic Media Settings by tapping the **[!UICONTRO
 >
 >デフォルトでは、Dynamic Media 画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
-* **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、「ビューアプリセットの管理」を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+* **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
    これは、画像セット、スピンセットまたは混在メディアセットを表示している場合に唯一使用できるオプションです。表示されるビューアプリセットもスマートであり、関連するビューアプリセットのみが表示されます。
 
@@ -168,7 +199,7 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 >
 >デフォルトでは、Dynamic Media ビデオコンポーネントはアダプティブです。ビデオコンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
-* **ビューアプリセット** - ドロップダウンメニューから既存のビデオビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、「ビューアプリセットの管理」を参照してください。
+* **ビューアプリセット** - ドロップダウンメニューから既存のビデオビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。
 
 * **ビューア修飾子** - ビューア修飾子は、名前=値の組み合わせで &amp; を区切り文字とした形式です。ビューア修飾子を使用すると、Adobe ビューアリファレンスガイドに概略が記されているとおり、ビューアを変更することができます。`posterimage=img.jpg&caption=text.vtt,1` はビューア修飾子の一例です。
 
@@ -178,7 +209,7 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
    * ビデオにナビゲーションファイルを関連付ける：[https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/r_html5_video_viewer_url_navigation.html](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/r_html5_video_viewer_url_navigation.html)
    コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の詳細設定を編集できます。
 
-* **タイトル** - ビデオのタイトルを変更します。
+* **[!UICONTROL タイトル** - ビデオのタイトルを変更します。
 
 * **[!UICONTROL 幅]** - 画像を固定サイズで表示する場合は、値をピクセル単位で入力します。この値を空にすると、アダプティブなアセットになります。
 
@@ -240,7 +271,7 @@ You must edit the following Dynamic Media Setting by clicking **[!UICONTROL Edit
 
 コンポーネントの「**[!UICONTROL 編集]**」をタップして、次の&#x200B;**[!UICONTROL 一般]**&#x200B;設定を編集できます。
 
-* **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。ビューアプリセットを使用するには、あらかじめ公開する必要があります。詳しくは、「ビューアプリセットの管理」を参照してください。
+* **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。ビューアプリセットを使用するには、あらかじめ公開する必要があります。詳しくは、ビューアプリセットの管理を参照してください。
 
 * **[!UICONTROL タイトル]** - ビデオのタイトルを変更します。
 
@@ -261,7 +292,7 @@ You must edit the following Dynamic Media Setting by clicking **[!UICONTROL Edit
 パノラマメディアコンポーネントは、球パノラマ画像のアセット用です。このような画像では、室内、物件、場所、風景などをあらゆる角度から見ることができます。画像が球パノラマとして適格となるには、以下の一方または両方の条件を満たしている必要があります。
 
 * 縦横比が 2:1 である必要があります。
-* キーワード `equirectangular` または (`spherical` + `panorama`) または (`spherical` + `panoramic`) でタグ付けされている必要があります。[タグの使用](/help/sites-authoring/tags.md)を参照してください。
+* キーワード `equirectangular` または（`spherical` + `panorama`）または（`spherical` + `panoramic`）でタグ付けされている必要があります。[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
 縦横比とキーワードの両方の条件が、アセットの詳細ページと「**[!UICONTROL パノラマメディア]**」WCM コンポーネントのパノラマアセットに適用されます。
 
