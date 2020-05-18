@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 translation-type: tm+mt
-source-git-commit: 7ee76afa11384aedc79b17e823c8dc9594662388
+source-git-commit: 4eb5f1c4aa6631d2570279eb1d4bf17a928e3b9f
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 81%
 
 ---
 
@@ -23,7 +26,7 @@ AEM が構築されている Sling フレームワークの RESTful 特性によ
 
 ## cURL とは {#what-is-curl}
 
-cURL は、URL 操作を実行するために使用される、オープンソールのコマンドラインツールです。HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DICT、TELNET、FILE、IMAP、POP3、SMTP、RTSPなど、様々なインターネットプロトコルをサポートしています。
+cURL は、URL 操作を実行するために使用される、オープンソールのコマンドラインツールです。HTTP、HTTPS、FTP、FTPS、SCP、SFTP、SFTP、TFTP、LDAP、DICT、TELNET、FILE、IMAP、POP3、SMTP、RTSPなど、様々なインターネットプロトコルをサポートしています。
 
 cURL は、URL 構文を使用してデータを取得または送信するための、広く使用される安定したツールで、最初にリリースされたのは 1997 年です。cURL という名前の元々の意味は、「see URL」でした。
 
@@ -60,7 +63,7 @@ cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認�
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. Copy the cURL command to a text editor and remove all headers from the command, which start with `-H` (highligted in blue in the image below) and add the proper authentication parameter such as `-u admin:admin`.
+1. Copy the cURL command to a text editor and remove all headers from the command, which start with `-H` (highligted in blue in the image below) and add the proper authentication parameter such as `-u <user>:<password>`.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -78,22 +81,28 @@ cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認�
 
 ### パッケージ管理 {#package-management}
 
+#### リストすべてのインストール済みパッケージ
+
+```shell
+curl -u <user>:<password> http://<host>:<port>/crx/packmgr/service.jsp?cmd=ls
+```
+
 #### パッケージの作成 {#create-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
 ```
 
 #### パッケージのプレビュー {#preview-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
 ```
 
 #### パッケージコンテンツのリスト表示 {#list-package-content}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
 ```
 
 #### パッケージの作成 {#build-a-package}
@@ -105,43 +114,43 @@ curl -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycont
 #### パッケージを再度含める {#rewrap-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
 ```
 
 #### パッケージの名前を変更 {#rename-a-package}
 
 ```shell
-curl -u admin:admin -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
+curl -u <user>:<password> -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
 ```
 
 #### パッケージのアップロード {#upload-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
+curl -u <user>:<password> -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
 ```
 
 #### パッケージのインストール {#install-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=install http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=install http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### パッケージのアンインストール {#uninstall-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### パッケージの削除 {#delete-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### パッケージのダウンロード {#download-a-package}
 
 ```shell
-curl -u admin:admin http://localhost:4502/etc/packages/my_packages/test.zip
+curl -u <user>:<password> http://localhost:4502/etc/packages/my_packages/test.zip
 ```
 
 ### ユーザー管理 {#user-management}
@@ -149,61 +158,61 @@ curl -u admin:admin http://localhost:4502/etc/packages/my_packages/test.zip
 #### 新しいユーザーの作成 {#create-a-new-user}
 
 ```shell
-curl -u admin:admin -FcreateUser= -FauthorizableId=hashim -Frep:password=hashim http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser= -FauthorizableId=hashim -Frep:password=hashim http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### 新しいグループの作成 {#create-a-new-group}
 
 ```shell
-curl -u admin:admin -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### 既存のユーザーへのプロパティの追加 {#add-a-property-to-an-existing-user}
 
 ```shell
-curl -u admin:admin -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
+curl -u <user>:<password> -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
 ```
 
 #### プロファイルを使用したユーザーの作成 {#create-a-user-with-a-profile}
 
 ```shell
-curl -u admin:admin -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### グループのメンバーとしての新しいユーザーの作成 {#create-a-new-user-as-a-member-of-a-group}
 
 ```shell
-curl -u admin:admin -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### グループへのユーザーの追加 {#add-a-user-to-a-group}
 
 ```shell
-curl -u admin:admin -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
+curl -u <user>:<password> -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
 #### グループからのユーザーの削除 {#remove-a-user-from-a-group}
 
 ```shell
-curl -u admin:admin -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
+curl -u <user>:<password> -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
 #### ユーザーのグループのメンバーシップの設定 {#set-a-user-s-group-membership}
 
 ```shell
-curl -u admin:admin -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
+curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
 ```
 
 #### ユーザーの削除 {#delete-a-user}
 
 ```shell
-curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
 ```
 
 #### グループの削除 {#delete-a-group}
 
 ```shell
-curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
 ```
 
 ### バックアップ {#backup}
@@ -215,13 +224,13 @@ See [Backup and Restore](/help/sites-administering/backup-and-restore.md#automat
 #### バンドルの開始 {#starting-a-bundle}
 
 ```shell
-curl -u admin:admin -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
+curl -u <user>:<password> -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
 ```
 
 #### バンドルの停止 {#stopping-a-bundle}
 
 ```shell
-curl -u admin:admin -Faction=stop http://localhost:4502/system/console/bundles/<bundle-name>
+curl -u <user>:<password> -Faction=stop http://localhost:4502/system/console/bundles/<bundle-name>
 ```
 
 ### Dispatcher {#dispatcher}
@@ -243,32 +252,32 @@ curl -H "CQ-Action: Deactivate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path:
 #### エージェントのステータスの確認 {#check-the-status-of-an-agent}
 
 ```shell
-curl -u admin:admin "http://localhost:4502/etc/replication/agents.author/publish/jcr:conten t.queue.json?agent=publish"
+curl -u <user>:<password> "http://localhost:4502/etc/replication/agents.author/publish/jcr:conten t.queue.json?agent=publish"
 http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on?agent=publish
 ```
 
 #### エージェントの削除 {#delete-an-agent}
 
 ```shell
-curl -X DELETE http://localhost:4502/etc/replication/agents.author/replication99 -u admin:admin
+curl -X DELETE http://localhost:4502/etc/replication/agents.author/replication99 -u <user>:<password>
 ```
 
 #### エージェントの作成 {#create-an-agent}
 
 ```shell
-curl -u admin:admin -F "jcr:primaryType=cq:Page" -F "jcr:content/jcr:title=new-replication" -F "jcr:content/sling:resourceType=/libs/cq/replication/components/agent" -F "jcr:content/template=/libs/cq/replication/templates/agent" -F "jcr:content/transportUri=http://localhost:4503/bin/receive?sling:authRequestLogin=1" -F "jcr:content/transportUser=admin" -F "jcr:content/transportPassword={DES}8aadb625ced91ac483390ebc10640cdf"http://localhost:4502/etc/replication/agents.author/replication99
+curl -u <user>:<password> -F "jcr:primaryType=cq:Page" -F "jcr:content/jcr:title=new-replication" -F "jcr:content/sling:resourceType=/libs/cq/replication/components/agent" -F "jcr:content/template=/libs/cq/replication/templates/agent" -F "jcr:content/transportUri=http://localhost:4503/bin/receive?sling:authRequestLogin=1" -F "jcr:content/transportUser=admin" -F "jcr:content/transportPassword={DES}8aadb625ced91ac483390ebc10640cdf"http://localhost:4502/etc/replication/agents.author/replication99
 ```
 
 #### エージェントの一時停止 {#pause-an-agent}
 
 ```shell
-curl -u admin:admin -F "cmd=pause" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
+curl -u <user>:<password> -F "cmd=pause" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
 ```
 
 #### エージェントキューのクリア {#clear-an-agent-queue}
 
 ```shell
-curl -u admin:admin -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
+curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
 ```
 
 ### Communities {#communities}
@@ -316,37 +325,37 @@ See [Single Sign On](/help/sites-deploying/single-sign-on.md) for details.
 #### ページのアクティベーション {#page-activation}
 
 ```shell
-curl -u admin:admin -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
+curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
 ```
 
 #### ページのアクティベーション解除 {#page-deactivation}
 
 ```shell
-curl -u admin:admin -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
+curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
 ```
 
 #### ツリーのアクティベーション {#tree-activation}
 
 ```shell
-curl -u admin:admin -F cmd=activate -F ignoredeactivated=true -F onlymodified=true -F path=/content/geometrixx http://localhost:4502/etc/replication/treeactivation.html
+curl -u <user>:<password> -F cmd=activate -F ignoredeactivated=true -F onlymodified=true -F path=/content/geometrixx http://localhost:4502/etc/replication/treeactivation.html
 ```
 
 #### ページをロック {#lock-page}
 
 ```shell
-curl -u admin:admin -X POST -F cmd="lockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -X POST -F cmd="lockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 ```
 
 #### ページのロックを解除 {#unlock-page}
 
 ```shell
-curl -u admin:admin -X POST -F cmd="unlockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -X POST -F cmd="unlockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 ```
 
 #### ページをコピー {#copy-page}
 
 ```shell
-curl -u admin:admin -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
 ```
 
 ### ワークフロー {#workflows}
@@ -358,43 +367,43 @@ See [Interacting with Workflows Programmatically](/help/sites-developing/workflo
 #### フォルダーの作成 {#create-a-folder}
 
 ```shell
-curl -u admin:admin -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
+curl -u <user>:<password> -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
 ```
 
 #### ノードの削除 {#delete-a-node}
 
 ```shell
-curl -u admin:admin -F :operation=delete http://localhost:4502/etc/test/test.properties
+curl -u <user>:<password> -F :operation=delete http://localhost:4502/etc/test/test.properties
 ```
 
 #### ノードの移動 {#move-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
+curl -u <user>:<password> -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### ノードのコピー {#copy-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
+curl -u <user>:<password> -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### Sling PostServlet を使用したファイルのアップロード {#upload-files-using-sling-postservlet}
 
 ```shell
-curl -u admin:admin -F"*=@test.properties"  http://localhost:4502/etc/test
+curl -u <user>:<password> -F"*=@test.properties"  http://localhost:4502/etc/test
 ```
 
 #### Sling PostServlet の使用およびノード名の指定によるファイルのアップロード {#upload-files-using-sling-postservlet-and-specifying-node-name}
 
 ```shell
-curl -u admin:admin -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
+curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
 ```
 
 #### コンテンツタイプを指定したファイルのアップロード {#upload-files-specifying-a-content-type}
 
 ```shell
-curl -u admin:admin -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
+curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
 ```
 
 ### アセットの操作 {#asset-manipulation}
