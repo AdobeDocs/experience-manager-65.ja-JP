@@ -3,9 +3,9 @@ title: Assets HTTP API in [!DNL Adobe Experience Manager].
 description: のHTTP APIを使用して、デジタルアセットの作成、読み取り、更新、削除、管理を行います [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 1f41de531d0e1784245c79ab2ace3586fc7dd469
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1568'
 ht-degree: 35%
 
 ---
@@ -69,7 +69,7 @@ Experience Managerでは、アセットに次の要素が含まれます。
 
 For information about elements in Content Fragments see [Content Fragments Support in Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md#content-fragments).
 
-Experience Managerのフォルダーには次のコンポーネントが含まれます。
+In [!DNL Experience Manager] a folder has the following components:
 
 * エンティティ： アセットの子はレンディションです。
 * プロパティ.
@@ -95,9 +95,9 @@ Assets HTTP API には、以下の機能が含まれます。
 
 **前提条件**
 
-1. `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
-1. Navigate to **Adobe Granite CSRF Filter**.
-1. Make sure the property **Filter Methods** includes: POST, PUT, DELETE.
+* `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
+* Navigate to **[!UICONTROL Adobe Granite CSRF Filter]**.
+* プロパティ **[!UICONTROL Filterメソッドに]** 、次の項目が含まれていることを確認します。 `POST`、 `PUT`、 `DELETE`.
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
@@ -181,14 +181,14 @@ Assets HTTP API には、以下の機能が含まれます。
 
 アセット用の新しいアセットレンディションを作成します。 リクエストパラメーター名が指定されない場合、ファイル名がレンディション名として使用されます。
 
-**パラメータ** ：パラメーターは、レンディション `name` の名前とファイル参照 `file` を表します。
+**パラメータ**: パラメーターは、レンディション `name` の名前とファイル参照 `file` を表します。
 
 **リクエスト**
 
 * `POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"`
 * `POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"`
 
-**応答コード**
+**応答コード**: 応答コードは次のとおりです。
 
 * 201 — 作成済み — レンディションが正常に作成された場合。
 * 404 — 見つかりません — 指定したURIでアセットが見つからなかったか、アクセスできなかった場合。
@@ -201,7 +201,7 @@ Assets HTTP API には、以下の機能が含まれます。
 
 **リクエスト**: `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
-**応答コード** ：応答コード
+**応答コード**: 応答コードは次のとおりです。
 
 * 200 - OK — レンディションが正常に更新された場合。
 * 404 — 見つかりません — 指定したURIでアセットが見つからなかったか、アクセスできなかった場合。
