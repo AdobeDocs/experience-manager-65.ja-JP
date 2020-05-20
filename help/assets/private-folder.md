@@ -3,10 +3,10 @@ title: AEMでのプライベートフォルダーの作成と共有
 description: Adobe Experience Manager (AEM) Assets でプライベートフォルダーを作成して、他のユーザーと共有し、様々な特権をユーザーに割り当てる方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 02bd337271f0039b354ada2899198f5654f9e8bf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 71%
+source-wordcount: '508'
+ht-degree: 60%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Manager (AEM) Assets のユーザーインターフェイスに
 > プライベートフォルダーには、所有者の役割を持つメンバが1つ以上あります。
 
 
-1. アセットコンソールのツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックし、メニューの「**[!UICONTROL フォルダー]**」を選択します。
+1. In the Assets console, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Folder]** from the menu.
 
    ![アセットフォルダーの作成](assets/Create-folder.png)
 
@@ -28,11 +28,11 @@ Adobe Experience Manager (AEM) Assets のユーザーインターフェイスに
 
    ![「非公開」チェックボックスを選択して、フォルダーを非公開にします](assets/private-folder.png)
 
-1. 「**[!UICONTROL 作成]**」をタップまたはクリックします。UI 内にプライベートフォルダーが作成されます。
+1. 「**[!UICONTROL 作成]**」をクリックします。UI 内にプライベートフォルダーが作成されます。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. フォルダーを他のユーザーと共有し、特権を割り当てるには、フォルダーを選択し、ツールバーの「**[!UICONTROL プロパティ]**」アイコンをクリックまたはタップします。
+1. To share the folder with other users and the assign privileges to them, select the folder, and click the **[!UICONTROL Properties]** icon from the toolbar.
 
    ![chlimage_1-414](assets/chlimage_1-414.png)
 
@@ -58,11 +58,11 @@ Adobe Experience Manager (AEM) Assets のユーザーインターフェイスに
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 通知アイコンをタップまたはクリックすると、通知のリストが開きます。
+1. 通知アイコンをクリックすると、通知のリストが開きます。
 
    ![通知のリスト](assets/Assets-Notification.png)
 
-1. 管理者によって共有されたプライベートフォルダーのエントリをクリックまたはタップして、フォルダーを開きます。
+1. 管理者が共有するプライベートフォルダーのエントリをクリックして、フォルダーを開きます。
 
 >[!NOTE]
 >
