@@ -1,9 +1,12 @@
 ---
-title: AEM Assetsの個人画像ギャラリーとしてのライトボックス
+title: AEM Assetsの個人用画像ギャラリーとしてのライトボックス
 description: AEM Assetsの個人画像ギャラリーとしてのライトボックスについて説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 66%
 
 ---
 
@@ -17,13 +20,13 @@ Adobe Experience Manager（AEM）Assets のユーザーである場合、Lightbo
 ## Lightbox へのアセットの追加 {#adding-assets-to-lightbox}
 
 1. Assets のユーザーインターフェイスで、Lightbox に追加するアセットを選択します。
-1. Drag the assets to the **[!UICONTROL Drop in Lightbox]** zone. Release when the drop-zone becomes active, and its label changes to **[!UICONTROL Drop to Add]**.
+1. アセットを **[!UICONTROL Lightbox にドロップ]**&#x200B;ゾーンにドラッグします。Release when the drop-zone becomes active, and its label changes to **[!UICONTROL Drop to Add]**.
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 
-1. In the dialog, tap/click **[!UICONTROL Add]**, and then close it to complete the process. 選択したアセットが Lightbox に追加されます。
-1. ライトボックスを表示するには、コレクションコンソールに移動します。
-1. Tap/click **[!UICONTROL Lightbox]** to view the assets in it.
+1. In the dialog, click **[!UICONTROL Add]**, and then close it to complete the process. 選択したアセットが Lightbox に追加されます。
+1. Lightbox を表示するには、コレクションコンソールに移動します。
+1. Click **[!UICONTROL Lightbox]** to view the assets in it.
 
    >[!NOTE]
    >
@@ -31,7 +34,7 @@ Adobe Experience Manager（AEM）Assets のユーザーである場合、Lightbo
 
 ## Remove assets from Lightbox {#removing-assets-from-lightbox}
 
-1. コレクションコンソールに移動し、「Lightbox」をタップまたはクリックしてそのアセットを表示します。
+1. コレクションコンソールに移動し、「ライトボックス」をクリックしてアセットを表示します。
 1. 削除するアセットを選択します。
-1. From the toolbar, tap/click **[!UICONTROL Remove]**.
-1. In the dialog, tap/click **[!UICONTROL Remove]** to confirm the delete action. アセットが Lightbox から削除されます。
+1. From the toolbar, click **[!UICONTROL Remove]**.
+1. In the dialog, click **[!UICONTROL Remove]** to confirm the delete action. アセットが Lightbox から削除されます。
