@@ -3,7 +3,10 @@ title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 53%
 
 ---
 
@@ -20,7 +23,7 @@ Adobe Dynamic Tag Management は、デジタルマーケティングツールを
 
 DTM を使用してアセットインサイトを有効にするには、次の手順を実行します。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL インサイト設定]**&#x200B;に移動します。
+1. Click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
 1. [DTM クラウドサービスを使用して AEM インスタンスを設定します](/help/sites-administering/dtm.md)。
 
    The API token should be available once you log on to [https://dtm.adobe.com](https://dtm.adobe.com/) and visit **[!UICONTROL Account Settings]** from the Profile icon. この手順はアセットインサイトの観点からは必要ありません。AEM Sites とアセットインサイトの統合は現在準備中であるからです。
@@ -28,33 +31,33 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 1. [https://dtm.adobe.com](https://dtm.adobe.com/) にログオンし、必要に応じて会社を選択します。
 1. Web プロパティを作成するか既存の Web プロパティを開きます。
 
-   * Select the **[!UICONTROL Web Properties]** tab, and then tap/click **[!UICONTROL Add Property]**.
+   * Select the **[!UICONTROL Web Properties]** tab, and then click **[!UICONTROL Add Property]**.
 
-   * Update the fields as appropriate, and tap/click **[!UICONTROL Create Property]**. See [documentation](https://helpx.adobe.com/jp/experience-manager/using/dtm.html).
-   ![Webプロパティの編集の作成](assets/Create-edit-web-property.png)
+   * 必要に応じてフィールドを更新し、「プロパティを **[!UICONTROL 作成]**」をクリックします。 See [documentation](https://helpx.adobe.com/jp/experience-manager/using/dtm.html).
+   ![Webプロパティの編集を作成する](assets/Create-edit-web-property.png)
 
-1. In the **[!UICONTROL Rules]** tab, select **[!UICONTROL Page Load Rules]** from the navigation pane and tap/click **[!UICONTROL Create New Rule]**.
+1. In the **[!UICONTROL Rules]** tab, select **[!UICONTROL Page Load Rules]** from the navigation pane and click **[!UICONTROL Create New Rule]**.
 
    ![chlimage_1-58](assets/chlimage_1-194.png)
 
-1. Expand **[!UICONTROL Javascript /Third Party Tags]**. Then tap/click **[!UICONTROL Add New Script]** in the **[!UICONTROL Sequential HTML]** tab to open the Script dialog.
+1. Expand **[!UICONTROL Javascript /Third Party Tags]**. Then click **[!UICONTROL Add New Script]** in the **[!UICONTROL Sequential HTML]** tab to open the Script dialog.
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Tap/click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
-1. Tap/click **[!UICONTROL Insights Page Tracker]**, copy the tracker code, and then paste it in the Script dialog you opened in step 6. 変更内容を保存します。
+1. Click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
+1. Click **[!UICONTROL Insights Page Tracker]**, copy the tracker code, and then paste it in the Script dialog you opened in step 6. 変更内容を保存します。
 
    >[!NOTE]
    >
-   > * `AppMeasurement.js` が削除されました。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
+   > * `AppMeasurement.js` が削除されます。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
    > * The call to `assetAnalytics.dispatcher.init`() is removed. この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
    > * アセットインサイトページトラッカーがホストされる場所（例えば、AEM や CDN など）によっては、スクリプトソースのオリジナルを変更する必要があります。
-   > * AEMがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して発行インスタンスを指定する必要があります。
+   > * AEMがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して発行インスタンスを指す必要があります。
 
 
 1. `https://dtm.adobe.com` にアクセスします。Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。While creating the tool, you can set **[!UICONTROL Configuration Method]** to **[!UICONTROL Automatic]**.
 
-   ![Adobe 追加 Analyticsツール](assets/Add-Adobe-Analytics-Tool.png)
+   ![追加Adobe Analyticsツール](assets/Add-Adobe-Analytics-Tool.png)
 
    必要に応じてステージング／実稼動版レポートスイートを選択します。
 
@@ -62,7 +65,7 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 
    ![chlimage_1-61](assets/chlimage_1-197.png)
 
-1. Expand **[!UICONTROL Customize Page Code]**, and click or tap **[!UICONTROL Open Editor]**.
+1. Expand **[!UICONTROL Customize Page Code]**, and click **[!UICONTROL Open Editor]**.
 
    ![chlimage_1-62](assets/chlimage_1-198.png)
 
