@@ -3,10 +3,10 @@ title: アセットメタデータの一括読み込みおよび書き出し.
 description: デジタルアセットのメタデータの一括読み込みと書き出し。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 42532bfe73c44ad04b67afa973eef526f47588cf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 51%
+source-wordcount: '785'
+ht-degree: 50%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 51%
    | [!UICONTROL ワークフローを開始] | デフォルトでは false です。When set to `true` and default Launcher settings are in effect for the [!UICONTROL DAM Metadata WriteBack] workflow (that writes metadata to the binary XMP data). 「ワークフローを開始」を有効にすると、システムの反応が遅くなります。 |
    | [!UICONTROL アセットパス列名] | アセットが含まれている、CSV ファイルの列名を定義します。 |
 
-1. ツールバーの「**[!UICONTROL 読み込み]**」をタップまたはクリックします。After the metadata is imported, a notification is displayed in [!UICONTROL Notification] inbox.
+1. Click **[!UICONTROL Import]** from the toolbar. After the metadata is imported, a notification is displayed in [!UICONTROL Notification] inbox.
 
 1. 正しい読み込みを確認するには、アセットの [!UICONTROL プロパティ] ページに移動し、フィールドの値を確認します。
 
