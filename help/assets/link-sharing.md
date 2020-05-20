@@ -3,7 +3,10 @@ title: 共有アセットのURLの生成
 description: この記事では、AEM Assets 内のアセット、フォルダーおよびコレクションを URL として外部の関係者と共有する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '1221'
+ht-degree: 63%
 
 ---
 
@@ -14,7 +17,7 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
 
 >[!NOTE]
 >
->リンクとして共有するフォルダまたはアセットに対するACLの編集権限が必要です。
+>リンクとして共有するフォルダーまたはアセットのACLを編集権限が必要です。
 
 ## アセットの共有 {#sharelink}
 
@@ -25,13 +28,13 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
 >リンクをユーザーと共有する前に、Day CQ Mail Service が設定されていることを確認してください。[Day CQ Mail Service を設定](/help/assets/link-sharing.md#configmailservice)せずにリンクの共有を試行すると、エラーが発生します。
 
 1. Assets のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
-1. From the toolbar, click/tap the **[!UICONTROL Share Link]** ![assets_share](assets/assets_share.png).
+1. From the toolbar, click the **[!UICONTROL Share Link]** ![assets_share](assets/assets_share.png).
 
    「**[!UICONTROL リンクを共有]**」フィールドにアセットリンクが自動的に作成されます。このリンクをコピーしてユーザーと共有します。リンクのデフォルトの有効期間は 1 日です。
 
    ![「リンクを共有」と表示されたダイアログ](assets/Link-sharing-dialog-box.png)
 
-   *図：アセットをリンクとして共有するためのダイアログ。*
+   *図： アセットをリンクとして共有するためのダイアログ。*
 
    または、この手順の 3～7 に進んで電子メールの受信者を追加し、リンクの有効期限を設定して、ダイアログから送信することもできます。
 
@@ -49,7 +52,7 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
 
 1. In AEM interface, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-1. **[!UICONTROL Day CQ Link Externalizerの設定を開き]** 、「 **[!UICONTROL Domains]** 」フィールドの次のプロパティを、、、およびに関して言及され `local`た値で変更 `author`しま `publish`す。 For the `local` and `author` properties, provide the URL for the local and the author instance respectively. Both `local` and `author` properties have the same value if you run a single Experience Manager Author instance. For `publish`, provide the URL for the Experience Manager publish instance.
+1. **[!UICONTROL Day CQ Link Externalizerの設定を開き、「]** Domains **[!UICONTROL 」フィールドの次のプロパティを、「]** 、 `local`」、「」、「」に関する値で変更しま `author``publish`す。 For the `local` and `author` properties, provide the URL for the local and the author instance respectively. Both `local` and `author` properties have the same value if you run a single Experience Manager Author instance. For `publish`, provide the URL for the Experience Manager publish instance.
 
 1. **[!UICONTROL リンク共有]**&#x200B;ダイアログの電子メールアドレスボックスに、リンクを共有するユーザーの電子メール ID を入力します。このリンクを複数のユーザーと共有することもできます。
 
@@ -59,7 +62,7 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
 
    ![アセットへのリンクをリンク共有ダイアログから直接共有する](assets/Asset-Sharing-LinkShareDialog.png)
 
-   *図：リンクの共有ダイアログから、アセットへのリ[!UICONTROL ンクを直接]共有します。*
+   *図： リンクの共有ダイアログからアセットへのリンクを直接[!UICONTROL 共有します]。*
 
    >[!NOTE]
    If you enter an email ID of a user that is not a member of your organization, the words [!UICONTROL External User] are prefixed with the email ID of the user.
@@ -78,32 +81,32 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
    デフォルトでは、ユーザーはリンクとして共有されているアセットのレンディションのみをダウンロードできます。
 
 1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールによってユーザーと共有されることを確認するメッセージが表示されます。
-1. 共有アセットを表示するには、ユーザーに送信された電子メールのリンクをクリックまたはタップします。共有アセットが **[!UICONTROL Adobe Marketing Cloud]** ページに表示されます。
+1. 共有アセットを表示するには、ユーザーに送信する電子メール内のリンクをクリックします。 共有アセットが **[!UICONTROL Adobe Marketing Cloud]** ページに表示されます。
 
    ![chlimage_1-260](assets/chlimage_1-545.png)
 
-   レイアウト表示に切り替えるには、リストのレイアウトオプションをクリックまたはタップします。
+   リスト表示に切り替えるには、ツールバーのレイアウトオプションをクリックします。
 
-1. アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。プレビューを閉じて **[!UICONTROL Marketing Cloud]** ページに戻るには、ツールバーの「**[!UICONTROL 戻る]**」をクリックまたはタップします。フォルダーを共有している場合は、「**[!UICONTROL 親フォルダー]**」をクリックまたはタップして親フォルダーに戻ります。
+1. アセットのプレビューを生成するには、共有アセットをクリックします。 To close the preview and return to the **[!UICONTROL Marketing Cloud]** page, click **[!UICONTROL Back]** in the toolbar. If you have shared a folder, click **[!UICONTROL Parent Folder]** to return to the parent folder.
 
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
    >[!NOTE]
    AEM は、これらの MIME タイプ（JPG、PNG、GIF、BMP、INDD、PDF、および PPT）のアセットのプレビューの生成をサポートしています。他の MIME タイプのアセットのみをダウンロードできます。
 
-1. To download the shared asset, tap **[!UICONTROL Select]** from the toolbar, click/tap the asset, and then click/tap **[!UICONTROL Download]** from the toolbar.
+1. To download the shared asset, click **[!UICONTROL Select]** from the toolbar, click the asset, and then click **[!UICONTROL Download]** from the toolbar.
 
    ![chlimage_1-262](assets/chlimage_1-547.png)
 
-1. リンクとして共有したアセットを表示するには、Assets UIに移動し、Experience Managerのロゴをタップします。 リストから「**[!UICONTROL ナビゲーション]**」を選択して、ナビゲーションウィンドウを表示します。
+1. リンクとして共有したアセットを表示するには、Assets UIに移動し、Experience Managerロゴをクリックします。 リストから「**[!UICONTROL ナビゲーション]**」を選択して、ナビゲーションウィンドウを表示します。
 1. ナビゲーションウィンドウで、「**[!UICONTROL 共有リンク]**」を選択して共有アセットのリストを表示します。
-1. アセットの共有を解除するには、対象のアセットを選択し、ツールバーの「**[!UICONTROL 共有しない]**」をタップまたはクリックします。確認メッセージが次に表示されます。 アセットのエントリがアセットから削除されます。リスト
+1. To un-share an asset, select it and click **[!UICONTROL Unshare]** from the toolbar. 確認メッセージが次に表示されます。 アセットのエントリがリストから削除されます。
 
 ## Day CQ 電子メールサービスの設定 {#configmailservice}
 
-1. Experience Managerホームページで、ツール/操作/ **** Webコンソー **[!UICONTROL ルに移]** 動します ****。
+1. Experience Managerホームページで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールに移動します]**。
 1. サービスのリストから、**[!UICONTROL Day CQ Mail Service]** を探します。
-1. Tap **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
+1. Click **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
    * SMTP server host name：電子メールサーバーのホスト名
    * SMTP server port：電子メールサーバーのポート
@@ -111,13 +114,13 @@ Adobe Experience Manager（AEM）Assets では、アセット、フォルダー�
    * SMTP password：電子メールサーバーのパスワード
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
-1. 「**[!UICONTROL 保存]**」をクリックまたはタップします。
+1. 「**[!UICONTROL 保存]**」をクリックします。
 
 ## 最大データサイズの設定 {#maxdatasize}
 
 リンク共有機能を使用して共有されているリンクからアセットをダウンロードすると、AEM は、リポジトリのアセットの階層を圧縮して、ZIP ファイルにしてアセットを返します。ただし、ZIP ファイルとして圧縮できるデータ量に制限がないと、膨大なデータが圧縮の対象となり、JVM のメモリ不足エラーの原因となります。この状況による潜在的な DoS 攻撃からシステムを保護するには、Configuration Manager で Day CQ DAM Adhoc Asset Share Proxy Servlet の「**[!UICONTROL Max Content Size (uncompressed)]**」パラメーターを使用して、最大サイズを設定します。アセットの未圧縮時のサイズが設定値を超えていると、アセットのダウンロード要求は拒否されます。デフォルト値は 100 MB です。
 
-1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL Web コンソール]**&#x200B;に移動します。
+1. Click the AEM logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. From the Web Console, locate the **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** configuration.
 1. 「**[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]**」設定を編集モードで開き、「**[!UICONTROL Max Content Size (uncompressed)]**」パラメーターの値を変更します。
 
