@@ -3,7 +3,7 @@ title: デジタルアセットのダウンロード元 [!DNL Adobe Experience M
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 57%
@@ -19,7 +19,7 @@ ht-degree: 57%
 >
 >電子メールの受信者は、電子メールメッセージに含まれる ZIP ダウンロードリンクにアクセスするためには、`dam-users` グループのメンバーである必要があります。アセットをダウンロードするためには、アセットのダウンロードを起動するワークフローを開始する権限が必要です。
 
-To download assets, navigate to an asset, select the asset, and tap **[!UICONTROL Download]** from the toolbar. 表示されるダイアログで、ダウンロードオプションを指定します。
+To download assets, navigate to an asset, select the asset, and click **[!UICONTROL Download]** from the toolbar. 表示されるダイアログで、ダウンロードオプションを指定します。
 
 画像セット、スピンセット、混在メディアセット、カルーセルセットの各アセットタイプはダウンロードできません。
 
