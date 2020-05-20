@@ -4,10 +4,10 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 94f7f2cde3c87ed4693b9e2004f80fc5f0cd9855
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '9347'
-ht-degree: 69%
+source-wordcount: '9298'
+ht-degree: 64%
 
 ---
 
@@ -61,13 +61,13 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 1. In the [!DNL Assets] user interface, navigate to the location where you want to add digital assets.
 1. アセットをアップロードするには、以下のいずれかの操作をおこないます。
 
-   * ツールバーの「**[!UICONTROL 作成]**」アイコンをタップします。Then on the menu, tap **[!UICONTROL Files]**. 表示されたダイアログで、必要に応じてファイル名を変更できます。
+   * On the toolbar, click the **[!UICONTROL Create]** icon. メニューで[ **[!UICONTROL ファイル]**]をクリックします。 表示されたダイアログで、必要に応じてファイル名を変更できます。
    * In a browser that supports HTML5, drag the assets directly on the [!DNL Assets] user interface. ファイル名を変更するためのダイアログは表示されません。
    ![アセットをアップロードするためのオプションを作成する](assets/create-options.png)
 
    複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPad を使用している場合、一度に選択できるファイルは 1 つだけです。
 
-   サイズの大きなアセット（500 MB 超）のアップロードを一時停止して、同じページから後で再開できます。Tap the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
+   サイズの大きなアセット（500 MB 超）のアップロードを一時停止して、同じページから後で再開できます。Click the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
 
    ![アセットのアップロードプログレスバー](assets/chlimage_1-5.png)
 
@@ -109,7 +109,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    ![重複アセットが検出されましたダイアログ](assets/chlimage_1-8.png)
 
-   To retain the duplicate asset in [!DNL Assets], tap/click **[!UICONTROL Keep]**. アップロードした重複アセットを削除するには、「**[!UICONTROL 削除]**」をタップまたはクリックします。
+   重複アセットを保持するに [!DNL Assets]は、「 **[!UICONTROL 保持]**」をクリックします。 To delete the duplicate asset you uploaded, click **[!UICONTROL Delete]**.
 
    [!DNL Experience Manager Assets] では、ファイル名に禁止文字が含まれるアセットをアップロードできません。If you try to upload an asset with file name containing a disallowed character or more, [!DNL Assets] displays a warning message and stops the upload until you remove these characters or upload with an allowed name.
 
@@ -154,9 +154,9 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 **FTP によりアセットをアップロードするには**
 
 1. 任意の FTP クライアントを使用して、プロビジョニングメールで受け取った FTP ユーザー名とパスワードで FTP サーバーにログインします。FTP クライアントで、ファイルやフォルダーを FTP サーバーにアップロードします。
-1. プロビジョニングメールで受け取った資格情報で [Dynamic Media Classic にログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)します。グローバルナビゲーションバーの「**[!UICONTROL アップロード]**」をタップします。
+1. プロビジョニングメールで受け取った資格情報で [Dynamic Media Classic にログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)します。グローバルナビゲーションバーの「**[!UICONTROL アップロード]**」をクリックします。
 
-1. アップロードページの左上隅付近で「**[!UICONTROL FTP 経由]**」タブをタップします。
+1. アップロードページの左上隅付近で「**[!UICONTROL FTP 経由]**」タブをクリックします。
 1. ページの左側でファイルのアップロード元の FTP フォルダーを選択し、ページの右側でアップロード先のフォルダーを選択します。
 1. ページの右下隅付近で「**[!UICONTROL オプション]**」をクリックし、選択したフォルダー内のアセットに基づいて必要なオプションを設定します。
 
@@ -166,11 +166,11 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
    >
    >When you upload assets via FTP, the upload job options you set in Dynamic Media Classic (S7) take precedent over asset processing parameters set in [!DNL Experience Manager].
 
-1. アップロードオプションを設定ダイアログボックスの右下隅で「**[!UICONTROL 保存]**」をタップします。
-1. アップロードページの右下隅で「**[!UICONTROL アップロードを送信]**」をタップします。
+1. In the lower-right corner of the Upload Job Options dialog box, click **[!UICONTROL Save]**.
+1. アップロードページの右下隅で「**[!UICONTROL アップロードを送信]**」をクリックします。
 
-   アップロードの進行状況を確認するには、グローバルナビゲーションバーの「**[!UICONTROL ジョブ]**」をタップします。ジョブページに、アップロードの進行状況が表示されます。You can continue working in [!DNL Experience Manager] and return to the Jobs page in Dynamic Media Classic at any time to review an in-progress job.
-進行中のアップロードジョブをキャンセルするには、経過時間の横の「**[!UICONTROL キャンセル]**」をタップします。
+   アップロードの進行状況を確認するには、グローバルナビゲーションバーの「**[!UICONTROL ジョブ]**」をクリックします。ジョブページに、アップロードの進行状況が表示されます。You can continue working in [!DNL Experience Manager] and return to the Jobs page in Dynamic Media Classic at any time to review an in-progress job.
+To cancel an upload job in progress, click **[!UICONTROL Cancel]** next to the Duration time.
 
 #### アップロードオプションを設定 {#upload-job-options}
 
@@ -180,7 +180,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 | アップロード後に公開 |  | アップロードしたアセットを自動的に公開します。 |
 | 任意のフォルダーでベース名が同じファイルを上書き |  | アップロードするファイルと同じ名前のファイルが既にある場合にアップロードするファイルで置き換えるには、このオプションを選択します。このオプションの名前は、**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**／**[!UICONTROL アプリケーションへのアップロード]**／**[!UICONTROL 画像を上書き]**&#x200B;での設定に応じて異なる可能性があります。 |
 | アップロード時に Zip または Tar ファイルを解凍 |  |  |
-| オプション |  | Tap/ click **[!UICONTROL Job Options]** to open the [!UICONTROL Upload Job Options] dialog box and choose options that affect the entire upload job. これらのオプションはすべてのファイルタイプで同じです。<br>アプリケーションの全般設定ページから、ファイルのアップロード用のデフォルトオプションを選択できます。このページを開くには、**[!UICONTROL セットアップ]**／**[!UICONTROL アプリケーション設定]**&#x200B;を選択します。Tap the **[!UICONTROL Default Upload Options]** button to open the [!UICONTROL Upload Job Options] dialog box. |
+| オプション |  | Click **[!UICONTROL Job Options]** to open the [!UICONTROL Upload Job Options] dialog box and choose options that affect the entire upload job. これらのオプションはすべてのファイルタイプで同じです。<br>アプリケーションの全般設定ページから、ファイルのアップロード用のデフォルトオプションを選択できます。このページを開くには、**[!UICONTROL セットアップ]**／**[!UICONTROL アプリケーション設定]**&#x200B;を選択します。Click the **[!UICONTROL Default Upload Options]** button to open the [!UICONTROL Upload Job Options] dialog box. |
 |  | 実行時 | 「一時」または「定期」を選択します。定期ジョブを設定するには、繰り返しオプション（毎日、毎週、またはカスタム）を選択し、FTP アップロードジョブを反復する頻度を指定します。次に、必要に応じてスケジューリングオプションを指定します。 |
 |  | サブフォルダーを含める | アップロードしたいフォルダー内のすべてのサブフォルダーをアップロードします。The names of the folder and its subfolders you upload are entered automatically in [!DNL Experience Manager Assets]. |
 |  | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。次に、画像のいずれかの辺または各辺から切り抜くピクセル数を入力します。画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。例えば、画像が 150 ppi で表示されている場合に、「上」、「右」、「下」、「左」テキストボックスに 75 と入力すると、各辺から 0.5 inch ずつ切り抜かれます。<br>画像からホワイトスペースを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」フィールドに画像の各辺から切り抜くピクセル数を入力します。また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**色** - 「色」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色を最も表現している色の画像の角を選択します。</li><li>****&#x200B;透明度 - 「透明度」オプションを選択します。<br> **許容値** — スライダをドラッグして、許容値を0 ～ 1の範囲で指定します。色に基づいてトリミングする場合は、0に設定すると、画像の隅で選択した色と正確に一致するピクセルのみが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。1 に近いほど、不透明さに対する許容度が高くなります。</li></ul><br>これらの切り抜きツールオプションは、非破壊です（何度でも修正できます）。 |
@@ -329,13 +329,13 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 アセットをプレビューするには、次の手順に従います。
 
 1. From the [!DNL Assets] user interface, navigate to the location of the asset you want to preview.
-1. 目的のアセットをタップして開きます。
+1. 目的のアセットをクリックして開きます。
 
 1. プレビューモードでは、[サポートされている画像タイプ](/help/assets/assets-formats.md#supported-raster-image-formats)で（インタラクティブ編集中に）ズームオプションを使用できます。
 
-   アセットにズームインするには、`+` をタップまたはクリック（またはアセット上の虫眼鏡アイコンをタップまたはクリック）します。ズームアウトするには、`-` をタップまたはクリックします。ズームインすると、パンニングによって画像の任意の場所を詳細に確認できます。「ズームをリセット」矢印をクリックすると、元の表示に戻ります。
+   To zoom into an asset, click `+` (or click the magnifying glass on the asset). To zoom out, click `-`. ズームインすると、パンニングによって画像の任意の場所を詳細に確認できます。「ズームをリセット」矢印をクリックすると、元の表示に戻ります。
 
-   **[!UICONTROL リセット]**&#x200B;をタップすると、表示を元のサイズに戻すことができます。
+   Click **[!UICONTROL Reset]** to reset the view to the original size.
 
    ![リセットアイコンを使用して元の表示に戻す](assets/chlimage_1-11.png)
 
@@ -366,7 +366,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. メタデータを編集するアセットの場所に移動します。
 
-1. アセットを選択し、ツールバーの「**[!UICONTROL プロパティ]**」をタップまたはクリックして、アセットのプロパティを表示します。または、アセットカードで&#x200B;**[!UICONTROL プロパティ]**&#x200B;クイックアクションを選択します。
+1. Select the asset, and click **[!UICONTROL Properties]** from the toolbar to view asset properties. または、アセットカードで&#x200B;**[!UICONTROL プロパティ]**&#x200B;クイックアクションを選択します。
 
    ![アセットカード表示のプロパティクイックアクション](assets/properties_quickaction.png)
 
@@ -394,13 +394,13 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    >
    >To create tags, you need write permission at `/content/cq:tags/default` in the CRX repository.
 
-1. アセットに評価を指定するには、「**[!UICONTROL 詳細]**」タブをタップまたはクリックし、適切な位置の星をタップまたはクリックして、目的の評価を割り当てます。
+1. To provide a rating to the asset, click the **[!UICONTROL Advanced]** tab and then click the star at the appropriate position to assign the desired rating.
 
    ![評価を割り当てるアセットのプロパティの「詳細」タブ](assets/ratings.png)
 
    アセットに割り当てた評価スコアは、「**[!UICONTROL あなたの評価]**」の下に表示されます。ユーザーによるアセットの評価の平均スコアは、「**[!UICONTROL 評価]**」の下に表示されます。さらに、平均評価スコアの評価スコアの内訳は、「**[!UICONTROL 評価分類]**」の下に表示されます。平均評価スコアに基づいてアセットを検索できます。
 
-1. アセットの使用状況の統計を確認するには、「**[!UICONTROL インサイト]**」タブをタップまたはクリックします。
+1. To view usage usage statistics for the asset, click the **[!UICONTROL Insights]** tab.
 
    使用状況の統計には、次の情報が含まれています。
 
@@ -424,7 +424,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 その他のプロパティとメタデータ情報は保持されます。アセットをコピーするときに、部分的なコピーが作成されることはありません。
 
-1. In [!DNL Assets] interface, select one or more assets and tap/click the **[!UICONTROL Copy]** icon from the toolbar. または、アセットカードから&#x200B;**[!UICONTROL コピー]**   クイックアクションを選択します。
+1. In [!DNL Assets] interface, select one or more assets and click the **[!UICONTROL Copy]** icon from the toolbar. または、アセットカードから&#x200B;**[!UICONTROL コピー]**   クイックアクションを選択します。
    ![アセットUIツールバーのコピーアイコン](assets/copy_icon.png)
 
    >[!NOTE]
@@ -437,7 +437,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    >
    >If you copy an asset at the same location, [!DNL Experience Manager] automatically generates a variation of the name. For example, if you copy an asset titled `Square`, [!DNL Experience Manager] automatically generates the title for its copy as `Square1`.
 
-1. Click/ tap the **[!UICONTROL Paste]** asset icon from the toolbar.
+1. ツールバーの&#x200B;**[!UICONTROL 貼り付け]**&#x200B;アセットアイコンをクリックします。
 
    ![アセットUIツールバーにアイコンを貼り付け](assets/chlimage_1-14.png)
    [!DNL Assets] がこの場所にコピーされます。
@@ -450,14 +450,14 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. 移動するアセットの場所に移動します。
 
-1. アセットを選択し、ツールバーの&#x200B;**[!UICONTROL 移動]**アイコン   をタップまたはクリックします。
+1. Select the asset, and click the **[!UICONTROL Move]** icon from the toolbar.
    ![アセットUIツールバーの移動アイコン](assets/move_icon.png)
 
 1. In the [!UICONTROL Move Assets] wizard, do one of the following:
 
-   * 移動後のアセットの名前を指定します。その後、「**[!UICONTROL 次へ]**」をタップまたはクリックして先に進みます。
+   * 移動後のアセットの名前を指定します。Then click **[!UICONTROL Next]** to proceed.
 
-   * 「**[!UICONTROL キャンセル]**」をタップまたはクリックして、プロセスを停止します。
+   * Click **[!UICONTROL Cancel]** to stop the process.
    >[!NOTE]
    >
    >* 新しい場所に同じ名前のアセットがない場合は、同じ名前を指定できます。ただし、アセットの移動先に同じ名前のアセットが既に存在する場合は、別の名前を使用する必要があります。同じ名前を使用すると、その名前のバリエーションが自動的に生成されます。例えば、「Square」という名前のアセットの場合、自動的にそのコピーの名前が「Square1」として生成されます。
@@ -466,31 +466,31 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. **[!UICONTROL 宛先を選択]**&#x200B;ダイアログで、次のいずれかの操作をおこないます。
 
-   * アセットの移動先に移動し、「**[!UICONTROL 次へ]**」をタップまたはクリックして次に進みます。
+   * Navigate to the new location for the assets, and then click **[!UICONTROL Next]** to proceed.
 
-   * 「**[!UICONTROL 戻る]**」をタップまたはクリックして、**[!UICONTROL 名前を変更]**&#x200B;画面に戻ります。
+   * Click **[!UICONTROL Back]** to return to the **[!UICONTROL Rename]** screen.
 
 1. 移動されるアセットに参照ページ、アセット、コレクションがある場合は、「**[!UICONTROL 宛先を選択]**」タブの横に「**[!UICONTROL 参照を調整]**」タブが表示されます。
 
    **[!UICONTROL 参照を調整]**&#x200B;画面で次のいずれかの操作を実行します。
 
-   * 新しい情報に基づいて調整する参照を指定し、「**[!UICONTROL 移動]**」をタップまたはクリックして次に進みます。
+   * Specify the references to be adjusted based on the new details, and then click **[!UICONTROL Move]** to proceed.
 
    * 「**[!UICONTROL 調整]**」列で、アセットへの参照を選択／選択解除します。
-   * 「**[!UICONTROL 戻る]**」をタップまたはクリックして、**[!UICONTROL 宛先を選択]**&#x200B;画面に戻ります。
+   * Click **[!UICONTROL Back]** to return to the **[!UICONTROL Select Destination]** screen.
 
-   * 「**[!UICONTROL キャンセル]**」をタップまたはクリックして、移動操作を停止します。
+   * Click **[!UICONTROL Cancel]** to stop the move operation.
    参照を更新しなければ、引き続きアセットの以前のパスが示されます。参照を調整すると、更新され、アセットの新しいパスが反映されます。
 
 ## レンディションの管理 {#managing-renditions}
 
 1. アセットのレンディション（オリジナルを除く）を追加または削除できます。レンディションを追加または削除するアセットの場所に移動します。
 
-1. アセットをタップまたはクリックして、そのアセットページを開きます。
+1. アセットをクリックして、アセットページを開きます。
 
    ![レンディションを管理するアセットの詳細ページ](assets/chlimage_1-15.png)
 
-1. グローバルナビゲーションアイコンをタップまたはクリックし、リストから「**[!UICONTROL レンディション]**」を選択します。
+1. Click the GlobalNav icon, and select **[!UICONTROL Renditions]** from the list.
 
    ![左側のパネルでメニューを開き、「レンディション」オプションを選択](assets/renditions_menu.png)
 
@@ -506,13 +506,13 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    **レンディションの削除**
 
-   **[!UICONTROL レンディション]**&#x200B;パネルからレンディションを選択し、ツールバーの「**[!UICONTROL レンディションを削除]**」アイコンをタップまたはクリックします。アセット処理の完了後、レンディションを一括で削除することはできません。 個々のアセットについて、レンディションをユーザインターフェイスから手動で削除できます。 複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** icon from the toolbar. アセット処理の完了後、レンディションを一括で削除することはできません。 個々のアセットについて、レンディションをユーザインターフェイスから手動で削除できます。 複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
 
    ![レンディションを削除するオプション](assets/delete_renditionicon.png)
 
    **新しいレンディションのアップロード**
 
-   アセットの詳細ページに移動し、ツールバーの「**[!UICONTROL レンディションを追加]**」アイコンをタップまたはクリックして、アセットの新しいレンディションをアップロードします。
+   Navigate to the asset details page for the asset, and click the **[!UICONTROL Add Rendition]** icon in the toolbar to upload a new rendition for the asset.
 
    ![新しいレンディションを追加アップロードするレンディションアイコン](assets/chlimage_1-16.png)
 
@@ -544,7 +544,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. 削除するアセットの場所に移動します。
 
-1. アセットを選択し、ツールバーの「**[!UICONTROL 削除]**」アイコンをタップまたはクリックします。
+1. Select the asset, and click the **[!UICONTROL Delete]** icon from the toolbar.
 
    ![削除アイコン](assets/delete_icon.png)
 
@@ -575,14 +575,14 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. 発行するアセットまたはフォルダーの場所に移動します。
 
-1. アセットカードで&#x200B;**[!UICONTROL 公開]**&#x200B;クイックアクションを選択するか、アセットを選択し、ツールバーの「**[!UICONTROL クイック公開]**」アイコンをタップまたはクリックします。
+1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** icon from the toolbar.
 1. アセットが他のアセットを参照する場合は、その参照がウィザードに表示されます。表示されるのは、非公開の参照か、最後に公開または非公開にされた後に変更された参照だけです。公開する参照を選択します。
 
    >[!NOTE]
    >
    >公開したフォルダーの一部である空のフォルダーは、公開されません。
 
-1. 「**[!UICONTROL 公開]**」をタップまたはクリックして、アセットのアクティベートを確認します。
+1. Click **[!UICONTROL Publish]** to confirm the activation for the assets.
 
 >[!CAUTION]
 >
@@ -592,7 +592,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. パブリッシュ環境から削除する（非公開にする）アセットまたはアセットフォルダーの場所に移動します。
 
-1. 非公開にするアセットまたはフォルダーを選択し、ツールバーの「**[!UICONTROL 公開を管理]**」アイコンをタップまたはクリックします。
+1. Select the asset/folder to unpublish, and click the **[!UICONTROL Manage Publication]** icon from the toolbar.
 
    ![パブリケーションの管理アイコン](assets/manage_publication.png)
 
@@ -602,8 +602,8 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. 後でアセットを非公開にするには、「**[!UICONTROL 後で非公開にする]**」を選択して、アセットを非公開にする日付を選択します。
 1. パブリッシュ環境でアセットを非公開にする日付をスケジュールします。
-1. アセットが他のアセットを参照する場合は、非公開にする参照を選択します。「**[!UICONTROL 非公開]**」をタップまたはクリックします。
-1. 確認ダイアログで、次のいずれかをタップまたはクリックします。
+1. アセットが他のアセットを参照する場合は、非公開にする参照を選択します。Click **[!UICONTROL Unpublish]**.
+1. 確認ダイアログで、次のいずれかをクリックします。
 
    * **[!UICONTROL キャンセル]**：アクションを停止します。
    * **[!UICONTROL 非公開]**：指定された日付にアセットを非公開にします（パブリッシュ環境では使用できません）。
@@ -617,7 +617,7 @@ A closed user group (CUG) is used to limit access to specific asset folders publ
 
 CUG は、アセットへのアクセスを制限する追加の方法です。また、フォルダーのログインページを設定することもできます。
 
-1. Select a folder from the [!DNL Assets] interface, and tap/click the [!UICONTROL Properties] icon from the toolbar to display the properties page.
+1. Select a folder from the [!DNL Assets] interface, and click the [!UICONTROL Properties] icon from the toolbar to display the properties page.
 1. 「**[!UICONTROL 権限]**」タブで、「**[!UICONTROL 閉じられたユーザーグループ]**」の下でメンバーまたはグループを追加します。
 
    ![閉じ追加たユーザーグループのユーザー](assets/add_user.png)
@@ -674,12 +674,12 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 1. 編集モードでアセットを開くには、次のいずれかの操作をおこないます。
 
-   * アセットを選択し、ツールバーの「**[!UICONTROL 編集]**」アイコンをクリックまたはタップします。
-   * カード表示で、アセットに表示される「**[!UICONTROL 編集]**」アイコンをタップまたはクリックします。
-   * アセットページで、ツールバーの「**[!UICONTROL 編集]**」アイコンをタップまたはクリックします。
+   * Select the asset and then click the **[!UICONTROL Edit]** icon in the toolbar.
+   * Click the **[!UICONTROL Edit]** icon that appears on an asset in the Card view.
+   * In the asset page, click the **[!UICONTROL Edit]** icon in the toolbar.
    ![ツールバーの編集アイコン](assets/edit_icon.png)
 
-1. 画像を切り抜くには、**切り抜き**&#x200B;アイコンをタップまたはクリックします。
+1. To crop the image, click the **Crop** icon.
 
    ![切り抜きアイコン](assets/chlimage_1-22.png)
 
@@ -696,15 +696,15 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
    ![元に戻す/やり直しアイコン](assets/chlimage_1-25.png)
 
-1. 適切な回転アイコンをタップまたはクリックして、画像を時計回りまたは反時計回りに回転します。
+1. 適切な回転アイコンをクリックして、画像を時計回りまたは反時計回りに回転します。
 
    ![右回りおよび左回りに回転するアイコン](assets/chlimage_1-26.png)
 
-1. 適切な反転アイコンをタップまたはクリックして、画像を水平方向または垂直方向に反転します。
+1. 適切な反転アイコンをクリックして、画像を水平方向または垂直方向に反転します。
 
    ![画像を水平方向または垂直方向に反転するアイコン](assets/chlimage_1-27.png)
 
-1. **完了**&#x200B;アイコンをタップまたはクリックして変更を保存します。
+1. Click the **Finish** icon to save the changes.
 
    ![完了アイコン](assets/chlimage_1-28.png)
 
@@ -745,7 +745,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 >コンテンツフラグメントの場合、[注釈はフラグメントエディターで作成されます](/help/assets/content-fragments-variations.md#annotating-a-content-fragment)。
 
 1. 注釈を追加するアセットの場所に移動します。
-1. 以下のいずれかから&#x200B;**[!UICONTROL 注釈]**&#x200B;アイコンをタップまたはクリックします。
+1. Click the **[!UICONTROL Annotate]** icon from one of the following:
 
    * [クイックアクション](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * アセットを選択した後またはアセットページに移動した後に、ツールバーから
@@ -771,18 +771,18 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
    >
    >複数の注釈を追加してから、それらを保存できます。
 
-1. 「**[!UICONTROL 閉じる]**」をタップまたはクリックして注釈モードを終了します。
+1. 「**[!UICONTROL 閉じる]**」をクリックして注釈モードを終了します。
 1. To view the notification, log in to [!DNL Assets] with Aaron MacDonald&#39;s credentials and click the **[!UICONTROL Notifications]** icon to view the notification.
 
    >[!NOTE]
    >
    >注釈はビデオアセットにも追加できます。ビデオに注釈を追加する際は、ユーザーがフレームに注釈を追加できるようにプレーヤーが一時停止します。詳しくは、[ビデオアセットの管理](/help/assets/managing-video-assets.md)を参照してください。
 
-1. 別の色を選択してユーザーを区別できるようにするには、プロファイルアイコンをクリックまたはタップし、「**[!UICONTROL 環境設定]**」をクリックまたはタップします。
+1. To choose a different color so you can differentiate between users, click the Profile icon and click **[!UICONTROL My Preferences]**.
 
    ![「ユーザープロファイル」アイコンを選択し、「環境設定」を選択して、「ユーザー環境設定」を開きます](assets/User-profile-preferences.png)
 
-   **[!UICONTROL 注釈カラー]**&#x200B;ボックスに必要な色を指定し、**[!UICONTROL 確定]**&#x200B;をクリックまたはタップします。
+   Specify the desired color in the **[!UICONTROL Annotation Color]** box and then click **[!UICONTROL Accept]**.
 
    ![ユーザ環境設定で注釈の色を選択し、ユーザパーソナの色を設定します](assets/Annotation-color.png)
 
@@ -794,7 +794,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 1. アセットに対して保存された注釈を表示するには、アセットの場所に移動して、そのアセットのアセットページを開きます。
 
-1. グローバルナビゲーションアイコンをタップまたはクリックし、リストから「**[!UICONTROL タイムライン]**」を選択します。
+1. Click the GlobalNav icon, and choose **[!UICONTROL Timeline]** from the list.
 
    ![GlobalNavアイコンで使用できるオプション](assets/chlimage_1-35.png)
 
@@ -802,11 +802,11 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
    ![タイムラインにすべてのリストを表示](assets/chlimage_1-36.png)
 
-   **[!UICONTROL タイムライン]**&#x200B;パネルでコメントをタップまたはクリックし、対応する画像の注釈を表示します。
+   **[!UICONTROL タイムライン]**&#x200B;パネルでコメントをクリックし、対応する画像の注釈を表示します。
 
    ![画像上の表示注釈に対するタイムラインパネル](assets/chlimage_1-37.png)
 
-   特定のコメントを削除するには、「**[!UICONTROL 削除]**」をタップまたはクリックします。
+   特定のコメントを削除するには、「**[!UICONTROL 削除]**」をクリックします。
 
 ### 注釈の印刷 {#printing-annotations}
 
@@ -814,7 +814,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 注釈またはレビューステータスのみ印刷することも選択できます。
 
-注釈とレビューステータスを印刷するには、**[!UICONTROL 印刷]**&#x200B;アイコンをタップまたはクリックし、ウィザードの指示に従ってください。**[!UICONTROL 印刷]**&#x200B;アイコンは、アセットに注釈またはレビューステータスが少なくとも 1 つ割り当てられている場合にのみ、ツールバーに表示されます。
+To print the annotations and review status, click the **[!UICONTROL Print]** icon and follow the instructions in the wizard. **[!UICONTROL 印刷]**&#x200B;アイコンは、アセットに注釈またはレビューステータスが少なくとも 1 つ割り当てられている場合にのみ、ツールバーに表示されます。
 
 1. From the [!DNL Assets] interface, open the preview page for an asset.
 1. 次のいずれかの操作をおこないます。
@@ -830,7 +830,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
    ![注釈のレビュー・ステータスのみを印刷するには、タイムラインから選択します](assets/chlimage_1-39.png)
 
-1. ツールバーの&#x200B;**[!UICONTROL 印刷]**&#x200B;アイコンをタップまたはクリックします。
+1. Click the **[!UICONTROL Print]** icon from the toolbar.
 
    ![ツールバーの印刷アイコン](assets/chlimage_1-40.png)
 
@@ -844,7 +844,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
    >
    >長い注釈は PDF ファイルに適切にレンダリングされない可能性があります。最適なレンダリングのために、注釈を 50 語以内に制限することをお勧めします。
 
-1. 「**[!UICONTROL 印刷]**」をタップまたはクリックします。手順 2 で選択したオプションに応じて、生成される PDF の特定の位置に注釈／ステータスが表示されます。例えば、注釈とレビューステータスの両方を「**左上**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
+1. 「 **[!UICONTROL 印刷]**」をクリックします。 手順 2 で選択したオプションに応じて、生成される PDF の特定の位置に注釈／ステータスが表示されます。例えば、注釈とレビューステータスの両方を「**左上**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
 
    ![生成されたPDFの注釈とレビューのステータス](assets/chlimage_1-42.png)
 
