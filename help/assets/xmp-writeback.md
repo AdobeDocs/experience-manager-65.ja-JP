@@ -3,14 +3,17 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '771'
+ht-degree: 63%
 
 ---
 
 
 # レンディションへの XMP の書き戻し {#xmp-writeback-to-renditions}
 
-のXMP書き戻し機能は、アセットのメ [!DNL Adobe Experience Manager Assets] タデータの変更をアセットのレンディションに複製します。 When you change the metadata for an asset from within [!DNL Experience Manager Assets] or while uploading the asset, changes are initially stored within the asset node in CRXDe. XMPの書き戻し機能は、メタデータの変更をアセットのすべてのレンディションまたは特定のレンディションに反映します。
+のXMP書き戻し機能は、アセットのメタデータの変更をアセットのレンディションに [!DNL Adobe Experience Manager Assets] 複製します。 When you change the metadata for an asset from within [!DNL Experience Manager Assets] or while uploading the asset, changes are initially stored within the asset node in CRXDe. XMPの書き戻し機能は、アセットのすべてのレンディションまたは特定のレンディションにメタデータの変更を反映します。
 
 「`Classic Leather`」というタイトルのアセットの「[!UICONTROL タイトル]」プロパティを「`Nylon`」に変更するシナリオについて考えます。
 
@@ -30,7 +33,7 @@ XMPの書き戻し機能を使用すると、メタデータの変更をアセ�
 
 1. Configuration Manager を開くには、`https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 1. 「**[!UICONTROL Adobe CQ DAM Rendition Maker]**」設定を開きます。
-1. 「**[!UICONTROL Propagate XMP[!UICONTROL **」オプションを選択し、変更を保存します。
+1. **[!UICONTROL Propagate XMP[!UICONTROL **]オプションを選択し、変更を保存します。
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
@@ -40,11 +43,11 @@ To let the XMP Writeback feature propagate metadata changes to select renditions
 
 XMP の書き戻し機能でメタデータをレンディションサムネール 140.100.png および 319.319.png に反映するには、次の手順を実行します。
 
-1. Experience Managerインターフェイスで、ツール/ワークフ **[!UICONTROL ロー]** /モ **[!UICONTROL デルに移]** 動し **[!UICONTROL ます]**。
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルに移動します]**。
 1. モデルページで、「**[!UICONTROL DAM メタデータの書き戻し]**」ワークフローモデルを開きます。
 1. **[!UICONTROL DAM メタデータの書き戻し]**&#x200B;ページで、「**[!UICONTROL XMP の書き戻しプロセス]**」ステップを開きます。
 1. In the [!UICONTROL Step Properties] dialog box, click the **[!UICONTROL Process]** tab.
-1. In the **Arguments** box, add `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`, andd then tap/click **OK**.
+1. In the **Arguments** box, add `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`, andd then click **OK**.
 
    ![step_properties](assets/step_properties.png)
 
@@ -67,13 +70,13 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 
 [!DNL Experience Manager Assets] は、アセットの取得時にアセットバイナリから読み取られて JCR に保存される XMP メタデータのプロパティ／ノードのブラックリストフィルターとホワイトリストフィルターの両方をサポートしています。
 
-ブラックリストフィルターは、除外するよう指定されたプロパティを除く、すべての XMP メタデータプロパティを読み込みます。ただし、膨大な量の XMP メタデータ（例えば、10,000 個のプロパティを持つ 1,000 個のノード）を含む INDD ファイルなどのアセットタイプの場合、フィルタリングするノードの名前が必ずしも事前にわかるわけではありません。ブラックリストのフィルタリングで大量のXMPメタデータを含む多数のアセットを読み込める場合、Experience Managerのデプロイメントでは、ログに記録された監視キューなどの安定性の問題が発生する可能性があります。
+ブラックリストフィルターは、除外するよう指定されたプロパティを除く、すべての XMP メタデータプロパティを読み込みます。ただし、膨大な量の XMP メタデータ（例えば、10,000 個のプロパティを持つ 1,000 個のノード）を含む INDD ファイルなどのアセットタイプの場合、フィルタリングするノードの名前が必ずしも事前にわかるわけではありません。ブラックリストのフィルタリングで多数のXMPメタデータを持つアセットを読み込める場合、Experience Managerのデプロイメントでは、ログに記録された監視キューなどの安定性の問題が発生する可能性があります。
 
 この問題は、XMP メタデータのホワイトリストフィルターで解決できます。このフィルターは、読み込む XMP プロパティを定義するので、そこに定義されていない XMP プロパティや不明な XMP プロパティは無視されます。これらのプロパティをいくつかブラックリストフィルターに追加することで、後方互換性を確保できます。
 
 >[!NOTE]
 >
->フィルタリングは、アセットバイナリの XMP ソースから派生したプロパティに対してのみ機能します。EXIF 形式や IPTC 形式などの XMP 以外のソースから派生したプロパティについては、フィルタリングは機能しません。例えば、アセットの作成日は、`CreateDate` という名前のプロパティに EXIF TIFF 形式で格納されています。この値は、Experience Managerによって、という名前のメタデータフィールドに保存されま `exif:DateTimeOriginal`す。 この場合は XMP 以外のソースなので、このプロパティにはフィルタリングは機能しません。
+>フィルタリングは、アセットバイナリの XMP ソースから派生したプロパティに対してのみ機能します。EXIF 形式や IPTC 形式などの XMP 以外のソースから派生したプロパティについては、フィルタリングは機能しません。例えば、アセットの作成日は、`CreateDate` という名前のプロパティに EXIF TIFF 形式で格納されています。この値は、Experience Managerによって、という名前のメタデータフィールドに保存され `exif:DateTimeOriginal`ます。 この場合は XMP 以外のソースなので、このプロパティにはフィルタリングは機能しません。
 
 1. Configuration Manager を開くには、`https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 1. 「**[!UICONTROL Adobe CQ DAM XmpFilter]**」設定を開きます。
