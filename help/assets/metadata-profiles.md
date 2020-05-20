@@ -3,7 +3,10 @@ title: アセットのメタデータ要件をカスタマイズするメタデ�
 description: アセットのメタデータプロファイルについて理解します。また、メタデータプロファイルを作成し、フォルダーのアセットに適用する方法も学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '1410'
+ht-degree: 62%
 
 ---
 
@@ -14,8 +17,8 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ## メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
-1. **[!UICONTROL ツール/アセット/メタデータプロファイル]** に移動し、「 **[!UICONTROL 作成]**」をタップします。
-1. Enter a title for the Metadata Profile, for example Sample Metadata, and tap **[!UICONTROL Create]**. The [!UICONTROL Edit Form] for the metadata profile is displayed.
+1. **[!UICONTROL ツール/アセット/メタデータプロファイル]** に移動し、「 **[!UICONTROL 作成]**」をクリックします。
+1. Enter a title for the Metadata Profile, for example Sample Metadata, and click **[!UICONTROL Create]**. The [!UICONTROL Edit Form] for the metadata profile is displayed.
 
    ![chlimage_1-197](assets/chlimage_1-480.png)
 
@@ -42,7 +45,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 1. （オプション）「**[!UICONTROL フォームを作成]**」タブから、「フォームを編集」にコンポーネントを追加し、「**[!UICONTROL 設定]**」タブでプロパティを設定します。次のプロパティが「**[!UICONTROL フォームを作成]**」タブで使用できます。
 
 | コンポーネント | プロパティ |
-|---|---|
+| ----------------------------- | ----------------------------------------------------------------------- |
 | [!UICONTROL セクションヘッダー] | Field Label, <br> Description |
 | [!UICONTROL 1 行のテキスト] | Field Label, <br> Map to property, <br> Default Value |
 | [!UICONTROL 複数値テキスト] | Field Label, <br> Map to property, <br> Default Value |
@@ -52,7 +55,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ![chlimage_1-201](assets/chlimage_1-484.png)
 
-1. 「**[!UICONTROL 完了]**」をタップまたはクリックします。メタデータプロファイルが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに追加されます。<br>
+1. 「**[!UICONTROL 完了]**」をクリックします。メタデータプロファイルが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに追加されます。<br>
 
    ![メタデータプロファイルページに追加されたメタデータプロファイル](assets/MetadataProfiles-page.png)
 
@@ -62,9 +65,9 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
    ![chlimage_1-203](assets/chlimage_1-486.png)
 
-1. ツールバーの「**[!UICONTROL コピー]**」をタップします。
+1. Click **[!UICONTROL Copy]** from the toolbar.
 1. **[!UICONTROL メタデータプロファイルをコピー]**&#x200B;ダイアログで、メタデータプロファイルの新しいコピーのタイトルを入力します。
-1. 「**[!UICONTROL コピー]**」をタップします。メタデータプロファイルのコピーが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに表示されます。
+1. 「**[!UICONTROL コピー]**」をクリックします。メタデータプロファイルのコピーが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに表示されます。
 
    ![メタデータプロファイルページに追加されたメタデータプロファイルのコピー](assets/copy-metadata-profile.png)
 
@@ -103,19 +106,19 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 メタデータプロファイルを適用する手順は、次のとおりです。
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;に移動します。
+1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
 
-1. 「**[!UICONTROL メタデータプロファイルをフォルダーに適用]**」をタップし、新たにアップロードしたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 完了]**」をタップします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
+1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
 #### 「プロパティ」からのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-properties}
 
-1. 左側のレールで、「**[!UICONTROL アセット]**」をタップし、メタデータプロファイルを適用するフォルダーに移動します。
-1. チェックマークをタップまたはクリックして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップまたはクリックします。
+1. In the left rail, click **[!UICONTROL Assets]** then navigate to the folder that you want to apply a metadata profile to.
+1. On the folder, click the check mark to select it and then click **[!UICONTROL Properties]**.
 
-1. Select the **[!UICONTROL Metadata Profiles]** tab and select the profile from the drop-down menu and tap **[!UICONTROL Save]**.
+1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューからプロファイルを選択して、「**[!UICONTROL 保存]**」をクリックします。
 
    ![chlimage_1-208](assets/chlimage_1-491.png)
 
@@ -129,7 +132,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 メタデータプロファイルをグローバルに適用するには、次の手順に従います。
 
-* `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` に移動して適切なプロファイル適用し、「**[!UICONTROL 保存]**」をタップします。
+* Navigate to `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` and apply the appropriate profile and click **[!UICONTROL Save]**.
 
    ![chlimage_1-209](assets/chlimage_1-492.png)
 
@@ -145,16 +148,16 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ### Remove metadata profiles from folders via Profiles user interface {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;の順に移動します。
+1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. 1 つまたは複数のフォルダーから削除するメタデータプロファイルを選択します。
-1. 「**[!UICONTROL フォルダーからメタデータプロファイルを削除]**」をタップし、プロファイルを削除する 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 完了]**」をタップします。
+1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
    名前がフォルダー名の下に表示されなくなっていることで、メタデータプロファイルがフォルダーに適用されていないことを確認できます。
 
 ### Remove metadata profiles from folders via Properties {#removing-metadata-profiles-from-folders-via-properties}
 
-1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、メタデータプロファイルを削除するフォルダーに移動します。
-1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
+1. Click the AEM logo and navigate **[!UICONTROL Assets]** and then to the folder that you want to remove an metadata profile from.
+1. On the folder, click the check mark to select it and then click **[!UICONTROL Properties]**.
 1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択して、「**[!UICONTROL 保存]**」をクリックします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
 ## 制限事項とベストプラクティス {#limitations-best-practices-tips}
