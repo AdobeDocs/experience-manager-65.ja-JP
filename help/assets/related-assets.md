@@ -1,9 +1,12 @@
 ---
 title: 関連アセット
-description: 共通の属性を共有するデジタルアセットを関連付ける方法を説明します。 また、デジタルアセット間のソースから派生する関係を作成します。
+description: 共通の属性を共有するデジタルアセットを関連付ける方法について説明します。 また、デジタルアセット間にソースから派生した関係を作成することもできます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '640'
+ht-degree: 50%
 
 ---
 
@@ -12,18 +15,18 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 [!DNL Adobe Experience Manager Assets] 関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。 例えば、ライセンスファイルを、類似のトピックのアセットまたは画像／ビデオに関連付けることができます。特定の共通属性を共有するアセットを関連付けることができます。この機能を使用して、アセット間にソース／派生関係を作成することもできます。例えば、INDD ファイルから生成した PDF ファイルがある場合、その PDF ファイルをソースの INDD ファイルに関連付けることができます。
 
-この機能を使用すると、ベンダーや代理店と低解像度のPDFファイルやJPGファイルを共有し、高解像度のINDDファイルを要求された場合にのみ利用できるように柔軟に調整できます。
+この機能を使用すると、ベンダーや代理店と低解像度のPDFファイルまたはJPGファイルを共有し、高解像度のINDDファイルを要求された場合にのみ利用できるように柔軟に指定できます。
 
->[!NOTE] アセットの関連付けと関連付け解除を行えるのは、アセットの編集権限を持つユーザーだけです。
+>[!NOTE] アセットの関連付けと関連付け解除を行えるのは、アセットに対する編集権限を持つユーザーだけです。
 >
 
 ## アセットの関連付け {#relating-assets}
 
 1. From the Experience Manager interface, open the **[!UICONTROL Properties]** page for an asset that you want to relate.
 
-   ![アセットのプロパティページを開き、アセットを関連付けます。](assets/asset-properties-relate-assets.png)
+   ![アセットのプロパティページを開き、アセットを関連付けます](assets/asset-properties-relate-assets.png)
 
-   *図：アセッ[!DNL Assets]トを関連付けるプロパティページ。*
+   *図：[!DNL Assets][!UICONTROL アセットを関連付けるプロパティ]ページ。*
 
    または、リスト表示からアセットを選択します。
 
@@ -33,7 +36,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. 選択したアセットに別のアセットを関連付けるには、ツールバーの「**[!UICONTROL 関連付け]**」アイコンをクリックまたはタップします。
+1. To relate another asset with the asset you selected, click the **[!UICONTROL Relate]** icon from the toolbar.
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -48,20 +51,20 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. 「**[!UICONTROL 確認]**」アイコンをクリックまたはタップします。
-1. 「**[!UICONTROL OK]**」をクリックまたはタップして、ダイアログを閉じます。手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
+1. Click the **[!UICONTROL Confirm]** icon.
+1. Click **[!UICONTROL OK]** to close the dialog. 手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. To un-relate an asset, click/tap **[!UICONTROL Unrelate]** from the toolbar.
+1. アセットの関連付けを解除するには、ツールバーの「 **[!UICONTROL 関連付け解除]** 」をクリックします。
 
    ![chlimage_1-279](assets/chlimage_1-279.png)
 
-1. Select the asset(s) you want to un-relate from the **[!UICONTROL Remove Relations]** dialog, and the click/tap **[!UICONTROL Unrelate]**.
+1. Select the asset(s) you want to un-relate from the **[!UICONTROL Remove Relations]** dialog, and the click **[!UICONTROL Unrelate]**.
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
-1. 「**[!UICONTROL OK]**」をクリックまたはタップして、ダイアログを閉じます。関係を削除したアセットは、「**[!UICONTROL 関連]**」セクションの関連付けられたアセットのリストから削除されます。
+1. Click **[!UICONTROL OK]** to close the dialog. 関係を削除したアセットは、「**[!UICONTROL 関連]**」セクションの関連付けられたアセットのリストから削除されます。
 
 ## 関連アセットの翻訳 {#translating-related-assets}
 
@@ -71,9 +74,9 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 If the source file is related to another asset, [!DNL Experience Manager Assets] fetches the referenced asset and includes it for translation.
 
-![アセットのプロパティページに、変換に含める関連アセットのソースファイルが表示されます。](assets/asset-properties-source-asset.png)
+![アセットのプロパティページには、変換に含める関連アセットのソースファイルが表示されます](assets/asset-properties-source-asset.png)
 
-*図：翻訳に含める関連アセットのソースアセット。*
+*図： 翻訳に含める関連アセットのソースアセット。*
 
 1. [新しい翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project)の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。例えば、この場合はアセットをフランス語に翻訳します。
 
@@ -81,22 +84,22 @@ If the source file is related to another asset, [!DNL Experience Manager Assets]
 
    ![chlimage_1-283](assets/chlimage_1-283.png)
 
-1. プロジェクトタイルをクリックまたはタップして詳細ページを開きます。
+1. プロジェクトタイルをクリックして詳細ページを開きます。
 
    ![chlimage_1-284](assets/chlimage_1-284.png)
 
-1. 「翻訳ジョブ」カードの下にある省略記号をクリックまたはタップして、翻訳ステータスを表示します。
+1. 翻訳ジョブカードの下の三点リーダーをクリックして、翻訳ステータスを表示します。
 
    ![chlimage_1-285](assets/chlimage_1-285.png)
 
-1. アセットを選択し、ツールバーの「**[!UICONTROL アセットで表示]**」をクリックまたはタップして、アセットの翻訳ステータスを表示します。
+1. Select the asset and then click **[!UICONTROL Reveal in Assets]** from the toolbar to view the translation status for the asset.
 
    ![chlimage_1-286](assets/chlimage_1-286.png)
 
-1. ソースに関連付けられているアセットが翻訳されているかどうかを確認するには、ソースアセットをクリックまたはタップします。
+1. ソースに関連するアセットが翻訳済みかどうかを確認するには、ソースアセットをクリックします。
 
    ![chlimage_1-287](assets/chlimage_1-287.png)
 
-1. ソースに関連付けられているアセットを選択し、「**[!UICONTROL アセットで表示]**」をクリックまたはタップします。翻訳された関連アセットが表示されます。
+1. Select the asset that is related to the source, and then click **[!UICONTROL Reveal in Assets]**. 翻訳された関連アセットが表示されます。
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
