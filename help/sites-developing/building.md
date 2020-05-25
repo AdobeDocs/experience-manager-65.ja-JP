@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 1493b301ecf4c25f785495e11ead352de600ddb7
+workflow-type: tm+mt
+source-wordcount: '893'
+ht-degree: 41%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 * [タグ付け API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/package-summary.html)
 
-」と「
+が
 
 * [タグフレームワーク](/help/sites-developing/framework.md)
 
@@ -65,13 +68,13 @@ Tag tag = tagManager.resolve("my/tag"); // for existing tags
 Tag tag = tagManager.createTag("my/tag"); // for new tags
 ```
 
-For the JCR-based implementation, which maps `Tags` onto JCR `Nodes`, you can directly use Sling&#39;s `adaptTo` mechanism if you have the resource (e.g. such as `/etc/tags/default/my/tag`):
+For the JCR-based implementation, which maps `Tags` onto JCR `Nodes`, you can directly use Sling&#39;s `adaptTo` mechanism if you have the resource (e.g. such as `/content/cq:tags/default/my/tag`):
 
 ```java
 Tag tag = resource.adaptTo(Tag.class);
 ```
 
-タグは*aリソース（ノードではない）からのみ変換できるが、タグは*aノードとリソースの両方に変換できる。
+タグは*aリソース（ノードではない）からしか変換できませんが、タグは*aノードとリソースの両方*に変換できます。
 
 ```java
 Node node = tag.adaptTo(Node.class);
@@ -131,9 +134,9 @@ replicator.replicate(session, replicationActionType, tagPath);
 
 ## タグのガベージコレクター {#the-tag-garbage-collector}
 
-タグガベージコレクターは、非表示で未使用のタグをクリーンアップするバックグラウンドサービスです。 非表示および未使用のタグは、プロパティを `/etc/tags` 持つ下のタグで、 `cq:movedTo` コンテンツノードでは使用されません。数はゼロです。 この遅延削除プロセスを使用すると、移動操作やマージ操作の一部としてコンテンツノード( `cq:tags` プロパティなど)を更新する必要はありません。 ページプロパティダイ `cq:tags` アログなどでプロパティが更新さ `cq:tags` れると、プロパティ内の参照が自動的に更新されます。
+タグガベージコレクターは、非表示で未使用のタグをクリーンアップするバックグラウンドサービスです。 非表示および未使用のタグは、 `/content/cq:tags``cq:movedTo` プロパティを持つ下のタグで、コンテンツノードでは使用されません。数は0です。 この遅延削除プロセスを使用すると、移動または結合操作の一環としてコンテンツノード( `cq:tags` プロパティ)を更新する必要がありません。 ページプロパティダイアログなどで `cq:tags` プロパティが更新されると、 `cq:tags` プロパティ内の参照が自動的に更新されます。
 
-タグガベージコレクタは、デフォルトで1日に1回実行されます。 これは次の場所で設定できます。
+タグガベージコレクターは、デフォルトで1日に1回実行されます。 これは、次の場所で設定できます。
 
 ```xml
 http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbageCollector
@@ -149,7 +152,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 ## 他の言語のタグ {#tags-in-different-languages}
 
-As described in the documentation for administering tags, in the section [Managing Tags in Different Languages](/help/sites-administering/tags.md#managing-tags-in-different-languages), a tag `title`can be defined in different languages. 次に、言語に依存するプロパティがタグノードに追加されます。 このプロパティは、例 `jcr:title.<locale>`えばフランス語翻訳 `jcr:title.fr` の場合の形式です。 `<locale>` は、小文字のISOロケール文字列で、「 — 」の代わりに「_」を使用する必要があります。例： `de_ch`.
+As described in the documentation for administering tags, in the section [Managing Tags in Different Languages](/help/sites-administering/tags.md#managing-tags-in-different-languages), a tag `title`can be defined in different languages. 次に、言語に依存するプロパティがタグノードに追加されます。 このプロパティは、例えばフランス語 `jcr:title.<locale>`の翻訳の場合 `jcr:title.fr` などの形式を持ちます。 `<locale>` は、小文字のISOロケール文字列である必要があり、「 — 」の代わりに「_」を使用します。例： `de_ch`.
 
 When the **Animals** tag is added to the **Products** page, the value `stockphotography:animals` is added to the property `cq:tags` of the node /content/geometrixx/en/products/jcr:content. 翻訳は、タグノードから参照されます。
 
@@ -171,11 +174,11 @@ When the **Animals** tag is added to the **Products** page, the value `stockphot
 
 AEM では、言語はページ言語またはユーザー言語のどちらかから取得できます。
 
-* jspでページ言語を取得するには：
+* JSPでページ言語を取得するには：
 
    * `currentPage.getLanguage(false)`
 
-* jspでユーザー言語を取得するには：
+* JSPでユーザー言語を取得するには：
 
    * `slingRequest.getLocale()`
 
@@ -185,13 +188,13 @@ AEM では、言語はページ言語またはユーザー言語のどちらか�
 
 ### タグを編集ダイアログへの新しい言語の追加 {#adding-a-new-language-to-the-edit-tag-dialog}
 
-次の手順では、タグ編集ダイアログに新しい言語（フィンランド語）を追加する方法 **を説明します** 。
+次の手順では、 **タグ編集** ダイアログに新しい言語（フィンランド語）を追加する方法を説明します。
 
-1. CRXDEで **は**、ノードの複数値プロパティ `languages` を編集します `/etc/tags`。
+1. CRXDE **で**、ノードの複数値プロパティ `languages` を編集し `/content/cq:tags`ます。
 
-1. フィン `fi_fi` ランド語のロケールを表す — を追加し、変更を保存します。
+1. フィ追加ンランド語のロケールを表す — 変更を保存します。 `fi_fi`
 
-新しい言語（フィンランド語）が、タグ管理コンソールでタグを編集する際に、ページプロパティのタグダイアログと **タグの編集** ダイアログで使用できるようにな **りました** 。
+新しい言語（フィンランド語）が、ページプロパティのタグダイアログと、 **タグ付け** コンソールでタグを編集する際のタグの **** 編集ダイアログで使用できるようになりました。
 
 >[!NOTE]
 >
