@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Managing User Guide
+user-guide-title: AEM 6.5ユーザーガイドの管理
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: cb7df7301364eb1ce3a1ca376256d2cd5afcb2c8
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 79%
 
 ---
 
@@ -23,6 +26,6 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [SEO と URL 管理のベストプラクティス](seo-and-url-management.md)
 + アクセシビリティ {#accessibility}
    + [AEM と Web アクセシビリティのガイドライン](web-accessibility.md)
-   + [WCAG 2.0 クイックガイド](qg-wcag.md)
+   + [WCAG 2.1 クイックガイド](qg-wcag.md)
 + データ保護 {#data-protection}
-   + [AEM Readiness for Data Protection and Data Privacy Regulations](data-protection-and-privacy.md)
+   + [データ保護およびデータプライバシーに関する規制に対する AEM の対応](data-protection-and-privacy.md)
