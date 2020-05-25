@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13e34a6df8a513a1654bc5277539b924c809ab8a
+source-git-commit: 49874dc723c3659550d891e786ddc178b30834ec
 workflow-type: tm+mt
-source-wordcount: '2349'
+source-wordcount: '2350'
 ht-degree: 91%
 
 ---
@@ -280,7 +280,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * ページを **貼り付け** アイコン自体を選択します。 元のページと子ページのコピーがこの場所に作成されます。
    * ドロップダウン矢印を選択すると、「子なしで **貼り付け** 」オプションが表示されます。 元のページのコピーがこの場所に作成されます。 子ページはコピーされません。
    >[!NOTE]
-   「 **子なしで** 貼り付け [」オプションは、](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)AEM 6.5 Service Pack 5で使用できます。
+   「 **子なしで** 貼り付け [」オプションは、](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) AEM 6.5 Service Pack 5以降で使用できます。
 
    >[!NOTE]
    ページのコピー先に同名のページが既に存在する場合は、その名前のバリエーションが数字を付加して自動的に生成されます。例えば、`winter` が既に存在する場合、`winter` は `winter1` になります。
