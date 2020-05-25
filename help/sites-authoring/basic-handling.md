@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 69e9b7499c1babcf7a6da62b8728bba7f127b4f9
+source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+workflow-type: tm+mt
+source-wordcount: '3010'
+ht-degree: 92%
 
 ---
 
@@ -29,11 +32,11 @@ source-git-commit: 69e9b7499c1babcf7a6da62b8728bba7f127b4f9
 
 
 
-## はじめに{#getting-started}
+## 概要 {#getting-started}
 
 ### タッチ対応 UI {#a-touch-enabled-ui}
 
-AEM のユーザーインターフェイスは、タッチ操作に対応しています。タッチ対応インターフェイスを使用すると、タップ、長押し、スワイプなどのタッチジェスチャを使用して、ソフトウェアを操作できます。この操作は、従来のデスクトップインターフェイスでクリック、ダブルクリック、右クリックおよびマウスオーバーなどのマウスアクションを使用して操作するのとは大きく異なります。
+AEM のユーザーインターフェイスは、タッチ操作に対応しています。タッチ対応インターフェイスを使用すると、タップ、長押し、スワイプなどのタッチジェスチャーを使用して、ソフトウェアを操作できます。この操作は、従来のデスクトップインターフェイスでクリック、ダブルクリック、右クリックおよびマウスオーバーなどのマウスアクションを使用して操作するのとは大きく異なります。
 
 AEM UI はタッチ対応なので、タッチデバイス（モバイルやタブレットなど）上のタッチジェスチャと、従来のデスクトップデバイス上のマウスアクションを使用できます。
 
@@ -55,15 +58,15 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 ![bh-02](assets/bh-02.png)
 
-「**次へ**」をクリックまたはタップして、概要の次のページに進みます。Click or tap **Close** or click or tap outside of the overview dialog to close.
+「**次へ**」をクリックまたはタップして、概要の次のページに進みます。「**閉じる**」をクリックまたはタップするか、概要ダイアログの外側をクリックまたはタップして閉じます。
 
 すべてのスライドを表示するか「**次回から表示しない**」オプションをオンにする場合を除き、概要は、次回コンソールにアクセスすると再び開始します。
 
 ## グローバルナビゲーション {#global-navigation}
 
-グローバルナビゲーションパネルを使用してコンソール間を移動できます。これは、画面の左上にある Adobe Experience Manager リンクをクリックまたはタップすると、フルスクリーンのドロップダウンとしてトリガーされます。
+グローバルナビゲーションパネルを使用してコンソール間を移動できます。これは、画面の左上にある Adobe Experience Manager リンクをクリックまたはタップすると、全画面表示のドロップダウンとしてトリガーされます。
 
-You can close the global navigation panel by clicking or tapping **Close** to return to your previous location.
+「**閉じる**」をクリックまたはタップすると、グローバルナビゲーションパネルが閉じて、前の場所に戻ることができます。
 
 ![bh-03](assets/bh-03.png)
 
@@ -73,27 +76,33 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
 グローバルナビゲーションには、2 つのパネルがあり、画面の左余白にアイコンで表示されます。
 
-* **[ナビゲーション](/help/sites-authoring/basic-handling.md#navigation-panel)**- コンパスで表される
+* **[ナビゲーション](/help/sites-authoring/basic-handling.md#navigation-panel)**- コンパスと、
 * **[ツール](/help/sites-authoring/basic-handling.md#tools-panel)**- ハンマーで表される
 
 次に、これらのパネルで使用できるオプションについて説明します。
 
 ### ナビゲーションパネル {#navigation-panel}
 
-ナビゲーションパネル：
+ナビゲーションパネルからAEMコンソールにアクセスできます。
 
 ![bh-01](assets/bh-01.png)
 
-ナビゲーションから利用可能なコンソールは次のとおりです。
+コンソールやコンテンツ間を移動すると、ブラウザータブのタイトルが更新され、場所が反映されます。
+
+>[!NOTE]
+>
+>タブのタイトルは、 [AEM 6.5 Service Pack 5](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 以降の場所を反映しています。
+
+ナビゲーションでは、次のコンソールを使用できます。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>console</strong></td>
+   <td><strong>コンソール</strong></td>
    <td><strong>目的</strong></td>
   </tr>
   <tr>
-   <td>アセット<br /> </td>
+   <td>Assets<br /> </td>
    <td>これらのコンソールでは、画像、ビデオ、ドキュメント、オーディオファイルなどのデジタルアセットを読み込んで、それらの<a href="/help/assets/home.md">デジタルアセットを管理</a>できます。これにより、これらのアセットは、同じ AEM インスタンス上で実行されているすべての Web サイトで使用できます。 </td>
   </tr>
   <tr>
@@ -113,7 +122,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
    <td>このコンソールを使用すると、<a href="/help/forms/home.md">フォームとドキュメント</a>を作成、管理、処理できます。</td>
   </tr>
   <tr>
-   <td>パーソナライゼーション</td>
+   <td>パーソナライズ機能</td>
    <td>このコンソールには、<a href="/help/sites-authoring/personalization.md">ターゲットとなるコンテンツをオーサリングして、パーソナライズされたエクスペリエンスを提供するためのツールのフレームワーク</a>が用意されています。</td>
   </tr>
   <tr>
@@ -122,7 +131,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
   </tr>
   <tr>
    <td>スクリーン</td>
-   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">スクリーン</a>では、あらゆる場所、あらゆるサイズの対顧客画面をすべて管理できます。</td>
+   <td><a href="https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">スクリーン</a>では、あらゆる場所、あらゆるサイズの対顧客画面をすべて管理できます。</td>
   </tr>
   <tr>
    <td>サイト</td>
@@ -145,7 +154,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
 * [グローバルナビゲーション](#navigatingconsolesandtools)
 
-   Select the **Adobe Experience Manager** link to navigate between consoles.
+   コンソール間を移動するには、**Adobe Experience Manager** リンクを選択します。
 
    ![screen_shot_2018-03-23at103615](assets/screen_shot_2018-03-23at103615.png)
 
@@ -153,9 +162,9 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    ![](do-not-localize/screen_shot_2018-03-23at103542.png)
 
-   You can also use the [shortcut key](/help/sites-authoring/keyboard-shortcuts.md) `/` (forward slash) to invoke search from any console.
+   [ショートカットキー](/help/sites-authoring/keyboard-shortcuts.md) `/`（スラッシュ）を使用して、任意のコンソールから検索を呼び出すこともできます。
 
-* [ソリューション](https://www.adobe.com/experience-cloud.html)
+* [ソリューション](https://www.adobe.com/jp/experience-cloud.html)
 
    ![](do-not-localize/screen_shot_2018-03-23at103552.png)
 
@@ -177,7 +186,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    ![](do-not-localize/screen_shot_2018-03-23at103603.png)
 
-* [レールセレクター](/help/sites-authoring/basic-handling.md#rail-selector)
+* [パネルセレクター](/help/sites-authoring/basic-handling.md#rail-selector)
 
    ![](do-not-localize/screen_shot_2018-03-23at103943.png)
 
@@ -189,7 +198,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    ![bh-05](assets/bh-05.png)
 
-   レールの中央に位置し、常に現在選択している項目の説明を表示するパンくずリストを使用すると、特定のコンソール内を移動できます。サイトコンソールでは、Webサイトのレベル間を移動できます。
+   パネルの中央に位置し、常に現在選択している項目の説明を表示するパンくずリストを使用すると、特定のコンソール内を移動できます。サイトコンソールでは、Web サイトのレベル間を移動できます。
 
    パンくずリストのテキストをクリックするだけで、現在選択している項目の階層のレベルをリストするドロップダウンが表示されます。エントリをクリックすると、その場所にジャンプします。
 
@@ -201,7 +210,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    これは、リスト表示でのみ使用できます。See [list view](#list-view) for more information.
 
-* **作成ボタン**
+* 「**作成**」ボタン
 
    ![screen_shot_2018-03-23at104301](assets/screen_shot_2018-03-23at104301.png)
 
@@ -216,6 +225,18 @@ You can close the global navigation panel by clicking or tapping **Close** to re
    列表示、カード表示、リスト表示を切り替えることができます。リスト表示では、表示設定も表示されます。
 
    ![bh-09](assets/bh-09.png)
+
+* キーボードナビゲーション
+
+   Webサイト内を移動するには、キーボードのみを使用します。 これは、 **Tabキー(または** Opt + Tab **)の標準的なブラウザ機能を使用して、フォーカス可能なページ上の要素間を移動し**&#x200B;ます **。
+
+   **サイトコンソールには** 、「メインコンテンツに **スキップ**」オプションが追加されています。 これは、ヘッダーオプションを *タブで移動すると表示され* 、（製品）ツールバーの標準要素をスキップしてメインコンテンツに直接移動できるので、ナビゲーションの速度が速くなります。
+
+   ![bh-30](assets/bh-30.png)
+
+   >[!NOTE]
+   >
+   >「 **メインコンテンツに** スキップ [」は、](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) AEM 6.5 Service Pack 5以降で利用できます。
 
 ## ヘルプへのアクセス {#accessing-help}
 
@@ -250,7 +271,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
    * **開発者向けリソース**&#x200B;開発者向けリソースおよびダウンロードです。
    >[!NOTE]
    >
-   >コンソールでは、ホットキー（疑問符）を使用して、いつでも使用でき `?` るショートカットキーの概要にアクセスできます。
+   >コンソールでは、ホットキー `?`（疑問符）を使用して、いつでもショートカットキーの概要を確認できます。
    >
    >すべてのキーボードショートカットの概要については、次のドキュメントを参照してください。
    >
@@ -262,13 +283,13 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
 リソース（ページやアセットなど）を選択するたびに、様々なアクションがアイコンで示され、ツールバーに説明テキストが表示されます。これらのアクションは、次によって決まります。
 
-* 現在のコンソール
-* 現在のコンテキスト
+* 現在のコンソール.
+* 現在のコンテキスト.
 * [選択モード](#navigatingandselectionmode)であるかどうか
 
 ツールバーで使用できるアクションは、選択した特定の項目に対して取ることのできるアクションを反映して変化します。
 
-How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) depends on the view.
+[リソースを選択する](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)方法は、表示によって異なります。
 
 一部のウィンドウではスペースが制限されるので、使用可能なスペースよりもツールバーのほうが長くなることがよくあります。この場合は、追加のオプションが表示されます。省略記号（三点リーダーまたは「**...**」）をクリックまたはタップすると、その他のすべてのアクションを含むドロップダウンセレクターが開きます。例えば、**サイト**&#x200B;コンソールでページを選択すると、次のように表示されます。
 
@@ -329,13 +350,13 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
    <td>カード表示<br /> </td>
    <td>
     <ul>
-     <li><br /> デスクトップ：マウスオーバーして、チェックマーククイックアクションを使用します</li>
+     <li>Desktop:<br /> Mouseover, then use the checkmark quick action</li>
      <li>モバイルデバイス：<br />カードをタップ＆ホールドする</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> デスクトップ：カードをクリックします</li>
-     <li><br /> モバイルデバイス：カードをタップします</li>
+     <li>Desktop:<br /> Click the card</li>
+     <li>Mobile device:<br /> Tap the card</li>
     </ul> </td>
   </tr>
   <tr>
@@ -386,7 +407,7 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
 
 1. リソースを選択すると、上部のヘッダーの上に[アクションツールバー](#actionstoolbar)が重なって表示され、選択したリソースで現在適用可能なアクションにアクセスできます。
 
-   To exit selection mode select the **X** to the top-right, or use **escape**.
+   選択モードを終了するには、右上の「**X**」を選択するか、**Esc** キーを使用します。
 
 ### 列表示 {#column-view}
 
@@ -428,10 +449,10 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
 
 * カード表示では、現在のレベルの各項目の情報カードを表示します。次のような情報が提供されます。
 
-   * ページの内容を視覚的に表現したもの。
-   * ページタイトル。
+   * ページの内容を視覚的に表現したもの.
+   * ページのタイトル.
    * 重要な日付（最終編集日、最終公開日など）。
-   * ページがロックされているかどうか、非表示になっているかどうか、またはライブコピーの一部であるかどうか。
+   * ページがロックされているかどうか、非表示になっているかどうか、またはライブコピーの一部であるかどうか.
    * 適切な場合、ワークフローの一部としてアクションを実行する必要があるタイミング。
 
       * 必要なアクションを示すマーカーは、[インボックス](/help/sites-authoring/inbox.md)のエントリに関連している場合があります。
@@ -475,13 +496,13 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
    * **ページ滞在時間**
    ![bh-21](assets/bh-21.png)
 
-   By default the **Name** column is shown, which makes up part of the URL for the page. 場合によっては、作成者は、異なる言語のページにアクセスする必要があることがあり、ページの名前（通常は変更なし）を確認することは、作成者がページの言語を知らない場合に非常に役立ちます。
+   デフォルトでは、ページの URL の一部を構成する「**名前**」列が表示されます。場合によっては、作成者は、異なる言語のページにアクセスする必要があることがあり、ページの名前（通常は変更なし）を確認することは、作成者がページの言語を知らない場合に非常に役立ちます。
 
 * リストの各項目の右端にある縦の点線マークを使用して項目の順序を変更します。
 
    >[!NOTE]
    >
-   >Changing the order works only within an ordered folder that has `jcr:primaryType` value as `sling:OrderedFolder`.
+   >順序を変更できるのは、`jcr:primaryType` 値が `sling:OrderedFolder` である順序付きフォルダーの内部のみです。
 
    ![bh-22](assets/bh-22.png)
 
@@ -495,19 +516,19 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
 
    ![bh-24](assets/bh-24.png)
 
-## レールセレクター {#rail-selector}
+## パネルセレクター {#rail-selector}
 
-The **Rail Selector** is available at the top-left of the window and displays options depending on your current consoles.
+**パネルセレクター**&#x200B;は、ウィンドウの左上にあり、現在のコンソールに応じてオプションを表示します。
 
 ![bh-25](assets/bh-25.png)
 
 例えば、サイトでは、コンテンツのみ（デフォルト）、コンテンツツリー、タイムライン、参照またはフィルターのサイドパネルを選択できます。
 
-コンテンツのみが選択されている場合は、レールアイコンのみが表示されます。他のオプションが選択されている場合は、レールアイコンの隣にオプション名が表示されます。
+コンテンツのみが選択されている場合は、パネルアイコンのみが表示されます。他のオプションが選択されている場合は、パネルアイコンの隣にオプション名が表示されます。
 
 >[!NOTE]
 >
->[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)を使用してレール表示オプションをすばやく切り替えることができます。
+>[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)を使用してパネル表示オプションをすばやく切り替えることができます。
 
 ### コンテンツツリー {#content-tree}
 
@@ -525,7 +546,7 @@ The **Rail Selector** is available at the top-left of the window and displays op
 
 ### タイムライン {#timeline}
 
-タイムラインを使用して、選択したリソースで発生したイベントを表示または開始することができます。「タイムライン」列を開くには、レールセレクターを使用します。
+タイムラインを使用して、選択したリソースで発生したイベントを表示または開始することができます。「タイムライン」列を開くには、パネルセレクターを使用します。
 
 「タイムライン」列では、次の操作を実行できます。
 
@@ -544,14 +565,14 @@ The **Rail Selector** is available at the top-left of the window and displays op
       * すべて表示
 
 
-* 選択した項目に関する[コメントを追加または表示](#timelineaddingandviewingcomments)します。イベントのリストの下部に「**コメント**」ボックスが表示されます。コメントを入力して Return キーを押すと、コメントが登録されます。コメントは「**コメント**」または「**すべて表示**」を選択すると表示されます。
+* [選択した項目に関するコメントを追加または表示します。](#timelineaddingandviewingcomments)イベントのリストの下部に「**コメント**」ボックスが表示されます。コメントを入力して Enter キーを押すと、コメントが登録されます。コメントは「**コメント**」または「**すべて表示**」を選択すると表示されます。
 
 * 特定のコンソールには追加機能が用意されています。例えば、サイトコンソールでは次のアクションを実行できます。
 
-   * [バージョンを保存](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)
-   * [ワークフローを開始](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail)
+   * [バージョンの保存](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)。
+   * [ワークフローを開始](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail).
 
-These options accessible via the chevron next to the **Comment** field.
+これらのオプションには、「**コメント**」フィールドの横にある山形記号からアクセスできます。
 
 ![bh-27](assets/bh-27.png)
 
