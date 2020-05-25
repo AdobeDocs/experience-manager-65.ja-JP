@@ -4,7 +4,10 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5オーサリングユーザーガイド
 translation-type: tm+mt
-source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
+source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 89%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
 # AEM 6.5 Authoring User Guide {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEMオーサリングに必要なタスク、ツールおよび概念 {#essentials}
++ AEMオーサリングに不可欠なタスク、ツール、概念 {#essentials}
    + [作成者が行う最初の手順](first-steps.md)
    + [ページオーサリング](page-authoring.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
@@ -48,7 +51,7 @@ source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
    + [コンポーネントコンソール](default-components-console.md)
    + [レスポンシブレイアウト](responsive-layout.md)
    + [コンテンツインサイト](content-insights.md)
-   + [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成 ](creating-accessible-content.md)
+   + [アクセス可能なコンテンツ（WCAG 2.1 適合）の作成 ](creating-accessible-content.md)
    + [基礎モード](scaffolding.md)
    + [デザインモードでのコンポーネントの設定](default-components-designmode.md)
    + [基盤コンポーネント](default-components-foundation.md)
