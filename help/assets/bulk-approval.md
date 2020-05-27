@@ -3,7 +3,10 @@ title: フォルダーのアセットとコレクションのレビュー
 description: フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '790'
+ht-degree: 63%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
-Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレクション内のアセットに対してアドホックレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
+Adobe Experience Manager Assetsを使用すると、フォルダーまたはコレクション内のアセットに対して臨時のレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有して、フィードバックを求めることができます。
 
 レビューワークフローをプロジェクトと関連付けることも、独立したレビュータスクを作成することもできます。
 
@@ -48,7 +51,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![review_name](assets/review_name.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として AEM Assets にログインし、Assets UI に移動します。To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
+1. 承認者として Assets にログインし、Assets UI に移動します。To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
 
    ![アセットの通知](assets/aemAssetsNotification.png)
 
@@ -58,15 +61,15 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![review_task](assets/review_task.png)
 
 1. Click **[!UICONTROL Complete]** from the toolbar. In the dialog, enter a comment and click  **[!UICONTROL Complete]** to confirm.
-1. アセットユーザーインターフェイスに移動し、フォルダを開きます。 アセットの承認ステータスアイコンが、カードの表示とリスト表示に表示されます。
+1. アセットユーザーインターフェイスに移動し、フォルダーを開きます。 アセットの承認ステータスアイコンは、カードの表示とリストの表示に表示されます。
 
    **カード表示**
 
-   ![カードの表示](assets/chlimage_1-404.png)
+   ![カードの表示に表示されるステータスの確認](assets/chlimage_1-404.png)
 
    **リスト表示**
 
-   ![レビューステータス(リスト表示](assets/review_status_listview.png)
+   ![リスト表示に表示されるステータスの確認](assets/review_status_listview.png)
 
 ## Create a review task for collections {#creating-a-review-task-for-collections}
 
@@ -92,7 +95,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![task_details-collection](assets/task_details-collection.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として AEM Assets にログインし、アセットコンソールに移動します。To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
+1. 承認者として Assets にログインし、アセットコンソールに移動します。To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
 1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then click **[!UICONTROL Review]**.
 1. コレクションのすべてのアセットがレビューページに表示されます。Select the assets and click **[!UICONTROL Approve/Reject]** to approve or reject assets, as appropriate.
 
@@ -103,8 +106,8 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
 
-   *図：カードの表示。*
+   *図： カードの表示。*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
 
-   *図：リスト表示。*
+   *図： リスト表示。*
