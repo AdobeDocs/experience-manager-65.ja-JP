@@ -1,23 +1,26 @@
 ---
 title: 非同期操作
-description: AEM Assets では、リソースを集中的に消費する一部のタスクを非同期的に処理することでパフォーマンスを最適化します。
+description: Experience Manager Assetsは、リソースを大量に消費する一部のタスクを非同期に完了することで、パフォーマンスを最適化します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 71%
 
 ---
 
 
 # 非同期操作 {#asynchronous-operations}
 
-Adobe Experience Manager (AEM) Assets では、パフォーマンスを悪化させないために、長時間実行され、リソースを集中的に消費する特定のアセット操作は、非同期的に処理されます。
+Adobe Experience Manger Assetsでは、パフォーマンスへの悪影響を軽減するために、長時間かつリソースを大量に消費する特定のアセット操作を非同期的に処理します。
 
 このような操作には以下のようなものがあります。
 
 * 多数のアセットの削除
 * 多数のアセットまたは多数の参照があるアセットの移動
 * アセットメタデータの一括での書き出しまたは読み込み
-* しきい値制限セットを超えるアセットのリモート AEM デプロイメントからの取得
+* リモートのExperience Managerデプロイメントから、しきい値の制限を超えるアセットを取得しています。
 
 非同期処理では複数のジョブがエンキューされ、システムリソースの可用性に応じた順序でジョブが実行されます。
 
@@ -25,15 +28,15 @@ Adobe Experience Manager (AEM) Assets では、パフォーマンスを悪化さ
 
 >[!NOTE]
 >
->デフォルトでは、AEM Assets でのジョブは並行して実行されます。N を CPU コアの数とすると、デフォルトでは N/2 のジョブを並行して実行できます。ジョブキューのカスタム設定を使用するには、Web コンソールで「**[!UICONTROL Async Operation Default Queue]**」設定を変更します。For more information, see [queue configurations](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
+>デフォルトでは、 Assets でのジョブは並行して実行されます。N を CPU コアの数とすると、デフォルトでは N/2 のジョブを並行して実行できます。ジョブキューのカスタム設定を使用するには、Web コンソールで「**[!UICONTROL Async Operation Default Queue]**」設定を変更します。For more information, see [queue configurations](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
 
 ## Monitor the status of asynchronous operations {#monitoring-the-status-of-asynchronous-operations}
 
-AEM Assets で非同期的に操作がおこなわれると、インボックスと電子メールに通知が届きます。
+ Assets で非同期的に操作がおこなわれると、インボックスと電子メールに通知が届きます。
 
 非同期操作のステータスの詳細を表示するには、**[!UICONTROL 非同期ジョブステータス]**&#x200B;ページに移動します。
 
-1. Experience Managerインターフェイスで、操作/ジョ **[!UICONTROL ブをクリッ]** クします ****。
+1. Experience Managerインターフェイスで、 **[!UICONTROL 操作]** / **[!UICONTROL ジョブをクリックします]**。
 
 1. **[!UICONTROL 非同期ジョブステータス]**&#x200B;ページで、操作の詳細をレビューします。
 
@@ -69,11 +72,11 @@ AEM Assets で非同期的に操作がおこなわれると、インボックス
 
 ## 完了したジョブの削除 {#purging-completed-jobs}
 
-AEM Assets は、毎日午前 1 時にパージジョブを実行して、1 日以上経過した完了済みの非同期ジョブを削除します。
+Experience Manager Assetsは毎日午前1時に削除ジョブを実行し、完了した非同期ジョブのうち1日以上経過しているジョブを削除します。
 
 パージジョブのスケジュールと、完了済みジョブの詳細を削除するまでの保持期間を変更できます。また、任意の時点での詳細を保持する、完了済みジョブの最大数を設定することもできます。
 
-1. Experience Managerインターフェイスで、ツール/操作/ **** Webコンソール **[!UICONTROL をク]** リックします ****。
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
 1. 「**[!UICONTROL Adobe CQ DAM Async Jobs Purge Scheduled]**」ジョブを開きます。
 1. 完了済みジョブを削除するまでの日数のしきい値と、詳細を履歴に保持するジョブの最大数を指定します。
 
@@ -83,13 +86,13 @@ AEM Assets は、毎日午前 1 時にパージジョブを実行して、1 日�
 
 ## Configure thresholds for asynchronous processing {#configuring-thresholds-for-asynchronous-processing}
 
-AEM Assets が特定の操作を非同期的に処理する際の、アセットまたは参照の数のしきい値を設定できます。
+ Assets が特定の操作を非同期的に処理する際の、アセットまたは参照の数のしきい値を設定できます。
 
 ### Configure thresholds for asynchronous delete operations {#configuring-thresholds-for-asynchronous-delete-operations}
 
 削除するアセットまたはフォルダーの数がしきい値を超えると、削除操作が非同期的に実行されます。
 
-1. Experience Managerインターフェイスで、ツール/操作/ **** Webコンソール **[!UICONTROL をク]** リックします ****。
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
 1. Web コンソールで、「**[!UICONTROL Async Delete Operation Job Processing]**」設定を開きます。
 1. 「**[!UICONTROL Threshold number of assets]**」ボックスで、削除操作の非同期処理に関するアセットまたはフォルダー数のしきい値を指定します。
 
@@ -101,7 +104,7 @@ AEM Assets が特定の操作を非同期的に処理する際の、アセット
 
 移動するアセットやフォルダーまたは参照の数がしきい値を超えると、移動操作が非同期的に実行されます。
 
-1. Experience Managerインターフェイスで、ツール/操作/ **** Webコンソール **[!UICONTROL をク]** リックします ****。
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
 1. Web コンソールで、「**[!UICONTROL Async Move Operation Job Processing]**」設定を開きます。
 1. 「**[!UICONTROL Threshold number of assets/references]**」ボックスで、移動操作の非同期処理に関するアセットやフォルダーまたは参照の数のしきい値を指定します。
 
