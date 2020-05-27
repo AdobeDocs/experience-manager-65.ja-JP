@@ -3,14 +3,17 @@ title: タイムラインのアクティビティストリーム
 description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 73%
 
 ---
 
 
 # タイムラインのアクティビティストリーム {#activity-stream-in-timeline}
 
-この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Manager(AEM)Assetsで以下のアセット関連操作を実行すると、アクティビティストリーム機能によってタイムラインが更新され、アクティビティが反映されます。
+この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Manager Assetsで以下のアセット関連の操作のいずれかを実行すると、アクティビティストリーム機能によってタイムラインが更新され、アクティビティが反映されます。
 
 アクティビティストリームでログに記録される操作は次のとおりです。
 
@@ -23,11 +26,11 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 * 拒否
 * 移動
 
-The activity logs to be displayed in the timeline are fetched from the location `/var/audit/com.day.cq.dam/content/dam` in CRX, where log files are stored.  また、[Adobe Asset Link](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)[ または AEM デスクトップアプリケーション](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)により、新しいアセットがアップロードされたり、既存のアセットが変更されて AEM にチェックインされたりすると、タイムラインアクティビティがログに記録されます。
+タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into Experience Manager via [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
->一時的なワークフローは、これらのワークフローの履歴情報が保存されないので、タイムラインに表示されません。
+>一時的なワークフローは、履歴情報が保存されないので、タイムラインに表示されません。
 
 アクティビティストリームを表示するには、アセットに対して 1 つ以上の操作を実行して、アセットを選択してから、グローバルナビゲーションリストから&#x200B;**[!UICONTROL タイムライン]**&#x200B;を選択します。
 
@@ -35,8 +38,8 @@ The activity logs to be displayed in the timeline are fetched from the location 
 
 タイムラインに、アセットに対して実行した操作のアクティビティストリームが表示されます。
 
-![activity_stream](assets/activity_stream.png)
+![アクティビティ_ストリーム](assets/activity_stream.png)
 
 >[!NOTE]
 >
->The default log storage location for **[!UICONTROL Publish]** and **[!UICONTROL Unpublish]** tasks is `/var/audit/com.day.cq.replication/content`. For **[!UICONTROL Move]** tasks, the default location is `/var/audit/com.day.cq.wcm.core.page`.
+>**[!UICONTROL 公開]**&#x200B;タスクと&#x200B;**[!UICONTROL 非公開]**&#x200B;タスクのデフォルトのログ保管先は `/var/audit/com.day.cq.replication/content` です。**[!UICONTROL 移動]**&#x200B;タスクの場合は、デフォルトの保管先は `/var/audit/com.day.cq.wcm.core.page` になります。
