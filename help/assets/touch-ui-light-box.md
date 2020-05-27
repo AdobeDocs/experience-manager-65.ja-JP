@@ -1,12 +1,12 @@
 ---
-title: AEM Assetsの個人用画像ギャラリーとしてのライトボックス
-description: AEM Assetsの個人画像ギャラリーとしてのライトボックスについて説明します。
+title: Adobe Experience Manager Assetsの個人用画像ギャラリーとしてのライトボックス。
+description: Adobe Experience Manager Assetsの個人用画像ギャラリーとしてのライトボックスについて説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 66%
+source-wordcount: '259'
+ht-degree: 65%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 66%
 
 Lightbox は、アセットに容易にアクセスするための特別なタイプのコレクションです。Lightbox にすぐにアクセスして、アセットを追加または削除できます。Lightbox は、個人用の画像ギャラリーとして使用することができます。
 
-Adobe Experience Manager（AEM）Assets のユーザーである場合、Lightbox は、アプリケーションに最初にログインしたときに自動的に作成されます。この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
+Adobe Experience Manager Assets のユーザーである場合は、アプリケーションに最初にログインしたときに Lightbox が自動的に作成されます。この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
 
 ## Lightbox へのアセットの追加 {#adding-assets-to-lightbox}
 
