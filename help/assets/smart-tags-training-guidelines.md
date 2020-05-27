@@ -1,23 +1,26 @@
 ---
 title: Smart Content Serviceトレーニングガイドライン
-description: アセットにスマートタグを適用するようにAdobe SenseiのAIサービスをトレーニングします。
+description: アセットにスマートタグを適用するようにAdobe SensieのAIサービスをトレーニングします。
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '465'
+ht-degree: 73%
 
 ---
 
 
 # Smart Content Service training guidelines {#smart-content-service-training-guidelines}
 
-ブランド画像に効果的にタグを付けるために、スマートコンテンツサービスでは、トレーニング画像が特定のガイドラインに従っている必要があります。
+ブランド画像に効果的にタグを付けるには、スマートコンテンツサービスで、トレーニング画像が特定のガイドラインに従っている必要があります。
 
 ## トレーニングのガイドライン {#guidelines-for-training}
 
 最適な結果を得るには、トレーニングセット内の画像は次のガイドラインに従う必要があります。
 
-**** 数量とサイズ：タグあたり最低30枚の画像。 長辺が 500 ピクセル以上である必要があります。
+**数とサイズ**：タグ 1 つにつき 30 以上の画像が必要です。長辺が 500 ピクセル以上である必要があります。
 
 **一貫性**：タグの各画像は、似たような外観にする必要があります。
 
@@ -25,7 +28,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ![トレーニングガイドラインの例を示すイラスト](/help/assets/assets/do-not-localize/coherence.png)
 
-**対象範囲**：トレーニングの画像には十分な多様性が必要です。AEM が適切に焦点を当てることを学習できるよう、数は少なくても多様性の高い例を提供します。見た目が大きく異なる画像に同じタグを適用する場合は、それぞれの種類に 5 つ以上の例を含めてください。
+**対象範囲**：トレーニングの画像には十分な多様性が必要です。アイデアは、いくつかの合理的に多様な例を提供して、Experience Managerが適切な事柄に焦点を当てるようにすることです。 見た目が大きく異なる画像に同じタグを適用する場合は、それぞれの種類に 5 つ以上の例を含めてください。
 
 例えば、model-down-pose ** というタグの場合、タグ付け時、類似する画像をより正確に識別できるよう、以下のハイライト表示された画像に似たトレーニング画像を増やします。
 
@@ -37,7 +40,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ![トレーニングガイドラインの例を示すイラスト](/help/assets/assets/do-not-localize/distraction.png)
 
-**** 完全性：画像が複数のタグに該当する場合は、該当するすべてのタグを追加してから、トレーニング用の画像を含めます。 例えば、`raincoat`   と `model-side-view` などのタグの場合、対象となるアセットに両方のタグを追加してから、そのアセットをトレーニングに含めます。
+**完全性**：画像が複数のタグの対象となる場合は、適用可能なすべてのタグを追加してから、画像をトレーニングに含めます。例えば、`raincoat` と `model-side-view` などのタグの場合、対象となるアセットに両方のタグを追加してから、そのアセットをトレーニングに含めます。
 
 ![トレーニングガイドラインの例を示すイラスト](/help/assets/assets/do-not-localize/completeness.png)
 
@@ -45,11 +48,11 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 強化されたスマートタグは、画像の学習モデルとそのタグに基づいています。 これらのモデルは、タグを識別するうえで常に完璧であるわけではありません。スマートコンテンツサービスの現行バージョンには次の制限事項があります。
 
-* 画像内の細かい違いを認識することはできません。例えば、スリムと通常のフィットシャツ。
+* 画像内の細かい違いを認識することはできません。例えば、スリムとレギュラーのフィットシャツ。
 * 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
-* タグ付けは、AEM がサポートされているロケールでサポートされています。言語の一覧については、](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)スマートコンテンツサービスのリリースノート[を参照してください。
+* タグ付けは、Experience Managerがサポートされているロケールでサポートされます。 言語の一覧については、](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)スマートコンテンツサービスのリリースノート[を参照してください。
 
-スマートタグ（通常または拡張タグ）を使用してアセットを検索するには、アセットのOmnisearch（フルテキスト検索）を使用します。 スマートタグには個別の検索用述語はありません。
+スマートタグを使用してアセットを検索（通常または拡張）するには、「アセットの検索」（フルテキスト検索）を使用します。 スマートタグには個別の検索用述語はありません。
 
 >[!NOTE]
 >
