@@ -3,7 +3,7 @@ title: 統合 [!DNL Adobe Experience Manager Assets] 機能 [!DNL Adobe InDesign
 description: Learn how to integrate [!DNL Adobe Experience Manager Assets] with [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 33%
@@ -57,7 +57,7 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
    * The extracted text and files are stored in [!DNL Experience Manager Assets].
    * All renditions are stored in [!DNL Experience Manager Assets], in the asset itself.
 
-## をAEM [!DNL InDesign Server] と統合する {#integrating-the-indesign-server-with-aem}
+## をExperience Manager [!DNL InDesign Server] と統合する {#integrating-the-indesign-server-with-aem}
 
 To integrate the [!DNL InDesign Server] for use with [!DNL Experience Manager Assets] and after configuring your proxy, you need to:
 
@@ -110,7 +110,7 @@ After the setup, uploading [!DNL InDesign] files into [!DNL Experience Manager A
 
 * **拡張スクリプト**: ここでは、異なるスクリプトの組み合わせを指定できます。 If you want your own scripts to be executed on the [!DNL InDesign Server], save the scripts at `/apps/settings/dam/indesign/scripts`.
 
-Indesignスクリプトについて詳しくは、InDesign開発者ドキュメントを参照して [ください](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)
+スクリプトについて詳し [!DNL Adobe InDesign] くは、InDesign開発者ドキュメントを参照し [てください](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)
 
 >[!CAUTION]
 >
@@ -165,7 +165,7 @@ If the [!DNL InDesign Server] and [!DNL Experience Manager] run on different hos
 
 1. Access the Web Console at `https://[aem_server]:[port]/system/console/configMgr`.
 1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and click **[!UICONTROL Edit]** to open it.
-1. Specify the host name and context path for the [!DNL Indesign Server] and click **Save**.
+1. Specify the host name and context path for the [!DNL Adobe InDesign Server] and click **Save**.
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
 
@@ -216,7 +216,7 @@ For [!DNL InDesign Server] 10.0 or higher, perform the following steps to enable
 
 >[!NOTE]
 >
->For [!DNL InDesign Server] integration with [!DNL Experience Manager Assets], use a multi-core processor because the Session Support feature necessary for the integration is not supported on single core systems.
+>For [!DNL InDesign Server] integration with [!DNL Experience Manager Assets], use a multi-core processor because the session support feature necessary for the integration is not supported on single core systems.
 
 ## 秘密鍵 [!DNL Experience Manager] 証明書の設定 {#configure-aem-credentials}
 
