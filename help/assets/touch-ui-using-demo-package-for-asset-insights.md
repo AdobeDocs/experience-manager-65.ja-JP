@@ -3,7 +3,10 @@ title: アセットインサイトにデモパッケージを使用する
 description: デモパッケージを使用して、アセットインサイトで Web ページからデータを取得し、Web ページのインサイトを生成できるようにします。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 75%
 
 ---
 
@@ -12,10 +15,10 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 デモパッケージを使用して、アセットインサイトでサンプル Web ページからデータを取得し、サンプル Web ページのインサイトを生成できるようにします。
 
-## Use AEM Assets Insights with sample web page  {#using-aem-assets-insights-with-sample-web-page}
+## サンプルWebページでのExperience Manager Assetsインサイトの使用  {#using-aem-assets-insights-with-sample-web-page}
 
 1. Configure Asset Insights using the instructions in [Configuring Asset Insights](touch-ui-configuring-asset-insights.md).
-1. 次に示すサンプル AEM Assets パッケージをダウンロードして、CRXDE パッケージマネージャーでインストールします。
+1. 次に示すサンプル Assets パッケージをダウンロードして、CRXDE パッケージマネージャーでインストールします。
 
    [ファイルを入手](assets/insightsdemo.zip)
 
@@ -31,4 +34,4 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    >[!NOTE]
    >
-   >外部の Web ページは、AEM 自体でホストされたものでもかまいません。
+   >外部Webページは、Experience Manager自体に配置できます。
