@@ -1,26 +1,29 @@
 ---
-title: AEM AssetsでのXMPメタデータのサポート
-description: AEM Assets でメタデータ管理において使用される XMP（Extensible Metadata Platform）メタデータ規格について説明します。XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
+title: Adobe Experience Manager AssetsでのXMPメタデータのサポート。
+description: Experience Manager Assetsでメタデータ管理に使用されるXMP(Extensible Metadata Platform)メタデータ標準について説明します。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '817'
+ht-degree: 88%
 
 ---
 
 
 # XMP メタデータ {#xmp-metadata}
 
-XMP（Extensible Metadata Platform）は、AEM Assets であらゆるメタデータ管理に使用されるメタデータ規格です。XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
+XMP(Extensible Metadata Platform)は、Adobe Experience Manager Assetsですべてのメタデータ管理に使用されるメタデータ標準です。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 
-Aside from offering universal metadata encoding that can be embedded into all file formats, XMP provides a rich [content model](xmp.md#xmp-core-concepts) and is [supported by Adobe](xmp.md#advantages-of-xmp) and other companies, so that users of XMP in combination with AEM Assets have a powerful platform to build upon.
+XMP では、すべてのファイル形式に埋め込むことができる共通のメタデータエンコーディングのほか、リッチ[コンテンツモデル](xmp.md#xmp-core-concepts)も提供され、[アドビによるサポート](xmp.md#advantages-of-xmp)やその他各社のサポートがあるので、XMP を Assets と組み合わせて使用すると強力なプラットフォームを構築できます。
 
 [XMP の仕様](https://www.adobe.com/devnet/xmp.html)は、アドビから入手できます。
 
 ## What is XMP? {#what-is-xmp}
 
-AEM Assets は、アドビ主導の XMP（Extensible Metadata Platform）をネイティブでサポートしています。XMP は、デジタルアセット内の標準化されたメタデータと独自メタデータを処理および格納するための規格です。XMP は、複数のアプリケーションでメタデータを効率的に使用するための共通規格となるよう設計されています。
+ Assets は、アドビ主導の XMP（Extensible Metadata Platform）をネイティブでサポートしています。XMP は、デジタルアセット内の標準化されたメタデータと独自メタデータを処理および格納するための規格です。XMP は、複数のアプリケーションでメタデータを効率的に使用するための共通規格となるよう設計されています。
 
-例えば制作のプロフェッショナルは、アドビのアプリケーションに組み込まれた XMP サポートを使用して、複数のファイル形式に情報を渡します。AEM Assets リポジトリでは、XMP メタデータを抽出し、そのデータをコンテンツのライフサイクルの管理に使用します。自動化ワークフローを作成することもできます。
+実稼働者は、例えば、アドビのアプリケーションに組み込まれたXMPサポートを使用して、複数のファイル形式に情報を渡すことができます。 アセットリポジトリはXMPメタデータを抽出し、それを使用してコンテンツのライフサイクルを管理し、オファーは自動化ワークフローを作成する機能を管理します。
 
 XMP が提供するデータモデル、ストレージモデルおよびスキーマを使用して、メタデータの定義、作成および処理方法を規格化できます。これらの概念は、すべてこの節で説明します。
 
@@ -34,18 +37,18 @@ XMP 規格は、アドビが初めて Adobe Acrobat ソフトウェア製品の�
 
 ### XMP ecosystem {#xmp-ecosystem}
 
-XMP によって定義される[メタデータ](https://en.wikipedia.org/wiki/Metadata)モデルは、任意の定義済みメタデータ項目のセットと併用できます。また、XMP によって、リソースで複数の処理手順がおこなわれる際にその履歴を記録する上で便利な基本的なプロパティに対して、特定の[スキーマ](https://en.wikipedia.org/wiki/XML_schema)も定義されます。処理手順は、撮影、[スキャン](https://en.wikipedia.org/wiki/Image_scanner)またはテキスト作成から、画像編集手順（[切り抜き](https://en.wikipedia.org/wiki/Cropping_%28image%29)やカラー調整など）を経て、最終的な画像へのアセンブリまでです。XMP の処理中に、各ソフトウェアプログラムまたはデバイスでデジタルリソースに独自の情報を付加できます。この情報は、最終的なデジタルファイルで保持されます。
+XMP によって定義される[メタデータ](https://en.wikipedia.org/wiki/Metadata)モデルは、任意の定義済みメタデータ項目のセットと併用できます。また、XMP によって、リソースで複数の処理手順がおこなわれる際にその履歴を記録するうえで便利な基本的なプロパティに対して、特定の[スキーマ](https://en.wikipedia.org/wiki/XML_schema)も定義されます。処理手順は、撮影、[スキャン](https://en.wikipedia.org/wiki/Image_scanner)またはテキスト作成から、画像編集手順（[切り抜き](https://en.wikipedia.org/wiki/Cropping_%28image%29)やカラー調整など）を経て、最終的な画像へのアセンブリまでです。XMP の処理中に、各ソフトウェアプログラムまたはデバイスでデジタルリソースに独自の情報を付加できます。この情報は、最終的なデジタルファイルで保持されます。
 
-XMP のシリアライズおよび格納は、通常 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework)（RDF）のサブセットを使用して実行され、[XML](https://en.wikipedia.org/wiki/XML) で表記されます。
+XMP のシリアライズおよび格納は、通常 [W3C](https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework)（RDF）のサブセットを使用して実行され、[XML](https://ja.wikipedia.org/wiki/XML) で表記されます。
 
 ## XMP の利点 {#advantages-of-xmp}
 
 XMP には、他のエンコーディング規格およびエンコーディングスキーマに比べて次の利点があります。
 
-* XMP ベースのメタデータは利便性が高く、細かく分類されています。   
+* XMP ベースのメタデータは利便性が高く、細かく分類されています。  
 * XMP では 1 つのプロパティに複数の値を指定できます。
 * XMP の規格化されたエンコーディングによって、メタデータを簡単にやり取りできます。
-* XMP は拡張可能です。アセットに追加情報を追加できます。
+* XMP は拡張可能です。アセットに詳細情報を追加できます。
 
 ### 拡張可能 {#extensible}
 
@@ -53,7 +56,7 @@ XMP 規格は拡張できるように設計されていて、カスタムタイ�
 
 >[!NOTE]
 >
->XMP では通常、バイナリデータタイプを埋め込むことはできません。To carry binary data in XMP, for example, thumbnail images, they must be encoded in an XML-friendly format such as `Base64`.
+>XMP では通常、バイナリデータタイプを埋め込むことはできません。XMP でバイナリデータ（サムネール画像など）を扱う場合、XML に対応するフォーマット（`Base64` など）でエンコーディングする必要があります。
 
 ## XMP の中心概念 {#xmp-core-concepts}
 
