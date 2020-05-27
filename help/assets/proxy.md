@@ -1,23 +1,23 @@
 ---
 title: アセットプロキシの開発
-description: プロキシは、プロキシワーカーを使用してジョブを処理する AEM インスタンスです。AEM のプロキシ、サポートされている操作、プロキシコンポーネントを設定する方法と、カスタムプロキシワーカーを開発する方法について説明します。
+description: プロキシは、プロキシワーカーを使用してジョブを処理するExperience Managerインスタンスです。 Experience Managerプロキシの設定方法、サポートされている操作、プロキシコンポーネントの設定方法、およびカスタムプロキシワーカーの開発方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 73%
+source-wordcount: '891'
+ht-degree: 56%
 
 ---
 
 
 # Assets proxy development {#assets-proxy-development}
 
-Adobe Experience Manager（AEM）Assets では、プロキシを使用して、特定のタスクの処理を分散させます。
+Adobe Experience Manager Assetsは、特定のタスク向けに処理を配布するためにプロキシを使用します。
 
-プロキシは、ジョブの処理および結果の作成を担当するプロセッサーとしてプロキシワーカーを使用する特定の（場合によっては個別の）AEM インスタンスです。プロキシワーカーは、幅広いタスクに使用できます。AEM Assetsプロキシの場合は、AEM Assets内でレンダリングするためにアセットを読み込むのに使用できます。 例えば、[IDS プロキシワーカー](indesign.md)は、InDesign Server を使用して、AEM Assets 内で使用できるようにファイルを処理します。
+プロキシは、ジョブの処理と結果の作成を担当するプロセッサーとしてプロキシワーカーを使用する、特定の（場合によっては別々の）Experience Managerインスタンスです。 プロキシワーカーは、幅広いタスクに使用できます。アセットプロキシの場合は、アセット内でレンダリングするためにアセットを読み込むのに使用できます。 例えば、[IDS プロキシワーカー](indesign.md)は、 Server を使用して、 Assets 内で使用できるようにファイルを処理します。[!DNL Adobe InDesign]
 
-プロキシが個別の AEM インスタンスである場合は、AEM オーサリングインスタンスの負荷の軽減に役立ちます。デフォルトでは、AEM Assetsは、同じJVM（プロキシを介して外部化）でアセット処理タスクを実行し、AEMオーサリングインスタンスの負荷を軽減します。
+プロキシが別のExperience Managerインスタンスの場合は、これによりExperience Managerオーサリングインスタンスの負荷を軽減できます。 デフォルトでは、アセットは、（プロキシを介して外部化された）同じJVMでアセット処理タスクを実行し、Experience Managerオーサリングインスタンスの負荷を軽減します。
 
 ## Proxy (HTTP Access) {#proxy-http-access}
 
@@ -109,11 +109,11 @@ API の使用例を以下に示します。
 >
 >プロキシ API の参考ドキュメントは、[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html) にあります。
 
-Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the AEM Assets **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の構成の詳細(例えば、 `/etc/cloudservices/proxy` ) `/etc/cloudservices/proxy/workername`の下にノードを追加する必要があります。
+Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the Assets **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の構成の詳細(例えば、 `/etc/cloudservices/proxy` ) `/etc/cloudservices/proxy/workername`の下にノードを追加する必要があります。
 
 >[!NOTE]
 >
->詳しくは、[InDesign Server プロキシワーカーの設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)および[クラウドサービスの設定](../sites-developing/extending-cloud-config.md)を参照してください。
+>See [InDesign Server Proxy Worker configuration](indesign.md#configuring-the-proxy-worker-for-indesign-server) and [Cloud Services configuration](../sites-developing/extending-cloud-config.md) for more information.
 
 API の使用例を以下に示します。
 
@@ -132,9 +132,9 @@ API の使用例を以下に示します。
 
 ### カスタマイズしたプロキシワーカーの開発 {#developing-a-customized-proxy-worker}
 
-[IDSプロキシワーカーは](indesign.md) 、Indesignアセットの処理をアウトソースするために既に用意されているAEM Assetsプロキシワーカーの例です。
+[](indesign.md) IDSプロキシワーカーは、InDesignアセットの処理をアウトソースするために既に用意されている、アセットプロキシワーカーの例です。
 
-独自のAEM Assetsプロキシワーカーを開発および設定して、AEM Assets処理タスクをディスパッチし、アウトソースする特殊なワーカーを作成することもできます。
+独自のAssetsプロキシワーカーを開発および設定して、アセット処理タスクをディスパッチし、アウトソーシングする特殊なワーカーを作成することもできます。
 
 独自のカスタムプロキシワーカーを設定するには、以下を実行する必要があります。
 
@@ -156,7 +156,7 @@ API の使用例を以下に示します。
 
 >[!NOTE]
 >
->以下の手順では、参照例として InDesign での該当項目を示しています。
+>次の手順では、InDesignの等価物を参照例として示します。
 
 1. [Sling ジョブ](https://sling.apache.org/site/eventing-and-jobs.html)が使用されるので、ユーザーの使用例向けにジョブトピックを定義する必要があります。
 
@@ -176,12 +176,12 @@ API の使用例を以下に示します。
 
 >[!NOTE]
 >
->AEM Assetsプロキシフレームワークでは、すぐに使用できる機能はプールメカニズムです。
+>Assetsプロキシフレームワークでは、すぐに使用できる機能はプールメカニズムです。
 >
->InDesign 統合によって、InDesign Server のプール（IDSPool）にアクセスできるようになります。このプールはIndesignの統合に固有のもので、AEM Assetsプロキシフレームワークの一部ではありません。
+>The [!DNL InDesign] integration allows the access of a pool of [!DNL InDesign] servers (IDSPool). This pooling is specific to [!DNL InDesign] integration and not part of the [!DNL Assets] proxy framework.
 
 >[!NOTE]
 >
 >結果の同期：
 >
->同じプロキシを使用するインスタンスが n 個ある場合、処理結果はプロキシに保持されます。クライアント（AEM オーサー）のジョブによって、ジョブ作成時にクライアントに指定されるものと同じ一意のジョブ ID を使用して結果がリクエストされます。プロキシでは、単にジョブを実行し、リクエストに備えて結果を準備しておくだけです。
+>同じプロキシを使用するインスタンスが n 個ある場合、処理結果はプロキシに保持されます。ジョブの作成時にクライアントに与えられたのと同じ一意のジョブIDを使用して結果をリクエストするのは、クライアント（Experience Manager作成者）のジョブです。 プロキシでは、単にジョブを実行し、リクエストに備えて結果を準備しておくだけです。
