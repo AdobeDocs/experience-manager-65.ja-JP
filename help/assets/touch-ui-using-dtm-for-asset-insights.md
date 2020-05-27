@@ -3,10 +3,10 @@ title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 53%
+source-wordcount: '634'
+ht-degree: 44%
 
 ---
 
@@ -23,10 +23,10 @@ Adobe Dynamic Tag Management は、デジタルマーケティングツールを
 
 DTM を使用してアセットインサイトを有効にするには、次の手順を実行します。
 
-1. Click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [DTM クラウドサービスを使用して AEM インスタンスを設定します](/help/sites-administering/dtm.md)。
+1. Click the Experience Manager logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
+1. [DTMクラウドサービスを使用したExperience Managerインスタンスの設定](/help/sites-administering/dtm.md)
 
-   The API token should be available once you log on to [https://dtm.adobe.com](https://dtm.adobe.com/) and visit **[!UICONTROL Account Settings]** from the Profile icon. この手順はアセットインサイトの観点からは必要ありません。AEM Sites とアセットインサイトの統合は現在準備中であるからです。
+   The API token should be available once you log on to [https://dtm.adobe.com](https://dtm.adobe.com/) and visit **[!UICONTROL Account Settings]** from the Profile icon. Experience Manager SitesとAsset Insightsの統合はまだ機能しているので、アセットインサイトの観点からは、この手順は必要ありません。
 
 1. [https://dtm.adobe.com](https://dtm.adobe.com/) にログオンし、必要に応じて会社を選択します。
 1. Web プロパティを作成するか既存の Web プロパティを開きます。
@@ -44,15 +44,15 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
+1. Experience Managerロゴをクリックし、 **[!UICONTROL ツール/アセットに移動します]**。
 1. Click **[!UICONTROL Insights Page Tracker]**, copy the tracker code, and then paste it in the Script dialog you opened in step 6. 変更内容を保存します。
 
    >[!NOTE]
    >
    > * `AppMeasurement.js` が削除されます。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
    > * The call to `assetAnalytics.dispatcher.init`() is removed. この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
-   > * アセットインサイトページトラッカーがホストされる場所（例えば、AEM や CDN など）によっては、スクリプトソースのオリジナルを変更する必要があります。
-   > * AEMがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して発行インスタンスを指す必要があります。
+   > * アセットインサイトページトラッカーがホストされている場所（Experience Manager、CDNなど）に応じて、スクリプトソースの接触チャネルに変更が必要な場合があります。
+   > * Experience Managerがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して発行インスタンスを指す必要があります。
 
 
 1. `https://dtm.adobe.com` にアクセスします。Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。While creating the tool, you can set **[!UICONTROL Configuration Method]** to **[!UICONTROL Automatic]**.
