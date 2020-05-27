@@ -3,14 +3,17 @@ title: アセットの翻訳のベストプラクティス
 description: 翻訳された各バージョンを同期し、翻訳ワークフローを合理化するための、アセットの効率的な管理に関するベストプラクティス。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 82%
 
 ---
 
 
 # アセットの翻訳のベストプラクティス {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager（AEM）Assets は、デジタルアセットのバイナリ、メタデータおよびタグを複数のロケール用に翻訳し、翻訳されたアセットを多言語ワークフローで管理します。詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
+Adobe Experience Manager Assetsは、デジタルアセットのバイナリ、メタデータおよびタグを複数のロケールに変換し、翻訳済みアセットを管理するための多言語ワークフローをサポートしています。 詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
 
 アセットの管理を効率化して、翻訳された各バージョンが確実に同期されるようにするには、翻訳ワークフローを実行する前にアセットの[言語コピー](preparing-assets-for-translation.md)を作成します。
 
@@ -29,7 +32,7 @@ Adobe Experience Manager（AEM）Assets は、デジタルアセットのバイ�
    * [ファイルデータストアの設定](/help/sites-deploying/data-store-config.md)
    * [Amazon S3 データストアの設定](/help/sites-deploying/data-store-config.md)
 
-1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
+1. [DAM MetaDataライトバックワークフローを無効にします](/help/sites-administering/workflow-offloader.md#disable-offloading) 。
 
    名前が示すとおり、「DAM メタデータの書き戻し」ワークフローはメタデータをバイナリファイルに書き直します。メタデータは翻訳後に変更になるので、バイナリファイルに書き戻すと言語コピーに別のバイナリが生成されます。
 
@@ -39,7 +42,7 @@ Adobe Experience Manager（AEM）Assets は、デジタルアセットのバイ�
 
 1. 「最終変更日を設定」ワークフローを有効化します。
 
-   アセットの最終変更日は、「DAM メタデータの書き戻し」ワークフローが設定します。このワークフローは手順 2 で無効化しているので、AEM Assets は今後アセットの最終変更日を最新の状態に保つことができなくなります。このため、「最終変更日を設定」**&#x200B;ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
+   アセットの最終変更日は、「DAM メタデータの書き戻し」ワークフローが設定します。手順2でこのワークフローを無効にしたので、アセットは、アセットの最終変更日を最新の状態に維持できなくなります。 このため、「最終変更日を設定」**&#x200B;ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
 
 1. アセットのバイナリを翻訳しないように、[翻訳統合フレームワークを設定](/help/sites-administering/tc-tic.md)します。Unselect the **[!UICONTROL Translate Assets]** option under the Assets tab to stop the translation of Asset binaries.
 1. Translate asset metadata/tags using [Multilingual asset workflows](multilingual-assets.md).
