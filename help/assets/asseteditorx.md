@@ -3,10 +3,10 @@ title: アセットエディタの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 94%
+source-wordcount: '695'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-Adobe Experience Manager（AEM）開発者は、既存のエディターコンポーネントを使用するだけでなく、独自のコンポーネントを作成することもできます。
+既存のエディターコンポーネントを使用するだけでなく、Adobe Experience Managerの開発者は独自のコンポーネントを作成することもできます。
 
 ## Create an Asset Editor template {#creating-an-asset-editor-template}
 
@@ -29,9 +29,9 @@ Geometrixxには以下のサンプルページが含まれています。
 
 ### Clientlibの設定 {#configuring-clientlib}
 
-AEM Assets コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
+ Assets コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
 
-（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、AEM Assets テンプレートは次の条件を満たす必要があります。
+（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、 Assets テンプレートは次の条件を満たす必要があります。
 
 * テンプレートでは、（`cq.wcm.edit` ではなく）`cq.dam.edit` クライアントライブラリを組み込む必要があります。
 
@@ -41,7 +41,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 
 ### JSアクションの設定 {#configuring-js-actions}
 
-一部の AEM Assets コンポーネントでは `component.js` で定義されている JS 関数が必要です。このファイルをコンポーネントディレクトリにコピーしてリンクします。
+一部の Assets コンポーネントでは `component.js` で定義されている JS 関数が必要です。このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
@@ -51,7 +51,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 
 ### Additional style sheets {#additional-style-sheets}
 
-一部の AEM Assets コンポーネントでは、AEM ウィジェットライブラリを使用します。コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+一部の Assets コンポーネントでは、 ウィジェットライブラリを使用します。コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
