@@ -4,9 +4,9 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '5869'
+source-wordcount: '5863'
 ht-degree: 56%
 
 ---
@@ -162,7 +162,7 @@ From within the [!DNL Experience Manager] user interface, users can search [Adob
 | 作成者 | creator:John |
 | 場所 | location:NA |
 | 説明 | description:&quot;Sample Image&quot; |
-| 作成ツール | creatortool:&quot;Adobe Photoshop CC 2015&quot; |
+| 作成ツール | creatortool:&quot;Adobe Photoshop CC 2020&quot; |
 | 著作権の所有者 | copyrightowner:&quot;Adobe Systems&quot; |
 | 投稿者 | contributor:John |
 | 使用条件 | usageterms:&quot;CopyRights Reserved&quot; |
@@ -200,7 +200,7 @@ path、limit、size および orderby の各プロパティを他のプロパテ
 
 ### Adobe Asset Link パネルからのアセットの検索 {#aal}
 
-Using Adobe Asset Link, the creative professionals can now access content stored in [!DNL Experience Manager Assets], without leaving the supported Adobe Creative Cloud apps. また、Photoshop、Illustrator、InDesign などの Creative Cloud アプリ内のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることができます。また、Asset Link を使用すると、視覚的に類似した結果を検索できます。ビジュアル検索の表示結果は、Adobe Sensei の機械学習アルゴリズムを活用しており、見た目に類似した画像を見つけやすくなっています。詳しくは、[Adobe Asset Link を使用したアセットの検索と参照](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)を参照してください。
+Using Adobe Asset Link, the creative professionals can now access content stored in [!DNL Experience Manager Assets], without leaving the supported Adobe Creative Cloud apps. Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in the [!DNL Adobe Creative Cloud apps]: [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign]. また、Asset Link を使用すると、視覚的に類似した結果を検索できます。ビジュアル検索の表示結果は、Adobe Sensei の機械学習アルゴリズムを活用しており、見た目に類似した画像を見つけやすくなっています。詳しくは、[Adobe Asset Link を使用したアセットの検索と参照](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)を参照してください。
 
 ### Search assets in [!DNL Experience Manager] desktop app {#desktopapp}
 
