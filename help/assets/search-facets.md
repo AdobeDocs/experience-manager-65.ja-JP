@@ -1,21 +1,19 @@
 ---
 title: 検索ファセット
-description: この記事では、AEM で検索ファセットを作成、変更および使用する方法について説明します。
+description: この記事では、Adobe Experience Managerで検索ファセットを作成、変更および使用する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2522'
-ht-degree: 87%
+source-wordcount: '2517'
+ht-degree: 82%
 
 ---
 
 
 # 検索ファセット {#search-facets}
 
-AEM で検索ファセットを作成、変更および使用する方法について説明します。
-
-Adobe Experience Manager (AEM) Assets の企業全体のデプロイメントには、多くのアセットが格納されています。AEM の一般的な検索機能だけでは、正しいアセットを見つけることが困難で時間がかかる場合があります。
+Adobe Experience Manager Assetsは、企業規模でデプロイすることで、多数のアセットを保存できます。 Experience Managerの汎用検索機能のみを使用する場合は、正しいアセットの検索に時間がかかり、時間がかかることがあります。
 
 フィルターパネルの検索ファセットを使用すると、より詳細な検索が可能になり、検索機能がより効率的で柔軟になります。検索ファセットは、複数のディメンション（述語）を追加するので、ユーザーはより複雑な検索を実行できます。フィルターパネルには、いくつかの標準ファセットが含まれます。カスタム検索ファセットを追加することもできます。
 
@@ -29,7 +27,7 @@ Adobe Experience Manager (AEM) Assets の企業全体のデプロイメントに
 
 フルテキスト検索の場合、「フルテキストの述語」をフォームに追加します。「プロパティの述語」を使用すると、ユーザーが指定した 1 つのプロパティと一致するアセットが検索されます。「オプションの述語」を使用すると、特定のプロパティについて 1 つ以上の値と一致するアセットが検索されます。「日付の範囲の述語」を追加すると、指定した期間内に作成されたアセットが検索されます。
 
-1. AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL 検索フォーム]**&#x200B;の順に移動します。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **Edit** ![aemassets_edit](assets/aemassets_edit.png).
 
    ![アセット管理者の検索レールを探して選択](assets/assets_admin_searchrail.png)
@@ -38,7 +36,7 @@ Adobe Experience Manager (AEM) Assets の企業全体のデプロイメントに
 
    >[!NOTE]
    >
-   >以前のバージョンのAEMで、事前設定済みの **アセット管理者用検索パネルからフォルダー検索機能を使用するには** 、次の手順を実行します。
+   >以前のバージョンの事前設定済みの **アセット管理者用検索パネルからフォルダー検索機能を使用するには** 、次の手順を実行します。
    >
    >1. CRXDEの */conf/global/settings/dam/search/facets/assets/jcr:content/items* に移動します。
    >1. 「 **type** 」ノードを削除します。
@@ -116,7 +114,7 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 >
 >オプションの述語は、求める動作を実行するためにプロパティの述語を組み合わせたカスタムのラッパーです。現時点で、この機能をネイティブにサポートする REST エンドポイントは存在しません。
 
-1. AEM のロゴをクリックし、**[!UICONTROL ツール／一般／検索フォーム]**&#x200B;の順に移動します。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
 1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click the Edit icon.
 1. **[!UICONTROL 検索フォームを編集]**&#x200B;ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに&#x200B;**[!UICONTROL オプションの述語]**&#x200B;をドラッグします。
 1. 「**[!UICONTROL 設定]**」タブで、プロパティのラベルと名前を入力します。例えば、アセットの形式に基づいてアセットを検索するには、ラベルに対してわかりやすい名前（例：**[!UICONTROL ファイルタイプ]**）を指定します。検索実行の基準となるプロパティをプロパティフィールドに指定します（例：`jcr:content/metadata/dc:format.`）。
@@ -136,9 +134,9 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 
 ## 複追加数値のプロパティ述語 {#adding-a-multi-value-property-predicate}
 
-複数値プロパティの述語では、複数の値でアセットを検索できます。AEM Assets で複数の製品の画像があり、各画像のメタデータには製品の SKU 番号が含まれているとします。この述語を利用すれば、複数の SKU 番号で製品の画像を検索できます。
+複数値プロパティの述語では、複数の値でアセットを検索できます。 Assets で複数の製品の画像があり、各画像のメタデータには製品の SKU 番号が含まれているとします。この述語を利用すれば、複数の SKU 番号で製品の画像を検索できます。
 
-1. AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL 検索フォーム]**&#x200B;の順に移動します。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. On the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, the click **[!UICONTROL Edit]** ![aemassets_edit](assets/aemassets_edit.png).
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに&#x200B;**[!UICONTROL 複数値プロパティの述語]**&#x200B;をドラッグします。
 1. 「**[!UICONTROL 設定]**」タブで、述語のラベルとプレースホルダーテキストを入力します。プロパティフィールドに検索したいプロパティ名を指定します（例：`jcr:content/metadata/dc:value`）。選択ダイアログを使用してノードを選択することもできます。
@@ -149,9 +147,9 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 
 ## タグ用述語の追加 {#adding-a-tags-predicate}
 
-Tag Predicateを使用すると、アセットをタグベースで検索できます。 デフォルトでは、AEM Assets は指定したタグに基づいて、1 つまたは複数のタグと一致するアセットを検索します。言い換えれば、検索クエリは指定したタグを用いて OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すれば、すべての指定したタグを含むアセットを検索することも可能です。
+Tag Predicateを使用すると、アセットをタグベースで検索できます。 初期設定では、アセットは、指定したタグに基づいて、1つ以上の一致するタグをアセット内で検索します。 言い換えれば、検索クエリは指定したタグを用いて OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すれば、すべての指定したタグを含むアセットを検索することも可能です。
 
-1. AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL 検索フォーム]**&#x200B;の順に移動します。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]** and then click **[!UICONTROL Edit]** ![aemassets_edit](assets/aemassets_edit.png).
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウにタグの述語をドラッグします。
 1. 「設定」タブで、述語のプレースホルダーテキストを入力します。プロパティフィールドに検索したいプロパティ名を指定します（例：*jcr:content/metadata/cq:tags*）。または、選択ダイアログから CRXDE のノードを選択することもできます。
@@ -166,9 +164,9 @@ Tag Predicateを使用すると、アセットをタグベースで検索でき�
 1. 検索パネルに移動します。**[!UICONTROL タグ]**&#x200B;の述語が検索パネルに追加されています。
 1. アセットの検索に使用するタグを指定または表示されたリストから選択します。
 
-   ![タグ名を入力する際のAEMで提示された提案](assets/chlimage_1-419.png)
+   ![タグ名を入力する際のExperience Managerによる提案](assets/chlimage_1-419.png)
 
-   タグ名を入力する際のAEMで提示された提案
+   *図： タグの名前を入力する際のExperience Managerによる提案。*
 
 1. すべての指定したタグに一致するアセットを検索するには、「**[!UICONTROL すべてに一致]**」を選択します。
 
