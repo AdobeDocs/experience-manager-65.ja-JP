@@ -1,9 +1,12 @@
 ---
 title: スマートタグと検索の管理
-description: 不正確なスマートタグを更新または削除して、タグの関連性を改善する
+description: 不正確なスマートタグを更新または削除して、タグの関連性を向上させます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '448'
+ht-degree: 70%
 
 ---
 
@@ -22,15 +25,15 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 
 1. オムニサーチボックスで、タグに基づいてアセットを検索します。
 1. 検索結果を調査し、検索に関連性のない画像を特定します。
-1. 画像を選択し、ツールバーの「タグ **[!UICONTROL の管理]** 」をクリックします。
+1. 画像を選択し、ツールバーの「タグ **[!UICONTROL 管理]** 」をクリックします。
 1. **[!UICONTROL タグを管理]**&#x200B;ページで、タグを調査します。If you don&#39;t want the image to be searched based on a specific tag, select the tag and then click **[!UICONTROL Delete]** from the toolbar. Alternatively, click `X` symbol that appears beside the label.
 1. To assign a higher rank to a tag, select the tag and click **[!UICONTROL Promote]** from the toolbar. 昇格したタグは、「**[!UICONTROL タグ]**」セクションに移動されます。
 1. Click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the Success dialog.
 1. 画像のプロパティページに移動します。昇格したタグに高い関連性が割り当てられていること、その結果として検索結果の上位に表示されることを確認します。
 
-## スマートタグ付き AEM 検索結果について {#understandsearch}
+## スマートタグを使用してExperience Managerの検索結果を把握する {#understandsearch}
 
-デフォルトでは、検索用語同士を `AND` 句で組み合わせて AEM 検索がおこなわれます。スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。しかし、スマートタグを使って「`woman`」または「`running`」のどちらかがタグ付けされているアセットは、そうした検索結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
+By default, Experience Manager search combines the search terms with an `AND` clause. スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。しかし、スマートタグを使って「`woman`」または「`running`」のどちらかがタグ付けされているアセットは、そうした検索結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
 
 * 「`woman`」と「`running`」の両方のキーワードがメタデータ内にあるアセット。
 
