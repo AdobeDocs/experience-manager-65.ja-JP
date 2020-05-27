@@ -10,7 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 5c0fec99-7b1e-45d6-a115-e498d288e9e1
 translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+source-git-commit: f951c195c581f770dcc87fdf4a89d40ee6dd9ec0
+workflow-type: tm+mt
+source-wordcount: '1322'
+ht-degree: 71%
 
 ---
 
@@ -66,7 +69,7 @@ Adobe Campaign の設定には、次が含まれます。
 
 The **aemserver** user must be configured in Adobe Campaign. The **aemserver** is a technical user that will be used to connect the AEM server to Adobe Campaign.
 
-Go to **Administration** >  **Users &amp; Security** >  **Users**, and select the **aemserver** user. クリックしてユーザー設定を開きます。
+**管理** / **ユーザーとセキュリティ** /ユーザーに移動し、aemserver ******** userを選択します。 クリックしてユーザー設定を開きます。
 
 * このユーザーにパスワードを設定する必要があります。これは UI では実行できません。技術管理者が REST で設定する必要があります。
 * **deliveryPrepare** など、特定の役割をこのユーザーに割り当てることができます。これにより、ユーザーは配信を作成および編集できます。
@@ -81,7 +84,7 @@ Adobe Campaign を AEM インスタンスに接続可能な外部アカウント
 
 AEM 外部アカウントを設定するには：
 
-1. Go to **Administration** > **Application settings** > **External accounts**.
+1. **管理** / **アプリケーション設定** / **外部アカウントに移動します**。
 
    ![chlimage_1-124](assets/chlimage_1-124a.png)
 
@@ -112,7 +115,7 @@ The **AEMResourceTypeFilter** option is used to filter types of AEM resources th
 AEM 専用の電子メール配信テンプレートを作成するには：
 
 1. **リソース**／**テンプレート**／**配信テンプレート**&#x200B;に移動します。
-1. **アクション** ・バーのチェックマークをクリックし、既存の **Standard電子メール（メール）デフォルト・テンプレートを選択して選択を有効にし、コピーアイコンをクリックして****「確認******」をクリックします。
+1. **アクションバーのチェックマークをクリックし** 、既存の **標準電子メール（電子メール）** デフォルトテンプレートを選択して選択を有効にします。次に、 **コピー** アイコンをクリックし、「 **確認**」をクリックして重複します。
 1. Disable the selection mode by clicking the **x** and open the newly created **Copy of Standard email (mail)** template, then select **Edit properties** from the action bar of the template dashboard.
 
    テンプレートの&#x200B;**ラベル**&#x200B;を変更できます。
@@ -140,13 +143,13 @@ AEM オーサーインスタンスから作成されたコンテンツは、最�
 >[!NOTE]
 >
 >レプリケーション URL を使用しない代わりに公開 URL を使用したい場合は、OSGi（**ツール**／**Web コンソール**／**OSGi Configuration／AEM Campaign Integration - Configuration**）で次の設定をおこなうことで&#x200B;**パブリック URL** を設定できます。
-**** 公開URL:com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
+**パブリックURL:** com.day.cq.mcm.キャンペーン.impl.IntegrationConfigImpl#aem.mcm.キャンペーン.publicUrl
 
 また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートするためにも必要です。
 
 AEM インスタンス間のレプリケーションを設定するには：
 
-1. From the authoring instance, select **AEM logo**> **Tools **icon > **Deployment** > **Replication** > **Agents on author**, then click **Default Agent**.
+1. From the authoring instance, select **AEM logo**> **Tools** > **Deployment** > **Replication** > **Agents on author**, then click **Default Agent**.
 
    ![chlimage_1-126](assets/chlimage_1-126a.png)
 
@@ -170,7 +173,7 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 1. Create a new configuration by entering a **Title** and click **Create**, or choose the existing configuration that you want to link with your Adobe Campaign instance.
 1. 設定を編集して、Adobe Campaign インスタンスのパラメーターと一致するようにします。
 
-   * **ユーザ名**:aemserver ****。2つのソリューション間のリンクを確立するために使用するAdobe Campaign AEM統合パッケージ演算子です。
+   * **ユーザー名**: **aemserver**(2つのソリューション間のリンクを確立するために使用されるAdobe CampaignAEM統合パッケージ演算子)。
    * **パスワード**：Adobe Campaign aemserver 演算子のパスワード。この演算子のパスワードを Adobe Campaign で直接再指定する必要があることがあります。
    * **API エンドポイント**：Adobe Campaign インスタンス URL。
 
