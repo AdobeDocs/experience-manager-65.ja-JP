@@ -3,10 +3,10 @@ title: 翻訳するアセットの準備
 description: 言語ルートフォルダーを作成して、多言語アセットをサポートする翻訳用のアセットを準備します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 62%
+source-wordcount: '449'
+ht-degree: 58%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 62%
 
 多言語アセットとは、複数の言語のバイナリ、メタデータ、タグを含むアセットです。通常、アセットのバイナリ、メタデータ、タグに使用される言語は 1 つですが、多言語プロジェクト用に他の言語へと翻訳されます。
 
-Adobe Experience Manager (AEM) Assets では、多言語アセットはフォルダーに含まれ、各フォルダーに異なる言語のアセットが格納されます。
+Adobe Experience Manager Assetsでは、多言語アセットがフォルダーに含まれ、各フォルダーには異なる言語のアセットが含まれます。
 
 各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。For example, */content/dam/it* is the Italian language root for the Italian language copy. ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
 
@@ -58,7 +58,7 @@ Adobe Experience Manager (AEM) Assets では、多言語アセットはフォル
 
 ## 言語ルートの表示 {#viewing-language-roots}
 
-AEM interface provides a **[!UICONTROL References]** panel that displays a list of language roots that have been created within AEM Assets.
+Experience Manager interface provides a **[!UICONTROL References]** panel that displays a list of language roots that have been created within Assets.
 
 1. アセットコンソールで、言語コピーを作成する言語マスターを選択します。
 1. Click the GlobalNav icon, and choose **[!UICONTROL References]** to open the [!UICONTROL Reference] pane.
