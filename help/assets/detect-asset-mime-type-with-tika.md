@@ -1,21 +1,21 @@
 ---
 title: Apache Tikaを使用してアセットのMIMEタイプを検出する
-description: Apache Tika を使用して、AEM Assets がアセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出できるようにします。
+description: Apache Tikaを有効にすると、Experience Manager Assetsが、アップロード操作中にファイル拡張子ではなく、コンテンツストリームからアセットのMIMEタイプを検出できるようになります。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 50%
+source-wordcount: '179'
+ht-degree: 10%
 
 ---
 
 
 # Detect MIME type of assets using Apache Tika {#detecting-mime-type-of-assets-using-apache-tika}
 
-通常、Adobe Experience Manager（AEM）Assets は、ユーザーがアップロードしたアセットの MIME タイプを、アセットのファイル拡張子から検出します。
+通常、Adobe Experience Manager Assetsは、ファイルの拡張子からアップロードするアセットのMIMEタイプを検出します。
 
-Apache Tika を使用してアセットをアップロードすると、AEM Assets は、アセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出します。
+Apache Tikaを使用してアセットをアップロードする場合、Assetsは、アップロード操作中に、ファイル拡張子ではなく、コンテンツストリームからMIMEタイプを検出します。
 
 この機能はデフォルトでは無効になっています。To enable the feature, configure the **[!UICONTROL Day CQ DAM Mime Type]** service from [!UICONTROL Configuration Manager].
 
