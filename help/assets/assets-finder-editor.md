@@ -3,10 +3,10 @@ title: アセットエディタページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2147'
-ht-degree: 81%
+source-wordcount: '2146'
+ht-degree: 76%
 
 ---
 
@@ -27,13 +27,13 @@ ht-degree: 81%
 
 ## Why create and configure Asset Editor pages? {#why-create-and-configure-asset-editor-pages}
 
-デジタルアセット管理は、ますます広く使用されるようになっています。専門的な教育を受けたユーザー（写真家や分類学者など）による小規模なユーザーグループ向けの小規模なソリューションから、大規模で多様なユーザーグループ（ビジネスユーザー、WCM 作成者、ジャーナリストなど）に移行する場合、専門的なユーザー向けの Adobe Experience Manager（AEM）Assets の強力なユーザーインターフェイスでは、利用できる情報が多すぎて不便が生じることがあります。この場合、関係者にとって必要なデジタルアセットにアクセスするための目的に特化したユーザーインターフェイスやアプリケーションが求められるようになります。
+デジタルアセット管理は、ますます広く使用されるようになっています。Adobe Experience Manager Assetsの強力なユーザーインターフェイスを使用して、写真家や分類学者など、専門的な知識を持つユーザーの小規模なグループから、ビジネスユーザー、WCM作成者、ジャーナリストなど、より多様なユーザーグループに移行する場合、
 
 アセット中心のアプリケーションは、社員が展示会の訪問や公共のWebサイトの報道機関から写真をアップロードできる、イントラネット内の単純なフォトギャラリーです。 アセット中心のアプリケーションは、買い物かご、チェックアウト、検証プロセスなどの完全なソリューションにも拡張できます。
 
-アセット中心型アプリケーションの作成の大部分は、コーディングを必要としない設定プロセスとなります。ここでは、ユーザーグループとそのニーズ、使用されるメタデータに関する知識のみが必要となります。AEM Assets で作成されたアセット中心型アプリケーションは拡張可能です。適度なコーディング作業によって、アセットの検索、表示、変更のための再利用可能なコンポーネントを作成できます。
+アセット中心型アプリケーションの作成の大部分は、コーディングを必要としない設定プロセスとなります。ここでは、ユーザーグループとそのニーズ、使用されるメタデータに関する知識のみが必要となります。 Assets で作成されたアセット中心型アプリケーションは拡張可能です。適度なコーディング作業によって、アセットの検索、表示、変更のための再利用可能なコンポーネントを作成できます。
 
-AEM のアセット中心型アプリケーションは、特定アセットの詳細を表示するのに利用できるアセットエディターページで構成されます。アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
+Experience Managerのアセット中心のアプリケーションは、アセットエディターページで構成され、アセットエディターを使用して特定のアセットの詳細な表示を取得できます。 アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -161,7 +161,7 @@ To customize the query builder:
 
 #### Add predicates {#adding-predicates}
 
-AEM Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
+Experience Manager Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
 
 To add predicates:
 
@@ -278,7 +278,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-See [Customizing and Extending AEM Assets](/help/assets/extending-assets.md) for information on modifying the namespaces available in the metadata form.
+See [Customizing and Extending Assets](/help/assets/extending-assets.md) for information on modifying the namespaces available in the metadata form.
 
 1. Click the **Constraints** tab. ここで、フィールドを必須にするかどうかを選択し、必要に応じて制約を追加できます。
 
@@ -391,7 +391,7 @@ See [Customizing and Extending AEM Assets](/help/assets/extending-assets.md) for
 
 ## Multi-edit assets with the Asset Editor page {#multi-editing-assets-with-the-asset-editor-page}
 
-AEM Assets では複数のアセットを同時に変更できます。アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
+Experience Manager Assetsを使用すると、複数のアセットに対して一度に変更を行うことができます。 アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
 
 * タグ
 * メタデータ
