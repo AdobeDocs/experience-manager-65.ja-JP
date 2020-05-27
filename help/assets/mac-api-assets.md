@@ -3,9 +3,9 @@ title: Assets HTTP API in [!DNL Adobe Experience Manager].
 description: のHTTP APIを使用して、デジタルアセットの作成、読み取り、更新、削除、管理を行います [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f41de531d0e1784245c79ab2ace3586fc7dd469
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1566'
 ht-degree: 35%
 
 ---
@@ -64,7 +64,7 @@ Assets HTTP API は、フォルダーとアセット（標準アセット用）�
 Experience Managerでは、アセットに次の要素が含まれます。
 
 * アセットのプロパティとメタデータ.
-* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加のレンディションには、様々なサイズの画像、ビデオエンコーディングの画像、PDFまたはAdobe InDesignファイルから抽出したページなどがあります。
+* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。Additional renditions may be images of different sizes, different video encodings, or extracted pages from PDF or [!DNL Adobe InDesign] files.
 * オプションのコメント.
 
 For information about elements in Content Fragments see [Content Fragments Support in Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md#content-fragments).
@@ -231,7 +231,7 @@ Assets HTTP API には、以下の機能が含まれます。
 
 * `X-Destination` - APIソリューションスコープ内の、リソースのコピー先となる新しい宛先URI。
 * `X-Depth`  — または `infinity` のいずれか `0`。 を使用すると、リソースとそのプロパティのみがコピーされ、子はコピーされません。 `0`
-* `X-Overwrite`  — 既存の宛先 `F` でアセットが上書きされないようにするために使用します。
+* `X-Overwrite`  — 既存の宛先 `F` でアセットが上書きされないようにする場合に使用します。
 
 **リクエスト**: `COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"`
 
