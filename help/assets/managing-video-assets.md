@@ -3,21 +3,21 @@ title: ビデオアセットの管理
 description: ビデオアセットをアップロード、プレビュー、注釈付け、公開する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 69%
+source-wordcount: '786'
+ht-degree: 64%
 
 ---
 
 
 # ビデオアセットの管理 {#manage-video-assets}
 
-Adobe Experience Manager（AEM）Assets でビデオアセットを管理および編集する方法について説明します。また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](/help/assets/video.md)を参照してください。
+Adobe Experience Manager Assetsでビデオアセットを管理および編集する方法について説明します。 また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](/help/assets/video.md)を参照してください。
 
 ## ビデオアセットのアップロードとプレビュー {#upload-and-preview-video-assets}
 
-Adobe Experience Manager Assetsは、拡張子がMP4のビデオアセットに関するプレビューを生成します。アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 これらのレンディションは、AEM Assets ユーザーインターフェイスでプレビューすることができます。
+Adobe Experience Manager Assetsは、拡張子がMP4のビデオアセットに関するプレビューを生成します。アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 これらのレンディションは、 Assets ユーザーインターフェイスでプレビューすることができます。
 
 1. デジタルアセットフォルダー（またはサブフォルダー）で、デジタルアセットを追加する場所に移動します。
 1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Files]**. または、アセット領域に直接ドロップします。アップロード操作について詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
@@ -44,11 +44,11 @@ Adobe Experience Manager Assetsは、拡張子がMP4のビデオアセットに�
 
 >[!NOTE]
 >
->AEM クラシックユーザーインターフェイスには、2 GB のファイルサイズ上限の制約がありません。また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
+>Experience Manager Classicユーザーインターフェイスには、2 GBのファイルサイズ制限はありません。 また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
 
 ファイルサイズの制限を高めに設定するには、`/apps` ディレクトリで次の手順を実行します。
 
-1. AEM で、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** をクリックします。
+1. In Experience Manager, click **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. CRXDE Lite で、`/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` に移動します。ディレクトリウィンドウを表示するには、「`>>`」アイコンをタッチします。
 1. From the toolbar, click the **[!UICONTROL Overlay Node]**. または、コンテキストメニューの「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
 1. In the **[!UICONTROL Overlay Node]** dialog, click **[!UICONTROL OK]**.
@@ -59,11 +59,11 @@ Adobe Experience Manager Assetsは、拡張子がMP4のビデオアセットに�
 1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。例えば、サイズ制限を 30 GB に増やすには、`{sizeLimit : "32212254720"}` という値を入力します。
 
 1. ツールバーで「**[!UICONTROL すべて保存]**」をタッチします。
-1. In AEM, click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Experience Managerで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
 1. On the Adobe Experience Manager Web Console Bundles page, under the Name column of the table, locate and click **[!UICONTROL Adobe Granite Workflow External Process Job Handler]**.
 1. Adobe Granite Workflow External Process Job Handler ページで、「**[!UICONTROL Default Timeout]**」フィールドと「**[!UICONTROL Max Timeout]**」フィールドの秒数を`18000`（5 時間）に設定します。
 1. 「**[!UICONTROL 保存]**」をクリックします。
-1. In AEM, click **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. Experience Managerで、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルをクリックします]**。
 1. On the Workflow Models page, select **[!UICONTROL Dynamic Media Encode Video]**, then click **[!UICONTROL Edit]**.
 1. On the workflow page, double-click the **[!UICONTROL Dynamic Media Video Service Process]** component.
 1. [!UICONTROL ステップのプロパティ]ダイアログボックスの「**[!UICONTROL 共通]**」タブにある「**詳細設定**」を展開します。
