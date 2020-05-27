@@ -3,10 +3,10 @@ title: Adobe Experience Manager Assetsの検索機能の拡張
 description: Adobe Experience Manager Assetsの検索機能をデフォルト以外に拡張しました。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2348df62f970d7e2ff41ad386f29c1550ea94e48
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 81%
+source-wordcount: '859'
+ht-degree: 75%
 
 ---
 
@@ -35,7 +35,7 @@ To overlay the pre-configured predicates, copy the `facets` node from `/libs/dam
 
 ## タブの追加 {#adding-tabs}
 
-AEM Assets管理者で検索タブを設定すると、追加の検索タブを追加できます。 追加のタブは以下の手順で作成します。
+アセット管理インターフェイスで設定することで、追加の検索タブを追加できます。 追加のタブは以下の手順で作成します。
 
 1. フォルダー構造 `/apps/wcm/core/content/damadmin/tabs,` がまだ存在しない場合は作成し、`tabs` ノードを `/libs/wcm/core/content/damadmin` からコピーして貼り付けます。
 1. 必要に応じて、2 つ目のタブを作成し設定します。
@@ -48,7 +48,7 @@ AEM Assets管理者で検索タブを設定すると、追加の検索タブを�
 
 [!DNL Assets] には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。Customizing an Asset Share in this way is covered in [create and configure an Asset Share page](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-AEM 開発者は、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md) を使用して独自の述語を作成することもできます。
+In addition to using pre-existing predicates, Experience Manager developers can also create their own predicates using the [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
@@ -296,6 +296,6 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 ## 検索結果のカスタマイズ {#customizing-search-results}
 
-アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。AEM Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
+アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。Experience Manager Assetsには、アセット共有ページのカスタマイズに使用できる定義済みのレンズセットが付属しています。 この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-AEM 開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。
+既存のレンズを使用するだけでなく、Experience Managerの開発者は独自のレンズを作成することもできます。
