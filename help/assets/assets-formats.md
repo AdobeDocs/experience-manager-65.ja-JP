@@ -3,10 +3,10 @@ title: での処理でサポートされるファイル形式 [!DNL Adobe Experi
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 138c8d960ad8c1de20212b7aeebbda0a486832ee
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1779'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
@@ -103,7 +103,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## サポートされている PDF Rasterizer ライブラリ {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い Adobe Illustrator ファイルおよび PDF ファイルの高品質のサムネールとプレビューを生成します。次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
+The Adobe PDF Rasterizer library generates high-quality thumbnails and previews for large and content-intensive [!DNL Adobe Illustrator] and PDF files. 次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
 * 処理にリソースを大量に消費する、コンテンツを集中的に使用するAI/PDFファイル。
 * AI／PDF ファイル。デフォルトではサムネールは生成されません。
@@ -121,7 +121,7 @@ See [Imaging Transcoding Library](imaging-transcoding-library.md).
 
 ## Supported camera raw {#supported-camera-raw}
 
-Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。See [Camera Raw support](camera-raw.md).
+Adobe Camera Raw ライブラリを使用すると、 Assets が Raw 画像を取り込むことができます。See [Camera Raw support](camera-raw.md).
 
 ## Supported Assets document formats {#supported-document-formats}
 
@@ -234,7 +234,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容から検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
+デフォルトでは、Experience Managerはファイル拡張子を使用してファイルの種類を検出します。 Experience Managerでは、ファイルのコンテンツから検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the Experience Manager Web Console.
 
 サポートされるMIMEタイプのリストは、CRXDE Liteので使用でき `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`ます。
 
