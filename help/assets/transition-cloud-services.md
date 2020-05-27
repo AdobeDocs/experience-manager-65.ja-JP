@@ -3,17 +3,17 @@ title: フォルダーへの翻訳クラウドサービスの適用
 description: フォルダーへの翻訳クラウドサービスの適用
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 82%
+ht-degree: 75%
 
 ---
 
 
 # フォルダーへの翻訳クラウドサービスの適用 {#applying-translation-cloud-services-to-folders}
 
-Adobe Experience Manager（AEM）では、選択した翻訳プロバイダーのクラウドベースの翻訳サービスを利用して、確実に要件に基づいてアセットを翻訳できます。
+Adobe Experience Managerでは、任意の翻訳プロバイダーからクラウドベースの翻訳サービスを利用し、要件に基づいてアセットが翻訳されていることを確認できます。
 
 翻訳クラウドサービスをアセットフォルダーに直接適用できるので、翻訳ワークフローの間もずっとアセットを利用できます。
 
@@ -42,7 +42,7 @@ Adobe Experience Manager（AEM）では、選択した翻訳プロバイダー�
 翻訳ワークフローで使用する翻訳サービスにカスタムコネクタを適用する場合、カスタムコネクタを適用するには、まずパッケージマネージャーからコネクタをインストールします。次に、クラウドサービスコンソールからコネクタを設定します。コネクタを設定すると、[翻訳サービスの適用](transition-cloud-services.md#applying-the-translation-services)で説明されている「クラウドサービス」タブのコネクタのリストに表示されるようになります。カスタムコネクタを適用し、翻訳ワークフローを実行すると、翻訳プロジェクトの「**[!UICONTROL 翻訳の概要]**」タイルの「**[!UICONTROL プロバイダー]**」と「**[!UICONTROL メソッド]**」という見出しの下にコネクタの詳細が表示されます。
 
 1. Package Manager からコネクタをインストールします。
-1. Click the AEM logo, and navigate to **[!UICONTROL Tools > Deployment > Cloud Services]**.
+1. Click the Experience Manager logo, and navigate to **[!UICONTROL Tools > Deployment > Cloud Services]**.
 1. インストールしたコネクタを&#x200B;**[!UICONTROL クラウドサービス]**&#x200B;ページの「**[!UICONTROL サードパーティのサービス]**」の下で探します。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
