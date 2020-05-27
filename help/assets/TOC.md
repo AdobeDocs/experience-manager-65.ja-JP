@@ -2,17 +2,17 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Assetsユーザーガイド
+user-guide-title: Experience Manager 6.5 Assetsユーザーガイド
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 56%
+source-wordcount: '636'
+ht-degree: 55%
 
 ---
 
 
-# AEM 6.5 Assets User Guide {#assets}
+# Experience Manager 6.5 Assetsユーザーガイド {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
 + [AEM 6.5 Assetsリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
@@ -153,7 +153,7 @@ ht-degree: 56%
    + [非同期操作](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [アセットのインサイト](touch-ui-asset-insights.md)
-   + [DTMを通じたアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
+   + [Adobe Launchでアセットのインサイトを有効にする](touch-ui-using-dtm-for-asset-insights.md)
    + [アセットのインサイトの設定](touch-ui-configuring-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
