@@ -1,10 +1,13 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]のパフォーマンス調整。'
-description: '[!DNL Experience Manager]の構成、ハードウェア、ソフトウェア、およびネットワークコンポーネントの変更に関する提案とガイダンス。ボトルネックを解消し、[!DNL Experience Manager Assets]のパフォーマンスを最適化します。'
+title: Performance tuning for [!DNL Adobe Experience Manager Assets].
+description: 構成、ハードウェア、ソフトウェア、ネットワーク・コンポーネントの変更に [!DNL Experience Manager] 関する提案とガイダンス。ボトルネックを解消し、パフォーマンスを最適化 [!DNL Experience Manager Assets]。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '2723'
+ht-degree: 53%
 
 ---
 
@@ -25,11 +28,11 @@ Poor performance in [!DNL Experience Manager Assets] can impact user experience 
 
 ## プラットフォーム {#platform}
 
-Experience Managerは様々なプラットフォームでサポートされていますが、LinuxおよびWindows上で最も高いサポートが見つかり、最適なパフォーマンスと実装のしやすさに貢献しています。 Ideally, you should deploy a 64-bit operating system to meet the high memory requirements of an [!DNL Experience Manager Assets] deployment. Experience Managerの導入と同様に、可能な限りTarMKを導入する必要があります。 TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。You can add TarMK offload instances to increase the workflow processing power of your [!DNL Experience Manager Assets] deployment.
+Experience Managerは様々なプラットフォームでサポートされていますが、LinuxおよびWindowsでのネイティブツールのサポートが最も多く行われ、パフォーマンスと導入の容易さの最適化に貢献しています。 Ideally, you should deploy a 64-bit operating system to meet the high memory requirements of an [!DNL Experience Manager Assets] deployment. Experience Manager導入の場合と同様、TarMKは可能な限り実装する必要があります。 TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。You can add TarMK offload instances to increase the workflow processing power of your [!DNL Experience Manager Assets] deployment.
 
-### 一時フォルダ {#temp-folder}
+### 一時フォルダー {#temp-folder}
 
-アセットのアップロード時間を短縮するには、Javaの一時ディレクトリに高いストレージを使用してください。 Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。For example in Amazon EC2, an [ephemeral drive](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) drive can be used for the temporary folder.
+アセットのアップロード時間を改善するには、Javaの一時ディレクトリに高いパフォーマンスのストレージを使用します。 Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。For example in Amazon EC2, an [ephemeral drive](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) drive can be used for the temporary folder.
 
 サーバーに十分なメモリがあるという前提で、RAM ドライブを設定します。Linux の場合、8GB RAM ドライブを作成するには、次のコマンドを実行します。
 
@@ -40,7 +43,7 @@ mkfs -q /dev/ram1 800000
  df -H | grep aem-tmp
 ```
 
-Windows OSでは、サードパーティ製のドライバを使用してRAMドライブを作成するか、SSDなどの高パフォーマンスのストレージを使用します。
+Windows OSでは、サードパーティ製のドライバを使用してRAMドライブを作成するか、SSDなどの高パフォーマンスストレージを使用します。
 
 Once the high performance temporary volume is ready, set the JVM parameter `-Djava.io.tmpdir`. For example, you could add the JVM parameter below to the `CQ_JVM_OPTS` variable in the `bin/start` script of [!DNLExperience Manager]:
 
@@ -50,7 +53,7 @@ Once the high performance temporary volume is ready, set the JVM parameter `-Dja
 
 ### Java バージョン {#java-version}
 
-パフォーマンスを最適化す [!DNL Experience Manager Assets] るために、Java 8へのデプロイをお勧めします。
+最適なパフォーマンスを得るた [!DNL Experience Manager Assets] めに、Java 8にデプロイすることをお勧めします。
 
 >[!NOTE]
 >
@@ -115,7 +118,7 @@ accessKey=<snip>
 
 Primarily, your network optimization strategy depends upon the amount of bandwidth available and the load on your [!DNLExperience Manager] instance. ファイアウォールやプロキシなどの一般的な設定オプションは、ネットワークのパフォーマンスの改善に役立ちます。留意点は次のとおりです。
 
-* インスタンスのタイプ（小、中、大）に応じて、Experience Managerインスタンスに十分なネットワーク帯域幅があることを確認します。 Adequate bandwidth allocation is especially important if [!DNLExperience Manager] is hosted on AWS.
+* インスタンスのタイプ（小、モデレート、大）に応じて、Experience Managerインスタンスに十分なネットワーク帯域幅があることを確認します。 Adequate bandwidth allocation is especially important if [!DNLExperience Manager] is hosted on AWS.
 * If your [!DNLExperience Manager] instance is hosted on AWS, you can benefit by having a versatile scaling policy. 高い負荷が予想される場合は、インスタンスのサイズを大きくします。負荷が標準的または低い場合は、インスタンスのサイズを小さくします。
 * HTTPS：ユーザーの多くは HTTP トラフィックをスニッフィングするファイアウォールを装備しており、ファイルのアップロード操作に干渉しファイルを破損することもあります。
 * サイズの大きなファイルのアップロード：必ず有線でネットワークに接続してください（Wi-Fi 接続は簡単に飽和するおそれがあります）。
@@ -126,9 +129,9 @@ Primarily, your network optimization strategy depends upon the amount of bandwid
 
 Wherever possible, set the [!UICONTROL DAM Update Asset] workflow to Transient. この設定にすると、ワークフローが通常のトラッキングやアーカイブ処理をパススルーする必要がなくなるので、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。
 
-1. Experience Managerインスタ `/miscadmin` ンス( [!DNLE)で] 、に移動しま `https://[aem_server]:[port]/miscadmin`す。
+1. Experience Manager `/miscadmin` の [!DNLEインスタンス()に移動]`https://[aem_server]:[port]/miscadmin`します。
 
-1. ツール/ワ **[!UICONTROL ークフ]** ロー **[!UICONTROL /モデル]** / **[!UICONTROL dam]** dam **** leversを展開します。
+1. **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル/]****** damを展開します。
 
 1. Open **[!UICONTROL DAM Update Asset]**. フローティングツールパネルで、「**[!UICONTROL ページ]**」タブに切り替えて「**[!UICONTROL ページプロパティ]**」をクリックします。
 
@@ -140,7 +143,7 @@ Wherever possible, set the [!UICONTROL DAM Update Asset] workflow to Transient. 
 
 In cases where transient workflows cannot be used, run workflow purging regularly to delete archived [!UICONTROL DAM Update Asset] workflows to ensure system performance does not degrade.
 
-通常、削除ワークフローを週単位で実行します。 ただし、大規模なアセットの取り込み中など、リソースを大量に消費するシナリオでは、より頻繁に実行できます。
+通常、パージワークフローは週単位で実行します。 ただし、大規模なアセット取り込みの際など、リソースを大量に消費するシナリオでは、より頻繁にアセットを実行できます。
 
 ワークフローのパージを設定するには、OSGi コンソールで新しい Adobe Granite のワークフローのパージ設定を追加します。次に、ワークフローを週次メンテナンスウィンドウの一部としてスケジュールを設定します。
 
@@ -152,7 +155,7 @@ For example, after executing numerous non-transient workflows (that creates work
 
 By default, [!DNLExperience Manager] runs a maximum number of parallel jobs equal to the number of processors on the server. The problem with this setting is that during periods of heavy load, all of the processors are occupied by [!UICONTROL DAM Update Asset] workflows, slowing down UI responsiveness and preventing [!DNLExperience Manager] from running other processes that safeguard server performance and stability. 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
-1. Experience Manager [!DNLEの作成者] 、にアクセスしま `https://[aem_server]:[port]/system/console/slingevent`す。
+1. Experience Manager [!DNLEAuthorで、にアクセス]`https://[aem_server]:[port]/system/console/slingevent`します。
 
 1. Click **[!UICONTROL Edit]** on each workflow queue that is relevant to your implementation, for example **[!UICONTROL Granite Transient Workflow Queue]**.
 
@@ -162,7 +165,7 @@ By default, [!DNLExperience Manager] runs a maximum number of parallel jobs equa
 
 ### DAM アセットの更新設定 {#dam-update-asset-configuration}
 
-[!UICONTROL DAM Update Asset] Workflowには、Scene7 PTIFFの生成やInDesign Serverの統合など、タスク用に設定されたすべての手順が含まれています。 ただし、大多数のユーザーにとってこれらの手順のうちのいくつかは不要です。Adobe recommends you create a custom copy of the [!UICONTROL DAM Update Asset] workflow model, and remove any unnecessary steps. In this case, update the launchers for [!UICONTROL DAM Update Asset] to point to the new model.
+[!UICONTROL DAM Update Asset] Workflowには、Scene7 PTIFFの生成や [!DNL Adobe InDesign Server] 統合など、タスクに対して設定されたすべての手順が含まれます。 ただし、大多数のユーザーにとってこれらの手順のうちのいくつかは不要です。Adobe recommends you create a custom copy of the [!UICONTROL DAM Update Asset] workflow model, and remove any unnecessary steps. In this case, update the launchers for [!UICONTROL DAM Update Asset] to point to the new model.
 
 Running the [!UICONTROL DAM Update Asset] workflow intensively can sharply increase the size of your file datatastore. アドビが実施した実験の結果によると、8 時間以内に約 5,500 のワークフローを実行した場合、データストアのサイズが約 400 GB 増加する可能性があります。
 
@@ -207,9 +210,9 @@ In addition, set the path of ImageMagick&#39;s temporary folder in the `configur
 
 >[!NOTE]
 >
->ImageMagickとファイルは、ではなく、で使用で `policy.xml` きます。 `configure.xml` 設定ファ `/usr/lib64/ImageMagick-&#42;/config/` イルの場所は `/etc/ImageMagick/`[](https://www.imagemagick.org/script/resources.php) 、ImageMagickのドキュメントを参照してください。
+>ImageMagick `policy.xml` と `configure.xml` ファイルは、ではなく、で入手できます `/usr/lib64/ImageMagick-&#42;/config/` 。設定ファイルの場所については、ImageMagickのドキュメント `/etc/ImageMagick/`[](https://www.imagemagick.org/script/resources.php) を参照してください。
 
-If you are using [!DNL Experience Manager] on Adobe Managed Services (AMS), reach out to Adobe Customer Care if you plan to process lots of large PSD or PSB files. AMS導入のためのこれらのベストプラクティスを実装し、アドビ独自の形式に最適なツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] では、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
+If you are using [!DNL Experience Manager] on Adobe Managed Services (AMS), reach out to Adobe Customer Care if you plan to process lots of large PSD or PSB files. AMSデプロイメントに関するこれらのベストプラクティスを実装し、アドビ独自の形式に関する最良のツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] は、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
 
 ### XMP の書き戻し {#xmp-writeback}
 
@@ -239,23 +242,23 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 ## 検索インデックス {#search-indexes}
 
-システムインデックスの更新が含まれている場合が多いので、最新のサービスパックやパフォーマンス関連のホットフィックスを実装してください。インデックス [の最適化については](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html) 、パフォーマンス調整のヒントを参照してください。
+システムインデックスの更新が含まれている場合が多いので、最新のサービスパックやパフォーマンス関連のホットフィックスを実装してください。一部のインデックスの最適化については、 [パフォーマンス調整のヒント](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html) （英語）を参照してください。
 
 頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法（英語）](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。For additional insights around query and index best practices, see [Best Practices for Queries and Indexing](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
 ### Lucene Index の設定 {#lucene-index-configurations}
 
-Some optimizations can be done on the Oak index configurations that can help improve [!DNL Experience Manager Assets] performance. インデックス設定を更新して、再インデックス作成時間を改善します。
+Some optimizations can be done on the Oak index configurations that can help improve [!DNL Experience Manager Assets] performance. インデックス構成を更新して再インデックス作成時間を改善します。
 
 1. Open CRXDe `/crx/de/index.jsp` and log in as an administrative user.
-1. 参照しま `/oak:index/lucene`す。
-1. 値、お `String[]` よびを `excludedPaths` 持つプロ `/var`パテ `/etc/workflow/instances`ィ `/etc/replication`です。および。
-1. 参照しま `/oak:index/damAssetLucene`す。 値を追加持つプ `String[]` ロパティ `includedPaths``/content/dam`。 変更を保存します。
+1. を参照し `/oak:index/lucene`ます。
+1. 値、お `String[]` よびを持つ追加プロパティ `excludedPaths``/var`で `/etc/workflow/instances``/etc/replication`す。
+1. を参照し `/oak:index/damAssetLucene`ます。 値を追加持つ `String[]` プロパテ `includedPaths` ィ `/content/dam`。 変更を保存します。
 
-例えば、PDFドキュメント内のテキストを検索する場合など、アセットの全文検索を行う必要がない場合は、無効にします。 フルテキストインデックスを無効にすることで、インデックスのパフォーマンスを向上できます。 テキスト抽出を無 [!DNL Apache Lucene] 効にするには、次の手順に従います。
+例えば、PDFドキュメント内のテキストを検索する場合など、アセットをフルテキスト検索する必要がない場合は、これを無効にします。 フルテキストインデックスを無効にすると、インデックスのパフォーマンスが向上します。 テキスト [!DNL Apache Lucene] 抽出を無効にするには、次の手順に従います。
 
-1. インターフ [!DNL Experience Manager] ェイスで、 [!UICONTROL Package Managerにアクセスします]。
-1. disable_indexingbinarytextraction-10.zipで入手可能なパッケ [ージをアップロードしてインストールします](assets/disable_indexingbinarytextextraction-10.zip)。
+1. インター [!DNL Experience Manager] フェイスで、 [!UICONTROL パッケージマネージャーにアクセスします]。
+1. disable_indexingbinarytextraction-10.zipで入手可能なパッケージをアップロードしてインスト [ールします](assets/disable_indexingbinarytextextraction-10.zip)。
 
 ### guessTotal {#guess-total}
 
@@ -267,7 +270,7 @@ Some optimizations can be done on the Oak index configurations that can help imp
 
 There are two major known issues related to large files in [!DNL Experience Manager]. ファイルのサイズが 2 GB 以上に到達すると、コールドスタンバイの同期でメモリ不足のエラーが発生することがあります。場合によっては、スタンバイの同期が実行されなくなります。また、プライマリインスタンスのクラッシュを引き起こすこともあります。This scenario applies to any file in [!DNL Experience Manager] that is larger than 2GB, including content packages.
 
-同様に、共有S3データストアを使用してファイルのサイズが2 GBに達した場合、キャッシュからファイルシステムにファイルが完全に保持されるまで、しばらく時間がかかる場合があります。 結果として、バイナリなしのレプリケーションを使用しているとき、レプリケーションが完了する前にバイナリデータが保持されていなかった可能性があります。この状況は、特にデータの可用性が重要な場合に問題を引き起こす可能性があります。
+同様に、共有S3データストアを使用している間にファイルのサイズが2 GBに達した場合は、ファイルがキャッシュからファイルシステムに完全に保持されるまでに時間がかかる場合があります。 結果として、バイナリなしのレプリケーションを使用しているとき、レプリケーションが完了する前にバイナリデータが保持されていなかった可能性があります。この状況は、特にデータの可用性が重要な場合に問題を引き起こす可能性があります。
 
 ## パフォーマンスのテスト {#performance-testing}
 
@@ -290,13 +293,13 @@ To minimize latency and achieve high throughput through efficient CPU utilizatio
 * Run load tests against the [!DNL Experience Manager] instance.
 * アップロードのパフォーマンスと UI の応答性を監視する.
 
-## [!DNL Experience Manager Assets] 資産管理タスクの実績チェックリストと影響 {#checklist}
+## [!DNL Experience Manager Assets] 資産管理タスクの性能チェックリストと影響 {#checklist}
 
 * HTTPS を有効化して企業の HTTP トラフィックスニッファーに対応する.
 * サイズの大きなアセットのアップロードには有線接続を使用する.
 * Java 8 にデプロイする
 * 最適な JVM パラメーターを設定する。
-* ファイルシステムのDataStoreまたはS3データストアを設定します。
+* ファイルシステムのDataStoreまたはS3データストアを構成します。
 * 一時的なワークフローを有効化する.
 * Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する.
 * Configure [!DNL ImageMagick] to limit resource consumption.
