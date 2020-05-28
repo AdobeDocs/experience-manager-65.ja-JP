@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 68cd1c13fff94ac485865e50bc955548cd285b14
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '1180'
+ht-degree: 91%
 
 ---
 
@@ -64,15 +67,15 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 >* HTML から PDF への変換機能を使用する場合、システムフォントディレクトリに特定のフォントが含まれている必要があります。Linux、Solaris および AIX システムでは、システムフォントディレクトリに Courier フォントが含まれている必要があります。Windows システムでは、システムフォントディレクトリに Times New Roman が含まれている必要があります。
    >
    > 
-* Linux上のAEM Formsでは、次に示すデフォルトの日本語フォントが使用されます。 日本語フォントを変換するには、>systemで、これらのフォントのうち少なくとも1つを使用できる必要があります。
+* （UNIXベースのシステムのみ）AEM Formsサーバーで、日本語フォントを使用したWebページをPDFドキュメントに変換するには、次の日本語フォントのいずれかを使用できます。
    >
    >   
-   * 『サザナミゴシック』
-   >   * 『Kozuka Gothic Pro-VI』
+   * 「Sazanami Gothic」
+   >   * &quot;Kozuka Gothic Pro-VI&quot;
    >   * 『Kozuka Mincho Pro-VI』
-   >   * 『サザナミゴシック』
+   >   * 「Sazanami Gothic」
    >   * &quot;Kozuka Mincho Pr6N&quot;
-   >   * 『サザナミ民潮』
+   >   * 『サザナミ明朝』
    >   * &quot;Adobe Heiti Std&quot;
    >   * &quot;Adobe Song Std&quot;
 >* ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
@@ -112,7 +115,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
    ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻. 「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. (Optional) In the **Specify custom Preflight profile** option, click Browse, and select a [custom Preflight profile](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用されます。
+1. (Optional) In the **Specify custom Preflight profile** option, click Browse, and select a [custom Preflight profile](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用します。
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
