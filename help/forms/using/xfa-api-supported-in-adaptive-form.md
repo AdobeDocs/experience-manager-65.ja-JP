@@ -9,7 +9,10 @@ topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '700'
+ht-degree: 86%
 
 ---
 
@@ -58,7 +61,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>手書き署名</p> </td>
-   <td><p>（非推奨）手書き署名</p> </td>
+   <td><p>手書き署名</p> </td>
   </tr>
   <tr>
    <td><p>数値フィールド </p> </td>
@@ -130,7 +133,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの speakPriority プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>アクセシビリティ：speakText</p> </td>
+   <td><p>アクセシビリティ： speakText</p> </td>
    <td><p>アダプティブフォームのカスタム Accessibility テキストにマッピング済み。</p> </td>
   </tr>
   <tr>
@@ -151,7 +154,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>items<em> (List Box, Check Box)</em></p> </td>
-   <td><p>アダプティブフォームの options プロパティにマッピング済み。Options式を使用して上書きできます。</p> </td>
+   <td><p>アダプティブフォームの options プロパティにマッピング済み。これは、オプション式を使用して上書きできます。</p> </td>
   </tr>
   <tr>
    <td><p>maxChar<em> (Text Field)</em></p> </td>
