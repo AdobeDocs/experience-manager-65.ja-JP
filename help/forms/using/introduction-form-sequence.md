@@ -10,7 +10,10 @@ topic-tags: author
 discoiquuid: 0f335ea0-504f-4cc0-b97b-c3fc715bcc2e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '543'
+ht-degree: 95%
 
 ---
 
@@ -38,7 +41,7 @@ source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
    * **E 署名**：XFA ベースのアダプティブフォームで使用できる&#x200B;**署名**&#x200B;コンポーネントが含まれます。E 署名には、次の署名サービスが含まれます。
 
       * Adobe Document Cloud eSign サービス
-      * （非推奨）手書き署名
+      * 手書きの署名
    * **確認**：ユーザーがフォームに署名してシーケンスの確認（概要）段階に到達したときにフォーム送信の確認メッセージを表示する&#x200B;**概要**&#x200B;コンポーネントが含まれます。作成者は概要コンポーネントのテキストの構成、お礼のメッセージの表示、生成された PDF へのリンクの表示などを設定できます。
 
 
