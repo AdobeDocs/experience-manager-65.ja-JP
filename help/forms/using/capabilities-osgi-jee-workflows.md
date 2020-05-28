@@ -9,7 +9,10 @@ topic-tags: publish
 discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 182043b43e9fdb2e7e6de982bceb87b43f36a3ba
+source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+workflow-type: tm+mt
+source-wordcount: '870'
+ht-degree: 71%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 182043b43e9fdb2e7e6de982bceb87b43f36a3ba
 
 ## AEM インボックスと HTML ワークスペース {#aem-inbox-and-html-workspace}
 
-AEM Inboxを使用して、OSGi上でForms中心のAEMワークフローを実行および監視できます。 一方、HTML Workspaceでは、AEM Forms JEEワークフローの実行と監視が可能です。 次の表は、OSGi上のForms中心のAEMワークフロー用のAEM InboxおよびAEM Forms JEEワークフロー用のHTML Workspaceで使用できる様々な重要なアクションを示しています。
+AEMインボックスを使用して、OSGi上でForms中心のAEMワークフローを実行および監視できます。 一方、HTML Workspaceでは、AEM Forms JEEワークフローの実行と監視が可能です。 次の表は、OSGi上のForms中心のAEMワークフロー用のAEMインボックスで使用可能な、AEM Forms JEEワークフロー用のAEMおよびHTML Workspaceで使用可能な様々な重要なアクションを理解するうえで役立ちます。
 
 <table>
  <tbody>
@@ -102,7 +105,7 @@ AEM Inboxを使用して、OSGi上でForms中心のAEMワークフローを実�
 
 ## OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワークフロー {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワークフロー（JEE Process Management 上の AEM Forms）には、それぞれ異なる機能セットが付属しています。次の表に、OSGi上のフォーム中心のAEMワークフローおよびJEE上のAEM Formsワークフローで使用できる重要な機能を示します。
+OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワークフロー（JEE Process Management 上の AEM Forms）には、それぞれ異なる機能セットが付属しています。次の表は、OSGi上のフォーム中心のAEMワークフローおよびJEE上のAEM Formsワークフローで使用できる重要な機能を理解するうえで役立ちます。
 
 <table>
  <tbody>
@@ -122,7 +125,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
    <td>サポート対象</td>
   </tr>
   <tr>
-   <td>（非推奨）手書き署名</td>
+   <td>（非推奨）Scribble Signature</td>
    <td>サポート対象</td>
    <td>サポート対象<br /> </td>
   </tr>
@@ -174,7 +177,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   <tr>
    <td>完了したタスクをアダプティブフォームまたは PDF ドキュメントとしてレンダリング</td>
    <td>サポート対象</td>
-   <td>サポート対象[4]</td>
+   <td>サポート対象 [4]</td>
   </tr>
   <tr>
    <td>Correspondence Management との統合</td>
@@ -307,7 +310,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
    <td>サポート対象</td>
   </tr>
   <tr>
-   <td>ゲートウェイ、待機なし </td>
+   <td>ゲートウェイ、NO WAIT </td>
    <td>サポート対象</td>
    <td>サポート対象</td>
   </tr>
@@ -317,7 +320,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
    <td>サポート対象</td>
   </tr>
   <tr>
-   <td>OR、AND Split</td>
+   <td>OR、AND SPLIT</td>
    <td>サポートなし</td>
    <td>サポート対象</td>
   </tr>
@@ -329,14 +332,14 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
  </tbody>
 </table>
 
-1. OSGiでフォーム中心のAEMワークフローを使用して、入力済みのアダプティブフォームに署名できます。 OSGi上のフォーム中心のAEMワークフローは、フォームの署名をサポートしています。 The [in-form signing](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) experience is not supported.
+1. フォーム中心のAEMワークフローをOSGiで使用して、入力済みのアダプティブフォームに署名できます。 OSGi上のフォーム中心のAEMワークフローは、フォームの署名をサポートしています。 The [in-form signing](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) experience is not supported.
 
-1. AEM Forms OSGiおよびHTML Workspaceでフォーム中心のワークフローを実行および監視し、AEM Forms JEEワークフローを実行および監視するには、AEM Inboxへのアクセスが必要です。
-1. ネイティブの AEM Forms Document Services は、OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワークフローの両方で使用することができます。AEM Workflowは、OSGiおよびAEM Forms JEE(Process Management)ワークフロー上のフォーム中心のAEMワークフローに対して、ネイティブドキュメントサービスを使用します。
+1. AEM Forms JEEワークフローを実行および監視するには、AEM Forms OSGiおよびHTML Workspaceでフォーム中心のワークフローを実行および監視するために、AEMインボックスへのアクセスが必要です。
+1. ネイティブの AEM Forms Document Services は、OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワークフローの両方で使用することができます。AEM Workflowは、OSGiおよびAEM Forms JEE(Process Management)ワークフロー上のフォーム中心のAEMワークフローに対してネイティブドキュメントサービスを使用します。
 1. AEM Forms JEE ワークフローでレンダリングできるのは、アダプティブフォームだけです。アダプティブフォームを PDF ドキュメントとしてレンダリングすることはできません。
 1. AEM Forms JEE ワークフローには、Adobe Sign 用の独立したステップは存在しません。AEM Forms JEE ワークフローに対して、Adobe Sign が有効になっているアダプティブフォームを使用する必要があります。詳しくは、[Adobe Sign のドキュメント](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)を参照してください。
-1. 「Invoke Form Data Model Service [](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) 」手順を使用して、Webサービスを呼び出し、サードパーティアプリケーションからデータを投稿または取得できます。
-1. 「電子メールの送信」ステ [ップを使用して](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step) 、電子メールを送信できます。
+1. 「 [Invoke Form Data Model Service](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) 」手順を使用すると、Webサービスサービスを呼び出し、サードパーティのアプリケーションからデータを投稿または取得できます。
+1. 「電子メールの [送信](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step) 」手順を使用して、電子メールを送信できます。
 
 ## AEM インボックスの機能と AEM Forms アプリケーションの機能との違い {#differences-between-aem-inbox-and-aem-forms-app-features}
 
