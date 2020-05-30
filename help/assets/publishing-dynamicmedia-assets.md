@@ -8,28 +8,31 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: b8fe3267a808f1a64b78620156826e0b6e3a5676
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 76%
 
 ---
 
 
 # Dynamic Media アセットの公開 {#publishing-dynamic-media-assets}
 
-You publish your Dynamic Media assets by selecting the assets and tapping **[!UICONTROL Publish]**. 動的メディアアセットは、公開後、URL経由でWebページに含めたり、埋め込みを使用してWebページに含めたりできます。
+ダイナミックメディアアセットを公開するには、既にアップロード済みのアセットを選択し、「 **[!UICONTROL 公開]** 」または「 **[!UICONTROL クイック公開]**」をタップします。 ダイナミックメディアアセットが公開されたら、URL経由でWebページに含めたり、ページにコードを埋め込んだりすることができます。
 
-また、ユーザの介入なしで、アップロードしたアセットを即座に公開することもできます。 See [Configuring Dynamic Media - Scene7 mode](config-dms7.md).
+また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。See [Configuring Dynamic Media - Scene7 mode](config-dms7.md).
 
-In the **[!UICONTROL Card View]**, a small globe icon appears directly below an asset&#39;s name to indicate that it is published. In the **[!UICONTROL List View]**, a **[!UICONTROL Published]** column indicates which assets are published or which are not.
+カー **[!UICONTROL ド表示で]**、アセット名のすぐ下、アセットが発行されたことを示す日時の左側に、小さなグローブアイコンが表示されます。 **[!UICONTROL リスト表示]**&#x200B;では、公開されたアセットと公開されていないアセットが「**[!UICONTROL 公開]**」列でわかります。
 
 >[!NOTE]
 >
->アセットが既に公開されている場合は、AEMを使用してアセットを別のフォルダに移動し、新しい場所から再公開すると、元の公開済みアセットの場所と新しく再公開したアセットを引き続き使用できます。ただし、元の公開済みアセットはAEMに対して「失われる」ので、非公開にすることはできません。したがって、ベストプラクティスとして、アセットを別のフォルダーに移動する前に、アセットの公開を取り消す必要があります。
+>アセットが既に公開されていて、AEM を使用してアセットを別のフォルダーに移動し、その移動先から再公開した場合は、新しく再公開されたアセットに加えて、元の公開済みアセットの場所も使用できる状態のままです。ただし、元の公開済みアセットは AEM からは「消失」しているので、非公開にすることができません。そのため、ベストプラクティスとしては、アセットを別のフォルダーに移動する前に、アセットを非公開にしてください。
 
-ビデオアセットをエンコードした直後に公開する場合は、エンコードが完全に完了していることを確認します。ビデオがエンコードされている間は、ビデオ処理ワークフローが進行中であることが通知されます。ビデオのエンコーディングが完了すると、ビデオのレンディションをプレビューできるようになります。この時点で、公開エラーが発生することなくビデオを公開しても安全です。
+ビデオアセットをエンコードした直後に公開する場合は、エンコードが完全に終了していることを確認してください。ビデオのエンコードがまだ完了していない場合は、ビデオ処理ワークフローが実行中であることが通知されます。ビデオのエンコードが完了すると、ビデオレンディションをプレビューできるようになります。その時点で、エラーが発生することなく、安全にビデオを公開できます。
 
 [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)も参照してください。
 
-[Web ページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
+See also [Embedding the Dynamic Media Video or Image viewer on a web page](embed-code.md)
 
 >[!NOTE]
 >
@@ -45,4 +48,4 @@ In the **[!UICONTROL Card View]**, a small globe icon appears directly below an 
 
 AEM は現在、HTTP/2 上でのすべての Dynamic Media コンテンツ（画像とビデオ）の配信をサポートしています。つまり、画像やビデオの公開済み URL や埋め込みコードは、ホストされるアセットを受け取るアプリケーションとの統合に使用できます。その公開済みアセットは、その後、HTTP/2 プロトコルで配信されます。この配信方法により、ブラウザーとサーバーの通信が向上し、すべての Dynamic Media アセットの応答時間と読み込み時間が短くなります。
 
-See [HTTP/2 delivery of content frequently asked questions](/help/sites-administering/scene7-http2faq.md) to learn more.
+詳しくは、[コンテンツの HTTP/2 配信に関する FAQ](/help/sites-administering/scene7-http2faq.md) を参照してください。
