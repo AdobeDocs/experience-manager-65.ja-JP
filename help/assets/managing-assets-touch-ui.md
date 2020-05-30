@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 85a93dfa3bcacfb0820029642c03b2d35552121f
 workflow-type: tm+mt
-source-wordcount: '9298'
+source-wordcount: '9304'
 ht-degree: 64%
 
 ---
@@ -301,11 +301,11 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 ### ストリーミングアップロード {#streamed-uploads}
 
-If you upload many assets to [!DNL Experience Manager], the I/O requests to server increase drastically, which reduces the upload efficiency and can even cause some upload task to time out. [!DNL Experience Manager Assets] アセットのストリームアップロードをサポートします。 ストリーミングアップロードにより、リポジトリにアセットをコピーする前にサーバーの一時フォルダーのアセットストレージを回避することで、アップロード操作中のディスクの I/O が低減します。代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。Streamed upload is enabled by default in [!DNL Assets].
+多数のアセットをAdobe Experience Managerにアップロードする場合、サーバーへのI/O要求は大幅に増加するので、アップロードの効率が低下し、一部のアップロードタスクがタイムアウトする場合もあります。 [!DNL Experience Manager Assets] アセットのストリームアップロードをサポートします。 ストリーミングアップロードにより、リポジトリにアセットをコピーする前にサーバーの一時フォルダーのアセットストレージを回避することで、アップロード操作中のディスクの I/O が低減します。代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。Streamed upload is enabled by default in [!DNL Assets].
 
 >[!NOTE]
 >
->Streaming upload is disabled for [!DNL Experience Manager] running on JEE server with servlet-api version lower than 3.1.
+>サーブレットAPIバージョン3.1より前のJEEサーバーで実行しているAdobe Experience Managerに対しては、ストリーミングアップロードは無効です。
 
 ### アセットが含まれている ZIP アーカイブの抽出 {#extractzip}
 
@@ -573,7 +573,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 >
 >Dynamic Media 特有の追加情報については、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
-1. 発行するアセットまたはフォルダーの場所に移動します。
+1. 公開するアセットまたはフォルダーの場所に移動します。
 
 1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** icon from the toolbar.
 1. アセットが他のアセットを参照する場合は、その参照がウィザードに表示されます。表示されるのは、非公開の参照か、最後に公開または非公開にされた後に変更された参照だけです。公開する参照を選択します。
