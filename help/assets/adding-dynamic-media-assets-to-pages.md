@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 876589d26f17dc088531c3f34deea0fab4c7726a
+source-git-commit: b6a7648699bc8e8e041749fb03998f86a27292ce
 workflow-type: tm+mt
-source-wordcount: '3137'
-ht-degree: 86%
+source-wordcount: '3129'
+ht-degree: 85%
 
 ---
 
@@ -29,7 +29,7 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
-Dynamic Media、インタラクティブメディア、パノラマメディア、ビデオ 360 メディアのいずれかのコンポーネントを 1 つのページに追加することは、コンポーネントを任意のページに追加することと同じです。Dynamic Media コンポーネントについては、後の節で説明します。
+3Dメディア、ダイナミックメディア、インタラクティブメディア、パノラマメディア、スマート切り抜きビデオ、ビデオ360メディアの各コンポーネントをページに追加するのと同じです。 Dynamic Media コンポーネントについては、後の節で説明します。
 
 1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
 1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、 **[!UICONTROL コンポーネント]** アイコンをクリックします。
@@ -40,10 +40,6 @@ Dynamic Media、インタラクティブメディア、パノラマメディア�
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
 1. Drag a **[!UICONTROL Dynamic Media]** component that you want to use and drop it in the desired location on the page.
-
-   以下の例では、**[!UICONTROL ビデオ 360 メディア]**&#x200B;コンポーネントが使用されています。
-
-   ![6_5_360video_wcmcomponentdrag](assets/6_5_360video_wcmcomponentdrag.png)
 
 1. コンポーネントの上に直接マウスポインターを置きます。コンポーネントが青色のボックスで囲まれた時点で 1 回タップすると、コンポーネントのツールバーが表示されます。**[!UICONTROL 設定（レンチ）]** アイコンをタップします。
 
@@ -57,7 +53,7 @@ Dynamic Media、インタラクティブメディア、パノラマメディア�
 
    Dynamic Media ビデオ 360 メディアコンポーネント。
 
-1. 完了したら、ダイアログボックスの右上隅近くにあるチェックマークをタップして、変更を保存します。
+1. 完了したら、ダイアログボックスの右上隅にあるチェックマークをタップして、変更を保存します。
 
 ### Enabling Dynamic Media components {#enabling-dynamic-media-components}
 
