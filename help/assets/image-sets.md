@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
+source-git-commit: 7c6655342256922473ec51dc1a58b2d08034b65b
+workflow-type: tm+mt
+source-wordcount: '2078'
+ht-degree: 97%
 
 ---
 
@@ -38,7 +41,7 @@ source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
 1. [複数ビュー用のマスター画像をアップロードします。](#uploading-assets-in-image-sets)
 
-   まずは画像セット用の画像をアップロードします。ユーザーは画像セットビューアで画像をズームできるので、画像を選択する際にはズームを考慮します。最適なズームディテールを得るために、最大寸法の画像が少なくとも2000 pixelであることを確認します。 ダイナミックメディアでは、各画像を最大25メガピクセルまでレンダリングできます。 例えば、5000 x 5000メガピクセルの画像や、その他のサイズの組み合わせを25メガピクセルまで使用できます。
+   まずは画像セット用の画像をアップロードします。ユーザーは画像セットビューアで画像をズームできるので、画像を選択する際にはズームを考慮します。最適なズーム詳細には、最大サイズで 2,000 ピクセル以上の画像を使用してください。Dynamic Media では、各画像を最大 25 メガピクセルまでレンダリングできます。例えば、5,000 x 5,000 メガピクセルの画像や、その他のサイズの組み合わせを 25 メガピクセルまで使用できます。
 
    AEM Assets では多くの画像ファイル形式がサポートされますが、可逆圧縮 TIFF、PNG および EPS 画像の使用が推奨されます。
 
@@ -48,10 +51,10 @@ source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
    Assets で画像セットを作成するには、**[!UICONTROL 作成／画像セット]**&#x200B;をタップまたはクリックします。次に、画像を追加して「**[!UICONTROL 保存]**」をクリックします。
 
-   [バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して画像セットを自動的に作成することもできます。
+   [バッチセットプリセット](/help/assets/config-dms7.md)を使用して画像セットを自動的に作成することもできます。
    >[!IMPORTANT]
    >
-   >バッチセットは、IPS(Image Production System)によってアセット取り込みの一部として作成され、ダイナミックメディア — Scene7モードでのみ使用できます。
+   >バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、ダイナミックメディア — Scene7モードでのみ使用できます。
 
    詳しくは、[アップロード用の画像セットアセットの準備およびファイルのアップロード](#uploading-assets-in-image-sets)を参照してください。
 
@@ -70,7 +73,7 @@ source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
 1. [画像セットを公開します。](/help/assets/publishing-dynamicmedia-assets.md)
 
-   画像セットを公開すると、URL と埋め込み文字列がアクティベートされます。さらに、作成した[カスタムビューアプリセットを公開する](/help/assets/managing-viewer-presets.md)必要があります。既製のビューアプリセットが既に公開されています。
+   画像セットを公開すると、URLと埋め込みコードがアクティブになります。 さらに、作成した[カスタムビューアプリセットを公開する](/help/assets/managing-viewer-presets.md)必要があります。既製のビューアプリセットが既に公開されています。
 
 1. [URL を Web アプリケーションにリンクする](/help/assets/linking-urls-to-yourwebapplication.md)か、[ビデオビューアまたは画像ビューアを埋め込みます](/help/assets/embed-code.md)。
 
