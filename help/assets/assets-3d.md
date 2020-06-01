@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS and AEM as a Cloud Service
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 7c6655342256922473ec51dc1a58b2d08034b65b
+source-git-commit: 46848fee0a3f838354ec65f2ea733cf70ac53deb
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2162'
 ht-degree: 13%
 
 ---
@@ -170,9 +170,7 @@ Webページが **[!UICONTROL 編集]** モードの場合、3Dアセットと�
 
 ## 3D Mediaコンポーネントの操作について {#working-with-three-d-media-component}
 
-ダイナミックメディアには、AEMサイトで3Dモデルをインタラクティブに表示するために使用できるダイナミックメディア3Dメディアコンポーネントが含まれています。
-
-この節では、以下のトピックについて説明します。
+ダイナミックメディアには、AEMサイトで使用できるダイナミックメディア3Dメディアコンポーネントが含まれており、Webページ上で3Dモデルをインタラクティブに表示できます。
 
 * [ページテンプレートへの3Dメディアコンポーネントの追加](#adding-three-d-media-component-to-page-template)
 * [Webページへの3D Mediaコンポーネントの追加](#adding-the-three-d-media-component-to-a-web-page)
