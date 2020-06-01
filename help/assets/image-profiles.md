@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media イメージプロファイル
-description: アンシャープマスクのほか、スマート切り抜きとスマートスウォッチのどちらか一方または両方の設定を含むイメージプロファイルを作成し、そのプロファイルを画像アセットのフォルダーに適用します。
+description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 3cc0df3cdcb44250e26a31ac3ce1ad86064938d6
+source-git-commit: e78b3701e57b1954f03591c38b72e3dd33e8ef46
 workflow-type: tm+mt
-source-wordcount: '2671'
-ht-degree: 97%
+source-wordcount: '2674'
+ht-degree: 93%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 97%
 
 ## 切り抜きツールオプション {#crop-options}
 
-選択可能な 2 つの画像切り抜きオプションと、カラーおよび画像スウォッチの作成を自動化するためのオプションがあります。
+<!-- CQDOC-16069 -->Smart Crop coordinates are aspect ratio dependent. That is, for the various smart crop settings in an image profile, if the aspect ratio is the same for the added dimensions that are in the image profile, then the same aspect ratio is sent to Dynamic media. Because of this, Adobe recommends that you use the same crop area. Doing so will ensure that there is no impact to different dimensions used in the image profile.
 
->[!IMPORTANT]
->
->作成する各スマート切り抜き生成には、追加の処理が必要になることに注意してください。 例えば、5つ以上のスマート切り抜きの縦横比を追加すると、アセットの取り込み速度が遅くなる場合があります。 また、システムの負荷が増大する場合もあります。 スマート切り抜きはフォルダーレベルで適用できるので、必要な場所での *みフォルダーに使用することをお勧めします* 。
+作成する各スマート切り抜き生成には、追加の処理が必要になることに注意してください。 例えば、5つ以上のスマート切り抜きの縦横比を追加すると、アセットの取り込み速度が遅くなる場合があります。 また、システムの負荷が増大する場合もあります。 スマート切り抜きはフォルダーレベルで適用できるので、必要な場所での *みフォルダーに使用することをお勧めします* 。
+
+2つの画像切り抜きオプションから選択できます。 また、カラースウォッチと画像スウォッチの作成を自動化するオプションもあります。
 
 <table>
  <tbody>
@@ -49,7 +49,7 @@ ht-degree: 97%
      <li>切り抜きの開始点：「左」が X、「上」が Y です。</li>
      <li>水平方向の計算：元の画像の水平方向のピクセルサイズから「左」と「右」を差し引きます。</li>
      <li>垂直方向の計算：垂直方向の高さ（ピクセル）から「上」と「下」を差し引きます。</li>
-    </ul> <p>例えば、4000 x 3000 ピクセルの画像があるとします。値として「上」= 250、「下」= 500、「左」= 300、「右」= 700 を使用します。</p> <p>左上 (300,250) から、(4000-300-700, 3000-250-500) つまり (3000,2250) のフィルスペースを使って切り抜きます。</p> </td>
+    </ul> <p>例えば、4000 x 3000 ピクセルの画像があるとします。次の値を使用します。 [上] = 250、[下] = 500、[左] = 300、[右] = 700</p> <p>左上 (300,250) から、(4000-300-700, 3000-250-500) つまり (3000,2250) のフィルスペースを使って切り抜きます。</p> </td>
   </tr>
   <tr>
    <td>スマート切り抜き</td>
@@ -72,7 +72,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、ptiff 内の最大サイズのレンディションはアンシャープマスクの影響を受けませんが、サムネールのような小さいサイズのレンディションは変更されます（そしてアンシャープマスクを表示します）。
+>アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、ptiff内の最大サイズのレンディションは、サムネールなどの小さいサイズのレンディションは変更される（そしてアンシャープマスクが表示される）のに対し、アンシャープマスクの影響を受けません。
 
 「**[!UICONTROL アンシャープマスク]**」には次のフィルタリングオプションがあります。
 
@@ -209,7 +209,7 @@ ht-degree: 97%
 
 1. フォルダーをタップして、その内容を開きます。
 1. スマート切り抜きまたはスマートスウォッチを調整したい画像をタップます。
-1. ツールバーで、「**[!UICONTROL スマート切り抜き]**」をタップします。
+1. In the toolbar, tap **[!UICONTROL Smart Crop]**.
 
 1. 次のいずれかの操作をおこないます。
 
@@ -288,6 +288,6 @@ ht-degree: 97%
 1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、イメージプロファイルを削除するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL イメージプロファイル]**」タブを選択します。
-1. 「**[!UICONTROL プロファイル名]**」ドロップダウンメニューから「**[!UICONTROL なし]**」を選択し、「**[!UICONTROL 保存して閉じる]**」をタップします。
+1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close]**.
 
    既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
