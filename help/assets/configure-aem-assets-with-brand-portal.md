@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cdcea49a25807e125ea15e7132ac9f188d3525bc
+source-git-commit: 9a27aabef07d5b5104c08c414138fbb22e284a68
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 25%
+ht-degree: 23%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Manager(AEM)Assetsは、Adobe Developer Consoleを介してBran
 
 >[!NOTE]
 >
->Adobe I/O を使用した AEM Assets と Brand Portal の連携の設定は、AEM 6.5.4.0 以降でサポートされています。
+>Adobe Developer Consoleを介したBrand PortalでのAEM Assetsの設定は、AEM 6.5.4.0以降でサポートされます。
 >
 >これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。
 >
@@ -35,13 +35,13 @@ Adobe Experience Manager(AEM)Assetsは、Adobe Developer Consoleを介してBran
 >
 >***既存のお客様のみ***
 >
->既存のレガシー OAuth Gateway 設定を引き続き使用することをお勧めします。レガシー OAuth Gateway 設定に問題が発生した場合は、既存の設定を削除し、Adobe I/O から新しい設定を作成します。
+>既存のレガシー OAuth Gateway 設定を引き続き使用することをお勧めします。レガシーOAuth Gateway設定で問題が発生した場合は、既存の設定を削除し、Adobe Developer Consoleを使用して新しい設定を作成します。
 
 
 
 このヘルプでは、次の2つの使用例について説明します。
-* [新しい設定](#configure-new-integration-65): 新しいBrand Portalユーザーで、AEM Assets作成者インスタンスをBrand Portalで設定する場合は、Adobe I/Oで新しい設定を作成できます。
-* [アップグレード設定](#upgrade-integration-65): 既存のBrand Portalユーザーで、レガシーOAuth GatewayのBrand Portalで設定したAEM Assets作成者インスタンスを持つ場合は、既存の設定を削除し、Adobe I/Oで新しい設定を作成することをお勧めします。
+* [新しい設定](#configure-new-integration-65): 新しいBrand Portalユーザーで、AEM Assets作成者インスタンスをBrand Portalで設定する場合は、Adobe Developer Consoleで新しい設定を作成できます。
+* [アップグレード設定](#upgrade-integration-65): 既存のBrand Portalユーザーで、レガシーOAuth GatewayのBrand Portalで設定したAEM Assets作成者インスタンスを持つ場合は、既存の設定を削除し、Adobe Developer Consoleで新しい設定を作成することをお勧めします。
 
 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
