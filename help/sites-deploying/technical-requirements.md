@@ -11,10 +11,10 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f16c25468418b6f228132e9d06017d32466cf43a
+source-git-commit: a299e26668b1f1f08cca8d4a8085da185522ec96
 workflow-type: tm+mt
-source-wordcount: '3119'
-ht-degree: 83%
+source-wordcount: '3118'
+ht-degree: 85%
 
 ---
 
@@ -100,7 +100,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
  <tbody>
   <tr>
    <td>プラットフォーム</td>
-   <td>サポートレベル<br /> </td>
+   <td>サポートレベル</td>
   </tr>
   <tr>
    <td>Oracle Java SE 12 JDK [1]</td>
@@ -144,15 +144,15 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 
 | **プラットフォーム** | **説明** | **サポートレベル** |
 |---|---|---|
-| **TARファイルを含むファイル・システム[1 ]** | リポジトリ | A：サポート対象 |
-| **データストア[1を持つファイルシステム&#x200B;]** | バイナリ | A：サポート対象 |
-| Store binaries in TAR files on file system [1] | バイナリ | Z：実稼動環境ではサポート対象外 |
+| **TAR ファイルを使用したファイルシステム** `[1]` | リポジトリ | A：サポート対象 |
+| **データストアを持つファイルシステム** `[1]` | バイナリ | A：サポート対象 |
+| ファイルシステムの TAR ファイルへのバイナリの格納 `[1]` | バイナリ | Z：実稼動環境ではサポート対象外 |
 | Amazon S3 | バイナリ | A：サポート対象 |
 | Microsoft Azure Blob Storage | バイナリ | A：サポート対象 |
-| MongoDB Enterprise 4.0 | リポジトリ | A: Supported [2, 3] |
+| MongoDB Enterprise 4.0 | リポジトリ | A：サポート対象 `[2, 3]` |
 | MongoDB Enterprise 3.6 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.4 | リポジトリ | Z：サポート対象外 |
-| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート [4] |
+| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `[4]` |
 | Oracle Database 12c(12.1.x) | リポジトリおよび Forms データベース | R：制限サポート |
 | Microsoft SQL Server 2016 | Forms データベース | A：サポート対象 |
 | **Apache Lucene（クイックスタート組み込み）** | 検索サービス | A：サポート対象 |
@@ -199,11 +199,11 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 |---|---|
 | **Quickstart 組み込みサーブレットエンジン（Jetty 9.4）** | A：サポート対象 |
 | Oracle WebLogic Server 12.2（12cR2） | Z：サポート対象外 |
-| IBM WebSphere Application Server Continuous Delivery（LibertyProfile）（Web Profile 7.0 および IBM JRE 1.8） | R: Restricted Support for new contracts [2] |
-| IBM WebSphere Application Server 9.0 および IBM JRE 1.8 | R: Restricted Support for new contracts [1] [2] |
-| Apache Tomcat 8.5.x | R: Restricted Support for new contracts [2] |
+| IBM WebSphere Application Server Continuous Delivery（LibertyProfile）（Web Profile 7.0 および IBM JRE 1.8） | R：新規契約向けの制限サポート `[2]` |
+| IBM WebSphere Application Server 9.0 および IBM JRE 1.8 | R：新規契約向けの制限サポート `[1]` `[2]` |
+| Apache Tomcat 8.5.x | R：新規契約向けの制限サポート `[2]` |
 | JBoss EAP 7.2.x と JBoss Application Server | Z：サポート対象外 |
-| JBoss EAP 7.1.4 と JBoss Application Server | R: Restricted Support for new contracts [1] [2] |
+| JBoss EAP 7.1.4 と JBoss Application Server | R：新規契約向けの制限サポート `[1]` `[2]` |
 | JBoss EAP 7.0.x と JBoss Application Server | Z：サポート対象外 |
 
 1. AEM Forms を備えたデプロイメントに推奨されています。
@@ -215,11 +215,11 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 
 | **プラットフォーム** | **サポートレベル** |
 |---|---|
-| **Linux、Red Hat ディストリビューションベース** | A: Supported [1] [3] |
-| Linux、Debian ディストリビューションベース（Ubuntu を含む） | A: Supported [2] |
+| **Linux、Red Hat ディストリビューションベース** | A：サポート対象 `[1]` `[3]` |
+| Linux、Debian ディストリビューションベース（Ubuntu を含む） | A：サポート対象 `[2]` |
 | Linux、SUSE ディストリビューションベース | A：サポート対象 |
-| Microsoft Windows Server 2019 [4] | R：新規契約向けの制限サポート |
-| Microsoft Windows Server 2016 [4] | R: Restricted Support for new contracts [5] |
+| Microsoft Windows Server 2019 `[4]` | R：新規契約向けの制限サポート |
+| Microsoft Windows Server 2016 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft Windows Server 2012 R2 | Z：サポート対象外 |
 | Oracle Solaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
@@ -248,7 +248,7 @@ Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバ
 
 | プラットフォーム | サポートレベル |
 |---|---|
-| **Apache httpd 2.4.x** [1,2] | A：サポート対象 |
+| **Apache httpd 2.4.x** `[1,2]` | A：サポート対象 |
 | Microsoft IIS 10（Internet Information Server） | A：サポート対象 |
 | Microsoft IIS 8.5（Internet Information Server） | Z：サポート対象外 |
 
