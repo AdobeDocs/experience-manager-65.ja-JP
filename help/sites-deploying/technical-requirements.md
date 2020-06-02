@@ -11,7 +11,10 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: f16c25468418b6f228132e9d06017d32466cf43a
+workflow-type: tm+mt
+source-wordcount: '3119'
+ht-degree: 83%
 
 ---
 
@@ -35,7 +38,7 @@ Adobe Experience Manager をインストールするための最小要件：
 
 ### 最小サイズ要件 {#minimum-sizing-requirements}
 
-Adobe Experience Managerの実行に必要な最小要件：
+Adobe Experience Managerの実行に関する最小要件：
 
 * 5 GB の空きディスク領域（インストールディレクトリ内）
 * 2 GB メモリ
@@ -100,7 +103,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
    <td>サポートレベル<br /> </td>
   </tr>
   <tr>
-   <td>Oracle Java SE 12 JDK `\[1]`</td>
+   <td>Oracle Java SE 12 JDK [1]</td>
    <td>Z：サポート対象外 </td>
   </tr>
   <tr>
@@ -108,23 +111,23 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
    <td>A：サポート対象</td>
   </tr>
   <tr>
-   <td>Oracle Java SE 10 JDK `\[1]`</td>
+   <td>Oracle Java SE 10 JDK [1]</td>
    <td>Z：サポート対象外 </td>
   </tr>
   <tr>
-   <td>Oracle Java SE 9 JDK `\[1]`</td>
+   <td>Oracle Java SE 9 JDK [1]</td>
    <td>Z：サポート対象外</td>
   </tr>
   <tr>
    <td>Oracle Java SE 8 JDK - 64 ビット</td>
-   <td>A: Supported `\[3]`<br /> </td>
+   <td>A：サポート対象 [3]</td>
   </tr>
   <tr>
-   <td>IBM J9 VM — ビルド2.9、JRE 1.8.0 `\[2]`</td>
+   <td>IBM J9 VM - ビルド 2.9、JRE 1.8.0 [2]</td>
    <td>A：サポート対象</td>
   </tr>
   <tr>
-   <td>IBM J9 VM — ビルド2.8、JRE 1.8.0 `\[2]`</td>
+   <td>IBM J9 VM - ビルド 2.8、JRE 1.8.0 [2]</td>
    <td>A：サポート対象</td>
   </tr>
  </tbody>
@@ -141,16 +144,16 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 
 | **プラットフォーム** | **説明** | **サポートレベル** |
 |---|---|---|
-| **TAR ファイルを使用したファイルシステム`\[1]`** | リポジトリ | A：サポート対象 |
-| **データストアを持つファイルシステム`\[1]`** | バイナリ | A：サポート対象 |
-| ファイルシステムの TAR ファイルへのバイナリの格納 `\[1]` | バイナリ | Z：実稼動環境ではサポート対象外 |
+| **TARファイルを含むファイル・システム[1 ]** | リポジトリ | A：サポート対象 |
+| **データストア[1を持つファイルシステム&#x200B;]** | バイナリ | A：サポート対象 |
+| Store binaries in TAR files on file system [1] | バイナリ | Z：実稼動環境ではサポート対象外 |
 | Amazon S3 | バイナリ | A：サポート対象 |
 | Microsoft Azure Blob Storage | バイナリ | A：サポート対象 |
 | MongoDB Enterprise 4.0 | リポジトリ | A: Supported [2, 3] |
 | MongoDB Enterprise 3.6 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.4 | リポジトリ | Z：サポート対象外 |
-| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `\[4]` |
-| Oracle Database 12c (12.1.x) | リポジトリおよび Forms データベース | R：制限サポート |
+| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート [4] |
+| Oracle Database 12c(12.1.x) | リポジトリおよび Forms データベース | R：制限サポート |
 | Microsoft SQL Server 2016 | Forms データベース | A：サポート対象 |
 | **Apache Lucene（クイックスタート組み込み）** | 検索サービス | A：サポート対象 |
 | Apache Solr | 検索サービス | A：サポート対象 |
@@ -196,11 +199,11 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 |---|---|
 | **Quickstart 組み込みサーブレットエンジン（Jetty 9.4）** | A：サポート対象 |
 | Oracle WebLogic Server 12.2（12cR2） | Z：サポート対象外 |
-| IBM WebSphere Application Server Continuous Delivery（LibertyProfile）（Web Profile 7.0 および IBM JRE 1.8） | R：新規契約向けの制限サポート `\[2]` |
-| IBM WebSphere Application Server 9.0 および IBM JRE 1.8 | R：新規契約向けの制限サポート `\[1]` `\[2]` |
-| Apache Tomcat 8.5.x | R：新規契約向けの制限サポート `\[2]` |
+| IBM WebSphere Application Server Continuous Delivery（LibertyProfile）（Web Profile 7.0 および IBM JRE 1.8） | R: Restricted Support for new contracts [2] |
+| IBM WebSphere Application Server 9.0 および IBM JRE 1.8 | R: Restricted Support for new contracts [1] [2] |
+| Apache Tomcat 8.5.x | R: Restricted Support for new contracts [2] |
 | JBoss EAP 7.2.x と JBoss Application Server | Z：サポート対象外 |
-| JBoss EAP 7.1.4 と JBoss Application Server | R：新規契約向けの制限サポート `\[1]` `\[2]` |
+| JBoss EAP 7.1.4 と JBoss Application Server | R: Restricted Support for new contracts [1] [2] |
 | JBoss EAP 7.0.x と JBoss Application Server | Z：サポート対象外 |
 
 1. AEM Forms を備えたデプロイメントに推奨されています。
@@ -212,16 +215,16 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 
 | **プラットフォーム** | **サポートレベル** |
 |---|---|
-| **Linux、Red Hat ディストリビューションベース** | A：サポート対象 `\[1]` `\[3]` |
-| Linux、Debian ディストリビューションベース（Ubuntu を含む） | A：サポート対象 `\[2]` |
+| **Linux、Red Hat ディストリビューションベース** | A: Supported [1] [3] |
+| Linux、Debian ディストリビューションベース（Ubuntu を含む） | A: Supported [2] |
 | Linux、SUSE ディストリビューションベース | A：サポート対象 |
-| Microsoft Windows Server 2019 `\[4]` | R：新規契約向けの制限サポート |
-| Microsoft Windows Server 2016 `\[4]` | R：新規契約向けの制限サポート `\[5]` |
+| Microsoft Windows Server 2019 [4] | R：新規契約向けの制限サポート |
+| Microsoft Windows Server 2016 [4] | R: Restricted Support for new contracts [5] |
 | Microsoft Windows Server 2012 R2 | Z：サポート対象外 |
 | Oracle Solaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
 
-1. Linux Kernel 2.6, 3.x, 4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、Amazon Linuxを含む、Red Hatディストリビューションの派生物が含まれています。 AEM Forms のアドオン機能は、CentOS 7 および Red Hat Enterprise Linux 7 でのみサポートされています。
+1. Linux Kernel 2.6、3.xおよび4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、Amazon Linuxなど、Red Hatディストリビューションの派生物が含まれます。 AEM Forms のアドオン機能は、CentOS 7 および Red Hat Enterprise Linux 7 でのみサポートされています。
 1. AEM Forms は Ubuntu 16.04 LTS でのみサポートされています。
 1. Adobe Managed Services でサポートされている Linux ディストリビューション
 1. Microsoft Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
@@ -239,7 +242,7 @@ Adobe Managed Services の外部で Azure または AWS に AEM をデプロイ�
 
 ### Dispatcher のプラットフォーム（Web サーバー） {#dispatcher-platforms-web-servers}
 
-Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新のDispatcherバージョンをダウンロードします](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)。 Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
+Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンのDispatcherをダウンロードします](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)。 Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
 
 Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバーがサポートされています。
 
@@ -249,7 +252,7 @@ Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバ
 | Microsoft IIS 10（Internet Information Server） | A：サポート対象 |
 | Microsoft IIS 8.5（Internet Information Server） | Z：サポート対象外 |
 
-1. Apache httpd のソースコードをベースとして構築された Web サーバーは、ベースとした httpd のバージョンと同じサポートレベルでサポートされます。不明な場合は、各サーバー製品に関連するサポートレベルの確認をアドビに依頼してください。 次の場合：
+1. Apache httpd のソースコードをベースとして構築された Web サーバーは、ベースとした httpd のバージョンと同じサポートレベルでサポートされます。疑わしい場合は、各サーバー製品に関連するサポートレベルをアドビに確認してもらってください。 次の場合：
 
    1. HTTP サーバーが公式の Apache ソースディストリビューションのみを使用して構築されている。または、
    1. HTTP サーバーが実行中のオペレーティングシステムの一部として配布されている。例：IBM HTTP Server、Oracle HTTP Server
@@ -298,7 +301,7 @@ AEM のユーザーインターフェイスは、大きめの画面（通常は�
    <td>A：サポート対象</td>
   </tr>
   <tr>
-   <td>Mozilla Firefox last ESR `\[1]`</td>
+   <td>Mozilla Firefox 最新 ESR [1]</td>
    <td>A：サポート対象</td>
    <td>A：サポート対象</td>
   </tr>
@@ -314,7 +317,7 @@ AEM のユーザーインターフェイスは、大きめの画面（通常は�
   </tr>
   <tr>
    <td>Apple Safari（iOS 12.x）</td>
-   <td>A:サポートされる`\[2]`</td>
+   <td>A：サポート対象 [2]</td>
    <td>Z：サポート対象外</td>
   </tr>
   <tr>
@@ -406,7 +409,7 @@ Linux でダイナミックメディアを使用する場合は、次の必要�
 >
 >**SELinux の無効化：**&#x200B;画像サービングは、SELinux が有効の場合は動作しません。このオプションはデフォルトで有効です。この問題を修正するには、**/etc/selinux/config** ファイルを編集し、SELinux 値を次のように変更します。
 >
->`SELINUX=enforcing` **to**`SELINUX=disabled`
+>`SELINUX=enforcing` **to** `SELINUX=disabled`
 
 >[!NOTE]
 >
@@ -431,15 +434,15 @@ Windows で Dynamic Media を使用するには、Microsoft Visual Studio 2010�
 
 Windows x64 の場合：
 
-* Get Microsoft Visual Studio 2010 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/en-us/download/details.aspx?id=13523)
-* Get Microsoft Visual Studio 2013 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* Get Microsoft Visual Studio 2015 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* Get Microsoft Visual Studio 2010 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/ja-jp/download/details.aspx?id=13523)
+* Get Microsoft Visual Studio 2013 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/ja-jp/download/details.aspx?id=40784)
+* Get Microsoft Visual Studio 2015 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/ja-jp/download/details.aspx?id=48145)
 
 Windows x86 の場合：
 
-* Get Microsoft Visual Studio 2010 redistributable at [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/en-in/download/details.aspx?id=5555)
+* Get Microsoft Visual Studio 2010 redistributable at [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/ja-jp/download/details.aspx?id=5555)
 * Get Microsoft Visual Studio 2013 redistributable at [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
-* Get Microsoft Visual Studio 2015 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
+* Get Microsoft Visual Studio 2015 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/ja-jp/download/details.aspx?id=52685)
 
 #### MacOS {#macos}
 
@@ -455,7 +458,7 @@ Windows x86 の場合：
    <th><p><strong>PDF への変換でサポートされている形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic最新バージョンを追跡</a> （英語のみ）</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic track</a> latest version</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
   </tr>
   <tr>
@@ -480,7 +483,7 @@ Windows x86 の場合：
   </tr>
   <tr>
    <td>OpenOffice 4.1.2</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPG、TIF、TIFF、TIFF、TIFF、TIF、TIFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、JPEG、JPG、TIF、TIFF、TIFF)JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、およびTXT</td>
   </tr>
  </tbody>
 </table>
@@ -515,8 +518,8 @@ XMP の書き戻しは次のプラットフォームおよびファイル形式�
    * Windows Server
    * Mac OS X（64 ビット）
 
-* **File Formats**:JPEG、PNG、TIFF、PDF、INDD、AIおよびEPS。
+* **ファイル形式**: JPEG、PNG、TIFF、PDF、INDD、AI、EPS。
 
-### AEM Assetsでメタデータの多いアセットをLinuxで処理するための要件 {#assetsonlinux}
+### AEM AssetsがLinuxでメタデータに重要なアセットを処理するための要件 {#assetsonlinux}
 
-XMPFilesProcessorプロセスが動作するには、ライブラリGLIBC_2.14が必要です。 GLIBC_2.14を含むLinuxカーネルを使用します。例えば、Linuxカーネルバージョン3.1.xを使用します。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンのGLIBCを使用すると、で始まるログでエラーが発生する `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`。
+XMPFilesProcessorプロセスが動作するには、ライブラリGLIBC_2.14が必要です。 GLIBC_2.14を含むLinuxカーネルを使う。 PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンのGLIBCを使用すると、で始まるログでエラーが発生 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`します。
