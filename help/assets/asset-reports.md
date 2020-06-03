@@ -3,10 +3,10 @@ title: デジタルアセットに関するレポート
 description: Adobe Experience Manager Assetsに含まれるアセットに関するレポートを理解し、デジタルアセットの使用、アクティビティおよび共有を把握できます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 3e43e46b37ea5a9449da4a98d94fdc22f6c4ee8c
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 66%
+source-wordcount: '974'
+ht-degree: 67%
 
 ---
 
@@ -37,10 +37,11 @@ Experience Manager Assetsは、次の標準レポートを自動的に生成し�
 * ファイル
 * リンク共有
 
-Experience Managerの管理者は、導入に合わせてこれらのレポートを簡単に生成およびカスタマイズできます。 レポートを生成するには、以下の手順に従います。
+[!DNL Adobe Experience Manager] 管理者は、これらのレポートを手軽に生成し、実装に合わせて容易にカスタマイズできます。レポートを生成するには、以下の手順に従います。
 
 1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートをクリックします]**。
-   ![](assets/AssetsReportNavigation.png)
+
+![](assets/AssetsReportNavigation.png)
 
 1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
 1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
