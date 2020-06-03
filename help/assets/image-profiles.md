@@ -8,10 +8,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: d40488ce830eb15b4209145df03dff027f9a2470
+source-git-commit: a71507e3c6030ebc3f4abbd7064318d653d326bd
 workflow-type: tm+mt
-source-wordcount: '2682'
-ht-degree: 93%
+source-wordcount: '2755'
+ht-degree: 90%
 
 ---
 
@@ -30,7 +30,9 @@ ht-degree: 93%
 
 ## 切り抜きツールオプション {#crop-options}
 
-<!-- CQDOC-16069 -->Smart Crop coordinates are aspect ratio dependent. That is, for the various smart crop settings in an image profile, if the aspect ratio is the same for the added dimensions that are in the image profile, then the same aspect ratio is sent to Dynamic media. Because of this, Adobe recommends that you use the same crop area. Doing so will ensure that there is no impact to different dimensions used in the image profile.
+<!-- CQDOC-16069 for paragraph directly below -->
+
+スマート切り抜きの座標は、縦横比に応じて異なります。 つまり、画像プロファイルの各種スマート切り抜き設定で、画像プロファイルに追加されたサイズの縦横比が同じ場合、同じ縦横比がダイナミックメディアに送信されます。 このため、同じ切り抜き領域を使用することをお勧めします。 これにより、画像プロファイルで使用される様々なサイズに影響を与えません。
 
 作成する各スマート切り抜き生成には、追加の処理が必要になることに注意してください。 例えば、5つ以上のスマート切り抜きの縦横比を追加すると、アセットの取り込み速度が遅くなる場合があります。 また、システムの負荷が増大する場合もあります。 スマート切り抜きはフォルダーレベルで適用できるので、必要な場所での *みフォルダーに使用することをお勧めします* 。
 
