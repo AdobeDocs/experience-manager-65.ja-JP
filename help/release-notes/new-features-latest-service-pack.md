@@ -1,165 +1,231 @@
 ---
-title: Adobe Experience Manager 6.5 Service Pack 4の新機能
-description: Adobe Experience Manager 6.5 Service Pack 4の新機能
+title: Adobe Experience Manager 6.5 Service Pack 5の新機能
+description: Adobe Experience Manager 6.5 Service Pack 5の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: cc423a199e860429e85895690f6c1a81c20d1a19
+workflow-type: tm+mt
+source-wordcount: '1853'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Service Pack 4の新機能 {#aem-whats-new-service-pack-4}
+# What&#39;s new in AEM 6.5 Service Pack 5 {#aem-whats-new-service-pack-5}
 
-Adobe Experience Manager(6.5)を使用すると、四半期ごとのService Packリリースで新機能や継続的な機能強化を利用できます。 このアプローチを使えば、イノベーションを簡単に導入できます。
+Adobe Experience Manager 6.5のサービスパックは、新機能、お客様から要請された機能強化、パフォーマンス、安定性に関する改善を四半期ごとに提供します。 四半期別配信モデルを使用すると、新機能や革新的な機能に簡単にアクセスし、導入できます。
 
-Experience Manager Service Pack 4(6.5.4.0)は重要なアップデートです。 2019年4月のAEM 6.5リリース以降にリリースされた、お客様から要望のあった機能強化、パフォーマンス、安定性、セキュリティの向上をすべて含みます。 このサービスパックは、AEM 6.5以降のリリースにインストールできます。
-
-この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Packに含まれる主な機能 [、およびExperience Manager 6.5.3.0以降の主なリリースの一部について説明し](#key-features-previous-service-packs)ます [](#key-features-sice-sp3)。
+この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Packに含まれる [主な機能](#key-features-previous-service-packs)、Experience Manager 6.5.4.0 [リリース以降の](#key-features-sice-sp3) 主なリリースの一部について説明します。
 
 ## AEM Sites {#aem-sites}
 
-### スタイルシステムの強化
+### アクセシビリティの強化 {#accessibility-sites}
 
-拡張されたスタイルシステムを使用して、コンポーネントダイアログ内のスタイルを選択できるようになりました。
+* テキスト情報を追加してエラーレポートを改善
 
-### 各領域のパフォーマンスの向上 {#performance-improvements}
+* キーボードナビゲーション中のUIフォーカスの改善
 
-* サイト内のContextHubの読み込みと初期化に要する時間を短縮しま`contexthub.kernel.js`した()。 サイト訪問中のページ読み込みが速くなります。
+* テキストのコントラストの改善（輝度比）
 
-* エクスペリエンスフラグメントをサイトのページエディターにドラッグした後に、ページを更新する時間を短縮しました。
+* ページ画像の代替属性の一貫性の向上
 
-* ライブコピーの概要で200を超えるライブコピーが含まれるサイトページのエントリの読み込み時 **[!UICONTROL 間を短縮しました]**。
+* アクセシブルなリッチインターネットアプリケーション(ARIA)ラベルの一貫性の向上
 
-* 不完全または無効なURLの処理を改善。 このようなURLを使用すると、テンプレートエディターの動作が遅くなる可能性があります。
+* Non-Visual Desktop Access(NVDA)機能の改善
+
+* スクリーンリーダーのサポートの強化
+
+### その他の主な機能強化 {#other-enhancements-sites}
+
+* ページツリーをコピーまたは貼り付けるときに、ルートページを貼り付けるか、ルートページをツリーのサブページと共に貼り付けるかを選択できるようになりました。
+
+* Adobeターゲットワークスペースに書き出されたAEMエクスペリエンスフラグメントは、で一意のオファータイプおよびオファーソースとして表示されるようになり [!DNL Target]ました。
+
+* マルチサイトマネージャ — 発行トリガーは、コンポーネントがソースページから削除された場合に、発行済みページからコンポーネントを正常に削除するようになりました。
+
+* マルチサイトマネージャー — LiveCopyのローカルコンポーネントの名前がブループリントのコンポーネントの名前と同じで、コンポーネントがブループリントからロールアウトされた場合、ローカルコンポーネントの名前に_msm_movedという用語が正常に追加されました。
 
 ## AEM Assets {#aem-assets}
 
-### AEM Assets と Brand Portal の連携の設定 {#configure-assets-bp}
+### アセットのアクセシビリティの強化 {#assets-accessibility}
 
-AEM AssetsとBrand Portalの間の認証チャネルが変更されます。 これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。AEM Assets と Brand Portal の連携が、Adobe I/O を通じて設定されるようになりました。Adobe I/O が Brand Portal テナントの認証用の IMS トークンを取得します。
+[!DNL Adobe Experience Manager] Webコンテンツアクセシビリティガイドライン(WCAG)に準拠して、アセット機能にアクセスしやすくなりました。 アクセシビリティは、次の領域で改善されました。
 
-Brand PortalでAEM Assetsを設定する手順は、AEMのバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 詳しくは、[AEM Assets と Brand Portal の連携の設定](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)を参照してください。
+* ユーザーインターフェイスの要素、コントロール、ページ、ダイアログは、スクリーンリーダーに適しています。
 
+* ユーザーインターフェイスの要素、コントロールおよび入力フォームのフィールドには、キーボードを使用してアクセスできます。
 
-### 既知の問題 {#known-issues-bp}
+* 一部のグラフィックの色とコントラストの変更。視覚や色の知覚が限られているユーザーによって、区別できるようになります。 例えば、星レーティングアイコンの色(アセットのプ [!UICONTROL ロパティの「] 詳細」タブの「レーティング [!UICONTROL 」セクションやカードの] 表示など  )は、適切なコントラストに合わせて変更されます。
 
-* Brand Portal ユーザーが AEM 6.5.4 の Adobe I/O にアップグレードする際に、投稿フォルダーのアセットを AEM Assets に公開できない。
+![コントラストを改善するために変更された星評価アイコンの色](assets/star-rating-icons.png)
 
-### Accessibility enhancements {#accessibility-enhancements}
+### 例外処理の強化 {#exception-handling}
 
-Experience Manager Assetsには、次のアクセシビリティ機能の強化が含まれています。
+アセットユーザーインターフェイスのフローの例外処理が改善されました。 以前は、アセットのディメンションに適切なタイプがなかった場合、ログ内のトレースなしでサイレントにキャッチされた例外が観察されていました。 この動作は変更され、すべての例外がログに記録されます。
 
-* キーボードの矢印キーを使用して、ズームされた画像内の領域を移動およびパンできます。 詳しくは、キーボードキーを使用した [プレビューアセットのみを参照してくださ](../assets/managing-assets-touch-ui.md#previewing-assets)い。
+## [!DNL Dynamic Media] {#dynamic-media}
 
-* フィルターパネルの混在状態のチェックボックス（ネストされた述語をすべて選択しない限り、最初のレベルのチェックボックスは選択されず、読み込まれます）は、スクリーンリーダーで読み取り可能です。
+### 3Dサポート [!DNL Dynamic Media] {#support-for-3d}
 
-* 日付と時間の形式の制約は、ユーザーがキーボードを使用して正しい形式で日付を入力できるように、日付フィールドのフィールドラベルに設定されています。
+の3Dサポートにより、3Dコンテンツを投稿してWebページやアプリケーションに追加できるようにな [!DNL Dynamic Media] りました。 以下が含まれます。
 
-   例えば、`On Time (MM-DD-YYYY HH:mm)` のようになります。ここで、MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍用形式の時、mmは分です。
+* 共通の3Dアセット形式を公開して、アセットURLを生成する。
 
-* 現在選 `X` 択されているタグを削除するボタン上のシンボルが、選択されているタグの数と共にスクリーンリーダーによって通知されるようになりました。
+* Adobe Dimensionを利用した、Viewerライブラリで使用可能な新しい3D Web Viewerを使用した、パブリッシュ済みの3Dアセットのインタラクティブな表示。 [!DNL Dynamic Media]
+
+* WCMコンポーネントを使用した3Dパブリッシングと [!DNL Experience Manager Sites][!DNL Sites] ページでの表示。
 
 ## AEM Forms {#aem-forms}
 
-### AEM Formsでの印刷可能出力の生成ワークフロー {#generate-printable-output}
+### AEMインボックスの列のカスタマイズ {#customize-aem-inbox-columns}
 
-印刷可能出力の生成ワークフローの手順を使用すると、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの異なるコピーを印刷または保存できます。 この手順で、PCL、PostScript、ZPL、IPL、TPCLまたはDPL出力が生成されます。 この機能について詳しくは、「 [Forms中心のOSGi上のワークフロー — 手順リファレンス」を参照してください](../forms/using/aem-forms-workflow-step-reference.md)。
+AEMインボックスをカスタマイズして、列のデフォルトタイトルの変更、列の位置の並べ替え、ワークフローのデータに基づいた追加の列の表示を行うことができます。 お客様は、列をカスタマイズする `administrators` または `workflow-administrators` グループのメンバーである必要があります。
 
-![印刷可能な出力を生成](assets/generate-print-output-step.gif)
+![AEMインボックスの列のカスタマイズ](assets/customize-columns.gif)
 
-### レイアウトモードでのアダプティブフォームとインタラクティブ通信の複数列のサポート {#multi-column-adaptive-forms}
+### 対話型通信をドラフトとして保存 {#save-as-draft}
 
-アダプティブフォームとインタラクティブな通信で、パネルの列数を定義できるようになりました。 レイアウトモードに切り替えて、新しい複数列オプションを使用します。 詳しくは、レイアウトモードを使用してコ [ンポーネントのサイズを変更するを参照してくださ](../forms/using/resize-using-layout-mode.md)い。
+エージェントUIを使用して、各対話型通信用の1つ以上のドラフトを保存し、後でドラフトを取得して、そのドラフトの操作を続行できます。 ドラフトごとに異なる名前を指定して、簡単に識別できます。
 
-![複数列レイアウト](assets/multi-column-layout.gif)
+![ドラフトとして保存](assets/save-as-draft.gif)
 
-### AEM受信トレイのカスタマイズ {#aem-inbox}
+### [!DNL Oracle WebLogic] アプリケーションサーバーサポート {#weblogic-support}
 
-新しい「管理者制御」オプションを使用すると、管理者は次のことができます。
+AEM Formsでは、JEE上のAEM Formsのサポート [!DNL Oracle WebLogic 12] が追加されました。 以前のバージョンからアップグレードすることも、12.2.1.4以降で新しいJEE上のAEM 6.5 Formsサーバーを設定するこ [!DNL Oracle WebLogic] ともできます。 後で、マイナーバージョンの変更に対応します。12.2.1.xのxはバージョン番号に置き換えられます。
 
-* ヘッダーテキストとロゴのカスタマイズ
+### アクセシビリティの強化 {#accessibility-improvements}
 
-* ヘッダーで使用できるナビゲーションリンクの表示を制御する
+AEM Formsのアクセシビリティの強化は次のとおりです。
 
-「管理者コントロール」オプションは、管理者またはワークフロー管理者グループのメンバーにのみ表示されます。 この機能の詳細については、「受信トレイ」を参 [照してください](../sites-authoring/inbox.md)。
+* アダプティブフォームをHTMLフォームとしてプレビューした場合、「 [!UICONTROL 手書き署名] 」フィールドはタブのフォーカスを保持します。
 
-### HTML5フォームでのリッチテキストのサポート {#rich-text-support}
+* アダプティブフォームの送信時に表示されるエラーメッセージに、属性が含まれるようにな `aria-describedBy` りました。 属性は、エラーメッセージで参照されるフィールドに添付されます。 属性は、オブジェクトを記述する要素のIDを示します。 `aria-describedby` ウィジェットまたはグループと、それらを説明するテキストとの間の関係を確立するのに役立ちます。
 
-XFAフォームのテキストフィールドをHTML5フォームのリッチテキストフィールドに変換します。 詳しくは、「HTML5フォーム用のフ [ォームテンプレートのデザイン」を参照してください](../forms/using/designing-form-template.md)。
+* アダプティブフォームに必須フィールドが含まれている場合、ARIAアクセシビリティスキーマでは、このようなフィールド `True` の必須属性はに設定されます。
 
-### Accessibility enhancements {#forms-accessibility-enhancements-6540}
+### フォームデータモデルのSOAPベースWebサービス用のX-509証明書ベースの認証 {#x509-based-authentication-soap}
 
-Experience Manager Formsには、次のアクセシビリティの強化が含まれています。
+フォームデータモデルで、SOAP Webサービスをデータソースとして使用している場合に、X-509証明書ベースの認証がサポートされるようになりました。
 
-* スクリーンリーダーは、アダプティブフォームでチェックボックス、リンク、日付選択、日付入力の各フィールドを正しく読み上げます。
+### その他の主な改善点 {#other-improvements}
 
-* アダプティブフォームの各ページに、1つのタイトルと1つのメインのランドマークラベルが含まれるようになりました。
+* JEE上のAEM 6.5 Formsドキュメントセキュリティがに基づくようになり [!DNL Apache Struts 2]ました。
+
+* のサポートを追加し [!DNL Oracle Real Applications Cluster (RAC) 19c]ました。
 
 ## 以前のAEM 6.5サービスパックの主な機能 {#key-features-previous-service-packs}
 
-### ダイナミックメディア向けスマートイメージング {#smart-imaging}
+### AEM Sites {#aem-sites-previous-service-packs}
 
-スマートイメージングでは、各ユーザーの独自の表示特性を使用して、エクスペリエンスに最適化された適切な画像を自動的に提供し、パフォーマンスとエンゲージメントを向上させます。 スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。スマートイメ [ージングを参照](../assets/imaging-faq.md)。
+#### スタイルシステムの拡張(6.5.4.0) {#style-system-enhancements}
 
-### ダイナミックメディア用のビデオプロファイルのスマート切り抜き(6.5.3.0) {#smart-crop-video}
+拡張スタイルシステムを使用して、コンポーネントダイアログ内のスタイルを選択できるようになりました。
 
-ビデオのスマート切り抜き（ビデオプロファイルで使用できるオプション機能）は、Adobe Sensei の人工知能機能を使用して、サイズに関係なく、アップロードしたアダプティブビデオやプログレッシブビデオの重要な部分を自動的に検出して切り抜くツールです。See [About using smart crop in video profiles](../assets/video-profiles.md).
+#### 様々な領域でのパフォーマンスの向上(6.5.4.0) {#performance-improvements}
 
-### AEM Assetsのビジュアル検索(6.5.2.0) {#visual-search}
+* サイト内でのContextHubの読み込みと初期化に要する時間が短縮されました(`contexthub.kernel.js`)。 サイト訪問中のページ読み込みが速くなります。
+
+* エクスペリエンスフラグメントをサイトページエディターにドラッグした後にページを更新する時間を短縮しました。
+
+* ライブコピーの概要で200を超えるライブコピーがあるサイトページのエントリの読み込み時間を短縮 **[!UICONTROL しました]**。
+
+* 不完全または無効なURLの処理を改善。 このようなURLを使用すると、テンプレートエディターの動作が遅くなる場合があります。
+
+### AEM Assets {#aem-assets-previous-service-packs}
+
+#### Configure AEM Assets with Brand Portal (6.5.4.0) {#configure-assets-bp}
+
+AEM AssetsとBrand Portal間の認証チャネルが変更されました。 これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。AEM Assets と Brand Portal の連携が、Adobe I/O を通じて設定されるようになりました。Adobe I/O が Brand Portal テナントの認証用の IMS トークンを取得します。
+
+Brand PortalでAEM Assetsを設定する手順は、AEMのバージョン、および初回の設定か既存の設定のアップグレードかによって異なります。 詳しくは、[AEM Assets と Brand Portal の連携の設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)を参照してください。
+
+#### Accessibility enhancements (6.5.4.0) {#accessibility-enhancements}
+
+Experience Manager Assetsには、次のアクセシビリティの強化が含まれています。
+
+* キーボードの矢印キーを使用して、ズームされた画像内の領域を移動およびパンできます。 詳しくは、キーボードキーのみを使用した [プレビューアセットを参照してください](../assets/managing-assets-touch-ui.md#previewing-assets)。
+
+* フィルターパネル内の混在状態のチェックボックス（ネストされた述語のすべてを選択しない限り、最初のレベルのチェックボックスは選択されず、完全に読み取られます）は、スクリーンリーダーで読み取り可能です。
+
+* 日付と時間の形式に関する制約が日付フィールドのフィールドラベルに設けられ、ユーザーがキーボードを使用して正しい形式で日付を入力できるようになっています。
+
+   例えば、`On Time (MM-DD-YYYY HH:mm)` のようになります。MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍事形式の時、mmは分です。
+
+* 現在選択されているタグを削除するボタンの `X` 記号が、選択されているタグの数と共に、スクリーンリーダーによって通知されるようになりました。
+
+#### AEM Assetsのビジュアル検索(6.5.2.0) {#visual-search}
 
 Assets ユーザーは、視覚的に類似した画像を検索できます。AEM は、ユーザーが選択した画像に類似した、DAM リポジトリのスマートタグ付き画像を表示します。See [Visual search](../assets/search-assets.md).
 
-### AEM Formsユーザー(6.5.3.0)のインボックス項目の共有とアクセスの要求 {#share-request-access}
+### Dynamic Media {#dynamic-media-previous-service-packs}
 
-受信トレイの項目を別のユーザーと共有できます。 別のユーザーが受信トレイの項目にアクセスしたら、そのユーザーは共有項目を要求し、適切なアクションを実行できます。 同様に、他のユーザーから受信トレイ項目へのアクセスを要求できます。 詳しくは、 [ユーザーのインボックス項目の共有とアクセスの要求を参照してくださ](../forms/using/configure-shared-queues-osgi.md)い。
+#### ダイナミックメディア向けスマートイメージング {#smart-imaging}
 
-### AEM Formsユーザー(6.5.3.0)の「Inbox」項目の不在設定の指定 {#configure-out-of-office}
+スマートイメージングでは、各ユーザー固有の視聴特性を使用して、エクスペリエンスに最適化された適切な画像を自動的に提供し、パフォーマンスとエンゲージメントを向上させます。 スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、 [スマートイメージングを参照してください](../assets/imaging-faq.md)。
 
-不在にする予定がある場合は、その期間に割り当てられた品目に対して何が起こるかを指定できます。
-不在設定が実施される開始日と時刻および終了日と時刻を指定するオプションがあります。すべてのアイテムを送信するデフォルトのユーザーを設定できます。 「不在 [時の設定」を参照してください](../forms/using/configure-out-of-office-settings.md)。
+#### ダイナミックメディア用のビデオプロファイルでのスマート切り抜き(6.5.3.0) {#smart-crop-video}
 
-### AEM Forms用のBatch API(6.5.3.0)を使用して複数のインタラクティブな通信を生成する {#generate-multiple-ic}
+ビデオのスマート切り抜き（ビデオプロファイルで使用できるオプション機能）は、Adobe Sensei の人工知能機能を使用して、サイズに関係なく、アップロードしたアダプティブビデオやプログレッシブビデオの重要な部分を自動的に検出して切り抜くツールです。See [About using smart crop in video profiles](../assets/video-profiles.md).
 
-Batch APIを使用すると、テンプレートから複数のインタラクティブな通信を作成できます。 テンプレートは、データのないインタラクティブな通信です。 Batch APIは、データをテンプレートと組み合わせて、インタラクティブな通信を生成します。 このAPIは、インタラクティブ通信の大量生産に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 Batch APIを使用 [した複数のインタラクティブ通信の生成を参照してくださ](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)い。
+### AEM Forms {#aem-forms-previous-service-packs}
 
-## AEM 6.5 SP3以降の主なリリース {#key-features-since-sp3}
+#### AEM Formsワークフロー(6.5.4.0)で印刷可能出力を生成する {#generate-printable-output}
 
-2019年12月12日から2020年3月5日まで、アドビは、AEMの主要な成果物以外の次の機能をリリースしました。
+印刷可能出力の生成ワークフローステップでは、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの別のコピーを印刷または保存できます。 このステップで、PCL、PostScript、ZPL、IPL、TPCLまたはDPL出力が生成されます。 この機能について詳しくは、「OSGiでの [フォーム中心のワークフロー — ステップリファレンス](../forms/using/aem-forms-workflow-step-reference.md)」を参照してください。
 
-* AEM Cloud Manager 2020.1.0および2020.2.0
+![印刷可能な出力を生成](assets/generate-print-output-step.gif)
 
-   パイプラインのステータスを改善し、様々な手順でログをダウンロードする機能を改善。 次のページを参照してください。
+#### レイアウトモードでのアダプティブフォームとインタラクティブ通信の複数列のサポート(6.5.4.0) {#multi-column-adaptive-forms}
 
-   * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
+アダプティブフォームとインタラクティブな通信で、パネルの列数を定義できるようになりました。 レイアウトモードに切り替えて、新しい複数列オプションを使用します。 詳しくは、レイアウトモードを [使用してコンポーネントのサイズを変更するを参照してください](../forms/using/resize-using-layout-mode.md)。
 
+![複数列のレイアウト](assets/multi-column-layout.gif)
 
-   * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-2-0.html)
+#### AEMインボックスのカスタマイズ(6.5.4.0) {#aem-inbox}
 
+新しい「管理コントロール」オプションを使用すると、管理者は次のことができます。
 
-* AEM Cloud Manager CLIの更新
+* ヘッダーテキストとロゴのカスタマイズ
 
-   コマンドラインツールを使用して、Cloud Managerタスクを自動化します。 GitHubを参照 [してください](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+* ヘッダーで使用可能なナビゲーションリンクの表示を制御する
 
-* AEMサイト：プロジェクトのアーキタイプ23
+「管理者コントロール」オプションは、管理者またはワークフロー管理者グループのメンバーにのみ表示されます。 この機能の詳細については、「受信トレイ [](../sites-authoring/inbox.md)」を参照してください。
 
-   新しいAEMプロジェクトを開始する最良の方法です。 アーキタイプ23は、SPAと通常のサ [イトのプロジェクトアーキタイプを1つに結合し](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23) 、フロントエンド開発をキック開始するためのデフォルトのテーマを提供します。
+#### HTML5フォームでのリッチテキストのサポート(6.5.4.0) {#rich-text-support}
 
-* AEMサイト：WKNDリファレンスサイト
+XFAフォームのテキストフィールドをHTML5フォームのリッチテキストフィールドに変換します。 詳しくは、「HTML5フォーム用のフォームテンプレートの [デザイン](../forms/using/designing-form-template.md)」を参照してください。
 
-   [AEMを使用してサイトを構築する方法に関する](https://www.wknd.site/) 、ベストプラクティスが詰め込まれた新しいリファレンスプロジェクトです。 詳しくは、最新の [WKNDチュートリアルを参照してください](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)。 GitHubから最新のコードを取得で [きます](https://github.com/adobe/aem-guides-wknd/releases)。
+#### Accessibility enhancements (6.5.4.0) {#forms-accessibility-enhancements-6540}
 
-* AEMサイト：コマースCIFコアコンポーネント0.7.0および0.9.0
+Experience Manager Formsでは、次のアクセシビリティの強化が行われました。
 
-   AEMサイトとMagento Commerceの統合を参照してください。 コマースに重 [点を置いた専用のコアコンポーネントおよびプロジェクトアーキタイプの拡張を参照してくださ](https://github.com/adobe/aem-core-cif-components/releases)い。
+* スクリーンリーダーは、アダプティブフォームで、チェックボックス、リンク、日付選択、日付入力の各フィールドについて正しく読み上げます。
 
-* AEM Assets:デスクトップアプリ2.0.1.1
+* アダプティブフォームの各ページに、1つのタイトルと1つのメインのランドマークラベルが含まれるようになりました。
 
-   詳しくは、ア [セットへのデスクトップアクセスの取得を参照してくださ](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)い。
+#### AEM Formsユーザーのインボックスアイテムの共有とアクセス要求(6.5.3.0) {#share-request-access}
 
-* AEM Screens:機能パック202001
+受信トレイの項目を他のユーザーと共有できます。 別のユーザーが受信トレイのアイテムにアクセスできるようになると、そのユーザーは共有アイテムに対して適切なアクションを実行できます。 同様に、他のユーザーからインボックス項目へのアクセスを要求することもできます。 詳しくは、ユーザーのインボックスアイテムの [共有およびアクセスの要求を参照してください](../forms/using/configure-shared-queues-osgi.md)。
 
-   AEM内から直接デジタル署名を使用できます。 最新の機能パックを使用して改良点をインストールし、複数のメ [ディアプレーヤー間で同期再生を有効にしま](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202001.html)す。
+#### AEM Formsユーザーのインボックスアイテムに対する不在設定の設定(6.5.3.0) {#configure-out-of-office}
+
+不在にする予定がある場合は、その期間に割り当てられたアイテムに対する処理を指定できます。
+不在設定が実施される開始日と時刻および終了日と時刻を指定するオプションがあります。すべてのアイテムを送信するデフォルトのユーザーを設定できます。 「不在設定の [設定](../forms/using/configure-out-of-office-settings.md)」を参照してください。
+
+#### Batch API for AEM Forms(6.5.3.0)を使用して複数のインタラクティブな通信を生成する {#generate-multiple-ic}
+
+Batch APIを使用すると、テンプレートから複数のインタラクティブな通信を作成できます。 テンプレートは、データを一切使用しないインタラクティブな通信です。 Batch APIは、データとテンプレートを組み合わせてインタラクティブな通信を行います。 このAPIは、インタラクティブ通信の大量生産に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 Batch APIを使用した複数の対話型通信の [生成を参照してください](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
+
+## AEM 6.5 SP4以降の主なリリース {#key-releases-since-last-sp}
+
+2020年3月5日～2020年6月4日の間に、Adobeは、主要なAEM成果物以外の次の機能をリリースしました。
+
+* AEM Cloud Manager [2020.3.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-3-0.html)、 [2020.4.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-4-0.html)[、2020.5.0](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/release-notes/release-notes-current.translate.html)
+
+* [AEM Assets: デスクトップアプリ2.0.2.0](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)
+
+* [AEM Screens: 機能パック202004](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html)
 
 ## 役立つリソース
 
@@ -167,4 +233,4 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * [一般リリースノート（Adobe Experience Manager 6.5）](release-notes.md)
 
-* [Adobe Experience Manager 6.5のService Packリリースノート](sp-release-notes.md)
+* [Adobe Experience Manager 6.5用Service Packリリースノート](sp-release-notes.md)
