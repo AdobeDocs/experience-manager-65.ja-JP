@@ -10,23 +10,27 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 translation-type: tm+mt
-source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+source-git-commit: 6396660b642fd78ac7f311fa416efe0e0d52a9e3
+workflow-type: tm+mt
+source-wordcount: '2721'
+ht-degree: 75%
 
 ---
 
 
 # AEM 6.5 における共通リポジトリの再構築 {#common-repository-restructuring-in-aem}
 
-As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes potentially impacting all solutions. 一部の変更は、AEM 6.5のアップグレードプロセス中に作業を行う必要がありますが、その他の変更は、将来のアップグレードまで延期できます。
+As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes potentially impacting all solutions. 一部の変更は、AEM 6.5のアップグレードプロセス中に作業を行う必要がありますが、その他の変更は、将来のアップグレードまで延期することができます。
 
 **6.5 へのアップグレード時におこなう変更**
 
+* [ContextHub 設定](#contexthub-6.5)
 * [ワークフローインスタンス](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-instances)
 * [ワークフローモデル](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-models)
 * [ワークフローランチャー](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-launchers)
 * [ワークフロースクリプト](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-scripts)
 
-**今後のアップグレードの前に**
+**今後のアップグレードの前**
 
 * [ContextHub 設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#contexthub-configurations)
 * [クラシッククラウドサービスデザイン](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-cloud-services-designs)
@@ -40,7 +44,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 * [AEM プロジェクトダッシュボードガジェット設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#aem-projects-dashboard-gadget-configurations)
 * [レプリケーション通知電子メールテンプレート](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#replication-notification-e-mail-template)
 * [タグ](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags)
-* [翻訳クラウドサービス](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-cloud-services)
+* [翻訳 Cloud Services](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-cloud-services)
 * [翻訳言語](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-languages)
 * [翻訳ルール](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)
 * [翻訳 Widget クライアントライブラリ](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-widget-client-library)
@@ -49,6 +53,21 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 * [ワークフロー通知電子メールテンプレート](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
+
+### ContextHub 設定 {#contexthub-6.5}
+
+AEM 6.4 以降、デフォルトの ContextHub 設定は用意されていません。Therefore on the root level of the site a `cq:contextHubPathproperty` should be set to indicate which configuration should be used.
+
+1. サイトのルートに移動します。
+1. ルートページのページのプロパティを開き、「パーソナライズ機能」タブを選択します。
+1. 「ContextHub のパス」フィールドに、独自の ContextHub の設定パスを入力します。
+
+Additionally on the ContextHub configuration, the `sling:resourceType` needs to be updated to be relative and not absolute.
+
+1. Open the properties of ContextHub configuration node in CRX DE Lite, e.g. `/apps/settings/cloudsettings/legacy/contexthub`
+1. 変更 `sling:resourceType` 前の値 `/libs/granite/contexthub/cloudsettings/components/baseconfiguration` から `granite/contexthub/cloudsettings/components/baseconfiguration`
+
+ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対パスであることが必要です。
 
 ### ワークフローモデル {#workflow-models}
 
@@ -88,7 +107,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>ワークフローモデルの解決は次の順序でおこなわれます。</p>
     <ol>
      <li><code>/conf/global/settings/workflow/models</code></li>
@@ -116,10 +135,10 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><p>新しい場所に合わせるための操作は必要ありません。</p> <p>古いワークフローインスタンスは安全に以前の場所に存在し続け、新しいワークフローインスタンスは新しい場所に作成されます。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
-   <td>コード内の「前の場所」へ <code>
+   <td><strong>備考</strong></td>
+   <td>前の場所への <code>
      custom
-    </code> の明示的なパス参照でも、「新しい場所」を考慮する必要があります。 このコードは AEM Workflow API を使用するようにリファクタリングすることをお勧めします。</td>
+    </code> コード内の明示的なパス参照でも、新しい場所を考慮する必要があります。 このコードは AEM Workflow API を使用するようにリファクタリングすることをお勧めします。</td>
   </tr>
  </tbody>
 </table>
@@ -144,7 +163,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>ワークフローランチャーの解決は、次の順序でおこなわれます。</p>
     <ol>
      <li><code>/conf/global/settings/workflow/launcher</code></li>
@@ -173,13 +192,13 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     <ol>
      <li>新規または変更されたワークフロースクリプトを以前の場所から新しい場所にコピーします。<br />
       <ul>
-       <li><code>/apps/workflow/scripts</code> はSCMで維持する必要があります。</li>
+       <li><code>/apps/workflow/scripts</code> should be maintained in SCM.</li>
       </ul> </li>
      <li>ワークフローモデルの以前の場所にある、ワークフロースクリプトへの参照を更新し、新しい場所を指すようにします。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>AEM 6.4 SP1, when it is released, makes it so this restructuring can be deferred until 6.5
      <code>
       upgrade
@@ -188,7 +207,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
  </tbody>
 </table>
 
-## 今後のアップグレードの前に {#prior-to-upgrade}
+## 今後のアップグレードの前 {#prior-to-upgrade}
 
 ### ContextHub 設定 {#contexthub-configurations}
 
@@ -215,7 +234,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -254,7 +273,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -293,7 +312,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -332,7 +351,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -371,7 +390,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -394,7 +413,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><p>アクションは必要ありません。</p> <p>公開されている以前の場所は、プライベートの新しい場所のプロキシエンドポイントとして機能します。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -417,7 +436,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><p>アクションは必要ありません。</p> <p>公開されている以前の場所は、プライベートの新しい場所のプロキシエンドポイントとして機能します。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -440,7 +459,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><strong>インボックスのパージメンテナンスタスク</strong>を使用して、必要に応じて以前の場所から古いタスクを削除します。</td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>タスクを新しい場所に移行するための操作は必要ありません。</p>
     <ul>
      <li>以前の場所にあるタスクは引き続き使用でき、機能します。</li>
@@ -471,7 +490,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -501,7 +520,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>AEM 6.4 互換パッケージが適用されている場合は、互換パッケージの削除時にリポジトリ調整アクティビティを実行する必要があります。</td>
   </tr>
  </tbody>
@@ -528,7 +547,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>サポートされている唯一の新規レプリケーション通知電子メールテンプレートは、新しいロケールをサポートするものです。</p> <p>レプリケーション通知電子メールテンプレートの解決は次の順序でおこなわれます。</p>
     <ol>
      <li><code>/etc/notification/email/default/com.day.cq.replication</code></li>
@@ -562,17 +581,17 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
-   <td><p>Day Communique Tagging OSGi バンドルを再起動しても、以前の場所が空であれば、新しい場所がタグのルートとして登録されるだけです。</p> <p>AEM の TagManager API を活用シてタグを解決するすべての機能については、新しい場所に移行した後も、以前の場所への参照は引き続き機能します。</p> <p>パスを明示的に参照するカスタムコードは、この移行と連携して、 <code>/etc/tags</code> /content/ <span class="code">、またはTagManager Java APIを利用するた <code>
+   <td><strong>備考</strong></td>
+   <td><p>Day Communique Tagging OSGi バンドルを再起動しても、以前の場所が空であれば、新しい場所がタグのルートとして登録されるだけです。</p> <p>AEM の TagManager API を活用シてタグを解決するすべての機能については、新しい場所に移行した後も、以前の場所への参照は引き続き機能します。</p> <p>この移行に伴い、パスを明示的に参照するカスタムコードは、 <code>/etc/tags</code> /content/ <span class="code">に更新するか、TagManager Java APIを利用できるように書き換える必要があり <code>
        cq
       </code><code>
        :tags
-      </code></span>めに書き直す必要があります。</p> </td>
+      </code></span>ます。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 翻訳クラウドサービス {#translation-cloud-services}
+### 翻訳 Cloud Services {#translation-cloud-services}
 
 <table>
  <tbody>
@@ -605,7 +624,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>翻訳クラウドサービスの解決は次の順序でおこなわれます。</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/translationcfg</code></li>
@@ -637,7 +656,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>翻訳言語のパス解決は次の順序でおこなわれます。</p>
     <ol>
      <li><code>/etc/translation/supportedLanguages</code></li>
@@ -665,7 +684,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><p>A modified Translation Rules XML file must be migrated to the new location (<code>/apps</code>, or <code>/conf/global</code>).</p> <p>1. 変更した 翻訳ルール XML ファイルを以前の場所から新しい場所にコピーします。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>レプリケーション翻訳ルール XML の解決は次の順序でおこなわれます。</p>
     <ol>
      <li><code>/conf/global/settings/translation/rules/translation_rules.xml</code></li>
@@ -712,7 +731,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -724,7 +743,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 |---|---|
 | **新しい場所** | `/libs/replication/treeactivation` |
 | **再構築の手引き** | アクションは必要ありません。 |
-| **メモ** | ツリー Activation Web コンソールは、**ツール／導入／レプリケーション／ツリーをアクティベート**&#x200B;から利用できます。 |
+| **備考** | ツリー Activation Web コンソールは、**ツール／導入／レプリケーション／ツリーをアクティベート**&#x200B;から利用できます。 |
 
 ### ベンダー翻訳コネクタクラウドサービス {#vendor-translation-connector-cloud-services}
 
@@ -761,7 +780,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>翻訳クラウドサービスの解決は次の順序でおこなわれます。</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/&lt;vendor&gt;</code></li>
@@ -794,7 +813,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>ワークフロー通知電子メールテンプレートの解決は、次の順序でおこなわれます。</p>
     <ol>
      <li><code>/etc/workflow/notification</code></li>
@@ -827,7 +846,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>クラシック UI の Miscadmin コンソールで作成されたワークフローパッケージは以前の場所に保持されますが、他のものはすべて新しい場所に保持されます。</p> <p>以前の場所または新しい場所に保存されているワークフローパッケージは、クラシック UI の Miscadmin コンソールで管理できます。</p> </td>
   </tr>
  </tbody>
