@@ -10,10 +10,10 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: 5eb05c69b2236d92504305ca076734bf7fac21e2
 workflow-type: tm+mt
 source-wordcount: '8030'
-ht-degree: 62%
+ht-degree: 61%
 
 ---
 
@@ -40,6 +40,7 @@ Dynamic Media での[ビデオ](/help/assets/video.md)の操作方法を参照�
 >
 >* `s7access.log`
 >* `ImageServing.log`
+
 >
 >
 They are documented in [Monitoring and Maintaining your AEM instance](/help/sites-deploying/monitoring-and-maintaining.md).
@@ -176,8 +177,10 @@ Dynamic Media を有効にするには、コマンドラインまたはクイッ
    >To troubleshoot issues with Dynamic Media, see the following logs in the `crx-quickstart/logs/` directory:
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServerログは、内部ImageServerプロセスの動作を分析する際に使用する統計情報と分析情報を提供します。
+
    Example of an Image Server log file name: `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - The s7access log records each request made to Dynamic Media through `/is/image` and `/is/content`.
+
    これらのログは、Dynamic Media が有効の場合のみ使用されます。They are not included in the **Download Full** package that is generated from the `system/console/status-Bundlelist` page; when calling Customer Support if you have a Dynamic Media issue, please append both these logs to the issue.
 
 ### If you installed AEM to a different port or context path ... {#if-you-installed-aem-to-a-different-port-or-context-path}
@@ -224,7 +227,7 @@ To disable dynamic media after you have enabled it, you remove the `-r dynamicme
 
 If you are upgrading AEM Dynamic Media from 6.3 to 6.5 (which now includes the ability for zero downtime deployments), you are required to run the following curl command to migrate all your presets and configurations from `/etc` to `/conf` in CRXDE Lite.
 
-**注意**：AEM インスタンスを互換モードで実行している場合、つまり、互換パッケージをインストールしている場合、これらのコマンドを実行する必要はありません。
+**注意**: 互換モードでAEMインスタンスを実行する場合（つまり、互換パッケージがインストールされている場合）、これらのコマンドを実行する必要はありません。
 
 互換パッケージの有無を問わず、すべてのアップグレードについて、次の Linux curl コマンドを実行することにより、Dynamic Media に付属しているデフォルトの標準提供ビューアプリセットをコピーできます。
 
@@ -283,6 +286,7 @@ Dynamic Media 画像配信サービスに画像をレプリケートするには
    * In the **[!UICONTROL KeyStore File Password]** field, enter the KeyStore File password. これは、手順 5 で作成したキーストアパスワード&#x200B;**ではなく**、プロビジョニング中に送信されたようこそメールでアドビから提供されたキーストアファイルパスワードです。キーストアファイルパスワードを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
    * 「**[!UICONTROL 秘密鍵のパスワード]**」フィールドで、秘密鍵のパスワードを入力します（以前の手順で指定した秘密鍵のパスワードと同じでも可）。秘密鍵のパスワードは、プロビジョニング中にアドビから送信されたようこそメールに記載されています。秘密鍵のパスワードを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
    * In the **[!UICONTROL Private Key Alias]** field, enter the private key alias. For example, `*companyname*-alias`. 秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたようこそメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
+
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
 1. 「**[!UICONTROL 保存して閉じる]**」をタップして、このユーザーに対する変更を保存します。
@@ -301,6 +305,7 @@ Dynamic Media 画像配信サービスに画像をレプリケートするには
    * **[!UICONTROL テナントID]** — この値は、レプリケーションサービスに発行する会社またはテナントの名前です。 この値は、プロビジョニング時にアドビから送信されるご案内の電子メールに含まれるテナントIDです。 この情報を受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
    * **[!UICONTROL Key Store Alias]** — この値は、「認証の [設定](#setting-up-authentication)」でキーを生成する際に設定された**新しいAlias**値と同じです。 例えば、 `replication`。 (See step 7 in [Setting Up Authentication](#setting-up-authentication).)
    * **[!UICONTROL Key Store Password]** — これは、Create KeyStoreをタップしたときに作成されたKeyStoreのパスワードで **[!UICONTROL す]**。 このパスワードはアドビが提供するものではありません。See step 5 of [Setting up Authentication](#setting-up-authentication).
+
    次の画像はサンプルデータが入力されたレプリケーションエージェントを示します。
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
@@ -965,7 +970,7 @@ Advanced use cases could use a manual configure `icc=` modifier to explicitly se
 * `iccEmbed` – [https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html)
 
 >[!NOTE]
-標準セットのAdobeカラープロファイルは、パッケージ共有の [機能パック12445](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 、またはソフトウェア配布の [機能パック12445がインストールされている場合にのみ使用できます](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 。 All feature packs and service packs are available via [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) and [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 機能パック 12445 は、Adobe カラープロファイルを提供します。
+標準セットのAdobeカラープロファイルは、Package Shareの [Feature Pack 12445またはSoftware Distribution](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) （ソフトウェア配布版）の [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) Feature Pack 12445がインストールされている場合にのみ使用できます。 All feature packs and service packs are available via [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) and [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 機能パック 12445 は、Adobe カラープロファイルを提供します。
 
 ### 機能パック 12445 のインストール {#installing-feature-pack}
 
