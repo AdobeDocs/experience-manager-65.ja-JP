@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d5fa8b85f6724097e34edd66745e0daf95d66cc
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+workflow-type: tm+mt
+source-wordcount: '1827'
+ht-degree: 90%
 
 ---
 
@@ -46,7 +49,7 @@ source-git-commit: 9d5fa8b85f6724097e34edd66745e0daf95d66cc
 コンテンツフラグメントを編集用に開くと、デフォルトで「**バリエーション**」タブが開きます。このタブで、マスターまたはバリエーション（ある場合）のコンテンツをオーサリングできます。以下の操作を実行できます。
 
 * 「**バリエーション**」タブで直接編集します。
-* [フルスクリーンエディター](#full-screen-editor)を開いて次のことをおこないます。
+* [全画面表示エディター](#full-screen-editor)を開いて次のことをおこないます。
 
    * [形式](#formats)の選択
    * その他の編集オプションの表示（[リッチテキスト](#rich-text)形式の場合）
@@ -57,30 +60,30 @@ source-git-commit: 9d5fa8b85f6724097e34edd66745e0daf95d66cc
 
 * 単純なフラグメントの編集
 
-   単純なフラグメントは 1 つの複数行テキストフィールドで構成されます（フルスクリーンエディターからビジュアルアセットを追加できます）。
+   単純なフラグメントは 1 つの複数行テキストフィールドで構成されます（全画面表示エディターからビジュアルアセットを追加できます）。
 
    ![cfm-6420-21](assets/cfm-6420-21.png)
 
 * 構造化コンテンツを含むフラグメントの編集
 
-   構造化されたフラグメントには、コンテンツモデルで定義された、様々なデータタイプの各種のフィールドが含まれています。複数行フィールドについては、[フルスクリーンエディター](#full-screen-editor)を使用できます。
+   構造化されたフラグメントには、コンテンツモデルで定義された、様々なデータタイプの各種のフィールドが含まれています。複数行フィールドについては、[全画面表示エディター](#full-screen-editor)を使用できます。
 
    ![cfm-6420-16](assets/cfm-6420-16.png)
 
-### フルスクリーンエディター {#full-screen-editor}
+### 全画面表示エディター {#full-screen-editor}
 
 複数行テキストフィールドの編集時には、フルスクリーンエディターを開くことができます。
 
 ![cf-fullscreeneditor-icon](assets/cf-fullscreeneditor-icon.png)
 
-フルスクリーンエディターでは次の情報が表示されます。
+全画面表示エディターでは次の情報が表示されます。
 
 * 様々な[アクション](#actions)へのアクセス
 * [形式](#formats)に応じた、その他の書式設定オプション（[リッチテキスト](#rich-text)）
 
 ### アクション {#actions}
 
-フルスクリーンエディター（複数行テキスト）を開いている場合は、次のアクションも（すべての[形式](#formats)で）使用できます。
+全画面表示エディター（複数行テキスト）を開いている場合は、次のアクションも（すべての[形式](#formats)で）使用できます。
 
 * [形式](#formats)（[リッチテキスト](#rich-text)、[プレーンテキスト](#plain-text)、[Markdown](#markdown)）の選択
 
@@ -101,7 +104,7 @@ source-git-commit: 9d5fa8b85f6724097e34edd66745e0daf95d66cc
 * [プレーンテキスト](#plain-text)
 * [Markdown](#markdown)
 
-フルスクリーンエディターでの作業時に形式を選択できます。
+全画面表示エディターでの作業時に形式を選択できます。
 
 ### リッチテキスト {#rich-text}
 
@@ -115,22 +118,22 @@ source-git-commit: 9d5fa8b85f6724097e34edd66745e0daf95d66cc
 * 番号付きリスト
 * インデント：増、減
 * ハイパーリンクの作成および解除
-* フルスクリーンエディターを開く。次の書式設定オプションを使用できます。
+* 全画面表示エディターを開く。次の書式設定オプションを使用できます。
 
    * テキストを貼り付け／Word から貼り付け
    * 表を挿入
-   * 段落スタイル：段落、見出し 1／2／3
+   * 段落スタイル：段落、見出し 1/2/3
    * [ビジュアルアセットの挿入](#inserting-assets-into-your-fragment)
    * 検索
    * 検索と置換
    * スペルチェッカー
    * [注釈](/help/assets/content-fragments-variations.md#annotating-a-content-fragment)
 
-[アクション](#actions)は、フルスクリーンエディターからアクセスすることもできます。
+[アクション](#actions)は、全画面表示エディターからアクセスすることもできます。
 
 ### プレーンテキスト {#plain-text}
 
-プレーンテキストを使用すると、書式設定または Markdown 情報なしでコンテンツをすばやく入力できます。フルスクリーンエディターを開いて追加の[アクション](#actions)を使用することもできます。
+プレーンテキストを使用すると、書式設定または Markdown 情報なしでコンテンツをすばやく入力できます。全画面表示エディターを開いて追加の[アクション](#actions)を使用することもできます。
 
 >[!CAUTION]
 >
@@ -154,15 +157,15 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 * コードブロック
 * バックスラッシュエスケープ
 
-フルスクリーンエディターを開いて追加の[アクション](#actions)を使用することもできます。
+全画面表示エディターを開いて追加の[アクション](#actions)を使用することもできます。
 
 >[!CAUTION]
 >
->If you switch between **Rich Text** and **Markdown** you might experience unexpected effects with Block Quotes and Code Blocks, as these two formats can have differences in how they are handled.
+>**リッチテキスト**&#x200B;と **Markdown** を切り替えると、ブロック引用やコードブロックに予期しない影響が出ることがあります。ブロック引用とコードブロックの 2 つの形式は処理方法が異なる場合があるからです。
 
 ### 重要な統計の表示 {#viewing-key-statistics}
 
-フルスクリーンエディターを開くと、「**テキスト統計**」アクションには、テキストに関する様々な情報が表示されます。次に例を示します。
+全画面表示エディターを開くと、「**テキスト統計**」アクションには、テキストに関する様々な情報が表示されます。次に例を示します。
 
 ![cfx-6420-22](assets/cfx-6420-22.png)
 
@@ -176,13 +179,13 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 >[!NOTE]
 >
->On a more technical level the system keeps the sentences which it rates as providing the *best ratio of information density and uniqueness* according to specific algorithms.
+>より技術的に説明すると、特定のアルゴリズムに従って&#x200B;*情報の密度と独自性が最適な比率*&#x200B;であると評価した文章をシステムが保持します。
 
 >[!CAUTION]
 >
->コンテンツフラグメントには、祖先として有効な言語（ISOコード）フォルダーが必要です。これは、使用する言語モデルを決定するために使用されます。
+>コンテンツフラグメントには、先祖として有効な言語（ISOコード）フォルダーが必要です。 これは、使用する言語モデルを決定するために使用されます。
 >
->For example, `en/` as in the following path:
+>例えば、次のパスの `en/` です。
 >
 >`/content/dam/my-brand/en/path-down/my-content-fragment`
 
@@ -190,18 +193,18 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >英語版は標準で提供されています。
 >
->他の言語版は、パッケージ共有から言語モデルパッケージとして使用できます。
+>他の言語は、Package ShareまたはSoftware Distributionの言語モデルパッケージとして利用できます。
 >
->* [フランス語（fr）](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [ドイツ語（de）](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [イタリア語（it）](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [スペイン語（es）](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr) （パッケージ共有）のフランス語(fr)または [Software Distribution（ソフトウェア配布）のフランス語(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [パッケージ共有のドイツ語(de)またはソフトウェア配布の](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)[ドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it) （パッケージ共有）のイタリア語(it)、またはソフトウェア配布の [イタリア語(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [パッケージ共有のスペイン語(es)またはソフトウェア配布の](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)[スペイン語(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 
 
 1. 「**マスター**」または必要なバリエーションを選択します。
-1. フルスクリーンエディターを開きます。
+1. 全画面表示エディターを開きます。
 
 1. ツールバーの「**テキストを要約**」を選択します。
 
@@ -215,27 +218,27 @@ Markdown を使用してテキストの形式を設定できます。次を定�
    * 強調表示されていない文をクリックすると、削除されます。
    ![cfm-6420-23](assets/cfm-6420-23.png)
 
-1. Select **Summarize** to confirm the changes.
+1. 変更を確定するには、「**要約**」を選択します。
 
 ### コンテンツフラグメントへの注釈の追加 {#annotating-a-content-fragment}
 
 フラグメントに注釈を追加するには：
 
 1. 「**マスター**」または必要なバリエーションを選択します。
-1. フルスクリーンエディターを開きます。
+1. 全画面表示エディターを開きます。
 1. テキストをどれか選択します。「**注釈**」アイコンが利用可能になります。
 
    ![cfm-6420-24](assets/cfm-6420-24.png)
 
 1. ダイアログが開きます。ここで注釈を入力できます。
 
-1. フルスクリーンエディターを閉じ、フラグメントを&#x200B;**保存**&#x200B;します。
+1. 全画面表示エディターを閉じ、フラグメントを&#x200B;**保存**&#x200B;します。
 
 ### 注釈の表示、編集、削除 {#viewing-editing-deleting-annotations}
 
-注釈について以下で説明します。
+注釈:
 
-* エディターのフルスクリーンモードと通常モードのどちらの場合も、注釈はテキストのハイライトとして示されます。注釈の完全な詳細を表示、編集および削除するには、ハイライト表示されたテキストをクリックします。するとダイアログが再度開きます。
+* エディターの全画面表示モードと通常モードのどちらの場合も、注釈はテキストのハイライトとして示されます。注釈の完全な詳細を表示、編集および削除するには、ハイライト表示されたテキストをクリックします。するとダイアログが再度開きます。
 
    >[!NOTE]
    >
@@ -251,7 +254,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 ### フラグメントへのアセットの挿入 {#inserting-assets-into-your-fragment}
 
-To ease the process of authoring content fragments you can add [Assets](/help/assets/managing-assets-touch-ui.md) (images) directly to the fragment.
+コンテンツフラグメントのオーサリングプロセスを容易にするには、[アセット](/help/assets/managing-assets-touch-ui.md)（画像）をフラグメントに直接追加します。
 
 アセットは書式設定なしでフラグメントの段落シーケンスに追加されます。[ページでフラグメントを利用、参照](/help/sites-authoring/content-fragments.md)する際に書式を設定できます。
 
@@ -266,7 +269,7 @@ To ease the process of authoring content fragments you can add [Assets](/help/as
 >[画像](/help/assets/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
 
 1. 画像を追加したい位置にカーソルを置きます。
-1. Use the **Insert Asset** icon to open the search dialog.
+1. **アセットを挿入**&#x200B;アイコンを使用して、検索ダイアログを開きます。
 
    ![cf-insertasset-icon](assets/cf-insertasset-icon.png)
 
@@ -295,10 +298,10 @@ To ease the process of authoring content fragments you can add [Assets](/help/as
 新しいバリエーションを作成するには：
 
 1. フラグメントを開き、サイドパネルが表示されていることを確認します。
-1. Select **Variations** from the icon bar in the side panel.
+1. サイドパネルのアイコンバーから「**バリエーション**」を選択します。
 1. 「**バリエーションを作成**」を選択します。
 1. ダイアログが開きます。新しいバリエーションの&#x200B;**タイトル**&#x200B;と&#x200B;**説明**&#x200B;を指定します。
-1. Select **Add**; the fragment **Master** will be copied to the new variation, which is now open for [editing](#editing-a-variation).
+1. 「**追加**」を選択します。フラグメントの&#x200B;**マスター**&#x200B;が新しいバリエーションにコピーされ、[編集](#editing-a-variation)用に開かれます。
 
    >[!NOTE]
    >
@@ -317,11 +320,11 @@ To ease the process of authoring content fragments you can add [Assets](/help/as
 
 既存のバリエーションの名前を変更するには：
 
-1. Open your fragment and select **Variations** from the side panel.
+1. フラグメントを開き、サイドパネルから「**バリエーション**」を選択します。
 1. 必要なバリエーションを選択します。
-1. Select **Rename** from the **Actions** drop down.
+1. 「**アクション**」ドロップダウンから「**名前を変更**」を選択します。
 
-1. Enter the new **Title** and/or **Description** in the resulting dialog box.
+1. 表示されたダイアログボックスで新しい「**タイトル**」や「**説明**」を入力します。
 
 1. 「**名前を変更**」アクションを確認します。
 
@@ -333,15 +336,15 @@ To ease the process of authoring content fragments you can add [Assets](/help/as
 
 既存のバリエーションを削除するには：
 
-1. Open your fragment and select **Variations** from the side panel.
+1. フラグメントを開き、サイドパネルから「**バリエーション**」を選択します。
 1. 必要なバリエーションを選択します。
-1. Select **Delete** from the **Actions** drop down.
+1. 「**アクション**」ドロップダウンから「**削除**」を選択します。
 
 1. ダイアログで「**削除**」アクションを確認します。
 
 >[!NOTE]
 >
->You cannot delete **Master**.
+>**マスター**&#x200B;は削除できません。
 
 ### マスターとの同期 {#synchronizing-with-master}
 
@@ -355,16 +358,16 @@ To ease the process of authoring content fragments you can add [Assets](/help/as
 >
 >バリエーションの現在の要素のみが同期されます。
 >
->同期は、複数行のテキスト **データタイプでの** み機能します。
+>同期は、**複数行テキスト**&#x200B;データタイプに対してのみ機能します。
 >
 >*バリエーションから&#x200B;**マスター&#x200B;***へ変更内容を転送することはできません。
 
 1. フラグメントエディターでコンテンツフラグメントを開きます。**マスター**&#x200B;が編集されていることを確認します。
 1. 特定のバリエーションを選択し、次のいずれかから適切な同期アクションを選択します。
 
-   * the **Actions** drop down selector - **Sync current element with master**
+   * 「**アクション**」ドロップダウンセレクター - **現在の要素をマスターと同期**
 
-   * フルスクリーンエディターのツールバー - **マスターと同期**
+   * 全画面表示エディターのツールバー - **マスターと同期**
 
 1. マスターとバリエーションが横並びに表示されます。
 
@@ -372,5 +375,5 @@ To ease the process of authoring content fragments you can add [Assets](/help/as
    * 赤は削除されたコンテンツを示します（バリエーションからの削除）
    ![cfm-6420-27](assets/cfm-6420-27.png)
 
-1. Select **Synchronize**, the variation will updated and shown.
+1. 「**同期**」を選択すると、バリエーションが更新され、表示されます。
 
