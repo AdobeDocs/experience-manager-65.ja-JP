@@ -3,17 +3,17 @@ title: '[!DNL Adobe Camera Raw]のサポート。'
 description: でサポートを [!DNL Adobe Camera Raw] 有効にする方法を説明します [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: bf840b0e13e58f961c32b0231e4b691cb47b947a
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 30%
+source-wordcount: '418'
+ht-degree: 28%
 
 ---
 
 
 # Camera Rawを使用した画像の処理 {#camera-raw-support}
 
-CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画像のレンダリングの [!DNL Adobe Camera Raw] サポートを有効にすることができます。 この機能は、Package Shareで使用可能な [!DNL Adobe Experience Manager Assets] Camera Rawパッケージ [](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) (Camera Raw)の使用でサポートされます。
+CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画像のレンダリングの [!DNL Adobe Camera Raw] サポートを有効にすることができます。 この機能は、Package Shareまたは [!DNL Adobe Experience Manager Assets] Software Distribution [（ソフトウェア配布版）で使用できる](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) Camera Rawパッケージの使用でサポートされます [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
 
 >[!NOTE]
 >
@@ -21,13 +21,14 @@ CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画�
 
 での [!DNL Camera Raw] サポートを有効にするに [!DNL Experience Manager Assets]は、次の手順に従います。
 
-1. Camera Rawパッケージは、Package Shareまたは [Software Distribution](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ( [ソフトウェア配布)からダウンロードします](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem620/product/assets/aem-assets-cameraraw-pkg)。
+1. Camera Rawパッケージは、Package Shareまたは [Software Distribution](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ( [ソフトウェア配布)からダウンロードします](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
 1. `https://[aem_server]:[port]/workflow` にアクセスします。Open the **[!UICONTROL DAM Update Asset]** workflow.
 1. Open the **[!UICONTROL Process Thumbnails]** step.
 1. Provide the following configuration in the **[!UICONTROL Thumbnails]** tab:
 
    * **[!UICONTROL サムネール]**: `140:100:false, 48:48:false, 319:319:false`
    * **[!UICONTROL スキップ MIME タイプ]**: `skip:image/dng, skip:image/x-raw-(.*)`
+
    ![chlimage_1-128](assets/chlimage_1-334.png)
 
 1. 「 **[!UICONTROL Web対応のリスト]** 」タブの「画像を **[!UICONTROL スキップ]** 」フィールドで、を指定し `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`ます。
@@ -44,6 +45,7 @@ CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画�
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.319.319.jpeg 319 319`
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.140.100.jpeg 140 100`
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.48.48.jpeg 48 48`
+
    ![chlimage_1-130](assets/chlimage_1-336.png)
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
