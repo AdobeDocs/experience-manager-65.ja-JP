@@ -3,7 +3,7 @@ title: PDFラスタライザを使用して、PDFファイルのレンディシ�
 description: のAdobe PDF Rasterizerライブラリを使用して、高品質のサムネールとレンディションを生成します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: 21f30cf67b73d26afc3f0413ca997a0b6e46e3d3
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 41%
@@ -21,7 +21,7 @@ ht-degree: 41%
 
 PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、何もしなくてもすぐに使用できる出力に比べて高品質です。そのため、デバイス全体で一貫した表示エクスペリエンスを得ることができます。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
 
-1. PDF Rasterizerパッケージを、 [!DNL Experience Manager] Package Share [または](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)[Software Distributionからデプロイメントにインストールします。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)
+1. PDF Rasterizerパッケージを、 [!DNL Experience Manager] Package Share [（パッケージ共有）または](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg) Software Distribution（ソフトウェア配布）から [デプロイメントにインストールします](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
 
    >[!NOTE]
    >
@@ -32,9 +32,11 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 1. デフォルトの方法でPDFファイルおよびAIファイルのサムネールとWebレンディションが生成されないようにするには、次の手順に従います。
 
    * Open the **[!UICONTROL Process Thumbnails]** step, and add `application/pdf` or `application/postscript` in the **[!UICONTROL Skip Mime Types]** field under the **[!UICONTROL Thumbnails]** tab as necessary.
+
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
    * In the **[!UICONTROL Web Enabled Image]** tab, add `application/pdf` or `application/postscript` under **[!UICONTROL Skip List]** depending upon your requirements.
+
    ![画像形式のサムネール処理をスキップする設定](assets/web_enabled_imageskiplist.png)
 
 1. Open the **[!UICONTROL Rasterize PDF/AI Image Preview Rendition]** step, and remove the MIME type for which you want to skip the default generation of preview image renditions. For example, remove the MIME type `application/pdf`, `application/postscript`, or `application/illustrator` from the **[!UICONTROL MIME Types]** list.
@@ -47,6 +49,7 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
    * MIME types: `application/pdf` または `application/postscript`
    * コマンド: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * 追加するサムネールのサイズ：319:319、140:100、48:48。必要に応じて、サムネールのカスタム設定を追加します。
+
    `PDFRasterizer` コマンドのコマンドライン引数には、以下のものがあります。
 
    * `-d`: テキスト、ベクトルアートワークおよび画像のスムーズなレンダリングを有効にするフラグ。 高い画質の画像が作成されます。ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像サイズも増大します。
@@ -84,6 +87,7 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 
    * コマンド: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * Add thumbnail sizes: `319:319`, `140:100`, `48:48`. 必要に応じて、追加カスタムサムネールの設定を指定します。
+
    `PDFRasterizer` コマンドのコマンドライン引数には、以下のものがあります。
 
    * `-d`: テキスト、ベクトルアートワークおよび画像のスムーズなレンダリングを有効にするフラグ。 高い画質の画像が作成されます。ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像サイズも増大します。
