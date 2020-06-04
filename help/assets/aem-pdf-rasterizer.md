@@ -3,10 +3,10 @@ title: PDFラスタライザを使用して、PDFファイルのレンディシ�
 description: のAdobe PDF Rasterizerライブラリを使用して、高品質のサムネールとレンディションを生成します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
 workflow-type: tm+mt
-source-wordcount: '728'
-ht-degree: 42%
+source-wordcount: '753'
+ht-degree: 41%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 42%
 
 PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、何もしなくてもすぐに使用できる出力に比べて高品質です。そのため、デバイス全体で一貫した表示エクスペリエンスを得ることができます。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
 
-1. Install the PDF Rasterizer package on your [!DNL Experience Manager] deployment from [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
+1. PDF Rasterizerパッケージを、 [!DNL Experience Manager] Package Share [または](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)[Software Distributionからデプロイメントにインストールします。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)
 
    >[!NOTE]
    >
