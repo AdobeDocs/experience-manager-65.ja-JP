@@ -3,10 +3,10 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 8490b81242ee284208d0f7fd90797f411e2b99b2
 workflow-type: tm+mt
-source-wordcount: '2661'
-ht-degree: 51%
+source-wordcount: '2709'
+ht-degree: 50%
 
 ---
 
@@ -119,7 +119,7 @@ To edit the properties of a metadata component on the form, click the component 
 
 * `./jcr:content/metadata/dc:title`：アセットのメタデータノードにある値を、プロパティ `dc:title` として格納します。
 
-* `./jcr:created`: アセットのノードでJCRプロパティを表示します。 これらのプロパティを設定する場合は、「編集を無効にする」とマークすることをお勧めします。 プロパティは保護されます。 Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
+* `./jcr:created`: アセットのノードでJCRプロパティを表示します。 これらのプロパティを設定する場合、「編集を無効にする」とマークし、に日付フィールドを連結しないことをお勧め `./jcr:created`します。 保護されたプロパティです。 DAMユーザーがアセットを更新しようとすると、 [!UICONTROL アセットの変更に失敗したというエラーが発生します]。 日付フィールドをこのJCRプロパティにマップする場合は、デフォルトのスキーマを使用します。 アドビが提供するデフォルトのメタデータスキーマをコピーし、デフォルトスキーマの日付フィールドのマッピング先として変更し `./jcr:created`ます。
 
 コンポーネントがメタデータスキーマフォームに適切に表示されるように、プロパティのパスにはスペースを含めないでください。
 
