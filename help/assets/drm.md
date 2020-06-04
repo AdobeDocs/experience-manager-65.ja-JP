@@ -3,10 +3,10 @@ title: Digital Rights Management in [!DNL Adobe Experience Manager Assets].
 description: Learn how to manage asset expiration states and information for licensed assets in [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 20f337ea2e4f369eb6eb760d312199fa39556513
+source-git-commit: ee54a3fa395e2c1ab4a5895a0bb8fc251d24a35a
 workflow-type: tm+mt
-source-wordcount: '1428'
-ht-degree: 55%
+source-wordcount: '1420'
+ht-degree: 53%
 
 ---
 
@@ -96,9 +96,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
    >
    >Only the asset creator (the person who uploads a particular asset to [!DNL Assets]) receives an email when the asset expires. See [how to configure email notification](/help/sites-administering/notification.md) for additional details around configuring email notifications at the overall [!DNL Experience Manager] level.
 
-1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。管理者かアセットの作成者の場合、アセットの有効期限が切れる前に、指定の時間が経過した後にアセットの有効期限が切れることを知らせるメッセージを受け取ります。
-
-   アセットの有効期限が切れると、有効期限が切れたことを知らせる別の通知を受け取ります。さらに、有効期限切れのアセットはアクティベートが解除されます。
+1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。アセットの作成者は、アセットの有効期限が切れる前に、指定した時間が経過するとアセットの有効期限が切れることを知らせるメッセージを受け取ります。 アセットの有効期限が切れると、有効期限が切れたことを知らせる別の通知を受け取ります。さらに、有効期限切れのアセットはアクティベートが解除されます。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
