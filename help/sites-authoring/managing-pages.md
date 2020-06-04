@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49874dc723c3659550d891e786ddc178b30834ec
+source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
-source-wordcount: '2350'
-ht-degree: 91%
+source-wordcount: '2334'
+ht-degree: 94%
 
 ---
 
@@ -80,7 +80,7 @@ Depending on the configuration of your instance, use of `/content` might be opti
  /...
 ```
 
-この構造は&#x200B;**サイト**&#x200B;コンソールから表示でき、[Web サイトのページ間を移動したり](/help/sites-authoring/basic-handling.md#navigating)、ページ上でアクションを実行したりできます。新しいサイトや[新しいページ](#creating-a-new-page)を作成することもできます。
+この構造は **Sites** コンソールから表示でき、[Web サイトのページ間を移動したり](/help/sites-authoring/basic-handling.md#navigating)、ページ上でアクションを実行したりできます。新しいサイトや[新しいページ](#creating-a-new-page)を作成することもできます。
 
 どの地点からでも、ヘッダーバーのパンくず（経路表示）から上位のブランチを確認できます。
 
@@ -197,6 +197,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 新しいページの作成時に使用するテンプレートを選択し、「**次へ**」をクリックまたはタップして次に進みます。
 
    * 「**キャンセル**」を使用してプロセスを中止します。
+
    ![caop-04](assets/caop-04.png)
 
 1. ウィザードの最後のステージで、次のいずれかを実行できます。
@@ -204,6 +205,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 3 つのタブを使用して、新しいページに割り当てる[ページプロパティ](/help/sites-authoring/editing-page-properties.md)を入力し、「**作成**」をクリックまたはタップしてページを実際に作成します。
 
    * 「**戻る**」を使用してテンプレートの選択に戻ります。
+
    主なフィールドは次のとおりです。
 
    * **タイトル**：
@@ -240,12 +242,13 @@ Components are the elements provided by AEM so that you can add specific types o
 
 ページを作成するか、既存ページ（コンソール内）に移動した後、そのページを開いて編集できます。
 
-1. **サイト**&#x200B;コンソールを開きます。
+1. **Sites** コンソールを開きます。
 1. 編集対象のページが表示されるまで移動します。
 1. 次のいずれかを使用してページを選択します。
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)とツールバー
+
    その後、「**編集**」アイコンを選択します。
 
    ![screen_shot_2018-03-22at105355](assets/screen_shot_2018-03-22at105355.png)
@@ -259,11 +262,12 @@ Components are the elements provided by AEM so that you can add specific types o
 
 ページとそのすべてのサブページを新しい場所にコピーできます。
 
-1. **サイト**&#x200B;コンソールで、コピー対象のページが表示されるまで移動します。
+1. **Sites** コンソールで、コピー対象のページが表示されるまで移動します。
 1. 次のいずれかを使用してページを選択します。
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)とツールバー
+
    「**コピー**」ページアイコンを選択します。
 
    ![screen_shot_2018-03-22at105425](assets/screen_shot_2018-03-22at105425.png)
@@ -272,15 +276,13 @@ Components are the elements provided by AEM so that you can add specific types o
    選択モードの場合は、ページのコピー後に選択モードが自動的に終了します。
 
 1. ページの新しいコピーを配置する場所に移動します。
-1. 「 **貼り付け** 」アイコンは、右にドロップダウン矢印を付けて使用できます。
+1. 右側にドロップダウン矢印が付いた「**貼り付け**」アイコンが使用できます。
 
    ![貼り付け](assets/paste-without-children.png)
 
    次のいずれかを実行できます。
-   * ページを **貼り付け** アイコン自体を選択します。 元のページと子ページのコピーがこの場所に作成されます。
-   * ドロップダウン矢印を選択すると、「子なしで **貼り付け** 」オプションが表示されます。 元のページのコピーがこの場所に作成されます。 子ページはコピーされません。
-   >[!NOTE]
-   「 **子なしで** 貼り付け [」オプションは、](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) AEM 6.5 Service Pack 5以降で使用できます。
+   * ページを&#x200B;**貼り付け**&#x200B;アイコン自体を選択します。元のページと子ページのコピーがこの場所に作成されます。
+   * ドロップダウン矢印を選択すると、「**子を含めずに貼り付け**」オプションが表示されます。オリジナルページのコピーがこの場所に作成されます。子ページはコピーされません。
 
    >[!NOTE]
    ページのコピー先に同名のページが既に存在する場合は、その名前のバリエーションが数字を付加して自動的に生成されます。例えば、`winter` が既に存在する場合、`winter` は `winter1` になります。
@@ -306,6 +308,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)とツールバー
+
    「**移動**」ページアイコンをクリックします。
 
    ![screen_shot_2018-03-22at105534](assets/screen_shot_2018-03-22at105534.png)
@@ -317,6 +320,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
    * 移動後にページに付ける名前を指定し、「**次へ**」をクリックまたはタップして次に進みます。
 
    * 「**キャンセル**」を使用してプロセスを中止します。
+
    ![caop-07](assets/caop-07.png)
 
    ページを移動するだけの場合は、ページ名はそのままにできます。
@@ -331,6 +335,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
       * 移動先のサムネールをクリックして、移動先を選択します。
       * 「**次へ**」をクリックして次に進みます。
    * 「**戻る**」を使用してページ名の指定に戻ります。
+
    >[!NOTE]
    デフォルトでは、移動または名前変更するページの親が、移動先として選択されます。
 
@@ -391,13 +396,13 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 フォルダーに新しいフォルダー名を指定する際にも、[ページ命名規則](#page-naming-conventions)に従います。
 
 >[!CAUTION]
-* フォルダーは、**サイト**&#x200B;直下か、他のフォルダーの下にのみ作成できます。ページの下には作成できません。
+* フォルダーは、**Sites** 直下か、他のフォルダーの下にのみ作成できます。ページの下には作成できません。
 * 標準のアクション（移動、コピー、貼り付け、削除、公開、非公開、プロパティの表示／編集）は、フォルダーに対して実行できます。
 * ライブコピー内ではフォルダーを選択できません。
 
 
 
-1. **サイト**&#x200B;コンソールを開いて、必要な場所まで移動します。
+1. **Sites** コンソールを開いて、必要な場所まで移動します。
 1. オプションリストを開くには、ツールバーの「**作成**」を選択します。
 1. 「**フォルダー**」を選択してダイアログを開きます。ここで、「**名前**」と「**タイトル**」を入力できます。
 
