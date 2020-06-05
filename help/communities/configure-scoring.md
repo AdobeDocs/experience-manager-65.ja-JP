@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: bc49aaad1f55b8c70228d3c800f1e5abf8a2519c
+workflow-type: tm+mt
+source-wordcount: '963'
+ht-degree: 52%
 
 ---
 
@@ -38,7 +41,7 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 バッジをテキストと画像のいずれで表示するかは、クライアント側の HBS テンプレートを使用して制御します。
 
-例えば、次を検索し `this.isAssigned` ます `/libs/social/forum/components/hbs/topic/list-item.hbs`。
+例えば、次の場合に検索 `this.isAssigned` しま `/libs/social/forum/components/hbs/topic/list-item.hbs`す。
 
 ```
 {{#each author.badges}}
@@ -74,7 +77,7 @@ isAssigned が false の場合、獲得されたスコアに対する報奨と�
 
 ## スコアおよびバッジのデバッグログ {#debug-log-for-scoring-and-badging}
 
-スコアおよびバッジのデバッグに役立つように、カスタムログファイルを設定できます。このログファイルの内容は、この機能で問題が発生した場合にカスタマーサポートに提供されます。
+スコアおよびバッジのデバッグに役立つように、カスタムログファイルを設定できます。この機能に問題が発生した場合は、このログファイルの内容をカスタマーサポートに提供できます。
 
 詳細な手順については、[カスタムログファイルの作成](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file)を参照してください。
 
@@ -84,7 +87,7 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
    * https://localhost:4502/system/console/slinglog
 
-1. Select **Add new logger**
+1. **追加新しいロガーの選択**
 
    1. Select `DEBUG` for **Log Level**
 
@@ -109,7 +112,7 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
    * Select **Log Files**
    * Search for your Log File name, such as `scoring-debug`
 
-* サーバのローカルディスク上
+* サーバーのローカルディスク上
 
    * The log file is at &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
@@ -123,9 +126,9 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 ここでは、JSRP を例に挙げて、スコアおよびバッジデータにアクセスする方法を説明しています。この場合、[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して UGC に容易にアクセスできます。
 
-**作成者のJSRP**:作成者環境で実験を行うと、UGCが作成者環境からのみ表示されます。
+**作成者**: 作成者の環境を試すと、UGCは作成者の環境からのみ表示されます。
 
-**JSRP on publish**:同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](/help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**発行時のJSRP**: 同様に、パブリッシュ環境でテストを行う場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](/help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
@@ -147,11 +150,11 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 1. An AEM site *with* a unique id (community site created using wizard) :
 
    * Using the Getting Started Tutorial (engage) site created during the [getting started tutorial](/help/communities/getting-started.md)
-   * フォーラムページのノードを見つけます。
+   * フォーラムページのノードを見つけます
 
       `/content/sites/engage/en/forum/jcr:content`
 
-   * スコアリングおよびバッジングのプロパティの追加
+   * 追加スコアリングとバッジングのプロパティ
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -163,56 +166,56 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
    /etc/community/badging/rules/forums-scoring]
    ```
 
-   * フォーラムコンポーネントノードを検索します。
+   * フォーラムコンポーネントノードを見つけます
 
       `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-   * バッジを表示するプロパティの追加
+   * バ追加ッジを表示するプロパティ
 
       `allowBadges = true`
 
-   * ユーザーがログインし、フォーラムトピックを作成し、青銅のバッジを受け取ります
+   * ユーザーがログインし、フォーラムトピックを作成し、ブロンズのバッジを受け取ります
 
 
 1. An AEM site *without* a unique id :
 
    * Using the [Community Components guide](/help/communities/components-guide.md)
-   * フォーラムページのノードを見つけます。
+   * フォーラムページのノードを見つけます
 
       `/content/community-components/en/forum/jcr:content`
 
-   * スコアリングおよびバッジングのプロパティの追加
+   * 追加スコアリングとバッジングのプロパティ
 
    ```
-   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   scoringRules = [/libs/settings/community/scoring/rules/comments-scoring,
    /etc/community/scoring/rules/forums-scoring]
    ```
 
    ```
-   badgingRules =[/etc/community/badging/rules/comments-scoring,
-   /etc/community/badging/rules/forums-scoring]
+   badgingRules =[/libs/settings/community/badging/rules/comments-badging,
+   /libs/settings/community/badging/rules/forums-badging]
    ```
 
-   * フォーラムコンポーネントノードを検索します。
+   * フォーラムコンポーネントノードを見つけます
 
       `/content/community-components/en/forum/jcr:content/content/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-   * バッジを表示するプロパティの追加
+   * バ追加ッジを表示するプロパティ
 
       `allowBadges = true`
 
-   * ユーザーがログインし、フォーラムトピックを作成し、青銅のバッジを受け取ります
+   * ユーザーがログインし、フォーラムトピックを作成し、ブロンズのバッジを受け取ります
 
 
-1. ユーザーにcURLを使用してモデレーターバッジが割り当てられました。
+1. ユーザーには、cURLを使用してモデレーターバッジが割り当てられます。
 
    ```shell
    curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
    ```
 
-   ユーザーが銅のバッジを2つ獲得し、モデレーターバッジを与えられたので、ユーザーはこのようにフォーラムエントリを表示します。
+   ユーザーはブロンズのバッジを2つ獲得し、モデレーターバッジを与えられたので、ユーザーはこのようにフォーラムに参加して表示されます。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -221,12 +224,13 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 >この例では次のベストプラクティスに従っていません。
 >
 >* スコアルールの名前はグローバルレベルで一意にする必要があり、末尾を同じ名前にしてはなりません。
-   >  実行しな *い* :
+   >  行わ *ない処理の例* :
    >  /etc/community/scoring/rules/site1/forums-scoring
    >  /etc/community/scoring/rules/site2/forums-scoring
    >
    >
-* 異なるAEMサイト用の一意のバッジ画像の作成
+* 異なるAEMサイト向けに一意のバッジ画像を作成する
+
 >
 
 
@@ -239,7 +243,7 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコアリングルール名は、グローバルに一意になることがベストプラクティスです。
+`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコアリングルール名は、グローバルで一意になることがベストプラクティスです。
 
 For the Geometrixx Engage site, the user and their score is in a path contstructed with the scoring rule name, community site&#39;s site id ( `engage-ba81p`), an unique id, and the user&#39;s id :
 
@@ -277,6 +281,6 @@ The score is stored in the property `scoreValue_tl` which may directonly contain
 
 ポイントに基づいて並べ替えたメンバーリストを表示するには：
 
-* [コミュニティサイト](/help/communities/functions.md#leaderboard-function) またはグループテンプレートに含めるリーダーボード機能。
+* [コミュニティサイトまたはグループテンプレートに含めるリーダーボード機能](/help/communities/functions.md#leaderboard-function) 。
 * [リーダーボードコンポーネント](/help/communities/enabling-leaderboard.md)：ページオーサリング用のリーダーボード機能の主要コンポーネント
 
