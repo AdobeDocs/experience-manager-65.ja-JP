@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5 固有のリリース�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d51577195e969ff8af31be49159ff575e3654cc9
+source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
 workflow-type: tm+mt
-source-wordcount: '4476'
+source-wordcount: '4486'
 ht-degree: 11%
 
 ---
@@ -159,7 +159,7 @@ AEM 6.5 Service Pack 5で導入された機能、主な特長、主な機能の�
 
 * ビデオのボリュームを制御する機能に、（ボリュームスライダーにフォーカスするために）タブと、（ボリュームを調整するために）キーボードの(NPR-32065)矢印キーを通してアクセスできるようになりました。
 
-* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザー(NPR-32064)に対して通知されるようになりました。
+* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザーに対して通知されるようになりました(NPR-32064)。
 
 * 「 [!UICONTROL 作成と翻訳] 」フォームの「 [!UICONTROL 言語] 」メニューにブラウズモードでアクセスできるようになりました。(CQ-4293906)
 
@@ -423,7 +423,7 @@ To use UberJar in a Maven project, refer to the article, [How to use UberJar](/h
 
 * 階層内のフォルダーの名前がに変更され、アセットを含むネストされたフォルダーがにパブリッシュされる場合 [!DNL Experience Manager Assets] 、ルートフォルダーが再度パブリッシュされ [!DNL Brand Portal][!DNL Brand Portal] るまで、フォルダーのタイトルはで更新されません。
 
-* バージョン83の更新により、 [!DNL chrome] パッケージの構築で問題が発生しています。 この問題を解決するには、 [!DNL Internet Explorer] およびなどの他の利用可能なブラウザー、 [!DNL Firefox]またはAEM標準のパッケージインストールオプションを使用します。
+* AEM 6.5.5.0のインストール時に、バージョン83のアップデートが原因でパッケージの構築に問題が発生して [!DNL Chrome] います。 この問題を解決するには、 [!DNL Internet Explorer] およびなどの他の利用可能なブラウザー、 [!DNL Firefox]またはAEM標準のパッケージインストールオプションを使用します。 この問題はAEM 6.5.5.0のインストール後に解決されます。
 
 * AEM既定のメール送信者を使用してリモートSMTPサーバーに電子メールを送信できません。TLS v1.2を使用した通信のみが可能です。バンドルを削除し、更新し `javax.mail:mail:1.5.0-b01` て問題を解決し `system/console` てください。
 
