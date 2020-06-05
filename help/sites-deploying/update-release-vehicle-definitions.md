@@ -10,16 +10,19 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 32695db5-d62d-4959-8a24-3d56b4a19904
 translation-type: tm+mt
-source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
+source-git-commit: 6a5a8e64c6eaab816d07d8206601849c974d1e26
+workflow-type: tm+mt
+source-wordcount: '769'
+ht-degree: 75%
 
 ---
 
 
-# AEM Updateリリースの車両定義{#update-release-vehicle-definitions}
+# AEM Updateリリース車の定義{#update-release-vehicle-definitions}
 
 このドキュメントでは、アドビから提供される完全リリース、機能パック、サービスパックなど、Adobe Experience Manager（AEM）の各種リリースについて詳しく説明します。
 
->[!N注]
+>[!Note]
 >
 >AEMアップデートリリースのリリーススケジュールについては、 [AEMアップデートリリースロードマップを参照してください。](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)
 
@@ -39,9 +42,9 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    <td><strong>命名</strong></td>
    <td>
     <ul>
-     <li>メジャーリリースのバージョン番号は、X+1.Y.Zという式に基づいて増加します。 </li>
+     <li>メジャーリリースのバージョン番号は、数式X+1.Y.Zに基づいて増加します。 </li>
      <li>マイナーリリースのバージョン番号は、X.Y+1.Z という式に基づいて大きくなります。</li>
-    </ul> <p>ここで、Xはプライマリバージョン番号、Yはセカンダリバージョン番号、Zはパッチ番号です。</p> </td>
+    </ul> <p>ここで、Xはプライマリ・バージョン番号、Yはセカンダリ・バージョン番号、Zはパッチ番号を表します。</p> </td>
   </tr>
   <tr>
    <td><strong>含まれるもの</strong></td>
@@ -69,7 +72,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    <td>
     <ul>
      <li>スタンドアロンの製品インストーラーとして提供されます。</li>
-     <li>WebサイトのライセンスおよびManaged ServicesライセンスWebサイトから利用可能</li>
+     <li>Licensing WebサイトおよびManaged Services Licensing Webサイトから入手可能</li>
      <li>コンテンツリポジトリの移行が必要な場合があります。</li>
     </ul> </td>
   </tr>
@@ -97,8 +100,8 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    <td>
     <ul>
      <li>パッチのリリース番号は 1 桁の数字です。</li>
-     <li>インストール後、X.Y.Z.SPxの式に基づいて、インストール済みのリリース番号パッチ桁を増やします。</li>
-     <li>ここで、Xはプライマリバージョン番号、Yはセカンダリバージョン番号、Zはパッチ番号です。 x はサービスパック番号です。</li>
+     <li>インストール後、X.Y.Z.SPxの式に基づいて、インストール済みのリリース番号のパッチ桁を増やします。</li>
+     <li>ここで、Xはプライマリ・バージョン番号、Yはセカンダリ・バージョン番号、Zはパッチ番号を表します。 x はサービスパック番号です。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -158,7 +161,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
   </tr>
   <tr>
    <td><strong>命名</strong></td>
-   <td><p>X.Y.Z.CFPx</p> <p>ここで、Xはプライマリバージョン番号、Yはセカンダリバージョン番号、Zはパッチ番号です。 x は累積サービスパック番号です。</p> </td>
+   <td><p>X.Y.Z.CFPx</p> <p>ここで、Xはプライマリ・バージョン番号、Yはセカンダリ・バージョン番号、Zはパッチ番号を表します。 x は累積サービスパック番号です。</p> </td>
   </tr>
   <tr>
    <td><strong>含まれるもの</strong></td>
@@ -170,7 +173,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
   </tr>
   <tr>
    <td><strong>タイミング</strong></td>
-   <td>四分の一</td>
+   <td>四分位数</td>
   </tr>
   <tr>
    <td><strong>入手可能性とインストール</strong></td>
@@ -186,93 +189,6 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
   <tr>
    <td><strong>テストのレベル</strong></td>
    <td>統合レベルでの QA 検証済みおよび回帰テスト</td>
-  </tr>
- </tbody>
-</table>
-
-## Oak 累積修正パック {#oak-cumulative-fix-pack}
-
-<table>
- <tbody>
-  <tr>
-   <td><strong>定義</strong></td>
-   <td>
-    <ul>
-     <li>標準の CFP に似ていますが、Oak 関連の修正のみが含まれています。</li>
-     <li>COFP は他に依存しません（依存関係なし）。ユーザーは依存関係の検索や解決を気にする必要はありません。[1]</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>命名</strong></td>
-   <td>oak &lt;version&gt;</td>
-  </tr>
-  <tr>
-   <td><strong>含まれるもの</strong></td>
-   <td>COFP は、特定の 1.x バージョンに関するすべての Oak コンポーネントの修正を含む、累積修正パックです。例えば、COHF 1.x.3 を適用する場合、COHF 1.x.3 = COHF 1.x.1 + COHF 1.x.2 です。</td>
-  </tr>
-  <tr>
-   <td><strong>ドキュメント</strong></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>タイミング</strong></td>
-   <td><p>必要に応じて</p> </td>
-  </tr>
-  <tr>
-   <td><strong>入手可能性とインストール</strong></td>
-   <td>
-    <ul>
-     <li>エクスペリエンスを向上させるために、COFP のインストールプロセスが単純化されました（すべてのコンポーネントに対して 1 つのパッケージをインストールするだけです）。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>テストのレベル</strong></td>
-   <td><p>QA 検証済み</p> </td>
-  </tr>
- </tbody>
-</table>
-
-## ホットフィックス {#hot-fix}
-
-<table>
- <tbody>
-  <tr>
-   <td><strong>定義</strong></td>
-   <td><p>不可欠なサービスの品質を大幅に低下させたり、業務活動に大きな影響を与えたりする製品の欠陥を解決するために作成された、1 つ以上のファイルを含むパッケージ。 </p> </td>
-  </tr>
-  <tr>
-   <td><strong>命名</strong></td>
-   <td>cq-&lt;Release Version&gt;-hotfix-&lt;hotfix ID&gt;-&lt;hotfix version&gt;</td>
-  </tr>
-  <tr>
-   <td><strong>含まれるもの</strong></td>
-   <td>特定の問題に対する修正を含みます。</td>
-  </tr>
-  <tr>
-   <td><strong>ドキュメント</strong></td>
-   <td>公開ホットフィックスのリリースノートは、AEM サポートポータルを通じた顧客からのリクエストに基づいてのみ入手可能です。</td>
-  </tr>
-  <tr>
-   <td><strong>タイミング</strong></td>
-   <td>必要に応じて</td>
-  </tr>
-  <tr>
-   <td><strong>入手可能性とインストール</strong></td>
-   <td>
-    <ul>
-     <li>パッケージとして提供</li>
-     <li>パッケージ共有で入手可能</li>
-     <li>リリースされている最新のサービスパックに依存</li>
-     <li>大部分のホットフィックスは、特に指定がない限り、スタンドアロンです。どのような順序でもインストールできます。依存関係要素の「パッケージ共有の詳細」タブから確認できます。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>テストのレベル</strong></td>
-   <td>
-    <ul>
-     <li>カスタマーケアによって検証済み</li>
-     <li>AEM のホットフィックスには、サービスパックや製品リリースと同じレベルの品質保証がありません。したがって、高品質なデプロイメントプロセスの一環として、まずステージング環境で検証する必要があります。</li>
-    </ul> </td>
   </tr>
  </tbody>
 </table>
@@ -306,7 +222,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    <td>
     <ul>
      <li>AEM カスタマーケアがパッケージとして提供</li>
-     <li>サービスパックやフルリリースには必ずしも含まれていない</li>
+     <li>サービスパックまたはフルリリースに必ずしも含まれていない</li>
     </ul> </td>
   </tr>
   <tr>
@@ -324,7 +240,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    <td><strong>定義</strong></td>
    <td>
     <ul>
-     <li>機能パックはアドオン機能であり、サービスパックを通じて提供されます。AEMバージョンが最後のService packをリリースしている場合、アドビは将来その機能パックを提供しません。</li>
+     <li>機能パックはアドオン機能であり、サービスパックを通じて提供されます。AEMバージョンの最後のService Packがリリースされた場合、アドビは将来、その機能パックを提供しなくなります。</li>
      <li>機能パックには、製品の機能強化が含まれます。以降の製品リリースで予定されているが、アドビの製品管理部門の決定に基づいて予定より早く提供されます。</li>
      <li>機能は常に次のメジャーリリースに統合され、顧客が必要とする AEM バージョンに移植されます。</li>
      <li>Common Interest 機能パックと GA 機能パックは次のサービスパックに統合されます。</li>
@@ -366,5 +282,5 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
  </tbody>
 </table>
 
-* [1]:OAKの修正は、個々のホットフィックスとして提供されません。 しかし、以降の累積 Oak ホットフィックスに含まれます。必要に応じて、最新の COFP 上で診断ビルドを利用できます。前提条件は、最新の COFP を実行していることです。診断ビルドは、ホットフィックスと同じレベルの品質保証を提供するだけです。したがって、累積修正パック、サービスパックまたは製品リリースと同じレベルの品質保証を提供するものではありません。最終修正は次のCFPで提供されます。
+* [1]: OAKの修正は、個々のホットフィックスとしては提供されません。 しかし、以降の累積 Oak ホットフィックスに含まれます。必要に応じて、最新の COFP 上で診断ビルドを利用できます。前提条件は、最新の COFP を実行していることです。診断ビルドは、ホットフィックスと同じレベルの品質保証を提供するだけです。したがって、累積修正パック、サービスパックまたは製品リリースと同じレベルの品質保証を提供するものではありません。最終的な修正は、次のCFPで提供されます。
 
