@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Release Notes
+user-guide-title: AEM 6.5 リリースノート
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
+workflow-type: tm+mt
+source-wordcount: '52'
+ht-degree: 73%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 + [AEM 6.5の概要](home.md)
 + [一般的なリリースノート](release-notes.md)
 + Service Pack リリースノート {#service-pack}
-   + [新機能 — 最新のサービスパック](new-features-latest-service-pack.md)
-   + [最新のサービスパックに含まれるホットフィックスと機能パック](sp-release-notes.md)
-   + [以前のサービスパックに含まれていたホットフィックスと機能パック](previous-hotfixes-featurepacks.md)
+   + [最新情報](new-features-latest-service-pack.md)
+   + [Service Pack 5 リリースノート](sp-release-notes.md)
+   + [以前のService Packリリースノート](previous-hotfixes-featurepacks.md)
 + [AEM Sites リリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
 + [AEM Communities リリースノート](communities-release-notes.md)
