@@ -11,7 +11,10 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: dbb99875cc6f3c8810670ffe923756f7c13d4ace
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 91%
 
 ---
 
@@ -66,14 +69,6 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-power-user</td> 
-   <td>
-    <ul> 
-     <li>アダプティブフォームやインタラクティブ通信テンプレートを作成およびプレビューする</li> 
-     <li>コードエディターを使用して、アダプティブフォームまたはインタラクティブな通信テンプレートのスクリプトを作成する</li> 
-    </ul> </td> 
-  </tr>
-  <tr>
    <td><p>fdm-authors</p> </td> 
    <td>
     <ul> 
@@ -99,7 +94,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>AEMインボックスアプリケーションを使用<br /><strong>する注意：AEMのイン </strong>ボックスでInteractive Communications Agent UIにアクセスするには、cm-agent-usersおよびworkflow-usersグループの割り当てが必要です。</li> 
+     <li>Use AEM inbox applications<br /><strong>Note: </strong>AEMのインボックスでInteractive Communications Agent UIにアクセスするには、cm-agent-usersとworkflow-usersグループの割り当てが必要です。</li> 
      <li>ワークフローインスタンスを管理する</li> 
     </ul> </td> 
   </tr>
