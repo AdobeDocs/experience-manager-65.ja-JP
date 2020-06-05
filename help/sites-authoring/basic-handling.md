@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
-source-wordcount: '3010'
-ht-degree: 92%
+source-wordcount: '2979'
+ht-degree: 93%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 92%
    >
 * 一部の機能はすべてのコンソールでは使用できず、一部のコンソールにしかない機能もあります。個別のコンソールや関連する機能に関する具体的な情報については、他のページで詳しく取り上げます。
 >* AEM 全体で（特に、[コンソールを使用する](/help/sites-authoring/keyboard-shortcuts.md)場合と[ページを編集する](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)場合に）、キーボードショートカットを利用できます。
+
 >
 
 
@@ -89,10 +90,6 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 コンソールやコンテンツ間を移動すると、ブラウザータブのタイトルが更新され、場所が反映されます。
 
->[!NOTE]
->
->タブのタイトルは、 [AEM 6.5 Service Pack 5](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 以降の場所を反映しています。
-
 ナビゲーションでは、次のコンソールを使用できます。
 
 <table>
@@ -134,7 +131,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    <td><a href="https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">スクリーン</a>では、あらゆる場所、あらゆるサイズの対顧客画面をすべて管理できます。</td>
   </tr>
   <tr>
-   <td>サイト</td>
+   <td>Sites</td>
    <td>サイトコンソールでは、AEM インスタンス上で実行される <a href="/help/sites-authoring/page-authoring.md">Web サイトを作成、参照および管理</a>できます。これらのコンソールを通じて、Web サイトページの作成、編集、コピー、移動および削除や、ワークフローの開始、ページの公開をおこなうことができます。<br /> </td>
   </tr>
  </tbody>
@@ -233,10 +230,6 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    **サイトコンソールには** 、「メインコンテンツに **スキップ**」オプションが追加されています。 これは、ヘッダーオプションを *タブで移動すると表示され* 、（製品）ツールバーの標準要素をスキップしてメインコンテンツに直接移動できるので、ナビゲーションの速度が速くなります。
 
    ![bh-30](assets/bh-30.png)
-
-   >[!NOTE]
-   >
-   >「 **メインコンテンツに** スキップ [」は、](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) AEM 6.5 Service Pack 5以降で利用できます。
 
 ## ヘルプへのアクセス {#accessing-help}
 
@@ -420,6 +413,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 * リソース名かリソース名の右にある山形記号をタップまたはクリックすることで、ツリーを上下に移動できます。
 
    * リソース名と山形記号は、タップまたはクリックするとハイライト表示されます。
+
    ![bh-17](assets/bh-17.png)
 
    * クリック／タップしたリソースの子は、クリック／タップしたリソースの右側の列に表示されます。
@@ -431,6 +425,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    * 選択すると、チェックマークがサムネールにオーバーレイ表示され、リソース名もハイライト表示されます。
    * 選択されたリソースの詳細が最後の列に表示されます。
    * アクションツールバーが使用可能になります。
+
    ![bh-18](assets/bh-18.png)
 
    列表示でページが選択されると、選択したページが次の詳細と共に最後の列に表示されます。
@@ -494,6 +489,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    * **ページ分析**
    * **個別訪問者数**
    * **ページ滞在時間**
+
    ![bh-21](assets/bh-21.png)
 
    デフォルトでは、ページの URL の一部を構成する「**名前**」列が表示されます。場合によっては、作成者は、異なる言語のページにアクセスする必要があることがあり、ページの名前（通常は変更なし）を確認することは、作成者がページの言語を知らない場合に非常に役立ちます。
