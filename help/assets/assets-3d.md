@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 2f0e626aa16a62203755e29800a5935b350ffe79
+source-git-commit: d17500ea7b95c90069d9c51fac5d4f3706ee4c71
 workflow-type: tm+mt
-source-wordcount: '2162'
-ht-degree: 13%
+source-wordcount: '2144'
+ht-degree: 14%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 13%
 
 ダイナミックメディアでは、3Dアセットをイマーシブなエクスペリエンスとしてアップロード、管理、表示および配信できます。
 
-* 3D画像のワンクリック公開(ツールバーの **[!UICONTROL クイック公開を使用]** )によるURLの生成。
-* Adobe Dimensionを使用した高品質でインタラクティブなDimensionalビューアプリセットで、3Dアセットの表示のサポートを最適化しました。 ビューアプリセットには、オービット、ズーム、パンを行うことのできるインタラクティブカメラコントロールの集まりが含まれています。
+* 3Dアセットのワンクリックで公開(ツールバーの **[!UICONTROL クイック公開]** )してURLを生成
+* Adobe Dimensionを使用した高品質でインタラクティブなDimensionalビューアプリセットで、3Dアセットの表示のサポートを最適化しました。
 * 3D Media WCMコンポーネントを使用すると、3DアセットをAEMサイトのページに簡単に追加できます。
 
-ダイナミックメディアで3Dアセットを使用する場合、インストールや設定はありません。
+ダイナミックメディアで3Dアセットを使用する場合、追加の設定は必要ありません。
 
 ![3次元の靴](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
@@ -36,10 +36,10 @@ ht-degree: 13%
 
 | 3D ファイル拡張子 | ファイル形式 | MIME タイプ | 備考 |
 |---|---|---|---|
-| GLB | バイナリ GL 伝送 | model/gltf-binary | テクスチャを外部イメージとして参照する代わりに、アセットと共にテクスチャを含めます。 |
+| GLB | バイナリ GL 伝送 | model/gltf-binary | マテリアルとテクスチャを単一のアセットとして含めます。 |
 | OBJ | WaveFront 3D オブジェクトファイル | application/x-tgif |  |
 | STL | ステレオリソグラフィ | application/vnd.ms-pki.stl |  |
-| USDZ | 汎用シーン記述 Zip アーカイブ | model/vnd.usdz+zip | *取り込みのみのサポート 表示も操作もできません。* USDZはApple独自の3D形式で、SafariまたはiOSの表示のみ可能です。 |
+| USDZ | 汎用シーン記述 Zip アーカイブ | model/vnd.usdz+zip | *取り込みのみのサポート 表示も操作もできません。* USDZは独自の3D形式で、SafariやiOSデバイスでネイティブに表示できます。 |
 
 ## クイック開始: ダイナミックメディア内の3Dアセット {#quick-start-three-d}
 
@@ -149,7 +149,8 @@ Webページが **[!UICONTROL 編集]** モードの場合、3Dアセットと�
 
    * ページ右上付近にある「 **[!UICONTROL プレビュー]** 」をクリックして **[!UICONTROL プレビュー]** モードに入ります。
    * ブラウザー `/editor.html` のページURLから削除します。
-   ![3D Mediaコンポーネント内に表示される3Dアセット](/help/assets/assets-dm/3d-asset-in-3d-media.png)完全にインタラクティブな3Dアセット **[!UICONTROL (]** プレビューモードで表示される)。
+
+完全にインタラクティブな3Dアセット(    ![3D Mediaコンポーネント内に表示される3Dアセット](/help/assets/assets-dm/3d-asset-in-3d-media.png)完全にインタラクティブな3Dアセット **[!UICONTROL (]** プレビューモードで表示される)。
 
 1. **[!UICONTROL プレビュー]** ・モードの間に、次のいずれかの操作を行います。
 
@@ -280,6 +281,7 @@ See also [Publishing Dynamic Media assets](publishing-dynamicmedia-assets.md).
    * 3Dアセットはサポートされている形式(GLB、OBJ、STL、USDZ)です。
    * 3Dアセットがダイナミックメディアイメージ制作システム(IPS)に取り込まれました。
    * 3Dアセットが公開されます。
+
    ![3d-asset-url](/help/assets/assets-dm/3d-asset-url.png)
 
 1. 「 **[!UICONTROL URL]** 」をタップして、3Dアセットの実稼動URLを表示します。
