@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 44%
 
 ---
 
@@ -22,9 +25,9 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 高度なスコアを使用すると、メンバーをエキスパートとして識別するバッジを授与できます。Advanced scoring assigns points based on the quantity *and* quality of content created by a member, whereas basic scoring assigns points simply based on the quantity of content created.
 
-この違いは、スコアの計算に使用されるスコアエンジンによるものです。基本スコアリングエンジンは、単純な計算を適用します。 アドバンススコアリングエンジンは、トピックの自然言語処理(NLP)を通じて導き出される、価値の高い関連コンテンツに貢献するアクティブなメンバーに報酬を与えるアダプティブアルゴリズムです。
+この違いは、スコアの計算に使用されるスコアエンジンによるものです。基本スコアリングエンジンは、単純な計算を適用します。 高度なスコアリングエンジンは、トピックの自然言語処理(NLP)を通じて導き出された、価値の高い関連コンテンツに貢献するアクティブメンバーに報酬を与えるアダプティブアルゴリズムです。
 
-このスコアアルゴリズムでは、コンテンツの関連度に加え、投票や回答の割合など、メンバーのアクティビティが考慮されます。基本スコアには定量的なものも含まれますが、高度なスコアではアルゴリズム的に使用されます。
+このスコアアルゴリズムでは、コンテンツの関連度に加え、投票や回答の割合など、メンバーのアクティビティが考慮されます。基本的なスコアリングには定量的なものが含まれますが、高度なスコアリングではアルゴリズム的に使用します。
 
 したがって、高度なスコアエンジンの分析を意味あるものにするには、十分なデータが必要です。エキスパートになるための達成のしきい値は、作成されたコンテンツの量と品質にアルゴリズムが継続的に調整されるので、常に再評価されます。 There is also a concept of *decay* of a member&#39;s older posts. If an expert member stops participating in the subject matter where they gained expert status, at some pre-determined point (see [scoring engine configuration](#configurable-scoring-engine)) they could lose their status as an expert.
 
@@ -32,9 +35,9 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 * Basic and advanced scoring and badging rules are [applied to content](/help/communities/implementing-scoring.md#apply-rules-to-content) in the same manner
 
-   * 基本および高度なスコアおよびバッジルールを同じコンテンツに適用できます。
+   * 基本的なスコアおよび高度なスコアおよびバッジルールを同じコンテンツに適用できます
 
-* [コンポーネントのバッジの有効化](/help/communities/implementing-scoring.md#enable-badges-for-component) ：汎用
+* [コンポーネントのバッジを有効にする](/help/communities/implementing-scoring.md#enable-badges-for-component) ：汎用
 
 スコアルールおよびバッジルールの設定では、以下の点が異なります。
 
@@ -44,7 +47,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
    * `scoringType` 設定 `advanced`
    * 必須 `stopwords`
 
-* 詳細なバッジルール：
+* 高度なバッジルール：
 
    * `badgingType` 設定 `advanced`
    * `badgingLevels`**を授与するエキスパートレベルの数に設定**
@@ -52,7 +55,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 >[!NOTE]
 >
->高度なスコアおよびバッジ機能を使用するには、エキスパートIDパッ [ケージをインストールしま](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)す。
+>高度なスコアリング機能とバッジング機能を使用するには、 [エキスパートIDパッケージをインストールします](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
 
 ## 設定可能なスコアエンジン {#configurable-scoring-engine}
 
@@ -60,12 +63,12 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ![chlimage_1-139](assets/chlimage_1-139.png)
 
-* **スコアリングの重み**
+* **スコア重み付け**
 
    特定のトピックについて、スコア計算時に最も高い優先度を与える動詞を指定します。One or more topics may be entered, but limited to **one verb per topic**. See [Topics and Verbs](/help/communities/implementing-scoring.md#topics-and-verbs).
-コンマはエスケープさ `topic,verb` れたとおりに入力されます。 次に例を示します。
+コンマはエスケープさ `topic,verb` れたとおりに入力します。 次に例を示します。
    `/social/forum/hbs/social/forum\,ADD`
-デフォルトは、QnAおよびフォーラムコンポーネントのADD動詞に設定されます。
+デフォルトは、QnAおよびフォーラムコンポーネント追加の動詞に設定されます。
 
 * **スコアリング範囲**
 
@@ -73,13 +76,13 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
    デフォルト値は 100 であり、スコア範囲は 0 ～ 100 となります。
 
-* **エンティティの減衰時間間隔**
+* **エンティティ減衰時間間隔**
 
-   このパラメーターは、すべてのエンティティスコアがディケードされる時間数を表します。 これは、コミュニティサイト上にある古いコンテンツをスコアに含めないようにするために必要な設定です。
+   このパラメーターは、すべてのエンティティスコアが計算されなくなった時間数を表します。 これは、コミュニティサイト上にある古いコンテンツをスコアに含めないようにするために必要な設定です。
 
    デフォルト値は 216000 時間（約 24 年）です。
 
-* **スコアの増加率**:0からスコアの範囲でスコアを指定します。この範囲を超えると、成長速度が遅くなり、エキスパートの数が制限されます。
+* **スコアリング増加率**:0 ～スコアリング範囲のスコアを指定します。スコア範囲を超えると、成長が遅くなり、エキスパートの数が制限されます。
 
    デフォルト値は 50 です。
 
@@ -87,9 +90,9 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 基本スコアでは、バッジ獲得に必要な量はあらかじめ決まっています。
 
-高度なスコアでは、システム内の上質なデータの量に基づいて、バッジ獲得に必要な量が継続的に調整されます。スコアリングは、ベル曲線と同様の方法で連続的に計算されます。
+高度なスコアでは、システム内の上質なデータの量に基づいて、バッジ獲得に必要な量が継続的に調整されます。スコアリングは、ベルカーブと同じ方法で連続的に計算されます。
 
-メンバーが、アクティブでなくなったトピックに関するエキスパートバッジを得た場合、時間の経過と共に減少するためにバッジを失う可能性があります。
+会員が、もはや活動していないトピックに関するエキスパートバッジを獲得した場合、時間の経過と共に減衰するためにバッジを失う可能性があります。
 
 ### scoringType {#scoringtype}
 
@@ -105,7 +108,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 高度なスコアパッケージでは、ストップワードファイルを含む設定フォルダーがインストールされます。
 
-* `/etc/community/scoring/configuration/stopwords`
+* `/libs/settings/community/scoring/configuration/stopwords`
 
 高度なスコアのアルゴリズムは、ストップワードファイルに含まれる単語のリストに基づいて、コンテンツ処理中に無視して構わない一般的な英単語を識別します。
 
@@ -126,27 +129,27 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
   <tr>
    <th>プロパティ</th>
    <th>タイプ</th>
-   <th>値 説明</th>
+   <th>値の説明</th>
   </tr>
   <tr>
    <td>badgingPath</td>
-   <td>文字列[]</td>
-   <td><em>（必須）</em> 、badgingLevelsの数までのバッジ画像の複数値の文字列。 バッジ画像のパスを指定するときは、最も高いレベルのエキスパートに授与するものを最初に指定する必要があります。badgingLevels で指定された値よりもバッジの数が少ない場合、足りない部分には配列内の最終要素のバッジが使用されます。エントリの例：<br /> <code>/etc/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
+   <td>String[]</td>
+   <td><em>（必須）</em> 、badgingLevelsの数までのバッジ画像の複数値の文字列。 バッジ画像のパスを指定するときは、最も高いレベルのエキスパートに授与するものを最初に指定する必要があります。badgingLevels で指定された値よりもバッジの数が少ない場合、足りない部分には配列内の最終要素のバッジが使用されます。入力例：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
   </tr>
   <tr>
    <td>badgingLevels</td>
    <td>Long</td>
-   <td><em>（オプション）</em> 、認定する専門知識のレベルを指定します。 For example, if there should be an <code>expert </code>and an <code>almost expert</code> (two badges), then the value should be set to 2. badgingLevelは、badgingPathプロパティに対してリストされたエキスパート関連のバッジ画像の数に対応する必要があります。 初期設定は 1 です。</td>
+   <td><em>（オプション）</em> 、審査対象となる専門知識のレベルを指定します。 For example, if there should be an <code>expert </code>and an <code>almost expert</code> (two badges), then the value should be set to 2. badgingLevelは、badgingPathプロパティに対してリストされているエキスパート関連のバッジ画像の数に対応する必要があります。 初期設定は 1 です。</td>
   </tr>
   <tr>
    <td>badgingType</td>
-   <td>文字列</td>
-   <td><em>（必須）</em> 「基本」または「詳細」としてスコアリングエンジンを識別します。 「advanced」に設定すると、デフォルトは「basic」になります。</td>
+   <td>String</td>
+   <td><em>（必須）</em> 「基本」または「詳細」としてスコアリングエンジンを識別します。 "advanced"に設定されている場合、デフォルトは"basic"です。</td>
   </tr>
   <tr>
    <td>scoringRules</td>
-   <td>文字列[]</td>
-   <td><em>（オプション）</em> 、リストに表示されたスコアリングルールで識別されるスコアリングイベントにバッジルールを制限する複数値の文字列。<br /> エントリの例：<br /> 初期設 <code>/etc/community/scoring/rules/adv-comments-scoring</code><br /> 定では、制限はありません。</td>
+   <td>String[]</td>
+   <td><em>（オプション）</em> 複数値の文字列。リストに表示されたスコアリングルールで識別されるスコアリングイベントにバッジングルールを制限します。<br /> 入力例：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 初期設定は制限なしです。</td>
   </tr>
  </tbody>
 </table>
@@ -159,62 +162,62 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 * `expert`
 
-   `/etc/community/badging/images/expert-badge/jcr:content/expert.png`
+   `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
-エキスパートバッジがアクティビティの報酬として表示されるようにするには、次の点を確認します。
+エキスパートバッジがアクティビティへのご褒美として表示されるように、以下を確認します。
 
-* `Badges` が有効になっているかどうかを確認します。
+* `Badges` は、フォーラムやQnAコンポーネントなどの機能に対して有効になっています。
 
-* 高度なスコアリングとバッジルールは、コンポーネントが配置されるページ（または上位）に適用されます
+* 高度なスコアリングルールとバッジルールは、コンポーネントが配置されているページ（または親）に適用されます
 
 次の基本情報を参照してください。
 
-* [コンポーネントのバッジの有効化](/help/communities/implementing-scoring.md#enableforcomponent)
+* [コンポーネントのバッジングの有効化](/help/communities/implementing-scoring.md#enableforcomponent)
 * [ルールの適用](/help/communities/implementing-scoring.md#applytopage)
 
 ### このリリースに含まれているスコアルールとサブルール {#included-scoring-rules-and-sub-rules}
 
 Included in the beta release are two advanced scoring rules for the [forum function](/help/communities/functions.md#forum-function) (one each for the forum and comments components of the forum feature):
 
-1. `/etc/community/scoring/rules/adv-comments-scoring`
+1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
    * `subRules[] =
-/etc/community/scoring/rules/sub-rules/adv-comments-rule
-/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner
-/etc/community/scoring/rules/sub-rules/adv-voting-rule`
+/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule`
 
-1. `/etc/community/scoring/rules/adv-forums-scoring`
+1. `/libs/settings/community/scoring/rules/adv-forums-scoring`
 
    * `subRules[] =
-/etc/community/scoring/rules/sub-rules/adv-forums-rule
-/etc/community/scoring/rules/sub-rules/adv-comments-rule
-/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner`
+/libs/settings/community/scoring/rules/sub-rules/adv-forums-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner`
 
-**注意：**
+**備考:**
 
 * Both `rules`and `sub-rules` nodes are of type `cq:Page`
 
-* `subRules`は、ルールのノード上のString[] 型の属性で `jcr:content` す
+* `subRules`は、ルールの[]`jcr:content` ノード上のString型の属性です
 
 * `sub-rules` は、複数のスコアルール間で共有できます。
 
 * `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
 
-   * ルール名は場所に関係なく一意である必要があります
+   * ルール名は、場所に関係なく一意である必要があります
 
 ### このリリースに含まれるバッジルール {#included-badging-rules}
 
 Included in the release are two advanced badging rules that correspond to the [advanced forums and comments scoring rules](#included-scoring-rules-and-sub-rules).
 
-* `/etc/community/badging/rules/adv-comments-badging`
-* `/etc/community/badging/rules/adv-forums-badging`
+* `/libs/settings/community/badging/rules/adv-comments-badging`
+* `/libs/settings/community/badging/rules/adv-forums-badging`
 
-**注意：**
+**備考:**
 
 * `rules` のノードは、cq:Page タイプです。
 * `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
 
-   * ルール名は場所に関係なく一意である必要があります
+   * ルール名は、場所に関係なく一意である必要があります
 
