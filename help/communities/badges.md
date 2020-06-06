@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 65%
 
 ---
 
@@ -42,7 +45,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 ## バッジを作成 {#create-badge}
 
-バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。The badge image is stored in the repository at `/etc/community/badging/images` and is automatically replicated to the publish environment.
+バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。The badge image is stored in the repository at `/libs/settings/community/badging/images` and is automatically replicated to the publish environment.
 
 パブリッシュ環境がパブリッシャーのファームである場合、[ユーザーの同期](/help/communities/sync.md)を設定する必要があります。
 
