@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 49%
 
 ---
 
@@ -47,7 +50,7 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 
 Select the placed `Leaderboard` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-20](assets/chlimage_1-20.png)![chlimage_1-21](assets/chlimage_1-21.png)
+![chlimage_1-20](assets/chlimage_1-20.png) ![chlimage_1-21](assets/chlimage_1-21.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -55,22 +58,22 @@ Select the placed `Leaderboard` component to access and select the `Configure` i
 
 * **表示名**
 
-   ボードに表示するわかりやすい名前。バッジやスコアの表示に選択したルールを反映します。
+   ボードに表示するわかりやすい名前。バッジとスコアの表示に選択したルールを反映します。
 Default is `Leaderboard`, if nothing entered.
 
 * **バッジ**
 
-   チェックすると、バッジアイコンの列がリーダーボードに含まれます。
+   オンの場合、バッジアイコンの列がリーダーボードに含まれます。
 初期設定はオフです。
 
 * **バッジ名**
 
-   チェックすると、バッジ名の列がリーダーボードに含まれます。
+   オンの場合、バッジ名の列がリーダーボードに含まれます。
 初期設定はオフです。
 
 * **ユーザーアバター**
 
-   オンにすると、メンバーのアバター画像がリーダーボードに含まれ、メンバーのプロファイルへの名前リンクの横に表示されます。
+   オンの場合、メンバーのアバター画像はリーダーボードに含まれ、メンバープロファイルへの名前リンクの隣に表示されます。
 初期設定はオフです。
 
 #### 「ルール」タブ{#rules-tab}
@@ -79,7 +82,7 @@ Default is `Leaderboard`, if nothing entered.
 
 * **ルールの場所**
 
-   （必須）スコアリング/バッジルールが設定されている場所。
+   （必須）スコアリング/バッジングルールが設定されている場所。
 
 * **スコアルール**
 
@@ -91,7 +94,7 @@ Default is `Leaderboard`, if nothing entered.
 
 * **最大表示数**
 
-   1ページに表示するメンバの数。デフォルトは10です。
+   1ページに表示するメンバーの数。デフォルトは10です。
 
 ### 例：参加者のリーダーボード {#example-participants-leaderboard}
 
@@ -110,9 +113,9 @@ Default is `Leaderboard`, if nothing entered.
 
 * 「ルール」タブ：
 
-   * ルールの場所 = `/content/sites/communities/jcr:content`
-   * スコアルール = `/etc/community/scoring/rules/forums-scoring`
-   * バッジルール = `/etc/community/badging/rules/reference-badging`
+   * ルールの場所 = `/content/sites/<site name>/jcr:content`
+   * スコアルール = `/libs/settings/community/scoring/rules/forums-scoring`
+   * バッジルール = `/libs/settings/community/badging/rules//reference-badging`
    * 最大表示数 = `10`
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
@@ -133,9 +136,9 @@ Default is `Leaderboard`, if nothing entered.
 
 * 「ルール」タブ：
 
-   * ルールの場所 = `/content/sites/communities/jcr:content`
-   * スコアルール = `/etc/community/scoring/rules/adv-forums-scoring`
-   * バッジルール = `/etc/community/badging/rules/adv-forums-badging`
+   * ルールの場所 = `/content/sites/<site name>/jcr:content`
+   * スコアルール = `/libs/settings/community/scoring/rules/adv-forums-scoring`
+   * バッジルール = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 最大表示数 = `10`
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
