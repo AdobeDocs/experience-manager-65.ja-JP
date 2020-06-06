@@ -12,7 +12,10 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '2896'
+ht-degree: 54%
 
 ---
 
@@ -25,12 +28,12 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 スコアとバッジの主な要素を以下に示します。
 
-* [コミュニティ内の](#assign-and-revoke-badges) 1人のメンバーの役割を識別するためのバッジを割り当てます。
+* [コミュニティ内のメンバーの役割を識別するためのバッジ](#assign-and-revoke-badges) を割り当てます。
 
-* [メンバーの参加を奨励する](#enable-scoring) （コンテンツの作成数量）ための基本的なバッジの付与。
-* [メンバーをエキスパート](/help/communities/advanced.md) （コンテンツの作成品質）として識別するための高度なバッジの付与。
+* [会員の参加を促すためのバッジの基本的な付与](#enable-scoring) （コンテンツの作成数量）。
+* [メンバーをエキスパートとして識別するため](/help/communities/advanced.md) 、バッジの高度な付与（コンテンツの作成品質）。
 
-**バッジの** 付与は、デフォルトで [は有効になっていません](/help/communities/implementing-scoring.md#main-pars-text-237875536)。
+**バッジの付与は** 、デフォルトでは [有効になっていません](/help/communities/implementing-scoring.md#main-pars-text-237875536)。
 
 >[!CAUTION]
 >
@@ -39,11 +42,11 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 ## バッジ {#badges}
 
-バッジはコミュニティ内でのメンバーの役割または地位を表すためのもので、メンバーの名前の下に配置されます。バッジは、画像または名前で表示できます。 画像として表示される場合、アクセシビリティの代替テキストとして名前が含まれます。
+バッジはコミュニティ内でのメンバーの役割または地位を表すためのもので、メンバーの名前の下に配置されます。バッジは、画像または名前で表示できます。 画像として表示される場合、アクセシビリティ用の代替テキストとして名前が含まれます。
 
-デフォルトでは、バッジはリポジトリ内の次の場所にあります。
+デフォルトでは、バッジはリポジトリの次の場所にあります。
 
-* `/etc/community/badging/images`
+* `/libs/settings/community/badging/images`
 
 別の場所に格納する場合は、バッジに誰でもアクセスできるようにする必要があります。
 
@@ -62,13 +65,16 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 このリリースには、以下の 3 つの役割ベースのバッジが含まれています。
 
 * **司会者**
-   `/etc/community/badging/images/moderator/jcr:content/moderator.png`
 
-* **グループマネージャー**
-   `/etc/community/badging/images/group-manager/jcr:content/group-manager.png`
+   `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
-* **特権会員**
-   `/etc/community/badging/images/privileged-member/jcr:content/privileged-member.png`
+* **グループマネージャ**
+
+   `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
+
+* **特権的な会員**
+
+   `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -84,19 +90,22 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 このリリースには、以下の 3 つの報奨ベースのバッジが含まれています。
 
 * **金**
-   `/etc/community/badging/images/gold-badge/jcr:content/gold.png`
+
+   `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
 * **銀**
-   `/etc/community/badging/images/silver-badge/jcr:content/silver.png`
+
+   `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **青銅**
-   `/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
+
+   `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
 ![chlimage_1-99](assets/chlimage_1-99.png)
 
 >[!NOTE]
 >
->不適切な投稿としてフラグが付けられた場合に、その投稿にマイナスのポイントを割り当て、スコアの値に反映させるようなスコアルールを設定できます。ただし、一度獲得したバッジは、スコアリングポイントの削減またはスコアリングルールの変更により、自動的に削除されることはありません。
+>不適切な投稿としてフラグが付けられた場合に、その投稿にマイナスのポイントを割り当て、スコアの値に反映させるようなスコアルールを設定できます。ただし、一度獲得したバッジは、スコアリングポイントの減少またはスコアリングルールの変更により、自動的に削除されません。
 >
 >授与されたバッジは、割り当てられたバッジと同じ方法で取り消すことができます。See the [Assign and Revoke Badges](#assign-and-revoke-badges) section. 今後の改善には、メンバーのバッジを管理するUIが含まれます。
 
@@ -109,7 +118,7 @@ Custom badges can be installed using the [Badges console](/help/communities/badg
 
 ## スコアの有効化 {#enable-scoring}
 
-スコアはデフォルトで有効になっていません。スコア付けとバッジの付与を設定し、有効にする基本的な手順は次のとおりです。
+スコアはデフォルトで有効になっていません。スコアリングを設定し、有効にしてバッジを付与する基本的な手順は次のとおりです。
 
 * Identify rules for earning points ([scoring rules](#scoring-rules)).
 * For points accumulated per scoring rules, assign [badges](#badges) ([badging rules](#badging-rules)).
@@ -163,11 +172,11 @@ If the node is of type `cq:Page` (recommended), then, using CRXDE|Lite, add the 
 スコアルールは継承されますが、付加的ではありません。次に例を示します。
 
 * page2にスコアリングルール2が含まれ、その上位のpage1にスコアリングルール1が含まれる場合。
-* page2コンポーネントのアクションは、rule1とrule2の両方を呼び出します。
+* page2コンポーネント上のアクションは、rule1とrule2の両方を呼び出します。
 * If both rules contain applicable sub-rules for the same `topic/verb`:
 
    * rule2のサブルールのみがスコアに影響を与えます。
-   * 両方のサブルールのスコアが一緒に追加されることはありません。
+   * 両方のサブルールのスコアが一緒に追加されるわけではありません。
 
 1 つ以上のスコアルールが存在するときは、ルールごとに分けてスコアが管理されます。
 
@@ -181,9 +190,9 @@ Scoring rules are nodes of type `cq:Page` with properties on its `jcr:content` n
 >
 >スコアルールの名前はグローバルレベルで一意にする必要があり、末尾を同じ名前にしてはなりません。
 >
->実行しな *い* :
->/etc/community/scoring/rules/site1/forums-scoring
->/etc/community/scoring/rules/site2/forums-scoring
+>実行し *ない操作の例* :
+>/libs/settings/community/scoring/rules/site1/forums-scoring
+>/libs/settings/community/scoring/rules/site2/forums/scoring
 
 
 ### Scoring Sub-Rules {#scoring-sub-rules}
@@ -192,9 +201,9 @@ Scoring rules are nodes of type `cq:Page` with properties on its `jcr:content` n
 
 それぞれのスコアサブルールでは、以下を指定します。：
 
-* どのアクティビティが追跡されているか。
-* どのコミュニティ機能が関与しているか。
-* 何点賞を取るか
+* 追跡しているアクティビティは何か。
+* どのコミュニティ機能が関与しているか
+* 何点が落札されるか
 
 デフォルトではアクションを実行したメンバーにポイントが付与されますが、サブルールでコンテンツの所有者にポイントを付与するよう設定することも可能です（`forOwner`）。
 
@@ -212,7 +221,7 @@ Sub-rules are nodes of type `cq:Page` with properties on its `jcr:content`node t
   <tr>
    <th>プロパティ</th>
    <th>タイプ</th>
-   <th> 値 説明</th>
+   <th> 値の説明</th>
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
@@ -274,36 +283,28 @@ Sub-rules are nodes of type `cq:Page` with properties on its `jcr:content`node t
 
 Included in the release are two scoring rules for the [Forum Function](/help/communities/functions.md#forum-function) (one each for the Forum and Comments components of the Forum feature) :
 
-1. /etc/community/scoring/rules/comments-scoring
+1. /libs/settings/community/scoring/rules/comments-scoring
 
-   * subRules[] =
-/etc/community/scoring/rules/sub-rules/member-comment-create
-/etc/community/scoring/rules/sub-rules/member-receive-vote
-/etc/community/scoring/rules/sub-rules/member-give-vote
-/etc/community/scoring/rules/sub-rules/member-is-moderated
+   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-comment-create/libs/scoring/rules/sub-rules/member-receive-vote/libs/scoring/rules/sub-rules/member-is-is
 
-1. /etc/community/scoring/rules/forums-scoring
+1. /libs/settings/community/scoring/rules/forums/scoring
 
-   * subRules[] =
-/etc/community/scoring/rules/sub-rules/member-forum-create
-/etc/community/scoring/rules/sub-rules/member-receive-vote
-/etc/community/scoring/rules/sub-rules/member-give-vote
-/etc/community/scoring/rules/sub-rules/member-is-moderated
+   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-forum-create/libs/settings/community/scoring/rules/sub-rules/member-receive-vote/libs/scoring/member-is
 
 **備考:**
 
 * Both `rules` and `sub-rules` nodes are of type cq:Page.
 
-* `subRules` は、ルールのノード上のString[] 型の属性 `jcr:content` です。
+* `subRules` は、ルールの[]`jcr:content` ノード上のString型の属性です。
 
-* `sub-rules` を様々なスコアリングルールで共有できます。
-* `rules` は、すべてのユーザーに対して読み取り権限を持つリポジトリの場所に配置する必要があります。
+* `sub-rules` は、様々なスコアリングルール間で共有できます。
+* `rules` は、全員に対して読み取り権限を持つリポジトリの場所に配置する必要があります。
 
-   * ルール名は、場所に関係なく一意である必要があります。
+   * ルール名は、場所に関係なく一意にする必要があります。
 
 ### カスタムスコアルールのアクティベート {#activating-custom-scoring-rules}
 
-作成者環境でスコアリングルールまたはサブルールに対して行った変更や追加は、発行時にインストールする必要があります。
+作成者環境でスコアリングルールまたはサブルールに対して行われた変更や追加は、発行時にインストールする必要があります。
 
 ## Badging Rules {#badging-rules}
 
@@ -316,17 +317,17 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
 
 バッジルールは必須の `thresholds` プロパティから成り、このプロパティには、バッジに対応付けるスコアの順序付きリストを指定します。スコアは小さい値から順に並べる必要があります。次に例を示します。
 
-* `1|/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
+* `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-   * 1点を稼ぐために銅のバッジが待っています。
+   * 1点を稼ぐためにブロンズのバッジが待っています。
 
-* `60|/etc/community/badging/images/silver-badge/jcr:content/silver.png`
+* `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
-   * 60ポイントの累積時に銀のバッジが贈られます。
+   * 60点が積み重ねられると銀のバッジが贈られます。
 
-* `80|/etc/community/badging/images/gold-badge/jcr:content/gold.png`
+* `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
-   * 80ポイントが積み重なると金のバッジが待ち受ける。
+   * 80ポイントが積み重なると、金のバッジが待たれます。
 
 バッジルールは、ポイントの累積方法を決定するスコアルールと組み合わせて使用されます。See the section titled [Apply Rules to Content](#apply-rules-to-content).
 
@@ -344,7 +345,7 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
   <tr>
    <th>プロパティ</th>
    <th>タイプ</th>
-   <th>値 説明</th>
+   <th>値の説明</th>
   </tr>
   <tr>
    <td>thresholds</td>
@@ -354,7 +355,7 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
      <li>number = スコア</li>
      <li>| = 縦線の文字（U+007C）</li>
      <li>path = バッジ画像リソースへのフルパス</li>
-    </ul> 文字列は、number の値が小さいものから順に並べる必要があります。また、数値とパスの間にスペースを入れないようにします。<br /> エントリの例：<br /> <code>80|/etc/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+    </ul> 文字列は、number の値が小さいものから順に並べる必要があります。また、数値とパスの間にスペースを入れないようにします。<br /> 入力例：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>badgingType</td>
@@ -373,15 +374,16 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
 
 このリリースには、[フォーラムとコメントのスコアルール](#includedscoringrules)に対応する 2 つのバッジルールが含まれています。
 
-* /etc/community/badging/rules/comments-badging
-* /etc/community/badging/rules/forums-badging
+* /libs/settings/community/badging/rules/comments-badging
+
+* /libs/settings/community/badging/rules/forums-badging
 
 **備考:**
 
 * `rules` ノードのタイプはcq:Pageです。
-* `rules` は、すべてのユーザーに対して読み取り権限を持つリポジトリの場所に配置する必要があります。
+* `rules` は、全員に対して読み取り権限を持つリポジトリの場所に配置する必要があります。
 
-   * ルール名は、場所に関係なく一意である必要があります。
+   * ルール名は、場所に関係なく一意にする必要があります。
 
 ### カスタムバッジルールのアクティベート {#activating-custom-badging-rules}
 
@@ -397,22 +399,23 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 
 *header* = &quot;Accept:application/json&quot;カスタムヘッダーをサーバーに渡す（必須）
 
-*signin* = administrator-id:password例：admin:admin
+*signin* = administrator-id:password例： admin:admin
 
 *operation* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
 *badge* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所。例：/etc/community/badging/images/moderator/jcr:content/moderator.png
+*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所です。例： /libs/settings/community/badging/images/moderator/jcr:content/moderator.png
 
-*member-プロファイル-url* =パブリッシュ時のメンバーのプロファイルのエンドポイント。例：https://&lt;サーバー>:&lt;ポート>/home/users/community/riley/profile.social.json
+*member-プロファイル-url* =パブリッシュ時のメンバーのプロファイルのエンドポイント。例： https://&lt;サーバー>:&lt;ポート>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
->The *member-profile-url*:
+>*member-プロファイルURL*:
 >
 >* May refer to an author instance if the [Tunnel Service](/help/communities/users.md#tunnel-service) is enabled.
 >* May be an obscure, random name - see [Security Checklist](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) regarding authorizable ID.
+
 >
 
 
@@ -422,13 +425,13 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 #### モデレーターバッジの割り当て {#assign-a-moderator-badge}
 
 ```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
+curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
 #### 割り当て済みのシルバーバッジの取り消し {#revoke-an-assigned-silver-badge}
 
 ```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/etc/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
+curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/libs/settings/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
 >[!NOTE]
@@ -523,7 +526,7 @@ For the communities components delivered, the following tables describe the `ver
 | ADD RATING | メンバーのコンテンツの評価が上がった |
 | REMOVE RATING | メンバーのコンテンツの評価が下がった |
 
-**[Voting Component](/help/communities/voting.md)**SocialEvent`topic`= com/adobe/cq/social/tally/voting
+**[投票コンポーネント](/help/communities/voting.md)**SocialEvent`topic`= com/adobe/cq/social/tally/voting
 
 | **動詞** | **説明** |
 |---|---|
@@ -582,9 +585,9 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
    * **Type**: `String`
    * Select **Multi**
    * Select **Add**
-   * Enter `/etc/community/badging/rules/forums-badging`
+   * Enter `/libs/settings/community/badging/rules/forums-badging`
    *  **+**
-   * Enter `/etc/community/badging/rules/comments-badging`
+   * Enter `/libs/settings/community/badging/rules/comments-badging`
    * 「**OK**」を選択します。
 
 * scoringRules追加プロパティ：
@@ -593,9 +596,9 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
    * **Type**: `String`
    * Select **Multi**
    * Select **Add**
-   * Enter `/etc/community/scoring/rules/forums-scoring`
+   * Enter `/libs/settings/community/scoring/rules/forums-scoring`
    *  **+**
-   * Enter `/etc/community/scoring/rules/comments-scoring`
+   * Enter `/libs/settings/community/scoring/rules/comments-scoring`
    * 「**OK**」を選択します。
 
 * Select **Save All**.
@@ -609,7 +612,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 
-* 必追加要に応じて、allowBadgesブール値プロパティを設定し、trueであることを確認します。
+* 必要に応じて、allowBadgesブール追加プロパティを設定し、それがtrueであることを確認します。
 
    * **名前**: `allowBadges`
    * **Type**: `Boolean`
@@ -622,11 +625,11 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 最後に、
 
 * パブリッシュインスタンス上のコンポーネントを参照します。
-* コミュニティのメンバーとしてサインインする(例：weston.mccall@dodgit.com /パスワード)。
+* コミュニティのメンバーとしてサインインする(例： weston.mccall@dodgit.com / password)。
 * 新しいフォーラムトピックを投稿します。
 * バッジを表示するには、ページを更新する必要があります。
 
-   * ログアウトし、別のコミュニティメンバーとしてログインします(例：aaron.mcdonald@mailinator.com/password)。
+   * 別のコミュニティメンバーとしてログアウトし、ログインする(例： aaron.mcdonald@mailinator.com/password)。
 
 * フォーラムを選択します。
 
