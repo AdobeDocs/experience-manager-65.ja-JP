@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '2765'
+ht-degree: 49%
 
 ---
 
@@ -24,24 +27,24 @@ Adobe Analytics と Adobe Experience Manager（AEM）は、どちらも Adobe Ma
 
 Adobe Analytics を AEM Communities と連携させ、サポートされるコミュニティ機能をメンバーが操作した際にイベントが Adobe Analytics に送信され、レポートが生成されるように設定することができます。
 
-例えば、イネーブルメントコミュニティサイトのメンバーが自分に割り当てられているビデオリソースを再生すると、リソースプレイヤーによって、イベント（ビデオハートビートのデータを含む）が自動的に Analytics に送信されます。管理者は、コミュニティサイトから、ビデオの再生に関する様々なレポートを表示できます。
+例えば、イネーブルメントコミュニティサイトのメンバーが自分に割り当てられているビデオリソースを再生すると、リソースプレイヤーによって、イベント（ビデオハートビートのデータを含む）が自動的に Analytics に送信されます。コミュニティサイトでは、管理者はビデオの再生に関する様々なレポートを閲覧できます。
 
 さらに、Analytics は以下の処理のために必要です。
 
-* 公開環境:
+* 公開環境で次の操作を行います。
 
    * Reporting on community [trends](/help/communities/trends.md)
-   * サイト訪問者を「最も頻繁に閲覧」、「最もアクティブ」、「最も「いいね！」済み」で並べ替えることを許可
-   * 表示のUGCリスト
+   * サイト訪問者が「最も頻繁に閲覧」、「最もアクティブ」、「最も「いいね！」をクリック」で並べ替えられるようにする
+   * UGCリストでの表示数
 
-* 作成者環境:
+* 作成者環境で、次の操作を行います。
 
    * Display of participation data in the [members management console](/help/communities/members.md) (views, posts, follows, likes)
    * Trend summary, video heartbeat and video device for enablement resource [reports](/help/communities/reports.md)
 
 サポートされるコミュニティ機能は以下のとおりです。
 
-* [実施可能リソース](/help/communities/resources.md)
+* [有効化リソース](/help/communities/resources.md)
 * [フォーラム](/help/communities/forum.md)
 * [Q&amp;A](/help/communities/working-with-qna.md)
 * [ブログ](/help/communities/blog-feature.md)
@@ -54,27 +57,27 @@ Adobe Analytics を AEM Communities と連携させ、サポートされるコ�
 1. Adobe Analytics の[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)を準備する
 1. AEM Analytics [クラウドサービス](#aem-analytics-cloud-service-configuration)と[フレームワーク](#aem-analytics-framework-configuration)を作成する
 
-1. [コミュニティサイトでAnalytics](#enable-analytics-for-a-community-site) を有効にする
+1. [コミュニティサイトでのAnalytics](#enable-analytics-for-a-community-site) の有効化
 1. Analytics と AEM 変数との間のマッピングを[**検証&#x200B;**](#verify-analytics-to-aem-variable-mapping)する
 1. Identify [primary publisher](#primary-publisher)
-1. [コミュニティ](#publish-community-site-and-analytics-cloud-service) サイトの公開
+1. [コミュニティサイトの公開](#publish-community-site-and-analytics-cloud-service)
 1. Configure [import of report data](#obtaining-reports-from-analytics) from Adobe Analytics to the community site
 
 ## 前提条件 {#prerequisites}
 
-Analytics をコミュニティ機能と連携するよう設定するには、アカウント担当者と協力して Adobe Analytics アカウントと[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)をセットアップする必要があります。確立後は、次の情報を利用できます。
+Analytics をコミュニティ機能と連携するよう設定するには、アカウント担当者と協力して Adobe Analytics アカウントと[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)をセットアップする必要があります。設定が完了したら、次の情報を使用できます。
 
 * **会社名**
 
-   Adobe Analytics会社に関連付けられているアカウント。
+   Adobe Analyticsアカウントに関連付けられている会社。
 
 * **User Name**
 
-   Analyticsアカウントの管理を承認されたユーザーのログインユーザー名（Webサービスアクセス権限を含む）。
+   Analyticsアカウントを管理する権限を持つユーザーのログインユーザー名（Webサービスアクセス権限を含む必要があります）。
 
 * **パスワード**
 
-   認証されたユーザーのログインパスワード。
+   認証済みユーザーのログインパスワード。
 
 * **Analyticsデータセンター**
 
@@ -92,18 +95,18 @@ By signing in to [Adobe Marketing Cloud](https://marketing.adobe.com/resources/h
 
 * [11コンバージョン変数](https://marketing.adobe.com/resources/help/ja_JP/reference/conversion_var_admin.html) (eVar)
 
-   * **`evar1`** 有効に **`evar11`** する
+   * **`evar1`** 有効 **`evar11`** にする
 
-   * 既存のeVarを再利用（名前変更）したり、コミュニティ機能で使用する新しいeVarを作成したりできます。
+   * 既存のeVarを再利用（名前変更）したり、Communitiesの機能で使用する新しいeVarを作成したりできます。
 
 * [7 個の成功イベント](https://marketing.adobe.com/resources/help/ja_JP/reference/success_event.html)（event）
 
-   * **`event1`** 有効に **`event7`** する
+   * **`event1`** 有効 **`event7`** にする
 
    * type **`Counter`**
 
       * **string not required****`Counter (no subrelations)`**
-   * 既存のコミュニティを再利用（名前変更）したり、イベント機能に使用する新しいコミュニティを作成したりできます。
+   * 既存のイベントを再利用（名前変更）したり、Communities機能で使用する新しいユーザーを作成できます。
 
 
 * [ビデオ管理](https://marketing.adobe.com/resources/help/ja_JP/sc/appmeasurement/hbvideo/video_analytics_config.html)
@@ -111,16 +114,16 @@ By signing in to [Adobe Marketing Cloud](https://marketing.adobe.com/resources/h
    * ビデオレポートコンソール
 
       * Enable（有効） `Video Core`
-      * 保存の選択
+      * 「保存」を選択します
    * ビデオコア測定コンソール
 
       *  `Use Solution Variables`
-      * 保存の選択
+      * 「保存」を選択します
 
 
 **新しいレポートスイート**&#x200B;を使用する場合、新しいレポートスイートには、4 個の evar と 6 個の event 変数しかないことに注意してください。コミュニティサイトでは 11 個の ever と 7 個の event 変数が必要です。
 
-**既存のレポートスイート**&#x200B;を使用する場合は、コミュニティサイト用の Analytics フレームワークをアクティベートする前に、[変数マッピングを変更](#modifying-analytics-variable-mapping)する必要があります。Communities専用の変数に関するご心配は、アカウント担当者にお問い合わせください。
+**既存のレポートスイート**&#x200B;を使用する場合は、コミュニティサイト用の Analytics フレームワークをアクティベートする前に、[変数マッピングを変更](#modifying-analytics-variable-mapping)する必要があります。Communities専用の変数に関する懸念は、アカウント担当者にお問い合わせください。
 
 >[!CAUTION]
 >
@@ -132,7 +135,7 @@ By signing in to [Adobe Marketing Cloud](https://marketing.adobe.com/resources/h
 * **`event1`** から **`event7`** まで
 >
 >
-**次に、コミュニティサイトが公開される前に** 、Analyticsがコミュニティサイトに対して有効になっている場合に、Analytics変数に自動的にマッピングされたAEM変数を移動して、既存のマッピングを復元することが重要です。
+**次に、コミュニティサイトが公開される前に** 、コミュニティサイトに対してAnalyticsが有効な場合にAnalytics変数に自動的にマッピングされたAEM変数を移動し、既存のマッピングを復元することが重要です。
 >
 >To restore the pre-existing mapping and move AEM variables to other Analytics variables, see the section on [Modifying Analytics Variable Mapping](#modifying-analytics-variable-mapping).
 >
@@ -140,25 +143,25 @@ By signing in to [Adobe Marketing Cloud](https://marketing.adobe.com/resources/h
 
 ### Video Heartbeat Analytics {#video-heartbeat-analytics}
 
-Video Heartbeat Analyticsのライセンスが取得されると、が割り当 `Marketing Cloud Org Id` てられます。
+Video Heartbeat Analyticsのライセンスを受けると、が割り当てら `Marketing Cloud Org Id` れます。
 
 To enable Video Heartbeat reporting after [configuring the Analytics report suite for video reporting](#adobe-analytics-report-suite-for-video-reporting):
 
 * [Analyticsクラウドサービスの作成](#aem-analytics-cloud-service-configuration)
 * Enable [Analytics for a community site](#enable-analytics-for-a-community-site)
-* をコミュニティ `Marketing Cloud Org Id` サイトに関連付ける
+* をコミュニティサイト `Marketing Cloud Org Id` に関連付ける
 
 The `Marketing Cloud Org Id` may be entered at the time of [community site creation](/help/communities/sites-console.md#enablement) or later by [modifying](/help/communities/sites-console.md#modifying-site-properties) the community site properties. [](#aem-analytics-cloud-service-configuration)
 
 ![chlimage_1-177](assets/chlimage_1-177.png)
 
-ビデオハートビート分析が有効な場合、ビデオプレーヤーのJavaScript(JS)コードは、ビデオハートビートライブラリコード（同じJS）をインスタンス化します。このコードは、10秒（設定不可）ごとにAnalyticsビデオトラッキングサーバーにビデオステータス更新を送信するロジックを処理します。
+ビデオハートビート分析が有効な場合、ビデオプレーヤーのJavaScript(JS)コードは、ビデオハートビートライブラリコード（同じJS）をインスタンス化します。このコードは、10秒ごと（設定不可）にビデオステータス更新を送信するロジックを処理します。
 
 有効にしない場合、Video Heartbeat コードはインスタンス化されず、ビデオの再生状況と再開位置の追跡のみが報告のために SRP に維持されます。
 
 ## AEM Analytics クラウドサービス設定 {#aem-analytics-cloud-service-configuration}
 
-作成者インスタンスの標準のUIを使用して、Adobe AnalyticsをAEMコミュニティサイトと統合する新しいAnalytics統合を作成するには：
+オーサーインスタンスの標準UIを使用して、Adobe AnalyticsをAEMコミュニティサイトと統合する、新しいAnalytics統合を作成するには：
 
 * From global navigation: **[!UICONTROL Tools > Deployment > Cloud Services]**
 * Scroll-down to **[!UICONTROL Adobe Analytics]**
@@ -181,7 +184,7 @@ For example, enter *Enablement Community Analytics*
 
 * **名前**
 
-   （オプション）指定しなかった場合、名前はデフォルトでタイトルから派生する有効なノード名に設定されます。
+   （オプション）指定しなかった場合、名前はデフォルトでタイトルから派生した有効なノード名になります。
 例えば、「communities」と入力します。**
 
 * **テンプレート**
@@ -190,7 +193,7 @@ For example, enter *Enablement Community Analytics*
 
 * 「**作成**」を選択します。
 
-   * 設定ページを起動し、ダイアログを `Analytics Settings` 開く
+   * 設定ページを起動し、 `Analytics Settings` ダイアログを開く
 
 ### Analytics 設定ダイアログ {#analytics-settings-dialog}
 
@@ -200,7 +203,7 @@ For example, enter *Enablement Community Analytics*
 
 * **会社**
 
-   Adobe Analytics会社に関連付けられているアカウント
+   Adobe Analyticsアカウントに関連付けられている会社
 
 * **ユーザー名**
 
@@ -208,25 +211,25 @@ For example, enter *Enablement Community Analytics*
 
 * **パスワード**
 
-   認証されたユーザーのログインパスワード
+   認証済みユーザーのログインパスワード
 
 * **データセンター**
 
-   レポートスイートをホストするAnalyticsデータセンターを選択します。
+   レポートスイートをホストするAnalyticsデータセンターを選択します
 
 * **ページに追跡タグを追加しない**
 
-   デフォルトのままにする（選択解除）
+   デフォルトのまま（選択解除）
 
 * **AppMeasurement を使用**
 
-   デフォルトのままにする（選択解除）
+   デフォルトのまま（選択解除）
 
 * **ページインプレッション数を夜間に読み込まない (作成者)**
 
-   デフォルトのままにする（選択解除）
+   デフォルトのまま（選択解除）
 
-* **ページインプレッション数を夜間に読み込まない（公開）**&#x200B;デフォルトのままにする（選択解除）
+* **ページインプレッション数を夜間（公開）にインポートしな**&#x200B;い（デフォルトのまま）
 
 設定を保存するには：
 
@@ -234,7 +237,7 @@ For example, enter *Enablement Community Analytics*
 
    * 成功しなかった場合、
 
-      * エントリの先頭に空白が含まれていないことを確認します。
+      * エントリの先頭に空白が含まれていないことを確認する
       * 別のデータセンターを試す
       * アカウント担当者にお問い合わせください
 
@@ -244,7 +247,7 @@ For example, enter *Enablement Community Analytics*
 
 ### フレームワークの作成 {#create-framework}
 
-Adobe Analytics への基本的な接続を正しく設定したら、コミュニティサイトのフレームワークを作成または編集する必要があります。このフレームワークの目的は、Communities機能(AEM)変数をAnalytics（レポートスイート）変数にマッピングすることです。
+Adobe Analytics への基本的な接続を正しく設定したら、コミュニティサイトのフレームワークを作成または編集する必要があります。フレームワークの目的は、Communities機能(AEM)変数をAnalytics（レポートスイート）変数にマップすることです。
 
 * Select `[+]` icon next to **[!UICONTROL Available Frameworks]** to create a new framework
 
@@ -257,7 +260,7 @@ For example, enter *Enablement Community Framework*
 
 * **名前**
 
-   （オプション）指定しなかった場合、名前はデフォルトでタイトルから派生する有効なノード名に設定されます。
+   （オプション）指定しなかった場合、名前はデフォルトでタイトルから派生した有効なノード名になります。
 例えば、「communities」と入力します。**
 
 * *テンプレート*
@@ -291,24 +294,24 @@ If a report suite has not yet been created or not properly set up, see the previ
 
    2つのドロップダウンボックスが表示されます。
 
-1. 選択 `Report suite.`
+1. 選択肢 `Report suite.`
 
-   選択可能なレポートスイートは、会社アカウントに関連付けられています。
+   会社アカウントに関連付けられたレポートスイートを選択できます。
 
-1. 開いたダ **イアログで** 「はい」を選択します。
+1. 開いたダイアログで **「はい** 」を選択します。
 
    ```
    Load default server settings?
     Do you want to load the default server settings and overwrite current values in the Server section?
    ```
 
-1. 選択 `Run Mode`
+1. 選択肢 `Run Mode`
 
 1. Select **Publish**
 
 ![chlimage_1-185](assets/chlimage_1-185.png)
 
-これで Analytic クラウドサービスとフレームワークの準備が完了しました。マッピングは、このAnalyticsサービスを有効にしてコミュニティサイトを作成した後に定義されます。
+これで Analytic クラウドサービスとフレームワークの準備が完了しました。マッピングは、このAnalyticsサービスを有効にしてコミュニティサイトを作成すると定義されます。
 
 ## コミュニティサイトに対する Analytics の有効化 {#enable-analytics-for-a-community-site}
 
@@ -316,8 +319,8 @@ If a report suite has not yet been created or not properly set up, see the previ
 
 [新しいコミュニティサイトの作成](/help/communities/sites-console.md)中に Analytics クラウドサービスを追加するには：
 
-* 手順3の「 [ANALYTICS」タブで](/help/communities/sites-console.md#analytics)、
-   * 「Analyticsを有効にする **」チェックボックス** を選択します。
+* 手順3の「 [解析」タブで、次の操作を行います](/help/communities/sites-console.md#analytics)。
+   * 「Analyticsを **有効にする** 」チェックボックスをオンにします。
    * ドロップダウンボックスからフレームワークを選択します。
 
 * Analytics フレームワーク設定に戻り、変数マッピングを調整します（オプション）。
@@ -330,7 +333,7 @@ Analytics クラウドサービスを[既存のコミュニティサイト](/hel
 * コミュニティサイトの[サイトの編集]アイコンを選択します。
 * 設定を選択します。
 * 「解析」セクションで、次の操作を行います。
-   * 「Analyticsを有効にする **」チェックボックス** を選択します。
+   * 「Analyticsを **有効にする** 」チェックボックスをオンにします。
    * ドロップダウンボックスからフレームワークを選択します。
 
 * Analytics フレームワーク設定に戻り、変数マッピングを調整します（オプション）。
@@ -368,7 +371,7 @@ Communities コンポーネントが含まれているが[サイト作成ウィ�
 
 Analytics は複数のコミュニティ機能で自動的に使用されます。
 
-The author environment&#39;s [OSGi configuration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Component Configuration`, provides a listing of the components that have been instrumented for Analytics. 変数の自動マッピングは、リストに表示されるコンポーネントによって決まります。
+The author environment&#39;s [OSGi configuration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Component Configuration`, provides a listing of the components that have been instrumented for Analytics. 変数の自動マッピングは、リストに表示されているコンポーネントによって決まります。
 
 Analytics 用の新しいカスタムコンポーネントを作成した場合は、この設定済みコンポーネントのリストに追加する必要があります。
 
@@ -382,7 +385,7 @@ Analytics 用の新しいカスタムコンポーネントを作成した場合�
 
 ### Analytics と AEM 変数とのマッピング {#mapped-analytics-to-aem-variables}
 
-Analyticsが有効で、クラウド設定フレームワークが選択された状態でコミュニティサイトを保存すると、AEM変数は、evar1とイベント1で始まるAnalytics eVarとイベントに自動的にマッピングされ、1ずつ増分されます。
+Analyticsを有効にしてコミュニティサイトを保存し、クラウド設定フレームワークを選択すると、AEM変数は、evar1とイベント1で始まるAnalytics eVarおよびイベントに自動的にマッピングされ、それぞれ1ずつ増分されます。
 
 evar1 ～ evar11 および event1 ～ event7 の範囲内のいずれかの変数がマップされた既存のレポートスイートを使用する場合は、[AEM 変数を再マップ](#modifying-analytics-variable-mapping)して、元のマッピングを復元する必要があります。
 
@@ -516,21 +519,23 @@ evar1 ～ evar11 および event1 ～ event7 の範囲内のいずれかの変�
 
 **eVar の値の例：**
 
-* *[MIME type](https://www.iana.org/assignments/media-types)*:video/mp4
-* *[コミュニティサイトのタイトル](/help/communities/sites-console.md#step13asitetemplate)*:Geometrixx Communities
-* *[コミュニティ関数名](/help/communities/functions.md)*:フォーラム
-* *[コミュニティグループ名](/help/communities/creating-groups.md#creating-a-new-group)*:ハイキング
-* *コミュニティグループコンテンツへのパス*: `/content/sites/communities/en/groups/hiking`
+* *[MIME type](https://www.iana.org/assignments/media-types)*: video/mp4
+* *[コミュニティサイトのタイトル](/help/communities/sites-console.md#step13asitetemplate)*: Geometrixx Communities
+* *[コミュニティ関数名](/help/communities/functions.md)*: フォーラム
+* *[コミュニティグループ名](/help/communities/creating-groups.md#creating-a-new-group)*: ハイキング
+* *コミュニティグループコンテンツへのパス*: `/content/sites/<site name>/en/groups/hiking`
 * *[UGCコンポーネントresourceType](/help/communities/essentials.md)*:`social/forum/components/hbs/topic`
-* *UGCコンポーネントのタイトル*:トピックのハイキング
+* *UGCコンポーネントタイトル*: トピックのハイク
 * *login (authorizableId)*: `aaron.mcdonald@mailinator.com`
-* *UGCへのSRPパス*:または `/content/usergenerated/asi/.../forum/jmtz-topic3`フォ *ローするコンポーネントのパス*: `/content/sites/communities/en/jcr:content/content/primary/forum`
+* *UGCへのSRPパス*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
+または 
+*次に従うコンポーネントのパス*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-* *コミュニティサイトコンテンツへのパス*: `/content/sites/community/en`
+* *コミュニティサイトコンテンツへのパス*: `/content/sites/<site name>/en`
 
 ### Analytics 変数のマッピングの変更 {#modifying-analytics-variable-mapping}
 
-Analytics eVarとイベントのAEM変数へのマッピングは、コミュニティサイトでAnalyticsを有効にした後で、フレームワーク設定から確認できます。
+Analytics eVarとイベントのAEM変数へのマッピングは、コミュニティサイトでAnalyticsを有効にした後、フレームワーク設定から確認できます。
 
 Analytics を有効にした後、コミュニティサイトを公開する前に、フレームワーク内で必要な Analytics の evar または event を左のレールからマッピングテーブルの適切な行にドラッグ＆ドロップすることで、マッピングを変更できます。
 
@@ -575,7 +580,7 @@ CommunitiesのeVarおよびイベントがレポートスイートに以前存�
 * **`event1`** から **`event7`** まで
 >
 >
-**次に、コミュニティサイトが公開される前に** 、既存のマッピングを復元し、（コミュニティサイトでAnalyticsが有効な場合）自動的にマッピングされたCommunities AEM変数を他のAnalytics変数に移動することが重要です。 この再マッピングは、すべてのCommunitiesコンポーネントで一貫性を保つ必要があります。
+**次に、コミュニティサイトが公開される前に** 、既存のマッピングを復元し、（コミュニティサイトでAnalyticsが有効な場合に）自動的にマッピングされたCommunities AEM変数を他のAnalytics変数に移動することが重要です。 この再マッピングは、すべてのCommunitiesコンポーネントで一貫している必要があります。
 >
 >この作業をしておかないと、修復不可能なデータ損傷が発生することがあります。
 
@@ -591,11 +596,11 @@ For specific instructions, see the primary publisher section of [Deploying Commu
 
 >[!CAUTION]
 >
->複数の発行インスタンスからのポーリングを防ぐように、プライマリ発行者を設定することが重要です。
+>複数の発行インスタンスからのポーリングを防ぐようにプライマリ発行者を設定することが重要です。
 
 ### 暗号鍵のレプリケーション {#replicate-the-crypto-key}
 
-Adobe Analytics の資格情報は暗号化されます。作成者と発行者の間で暗号化された解析資格情報のレプリケーションまたは送信を容易にするには、すべてのAEMインスタンスで同じマスター暗号化キーを共有する必要があります。
+Adobe Analytics の資格情報は暗号化されます。作成者と発行者間で暗号化された解析資格情報のレプリケーションまたは送信を容易にするには、すべてのAEMインスタンスで同じマスター暗号化キーを共有する必要があります。
 
 To do so, follow the instructions at [Replicate the Crypto Key](/help/communities/deploy-communities.md#replicate-the-crypto-key).
 
@@ -607,7 +612,7 @@ Analytics クラウドサービスをコミュニティサイトに対して有�
 
 ### レポート管理 {#report-management}
 
-作成者およびプライマリ発行者の [OSGi設定](/help/sites-deploying/configuring-osgi.md)( `AEM Communities Analytics Report Management`OSGiの設定)は、Analyticsのクエリに使用されます。
+作成者およびプライマリパブリッシャーの [OSGi設定](/help/sites-deploying/configuring-osgi.md)( `AEM Communities Analytics Report Management`OSGi設定)は、Analyticsのクエリに使用されます。
 
 オーサー環境では、リアルタイムレポートを入手するにはクエリを使用します。
 
@@ -633,13 +638,13 @@ The polling interval controls the frequency of requests to Adobe Analytics for d
 
 現在、このカスタマイズの例を確認できるのはフォーラムトピックのみです。
 
-* プライマリパブリッシャで、管理者権限でログインします。
+* プライマリパブリッシャーで、管理者権限でサインインします。
 * Navigate to [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). For example, [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
-* 言語ルートのjcr:contentノードの下(例えば、Analyticsノード用に設 `/content/sites/engage/en/jcr:content),`定されたコンポーネントに移動します)。レポート
+* 言語ルートのjcr:contentノードの下(例えば、Analyticsレポート用に設定されたコンポーネントに `/content/sites/engage/en/jcr:content),`移動します)。
 例：**`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
-* 作成された期間を確認します。
+* 作成された期間に注意してください。
 
    * `last30Days`
    * `last90Days`
@@ -647,7 +652,7 @@ The polling interval controls the frequency of requests to Adobe Analytics for d
 
 * Notice the `total`node.
 
-   * プロパティを変更す **`interval`** ると、レポートインポーターの間隔が上書きされます。
+   * この **`interval`** プロパティを変更すると、レポートインポーターの間隔が上書きされます。
    * 値は秒単位で、4時間（14400秒）に設定します。
 
 ![chlimage_1-192](assets/chlimage_1-192.png)
