@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d42526ff4c7b7d8a31690ebfb8b45d0e951ebac
+source-git-commit: 1669412afb670a9f55f02476e828de55b4f7a55a
+workflow-type: tm+mt
+source-wordcount: '2424'
+ht-degree: 56%
 
 ---
 
@@ -37,34 +40,34 @@ Maven に基づく AEM プロジェクトのビルドには以下のメリット
 アドビでは、AEMプロジェクトのベースラインとして機能する2つのMavenアーキタイプを提供しています。 詳しくは、以下のリンクを参照してください。
 
 * [AEMプロジェクトのアーキタイプ](https://github.com/adobe/aem-project-archetype)
-* [単一ページアプリ用スターターキットのMavenアーキタイプ](https://github.com/adobe/aem-spa-project-archetype)
+* [単一ページアプリ用のMavenアーキタイプスターターキット](https://github.com/adobe/aem-spa-project-archetype)
 
 ## Adobe Experience Manager API の依存関係 {#experience-manager-api-dependencies}
 
 ### What is the UberJar? {#what-is-the-uberjar}
 
-「UberJar」は、アドビが提供する特別なJavaアーカイブ(JAR)ファイルに付ける非公式な名前です。 これらのJARファイルには、Adobe Experience Managerで公開されるすべてのパブリックJava APIが含まれています。 一部の外部ライブラリには、特にApache Sling、Apache Jackrabbit、Apache Lucene、Google GuavaのAEMで利用可能なすべてのパブリックAPI、および画像処理に使用される2つのライブラリ（Werner RandelshowerのCYMK JPEG ImageIOライブラリとTher Monesライブラリ）が含ます。 UberJarにはAPIインターフェイスとクラスのみが含まれます。つまり、AEMのOSGiバンドルによって書き出されたインターフェイスとクラスのみが含まれます。 They also contain a *MANIFEST.MF* file containing the correct package export versions for all of these exported packages, thus ensuring that projects built against the UberJar have the correct package import ranges.
+「UberJar」は、アドビから提供される特別なJavaアーカイブ(JAR)ファイルに付けられる非公式な名前です。 これらのJARファイルには、Adobe Experience Managerによって公開されるすべてのパブリックJava APIが含まれます。 制限付き外部ライブラリに加えて、特にApache Sling、Apache Jackrabbit、Apache Lucene、Google Guavaから提供されるAEMで利用可能なすべてのパブリックAPIと、画像処理に使用される2つのライブラリ（Werner RandelshoferのCY JPEG ImageIOライブラリとLibrary）が含ます。 UberJarにはAPIインターフェイスとクラスのみが含まれます。つまり、AEMのOSGiバンドルによってエクスポートされたインターフェイスとクラスのみが含まれます。 They also contain a *MANIFEST.MF* file containing the correct package export versions for all of these exported packages, thus ensuring that projects built against the UberJar have the correct package import ranges.
 
 ### Why did Adobe create the UberJars? {#why-did-adobe-create-the-uberjars}
 
 これまで、開発者は様々な AEM ライブラリに対する個別の依存関係を比較的多数管理し、新しい API が使用されるたびに、個別の依存関係を 1 つ以上プロジェクトに追加する必要がありました。1 つのプロジェクトに UberJar を導入すると、30 個の個別の依存関係がプロジェクトから削除されます。
 
-AEM 6.5以降、アドビでは2つのUberJarを提供しています。非推奨のインターフェイスと、その非推奨のインターフェイスを削除するインターフェイスを含むインターフェイス。 ビルド時に明示的に1つを参照することで、お客様は、非推奨のコードに依存しているかどうかを理解する必要があります。
+AEM 6.5以降、アドビでは次の2つのUberJarを提供しています。 非推奨のインターフェイスと、その非推奨のインターフェイスを削除するインターフェイスを含むインターフェイス。 ビルド時に明示的に1つを参照することで、お客様は、廃止されたコードに依存しているかどうかを理解する必要があります。
 
-2つ目のUber jarは、非推奨のクラス、メソッドおよびプロパティを削除するので、顧客がそれらに対してコンパイルし、カスタムコードが将来の証明であるかどうかを把握できます。
+2つ目のUber Jarは、非推奨のクラス、メソッド、プロパティを削除するので、ユーザーは、これらのクラス、メソッド、プロパティに対してコンパイルを行い、カスタムコードが将来の配達確認であるかを把握できます。
 
 ### 使用するUberJar {#which-uberjar-to-use}
 
-AEM 6.5には、Uber Jarの2種類の機能が含まれています。
+AEM 6.5には、Uber Jarの2種類の味があります。
 
-1. Uber Jar — 非推奨とマークされていないパブリックインターフェイスのみを含みます。 これは、コー **** ドベースが非推奨のAPIに依存することを将来的に防ぐのに役立つので、使用するUberJarを推奨します。
-1. 非推奨のAPIを使用するUber Jar — 今後のバージョンのAEMでの非推奨とマークされているパブリックインターフェイスを含む、すべてのパブリックインターフェイスが含まれます。
+1. Uber Jar — 非推奨とマークされていないパブリックインターフェイスのみを含みます。 これは、将来の配達確認でコードベースが非推奨APIに依存しなくなるのを助けるため、 **UberJarを使用することを推奨します** 。
+1. 非推奨のAPIを持つUber Jar — 今後のAEMのバージョンで非推奨とマークされているものを含め、すべてのパブリックインターフェイスが含まれます。
 
-### How to I use the UberJars? {#how-to-i-use-the-uberjars}
+### UberJarsの使用方法 {#how-do-i-use-the-uberjars}
 
 If you are using Apache Maven as a build system (which is the case for most AEM Java projects), you will need to add one or two elements to your *pom.xml* file. The first is a *dependency* element adding the actual dependency to your project:
 
-**Uber Jar依存&#x200B;*関係（非推奨APIなし）***
+**Uber Jar依存関係&#x200B;*（非推奨APIは除く）***
 
 ```xml
 <dependency>
@@ -76,13 +79,13 @@ If you are using Apache Maven as a build system (which is the case for most AEM 
 </dependency>
 ```
 
-**非推奨のAPIを使用するUber Jar依存関係**
+**非推奨のAPIを含むUber Jar依存関係**
 
 >[!CAUTION]
 >
->アドビでは、今後のバージョンのAEMでアプリケーションが正しく動作するように、非推奨のAPIを***含まない** **Uber jarに対してデプロイすることをお勧めします。
+>アドビでは、今後のバージョンのAEMでアプリケーションが正しく動作するように、非推奨のAPIが**** *含まれていないUber Jarに対してデプロイすることをお勧めします。
 >
->非推奨のAPIに依存するコードを変更して変更を加えることができない場合にのみ、非推奨のAPIを含むUber Jarを使用してください。
+>非推奨のAPIに依存するコードを変更して変更内容に合わせることができない場合にのみ、Uber Jarと非推奨のAPIのサポートを使用してください。
 
 ```xml
 <dependency>
@@ -407,7 +410,7 @@ For example, the archetype uses a `.vltignore` file to prevent the JAR file that
 
 ファイルシステムとリポジトリとの間で特定のパスの同期を維持し、AEM にインストールするためにビルドするパッケージにはそのパスをインクルードしない場合があります。
 
-一般的なケースはパス `/libs/foundation` です。 開発目的で、このパスの内容をファイルシステムで使用できるようにし、例えば、IDEがにJSPを含むJSP挿入を解決できるようにします `/libs`。 ただし、カスタム実装で変更する必要のない製品コードがパーツに含まれているので、構築するパ `/libs` ーツはパッケージに含めないでください。
+通常は `/libs/foundation` パスです。 開発のためには、このパスの内容をファイルシステムで使用できるようにし、例えば、IDEで、内のJSPを含むJSP挿入を解決できるようにし `/libs`ます。 ただし、カスタム実装で変更してはならない製品コードがパーツに含まれているので、構築するパッケージにその `/libs` パーツを含めたくありません。
 
 To achieve this, you can provide a file `src/main/content/META-INF/vault/filter-vlt.xml`. If this file exists, it will be used by the VLT tool, e.g. when you perform `vlt up` and `vlt ci`, or when you have set `vlt sync` set up. The content-package-maven-plugin will continue to use the file `src/main/content/META-INF/vault/filter.xml` when creating the package.
 
@@ -495,7 +498,7 @@ To compile JSPs in Maven&#39;s `compile` phase, we use Apache Sling&#39;s [Maven
 
 また、Maven JspC Plugin の結果を OSGi バンドルの一部としてバンドルおよびデプロイすることもできますが、これにより他の影響や副作用が生じ、JSP の検証という目的を逸脱してしまいます。
 
-JSPからコンパイルされたクラスを削除するために、Maven Clean pluginを次のように設定します。 Maven JspCプラグインの結果を調べたい場合は、を実行し `mvn compile` ます。 `myproject/content` その後、結果はに表示されま `myproject/content/target/ignoredjspc`す。
+JSPからコンパイルされたクラスを削除するために、Maven Clean Pluginを次のように設定しました。 Maven JspCプラグインの結果を調べたい場合は、を実行 `mvn compile` し `myproject/content` ます。その後、結果はに表示され `myproject/content/target/ignoredjspc`ます。
 
 #### myproject/content/pom.xml {#myproject-content-pom-xml}
 
@@ -576,7 +579,8 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 >
 >E.g. if you include `/libs/foundation/global.jsp`, you can use the following configuration for the `maven-resources-plugin` instead of the configuration above which completely skips over `/libs`.
 >
->```
+>
+```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
 >           <includes>  
@@ -585,7 +589,6 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 >       </includes>  
 >   </resource>  
 >```
->
 
 ### SCM システムを使用する方法 {#how-to-work-with-scm-systems}
 
@@ -600,7 +603,7 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 
 #### SCM から除外するパターン {#patterns-to-exclude-from-scm}
 
-次に、SCMから含めるパターンの一般的なリストを示します。 例えば、gitを使用している場合は、プロジェクトのファイルに追加でき `.gitignore` ます。
+次に、SCMから含めるパターンの一般的なリストを示します。 例えば、gitを使用している場合は、これらをプロジェクトの `.gitignore` ファイルに追加できます。
 
 #### サンプルの .gitignore {#sample-gitignore}
 
@@ -652,7 +655,7 @@ maven-eclipse.xml
 *.jar
 ```
 
-を参照してください。ファ `gitignore` イルはリポジトリ()にも含めないでください。 `vltignore` ファイルを拡張して、を含める必要があります。 `gitignore` file:
+を参照してください。 `gitignore` ファイルはリポジトリ(. `vltignore` ファイルを拡張して、を含める必要があります。 `gitignore` file:
 
 #### src/main/content/jcr_root/apps/myproject/install/.vltignore {#src-main-content-jcr-root-apps-myproject-install-vltignore-2}
 
