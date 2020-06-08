@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 translation-type: tm+mt
-source-git-commit: a44d655871308dac34671f0af2c4a0017eba5793
+source-git-commit: d559a15e3c1c65c39e38935691835146f54a356e
+workflow-type: tm+mt
+source-wordcount: '853'
+ht-degree: 62%
 
 ---
 
@@ -24,15 +27,15 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 * メッセージの署名と暗号化
 * ユーザーの自動作成
 * AEM でグループを既存のグループに同期させる
-* サービスプロバイダーとIDプロバイダーが認証を開始しました
+* サービスプロバイダーおよびIDプロバイダーが認証を開始しました
 
 このハンドラーは、暗号化された SAML 応答メッセージをユーザーノード（`usernode/samlResponse`）に格納して、サードパーティのサービスプロバイダーとの通信を容易にします。
 
 >[!NOTE]
 >
->[AEM と SAML の統合のデモンストレーション](https://helpx.adobe.com/cq/kb/saml-demo.html)を参照してください。
+>[AEM と SAML の統合のデモンストレーション](https://helpx.adobe.com/experience-manager/kb/simple-saml-demo.html)を参照してください。
 >
->エンドツーエンドのコミュニティの記事については、[Integrating SAML with Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html)を参照してください。
+>エンドツーエンドのコミュニティの記事については、[Integrating SAML with Adobe Experience Manager](https://helpx.adobe.com/jp/experience-manager/using/aem63_saml.html)を参照してください。
 
 ## SAML 2.0 認証ハンドラーの設定 {#configuring-the-saml-authentication-handler}
 
@@ -44,6 +47,7 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 >
 >* ID プロバイダーの POST の URL
 >* サービスプロバイダーのエンティティ ID
+
 >
 
 
@@ -52,26 +56,26 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 >
 >SAML アサーションは署名されます。オプションとして暗号化することもできます。そのためには、少なくとも TrustStore の ID プロバイダーの公開証明書を指定する必要があります。詳しくは、[TrustStore への IdP 証明書の追加](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore)の節を参照してください。
 
-**Path** : Slingがこの認証ハンドラーを使用するリポジトリパス。 このプロパティが空の場合は、認証ハンドラーが無効になります。
+**Path** Repositoryパス。Slingでこの認証ハンドラーを使用する必要があります。 このプロパティが空の場合は、認証ハンドラーが無効になります。
 
-**Service Ranking** OSGi Framework Service Ranking値。このサービスを呼び出す順序を示します。 これは整数値で、値が大きいほど優先順位が高くなります。
+**サービスのランク付け** OSGiフレームワークサービスのランクの値。このサービスを呼び出す順序を示します。 これは整数値で、値が大きいほど優先順位が高くなります。
 
-**IDP Certificate Alias** ：グローバル信頼ストア内のIdPの証明書のエイリアス。 このプロパティが空の場合は、認証ハンドラーが無効になります。設定方法は、以下の「AEM TrustStore への IdP 証明書の追加」を参照してください。
+**IDP証明書エイリアス** ：グローバル信頼ストア内のIdP証明書のエイリアス。 このプロパティが空の場合は、認証ハンドラーが無効になります。設定方法は、以下の「AEM TrustStore への IdP 証明書の追加」を参照してください。
 
-**IDプロバイダー** URL SAML認証要求の送信先のIDPのURLです。 このプロパティが空の場合は、認証ハンドラーが無効になります。
+**IDプロバイダーURL** SAML認証要求の送信先のIDPのURLです。 このプロパティが空の場合は、認証ハンドラーが無効になります。
 
 >[!CAUTION]
 >
 >ID プロバイダーのホスト名は **Apache Sling Referrer Filter** の OSGi 設定に追加する必要があります。詳しくは、[Web コンソール](/help/sites-deploying/configuring-osgi.md)に関する節を参照してください。
 
-**サービスプロバイダーのエンティティID** ID。このIDプロバイダーをIDプロバイダーで一意に識別します。 このプロパティが空の場合は、認証ハンドラーが無効になります。
+**IDプロバイダーでこのサービスプロバイダーを一意に識別するサービスプロバイダーエンティティID** 。 このプロパティが空の場合は、認証ハンドラーが無効になります。
 
-**Default Redirect** ：認証が成功した後にリダイレクトするデフォルトの場所です。
+**デフォルトのリダイレクト** ：認証が成功した後にリダイレクトされるデフォルトの場所です。
 
 >[!NOTE]
 >
->この場所は、cookieが設定されていな `request-path` い場合にのみ使用されます。 有効なログイントークンを持たない設定されたパスの下のページをリクエストした場合、リクエストされたパスはcookieに保存されます
->認証に成功すると、ブラウザーは再びこの場所にリダイレクトされます。
+>この場所は、 `request-path` cookieが設定されていない場合にのみ使用されます。 有効なログイントークンを持たないで、設定されたパスより下のページをリクエストした場合、リクエストされたパスはcookieに保存されます
+>認証が成功すると、ブラウザーは再度この場所にリダイレクトされます。
 
 **User-ID Attribute** :CRXリポジトリでユーザーを認証および作成するために使用されるユーザーIDを含む属性の名前。
 
@@ -79,15 +83,15 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 >
 >ユーザー ID は SAML アサーションの `saml:Subject` ノードではなく、この `saml:Attribute` から取得されます。
 
-**Use Encryption** Whether this authentication handler required encrypted SAML assertions.
+**Use Encryption** Whether or not this authentication handler werquise encrypted SAML assertions.
 
-**CRXユーザーの自動作成** ：認証に成功した後、リポジトリ内に存在しないユーザーを自動的に作成するかどうか。
+**CRXユーザーの自動作成** ：認証が成功した後、リポジトリ内に存在しないユーザーを自動的に作成するかどうかを指定します。
 
 >[!CAUTION]
 >
 >CRX ユーザーの自動作成が無効な場合は、ユーザーを手動で作成する必要があります。
 
-**グループに追加** ：認証が成功した後、ユーザーをCRXグループに自動的に追加する必要があるかどうかを指定します。
+**グループ追加への追加** ：認証が成功した後、ユーザーをCRXグループに自動的に追加する必要があるかどうかを示します。
 
 **Group Membership** ：このユーザーを追加するCRXグループのリストを含むsaml:Attributeの名前。
 
@@ -96,7 +100,7 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 SAML アサーションは署名されます。オプションとして暗号化することもできます。そのためには、少なくともリポジトリ内の IDP の公開証明書を指定する必要があります。これをおこなうには、次の手順を実行する必要があります。
 
 1. http:/serveraddress:serverport/libs/granite/security/content/truststore.htmlに移動し *ます。*
-1. 「TrustStoreを作成」 **[!UICONTROL リンクを押します。]**
+1. 「TrustStoreを **[!UICONTROL 作成」リンクを押します。]**
 1. TrustStore のパスワードを入力して「**[!UICONTROL 保存]**」を押します。
 1. 「**[!UICONTROL TrustStore を管理]**」をクリックします。
 1. IdP 証明書をアップロードします。
@@ -116,9 +120,9 @@ SAML アサーションは署名されます。オプションとして暗号化
 
 >[!NOTE]
 >
->以下の手順は、ハンドラがメッセージの署名または復号化を行える必要がある場合にのみ必要です。
+>以下の手順は、ハンドラがメッセージの署名または復号化を可能にする必要がある場合にのみ必要です。
 
-1. 「**秘密鍵ファイルを選択**」をクリックして秘密鍵ファイルをアップロードします。キーはDERエンコードでPKCS#8形式にする必要があります。
+1. 「**秘密鍵ファイルを選択**」をクリックして秘密鍵ファイルをアップロードします。キーは、DERエンコードを使用したPKCS#8形式にする必要があります。
 1. 「**証明書チェーンファイルを選択**」をクリックして証明書ファイルをアップロードします。
 1. 以下のようにエイリアスを割り当てます。
 
