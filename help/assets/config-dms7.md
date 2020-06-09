@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06301db70f763eedebeca293dd288d22248cfbf6
+source-git-commit: f671e00ad94555346190ecb98c905441ad111e18
 workflow-type: tm+mt
 source-wordcount: '5777'
 ht-degree: 86%
@@ -109,6 +109,7 @@ The installation of feature pack 18912 is *optional*.
          * **[!UICONTROL 継承]** - フォルダーに明示的な同期値はなく、代わりに、上位フォルダーの 1 つ、またはクラウド設定のデフォルトモードから同期値を継承します。継承された詳細なステータスは、ツールチップの要領で表示されます。
          * **[!UICONTROL サブフォルダーを有効にする]** - このサブツリー内のすべての項目を、Dynamic Media との同期に含めます。フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
          * **[!UICONTROL サブフォルダーに対して無効]** - このサブツリー内のすべての項目を、Dynamic Media との同期から除外します。
+
    >[!NOTE]
    >
    >DMS7 ではバージョン管理はサポートされていません。また、遅延アクティベーションは、Dynamic Media 設定を編集ページの「**[!UICONTROL アセットを公開]**」が「**[!UICONTROL アクティベーション時]**」に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
@@ -117,7 +118,7 @@ The installation of feature pack 18912 is *optional*.
    >アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」をタップします。
-1. Dynamic Media コンテンツを公開する前に安全にプレビューするには、AEM オーサーインスタンスを「ホワイトリストに登録」して、Dynamic Media に接続する必要があります。
+1. ダイナミックメディアコンテンツを公開する前に、安全にプレビューするには、AEM作成者インスタンスを「許可」して、ダイナミックメディアに接続する必要があります。
 
    * Dynamic Media Classic アカウントにログインします（[http://www.adobe.com/jp/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)）。資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
    * ページ右上付近のナビゲーションバーで、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。
