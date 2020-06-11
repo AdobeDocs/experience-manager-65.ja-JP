@@ -1,16 +1,12 @@
 ---
-title: AEM 6.5以前のService Packリリースノート
+title: Adobe Experience Manager 6.5以前のService Packリリースノート
 description: Adobe Experience Manager 6.5 Service Pack 3以前に固有のリリースノートです。
-uuid: c7bc3705-3d92-4e22-ad84-dc6002f6fa6c
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
-docset: aem65
+contentOwner: AK
 translation-type: tm+mt
-source-git-commit: c80cb65b42d8e132ba83c25f1decdcf0a0a6fc51
+source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
 workflow-type: tm+mt
-source-wordcount: '8093'
-ht-degree: 36%
+source-wordcount: '8094'
+ht-degree: 35%
 
 ---
 
@@ -19,13 +15,13 @@ ht-degree: 36%
 
 ## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
 
-Adobe Experience Manager 6.5.4.0は、2019 **年4月のGAリリース(GA)以降にリリースされた主な機能、お客様からリクエストされた機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager (AEM) 6.5にインストールできます。
+Adobe Experience Manager 6.5.4.0は、2019 **年4月のGAリリース(GA)以降にリリースされた主な機能、お客様からリクエストされた機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager 6.5の上部にインストールできます。
 
-AEM 6.5.4.0で導入された主な機能および機能強化には、次のものが含まれます。
+Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強化には、次のものが含まれます。
 
-* Adobe I/Oコンソールを通じて、AEM AssetsがBrand Portalで設定されるようになりました。
+* Adobe Experience Manager Assetsは、Adobe I/Oコンソールを通じてBrand Portalと共に設定されるようになりました。
 
-* AEM Formsワークフローで、新しい「 [印刷可能な出力を](../forms/using/aem-forms-workflow-step-reference.md) 生成」手順を使用できるようになりました。
+* Adobe Experience Manager Formsワークフローで、印刷可能な [](../forms/using/aem-forms-workflow-step-reference.md) 出力の生成に関する新しい手順が利用できるようになりました。
 
 * [アダプティブフォームとインタラクティブ通信のレイアウトモードの複数列のサポート](../forms/using/resize-using-layout-mode.md) 。
 
@@ -41,13 +37,13 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * SOAP入力または出力と複雑なデータ構造で、動的グループの置換がサポートされるようになりました。
 
-以前のAEM 6.5サービスパックで導入された機能、主な特長、主な機能の完全なリストについては、「Adobe Experience Manager 6.5 Service Pack 4の新機能」を参照して [ください](new-features-latest-service-pack.md)。
+最新のサービスパックで導入された機能と主なハイライトの完全なリストについては、「Adobe Experience Manager 6.5サービスパックの新機能 [](new-features-latest-service-pack.md)」を参照してください。
 
 ### Sites {#sites-fixes}
 
-* AEMサイトページのURLにコロン(:)が含まれる場合 )またはパーセント記号(%)を使用すると、基になるブラウザーが応答を停止し、CPUサイクルがスパイクを示します(NPR-32369、NPR-31918)。
+* Adobe Experience ManagerのサイトのページのURLにコロン(`:`)またはパーセンテージ記号(`%`)が含まれている場合、ブラウザーは応答を停止し、CPU使用率のスパイク(NPR-32369、NPR-31918)が発生します。
 
-* AEMサイトページを編集用に開き、コンポーネントをコピーした場合、一部のプレースホルダー(NPR-32317)では貼り付け操作が使用できなくなります。
+* Experience Managerのサイトページを編集用に開き、コンポーネントをコピーした場合、一部のプレースホルダーでは貼り付け操作が使用できないままになります(NPR-32317)。
 
 * パブリケーションの管理ウィザードを開くと、コアコンポーネントにリンクされたエクスペリエンスフラグメントは、公開された参照のリストに表示されません(NPR-32233)。
 
@@ -55,7 +51,7 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * サーバー時間とマシン時間が異なるタイムゾーンにある場合、スケジュールされた公開時間はタッチUIでサーバー時間を表示しますが、クラシックUIではマシン時間が表示されます(NPR-32077)。
 
-* AEMサイトが、URLにサフィックスの付いたページを開くのに失敗する(NPR-32072)。
+* Experience Manager Sitesで、URLにサフィックスの付いたページを開けません(NPR-32072)。
 
 * ユーザがコンテンツフラグメントを編集すると、削除されたコンテンツフラグメントが復元される(NPR-32062)。
 
@@ -129,7 +125,7 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * ユーザーがダイナミックメディアクライアントのセットエディター(CQ-4285690)で変更を行っていない場合、「保存」ボタンでリモートセットが読み込まれません。
 
-* 3Dアセットのサムネールは情報ではありません。サポートされている3DモデルがAEMに取り込まれる場合(CQ-4283701)に表示されます。
+* 3Dアセットのサムネールは情報ではありません。サポートされている3DモデルがExperience Managerに取り込まれる場合(CQ-4283701)。
 
 * スマート切り抜きビデオビューアプリセットの未処理のステータスが、バナーのプリセット名の横に2回表示されます(CQ-4283517)。
 
@@ -139,7 +135,7 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * ChromeおよびSafariブラウザー(NPR-32067)のダウンロードダイアログの電子メールドロップダウンで、キーボードのフォーカスが動かなくなる。
 
-* AEMでDMクラウド設定を追加しようとすると、「すべてのコンテンツを同期」チェックボックスがデフォルトで有効になりません(CQ-4288533)。
+* Experience ManagerでDMクラウド設定を追加しようとすると、「すべてのコンテンツを同期」チェックボックスがデフォルトで有効になりません(CQ-4288533)。
 
 ### Foundation UI {#foundation-ui-6540}
 
@@ -187,13 +183,9 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 ### Brand Portal {#assets-brand-portal-6540}
 
-* Brand Portalのユーザーは、AEM 6.5.4のAdobe I/Oにアップグレードする際に、貢献度フォルダーのアセットをAEM Assetsに発行できません(CQDOC-15655)。
+* Brand Portal users are not able to publish contribution folder assets to [!DNL Assets] on upgrading to Adobe I/O on Experience Manager 6.5.4 (CQDOC-15655). For an immediate fix on Experience Manager 6.5.4, it is recommended to [download the hotfix](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) and install on your author instance.
 
-   この問題は、次のサービスパック AEM 6.5.5 で修正されます。
-
-   AEM 6.5.4 の即時修正をおこなうには、[ホットフィックスをダウンロード](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)して、オーサーインスタンスにインストールすることをお勧めします。
-
-* メタデータスキーマのドロップダウン値は、アセットのプロパティに表示されません(CQ-4283287)。
+* メタデータスキーマポップアップ値は、アセットのプロパティに表示されません(CQ-4283287)。
 
 * メタデータのサブスキーマでは、アセットプロパティのMIMETYPEに基づくタブが表示されません(CQ-4283288)。
 
@@ -217,11 +209,11 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * Tikaパーサーで解析した場合にJPEGドキュメントを含むMS WordおよびMS Excel画像が解析に失敗し、クラスが見つからないというエラーが表示される(NPR-31952)。
 
-### Forms {#forms-6540}
+### フォーム {#forms-6540}
 
 >[!NOTE]
 >
->AEM サービスパックには、AEM Forms の修正は含まれません。別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
+>Experience Manager Service Packには、Experience Manager Formsに関する修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsに関する修正を含む、累積的なインストーラーがリリースされました。 詳しくは、「Experience Manager Formsの [インストールアドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「JEE上のExperience Manager Formsの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 * Correspondence Management: 後処理ワークフロー(NPR-32626)に送信した後、レターに追加の文字が表示されます。
 
@@ -233,13 +225,13 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * ドキュメントサービス： Service Pack 2(NPR-32508、NPR-32509)を適用した後のLettersおよびその他のページのURLアクセスの問題。
 
-* ドキュメントサービス： サーバー上のトランザクション数が特定の制限を超える場合、HTMLからPDFへの変換は失敗し、ファイルタイプの設定がAEM Formsサーバー(NPR-32204)から削除されます。
+* ドキュメントサービス： サーバー上のトランザクション数が特定の制限を超える場合、HTMLからPDFへの変換は失敗し、ファイルタイプの設定が [!DNL Forms] サーバー(NPR-32204)から削除されます。
 
 * アダプティブフォーム： ブラウザーアクセシビリティツールは、WCAG2 Level AAガイドライン(NPR-32312、NPR-32309、CQ-4285439)に従ってアダプティブフォーム内のエラーをレポートします。
 
 * アダプティブフォーム： Chromeブラウザーアクセシビリティツールが、ベストプラクティスの失敗を報告します(NPR-32310)。
 
-* アダプティブフォーム： AEMサイトページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
+* アダプティブフォーム： Experience Manager Sitesページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
 
 * Workbench: PDF Utilitiesサービス(NPR-32150)で「Get PDF Properties」操作を使用していると、エラーメッセージが表示されます。
 
@@ -249,7 +241,7 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * Designer: 表内に結合されたセルがある場合、アクセシビリティテストは、出力サービス(CQ-4285372)を使用してXDPフォームから変換された出力PDFファイルに対して失敗します。
 
-* Foundation JEE: AEM Formsサーバーがクラスターから切断された場合、キャッシュの問題によってサーバーに再接続できなくなります(NPR-32412)。
+* Foundation JEE: Experience Manager Formsサーバーがクラスターから切断された場合、キャッシュの問題によってサーバーに再接続できなくなります(NPR-32412)。
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -283,45 +275,48 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * [!DNL Experience Manager Assets] は、Deflate64アルゴリズム(NPR-27573)を使用して作成されたZIPアーカイブをサポートするようになりました。
 
-* 作成日の新しい列（並べ替え可能）がDAMリスト表示およびリスト表示(NPR-31312)のアセット検索結果に追加されました。
+* 作成日の新しい列（並べ替え可能）がDAMリスト表示に追加され、アセット検索結果のリスト表示(NPR-31312)に追加されます。
 
-* リスト表示(NPR-31299)で、「名前」列に基づくアセットの並べ替えが許可されました。
+* リスト表示で、ユーザーは [!UICONTROL Name] 列(NPR-31299)を使用してアセットのリストを並べ替えることができます。
 
-* GLB、GLTF、OBJ、およびSTLアセットファイルは、DAMの「アセットの詳細」ページでのアセットプレビューをサポートしています(CQ-4282277)。
+* GLB、GLTF、OBJ、およびSTLファイルは、DAMの [!UICONTROL アセットの詳細] ページでプレビューできます(CQ-4282277)。
 
-* ReplicationOnModifyListenerイベントは、でのチャンクのアップロード中にチャンクノードに対してトリガーされ [!DNL Dynamic Media] ます(CQ-4281279)。
+* `ReplicationOnModifyListener` (CQ-4281279)で、チャンクのアップロード中にチャンクノードのイベントがトリガーされ [!DNL Dynamic Media] ます。
 
 * [!DNL Dynamic Media] で、スマート切り抜きビデオアセットがサポートされるようになりました。 スマート切り抜きは、機械学習を中心とした機能で、フレームを移動しながらビデオを再トリミングし、シーンの焦点に合わせます(CQ-4278995)。
 
 * [!DNL Dynamic Media] は、スマートイメージング(CQ-4222249)をサポートしています。
 
-* クエリパラメーターが要求で渡される場合、検索/参照表示がFoundationピッカーのデフォルトの表示として設定されました(NPR-31601)。
+* クエリパラメーターが要求で渡される場合、検索表示ーまたは参照表示ーがFoundationピッカーのデフォルトのとして設定されます(NPR-31601)。
 
 **安定性および**
 
-* 一部のPDFドキュメントのメタデータが更新されず、タイトルの変更時にPDFに保存されません(NPR-31629)。
+* 一部のPDFドキュメントのメタデータが更新されず、タイトルが変更されてもPDFに保存されません(NPR-31629)。
 
-* 名前にプラス(+)文字が含まれるアセット(NPR-31547)では、アセットの共有は機能しません。
+* ファイル名にプラス文字(`+`)が含まれるアセット(NPR-31547)では、アセットの共有は機能しません。
 
 * アセット管理者*検索レールのデフォルトの検索フォームでの編集が期待どおりに動作しません(NPR-31502)。
 
-* アセットの検索にOmnisearchをアセット表示で使用する場合、サーチクエリが表示されません(NPR-31496)。
+<!-- Review: Check if this seemingly stray asterisk is needed there or not.
+-->
+
+* アセットの検索にOmnisearch on assets表示ーを使用している場合、サーチクエリが表示されません(NPR-31496)。
 
 * 同じアセットが別のユーザーによる別のコレクションで参照されている場合、参照先のアセットが別の場所に移動しても、コレクション内のアセット参照は更新されません(NPR-31486)。
 
 * 重複のIPTCタグがアセットメタデータ(NPR-31328)に追加されます。
 
-* フィルターレール(NPR-31316)から検索がトリガーされると、右上隅の検索結果カウントが正確に更新されません。
+* フィルターレール(NPR-31316)から検索がトリガーされた場合、検索結果カウントは正確に更新されません。
 
-* ファイルの種類フィルターで2番目のレベルのチェックボックスの選択を解除すると、すべてのチェックボックスがオフになり、検索バーのテキストが選択/選択解除されたプロパティ(NPR-31287)と同期されません。
+* ファイルの種類フィルターで第2レベルのチェックボックスの選択を解除すると、すべてのチェックボックスがオフになり、検索バーのテキストが選択または選択解除されたプロパティ(NPR-31287)と同期されません。
 
 * すべてのメンバ（ユーザー/グループ）をフォルダーのMembersセクションから削除することはできません。 すべてのユーザーを削除しようとすると、ログインしたユーザーがリストに追加されます(NPR-31171)。
 
-* ファイル名にプラス記号「+」が付いたアセットは削除できません(NPR-31162)。
+* ファイル名にプラス記号(`+`)が付いたアセットは削除できません(NPR-31162)。
 
 * 「作成」ドロップダウンメニューは、フォルダーを選択したときにトップメニューに表示され、作成オプションとして「フォルダー」が表示されません(NPR-30877)。
 
-* パス上のDeny jcr:removeChildNodesおよびjcr:removeNodeのACLがユーザーに適用される場合、フォルダー選択の作成/FileUploadアクション項目が見つかりません(NPR-30840)。
+* DenyのACLとパスのFileUploadアクション項目がユーザーに適用されている場合に、Create/FileUploadアクション項目 `jcr:removeChildNodes``jcr:removeNode` が見つかりません(NPR-30840)。
 
 * 特定のmp4アセットがアップロードされると、DAMワークフローが古い状態になり、残りのすべてのワークフローが古い状態になります(NPR-30662)。
 
@@ -331,7 +326,7 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * Scene7モード(NPR-31630)で [!DNL Experience Manager] 実行している場合、アセットを別のフォルダに移動するときに、アセット名が小文字に変更され [!DNL Dynamic Media]ます。
 
-* Scene 7会社名(NPR-31340)と同じ名前のフォルダに存在する画像に関して、リモート画像セットの編集中にエラーが発生します。
+* Scene7会社名(NPR-31340)と同じ名前のフォルダーに存在する画像に関して、リモート画像セットの編集中にエラーが発生します。
 
 * [!DNL Dynamic Media] 参照を含むアセットが公開されない(NPR-31180)。
 
@@ -339,9 +334,9 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * 画像アセットに追加されたホットスポットは、アセットの詳細ページのインタラクティブ画像ビューアでは表示されません(NPR-30979)。
 
-* 巨大なスリングジョブが作成され、でアセットに対して行われた操作がScene 7に渡されると「処理」バナー [!DNL Experience manager Assets] が再表示されます(NPR-30947)。
+* 巨大なスリングジョブが作成され、でアセットに対して行われた操作がScene7に渡されると「処理」バナー [!DNL Experience manager Assets] が再表示されます(NPR-30947)。
 
-* アセットとアセットの言語コピーを作成すると競合が発生し、Scene 7(NPR-30932)にアップロードされません。
+* アセットとアセットの言語コピーを作成すると競合が発生し、Scene7(NPR-30932)にアップロードされません。
 
 * ハイブリッドモード [!DNL Experience Manager] で実行されている [!DNL Dynamic Media]ときにダウンロードされたダイナミックレンディションが壊れる（画像コンテンツタイプではなく、コンテンツが「画像が見つかりません」のテキストタイプ）(NPR-30876)。
 
@@ -349,7 +344,7 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * 異なるScene7会社IDを使用して、1つのインスタンスから別のインスタンスにアセットを移行する際にIpsApiExceptionが発生する問題を修正しました(CQ-4280548)。
 
-* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報として表示されません。
+* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報としてはなりません。
 
 * 3Dアセットにカメラ表示が少ない場合は、スクロールボタンがビューアに表示されます(CQ-4283322)。
 
@@ -363,11 +358,11 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * ビデオプロファイルを含むフォルダーに新たに取り込まれたビデオは、エンコードの割合が100 %に達した後も処理状態のままとなります。(CQ-4279389)
 
-* フォルダからアセットを移動すると、理想的に必要なジョブ(CQ-4278664)よりも多くのSlingジョブ（Scene 7 API呼び出し）が作成されます。
+* フォルダーからアセットを移動すると、理想的に必要なジョブ(CQ-4278664)よりも多くのSlingジョブ（Scene7 API呼び出し）が作成されます。
 
-* Scene7では、DAMで画像セット（またはメディアセット）が作成され、適切な命名規則に従って名前が付けられている場合、画像セットの名前が小文字に変更されます(CQ-4281112)。
+* Scene7では、画像セット（またはメディアセット）が作成され、DAMで適切な命名規則に従って名前が付けられている場合、画像セットの名前が小文字に変更されます(CQ-4281112)。
 
-* Scene 7 Migratorで、公開状態が正しく設定されない(CQ-4263492)。
+* Scene7 Migratorで、公開状態が正しく設定されない(CQ-4263492)。
 
 * タッチUI検索（Omnisearchで実行）の結果ページは自動的に上にスクロールし、コンテンツフラグメント内でのユーザーのスクロール位置が失われます。(CQ-4282898)
 
@@ -381,7 +376,7 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * レンディションのワークフローが失敗する(CQ-4271928)。
 
-* DAMイベントの削除は、最新の(maxSavedActivities)イベントデータを削除し、以前に作成されたデータを保持します(NPR-31336)。
+* 「DAMイベントの削除」は、最新の(`maxSavedActivities`)イベントデータを削除し、以前に作成されたデータ(NPR-31336)を保持します。
 
 * タッチUI検索（Omnisearchを通じて行われる）の結果ページは自動的に上にスクロールし、ユーザーのスクロール位置が失われます(NPR-31307)。
 
@@ -393,22 +388,27 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * LiveCopyの継承が壊れている場合、ライブコピーページには、LiveCopyリンクではなく、言語コピーリンクが表示されます(NPR-30980)。
 * 新しいBlueprintの場合、レコード数が40を超える場合、最初の40個のレコードのみが表示されます。 Blueprintでは、残りのレコードに空白行が表示されます(NPR-31182)。
-* ユーザーがメニューのdescriptionプロパティに日本語または韓国語の文字を追加すると、日本語および韓国語のテキストに対して、ゆがんだ文字が表示されます。 (NPR-31331).
+* ユーザーがメニューのdescriptionプロパティに日本語または韓国語の文字を追加すると、メニューは、日本語および韓国語のテキストに対して歪んだ文字を表示します(NPR-31331)。
 * リッチテキストエディター(RTE)では、埋め込まれたテーブルをリスト項目として挿入できません(NPR-30879)。
 * Scaffolding Rich Text Editor(RTE)をすぐに使用できます。 要素にインラインのフォントサイズを適用します（予期せず）(NPR-31284)。
 * ユーザーが左側のレールフィールドにフォーカスし、キーボードショートカットを使用してコンテンツを貼り付けると、左側のレールフィールドからコピーされたコンテンツではなく、ページエディターのクリップボードのコンテンツが貼り付けられます(NPR-31172)。
 * ユーザがマルチフィールドにファイルアップロードフィールドを追加すると、画像パスはマルチフィールドノード(NPR-30882)ではなくコンポーネントノードに保存されます。
-* ResponsiveGridExporter APIは、com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporterインターフェイスを返しません。 com.day.cq.wcm.foundation.model.implパッケージがプライベートパッケージとして宣言されています(NPR-31398)。
-* 一部のExperienceFragmentsを含むページがエディター以外のモードで（プレフィックスとのない作成者で、または発行者で）開かれると、要求はHTTPステータスエラーコード500(NPR-30743)で終了します。 `editor.html``wcmmode=disabled`
+* この `ResponsiveGridExporter` APIはインター `com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter` フェイスを返しません。 この `com.day.cq.wcm.foundation.model.impl` パッケージはプライベートパッケージとして宣言されます(NPR-31398)。
+
+<!-- Review: NPR-31398 has fixVersion as 6530. However, it is mentioned twice in 6530 and 6520 as fixed. 
+Remove one mention of this fix.
+-->
+
+* 一部のエクスペリエンスフラグメントを含むページがエディター以外のモードで（プレフィックスとのない作成者で、または投稿で）開かれると、要求はHTTPステータスエラーコード `editor.html``wcmmode=disabled``500` (NPR-30743)で終了します。
 * ユーザーは、パスワードを変更したり、プロファイルページにアクセスしたりすることはできません(NPR-31161)。
 
 ### 検索とユーザーインターフェイス {#search-ui-interface}
 
-* 検索結果ページでカード表示からリスト表示に切り替えると、ページをスクロールする前に遅延が発生します(NPR-31286)。
+* 検索結果ページ上でカード表示からリスト表示に切り替えると、ページがスクロールされるまでに遅延が生じます(NPR-31286)。
 
-* 「すべて選択」チェックボックスは、 [!DNL Sites] UIのリスト表示(NPR-31614)で非表示になっています。
+* 「す [!UICONTROL べて選択] 」チェックボックスは、 [!DNL Sites] ユーザーインターフェイスのリスト表示(NPR-31614)で非表示になっています。
 
-* 検索結果ページの「すべて選択」の数が正しくありません(NPR-31120)。
+* 検索結果ページの [!UICONTROL 「すべて選択] 」のカウントが正しくありません(NPR-31120)。
 
 * メタデータエディターには、存在しないタグ(NPR-31119)が表示されます。
 
@@ -471,11 +471,11 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 * Luceneインデックスの更新により、作成者サーバーの速度が低下する原因となっています(NPR-31548)。
 
-### Forms {#forms-6530}
+### フォーム {#forms-6530}
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「Experience Manager Formsの [インストールアドオン](#install-aem-forms-add-on-package) 」および「JEE上のExperience Manager Formsの [インストール」を参照してください](#install-aem-forms-jee-installer)。
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「Experience Manager Formsの [インストールアドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「JEE上のExperience Manager Formsの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 #### Forms アドオンパッケージ {#forms-add-on-package-6530}
 
@@ -603,15 +603,15 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 
 ### Sites {#sites-6520}
 
-* LiveCopyの継承が壊れている場合、ライブコピーページには、LiveCopyリンクではなく言語コピーリンクが表示されます。 (NPR-30980)
-* 新しいBlueprintの場合、レコード数が40を超える場合、最初の40個のレコードのみが表示されます。 Blueprintは、残りのレコードの空白行を表示します。 (NPR-31182)
-* テキストコンポーネントのリッチテキストエディター(RTE)プラグインは、日本語と韓国語のテキストに対して歪んだ文字を表示します。 (NPR-31331)
-* リッチテキストエディター(RTE)では、埋め込みテーブルをリスト項目として挿入できません。 (NPR-30879)
-* 初期設定のスキャフォールドであるリッチテキストエディタ(RTE)が、要素にインラインフォントサイズを適用します。 (NPR-31284)
-* ユーザーが左側のパネルのフィールドにフォーカスし、キーボードショートカットを使用してコンテンツを貼り付けると、左側のパネルのフィールドからコピーしたコンテンツではなく、ページエディターのクリップボードのコンテンツが貼り付けられます。 (NPR-31172)
-* ユーザが複数フィールドにファイルのアップロードフィールドを追加すると、画像パスは、複数フィールドのノードではなく、コンポーネントのノードに保存されます。 (NPR-30882)
-* ResponsiveGridExporter APIは、com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporterインターフェイスを返しません。 com.day.cq.wcm.foundation.model.implパッケージはプライベートパッケージとして宣言されています。 (NPR-31398)
-* 一部のExperienceFragmentsを含むページがエディター以外のモードで(プレフィックスとを含まない作成者で、または `editor.html``wcmmode=disabled`発行者で)開かれると、リクエストはHTTPステータスエラーコード500で終了します。 (NPR-30743)
+* LiveCopyの継承が壊れている場合、ライブコピーページには、LiveCopyリンクではなく、言語コピーリンクが表示されます(NPR-30980)。
+* 新しいBlueprintの場合、レコード数が40を超える場合、最初の40個のレコードのみが表示されます。 Blueprintでは、残りのレコードに空白行が表示されます(NPR-31182)。
+* テキストコンポーネントのRich Text Editor(RTE)プラグインは、日本語と韓国語のテキストに対して、歪んだ文字を表示します(NPR-31331)。
+* リッチテキストエディター(RTE)では、埋め込まれたテーブルをリスト項目として挿入できません(NPR-30879)。
+* 初期設定のスキャフォールドであるRich Text Editor(RTE)が、要素にインラインフォントサイズを適用します(NPR-31284)。
+* ユーザーが左側のパネルのフィールドにフォーカスし、キーボードショートカットを使用してコンテンツを貼り付けると、左側のパネルのフィールドからコピーしたコンテンツではなく、ページエディターのクリップボードのコンテンツを貼り付けます(NPR-31172)。
+* ユーザがマルチフィールドにファイルアップロードフィールドを追加すると、画像パスはマルチフィールドノード(NPR-30882)ではなくコンポーネントノードに保存されます。
+* この `ResponsiveGridExporter` APIはインター `com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter` フェイスを返しません。 パッ `com.day.cq.wcm.foundation.model.impl` ケージがプライベートパッケージとして宣言されます(NPR-31398)。
+* 一部のエクスペリエンスフラグメントを含むページがエディター以外のモードで(プレフィックスとを含まない作成者で、または `editor.html``wcmmode=disabled`投稿で)開かれると、要求はHTTPステータスエラーコード500(NPR-30743)で終了します。
 
 ### WCM - ページエディター {#wcm-page-editor-6520}
 
@@ -655,11 +655,11 @@ AEM 6.5.4.0で導入された主な機能および機能強化には、次のも
 * パブリッシュインスタンスを再起動するまで、カスタマイズされたコンテンツがインスタンス上で正しく表示されません。NPR-30377：CQ-4273706 のホットフィックス
 * Web サイトで Launch を設定すると、ライブラリアドレスの先頭にスラッシュ（/）が付加され、毎回手動の対応が必要になります。NPR-30694：CQ-4275501 のホットフィックス
 
-### Forms {#forms-6520}
+### フォーム {#forms-6520}
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 They are delivered using a separate [!DNL Forms] add-on package. In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. For more information, see [Install Experience Manager Forms add-on](#install-aem-forms-add-on-package) and [Install Experience Manager Forms JEE installer](#forms-jee-installer).
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 They are delivered using a separate [!DNL Forms] add-on package. In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. For more information, see [Install Experience Manager Forms add-on](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) and [Install Experience Manager Forms JEE installer](#forms-jee-installer).
 
 The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
@@ -835,7 +835,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
 * Java11\を使用する場合、メモリ使用量の詳細はシステムコンソールに表示されません。 NPR-29669
 
-### Forms
+### フォーム
 
 The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
@@ -850,7 +850,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 **バックエンド統合**
 
 * 保護された Web サービス定義言語（WSDL）の取得に失敗します。NPR-29944：CQ-4270777 のホットフィックス
-* When [!DNL Experience Manager Forms]  is installed on IBM WebSphere, creating a form data model based on SOAP fails. CQ-4251134 のホットフィックス
+* When [!DNL Experience Manager Forms] is installed on IBM WebSphere, creating a form data model based on SOAP fails. CQ-4251134 のホットフィックス
 * Microsoft Dynamics オンプレミス統合で Active Directory Federation Services（ADFS）v3.0 がサポートされるようになりました。CQ-4270586 のホットフィックス
 * データソースのタイトルが変更されても、更新されたタイトルがフォームデータモデルに表示されません。CQ-4265599 のホットフィックス
 * 図形または属性の名前にハイフンまたはスペースが含まれる場合、式はそのような図形や属性を評価できません。 CQ-4225129 のホットフィックス
