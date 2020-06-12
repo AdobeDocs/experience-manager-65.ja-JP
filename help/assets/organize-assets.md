@@ -3,7 +3,7 @@ title: デジタルアセットを整理します
 description: Experience Managerを使用して、デジタルアセット、画像、ファイル、フォルダーなどを整理します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 8%
@@ -26,7 +26,7 @@ Experience Manager Assetsでは、複数の方法によるコンテンツの編�
 
    * **開発フォルダー**: 現在操作中のデジタルアセットが含まれます。
    * **クライアントフォルダー**: クライアントまたはプロジェクト名に基づくデジタルアセットが含まれます。
-   * **マスターフォルダ**: 元のソースデジタルアセットが含まれます。
+   * **プライマリフォルダ**: 元のソースデジタルアセットが含まれます。
    * **レンダリングフォルダ**: 元のソースデジタルアセットのレンディションとコピーが含まれます。
    * **File Size folders**: 小、中、大のファイルサイズに基づくデジタルアセットが含まれます。
    * **ステージングフォルダー**: webサイト上でライブに公開する準備ができているデジタルアセットが含まれます。
