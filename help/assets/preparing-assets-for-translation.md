@@ -3,10 +3,10 @@ title: 翻訳するアセットの準備
 description: 言語ルートフォルダーを作成して、多言語アセットをサポートする翻訳用のアセットを準備します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
 source-wordcount: '449'
-ht-degree: 58%
+ht-degree: 45%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Manager Assetsでは、多言語アセットがフォルダー�
 
 各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。For example, */content/dam/it* is the Italian language root for the Italian language copy. ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
 
-最初にアセットを追加した言語コピーが言語マスターです。言語マスターは、他の言語に翻訳されるソースです。サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
+最初にアセットを追加した言語コピーは、言語の主要な言語です。 言語プライマリは、他の言語に翻訳されたソースです。 サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
 
 ```
  /content
@@ -35,9 +35,9 @@ Adobe Experience Manager Assetsでは、多言語アセットがフォルダー�
 
 翻訳するアセットを準備するには、次の手順を実行します。
 
-1. 言語マスターの言語ルートを作成します。For example, the language root of the English language copy in the sample folder hierarchy is `/content/dam/en`. Ensure that the language root is correctly configured according to the information in [Create a Language Root](preparing-assets-for-translation.md#creating-a-language-root).
+1. 言語プライマリの言語ルートを作成します。 For example, the language root of the English language copy in the sample folder hierarchy is `/content/dam/en`. Ensure that the language root is correctly configured according to the information in [Create a Language Root](preparing-assets-for-translation.md#creating-a-language-root).
 
-1. 言語マスターにアセットを追加します。
+1. ア追加セットを言語のプライマリに追加します。
 1. 言語コピーが必要な各ターゲット言語の言語ルートを作成します。
 
 ## Create a language root {#creating-a-language-root}
@@ -60,7 +60,7 @@ Adobe Experience Manager Assetsでは、多言語アセットがフォルダー�
 
 Experience Manager interface provides a **[!UICONTROL References]** panel that displays a list of language roots that have been created within Assets.
 
-1. アセットコンソールで、言語コピーを作成する言語マスターを選択します。
+1. アセットコンソールで、言語コピーを作成する言語のプライマリ言語を選択します。
 1. Click the GlobalNav icon, and choose **[!UICONTROL References]** to open the [!UICONTROL Reference] pane.
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
