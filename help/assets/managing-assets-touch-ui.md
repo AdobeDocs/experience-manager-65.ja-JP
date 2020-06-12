@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 85a93dfa3bcacfb0820029642c03b2d35552121f
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '9304'
+source-wordcount: '9303'
 ht-degree: 64%
 
 ---
@@ -197,7 +197,7 @@ To cancel an upload job in progress, click **[!UICONTROL Cancel]** next to the D
 
 When uploading image files, including AI, EPS, and PSD files, you can take the following editing actions in the [!UICONTROL Upload Job Options] dialog box:
 
-* 画像の端からホワイトスペースを切り抜く（上の表の説明を参照してください）。
+* 画像の端の空白の切り抜き（上の表の説明を参照）
 * 画像の側面から手動で切り抜く（上の表の説明を参照してください）。
 * カラープロファイルを選択する（上の表でオプションの説明を参照してください）。
 * クリッピングパスからマスクを作成する。
@@ -506,7 +506,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    **レンディションの削除**
 
-   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** icon from the toolbar. アセット処理の完了後、レンディションを一括で削除することはできません。 個々のアセットについて、レンディションをユーザインターフェイスから手動で削除できます。 複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** icon from the toolbar. アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザインターフェイスからレンディションを手動で削除できます。複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
 
    ![レンディションを削除するオプション](assets/delete_renditionicon.png)
 
