@@ -3,10 +3,10 @@ title: 統合 [!DNL Adobe Experience Manager Assets] 機能 [!DNL Adobe InDesign
 description: Learn how to integrate [!DNL Adobe Experience Manager Assets] with [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '1561'
-ht-degree: 33%
+source-wordcount: '1560'
+ht-degree: 30%
 
 ---
 
@@ -43,6 +43,7 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
       * PDF と JPG のレンディションが生成されます。
       * HTML と IDML のレンディションが生成されます。
    * Post the resulting files back to [!DNL Experience Manager Assets].
+
    >[!NOTE]
    >
    >IDMLは、 [!DNL InDesign] ファイルのすべてのコンテンツをレンダリングするXMLベースの形式です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、InDesign Interchange Formats INX and [IDMLを参照してください](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
@@ -193,18 +194,19 @@ IDS 並列ジョブ数を設定するには：
 
    If there are multiple machines running [!DNL InDesign Server], add SOAP endpoints (number of processors per machine -1) for each machine.
 
-   >[!NOTE]
-   >
-   >ワーカーのプールを操作するときに、IDS ワーカーのブラックリスト設定を有効にすることもできます。
-   >
-   >
-   >To do so, enable the **[!UICONTROL enable.retry.name]** checkbox, under the `com.day.cq.dam.ids.impl.IDSJobProcessor.name` configuration, which enables IDS job retrials.
-   >
-   >
-   >Also, under the `com.day.cq.dam.ids.impl.IDSPoolImpl.name` configuration, set a positive value for `max.errors.to.blacklist` parameter which determines number of job retrials before barring an IDS from the job handlers list.
-   >
-   >
-   >デフォルトでは、設定可能な（retry.interval.to.whitelist.name）時間（分）が経過した後で、IDS ワーカーが再検証されます。ワーカーがオンラインである場合は、ブラックリストから削除されます。。
+<!-- 
+TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
+
+>[!NOTE]
+>
+>ワーカーのプールを使用する場合、IDSワーカーのブロックリストを有効にできます。
+>
+>To do so, enable the **[!UICONTROL enable.retry.name]** checkbox, under the `com.day.cq.dam.ids.impl.IDSJobProcessor.name` configuration, which enables IDS job retrials.
+>
+>Also, under the `com.day.cq.dam.ids.impl.IDSPoolImpl.name` configuration, set a positive value for `max.errors.to.blacklist` parameter which determines number of job retrials before barring an IDS from the job handlers list.
+>
+>By default, after the configurable (`retry.interval.to.whitelist.name`) time in minutes the IDS worker is revalidated. ワーカーがオンラインで見つかった場合は、ブロックされたリストから削除されます。
 
 ## 10.0以降のサポート [!DNL InDesign Server] を有効にする {#enabling-support-for-indesign-server-or-later}
 
