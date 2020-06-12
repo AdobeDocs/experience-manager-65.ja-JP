@@ -3,9 +3,9 @@ title: Adobe Creative Cloud [!DNL Adobe Experience Manager] と統合のベス�
 description: アセット転送ワークフローを合理化し、高いコンテンツ速度を達成するための [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 統合のベストプラクティスです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3249'
 ht-degree: 55%
 
 ---
@@ -160,7 +160,7 @@ DAM の既存アセットに対する変更要求が出された後、マーケ�
 
 #### DAM への直接アクセス権を持つクリエイティブユーザー {#creative-users-with-direct-access-to-dam}
 
-Typically, in-house creative teams or agencies/creative professionals  onboarded  to the internal network have access to the DAM instance, including [!DNL Experience Manager] login. [!DNL Experience Manager] また、ネットワークインフラストラクチャは、外部パーティ（通常はクライアントで働くエージェンシーなどの信頼できる組織）への直接アクセスを、VPNやIPのホワイトリストなどを介してネットワーク経由でアクセスできるように設定できます。 [!DNL Experience Manager]
+Typically, in-house creative teams or agencies/creative professionals  onboarded  to the internal network have access to the DAM instance, including [!DNL Experience Manager] login. [!DNL Experience Manager] また、ネットワークインフラストラクチャは、外部の関係者（通常、クライアントで働く機関などの信頼できる組織）への直接アクセスを、VPNやIPで許可されたリスト経由でネットワーク経由でアクセスできるように設定できます。 [!DNL Experience Manager]
 
 In such cases, Adobe Asset Link or [!DNL Experience Manager] desktop app helps provide easy access to final/approved assets and lets you save creative-ready assets to DAM.
 
@@ -173,7 +173,7 @@ DAM インスタンスへの直接アクセス権を持たない外部のエー�
 * Asset Link が機能しない場合は、デスクトップアプリケーションを使用します。
 * Use [Experience Manager Assets Brand Portal](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html) for distributing assets securely to external partners
 * [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) に基づいた、配布および調達用ポータルのカスタム実装を使用します。
-* Use Access Control set up in [!DNL Experience Manager] and necessary network infrastructure (for example, VPN and IP whitelisting) to give external parties access to a dedicated area of content in your DAM. They can use [!DNL Experience Manager] Web UI to get assets and upload new content into your DAM.
+* Use Access Control set up in [!DNL Experience Manager] and necessary network infrastructure (for example, VPN and IP allowed list) to give external parties access to a dedicated area of content in your DAM. They can use [!DNL Experience Manager] Web UI to get assets and upload new content into your DAM.
 
 ####  内のアセットの更新 [!DNL Experience Manager]{#work-in-progress-on-assets-from-aem}
 
