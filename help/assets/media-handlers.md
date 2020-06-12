@@ -3,7 +3,7 @@ title: Process assets using media handlers and workflows in [!DNL Adobe Experien
 description: メディアハンドラーについて、およびワークフローを使用してデジタルアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 50%
@@ -410,8 +410,8 @@ After you perform the following procedure, when you upload a TXT file into [!DNL
      * * @return the number of words in the string
      * */
     private long wordCount(String text) {
-     // We need to keep track of the last character, if we have two white spaces in a row we dont want to double count
-     // The starting of the document is always a whitespace
+     // We need to keep track of the last character, if we have two whitespaces in a row we don't want to double count.
+     // The starting of the document is always a whitespace.
      boolean prevWhiteSpace = true;
      boolean currentWhiteSpace = true;
      char c; long numwords = 0;
@@ -424,7 +424,7 @@ After you perform the following procedure, when you upload a TXT file into [!DNL
       if (currentWhiteSpace && !prevWhiteSpace) { numwords++; }
       prevWhiteSpace = currentWhiteSpace;
      }
-     // If we do not end with a white space then we need to add one extra word
+     // If we do not end with a whitespace then we need to add one extra word.
      if (!currentWhiteSpace) { numwords++; }
      return numwords;
     }
