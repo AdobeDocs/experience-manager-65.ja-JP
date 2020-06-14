@@ -3,9 +3,9 @@ title: Adobe Experience Manager 6.5以前のService Packリリースノート
 description: Adobe Experience Manager 6.5 Service Pack 3以前に固有のリリースノートです。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
-source-wordcount: '8094'
+source-wordcount: '8093'
 ht-degree: 35%
 
 ---
@@ -295,10 +295,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * ファイル名にプラス文字(`+`)が含まれるアセット(NPR-31547)では、アセットの共有は機能しません。
 
-* アセット管理者*検索レールのデフォルトの検索フォームでの編集が期待どおりに動作しません(NPR-31502)。
-
-<!-- Review: Check if this seemingly stray asterisk is needed there or not.
--->
+* アセットの管理者の検索レールのデフォルトの検索フォームでの編集が期待どおりに機能しません(NPR-31502)。
 
 * アセットの検索にOmnisearch on assets表示ーを使用している場合、サーチクエリが表示されません(NPR-31496)。
 
@@ -312,7 +309,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * すべてのメンバ（ユーザー/グループ）をフォルダーのMembersセクションから削除することはできません。 すべてのユーザーを削除しようとすると、ログインしたユーザーがリストに追加されます(NPR-31171)。
 
-* ファイル名にプラス記号(`+`)が付いたアセットは削除できません(NPR-31162)。
+* ファイル名にプラス記号(`+`)が付いているアセットは削除できません(NPR-31162)。
 
 * 「作成」ドロップダウンメニューは、フォルダーを選択したときにトップメニューに表示され、作成オプションとして「フォルダー」が表示されません(NPR-30877)。
 
