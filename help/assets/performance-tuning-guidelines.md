@@ -4,10 +4,10 @@ description: 構成、ハードウェア、ソフトウェア、ネットワー�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: da2e435f33e8527793e009700c30e60868d196be
 workflow-type: tm+mt
-source-wordcount: '2723'
-ht-degree: 53%
+source-wordcount: '2776'
+ht-degree: 52%
 
 ---
 
@@ -300,6 +300,7 @@ To minimize latency and achieve high throughput through efficient CPU utilizatio
 * Java 8 にデプロイする
 * 最適な JVM パラメーターを設定する。
 * ファイルシステムのDataStoreまたはS3データストアを構成します。
+* サブアセットの生成を無効にします。 この機能が有効な場合、AEMのワークフローは、複数ページのアセット内の各ページに対して個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費し、バージョン管理や追加のワークフロー処理が必要な個々のアセットです。 別々のページが必要ない場合は、サブアセットの生成とページ抽出のアクティビティを無効にします。
 * 一時的なワークフローを有効化する.
 * Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する.
 * Configure [!DNL ImageMagick] to limit resource consumption.
