@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 5の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 7%
@@ -56,9 +56,9 @@ Adobe Experience Manager 6.5のサービスパックは、新機能、お客様�
 
 * 多くのユーザーインターフェイス要素、コントロール、入力フォームフィールドには、キーボードを使用してアクセスできます。
 
-* 一部のユーザインターフェイス要素の色とコントラストの比率が更新され、視覚が限られたユーザや、色の知覚を持たないユーザが、これらのユーザインターフェイス要素を区別できるようになりました。 例えば、星レーティングアイコンの色(アセットのプ [!UICONTROL ロパティの「] 詳細」タブの「レーティング [!UICONTROL 」セクションやカードの] 表示など  )は、適切なコントラストに合わせて変更されます。
+* 一部のユーザインターフェイス要素の色とコントラストが更新され、視覚が限られたユーザや、色の知覚を持たないユーザが、これらのユーザインターフェイス要素を区別できるようになりました。 例えば、星レーティングアイコンの色(アセットのプ [!UICONTROL ロパティの「] 詳細」タブの「レーティング [!UICONTROL 」セクションやカードの] 表示など  )は、適切なコントラストに合わせて変更されます。
 
-   ![コントラスト比が向上した評価アイコン](assets/star-rating-icons.png)
+   ![コントラストが向上した評価アイコン](assets/star-rating-icons.png)
 
 ### 例外処理の強化 {#exception-handling}
 
@@ -146,9 +146,10 @@ The steps to configure [!DNL Experience Manager Assets] with [!DNL Brand Portal]
 
 * フィルターパネル内の混在状態のチェックボックス（ネストされた述語のすべてを選択しない限り、最初のレベルのチェックボックスは選択されず、完全に読み取られます）は、スクリーンリーダーで読み取り可能です。
 
-* 日付と時間の形式に関する制約が日付フィールドのフィールドラベルに設けられ、ユーザーがキーボードを使用して正しい形式で日付を入力できるようになっています。 例えば、`On Time (MM-DD-YYYY HH:mm)` のようになります。MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍事形式の時、mmは分です。
+* 日付と時間の形式に関する制約が日付フィールドのフィールドラベルに設けられ、ユーザーがキーボードを使用して正しい形式で日付を入力できるようになっています。
+例えば、`On Time (MM-DD-YYYY HH:mm)` のようになります。MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍事形式の時、mmは分です。
 
-* スクリーンリーダーは、 `X` 記号を読み上げ、選択したタグと選択したタグの数を削除します。
+* スクリーンリーダーは、選択したタグと選択したタグの数を読み上げ、そのタグを削除する `X` 記号を読み上げるようになりました。
 
 #### Visual Search for [!DNL Adobe Experience Manager Assets] (6.5.2.0) {#visual-search}
 
