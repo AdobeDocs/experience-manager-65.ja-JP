@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: fe81a72a6269060a7ec1283f817920618ba715ef
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1691'
 ht-degree: 55%
 
 ---
@@ -101,6 +101,7 @@ SPAエディターの主要要素に留意し、AEM内でSPAを編集する高�
 >* SPAは常にその表示を担当します。
 >* SPAエディタはSPA自体から切り離されています。
 >* 実稼動（公開）では、SPAエディタは読み込まれません。
+
 >
 
 
@@ -167,8 +168,8 @@ SPAエディターの主要要素に留意し、AEM内でSPAを編集する高�
 
 SPAエディターSDKは、以下の最小バージョンをサポートしています。
 
-* React 16.3
-* Angular 6.x
+* 16.x以降に対応
+* Angular 6.x以上
 
 これらのフレームワークの以前のバージョンは、AEM SPA Editor SDKで動作する可能性がありますが、サポートされていません。
 
