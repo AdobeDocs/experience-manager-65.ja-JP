@@ -6,14 +6,17 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 61%
 
 ---
 
 
 # Dynamic Media の設定 {#setting-up-dynamic-media}
 
-[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Mediaは、一連のプライマリソースアセットを使用して、グローバルで拡張性の高いパフォーマンスに最適化されたネットワークを通じて、リッチコンテンツの複数のバリエーションをリアルタイムで生成し、配信します。
 
 >[!NOTE]
 >
@@ -23,8 +26,8 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 Dynamic Media の管理者には、次のトピックが参考になります。
 
-* [ダイナミックメディア —Scene7モードの設定](config-dms7.md) — Dynamic mediaを初めて使用する場合は、この設定を使用します。
-* [ダイナミックメディアハイブリッドモードの設定](config-dynamic.md) — 既存のダイナミックメディアユーザーがAEMをアップグレードする場合は、この設定を使用します。
+* [Dynamic Mediaの設定 — Scene7モード](config-dms7.md) — 初めてDynamic Mediaを使用する場合は、この設定を使用します。
+* [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md) — AEMをアップグレードする既存のDynamic Mediaの場合は、この設定を使用します。
 * [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
 * [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
@@ -38,4 +41,4 @@ Dynamic Media の管理者には、次のトピックが参考になります。
 >
 >**アップグレードする場合：**
 >
->* AEMの起動と実行が完了すると、アップロードしたアセットはすべて、ダイナミックメディアを自動的に有効になります（システム管理者が明示的に無効にしていない限り）。 アップグレードしたAEMのインスタンスを使用し、ダイナミックメディアに初めてアクセスする場合は、アセットをダイナミックメディア対応にするには、アセットの再処理が必要になる場合があります。
+>* AEM を実行状態にした後にアップロードしたすべてのアセットで、Dynamic Media が自動的に有効になります（システム管理者によって明示的に無効にされた場合を除く）。アップグレードされた AEM インスタンスで Dynamic Media を新たに使用する場合、Dynamic Media を使用できるようアセットを再処理する必要が生じる場合があります。
