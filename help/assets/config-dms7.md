@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f671e00ad94555346190ecb98c905441ad111e18
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '5777'
-ht-degree: 86%
+source-wordcount: '5779'
+ht-degree: 87%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 86%
 
 以下のアーキテクチャ図に Dynamic Media - Scene7 モードの仕組みを示します。
 
-新しいアーキテクチャでは、AEM は、マスターアセットを担当し、アセットの処理および公開のための Dynamic Media と同期します。
+新しいアーキテクチャでは、AEMはプライマリソースアセットを管理し、アセットの処理と公開に関するDynamic Mediaと同期します。
 
-1. マスターアセットが AEM にアップロードされると、Dynamic Media にレプリケートされます。その時点で、Dynamic Media は、ビデオエンコーディングおよび画像の動的バリアントなど、すべてのアセットの処理とレンディションの生成を扱います。 <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
+1. プライマリソースアセットがAEMにアップロードされると、Dynamic Mediaに複製されます。 At that point, Dynamic Media handles all asset processing and rendition generation, such as video encoding and dynamic variants of an image. <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
 1. レンディションが生成されると、AEM は、リモートの Dynamic Media レンディションに安全にアクセスおよびプレビューできます（バイナリは AEM インスタンスに送り返されません）。
 1. コンテンツを公開および承認する準備ができると、Dynamic Media サービスがトリガーされ、コンテンツが配信サーバーにプッシュされて、CDN にコンテンツがキャッシュされます。
 
@@ -39,7 +39,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->ダイナミックメディア — Scene7モードは、AEMオーサーインスタンス専用です。 したがって、AEM発行インスタンス `runmode=dynamicmedia_scene7` ではなく、AEM作成者インスタンス *に対して設定する必要があります* 。
+>Dynamic Media- Scene7モードは、AEM Authorインスタンス専用です。 したがって、AEM Publishインスタンス `runmode=dynamicmedia_scene7` ではなく、AEM Authorインスタンス *に対して設定する必要があります* 。
 
 Dynamic Media を有効にするには、ターミナルウィンドウで次を入力することで、コマンドラインから `dynamicmedia_scene7` 実行モードを使用して AEM を開始する必要があります（例で使用しているポートは 4502）。
 
@@ -67,17 +67,17 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 The installation of feature pack 18912 is *optional*.
 
-機能パック18912では、FTPを使用してアセットを一括取り込むか、AEMでダイナミックメディア — ハイブリッドモードまたはダイナミックメディアクラシックからダイナミックメディア — Scene7モードにアセットを移行できます。 Adobe Professional Services [から入手できます](https://www.adobe.com/jp/experience-cloud/consulting-services.html)。
+機能パック18912では、FTPを使用してアセットを一括インジェストするか、Dynamic Media — ハイブリッドモードまたはDynamic MediaClassicからDynamic Media- AEMのScene7モードにアセットを移行できます。 Adobe Professional Services [から入手できます](https://www.adobe.com/jp/experience-cloud/consulting-services.html)。
 
 詳しくは、一括アセット移行について [機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md) 。
 
-## ダイナミックメディア設定の作成 {#configuring-dynamic-media-cloud-services}
+## Dynamic Media設定の作成 {#configuring-dynamic-media-cloud-services}
 
 **Dynamic Media を設定する前**：Dynamic Media の資格情報を含んだプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)して、パスワードを変更する必要があります。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**ダイナミックメディア設定を作成するには**
+**Dynamic Media設定を作成するには**
 
 1. In AEM, tap the AEM logo to access the global navigation console and tap or click the Tools icon, then tap **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. Dynamic Media 設定ブラウザーページの左側のパネルで、「**[!UICONTROL グローバル]**」をタップし（「**[!UICONTROL グローバル]**」の左側にあるフォルダーアイコンをタップまたは選択しないでください）、次に、「**[!UICONTROL 作成]**」をタップします。
@@ -105,7 +105,7 @@ The installation of feature pack 18912 is *optional*.
    * **[!UICONTROL Dynamic Media 同期モード]**
       * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL デフォルトで無効]** - 選択したフォルダーを Dynamic Media と同期するように明示的にマークしない限り、設定はどのフォルダーにも適用されません。
-選択したフォルダーをダイナミックメディアと同期するようにマークするには、アセットフォルダーを選択し、ツールバーで「 **[!UICONTROL プロパティ]**」をクリックします。 「 **[!UICONTROL 詳細]** 」タブの「 **[!UICONTROL ダイナミックメディア同期モード]** 」ドロップダウンリストで、次の3つのオプションから選択します。 When you are done tap **[!UICONTROL Save]**. *注意： これら3つのオプションは、「すべてのコンテンツを&#x200B;**同期**」を選択した場合は使用できません。*
+選択したフォルダをDynamic Mediaと同期するようにマークするには、アセットフォルダを選択し、ツールバーで「 **[!UICONTROL プロパティ]**」をクリックします。 「 **[!UICONTROL 詳細]** 」タブの「 **[!UICONTROL Dynamic Media同期モード]** 」ドロップダウンリストで、次の3つのオプションから選択します。 When you are done tap **[!UICONTROL Save]**. *注意： これら3つのオプションは、「すべてのコンテンツを&#x200B;**同期**」を選択した場合は使用できません。*
          * **[!UICONTROL 継承]** - フォルダーに明示的な同期値はなく、代わりに、上位フォルダーの 1 つ、またはクラウド設定のデフォルトモードから同期値を継承します。継承された詳細なステータスは、ツールチップの要領で表示されます。
          * **[!UICONTROL サブフォルダーを有効にする]** - このサブツリー内のすべての項目を、Dynamic Media との同期に含めます。フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
          * **[!UICONTROL サブフォルダーに対して無効]** - このサブツリー内のすべての項目を、Dynamic Media との同期から除外します。
@@ -118,7 +118,7 @@ The installation of feature pack 18912 is *optional*.
    >アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」をタップします。
-1. ダイナミックメディアコンテンツを公開する前に、安全にプレビューするには、AEM作成者インスタンスを「許可」して、ダイナミックメディアに接続する必要があります。
+1. Dynamic Mediaのコンテンツが公開される前に、プレビューを安全に行うには、AEM作成者インスタンスを「許可リスト」してDynamic Mediaに接続する必要があります。
 
    * Dynamic Media Classic アカウントにログインします（[http://www.adobe.com/jp/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)）。資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
    * ページ右上付近のナビゲーションバーで、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。
@@ -150,14 +150,14 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 
 セットアップおよび設定タスクには、次のものが含まれます。
 
-* [Image Server の公開設定](#publishing-setup-for-image-server)
+* [Image Server の公開設定 ](#publishing-setup-for-image-server)
 * [アプリケーションの一般設定の指定](#configuring-application-general-settings)
 * [カラーマネジメントの設定](#configuring-color-management)
 * [アセット処理の設定](#configuring-asset-processing)
 * [サポートされていない形式のカスタム MIME タイプの追加](#adding-custom-mime-types-for-unsupported-formats)
 * [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
-#### Image Server の公開設定 {#publishing-setup-for-image-server}
+#### Image Server の公開設定  {#publishing-setup-for-image-server}
 
 公開設定は、アセットがデフォルトで Dynamic Media からどのように配信されるかを決定します。設定が指定されていない場合、Dynamic Media は、公開設定で定義されたデフォルト設定に従ってアセットを配信します。例えば、解像度属性が含まれていない画像を配信するように要求した場合、画像は初期設定のオブジェクト解像度設定で配信されます。
 
@@ -177,7 +177,7 @@ Image Server 画面では、画像を配信するためのデフォルト設定�
 
 アプリケーションの一般設定ページを開くには、Dynamic Media Classic グローバルナビゲーションバーで、**[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をクリックします。
 
-**サーバ — **アカウントプロビジョニングを行うと、ダイナミックメディアは会社に割り当てられたサーバを自動的に提供します。 これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。AEM サポートによって明示的に指示されない限り、サーバー名は変更しないでください。
+**サーバ — **アカウントのプロビジョニングにより、Dynamic Mediaは会社に割り当てられたサーバを自動的に提供します。 これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。AEM サポートによって明示的に指示されない限り、サーバー名は変更しないでください。
 
 **[!UICONTROL 画像を上書き]** - Dynamic Media は、2 つのファイルが同じ名前を持つことを許可しません。各項目の URL ID（ファイル名から拡張子を取り除いた部分）は一意である必要があります。これらのオプションは、置き換えるアセットのアップロード方法、つまり元のアセットを置き換えるか、重複させるかを指定します。重複するアセット名には「-1」が付けられます（例えば、chair.tif は chair-1.tif に変更されます）。これらのオプションは、元のアセットとは別のフォルダーにアップロードされるアセットや、元のアセットと異なるファイル名拡張子（JPG、TIF、PNG など）を持つアセットに影響を与えます。
 
@@ -480,18 +480,18 @@ spin-01-01
 
 ### （オプション）Dynamic Media - Scene7 モードのパフォーマンスの調整 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-ダイナミックメディア — Scene7モードのスムーズな動作を維持するには、次の同期パフォーマンス/スケーラビリティの微調整のヒントを推奨します。
+Dynamic Media- Scene7モードのスムーズな実行を維持するには、次の同期パフォーマンス/スケーラビリティの微調整に関するヒントを推奨します。
 
-* 様々なファイル形式の処理用に、定義済みのジョブパラメーターを更新します。
-* 定義済みのGraniteワークフロー（ビデオアセット）キューワーカースレッドを更新しています。
-* 定義済みのGranite一時ワークフロー（画像および非ビデオアセット）キューワーカースレッドを更新しています。
-* Dynamic Media Classicサーバーへの最大アップロード接続数を更新しています。
+* 様々なファイル形式の処理に対応する定義済みのジョブパラメーターを更新する。
+* 事前定義済みの Granite のワークフロー（ビデオアセット）キューワーカースレッドを更新する。
+* Granite の事前定義済みの一時的なワークフロー（画像および非ビデオアセット）キューワーカースレッドを更新する。
+* Dynamic Media Classic サーバーへの最大アップロード接続数を更新する。
 
-#### 様々なファイル形式の処理用に、定義済みのジョブパラメーターを更新する
+#### 様々なファイル形式の処理に対応する定義済みのジョブパラメーターを更新する
 
-ジョブのパラメータを調整して、ファイルをアップロードする際の処理を高速化できます。 例えば、PSDファイルをアップロードしていて、テンプレートとして処理したくない場合は、レイヤーの抽出を「false」（オフ）に設定できます。 この場合、調整されたジョブパラメータは、と表示され `process=None&createTemplate=false`ます。
+ジョブパラメータを調整して、ファイルアップロード時の処理を高速化できます。例えば、PSD ファイルをアップロードするものの、テンプレートとして処理しない場合は、レイヤー抽出を false（オフ）に設定できます。このような場合、調整されたジョブパラメータは `process=None&createTemplate=false` と表示されます。
 
-PDF、PostscriptおよびPSDファイルには、次の「調整済み」ジョブパラメーターを使用することをお勧めします。
+PDF ファイル、Postscript ファイル、PSD ファイルには、以下の「調整済み」ジョブパラメーターを使用することをお勧めします。
 
 | ファイルタイプ | 推奨されるジョブパラメーター |
 | ---| ---|
@@ -499,7 +499,7 @@ PDF、PostscriptおよびPSDファイルには、次の「調整済み」ジョ�
 | Postscript | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Rasterize&airesolution=150&aicolorspace=Auto&aialpha=false` |
 | PSD | `process=None&layerNaming=Layername&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
 
-これらのパラメーターのいずれかを更新するには、MIMEタイプベースのアセットの [有効化/ダイナミックメディアクラシックアップロードジョブパラメーターのサポートの手順に従います](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+これらのパラメーターのいずれかを更新するには、[MIME タイプベースの Assets／Dynamic Media Classic アップロードジョブパラメーターサポートの有効化](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)の手順に従います。
 
 #### Updating the Granite transient workflow queue {#updating-the-granite-transient-workflow-queue}
 
@@ -545,11 +545,11 @@ Granite のワークフローキューは、一時的でないワークフロー
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
-#### Dynamic Media Classicアップロード接続の更新 {#updating-the-scene-upload-connection}
+#### Dynamic Mediaのクラシックアップロード接続の更新 {#updating-the-scene-upload-connection}
 
 Scene7 アップロード接続の設定は、AEM Assets を Dynamic Media Classic サーバーと同期します。
 
-**Dynamic Media Classicアップロード接続を更新するには**
+**Dynamic Mediaクラシックアップロード接続を更新するには**
 
 1. `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl` に移動します。
 1. 「**[!UICONTROL Number of connections]**」フィールドおよび「**[!UICONTROL Active job timeout]**」フィールドで、必要に応じて数値を変更します。
@@ -568,13 +568,13 @@ Scene7 アップロード接続の設定は、AEM Assets を Dynamic Media Class
 
 In non-Dynamic Media deployments, you replicate *all* assets (both images and video) from your AEM author environment to the AEM publish node. AEMパブリッシュサーバーもアセットを配信するので、このワークフローは必要です。
 
-ただし、ダイナミックメディアデプロイメントでは、アセットはクラウドサービスを介して配信されるので、AEMの発行ノードに同じアセットを複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴うストレージの余分なコストと処理時間を回避します。 サイトページなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
+ただし、Dynamic Mediaのデプロイメントでは、アセットはクラウドサービスを介して配信されるので、AEM発行ノードに同じアセットを複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴うストレージの余分なコストと処理時間を回避します。 サイトページなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
 
 フィルターによって、アセットを AEM パブリッシュノードへのレプリケート対象から&#x200B;**&#x200B;除外することができます。
 
 #### レプリケーションへのデフォルトのアセットフィルターの使用 {#using-default-asset-filters-for-replication}
 
-画像処理やビデオ処理にダイナミックメディアを使用している場合は、そのまま提供する初期設定のフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
+画像処理やビデオ処理にDynamic Mediaを使用する場合は、そのまま提供する初期設定のフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
 
 <table>
  <tbody>
