@@ -8,26 +8,29 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 84%
 
 ---
 
 
 # Dynamic Media の操作 {#working-with-dynamic-media}
 
-[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Mediaは、一連のプライマリソースアセットを使用して、グローバルで拡張性の高いパフォーマンスに最適化されたネットワークを通じて、リッチコンテンツの複数のバリエーションをリアルタイムで生成し、配信します。
 
-Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。Dynamic Media は Adobe Experience Manager デジタルアセット管理（AEM アセット）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
+Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。Dynamic Media は Adobe Experience Manager デジタルアセット管理（AEM Assets）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
 
 >[!NOTE]
 >
->[Adobe Experience Manager および Dynamic Media の操作](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html)にコミュニティの記事があります。
+>[Adobe Experience Manager および Dynamic Media の操作](https://helpx.adobe.com/jp/experience-manager/using/aem_dynamic_media.html)にコミュニティの記事があります。
 
 ## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
 
 Dynamic Media では、公開前のアセットを管理できます。一般的なアセットの操作方法については、[デジタルアセットの操作](managing-assets-touch-ui.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集および公開、プロパティの表示と編集、アセットの検索が含まれます。
 
-ダイナミックメディア専用の機能には、次のものがあります。
+Dynamic Media 限定の機能は次のとおりです。
 
 * [カルーセルバナー](carousel-banners.md)
 * [画像セット](image-sets.md)
@@ -46,19 +49,19 @@ Dynamic Media では、公開前のアセットを管理できます。一般的
 
 >[!NOTE]
 >
->ダイナミックメディアの使用と、ダイナミックメディアクラシックとAEMの統合の違いを理解するには、ダイナミックメディアクラシッ [クとダイナミックメディアの統合を参照してください](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
+>Dynamic Mediaの使用とDynamic MediaClassicとAEMの統合の違いについて詳しくは、 [Dynamic Mediaクラシックの統合とDynamic Mediaの違いを参照してください](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
 
-## ダイナミックメディアを有効にするか、ダイナミックメディアを無効にするか {#dynamic-media-on-versus-dynamic-media-off}
+## Dynamic Media が有効な場合と無効な場合の比較 {#dynamic-media-on-versus-dynamic-media-off}
 
-ダイナミックメディアが有効（オン）になっているかどうかは、次の特性によって判断できます。
+Dynamic Media が有効（オン）になっているかどうかは、次の特徴から判断できます。
 
-* 動的レンディションは、アセットのダウンロード時またはプレビュー時に使用できます。
-* 画像セット、スピンセット、混在メディアセットを使用できます。
+* アセットのダウンロードやプレビューで動的レンディションを使用できる。
+* 画像セット、スピンセット、混在メディアセットを使用できる。
 * PTIFF レンディションが作成されている。
 
 When you click an image asset, the view of the asset is different with Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media). Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
 
-### Dynamic renditions {#dynamic-renditions}
+### 動的レンディション {#dynamic-renditions}
 
 「**[!UICONTROL 動的]**」の下にある画像プリセットやビューアプリセットなどの動的レンディションは、Dynamic Media が有効な場合に使用できます。
 
@@ -70,18 +73,18 @@ When you click an image asset, the view of the asset is different with Dynamic M
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
-### PTIFF renditions {#ptiff-renditions}
+### PTIFF レンディション {#ptiff-renditions}
 
-Dynamic media enabled assets include `pyramid.tiffs`.
+Dynamic Media 対応のアセットには `pyramid.tiffs` が含まれています。
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
 ### アセットのビューの変化 {#asset-views-change}
 
-With Dynamic Media enabled, you can zoom in and out by clicking the `+` and `-` buttons. You can also click/tap to zoom into certain area. Revert brings you to the original version and you can make the image full screen by clicking the diagonal arrows. Dynamic Media enabled looks like this:
+Dynamic Media を有効にすると、「`+`」ボタンをクリックしてズームインし、「`-`」ボタンをクリックしてズームアウトすることができます。クリックまたはタップして、特定の領域にズームインすることもできます。元に戻すアイコンをクリックすると元のバージョンに戻ります。また、斜めの矢印をクリックすると、画像を全画面表示にすることができます。Dynamic Media を有効にした場合の画面は次のようになります。
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
-ダイナミックメディアを無効にした状態で、ズームインおよびズームアウトを行い、元のサイズに戻すことができます。
+Dynamic Media を無効にした場合は、次のようにズームイン、ズームアウトおよび元のサイズに戻す操作が可能です。
 
 ![chlimage_1-362](assets/chlimage_1-362.png)
