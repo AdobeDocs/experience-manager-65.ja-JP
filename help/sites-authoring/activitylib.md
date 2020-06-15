@@ -11,7 +11,10 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d53e72b198db91d368ddddac768d19b88ee29050
+source-git-commit: f62d2d639499c128fd4cafa5f9c39307ae9a607d
+workflow-type: tm+mt
+source-wordcount: '2022'
+ht-degree: 95%
 
 ---
 
@@ -20,9 +23,9 @@ source-git-commit: d53e72b198db91d368ddddac768d19b88ee29050
 
 アクティビティコンソールでは、ブランドのマーケティング[アクティビティ](/help/sites-authoring/personalization.md#activities)を作成、整理、管理できます。次のことができます。
 
-* ブランドの追加
-* ブランドごとのアクティビティの追加と設定
-* アクティビティの管理
+* ブランドの追加。
+* ブランドごとのアクティビティの追加と設定.
+* アクティビティの管理.
 
 >[!NOTE]
 >
@@ -30,7 +33,7 @@ source-git-commit: d53e72b198db91d368ddddac768d19b88ee29050
 
 アクティビティコンソールでは、アクティビティがブランドごとに整理されます。ブランドとフォルダーを使用して、アクティビティの構造を作成できます。アクティビティコンソールに移動するには、「**パーソナライズ機能**」をタップまたはクリックしてから、「**アクティビティ**」をタップまたはクリックします。
 
-Activities are available in Targeting mode for [authoring targeted content](/help/sites-authoring/content-targeting-touch.md), where you can also create activities. ターゲット設定モードで作成したアクティビティは、アクティビティコンソールに表示されます。
+アクティビティはターゲット設定モードで[ターゲットコンテンツのオーサリング](/help/sites-authoring/content-targeting-touch.md)に使用できます。その際には、アクティビティを作成することもできます。ターゲット設定モードで作成したアクティビティは、アクティビティコンソールに表示されます。
 
 アクティビティ名の横には、アクティビティの種類を示す次のラベルが表示されます。
 
@@ -58,7 +61,7 @@ Activities are available in Targeting mode for [authoring targeted content](/hel
 
 マーケティングアクティビティを管理するブランドを作成します。
 
-When you create a brand using the Activities console, it also appears in the [Offers console](/help/sites-authoring/offerlib.md) where you can create offers for the experiences of your activities.
+アクティビティコンソールを使用してブランドを作成すると、そのブランドが[オファーコンソール](/help/sites-authoring/offerlib.md)にも表示されます。オファーコンソールでは、アクティビティのエクスペリエンス用のオファーを作成できます。
 
 1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。「**アクティビティ**」をクリックまたはタップします。
 
@@ -77,16 +80,16 @@ When you create a brand using the Activities console, it also appears in the [Of
 * **ターゲティングエンジン：**&#x200B;ターゲットコンテンツのエンジンとして、「[AEM](/help/sites-authoring/personalization.md#aem)」または「[Adobe Target](/help/sites-authoring/personalization.md#adobe-target)」。
 
 * **Target 設定を選択：**（Adobe Target のみ）このアクティビティが Adobe Target に接続するために使用するクラウド設定。このオプションは、Adobe Target が「ターゲティングエンジン」として選択されている場合にのみ表示されます。
-* **アクティビティタイプ：**アクティビティタイプ — A/Bテストまたはエクスペリエンスのターゲット設定
+* **アクティビティタイプ： **アクティビティタイプ — A/Bテストまたはエクスペリエンスのターゲット設定
 * **目的：**（オプション）アクティビティの説明。
 * **エクスペリエンス：**&#x200B;オーディエンス名と、ターゲットを設定するマーケティングセグメントのマッピング。
-* **** トラフィックの割合：A/Bテストを選択すると、各エクスペリエンスに対するトラフィック量(%)を変更できます。
+* **トラフィックの割合：** A/B テストを選択した場合、各エクスペリエンスに割り当てるトラフィック量を（パーセント単位で）変更できます。
 * **期間：**&#x200B;アクティビティが適用される期間。
 * **優先度：**&#x200B;アクティビティの相対的優先度。複数のアクティビティが同じユーザーセグメントにコンテンツを提供する場合、優先度が高いアクティビティが優先されます。
-* **** 目標指標：ターゲット設定エンジンとして「Adobe Target」を選択した場合は、アクティビティに成功指標を追加できます。 1 つの成功指標が必要です。
+* **目標指標：** Adobe Target をターゲティングエンジンとして選択した場合、成功指標をアクティビティに追加できます。1 つの成功指標が必要です。
 
 >[!NOTE]
-Adobe Target への同期が失敗するので、新しい Adobe Target アクティビティは、**アクティビティ**&#x200B;コンソールではなく、ターゲットコンテンツエディターで&#x200B;******&#x200B;作成する必要があります。
+Adobe Target への同期が失敗するので、新しい Adobe Target アクティビティは、**アクティビティ**&#x200B;コンソールではなく、ターゲットコンテンツエディターで&#x200B;***作成***&#x200B;する必要があります。
 ただし、既存の Adobe Target アクティビティはアクティビティコンソールで編集できます。
 
 アクティビティを追加するには：
@@ -103,10 +106,11 @@ Adobe Target への同期が失敗するので、新しい Adobe Target アク�
 1. 1 つ以上のエクスペリエンスをアクティビティに追加します。「**エクスペリエンスを追加**」をクリックまたはタップします。
 1. AEM ターゲット設定または Adobe Target エクスペリエンスターゲット設定を使用する場合：
 
-   1. 「**オーディエンスを選択**」をクリックまたはタップし、エクスペリエンスのターゲット設定するセグメントを選択します。
+   1. 「**オーディエンスを選択**」をクリックまたはタップして、エクスペリエンスターゲットが設定したセグメントを選択します。
    1. 「**エクスペリエンスを追加**」をクリックまたはタップし、名前を入力し、「**OK**」をクリックまたはタップします。
 
    1. 「**次へ**」をクリックまたはタップします。
+
    Adobe Target A/B テストを使用する場合：
 
    1. オーディエンスボックスの鉛筆アイコンをクリックまたはタップして、オーディエンスを選択します。
@@ -127,7 +131,7 @@ Adobe Target への同期が失敗するので、新しい Adobe Target アク�
    * **指定された日時**：特定の時間。このオプションを選択した場合は、カレンダーアイコンをクリックまたはタップし、日付を選択して、アクティビティを終了する時刻を指定します。
 
 1. アクティビティの優先度を指定するには、スライダーを使用して「**低**」、「**標準**」または「**高**」を選択します。
-1. Adobe Target をターゲティングエンジンとして使用する場合は、このアクティビティを使用して何を測定するかを選択します。See [Configuring the Activity and Setting Goals](/help/sites-authoring/content-targeting-touch.md) for more information on the success metrics available. 目標を少なくとも 1 つ選ぶ必要があります。
+1. Adobe Target をターゲティングエンジンとして使用する場合は、このアクティビティを使用して何を測定するかを選択します。使用可能な成功指標について詳しくは、[アクティビティの設定と目標の設定](/help/sites-authoring/content-targeting-touch.md)を参照してください。目標を少なくとも 1 つ選ぶ必要があります。
 1. 「**保存**」をクリックまたはタップします。
 
    >[!NOTE]
@@ -138,7 +142,7 @@ Adobe Target への同期が失敗するので、新しい Adobe Target アク�
 アクティビティを使用可能にするには、公開する必要があります。逆に、アクティビティを使用不可にするには、非公開にします。
 
 >[!NOTE]
-アクティビティの非公開時、
+アクティビティの公開を取り消す場合、ページを更新しない限り、アクティビティのステータスは変更されません。
 
 アクティビティを公開または非公開にするには：
 
@@ -160,20 +164,21 @@ Adobe Target ターゲット設定エンジンを使用するアクティビテ�
 
 Adobe Target アクティビティ（XT または A/B）のパフォーマンスを表示できます。A/B テストを使用する場合は、成功エクスペリエンスを採用して、これをデフォルトのエクスペリエンスにすることができます。
 
-アクティビティのパフォーマンスを表示し、勝者エクスペリエンスをコンバージョンするには：
+アクティビティのパフォーマンスを表示して成功エクスペリエンスを採用するには：
 
-1. In **Personalization**, click or tap **Activities** to navigate to the **Activities** console.
+1. 「**パーソナライズ機能**」で、「**アクティビティ**」をクリックまたはタップして、**アクティビティ**&#x200B;コンソールに移動します。
 1. アクティビティを表示するブランドをクリックまたはタップします。
-1. Select the activity and click or tap **View Properties** and click the **Reports** tab and select the activity that you want to view performance for/convert winning experiences for. パフォーマンスデータが表示されます。
+1. アクティビティを選択し、「**プロパティを表示**」をクリックまたはタップし、「**レポート**」タブをクリックして、パフォーマンスを表示または成功エクスペリエンスを採用するアクティビティを選択します。パフォーマンスデータが表示されます。
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
-1. Click or tap the **Push winner** link to push that experience as the default experience.
+1. 「**勝者を採用**」リンクをクリックまたはタップして、そのエクスペリエンスをデフォルトエクスペリエンスとして採用します。
 
    勝者を採用すると、次のことがおこなわれます。
 
-   * 現在のアクティビティを無効にします
-   * すべてのページが変更され、ターゲットコンテンツが成功エクスペリエンスの実際のコンテンツで置き換えられます。The content of the winning experience becomes part of the normal page **without** targeting.
+   * 現在のアクティビティが無効になります。
+   * すべてのページが変更され、ターゲットコンテンツが成功エクスペリエンスの実際のコンテンツで置き換えられます。ターゲット設定を&#x200B;**しなくても**、成功エクスペリエンスのコンテンツが標準ページの一部になります。
+
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
    成功エクスペリエンスとは、レポートのコンバージョン率を上昇させるエクスペリエンスです。
@@ -193,7 +198,7 @@ Adobe Target ターゲティングエンジンを使用するアクティビテ�
 アクティビティを同期すると、対応するキャンペーンが Adobe Target 内で次のように作成されます。
 
 * パブリッシュインスタンス上のアクティビティは、対応する Adobe Target キャンペーンと同じ名前を持つ。
-* Activities on the author instance correspond with Target campaigns of the same name with the `_author` suffix.
+* オーサーインスタンス上のアクティビティは、対応する Target キャンペーンと同じ名前で `_author` というサフィックスが付く。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -203,7 +208,7 @@ _author タイプのアクティビティは、アクティビティが変更さ
 
 ## アクティビティの同期のトラブルシューティング {#troubleshooting-activity-synchronization}
 
-When AEM synchronizes an activity with Adobe Target, AEM includes a property of the activity named `thirdPartyId`. このプロパティの値は、AEM リポジトリ内のアクティビティのパスに基づいています。Adobe Target 内で、2 つのキャンペーンが `thirdPartyId` プロパティに同じ値を持つことはできません。したがって、Adobe Target 内の（AB、XT という異なるタイプの）既存キャンペーンが `thirdPartyId` に同じ値を使用している場合は、アクティビティの同期が失敗します。
+AEM では、アクティビティを Adobe Target と同期するときに、`thirdPartyId` というアクティビティのプロパティを含めます。このプロパティの値は、AEM リポジトリ内のアクティビティのパスに基づいています。Adobe Target 内で、2 つのキャンペーンが `thirdPartyId` プロパティに同じ値を持つことはできません。したがって、Adobe Target 内の（AB、XT という異なるタイプの）既存キャンペーンが `thirdPartyId` に同じ値を使用している場合は、アクティビティの同期が失敗します。
 
 この問題は、次の状況で発生する場合があります。
 
@@ -218,7 +223,7 @@ When AEM synchronizes an activity with Adobe Target, AEM includes a property of 
 同期の問題を回避するには、すべてのアクティビティに一意の名前を付けてください。アクティビティの同期が失敗した場合は、同じ名前を使用しているキャンペーンを Adobe Target で削除できます（そのキャンペーンが使用中でない場合）。
 
 >[!NOTE]
-When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. Adobe Target でキャンペーンを削除しても、`thirdPartyId` は削除されません。`thirdPartyId` を異なるタイプ（AB、XT）のキャンペーンに再利用することはできません。また、手動で削除することはできません。この問題を回避するには、各キャンペーンに一意の名前を付けます。したがって、キャンペーン名を別のキャンペーンタイプで再使用することはできません。
+When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. Adobe Target でキャンペーンを削除しても、`thirdPartyId` は削除されません。`thirdPartyId` を異なるタイプ（AB、XT）のキャンペーンに再利用することはできません。また、手動で削除することはできません。この問題を回避するには、各キャンペーンに一意の名前を付けてください。そうすれば、キャンペーン名を異なるキャンペーンタイプで再利用できなくなります。
 同じキャンペーンタイプで同じ名前を使用する場合は、既存のキャンペーンが上書きされます。
 同期中に、「リクエストは失敗しました。`thirdPartyId` は既に存在します」というエラーが表示された場合は、キャンペーン名を変更して再度同期してください。
 
