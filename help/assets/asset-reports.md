@@ -1,45 +1,54 @@
 ---
-title: デジタルアセットに関するレポート
-description: Adobe Experience Manager Assetsに含まれるアセットに関するレポートを理解し、デジタルアセットの使用、アクティビティおよび共有を把握できます。
+title: デジタルアセットの使用および共有に関するレポートです。
+description: デジタルアセットの使用状況、アクティビティ、共有 [!DNL Adobe Experience Manager Assets] を理解するのに役立つ、アセットに関するレポートです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2faf210d4177d6b2e29795b5668f8199816097eb
+source-git-commit: bc08b0039f8be92a7638245b1770c2ad21503f63
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 63%
+source-wordcount: '1013'
+ht-degree: 51%
 
 ---
 
 
 # アセットレポート {#asset-reports}
 
-アセットのレポートは、Adobe Experience Manager Assetsデプロイメントのユーティリティを評価するための主要なツールです。 アセットを使用すると、デジタルアセットに関する様々なレポートを生成できます。 レポートでは、システムの使用状況、ユーザーによるアセットの操作方法、ダウンロードされたアセットや共有されているアセットなどに関する有用な情報が提供されます。
+アセットレポートを使用すると、 [!DNL Adobe Experience Manager Assets] 導入のユーティリティを評価できます。 を使用 [!DNL Assets]すると、デジタルアセットに関する様々なレポートを生成できます。 レポートでは、システムの使用状況、ユーザーによるアセットの操作方法、ダウンロードされたアセットや共有されているアセットなどに関する有用な情報が提供されます。
 
-レポートの情報を使用して重要な成功指標を導き出し、企業やお客様における Assets の採用状況を測定することができます。
+Use the information in the reports to derive key success metrics to measure the adoption of [!DNL Assets] within your enterprise and by customers.
 
-アセットレポートフレームワークは、Slingジョブを使用して、正しい順序でレポート要求を非同期に処理します。 このフレームワークは大規模なリポジトリに合わせて拡張することができます。レポートの非同期処理により、レポートを生成する際の効率性とスピードが向上します。
+The [!DNL Assets] reporting framework uses [!DNL Sling] jobs to asynchronously process report requests in an ordered manner. このフレームワークは大規模なリポジトリに合わせて拡張することができます。レポートの非同期処理により、レポートを生成する際の効率性とスピードが向上します。
 
 直観的なレポート管理インターフェイスに備わっているきめ細かなオプションやコントロールを使用すれば、アーカイブされたレポートにアクセスしたり、レポートの実行ステータス（成功、失敗および待機中）を表示したりすることができます。
 
 レポートが生成されると、電子メール（オプション）とインボックスで通知を受け取ります。それまでに生成されたすべてのレポートが示されるレポートリストページで、レポートの表示、ダウンロードまたは削除をおこなうことができます。
 
+## 前提条件 {#prerequisite-for-reporting}
+
+レポートを生成するには、次の事項を確認します。
+
+* ツール [!UICONTROL /] 操作 **[!UICONTROL /Webコンソールから「]** Day CQ DAMイベントレコーダー **[!UICONTROL 」サービスを有効にします]******。
+* レポートするアクティビティまたはイベントを選択します。 例えば、ダウンロードしたアセットに関するレポートを生成するには、「 [!UICONTROL ダウンロード済みアセット(DOWNLOADED)]」を選択します。
+
+![Webコンソールでアセットレポートを有効にする](assets/reports-config-day-cq-dam-event-recorder.png)
+
 ## レポートの生成 {#generate-reports}
 
-Experience Manager Assetsは、次の標準レポートを自動的に生成します。
+[!DNL Experience Manager Assets] は、次の標準レポートを生成します。
 
 * アップロード
 * ダウンロード
 * 有効期限
 * 変更
 * 公開
-* Brand Portal 公開
+* [!DNL Brand Portal] publish
 * ディスク使用量
 * ファイル
 * リンク共有
 
 [!DNL Adobe Experience Manager] 管理者は、これらのレポートを手軽に生成し、実装に合わせて容易にカスタマイズできます。レポートを生成するには、以下の手順に従います。
 
-1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートをクリックします]**。
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートをクリックします]**。
 
 ![アセットレポートに移動するツールページ](assets/AssetsReportNavigation.png)
 
@@ -47,10 +56,6 @@ Experience Manager Assetsは、次の標準レポートを自動的に生成し�
 1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
 
    ![レポートタイプの選択](assets/choose_report.png)
-
-   >[!NOTE]
-   >
-   >「**[!UICONTROL ダウンロードされたアセット]**」レポートを生成する前に、Asset Download サービスが有効になっていることを確認してください。Web コンソール（`https://[aem_server]:[port]/system/console/configMgr`）で、「**[!UICONTROL Day CQ DAM Event Recorder]**」設定を開き、「イベントタイプ」で「**[!UICONTROL ダウンロードされたアセット（ダウンロード済み）]**」オプションを選択します（まだ選択されていない場合）。
 
    >[!NOTE]
    >
@@ -80,7 +85,7 @@ Experience Manager Assetsは、次の標準レポートを自動的に生成し�
 
    ![ファイルレポートの詳細ページ](assets/files_report.png)
 
-   「**[!UICONTROL リンク共有]**」レポートには、 Assets 内から外部ユーザーと共有されているアセットへの URL が表示されます。アセットを共有したユーザーの電子メール ID、アセットを共有しているユーザーの電子メール ID、共有の日付、リンクの有効期限なども表示されます。列をカスタマイズすることはできません。
+   The **[!UICONTROL Link Share]** report displays URLs to assets that are shared with external users from within [!DNL Assets]. アセットを共有したユーザーの電子メール ID、アセットを共有しているユーザーの電子メール ID、共有の日付、リンクの有効期限なども表示されます。列をカスタマイズすることはできません。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
@@ -92,12 +97,12 @@ Experience Manager Assetsは、次の標準レポートを自動的に生成し�
 
    ![レポート列の選択または選択解除](assets/configure_columns.png)
 
-   カスタムの列名やプロパティパスを表示するには、CRX の jcr:content ノード下のアセットバイナリのプロパティを設定します。または、プロパティパスピッカーを使用してパスを追加します。
+   To display a custom column name or property path, configure the properties for the asset binary under the `jcr:content` node in CRX. または、プロパティパスピッカーを使用してパスを追加します。
 
    ![レポート列の選択または選択解除](assets/custom_columns.png)
 
 1. Click **[!UICONTROL Create]** from the toolbar. レポートの生成が開始されたことを通知するメッセージが表示されます。
-1. アセットレポートページのレポート生成ステータスは、レポートジョブの現在の状態（「成功」、「失敗」、「待機中」、「スケジュール済み」など）に基づきます。通知インボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。 Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
+1. On the [!UICONTROL Asset Reports] page, the report generation status is based on the current state of the report job, for example [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], or [!UICONTROL Scheduled]. 通知インボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。 Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
 
    ![生成されたレポート](assets/report_page.png)
 
@@ -112,12 +117,12 @@ Experience Manager Assetsは、次の標準レポートを自動的に生成し�
 * 有効期限
 * 変更
 * 公開
-* Brand Portal 公開
+* [!DNL Brand Portal] publish
 * ファイル
 
 これらのレポートにカスタム列を追加するには、次の手順に従います。
 
-1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートをクリックします]**。
+1. で、 [!DNL Manager interface]ツール **[!UICONTROL /]** アセット **[!UICONTROL /]** レポートをクリックします ****。
 1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
 
 1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
