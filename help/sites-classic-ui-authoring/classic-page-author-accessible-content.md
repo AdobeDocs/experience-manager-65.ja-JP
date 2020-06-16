@@ -11,7 +11,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 translation-type: tm+mt
-source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
 source-wordcount: '9241'
 ht-degree: 91%
@@ -29,7 +29,7 @@ ht-degree: 91%
 >
 >* [AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)
 >* [WCAG 2.1 クイックガイド](/help/managing/qg-wcag.md)
->* [アクセス可能なコンテンツ（WCAG 2.1 適合）の作成 ](/help/sites-authoring/creating-accessible-content.md)
+>* [アクセシブルなコンテンツ（WCAG 2.1 適合）の作成 ](/help/sites-authoring/creating-accessible-content.md)
 
 
 WCAG 2.0 は、障碍のあるユーザーが Web コンテンツにアクセスして利用できるようにするための、テクノロジーから独立した一連のガイドラインおよび達成基準で構成されます。
@@ -40,6 +40,7 @@ WCAG 2.0 は、障碍のあるユーザーが Web コンテンツにアクセス
 >
 >* [WCAG 2.0 のクイックガイド](/help/managing/qg-wcag.md)
 >* [アクセス可能なコンテンツを生成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md)
+
 >
 
 
@@ -64,13 +65,14 @@ WCAG 2.0 は 3 つの適合レベル（レベル A（最低）、レベル AA、
 >
 >* [WCAG 2.0 のガイドライン](https://www.w3.org/TR/WCAG20/#guidelines)用の省略名。
 >* WCAG の Web サイトとの相互参照を目的として [WCAG 2.0 のガイドライン](https://www.w3.org/TR/WCAG20/#guidelines)で使用されている番号。
+
 >
 
 
 
 ## 原則 1：知覚可能 {#principle-perceivable}
 
-[原則 1: 知覚可能 - 情報およびユーザーインターフェイスコンポーネントは、ユーザーが知覚できる方法でユーザーに提示可能でなければならない。](https://www.w3.org/TR/WCAG20/#perceivable)
+[原則 1：知覚可能 - 情報およびユーザーインターフェイスコンポーネントは、ユーザーが知覚できる方法でユーザーに提示可能でなければならない。](https://www.w3.org/TR/WCAG20/#perceivable)
 
 ### 代替テキスト（1.1）{#text-alternatives}
 
@@ -94,7 +96,7 @@ Web ページ上の情報はテキスト以外の様々な形式（写真、ビ�
 
 >[!NOTE]
 >
->**カルーセル**&#x200B;や&#x200B;**スライドショー**&#x200B;など、あらかじめ用意されている一部のコンポーネントには、代替テキストの説明を画像に追加する手段が用意されていません。When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>**カルーセル**&#x200B;や&#x200B;**スライドショー**&#x200B;など、あらかじめ用意されている一部のコンポーネントには、代替テキストの説明を画像に追加する手段が用意されていません。When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 「**代替テキスト**」フィールドは、**画像**&#x200B;コンポーネントダイアログの「**詳細**」画像プロパティタブに表示されます。
 
@@ -269,7 +271,7 @@ AEM では、「**代替テキスト**」がデフォルトで画像に追加さ
 
 キャプションは、次のいずれかの状態に設定できます。
 
-* オープン：映像再生時に常に表示
+* オープン：映像再生時に常に表示）
 * クローズド：ユーザーがキャプションのオン、オフを切り替え可能
 
 可能な場合は、クローズドキャプションを使用して、キャプションの表示、非表示をユーザーが選択できるようにしてください。
@@ -338,7 +340,7 @@ AEM では、「**代替テキスト**」がデフォルトで画像に追加さ
 * [WebAIM：Real Time Captioning](https://www.webaim.org/techniques/captions/realtime.php)
 * [AccessIT （University of Washington）：Can captions be generated automatically using speech recognition?](https://www.washington.edu/accessit/articles?1209)
 
-#### 詳細情報 - キャプション（ライブ）（1.2.4） {#more-information-captions-live}
+#### 詳細情報 - キャプション（ライブ）（1.2.4）{#more-information-captions-live}
 
 * [達成基準 1.2.4 について](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-real-time-captions.html)
 * [達成基準 1.2.4 の達成方法](https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-real-time-captions)
@@ -372,7 +374,7 @@ AEM では、「**代替テキスト**」がデフォルトで画像に追加さ
 
 * 音声のみ、または大きいテキストや高いコントラストなど、代替の視覚表示を使用する可能性のあるユーザー
 
-### 情報および関係性（1.3.1）    {#info-and-relationships}
+### 情報および関係性（1.3.1）     {#info-and-relationships}
 
 * 達成基準 1.3.1
 * レベル A
@@ -408,12 +410,14 @@ Web ページに適切な構造が指定されていることを確認するに�
 
    * 強調するテキストをハイライト表示します。
    * Click on the **B** icon (for &lt;strong>) or the **I** icon (for &lt;em>) shown within the **Properties** panel (make sure that HTML is selected).
+
    >[!NOTE]
    >
    >AEM の標準的なインストールに含まれる RTE は、次のように設定されています。
    >
    >* &lt;strong> の代わりに &lt;b> を使用
    * &lt;em> の代わりに &lt;i> を使用
+
    それぞれ実質的には同じですが、好ましいのは、意味的に正しい HTML である &lt;strong> と &lt;em> です。開発チームがプロジェクトインスタンスを作成する際に、&lt;b> と &lt;i> ではなく &lt;strong> と &lt;em> を使用するように RTE を設定できます。
 
 * **リストの使用**：HTML を使用して、3 つの異なるタイプのリストを指定できます。
@@ -438,6 +442,7 @@ Web ページに適切な構造が指定されていることを確認するに�
    * テーブルの行ごとに 1 つの `<tr>` 要素
    * 行および列の見出しごとに 1 つの `<th>` 要素
    * データセルごとに 1 つの `<td>` 要素
+
    >[!NOTE]
    テーブルは、**テーブル**&#x200B;コンポーネントで実現する必要があります。テーブルはテキストコンポーネントで作成できますが、これはお勧めしません。
 
@@ -446,13 +451,15 @@ Web ページに適切な構造が指定されていることを確認するに�
    * `<caption>` 要素は、テーブルの表示可能なキャプションを提供する際に使用します。キャプションは、デフォルトではテーブルの上に中央配置で表示されますが、CSS を使用して適切に配置できます。キャプションはプログラムによってテーブルに関連付けられるので、コンテンツを紹介する際に役立ちます。
    * `<h3 class="summary">` 要素は、目の見えるユーザーに見えているものの概要を提示することで、視覚障碍のあるユーザーがテーブル内の情報をより簡単に理解できるように支援します。これは、複雑な、型どおりでないテーブルレイアウトが使用されている場合に特に便利です（この属性はブラウザーには表示されません。支援テクノロジーに読み上げられるだけです）。
    * `<th>` 要素の `scope` 属性は、セルが特定の行のヘッダーを表すか、特定の列のヘッダーを表すかを示すために使用します。同様の方法として、データセルが 1 つ以上のヘッダーに関連付けられている複雑なテーブルで、header 属性と id 属性を使用することがあります。
+
    >[!NOTE]
-   By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+   By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
    **テーブル**&#x200B;を追加するときは、ダイアログを使用して&#x200B;**テーブルのプロパティ**&#x200B;を設定できます。
 
    * 適切な&#x200B;**キャプション**。
    * 理想としては、「**幅**」、「**高さ**」、「**ボーダー**」、「**セル内の余白**」、「**セルの間隔**」のデフォルト値をすべて削除します。これらのプロパティはグローバルスタイルシートで設定できるからです。
+
    ![テーブルのプロパティダイアログ。](assets/chlimage_1-20a.png)
 
    You can then use the **Cell properties** to choose whether the cell is a data or header cell and, if a header cell, whether it relates to a row or column or both:
@@ -540,7 +547,7 @@ Web ページに適切な構造が指定されていることを確認するに�
 
 [ガイドライン 1.4 判別可能：コンテンツを、利用者にとって見やすく、聞きやすいものにします。これには、前景と背景を区別することも含む。](https://www.w3.org/TR/WCAG20/#visual-audio-contrast)
 
-### 色の使用（1.4.1）    {#use-of-color}
+### 色の使用（1.4.1）       {#use-of-color}
 
 * 達成基準 1.4.1
 * レベル A
@@ -567,7 +574,7 @@ Web ページに適切な構造が指定されていることを確認するに�
  <tbody>
   <tr>
    <td><p><strong>パフォーマンス</strong></p> </td>
-   <td><p><strong>利用可能場所</strong></p> </td>
+   <td><p><strong>入手方法</strong></p> </td>
   </tr>
   <tr>
    <td><p><sup>3 月 16 日（火）</sup></p> </td>
@@ -592,7 +599,7 @@ Web ページに適切な構造が指定されていることを確認するに�
 * [達成基準 1.4.1 の達成方法](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
 * [3:1 のコントラスト比を満たすためのガイダンス（「Web に安全な」色のリストを含む）](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
 
-### コントラスト（最低限）（1.4.3） {#contrast-minimum}
+### コントラスト（最低限）（1.4.3）{#contrast-minimum}
 
 * 達成基準 1.4.3
 * レベル AA
@@ -631,7 +638,7 @@ Web ページに適切な構造が指定されていることを確認するに�
 * [達成基準 1.4.3 について](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 * [達成基準 1.4.3 の達成方法](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast)
 
-### 文字画像（1.4.5） {#images-of-text}
+### 文字画像（1.4.5）{#images-of-text}
 
 * 達成基準 1.4.5
 * レベル AA
@@ -672,7 +679,7 @@ Web ページに適切な構造が指定されていることを確認するに�
 注意点は次のとおりです。
 
 1. コンテンツの明滅や閃光に関連する要件については、[発作の防止：発作を引き起こすようなコンテンツを設計しないこと（2.3）](#seizures)を参照してください。
-1. この達成基準を満たさないコンテンツがある場合は、ユーザーがページ全体を使用できない場合があるので、Web ページ上のすべてのコンテンツ（他の達成基準を満たすために使用されているかどうかにかかわらず）が、この達成基準を満たす必要があります。[「Conformance Requirements」の「5. Non-Interference」](https://www.w3.org/TR/WCAG20/#cc5)を参照してください。
+1. この達成基準を満たさないコンテンツがある場合は、ユーザーがページ全体を使用できない場合があるので、Web ページ上のすべてのコンテンツ（他の達成基準を満たすために使用されているかどうかにかかわらず）が、この達成基準を満たす必要があります。[適合要件の「5. 非干渉」](https://www.w3.org/TR/WCAG20/#cc5)を参照してください。
 1. ソフトウェアによって定期的に更新されるコンテンツや、ユーザーエージェントにストリーミングされるコンテンツでは、一時停止してから再開されるまでの間に生成または受信された情報を保持したり停止したりする必要はありません。これは技術的に不可能な場合があり、多くの場合に誤解を招く可能性があるからです。
 1. プリロード段階または同様の状況の一環として発生するアニメーションがある場合に、すべてのユーザーに対してその段階中はインタラクションが発生できず、進捗を示さないことによってユーザーが混乱したり、コンテンツがフリーズまたは破損していると考える可能性がある場合は、そのアニメーションを必須と見なすことができます。
 
@@ -699,14 +706,14 @@ Web ページに適切な構造が指定されていることを確認するに�
 
 [ガイドライン 2.3 発作の防止：発作を引き起こすようなコンテンツを設計しないこと。](https://www.w3.org/TR/WCAG20/#seizure)
 
-### 3 回の閃光、またはしきい値以下（2.3.1） {#three-flashes-or-below-threshold}
+### 3 回の閃光、またはしきい値以下（2.3.1）{#three-flashes-or-below-threshold}
 
 * 達成基準 2.3.1
 * レベル A
 * 3 回の閃光、またはしきい値以下：1 秒間の閃光回数が 3 回を超えるものが Web ページに含まれていない。または、閃光が一般閃光しきい値および赤色閃光しきい値を下回っている。
 
 >[!NOTE]
-この達成基準を満たさないコンテンツがある場合は、ユーザーがページ全体を使用できない場合があるので、Web ページ上のすべてのコンテンツ（他の達成基準を満たすために使用されているかどうかにかかわらず）が、この達成基準を満たす必要があります。[「Conformance Requirements」の「5. Non-Interference」](https://www.w3.org/TR/WCAG20/#cc5)を参照してください。
+この達成基準を満たさないコンテンツがある場合は、ユーザーがページ全体を使用できない場合があるので、Web ページ上のすべてのコンテンツ（他の達成基準を満たすために使用されているかどうかにかかわらず）が、この達成基準を満たす必要があります。[適合要件の「5. 非干渉」](https://www.w3.org/TR/WCAG20/#cc5)を参照してください。
 
 #### 目的 - 3 回の閃光、またはしきい値以下（2.3.1）{#purpose-three-flashes-or-below-threshold}
 
@@ -809,7 +816,7 @@ John Smith’s publications
 
 * [達成基準 2.4.4 について](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 * [達成基準 2.4.4 の達成方法](https://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-refs)
-* [C7: Using CSS to hide a portion of the link text](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C7)
+* [C7：CSS を使用して、リンクテキストの一部を非表示にする](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C7)
 
 ## 原則 3：理解可能 {#principle-understandable}
 
@@ -849,7 +856,7 @@ AEM では、ページのデフォルト言語は、ページを作成する際�
 * [達成基準 3.1.1 の達成方法](https://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-doc-lang-id)
 * コードは ISO 639-1 に基づいています。各言語の詳細なコードリストについては、[W3 Schools サイト](https://www.w3schools.com/tags/ref_language_codes.asp)を参照してください。
 
-### 一部分の言語（3.1.2）    {#language-of-parts}
+### 一部分の言語（3.1.2）       {#language-of-parts}
 
 * 達成基準 3.1.2
 * レベル AA
@@ -887,7 +894,7 @@ blockquote は、標準のインスタンスではサポートされていませ
 >[!NOTE]
 様々な言語の名前や都市名を含める場合や、デフォルトの言語で一般的になった外来語やフレーズ（英語の *schadenfreude* など）を使用する場合は、この達成基準に従う必要はありません。
 
-span 要素を適切な言語で追加するには、RTE のソース編集モードで、上記の内容になるように HTML マークアップを手動で編集します。Alternatively the `lang` attribute can be included in the RTE by a system administrator (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+span 要素を適切な言語で追加するには、RTE のソース編集モードで、上記の内容になるように HTML マークアップを手動で編集します。Alternatively the `lang` attribute can be included in the RTE by a system administrator (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### 詳細情報 - 一部分の言語（3.1.2）{#more-information-language-of-parts}
 
@@ -898,7 +905,7 @@ span 要素を適切な言語で追加するには、RTE のソース編集モ�
 
 [ガイドライン 3.3 入力支援：利用者の間違いを防ぎ、修正を支援すること。](https://www.w3.org/TR/WCAG20/#minimize-error)
 
-### ラベルまたは説明（3.3.2） {#labels-or-instructions}
+### ラベルまたは説明（3.3.2）{#labels-or-instructions}
 
 * 達成基準 3.3.2
 * レベル A
@@ -928,7 +935,7 @@ AEM では、「**テキストフィールド**」のようなフォームコン
 
 ![ラジオグループに項目を追加。グループタイトルは「Contact me by」で、「タイトル」フィールドで定義。](assets/chlimage_1-24a.png)
 
-ただし、グループタイトルとラジオボタン自体との間には、プログラム的な関連付けはありません。テンプレートエディターでは、必要な `fieldset` タグと `legend` タグでタイトルを囲んで、この関連付けを作成する必要があります。この処理は、ページのソースコードを編集することによってのみ可能です。また、システム管理者がこれらの要素のサポートを追加して、**フィールドのプロパティ**&#x200B;ダイアログに表示させることもできます（[追加の HTML 要素および属性のサポートの追加](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)を参照）。
+ただし、グループタイトルとラジオボタン自体との間には、プログラム的な関連付けはありません。テンプレートエディターでは、必要な `fieldset` タグと `legend` タグでタイトルを囲んで、この関連付けを作成する必要があります。この処理は、ページのソースコードを編集することによってのみ可能です。また、システム管理者がこれらの要素のサポートを追加して、**フィールドのプロパティ**&#x200B;ダイアログに表示させることもできます（[追加の HTML 要素および属性のサポートの追加](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)を参照）。
 
 #### フォームに関するその他の考慮事項 {#additional-considerations-for-forms}
 
