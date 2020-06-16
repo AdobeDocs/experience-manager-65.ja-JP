@@ -1,29 +1,18 @@
 ---
 title: 装飾タグ
-seo-title: 装飾タグ
 description: Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。AEM は、開発者向けに、含まれているコンポーネントをラップする装飾タグを制御する明確でシンプルなロジックを提供します。
-seo-description: Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。AEM は、開発者向けに、含まれているコンポーネントをラップする装飾タグを制御する明確でシンプルなロジックを提供します。
-uuid: db796a22-b053-48dd-a50c-354dead7e8ec
-contentOwner: user
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: components
-content-type: reference
-discoiquuid: 8cb9fd6e-5e1f-43cd-8121-b490dee8c2be
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: be1c0e21216b1014a36f88d13557f6e1d7a87c0a
+workflow-type: tm+mt
+source-wordcount: '878'
+ht-degree: 72%
 
 ---
 
 
 # 装飾タグ{#decoration-tag}
 
->[!NOTE]
->
->この記事に記載されている装飾タグ動作およびオプションは、[AEM 6.3 CFP1](https://helpx.adobe.com/experience-manager/release-notes--aem-6-3-cumulative-fix-pack.html) に基づいています。
->
->CFP1 より前の 6.3 の装飾タグの動作は、AEM 6.2 の動作と同じです。
-
-Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。これは主に2つの目的を果たします。
+Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。これは主に次の2つの目的を果たします。
 
 * コンポーネントは、HTML 要素でラップされている場合に、編集のみできます。
 * ラッピング要素は、次を提供する HTML クラスを適用するために使用されます。
@@ -48,12 +37,12 @@ AEM は、開発者向けに、含まれているコンポーネントをラッ�
 
 次のプロパティおよびノードをコンポーネントに適用して、装飾タグの動作を制御できます。
 
-* **`cq:noDecoration {boolean}`**:このプロパティをコンポーネントに追加でき、true値を指定すると、AEMがコンポーネント上にラッパー要素を生成しなくなります。
+* **`cq:noDecoration {boolean}`:**このプロパティをコンポーネントに追加すると、true値に設定すると、AEMがコンポーネント上にラッパー要素を生成しなくなります。
 
 * **`cq:htmlTag`ノード：**このノードは、コンポーネントに追加でき、次のプロパティを持つことができます。
 
-   * **`cq:tagName {String}`**:これは、デフォルトのDIV要素の代わりにコンポーネントのラッピングに使用するカスタムHTMLタグを指定する場合に使用できます。
-   * **`class {String}`**:これは、ラッパーに追加するcssクラス名を指定するために使用できます。
+   * **`cq:tagName {String}`:**これは、デフォルトのDIV要素の代わりにコンポーネントのラップに使用するカスタムHTMLタグを指定する場合に使用できます。
+   * **`class {String}`:**これは、ラッパに追加するcssクラス名を指定するために使用できます。
    * 他のプロパティ名は、提供されたのと同じ String 値の HTML 属性として追加されます。
 
 ## スクリプトの制御 {#script-controls}
@@ -74,7 +63,7 @@ The wrapper behavior does differ however depending on if [HTL](/help/sites-devel
 
 HTL スクリプトおよびその関連ロジックからラッパータグの動作を完全に制御できます。
 
-For further information about developing in HTL see the [HTL documentation](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html).
+For further information about developing in HTL see the [HTL documentation](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html).
 
 #### デシジョンツリー {#decision-tree}
 
@@ -118,7 +107,7 @@ For further information about developing in HTL see the [HTL documentation](http
 
 **`Hello World!`**
 
-例えば、イメージを表示するコアイメージコンポーネントを含むコンポーネントを例に挙げます。通常は、そのコンポーネントが持つすべてのプロパティを表すMapオブジェクトに、仮想子コンポーネントをデータ密接に渡して渡す、合成リソースを使用します。
+例えば、イメージを表示するコアイメージコンポーネントを含むコンポーネントを例に挙げます。通常は、合成リソースを使用してイメージを表示します。これは、コンポーネントに含まれるすべてのプロパティを表すMapオブジェクトに、データ機密の子コンポーネントを渡します。
 
 #### 使用例 2：編集可能なコンポーネントを含める {#use-case-include-an-editable-component}
 
@@ -145,7 +134,7 @@ For further information about developing in HTL see the [HTL documentation](http
 
 `two.html: Hello World!`
 
-結果の出 `/content/test.html`力：
+結果の出力 `/content/test.html`:
 
 **`<aside class="child">Hello World!</aside>`**
 
