@@ -9,14 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d3dbf4cf522441561d6ac6eeeff0e63e7bbb5e38
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 70%
 
 ---
 
 
 # リッチテキストエディターを使用したコンテンツのオーサリング {#use-rich-text-editor-to-author-content}
 
-リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。以下を含む、様々なコンポーネントの基礎となります。
+リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。様々なコンポーネントの基礎となります。、次を含みます。
 
 * テキスト
 * テキスト画像
@@ -24,7 +27,7 @@ source-git-commit: d3dbf4cf522441561d6ac6eeeff0e63e7bbb5e38
 
 ## インプレース編集 {#in-place-editing}
 
-Selecting a text-based component with a single tap or click will reveal the [component toolbar](/help/sites-authoring/editing-content.md#editmovecopypastedeletetouchoptimizedui) as with any component.
+シングルタップまたはクリックでテキストベースのコンポーネントを選択すると、あらゆるコンポーネントと同様に、[コンポーネントツールバー](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)が表示されます。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -34,8 +37,8 @@ Selecting a text-based component with a single tap or click will reveal the [com
 
 このツールバーには、次のオプションがあります。
 
-* **形式**:太字、斜体、下線を設定できます。
-* **リスト**:これにより、箇条書きリストや番号付きリストを作成したり、インデントを設定したりできます。
+* **フォーマット**：太字、斜体および下線を設定できます。
+* **リスト**：箇条書きリストまたは番号付きリストを作成したり、インデントを設定したりすることができます。
 * **ハイパーリンク**
 * **リンク解除**
 * **フルスクリーン**
@@ -44,15 +47,15 @@ Selecting a text-based component with a single tap or click will reveal the [com
 
 ## フルスクリーン編集 {#full-screen-editing}
 
-For text-based components, tapping the full screen mode from the [toolbar](#componenttoolbar) ![](do-not-localize/screen_shot_2018-03-21at163236.png) opens the rich text editor and hides the rest of the page content.
+For text-based components, tapping the full-screen mode from the toolbar ![](do-not-localize/screen_shot_2018-03-21at163236.png) opens the rich text editor and hides the rest of the page content.
 
-フルスクリーンモードでは、オーサリングに使用できる設定済みのオプションがすべて表示されます。 使用可能なオプションは、 [設定によって異なります](/help/sites-administering/rich-text-editor.md)。
+フルスクリーンモードでは、オーサリングに使用できる設定済みのすべてのオプションが表示されます。 The availability is options [depends on the configuration](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
 その他のリッチテキストエディターオプションを次に示します。
 
-* **アンカー**:後でリンク/参照できるテキストにアンカーを作成します。
+* **アンカー**：テキストにアンカーを作成し、後でそのアンカーへのリンクや参照を設定できます。
 * **テキストを左揃え**
 * **テキストを中央揃え**
 * **テキストを右揃え**
@@ -63,4 +66,4 @@ For text-based components, tapping the full screen mode from the [toolbar](#comp
 
 >[!NOTE]
 >
->Microsoft wordからRTEにネストされたリストをコピーすると、結果が一貫せず、RTEにテキストを貼り付けた後に手動で調整する必要がある場合があります。
+>ネストされたリストをMicrosoft WordからRTEにコピーすると、結果が一貫しなくなり、RTE内でテキストを貼り付けた後に手動で調整する必要が生じる場合があります。
