@@ -3,10 +3,10 @@ title: デジタルアセットのダウンロード元 [!DNL Adobe Experience M
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 527b2f50efac606a0a696c8f56b0d725f79cd692
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 57%
+source-wordcount: '796'
+ht-degree: 41%
 
 ---
 
@@ -19,27 +19,32 @@ ht-degree: 57%
 >
 >電子メールの受信者は、電子メールメッセージに含まれる ZIP ダウンロードリンクにアクセスするためには、`dam-users` グループのメンバーである必要があります。アセットをダウンロードするためには、アセットのダウンロードを起動するワークフローを開始する権限が必要です。
 
-To download assets, navigate to an asset, select the asset, and click **[!UICONTROL Download]** from the toolbar. 表示されるダイアログで、ダウンロードオプションを指定します。
-
 画像セット、スピンセット、混在メディアセット、カルーセルセットの各アセットタイプはダウンロードできません。
 
-![Experience Manager Assetsからアセットをダウンロードする場合に使用できるオプション](assets/asset_download_dialog.png)
+**アセットをダウンロードするには**
 
-*図： からアセットをダウンロードする場合に使用できるオプション[!DNL Experience Manager Assets]です。*
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
+1. On the Navigation page, tap **[!UICONTROL Assets > Files]**.
+1. ダウンロードするアセットを含むフォルダーに移動します。
+1. フォルダーを選択するか、フォルダー内の1つ以上のアセットを選択します。
+1. On the toolbar, tap **[!UICONTROL Download]**.
 
-使用できる書き出しオプションとダウンロードオプションは次のとおりです。 動的レンディションは、提供するものに固有のもの [!DNL Dynamic Media] です。 このオプションを使用すると、選択したアセットに加えて、リアルタイムで新しいレンディションを生成できます。 このオプションは、有効にしている場合にのみ使用でき [!DNL Dynamic Media] ます。
+   ![Experience Managerアセットからアセットをダウンロードする場合に使用できるオプション](/help/assets/assets/asset-download.png)
 
-| 書き出しまたはダウンロードのオプション | 説明 |
-|---|---|
-| [!UICONTROL Assets] | レンディションなしで元の形式でアセットをダウンロードする場合は、このオプションを選択します。 |
-| [!UICONTROL レンディション] | レンディションは、アセットのバイナリ表現です。アセットは、（アップロードされたファイルの）一次表現を持ちます。アセットは任意の数の追加の表現を持つことができます。<br>このオプションを選択すると、ダウンロードするレンディションを選択できます。使用できるレンディションは、選択したアセットによって異なります。 |
-| [!UICONTROL 動的レンディション] | ダイナミックレンディションは、他のレンディションをリアルタイムで生成します。 When you select this option, you also select the renditions you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>さらに、サイズ、測定単位、形式、カラースペース、解像度および画像の修飾子（例：画像の反転用）を選択できます。 |
-| [!UICONTROL 電子メール] | ユーザーに電子メール通知が送信されます。次の場所にある標準の電子メールテンプレートを利用できます。<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> デプロイ時にカスタマイズするテンプレートは、次の場所に存在している必要があります。 <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>テナント固有のカスタムテンプレートは、次の場所に保存できます。<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
-| [!UICONTROL アセットごとに別のフォルダーを作成] | アセットのダウンロード時にフォルダー階層を維持する場合は、このオプションを選択します。 デフォルトでは、フォルダー階層は無視され、すべてのアセットがローカルファイルシステム内の1つのフォルダーにダウンロードされます。 |
+   *ダウンロードダイアログボックスのオプション*
 
-アセットにレンディションが含まれる場合は、「レンディション」オプションを使用できます。 元のアセットにサブアセットが含まれている場合は、「サブアセット」オプションを使用できます。
+1. ダウンロードダイアログボックスで、目的のダウンロードオプションを選択します。
 
-ダウンロードするフォルダーを選択すると、そのフォルダーの下位のアセットの階層全体がダウンロードされます。ダウンロードする各アセット（親フォルダーの下にネストされている子フォルダーのアセットを含む）を個々のフォルダーに格納するには、「**[!UICONTROL アセットごとに別のフォルダーを作成]**」を選択します。
+   | ダウンロードオプション | 説明 |
+   |---|---|
+   | **[!UICONTROL アセットごとに別のフォルダーを作成]** | このオプションを選択すると、ダウンロードした各アセット（アセットの親フォルダーの下にネストされた子フォルダー内のアセットを含む）が、ローカルコンピューター上の1つのフォルダーに含まれます。 このオプションを *選択しない場合* 、デフォルトでは、フォルダー階層は無視され、すべてのアセットがローカルコンピューターの1つのフォルダーにダウンロードされます。 |
+   | **[!UICONTROL 電子メール]** | 受信者に電子メール通知を送信する場合は、このオプションを選択します。 次の場所にある標準の電子メールテンプレートを利用できます。<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> 展開時にカスタマイズしたテンプレートは、次の場所で利用できます。 <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>テナント固有のカスタムテンプレートは、次の場所に保存できます。<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
+   | **[!UICONTROL アセット]** | レンディションなしで元の形式でアセットをダウンロードする場合は、このオプションを選択します。<br>元のアセットにサブアセットが含まれている場合は、「サブアセット」オプションを使用できます。 |
+   | **[!UICONTROL レンディション]** | レンディションは、アセットのバイナリ表現です。アセットは、（アップロードされたファイルの）一次表現を持ちます。アセットは任意の数の追加の表現を持つことができます。<br>このオプションを選択すると、ダウンロードするレンディションを選択できます。使用できるレンディションは、選択したアセットによって異なります。 |
+   | **[!UICONTROL スマート切り抜き]** | このオプションを選択すると、選択したアセットのすべてのスマートトリミングレンディションがAEM内からダウンロードされます。 スマート切り抜きレンディションを含むzipファイルが作成され、ローカルコンピューターにダウンロードされます。 |
+   | **[!UICONTROL 動的レンディション]** | 一連の代替レンディションをリアルタイムで生成するには、このオプションを選択します。 When you select this option, you also select the renditions that you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>また、測定のサイズと単位、形式、カラースペース、解像度、および画像の反転などのオプションの画像修飾子を選択できます。 このオプションは、有効にしている場合にのみ使用でき [!DNL Dynamic Media] ます。 |
+
+1. ダイアログボックスで、「 **[!UICONTROL ダウンロード]**」をタップします。
 
 ## アセットダウンロードサーブレットの有効化 {#enable-asset-download-servlet}
 
@@ -68,6 +73,6 @@ The default servlet in [!DNL Experience Manager] allows authenticated users to i
 >[!MORELIKETHIS]
 >
 >* [DRM で保護されたアセットのダウンロード](drm.md)。
->* [WinまたはMacデスクトップでExperience Managerデスクトップアプリを使用してアセットをダウンロードします](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)。
+>* [WinまたはMacデスクトップで、Experience Managerのデスクトップアプリを使用してアセットをダウンロードします](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)。
 >* [サポートされている Adobe Creative Cloud アプリ内から Adobe Asset Link を使用したアセットのダウンロード](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html).
 
