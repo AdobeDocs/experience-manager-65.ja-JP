@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+workflow-type: tm+mt
+source-wordcount: '576'
+ht-degree: 89%
 
 ---
 
@@ -104,11 +107,11 @@ Cookie の使用の同意が得られていないことを示す Cookie がユ�
 
 ### maySetCookie(cookieName) 関数 {#maysetcookie-cookiename-function}
 
-ユーザーのブラウザー上で特定の Cookie を使用できるかを判断します。この関数は、`isOptedOut` 関数と、`getWhitelsitCookieNames` が返すリスト内に特定の特定の Cookie が含まれているかの判断を連結して使用する処理と同等です。
+ユーザーのブラウザー上で特定の Cookie を使用できるかを判断します。この関数は、`isOptedOut` 関数と、`getWhitelistCookieNames` が返すリスト内に特定の特定の Cookie が含まれているかの判断を連結して使用する処理と同等です。
 
 **パラメーター**
 
-* cookieName:文字列。 cookieの名前。
+* cookieName: 文字列。 Cookieの名前。
 
 **戻り値**
 
