@@ -12,10 +12,10 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
 workflow-type: tm+mt
-source-wordcount: '2896'
-ht-degree: 54%
+source-wordcount: '2897'
+ht-degree: 53%
 
 ---
 
@@ -65,15 +65,12 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 このリリースには、以下の 3 つの役割ベースのバッジが含まれています。
 
 * **司会者**
-
    `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
 * **グループマネージャ**
-
    `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
 * **特権的な会員**
-
    `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
@@ -90,15 +87,12 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 このリリースには、以下の 3 つの報奨ベースのバッジが含まれています。
 
 * **金**
-
    `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
 * **銀**
-
    `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **青銅**
-
    `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
 ![chlimage_1-99](assets/chlimage_1-99.png)
@@ -355,7 +349,7 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
      <li>number = スコア</li>
      <li>| = 縦線の文字（U+007C）</li>
      <li>path = バッジ画像リソースへのフルパス</li>
-    </ul> 文字列は、number の値が小さいものから順に並べる必要があります。また、数値とパスの間にスペースを入れないようにします。<br /> 入力例：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+    </ul> 値が増え、数値とパスの間に空白が表示されないように、文字列の順番を並べる必要があります。<br /> 入力例：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>badgingType</td>
@@ -415,7 +409,6 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 >
 >* May refer to an author instance if the [Tunnel Service](/help/communities/users.md#tunnel-service) is enabled.
 >* May be an obscure, random name - see [Security Checklist](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) regarding authorizable ID.
-
 >
 
 
@@ -581,7 +574,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 
 * badgingRules追加プロパティ：
 
-   * **名前**: `badgingRules`
+   * **名前**：`badgingRules`
    * **Type**: `String`
    * Select **Multi**
    * Select **Add**
@@ -592,7 +585,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 
 * scoringRules追加プロパティ：
 
-   * **名前**: `scoringRules`
+   * **名前**：`scoringRules`
    * **Type**: `String`
    * Select **Multi**
    * Select **Add**
@@ -614,7 +607,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 
 * 必要に応じて、allowBadgesブール追加プロパティを設定し、それがtrueであることを確認します。
 
-   * **名前**: `allowBadges`
+   * **名前**：`allowBadges`
    * **Type**: `Boolean`
    * **値**: `true`
 
