@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '1890'
+ht-degree: 36%
 
 ---
 
@@ -37,19 +40,19 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 * Install latest [AEM 6.5 Updates](#aem64updates)
 
 * If not using the default ports (4502, 4503), then [configure replication agents](#replication-agents-on-author)
-* [暗号鍵を複製する](#replicate-the-crypto-key)
+* [暗号化キーを複製します](#replicate-the-crypto-key)
 * If supporting globalization, [setup automated translation](/help/sites-administering/translation.md)
 (sample setup is provided for development)
 
 **[Communities 機能](/help/communities/overview.md)**用
 
-* If deploying a [publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm), [identify the primary publisher](#primary-publisher)
+* [発行ファームを展開する場合](/help/sites-deploying/recommended-deploys.md#tarmk-farm)、主な発行者を [特定する](#primary-publisher)
 
-* [トンネルサービスの有効化](#tunnel-service-on-author)
-* [ソーシャルログインの有効化](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
+* [トンネルサービスを有効にする](#tunnel-service-on-author)
+* [ソーシャルログインを有効にする](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
 * [Adobe Analytics の設定](/help/communities/analytics.md)
-* Setup a [default email service](/help/communities/email.md)
-* Identify the choice for [shared UGC storage](/help/communities/working-with-srp.md) (**SRP**)
+* [デフォルトの電子メールサービスの設定](/help/communities/email.md)
+* [共有UGCストレージ](/help/communities/working-with-srp.md) (**SRP**)の選択肢の特定
 
    * If MongoDB SRP [(MSRP)](/help/communities/msrp.md)
 
@@ -68,17 +71,17 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
       * [ASRP の選択](/help/communities/srp-config.md)
    * If JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
-      * 共有UGCストアではありません：
+      * 共有されたUGCストアではありません：
 
          * UGC のレプリケーションなし
          * UGC はそれが入力された AEM インスタンスまたはクラスターでのみ表示
-      * デフォルトはJSRP
+      * デフォルトはJSRPです。
    イネーブルメント機能&#x200B;**[用](/help/communities/overview.md#enablement-community)**
 
    * [FFmpegのインストールと設定](/help/communities/ffmpeg.md)
    * [MySQL用JDBCドライバーのインストール](#jdbc-driver-for-mysql)
-   * [AEM Communities SCORMエンジンのインストール](#scorm-package)
-   * [MySQLのインストールと有効化の設定](/help/communities/mysql.md)
+   * [SCORM-EngineAEM Communitiesのインストール](#scorm-package)
+   * [有効にするMySQLのインストールと設定](/help/communities/mysql.md)
 
 
 
@@ -104,7 +107,7 @@ AEM 6.4 以降、AEM Communities 機能およびホットフィックスは、AE
 以下の 2 つの Communities 機能で MySQL データベースを使用しています。
 
 * For [enablement](/help/communities/enablement.md) : recording SCORM activities and learners
-* [DSRP](/help/communities/dsrp.md) :ユーザー生成コンテンツの保存(UGC)
+* For [DSRP](/help/communities/dsrp.md) : storing user generated content (UGC)
 
 MySQL コネクタを別途入手し、インストールする必要があります。
 
@@ -112,24 +115,24 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 
 1. Download the ZIP archive from [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
-   * バージョンは5.1.38以上にする必要があります
+   * バージョンは5.1.38以上である必要があります
 
 1. アーカイブからmysql-connector-java-&lt;version>-bin.jar（バンドル）を抽出します。
-1. Webコンソールを使用して、バンドルをインストールし開始します。
+1. Webコンソールを使用して、バンドルをインストールおよび開始します。
 
    * 例：https://localhost:4502/system/console/bundles
    *  **`Install/Update`**
    * ダウンロードした ZIP アーカイブから抽出したバンドルを参照し、選択します。
-   * ** Oracle CorporationのMySQLcom.mysql.jdbc用JDBCドライバーがアクティブであることを確認し、アクティブでない場合は開始します（またはログを確認します）。
+   * Check that *Oracle Corporation&#39;s JDBC Driver for MySQLcom.mysql.jdbc* is active, and start it if not (or check the logs)
 
 1. JDBCの設定後に既存のデプロイメントにインストールする場合は、WebコンソールからJDBC設定を再保存して、JDBCを新しいコネクタに再バインドします。
 
    * 例：https://localhost:4502/system/console/configMgr
-   * 設定の `Day Commons JDBC Connections Pool` 検索
-   * 選択して開く
+   * 設定の検索 `Day Commons JDBC Connections Pool`
+   * 選択して開きます
    *  `Save`
 
-1. すべての作成者インスタンスと発行インスタンスで手順3と4を繰り返します。
+1. すべてのオーサーインスタンスとパブリッシュインスタンスで手順3と4を繰り返します。
 
 Further information on installing bundles is found on the [Web Console](/help/sites-deploying/web-console.md) page.
 
@@ -143,7 +146,7 @@ Shareable Content Object Reference Model（SCORM）は、e ラーニングの標
 
 AEM Communities SCORM エンジンは[イネーブルメント](/help/communities/overview.md#enablement-community)機能で必要になります。AEM 6.5 CommunitiesでサポートされるScormパッケージ：
 
-* [cq-social-scorm-package、](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) SCORM 2017.1エンジンを含むバージョン2.3.7 [](https://rusticisoftware.com/blog/scorm-engine-2017-released/) 。
+* [cq-social-scorm-package、](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) SCORM 2017.1 [](https://rusticisoftware.com/blog/scorm-engine-2017-released/) エンジンを含むバージョン2.3.7。
 
 **SCORMパッケージをインストールするには**
 
@@ -168,7 +171,7 @@ SRP コレクション（MSRP または DSRP）で高度な多言語検索（MLS
 
 * [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
 
-   * バージョン1.2.40、2016年4月6日
+   * バージョン1.2.40、2016年4月7日
    * AEM-SOLR-MLS-phasetwo-1.2.40.zipをダウンロードします。
 
 For details and installation information, visit [Solr Configuration](/help/communities/solr.md) for SRP.
@@ -190,13 +193,13 @@ On the local AEM instance, use package manager (for example [https://localhost:4
 
 Alternatively, accessing the package using package share from the local AEM instance (for example, [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)), the `Download` button will download to the local AEM instance&#39;s package repository.
 
-ローカルAEMインスタンスのパッケージリポジトリに入ったら、パッケージマネージャーを使用してパッケージをインストールします。
+ローカルAEMインスタンスのパッケージリポジトリに移動したら、パッケージマネージャーを使用してパッケージをインストールします。
 
 For more information, visit [How to Work With Packages](/help/sites-administering/package-manager.md#package-share).
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
-In AEM Communities, a common store is used to store user generated content (UGC) and is often referred to as the [storage resource provider (SRP)](/help/communities/working-with-srp.md). 推奨される導入は、共通ストアのSRPオプションの選択を中心に行われます。
+In AEM Communities, a common store is used to store user generated content (UGC) and is often referred to as the [storage resource provider (SRP)](/help/communities/working-with-srp.md). 推奨される展開は、共通ストアのSRPオプションの選択が中心です。
 
 The common store supports moderation of, and analytics on, UGC in the publish environment while eliminating the need for [replication](/help/communities/sync.md) of UGC.
 
@@ -224,13 +227,13 @@ By default, the `AEM Communities Publisher Configuration` OSGi configuration is 
 
 パブリッシュファーム内の他のすべての（セカンダリ）パブリッシュインスタンスについて、以下をおこないます。
 
-* 管理者権限でのログイン
+* 管理者権限を持つログイン
 * Access the [web console](/help/sites-deploying/configuring-osgi.md)
 
    * For example, [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
-* を検索します。 `AEM Communities Publisher Configuration`
-* 編集アイコンの選択
+* Folio Builder `AEM Communities Publisher Configuration`
+* 編集アイコンを選択します
 * Uncheck the **Primary Publisher** box
 * Select **Save**
 
@@ -287,8 +290,8 @@ then [configure the replication agent](#replication-agents-on-author)
 
    * For example, [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-* を検索します。 `AEM Communities Publish Tunnel Service`
-* 編集アイコンの選択
+* Folio Builder `AEM Communities Publish Tunnel Service`
+* 編集アイコンを選択します
 * Check the **enable** box
 * Select **Save**
 
@@ -302,7 +305,7 @@ AEM 6.3以降、主要な資料はファイルシステムに保存され、リ�
 
 オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
 
-* コピーする主要な素材を含むAEMインスタンス（通常は作成者インスタンス）にアクセスします。
+* コピーする主要素材を含むAEMインスタンス（通常は作成者インスタンス）にアクセスします
 
    * Locate the `com.adobe.granite.crypto.file` bundle in the local file system
 for example,
@@ -312,11 +315,11 @@ for example,
    * 例えば、データフォルダーに移動します。
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * hmacファイルとマスターファイルのコピー
+   * hmacおよびプライマリ・ノード・ファイルのコピー
 
 
 
-* 各ターゲットAEMインスタンス
+* 各ターゲットのAEMインスタンス
 
    * 例えば、データフォルダーに移動します。
 
@@ -331,7 +334,7 @@ for example,
 
 #### リポジトリのレプリケーション {#repository-replication}
 
-AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（初期リポジトリを作成します）。
+AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（これにより初期リポジトリが作成されます）。
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
@@ -345,7 +348,7 @@ AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存�
 
 * Browse to [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
 *  `/etc/key`
-* 「開く」タ `Replication` ブ
+* 「開く」 `Replication` タブ
 *  `Replicate`
 
 * [Granite Cryptoバンドルの更新](#refresh-the-granite-crypto-bundle)
@@ -363,7 +366,7 @@ AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存�
 
 ![](/help/communities/assets/chlimage_1-131.png)
 
-* しばらくすると、成功ダイアログ **が表示さ** れます。
+* しばらくすると、 **成功** ダイアログが表示されます。
    `Operation completed successfully.`
 
 ### Apache HTTP サーバー {#apache-http-server}
