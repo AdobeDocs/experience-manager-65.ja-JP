@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 5d74f3510ff20e062f1e78f61d98e9c2e7a0414f
+workflow-type: tm+mt
+source-wordcount: '1599'
+ht-degree: 69%
 
 ---
 
 
 # SharePoint コネクター{#sharepoint-connector}
 
-この記事には、Adobe JCR Connector for Microsoft sharePoint 2010およびMicrosoft sharePoint 2013、バージョン4.0に関する詳細が含まれています。
+この記事には、Adobe JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0に関する詳細が含まれています。
 
 SharePoint コネクターでは次の基本機能がサポートされています。
 
@@ -32,7 +35,7 @@ SharePoint コネクターでは次の基本機能がサポートされていま
 
 >[!NOTE]
 >
->SharePoint コネクターは AEM 6.1 サービスパック 2 でもサポートされています。コネクタは、仮想リポジトリマウントをサポートしなくなったため、マウントできません。 Java APIを使用してSharepointリポジトリにアクセスする場合は、プロジェクトでSharepoint ConnectorのJCRリポジトリ実装を使用します。
+>SharePoint コネクターは AEM 6.1 サービスパック 2 でもサポートされています。コネクタは、仮想リポジトリのマウントをサポートしなくなったため、マウントできません。 Java APIを使用してSharepointリポジトリにアクセスする場合は、プロジェクトでSharepoint ConnectorのJCRリポジトリ実装を使用します。
 >
 >このドキュメントでは、SharePoint サーバーおよび関連する IT インフラストラクチャのインストール、設定、管理および IT 運営については取り上げていません。See vendor documentation on [SharePoint](https://www.microsoft.com/sharepoint) for information about these topics. コネクターを使用するには、これらのインフラストラクチャ要素を適切にインストール、設定および運用する必要があります。
 
@@ -51,7 +54,7 @@ SharePoint コネクターでは次の基本機能がサポートされていま
 
 ## SharePoint コネクターのインストール {#installing-sharepoint-connector}
 
-このコネクターは、インストールが容易なコンテンツパッケージとして提供されています。パッケージマネージャーを使用してパッケージをインストールし、SharePointサーバーのURLとその他の構成オプションを設定します。 SharePoint コンテンツは AEM リポジトリに格納されています。
+このコネクターは、インストールが容易なコンテンツパッケージとして提供されています。パッケージマネージャーを使用してパッケージをインストールし、SharePointサーバーのURLおよびその他の構成オプションを設定します。 SharePoint コンテンツは AEM リポジトリに格納されています。
 
 ### インストール要件 {#installation-requirements}
 
@@ -99,7 +102,7 @@ To access Package Share on the AEM Welcome page, tap/click **Tools** and then se
 1. Tap/click **Install** from the package description page.
 1. From the **Install Package** dialog, tap/click **Install**.
 
-   **注意**:管理者としてログインしていることを確認します。
+   **注意**: 管理者としてログインしていることを確認します。
 
 1. When the package is installed, tap/click **Close**.
 
@@ -130,14 +133,14 @@ SharePoint サーバーの URL および高度なオプションを設定する�
 `<name>` is the name of the JCR workspace and
 `<url>` is the URL of the SharePoint server for that workspace.
 
-AEM では、前述の設定手順とは別に、もう 1 つ手順を実行します。「**com.day.cq.dam.cq-dam-jcr-connectors**」バンドルをホワイトリストに追加します。
+AEM では、前述の設定手順とは別に、もう 1 つ手順を実行します。「**com.day.cq.dam.cq-dam-jcr-connectors**」バンドルの許可リスト。
 
-AEM でバンドルをホワイトリストに追加するには、次の手順を実行します。
+AEMで許可リストバンドルを作成するには、次の手順を実行します。
 
-1. OSGi管理コンソールに移動します。http://localhost:4502/system/console/configMgr.
+1. OSGi管理コンソールに移動します。 http://localhost:4502/system/console/configMgr
 1. 「Apache Sling Login Admin Whitelist」サービスを検索します。
-1. 「ホワイトリストをバイパス」を選択します。
-1. Add &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39; in whitelist bundles default
+1. Select **Bypass the whitelist**.
+1. Add `com.day.cq.dam.cq-dam-jcr-connectors` in whitelist bundles default
 1. 「保存」をクリックします。
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
@@ -194,10 +197,10 @@ SharePoint ではクラシック認証方式と要求ベースの認証方式を
 * 要求-基本
 * 要求-フォームベース
 
-AEM JCR Connector for Microsoft sharePoint 2010およびMicrosoft sharePoint 2013、バージョン4.0。は、次のモードで動作する、要求ベースの認証（Microsoftが推奨）をサポートしています。
+AEM JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0.は、次のモードで動作する要求ベースの認証（Microsoftによって推奨される）をサポートしています。
 
 * **基本／NTLM 認証**：コネクターでの最初の接続試行では、基本認証が使用されます。基本認証が使用できない場合は、NTLM ベースの認証に切り替えられます。
-* **フォームベースの認証**:Sharepointは、ユーザーがログインフォーム（通常はWebページ）に入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
+* **フォームベースの認証**: Sharepointは、ログインフォーム（通常はWebページ）にユーザーが入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
 
 **フォームベースの認証の設定**
 
@@ -230,7 +233,7 @@ AEMでユーザーを作成するには：
 1. 「セキュリティ」をクリックします。
 1. 「ユーザー」をクリックします。
 1. 「**ユーザーを作成**」をクリックします。
-1. ユーザーID（SharePointでアクセス可能なユーザー名）を指定します。
+1. ユーザーID （SharePointでアクセスできるユーザー名）を指定します。
 1. 対応するパスワードを指定します。
 1. 緑の目盛り記号をクリックして、ユーザを作成します。
 
@@ -240,7 +243,7 @@ admin グループにユーザーを追加するには：
 1. 「a」ノードをクリックします。
 1. 「管理者」をクリックします。
 1. Type the user ID create above in the text box before **Browse** button.
-1. 緑色の目盛り記号をクリックして、ユーザーを管理グループに追加します。
+1. 緑の目盛り記号をクリックして、ユーザを管理者グループに追加します。
 
 ### トークン認証の無効化 {#disable-token-authentication}
 
@@ -248,7 +251,7 @@ admin グループにユーザーを追加するには：
 
 1. クイックスタートを閉じます。
 1. ファイル *\crx-quickstart\repository\repository.xml* を開きます。
-1. タグを検索します。 `<LoginModule class="com.day.crx.core.CRXLoginModule"> ... </LoginModule>.`
+1. タグの検索 `<LoginModule class="com.day.crx.core.CRXLoginModule"> ... </LoginModule>.`
 1. Insert the tag `<param name="disableTokenAuth" value="true"/>` inside the tag mentioned in step 4.
 1. xml ファイルを保存して閉じます。
 1. QuickStartを再起動し、資格情報を使用してログインします。
