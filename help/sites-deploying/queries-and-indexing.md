@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: b01f6d3726fd6aa06ffedaf10dfde9526479a2a3
+workflow-type: tm+mt
+source-wordcount: '2880'
+ht-degree: 89%
 
 ---
 
@@ -65,7 +68,7 @@ The **Traversal Index** is used if no other indexer is available. つまり、�
 
 >[!NOTE]
 >
->大規模なリポジトリの場合、インデックスの作成は時間がかかります。 これは、最初にインデックスを作成するときと、再インデックス（定義を変更した後にインデックスを再構築すること）をおこなうときの両方に当てはまります。See also [Troubleshooting Oak Indexes](/help/sites-deploying/troubleshooting-oak-indexes.md) and [Preventing Slow Re-indexing](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>大規模なリポジトリの場合、インデックスの作成は時間のかかる操作です。 これは、最初にインデックスを作成するときと、再インデックス（定義を変更した後にインデックスを再構築すること）をおこなうときの両方に当てはまります。See also [Troubleshooting Oak Indexes](/help/sites-deploying/troubleshooting-oak-indexes.md) and [Preventing Slow Re-indexing](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 非常に大規模なリポジトリで再インデックスが必要な場合、特に MongoDB を使用してフルテキストのインデックスを作成する場合は、テキスト事前抽出と、oak-run を使用した初期インデックス構築および再インデックスを検討してください。
 
@@ -82,8 +85,8 @@ The **Traversal Index** is used if no other indexer is available. つまり、�
 1. このノードに **PropertyIndex** という名前を付け、ノードタイプを **oak:QueryIndexDefinition** に設定します。
 1. 新しいノードに対して次のプロパティを設定します。
 
-   * **** type: `property` （文字列型）
-   * **** propertyNames: `jcr:uuid` （名前のタイプ）
+   * **type:**  `property` （文字列型）
+   * **propertyNames:**  `jcr:uuid` （名前のタイプ）
    この例では、`jcr:uuid` プロパティに対してインデックスを作成します。このプロパティの役割は、関連付けられたノードの Universally Unique Identifier（UUID）を公開することです。
 
 1. 変更内容を保存します。
@@ -119,8 +122,8 @@ AEM 6 では、Apache Lucene ベースのフルテキストインデクサーを
 1. このノードに **LuceneIndex** という名前を付け、ノードタイプを **oak:QueryIndexDefinition** に設定します。
 1. この  ノードに次のプロパティを追加します。
 
-   * **** type: `lucene` （文字列型）
-   * **** async: `async` （文字列型）
+   * **type:**  `lucene` （文字列型）
+   * **async:**  `async` （文字列型）
 
 1. 変更内容を保存します。
 
@@ -129,7 +132,7 @@ Lucene インデックスでは次の設定オプションを使用できます�
 * インデックスのタイプを指定する **type** プロパティは **lucene** に設定する必要があります。
 * **async** プロパティは **async** に設定する必要があります。この設定により、インデックス更新プロセスがバックグラウンドスレッドに送信されます。
 * **includePropertyTypes** プロパティ。インデックスに含まれるプロパティタイプのサブセットを定義します。
-* プロパティ名のブラックリストを定義する **excludePropertyNames** プロパティ。インデックスから除外する必要のあるプロパティを設定します。
+* The **excludePropertyNames** property which will define a list of property names - properties that should be excluded from the index.
 * **reindex** フラグ。**true** に設定されている場合、コンテンツ全体の再インデックスをトリガーします。
 
 ### Lucene プロパティインデックス {#the-lucene-property-index}
@@ -146,8 +149,8 @@ select * from [nt:base] where [alias] = '/admin'
 
 このクエリのための Lucene プロパティインデックスを定義するには、**oak:index** の下に新しいノードを作成して、次の定義を追加します。
 
-* **名前:** `LucenePropertyIndex`
-* **タイプ:** `oak:QueryIndexDefinition`
+* **名前：**`LucenePropertyIndex`
+* **Type:** `oak:QueryIndexDefinition`
 
 ノードを作成したら、次のプロパティを追加します。
 
@@ -169,7 +172,7 @@ select * from [nt:base] where [alias] = '/admin'
    false (of type Boolean)
    ```
 
-* **** includePropertyNames: `["alias"] (of type String)`
+* **includePropertyNames:** `["alias"] (of type String)`
 
 >[!NOTE]
 >
@@ -205,22 +208,22 @@ The analyzers can be configured via the `analyzers` node (of type `nt:unstructur
 
 1. default ノードに次のプロパティを追加します。
 
-   * **名前:** `class`
-   * **タイプ:** `String`
+   * **名前：**`class`
+   * **Type:** `String`
    * **値:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
    この値は、使用するアナライザークラスの名前です。
 
    また、特定の Lucene バージョンで使用するアナライザーを設定するには、オプションの `luceneMatchVersion` プロパティ（string）を使用することもできます。Lucene 4.7 で使用する場合の有効な構文は次のとおりです。
 
-   * **名前:** `luceneMatchVersion`
-   * **タイプ:** `String`
+   * **名前：**`luceneMatchVersion`
+   * **Type:** `String`
    * **値:** `LUCENE_47`
    `luceneMatchVersion` が指定されない場合、Oak では出荷時の Lucene のバージョンが使用されます。
 
 1. アナライザー設定にストップワードファイルを追加する場合は、`default` ノードの下に新しいノードを作成し、次のプロパティを設定します。
 
-   * **名前:** `stopwords`
-   * **タイプ:** `nt:file`
+   * **名前：**`stopwords`
+   * **Type:** `nt:file`
 
 #### 構成によるアナライザーの作成 {#creating-analyzers-via-composition}
 
@@ -228,37 +231,37 @@ Analyzers can also be composed based on `Tokenizers`, `TokenFilters` and `CharFi
 
 例えば、次のノード構造について考えてみます。
 
-* **名前:** `analyzers`
+* **名前：**`analyzers`
 
-   * **名前:** `default`
+   * **名前：**`default`
 
-      * **名前:** `charFilters`
-      * **タイプ:** `nt:unstructured`
+      * **名前：**`charFilters`
+      * **Type:** `nt:unstructured`
 
-         * **名前:** `HTMLStrip`
-         * **名前:** `Mapping`
-      * **名前:** `tokenizer`
+         * **名前：**`HTMLStrip`
+         * **名前：**`Mapping`
+      * **名前：**`tokenizer`
 
          * **プロパティ名:** `name`
 
-            * **タイプ:** `String`
+            * **Type:** `String`
             * **値:** `Standard`
-      * **名前:** `filters`
-      * **タイプ:** `nt:unstructured`
+      * **名前：**`filters`
+      * **Type:** `nt:unstructured`
 
-         * **名前:** `LowerCase`
-         * **名前:** `Stop`
+         * **名前：**`LowerCase`
+         * **名前：**`Stop`
 
             * **プロパティ名:** `words`
 
-               * **タイプ:** `String`
+               * **Type:** `String`
                * **値:** `stop1.txt, stop2.txt`
-            * **名前:** `stop1.txt`
+            * **名前：**`stop1.txt`
 
-               * **タイプ:** `nt:file`
-            * **名前:** `stop2.txt`
+               * **Type:** `nt:file`
+            * **名前：**`stop2.txt`
 
-               * **タイプ:** `nt:file`
+               * **Type:** `nt:file`
 
 
 
@@ -272,7 +275,7 @@ filters、charFilters および tokenizers の名前は、ファクトリのサ�
 
 * `org.apache.lucene.analysis.core.StopFilterFactory` becomes `Stop`
 
-ファクトリに必要な設定パラメーターは、該当するノードのプロパティとして指定します。
+ファクトリに必要な設定パラメーターは、該当するノードのプロパティとして指定されます。
 
 ストップワードの読み込みなど、外部ファイルのコンテンツを読み込む必要がある場合は、対象ファイル用の子ノード（タイプ `nt:file`）を作成することによってコンテンツを指定できます。
 
@@ -307,9 +310,9 @@ AEM は、Web コンソール経由で設定可能な組み込み Solr サーバ
 1. CRXDE を開き、Admin でログインします。
 1. **solrlndex** というノード（タイプ **oak:QueryIndexDefinition**）を **oak:index** の下に追加し、次のプロパティを設定します。
 
-   * **** type: `solr`（文字列型）
-   * **** async: `async`（文字列型）
-   * **** reindex: `true`（ブール型）
+   * **type:** `solr`（文字列型）
+   * **async:** `async`（文字列型）
+   * **reindex:** `true`（ブール型）
 
 1. 変更内容を保存します。
 
@@ -411,7 +414,7 @@ ACS Commons パッケージは、プロパティインデックスの作成に�
 
 #### 分析用のデバッグ情報の準備 {#preparing-debugging-info-for-analysis}
 
-実行中のクエリについて必要な情報を取得する最も簡単な方法は、[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を使用することです。このツールを使用すると、ログレベル情報を参照しなくても、処理に時間のかかるクエリのデバッグに必要な正確な情報を収集できます。これは、デバッグ中のクエリーがわかっている場合に望ましいことです。
+実行中のクエリについて必要な情報を取得する最も簡単な方法は、[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を使用することです。このツールを使用すると、ログレベル情報を参照しなくても、処理に時間のかかるクエリのデバッグに必要な正確な情報を収集できます。これは、デバッグ中のクエリがわかっている場合に望ましいです。
 
 何らかの理由でこのツールを使用できない場合は、インデックスログを単一のファイルで収集し、そのファイルを使用して特定の問題をトラブルシューティングすることができます。
 
@@ -453,7 +456,7 @@ Since in most cases, the indexing configuration is stored under the `/oak:index`
 
 インデックス関連の MBean の出力を取得すると、デバッグに役立つことがあります。手順は次のとおりです。
 
-1. JMXコンソール(:
+1. JMXコンソール（次の場所）に移動します。
    `https://serveraddress:port/system/console/jmx`
 
 1. 次の MBean を検索します。
