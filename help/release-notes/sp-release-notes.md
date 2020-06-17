@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager 6.5 Service Packリリースノート
+title: Adobe Experience Manager6.5サービスパックリリースノート
 description: Adobe Experience Manager 6.5 Service Pack 5 固有のリリースノート
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: 1eca1fcce90dfde8b512414249eb8cc05323c5cc
 workflow-type: tm+mt
-source-wordcount: '4510'
+source-wordcount: '4512'
 ht-degree: 7%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Service Packリリースノート {#aem-service-pack-release-notes}
+# Adobe Experience Manager6.5サービスパックリリースノート {#aem-service-pack-release-notes}
 
 ## リリース情報 {#release-information}
 
@@ -23,23 +23,23 @@ ht-degree: 7%
 | 日付 | 2020年6月4日 |
 | ダウンロード URL | [パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/AEM-6.5.5.0-Service-Pack)、 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
-## Adobe Experience Manager 6.5.5.0の機能 {#what-s-included-in-aem}
+## Adobe Experience Manager6.5.5.0に含まれるもの {#what-s-included-in-aem}
 
-Adobe Experience Manager 6.5.5.0は、2019 **年4月のGAリリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートです**。 Adobe Experience Manager 6.5の上部にインストールできます。
+Adobe Experience Manager6.5.5.0は、2019 **年4月のGAリリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上にインストールできます。
 
-Adobe Experience Manager 6.5.5.0で導入された主な機能および機能強化には、次のものが含まれます。
+Adobe Experience Manager6.5.5.0で導入された主な機能および機能強化には、次のものが含まれます。
 
-* Adobe Experience Managerインボックスに表示する列名をカスタマイズします。
+* Adobe Experience Managerの受信トレイに表示する列名をカスタマイズします。
 
-* ページエディター、コアコンポーネント、RTE、管理者ユーザーインターフェイスなど、Experience Manager Webコンテンツ管理(WCM)の様々な領域でのアクセシビリティが向上しました。
+* ページエディター、コアコンポーネント、RTE、管理者ユーザーインターフェイスなど、Experience ManagerWebコンテンツ管理(WCM)の様々な領域でのアクセシビリティが向上しました。
 
 * をドラフト [!DNL Interactive Communication] として保存します。
 
-* JEE上 [!DNL Oracle WebLogic 12] のExperience Manager Formsのサポート。
+* JEE上のExperience Manager [!DNL Oracle WebLogic 12] フォームのサポート。
 
 * ユーザーインターフェイスフローでの例外処理を改善 [!DNL Adobe Experience Manager Assets] しました。
 
-* ダイナミックメディアScene7の公開URLを取得するために、新しいメソッド `getRemoteAssetPublishURL` がインター `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` フェイスに追加されました。
+* Dynamic MediaScene7の公開URLを取得するために、新しいメソッド `getRemoteAssetPublishURL` がインター `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` フェイスに追加されました。
 
 * [アクセシビリティの強化](#assets-6550) (Webコンテンツアクセシビリティガイドライン(WCAG) [!DNL Adobe Experience Manager Assets] に準拠)
 
@@ -47,37 +47,37 @@ Adobe Experience Manager 6.5.5.0で導入された主な機能および機能強
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.22.3 に更新しました。
 
-Experience Manager 6.5 Service Pack 5で導入された主な機能の完全なリストについては、「Adobe Experience Manager 6.5 Service Pack 5の新機能」を参照して [ください](new-features-latest-service-pack.md) 。
+機能の完全なリスト、主な特徴、Experience Manager6.5 Service Pack 5で導入された主な機能については、「Adobe Experience Manager6.5 Service Pack 5 [の新機能](new-features-latest-service-pack.md) 」を参照してください。
 
 6.5.5.0リリースでの修正のリスト [!DNL Experience Manager] を次に示します。
 
 ### [!DNL Sites] {#sites-6550}
 
-* Experience Manager Sitesには、エイリアスからページを公開または非公開するオプションが用意されています。 このオプションは機能しません(NPR-33415)。
+* Experience Managerサイトには、エイリアスからページを公開または非公開にするオプションがあります。 このオプションは機能しません(NPR-33415)。
 * 複数のテンプレートを含むテンプレートからレイアウトコンテナを削除すると、そのテンプレートは正しくレンダリングされません(NPR-33347)。
-* Experience Managerのサイトページが、複数のライブコピーを持つ大きなコンテンツセットに含まれている場合、ページバージョン履歴プレビューの読み込みに失敗します(NPR-33311)。
-* 「移動」コマンドを使用してExperience Managerのサイトページの名前を変更すると、ページタイトルは更新されません(NPR-33264)。
+* Experience Managerサイトページが、複数のライブコピーが設定された大きなコンテンツの一部である場合、ページバージョン履歴プレビューの読み込みに失敗します(NPR-33311)。
+* 「移動」コマンドを使用してExperience Managerサイトページの名前を変更すると、ページタイトルは更新されません(NPR-33264)。
 * 列表示内でページを移動すると、列は表示されなくなります(NPR-33216)。
 * 言語コピーのローカルコンポーネントの名前が、ブループリントのコンポーネントの名前と同じで、そのコンポーネントがブループリントからロールアウトされる場合、ローカルコンポーネントの名前に用語 `_msm_moved` が追加されない(NPR-33208)。
-* Page Redirectサーブレットは、Experience Manager Sites URLに.htmlを追加します。この場合、ResourceTypeは追加されません `cq:Page` (NPR-33176)。
+* Page Redirectサーブレットは、Experience ManagerサイトのURLに.htmlを追加します。このサイトのURLでは、ResourceTypeは追加されません `cq:Page` (NPR-33176)。
 * サブツリーを貼り付ける場合、対応するサブページを貼り付けるかどうかを決定するオプションはありません(NPR-33149)。
 * コンポーネントのライブ使用の結果の数は、49個に制限されます(NPR-33058)。
 * スキーマに基づくコンテンツフラグメントのベースとなり、そのコンテンツに必須のテキスト領域またはパスフィールドが含まれている場合、コンテンツフラグメントは保存されません(NPR-33007)。
-* デフォルトのエクスペリエンスフラグメントコンポーネントを使用してカスタムコンポーネントを作成し、それをExperience Managerサイトページで使用すると、Experience Managerではカスタムコンポーネント(NPR-32852)の参照（使用）が表示されません。
+* デフォルトのエクスペリエンスフラグメントコンポーネントを使用してカスタムコンポーネントを作成し、Experience Managerサイトページで使用する場合、Experience Managerにはカスタムコンポーネント(NPR-32852)の参照（使用）が表示されません。
 * 多数の参照を持つフォルダーの名前を変更すると、そのフォルダーへの多くの参照は更新されません(NPR-32765)。
 * ソース編集オプションを有効にすると、インラインのフルスクリーンオプションで使用できるようになりますが、リッチテキストエディターの編集ダイアログおよびフルスクリーンオプションでは使用できなくなります(NPR-32763)。
 * 複数のフィールドがあり、そのフィールドに設計図のページプロパティに必須のフィールド（ドロップダウンやパスフィールドなど）が含まれている場合、そのような複数のフィールドを含むページをロールアウトすると、ライブコピーのページプロパティは保存されません(NPR-32751)。
 * スクリーンリーダーは、見出し構造を使用してページを移動することはできません。 さらに、「Components（コンポーネント）」タブのラベルが誤っています(NPR-32648)。
 * ページ番号の開始では、エクスペリエンスフラグメントピッカーはすべての項目を読み込みません(NPR-32605)。
 * ライブコピーを読み取り、変更、作成および削除する作成者権限は失効します。 各発言者は、Blueprint内でページを移動するための読み取り権限と変更権限を明示的に提供する必要がありました(NPR-32550)。
-* Adobe Analytics(NPR-32548)と統合されているページで、コンテンツ作成者が「起動」を作成できません。
+* アドビのAnalytics(NPR-32548)との統合を持つページに対して、コンテンツ作成者が「起動」を作成できません。
 * ユーザーが同期による継承を再開すると、親ページのライブコピーは青写真と同期せず、誤ったステータスを表示します(NPR-32500)。
-* Experience Manager Sitesエディターページの読み込みに15秒以上かかる(NPR-32413)。
+* Experience Managerサイトのエディターページの読み込みに15秒以上かかる(NPR-32413)。
 * 一部のフィールドでは、「継承をキャンセル」オプションが表示されません(NPR-32362)。
 * エクスペリエンスフラグメントコンポーネントのパスを選択し、「選択ダイアログを開く」チェックボックスを選択した場合、パスブラウザー(NPR-32308)で選択されたパスに移動しません。
-* Experience Manager 6.2からExperience Manager 6.5にアップグレードした場合、静的テンプレートのParsysコンポーネントが正しく表示されません。 Parsysコンポーネントの高さは0に設定され、その中のコンポーネントは表示されません(NPR-33663)。
+* Experience Manager6.2からExperience Manager6.5にアップグレードした場合、静的テンプレートのParsysコンポーネントが正しく表示されません。 Parsysコンポーネントの高さは0に設定され、その中のコンポーネントは表示されません(NPR-33663)。
 * ユーザーがレイアウトコンテナをコピーして同じページに貼り付けた場合、レイアウトコンテナのコンポーネントは表示されません(NPR-33648)。
-* ディスパッチャーの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33629)。
+* Dispatcherの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33629)。
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -91,7 +91,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * 並べ替え可能なヘッダー(リスト表示、 [!UICONTROL タイムライン、およびパブリケーション] 表示の  管理ページ)の並べ替え機能が、スクリーンリーダーによって通知され、列ヘッダーの並べ替えコントロールがキーボード(NPR-32979)を使用してアクセスできるようになりました。
 
-* コメントカード、バージョン更新、コンボボックス、メニューの山形アイコンなどのクリック可能な要素は、注目してキーボード(NPR-33514)を使用して操作できるようになりました。
+* コメントカード、バージョン更新、コンボボックス、メニューの山形アイコンなどのクリック可能な要素は、注目し、キーボード(NPR-33514)を使用して操作できるようになりました。
 
 * インサイト表示のインサイトアイコン（使用方法、インプレッション数およびクリック数）の機能（またはアクションの目的）が、スクリーンリーダー  (NPR-33513)によって正しくアナウンスされるようになりました。
 
@@ -125,7 +125,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * 様々なコンボボックス要素（パスフィールドや、アセットのプロパティの「基本」タブで選択ダイアログを開くオプションなど）の目的が、スクリーンリーダー(NPR-33235)によって正しく通知されるようになりました。
 
-* リスト表示テーブルの行が選択可能であるという情報が、キーボードフォーカスがある場合に、スクリーンリーダーユーザーに通信されるようになりました。 この情報は、行上でマウスをポインターで移動すると(NPR-33234)、通知されます。
+* リスト表示テーブルの行が選択可能であるという情報が、キーボードフォーカスがある場合に、スクリーンリーダーユーザーに通信されるようになりました。 ポインタが行に合わさると、スクリーンリーダーは情報を読み上げます(NPR-33234)。
 
 * ( [!UICONTROL xを含む)に設定した場合、]基本 [!UICONTROL タブのPropertiesNprの「] Tags [!UICONTROL (タグ] )」フィールドの下にある選択した各タグを削除するオプションが、スクリーンリーダー(NPR-33206)にアクセスできるようになりました。
 
@@ -159,7 +159,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * ビデオのボリュームを制御する機能に、（ボリュームスライダーにフォーカスするために）タブと、（ボリュームを調整するために）キーボードの(NPR-32065)矢印キーを通してアクセスできるようになりました。
 
-* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザー(NPR-32064)に対して通知されるようになりました。
+* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザーに対して通知されるようになりました(NPR-32064)。
 
 * 「 [!UICONTROL 作成と翻訳] 」フォームの「 [!UICONTROL 言語] 」メニューにブラウズモードでアクセスできるようになりました。(CQ-4293906)
 
@@ -177,7 +177,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * スクリーンリーダーを使用する近視眼的なユーザーが混乱しないように、装飾用のアイコンと画像がスクリーンリーダーで無視されるようになりました。(CQ-4272944)
 
-**Experience Manager Assetsで修正された問題**
+**Experience Managerアセットで修正された問題**
 
 [!DNL Adobe Experience Manager] 6.5.5.0 Assetsには、次の問題の修正が含まれています。
 
@@ -185,7 +185,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * メタデータスキーマでカスケーディングポップアップを使用する場合、（子のドロップダウンから）アポストロフィを含むドロップダウンオプションを選択して保存すると、アセットの [!UICONTROL プロパティ] (NPR-32649)を再度開いた後に、選択されたアポストロフィオプションが消えます。
 
-* [!UICONTROL 「アセットインサイトの同期ジョブ] 」は、（Analytics側で）次のエントリ(NPR-32674)に移動する代わりに無効なエントリが見つかると停止し、失敗します。
+* [!UICONTROL 「アセットインサイトの同期ジョブ] 」は、(Analytics側で)次のエントリに移動する代わりに無効なエントリが見つかると停止し、失敗します(NPR-32674)。
 
 * パノラマビューアのモバイルブラウザでは、モーションセンサーがデフォルトで無効になっているので、ジャイロは機能しません。(CQ-4272937)
 
@@ -199,7 +199,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * 10,000を超えるアセットを含むスマートコレクションを開くと、ログ内でトラバーサルの警告が観察されます(NPR-32980)。
 
-* Dynamic Media Scene7 runmode(NPR-32995)で [!DNL Adobe Experience Manager] 作業中にアセットを別のフォルダに移動すると、アセット名が小文字に変更されます。
+* Dynamic MediaScene7実行モード(NPR-32995)で [!DNL Adobe Experience Manager] 作業している場合、アセットを別のフォルダに移動すると、アセット名が小文字に変更されます。
 
 * 検索されたアセットは、検索結果からそのプロパティに移動した後で検索結果に戻って削除した後は削除できません(NPR-32998)。
 
@@ -213,11 +213,11 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * スマート切り抜きプロファイルを含むフォルダーの下のPDFのレンディションパネルを開くログ(CQ-4294201)で例外が発生する。
 
-* Dynamic Media Scene7実行モード(CQ-4294200)を持つExperience Managerで [!UICONTROL ダイナミックメディア同期モード] がデフォルトで無効になっている場合、画像プリセットは公開されません。
+* Dynamic MediaがScene7実行モード(CQ-4294200)とExperience Managerして [!UICONTROL Dynamic Mediaの同期モード] が初期設定で無効になっている場合、画像プリセットは公開されません。
 
 * バルクアップロード中のアセット処理が停止し、ワークフローインスタンスにDAM更新アセットのスタックインスタンスが表示される(CQ-4293916)。
 
-* Experience Managerでのダイナミックメディア設定の作成は機能しますが、ユーザーインターフェイスで「保存」を選択しても何も起こりません。(CQ-4292442)
+* Experience ManagerでのDynamic Media設定の作成は機能しますが、ユーザーインターフェイスで「保存」を選択しても何も起こりません。(CQ-4292442)
 
 * Safari/Macでのプログレッシブ再生でF4Vビデオアセットのプレビューが機能しない(CQ-4289844)。
 
@@ -229,23 +229,23 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 * 6.5.5.0で修正されたパフォーマンスの問題は次のとおりです(CQ-4279206)。
 
-   * 大きなバイナリをダイナミックメディア画像処理サーバーにアップロードするには、時間がかかり過ぎます。
+   * 大きなバイナリをDynamic MediaのImage Processing Serverにアップロードするには、時間がかかりすぎます。
 
-   * Dynamic Media Scene7アーキテクチャにより、Experience Managerでのサムネールの生成時間が長くなりました。
+   * Scene7のアーキテクチャがDynamic Mediaするので、Experience Manager時のサムネール生成時間が長くなりました。
 
-* 大量のアセットを持つお客様のDynamic Media Scene7への移行に失敗する問題(CQ-4279206)。
+* アセット数が多いお客様のScene7への移行に関するDynamic Mediaの問題が発生する(CQ-4279206)。
 
 * ビデオ360ビューワのレイアウトが使用され `setVideo` ると壊れ、使用時にビデオが下に移動し `video= modifier` ます(CQ-4263201)。
 
-* Experience Manager SDLパッケージ(NPR-33175)のインストール中にエラーメッセージが表示されます。
+* Experience ManagerSDLパッケージ(NPR-33175)のインストール中にエラーメッセージが表示されます。
 
 ### プラットフォーム {#platform-6550}
 
 * マップエントリが [!DNL Sling]`sling:match``/etc/maps` (NPR-33362)の下に作成された場合、フィルターは呼び出されません。
-* Experience Managerが、NPR-32988を使用したセグメント化障害によってクラッシュ [!DNL Apache Lucene] する。
-* [!DNL Jackson] コアパッケージがExperience Manager uberjarファイル(NPR-32848)に見つかりません。
+* (NPR-32988)を使用したセグメント化障害によるExperience Managerのクラッシュ [!DNL Apache Lucene] 。
+* [!DNL Jackson] コアパッケージがExperience Manageruberjarファイルに見つかりません(NPR-32848)。
 * CRXDE Liteは、ノードの `jcr:primaryType` プロパティ(NPR-32611)の読み取り権限を持たないユーザー向けのコンテンツを読み込みません。
-* [!DNL Granite] メンテナンスタスクスケジューラーは、Experience Managerのデプロイメント中に再初期化する頻度が高すぎます(CQ-4294627)。
+* [!DNL Granite] メンテナンスタスクスケジューラーは、Experience Managerデプロイメント中に再初期化する頻度が高すぎます(CQ-4294627)。
 * SQLクエリが長時間（例えば7時間）実行されると、Experience Managerは応答を停止します(NPR-33044)。
 
 ### ユーザーインターフェイス {#ui-6550}
@@ -258,10 +258,10 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 ### 統合 {#integrations-6550}
 
 * Adobe Targetコンポーネントを含むページが公開されると、内部キャッシュはクリアされます(NPR-33162)。
-* Adobe Targetとの統合は11(NPR-33111)では機能しません [!DNL Windows Internet Explorer] 。
-* Adobe Targetの設定時に、レポートソース(NPR-32502)の選択時に [!UICONTROL 会社] と [!UICONTROL レポートスイート] の各フィールドが表示されません。
-* Adobe I/O [!DNL Experience Fragments] を使用して書き出す場合、「ソース製品」などのメタデータはAdobe Targetに書き出されません(NPR-32159)。
-* ローカルのExperience Manager管理者グループに属する権限のあるIMSユーザーは、IMS設定を作成または変更できません(NPR-33045)。
+* Adobe Targetとの統合は11では機能しません( [!DNL Windows Internet Explorer] NPR-33111)。
+* Adobe Targetの設定時に、 [!UICONTROL 会社] と [!UICONTROL レポートスイート] (NPR-32502)の各フィールドはレポートソースの選択時に表示されません。
+* Adobe I/O [!DNL Experience Fragments] を使用して書き出す場合、「Source Product」などのメタデータはAdobe Targetに書き出されません(NPR-32159)。
+* ローカルExperience Managerの管理者グループに属する権限のあるIMSユーザーは、IMS設定を作成または変更できません(NPR-33045)。
 * Adobe Launchの設定ページにすべてのレコードが表示されるわけではありません(NPR-33011)。
 * JavaScriptエラー(NPR-32996)が原因で、content-authorsグループのユーザーはAdobe Targetコンポーネントのプロパティを編集できません。
 
@@ -290,7 +290,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 * [!UICONTROL アクティビティストリーム] ページ(NPR-33146)へのアクセス時にエラーが発生します。
 * オーサーインスタンスで削除されたグループは、すべての発行インスタンス(NPR-33199)から削除されません。
 * 作成者は、新しいグループを作成した後、11の [!UICONTROL コミュニティグループ][!DNL Internet Explorer] (NPR-33205)セクションにリダイレクトされません。
-* Experience Managerのインボックスでメッセージにアクセスしても、メッセージのステータスは読み取り(NPR-32764)に変更されません。
+* Experience Managerの受信トレイでメッセージにアクセスしても、メッセージのステータスは読み取り(NPR-32764)に変更されません。
 * グループを編集してサムネール画像を変更しても、グループサムネール画像は更新されません(NPR-32599)。 [!DNL Communities]
 * ユーザは、コミュニティ内の別のユーザに電子メールを送信できません(NPR-32598)。
 * 送信されたブログは、ユーザがページを更新するまで表示されません(NPR-32391)。
@@ -299,13 +299,13 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 ### ワークフロー {#workflow-6550}
 
 * 左側のレールの「 [!UICONTROL タイムライン] 」オプションの読み込みに、予想以上に時間がかかります(NPR-32851)。
-* Experience Managerインスタンスを再起動した後、コレクションのレビュータスクの電子メールに、正しくないペイロードリンクが含まれます(NPR-32774)。
+* Experience Managerインスタンスを再起動した後、コレクションのレビュータスクの電子メールに、正しくないペイロードリンク(NPR-32774)が含まれます。
 
 ### [!DNL Forms] {#forms-6550}
 
 >[!NOTE]
 >
->Experience Manager Service Packには、の修正は含まれていません [!DNL Forms]。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
+>Experience Managerサービスパックには、の修正が含まれていません [!DNL Forms]。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsに関する修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
 
 * Correspondence Management: レターを送信した後、ターゲット領域内のアセットの順序が変化する(NPR-33359、NPR-33153)。
 * アダプティブフォーム： ユーザーがアダプティブフォームを編集すると、 [!UICONTROL ページ開始] ( [!UICONTROL Page Information] )メニューの「情報のワークフロー」オプションが機能しません(NPR-33004)。
@@ -334,11 +334,11 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 >[!NOTE]
 >
->Adobe Experience Manager 6.5.5.0パッケージの削除またはアンインストールはお勧めしません。
+>Adobe Experience Manager6.5.5.0パッケージの削除またはアンインストールはお勧めしません。
 
 ### サービスパックのインストール {#install-service-pack}
 
-既存のAdobe Experience Manager 6.5インスタンスにService Packをインストールするには、次の手順を実行します。
+既存のAdobe Experience Manager6.5インスタンスにService Packをインストールするには、次の手順を実行します。
 
 1. Service Packは、 [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/AEM-6.5.5.0-Service-Pack) （パッケージ共有）または [Software Distribution（ソフトウェア配布）からダウンロードします](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
 
@@ -352,7 +352,7 @@ Experience Manager 6.5 Service Pack 5で導入された主な機能の完全な�
 
 **自動インストール**
 
-Adobe Experience Manager 6.5.5.0を作業インスタンスに自動的にインストールするには、次の2つの方法があります。
+Adobe Experience Manager6.5.5.0を作業インスタンスに自動的にインストールするには、2つの方法があります。
 
 A.サーバーがオンラインで使用可能になったら、パッケージを `../crx-quickstart/install` フォルダーに配置します。 パッケージが自動的にインストールされます。
 
@@ -360,7 +360,7 @@ B. Package Managerの [HTTP APIを使用します](https://docs.adobe.com/conten
 
 >[!NOTE]
 >
->Adobe Experience Manager 6.5.5.0は、ブートストラップのインストールをサポートしていません。
+>Adobe Experience Manager6.5.5.0は、Bootstrapのインストールをサポートしていません。
 
 **インストールの検証**
 
@@ -372,27 +372,27 @@ B. Package Managerの [HTTP APIを使用します](https://docs.adobe.com/conten
 
 このリリースで動作が確認されたプラットフォームについて詳しくは、 [技術要件を参照してください](/help/sites-deploying/technical-requirements.md)。
 
-### Adobe Experience Manager Formsアドオンパッケージのインストール {#install-aem-forms-add-on-package}
+### Adobe Experience Managerフォームアドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->AEM Forms を使用していない場合はスキップしてください。Adobe Experience Manager Formsに加えられた修正は、個別のアドオンパッケージを通じて提供されます。
+>AEM Forms を使用していない場合はスキップしてください。Adobe Experience Managerフォームの修正は、別のアドオンパッケージを通じて提供されます。
 
-1. Adobe Experience Manager Service Packがインストールされていることを確認します。
+1. Adobe Experience Managerサービスパックがインストールされていることを確認します。
 1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) for your operating system.
 1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
-### JEE上のAdobe Experience Manager Formsのインストール {#install-aem-forms-jee-installer}
+### JEE上のAdobe Experience Managerフォームのインストール {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->JEE で AEM Forms を使用していない場合はスキップします。JEE上のAdobe Experience Manager Formsに関する修正は、別のインストーラーを使用して提供されます。
+>JEE で AEM Forms を使用していない場合はスキップします。JEE上のAdobe Experience ManagerFormsに関する修正は、別のインストーラーを使用して提供されています。
 
 For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes for patch 0014](https://helpx.adobe.com/jp/aem-forms/quick-fixes/6-5/jee-patch-0014.html).
 
 ### UberJar {#uber-jar}
 
-Experience Manager 6.5.5.0のUberJarは、 [Adobe Public Mavenリポジトリで使用できます](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/)。
+Experience Manager6.5.5.0のUberJarは、 [Adobe Public Mavenリポジトリで使用できます](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/)。
 
 MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方法を参照し](/help/sites-developing/ht-projects-maven.md) 、プロジェクトPOMに次の依存関係を含めます。
 
@@ -414,7 +414,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| 統合 | AEM **[!UICONTROL クラウドサービスのオプトイン画面は非推奨です]** 。 AEMとターゲットの統合がAEM 6.5で更新され、Adobe IMSとI/Oを介した認証を使用するTarget Standard APIをサポートするようになりました。また、分析とパーソナライゼーションのためのAEMページの実装が増えるにつれ、オプトインウィザードは機能的に無関係になりました。 | 各AEMクラウドサービスを介して、システム接続、Adobe IMS認証、Adobe I/O統合を設定します。 |
+| 統合 | AEM cloud servicesのオプトイン **[!UICONTROL 画面は非推奨です]** 。 AEM 6.5で更新されたAEMとTargetの統合により、Adobe IMSとI/Oを介した認証を使用するTarget StandardAPIがサポートされ、AEMページの解析とパーソナライゼーションを実装するためのAdobe Launchの役割が増加しているので、オプトインウィザードは機能的に無関係です。 | 各AEM cloud servicesを介して、システム接続、Adobe IMS認証、Adobe I/O統合を設定します。 |
 
 ## 既知の問題 {#known-issues}
 
@@ -435,7 +435,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * SUM、MAX、MINなどの集計機能が使用されると、アダプティブフォームのサーバー側検証に失敗します。 CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
-   * ダイナミックメディアのインタラクティブ画像のホットスポットは、買い物かご可能なバナービューアでアセットをプレビューすると表示されません。
+   * 買い物かご可能なバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されません。
 
 ## OSGi bundles and content packages included {#osgi-bundles-and-content-packages-included}
 
