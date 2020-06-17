@@ -3,7 +3,7 @@ title: デジタルアセットのダウンロード元 [!DNL Adobe Experience M
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 527b2f50efac606a0a696c8f56b0d725f79cd692
+source-git-commit: 64c09e454960a40632059a85f0861deed1899b86
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 41%
@@ -29,7 +29,7 @@ ht-degree: 41%
 1. フォルダーを選択するか、フォルダー内の1つ以上のアセットを選択します。
 1. On the toolbar, tap **[!UICONTROL Download]**.
 
-   ![Experience Managerアセットからアセットをダウンロードする場合に使用できるオプション](/help/assets/assets/asset-download.png)
+   ![Experience Managerアセットからアセットをダウンロードする場合に使用できるオプション](/help/assets/assets/asset-download1.png)
 
    *ダウンロードダイアログボックスのオプション*
 
