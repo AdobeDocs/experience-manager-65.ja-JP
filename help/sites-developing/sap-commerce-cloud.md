@@ -1,8 +1,8 @@
 ---
 title: SAP Commerce Cloud を使用した開発
 seo-title: SAP Commerce Cloud を使用した開発
-description: SAP Commerce cloud統合フレームワークには、APIとの統合レイヤーが含まれます
-seo-description: SAP Commerce cloud統合フレームワークには、APIとの統合レイヤーが含まれます
+description: SAP Commerce Cloud統合フレームワークには、APIとの統合レイヤーが含まれます
+seo-description: SAP Commerce Cloud統合フレームワークには、APIとの統合レイヤーが含まれます
 uuid: a780dd17-027a-4a61-af8f-3e2f600524c7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+workflow-type: tm+mt
+source-wordcount: '2331'
+ht-degree: 83%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 >
 >[API に関するドキュメント](/help/sites-developing/ecommerce.md#api-documentation)もお読みください。
 
-統合レイヤーを使用するために、標準搭載の多くのAEMコンポーネントが用意されています。 現時点では、以下のようなものがあります。
+統合レイヤーを使用するために、標準搭載のAEMコンポーネントが多数用意されています。 現時点では、以下のようなものがあります。
 
 * 製品表示コンポーネント
 * 買い物かご
@@ -48,7 +51,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEMは、およびをサ `Resource.adaptTo()` ポートし `CommerceService` ます `Product`
+* AEMは、および `Resource.adaptTo()` をサポート `CommerceService` します `Product`
 
    * The `adaptTo` implementation looks for a `cq:commerceProvider` property in the resource&#39;s hierarchy:
 
@@ -99,18 +102,17 @@ e コマースフレームワークは任意の e コマースソリューショ
 
 ### hybris 4 向けの開発 {#developing-for-hybris}
 
-eCommerce Integration Frameworkの傲慢な拡張は、Hybris 5をサポートするように更新され、Hybris 4との後方互換性を維持しました。
+Hybris 4との後方互換性を維持しつつ、Hybris 5をサポートするようにeCommerce Integration Frameworkのhybris拡張が更新されました。
 
 コード内のデフォルト設定は hybris 5 向けに最適化されています。
 
 hybris 4 向けの開発をおこなうには、以下が必要です。
 
-* mavenを呼び出す際に、次のコマンドライン引数をコマンドに追加します。
+* Mavenを呼び出すときに、次のコマンドライン引数をコマンドに追加します
 
    `-P hybris4`
 
-   
-事前設定済みのHybris 4配布物をダウンロードし、バンドルに埋め込みます。
+   事前設定済みのHybris 4配布物をダウンロードし、バンドルに埋め込みます。
 
    ```
    cq-commerce-hybris-server
@@ -135,10 +137,10 @@ hybris では、顧客の買い物かごなどの情報を格納するために�
 
 #### CommerceSession {#commercesession}
 
-* このセッションは、買い物かごを「所 **有」する**
+* このセッションは、 **買い物かごを「所有」します**
 
    * 追加や削除などを実行します。
-   * は、買い物かごに対してさまざまな計算を行います。
+   * は、買い物かごにさまざまな計算を行います。
 
       `commerceSession.getProductPrice(Product product)`
 
@@ -170,6 +172,7 @@ hybris で管理されている製品データを AEM で使用できるよう�
 * hybris 拡張はポーリングインポーター（&quot;hybris&quot; scheme&quot;）を提供します。このインポーターは、変更を指定の時間間隔で AEM に読み込むように設定できます（例えば 24 時間おきにする場合は、秒単位で以下のように指定します）。
 
    * 
+
       ```
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
@@ -223,8 +226,9 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 >1. `size`
    >
    >
-1. もう1つ
+1. もう一度
    >   This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
+
 >
 
 
@@ -239,7 +243,7 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 
 製品バリエーションと製品データノードの間には 1 対 1 のマッピングが必要です。
 
-製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品にS、M、Lのバリエーションがある場合、製品データは次のようになります。
+製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品のバリエーションがS、M、Lの場合、製品データは次のようになります。
 
 ```shell
 etc
@@ -260,7 +264,7 @@ content
       shirt-l
 ```
 
-最後に、製品データを使用するための要件はありません。カタログ内の参照の下に、すべての製品データを配置できます。ただし、すべての製品データを複製しない限り、実際に複数のカタログを持つことはできません。
+最後に、製品データを使用するための要件はありません。カタログ内の参照の下に、すべての製品データを配置できます。 しかし、すべての製品データを複製しない限り、実際には複数のカタログを持つことはできません。
 
 **API**
 
@@ -429,7 +433,7 @@ public class AxisFilter implements VariantFilter {
    * hybris のケースでは、hybris サーバーが買い物かごを管理します。
    * AEM 汎用ケースでは、買い物かごは [ClientContext](/help/sites-administering/client-context.md) に格納されます。
 
-**パーソナライズ**
+**パーソナライズ機能**
 
 * パーソナライズは、常に [ClientContext](/help/sites-administering/client-context.md) から取得する必要があります。
 * A ClientContext `/version/` of the cart is created in all cases:
@@ -556,9 +560,9 @@ AEM は様々な e コマースシステムと統合できます。これを実�
 
    AEM is presumed to be the *only* web front-end and therefore performs *all* authentication.
 
-* スレーブアカウント
+* ハイブリスのアカウント
 
-   AEMは買い物客ごとにハイブリストでスレーブアカウントを作成します。 スレーブアカウントのユーザー名はAEMユーザー名と同じです。 暗号化されたランダムパスワードが自動生成され、暗号化された状態で AEM に保存されます。
+   AEMは買い物客ごとに、おろかさで対応する（下位の）アカウントを作成します。 このアカウントのユーザ名はAEMユーザ名と同じです。 暗号化されたランダムパスワードが自動生成され、暗号化された状態で AEM に保存されます。
 
 #### 既存ユーザー {#pre-existing-users}
 
