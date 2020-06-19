@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1910'
+ht-degree: 53%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 Correspondence Management ソリューションでは、「通信を作成」UI にカスタムアクションを追加できます。
 
-このドキュメントのシナリオでは、通信を作成ユーザーインターフェイスでボタンを作成し、レターをレビュー用のPDFとして電子メールに添付して共有する方法を説明します。
+このドキュメントのシナリオでは、通信を作成ユーザーインターフェイスでボタンを作成して、レターをレビュー用のPDFとして電子メールに添付して共有する方法を説明します。
 
 ### 前提条件 {#prerequisites}
 
@@ -90,7 +93,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
    </extensionsConfig>
    ```
 
-1. レターを電子メールで送信するには、LiveCycle Forms ワークフローを使用します。次のよ追加うに、acmExtensionsConfig.xmlのmodelExtensionタグの下にあるcustomActionタグ。
+1. レターを電子メールで送信するには、LiveCycle Forms ワークフローを使用します。次のよ追加うに、acmExtensionsConfig.xmlのmodelExtensionタグの下にcustomActionタグがあります。
 
    ```xml
     <customAction name="Letter Review" label="Letter Review" tooltip="Letter Review" styleName="" permissionName="forms-users" actionHandler="CM.domain.CCRCustomActionHandler">
@@ -104,20 +107,20 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    | **名前** | **説明** |
    |---|---|
-   | 名前 | 実行するアクションの英数字の名前。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
+   | 名前 | 実行するアクションの英数字による名前。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
    | label | アクションボタンに表示するラベル。 |
    | tooltip | ボタンのツールチップテキスト。ボタンにカーソルを置くと表示されます。 |
-   | styleName | アクションボタンに適用されるカスタムスタイルの名前。 |
+   | styleName | アクションボタンに適用するカスタムスタイルの名前。 |
    | permissionName | 対応するアクションは、ユーザーがpermissionNameで指定された権限を持つ場合にのみ表示されます。 When you specify permissionName as `forms-users`, all the users get access to this option. |
    | actionHandler | ユーザーがボタンをクリックしたときに呼び出されるActionHandlerクラスの完全修飾名です。 |
 
-   上記のパラメーター以外に、customAction には追加の設定を関連付けることができます。これらの追加設定は、CustomActionオブジェクトを通じてハンドラーで使用できるようになります。
+   上記のパラメーター以外に、customAction には追加の設定を関連付けることができます。これらの追加の設定は、CustomActionオブジェクトを通じてハンドラーで使用できます。
 
    | **名前** | **説明** |
    |---|---|
-   | serviceName | customActionにserviceNameという名前の子タグが含まれている場合、関連するボタンまたはリンクをクリックすると、serviceNameタグで表される名前でプロセスが呼び出されます。 このプロセスの署名がレターポストプロセスと同じであることを確認します。 サービス名に「Forms Workflow ->」プレフィックスを追加します。 |
-   | タグ名にcm_プレフィックスを含むパラメータ | customActionにcm_で始まる子タグが含まれている場合、後処理（Letter Post ProcessまたはserviceNameタグで表される特別なプロセス）では、これらのパラメーターが、cm_プレフィックスが削除された関連タグの下の入力XMLコードで使用できます。 |
-   | actionName | クリックによる後処理の場合、送信されたXMLには、ユーザーアクションの名前を持つタグの下に、名前の付いた特別なタグが含まれます。 |
+   | serviceName | customActionにserviceNameという名前の子タグが含まれている場合、関連するボタンまたはリンクをクリックすると、serviceNameタグで表される名前でプロセスが呼び出されます。 このプロセスの署名がLetter PostProcessと同じであることを確認します。 サービス名に「Forms Workflow ->」プレフィックスを追加します。 |
+   | タグ名にcm_プレフィックスが含まれるパラメーター | customActionに名前cm_で始まる子タグが含まれる場合、後処理（レター後処理か、serviceNameタグで表される特別な処理）では、これらのパラメーターは、cm_プレフィックスが削除された関連タグの下の入力XMLコードで使用できます。 |
+   | actionName | クリックが後処理に発生した場合は常に、送信されたXMLには、ユーザーアクションの名前を持つタグの下に、名前の付いた特別なタグが含まれます。 |
 
 1. 「**すべて保存**」をクリックします。
 
@@ -155,7 +158,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
    `loc.letterInstance.letterreview.label=Revue De Lettre`
 
-   同様に、このファイルにツールチップやスタイルなどのプロパティを追加できます。
+   同様に、このファイルにツールチップやスタイルなどのプロパティを追加することもできます。
 
 1. 「**すべて保存**」をクリックします。
 
@@ -183,11 +186,11 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
 カスタムのアクション処理の場合は、CRX の /apps branch にある cm.domain.js ファイルのオーバーレイを作成します。
 
-アクション/ボタンをクリックしたときのアクション/ボタンの処理には、次のロジックが含まれます。
+アクションやボタンをクリックしたときのアクションやボタンの処理には、次のロジックが含まれます。
 
 * 新しく追加したアクションを表示または非表示にする：actionVisible() 関数をオーバーライドして実行します。
-* 新しく追加したアクションの有効化/無効化：actionenabled()関数をオーバーライドして実行します。
-* ユーザーがボタンをクリックした場合の実際のアクションの処理：handleAction()関数の実装をオーバーライドして実行します。
+* 新しく追加したアクションを有効または無効にする： actionEnabled()関数をオーバーライドして実行します。
+* ユーザーがボタンをクリックした場合の実際のアクションの処理： handleAction()関数の実装をオーバーライドして実行します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスします。必要に応じて、管理者としてログインします。
 
@@ -322,12 +325,12 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
 ### LiveCycle プロセスの追加によるアクション<span class="acrolinxCursorMarker"></code>処理の有効化 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
-このシナリオでは、次のコンポーネントを有効にします。これは、添付されたcomponents.zipファイルの一部です。
+このシナリオでは、次のコンポーネントを有効にします。これらのコンポーネントは、添付されたcomponents.zipファイルの一部です。
 
 * DSC コンポーネント jar（DSCSample.jar）
 * レビュープロセス LCA（SendLetterForReview.lca）用の送信レター
 
-components.zipファイルをダウンロードして解凍し、DSCSample.jarおよびSendLetterForReview.lcaファイルを取得します。 これらのファイルは、次の手順に従って使用します。components.zip
+components.zipファイルをダウンロードして解凍し、DSCSample.jarファイルとSendLetterForReview.lcaファイルを取得します。 これらのファイルは、次の手順に従って使用します。components.zip
 
 #### LiveCycle サーバーの設定と LCA プロセスの実行 {#configure-the-livecycle-server-to-run-the-lca-process}
 
@@ -342,9 +345,10 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
 1. Enter the following details and click **Save**:
 
-   * **Server Url**:アクションハンドラーコードが使用するSend For ReviewサービスのLCサーバーのURLです。
-   * **Username**:LCサーバーの管理者ユーザー名
+   * **Server Url**: アクションハンドラーコードが使用するSend For ReviewサービスのLCサーバーのURLです。
+   * **ユーザー名**: LCサーバーの管理者ユーザー名
    * **パスワード**：管理者ユーザー名のパスワード
+
    ![Adobe LiveCycle Client SDK Configuration](assets/3_clientsdkconfiguration.png)
 
 #### Install LiveCycle Archive (LCA) {#install-livecycle-archive-lca}
@@ -359,7 +363,7 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
 1. **ホーム／サービス／アプリケーションおよびサービス／アプリケーションの管理**&#x200B;に移動します。
 
-1. SendLetterForReviewアプリケーションが既に存在する場合は、この手順の残りの手順をスキップし、それ以外の場合は次の手順に進みます。
+1. SendLetterForReviewアプリケーションが既に存在する場合は、この手順の残りの手順をスキップします。存在しない場合は、次の手順に進みます。
 
    ![UI 内の SendLetterForReview アプリケーション](assets/12_applicationmanagementlc.png)
 
@@ -375,11 +379,11 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
 1. 「**読み込み**」をクリックします。
 
-#### ホワイトリスト登録済みサービスリストへの ServiceName の追加 {#adding-servicename-to-the-whitelisted-service-list}
+#### Adding ServiceName to the Allowlist Service list {#adding-servicename-to-the-allowlist-service-list}
 
 AEM サーバーにアクセスする必要のある LiveCycle サービスを AEM サーバーで指定します。
 
-1. に管理者としてログインしま `https:/[host]:'port'/system/console/configMgr`す。
+1. 管理者としてにログインし `https:/[host]:'port'/system/console/configMgr`ます。
 
 1. Locate and click **Adobe LiveCycle Client SDK Configuration**. Adobe LiveCycle Client SDK Configurationパネルが表示されます。
 1. In the Service Name list, click + icon and add a serviceName **SendLetterForReview/SendLetterForReviewProcess**.
@@ -402,11 +406,11 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 #### DSC サービスの設定 {#configure-the-dsc-service}
 
-Correspondence Management APIを使用するには、DSCSample.jar(このドキュメントに添付されているcomponents.zipの一部として添付)をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされた後、AEMサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
+Correspondence Management APIを使用するには、DSCSample.jar(このドキュメントに添付されているcomponents.zipに含まれています)をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされると、AEMサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
 
 For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
-1. 次の場所にあるDSCSample.jarのcmsa.propertiesのAEMサーバーURLを更新します。
+1. DSCSample.jarのcmsa.propertiesでAEMサーバーのURLを更新します。次の場所にあります。
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
@@ -416,18 +420,19 @@ For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/form
    * **crx.username**= AEM ユーザー名
    * **crx.password**= AEMパスワード
    * **crx.appRoot**=/content/apps/cm
+
    >[!NOTE]
    >
    >サーバー側で変更を加えるたびに LiveCycle サーバーは再起動します。独自の LiveCycle コンポーネントの作成について詳しくは、「[カスタムの DSC 開発を通じた LiveCycle ES ソフトウェアの拡張](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html)」を参照してください。
 
-   DSCSample.jarファイルは、renderLetter APIを使用します。 For more Information about the renderLetter API, see [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
+   DSCSample.jarファイルはrenderLetter APIを使用します。 For more Information about the renderLetter API, see [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
 
 #### LiveCyle への DSC の読み込み {#import-dsc-to-livecyle}
 
-DSCSample.jarファイルは、renderLetter APIを使用して、Cが入力として与えるXMLデータからPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
+DSCSample.jarファイルはrenderLetter APIを使用して、Cが入力として与えたXMLデータからのPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 
 1. Livecycle Workbenchを起動してログインします。
-1. Select **Window > Show Views > Components**. コンポーネント表示がWorkbench ES2に追加されます。
+1. **Window/Show表示/Componentsを選択します**。 コンポーネント表示がWorkbench ES2に追加されます。
 
 1. Right-click **Components** and select **Install Component**.
 
