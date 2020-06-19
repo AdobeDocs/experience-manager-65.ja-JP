@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '2190'
+ht-degree: 89%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 バックアップと復旧に関して次の点を考慮してください。
 
 * データベースは、GDS および AEM リポジトリの前にバックアップを取る必要があります。
-* バックアップのためにクラスター環境内でノードを下げる必要がある場合は、スレーブノードをマスターノードの前にシャットダウンしてください。そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、マスターノードはすべてのスレーブノードよりも前にライブにする必要があります。
+* バックアップ用にクラスター環境でノードを停止する必要がある場合は、セカンダリノードがプライマリノードの前にシャットダウンされていることを確認してください。 そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、プライマリノードは、セカンダリノードの前にライブにする必要があります。
 * クラスターの復旧操作では、アプリケーションサーバーはクラスター内の各ノードごとに停止する必要があります。
 
 ## グローバルドキュメントストレージディレクトリ {#global-document-storage-directory}
