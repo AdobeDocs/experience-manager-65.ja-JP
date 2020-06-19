@@ -3,7 +3,7 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 711cd438cc8962d310bb2bfbb14f079161aacce0
+source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 41%
@@ -77,16 +77,6 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 >[!NOTE]
 >
 >フィルタリングは、アセットバイナリの XMP ソースから派生したプロパティに対してのみ機能します。EXIF 形式や IPTC 形式などの XMP 以外のソースから派生したプロパティについては、フィルタリングは機能しません。例えば、アセットの作成日は、`CreateDate` という名前のプロパティに EXIF TIFF 形式で格納されています。Experience Managerは、この値をという名前のメタデータフィールドに格納し `exif:DateTimeOriginal`ます。 この場合は XMP 以外のソースなので、このプロパティにはフィルタリングは機能しません。
-
-<!-- TBD: The instructions don't seem to match the UI. I see com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.description
-in Config Manager. And the settings are,
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_blacklist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.blacklist.name
- 
-TBD: Make updates to configurations for allow and block list after product updates are done.
--->
 
 1. Configuration Manager を開くには、`https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 1. 「**[!UICONTROL Adobe CQ DAM XmpFilter]**」設定を開きます。
