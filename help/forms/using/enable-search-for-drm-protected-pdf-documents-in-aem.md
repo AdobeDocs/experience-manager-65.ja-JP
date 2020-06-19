@@ -11,7 +11,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: b79c147c-f846-4e48-bec0-8b658502bb6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '722'
+ht-degree: 86%
 
 ---
 
@@ -27,7 +30,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
 * OSGi 上で AEM Forms を使用している場合：
 
-   * [AEM Forms Document Security Indexer パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)を AEM Forms サーバーにインストールします。
+   * [AEM Forms Document Security Indexer パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)を AEM Forms サーバーにインストールします。
 
    * JEE サーバー上で AEM Forms が起動して実行されていること、および Document Security が JEE サーバー上の対応する AEM Forms にインストールされていることを確認します。保護されたドキュメントのインデックスを作成するには、JEE サーバー上の AEM Form が必要です。
 
@@ -37,12 +40,12 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
    * For AEM Forms on OSGi, the bundles are listed at https://&#39;[server]:[port]&#39;/system/console/bundles.
    * For AEM Forms on JEE, the bundles are listed at https://&#39;[server]:[port]&#39;/[context-path]/system/console/bundles. 例：https://localhost:8080/lc/system/console/bundles
 
-* *sun.util.calendar* パッケージをホワイトリストに登録します。パッケージをホワイトリストに登録するには、次の手順を実行します。
+* 許可リスト追加に対する *sun.util.calendar* パッケージ。 パッケージを許可リストに追加するには、次の手順を実行します。
 
    1. AEM Web コンソールを開きます。The URL is https://&#39;[server]:[port]&#39;/system/console/configMgr.
    1. **デシリアライゼーションファイアウォール設定**&#x200B;を探して開きます。
 
-   1. Add the sun.util.calendar package to the Whitelisted classes or package prefixes field and click **Save**.
+   1. Add the sun.util.calendar package to the Allowlisted classes or package prefixes field and click **Save**.
 
 ### AEM Forms JEE と OSGi スタック間の安全な接続の確立 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 
@@ -64,7 +67,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
 #### 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
 
-1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
+1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/jp/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
 1. AEM Web コンソールを開きます。The URL is https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. **Adobe LiveCycle Client SDK** Bundle を探して開きます。次の各プロパティの値を指定します。
 
