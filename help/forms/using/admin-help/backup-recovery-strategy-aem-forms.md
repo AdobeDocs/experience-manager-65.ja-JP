@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1520'
+ht-degree: 92%
 
 ---
 
@@ -45,7 +48,7 @@ AEM Forms のバックアップ方法には、次の 2 種類のバックアッ�
 
    * 管理コンソールのバックアップ設定ページを使用します。スナップショットモードを開始するには、「セーフバックアップモードで稼動する」チェックボックスを選択します。スナップショットモードを終了するには、このチェックボックスの選択を解除します。
    * LCBackupMode スクリプト（[データベース、GDS およびコンテンツ保存場所のルートディレクトリのバックアップ](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)を参照）を使用します。スナップショットバックアップモードを終了するには、スクリプトの引数で `continuousCoverage` パラメーターを `false` に設定するか、`leaveContinuousCoverage` オプションを使用します。
-   * 提供されているバックアップ/リカバリAPIを使用します。 <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
+   * 提供されているバックアップ/回復APIを使用します。 <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
 
 * **ローリングバックアップ**&#x200B;モードでは、システムが常にバックアップモードになり、前のセッションが解放されるとすぐに新しいバックアップモードセッションが初期化されます。ローリングバックアップモードにはタイムアウトは関連付けられません。LCBackupMode スクリプトまたは API を呼び出してローリングバックアップモードを終了すると、新しいローリングバックアップモードセッションが開始します。このモードでは継続的なバックアップがサポートされ、GDS ディレクトリから古いドキュメントや不要なドキュメントを消去できるので便利です。ローリングバックアップモードは、「Backup and Recovery」ページではサポートされません。回復シナリオの後、ローリングバックアップモードは引き続き有効になります。継続的なバックアップモード（ローリングバックアップモード）を終了するには、LCBackupMode スクリプトで `leaveContinuousCoverage` オプションを使用します。
 
@@ -85,7 +88,7 @@ AEM Forms を異なる環境に回復する場合、次のような変更点が�
    1. **Admin Options** をクリックします。
    1. **Start** をクリックして、リポジトリのアセットを同期します。
 
-1. クラスター環境では、マスターノード（AEM に関して）はスレーブノードよりも前に立ち上げなければなりません。
+1. クラスター環境では、プライマリノード（AEMに関して）はセカンダリノードの前に立ち上がっている必要があります。
 1. システムの通常処理が有効になるまで、Web、SOAP、EJB のプロセスイニシエーターなど、内部ソースまたは外部ソースからプロセスが開始されないようにします。
 
 メイン AEM Forms データベースを移動または変更した場合は、ご使用のアプリケーションサーバーに対応するインストールガイドを参照して、AEM Forms データソースの IDP_DS および EDC_DS のデータベース接続情報を更新します。
