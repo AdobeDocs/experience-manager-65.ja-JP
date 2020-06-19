@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1029'
+ht-degree: 93%
 
 ---
 
@@ -28,7 +31,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
 プロパティは説明がなくても分かりますが、重要なプロパティは次のとおりです。
 
-* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEMの間でhttps経由で通信する場合は、AEMを次のJVMと開始します
+* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEM間でHTTPS経由で通信する場合は、AEMを次のJVMと開始します
 
    ```
    argument
@@ -153,7 +156,7 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 LiveCycle のほとんどの Document Service には認証が必要です。次のオプションのいずれかを使用すると、コードに資格情報を明示的に指定せずにこれらのサービスを開始できます。
 
-### Whitelist 設定 {#whitelist-configuration}
+### 許可リスト設定 {#allowlist-configuration}
 
 LiveCycle Client SDK 設定には、サービス名についての設定が含まれています。この設定は、呼び出しロジックが追加設定なしに管理者資格情報を使用するサービスのリストです。例えば、DirectoryManager サービス（User Management API の一部）をこのリストに追加する場合、すべてのクライアントコードはこのサービスを直接使用することが可能で、呼び出しレイヤーは LiveCycle サーバーに送信された要求の一部として、設定された資格情報を自動的に渡します。
 
