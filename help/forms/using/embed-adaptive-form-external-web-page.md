@@ -9,7 +9,10 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '979'
+ht-degree: 65%
 
 ---
 
@@ -23,7 +26,7 @@ AEM の外側にホストされた Web ページか [AEM サイトページに�
 外部 Web サイトにアダプティブフォームを埋め込む前に次の手順を実行します。
 
 * AEM Forms サーバーのパブリッシュインスタンスに埋め込むアダプティブフォームを発行します。
-* Web サイト上で、アダプティブフォームをホストする Web ページを決定するか、新規に作成します。Ensure that the webpage can [read jQuery files from a CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) or has a local copy of the jQuery embeded. jQueryは、アダプティブフォームをレンダリングするために必要です。
+* Web サイト上で、アダプティブフォームをホストする Web ページを決定するか、新規に作成します。Ensure that the webpage can [read jQuery files from a CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) or has a local copy of the jQuery embeded. アダプティブフォームをレンダリングするには、jQueryが必要です。
 * When AEM server and the web page are on different domains, perform the steps listed in sectiion, [enable AEM Forms to serve adaptive forms to a cross domain site](#cross-site).
 
 ## アダプティブフォームの埋め込み {#embed-adaptive-form}
@@ -95,10 +98,10 @@ WebページにJavaScriptの数行を挿入することで、アダプティブ�
 
 1. 埋め込まれたコードで：
 
-   * Change value of the *options.path* variable with the path of the publish URL of the adaptive form. AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。例えば、上記のコードとアダプティブフォームは同じaem formsサーバー上にあるので、この例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用します。
+   * Change value of the *options.path* variable with the path of the publish URL of the adaptive form. AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。例えば、上記のコードとアダプティブフォームは同じaem formsサーバー上に存在するので、例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用します。
    * *options.dataRef* を URL を渡す属性と置き換えます。You can use the dataref variable to [prefill an adaptive form](/help/forms/using/prepopulate-adaptive-form-fields.md).
    * *options.themePath* をアダプティブフォームで設定されたテーマ以外のテーマへのパスと置き換えます。また、リクエストの属性を使用してテーマのパスを指定することができます。
-   * CSS_Selector は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、.customafsection cssクラスは、上の例のCSSセレクターです。
+   * CSS_Selector は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、.customafsection cssクラスは、上記の例のCSSセレクターです。
 
 アダプティブフォームが Web ページに埋め込まれました。埋め込まれたアダプティブフォームで次を確認します。
 
@@ -148,7 +151,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->その他のトポロジーをセットアップする場合は、ディスパッチャーレイヤーの送信、事前入力、およびその他の URL を必ずホワイトリストに登録してください。
+>その他のトポロジを設定する場合は、送信、事前入力およびその他のURLをディスパッチャーレイヤーの許可リストに追加します。
 
 ## ベストプラクティス {#best-practices}
 
@@ -158,11 +161,11 @@ Web ページにアダプティブフォームを埋め込む場合、次のベ�
 * Web ページのフォームコンテナがウィンドウの幅全体を使用するようにしてください。これにより、モバイルデバイスに設定された CSS ルールが確実に変更なしで動作するようになります。フォームコンテナがウィンドウの幅全体に表示されない場合は、さまざまなモバイルデバイスに適合するようにカスタムの CSS を記述する必要があります。
 * Use `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API to get the XML or JSON representation of form data in client.
 * Use `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API to unload the adaptive form from HTML DOM.
-* AEMサーバーから応答を送信する際に、access-control-接触チャネルヘッダーを設定します。
+* AEMサーバーから応答を送信する際に、access-control-接触チャネルのヘッダーを設定します。
 
 ## AEM Forms がクロスドメインサイトに対してアダプティブフォームをサーブできるようにする {#cross-site}
 
 1. On AEM author instance, go to AEM Web Console Configuration Manager at `https://'[server]:[port]'/system/console/configMgr`.
 1. **Apache Sling Referrer Filter** 構成を探して開きます。
-1. 「許可済みホスト」フィールドで、Web ページが存在するドメインを指定します。これにより、ホストは AEM サーバーに POST リクエストをできるようになります。また、通常の式を使用して、一連の外部アプリケーションドメインを指定できます。
+1. 「許可済みホスト」フィールドで、Web ページが存在するドメインを指定します。これにより、ホストは AEM サーバーに POST リクエストをできるようになります。正規式を使用して、一連の外部アプリケーションドメインを指定することもできます。
 
