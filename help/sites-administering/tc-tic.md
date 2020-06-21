@@ -10,7 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
+source-git-commit: 49b18b780c87501dcb2d9a00930da8eb5e51cff2
+workflow-type: tm+mt
+source-wordcount: '1563'
+ht-degree: 80%
 
 ---
 
@@ -27,20 +30,20 @@ For an overview of the content translation features in AEM, see [Translating Con
 
 ## 翻訳サービスプロバイダーへの接続 {#connecting-to-a-translation-service-provider}
 
-AEM を翻訳サービスプロバイダーに接続するためのクラウド設定を作成します。AEM には、Microsoft Translator にデフォルトで接続する機能が用意されています。その他の翻訳プロバイダーについては、[パッケージ共有](/help/sites-administering/package-manager.md#package-share)からコネクターパッケージをダウンロードしてください。 次の翻訳ベンダーは翻訳プロジェクト用の新しい API の実装を提供します。統合とパッケージ共有からダウンロードする方法については、次のリンクを参照してください。
+AEM を翻訳サービスプロバイダーに接続するためのクラウド設定を作成します。AEM には、Microsoft Translator にデフォルトで接続する機能が用意されています。 次の翻訳ベンダーは翻訳プロジェクト用の新しい API の実装を提供します。統合の詳細を参照するためのリンク：
 
-* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premiere Partner)
-* [Clay Tablet Technologies](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/clay-tablet-translation-connector-for-aem.html)（パッケージ共有にはないので、ベンダーに直接お問い合わせください）
-* [Lionbridge](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lionbridge-for-adobe-experience-manager.html)
-* [Cloudwords](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/cloudwords-for-adobe-translations-connector.html)
-* [CrossLang NV](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/crosslang-xtm-for-adobe-experience-manager.html)
-* [Lingotek](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lingotek-for-adobe-experience-manager.html)
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
+* [Clayタブレットテクノロジ](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
+* [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
+* [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
+* [Cloudwords](https://exchange.adobe.com/experiencecloud.details.90019.html)
+* [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
+* [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
+* [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
+* [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
+* [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
+* [Altlang](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
 * Microsoft（Microsoft Translator は AEM にプリインストールされています）
-* [Smartling](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/smartling-connector-for-adobe-experience-manager.html)
-* [SDL WorldServer](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdlworldserver-connector.html)
-* [SDL TMS](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdl-tms-translation-connector-for-adobe-experience-manager.html)
-* [Systran](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/systran-for-adobe-experience-manager.html)
-* [Altlang](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/Altlang.html)
 
 >[!NOTE]
 >
@@ -102,7 +105,7 @@ After you configure a translation integration framework, you can [associate it w
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）カテゴリする内容を説明する翻訳。このカテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える可能性があります。</td>
+   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。 カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
   </tr>
   <tr>
    <td>タグを翻訳</td>
@@ -131,7 +134,7 @@ After you configure a translation integration framework, you can [associate it w
 | プロパティ | 説明 |
 |---|---|
 | 翻訳プロバイダー | 翻訳を実行する翻訳プロバイダーを選択します。クラウド設定の作成対象となるプロバイダーがリストに表示されます。 |
-| コンテンツのカテゴリ | カテゴリする内容を説明する翻訳。このカテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える可能性があります。 |
+| コンテンツのカテゴリ | 変換するコンテンツを説明するカテゴリ。 カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。 |
 | グローバル共有ストアとして使用するロケールを選択 | (Optional) By selecting a locale for storing UGC, posts from all language copies will appear in one global conversation. By convention, choose the locale for the [base language](/help/communities/sites-console.md#translation) for the website. Choosing No Common Store will disable global translation. By default, global translation is disabled. |
 
 ### 「アセット」の設定プロパティ{#assets-configuration-properties}
@@ -159,7 +162,7 @@ Assets properties control how to configure assets. For more information about tr
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）カテゴリする内容を説明する翻訳。このカテゴリは、コンテンツの翻訳時に用語やフレーズの選択に影響を与える可能性があります。</td>
+   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。 カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
   </tr>
   <tr>
    <td>アセットを翻訳</td>
@@ -198,7 +201,7 @@ Assets properties control how to configure assets. For more information about tr
 
 翻訳統合フレームワークのクラウド設定によって、サービスプロバイダーへの接続に使用するクラウド設定が特定されます。ソースページをフレームワークのクラウド設定に関連付ける場合は、フレームワークのクラウド設定が使用するサービスプロバイダーのクラウド設定にページを関連付ける必要があります。
 
-ページをクラウド設定に関連付ける場合は、そのページの子ページが関連付けを継承します。例えば、/content/geometrixx/jp/productsページを翻訳統合フレームワークに関連付けた場合、製品ページとその下のすべてのページがフレームワークに従って翻訳されます。
+ページをクラウド設定に関連付ける場合は、そのページの子ページが関連付けを継承します。例えば、/content/geometrixx/en/productsページを翻訳統合フレームワークに関連付けた場合、製品ページとその下のすべてのページがフレームワークに従って翻訳されます。
 
 必要に応じて、子ページの関連付けを上書きできます。例えば、Web サイトのコンテンツがほとんど衣料品に関するものだとします。しかし、ページの 1 つのブランチには企業の説明が記述されています。サイトのルートページは、「衣料品」カテゴリを使用して、機械翻訳を指定する翻訳統合フレームワークに関連付けられます。企業の説明が記述されているブランチでは、「一般」カテゴリを使用して、機械翻訳を実行するフレームワークを使用します。
 
