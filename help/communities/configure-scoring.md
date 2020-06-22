@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 4170c7fe48a740e0574a32c7823841dc311fd565
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 52%
@@ -102,7 +102,7 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 
 
-![chlimage_1-193](assets/chlimage_1-193.png)
+![chlimage_1-248](assets/chlimage_1-248.png)
 
 ログエントリを表示するには：
 
@@ -118,7 +118,7 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
    * 例：`.../crx-quickstart/logs/scoring-debug.log`
 
-![chlimage_1-194](assets/chlimage_1-194.png)
+![chlimage_1-249](assets/chlimage_1-249.png)
 
 ## スコアおよびバッジの UGC {#ugc-for-scoring-and-badging}
 
@@ -217,7 +217,7 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
    ユーザーはブロンズのバッジを2つ獲得し、モデレーターバッジを与えられたので、ユーザーはこのようにフォーラムに参加して表示されます。
 
-![chlimage_1-195](assets/chlimage_1-195.png)
+![chlimage_1-250](assets/chlimage_1-250.png)
 
 >[!NOTE]
 >
@@ -255,7 +255,7 @@ For the Geometrixx Engage site, the user and their score is in a path contstruct
 
 The score is stored in the property `scoreValue_tl` which may directonly contain a value or indirectly refer to an atomicCounter.
 
-![chlimage_1-196](assets/chlimage_1-196.png)
+![chlimage_1-251](assets/chlimage_1-251.png)
 
 ### バッジ関連の UGC へのアクセス {#access-badging-ugc}
 
@@ -271,11 +271,11 @@ The score is stored in the property `scoreValue_tl` which may directonly contain
 
 #### Awarded badge {#awarded-badge}
 
-![chlimage_1-197](assets/chlimage_1-197.png)
+![chlimage_1-252](assets/chlimage_1-252.png)
 
 #### Assigned badge {#assigned-badge}
 
-![chlimage_1-198](assets/chlimage_1-198.png)
+![chlimage_1-253](assets/chlimage_1-253.png)
 
 ## 追加情報 {#additional-information}
 
