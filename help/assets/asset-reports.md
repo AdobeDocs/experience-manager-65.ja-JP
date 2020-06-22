@@ -3,10 +3,10 @@ title: デジタルアセットの使用および共有に関するレポート�
 description: デジタルアセットの使用状況、アクティビティ、共有 [!DNL Adobe Experience Manager Assets] を理解するのに役立つ、アセットに関するレポートです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bc08b0039f8be92a7638245b1770c2ad21503f63
+source-git-commit: 0c41666353a8ee8d39285c99327680ab12377d61
 workflow-type: tm+mt
-source-wordcount: '1013'
-ht-degree: 51%
+source-wordcount: '1044'
+ht-degree: 48%
 
 ---
 
@@ -59,8 +59,11 @@ The [!DNL Assets] reporting framework uses [!DNL Sling] jobs to asynchronously p
 
    >[!NOTE]
    >
-   >デフォルトで、「ダウンロードされたアセット」レポートにはコンテンツフラグメントとリンク共有が含まれています。適切なオプションを選択して、リンク共有のレポートを作成するか、ダウンロードレポートからコンテンツフラグメントを除外します。
+   >By default, the Content Fragments and link shares are included in the asset [!UICONTROL Download] report. 適切なオプションを選択して、リンク共有のレポートを作成するか、ダウンロードレポートからコンテンツフラグメントを除外します。
 
+   >[!NOTE]
+   >
+   >[!UICONTROL ダウンロード] レポートには、個別に選択してダウンロードしたアセットの詳細のみが表示されます。 ただし、ダウンロードしたフォルダー内にあったアセットの詳細は含まれません。
 1. タイトル、説明、サムネール、CRX リポジトリ内のフォルダーパス（レポートの保存場所）など、レポートの詳細を設定します。By default, the folder path is `/content/dam`. 別のパスを指定することもできます。
 
    ![レポートの詳細を追加するページ](assets/report_configuration.png)
