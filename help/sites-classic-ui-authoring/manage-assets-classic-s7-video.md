@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 37%
@@ -74,7 +74,7 @@ Dynamic Mediaクラシックビデオコンポーネントでは、次の形式�
 
 **ユニバーサルプリセットを設定するには**:
 
-1. **[!UICONTROL Cloud Service]**&#x200B;で、 **[!UICONTROL Dynamic MediaのClassic]** 設定に移動し、「 **[!UICONTROL 編集」をクリックします]**。
+1. **[!UICONTROL Cloud Service]**&#x200B;で、 **[!UICONTROL Dynamic MediaClassic]** 設定に移動し、「 **[!UICONTROL 編集」をクリックします。]**
 1. 「**[!UICONTROL ビデオ]**」タブを選択します。
 
    >[!NOTE]
@@ -151,8 +151,8 @@ Dynamic Mediaのクラシックビデオの閲覧にはDynamic Mediaクラシッ
 >
 >新しいビデオプロファイルおよびビデオプロファイルに対する変更をアクティベートして公開する必要があります。
 
-1. AEM で、**[!UICONTROL ツール]**&#x200B;に移動し、「**[!UICONTROL 設定コンソール]**」を選択します。In the Configuration Console navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** in the navigation tree.
-1. 新しいDynamic Mediaクラシックビデオプロファイルを作成します。 「 **[!UICONTROL 新規…]** 」メニューで「ページを **[!UICONTROL 作成」を選択し、「Dynamic Mediaクラシックビデオプロファイル]** 」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「 **[!UICONTROL 作成]**」をクリックします。
+1. AEM で、**[!UICONTROL ツール]**&#x200B;に移動し、「**[!UICONTROL 設定コンソール」を選択します。]** 設定コンソールで、ナビゲーションツリーの **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL ビデオプロファイル]** に移動します。
+1. 新しいDynamic Mediaクラシックビデオプロファイルを作成します。 「 **[!UICONTROL 新規…]** 」メニューで「ページを **[!UICONTROL 作成」を選択し、「Dynamic Mediaクラシックビデオプロファイル]** 」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「 **[!UICONTROL 作成」をクリックします。]**
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
