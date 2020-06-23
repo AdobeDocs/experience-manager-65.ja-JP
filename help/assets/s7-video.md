@@ -8,10 +8,10 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1628'
-ht-degree: 54%
+ht-degree: 51%
 
 ---
 
@@ -72,7 +72,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
 ユニバーサルプリセットを設定するには：
 
-1. **[!UICONTROL クラウドサービス]**&#x200B;で、**[!UICONTROL Scene7]** の設定に移動して、「**[!UICONTROL 編集]**」をクリックします。
+1. **[!UICONTROL Cloud Serviceで]**、 **[!UICONTROL Scene7]** 設定に移動し、「 **[!UICONTROL 編集」をクリックします。]**
 1. 「**[!UICONTROL ビデオ]**」タブを選択します。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -93,7 +93,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
 ## ビューアとエンコーディングプリセットの更新 {#updating-viewer-and-encoding-presets}
 
-Scene7 でプリセットが更新されているので、AEM でビデオのビューアとエンコーディングプリセットを更新する必要がある場合は、クラウド設定の Scene7 設定に移動して、「**[!UICONTROL ビューアとエンコーディングプリセットを更新]**」をクリックします。
+If you need to update the viewer and encoding presets for video in AEM because the presets have been updated in Scene7, navigate to the Scene7 configuration in the cloud configuration and click **[!UICONTROL Update the viewer and encoding presets.]**
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -150,7 +150,7 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 
 1. AEMで、 **[!UICONTROLツール/設定コンソール**]をタップします。
 1. **[!UICONTROL 設定コンソールで、ナビゲーションツリーの]** ツール **[!UICONTROL /DAM/ビデオプロファイル]** に移動します。
-1. Create a new S7 Video Profile. In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Scene7 Video Profile template. Give the new video profile page a name and click **[!UICONTROL Create]**.
+1. Create a new S7 Video Profile. In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Scene7 Video Profile template. Give the new video profile page a name and click **[!UICONTROL Create.]**
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
