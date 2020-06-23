@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '3707'
-ht-degree: 98%
+ht-degree: 89%
 
 ---
 
@@ -157,18 +157,18 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 **アダプティブストリーミング用のビデオプロファイルを作成するには**
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 「**[!UICONTROL 作成]**」をクリックまたはタップして、新しいビデオプロファイルを追加します。
 
 1. プロファイルの名前と説明を入力します。
-1. ビデオエンコーディングプリセットを作成ページまたはビデオエンコーディングプリセットを編集ページで、「**[!UICONTROL ビデオエンコーディングプリセットを追加]**」をタップします。
+1. On the Create/Edit Video Encoding Presets page, tap **[!UICONTROL Add Video Encoding Preset.]**
 1. 「**[!UICONTROL 基本]**」タブで、ビデオとオーディオのオプションを設定します。各オプションの横にある情報アイコンをタップすると、追加の説明や、選択したビデオ形式のコーデックに応じた推奨設定が表示されます。
 1. 「ビデオサイズ」ヘッダーの下で、「**[!UICONTROL 縦横比を保持]**」チェックボックスがオンになっていることを確認します。
 1. ビデオフレームサイズの解像度をピクセル単位で設定します。**[!UICONTROL auto]** 値を使用すると、ソースの縦横比（幅と高さの比率）に合わせて自動的に拡大／縮小されます。例えば、「auto x 480」や「640 x auto」のようになります。
 
 1. 次のいずれかの操作をおこないます。
 
-   * 「**[!UICONTROL 幅]**」フィールドに「**[!UICONTROL auto]**」と入力します。「**[!UICONTROL 高さ]**」フィールドに値をピクセル単位で入力します。
+   * 「**[!UICONTROL 幅]**」フィールドに「**[!UICONTROL auto」と入力します。]**「**[!UICONTROL 高さ]**」フィールドに値をピクセル単位で入力します。
 
    * ビデオのサイズを目で確認できるようにするには、「**[!UICONTROL 高さ]**」の右にある情報アイコン（「i」）をタップして、サイズ計算ツールページを開きます。**[!UICONTROL サイズ計算ツール]**&#x200B;を使用して、必要なビデオサイズ（青のボックスで表示）を設定します。完了したら、右上隅の「**[!UICONTROL X]**」をタップします。
 
@@ -179,7 +179,7 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
    * 続行して次の手順に進みます。
 
 1. （オプション）このプロファイルを適用するビデオにビデオスマート切り抜きを追加するには、以下をおこないます。
-   * ビデオプロファイルを編集ページで、「スマート切り抜き率」の見出しの右側にある「**[!UICONTROL 新規追加]**」をタップします。
+   * On the Edit Video Profile page, to the right of the Smart Crop Ratio heading, tap **[!UICONTROL Add New.]**
    * 切り抜き率を容易に識別できるように、切り抜き率の名前を「名前」フィールドに入力します。
    * 「**[!UICONTROL 切り抜き率]**」ドロップダウンリストで、使用する比率を選択します。
 
@@ -209,15 +209,15 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 **プログレッシブストリーミング用のビデオプロファイルを作成するには：**
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 「**[!UICONTROL 作成]**」をタップクリックして、新しいビデオプロファイルを追加します。
 1. プロファイルの名前と説明を入力します。
-1. ビデオエンコーディングプリセットを作成ページまたはビデオエンコーディングプリセットを編集ページで、「**[!UICONTROL ビデオエンコーディングプリセットを追加]**」をタップします。
+1. On the Create/Edit Video Encoding Presets page, tap **[!UICONTROL Add Video Encoding Preset.]**
 1. 「**[!UICONTROL 基本]**」タブで、ビデオとオーディオのオプションを設定します。各オプションの横にある情報アイコンをタップすると、追加の説明や、選択したビデオ形式のコーデックに応じた推奨設定が表示されます。
-1. （オプション）「ビデオサイズ」ヘッダーの下で、「**[!UICONTROL 縦横比を保持]**」チェックボックスをオフにします。
+1. (Optional) Under the Video Size heading, uncheck **[!UICONTROL Keep aspect ratio.]**
 1. 以下の操作を実行してください。
-   * 「**[!UICONTROL 幅]**」フィールドに「**[!UICONTROL auto]**」と入力します。
-   * 「**[!UICONTROL 高さ]**」フィールドに値をピクセル単位で入力します。ビデオのサイズを目で確認できるようにするには、「高さ」の情報アイコンをタップして、**[!UICONTROL サイズ計算ツール]**&#x200B;ページを開きます。**[!UICONTROL サイズ計算ツール]**&#x200B;ページを使用して、必要なビデオのサイズ（青いボックス）を設定します。完了したら、ダイアログボックスの右上隅にある「**[!UICONTROL X]**」をタップします。
+   * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto.]**
+   * 「**[!UICONTROL 高さ]**」フィールドに値をピクセル単位で入力します。ビデオのサイズを目で確認できるようにするには、「高さ」の情報アイコンをタップして、**[!UICONTROL サイズ計算ツール]**&#x200B;ページを開きます。**[!UICONTROL サイズ計算ツール]**&#x200B;ページを使用して、必要なビデオのサイズ（青いボックス）を設定します。When you are done, in the upper-right corner of the dialog box, tap **[!UICONTROL X.]**
 1. （オプション）次のいずれかの操作をおこないます。
 
    * 「**[!UICONTROL 詳細]**」タブをタップし、「**[!UICONTROL デフォルト値を使用]**」チェックボックスがオンになっている（推奨）ことを確認します。
@@ -232,7 +232,7 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 1. （オプション）このプロファイルを適用するビデオにビデオスマート切り抜きを追加するには、以下をおこないます。
 
-   * ビデオプロファイルを編集ページで、「スマート切り抜き率」の見出しの右側にある「**[!UICONTROL 新規追加]**」をタップします。
+   * On the Edit Video Profile page, to the right of the Smart Crop Ratio heading, tap **[!UICONTROL Add New.]**
    * 切り抜き率を容易に識別できるように、切り抜き率の名前を「名前」フィールドに入力します。
    * 「**[!UICONTROL 切り抜き率]**」ドロップダウンリストで、使用する比率を選択します。
 
@@ -251,7 +251,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 **カスタムで追加するビデオエンコーディングパラメーターを使用するには**：
 
-1. AEM のロゴをタップして、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** に移動します。
+1. Tap the AEM logo, then navigate to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite.]**
 1. CRXDE Lite ページの左側にあるエクスプローラーパネルで、以下の場所に移動します。
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
@@ -303,11 +303,11 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 ![chlimage_1-516](assets/chlimage_1-516.png)
 
-1. ページの右下隅付近にある「**[!UICONTROL 追加]**」をタップします。
+1. Near the lower-right corner of the page, tap **[!UICONTROL Add.]**
 1. 次のいずれかの操作をおこないます。
 
    * 手順 3 および 4 を繰り返して、ビデオエンコーディングプロファイルに別のパラメーターを追加します。
-   * ページの左上隅付近にある「**[!UICONTROL すべて保存]**」をタップします。
+   * Near the upper-left corner of the page, tap **[!UICONTROL Save All.]**
 
 1. CRXDE Lite ページの左上隅にある「**[!UICONTROL ホームに戻る]**」アイコンをタップして、AEM に戻ります。
 
@@ -323,22 +323,22 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 **ビデオプロファイルを編集するには**：
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. ビデオプロファイルページで、1 つのビデオプロファイル名のチェックボックスをオンにします。
-1. ツールバーの「**[!UICONTROL 編集]**」をタップします。
+1. On the toolbar, tap **[!UICONTROL Edit.]**
 1. ビデオエンコーディングプロファイルページで、必要に応じて名前と説明を編集します。
 1. ベストプラクティスとしては、「**[!UICONTROL アダプティブストリーミング用にエンコーディング]**」チェックボックスは必ずオンにします。アダプティブストリーミングの説明を参照するには、情報アイコンをタップします（プログレッシブビデオプロファイルを編集する場合は、このチェックボックスをオンにしないでください）。
 1. 「ビデオエンコーディングプリセット」ヘッダーの下で、プロファイルを構成するビデオエンコーディングプリセットを追加、編集または削除します。
 
    「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブの各オプションの横にある情報アイコンをタップすると、追加の説明や、選択したビデオ形式のコーデックに応じた推奨設定が表示されます。
 
-1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
+1. In the upper-right corner ofthepage, tap **[!UICONTROL Save.]**
 
 ### ビデオプロファイルのコピー {#copying-a-video-encoding-profile}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. ビデオプロファイルページで、1 つのビデオプロファイル名のチェックボックスをオンにします。
-1. ツールバーの「**[!UICONTROL コピー]**」をタップします。
+1. On the toolbar, tap **[!UICONTROL Copy.]**
 1. ビデオエンコーディングプロファイルページで、プロファイルの新しい名前を入力します。
 1. ベストプラクティスとしては、「**[!UICONTROL アダプティブストリーミング用にエンコーディング]**」チェックボックスは必ずオンにします。アダプティブストリーミングの説明を参照するには、情報アイコンをタップします（プログレッシブビデオプロファイルをコピーする場合は、このチェックボックスをオンにしないでください）。
 
@@ -347,14 +347,14 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
    「基本」タブと「詳細」タブの各オプションの横にある情報アイコンをタップすると、推奨設定と説明が表示されます。
 
-1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
+1. In the upper-right corner ofthepage, tap **[!UICONTROL Save.]**
 
 ### ビデオプロファイルの削除 {#deleting-a-video-encoding-profile}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. ビデオプロファイルページで、1 つ以上のビデオプロファイル名のチェックボックスをオンにします。
-1. ツールバーの「**[!UICONTROL 削除]**」をタップします。
-1. 「**[!UICONTROL OK]**」をタップします。
+1. On the toolbar, tap **[!UICONTROL Delete.]**
+1. Tap **[!UICONTROL OK.]**
 
 ## ビデオプロファイルのフォルダーへの適用 {#applying-a-video-profile-to-folders}
 
@@ -372,7 +372,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 ### 特定のフォルダーへのビデオプロファイルの適用 {#applying-video-profiles-to-specific-folders}
 
-**[!UICONTROL ツール]**&#x200B;メニュー内からフォルダーにビデオプロファイルを適用するか、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」から適用します。この節では、フォルダーにビデオプロファイルを適用するこれら両方の方法について説明します。
+**[!UICONTROL ツール]**&#x200B;メニュー内からフォルダーにビデオプロファイルを適用するか、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ」から適用します。]**&#x200B;この節では、フォルダーにビデオプロファイルを適用するこれら両方の方法について説明します。
 
 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
@@ -380,15 +380,15 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 #### プロファイルユーザーインターフェイスを介してフォルダーにビデオプロファイルを適用する {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 1 つまたは複数のフォルダーに適用するビデオプロファイルを選択します。
-1. 「**[!UICONTROL プロファイルをフォルダーに適用]**」をタップし、新たにアップロードされたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 適用]**」をタップします。**[!UICONTROL カード表示]**&#x200B;の場合、既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。[ビデオプロファイル処理ジョブの進行状況を監視](#monitoring-the-progress-of-an-encoding-job)できます。
+1. 「**[!UICONTROL プロファイルをフォルダーに適用]**」をタップし、新たにアップロードされたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 適用」をタップします。]****[!UICONTROL カード表示の場合、既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。]**[ビデオプロファイル処理ジョブの進行状況を監視](#monitoring-the-progress-of-an-encoding-job)できます。
 
 #### 「プロパティ」でフォルダーにビデオプロファイルを適用する {#applying-video-profiles-to-folders-from-properties}
 
 1. AEM のロゴをタップまたはクリックし、「**[!UICONTROL Assets]**」に移動した後、ビデオプロファイルを適用するフォルダーに移動します。
-1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
-1. 「**[!UICONTROL ビデオプロファイル]**」タブを選択し、ドロップダウンメニューからプロファイルを選択して、「**[!UICONTROL 保存して閉じる]**」をクリックします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
+1. On the folder, tap the check mark to select it and then tap **[!UICONTROL Properties.]**
+1. 「**[!UICONTROL ビデオプロファイル]**」タブを選択し、ドロップダウンメニューからプロファイルを選択して、「**[!UICONTROL 保存して閉じる」をクリックします。]**&#x200B;既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
 [ビデオプロファイル処理ジョブの進行状況を監視](#monitoring-the-progress-of-an-encoding-job)できます。
@@ -401,7 +401,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 **ビデオプロファイルをグローバルに適用するには**
 
-* CRXDE Lite で、`/content/dam/jcr:content` ノードに移動します。プロパティ `videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>` を追加し、「**[!UICONTROL すべて保存]**」をタップします。
+* CRXDE Lite で、`/content/dam/jcr:content` ノードに移動します。Add the property `videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>` and tap **[!UICONTROL Save All.]**
 
    ![chlimage_1-519](assets/chlimage_1-519.png)
 * [ビデオプロファイル処理ジョブの進行状況を監視](#monitoring-the-progress-of-an-encoding-job)できます。
@@ -416,19 +416,19 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 フォルダーからビデオプロファイルを削除すると、サブフォルダーは自動的に親フォルダーのプロファイルの削除状態を継承します。ただし、フォルダー内で実行されたファイルの処理はそのまま維持されます。
 
-**[!UICONTROL ツール]**&#x200B;メニュー内から、またはフォルダー内にいる場合は「**[!UICONTROL フォルダー設定]**」から、フォルダーのビデオプロファイルを削除できます。この節では、両方の方法でフォルダーからビデオプロファイルを削除する方法について説明します。
+You can remove a video profile from a folder from within the **[!UICONTROL Tools]** menu or if you are in the folder, from the **[!UICONTROL Folder Settings.]** This section describes how to remove video profiles from folders both ways.
 
 ### プロファイルユーザーインターフェイスを介してフォルダーからビデオプロファイルを削除する {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 1 つまたは複数のフォルダーから削除するビデオプロファイルを選択します。
-1. 「**[!UICONTROL フォルダーからプロファイルを削除]**」をタップし、プロファイルを削除する 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 削除]**」をタップします。
+1. Tap **[!UICONTROL Remove Profile from Folders]** and select the folder or multiple folders you want use to remove the profile from and tap **[!UICONTROL Remove.]**
 
    名前がフォルダー名の下に表示されなくなっていることで、ビデオプロファイルがフォルダーに適用されていないことを確認できます。
 
 ### 「プロパティ」でフォルダーからビデオプロファイルを削除する {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. AEM のロゴをタップまたはクリックし、「**[!UICONTROL Assets]**」に移動した後、ビデオプロファイルを削除するフォルダーに移動します。
-1. チェックマークをタップまたはクリックして対象のフォルダーを選択した後、「**プロパティ**」をタップまたはクリックします。
-1. 「**[!UICONTROL ビデオプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択して、「**[!UICONTROL 保存して閉じる]**」をクリックします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
+1. On the folder, tap or click the check mark to select it and then tap or click **Properties.]**
+1. 「**[!UICONTROL ビデオプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択して、「**[!UICONTROL 保存して閉じる」をクリックします。]**&#x200B;既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
