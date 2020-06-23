@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 071f4a292343f0ad52ca3700c95bf60f03c307cc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '462'
-ht-degree: 18%
+ht-degree: 16%
 
 ---
 
@@ -74,7 +74,7 @@ To **configure AEM**, follow these steps:
    >
    >変更が必要なプロパティだけでなく、プロファイルノード全体をオーバーレイ／編集してください。そのようなリソースは SlingResourceMerger 経由で解決されません。
 
-4. いずれかのプロパティを変更した場合は、「**[!UICONTROL すべて保存]**」をクリックします。
+4. If you changed either of the properties, click **[!UICONTROL Save All.]**
 
 >[!NOTE]
 >
