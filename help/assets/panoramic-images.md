@@ -9,12 +9,15 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '586'
+ht-degree: 74%
 
 ---
 
 
-# Panoramic images{#panoramic-images}
+# パノラマ画像{#panoramic-images}
 
 ここでは、パノラマ画像ビューアを使用して球パノラマ画像をレンダリングし、室内、物件、場所、風景などをあらゆる角度から見ることができる臨場感あふれる体験を提供する方法について説明します。
 
@@ -26,12 +29,12 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 アップロードするアセットが、パノラマ画像ビューアで使用する球パノラマ画像として適格となるには、アセットが以下の一方または両方の条件を満たしている必要があります。
 
-* 縦横比が 2 である必要があります。CRXDE liteのデフォルトの縦横比設定である2は、次の場所で上書きできます。
+* 縦横比が 2 である必要があります。次の場所にあるCRXDE Liteのデフォルトの縦横比設定である2を上書きできます。
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-* Tagged with the keywords `equirectangular`, or `spherical`and `panorama`, or `spherical` and `panoramic`. [タグの使用](/help/sites-authoring/tags.md)を参照してください。
+* キーワード `equirectangular`、または `spherical` と `panorama`、または `spherical` と `panoramic` でタグ付けされている必要があります。[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
-Both the aspect ratio and keyword criteria apply to panoramic assets for the asset details page and the `Panoramic Media` WCM component.
+縦横比とキーワードの両方の条件が、アセットの詳細ページと `Panoramic Media` WCM コンポーネントのパノラマアセットに適用されます。
 
 パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
 
@@ -39,15 +42,15 @@ Both the aspect ratio and keyword criteria apply to panoramic assets for the ass
 
 パノラマ画像ビューアが AEM 内で正しく機能するには、パノラマ画像ビューアプリセットが JCR で更新されるように、ビューアプリセットを Dynamic Media Classic（Scene7）および Dynamic Media Classic（Scene7）固有のメタデータと同期する必要があります。そのためには、Dynamic Media Classic（Scene7）を次のように設定します。
 
-1. 各会社アカウントの [Dynamic Media Classic（Scene7）のインスタンスにログイン](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)します。
+1. 各会社アカウントの [Dynamic Media Classic（Scene7）のインスタンスにログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)します。
 
-1. ページの右上隅付近で、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。
-1. Image Server 公開ページの上部にある「**[!UICONTROL 公開コンテキスト]**」ドロップダウンリストで、「**[!UICONTROL 画像サービング]**」を選択します。
+1. Near the upper-right corner of the page, click **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]**
+1. On the Image Server Publish page, from the **[!UICONTROL Publish Context]** drop-down menu near the top, select **[!UICONTROL Image Serving.]**
 
-1. 同じ Image Server 公開ページで、「**[!UICONTROL 要求属性]**」という見出しを探します。
-1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限]**」を探します。次に、関連する「幅」と「高さ」フィールドで、パノラマ画像に使用できる最大画像サイズを大きくします。
+1. On the same Image Server Publish page, locate the heading **[!UICONTROL Request Attributes.]**
+1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限」を探します。]** 次に、関連する「幅」と「高さ」フィールドで、パノラマ画像に使用できる最大画像サイズを大きくします。
 
-   Dynamic Media Classic（Scene7）には、25,000,000 ピクセルという制限があります。縦横比が2:1の画像の最大許容サイズは7000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
+   Dynamic Media Classic（Scene7）には、25,000,000 ピクセルという制限があります。縦横比が2:1の画像で許可される最大サイズは7000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
 
    >[!NOTE]
    >
@@ -55,13 +58,13 @@ Both the aspect ratio and keyword criteria apply to panoramic assets for the ass
 
 1. 「要求属性」の見出しの下で、次の操作をおこないます。
 
-   * 「要求難読化モード」を「**[!UICONTROL 無効]**」に設定します。
-   * 「要求ロックモード」を「**[!UICONTROL 無効]**」に設定します。
+   * Set Request Obfuscation Mode to **[!UICONTROL Disabled.]**
+   * Set Request Locking Mode to **[!UICONTROL Disabled.]**
    These settings are necessary for using the `Panoramic Media` WCM component in AEM.
 
-1. Image Server 公開ページの下部で、左側にある「**[!UICONTROL 保存]**」をクリックします。
+1. At the bottom of the Image Server Publish page, on the left side, click **[!UICONTROL Save.]**
 
-1. 右下隅にある「**[!UICONTROL 閉じる]**」をクリックします。
+1. In the lower-right corner, click **[!UICONTROL Close.]**
 
 ### パノラマメディア WCM コンポーネントのトラブルシューティング {#troubleshooting-the-panoramic-media-wcm-component}
 
