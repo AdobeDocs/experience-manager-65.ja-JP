@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: b8fe3267a808f1a64b78620156826e0b6e3a5676
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 76%
@@ -18,7 +18,7 @@ ht-degree: 76%
 
 # Dynamic Media アセットの公開 {#publishing-dynamic-media-assets}
 
-ダイナミックメディアアセットを公開するには、既にアップロード済みのアセットを選択し、「 **[!UICONTROL 公開]** 」または「 **[!UICONTROL クイック公開]**」をタップします。 ダイナミックメディアアセットが公開されたら、URL経由でWebページに含めたり、ページにコードを埋め込んだりすることができます。
+Dynamic Mediaアセットを公開するには、既にアップロード済みのアセットを選択し、「 **[!UICONTROL 公開]** 」または「 **[!UICONTROL クイック公開」をタップします。]** Dynamic Mediaアセットが公開されたら、URL経由でWebページに含めたり、ページにコードを埋め込んだりできます。
 
 また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。See [Configuring Dynamic Media - Scene7 mode](config-dms7.md).
 
