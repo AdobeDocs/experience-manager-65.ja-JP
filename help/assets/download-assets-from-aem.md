@@ -3,7 +3,7 @@ title: デジタルアセットのダウンロード元 [!DNL Adobe Experience M
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 64c09e454960a40632059a85f0861deed1899b86
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 41%
@@ -24,10 +24,10 @@ ht-degree: 41%
 **アセットをダウンロードするには**
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
-1. On the Navigation page, tap **[!UICONTROL Assets > Files]**.
+1. On the Navigation page, tap **[!UICONTROL Assets > Files.]**
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の1つ以上のアセットを選択します。
-1. On the toolbar, tap **[!UICONTROL Download]**.
+1. On the toolbar, tap **[!UICONTROL Download.]**
 
    ![Experience Managerアセットからアセットをダウンロードする場合に使用できるオプション](/help/assets/assets/asset-download1.png)
 
@@ -44,7 +44,7 @@ ht-degree: 41%
    | **[!UICONTROL スマート切り抜き]** | このオプションを選択すると、選択したアセットのすべてのスマートトリミングレンディションがAEM内からダウンロードされます。 スマート切り抜きレンディションを含むzipファイルが作成され、ローカルコンピューターにダウンロードされます。 |
    | **[!UICONTROL 動的レンディション]** | 一連の代替レンディションをリアルタイムで生成するには、このオプションを選択します。 When you select this option, you also select the renditions that you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>また、測定のサイズと単位、形式、カラースペース、解像度、および画像の反転などのオプションの画像修飾子を選択できます。 このオプションは、有効にしている場合にのみ使用でき [!DNL Dynamic Media] ます。 |
 
-1. ダイアログボックスで、「 **[!UICONTROL ダウンロード]**」をタップします。
+1. ダイアログボックスで、「 **[!UICONTROL ダウンロード」をタップします]**。
 
 ## アセットダウンロードサーブレットの有効化 {#enable-asset-download-servlet}
 
