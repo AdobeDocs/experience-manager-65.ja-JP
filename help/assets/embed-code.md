@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 translation-type: tm+mt
-source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '371'
-ht-degree: 96%
+ht-degree: 88%
 
 ---
 
@@ -48,10 +48,10 @@ AEM を WCM として使用&#x200B;_していない_&#x200B;場合に限り、UR
 
    [画像プリセットの公開](managing-image-presets.md#publishing-image-presets)を参照してください。
 
-1. 左側のレールでドロップダウンメニューを選択して、「**[!UICONTROL ビューア]**」をタップします。
+1. In the left rail, select the drop-down menu and tap **[!UICONTROL Viewers.]**
 1. 左側のレールで、ビューアプリセット名をタップします。ビューアプリセットがアセットに適用されます。
-1. 「**[!UICONTROL 埋め込み]**」をタップします。
-1. **[!UICONTROL 埋め込みコード]**&#x200B;ダイアログボックスで、コード全体をクリップボードにコピーしてから、「**[!UICONTROL 閉じる]**」をタップします。
+1. Tap **[!UICONTROL Embed.]**
+1. In the **[!UICONTROL Embed Code]** dialog box, copy the entire code to the clipboard, and then tap **[!UICONTROL Close.]**
 1. 埋め込みコードを Web ページに貼り付けます。
 
 ## HTTP/2 を使用した Dynamic Media アセットの配信 {#using-http-to-deliver-your-dynamic-media-assets}
