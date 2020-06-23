@@ -1,6 +1,6 @@
 ---
-title: ダイナミックメディア画像プリセットの管理
-description: ダイナミックメディア画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
+title: Dynamic Media画像プリセットの管理
+description: Dynamic Mediaの画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,7 +10,10 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '3851'
+ht-degree: 89%
 
 ---
 
@@ -41,7 +44,7 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ## Managing Dynamic Media image presets {#managing-image-presets-1}
 
-AEM で画像プリセットを管理するには、AEM のロゴをタップまたはクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップまたはクリックして&#x200B;**[!UICONTROL アセット／画像プリセット]**&#x200B;の順に移動します。
+You manage your image presets in AEM by tapping or clicking the AEM logo to access the global navigation console and then tapping or clicking the Tools icon and navigating to **[!UICONTROL Assets > Image Presets.]**
 
 ![6_5_tools-assets-imagepresets](assets/6_5_tools-assets-imagepresets.png)
 
@@ -68,11 +71,11 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 * Adobe Illustrator のドキュメントは複数のレイヤーを持つ単一のページで構成されます。各レイヤーはメインの Illustrator アセットの下に PNG サブアセットとして抽出されます。
 * PDF のドキュメントは 1 つ以上のページで構成されます。各ページはメインの複数ページの PDF ドキュメントの下に単一ページの PDF サブアセットとして抽出されます。
 
-サブアセットは、`DAM Update Asset` ワークフロー全体で `Create Sub Asset process` コンポーネントによって作成されます。ワークフローにこのプロセスコンポーネントを表示するには、**[!UICONTROL ツール／ワークフロー／モデル／DAM アセットの更新／編集]**&#x200B;をタップします。
+サブアセットは、`DAM Update Asset` ワークフロー全体で `Create Sub Asset process` コンポーネントによって作成されます。To see this process component within the workflow, tap **[!UICONTROL Tools > Workflow > Models > DAM Update Asset > Edit.]**
 
 [複数ページファイルのページの表示](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)も参照してください。
 
-  サブアセットまたはページは、アセットを開き、コンテキストメニューをタップし、「**[!UICONTROL サブアセット]**」または「**[!UICONTROL ページ]**」を選択して表示できます。サブアセットは実在のアセットです。つまり、PDF ページは `Create Sub Asset` ワークフローコンポーネントによって抽出されます。その後それらは `page1.pdf` や `page2.pdf` などとして、メインアセットの下に保存されます。保存後、それらは `DAM Update Asset` ワークフローで処理されます。
+  サブアセットまたはページは、アセットを開き、コンテキストメニューをタップし、「**[!UICONTROL サブアセット]**」または「**[!UICONTROL ページ」を選択して表示できます。]**&#x200B;サブアセットは実在のアセットです。つまり、PDF ページは `Create Sub Asset` ワークフローコンポーネントによって抽出されます。その後それらは `page1.pdf` や `page2.pdf` などとして、メインアセットの下に保存されます。保存後、それらは `DAM Update Asset` ワークフローで処理されます。
 
   Dynamic Media を使用して AI、EPS または PDF ファイルの動的レンディションを表示および生成するには、次の処理ステップが必要です。
 
@@ -93,7 +96,7 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 
 `Rasterize PDF/AI Image Preview Rendition` プロセスコンポーネントのオプションには、`DAM Update Asset` ワークフローを通じてアクセスします。
 
-左上の Adobe Experience Manager をタップし、**[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;に移動します。ワークフローモデルページで「**[!UICONTROL DAM アセットの更新]**」を選択し、ツールバーの「**[!UICONTROL 編集]**」をタップします。On the [!UICONTROL DAM Update Asset] workflow page, double-tap the `Rasterize PDF/AI Image Preview Rendition` process component to open its Step Properties dialog box.
+左上の Adobe Experience Manager をタップし、**[!UICONTROL ツール／ワークフロー／モデルに移動します。]**&#x200B;ワークフローモデルページで「**[!UICONTROL DAM アセットの更新]**」を選択し、ツールバーの「**[!UICONTROL 編集」をタップします。]**[!UICONTROL DAM アセットの更新ワークフローページで、] プロセスコンポーネントをダブルタップして、ステップのプロパティダイアログボックスを開きます。`Rasterize PDF/AI Image Preview Rendition`
 
 #### PDF/AI 画像プレビューレンディションをラスタライズのオプション {#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -149,7 +152,7 @@ The Media Extraction process component in the `DAM Update Asset` workflow runs s
 
 ![メディア抽出プロセスの引数で使用される ExtendScript のパス](assets/6_5_mediaextractionprocess.png)
 
-[!UICONTROL DAM Update Assetワークフローのメディア抽出プロセスコンポーネントの引数内のExtendScriptパス] 。
+[!UICONTROL DAM Update Asset] Workflowのメディア抽出プロセスコンポーネントの引数に含まれるExtendScriptパス。
 
 Dynamic Media 統合では、以下のスクリプトが使用されます。
 
@@ -191,19 +194,20 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 >* EPS ファイルのサムネールサイズは 「サムネール」の下の「**[!UICONTROL 引数]**」タブにある **[!UICONTROL EPS サムネール]**&#x200B;のステップで設定します。
    >
    >
-* ビデオのサムネールサイズは「**[!UICONTROL 引数]**」の下にある「**[!UICONTROL 処理]**」タブの **[!UICONTROL FFmpeg サムネール]**&#x200B;のステップで設定します。
+* Thumbnail size for videos are configured in the **[!UICONTROL FFmpeg thumbnails]** step, in the **[!UICONTROL Process]** tab under **[!UICONTROL Arguments.]**
+
 >
 
 
 
-**画像のサムネールサイズを設定するには**：：
+**画像サムネールのサイズを設定するには**:
 
-1. **[!UICONTROL ツール／ワークフロー／モデル／DAM アセットの更新／編集]**&#x200B;をタップします。
-1. **[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップまたはクリックします。必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」をタップします。
+1. **[!UICONTROL ツール/ワークフロー/モデル/DAM更新アセット/編集をタップします。]**
+1. **[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップまたはクリックします。Change the thumbnail size, as needed, then tap **[!UICONTROL OK.]**
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. **[!UICONTROL サムネールを処理]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップします。必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」をタップします。
+1. **[!UICONTROL サムネールを処理]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップします。Change the thumbnail size, as needed, then tap **[!UICONTROL OK.]**
 
    >[!NOTE]
    >
@@ -213,9 +217,9 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 ### Increasing or decreasing the number of Dynamic Media image presets that display {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
-作成した画像プリセットは、アセットをプレビューする際の動的レンディションとして使用できます。AEM で、**[!UICONTROL 詳細表示／レンディション]**&#x200B;からアセットを表示すると、様々な動的レンディションが表示されます。表示されるレンディション数の制限を増減させることができます。
+作成した画像プリセットは、アセットをプレビューする際の動的レンディションとして使用できます。AEM で、**[!UICONTROL 詳細表示／レンディションからアセットを表示すると、様々な動的レンディションが表示されます。]**&#x200B;表示されるレンディション数の制限を増減させることができます。
 
-**表示されるダイナミックメディア画像プリセットの数を増減するには**:
+**表示されるDynamic Media画像プリセットの数を増減するには**:
 
 1. CRXDE Lite（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）に移動します。
 1. 画像プリセットリストノード（`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`）に移動します。
@@ -228,11 +232,11 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
-1. 「**[!UICONTROL すべて保存]**」をタップします。
+1. Tap **[!UICONTROL Save All.]**
 
-## ダイナミックメディア画像プリセットの作成 {#creating-image-presets}
+## Dynamic Media画像プリセットの作成 {#creating-image-presets}
 
-ダイナミックメディア画像プリセットを作成すると、プレビュー時や公開時に、これらの設定を任意の画像に適用できます。
+Dynamic Mediaの画像プリセットを作成すると、プレビュー時や公開時にこれらの設定を任意の画像に適用できます。
 
 >[!NOTE]
 >
@@ -244,12 +248,12 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 >[!NOTE]
 >
->ダイナミックメディア画像プリセットを作成するには、AEM管理者または管理コンソール管理者としての管理者権限が必要です。
+>Dynamic Media画像プリセットを作成するには、AEM管理者またはAdmin Console管理者としての管理者権限が必要です。
 
-**ダイナミックメディア画像プリセットを作成するには**:
+**Dynamic Media画像プリセットを作成するには**:
 
-1. AEM で、AEM のロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール／アセット／画像プリセット]**&#x200B;をタップします。
-1. 「**[!UICONTROL 作成]**」をクリックします。**[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
+1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Assets > Image Presets.]**
+1. 「**[!UICONTROL 作成」をクリックします。]****[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
 
@@ -289,7 +293,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 * **[!UICONTROL シンプルシャープを有効にする]** - 「**[!UICONTROL シンプルシャープを有効にする]**」は選択しません（このシャープフィルターでは、アンシャープマスク設定よりも細かく制御できません）。
 
-* **[!UICONTROL シャープ：再サンプリングモード]** - 「**[!UICONTROL バイキュービック法]**」を選択します。
+* **[!UICONTROL シャープ： 再サンプリングモード]** - **[!UICONTROL バイキュービック法を選択します。]**
 
 #### 「基本」タブオプション{#basic-tab-options}
 
@@ -473,11 +477,11 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 ## 画像プリセットの編集 {#modifying-image-presets}
 
-1. AEM で、AEM のロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール／アセット／画像プリセット]**&#x200B;をタップします。
+1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Assets > Image Presets.]**
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
-1. プリセットを選択し、「**[!UICONTROL 編集]**」をクリックします。**[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
+1. Select a preset and then click **[!UICONTROL Edit.]** The **[!UICONTROL Edit Image Preset]** window opens.
 1. 変更を加え、「**[!UICONTROL 保存]**」をクリックして変更を保存するか、「**[!UICONTROL キャンセル]**」をクリックして変更をキャンセルします。
 
 ## Publishing Dynamic Media image presets {#publishing-image-presets}
@@ -486,17 +490,17 @@ Dynamic Media - ハイブリッドモードを実行している場合、画像�
 
 （Dynamic Media - Scene7 モードを実行している場合、画像プリセットは自動的に公開されるので、以下の手順を実行する必要はありません）。
 
-**ダイナミックメディア — ハイブリッドモードで画像プリセットを公開するには**:
+**Dynamic Media — ハイブリッドモードで画像プリセットを公開するには**:
 
-1. In AEM, tap or click the AEM logo to access the global navigation console and tap or click the Tools icon and navigate to **[!UICONTROL Assets > Image Presets]**.
-1. 画像プリセットのリストから該当する画像プリセットを選択し（複数選択可）「**[!UICONTROL 公開]**」をクリックまたはタップします。
+1. In AEM, tap or click the AEM logo to access the global navigation console and tap or click the Tools icon and navigate to **[!UICONTROL Assets > Image Presets.]**
+1. Select the image preset or multiple image presets from the list of image presets and click or tap **[!UICONTROL Publish.]**
 1. 画像プリセットが公開されると、ステータスが非公開から公開済みに変更されます。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
 ## Deleting Dynamic Media image presets {#deleting-image-presets}
 
-1. AEMで、AEMロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
-1. ツールアイコ **[!UICONTROL ンをタップし]** 、アセット/画 **[!UICONTROL 像プリセットに移動します]**。
+1. AEMでAEMロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
+1. ツール **[!UICONTROL アイコンをタップし、]****[!UICONTROL アセット/画像プリセットに移動します。]**
 1. プリセットを選択してから、「**削除**」をクリックします。プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップして削除するか、「**[!UICONTROL キャンセル]**」をタップして中止します。
 
