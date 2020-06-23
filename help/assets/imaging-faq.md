@@ -8,10 +8,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 8fa26e1d763950f370ba0adbc048efba612e8afc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1720'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -109,7 +109,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
  自社のドメインを調べるには、会社のアカウントにログインします。
 
-**[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をタップします。「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
+**[!UICONTROL 設定／アプリケーション設定／一般設定をタップします。]**「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
 
 最初のカスタムドメインは、Dynamic Media ライセンスを使用する場合、追加費用はかかりません。
 
@@ -125,17 +125,17 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
        自社のドメインを調べるには、会社のアカウントにログインします。
 
-      **[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をクリックします。
+      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
 
-      「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。
+      Look for the field labeled **[!UICONTROL Published Server Name.]**
    1. 直接的な関係で管理されているのではなく、アドビを通じて CDN を使用していることを確認します。
    1. `s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用ドメインではなく、`images.company.com` や `mycompany.scene7.com` などの専用ドメインを使用していることを確認します。
 
        自社のドメインを調べるには、会社のアカウントにログインします。
 
-      **[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をクリックします。
+      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
 
-      「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+      「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
    1. HTTP/2 上で機能させる必要もある場合は、その旨を記載します。
 
 1. テクニカルサポートでは、要求が送信された順序に基づいて、スマートイメージングカスタマー待ちリストに貴社を追加します。
@@ -144,7 +144,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 1. 完了後、サポートから通知があります。
 1. スマートイメージングのパフォーマンス向上を最大限にするため、アドビでは、有効期間（TTL）を 24 時間以上に設定することを推奨しています。TTL によって定義されるのは、アセットが CDN によってキャッシュされる期間です。この設定を変更するには、次の手順を実行します。
 
-   1. Dynamic Media Classic を使用している場合は、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。「**[!UICONTROL 初期設定のクライアントキャッシュの有効期限]**」の値を 24 以上に設定します。
+   1. Dynamic Media Classic を使用している場合は、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server をクリックします。]**「**[!UICONTROL 初期設定のクライアントキャッシュの有効期限]**」の値を 24 以上に設定します。
    1. Dynamic Media を使用する場合は、[次の手順](config-dynamic.md)に従います。「**[!UICONTROL 有効期限]**」の値を 24 時間以上に設定します。
 
 ## 自分のアカウントでスマートイメージングが有効になるのはいつ頃ですか？ {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
