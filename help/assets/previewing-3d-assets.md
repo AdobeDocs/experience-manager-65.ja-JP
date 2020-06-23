@@ -4,17 +4,17 @@ description: 3D アセットのプレビュー方法について説明します�
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cabc87dc58a4dbcac64a2797a3b1e0cca995d63
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 91%
+ht-degree: 87%
 
 ---
 
 
 # AEMでの3Dアセットのプレビュー{#previewing-3d-assets-aem}
 
-Adobe Experience Managerでは、3Dアセットのアップロード、配信およびオーサリングプロセスの一環としてインタラクティブなプレビューをサポートしています。
+Adobe Experience Managerは、オーサリングプロセスの一環として、3Dアセットのアップロード、配信、およびインタラクティブプレビューをサポートしています。
 
 AEM のアセットの詳細ページから、インタラクティブ 3D ビューアを使用できます。このビューアには、3D アセットをオービット、ズームおよびパンできるインタラクティブなカメラコントロールのコレクションが含まれます。
 
@@ -51,7 +51,7 @@ AEM のアセットの詳細ページから、インタラクティブ 3D ビュ
 **AEMで3Dアセットをプレビューするには**
 
 1. 3D アセットが AEM にアップロードされていることを確認します。詳しくは、[3D プレビューでサポートされるファイル形式](#supported-3d-previewing-assets)と[アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
-1. AEM の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、**[!UICONTROL アセット／ファイル]**&#x200B;をタップします。
+1. From AEM, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets > Files.]**
 
    ![ナビゲーションページ](/help/assets/assets-dm/navigation-assets.png)
 
@@ -80,4 +80,4 @@ AEM のアセットの詳細ページから、インタラクティブ 3D ビュ
    * **リセット** - ページの右下隅付近にあるリセットアイコンをタップして、視野のターゲットポイントを 3D アセットの中心に戻します。リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。
    * **全画面表示モード** - 全画面表示モードに入るには、ページの右下隅にある全画面表示アイコンをタップします。
 
-1. 作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 閉じる]**」をタップします。
+1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close.]**
