@@ -9,40 +9,44 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '1095'
+ht-degree: 93%
 
 ---
 
 
 # 360/VR ビデオ {#vr-video}
 
-360 度ビデオでは、すべての方向のビューが同時に記録されます。全方向カメラやカメラの集まりを使って撮影されます フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を利用します。
+360 度ビデオでは、すべての方向のビューが同時に記録されます。このタイプのビデオは、全方位カメラやカメラのコレクションを使用して撮影されます。フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を利用します。
 
 Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネイティブサポートが含まれています。デフォルトでは、表示または再生するための追加設定は不要です。360 ビデオは、.mp4、.mkv、.mov といった標準のビデオ拡張子を使用して配信されます。最も一般的なコーデックは H.264 です。
 
-この節では、360/VR ビデオビューアを操作して、部屋、物件、場所、風景、医療処置などの没入感のある視聴体験のための equirectangular ビデオをレンダリングする方法について説明します。
+この節では、360/VR ビデオビューアを操作して、部屋、物件、場所、風景、医療処置などの没入感のある視聴体験のために、エクイレクタングラー形式のビデオをレンダリングする方法について説明します。
 
-空間オーディオは現在サポートされていません。オーディオをステレオにミックスした場合、お客様がカメラの表示角度を変更してもバランス（L／R）は変化しません。
+空間オーディオは現在サポートされていません。オーディオをステレオにミックスした場合、お客様がカメラの表示角度を変更してもバランス（L/R）は変化しません。
 
 [ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)も参照してください。
 
 ## 360 ビデオの視聴 {#video-in-action}
 
-「 [Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) 」をタップしてブラウザウィンドウを開き、360度のビデオを見ます。 ビデオの再生中に、マウスポインタを新しい位置にドラッグして、表示角度を変更します。
+「[Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)」をタップして、ブラウザーウィンドウを開き、360 度ビデオを視聴します。ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
 
-![360 Space Station 360からのビデオ](assets/6_5_360videoiss_simplified.png)*サンプルビデオフレーム*
+![360 ビデオのサンプル](assets/6_5_360videoiss_simplified.png)*Space Station 360（国際宇宙ステーションの 360 度ビデオ）のビデオフレーム*
 
 ## 360/VR ビデオと Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
-Adobe Premier Pro を使用すれば、360/VR シーンを表示および編集できます。例えば、シーン内にロゴやテキストを適切に配置したり、equirectangular メディアに特化して設計されたエフェクトやトランジションを適用したりできます。
+Adobe Premier Pro を使用すれば、360/VR シーンを表示および編集できます。例えば、シーン内にロゴやテキストを適切に配置したり、エクイレクタングラー形式のメディアに特化して設計されたエフェクトやトランジションを適用したりできます。
 
-[360/VR ビデオの編集](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html)を参照してください。
+[360/VR ビデオの編集](https://helpx.adobe.com/jp/premiere-pro/how-to/edit-360-vr-video.html)を参照してください。
 
 ## 360 ビデオビューアで使用するアセットのアップロード {#uploading-assets-for-use-with-the-video-viewer}
 
 AEM にアップロードされた 360 ビデオアセットには、通常のビデオアセットの場合と同じく、アセットページで「**マルチメディア**」というラベルが付けられます。
 
-![6_5_360video-selecttopreview](assets/6_5_360video-selecttopreview.png)*カード表示で表示されるアップロードされた360個のビデオアセット。 アセットには「マルチメディア」というラベルが付けられます。*
+![6_5_360video-selecttopreview](assets/6_5_360video-selecttopreview.png)
+*アップロードされた 360 ビデオアセット（カード表示）。アセットには「マルチメディア」というラベルが付けられます。*
 
 **360 ビデオビューアで使用するアセットをアップロードするには：**
 
@@ -51,7 +55,7 @@ AEM にアップロードされた 360 ビデオアセットには、通常の�
 
    360 ビデオコンテンツをレンダリングする場合、ソースビデオの解像度とレンディションのエンコード解像度に関する要件が、標準の非 360 ビデオコンテンツの場合よりも高くなります。
 
-   Dynamic Media に付属している、既製のアダプティブビデオプロファイルを使用してもかまいません。ただしその場合、同じ設定でエンコードされた非 360 ビデオを非 360 ビデオビューアでレンダリングする場合と比べ、360 ビデオの品質のほうが低く感じられることに注意してください。したがって、高品質の360 ビデオが必要な場合は、以下の操作をおこなってください。
+   Dynamic Media に付属している、既製のアダプティブビデオプロファイルを使用してもかまいません。ただしその場合、同じ設定でエンコードされた非 360 ビデオを非 360 ビデオビューアでレンダリングする場合と比べ、360 ビデオの品質のほうが低く感じられることに注意してください。したがって、高品質の 360 ビデオが必要な場合は、以下の操作をおこなってください。
 
    * できれば、元の 360 ビデオコンテンツの解像度は次のいずれかにしてください。
 
@@ -63,6 +67,7 @@ AEM にアップロードされた 360 ビデオアセットには、通常の�
       * width=auto; height=1080; bitrate=5000 kbps
       * width=auto; height=1440; bitrate=6600 kbps
    * 360 ビデオアセット専用のフォルダー内の 360 ビデオコンテンツを処理します。
+
    このアプローチを使用する場合、エンドユーザーのネットワークや CPU の要件も高くなることに注意してください。
 
 1. [フォルダーにビデオをアップロードします](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
@@ -92,9 +97,9 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
 360 ビデオの設定が完了したら、このビデオを公開できます。
 
-[Web ページへのビデオビューアまたは画像ビューアの埋め込み](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)を参照してください。[Web アプリケーションへの URL のリンク](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)を参照してください。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。 [ページへの Dynamic Media アセットの追加](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)を参照してください。
+[Web ページへのビデオビューアまたは画像ビューアの埋め込み](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)を参照してください。[Web アプリケーションへの URL のリンク](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)を参照してください。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)を参照してください。
 
-**360個のビデオをプレビューするには**
+**360 ビデオをプレビューするには**
 
 1. **[!UICONTROL Assets]** で、作成した既存の 360 ビデオに移動します。360 ビデオアセットをタップしてプレビューモードで開きます。
 
@@ -102,7 +107,7 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
    360 ビデオアセットをタップしてビデオをプレビューします。
 
-1. プレビューページで、ページの左上隅付近にあるドロップダウンリストをタップし、「**[!UICONTROL ビューア]**」を選択します。
+1. On the preview page, near the upper-left corner of the page, tap the drop-down list, then select **[!UICONTROL Viewers.]**
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
@@ -110,18 +115,19 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
    * ビデオの上でマウスポインターをドラッグして、静的なシーンの表示角度を変更します。
    * ビデオの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンをタップして再生を開始します。ビデオの再生中にビデオの上でマウスポインターをドラッグして、表示角度を変更します。
-   ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360ビデオスクリーンショット。*
 
-   * 「ビューア」リストから **[!UICONTROL Video360VR]** をタップします。
+   ![6_5_360video-preview-video360-social](assets/6_5_360video-preview-video360-social.png)*360 ビデオのスクリーンショット&#x200B;*
+
+   * From the Viewers list, tap **[!UICONTROL Video360VR.]**
 
       バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットを通じてアクセスする、没入感のあるビデオコンテンツです。通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 
-1. プレビューページの右上隅付近にある「**[!UICONTROL 閉じる]**」をタップします。
+1. Near the upper-right of the preview page, tap **[!UICONTROL Close.]**
 
 ## 360 ビデオの公開 {#publishing-video}
 
-360 ビデオを使用するには公開する必要があります。360ビデオを公開すると、URLと埋め込みコードがアクティブになります。 また、スケーラブルで効率のよい配信のために CDN と統合された Dynamic Media クラウドにも、360 ビデオが公開されます。
+360 ビデオを使用するには公開する必要があります。360 ビデオを公開すると、URL と埋め込みコードがアクティベートされます。また、スケーラブルで効率の良い配信のために CDN と統合された Dynamic Media クラウドにも、360 ビデオが公開されます。
 
-360 ビデオの公開方法について詳しくは、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。[Web ページへのビデオビューアまたは画像ビューアの埋め込み](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)も参照してください。See also [Linking URLs to your web application](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)も参照してください。
+360 ビデオの公開方法について詳しくは、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。[Web ページへのビデオビューアまたは画像ビューアの埋め込み](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)も参照してください。[Web アプリケーションへの URL のリンク](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)も参照してください。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)も参照してください。
