@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2873'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -87,7 +87,7 @@ Dynamic Mediaクラシック(Scene7)コンポーネントをページに追加�
 
 1. AEMで、Dynamic Mediaクラシック(Scene7)コンポーネントを追加するページを開きます。
 
-1. If no Dynamic Media Classic components are available, click **[!UICONTROL Design]** mode, tap any component with a blue border, tap the **[!UICONTROL Parent]** icon, and then the **[!UICONTROL Configuration]** icon. In **[!UICONTROL Parsys (Design)]**, select all the Dynamic Media Classic components to make them available and click **[!UICONTROL OK]**.
+1. If no Dynamic Media Classic components are available, click **[!UICONTROL Design]** mode, tap any component with a blue border, tap the **[!UICONTROL Parent]** icon, and then the **[!UICONTROL Configuration]** icon. In **[!UICONTROL Parsys (Design)]**, select all the Dynamic Media Classic components to make them available and click **[!UICONTROL OK.]**
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -210,7 +210,7 @@ Tap **[!UICONTROL Edit]** to configure the component. You can configure [setting
 
 #### テキストの動的な変更 {#changing-text-dynamically}
 
-テキストを動的に変更するには、新しいテキストをフィールドに入力して、「**[!UICONTROL OK]**」をクリックします。この例では、「**[!UICONTROL 価格]**」が $50 で、送料が 99 セントです。
+To change the text dynamically, enter new text in the fields and click **[!UICONTROL OK.]** In this example, the **[!UICONTROL Price]** is now $50 and shipping is 99 cents.
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -220,7 +220,7 @@ Tap **[!UICONTROL Edit]** to configure the component. You can configure [setting
 
 #### ClientContext の値を反映したテキストの変更 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-To link a field to a client context value, tap **[!UICONTROL Select]** to open the client-context menu, select the client context, and tap **[!UICONTROL OK]**. この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
+To link a field to a client context value, tap **[!UICONTROL Select]** to open the client-context menu, select the client context, and tap **[!UICONTROL OK.]**&#x200B;この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -230,12 +230,12 @@ To link a field to a client context value, tap **[!UICONTROL Select]** to open t
 
 #### クラシックDynamic Mediaテンプレートをリンクにする {#making-the-scene-image-template-a-link}
 
-1. 「Dynamic Mediaクラシック **[!UICONTROL 画像テンプレート]** 」コンポーネントを含むページで、「 **[!UICONTROL 編集]**」をタップします。
+1. 「Dynamic Mediaクラシック **[!UICONTROL 画像テンプレート]** 」コンポーネントを含むページで、「 **[!UICONTROL 編集」をタップします。]**
 1. In the **[!UICONTROL URL]** field, enter the URL that users go to when the image is tapped. 「**[!UICONTROL 次のウィンドウで開く]**」フィールドで、ターゲットを新しいウィンドウと同じウィンドウのどちらで開くかを選択します。
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. 「**[!UICONTROL OK]**」をタップします。
+1. Tap **[!UICONTROL OK.]**
 
 ### ビデオコンポーネント {#video-component}
 
@@ -285,6 +285,7 @@ Dynamic Mediaクラシックコンテンツブラウザーを使用すると、D
 >
 >* Dynamic MediaClassicコンテンツブラウザは、約100個のアセットを読み込み、名前順に並べ替えます。
 >* セキュリティで保護されたプレビューサーバーが設定されている場合、ブラウザーはそのプレビューサーバーを使用してサムネールとアセットをレンダリングします。
+
 >
 
 
@@ -337,11 +338,12 @@ Dynamic Mediaクラシックアセットの検索は、AEMアセットの検索�
    >
 * ビデオを検索するときは、単一のレンディションが検索されています。結果は、元のレンディション（&amp;ast;.mp4のみ）とエンコードされたレンディションを返します。
 >* アダプティブビデオセットを検索すると、フォルダとすべてのサブフォルダが検索されますが、検索にキーワードを追加した場合にのみ検索されます。 キーワードを追加しない場合、AEM はサブフォルダーを検索しません。
+
 >
 
 
 
-**[!UICONTROL 公開ステータス]** — 公開ステータスに基づいてアセットをフィルタリングできます。 **[!UICONTROL 未公開]** 、 **[!UICONTROL 公開]**。 If you do not select any **[!UICONTROL Publish Status]**, AEM by default searches all publish statuses.
+**[!UICONTROL 公開ステータス]** — 公開ステータスに基づいてアセットをフィルタリングできます。 **[!UICONTROL 非公開]** 、または **[!UICONTROL 公開済み。]** 「 **[!UICONTROL 公開ステータス」を選択しない場合、デフォルトでは、AEMはすべての]**&#x200B;公開ステータスを検索します。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
 
