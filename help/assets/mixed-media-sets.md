@@ -1,6 +1,6 @@
 ---
 title: 混在メディアセット
-description: ダイナミックメディアで混在メディアセットを操作する方法を説明します。
+description: Dynamic Media での混在メディアセットの使用方法について説明します。
 uuid: cecad772-ed05-46f6-ba44-107195866b0d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '1469'
+ht-degree: 87%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 混在メディアセットは、画像、画像セット、スピンセットおよびビデオを 1 つのプレゼンテーションで混在させて表示するものです。
 
-混在メディアセットのバナーには、「**[!UICONTROL MixedMediaSet]**」と表示されます。また、混在メディアセットが発行されている場合、発行日が&#x200B;**[!UICONTROL 地球]**&#x200B;アイコン付きでバナーに表示され、最終変更日も&#x200B;**[!UICONTROL 鉛筆]**&#x200B;アイコン付きで表示されます。
+混在メディアセットのバナーには、「**[!UICONTROL MixedMediaSet」と表示されます。]**&#x200B;また、混在メディアセットが公開されている場合、公開日が&#x200B;**[!UICONTROL 地球]**&#x200B;アイコン付きでバナーに表示され、最終変更日も&#x200B;**[!UICONTROL 鉛筆]**&#x200B;アイコン付きで表示されます。
 
 ![chlimage_1-137](assets/chlimage_1-348.png)
 
@@ -36,35 +39,35 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 1. [混在メディアセットを作成します。](#creating-mixed-media-sets)
 
-   To create a Mixed Media Set, from the Assets page, tap **[!UICONTROL Create > Mixed Media Set]** and then name the set, choose the assets, and choose the order the images appear.
+   アセットページで混在メディアセットを作成するには、**[!UICONTROL 作成／混在メディアセット]**&#x200B;をタップし、セットの名前を付け、アセットを選択し、さらに画像の表示順を選択します。
 
    [セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
 
-1. Set up [Mixed Media Viewer presets](/help/assets/managing-viewer-presets.md), as needed.
+1. 必要に応じて[混在メディアビューアプリセット](/help/assets/managing-viewer-presets.md)を設定します。
 
-   管理者は、混在メディアセットビューアプリセットを作成または編集できます。To see your mixed media with a viewer preset, select the mixed media set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers]**.
+   管理者は、混在メディアセットビューアプリセットを作成または編集できます。To see your mixed media with a viewer preset, select the mixed media set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers.]**
 
-   See **[!UICONTROL Tools > Assets > Viewer Presets]** to create or edit viewer presets.
+   **[!UICONTROL ツール／アセット／ビューアプリセット]**&#x200B;を選択して、ビューアプリセットを作成または編集します。
 
-   See [Adding and editing viewer presets.](/help/assets/managing-viewer-presets.md)
+   詳しくは、[ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
 
 1. [混在メディアセットをプレビューします。](#previewing-mixed-media-sets)
 
-   混在メディアセットを選択すると、プレビューできます。サムネールアイコンをクリックして、選択したビューアでの混在メディアセットの表示を確認します。You can choose different Viewers from the **[!UICONTROL Viewers]** menu, available from the left rail drop-down menu.
+   混在メディアセットを選択すると、プレビューできます。サムネールアイコンをクリックして、選択したビューアでの混在メディアセットの表示を確認します。**[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左側のレールのドロップダウンメニューにあります。
 
 1. [混在メディアセットを公開します。](#publishing-mixed-media-sets)
 
-   混在メディアセットを公開すると、URL と埋め込み文字列がアクティベートされます。In addition, you must [publish the viewer preset](/help/assets/managing-viewer-presets.md#publishing-viewer-presets).
+   混在メディアセットを公開すると、URL と埋め込み文字列がアクティベートされます。また、[ビューアプリセットを公開](/help/assets/managing-viewer-presets.md#publishing-viewer-presets)する必要があります。
 
 1. [URL を Web アプリケーションにリンクする](/help/assets/linking-urls-to-yourwebapplication.md)か、[ビデオビューアまたは画像ビューアを埋め込みます](/help/assets/embed-code.md)。
 
    混在メディアセットの URL コールが作成され、混在メディアセットの公開後にそれらの URL コールがアクティベートされます。アセットをプレビューする際に、これらの URL をコピーできます。または、URL を Web サイトに埋め込むこともできます。
 
-   Select the Mixed Media Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers]**.
+   Select the Mixed Media Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers.]**
 
-   See [Linking a Mixed Media Set to a web page](/help/assets/linking-urls-to-yourwebapplication.md) and [Embedding the Video or Image Viewer](/help/assets/embed-code.md).
+   詳しくは、[Web ページへの混在メディアセットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)および[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-必要に応じて、[混在メディアセット](#editing-mixed-media-sets)を編集できます。In addition, you can view and modify [Mixed Media Set properties](/help/assets/managing-assets-touch-ui.md#editing-properties).
+必要に応じて、[混在メディアセット](#editing-mixed-media-sets)を編集できます。また、[混在メディアセットのプロパティ](/help/assets/managing-assets-touch-ui.md#editing-properties)を表示および変更することができます。
 
 >[!NOTE]
 >
@@ -82,9 +85,9 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 画像セットに追加したアセットは、自動的に英数字順で追加されます。追加後に、手動でアセットの順番を変更したり、並べ替えたりすることができます。
 
-**混在メディアセットを作成するには**
+**混在メディアセットを作成するには：**
 
-1. In Assets, navigate to where you want to create a mixed media set, and click **[!UICONTROL Create]**, and select **[!UICONTROL Mixed Media Set]**. アセットを格納しているフォルダー内からセットを作成することもできます。混在メディアセットエディターが表示されます。
+1. Assets で、混在メディアセットを作成する場所に移動し、**[!UICONTROL 作成]**／**[!UICONTROL 混在メディアセットを選択します。]**&#x200B;アセットを格納しているフォルダー内からセットを作成することもできます。混在メディアセットエディターが表示されます。
 
    ![chlimage_1-138](assets/chlimage_1-349.png)
 
@@ -94,29 +97,29 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
    >[!NOTE]
    >
-   >混在メディアセットを作成する際に、混在メディアセットのサムネールを変更したり、AEMが混在メディアセット内のアセットに基づいて自動的にサムネールを選択できるようにしたりできます。 To select a thumbnail, click **[!UICONTROL Change thumbnail]** and select any image (you can navigate to other folders to find images as well). If you have selected a thumbnail and then decide that you want AEM to generate one from the mixed media set, select **[!UICONTROL Switch to Automatic thumbnail]**.
+   >混在メディアセットを作成するときに、混在メディアセットのサムネールを変更したり、AEM で混在メディアセット内のアセットに基づいてサムネールを自動的に選択したりすることができます。サムネールを選択するには、「**[!UICONTROL サムネールを変更]**」をクリックし、画像を選択します（他のフォルダーに移動して画像を探すこともできます）。If you have selected a thumbnail and then decide that you want AEM to generate one from the mixed media set, select **[!UICONTROL Switch to Automatic thumbnail.]**
 
-1. 「アセットセレクタ」をタップして、混在メディアセットに含めるアセットを選択します。 アセットを選択し、「**[!UICONTROL 選択]**」をクリックします。
+1. アセットセレクターをタップして、混在メディアセットに組み込むアセットを選択します。Select them and click **[!UICONTROL Select.]**
 
-   With the Asset Selector, you can search for assets by typing in a keyword and tapping **[!UICONTROL Return]**. フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。Select the filter and then tap the **[!UICONTROL Filter]** icon from the toolbar. Change the view by selecting the **[!UICONTROL View]** icon and selecting **[!UICONTROL List View]**, **[!UICONTROL Column View]**, or **[!UICONTROL Card View]**.
+   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter キーをタップすることで、アセットを検索することができます。]**&#x200B;フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by selecting the **[!UICONTROL View]** icon and selecting **[!UICONTROL List View]**, **[!UICONTROL Column View]**, or **[!UICONTROL Card View.]**
 
    [セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
 
    ![chlimage_1-140](assets/chlimage_1-383.png)
 
-1. Re-order the assets by dragging them up or down the list (must select the **[!UICONTROL Reorder]** icon), as necessary.
+1. 必要に応じて、アセットをリスト内で上下にドラッグしてアセットを並べ替えます（ドラッグするには、**[!UICONTROL 並べ替え]**&#x200B;アイコンを選択する必要があります）。
 
    ![chlimage_1-141](assets/chlimage_1-352.png)
 
-   If you want to add thumbnails, click the **+** **[!UICONTROL thumbnail]** icon next to the image and navigate to the thumbnail you want. When done selecting all the thumbnail images click **[!UICONTROL Save]**.
+   サムネールを追加する場合は、画像の横の **+** **[!UICONTROL サムネール]**&#x200B;アイコンをクリックし、必要なサムネールに移動します。When done selecting all the thumbnail images click **[!UICONTROL Save.]**
 
    >[!NOTE]
    >
-   >If you want to add assets, tap **[!UICONTROL Add Asset]**.
+   >If you want to add assets, tap **[!UICONTROL Add Asset.]**
 
-1. To delete an asset, select the corresponding check box and tap **[!UICONTROL Delete Asset]**.
-1. To apply a preset, tap **[!UICONTROL Preset]** in the upper right corner and select a preset to apply to the assets.
-1. 「**[!UICONTROL 保存]**」をクリックします。新しく作成した混在メディアセットが、作成先のフォルダーに表示されます。
+1. To delete an asset, select the corresponding check box and tap **[!UICONTROL Delete Asset.]**
+1. プリセットを適用するには、右上隅にある「**[!UICONTROL プリセット]**」をタップし、アセットに適用するプリセットを選択します。
+1. Click **[!UICONTROL Save.]** Your newly created Mixed Media Set appears in the folder you created it in.
 
 ## 混在メディアセットの編集 {#editing-mixed-media-sets}
 
@@ -128,7 +131,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 * ビューアプリセットの適用
 * デフォルトサムネールの変更
 
-**混在メディアセットを編集するには**
+**混在メディアセットを編集するには：**
 
 1. 次のいずれかの操作をおこないます。
 
@@ -140,28 +143,28 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 1. 混在メディアセットエディターで、次のいずれかをおこないます。
 
    * アセットを並べ替えるには - 左側のパネルで「**[!UICONTROL アセット]**」（写真アイコン）をタップし、アセットを新しい位置にドラッグします。
-   * アセットを追加するには - ツールバーの「**[!UICONTROL アセットを追加]**」をタップします。アセットに移動します。追加するアセットごとに、（アセットの名前ではなく）アセットの画像の上にマウスポインターを置き、チェックマークアイコンをタップします。右上隅にある「**[!UICONTROL 選択]**」をタップします。
+   * アセットを追加するには - ツールバーの「**[!UICONTROL アセットを追加」をタップします。]**&#x200B;アセットに移動します。追加するアセットごとに、（アセットの名前ではなく）アセットの画像の上にマウスポインターを置き、チェックマークアイコンをタップします。In the upper-right corner, tap **[!UICONTROL Select.]**
 
-   * アセットを削除するには - 左側のパネルで「**[!UICONTROL アセット]**」（写真アイコン）をタップし、アセットを選択します。ツールバーの「**[!UICONTROL アセットを削除]**」をタップします。
+   * アセットを削除するには - 左側のパネルで「**[!UICONTROL アセット]**」（写真アイコン）をタップし、アセットを選択します。On the toolbar bar tap **[!UICONTROL Delete Asset.]**
 
    * アセットを名前の昇順または降順に並べ替えるには、左側のパネルで「**[!UICONTROL アセット]**」（写真アイコン）をタップします。「**[!UICONTROL アセット]**」見出しの右側にある上向きまたは下向きキャレットアイコンをタップします。
 
       >[!NOTE]
       >
-      >    * To delete an entire Mixed Media Set, from any viewing mode (such as **[!UICONTROL Card View]** or **[!UICONTROL Column View]**) navigate to the Mixed Media Set. アセットの上にマウスポインターを置き、チェックマークアイコンをタップして選択します。キーボードの **[!UICONTROL Backspace]** キーを押すか、ツールバーの「**[!UICONTROL 詳細]**」（3 つのドット）をクリックしてから「**[!UICONTROL 削除]**」をタップします。
+      >    * 混在メディアセット全体を削除するには、任意の表示モード（**[!UICONTROL カード表示]**&#x200B;や&#x200B;**[!UICONTROL 列表示]**&#x200B;など）から混在メディアセットに移動します。アセットの上にマウスポインターを置き、チェックマークアイコンをタップして選択します。Press **[!UICONTROL Backspace]** on the keyboard, or click **[!UICONTROL More]** (three dots) on the toolbar, then tap **[!UICONTROL Delete.]**
          >
          >    
-      * You can edit the assets in a Mixed Media Set by navigating to the set, clicking **Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
+      * 混在メディアセット内のアセットを編集するには、セットの場所に移動し、左側のレールの「**メンバーを設定**」を選択してから、個々のアセットの&#x200B;**[!UICONTROL 鉛筆]**&#x200B;アイコンをタップして編集ウィンドウを開きます。
 
 
 1. 編集が完了したら、「**[!UICONTROL 保存]**」をタップします。
 
    >[!NOTE]
    >
-   >* 混在メディアセット内のアセットを編集するには - 混在メディアセットに移動します。セットを（選択ではなく）タップして、AEM プレビューを設定ページでセットを開きます。左側のレールで、下向きキャレットをクリックしてドロップダウンリストを開き、「**[!UICONTROL メンバーを設定]**」をタップします。メンバーを設定ページで、アセットの上にマウスポインターを置き、「**[!UICONTROL 編集]**」（鉛筆アイコン）をタップして編集ページを開きます。
+   >* 混在メディアセット内のアセットを編集するには - 混在メディアセットに移動します。セットを（選択ではなく）タップして、AEM プレビューを設定ページでセットを開きます。左側のレールで、下向きキャレットをクリックしてドロップダウンリストを開き、「**[!UICONTROL メンバーを設定」をタップします。]**&#x200B;メンバーを設定ページで、アセットの上にマウスポインターを置き、「**[!UICONTROL 編集]**」（鉛筆アイコン）をタップして編集ページを開きます。
       >
       >
-   * 混在メディアセット全体を削除するには - 任意の表示モード（カード表示や列表示など）から混在メディアセットに移動します。Hover on the set, then tap **Select]** (checkmark icon). キーボードの **[!UICONTROL Backspace]** キーを押すか、「**[!UICONTROL 詳細]**」（連続する 3 つのドット）をタップしてから「**[!UICONTROL 削除]**」をタップします。
+   * 混在メディアセット全体を削除するには - 任意の表示モード（カード表示や列表示など）から混在メディアセットに移動します。セットの上にマウスポインターを置き、「**選択**」（チェックマークアイコン）をタップします。Press **[!UICONTROL Backspace]** on your keyboard, or tap **[!UICONTROL More]** (row of three dots), then tap **[!UICONTROL Delete.]**
 
 
 ## 混在メディアセットのプレビュー {#previewing-mixed-media-sets}
@@ -174,5 +177,5 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 >[!NOTE]
 >
->混在メディアセットが最初の公開時に配信サービスに完全に送信されなかった場合は、混在メディアセットを 2 回公開する必要があります。
+>混在メディアセットが最初の公開時に配信サービスに完全に送信されなかった場合は、2 回目の公開をおこなう必要があります。
 
