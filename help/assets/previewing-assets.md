@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9e6aba1f511754080305c0a97ce9bc85511f29a7
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1346'
-ht-degree: 68%
+ht-degree: 67%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 68%
 **ソフトウェアインターフェイスを使用してアセットをプレビューするには**
 
 1. **Adobe Experience Manager** で、**ナビゲーション**&#x200B;ページの「**[!UICONTROL アセット]**」をタップし、「**[!UICONTROL ファイル]**」をタップしてアセットにアクセスします。
-1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL リスト表示]**」をタップします。
+1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View.]**
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
 1. クリックしたアセットの種類に応じて、次のいずれかの操作をおこないます。
