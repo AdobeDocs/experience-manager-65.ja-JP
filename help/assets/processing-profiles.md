@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1369'
-ht-degree: 91%
+ht-degree: 87%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->ダ *イナミックメディア — Scene7モード* はAEM 6.4.6.0以降でのみ適用されます。
+>Dynamic Mediaに適用され *ます。Scene7モードは* 、AEM 6.4.6.0以降でのみ有効です。
 
 後で変更した既存の処理プロファイルがあるフォルダー内のアセットを再処理できます。
 
@@ -73,20 +73,20 @@ ht-degree: 91%
    * 選択したメインフォルダー内にアセットを含んだ 1 つ以上のサブフォルダーが存在する場合、ワークフローはフォルダー階層内のあらゆるアセットを再処理します。
    * ベストプラクティスとしては、1,000 個を超えるアセットを含んだフォルダー階層に対しては、このワークフローを実行しないでください。
 
-1. ページの左上隅付近にあるドロップダウンリストで「**[!UICONTROL タイムライン]**」をクリックします。
+1. Near the upper-left corner of the page, from the drop-down list, click **[!UICONTROL Timeline.]**
 1. ページ左下隅付近の「コメント」フィールドの右側にあるカラットアイコン（**^**）をクリックします。
 
    ![アセット再処理ワークフロー（その 1）](/help/assets/assets/reprocess-assets1.png)
 
-1. 「**[!UICONTROL ワークフローを開始]**」をクリックします。
-1. 「**[!UICONTROL ワークフローを開始]**」ドロップダウンリストから「**[!UICONTROL Scene7 : アセットを再処理]**」を選択します。
+1. Click **[!UICONTROL Start Workflow.]**
+1. From the **[!UICONTROL Start Workflow]** drop-down list, choose **[!UICONTROL Scene7: Reprocess Assets.]**
 1. （オプション）「**ワークフローのタイトルを入力**」テキストフィールドに、ワークフローの名前を入力します。必要に応じて、ワークフローインスタンスを参照する名前を使用できます。
 
    ![アセット再処理ワークフロー（その 2）](/help/assets/assets/reprocess-assets2.png)
 
-1. 「**[!UICONTROL 開始]**」をクリックした後、「**[!UICONTROL 確認]**」をクリックします。
+1. Click **[!UICONTROL Start]**, then click **[!UICONTROL Confirm.]**
 
-   ワークフローを監視したり、進行状況を確認したりするには、AEM のメインコンソールページで&#x200B;**[!UICONTROL ツール／ワークフロー]**&#x200B;をクリックします。ワークフローインスタンスページで、ワークフローを選択します。メニューバーの「**[!UICONTROL 履歴を開く]**」をクリックします。同じワークフローインスタンスページで、選択したワークフローの終了、休止、名前変更をおこなうこともできます。
+   ワークフローを監視したり、進行状況を確認したりするには、AEM のメインコンソールページで&#x200B;**[!UICONTROL ツール／ワークフローをクリックします。]**&#x200B;ワークフローインスタンスページで、ワークフローを選択します。メニューバーの「**[!UICONTROL 履歴を開く」をクリックします。]**&#x200B;同じワークフローインスタンスページで、選択したワークフローの終了、休止、名前変更をおこなうこともできます。
 
 ### 再処理ワークフローのバッチサイズの調整 {#adjusting-load}
 
@@ -94,12 +94,12 @@ ht-degree: 91%
 
 **再処理ワークフローのバッチサイズを調整するには（オプション）**：
 
-1. In Experience Manager, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL Workflow > Models]**.
-1. ワークフローモデルページのカード表示またはリスト表示で、「**[!UICONTROL Scene7 : アセットを再処理]**」を選択します。
+1. In Experience Manager, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL Workflow > Models.]**
+1. On the Workflow Models page, in Card View or List View, select **[!UICONTROL Scene7: Reprocess Assets.]**
 
    ![カード表示で「Scene7 : アセットを再処理」ワークフローが選択されたワークフローモデルページ](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. ツールバーの「**[!UICONTROL 編集]**」をクリックします。新しいブラウザータブに、「Scene7 : アセットを再処理」ワークフローモデルページが開きます。
+1. ツールバーの「**[!UICONTROL 編集」をクリックします。]**&#x200B;新しいブラウザータブに、「Scene7 : アセットを再処理」ワークフローモデルページが開きます。
 1. On the Scene7: Reprocess Assets workflow page, near the upper-right corner, click **[!UICONTROL Edit]** to &quot;unlock&quot; the workflow.
 1. In the workflow, select the Scene7 Batch Upload component to open the toolbar, then click **[!UICONTROL Configure]** on the toolbar.
 
@@ -112,18 +112,19 @@ ht-degree: 91%
    * 「**[!UICONTROL 期間]**」フィールドに、外部プロセスが完了したかどうかを確認するポーリング間隔（秒）を入力します。
    * 「**[!UICONTROL バッチ]**」フィールドに、Dynamic Media サーバーのアップロードジョブのバッチ処理で処理するアセットの最大数（50～1,000）を入力します。
    * タイムアウトに達したときに先に進む場合は、「**[!UICONTROL タイムアウトで先に進む]**」を選択します。タイムアウトに達したときにインボックスまで進む場合は、選択を解除します。
+
    ![プロパティダイアログボックス](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. In the upper-right corner of the **[!UICONTROL Batch Upload to Scene7 – Step Properties]** dialog box, click **[!UICONTROL Done]**.
+1. In the upper-right corner of the **[!UICONTROL Batch Upload to Scene7 – Step Properties]** dialog box, click **[!UICONTROL Done.]**
 
-1. In the upper-right corner of the Scene7: Reprocess Assets workflow model page, click **[!UICONTROL Sync]**. 「**[!UICONTROL 同期済み]**」と表示された場合、ワークフローランタイムモデルは正常に同期されており、フォルダー内のアセットを再処理する準備が整います。
+1. In the upper-right corner of the Scene7: Reprocess Assets workflow model page, click **[!UICONTROL Sync.]**「**[!UICONTROL 同期済み]**」と表示された場合、ワークフローランタイムモデルは正常に同期されており、フォルダー内のアセットを再処理する準備が整います。
 
    ![ワークフローモデルの同期](/help/assets/assets-dm/reprocess-assets1.png)
 
 1. 「Scene7 : アセットを再処理」ワークフローモデルを表示しているブラウザータブを閉じます。
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
-1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
+1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite.]**
 1. In the folder tree on the left side of the CRXDE Lite page, navigate to the following location:
 
    `/conf/global/settings/workflow/models/scene7_reprocess_assets/jcr:content/flow/reprocess/metaData`
@@ -134,10 +135,10 @@ ht-degree: 91%
     * **[!UICONTROL Name]**: `reprocess-batch-size`
     * **[!UICONTROL Type]**: `Long`
     * **[!UICONTROL Value]**: enter a default value (50-1000) for the batch size
-1. In the lower-right corner, click **[!UICONTROL Add]**. The new property appears as the following:
+1. In the lower-right corner, click **[!UICONTROL Add.]** The new property appears as the following:
 
     ![Saving the new property](/help/assets/assets/workflow-models10.png)
 
-1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All]**.
+1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All.]**
 1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main AEM console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
