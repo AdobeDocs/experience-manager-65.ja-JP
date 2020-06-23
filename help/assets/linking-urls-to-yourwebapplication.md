@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 translation-type: tm+mt
-source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1275'
-ht-degree: 94%
+ht-degree: 85%
 
 ---
 
@@ -66,25 +66,25 @@ URL 文字列を取得するには複数の方法があります。以下の手�
 
 1. 選択したアセットに応じて、次のいずれかの操作をおこないます。
 
-   * 画像を選択した場合は、ドロップダウンメニューで「**[!UICONTROL レンディション]**」をタップします。
+   * If you selected an image, in the drop-down menu, tap **[!UICONTROL Renditions.]**
 
       「**[!UICONTROL 動的]**」ヘッダーの下にあるプリセット名をタップすると、右側のフレームにレンディションが表示されます。「動的」ヘッダーを表示するには、場合によってはレンディションリストをスクロールする必要があります。
 
-      左側のレールの下部にある「**[!UICONTROL URL]**」をタップします。
+      At the bottom of the left rail, tap **[!UICONTROL URL.]**
 
       ![chlimage_1-270](assets/chlimage_1-270.png)
 
-   * スピンセット、画像セット、カルーセルセットまたはビデオを選択した場合は、ドロップダウンメニューで「**[!UICONTROL ビューア]**」をタップします。
+   * If you selected a spin set, an image set, a carousel set, or a video, in the drop-down menu, tap **[!UICONTROL Viewers.]**
 
       左側のレールで、ビューアプリセット名をタップします。セットまたはビデオのプレビューが別のページで開きます。
 
-      左側のレールの下部にある「**[!UICONTROL URL]**」をタップします。
+      In the left rail, at the bottom, tap **[!UICONTROL URL.]**
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. テキストを選択し、Web ブラウザーにコピーしてアセットをプレビューするか、Web コンテンツページに追加します。
 
-   URL ウィンドウを閉じるには、「**[!UICONTROL X]**」をタップするか、「**[!UICONTROL 閉じる]**」をタップします。
+   To exit the URL window, tap the **[!UICONTROL X]** or tap **[!UICONTROL Close.]**
 
 ## 静的アセットの URL の取得 {#obtaining-a-url-for-a-static-asset}
 
@@ -122,8 +122,8 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
 ## 公開されたビデオレンディションのビデオ URL の取得 {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. AEM で、**[!UICONTROL ツール／導入／クラウド／Cloud Services]** に移動します。
-1. **[!UICONTROL Cloud Services]** ページで、「**[!UICONTROL Dynamic Media Cloud Services]**」見出しまでスクロールダウンして、「**[!UICONTROL 設定を表示]**」をタップします。
+1. In AEM, navigate to **[!UICONTROL Tools > Deployment > Cloud > Cloud Services.]**
+1. On the **[!UICONTROL Cloud Services]** page, scroll down to the **[!UICONTROL Dynamic Media Cloud Services]** heading, then tap **[!UICONTROL Show Configurations.]**
 1. 「**[!UICONTROL 利用可能な設定]**」の下で、必要な設定をタップします。
 
 1. **[!UICONTROL Dynamic Media クラウドの設定]**&#x200B;ページの「**[!UICONTROL ビデオサービスの URL]**」の下で、URL パス全体をコピーします。コピーした URL パスは後の手順で必要になります。
@@ -138,7 +138,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    例えば、登録 ID が `87654321|MyCompany` の場合、顧客名は `MyCompany` です。
 
-1. Near the upper-left corner of the page, tap **[!UICONTROL Cloud Services**, then tap the Experience Manager logo and navigate to **[!UICONTROL General > CRXDE Lite]**.
+1. Near the upper-left corner of the page, tap **[!UICONTROL Cloud Services**, then tap the Experience Manager logo and navigate to **[!UICONTROL General > CRXDE Lite.]**
 1. JCR（Java コンテンツリポジトリ）のビデオレンディションパス全体をコピーします。
 
    例えば、ビデオのレンディションパスは、次のように表示されることがあります。
@@ -159,8 +159,8 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
 ## アダプティブストリーミング（HLS）用のビデオ URL の取得 {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. AEM で、**[!UICONTROL ツール／導入／クラウド／Cloud Services]** に移動します。
-1. **[!UICONTROL Cloud Services]** ページで、「**[!UICONTROL Dynamic Media Cloud Services]**」見出しまでスクロールダウンして、「**[!UICONTROL 設定を表示]**」をタップします。
+1. In AEM, navigate to **[!UICONTROL Tools > Deployment > Cloud > Cloud Services.]**
+1. On the **[!UICONTROL Cloud Services]** page, scroll down to the **[!UICONTROL Dynamic Media Cloud Services]** heading, then tap **[!UICONTROL Show Configurations.]**
 1. 「**[!UICONTROL 利用可能な設定]**」の下で、必要な設定をタップします。
 1. **[!UICONTROL Dynamic Media Cloud Services を設定]**&#x200B;ページで、以下の作業をおこないます。
 
