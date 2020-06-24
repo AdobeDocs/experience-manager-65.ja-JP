@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
 workflow-type: tm+mt
 source-wordcount: '4345'
 ht-degree: 97%
@@ -52,7 +52,11 @@ ht-degree: 97%
 1. **画像バナーのアップロード** - インタラクティブとして設定する画像バナーをアップロードします。
 [画像バナーのアップロード](#uploading-an-image-banner)を参照してください。
 
-1. **画像バナーへのホットスポットの追加** - 1 つ以上のホットスポットを画像バナーに追加し、それぞれにアクション（ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなど）を関連付けます。ホットスポットを追加した後は、インタラクティブ画像を公開するとタスクが終了します。[画像バナーへのホットスポットの追加](#adding-hotspots-to-an-image-banner)を参照してください。[（オプション）インタラクティブ画像のプレビュー](#optional-previewing-interactive-images)を参照してください。必要に応じて、ショッパブルバナーの表示を確認して、インタラクティビティをテストすることができます。インタラクティブ画像アセットの公開方法について詳しくは、[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+1. **画像バナーへのホットスポットの追加** - 1 つ以上のホットスポットを画像バナーに追加し、それぞれにアクション（ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなど）を関連付けます。ホットスポットを追加した後は、インタラクティブ画像を公開するとタスクが終了します。
+
+   * [画像バナーへのホットスポットの追加](#adding-hotspots-to-an-image-banner)を参照してください。
+   * [（オプション）インタラクティブ画像のプレビュー](#optional-previewing-interactive-images)を参照してください。必要に応じて、ショッパブルバナーの表示を確認して、インタラクティビティをテストすることができます。
+   * インタラクティブ画像アセットの公開方法について詳しくは、[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
 1. **AEM でのインタラクティブ画像の Web サイトへの追加** AEM Sites または AEM eCommerce（あるいは両方）を使用している場合、AEM でインタラクティブメディアコンポーネントを Web ページにドラッグすることで、インタラクティブ画像を Web ページに直接追加できます。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。AEM Assets と Dynamic Media をスタンドアロンで使用している場合は、埋め込みコードを Web サイトにコピーしてから、既存のクイックビューに統合する必要があります。[インタラクティブ画像の Web サイトへの統合](#integrating-an-interactive-image-with-your-website)を参照してください。サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブ画像の既存のクイックビューへの統合](#integrating-an-interactive-image-with-an-existing-quickview)を参照してください。
 
@@ -64,6 +68,7 @@ ht-degree: 97%
 >
 >* クイックビューをトリガーして、画像にインタラクティブ機能を追加する。
 >* eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+
 >
 >
 AEM の実装で AEM eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
@@ -277,6 +282,7 @@ AEM Assets に含まれる、デフォルトの標準提供インタラクティ
 
       * AEM Sites のユーザーである場合は、サイトセレクターアイコン（フォルダー）をタップまたはクリックして URL に移動します。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
       * スタンドアロンユーザーである場合は、「HREF」テキストフィールドに、リンクされる Web ページへの完全な URL パスを指定します。
+
    このリンクを新しいブラウザータブで開く（推奨のデフォルト）か同じタブで開くかを指定してください。
 
    詳しくは、[セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
