@@ -11,7 +11,7 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13cf9930876af3dd27b2fcb3e1059dae61769803
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 94%
@@ -29,6 +29,7 @@ ht-degree: 94%
 >
 >* Assets REST API
 >* コンテンツフラグメントをサポートしています。
+
 >
 >
 AEM Assets HTTP API の現在の実装は REST です。
@@ -129,6 +130,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 >
 >* [CORS／AEM の説明](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 >* [ビデオ - AEM を使用した CORS 向け開発](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+
 >
 
 
@@ -137,7 +139,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 
 ## 使用可能な機能 {#available-features}
 
-コンテンツフラグメントは特定のアセットタイプです。](/help/assets/content-fragments.md)コンテンツフラグメントの操作[を参照してください。
+コンテンツフラグメントは特定のアセットタイプです。](/help/assets/content-fragments/content-fragments.md)コンテンツフラグメントの操作[を参照してください。
 
 API を通じて使用できる機能について詳しくは、以下を参照してください。
 
@@ -197,7 +199,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 ### コンテンツフラグメント {#content-fragments}
 
-[コンテンツフラグメント](/help/assets/content-fragments.md)は特殊なタイプのアセットです。コンテンツフラグメントを使用すれば、テキスト、数値、日付など様々な要素を含む構造化データにアクセスできます。
+[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)は特殊なタイプのアセットです。コンテンツフラグメントを使用すれば、テキスト、数値、日付など様々な要素を含む構造化データにアクセスできます。
 
 標準アセット（画像やオーディオなど）との違いがいくつかあるので、それらの処理には追加のルールが適用されます。**
 
@@ -345,6 +347,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
       * `Could not update content element`
       * `Could not update fragment data of element`
+
    通常、詳細なエラーメッセージは次のように返されます。
 
    ```xml
