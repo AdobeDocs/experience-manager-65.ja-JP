@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4244ebbe8ceb3bef8d47e1e32817edbd11db4d9a
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+workflow-type: tm+mt
+source-wordcount: '5899'
+ht-degree: 75%
 
 ---
 
@@ -99,17 +102,17 @@ CRX ドキュメントの[バックアップと復元](/help/sites-administering
 
 ![screen_shot_2012-03-15at14418pm](assets/screen_shot_2012-03-15at14418pm.png)
 
-**開始パス** ：パージを実行する必要がある絶対パス。 リポジトリツリーナビゲーターをクリックして、開始パスを選択することができます。
+**開始パス** ：削除を実行する必要がある絶対パスです。 リポジトリツリーナビゲーターをクリックして、開始パスを選択できます。
 
 **再帰** ：データを削除する場合は、「再帰」を選択して、1つのノードで操作を実行するか、階層全体で操作を実行するかを選択できます。 最後のケースでは、指定されたパスが階層のルートノードを定義します。
 
-**保持する最大バージョン** ：ノードで保持する最大バージョン数。 この値を超えると、最も古いバージョンが削除されます。
+**保持する最大バージョン** ：ノードで保持する最大バージョン数です。 この値を超えると、最も古いバージョンは削除されます。
 
-**Maximum version age** ：ノードのバージョンの最大経過時間。 バージョンの経過時間がこの値を超えると、削除されます。
+**Maximum version age** ：ノードのバージョンの最大経過時間。 バージョンの有効期間がこの値を超えると、そのバージョンは削除されます。
 
-**Dry Run** ：バックアップを復元しない限り、コンテンツのバージョンの削除は確実で元に戻せないので、Purge Versionsツールではドライ実行モードを使用して、削除されたバージョンをプレビューできます。 パージ処理のドライ実行を開始するには、「ドライ実行」をクリックします。
+**ドライ作動** ：バックアップを復元しないと、コンテンツの削除バージョンは確定されており、元に戻すことができないため、Purge Versionsツールではドライ作動モードを使用して、削除されたバージョンをプレビューできます。 パージ処理のドライ実行を開始するには、「ドライ実行」(Dry Run)をクリックします。
 
-**削除** ：ノードパスで定義されたノード上のバージョンの削除を開始します。
+**Purge** :開始パスで定義されたノード上のバージョンの削除を開始します。
 
 ### Web サイトのバージョンのパージ {#purging-versions-of-a-web-site}
 
@@ -135,19 +138,19 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 
 「**ドライラン**」と「**パージ**」の処理では、処理されたすべてのノードがリストされます。処理の間、ノードのステータスは次のうちいずれかになります。
 
-* `ignore (not versionnable)`:ノードはバージョン管理をサポートしていないので、処理中は無視されます。
+* `ignore (not versionnable)`: このノードはバージョン管理をサポートしていないので、プロセス中は無視されます。
 
-* `ignore (no version)`:ノードにはバージョンがないので、処理中は無視されます。&quot;
+* `ignore (no version)`: ノードにはバージョンがなく、プロセス中は無視されます。 &quot;
 
 * `retained`：ノードはパージされません。
-* `purged`:ノードが削除されます。
+* `purged`: ノードが削除されます。
 
 さらに、コンソールでは、バージョンに関して次のような有益な情報が提供されます。
 
-* `V 1.0`:バージョン番号。
+* `V 1.0`: バージョン番号。
 * `V 1.0.1`*：星マークは、バージョンが最新であることを示します。
 
-* `Thu Mar 15 2012 08:37:32 GMT+0100`:バージョンの日付。
+* `Thu Mar 15 2012 08:37:32 GMT+0100`: バージョンの日付。
 
 例を以下に示します。
 
@@ -170,11 +173,11 @@ AEM WCM では詳細なログを記録します。クイックスタートを展
 
 #### ログファイルのローテーション {#log-file-rotation}
 
-ログファイルのローテーションとは、新しいファイルを定期的に作成することでファイルの増大を制限するプロセスを指します。 AEMでは、というログファイルが `error.log` 、指定された規則に従って1日1回回転されます。
+ログファイルのローテーションとは、新しいファイルを定期的に作成することでファイルの量を制限するプロセスを指します。 AEMでは、というログファイル `error.log` が、指定されたルールに従って1日1回回転されます。
 
-* ファイル `error.log` の名前は、{original_filename}というパターンに従って変更されま `.yyyy-MM-dd`す。 例えば、2010年7月11日に、現在のログファイルの名前が変更され、新 `error.log-2010-07-10`しいログファイルが作成 `error.og` されます。
+* フ `error.log` ァイルの名前は、{original_filename}というパターンに従って変更され `.yyyy-MM-dd`ます。 例えば、2010年7月11日に、現在のログファイルの名前が変更され `error.log-2010-07-10`、新しいログファイルが作成 `error.og` されます。
 
-* 以前のログファイルは削除されないので、古いログファイルを定期的にクリーンアップして、ディスクの使用を制限する必要があります。
+* 以前のログファイルは削除されないので、古いログファイルを定期的にクリーンアップしてディスクの使用を制限する必要があります。
 
 >[!NOTE]
 AEM をアップグレードする場合は、AEM でこれ以上使用されない既存のログファイルがディスク上に残ることに注意してください。これらは削除しても問題ありません。新しいログエントリはすべて、新しいログファイルに書き込まれます。
@@ -189,434 +192,441 @@ AEM をアップグレードする場合は、AEM でこれ以上使用されな
 AEM WCM およびリポジトリに対するアクセス要求はすべてここに登録されます。
 
    * `audit.log`
-モデレートアクションはここに登録されます。
+モデレート操作はここに登録されます。
 
    * `error.log`
 エラーメッセージ（様々な深刻度レベル）はここに登録されます。
 
-   * [ このロ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)グは、が有効な場合にのみ [!DNL Dynamic Media] 使用されます。 内部ImageServerプロセスの動作を分析するために使用される統計と分析情報を提供します。
+   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+このログは、が有効な場合にのみ使用 [!DNL Dynamic Media] されます。 内部ImageServerプロセスの動作の分析に使用される統計と分析情報を提供します。
 
    * `request.log`
 各アクセス要求が、応答と共にここに登録されます。
 
-   * [ このロ `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)グは、が有効な場合にのみ [!DNL Dynamic Media] 使用されます。 s7accessログには、およびを介して行われた各リクエストが [!DNL Dynamic Media] 記録さ `/is/image` れま `/is/content`す。
+   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+このログは、が有効な場合にのみ使用 [!DNL Dynamic Media] されます。 s7accessログには、およびを介して行われた各リクエストが記録 [!DNL Dynamic Media] され `/is/image` ま `/is/content`す。
 
    * `stderr.log`
-起動時に生成される様々な重大度のエラー・メッセージを保持します。 デフォルトでは、ログレベルは `Warning` ( `WARN`)に設定されます
-
-   * `stdout.log`
-起動時のイベントを示すログメッセージを保持します。
+起動時に生成される様々なレベルの重大度のエラー・メッセージを保持します。 デフォルトでは、ログレベルは `Warning` ( `WARN`)に設定されます。
+`stdout.log`
+起動時のイベントを示すログメッセージを保持します。`WARN`
 
    * `upgrade.log`
-およびパッケージから実行されるすべてのアップグレード操作のログ `com.day.compat.codeupgrade` を提供 `com.adobe.cq.upgradesexecutor` します。
+およびパッケージから実行されるすべてのアップグレード操作のログ `com.day.compat.codeupgrade` を提供し `com.adobe.cq.upgradesexecutor` ます。
 
-* `<*cq-installation-dir*>/crx-quickstart/repository`
+   * `<*cq-installation-dir*>/crx-quickstart/repository`
+`revision.log`
+改訂ジャーナリング情報。`com.adobe.cq.upgradesexecutor`
 
-   * `revision.log`
-リビジョンジャーナリング情報。
+* [!NOTE]
 
->[!NOTE]
-ImageServerとs7accessのログは、**system/console/status-Bundlelist **pageから生成される**Download Full **パッケージには含まれません。 サポートの目的で問題が発生した場合 [!DNL Dynamic Media] は、カスタマーサポートに問い合わせる際に、ImageServerとs7accessのログも追加してください。
+   * **system/console/status-Bundlelist **ページから生成された**Download Full **packageには、ImageServerとs7accessのログは含まれません。 サポートの目的で、問題が発生した場合は、カスタマーサポートに問い合わせる際に、ImageServerログとs7accessログも追加して [!DNL Dynamic Media] ください。
 
-### デバッグログレベルのアクティベート {#activating-the-debug-log-level}
-
+>デバッグログレベルのアクティベート {#activating-the-debug-log-level}
 デフォルトのログレベル（[Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)）は情報（INFO）なので、デバッグメッセージはログに記録されません。
 
-ロガーのデバッグログレベルをアクティブにするには、リポジトリでデバッグす `org.apache.sling.commons.log.level` るプロパティを設定します。 例えば、をオンにして、グ `/libs/sling/config/org.apache.sling.commons.log.LogManager` ローバルApache Sling [ログを設定します](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)。
+### ロガーのデバッグログレベルをアクティブにするには、リポジトリでデバッグす `org.apache.sling.commons.log.level` るプロパティを設定します。 例えば、 `/libs/sling/config/org.apache.sling.commons.log.LogManager` グローバルApache Slingログを設定す [る場合などです](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)。
 
->[!CAUTION]
-デバッグログレベルのログを、不必要に長く残さないでください。多くのログエントリが生成され、リソースが消費されます。
+[!CAUTION]](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
 
-デバッグファイルの行は、通常は DEBUG で始まり、その後にログレベル、インストーラーのアクション、ログメッセージが示されます。次に例を示します。
+デバッグログレベルのログを、不必要に長く残さないでください。多くのログエントリが生成され、リソースが消費されます。`org.apache.sling.commons.log.level``/libs/sling/config/org.apache.sling.commons.log.LogManager`[](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
+
+>[!CAUTION]デバッグファイルの行は、通常は DEBUG で始まり、その後にログレベル、インストーラーのアクション、ログメッセージが示されます。次に例を示します。
+ログレベルは次のとおりです。
+
+0
 
 ```shell
 DEBUG 3 WebApp Panel: WebApp successfully deployed
 ```
 
-ログレベルは次のとおりです。
+重大なエラー
 
-| 0 | 重大なエラー | アクションが失敗し、インストーラーの処理を続行できません。 |
+| アクションが失敗し、インストーラーの処理を続行できません。 | 1 | エラー |
 |---|---|---|
-| 1 | エラー | アクションが失敗しました。インストールは続行しますが、AEM WCM の一部が正常にインストールされなかったので、機能しません。 |
-| 2 | 警告 | アクションは成功しましたが、問題が発生しました。AEM WCM は正常に機能する場合と機能しない場合があります。 |
-| 3 | 情報 | アクションが成功しました。 |
+| アクションが失敗しました。インストールは続行しますが、AEM WCM の一部が正常にインストールされなかったので、機能しません。 | 2 | 警告 |
+| アクションは成功しましたが、問題が発生しました。AEM WCM は正常に機能する場合と機能しない場合があります。 | 3 | 情報 |
+| アクションが成功しました。 | カスタムログファイルの作成 {#create-a-custom-log-file} | [!NOTE] |
 
-### カスタムログファイルの作成 {#create-a-custom-log-file}
+### Adobe Experience Manager を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
->[!NOTE]
-Adobe Experience Manager を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+>[!NOTE]状況によっては、別のログレベルでカスタムログファイルを作成する必要があります。これをおこなうには、リポジトリで次の手順を実行します。
+既存のものがない場合は、新しい設定フォルダー（`sling:Folder`）を、プロジェクト（`/apps/<*project-name*>/config`）用に作成します。
 
-状況によっては、別のログレベルでカスタムログファイルを作成する必要があります。これをおこなうには、リポジトリで次の手順を実行します。
+Under `/apps/<*project-name*>/config`, create a node for the new [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration):
 
-1. If not already existing, create a new configuration folder ( `sling:Folder`) for your project `/apps/<*project-name*>/config`.
-1. Under `/apps/<*project-name*>/config`, create a node for the new [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration):
+1. 名前：`org.apache.sling.commons.log.LogManager.factory.config-<*identifier*>`（ロガーの場合）`/apps/<*project-name*>/config`
+1. `<*identifier*>` の部分は、インスタンスを識別するフリーテキストに置き換えます（この情報は省略できません）。[](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration)
 
-   * 名前： `org.apache.sling.commons.log.LogManager.factory.config-<*identifier*>` （ロガーの場合）
+   * 例：`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
-      Where `<*identifier*>` is replaced by free text that you (must) enter to identify the instance (you cannot omit this information).
+      タイプ：`sling:OsgiConfig`
 
-      例：`org.apache.sling.commons.log.LogManager.factory.config-MINE`
+      [!NOTE]
 
-   * タイプ: `sling:OsgiConfig`
-   >[!NOTE]
-   Although not a technical requirement, it is advisable to make `<*identifier*>` unique.
+   * 技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
+   >[!NOTE]このノードで次のプロパティを設定します。
+   名前：`org.apache.sling.commons.log.file`
 
-1. このノードで次のプロパティを設定します。
+1. タイプ：String
 
-   * 名前: `org.apache.sling.commons.log.file`
+   * 値： ログファイルを指定します。 例えば、 `logs/myLogFile.log`
 
-      タイプ：String
+      名前：`org.apache.sling.commons.log.names`
 
-      値：ログファイルの指定例えば、 `logs/myLogFile.log`
+      タイプ： 文字列[] （文字列+複数）
 
-   * 名前: `org.apache.sling.commons.log.names`
+   * 値： ロガーがメッセージをログに記録するOSGiサービスを指定する。 例えば、次のすべての例を示します。`org.apache.sling.commons.log.names`
 
-      タイプ：文字列[] （文字列+複数）
+      `org.apache.sling`
 
-      値：ロガーがメッセージをログに記録するOSGiサービスを指定する。例えば、次のすべての例を示します。
+      `org.apache.felix`
 
-      * `org.apache.sling`
-      * `org.apache.felix`
       * `com.day`
-   * 名前: `org.apache.sling.commons.log.level`
+      * 名前：`org.apache.sling.commons.log.level`
+      * `com.day`タイプ：String
+   * 値： 必要なログレベルを指定します( `debug`、 `info`、 `warn` または `error`)。 例えば `debug`
 
-      タイプ：String
+      必要に応じてその他のパラメーターを設定します。
 
-      値：必要なログレベル(、、ま `debug`たは `info``warn` )を指 `error`定します。例えば `debug`
+      名前：`org.apache.sling.commons.log.pattern``info``warn``error``debug`
 
-   * 必要に応じてその他のパラメーターを設定します。
+   * タイプ：`String`
 
-      * 名前: `org.apache.sling.commons.log.pattern`
-
-         タイプ: `String`
-
-         値：必要に応じて、ログメッセージのパターンを指定します。例えば、
+      * 値： 必要に応じて、ログメッセージのパターンを指定します。 例えば、`org.apache.sling.commons.log.pattern`
 
          `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
-   >[!NOTE]
-   `org.apache.sling.commons.log.pattern` では、最大 6 個の引数がサポートされています。
 
+         [!NOTE]
+
+         `org.apache.sling.commons.log.pattern` では、最大 6 個の引数がサポートされています。
    >{0} タイプが `java.util.Date` のタイムスタンプ {1} ログマーカー {2} 現在のスレッドの名前 {3} ロガーの名前 {4} ログレベル {5} ログメッセージ
-
-   >ログ呼び出しに `Throwable` が含まれている場合は、スタックトレースがメッセージに付加されます。
+   ログ呼び出しに `Throwable` が含まれている場合は、スタックトレースがメッセージに付加されます。
 
    >[!CAUTION]
-   org.apache.sling.commons.log.names には値が必要です。
+
+   >org.apache.sling.commons.log.names には値が必要です。`Throwable`
 
    >[!NOTE]
    ログライターのパスは、`crx-quickstart` の場所と相対的です。
-   したがって、ログファイルが
+
+   >[!NOTE]したがって、ログファイルが
    `logs/thelog.log`
-
-   >と指定されている場合、書き込み先は以下となります。
+   と指定されている場合、書き込み先は以下となります。
    `` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
-   また、ログファイルが
-   `../logs/thelog.log`
 
-   >と指定されている場合、書き込み先は以下のディレクトリとなります。
+   >また、ログファイルが
+   `../logs/thelog.log`
+   と指定されている場合、書き込み先は以下のディレクトリとなります。
    ` <*cq-installation-dir*>/logs/`
 &quot;(例： ` `&lt;*cq-installation-dir*>/の横`crx-quickstart/`)
 
-1. この手順は、新しいライターが必要な場合（つまり、デフォルトのライターとは異なる設定の場合）にのみ必要です。
+   >この手順は、新しいライターが必要な場合（つまり、デフォルトのライターとは異なる設定の場合）にのみ必要です。
+   [!CAUTION]` `**`crx-quickstart/`
 
-   >[!CAUTION]
-   新しい Logging Writer Configuration は、既存のデフォルトが適切でない場合にのみ必要です。
+1. 新しい Logging Writer Configuration は、既存のデフォルトが適切でない場合にのみ必要です。
 
-   >明示的なライターが設定されていない場合は、デフォルトに基づいて暗黙のライターが自動的に生成されます。
-
+   >[!CAUTION]明示的なライターが設定されていない場合は、デフォルトに基づいて暗黙のライターが自動的に生成されます。
    Under `/apps/<*project-name*>/config`, create a node for the new [Apache Sling Logging Writer Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingwriterconfigurationfactoryconfiguration):
 
-   * 名前：(こ `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` れは作家なので)
+   >Name: `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` (as this is a Writer)
 
-      ロガーと同様、は、イン `<*identifier*>` スタンスを識別するために（必須の）入力する自由なテキストに置き換えられます（この情報は省略できません）。 例：`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+   As with the Logger, `<*identifier*>` is replaced by free text that you (must) enter to identify the instance (you cannot omit this information). 例：`org.apache.sling.commons.log.LogManager.factory.writer-MINE`](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingwriterconfigurationfactoryconfiguration)
 
-   * タイプ: `sling:OsgiConfig`
-   >[!NOTE]
-   Although not a technical requirement, it is advisable to make `<*identifier*>` unique.
+   * タイプ：`sling:OsgiConfig`
 
-   このノードで次のプロパティを設定します。
+      [!NOTE]`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
-   * 名前: `org.apache.sling.commons.log.file`
+   * 技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
+   >[!NOTE]このノードで次のプロパティを設定します。
+   名前：`org.apache.sling.commons.log.file`
 
-      タイプ: `String`
+   タイプ：`String`
 
-      値：ログファイルを指定して、ロガーで指定されたファイルと一致するようにします。
+   * 値： ロガーで指定したファイルと一致するようにログファイルを指定します。`org.apache.sling.commons.log.file`
 
-      例えば、 `../logs/myLogFile.log`「
+      この例では、 `../logs/myLogFile.log`「
 
-   * 必要に応じてその他のパラメーターを設定します。
+      必要に応じてその他のパラメーターを設定します。
 
-      * 名前: `org.apache.sling.commons.log.file.number`
+      名前：`org.apache.sling.commons.log.file.number`
 
-         タイプ: `Long`
+   * タイプ：`Long`
 
-         Value: specify the number of log files you want kept; for example, `5`
+      * Value: specify the number of log files you want kept; for example, `5`
 
-      * 名前: `org.apache.sling.commons.log.file.size`
+         名前：`org.apache.sling.commons.log.file.size`
 
-         タイプ: `String`
+         タイプ：`String`
 
-         Value: specify as required to control file rotation by size/date; for example, `'.'yyyy-MM-dd`
-   >[!NOTE]
-   `org.apache.sling.commons.log.file.size` は、次のいずれかを設定することによって、ログファイルのローテーションを制御します。
-   * 最大ファイルサイズ
-   * 時刻／日付のスケジュール
-   これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
-   * サイズ制限は数値で指定できます。 サイズインジケーターを指定しない場合は、バイト数と見なされるか、サイズインジケーター(、、または、大文字と小文字の区別な `KB`し) `MB`の1つ `GB` を追加できます。
-   * 日時スケジュールは、パターンとして指定で `java.util.SimpleDateFormat` きます。 これは、ファイルの回転が終わるまでの期間を定義します。また、回転されたファイルに追加されるサフィックスも表します（識別用）。
-   デフォルトは「。」です。yyyy-MM-dd（日別ログのローテーション用）。
-   例えば、2010年1月20日の真夜中（またはこの後の最初のログメッセージが正確である場合）、../logs/error.logの名前は../logs/error.log.2010-01-20に変更されます。 1月21日のログは、次の日の変更時にロールオーバーされるまで、（新しい空の）../logs/error.logに出力されます。
-   | `'.'yyyy-MM` | 毎月の初めにローテーション。 |
+      * Value: specify as required to control file rotation by size/date; for example, `'.'yyyy-MM-dd`
+
+         [!NOTE]
+
+         `org.apache.sling.commons.log.file.size` は、次のいずれかを設定することによって、ログファイルのローテーションを制御します。
+   >[!NOTE]最大ファイルサイズ
+   `org.apache.sling.commons.log.file.size`時刻／日付のスケジュール
+   * これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
+   * サイズ制限は、数値で指定できます。 サイズインジケーターを指定しない場合は、バイト数と見なされるか、サイズインジケーターの1つ( `KB`、 `MB`または `GB` （大文字と小文字は区別されません）を追加できます。
+
+   日時スケジュールは、 `java.util.SimpleDateFormat` パターンとして指定できます。 これは、ファイルの回転後の期間を定義します。 また、回転したファイルの末尾に付く接尾辞（識別用）。
+   * デフォルトは「。」です。yyyy-MM-dd（日別ログローテーションの場合）`KB``MB``GB`
+   * 例えば、2010年1月20日の真夜中（またはこれ以降の最初のログメッセージが正確である場合）、../logs/error.logは../logs/error.log.2010-01-20に名前が変更されます。 1月21日のログは、次の変更時にロールオーバーするまで、（新しい空の）../logs/error.logに出力されます。`java.util.SimpleDateFormat`
+
+   `'.'yyyy-MM`
+   毎月の初めにローテーション。
+   | `'.'yyyy-ww` | 各週の最初の日のローテーション（ロケールに応じて異なります）。 |
    |---|---|
-   | `'.'yyyy-ww` | 各週の最初の日のローテーション（ロケールによって異なります）。 |
-   | `'.'yyyy-MM-dd` | 毎日午前0時のローテーション。 |
+   | `'.'yyyy-MM-dd` | 毎日午前0時にローテーション。 |
    | `'.'yyyy-MM-dd-a` | 毎日午前0時と正午のローテーション。 |
-   | `'.'yyyy-MM-dd-HH` | 毎時の最上部での回転。 |
-   | `'.'yyyy-MM-dd-HH-mm` | 毎分の最初の回転。 |
-   注意：日時を指定する場合：
-   1. 一重引用符(&#39; &#39;)のペア内で、リテラルテキストを「エスケープ」する必要があります。これは、特定の文字がパターン文字として解釈されるのを防ぐためです。
-   1. オプションの任意の場所で、有効なファイル名に使用できる文字のみを使用します。
+   | `'.'yyyy-MM-dd-HH` | 毎時の上部での回転。 |
+   | `'.'yyyy-MM-dd-HH-mm` | 毎分の開始時の回転。 |
+   | `'.'yyyy-MM-dd-HH-mm`注意： 日時を指定する場合： | 一重引用符(&#39; &#39;)のペア内のリテラルテキストは、「エスケープ」する必要があります。 これは、特定の文字がパターン文字として解釈されるのを防ぐためです。 |
+   有効なファイル名に使用できる文字は、オプション内の任意の場所に限られます。
+   1. 任意のツールで新しいログファイルを読み取ります。
+   1. The log file created by this example will be `../crx-quickstart/logs/myLogFile.log`.
 
 
-1. 任意のツールで新しいログファイルを読み取ります。
+1. Felix コンソールでは、`../system/console/slinglog` の Sling Log Support に関する情報も提供されます。例えば、`https://localhost:4502/system/console/slinglog`. です。
 
-   The log file created by this example will be `../crx-quickstart/logs/myLogFile.log`.
+   監査記録の検索 {#finding-the-audit-records}
 
-The Felix Console also provides information about Sling Log Support at `../system/console/slinglog`; for example `https://localhost:4502/system/console/slinglog`.
+監査記録は、いつ、誰が、何をしたかの記録を提供するために保持されます。AEM WCM と OSGi の両方のイベントに関して、様々な監査記録が生成されます。`../system/console/slinglog``https://localhost:4502/system/console/slinglog`
 
-### 監査記録の検索 {#finding-the-audit-records}
+### ページオーサリング時に表示される AEM WCM の監査記録 {#aem-wcm-audit-records-shown-when-page-authoring}
 
-監査記録は、いつ、誰が、何をしたかの記録を提供するために保持されます。AEM WCM と OSGi の両方のイベントに関して、様々な監査記録が生成されます。
+ページを開きます。
 
-#### ページオーサリング時に表示される AEM WCM の監査記録 {#aem-wcm-audit-records-shown-when-page-authoring}
+#### サイドキックから、ロックアイコンを含むタブを選択できます。次に、「**監査ログ**」をダブルクリックします。
 
-1. ページを開きます。
-1. サイドキックから、ロックアイコンを含むタブを選択できます。次に、「**監査ログ**」をダブルクリックします。
 1. 新しいウィンドウが開き、現在のページの監査記録のリストが表示されます。
-
-   ![screen_shot_2012-02-02at43601pm](assets/screen_shot_2012-02-02at43601pm.png)
-
+1. ![screen_shot_2012-02-02at43601pm](assets/screen_shot_2012-02-02at43601pm.png)
 1. ウィンドウを閉じるには、「**OK**」をクリックします。
 
-#### リポジトリ内の AEM WCM 監査記録 {#aem-wcm-auditing-records-within-the-repository}
+   リポジトリ内の AEM WCM 監査記録 {#aem-wcm-auditing-records-within-the-repository}](assets/screen_shot_2012-02-02at43601pm.png)
 
-フォルダ内 `/var/audit` では、リソースに従って監査レコードが保持されます。 個々のレコードとそのレコードに含まれる情報が表示されるまで、ドリルダウンできます。
+1. フォルダ内には、 `/var/audit` リソースに応じて監査レコードが保持される。 個々のレコードとそのレコードに含まれる情報が表示されるまで、ドリルダウンできます。**
 
-これらのエントリに保持されている情報は、ページ編集時に表示される情報と同じです。
+#### これらのエントリに保持されている情報は、ページ編集時に表示される情報と同じです。{#aem-wcm-auditing-records-within-the-repository}
 
-#### Web コンソールの OSGi 監査記録 {#osgi-audit-records-from-the-web-console}
+Web コンソールの OSGi 監査記録 {#osgi-audit-records-from-the-web-console}
 
 OSGi events also generate audit records which can be seen from the **Configuration Status** tab -> **Log Files **tab in the AEM Web Console:
 
-![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
+#### ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
-## レプリケーションエージェントの監視 {#monitoring-your-replication-agents}
+レプリケーションエージェントの監視 {#monitoring-your-replication-agents}**
 
 [レプリケーションキュー](/help/sites-deploying/replication.md)を監視すると、キューのダウンまたはブロックを検出できます。このような場合、パブリッシュインスタンスまたは外部システムに問題がある可能性があります。
 
-* 必要なキューがすべて有効になっていますか。
-* 無効なキューの中に、まだ必要なものがありますか。
+## 必要なキューがすべて有効になっていますか。{#monitoring-your-replication-agents}
+
+無効なキューの中に、まだ必要なものがありますか。[](/help/sites-deploying/replication.md)
+
 * `enabled`（有効な状態）のキューはすべて、ステータスが `idle` または `active` であり、これは正常な動作を示します。キューを `blocked`（ブロック状態）にしてはいけません。ブロックされている場合、多くは受信者側に問題があります。
-
 * 時間の経過と共にキューのサイズが大きくなる場合は、キューがブロックされている可能性があります。
+* レプリケーションエージェントを監視するには：`enabled``idle``active``blocked`
 
-レプリケーションエージェントを監視するには：
+* AEM の「**ツール**」タブにアクセスします。
 
-1. AEM の「**ツール**」タブにアクセスします。
-1. 「**レプリケーション**」をクリックします。
+「**レプリケーション**」をクリックします。
+
 1. 適切な環境のエージェントへのリンクをダブルクリックします（左右いずれかのウィンドウ）。例えば、「**オーサーのエージェント**」などです。
-
-   ウィンドウが開き、オーサー環境のすべてのレプリケーションエージェントの概要が、それぞれのターゲットとステータスを含めて表示されます。
-
-1. 適切なエージェント名（リンク）をクリックして、そのエージェントの詳細情報を表示します。
+1. ウィンドウが開き、オーサー環境のすべてのレプリケーションエージェントの概要が、それぞれのターゲットとステータスを含めて表示されます。****
+1. 適切なエージェント名（リンク）をクリックして、そのエージェントの詳細情報を表示します。****
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-   ここでは、以下のことができます。
+1. ここでは、以下のことができます。
 
-   * エージェントが有効かどうかを確認。
-   * レプリケーションのターゲットを確認。
+   ![エージェントが有効かどうかを確認。](assets/chlimage_1.jpeg)
+
+   レプリケーションのターゲットを確認。
+
    * レプリケーションキューが現在アクティブ（有効）かどうかを確認。
    * キュー内に項目が含まれているかどうかを確認。
    * **更新**&#x200B;または&#x200B;**消去**&#x200B;して、キューエントリの表示を更新。これは、キューに出入りする項目の確認に役立ちます。
-
    * **ログを表示**&#x200B;して、レプリケーションエージェントによるアクションのログにアクセス。
-   * ターゲットインスタンスへの&#x200B;**接続をテスト**。
+   * ターゲットインスタンスへの&#x200B;**接続をテスト**。****
+
    * 必要に応じて、任意のキュー項目で&#x200B;**強制的に再試行**。
-   >[!CAUTION]
-   パブリッシュインスタンスのリバースレプリケーションアウトボックスには、「接続をテスト」リンクは使用しないでください。
-   アウトボックスクエリ用にレプリケーションテストが実行されると、リバースレプリケーションのたびに、テストレプリケーションより古い項目がすべて再処理されます。
+   * [!CAUTION]**
+   * **パブリッシュインスタンスのリバースレプリケーションアウトボックスには、「接続をテスト」リンクは使用しないでください。**
+
+   >[!CAUTION]アウトボックスクエリ用にレプリケーションテストが実行されると、リバースレプリケーションのたびに、テストレプリケーションより古い項目がすべて再処理されます。
    そのような項目がキュー内に既に存在する場合は、次の XPath JCR クエリを使用して検索し、削除する必要があります。
    `/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
+   Again you can develop a solution to detect all replication agents (located under `/etc/replication/author` or `/etc/replication/publish`), then check the status of the agent ( `enabled`, `disabled`) and the underlying queue ( `active`, `idle`, `blocked`).
+   パフォーマンスの監視 {#monitoring-performance}
 
-Again you can develop a solution to detect all replication agents (located under `/etc/replication/author` or `/etc/replication/publish`), then check the status of the agent ( `enabled`, `disabled`) and the underlying queue ( `active`, `idle`, `blocked`).
+[パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)は、開発時に注目を集めるインタラクティブなプロセスです。デプロイメント後、通常は特定の間隔またはイベントの後でレビューされます。`enabled``disabled``active``idle``blocked`
 
-## パフォーマンスの監視 {#monitoring-performance}
+## 最適化のための情報収集に使用する方法は、継続中の監視にも使用できます。{#monitoring-performance}
 
-[パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)は、開発時に注目を集めるインタラクティブなプロセスです。デプロイメント後、通常は特定の間隔またはイベントの後でレビューされます。
+[!NOTE]](/help/sites-deploying/configuring-performance.md)
 
-最適化のための情報収集に使用する方法は、継続中の監視にも使用できます。
-
->[!NOTE]
 具体的な[パフォーマンス向上のための設定](/help/sites-deploying/configuring-performance.md#configuring-for-performance)も確認できます。
 
-以下のリストは、よく発生するパフォーマンス上の問題と、それぞれの見分け方および対策を示しています。
+>[!NOTE]以下のリストは、よく発生するパフォーマンス上の問題と、それぞれの見分け方および対策を示しています。
+領域[](/help/sites-deploying/configuring-performance.md#configuring-for-performance)
 
-| 領域 | 現象 | 容量を増やす方法 | ボリュームを減らす方法 |
+現象
+
+| 容量を増やす方法 | ボリュームを減らす方法 | クライアント | クライアントの CPU 使用率が高い。 |
 |---|---|---|---|
-| クライアント | クライアントの CPU 使用率が高い。 | より高性能のクライアント CPU をインストール。 | （HTML）レイアウトを簡素化。 |
-|  | サーバーの CPU 使用率が低い。 | より高速なブラウザーにアップグレード。 | クライアント側のキャッシュを改善。 |
-|  | 高速のクライアントと低速のクライアントがある。 |  |  |
-| サーバー |  |  |  |
-| ネットワーク | サーバーとクライアントの両方で CPU 使用率が低い。 | ネットワークのボトルネックを除去。 | クライアントキャッシュの設定を改善／最適化。 |
-|  | サーバーのローカルでの参照が（比較的）高速。 | ネットワーク帯域幅を増加。 | Web ページの「重さ」を軽減（例：画像を減らす、HTML を最適化する）。 |
-| Web サーバー | Web サーバー上の CPU 使用率が高い。 | Web サーバーをクラスター化。 | ページごとのヒット数（訪問数）を減らす。 |
-|  |  | ハードウェアのロードバランサーを使用。 |  |
-| アプリケーション | サーバーの CPU 使用率が高い。 | AEM インスタンスをクラスター化します。 | CPU およびメモリが集中的に使用されている箇所を検索して除去（コードレビュー、タイミング出力などを使用）。 |
-|  | メモリ消費率が高い。 |  | すべてのレベルでキャッシュを改善。 |
+| より高性能のクライアント CPU をインストール。 | （HTML）レイアウトを簡素化。 | サーバーの CPU 使用率が低い。 | より高速なブラウザーにアップグレード。 |
+|  | クライアント側のキャッシュを改善。 | 高速のクライアントと低速のクライアントがある。 | サーバー |
+|  | ネットワーク |  |  |
+| サーバーとクライアントの両方で CPU 使用率が低い。 |  |  |  |
+| ネットワークのボトルネックを除去。 | クライアントキャッシュの設定を改善／最適化。 | サーバーのローカルでの参照が（比較的）高速。 | ネットワーク帯域幅を増加。 |
+|  | Web ページの「重さ」を軽減（例：画像を減らす、HTML を最適化する）。 | Web サーバー | Web サーバー上の CPU 使用率が高い。 |
+| Web サーバーをクラスター化。 | ページごとのヒット数（訪問数）を減らす。 | ハードウェアのロードバランサーを使用。 | アプリケーション |
+|  |  | サーバーの CPU 使用率が高い。 |  |
+| AEM インスタンスをクラスター化します。 | CPU およびメモリが集中的に使用されている箇所を検索して除去（コードレビュー、タイミング出力などを使用）。 | メモリ消費率が高い。 | すべてのレベルでキャッシュを改善。 |
 |  | 応答時間が遅い。 |  | テンプレートおよびコンポーネント（構造、ロジックなど）を最適化。 |
-| リポジトリ |  |  |  |
-| キャッシュ |  |  |  |
-
-パフォーマンス問題は、接続速度の一時的低下、CPU の負荷、その他の、Web サイトとは何ら関係のない多くの問題から生じる場合があります。
-
-また、訪問者全員に影響する問題もあれば、一部のみに影響する問題もあります。
+|  | リポジトリ |  | キャッシュ |
+| パフォーマンス問題は、接続速度の一時的低下、CPU の負荷、その他の、Web サイトとは何ら関係のない多くの問題から生じる場合があります。 |  |  |  |
+| また、訪問者全員に影響する問題もあれば、一部のみに影響する問題もあります。 |  |  |  |
 
 この情報をすべて入手し、分類および分析して初めて、一般的なパフォーマンスを最適化したり、特定の問題を解決したりできます。
 
-* パフォーマンス問題が発生する前の対応：
+パフォーマンス問題が発生する前の対応：
 
-   * できる限り多くの情報を収集し、正常な状態のシステムに関する十分な実用的知識を構築します。
+できる限り多くの情報を収集し、正常な状態のシステムに関する十分な実用的知識を構築します。
 
 * パフォーマンス問題が発生した場合の対応：
 
    * 1 つ（または 2 つ以上を推奨）の標準的な Web ブラウザー、通常のパフォーマンスが良好であることがわかっている別のクライアント、またはサーバー自体（可能であれば）で、問題を再現します。
-   * 適切な時間内に（システムに関連する）何かが変更されたかどうかと、いずれかの変更がパフォーマンスに影響した可能性があるかどうかを確認します。
+
+* 適切な時間内に（システムに関連する）何かが変更されたかどうかと、いずれかの変更がパフォーマンスに影響した可能性があるかどうかを確認します。
+
    * 次の点を確認します。
+   * 問題が発生するのは特定の時間のみかどうか。
+   * 問題が発生するのは特定のページのみかどうか。
 
-      * 問題が発生するのは特定の時間のみかどうか。
-      * 問題が発生するのは特定のページのみかどうか。
       * その他の要求に影響があるかどうか。
-   * できる限り多くの情報を収集し、正常な状態のシステムに関する知識と比較します。
+      * できる限り多くの情報を収集し、正常な状態のシステムに関する知識と比較します。
+      * パフォーマンスの監視および分析のツール {#tools-for-monitoring-and-analyzing-performance}
+   * パフォーマンスの監視および分析に使用できるツールの一部について、以下で簡単に概要を説明します。
 
 
-### パフォーマンスの監視および分析のツール {#tools-for-monitoring-and-analyzing-performance}
+### この中には、オペレーティングシステムに依存するものもあります。{#tools-for-monitoring-and-analyzing-performance}
 
-パフォーマンスの監視および分析に使用できるツールの一部について、以下で簡単に概要を説明します。
 
-この中には、オペレーティングシステムに依存するものもあります。
+
+
 
 <table>
  <tbody>
   <tr>
-   <td>ツール</td>
-   <td>分析対象</td>
-   <td>使用法／詳細</td>
+   </td>
+   </td>
+   </td>
   </tr>
   <tr>
-   <td>request.log</td>
-   <td>応答時間および並行性</td>
-   <td><a href="#interpreting-the-request-log">request.log の解釈</a>。</td>
+   </td>
+   </td>
+   </td>
   </tr>
   <tr>
-   <td>truss／strace</td>
-   <td>ページの読み込み</td>
-   <td><p>システムの呼び出しおよびシグナルをトレースする Unix／Linux コマンド。ログレベルを <code>INFO</code> に上げます。</p> <p>要求ごとのページの読み込み数、どのページか、などを分析します。</p> </td>
+   </td>
+   </td>
+   </p> </p> </td>
   </tr>
   <tr>
-   <td>スレッドダンプ</td>
-   <td>JVM スレッドを監視。競合、ロック、長時間の実行を識別。</td>
-   <td><p>Dependent on the operating system:<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows (console mode): Ctrl-Break<br /> </p> <p><a href="https://java.net/projects/tda/">TDA</a> などの分析ツールも使用できます。<br /> </p> </td>
+   </td>
+   </td>
+   </p> </p> </td>
   </tr>
   <tr>
-   <td>ヒープダンプ</td>
-   <td>パフォーマンス低下の原因となるメモリ不足の問題。</td>
-   <td><p>Add the:<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> option to the java call to AEM.</p> <p><a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">Troubleshooting Guide for Java SE 6 with HotSpot VM</a> を参照してください。</p> </td>
+   </td>
+   </td>
+   </p> </p> </td>
   </tr>
   <tr>
-   <td>システム呼び出し</td>
-   <td>タイミングの問題を識別。</td>
-   <td><p>Calls to <code>System.currentTimeMillis()</code> or <code>com.day.util</code>.Timing are used to generate timestamps from your code, or via <a href="#html-comments">HTML-comments</a>.</p> <p><strong>注意：</strong> これらを実装するのは、必要に応じてアクティベート／アクティベート解除できるようにするためです。システムが問題なく動作しているときは、統計を収集するオーバーヘッドは不要です。</p> </td>
+   </td>
+   </td>
+   </p> </p> </td>
   </tr>
   <tr>
-   <td>Apache Bench</td>
-   <td>メモリリークを識別し、応答時間を選択分析。</td>
-   <td><p>基本的な使用法は次のとおりです。</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>See <a href="#apache-bench">Apache Bench</a> and the <a href="https://httpd.apache.org/docs/2.2/programs/ab.html">ab man page</a> for full details.</p> </td>
+   </td>
+   </td>
+   </p> </p> </p> </td>
   </tr>
   <tr>
-   <td>Search Analysis</td>
-   <td> </td>
-   <td>検索クエリーをオフラインで実行し、クエリーの応答時間を特定して、結果セットをテストおよび確認します。<br /> </td>
+   </td>
+   </td>
+   </td>
   </tr>
   <tr>
-   <td>JMeter</td>
-   <td>読み込みおよび機能テスト。</td>
-   <td><a href="https://jakarta.apache.org/jmeter/">https://jakarta.apache.org/jmeter/</a></td>
+   </td>
+   </td>
+   </td>
   </tr>
   <tr>
-   <td>JProfiler</td>
-   <td>CPU およびメモリの詳細なプロファイリング。</td>
-   <td><a href="https://www.ej-technologies.com/">https://www.ej-technologies.com/</a></td>
+   </td>
+   </td>
+   </td>
   </tr>
   <tr>
-   <td>JConsole</td>
-   <td>JVM の指標およびスレッドを監視。</td>
-   <td><p>使用法：jconsole</p> <p><a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> および <a href="#monitoring-performance-using-jconsole">JConsole を使用したパフォーマンスの監視</a> を参照してください。</p> <p><strong>注意：</strong> JDK 1.6 では、Top や TDA（Thread Dump Analyzer）などのプラグインを使用して JConsole を拡張できます。</p> </td>
+   </td>
+   </td>
+   </p> </p> </p> </td>
   </tr>
   <tr>
-   <td>Java VisualVM</td>
-   <td>JVM の指標、スレッド、メモリおよびプロファイリングを監視。</td>
-   <td><p>使用法：jvisualvm または visualvm<br /> </p> <p><a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>、<a href="https://visualvm.dev.java.net/">visualvm</a> および<a href="#monitoring-performance-using-j-visualvm">（J）VisualVM を使用したパフォーマンスの監視</a>を参照してください。</p> <p><strong>注意：</strong> JDK 1.6 では、プラグインを使用して VisualVM を拡張できます。</p> </td>
+   </td>
+   </td>
+   </p> </p> </p> </td>
   </tr>
   <tr>
-   <td>truss/strace、lsof</td>
-   <td>詳細なカーネル呼び出しおよびプロセス分析（Unix）。</td>
-   <td>Unix／Linux コマンド。</td>
+   </td>
+   </td>
+   </td>
   </tr>
   <tr>
-   <td>タイミングの統計</td>
-   <td>ページレンダリングのタイミングの統計を確認。</td>
-   <td><p>To see timing statistics for page rendering you can use <strong>Ctrl-Shift-U</strong> together with <code>?debugClientLibs=true</code> set in the URL.</p> </td>
+   </td>
+   </td>
+   </p> </td>
   </tr>
   <tr>
-   <td>CPU およびメモリプロファイリングツール<br /> </td>
-   <td><a href="#interpreting-the-request-log">開発中に低速の要求を分析する際に使用</a>。</td>
-   <td>例えば、<a href="https://www.yourkit.com/">YourKit</a> などです。</td>
+   </td>
+   </td>
+   </td>
   </tr>
   <tr>
-   <td><a href="#information-collection">情報収集</a></td>
-   <td>インストールの進行中のステータス。</td>
-   <td>インストールについてできる限り知っておくことは、パフォーマンスの変化の原因や、変化が正当かどうかを追跡する上でも役立ちます。これらの指標を一定の間隔で収集し、重大な変化を簡単に確認できるようにする必要があります。</td>
+   </td>
+   </td>
+   </td>
   </tr>
  </tbody>
 </table>
 
-### request.log の解釈 {#interpreting-the-request-log}
+### リクエストの所要時間を調べるための `request.log` オファーーの組み込み。 開発のために、応答時間が遅い場合は、を使用 `tail -f` し `request.log` て監視すると便利です。 より大きな値を分析する `request.log` には、応答時間の並べ替えとフィルターを可能にする、 [を使用する `rlog.jar` ことをお勧めします](#using-rlog-jar-to-find-requests-with-long-duration-times)。
 
-このファイルには、AEM に対するあらゆるリクエストに関する基本情報が登録されています。このことから、貴重な結論を引き出すことができます。
+「遅い」ページをと分離し、パフォーマンスを向上させるた `request.log`めにそれらを個別に調整することをお勧めします。 これは、通常、コンポーネントごとのパフォーマンス指標を含めるか、などのパフォーマンスプロファイルツールを使用して行い ` [yourkit](https://www.yourkit.com/)`ます。
 
-この `request.log` オファーは、リクエストの所要時間を調べるための組み込みの方法です。 開発目的では、応答時間が遅い `tail -f` 場合に `request.log` 、および監視すると便利です。 より大きな値を分析する `request.log` には、応答時間 [の並べ替えとフ `rlog.jar` ィルタリングを可能にするを使用することをお勧めします](#using-rlog-jar-to-find-requests-with-long-duration-times)。
+Web サイトでのトラフィックの監視 {#monitoring-traffic-on-your-website}`tail -f``request.log``request.log`[`rlog.jar`](#using-rlog-jar-to-find-requests-with-long-duration-times)
 
-「遅い」ページをから分離し、それぞれを個別に調整してパフ `request.log`ォーマンスを向上させることをお勧めします。 これは、通常、コンポーネントごとのパフォーマンス指標を含めるか、などのパフォーマンスプロファイルツールを使用して行いま ` [yourkit](https://www.yourkit.com/)`す。
+request.log は、実行される各要求を、応答と共に登録します。`request.log`` [yourkit](https://www.yourkit.com/)`
 
-#### Web サイトでのトラフィックの監視 {#monitoring-traffic-on-your-website}
+#### 特定の期間内の（例えば 24 時間の監視を何度かおこなって）すべての GET エントリを合計することにより、Web サイトの平均トラフィックを把握できます。{#monitoring-traffic-on-your-website}
 
-request.log は、実行される各要求を、応答と共に登録します。
+ request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
 
 ```xml
 09:43:41 [66] -> GET /author/y.html HTTP/1.1
 09:43:41 [66] <- 200 text/html 797ms
 ```
 
-特定の期間内の（例えば 24 時間の監視を何度かおこなって）すべての GET エントリを合計することにより、Web サイトの平均トラフィックを把握できます。
-
-####  request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
-
 パフォーマンス分析は、request.log から始めることをお勧めします。
 
-`<*cq-installation-dir*>/crx-quickstart/logs/request.log`
+#### `<*cq-installation-dir*>/crx-quickstart/logs/request.log`
 
 ログは次のようになっています（簡潔にするために、各行を短縮しています）。
+
+`<*cq-installation-dir*>/crx-quickstart/logs/request.log`このログには、要求または応答ごとに 1 行ずつの構成になっています。
+
+要求または応答がおこなわれた日付。
 
 ```xml
 31/Mar/2009:11:32:57 +0200 [379] -> GET /path/x HTTP/1.1
@@ -625,46 +635,47 @@ request.log は、実行される各要求を、応答と共に登録します�
 31/Mar/2009:11:33:17 +0200 [380] <- 200 application/json 39ms
 ```
 
-このログには、要求または応答ごとに 1 行ずつの構成になっています。
+要求の番号（角括弧内）。この番号は、要求と応答で一致しています。
 
-* 要求または応答がおこなわれた日付。
-* 要求の番号（角括弧内）。この番号は、要求と応答で一致しています。
 * 矢印は、要求（右向き矢印）か応答（左向き矢印）かを示しています。
 * 要求の行には、以下が含まれます。
+* メソッド（通常は GET、HEAD または POST）
+* 要求されたページ
 
-   * メソッド（通常は GET、HEAD または POST）
-   * 要求されたページ
    * プロトコル
-
-* 応答の行には、以下が含まれます。
-
+   * 応答の行には、以下が含まれます。
    * ステータスコード（200 は「成功」、404 は「ページが見つかりません」）
-   * MIME タイプ
+
+* MIME タイプ
+
    * 応答時間
-
-サイズの小さいスクリプトを使用して、ログファイルから必要な情報を抽出し、必要な統計を取ることができます。これらの統計から、どのページ、またはどんなタイプのページが低速か、全体的なパフォーマンスが十分かどうかを確認できます。
-
-####  request.log での検索応答時間の監視 {#monitoring-search-response-times-with-the-request-log}
+   * サイズの小さいスクリプトを使用して、ログファイルから必要な情報を抽出し、必要な統計を取ることができます。これらの統計から、どのページ、またはどんなタイプのページが低速か、全体的なパフォーマンスが十分かどうかを確認できます。
+   *  request.log での検索応答時間の監視 {#monitoring-search-response-times-with-the-request-log}
 
 検索要求は常にログファイルに登録されます。
+
+#### したがって、上記のように、スクリプトを使用して関連する情報を抽出し、統計を取ることができます。{#monitoring-search-response-times-with-the-request-log}
+
+ただし、応答時間を確認したら、その要求になぜそれだけの時間がかかっているのか、応答を改善するために何ができるかに関する分析が必要になる場合があります。
 
 ```xml
 31/Mar/2009:11:35:34 +0200 [338] -> GET /author/playground/en/tools/search.html?query=dilbert&size=5&dispenc=utf-8 HTTP/1.1
 31/Mar/2009:11:35:34 +0200 [338] <- 200 text/html 1562ms
 ```
 
-したがって、上記のように、スクリプトを使用して関連する情報を抽出し、統計を取ることができます。
-
-ただし、応答時間を確認したら、その要求になぜそれだけの時間がかかっているのか、応答を改善するために何ができるかに関する分析が必要になる場合があります。
-
-#### 現在のユーザーの数と影響の監視 {#monitoring-the-number-and-impact-of-concurrent-users}
+現在のユーザーの数と影響の監視 {#monitoring-the-number-and-impact-of-concurrent-users}
 
 ここでも、`request.log` を使用して、並行性およびそれに対するシステムの反応を監視できます。
 
-テストを実施して、悪影響なくシステムが処理できる同時ユーザーの数を特定する必要があります。ここでも、スクリプトを使用してログファイルから結果を抽出できます。
+#### テストを実施して、悪影響なくシステムが処理できる同時ユーザーの数を特定する必要があります。ここでも、スクリプトを使用してログファイルから結果を抽出できます。{#monitoring-the-number-and-impact-of-concurrent-users}
 
-* 特定の期間（1 分間など）内におこなわれる要求の数を監視します。
-* 特定の数のユーザー全員がほぼ同時に同じ要求をおこなった場合の影響をテストします（例えば、30 人のユーザーが同時に「**保存**」をクリックするなど）。
+特定の期間（1 分間など）内におこなわれる要求の数を監視します。`request.log`
+
+特定の数のユーザー全員がほぼ同時に同じ要求をおこなった場合の影響をテストします（例えば、30 人のユーザーが同時に「**保存**」をクリックするなど）。
+
+* rlog.jar を使用した所要時間の長い要求の検索 {#using-rlog-jar-to-find-requests-with-long-duration-times}
+* AEM includes various helper tools located in:
+`<*cq-installation-dir*>/crx-quickstart/opt/helpers`**
 
 ```xml
 31/Mar/2009:11:45:29 +0200 [333] -> GET /author/libs/Personalize/content/statics.close.gif HTTP/1.1
@@ -679,14 +690,13 @@ request.log は、実行される各要求を、応答と共に登録します�
 31/Mar/2009:11:45:44 +0200 [337] <- 304 text/html 0ms
 ```
 
-### rlog.jar を使用した所要時間の長い要求の検索 {#using-rlog-jar-to-find-requests-with-long-duration-times}
+### その 1 つ、`rlog.jar` を使用すると、`request.log` を短時間で分類し、所要時間を基準として、最長から最短の順序で要求を表示できます。
 
-AEM includes various helper tools located in:
-`<*cq-installation-dir*>/crx-quickstart/opt/helpers`
+次のコマンドは、考えられる引数を示しています。`<*cq-installation-dir*>/crx-quickstart/opt/helpers`
 
-その 1 つ、`rlog.jar` を使用すると、`request.log` を短時間で分類し、所要時間を基準として、最長から最短の順序で要求を表示できます。
+例えば、`request.log` ファイルをパラメーターとして指定してコマンドを実行し、所要時間が長いほうから 10 個の要求を表示することができます。`request.log`
 
-次のコマンドは、考えられる引数を示しています。
+大容量のデータサンプルに関してこの処理をおこなう必要がある場合は、個々の `request.log` ファイルを連結する必要があります。
 
 ```shell
 $java -jar rlog.jar
@@ -700,7 +710,7 @@ Options:
   -xdev            Exclude POST request to CRXDE.
 ```
 
-例えば、`request.log` ファイルをパラメーターとして指定してコマンドを実行し、所要時間が長いほうから 10 個の要求を表示することができます。
+Apache Bench {#apache-bench}
 
 ```shell
 $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
@@ -723,13 +733,13 @@ $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
       1462ms 30/Mar/2009:17:23:08 +0200 200 GET /libs/wcm/content/welcome.html text/html; charset=utf-8
 ```
 
-大容量のデータサンプルに関してこの処理をおこなう必要がある場合は、個々の `request.log` ファイルを連結する必要があります。
+特殊なケース（ガベージコレクションなど）の影響を最小限にするために、`apachebench`（詳細なドキュメントについては [ab[#$tu387] などを参照）などのツールを使用してメモリリークを特定し、応答時間を選択分析することをお勧めします。
 
-### Apache Bench {#apache-bench}
+### 
 
-特殊なケース（ガベージコレクションなど）の影響を最小限にするために、`apachebench`（詳細なドキュメントについては [ab](https://httpd.apache.org/docs/2.2/programs/ab.html) などを参照）などのツールを使用してメモリリークを特定し、応答時間を選択分析することをお勧めします。
 
-Apache Bench は次の方法で使用できます。
+
+`apachebench` また、すべての同時要求に対するリクエストあたりの時間を平均として表示します。 「 `Time per request: 54.595 [ms]` （つまり、すべての同時要求に対して）」を参照してください。 concurrencyパラメーターの値 `-c` （一度に実行する複数の要求の数）を変更して、任意の効果を確認できます。
 
 ```shell
 $ ab -c 5 -k -n 1000 "https://localhost:4503/content/geometrixx/en/company.html"
@@ -790,29 +800,29 @@ Percentage of the requests served within a certain time (ms)
 100% 8106 (longest request)
 ```
 
-上記の数字は、デフォルトの AEM インストールに含まれている、geometrixx の会社ページにアクセスする標準の MAcBook Pro ラップトップ（2010 年半ば）から取得されたものです。このページは非常に単純ですが、パフォーマンスが最適化されていません。
+要求カウンター {#request-counters}
 
-`apachebench` また、すべての同時リクエストにおける、リクエストあたりの時間を平均として表示します。を参 `Time per request: 54.595 [ms]` 照してください（つまり、すべての同時要求に対して）。 concurrencyパラメーターの値(一度に実行す `-c` る複数のリクエストの数)を変更して、効果を確認できます。
+要求トラフィックに関する情報（特定の期間の要求数）により、インスタンスの負荷の目安がわかります。この情報は [request.log](#interpreting-the-request-log) から抽出できますが、カウンターを使用すると、データ収集を自動化し、以下の情報を確認できます。`-c`
 
-### 要求カウンター {#request-counters}
+### アクティビティの大きな相違点（「多数の要求」と「少ないアクティビティ」を区別）{#request-counters}
 
-要求トラフィックに関する情報（特定の期間の要求数）により、インスタンスの負荷の目安がわかります。この情報は [request.log](#interpreting-the-request-log) から抽出できますが、カウンターを使用すると、データ収集を自動化し、以下の情報を確認できます。
+インスタンスが使用されていない時間帯[](#interpreting-the-request-log)
 
-* アクティビティの大きな相違点（「多数の要求」と「少ないアクティビティ」を区別）
-* インスタンスが使用されていない時間帯
 * 再起動（カウンターが 0 にリセット）があるかどうか
+* 情報収集を自動化するには、RequestFilter をインストールして、要求がおこなわれるたびにカウンターの数値を増やすこともできます。複数のカウンターを様々な期間に使用できます。
+* 収集された情報を使用して、以下の内容を示すことができます。
 
-情報収集を自動化するには、RequestFilter をインストールして、要求がおこなわれるたびにカウンターの数値を増やすこともできます。複数のカウンターを様々な期間に使用できます。
+アクティビティの大きな変化
 
-収集された情報を使用して、以下の内容を示すことができます。
+冗長なインスタンス
 
-* アクティビティの大きな変化
-* 冗長なインスタンス
 * 再起動（カウンターが 0 にリセット）があるかどうか
+* HTML Comments {#html-comments}
+* すべてのプロジェクトに、サーバーのパフォーマンスを考慮し `html comments` た内容を含めることをお勧めします。 良い例がたくさん見つかる。 ページを選択し、表示するページソースを開き、下までスクロールします。次のようなコードが表示されます。
 
-### HTML Comments {#html-comments}
+### Monitoring Performance using JConsole {#monitoring-performance-using-jconsole}
 
-サーバーのパフォーマンスを高めるために、すべてのプロジェクトに `html comments` 含めることをお勧めします。 多くの良い事例が見つかる。ページを選択し、表示するページソースを開き、下までスクロールすると、次のようなコードが表示されます。
+ツールコマンド `jconsole` を、JDK で使用できます。
 
 ```xml
 </body>
@@ -822,52 +832,50 @@ Percentage of the requests served within a certain time (ms)
          -->
 ```
 
-### Monitoring Performance using JConsole {#monitoring-performance-using-jconsole}
+### AEM インスタンスを起動します。{#monitoring-performance-using-jconsole}
 
-ツールコマンド `jconsole` を、JDK で使用できます。
+実行 `jconsole.`
 
-1. AEM インスタンスを起動します。
-1. 実行 `jconsole.`
 1. AEM インスタンスを選択して「**接続**」をクリックします。
-
 1. `Local` アプリケーション内から、`com.day.crx.quickstart.Main` をダブルクリックします。「概要」がデフォルトで表示されます。
+1. ![chlimage_1-1](assets/chlimage_1-1.png)
 
-   ![chlimage_1-1](assets/chlimage_1-1.png)
+1. この後、他のオプションを選択できます。`Local``com.day.crx.quickstart.Main`
 
-   この後、他のオプションを選択できます。
+   Monitoring Performance using (J)VisualVM {#monitoring-performance-using-j-visualvm}](assets/chlimage_1-1.png)
 
-### Monitoring Performance using (J)VisualVM {#monitoring-performance-using-j-visualvm}
+   JDK 1.6以降では、toolコマンドを使用 `jvisualvm` できます。 JDK 1.6をインストールすると、次の操作を実行できます。
 
-JDK 1.6以降では、toolコマンドを使用で `jvisualvm` きます。 JDK 1.6をインストールすると、次の操作が可能になります。
+### AEM インスタンスを起動します。{#monitoring-performance-using-j-visualvm}
 
-1. AEM インスタンスを起動します。
+[!NOTE]
 
-   >[!NOTE]
-   Java 5を使用している場合は、JVMを開始す `-Dcom.sun.management.jmxremote` るJavaコマンドラインに引数を追加できます。 JMXは、Java 6を使用してデフォルトで有効になっています。
+1. Java 5を使用している場合は、JVMを開始するJavaコマンドラインに `-Dcom.sun.management.jmxremote` 引数を追加できます。 JMXは、Java 6によりデフォルトで有効になります。
 
-1. 次のいずれかを実行します。
+   >[!NOTE]次のいずれかを実行します。
+   `jvisualvm`：JDK 1.6 bin フォルダー内（テスト済みバージョン）
 
-   * `jvisualvm`：JDK 1.6 bin フォルダー内（テスト済みバージョン）
-   * `visualvm`：[VisualVM](https://visualvm.dev.java.net/) からダウンロードできます（最先端バージョン）
+1. `visualvm`：[VisualVM[#$tu419] からダウンロードできます（最先端バージョン）
 
-1. `Local` アプリケーション内から、`com.day.crx.quickstart.Main` をダブルクリックします。「概要」がデフォルトで表示されます。
+   * 
+   * 
 
-   ![chlimage_1-2](assets/chlimage_1-2.png)
-
-   この後、「監視」など、他のオプションを選択できます。
+1. この後、「監視」など、他のオプションを選択できます。`Local``com.day.crx.quickstart.Main`
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-このツールを使用すると、スレッドダンプおよびメモリヘッドダンプを生成できます。これは、テクニカルサポートチームから要求されることの多い情報です。
+   このツールを使用すると、スレッドダンプおよびメモリヘッドダンプを生成できます。これは、テクニカルサポートチームから要求されることの多い情報です。
 
-### 情報収集 {#information-collection}
+   情報収集 {#information-collection}](assets/chlimage_1-3.png)
 
 インストールについてできる限り知っておくことは、パフォーマンスの変化の原因や、変化が正当かどうかを追跡する上で役立ちます。これらの指標を一定の間隔で収集し、重大な変化を簡単に確認できるようにする必要があります。
 
-有益な情報を以下に示します。
+### 有益な情報を以下に示します。{#information-collection}
 
-* [システムで作業をしている作成者の数](#how-many-authors-are-working-with-the-system)
-* [1 日あたりのページアクティベーションの平均数](#what-is-the-average-number-of-page-activations-per-day)
+[システムで作業をしている作成者の数](#how-many-authors-are-working-with-the-system)
+
+[1 日あたりのページアクティベーションの平均数](#what-is-the-average-number-of-page-activations-per-day)
+
 * [このシステムで現在保守しているページ数](#how-many-pages-do-you-currently-maintain-on-this-system)
 * [MSM を使用する場合は、1 ヶ月あたりのロールアウトの平均数](#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month)
 * [1 ヶ月あたりのライブコピーの平均数](#what-is-the-average-number-of-live-copies-per-month)
@@ -877,204 +885,206 @@ JDK 1.6以降では、toolコマンドを使用で `jvisualvm` きます。 JDK 
 * [現在使用されているコンポーネントの数](#how-many-components-are-currently-used)
 * [ピーク時のオーサーシステムの 1 時間あたりの要求数](#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time)
 * [ピーク時のパブリッシュシステムの 1 時間あたりの要求数](#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time)
+* システムで作業をしている作成者の数 {#how-many-authors-are-working-with-the-system}](#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time)
+* [インストール以降にシステムを使用した作成者の数を確認するには、次のコマンドラインを使用します。](#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time)
 
-#### システムで作業をしている作成者の数 {#how-many-authors-are-working-with-the-system}
+#### 特定の日付に作業をしている作成者の数を確認するには、以下を使用します。{#how-many-authors-are-working-with-the-system}
 
-インストール以降にシステムを使用した作成者の数を確認するには、次のコマンドラインを使用します。
+1 日あたりのページアクティベーションの平均数 {#what-is-the-average-number-of-page-activations-per-day}
 
 ```shell
 cd <cq-installation-dir>/crx-quickstart/logs
 cut -d " " -f 3 access.log | sort -u | wc -l
 ```
 
-特定の日付に作業をしている作成者の数を確認するには、以下を使用します。
+サーバーのインストール以降のページアクティベーションの合計数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
 ```shell
 grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 ```
 
-#### 1 日あたりのページアクティベーションの平均数 {#what-is-the-average-number-of-page-activations-per-day}
+#### **Type** `XPath`
 
-サーバーのインストール以降のページアクティベーションの合計数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
+**パス** `/`
 
-* **Type** `XPath`
+* **クエリ** `//element(*, cq:AuditEvent)[@cq:type='Activate']`
 
-* **パス** `/`
+* **その後、インストール以降の経過日数を計算し、平均を計算します。**`/`
 
-* **クエリ**`//element(*, cq:AuditEvent)[@cq:type='Activate']`
-
-その後、インストール以降の経過日数を計算し、平均を計算します。
-
-#### このシステムで現在保守しているページ数{#how-many-pages-do-you-currently-maintain-on-this-system}
+* このシステムで現在保守しているページ数{#how-many-pages-do-you-currently-maintain-on-this-system}**`//element(*, cq:AuditEvent)[@cq:type='Activate']`
 
 現在サーバー上にあるページの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+#### **Type** `XPath`
 
-* **パス** `/`
+**パス** `/`
 
-* **クエリ**`//element(*, cq:Page)`
+* **クエリ** `//element(*, cq:Page)`
 
-#### MSM を使用する場合は、1 ヶ月あたりのロールアウトの平均数{#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
+* MSM を使用する場合は、1 ヶ月あたりのロールアウトの平均数{#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}**`/`
 
-インストール以降のロールアウトの合計数を特定するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
+* **インストール以降のロールアウトの合計数を特定するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。**`//element(*, cq:Page)`
 
-* **Type** `XPath`
+#### **Type** `XPath`
 
-* **パス** `/`
+**パス** `/`
 
-* **クエリ**`//element(*, cq:AuditEvent)[@cq:type='PageRolledOut']`
+* **クエリ** `//element(*, cq:AuditEvent)[@cq:type='PageRolledOut']`
 
-インストール以降の経過月数を計算し、平均を計算します。
+* **インストール以降の経過月数を計算し、平均を計算します。**`/`
 
-#### 1 ヶ月あたりのライブコピーの平均数{#what-is-the-average-number-of-live-copies-per-month}
+* 1 ヶ月あたりのライブコピーの平均数{#what-is-the-average-number-of-live-copies-per-month}**`//element(*, cq:AuditEvent)[@cq:type='PageRolledOut']`
 
 インストール以降におこなわれたライブコピーの合計数を特定するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+#### **Type** `XPath`
 
-* **パス** `/`
+**パス** `/`
 
-* **クエリ**`//element(*, cq:LiveSyncConfig)`
+* **クエリ** `//element(*, cq:LiveSyncConfig)`
 
-ここでも、インストール以降の経過月数を使用して、平均を計算します。
+* **ここでも、インストール以降の経過月数を使用して、平均を計算します。**`/`
 
-#### AEM Assets を使用する場合は、Assets で現在保守しているアセットの数{#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
+* AEM Assets を使用する場合は、Assets で現在保守しているアセットの数{#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}**`//element(*, cq:LiveSyncConfig)`
 
 現在保守している DAM アセットの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
-* **パス** `/`
-* **クエリ**`/jcr:root/content/dam//element(*, dam:Asset)`
+#### **Type** `XPath`
 
-#### アセットの平均サイズ{#what-is-the-average-size-of-the-assets}
+**パス** `/`
 
-To determine the total size of the `/var/dam` folder:
+* **クエリ** `/jcr:root/content/dam//element(*, dam:Asset)`
+* アセットの平均サイズ{#what-is-the-average-size-of-the-assets}**`/`
+* To determine the total size of the `/var/dam` folder:**`/jcr:root/content/dam//element(*, dam:Asset)`
 
-1. WebDAV を使用して、 リポジトリをローカルファイルシステムにマップします。
+#### WebDAV を使用して、 リポジトリをローカルファイルシステムにマップします。{#what-is-the-average-size-of-the-assets}
 
-1. 次のコマンドラインを使用します。
+次のコマンドラインを使用します。`/var/dam`
+
+1. To get the average size, divide the global size by the total number of assets in `/var/dam` (obtained above).
+
+1. 現在使用されているテンプレートの数{#how-many-templates-are-currently-used}
 
    ```shell
    cd /Volumes/localhost/var
    du -sh dam/
    ```
 
-   To get the average size, divide the global size by the total number of assets in `/var/dam` (obtained above).
+   現在サーバー上にあるテンプレートの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。`/var/dam`
 
-#### 現在使用されているテンプレートの数{#how-many-templates-are-currently-used}
+#### **Type** `XPath`
 
-現在サーバー上にあるテンプレートの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
+**パス** `/`
 
-* **Type** `XPath`
-* **パス** `/`
-* **クエリ**`//element(*, cq:Template)`
+* **クエリ** `//element(*, cq:Template)`
+* 現在使用されているコンポーネントの数{#how-many-components-are-currently-used}**`/`
+* **現在サーバー上にあるコンポーネントの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。**`//element(*, cq:Template)`
 
-#### 現在使用されているコンポーネントの数{#how-many-components-are-currently-used}
+#### **Type** `XPath`
 
-現在サーバー上にあるコンポーネントの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
+**パス** `/`
 
-* **Type** `XPath`
-* **パス** `/`
-* **クエリ**`//element(*, cq:Component)`
+* **クエリ** `//element(*, cq:Component)`
+* ピーク時のオーサーシステムの 1 時間あたりの要求数{#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}**`/`
+* **ピーク時のオーサーシステムの 1 時間あたりの要求数を特定するには：**`//element(*, cq:Component)`
 
-#### ピーク時のオーサーシステムの 1 時間あたりの要求数{#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
+#### インストール以降の要求の合計数を特定するには、次のコマンドラインを使用します。{#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
 
-ピーク時のオーサーシステムの 1 時間あたりの要求数を特定するには：
+開始日と終了日を特定するには、以下を使用します。
 
-1. インストール以降の要求の合計数を特定するには、次のコマンドラインを使用します。
+1. これらの値を使用して、インストール以降の経過時間数、さらに 1 時間あたりの要求の平均数を計算します。
 
    ```shell
    cd <cq-installation-dir>/crx-quickstart/logs
    grep -R "\->" request.log | wc -l
    ```
 
-1. 開始日と終了日を特定するには、以下を使用します。
+1. ピーク時のパブリッシュシステムの 1 時間あたりの要求数 {#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time}
 
    ```shell
    vim request.log
    G / 1G: for the last/first lines
    ```
 
-   これらの値を使用して、インストール以降の経過時間数、さらに 1 時間あたりの要求の平均数を計算します。
+   パブリッシュインスタンスで上記の手順を繰り返します。
 
-#### ピーク時のパブリッシュシステムの 1 時間あたりの要求数 {#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time}
-
-パブリッシュインスタンスで上記の手順を繰り返します。
-
-## 具体的なシナリオの分析 {#analyzing-specific-scenarios}
+#### 具体的なシナリオの分析 {#analyzing-specific-scenarios}
 
 以下は、特定のパフォーマンス問題が発生しはじめた場合にチェックするべきことの提案リストです。リストは（残念ながら）完全に網羅的ではありません。
 
->[!NOTE]
+## [!NOTE]
+
 詳しくは、以下の記事も参照してください。
-* [スレッドダンプ](https://helpx.adobe.com/jp/experience-manager/kb/TakeThreadDump.html)
-* [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
-* [ビルトインプロファイラーによる分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
-* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+
+>[スレッドダンプ[#$tu497]
+
+* 
+* 
+* 
+* 
 
 
 
-### CPU 使用率が 100 ％ {#cpu-at}
+### ナレッジベース{#cpu-at}
 
-システムの CPU が常に 100 ％で動作している場合は、以下を参照してください。
+[遅延しているプロセスおよびブロックされたプロセスの分析[#$tu508]
 
-* ナレッジベース
+* 
 
-   * [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+   * 
 
-### Out of Memory {#out-of-memory}
-
-このようなエラーは開発およびテストの段階で検出されるべきですが、特定のシナリオが見落とされる可能性もあります。
-
-システムがメモリ不足になっている場合、パフォーマンスの低下や、次のサブテキストを含むエラーメッセージなど、様々な方法で確認できます。
+### システムがメモリ不足になっている場合、パフォーマンスの低下や、次のサブテキストを含むエラーメッセージなど、様々な方法で確認できます。{#out-of-memory}
 
 `java.lang.OutOfMemoryError`
 
 このような場合は、以下をチェックします。
 
-* The JVM settings used to [start AEM](/help/sites-deploying/deploy.md#getting-started)
-* ナレッジベース
+The JVM settings used to [start AEM](/help/sites-deploying/deploy.md#getting-started)
 
-   * [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
+ナレッジベース
 
-### ディスク I/O {#disk-i-o}
+* [メモリの問題の分析[#$tu517]
+* 
 
-システムがディスク容量不足になっている場合や、ディスクスラッシングが始まっていることに気付いた場合は、以下を参照してください。
+   * 
 
-* デバッグ情報のコレクションを無効にしているかどうか。これは、以下を含む様々な場所で設定できます。
+### デバッグ情報のコレクションを無効にしているかどうか。これは、以下を含む様々な場所で設定できます。{#disk-i-o}
 
-   * [Apache Sling JSP Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
-   * [Apache Sling Java Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+[Apache Sling JSP Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
+
+* [Apache Sling Java Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+
    * [Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML ライブラリマネージャー](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM Debug Filter](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
    * [ロガー](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level) [](/help/sites-deploying/configuring.md#loggersandwritersforindividualservices)
+   * [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
+   * [ナレッジベース](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)[](/help/sites-deploying/configuring.md#loggersandwritersforindividualservices)
 
-* [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
-* ナレッジベース
+* [開いているファイルが多すぎる[#$tu530]
+* 
 
-   * [開いているファイルが多すぎる](https://helpx.adobe.com/experience-manager/kb/TooManyOpenFiles.html)
-   * [ジャーナルの消費ディスクスペースが大きすぎる](https://helpx.adobe.com/experience-manager/kb/JournalTooMuchDiskSpace.html)
+   * 
+   * 
 
-### 通常のパフォーマンス低下 {#regular-performance-degradation}
+### [メモリ不足](#outofmemory)
 
-リブートのたびにインスタンスのパフォーマンスの低下が確認される場合（場合によって 1 週間後またはそれ以降）は、以下を確認できます。
+ナレッジベース
 
-* [メモリ不足](#outofmemory)
-* ナレッジベース
+* [閉じられていないセッション[#$tu538]
+* 
 
-   * [閉じられていないセッション](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html)
+   * 
 
-### JVM のチューニング {#jvm-tuning}
-
-Java 仮想マシン（JVM）のチューニング機能は大幅に改善されています（特に Java 7 以降）。したがって、ある程度の固定の JVM サイズを指定し、デフォルトを使用すれば、たいていの場合に対応できます。
-
-デフォルト設定が適切でない場合は、GC パフォーマンスを監視および査定する方法を確立してから JVM のチューニングを試みることが重要です。これには、ヒープサイズ、アルゴリズム、その他の局面を含む要因の監視が必要になる場合があります。
+### デフォルト設定が適切でない場合は、GC パフォーマンスを監視および査定する方法を確立してから JVM のチューニングを試みることが重要です。これには、ヒープサイズ、アルゴリズム、その他の局面を含む要因の監視が必要になる場合があります。{#jvm-tuning}
 
 一般的な選択肢は以下のとおりです。
 
-* VerboseGC:
+VerboseGC:
+
+結果のログは、次のような GC 可視化機能によって取り込み可能です。
+
+* ` [https://www.ibm.com/developerworks/library/j-ibmtools2/](https://www.ibm.com/developerworks/library/j-ibmtools2/)`
 
    ```
    -verbose:gc \
@@ -1083,13 +1093,14 @@ Java 仮想マシン（JVM）のチューニング機能は大幅に改善され
     -XX:+PrintGCDateStamps
    ```
 
-結果のログは、次のような GC 可視化機能によって取り込み可能です。
-
-` [https://www.ibm.com/developerworks/library/j-ibmtools2/](https://www.ibm.com/developerworks/library/j-ibmtools2/)`
-
 JConsole の場合は以下のとおりです。
 
-* 次の設定は、「ワイドオープン」JMX接続用です。
+` [https://www.ibm.com/developerworks/library/j-ibmtools2/](https://www.ibm.com/developerworks/library/j-ibmtools2/)`以下の設定は、「ワイドオープン」JMX接続用です。
+
+次に、JConsoleを使用してJVMに接続します。 参照：
+
+
+* ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
 
    ```
    -Dcom.sun.management.jmxremote \
@@ -1098,11 +1109,10 @@ JConsole の場合は以下のとおりです。
     -Dcom.sun.management.jmxremote.ssl=false
    ```
 
-* 次に、JConsoleを使用してJVMに接続します。参照：
-   ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
+* これは、使用されているメモリ量、使用されているGCアルゴリズム、実行に要する時間、およびアプリケーションのパフォーマンスに与える影響を確認するのに役立ちます。 これを使わないと、調整は単に「ランダムにタワタ動くノブ」になる。   [!NOTE]
 
-これは、使用されているメモリの量、使用されているGCアルゴリズム、実行に要する時間、およびアプリケーションのパフォーマンスに与える影響を確認するのに役立ちます。これを使わないと、チューニングは「ランダムに回転するノブ」に過ぎません。
-
->[!NOTE]
 Oracle の VM に関しては、以下にも情報があります。
-[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+
+>[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html[#$tu554]
+For Oracle&#39;s VM there is also information at:
+[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html-ERR:REF-NOT-FOUND-
