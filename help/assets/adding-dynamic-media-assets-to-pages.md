@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
 workflow-type: tm+mt
-source-wordcount: '3129'
-ht-degree: 88%
+source-wordcount: '3095'
+ht-degree: 89%
 
 ---
 
@@ -123,6 +123,7 @@ Dynamic Media コンポーネントはスマートであり、追加している
 >
 >* 同じページで使用されている Dynamic Media コンポーネントの複数のインスタンス。
 >* 各インスタンスが同じアセットタイプを使用している。
+
 >
 >
 そのページの各 Dynamic Media コンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされないことに注意してください。
@@ -201,8 +202,9 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
    ビューア修飾子を使用すると、例えば次のことが可能です。
 
-   * Associate a caption file with a video: [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_caption.html](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/r_html5_video_viewer_url_caption.html)
-   * ビデオにナビゲーションファイルを関連付ける：[https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/r_html5_video_viewer_url_navigation.html](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/r_html5_video_viewer_url_navigation.html)
+   * ビデオにキャプションファイルを関連付ける：[キャプション](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * ビデオにナビゲーションファイルを関連付ける：[ナビゲーション](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+
    コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の詳細設定を編集できます。
 
 * **[!UICONTROL タイトル** - ビデオのタイトルを変更します。
@@ -257,6 +259,7 @@ You must edit the following Dynamic Media Setting by clicking **[!UICONTROL Edit
 >
 >* 同じページで使用されているインタラクティブメディアコンポーネントの複数のインスタンス。
 >* 各インスタンスが同じアセットタイプを使用している。
+
 >
 >
 そのページの各インタラクティブメディアコンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされないことに注意してください。
@@ -298,6 +301,7 @@ You must edit the following Dynamic Media Setting by clicking **[!UICONTROL Edit
 >
 >* 同じページで使用されている&#x200B;**[!UICONTROL パノラマメディア]**&#x200B;コンポーネントの複数のインスタンス。
 >* 各インスタンスが同じアセットタイプを使用している。
+
 >
 >
 そのページの各&#x200B;**[!UICONTROL パノラマメディア]**&#x200B;コンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされないことに注意してください。
