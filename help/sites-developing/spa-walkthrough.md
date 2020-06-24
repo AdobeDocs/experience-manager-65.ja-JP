@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+workflow-type: tm+mt
+source-wordcount: '2000'
+ht-degree: 3%
 
 ---
 
@@ -103,6 +106,7 @@ AEM SPA Editorを活用するためにSPAを構築した場合、コンテンツ
 >
 >* [AEMバージョン6.4サービスパック2](/help/release-notes/sp-release-notes.md)
 >* [GitHubにあるサンプルのWe.Retailジャーナルアプリをここにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+
 >
 
 
@@ -225,11 +229,11 @@ SPAがエンドユーザーに対してどのように動作するかを体験�
 
    ![screen_shot_2018-06-07at152636](assets/screen_shot_2018-06-07at152636.png)
 
-   AEM SPA Editorは、 [AEM Content Services](/help/assets/content-fragments.md) を利用して、ページのコンテンツ全体をJSONモデルとして配信します。
+   AEM SPA Editorは、 [AEM Content Services](/help/assets/content-fragments/content-fragments.md) を利用して、ページのコンテンツ全体をJSONモデルとして配信します。
 
    特定のインターフェイスを実装することで、SlingモデルはSPAに必要な情報を提供します。 JSONデータの配信は、各コンポーネント（ページ間、段落間、コンポーネント間など）に下方向に委任されます。
 
-   各コンポーネントは、そのコンポーネントが何を公開し、どのようにレンダリングされるかを選択します（HTLを使用するサーバー側またはReactを使用するクライアント側）。 もちろん、この記事では、Reactを使用したクライアント側のレンダリングに重点を置いています。
+   各コンポーネントは、そのコンポーネントが何を公開し、どのようにレンダリングされるかを選択します(サーバー側（HTLを使用、クライアント側はReactを使用）。 もちろん、この記事では、Reactを使用したクライアント側のレンダリングに重点を置いています。
 
 1. また、モデルはページを同期的に読み込むように複数のページをグループ化できるので、必要なページ再読み込み数を減らすことができます。
 
@@ -257,7 +261,7 @@ SPAがエンドユーザーに対してどのように動作するかを体験�
 
    `https://localhost:4502/editor.html/content/we-retail-journal/react.html`
 
-1. ブラウザーに組み込まれている開発者ツールを使用して、ページのコンテンツを調べます。 選択ツールを使用して、ページ上の編集可能コンポーネントを選択し、表示の詳細を要素に選択します。
+1. ブラウザーに組み込まれている開発者ツールを使用して、ページのコンテンツを調べます。 選択ツールを使用して、ページ上の編集可能なコンポーネントを選択し、表示の詳細を要素に選択します。
 
    コンポーネントには新しいデータ属性があり `data-cq-data-path`ます。
 
