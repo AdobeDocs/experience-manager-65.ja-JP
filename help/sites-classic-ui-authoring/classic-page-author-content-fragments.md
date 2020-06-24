@@ -11,14 +11,17 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 5b488f41-2cc1-41f9-8c7f-da851d325949
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 100%
 
 ---
 
 
 # コンテンツフラグメントを使用したページのオーサリング{#page-authoring-with-content-fragments}
 
-Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページから独立したアセットとして作成および管理されます](/help/assets/content-fragments.md)。
+Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。
 
 これによりチャネルに依存しないコンテンツを、様々なバリエーション（チャネル固有）で作成できます。その後、コンテンツページをオーサリングする際に、これらのフラグメントとそれらのバリエーションを使用できます。
 
