@@ -1,7 +1,7 @@
 ---
 title: オーディエンスの管理
 seo-title: オーディエンスの管理
-description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub または ClientContext 用のセグメントを管理したりできます。
+description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub 用のセグメントを管理したりできます。 またはClient Context
 seo-description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub または ClientContext 用のセグメントを管理したりできます。
 uuid: 76408a8c-25db-4e9f-8a69-27e820a2a7cf
 contentOwner: msm-service
@@ -11,7 +11,10 @@ topic-tags: personalization
 discoiquuid: 9a7a31f9-aeb8-455f-a07e-7b1d1f0a88b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1016'
+ht-degree: 86%
 
 ---
 
@@ -27,7 +30,7 @@ An Audience, called *segment* in ContextHub and Client Context, is a class of vi
 
 オーディエンスコンソールでは、オーディエンスはブランド別に整理されます。
 
-Audiences are available in Targeting mode for [authoring targeted content](/help/sites-authoring/content-targeting-touch.md), where you can also create audiences (but you need to create Adobe Target audiences in the Audiences console). ターゲット設定モードで作成したオーディエンスは、オーディエンスコンソールに表示されます。
+オーディエンスは、ターゲット設定モードで[ターゲットコンテンツのオーサリング](/help/sites-authoring/content-targeting-touch.md)に使用できます。その際、オーディエンスを作成することもできます（ただし、オーディエンスコンソールで Adobe Target オーディエンスを作成する必要があります）。ターゲット設定モードで作成したオーディエンスは、オーディエンスコンソールに表示されます。
 
 オーディエンスは、定義されているオーディエンスの種類を示すラベルと共に表示されます。
 
@@ -41,16 +44,16 @@ ContextHub セグメントは、オーディエンスコンソールまたはタ
 
 オーディエンスコンソールで ContextHub セグメントを作成するには：
 
-1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。Click or tap **Audiences**.
+1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。「**オーディエンス**」をクリックまたはタップします。
 1. 「**ContextHub セグメントを作成**」をタップまたはクリックします。
 
    ![screen-shot_2019-03-05at124034](assets/screen-shot_2019-03-05at124034.png)
 
-1. **新しい ContextHub セグメント**&#x200B;ダイアログボックスで、タイトルを入力し、ブーストを調整して、「**作成**」をクリックします。新しいContextHubセグメントがオーディエンスリストに表示されます。
+1. **新しい ContextHub セグメント**&#x200B;ダイアログボックスで、タイトルを入力し、ブーストを調整して、「**作成**」をクリックします。新しい ContextHub セグメントがオーディエンスリストに表示されます。
 
    >[!NOTE]
    >
-   >You can sort the modified list by tapping or clicking **Modified** to sort by descending order to see any newly created audiences.
+   >新しく作成したオーディエンスがあるか確認するために降順に並べ替えるには、「**変更済み**」をタップまたはクリックして、変更済みのリストを並べ替えることができます。
 
 ContextHub を使用するセグメント作成の詳細については、「[ContextHub によるセグメンテーション設定](/help/sites-administering/segmentation.md)」ドキュメントを参照してください。
 
@@ -64,15 +67,15 @@ ContextHub を使用するセグメント作成の詳細については、「[Co
 
 >[!NOTE]
 >
->If you do not see **Create Target Audience **in the **Create** menu, you do not have the necessary permissions to create an audience. You need write permissions under **/etc/segmentation** to be able to create audiences. グループのcontent-authorsには、デフォルトで書き込み権限があります。
+>If you do not see **Create Target Audience **in the **Create** menu, you do not have the necessary permissions to create an audience. You need write permissions under **/etc/segmentation** to be able to create audiences. content-authors グループには、デフォルトで書き込み権限があります。
 
 Adobe Target オーディエンスを作成するには：
 
-1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。Click or tap **Audiences**.
+1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。「**オーディエンス**」をクリックまたはタップします。
 
    ![screen-shot_2019-03-05at124139](assets/screen-shot_2019-03-05at124139.png)
 
-1. In the Audiences console, tap or click **Create** and then** Create Target Audience**.
+1. オーディエンスコンソールで、「**作成**」、「Target オーディエンスを作成」の順にタップまたはクリックします。
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -89,13 +92,13 @@ Adobe Target オーディエンスを作成するには：
 
 | **属性** | **説明** | **その他の情報** |
 |---|---|---|
-| **モバイル** | モバイルデバイス、デバイスの種類、デバイスのベンダー、画面の寸法（ピクセル単位）などのパラメーターに基づく Target モバイルデバイスです。 | Adobe Target で[モバイルに関するドキュメント](https://marketing.adobe.com/resources/help/en_US/target/target/c_mobile.html)を参照してください。 |
-| **カスタム** | カスタムパラメーターはmboxパラメーターです。 mbox に対して mbox パラメーターを渡した場合、または targetPageParams 関数を使用した場合、それらのパラメーターはここに表示され、オーディエンスで使用できます。 | Adobe Target で[カスタムパラメーターに関するドキュメント](https://marketing.adobe.com/resources/help/en_US/target/target/c_custom_parameters.html)を参照してください。 |
+| **モバイル** | モバイルデバイス、デバイスの種類、デバイスのベンダー、画面の寸法（ピクセル単位）などのパラメーターに基づく Target モバイルデバイスです。 | Adobe Target で[モバイルに関するドキュメント](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/mobile.html)を参照してください。 |
+| **カスタム** | カスタムパラメーターは、mbox パラメーターです。mbox に対して mbox パラメーターを渡した場合、または targetPageParams 関数を使用した場合、それらのパラメーターはここに表示され、オーディエンスで使用できます。 | Adobe Target で[カスタムパラメーターに関するドキュメント](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)を参照してください。 |
 | **OS** | 特定のオペレーティングシステムを使用している訪問者をターゲットに設定することができます。 | Linux、Macintosh または Windows を使用している Target ユーザーです。 |
-| **サイトページ** | 指定したページを閲覧している、または指定した mbox パラメーターが設定されている訪問者をターゲットにします。 | See [Site Pages documentation](https://marketing.adobe.com/resources/help/en_US/target/target/c_site_pages.html) at Adobe Target. |
-| **ブラウザー** | ページの訪問時に特定のブラウザーまたは特定のブラウザーオプションを使用しているユーザーをターゲットに設定することができます。 | See [Browser options documentation](https://marketing.adobe.com/resources/help/en_US/target/target/c_browser_options.html)at Adobe Target. |
-| **訪問者プロファイル** | 特定のプロファイルパラメーターに一致する訪問者をターゲット設定します。 | See [Visitor Profile documentation](https://marketing.adobe.com/resources/help/en_US/target/target/c_visitor_profile.html) at Adobe Target. |
-| **トラフィックソース** | サイトに導いた検索エンジンやランディングページに基づいて訪問者をターゲット設定します。 | See [Traffic Sources documentation](https://marketing.adobe.com/resources/help/en_US/target/target/c_traffic_sources.html) at Adobe Target. |
+| **サイトページ** | 指定したページを閲覧している、または指定した mbox パラメーターが設定されている訪問者をターゲットにします。 | Adobe Target で[サイトページに関するドキュメント](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/site-pages.html)を参照してください。 |
+| **ブラウザー** | ページの訪問時に特定のブラウザーまたは特定のブラウザーオプションを使用しているユーザーをターゲットに設定することができます。 | Adobe Target で[ブラウザーオプションに関するドキュメント](https://docs.adobe.com/help/en/target/using/audiences/create-audiences/categories-audiences/browser.html)を参照してください。 |
+| **訪問者プロファイル** | 特定のプロファイルパラメーターに一致する訪問者をターゲット設定します。 | Adobe Target で[訪問者プロファイルに関するドキュメント](https://docs.adobe.com/content/help/en/target/using/audiences/visitor-profiles/visitor-profile.html)を参照してください。 |
+| **トラフィックソース** | サイトに導いた検索エンジンやランディングページに基づいて訪問者をターゲット設定します。 | Adobe Target で[トラフィックソースに関するドキュメント](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)を参照してください。 |
 
 ## オーディエンスコンソールでのオーディエンスの変更 {#modifying-an-audience-in-the-audiences-console}
 
@@ -105,6 +108,6 @@ Adobe Target オーディエンスを作成するには：
 
 ContextHub オーディエンスまたは ClientContext オーディエンスは、オーディエンスコンソールから編集できます。次のように Adobe Target オーディエンスも編集できますが、AEM で作成された Adobe Target オーディエンスのみです。
 
-1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。Click or tap **Audiences**.
+1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。「**オーディエンス**」をクリックまたはタップします。
 1. 編集する ContextHub セグメントまたは ClientContext セグメントの横のアイコンをタップまたはクリックして、「**編集**」をタップまたはクリックします。
 1. セグメントエディターで編集をおこないます。[ClientContext](/help/sites-administering/campaign-segmentation.md) または [ContextHub](/help/sites-administering/contexthub-config.md) に関するドキュメントを参照してください。
