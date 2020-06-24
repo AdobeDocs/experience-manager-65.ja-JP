@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 82%
 
 ---
 
@@ -28,14 +31,14 @@ AEM Mobile アプリは、ページ構成およびプロパティを定義する
 
 * **名前：**&#x200B;デフォルト値は、「タイトル」プロパティの値から空白文字を除外した値です。この名前は、AEM 内でアプリケーションを参照するために使用されます（例えば、アプリケーションを表すリポジトリノードなど）。
 * **説明：**&#x200B;アプリケーションの説明。
-* **サーバー URL：**&#x200B;アプリケーションに対して無線（OTA）によるコンテンツ更新を提供する URL。デフォルト値は、アプリケーションの作成に使用するインスタンスのパブリッシュサーバー URL です（Externalizer サービスから取得されます）。注意：これは、作成者ではなく、パブリッシュサーバーインスタンスである必要があり、認証が必要です。
+* **サーバー URL：**&#x200B;アプリケーションに対して無線（OTA）によるコンテンツ更新を提供する URL。デフォルト値は、アプリケーションの作成に使用するインスタンスのパブリッシュサーバー URL です（Externalizer サービスから取得されます）。これは、作成者ではなく、発行サーバーインスタンスである必要があります。これには認証が必要です。
 
 アプリケーションサムネールとして使用する画像ファイルを提供したり、使用する PhoneGap Build 設定を選択したり、使用するモバイルアプリ分析設定を選択したりすることもできます。この画像は、Experience Managerのモバイルアプリコンソール内でモバイルアプリを表すためのサムネールとしてのみ使用されます。
 
 その他の（オプションの）タブは、ビルドクラウドサービス向けで、Adobe Mobile Services SDK プラグインをアプリに統合する場合に使用します。
 
 * ビルド：ここでは、「設定を管理」をクリックし、build.phonegap.com ビルドサービスを設定します。次に、ドロップダウンから、新規に作成した PhoneGap Build クラウドサービスを選択できます。
-* 分析：「設定を管理」をクリックし、[Adobe Mobile Services SDK](https://marketing.adobe.com/developer/en_US/get-started/mobile/c-measuring-mobile-applications) クラウドサービスを設定します。ドロップダウンから、モバイルアプリに統合する新しく作成したモバイルサービスを選択できるようになります。
+* 分析：「設定を管理」をクリックし、[Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html) クラウドサービスを設定します。ドロップダウンから、モバイルアプリに統合する新しく作成したモバイルサービスを選択できるようになります。
 
 ## アプリテンプレートの使用 {#using-app-templates}
 
@@ -47,7 +50,7 @@ AEM Mobile アプリは、ページ構成およびプロパティを定義する
 
 最新のAEM Appsサンプルパッケージには、Geometrixxアプリの更新版とアプリテンプレートが含まれています。 Alternatively, you can install the [StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) which also provides a template.
 
-アプリテンプレートに基づいて新しいアプリを作成する手順：
+アプリテンプレートに基づいて新規アプリを作成する手順：
 
 1. Navigate to the AEM Mobile app catalog: &lt;*server-url*>aem/apps.html/content/mobileapps
 1. 以下のように「**作成**」を選択し、「**アプリ**」を選択します。
