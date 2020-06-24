@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
 workflow-type: tm+mt
 source-wordcount: '9303'
 ht-degree: 64%
@@ -16,7 +16,7 @@ ht-degree: 64%
 
 では、アセット [!DNL Adobe Experience Manager Assets] の保存や管理だけでなく、様々な操作を行うことができます。 [!DNL Experience Manager] オファーのエンタープライズグレードのアセット管理機能。 アセットの編集と共有、高度な検索の実行、サポートされる多数のファイル形式の複数レンディションの作成、バージョンとデジタル権限の管理、アセットの処理の自動化、メタデータの管理と管理、注釈を使用した共同作業などが可能です。
 
-この記事では、作成やアップロードなど、基本的なアセット管理タスクについて説明します。 メタデータの更新； コピー、移動、削除、 アセットの公開、非公開、検索を行います。 ユーザインターフェイスについて詳しくは、「アセットユーザインターフェイス [の概要](/help/sites-authoring/basic-handling.md)」を参照してください。 To manage Content Fragments, see [manage Content Fragments](content-fragments-managing.md) assets.
+この記事では、作成やアップロードなど、基本的なアセット管理タスクについて説明します。 メタデータの更新； コピー、移動、削除、 アセットの公開、非公開、検索を行います。 ユーザインターフェイスについて詳しくは、「アセットユーザインターフェイス [の概要](/help/sites-authoring/basic-handling.md)」を参照してください。 To manage Content Fragments, see [manage Content Fragments](/help/assets/content-fragments/content-fragments-managing.md) assets.
 
 ## フォルダーの作成 {#creating-folders}
 
@@ -63,6 +63,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    * On the toolbar, click the **[!UICONTROL Create]** icon. メニューで[ **[!UICONTROL ファイル]**]をクリックします。 表示されたダイアログで、必要に応じてファイル名を変更できます。
    * In a browser that supports HTML5, drag the assets directly on the [!DNL Assets] user interface. ファイル名を変更するためのダイアログは表示されません。
+
    ![アセットをアップロードするためのオプションを作成する](assets/create-options.png)
 
    複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPad を使用している場合、一度に選択できるファイルは 1 つだけです。
@@ -119,6 +120,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    * アセットファイル名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? &`
    * アセットフォルダー名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
    アセットファイル名の拡張子には特殊文字を含めないでください。
 
    ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルおよびアップロードに失敗したファイルの状態が表示されます](assets/chlimage_1-10.png)
@@ -147,7 +149,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 >[!NOTE]
 >
->ダイナミックメディア — Scene7モードでFTPを使用してアセットをアップロードするには、機能パック18912をオーサーインスタンスにインスト [!DNL Experience Manager] ールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行について [は、機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
+>Dynamic Media- Scene7モードのFTPを使用してアセットをアップロードするには、機能パック18912をオーサーインスタンスにインスト [!DNL Experience Manager] ールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行について [は、機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
 >
 >If you use FTP for uploading assets, the upload settings specified in [!DNL Experience Manager] are ignored. 代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
@@ -301,11 +303,11 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 ### ストリーミングアップロード {#streamed-uploads}
 
-多数のアセットをAdobe Experience Managerにアップロードする場合、サーバーへのI/O要求は大幅に増加するので、アップロードの効率が低下し、一部のアップロードタスクがタイムアウトする場合もあります。 [!DNL Experience Manager Assets] アセットのストリームアップロードをサポートします。 ストリーミングアップロードにより、リポジトリにアセットをコピーする前にサーバーの一時フォルダーのアセットストレージを回避することで、アップロード操作中のディスクの I/O が低減します。代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。Streamed upload is enabled by default in [!DNL Assets].
+多数のアセットをAdobe Experience Managerにアップロードする場合、サーバへのI/O要求は大幅に増加するので、アップロードの効率が低下し、一部のアップロードタスクがタイムアウトする場合もあります。 [!DNL Experience Manager Assets] アセットのストリームアップロードをサポートします。 ストリーミングアップロードにより、リポジトリにアセットをコピーする前にサーバーの一時フォルダーのアセットストレージを回避することで、アップロード操作中のディスクの I/O が低減します。代わりに、データはリポジトリに直接転送されます。これにより、サイズの大きいアセットのアップロードにかかる時間を抑え、タイムアウトが発生する可能性を減少することができます。Streamed upload is enabled by default in [!DNL Assets].
 
 >[!NOTE]
 >
->サーブレットAPIバージョン3.1より前のJEEサーバーで実行しているAdobe Experience Managerに対しては、ストリーミングアップロードは無効です。
+>サーブレットAPIバージョンが3.1より前のJEEサーバーで実行しているAdobe Experience Managerでは、ストリーミングアップロードは無効になっています。
 
 ### アセットが含まれている ZIP アーカイブの抽出 {#extractzip}
 
@@ -350,6 +352,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 1. アセットにズームインするには：
    1. ズームインアイコンにフォーカスを移動するには、 `Tab` keyを使用します。
    1. keyを使用して画像をズームインします。 `Enter`
+
    ズームアウトするには、 `Tab` keyキーを使用してズームアウトアイコンにフォーカスを移動し、を押し `Enter`ます。
 
 1. Ctrl + Altキーを押しながら、画像にフォーカスを戻し `Shift``Tab` ます。
@@ -358,7 +361,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 >[!MORELIKETHIS]
 >
->* [プレビューダイナミックメディアアセット](/help/assets/previewing-assets.md)。
+>* [プレビューDynamic Mediaアセット](/help/assets/previewing-assets.md)。
 >* [サブアセットの表示](managing-linked-subassets.md#viewing-subassets).
 
 
@@ -407,6 +410,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    * アセットが表示またはダウンロードされた回数
    * アセットが使用されたチャネルまたはデバイス
    * アセットが最近使用されたクリエイティブソリューション
+
    詳しくは、[アセットインサイト](/help/assets/touch-ui-asset-insights.md)を参照してください。
 
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。
@@ -480,6 +484,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    * Click **[!UICONTROL Back]** to return to the **[!UICONTROL Select Destination]** screen.
 
    * Click **[!UICONTROL Cancel]** to stop the move operation.
+
    参照を更新しなければ、引き続きアセットの以前のパスが示されます。参照を調整すると、更新され、アセットの新しいパスが反映されます。
 
 ## レンディションの管理 {#managing-renditions}
@@ -506,7 +511,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    **レンディションの削除**
 
-   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** icon from the toolbar. アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザインターフェイスからレンディションを手動で削除できます。複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** icon from the toolbar. アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザインターフェイスからレンディションを手動で削除できます。複数のアセットの場合、Experience Managerをカスタマイズして、特定のレンディションを削除したり、アセットを削除して削除したアセットを再度アップロードしたりできます。
 
    ![レンディションを削除するオプション](assets/delete_renditionicon.png)
 
@@ -555,6 +560,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
       * アセットに参照がない場合は、アセットが削除されます。
       * アセットに参照がある場合は、「**1 つ以上のアセットが参照されています。**」というエラーメッセージが表示されます。「**[!UICONTROL 削除を強制]**」または「**[!UICONTROL キャンセル]**」を選択できます。
+
    >[!NOTE]
    >
    >アセットを削除するには、ユーザーがに対して削除権限を持っている必要があり `dam/asset`ます。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
@@ -607,6 +613,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    * **[!UICONTROL キャンセル]**：アクションを停止します。
    * **[!UICONTROL 非公開]**：指定された日付にアセットを非公開にします（パブリッシュ環境では使用できません）。
+
    >[!NOTE]
    >
    >複雑なアセットを非公開にする場合は、アセットだけを非公開にします。参照は他の公開済みアセットから参照されている可能性があるので、非公開にしないでください。
@@ -677,6 +684,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
    * Select the asset and then click the **[!UICONTROL Edit]** icon in the toolbar.
    * Click the **[!UICONTROL Edit]** icon that appears on an asset in the Card view.
    * In the asset page, click the **[!UICONTROL Edit]** icon in the toolbar.
+
    ![ツールバーの編集アイコン](assets/edit_icon.png)
 
 1. To crop the image, click the **Crop** icon.
@@ -732,7 +740,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 >[!NOTE]
 >
->タイムラインには、[コンテンツフラグメントに固有のオプション](/help/assets/content-fragments-managing.md#timeline-for-content-fragments)がいくつか含まれています。
+>タイムラインには、[コンテンツフラグメントに固有のオプション](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)がいくつか含まれています。
 
 ## アセットへの注釈の付加 {#annotating}
 
@@ -742,13 +750,14 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 >[!NOTE]
 >
->コンテンツフラグメントの場合、[注釈はフラグメントエディターで作成されます](/help/assets/content-fragments-variations.md#annotating-a-content-fragment)。
+>コンテンツフラグメントの場合、[注釈はフラグメントエディターで作成されます](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)。
 
 1. 注釈を追加するアセットの場所に移動します。
 1. Click the **[!UICONTROL Annotate]** icon from one of the following:
 
    * [クイックアクション](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * アセットを選択した後またはアセットページに移動した後に、ツールバーから
+
    ![注釈アイコン](assets/chlimage_1-29.png)
 
 1. タイムラインの一番下の&#x200B;**[!UICONTROL コメント]**&#x200B;ボックスにコメントを追加します。または、画像内の任意の領域をマークアップし、**[!UICONTROL 注釈を追加]**&#x200B;ダイアログに注釈を追加します。
@@ -940,6 +949,7 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 1. 2つのバージョンの画像を比較するには、次の手順に従います。
    * 現在のバージョンと比較するバージョンをクリックします。
    * スライダを左にドラッグして、このバージョンを現在のバージョンに重ね合わせ、比較します。
+
    ![スライダを使用して、選択したアセットのバージョンと現在のバージョンを比較する](assets/version-slider.gif)
 
    *図： スライダを使用すると、選択したアセットのバージョンを現在のバージョンと簡単に比較できます。*
