@@ -10,16 +10,19 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 translation-type: tm+mt
-source-git-commit: dca52c05c413fc96bf7fab012a3be52f6769c2e0
+source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 79%
 
 ---
 
 
 # We.Retail のコンテンツフラグメントの使用{#trying-out-content-fragments-in-we-retail}
 
-コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** （AEMの標準インスタンスで使用可能）は、Lofotenの **Arctic Surfingフラグメントを基本サンプルとして提供します** 。 このフラグメントは、次のことを示しています。
+コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** （AEMの標準搭載インスタンスで利用可能）は、Lofotenのフラグメント **Arctic Surfingを基本的なサンプルとして提供しています** 。 このフラグメントは、次のことを示しています。
 
-* Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセットとして作成および管理されます](/help/assets/content-fragments.md)。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。
+* Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。
 
    * See [Where to Find Content Fragment assets in We.Retail](#where-to-find-content-fragments-in-we-retail)
 
@@ -37,6 +40,7 @@ source-git-commit: dca52c05c413fc96bf7fab012a3be52f6769c2e0
 >
 >* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
+
 >
 >
 エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
@@ -49,7 +53,7 @@ There are several sample content fragments in We.Retail; navigate via **Assets**
 
 * Navigate via **Assets**, **Files**, **We.Retail**, **English**, **Experiences**, **Artic Surfing in Lofoten**:
 
-   * [http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
+   * [http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten)
 
 ![cf-44](assets/cf-44.png)
 
@@ -57,13 +61,13 @@ There are several sample content fragments in We.Retail; navigate via **Assets**
 
 * [http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten](http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten)
 
-ここでは、タブ（左側のパネル）を使用してフラグメントを[編集および管理](/help/assets/content-fragments.md)できます。
+ここでは、タブ（左側のパネル）を使用してフラグメントを[編集および管理](/help/assets/content-fragments/content-fragments.md)できます。
 
 <!--![](do-not-localize/cf-45-aa.png) ![](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
-* **[マークダウン](/help/assets/content-fragments-variations.md)**を含む[バリエーション](/help/assets/content-fragments-markdown.md)
-* **[関連コンテンツ](/help/assets/content-fragments-assoc-content.md)**
-* **[メタデータ](/help/assets/content-fragments-metadata.md)**
+* **[マークダウン](/help/assets/content-fragments/content-fragments-variations.md)**を含む[バリエーション](/help/assets/content-fragments/content-fragments-markdown.md)
+* **[関連コンテンツ](/help/assets/content-fragments/content-fragments-assoc-content.md)**
+* **[メタデータ](/help/assets/content-fragments/content-fragments-metadata.md)**
 
 ![cf-46](assets/cf-46.png)
 
@@ -85,7 +89,7 @@ For example, the **Arctic Surfing in Lofoten** content fragment is referenced in
 
 詳しくは、以下を参照してください。
 
-* [コンテンツフラグメントの操作](/help/assets/content-fragments.md)
+* [コンテンツフラグメントの操作](/help/assets/content-fragments/content-fragments.md)
 
    * コンテンツフラグメントアセットを作成、編集および管理する方法について説明します。
 
