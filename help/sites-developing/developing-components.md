@@ -12,7 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+workflow-type: tm+mt
+source-wordcount: '3452'
+ht-degree: 85%
 
 ---
 
@@ -43,7 +46,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 ## 構造 {#structure}
 
-コンポーネントの基本構造については、[AEM コンポーネント - 基本](/help/sites-developing/components-basics.md#structure)で説明しています。このドキュメントには、タッチ対応UIとクラシックUIの両方が含まれています。 新しいコンポーネントでクラシック設定を使用する必要がない場合でも、既存のコンポーネントから継承する際にクラシック設定について知っていると役立ちます。
+コンポーネントの基本構造については、[AEM コンポーネント - 基本](/help/sites-developing/components-basics.md#structure)で説明しています。このドキュメントは、タッチ対応UIとクラシックUIの両方に対応しています。 新しいコンポーネントでクラシック設定を使用する必要がない場合でも、既存のコンポーネントから継承する際にクラシック設定について知っていると役立ちます。
 
 ## 既存のコンポーネントおよびダイアログの拡張 {#extending-existing-components-and-dialogs}
 
@@ -77,7 +80,7 @@ This means you only need to redefine the required differences, as opposed to red
 
 ### HTML テンプレート言語の使用 {#using-the-html-template-language}
 
-[HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)は、AEM 6.0 で JSP（JavaServer Pages）に代わって導入されたスクリプティング言語であり、HTML の扱いに適した、推奨されるサーバー側テンプレートシステムです。堅牢なエンタープライズ Web サイトを構築する必要のある Web 開発者にとって、HTL は安全性と開発効率の向上に役立ちます。
+[HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)は、AEM 6.0 で JSP（JavaServer Pages）に代わって導入されたスクリプティング言語であり、HTML の扱いに適した、推奨されるサーバー側テンプレートシステムです。堅牢なエンタープライズ Web サイトを構築する必要のある Web 開発者にとって、HTL は安全性と開発効率の向上に役立ちます。
 
 >[!NOTE]
 >
@@ -127,7 +130,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
 
 ### Coral UI と Granite UI {#coral-ui-and-granite-ui}
 
-AEM の現代的なルックアンドフィールは [Coral UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) と [Granite UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) で定義されています。
+AEM の現代的なルックアンドフィールは [Coral UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) と [Granite UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) で定義されています。
 
 [Granite UI で提供される幅広い基本コンポーネント（ウィジェット）](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)は、オーサー環境でダイアログを作成するために使用されます。必要な場合には、選択したウィジェットを拡張し、[独自のウィジェットを作成](#creatinganewwidget)することができます。
 
@@ -139,7 +142,7 @@ Coral および Granite リソースタイプを使用してコンポーネン�
 
    * すべてのクラウドソリューションに一貫性ある UI を提供
    * [AEM タッチ操作対応 UI の概念 - Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Coral UI ガイド](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
+   * [Coral UI ガイド](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 
 * Granite UI
 
@@ -198,6 +201,7 @@ newComponent (cq:Component)
 >
 >* [ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッション。
 >* 「[コードサンプル - ダイアログフィールドのカスタマイズ方法](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)」で説明されている関連サンプルコード。
+
 >
 
 
@@ -216,7 +220,7 @@ newComponent (cq:Component)
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
-より正確に言えば、Granite UI には、ダイアログ（より一般的に言えば[フォーム](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)）での使用に適した、幅広いフィールドコンポーネントが用意されています。
+より正確に言えば、Granite UI には、ダイアログ（より一般的に言えば[フォーム](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)）での使用に適した、幅広いフィールドコンポーネントが用意されています。
 
 >[!NOTE]
 >
@@ -268,7 +272,7 @@ To have your client library loaded solely for your component dialog (i.e. it wil
 1. 対象となるフィールドを、指定された CSS クラス（フック&#x200B;**）でマークします。
 1. クライアントライブラリ内で、その CSS クラス名に対してフックされる JS リスナーを定義します（これによって、カスタムロジックの範囲がそのフィールドのみに限定され、同じタイプの他のフィールドに影響を与えなくなります）。
 
-これを実現するには、やり取りする、基になるウィジェットライブラリについて理解する必要があります。反応するイベントの識別については、[Coral UI ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)を参照してくださいExtJS を使用して実行する必要があったプロセスと非常によく似ています。指定されたウィジェットのドキュメントページを探し、そのイベント API の詳細を確認してください。
+これを実現するには、やり取りする、基になるウィジェットライブラリについて理解する必要があります。反応するイベントの識別については、[Coral UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)を参照してくださいExtJS を使用して実行する必要があったプロセスと非常によく似ています。指定されたウィジェットのドキュメントページを探し、そのイベント API の詳細を確認してください。
 
 例えば、次を参照してください。
 
@@ -288,8 +292,8 @@ ExtJS を使用するクラシック UI では、コンテンツ構造内に指�
 
 指定されたフィールドを「必須」としてマークするには、フィールドのコンテンツノードに次のプロパティを設定します。
 
-* 名前: `required`
-* タイプ: `Boolean`
+* 名前：`required`
+* タイプ：`Boolean`
 
 例えば、次を参照してください。
 
@@ -316,7 +320,7 @@ Granite UI でのフィールド検証および Granite UI コンポーネント
 デザインダイアログの定義は、[コンテンツの編集に使用されるダイアログ](#creating-a-new-dialog)の定義によく似ています。違いはノードとして定義される点です。
 
 * ノード名: `cq:design_dialog`
-* タイプ: `nt:unstructured`
+* タイプ：`nt:unstructured`
 
 ## インプレースエディターの作成と設定 {#creating-and-configuring-an-inplace-editor}
 
@@ -364,42 +368,44 @@ AEM では、ページの段落システムを設定するときに、常に空�
 1. 次のようなページデザインの段落定義の下に、
 
    * `/etc/designs/<myApp>/page/par`
+
    新しいノードを作成します。
 
-   * 名前: `cq:authoring`
-   * タイプ: `nt:unstructured`
+   * 名前：`cq:authoring`
+   * タイプ：`nt:unstructured`
 
 
 1. この下に、アセットとコンポーネントのマッピングをすべて保持する新しいノードを作成します。
 
-   * 名前: `assetToComponentMapping`
-   * タイプ: `nt:unstructured`
+   * 名前：`assetToComponentMapping`
+   * タイプ：`nt:unstructured`
 
 1. アセットとコンポーネントのマッピングごとに、ノードを作成します。
 
    * 名前：テキスト。アセットと関連するコンポーネントタイプを示す名前（例：image）にすることを推奨します。
-   * タイプ: `nt:unstructured`
+   * タイプ：`nt:unstructured`
+
    それぞれが以下のプロパティを持ちます。
 
    *  `assetGroup` の下）で、次の手順をおこないます。
 
-      * タイプ: `String`
+      * タイプ：`String`
       * Value: the group that the related asset belongs to; for example, `media`
    *  `assetMimetype` の下）で、次の手順をおこないます。
 
-      * タイプ: `String`
+      * タイプ：`String`
       * 値：関連アセットの MIME タイプ（例：`image/*`/*）
    *  `droptarget` の下）で、次の手順をおこないます。
 
-      * タイプ: `String`
+      * タイプ：`String`
       * 値：ドロップターゲット（例：`image`）
    *  `resourceType` の下）で、次の手順をおこないます。
 
-      * タイプ: `String`
+      * タイプ：`String`
       * Value: the related component resource; for example, `foundation/components/image`
    *  `type` の下）で、次の手順をおこないます。
 
-      * タイプ: `String`
+      * タイプ：`String`
       * 値：タイプ（例：`Images`）
 
 
@@ -417,12 +423,12 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでAEMプロジェクトアーキタイププロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
+* [GitHubでAEMプロジェクトのアーキタイププロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/archive/master.zip)としてダウンロードします
 
 >[!NOTE]
 >
->The automatic creation of component instances can now be configured easily within the UI when using [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) and Editable Templates. See [Creating Page Templates](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) for more information about defining which components are automatically associated with given media types.
+>The automatic creation of component instances can now be configured easily within the UI when using [Core Components](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) and Editable Templates. See [Creating Page Templates](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) for more information about defining which components are automatically associated with given media types.
 
 ## AEM Brackets 拡張の使用 {#using-the-aem-brackets-extension}
 
@@ -431,7 +437,7 @@ GitHub のコード
 この拡張には、次の機能があります。
 
 * 同期を容易にして（Maven や File Vault は不要）、開発者の効率を向上させるだけでなく、AEM に関する知識が限られたフロントエンド開発者もプロジェクトに参加できるようにします。
-* Provides some [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) support, the template language designed to simplify component development and increase security.
+* Provides some [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html) support, the template language designed to simplify component development and increase security.
 
 >[!NOTE]
 >
@@ -443,7 +449,7 @@ GitHub のコード
 
 * HTL
 
-   * [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) の使用は必須条件ではありません。ただし、コンポーネントを更新する必要がある場合は、[JSP から HTL への移行](/help/sites-developing/components-basics.md#htl-vs-jsp)を検討することをお勧めします。
+   * [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html) の使用は必須条件ではありません。ただし、コンポーネントを更新する必要がある場合は、[JSP から HTL への移行](/help/sites-developing/components-basics.md#htl-vs-jsp)を検討することをお勧めします。
 
 * コンポーネント
 
@@ -494,4 +500,4 @@ if (Granite.author) {
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
-The supported markdown is the same as that for [content fragments](/help/assets/content-fragments-markdown.md).
+The supported markdown is the same as that for [content fragments](/help/assets/content-fragments/content-fragments-markdown.md).
