@@ -10,14 +10,17 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 translation-type: tm+mt
-source-git-commit: 48fd5ddb386d69795291e560fa7b21da6edf5979
+source-git-commit: 8f1a1beb9aa64b1d2ea5eda0bec3ca6e99c2ddcc
+workflow-type: tm+mt
+source-wordcount: '987'
+ht-degree: 85%
 
 ---
 
 
 # コンテンツフラグメントの翻訳プロジェクトの作成 {#creating-translation-projects-for-content-fragments}
 
-In addition to assets, Adobe Experience Manager (AEM) Assets supports language copy workflows for [content fragments](content-fragments.md) (including variations). コンテンツフラグメントで言語コピーワークフローを実行するために追加の最適化は必要ありません。各ワークフローで、コンテンツフラグメント全体が翻訳のために送信されます。
+In addition to assets, Adobe Experience Manager (AEM) Assets supports language copy workflows for [content fragments](/help/assets/content-fragments/content-fragments.md) (including variations). コンテンツフラグメントで言語コピーワークフローを実行するために追加の最適化は必要ありません。各ワークフローで、コンテンツフラグメント全体が翻訳のために送信されます。
 
 コンテンツフラグメントで実行できるワークフロータイプは、アセットで実行できるワークフロータイプと同じです。また、ワークフロータイプごとに使用できるオプションも、アセット用の対応するワークフロータイプで使用できるものと同じです。
 
@@ -149,7 +152,7 @@ AEM では、様々な種類のメディアアセットとコレクションが�
 
    コレクションのコンテンツのみが翻訳されていることがわかります。コレクション自体は翻訳されていません。
 
-1. 翻訳後の関連アセットのパスに移動します。翻訳済みのアセットがターゲット言語のルートの下に保存されていることを確認します。
+1. 翻訳後の関連アセットのパスに移動します。翻訳済みのアセットがターゲット言語ルートの下に保存されていることを確認します。
 
    ![chlimage_1-466](assets/chlimage_1-466.png)
 
