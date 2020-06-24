@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1287'
+ht-degree: 74%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 ## ページ上での Adobe Target によるターゲット設定の有効化 {#enabling-targeting-with-adobe-target-on-your-pages}
 
-Adobe targetとやり取りするページでターゲットコンポーネントを使用するには、&lt;head>要素に特定のクライアント側コードを含めます。
+Adobe Targetとやり取りするページでターゲットコンポーネントを使用するには、特定のクライアントサイドコードを&lt;head>要素に含めます。
 
 ### head セクション {#the-head-section}
 
@@ -78,7 +81,7 @@ Adobe targetとやり取りするページでターゲットコンポーネン�
 
 >[!NOTE]
 >
->製品に付属ののバージ `at.js` ョンのみがサポートされます。 製品に付属して `at.js` いるのバージョンは、次の場所のファイルを参照するこ `at.js` とで取得できます。
+>製品に付属の `at.js` 出荷済みバージョンのみがサポートされます。 製品と共に `at.js` 出荷されたのバージョンは、次の `at.js` ファイルを参照して取得できます。
 >
 >**/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js**.
 
@@ -197,7 +200,7 @@ ClientContext 機能をページに追加するには、&lt;body> タグの直�
 
 mboxの作成に使用されるデフォルトのmbox.jsファイルは、/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.jsにあります。 カスタムの mbox.js ファイルを使用するには、このファイルを Target クラウド設定に追加します。mbox.js ファイルを追加するには、そのファイルがファイルシステム上で使用可能になっている必要があります。
 
-For example, if you want to use the [Marketing Cloud ID service](https://marketing.adobe.com/resources/help/en_US/mcvid/) you need to download mbox.js so that it contains the correct value for the `imsOrgID` variable, which is based on your tenant. この変数は、Marketing Cloud ID サービスとの統合に必須です。For information, see [Adobe Analytics as the Reporting Source for Adobe Target](https://marketing.adobe.com/resources/help/en_US/target/a4t/a4t.html) and [Before You Implement](https://marketing.adobe.com/resources/help/en_US/target/a4t/c_before_implement.html).
+For example, if you want to use the [Marketing Cloud ID service](https://docs.adobe.com/content/help/en/id-service/using/home.html) you need to download mbox.js so that it contains the correct value for the `imsOrgID` variable, which is based on your tenant. この変数は、Marketing Cloud ID サービスとの統合に必須です。For information, see [Adobe Analytics as the Reporting Source for Adobe Target](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/a4t.html) and [Before You Implement](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/before-implement.html).
 
 >[!NOTE]
 >
@@ -223,7 +226,7 @@ Target 設定にカスタム mbox.js ファイルが含まれます。これは�
 * タイプ：Boolean
 * 値：True
 
-例えば、Geometrixxデモサイトページのタイトルコンポーネントのターゲット設定を無効にするには、/apps/geometrixx/components/title/cq:editConfigノードにプロパティを追加します。
+例えば、Geometrixxデモサイトのページのタイトルコンポーネントのターゲット設定を無効にするには、/apps/geometrixx/components/title/cq:editConfigノードにプロパティを追加します。
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
@@ -233,7 +236,7 @@ Target 設定にカスタム mbox.js ファイルが含まれます。これは�
 >
 >DTM を使用していない場合は、注文確認を Adobe Target に送信します。
 
-Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します（Adobe Target ドキュメントの [orderConfirmPage mbox の作成](https://marketing.adobe.com/resources/help/en_US/dtm/target/order-confirmation-mbox.html)を参照）。mbox が `orderConfirmPage` という名前を持ち、以下の特定のパラメーター名を使用している場合は、Adobe Target が mbox データを注文確認データとして認識します。
+Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します（Adobe Target ドキュメントの [orderConfirmPage mbox の作成](https://docs.adobe.com/content/help/en/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html)を参照）。mbox が `orderConfirmPage` という名前を持ち、以下の特定のパラメーター名を使用している場合は、Adobe Target が mbox データを注文確認データとして認識します。
 
 * productPurchasedId：購入された商品を識別する ID のリスト。
 * orderId：注文の ID。
@@ -317,14 +320,14 @@ String orderID = session.getOrderId();
 
 ## Target コンポーネントについて {#understanding-the-target-component}
 
-Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。Targetコンポーネントは、/libs/cq/personalization/components/targetにあります。
+Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。Targetコンポーネントは、/libs/cq/personalization/components/ターゲットにあります。
 
 target.jsp スクリプトは、ページのプロパティにアクセスして、コンポーネントに使用するターゲティングエンジンを決定し、適切なスクリプトを実行します。
 
-* Adobe Target:/libs/cq/personalization/components/target/engine_tnt.jsp
-* [AT.JSを使用するAdobe Target](/help/sites-administering/target.md):/libs/cq/personalization/components/target/engine_atjs.jsp
-* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md):/libs/cq/personalization/components/target/engine_cq_campaign.jsp
-* クライアント側ルール/ContextHub:/libs/cq/personalization/components/target/engine_cq.jsp
+* Adobe Target: /libs/cq/personalization/components/target/engine_tnt.jsp
+* [AT.JSとのAdobe Target](/help/sites-administering/target.md): /libs/cq/personalization/components/target/engine_atjs.jsp
+* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md): /libs/cq/personalization/components/target/engine_cq_campaign.jsp
+* クライアント側のルール/ContextHub: /libs/cq/personalization/components/target/engine_cq.jsp
 
 ### mbox の作成 {#the-creation-of-mboxes}
 
