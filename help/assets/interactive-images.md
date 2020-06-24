@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
+source-git-commit: 2014e4f28c63f6268606d46b5019d654bbe4aa08
 workflow-type: tm+mt
-source-wordcount: '4345'
+source-wordcount: '4334'
 ht-degree: 97%
 
 ---
@@ -68,7 +68,6 @@ ht-degree: 97%
 >
 >* クイックビューをトリガーして、画像にインタラクティブ機能を追加する。
 >* eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
-
 >
 >
 AEM の実装で AEM eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
@@ -282,7 +281,6 @@ AEM Assets に含まれる、デフォルトの標準提供インタラクティ
 
       * AEM Sites のユーザーである場合は、サイトセレクターアイコン（フォルダー）をタップまたはクリックして URL に移動します。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
       * スタンドアロンユーザーである場合は、「HREF」テキストフィールドに、リンクされる Web ページへの完全な URL パスを指定します。
-
    このリンクを新しいブラウザータブで開く（推奨のデフォルト）か同じタブで開くかを指定してください。
 
    詳しくは、[セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
@@ -363,9 +361,9 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 
 レスポンシブ環境向けにショッパブルインタラクティブ画像に「切り抜き」を適用するために、`ZoomView.iscommand` というインタラクティブ画像設定属性をパスに追加できます。ここでの `ZoomView` は呼び出すコンポーネントで、`iscommand` は適用する「crop」画像サービングコマンドです。
 
-[ZoomView.iscommand](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_interactive_image_config_attrib_zoomview_iscommand.html) 設定属性を参照してください。
+[ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 設定属性を参照してください。
 
-[crop](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_crop.html) 画像サービングコマンドを参照してください。
+[crop](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 画像サービングコマンドを参照してください。
 
 これで、インタラクティブ画像を Web サイト上の既存のクイックビューに統合できるようになりました。
 
