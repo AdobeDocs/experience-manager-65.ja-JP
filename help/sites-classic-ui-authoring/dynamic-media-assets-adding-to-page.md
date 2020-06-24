@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 55%
+source-wordcount: '1716'
+ht-degree: 53%
 
 ---
 
@@ -66,7 +66,6 @@ Dynamic Mediaコンポーネントはスマートです。画像とビデオの�
 >
 >* [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
 >* 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
-
 >
 
 
@@ -95,7 +94,7 @@ You can edit the following Dynamic Media settings by clicking **[!UICONTROL Edit
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
-**[!UICONTROL 画像修飾子]** — 画像効果を変更するには、追加の画像コマンドを指定します。 These are described in [Managing Image Presets](/help/assets/managing-viewer-presets.md) and the [Command reference](https://marketing.adobe.com/resources/help/ja_jp/s7/is_ir_api/is_api/http_ref/c_command_reference.html).
+**[!UICONTROL 画像修飾子]** — 画像効果を変更するには、追加の画像コマンドを指定します。 These are described in [Managing Image Presets](/help/assets/managing-viewer-presets.md) and the [Command reference](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
@@ -115,7 +114,7 @@ You can edit the following [!UICONTROL Advanced Settings] by clicking **[!UICONT
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
-**[!UICONTROL Width and Height]** – Enter value in pixels if you want the image to be a fixed size. これらの値を空にすると、アダプティブなアセットになります。
+**[!UICONTROL 幅と高さ]** — 画像を固定サイズにする場合は、値をピクセル単位で入力します。 これらの値を空にすると、アダプティブなアセットになります。
 
 #### When working with video {#when-working-with-video}
 
@@ -141,7 +140,7 @@ You can edit the following [!UICONTROL Advanced] settings by clicking **[!UICONT
 
 AEM 6.2 で [FP-13480](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを制御できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆の場合も同様です。Web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。ほとんどの場合、このデフォルトの動作で問題ないため、特に設定を変更する必要はありません。ただし、ビデオをセキュアに配信するために、`VideoPlayer.ssl=on` を URL パスの最後に付加するか、または埋め込みコードスニペットにある他のビューアの設定パラメーターのリストに付加して、このデフォルトの動作をオーバーライドすることができます。
 
-ビデオのセキュア配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_video_viewer_20_securevideodelivery.html)」を参照してください。ビデオビューアの他に、セキュアビデオ配信は混在メディアビューアとインタラクティブビデオビューアで使用できます。
+ビデオのセキュア配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)」を参照してください。ビデオビューアの他に、セキュアビデオ配信は混在メディアビューアとインタラクティブビデオビューアで使用できます。
 
 ### インタラクティブメディアコンポーネント {#interactive-media-component}
 
