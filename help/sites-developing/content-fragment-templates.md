@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0dc96f07e45ccbfea4edc87431677ada5b1bfa8c
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 84%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 0dc96f07e45ccbfea4edc87431677ada5b1bfa8c
 
 >[!CAUTION]
 >
->[すべてのフラグメントを作成する場合](/help/assets/content-fragments-models.md) 、コンテンツフラグメントモデルが推奨されるようになりました。
+>[コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)は、すべてのフラグメント作成で使用することが推奨されています。
 >
 >コンテンツフラグメントモデルは、We.Retail のすべてのサンプルでも使用されています。
 
@@ -33,7 +36,7 @@ source-git-commit: 0dc96f07e45ccbfea4edc87431677ada5b1bfa8c
 次の場所に、サイト固有のコンテンツフラグメントテンプレートを作成できます。
 
 * `/apps/settings/dam/cfm/templates`
-標準搭載のテンプレートをオーバーレイしたり、実行時に拡張/変更を行うことを意図していない、顧客固有のアプリケーション全体のテンプレートを提供したりする場所です。
+標準搭載のテンプレートをオーバーレイする場所、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場所です。
 
 * `/conf/global/settings/dam/cfm/templates`
 実行時に変更する必要がある、インスタンス全体の顧客固有のテンプレートの場所。
@@ -42,16 +45,17 @@ The order of precedence is (in descending order) `/conf`, `/apps`, `/libs`.
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+>`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
 >1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
    >
    >
-1. Make any changes within `/apps`
+1. `/apps` 内で変更作業をおこないます。
+
 >
 
 
@@ -137,7 +141,7 @@ conf
     <tr>
      <td><code>version</code></td>
      <td><p><code>Long</code></p> <p>必須</p> </td>
-     <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>:現在、このパラメーターはに設定する必要がありま <code>2</code>す。<br /> </p> </td>
+     <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>: 現在、このパラメーターはに設定する必要があり <code>2</code>ます。<br /> </p> </td>
     </tr>
    </tbody>
   </table>
