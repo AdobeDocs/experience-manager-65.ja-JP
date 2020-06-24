@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1765'
+ht-degree: 50%
 
 ---
 
@@ -36,7 +39,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
 1. サイドキックから&#x200B;**ビデオコンポーネント**&#x200B;をドラッグし、再生可能なビデオをそのコンポーネントの&#x200B;**アセットとして**&#x200B;追加することによって、Web ページを設定します。
 
-1. [Adobe Analyticsの設定とフレームワークを作成します](/help/sites-administering/adobeanalytics.md)。
+1. [アドビのAnalytics設定とフレームワークを作成します](/help/sites-administering/adobeanalytics.md)。
 
    * The examples in the sections that follow use the name **my-sc-configuration** for the configuration and **videofw** for the framework.
 
@@ -49,13 +52,13 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
    * [レガシーマイルストーン](/help/sites-administering/adobeanalytics.md)
    * [レガシー秒](/help/sites-administering/adobeanalytics.md)
 
-1. トラッキング方式を選択すると、それに従って CQ 変数のリストが変更されます。コンポーネントをさらに設定し、CQ変数をAdobe Analyticsプロパティにマッピングする方法については、以下の節を参照してください。
+1. トラッキング方式を選択すると、それに従って CQ 変数のリストが変更されます。コンポーネントをさらに設定し、CQ変数をAdobeAnalyticsプロパティにマッピングする方法については、次の節を参照してください。
 
 ## マイルストーン {#milestones}
 
 マイルストーン方式では、ビデオに関する大部分の情報を追跡します。高度なカスタマイズが可能で、設定が容易です。
 
-マイルストーン方式を使用するには、時間ベースの追跡オフセットを指定して、マイルストーンを定義します。ビデオ再生がマイルストーンを渡すと、ページはAdobe Analyticsを呼び出してイベントを追跡します。 定義した各マイルストーンに対して、Adobe AnalyticsプロパティにマップできるCQ変数を作成します。 これらの CQ 変数の名前には、次の形式を使用します。
+マイルストーン方式を使用するには、時間ベースの追跡オフセットを指定して、マイルストーンを定義します。ビデオ再生がマイルストーンを渡すと、ページはアドビAnalyticsを呼び出してイベントを追跡します。 定義したマイルストーンごとに、Adobe ServerプロパティにマップできるCQ変数がコンポーネントによって作成されます。 これらの CQ 変数の名前には、次の形式を使用します。
 
 ```shell
 eventdata.events.milestoneXX
@@ -75,7 +78,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
  <tbody>
   <tr>
    <th>CQ 変数</th>
-   <th>Adobe Analyticsプロパティ</th>
+   <th>アドビAnalyticsのプロパティ</th>
   </tr>
   <tr>
    <td>eventdata.videoName </td>
@@ -136,20 +139,20 @@ XX というサフィックスは、マイルストーンを定義する追跡�
 
    オフセット値は、0 より大きい整数でなければなりません。デフォルト値は `10,25,50,75` です。
 
-1. CQ変数をAdobe Analyticsプロパティにマップするには、Adobe AnalyticsプロパティをContentFinderからコンポーネント上のCQ変数の横にドラッグします。
+1. CQ変数をAdobeAnalyticsプロパティにマッピングするには、ContentFinderからAdobeAnalyticsプロパティをコンポーネント上のCQ変数の横にドラッグします。
 
-   For information about optimizing the mappings, see the [Measuring Video in Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_overview.html) guide.
+   For information about optimizing the mappings, see the [Measuring Video in Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) guide.
 
-1. [ページにフレームワーク](/help/sites-administering/adobeanalytics.md) を追加します。
+1. [ページ追加のフレームワーク](/help/sites-administering/adobeanalytics.md) 。
 1. To test the setup in **Preview mode**, play the video to get Adobe Analytics calls to trigger.
 
-以下に示すAdobe Analyticsトラッキングデータの例は、4,8,16,20および24の追跡オフセットと、CQ変数に対する次のマッピングを使用したマイルストーントラッキングに適用されます。
+以下のAdobeAnalyticsトラッキングデータの例は、4,8,16,20および24のトラックオフセットと、CQ変数に対する次のマッピングを使用したマイルストーントラッキングに適用されます。
 
 <table>
  <tbody>
   <tr>
    <th>CQ 変数</th>
-   <th>Adobe Analyticsプロパティ</th>
+   <th>AdobeAnalyticsプロパティ</th>
   </tr>
   <tr>
    <td>eventdata.videoName </td>
@@ -220,13 +223,13 @@ XX というサフィックスは、マイルストーンを定義する追跡�
 
 >[!NOTE]
 >
->Adobe Analyticsに対して行われた呼び出しを確認するには、DigitalPulse DebuggerやFiddlerなどの適切なツールを使用します。
+>AdobeAnalyticsに対する呼び出しを確認するには、DigitalPulse DebuggerやFiddlerなどの適切なツールを使用します。
 
-DigitalPulse Debuggerで表示する場合、例を使用したAdobe Analyticsの呼び出しは次のようになります。
+DigitalPulse Debuggerで表示した場合、前述の例を使用したAdobeAnalyticsの呼び出しは次のようになります。
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-*これは、次の値&#x200B;**を含む**、Adobe Analyticsに対して行われる最初の呼び出しです。*
+*これは、次の値を含むAdobe **Analyticsに対する**最初の呼び出しです。*
 
 * *eventdata.a.media.name に対する prop1 と eVar1*
 * *prop2～4、および contentType（video）と segment（1:O:1-4）を格納している eVar2 と eVar3*
@@ -246,9 +249,9 @@ DigitalPulse Debuggerで表示する場合、例を使用したAdobe Analytics�
 
 非レガシーマイルストーン方式は、マイルストーン方式によく似ていますが、マイルストーンを計測の長さの割合に基づいて定義する点が異なります。次の点は共通です。
 
-* ビデオ再生がマイルストーンを渡すと、ページはAdobe Analyticsを呼び出してイベントを追跡します。
+* ビデオ再生がマイルストーンを渡すと、ページはアドビAnalyticsを呼び出してイベントを追跡します。
 * The [static set of CQ variables](#cqvars) that are defined for mapping with Adobe Analytics properties.
-* 定義した各マイルストーンに対して、Adobe AnalyticsプロパティにマップできるCQ変数を作成します。
+* 定義したマイルストーンごとに、Adobe ServerプロパティにマップできるCQ変数がコンポーネントによって作成されます。
 
 これらの CQ 変数の名前には、次の形式を使用します。
 
@@ -271,11 +274,11 @@ eventdata.events.milestoneXX
 
    オフセット値は、0 より大きい整数でなければなりません。
 
-1. CQ変数をAdobe Analyticsプロパティにマップするには、Adobe AnalyticsプロパティをContentFinderからコンポーネント上のCQ変数の横にドラッグします。
+1. CQ変数をAdobeAnalyticsプロパティにマッピングするには、ContentFinderからAdobeAnalyticsプロパティをコンポーネント上のCQ変数の横にドラッグします。
 
-   For information about optimizing the mappings, see the [Measuring Video in Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_overview.html) guide.
+   For information about optimizing the mappings, see the [Measuring Video in Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) guide.
 
-1. [ページにフレームワーク](/help/sites-administering/adobeanalytics.md) を追加します。
+1. [ページ追加のフレームワーク](/help/sites-administering/adobeanalytics.md) 。
 1. To test the setup in **Preview mode**, play the video to get Adobe Analytics calls to trigger.
 
 ## レガシーマイルストーン {#legacy-milestones}
@@ -289,7 +292,7 @@ eventdata.events.milestoneXX
 1. 追跡オフセットを設定します。
 
    * 例：10,50,75,100
-   また、Adobe Analyticsに送信される情報はカスタマイズが容易です。マッピングに使用できる変数は3つだけです。
+   また、アドビのAnalyticsに送信される情報はカスタマイズが容易です。 マッピングに使用できる変数は3つのみです。
 
 <table>
  <tbody>
@@ -316,7 +319,7 @@ eventdata.events.milestoneXX
 
    The **rest of the relevant information** in the call will be sent concatenated into **one** variable named **pev3**.
 
-   **DigitalPulse Debuggerで表示する場合** 、Adobe Analyticsへの呼び出しの例を次に示します。
+   **DigitalPulse Debuggerで表示する場合** 、例を使用したAdobeAnalyticsへの呼び出し例を次に示します。
 
    ![lmilestones1](assets/lmilestones1.png)
 
@@ -326,17 +329,17 @@ eventdata.events.milestoneXX
 
    * *長さ* — ビデオファイルの長さ(秒単位、*100*)
 
-   * *プレイヤー名* — ビデオファイルの再生に使用するビデオプレーヤー(*HTML5ビデオ*)
+   * *プレーヤー名* — ビデオファイルの再生に使用するビデオプレーヤー(*HTML5ビデオ*)
 
    * *再生秒数合計* — ビデオが再生された秒数の合計(*25*)
 
-   * *開始タイムスタンプ* — ビデオ再生がいつ開始したかを識別するタイムスタンプ(*1331035567*)
+   * *開始のタイムスタンプ* — ビデオ再生がいつ開始したかを識別するタイムスタンプ(*1331035567*)
 
    * *再生セッション* — 再生セッションの詳細。 このフィールドは、ユーザーによるビデオの操作を示します。This might include data such as where they started playing the video, whether they used the video slider to advance the video, and where they stopped playing the video (*L10E24S58L58 - video was stopped at sec. 25 of section L10, then skipped to sec. 48*)
 
 ## レガシー秒 {#legacy-seconds}
 
-**レガシー秒**メソッドを使用すると、Adobe Analyticsの呼び出しがN秒ごとにトリガーされます。ここで、Nは「トラックオフセット」フィールドで指定されます。
+「**レガシー秒**」メソッドを使用すると、AdobeAnalyticsの呼び出しは、N秒ごとにトリガされます。ここで、NはTrack Offsetフィールドで指定されます。
 
 1. トラックのオフセットを任意の秒数に設定します。
 
@@ -345,7 +348,7 @@ eventdata.events.milestoneXX
    >
    >「追跡オフセット」フィールドに指定できるのは、0 より大きい整数だけです。
 
-   Adobe Analyticsに送信される情報は、カスタマイズ性が低くなります。 マッピングに使用できる変数は次の 3 つだけです。
+   アドビのAnalyticsに送信される情報は、カスタマイズが容易です。 マッピングに使用できる変数は次の 3 つだけです。
 
 <table>
  <tbody>
@@ -372,7 +375,7 @@ eventdata.events.milestoneXX
 
    呼び出しの中の&#x200B;**その他の関連情報**&#x200B;は、**pev3** という&#x200B;**ひとつ**&#x200B;の変数に連結されて送信されます。
 
-   DigitalPulse Debuggerで表示する場合、例を使用したAdobe Analyticsの呼び出しは次のようになります。
+   DigitalPulse Debuggerで表示した場合、前述の例を使用したAdobeAnalyticsの呼び出しは次のようになります。
 
    ![lseconds](assets/lseconds.png)
 
@@ -380,4 +383,4 @@ eventdata.events.milestoneXX
 
 **このチュートリアルで使用しているリファレンス：**
 
-[0] [https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_overview.html](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_overview.html)
+[0] [https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
