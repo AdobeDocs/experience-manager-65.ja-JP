@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 64%
 
 ---
 
@@ -30,13 +33,13 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
        ${'a' in myObject}
       ```
 
-   * 変数宣言のデータセキュリティセット：
+   * 変数の宣言で、データスルキップが設定されている：
       `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
-   * 制御パラメーターのリストと繰り返し：begin, step, end:
+   * リストと繰り返しの制御パラメータ： begin、step、end:
       `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
-   * データに含まれない非ラップの識別子：
+   * データによる非ラップの識別子：
 
       ```
       <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
@@ -48,10 +51,10 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
 * コアコンポーネント 2.3.2 以上（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases) を参照）。
 * レイアウトコンテナのグリッドシステム（[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid) を参照）。
-* Clientlibマネージャ：Google Closure CompilerのデフォルトをJavaScriptクライアントlibsの縮小（旧デフォルトはYahoo YUI）に設定し、Google Closure Compilerのバージョンをv20190121に更新
+* Clientlibマネージャ： Google Closure CompilerのデフォルトをJavaScript clientlibsの縮小（以前のデフォルトはYahoo YUI）に変更し、Google Closure Compilerのバージョンをv20190121に更新
 * テンプレートエディターとポリシー
 
-   * JS SDK（SPAエディターとも呼ばれる）を使用するシングルページアプリ用のテンプレートの作成と編集
+   * JS SDK（SPAエディター）を使用するシングルページアプリ用のテンプレートの作成と編集
 
 * 参照サイト We.Retail 4.0（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) を参照）。
 * Toolkit to upgrade existing sites to leverage the latest editor capabilities, see [Github repository](https://github.com/adobe/aem-modernize-tools)
@@ -73,10 +76,10 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
 ## コンテンツフラグメントとエディター {#content-fragments-amp-editor}
 
-* 全般的なコメントを書き込んだり、テキスト内のコメントを表示（タイムラインレールにも表示）するための新しい[注釈](/help/assets/content-fragments-variations.md#viewing-editing-deleting-annotations)レールがコンテンツフラグメントエディターに追加されました。
-* Ability to set the default content type of a multi-line text element in a [Content Fragment model](/help/assets/content-fragments-models.md) to simple text, rich text or markdown
-* RTE（フルスクリーン表示）でテキストを選択して、[コメント／注釈](/help/assets/content-fragments-variations.md#annotating-a-content-fragment)を追加できます。
-* 参照レールでコンテンツフラグメント並列に表示して、[バージョンを比較](/help/assets/content-fragments-managing.md#comparing-fragment-versions)できるようになりました。
+* 全般的なコメントを書き込んだり、テキスト内のコメントを表示（タイムラインレールにも表示）するための新しい[注釈](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations)レールがコンテンツフラグメントエディターに追加されました。
+* Ability to set the default content type of a multi-line text element in a [Content Fragment model](/help/assets/content-fragments/content-fragments-models.md) to simple text, rich text or markdown
+* RTE（フルスクリーン表示）でテキストを選択して、[コメント／注釈](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)を追加できます。
+* 参照レールでコンテンツフラグメント並列に表示して、[バージョンを比較](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)できるようになりました。
 * アセットのダウンロードレポートにコンテンツフラグメントが適宜表示されるようになりました。
 * /api.json を通じて、[Assets HTTP API でコンテンツフラグメントがサポート](/help/assets/assets-api-content-fragments.md)されるようになりました。コンテンツフラグメントの作成、更新、読み取りおよび削除のための API が用意されています。
 
@@ -88,16 +91,16 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 ## 翻訳 {#translation}
 
 * プロジェクトマスターを使用して、翻訳プロジェクトを手軽に作成できます。
-* 翻訳ジョブをデフォルトの承認済みステータスに設定することで、翻訳プロジェクトの実行を簡略化します。
+* デフォルトで翻訳ジョブを承認済みステータスに設定することで、翻訳プロジェクトの実行を簡単にする
 * サードパーティ翻訳メモリの変更点に合わせて翻訳済みページを更新できます。
 * 翻訳ジョブを JSON 形式で書き出すことができます。
-* V3 APIを使用するようにMicrosoft Translation統合を更新する
+* V3 APIを使用するためにMicrosoft Translation統合を更新する
 
 ## Multi-Site Management (MSM) {#multi-site-management-msm}
 
 * PushOnModifyを使用するロールアウト設定の場合は、ページ移動操作の処理が改善され、一貫性のない状態が回避されます。
 * ライブコピー構造内に新しいページを作成すると、デフォルトでスタンドアロンページが作成されるようになりました。
-* JS SDK（SPAエディターとも呼ばれる）を使用するシングルページアプリでMSM機能を使用する
+* JS SDK（SPAエディター）を使用するシングルページアプリでMSM機能を使用する
 
 ## ローンチ {#launches}
 
@@ -114,11 +117,11 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 >
 >AEM 6.5 のリリース時点では、at.js 2.x は AEM でサポートされていません。at.js 1.x の最新バージョンを使用してください。
 
-* Adobe Target との連携で Target Standard API を使用できるようになりました。AEMの以前のバージョンでは、非推奨となったTarget Classic HTTP APIを使用しています。
+* Adobe Target との連携で Target Standard API を使用できるようになりました。AEMの以前のバージョンでは、非推奨となったTargetクラシックHTTP APIを使用しています。
 * Adobe Target `mbox.js` version 63 is included. Adobe strongly recommends to switch implementation to `at.js` v1.x.
 * `at.js` バージョン1.5.0が含まれるようになりました。 Adobe recommends that you use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision `at.js` v1.x into the site.
 
-## AEMとAdobe Analytics {#aem-amp-adobe-analytics}
+## AEMとアドビAnalytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5が含まれます。 導入を `AppMeasurement.js`
 * `AppMeasurement.js` v1.8.0が含まれます。 Adobe recommends to use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision AppMeasurement.js into the site.
@@ -133,8 +136,8 @@ Improvements to the Commerce Integration Framework are on a faster release cycle
 
 ## Screens アドオン {#screens-add-on}
 
-* 起動回数を使用した、署名コンテンツの将来のコンテンツ変更の計画
+* 起動回数を使用した署名コンテンツの将来のコンテンツ変更の計画
 * シーケンスチャンネルでのメーター制再生が可能になりました。
 * ソースファイル（Excel シートなど）を使用してプロジェクト構造を自動作成できるようになりました。
 
-For more details on changes to AEM Screens - see the Release Notes in the [AEM Screens User Guide](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
+For more details on changes to AEM Screens - see the Release Notes in the [AEM Screens User Guide](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html).
