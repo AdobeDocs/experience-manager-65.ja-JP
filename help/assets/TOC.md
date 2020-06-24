@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Experience Manager 6.5 Assetsユーザーガイド
+user-guide-title: Experience Manager6.5アセットユーザーガイド
 translation-type: tm+mt
-source-git-commit: db60a7297defa2ed8e7f30f148d0f74a73a49893
+source-git-commit: d870e80e33c5ba36a43ff45ba2dc82551491bb18
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 55%
@@ -12,24 +12,24 @@ ht-degree: 55%
 ---
 
 
-# Experience Manager 6.5 Assetsユーザーガイド {#assets}
+# Experience Manager6.5アセットユーザーガイド {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
 + [AEM 6.5 Assetsリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
 + AEM Assetsの使用 {#using}
-   + [AEM Assetsホームページエクスペリエンス](assets-home-page.md)
+   + [AEM Assetsホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [多言語のアセット](multilingual-assets.md)
-   + [AEM Assetsの [!DNL Adobe Stock] 使用状況](aem-assets-adobe-stock.md)
+   + [AEM Assets [!DNL Adobe Stock] の使用](aem-assets-adobe-stock.md)
    + [3D アセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
    + [アセットの処理](assets-workflow.md)
    + [追加画像マップ](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
-   + [AEMサイトとの接続されたアセット](use-assets-across-connected-assets-instances.md)
+   + [アセットとAEM Sitesの接続](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Experience League 提供の Dynamic Media ニュースレター](dynamic-media-newsletter.md)
    + [Dynamic Media のセットアップ](administering-dynamic-media.md)
@@ -37,7 +37,7 @@ ht-degree: 55%
    + [Dynamic Media - Scene7 モードの設定](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
-   + [ダイナミックメディア — ハイブリッドモードからダイナミックメディア — S7モードへの移行](migrate-from-hybrid-to-dms7.md)
+   + [Dynamic MediaからハイブリッドモードへのDynamic Media- S7モードへの移行](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media アセットの管理](managing-assets.md)
    + [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Dynamic Media ビューアプリセットの管理](managing-viewer-presets.md)
@@ -57,7 +57,7 @@ ht-degree: 55%
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)
    + [スピンセット](spin-sets.md)
-   + [ダイナミックメディアでのビデオ](video.md)
+   + [Dynamic Media内のビデオ](video.md)
    + [カルーセルバナー](carousel-banners.md)
    + [インタラクティブ画像](interactive-images.md)
    + [インタラクティブビデオ](interactive-videos.md)
@@ -82,7 +82,7 @@ ht-degree: 55%
    + [アセットとアクティビティストリームの統合](extending-activity-stream.md)
    + [アセットエディタの拡張](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
-   + [AEM Assets HTTP APIでサポートされるコンテンツフラグメント](assets-api-content-fragments.md)
+   + [AEM AssetsのHTTP APIでサポートされるコンテンツフラグメント](assets-api-content-fragments.md)
    + [アセットプロキシの開発](proxy.md)
 + アセットの管理 {#administer}
    + [サポートされているファイル形式](assets-formats.md)
@@ -131,14 +131,14 @@ ht-degree: 55%
    + [Brand Portal へのフォルダーの公開](brand-portal-publish-folder.md)
    + [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
 + コンテンツフラグメント {#fragments}
-   + [コンテンツフラグメントの操作](content-fragments.md)
-   + [コンテンツフラグメントの管理](content-fragments-managing.md)
-   + [コンテンツフラグメントモデル](content-fragments-models.md)
-   + [バリエーション - フラグメントコンテンツのオーサリング](content-fragments-variations.md)
-   + [コンテンツフラグメントを関連付けられたコンテンツ](content-fragments-assoc-content.md)
-   + [メタデータ - フラグメントのプロパティ](content-fragments-metadata.md)
-   + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments-delete.md)
-   + [コンテンツフラグメント - Markdown](content-fragments-markdown.md)
+   + [コンテンツフラグメントの操作](content-fragments/content-fragments.md)
+   + [コンテンツフラグメントの管理](content-fragments/content-fragments-managing.md)
+   + [コンテンツフラグメントモデル](content-fragments/content-fragments-models.md)
+   + [バリエーション - フラグメントコンテンツのオーサリング](content-fragments/content-fragments-variations.md)
+   + [コンテンツフラグメントを関連付けられたコンテンツ](content-fragments/content-fragments-assoc-content.md)
+   + [メタデータ - フラグメントのプロパティ](content-fragments/content-fragments-metadata.md)
+   + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments/content-fragments-delete.md)
+   + [コンテンツフラグメント - Markdown](content-fragments/content-fragments-markdown.md)
    + [コンテンツフラグメント用の翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
 + Manage Assets {#managing}
    + [デジタルアセットの管理](managing-assets-touch-ui.md)
