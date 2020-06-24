@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1064'
+ht-degree: 66%
 
 ---
 
@@ -25,9 +28,9 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 ユーザーは、すべてのコンテンツにアクセスしていますか。ユーザーはアプリの使用を中止していますか。中止している場合、その場所はどこですか。ユーザーがアプリに留まる頻度と戻ってくる頻度はどのくらいですか。どのような変更を導入でき、どのようにして定着率を測定しますか。クラッシュ率はどうなっていますか。ユーザーに対してクラッシュが発生していますか。
 
-Take advantage of [Mobile App Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) in your AEM Apps by integrating with [Adobe Mobile Services](https://www.adobe.com/marketing-cloud/mobile-marketing.html).
+[Adobe Mobile Servicesとの連携により、AEMアプリの](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) モバイルアプリAnalytics [を活用できます](https://www.adobe.com/marketing-cloud/mobile-marketing.html)。
 
-AEMアプリを実装して、モバイルアプリやコンテンツに対するユーザーの関与を追跡、レポート、理解し、起動回数、アプリ滞在時間、クラッシュ率などの主要なライフサイクル指標を測定します。
+AEMアプリを実装して、モバイルアプリやコンテンツに対するユーザーの関与を追跡、レポート、理解し、起動回数、アプリ内時間、クラッシュ率などの主要なライフサイクル指標を測定します。
 
 この節では、AEM 開発者が次の操作を実行する方法について説明します。**
 
@@ -36,7 +39,7 @@ AEMアプリを実装して、モバイルアプリやコンテンツに対す�
 
 ## 前提条件 {#prerequisties}
 
-AEM Mobile では、アプリでのトラッキングデータを収集してレポートするには Adobe Analytics アカウントが必要です。設定の一環として、AEM管理者は *まず* 、次の操作を行う必要があります。
+AEM Mobile では、アプリでのトラッキングデータを収集してレポートするには Adobe Analytics アカウントが必要です。設定の一環として、AEM *管理者は* 、まず次の操作を行う必要があります。
 
 * Adobe Analytics アカウントを設定し、Mobile Services にアプリケーションのレポートスイートを作成します。
 * Adobe Experience Manager（AEM）に AMS クラウドサービスを設定します。
@@ -49,7 +52,7 @@ Analytics アカウントを設定したら、コンテンツをモバイルア�
 
 詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 この設定は、コンテンツ同期に対して、ADBMobileConfig を /www ディレクトリに取り込むように指示する必要があります。For example in the Geometrixx Outdoors App the Content Sync configuration is located at: */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 開発向けの設定もありますが、Geometrixx Outdoors の場合には開発以外の設定と同じものです。
 
-モバイルアプリケーションのAEM AppsダッシュボードからADBMobileConfigをダウンロードする方法について詳しくは、Analytics - Mobile Services - Adobe Mobile Services SDK設定ファイルを参照してください。
+モバイルアプリケーションのAEM AppsダッシュボードからADBMobileConfigをダウンロードする方法について詳しくは、「Analytics- Mobile Services - Adobe Mobile Services SDK Configファイル」を参照してください。
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"
@@ -88,7 +91,7 @@ For iOS the file will need to be copied to the XCode project&#39;s **Resources**
 
 ### アプリでの AMS プラグインの追加 {#add-the-ams-plugin-in-the-app}
 
-アプリがデータを収集するには、Adobe Mobile Services(AMS)プラグインをアプリの一部として含める必要があります。 アプリの config.xml にプラグインを 1 つの機能としてインクルードすることで、別の Cordova フックを使用して、PhoneGap Build プロセスでプラグインを自動的に追加できます。
+アプリがデータを収集するには、アプリの一部としてAdobe Mobile Services(AMS)プラグインを含める必要があります。 アプリの config.xml にプラグインを 1 つの機能としてインクルードすることで、別の Cordova フックを使用して、PhoneGap Build プロセスでプラグインを自動的に追加できます。
 
 ```xml
 <feature name="ADBMobile">
@@ -102,9 +105,9 @@ The Geometrixx Outdoors App config.xml is located at */content/phonegap/geometri
 
 ### アプリを完全にトラッキングするためのコードの実装 {#instrument-your-code-for-full-app-tracking}
 
-[AMS Phonegap Plugin APIには、いくつかのトラッキングAPIが用意されています。](https://marketing.adobe.com/resources/help/en_US/mobile/ios/phonegap_methods.html)
+There are several tracking APIs provided in the [AMS Phonegap Plugin API.](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
-これらを使用すると、ユーザーがアプリ内でどのページに移動しているか、どのコントロールが最も使用されているかなど、状態およびアクションをトラッキングできます。AMSプラグインが提供するAnalytics APIを使用して、アプリを追跡用に実装する最も簡単な方法です。
+これらを使用すると、ユーザーがアプリ内でどのページに移動しているか、どのコントロールが最も使用されているかなど、状態およびアクションをトラッキングできます。アプリを計測して追跡する最も簡単な方法は、AMSプラグインが提供するAnalyticsAPIを利用することです。
 
 * ADB.trackState()
 * ADB.trackAction()
@@ -116,6 +119,8 @@ Geometrixx Outdoors アプリのコードを見ると参考になります。Geo
 ### Bloodhound による Analytics トラッキングのテスト  {#testing-analytics-tracking-with-bloodhound}
 
 ![](do-not-localize/chlimage_1.jpeg)
+
+<!--NOTE TO WRITER: Bloodhound is no longer available.-->
 
 Optionally before deploying to production you can use the Adobe tool [Bloodhound](https://marketing.adobe.com/developer/gallery/bloodhound-app-measurement-qa-tool-1) to test your analytics configuration. 分析設定をテストするには、実際の Analytics サーバーではなく Bloodhound が実行されているサーバーを指すように ADBMobileConfig.json ファイルを編集する必要があります。この変更を加えるには、ADBMobileConfig.json で次のエントリを変更します。
 
@@ -143,9 +148,9 @@ Optionally before deploying to production you can use the Adobe tool [Bloodhound
 
 *com.adobe.cq.mobile.mobileservices.impl.service.MobileServicesHttpClientImpl* は、AMS への接続用の以下のプロパティを公開しています。
 
-| **ラベル** | **説明** | **デフォルト値は** |
+| **ラベル** | **説明** | **デフォルト** |
 |---|---|---|
 | APIエンドポイント | Adobe Mobile Services HTTP APIのベースURL | https://api.omniture.com |
-| 設定エンドポイント | 指定したレポートスイートIDのADBモバイル設定の取得に使用するURL | /ams/1.0/app/config/ |
-| モバイルサービスアプリ | ユーザーの会社内のアプリのリストを取得する | /ams/1.0/apps |
+| 設定エンドポイント | 指定したレポートスイートIDのADBモバイル設定を取得するために使用されるURL | /ams/1.0/app/config/ |
+| Mobile Service Apps | ユーザー会社ー内のアプリのリストの取得 | /ams/1.0/apps |
 
