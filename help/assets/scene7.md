@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2862'
 ht-degree: 31%
 
 ---
@@ -180,13 +180,13 @@ Dynamic Mediaクラシック **[!UICONTROL Image]** コンポーネントを使�
 
 **[!UICONTROL シャープ]** — 画像にシャープを適用する方法を選択します。 シャープニングについて詳しくは、[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)および[シャープニングのベストプラクティス](/help/assets/assets/s7_sharpening_images.pdf)を参照してください。
 
-**[!UICONTROL URL修飾子]** — 画像効果を変更するには、クラシックDynamic Mediaのコマンドを追加します。 詳しくは、[画像プリセット](/help/assets/managing-image-presets.md)および「[コマンドリファレンス](https://marketing.adobe.com/resources/help/ja_jp/s7/is_ir_api/is_api/http_ref/c_command_reference.html)」を参照してください。
+**[!UICONTROL URL修飾子]** — 画像効果を変更するには、クラシックDynamic Mediaのコマンドを追加します。 詳しくは、[画像プリセット](/help/assets/managing-image-presets.md)および「[コマンドリファレンス](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)」を参照してください。
 
 **[!UICONTROL ブレークポイント]** - Webサイトがレスポンシブである場合は、ブレークポイントを調整する必要があります。 ブレークポイントはコンマ（,）で区切って指定してください。
 
 ### 画像テンプレート {#image-template}
 
-[Dynamic Mediaクラシック画像テンプレート](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) は、Dynamic Mediaクラシックに読み込まれたPhotoshopのレイヤーコンテンツで、コンテンツとプロパティが可変性を考慮してパラメータ化されていました。 **[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを使用すると、画像を読み込んで、テキストを AEM で動的に変更できます。また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
+[Dynamic Mediaクラシック画像テンプレート](https://docs.adobe.com/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html) は、Dynamic Mediaクラシックに読み込まれたPhotoshopのレイヤーコンテンツで、コンテンツとプロパティが可変性を考慮してパラメータ化されていました。 **[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを使用すると、画像を読み込んで、テキストを AEM で動的に変更できます。また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
 
 Tap **[!UICONTROL Edit]** to configure the component. You can configure [settings common to all Dynamic Media Classic components](#settings-common-to-all-scene-components) as well as other settings described in this section.
 
