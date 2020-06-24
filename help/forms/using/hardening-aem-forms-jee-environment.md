@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
 workflow-type: tm+mt
-source-wordcount: '7445'
+source-wordcount: '7603'
 ht-degree: 71%
 
 ---
@@ -173,7 +173,6 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
 
    * 「**ユーザーはパスワードを変更できない**」オプションを選択します。
    * 「**所属するグループ**」タブに、「**ユーザー**」グループが表示されていることを確認してください。
-
    >[!NOTE]
    >
    >PDF Generator 用のこの設定は変更できません。
@@ -188,7 +187,25 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    * ローカルでログオンを拒否する
    * サービスとしてログオン（通常は既に設定済み）
 
-1. 新しいユーザーアカウントに、JEE上のインストールディレクトリとグローバルドキュメントストレージ(GDS)ディレクトリのAEM Formsを完了するための読み取りと実行、書き込み、変更、リストフォルダーの内容、読み取りの各権限を付与します。 GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 インストール時に場所の設定が空のままの場合、 [JBoss root]/server/[type]/svcnative/DocumentStorageのアプリケーションサーバーインストール下のディレクトリがデフォルトの場所になります。
+1. 次のディレクトリの新しいユーザーアカウントに変更権限を与えます。
+   * **グローバルドキュメントストレージ(GDS)ディレクトリ**: GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repositoryディレクトリ**: デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Formsの一時ディレクトリ**:
+      * （Windows）環境変数で設定されている TMP または TEMP パス
+      * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
+      * （Linux）/var/tmp or /usr/tmp
+      * （AIX）/tmp or /usr/tmp
+      * （Solaris）/var/tmp または /usr/tmp
+1. 次のディレクトリに対する新しいユーザーアカウントの書き込み権限を付与します。
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > JBoss Application Serverのデフォルトのインストール場所：
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/
+
 1. アプリケーションサーバーを起動します。
 
 **Configuration Manager ブートストラップサーブレットの無効化**
@@ -977,7 +994,25 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
    * ローカルxxに対するログを拒否する
    * サービスとしてログオン（通常は既に設定済み）
 
-1. 新しいユーザーアカウントに、JEE上のインストールディレクトリとグローバルドキュメントストレージ(GDS)ディレクトリのAEM Formsを完了するための読み取りと実行、書き込み、変更、リストフォルダーの内容、読み取りの各権限を付与します。 GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 インストール時に場所の設定が空のままの場合、 [JBoss root]/server/[type]/svcnative/DocumentStorageのアプリケーションサーバーインストール下のディレクトリがデフォルトの場所になります。
+1. 次のディレクトリの新しいユーザーアカウントに変更権限を与えます。
+   * **グローバルドキュメントストレージ(GDS)ディレクトリ**: GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repositoryディレクトリ**: デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Formsの一時ディレクトリ**:
+      * （Windows）環境変数で設定されている TMP または TEMP パス
+      * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
+      * （Linux）/var/tmp or /usr/tmp
+      * （AIX）/tmp or /usr/tmp
+      * （Solaris）/var/tmp または /usr/tmp
+1. 次のディレクトリに対する新しいユーザーアカウントの書き込み権限を付与します。
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > JBoss Application Serverのデフォルトのインストール場所：
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/.
+
 
 1. アプリケーションサーバーサービスを起動します。
 
