@@ -10,10 +10,10 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '3851'
-ht-degree: 89%
+source-wordcount: '3845'
+ht-degree: 88%
 
 ---
 
@@ -410,7 +410,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>画像の修飾子</strong></td>
-   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://marketing.adobe.com/resources/help/ja_jp/s7/is_ir_api/is_api/http_ref/c_command_reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
+   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
     <ul>
      <li>基本的なテンプレートコマンドおよびテキストレンダリングコマンド：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> および <code>textPs=</code></li>
      <li>ローカライゼーションコマンド：<code>locale=</code> および <code>req=xlate</code></li>
