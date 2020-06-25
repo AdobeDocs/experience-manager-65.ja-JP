@@ -3,9 +3,9 @@ title: での処理でサポートされるファイル形式 [!DNL Adobe Experi
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f47f5e45c64e3cbbe0b68d449a5ef8d4b7dd7f38
+source-git-commit: 62085bdd8fa576e0d4eaeae19076d6edbf8c484a
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1647'
 ht-degree: 58%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 58%
 
 次の3D形式のリストがサポートされています。
 
-詳しくは、Dynamic Mediaでの3Dアセットの [操作を参照してください。](/help/assets/assets-3d.md)
+Dynamic Mediaでの3Dアセットの [操作も参照してください。](/help/assets/assets-3d.md)
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | サムネールプレビュー | 3次元プレビュー | Dynamic Media配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
