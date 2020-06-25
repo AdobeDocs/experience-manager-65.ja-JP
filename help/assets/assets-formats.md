@@ -3,10 +3,10 @@ title: での処理でサポートされるファイル形式 [!DNL Adobe Experi
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: f47f5e45c64e3cbbe0b68d449a5ef8d4b7dd7f38
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 59%
+source-wordcount: '1646'
+ht-degree: 58%
 
 ---
 
@@ -69,6 +69,21 @@ ht-degree: 59%
 * To use [!DNL Dynamic Media] to preview and generate dynamic renditions for EPS files, see [Adobe Illustrator (AI), Postscript (EPS), and PDF file formats.](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
+
+## Supported 3D formats {#support-3d-formats}
+
+次の3D形式のリストがサポートされています。
+
+詳しくは、Dynamic Mediaでの3Dアセットの [操作を参照してください。](/help/assets/assets-3d.md)
+
+| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | サムネールプレビュー | 3次元プレビュー | Dynamic Media配信 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ |  | ✓ |  | ✓ |  |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 
 ## Dynamic Mediaでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
