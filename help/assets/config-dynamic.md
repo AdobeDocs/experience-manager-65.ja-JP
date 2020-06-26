@@ -10,15 +10,15 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '7951'
+source-wordcount: '7912'
 ht-degree: 59%
 
 ---
 
 
-# Dynamic Media - ハイブリッドモードの設定{#configuring-dynamic-media-hybrid-mode}
+# Dynamic Media - ハイブリッドモードの設定 {#configuring-dynamic-media-hybrid-mode}
 
 Dynamic Media - ハイブリッドを使用するには、有効化して設定する必要があります。Dynamic Media では、使用例に応じて、[サポートされる設定](#supported-dynamic-media-configurations)がいくつか用意されています。
 
@@ -970,7 +970,7 @@ Advanced use cases could use a manual configure `icc=` modifier to explicitly se
 * `iccEmbed` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
-標準セットのAdobeカラープロファイルは、Package Shareの [Feature Pack 12445またはSoftware Distribution](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) （ソフトウェア配布版）の [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) Feature Pack 12445がインストールされている場合にのみ使用できます。 All feature packs and service packs are available via [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) and [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 機能パック 12445 は、Adobe カラープロファイルを提供します。
+The standard set of Adobe color profiles are only available if you have [Feature Pack 12445 from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installed. すべての機能パックとサービスパックは、 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)(Software Distribution)で利用できます。 機能パック 12445 は、Adobe カラープロファイルを提供します。
 
 ### 機能パック 12445 のインストール {#installing-feature-pack}
 
@@ -978,9 +978,9 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
 
 **機能パック12445をインストールするには**
 
-1. 「 [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) 」または「 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 」に移動し、いずれかをダウンロードし `cq-6.3.0-featurepack-12445`ます。
+1. 「 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 」に移動し、いずれかをダウンロードし `cq-6.3.0-featurepack-12445`ます。
 
-   See [How to Work with Packages](/help/sites-administering/package-manager.md) for more information on using Package Share and Packages in AEM.
+   See [How to work with packages](/help/sites-administering/package-manager.md) for more information on using packages in [!DNL Adobe Experience Manager].
 
 1. 機能パックをインストールします。
 
