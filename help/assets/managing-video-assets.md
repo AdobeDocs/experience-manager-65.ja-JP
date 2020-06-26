@@ -1,26 +1,28 @@
 ---
-title: ビデオアセットの管理
-description: ビデオアセットをアップロード、プレビュー、注釈付け、公開する方法について説明します。
+title: でビデオアセットを管理します [!DNL Adobe Experience Manager]。
+description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 46568322e75669532734dddda91a781f45a398d4
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 64%
+source-wordcount: '815'
+ht-degree: 41%
 
 ---
 
 
 # ビデオアセットの管理 {#manage-video-assets}
 
-Adobe Experience Manager Assetsでビデオアセットを管理および編集する方法について説明します。 また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](/help/assets/video.md)を参照してください。
+ビデオ形式は、組織のデジタルアセットの重要な部分です。 [!DNL Adobe Experience Manager] 成熟したオファーは、ビデオアセットの作成後に、ビデオアセットのライフサイクル全体を管理するための製品と機能を提供しています。
+
+Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager Assets]. Also, if you are licensed to use [!DNL Dynamic Media], see the [Dynamic Media video documentation](/help/assets/video.md).
 
 ## ビデオアセットのアップロードとプレビュー {#upload-and-preview-video-assets}
 
-Adobe Experience Manager Assetsは、拡張子がMP4のビデオアセットに関するプレビューを生成します。アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 これらのレンディションは、 Assets ユーザーインターフェイスでプレビューすることができます。
+[!DNL Adobe Experience Manager Assets] 拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 レンディションは、アセットユーザーインターフェイスでプレビューできます。
 
 1. デジタルアセットフォルダー（またはサブフォルダー）で、デジタルアセットを追加する場所に移動します。
-1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Files]**. または、アセット領域に直接ドロップします。アップロード操作について詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
+1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Files]**. または、アセット領域に直接ドロップします。See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
 1. To preview a video in the Card view, click the **[!UICONTROL Play]** button on the video asset.
 
    ![chlimage_1-65](assets/chlimage_1-201.png)
@@ -35,59 +37,64 @@ Adobe Experience Manager Assetsは、拡張子がMP4のビデオアセットに�
 
 ## 2 GB を超えるアセットをアップロードするための設定 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
-デフォルトでは、ファイルサイズの上限により、Adobe Experience Manager Assets で 2 GB を超えるアセットをアップロードすることはできません。ただし、この上限は CRXDE Lite を開き、`/apps` ディレクトリ配下にノードを作成することで上書きできます。ノードには、同じノード名とディレクトリ構造および類似した順序のノードプロパティが必要です。
+By default, [!DNL Assets] does not let you upload any assets that are larger than 2 GB because of a file size limit. ただし、この上限は CRXDE Lite を開き、`/apps` ディレクトリ配下にノードを作成することで上書きできます。ノードには、同じノード名とディレクトリ構造および類似した順序のノードプロパティが必要です。
 
-大きなアセットをアップロードするには、Adobe Experience Manager Assets の設定に加えて、次の設定を変更します。
+In addition to [!DNL Assets] configuration, change the following configurations to upload large assets:
 
 * トークンの有効期間を増やします。Webコンソールの「 [!UICONTROL Adobe Granite CSRF Servlet] 」()を参照し `https://[aem_server]:[port]/system/console/configMgr`てください。 詳しくは、「 [CSRF保護](/help/sites-developing/csrf-protection.md)」を参照してください。
 * Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
 
 >[!NOTE]
 >
->Experience Manager Classicユーザーインターフェイスには、2 GBのファイルサイズ制限はありません。 また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
+>The [!DNL Experience Manager] Classic user interface does not have a 2-GB file size limit restriction. また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
 
 ファイルサイズの制限を高めに設定するには、`/apps` ディレクトリで次の手順を実行します。
 
-1. In Experience Manager, click **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
-1. CRXDE Lite で、`/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` に移動します。ディレクトリウィンドウを表示するには、「`>>`」アイコンをタッチします。
+1. In [!DNL Experience Manager], click **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. CRXDE Lite で、`/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` に移動します。To see the directory window, click the `>>`.
 1. From the toolbar, click the **[!UICONTROL Overlay Node]**. または、コンテキストメニューの「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
 1. In the **[!UICONTROL Overlay Node]** dialog, click **[!UICONTROL OK]**.
 
-   ![chlimage_1-67](assets/chlimage_1-203.png)
+   ![ノードをオーバーレイ](assets/overlay-node-path.png)
 
 1. ブラウザーを更新します。オーバーレイノード `/jcr_root/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` が選択されます。
 1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。例えば、サイズ制限を 30 GB に増やすには、`{sizeLimit : "32212254720"}` という値を入力します。
 
-1. ツールバーで「**[!UICONTROL すべて保存]**」をタッチします。
-1. Experience Managerで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
-1. On the Adobe Experience Manager Web Console Bundles page, under the Name column of the table, locate and click **[!UICONTROL Adobe Granite Workflow External Process Job Handler]**.
-1. Adobe Granite Workflow External Process Job Handler ページで、「**[!UICONTROL Default Timeout]**」フィールドと「**[!UICONTROL Max Timeout]**」フィールドの秒数を`18000`（5 時間）に設定します。
-1. 「**[!UICONTROL 保存]**」をクリックします。
-1. Experience Managerで、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルをクリックします]**。
+1. From the toolbar, click **[!UICONTROL Save All]**.
+1. In [!DNL Experience Manager], click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. On the [!DNL Adobe Experience Manager] [!UICONTROL Web Console Bundles] page, under the Name column of the table, locate and click **[!UICONTROL Adobe Granite Workflow External Process Job Handler]**.
+1. On the [!UICONTROL Adobe Granite Workflow External Process Job Handler] page, set the seconds for both **[!UICONTROL Default Timeout]** and **[!UICONTROL Max Timeout]** fields to `18000` (five hours). 「**[!UICONTROL 保存]**」をクリックします。
+1. で、 [!DNL Experience Manager]ツール **[!UICONTROL /]** ワークフロー **[!UICONTROL /]** モデルをクリックします ****。
 1. On the Workflow Models page, select **[!UICONTROL Dynamic Media Encode Video]**, then click **[!UICONTROL Edit]**.
 1. On the workflow page, double-click the **[!UICONTROL Dynamic Media Video Service Process]** component.
 1. [!UICONTROL ステップのプロパティ]ダイアログボックスの「**[!UICONTROL 共通]**」タブにある「**詳細設定**」を展開します。
 1. In the **[!UICONTROL Timeout]** field, specify a value of `18000`, then click **[!UICONTROL OK]** to return to the **[!UICONTROL Dynamic Media Encode Video]** workflow page.
-1. Near the top of the page, below the Dynamic Media Encode Video page title, click **[!UICONTROL Save]**.
+1. Near the top of the page, below the [!UICONTROL Dynamic Media Encode Video] page title, click **[!UICONTROL Save]**.
 
 ## ビデオアセットを公開する {#publish-video-assets}
 
-ビデオアセットを公開すると、URL として Web ページに含めることや、Web ページに埋め込むことができます。[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+公開後、ビデオアセットをURLとしてWebページに含めたり、アセットを直接埋め込んだりできます。 詳しくは、ダイナミックメディアアセットの [公開を参照してください](/help/assets/publishing-dynamicmedia-assets.md)。
 
 ## ビデオアセットに注釈を付ける {#annotate-video-assets}
 
-1. From the Assets console, click the [!UICONTROL Edit] icon on the asset card to display the asset details page.
-1. To play the video, click the [!UICONTROL Preview] icon.
-1. ビデオに注釈を付けるには、「**[!UICONTROL 注釈]**」ボタンをクリックします。注釈がビデオ内の特定の時点（フレーム）に追加されます。注釈を付ける際に、キャンバスに描画して、その画像をコメントと一緒に含めることができます。コメントは自動保存されます。
+1. From the Assets console, click [!UICONTROL Edit] on the asset card to display the asset details page.
+1. ビデオを再生するには、「 [!UICONTROL プレビュー]」をクリックします。
+1. ビデオに注釈を付けるには、「**[!UICONTROL 注釈]**」ボタンをクリックします。ビデオの特定の時間（フレーム）に注釈が追加されます。 注釈を付ける際に、キャンバスに描画して、その画像をコメントと一緒に含めることができます。コメントは自動保存されます。
 
-   ![chlimage_1-68](assets/chlimage_1-204.png)
+   ![ビデオフレームの描画と注釈の追加](assets/annotate-video.png)
 
    注釈ウィザードを終了するには、「**[!UICONTROL 閉じる]**」をクリックします。
 
 1. ビデオ内の特定のポイントを探すには、**テキスト**&#x200B;フィールドに時刻（秒）を指定して、「**ジャンプ**」をクリックします。例えば、ビデオの最初の 20 秒をスキップするには、テキストフィールドに「10」と入力します。
 
-   ![chlimage_1-69](assets/chlimage_1-205.png)
+   ![ビデオ内の時間をシークして、指定された秒数だけスキップします](assets/seek-in-video.png)
 
 1. タイムラインで表示するには、注釈をクリックします。タイムラインから注釈を削除するには、「**[!UICONTROL 削除]**」をクリックします。
 
-   ![chlimage_1-70](assets/chlimage_1-206.png)
+   ![表示注釈とタイムライン内の詳細](assets/timeline-view-annotation.png)
+
+>[!MORELIKETHIS]
+>
+>* [Experience Managerアセット内のデジタルアセットの管理](/help/assets/managing-assets-touch-ui.md)
+>* [Experience Managerアセット内のコレクションの管理](/help/assets/managing-collections-touch-ui.md)
+
