@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 2b1cc29fbfdb80aff6b6fc5c6c4fc9093d12e418
+workflow-type: tm+mt
+source-wordcount: '687'
+ht-degree: 42%
 
 ---
 
@@ -26,14 +29,14 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 1. Using **CRXDE Lite**, expand `/etc/designs`
 
-1. 右クリックし `an-scf-sandbox` て、 `Create Node`
+1. 右クリックし `an-scf-sandbox` て「 `Create Node`
 
-   * 名前 : `clientlibs`
-   * タイプ : `cq:ClientLibraryFolder`
+   * 名前：`clientlibs`
+   * タイプ：`cq:ClientLibraryFolder`
 
 1. 「**OK**」をクリックします。
 
-![chlimage_1-47](assets/chlimage_1-47.png)
+![chlimage_1-220](assets/chlimage_1-220.png)
 
 新しい **ノードの「**&#x200B;プロパティ`clientlibs`」タブで、**categories** プロパティを入力します。
 
@@ -43,7 +46,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 * Click **Add**
 * Click **Save All**
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プレースホルダ `js.tx`tとファイルを **`css.txt`** 追加します。 （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
+注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要： プ追加レースホルダー `js.tx`tと **`css.txt`** ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
 
 1. Right-click **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. Select **Create File...**
@@ -52,7 +55,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 1. Enter **Name:** `js.txt`
 1. Click **Save All**
 
-![chlimage_1-48](assets/chlimage_1-48.png)
+![chlimage_1-221](assets/chlimage_1-221.png)
 
 css.txt および js.txt の最初の行によって、後述のファイルのリストが見つかる基本の場所が特定されます。
 
@@ -63,7 +66,7 @@ css.txt の内容を次のように設定します。
  style.css
 ```
 
-次に、clientlibsの下にstyle.cssという名前のファイルを作成し、コンテンツを
+次に、clientlibsにstyle.cssという名前のファイルを作成し、内容を
 
 `body {`
 
@@ -73,7 +76,7 @@ css.txt の内容を次のように設定します。
 
 ### SCF clientlib の埋め込み {#embed-scf-clientlibs}
 
-**ノードの「**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **embed** を入力します。This embeds the necessary [client-side libraries (clientlibs) for SCF components](/help/communities/client-customize.md#clientlibs-for-scf). このチュートリアルでは、Communitiesコンポーネントに必要なクライアントライブラリの多くが追加されます。
+**ノードの「**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **embed** を入力します。This embeds the necessary [client-side libraries (clientlibs) for SCF components](/help/communities/client-customize.md#clientlibs-for-scf). このチュートリアルでは、Communitiesコンポーネントに必要なclientlibの多くが追加されます。
 
 ページごとにダウンロードされる clientlib の利点とサイズ／スピードに関する考慮事項があるので、このアプローチが実稼動サイトでの使用に適している場合もあれば、そうでない場合もある点に&#x200B;**注意してください**。
 
@@ -81,10 +84,10 @@ css.txt の内容を次のように設定します。
 
 `% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
-この場合は、すべてを含め、より基本的なSCFクライアントライブラリを作成者clientlibsとして扱うことが推奨されます。
+この場合は、すべてを含め、より基本的なSCFクライアントライブラリを作成者のclientlibとして扱うことをお勧めします。
 
-* 名前 : **`embed`**
-* タイプ : **`String`**
+* 名前：**`embed`**
+* タイプ：**`String`**
 * クリック **`Multi`**
 * 値: **`cq.social.scf`**
 
@@ -101,11 +104,11 @@ click **`+`** after each entry to add the following clientlib categories:
 
 * Click **Save All**
 
-![chlimage_1-49](assets/chlimage_1-49.png)
+![chlimage_1-222](assets/chlimage_1-222.png)
 
 This is how `/etc/designs/an-scf-sandbox/clientlibs` should now appear in the repository :
 
-![chlimage_1-50](assets/chlimage_1-50.png)
+![chlimage_1-223](assets/chlimage_1-223.png)
 
 ### playpage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
 
@@ -113,11 +116,11 @@ Without including the `apps.an-scf-sandbox` ClientLibraryFolder category on the 
 
 例えば、clientlibs を挿入しなかった場合、SCF コメントコンポーネントは、スタイルが設定されていない状態で表示されます。
 
-![chlimage_1-51](assets/chlimage_1-51.png)
+![chlimage_1-224](assets/chlimage_1-224.png)
 
 apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネントは、スタイルが設定された状態で表示されます。
 
-![chlimage_1-52](assets/chlimage_1-52.png)
+![chlimage_1-225](assets/chlimage_1-225.png)
 
 The include statement belongs in the `head` section of the `html` script. The default **`foundation head.jsp`** includes a script that can be overlaid : **`headlibs.jsp`**.
 
@@ -125,10 +128,10 @@ The include statement belongs in the `head` section of the `html` script. The de
 
 1. Using **CRXDE Lite**, select **`/libs/foundation/components/page/headlibs.jsp`**
 
-1. 右クリックし、「 **Copy** 」を選択します（または、ツールバーから「Copy」を選択します）。
+1. 右クリックして「 **コピー** 」を選択します（または、ツールバーから「コピー」を選択します）。
 1.  **`/apps/an-scf-sandbox/components/playpage`**
-1. 右クリックし、「貼り付け」を **選択します** （または、ツールバーから「貼り付け」を選択します）。
-1. ダブルクリック **`headlibs.jsp`** して開きます
+1. 右クリックして「 **貼り付け** 」を選択します（または、ツールバーから「貼り付け」を選択します）。
+1. 重複をクリック **`headlibs.jsp`** して開きます
 1. ファイルの末尾に次の行を追加します。
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
@@ -148,11 +151,11 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![chlimage_1-53](assets/chlimage_1-53.png)
+![chlimage_1-226](assets/chlimage_1-226.png)
 
 ### これまでの作業内容の保存 {#saving-your-work-so-far}
 
-この時点では、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、再生を再開したい場合に、サーバーのオフ、crx-quickstart/フォルダーの名前の変更や削除、サーバーのオン、この保存済みパッケージのアップロードとインストールを行えるように、パッケージとして保存できます。
+この時点では、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、開始し直したい場合に、サーバーのオフ、crx-quickstart/フォルダーの名前の変更や削除、サーバーのオン、アップロード、インストールを行う際に、最も基本的な手順を繰り返す必要がない。
 
 すぐに操作してみたい場合は、[サンプルページの作成](/help/communities/create-sample-page.md)チュートリアルにこのパッケージがあります。
 
@@ -163,7 +166,7 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 
    * パッケージ名：an-scf-sandbox-minimal-pkg
    * バージョン：0.1
-   * グループ：`leave as default`
+   * グループ: `leave as default`
    * 「**OK**」をクリックします。
 
 * 「**編集**」をクリックします。
