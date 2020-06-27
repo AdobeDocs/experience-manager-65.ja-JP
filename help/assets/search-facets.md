@@ -1,19 +1,19 @@
 ---
 title: 検索ファセット
-description: この記事では、Adobe Experience Managerで検索ファセットを作成、変更および使用する方法について説明します。
+description: この記事では、Adobe Experience Managerで検索ファセットを作成、変更、および使用する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2517'
-ht-degree: 82%
+source-wordcount: '2523'
+ht-degree: 79%
 
 ---
 
 
 # 検索ファセット {#search-facets}
 
-Adobe Experience Manager Assetsは、企業規模でデプロイすることで、多数のアセットを保存できます。 Experience Managerの汎用検索機能のみを使用する場合は、正しいアセットの検索に時間がかかり、時間がかかることがあります。
+企業規模でのAdobe Experience Managerアセットのデプロイメントには、多数のアセットを保存する機能があります。 Experience Managerの汎用検索機能のみを使用する場合は、適切なアセットの検索に時間がかかる場合があります。
 
 フィルターパネルの検索ファセットを使用すると、より詳細な検索が可能になり、検索機能がより効率的で柔軟になります。検索ファセットは、複数のディメンション（述語）を追加するので、ユーザーはより複雑な検索を実行できます。フィルターパネルには、いくつかの標準ファセットが含まれます。カスタム検索ファセットを追加することもできます。
 
@@ -115,7 +115,7 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 >オプションの述語は、求める動作を実行するためにプロパティの述語を組み合わせたカスタムのラッパーです。現時点で、この機能をネイティブにサポートする REST エンドポイントは存在しません。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
-1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click the Edit icon.
+1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]**.
 1. **[!UICONTROL 検索フォームを編集]**&#x200B;ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに&#x200B;**[!UICONTROL オプションの述語]**&#x200B;をドラッグします。
 1. 「**[!UICONTROL 設定]**」タブで、プロパティのラベルと名前を入力します。例えば、アセットの形式に基づいてアセットを検索するには、ラベルに対してわかりやすい名前（例：**[!UICONTROL ファイルタイプ]**）を指定します。検索実行の基準となるプロパティをプロパティフィールドに指定します（例：`jcr:content/metadata/dc:format.`）。
 1. 次のいずれかの操作をおこないます。
@@ -164,9 +164,9 @@ Tag Predicateを使用すると、アセットをタグベースで検索でき�
 1. 検索パネルに移動します。**[!UICONTROL タグ]**&#x200B;の述語が検索パネルに追加されています。
 1. アセットの検索に使用するタグを指定または表示されたリストから選択します。
 
-   ![タグ名を入力する際のExperience Managerによる提案](assets/chlimage_1-419.png)
+   ![タグ名の入力時にExperience Managerが提示する提案](assets/chlimage_1-419.png)
 
-   *図： タグの名前を入力する際のExperience Managerによる提案。*
+   *図： タグ名を入力する際にExperience Managerが提示する提案です。*
 
 1. すべての指定したタグに一致するアセットを検索するには、「**[!UICONTROL すべてに一致]**」を選択します。
 
@@ -193,20 +193,17 @@ Tag Predicateを使用すると、アセットをタグベースで検索でき�
 
 ## デフォルトの検索ファセットを復元 {#restoring-default-search-facets}
 
-デフォルトでは、ロックアイコンは&#x200B;**[!UICONTROL 検索フォーム]**&#x200B;ページの「**[!UICONTROL アセット管理者の検索レール]**」の前に表示されます。フォームに検索ファセットを追加した場合、ロックアイコンが表示されなくなります。これはデフォルトのフォームが変更されたことを示します。
+By default, a lock icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) appears before **[!UICONTROL Assets Admin Search Rail]** in the **[!UICONTROL Search Forms]** page. 検索フォームページのオプションに対するロックアイコンは、デフォルト設定がそのままになっており、カスタマイズされていないことを示します。The icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) disappears if you add search facets to the form indicating that the default form has been modified.
 
 ![検索フォームページのオプションに対するロックアイコンは、デフォルト設定がそのままになっており、カスタマイズされていないことを示します。](assets/locked_admin_rail.png)
-
-検索フォームページのオプションに対するロックアイコンは、デフォルト設定がそのままになっており、カスタマイズされていないことを示します。
 
 デフォルトの検索ファセットを復元するには、次の手順を実行します。
 
 1. **[!UICONTROL 検索フォーム]**&#x200B;ページで「**[!UICONTROL アセット管理者の検索レール]**」を選択します。
-1. Click **[!UICONTROL Delete]** in the toolbar.
-   ![deleteoutline](assets/deleteoutline.png)
+1. ツールバーで「 **[!UICONTROL 削除]** 」をクリックし ![](assets/deleteoutline.png) ます。
 1. In the confirmation dialog, click **[!UICONTROL Delete]** to remove the custom changes.
 
-   検索ファセットへのカスタムの変更を削除すると、**[!UICONTROL 検索フォーム]**&#x200B;ページの「**[!UICONTROL アセット管理者の検索レール]**」の前にロックアイコンが再び表示されるようになります。
+   After you delete the custom changes to search facets, the lock icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) reappears before **[!UICONTROL Assets Admin Search Rail]** in the **[!UICONTROL Search Forms]** page.
 
 ## ユーザーの権限 {#user-permissions}
 
