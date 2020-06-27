@@ -1,22 +1,25 @@
 ---
 title: フォルダーメタデータスキーマ
-description: Adobe Experience Manager Assetsでアセットスキーマーのメタデータフォルダーを作成する方法を説明します。
+description: Adobe Experience Managerアセット内のアセットフォルダ用のメタデータスキーマを作成する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+workflow-type: tm+mt
+source-wordcount: '1024'
+ht-degree: 71%
 
 ---
 
 
 # フォルダーメタデータスキーマ {#folder-metadata-schema}
 
-Adobe Experience Manager Assetsでは、アセットフォルダーのメタデータスキーマーを作成できます。このフォルダーは、フォルダーのプロパティページに表示されるレイアウトとメタデータを定義します。
+Adobe Experience Managerアセットを使用すると、アセットフォルダ用のメタデータスキーマを作成できます。このフォルダフォルダは、フォルダのプロパティページに表示されるレイアウトとメタデータを定義します。
 
 ## フォルダーメタデータスキーマフォームの追加 {#add-a-folder-metadata-schema-form}
 
 フォルダーメタデータスキーマフォームエディターを使用して、フォルダーのメタデータスキーマを作成および編集します。
 
-1. Experience Managerインターフェイスで、ツール/アセット/フ **[!UICONTROL ォルダーメ]** タデータ **[!UICONTROL スキーマ]** に移動します ****。
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL フォルダーメタデータスキーマに移動します]**。
 1. On the [!UICONTROL Folder Metadata Schema Forms] page, click **[!UICONTROL Create]**.
 1. Specify a name for the form, and click **[!UICONTROL Create]**. The new schema form is listed in the [!UICONTROL Schema Forms] page.
 
@@ -29,12 +32,12 @@ Adobe Experience Manager Assetsでは、アセットフォルダーのメタデ�
 
 これらのフォーム項目を CRX リポジトリのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。
 
-1. In the Schema Forms page, select the form you created, and then click the **[!UICONTROL Edit]** icon from the toolbar.
+1. In the Schema Forms page, select the form you created, and then select the **[!UICONTROL Edit]** option from the toolbar.
 1. In the Folder Metadata Schema Editor page, click `+` to add a tab to the form. To rename the tab, click the default name and specify the new name under **[!UICONTROL Settings]**.
 
    ![custom_tab](assets/custom_tab.png)
 
-   タブを追加するには、をクリックしま `+`す。 削除する `X` には、タブをクリックします。
+   タブを追加するには、をクリックし `+`ます。 タブ `X` を削除するには、そのタブをクリックします。
 
 1. アクティブになっているタブで、「**[!UICONTROL フォームを作成]**」タブから 1 つ以上のコンポーネントを追加します。
 
@@ -93,7 +96,7 @@ To edit the properties of form items, click the component and edit all or a subs
 
 ## フォルダーメタデータスキーマフォームの削除 {#delete-folder-metadata-schema-forms}
 
-フォルダーメタデータスキーマフォームページから、フォルダーメタデータスキーマフォームを削除できます。フォームを削除するには、フォームを選択し、ツールバーの削除アイコンをクリックします。
+フォルダーメタデータスキーマフォームページから、フォルダーメタデータスキーマフォームを削除できます。フォームを削除するには、フォームを選択し、ツールバーの削除オプションをクリックします。
 
 ![delete_form](assets/delete_form.png)
 
@@ -105,7 +108,7 @@ To edit the properties of form items, click the component and edit all or a subs
 
 ### フォルダーメタデータスキーマページからのスキーマへの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. Experience Managerインターフェイスで、ツール/アセット/フ **[!UICONTROL ォルダーメ]** タデータ ****&#x200B;スキーマに移動しま ****&#x200B;す。
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]**/ **[!UICONTROL フォルダーメタデータスキーマに移動します]**。
 1. フォルダーメタデータスキーマフォームページから、フォルダーに適用するスキーマフォームを選択します。
 1. From the toolbar, click **[!UICONTROL Apply to Folder(s)]**.
 
