@@ -3,9 +3,9 @@ title: 翻訳プロジェクトの作成
 description: Learn how to create translation projects in [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 75%
 
 ---
@@ -286,7 +286,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. From the [!DNL Assets] interface, select an asset you already translated and click the **[!UICONTROL Edit]** icon from the toolbar to open the asset in edit mode.
+1. From the [!DNL Assets] interface, select an asset you already translated and click **[!UICONTROL Edit]** from the toolbar to open the asset in edit mode.
 1. アセットを編集して、変更内容を保存します。
 1. [既存の翻訳プロジェクトに追加](#add-to-existing-translation-project)の手順 2～14 を実行して、言語コピーを更新します。
 1. Click the ellipsis at the bottom of the **[!UICONTROL Translation Job]** tile. **[!UICONTROL 翻訳ジョブ]**&#x200B;ページのアセットのリストで、翻訳済みバージョンのアセットが格納されている一時的な場所を確認できます。
