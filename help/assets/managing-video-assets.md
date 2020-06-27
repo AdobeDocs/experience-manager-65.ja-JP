@@ -3,9 +3,9 @@ title: でビデオアセットを管理します [!DNL Adobe Experience Manager
 description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 46568322e75669532734dddda91a781f45a398d4
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '813'
 ht-degree: 41%
 
 ---
@@ -29,7 +29,7 @@ Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager 
 
    ビデオの一時停止や再生は、カード表示でのみ可能です。リスト表示では、[!UICONTROL 再生]および[!UICONTROL 一時停止]ボタンを使用できません。
 
-1. To preview the video in the asset details page, click the **[!UICONTROL Edit]** icon on the card.
+1. To preview the video in the asset details page, click **[!UICONTROL Edit]** on the card.
 
    ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
 
