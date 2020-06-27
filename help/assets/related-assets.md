@@ -3,9 +3,9 @@ title: 関連アセット
 description: 共通の属性を共有するデジタルアセットを関連付ける方法について説明します。 また、デジタルアセット間にソースから派生した関係を作成することもできます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '636'
 ht-degree: 50%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 50%
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. To relate another asset with the asset you selected, click the **[!UICONTROL Relate]** icon from the toolbar.
+1. To relate another asset with the asset you selected, click **[!UICONTROL Relate]** from the toolbar.
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -51,7 +51,7 @@ ht-degree: 50%
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. Click the **[!UICONTROL Confirm]** icon.
+1. 「 **[!UICONTROL 確認]**」をクリックします。
 1. Click **[!UICONTROL OK]** to close the dialog. 手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
