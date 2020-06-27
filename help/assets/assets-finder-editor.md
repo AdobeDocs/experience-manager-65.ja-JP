@@ -3,10 +3,10 @@ title: アセットエディタページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2146'
-ht-degree: 76%
+source-wordcount: '2135'
+ht-degree: 72%
 
 ---
 
@@ -27,13 +27,13 @@ ht-degree: 76%
 
 ## Why create and configure Asset Editor pages? {#why-create-and-configure-asset-editor-pages}
 
-デジタルアセット管理は、ますます広く使用されるようになっています。Adobe Experience Manager Assetsの強力なユーザーインターフェイスを使用して、写真家や分類学者など、専門的な知識を持つユーザーの小規模なグループから、ビジネスユーザー、WCM作成者、ジャーナリストなど、より多様なユーザーグループに移行する場合、
+デジタルアセット管理は、ますます広く使用されるようになっています。プロの訓練を受けたユーザ（写真家、分類学者など）の小規模なユーザグループから、ビジネスユーザ、WCM作成者、ジャーナリストなど、より多様なAdobe Experience Managerグループに移行すると、特定のユーザインターフェイスや関係者開始を提供し、関連性の高いデジタルアセットへのアクセスを要求できます。
 
 アセット中心のアプリケーションは、社員が展示会の訪問や公共のWebサイトの報道機関から写真をアップロードできる、イントラネット内の単純なフォトギャラリーです。 アセット中心のアプリケーションは、買い物かご、チェックアウト、検証プロセスなどの完全なソリューションにも拡張できます。
 
 アセット中心型アプリケーションの作成の大部分は、コーディングを必要としない設定プロセスとなります。ここでは、ユーザーグループとそのニーズ、使用されるメタデータに関する知識のみが必要となります。 Assets で作成されたアセット中心型アプリケーションは拡張可能です。適度なコーディング作業によって、アセットの検索、表示、変更のための再利用可能なコンポーネントを作成できます。
 
-Experience Managerのアセット中心のアプリケーションは、アセットエディターページで構成され、アセットエディターを使用して特定のアセットの詳細な表示を取得できます。 アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
+Experience Manager内のアセット中心のアプリケーションは、アセットエディタページで構成されます。このページは、特定のアセットの詳細な表示を取得するのに使用できます。 アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -203,7 +203,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 アセットエディターページを作成するには：
 
-1. 「**Web サイト**」タブで、アセットエディターページを作成する場所に移動し、「**新規**」をクリックします。
+1. 「**[!UICONTROL Web サイト]**」タブで、アセットエディターページを作成する場所に移動し、「**新規**」をクリックします。
 1. 「**Geometrixx アセットエディター**」を選択し、「**作成**」をクリックします。新しいページが作成され、ページが「**Web サイト**」タブに表示されます。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
@@ -356,7 +356,7 @@ See [Customizing and Extending Assets](/help/assets/extending-assets.md) for inf
 
 タイトルが編集可能な場合、鉛筆アイコンをクリックして&#x200B;**アセットのプロパティ**&#x200B;ウィンドウを開いて、タイトルと説明を追加できます。さらに、日時を選択してアセットのオンとオフを切り替えることができます。
 
-ユーザーが鉛筆アイコンをクリックしてタイトルを編集する場合、「**タイトル**」と「**説明**」を変更し、アセットをオンまたはオフにする「**オンタイム**」と「**オフタイム**」を入力することができます。
+Titleを編集する場合、ユーザーは「 [!UICONTROL Title]**」、「Description**」 **、「On」、「On」、「********** Off Times」の順に入力して、アセットをonおよびoffにすることができます。
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -391,7 +391,7 @@ See [Customizing and Extending Assets](/help/assets/extending-assets.md) for inf
 
 ## Multi-edit assets with the Asset Editor page {#multi-editing-assets-with-the-asset-editor-page}
 
-Experience Manager Assetsを使用すると、複数のアセットに対して一度に変更を行うことができます。 アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
+Experience Managerアセットを使用すると、複数のアセットを一度に変更できます。 アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
 
 * タグ
 * メタデータ
@@ -405,6 +405,7 @@ Experience Manager Assetsを使用すると、複数のアセットに対して�
 
    * Windowsの場合： `Ctrl + click` 各アセット。
    * Macの場合： `Cmd + click` 各アセット。
+
    To select a range of assets: click the first asset then `Shift + click` the last asset.
 
 1. 「**Actions**」フィールド（ページの左側）の「**Edit Metadata**」をクリックします。
@@ -414,16 +415,18 @@ Experience Manager Assetsを使用すると、複数のアセットに対して�
    * すべてのアセットに適用されるタグは、通常のフォントで表示されます。
    * タグ以外のメタデータ：フィールドの値は、選択されたすべてのアセットで同じ場合にのみ表示されます。
 
-1. 「**Download**」をクリックして、アセットの元のレンダリングを含む zip ファイルをダウンロードします。
-1. 「**Tags**」フィールドの横にある鉛筆アイコンをクリックして、タグを編集します。
+1. Click **Download** to download a ZIP file containing the assets original renditions.
+1. 「 **タグ** 」フィールドの横にある「タグ」オプションをクリックします。
 
    * すべてのアセットではなく一部のアセットにのみ適用されるタグは、グレーの背景になります。
    * すべてのアセットに適用されるタグは白の背景になります。
+
    以下の操作を実行できます。
 
-   * 「**x**」アイコンをクリックして、すべてのアセットのタグを削除します。
-   * 「**+**」アイコンをクリックして、すべてのアセットにタグを追加します。
+   * Click `x` to remove the tag for all the assets.
+   * Click `+` to add the tag to all the assets.
    * **矢印**&#x200B;をクリックしてタグを選択し、すべてのアセットに新しいタグを追加します。
+
    「**OK**」をクリックして、変更内容をフォームに書き込みます。「**Tags**」フィールドの横にあるチェックボックスが自動的にオンになります。
 
 1. 「説明」フィールドを編集します。 例えば、次の値に設定します。
