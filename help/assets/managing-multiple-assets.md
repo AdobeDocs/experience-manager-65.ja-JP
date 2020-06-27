@@ -3,10 +3,10 @@ title: Adobe Enterprise Managerで、多数のアセットおよびコレクシ�
 description: 多数のアセットとコレクションのメタデータを同時に編集し、一般的なメタデータの変更をすばやく反映します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 62%
+source-wordcount: '495'
+ht-degree: 63%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Enterprise Manager Assetsを使用すると、複数のアセットのメ�
 
 1. Assets ユーザーインターフェイスで、編集するアセットの場所に移動します。
 1. 共通のプロパティを編集するアセットを選択します。
-1. From the toolbar, click the **[!UICONTROL Properties]** icon to open the properties page for the selected assets.
+1. From the toolbar, click **[!UICONTROL Properties]** to open the properties page for the selected assets.
 
    >[!NOTE]
    >
@@ -45,7 +45,7 @@ Adobe Enterprise Manager Assetsを使用すると、複数のアセットのメ�
    >* アセットリストの上部で、「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにして、アセットの選択とリストの消去を切り替えます。
 
 
-1. To select a different metadata schema for the assets, click the **[!UICONTROL Settings]** icon from the toolbar, and select the desired schema.
+1. To select a different metadata schema for the assets, click **[!UICONTROL Settings]** from the toolbar, and select the desired schema.
 1. 変更内容を保存します。
 1. 複数の値が含まれるフィールドで、既存のメタデータに新しいメタデータを追加するには、「**[!UICONTROL 追加モード]**」を選択します。このオプションを選択しないと、フィールド内の既存のメタデータが新しいメタデータに置換されます。「**[!UICONTROL 送信]**」をクリックします。
 
