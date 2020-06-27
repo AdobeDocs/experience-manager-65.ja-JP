@@ -3,9 +3,9 @@ title: で、参照と複数ページのアセットを持つ複合アセット�
 description: 内からデジタルアセットへの参照を作成する方法を説明します [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d90a95195a97a1840e1defb49d2a09ffbd3c8650
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1363'
 ht-degree: 18%
 
 ---
@@ -25,7 +25,7 @@ Besides eliminating redundancy, referencing the assets in [!DNL Adobe Creative C
 
 You can reference existing digital assets from within an [!DNL Adobe Illustrator] file.
 
-1. Experience Managerデスクトップアプリケーションを使用して [](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)、デジタルアセットをローカルファイルシステムに取得します。 参照するアセットのファイルシステムの場所に移動します。
+1. [Experience Managerのデスクトップアプリケーションを使用して](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)、デジタルアセットをローカルファイルシステムに取得します。 参照するアセットのファイルシステムの場所に移動します。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
 1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
@@ -40,7 +40,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 
 1. Click **[!UICONTROL View Properties]** from the toolbar. In the [!UICONTROL Properties] page, the list of files that reference the current asset appear under the **[!UICONTROL References]** column in the **[!UICONTROL Basic]** tab.
 
-   ![アセットの詳細の「参照」列のExperience Manager Assetsへの参照を表示します。](assets/asset-references.png)
+   ![アセットの詳細の「参照」列のExperience Managerアセットの参照の表示](assets/asset-references.png)
 
    *図： アセットの詳細内のアセット参照。*
 
@@ -105,7 +105,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 ## サブアセットの表示 {#viewing-subassets}
 
-サブアセットは、サブアセットが生成され、選択した複数ページのアセットで使用できる場合にのみ表示されます。 生成されたサブアセットを表示するには、複数ページのアセットを開きます。 ページの左上の領域で、 ![左側のパネルアイコンをクリックし](assets/do-not-localize/aem_leftrail_contentonly.png) 、リストの「 **[!UICONTROL サブアセット]** 」をクリックします。 リストから「 **[!UICONTROL サブアセット]** 」を選択した場合。 Alternately, use the keyboard shortcut `alt + 5`.
+サブアセットは、サブアセットが生成され、選択した複数ページのアセットで使用できる場合にのみ表示されます。 生成されたサブアセットを表示するには、複数ページのアセットを開きます。 ページの左上の領域で、「 ![オプション」をクリックして左側のパネルを開き](assets/do-not-localize/aem_leftrail_contentonly.png) 、リストの「 **[!UICONTROL サブアセット]** 」をクリックします。 リストから「 **[!UICONTROL サブアセット]** 」を選択した場合。 Alternately, use the keyboard shortcut `alt + 5`.
 
 ![複数ページのアセットの表示サブアセット](assets/view_subassets_simulation.gif)
 
@@ -127,11 +127,11 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 * **[!UICONTROL 「ページの概要]** 」オプションを選択すると、すべてのサブアセットが同時に表示されます。
 
-* **[!UICONTROL 左側のパネルアイコンをクリックした後の左側のパネルにあるタイムライン]** アクティビティには ![](assets/do-not-localize/aem_leftrail_contentonly.png) 、ファイルのタイムラインストリームが表示されます。
+* **[!UICONTROL 左側のパネルを開くには]** 、左側のパネルで「 ![オプション」をクリックした後の左側のパネルでタイムライン](assets/do-not-localize/aem_leftrail_contentonly.png) アクティビティを選択すると、ファイルのタイムラインストリームが表示されます。
 
 ## Best practices and limitation {#best-practice-limitation-tips}
 
-* サブアセットの生成は、どのExperience Managerデプロイメントでもリソースを大量に消費する可能性があります。 複雑なアセットがアップロードされたときにサブアセットを生成する場合は、DAMアセットの更新ワークフローで手順を追加します。 サブアセットをオンデマンドで生成する場合は、サブアセットを生成するための別のワークフローを作成します。 専用ワークフローを使用すると、DAM Update Assetワークフローの他の手順をスキップして、計算リソースを保存できます。
+* サブアセットの生成は、どのExperience Managerのデプロイメントでもリソースを大量に消費する可能性があります。 複雑なアセットがアップロードされたときにサブアセットを生成する場合は、DAMアセットの更新ワークフローで手順を追加します。 サブアセットをオンデマンドで生成する場合は、サブアセットを生成するための別のワークフローを作成します。 専用ワークフローを使用すると、DAM Update Assetワークフローの他の手順をスキップして、計算リソースを保存できます。
 
 >[!MORELIKETHIS]
 >
@@ -139,3 +139,4 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 >* [Adobe Experience Managerでのデスクトップアクションの設定](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [Adobe Photoshopでのリンクされたスマートオブジェクトの作成](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Adobe InDesignでのグラフィックの配置](https://helpx.adobe.com/jp/indesign/using/placing-graphics.html)
+
