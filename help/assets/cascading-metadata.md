@@ -1,9 +1,12 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]のカスケードメタデータ。'
+title: でのメタデータのカスケード [!DNL Adobe Experience Manager Assets]。
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 82%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 選択したアセットタイプに関係なく、著作権情報を必須フィールドとして表示します。
 
-1. インターフ [!DNL Experience Manager] ェイスで、ツール/アセッ **[!UICONTROL ト]** /メタデータ **[!UICONTROL スキーマ]******。
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータスキーマに移動します]**。
 1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
@@ -62,7 +65,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    >[!NOTE]
    >
-   >選択肢を追加するときに「ドロップダウン」フィールドをクリックすると、インターフェイスが変形し、選択肢の削除アイコンが機能しなくなります。変更内容を保存するまで、ドロップダウンをクリックしないでください。この問題が発生した場合は、スキーマを保存してから再度開き、編集を続行します。
+   >選択肢を追加する際に、ドロップダウンフィールドをクリックすると、インターフェイスがゆがみ、選択肢の削除オプションが機能しなくなります。 変更内容を保存するまで、ドロップダウンをクリックしないでください。この問題が発生した場合は、スキーマを保存してから再度開き、編集を続行します。
 
 1. （オプション）他の必須フィールドを追加します。例えば、アセットタイプが「ビデオ」の場合、形式、コーデックおよび期間のフィールドがあります。
 
@@ -91,7 +94,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    >[!NOTE]
    >
-   >空白（または値以外の場所）をクリックすると、値がリセットされます。 発生した場合は、値を再度選択します。
+   >空白（または値以外の場所）をクリックすると、値がリセットされます。 値が存在する場合は、値を再度選択します。
 
    >[!NOTE]
    >
@@ -105,8 +108,8 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![ビデオアセットのカスケードメタデータ](assets/video_asset.png)
 
-   *図：ビデオのカスケードメタデータ。*
+   *図： ビデオのカスケードメタデータ。*
 
    ![ドキュメントアセットのカスケードメタデータ](assets/doc_type_fields.png)
 
-   *図：ドキュメントのカスケードメタデータ*
+   *図： ドキュメントのカスケードメタデータ。*
