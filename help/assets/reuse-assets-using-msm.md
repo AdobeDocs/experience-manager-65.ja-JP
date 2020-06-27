@@ -4,10 +4,10 @@ description: 親アセットから派生し、親アセットにリンクされ�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 74%
+source-wordcount: '3368'
+ht-degree: 73%
 
 ---
 
@@ -37,7 +37,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
 ### Glossary of MSM for [!DNL Assets] terms {#glossary}
 
-**ソース：** 元のアセットまたはフォルダー。 ライブ・コピーの派生元となるプライマリ・コピー。
+**ソース：** 元のアセットまたはフォルダー。 ライブコピーの派生元となるプライマリコピー。
 
 **ライブコピー：** ソースと同期しているソースアセット/フォルダーのコピー。 ライブコピーは、さらに別のライブコピーのソースになることができます。LC の作成方法を参照してください。
 
@@ -45,7 +45,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
 **ロールアウト：** ソースに対して行われた変更を、そのソースのライブコピーの下流にプッシュするアクション。 ロールアウトアクションを使用して、一度に 1 つ以上のライブコピーを更新することができます。ロールアウトを参照してください。
 
-**Rollout config:** Rules that determine which properties are synchronized, how and when. これらの設定はライブコピーの作成時に適用され、後で編集できます。子は親アセットからロールアウト設定を継承できます。For MSM for [!DNL Assets], use only the Standard rollout config. The other rollout configurations are not available for MSM for [!DNL Assets].
+**ロールアウト設定：** どのプロパティがどのような場合、どのように、どのような場合に同期されるかを決定するルール。 これらの設定はライブコピーの作成時に適用され、後で編集できます。子は親アセットからロールアウト設定を継承できます。For MSM for [!DNL Assets], use only the Standard rollout config. The other rollout configurations are not available for MSM for [!DNL Assets].
 
 **同期：** 展開に加えて、更新をソースからライブコピーに送信することで、ソースとライブコピーの間でパリティを持たせるもう1つのアクションがあります。 同期は特定のライブコピーに対して開始され、このアクションでソースから変更内容が取得されます。このアクションを使用すると、ライブコピーのいずれか 1 つだけを更新することができます。同期アクションを参照してください。
 
@@ -242,7 +242,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
 ライブコピーは、元のソースの作成時のレプリカです。ライブコピーのメタデータ値はソースから継承されます。メタデータフィールドでは、ソースアセットのそれぞれのフィールドについて継承を個別に維持します。
 
-ただし、ライブコピーをローカルに変更して、一部の限定されたプロパティを変更する柔軟性があります。ローカルに変更するには、目的のプロパティの継承をキャンセルします。1 つ以上のメタデータフィールドの継承がキャンセルされても、アセットのライブ関係と他のメタデータフィールドの継承は保持されます。同期やロールアウトでローカルの変更内容が上書きされることはありません。継承をキャンセルするには、ライブコピーアセットの&#x200B;**[!UICONTROL プロパティ]**&#x200B;ページを開き、メタデータフィールドの横にある「**[!UICONTROL 継承をキャンセル]**」アイコンをクリックします。
+ただし、ライブコピーをローカルに変更して、一部の限定されたプロパティを変更する柔軟性があります。ローカルに変更するには、目的のプロパティの継承をキャンセルします。1 つ以上のメタデータフィールドの継承がキャンセルされても、アセットのライブ関係と他のメタデータフィールドの継承は保持されます。同期やロールアウトでローカルの変更内容が上書きされることはありません。To do so, open **[!UICONTROL Properties]** page of a live copy asset, click the **[!UICONTROL cancel inheritance]** option next to a metadata field.
 
 ローカルの変更をすべて取り消して、アセットをソースの状態に戻すことができます。リセットアクションはローカルの変更をすべて完全かつ即座に無効にし、すべてのメタデータフィールドに関して継承を復元します。元に戻すには、ライブコピーアセットの&#x200B;**[!UICONTROL プロパティ]**&#x200B;ページでツールバーの「**[!UICONTROL リセット]**」クリックします。
 
