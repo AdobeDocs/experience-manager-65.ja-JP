@@ -3,9 +3,9 @@ title: アセットインサイト
 description: アセットインサイト機能を使用して、サードパーティの Web サイト、マーケティングキャンペーン、アドビのクリエイティブソリューションで使用される画像のユーザーのレーティングと使用状況統計を追跡する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '735'
 ht-degree: 81%
 
 ---
@@ -43,11 +43,12 @@ ht-degree: 81%
    * **Web およびモバイル**：アセットが Web サイトまたはアプリに含まれた回数
    * **ソーシャル**：アセットが Adobe Social や Adobe Campaign などのソリューションで使用された回数
    * **電子メール**：アセットが電子メールキャンペーンで使用された回数
+
    ![usage_statistics](assets/usage_statistics.png)
 
    >[!NOTE]
    >
-   >アセットインサイト機能は通常、Adobe Analyticsからソリューションデータを定期的に取得するので、「ソリューション」セクションには最新のデータが表示されない場合があります。 表示されるデータが対応する期間は、アセットインサイトが Analytics のデータを取得するために実行するフェッチ操作のスケジュールによって決まります。
+   >アセットインサイト機能は通常、アドビAnalyticsからソリューションデータを定期的に取得するので、「ソリューション」セクションには最新のデータが表示されない場合があります。 表示されるデータが対応する期間は、アセットインサイトが Analytics のデータを取得するために実行するフェッチ操作のスケジュールによって決まります。
 
 1. 特定の期間のアセットのパフォーマンス統計をグラフィカルに表示するには、「**[!UICONTROL パフォーマンス統計]**」セクションで期間を選択します。クリック数やインプレッション数などの詳細がグラフの傾向線として表示されます。
 
@@ -66,7 +67,7 @@ ht-degree: 81%
 **[!UICONTROL インサイト表示]**&#x200B;を使用すると、フォルダー内のすべてのアセットのスコアを同時に表示できます。
 
 1. アセットユーザーインターフェイスで、インサイトを表示するアセットが含まれているフォルダーに移動します。
-1. Click the Layout icon from the toolbar, and then choose **[!UICONTROL Insights View]**.
+1. Click Layout from the toolbar, and then choose **[!UICONTROL Insights View]**.
 1. このページには、アセットの使用状況スコアが表示されます。様々なアセットのレーティングを比較して、洞察を導きます。
 
 ## バックグラウンドジョブのスケジュール設定 {#scheduling-background-job}
