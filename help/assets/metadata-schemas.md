@@ -3,10 +3,10 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 505ee267534b7b3de1f85fb6782b855dbf3c371d
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2648'
-ht-degree: 51%
+source-wordcount: '2644'
+ht-degree: 52%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 51%
 
 アセットのプロパティページを表示して編集するには、次の手順に従います。
 
-1. カード表示のアセットタイルにあるクイックアクションから **[!UICONTROL 表示プロパティ]** (Quick Actions)アイコンをクリックします。
+1. カード表示のアセットタイルにあるクイックアクションから、 **[!UICONTROL 表示のプロパティ]** (Asset Properties)オプションをクリックします。
 
    ![アセットタイルのクイックアクション](assets/chlimage_1-170.png)
 
-   Alternatively, select an asset and then click the [!UICONTROL Properties] icon from the toolbar.
+   または、アセットを選択し、ツールバーの「 **[!UICONTROL プロパティ]** 」をクリックします。
 
 1. 使用可能なタブで、編集可能な様々なメタデータプロパティを編集できます。 However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
 
@@ -68,7 +68,7 @@ application doesn't contain the sub type zip OOTB.
 
    >[!NOTE]
    >
-   >ロックアイコンが表示され、編集されていないテンプレートが表示されます。 テンプレートをカスタマイズした場合、ロックアイコンは表示されません。
+   >ロック記号は、編集されていないテンプレートと共に表示されます。 テンプレートをカスタマイズしても、ロックは ![閉じられません](assets/do-not-localize/lock_closed_icon.svg)。
 
 1. In the dialog, provide the title of the schema form and click **[!UICONTROL Create]** to complete the form creation process.
 
@@ -175,7 +175,7 @@ Click `+` to add a tab on a schema form. By default, the new tab has the name `U
 
 >[!NOTE]
 >
->* デフォルトフォームに対するカスタム変更を削除すると、メタデータスキーマインターフェイスで、その前にロックアイコンが再び表示されます。 これは、フォームがデフォルトの状態に戻されることを示します。
+>* デフォルトのフォームに対するカスタム変更を削除すると、ロック ![ロックが閉じた状態がフォームの前に再び表示され](assets/do-not-localize/lock_closed_icon.svg) ます。 これは、フォームがデフォルトの状態に戻されることを示します。
 >* では、デフォルトのメタデータスキーマフォームを削除できません [!DNL Assets]。
 
 
