@@ -4,9 +4,9 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '5863'
+source-wordcount: '5862'
 ht-degree: 56%
 
 ---
@@ -26,12 +26,12 @@ ht-degree: 56%
 | [検索結果および動作について](#searchbehavior) | [検索ファセットの変更](#searchfacets) | [メタデータの一括更新](#metadataupdates) |
 | [検索ランキングおよびブースト](#searchrank) | [テキスト抽出](#extracttextupload) | [スマートコレクション](#collections) |
 | [詳細検索：検索のフィルタリングと範囲](#scope) | [カスタム述語](#custompredicates) | [予期しない検索結果と検索に関連する問題のトラブルシューティング](#troubleshoot-unexpected-search-results-and-issues) |
-| [他のソリューションおよびアプリから検索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Managerデスクトップアプリケーション](#desktopapp)</li><li>[Adobe Stock 画像](#adobestock)</li><li>[Dynamic Media アセット](#dynamicmedia)</li></ul> |  |  |
+| [他のソリューションおよびアプリから検索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Managerデスクトップアプリ](#desktopapp)</li><li>[Adobe Stock 画像](#adobestock)</li><li>[Dynamic Media アセット](#dynamicmedia)</li></ul> |  |  |
 | [アセットピッカー](#assetselector) |  |  |
 | [制限事項](#limitations)と[ヒント](#tips) |  |  |
 | [例を使った説明](#samples) |  |  |
 
-Search for assets using the Omnisearch field at the top of the [!DNL Experience Manager] web interface. Go to **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], click search icon in top bar, enter search keyword, and press return. または、キーワードショートカット/（スラッシュ）を使用して、Omnisearchフィールドを開きます。 `Location:Assets` が事前に選択されており、DAM アセットの検索に制限されています。[!DNL Experience Manager] 開始が検索キーワードを入力する際に、サーチクエリを表示します。
+Search for assets using the Omnisearch field at the top of the [!DNL Experience Manager] web interface. Go to **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], click search in top bar, enter search keyword, and press return. または、キーワードショートカット/（スラッシュ）を使用して、Omnisearchフィールドを開きます。 `Location:Assets` が事前に選択されており、DAM アセットの検索に制限されています。[!DNL Experience Manager] 開始が検索キーワードを入力する際に、サーチクエリを表示します。
 
 [ **[!UICONTROL フィルター]** ]パネルを使用して、ファイルタイプ、ファイルサイズ、最終変更日、アセットのステータス、インサイトデータ、Adobe Stockライセンスなど、様々なオプション（述部）に基づいて検索結果をフィルタリングし、検索範囲を絞り込みます。 管理者は、フィルターパネルをカスタマイズし、検索ファセットを使用して検索予測を追加または削除できます。 [!UICONTROL フィルターパネルの] ファイルの種類 [!UICONTROL (File Type] )フィルターには、混在状態のチェックボックスがあります。 したがって、すべてのネストされた述語（またはフォーマット）を選択しない限り、第1レベルのチェックボックスは部分的にチェックされます。
 
@@ -41,7 +41,7 @@ Search for assets using the Omnisearch field at the top of the [!DNL Experience 
 
 検索インターフェイスと使用可能なアクションについて理解します。
 
-![Experience Manager Assetsの検索結果インターフェイスについて](assets/aem_search_results.png)
+![Experience Managerアセットの検索結果インターフェイスを理解する](assets/aem_search_results.png)
 
 *図： 検索結果インターフェースを理解[!DNL Experience Manager Assets]する。*
 
@@ -336,6 +336,7 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
    * `costPerExecution` 値を持つタイプ `Double` のプロパティ `2`。
 
    * `refresh` 値を持つタイプ `Boolean` のプロパティ `true`。
+
    この設定では、適切なインデックスからの検索が可能です。
 
 1. Luceneインデックスを作成するには、CRXDEで、タイプの名前 `/oak:index/damAssetLucene/indexRules/dam:Asset/properties`のノード `imageFeatures` を作成 `nt-unstructured`します。 ノード `imageFeatures` で、
@@ -347,6 +348,7 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
    * の値を持つタイプの追加 `propertyIndex` プロパティで `Boolean``true`す。
 
    * 値を持つタイプの追加 `useInSimilarity` プロパティ `Boolean` で `true`す。
+
    変更内容を保存します。
 
 1. の値 `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` を使用して、タイプの `similarityTags` プロパティ `Boolean` にアクセスして追加し `true`ます。
@@ -354,7 +356,7 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
 1. CRXDEの `/oak-index/damAssetLucene` nodeで、 `reindex` プロパティをに設定し `true`ます。 変更内容を保存します。
 1. （オプション）検索フォームをカスタマイズした場合は、に `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` ノードをコピーし `/conf/global/settings/dam/search/facets/assets/jcr:content/items`ます。 すべての変更を保存します。
 
-関連情報については、Experience Managerでのスマートタグの [理解](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) と、スマートタグの管理 [方法を参照してください](/help/assets/managing-smart-tags.md)。
+関連情報については、「Experience Managerのスマートタグ [について](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) 」および「スマートタグの管理 [方法](/help/assets/managing-smart-tags.md)」を参照してください。
 
 ### 必須メタデータ {#mandatorymetadata}
 
