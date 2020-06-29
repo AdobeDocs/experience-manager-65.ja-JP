@@ -5,10 +5,10 @@ keywords: dynamic media;newsletter;product updates;tips and tricks;events;custom
 contentOwner: Rick Brough
 solution: Dynamic Media
 translation-type: tm+mt
-source-git-commit: 9e8ff9bf5c9ddd4675e887fc734bf3b616526b36
+source-git-commit: 7dce19107539bc4fd986d894b681ed6e1b99e4fc
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 93%
+source-wordcount: '1200'
+ht-degree: 100%
 
 ---
 
@@ -25,20 +25,20 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
 
 ## Dynamic Media ニュースレターを見逃した方のための各号の内容紹介
 
-* **[2020 年 5 月、第 4 号](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
+<!-- * **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
 
-   この号の主な内容：
+    In this issue:
 
-   * 不確実な時期におけるビジネス継続性の意味
-   * 最初のデジタル版Adobe Summitの重要なポイントです。
-   * Experience Managerのブレークアウトセッションは視聴が必須です。
-   * サミットのお客様向けスポットライト： 鎧の下。
-   * エクスペリエンスインサイダーのウェビナーを見逃さないでください。
-   * 公共部門のスポットライト： デジタル登録の緊急の必要性
-   * Experience Manager Innovationの新機能を紹介します。
-   * アドビのプロフェッショナルスキル *を活用して* 、Experience Managerのスキルを習得します。
-   * Adobe Experience Managerコミュニティに接続します。
-   * Adobe Experience Leagueのアドビの専門知識を迅速に追跡できます。
+    * What business continuity means in uncertain times.
+    * Key takeaways from the first all-digital Adobe Summit.
+    * Must-watch Experience Manager breakout sessions.
+    * Summit customer spotlight: Under Armour.
+    * Never miss an Experience Insider webinar.
+    * Public sector spotlight: The urgent need for digital enrollment.
+    * Look what’s new in Experience Manager Innovation.
+    * Build your Experience Manager skills *live* with the Adobe pros.
+    * Connect with the Adobe Experience Manager Community.
+    * Fast-track your Adobe expertise with Adobe Experience League. -->
 
 * **[2020 年 4 月、第 3 号](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@DRPFipWV_3bgH_oxl1monOhd4auNDxFVTBWB-uKB6lM_BixlVqja2E5Ml7DbtOy6pARL78LPxljqgxEEAr7RBsRp8WOyn-Zw6hQ8MNoFn9i9WMXm.html)**
 
