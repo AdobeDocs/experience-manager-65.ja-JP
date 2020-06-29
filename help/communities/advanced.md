@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
 workflow-type: tm+mt
 source-wordcount: '1060'
-ht-degree: 44%
+ht-degree: 41%
 
 ---
 
@@ -33,11 +33,11 @@ ht-degree: 44%
 
 高度なスコアの設定方法は、基本スコアとほとんど同じです。
 
-* Basic and advanced scoring and badging rules are [applied to content](/help/communities/implementing-scoring.md#apply-rules-to-content) in the same manner
+* Basic and advanced scoring and badging rules are [applied to content](/help/communities/implementing-scoring.md#apply-rules-to-content) in the same manner.
 
-   * 基本的なスコアおよび高度なスコアおよびバッジルールを同じコンテンツに適用できます
+   * 基本的なスコアおよび高度なスコアおよびバッジルールは、同じコンテンツに適用できます。
 
-* [コンポーネントのバッジを有効にする](/help/communities/implementing-scoring.md#enable-badges-for-component) ：汎用
+* [コンポーネントのバッジを有効にするのは汎用です](/help/communities/implementing-scoring.md#enable-badges-for-component) 。
 
 スコアルールおよびバッジルールの設定では、以下の点が異なります。
 
@@ -45,23 +45,24 @@ ht-degree: 44%
 * 高度なスコアリングルール：
 
    * `scoringType` 設定 `advanced`
-   * 必須 `stopwords`
+   * 次を必要とする `stopwords`
 
 * 高度なバッジルール：
 
    * `badgingType` 設定 `advanced`
    * `badgingLevels`**を授与するエキスパートレベルの数に設定**
-   * requires `badgingPaths` array of badges instead of thresholds array mapping points to badges
+   * Requires `badgingPaths` array of badges instead of thresholds array mapping points to badges.
 
 >[!NOTE]
 >
 >高度なスコアリング機能とバッジング機能を使用するには、 [エキスパートIDパッケージをインストールします](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
 
+
 ## 設定可能なスコアエンジン {#configurable-scoring-engine}
 
 この高度なスコアエンジンには OSGi 設定が用意されており、パラメーターを設定して高度なスコアアルゴリズムを調整できます。
 
-![chlimage_1-139](assets/chlimage_1-139.png)
+![chlimage_1-260](assets/chlimage_1-260.png)
 
 * **スコア重み付け**
 
@@ -102,7 +103,7 @@ ht-degree: 44%
 
 [スコアサブルール](/help/communities/implementing-scoring.md#scoring-sub-rules)を参照してください。
 
-![chlimage_1-140](assets/chlimage_1-140.png)
+![chlimage_1-261](assets/chlimage_1-261.png)
 
 ### Stopwords {#stopwords}
 
@@ -122,7 +123,7 @@ ht-degree: 44%
 
 ポイントとバッジ画像を関連付ける必要はなく、許可するエキスパートの数と、授与するバッジ画像を指定するだけで十分です。
 
-![chlimage_1-141](assets/chlimage_1-141.png)
+![chlimage_1-262](assets/chlimage_1-262.png)
 
 <table>
  <tbody>
@@ -164,7 +165,7 @@ ht-degree: 44%
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-142](assets/chlimage_1-142.png)
+![chlimage_1-263](assets/chlimage_1-263.png)
 
 エキスパートバッジがアクティビティへのご褒美として表示されるように、以下を確認します。
 
@@ -197,15 +198,15 @@ Included in the beta release are two advanced scoring rules for the [forum funct
 
 **備考:**
 
-* Both `rules`and `sub-rules` nodes are of type `cq:Page`
+* Both `rules` and `sub-rules` nodes are of type `cq:Page`.
 
-* `subRules`は、ルールの[]`jcr:content` ノード上のString型の属性です
+* `subRules` は、ルールの[]`jcr:content` ノード上のString型の属性です。
 
-* `sub-rules` は、複数のスコアルール間で共有できます。
+* `sub-rules` は、様々なスコアリングルール間で共有できます。
 
-* `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
+* `rules` は、全員に対して読み取り権限を持つリポジトリの場所に配置する必要があります。
 
-   * ルール名は、場所に関係なく一意である必要があります
+* ルール名は、場所に関係なく一意にする必要があります。
 
 ### このリリースに含まれるバッジルール {#included-badging-rules}
 
@@ -216,8 +217,7 @@ Included in the release are two advanced badging rules that correspond to the [a
 
 **備考:**
 
-* `rules` のノードは、cq:Page タイプです。
-* `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
-
-   * ルール名は、場所に関係なく一意である必要があります
+* `rules` ノードのタイプはcq:Pageです。
+* `rules` は、全員に対して読み取り権限を持つリポジトリの場所に配置する必要があります。
+* ルール名は、場所に関係なく一意にする必要があります。
 
