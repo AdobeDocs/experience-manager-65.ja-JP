@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 57%
 
 ---
 
@@ -25,7 +28,7 @@ Another useful tool for developers is the [Community Components guide](component
 
 The exercise of creating a website can be useful for understanding the structure of an AEM website which may include Communities features, while also providing simple pages on which to explore working with the [social component framework (SCF)](scf.md).
 
-このチュートリアルは、AEM の知識がなく、SCF コンポーネントの使用に興味を持っている開発者を主な対象としています。手順に従いながら SCF サンドボックスサイトの作成を進めることができますこれは、ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト表示などのサイト構造に重点を置いた [How to Create a Fully Featured Internet Website](../../help/sites-developing/website.md) （全機能を備えたインターネットWebサイトの作成方法）のチュートリアルに似ています。
+このチュートリアルは、AEM の知識がなく、SCF コンポーネントの使用に興味を持っている開発者を主な対象としています。手順に従いながら SCF サンドボックスサイトの作成を進めることができますは、ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト表示などのサイト構造に重点を置いた、 [全機能を果たしたインターネットWebサイト](../../help/sites-developing/website.md) （英語）のチュートリアルに似ています。
 
 オーサーインスタンスで開発を行い、パブリッシュインスタンスでサイトを試してみるのがベストです。
 
@@ -50,14 +53,14 @@ The exercise of creating a website can be useful for understanding the structure
 
 次に、AEM プラットフォームを初めて使用する開発者にとって役立つリンクをいくつか紹介します。
 
-* [はじめに](../../help/sites-deploying/deploy.md#getting-started):AEMインスタンスのデプロイ
+* [はじめに](../../help/sites-deploying/deploy.md#getting-started): を参照してください。
 
-   * [基本](../../help/sites-developing/the-basics.md):Webサイトや機能の開発者向け
-   * [作成者の最初の手順](../../help/sites-authoring/first-steps.md):ページコンテンツのオーサリング
+   * [基本事項](../../help/sites-developing/the-basics.md): を参照してください。
+   * [作成者の最初の手順](../../help/sites-authoring/first-steps.md): 」をクリックします。
 
 ## CRXDE Lite 開発環境の使用 {#using-crxde-lite-development-environment}
 
-AEM 開発者は、オーサーインスタンス上の [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 開発環境で多くの時間を費やすことになります。CRXDE Liteは、CRXリポジトリへのアクセスを制限されない。 従来のUIツールとタッチ操作対応のUIコンソールは、CRXリポジトリの特定の部分に対するより構造化されたアクセスを提供します。
+AEM 開発者は、オーサーインスタンス上の [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 開発環境で多くの時間を費やすことになります。CRXDE Liteは、CRXリポジトリへのアクセスに制限が少ないことを提供します。 従来のUIツールとタッチ対応のUIコンソールは、CRXリポジトリの特定の部分に対して、より構造化されたアクセスを提供します。
 
 管理者権限でサインインした後、さまざまな方法で CRXDE Lite にアクセスできます。
 
@@ -79,7 +82,7 @@ CRXDE Lite を使用するには、開発者または管理者権限でサイン
 * `password: admin`
 
 
-**このログインは** 、タイムアウトになり、CRXDe Liteツールバーの右端にあるプルダウンを使用して定期的に再ログインする必要があることに注意してください。
+**このログインはタイムアウトになり** 、CRXDe Liteツールバーの右端にあるプルダウンを使用して定期的に再ログインする必要があります。
 
 ログインしていない状態では、JCR リポジトリをナビゲートしたり、編集／保存操作を実行したりすることはできません。
 
