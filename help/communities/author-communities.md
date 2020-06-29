@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 73%
 
 ---
 
@@ -31,6 +34,7 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 >[!NOTE]
 >
 >If not familiar with the authoring environment, view the documentation on [basic handling](/help/sites-authoring/basic-handling.md) and a [quick guide to authoring pages](/help/sites-authoring/qg-page-authoring.md).
+
 
 ## 使用可能なコミュニティコンポーネント {#available-communities-components}
 
@@ -77,7 +81,8 @@ See also the interactive [Community Components guide](/help/communities/componen
 
 >[!NOTE]
 >
->調査コンポーネントは、Experience Manager Communitiesでは使用できなくなり、サポートされなくなりました。
+>調査コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
+
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
