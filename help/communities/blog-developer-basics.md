@@ -11,22 +11,26 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
+source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 60%
 
 ---
 
 
 # ブログの基本事項 {#blog-essentials}
 
-AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティです。 ブログ記事は公開環境から投稿されるようになりました。以前は、ブログ記事は作成者環境でのみ作成され、公開されていました。
+AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティです。 ブログ記事は公開環境から投稿されるようになりました。以前は、ブログ記事は作成者環境でのみ作成され、公開できました。
 
-特権を持つメンバーに制限されない限り、どのコミュニティメンバーでもブログ記事が作成できるようになりました。
+特権を持つメンバーに制限されない限り、どのコミュニティのメンバーでもブログ記事が作成できるようになりました。
 
 このページでは、ブログ機能の操作に関する基本情報をまとめています。
 
 >[!NOTE]
 >
 >ブログ機能の基礎となるインフラストラクチャはジャーナル機能です。
+
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -42,7 +46,7 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
   </tr>
   <tr>
    <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -67,11 +71,11 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
-| [**インクルード可能&#x200B;**](/help/communities/scf.md#add-or-include-a-communities-component) | いいえ |
+| [**インクルード可能&#x200B;**](/help/communities/scf.md#add-or-include-a-communities-component) | 不可 |
 | [**clientllibs **](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
-| **properties** | see [Blog Feature](/help/communities/blog-feature.md) |
+| **プロパティ** | see [Blog Feature](/help/communities/blog-feature.md) |
 
 * [クライアント側のカスタマイズ](/help/communities/client-customize.md)
 
@@ -97,10 +101,10 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](/help/communities/wo
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダーの概要](/help/communities/srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](/help/communities/srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](/help/communities/accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtils のリファクタリング](/help/communities/socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
+* [ストレージリソースプロバイダーの概要](/help/communities/srp.md) - 序論とリポジトリの使用方法の概要.
+* [SRPとUGC Essentials](/help/communities/srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPを使用したUGCへのアクセス](/help/communities/accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SocialUtils のリファクタリング](/help/communities/socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
 ## プライマリパブリッシャー {#primary-publisher}
 
@@ -114,9 +118,9 @@ AEM プラットフォームでは、次に説明するように、XSS 攻撃を
 
 * [クロスサイトスクリプティング（XSS）に対する保護](/help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
 
-AEM 6.2以降、以前は手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれます。
+AEM 6.2以降、手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれます。
 
-リッチメディアは、次のアイコンを選択してブログ記事に埋め込ま `Embed Media from External Sites` れます。
+リッチメディアは、次のアイコンを選択してブログ記事に埋め込まれ `Embed Media from External Sites` ます。
 
-![chlimage_1-199](assets/chlimage_1-199.png)
+![chlimage_1-471](assets/chlimage_1-471.png)
 
