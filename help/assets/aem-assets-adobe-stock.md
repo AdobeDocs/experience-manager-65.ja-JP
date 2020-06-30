@@ -3,10 +3,10 @@ title: の [!DNL Adobe Stock] 管理セット [!DNL Adobe Experience Manager Ass
 description: 内部から、検索、取得、ライセンス、 [!DNL Adobe Stock] 管理の各セットを検索します [!DNL Adobe Experience Manager]。 ライセンス済みのアセットを他のデジタルアセットと同様に使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 97e17df1f79450b5aed5867633c129a1c21a17ac
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 35%
+source-wordcount: '1113'
+ht-degree: 32%
 
 ---
 
@@ -34,8 +34,10 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 1. Click on [!DNL Experience Manager] logo. **[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
 1. 既存の証明書を再使用するか、「**[!UICONTROL 新しい証明書を作成]**」を選択します。
 1. 「**[!UICONTROL 証明書を作成]**」をクリックします。証明書を作成したら、公開鍵をダウンロードします。「**[!UICONTROL 次へ]**」をクリックします。
-1. 「**[!UICONTROL タイトル]**」、「**[!UICONTROL 認証サーバー]**」、「**[!UICONTROL API キー]**」、「**[!UICONTROL クライアントの秘密鍵]**」および「**[!UICONTROL ペイロード]**」の各フィールドに適切な値を指定します。See [JWT authentication quick start](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md), for detailed information to fetch these values from [!DNL Adobe I/O].
-1. Add the downloaded public key to your [!DNL Adobe I/O] service account.
+1. Add the downloaded public key to your [!DNL Adobe Developer Console] service account. 「**[!UICONTROL 次へ]**」をクリックします。間もなく値を指定するには、 [!UICONTROL Adobe IMSテクニカルアカウント設定] 画面を開いたままにします。
+1. Adobe [Developer Consoleにアクセスします](https://console.adobe.io)。 アカウントに、統合が必要な組織の管理者権限があることを確認します。
+1. 「 **[!UICONTROL 新しいプロジェクトを]** 作成 **[!UICONTROL 」をクリックし、「]** API」をクリックします。 使用可能なAPIのリストから **[!UICONTROL 「Adobe Stock]** 」を選択 [!UICONTROL します]。 「 [!UICONTROL OAUTH 2.0 Web]」を選択します。 表示される様々な値を設定およびコピーします。
+1. In [!DNL Experience Manager] provide the values in the fields titled **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL API Key]**, **[!UICONTROL Client Secret]**, and **[!UICONTROL Payload]**. これらの値について詳しくは、 [JWT認証クイック開始](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)（英語）を参照してください。
 
 <!-- TBD: Update the URL when the new URL is available. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
 -->
@@ -50,7 +52,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 >[!NOTE]
 >
->If there are multiple [!DNL Adobe Stock] configurations, select the desired configuration in [!UICONTROL User Preferences] panel by clicking the *User* logo in the upper-right corner of the [!DNL Experience Manager] user interface.
+>複数の [!DNL Adobe Stock] 設定がある場合は、 [!UICONTROL ユーザ環境設定] パネルで目的の設定を選択します。 ユーザインター *フェイスの右上隅にある* ユーザ [!DNL Experience Manager] ロゴをクリックします。
 
 ## Use and manage [!DNL Adobe Stock] assets in [!DNL Experience Manager] {#usemanage}
 
