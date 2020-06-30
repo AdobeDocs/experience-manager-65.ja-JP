@@ -10,14 +10,17 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 7cd7921e-6438-450a-a676-9da3c4a5ced3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 25%
 
 ---
 
 
 # カタログ機能 {#catalog-feature}
 
-The [ `Enablement Assignments`](assignments.md) and `Enablement Catalog` components found in the Communities group in the components browser are components of an [enablement community](overview.md#enablement-community).
+The [`Enablement Assignments`](assignments.md) and `Enablement Catalog` components found in the Communities group in the components browser are components of an [enablement community](overview.md#enablement-community).
 
 The `Enablement Catalog` component allows community members to access a catalog of [enablement resources](resources.md). The use of AEM tags is an important part of managing the listing of enablement resources in a catalog (see [Tagging Enablement Resources](tag-resources.md)).
 
