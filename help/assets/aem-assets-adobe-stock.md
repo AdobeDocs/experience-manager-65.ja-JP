@@ -3,10 +3,10 @@ title: の [!DNL Adobe Stock] 管理セット [!DNL Adobe Experience Manager Ass
 description: 内部から、検索、取得、ライセンス、 [!DNL Adobe Stock] 管理の各セットを検索します [!DNL Adobe Experience Manager]。 ライセンス済みのアセットを他のデジタルアセットと同様に使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 97e17df1f79450b5aed5867633c129a1c21a17ac
+source-git-commit: 376940612066123a8f84fe6c30ff3002cda08079
 workflow-type: tm+mt
-source-wordcount: '1113'
-ht-degree: 32%
+source-wordcount: '1109'
+ht-degree: 31%
 
 ---
 
@@ -31,7 +31,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 ### IMS 設定の作成 {#create-an-ims-configuration}
 
-1. Click on [!DNL Experience Manager] logo. **[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
+1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** セキュリティ **[!UICONTROL /]** Adobe IMS設定に移動します ****。 「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
 1. 既存の証明書を再使用するか、「**[!UICONTROL 新しい証明書を作成]**」を選択します。
 1. 「**[!UICONTROL 証明書を作成]**」をクリックします。証明書を作成したら、公開鍵をダウンロードします。「**[!UICONTROL 次へ]**」をクリックします。
 1. Add the downloaded public key to your [!DNL Adobe Developer Console] service account. 「**[!UICONTROL 次へ]**」をクリックします。間もなく値を指定するには、 [!UICONTROL Adobe IMSテクニカルアカウント設定] 画面を開いたままにします。
@@ -52,7 +52,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 >[!NOTE]
 >
->複数の [!DNL Adobe Stock] 設定がある場合は、 [!UICONTROL ユーザ環境設定] パネルで目的の設定を選択します。 ユーザインター *フェイスの右上隅にある* ユーザ [!DNL Experience Manager] ロゴをクリックします。
+>If there are multiple [!DNL Adobe Stock] configurations, select the desired configuration in User Preferences panel (**[!UICONTROL AEM]** > **[!UICONTROL User Icon]** > **[!UICONTROL User Preferences]** > **[!UICONTROL Stock Configuration]**).
 
 ## Use and manage [!DNL Adobe Stock] assets in [!DNL Experience Manager] {#usemanage}
 
