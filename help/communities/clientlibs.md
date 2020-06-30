@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 60%
 
 ---
 
@@ -24,8 +27,8 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 基本情報については、以下を参照してください。
 
-* [使用状況の詳細とデバッグツールを提供する](/help/sites-developing/clientlibs.md) 、クライアント側ライブラリの使用
-* [SCFコンポーネントのカスタマイズ時に役立つ情報を提供するSCF](/help/communities/client-customize.md#clientlibs) 用のClientlibs
+* [使用状況の詳細とデバッグツールを提供するクライアント側ライブラリ](/help/sites-developing/clientlibs.md) (Using Client-Side Libraries)
+* [SCFコンポーネントのカスタマイズ時に役立つ情報を提供する、SCF](/help/communities/client-customize.md#clientlibs) 用のClientlibs
 * [ブログ：AEM Client Libraries explained by example](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
 ## clientlib が必要になる理由 {#why-clientlibs-are-required}
@@ -38,11 +41,11 @@ When there exists a [community function](/help/communities/functions.md) for a f
 
 ### 例：clientlib が欠落している場合のレビューの配置 {#example-placed-reviews-without-clientlibs}
 
-![chlimage_1-132](assets/chlimage_1-132.png)
+![chlimage_1-426](assets/chlimage_1-426.png)
 
 ### 例：clientlib が存在する場合のレビューの配置 {#example-placed-reviews-with-clientlibs}
 
-![chlimage_1-133](assets/chlimage_1-133.png)
+![chlimage_1-427](assets/chlimage_1-427.png)
 
 ## 必須の clientlib の識別 {#identifying-required-clientlibs}
 
@@ -55,7 +58,7 @@ For example, at the very top of the [Reviews page](https://localhost:4502/conten
 * cq.ckeditor
 * cq.social.hbs.reviews
 
-![chlimage_1-134](assets/chlimage_1-134.png)
+![chlimage_1-246](assets/chlimage_1-246.png)
 
 ## 必須の clientlib の追加 {#adding-required-clientlibs}
 
@@ -63,32 +66,33 @@ For example, at the very top of the [Reviews page](https://localhost:4502/conten
 
 [CRXDE|Lite](#using-crxde-lite) を使用すると、コミュニティサイトページの既存の clientlibslist を変更できます。
 
-To add a clientlib for a community site using [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
+To add a clientlib for a community site using [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* Browse to [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* Locate the `clientlibslist` node for the page on which you wish to add the component
+* Browse to [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de).
+* Locate the `clientlibslist` node for the page on which you wish to add the component:
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* With `clientlibslist` node selected
+* With `clientlibslist` node selected:
 
-   * Stringプロパティの検索[]`scg:requiredClientLibs`
-   * Select its `Value` to access the String array dialog
+   * String[] プロパティを探し `scg:requiredClientLibs`ます。
+   * Select its `Value` to access the String array dialog.
 
-      * 必要に応じて下にスクロール
-      * 「+」を選択して新しいクライアントライブラリを入力します。
+      * 必要に応じて下にスクロールします。
+      * 「+」を選択して、新しいクライアントライブラリを入力します。
 
-         * 繰り返してクライアントライブラリを追加
-      * 「**OK**」を選択します。
-   * 「**すべて保存**」を選択します。
+         * さらにクライアントライブラリを追加する場合は、同じ手順を繰り返します。
 
+         * 「**OK**」を選択します。
+   * Select **Save All**.
 
 
 >[!NOTE]
 >
 >コミュニティサイト以外のサイトでは、使用されているクライアントライブラリの有無や場所を調べる必要があります。
 
+
 ここでは、[AEM Communities 使用の手引き](/help/communities/getting-started.md)の例（`site-name` は *engage*）を引用し、レビューコンポーネントを追加する場合に clientliblist がどのように表示されるかを示しています。
 
-![chlimage_1-135](assets/chlimage_1-135.png)
+![chlimage_1-247](assets/chlimage_1-247.png)
 
