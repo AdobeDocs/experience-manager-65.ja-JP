@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 65%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td>
@@ -63,7 +66,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### カレンダー機能 {#calendar-function}
 
-A community site structure that includes the [Calendar function](functions.md#calendar-function) will have a configured c `alendar`component. The Calendar function supports identifying a [privileged member user group](users.md#privileged-members-group).
+A community site structure that includes the [Calendar function](functions.md#calendar-function) will have a configured `calendar` component. The Calendar function supports identifying a [privileged member user group](users.md#privileged-members-group).
 
 ### Accessing Calendar Posts (UGC) {#accessing-calendar-posts-ugc}
 
