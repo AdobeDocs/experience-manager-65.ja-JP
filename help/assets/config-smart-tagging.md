@@ -1,12 +1,12 @@
 ---
 title: Smart Content Serviceを使用してアセットのタグ付けを設定します。
-description: Smart Content Serviceを使用して、Adobe Experience Managerでスマートタグを設定し、高度なスマートタグを設定する方法について説明します。
+description: Learn how to configure smart tagging and enhanced smart tagging in [!DNL Adobe Experience Manager], using the Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f3d699f35c7b1ef832a0857fa2fa41aed1fe5a4e
+source-git-commit: dfac819018e85e0e8221bfcc57bc1eaf43b7ff25
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 41%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,10 +17,11 @@ Adobe Developer Console [!DNL Adobe Experience Manager] を使用して、Smart 
 
 この記事では、スマートコンテンツサービスの設定に必要となる以下の主要なタスクについて詳しく説明します。At the back end, the [!DNL Experience Manager] server authenticates your service credentials with the Adobe Developer Console gateway before forwarding your request to the Smart Content Service.
 
-* Create a Smart Content Service configuration in [!DNL Experience Manager] to generate a public key. OAuth 統合用の公開証明書を取得します。
-* Adobe Developer Consoleで統合を作成し、生成した公開鍵をアップロードします。
-* Configure your [!DNL Experience Manager] instance using the API key and other credentials from Adobe Developer Console.
-* （オプション）アセットアップロード時の自動タグ付けを有効化します。
+1. Create a Smart Content Service configuration in [!DNL Experience Manager] to generate a public key. [OAuth 統合用の公開証明書を取得します。](#obtain-public-certificate)
+1. [Adobe Developer Consoleで統合を作成し](#create-adobe-i-o-integration) 、生成した公開鍵をアップロードします。
+1. [Adobe Developer ConsoleのAPIキーと他の資格情報を使用して](#configure-smart-content-service) 、デプロイメントを設定します。
+1. [設定をテストします](#validate-the-configuration)。
+1. Optionally, [enable auto-tagging on asset upload](#enable-smart-tagging-in-the-update-asset-workflow-optional).
 
 ## 前提条件 {#prerequisites}
 
@@ -29,11 +30,13 @@ Smart Content Serviceを使用する前に、次の手順を実行してAdobe De
 * 組織の管理者権限を持つ Adobe ID アカウントがあること。
 * 組織でスマートコンテンツサービスが有効化されていること。
 
+To enable Enhanced Smart Tags, in addition to the above, also install the latest [AEM service pack](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html).
+
 ## 公開証明書の取得 {#obtain-public-certificate}
 
 公開証明書を使用すると、Adobe Developer Consoleでプロファイルを認証できます。
 
-1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール/Cloud Service **[!UICONTROL /]**&#x200B;レガシーCloud Serviceにアクセスします ****。
+1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** Cloud Service **[!UICONTROL /]** レガシCloud Serviceにアクセスします ****。
 
 1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、スマートタグ設定のタイトルと名前を指定します。「**[!UICONTROL 作成]**」をクリックします。
@@ -46,6 +49,10 @@ Smart Content Serviceを使用する前に、次の手順を実行してAdobe De
    その他のフィールドは現時点では空白のままにします（後で指定します）。「**[!UICONTROL OK]**」をクリックします。
 
    ![コンテンツサービスURLを提供するExperience Managerスマートコンテンツサービスダイアログ](assets/aem_scs.png)
+
+   >[!NOTE]
+   >
+   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. この設定は、 [!UICONTROL サービスURL] パラメーターと同じ値で正常に機能します。 For the overall service status and maintenance schedule, see [https://status.adobe.com](https://status.adobe.com).
 
 1. Click **[!UICONTROL Download Public Certificate for OAuth Integration]**, and download the public certificate file `AEM-SmartTags.crt`.
 
@@ -84,7 +91,7 @@ Smart Content Service APIを使用するには、Adobe Developer ConsoleでAPI�
 
 ## スマートコンテンツサービスの設定 {#configure-smart-content-service}
 
-統合を設定するには、Adobe Developer Console統合の「テクニカルアカウントID」、「組織ID」、「クライアントシークレット」、「認証サーバー」および「APIキー」フィールドの値を使用します。 Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] instance.
+統合を設定するには、Adobe Developer Console統合の「テクニカルアカウントID」、「組織ID」、「クライアントシークレット」、「認証サーバー」および「APIキー」フィールドの値を使用します。 Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] deployment.
 
 1. In [!DNL Experience Manager], navigate to **[!UICONTROL Tools > Cloud Service > Legacy Cloud Services]** to open the [!UICONTROL Cloud Services] console.
 1. 「**[!UICONTROL アセットのスマートタグ]**」で、上記で作成した設定を開きます。サービスの設定ページで、「**[!UICONTROL 編集]**」をクリックします。
@@ -96,7 +103,6 @@ Smart Content Service APIを使用するには、Adobe Developer ConsoleでAPI�
 設定を完了したら、JMX MBean を使用して設定を検証できます。検証するには、次の手順に従います。
 
 1. で [!DNL Experience Manager] サーバーにアクセスし `https://[aem_server]:[port]`ます。
-
 1. **[!UICONTROL ツール／操作／Web コンソール]**&#x200B;に移動して、OSGi コンソールを開きます。**[!UICONTROL メイン／JMX]** を選択します。
 1. 「**[!UICONTROL com.day.cq.dam.similaritysearch.internal.impl]**」をクリックします。It opens **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.
 1. 「**[!UICONTROL validateConfigs()]**」をクリックします。In the **[!UICONTROL Validate Configurations]** dialog, click **[!UICONTROL Invoke]**.
@@ -110,7 +116,7 @@ Smart Content Service APIを使用するには、Adobe Developer ConsoleでAPI�
 1. Click **[!UICONTROL Edit]** from the toolbar.
 1. サイドパネルを展開して、ステップを表示します。「DAM ワークフロー」セクションの「**[!UICONTROL スマートタグアセット]**」ステップをドラッグして、「**[!UICONTROL サムネールを処理]**」ステップの後に配置します。
 
-   ![[!UICONTROL 「DAM アセットの更新」ワークフローで「サムネールを処理」ステップの後に「スマートタグアセット」ステップを追加]](assets/smart-tag-in-dam-update-asset-workflow.png)
+   ![「DAM アセットの更新」ワークフローで「サムネールを処理」ステップの後に「スマートタグアセット」ステップを追加](assets/smart-tag-in-dam-update-asset-workflow.png)
 
    *図：[!UICONTROL DAM追加 Update Asset]ワークフローのプロセスサムネールの後のスマートタグアセットの手順*
 
