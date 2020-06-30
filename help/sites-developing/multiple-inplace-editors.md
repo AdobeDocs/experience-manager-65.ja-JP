@@ -1,43 +1,37 @@
 ---
-title: 複数のインプレースエディターの設定
-seo-title: 複数のインプレースエディターの設定
-description: 複数のインプレースエディターが含まれるようにコンポーネントを設定できます
-seo-description: 複数のインプレースエディターが含まれるようにコンポーネントを設定できます
-uuid: 4abbfcd5-fe1b-4c02-b115-97db20e60e1e
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: components
-content-type: reference
-discoiquuid: 0fac1e4a-f08f-4c46-b070-cb1d5a05b6e0
+title: 複数のインプレースエディター用にRTEを設定します。
+description: リッチテキストエディターを設定して、Adobe Experience Managerに複数のインプレースエディターを作成します。
+contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: e49411a99a80e91c983afc103a8ea826e75569b8
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 25%
 
 ---
 
 
-# 複数のインプレースエディターの設定{#configuring-multiple-in-place-editors}
+# 複数のインプレースエディターの設定 {#configure-multiple-in-place-editors}
 
-タッチ操作対応 UI では、複数のインプレースエディターが含まれるようにコンポーネントを設定できます。
+リッチテキストエディタは、複数のインプレースエディタを持つようにAdobe Experience Managerで設定できます。 このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。
 
-このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。次に例を示します。
+![特定のインプレイスエディタ](assets/rte-inplace-editor.png)
 
-![chlimage_1-8](assets/chlimage_1-8a.png)
-
-## 複数のエディターの設定 {#configuring-multiple-editors}
+## 複数のエディターの設定 {#configure-multiple-editors}
 
 複数のインプレースエディターを有効にするには、`cq:InplaceEditingConfig` ノードタイプの構造を `cq:ChildEditorConfig` ノードタイプの定義で強化します。
 
 次に例を示します。
 
-```
+```js
    /**
-       * Configures inplace editing of a component.
+       * Configures in-place editing of a component.
        *
-       * @prop active true to activate inplace editing for the component
-       * @prop editorType ID of inplace editor to use
+       * @prop active true to activate in-place editing for the component.
+       * @prop editorType ID of in-place editor to use.
        * @prop cq:childEditors collection of {@link cq:ChildEditorConfig} nodes.
-       * @prop configPath path to editor's config (optional)
-       * @node config editor's config (used if no configPath is specified; optional)
+       * @prop configPath path to editor's config (optional).
+       * @node config editor's config (used if no configPath is specified; optional).
      */
     [cq:InplaceEditingConfig] > nt:unstructured
       - active (boolean)
@@ -47,12 +41,12 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
       + config (nt:unstructured) = nt:unstructured
 
     /**
-      * Configures one child editor for a subcomponent. The name of the this node will
-      * be used as DD id.
+      * Configures one child editor for a sub-component. The name of the this node is
+      * used as DD ID.
       *
-      * @prop type type of the inline editor. eg: ["image"]
-      * @prop title totle od the inline editor
-      * @prop icon icon to represent the inline editor
+      * @prop type type of the inline editor. For example, ["image"].
+      * @prop title Title of the inline editor.
+      * @prop icon Icon to represent the inline editor.
     */
     [cq:ChildEditorConfig] > nt:unstructured
       orderable
@@ -60,48 +54,39 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
       - title (string)
 ```
 
-複数のエディターの設定手順
+複数のエディターを設定するには、次の手順に従います。
 
-1. On the node `cq:inplaceEditing` (of type `cq:InplaceEditingConfig`) define the property:
+1. ノード `cq:inplaceEditing` (タイプ `cq:InplaceEditingConfig`)で次のプロパティを定義します。
 
-   * 名前:`editorType`
-   * タイプ: `String`
+   * 名前：`editorType`
+   * タイプ：`String`
    * 値: `hybrid`
 
-1. このノードの下に、新しいノードを作成します。
+1. このノードの下で、ノードを作成します。
 
-   * 名前: `cq:ChildEditors`
-   * タイプ: `nt:unstructured`
+   * 名前：`cq:ChildEditors`
+   * タイプ：`nt:unstructured`
 
-1. `cq:childEditors` ノードの下に、インプレースエディターごとに新しいノードを作成します。
+1. Under `cq:childEditors` node, create a node for each in-place editor:
 
-   * 名前：各ノードの名前は、そのノードが（ドロップターゲットのように）表すプロパティの名前にしてください。For example, `image`, `text`.
-   * タイプ：cq: `ChildEditorConfig`
+   * 名前： 各ノードの名前は、それが表すプロパティの名前で、ドロップターゲットと同様に、 例えば、 `image` と `text`。
+   * タイプ：`cq:ChildEditorConfig`
+
    >[!NOTE]
    >
-   >定義されたドロップターゲットと子エディターの間には相関関係があります。`cq:ChildEditorConfig` ノードの名前はドロップターゲット ID と見なされ、選択された子エディターへのパラメーターとして使用されます。編集可能なサブエリアにドロップターゲット（テキストコンポーネントなど）がない場合でも、子エディターの名前は対応する編集可能エリアを識別する ID と見なされます。
+   >定義されたドロップターゲットと子エディターの間には相関関係があります。The name of the `cq:ChildEditorConfig` node is considered as the drop target ID, for use as a parameter to the selected child editor. 編集可能サブ領域にドロップターゲットがない場合（例えば、テキストコンポーネント内など）、子エディターの名前は、対応する編集可能領域を識別するIDと見なされます。
 
-1. On each of these nodes ( `cq:ChildEditorConfig`) define the properties:
+1. On each of these nodes (`cq:ChildEditorConfig`) define the properties:
 
-   * 名前: `type`
-   * Value: name of the registered in-place editor; for example, `image`, `text`
+   * 名前: `type`.
+   * Value: The name of the registered in-place editor; for example, `image` and `text`.
 
-   * 名前: `title`
-   * Value: the title that you want to display in the components selection list (of available editors); for example, `Image`, `Text`
+   * 名前: `title`.
+   * 値： 使用可能なエディターのコンポーネント選択リストに表示されるタイトル。 例えば、 `Image` と `Text`。
 
-### リッチテキストエディター用の追加設定 {#additional-configuration-for-rich-text-editors}
+### Additional configuration for Rich Text Editors {#additional-configuration-for-rich-text-editors}
 
-複数のリッチテキストエディター（RTE）の設定は、個々の RTE インスタンスをそれぞれ別個に設定できるので、やや異なります。
-
->[!NOTE]
->
->詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
-
-複数の RTE を含めるには、インプレース RTE ごとに次のような設定が必要です。
-
-* 「ノー `cq:InplaceEditingConfig` ドを定義」 `config` で、
-
-   * `config` ノードの下に、個々の RTE 設定を定義します。
+複数のリッチテキストエディター（RTE）の設定は、個々の RTE インスタンスをそれぞれ別個に設定できるので、やや異なります。詳しくは、「リッチテキストエディターの [設定](/help/sites-administering/rich-text-editor.md)」を参照してください。 複数のRTEに各インプレースRTEの設定を作成させる場合。 アドビでは、個々のRTEごとに異なる設定を持つこ `cq:InplaceEditingConfig` とができるので、に新しい設定ノードを作成することをお勧めします。 新しいノードで、個々のRTE設定を作成します。
 
 ```xml
     texttext
@@ -109,7 +94,7 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
         cq:editConfig
             cq:inplaceEditing
                 cq:childEditors
-                    config
+                    someconfig
                         text1
                             rtePlugins
                         text2
@@ -118,19 +103,21 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 
 >[!NOTE]
 >
->各 RTE はそれぞれ異なる設定を持つことができるので、推奨されるベストプラクティスは、`config` ノードを `cq:InplaceEditingConfig` の下に定義することです。
+>ただし、RTE の場合、`configPath` プロパティがサポートされるのは、コンポーネント内のテキストエディター（編集可能なサブエリア）のインスタンスが 1 つだけのときです。This use of `configPath` is provided to support backwards compatibility with older user interface dialogs of the component.
+
+>[!CAUTION]
 >
->ただし、RTE の場合、`configPath` プロパティがサポートされるのは、コンポーネント内のテキストエディター（編集可能なサブエリア）のインスタンスが 1 つだけのときです。この `configPath` のサポートは、コンポーネントの古い UI ダイアログとの下位互換性のために提供されています。
+>RTE 設定ノードの名前を `config` にしないでください。Otherwise, the RTE configurations are available for only the administrators and not for the users in the group `content-author`.
 
-## コードサンプル {#code-samples}
+## Code samples {#code-samples}
 
-**GitHub のコード**
+You can find the code of this page on [aem-authoring-hybrideditors project on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors). 完全なプロジェクトはZIPアーカイブとしてダウンロ [ードできます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)。
 
-このページのコードは GitHub にあります
+## インプレ追加ースエディター {#add-an-in-place-editor}
 
-* [GitHub上のaem-authoring-hybrideditorsプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)
-* プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)としてダウンロードします
+For general information about adding an in-place editor see the document [customize page authoring](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
 
-## インプレースエディターの追加 {#adding-an-in-place-editor}
+>[!MORELIKETHIS]
+>
+>* [Experience Managerでリッチテキストエディターを設定します](/help/sites-administering/rich-text-editor.md)。
 
-For general information about adding an in-place editor see the document [Customizing Page Authoring](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
