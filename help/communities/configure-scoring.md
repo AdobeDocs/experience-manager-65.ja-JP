@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4170c7fe48a740e0574a32c7823841dc311fd565
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 52%
+ht-degree: 50%
 
 ---
 
@@ -230,7 +230,6 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
    >
    >
 * 異なるAEMサイト向けに一意のバッジ画像を作成する
-
 >
 
 
@@ -265,7 +264,7 @@ The score is stored in the property `scoreValue_tl` which may directonly contain
 
 * `/content/usergenerated/asi/jcr`
 
-次のように、ユーザーのプロファイルのパスが続き、最後が badges フォルダーになります。
+次のように、ユーザーのプロファイルーのパスが続き、バッジフォルダーで終わります。
 
 * `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
