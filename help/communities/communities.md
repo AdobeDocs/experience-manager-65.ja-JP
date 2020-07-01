@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 59%
 
 ---
 
@@ -30,8 +33,9 @@ The foundation of a [community site](overview.md#communitiessites) is the [socia
 * [イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)
 
 >[!NOTE]
->
+> 
 >[最新リリース](deploy-communities.md#latest-releases)によって常に最新状態にしておくことをお勧めします。
+
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
@@ -40,13 +44,13 @@ The foundation of a [community site](overview.md#communitiessites) is the [socia
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-* [Social Component Framework](scf.md):フレームワークとAPIの概要
-* [SCFハンドルバーヘルパー](handlebars-helpers.md):デフォルトヘルパーとカスタムヘルパーの作成方法
-* [クライアント側のカスタマイズ](client-customize.md):ブラウザーで実行するコードのカスタマイズ
-* [サーバ側のカスタマイズ](server-customize.md):サーバーで実行するコードのカスタマイズ
-* [記憶域リソースプロバイダー(SRP)](srp.md):コミュニティコンテンツストレージの概要
-* [Coding Guidelines](code-guide.md):ガイドライン、ヒント、テクニック
-* [コミュニティコンポーネントガイド](components-guide.md):対話型開発ツール
+* [Social Component Framework](scf.md): フレームワークとAPIの概要を説明します。
+* [SCFハンドルヘルパー](handlebars-helpers.md): デフォルトのヘルパーおよびカスタムヘルパーの作成方法。
+* [クライアント側のカスタマイズ](client-customize.md): ブラウザーで実行するコードのカスタマイズ
+* [サーバー側のカスタマイズ](server-customize.md): サーバーで実行するコードのカスタマイズ
+* [ストレージリソースプロバイダ(SRP)](srp.md): コミュニティコンテンツのストレージの概要を示します。
+* [コーディングのガイドライン](code-guide.md): ガイドライン、ヒント、テクニックを参照してください。
+* [コミュニティコンポーネントガイド](components-guide.md): インタラクティブ開発ツール
 
 ## コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
 
@@ -65,7 +69,7 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 
 ## コミュニティグループ {#community-groups}
 
-[コミュニティグループ](overview.md#communitygroups)は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。コミュニティグループの作成は、発行環境または作成者環境で行われる場合があります。
+[コミュニティグループ](overview.md#communitygroups)は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。コミュニティグループの作成は、発行環境または作成者フォルダーで行うことができます。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [グループ機能](functions.md#groups-function)
@@ -75,7 +79,7 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 
 ## データの管理 {#managing-data}
 
-* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
 * [Tag Essentials](tag.md) — コミュニティメンバーがUGCやカタログ化された有効化リソースにタグ付けする機能
 
 ## チュートリアル {#tutorials}
