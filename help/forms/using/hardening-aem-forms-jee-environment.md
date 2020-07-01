@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
+source-git-commit: 36c9b3d60331e7482655bc8039153b6b86d721f9
 workflow-type: tm+mt
-source-wordcount: '7603'
+source-wordcount: '7665'
 ht-degree: 71%
 
 ---
@@ -455,6 +455,16 @@ LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認
   </tr> 
  </tbody> 
 </table>
+
+### 管理者以外のユーザに対して、PDF Generatorの実行を許可する
+
+管理者以外のユーザに対して、PDF Generatorの使用を許可することができます。通常は、管理者権限を持つユーザーのみがPDF Generatoを実行できます。管理者以外のユーザに対してPDF Generatorの実行を許可するには、次の手順を実行します。
+
+1. 「PDFG_NON_ADMIN_ENABLED」という名前の環境変数を作成します。
+
+1. 変数の値を TRUE に設定します。
+
+1. AEM Forms のインスタンスを再起動します。
 
 ## 社外からのアクセスを可能にするための JEE 上の AEM Forms の設定 {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
