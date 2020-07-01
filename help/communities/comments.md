@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
+workflow-type: tm+mt
+source-wordcount: '994'
+ht-degree: 33%
 
 ---
 
@@ -20,20 +23,21 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ## 概要 {#introduction}
 
-サインインしているサイト訪問者（メンバー）は、コメント機能を使用して、サイト上のコンテンツに関する意見や知識を共有できます。この機能は、他の機能に既に存在する場合が多く、どのWebサイトにも追加できます。
+サインインしているサイト訪問者（メンバー）は、コメント機能を使用して、サイト上のコンテンツに関する意見や知識を共有できます。この機能は他の機能に既に存在する場合が多く、どのWebサイトにも追加できます。
 
-このドキュメントでは、次の内容を説明しています。
+このドキュメントでは、次の内容を説明します。
 
-* ペー `Comments`ジへの追加を参照してください。
-* Configuration settings for the `Comments`component.
+* ページ `Comments` への追加を参照してください。
+* Configuration settings for the `Comments` component.
 
 >[!NOTE]
 >
->匿名でのコメント投稿はサポートされていません。サイト訪問者は登録（会員になる）し、参加する必要があります。
+>匿名でのコメント投稿はサポートされていません。サイト訪問者は参加するには、登録（会員になる）し、サインインする必要があります。
+
 
 ### コメントをページに追加 {#adding-comments-to-a-page}
 
-To add a `Comments`component to a page in author mode, use the component browser to locate
+To add a `Comments` component to a page in author mode, use the component browser to locate
 
 * `Communities / Comments`
 
@@ -41,19 +45,22 @@ To add a `Comments`component to a page in author mode, use the component browser
 
 For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
 
-When the [required client-side libraries](/help/communities/essentials-comments.md#essentials-for-client-side) are included, this is how the `Comments`component appears.
+[必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-comments.md#essentials-for-client-side) 、このようにコンポー `Comments` ネントが表示されます。
 
-![chlimage_1-143](assets/chlimage_1-143.png)
+![chlimage_1-428](assets/chlimage_1-428.png)
 
 >[!NOTE]
 >
->Only one `Comments`component may exist on a page. コミュニティの機能の中には、既にブログ、カレンダー、フォーラム、QnA、レビューなどのコメントが含まれているものもあります。
+>Only one `Comments` component may exist on a page. コミュニティの機能の中には、既にブログ、カレンダー、フォーラム、QnA、レビューなどのコメントが含まれているものもあります。
+
 
 ### コメントの設定 {#configuring-comments}
 
 Select the placed `Comments` component to access and select the `Configure` icon which opens the edit dialog.
 
-![アイコン注釈の設定](assets/configure.png) (英 ![語)](assets/commentssettings.png)
+![アイコンを設定](assets/configure.png)
+
+![commentsettings](assets/commentssettings.png)
 
 #### 「コメント」タブ{#comments-tab}
 
@@ -61,7 +68,7 @@ Select the placed `Comments` component to access and select the `Configure` icon
 
 * **返信を許可**
 
-   このチェックボックスをオンにすると、メンバーは既存のコメントに返信できます。 デフォルト値はオフです。
+   このオプションを選択すると、メンバーは既存のコメントに返信できます。 デフォルト値はオフです。
 
 * **1 ページのコメント数**
 
@@ -69,11 +76,11 @@ Select the placed `Comments` component to access and select the `Configure` icon
 
 * **ファイルのアップロードを許可**
 
-   チェックすると、ファイルをアップロードするオプションにテキスト入力ボックスが表示されます。 デフォルト値はオフです。
+   オンにすると、ファイルをアップロードするオプションにテキスト入力ボックスが表示されます。 デフォルト値はオフです。
 
 * **最大ファイルサイズ**
 
-   「ファイルのアップロードを許可」がオンの場合にのみ関連します。 この値は、アップロードされるファイルのサイズを制限します。 デフォルトは 10 MB です。
+   「ファイルのアップロードを許可」がオンになっている場合にのみ関連します。 この値は、アップロードされるファイルのサイズを制限します。 デフォルトは 10 MB です。
 
 * **メッセージの最大長**
 
@@ -81,15 +88,15 @@ Select the placed `Comments` component to access and select the `Configure` icon
 
 * **許可されるファイルタイプ**
 
-   「ファイルのアップロードを許可」がオンの場合にのみ関連します。 区切り文字「ドット」を含むファイル名拡張子のコンマ区切りリスト。 例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 初期設定は、すべてのファイルタイプが許可されるように指定されない。
+   「ファイルのアップロードを許可」がオンになっている場合にのみ関連します。 区切り文字「。」を含むファイル名拡張子のコンマ区切りリスト。 例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定した場合、指定しなかったファイルは許可されません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **リッチテキストエディター**
 
-   チェックすると、注釈が入力されます。 デフォルト値はオフです。
+   オンの場合、コメントはマークアップと共に入力されます。 デフォルト値はオフです。
 
 * **投票を許可**
 
-   オンにすると、投票を行うオプションにテキスト入力ボックスが表示されます。 デフォルト値はオフです。
+   選択すると、上下に投票するオプションにテキスト入力ボックスが表示されます。 デフォルト値はオフです。
 
 * **フォローを許可**
 
@@ -105,39 +112,39 @@ Under the **User Moderation** tab, specify how the posted comments are managed. 
 
 * **事前モデレート**
 
-   このチェックボックスをオンにすると、コメントは発行サイトに表示される前に承認される必要があります。 デフォルト値はオフです。
+   このオプションを選択すると、コメントが発行サイトに表示される前に、承認される必要があります。 デフォルト値はオフです。
 
 * **コメントを削除**
 
-   選択すると、コメントを投稿したメンバーに対して、コメントを削除する機能が提供されます。 デフォルト値はオフです。
+   オンにすると、コメントを投稿したメンバーに、コメントを削除する機能が与えられます。 デフォルト値はオフです。
 
 * **コメントを拒否**
 
-   オンにした場合、モデレーターはコメントを拒否できます。 デフォルト値はオフです。
+   オンにした場合、モデレーターがコメントを拒否できます。 デフォルト値はオフです。
 
 * **コメントを閉じる / 再度開く**
 
-   このオプションを選択すると、モデレーターはコメントを閉じて再度開くことができます。 デフォルト値はオフです。
+   このオプションを選択すると、モデレーターはコメントを閉じたり、再度開いたりできます。 デフォルト値はオフです。
 
 * **コメントにフラグを設定**
 
-   このオプションを選択すると、メンバーはコメントに不適切なフラグを付けることができます。 デフォルト値はオフです。
+   このオプションを選択すると、メンバーは不適切としてコメントにフラグを付けることができます。 デフォルト値はオフです。
 
 * **フラグ設定理由リスト**
 
-   このオプションを選択すると、コメントに不適切なフラグを付ける理由を、ドロップダウンリストからメンバーが選択できるようになります。 デフォルト値はオフです。
+   このオプションを選択すると、メンバーは、コメントに不適切なフラグを付ける理由をドロップダウンリストから選択できます。 デフォルト値はオフです。
 
 * **カスタムフラグ設定理由**
 
-   このオプションを選択すると、コメントに不適切なフラグを付ける理由をメンバーが自分で入力できるようになります。 デフォルト値はオフです。
+   このオプションを選択すると、コメントに不適切なフラグを付ける場合に、メンバーが自分の理由を入力できます。 デフォルト値はオフです。
 
 * **モデレートのしきい値**
 
-   モデレーターに通知する前に、メンバーがコメントにフラグを付ける必要がある回数を入力します。 初期設定は1回(1)です。
+   モデレーターに通知する前に、メンバーがコメントにフラグを付ける必要がある回数を入力します。 初期設定は1回です。
 
 * **フラグ付けの制限**
 
-   コメントが公開ビューに表示されなくなる前にフラグ付けする必要がある回数を入力します。 This number must be greater than or equal to the **Moderation Threshold**. 初期設定は 5 です。
+   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 This number must be greater than or equal to the **Moderation Threshold**. 初期設定は 5 です。
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
@@ -145,37 +152,37 @@ Under the **Sort Settings** tab, specify how the posted comments are sorted when
 
 * **並べ替えフィールド**
 
-   プルダウンして、またはのいずれかを `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`選択しま `Most Liked`す。
+   プルダウンして、またはのいずれかを選択 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`しま `Most Liked`す。
 
 * **並べ替え順序**
 
-   プルダウンして、またはのいずれかを選 `Ascending` 択しま `Descending`す。
+   プルダウンして、またはのいずれかを選択 `Ascending` しま `Descending`す。
 
 ### カスタムコメントタイプへの変更 {#changing-to-a-custom-comment-type}
 
-コメントリソースタイプを変更すると、コメントシステムはデフォルトを使用してコメントのインスタンスを生成するのではなく、開発者がカスタマイズ（拡張）したインスタンスを生成するようになります。
+コメントリソースタイプを変更すると、コメントシステムは、デフォルトを使用してコメントのインスタンスを生成しなくなり、開発者によってカスタマイズ（拡張）されています。
 
 Once the custom resource types are known, enter [Design Mode](/help/sites-authoring/default-components-designmode.md) and double click the placed `Comments` component to open a dialog with an extra tab.
 
-Under the **Resource Types** tab, specify the custom resourceType for new instances of the `Comments or Voting`components:
+Under the **Resource Types** tab, specify the custom resourceType for new instances of the `Comments or Voting` components:
 
-![chlimage_1-144](assets/chlimage_1-144.png)
+![chlimage_1-429](assets/chlimage_1-429.png)
 
 * **コメントリソースタイプ**
 
-   /apps内の拡張コンポーネント( `comment`単一のコメント)のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
+   /apps内の拡張 `comment` コンポーネント（1つのコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
 
    このリソースは、訪問者がコメントを投稿したときに作成されたUGCのresourceTypeを識別します。
 
 * **投票リソースタイプ**
 
-   /apps内の拡張コンポーネントのresourceType `voting`に移動します。 例：`/apps/social/components/hbs/voting`
+   /apps内の拡張 `voting` コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
 
    このリソースは、訪問者が投票を行ったときに作成されたUGCのリソースタイプを識別します。
 
 * **コメントシステムリソースタイプ**
 
-   /apps内の拡張コンポーネント(コ `comments`メントシステム)のresourceTypeに移動します。 Leave blank unless the page template [dynamically includes](/help/communities/scf.md#add-or-include-a-communities-component) the Comment System in the underlying script instead of being added to the page as a resource (comments node). Learn more by reading about the [{{include}} helper](/help/communities/handlebars-helpers.md#include).
+   /apps内の拡張 `comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 Leave blank unless the page template [dynamically includes](/help/communities/scf.md#add-or-include-a-communities-component) the Comment System in the underlying script instead of being added to the page as a resource (comments node). Learn more by reading about the [{{include}} helper](/help/communities/handlebars-helpers.md#include).
 
 ### サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
