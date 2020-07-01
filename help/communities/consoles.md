@@ -10,20 +10,23 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 13%
 
 ---
 
 
 # コミュニティコンソール {#communities-consoles}
 
-AEM Communitiesコンソールは、グローバルナビゲーションパネルから作成者環境で使用でき、次のような管理タスクにアクセスできます。
+グローバルナビゲーションパネルから作成者環境で使用できるAEM Communitiesコンソールは、次のような管理タスクにアクセスできます。
 
 * [コミュニティサイトの作成](sites-console.md)
 * Adding [groups](groups.md) nested within the site
 * Managing [community site templates](sites.md)
 * Managing [community members](members.md)
-* [ユーザー生成](moderate-ugc.md) (UGC)コンテンツのモデレート
+* [モデレート](moderate-ugc.md) （ユーザー生成コンテンツ）
 * Create [custom badges](badges.md)
 * Configuring the [default storage for UGC](srp-config.md)
 
@@ -34,6 +37,7 @@ In the author environment, after signing in with administrator privileges, the `
 >[!NOTE]
 >
 >In the publish environment, a [community site](sites-console.md) will display an `Administration` menu item when the signed in member has appropriate privileges.
+
 
 ## グローバルナビゲーションパネル {#global-navigation-panel}
 
@@ -56,11 +60,11 @@ To access the various Communities consoles, from global navigation select **navi
 
 * [モデレート](moderation.md)
 
-   モデレートコンソールは、UGCの一括モデレートおよび作成者環境用です。 A similar bulk moderation console is accessible in the publish environment to community members assigned the role of [community moderator](users.md#publishenvironmentusersandgroups) for one or more community sites.
+   モデレートコンソールは、UGCの一括モデレートと作成者環境用です。 A similar bulk moderation console is accessible in the publish environment to community members assigned the role of [community moderator](users.md#publishenvironmentusersandgroups) for one or more community sites.
 
 * [メンバー、グループ](members.md)
 
-   [メンバ]コンソールと[グループ]コンソールは、コミュニティメンバと、発行環境に存在するメンバグループを作成者環境から管理するためのものです。
+   メンバーコンソールとグループコンソールは、作成者環境から発行環境に存在するコミュニティメンバーとメンバーグループを管理するためのものです。
 
 * [レポート](reports.md)
 
@@ -72,4 +76,4 @@ To access the various Communities consoles, from global navigation select **navi
 
 ## ツールコンソール {#tools-console}
 
-To access [Communities Tools](tools.md) (formerly the administration console), from global navigation: **[!UICONTROL Tools > Communities]**
+To access [Communities Tools](tools.md) (formerly the administration console), from global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Communities]**
