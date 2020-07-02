@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 9df949b0069dad7fc1627977097cec5546cd845f
+workflow-type: tm+mt
+source-wordcount: '1558'
+ht-degree: 54%
 
 ---
 
@@ -26,7 +29,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 * SOAP ベース Web サービス
 * OData サービス
 
-データ統合では、OAuth2.0、基本認証、APIキーの認証タイプがすぐに使用でき、Webサービスにアクセスするためのカスタム認証を実装できます。 RESTful サービス、SOAP ベースサービス、OData サービスは AEM クラウドサービスで設定し、リレーショナルデータベース用の JDBC と AEM ユーザープロファイル用のコネクターは、AEM Web コンソールで設定します。
+データ統合では、OAuth2.0、基本認証、およびAPIキーの認証タイプをすぐに使用でき、Webサービスにアクセスするためのカスタム認証を実装できます。 RESTful サービス、SOAP ベースサービス、OData サービスは AEM クラウドサービスで設定し、リレーショナルデータベース用の JDBC と AEM ユーザープロファイル用のコネクターは、AEM Web コンソールで設定します。
 
 ## リレーショナルデータベースの設定 {#configure-relational-database}
 
@@ -85,7 +88,7 @@ AEM Web コンソールでユーザープロファイルコネクター設定を
 ## クラウドサービス設定用フォルダーの構成 {#cloud-folder}
 
 >[!NOTE]
-RESTful、SOAPおよびODataサービス用のクラウドサービスを設定するには、クラウドサービスフォルダーの設定が必要です。
+RESTful、SOAP、ODataサービス用のクラウドサービスを設定するには、クラウドサービスフォルダーの設定が必要です。
 
 All cloud service configurations in AEM are consolidated in the `/conf` folder in AEM repository. デフォルトの場合、`conf` フォルダーには `global` フォルダーが含まれています。このフォルダーで、クラウドサービスの設定を作成することができます。ただし、このフォルダーを手動でクラウド設定用に有効にする必要があります。追加のフォルダーを `conf` フォルダー内に作成して、クラウドサービスの作成と編集を行うこともできます。
 
@@ -106,7 +109,7 @@ All cloud service configurations in AEM are consolidated in the `/conf` folder i
 
 ## RESTful Web サービスの設定 {#configure-restful-web-services}
 
-RESTful web service can be described using [Swagger specifications](https://swagger.io/specification/) in JSON or YAML format in a Swagger definition file. AEMクラウドサービスでRESTful Webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認します。
+RESTful web service can be described using [Swagger specifications](https://swagger.io/specification/) in JSON or YAML format in a Swagger definition file. AEM cloud servicesでRESTful Webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認してください。
 
 RESTful サービスを設定するには、以下の手順を実行します。
 
@@ -117,15 +120,15 @@ RESTful サービスを設定するには、以下の手順を実行します。
 1. Tap **[!UICONTROL Create]** to open the **[!UICONTROL Create Data Source Configuration wizard]**. 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL RESTful サービス]**」を選択します。必要な場合は、設定のサムネイル画像を選択して「**[!UICONTROL 次へ]**」をタップします。
 1. 以下に示す RESTful サービスの詳細情報を指定します。
 
-   * 「Swaggerソース」ドロップダウンから「URL」または「ファイル」を選択し、それに応じてSwagger URLをSwagger定義ファイルに指定するか、ローカルファイルシステムからSwaggerファイルをアップロードします。
-   * Swaggerソースの入力に基づいて、次のフィールドに値が事前入力されます。
+   * 「Swagger Source」ドロップダウンから「URL」または「File」を選択し、Swagger URLをSwagger定義ファイルに指定するか、ローカルファイルシステムからSwaggerファイルをアップロードします。
+   * Swagger Source入力に基づいて、次のフィールドに値が事前に入力されます。
 
-      * スキーム：REST APIで使用される転送プロトコルです。 ドロップダウンリストに表示されるスキームの種類の数は、Swaggerソースで定義されているスキームによって異なります。
-      * ホスト：REST APIを提供するホストのドメイン名またはIPアドレス。 このフィールドは必須です。
-      * ベースパス：すべてのAPIパスのURLプレフィックス。 これはオプションのフィールドです。\
-         必要に応じて、これらのフィールドの事前入力値を編集します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、APIキー、またはカスタム認証 — を使用してRESTfulサービスにアクセスし、認証の詳細を指定します。
-   認証タイプとして **[!UICONTROL APIキー]** を選択する場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはパラメーターとしてクエリできます。 「場所」ドロップダウンリストから **[!UICONTROL 、次のいずれかのオプションを選択し、「クエリ名」フィールドにヘッダーの名前またはパラメーターのパラ]** メーターを指定します **** 。
+      * スキーム： REST APIで使用される転送プロトコルです。 ドロップダウンリストに表示されるスキームの種類の数は、Swaggerソースで定義されているスキームによって異なります。
+      * ホスト： REST APIを提供するホストのドメイン名またはIPアドレス。 このフィールドは必須です。
+      * 基本パス： すべてのAPIパスのURLプレフィックス。 これはオプションのフィールドです。\
+         必要に応じて、これらのフィールドの事前入力された値を編集します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「APIキー」、「カスタム認証」）を選択してRESTfulサービスにアクセスし、認証の詳細を指定します。
+   認証タイプとして **[!UICONTROL APIキー]** を選択する場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。 「 **[!UICONTROL 場所]** 」ドロップダウンリストから次のオプションの1つを選択し、それに応じて、ヘッダーの名前またはクエリパラメーターの名前を「 **[!UICONTROL パラメーター名]** 」フィールドに指定します。
 
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
 
@@ -142,7 +145,10 @@ SOAP ベースの Web サービスは、[Web Services Description Language（WSD
 
    * Web サービスの WSDL URL を指定します。
    * サービスエンドポイント. WSDLで指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — SOAPサービスにアクセスし、認証の詳細を指定します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」、「X509トークン」）を選択してSOAPサービスにアクセスし、認証の詳細を入力します。
+
+      認証の種類として「X509トークン」を選択した場合は、X509証明書を設定します。 詳しくは、証明書の [設定を参照してください](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
+「 **[!UICONTROL Key Alias]** 」フィールドに、X509証明書のKeyStoreエイリアスを指定します。 認証要求が有効なままになるまでの時間を秒単位でTime To Live **** Fieldに指定します。 オプションで、メッセージの本文ヘッダーとタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
 
 1. 「**[!UICONTROL 作成]**」をタップして、SOAP Web サービス用のクラウド設定を作成します。
 
@@ -161,7 +167,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 1. 以下に示す OData サービスの詳細情報を指定します。
 
    * 設定する OData サービスのルート URL を指定します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — を使用してODataサービスにアクセスし、それに従って認証の詳細を提供します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」）を選択してODataサービスにアクセスし、認証の詳細を入力します。
    >[!NOTE]
    OData エンドポイントをサービスルートとして使用して Microsoft Dynamics サービスに接続する場合は、OAuth 2.0 認証を選択する必要があります。
 
