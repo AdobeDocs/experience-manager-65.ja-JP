@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: AEM 6.5 Administering User Guide
+user-guide-title: AEM 6.5管理ユーザーガイド
 translation-type: tm+mt
-source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+workflow-type: tm+mt
+source-wordcount: '622'
+ht-degree: 96%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [翻訳の機能強化](tc-enhancements.md)
    + [翻訳のベストプラクティス](tc-bp.md)
    + [AEM FAQ](aem-faqs.md)
-+ 操作 {#operations}
++ 運用 {#operations}
    + [ダッシュボード](dashboards.md)
    + [操作ダッシュボード](operations-dashboard.md)
    + [バックアップと復元](backup-and-restore.md)
@@ -90,7 +93,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [Content Disposition フィルター](content-disposition-filter.md)
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライズパーソナライゼーション](personalization.md)
+   + [パーソナライズ機能](personalization.md)
    + [ContextHub の設定](contexthub-config.md)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
@@ -100,7 +103,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [ランディングページと Adobe Analytics の統合](integrating-landing-pages-with-adobe-analytics.md)
 + e コマース {#ecommerce}
    + [e コマース](ecommerce.md)
-   + [概念](concepts.md)
+   + [概念 ](concepts.md)
    + [汎用eコマースの管理](generic.md)
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
@@ -115,7 +118,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
    + [コンポーネントデータと Adobe Analytics プロパティとのマッピング](adobeanalytics-mapping.md)
    + [Adobe Analytics のビデオトラッキングの設定](adobeanalytics-video.md)
-   + [コンテンツの HTTP2 配信の FAQ](scene7-http2faq.md)
+   + [コンテンツの HTTP/2 配信の FAQ](scene7-http2faq.md)
    + [Adobe Campaign 統合に関するトラブルシューティング](troubleshooting-campaignintegration.md)
    + [SharePoint Connector のライセンス、著作権情報および免責事項](sharepoint-connector-licenses.md)
    + [SharePoint コネクター](sharepoint-connector.md)
@@ -123,7 +126,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [Adobe Campaign Classic との統合](campaignonpremise.md)
    + [関連するコミュニティ記事](related-community-articles.md)
    + [Adobe Campaign Standard との統合](campaignstandard.md)
-   + [Flash ビューアのサポート終了](flash-viewers-eol.md)
+   + [Flash ビューアのサポート終了に関する通知](flash-viewers-eol.md)
    + [製品フィード](product-feed.md)
    + [Adobe Dynamic Tag Management との統合](dtm.md)
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
@@ -142,11 +145,11 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [Adobe Marketing Cloud との統合](marketing-cloud.md)
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
-   + [Adobe I/Oを使用したAdobe targetとの統合](integration-ims-adobe-io.md)
+   + [Adobe I/O を使用した Adobe Target との統合](integration-ims-adobe-io.md)
    + [Adobe 分類](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)
-   + [エクスペリエンスフラグメントのAdobe targetへの書き出し](experience-fragments-target.md)
+   + [エクスペリエンスフラグメントのAdobe Targetへの書き出し](experience-fragments-target.md)
    + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
    + [Livefyre との統合](livefyre.md)
 + ベストプラクティス {#bestpractices}
@@ -158,7 +161,6 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
 + コンテンツ管理 {#contentmanagement}
    + [パッケージの使用方法](package-manager.md)
-   + [アセットのワークフローオフローダー](workflow-offloader.md)
    + [タグの管理](tags.md)
    + [ページエクスポーター](page-exporter.md)
    + [クラシック UI のタグ付けコンソール](classic-console.md)
