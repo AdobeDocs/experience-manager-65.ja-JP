@@ -3,17 +3,17 @@ title: アセットの翻訳のベストプラクティス
 description: 翻訳された各バージョンを同期し、翻訳ワークフローを合理化するための、アセットの効率的な管理に関するベストプラクティス。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 82%
+source-wordcount: '421'
+ht-degree: 80%
 
 ---
 
 
 # アセットの翻訳のベストプラクティス {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager Assetsは、デジタルアセットのバイナリ、メタデータおよびタグを複数のロケールに変換し、翻訳済みアセットを管理するための多言語ワークフローをサポートしています。 詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
+Adobe Experience Managerアセットは、デジタルアセットのバイナリ、メタデータ、タグを複数のロケールに変換し、翻訳済みアセットを管理するための多言語ワークフローをサポートしています。 詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
 
 アセットの管理を効率化して、翻訳された各バージョンが確実に同期されるようにするには、翻訳ワークフローを実行する前にアセットの[言語コピー](preparing-assets-for-translation.md)を作成します。
 
@@ -32,13 +32,15 @@ Adobe Experience Manager Assetsは、デジタルアセットのバイナリ、�
    * [ファイルデータストアの設定](/help/sites-deploying/data-store-config.md)
    * [Amazon S3 データストアの設定](/help/sites-deploying/data-store-config.md)
 
-1. [DAM MetaDataライトバックワークフローを無効にします](/help/sites-administering/workflow-offloader.md#disable-offloading) 。
+<!--
+1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
 
-   名前が示すとおり、「DAM メタデータの書き戻し」ワークフローはメタデータをバイナリファイルに書き直します。メタデータは翻訳後に変更になるので、バイナリファイルに書き戻すと言語コピーに別のバイナリが生成されます。
+   As the name suggests, the [!UICONTROL DAM Metadata Writeback] workflow rewrites the metadata to the binary file. Because the metadata changes after translation, writing it back to the binary file generates a different binary for a language copy.
 
    >[!NOTE]
    >
-   >「DAM メタデータの書き戻し」ワークフローを無効化すると、アセットバイナリで XMP メタデータの書き戻しがオフになります。結果として、将来メタデータに加えられる変更はアセット内に保存されなくなります。このワークフローを無効にする前に、結果を評価してください。
+   >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
+-->
 
 1. 「最終変更日を設定」ワークフローを有効化します。
 
