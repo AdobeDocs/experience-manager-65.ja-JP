@@ -10,10 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: c3e4b68c10496cac8f75d009fdd9ebd777826850
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
 workflow-type: tm+mt
-source-wordcount: '2771'
-ht-degree: 68%
+source-wordcount: '2403'
+ht-degree: 77%
 
 ---
 
@@ -111,7 +111,7 @@ Experience Manager インスタンスとトポロジとのインタラクショ�
 Discovery Service によって、トポロジとの接続を確立および維持するために、定期的な POST 要求（ハートビート）が Topology Connector サービスに送信されます。Topology Connectorサービスは、トポロジに参加できるIPアドレスまたはホスト名の許可リストを維持します。
 
 * インスタンスをトポロジに参加させるには、ルートメンバーの Topology Connector サービスの URL を指定します。
-* インスタンスがトポロジを結合できるようにするには、ルートメンバーのTopology Connectorサービスの許可リストにそのインスタンスを追加します。
+* インスタンスがトポロジに参加できるようにするには、ルートメンバーの Topology Connector サービスの許可リストにインスタンスを追加します。
 
 Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apache.sling.discovery.impt.Config サービスの以下のプロパティを設定します。
 
@@ -169,7 +169,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 1. 「 Configure Discovery Service」をクリックします。
 1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URLは、https://rootservername:4502/libs/sling/topology/connectorの形式で指定します。
 
-トポロジのルートメンバーで以下の手順を実行します。この手順では、他のトポロジメンバの名前がDiscovery Service許可リストに追加されます。
+トポロジのルートメンバーで以下の手順を実行します。この手順では、ルートメンバーの Discovery Service 許可リストに他のトポロジメンバーの名前を追加します。
 
 1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
 1. Main／Topology Management をクリックします。
@@ -200,6 +200,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
    * 有効：このインスタンスはこのトピックのジョブを使用します。
    * 無効：このインスタンスはこのトピックのジョブを使用しません。
    * 排他：このインスタンスはこのトピックのみのジョブを使用します。
+
    **注意：**&#x200B;あるトピックに対して「排他」を選択すると、他のすべてのトピックは自動的に「無効」に設定されます。
 
 ### インストール済みの JobConsumer {#installed-job-consumers}
@@ -210,15 +211,18 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 |---|---|---|
 | ／ | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling とともにインストールされます。下位互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
 | com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
-| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | DAM アセット更新オフローダーワークフローによって生成されたジョブを処理します。 |
+
+<!--
+| com/adobe/granite/workflow/offloading |com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer |Processes jobs that the DAM Update Asset Offloader workflow generates. |
+-->
 
 ### インスタンスのトピックの無効化と有効化 {#disabling-and-enabling-topics-for-an-instance}
 
-Apache Sling Job Consumer Managerサービスには、トピックの許可リストおよびブロックリストのプロパティが用意されています。 これらのプロパティを設定して、Experience Manager インスタンスでの特定のトピックの処理を有効または無効にします。
+Apache Sling JobConsumer Manager サービスによって、トピックの許可リストプロパティとブロックリストプロパティが提供されます。これらのプロパティを設定して、Experience Manager インスタンスでの特定のトピックの処理を有効または無効にします。
 
 **注意：**&#x200B;インスタンスがトポロジに属している場合は、トポロジ内の任意のコンピューターでオフロードするブラウザーを使用して、トピックを有効または無効にすることもできます。
 
-有効なトピックのリストを作成するロジックでは、最初に許可リスト内のすべてのトピックが許可され、次にブロックリスト上のトピックが削除されます。 デフォルトでは、すべてのトピックが有効(許可リスト値は `*`)で、トピックは無効(ブロックリストに値がない)になっています。
+有効化されたトピックのリストを作成するロジックでは、まず許可リスト内のすべてのトピックを許可した後、ブロックリスト内のトピックを削除します。By default, all topics are enabled (the allow list value is `*`) and no topics are disabled (the block list has no value).
 
 Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以下のプロパティを設定します。`sling:OsgiConfig` ノードの場合、JobConsumer Manager サービスの PID は、org.apache.sling.event.impl.jobs.JobConsumerManager です。
 
@@ -316,35 +320,37 @@ Use a specific format for the ***Name*** property of the replication agents so t
 * Open the Web Console and, in the Sling Settings, find the value of the Sling ID property ([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)). このメソッドは、インスタンスがまだトポロジに含まれていない場合に役立ちます。
 * インスタンスが既にトポロジの一部である場合は、トポロジブラウザーを使用します。
 
-## DAM アセットの処理のオフロード {#offloading-the-processing-of-dam-assets}
+<!--
+## Offloading the Processing of DAM Assets {#offloading-the-processing-of-dam-assets}
 
-DAM で追加または更新されたアセットのバックグラウンド処理が特定のインスタンスによって実行されるように、トポロジのインスタンスを設定します。
+Configure the instances of a topology so that specific instances perform the background processing of assets that are added or updated in DAM.
 
 By default, Experience Manager executes the [!UICONTROL DAM Update Asset] workflow when a DAM asset changes or one is added to DAM. Change the default behavior so that Experience Manager instead executes the [!UICONTROL DAM Update Asset Offloader] workflow. This workflow generates a JobManager job that has a topic of `com/adobe/granite/workflow/offloading`. Then, configure the topology so that the job is offloaded to a dedicated worker.
 
 >[!CAUTION]
 >
->ワークフローのオフロードで使用する場合、ワークフローは一時的なものではありません。 For example, the [!UICONTROL DAM Update Asset] workflow must not be transient when used for asset offloading. To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
+>No workflow should be transient when used with workflow offloading. For example, the [!UICONTROL DAM Update Asset] workflow must not be transient when used for asset offloading. To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
 
-以下の手順では、次の特徴を持つオフロードトポロジを想定しています。
+The following procedure assumes the following characteristics for the offloading topology:
 
-* 1 つ以上の Experience Manager インスタンスがオーサーインスタンスであり、ユーザーは DAM アセットの追加または更新のためにこのインスタンスとやり取りします。
-* ユーザーは、DAM アセットを処理する 1 つ以上の Experience Manager インスタンスと直接的にはやり取りしません。これらのインスタンスは、DAM アセットのバックグラウンド処理専用です。
+* One or more Experience Manager instance are authoring instances that users interact with for adding or updating DAM assets.
+* Users to do not directly interact with one or more Experience Manager instances that process the DAM assets. These instances are dedicated to the background processing of DAM assets.
 
-1. 各 Experience Manager インスタンスで、ルート Topology Connector を指すように Discovery Service を設定します（[トポロジメンバーシップの設定](#title4)を参照）。
-1. 接続するインスタンスが許可リスト上に来るようにルートの地形コネクタを設定します。
+1. On each Experience Manager instance, configure the Discovery Service so that it points to the root Topography Connector. (See [Configuring Topology Membership](#title4).)
+1. Configure the root Topography Connector so that the connecting instances are on the allow list.
 1. Open Offloading Browser and disable the `com/adobe/granite/workflow/offloading` topic on the instances with which users interact to upload or change DAM assets.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
 1. On each instance that users interact with to upload or change DAM assets, configure workflow launchers to use the [!UICONTROL DAM Update Asset Offloading] workflow:
 
-   1. ワークフローコンソールを開きます。
-   1. 「ランチャー」タブをクリックします。
-   1. Locate the two Launcher configurations that execute the [!UICONTROL DAM Update Asset] workflow. One launcher configuration event type is Node Created, and the other type is Node Modified.
-   1. Change both event types so that they execute the [!UICONTROL DAM Update Asset Offloading] workflow. (For information about launcher configurations, see [Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md).)
+    1. Open the Workflow console.
+    1. Click the Launcher tab.
+    1. Locate the two Launcher configurations that execute the [!UICONTROL DAM Update Asset] workflow. One launcher configuration event type is Node Created, and the other type is Node Modified.
+    1. Change both event types so that they execute the [!UICONTROL DAM Update Asset Offloading] workflow. (For information about launcher configurations, see [Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md).)
 
 1. On the instances that perform the background processing of DAM assets, disable the workflow launchers that execute the [!UICONTROL DAM Update Asset] workflow.
+-->
 
 ## 参考情報 {#further-reading}
 
