@@ -1,25 +1,25 @@
 ---
-title: Adobe Experience Managerアセットについて
-description: デジタルアセット管理とその使用例、アドビのExperience Managerアセットの提供内容について説明します。
+title: 概要 [!DNL Adobe Experience Manager Assets]。
+description: デジタルアセット管理、その使用例、 [!DNL Adobe Experience Manager Asset] およびオファーについて説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 0d5b3a442756e95c15cb01c4117a83b761dc8367
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 54%
+source-wordcount: '856'
+ht-degree: 35%
 
 ---
 
 
-# アセットの管理 {#administering-assets}
+# DAMソリュ [!DNL Adobe Experience Manager Assets] ーションについて {#administering-assets}
 
-アセットは、Experience Managerプラットフォームと完全に統合されたDigital Asset Management(DAM)ツールで、デジタルアセットの共有と配布を企業で行うことができます。 組織のユーザーは、Web、印刷およびデジタル配信に使用する画像、ビデオ、ドキュメント、オーディオクリップ、リッチメディア（Flash ファイルなど）を管理、格納したり、これらのデジタルアセットにアクセスしたりできます。
+[!DNL Assets] は、プラットフォームに不可欠なツールで、企業がデジタルアセットを管理および配信できるようにするDigital Asset Management(DAM)ツールです。 [!DNL Experience Manager] 画像、ビデオ、ドキュメント、オーディオクリップ、3Dファイル、リッチメディアなど、Web上で使用したり、印刷したり、デジタル配信用に様々な種類のデジタルアセットを管理、保存、アクセスできます。
 
 ## What is Digital Asset Management? {#what-is-digital-asset-management}
 
-AEM Assets は、組織の主要なデジタルアセットを、企業全体で共有および配布する機能を提供します。組織のユーザーは、画像、グラフィック、オーディオ、ビデオおよびドキュメントなどのデジタルアセットを、Web インターフェイス（または CIFS や WebDAV フォルダー）を使用して格納、管理したり、これらのデジタルアセットにアクセスしたりできます。
+[!DNL Assets]AEM は、組織の主要なデジタルアセットを、企業全体で共有および配布する機能を提供します。組織のユーザーは、画像、グラフィック、オーディオ、ビデオおよびドキュメントなどのデジタルアセットを、Web インターフェイス（または CIFS や WebDAV フォルダー）を使用して格納、管理したり、これらのデジタルアセットにアクセスしたりできます。
 
-Experience Managerに統合されたアセット機能を使用すると、次のことが可能になります。
+[!DNL Assets] の機能 [!DNL Experience Manager] を使用すると、次のことができます。
 
 * 様々なファイル形式の画像、ドキュメント、オーディオファイルおよびビデオファイルを追加および共有する。
 * タグ、ライトボックス、星（お気に入り）でアセットをグループ化して、アセットを管理します。 アセットに注釈を追加する。
@@ -28,18 +28,18 @@ Experience Managerに統合されたアセット機能を使用すると、次�
 * 拡大縮小や画像フィルターの追加など、画像編集機能を実行する。WebDAV または CIFS フォルダーを使用して、複数のデジタルアセットを同時に読み込んだり、書き出したりする。
 * ワークフローおよび通知を使用して、アセットのセットに関する結合処理とダウンロードを許可し、アセットへのアクセス権を管理する。
 
-### Experience ManagerアセットはExperience Managerサイトと統合されています。 {#aem-assets-fully-integrated-in-cq-wcm}
+### [!DNL Experience Manager Assets] は、 [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
 
-アセットはSitesと完全に統合され、すべての機能をシームレスに使用できます。 アセットリポジトリ内で管理されるデジタルアセットは、Webページの作成時に、コンテンツファインダーを介してアクセスできます。
+[!DNL Assets] すべての用途に対して完全に統合 [!DNL Sites] され、シームレスに機能します。 例えば、Webページの作成時に、 [!DNL Sites] 作成者はコンテンツファインダーでデジタルアセットを検索して使用できます。 のユーザーインターフェイス [!DNL Assets] は、のユーザーインターフェイスと同じで [!DNL Sites]す。 詳しくは、「サイト [の概要](/help/sites-authoring/page-authoring.md) 」を参照してください。
 
-基本的なユーザーインターフェイスは、サイトと同じです。 詳しくは、「サイト [の概要](/help/sites-authoring/page-authoring.md) 」を参照してください。
+基本的なユーザインターフェイスは、のインターフェイスと同じで [!DNL Sites]す。 詳しくは、「サイト [の概要](/help/sites-authoring/page-authoring.md) 」を参照してください。
 
 ### Digital Asset Management versus image component {#digital-asset-management-versus-image-component}
 
 画像をDAMリポジトリに配置するか、画像コンポーネントを使用するかを決定する際は、画像のライフサイクルを考慮します。
 
 * 画像のライフサイクルがページと同じ場合は、画像コンポーネントを使用します。
-* 画像にライフサイクルが個別に設定されている場合、例えば画像を 2 回使用する場合や WCM の外部で使用する場合は、 Assets を使用します。
+* If the image has a separate life cycle, for example, if you use the image twice or outside WCM, use [!DNL Assets].
 
 ## What are digital assets? {#what-are-digital-assets}
 
@@ -49,41 +49,41 @@ Experience Managerに統合されたアセット機能を使用すると、次�
 
 >[!CAUTION]
 >
->大量のアセット（特に画像）をアップロードまたは編集すると、Experience Managerインスタンスのパフォーマンスに影響する場合があります。
+>Uploading and/or editing a large volume of assets (particularly images) can impact the performance of your [!DNL Experience Manager] instance.
 
-### Experience Managerアセットの用語 {#aem-assets-terminology}
+### [!DNL Experience Manager Assets] 用語 {#aem-assets-terminology}
 
-Experience Managerでデジタルアセットを操作する場合、次の用語を理解する必要があります。
+When working with digital assets in [!DNL Experience Manager], you need to understand the following terminology:
 
-* **コレクション** ：物理的な場所（フォルダー）、共通のプロパティ（保存された検索フォルダー）またはユーザー選択（ライトボックスフォルダー）に基づく、アセットのコレクションです。
+* **コレクション**: 物理的な場所（フォルダー）、共通のプロパティ（保存された検索フォルダー）またはユーザー選択（ライトボックスのフォルダー）に基づくアセットのコレクションです。
 
-* **Metadata** Assets have metadata; 例えば、作成者、有効期限、DRM情報(Digital Rights Management)などがあります。 メタデータは、アクセスが制御されます。 Assets では、追加設定なしに、次の共通の各種メタデータスキーマがサポートされます。
+* **メタデータ**[!DNL Assets] はメタデータを持つ。 例えば、作成者、有効期限、DRM情報(Digital Rights Management)などがあります。 メタデータは、アクセスが制御されます。[!DNL Assets] では、追加設定なしに、次の共通の各種メタデータスキーマがサポートされます。
 
    * Dublin Core：作成者、説明、日付、件名などが含まれます。
    * IPTC：イベント、モデル、場所などが含まれます。
    * WCM: ページプロパティ、 [!UICONTROL オン時間] 、 [!UICONTROL オフ時間]などを含みます。
 
-* **アセットのタグ付け** 、分類は可能です。 タグの使用およびタグの管理を参照してください。
+* **タグ付け**: [!DNL Assets] は、タグ付けと分類が可能です。 詳しくは、アセットの [編成を参照してください](/help/assets/organize-assets.md)。
 
-* **レンディション** ：レンディションは、アセットのバイナリ表現です。 アセットは、常に（アップロードされたファイルの）一次表現を持ちます。アセットは、例えば、カスタマイズされたワークフロー手順によって作成された、またはアセットがアップロードされた際に作成された、任意の数の追加の表現を持つことができます。レンディションには、様々なサイズや解像度のものがあります。また、透かしが追加されていたり、その他の変更された特徴を持つものもあります。
+* **レンディション**: レンディションとは、アセットのバイナリ表現です。 [!DNL Assets] 常に主要な表現（アップロードされたファイルの表現）を持ちます。 アセットは、例えば、カスタマイズされたワークフロー手順によって作成された、またはアセットがアップロードされた際に作成された、任意の数の追加の表現を持つことができます。レンディションには、様々なサイズや解像度のものがあります。また、透かしが追加されていたり、その他の変更された特徴を持つものもあります。
 
-* **バージョン** ：バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。 これにより、以前のバージョンにアセットを復元できます。See [versioning in Assets](managing-assets-touch-ui.md#asset-versioning).
+* **バージョン**: バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。 これにより、以前のバージョンにアセットを復元できます。See [versioning in Assets](managing-assets-touch-ui.md#asset-versioning).
 
-* **サブアセット** ：サブアセットは、例えば、Adobe PhotoshopファイルのレイヤーやPDFファイルのページなど、アセットを構成するアセットです。  Assets では、サブアセットをアセットと同じように管理できます。
+* **サブアセット**: サブアセットとは、ファイル内のレイヤーやPDFファイル内のページなど、アセットを構成するアセ [!DNL Adobe Photoshop] ットのことです。 In [!DNL Assets], you can manage sub-assets as you would assets.
 
 ### How to work with assets {#how-to-work-with-assets}
 
-アセットまたはコレクションに対してアクションを実行します。アクションでは、アセット、コレクションおよびレンディションを作成したり変更したりできます。アセットに対して実行する基本的な操作の多く(アップロード、削除、更新、サブアセットの保存 — 事前設定済みのワークフローをトリガー)。 これらのアクションは、 Assets で自動的にオンになり、 Assets メディアハンドラーで詳細が記述されます。
+アセットまたはコレクションに対してアクションを実行します。アクションでは、アセット、コレクションおよびレンディションを作成したり変更したりできます。アセットに対して実行する基本的な操作の多く(アップロード、削除、更新、サブアセットの保存 — 事前設定済みのワークフローをトリガー)。 These are automatically turned on in [!DNL Assets] and are described in detail in [!DNL Assets] media handlers.
 
 次の事前設定済みワークフローで実行できるタスクです。
 
-* リポジトリへのアセットの保存またはリポジトリからのアセットの削除。
-* アセットのメタデータの抽出および保存。個々のメタデータ項目は XMP として保存されます。
-* アセットのレンディションとサムネールの生成。必要に応じた自動リサイズおよびトリミングも含まれます。
-* 必要に応じたアセットのトランスコード。例えば、モバイルおよび Web で使用するビデオは 24 fps、ダウンロード用ビデオは 30 fps にトランスコードされます。モバイルおよび Web で使用するオーディオは 128 kbps、ダウンロード用オーディオは 192 kbps にトランスコードされます。
+* アセットをリポジトリに保存または削除します。
+* アセットのメタデータを抽出し、保存します。 個々のメタデータ項目はXMPとして保存されます。
+* アセットのレンディションとサムネールを生成する、 必要に応じて、自動サイズ変更や切り抜きを含めます。
+* 必要に応じてアセットをトランスコードします。 例えば、モバイルおよびWebでの使用に使用するビデオは、24フレーム/秒でトランスコードされ、30フレーム/秒のビデオをダウンロードします。 モバイルおよびWebでの使用に使用するオーディオは128 Kbpsでトランスコードされ、192 Kbpsでのダウンロード用のオーディオです。
 
 また、ワークフローを手動で適用することもできます。デフォルトワークフローのリストについては、[ Assets メディアハンドラー](/help/assets/media-handlers.md)を参照してください。
 
-## Experience ManagerアセットとMediaLibrary {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] および [!DNL MediaLibrary] {#cq-dam-vs-cq-medialibrary}
 
 相違点について詳しくは、 [アセットとMediaLibrary](/help/assets/medialibrary.md) （英語のみ）を参照してください。
