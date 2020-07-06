@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: b7c790681034e9950aa43738310f7af8b1dd0085
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 48%
 
 ---
 
@@ -25,12 +28,12 @@ source-git-commit: b7c790681034e9950aa43738310f7af8b1dd0085
 
 ## 要件 {#requirements}
 
-* [MySQL](#mysql-configuration)：リレーショナルデータベース
-* [Apache Solr](#solr-configuration)：検索プラットフォーム
+* [MySQL](#mysql-configuration)：リレーショナルデータベース.
+* [Apache Solr](#solr-configuration)：検索プラットフォーム.
 
 >[!NOTE]
 >
->デフォルトのストレージ設定は、etc path (`/conf/global/settings/community/srpc/defaultconfiguration`)ではなくconf path(`/etc/socialconfig/srpc/defaultconfiguration`)に保存されます。 デフォルトのsrpを期待どおりに動作させ [るには](#zerodt-migration-steps) 、移行手順に従うことをお勧めします。
+>デフォルトのストレージ設定は、etc path (`/conf/global/settings/community/srpc/defaultconfiguration`)ではなくconf path(`/etc/socialconfig/srpc/defaultconfiguration`)に保存されるようになりました。 defaultsrpを期待どおりに機能させるには、 [移行手順に従うようお勧めします](#zerodt-migration-steps) 。
 
 
 ## リレーショナルデータベースの設定 {#relational-database-configuration}
@@ -47,17 +50,17 @@ For installation and configuration details, see [MySQL Configuration for DSRP](d
 
 Oak と SRP のコレクションがどちらも高頻度で使用される場合は、パフォーマンス上の理由から 2 つ目の Solr をインストールすることもできます。
 
-実稼働環境では、SolrCloudモードは、スタンドアロンモード（単一のローカルSolrセットアップ）に比べてパフォーマンスが向上します。
+実稼働環境では、SolrCloudモードを使用すると、スタンドアロンモード（ローカルで単一のSolr設定）よりもパフォーマンスが向上します。
 
 インストールと設定について詳しくは、[SRP 向け Solr 設定](solr.md)を参照してください。
 
 ### DSRP の選択 {#select-dsrp}
 
-The [Storage Configuration console](srp-config.md) allows for the selection of the default storage configuration, which identifies which implementation of SRP to use.
+[ストレージ設定コンソール](srp-config.md) では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 オーサー環境でストレージ設定コンソールにアクセスするには
 
-* 管理者権限でサインイン
+* 管理者権限でサインインする
 * From the **main menu**
 
    * Select **[!UICONTROL Tools]** (from the left hand pane)
@@ -67,9 +70,8 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
       * As an example, the resulting location is: [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
       >[!NOTE]
       >
-      >デフォルトのストレージ設定は、etc path (`/conf/global/settings/community/srpc/defaultconfiguration`)ではなくconf path(`/etc/socialconfig/srpc/defaultconfiguration`)に保存されます。 デフォルトのsrpを期待どおりに動作させ [るには](#zerodt-migration-steps) 、移行手順に従うことをお勧めします。
-
-![chlimage_1-128](assets/chlimage_1-128.png)
+      >デフォルトのストレージ設定は、etc path (`/conf/global/settings/community/srpc/defaultconfiguration`)ではなくconf path(`/etc/socialconfig/srpc/defaultconfiguration`)に保存されるようになりました。 defaultsrpを期待どおりに機能させるには、 [移行手順に従うようお勧めします](#zerodt-migration-steps) 。
+   ![chlimage_1-128](assets/chlimage_1-128.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **データベース設定**
@@ -78,13 +80,13 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
 
       MySQL接続に指定する名前は、 [JDBC OSGi設定で入力した名前と同じである必要があります](dsrp-mysql.md#configurejdbcconnections)
 
-      *default*:コミュニティ
+      *default*: コミュニティ
 
    * **[!UICONTROL データベース名]**
 
-      init_schema.sqlスクリプ [トのスキーマに与えられた名](dsrp-mysql.md#obtain-the-sql-script) 前
+      [init_スキーマ.sql](dsrp-mysql.md#obtain-the-sql-script) script内のスキーマに指定された名前
 
-      *default*:コミュニティ
+      *default*: コミュニティ
 
 * **SolrConfiguration**
 
@@ -96,7 +98,7 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
 
    * **[!UICONTROL Solr URL]**
 
-      *default*:https://127.0.0.1:8983/solr/
+      *default*: https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr コレクション]**
 
@@ -104,15 +106,15 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
-### デフォルトのSRPのダウンタイム移行手順が不要 {#zerodt-migration-steps}
+### defaultsrpのダウンタイムのない移行手順 {#zerodt-migration-steps}
 
-次の手順に従って、デフォルトのSRPページhttp://localhost:4502/communities/admin/defaultsrpが期待どおりに動 [作する](http://localhost:4502/communities/admin/defaultsrp) ことを確認します。
+次の手順に従って、defaultsrpページhttp://localhost:4502/communities/admin/defaultsrp [](http://localhost:4502/communities/admin/defaultsrp) が期待どおりに動作することを確認します。
 
-1. パスの名前をに変更し、シ `/etc/socialconfig` ステ `/etc/socialconfig_old`ム設定がjsrp（デフォルト）にフォールバックされるようにします。
-1. defaultsrpページhttp://localhost:4502/communities/admin/defaultsrpに移動し [ます](http://localhost:4502/communities/admin/defaultsrp)。ここで、jsrpが設定されています。 送信ボタン **[!UICONTROL をクリックし]** 、に新しいデフォルト設定ノードを作成しま `/conf/global/settings/community/srpc`す。
-1. 作成したデフォルト設定を削除しま `/conf/global/settings/community/srpc/defaultconfiguration`す。
-1. 前の手順で削除し `/etc/socialconfig_old/srpc/defaultconfiguration` たノード()の代わりに、古い`/conf/global/settings/community/srpc/defaultconfiguration`設定をコピーします。
-1. 古いetcノードを削除しま `/etc/socialconfig_old`す。
+1. パスの名前をに変更 `/etc/socialconfig` し `/etc/socialconfig_old`ます。これにより、システム設定がjsrp(default)にフォールバックされます。
+1. defaultsrpページhttp://localhost:4502/communities/admin/defaultsrp [](http://localhost:4502/communities/admin/defaultsrp)に移動します。ここで、jsrpが設定されています。 「 **[!UICONTROL submit]** 」ボタンをクリックして、新しいデフォルト設定ノードがに作成され `/conf/global/settings/community/srpc`ます。
+1. 作成したデフォルト設定を削除 `/conf/global/settings/community/srpc/defaultconfiguration`します。
+1. 前の手順で削除したノード( `/etc/socialconfig_old/srpc/defaultconfiguration``/conf/global/settings/community/srpc/defaultconfiguration`)の代わりに、古い設定をコピーします。
+1. 古いetcノードを削除し `/etc/socialconfig_old`ます。
 
 ## 設定の公開 {#publishing-the-configuration}
 
@@ -122,18 +124,18 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
 
 * 作成者：
 
-   * Navigate from main menu to **[!UICONTROL Tools > Operations > Replication]**
-   * Double-click **Activate Tree **
-   * **開始パス：**
+   * Navigate from main menu to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**
+   * Double-click **[!UICONTROL Activate Tree]**
+   * **開始パス**:
 
       * 参照先 `/etc/socialconfig/srpc/`
    * が選択され `Only Modified` ていないことを確認します。
-   * Select **[!UICONTROL Activate]**
+   * Select **[!UICONTROL Activate]**.
 
 
 ## ユーザーデータの管理 {#managing-user-data}
 
-パブリッシュ環境で頻繁に入力されるユーザー、ユーザープロファイルおよびユーザーグループについては、以下を参照してください。******
+For information regarding *users*, *user profiles* and *user groups*, often entered in the publish environment, visit:
 
 * [ユーザーの同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
