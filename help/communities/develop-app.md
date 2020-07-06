@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: 2b04724138f28cd7f357d155b88daf964632f3bc
+source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 50%
+source-wordcount: '616'
+ht-degree: 51%
 
 ---
 
@@ -32,13 +32,17 @@ The first step is to add a resource super type property to the `/apps/an-scf-san
 
 CRXDE Lite を使用して、次の手順を実行します。
 
-<!--Resolve steps below-->
-    名前： `sling:resourceSuperType`
-    Type: `文字列`
-    値： &#39;foundation/components/page&#39;
+1. ノードを選択 `/apps/an-scf-sandbox/components/playpage`します。
+1. 「プロパティ」タブで、次の値を持つ新しいプロパティを入力します。
 
-1. Click the green **[!UICONTROL [+]Add]**
-1. Click **[!UICONTROL Save All]**
+   名前：`sling:resourceSuperType`
+
+   型：`String`
+
+   値：`foundation/components/page`
+
+1. Click the green **[!UICONTROL +Add]** button.
+1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
    ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -90,11 +94,12 @@ CRXDE Lite を使用して、次の手順を実行します。
    To setup for authoring, overlay `body.jsp` with a local script and include a paragraph system (parsys) in the body:
 
    1. `/apps/an-scf-sandbox/components` に移動します。
-   1. Select the `playpage`node
+   1. Select the `playpage` node.
    1. Right-click and select `Create > Create File...`
 
       * 名前：**body.jsp**
-   1. Click **[!UICONTROL Save All]**
+   1. 「**[!UICONTROL すべて保存]**」をクリックします。
+
    Open `/apps/an-scf-sandbox/components/playpage/body.jsp` and paste in the following text:
 
    ```xml
@@ -113,7 +118,7 @@ CRXDE Lite を使用して、次の手順を実行します。
    </body>
    ```
 
-1. Click **[!UICONTROL Save All]**
+1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
 **ページを編集モードでブラウザーに表示します。**
 
