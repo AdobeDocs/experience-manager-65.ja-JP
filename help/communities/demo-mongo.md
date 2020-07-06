@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 55%
@@ -165,7 +165,7 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
    注意：オーサーインスタンスの *asipath* の下には JCR ノードがありますが、これらは SCF フレームワーク用のものです。実際のUGCはJCRにはなく、MongoDBにあります。
 
-1. View the UGC in mongodb **[!UICONTROL Communities > Collections > Content]**
+1. View the UGC in mongodb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** > **[!UICONTROL Content]**
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
