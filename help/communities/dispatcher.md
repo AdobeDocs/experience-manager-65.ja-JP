@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 68%
 
 ---
 
@@ -23,7 +26,7 @@ AEM Communities では、[コミュニティサイト](overview.md#community-sit
 
 特定のデプロイメントとサイトデザインにとって何が必要かについては
 
-* Contact [Customer Care](https://helpx.adobe.com/marketing-cloud/contact-support.html)
+* Contact [Customer Care](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)
 
 See also the main [Dispatcher documentation](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
@@ -33,7 +36,7 @@ See also the main [Dispatcher documentation](https://helpx.adobe.com/experience-
 
 AEM Communities 用の Dispatcher のキャッシュとは、Dispatcher によってコミュニティサイトのページの完全にキャッシュされたバージョンを提供する機能です。
 
-現在、コミュニティサイトを閲覧するユーザー、検索の結果コミュニティページに辿り着いたユーザー、ページのインデックスを作成する検索エンジンなど、匿名のサイト訪問者に対してのみサポートされます。そのメリットは、匿名ユーザーと検索エンジンのパフォーマンスが向上するという点です。
+現在、コミュニティサイトを閲覧するユーザー、検索の結果コミュニティページに辿り着いたユーザー、ページのインデックスを作成する検索エンジンなど、匿名のサイト訪問者に対してのみサポートされます。匿名ユーザーと検索エンジンのパフォーマンスが向上するという利点があります。
 
 サインインしているメンバーの場合、Dispatcher はキャッシュをバイパスして、要求をパブリッシャーに直接リレーするため、すべてのページが動的に生成されて提供されます。
 
@@ -41,7 +44,7 @@ Dispatcher のキャッシュをサポートするように設定すると、TTL
 
 ### 要件 {#requirements}
 
-* Dispatcherバージョン4.1.2以降(最新バージョンについては [「Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) 」のインストールを参照)
+* Dispatcherバージョン4.1.2以降(最新バージョンの [Dispatcherのインストール](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) を参照)
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2 以降
@@ -56,15 +59,17 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
    * For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * Locate `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
-* 「+」アイコンを選択して、新しい接続設定を作成します
+* 新しい接続設定を作成するには、「+」アイコンを選択します
 
-![chlimage_1-339](assets/chlimage_1-339.png)
+   ![chlimage_1-339](assets/chlimage_1-339.png)
 
 * **フィルターパターン**
-   *（必須）コミュニティ* ページへの1つ以上のパス。 For example, `/content/sites/engage/(.*)`.
 
-* **Cache-Control Max Age**
-   *（必須）* Cache Controlヘッダーに追加する最大経過時間（秒）。 この値はゼロ（0）より大きくする必要があります。
+   *（必須）* コミュニティページへの1つ以上のパス。 例： `/content/sites/engage/(.*)`
+
+* **Cache-Controlの最大経過時間**
+
+   *（必須）* [キャッシュコントロール]ヘッダに追加する最大経過時間（秒）。 この値はゼロ（0）より大きくする必要があります。
 
 ## Dispatcher クライアントヘッダー {#dispatcher-client-headers}
 
@@ -80,7 +85,7 @@ In the /clientheaders section of `dispatcher.any`, if listing a specific set of 
 
 以下のサンプルでは、プロパティ名を使用しています。特定の dispatcher.any ファイルに合わせて変更が必要な可能性があります。
 
-関連トピック
+関連トピック：
 
 * [Dispatcher のセキュリティのチェックリスト](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)
 
@@ -88,6 +93,7 @@ In the /clientheaders section of `dispatcher.any`, if listing a specific set of 
 >
 >**プロパティ名の例**
 >All property names shown, such as **/0050** and **/0170**, should be adjusted to fit within an existing dispatcher.any configuration file.
+
 
 以下のエントリを /filter セクションの最後に追加する必要があります（特にすべての拒否エントリの後）。
 
@@ -163,7 +169,7 @@ In the /clientheaders section of `dispatcher.any`, if listing a specific set of 
 
 ## Dispatcher ルール {#dispatcher-rules}
 
-`dispatcher.any` のルールセクションは、要求された URL に基づいてキャッシュされる応答を定義します。コミュニティの場合、ルールセクションを使用して、キャッシュしない内容を定義します。
+`dispatcher.any` のルールセクションは、要求された URL に基づいてキャッシュされる応答を定義します。Communitiesの場合、ルールセクションは、キャッシュしない対象を定義するために使用します。
 
 ```shell
 # Never cache the client-side .social.json calls
@@ -188,7 +194,7 @@ In the /clientheaders section of `dispatcher.any`, if listing a specific set of 
 
 よくある問題の原因は、フィルタールールを挿入するときに、以前のルールへの影響を考慮しないことです。特に、アクセスを拒否するルールを追加するときには注意が必要です。
 
-通常は、最初のフィルターパターンであらゆるものを拒否し、後続のフィルターで何らかの規則性に基づいてアクセスを認めるという方法をとります。1つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効になります。
+通常は、最初のフィルターパターンであらゆるものを拒否し、後続のフィルターで何らかの規則性に基づいてアクセスを認めるという方法をとります。リクエストに複数のフィルターが適用される場合、適用される最後のフィルターが有効になります。
 
 ## dispatcher.any のサンプル {#sample-dispatcher-any}
 
