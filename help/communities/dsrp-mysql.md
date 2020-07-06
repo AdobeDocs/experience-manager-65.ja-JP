@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 49%
 
 ---
 
@@ -23,13 +26,13 @@ MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用でき�
 
 ## 要件 {#requirements}
 
-* [最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)
+* [最新のコミュニティ機能パック](deploy-communities.md#latestfeaturepack)
 * [MySQL 用 JDBC ドライバー](deploy-communities.md#jdbc-driver-for-mysql)
 * リレーショナルデータベース：
 
    * [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Serverバージョン5.6以降
 
-      * AEMと同じホストで実行するか、リモートで実行できます。
+      * AEMと同じホストで実行することも、リモートで実行することも可能
    * [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
 
 
@@ -71,7 +74,7 @@ SQL では大文字と小文字が区別されます。大文字と小文字が�
 
 MySQL Workbench には、スキーマと初期データをインストールする SQL スクリプトを実行するための UI が用意されています。
 
-MySQL Workbenchは、ターゲットOSの手順に従ってダウンロードし、インストールする必要があります。
+MySQL Workbenchは、ターゲットOSの指示に従ってダウンロードし、インストールする必要があります。
 
 ## Communities の接続 {#communities-connection}
 
@@ -82,20 +85,20 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 ### 新しい接続の設定 {#new-connection-settings}
 
 1. Select the `+` icon to the right of `MySQL Connections`.
-1. ダイアログで、プ `Setup New Connection`ラットフォームに適した値を入力します
+1. ダイアログで、プラットフォーム `Setup New Connection`に適した値を入力します
 
-   デモ用に、作成者のAEMインスタンスとMySQLを同じサーバー上に置きます。
+   デモ目的で、作成者のAEMインスタンスとMySQLを同じサーバー上に配置します。
 
    * 接続名: `Communities`
    * 接続方法： `Standard (TCP/IP)`
    * Hostname：`127.0.0.1`
    * ユーザー名: `root`
    * パスワード: `no password by default`
-   * デフォルトのスキーマ： `leave blank`
+   * デフォルトスキーマ: `leave blank`
 
 1. Select `Test Connection` to verify the connection to the running MySQL service
 
-**メモ**:
+**備考**:
 
 * The default port is `3306`
 * The Connection Name chosen is entered as the datasource name in [JDBC OSGi configuration](#configurejdbcconnections)
@@ -118,17 +121,17 @@ SQL スクリプトは、AEM リポジトリから取得されます。
 
    * 例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-1. /libs/social/config/datastore/dsrp/schemaフォルダーを選択します
+1. /libs/social/config/datastore/dsrp/スキーマフォルダーを選択します
 1. ダウンロード `init-schema.sql`
 
-![chlimage_1-107](assets/chlimage_1-107.png)
+   ![chlimage_1-107](assets/chlimage_1-107.png)
 
-スキーマをダウンロードする方法の1つは、
+スキーマをダウンロードする方法の1つは、次の操作です。
 
 * Select the `jcr:content` node for the sql file
 * Notice the value for the `jcr:data` property is a view link
 
-* データをローカルファイルに保存するには、ビューリンクを選択します
+* 表示リンクを選択して、データをローカルファイルに保存します
 
 ### DSRP データベースの作成 {#create-the-dsrp-database}
 
@@ -165,38 +168,37 @@ Once the script is executed, it is necessary to refresh the `SCHEMAS` section of
 
 すべての AEM パブリッシュインスタンスおよびオーサーインスタンスが、同じ MySQL サーバーを指している必要があります。
 
-MySQLをAEMとは異なるサーバーで実行する場合、JDBCコネクタの「localhost」の代わりにサーバーのホスト名を指定する必要があります。
+MySQLがAEMとは異なるサーバーで実行される場合、JDBCコネクタの「localhost」の代わりにサーバーのホスト名を指定する必要があります。
 
-* 各作成者および発行AEMインスタンス
-* 管理者権限でサインイン
-* Access the [web console](../../help/sites-deploying/configuring-osgi.md)
+* 各作成者および発行AEMインスタンス。
+* 管理者権限を持つログイン。
+* Access the [web console](../../help/sites-deploying/configuring-osgi.md).
 
    * For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
-* を検索します。 `Day Commons JDBC Connections Pool`
-* Select the `+` icon to create a new connection configuration
+* Folio Builder `Day Commons JDBC Connections Pool`
+* Select the `+` icon to create a new connection configuration.
 
-![chlimage_1-111](assets/chlimage_1-111.png)
+   ![chlimage_1-111](assets/chlimage_1-111.png)
 
 * 次の値を入力します。
 
    * **[!UICONTROL JDBC ドライバークラス]**: `com.mysql.jdbc.Driver`
    * **[!UICONTROL JDBC 接続 URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      MySQLサーバーが「this」AEMサーバーと同じでない場合は、localhostの代わりにサーバーを指定します。
-
-      *communitiesは* 、デフォルトのデータベース（スキーマ）名です。
+      Specify server in place of localhost if MySQL server is not the same as &#39;this&#39; AEM server *communities* is the default database (schema) name.
 
    * **[!UICONTROL ユーザー名]**: `root`
 
-      または、MySQLサーバーの設定済みのユーザー名（「root」でない場合）を入力します。
+      または、「root」でない場合は、MySQLサーバー用に設定されたユーザー名を入力します。
 
    * **[!UICONTROL パスワード]**:
 
       MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。
 
-      それ以外の場合は、MySQLユーザー名用に設定されたパスワードを入力します。
-   * **[!UICONTROL Datasource name]**： [MySQL connection](#new-connection-settings) に入力した名前（例：「communities」）
+      それ以外の場合は、MySQLユーザー名用に設定済みのパスワードを入力します。
+
+   * **[!UICONTROL データソース名]**: MySQL接続に対して入力された [名前](#new-connection-settings)（例： &#39;communities&#39;）。
 
 * Select **[!UICONTROL Save]**
 
