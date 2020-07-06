@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 85d4cdf0e2cfcb8b5e70387ce2dc556df9033257
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1899'
 ht-degree: 36%
 
 ---
@@ -75,14 +75,14 @@ ht-degree: 36%
 
          * UGC のレプリケーションなし
          * UGC はそれが入力された AEM インスタンスまたはクラスターでのみ表示
-      * デフォルトはJSRPです。
+
+         * デフォルトはJSRPです。
    イネーブルメント機能&#x200B;**[用](/help/communities/overview.md#enablement-community)**
 
    * [FFmpegのインストールと設定](/help/communities/ffmpeg.md)
    * [MySQL用JDBCドライバーのインストール](#jdbc-driver-for-mysql)
    * [SCORM-EngineAEM Communitiesのインストール](#scorm-package)
    * [有効にするMySQLのインストールと設定](/help/communities/mysql.md)
-
 
 
 
@@ -106,8 +106,8 @@ AEM 6.4 以降、AEM Communities 機能およびホットフィックスは、AE
 
 以下の 2 つの Communities 機能で MySQL データベースを使用しています。
 
-* For [enablement](/help/communities/enablement.md) : recording SCORM activities and learners
-* For [DSRP](/help/communities/dsrp.md) : storing user generated content (UGC)
+* For [enablement](/help/communities/enablement.md): recording SCORM activities and learners
+* For [DSRP](/help/communities/dsrp.md): storing user generated content (UGC)
 
 MySQL コネクタを別途入手し、インストールする必要があります。
 
@@ -126,7 +126,6 @@ MySQL コネクタを別途入手し、インストールする必要があり�
    * Check that *Oracle Corporation&#39;s JDBC Driver for MySQLcom.mysql.jdbc* is active, and start it if not (or check the logs)
 
 1. JDBCの設定後に既存のデプロイメントにインストールする場合は、WebコンソールからJDBC設定を再保存して、JDBCを新しいコネクタに再バインドします。
-
    * 例：https://localhost:4502/system/console/configMgr
    * 設定の検索 `Day Commons JDBC Connections Pool`
    * 選択して開きます
@@ -138,7 +137,7 @@ Further information on installing bundles is found on the [Web Console](/help/si
 
 #### 例：インストール済みの MySQL コネクタバンドル {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![小包](assets/chlimage-bundles.png)
 
 ### SCORM パッケージ {#scorm-package}
 
@@ -223,7 +222,7 @@ By default, the `AEM Communities Publisher Configuration` OSGi configuration is 
 
 したがって、すべてのセカンダリパブリッシュインスタンスの設定を編集して、「」チェックボックスをオフにする必要があります。******`Primary Publisher`**
 
-![](/help/communities/assets/chlimage_1-126.png)
+![chlimage_1-411](assets/chlimage_1-411.png)
 
 パブリッシュファーム内の他のすべての（セカンダリ）パブリッシュインスタンスについて、以下をおこないます。
 
@@ -249,7 +248,7 @@ In order for some other user to have the appropriate permissions, they must be a
 
 * 作成者のレプリケーションコンソールにアクセスする
 
-   * From global navigation, navigate to **[!UICONTROL Tools > Deployment > Replication > Agents on author]**
+   * From global navigation, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on author]**
 
 * 両方のエージェントに対して同じ手順を実行します。
 
@@ -265,13 +264,13 @@ In order for some other user to have the appropriate permissions, they must be a
 
 以下の画像は、ポートを 4503 から 6103 に変更した結果を示しています。
 
-#### デフォルトエージェント（publish） {#default-agent-publish}
+#### Default Agent (publish) {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![chlimage_1-412](assets/chlimage_1-412.png)
 
 #### リバースレプリケーションエージェント（publish reverse）{#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![chlimage_1-413](assets/chlimage_1-413.png)
 
 ### オーサー環境のトンネルサービス {#tunnel-service-on-author}
 
@@ -281,8 +280,7 @@ When using the author environment to [create sites](/help/communities/sites-cons
 
 トンネルサービスを有効にするには：
 
-* On **author**
-* 管理者権限でサインイン
+* 作成者インスタンスに対する管理者権限でログインします。
 * If publisher is not localhost:4503 or transport user is not `admin`,
 then [configure the replication agent](#replication-agents-on-author)
 
@@ -295,7 +293,7 @@ then [configure the replication agent](#replication-agents-on-author)
 * Check the **enable** box
 * Select **Save**
 
-![](/help/communities/assets/chlimage_1-129.png)
+   ![chlimage_1-414](assets/chlimage_1-414.png)
 
 ### 暗号鍵のレプリケーション {#replicate-the-crypto-key}
 
@@ -307,7 +305,7 @@ AEM 6.3以降、主要な資料はファイルシステムに保存され、リ�
 
 * コピーする主要素材を含むAEMインスタンス（通常は作成者インスタンス）にアクセスします
 
-   * Locate the `com.adobe.granite.crypto.file` bundle in the local file system
+   * Locate the `com.adobe.granite.crypto.file` bundle in the local file system,
 for example,
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
@@ -315,8 +313,8 @@ for example,
    * 例えば、データフォルダーに移動します。
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * hmacおよびプライマリ・ノード・ファイルのコピー
 
+      * hmacおよびプライマリ・ノード・ファイルのコピー
 
 
 * 各ターゲットのAEMインスタンス
@@ -332,6 +330,7 @@ for example,
 >
 >既に暗号鍵に基づいて別のセキュリティ機能が設定されている場合、暗号鍵のレプリケーションをおこなうと設定が破損する可能性があります。For assistance, [contact customer care](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html).
 
+
 #### リポジトリのレプリケーション {#repository-replication}
 
 AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（これにより初期リポジトリが作成されます）。
@@ -341,6 +340,7 @@ AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存す�
 >[!NOTE]
 >
 >It is important to verify that the [replication agent on author](#replication-agents-on-author) is correctly configured.
+
 
 リポジトリに鍵の素材が格納されるので、オーサー環境から他のインスタンスへ暗号鍵をレプリケーションする方法は次のようになります。
 
@@ -353,7 +353,7 @@ AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存す�
 
 * [Granite Cryptoバンドルの更新](#refresh-the-granite-crypto-bundle)
 
-![](/help/communities/assets/chlimage_1-130.png)
+   ![chlimage_1-415](assets/chlimage_1-415.png)
 
 #### Granite 暗号バンドルの更新 {#refresh-the-granite-crypto-bundle}
 
@@ -364,7 +364,7 @@ AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存す�
 * バン `Adobe Granite Crypto Support` ドルの検索(com.adobe.granite.crypto)
 * Select **Refresh**
 
-![](/help/communities/assets/chlimage_1-131.png)
+   ![chlimage_1-416](assets/chlimage_1-416.png)
 
 * しばらくすると、 **成功** ダイアログが表示されます。
    `Operation completed successfully.`
