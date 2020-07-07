@@ -3,7 +3,7 @@ title: で、参照と複数ページのアセットを持つ複合アセット�
 description: 内からデジタルアセットへの参照を作成する方法を説明します [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 18%
@@ -89,9 +89,9 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 サブアセットの生成はデフォルトでは無効になっています。サブアセットの生成を有効にするには、次の手順に従います。
 
-1. Log into [!DNL Experience Manager] as an administrator. Access **[!UICONTROL Tools > Workflow > Models]**.
+1. Log into [!DNL Experience Manager] as an administrator. **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / ****&#x200B;モデルにアクセスします。
 1. 「 **[!UICONTROL DAM Update Asset]** workflow」を選択し、「 **[!UICONTROL 編集]**」をクリックします。
-1. 「 **[!UICONTROL サイドパネルを]** 切り替え **[!UICONTROL 」をクリックし、「サブアセットを]** 作成」ステップを見つけます。 ワークフロー追加への手順です。 「 **[!UICONTROL 同期]**」をクリックします。
+1. 「 **[!UICONTROL サイドパネルを]** 切り替え **[!UICONTROL 」をクリックし、「サブアセットを]** 作成」ステップを見つけます。 ワークフロー追加への手順です。 「**[!UICONTROL 同期]**」をクリックします。
 
 サブアセットを生成するには、次のいずれかの操作を行います。
 
@@ -99,7 +99,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 * 既存の複数ページアセット： 次のいずれかの手順に従って、手動で [!UICONTROL DAMアセットの更新] ワークフローを実行します。
 
    * アセットを選択し、 [!UICONTROL タイムラインをクリックして] 、左側のパネルを開きます。 Alternately, use the keyboard shortcut `alt + 3`. 「 [!UICONTROL 開始ワークフロー]」をクリックし、「 [!UICONTROL DAM Update Asset]」を選択して「 [!UICONTROL 開始]」をクリックし、「 続行」をクリックします。
-   * アセットを選択し、ツールバーで [!UICONTROL 作成/ワークフロー] をクリックします。 ポップアップダイアログから「 [!UICONTROL DAM Update Asset] workflow」を選択し、「 [!UICONTROL 開始]」をクリックし、「 [!UICONTROL 続行]」をクリックします。
+   * アセットを選択し、ツールバーで [!UICONTROL 作成] / [!UICONTROL ワークフロー] をクリックします。 ポップアップダイアログから「 [!UICONTROL DAM Update Asset] workflow」を選択し、「 [!UICONTROL 開始]」をクリックし、「 [!UICONTROL 続行]」をクリックします。
 
 特にMicrosoft Wordドキュメントの場合は、 **[!UICONTROL DAM Parse Wordドキュメント]** ・ワークフローを実行します。 Microsoft Wordドキュメントのコンテンツから `cq:Page` コンポーネントを生成します。 このドキュメントから抽出された画像は `cq:Page` コンポーネントから参照されます。これらの画像は、サブアセットの生成が無効な場合も抽出されます。
 
