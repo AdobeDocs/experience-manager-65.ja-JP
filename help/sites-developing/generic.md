@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: platform
 discoiquuid: d8ee3b57-633a-425e-bf36-646f0e0bad52
 translation-type: tm+mt
-source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '1886'
+ht-degree: 82%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
 
 統合フレームワークには、API を備えた統合レイヤーが含まれます。これにより、特定の e コマースエンジンに依存しない e コマース機能用の AEM コンポーネントを作成できます。さらに、内部 CRX データベースを使用したり、e コマースシステムを組み込んだりして、製品データを AEM に取り込むこともできます。
 
-統合レイヤーを使用するために、標準搭載の多くのAEMコンポーネントが用意されています。 現時点では、以下のようなものがあります。
+統合レイヤーを使用するために、標準搭載のAEMコンポーネントが多数用意されています。 現時点では、以下のようなものがあります。
 
 * 製品表示コンポーネント
 * 買い物かご
@@ -42,7 +45,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEMは、およびをサ `Resource.adaptTo()` ポートし `CommerceService` ます `Product`
+* AEMは、および `Resource.adaptTo()` をサポート `CommerceService` します `Product`
 
    * The `adaptTo` implementation looks for a `cq:commerceProvider` property in the resource&#39;s hierarchy:
 
@@ -91,10 +94,10 @@ e コマースフレームワークは任意の e コマースソリューショ
 
 **CommerceSession** は、
 
-* 買い物かご **を所有**
+* 買い **物かごを所有**
 
    * 追加や削除などを実行します。
-   * は、買い物かごに対してさまざまな計算を行います。
+   * は、買い物かごにさまざまな計算を行います。
 
       `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
@@ -128,13 +131,11 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 （一般的に）製品には多数のバリアント軸を持たせることができますが、デフォルトの製品コンポーネントでは次の 2 つのバリアント軸のみが処理されます。
 >
 >1. `size`
-   >
-   >
-1. もう1つ
-   >   This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
+>1. もう一度
+
 >
-
-
+>   
+This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
 
 #### 製品リファレンスと PIM データ {#product-references-and-pim-data}
 
@@ -146,7 +147,7 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 
 製品バリエーションと製品データノードの間には 1 対 1 のマッピングが必要です。
 
-製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品にS、M、Lのバリエーションがある場合、製品データは次のようになります。
+製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品のバリエーションがS、M、Lの場合、製品データは次のようになります。
 
 ```shell
 etc
@@ -167,7 +168,7 @@ content
       shirt-l
 ```
 
-最後に、製品データを使用するための要件はありません。カタログ内の参照の下に、すべての製品データを配置できます。ただし、すべての製品データを複製しない限り、実際に複数のカタログを持つことはできません。
+最後に、製品データを使用するための要件はありません。カタログ内の参照の下に、すべての製品データを配置できます。 しかし、すべての製品データを複製しない限り、実際には複数のカタログを持つことはできません。
 
 **API**
 
@@ -336,7 +337,7 @@ public class AxisFilter implements VariantFilter {
 
    * AEM 汎用ケースでは、買い物かごは [ClientContext](/help/sites-administering/client-context.md) に保存されます。
 
-**パーソナライズ**
+**パーソナライズ機能**
 
 * パーソナライズは、常に [ClientContext](/help/sites-administering/client-context.md) から取得する必要があります。
 * A ClientContext `/version/` of the cart is created in all cases:
@@ -446,7 +447,7 @@ e コマースプロジェクトには、デフォルトの検索コンポーネ
    * 外部のコマースエンジンも割引券を提供できます。少なくとも以下が必要です。
 
       * 割引券コード
-      * Anメソ `isValid()` ッド
+      * メソッド `isValid()`
    * The **Voucher** component ( `/libs/commerce/components/voucher`) provides:
 
       * 割引券管理用のレンダラー。買い物かごに現在入っている割引券があれば表示します。
@@ -457,7 +458,7 @@ e コマースプロジェクトには、デフォルトの検索コンポーネ
 
 * プロモーション：
 
-   * プロモーションは、Webサイトコンソールで作成/編集し、次の場所に保存されるページベースのコンポーネントです。
+   * プロモーションは、Webサイトコンソールで作成/編集し、次の場所に保存するページベースのコンポーネントです。
 
       `/content/campaigns`
 
@@ -521,11 +522,11 @@ public List<Voucher> getVouchers() throws CommerceException;
 
 提供される `AbstractJcrCommerceSession` によって割引券を適用できます。The vouchers returned by the class `getVouchers()` are instances of `cq:Page` containing a jcr:content node with the following properties (amongst others):
 
-* `sling:resourceType` （文字列） — これは `commerce/components/voucher`
+* `sling:resourceType` （文字列） — これは、 `commerce/components/voucher`
 
 * `jcr:title` （文字列） — 伝票の説明
 * `code`（String） - この割引券を適用するためにユーザーが入力する必要があるコード。
-* `promotion` （文字列） — 適用するプロモーション例： `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` （文字列） — 適用されるプロモーション。 例えば `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 プロモーションハンドラーは、買い物かごを変更する OSGi サービスです。買い物かごは、`PromotionHandler` インターフェイスで定義される、複数のフックをサポートします。
 
