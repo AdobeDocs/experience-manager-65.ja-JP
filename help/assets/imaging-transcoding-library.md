@@ -3,7 +3,7 @@ title: 画像トランスコーディングライブラリ
 description: エンコーディング、トランスコーディング、画像のリサンプリング、画像のサイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションであるアドビの画像トランスコーディングライブラリを設定および使用する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 35%
@@ -76,7 +76,7 @@ ITL処理を設定するには、設定ファイルを作成し、ワークフ�
 
 1. Download the [Imaging Transcoding Library package from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) and install it using the Package Manager. このパッケージはExperience Manager6.5と互換性があります。
 
-1. のバンドルIDを確認するに `com.day.cq.dam.cq-dam-switchengine`は、Webコンソールにログインし、 **[!UICONTROL OSGi/Bundles]**&#x200B;をクリックします。 または、バンドルコンソールを開くには、 `https://[aem_server:[port]/system/console/bundles/` URLにアクセスします。 バンドルと `com.day.cq.dam.cq-dam-switchengine` そのIDを探します。
+1. のバンドルIDを確認するに `com.day.cq.dam.cq-dam-switchengine`は、Webコンソールにログインし、 **[!UICONTROL OSGi]** / **[!UICONTROL Bundles]**&#x200B;をクリックします。 または、バンドルコンソールを開くには、 `https://[aem_server:[port]/system/console/bundles/` URLにアクセスします。 バンドルと `com.day.cq.dam.cq-dam-switchengine` そのIDを探します。
 
 1. コマンドを使用してフォルダーをチェックし、必要なすべてのライブラリが抽出されていることを確認します。ここで `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`、フォルダー名はバンドルIDを使用して構築されます。 例えば、バンドルIDが `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` である場合、コマンドはで `588`す。
 
@@ -105,7 +105,7 @@ ITL処理を設定するには、設定ファイルを作成し、ワークフ�
 
 画像処理用ライブラリを使用するように、 [!UICONTROL DAM Update Asset] Workflowを更新します。
 
-1. Experience Managerユーザーインターフェイスで、 **[!UICONTROL ツール/ワークフロー/モデル]**&#x200B;を選択します。
+1. Experience Managerユーザーインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルを選択します]**。
 
 1. From the **[!UICONTROL Workflow Models]** page, open the **[!UICONTROL DAM Update Asset]** workflow model in edit mode.
 
