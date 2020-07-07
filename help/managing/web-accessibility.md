@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Manager (AEM)とWebアクセシビリティのガイドライン
-description: Adobe Experience Manager(AEM)の概要とWebアクセシビリティガイドライン
+title: Adobe Experience Manager(AEM)とWebアクセシビリティのガイドライン
+description: Adobe Experience Managerの概要(AEM)とWebアクセシビリティガイドライン
 translation-type: tm+mt
-source-git-commit: 7d2996b425db3115851ad35a446ec6b2ed4a32f3
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '415'
-ht-degree: 78%
+ht-degree: 84%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 78%
 
 AEMでアクセシブルなWebサイトやコンテンツを作成すると、次のような影響があります。
 
-* アクセシビリティ機能が正しく有効になっていることを確認するために、AEMを設定する管理者です。
+* 管理者は、アクセシビリティ機能が正しく有効化されるように AEM を設定する必要があります。
 
 * 作成者は、これらの機能を使用して、アクセシブルな Web サイトを作成する必要があります。
 
@@ -28,7 +28,7 @@ Adobe Experience Manager works with the [guidelines](#wcag-accessibility-guideli
 
 >[!NOTE]
 >
-> 詳しくは、アドビのソリューションの [アクセシビリティ準拠レポートを参照してください](https://www.adobe.com/accessibility/compliance.html) 。
+>詳しくは、[Accessibility conformance reports for Adobe solutions](https://www.adobe.com/accessibility/compliance.html)（アドビソリューションのアクセシビリティ準拠レポート）を参照してください。
 
 ## World Wide Web Consortium {#world-wide-web-consortium}
 
@@ -53,7 +53,7 @@ Adobe Experience Manager を使用すると、コンテンツ作成者や Web �
 * [アクセスしやすいアダプティブフォームの作成](/help/forms/using/creating-accessible-adaptive-forms.md) Adobe Experience Manager（AEM）には、ユーザーの様々な能力に合わせてアダプティブフォームの使いやすさを向上させる機能が多数含まれています。このソリューションは、フォーム作成者がアクセスしやすいアダプティブフォームを作成する上でも役立ちます。
 
 >[!NOTE]
-> 
+>
 >サイトを作成する際は、サイトの全体的なレベルを特定する必要があります。
 
 ## Adobe におけるアクセシビリティ {#accessibility-at-adobe}
