@@ -3,7 +3,7 @@ title: フォルダーメタデータスキーマ
 description: Adobe Experience Managerアセット内のアセットフォルダ用のメタデータスキーマを作成する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 71%
@@ -108,7 +108,7 @@ To edit the properties of form items, click the component and edit all or a subs
 
 ### フォルダーメタデータスキーマページからのスキーマへの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]**/ **[!UICONTROL フォルダーメタデータスキーマに移動します]**。
+1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL フォルダーメタデータスキーマに移動します]**。
 1. フォルダーメタデータスキーマフォームページから、フォルダーに適用するスキーマフォームを選択します。
 1. From the toolbar, click **[!UICONTROL Apply to Folder(s)]**.
 
