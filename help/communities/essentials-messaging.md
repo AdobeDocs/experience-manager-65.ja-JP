@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 34%
 
 ---
 
@@ -44,7 +47,7 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td>詳しくは、メッセ <a href="/help/communities/configure-messaging.md" target="_blank">ージの設定を参照してください。</a></td>
+   <td>「メッセージの <a href="/help/communities/configure-messaging.md" target="_blank">設定」を参照してください。</a></td>
   </tr>
   <tr>
    <td><strong>管理設定</strong></td>
@@ -77,7 +80,7 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td>詳しくは、メッセ <a href="/help/communities/configure-messaging.md" target="_blank">ージの設定を参照してください。</a></td>
+   <td>「メッセージの <a href="/help/communities/configure-messaging.md" target="_blank">設定」を参照してください。</a></td>
   </tr>
   <tr>
    <td><strong>管理設定</strong></td>
@@ -91,7 +94,7 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
 ## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [メッセージングの設定](/help/communities/configure-messaging.md)
-* [SCFコンポーネントのメッセージング](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) ・クライアントAPI
+* [SCFコンポーネント用メッセージングクライアントAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html)
 * [メッセージング API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)（サービス用）
 * [メッセージングエンドポイント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [サーバー側のカスタマイズ](/help/communities/server-customize.md)
@@ -102,6 +105,7 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
+
 >
 >
 次に例を示します。
@@ -118,24 +122,24 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
 
 ### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
 
-ソーシャルメッセージ機能は、例えば、イベントの操作に関する操作（例えば、） `send`をス `marking read`ローしま `marking delete`す。 これらのイベントは、取得され、データに含まれるデータに対して実行されるイベントです。
+ソーシャルメッセージ機能は、操作(例えば、 `send`、など)に関するイベントをスローし `marking read``marking delete`ます。 これらのイベントは、イベントに含まれるデータに対して取得し、実行されるアクションです。
 
 The following example is of an event handler which listens for the `message sent` event and sends an email to all message recipients using the `Day CQ Mail Service`.
 
-サーバーサイドのサンプルスクリプトを試すには、開発環境とOSGiバンドルの構築機能が必要です。
+サーバーサイドのサンプルスクリプトを試すには、開発環境とOSGiバンドルを構築する機能が必要です。
 
-1. に管理者としてログインします ` [CRXDE|Lite](https://localhost:4502/crx/de)`。
-1. 任意の名 `bundle node`前を `/apps/engage/install` 使用して、次のようにinを作成します。
+1. 管理者としてにログインし ` [CRXDE|Lite](https://localhost:4502/crx/de)`ます。
+1. 次のよう `bundle node`な任意の名前 `/apps/engage/install` を使用して、を作成します。
 
    * シンボリック名： `com.engage.media.social.messaging.MessagingNotification`
-   * 名前：はじめにチュートリアルのメッセージ通知
-   * 説明：ユーザーがメッセージを受信したときに電子メール通知を送信するためのサンプルサービス
+   * 名前： はじめにチュートリアルのメッセージ通知
+   * 説明： ユーザーがメッセージを受信したときに電子メール通知を送信するためのサンプルサービス
    * パッケージ: `com.engage.media.social.messaging.notification`
 
-1. 次に、に移 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`動します。
+1. に移動 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`し、次の操作を行います。
 
    1. Delete the `Activator.java` class automatically created.
-   1. クラスを作成しま `MessageEventHandler.java`す。
+   1. クラスを作成 `MessageEventHandler.java`します。
    1. Copy and paste the code below into `MessageEventHandler.java`.
 
 1. 「**すべて保存**」をクリックします。
