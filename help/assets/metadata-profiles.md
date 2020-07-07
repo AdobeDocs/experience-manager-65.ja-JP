@@ -3,7 +3,7 @@ title: アセットのメタデータ要件をカスタマイズするメタデ�
 description: アセットのメタデータプロファイルについて理解します。また、メタデータプロファイルを作成し、フォルダーのアセットに適用する方法も学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 57%
@@ -17,7 +17,7 @@ ht-degree: 57%
 
 ## メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
-1. **[!UICONTROL ツール/アセット/メタデータプロファイル]** に移動し、「 **[!UICONTROL 作成]**」をクリックします。
+1. **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータプロファイルに移動し、「作成」をクリックし]******&#x200B;ます。
 1. Enter a title for the Metadata Profile, for example Sample Metadata, and click **[!UICONTROL Create]**. The [!UICONTROL Edit Form] for the metadata profile is displayed.
 
    ![chlimage_1-197](assets/chlimage_1-480.png)
@@ -106,7 +106,7 @@ ht-degree: 57%
 
 メタデータプロファイルを適用する手順は、次のとおりです。
 
-1. Click the Experience Manager logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Experience Managerのロゴをクリックし、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータプロファイルに移動します]**。
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
@@ -126,7 +126,7 @@ ht-degree: 57%
 
 ### メタデータプロファイルのグローバルな適用 {#applying-a-metadata-profile-globally}
 
-フォルダーにプロファイルを適用する以外に、グローバルに1つを適用して、任意のフォルダー内のExperience Managerアセットにアップロードされたコンテンツに選択したプロファイルが適用されるようにすることもできます。
+フォルダーにプロファイルを適用する以外に、グローバルに1つを適用して、任意のExperience Managerー内のフォルダーアセットにアップロードされたコンテンツに選択したプロファイルが適用されるようにすることもできます。
 
 後で変更した既存のメタデータプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
@@ -148,7 +148,7 @@ ht-degree: 57%
 
 ### Remove metadata profiles from folders via Profiles user interface {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. Click the Experience Manager logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Experience Managerのロゴをクリックし、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータプロファイルに移動します]**。
 1. 1 つまたは複数のフォルダーから削除するメタデータプロファイルを選択します。
 1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
@@ -160,7 +160,7 @@ ht-degree: 57%
 1. On the folder, click the check mark to select it and then click **[!UICONTROL Properties]**.
 1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択して、「**[!UICONTROL 保存]**」をクリックします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-## 制限事項とベストプラクティス {#limitations-best-practices-tips}
+## Limitations and best practices {#limitations-best-practices-tips}
 
 * 6.5へのアップグレード以降、既存のメタデータプロファイルが存在する場合があります。アップグレード後、「メタデータプロファイル [!DNL Experience Manager][!UICONTROL 」タブのフォルダー] プロパティ  にこのプロファイルを適用すると、メタデータフォームフィールドは表示されません。 ただし、新しく作成したメタデータプロファイルを適用すると、フォームフィールドは表示されますが、期待どおりに使用できなくなります。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
 
