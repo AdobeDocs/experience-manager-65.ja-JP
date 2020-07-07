@@ -3,9 +3,9 @@ title: デジタルアセットのダウンロード元 [!DNL Adobe Experience M
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '795'
 ht-degree: 41%
 
 ---
@@ -24,14 +24,14 @@ ht-degree: 41%
 **アセットをダウンロードするには**
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]**.
-1. On the Navigation page, tap **[!UICONTROL Assets > Files.]**
+1. ナビゲーションページで、 **[!UICONTROL アセット]** / **[!UICONTROL ファイルをタップします。]**
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の1つ以上のアセットを選択します。
 1. On the toolbar, tap **[!UICONTROL Download.]**
 
    ![Experience Managerアセットからアセットをダウンロードする場合に使用できるオプション](/help/assets/assets/asset-download1.png)
 
-   *ダウンロードダイアログボックスのオプション*
+   *図： ダウンロードダイアログボックスのオプション*
 
 1. ダウンロードダイアログボックスで、目的のダウンロードオプションを選択します。
 
