@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9df949b0069dad7fc1627977097cec5546cd845f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1554'
 ht-degree: 54%
 
 ---
@@ -44,7 +44,8 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    * JDBC ドライバーの Java クラス名
    * JDBC 接続 URI
    * JDBC ドライバーとの接続を確立するためのユーザー名とパスワード
-   >[!NOTE] {graybox=&quot;true&quot;}
+
+   >[!NOTE]
    >
    >データソースを設定する前に、パスワードなどの機密情報を必ず暗号化してください。暗号化するには、以下の手順を実行します。
    >
@@ -52,6 +53,7 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    >    
    >    1. Go to https://&#39;[server]:[port]&#39;/system/console/crypto.
    >    1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をクリックします。
+
    >    
    >    
    >    
@@ -79,7 +81,8 @@ AEM Web コンソールでユーザープロファイルコネクター設定を
 
    * `name=profile/phoneNumber,type=string`
    * `name=profile/empLocation/*/city,type=string`
-   >[!NOTE] {graybox=&quot;true&quot;}
+
+   >[!NOTE]
    >
    >The ***** in the above example denotes all nodes under the `profile/empLocation/` node in AEM user profile in CRXDE structure. It means that the form data model can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. ただし、指定されたプロパティが存在するノードの構造が統一されている必要があります。
 
@@ -128,6 +131,7 @@ RESTful サービスを設定するには、以下の手順を実行します。
       * 基本パス： すべてのAPIパスのURLプレフィックス。 これはオプションのフィールドです。\
          必要に応じて、これらのフィールドの事前入力された値を編集します。
    * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「APIキー」、「カスタム認証」）を選択してRESTfulサービスにアクセスし、認証の詳細を指定します。
+
    認証タイプとして **[!UICONTROL APIキー]** を選択する場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。 「 **[!UICONTROL 場所]** 」ドロップダウンリストから次のオプションの1つを選択し、それに応じて、ヘッダーの名前またはクエリパラメーターの名前を「 **[!UICONTROL パラメーター名]** 」フィールドに指定します。
 
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
@@ -168,6 +172,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
    * 設定する OData サービスのルート URL を指定します。
    * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」）を選択してODataサービスにアクセスし、認証の詳細を入力します。
+
    >[!NOTE]
    OData エンドポイントをサービスルートとして使用して Microsoft Dynamics サービスに接続する場合は、OAuth 2.0 認証を選択する必要があります。
 
