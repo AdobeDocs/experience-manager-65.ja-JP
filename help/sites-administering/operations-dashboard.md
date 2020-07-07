@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9eb8f3921e7d485ca4eb035cd04a9d8731dd6b06
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '6229'
 ht-degree: 76%
@@ -107,13 +107,13 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    新しいノードに次のプロパティを設定する必要があります。
 
-   * **名前：**`sling:resourceType`
+   * **名前:** `sling:resourceType`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `granite/operations/components/mbean`
-   * **名前：**`resource`
+   * **名前:** `resource`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
@@ -163,19 +163,19 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    例えば、設定を作成して **hc.mbean.name** 値を **diskusage** に設定した場合、設定ノードは次のようになります。
 
-   * **名前：**`Composite Health Check`
+   * **名前:** `Composite Health Check`
 
-      * **Type:** `nt:unstructured`
+      * **型:** `nt:unstructured`
 
    次のようにプロパティを定義します。
 
-   * **名前：**`sling:resourceType`
+   * **名前:** `sling:resourceType`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `granite/operations/components/mbean`
-   * **名前：**`resource`
+   * **名前:** `resource`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
@@ -590,7 +590,7 @@ You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations
 
 >[!NOTE]
 >
-> ワークフローメンテナンスの詳細については、[このページ](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)を参照してください。
+>ワークフローメンテナンスの詳細については、[このページ](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)を参照してください。
 
 ### 監査ログのメンテナンス {#audit-log-maintenance}
 
@@ -632,7 +632,7 @@ You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations
    <td><strong>サービスプロパティ名</strong><br /> </td>
    <td><strong>説明</strong></td>
    <td><strong>例</strong><br /> </td>
-   <td><strong>タイプ</strong></td>
+   <td><strong>型</strong></td>
   </tr>
   <tr>
    <td>granite.maintenance.isStoppable</td>
