@@ -3,10 +3,10 @@ title: Process assets using media handlers and workflows in [!DNL Adobe Experien
 description: メディアハンドラーについて、およびワークフローを使用してデジタルアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
 workflow-type: tm+mt
-source-wordcount: '2119'
-ht-degree: 50%
+source-wordcount: '2109'
+ht-degree: 49%
 
 ---
 
@@ -21,15 +21,13 @@ Media handlers are services in [!DNL Assets] that perform specific actions on as
 
 >[!NOTE]
 >
-> でサポートされるすべての形式と、各形式でサポートされる機能の説明については、[Assets でサポートされる形式](assets-formats.md)を参照してください。[!DNL Assets]
+>See the [Assets supported formats](assets-formats.md) page for a description of all the formats supported by [!DNL Assets] as well as features supported for each format.
 
 ## Default media handlers {#default-media-handlers}
 
 The following media handlers are available within [!DNL Assets] and handle the most common MIME types:
 
-<!-- TBD: 
-* Apply correct formatting once table is moved to MD.
-* Java versions shouldn't be set to 1.5. Must be updated.
+<!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
 -->
 
 | ハンドラー名 | サービス名（システムコンソール内） | サポートされる MIME タイプ |
@@ -140,7 +138,7 @@ After you perform the following procedure, when you upload a TXT file into [!DNL
 
 1. Eclipseで、 `myBundle` プロジェクトを作成し [!DNL Maven] ます。
 
-   1. In the Menu bar, click **[!UICONTROL File > New > Other]**.
+   1. In the Menu bar, click **[!UICONTROL File]** > **[!UICONTROL New]** > **[!UICONTROL Other]**.
    1. In the dialog, expand the [!DNL Maven] folder, select [!DNL Maven] project and click **[!UICONTROL Next]**.
    1. Check the Create a simple project box and the Use default Workspace locations box, then click **[!UICONTROL Next]**.
    1. プ [!DNL Maven] ロジェクトの定義：
@@ -505,7 +503,7 @@ Install [!DNL ImageMagick] on the disk hosting the [!DNL Experience Manager] ser
 |---|---|
 | mime:&lt;mime-type> | オプション引数。アセットの MIME タイプが引数の MIME タイプと同じ場合にプロセスが適用されます。<br>いくつかのMIMEタイプを定義できます。 |
 | tn:&lt;width>:&lt;height> | オプション引数。プロセスにより、引数で定義されたサイズのサムネールが作成されます。<br>複数のサムネールを定義できます。 |
-| cmd: &lt;command> | 実行されるコマンドを定義します。この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど） <br> `${file}`: 入力ファイルのフルパス名(例：/tmp/cqdam0816.tmp/original.jpg) <br> `${directory}`: 入力ファイルのディレクトリ。例：/tmp/cqdam0816.tmp <br>`${basename}`: 入力ファイルの名前（拡張子なし）。例： original <br>`${extension}`: 入力ファイルの拡張子（JPGなど）。 |
+| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど） <br> `${file}`: 入力ファイルのフルパス名（例：） `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: 入力ファイルのディレクトリ。例 `/tmp/cqdam0816.tmp`<br>`${basename}`: 入力ファイルの名前（拡張子なし）。例： original <br>`${extension}`: 入力ファイルの拡張子（JPGなど）。 |
 
 For example, if [!DNL ImageMagick] is installed on the disk hosting the [!DNL Experience Manager] server and if you create a process step using [!UICONTROL CommandLineProcess] as Implementation and the following values as [!UICONTROL Process Arguments]:
 
