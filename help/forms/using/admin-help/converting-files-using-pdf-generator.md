@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1180'
 ht-degree: 91%
@@ -66,19 +66,22 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 >
 >* HTML から PDF への変換機能を使用する場合、システムフォントディレクトリに特定のフォントが含まれている必要があります。Linux、Solaris および AIX システムでは、システムフォントディレクトリに Courier フォントが含まれている必要があります。Windows システムでは、システムフォントディレクトリに Times New Roman が含まれている必要があります。
    >
-   > 
-* （UNIXベースのシステムのみ）AEM Formsサーバーで、日本語フォントを使用したWebページをPDFドキュメントに変換するには、次の日本語フォントのいずれかを使用できます。
    >
-   >   
-   * 「Sazanami Gothic」
-   >   * &quot;Kozuka Gothic Pro-VI&quot;
-   >   * 『Kozuka Mincho Pro-VI』
-   >   * 「Sazanami Gothic」
-   >   * &quot;Kozuka Mincho Pr6N&quot;
-   >   * 『サザナミ明朝』
-   >   * &quot;Adobe Heiti Std&quot;
-   >   * &quot;Adobe Song Std&quot;
->* ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
+* (UNIXベースのドキュメントのみ)日本語フォントを使用してWebページをPDFAEM Formsに変換するには、Serversサーバーで次の日本語フォントのいずれかを使用できます。
+   >
+   >  
+* 「Sazanami Gothic」
+>  * &quot;Kozuka Gothic Pro-VI&quot;
+>  * 『Kozuka Mincho Pro-VI』
+>  * 「Sazanami Gothic」
+>  * &quot;Kozuka Mincho Pr6N&quot;
+>  * 『サザナミ明朝』
+>  * &quot;Adobe Heiti Std&quot;
+>  * &quot;Adobe Song Std&quot;
+
+   >
+   >
+* ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
 
 
 1. 管理コンソールで、サービス／PDF Generator／HTML から PDF をクリックします。
@@ -86,6 +89,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
    * 「アップロードするファイル」に、HTML ファイルまたは ZIP ファイルのパスとファイル名を入力するか、「参照」をクリックして該当するファイルを探して選択します。
    * 「URL の指定」ボックスに、変換するページまたは Web サイトの URL を入力します。
+
    >[!NOTE]
    >
    >変換するファイルのファイル拡張子は、.html、.htm または .zip である必要があります。
