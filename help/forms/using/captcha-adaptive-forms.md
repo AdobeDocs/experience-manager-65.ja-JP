@@ -10,7 +10,10 @@ topic-tags: author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 translation-type: tm+mt
-source-git-commit: abfb6dced1ffd8d0dd11eaab1e66c78704df543f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '665'
+ht-degree: 83%
 
 ---
 
@@ -21,7 +24,7 @@ CAPTCHA（Completely Automated Public Turing test to tell Computers and Humans A
 
 AEM によるアダプティブフォームの CAPTCHA のサポートGoogleのreCAPTCHAサービスを使用して、CAPTCHAを実装できます。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >* AEM Forms は reCaptcha v2 のみをサポートします。その他のバージョンはサポートされません。
 >* アダプティブフォームの CAPTCHA は、AEM Forms アプリケーションのオフラインモードではサポートされていません。
