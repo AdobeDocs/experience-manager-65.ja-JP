@@ -1,12 +1,12 @@
 ---
-title: Adobe Experience Manager Assetsの検索機能の拡張
-description: Adobe Experience Manager Assetsの検索機能をデフォルト以外に拡張しました。
+title: Adobe Experience Managerアセットの検索機能の拡張
+description: Adobe Experience Managerアセットの検索機能をデフォルト以外に拡張します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 75%
+source-wordcount: '857'
+ht-degree: 74%
 
 ---
 
@@ -31,7 +31,7 @@ To overlay the pre-configured predicates, copy the `facets` node from `/libs/dam
 
 >[!NOTE]
 >
->デフォルトでは、/`apps` 配下のディレクトリ構造は存在しないので、新たに作成する必要があります。ノードのタイプが、/`libs` 配下のノードのタイプと一致するようにしてください。
+>デフォルトでは、の下のディレクトリ構造 `/apps` は存在しないので作成します。 ノードのタイプが、`/libs` 配下のノードのタイプと一致するようにしてください。
 
 ## タブの追加 {#adding-tabs}
 
@@ -252,14 +252,14 @@ In addition to using pre-existing predicates, Experience Manager developers can 
 
 ### FulltextPredicate {#fulltextpredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`fulltext` |
 | searchCallback | Function | Callback for triggering search on event `keyup`. デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`property` |
 | propertyName | String | JCR プロパティの名前。デフォルト に設定`jcr:title` |
@@ -267,7 +267,7 @@ In addition to using pre-existing predicates, Experience Manager developers can 
 
 ### PathPredicate {#pathpredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`path` |
 | rootPath | String | 述語のルートパス。デフォルト に設定`/content/dam` |
@@ -276,7 +276,7 @@ In addition to using pre-existing predicates, Experience Manager developers can 
 
 ### DatePredicate {#datepredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`daterange` |
 | propertyname | String | JCR プロパティの名前。デフォルト に設定`jcr:content/jcr:lastModified` |
@@ -284,7 +284,7 @@ In addition to using pre-existing predicates, Experience Manager developers can 
 
 ### OptionsPredicate {#optionspredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | title | String | 最上部のタイトルを追加します |
 | predicateName | String | 述語の名前。デフォルト に設定`daterange` |
@@ -296,6 +296,6 @@ In addition to using pre-existing predicates, Experience Manager developers can 
 
 ## 検索結果のカスタマイズ {#customizing-search-results}
 
-アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。Experience Manager Assetsには、アセット共有ページのカスタマイズに使用できる定義済みのレンズセットが付属しています。 この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
+アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。Experience Managerアセットには、アセット共有ページのカスタマイズに使用できる定義済みのレンズセットが付属しています。 この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-既存のレンズを使用するだけでなく、Experience Managerの開発者は独自のレンズを作成することもできます。
+既存のレンズを使用するだけでなく、Experience Manager開発者は独自のレンズを作成することもできます。
