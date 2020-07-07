@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '708'
+ht-degree: 87%
 
 ---
 
@@ -36,7 +39,10 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
-   >   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
+
+   >
+   >   
+   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
 >* グループのメンバーであるユーザーのみが使用でき `administrators` ます。
 
 
@@ -48,6 +54,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* nosamplecontent実行モードを使用した作成者インスタンスに対する
 >* パブリッシュインスタンス
+
 >
 >
 使用後は再度無効にする必要があります。
@@ -58,6 +65,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」（有用なヒントとツールに関する記述あり）
 >* [AEM 6.0 の開発者モード](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)に関する AEM Gems セッション
+
 >
 
 
@@ -103,6 +111,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
    * コンポーネントのレンダリングに使用されるすべてのコンポーネントスクリプト。
    * この特定のコンポーネントのリポジトリコンテンツパス。
+
    ![chlimage_1-14](assets/chlimage_1-14.png)
 
 * **スクリプトを編集**：次のことをおこなうリンクです。
@@ -113,6 +122,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
    * 選択したコンポーネント内の階層。
    * 選択したコンポーネント単独でのレンダリング時間、そのコンポーネント内にネストされている個々のコンポーネントのレンダリング時間および両者の合計。
+
    ![chlimage_1-15](assets/chlimage_1-15.png)
 
 >[!CAUTION]
