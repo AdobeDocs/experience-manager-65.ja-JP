@@ -3,7 +3,7 @@ title: Adobe Experience Manager内のプライベートフォルダーを作成�
 description: Adobe Experience Managerアセット内にプライベートフォルダーを作成し、他のユーザーと共有し、それらに様々な権限を割り当てる方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 45%
@@ -17,7 +17,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
-> プライベートフォルダーには、所有者の役割を持つメンバが少なくとも1つ存在します。
+>プライベートフォルダーには、所有者の役割を持つメンバが少なくとも1つ存在します。
 
 1. In the Assets console, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Folder]** from the menu.
 
