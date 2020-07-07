@@ -4,7 +4,7 @@ description: 親アセットから派生し、親アセットにリンクされ�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '3368'
 ht-degree: 73%
@@ -61,14 +61,14 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
 1 つ以上のソースアセットまたはフォルダーからライブコピーを作成するには、次のいずれかを実行します。
 
-* 方法 1：ソースアセットを選択し、上部のツールバーで&#x200B;**[!UICONTROL 作成／ライブコピー]**&#x200B;をクリックします。
-* Method 2: In [!DNL Experience Manager] user interface, click **[!UICONTROL Create > Live Copy]** from upper-right corner of the interface.
+* Method 1: Select the source assets and click **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** from toolbar at the top.
+* Method 2: In [!DNL Experience Manager] user interface, click **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** from upper-right corner of the interface.
 
 アセットまたはフォルダーのライブコピーを 1 つずつ作成できます。それ自体がライブコピーであるアセットまたはフォルダーから派生したライブコピーを作成できます。この使用例では、コンテンツフラグメント（CF）はサポートされていません。ライブコピーを作成しようとすると、CF は関係を除きそのままコピーされます。コピーされた CF はある時点でのスナップショットであり、元の CF が更新されても更新されません。
 
 最初の方法でライブコピーを作成するには、次の手順に従います。
 
-1. ソースアセットまたはフォルダーを選択します。ツールバーで&#x200B;**[!UICONTROL 作成／ライブコピー]**&#x200B;をクリックします。
+1. ソースアセットまたはフォルダーを選択します。From the toolbar, click **[!UICONTROL Create]** > **[!UICONTROL Live Copy]**.
 
    ![Experience Managerインターフェイスからライブコピーを作成する](assets/create_lc1.png)
 
@@ -80,7 +80,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
 2 番目の方法でライブコピーを作成するには、次の手順に従います。
 
-1. In [!DNL Experience Manager] interface, from upper-right corner, click **[!UICONTROL Create > Live Copy]**.
+1. In [!DNL Experience Manager] interface, from upper-right corner, click **[!UICONTROL Create]** > **[!UICONTROL Live Copy]**.
 
    ![Experience Managerインターフェイスからライブコピーを作成する](assets/create_lc2.png)
 
