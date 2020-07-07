@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+workflow-type: tm+mt
+source-wordcount: '447'
+ht-degree: 53%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 イネーブルメント機能では、[イネーブルメントコミュニティ](overview.md#enablement-community)を作成できます。
 
-* この機能を使用するには、実稼働環境での使用に追加のライセンスが必要です。
+* この機能を使用するには、実稼働環境で使用する追加のライセンスが必要です。
 
 イネーブルメント機能を使用するには、次の必要があります。
 
@@ -61,11 +64,16 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[MySQL用JDBCドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
+1. **[MySQL用のJDBCドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   Use Web Console (bundles): *http://localhost:4502/system/console/bundles* Install *before install* SCORM package
+   Webコンソールを使用（バンドル）: *http://localhost:4502/system/console/bundles*
 
-1. **[SCORMパッケージのインストール](deploy-communities.md#scorm-package)**パッケージマネージャーの使用：http://localhost:4502/crx/packmgr/**
+   SCORMパッケージ *をインストールする前に* 、インストールします
+
+1. **[SCORMパッケージのインストール](deploy-communities.md#scorm-package)**
+
+
+   Package Managerを使用する： *http://localhost:4502/crx/packmgr/*
 
 **任意のサーバーで、次の手順を実行します。**
 
@@ -73,7 +81,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 1. **[MySQLデータベースのインストール](mysql.md#database-setup)**
 
-   作成者インスタンスからダウンロードしたSQLスクリプトの実行MySQL Workbenchを使用
+   作成者インスタンスからダウンロードしたSQLスクリプトを実行します
+
+   MySQL Workbenchの使用
 
 **オーサーインスタンスをホストしている同じサーバーで、次の手順を実行します。**
 
@@ -83,21 +93,21 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 1. **[JDBC接続プールの設定](mysql.md#configure-jdbc-connections)**
 
-   Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
 
-1. **[SCORMエンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**
+1. **[SCORMエンジンサービスの構成](mysql.md#aem-communities-scormengine-service)**
 
-   Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
 
-1. **[CSRFフィルター](mysql.md#adobe-granite-csrf-filter)**
+1. **[CSRFフィルターの設定](mysql.md#adobe-granite-csrf-filter)**
 
-   Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
 
 **オーサーインスタンスで、次の手順を実行します。**
 
-1. (オプ&#x200B;*ション*) **[Analyticsサービスの設定](analytics.md)**
+1. (*オプション*)Analyticsサービスの **[設定](analytics.md)**
 
-   ツール/展開/クラウドサービスコンソールを使用します。http://localhost:4502/etc/cloudservices/sitecatalyst.html **
+   ツール、デプロイメント、Cloud Serviceコンソールを使用します。 *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[FFmpegの設定](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
@@ -105,13 +115,15 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 1. **[トンネルサービスの有効化](deploy-communities.md#tunnel-service-on-author)**
 
-   Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
 
 1. **[コミュニティ管理者の作成](users.md#creating-community-members)**
 
-   作成者環境の場合は、従来のUIセキュリティコンソールを使用します。 *http://localhost:4502/useradmin*&#x200B;パス= /home/users/communityを使用してユーザーを作成
+   作成者環境に対しては、クラシックUIセキュリティコンソールを使用します。 *http://localhost:4502/useradmin*
 
-   * 次追加のグループにメンバー：
+   パス= /home/users/communityでユーザーを作成
+
+   * メ追加ンバーを次のグループに追加します：
 
       * コミュニティイネーブルメントマネージャー
       * コミュニティ管理者
