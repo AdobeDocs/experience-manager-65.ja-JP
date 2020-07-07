@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '9250'
 ht-degree: 63%
@@ -506,7 +506,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    **レンディションの削除**
 
-   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** option from the toolbar. アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザインターフェイスからレンディションを手動で削除できます。複数のアセットの場合、Experience Managerをカスタマイズして、特定のレンディションを削除したり、アセットを削除して削除したアセットを再度アップロードしたりできます。
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** option from the toolbar. アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザーインターフェイスからレンディションを手動で削除できます。複数のアセットの場合、Experience Managerをカスタマイズして、特定のレンディションを削除したり、アセットを削除して削除したアセットを再度アップロードしたりできます。
 
    ![レンディションを削除するオプション](assets/delete_renditionicon.png)
 
@@ -676,7 +676,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
    * Select the asset and then click **[!UICONTROL Edit]** in the toolbar.
    * Click **[!UICONTROL Edit]** option that displays on an asset in the card view.
-   * Click **[!UICONTROL Edit]** from the toolbar.
+   * ツールバーの「**[!UICONTROL 編集]**」をクリックします。
    ![ツールバーの編集オプション](assets/edit_icon.png)
 
 1. 画像を切り抜くには、「切り抜き **** オプション」をクリックして画像を切り抜き ![](assets/chlimage_1-22.png)ます。
