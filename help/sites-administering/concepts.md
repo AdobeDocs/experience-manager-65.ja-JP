@@ -1,6 +1,6 @@
 ---
-title: 概念
-seo-title: 概念
+title: '概念 '
+seo-title: '概念 '
 description: e コマースと AEM の一般的な概念
 seo-description: e コマースと AEM の一般的な概念
 uuid: 9a4cc154-d82b-43e0-a66c-3edf059e8b75
@@ -11,12 +11,15 @@ content-type: reference
 discoiquuid: 6d595c46-b04e-400b-a014-fbecd2010f5f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 69dfd6b41b32cb9131fd90fd7039a0c224889db5
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '4532'
+ht-degree: 81%
 
 ---
 
 
-# 概念{#concepts}
+# 概念 {#concepts}
 
 この統合フレームワークは、次のことを実行するメカニズムとコンポーネントを提供します。
 
@@ -39,6 +42,7 @@ source-git-commit: 69dfd6b41b32cb9131fd90fd7039a0c224889db5
 >* [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 >* [SAP Commerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
 >* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
+
 >
 
 
@@ -65,7 +69,7 @@ source-git-commit: 69dfd6b41b32cb9131fd90fd7039a0c224889db5
 
 * AEM がすること：
 
-   * 以下を要求します。
+   * リクエスト:
 
       * e コマースエンジンからの商品情報。
    * 以下を指定します。
@@ -97,7 +101,7 @@ source-git-commit: 69dfd6b41b32cb9131fd90fd7039a0c224889db5
 >
 >詳細は、e コマースエンジンとプロジェクトの実装によって異なります。
 
-統合レイヤーを使用するために、標準搭載の多くのAEMコンポーネントが用意されています。 現在は次のものを使用できます。
+統合レイヤーを使用するために、標準搭載のAEMコンポーネントが多数用意されています。 現在は次のものを使用できます。
 
 * 商品情報
 * 買い物かご
@@ -132,10 +136,9 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 >JCR をベースとする汎用的な開発によって AEM 内に実装される AEM e コマースは、
 >
 >* API の使用方法を説明するための、スタンドアロンの AEM ネイティブな e コマースのサンプルです。これにより、商品データ、ショッピングカート、チェックアウトと共に、既存のデータ表示とマーケティングキャンペーンを制御することができます。この場合、商品データは AEM にネイティブなリポジトリ（アドビの [JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html) 実装）に保存されます。
-   >  The standard AEM installation contains the basics of the [generic eCommerce implemention](/help/sites-administering/generic.md).
 >
-
-
+>  
+The standard AEM installation contains the basics of the [generic eCommerce implemention](/help/sites-administering/generic.md).
 
 ### コマースプロバイダー {#commerce-providers}
 
@@ -168,7 +171,7 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 
 * `.../importproductswizard/importers/geometrixx/.content.xml`
 
-読み込み元ファイルの形式は、インポーターによって定義されます。または、インポーターがコマースエンジンへの接続（WebDAVやhttpなど）を確立する場合があります。
+読み込み元ファイルの形式は、インポーターによって定義されます。または、インポーターが、WebDAVやhttpなどのコマースエンジンへの接続を確立します。
 
 ## 役割 {#roles}
 
@@ -201,7 +204,7 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 
 ## 製品 {#products}
 
-### 商品データとマーケティングデータ {#product-data-versus-marketing-data}
+### 製品 Data versus Marketing Data {#product-data-versus-marketing-data}
 
 #### 構造的カテゴリとマーケティングカテゴリ {#structural-versus-marketing-categories}
 
@@ -209,13 +212,13 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 
 * *構造*カテゴリ
 
-   製品とは何かを定義 *するカテゴリツリー*。例：
+   商品 *とは何かを定義するカテゴリツリー*; 例：
 
    `/products/mens/shoes/sneakers`
 
 * *マーケティング* カテゴリ
 
-   製品が属することがで *きるその他のカテゴリ*。例：
+   ある *製品が属する他のすべてのカテゴリ*; 例：
 
    `/special-offers/christmas/shoes`)
 
@@ -242,7 +245,7 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 
 商品によっては、バリアントに関する情報も保持できます。例えば、衣料品の場合は、販売されている様々なカラーをバリアントとして保持します。
 
-![ecommerceproductvariants](assets/ecommerceproductvariants.png)
+![ecommerproductvariant](assets/ecommerceproductvariants.png)
 
 ### 商品属性 {#product-attributes}
 
@@ -258,15 +261,15 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 
 * **説明**
 
-   製品のテキスト説明。
+   製品の説明。
 
 * **タグ**
 
-   関連製品のグループ化に使用するタグ。
+   関連製品をグループ化するために使用するタグ。
 
 * **デフォルトのアセットカテゴリ**
 
-   アセットのデフォルトのカテゴリ。
+   アセットの初期設定のカテゴリ。
 
 * **ERP データ**
 
@@ -286,9 +289,9 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 
    製品の機能の概要です。
 
-* **機能**
+* **特長**
 
-   製品の機能の詳細。
+   製品の機能の詳細を説明します。
 
 ### 商品アセット {#product-assets}
 
@@ -367,7 +370,7 @@ JCR ノードの直下に多数の子ノード（1000 以上）がある場合�
 
 1. マスター作成者インスタンス
 
-   PIMから製品データを読み込みます。このデータ上でアセットパスの後処理が無効になります。
+   PIMから製品データを読み込みます。このPIMでは、アセットパスの後処理が無効になります。
 
 1. 専用のDAM作成者インスタンス
 
@@ -390,23 +393,23 @@ JCR ノードの直下に多数の子ノード（1000 以上）がある場合�
 
 AEM e コマース実装では、パフォーマンステストを考慮に入れる必要があります。
 
-* 作成者環境：
+* 作成者環境:
 
-   背景（例：読み込み）アクティビティは、通常のユーザーアクティビティと同時に発生し（例：ページ編集）、フロントエンドのパフォーマンスが高い優先度を与えられた場合でも、オンライン作成者が見たパフォーマンスが低い場合は、実行中の判断を妨げる不満を招きます。
+   背景（例：読み込み）のアクティビティは、通常のユーザーアクティビティ（例：ページ編集）と同時に発生し、フロントエンドのパフォーマンスが高い優先度を与えられた場合でも、オンライン作成者が見た悪いパフォーマンスは、実行中の判断を妨げる不満を招きます。
 
-* パブリケーション環境：
+* パブリケーション環境:
 
    レプリケーションは、コンテンツを迅速かつ確実に公開するための重要なプロセスです。 レプリケーションは、公開するコンテンツをオーサーがどのようにグループ化するかによって影響を受ける場合があります。
 
 * フロントエンド:
 
-   フロントエンドとキャッシュの無効化が混在していると、パフォーマンスが異常になる可能性があります。 この問題はテストによって回避できます。
+   フロントエンドとキャッシュの無効化が混在している場合、パフォーマンスが異常になる可能性があります。 この問題はテストによって回避できます。
 
 このようなパフォーマンステストには、ターゲットに関する次のような知識と分析が必要です。
 
 * コンテンツのボリューム
 
-   * アセット
+   * Assets
    * ローカライズされ、インターナショナライズされた商品と SKU
 
 * ユーザーアクティビティ：
@@ -437,7 +440,7 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
 
    `/content/products/france/fr/shoe/reebok/pump/46 SKU`
 
-   コンテンツレベルごとに1つのタグ（例：国、言語、カテゴリ、ブランド、製品）を持つ必要があります。 検索
+   には、コンテンツレベルごとに1つのタグ(国、言語、カテゴリ、ブランド、製品など)が必要です。 検索
 
    `//element(*,my:Sku)[@country=’france’ and @language=’fr’`
 
@@ -499,7 +502,7 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
 
 カタログの作成では、商品あたり 10 ノードを使用します。AEM 内で更新およびカスタマイズできる商品ごとに、個別のコンポーネントを提供するからです。このようにノード数が多いと、カタログに何百、何千もの商品が含まれる場合、問題が生じる場合があります。問題を回避するために、プロキシページを使用してカタログを作成できます。
 
-Proxy pages use a two-node structure ( `cq:Page` and `jcr:content`) that does not contain any of the actual product content. コンテンツは、リクエスト時に、製品データとテンプレートページを参照することによって生成されます。
+Proxy pages use a two-node structure ( `cq:Page` and `jcr:content`) that does not contain any of the actual product content. リクエスト時に、製品データとテンプレートページを参照することで、コンテンツが生成されます。
 
 ただし、デメリットもあります。AEM 内の商品情報をカスタマイズすることはできません。（サイト用に定義された）標準テンプレートが使用されます。
 
@@ -577,15 +580,15 @@ AEM では、プロモーションは[キャンペーン管理](/help/sites-auth
 
    `/content/campaigns/geometrixx-outdoors/big-spender/ordervalueover100/free-shipping`
 
-   がエクスペリエンス内にあるので、セグメント( `ordervalueover100`)が解決されるたびに自動的に実行されます。
+   がエクスペリエンス内にある場合、セグメント( `ordervalueover100`)が解決されるたびに自動的に実行されます。
 
-* エクスペリエンス内に存在しない（キャンペーン内にのみ存在する）プロモーションの場合は、自動的にはオーディエンスに適用されません。ただし、買い物かごに伝票が入力され、その伝票がプロモーションを参照している場合は、引き続きこのメッセージを表示できます。
+* エクスペリエンス内に存在しない（キャンペーン内にのみ存在する）プロモーションの場合は、自動的にはオーディエンスに適用されません。ただし、買い物かごに伝票を入力し、その伝票がプロモーションを参照している場合は、これをクリックできます。
 
-   例えば、プロモーションは次のようになります。
+   例えば、次のようなプロモーションがあります。
 
    `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
-   がエクスペリエンスの外にあるので、自動的には実行されません(例：セグメント化に基づいて)。 ただし、これは、記事キャンペーン内の複数のエクスペリエンスで見つかる証明書によって参照されます。 これらの伝票コードを買い物かごに入力すると、プロモーションが実行されます。
+   がエクスペリエンスの外にあるため、自動的には発生しません(例： セグメントに基づいて)。 ただし、これは受講券によって参照され、記事キャンペーン内の複数のエクスペリエンスで見つけることができます。 これらのバウチャーコードを買い物かごに入力すると、プロモーションが実行されます。
 
 >[!NOTE]
 >
@@ -677,7 +680,7 @@ The address book component is reachable from the **My Account** page by clicking
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
 Addresses are persisted below `user_home/profile/addresses`.
-例えば、Alison Parkerの場合、/home/users/geometrixx/aparker@geometrixx.info/profile/addressesの下に配置されます。
+例えば、Alison Parkerの場合、この名前は/home/users/geometrixx/aparker@geometrixx.info/プロファイル/addressesの下にあります。
 
 デフォルトとするアドレスを選択できます。この情報は、アドレスと一緒にではなく、買い物客のプロファイルに保持されます。The profile property `address.default` is set with the path of the selected address for value.
 
@@ -722,7 +725,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
    * 個々のアイテムの数／数量を更新する
    * 個々のアイテムを削除する
 
-![eコマース_買い物かご](assets/ecommerce_shoppingcart.png)
+![ecommerce_shoppingcart](assets/ecommerce_shoppingcart.png)
 
 買い物かごは、使用しているエンジンに応じて次のように保存されます。
 
@@ -768,7 +771,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 * **ステータス**
 
-   注文のステータス例えば、「Shipped」と入力します。
+   注文のステータス 例えば、Shipped.
 
 * **通貨**
 
@@ -776,15 +779,15 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 * **コンテンツ項目**
 
-   注文された項目のリスト。
+   注文された品目のリスト。
 
 * **小計**
 
-   注文された品目の合計コスト。
+   注文された品目の総原価。
 
 * **税**
 
-   注文に対する税金の額。
+   注文に対する納税額。
 
 * **送料**
 
@@ -792,7 +795,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 * **合計**
 
-   注文の合計値。注文された品目、税金、および支払い
+   注文の合計値。 発注済品目、税金、および支払い
 
 * **請求先住所**
 
@@ -812,15 +815,15 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 * **発送方法**
 
-   発送方法たとえば、陸、海、空など。
+   発送方法 たとえば、陸、海、空など。
 
 * **追跡番号**
 
-   配送会社が使用する任意の追跡番号。
+   出荷会社が使用する任意の追跡番号。
 
 * **追跡リンク**
 
-   出荷中の注文の追跡に使用されるリンク。
+   出荷時の注文の追跡に使用するリンク。
 
 >[!NOTE]
 >
@@ -846,7 +849,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 注文の配達を受け取った後、買い物客は一定期間におこなわれた注文の履歴を表示することもできます。
 
-注文の受け渡しと追跡は、通常は e コマースエンジンによって管理されます。AEMは注文履歴コンポーネントを使用して、適用された伝票やプロモーションを含むすべての関連詳細を表示する情報を表示できます。 次に例を示します。
+注文の受け渡しと追跡は、通常は e コマースエンジンによって管理されます。AEMでは注文履歴コンポーネントを使用して情報を表示できます。このコンポーネントには、適用された伝票やプロモーションなど、関連するすべての詳細が表示されます。 次に例を示します。
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -860,7 +863,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 クレジットカード情報を含む支払いの詳細は、多くの場合、e コマースエンジンが管理します。AEM は、そのようなトランザクション情報をエンジンに転送します（情報はエンジンから支払い処理サービスに転送されます）。
 
-PCI (Payment Card Industry)への準拠を実現できます。
+PCI (Payment Card Industry)への準拠を達成できます。
 
 ### 注文の確認 {#confirmation-of-order}
 
@@ -877,5 +880,5 @@ AEM は商品に標準のページを使用しているので、標準の検索�
 * 必要な機能で、デフォルトの検索コンポーネントを拡張する。
 * `CommerceService` に検索メソッドを実装し、検索ページで e コマース検索コンポーネントを使用する。
 
-eコマースエンジンを使用する場合、eCommerce検索APIをeコマースエンジンソリューションに完全に実装できるので、標準搭載のeコマース検索コンポーネントを使用できます。 ファセット検索を利用して、JCR やエンジンを検索できます。
+eコマースエンジンを使用する場合、eCommerce検索APIはeコマースエンジンソリューションに完全に実装できるので、すぐに使用できるeCommerce検索コンポーネントを使用できます。 ファセット検索を利用して、JCR やエンジンを検索できます。
 
