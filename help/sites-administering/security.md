@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 86d3f14ec9e99297ede0aa1c027884d7f73665bc
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '5487'
 ht-degree: 88%
@@ -61,7 +61,7 @@ AEM WCM では複数のユーザーとグループがインストールされま
  <tbody>
   <tr>
    <td>ユーザー ID</td>
-   <td>タイプ</td>
+   <td>型</td>
    <td>説明</td>
    <td>推奨事項</td>
   </tr>
@@ -78,7 +78,7 @@ AEM WCM では複数のユーザーとグループがインストールされま
    <td>オーサーインスタンスの機能に悪影響を及ぼす可能性があるため、このアカウントを削除または無効にしないでください。削除することを義務付けているセキュリティ要件がある場合は、まずシステムに与える影響をテストするようにしてください。</td>
   </tr>
   <tr>
-   <td><p>author</p> <p>デフォルトのパスワード：author</p> </td>
+   <td><p>作成者</p> <p>デフォルトのパスワード：author</p> </td>
    <td>ユーザー</td>
    <td><p>/content への書き込みが許可されている author アカウント。寄稿者と閲覧者の権限が含まれます。</p> <p>/content ツリー全体へのアクセスが許可されているので、Web マスターとして使用できます。</p> <p>これは組み込みのユーザーではなく、別の Geometrixx Demo のユーザーです。</p> </td>
    <td><p>このアカウントを完全に削除するか、デフォルトのパスワードを変更することをお勧めします。</p> <p>可能な場合はインストール時に変更してください。後から変更することもできます。</p> </td>
@@ -457,9 +457,11 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 1. ユーザーとグループのどちらを作成するかに従って、必要な詳細を入力します。
 
    * 「**ユーザーを作成**」を選択した場合は、ログイン ID、姓名、電子メールアドレスおよびパスワードを入力します。デフォルトでは、AEM は姓の最初の文字に基づいてパスを作成しますが、別のパスを選択することもできます。
+
    ![createuserdialog](assets/createuserdialog.png)
 
    * 「**グループを作成**」を選択した場合は、グループ ID と説明（オプション）を入力します。
+
    ![creategroupdialog](assets/creategroupdialog.png)
 
 1. 「**作成**」をクリックします。作成したユーザーまたはグループがツリーリストに表示されます。
@@ -493,11 +495,11 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 >[!NOTE]
 >
 >You cannot use the Security console to change the admin password. To change the password for the admin account, use the [Users console](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) that Granite Operations provides.
-> JEE上のAEM Formsを使用している場合は、次の手順に従ってパスワードを変更しないでください。JEE上のAEM Forms管理コンソール(/adminui)を使用してパスワードを変更してください。
+>
+>JEE上のAEM Formsを使用している場合は、次の手順に従ってパスワードを変更しないでください。JEE管理コンソール(/adminui)のAEM Formsを使用してパスワードを変更してください。
 
 1. **セキュリティ**&#x200B;コンソールで、パスワードを変更するユーザーの名前をダブルクリックします。
 1. 「**プロパティ**」タブをクリックします（まだアクティブでない場合）。
-
 1. 「**パスワードを設定**」をクリックします。パスワードを設定ウィンドウが開きます。このウィンドウでパスワードを変更できます。
 
    ![cqsecurityuserpassword](assets/cqsecurityuserpassword.png)
@@ -638,6 +640,7 @@ When the deployment is a [publish farm](/help/sites-deploying/recommended-deploy
 >* グループに適用されたレプリケーション権限は、そのグループ内のすべてのユーザーに適用されます。
 >* ユーザーのレプリケーション権限はグループのレプリケーション権限に優先します。
 >* The Allow replication rights have a higher precedence than the Deny replication rights. See [Permissions in AEM](#permissions-in-aem) for more information.
+
 >
 
 
