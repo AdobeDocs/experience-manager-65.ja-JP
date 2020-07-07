@@ -9,7 +9,10 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '2042'
+ht-degree: 84%
 
 ---
 
@@ -45,6 +48,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
    * [XFA フォームテンプレート](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)
    * [XML または JSON スキーマ](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-xml-or-json-schema-p)
    * なし、またはフォームモデルを使用しない
+
    これらは、「**[!UICONTROL プロパティの追加]**」ページにある「**[!UICONTROL フォームモデル]**」タブから設定することができます。デフォルトで選択されているフォームモデルは「**[!UICONTROL なし]**」になっています。
 
 1. 「**作成**」をタップします。アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。
@@ -59,7 +63,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
    アダプティブフォームのオーサリングインターフェースと使用可能なコンポーネントについて詳しくは、「[アダプティブフォームの作成について](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
 
-   >[!NOTE] {grayBox=&quot;true&quot;}
+   >[!NOTE]
    >
    >新しく作成されたフォームを新しいタブで開くには、ブラウザでポップアップを許可してください。
 
@@ -97,7 +101,7 @@ XFA フォームテンプレートをアダプティブフォームのフォー�
 1. In the Form Model tab, from the drop-down list, select **[!UICONTROL Form Templates]**. AEM Forms UI を通じてリポジトリにアップロードされたすべてのフォームテンプレートがリストされ、選択できるようになります。リストからテンプレートを選択します。
 
    ![XFA フォームテンプレートとアダプティブフォームの関連付け](assets/form_model_xfa_associate.png)
-   **図：** フォーム *テンプレートの選択*
+   **図：** *フォームテンプレートの選択*
 
    >[!NOTE]
    >
@@ -105,7 +109,7 @@ XFA フォームテンプレートをアダプティブフォームのフォー�
 
 ## XML スキーマまたは JSON スキーマに基づくアダプティブフォームの作成 {#create-an-adaptive-form-based-on-xml-or-json-schema}
 
-XML スキーマと JSON スキーマは、組織内のバックエンドシステムによって生成されて使用されるデータの構造を表します。アダプティブフォームにスキーマを関連付け、その要素を使用して、アダプティブフォームに動的なコンテンツを追加することができます。 スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブで使用できます。 スキーマ要素をドラッグ &amp; ドロップしてフォームを作成できます。
+XML スキーマと JSON スキーマは、組織内のバックエンドシステムによって生成されて使用されるデータの構造を表します。アダプティブフォームにスキーマを関連付け、その要素を使用して、アダプティブフォームに動的なコンテンツを追加することができます。 スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブから利用できます。 スキーマ要素をドラッグ &amp; ドロップしてフォームを作成できます。
 
 アダプティブフォームのオーサリングのための XML または JSON スキーマの設計方法について理解するには、次のドキュメントを参照してください。
 
@@ -121,17 +125,18 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
 
    * **[!UICONTROL ディスクからアップロード]** - このオプションを選択して「スキーマの定義をアップロード」をタップし、ファイルシステムから XML スキーマまたは JSON スキーマをアップロードします。アップロードされたスキーマファイルはフォームとともに保存されますが、他のアダプティブフォームからアクセスすることはできません。
    * **[!UICONTROL リポジトリ内を検索]** - このオプションを選択して、リポジトリで使用できるスキーマ定義ファイルのリストからスキーマを選択します。XML または JSON スキーマファイルをフォームモデルとして選択します。選択したスキーマが参照されてフォームに関連付けられ、他のアダプティブフォームからアクセスして使用できるようになります。
-   >[!CAUTION] {grayBox=&quot;true&quot;}
+
+   >[!CAUTION]
    >
    >JSON スキーマファイル名が **.schema.json** で終わることを確認してください。例：mySchema.schema.json
 
    ![XML または JSON スキーマの選択](assets/upload-schema.png)
-   **図：** 「 *XMLまたはJSONの選択」スキーマ*
+   **図：** *XMLまたはJSONスキーマの選択*
 
 1. （XML スキーマのみ）XML スキーマを選択またはアップロードした後、選択した XSD ファイルのルートエレメントを指定してアダプティブフォームにマッピングします。
 
    ![XSD ルートエレメントの選択](assets/xsd-root-element.png)
-   **図：** XSDル *ート要素の選択*
+   **図：** *XSDルート要素の選択*
 
 >[!NOTE]
 >
@@ -179,10 +184,12 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
 
    * **[!UICONTROL 時刻に基づいた自動保存]**：特定の時間間隔に基づいてコンテンツの保存を開始するには、このオプションを選択します。
    * **[!UICONTROL イベントに基づいた自動保存]**：イベントがトリガーされたときにコンテンツの保存を開始するには、このオプションを選択します。
+
    トリガーを選択すると、方法の設定ボックスが有効になります。方法の設定ボックスでは、次のことができます。
 
    * **[!UICONTROL 時刻に基づいた自動保存]**&#x200B;トリガーを選択した場合は、時間間隔を指定します。
    * Specify an event name if you select **[!UICONTROL Event based]** trigger.
+
    独自の方法を作成してリストに追加することもできます。詳細については、[フォームを自動保存するためのカスタム方法の実装](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)を参照してください。
 
 1. （時間ベースの自動保存のみ）次の手順を実行して、時間ベースの自動保存のオプションを設定します。
