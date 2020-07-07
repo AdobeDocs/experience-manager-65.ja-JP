@@ -3,10 +3,10 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '2644'
-ht-degree: 52%
+ht-degree: 53%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 52%
 |---|---|---|
 | [!UICONTROL default] |  | アセットのベースメタデータスキーマフォーム。 |
 |  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
-|  | [!UICONTROL 画像] | MIMEタイプがandなどの画像のスキーマフォ `image/jpeg` ーム `image/png`。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプがTIFFのアセットのスキーマフォーム。</li></ul> |
+|  | [!UICONTROL image] | MIMEタイプがandなどの画像のスキーマフォ `image/jpeg` ーム `image/png`。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプがTIFFのアセットのスキーマフォーム。</li></ul> |
 |  | [!UICONTROL アプリケーション] | Schema form for assets with MIME type such as `application/pdf` and `application/zip`. <br>[!UICONTROL pdf]: サブタイプがPDFのアセットのスキーマフォームです。 |
 |  | [!UICONTROL ビデオ] | MIMEタイプ（例：および）を持つビデオアセットのスキーマフォ `video/avi` ーム `video/mp4`。 |
 | [!UICONTROL collection] |  | コレクションのスキーマフォーム。 |
@@ -119,7 +119,7 @@ To edit the properties of a metadata component on the form, click the component 
 
 * `./jcr:content/metadata/dc:title`：アセットのメタデータノードにある値を、プロパティ `dc:title` として格納します。
 
-* `./jcr:created`: アセットの作成日時が格納されます。 保護されたプロパティです。 これらのプロパティを設定する場合は、「編集を無効にする」とマークすることをお勧めします。
+* `./jcr:created`:アセットの作成日時が格納されます。これは保護プロパティーです。これらのプロパティを設定する場合は、「編集を無効にする」とマークすることをお勧めします。
 
 コンポーネントがメタデータスキーマフォームに適切に表示されるように、プロパティのパスにはスペースを含めないでください。
 
