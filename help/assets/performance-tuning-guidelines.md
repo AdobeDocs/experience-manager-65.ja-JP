@@ -4,9 +4,9 @@ description: 構成、ハードウェア、ソフトウェア、ネットワー�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da2e435f33e8527793e009700c30e60868d196be
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '2776'
+source-wordcount: '2767'
 ht-degree: 52%
 
 ---
@@ -28,7 +28,7 @@ Poor performance in [!DNL Experience Manager Assets] can impact user experience 
 
 ## プラットフォーム {#platform}
 
-Experience Managerは様々なプラットフォームでサポートされていますが、LinuxおよびWindowsでのネイティブツールのサポートが最も多く行われ、パフォーマンスと導入の容易さの最適化に貢献しています。 Ideally, you should deploy a 64-bit operating system to meet the high memory requirements of an [!DNL Experience Manager Assets] deployment. Experience Manager導入の場合と同様、TarMKは可能な限り実装する必要があります。 TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。You can add TarMK offload instances to increase the workflow processing power of your [!DNL Experience Manager Assets] deployment.
+Experience Managerは様々なプラットフォームでサポートされていますが、LinuxおよびWindowsで最も多くのネイティブツールがサポートされ、最適なパフォーマンスと実装の容易さに貢献しています。 Ideally, you should deploy a 64-bit operating system to meet the high memory requirements of an [!DNL Experience Manager Assets] deployment. Experience Manager導入の場合と同様に、可能な限りTarMKを実装する必要があります。 TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。You can add TarMK offload instances to increase the workflow processing power of your [!DNL Experience Manager Assets] deployment.
 
 ### 一時フォルダー {#temp-folder}
 
@@ -55,9 +55,8 @@ Once the high performance temporary volume is ready, set the JVM parameter `-Dja
 
 最適なパフォーマンスを得るた [!DNL Experience Manager Assets] めに、Java 8にデプロイすることをお勧めします。
 
->[!NOTE]
->
->Oracleは、2015年4月にJava 7のアップデートのリリースを停止しました。
+<!-- TBD: Link to the latest official word around Java.
+-->
 
 ### JVM パラメーター {#jvm-parameters}
 
@@ -118,7 +117,7 @@ accessKey=<snip>
 
 Primarily, your network optimization strategy depends upon the amount of bandwidth available and the load on your [!DNLExperience Manager] instance. ファイアウォールやプロキシなどの一般的な設定オプションは、ネットワークのパフォーマンスの改善に役立ちます。留意点は次のとおりです。
 
-* インスタンスのタイプ（小、モデレート、大）に応じて、Experience Managerインスタンスに十分なネットワーク帯域幅があることを確認します。 Adequate bandwidth allocation is especially important if [!DNLExperience Manager] is hosted on AWS.
+* インスタンスのタイプ（小、中、大）に応じて、Experience Managerインスタンスに十分なネットワーク帯域幅があることを確認します。 Adequate bandwidth allocation is especially important if [!DNLExperience Manager] is hosted on AWS.
 * If your [!DNLExperience Manager] instance is hosted on AWS, you can benefit by having a versatile scaling policy. 高い負荷が予想される場合は、インスタンスのサイズを大きくします。負荷が標準的または低い場合は、インスタンスのサイズを小さくします。
 * HTTPS：ユーザーの多くは HTTP トラフィックをスニッフィングするファイアウォールを装備しており、ファイルのアップロード操作に干渉しファイルを破損することもあります。
 * サイズの大きなファイルのアップロード：必ず有線でネットワークに接続してください（Wi-Fi 接続は簡単に飽和するおそれがあります）。
