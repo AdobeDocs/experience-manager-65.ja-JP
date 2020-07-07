@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '952'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +28,7 @@ Forms 中心のワークフローを起動またはトリガする多くの方�
 
 要約すると、インボックスでは新しいアプリケーションを作成して割り当てタスクを管理することができます。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >AEM インボックスを使用するには、ワークフローユーザーグループのメンバーである必要があります。
 
@@ -33,7 +36,7 @@ Forms 中心のワークフローを起動またはトリガする多くの方�
 
 1. Go to AEM Inbox at https://&#39;[server]:[port]&#39;/aem/inbox.
 1. In the Inbox UI, tap **[!UICONTROL Create > Application]**. [アプリの選択]ページが表示されます。
-1. Select an application and click **[!UICONTROL Create]**. アプリに関連付けられたアダプティブフォームが開きます。 アダプティブフォームの情報を入力し、「送信」をタッ **[!UICONTROL プします]**。 関連するワークフローが起動し、担当者のインボックスにタスクが作成されます。
+1. Select an application and click **[!UICONTROL Create]**. アプリに関連付けられたアダプティブフォームが開きます。 アダプティブフォームの情報を入力し、「 **[!UICONTROL 送信]**」をタップします。 関連するワークフローが起動し、担当者のインボックスにタスクが作成されます。
 
 ## タスクの管理 {#manage-tasks}
 
@@ -50,9 +53,11 @@ Forms ワークフローがトリガして、自分が担当者であるまた�
 1. 次のいずれかの操作をおこないます。
 
    * タスクを委任するには、「**[!UICONTROL 委任]**」をタップします。項目を委任ダイアログが開きます。Select a user, optionally add a comment, and tap **[!UICONTROL OK]**.
+
    ![delegate](assets/delegate.png)
 
    * タスクを要求するには、「**[!UICONTROL 開く]**」をタップします。自分に割り当てダイアログが開きます。「**[!UICONTROL 続行]**」をタップして、タスクを要求します。要求したタスクが、自分が担当者としてインボックスに表示されます。
+
    ![claim](assets/claim.png)
 
 ### タスクの詳細の表示とアクションの実行 {#view-details-and-perform-actions-on-tasks}
@@ -66,7 +71,7 @@ Forms ワークフローがトリガして、自分が担当者であるまた�
    >
    >タスクがグループに割り当てられている場合、詳細表示を開くにはタスクを要求する必要があります。
 
-![タスク詳細](assets/task-details.png)
+![タスクの詳細](assets/task-details.png)
 
 タスクの詳細表示は、次のセクションで構成されます。
 
@@ -89,7 +94,7 @@ Forms ワークフローがトリガして、自分が担当者であるまた�
 
 さらに、タブはワークフローの完了した各段階ごとのタスクの履歴を表示します。完了した段階の「**[!UICONTROL 詳細を表示]**」をタップして、その段階の詳細を知ることができます。タスクに関するコメント、フォーム、タスクの添付ファイル、状態、開始日、終了日などが表示されます。
 
-![ワークフローの詳細](assets/workflow-details.png)
+![workflow-details](assets/workflow-details.png)
 
 #### アクションツールバー {#actions-toolbar}
 
@@ -99,7 +104,7 @@ Forms ワークフローがトリガして、自分が担当者であるまた�
 
 ### 完了したタスクの表示 {#view-completed-tasks}
 
-AEM インボックスでは、アクティブなタスクのみ表示されます。完了したタスクはリストには表示されません。ただし、インボックスフィルターを使用して、いくつかのパラメーター（タスクのタイプ、状態、開始日と終了日など）に基づいてタスクをフィルターすることができます。完了した表示のタスク:
+AEM インボックスでは、アクティブなタスクのみ表示されます。完了したタスクはリストには表示されません。ただし、インボックスフィルターを使用して、いくつかのパラメーター（タスクのタイプ、状態、開始日と終了日など）に基づいてタスクをフィルターすることができます。完了したタスクを表示するには：
 
 1. In AEM Inbox, tap ![toggle-side-panel1](assets/toggle-side-panel1.png) to open the filter selector.
 1. 「**[!UICONTROL タスクステータス]**」アコーディオンをタップし、「**[!UICONTROL 完了]**」を選択します。完了されたすべてのタスクが表示されます。
@@ -112,7 +117,7 @@ AEM インボックスでは、アクティブなタスクのみ表示されま�
 
 タスクの詳細セクションでは、実行済みアクション、タスクのステータス、開始日、終了日が表示されます。
 
-![完了タスク](assets/completed-task.png)
+![タスク完了](assets/completed-task.png)
 
 The **[!UICONTROL Workflow Details]** tab shows each step of the workflow. Tap **[!UICONTROL View details]** for a step for detailed information.
 
