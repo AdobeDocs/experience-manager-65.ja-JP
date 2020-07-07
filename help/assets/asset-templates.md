@@ -3,10 +3,10 @@ title: のアセットテンプレート [!DNL Adobe Experience Manager Assets]�
 description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 33%
+ht-degree: 32%
 
 ---
 
@@ -79,6 +79,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    * From the Templates page, navigate to a folder where you created the collateral, and click the [!UICONTROL Edit] quick action on the thumbnail of a collateral.
    * In the asset page for the collateral, click **[!UICONTROL Edit]** from the toolbar.
    * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
+
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
    アセットファインダーおよびテキストエディターがページの左側に表示されます。デフォルトで、テキストエディターが開きます。
@@ -95,7 +96,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    >[!NOTE]
    >
-   >Ensure that your [!DNL Experience Manager] instance is integrated with an [!DNL InDesign Server] to enable [!DNL Experience Manager Assets] to extract data from the [!DNL InDesign] template and make it available for editing. 詳しくは、Experience Manager AssetsとInDesign Serverの [統合を参照してください](/help/assets/indesign.md)。
+   >Ensure that your [!DNL Experience Manager] instance is integrated with an [!DNL InDesign Server] to enable [!DNL Experience Manager Assets] to extract data from the [!DNL InDesign] template and make it available for editing. 詳しくは、Experience ManagerアセットとInDesign Serverの [統合を参照してください](/help/assets/indesign.md)。
 
 1. 編集可能なフィールド内のテキストを変更するには、編集可能なフィールドのリストからテキストフィールドをクリックし、フィールド内のテキストを編集します。
 
@@ -127,21 +128,23 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    ![chlimage_1-117](assets/chlimage_1-322.png)
 
-1. Click **[!UICONTROL Preview]**  on the toolbar to preview all the changes. Click **[!UICONTROL Done]** to save the editing changes to the collateral.
+1. Click **[!UICONTROL Preview]** on the toolbar to preview all the changes. Click **[!UICONTROL Done]** to save the editing changes to the collateral.
 
    >[!NOTE]
    >
-   >「プレビュー」および「完了」アイコンは、販促物内の編集可能な画像フィールドに見つからないアイコンがない場合にのみ有効になります。If there are missing icons in your collateral, it is because [!DNL Experience Manager] is unable to resolve the images in the [!DNL InDesign] template. Usually, [!DNL Experience Manager] is unable to resolve images in the following cases:
+   >「プレビュー」オプションと「完了」オプションは、コラテラル内の編集可能な画像フィールドに、見つからないアイコンがない場合にのみ有効です。 If there are missing icons in your collateral, it is because [!DNL Experience Manager] is unable to resolve the images in the [!DNL InDesign] template. Usually, [!DNL Experience Manager] is unable to resolve images in the following cases:
    >
-   >    * Images are not embedded in the underlying [!DNL InDesign] template.
-   >    * 画像がローカルファイルシステムからリンクされている.
+   >* Images are not embedded in the underlying [!DNL InDesign] template.
+   >* 画像がローカルファイルシステムからリンクされている.
+
    >
    >To enable [!DNL Experience Manager] to resolve images, do the following:
    >
-   >    * Embed images while creating [!DNL InDesign] templates (See [About links and embedded graphics](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)).
-   >    * Mount [!DNL Experience Manager] to your local file system, and then map missing icons with existing assets in [!DNL Experience Manager].
+   >* Embed images while creating [!DNL InDesign] templates (See [About links and embedded graphics](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)).
+   >* Mount [!DNL Experience Manager] to your local file system, and then map missing icons with existing assets in [!DNL Experience Manager].
+
    >
-   >[!DNL InDesign] ドキュメントの操作について詳しくは、「Experience ManagerでのInDesignドキュメントの操作に関する [ベストプラクティス](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html)」を参照してください。
+   >For more information around working with [!DNL InDesign] documents, see [best practices to work with InDesign documents in Experience Manager](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html).
 
 1. パンフレットの PDF レンディションを生成するには、ダイアログで Acrobat オプションを選択し、「**[!UICONTROL 続行]**」をクリックします。
 1. 開始したフォルダーに販促物が作成されます。レンディションを表示するには、販促物を開いて、グローバルナビゲーションリストから「**[!UICONTROL レンディション]**」を選択します。
@@ -197,6 +200,6 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    >
    >統合された販促物を後で編集したり、他の販促物を作成するために使用したりすることはできません。
 
-## Best practices and limitations {#best-practices-limitations-tips}
+## ベストプラクティスと制限事項 {#best-practices-limitations-tips}
 
 * の [!DNL InDesign] エディターはタグレベルで [!DNL Experience Manager] 機能し、1つのタグの下にあるすべてのテキストは単一のエンティティと見なされます。 編集時にテキストの書式設定とスタイルを保持するには、各段落（または異なるスタイルのテキスト）に個別にタグを付けます。
