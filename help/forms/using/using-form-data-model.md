@@ -9,7 +9,10 @@ topic-tags: integration
 discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '1273'
+ht-degree: 81%
 
 ---
 
@@ -22,7 +25,7 @@ AEM Forms のデータ統合機能により、各種のバックエンドデー�
 
 * [AEM Forms のデータ統合機能](../../forms/using/data-integration.md)
 * [データソースの設定](../../forms/using/configure-data-sources.md)
-* [フォームデータモデルの作成](../../forms/using/create-form-data-models.md)
+* [フォームデータモデルを作成する](../../forms/using/create-form-data-models.md)
 * [フォームデータモデルの操作](../../forms/using/work-with-form-data-model.md)
 
 JSON スキーマの拡張機能であるフォームデータモデルを使用して、以下の処理を行うことができます。
@@ -54,7 +57,7 @@ JSON スキーマの拡張機能であるフォームデータモデルを使用
 
 フォームデータモデルに基づいてアダプティブフォームまたはアダプティブフォームフラグメントを作成すると、アダプティブフォームエディターのコンテンツブラウザーの「**[!UICONTROL データモデルオブジェクト]**」タブにフォームデータモデルオブジェクトが表示されます。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >アダプティブフォームフラグメントの場合、オーサリング時に選択されたデータモデルオブジェクトと、関連するデータモデルオブジェクトのみが「データモデルオブジェクト」タブに表示されます。
 
@@ -94,7 +97,7 @@ JSON スキーマの拡張機能であるフォームデータモデルを使用
 
 サンプルデータが取り込まれた状態のインタラクティブ通信が表示されます。
 
-![Webプレビュー](assets/web-preview.png)
+![ウェブプレビュー](assets/web-preview.png)
 
 Similarly, to preview an adaptive form with sample data, open the adaptive adaptive form in author mode and tap **[!UICONTROL Preview]**.
 
@@ -139,6 +142,6 @@ To configure the Form Data Model submit action, open Adaptive Form Container pro
 
 例えば以下のルールの場合、従業員 ID を入力として使用する Get サービスが呼び出され、このサービスから返された値が、フォーム内の対応する扶養家族 ID フィールド、姓フィールド、名フィールド、性別フィールドに設定されます。
 
-![呼び出しサービス](assets/invoke-service.png)
+![invoke-service](assets/invoke-service.png)
 
 In addition, you can use the `guidelib.dataIntegrationUtils.executeOperation` API to write a JavaScript in the code editor for the rule editor. For API details, see [API to invoke form data model service](/help/forms/using/invoke-form-data-model-services.md).
