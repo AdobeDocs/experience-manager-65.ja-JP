@@ -3,7 +3,7 @@ title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 41%
@@ -34,6 +34,7 @@ DTM を使用してアセットインサイトを有効にするには、次の�
    * Select the **[!UICONTROL Web Properties]** tab, and then click **[!UICONTROL Add Property]**.
 
    * 必要に応じてフィールドを更新し、「プロパティを **[!UICONTROL 作成]**」をクリックします。 See [documentation](https://helpx.adobe.com/jp/experience-manager/using/dtm.html).
+
    ![Webプロパティの編集を作成する](assets/Create-edit-web-property.png)
 
 1. In the **[!UICONTROL Rules]** tab, select **[!UICONTROL Page Load Rules]** from the navigation pane and click **[!UICONTROL Create New Rule]**.
@@ -44,15 +45,15 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Experience Managerのロゴをクリックし、 **[!UICONTROL ツール/アセットに移動します]**。
+1. Experience Managerのロゴをクリックし、 **[!UICONTROL ツール]** / **[!UICONTROL アセットに移動します]**。
 1. Click **[!UICONTROL Insights Page Tracker]**, copy the tracker code, and then paste it in the Script dialog you opened in step 6. 変更内容を保存します。
 
    >[!NOTE]
    >
-   > * `AppMeasurement.js` が削除されます。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
-   > * The call to `assetAnalytics.dispatcher.init`() is removed. この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
-   > * アセットインサイトページトラッカーがホストされている場所(Experience Manager、CDNなど)に応じて、スクリプトソースの接触チャネルに変更が必要な場合があります。
-   > * Experience Managerがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して発行インスタンスを指し示す必要があります。
+   >* `AppMeasurement.js` が削除されます。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
+   >* The call to `assetAnalytics.dispatcher.init()` is removed. この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
+   >* アセットインサイトページトラッカーがホストされている場所(Experience Manager、CDNなど)に応じて、スクリプトソースの接触チャネルに変更が必要な場合があります。
+   >* Experience Managerがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して発行インスタンスを指し示す必要があります。
 
 
 1. `https://dtm.adobe.com` にアクセスします。Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。While creating the tool, you can set **[!UICONTROL Configuration Method]** to **[!UICONTROL Automatic]**.
