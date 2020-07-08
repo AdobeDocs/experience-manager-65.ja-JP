@@ -1,16 +1,19 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]を使用して、サポートされる様々なファイル形式を処理するためのベストプラクティスです。'
-description: '[!DNL Experience Manager Assets]を使用して、サポートされる様々なファイルの種類を処理するためのベストプラクティスです。'
+title: を使用して、サポートされる様々なファイル形式を処理するためのベストプラクティス [!DNL Adobe Experience Manager Assets]。
+description: を使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティス [!DNL Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f67b4e5ccd5d7e982732e449050123e917c9914
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+workflow-type: tm+mt
+source-wordcount: '467'
+ht-degree: 46%
 
 ---
 
 
 # Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
 
-[!DNL Adobe Experience Manager Assets] はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。The supported Adobe libraries include, [!DNL Adobe Camera Raw], Gibson, Adobe PDF Rasterizer, and [!DNL Adobe InDesign Server]. さらに、、などのサードパーティライブラリも [!DNL Experience Manager Assets] サポート [!DNL ImageMagick]さ [!DNL TwelveMonkeys]れます。
+[!DNL Adobe Experience Manager Assets] はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。The supported Adobe libraries include, [!DNL Adobe Camera Raw], Gibson, Adobe PDF Rasterizer, and [!DNL Adobe InDesign Server]. また、は、、などのサードパーティライブラリを [!DNL Experience Manager Assets] サポートし [!DNL ImageMagick]て [!DNL TwelveMonkeys]います。
 
 サポートされるファイル形式については、[アセットでサポートされるファイル形式](/help/assets/assets-formats.md)を参照してください。
 
@@ -40,7 +43,7 @@ PDF Rasterizer を使用して生成されたサムネールやプレビュー�
 
 Adobe recommends that you use [!DNL Adobe InDesign Server] to extract [!DNL Adobe InDesign]-specific renditions, such as IDML and HTML. For more information, see [Adding Experience Manager assets as references in Adobe InDesign](/help/assets/managing-linked-subassets.md#refai).
 
-## [!DNL Dynamic Media]  {#dynamic-media}
+## [!DNL Dynamic Media] {#dynamic-media}
 
 [!DNL Dynamic Media] は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。For details around enabling [!DNL Dynamic Media], see [Configuring Dynamic Media](/help/assets/config-dynamic.md).
 
