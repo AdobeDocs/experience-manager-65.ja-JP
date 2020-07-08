@@ -3,10 +3,10 @@ title: 統合 [!DNL Adobe Experience Manager Assets] 機能 [!DNL Adobe InDesign
 description: Learn how to integrate [!DNL Adobe Experience Manager Assets] with [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 30%
+source-wordcount: '1559'
+ht-degree: 31%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 30%
 * プロキシ：特定の処理タスクのロードを分配するために使用します。A proxy is an [!DNL Experience Manager] instance that communicates with a proxy worker to fulfil a specific task, and other [!DNL Experience Manager] instances to deliver the results.
 * プロキシワーカー：特定のタスクを定義し管理するために使用します。These can cover a wide variety of tasks; for example, using an [!DNL InDesign Server] to process files.
 
-To fully upload files to [!DNL Experience Manager Assets] that you have created with [!DNL Adobe InDesign] a proxy is used. This uses a proxy worker to communicate with the [!DNL Adobe InDesign Server], where [scripts](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting) are run to extract metadata and generate various renditions for [!DNL Experience Manager Assets]. The proxy worker enables the two-way communication between the [!DNL InDesign Server] and the [!DNL Experience Manager] instance(s) in a cloud configuration.
+To fully upload files to [!DNL Experience Manager Assets] that you have created with [!DNL Adobe InDesign] a proxy is used. This uses a proxy worker to communicate with the [!DNL Adobe InDesign Server], where [scripts](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting) are run to extract metadata and generate various renditions for [!DNL Experience Manager Assets]. The proxy worker enables the two-way communication between the [!DNL InDesign Server] and the [!DNL Experience Manager] instances in a cloud configuration.
 
 >[!NOTE]
 >
@@ -43,7 +43,6 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
       * PDF と JPG のレンディションが生成されます。
       * HTML と IDML のレンディションが生成されます。
    * Post the resulting files back to [!DNL Experience Manager Assets].
-
    >[!NOTE]
    >
    >IDMLは、 [!DNL InDesign] ファイルのすべてのコンテンツをレンダリングするXMLベースの形式です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、InDesign Interchange Formats INX and [IDMLを参照してください](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
@@ -58,7 +57,7 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
    * The extracted text and files are stored in [!DNL Experience Manager Assets].
    * All renditions are stored in [!DNL Experience Manager Assets], in the asset itself.
 
-## をExperience Manager [!DNL InDesign Server] と統合する {#integrating-the-indesign-server-with-aem}
+## Experience Manager [!DNL InDesign Server] との統合 {#integrating-the-indesign-server-with-aem}
 
 To integrate the [!DNL InDesign Server] for use with [!DNL Experience Manager Assets] and after configuring your proxy, you need to:
 
@@ -206,7 +205,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 >
 >Also, under the `com.day.cq.dam.ids.impl.IDSPoolImpl.name` configuration, set a positive value for `max.errors.to.blacklist` parameter which determines number of job retrials before barring an IDS from the job handlers list.
 >
->By default, after the configurable (`retry.interval.to.whitelist.name`) time in minutes the IDS worker is revalidated. ワーカーがオンラインで見つかった場合は、ブロックされたリストから削除されます。
+>By default, after the configurable (`retry.interval.to.whitelist.name`) time in minutes the IDS worker is revalidated. ワーカーがオンラインである場合は、ブロックリストから削除されます。
 
 ## 10.0以降のサポート [!DNL InDesign Server] を有効にする {#enabling-support-for-indesign-server-or-later}
 
@@ -222,7 +221,7 @@ For [!DNL InDesign Server] 10.0 or higher, perform the following steps to enable
 
 ## 秘密鍵 [!DNL Experience Manager] 証明書の設定 {#configure-aem-credentials}
 
-You can change the default administrator credentials (user name and password) for accessing the [!DNL InDesign Server] from your [!DNL Experience Manager] instance without breaking the integration with the [!DNL InDesign Server].
+デプロイメントとの統合を中断することなく、デプロイメント [!DNL InDesign Server] からにアクセスするためのデフォルトの管理者資格情報（ユーザー名とパスワード）を変更でき [!DNL Experience Manager][!DNL InDesign Server]ます。
 
 1. `/etc/cloudservices/proxy.html` にアクセスします。
 1. ダイアログで、新しいユーザー名とパスワードを指定します。
