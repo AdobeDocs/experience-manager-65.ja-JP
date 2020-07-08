@@ -3,7 +3,7 @@ title: のアセットテンプレート [!DNL Adobe Experience Manager Assets]�
 description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 32%
@@ -79,7 +79,6 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    * From the Templates page, navigate to a folder where you created the collateral, and click the [!UICONTROL Edit] quick action on the thumbnail of a collateral.
    * In the asset page for the collateral, click **[!UICONTROL Edit]** from the toolbar.
    * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
-
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
    アセットファインダーおよびテキストエディターがページの左側に表示されます。デフォルトで、テキストエディターが開きます。
@@ -96,7 +95,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    >[!NOTE]
    >
-   >Ensure that your [!DNL Experience Manager] instance is integrated with an [!DNL InDesign Server] to enable [!DNL Experience Manager Assets] to extract data from the [!DNL InDesign] template and make it available for editing. 詳しくは、Experience ManagerアセットとInDesign Serverの [統合を参照してください](/help/assets/indesign.md)。
+   >Ensure that your [!DNL Experience Manager] deployment is integrated with an [!DNL InDesign Server] to enable [!DNL Experience Manager Assets] to extract data from the [!DNL InDesign] template and make it available for editing. 詳しくは、Experience ManagerアセットとInDesign Serverの [統合を参照してください](/help/assets/indesign.md)。
 
 1. 編集可能なフィールド内のテキストを変更するには、編集可能なフィールドのリストからテキストフィールドをクリックし、フィールド内のテキストを編集します。
 
@@ -136,13 +135,11 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    >
    >* Images are not embedded in the underlying [!DNL InDesign] template.
    >* 画像がローカルファイルシステムからリンクされている.
-
    >
    >To enable [!DNL Experience Manager] to resolve images, do the following:
    >
    >* Embed images while creating [!DNL InDesign] templates (See [About links and embedded graphics](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)).
    >* Mount [!DNL Experience Manager] to your local file system, and then map missing icons with existing assets in [!DNL Experience Manager].
-
    >
    >For more information around working with [!DNL InDesign] documents, see [best practices to work with InDesign documents in Experience Manager](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html).
 
