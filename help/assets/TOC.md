@@ -4,10 +4,10 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Experience Manager6.5アセットユーザーガイド
 translation-type: tm+mt
-source-git-commit: d870e80e33c5ba36a43ff45ba2dc82551491bb18
+source-git-commit: e3907ac1c6e3900f280b2570b93053b10128cc6d
 workflow-type: tm+mt
 source-wordcount: '638'
-ht-degree: 55%
+ht-degree: 56%
 
 ---
 
@@ -45,14 +45,14 @@ ht-degree: 55%
    + [Dynamic Media 画像プリセットの管理](managing-image-presets.md)
    + [Dynamic Media 画像プリセットの適用](image-presets.md)
    + [Dynamic Media のビデオプロファイル](video-profiles.md)
-   + [Dynamic Media の画像プロファイル](image-profiles.md)
+   + [Dynamic Media イメージプロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
    + [ページへのScene7機能の追加](scene7.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
    + [Dynamic Media でのホットリンク保護の有効化](hotlink-protection.md)
-   + [3Dサポート](/help/assets/assets-3d.md)
+   + [3D サポート](/help/assets/assets-3d.md)
    + [画像セット](image-sets.md)
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)
@@ -151,7 +151,7 @@ ht-degree: 55%
    + [翻訳プロジェクトの作成](translation-projects.md)
    + [翻訳するアセットの準備](preparing-assets-for-translation.md)
    + [AEM からのアセットのダウンロード](download-assets-from-aem.md)
-   + [非同期操作](asynchronous-jobs.md)
+   + [非同期操作](/help/sites-administering/asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [アセットのインサイト](touch-ui-asset-insights.md)
    + [Adobe Launchでアセットのインサイトを有効にする](touch-ui-using-dtm-for-asset-insights.md)
