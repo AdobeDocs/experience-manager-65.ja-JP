@@ -3,7 +3,7 @@ title: タイムラインのアクティビティストリーム
 description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 73%
@@ -13,7 +13,7 @@ ht-degree: 73%
 
 # タイムラインのアクティビティストリーム {#activity-stream-in-timeline}
 
-この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Manager Assetsで以下のアセット関連の操作のいずれかを実行すると、アクティビティストリーム機能によってタイムラインが更新され、アクティビティが反映されます。
+この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Managerアセットで以下のアセット関連の操作を実行すると、アクティビティストリーム機能によってタイムラインが更新され、アクティビティが反映されます。
 
 アクティビティストリームでログに記録される操作は次のとおりです。
 
