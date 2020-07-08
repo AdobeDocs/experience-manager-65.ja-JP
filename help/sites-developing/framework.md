@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c4a0b1a76f44dcf1084a4651194e60735bc5aea
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 39%
@@ -258,20 +258,23 @@ AEM に含まれるノードタイプの基本的な定義は、次のように�
 
 * 後でページの `cq:tags` プロパティに対して更新がおこなわれると、「以前の」参照が自動的にクリーンアップされます。移動したタグを API で解決すると移動先のタグが戻され、移動先のタグ ID が提供されることから、この処理がトリガーされます。
 
-> [!NOTE]
+>[!NOTE]
 >
-> タグの移動は、タグの移行とは異なります。
+>タグの移動は、タグの移行とは異なります。
 
 ## タグの移行 {#tags-migration}
 
-Experience Manager 6.4以降のタグはに保存され `/content/cq:tags`ます。以前はに保存されていました `/etc/tags`。 ただし、Adobe Experience Managerが以前のバージョンからアップグレードされた場合でも、タグは古い場所に残り `/etc/tags`ます。 アップグレードしたシステムのタグは、に移行する必要があり `/content/cq:tags`ます。
+Experience Manager6.4以降のタグはに格納され `/content/cq:tags`ます。以前はに格納されていました `/etc/tags`。 ただし、Adobe Experience Managerが以前のバージョンからアップグレードされた場合、タグは古い場所に残り `/etc/tags`ます。 アップグレードしたシステムのタグは、に移行する必要があり `/content/cq:tags`ます。
 
-> [!NOTE]
-> タグページのページプロパティでは、タグベースパス（例えば、）をハードコーディングする代わりに、タグID(`geometrixx-outdoors:activity/biking`)を使用することをお勧めします `/etc/tags/geometrixx-outdoors/activity/biking`。
-> リストタグを使用す `com.day.cq.tagging.servlets.TagListServlet` るには、を使用します。
+>[!NOTE]
+>
+>タグページのページプロパティでは、タグベースパス（例えば、）をハードコーディングする代わりに、タグID(`geometrixx-outdoors:activity/biking`)を使用することをお勧めします `/etc/tags/geometrixx-outdoors/activity/biking`。
+>
+>リストタグを使用す `com.day.cq.tagging.servlets.TagListServlet` るには、を使用します。
 
-> [!NOTE]
-> タグマネージャーAPIをリソースとして使用することをお勧めします。
+>[!NOTE]
+>
+>タグマネージャーAPIをリソースとして使用することをお勧めします。
 
 ### アップグレードしたAEMインスタンスがTagManager APIをサポートする場合 {#upgraded-instance-support-tagmanager-api}
 
@@ -337,9 +340,9 @@ println "---------------------------------Success-------------------------------
 
 ### アップグレードしたAEMインスタンスがクラシックUIで実行される場合 {#upgraded-instance-runs-classic-ui}
 
-> [!NOTE]
-> クラシックUIは、ダウンタイムゼロの互換性がなく、新しいタグ基本パスをサポートしていません。 作成する必要のないクラシックUIを使用する場合は、コンポー `/etc/tags``cq-tagging` ネントを再起動する必要があります。
-
+>[!NOTE]
+>
+>クラシックUIは、ダウンタイムゼロの互換性がなく、新しいタグ基本パスをサポートしていません。 作成する必要のないクラシックUIを使用する場合は、コンポー `/etc/tags``cq-tagging` ネントを再起動する必要があります。
 
 アップグレードしたAEMインスタンスがTagManager APIでサポートされ、クラシックUIで実行される場合：
 
