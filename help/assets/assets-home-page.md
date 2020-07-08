@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Manager Assetsホームページエクスペリエンス
-description: Experience Manager Assetsホームページをパーソナライズして、豊富なスタートアップスクリーンエクスペリエンスを実現します。アセットに関する最近のアクティビティのスナップショットも含まれます。
+title: Adobe Experience Managerアセットのホームページエクスペリエンス
+description: Experience Managerアセットホームページをパーソナライズして、豊富なスタートアップスクリーンエクスペリエンスを実現します。アセットに関する最近のアクティビティのスナップショットも含まれます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 32%
@@ -11,15 +11,15 @@ ht-degree: 32%
 ---
 
 
-# Adobe Experience Manager Assetsホームページエクスペリエンス {#aem-assets-home-page-experience}
+# Adobe Experience Managerアセットのホームページエクスペリエンス {#aem-assets-home-page-experience}
 
-Adobe Experience Manager Assetsホームページをパーソナライズして、豊富なスタートアップスクリーンエクスペリエンスを実現します。アセットに関する最近のアクティビティのスナップショットも含まれます。
+Adobe Experience Managerアセットホームページをパーソナライズして、豊富なスタートアップスクリーンエクスペリエンスを実現します。アセットに関する最近のアクティビティのスナップショットも含まれます。
 
 アセットホームページは、最近表示またはアップロードされたアセットなど、最近のアクティビティのスナップショットを含む、パーソナライズされた豊富なスタートアップスクリーンエクスペリエンスを提供します。
 
 アセットホームページは、デフォルトで無効になっています。 ホームページを有効にするには、次の手順を実行します。
 
-1. Experience Manager Configuration Managerを開き `https://[aem_server]:[port]/system/console/configMgr`ます。
+1. Experience Manager構成マネージャーを開き `https://[aem_server]:[port]/system/console/configMgr`ます。
 1. Open the **[!UICONTROL Day CQ DAM Event Recorder]** service.
 1. Select the **[!UICONTROL Enable this service]** to enable activity recording.
 
@@ -69,7 +69,7 @@ Assets のホームページには次のセクションが含まれます。
 
 **最新**: このセクションの **[!UICONTROL 最近表示した]** Widgetには、フォルダー、コレクション、プロジェクトなど、ログインユーザーが最近アクセスしたエンティティが表示されます。
 
-**Discover**: このセクションの下の **[!UICONTROL 新規]** ウィジェットには、Assetsインスタンスに最近アップロードされたアセットとレンディションが表示されます。
+**Discover**: このセクションの **[!UICONTROL 新しいウィジェットには]** 、アセットデプロイメントに最近アップロードされたアセットとレンディションが表示されます。
 
 To enable purging of user activity data, enable the **[!UICONTROL DAM Event Purge Service]** from Configuration Manager. このサービスを有効にすると、ログインユーザーのアクティビティのうち指定した数を超えたものがシステムによって削除されます。
 
