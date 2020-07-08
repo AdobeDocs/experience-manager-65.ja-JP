@@ -3,7 +3,7 @@ title: 共有アセットのURLの生成
 description: この記事では、Experience Managerアセット内のアセット、フォルダー、コレクションを外部の関係者へのURLとして共有する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 51%
@@ -40,7 +40,7 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
 
    >[!NOTE]
    >
-   >If you want to share links from your Experience Manager Author instance to external entities, ensure that you only expose the following URLs (which are used for link sharing) for `GET` requests only. 他のURLをブロックして、Experience Manager作成者のセキュリティを確保します。
+   >If you want to share links from your Experience Manager Author deployment to external entities, ensure that you only expose the following URLs (which are used for link sharing) for `GET` requests only. 他のURLをブロックして、Experience Manager作成者のセキュリティを確保します。
    >
    >* http://[aem_server]:[port]/linkshare.html
    >* http://[aem_server]:[port]/linksharepreview.html
@@ -116,7 +116,6 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
    * SMTP server port：電子メールサーバーのポート
    * SMTP user：メールサーバーのユーザー名
    * SMTP password：電子メールサーバーのパスワード
-
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
