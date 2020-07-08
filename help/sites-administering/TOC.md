@@ -4,9 +4,9 @@ product: adobe experience manager
 audience: admin-user
 user-guide-title: AEM 6.5管理ユーザーガイド
 translation-type: tm+mt
-source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+source-git-commit: 8d000088f4fd0ff1f85f11818d4e72337da5a280
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '624'
 ht-degree: 96%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 96%
 + [管理ユーザガイドの概要](home.md)
 + Sites の機能 {#introduction}
    + [Web サイト管理](msm-and-translation.md)
+   + [非同期ジョブ](asynchronous-jobs.md)
    + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](msm.md)
    + [ライブコピーの概要コンソール](msm-livecopy-overview.md)
    + [ライブコピーの同期の設定](msm-sync.md)
