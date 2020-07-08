@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '9250'
 ht-degree: 63%
@@ -63,6 +63,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    * On the toolbar, click **[!UICONTROL Create]**. メニューで[ **[!UICONTROL ファイル]**]をクリックします。 表示されたダイアログで、必要に応じてファイル名を変更できます。
    * In a browser that supports HTML5, drag the assets directly on the [!DNL Assets] user interface. ファイル名を変更するためのダイアログは表示されません。
+
    ![アセットをアップロードするためのオプションを作成する](assets/create-options.png)
 
    複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPad を使用している場合、一度に選択できるファイルは 1 つだけです。
@@ -119,6 +120,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    * アセットファイル名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? &`
    * アセットフォルダー名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
    アセットファイル名の拡張子には特殊文字を含めないでください。
 
    ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルおよびアップロードに失敗したファイルの状態が表示されます](assets/chlimage_1-10.png)
@@ -131,7 +133,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
 ### 順次アップロード {#serialuploads}
 
-Uploading numerous assets in bulk consumes significant I/O resources, which may adversely impact the performance of your [!DNL Assets] instance. In particular, if you have a slow internet connection, the time to upload drastically increases due to a spike in disk I/O. Moreover, your web browser may introduce additional restrictions to the number of POST requests [!DNL Assets] can handle for concurrent asset uploads. その結果、アップロード操作に失敗したり、途中で終了してしまったりします。In other words, [!DNL Experience Manager Assets] may miss some files while ingesting a bunch of files or altogether fail to ingest any file.
+Uploading numerous assets in bulk consumes significant I/O resources, which may adversely impact the performance of your [!DNL Assets] deployment. In particular, if you have a slow internet connection, the time to upload drastically increases due to a spike in disk I/O. Moreover, your web browser may introduce additional restrictions to the number of POST requests [!DNL Assets] can handle for concurrent asset uploads. その結果、アップロード操作に失敗したり、途中で終了してしまったりします。In other words, [!DNL Experience Manager Assets] may miss some files while ingesting a bunch of files or altogether fail to ingest any file.
 
 To overcome this situation, [!DNL Assets] ingests one asset at a time (serial upload) during a bulk upload operation, instead of the concurrently ingesting all the assets.
 
@@ -350,6 +352,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 1. アセットにズームインするには：
    1. ズームインオプションにフォーカスを移動するには、 `Tab` keyを使用します。
    1. keyを使用して画像をズームインします。 `Enter`
+
    ズームアウトするには、 `Tab` keyキーを使用してズームアウトオプションにフォーカスを移動し、を押し `Enter`ます。
 
 1. Ctrl + Altキーを押しながら、画像にフォーカスを戻し `Shift``Tab` ます。
@@ -407,6 +410,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    * アセットが表示またはダウンロードされた回数
    * アセットが使用されたチャネルまたはデバイス
    * アセットが最近使用されたクリエイティブソリューション
+
    詳しくは、[アセットインサイト](/help/assets/touch-ui-asset-insights.md)を参照してください。
 
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。
@@ -480,6 +484,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    * Click **[!UICONTROL Back]** to return to the **[!UICONTROL Select Destination]** screen.
 
    * Click **[!UICONTROL Cancel]** to stop the move operation.
+
    参照を更新しなければ、引き続きアセットの以前のパスが示されます。参照を調整すると、更新され、アセットの新しいパスが反映されます。
 
 ## レンディションの管理 {#managing-renditions}
@@ -555,6 +560,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
       * アセットに参照がない場合は、アセットが削除されます。
       * アセットに参照がある場合は、「**1 つ以上のアセットが参照されています。**」というエラーメッセージが表示されます。「**[!UICONTROL 削除を強制]**」または「**[!UICONTROL キャンセル]**」を選択できます。
+
    >[!NOTE]
    >
    >アセットを削除するには、ユーザーがに対して削除権限を持っている必要があり `dam/asset`ます。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
@@ -607,6 +613,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    * **[!UICONTROL キャンセル]**：アクションを停止します。
    * **[!UICONTROL 非公開]**：指定された日付にアセットを非公開にします（パブリッシュ環境では使用できません）。
+
    >[!NOTE]
    >
    >複雑なアセットを非公開にする場合は、アセットだけを非公開にします。参照は他の公開済みアセットから参照されている可能性があるので、非公開にしないでください。
@@ -677,6 +684,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
    * Select the asset and then click **[!UICONTROL Edit]** in the toolbar.
    * Click **[!UICONTROL Edit]** option that displays on an asset in the card view.
    * ツールバーの「**[!UICONTROL 編集]**」をクリックします。
+
    ![ツールバーの編集オプション](assets/edit_icon.png)
 
 1. 画像を切り抜くには、「切り抜き **** オプション」をクリックして画像を切り抜き ![](assets/chlimage_1-22.png)ます。
@@ -742,6 +750,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
    * [クイックアクション](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * アセットを選択した後またはアセットページに移動した後に、ツールバーから
+
    ![注釈オプション](assets/chlimage_1-29.png)
 
 1. タイムラインの一番下の&#x200B;**[!UICONTROL コメント]**&#x200B;ボックスにコメントを追加します。または、画像内の任意の領域をマークアップし、**[!UICONTROL 注釈を追加]**&#x200B;ダイアログに注釈を追加します。
@@ -870,7 +879,7 @@ If an asset includes annotations in foreign languages (especially non-latin lang
 
    * 文字列 `<font_family_name_of_custom_font, sans-serif>` をフォントファミリオプションに含めます。例えば、注釈を CJK（中国語、日本語、韓国語）で印刷したい場合、フォントファミリオプションに文字列 `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` を含めます。ヒンディー語の注釈を印刷したい場合、適切なフォントをダウンロードし、フォントファミリを Arial Unicode MS, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif として設定します。
 
-1. Restart the [!DNL Experience Manager] instance.
+1. デプロイメントを再起動し [!DNL Experience Manager] ます。
 
 Here is an example of how you can configure [!DNL Experience Manager] to print annotations in CJK (Chinese, Japanese and Korean):
 
@@ -933,6 +942,7 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 1. 2つのバージョンの画像を比較するには、次の手順に従います。
    * 現在のバージョンと比較するバージョンをクリックします。
    * スライダを左にドラッグして、このバージョンを現在のバージョンに重ね合わせ、比較します。
+
    ![スライダを使用して、選択したアセットのバージョンと現在のバージョンを比較する](assets/version-slider.gif)
 
    *図： スライダを使用すると、選択したアセットのバージョンを現在のバージョンと簡単に比較できます。*
