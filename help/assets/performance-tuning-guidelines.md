@@ -4,7 +4,7 @@ description: 構成、ハードウェア、ソフトウェア、ネットワー�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '2767'
 ht-degree: 52%
@@ -128,7 +128,7 @@ Primarily, your network optimization strategy depends upon the amount of bandwid
 
 Wherever possible, set the [!UICONTROL DAM Update Asset] workflow to Transient. この設定にすると、ワークフローが通常のトラッキングやアーカイブ処理をパススルーする必要がなくなるので、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。
 
-1. Experience Manager `/miscadmin` の [!DNLEインスタンス()に移動]`https://[aem_server]:[port]/miscadmin`します。
+1. Experience Manager `/miscadmin` の [!DNLEデプロイメント(] )に移動し `https://[aem_server]:[port]/miscadmin`ます。
 
 1. **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル/]****** damを展開します。
 
@@ -285,11 +285,11 @@ For every [!DNL Experience Manager] deployment, establish a performance testing 
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
 
-### [!DNL Experience Manager] インスタンス試験 {#aem-instance-testing}
+### [!DNL Experience Manager] 導入テスト {#aem-deployment-testing}
 
-To minimize latency and achieve high throughput through efficient CPU utilization and load-sharing, monitor the performance of your [!DNL Experience Manager] instance regularly. 具体的には、次のことを実行します。
+To minimize latency and achieve high throughput through efficient CPU utilization and load-sharing, monitor the performance of your [!DNL Experience Manager] deployment regularly. 具体的には、次のことを実行します。
 
-* Run load tests against the [!DNL Experience Manager] instance.
+* デプロイメントに対してロードテストを実行し [!DNL Experience Manager] ます。
 * アップロードのパフォーマンスと UI の応答性を監視する.
 
 ## [!DNL Experience Manager Assets] 資産管理タスクの性能チェックリストと影響 {#checklist}
