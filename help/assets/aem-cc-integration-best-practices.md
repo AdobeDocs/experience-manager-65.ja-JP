@@ -3,10 +3,10 @@ title: Adobe Creative Cloud [!DNL Adobe Experience Manager] と統合のベス�
 description: アセット転送ワークフローを合理化し、高いコンテンツ速度を達成するための [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 統合のベストプラクティスです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '3250'
-ht-degree: 55%
+source-wordcount: '3251'
+ht-degree: 54%
 
 ---
 
@@ -45,6 +45,9 @@ ht-degree: 55%
 
 ### 使用例とアドビソリューションの対応関係 {#mapping-of-use-cases-and-adobe-solutions}
 
+<!-- TBD: Add some info about XD integration and possibly info about DA v2.0.
+-->
+
 | 使用例 | [!DNL Adobe Asset Link] | [!DNL Experience Manager] デスクトップアプリ | 備考／その他のソリューション |
 |---|---|---|---|
 | Discover - DAMフォルダーを参照 | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
@@ -73,9 +76,9 @@ ht-degree: 55%
 ### よく使用される用語 {#glossary-of-common-terms}
 
 * **作業中（WIP）またはクリエイティブ WIP：**&#x200B;アセットライフサイクルのフェーズ。アセットに対してまだ複数の変更がおこなわれている最中であり、通常は、より広範なチームと共有するための準備がまだできていない状態。
-* **クリエイティブなアセット：** [!DNL Assets] 広告を様々なチームと共有する準備ができているか、クリエイティブチームがマーケティングチームやLOBチームと共有するために選択/承認している。
+* **クリエイティブなアセット：** [!DNL Assets] 広告を様々なチームと共有する準備ができているか、クリエイティブチームがマーケティングチームやLOBチームと共有するために選択または承認している。
 * **アセット承認：** 既に DAM にアップロードされているアセットに対して実行される承認プロセス。通常、ブランド承認および法的承認などが含まれます。
-* **最終アセット：**&#x200B;すべての  承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
+* **最終アセット：**&#x200B;すべての      承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
 * **アセットの小規模な更新／変更：**&#x200B;デジタルアセットに対する迅速で小規模な変更。多くの場合、リタッチ作業や小規模な編集の要求、アセットレビューまたは承認に対応するためにおこなわれます（例えば、再配置、テキストサイズの変更、彩度／明るさ、色などの調整）。
 * **アセットの大規模な更新／変更：**&#x200B;デジタルアセットに加えられる、大規模な作業が必要な変更。その変更作業は比較的長期にわたる場合もあります。通常は複数の変更が含まれます。アセットは、更新中、複数回保存する必要があります。アセットの大規模な更新により、ほとんどの場合、アセットのステージは WIP になります。
 * **DAM：**&#x200B;デジタルアセット管理。In this document, it is synonymous with [!DNL Experience Manager Assets], unless specifically mentioned otherwise.
@@ -160,13 +163,13 @@ DAM の既存アセットに対する変更要求が出された後、マーケ�
 
 #### DAM への直接アクセス権を持つクリエイティブユーザー {#creative-users-with-direct-access-to-dam}
 
-Typically, in-house creative teams or agencies/creative professionals  onboarded  to the internal network have access to the DAM instance, including [!DNL Experience Manager] login. [!DNL Experience Manager] また、ネットワークインフラストラクチャは、外部パーティ（通常はクライアントで働く機関などの信頼できる組織）への直接アクセスを、VPNやIP許可リストなどを介してネットワーク経由でアクセスできるように設定できます。 [!DNL Experience Manager]
+Typically, in-house creative teams or agencies/creative professionals onboarded to the internal network have access to the DAM deployment, including [!DNL Experience Manager] login. [!DNL Experience Manager] また、ネットワークインフラストラクチャは、外部パーティ（通常はクライアントで働く機関などの信頼できる組織）への直接アクセスを、VPNやIP許可リストなどを介してネットワーク経由でアクセスできるように設定できます。 [!DNL Experience Manager]
 
 In such cases, Adobe Asset Link or [!DNL Experience Manager] desktop app helps provide easy access to final/approved assets and lets you save creative-ready assets to DAM.
 
 #### DAM へのアクセス権を持たないクリエイティブユーザー {#creative-users-without-access-to-dam}
 
-DAM インスタンスへの直接アクセス権を持たない外部のエージェンシーやフリーランサーも、承認済みアセットにアクセスしたり、新しいデザインを DAM に追加したりする必要が生じることがあります。
+DAMデプロイメントに直接アクセスできない外部のエージェンシーやフリーランサーは、承認されたアセットへのアクセス権が必要な場合や、DAMに新しいデザインを追加する必要がある場合があります。
 
 以下の戦略で最終／承認済みアセットへのアクセスを提供します。
 
