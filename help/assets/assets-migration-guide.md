@@ -3,7 +3,7 @@ title: アセットを一括 [!DNL Adobe Experience Manager Assets] で移行し
 description: Describes how to bring assets into [!DNL Adobe Experience Manager], apply metadata, generate renditions, and activate them to publish instances.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1800'
 ht-degree: 67%
@@ -61,7 +61,7 @@ Before starting your migration, disable your launchers for the [!UICONTROL DAM U
 
 #### HTTP経由で送信 {#pushing-through-http}
 
-アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Glutton is a small Java application that loads all assets from one directory into another directory on an [!DNL Experience Manager] instance. Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
+アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Glutton is a small Java application that loads all assets from one directory into another directory on an [!DNL Experience Manager] deployment. Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
 
 HTTPS を通じたプッシュのアプローチには、主に次の 2 つの欠点があります。
 
@@ -72,7 +72,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 #### Fetch from the local filesystem {#pulling-from-the-local-filesystem}
 
-[ACS AEM ツールの CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) は、アセットをファイルシステムから、アセットメタデータをアセット読み込みの CSV ファイルから、それぞれ取り込みます。Experience Manager Asset Manager APIは、アセットをシステムに読み込み、設定済みのメタデータプロパティを適用するために使用します。 アセットはネットワークファイルマウントまたは外部ドライブを介してサーバーにマウントされているのが理想です。
+[ACS AEM ツールの CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) は、アセットをファイルシステムから、アセットメタデータをアセット読み込みの CSV ファイルから、それぞれ取り込みます。Experience ManagerAsset Manager APIは、アセットをシステムに読み込み、設定済みのメタデータプロパティを適用するために使用します。 アセットはネットワークファイルマウントまたは外部ドライブを介してサーバーにマウントされているのが理想です。
 
 アセットをネットワーク上で送信する必要がないので、全体的なパフォーマンスが劇的に向上します。このため、一般的にはこの方法がアセットをリポジトリに読み込む最も効率的な方法と見なされています。さらに、ツールがメタデータの取り込みをサポートし、すべてのアセットとメタデータを 1 つの手順で取り込むことができるので、別のツールを使用してメタデータを適用する 2 つ目の手順が不要になります。
 
@@ -117,15 +117,15 @@ Once we have completed migration, the launchers for the [!UICONTROL DAM Update A
 
 ## 複数の [!DNL Experience Manager] 展開にわたる移行 {#migrating-between-aem-instances}
 
-While not nearly as common, sometimes you need to migrate large amounts of data from one [!DNL Experience Manager] instance to another; for example, when you perform an [!DNL Experience Manager] upgrade, upgrade your hardware, or migrate to a new datacenter, such as with an AMS migration.
+While not nearly as common, sometimes you need to migrate large amounts of data from one [!DNL Experience Manager] deployment to another; for example, when you perform an [!DNL Experience Manager] upgrade, upgrade your hardware, or migrate to a new datacenter, such as with an AMS migration.
 
-このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。When migrating between [!DNL Experience Manager] instances, you perform the following steps:
+このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。When migrating between [!DNL Experience Manager] deployment, you perform the following steps:
 
 1. Disable workflows: Because you are migrating renditions along with our assets, you want to disable the workflow launchers for [!UICONTROL DAM Update Asset] workflow.
 
-1. Migrate tags: Because you already have tags loaded in the source [!DNL Experience Manager] instance, you can build them in a content package and install the package on the target instance.
+1. Migrate tags: Because you already have tags loaded in the source [!DNL Experience Manager] deployment, you can build them in a content package and install the package on the target instance.
 
-1. Migrate assets: There are two tools that are recommended for moving assets from one [!DNL Experience Manager] instance to another:
+1. Migrate assets: There are two tools that are recommended for moving assets from one [!DNL Experience Manager] deployment to another:
 
    * **Vault Remote Copy** (vlt rcp)を使用すると、ネットワーク全体でvltを使用できます。 移動元と移動先のディレクトリを指定すると、vit がすべてのリポジトリデータを一方のインスタンスからダウンロードし、もう一方に読み込みます。vt rcp については、[https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html) に記載されています。
    * **Grabbit**[!DNL Experience Manager]。Time Warner Cable が の実装のために開発した、オープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
