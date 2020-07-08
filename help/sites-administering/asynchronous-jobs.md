@@ -1,18 +1,18 @@
 ---
-title: 非同期操作
+title: 非同期ジョブ
 description: Adobe Experience Managerは、リソースを大量に消費する一部のタスクを非同期に完了して、パフォーマンスを最適化します。
 translation-type: tm+mt
-source-git-commit: 69b90432ac6028a64f36300819e1bead1ae8d671
+source-git-commit: 198593fa456780816216a63790fea8cca469f8c7
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 26%
+source-wordcount: '892'
+ht-degree: 27%
 
 ---
 
 
 # 非同期操作 {#asynchronous-operations}
 
-Adobe Experience Mangerでは、パフォーマンスに悪影響を与えないように、長時間かつリソースを大量に消費する特定の操作を非同期に処理します。
+Adobe Experience Mangerでは、パフォーマンスに悪影響を与えないように、長時間かつリソースを大量に消費する特定の操作を非同期に処理します。 非同期処理では、複数のジョブをエンキューし、システムリソースの可用性に左右されないように連続して実行します。
 
 このような操作には以下のようなものがあります。
 
@@ -23,19 +23,17 @@ Adobe Experience Mangerでは、パフォーマンスに悪影響を与えない
 * ページの移動
 * ライブコピーのロールアウト
 
-非同期処理では、複数のジョブをエンキューし、システムリソースの可用性に左右されないように連続して実行します。
-
 非同期ジョブの状態は、 **[!UICONTROL Async Job]** ダッシュボード **グローバルナビゲーション** -> Tools **> Operations** Operations Jobs> Jobsステータスで表示できます。非同期ジョブの状態は、Async Job **Navigation -> Global Navigation** -> Tools > Operations **** Jobsステータスでできます。
 
 >[!NOTE]
 >
->デフォルトでは、非同期ジョブは並行して実行されます。 If *`n`* is the number of CPU cores, *`n/2`* jobs can run in parallel, by default. ジョブキューのカスタム設定を使用するには、Webコンソールから **[!UICONTROL Async Operation Default Queue Config]** と&#x200B;**Async Operation Page Move and Rollout Config** を変更します。
+>デフォルトでは、非同期ジョブは並行して実行されます。 If *`n`* is the number of CPU cores, *`n/2`* jobs can run in parallel, by default. ジョブキューのカスタム設定を使用するには、Webコンソールから **[!UICONTROL Async Operation Default Queue Config]** と **Async Operation Page Move and Rollout Config** を変更します。
 >
 >For more information, see [queue configurations](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
 
 ## Monitor the Status of Asynchronous Operations {#monitor-the-status-of-asynchronous-operations}
 
-AEMが操作を非同期に処理する場合は常に、インボックスと電子メール（有効になっている場合）を通じて通知を受信します。
+AEMが操作を非同期で処理する場合は常に、イン [ボックス](/help/sites-authoring/inbox.md) と電子メール（有効になっている場合）で通知が受信されます。
 
 非同期操作のステータスの詳細を表示するには、**[!UICONTROL 非同期ジョブステータス]**&#x200B;ページに移動します。
 
@@ -142,3 +140,12 @@ AEMは毎日01:00に削除ジョブを実行し、1日以上経過している�
    ![MSM設定](assets/async-msm.png)
 
 1. 変更内容を保存します。
+
+>[!MORELIKETHIS]
+>
+>* [ページの作成と整理](/help/sites-authoring/managing-pages.md)
+>* [ライブコピーの作成と同期](/help/sites-administering/msm-livecopy.md)
+>* [Experience Managerで電子メールを設定します](/help/sites-administering/notification.md)。
+>* [アセットメタデータの一括読み込みおよび書き出し](/help/assets/metadata-import-export.md).
+>* [「接続されたアセット」を使用して、リモートデプロイメントからDAMアセットを共有します](/help/assets/use-assets-across-connected-assets-instances.md)。
+
