@@ -3,7 +3,7 @@ title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 41%
@@ -24,7 +24,7 @@ Adobe Dynamic Tag Management は、デジタルマーケティングツールを
 DTM を使用してアセットインサイトを有効にするには、次の手順を実行します。
 
 1. Click the Experience Manager logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [DTMCloud Serviceを使用したExperience Managerインスタンスの設定](/help/sites-administering/dtm.md)
+1. [DTMCloud Serviceを使用したExperience Managerデプロイメントの設定](/help/sites-administering/dtm.md)
 
    The API token should be available once you log on to [https://dtm.adobe.com](https://dtm.adobe.com/) and visit **[!UICONTROL Account Settings]** in the user Profile. Experience Managerサイトとアセットインサイトの統合はまだ機能しているので、アセットインサイトの観点からは、この手順は必要ありません。
 
