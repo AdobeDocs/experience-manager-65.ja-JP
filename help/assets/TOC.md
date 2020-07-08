@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Experience Manager6.5アセットユーザーガイド
 translation-type: tm+mt
-source-git-commit: e3907ac1c6e3900f280b2570b93053b10128cc6d
+source-git-commit: 9f1548785283ffba119d8404e328f513012a082c
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 56%
@@ -151,7 +151,7 @@ ht-degree: 56%
    + [翻訳プロジェクトの作成](translation-projects.md)
    + [翻訳するアセットの準備](preparing-assets-for-translation.md)
    + [AEM からのアセットのダウンロード](download-assets-from-aem.md)
-   + [非同期操作](/help/sites-administering/asynchronous-jobs.md)
+   + [非同期ジョブ](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [アセットのインサイト](touch-ui-asset-insights.md)
    + [Adobe Launchでアセットのインサイトを有効にする](touch-ui-using-dtm-for-asset-insights.md)
