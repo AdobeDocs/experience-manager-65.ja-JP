@@ -3,7 +3,7 @@ title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 74%
@@ -27,7 +27,7 @@ ht-degree: 74%
 
 背景には、スマートコンテンツサービスはAdobe Senesi AIフレームワークを使用して、タグ構造とビジネス分類に対する画像認識アルゴリズムのトレーニングを行っています。 その後、このコンテンツインテリジェンスを使用して、アセットの個々のセットに関連性の高いタグが適用されます。
 
-スマートコンテンツサービスは、Adobe I/O上でホストされるクラウドサービスです。 この機能をAdobe Experience Managerで使用するには、Experience Manager管理者がシステムインスタンスをAdobe I/Oと統合する必要があります。
+スマートコンテンツサービスは、Adobe I/O上でホストされるクラウドサービスです。 この機能をAdobe Experience Managerで使用するには、Experience Manager管理者がシステム導入をAdobe I/Oと統合する必要があります。
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
