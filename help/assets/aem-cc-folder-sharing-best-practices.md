@@ -3,10 +3,10 @@ title: Adobe Creative Cloudフォルダー共有のベストプラクティス�
 description: Adobe Experience Managerを設定し、Experience Managerアセット内のユーザーがAdobe Creative Cloud(CC)ユーザーとフォルダーを交換できるようにします。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 34%
+ht-degree: 29%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 34%
 >
 >Creative Cloudフォルダー共有へのExperience Manager機能は非推奨となりました。 アドビでは、 [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) ( [Adobeアセットリンク)や](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)Experience Managerのデスクトップアプリケーションなど、新しい機能を使用することを強くお勧めします。 Learn more in [Experience Manager and Creative Cloud integration best practices](/help/assets/aem-cc-integration-best-practices.md).
 
-Adobe Experience Managerは、アセット内のユーザーがAdobe Creative Cloudアプリのユーザーとフォルダーを共有できるように設定できるので、Adobe Creative Cloud Assetsサービスで共有フォルダーとして使用できます。 この機能を使用すると、クリエイティブチームと Assets ユーザーの間でファイルをやり取りすることができます。特に、クリエイティブユーザーが Assets インスタンスへのアクセス権を持っていない（エンタープライズネットワーク上にいない）場合に便利です。
+Adobe Experience Managerは、アセット内のユーザーがAdobe Creative Cloudアプリのユーザーとフォルダーを共有できるように設定できるので、Adobe Creative Cloud Assetsサービスで共有フォルダーとして使用できます。 この機能を使用して、クリエイティブチームとアセットユーザー間でファイルを交換できます。特に、クリエイティブユーザーがアセット展開にアクセスできない（エンタープライズネットワーク上にない）場合に便利です。
 
 このタイプの統合は、以下の場合に使用できます。特に、 Assets への直接アクセス権を持っていないユーザーと作業する場合に便利です。
 
@@ -39,7 +39,7 @@ Creative CloudへのExperience Managerー共有は、アセットとCreative Clo
 この統合の主要な要素は以下のとおりです。
 
 * **エンタープライズネットワーク** （マネージドサービスまたはオンプレミス）にデプロイされたExperience Managerアセットサーバー： ここでフォルダの共有を開始します。
-* **Adobe Marketing Cloudアセットコアサービス**: Experience ManagerとCreative Cloudストレージサービスの間に介在する役割を果たします。 この統合を使用する企業の管理者は、Marketing Cloud 組織と Assets インスタンスの間に信頼関係を確立する必要があります。また、管理者は、 Assets ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)します。
+* **Adobe Marketing Cloudアセットコアサービス**: Experience ManagerとCreative Cloudストレージサービスの間に介在する役割を果たします。 統合を使用する会社の管理者は、Marketing Cloud組織とアセットのデプロイメントの間に信頼関係を確立する必要があります。 また、管理者は、 Assets ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)します。
 
 * **Creative Cloud Assets Webサービス** (ストレージおよびCreative Cloud Files Web UI): ここでは、アセットフォルダーが共有された特定のCreative Cloudアプリユーザーが、招待を受諾して、Creative Cloudアカウントストレージーのフォルダーを表示できます。
 * **Creative Cloudデスクトップアプリケーション**: （オプション）Creative Cloud Assetsストレージーと同期することで、クリエイティブユーザーのデスクトップから共有フォルダーや共有ファイルに直接アクセスできます。
