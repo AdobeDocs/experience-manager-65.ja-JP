@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1584bc5034e7d4a549a5f824a89e8cf0c06ac3c
+source-git-commit: 5ae20c36efe40e7228488a59ffc27f86e56e2d48
 workflow-type: tm+mt
-source-wordcount: '3217'
+source-wordcount: '3225'
 ht-degree: 84%
 
 ---
@@ -32,7 +32,6 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 >
 >* サポートされているサーバープラットフォームへの例外エラーの完全リストについては、[サポートされているサーバープラットフォームへの例外エラー](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)を参照してください。
 >* JEE 上の AEM Forms でサポートされるのは、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみです。
-
 >
 
 
@@ -156,7 +155,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サポート対象</td>
   </tr> 
    <tr>
-   <td>Oracle Database 19c </td>
+   <td>Oracle Database 19c(Standard、Real Application Clusters(RAC)およびEnterpriseエディション) </td>
    <td>Repository Microkernal </td>
    <td>サポート対象</td>
   </tr>
@@ -453,11 +452,9 @@ AEM Forms版AppでApache Cordovaがサポートされるようになりました
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 >* 「OCR PDF」、「PDF を最適化」、「PDF を書き出し」の各機能は、Windows でのみサポートされています。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。For more information, refer to AEM Forms product description as per your deployment ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) or [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
-
    >
    >
 * PDF Generator サービスは、Microsoft Windows 10 をサポートしていません。
-
 >
 
 
@@ -637,7 +634,6 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >* Administration Console は Safari ではサポートされていません。
 >* Correspondence Managementは、AEM 6.1 FormsではWindows® Internet Explorer 9.0をサポートしていません。
 >* Forms ポータルは、アクセシビリティのために、JAWS 14.0 画面読み上げソフトウェアを Internet Explorer 11 でサポートしています。
-
 >
 
 
@@ -672,7 +668,6 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >[!NOTE]
 >
 >* Forms Portal は iPad の Safari でのみサポートされています。
-
 >
 
 
