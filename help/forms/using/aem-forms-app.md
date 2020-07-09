@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
+workflow-type: tm+mt
+source-wordcount: '2418'
+ht-degree: 75%
 
 ---
 
@@ -19,15 +22,15 @@ source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
 
 ## 概要 {#overview}
 
-AEM Forms アプリケーションでは、アダプティブフォーム、モバイルフォーム、およびモバイルデバイスのフォームセットをサーバーに基づいて同期することができます。[OSGi 上の Forms 中心ワークフロー](/help/forms/using/aem-forms-workflow.md)または [JEE 上の Forms ワークフロー](/help/forms/using/finance-reference-site-walkthrough.md#approving-the-application)を定義することができます。例えば、金融関係の会社を経営していて、顧客の申請と問い合わせの管理に AEM Forms を使用するとします。顧客はフォームを記入し、それを送信して承認を求めます。モバイルデバイスのフォームを有効にしている場合、顧客はフォームを AEM Forms アプリケーションで記入することができます。また、会社側も、モバイルデバイス上でのフォームの認証を有効にすることで、承認のワークフローを管理することができます。フィールドワーカーはモバイルデバイスを顧客のところに持参し、詳細を検証して、フォームを送信します。AEM Forms アプリケーションは AEM Forms サーバーと同期して、モバイルデバイス用に有効化されたフォームを取得します。アプリがオフラインの場合は、データがローカルに保存されます。
+AEM Forms アプリケーションでは、アダプティブフォーム、モバイルフォーム、およびモバイルデバイスのフォームセットをサーバーに基づいて同期することができます。[OSGi 上の Forms 中心ワークフロー](/help/forms/using/aem-forms-workflow.md)または [JEE 上の Forms ワークフロー](/help/forms/using/finance-reference-site-walkthrough.md#approving-the-application)を定義することができます。例えば、金融関係の会社を経営していて、顧客の申請と問い合わせの管理に AEM Forms を使用するとします。顧客はフォームを記入し、それを送信して承認を求めます。モバイルデバイスのフォームを有効にしている場合、顧客はフォームを AEM Forms アプリケーションで記入することができます。また、会社側も、モバイルデバイス上でのフォームの認証を有効にすることで、承認のワークフローを管理することができます。フィールドワーカーはモバイルデバイスを顧客のところに持参し、詳細を検証して、フォームを送信します。AEM Forms アプリケーションは AEM Forms サーバーと同期して、モバイルデバイス用に有効化されたフォームを取得します。アプリがオフラインの場合、データはローカルに保存されます。
 
 AEM Forms アプリケーションのソースコードは、パッケージ共有により、使用することができます。The source code package in package share is available as: `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
 
-AEM Forms アプリケーションは、iOS、Android、および Windows デバイスでサポートされます。Android用のAEM formsアプリケーションは、Google playから、iOSはApp storeから、Windowsストアからインストールできます。
+AEM Forms アプリケーションは、iOS、Android、および Windows デバイスでサポートされます。Android向けのAEM Formsアプリは、Google Playから、iOSはApp Storeから、Windowsストアからインストールできます。
 
-    [ ![google_play](assets/google_play.png)](https://play.google.com/store/apps/details?id=com.adobe.aem.forms)
+    [ ![google_play](assets/google_play.png)
     
-    [ ![app_store](assets/app_store.png)](https://itunes.apple.com/us/app/adobe-experience-manager-forms/id1129625976?ls=1&amp;mt=8)
+    [ ![app_store](assets/app_store.png)
     
     [ ![microsoft-badge-icon](assets/microsoft-badge-icon.png)](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-forms/9nd12rlxtgtt)
 
@@ -47,9 +50,9 @@ AEM Forms サーバーをお持ちの場合、アダプティブフォームを 
 
 ### スタンドアロンのフォームまたは AEM Forms ワークフローを使用しないサーバーのある AEM Forms アプリケーション {#standalone-forms-or-aem-forms-app-with-servers-without-aem-forms-workflow}
 
-AEM Forms ワークフローを使用しない AEM Forms サーバーは、OSGi 上の AEM Forms またはスタンドアロンのモバイルフォームもしくはアダプティブフォームです。AEM Forms アプリケーションは、[OSGi](/help/sites-deploying/configuring-osgi.md) に AEM Forms を実装して機能します。AEM Formsアプリケーションで有効にして発行するフォームは、アプリケーションで使用できます。
+AEM Forms ワークフローを使用しない AEM Forms サーバーは、OSGi 上の AEM Forms またはスタンドアロンのモバイルフォームもしくはアダプティブフォームです。AEM Forms アプリケーションは、[OSGi](/help/sites-deploying/configuring-osgi.md) に AEM Forms を実装して機能します。AEM Forms版アプリケーションで有効にして発行するフォームは、アプリケーションで使用できます。
 
-フォームをアプリケーションにダウンロードして、オフラインで使用することができます。例えば、ある銀行会社を経営していて、顧客がサイト上の申込書に記入したとします。 申込書はアダプティブフォームで、顧客からの情報を受け付け、レビュー用に保存します。管理者はフォームをレビューし、AEM オーサーインスタンスで検証フォームを作成します。管理者は AEM Forms アプリケーションによる同期を有効にして、発行します。検証フォームが AEM Forms アプリケーションで使用できる場合、フィールドエージェントは顧客の詳細の検証にモバイルデバイスを使用することができます。モバイルデバイスはサーバーと同期し、検証フォームがアプリケーションにロードされます。フィールドエージェントは顧客を訪問し、詳細を検証した上で、データをドラフトとして保存、または検証フォームとして提出します。アプリケーションがオンラインになるたびに、フォームはサーバーと同期されます。
+フォームをアプリケーションにダウンロードして、オフラインで使用することができます。例えば、金融関係の会社を経営していて、顧客がサイトで申込書を記入したとします。 申込書はアダプティブフォームで、顧客からの情報を受け付け、レビュー用に保存します。管理者はフォームをレビューし、AEM オーサーインスタンスで検証フォームを作成します。管理者は AEM Forms アプリケーションによる同期を有効にして、発行します。検証フォームが AEM Forms アプリケーションで使用できる場合、フィールドエージェントは顧客の詳細の検証にモバイルデバイスを使用することができます。モバイルデバイスはサーバーと同期し、検証フォームがアプリケーションにロードされます。フィールドエージェントは顧客を訪問し、詳細を検証した上で、データをドラフトとして保存、または検証フォームとして提出します。アプリケーションがオンラインになるたびに、フォームはサーバーと同期されます。
 
 AEM Forms アプリケーションでは、次のようにフォームを同期します。
 
@@ -70,7 +73,7 @@ AEM Forms アプリケーションでは、次のようにフォームを同期�
 
 AEM Forms サーバーでアプリケーションを同期して、モバイルデバイスでフォームを使用した作業をすることができます。
 
-AEM Forms Workflow サーバーでは、フォームをワークベンチプロセスおよび AEM インボックスアプリケーションのスタートポイントに関連付けることができます。AEM インボックスアプリケーションには、アダプティブフォームを関連付けることができます。スタートポイントにはアダプティブフォーム、HTML5 フォーム、または関連するフォームセットを設定することができます。スタートポイントはタスクとして送信したり、ドラフトとしてそのタスクを保存したりできます。For more information on differences between an AEM Inbox application and a startpoint see [Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows](/help/forms/using/capabilities-osgi-jee-workflows.md).
+AEM Forms Workflow サーバーでは、フォームをワークベンチプロセスおよび AEM インボックスアプリケーションのスタートポイントに関連付けることができます。AEM インボックスアプリケーションには、アダプティブフォームを関連付けることができます。スタートポイントにはアダプティブフォーム、HTML5 フォーム、または関連するフォームセットを設定することができます。スタートポイントはタスクとして送信したり、ドラフトとしてそのタスクを保存したりできます。For more information on differences between an AEM Inbox application and a startpoint see [Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows](capabilities-osgi-jee-workflows.md).
 
 AEM Forms ワークフローを使用しない AEM Forms Server がある場合、アプリケーション内で同期が有効にされているフォームは AEM Forms アプリケーション内でレンダリングされます。フォームは、アプリケーションの「フォーム」タブで使用することができ、ドラフトとして送信または保存することができます。アプリケーションでは、アダプティブフォームおよびモバイルフォームがサポートされています。
 
@@ -90,7 +93,7 @@ AEM Forms ワークフローを使用しない AEM Forms Server がある場合�
 
 アプリケーションを AEM Forms ワークフローサーバーと同期して、モバイルデバイスでタスクやフォームを使用できます。
 
-A task on the mobile device contains an adaptive form, HTML5 form, or a form set and can also contain attachments and [summary URL](/help/forms/using/getting-task-variables-summary-url.md). デフォルトでは、自分に割り当てられたタスクが **[!UICONTROL Tasks]** フォルダーに保存されます。タスクを操作する場合は、タスクを変更し、AEM Formsサーバーにタスクのドラフトコピーを保存できます。
+A task on the mobile device contains an adaptive form, HTML5 form, or a form set and can also contain attachments and [summary URL](/help/forms/using/getting-task-variables-summary-url.md). デフォルトでは、自分に割り当てられたタスクが **[!UICONTROL Tasks]** フォルダーに保存されます。タスクで作業する場合、タスクを変更し、タスクのドラフトコピーをAEM Formsサーバーに保存できます。
 
 モバイルデバイスのフォームは、アダプティブフォームまたはモバイルフォームになります。Foms アプリケーションで同期可能なフォームは、Forms フォルダーにあります。AEM Forms ワークフローを使用しない AEM Forms Server（OSGi での AEM Forms）で有効にされているフォームを同期することができます。
 
@@ -101,7 +104,7 @@ A task on the mobile device contains an adaptive form, HTML5 form, or a form set
 
 ### オフライン作業 {#working-offline}
 
-オフラインモードであっても、モバイルデバイス上で作業ができます。ネットワークに接続していない場合でも、アプリケーションにログインできます。また、最後に同期したすべてのフォームを実行できます。フォームを同期する方法について詳しくは、「[アプリケーションの同期](/help/forms/using/sync-app.md)」を参照してください。フォームに関連付けられた添付ファイルを同期する場合は、オフラインモードで添付ファイルを開くこともできます。 オフラインモードでは、フォームの編集、注釈の追加、およびフォームの送信と保存が可能です。フォームは次にオンラインになったときに AEM Forms サーバーと同期します。
+オフラインモードであっても、モバイルデバイス上で作業ができます。ネットワークに接続していない場合でも、アプリケーションにログインできます。また、最後に同期したすべてのフォームを実行できます。フォームを同期する方法について詳しくは、「[アプリケーションの同期](/help/forms/using/sync-app.md)」を参照してください。フォームに関連付けられた添付ファイルを同期する場合は、オフラインモードでその添付ファイルを開くこともできます。 オフラインモードでは、フォームの編集、注釈の追加、およびフォームの送信と保存が可能です。フォームは次にオンラインになったときに AEM Forms サーバーと同期します。
 
 詳細については、「[オフラインモードの使用](/help/forms/using/work-offline-mode.md)」を参照してください。
 
@@ -111,7 +114,7 @@ A task on the mobile device contains an adaptive form, HTML5 form, or a form set
 
 * **メモ**— メモ機能を使用して、手書きメモやテキストメモをフォームに追加できます。 詳しくは、「[メモの追加](/help/forms/using/add-attachments.md#adding-a-note)」を参照してください。
 
-* **画像**- AEM Formsアプリケーションには、モバイルデバイスのカメラ機能またはギャラリーを使用する機能が含まれています。 写真注釈を使用すると、写真を関連するフォームに追加することができます。詳しくは、「[写真の追加](/help/forms/using/add-attachments.md#adding-a-photograph)」を参照してください。
+* **画像**-AEM Formsアプリには、モバイルデバイスのカメラ機能やギャラリーを使用する機能が含まれています。 写真注釈を使用すると、写真を関連するフォームに追加することができます。詳しくは、「[写真の追加](/help/forms/using/add-attachments.md#adding-a-photograph)」を参照してください。
 
 ### 自動保存 {#autosave}
 
@@ -121,7 +124,7 @@ AEM Forms アプリケーションでユーザーがデータを入力すると�
 
 ## AEM インボックスと AEM Forms アプリケーションの機能の違い {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-Two of the prominent ways to launch a Forms-centric workflow are using [AEM Inbox](/help/forms/using/manage-applications-inbox.md) and AEM Forms app. ただし、AEM インボックスの機能と AEM Forms アプリケーションの機能は異なっています。AEM Inbox works only with [Forms-centric workflows](/help/forms/using/aem-forms-workflow.md) while the AEM Forms app works with both Forms-centric workflows as well as process management. For more information on differences between AEM Inbox and AEM Forms app capabilities, see [Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows](/help/forms/using/capabilities-osgi-jee-workflows.md).
+Two of the prominent ways to launch a Forms-centric workflow are using [AEM Inbox](/help/forms/using/manage-applications-inbox.md) and AEM Forms app. ただし、AEM インボックスの機能と AEM Forms アプリケーションの機能は異なっています。AEM Inbox works only with [Forms-centric workflows](/help/forms/using/aem-forms-workflow.md) while the AEM Forms app works with both Forms-centric workflows as well as process management. For more information on differences between AEM Inbox and AEM Forms app capabilities, see [Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows](capabilities-osgi-jee-workflows.md).
 
 ## サポートされているフォーム {#supported-forms}
 
@@ -145,9 +148,9 @@ AEM Forms では、モバイルデバイス用のフォームを作成するこ�
 
 ## AEM Forms アプリケーションの仕組み {#how-aem-forms-app-works}
 
-AEM Formsアプリは、フィールドワーカーに割り当てられたフォームを使用するためのモバイルソリューションを提供します。 アプリケーションはサーバーから完全なデータをキャッシュし、すべての作業をローカルに保存することによって、十分なユーザーエクスペリエンスを提供します。ディスクからのデータは適時の同期更新によってサーバーに送信されます。
+AEM Formsアプリは、フィールドワーカーが割り当てられたフォームを使用できるモバイルソリューションを提供します。 アプリケーションはサーバーから完全なデータをキャッシュし、すべての作業をローカルに保存することによって、十分なユーザーエクスペリエンスを提供します。ディスクからのデータは適時の同期更新によってサーバーに送信されます。
 
-AEM FormsアプリケーションはPhoneGap 5.0ベースのアプリケーションで、モデルに保存されたデータをビューを介して表示するためにBackboneモデルが効率的に使用されます。 すべてのネイティブ操作は、PhoneGap プラグインによって実行されます。
+AEM Formsアプリは、Backboneモデルを効率的に使用し、モデルに保存されたデータを表示で表示するPhoneGap 5.0ベースのアプリケーションです。 すべてのネイティブ操作は、PhoneGap プラグインによって実行されます。
 
 ## AEM Forms アプリケーションのカスタマイズ、構築、配布 {#customize-build-distribute}
 
@@ -155,7 +158,7 @@ AEM FormsアプリケーションはPhoneGap 5.0ベースのアプリケーシ�
 >
 >AEM Forms アプリケーションソースコードを使用してアプリを構築する場合にのみ適用可能です。
 
-AEM Formsアプリケーションは、組織固有のニーズに合わせて簡単にカスタマイズできます。 アプリケーションのソースコードは AEM Forms とともに提供されます。ソースコードに変更を加え、独自に作業員向けモバイルソリューションを構築できます。アプリケーションへのサインには、会社独自のキーを使用することもできます。
+AEM Formsアプリは、組織固有のニーズに合わせて簡単にカスタマイズできます。 アプリケーションのソースコードは AEM Forms とともに提供されます。ソースコードに変更を加え、独自に作業員向けモバイルソリューションを構築できます。アプリケーションへのサインには、会社独自のキーを使用することもできます。
 
 ### カスタマイズ {#customize}
 
@@ -163,9 +166,9 @@ AEM Formsアプリケーションは、組織固有のニーズに合わせて�
 
 **ブランディング**：アプリケーションのアイコン、アプリケーション名、起動の画像、AEM Forms アプリケーション内のページを変更します。テキストを特定の地域のローカライズアプリケーションに変更することもできます。AEM Forms アプリケーションのブランディングについて詳しくは、「[ブランディングのカスタマイズ](/help/forms/using/branding-customization.md)」を参照してください。
 
-**テーマ**:AEM Formsアプリケーションユーザーインターフェイスでの色、フォント、間隔などのスタイルを変更します。 詳しくは、「[テーマのカスタマイズ](/help/forms/using/theme-customization.md)」を参照してください。
+**テーマ**: AEM Formsアプリユーザーインターフェイスで、色、フォント、間隔などのスタイルを変更します。 詳しくは、「[テーマのカスタマイズ](/help/forms/using/theme-customization.md)」を参照してください。
 
-**ジェスチャ**:AEM Formsアプリユーザーインターフェイスでの右にスワイプ、左にスワイプなどのジェスチャーを変更します。 詳しくは、「[ジェスチャーのカスタマイズ](/help/forms/using/gesture-customization.md)」を参照してください。
+**ジェスチャ**: AEM Formsアプリユーザーインターフェイスでの右にスワイプ、左にスワイプなどのジェスチャーを変更します。 詳しくは、「[ジェスチャーのカスタマイズ](/help/forms/using/gesture-customization.md)」を参照してください。
 
 AEM Forms アプリケーションプロジェクトをカスタマイズ用にセットアップする方法について、詳細は次のリンクを参照してください。
 
@@ -176,18 +179,18 @@ AEM Forms アプリケーションプロジェクトをカスタマイズ用に�
 
 ### 構築と配布 {#build-and-distribute}
 
-AEM Formsアプリケーションのソースコードは、パッケージ共有のAEM Formsアプリケーションソースパッケージの一部として入手できるadobe-lc-mobileworkspace-src.zipから抽出できます。
+AEM Forms版アプリのソースコードは、パッケージ共有のAEM Forms版アプリソースパッケージの一部として入手できるadobe-lc-mobileworkspace-src.zipから抽出できます。
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. パッケージ共有に移動
+1. パッケージ共有に移動します
 
    URL: `https://<server>:<port>/crx/packageshare`.
 
 1. ソースパッケージをダウンロードします。パッケージをダウンロードすると、AEM Forms パッケージマネージャーに追加されます。
-1. ダウンロード後、次の場所に移動します。を `https://<server>:<port>/crx/packmgr/index.jsp`選択し、インストールしま `adobe-aemfd-forms-app-src-pkg-<version>.zip`す。
+1. ダウンロード後、次の場所に移動します。 `https://<server>:<port>/crx/packmgr/index.jsp`、およびinstall `adobe-aemfd-forms-app-src-pkg-<version>.zip`。
 
-1. パッケージをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開いてください。
+1. パッケージをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開きます。
 
    ソースパッケージがデバイスにダウンロードされます。
 
@@ -207,7 +210,7 @@ For details on how to sign the AEM Forms app, see [Signing Your Applications](ht
 
 For details on how to create a Windows app (.appx), refer [Set up the Visual Studio project and build the Windows app](/help/forms/using/setup-visual-studio-project-build-installer.md).
 
-MDM を介したアプリケーションの配布方法について詳しくは、「[AEM Forms アプリケーションの配布](/help/forms/using/distribute-mobile-workspace-app.md)」を参照してください。MDMを使用したアプリの配布は、iOSとAndroidにのみ適用できます。
+MDM を介したアプリケーションの配布方法について詳しくは、「[AEM Forms アプリケーションの配布](/help/forms/using/distribute-mobile-workspace-app.md)」を参照してください。MDMを介したアプリの配布は、iOSとAndroidにのみ適用できます。
 
 ## Mobile Workspace を AEM Forms アプリケーションにアップグレードするための推奨事項 {#recommendations-to-upgrade-mobile-workspace-to-aem-forms-app}
 
@@ -215,7 +218,7 @@ MDM を介したアプリケーションの配布方法について詳しくは�
 
 * **Android に Play ストアから以前のバージョンのアプリケーションをインストールした場合** アプリケーションを Play ストアから直接アップグレードできます。
 
-* **以前のバージョンのアプリケーションがソースコードを使用して構築およびインストールされている場合**:
+* **以前のバージョンのアプリケーションがソースコードを使用して構築およびインストールされる場合（iOSとAndroidに適用）**:
 
-   新しいアプリケーションをインストールする前に、すべてのデータをAEM Formsサーバーと同期します。 データが同期されたら、以前のバージョンのアプリケーションをアンインストールし、新しいアプリケーションをインストールします。
+   新しいアプリをインストールする前に、すべてのデータをAEM Formsサーバーと同期します。 データが同期されたら、以前のバージョンのアプリケーションをアンインストールし、新しいアプリケーションをインストールします。
 
