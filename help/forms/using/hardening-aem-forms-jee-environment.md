@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 36c9b3d60331e7482655bc8039153b6b86d721f9
+source-git-commit: f9b11eee4c044a8df4e694aa5f660b5ea375ca3c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 71%
@@ -173,6 +173,7 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
 
    * 「**ユーザーはパスワードを変更できない**」オプションを選択します。
    * 「**所属するグループ**」タブに、「**ユーザー**」グループが表示されていることを確認してください。
+
    >[!NOTE]
    >
    >PDF Generator 用のこの設定は変更できません。
@@ -200,6 +201,7 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    * [JBoss-directory]\standalone\deployment
    * [JBoss-directory]\standalone\
    * [JBoss-directory]\bin\
+
    >[!NOTE]
    >
    > JBoss Application Serverのデフォルトのインストール場所：
@@ -1017,6 +1019,7 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
    * [JBoss-directory]\standalone\deployment
    * [JBoss-directory]\standalone\
    * [JBoss-directory]\bin\
+
    >[!NOTE]
    >
    > JBoss Application Serverのデフォルトのインストール場所：
