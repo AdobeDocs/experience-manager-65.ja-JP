@@ -10,18 +10,21 @@ topic-tags: customization
 discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: a399b2cb2e0ae4f045f7e0fddf378fdcd80bb848
+workflow-type: tm+mt
+source-wordcount: '1661'
+ht-degree: 51%
 
 ---
 
 
 # アダプティブフォーム向けのカスタム送信アクションの作成{#writing-custom-submit-action-for-adaptive-forms}
 
-Adaptive forms では、ユーザー指定のデータを処理するために、送信アクションが必要となります。送信アクションは、アダプティブフォームを使用して送信したデータに対して実行されるタスクを決定します。 Adobe Experience Manager (AEM) includes [OOTB Submit actions](../../forms/using/configuring-submit-actions.md) that demonstrate custom tasks you can perform using the user-submitted data. 例えば、電子メールの送信やデータの保存などのタスクを実行できます。
+アダプティブフォームでは、ユーザー指定のデータを処理するために送信アクションが必要です。 送信アクションは、アダプティブフォームを使用して送信するデータに対して実行されるタスクを決定します。 Adobe Experience Manager (AEM) includes [OOTB Submit actions](../../forms/using/configuring-submit-actions.md) that demonstrate custom tasks you can perform using the user-submitted data. 例えば、電子メールの送信やデータの保存などのタスクを実行できます。
 
 ## 送信アクションのワークフロー {#workflow-for-a-submit-action}
 
-The flowchart depicts the workflow for a Submit action that is triggered when you click the **[!UICONTROL Submit]** button in an adaptive form. File Attachment コンポーネントのファイルはサーバーにアップロードされ、フォームデータはアップロードされたファイルの URL で更新されます。クライアント内で、データは JSON 形式で格納されます。クライアントは、指定したデータをメッセージして XML 形式で返信する内部サーブレットに Ajax リクエストを送信します。クライアントは、このデータをアクションフィールドと照合します。データは、Form Submitアクションを使用して、最終サーブレット（Guide Submitサーブレット）に送信されます。 次に、サーブレットが送信アクションにコントロールを転送します。送信アクションは、リクエストを別のスリングリソースに転送したり、ブラウザーを別のURLにリダイレクトしたりできます。
+The flowchart depicts the workflow for a Submit action that is triggered when you click the **[!UICONTROL Submit]** button in an adaptive form. File Attachment コンポーネントのファイルはサーバーにアップロードされ、フォームデータはアップロードされたファイルの URL で更新されます。クライアント内で、データは JSON 形式で格納されます。クライアントは、指定したデータをメッセージして XML 形式で返信する内部サーブレットに Ajax リクエストを送信します。クライアントは、このデータをアクションフィールドと照合します。データは、Form Submitアクションを通じて、最終サーブレット（Guide Submitサーブレット）に送信されます。 次に、サーブレットが送信アクションにコントロールを転送します。送信アクションは、リクエストを別のスリングリソースに転送したり、ブラウザーを別のURLにリダイレクトしたりできます。
 
 ![送信アクションのワークフローを示したフローチャート](assets/diagram1.png)
 
@@ -51,7 +54,7 @@ The XML data is sent to the servlet using the **`jcr:data`** request parameter. 
 
 ### アクションフィールド {#action-fields}
 
-A Submit action can add hidden input fields (using the HTML [input](https://developer.mozilla.org/en/docs/Web/HTML/Element/Input) tag) to the rendered form HTML. これらの非表示フィールドには、フォーム送信の処理中に必要な値を含めることができます。 フォームの送信時に、これらのフィールド値は、送信アクションが送信処理中に使用できるリクエストパラメーターとしてポストバックされます。 この入力フィールドは、アクションフィールドと呼ばれます。
+A Submit action can add hidden input fields (using the HTML [input](https://developer.mozilla.org/en/docs/Web/HTML/Element/Input) tag) to the rendered form HTML. これらの非表示フィールドには、フォーム送信の処理中に必要な値を含めることができます。 フォームの送信時に、これらのフィールド値は、送信アクションが送信処理時に使用できるリクエストパラメーターとしてポストバックされます。 この入力フィールドは、アクションフィールドと呼ばれます。
 
 For example, a Submit action that also captures the time taken to fill a form can add the hidden input fields `startTime` and `endTime`.
 
@@ -59,9 +62,9 @@ For example, a Submit action that also captures the time taken to fill a form ca
 
 ### 添付ファイル {#file-attachments}
 
-送信アクションは、添付ファイルコンポーネントを使用してアップロードする添付ファイルを使用することもできます。 送信アクションスクリプトは、スリング [RequestParameter API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html) を使ってこれらのファイルにアクセスすることができます。The [isFormField](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html#isFormField()) method of the API helps identify whether the request parameter is a file or a form field. 送信アクション内のリクエストパラメーターを反復することで、File Attachment パラメーターを特定することができます。
+送信アクションは、File Attachmentコンポーネントを使用してアップロードする添付ファイルを使用することもできます。 送信アクションスクリプトは、スリング [RequestParameter API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html) を使ってこれらのファイルにアクセスすることができます。The [isFormField](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html#isFormField()) method of the API helps identify whether the request parameter is a file or a form field. 送信アクション内のリクエストパラメーターを反復することで、File Attachment パラメーターを特定することができます。
 
-次のサンプルコードは、まず、リクエスト内の添付ファイルを特定します。Next, it reads the data into the file using the [Get API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html#get()). 最後に、データを使用してDocumentオブジェクトを作成し、リストに追加します。
+次のサンプルコードは、まず、リクエスト内の添付ファイルを特定します。Next, it reads the data into the file using the [Get API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html#get()). 最後に、データを使用してドキュメントオブジェクトを作成し、リストに追加します。
 
 ```java
 RequestParameterMap requestParameterMap = slingRequest.getRequestParameterMap();
@@ -75,32 +78,32 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 ### 転送パスおよびリダイレクト URL {#forward-path-and-redirect-url}
 
-要求されたアクションを実行した後、送信サーバーレットは、リクエストを転送パスに転送します。アクションは、setForwardPath APIを使用してGuide submitサーブレットに転送パスを設定します。
+要求されたアクションを実行した後、送信サーバーレットは、リクエストを転送パスに転送します。アクションは、setForwardPath APIを使用して、Guide Submitサーブレットに転送パスを設定します。
 
-アクションによって転送パスが指定されない場合、送信サーバーレットは、リダイレクト URL を使ってブラウザをリダイレクトします。作成者は、アダプティブフォーム編集ダイアログのありがとうございますページ設定を使って、リダイレクト URL を設定します。リダイレクトURLは、送信アクションまたはGuide SubmitサーブレットのsetRedirectUrl APIを使用して設定することもできます。 また、Guide Submit 内の setRedirectUrl API を使って、リダイレクト URL に送られるリクエストパラメーターを設定することもできます。
+アクションによって転送パスが指定されない場合、送信サーバーレットは、リダイレクト URL を使ってブラウザをリダイレクトします。作成者は、アダプティブフォーム編集ダイアログのありがとうございますページ設定を使って、リダイレクト URL を設定します。リダイレクトURLは、送信アクションまたはGuide Submit内のsetRedirectUrl APIを使用して設定することもできます。 また、Guide Submit 内の setRedirectUrl API を使って、リダイレクト URL に送られるリクエストパラメーターを設定することもできます。
 
 >[!NOTE]
 >
->リダイレクト URL は、ありがとうございますページ設定を使って作成者が指定します[OOTB送信アクションは](../../forms/using/configuring-submit-actions.md) 、リダイレクトURLを使用して、転送パスが参照するリソースからブラウザーをリダイレクトします。
+>リダイレクト URL は、ありがとうございますページ設定を使って作成者が指定します[OOTB送信アクション](../../forms/using/configuring-submit-actions.md) ：リダイレクトURLを使用して、転送パスが参照するリソースからブラウザをリダイレクトします。
 >
->リクエストをリソースまたはサーブレットに転送するカスタム送信アクションを作成できます。 アドビでは、転送パスのリソース処理を実行するスクリプトで、処理が完了したときにリダイレクトURLにリクエストをリダイレクトすることをお勧めします。
+>リクエストをリソースまたはサーブレットに転送するカスタム送信アクションを作成できます。 転送パスのリソース処理を実行するスクリプトで、処理が完了したときにリダイレクトURLにリクエストをリダイレクトすることをお勧めします。
 
 ## 送信アクション {#submit-action}
 
 送信アクションは、次を含むsling:Folderです。
 
 * **addfields.jsp**:このスクリプトは、レンダリング中に HTML ファイルに追加されるアクションフィールドを指定します。post.POST.jsp スクリプトでの送信中に必要な非表示の入力パラメーターの追加には、このスクリプトを使用します。
-* **dialog.xml**：このスクリプトは、CQ Component ダイアログに似ています。作成者がカスタマイズする設定情報を提供します。 送信アクションを選択すると、アダプティブフォーム編集ダイアログの「送信アクション」タブにフィールドが表示されます。
-* **post.POST.jsp**:送信サーブレットは、送信したデータと前の節の追加データを使用して、このスクリプトを呼び出します。 このページで言及されるアクションの実行は、post.POST.jsp スクリプトの実行を意味します。送信アクションをアダプティブフォームに登録し、アダプティブフォーム編集ダイアログに表示するには、次のプロパティをsling:Folderに追加します。
+* **dialog.xml**：このスクリプトは、CQ Component ダイアログに似ています。作成者がカスタマイズする設定情報を提供します。 これらのフィールドは、送信アクションを選択した場合に、アダプティブフォーム編集ダイアログの送信アクションタブに表示されます。
+* **post.POST.jsp**: 送信サーブレットは、送信したデータと前の節の追加データを使用して、このスクリプトを呼び出します。 このページで言及されるアクションの実行は、post.POST.jsp スクリプトの実行を意味します。送信アクションをアダプティブフォームに登録し、アダプティブフォーム編集ダイアログに表示するには、次のプロパティをsling:Folderに追加します。
 
    * ストリング型の **guideComponentType** および値 **fd/af/components/guidesubmittype**
-   * **送信アクションが** 適用されるアダプティブフォームのタイプを指定する文字列型のguideDataModel。 **xfaはXFA** ベースのアダプティブフォームでサポートされ、 **xsdは** XSDベースのアダプティブフォームでサポートされます。 **basicは** 、XDPまたはXSDを使用しないアダプティブフォームでサポートされています。 複数のタイプのアダプティブフォームでのアクションを表示するには、対応する文字列を追加します。各文字列はコンマで区切ります。 For example, to make an action visible on XFA- and XSD-based adaptive forms, specify the values **xfa** and **xsd** respectively.
+   * **送信アクションが適用されるアダプティブフォームのタイプを指定する文字列型のguideDataModel** 。 **xfa** はXFAベースのアダプティブフォームでサポートされ、 **** xsdはXSDベースのアダプティブフォームでサポートされています。 **basic** は、XDPまたはXSDを使用しないアダプティブフォームでサポートされています。 複数のタイプのアダプティブフォームでのアクションを表示するには、対応する文字列を追加します。各文字列はコンマで区切ります。 For example, to make an action visible on XFA- and XSD-based adaptive forms, specify the values **xfa** and **xsd** respectively.
 
-   * **文字列型のjcr** :description。 このプロパティの値は、アダプティブフォーム編集ダイアログの「送信アクション」タブにある送信アクションリストに表示されます。 The OOTB actions are present in the CRX repository at the location **/libs/fd/af/components/guidesubmittype**.
+   * **文字列型のjcr:description** 。 このプロパティの値は、アダプティブフォーム編集ダイアログの送信アクションタブにある送信アクションリストに表示されます。 The OOTB actions are present in the CRX repository at the location **/libs/fd/af/components/guidesubmittype**.
 
 ## カスタム送信アクションの作成 {#creating-a-custom-submit-action}
 
-次の手順を実行し、CRX リポジトリにデータを保存した後、メール送信を行うカスタム送信アクションを作成します。アダプティブフォームには、CRXリポジトリにデータを保存するOOTB送信アクションStore Content（非推奨）が含まれています。 In addition, CQ provides a [Mail](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html) API that can be used to send emails. Before using the Mail API, [configure](https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring the Mail Service) the Day CQ Mail service through the system console. 「コンテンツの保存（非推奨）」アクションを再利用して、データをリポジトリに保存できます。 Store Content（廃止）アクションは、CRX リポジトリの /libs/fd/af/components/guidesubmittype/store にあります。
+次の手順を実行し、CRX リポジトリにデータを保存した後、メール送信を行うカスタム送信アクションを作成します。アダプティブフォームには、CRXリポジトリにデータを保存するOOTB送信アクションStore Content（非推奨）が含まれています。 In addition, CQ provides a [Mail](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html) API that can be used to send emails. Before using the Mail API, [configure](https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring the Mail Service) the Day CQ Mail service through the system console. Store Content（非推奨）アクションを再利用して、リポジトリにデータを保存できます。 Store Content（廃止）アクションは、CRX リポジトリの /libs/fd/af/components/guidesubmittype/store にあります。
 
 1. URL https://&lt;server>:&lt;port>/crx/de/index.jspでCRXDE Liteにログインします。 /apps/custom_submit_action フォルダー内に sling:Folder プロを持つノードを作成し、名前を store_and_mail に設定します。custom_submit_action フォルダーがすでに存在しない場合は作成します。
 
@@ -108,7 +111,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 1. **必須の設定フィールドを指定します。**
 
-   ストアアクションに必要な設定を追加します。 /libs/fd/af/components/guidesubmittype/store から、Store アクションの **cq:dialog** ノードを、/apps/custom_submit_action/store_and_email のアクションフォルダーにコピーします。
+   Store追加アクションに必要な設定。 /libs/fd/af/components/guidesubmittype/store から、Store アクションの **cq:dialog** ノードを、/apps/custom_submit_action/store_and_email のアクションフォルダーにコピーします。
 
    ![アクションフォルダーへのダイアログノードのコピーを示したスクリーンショット](assets/step2.png)
 
@@ -124,7 +127,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    * ストリング型の **guideComponentType****** および値 **fd/af/components/guidesubmittype**
 
-   * **タイプ** String **、値xfa** 、xsd **、basicのguideDataModel**
+   * **タイプ** String **、** 値xfa **、xsd、basicのguideDataModel**
 
    * **ストリング**&#x200B;型の&#x200B;**jcr:description**&#x200B;および値 **Store and Email Action**
 
