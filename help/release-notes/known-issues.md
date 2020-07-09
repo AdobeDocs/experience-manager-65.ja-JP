@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6943eb3d0b73a348fc7bb5a713813bf73f8e7e79
+source-git-commit: 0a55ed44cb7fe3320b2196df38fe8492ee03912d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 59%
+source-wordcount: '586'
+ht-degree: 56%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 59%
    1. &quot;*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*&quot;を呼び出しています。
    2. AEM 6.5 へのアップグレード.
    3. AEM 6.5で「遅延コンテンツ移行」を実行しています。
+
    ナレッジベース [の記事には](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) 、この問題の詳細と回避策が記載されています。
 
 * JDK 11とAEM 6.5インスタンスを使用している場合、一部のパッケージをデプロイすると、一部のページが空白で表示される場合があります。 ログファイルには、次のエラーメッセージが表示されます。
@@ -69,6 +70,8 @@ ht-degree: 59%
 * アダプティブフォームで、ルールエディターからフォームデータモデルサービスを呼び出して画像選択コンポーネントの値を動的に更新する場合、画像選択コンポーネントの値が更新されない（CQ-4254754）
 * AEM Forms Designer installer requires the 32-bit version of [Visual C++ redistributable runtime package 2012](https://support.microsoft.com/ja-jp/help/2977003/the-latest-supported-visual-c-downloads) and [Visual C++ redistributable runtime packages 2013](https://support.microsoft.com/ja-jp/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). インストールを開始する前に、これらの再頒布可能ランタイムパッケージがインストールされていることを確認してください。（CQ-4265668）
 
+* PDF Generatorは、スマートカードベースの認証をサポートしていません。  管理者がWindowsサーバーでグループポリシーを有効にす `Interactive Logon: Require Smart card` ると、既存のPDF Generatorユーザーはすべて無効になります。
+
 * コンポーネントの値を動的に更新するようにアダプティブフォームが設定されていて、そのフォームをホストするパブリッシュインスタンスにディスパッチャーを通じてアクセスする場合、フィールドの値を動的に更新する機能が動作しなくなるこの問題を解決するには、パブリッシュインスタンスで CRXDE を開き、/libs/fd/af/runtime/clientlibs/guideChartReducer を探して、以下のプロパティを作成します。
 
    * 名前：allowProxy
@@ -78,6 +81,7 @@ ht-degree: 59%
    * 必須：false
    * 複数：false
    * 自動作成：false
+
    このプロパティを設定すると、ランタイムフォルダー内のクライアントライブラリからプロキシにアクセスできます。（CQ-4268679）
 
 * 
