@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5 固有のリリース�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1eca1fcce90dfde8b512414249eb8cc05323c5cc
+source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
 workflow-type: tm+mt
-source-wordcount: '4512'
+source-wordcount: '4529'
 ht-degree: 7%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 7%
 | 製品 | Adobe Experience Manager 6.5 |
 | -------- | ---------------------------- |
 | バージョン | 6.5.5.0 |
-| タイプ | Service Pack のリリース |
+| 型 | Service Pack のリリース |
 | 日付 | 2020年6月4日 |
 | ダウンロード URL | [パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/AEM-6.5.5.0-Service-Pack)、 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
@@ -91,11 +91,11 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * 並べ替え可能なヘッダー(リスト表示、 [!UICONTROL タイムライン、およびパブリケーション] 表示の  管理ページ)の並べ替え機能が、スクリーンリーダーによって通知され、列ヘッダーの並べ替えコントロールがキーボード(NPR-32979)を使用してアクセスできるようになりました。
 
-* コメントカード、バージョン更新、コンボボックス、メニューの山形アイコンなどのクリック可能な要素は、注目し、キーボード(NPR-33514)を使用して操作できるようになりました。
+* コメントカード、バージョン更新、コンボボックス、メニューの山形アイコンなどのクリック可能な要素は、注目してキーボード(NPR-33514)を使用して操作できるようになりました。
 
 * インサイト表示のインサイトアイコン（使用方法、インプレッション数およびクリック数）の機能（またはアクションの目的）が、スクリーンリーダー  (NPR-33513)によって正しくアナウンスされるようになりました。
 
-* 読み取り専用のフォームフィールド(例えば、アセットの [!UICONTROL プロパティの「] 基本」タブの無効なフィールド )が、キーボード(NPR-33493、CQ-4273031)を使用してフォーカスできるようになりました。
+* Read-only form fields (for example disabled fields on [!UICONTROL Basic tab] of asset [!UICONTROL Properties]) are now focusable using keyboard (NPR-33493, CQ-4273031).
 
 * 様々な入力フィールドのラベルが、テキストの入力時に消えたプレースホルダーラベルだけでなく、永続的なラベル（アクセス可能）になりました。(NPR-33475)
 
@@ -111,7 +111,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * アセットのプ [!UICONTROL ロパティ] と左側のナビゲーション（アセットのユーザーインターフェイス上）のタグ [!UICONTROL (Tags] )ダイアログの展開状態と折りたたまれた状態が、スクリーンリーダー(NPR-33396)によって正しく通知されるようになりました。
 
-* ア [!DNL Adobe Experience Manager] セットの閲覧されたすべてのページのタイトルが一意になりました(NPR-33343)。
+* Titles of all the browsed pages on [!DNL Adobe Experience Manager] Assets are now unique (NPR-33343).
 
 * ツリー構造をナビゲートする際に、ツリー表示コントロールの様々な要素がスクリーンリーダー(NPR-33304)によって正しく通知されるようになりました。
 
@@ -127,7 +127,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * リスト表示テーブルの行が選択可能であるという情報が、キーボードフォーカスがある場合に、スクリーンリーダーユーザーに通信されるようになりました。 ポインタが行に合わさると、スクリーンリーダーは情報を読み上げます(NPR-33234)。
 
-* ( [!UICONTROL xを含む)に設定した場合、]基本 [!UICONTROL タブのPropertiesNprの「] Tags [!UICONTROL (タグ] )」フィールドの下にある選択した各タグを削除するオプションが、スクリーンリーダー(NPR-33206)にアクセスできるようになりました。
+* Options (having [!UICONTROL x]) to remove each of the selected tags below the [!UICONTROL Tags] field in [!UICONTROL Basic] tab of [!UICONTROL Properties] are now accessible to screen readers (NPR-33206).
 
 * カレンダーの日付選択は、スクリーンリーダーユーザーや視覚力のあるキーボードユーザーがキーボードを使用して、フォーカスでき、アクションを実行できるようになりました(NPR-33200)。
 
@@ -415,6 +415,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
 | 統合 | AEM cloud servicesのオプトイン **[!UICONTROL 画面は非推奨です]** 。 AEM 6.5で更新されたAEMとTargetの統合により、Adobe IMSとI/Oを介した認証を使用するTarget StandardAPIがサポートされ、AEMページの解析とパーソナライゼーションを実装するためのAdobe Launchの役割が増加しているので、オプトインウィザードは機能的に無関係です。 | 各AEM cloud servicesを介して、システム接続、Adobe IMS認証、Adobe I/O統合を設定します。 |
+| コネクタ | AEM 6.5では、Adobe JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013の使用が推奨されなくなりました。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
 
