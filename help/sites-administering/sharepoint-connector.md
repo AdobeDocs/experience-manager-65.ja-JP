@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5d74f3510ff20e062f1e78f61d98e9c2e7a0414f
+source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 69%
@@ -74,7 +74,7 @@ The SharePoint connector is available for downloading from [packageshare](https:
 
 * AEM バージョン：
 
-   * AEM 6.5、6.4、6.3
+   * AEM 6.4、6.3
 
 * Microsoft SharePoint バージョン：
 
