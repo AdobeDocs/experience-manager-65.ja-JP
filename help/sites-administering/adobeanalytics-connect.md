@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 64%
+source-wordcount: '1550'
+ht-degree: 63%
 
 ---
 
@@ -47,9 +47,9 @@ Webページをフレームワークに関連付けると、フレームワー�
 
 先に進む前に、お使いの資格情報で Adobe Analytics にログインできることを確認してください（次のどちらかから）。
 
-* [https://marketing.adobe.com](https://marketing.adobe.com)
+* [Adobe Experience Cloudのサインイン](https://login.experiencecloud.adobe.com/exc-content/login.html)
 
-* [https://sc.omniture.com/login/](https://sc.omniture.com/login/)
+* [AdobeAnalyticsサインイン](https://sc.omniture.com/login/)
 
 ### Adobe Analytics データセンターを使用するように AEM を設定 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
@@ -121,6 +121,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
    * 「**タイトル**」を指定します。
    * オプションで、リポジトリにフレームワークの詳細を保存するノードの&#x200B;**名前**&#x200B;を指定できます。
    * Select **Adobe Analytics Framework**
+
    「**作成**」をクリックします。
 
    フレームワークが編集用に開きます。
