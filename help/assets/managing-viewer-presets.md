@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
 source-wordcount: '4361'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -84,8 +84,8 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
    <td><p>ホットスポットや画像マップ、またはその両方が 2 つ以上の一連の画像に追加されます。お客様は画像を左右にパンし、画像のホットスポットをクリックして追加の詳細情報を入力したり、Web サイトのカテゴリ、ホームまたはランディングページから直接購入したりできます。</p> </td>
   </tr>
   <tr>
-   <td><strong>ディメンションの</strong><br /> </td>
-   <td><p>3Dシーンが表示され、カメラの回転、パン、ズーム、中心の変更が可能です。</p> </td>
+   <td><strong>ディメンション</strong><br /> </td>
+   <td><p>3D シーンが表示され、カメラの回転、パン、ズーム、中心の変更が可能です。</p> </td>
   </tr>
   <tr>
    <td><strong>フライアウトズーム</strong></td>
@@ -154,7 +154,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 次の表に、Dynamic Media に付属するすべての事前定義済みの標準提供ビューアプリセットについて示します。
 
-関連トピック <!-- KEEP THIS REFERENCE FOR NOW [Viewers Reference Library Examples](https://marketing.adobe.com/resources/help/en_US/s7/vlist/vlist.html) --> [ライブデモ](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html)。
+ライブデモも参照して [ください](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html)。
 
 ビューアでサポートされている Web ブラウザーとオペレーティングシステムのバージョンについては、ビューアのリリースノートに記載されています。
 
@@ -196,8 +196,8 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
    <td><code>html5_carouselviewer_numeric_light.css</code></td>
   </tr>
   <tr>
-   <td>ディメンションの</td>
-   <td>ディメンションの</td>
+   <td>ディメンション</td>
+   <td>ディメンション</td>
    <td><code>html5_dimensionalviewer.css</code></td>
   </tr>
   <tr>
@@ -408,7 +408,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 ビューアプリセットを作成しておくと、アセットの表示やアセットとの対話のための様々な設定を適用できます。ただし、新しいビューアプリセットを作成する必要はありません。デフォルトの、すぐに使えるビューアプリセットが既に AEM Assets に付属していますので、これを使用できます。
 
-新しいビューアプリセットを作成することを選んだ場合、ビューアプリセットを保存すると、ビューアプリセットページのそのビューアの状態が自動的にアクティベート済みになります（「**[!UICONTROL オン]**」に設定されます）。この状態は、画像やビデオをプレビューするときは常にダイナミックメディアコンポーネントとインタラクティブメディアコンポーネントに表示されることを意味します。
+新しいビューアプリセットを作成することを選んだ場合、ビューアプリセットを保存すると、ビューアプリセットページのそのビューアの状態が自動的にアクティベート済みになります（「**[!UICONTROL オン]**」に設定されます）。この状態は、画像やビデオをプレビューするときは常に Dynamic Media コンポーネントとインタラクティブメディアコンポーネントに表示されることを意味します。
 
 一部のビューアプリセットには、ビューアの全体的な動作に影響する専用の設定があります。作成するビューアプリセットによっては、これらの特別な考慮事項について注意する必要があります。
 
@@ -418,12 +418,12 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **ビューアプリセットを作成するには：**
 
-1. AEM の左上隅にある AEM ロゴをタップし、左側のパネルで&#x200B;**ツール**（ハンマーアイコン）／**アセット／ビューアプリセット**&#x200B;をタップします。
+1. AEM の左上隅にある AEM ロゴをタップし、左側のパネルで&#x200B;**[!UICONTROL ツール**（ハンマーアイコン）／**[!UICONTROL アセット／ビューアプリセット**&#x200B;をタップします。
 
    ![6_5_viewerpresets](assets/6_5_viewerpresets.png)
 
 1. On the Viewer Presets page, on the toolbar, tap **[!UICONTROL Create.]**
-1. **新規ビューアプリセット**&#x200B;ダイアログボックスで、「**[!UICONTROL プリセット名]**」フィールドに新しいプリセットの名前を入力します。Choose a name carefully—they are not editable after you tap **[!UICONTROL Create.]**
+1. **[!UICONTROL 新規ビューアプリセット**&#x200B;ダイアログボックスで、「**[!UICONTROL プリセット名]**」フィールドに新しいプリセットの名前を入力します。Choose a name carefully—they are not editable after you tap **[!UICONTROL Create.]**
 
    後述の手順でプリセットを保存すると、この名前がビューアプリセットページの「プリセットのタイトル」列ヘッダーの下に表示されます。
 
