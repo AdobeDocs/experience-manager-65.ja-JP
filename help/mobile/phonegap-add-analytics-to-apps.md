@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 66%
+source-wordcount: '971'
+ht-degree: 65%
 
 ---
 
@@ -115,34 +115,6 @@ There are several tracking APIs provided in the [AMS Phonegap Plugin API.](https
 Geometrixx Outdoors アプリのコードを見ると参考になります。Geometrixx Outdoors アプリでは、ADB.trackState() メソッドを使用して、すべてのページ移動をトラッキングしています。詳しくは、/libs/mobileapps/components/angular/ng-page/clientlibs/app-navigation.jsのソースコードを参照してください。
 
 ソースコードにこれらのメソッドの呼び出しを実装することで、アプリケーションに対する完全な指標を収集できます。
-
-### Bloodhound による Analytics トラッキングのテスト  {#testing-analytics-tracking-with-bloodhound}
-
-![](do-not-localize/chlimage_1.jpeg)
-
-<!--NOTE TO WRITER: Bloodhound is no longer available.-->
-
-Optionally before deploying to production you can use the Adobe tool [Bloodhound](https://marketing.adobe.com/developer/gallery/bloodhound-app-measurement-qa-tool-1) to test your analytics configuration. 分析設定をテストするには、実際の Analytics サーバーではなく Bloodhound が実行されているサーバーを指すように ADBMobileConfig.json ファイルを編集する必要があります。この変更を加えるには、ADBMobileConfig.json で次のエントリを変更します。
-
-```xml
-...
-"analytics": {
-    "rsids": "YOUR_RSID",
-    "server": "YOUR_TRACKING_SERVER:YOUR_TRACKING_PORT",
-...
-```
-
-このエントリに一致するように変更します。
-
-```xml
-...
-"analytics": {
-    "rsids": "YOUR_RSID",
-    "server": "localhost:50000",
-...
-```
-
-これにより、結果を表示できるように、AMS プラグインで収集されるすべてのデータが Bloodhound にリダイレクトされます。
 
 #### AMS への接続のプロパティ {#properties-for-connecting-to-ams}
 
