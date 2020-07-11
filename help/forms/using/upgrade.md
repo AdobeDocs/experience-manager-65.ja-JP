@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43fe9540a3a29ae86f48756c77001c0a4b8ea3e4
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 100%
 
 ---
 
@@ -70,7 +73,7 @@ Migration involves moving only assets (PDF, XDP, images, adaptive forms, corresp
 
     * **Run Migration Utility**
 
-      The migration utility makes the adaptive forms and correspondence management assets of earlier versions compatible with AEM 6.3 forms. You can download the utility from AEM package share. For step-by-step information to configure and use the migration utility, see [migration utility](../../forms/using/migration-utility.md) documentation.
+      The migration utility makes the adaptive forms and correspondence management assets of earlier versions compatible with AEM 6.3 forms. You can download the utility from AEM Software Distribution. For step-by-step information to configure and use the migration utility, see [migration utility](../../forms/using/migration-utility.md) documentation.
 
     * **Reconfigure Adobe Sign**
 
