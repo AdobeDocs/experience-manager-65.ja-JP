@@ -8,24 +8,30 @@ topic-tags: forms-app
 discoiquuid: c71c2a17-54f9-4c95-a90a-3c89d6d45721
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 63%
 
 ---
 
 
 # Visual Studio プロジェクトの設定と Windows アプリケーションの構築{#set-up-the-visual-studio-project-and-build-the-windows-app}
 
-AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムワークスペースアプリケーションを構築するためのすべてのコンポーネントが含まれています。The source code archive, `adobe-lc-mobileworkspace-src-<version>.zip`is a part of the `adobe-aemfd-forms-app-src-pkg-<version>.zip` package on package share.
+AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムワークスペースアプリケーションを構築するためのすべてのコンポーネントが含まれています。ソースコードアーカイブ `adobe-lc-mobileworkspace-src-<version>.zip`は、ソフトウェア配布 `adobe-aemfd-forms-app-src-pkg-<version>.zip` パッケージの一部です。
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. パッケージ共有に移動\
-   URL: `https://<server>:<port>/crx/packageshare`.
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
+1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. In the **[!UICONTROL Filters]** section:
+   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
+1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Select the package and click **[!UICONTROL Install]**.
 
-1. ソースパッケージをダウンロードします。パッケージをダウンロードすると、AEM Forms パッケージマネージャーに追加されます。
-1. ダウンロード後、次の場所に移動します。を `https://<server>:<port>/crx/packmgr/index.jsp`選択し、インストールしま `adobe-aemfd-forms-app-src-pkg-<version>.zip`す。
-
-1. ソースコードアーカイブをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開いてください。\
+1. ソースコードアーカイブをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開きます。\
    ソースパッケージがデバイスにダウンロードされます。
 
 The following image displays the extracted contents of the `adobe-lc-mobileworkspace-src-<version>.zip`.
@@ -34,7 +40,7 @@ The following image displays the extracted contents of the `adobe-lc-mobileworks
 
 The following image displays the directory structure of the `windows` folder in the `src` folder.
 
-![勝者](assets/win-dir.png)
+![win-dir](assets/win-dir.png)
 
 ## 環境の設定 {#setting-up-the-environment}
 
@@ -59,7 +65,7 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
 
 >[!NOTE]
 >
->AEM Forms アプリケーション向けに Windows ファイルシステムに保存されるデータは、暗号化されていません。Windows bitLocker Drive Encryptionなどのサードパーティ製ツールを使用してディスクデータを暗号化することをお勧めします。
+>AEM Forms アプリケーション向けに Windows ファイルシステムに保存されるデータは、暗号化されていません。Windows BitLocker Drive Encryptionなどのサードパーティ製ツールを使用して、ディスクデータを暗号化することをお勧めします。
 
 1. In the Visual Studio Standard Toolbar, select **Release** from the drop-down for build mode.
 
@@ -88,11 +94,13 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
 
    * Windows PowerShell
    * Visual Studio
+
    The `.appx` package requires the following items to install successfully:
 
    1. WinJS ライブラリ
    1. WinJS のパッケージに、自己署名証明書または VeriSign などの信頼できる機関によって署名された公開証明書が付帯していることを確認してください。
    1. 開発者用のライセンス
+
    Platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Testディレクトリには、4つの主要なコンポーネントが含まれています。
 
    1. `.appx` file
@@ -124,7 +132,7 @@ Microsoft では VeriSign などの信頼できる機関が発行した公開証
 
 アプリをデプロイするには：
 
-* デバイスがエンタープライズドメインに参加していることを確認します。
+* デバイスがエンタープライズのドメインに参加していることを確認します。
 * グループポリシー設定を有効にします。
 
 **グループポリシー設定を有効にするには：**
