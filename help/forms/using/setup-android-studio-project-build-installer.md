@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 discoiquuid: fabc981e-0c9e-4157-b0a1-0c13717fb6cd
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '620'
+ht-degree: 55%
 
 ---
 
@@ -18,20 +21,18 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ここでは、バージョン 6.3.1.1 移行の AEM Forms アプリケーションを作成する手順について説明します。For building an app from source code of source code of the AEM Forms App 6.3, see [Set up the Eclipse project and build the Android™ app](/help/forms/using/setup-eclipse-project-build-installer.md).
 
-AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムの AEM Forms アプリケーションを構築するためのすべてのコンポーネントが含まれています。The source code archive, `adobe-lc-mobileworkspace-src-<version>.zip` is a part of the `adobe-aemfd-forms-app-src-pkg-<version>.zip` package on package share.
+AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムの AEM Forms アプリケーションを構築するためのすべてのコンポーネントが含まれています。ソースコードアーカイブ `adobe-lc-mobileworkspace-src-<version>.zip` は、ソフトウェア配布 `adobe-aemfd-forms-app-src-pkg-<version>.zip` パッケージの一部です。
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. パッケージ共有に移動
-
-   URL: `https://<server>:<port>/crx/packageshare`.
-
-1. ソースパッケージをダウンロードします。パッケージをダウンロードすると、AEM Forms パッケージマネージャーに追加されます。
-1. ダウンロード後、次の場所に移動します。をクリ `https://<server>:<port>/crx/packmgr/index.jsp`ックし、をインストールし `adobe-aemfd-forms-app-src-pkg-<version>.zip`ます。
-
-1. ソースコードアーカイブをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開いてください。
-
-   ソースパッケージがデバイスにダウンロードされます。
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
+1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. In the **[!UICONTROL Filters]** section:
+   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
+1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Select the package and click **[!UICONTROL Install]**.
 
 The following image displays the extracted contents of the `adobe-lc-mobileworkspace-src-<version>.zip`.
 
@@ -69,9 +70,9 @@ The following image displays the directory structure of the `android`folder in t
 
 1. Android™ Studio を起動します。
 
-   **MACユーザーの場合**:フォルダー `local.properties` 内のファイルを更 `[User_Home]/Projects/[your-project]/android` 新し、デスクトップ上 `sdk.dir` の場所を変 `SDK` 数で指定してください。
+   **MACユーザーの場合**: フォルダー内の `local.properties` ファイルを更新し、デスクトップ上の `[User_Home]/Projects/[your-project]/android` 場所を `sdk.dir``SDK` 変数で指定します。
 
-   **Windows®ユーザーの場合**:フォルダー `local.properties` 内のファイルを更 `%HOMEPATH%\Projects\[your-project]\android` 新し、デスクトップ上 `sdk.dir` の場所を変 `SDK` 数で指定してください。
+   **Windows®ユーザーの場合**: フォルダー内の `local.properties` ファイルを更新し、デスクトップ上の `%HOMEPATH%\Projects\[your-project]\android` 場所を `sdk.dir``SDK` 変数で指定します。
 
 1. プロジェクトをビルドするには、「**[!UICONTROL 完了]**」をクリックします。
 
@@ -82,13 +83,13 @@ The following image displays the directory structure of the `android`folder in t
 1. Android™ Studio で、「**[!UICONTROL Import Project (Eclipse ADT, Gradle, Etc.)]**」を選択します。
 1. In the project explorer, select the root directory of the project that you want to build in the **Root Directory** text box:
 
-   **Macユーザーの場合：**[User_Home]/Projects/MobileWorkspace/src/android
+   **Macユーザーの場合：** [User_Home]/Projects/MobileWorkspace/src/android
 
    **Windows®ユーザーの場合：** %HOMEPATH%\Projects\MobileWorkspace\src\android
 
 1. プロジェクトの読み込みが完了すると、ポップアップが表示されます。このポップアップには、Android™ プラグインの Gradle を更新するためのオプションが表示されます。要件に応じて、適切なボタンをクリックします。
 
-   ![このプロジェクトに対する](assets/dontremindmeagainforthisproject.png)
+   ![DontremindAgoinforThisproject](assets/dontremindmeagainforthisproject.png)
 
 1. Gradle が正しく作成されると、以下の画面が表示されます。Connect the appropriate device or emulator with the system and click **[!UICONTROL Run Android™]**.
 
