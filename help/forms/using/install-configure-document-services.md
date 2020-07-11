@@ -7,10 +7,10 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '4353'
-ht-degree: 68%
+source-wordcount: '4295'
+ht-degree: 66%
 
 ---
 
@@ -391,15 +391,16 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms ドキュメントサービスおよびその他の AEM Forms 機能が含まれています。次の手順を実行してパッケージをインストールします。
 
-1. [AEM サーバー](http://localhost:4502)に管理者としてログインし、「[パッケージ共有](http://localhost:4502/crx/packageshare)」を開きます。パッケージ共有にログインするには、Adobe ID が必要です。
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
+1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. In the **[!UICONTROL Filters]** section:
+   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
+1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Select the package and click **[!UICONTROL Install]**.
 
-1. [AEM パッケージ共有](http://localhost:4502/crx/packageshare/login.html)で **[!UICONTROL AEM 6.4 Forms add-on packages]** を検索し、お使いのオペレーティングシステムに対応するパッケージをクリックして、「**[!UICONTROL ダウンロード]**」をクリックします。ライセンス使用許諾契約書を読んでから同意し、「**[!UICONTROL OK]**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**[!UICONTROL ダウンロード済み]**」というテキストが表示されます。
-
-   バージョン番号を使用してアドオンパッケージを検索することもできます。最新のパッケージのバージョン番号については、「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」の記事を参照してください。
-
-1. ダウンロードが完了したら、「**[!UICONTROL ダウンロード済み]**」をクリックします。パッケージマネージャーに切り替わります。In the package manager, search the downloaded package, and click **[!UICONTROL Install]**.
-
-   「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」記事に記載された直接リンクからパッケージを手動でダウンロードする場合は、パッケージマネージャーにログインし、「**[!UICONTROL パッケージをアップロード]**」をクリックし、ダウンロード済みパッケージを選択して「アップロード」をクリックします。After the package is uploaded, click package name, and click **[!UICONTROL Install]**.
+   「 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 」記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
 1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**その際、すぐにサーバーを停止しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error`.logファイルに表示されなくなるまで待ち、ログは安定しています。
 
