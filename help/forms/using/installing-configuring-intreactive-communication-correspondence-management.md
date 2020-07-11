@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 76%
+source-wordcount: '1428'
+ht-degree: 69%
 
 ---
 
@@ -90,14 +90,16 @@ AEM Formsのインタラクティブな通信および通信管理機能をイ�
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。パッケージには、AEM Formsの対話型通信、通信管理、その他の機能が含まれます。 次の手順を実行してアドオンパッケージをインストールします。
 
-1. [AEM サーバー](https://localhost:4502)に管理者としてログインし、「[パッケージ共有](https://localhost:4502/crx/packageshare)」を開きます。パッケージ共有にログインするには、Adobe ID が必要です。
-1. [AEM パッケージ共有](https://localhost:4502/crx/packageshare/login.html)で、**AEM 6.5 Forms アドオンパッケージ**&#x200B;または&#x200B;**最新のサービスパック**&#x200B;を検索し、お使いのオペレーティングシステムに対応するパッケージをクリックして、「**ダウンロード**」をクリックします。ライセンス使用許諾契約書を読んでから同意し、「**OK**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**ダウンロード済み**」というテキストが表示されます。
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
+1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. In the **[!UICONTROL Filters]** section:
+   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
+1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Select the package and click **[!UICONTROL Install]**.
 
-   バージョン番号を使用してアドオンパッケージを検索することもできます。最新のパッケージのバージョン番号については、「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」の記事を参照してください。
-
-1. ダウンロードが完了したら、「**ダウンロード済み**」をクリックします。パッケージマネージャーに切り替わります。In the package manager, search the downloaded package, and click **Install**.
-
-   「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」記事に記載された直接リンクからパッケージを手動でダウンロードする場合は、パッケージマネージャーにログインし、「**パッケージをアップロード**」をクリックし、ダウンロード済みパッケージを選択して「アップロード」をクリックします。パッケージのアップロードが完了したら、パッケージ名をクリックし、「**インストール**」をクリックします。
+   「 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 」記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
 1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが [AEM-Installation-Directory]/crx-quickstart/logs/error.logファイルに表示されなくなるまで待ち、ログは安定しています。
 1. 手順 1 から 4 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
@@ -117,7 +119,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
    If you used [AEM installation directory]\crx-quickstart\bin\start.bat to start AEM, then edit the sling.properties located at [AEM_root]\crx-quickstart\.
 
-1. 以下のプロパティを sling.properties ファイルに追加します。 
+1. 以下のプロパティを sling.properties ファイルに追加します。
 
    ```
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
