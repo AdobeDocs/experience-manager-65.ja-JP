@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Manager 6.5以前のService Packリリースノート
-description: Adobe Experience Manager 6.5 Service Pack 3以前に固有のリリースノートです。
+title: Adobe Experience Manager6.5以前のService Packリリースノート
+description: Adobe Experience Manager6.5 Service Pack 3以前に固有のリリースノートです。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: f75e5ad12aed95e950dbf7a00e0f444605f800dd
 workflow-type: tm+mt
-source-wordcount: '8093'
+source-wordcount: '8102'
 ht-degree: 35%
 
 ---
@@ -15,35 +15,35 @@ ht-degree: 35%
 
 ## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
 
-Adobe Experience Manager 6.5.4.0は、2019 **年4月のGAリリース(GA)以降にリリースされた主な機能、お客様からリクエストされた機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager 6.5の上部にインストールできます。
+Adobe Experience Manager6.5.4.0は、2019 **年4月のGAリリース(GA)以降にリリースされた主な機能、お客様から要請された機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上にインストールできます。
 
-Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強化には、次のものが含まれます。
+Adobe Experience Manager6.5.4.0で導入された主な機能および機能強化には、次のものが含まれます。
 
-* Adobe Experience Manager Assetsは、Adobe I/Oコンソールを通じてBrand Portalと共に設定されるようになりました。
+* Adobe I/Oコンソールを通じてBrand PortalでAdobe Experience Managerアセットが構成されるようになりました。
 
-* Adobe Experience Manager Formsワークフローで、印刷可能な [](../forms/using/aem-forms-workflow-step-reference.md) 出力の生成に関する新しい手順が利用できるようになりました。
+* Adobe Experience Managerフォームワークフローで、新しい「 [印刷可能な出力を生成](../forms/using/aem-forms-workflow-step-reference.md) 」手順を使用できるようになりました。
 
 * [アダプティブフォームとインタラクティブ通信のレイアウトモードの複数列のサポート](../forms/using/resize-using-layout-mode.md) 。
 
 * HTML5フォームでの [リッチテキスト](../forms/using/designing-form-template.md) のサポート。
 
-* [Experience Manager Assetsのアクセシビリティの強化](new-features-latest-service-pack.md#accessibility-enhancements) 。
+* [Experience Managerアセットのアクセシビリティの強化](new-features-latest-service-pack.md#accessibility-enhancements) 。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.10.8 に更新しました。
 
-* 選択したコンテンツのサブツリーを、で利用可能なすべてのものではなく、 *ダイナミックメディア — Scene7モード* に同期できるようになり `content/dam`ました。
+* 選択したコンテンツサブツリーを *Dynamic Mediaに同期できるようになりました。（を参照）すべて同期する代わりに、Scene7モード* （を参照）を使用し `content/dam`ます。
 
 * SOAP Webサービスとのフォームデータモデルの統合で、要素の選択グループまたは属性がサポートされるようになりました。
 
 * SOAP入力または出力と複雑なデータ構造で、動的グループの置換がサポートされるようになりました。
 
-最新のサービスパックで導入された機能と主なハイライトの完全なリストについては、「Adobe Experience Manager 6.5サービスパックの新機能 [](new-features-latest-service-pack.md)」を参照してください。
+最新のサービスパックで導入された機能と主な特徴の完全なリストについては、「Adobe Experience Manager6.5のサービスパックの新 [機能](new-features-latest-service-pack.md)」を参照してください。
 
 ### Sites {#sites-fixes}
 
-* Adobe Experience ManagerのサイトのページのURLにコロン(`:`)またはパーセンテージ記号(`%`)が含まれている場合、ブラウザーは応答を停止し、CPU使用率のスパイク(NPR-32369、NPR-31918)が発生します。
+* Adobe Experience ManagerサイトのページのURLにコロン(`:`)または割合記号(`%`)が含まれている場合、ブラウザーは応答を停止し、CPU使用率のスパイク(NPR-32369、NPR-31918)が発生します。
 
-* Experience Managerのサイトページを編集用に開き、コンポーネントをコピーした場合、一部のプレースホルダーでは貼り付け操作が使用できないままになります(NPR-32317)。
+* Experience Managerサイトページを編集用に開き、コンポーネントをコピーした場合、一部のプレースホルダー(NPR-32317)では貼り付け操作が使用できないままになります。
 
 * パブリケーションの管理ウィザードを開くと、コアコンポーネントにリンクされたエクスペリエンスフラグメントは、公開された参照のリストに表示されません(NPR-32233)。
 
@@ -51,7 +51,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * サーバー時間とマシン時間が異なるタイムゾーンにある場合、スケジュールされた公開時間はタッチUIでサーバー時間を表示しますが、クラシックUIではマシン時間が表示されます(NPR-32077)。
 
-* Experience Manager Sitesで、URLにサフィックスの付いたページを開けません(NPR-32072)。
+* Experience Managerサイトが、URLにサフィックスの付いたページを開けません(NPR-32072)。
 
 * ユーザがコンテンツフラグメントを編集すると、削除されたコンテンツフラグメントが復元される(NPR-32062)。
 
@@ -87,7 +87,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * アセット収集ページでワークフローをトリガーするボタンが無効になっています(NPR-32471)。
 
-* 名前のないフォルダがSPS(Scene7 Publishing System)で作成され、Dynamic Media Scene7設定(NPR-32440)を使用してExperience Managerでアセットを別のフォルダに移動します。
+* Dynamic MediaScene7の設定(NPR-32440)とExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7 Publishing System)に作成されます。
 
 * すべてのアセットを（「すべて選択」を使用して）公開済みアセットを含むフォルダーに移動する操作は、エラーが発生して失敗します(NPR-32366)。
 
@@ -105,7 +105,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * 検索フィルターから複数のタグが選択されると、複数の検索クエリが実行されます(NPR-32143)。
 
-* ファイル名が50文字を超えるアセットがアップロードされると、Experience Manager Assets UIでファイル名が切り捨てられて表示されます(NPR-32054)。
+* ファイル名が50文字を超えるアセットがアップロードされる場合、Experience ManagerアセットUIでファイル名が切り捨てられて表示されます(NPR-32054)。
 
 * Adobe Stockのチェックボックスツリーのレベル2のチェックボックスが選択されている場合、最初と2番目のチェックボックスがクリアされると、フィルターパネルのすべてのチェックボックスがクリアされます(NPR-31919)。
 
@@ -119,31 +119,31 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * タッチUI検索（Omnisearchを通じて行われる）の結果ページは自動的に上にスクロールし、ユーザーのスクロール位置が失われます(NPR-31307)。
 
-* PDFアセットのアセットの詳細ページに、Dynamic Media Scene7実行モード(CQ-4286705)で実行されるExperience Managerのコレクションへボタンと追加レンディションへボタンを除き、アクションボタンが表示されません。
+* PDFアセットのアセットの詳細ページに、Dynamic MediaのScene7実行モード(CQ-4286705)で実行されているExperience Managerで、「コレクションへ」と「レンディションへ」のボタン以外のアクションボタンが表示されません。
 
 * Scene7のバッチアップロードプロセスでアセットの処理に時間がかかりすぎます(CQ-4286445)。
 
-* ユーザーがダイナミックメディアクライアントのセットエディター(CQ-4285690)で変更を行っていない場合、「保存」ボタンでリモートセットが読み込まれません。
+* Dynamic Mediaクライアントのセットエディター(CQ-4285690)で変更を行っていない場合、「保存」ボタンを押してもリモートセットは読み込まれません。
 
-* 3Dアセットのサムネールは情報ではありません。サポートされている3DモデルがExperience Managerに取り込まれる場合(CQ-4283701)。
+* 3Dアセットのサムネールは情報ではありません。サポートされている3DモデルがExperience Managerに取り込まれる場合(CQ-4283701)に役立ちます。
 
 * スマート切り抜きビデオビューアプリセットの未処理のステータスが、バナーのプリセット名の横に2回表示されます(CQ-4283517)。
 
 * 3Dビューアでプレビューした、アップロードされた3Dモデルのコンテナの高さが正しくないと、アセットの詳細ページに表示されます(CQ-4283309)。
 
-* Experience ManagerダイナミックメディアハイブリッドモードのIE 11でカルーセルエディターが開きません(CQ-4255590)。
+* Experience ManagerDynamic Mediaハイブリッドモード(CQ-4255590)で、IE 11でカルーセルエディターが開かない。
 
 * ChromeおよびSafariブラウザー(NPR-32067)のダウンロードダイアログの電子メールドロップダウンで、キーボードのフォーカスが動かなくなる。
 
-* Experience ManagerでDMクラウド設定を追加しようとすると、「すべてのコンテンツを同期」チェックボックスがデフォルトで有効になりません(CQ-4288533)。
+* DMクラウド設定をExperience Managerに追加しようとすると、「すべてのコンテンツを同期」チェックボックスがデフォルトで有効になりません(CQ-4288533)。
 
 ### Foundation UI {#foundation-ui-6540}
 
 * フィルターパネル(NPR-32538)を使用してアセットを検索している間、マウスコントロールを既存のフィルターフィールドに留まらずに、前のフィルターフィールドに移動します。
 
-* プラットフォームのタグ付け： タグフィールドにタグを入力して検索すると、ルート境界の外側にあるタグが表示され、タグフィールドの `rootPath` プロパティは無視されます(NPR-31895)。
+* Platformのタグ付け： タグフィールドにタグを入力して検索すると、ルート境界の外側にあるタグが表示され、タグフィールドの `rootPath` プロパティは無視されます(NPR-31895)。
 
-* プラットフォームUI: テキストフィールドに無効なパスが追加されると、パスブラウザーが壊れます(NPR-31884)。
+* PlatformUI: テキストフィールドに無効なパスが追加されると、パスブラウザーが壊れます(NPR-31884)。
 
 * ページ選択時に、通知がスティッキーメニューの背後に隠れる(NPR-31628)。
 
@@ -179,7 +179,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 ### Campaign Targeting {#campaign-targeting-6540}
 
-* ターゲットクラウドの設定が失敗し、エラーget mboxリクエストが失敗しました。(CQ-4279880)
+* Targetクラウドの設定が失敗し、エラーget mboxリクエストが失敗しました。(CQ-4279880)
 
 ### Brand Portal {#assets-brand-portal-6540}
 
@@ -213,7 +213,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 >[!NOTE]
 >
->Experience Manager Service Packには、Experience Manager Formsに関する修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsに関する修正を含む、累積的なインストーラーがリリースされました。 詳しくは、「Experience Manager Formsの [インストールアドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「JEE上のExperience Manager Formsの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
+>Experience Managerサービスパックには、Experience Managerフォームに関する修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience ManagerFormsの修正を含む累積インストーラーがリリースされました。 詳しくは、「 [Experience Managerフォームのインストール」アドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) および「JEE上のExperience Managerフォームの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 * Correspondence Management: 後処理ワークフロー(NPR-32626)に送信した後、レターに追加の文字が表示されます。
 
@@ -231,7 +231,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * アダプティブフォーム： Chromeブラウザーアクセシビリティツールが、ベストプラクティスの失敗を報告します(NPR-32310)。
 
-* アダプティブフォーム： Experience Manager Sitesページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
+* アダプティブフォーム： Experience Managerサイトページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
 
 * Workbench: PDF Utilitiesサービス(NPR-32150)で「Get PDF Properties」操作を使用していると、エラーメッセージが表示されます。
 
@@ -241,7 +241,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * Designer: 表内に結合されたセルがある場合、アクセシビリティテストは、出力サービス(CQ-4285372)を使用してXDPフォームから変換された出力PDFファイルに対して失敗します。
 
-* Foundation JEE: Experience Manager Formsサーバーがクラスターから切断された場合、キャッシュの問題によってサーバーに再接続できなくなります(NPR-32412)。
+* Foundation JEE: Experience ManagerのFormsサーバーがクラスターから切断された場合、キャッシュの問題により、サーバーに再接続できません。(NPR-32412)
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -337,11 +337,11 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能および機能強
 
 * ハイブリッドモード [!DNL Experience Manager] で実行されている [!DNL Dynamic Media]ときにダウンロードされたダイナミックレンディションが壊れる（画像コンテンツタイプではなく、コンテンツが「画像が見つかりません」のテキストタイプ）(NPR-30876)。
 
-* [!DNL Dynamic Media] Adobe Experience ManagerでScene7モードに移行したビデオのサムネール [!DNL Dynamic Media Classic][!DNL Dynamic Media]は、ビデオのエンコードワークフローで生成できません。(CQ-4282011)
+* [!DNL Dynamic Media] Adobe Experience Manager時にScene7モードに移行されたビデオのサムネール [!DNL Dynamic Media Classic][!DNL Dynamic Media]の生成に失敗するビデオのエンコードワークフロー(CQ-4282011)。
 
 * 異なるScene7会社IDを使用して、1つのインスタンスから別のインスタンスにアセットを移行する際にIpsApiExceptionが発生する問題を修正しました(CQ-4280548)。
 
-* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報としてはなりません。
+* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報として表示されません。
 
 * 3Dアセットにカメラ表示が少ない場合は、スクロールボタンがビューアに表示されます(CQ-4283322)。
 
@@ -449,7 +449,7 @@ Remove one mention of this fix.
 * 新しい貢献度フォルダーを作成すると、1つまたは両方のサブフォルダー（NEWとSHARED）が貢献度フォルダー内に表示されません(CQ-4282424)。
 * 貢献度フォルダー内の新しいアセットを [!DNL Experience Manager] 最後から受け取った後に、貢献度フォルダーをからに再公開しようとすると、システムで例外がスローされます( [!DNL Brand Portal][!DNL Brand Portal] CQ-4279740)。
 * 貢献度フォルダー（ネストされたフォルダー）内に貢献度フォルダーを作成することは、複雑さを避けるために禁止されています(CQ-4278391)。
-* 管理コンソールからインポートした [!DNL Brand Portal] ユーザーリスト（.csvファイル）のアップロード時に例外がスロー [!DNL Experience Manager] されます。 .csvファイル内の「電子メール」、「FirstName」、「LastName」フィールドのみが必須です(CQ-4278390)。
+* Admin Consoleから読み込んだ [!DNL Brand Portal] ユーザーリスト（.csvファイル）のアップロード時に例外がスローされ [!DNL Experience Manager] ます。 .csvファイル内の「電子メール」、「FirstName」、「LastName」フィールドのみが必須です(CQ-4278390)。
 
 ### Communities {#communities-6530}
 
@@ -472,7 +472,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「Experience Manager Formsの [インストールアドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「JEE上のExperience Manager Formsの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「 [Experience Managerフォームのインストール」アドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) および「JEE上のExperience Managerフォームの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 #### Forms アドオンパッケージ {#forms-add-on-package-6530}
 
@@ -505,6 +505,8 @@ Remove one mention of this fix.
 **Forms - ドキュメントサービス**
 
 * .NETプロジェクトでMTOMを使用するSOAP Webサービスで、AssemblerServiceClientの呼び出しとHtmlToPDF2メソッドに関する例外が表示されます(NPR-4281771)。
+
+* Axis jarバージョン1.4および1.4.1には、セキュリティ脆弱性(NPR-31015)が含まれています。
 
 **Foundation JEE**
 
