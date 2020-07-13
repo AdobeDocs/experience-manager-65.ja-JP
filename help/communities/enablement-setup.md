@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+workflow-type: tm+mt
+source-wordcount: '866'
+ht-degree: 53%
 
 ---
 
@@ -28,22 +31,23 @@ Follow the basic AEM [Getting Started](../../help/sites-deploying/deploy.md#gett
 
 AEM Communities では、各環境を次の目的で使用します。
 
-* 作成者環境は
+* 作成者環境は次の目的で使用します。
 
-   * サイト、テンプレート、コンポーネント、イネーブルメントリソース、学習パスの開発
-   * 有効化リソースと学習パスへのメンバーおよびメンバーのグループの割り当て
-   * 割り当て、表示、投稿に関するレポートの生成
-   * 管理および設定のタスク
+   * サイト、テンプレート、コンポーネント、イネーブルメントリソース、学習パスの開発。
+   * 有効化リソースと学習パスへのメンバーとメンバーのグループの割り当て。
+   * 割り当て、表示および投稿に関するレポートを生成します。
+   * 管理タスクと設定環境。
 
-* 公開環境は
+* 公開環境は次の目的で使用します。
 
    * イネーブルメントマネージャが管理するトピックに基づく学習/トレーニング
-   * コメント化と評価の有効化リソースと学習パス
-   * リソースの連絡先との連絡
+   * コメント化と評価の有効化リソースと学習パス。
+   * リソースの連絡先と連絡を取る。
 
 >[!NOTE]
 >
 >AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
+
 
 ## Communities の最新リリースのインストール {#install-latest-communities-release}
 
@@ -92,7 +96,7 @@ Use the [Tagging console](../../help/sites-administering/tags.md#tagging-console
 
 ![chlimage_1-417](assets/chlimage_1-417.png)
 
-次に、以下の操作をおこないます。
+次の手順に従います。
 
 1. [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [タグを公開する](../../help/sites-administering/tags.md#publishing-tags)
@@ -107,7 +111,7 @@ For an enablement community site, site visitors should not be able to [self-regi
 
 Instead, with the [tunnel service](#enable-the-tunnel-service) enabled, the [Members console](members.md) is used to register new members in the publish environment.
 
-このチュートリアルでは、パブリッシュ環境で 3 人のメンバーを作成します。2人のメンバーは、学習パスに割り当てられたユーザーグループのメンバーになり、3人目のメンバーはイネーブルメントリソースの連絡先になります。
+このチュートリアルでは、パブリッシュ環境で 3 人のメンバーを作成します。2人のメンバーが学習パスに割り当てられたユーザーグループのメンバーになり、3人目のメンバーはイネーブルメントリソースの連絡先になります。
 
 さらに、4 人目のメンバーをオーサー環境で作成し、コミュニティ管理者およびコミュニティイネーブルメントマネージャーの役割を割り当てます。
 
@@ -119,47 +123,48 @@ Instead, with the [tunnel service](#enable-the-tunnel-service) enabled, the [Mem
 >
 >または、これらのメンバーを後から[メンバーグループに割り当て](enablement-create-site.md#assignuserstocommunityenablemembersgroup)ます。
 
+
 ### Riley Taylor - 登録者 {#riley-taylor-enrollee}
 
 Community Ski Class という名前の学習者グループに追加される[メンバーを作成](members.md#create-new-member)します。
 
-* **ID**:ライリー
+* **ID**: ライリー
 * **電子メール**：riley.taylor@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**:password
+* **パスワードの確認**: password
 * **名**：Riley
-* **姓**:テイラー
+* **姓**: テイラー
 
 ### Sidney Croft - 登録者 {#sidney-croft-enrollee}
 
 「Community Ski Class」グループに追加される [2 人目のメンバーを作成](members.md#create-new-member)します。
 
-* **ID**:シドニー
+* **ID**: シドニー
 * **電子メール**：sidney.croft@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**:password
+* **パスワードの確認**: password
 * **名**：Sidney
-* **姓**:クロフト
+* **姓**: クロフト
 
 ### Quinn Harper - イネーブルメントリソースの連絡先およびモデレーター {#quinn-harper-enablement-resource-contact-and-moderator}
 
-[サイトの作成後](members.md#create-new-member) 、コミュニティサイトのメンバグループに追加されるメンバを作成します。 This membership will allow the member to be assigned as the enablement [Resource Contact](resources.md#settings) when an enablement resource is created for the site.
+[サイトの作成後にコミュニティサイトのメンバーグループに追加されるメンバーを作成します](members.md#create-new-member) 。 This membership will allow the member to be assigned as the enablement [Resource Contact](resources.md#settings) when an enablement resource is created for the site.
 
-* **ID**:クイン
+* **ID**: クイン
 * **電子メール**：quinn.harper@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**:password
+* **パスワードの確認**: password
 * **名**：Quinn
-* **姓**:ハーパー
+* **姓**: ハーパー
 
 ### ユーザーグループを追加 - Community Ski Class {#add-a-user-group-community-ski-class}
 
 Community Ski Class という名前の[新しいグループを追加](members.md#create-new-group)します。
 
-* **ID**:コミュニティスキー教室
+* **ID**: コミュニティスキー教室
 * **名前**：Community Ski Class
-* **説明**:イネーブルメントリソースを割り当てるためのサンプルグループ
-* **Add Members To Group** &#39;add&#39;:
+* **説明**: 有効化リソースを割り当てるためのサンプルグループ
+* **Members To Group** &#39;add&#39;:
 
    * riley
    * sidney
@@ -174,6 +179,7 @@ Community Ski Class という名前の[新しいグループを追加](members.m
 >
 >コミュニティサイトの作成中に、既存のメンバーおよびグループをコミュニティサイトのメンバーグループに追加できます。
 
+
 ## コミュニティ管理者の役割 {#community-administrator-role}
 
 コミュニティ管理者グループのメンバーは、コミュニティサイトの作成、サイトの管理、メンバーの管理（コミュニティの利用を禁止可能）およびコンテンツのモデレートを実行できます。
@@ -186,27 +192,27 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
    * For example, [http://localhost:4502/](http://localhost:4503/)
 
-* 管理者権限でサインイン
+* 管理者権限でサインインする
 
    * 例：ユーザー名「admin」/パスワード「admin」
 
-* From the main console, navigate to **[!UICONTROL Tools, Operations > Security > Users]**
-* From the **[!UICONTROL Edit]** menu, select **[!UICONTROL Add User]**
+* From the main console, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+* From the **[!UICONTROL Edit]** menu, select **[!UICONTROL Add User]**.
 
-* ダイアログで、次のよ `Create New User` うに入力します。
+* ダイアログで、次のように `Create New User` 入力します。
 
-   * **IDアンプ(&amp;A);ast;**:シリア
+   * **IDアンプ(&amp;A);ast;**: シリウス
    * **電子メールアドレス**：sirius.nilson@mailinator.com
-   * **パスワード(&amp;A)；末尾；**:password
-   * **パスワードの確認(&amp;A);ast;**:password
+   * **パスワード(&amp;A);ast;**: password
+   * **パスワードの確認(&amp;A);ast;**: password
    * **名**：Sirius
-   * **姓(&amp;A)；姓**:ニルソン
+   * **姓(&amp;A)；姓(&amp;A);**: ニルソン
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
-下にスクロールして次の操作を行い `Add User to Groups`ます。
+下にスクロール `Add User to Groups`:
 
-* 検索するには&#39;C&#39;と入力してください
+* &#39;C&#39;を入力して検索してください
 
    *  `Community Administrators`
    *  `Community Enablement Managers`
