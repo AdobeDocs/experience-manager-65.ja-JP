@@ -10,14 +10,17 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 56%
 
 ---
 
 
 # コメントの基本事項 {#comments-essentials}
 
-このページでは、コメントシステム（コメントコンポーネント）と、メンバーがコメントや返信を投稿する際に生成されるユーザー生成コンテンツ(UGC)を管理するためのオプションを操作する際の基本事項を説明します。
+このページでは、コメントシステム（コメントコンポーネント）の操作に関する基本的な事項と、メンバーがコメントや返信を投稿する際に生成されるユーザー生成コンテンツ(UGC)を管理するためのオプションを提供します。
 
 個々の投稿がそれぞれ単一のコメントコンポーネントで表されるように、コメントシステムが確立されます。これは、ページに含まれるコメントシステムです。 コメントシステムを呼び出すと、個々のコメントが作成されます。
 
@@ -91,10 +94,10 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-参照先：
+次のページを参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリの使用の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
+* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
