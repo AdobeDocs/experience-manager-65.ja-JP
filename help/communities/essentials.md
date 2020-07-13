@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 71%
 
 ---
 
@@ -50,7 +53,7 @@ A community site will support members creating community groups when the [commun
 * [リーダーボード](leaderboard.md)
 * [質問と回答](qna-essentials.md) `(QnA)`
 
-## 機能 {#features}
+## 特長 {#features}
 
 * [クライアントライブラリ](clientlibs.md)
 * [コミュニティサイト](sites-for-developers.md)
@@ -61,7 +64,7 @@ A community site will support members creating community groups when the [commun
 * [スコアとバッジ](configure-scoring.md)
 * [検索](search-implementation.md)
 * [ソーシャルグラフ](essentials-socialgraph.md)
-* [ストレージリソースプロバイダ](srp-and-ugc.md)`(SRP)`
+* [ストレージリソースプロバイダ](srp-and-ugc.md) `(SRP)`
 
 * [タグ付け](tag.md)
 
