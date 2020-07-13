@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: d6ae8bffa2d9d59f5656b9344d8826128f12885c
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1653'
 ht-degree: 66%
 
 ---
@@ -39,22 +39,13 @@ AEM 6.5 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 
    ![livefyre-aem-uninstall-64](assets/livefyre-aem-uninstall-64.png)
 
-1. Return to the AEM homepage, click Tools, then navigate to **Deployment > Package Share**.
+1. Livefyreパッケージを [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)(SDK)からダウンロードします。
 
-   ダウンロード可能な機能パックとホットフィックスのリストが表示されます。
-
-1. キーワード検索で &quot;Livefyre&quot; を検索して、お使いの AEM バージョンに対応する Livefyre 機能パックを選択します。
-
-   ![livefyre-aem3-6-4](assets/livefyre-aem3-6-4.png)
-
-1. On the feature pack information page, click **Download**, then read the Package License Agreement and click **Accept**.
-1. Return to the Package Manager, locate the newly downloaded package, and click **Install**.
+1. パッケージマネージャーから、ダウンロードしたパッケージをインストールします。 See [How to Work with Packages](/help/sites-administering/package-manager.md) for more information on using Software Distribution and packages in AEM
 
    ![livefyre-aem4-6-4](assets/livefyre-aem4-6-4.png)
 
    Livefyre-AEM パッケージがインストールされます。統合機能を使い始める前に、Livefyre を使用するように AEM を設定する必要があります。
-
-   For more information on packages, see [How to Work With Packages](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/package-manager.html).
 
    For more information and release notes on feature packs, see [Feature Packs](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/feature-packs-release-notes.html).
 
@@ -176,6 +167,7 @@ UGC を AEM Assets に読み込むには：
 
    * **手動で要求する権限** 」を参照してください。
    * **手動でコンテンツの権限を属性付け** ：個々のアセットの権限を上書きします。
+
    >[!NOTE]
    >
    >非ビジネスユーザーアカウントからのコンテンツの集計に影響する更新により、お客様に代わってコメントを投稿したり、作成者からの返信を自動的に確認したりすることはできません。 [詳しくは、ここをクリックしてください](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/)。
