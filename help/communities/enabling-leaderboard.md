@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 49%
@@ -27,10 +27,10 @@ The `Leaderboard` component provides the ability to obtain a sense of how member
 
 ページにリーダーボードコンポーネントを含める前に、[コミュニティのスコアとバッジ](/help/communities/implementing-scoring.md)を設定する必要があります。
 
-ドキュメントのこのセクションでは、以下の内容について説明します。
+ドキュメントのこのセクションでは、以下の内容について説明します。：
 
-* Adding the `Leaderboard` component to a [community site](/help/communities/overview.md#community-sites)
-* Configuration settings for the `Leaderboard` component
+* Adding the `Leaderboard` component to a [community site](/help/communities/overview.md#community-sites).
+* Configuration settings for the `Leaderboard` component.
 
 ### リーダーボードをページに追加 {#adding-a-leaderboard-to-a-page}
 
@@ -44,17 +44,19 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
-![chlimage_1-19](assets/chlimage_1-19.png)
+![chlimage_1-8](assets/chlimage_1-8.png)
 
 ### リーダーボードの設定 {#configuring-leaderboard}
 
 Select the placed `Leaderboard` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-20](assets/chlimage_1-20.png) ![chlimage_1-21](assets/chlimage_1-21.png)
+![chlimage_1-9](assets/chlimage_1-9.png)
+
+![chlimage_1-10](assets/chlimage_1-10.png)
 
 #### 「設定」タブ{#settings-tab}
 
-「**設定**」タブで、メンバーに関連して表示する情報を指定します。
+「**[!UICONTROL 設定]**」タブで、メンバーに関連して表示する情報を指定します。
 
 * **表示名**
 
@@ -118,7 +120,7 @@ Default is `Leaderboard`, if nothing entered.
    * バッジルール = `/libs/settings/community/badging/rules//reference-badging`
    * 最大表示数 = `10`
 
-![chlimage_1-22](assets/chlimage_1-22.png)
+![chlimage_1-11](assets/chlimage_1-11.png)
 
 ### 例：エキスパートのリーダーボード {#example-experts-leaderboard}
 
@@ -141,7 +143,7 @@ Default is `Leaderboard`, if nothing entered.
    * バッジルール = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 最大表示数 = `10`
 
-![chlimage_1-23](assets/chlimage_1-23.png)
+![chlimage_1-12](assets/chlimage_1-12.png)
 
 ### 追加情報 {#additional-information}
 
