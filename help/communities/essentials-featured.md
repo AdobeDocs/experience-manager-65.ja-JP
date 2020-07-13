@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 84%
 
 ---
 
@@ -20,6 +23,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 このページでは、おすすめコンテンツを使用するための基本的な情報について説明します。
 
 フォーラム上部への投稿のピン留めとは異なり、この機能では、コミュニティサイト内のすべての場所でコンテンツを強調表示できます。
+
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -31,7 +35,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
