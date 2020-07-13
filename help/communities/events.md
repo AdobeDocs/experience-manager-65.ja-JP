@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 42%
 
 ---
 
@@ -31,90 +34,90 @@ For the Communities components delivered in the release, the following tables de
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがカレンダーイベントを作成する |
-| ADD | メンバーがカレンダーイベントについてコメントする |
-| UPDATE | メンバーのカレンダーイベントまたはコメントが編集される |
-| DELETE | メンバーのカレンダーイベントまたはコメントが削除される |
+| POST | カレンダーイベントの作成 |
+| ADD | カレンダーイベントに対するメンバーコメント |
+| UPDATE | メンバーのカレンダーイベントまたはコメントが編集されました |
+| DELETE | メンバーのカレンダーイベントまたはコメントが削除されました |
 
 [コメントコンポーネント](essentials-comments.md) SocialEvent `topic`=  = com/adobe/cq/social/comment
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがコメントを作成する |
-| ADD | メンバーがコメントに返信する |
-| UPDATE | メンバーのコメントが編集される |
-| DELETE | メンバーのコメントが削除される |
+| POST | メンバがコメントを作成する |
+| ADD | コメントへのメンバの返信 |
+| UPDATE | メンバーのコメントが編集されます |
+| DELETE | メンバーのコメントが削除されました |
 
 [ファイルライブラリコンポーネント](essentials-file-library.md) SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがフォルダーを作成する |
-| ATTACH | メンバーがファイルをアップロードする |
-| UPDATE | メンバーがフォルダーまたはファイルを更新する |
-| DELETE | メンバーがフォルダーまたはファイルを削除する |
+| POST | メンバーがフォルダーを作成 |
+| ATTACH | メンバーはファイルをアップロードします |
+| UPDATE | メンバーがフォルダーまたはファイルを更新 |
+| DELETE | メンバーがフォルダーまたはファイルを削除しました |
 
 [フォーラムコンポーネント](essentials-forum.md) SocialEvent `topic`=  = com/adobe/cq/social/forum
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがフォーラムトピックを作成する |
-| ADD | メンバーがフォーラムトピックに返信する |
-| UPDATE | メンバーのフォーラムトピックまたは返信が編集される |
-| DELETE | メンバーのフォーラムトピックまたは返信が削除される |
+| POST | メンバーがフォーラムトピックを作成します |
+| ADD | フォーラムトピックへのメンバーの返信 |
+| UPDATE | メンバーのフォーラムトピックまたは返信が編集されました |
+| DELETE | メンバーのフォーラムトピックまたは返信が削除されました |
 
 [ジャーナルコンポーネント](blog-developer-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/journal
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがブログ記事を作成する |
-| ADD | メンバーがブログ記事にコメントする |
-| UPDATE | メンバーのブログ記事またはコメントが編集される |
-| DELETE | メンバーのブログ記事またはコメントが削除される |
+| POST | 会員がブログ記事を作成する |
+| ADD | ブログ記事に対するメンバーコメント |
+| UPDATE | 会員のブログ記事またはコメントが編集されました |
+| DELETE | 会員のブログ記事またはコメントが削除されました |
 
 [Q&amp;A コンポーネント](qna-essentials.md) SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーが Q&amp;A の質問を作成する |
-| ADD | メンバーが Q&amp;A の回答を作成する |
-| UPDATE | メンバーの Q&amp;A の質問または回答が編集される |
-| SELECT | メンバーの回答が選択される |
-| UNSELECT | メンバーの回答の選択が解除される |
-| DELETE | メンバーの Q&amp;A の質問または回答が削除される |
+| POST | メンバがQnA質問を作成します |
+| ADD | メンバはQnA応答を作成します |
+| UPDATE | メンバーのQnAの質問または回答が編集されました |
+| SELECT | メンバの回答が選択されました |
+| UNSELECT | メンバーの回答が選択解除されました |
+| DELETE | メンバーのQnAの質問または回答が削除されました |
 
 [レビューコンポーネント](reviews-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/review
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがレビューを作成する |
-| UPDATE | メンバーのレビューが編集される |
-| DELETE | メンバーのレビューが削除される |
+| POST | メンバーがレビューを作成 |
+| UPDATE | メンバーのレビューが編集されます |
+| DELETE | メンバーのレビューが削除されました |
 
 [評価コンポーネント](rating-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/tally
 
 | **動詞** | **説明** |
 |---|---|
-| ADD RATING | メンバーのコンテンツの評価が上がった |
-| REMOVE RATING | メンバーのコンテンツの評価が下がった |
+| ADD RATING | 会員のコンテンツが評価済みです |
+| REMOVE RATING | 会員のコンテンツが評価されていません |
 
 [投票コンポーネント](essentials-voting.md) SocialEvent `topic`=  = com/adobe/cq/social/tally
 
 | **動詞** | **説明** |
 |---|---|
-| ADD VOTING | メンバーのコンテンツに賛成票が投じられた |
-| REMOVE VOTING | メンバーのコンテンツに反対票が投じられた |
+| ADD VOTING | 会員のコンテンツが投票済み |
+| REMOVE VOTING | 会員のコンテンツが投票済みになりました |
 
 **モデレート対応コンポーネント** SocialEvent `topic`=  = com/adobe/cq/social/moderation
 
 | **動詞** | **説明** |
 |---|---|
-| DENY | メンバーのコンテンツが拒否される |
-| FLAG-AS-INAPPROPRIATE | メンバーのコンテンツにフラグが付けられる |
-| UNFLAG-AS-INAPPROPRIATE | メンバーのコンテンツのフラグが解除される |
-| ACCEPT | メンバーのコンテンツがモデレーターにより承認される |
-| CLOSE | メンバーがコメントの編集と返信を閉じる |
-| OPEN | メンバーがコメントを再度開く |
+| DENY | 会員の内容が拒否されました |
+| FLAG-AS-INAPPROPRIATE | メンバーのコンテンツにフラグが付けられます |
+| UNFLAG-AS-INAPPROPRIATE | メンバーのコンテンツにフラグが付けられていません |
+| ACCEPT | メンバーのコンテンツがモデレーターによって承認されている |
+| CLOSE | メンバーが編集と返信に対するコメントを閉じる |
+| OPEN | メンバーがコメントを再度開きます |
 
 ## カスタムコンポーネントのイベント {#events-for-custom-components}
 
@@ -126,9 +129,13 @@ The custom event would override the method `getVerb()` so that an appropriate `v
 >
 >カスタム拡張が製品の既存の実装よりも低いランクで登録されていることを確認します。
 
+
 ### カスタムコンポーネントイベントの疑似コード {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.イベント.イベント](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);[com.adobe.cq.soscial.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);[com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
+[org.osgi.service.イベント.イベント](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
+[com.adobe.cq.soscial.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);
+[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);
+[com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
 package com.mycompany.recipe;
