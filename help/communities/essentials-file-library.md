@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9019b967-fff8-4dda-bc5a-fd4a3e14a4ef
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 59%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -74,8 +77,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
+* [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
