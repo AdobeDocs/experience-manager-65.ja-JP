@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: e795a647b8728b224792f342200a700169a5e87b
+source-git-commit: b242163267b43507e1cb9c6d4c36bb65385afc62
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 46%
@@ -59,7 +59,7 @@ Notice this  home page  shows four menu items: `Assignments, Ski Catalog, What's
 
 jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
-1. AEM Authorインスタンスで、https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.htmlに移動します。
+1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
 
    >[!NOTE]
    >
@@ -182,7 +182,7 @@ On author, navigate to the **Communities,[Resources console](resources.md)**, wh
 * すべての有効化リソースと学習パス
 * 有効化に関する1つのリソースまたは学習パス
 
-Navigate to the **Communities,[Reports console](reports.md)**, and generate reports according to
+Navigate to the **Communities,[Reports console](reports.md)**, and generate reports according to:
 
 * 有効化リソースと学習パスの割り当て
 * 特定の期間におけるコミュニティサイトへの投稿
@@ -203,12 +203,11 @@ Navigate to the **Communities,[Reports console](reports.md)**, and generate repo
 
 パブリッシュ環境でリソースに対しておこなわれるアクティビティやインタラクションが少ない場合は、オーサー環境でレポートを表示すると有益です。
 
-* 作成者
-* 管理者権限でサインイン
-* Navigate from the main menu to **[!UICONTROL Communities > Resources]**
-* サイトの選択 `Enablement Tutorial`
-* Select the `Report` icon for a summary of all Resources
-* Select a Resource and then the `Report` icon for a report on that Resource
+* 作成者は、管理者権限でサインインします。
+* Navigate from the main menu to **[!UICONTROL Communities]** > **[!UICONTROL Resources]**.
+* サイトを選択し `Enablement Tutorial` ます。
+* Select the `Report` icon for a summary of all Resources.
+* Select a Resource and then the `Report` icon for a report on that Resource.
 
 Adobe Analytics のデータを表示するには時期尚早のようです。データが表示されるには 1 時間から 12 時間かかります。ただし、基本的なSCORMレポートは既に使用可能です。
 
@@ -236,10 +235,9 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 割り当てのレポートの場合：
 
-* 作成者
-* 管理者権限でサインイン
-* Navigate to **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**
-* Select a **[!UICONTROL Site]** from the pull-down menu (select `Enablement Tutorial`)
+* 作成者は、管理者権限でサインインします。
+* Navigate to **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**.
+* Select a **[!UICONTROL Site]** from the pull-down menu (select `Enablement Tutorial`).
 
 * Select **[!UICONTROL Group]** (select `Community Ski Class`)
 
@@ -251,15 +249,15 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 表示のレポートの場合：
 
-* 作成者が管理者権限を持つログイン
-* Navigate to **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Views Report]**
-* Select a **Site **from the pull-down menu (select`Enablement Tutorial`)
+* 作成者は、管理者権限でサインインします。
+* **[!UICONTROL コミュニティ]** / **[!UICONTROL レポート]** / **[!UICONTROL 表示レポートに移動します]**。
+* Select a **Site **from the pull-down menu (select`Enablement Tutorial`).
 
-* Select **[!UICONTROL Content Type]** (select `all`)
+* Select **[!UICONTROL Content Type]** (select `all`).
 
-* **[!UICONTROL 日付範囲の選択]** (選択 `Last 7 days`)
+* **[!UICONTROL 日付範囲を選択します]** (選択 `Last 7 days`)。
 
-* Select **[!UICONTROL Generate]**
+* Select **[!UICONTROL Generate]**.
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
