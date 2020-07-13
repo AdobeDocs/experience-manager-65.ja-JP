@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 64%
 
 ---
 
@@ -44,7 +47,7 @@ An *activity stream* is the list of recent activities performed by a member or a
   </tr>
   <tr>
    <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -60,7 +63,7 @@ An *activity stream* is the list of recent activities performed by a member or a
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>see <a href="/help/communities/activities.md">Activity Streams Feature</a></td>
+   <td>See <a href="/help/communities/activities.md">Activity Streams Feature</a></td>
   </tr>
  </tbody>
 </table>
