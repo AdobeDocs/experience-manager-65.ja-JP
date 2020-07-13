@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 58%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 Placing multiple instances of a voting component on the same page is allowed; each instance must be configured with an unique `tally name` property.
 
-匿名での投票投稿はサポートされていません。サイト訪問者は、1回のみ投票に参加するために登録し、サインインする必要があります。サインインした訪問者（メンバー）は、いつでも投票を変更できます。
+匿名での投票投稿はサポートされていません。サイト訪問者が投票に参加するには、一度だけ登録してサインインする必要があります。サインインした訪問者（会員）は、いつでも投票を変更できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -49,7 +52,7 @@ Placing multiple instances of a voting component on the same page is allowed; ea
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><p>See, <a href="voting.md">Using Voting</a></p> </td>
+   <td><p>See <a href="voting.md">Using Voting</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -72,10 +75,10 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-参照先：
+次のページを参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
+* [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
