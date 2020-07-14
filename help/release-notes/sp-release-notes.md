@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 5 固有のリリース�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
+source-git-commit: 97714abf86a80f6b3d1c68c85ccf443482da22bf
 workflow-type: tm+mt
 source-wordcount: '4529'
 ht-degree: 7%
@@ -159,7 +159,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * ビデオのボリュームを制御する機能に、（ボリュームスライダーにフォーカスするために）タブと、（ボリュームを調整するために）キーボードの(NPR-32065)矢印キーを通してアクセスできるようになりました。
 
-* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザーに対して通知されるようになりました(NPR-32064)。
+* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザー(NPR-32064)に対して通知されるようになりました。
 
 * 「 [!UICONTROL 作成と翻訳] 」フォームの「 [!UICONTROL 言語] 」メニューにブラウズモードでアクセスできるようになりました。(CQ-4293906)
 
@@ -281,7 +281,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 ### [!DNL Brand Portal] {#assets-brand-portal-6550}
 
 * Removing a published metadata schema from [!DNL Brand Portal] results in an error (CQ-4292063).
-* 管理者がAdobe Developer Consoleを使用してBrand Portalを使用して6.5.4を設定した場合、ユー [!DNL Experience Manager Assets] ザーは貢献度フォルダーのアセットをから [!DNL Brand Portal][!DNL Brand Portal][!DNL Experience Manager] (NPR-33046)に公開できません。
+* 管理者がAdobe Developer Consoleを使用してBrand Portalを使用して [!DNL Experience Manager Assets] 6.5.4を設定した場合、ユー [!DNL Brand Portal] ザーは貢献度フォルダーのアセットを(NPR-33046)から [!DNL Brand Portal][!DNL Experience Manager] (NPR-33046)に公開できません。
 * 競合の原因となる親フォルダーの重複レプリケーション(NPR-33001)。
 
 ### [!DNL Communities] {#communities-6550}
@@ -368,7 +368,7 @@ B. Package Managerの [HTTP APIを使用します](https://docs.adobe.com/conten
 
 1. All OSGi bundles are either **[!UICONTROL ACTIVE]** or **[!UICONTROL FRAGMENT]** in the OSGi Console (Use Web Console: `/system/console/bundles`).
 
-1. The OSGI bundle `org.apache.jackrabbit.oak-core` is version 1.10.6 or higher (Use Web Console: `/system/console/bundles`).
+1. The OSGI bundle `org.apache.jackrabbit.oak-core` is version 1.22.3 or higher (Use Web Console: `/system/console/bundles`).
 
 このリリースで動作が確認されたプラットフォームについて詳しくは、 [技術要件を参照してください](/help/sites-deploying/technical-requirements.md)。
 
