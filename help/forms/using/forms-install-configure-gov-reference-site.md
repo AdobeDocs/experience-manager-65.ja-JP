@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 38f40badf8a850de363fa3f28232d3037fbf209b
+source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
 workflow-type: tm+mt
-source-wordcount: '5037'
+source-wordcount: '4685'
 ht-degree: 3%
 
 ---
@@ -77,31 +77,6 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 * Apache Derbyデータベースのサンプル（メモリ内）
 * Apache Derbyデータソース（フォームデータモデルで使用）
 
-## 設定オプション {#configuration-options}
-
-ユーザーは、次のような様々なワークフローサービスオプションを設定できます。
-
-1. Microsoft Dynamicsエントリ
-1. Adobe Sign
-1. AEM Custom Communication Management
-1. Adobe Analytics
-
-ワークフローユーザーがワークフロー内で有効になるように設定するには、次のタスクを実行する必要があります。
-
-1. https://&#39;[server]:[port]&#39;/system/console/configMgrに移動します。
-
-1. WebGov *設定を見つけます*。
-
-1. サービス定義を開き、選択したサービスをワークフロー内で呼び出せるようにします。
-
->[!NOTE]
->
->ユーザーがConfiguration Managerページ内でサービスを有効にしたので、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
-
-![govフォームパッケージ](assets/aftia-configuration-options.jpg)
-
-1. 設定を保存するには、「保存」ボタンをクリックします。
-
 ## デモパッケージのインストール {#demo-package-installation}
 
 この節では、デモパッケージのインストールについて説明します。
@@ -163,18 +138,19 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 1. https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.htmlに移動し *ます。*
 1. 以下のタスクを実行するには、管理者としてログインします。
+1. ページの最後まで下にスクロールすると、すべてのユーザーグループが読み込まれます。
 1. 「**workflow**」を検索します。
 1. 「**workflow-users**」グループを選択し、「Properties」をクリックします。
 1. 「メンバー」タブに移動します。
 1. 「Select User or Group **」フィールドに** wegovと入力します。
-1. 「**Web.Gov Form Users**」ドロップダウンから選択します。
+1. 「**Web.Gov Forms Users**」ドロップダウンから選択します。
 
    ![ワークフローユーザーのグループ設定の編集](assets/edit_group_settings.jpg)
 
 1. メニューバーの「保存して閉じる」をクリックします。
-1. 手順2 ～ 7を繰り返して、「**analytics**」を検索し、「**Analytics管理者**」グループを選択して、「**We.Gov Form Users**」グループをメンバーとして追加します。
-1. 手順2 ～ 7を繰り返して、「**forms users**」を検索し、「**forms-power-users**」グループを選択し、「**We.Gov Form Users**」グループをメンバーとして追加します。
-1. 手順2 ～ 7を繰り返して、「**forms users**」を検索し、「**forms-users**」グループを選択して、次に「**We.Gov Users**」グループをメンバーとして追加します。
+1. 手順2 ～ 7を繰り返して、「**analytics**」を検索し、「**Analytics管理者**」グループを選択して、「**We.Gov Forms Users**」グループをメンバーとして追加します。
+1. 手順2 ～ 7を繰り返して、「**forms users**」を検索し、「**forms-power-users**」グループを選択し、「**We.Gov Forms Users**」グループをメンバーとして追加します。
+1. 手順2 ～ 7を繰り返して、「**forms-users**」を検索し、「**forms-users**」グループを選択して、次に「**We.Gov Users**」グループをメンバーとして追加します。
 
 ### 電子メールサーバーの設定 {#email-server-configuration}
 
@@ -362,7 +338,7 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 1. Click on **Save and Close**.
 
-1. サービスをテストし、設定済みのデータソースに正常に接続できることを確認します
+1. [サービスをテストし](work-with-form-data-model.md#test-data-model-objects-and-services) 、設定済みのデータソースに正常に接続できることを確認します
 
    * 接続をテストするには、 **HOMEMORTGAGEACCOUNTを選択し** 、getサービスを提供します。 サービスおよびシステム管理者は、取得中のデータを確認できます。
 
@@ -488,25 +464,6 @@ AEM FormsAnalyticsのデータは、オフライン時、またはパッケー�
 
    ![表示Analyticsレポートデータ](assets/analytics_report_data.jpg)
 
-#### 表示アドビAnalyticsレポート {#view-adobe-analytics-reporting}
-
-オプションで、アドビのAnalyticsに直接移動して分析データを表示できます。
-
-1. https://my.omniture.com/login/に移動し [ます。](https://my.omniture.com/login/)
-1. 資格情報を使用してログインする：
-
-   1. **会社:** AEM Formsデモ
-   1. **ユーザー：** &lt;ご要望に応じて利用可能>
-   1. **パスワード：** &lt;ご要望に応じて利用可能>
-
-1. レポートスイートから「Web.Govリファレンスサイト」を選択します。
-
-   ![レポートスイート](assets/report_suites.jpg)
-
-1. 使用可能なレポートの1つを選択して、そのレポートの分析データを表示します。
-
-   ![Analytics報告のデータ](assets/analytics_data.jpg)
-
 ### Adobe Automated Forms Configuration Enablement {#automated-forms-enablement}
 
 Adobe Formsを使用してAEM Formsをインストールおよび設定するには、コンバージョンツールに次の機能が必要です。
@@ -535,7 +492,7 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 1. 証明書は必ずダウンロードしてください。
 
-1. 設定の残りの部分は使用しないでください — レビューセクション(TBD)
+1. 残りの設定は行わないでください。「Adobe I/Oでの統合の [作成」の節を確認してください。](#create-integration-adobeio)
 
 >[!NOTE]
 この節で作成した証明書は、Adobe I/Oで統合サービスを作成する際に使用されます。 ユーザーが統合サービスで作成した情報は、アドビのI/Oから取得した情報を使用して設定を完了できます。
@@ -590,7 +547,7 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 #### クラウドの設定（Web.Gov AFC実稼働環境） {#configure-cloud-configuration}
 
-IMSの設定が完了したら、AEMでクラウド設定の作成に進むことができます。
+IMSの設定が完了したら、AEMでクラウドの設定を確認します。 設定が存在しない場合は、次の手順を実行してAEMにクラウド設定を作成します。
 
 1. ブラウザーを開き、システムURL https://&lt;domain_name>:&lt;system_port>に移動します。
 
@@ -672,13 +629,7 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
    ![詳細な変換設定](assets/aftia-conversion-settings-2.jpg)
 
-1. 使用するすべての開始を設定したら、「オプションの変換」を選択します
-
-   >[!NOTE]
-   *「アダプティブフォームのテーマ* 」の節を指定します。ここでは、ユーザーがテーマAccessible-Ultramarineテーマを指定できます。
-
-   >[!NOTE]
-   生成されたフォームをFDMまたはその他の要素で連結する場合は、「データ連結なしでアダプティブフォームを *生成する*」チェックボックスをオンにする必要があります。
+1. 使用するすべての開始を設定したら、「オプションの変換」を選択します。
 
 1. 変換プロセスが始まると、次の画面が表示されます。
 
@@ -688,57 +639,11 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
    ![変換されたアダプティブフォーム](assets/aftia-converted-adaptive-form-2.jpg)
 
-#### フォームコンバージョンのテスト（Web.Financeクレジットカード申込） {#testing-forms-conversion-wefinance}
-
-設定が完了すると、ユーザーはPDFドキュメントをアップロードしてテストできます。
-
-1. AEMシステムhttps://&lt;ドメイン名>:&lt;システムポート>に移動します。
-
-1. フォーム/フォームとドキュメント/AEM FormsWeb.financeフォーム/PDF formsをクリックします。
-
-1. 「We.Finance Credit Card Application」を選択します。
-
-1. 右上隅の「 **開始自動コンバージョン** 」ボタンをクリックします。
-
-1. 次に示すように、このオプションが表示されます。
-
-   ![PDF のフォーム](assets/aftia-pdf-forms.jpg)
-
-1. ボタンを選択すると、次のオプションが表示されます。
-
-   * ユーザーが *We.Finance AFC Production* 設定を選択していることを確認します。
-
-   ![「We.Finance AFC Production」を選択します。](assets/aftia-select-production-configuration.jpg)
-
-   ![詳細な変換設定](assets/aftia-advanced-conversion-settings-wefinance.jpg)
-
-1. 使用するすべての開始を設定したら、「オプションの変換」を選択します
-
-   >[!NOTE]
-   *「アダプティブフォームのテーマ* 」の節を指定します。ここでは、ユーザーがテーマAccessible-Ultramarineテーマを指定できます。
-
-   >[!NOTE]
-   生成されたフォームをFDMまたはその他の要素で連結する場合は、「データ連結なしでアダプティブフォームを *生成する*」チェックボックスをオンにする必要があります。
-
-   >[!NOTE]
-   レンダリングされたフォームがWeb.Govサイトのフォームポータルに表示されるようにするには、出力フォルダーの場所を */content/dam/formsanddocuments/adobe-finance-forms/afc-converted-forms* に設定する必要があります。
-
-1. 変換プロセスが始まると、次の画面が表示されます。
-
-   ![変換しています](assets/aftia-conversion-progress.jpg)
-
-   >[!NOTE]
-   3つのバグが報告されます。クラウド設定から提供されたフォルダーとは別のフォルダーを選択しても、出力フォルダーはローカルに作成され、生成されたフォームは正しい場所に配置されます。
-
-1. 変換が完了すると、次の画面が表示されます。
-
-   ![変換しています](assets/aftia-conversion-complete.jpg)
-
-1. また、コンバージョンプロセスを確認し、結果を編集して、システムのコンバージョン能力を向上させることもできます。
+   Output **** フォルダーをクリックして、生成されたアダプティブフォームを表示します。
 
 #### 既知の問題とメモ {#known-issues-notes}
 
-フォームの変換プロセスにはいくつかの制限があり、アドビのWebサイトで確認できます。 フォームがこのプロセスと互換性があるかどうかを確認するには、 [既知の問題](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html) （英語のみ）を参照してください。
+自動フォームコンバージョンサービスには、特定の [ベストプラクティス、既知の複雑なパターン](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、 [既知の問題が含まれています](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 AEM Formsの自動フォームコンバージョンサービスの使用を開始する前に、これらを確認してください。
 
 1. 変換後にフォームをFDMに連結する場合は、データ連結を有効にせずにアダプティブフォームを生成します。
 
@@ -868,6 +773,30 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 Package Managerを使用すると、 **フォーム** /テーマ **/リファレンステーマ** /Ultramarine-Accessible Ultralineに移動して、AEM Forms内のUltramarineテーマにアクセスできます ********。
 
 ![Ultramarine テーマ](assets/aftia-ultramarine-theme.jpg)
+
+## 設定オプション {#configuration-options}
+
+ユーザーは、次のような様々なワークフローサービスオプションを設定できます。
+
+1. Microsoft Dynamicsエントリ
+1. Adobe Sign
+1. AEM Custom Communication Management
+1. Adobe Analytics
+
+ワークフローユーザーがワークフロー内で有効になるように設定するには、次のタスクを実行する必要があります。
+
+1. https://&#39;[server]:[port]&#39;/system/console/configMgrに移動します。
+
+1. WebGov *設定を見つけます*。
+
+1. サービス定義を開き、選択したサービスをワークフロー内で呼び出せるようにします。
+
+>[!NOTE]
+ユーザーがConfiguration Managerページ内でサービスを有効にしたので、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
+
+![govフォームパッケージ](assets/aftia-configuration-options.jpg)
+
+1. 設定を保存するには、「保存」ボタンをクリックします。
 
 ## 次の手順 {#next-steps}
 
