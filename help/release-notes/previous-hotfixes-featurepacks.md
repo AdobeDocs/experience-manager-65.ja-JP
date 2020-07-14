@@ -3,9 +3,9 @@ title: Adobe Experience Manager6.5以前のService Packリリースノート
 description: Adobe Experience Manager6.5 Service Pack 3以前に固有のリリースノートです。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: f75e5ad12aed95e950dbf7a00e0f444605f800dd
+source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
 workflow-type: tm+mt
-source-wordcount: '8102'
+source-wordcount: '8108'
 ht-degree: 35%
 
 ---
@@ -506,7 +506,7 @@ Remove one mention of this fix.
 
 * .NETプロジェクトでMTOMを使用するSOAP Webサービスで、AssemblerServiceClientの呼び出しとHtmlToPDF2メソッドに関する例外が表示されます(NPR-4281771)。
 
-* Axis jarバージョン1.4および1.4.1には、セキュリティ脆弱性(NPR-31015)が含まれています。
+* [Axis jarバージョン1.4および1.4.1には、セキュリティ脆弱性(NPR-31015](https://helpx.adobe.com/jp/aem-forms/quick-fixes/6-5/jee-patch-0014.html) )が含まれています。
 
 **Foundation JEE**
 
