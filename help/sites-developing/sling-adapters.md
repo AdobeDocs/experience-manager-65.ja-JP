@@ -10,14 +10,17 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 95c23d29aa1dd1695ed4e541dd11c2bbc7214f75
+workflow-type: tm+mt
+source-wordcount: '1496'
+ht-degree: 48%
 
 ---
 
 
 # Sling アダプターの使用{#using-sling-adapters}
 
-[Slingは](https://sling.apache.org) Adapter [Patternを提供し、](https://sling.apache.org/site/adapters.html) Adaptable [Interfaceを実装するオブジェクトを簡単に変換](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) します。このインターフェイスは、オ [ブジェクトを引数として渡されるクラス型に変換する汎用のadaptTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) メソッドを提供します。
+[Sling](https://sling.apache.org) オファーと [Adapterパターン](https://sling.apache.org/site/adapters.html) 。Adaptable [](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) インターフェイスを実装するオブジェクトを簡単に変換します。 このインターフェイスは、オブジェクトを引数として渡されるクラス型に変換する汎用の [adaptTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) メソッドを提供します。
 
 例えば、次のように実行するだけで、Resource オブジェクトを対応する Node オブジェクトに変換できます。
 
@@ -43,7 +46,7 @@ Node node = resource.adaptTo(Node.class);
 
 ### 戻り値 Null {#null-return-value}
 
-`adaptTo()` はnullを返すことができる。
+`adaptTo()` はnullを返すことができます。
 
 これには様々な理由がありますが、その一部は次のとおりです。
 
@@ -67,15 +70,15 @@ To improve performance, implementations are free to cache the object returned fr
 There are various ways that `Adaptable.adaptTo()` can be implemented:
 
 * オブジェクト自体による実装（このメソッド自体を実装して特定のオブジェクトにマッピングします）。
-* `を使用して、 [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)任意のオブジェクトをマッピングできます。
+* 「」(任意のオブジェクトをマッピングでき [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)ます)。
 
-   オブジェクトは、インターフェイスを実装し `Adaptable` 、拡張する必要があります(こ [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) の拡張は、中央アダプ `adaptTo` タマネージャに呼び出しを渡します)。
+   オブジェクトは、引き続き `Adaptable` インターフェイスを実装し、拡張する必要があります [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (これは、Central Adapter Managerへの `adaptTo` 呼び出しを渡します)。
 
-   これにより、などの既存のク `adaptTo` ラスのメカニズムにフックできま `Resource`す。
+   これにより、などの既存のクラスの `adaptTo` メカニズムにフックを組み込むことができ `Resource`ます。
 
 * これら 2 つの組み合わせ。
 
-最初の例では、javadocに何が可能かを示すこ `adaptTo-targets` とができます。 ただし、JCRベースのリソースなどの特定のサブクラスでは、多くの場合、これは不可能です。 後者の場合、の実装は通常、バ `AdapterFactory` ンドルのプライベートクラスの一部であり、クライアントAPIに公開されず、javadocにも表示されません。 理論的には、 `AdapterFactory`[](/help/sites-deploying/configuring-osgi.md) OSGiサービスランタイムからすべての実装にアクセスし、「アダプティブテーブル」（ソースとターゲット）設定を調べることは可能ですが、相互にマッピングすることはできません。 最終的には、これは内部ロジックに依存し、ドキュメント化する必要があります。 したがって、この資料を参照してください。
+最初の例では、javadocsに何が可能かが示され `adaptTo-targets` ます。 ただし、JCRベースのリソースなどの特定のサブクラスでは、多くの場合、これは不可能です。 後者の場合、の実装は通常、バンドルのプライベートクラスの一部 `AdapterFactory` なので、クライアントAPIで公開されず、javadocにも表示されません。 理論的には、 `AdapterFactory` OSGi [サービスランタイムからすべての](/help/sites-deploying/configuring-osgi.md) 実装にアクセスし、「アダプティブテーブル」(ソースとターゲット)の設定を調べることは可能ですが、相互にマッピングすることはできません。 最終的には、これは内部ロジックに依存し、ドキュメントに記載する必要があります。 従って、この参照。
 
 ## リファレンス {#reference}
 
@@ -87,7 +90,7 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
  <tbody>
   <tr>
    <td><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node</a></td>
-   <td>ノードを参照するJCRノードベースのリソースまたはJCRプロパティの場合。</td>
+   <td>JCRノードベースのリソース、またはノードを参照するJCRプロパティの場合。</td>
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Property.html">プロパティ</a></td>
@@ -103,22 +106,21 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a></td>
-   <td>JCRノードベースのリソース（または他のリソースサポート値マップ）の場合、プロパティの使いやすいマップを返します。 また、(ヌル文字の場合を処理するなど<br /> ) <code><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceUtil.html#getvaluemap%28org.apache.sling.api.resource.resource%29">ResourceUtil.getValueMap(Resource)</a></code> を使用して達成することもできます。</td>
+   <td>JCRノードベースのリソース（または他のリソースサポート値マップ）の場合、プロパティの使いやすいマップを返します。 また、<br /> (ヌルケースを処理するなど <code><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceUtil.html#getvaluemap%28org.apache.sling.api.resource.resource%29">ResourceUtil.getValueMap(Resource)</a></code> )を使用して達成することもできます。</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/inherit/InheritanceValueMap.html">InheritanceValueMap</a></td>
    <td>Extension of <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> which allows the hierarchy of resources to be taken into account when looking for properties.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/PersistableValueMap.html">PersistableValueMap</a></td>
-   <td>このリソースが JCR ノードベースのリソースであり、ユーザーがそのノードのプロパティを変更する権限を持っている場合。<br />
-注意：複数の永続化可能マップでは値は共有されません。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ModifiableValueMap.html">ModifiableValueMap</a></td>
+   <td>ValueMapの拡張子です。 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>では、そのノードのプロパティを変更できます。</td>
   </tr>
   <tr>
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
-   <td>「ファイル」のバイナリコンテンツを返す<code>nt:resource</code></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td><code>AuthorizableResourceProvider</code><code>org.apache.sling.jackrabbit.usermanager</code><code>/system/userManager</code></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td><code>cq:Page</code><code>cq:PseudoPage</code></td></tr><tr><td></td><td><code>cq:Component</code></td></tr><tr><td></td><td><code>cq:Page</code></td></tr><tr><td></td><td><code>cq:Template</code></td></tr><tr><td></td><td><code>cq:Page</code></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td><code>cq:Tag</code></td></tr><tr><td></td><td><code>cq:Preferences</code></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr></tbody></table>
+   <td>「ファイル」のバイナリコンテンツを返す<code>nt:resource</code></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr></tbody></table>
 
-[**ResourceResolverは&#x200B;**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html)、次に対応します。
+[**ResourceResolver **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html):
 
 <table>
  <tbody>
@@ -127,28 +129,13 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
    <td>このリソースリゾルバーが JCR ベースのリソースリゾルバー（デフォルト）である場合の、要求の JCR セッション。</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html">PageManager</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/ComponentManager.html">ComponentManager</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Designer.html">デザイナー</a></td>
-   <td> </td>
-  </tr>
-  <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/AssetManager.html">AssetManager</a></td>
    <td>このリソースリゾルバーが JCR ベースのリソースリゾルバーである場合の、JCR セッションに基づいたもの。</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/TagManager.html">TagManager</a></td>
-   <td>このリソースリゾルバーが JCR ベースのリソースリゾルバーである場合の、JCR セッションに基づいたもの。</td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html">UserManager</a></td>
-   <td>このリソースリゾルバーが JCR ベースのリソースリゾルバーであり、ユーザーが UserManager へのアクセス権限を持っている場合の、JCR セッションに基づいたもの。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/UserManager.html">UserManager</a></td>
+   <td>UserManagerは、承認可能なオブジェクト（ユーザーやグループ）へのアクセス権と手段を提供します。 UserManagerが特定のセッションにバインドされている。
+   </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">Authorizable</a> </td>
@@ -157,22 +144,6 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/User.html">ユーザー</a><br /> </td>
    <td>現在のユーザー。</td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/privileges/PrivilegeManager.html">PrivilegeManager</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/preferences/Preferences.html">環境設定</a></td>
-   <td>現在のユーザーの環境設定（このリソースリゾルバーが JCR ベースのリソースリゾルバーである場合、JCR セッションに基づいたもの）。</td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/preferences/PreferencesService.html">PreferencesService</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/auth/pin/PinManager.html">PinManager</a></td>
-   <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html">QueryBuilder</a></td>
@@ -203,7 +174,7 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
 
 #### WCM {#wcm}
 
-[**Page **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)は次の項目に適応します。
+**Page** は次の項目に適応します。
 
 <table>
  <tbody>
@@ -226,7 +197,7 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
  </tbody>
 </table>
 
-[**Component **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html)は次の項目に適応します。
+**Component** は次の項目に適応します。
 
 | [Resource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | コンポーネントのリソース。 |
 |---|---|
@@ -234,7 +205,7 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
 | [Node](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | コンポーネントのノード。 |
 | ... | コンポーネントのリソースが適応可能なすべての項目。 |
 
-[**Template **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Template.html)は次の項目に適応します。
+**Template** は次の項目に適応します。
 
 <table>
  <tbody>
@@ -259,7 +230,7 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
 
 #### セキュリティ {#security}
 
-[**Authorizable **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Authorizable.html)、[**User**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/User.html) および [**Group **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Group.html)は以下に適応します。
+**Authorizable**、**User** および **Group** は以下に適応します。
 
 | [Node](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | ユーザーまたはグループのホームノードを返します。 |
 |---|---|
@@ -267,7 +238,7 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
 
 #### DAM {#dam}
 
-[**アセット&#x200B;**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Asset.html):
+**アセット** :
 
 | [Resource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | アセットのリソース。 |
 |---|---|
@@ -276,7 +247,7 @@ There are various ways that `Adaptable.adaptTo()` can be implemented:
 
 #### タグ付け {#tagging}
 
-[**タグ&#x200B;**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/Tag.html):
+**タグ** :
 
 | [Resource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | タグのリソース。 |
 |---|---|
