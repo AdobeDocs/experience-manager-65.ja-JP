@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: fc09ba6cb923d9ea25ec14af093d7f86a4835d85
+source-git-commit: d621a612556f0bea032444c2e07be101868b1905
 workflow-type: tm+mt
-source-wordcount: '3365'
+source-wordcount: '3371'
 ht-degree: 66%
 
 ---
@@ -68,11 +68,11 @@ See [Discover Sling in 15 minutes](https://sling.apache.org/documentation/gettin
 
 次の図は、Sling のスクリプト解決の説明です。HTTP リクエストからコンテンツノード、コンテンツノードからリソースタイプ、リソースタイプからスクリプトを得る方法と、使用可能なスクリプト変数を示しています。
 
-![chlimage_1-84](assets/chlimage_1-97.png)
+![Apache Slingスクリプトの解決について](assets/sling-cheatsheet-01.png)
 
 次の図は、SlingPostServlet を扱う際に使用できる、非表示ながらも強力なリクエストパラメーターの説明です。リポジトリでノードを作成、変更、削除、コピーおよび移動するためのオプションを際限なしに提供する、すべての POST リクエストのデフォルトハンドラーです。
 
-![chlimage_1-85](assets/chlimage_1-98.png)
+![SlingPostServletの使用](assets/sling-cheatsheet-02.png)
 
 ### Sling はコンテンツ中心型 {#sling-is-content-centric}
 
@@ -185,7 +185,7 @@ Using the above example, if the `sling:resourceType` is `hr/jobs` then for:
 
 * 他の形式のURL（.htmlで終わらない）
 
-   For example `../content/corporate/jobs/developer.pdf`
+   例：`../content/corporate/jobs/developer.pdf`
 
    スクリプトは次のとおりで `/apps/hr/jobs/jobs.pdf.esp`す。 スクリプト名にサフィックスが追加されます。
 
