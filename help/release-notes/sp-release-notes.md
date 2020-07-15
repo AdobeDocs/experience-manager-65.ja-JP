@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5 固有のリリース�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 97714abf86a80f6b3d1c68c85ccf443482da22bf
+source-git-commit: a599a1c75a1933d6b21e60e96485f43a0aedd679
 workflow-type: tm+mt
-source-wordcount: '4529'
+source-wordcount: '4496'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 7%
 | バージョン | 6.5.5.0 |
 | 型 | Service Pack のリリース |
 | 日付 | 2020年6月4日 |
-| ダウンロード URL | [パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/AEM-6.5.5.0-Service-Pack)、 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
 ## Adobe Experience Manager6.5.5.0に含まれるもの {#what-s-included-in-aem}
 
@@ -281,7 +281,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 ### [!DNL Brand Portal] {#assets-brand-portal-6550}
 
 * Removing a published metadata schema from [!DNL Brand Portal] results in an error (CQ-4292063).
-* 管理者がAdobe Developer Consoleを使用してBrand Portalを使用して [!DNL Experience Manager Assets] 6.5.4を設定した場合、ユー [!DNL Brand Portal] ザーは貢献度フォルダーのアセットを(NPR-33046)から [!DNL Brand Portal][!DNL Experience Manager] (NPR-33046)に公開できません。
+* 管理者がAdobe Developer Consoleを使用してBrand Portalを使用して6.5.4を設定した場合、ユー [!DNL Experience Manager Assets] ザーは貢献度フォルダーのアセットをから [!DNL Brand Portal][!DNL Brand Portal][!DNL Experience Manager] (NPR-33046)に公開できません。
 * 競合の原因となる親フォルダーの重複レプリケーション(NPR-33001)。
 
 ### [!DNL Communities] {#communities-6550}
@@ -340,7 +340,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 既存のAdobe Experience Manager6.5インスタンスにService Packをインストールするには、次の手順を実行します。
 
-1. Service Packは、 [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/AEM-6.5.5.0-Service-Pack) （パッケージ共有）または [Software Distribution（ソフトウェア配布）からダウンロードします](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
+1. Service Packを [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)（ソフトウェア配布）からダウンロードします。
 
 1. パッケージマネージャーを開き、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。 使用方法について詳しくは、 [パッケージマネージャーを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
