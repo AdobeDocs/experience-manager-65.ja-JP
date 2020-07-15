@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 7d3ceccb-4f00-4e11-9c9f-6de46a455e02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+workflow-type: tm+mt
+source-wordcount: '2182'
+ht-degree: 81%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
    <td>6.5</td>
   </tr>
   <tr>
-   <th>タイプ</th>
+   <th>型</th>
    <td>メジャーリリース</td>
   </tr>
   <tr>
@@ -36,7 +39,7 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
   </tr>
   <tr>
    <th>推奨されるアップデート</th>
-   <td>See <a href="https://helpx.adobe.com/experience-manager/aem-releases-updates.html">AEM Releases and Updates</a></td>
+   <td>See <a href="https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html">AEM Releases and Updates</a></td>
   </tr>
  </tbody>
 </table>
@@ -49,11 +52,11 @@ Adobe Experience Manager 6.5 は、2019 年 8 月 4 日より正式版として�
 
 ![AEM 6.5 ログイン画面](/help/assets/assets/aem65-login-v4.png)
 
-## 最新情報 {#what-s-new}
+## 新機能 {#what-s-new}
 
 Adobe Experience Manager 6.5 は、Adobe Experience Manager 6.4 コードベースのアップグレードリリースです。新機能および強化機能、お客様向けの重要な修正、お客様向けの優先順位の高い機能強化、製品の安定性向上のための全般的なバグ修正が加えられています。また、SP4 までの Adobe Experience Manager 6.4 サービスパックリリースも含まれています。
 
-以下のリストは概要を示し、以降のページは詳細を示します。
+以下のリストで概要を説明します。その後のページでは詳細をリストします。
 
 ### Experience Manager の基盤 {#experience-manager-foundation}
 
@@ -89,7 +92,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 #### 検索とインデックス作成 {#search-indexing}
 
-* Oak 内の検索では動的ファセットをサポートするようになりました。例えば、アセット検索のフィルターレールには、結果の予測量が表示されます。
+* Oak 内の検索では動的ファセットをサポートするようになりました。例えば、アセット検索のフィルターレールに、結果の予測量が表示されます。
 * QueryBuilder は、動的ファセットを使用して結果を返すように拡張されました。
 
 #### アップグレード {#upgrade}
@@ -115,7 +118,7 @@ SPA のサポートは AEM 6.4 SP2 の一部として導入されたものです
 
 #### ヘッドレスコンテンツ管理 {#headless-content-management}
 
-AEM では、様々な形式で様々なスタックレベルからコンテンツを提供できます。一部は、2008 年以降、](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)Sling GET[ および ](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)POST Servlet[ で機能しています。コンテンツサービス（[Sling Model エクスポーター](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html)）は AEM 6.3 で導入されたもので、AEM SJ SDK で単一ページアプリの改善に使用されている方法です。[HTTP API for Assets](/help/assets/mac-api-assets.md) は、AEM 6.5 向けに拡張された CRUD API です。
+AEM では、様々な形式で様々なスタックレベルからコンテンツを提供できます。一部は、2008 年以降、](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)Sling GET[ および ](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)POST Servlet[ で機能しています。コンテンツサービス（[Sling Model エクスポーター](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html)）は AEM 6.3 で導入されたもので、AEM SJ SDK で単一ページアプリの改善に使用されている方法です。[HTTP API for Assets](/help/assets/mac-api-assets.md) は、AEM 6.5 向けに拡張された CRUD API です。
 
 新しいHTTP API機能：
 
@@ -142,17 +145,17 @@ AEM では、様々な形式で様々なスタックレベルからコンテン�
 * 動的プレースホルダーを使用して、データでトリガーされるコンテンツの場所または設定別にパーソナライズできます。
 * Adobe Analytics と AEM Screens Player の連携でインサイトの統合が促進されます。
 
-For more details on changes to AEM Screens - see the Release Notes in the [AEM Screens User Guide](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
+For more details on changes to AEM Screens - see the Release Notes in the [AEM Screens User Guide](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 ### Experience Manager Assets {#experience-manager-assets}
 
-[AEM 6.5 Assetsリリースノートの変更の完全なリストです](/help/release-notes/assets.md)。
+Full list of changes in [AEM 6.5 Assets release notes](/help/release-notes/assets.md).
 
 AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリエイティブおよびマーケティングロールの生産性を高めるため、以下の機能およびき機能強化が導入されています。
 
 #### Adobe Creative Cloud との連携 {#integration-with-adobe-creative-cloud}
 
-[Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)（Photoshop、Illustrator、InDesign などの Adobe Creative Cloud アプリケーションを使用するクリエイティブユーザー向けのアプリ内エクスペリエンス）の導入により、コンテンツ作成プロセスにおけるクリエイティブ担当者とマーケティング担当者のコラボレーションが効率化されます。AEMデスクトップアプリケーションは、任意のファイルタイプとデスクトップアプリケーションを使用して、デスクトップ上のAEMのアセットを操作するユーザーのニーズを引き続きサポートします。
+[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)（Photoshop、Illustrator、InDesign などの Adobe Creative Cloud アプリケーションを使用するクリエイティブユーザー向けのアプリ内エクスペリエンス）の導入により、コンテンツ作成プロセスにおけるクリエイティブ担当者とマーケティング担当者のコラボレーションが効率化されます。AEMデスクトップアプリは、任意のファイルタイプとデスクトップアプリケーションを使用して、デスクトップ上のAEMのアセットを操作するユーザーのニーズを引き続きサポートします。
 
 さらに、AEM は Adobe Stock と連携しているので、ユーザーは AEM Web UI から直接 Adobe Stock アセットの検索、プレビュー、ライセンス取得、保存をおこなえます。
 
@@ -160,7 +163,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### Connected Assets {#connected-assets}
 
-「接続されたアセット」機能は、中央のAEM Assets DAMデプロイメントからのアセットを活用する必要がある、多数のAEMサイトデプロイメントを含む大規模なデプロイメントを対象としています。 これにより、一元的に管理される資産に関するガバナンスを改善し、さまざまなサイトの導入に対する資産の供給を効率的に行うことができます。
+「Connected Assets」機能は、中央AEM AssetsのDAM展開からのアセットを活用する必要がある、多数のAEM Sites展開を伴う大規模な展開をターゲットにしています。 一元的に管理されるアセットの管理を改善しながら、さまざまなサイトの導入に対するアセットの供給を効率的に行うことができます。
 
 ### Dynamic Media {#dynamic-media}
 
@@ -171,7 +174,7 @@ Dynamic Media により、リッチメディアのオーサリングと AEM Asse
 * 360 ビデオおよび VR ヘッドセットのサポート
 * カスタムビデオのサムネール
 * アクセシビリティのサポート強化
-* ホット・リンク保護
+* ホットリンク保護
 
 #### ユーザーエクスペリエンスと検索 {#user-experience-and-search}
 
@@ -217,7 +220,7 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様中心のバグ修正と機能強化リクエストの開発に関する情報収集、優先順位付け、追跡の手順およびプロセスを整備しています。The [Adobe Marketing Cloud Support Portal](https://helpx.adobe.com/marketing-cloud/contact-support.html) is integrated with the Adobe Enhancement &amp; Defect Tracking System. お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、すべての顧客情報が収集され、優先順位付けとレポートに使用されます。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様中心のバグ修正と機能強化リクエストの開発に関する情報収集、優先順位付け、追跡の手順およびプロセスを整備しています。The [Adobe Marketing Cloud Support Portal](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html) is integrated with the Adobe Enhancement &amp; Defect Tracking System. お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、すべての顧客情報が収集され、優先順位付けとレポートに使用されます。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 この優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更がおこなわれました。
 
@@ -226,8 +229,8 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 **Foundation**
 
 * スタンドアロンのクイックスタート：cq-quickstart-6.5.0.jar
-* アプリケーションサーバークイックスタート：cq-quickstart-6.5.0.war
-* 様々な Web サーバーおよびプラットフォーム向けの Dispatcher 4.3.2 以降（[ダウンロードリンク](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)）
+* Application Server Quickstart: cq-quickstart-6.5.0.war
+* 様々な Web サーバーおよびプラットフォーム向けの Dispatcher 4.3.2 以降（[ダウンロードリンク](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)）
 * Eclipse IDE 用プラグイン（[詳細およびダウンロード](/help/sites-developing/aem-eclipse.md)）
 
 * Brackets コードエディターの拡張機能（[詳細およびダウンロード](/help/sites-developing/aem-brackets.md)）
@@ -246,10 +249,10 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 
 * スマートコンテンツの言語モデル。英語は事前インストール済み。ほかに以下の言語がダウンロード可能
 
-   * [ドイツ語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [スペイン語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [イタリア語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [フランス語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
+   * [ドイツ語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+   * [スペイン語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+   * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+   * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * ダイアログ変換ツールなどを含む AEM Modernize Tool Suite（[GitHub プロジェクト](https://github.com/adobe/aem-modernize-tools)）
 
@@ -258,10 +261,10 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 * 強化された PDF Rasterizer を追加するためのパッケージ（[詳細](/help/assets/aem-pdf-rasterizer.md)）
 * 強化された RAW 画像のサポートを追加するためのパッケージ（[詳細](/help/assets/camera-raw.md)）
 
-**Forms**
+**フォーム**
 
-* [AEM Forms の機能パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
-* [AEM Forms OSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
+* [AEM Forms の機能パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)
+* [AEM FormsOSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
 
 ## 言語 {#languages}
 
@@ -290,7 +293,7 @@ Experience Manager 6.5 は、中国語エンコーディング規格の使用に
 
 サポートされているプラットフォーム（サポートレベルを含む）の完全な一覧表については、[AEM 6.5 の技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-Oak microKernel forOak microKernel for
+Oak MicroKernel forOak MicroKernel
 
 >[!NOTE]
 >
