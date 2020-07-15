@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: 4949eeb190f26850f80e1ad107f2057c661ed23d
+source-git-commit: bac56cb8e172d826114e1e607dc24b0a17821f8c
 workflow-type: tm+mt
 source-wordcount: '2100'
 ht-degree: 44%
@@ -34,7 +34,7 @@ Node node = resource.adaptTo(Node.class);
 
 * 実装固有のオブジェクトを取得します。
 
-   For example, a JCR-based implementation of the generic [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) interface provides access to the underlying JCR [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).`
+   For example, a JCR-based implementation of the generic [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) interface provides access to the underlying JCR [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 * 内部的なコンテキストオブジェクトを渡す必要があるオブジェクトのショートカット作成。
 
@@ -70,7 +70,7 @@ To improve performance, implementations are free to cache the object returned fr
 There are various ways that `Adaptable.adaptTo()` can be implemented:
 
 * オブジェクト自体による実装（このメソッド自体を実装して特定のオブジェクトにマッピングします）。
-* 「」(任意のオブジェクトをマッピングでき [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)ます)。
+* を使用し [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)て、任意のオブジェクトをマッピングできます。
 
    オブジェクトは、引き続き `Adaptable` インターフェイスを実装し、拡張する必要があります [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (これは、Central Adapter Managerへの `adaptTo` 呼び出しを渡します)。
 
