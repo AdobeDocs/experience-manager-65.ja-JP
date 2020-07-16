@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: bb523ecf97ea18d8e8d5afa238fdf9e95fa58ab4
+source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 43%
 
 ---
 
@@ -28,13 +31,13 @@ FFmpeg は、オーサー環境で、アップロードしたイネーブルメ�
 FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしているサーバーにインストールする必要があります。
 
 1. Go to [https://www.ffmpeg.org](https://www.ffmpeg.org/).
-1. ご使用の環境（Macintosh、WindowsまたはLinux）用の最新バージョンのFFmpegをダウンロードします。
+1. ご使用の環境（Macintosh、Windows、またはLinux）用の最新バージョンのFFmpegをダウンロードします。
 
-   * 古いバージョンのセキュリティの脆弱性により、FFmpegを最新の状態に保つことが重要です。
+   * 古いバージョンのセキュリティの脆弱性により、FMPEGを最新の状態に保つことが重要です。
 
 1. OS の手順に従って FFmpeg をインストールします。
 
-1. FFmpeg実行可能ファイルがシステムパスに設定されていることを確認します。
+1. システムパスにFmpeg実行可能ファイルが設定されていることを確認してください。
 
    システム内の任意のディレクトリからFFmpegを実行できるはずです。
 
@@ -49,18 +52,18 @@ By default, when FFmpeg is installed, multiple renditions are configured (transc
 To modify the [!UICONTROL DAM Update Asset] workflow, and in this example, to turn off transcoding:
 
 * 管理者権限で作成者インスタンスにサインインします。
-* グローバルナビゲーションから、 **[!UICONTROL Tools]** / **[!UICONTROL Workflow]** / **[!UICONTROL Modelsに移動し]**&#x200B;ます。
+* グローバルナビゲーションから、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルに移動します]**。
 * Locate **[!UICONTROL DAM Update Asset]**.
-* 重複キーを押しながらクリックすると、編集用のワークフローがクラシックUIで開きます。
+* 重複を押しながらクリックすると、編集用のワークフローがクラシックUIで開きます。
 
    Resulting location: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
 * Double-click the **[!UICONTROL FFmpeg transcoding]** step to access the Step Properties dialog.
 * Under the **[!UICONTROL Process]** tab:
 
-   * **[!UICONTROL 歩調]**:トランスコードを無効にするすべてのエントリを消去します。初期設定値： `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL 軍備]**: すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
-![chlimage_1-372](assets/chlimage_1-372.png)
+   ![chlimage_1-372](assets/chlimage_1-372.png)
 
 * Select **[!UICONTROL OK]** to close the `Step Properties` dialog.
 
