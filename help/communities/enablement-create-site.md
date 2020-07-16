@@ -276,32 +276,29 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
    * 公開時に、CRXDEにアクセスし、管理者権限でログインします[-ERR:REF-NOT-FOUND-`admin/admin`
 
-1. 
 1. In the project browser, expand `/etc/map`
-
-   * Select the `http` node**
+1. Select the `http` node**
 
       * Select **Create Node**
 
          **名前** localhost.4503
 
-      * (do *not* use &#39;:&#39;)[-ERR:REF-NOT-FOUND-
+         * (do *not* use &#39;:&#39;)[-ERR:REF-NOT-FOUND-
 
-1. 
-
-   * With newly created `localhost.4503` node selected
+1.  With newly created `localhost.4503` node selected
 
       * **追加特性**
-      * **名前**：sling:match
-      * **タイプ**：String
-   **値**：localhost.4503/$
+      
+        * **名前**：sling:match
+        * **タイプ**：String
+        * **値**：localhost.4503/$
 
-   * （「$」文字で終わる必要があります）
+     （「$」文字で終わる必要があります）
 
       * **追加特性**
-      * **名前**：sling:internalRedirect
-      * **タイプ**：String
-
+      
+        * **名前**：sling:internalRedirect
+        * **タイプ**：String
 
 1. **値**：/content/sites/enable/en.html
 1. 「**すべて保存**」を選択します。
@@ -334,14 +331,13 @@ To disable, simply pre-pend the `sling:match` property value with an &#39;x&#39;
 
 また、管理者は[サイトを編集アイコン](/help/communities/sites-console.md#modifying-site-properties)を使用して、タイトルなどのサイトプロパティを変更できます。****
 
->変更後は、必ず&#x200B;**保存**&#x200B;して再&#x200B;**公開**&#x200B;してください。
->
+変更後は、必ず&#x200B;**保存**&#x200B;して再&#x200B;**公開**&#x200B;してください。
+
 >[!NOTE]](/help/sites-authoring/basic-handling.md)[](/help/sites-authoring/qg-page-authoring.md)
+>
+>AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
 
-
-### AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
-
-カタログの追加 {#add-a-catalog}
+### カタログの追加 {#add-a-catalog}
 
 このコミュニティサイトに選択されたコミュニティサイトテンプレートには、カタログ機能が含まれています。
 
