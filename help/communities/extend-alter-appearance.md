@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: 618464d1e01986786a47a4e9c6ecce87e2a77ec3
+workflow-type: tm+mt
+source-wordcount: '278'
+ht-degree: 58%
 
 ---
 
@@ -26,28 +29,29 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 >
 >この拡張機能を使用するには、影響を受けるWebサイト内のコメントシステムのインスタンス(/content)で、そのresourceTypeをカスタムコメントシステムに設定する必要があります。
 
+
 ## HBS スクリプトの変更 {#modify-the-hbs-scripts}
 
 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* Open [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* Open [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * コメント投稿用のアバターを含むタグ（～行21）をコメントアウトします。
-
-      ```
-      <!--
-       <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
-       -->
-      ```
-
-* Open [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
-
-   * 次のコメントエントリ（～行44）のアバターを含むタグをコメントアウトします。
+   * コメント投稿のアバターを含むタグをコメントアウトします（～行21）。
 
       ```
-      <!--
-       <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
-       -->
+        <!--
+         <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+         -->
+      ```
+
+* Open [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+
+   * 次のコメントエントリ用のアバターを含むタグをコメントアウトします（～行44）。
+
+      ```
+        <!--
+         <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
+         -->
       ```
 
 * 「**すべて保存**」を選択します。
@@ -56,21 +60,21 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 アプリケーションを変更した後で、カスタムコンポーネントを再レプリケートする必要があります。
 
-その一つの方法は
+その方法の1つは、次のとおりです。
 
 * メインメニューから
 
-   * **ツール／運営／レプリケーション**&#x200B;を選択します。
-   * select `Activate Tree`
-   * 設定 `Start Path`:to `/apps/custom`
-   * deselect `Only Modified`
-   * 選択ボ `Activate`タン
+   * Select **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**.
+   * Select **[!UICONTROL Activate Tree]**.
+   * に設定 `Start Path` し `/apps/custom`ます。
+   * 「変更 **[!UICONTROL 済みのみ]**」の選択を解除します。
+   * Select **[!UICONTROL Activate]** button.
 
 ### 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 
 パブリッシュインスタンスで[エクスペリエンスを続行](/help/communities/extend-sample-page.md#publish-sample-page)すると、同じユーザーとしてサインインしたまま、パブリッシュ環境でページを更新してアバターを削除する変更を表示できます。
 
-![chlimage_1-136](assets/chlimage_1-136.png)
+![chlimage_1-81](assets/chlimage_1-81.png)
 
 ### サンプルコメント拡張パッケージ {#sample-comment-extension-package}
 
