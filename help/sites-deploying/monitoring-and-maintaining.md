@@ -223,6 +223,7 @@ AEM WCM およびリポジトリに対するアクセス要求はすべてここ
 > **system/console/status-Bundlelist **ページから生成された**Download Full **packageには、ImageServerとs7accessのログは含まれません。 サポートの目的で、問題が発生した場合は、カスタマーサポートに問い合わせる際に、ImageServerログとs7accessログも追加して [!DNL Dynamic Media] ください。
 
 ### >デバッグログレベルのアクティベート {#activating-the-debug-log-level}
+
 デフォルトのログレベル（[Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)）は情報（INFO）なので、デバッグメッセージはログに記録されません。
 
 ロガーのデバッグログレベルをアクティブにするには、リポジトリでデバッグす `org.apache.sling.commons.log.level` るプロパティを設定します。 例えば、 `/libs/sling/config/org.apache.sling.commons.log.LogManager` グローバルApache Slingログを設定す [る場合などです](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)。
