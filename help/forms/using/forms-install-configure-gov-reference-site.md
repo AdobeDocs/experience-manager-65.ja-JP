@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
 workflow-type: tm+mt
-source-wordcount: '4685'
+source-wordcount: '5004'
 ht-degree: 3%
 
 ---
@@ -222,6 +222,48 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 1. 設定済みのAdobe Signインスタンスから、設定済みのクライアントIDとクライアントシークレットを指定します。
 1. 「Adobe Signに接続」をクリックします。
 1. 接続が完了したら、「保存して閉じる」をクリックして統合を完了します。
+
+### 複数のフォームへの入力と署名 {#fill-sign-multiple-forms}
+
+このドキュメントでは、複数のフォームに入力して署名する機能を設定する手順を説明します。 同じ機能をここで試すこともでき [ます](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 このサンプルでは、このサンプルに必要なデータをAMEリポジトリに保存します。 これは、デモアセットをローカルサーバーにデプロイする際の摩擦のないエクスペリエンスを確実に実現するためです。 実際には、お客様が選択したRDMSに同じ情報を保存します。
+
+#### 前提条件 {#pre-requisites-fill-sign-multiple-forms}
+
+* [Day CQ 電子メールサービスの設定](https://docs.adobe.com/content/help/en/experience-manager-65/communities/administer/email.html)
+
+* [Adobe SignでのAEM Formsの設定](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html)
+
+#### ローカルサーバーでのサンプルのセットアップ {#setup-sample-local-server}
+
+次の手順を実行して、ローカルサーバーでサンプルを設定します。
+
+1. パッケージをインストールします。 このパッケージには、次の内容が含まれています。
+   * アダプティブフォーム. フォームは、formsandsigndemo **** フォルダーにあります。
+   * カスタムOSGIバンドル
+   * ワークフロー
+1. Adobe Sign Configurationを使用する [ように](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/consentform.html) 、同意フォームを設定します。
+1. Adobe Sign Configurationを使用するように [マルチステートインタレストロック](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/multistateinterestratelock.html) フォームを設定します。
+1. Formsandsigningdemo [ワークフローモデルを開きます](http://localhost:4502/editor.html/conf/global/settings/workflow/models/formsandsigningdemo.html) 。
+   1. CRXの「フォームを保存」の手順を開きます。
+   1. localhostをAEMサーバーのIPアドレスに変更します。
+   1. 変更を保存します。
+   1. ワークフローを同期してランタイムモデルを生成します。
+
+      ![複数のフォームへの署名](assets/sign-multiple-forms.jpg)
+
+   1. 「 [絞り込み条件」フォームを開きます](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。
+   1. 必須フィールドに入力します。 有効な電子メールアドレスを入力し、フォームに署名して送信する1つ以上のフォームを選択してください。
+フォームに入力し、署名するためのリンクが記載された電子メールを受信します。
+
+#### トラブルシューティング {#troubleshoot-sign-multiple-forms}
+
+* デバッグログは、サーバーのログフォルダーにある `signingmultipleforms.log` ファイルに書き込まれます。
+
+* 署名するフォームは、以下に保存され `/content/formsforsigning`ます。
+
+* すべてのバンドルがアクティブ状態になっていることを確認します。
+
+* 電子メールサーバーの設定を確認します。
 
 ### （オプション） MS Dynamicsクラウドの構成 {#ms-dynamics-cloud-configuration}
 
@@ -499,7 +541,7 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 #### Adobe I/Oでの統合の作成 {#create-integration-adobeio}
 
-システム管理者に連絡しない場合は、アドビのドメイン内で統合を作成する権限があることを確認してください。
+システム管理者に連絡しない場合は、アドビのドメイン内で統合を作成できる権限があることを確認してください。
 
 1. 「 [Adobe I/Oコンソール](https://console.adobe.io/)」に移動します。
 
