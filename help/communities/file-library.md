@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+workflow-type: tm+mt
+source-wordcount: '753'
+ht-degree: 41%
 
 ---
 
@@ -24,12 +27,12 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ドキュメントのこのセクションでは、以下の内容について説明します。：
 
-* AEMサイトへのファイルライブラリ機能の追加
+* ファイルライブラリ機能をAEMサイトに追加する。
 * Configuration settings for the `File Library` component.
 
 ### ファイルライブラリをページに追加 {#adding-a-file-library-to-a-page}
 
-To add a `File Library` component to a page in author mode, locate the component
+To add a `File Library` component to a page in author mode, locate the component:
 
 * `Communities / File Library`
 
@@ -37,15 +40,17 @@ To add a `File Library` component to a page in author mode, locate the component
 
 For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
 
-When the [required client-side libraries](/help/communities/essentials-file-library.md#essentials-for-client-side) are included, this is how the `File Library` component will appear:
+[必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-file-library.md#essentials-for-client-side) 、次のようにコンポー `File Library` ネントが表示されます。
 
-![chlimage_1-145](assets/chlimage_1-145.png)
+![chlimage_1-430](assets/chlimage_1-430.png)
 
 ### ファイルライブラリの設定 {#configuring-file-library}
 
 Select the placed `File Library` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-146](assets/chlimage_1-146.png) ![forum-config-1](assets/forum-config-1.png)
+![chlimage_1-431](assets/chlimage_1-431.png)
+
+![chlimage_1-432](assets/chlimage_1-432.png)
 
 #### 「コメント」タブ{#comments-tab}
 
@@ -69,11 +74,11 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **許可されるファイルタイプ**
 
-   ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定すると、指定されていないファイルは許可されません。 デフォルトでは、すべてのファイルタイプが許可されるように指定されていません。
+   ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定すると、指定されていないファイルは許可されません。 初期設定は指定されておらず、すべてのファイルタイプが許可されます。
 
 * **リッチテキストエディター**
 
-   チェックすると、コメントがマークアップと共に入力される場合があります。 初期設定はオフです。
+   オンにすると、注釈と共にコメントを入力できます。 初期設定はオフです。
 
 * **コメントを削除**
 
@@ -81,19 +86,19 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **タグ付けを許可**
 
-   チェックすると、ファイルにタグを追加する機能が有効になります。 初期設定はオフです。
+   オンにすると、ファイルにタグを追加する機能が有効になります。 初期設定はオフです。
 
 * **許可された名前空間**
 
-   「タグ付けを許可」を選択すると、使用可能なタグは、選択した名前空間に限定されます。 名前空間が選択されていない場合、すべての名前空間が許可されます。初期設定はすべての名前空間です。
+   「タグ付けを許可」を選択すると、使用できるタグは、選択した名前空間に限定されます。 名前空間が選択されていない場合、すべての名前空間が許可されます。初期設定はすべての名前空間です。
 
 * **推奨の制限**
 
-   「タグ付けを許可」をオンにした場合、この設定により、表示する推奨タグの数が制限されます。 -1 に設定した場合、制限はありません。初期設定は -1 です。
+   「タグ付けを許可」をオンにした場合、この設定により、表示される推奨タグの数が制限されます。 -1 に設定した場合、制限はありません。初期設定は -1 です。
 
 * **投票を許可**
 
-   オンにすると、ファイルの投票機能が有効になります。 初期設定はオフです。
+   オンにすると、ファイルのボーター機能が有効になります。 初期設定はオフです。
 
 * **フォローを許可**
 
@@ -101,15 +106,15 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **メンションを有効化**
 
-   有効にすると、登録済みコミュニティユーザーは、他の登録済みメンバー（名、姓、ユーザー名を使用）を識別し、共通の@user-name構文を使用してタグ付けできます。 タグ付きユーザーは、メンションに関する通知を受信します。
+   有効にすると、登録済みコミュニティユーザーが他の登録メンバー（名、姓、ユーザー名を使用）を識別し、共通の@user-name構文を使用してタグ付けできます。 タグ付けされたユーザーは、メンションに関する通知を受信します。
 
 * **最大メンション数**
 
-   投稿で許可するメンションの最大数を制限します。 初期設定は 10 です。
+   投稿で許可されるメンションの最大数を制限します。 初期設定は 10 です。
 
 * **UI メンションパターン**
 
-   投稿内の登録ユーザーにタグ(@mention)を付けるために許可されたパターン文字列を指定します。 例：～{{familyName}}{{givenName}}
+   投稿内の登録ユーザーにタグ(@mention)を付けるために許可されたパターン文字列を指定します。 例： ～{{familyName}}{{givenName}}
 
 * **スレッド化された返信を許可**
 
@@ -121,11 +126,11 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **事前モデレート**
 
-   このチェックボックスをオンにすると、コメントは発行サイトに表示される前に承認する必要があります。 初期設定はオフです。
+   このオプションを選択すると、コメントが発行サイトに表示される前に、承認される必要があります。 初期設定はオフです。
 
 * **コメントを削除**
 
-   オンにすると、訪問者がコメントを投稿したときに、コメントを削除する機能が提供されます。 初期設定はオンです。
+   オンの場合、コメントを投稿した訪問者にはコメントを削除する機能が与えられます。 初期設定はオンです。
 
 * **コメントを拒否**
 
@@ -133,11 +138,11 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **コメントを閉じる / 再度開く**
 
-   オンにした場合、信頼できるメンバーのモデレーターがコメントを閉じて再度開くことを許可します。 初期設定はオフです。
+   オンにした場合、信頼されたメンバーのモデレーターがコメントを閉じて再度開くことを許可します。 初期設定はオフです。
 
 * **コメントにフラグを設定**
 
-   このオプションを選択すると、訪問者はコメントに不適切なフラグを付けることができます。 初期設定はオフです。
+   このオプションを選択すると、訪問者は不適切としてコメントにフラグを付けることができます。 初期設定はオフです。
 
 * **フラグ設定理由リスト**
 
@@ -145,15 +150,15 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **カスタムフラグ設定理由**
 
-   このオプションを選択すると、訪問者はコメントに不適切なフラグを付ける理由を入力できます。 初期設定はオフです。
+   このオプションを選択すると、訪問者は、コメントに不適切なフラグを付ける理由を入力できます。 初期設定はオフです。
 
 * **モデレートのしきい値**
 
-   モデレーターに通知する前に、コメントに訪問者がフラグを付ける必要のある回数を入力します。 Default is one time (**1**).
+   モデレーターに通知する前に、訪問者がコメントにフラグを付ける必要がある回数を入力します。 Default is one time (**1**).
 
 * **フラグ付けの制限**
 
-   コメントが公開表示に表示される前にフラグ付けされる必要がある回数を入力します。 This number must be greater than or equal to the **Moderation Threshold**. 初期設定は 5 です。
+   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 This number must be greater than or equal to the **Moderation Threshold**. 初期設定は 5 です。
 
 ### 「並べ替え設定」タブ{#sort-settings-tab}
 
