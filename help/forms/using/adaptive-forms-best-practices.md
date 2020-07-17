@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: d5efcec4a0397d99c899643ff13a883a0ed02c81
+workflow-type: tm+mt
+source-wordcount: '4249'
+ht-degree: 80%
 
 ---
 
@@ -23,7 +26,7 @@ Adobe Experience Manager（AEM）Forms を使用すると、複雑なトラン�
 
 また、AEM の一般的なベストプラクティスについて、以下をお読みになることもお勧めします。
 
-* [ベストプラクティス：AEMのデプロイと保守](/help/sites-deploying/best-practices.md)
+* [ベストプラクティス： AEMのデプロイと保守](/help/sites-deploying/best-practices.md)
 * [ベストプラクティス：コンテンツのオーサリング](/help/sites-authoring/best-practices.md)
 * [ベストプラクティス：AEM の管理](/help/sites-administering/administer-best-practices.md)
 * [ベストプラクティス：ソリューションの開発](/help/sites-developing/best-practices.md)
@@ -45,6 +48,16 @@ For more information, see [How to Build AEM Projects using Apache Maven](/help/s
 
 * Eclipse 統合開発環境を使用している場合、AEM 開発者ツールを使用して Eclipse IDE を AEM インスタンスにシームレスに統合して、AEM アプリケーションを作成できます。詳しくは、「[Eclipse 用 AEM 開発者ツール](/help/sites-developing/aem-eclipse.md)」を参照してください。
 
+* コンテンツを保存したり、/libsフォルダーに変更を加えたりしないでください。 /appフォルダーにオーバーレイを作成して、デフォルトの機能を拡張または上書きします。
+
+* コンテンツを移動するパッケージを作成する場合は、パッケージフィルターのパスが正しく、必要なパスのみが記載されていることを確認します。
+
+* コンテンツを保存したり、/libsフォルダーに変更を加えたりしないでください。 /appフォルダーにオーバーレイを作成して、デフォルトの機能を拡張または上書きします。
+
+* パッケージの正しい依存関係を定義し、事前に決定されたインストールの順序/シーケンスを強制します。
+
+* /libsや/appsに参照可能なノードを作成しないでください。
+
 ### オーサリング環境の計画 {#planning-for-authoring-environment}
 
 AEM プロジェクトのセットアップを完了したら、アダプティブフォームのテンプレートおよびコンポーネントを作成してカスタマイズするための計画を策定します。
@@ -53,11 +66,11 @@ AEM プロジェクトのセットアップを完了したら、アダプティ�
 * AEM Forms では、次のフォームモデルに基づいてアダプティブフォームを作成することができます。フォームモデルは、フォームと AEM システム間のデータ交換のためのインターフェイスとして機能し、アダプティブフォーム内外のデータフローの XML ベースの構造を提供します。また、フォームモデルはスキーマおよび XFA 制約の形式で、アダプティブフォームにルールや制約を課します。
 
    * **なし**：このオプションを使用して作成されたアダプティブフォームは、フォームモデルを使用しません。このようなフォームで生成されるデータ XML は、フィールドと対応する値を持つフラットな構造です。
-   * **XMLまたはJSONスキーマ**:XMLスキーマとJSONシステムは、組織のバックエンドシステムでデータが生成または消費される構造を表します。 アダプティブフォームにスキーマを関連付け、その要素を使用して、アダプティブフォームに動的なコンテンツを追加することができます。 スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブで使用できます。 スキーマ要素をドラッグ &amp; ドロップしてフォームを作成できます。
+   * **XMLまたはJSONスキーマ**: XMLとJSONのスキーマは、組織のバックエンドシステムでデータが生成、消費される構造を表します。 アダプティブフォームにスキーマを関連付け、その要素を使用して、アダプティブフォームに動的なコンテンツを追加することができます。 スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブから利用できます。 スキーマ要素をドラッグ &amp; ドロップしてフォームを作成できます。
    * **XFA フォームテンプレート**：これまで XFA ベースの HTML5 フォームに投資してきた場合、これが最適なフォームデータモデルです。XFA ベースのフォームをアダプティブフォームに直接変換する方法を提供します。すべての既存の XFA ルールは、関連付けられたアダプティブフォームに保持されます。このアダプティブフォームは、検証、イベント、プロパティ、パターンなどの XFA 構成をサポートします。
-   * **Form Data Model**:これは、データベース、Webサービス、AEMユーザープロファイルなどのバックエンドシステムを統合して、アダプティブフォームに事前入力し、送信済みのフォームデータをバックエンドシステムに書き戻す場合に推奨されるフォームモデルです。 フォームデータモデルエディターにより、アダプティブフォームの作成に使用できるフォームデータモデルで、エンティティとサービスを定義して設定することができます。詳しくは、「[AEM Forms のデータ統合](/help/forms/using/data-integration.md)」を参照してください。
+   * **Form Data Model**: データベース、Webサービス、AEMユーザープロファイルなどのバックエンドシステムを統合して、アダプティブフォームに事前入力し、送信済みのフォームデータをバックエンドシステムに書き込む場合は、このフォームモデルをお勧めします。 フォームデータモデルエディターにより、アダプティブフォームの作成に使用できるフォームデータモデルで、エンティティとサービスを定義して設定することができます。詳しくは、「[AEM Forms のデータ統合](/help/forms/using/data-integration.md)」を参照してください。
 
-データモデルを選択する際には、要件に適合するかどうかだけでなく、すでに XFA および XSD アセットに投資をしている場合、それらの既存の投資を拡張できるかどうかを考慮することが重要です。生成されたXMLには、XPATHで定義されたXPATHごとのデータが含まれるので、フォームテンプレートの作成にはXSDモデルを使用することをお勧めします。スキーマで定義される フォームデータモデルのデフォルトとして XSD モデルを使用することは、データを処理して使用するバックエンドシステムからフォームデザインが切り離され、フォームフィールドとの 1 対 1 のマッピングによりフォームのパフォーマンスが向上する点でも有用です。また、フィールドの BindRef を XML でそのデータ値の XPATH にすることもできます。
+データモデルを選択する際には、要件に適合するかどうかだけでなく、すでに XFA および XSD アセットに投資をしている場合、それらの既存の投資を拡張できるかどうかを考慮することが重要です。生成されるXMLにはスキーマが定義するXPATHに従ったデータが含まれるので、フォームテンプレートの作成にはXSDモデルを使用することをお勧めします。 フォームデータモデルのデフォルトとして XSD モデルを使用することは、データを処理して使用するバックエンドシステムからフォームデザインが切り離され、フォームフィールドとの 1 対 1 のマッピングによりフォームのパフォーマンスが向上する点でも有用です。また、フィールドの BindRef を XML でそのデータ値の XPATH にすることもできます。
 
 詳しくは、「[アダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md)」を参照してください。
 
@@ -87,7 +100,7 @@ AEM プロジェクトのセットアップを完了したら、アダプティ�
 
 ### タッチに最適化されたオーサリング用 UI の使用 {#using-touch-optimized-ui-for-authoring}
 
-* サイドバーのオブジェクトブラウザーを使用して、フォーム階層の深い部分のフィールドにすばやくアクセスできます。 検索ボックスを使用してフォームまたはオブジェクトツリー内のオブジェクトを検索し、オブジェクト間を移動することができます。
+* サイドバーのオブジェクトブラウザーを使用すると、フォーム階層の深いフィールドにすばやくアクセスできます。 検索ボックスを使用してフォームまたはオブジェクトツリー内のオブジェクトを検索し、オブジェクト間を移動することができます。
 * To view and edit the properties of a component in the components browser in the sidebar, select the component and click ![cmppr-1](assets/cmppr-1.png). コンポーネントをダブルクリックして、プロパティブラウザーにコンポーネントのプロパティを表示することもできます。
 * フォームに対する操作をすばやく実行するには、キーボードショートカットを使用します。See [AEM Forms Keyboard Shortcuts](/help/forms/using/keyboard-shortcuts.md).
 
@@ -97,27 +110,27 @@ AEM プロジェクトのセットアップを完了したら、アダプティ�
 
 ### アダプティブフォームにおけるルールの使用 {#using-rules-in-adaptive-forms}
 
-AEM Forms が提供する[ルールエディター](/help/forms/using/rule-editor.md)を使用すると、アダプティブフォームコンポーネントに動的な動きを付加するルールを作成できます。これらのルールを使用すると、条件を評価し、フィールドの表示/非表示、値の計算、ドロップダウンリストの動的な変更など、コンポーネントに対するアクションをトリガーできます。
+AEM Forms が提供する[ルールエディター](/help/forms/using/rule-editor.md)を使用すると、アダプティブフォームコンポーネントに動的な動きを付加するルールを作成できます。これらのルールを使用すると、条件を評価し、フィールドの表示/非表示、値の計算、ドロップダウンリストの動的な変更など、コンポーネントに対してアクションをトリガーできます。
 
 ルールエディターには、ルールを記述するために、視覚的なエディターとコードエディターが用意されています。コードエディターモードを使用してルールを記述する際には、以下を考慮してください。
 
 * ルールの記述時には、フォームフィールドおよびコンポーネントには意味のある固有の名前を使用し、名前の競合を回避します。
-* ルールの式で、コンポーネント自身を参照するには、コンポーネントの `this` 演算子を使用します。これにより、コンポーネント名が変更されても、ルールは有効なままになります。例えば、次のように入力します。`field1.valueCommit script: this.value > 10`
+* ルールの式で、コンポーネント自身を参照するには、コンポーネントの `this` 演算子を使用します。これにより、コンポーネント名が変更されても、ルールは有効なままになります。例： `field1.valueCommit script: this.value > 10`
 
-* 他のフォームコンポーネントを参照する場合には、コンポーネント名を使用します。フィールドまたはコンポーネントの値を取得するには、`value` プロパティを使用します。例えば、次のように入力します。`field1.value`
+* 他のフォームコンポーネントを参照する場合には、コンポーネント名を使用します。フィールドまたはコンポーネントの値を取得するには、`value` プロパティを使用します。例： `field1.value`
 
-* 競合を回避するために、コンポーネントは固有の相対階層で参照します。例えば、次のように入力します。`parentName.fieldName`
+* 競合を回避するために、コンポーネントは固有の相対階層で参照します。例： `parentName.fieldName`
 
-* 複雑なルールや一般的に使用されるルールを処理する場合は、アダプティブフォーム間で指定して再利用できる別のクライアントライブラリの関数としてビジネスロジックを記述することを検討します。 クライアントライブラリは独立のライブラリとし、jQuery および Underscore.js 以外の外部依存性はなくしてください。You can also use the client library to enforce [server-side revalidation](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) of submitted form data.
+* 複雑なルールや一般的に使用されるルールを処理する場合は、指定してアダプティブフォーム間で再利用できる別のクライアントライブラリの機能としてビジネスロジックを記述することを検討してください。 クライアントライブラリは独立のライブラリとし、jQuery および Underscore.js 以外の外部依存性はなくしてください。You can also use the client library to enforce [server-side revalidation](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) of submitted form data.
 * アダプティブフォームが提供する一連の API を使用して、アダプティブフォームと通信したり、アダプティブフォーム上でアクションを実行したりできます。主要な API には次の項目が挙げられます。詳しくは、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://adobe.com/go/learn_aemforms_documentation_63)」を参照してください。
 
-   * `guideBridge.reset()`:フォームをリセットします。
-   * `guideBridge.submit()`:フォームを送信します。
-   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`:フィールドにフォーカスを設定します。
-   * `guideBridge.validate(errorList, somExpression, focus)`:フォームを検証します。
-   * `guideBridge.getDataXML(options)`:フォームデータをXMLとして取得します。
-   * `guideBridge.resolveNode(somExpression)`:フォームオブジェクトを取得します。
-   * `guideBridge.setProperty(somList, propertyName, valueList)`:フォームオブジェクトのプロパティを設定します。
+   * `guideBridge.reset()`: フォームをリセットします。
+   * `guideBridge.submit()`: フォームを送信します。
+   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`: フィールドにフォーカスを設定します。
+   * `guideBridge.validate(errorList, somExpression, focus)`: フォームを検証します。
+   * `guideBridge.getDataXML(options)`: フォームデータをXMLとして取得します。
+   * `guideBridge.resolveNode(somExpression)`: フォームオブジェクトを取得します。
+   * `guideBridge.setProperty(somList, propertyName, valueList)`: フォームオブジェクトのプロパティを設定します。
    * 上記に加えて、以下のフィールドプロパティを使用できます。
 
       * `field.value` フィールドの値を変更します。
@@ -168,7 +181,7 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
 * 事前入力データ XML は、アダプティブフォームに関連付られたフォームモデルのスキーマに準拠している必要があります。
 * 事前入力 XML には `afBoundedData` および `afUnBoundedData` セクションを含めて、アダプティブフォームの連結されたフィールドと連結されていないフィールドのどちらにも事前入力するようにします。
 
-* フォームデータモデルに基づくアダプティブフォームの場合、AEM Formsは、標準搭載のフォームデータモデル事前入力サービスを提供します。 この事前入力サービスは、アダプティブフォーム内のデータモデルオブジェクトに対してデータソースのクエリを実行し、フォームのレンダリング時に、フィールドに値を取り込みます。
+* フォームデータモデルに基づくアダプティブフォームの場合、AEM Formsは標準搭載のフォームデータモデル事前入力サービスを提供します。 この事前入力サービスは、アダプティブフォーム内のデータモデルオブジェクトに対してデータソースのクエリを実行し、フォームのレンダリング時に、フィールドに値を取り込みます。
 * ファイル、crx、サービス、http プロトコルを使用してアダプティブフォームに事前入力することもできます。
 * AEM Forms は、OSGi サービスとしてプラグインしてアダプティブフォームに事前入力できるカスタム事前入力サービスをサポートしています。
 
@@ -176,7 +189,7 @@ For more information, see [Prefill adaptive form fields](/help/forms/using/prepo
 
 ### アダプティブフォームの署名と送信 {#signing-and-submitting-adaptive-forms}
 
-Adaptive forms では、ユーザー指定のデータを処理するために、送信アクションが必要となります。送信アクションは、アダプティブフォームを使用してタスクを送信する際に、データに対して実行されるアクションを決定します。
+Adaptive forms では、ユーザー指定のデータを処理するために、送信アクションが必要となります。送信アクションは、アダプティブフォームを使用して送信するデータに対して実行されるタスクを決定します。
 
 * アダプティブフォームには、初期設定済みの複数の送信アクションがあります。For details, see [Configuring the Submit action](/help/forms/using/configuring-submit-actions.md).
 * デフォルトの送信アクションが実際のユースケースに適していない場合は、カスタム送信アクションを作成できます。For more information, see [Writing custom Submit action for adaptive forms](/help/forms/using/custom-submit-action-form.md).
@@ -239,13 +252,13 @@ AEM には、アダプティブフォームをローカライズするために�
 
 アダプティブフォームをローカライズする際のベストプラクティスの一部を以下に示します。
 
-* フォーム間の共通要素やフラグメントのローカライズには、アダプティブフォームフラグメントを使用します。 フラグメントを一度ローカライズすると、ローカライズしたフラグメントが使用されているすべてのフォームにその内容が反映されます。
-* 新しいコンポーネントの追加やローカライズしたフォームへのスクリプトの適用などの変更を行った場合、その変更内容は自動的にローカライズされません。したがって、フォームをローカライズする前にフォームを最終決定し、複数のローカライゼーションサイクルを避ける必要があります。
-* ブラウザーのロケールを上書きし、指定したロケールでフォームをレンダリングするには、`afAcceptLang` 要求パラメーターを使用します。例えば、次のURLは、ブラウザーの設定で指定されたロケールに関係なく、日本語ロケールでフォームをレンダリングするように強制します。
+* アダプティブフォームフラグメントを使用すると、フォーム間やローカライズフラグメントで共通の要素を使用できます。 フラグメントを一度ローカライズすると、ローカライズしたフラグメントが使用されているすべてのフォームにその内容が反映されます。
+* 新しいコンポーネントの追加やローカライズしたフォームへのスクリプトの適用などの変更を行った場合、その変更内容は自動的にローカライズされません。したがって、複数のローカライゼーションサイクルを避けるために、フォームをローカライズする前に最終決定する必要があります。
+* ブラウザーのロケールを上書きし、指定したロケールでフォームをレンダリングするには、`afAcceptLang` 要求パラメーターを使用します。例えば、次のURLは、ブラウザーの設定で指定されているロケールに関係なく、日本語ロケールでのフォームのレンダリングを強制します。
 
    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* AEM Formsでは、現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語(taiwan)ロケール(zh-TW)、韓国語(ko-KR)のアダプティブフォームコンテンツのローカライゼーションをサポートしています。. ただし、実行時にアダプティブフォームに対する新しいロケールのサポートを追加できます。詳しくは、「[アダプティブフォームのローカライズに対する新しいロケールのサポート](/help/forms/using/supporting-new-language-localization.md)」を参照してください。
+* AEM Formsは現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語(zh-TW)、韓国語(ko-KR)ロケールでのアダプティブフォームコンテンツのローカライゼーションをサポートしています。 ただし、実行時にアダプティブフォームに対する新しいロケールのサポートを追加できます。詳しくは、「[アダプティブフォームのローカライズに対する新しいロケールのサポート](/help/forms/using/supporting-new-language-localization.md)」を参照してください。
 
 ## フォームプロジェクトを実稼働で使用するための準備 {#prepare-forms-project-for-production}
 
@@ -253,7 +266,7 @@ AEM には、アダプティブフォームをローカライズするために�
 
 ファイアウォール内側の保護された領域に、追加の AEM Forms サーバーを構成することもできます。このインスタンスは次の目的に使用できます。
 
-* **バッチ処理**:負荷の大きいバッチで繰り返しまたはスケジュールされたジョブ。 例えば、印刷明細、通信の生成や、PDF Generator、Output、アセンブラなどのドキュメントサービスの使用が例として挙げられます。
+* **バッチ処理**: 定期的なジョブ、または負荷の大きいバッチでスケジュールされるジョブ。 例えば、印刷明細、通信の生成や、PDF Generator、Output、アセンブラなどのドキュメントサービスの使用が例として挙げられます。
 * **PII データの保存**： PII データを処理サーバーに保存します。PII データの保存用にカスタムのストレージプロバイダーを使用している場合には必要ありません。
 
 ### プロジェクトの別の環境への移動 {#moving-project-to-another-environment}
@@ -265,6 +278,7 @@ AEM プロジェクトを別の環境に移動させたいという場合は、�
 * プロジェクト固有のコードパッケージおよびバンドルを、手動で、新しい AEM サーバー上の別個のパッケージまたはバンドルとしてデプロイします。
 * (*AEM Forms on JEE only*) Deploy LCAs and DSCs manually on Forms Workflow server.
 * [エクスポート-インポート](/help/forms/using/import-export-forms-templates.md)機能を使用して、アセットを新しい環境に移動します。複製エージェントを構成し、アセットを発行することもできます。
+* アップグレードする際は、非推奨のAPIと機能をすべて新しいAPIと機能に置き換えます。
 
 ### AEM の設定 {#configuring-aem}
 
@@ -273,7 +287,7 @@ AEM 全体のパフォーマンスを改善するために設定するベスト�
 * Felix Console からの JavaScript および CSS の HTML クライアントライブラリ圧縮を有効にします。See [Clientlibs explained by example](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/).
 * Cache all client libraries at `/etc.clientlibs/fd` and any additional custom client libraries on AEM dispatcher to increase the responsiveness and security of your published forms. 詳しくは、「[ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)」を参照してください。
 
-* キャッシュとパスを使 `/content/forms/af/` 用しな `/content/dam/formsanddocuments/*` いでください。 アダプティブフォームのキャッシュの設定に関する詳細は、「アダプティブフォームのキャッ [シュ」を参照してくださ](/help/forms/using/configure-adaptive-forms-cache.md)い。
+* キャッシュ `/content/forms/af/` と `/content/dam/formsanddocuments/*` パスは使用しません。 アダプティブフォームのキャッシュの設定に関する詳細は、「アダプティブフォームの [キャッシュ](/help/forms/using/configure-adaptive-forms-cache.md)」を参照してください。
 
 * Web サーバー圧縮モジュールを経由して、HTML を有効にします。詳しくは、「[AEM Forms サーバーのパフォーマンス調整](/help/forms/using/performance-tuning-aem-forms.md)」を参照してください。
 * 大規模なフォームのリクエスト構成ごとの呼び出し数を増加させます。「[大規模フォームおよび複雑なフォームのパフォーマンスの最適化](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms)」を参照してください。
@@ -293,7 +307,7 @@ AEM 全体のパフォーマンスを改善するために設定するベスト�
 
 * **ドラフトデータの保存**：アダプティブフォームの「ドラフト」機能を使用している場合は、カスタムサービスプロバイダーインターフェイス（SPI）を実装して、データベースなどのより安全なストレージにドラフトデータを保存してください。詳しくは、「[ドラフト&amp;送信コンポーネントとデータベースの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。
 
-* **送信データの保存**:フォームポータル送信ストアを使用する場合は、送信データをデータベースに保存するカスタムSPIを実装する必要があります。 See [Sample for integrating drafts &amp; submissions component with database](/help/forms/using/integrate-draft-submission-database.md) for a sample integration.
+* **送信データの保存**: フォームポータル送信ストアを使用する場合は、カスタムSPIを実装して送信データをデータベースに保存する必要があります。 See [Sample for integrating drafts &amp; submissions component with database](/help/forms/using/integrate-draft-submission-database.md) for a sample integration.
 
    安全なストレージにフォームデータと添付ファイルを保存するカスタム送信アクションを作成することもできます。See [Writing custom Submit action for adaptive forms](/help/forms/using/custom-submit-action-form.md) for more information.
 
