@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+workflow-type: tm+mt
+source-wordcount: '1226'
+ht-degree: 33%
 
 ---
 
@@ -24,15 +27,15 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 * 新しいトピックの作成
 * 表示とトピックへの返信
-* トピックのフォロー
+* トピックをフォロー
 * フォーラムの検索
 * フォーラムのコンテンツのモデレートの支援
-* フォーラムトピックを別のページに移動する
+* フォーラムトピックをページ間で移動する
 
-ドキュメントのこの節では、以下の内容について説明します。
+ドキュメントのこの節では、以下について説明します。
 
-* AEMサイトへのフォーラム機能の追加
-* Configuration settings for the `Forum`component.
+* フォーラム機能をAEMサイトに追加する。
+* Configuration settings for the `Forum` component.
 
 ### フォーラムをページに追加 {#adding-a-forum-to-a-page}
 
@@ -44,15 +47,17 @@ To add a `Forum` component to a page in author mode, use the component browser t
 
 For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
 
-When the [required client-side libraries](/help/communities/essentials-forum.md#essentials-for-client-side) are included, this is how the `Forum`component will appear :
+[必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-forum.md#essentials-for-client-side) 、次のようにコンポー `Forum` ネントが表示されます。
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![chlimage_1-60](assets/chlimage_1-60.png)
 
 ### フォーラムの設定 {#configuring-a-forum}
 
 Select the placed `Forum` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-105](assets/chlimage_1-105.png) ![forum-config](assets/forum-config.png)
+![chlimage_1-61](assets/chlimage_1-61.png)
+
+![forum-config](assets/forum-config.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -64,12 +69,12 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **添付サムネールの最大サイズ**
 
-   添付ファイルのサムネール画像の最大サイズ（ピクセル単位）。 デフォルト値は、800 x 800 です。
+   添付ファイルのサムネール画像の最大サイズ（ピクセル単位）です。 デフォルト値は、800 x 800 です。
 
 * **サムネールの最小画像サイズ**
 * **サムネールの最大サイズ**
 
-   インライン画像のサムネール画像の最大サイズ（ピクセル単位）。 デフォルト値は、800 x 800 です。
+   インライン画像のサムネール画像の最大サイズ（ピクセル単位）です。 デフォルト値は、800 x 800 です。
 
 * **1 ページのトピック数**
 
@@ -77,15 +82,15 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **モデレート**
 
-   オンにした場合、トピックとコメントの投稿は、公開サイトに表示される前に承認する必要があります。 初期設定はオフです。
+   オンにした場合、トピックとコメントの投稿は、投稿サイトに表示される前に承認する必要があります。 初期設定はオフです。
 
 * **閉じる**
 
-   オンにすると、フォーラムは新しいトピックとコメントに対して閉じられます。 初期設定はオフです。
+   選択すると、フォーラムは新しいトピックとコメントに対して閉じられます。 初期設定はオフです。
 
 * **リッチテキストエディター**
 
-   チェックすると、トピックとコメントがマークアップと共に入力される場合があります。 初期設定はオフです。
+   オンにすると、トピックとコメントがマークアップと共に入力される場合があります。 初期設定はオフです。
 
 * **タグ付けを許可**
 
@@ -93,7 +98,7 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **ファイルのアップロードを許可**
 
-   オンにした場合、添付ファイルをトピックまたはコメントに追加できます。 初期設定はオフです。
+   オンにした場合、添付ファイルをトピックまたはコメントに追加できるようにします。 初期設定はオフです。
 
 * **フォローを許可**
 
@@ -101,7 +106,7 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **ピン留めを許可**
 
-   オンにすると、フォーラムトピックがトピックのリストの上部に固定されます。 初期設定はオフです。
+   オンにすると、トピックのリストの上部にフォーラムトピックが固定される場合があります。 初期設定はオフです。
 
 * **おすすめコンテンツを許可**
 
@@ -113,17 +118,17 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **最大ファイルサイズ**
 
-   がオンの場合のみ `Allow File Uploads` 関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **許可されるファイルタイプ**
 
-   がオンの場合のみ `Allow File Uploads` 関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプが許可されるように指定されない。
+   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
-* **Max Attach Image File Size** Relevant only if Allow File Uploadsがチェックされている場合のみ。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+* **「ファイルのアップロードを許可」が選択されている場合のみ、「添付画像ファイルの最大サイズ**」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **スレッド化された返信を許可**
 
-   オンにすると、トピックに投稿されたコメントへの返信を許可します。 初期設定はオフです。
+   オンの場合、トピックに投稿されたコメントへの返信を許可します。 初期設定はオフです。
 
 * **投票を許可**
 
@@ -131,11 +136,11 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **ユーザーによるコメントおよびトピックの削除を許可**
 
-   オンにすると、投稿したコメントやトピックの削除をメンバーに許可します。 初期設定はオフです。
+   オンの場合、メンバーは投稿したコメントやトピックを削除できます。 初期設定はオフです。
 
 * **パンくずリストを表示**
 
-   オンにすると、トピックページのナビゲーション階層を表示します。 初期設定はオンです。
+   オンにした場合、トピックページのナビゲーションパンくずリストを表示します。 初期設定はオンです。
 
 * **バッジを表示**
 
@@ -143,7 +148,7 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **権限を持つメンバーを許可**
 
-   オンにすると、特権を持つメンバーのみがコンテンツの作成を許可されます。
+   オンの場合、権限を持つメンバーのみがコンテンツを作成できます。
 
 * **許可された権限を持つメンバー**
 
@@ -155,11 +160,11 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **メンションを有効化**
 
-   有効にすると、登録済みコミュニティユーザーは、他の登録済みメンバー（名、姓、ユーザー名を使用）を識別し、共通の@user-name構文を使用してタグ付けできます。 タグ付きユーザーは、メンションに関する通知を受信します。
+   有効にすると、登録済みコミュニティユーザーが他の登録メンバー（名、姓、ユーザー名を使用）を識別し、共通の@user-name構文を使用してタグ付けできます。 タグ付けされたユーザーは、メンションに関する通知を受信します。
 
 * **最大メンション数**
 
-   投稿で許可するメンションの最大数を制限します。 初期設定は 10 です。
+   投稿で許可されるメンションの最大数を制限します。 初期設定は 10 です。
 
 * **UI メンションパターン**
 
@@ -167,7 +172,7 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 >[!NOTE]
 >
->トピックに対するコメントを有効にするには、との両方 `AllowThreaded Replies` を確認す `Allow users to Delete Comments and Topics` る必要がある場合があります。
+>トピックに対するコメントを有効にする場合は、お `AllowThreaded Replies` よび両方 `Allow users to Delete Comments and Topics` を確認する必要があります。
 
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
@@ -176,15 +181,15 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 * **投稿を拒否**
 
-   このオプションを選択すると、信頼できるメンバーのモデレーターは、投稿を拒否し、投稿が公開フォーラムに表示されないようにします。 初期設定はオフです。
+   オンにすると、信頼されたメンバーのモデレーターは、投稿を拒否し、投稿がパブリックフォーラムに表示されないように許可されます。 初期設定はオフです。
 
 * **トピックを閉じる / 再度開く**
 
-   このオプションを選択すると、信頼できるメンバーのモデレーターがトピックを閉じて、さらに編集やコメントを行ったり、トピックを再度開いたりすることができます。 初期設定はオフです。
+   オンにすると、信頼されたメンバーのモデレーターがトピックを閉じて、さらに編集やコメントを行ったり、トピックを再度開いたりすることができます。 初期設定はオフです。
 
 * **トピックを移動**
 
-   オンにした場合、投稿側のモデレーターがトピックを移動できるようにします。 初期設定はオンです。
+   オンにした場合、公開側モデレーターがトピックを移動できるようにします。 初期設定はオンです。
 
 * **投稿にフラグを設定**
 
@@ -192,11 +197,11 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 * **フラグ設定理由リスト**
 
-   このオプションを選択すると、メンバーは、トピックまたはコメントに不適切なフラグを付ける理由を、ドロップダウンリストから選択できます。 初期設定はオフです。
+   オンにした場合、メンバーは、トピックまたはコメントに不適切なフラグを付ける理由をドロップダウンリストから選択できます。 初期設定はオフです。
 
 * **カスタムフラグ設定理由**
 
-   このオプションを選択すると、トピックやコメントに不適切なフラグを付ける理由をメンバーが自分で入力できるようになります。 初期設定はオフです。
+   このオプションを選択すると、トピックやコメントに不適切なフラグを付ける理由をメンバーが自分で入力できます。 初期設定はオフです。
 
 * **モデレートのしきい値**
 
@@ -204,7 +209,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 * **フラグ付けの制限**
 
-   トピックまたはコメントが公開表示に表示されなくなる前にフラグを付ける必要がある回数を入力します。 -1に設定すると、フラグ付けされたトピックまたはコメントがパブリック表示に表示されません。 そうでない場合、この数値はモデレートしきい値以上にする必要があります。 初期設定は 5 です。
+   トピックまたはコメントが公開表示に表示されなくなる前にフラグを付ける必要がある回数を入力します。 -1に設定した場合、フラグ付けされたトピックまたはコメントはパブリック表示に表示されません。 それ以外の場合は、この数値をモデレートしきい値以上にする必要があります。 初期設定は 5 です。
 
 #### 「タグフィールド」タブ{#tag-field-tab}
 
@@ -212,11 +217,11 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 * **許可された名前空間**
 
-   「設定」タブで `Allow Tagging` チェックされている場 **合は** 、該当します。 適用できるタグは、チェックされた名前空間内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」が含まれます。 初期設定は「なし」で、すべての名前空間が許可されます。
+   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **推奨の制限**
 
-   フォーラムへの投稿に対して提案として表示するタグの数を入力します。 初期設定は**-**1 （制限なし）です。
+   フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 初期設定は**-**1（制限なし）です。
 
 #### 「翻訳」タブ{#translation-tab}
 
@@ -224,7 +229,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 * **すべてを翻訳**
 
-   オンにすると、フォーラムスレッドがユーザーの好みの言語に変換されます。 初期設定はオフです。
+   選択すると、フォーラムスレッドがユーザーの推奨言語に変換されます。 初期設定はオフです。
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
@@ -232,15 +237,17 @@ Under the **Sort Settings** tab, specify how the posted comments are sorted when
 
 * **並べ替え**
 
-   許可されている並べ替えの選択をすべてオンにします： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
+   許可されている並べ替えの選択項目をすべてオンにします。 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **デフォルトとして設定**
 
-   プルダウンして、デフォルトとして表示するチェック済みの並べ替えオプションの1つを選択します。 デフォルトは `Newest` です。
+   デフォルトとして表示する、チェック済みの並べ替えオプションの1つをプルダウンして選択します。 デフォルトは `Newest` です。
 
 * **Analytics 並べ替えのタイムオプションを選択**
 
-   プルダウンして1つを選択しま `All, Last 24 Hours, Last 7 Days, Last 30 Days`す。 デフォルトは `All` です。
+   プルダウンして、次のオプションのいずれかを選択します。 `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
+
+   デフォルトは `All` です。
 
 ### 追加情報 {#additional-information}
 
