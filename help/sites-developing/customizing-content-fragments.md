@@ -113,9 +113,9 @@ ht-degree: 85%
 
 `/content/dam`
 
-アセットの権限 {#asset-permissions}
+#### アセットの権限 {#asset-permissions}
 
-#### 詳しくは、[コンテンツフラグメント - 削除に関する考慮事項](/help/assets/content-fragments/content-fragments-delete.md)を参照してください。
+詳しくは、[コンテンツフラグメント - 削除に関する考慮事項](/help/assets/content-fragments/content-fragments-delete.md)を参照してください。
 
 機能の統合 {#feature-integration}](/help/assets/content-fragments/content-fragments-delete.md)
 
@@ -248,11 +248,7 @@ Content Fragments are fully integrated with the [AEM translation workflow](/help
 >
 >次の 3 つのインターフェイスが、入口の役割を果たします。
 
-### **フラグメントテンプレート**（[FragmentTemplate[#$tu136]）
-
-
-
-* 
+* **フラグメントテンプレート**（[FragmentTemplate[#$tu136]）
 
    コンテンツフラグメントの作成元がコンテンツフラグメントモデルなのか、コンテンツフラグメントテンプレートなのか。`FragmentTemplate.createFragment()`
 
@@ -264,40 +260,34 @@ Content Fragments are fully integrated with the [AEM translation workflow](/help
 
    そして（作成後）そのフラグメントの構造情報
 
-   * この情報の例は次のとおりです。
-   * 基本データ（タイトル、説明）にアクセスする
+    * この情報の例は次のとおりです。
+    * 基本データ（タイトル、説明）にアクセスする
 
    フラグメントの要素のテンプレート／モデルにアクセスする
 
-   * 要素テンプレートを一覧表示する
-   * 特定の要素の構造に関する情報を取得する
+    * 要素テンプレートを一覧表示する
+    * 特定の要素の構造に関する情報を取得する
 
       * 要素テンプレートにアクセスする（`ElementTemplate` を参照）
       * フラグメントのバリエーションのテンプレートにアクセスする
       * バリエーションテンプレートを一覧表示する`ElementTemplate`
-   * 特定のバリエーションの構造情報を取得する
+   
+    * 特定のバリエーションの構造情報を取得する
 
       * バリエーションテンプレートにアクセスする（`VariationTemplate` を参照）
       * 初期関連コンテンツを取得する
       * 重要な情報を表すインターフェイスには、次のものがあります。`VariationTemplate`
-   * `ElementTemplate`
+   
+    * `ElementTemplate`
 
    基本データ（名前、タイトル）を取得する
 
-   * `ElementTemplate`初期要素コンテンツを取得する
+    * `ElementTemplate`初期要素コンテンツを取得する
 
       * `VariationTemplate`
       * 基本データ（名前、タイトル、説明）を取得する
-   * **コンテンツフラグメント**（[ContentFragment[#$tu159]）
-
-      * 
-
-
-
-
-
-
-* 
+      
+* **コンテンツフラグメント**（[ContentFragment[#$tu159]）
 
    このインターフェイスを使用してフラグメントにアクセスすることを強く推奨します。コンテンツ構造を直接変更しないでください。
 
@@ -316,6 +306,7 @@ Content Fragments are fully integrated with the [AEM translation workflow](/help
       * そのフラグメントに対して定義されているバリエーションを一覧表示する[](#caveats)
 
       * 新しいバリエーションをグローバルに作成する`ContentElement`
+      
    * 関連コンテンツを管理する
    * コレクションを一覧表示する
    * コレクションを追加する
@@ -323,11 +314,8 @@ Content Fragments are fully integrated with the [AEM translation workflow](/help
       * コレクションを削除する
       * フラグメントのモデルまたはテンプレートにアクセスする
       * フラグメントの主要要素を表すインターフェイスには、次のものがあります。
+      
    * **コンテンツ要素**（[ContentElement[#$tu180]）
-
-   
-
-   * 
 
       * 要素のバリエーションにアクセスする
       * バリエーションを一覧表示する
@@ -338,8 +326,6 @@ Content Fragments are fully integrated with the [AEM translation workflow](/help
          * バリエーションデータにアクセスする（`ContentVariation` を参照）](#caveats)
          * バリエーションを解決するためのショートカット（要素に指定されたバリエーションを使用できない場合は実装固有の追加のフォールバックロジックを適用）[](#caveats)
          * **コンテンツバリエーション**（[ContentVariation[#$tu191]）
-      * 
-   * 
 
       * 最後に変更された情報に基づくシンプルな同期
       * 3 つのインターフェイス（`ContentVariation`、`ContentFragment`、`ContentElement`、）すべてによって `Versionable` インターフェイスを拡張し、コンテンツフラグメントに必要な次のバージョン管理機能を追加します。
@@ -350,12 +336,6 @@ Content Fragments are fully integrated with the [AEM translation workflow](/help
    * バージョン管理されている要素の特定のバージョンのコンテンツを取得する
    * 適応 - adaptTo() の使用{#adapting-using-adaptto}
    * 次のものを適応させることができます。
-
-
-
-
-
-
 
 ### `ContentFragment` は、次のものに適応させることができます。
 
