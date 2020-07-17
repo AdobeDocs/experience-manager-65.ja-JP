@@ -218,14 +218,14 @@ AEM WCM およびリポジトリに対するアクセス要求はすべてここ
 `revision.log`
 改訂ジャーナリング情報。`com.adobe.cq.upgradesexecutor`
 
-* [!NOTE]
+>[!NOTE]
+>
+> **system/console/status-Bundlelist **ページから生成された**Download Full **packageには、ImageServerとs7accessのログは含まれません。 サポートの目的で、問題が発生した場合は、カスタマーサポートに問い合わせる際に、ImageServerログとs7accessログも追加して [!DNL Dynamic Media] ください。
 
-   * **system/console/status-Bundlelist **ページから生成された**Download Full **packageには、ImageServerとs7accessのログは含まれません。 サポートの目的で、問題が発生した場合は、カスタマーサポートに問い合わせる際に、ImageServerログとs7accessログも追加して [!DNL Dynamic Media] ください。
-
->デバッグログレベルのアクティベート {#activating-the-debug-log-level}
+### >デバッグログレベルのアクティベート {#activating-the-debug-log-level}
 デフォルトのログレベル（[Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)）は情報（INFO）なので、デバッグメッセージはログに記録されません。
 
-### ロガーのデバッグログレベルをアクティブにするには、リポジトリでデバッグす `org.apache.sling.commons.log.level` るプロパティを設定します。 例えば、 `/libs/sling/config/org.apache.sling.commons.log.LogManager` グローバルApache Slingログを設定す [る場合などです](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)。
+ロガーのデバッグログレベルをアクティブにするには、リポジトリでデバッグす `org.apache.sling.commons.log.level` るプロパティを設定します。 例えば、 `/libs/sling/config/org.apache.sling.commons.log.LogManager` グローバルApache Slingログを設定す [る場合などです](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)。
 
 [!CAUTION]](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
 
@@ -246,9 +246,11 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 |---|---|---|
 | アクションが失敗しました。インストールは続行しますが、AEM WCM の一部が正常にインストールされなかったので、機能しません。 | 2 | 警告 |
 | アクションは成功しましたが、問題が発生しました。AEM WCM は正常に機能する場合と機能しない場合があります。 | 3 | 情報 |
-| アクションが成功しました。 | カスタムログファイルの作成 {#create-a-custom-log-file} | [!NOTE] |
+| アクションが成功しました。 | 
 
-### Adobe Experience Manager を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+### カスタムログファイルの作成 {#create-a-custom-log-file}
+
+Adobe Experience Manager を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 >[!NOTE]状況によっては、別のログレベルでカスタムログファイルを作成する必要があります。これをおこなうには、リポジトリで次の手順を実行します。
 既存のものがない場合は、新しい設定フォルダー（`sling:Folder`）を、プロジェクト（`/apps/<*project-name*>/config`）用に作成します。
@@ -601,7 +603,9 @@ OSGi events also generate audit records which can be seen from the **Configurati
  </tbody>
 </table>
 
-### リクエストの所要時間を調べるための `request.log` オファーーの組み込み。 開発のために、応答時間が遅い場合は、を使用 `tail -f` し `request.log` て監視すると便利です。 より大きな値を分析する `request.log` には、応答時間の並べ替えとフィルターを可能にする、 [を使用する `rlog.jar` ことをお勧めします](#using-rlog-jar-to-find-requests-with-long-duration-times)。
+### request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
+
+リクエストの所要時間を調べるための `request.log` オファーーの組み込み。 開発のために、応答時間が遅い場合は、を使用 `tail -f` し `request.log` て監視すると便利です。 より大きな値を分析する `request.log` には、応答時間の並べ替えとフィルターを可能にする、 [を使用する `rlog.jar` ことをお勧めします](#using-rlog-jar-to-find-requests-with-long-duration-times)。
 
 「遅い」ページをと分離し、パフォーマンスを向上させるた `request.log`めにそれらを個別に調整することをお勧めします。 これは、通常、コンポーネントごとのパフォーマンス指標を含めるか、などのパフォーマンスプロファイルツールを使用して行い ` [yourkit](https://www.yourkit.com/)`ます。
 
@@ -610,8 +614,6 @@ Web サイトでのトラフィックの監視 {#monitoring-traffic-on-your-webs
 request.log は、実行される各要求を、応答と共に登録します。`request.log`` [yourkit](https://www.yourkit.com/)`
 
 #### 特定の期間内の（例えば 24 時間の監視を何度かおこなって）すべての GET エントリを合計することにより、Web サイトの平均トラフィックを把握できます。{#monitoring-traffic-on-your-website}
-
- request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
 
 ```xml
 09:43:41 [66] -> GET /author/y.html HTTP/1.1
@@ -735,9 +737,7 @@ $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
 
 特殊なケース（ガベージコレクションなど）の影響を最小限にするために、`apachebench`（詳細なドキュメントについては [ab[#$tu387] などを参照）などのツールを使用してメモリリークを特定し、応答時間を選択分析することをお勧めします。
 
-### 
-
-
+### Apache Bench {#apache-bench}
 
 `apachebench` また、すべての同時要求に対するリクエストあたりの時間を平均として表示します。 「 `Time per request: 54.595 [ms]` （つまり、すべての同時要求に対して）」を参照してください。 concurrencyパラメーターの値 `-c` （一度に実行する複数の要求の数）を変更して、任意の効果を確認できます。
 
