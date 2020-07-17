@@ -336,16 +336,12 @@ The Scene7 content browser lets you view content from Scene7 directly in AEM. To
 >* アドホックフォルダー内のアセットは、Scene7 コンテンツブラウザーには表示されません。
 >* [セキュアプレビューが有効](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)なときは、Scene7 の公開、非公開の両方のアセットが、Scene7 コンテンツブラウザーに表示されます。
 >* If you do not see **Scene7** or the **S7** icon as an option in the content browser, you need to [configure Scene7 to work with AEM](/help/sites-administering/scene7.md).
-
-   >
-   >
-* Scene7 コンテンツブラウザーでは、次のビデオがサポートされます。
-   >
-   >  
-* アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
+>
+>* Scene7 コンテンツブラウザーでは、次のビデオがサポートされます。
+>  
+>  * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
 >  * 単一の MP4 ビデオ
 >  * 単一の F4V ビデオ
-
 
 ### コンテンツの参照 {#browsing-content-in-the-classic-ui}
 
