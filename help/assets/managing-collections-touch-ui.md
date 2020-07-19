@@ -4,10 +4,10 @@ description: 作成、表示、削除、編集、コレクションのダウン�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 983f281b77a122c757bb508bee570c6c8490a2b9
 workflow-type: tm+mt
-source-wordcount: '2177'
-ht-degree: 67%
+source-wordcount: '2197'
+ht-degree: 66%
 
 ---
 
@@ -246,7 +246,7 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 ![saved_searches_リスト](assets/saved_searches_list.png)
 
-スマートコレクションの作成時には、保存済みの検索結果が作成されます。スマートコレクションは、「**[!UICONTROL 保存済みの検索結果]**」リストに自動的に追加されます。コレクションの保存済みの検索結果のクエリは、相対的な場所（`/content/dam/collections/`）にある CRXDE の `dam:query` プロパティに保存されます。
+スマートコレクションの作成時には、保存済みの検索結果が作成されます。スマートコレクションは、「**[!UICONTROL 保存済みの検索結果]**」リストに自動的に追加されます。The [!UICONTROL Saved Searches] query for the collection is saved in the `dam:query` property in CRXDE at the relative location `/content/dam/collections/`. 保存できる検索と、リストに表示される保存済みの検索に制限はありません。
 
 >[!NOTE]
 >
@@ -264,7 +264,7 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
-   ![select_smart_collection-1](assets/select_smart_collection-1.png)
+   ![select_smart_collection](assets/select_smart_collection.png)
 
 1. In the dialog, click **[!UICONTROL Delete]** to delete the saved search.
 
