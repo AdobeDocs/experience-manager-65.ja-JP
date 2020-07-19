@@ -3,10 +3,10 @@ title: Connected Assets を使用して、 [!DNL Adobe Experience Manager Sites]
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7d001ce126e72663bf8ad0722cf59c1cb7239ae0
+source-git-commit: 28c55333e0eebb68ada46ee89785f5f6475abf9e
 workflow-type: tm+mt
-source-wordcount: '2080'
-ht-degree: 77%
+source-wordcount: '2105'
+ht-degree: 76%
 
 ---
 
@@ -27,8 +27,8 @@ ht-degree: 77%
 
 この機能を使用または設定する前に、以下を確認してください。
 
-* ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* Adobe Experience Managerのデプロイメントの種類に対して、サポートされている条件の1つが満たされます。 [!DNL Experience Manager] 6.5 [!DNL Assets] は、Cloud Serviceと [!DNL Experience Manager] して機能します。 詳しくは、Cloud ServiceとしてのExperience Managerでの [接続されたアセット機能を参照してください](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* ユーザーは、各デプロイメントで適切なユーザーグループに属します。
+* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は、Cloud Serviceと [!DNL Experience Manager] して機能します。 詳しくは、Cloud ServiceとしてのExperience Managerでの [接続されたアセット機能を参照してください](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
    |  | [!DNL Sites] as a Cloud Service | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
    |---|---|---|---|
@@ -41,7 +41,7 @@ ht-degree: 77%
 作成者は、コンテンツファインダーで画像と次の種類のドキュメントを検索し、ページエディターで検索されたアセットを使用します。 ドキュメントがコンポーネントに追加され `Download` 、画像がコンポー `Image` ネントに追加されます。 Authors also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. サポートされる形式は以下の通りです。
 
 * **画像形式**：[画像コンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)がサポートする形式。[!DNL Dynamic Media] 画像はサポートされていません。
-* **ドキュメント形式**: 接続さ [れているアセットでサポートされるドキュメント形式を参照してください](assets-formats.md#supported-document-formats)。
+* **ドキュメント形式**: サ [ポートされるドキュメント形式を参照してください](assets-formats.md#supported-document-formats)。
 
 ### 関連するユーザーとグループ {#users-and-groups-involved}
 
@@ -96,8 +96,8 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    | 前 | 後 |
    |---|---|
    | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
-   | `/content/dam(/*/)renditions/original` | `/content/dam(/((?!connectedassets).)*/)renditions/original` |
-   | `/content/dam(/*)/jcr:content/metadata` | `/content/dam(/((?!connectedassets).)*/)jcr:content/metadata` |
+   | `/content/dam(/.*/)renditions/original` | `/content/dam(/((?!connectedassets).)*/)renditions/original` |
+   | `/content/dam(/.*)/jcr:content/metadata` | `/content/dam(/((?!connectedassets).)*/)jcr:content/metadata` |
 
    >[!NOTE]
    >
@@ -182,7 +182,8 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 
 * ユーザーは、オーサリング時にリモートアセットを検索し、ローカルページにドラッグできます。 その他の機能はサポートされていません。
 * 取得操作は 5 秒でタイムアウトします。アセット取得時、問題が発生する場合があります（ネットワークに問題がある場合など）。作成者は、再試行をおこない、リモートアセットを[!UICONTROL コンテンツファインダー]から[!UICONTROL ページエディター]にドラッグ＆ドロップできます。
-* Simple edits that are non-destructive and the edit supported via the `Image` component can be done on fetched assets. アセットは読み取り専用です。
+* 取得されたアセットに対しては、単純な非破壊編集と、 `Image` コンポーネント経由でサポートされている編集をおこなえます。アセットは読み取り専用です。
+* アセットを再取得する唯一の方法は、アセットをページにドラッグすることです。 アセットを更新するために再取得するAPIのサポートやその他のメソッドはありません。
 
 ## 問題のトラブルシューティング {#troubleshoot}
 
