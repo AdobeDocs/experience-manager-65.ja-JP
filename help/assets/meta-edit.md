@@ -3,19 +3,19 @@ title: メタデータの編集と追加
 description: Learn about asset metadata in [!DNL Adobe Experience Manager Assets] an various ways by which you can edit asset metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 4748eed3ce484e8446b641ccbc7b5d76cb66f428
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 33%
+source-wordcount: '436'
+ht-degree: 23%
 
 ---
 
 
 # メタデータの編集と追加 {#how-to-edit-or-add-metadata}
 
-メタデータは、検索可能なアセットに関する追加情報です。画像をアップロードすると自動的に抽出されます。既存のメタデータを編集したり、新しいメタデータプロパティを既存のフィールドに追加（例えば、メタデータフィールドが空白の場合など）したりすることができます。
+メタデータは、検索可能なアセットに関する追加情報です。画像をアップロードすると自動的に抽出されます。既存のメタデータを編集したり、新しいメタデータプロパティを既存のフィールドに追加したりできます。例えば、メタデータフィールドが空白の場合などです。
 
-Because organizations need controlled and reliable metadata vocabularies, [!DNL Experience Manager Assets] does not allow for on demand adding of new metadata properties. 作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。詳しくは、アセットのメタデータプロパティの [作成を参照してください](meta-edit.md#editing-metadata-schema)。
+組織は、制御された信頼性の高いメタデータの語彙を必要とします。 したがって、 [!DNL Experience Manager Assets] 新しいメタデータプロパティのオンデマンド追加は許可されません。 作成者ではなく開発者が、アセット用に新しいメタデータフィールドを追加できます。 詳しくは、アセットのメタデータプロパティの [作成を参照してください](meta-edit.md#editing-metadata-schema)。
 
 ## Edit metadata for an asset {#editing-metadata-for-an-asset}
 
@@ -25,10 +25,11 @@ Because organizations need controlled and reliable metadata vocabularies, [!DNL 
 
    * インター [!DNL Assets] フェイスでアセットを選択し、ツールバーの「 **[!UICONTROL 表示プロパティ]** 」をクリックします。
    * アセットのサムネールから、「**[!UICONTROL プロパティを表示]**」クイックアクションを選択します。
-   * From the asset page, click **[!UICONTROL View Properties]** ![chlimage_1-168](assets/chlimage_1-168.png) from the toolbar.
+   * アセットページで、ツールバーの **[!UICONTROL 表示プロパティ]**![](assets/do-not-localize/info-circle-icon.png) アセット情報アイコンをクリックします。
+
    アセットページには、すべてのアセットのメタデータが表示されます。 アセットがにアップロード（取り込む）されると、メタデータが抽出され [!DNL Experience Manager]ます。
 
-   ![表示メタデータにアセットのプロパティを選択](assets/asset-metadata.png)
+   ![アセットのプロパティを選択して、メタデータを表示します](assets/asset-metadata.png)
 
    *図： アセットの[!UICONTROL プロパティ]ページのメタデータを編集または追加します。*
 
@@ -50,8 +51,14 @@ XMP write-back is supported and enabled for the platforms and file formats descr
 
 You can add your own namespaces within [!DNL Experience Manager]. Just as there are predefined namespaces such as `cq`, `jcr`, and `sling`, you can have a namespace for your repository metadata and XML processing.
 
-1. Go to the node type administration page `https:[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`.
-1. Click **[!UICONTROL Namespaces]** at the top of the page. ウィンドウに名前空間管理ページが表示されます。
-
-1. To add a namespace, click **[!UICONTROL New]** at the bottom.
+1. ノードタイプ管理ページにアクセス `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`します。
+1. 名前空間管理ページにアクセスするには、ページの上部にある **[!UICONTROL 名前空間]** をクリックします。
+1. 名前空間を追加するには、ページの下部にある **[!UICONTROL 新規]** (New)をクリックします。
 1. XML名前空間の規則でカスタム名前空間を指定します。 URIの形式でIDを指定し、IDに関連付けられたプレフィックスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
+
+>[!MORELIKETHIS]
+>
+>* [メタデータとアセット内でのニーズについて](metadata.md)
+>* [XMP メタデータ](xmp.md)
+>* [メタデータのスキーマに関する参照情報](meta-ref.md)
+
