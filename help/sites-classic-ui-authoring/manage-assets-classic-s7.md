@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: eb5ec39431d365ed6ba274018bbca437a58bfafe
 workflow-type: tm+mt
 source-wordcount: '3221'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
@@ -291,7 +291,7 @@ To link a field to a client context value, click **Select** to open the client-c
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-現在ログインしているユーザーの名前がテキストに反映されます。フィールドの横にある「**リセット**」をクリックして、テキストを元の値に戻すことができます。
+現在ログインしているユーザーの名前がテキストに反映されます。フィールドの横にある「**リセット**」をクリックすると、テキストを元の値に戻すことができます。
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -336,12 +336,16 @@ The Scene7 content browser lets you view content from Scene7 directly in AEM. To
 >* アドホックフォルダー内のアセットは、Scene7 コンテンツブラウザーには表示されません。
 >* [セキュアプレビューが有効](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)なときは、Scene7 の公開、非公開の両方のアセットが、Scene7 コンテンツブラウザーに表示されます。
 >* If you do not see **Scene7** or the **S7** icon as an option in the content browser, you need to [configure Scene7 to work with AEM](/help/sites-administering/scene7.md).
->
->* Scene7 コンテンツブラウザーでは、次のビデオがサポートされます。
->  
->  * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
->  * 単一の MP4 ビデオ
->  * 単一の F4V ビデオ
+
+   >
+   >
+* Scene7 コンテンツブラウザーでは、次のビデオがサポートされます。
+   >
+   >   
+   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
+   >   * 単一の MP4 ビデオ
+   >   * 単一の F4V ビデオ
+
 
 ### コンテンツの参照 {#browsing-content-in-the-classic-ui}
 
