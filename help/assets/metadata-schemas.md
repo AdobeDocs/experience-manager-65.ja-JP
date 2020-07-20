@@ -3,7 +3,7 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0496d2d541be052e1201ada2bff99a2ed6fef4f3
+source-git-commit: 04babc1ec79a0816e1cb9f97e2711fe212f51387
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 52%
@@ -43,19 +43,14 @@ ht-degree: 52%
 |---|---|---|
 | [!UICONTROL default] |  | アセットのベースメタデータスキーマフォーム。 |
 |  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
-|  | [!UICONTROL dm_video] | Dynamic Mediaビデオのスキーマフォーム。 |
-|  | [!UICONTROL image] | MIMEタイプがandなどの画像のスキーマフォ `image/jpeg` ーム `image/png`。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプがTIFFのアセットのスキーマフォーム。</li></ul> |
-|  | [!UICONTROL アプリケーション] | Schema form for assets with MIME type such as `application/pdf` and `application/zip`. <br>[!UICONTROL pdf]: サブタイプがPDFのアセットのスキーマフォームです。 |
-|  | [!UICONTROL ビデオ] | MIMEタイプ（例：および）を持つビデオアセットのスキーマフォ `video/avi` ーム `video/mp4`。 |
+|  | <ul><li>[!UICONTROL dm_video]</li></ul> | Dynamic Mediaビデオのスキーマフォーム。 |
+|  | <ul><li>[!UICONTROL image]</li></ul> | MIMEタイプがandなどの画像のスキーマフォ `image/jpeg` ーム `image/png`。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプがTIFFのアセットのスキーマフォーム。</li></ul> |
+|  | <ul><li>[!UICONTROL アプリケーション]</li></ul> | Schema form for assets with MIME type such as `application/pdf` and `application/zip`. <br>[!UICONTROL pdf]: サブタイプがPDFのアセットのスキーマフォームです。 |
+|  | <ul><li>[!UICONTROL ビデオ]</li></ul> | MIMEタイプ（例：および）を持つビデオアセットのスキーマフォ `video/avi` ーム `video/mp4`。 |
 | [!UICONTROL collection] |  | コレクションのスキーマフォーム。 |
 | [!UICONTROL contentfragment] |  | [コンテンツフラグメントのスキーマフォーム](/help/sites-developing/customizing-content-fragments.md)。 |
 | [!UICONTROL forms] |  | This schema form relates to [Adobe Experience Manager Forms](/help/forms/home.md). |
 | [!UICONTROL ugc_contentfragment] |  | ソーシャルメディアからExperience Managerに統合された、ユーザーが生成するコンテンツ要素およびアセットのスキーマフォーム。 |
-
-<!-- 
-TBD: video doesn't contain any sub types as listed above OOTB.
-application doesn't contain the sub type zip OOTB.
--->
 
 >[!NOTE]
 >
