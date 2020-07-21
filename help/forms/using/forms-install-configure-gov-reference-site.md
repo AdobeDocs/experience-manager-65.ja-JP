@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
+source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
 workflow-type: tm+mt
-source-wordcount: '5004'
+source-wordcount: '5035'
 ht-degree: 3%
 
 ---
@@ -81,19 +81,16 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 この節では、デモパッケージのインストールについて説明します。
 
-### From package share {#from-package-share}
+### ソフトウェア配布から {#from-software-distribution}
 
-1. https://&lt;aemserver>:&lt;port>/crx/packageshare/に移動し *ます。*
-
-   または、AEMで「Deployment」をクリックし、「Package Share Icon」に移動します。
-
-   ![パッケージ共有アイコン](assets/package_share_icon.jpg)
-
-1. Adobe IDを使用してログインします。
-1. we-gov-forms.pkg. **all-&lt;version>** パッケージを検索して探します。
-1. 「ダウンロード」オプションを選択し、利用条件に同意します。
-1. ダウンロードが完了したら、「ダウンロード済み」オプションを選択して、パッケージマネージャーでパッケージを探します。
-1. 「インストール」オプションを選択してパッケージをインストールします。
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
+1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. In the **[!UICONTROL Filters]** section:
+   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
+1. パッケージ名 **we-gov-forms.pkg.all-&lt;version>.zipをタップし、「EULA条件に** 同意する **[!UICONTROL 」を選択して、「]**&#x200B;ダウンロード ****」をタップします。
+1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Select the package and click **[!UICONTROL Install]**.
 
    ![govフォームパッケージ](assets/wegov_forms_package.jpg)
 
@@ -541,7 +538,7 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 #### Adobe I/Oでの統合の作成 {#create-integration-adobeio}
 
-システム管理者に連絡しない場合は、アドビのドメイン内で統合を作成できる権限があることを確認してください。
+システム管理者に連絡しない場合は、アドビのドメイン内で統合を作成する権限があることを確認してください。
 
 1. 「 [Adobe I/Oコンソール](https://console.adobe.io/)」に移動します。
 
