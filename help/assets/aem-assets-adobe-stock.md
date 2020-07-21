@@ -3,9 +3,9 @@ title: の [!DNL Adobe Stock] 管理セット [!DNL Adobe Experience Manager Ass
 description: 内部から、検索、取得、ライセンス、 [!DNL Adobe Stock] 管理の各セットを検索します [!DNL Adobe Experience Manager]。 ライセンス済みのアセットを他のデジタルアセットと同様に使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 376940612066123a8f84fe6c30ff3002cda08079
+source-git-commit: 2701c64b3e049ac423ef74147930de2da78a3d81
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1098'
 ht-degree: 31%
 
 ---
@@ -19,7 +19,7 @@ Organizations can integrate their [!DNL Adobe Stock] enterprise plan with [!DNL 
 
 ## 前提条件 {#prerequisites}
 
-統合には、[Adobe Stock エンタープライズ版プラン](https://stockenterprise.adobe.com/)と 6.5 以降が必要です。[!DNL Experience Manager]For [!DNL Experience Manager] 6.5 service pack details, see these [release notes](/help/release-notes/sp-release-notes.md).
+統合には、 [エンタープライズ版のAdobe Stockプランが必要です](https://stockenterprise.adobe.com/)。
 
 ## 統合 [!DNL Experience Manager] および [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
@@ -31,7 +31,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 ### IMS 設定の作成 {#create-an-ims-configuration}
 
-1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** セキュリティ **[!UICONTROL /]** Adobe IMS設定に移動します ****。 「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
+1. In the [!DNL Experience Manager] user interface, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. 「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
 1. 既存の証明書を再使用するか、「**[!UICONTROL 新しい証明書を作成]**」を選択します。
 1. 「**[!UICONTROL 証明書を作成]**」をクリックします。証明書を作成したら、公開鍵をダウンロードします。「**[!UICONTROL 次へ]**」をクリックします。
 1. Add the downloaded public key to your [!DNL Adobe Developer Console] service account. 「**[!UICONTROL 次へ]**」をクリックします。間もなく値を指定するには、 [!UICONTROL Adobe IMSテクニカルアカウント設定] 画面を開いたままにします。
