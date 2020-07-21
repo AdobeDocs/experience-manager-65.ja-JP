@@ -154,188 +154,192 @@ The tags which may be applied to community content are controlled by selecting A
 
 1 つのイネーブルメントコミュニティに対し、1 人以上のコミュニティ実施可能マネージャーを指定する必要があります。
 
-* **有効化マネージャ**（必須） `Community Enablement Managers`
+* **有効化マネージャ**（必須） 
+`Community Enablement Managers` グループを選択して、このコミュニティサイトを管理できます。
 
-   * `Community Enablement Managers` グループを選択して、このコミュニティサイトを管理できます。
    * 型 `s`
+   *  `Sirius Nilson`
 
-*  `Sirius Nilson`**[](/help/communities/analytics.md#video-heartbeat-analytics)
-
-**Marketing Cloud組織ID**（オプション）有効化レポートに [ビデオハートビートAnalyticsを含める場合に必要な、アドビのAnalyticsアカウントのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
+* **Marketing Cloud組織ID**（オプション）有効化レポートに [ビデオハートビートAnalyticsを含める場合に必要な、アドビのAnalyticsアカウントのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
-### 「**次へ**」を選択します。
+「**次へ**」を選択します。
 
-手順 4：コミュニティサイトの作成 {#step-create-community-site}**
+### 手順 4：コミュニティサイトの作成 {#step-create-community-site}
 
 Select **Create.**
 
 ![chlimage_1-458](assets/chlimage_1-458.png)
 
-![処理が完了すると、新しいサイトのフォルダーがコミュニティ/サイトコンソールに表示されます。](assets/enablementsitecreated.png)
+処理が完了すると、新しいサイトのフォルダーがコミュニティ/サイトコンソールに表示されます。
 
-### ![enablementsitecreated](assets/enablementsitecreated.png)
+![enablementsitecreated](assets/enablementsitecreated.png)
 
-新しいコミュニティサイトの公開 {#publish-the-new-community-site}
+### 新しいコミュニティサイトの公開 {#publish-the-new-community-site}
 
 作成したサイトは、コミュニティ - サイトコンソールで管理する必要があります。このコンソールは、新しいサイトを作成するコンソールと同じものです。
 
-![コミュニティサイトのフォルダーを選択した後、サイトアイコンにマウスカーソルを合わせると、4 つのアクションアイコンが表示されます。](assets/siteactionicons.png)
+コミュニティサイトのフォルダーを選択した後、サイトアイコンにマウスカーソルを合わせると、4 つのアクションアイコンが表示されます。
 
 ![siteactionicons](assets/siteactionicons.png)
 
-![省略記号アイコン（その他のアクションアイコン）を選択すると、「サイトを書き出し」および「サイトを削除」オプションが表示されます。](assets/siteactionsnew.png)
+省略記号アイコン（その他のアクションアイコン）を選択すると、「サイトを書き出し」および「サイトを削除」オプションが表示されます。
 
 ![siteactionsnew](assets/siteactionsnew.png)
 
-* **各アイコンの機能は次のとおりです（左から右の順に説明）。**
+各アイコンの機能は次のとおりです（左から右の順に説明）。
 
-   **サイトを開く**
+* **サイトを開く**
 
-* **ページコンポーネントの追加や設定を行うには、鉛筆アイコンを選択して、作成者編集モードでコミュニティサイトを開きます。**
+   ページコンポーネントの追加や設定を行うには、鉛筆アイコンを選択して、作成者編集モードでコミュニティサイトを開きます。
 
-   **サイトを編集**
+* **サイトを編集**
 
-* **プロパティアイコンを選択して、コミュニティサイトを開き、タイトルやテーマの変更など、プロパティの変更を行います。**
+   プロパティアイコンを選択して、コミュニティサイトを開き、タイトルやテーマの変更など、プロパティの変更を行います。
 
-   **サイトを公開**
+* **サイトを公開**
 
-* **コミュニティサイトを（デフォルトでlocalhost:4503に）公開するには、世界のアイコンを選択します。**
+   コミュニティサイトを（デフォルトでlocalhost:4503に）公開するには、世界のアイコンを選択します。
 
-   **サイトを書き出し**
+* **サイトを書き出し**
 
-* 書き出しアイコンを選択して、コミュニティサイトのパッケージを作成します。このパッケージが、[パッケージマネージャー](/help/sites-administering/package-manager.md)に格納され、ダウンロード可能になります。UGC はサイトパッケージに含まれていません。
+   書き出しアイコンを選択して、コミュニティサイトのパッケージを作成します。このパッケージが、[パッケージマネージャー](/help/sites-administering/package-manager.md)に格納され、ダウンロード可能になります。UGC はサイトパッケージに含まれていません。
 
-   **サイトを削除**
+* **サイトを削除**
 
-   ![コミュニティサイトを削除するには、サイトを削除アイコンを選択します。このアイコンは、コミュニティサイトコンソール内でサイトにマウスポインターを置くと表示されます。サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。](assets/enablesiteactions.png)
+   コミュニティサイトを削除するには、サイトを削除アイコンを選択します。このアイコンは、コミュニティサイトコンソール内でサイトにマウスポインターを置くと表示されます。サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
 
-#### ![enablesiteactions](assets/enablesiteactions.png)
+   ![enablesiteactions](assets/enablesiteactions.png)
 
-サイトの公開 {#select-publish}
+#### サイトの公開 {#select-publish}
 
-![地球のアイコンを選択して、コミュニティサイトを公開します。](assets/chlimage_1-465.png)
+地球のアイコンを選択して、コミュニティサイトを公開します。
 
 ![chlimage_1-465](assets/chlimage_1-465.png)
 
-![サイトが公開されると、次のようなメッセージが表示されます。](assets/chlimage_1-466.png)
+サイトが公開されると、次のようなメッセージが表示されます。
 
-## ![chlimage_1-466](assets/chlimage_1-466.png)
+![chlimage_1-466](assets/chlimage_1-466.png)
 
-### コミュニティのユーザーとユーザーグループ {#community-users-user-groups}
+## コミュニティのユーザーとユーザーグループ {#community-users-user-groups}
 
-新しいコミュニティユーザーグループの確認 {#notice-new-community-user-groups}](/help/communities/users.md#usergroupsforcommunitysites)
+### 新しいコミュニティユーザーグループの確認 {#notice-new-community-user-groups}
 
 新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。For details, visit [User Groups for Community Sites](/help/communities/users.md#usergroupsforcommunitysites).
 
 For this new community site, given the site name &quot;enable&quot; in Step 1, the new user groups that exist in the publish environment may be seen from the [Communities Members &amp; Groups console](/help/communities/members.md#groups-console):
 
-### ![community_usergroup](assets/community_usergroup.png)
+![community_usergroup](assets/community_usergroup.png)
 
-「Community Enable Members」グループへのメンバー割り当て{#assign-members-to-community-enable-members-group}](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+### 「Community Enable Members」グループへのメンバー割り当て{#assign-members-to-community-enable-members-group}
 
 On author, with the tunnel service enabled, it is possible to assign the [users created during Initial Setup](/help/communities/enablement-setup.md#publishcreateenablementmembers) to the Community Members group for the newly created community site.
 
-コミュニティグループコンソールでは、メンバーを個別に追加したり、グループのメンバーシップを使用して追加したりできます。`Community Ski Class``Community Enable Members``Quinn Harper`
+コミュニティグループコンソールでは、メンバーを個別に追加したり、グループのメンバーシップを使用して追加したりできます。
 
-* In this example, the group `Community Ski Class` is added as a member of the group `Community Enable Members` as well as member `Quinn Harper`.
+In this example, the group `Community Ski Class` is added as a member of the group `Community Enable Members` as well as member `Quinn Harper`.
+
 * Navigate to **Communities, Groups** console
 * Select *Community Enable Members* group
 * Enter &#39;ski&#39; into the **Add Members To Group** search box
 * Select *Community Ski Class* (group of learners)
-* 検索ボックスに「クイン」と入力します。**
-
+* 検索ボックスに「クイン」と入力します。
 * Select *Quinn Harper* (enablement resource contact)
 
-Select **Save**
+* Select **Save**
 
-## ![chlimage_1-418](assets/chlimage_1-418.png)
+![chlimage_1-418](assets/chlimage_1-418.png)
 
-パブリッシュ側の設定 {#configurations-on-publish}
+## パブリッシュ側の設定 {#configurations-on-publish}
 
-`https://localhost:4503/content/sites/enable/en.html {#http-localhost-content-sites-enable-en-html}`](assets/chlimage_1-433.png)
+`https://localhost:4503/content/sites/enable/en.html {#http-localhost-content-sites-enable-en-html}`
 
-### ![chlimage_1-433](assets/chlimage_1-433.png)
+![chlimage_1-433](assets/chlimage_1-433.png)
 
-認証エラーの設定 {#configure-for-authentication-error}](/help/communities/sites-console.md#configure-for-authentication-error)`Adobe Granite Login Selector Authentication Handler`
+### 認証エラーの設定 {#configure-for-authentication-error}
 
 Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
 
-* 追加a `Login Page Mapping` は次のようになります。
+追加a `Login Page Mapping` は次のようになります。
 
-### `/content/sites/enable/en/signin:/content/sites/enable/en`
+* `/content/sites/enable/en/signin:/content/sites/enable/en`
 
-（オプション）デフォルトのホームページの変更{#optional-change-the-default-home-page}
+### （オプション）デフォルトのホームページの変更{#optional-change-the-default-home-page}
 
-公開サイトをデモ目的で操作するときは、デフォルトのホームページを新しいサイトに変更すると便利です。[-ERR:REF-NOT-FOUND-[](/help/sites-deploying/resource-mapping.md)
+公開サイトをデモ目的で操作するときは、デフォルトのホームページを新しいサイトに変更すると便利です。
 
+これをおこなうには、[CRX|DE](https://localhost:4503/crx/de) Lite を使用して、パブリッシュ側で[リソースマッピング](/help/sites-deploying/resource-mapping.md)テーブルを編集します。
 
+開始するには、次のようにします。：
 
-1. 開始するには、次のようにします。：
+1. 公開時に、CRXDEにアクセスし、管理者権限でログインします
 
-   * 公開時に、CRXDEにアクセスし、管理者権限でログインします[-ERR:REF-NOT-FOUND-`admin/admin`
+   * 例えば、https://localhost:4503/crx/deを参照して [](https://localhost:4503/crx/de) から、 `admin/admin`
 
 1. In the project browser, expand `/etc/map`
-1. Select the `http` node**
+1. Select the `http` node
 
-      * Select **Create Node**
+   * Select **Create Node**
 
-         **名前** localhost.4503
+      * **名前** localhost.4503
 
-         * (do *not* use &#39;:&#39;)[-ERR:REF-NOT-FOUND-
+         (do *not* use &#39;:&#39;)
 
-1.  With newly created `localhost.4503` node selected
+      * **Type** sling [:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-      * **追加特性**
-      
-        * **名前**：sling:match
-        * **タイプ**：String
-        * **値**：localhost.4503/$
+1. With newly created `localhost.4503` node selected
 
-     （「$」文字で終わる必要があります）
+   * 追加特性
 
-      * **追加特性**
-      
-        * **名前**：sling:internalRedirect
-        * **タイプ**：String
+      * **名前**：sling:match
+      * **タイプ**：String
+      * **値**：localhost.4503/$
 
-1. **値**：/content/sites/enable/en.html
+   （「$」文字で終わる必要があります）
+
+   * 追加特性
+
+      * **名前**：sling:internalRedirect
+      * **タイプ**：String
+      * **値**：/content/sites/enable/en.html
+
+
 1. 「**すべて保存**」を選択します。
 1. （オプション）閲覧履歴の削除
+1. https://localhost:4503/を参照します。
 
-   * https://localhost:4503/を参照します。
+   * https://localhost:4503/content/sites/enable/en.htmlにアクセス
 
->[!NOTE]https://localhost:4503/content/sites/enable/en.htmlにアクセス
+>[!NOTE]
 >
->[!NOTE]`xlocalhost.4503/$`****
+>To disable, simply pre-pend the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
 
 
-To disable, simply pre-pend the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
+![chlimage_1-364](assets/chlimage_1-364.png)
 
-#### ![chlimage_1-364](assets/chlimage_1-364.png)
-
-トラブルシューティング：マップ保存エラー {#troubleshooting-error-saving-map}`localhost:4503``localhost`
+#### トラブルシューティング：マップ保存エラー {#troubleshooting-error-saving-map}
 
 変更を保存できない場合は、ノード名が `localhost.4503`（区切り文字が「ドット」）となっているかを確認してください。`localhost:4503` は有効な名前空間のプレフィックスではないので、`localhost`（区切り文字が「コロン」）という表記は正しくありません。
 
-#### ![chlimage_1-365](assets/chlimage_1-365.png)
+![chlimage_1-365](assets/chlimage_1-365.png)
 
-トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}**`sling:match``https://localhost:4503/`
+#### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-## The &#39;**$**&#39; at the end of the regular expression `sling:match` string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると失敗します。
+The &#39;**$**&#39; at the end of the regular expression `sling:match` string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると失敗します。
 
-コミュニティサイトの変更 {#modifying-the-community-site}](/help/communities/sites-console.md#authoring-site-content)
+## コミュニティサイトの変更 {#modifying-the-community-site}
 
 サイトを最初に作成した後、作成者は[サイトを開くアイコン](/help/communities/sites-console.md#authoring-site-content)を使用して、標準的な AEM のオーサリングアクティビティを実行できます。
 
-また、管理者は[サイトを編集アイコン](/help/communities/sites-console.md#modifying-site-properties)を使用して、タイトルなどのサイトプロパティを変更できます。****
+また、管理者は[サイトを編集アイコン](/help/communities/sites-console.md#modifying-site-properties)を使用して、タイトルなどのサイトプロパティを変更できます。
 
 変更後は、必ず&#x200B;**保存**&#x200B;して再&#x200B;**公開**&#x200B;してください。
 
->[!NOTE]](/help/sites-authoring/basic-handling.md)[](/help/sites-authoring/qg-page-authoring.md)
+>[!NOTE]
 >
 >AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
+
 
 ### カタログの追加 {#add-a-catalog}
 
@@ -343,11 +347,11 @@ To disable, simply pre-pend the `sling:match` property value with an &#39;x&#39;
 
 含まれていない場合は、カタログ機能を簡単に追加できます。これにより、有効化リソースや学習パスに割り当てられていないコミュニティの他のメンバーが、カタログから有効化リソースを選択できるようになります。
 
-サイト構造にカタログ機能が既に含まれている場合、タイトルが変わることがあります。****`enable`****`Enablement Tutorial`
+サイト構造にカタログ機能が既に含まれている場合、タイトルが変わることがあります。
 
 To modify the site&#39;s structure, navigate to the **Communities, Sites** console, open the `enable` folder, and select the **Edit Site** icon to access the properties of `Enablement Tutorial`.
 
-* **構造パネルを選択し、カタログを追加するか、既存のカタログを変更します。**`Ski Catalog`
+構造パネルを選択し、カタログを追加するか、既存のカタログを変更します。
 
 * **タイトル**: `Ski Catalog`
 
@@ -355,13 +359,15 @@ To modify the site&#39;s structure, navigate to the **Communities, Sites** conso
 
 * **すべての名前空間を選択**：デフォルトのままにします。
 
-「**保存**」を選択します。
+* 「**保存**」を選択します。
 
 ![chlimage_1-299](assets/chlimage_1-299.png)
 
-![位置アイコンを使用し、カタログ機能を Assignments の後の 2 番目の位置に移動します。](assets/chlimage_1-300.png)
+位置アイコンを使用し、カタログ機能を Assignments の後の 2 番目の位置に移動します。
 
 ![chlimage_1-300](assets/chlimage_1-300.png)
 
 右上隅の「**保存**」を選択してコミュニティサイトに対する変更を保存します。
+
+その後、サイトを再び&#x200B;**公開**&#x200B;します。
 
