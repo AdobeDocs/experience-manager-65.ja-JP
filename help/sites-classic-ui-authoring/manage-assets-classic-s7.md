@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb5ec39431d365ed6ba274018bbca437a58bfafe
+source-git-commit: 9bd71115dac8109c9a47155ab60ac7573d88014c
 workflow-type: tm+mt
 source-wordcount: '3221'
 ht-degree: 74%
@@ -340,9 +340,7 @@ The Scene7 content browser lets you view content from Scene7 directly in AEM. To
    >
    >
 * Scene7 コンテンツブラウザーでは、次のビデオがサポートされます。
-   >
-   >   
-   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
+   >   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
    >   * 単一の MP4 ビデオ
    >   * 単一の F4V ビデオ
 
