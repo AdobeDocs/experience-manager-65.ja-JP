@@ -3,9 +3,9 @@ title: 関連アセット
 description: 共通の属性を共有するデジタルアセットを関連付ける方法について説明します。 また、デジタルアセット間にソースから派生した関係を作成することもできます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 50%
 
 ---
@@ -37,10 +37,7 @@ ht-degree: 50%
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. To relate another asset with the asset you selected, click **[!UICONTROL Relate]** from the toolbar.
-
-   ![chlimage_1-275](assets/chlimage_1-275.png)
-
+1. To relate another asset with the asset you selected, click **[!UICONTROL Relate]** ![relate assets](assets/do-not-localize/link-relate.png) from the toolbar.
 1. 次のいずれかの操作をおこないます。
 
    * アセットのソースファイルを関連付けるには、リストから「**[!UICONTROL ソース]**」を選択します。
@@ -60,7 +57,7 @@ ht-degree: 50%
 
 1. アセットの関連付けを解除するには、ツールバーの「 **[!UICONTROL 関連付け解除]** 」をクリックします。
 
-   ![chlimage_1-279](assets/chlimage_1-279.png)
+   ![非関連資産](assets/do-not-localize/link-unrelate-icon.png)
 
 1. Select the asset(s) you want to un-relate from the **[!UICONTROL Remove Relations]** dialog, and the click **[!UICONTROL Unrelate]**.
 
