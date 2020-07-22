@@ -2,7 +2,7 @@
 title: ページエクスポーター
 description: AEM ページエクスポーターの使用方法について説明します。
 translation-type: tm+mt
-source-git-commit: b0126894dec33648a24c0308972aa5b47d7e4b84
+source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 22%
@@ -16,10 +16,11 @@ AEM allows you to export a page as a complete web page including images, `.js` a
 
 設定が完了したら、URLのをに置き換えて、ブラウザーからページの書き出し `html` を要求 `export.zip` します。 これにより、HTML形式でレンダリングされたページと参照先のアセットが含まれたアーカイブ(zip)ファイルが生成されます。 ページ内のすべてのパス（例えば、画像へのパス）が、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き直されます。 アーカイブ(zip)ファイルをブラウザーからダウンロードできます。
 
->!![NOTE]
-ブラウザーと設定に応じて、ダウンロードは次のいずれかになります。
-* アーカイブファイル(`<page-name>.export.zip`)
-* フォルダ(`<page-name>`); 効果的にアーカイブ・ファイルは既に拡張済み
+>[!NOTE]
+>
+>ブラウザーと設定に応じて、ダウンロードは次のいずれかになります。
+>* アーカイブファイル(`<page-name>.export.zip`)
+>* フォルダ(`<page-name>`); 効果的にアーカイブ・ファイルは既に拡張済み
 
 
 ## ページの書き出し {#exporting-a-page}
