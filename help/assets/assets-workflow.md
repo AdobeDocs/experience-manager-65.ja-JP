@@ -3,9 +3,9 @@ title: ビジネス・プロセスの達成、監査の実施、コンプライ�
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f6c770e8830bd2fe7c436c4bfe9725564c49a08f
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '979'
 ht-degree: 30%
 
 ---
@@ -72,10 +72,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
-1. 下部の「 **[!UICONTROL アクション]** 」をクリックします。
-
-   ![chlimage_1-30](assets/chlimage_1-137.png)
-
+1. 下部にある **[!UICONTROL []** アクション ![] [](assets/do-not-localize/chevron-up-icon.png) 山形]をクリックします。
 1. 「**[!UICONTROL ワークフローを開始]**」をクリックします。**[!UICONTROL ワークフローを開始]**&#x200B;ダイアログで、リストからワークフローモデルを選択します。
 
    ![chlimage_1-31](assets/chlimage_1-138.png)
