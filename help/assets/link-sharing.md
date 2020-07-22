@@ -3,9 +3,9 @@ title: 共有アセットのURLの生成
 description: この記事では、Experience Managerアセット内のアセット、フォルダー、コレクションを外部の関係者へのURLとして共有する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1229'
 ht-degree: 51%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
 >リンクをユーザーと共有する前に、Day CQ Mail Service が設定されていることを確認してください。[Day CQ Mail Service を設定](/help/assets/link-sharing.md#configmailservice)せずにリンクの共有を試行すると、エラーが発生します。
 
 1. Assets のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
-1. From the toolbar, click the **[!UICONTROL Share Link]** ![assets_share](assets/assets_share.png).
+1. From the toolbar, click the **[!UICONTROL Share Link]** ![share assets icon](assets/do-not-localize/assets_share.png).
 
    「**[!UICONTROL リンクを共有]**」フィールドにアセットリンクが自動的に作成されます。このリンクをコピーしてユーザーと共有します。リンクのデフォルトの有効期間は 1 日です。
 
@@ -116,6 +116,7 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
    * SMTP server port：電子メールサーバーのポート
    * SMTP user：メールサーバーのユーザー名
    * SMTP password：電子メールサーバーのパスワード
+
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
