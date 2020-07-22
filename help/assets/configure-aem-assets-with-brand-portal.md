@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d7e2d33b81847b15d1e33b3aa406e5e91d44a5f8
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 60%
@@ -129,7 +129,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
 1. AEM Assets オーサーインスタンスにログインします。デフォルトの URL は次のとおりです。
    `http:// localhost:4502/aem/start.html`
-1. **ツール**![ツール](assets/tools.png)パネルで、**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。
+1. **ツール**![ツール](assets/do-not-localize/tools.png)パネルで、**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。
 
    ![Adobe IMS アカウント設定 UI](assets/ims-config1.png)
 
@@ -198,7 +198,7 @@ Adobe 開発者コンソールで、プロジェクトと API を組織（Brand 
 
    ![製品プロファイルを選択](assets/service-account4.png)
 
-1. API が設定されている場合は、API の概要にリダイレクトされます。左側のナビゲーションツリーで「**[!UICONTROL 資格情報]**」の下の「**[!UICONTROL サービスアカウント (JWT)]**」をクリックします。
+1. API が設定されている場合は、API の概要にリダイレクトされます。左側のナビゲーションツリーで「**[!UICONTROL 資格情報]**」の下の「**[!UICONTROL サービスアカウント（JWT）]**」をクリックします。
 
    >[!NOTE]
    >
@@ -302,7 +302,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. AEM Assets オーサーインスタンスにログインします。
 
-1. **ツール**&#x200B;の![ツール](assets/tools.png)パネルで、**[!UICONTROL Cloud Services]**／**[!UICONTROL AEM Brand Portal]** に移動します。
+1. **ツール**&#x200B;の![ツール](assets/do-not-localize/tools.png)パネルで、**[!UICONTROL Cloud Services]**／**[!UICONTROL AEM Brand Portal]** に移動します。
 
 1. Brand Portal の設定ページで、「**[!UICONTROL 作成]**」をクリックします。
 
@@ -322,7 +322,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. AEM Assets クラウドインスタンスにログインします。
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
    ![](assets/test-integration1.png)
 
@@ -379,7 +379,7 @@ AEM Assets作成者インスタンスがBrand Portalで正しく設定され、�
 
 1. AEM Assets オーサーインスタンスにログインします。
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Deployment Replication]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Deployment Replication]**.
 
 1. レプリケーションページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
 
