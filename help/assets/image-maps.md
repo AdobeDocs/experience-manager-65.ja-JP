@@ -3,10 +3,10 @@ title: 画像追加マップとデジタル画像へのハイパーリンク
 description: ハイパーリンクを含む画像マップを画像に追加する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 14%
+source-wordcount: '271'
+ht-degree: 13%
 
 ---
 
@@ -26,12 +26,9 @@ ht-degree: 14%
    * In the **[!UICONTROL Card]** or **[!UICONTROL List]** view, select the asset and click **[!UICONTROL Edit]** on the toolbar.
    * Click **[!UICONTROL Edit]** from the asset page.
 
-      ![chlimage_1-420](assets/chlimage_1-420.png)
+      ![編集オプション](assets/do-not-localize/edit_icon.png)
 
-1. To insert an image map, click **[!UICONTROL Launch Map]** from the toolbar.
-
-   ![chlimage_1-421](assets/chlimage_1-421.png)
-
+1. 画像マップを挿入するには、ツールバーの「マップ **** 画像マップを起動 ![](assets/do-not-localize/image-map-icon.png) 」をクリックします。
 1. 画像マップの図形を選択します。選択した図形のホットスポットが画像上に置かれます。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
@@ -40,13 +37,9 @@ ht-degree: 14%
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. 「 **[!UICONTROL 確認]** 」をクリックし、ツールバーの「 **[!UICONTROL 完了]** 」をクリックして変更を保存します。
+1. 「 **[!UICONTROL 確認]** 」をクリックし、「 **[!UICONTROL 完了]** 」をクリックして、ツールバーから「チェック完了 ![](assets/do-not-localize/check-ok-done-icon.png) 」を選択し、変更を保存します。
 
-   ![chlimage_1-424](assets/chlimage_1-424.png)
-
-   To delete the image map, click the hot-spot and click **[!UICONTROL Delete]**.
-
-   ![chlimage_1-425](assets/chlimage_1-425.png)
+   To delete the image map, click the hot-spot and click **[!UICONTROL Delete]** ![delete](assets/do-not-localize/delete-solid-line.png).
 
 1. 画像マップを表示するには、アセットの詳細ページに移動し、画像の上にカーソルを置きます。
 
