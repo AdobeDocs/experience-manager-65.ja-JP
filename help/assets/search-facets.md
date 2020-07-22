@@ -1,12 +1,12 @@
 ---
-title: 検索ファセット
-description: この記事では、Adobe Experience Managerで検索ファセットを作成、変更、および使用する方法について説明します。
+title: 検索ファセット.
+description: Adobe Experience Managerで検索ファセットを作成、変更および使用する方法。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '2523'
-ht-degree: 79%
+source-wordcount: '2525'
+ht-degree: 78%
 
 ---
 
@@ -25,10 +25,10 @@ ht-degree: 79%
 
 フィルターパネルに表示される検索ファセットは、述語を使用した基盤となる検索フォームで定義されます。より多くのファセットや別のファセットを表示するには、述語をデフォルトフォームに追加するか、選択したファセットを含むカスタムフォームを使用します。
 
-フルテキスト検索の場合、「フルテキストの述語」をフォームに追加します。「プロパティの述語」を使用すると、ユーザーが指定した 1 つのプロパティと一致するアセットが検索されます。「オプションの述語」を使用すると、特定のプロパティについて 1 つ以上の値と一致するアセットが検索されます。「日付の範囲の述語」を追加すると、指定した期間内に作成されたアセットが検索されます。
+For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「プロパティの述語」を使用すると、ユーザーが指定した 1 つのプロパティと一致するアセットが検索されます。「オプションの述語」を使用すると、特定のプロパティについて 1 つ以上の値と一致するアセットが検索されます。「日付の範囲の述語」を追加すると、指定した期間内に作成されたアセットが検索されます。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **Edit** ![aemassets_edit](assets/aemassets_edit.png).
+1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **Edit** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 
    ![アセット管理者の検索レールを探して選択](assets/assets_admin_searchrail.png)
 
@@ -46,9 +46,9 @@ ht-degree: 79%
 
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに述語をドラッグします。例えば、「**[!UICONTROL プロパティの述語]**」をドラッグします。
 
-   ![述語のドラッグ＆ドロップによる検索フィルターのカスタマイズ](assets/drag_predicate.png)
+   ![述語を押して移動し、検索フィルターをカスタマイズします](assets/drag_predicate.png)
 
-   述語のドラッグ＆ドロップによる検索フィルターのカスタマイズ
+   *図： 述語を押して移動し、検索フィルターをカスタマイズします。*
 
 1. 「設定」タブで、その述語のフィールドラベル、プレースホルダーテキストおよび説明を入力します。述語に関連付けるメタデータプロパティの有効な名前を指定します。
 
@@ -66,14 +66,14 @@ ht-degree: 79%
 
    「プロパティ名」フィールドでのメタデータプロパティと述語の関連付け
 
-1. Click the **[!UICONTROL Preview]** ![preview](assets/preview.png) to generate a preview of the Filters panel as it appears after you add the predicate.
+1. Click the **[!UICONTROL Preview]** ![preview](assets/do-not-localize/preview_icon.png) to generate a preview of the Filters panel as it appears after you add the predicate.
 1. プレビューモードで述語のレイアウトを確認します。
 
    ![変更送信前の検索フォームのプレビュー](assets/preview-1.png)
 
    変更送信前の検索フォームのプレビュー
 
-1. To close the preview, click the **[!UICONTROL Close]** ![close](assets/close.png) on the upper-right corner of the preview.
+1. To close the preview, click the **[!UICONTROL Close]** ![close](assets/do-not-localize/close.png) on the upper-right corner of the preview.
 1. 「**[!UICONTROL 完了]**」をクリックして、設定を保存します。
 1. Assets ユーザーインターフェイスの検索パネルに移動します。プロパティの述語がパネルに追加されています。
 1. 検索するアセットの説明をテキストボックスに入力します。例えば、&quot;Adobe&quot; と入力します。検索を実行すると、「Adobe」に一致する説明を含むアセットが検索結果に表示されます。
@@ -137,7 +137,7 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 複数値プロパティの述語では、複数の値でアセットを検索できます。 Assets で複数の製品の画像があり、各画像のメタデータには製品の SKU 番号が含まれているとします。この述語を利用すれば、複数の SKU 番号で製品の画像を検索できます。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. On the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, the click **[!UICONTROL Edit]** ![aemassets_edit](assets/aemassets_edit.png).
+1. On the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, the click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに&#x200B;**[!UICONTROL 複数値プロパティの述語]**&#x200B;をドラッグします。
 1. 「**[!UICONTROL 設定]**」タブで、述語のラベルとプレースホルダーテキストを入力します。プロパティフィールドに検索したいプロパティ名を指定します（例：`jcr:content/metadata/dc:value`）。選択ダイアログを使用してノードを選択することもできます。
 1. 「**[!UICONTROL 区切り文字サポート]**」が選択されていることを確認します。「**[!UICONTROL 入力区切り文字]**」フィールドで、それぞれの値を区切る文字を指定します。デフォルトでは、コンマが区切り文字に指定されています。別の区切り文字を指定できます。
@@ -150,7 +150,7 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 Tag Predicateを使用すると、アセットをタグベースで検索できます。 初期設定では、アセットは、指定したタグに基づいて、1つ以上の一致するタグをアセット内で検索します。 言い換えれば、検索クエリは指定したタグを用いて OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すれば、すべての指定したタグを含むアセットを検索することも可能です。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]** and then click **[!UICONTROL Edit]** ![aemassets_edit](assets/aemassets_edit.png).
+1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]** and then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウにタグの述語をドラッグします。
 1. 「設定」タブで、述語のプレースホルダーテキストを入力します。プロパティフィールドに検索したいプロパティ名を指定します（例：*jcr:content/metadata/cq:tags*）。または、選択ダイアログから CRXDE のノードを選択することもできます。
 1. この述語の「ルートタグ」の「パス」プロパティを設定して、「タグ」リストに様々なタグを表示させます。
@@ -200,7 +200,7 @@ By default, a lock icon ![lock closed icon](assets/do-not-localize/lock_closed_i
 デフォルトの検索ファセットを復元するには、次の手順を実行します。
 
 1. **[!UICONTROL 検索フォーム]**&#x200B;ページで「**[!UICONTROL アセット管理者の検索レール]**」を選択します。
-1. ツールバーで「 **[!UICONTROL 削除]** 」をクリックし ![](assets/deleteoutline.png) ます。
+1. ツールバーで「 **[!UICONTROL 削除]** 」をクリックし ![](assets/do-not-localize/deleteoutline.png) ます。
 1. In the confirmation dialog, click **[!UICONTROL Delete]** to remove the custom changes.
 
    After you delete the custom changes to search facets, the lock icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) reappears before **[!UICONTROL Assets Admin Search Rail]** in the **[!UICONTROL Search Forms]** page.
