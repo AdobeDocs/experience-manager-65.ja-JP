@@ -3,9 +3,9 @@ title: のアセットテンプレート [!DNL Adobe Experience Manager Assets]�
 description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1554'
 ht-degree: 32%
 
 ---
@@ -79,6 +79,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    * From the Templates page, navigate to a folder where you created the collateral, and click the [!UICONTROL Edit] quick action on the thumbnail of a collateral.
    * In the asset page for the collateral, click **[!UICONTROL Edit]** from the toolbar.
    * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
+
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
    アセットファインダーおよびテキストエディターがページの左側に表示されます。デフォルトで、テキストエディターが開きます。
@@ -135,11 +136,13 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    >
    >* Images are not embedded in the underlying [!DNL InDesign] template.
    >* 画像がローカルファイルシステムからリンクされている.
+
    >
    >To enable [!DNL Experience Manager] to resolve images, do the following:
    >
    >* Embed images while creating [!DNL InDesign] templates (See [About links and embedded graphics](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)).
    >* Mount [!DNL Experience Manager] to your local file system, and then map missing icons with existing assets in [!DNL Experience Manager].
+
    >
    >For more information around working with [!DNL InDesign] documents, see [best practices to work with InDesign documents in Experience Manager](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html).
 
@@ -162,9 +165,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. [ [!UICONTROL テンプレートの結合] ]ページで[ **[!UICONTROL 結合]**]をクリックします。
-
-   ![chlimage_1-121](assets/chlimage_1-326.png)
+1. テン [!UICONTROL プレートの結合] ページで、「アセットを **[!UICONTROL 結合]** 」をクリックし、アセットを ![追加します](assets/do-not-localize/assets_add_icon.png)。
 
 1. マージするコラテラルの場所に移動し、マージするコラテラルのサムネールをクリックして選択します。
 
