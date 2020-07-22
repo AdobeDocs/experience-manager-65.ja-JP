@@ -3,9 +3,9 @@ title: の [!DNL Adobe Stock] 管理セット [!DNL Adobe Experience Manager Ass
 description: 内部から、検索、取得、ライセンス、 [!DNL Adobe Stock] 管理の各セットを検索します [!DNL Adobe Experience Manager]。 ライセンス済みのアセットを他のデジタルアセットと同様に使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2701c64b3e049ac423ef74147930de2da78a3d81
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1097'
 ht-degree: 31%
 
 ---
@@ -72,7 +72,7 @@ Your [!DNL Experience Manager] users, can search for assets in both, [!DNL Exper
 
 * To search for [!DNL Adobe Stock] assets, click **[!UICONTROL Navigation]** > **[!UICONTROL Assets]** > **[!UICONTROL Search Adobe Stock]**.
 
-* およ [!DNL Adobe Stock] びにまたがるアセットを検索するには、search [!DNL Experience Manager Assets]search_icon ![](assets/search_icon.png)をクリックします。
+* およ [!DNL Adobe Stock] びにまたがるアセットを検索するには、「検索 [!DNL Experience Manager Assets]![](assets/do-not-localize/search_icon.png)」をクリックします。
 
 また、 アセットを選択するには、検索バーに「`Location: Adobe Stock`」と入力します。[!DNL Adobe Stock][!DNL Experience Manager] は、検索されたアセットに対する高度なフィルタリング機能を備えており、サポートされているアセットのタイプや画像の向き、ライセンスの状態などのフィルターを使用して、必要なアセットをすばやく見つけることができます。
 
