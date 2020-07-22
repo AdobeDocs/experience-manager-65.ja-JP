@@ -4,10 +4,10 @@ description: 作成、表示、削除、編集、コレクションのダウン�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 983f281b77a122c757bb508bee570c6c8490a2b9
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '2197'
-ht-degree: 66%
+source-wordcount: '2200'
+ht-degree: 65%
 
 ---
 
@@ -124,10 +124,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 スマートコレクションは検索を保存することによって構築されるので、内容を変更するには、[保存済みの検索](#saved-searches)の検索パラメーターを変更します。
 
-1. アセットユーザーインターフェイスで、ツールバーの検索オプションをクリックします。
-
-   ![chlimage_1-9](assets/chlimage_1-110.png)
-
+1. アセットユーザーインターフェイスで、ツールバーの検索オプション ![検索オプション](assets/do-not-localize/search_icon.png) 「」をクリックします。
 1. オムニサーチボックスにカーソルを置き、Enter キーを押します。
 1. Experience Managerインターフェイスで、フィルターパネルを開きます。
 1. 「**[!UICONTROL 保存済みの検索結果]**」リストから、変更するスマートコレクションを選択します。検索パネルに、該当する保存済みの検索用に設定されているフィルターが表示されます。
@@ -256,12 +253,9 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 保存済みの検索結果を削除するには、次の手順に従います。
 
-1. アセットユーザーインターフェイスで、「search ![chlimage_1-13](assets/chlimage_1-114.png)」をクリックします。
-
-1. 「オムニサーチ」フィールドにカーソルを置き、Enter キーを押します。
-
+1. アセットユーザーインターフェイスで、検索 ![検索オプション](assets/do-not-localize/search_icon.png)をクリックします。
+1. Omnisearchフィールドにカーソルを置き、Returnキーを押します。
 1. Experience Managerインターフェイスで、フィルターパネルを開きます。
-
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection](assets/select_smart_collection.png)
@@ -273,7 +267,7 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 コレクション内のアセットのワークフローを実行できます。コレクションにネストされたコレクションが含まれている場合は、ネストされたコレクション内のアセットでもワークフローが実行されます。ただし、コレクションとネストされたコレクションでアセットが重複する場合、そのアセットのワークフローは 1 回しか実行されません。
 
 1. ア **[!UICONTROL セット]** / **[!UICONTROL コレクションを開きます]**。 特定のコレクションに対してワークフローを実行するには、そのコレクションを選択します。
-1. Open **[!UICONTROL Timeline]** rail. 「 ![chlimage_1-14](assets/chlimage_1-137.png) 」をクリックし、「 **[!UICONTROL 開始ワークフロー]**」をクリックします。
+1. Open **[!UICONTROL Timeline]** rail. [ ![山形]をクリックし](assets/do-not-localize/chevron-up-icon.png) 、[ **[!UICONTROL 開始ワークフロー]**]をクリックします。
 1. 「**[!UICONTROL ワークフローを開始]**」セクションで、リストからワークフローモデルを選択します。例えば、「**[!UICONTROL DAM アセットの更新]**」モデルを選択します。
 1. Enter a title for the workflow and click **[!UICONTROL Start]**.
 1. ダイアログで、「**[!UICONTROL 続行]**」をクリックします。ワークフローは、選択したコレクション内のすべてのアセットを処理します。
