@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
+source-git-commit: 5412d788ccebe00707f2d94dfb1e40da6cb0471c
 workflow-type: tm+mt
 source-wordcount: '5035'
 ht-degree: 3%
@@ -222,7 +222,7 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 ### 複数のフォームへの入力と署名 {#fill-sign-multiple-forms}
 
-このドキュメントでは、複数のフォームに入力して署名する機能を設定する手順を説明します。 同じ機能をここで試すこともでき [ます](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 このサンプルでは、このサンプルに必要なデータをAMEリポジトリに保存します。 これは、デモアセットをローカルサーバーにデプロイする際の摩擦のないエクスペリエンスを確実に実現するためです。 実際には、お客様が選択したRDMSに同じ情報を保存します。
+このドキュメントでは、複数のフォームに入力して署名する機能を設定する手順を説明します。 同じ機能をここで試すこともでき [ます](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 このサンプルでは、このサンプルに必要なデータをAEMリポジトリに保存します。 これは、デモアセットをローカルサーバーにデプロイする際の摩擦のないエクスペリエンスを確実に実現するためです。 実際には、お客様が選択したRDMSに同じ情報を保存します。
 
 #### 前提条件 {#pre-requisites-fill-sign-multiple-forms}
 
