@@ -3,7 +3,7 @@ title: アセットエディタページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '2135'
 ht-degree: 72%
@@ -290,7 +290,7 @@ See [Customizing and Extending Assets](/help/assets/extending-assets.md) for inf
 
 次に、様々なフィールドを持つメタデータフォームの例を示します。
 
-![chlimage_1-162](assets/chlimage_1-390.png)
+![メタデータ](assets/chlimage_1-390.png)
 
 アセットエディターページでは、ユーザーはこの後メタデータフィールドに値を入力し（フィールドが編集可能な場合）、終了アクション（変更内容の送信など）を実行することができます。
 
