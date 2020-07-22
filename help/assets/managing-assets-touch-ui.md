@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '9250'
+source-wordcount: '9245'
 ht-degree: 63%
 
 ---
@@ -335,11 +335,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. プレビューモードでは、[サポートされている画像タイプ](/help/assets/assets-formats.md#supported-raster-image-formats)で（インタラクティブ編集中に）ズームオプションを使用できます。
 
-   To zoom into an asset, click `+` (or click the magnifying glass on the asset). To zoom out, click `-`. ズームインすると、パンニングによって画像の任意の場所を詳細に確認できます。「ズームをリセット」矢印をクリックすると、元の表示に戻ります。
-
-   Click **[!UICONTROL Reset]** to reset the view to the original size.
-
-   ![リセットして元の表示に戻す](assets/chlimage_1-11.png)
+   To zoom into an asset, click `+` (or click the magnifying glass on the asset). To zoom out, click `-`. ズームインすると、パンニングによって画像の任意の場所を詳細に確認できます。「ズームをリセット」矢印をクリックすると、元の表示に戻ります。表示を元のサイズにリセットするには、「 **[!UICONTROL リセット]**![表示](assets/do-not-localize/revert.png)」をクリックします。
 
 **キーボードキーのみを使用したプレビューアセット**
 
@@ -428,8 +424,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 その他のプロパティとメタデータ情報は保持されます。アセットをコピーするときに、部分的なコピーが作成されることはありません。
 
-1. インター [!DNL Assets] フェイスで、1つまたは複数のアセットを選択し、ツールバーの「 **[!UICONTROL コピー]** 」をクリックします。 または、アセットカードから&#x200B;**[!UICONTROL コピー]**   クイックアクションを選択します。
-   ![アセットインターフェイスのツールバーのコピーオプション](assets/copy_icon.png)
+1. インター [!DNL Assets] フェイスで、1つまたは複数のアセットを選択し、ツールバーの「 **[!UICONTROL コピー]** 」をクリックします。 または、アセットカードからアセットインターフェイス **[!UICONTROL クイックアクションのツールバーで、]** 「コピー ![](assets/do-not-localize/copy_icon.png) 」オプションを選択します。
 
    >[!NOTE]
    >
@@ -441,10 +436,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    >
    >If you copy an asset at the same location, [!DNL Experience Manager] automatically generates a variation of the name. For example, if you copy an asset titled `Square`, [!DNL Experience Manager] automatically generates the title for its copy as `Square1`.
 
-1. Click the **[!UICONTROL Paste]** asset option from the toolbar.
-
-   ![アセットツールバーの貼り付けオプション](assets/chlimage_1-14.png)
-   [!DNL Assets] がこの場所にコピーされます。
+1. ツールバーから、アセットツールバーアセット **** (Assets)の「 ![貼り付け](assets/do-not-localize/paste.png) 」(Paste)オプションをクリックします。 次に、アセットがこの場所にコピーされます。
 
    >[!NOTE]
    >
@@ -455,7 +447,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 1. 移動するアセットの場所に移動します。
 
 1. Select the asset, and click **[!UICONTROL Move]** option from the toolbar.
-   ![アセットツールバーの移動オプション](assets/move_icon.png)
+   ![アセットツールバーの移動オプション](assets/do-not-localize/move.png)
 
 1. In the [!UICONTROL Move Assets] wizard, do one of the following:
 
@@ -685,9 +677,9 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
    * Click **[!UICONTROL Edit]** option that displays on an asset in the card view.
    * ツールバーの「**[!UICONTROL 編集]**」をクリックします。
 
-   ![ツールバーの編集オプション](assets/edit_icon.png)
+   ![ツールバーの編集オプション](assets/do-not-localize/edit_icon.png)
 
-1. 画像を切り抜くには、「切り抜き **** オプション」をクリックして画像を切り抜き ![](assets/chlimage_1-22.png)ます。
+1. 画像を切り抜くには、「切り抜き **** オプション」をクリックして画像を切り抜き ![](assets/do-not-localize/crop.png)ます。
 
 1. リストから必要なオプションを選択します。選択したオプションに基づいて、画像に切り抜き領域が表示されます。「**フリーハンド**」オプションを使用すると、縦横比の制限に関係なく画像を切り抜くことができます。
 
@@ -695,19 +687,19 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 1. 切り抜く領域を選択し、画像上でそのサイズまたは位置を変更します。
 
-1. Use the **Undo** and **Redo** options to revert to the uncropped image or retain the cropped image, respectively.
+1. Use the **[!UICONTROL Undo]** and **[!UICONTROL Redo]** options to revert to the uncropped image or retain the cropped image, respectively.
 
    ![元に戻す/やり直しのオプション](assets/chlimage_1-25.png)
 
-1. Click the appropriate **Rotate** option to rotate the image clockwise or anti-clockwise.
+1. Click the appropriate **[!UICONTROL Rotate]** option to rotate the image clockwise or anti-clockwise.
 
    ![右回りおよび左回りに回転するオプション](assets/chlimage_1-26.png)
 
-1. Click the appropriate **Flip** option to flip the image horizontally or vertically.
+1. Click the appropriate **[!UICONTROL Flip]** option to flip the image horizontally or vertically.
 
    ![画像を水平または垂直に反転するオプション](assets/chlimage_1-27.png)
 
-1. 「 **完了** 」(Finish ![)「](assets/chlimage_1-24.png) 完了」(Finish)の順にクリックして画像の編集を完了します。 「 **完了** 」をクリックすると、レンディションの再生成も開始されます。
+1. 画像の編集を完了するには、「 **[!UICONTROL 完了]**![完了」オプションをクリックします](assets/do-not-localize/check-ok-done-icon.png)。 「 **完了** 」をクリックすると、レンディションの再生成も開始されます。
 
 >[!NOTE]
 >
@@ -834,7 +826,7 @@ To print the annotations and review status, click **[!UICONTROL Print]** and fol
 
 1. Click **[!UICONTROL Print]** from the toolbar.
 
-   ![ツールバーの印刷オプション](assets/chlimage_1-40.png)
+   ![ツールバーの印刷オプション](assets/do-not-localize/print.png)
 
 1. 印刷ダイアログから、注釈／レビューステータスを PDF のどこに表示したいかを選択します。例えば、印刷する画像が含まれるページの右上に注釈／ステータスを印刷したい場合は、「**左上**」設定を使用します。デフォルトで選択されています。
 
