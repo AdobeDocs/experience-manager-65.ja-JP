@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: a3f5a21d-2df6-4663-a1ea-3a067c46f860
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+workflow-type: tm+mt
+source-wordcount: '1124'
+ht-degree: 36%
 
 ---
 
@@ -23,14 +26,14 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 アイディエーション機能は、パブリッシュ環境にサインインしているサイト訪問者（コミュニティメンバー）が以下を実行できる領域を提供します。
 
 * コミュニティと共有するアイデアを作成します。
-* 表示とアイデアに対するコメント。
+* アイデアに対する表示とコメント。
 * 考えに従って。
 * アイデアに投票する。
 
-ドキュメントのこの節では、以下の内容について説明します。
+ドキュメントのこの節では、以下について説明します。
 
-* AEMサイトへの理想化機能の追加を参照してください。
-* Ideationコンポーネントの設定。
+* AEMサイトへのアイデア作成機能の追加
+* Ideationコンポーネントの設定です。
 
 ### ページへのアイディエーションの追加 {#adding-a-ideation-to-a-page}
 
@@ -42,15 +45,17 @@ To add a `Ideation` component to a page in author mode, use the component browse
 
 For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
 
-When the [required client-side libraries](/help/communities/ideation.md#essentials-for-client-side) are included, this is how the `Ideation` component will appear:
+[必要なクライアント側ライブラリが含まれる場合](/help/communities/ideation.md#essentials-for-client-side) 、次のようにコンポー `Ideation` ネントが表示されます。
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![アイディエーション](assets/ideation.png)
 
 ### アイディエーションの設定 {#configuring-an-ideation}
 
 Select the placed `Ideation` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-72](assets/chlimage_1-72.png) ![ideation-settings](assets/ideation-settings.png)
+![configure-new](assets/configure-new.png)
+
+![ideation-settings](assets/ideation-settings.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -72,19 +77,19 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **1 ページのトピック数**
 
-   ページごとに表示するアイデア/投稿の数を定義します。 初期設定は 10 です。
+   ページあたりに表示するアイデア/投稿の数を定義します。 初期設定は 10 です。
 
 * **モデレート**
 
-   オンにした場合、アイデアやコメントの投稿は、公開サイトに表示される前に承認する必要があります。 初期設定はオフです。
+   オンにした場合、アイデアやコメントの投稿は、投稿サイトに表示される前に承認される必要があります。 初期設定はオフです。
 
 * **閉じる**
 
-   このオプションを選択すると、新しいアイデアやコメントに対するアイデアフォーラムが閉じられます。 初期設定はオフです。
+   このオプションを選択すると、新しいアイデアやコメントに対するイデエーションフォーラムが閉じられます。 初期設定はオフです。
 
 * **リッチテキストエディター**
 
-   チェックすると、アイデアやコメントがマークアップと共に入力される場合があります。 初期設定はオフです。
+   オンにすると、アイデアやコメントはマークアップと共に入力される場合があります。 初期設定はオフです。
 
 * **タグ付けを許可**
 
@@ -92,19 +97,19 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **ファイルのアップロードを許可**
 
-   オンにした場合、添付ファイルをアイデアまたはコメントに追加できます。 初期設定はオフです。
+   オンにした場合、添付ファイルをアイデアまたはコメントに追加できるようにします。 初期設定はオフです。
 
 * **最大ファイルサイズ**
 
-   がオンの場合のみ `Allow File Uploads` 関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **許可されるファイルタイプ**
 
-   がオンの場合のみ `Allow File Uploads` 関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプが許可されるように指定されない。
+   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **添付する画像ファイルの最大サイズ**
 
-   「ファイルのアップロードを許可」がオンの場合にのみ関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+   「ファイルのアップロードを許可」がオンになっている場合にのみ関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **応答を許可**
 
@@ -112,11 +117,11 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **投票を許可**
 
-   選択した場合、アイデアのコメントに対する投票を許可します。 初期設定はオフです。
+   オンにした場合、アイデアのコメントに対する投票を許可します。 初期設定はオフです。
 
 * **ユーザーによるコメントおよびトピックの削除を許可**
 
-   選択すると、投稿したコメントやアイデアの削除をメンバーに許可します。 初期設定はオフです。
+   オンの場合、メンバーが投稿したコメントやアイデアを削除できるようにします。 初期設定はオフです。
 
 * **フォローを許可**
 
@@ -128,7 +133,7 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **投票を許可**
 
-   選択した場合、アイデアのコメントに対する投票を許可します。 初期設定はオフです。
+   オンにした場合、アイデアのコメントに対する投票を許可します。 初期設定はオフです。
 
 * **バッジを表示**
 
@@ -150,11 +155,11 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and
 
 * **投稿を拒否**
 
-   このオプションを選択すると、信頼できるメンバーのモデレーターは、投稿を拒否し、投稿が公開フォーラムに表示されないようにします。 初期設定はオフです。
+   オンにすると、信頼されたメンバーのモデレーターは、投稿を拒否し、投稿がパブリックフォーラムに表示されないように許可されます。 初期設定はオフです。
 
 * **トピックを閉じる / 再度開く**
 
-   このオプションを選択すると、信頼できるメンバーのモデレーターがトピックを閉じて、さらに編集やコメントを行ったり、トピックを再度開いたりすることができます。 初期設定はオフです。
+   オンにすると、信頼されたメンバーのモデレーターがトピックを閉じて、さらに編集やコメントを行ったり、トピックを再度開いたりすることができます。 初期設定はオフです。
 
 * **投稿にフラグを設定**
 
@@ -162,11 +167,11 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and
 
 * **フラグ設定理由リスト**
 
-   このオプションを選択すると、メンバーは、トピックまたはコメントに不適切なフラグを付ける理由を、ドロップダウンリストから選択できます。 初期設定はオフです。
+   オンにした場合、メンバーは、トピックまたはコメントに不適切なフラグを付ける理由をドロップダウンリストから選択できます。 初期設定はオフです。
 
 * **カスタムフラグ設定理由**
 
-   このオプションを選択すると、トピックやコメントに不適切なフラグを付ける理由をメンバーが自分で入力できるようになります。 初期設定はオフです。
+   このオプションを選択すると、トピックやコメントに不適切なフラグを付ける理由をメンバーが自分で入力できます。 初期設定はオフです。
 
 * **モデレートのしきい値**
 
@@ -174,7 +179,7 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and
 
 * **フラグ付けの制限**
 
-   トピックまたはコメントが公開表示に表示されなくなる前にフラグを付ける必要がある回数を入力します。 -1に設定すると、フラグ付けされたトピックまたはコメントがパブリック表示に表示されません。 そうでない場合、この数値はモデレートしきい値以上にする必要があります。 初期設定は 5 です。
+   トピックまたはコメントが公開表示に表示されなくなる前にフラグを付ける必要がある回数を入力します。 -1に設定した場合、フラグ付けされたトピックまたはコメントはパブリック表示に表示されません。 それ以外の場合は、この数値をモデレートしきい値以上にする必要があります。 初期設定は 5 です。
 
 #### 「タグフィールド」タブ{#tag-field-tab}
 
@@ -182,11 +187,11 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and
 
 * **許可された名前空間**
 
-   「設定」タブで `Allow Tagging` チェックされている場 **[!UICONTROL 合は]** 、該当します。 適用できるタグは、チェックされた名前空間内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」が含まれます。 初期設定は「なし」で、すべての名前空間が許可されます。
+   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **推奨の制限**
 
-   フォーラムへの投稿に対して提案として表示するタグの数を入力します。 A value of **-1** means no limit. 初期設定は 0 です。
+   フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 A value of **-1** means no limit. 初期設定は 0 です。
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
@@ -194,15 +199,15 @@ Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments ar
 
 * **並べ替え**
 
-   許可されている並べ替えの選択をすべてオンにします。 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
+   許可されている並べ替えの選択項目をすべて選択： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **デフォルトとして設定**
 
-   プルダウンして、デフォルトとして表示するチェック済みの並べ替えオプションの1つを選択します。 デフォルトは `Newest` です。
+   デフォルトとして表示する、チェック済みの並べ替えオプションの1つをプルダウンして選択します。 デフォルトは `Newest` です。
 
 * **Analytics 並べ替えのタイムオプションを選択**
 
-   プルダウンして1つを選択しま `All, Last 24 Hours, Last 7 Days, Last 30 Days`す。 デフォルトは `All` です。
+   プルダウンしていずれかを選択し `All, Last 24 Hours, Last 7 Days, Last 30 Days`ます。 デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -212,23 +217,23 @@ Communities のすべての機能と同様に、サインインしていない�
 
 メンバーはサインインすると、新しいアイデアを作成できます。
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![新しいアイデアを生み出す](assets/create-new-idea.png)
 
 アイデアを送信する前に、ドラフトとして保存できます。
 
-ボタンを選択す `Save as Draft` ると、ドラフトが保存されます。
+この `Save as Draft` ボタンを選択すると、ドラフトが保存されます。
 
-![chlimage_1-74](assets/chlimage_1-74.png)
+![節約案](assets/save-idea.png)
 
-保存したドラフトをタブで表 `My Drafts` 示する場合、編 `Read More` 集モードに戻す場合に選択します。
+保存したドラフトを `My Drafts` タブで表示する場合、編集モード `Read More` を再開する場合に選択します。
 
-![chlimage_1-75](assets/chlimage_1-75.png)
+![編集アイデア](assets/edit-idea.png)
 
 #### フィードバックの提供 {#providing-feedback}
 
 Once the idea is published, other members can sign in, open the idea ( `Read More`) and like the idea, thus adding to the vote count, and make comments.
 
-![chlimage_1-76](assets/chlimage_1-76.png)
+![feedback](assets/feedback-idea.png)
 
 ### 追加情報 {#additional-information}
 
