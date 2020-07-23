@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: ee0d4aa07db6f00409cace8664d02c545e7d6550
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 42%
@@ -259,7 +259,7 @@ Once **Create** is selected and started, the process of creating the group canno
 
 >[!CAUTION]
 >
->The groups function must *not *be the *first nor the only* function in the site structure.
+>The groups function must *not* be the *first nor the only* function in the site structure.
 >
 >他の機能（[ページ機能](/help/communities/functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
