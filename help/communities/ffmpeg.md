@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+source-git-commit: 299c4cb377c65e49b94383704a906fdd0bb38d06
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 43%
@@ -61,7 +61,7 @@ To modify the [!UICONTROL DAM Update Asset] workflow, and in this example, to tu
 * Double-click the **[!UICONTROL FFmpeg transcoding]** step to access the Step Properties dialog.
 * Under the **[!UICONTROL Process]** tab:
 
-   * **[!UICONTROL 軍備]**: すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL 軍備]**: すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
