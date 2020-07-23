@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '1346'
-ht-degree: 67%
+source-wordcount: '1344'
+ht-degree: 81%
 
 ---
 
@@ -30,13 +30,13 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->AEM の Web ページ（Sites）で操作しているときは、**編集**&#x200B;モードでアセットをプレビューできません。You need to go to **Preview** mode by clicking **Preview** in the upper right-hand corner of the page.
+>AEM の Web ページ（Sites）で操作しているときは、**編集**&#x200B;モードでアセットをプレビューできません。**プレビュー**&#x200B;モードに移るには、ページの右上隅の「**プレビュー**」をクリックする必要があります。
 
 ユーザーインターフェイスでビューアプリセットを有効または無効にする方法については、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
 **ソフトウェアインターフェイスを使用してアセットをプレビューするには**
 
-1. **Adobe Experience Manager** で、**ナビゲーション**&#x200B;ページの「**[!UICONTROL アセット]**」をタップし、「**[!UICONTROL ファイル]**」をタップしてアセットにアクセスします。
+1. **[!UICONTROL Adobe Experience Managerから、]**&#x200B;ナビゲーション **[!UICONTROL ページで「アセット]** 」をタップし、「 **[!UICONTROL ファイル」をタップしてアセットにアクセスし]****** ます。
 1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View.]**
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
@@ -55,18 +55,18 @@ ht-degree: 67%
       <td><p>3D</p> </td>
       <td>不可</td>
       <td>可</td>
-      <td><p><strong>3Dアセットをディメンションビューアにプレビューするには</strong></p>
+      <td><p><strong>3D アセットをディメンショナルビューアにプレビューするには</strong></p>
       <ul>
-      <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストで「 <strong>ビューア</strong> 」をクリックし、次元ビューアを選択します。</li>
-      <li>Tap <strong>Reset</strong> to return the image to the original zoom.</li>
-      <li>「 <strong>フルスクリーン</strong> 」をタップして、表示デバイスのビューアを最大化します。</li>
+      <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストで「<strong>ビューア</strong>」をクリックし、ディメンショナルビューアを選択します。</li>
+      <li>「<strong>リセット</strong>」をタップすると、画像は元のズームに戻ります。</li>
+      <li>「<strong>フルスクリーン</strong>」をタップすると、表示デバイスのビューアを最大化します。</li>
       </ul>
-      <p><strong>3Dシーンの操作</strong></p>
+      <p><strong>3D シーンの操作</strong></p>
       <ul>
-      <li><p><strong>3Dカメラを回転</strong> - 3Dシーンとオブジェクトの周りに表示を回転させます。</p> マウス： 左クリックしながらドラッグします。 </p> タッチスクリーン： Ctrlキーを押しながらドラッグします。</p></li>
-      <li><p><strong>カメラのパン</strong> -表示を左、右、上、下にパンします。</p> マウス： 右クリックしながらドラッグします。 </p> タッチスクリーン： 2本指で押しながらドラッグします。</p></li>
-      <li><p><strong>カメラのズーム</strong> — カメラをズームして、3Dシーン内の領域の内外を移動します。</p> マウス：ホイールをスクロールします。 </p> タッチスクリーン： 指をつねる。</p></li>
-      <li><p><strong>カメラを再入力</strong> - 3Dシーンとオブジェクトの周りに表示を回転させます。</p> マウス：ダブルクリックします。 </p> タッチスクリーン： 重複がタップします。</li></ul></td>
+      <li><p><strong>3D カメラを回転</strong> - 3D シーンとオブジェクトの周りを回転します。</p> マウス：左クリックしながらドラッグします。 </p> タッチスクリーン：指で押しながらドラッグします。</p></li>
+      <li><p><strong>カメラをパン</strong> - ビューを左右上下にパンします。</p> マウス：右クリックしながらドラッグします。 </p> タッチスクリーン：2 本指で押しながらドラッグします。</p></li>
+      <li><p><strong>カメラをズーム</strong> - 3D シーンの領域をズームインまたはズームアウトします。</p> マウス：ホイールをスクロールします。 </p> タッチスクリーン：指でつまみます。</p></li>
+      <li><p><strong>カメラ視野の中心を変更</strong> - 3D シーンとオブジェクトの周りを回転します。</p> マウス：ダブルクリックします。 </p> タッチスクリーン：ダブルタップします。</li></ul></td>
       </tr>
       <tr>
       <td><p>画像</p> </td>
@@ -78,7 +78,7 @@ ht-degree: 67%
       </ul> <p><strong>特定のビューアでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br /> タッチスクリーンを表示している場合は、重複をタップすると、画像がステップごとにズームインします。 最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br />タッチスクリーンを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
       </tr>
       <tr>
       <td>マルチメディア</td>
@@ -99,7 +99,7 @@ ht-degree: 67%
       <td><p><strong>特定のビューアでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br /> タッチスクリーンを表示している場合は、重複をタップすると、画像がステップごとにズームインします。 最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br />タッチスクリーンを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
       </tr>
       <tr>
       <td>スピンセット</td>
@@ -108,7 +108,7 @@ ht-degree: 67%
       <td><p><strong>特定のビューアでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br /> タッチスクリーンを表示している場合は、重複をタップすると、画像がステップごとにズームインします。 最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br />タッチスクリーンを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
       </tr>
       <tr>
       <td>混在メディアセット</td>
@@ -117,7 +117,7 @@ ht-degree: 67%
       <td><p><strong>特定のビューアでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br /> タッチスクリーンを表示している場合は、重複をタップすると、画像がステップごとにズームインします。 最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br />タッチスクリーンを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
       </tr>
       <tr>
       <td>カルーセルセット</td>
@@ -138,7 +138,7 @@ ht-degree: 67%
       </ul> <p><strong>特定のビューアでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをタップして、ドロップダウンリストを表示します。「<strong>ビューア</strong>」を選択した後、アセットに適用するビューアを選択します。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br /> タッチスクリーンを表示している場合は、重複をタップすると、画像がステップごとにズームインします。 最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 「<strong>リセット</strong>」をクリックすると、画像は元のズームに戻ります。<br />タッチスクリーンを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> </td>
       </tr>
     </tbody>
     </table>
