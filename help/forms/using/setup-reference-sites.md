@@ -10,10 +10,10 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 371ecbdaad97b7111353f40d1ddfb686e99d46c5
 workflow-type: tm+mt
-source-wordcount: '2864'
-ht-degree: 46%
+source-wordcount: '2878'
+ht-degree: 45%
 
 ---
 
@@ -216,8 +216,8 @@ AEM Formsリファレンスサイトの場合、AEM DS Settings Serviceで、処
 
 「 [ソフトウェア配布](https://docs.adobe.com/content/help/en/experience-cloud/software-distribution/home.html)」を使用してリファレンスサイトパッケージをインストールします。
 
-* [AEM FormsFSIリファレンスサイトパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-FSI-REF-SITE)
-* [AEM Forms管理リファレンスサイトパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-GOV-REF-SITE)
+* [AEM FormsFSIリファレンスサイトパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-FSI-REF-SITE)
+* [AEM Forms管理リファレンスサイトパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-GOV-REF-SITE)
 
 To learn more about how to use packages , see [How to Work With Packages](/help/sites-administering/package-manager.md).
 
@@ -376,7 +376,7 @@ AEM Forms を Adobe Analytics に統合することで、フォームやドキ�
 
 1. 「**[!UICONTROL AEM Forms Target の設定]**」をクリックします。
 1. Targetフレームワークを選択します。
-1. 「**[!UICONTROL Target URLs]**」フィールドに、AEM Forms への URL を指定します。例えば、次のように入力します。`https://<hostname>:<port>/`
+1. 「**[!UICONTROL Target URLs]**」フィールドに、AEM Forms への URL を指定します。例：`https://<hostname>:<port>/`
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
