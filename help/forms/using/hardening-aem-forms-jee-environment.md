@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: f9b11eee4c044a8df4e694aa5f660b5ea375ca3c
+source-git-commit: 9e1d77b8696436b392f0d9209ddcb2c9196f3c09
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7698'
 ht-degree: 71%
 
 ---
@@ -955,6 +955,8 @@ JEE上のAEM Formsが必要とするWebSphereポートについて詳しくは�
 Referring to the physical architecture that is described in the section [AEM Forms on JEE physical architecture](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture), you should configure SSL for all of the connections that you plan to use. 特に SOAP 接続は、ネットワーク上にユーザー資格情報が公開されないように、すべて SSL 経由で行う必要があります。
 
 JBoss、WebLogic および WebSphere 上で SSL を設定する手順については、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_64)の「SSL の設定」を参照してください。
+
+AEM Formsサーバー用に設定されたJVM (Java Virtual Machine)に証明書を読み込む方法について詳しくは、 [AEM Formsワークベンチヘルプの「相互認証」の節を参照してください](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)。
 
 ### SSL リダイレクトの設定 {#configuring-ssl-redirect}
 
