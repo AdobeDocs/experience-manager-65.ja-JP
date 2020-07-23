@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: b242163267b43507e1cb9c6d4c36bb65385afc62
+source-git-commit: 8738989c18c6f09452da95d0b9f2c05b0a2a1a81
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 46%
@@ -39,7 +39,7 @@ ht-degree: 46%
 
 **http://localhost:4503/content/sites/enable/en.html**
 
-![chlimage_1-433](assets/chlimage_1-433.png)
+![enablement-login](assets/enablement-login.png)
 
 ## 匿名のサイト訪問者 {#anonymous-site-visitor}
 
@@ -72,7 +72,7 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 1. 「**[!UICONTROL 詳細]**」タブに移動します。
 1. Enable **[!UICONTROL Authentication Requirement]**.
 
-   ![site-authentication-1](assets/site-authentication-1.png)
+   ![サイト認証](assets/site-authentication.png)
 
 1. ログ追加インページのパス。 例： `/content/......./GetStarted`
 1. ページを公開します。
