@@ -12,7 +12,7 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '2897'
 ht-degree: 53%
@@ -65,12 +65,15 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 このリリースには、以下の 3 つの役割ベースのバッジが含まれています。
 
 * **司会者**
+
    `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
 * **グループマネージャ**
+
    `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
 * **特権的な会員**
+
    `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
@@ -87,12 +90,15 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 このリリースには、以下の 3 つの報奨ベースのバッジが含まれています。
 
 * **金**
+
    `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
 * **銀**
+
    `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **青銅**
+
    `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
 ![chlimage_1-99](assets/chlimage_1-99.png)
@@ -214,8 +220,8 @@ Sub-rules are nodes of type `cq:Page` with properties on its `jcr:content`node t
  <tbody>
   <tr>
    <th>プロパティ</th>
-   <th>タイプ</th>
-   <th> 値の説明</th>
+   <th>型</th>
+   <th> 値 説明</th>
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
@@ -338,8 +344,8 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
  <tbody>
   <tr>
    <th>プロパティ</th>
-   <th>タイプ</th>
-   <th>値の説明</th>
+   <th>型</th>
+   <th>値 説明</th>
   </tr>
   <tr>
    <td>thresholds</td>
@@ -409,6 +415,7 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 >
 >* May refer to an author instance if the [Tunnel Service](/help/communities/users.md#tunnel-service) is enabled.
 >* May be an obscure, random name - see [Security Checklist](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) regarding authorizable ID.
+
 >
 
 
@@ -575,7 +582,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 * badgingRules追加プロパティ：
 
    * **名前**：`badgingRules`
-   * **Type**: `String`
+   * **型**：`String`
    * Select **Multi**
    * Select **Add**
    * Enter `/libs/settings/community/badging/rules/forums-badging`
@@ -586,7 +593,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 * scoringRules追加プロパティ：
 
    * **名前**：`scoringRules`
-   * **Type**: `String`
+   * **型**：`String`
    * Select **Multi**
    * Select **Add**
    * Enter `/libs/settings/community/scoring/rules/forums-scoring`
@@ -608,7 +615,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 * 必要に応じて、allowBadgesブール追加プロパティを設定し、それがtrueであることを確認します。
 
    * **名前**：`allowBadges`
-   * **Type**: `Boolean`
+   * **型**：`Boolean`
    * **値**: `true`
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
