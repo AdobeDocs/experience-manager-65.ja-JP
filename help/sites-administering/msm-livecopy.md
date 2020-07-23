@@ -2,9 +2,9 @@
 title: ライブコピーの作成と同期
 description: ライブコピーを作成および同期する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
+source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
 workflow-type: tm+mt
-source-wordcount: '4116'
+source-wordcount: '4115'
 ht-degree: 82%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 82%
 
 以下のような任意のページのライブコピーを作成できます。
 
-* [ブループリント設定](#creating-a-blueprint-configuration)によって参照されるページ。
+* Pages that are referenced by a [blueprint configuration](#creating-a-blueprint-configuration).
 * ブループリント設定に接続されていないページ。
 * AEM では、ライブコピーを別のライブコピーのページ内に作成することもできます。
 
