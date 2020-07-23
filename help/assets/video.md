@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '11829'
-ht-degree: 87%
+source-wordcount: '11828'
+ht-degree: 89%
 
 ---
 
@@ -38,18 +38,18 @@ ht-degree: 87%
 
 
 
-1. 次の手順を実行して、**Dynamic Media ビデオをアップロードします**。
+1. 次の手順を実行して、**Dynamic Media ビデオをアップロード**&#x200B;します。
 
    * 独自のビデオエンコーディングプロファイルを作成します。または、Dynamic Media に付属している事前定義済みの&#x200B;_アダプティブビデオエンコーディング_（AVE）プロファイルを使用してもかまいません。
 
       * [ビデオエンコーディングプロファイルの作成](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)
       * [ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)に関する詳細
-   * プライマリソースビデオをアップロードする1つ以上のフォルダに、ビデオ処理プロファイルを関連付けます。
+   * ビデオ処理プロファイルを、プライマリソースビデオのアップロード先となる 1 つ以上のフォルダーに関連付けます。
 
       * [ビデオプロファイルのフォルダーへの適用](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
       * [処理プロファイルを使用するためのデジタルアセットの整理におけるベストプラクティス](/help/assets/organize-assets.md)に関する詳細
       * [デジタルアセットの整理](/help/assets/organize-assets.md)に関する詳細
-   * プライマリソースビデオをフォルダーにアップロードします。 15 GB までのビデオファイルをアップロードできます。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
+   * フォルダーにプライマリソースビデオをアップロードします。15 GB までのビデオファイルをアップロードできます。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
 
       * [ビデオのアップロード](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)
       * [サポートされる入力ファイル形式](/help/assets/assets-formats.md#supported-multimedia-formats)に関する詳細
@@ -58,7 +58,7 @@ ht-degree: 87%
 
 
 
-1. 次のいずれかの操作をおこなって、**Dynamic Media ビデオを管理します。**
+1. 次のいずれかの操作をおこなって、**Dynamic Media ビデオを管理**&#x200B;します。
 
    * ビデオアセットを整理、参照および検索します。
 
@@ -146,7 +146,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 * 効率的なビデオアセット管理のための、メタデータが完全にサポートされたビデオの整理、参照および検索。
 * Web やデスクトップおよびモバイルデバイス（iPhone、iPad、Android、Blackberry および Windows Phone を含む）へのアダプティブビデオセットの配信。
 
-アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。詳しくは、[Scene7 ビューアリファレンスガイド](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html)を参照してください。
+アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。詳しくは、[Scene7 ビューアリファレンスガイド](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.translate.html)を参照してください。
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする Blackberry デバイスについては、[Blackberry でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
@@ -162,7 +162,7 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 詳しくは、[動的なビデオ再生](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)の例を参照してください。
 
-See also [Viewers for AEM Assets and Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) and [Viewers for AEM assets only](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) in the Adobe Scene7 Viewers Reference Guide.
+See also [Viewers for AEM Assets and Dynamic Media Classic](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.translate.html) and [Viewers for AEM assets only](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.translate.html) in the Adobe Scene7 Viewers Reference Guide.
 
 ## ベストプラクティス：HTML5 ビデオビューアの使用 {#best-practice-using-the-html-video-viewer}
 
@@ -174,7 +174,7 @@ Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデ�
 
 HTML5 と CSS を使用して再生コンポーネントをデザインできる機能、埋め込み再生の機能、ブラウザーの機能に応じてアダプティブストリーミングまたはプログレッシブストリーミングを使用できる機能を 1 つのプレーヤーにまとめることで、リッチメディアコンテンツを配信する範囲をデスクトップユーザーとモバイルユーザーの両方に拡大して、ビデオエクスペリエンスを効率化することができます。
 
-『Adobe Scene7 ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)も参照してください。
+『Adobe Scene7 ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.translate.html)も参照してください。
 
 ### HTML5 ビデオビューアを使用した、デスクトップコンピューターおよびモバイルデバイス上でのビデオ再生 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -306,7 +306,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
 
 ### 縦横比 {#aspect-ratio}
 
-プライマリソースビデオファイルのビデオエンコーディングプリセットを選択または作成する場合は、プリセットとプライマリソースビデオファイルの縦横比が同じであることを確認してください。 縦横比とは、ビデオの高さに対する幅の比率のことです。
+プライマリソースビデオファイルのビデオエンコーディングプリセットを選択または作成するときには、プライマリソースビデオファイルと同じ縦横比をプリセットに使用してください。縦横比とは、ビデオの高さに対する幅の比率のことです。
 
 ビデオファイルの縦横比を求めるには、ファイルのメタデータを取得し、そのファイルの幅と高さを記録します（前述のファイルのメタデータの取得を参照してください）。さらに、次の式を使用して縦横比を計算します。
 
@@ -370,7 +370,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 * データレートを選択してから、選択したデータレートできれいに表示される最高の解像度でエンコードします。
 * 解像度を選択してから、選択した解像度で高品質のビデオを配信するために必要になるデータレートでエンコードします。
 
-プライマリソースビデオファイルのビデオエンコーディングプリセットを選択（または作成）する場合は、次の表を使用して正しい解像度をターゲットします。
+プライマリソースビデオファイルのビデオエンコーディングプリセットを選択（または作成）する場合は、次の表を使用して正しい解像度をターゲットにします。
 
 | 解像度 | 高さ（ピクセル） | 画面サイズ |
 |--- |--- |--- |
@@ -385,7 +385,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 日本および米国では、ほとんどのビデオは 1 秒あたりのフレーム数（fps）が 29.97 で撮影されます。また、ヨーロッパでは、ほとんどのビデオが 25 fps で撮影されます。映画は 24 fps で撮影されます。
 
-プライマリソースビデオファイルのfpsに一致するビデオエンコーディングプリセットを選択します。 例えば、プライマリソースビデオが25 fpsの場合は、25 fpsのエンコーディングプリセットを選択します。 デフォルトでは、すべてのカスタムエンコーディングはプライマリソースビデオファイルのfpsを使用します。 そのため、ビデオエンコーディングプリセットを作成するときに、fps 設定を明示的に指定する必要はありません。
+プライマリソースビデオファイルの fps レートに一致するビデオエンコーディングプリセットを選択します。例えば、プライマリソースビデオが 25 fps の場合は、25 fps のエンコーディングプリセットを選択します。デフォルトでは、すべてのカスタムエンコーディングでプライマリソースビデオファイルの fps が使用されます。そのため、ビデオエンコーディングプリセットを作成するときに、fps 設定を明示的に指定する必要はありません。
 
 ### ビデオエンコーディングのサイズ {#video-encoding-dimensions}
 
@@ -746,7 +746,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 
 >[!NOTE]
 >
->AEM では、YouTube からのコンテンツの公開に **[!UICONTROL YouTube に公開]**&#x200B;ワークフローを使用します。このワークフローでは、進行状況を監視して、エラー情報を表示できます。
+>AEM では、YouTube からのコンテンツの公開に **[!UICONTROL YouTube への公開]**&#x200B;ワークフローを使用します。このワークフローでは、進行状況を監視して、エラー情報を表示できます。
 >
 >詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。
 >
@@ -776,7 +776,7 @@ YouTube チャンネルにビデオを公開するには：
 
 詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。
 
-公開時間は、プライマリソースビデオの形式、ファイルサイズ、アップロードトラフィックなど、様々な要因によって大きく異なります。 公開プロセスにかかる時間は、数分から数時間までの幅があります。また、高解像度の形式では、レンダリングの時間がかかることにも注意してください。例えば、720p や 1080p の場合、表示されるまでの時間が 480p よりも大幅に長くなります。
+公開にかかる時間は、プライマリソースビデオの形式、ファイルサイズ、アップロードトラフィックなどの多数の要因により左右されます。公開プロセスにかかる時間は、数分から数時間までの幅があります。また、高解像度の形式では、レンダリングの時間がかかることにも注意してください。例えば、720p や 1080p の場合、表示されるまでの時間が 480p よりも大幅に長くなります。
 
 8 時間経っても「**[!UICONTROL アップロード済み（処理中、お待ちください）]**」というステータスメッセージが表示される場合は、サイトからビデオを削除して再度アップロードしてみてください。
 
@@ -790,9 +790,9 @@ YouTube チャンネルにビデオを公開するには：
 
 Web アプリケーションに YouTube URL をリンクするには：
 
-1. URL をコピーする、YouTube への公開済みビデオアセットの場所に移動して選択します。**
+1. URL のコピー先となる、*YouTube への公開済み*&#x200B;ビデオアセットの場所に移動して選択します。
 
-   YouTube URL をコピーするには、その前にビデオアセットを YouTube に公開しておく必要があります。****
+   YouTube URL をコピーするには、*その前に*&#x200B;ビデオアセットを YouTube に&#x200B;*公開しておく*&#x200B;必要があります。
 
 1. On the toolbar, click **[!UICONTROL Properties.]**
 1. 「**[!UICONTROL 詳細]**」タブをクリックします。
@@ -962,7 +962,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 * ビデオの合計視聴時間
 * 訪問別ビデオ数
 
-すべての公開済みビデオの表も表示されるので、ビデオ開始数の合計に基づいて、Web サイトで視聴された上位のビデオを追跡できます。**
+すべての&#x200B;*公開済み*&#x200B;ビデオの表も表示されるので、ビデオ開始数の合計に基づいて、Web サイトで視聴された上位のビデオを追跡できます。
 
 リストのビデオ名をタップすると、ビデオのオーディエンス保持（ドロップオフ）レポートが折れ線グラフの形式で表示されます。このグラフには、ビデオ再生中の特定の瞬間におけるビュー数が表示されます。ビデオを再生すると、プレーヤーの時間インジケーターと同期して縦棒が表示されていきます。この折れ線グラフのデータが急激に下るところは、オーディエンスが関心をなくして再生を終了したところです。
 
@@ -999,7 +999,7 @@ Dynamic Media で標準提供されているビデオビューアを使用して
 
 独自のビデオビューアを作成するには、Scene7 ビューアリファレンスと Scene7 HTML5 ビューア SDK を使用します。
 
-詳しくは、[Scene7 ビューアリファレンスガイド](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)を参照してください。
+詳しくは、[Scene7 ビューアリファレンスガイド](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/home.translate.html)を参照してください。
 
 <!-- Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
@@ -1050,7 +1050,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
       ```
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
-   ****&#x200B;詳しくは、『Scene7 HTML5 Viewer SDK User Guide』の「Using the TrackingManager Component」を参照してください。このガイドは、[Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードできます。
+   詳しくは、『*Scene7 HTML5 Viewer SDK User Guide*』の「*Using the TrackingManager Component*」を参照してください。このガイドは、[Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードできます。
 
 ## ビデオへのキャプションの追加 {#adding-captions-to-video}
 
@@ -1064,7 +1064,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
 
 Dynamic Media には、キャプションファイルを JSON（JavaScript Object Notation）形式に変換する機能があります。このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
 
-URL で JSON 機能を使用する方法について詳しくは、Scene7 画像サービング API ヘルプの[静的コンテンツ（画像以外）の提供（英語）](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html)を参照してください。**
+URL で JSON 機能を使用する方法について詳しくは、*Scene7 画像サービング API ヘルプ*&#x200B;の[静的コンテンツ（画像以外）の提供（英語）](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.translate.html)を参照してください。
 
 ビデオにキャプションまたはサブタイトルを追加するには:
 
@@ -1080,7 +1080,7 @@ URL で JSON 機能を使用する方法について詳しくは、Scene7 画像
 
    良い結果を得るためには、このツールを Explorer 9 以上、Google Chrome、または Safari で使用してください。
 
-   ツールの「**[!UICONTROL Enter URL of video file]**」フィールドにビデオファイルの URL をコピーして貼り付け、「**Load**」をクリックします。[アセットの URL の取得](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)を参照して、ビデオファイルそのものの URL を取得し、それを「**[!UICONTROL Enter URL of video file field」に貼り付けてください。]**&#x200B;その後、Internet Explorer、Chrome、または Safari で、ビデオを再生できます。
+   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. [アセットの URL の取得](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)を参照して、ビデオファイルそのものの URL を取得し、それを「**[!UICONTROL ビデオファイルの URL を入力」フィールドに貼り付けてください。]**&#x200B;その後、Internet Explorer、Chrome、または Safari で、ビデオを再生できます。
 
    ここで、サイトの画面に表示される指示に従って、WebVTT ファイルを作成して保存します。終了したら、キャプションファイルの内容をコピーし、空のテキストエディターに貼り付けて、ファイル拡張子 .vtt を付けて保存します。
 
@@ -1093,7 +1093,7 @@ URL で JSON 機能を使用する方法について詳しくは、Scene7 画像
 1. AEM で、WebVTT キャプションファイルを DAM にアップロードします。
 1. アップロードしたキャプションファイルに関連付ける*公開済み*ビデオアセットに移動します。
 
-   URL をコピーするには、その前にアセットを公開しておく必要があります。****
+   URL をコピーするには、その&#x200B;*前に*&#x200B;アセットを&#x200B;*公開*&#x200B;しておく必要があります。
 
    [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
@@ -1166,7 +1166,7 @@ Cost-efficient access to rapidly evolving technology.
        <td>ポップアップビデオビューアエクスペリエンスの場合</td>
        <td>
        <ol>
-       <li>アップロードしたチャプターファイルを関連付ける、公開済み<i></i>ビデオアセットに移動します。URL をコピーするには、その前にアセットを公開しておく必要があります。<i></i><i></i><a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li>
+       <li>アップロードしたチャプターファイルを関連付ける、公開済み<i></i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li>
        <li>ドロップダウンメニューで「<strong>ビューア</strong>」をクリックまたはタップします。</li>
        <li>左側のレールで、ビデオビューアプリセット名をタップまたはクリックします。ビデオのプレビューが別のページで開きます。</li>
        <li>左側のレールの下部にある「<strong>URL</strong>」をクリックします。</li>
@@ -1178,7 +1178,7 @@ Cost-efficient access to rapidly evolving technology.
        <td>埋め込みビデオビューアエクスペリエンスの場合 <br /> </td>
        <td>
        <ol>
-       <li>アップロードしたチャプターファイルを関連付ける、公開済み<i></i>ビデオアセットに移動します。URL をコピーするには、その前にアセットを公開しておく必要があります。<i></i><i></i><a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li>
+       <li>アップロードしたチャプターファイルを関連付ける、公開済み<i></i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li>
        <li>ドロップダウンメニューで「<strong>ビューア</strong>」をクリックまたはタップします。</li>
        <li>左側のレールで、ビデオビューアプリセット名をタップまたはクリックします。ビデオのプレビューが別のページで開きます。</li>
        <li>左側のレールの下部にある「<strong>埋め込み</strong>」をクリックします。</li>
