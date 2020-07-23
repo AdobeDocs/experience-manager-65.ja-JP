@@ -11,14 +11,17 @@ topic-tags: site-features
 discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 611743cc4144f99968845093b3903fe7df8bf9d9
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 99%
 
 ---
 
 
 # ページへのワークフローの適用{#applying-workflows-to-pages}
 
-オーサリング時に、ワークフローを呼び出して、ページ上でアクションを実行できます。複数のワークフローを適用することもできます。
+オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
 
 ワークフローを適用する際には、次の情報を指定します。
 
@@ -28,15 +31,16 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 ワークフローは以下のものから開始できます。
 
-* [**サイト**&#x200B;コンソール](#starting-a-workflow-from-the-sites-console)。
-* [ページの編集中に「**ページ情報&#x200B;**](#starting-a-workflow-from-the-page-editor)」から。
+* [サイトコンソール](#starting-a-workflow-from-the-sites-console)。
+* [ページの編集中に「ページ情報](#starting-a-workflow-from-the-page-editor)」から。
 
 >[!NOTE]
 >
->関連トピック:
+>関連トピック：
 >
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
 >* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)
+
 >
 
 
@@ -49,8 +53,8 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 ワークフローは以下のいずれかから開始できます。
 
-* [サイトツールバーの「**作成**」オプション](#starting-a-workflow-from-the-sites-toolbar)。
-* [サイトコンソールの&#x200B;**タイムライン**&#x200B;レール](#starting-a-workflow-from-the-timeline)。
+* [サイトツールバーの「作成」オプション](#starting-a-workflow-from-the-sites-toolbar)。
+* [サイトコンソールのタイムラインレール](#starting-a-workflow-from-the-timeline)。
 
 両方の場合で、以下の作業が必要です。
 
@@ -58,11 +62,11 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 ### サイトツールバーからのワークフローの開始 {#starting-a-workflow-from-the-sites-toolbar}
 
-You can start a workflow from the toolbar of the **Sites** console:
+**サイト**&#x200B;コンソールのツールバーからワークフローを開始できます。
 
 1. 必要なページに移動して選択します。
 
-1. From the **Create** option in the toolbar you can now select **Workflow**.
+1. これでツールバーの「**作成**」オプションで「**ワークフロー**」を選択できます。
 
    ![screen_shot_2019-03-06at121237pm](assets/screen_shot_2019-03-06at121237pm.png)
 
@@ -72,8 +76,8 @@ You can start a workflow from the toolbar of the **Sites** console:
 
 **タイムライン**&#x200B;から、選択したリソースに適用されるワークフローを開始できます。
 
-1. [リソースを選択し](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) 、「 [Timeline](/help/sites-authoring/basic-handling.md#timeline) 」を開きます（または、「Timeline」を開いて、リソースを選択します）。
-1. コメントフィールドの横にある矢印を使用すると、**「ワークフローを開始」**&#x200B;が表示されます。
+1. [リソースを選択](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources)し、[タイムライン](/help/sites-authoring/basic-handling.md#timeline)を開きます（またはタイムラインを開いてからリソースを選択します）。
+1. コメントフィールドの横にある矢印を使用すると、「**ワークフローを開始**」が表示されます。
 
    ![screen-shot_2019-03-05at120026](assets/screen-shot_2019-03-05at120026.png)
 
@@ -85,8 +89,8 @@ You can start a workflow from the toolbar of the **Sites** console:
 
 **ワークフローの作成**&#x200B;ウィザードを以下のいずれかから開いた後
 
-* [サイトツールバーの「**作成**」オプション](#starting-a-workflow-from-the-sites-toolbar)。
-* [サイトコンソールの&#x200B;**タイムライン**&#x200B;レール](#starting-a-workflow-from-the-timeline)。
+* [サイトツールバーの「作成」オプション](#starting-a-workflow-from-the-sites-toolbar)。
+* [サイトコンソールのタイムラインレール](#starting-a-workflow-from-the-timeline)。
 
 以下のように詳細を指定できます。
 
@@ -96,6 +100,7 @@ You can start a workflow from the toolbar of the **Sites** console:
    * **ワークフロータイトル**
 
       * このインスタンスのタイトルを指定して、後の段階でそれを識別するために役立てることができます。
+
    ワークフローモデルによっては、以下のオプションも使用できます。これらにより、ペイロードとして作成されたパッケージは、ワークフローが完成した後も維持されます。
 
    * **ワークフローパッケージを維持**
@@ -104,7 +109,7 @@ You can start a workflow from the toolbar of the **Sites** console:
       * 識別を容易にするために、パッケージのタイトルを指定できます。
    >[!NOTE]
    >
-   >ワークフローが[マルチリソースサポート](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)のために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。
+   >ワークフローがマルチリソースサポートのために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
 
    完了したら、「**次へ**」を使用して続行します。
 
@@ -112,7 +117,7 @@ You can start a workflow from the toolbar of the **Sites** console:
 
 1. **スコープ**&#x200B;ステップで、以下のものを選択できます。
 
-   * **「コンテンツを追加** 」をクリックしてパ [スブラウザーを開き](/help/sites-authoring/author-environment-tools.md#path-browser) 、追加のリソースを選択します。ブラウザーで「選択」をクリックまたはタップし **て** 、コンテンツをワークフローインスタンスに追加します。
+   * 「**コンテンツを追加**」で[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)を開き、追加リソースを選択します。ブラウザーでは、「**選択**」をクリックまたはタップして、コンテンツをワークフローインスタンスに追加します。
 
    * 追加のアクションを表示するための既存のリソース
 
@@ -121,16 +126,18 @@ You can start a workflow from the toolbar of the **Sites** console:
          * 直近の子のみを含める。
          * 変更されたページのみを含める。
          * 既に公開済みのページのみを含める。
+
          指定された子は、ワークフローが適用されるリソースのリストに追加されます。
 
       * 「**選択範囲を削除**」は、そのリソースをワークフローから削除します。
+
    ![wf-53](assets/wf-53.png)
 
    >[!NOTE]
    >
    >追加リソースを追加する場合は、「**戻る**」を使用して、**プロパティ**&#x200B;ステップで「**ワークフローパッケージを維持**」の設定を調整できます。
 
-1. Use **Create** to close the wizard and create the workflow instance. 通知はサイトコンソールに表示されます。
+1. 「**作成**」を使用して、ウィザードを閉じ、ワークフローインスタンスを作成します。通知はサイトコンソールに表示されます。
 
 ## ページエディターからのワークフローの開始 {#starting-a-workflow-from-the-page-editor}
 
