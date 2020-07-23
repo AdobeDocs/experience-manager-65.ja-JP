@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1829'
 ht-degree: 89%
 
 ---
@@ -131,7 +131,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
    * Near the middle of the Spin Set Editor page, tap **[!UICONTROL Tap to open Asset Selector.]**
    スピンセットに含めるアセットをタップして選択しします。選択済みのアセットにはチェックマークアイコンが付いています。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select.]**
 
-   アセットセレクターでは、キーワードを入力して **Enter** キーをタップすることで、アセットを検索することができます。フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
+   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter]** キーをタップすることで、アセットを検索することができます。フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
 
    [セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
 
@@ -204,6 +204,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
    * To delete an asset, select it and click or tap **[!UICONTROL Delete Asset.]**
    * プリセットを適用するには、「プリセット」アイコンをタップまたはクリックし、プリセットを選択します。
    * スピンセット全体を削除するには、スピンセットに移動して選択し、「**[!UICONTROL 削除]**」を選択します
+
    >[!NOTE]
    >
    >スピンセットの画像を編集するには、スピンセットに移動し、左側のレールの「**[!UICONTROL メンバーを設定]**」をタップしてから、個々のアセットの鉛筆アイコンをタップして編集ウィンドウを開きます。
