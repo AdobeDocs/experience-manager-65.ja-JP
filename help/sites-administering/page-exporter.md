@@ -2,10 +2,10 @@
 title: ページエクスポーター
 description: AEM ページエクスポーターの使用方法について説明します。
 translation-type: tm+mt
-source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
+source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 22%
+source-wordcount: '1065'
+ht-degree: 21%
 
 ---
 
@@ -98,7 +98,7 @@ AEM allows you to export a page as a complete web page including images, `.js` a
 
 テンプレートを設定したら、使用可能にする必要があります。
 
-1. CRXDEで、ブランチの必要なページに移動し `/content` ます。
+1. CRXDEで、ブランチの必要なページに移動し `/content` ます。 これは、個々のページ、またはサブツリーのルートページにすることができます。
 
 1. ページの `jcr:content` ノードで、プロパティを作成します。
    * `Name`: `cq:exportTemplate`
