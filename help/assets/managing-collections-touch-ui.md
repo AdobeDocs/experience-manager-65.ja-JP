@@ -4,9 +4,9 @@ description: 作成、表示、削除、編集、コレクションのダウン�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '2203'
 ht-degree: 65%
 
 ---
@@ -102,19 +102,14 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
    ![collection_listing](assets/collection_listing.png)
 
-   「**[!UICONTROL コレクションを作成]**」ボタンのラベルが「**[!UICONTROL スマートコレクションを編集]**」に変わります。スマートコレクションの設定を編集するには、「**[!UICONTROL ファイルとフォルダー]**」リストから「**[!UICONTROL ファイル]**」を選択します。Then, Click the **[!UICONTROL Edit Smart Selection]** button.
-
-   ![chlimage_1-7](assets/chlimage_1-112.png)
+   The label of the **[!UICONTROL Create Smart Selection]** option changes to **[!UICONTROL Edit Smart Selection]**. スマートコレクションの設定を編集するには、「**[!UICONTROL ファイルとフォルダー]**」リストから「**[!UICONTROL ファイル]**」を選択します。「Edit Smart Selection **[!UICONTROL 」]** 編集スマート・コレクション ![](assets/do-not-localize/edit-smart-collection.png) ・オプションをクリックします。
 
 ## コレクションへのアセットの追加 {#adding-assets-to-a-collection}
 
 参照元のアセットまたはフォルダーのリストを含むコレクションにアセットを追加できます。スマートコレクションでは、検索クエリを使用してアセットを設定します。そのため、アセットおよびフォルダーへの静的な参照はスマートコレクションに適用できません。
 
-1. アセットユーザーインターフェイスで、アセットを選択し、ツールバー **[!UICONTROL の「コレクションへ]** 」をクリックします。
-
-   ![chlimage_1-8](assets/chlimage_1-113.png)
-
-   または、インターフェイスの「コレクションに **[!UICONTROL ドロップ]** 」領域にアセットをドラッグすることもできます。 領域追加のラベルが「ドロップ」に変わった場合のアセット追加。 ****
+1. アセットユーザーインターフェイスで、アセットを選択し、ツールバー **[!UICONTROL から「コレクション]**![に追加](assets/do-not-localize/add-to-collection.png) 」をクリックします。
+または、インターフェイスの「コレクションに **[!UICONTROL ドロップ]** 」領域にアセットをドラッグすることもできます。 領域追加のラベルが「ドロップ」に変わった場合のアセット追加。 ****
 
 1. **[!UICONTROL コレクションに追加]**&#x200B;ページで、アセットを追加するコレクションを選択します。
 
