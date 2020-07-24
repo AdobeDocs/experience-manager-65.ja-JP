@@ -3,9 +3,9 @@ title: Adobe Creative Cloud [!DNL Adobe Experience Manager] と統合のベス�
 description: アセット転送ワークフローを合理化し、高いコンテンツ速度を達成するための [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 統合のベストプラクティスです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '3251'
+source-wordcount: '3262'
 ht-degree: 54%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 54%
 | Business users simplify opening and using assets, editing and uploading changes to [!DNL Experience Manager], and uploading new files into [!DNL Experience Manager] from the desktop environment. 汎用の統合を使用して、アドビ以外のアセットも含め、あらゆるアセットタイプをネイティブデスクトップアプリケーションで開きます。 | [Experience Managerデスクトップアプリ](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager]Windows および Mac デスクトップ上の デスクトップアプリケーション |
 | Marketers and business users discover, preview, license and save, and manage the [!DNL Adobe Stock] assets from within [!DNL Experience Manager]. Licensed and saved assets provide select [!DNL Adobe Stock] metadata for better governance. | [Adobe Experience Manager と Adobe Stock との連携](aem-assets-adobe-stock.md) | [!DNL Experience Manager] ウェブインターフェース |
 
-ここでは、主に、コラボレーションニーズの最初の 2 つの側面に焦点を当てます。アセットの大規模な配布と調達については、使用例として簡単に説明します。そのようなニーズに対するソリューションとしては、Adobe Brand Portal または Asset Share Commons を検討してください。[Brand Portalなどの別のソリューション](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html)、 [Asset Share Commonsコンポーネントに基づいて構築できるソリューション、](https://adobe-marketing-cloud.github.io/asset-share-commons/) Link Share [、Using](/help/assets/link-sharing.md)[](/help/assets/managing-assets-touch-ui.md) Experience ManagerAssetsを使用するソリューションは、特定の要件に基づいて検討する必要があります。
+ここでは、主に、コラボレーションニーズの最初の 2 つの側面に焦点を当てます。アセットの大規模な配布と調達については、使用例として簡単に説明します。そのようなニーズに対するソリューションとしては、Adobe Brand Portal または Asset Share Commons を検討してください。[Brand Portalなどの別のソリューション](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/home.html)、 [Asset Share Commonsコンポーネントに基づいて構築できるソリューション、](https://adobe-marketing-cloud.github.io/asset-share-commons/) Link Share [、Using](/help/assets/link-sharing.md)[](/help/assets/managing-assets-touch-ui.md) Experience ManagerAssetsを使用するソリューションは、特定の要件に基づいて検討する必要があります。
 
 ![Creative CloudExperience Manager用接続では、使用する機能を決定](assets/creative-connections-aem.png)
 
@@ -66,7 +66,7 @@ ht-degree: 54%
 
 アセット配布使用例をサポートするには、他のソリューションを考慮に入れる必要があります。
 
-* [Brand Portal](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html) （設定可能なSaaSアドオン）を使用してアセット [!DNL Experience Manager Assets] を公開できます。
+* [Brand Portal](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/home.html) （設定可能なSaaSアドオン）を使用してアセット [!DNL Experience Manager Assets] を公開できます。
 * カスタムソリューションは [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) のコードベースに基づいて作成される。
 * [!DNL Experience Manager][ リンク共有](/help/assets/link-sharing.md)：リンクを使用してアドホックでアセットを共有する。
 * [Experience ManagerアセットWebインターフェイス](/help/assets/managing-assets-touch-ui.md) 。 [!DNL Experience Manager] アクセス制御の設定と必要なIT/ネットワーク構成の調整によって保護された外部のユーザー向けの領域を備えており、これらの外部ユーザーに対するアクセスを提供 [!DNL Experience Manager]します。
@@ -174,7 +174,7 @@ DAMデプロイメントに直接アクセスできない外部のエージェ�
 以下の戦略で最終／承認済みアセットへのアクセスを提供します。
 
 * Asset Link が機能しない場合は、デスクトップアプリケーションを使用します。
-* Use [Experience Manager Assets Brand Portal](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html) for distributing assets securely to external partners
+* Use [Experience Manager Assets Brand Portal](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/home.html) for distributing assets securely to external partners
 * [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) に基づいた、配布および調達用ポータルのカスタム実装を使用します。
 * Use Access Control set up in [!DNL Experience Manager] and necessary network infrastructure (for example, VPN and IP allowed list) to give external parties access to a dedicated area of content in your DAM. They can use [!DNL Experience Manager] Web UI to get assets and upload new content into your DAM.
 
@@ -206,7 +206,7 @@ The recommended approach here is to use an option in [!DNL Experience Manager] d
 
 次のアップロード機能を利用できます。
 
-* To upload large/hierarchical folders in bulk, use [!DNL Experience Manager] desktop app that provides [folder upload](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html#bulkupload) functionality. フォルダーの階層構造もアップロードできます。[!DNL Assets] がバックグラウンドでアップロードされるので、webブラウザーセッションに関連付けられません
+* To upload large/hierarchical folders in bulk, use [!DNL Experience Manager] desktop app that provides [folder upload](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#bulk-upload-assets) functionality. フォルダーの階層構造もアップロードできます。[!DNL Assets] がバックグラウンドでアップロードされるので、webブラウザーセッションに関連付けられません
 * To upload a few files from a single folder, drag the files directly to the web interface or use the Create option in the [!DNL Assets] web interface.
 * ビジネス要件によっては、カスタムアップローダーを使用することもできます。
 
@@ -222,7 +222,7 @@ Avoid using [!DNL Experience Manager] desktop app to manage assets directly in t
 
 >[!MORELIKETHIS]
 >
->* [Adobe Asset Link](https://helpx.adobe.com/in/enterprise/using/adobe-asset-link.html)
+>* [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)
 >* [Experience Managerデスクトップアプリのベストプラクティス](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
 >* [Experience Managerブランドポータル](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
 >* [Adobe Experience Manager と Adobe Stock との連携](aem-assets-adobe-stock.md)
