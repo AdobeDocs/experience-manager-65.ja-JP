@@ -3,10 +3,10 @@ title: 翻訳プロジェクトの作成
 description: Learn how to create translation projects in [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 34b98636966264b15b16fffc9e712b925303a701
 workflow-type: tm+mt
-source-wordcount: '1895'
-ht-degree: 75%
+source-wordcount: '1904'
+ht-degree: 74%
 
 ---
 
@@ -17,7 +17,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
 * **作成と翻訳**: このワークフローでは、翻訳対象のアセットが、翻訳先の言語の言語ルートにコピーされます。 また、選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
 
-* **言語コピーを更新**: このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。 この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
+* **言語コピーの更新**: このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。 この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
 
 >[!NOTE]
 >
@@ -46,11 +46,9 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. Click **[!UICONTROL Create &amp; Translate]** at the bottom.
 
-   ![chlimage_1-58](assets/chlimage_1-58.png)
-
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
-   ![chlimage_1-59](assets/chlimage_1-59.png)
+   ![ターゲット言語を選択](assets/target-language.png)
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 構造のみを作成]**」を選択します。
 
@@ -58,11 +56,11 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. 「**[!UICONTROL 作成]**」をクリックします。ターゲット言語の新しい構造が、「**[!UICONTROL 言語コピー]**」の下に表示されます。
 
-   ![chlimage_1-61](assets/chlimage_1-61.png)
+   ![言語コピー](assets/lang-copy2.png)
 
 1. Click the structure from the list, and then click **[!UICONTROL Reveal in Assets]** to navigate to the folder structure within the target language.
 
-   ![chlimage_1-62](assets/chlimage_1-62.png)
+   ![資産の公開](assets/reveal-in-assets.png)
 
 ### 新しい翻訳プロジェクトを作成 {#create-a-new-translation-project}
 
@@ -74,8 +72,6 @@ To create a language copy, trigger one of the following language copy workflows 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
 1. Click **[!UICONTROL Create &amp; Translate]** at the bottom.
-
-   ![chlimage_1-64](assets/chlimage_1-64.png)
 
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
@@ -91,11 +87,11 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. 「**[!UICONTROL 作成]**」をクリックします。ソースフォルダーのアセットが、手順 4 で選択したロケールのターゲットフォルダーにコピーされます。
 
-   ![chlimage_1-68](assets/chlimage_1-68.png)
+   ![言語コピー](assets/lang-copy2.png)
 
 1. そのフォルダーに移動するには、言語コピーを選択してから「**[!UICONTROL アセットで表示]**」をクリックします。
 
-   ![chlimage_1-69](assets/chlimage_1-69.png)
+   ![資産の公開](assets/reveal-in-assets.png)
 
 1. プロジェクトコンソールに移動します。翻訳フォルダーはプロジェクトコンソールにコピーされます。
 
@@ -135,11 +131,9 @@ To create a language copy, trigger one of the following language copy workflows 
 1. Click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 使用可能な翻訳コピーのリストが表示されます。
 1. Click **[!UICONTROL Create &amp; Translate]** at the bottom.
 
-   ![chlimage_1-75](assets/chlimage_1-75.png)
-
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
-   ![chlimage_1-76](assets/chlimage_1-76.png)
+   ![ターゲット言語を選択](assets/target-language.png)
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択して、翻訳ワークフローをフォルダーに対して実行します。
 
@@ -207,11 +201,9 @@ To create a language copy, trigger one of the following language copy workflows 
 1. **[!UICONTROL 参照]** ペインを開き、「コピー」の **[!UICONTROL 下にある「]** 言語コピー **** 」をクリックして言語コピーのリストを表示します。
 1. 「**[!UICONTROL 言語コピー]**」の前のチェックボックスを選択し、適切なロケールに対応するターゲットフォルダーを選択します。
 
-   ![chlimage_1-84](assets/chlimage_1-84.png)
+   ![言語コピーを選択](assets/lang-copy1.png)
 
 1. Click **[!UICONTROL Update language copies]** at the bottom.
-
-   ![chlimage_1-85](assets/chlimage_1-85.png)
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 新しい翻訳プロジェクトを作成]**」を選択します。
 
@@ -261,11 +253,9 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. 「**[!UICONTROL 言語コピー]**」の前のチェックボックスをオンにします。これによりすべての言語コピーが選択されます。翻訳先のロケールに対応する言語コピーを除き、他のコピーの選択を解除します。
 
-   ![chlimage_1-95](assets/chlimage_1-95.png)
+   ![言語コピーを選択](assets/lang-copy1.png)
 
 1. Click **[!UICONTROL Update language copies]** at the bottom.
-
-   ![chlimage_1-96](assets/chlimage_1-96.png)
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択します。
 
@@ -273,7 +263,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. 「**[!UICONTROL 既存の翻訳プロジェクト]**」リストで、翻訳のためのアセットを追加するプロジェクトを選択します。
 
-   ![chlimage_1-98](assets/chlimage_1-98.png)
+   ![プロジェクトを選択](assets/select-a-project.png)
 
 1. 「**[!UICONTROL 開始]**」をクリックします。
 1. [既存の翻訳プロジェクトに追加](translation-projects.md#add-to-existing-translation-project)の手順 9～14 を参照して、この手順の続きを完了させます。
@@ -294,17 +284,13 @@ To create a language copy, trigger one of the following language copy workflows 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにします。
-1. From the toolbar, click **[!UICONTROL Accept Translation]** and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
-
-   ![chlimage_1-102](assets/chlimage_1-102.png)
+1. From the toolbar, click **[!UICONTROL Accept Translation]** ![accept translation](assets/do-not-localize/thumb-up.png) and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
 
    >[!NOTE]
    >
    >翻訳ワークフローが対象のアセットを更新できるようにするには、アセットとメタデータの両方を承認します。
 
-   Click **[!UICONTROL Reject Translation]** to retain the originally translated version of the asset in the target locale root and reject the edited version.
-
-   ![chlimage_1-103](assets/chlimage_1-103.png)
+   Click **[!UICONTROL Reject Translation]** ![reject translation](assets/do-not-localize/thumb-down.png) to retain the originally translated version of the asset in the target locale root and reject the edited version.
 
 1. 翻訳済みメタデータを表示するには、コン [!DNL Assets] ソールに移動し、翻訳済みの各アセットの [!UICONTROL プロパティ] ページを開きます。
 
