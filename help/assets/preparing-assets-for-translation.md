@@ -3,10 +3,10 @@ title: 翻訳するアセットの準備
 description: 言語ルートフォルダーを作成して、多言語アセットをサポートする翻訳用のアセットを準備します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 55%
+source-wordcount: '450'
+ht-degree: 61%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Managerアセットでは、多言語アセットがフォル�
 
 各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。For example, */content/dam/it* is the Italian language root for the Italian language copy. ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
 
-最初にアセットを追加した言語コピーが言語プライマリです。言語プライマリは、他の言語に翻訳されたソースです。 サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
+最初にアセットを追加した言語コピーが言語プライマリです。言語プライマリは、他の言語に翻訳されるソースです。サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
 
 ```
  /content
@@ -35,7 +35,7 @@ Adobe Experience Managerアセットでは、多言語アセットがフォル�
 
 翻訳するアセットを準備するには、次の手順を実行します。
 
-1. 言語プライマリの言語ルートを作成します。For example, the language root of the English language copy in the sample folder hierarchy is `/content/dam/en`. Ensure that the language root is correctly configured according to the information in [Create a Language Root](preparing-assets-for-translation.md#creating-a-language-root).
+1. 言語プライマリの言語ルートを作成します。例えば、サンプルフォルダー階層の英語言語コピーの言語ルートは `/content/dam/en` です。Ensure that the language root is correctly configured according to the information in [Create a Language Root](preparing-assets-for-translation.md#creating-a-language-root).
 
 1. 言語プライマリにアセットを追加します。
 1. 言語コピーが必要な各ターゲット言語の言語ルートを作成します。
@@ -60,11 +60,11 @@ Adobe Experience Managerアセットでは、多言語アセットがフォル�
 
 Experience Manager interface provides a **[!UICONTROL References]** panel that displays a list of language roots that have been created within Assets.
 
-1. Assets コンソールで、言語コピーを作成する言語プライマリを選択します。
+1. アセットコンソールで、言語コピーを作成する言語プライマリを選択します。
 1. 左側のレールで、「 **[!UICONTROL 参照]** 」オプションを選択し、  参照ペインを開きます。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
 1. In the References pane, click **[!UICONTROL Language Copies]**. The [!UICONTROL Language Copies] panel shows the language copies of the assets.
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+   ![言語コピー](assets/lang-copy2.png)
