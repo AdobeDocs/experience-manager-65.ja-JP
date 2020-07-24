@@ -3,10 +3,10 @@ title: Smart Content Serviceを使用してアセットのタグ付けを設定�
 description: Learn how to configure smart tagging and enhanced smart tagging in [!DNL Adobe Experience Manager], using the Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 55%
+source-wordcount: '1102'
+ht-degree: 56%
 
 ---
 
@@ -17,8 +17,8 @@ You can integrate [!DNL Adobe Experience Manager] with the Smart Content Service
 
 この記事では、スマートコンテンツサービスの設定に必要となる以下の主要なタスクについて詳しく説明します。At the back end, the [!DNL Experience Manager] server authenticates your service credentials with the Adobe Developer Console gateway before forwarding your request to the Smart Content Service.
 
-1. Create a Smart Content Service configuration in [!DNL Experience Manager] to generate a public key. [OAuth 統合用の公開証明書を取得します。](#obtain-public-certificate)
-1. [Adobe 開発者コンソールで統合を作成し、生成した公開鍵をアップロードします。](#create-adobe-i-o-integration)
+1. Create a Smart Content Service configuration in [!DNL Experience Manager] to generate a public key. OAuth 統合用の[公開証明書を取得します](#obtain-public-certificate)。
+1. [Adobe 開発者コンソールで統合を作成](#create-adobe-i-o-integration)し、生成した公開鍵をアップロードします。
 1. [Adobe Developer ConsoleのAPIキーと他の資格情報を使用して](#configure-smart-content-service) 、デプロイメントを設定します。
 1. [設定をテストします](#validate-the-configuration)。
 1. Optionally, [enable auto-tagging on asset upload](#enable-smart-tagging-in-the-update-asset-workflow-optional).
@@ -124,11 +124,9 @@ Smart Content Service APIを使用するには、Adobe Developer ConsoleでAPI�
 
 1. 自動タグ付けのステップに失敗してもワークフローを完了させたい場合は、「**[!UICONTROL 引数]**」タブで「**[!UICONTROL エラーを無視]**」を選択します。
 
-   ![DAMアセットの更新ワークフローを設定し、スマートタグ手順を追加してハンドラーの設定を選択します](assets/smart-tag-step-properties-workflow2.png)
-
    フォルダーでスマートタグが有効になっているかに関わらずアップロード時にアセットをタグ付けするには、「**[!UICONTROL スマートタグフラグを無視]**」を選択します。
 
-   ![DAM Update Assetワークフローを設定し、スマートタグ手順を追加して、「スマートタグフラグを無視」を選択します](assets/smart-tag-step-properties-workflow3.png)
+   ![DAM Update Assetワークフローを設定し、スマートタグ手順を追加して、「スマートタグフラグを無視」を選択します](assets/smart-tag-step-properties-workflow2.png)
 
 1. 「**[!UICONTROL OK]**」をクリックして、プロセスステップを閉じ、ワークフローを保存します。
 
