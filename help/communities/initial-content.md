@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 49%
+ht-degree: 48%
 
 ---
 
@@ -38,13 +38,13 @@ ht-degree: 49%
 
    クラシック UI に切り替えるには、グローバルナビゲーションを選択し、「プロジェクト」アイコンの右側にマウスカーソルを合わせます。Select the *Switch to Classic UI* icon which appears:
 
-   ![chlimage_1-36](assets/chlimage_1-36.png)
+   ![classic-ui](assets/classic-ui.png)
 
    クラシック UI に切り替える機能は、[管理者が有効にする](../../help/sites-administering/enable-classic-ui.md)必要があります。
 
 1. From the [classic UI Welcome page](http://localhost:4502/welcome.html), select **[!UICONTROL Websites]**.
 
-   ![chlimage_1-37](assets/chlimage_1-37.png)
+   ![classic-ui-webサイト](assets/classic-ui-website.png)
 
    または、[/siteadmin](http://localhost:4502/siteadmin) を参照して、Web サイトのクラシック UI に直接アクセスします。
 
@@ -57,7 +57,7 @@ ht-degree: 49%
    * Select **[!UICONTROL An SCF Sandbox Play Template]**
    * 「**[!UICONTROL 作成]**」をクリックします。
 
-   ![chlimage_1-38](assets/chlimage_1-38.png)
+   ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
 1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site`, and click **[!UICONTROL New]** > **[!UICONTROL New Page]**:
 
@@ -75,11 +75,11 @@ ht-degree: 49%
 
 1. Web サイトコンソールに Web サイトが次のように表示されます。エクスプローラペインで選択した項目の子ページが、管理可能な右側のペインに表示されます。
 
-   ![chlimage_1-39](assets/chlimage_1-39.png)
+   ![classic-ui-webサイト — ページ](assets/classic-ui-website-page.png)
 
    次に、Web サイトツールとテンプレートを使用して作成されたページのリポジトリビューを示します。
 
-   ![chlimage_1-40](assets/chlimage_1-40.png)
+   ![classic-ui-repository-表示](assets/classic-ui-repository-view.png)
 
 ## デザインパスの追加 {#add-the-design-path}
 
@@ -100,7 +100,7 @@ When ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesig
 
 リポジトリは次のようになります。
 
-![chlimage_1-41](assets/chlimage_1-41.png)
+![classic-ui-repository-path](assets/classic-ui-repository-path.png)
 
 * Click **[!UICONTROL Save All]**
 
