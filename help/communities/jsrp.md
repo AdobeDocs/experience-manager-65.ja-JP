@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 52%
 
 ---
@@ -44,20 +44,18 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 * Select **[!UICONTROL Submit]**
 
-![chlimage_1-234](assets/chlimage_1-234.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
 ### 設定の公開 {#publishing-the-configuration}
 
 JSRP はデフォルト設定ですが、パブリッシュ環境で同じ設定が使用されていることを確認するには、以下の手順をおこないます。
 
-* 作成者：
+* From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
+* 「 **[!UICONTROL Activate Tree]** / **[!UICONTROL 開始パス]**」を選択します。
 
-   * From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
-   * 「 **[!UICONTROL Activate Tree]** / **[!UICONTROL 開始パス]**」を選択します。
+   * 参照先 `/conf/global/settings/community/srpc/`
 
-      * 参照先 `/conf/global/settings/community/srpc/`
-   * Select **[!UICONTROL Activate]**
-
+* Select **[!UICONTROL Activate]**
 
 ## ユーザーデータの管理 {#managing-user-data}
 
