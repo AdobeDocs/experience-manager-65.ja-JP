@@ -3,10 +3,10 @@ title: ビジネス・プロセスの達成、監査の実施、コンプライ�
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 30%
+source-wordcount: '986'
+ht-degree: 29%
 
 ---
 
@@ -56,11 +56,9 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 1. **[!UICONTROL ワークフローを開始]**&#x200B;ダイアログで、リストからワークフローモデルを選択します。
 
-   ![chlimage_1-254](assets/chlimage_1-50.png)
-
 1. （オプション）ワークフローのインスタンスを参照するために使用できるワークフローのタイトルを指定します。
 
-   ![chlimage_1-255](assets/chlimage_1-51.png)
+   ![ワークフローを選択し、タイトルを入力して「開始」をクリックします](assets/start-workflow.png)
 
 1. Click **[!UICONTROL Start]** and then click **[!UICONTROL Proceed]**. ワークフローの各ステップは、タイムラインにイベントとして表示されます。
 
@@ -75,7 +73,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 1. 下部にある **[!UICONTROL []** アクション ![] [](assets/do-not-localize/chevron-up-icon.png) 山形]をクリックします。
 1. 「**[!UICONTROL ワークフローを開始]**」をクリックします。**[!UICONTROL ワークフローを開始]**&#x200B;ダイアログで、リストからワークフローモデルを選択します。
 
-   ![chlimage_1-31](assets/chlimage_1-138.png)
+   ![開始ワークフロー](assets/start-workflow.png)
 
 1. （オプション）ワークフローインスタンスを参照するために使用するワークフローのタイトルを指定します。
 1. ダイアログで「**[!UICONTROL 開始]**」をクリックし、次に「**[!UICONTROL 確認]**」をクリックします。選択したすべてのアセットでワークフローが実行されます。
