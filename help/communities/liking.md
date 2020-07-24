@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 32%
 
 ---
 
@@ -21,7 +24,7 @@ The `Liking` component is a useful tool that allows users to express an opinion 
 
 ## ページへの「いいね!」設定の追加 {#adding-liking-to-a-page}
 
-To add a `Liking` component to a page in author mode, use the component browser to locate:
+To add a `Liking` component to a page in author mode, use the component browser to locate
 
 * `Communities / Liking`
 
@@ -29,7 +32,7 @@ To add a `Liking` component to a page in author mode, use the component browser 
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](essentials-liking.md#essentials-for-client-side) are included, this is how the `Liking` component will appear.
+[必要なクライアント側のライブラリが含まれる場合](essentials-liking.md#essentials-for-client-side) 、これがコンポー `Liking` ネントの表示方法です。
 
 ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -45,11 +48,11 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 * **[!UICONTROL 肯定的な返信ラベル]**
 
-   (必&#x200B;*須*)ポジティブな応答のプロパティ名。
+   (*必須*)ポジティブな反応を表すプロパティ名です。
 
 * **[!UICONTROL 否定的な返信ラベル]**
 
-   (必&#x200B;*須*)否定応答のプロパティ名。
+   (*必須*)否定応答のプロパティ名。
 
 * **[!UICONTROL 集計名]**
 
@@ -63,7 +66,7 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ### 匿名 {#anonymous}
 
-匿名での「いいね!」はサポートされていません。サイト訪問者は登録（会員になる）し、サインインして「いいね！」に参加する必要があります。
+匿名での「いいね!」はサポートされていません。サイト訪問者は、「いいね！」に参加するには、登録（会員になる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
