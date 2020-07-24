@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '11828'
+source-wordcount: '11830'
 ht-degree: 89%
 
 ---
@@ -766,7 +766,7 @@ YouTube チャンネルにビデオを公開するには：
 1. In the upper-right corner of the video&#39;s properties page, click **[!UICONTROL Save and Close.]**
 1. On the toolbar, click **[!UICONTROL Quick Publish.]**
 
-   [AEM Sites での公開管理の使用](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/publication-management-feature-video-use.html)も参照してください。
+   [AEM Sites での公開管理の使用](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)も参照してください。
 
    オプションで、YouTube チャンネルで公開済みビデオを確認できます。
 
