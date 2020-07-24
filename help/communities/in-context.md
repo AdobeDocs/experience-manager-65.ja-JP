@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: 917fceffb58883df83e96f60da4769046a18f3c0
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 43%
 
 ---
 
@@ -27,10 +30,10 @@ Visit the moderation overview for a description of [moderation actions](moderate
 
 ## モデレート UI {#moderation-ui}
 
-パブリッシュインスタンスで使用できるモデレーター用の UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内にあります。UIの要素は、サイト訪問者のステータス(
+パブリッシュインスタンスで使用できるモデレーター用の UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内にあります。UIの要素は、サイトの訪問者のステータス（該当するかどうか）によって決まります。
 
 1. コンテンツを投稿したメンバー。
-1. 信頼できるメンバーのモデレーター。
+1. 信頼できるメンバーモデレーターです。
 1. 管理者。
 1. サインインしましたが、管理者、モデレーター、コンテンツの作成者はいません。
 1. サインインしていません。
@@ -53,21 +56,22 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
    * 新しい投稿の選択
    * 件名の入力
 
-      ハミングバードフィーダで花蜜を交換するタイミング
+      ハミングバードフィーダーで花蜜を変更するタイミング
 
    * 本文を入力
 
-      毎年ハチドリの餌をつるす時はあまり成功していません Seems they come a day or two then that is it.I change it once a week is that too long? Do I need to change it sooner?
+      私は毎年ハチドリの餌をつるしている時はあまり成功していません Seems they come a day or two then that is it.I change it once a week is that too long? Do I need to change it sooner?
+
    * 投稿の選択
    * ログアウトの選択
 
 * Aaron McDonald（aaron.mcdonald@mailinator.com）としてログインします。
 
    * フォーラムの選択
-   * 「Hummingbirdのトピック」で、「詳細情報」を選択します。
-   * 「返信を投稿」に対するコメントを入力します。
+   * 「Hummingbird」のトピックで、「詳細情報を読む」を選択します。
+   * 「返信を投稿」にコメントを入力します
 
-      私は週に1回私の家を変え、5月から10月までそれを受け取る。
+      私は週に1回、彼らを5月から10月まで受け取る。
 
    * 返信の選択
    * ログアウトの選択
@@ -75,10 +79,10 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 * Andrew Schaeffer（andrew.schaeffer@trashymail.com）としてログインします。
 
    * フォーラムの選択
-   * 「Hummingbirdのトピック」で、「詳細情報」を選択します。
-   * 「返信を投稿」に対するコメントを入力します。
+   * 「Hummingbird」のトピックで、「詳細情報を読む」を選択します。
+   * 「返信を投稿」にコメントを入力します
 
-      販売しているのは、蜜と飼料 — https://my.viral.url/を参照してください。
+      私は蜜と飼料を販売しています。https://my.viral.url/にアクセスしてください。
 
    * 返信の選択
    * ログアウトの選択
@@ -89,7 +93,7 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 
 匿名のサイト訪問者にできることは、フォーラムを表示することだけです。コンテンツを投稿することも、モデレートアクションを実行することもできません。
 
-![chlimage_1](assets/chlimage_1.png)
+![地域フォーラム訪問者](assets/community-forum-visitor.png)
 
 ### New Member (#4) {#new-member}
 
@@ -99,26 +103,26 @@ On publish, log in as Boyd Larsen and access the thread by selecting `Forum`, an
 
 注意:
 
-* ボイドはフォーラムに参加していない。
+* ボイドはこのフォーラムに参加していない。
 * ボイドは何も削除できません。
-* Boydはサインインし、コンテンツに返信またはフラグを付けることができます。
+* Boydはサインイン済みで、内容に返信またはフラグを付けることができます。
 
 Boyd としてログインした状態で「フラグ」を選択し、Andrew が投稿したコンテンツにフラグを設定します。
 
 ログアウトします。
 
-![chlimage_1-1](assets/chlimage_1-1.png)
+![コミュニティフォーラムの会員](assets/community-forum-member.png)
 
 ### Administrator (#3) {#administrator}
 
-管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿の「詳細を読む」を選択します。
+管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿に関して「詳細を表示」を選択します。
 
 注意:
 
-* 管理者は、フラグ付け、削除、編集、拒否、切り取り、閉じる、ピン、機能を使用できます。
+* 管理者は、フラグ付け、削除、編集、拒否、切り取り、閉じる、ピン、機能を実行できます。
 * 管理者は、「管理」を選択してモデレートコンソールにアクセスできます。
 
-![communityadmin-forum](assets/communityadmin-forum.png)
+![コミュニティ管理者 — フォーラム](assets/community-admin-forum.png)
 
 [モデレートコンソール](moderation.md)にアクセスするには、パブリッシュ環境で「管理」メニュー項目を選択します。
 
@@ -128,20 +132,20 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ログアウトします。
 
-![moderationconsole-publish](assets/moderationconsole-publish.png)
+![moderation-console-publish](assets/moderation-console-publish.png)
 
 ### Community Moderator (#2) {#community-moderator}
 
-コミュニティのモデレーターであるAaron McDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「詳細情報を読む」を選択します。
+コミュニティのモデレーターであるAaron McDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbird投稿の詳細情報を確認します。
 
 注意:
 
 * Aaronは、自分の投稿に対する返信、削除、編集または拒否を実行できます。
-* Aaronは、他のコンテンツにフラグ/許可、返信、削除、編集、拒否を行うこともできます。
+* Aaronは、他のコンテンツに対してフラグ/許可、返信、削除、編集、拒否を行うこともできます。
 * Aaronは、フォーラムのトピックを切り取って、モデレート対象の別のフォーラムに移動できます。
-* Aaronは、「管理」を選択してモデレートコンソールにアクセスできます。
+* Aaronは、「管理」を選択してモデレートコンソールにアクセスする場合があります。
 
-![chlimage_1-2](assets/chlimage_1-2.png)
+![コミュニティフォーラムの司会者](assets/community-forum-moderator.png)
 
 [モデレートコンソール](moderation.md)にアクセスするには、パブリッシュ環境で「管理」メニュー項目を選択します。
 
@@ -151,17 +155,17 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ログアウトします。
 
-![moderatoraccess](assets/moderatoraccess.png)
+![モデレーターアクセス](assets/moderator-access.png)
 
 ### Content Author (#1) {#content-author}
 
-Rebehah Larsen(rebekah.larsen@mailinator.com)としてログインします。このスレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「詳細を読む」を選択します。
+Rebekah Larsen(rebekah.larsen@mailinator.com)としてログインします。スレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbird投稿の詳細情報を参照してください。
 
 注意:
 
 * Rebekahは自分の投稿を削除または編集できます。
-* Rebekahは、他のコンテンツに返信したり、他のコンテンツにフラグを付けたりすることもできます。
+* Rebekahは、他のコンテンツに返信したり、フラグを付けたりすることもできます。
 * Rebekahはモデレートコンソールにアクセスできません。
 
-![chlimage_1-3](assets/chlimage_1-3.png)
+![community-forum-author](assets/community-forum-author.png)
 
