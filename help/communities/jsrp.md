@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 52%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ## JSRP について {#about-jsrp}
 
-AEM CommunitiesがJSRPをストレージオプションとして使用する場合（デフォルト）、コミュニティコンテンツはJCRに保存され、ユーザー生成コンテンツ(UGC)は、投稿先の作成者インスタンスまたは発行インスタンスからのみアクセスできます。
+AEM CommunitiesがJSRPをストレージオプションとして使用する場合（デフォルト）、コミュニティコンテンツはJCRに保存され、ユーザー生成コンテンツ(UGC)は、そのコンテンツが投稿された作成者インスタンスまたは発行インスタンスからのみアクセスできます。
 
 JSRP はデプロイメントが容易なので、一般的に、1 つのパブリッシュインスタンスと 1 つのオーサーインスタンスがあるデモ環境または開発環境に適しています。
 
@@ -31,16 +34,17 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 デフォルトでは、JSRP が UGC 用のストレージオプションとして選択されています。
 
-[ストレージ設定コンソールでは](srp-config.md) 、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
+[ストレージ設定コンソール](srp-config.md) では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 オーサー環境でストレージ設定コンソールに移動するには、
 
 * From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
 
-![chlimage_1-234](assets/chlimage_1-234.png)
-
 * Select **[!UICONTROL JCR Storage Resource Provider (JSRP)]**
+
 * Select **[!UICONTROL Submit]**
+
+![chlimage_1-234](assets/chlimage_1-234.png)
 
 ### 設定の公開 {#publishing-the-configuration}
 
@@ -49,7 +53,7 @@ JSRP はデフォルト設定ですが、パブリッシュ環境で同じ設定
 * 作成者：
 
    * From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
-   * 「 **[!UICONTROL Activate Tree]** 」>「 **[!UICONTROL 開始パス]**:
+   * 「 **[!UICONTROL Activate Tree]** / **[!UICONTROL 開始パス]**」を選択します。
 
       * 参照先 `/conf/global/settings/community/srpc/`
    * Select **[!UICONTROL Activate]**
@@ -70,14 +74,14 @@ For information regarding *users*, *user profiles* and *user groups*, often ente
 
 すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
-* JCRで、 [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
+* JCRで、/conf/ [global/settings/communityの場合](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
    * Does not contain an [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) node, it means the storage provider is JSRP.
    * If the srpc node exists and contains node [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties should define JSRP to be the default provider.
 
 ### UGC がオーサーインスタンスで表示されない {#ugc-not-visible-on-author-instance}
 
-これはバグではありません。JSRPの特徴は、パブリッシュ環境に入力されたコミュニティコンテンツがパブリッシュ環境にのみ表示されることです。
+これはバグではありません。JSRPの特徴は、公開環境で入力されたコミュニティコンテンツが公開環境でのみ表示されることです。
 
 ### UGC がパブリッシュインスタンスで表示されない {#ugc-not-visible-on-publish-instance}
 
