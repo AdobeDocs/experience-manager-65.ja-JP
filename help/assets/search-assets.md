@@ -4,9 +4,9 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8ca4e3057ec13762404a8b7fb6f6bdf5dd562281
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '5826'
+source-wordcount: '5830'
 ht-degree: 54%
 
 ---
@@ -118,7 +118,7 @@ When you start typing keywords, [!DNL Experience Manager] suggests the possible 
 1. In the **[!UICONTROL Search Promote]** box, specify a keyword for which you want to boost the search for the image and then click **[!UICONTROL Add]**. 同じ方法で複数のキーワードを指定できます。
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。昇格したこのキーワードの対象となるアセットが、検索結果の上位に表示されます。
 
-ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。For detailed info, see [search in Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html).
+ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。For detailed info, see [search in Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -351,7 +351,7 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
 1. CRXDEの `/oak-index/damAssetLucene` nodeで、 `reindex` プロパティをに設定し `true`ます。 変更内容を保存します。
 1. （オプション）検索フォームをカスタマイズした場合は、に `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` ノードをコピーし `/conf/global/settings/dam/search/facets/assets/jcr:content/items`ます。 変更内容を保存します。
 
-関連情報については、「Experience Managerのスマートタグ [について](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) 」および「スマートタグの管理 [方法](/help/assets/managing-smart-tags.md)」を参照してください。
+関連情報については、「Experience Managerのスマートタグ [について](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) 」および「スマートタグの管理 [方法](/help/assets/managing-smart-tags.md)」を参照してください。
 
 ### 必須メタデータ {#mandatorymetadata}
 
