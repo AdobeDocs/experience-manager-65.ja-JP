@@ -3,10 +3,10 @@ title: Digital Rights Management in [!DNL Adobe Experience Manager Assets].
 description: Learn how to manage asset expiration states and information for licensed assets in [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
 source-wordcount: '1422'
-ht-degree: 84%
+ht-degree: 82%
 
 ---
 
@@ -65,9 +65,6 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
 1. 「 [!DNL Experience Manager] logo」をクリックして検索パネルを表示します。
-
-   ![chlimage_1-151](assets/chlimage_1-151.png)
-
 1. Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
@@ -114,11 +111,9 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. アセットの詳細ページを表示するには、[!DNL Assets] インターフェイスでアセットを選択し、「**[!UICONTROL プロパティ]**」をクリックします。
+1. To display its asset details page, in the [!DNL Assets] interface, select an asset and click **[!UICONTROL Properties]** ![view properties](assets/do-not-localize/info-circle-icon.png).
 
-   ![chlimage_1-158](assets/chlimage_1-158.png)
-
-1. 「詳細」タブの「**[!UICONTROL 期限切れ]**」フィールドで、アセットの有効期限日を設定します。
+1. 「[!UICONTROL 詳細]」タブの「**[!UICONTROL 期限切れ]**」フィールドで、アセットの有効期限日を設定します。
 
    ![[有効期限]フィールドにアセットの有効期限の日時を設定します。](assets/asset-properties-advanced-tab.png)
 
