@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 100%
 
 ---
 
@@ -24,18 +27,18 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 * Web サイトが AEM 上にない場合は、次のいずれかの方法を選択します。
 
    * ビデオまたは画像を Web サイトに埋め込みます。
-   * WebアプリケーションへのURLのリンクリンクは、ビデオプレーヤーをポップアップウィンドウまたはモーダルウィンドウとして配信する場合に使用します。
+   * Web アプリケーションに URL をリンクします。ビデオプレーヤーをポップアップウィンドウまたはモーダルウィンドウとして配信する場合には、リンク機能を使用します。
    * レスポンシブサイトの場合は、[最適化された画像を配信できます。](/help/assets/responsive-site.md)
 
 >[!NOTE]
 >
->スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。See [Smart Imaging](/help/assets/imaging-faq.md) for more information.
+>スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、[スマートイメージング](/help/assets/imaging-faq.md)を参照してください。
 
 詳しくは、次のトピックを参照してください。
 
 * [Web ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
 * [Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)
-* [Dynamic Media でのホットリンク保護の有効化](https://helpx.adobe.com/experience-manager/6-4/help/assets/hotlink-protection.html)
+* [Dynamic Media でのホットリンク保護の有効化](hotlink-protection.md)
 * [Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)
 * [レスポンシブサイト用に最適化された画像の配信](/help/assets/responsive-site.md)
 * [コンテンツの HTTP/2 配信](/help/assets/http2.md)
