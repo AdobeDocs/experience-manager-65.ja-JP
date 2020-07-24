@@ -4,10 +4,10 @@ seo-title: Adobe Experience Manager6.5アセットユーザーガイド
 description: このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
 seo-description: デジタルアセットの作成、管理、配信、最適化の方法など、すべてのExperience Managerアセットタスクについて取り上げます。
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -17,6 +17,9 @@ ht-degree: 18%
 このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
 
 ## 主なExperience Manager記事
+
+<!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
+-->
 
 * [ Experience Manager の概要](https://helpx.adobe.com/jp/experience-manager/get-started.html)
 * [Experience Manager6.5リリースノート](/help/release-notes/home.md)
