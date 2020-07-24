@@ -3,10 +3,10 @@ title: フォルダーのアセットとコレクションのレビュー
 description: フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 63%
+source-wordcount: '794'
+ht-degree: 62%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 63%
 
 フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
-Adobe Experience Manager Assetsを使用すると、フォルダーまたはコレクション内のアセットに対して臨時のレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有して、フィードバックを求めることができます。
+Adobe Experience Managerアセットを使用すると、フォルダーまたはコレクション内のアセットに対して臨時のレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有して、フィードバックを求めることができます。
 
 レビューワークフローをプロジェクトと関連付けることも、独立したレビュータスクを作成することもできます。
 
@@ -26,9 +26,7 @@ Adobe Experience Manager Assetsを使用すると、フォルダーまたはコ�
 ## Create a review task for folders {#creating-a-review-task-for-folders}
 
 1. Assets ユーザーインターフェイスで、レビュータスクを作成するフォルダーを選択します。
-1. From the toolbar, click **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-403](assets/chlimage_1-403.png)
+1. ツールバーで、「レビューを **[!UICONTROL 作成」タスク]** 「レビューを ![作成」タスクをクリックし](assets/do-not-localize/create-review-task.png) 、「 **[!UICONTROL レビュータスク]** 」ページを開きます。 If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
@@ -74,9 +72,7 @@ Adobe Experience Manager Assetsを使用すると、フォルダーまたはコ�
 ## Create a review task for collections {#creating-a-review-task-for-collections}
 
 1. コレクションページで、レビュータスクを作成するコレクションを選択します。
-1. From the toolbar, click **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-405](assets/chlimage_1-405.png)
+1. ツールバーで、「レビューを **[!UICONTROL 作成」タスク]** 「レビューを ![作成」タスクをクリックし](assets/do-not-localize/create-review-task.png) 、「 **[!UICONTROL レビュータスク]** 」ページを開きます。 If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
