@@ -3,10 +3,10 @@ title: の [!DNL Adobe Stock] 管理セット [!DNL Adobe Experience Manager Ass
 description: 内部から、検索、取得、ライセンス、 [!DNL Adobe Stock] 管理の各セットを検索します [!DNL Adobe Experience Manager]。 ライセンス済みのアセットを他のデジタルアセットと同様に使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 31%
+source-wordcount: '1099'
+ht-degree: 30%
 
 ---
 
@@ -122,7 +122,7 @@ Users can access and preview the metadata, including the [!DNL Adobe Stock] meta
 
 >[!MORELIKETHIS]
 >
->* [Experience ManagerアセットでのAdobe Stockアセットの使用に関するビデオチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/assets/using/stock-assets-feature-video-use.html)
+>* [Experience ManagerアセットでのAdobe Stockアセットの使用に関するビデオチュートリアル](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
 >* [Adobe Stock エンタープライズプランのヘルプ](https://helpx.adobe.com/jp/enterprise/using/adobe-stock-enterprise.html)
 >* [Adobe Stock の FAQ](https://helpx.adobe.com/jp/stock/faq.html)
 
