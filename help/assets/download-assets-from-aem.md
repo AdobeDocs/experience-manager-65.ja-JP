@@ -3,10 +3,10 @@ title: デジタルアセットのダウンロード元 [!DNL Adobe Experience M
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3602a39e03536696911b39cceb20f10dfd3a9347
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 76%
+source-wordcount: '852'
+ht-degree: 75%
 
 ---
 
@@ -74,6 +74,6 @@ The default servlet in [!DNL Experience Manager] allows authenticated users to i
 >[!MORELIKETHIS]
 >
 >* [DRM で保護されたアセットのダウンロード](drm.md)。
->* [WinまたはMacデスクトップで、Experience Managerのデスクトップアプリを使用してアセットをダウンロードします](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)。
+>* [WinまたはMacデスクトップで、Experience Managerのデスクトップアプリを使用してアセットをダウンロードします](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)。
 >* [サポートされている Adobe Creative Cloud アプリ内から Adobe Asset Link を使用したアセットのダウンロード](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html).
 
