@@ -3,10 +3,10 @@ title: Assets のベストプラクティス
 description: アセットの取り込み、レンディションの生成、メタデータの抽出に使用するExperience Managerアセットのデプロイメントと機能に応じて、異なる領域でのベストプラクティスを識別して固有にすることで、読み込み中のシステムの安定性とパフォーマンスが大幅に向上します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 41%
+source-wordcount: '557'
+ht-degree: 42%
 
 ---
 
@@ -24,5 +24,5 @@ Adobe Experience Managerアセットは、コンテンツ速度を向上させ�
 * [アセット移行ガイド](/help/assets/assets-migration-guide.md)：従来使用していたシステムからアセットを Assets に移行する場合、移行プロセスを効率化するにはいくつかの手順を考慮する必要があります。移行ガイドには、アセットを段階的にExperience Managerさせるために実行するタスクに関するベストプラクティスが含まれています。 これには、メタデータの適用、レンディションの生成、パブリッシュインスタンスへのアセットのアクティベートなどが含まれています。
 * The [Assets Network Considerations document](/help/assets/assets-network-considerations.md): When handling Experience Manager deployment, understanding the network topology is important to understand network performance, identify chokepoints, and describe the expected user experience. Assets のネットワークに関する考慮事項のドキュメントでは、 Assets のデプロイメントを設計する際のネットワークの考慮事項について説明します。
 * The [Assets Monitoring guide](/help/assets/assets-monitoring-best-practices.md): After your Experience Manager deployment is deployed, you should monitor certain tasks and the system in general to ensure system integrity and efficiency of operations. この監視ガイドには、システムの様々な側面を監視するためのベストプラクティスが記載されています。
-* [Experience Managerデスクトップアプリのベストプラクティス](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app-best-practices.html): Experience Managerのデスクトップアプリは、デジタルアセット管理(DAM)ソリューションをデスクトップにリンクするので、Experience ManagerのWeb UIで使用できるファイルをデスクトップ上で直接開くことができます。 デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジーにより有効化されます。このガイドでは、Experience Managerのデスクトップアプリの主な機能と推奨される使用方法を説明します。
+* [Experience Managerデスクトップアプリのベストプラクティス](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/introduction.html): Experience Managerのデスクトップアプリは、デジタルアセット管理(DAM)ソリューションをデスクトップにリンクするので、Experience ManagerのWeb UIで使用できるファイルをデスクトップ上で直接開くことができます。 デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジーにより有効化されます。このガイドでは、Experience Managerのデスクトップアプリの主な機能と推奨される使用方法を説明します。
 * [Experience ManagerとCreative Cloud統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md): Experience Managerの展開は、様々な方法でCreative Cloudと統合できます。 ベストプラクティスに従って統合ワークフローおよびアセット転送ワークフローを効率化すると、効率を最大化することができます。このガイドには、 Assets と Adobe CC の統合に関するベストプラクティスが記載されています。
