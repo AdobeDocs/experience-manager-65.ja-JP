@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1973'
 ht-degree: 99%
 
 ---
@@ -84,7 +84,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 >
 エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
 >
->詳細については、](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/content-fragments-experience-fragments-article-understand.html)AEM のコンテンツフラグメントおよびエクスペリエンスフラグメントについて[も参照してください。
+>詳細については、](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)AEM のコンテンツフラグメントおよびエクスペリエンスフラグメントについて[も参照してください。
 
 >[!CAUTION]
 >
@@ -151,7 +151,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
    * ページでフラグメントを使用する場合に、（中間コンテンツのように）手軽に利用できます。
    * 詳細については、[関連コンテンツ](/help/assets/content-fragments/content-fragments-assoc-content.md)を参照してください。
 
-* ページエディターの&#x200B;**Assets ブラウザー**&#x200B;で利用できるアセット
+* ページエディターの **Assets ブラウザー**&#x200B;で利用できるアセット
 
    * アセットの選択には、完全な柔軟性があります。
    * 位置決めには、ある程度の柔軟性があります。
