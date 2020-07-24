@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 49%
 
 ---
 
@@ -21,17 +24,17 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * SCF Sandboxサイト。メインページの英語版にリダイレクトされます。
 
-   * SCF Sandbox — サイトの英語版のメインページ。
+   * SCF Sandbox — サイトの英語版のメインページです。
 
-      * SCF再生 — 再生するメインページの子。
+   * SCF再生 — 再生するメインページの子。
 
-このチュートリアルでは[言語コピー](../../help/sites-administering/tc-prep.md)については詳しく説明しませんが、HTML ヘッダーによるユーザーの優先言語の検出をルートページに実装し、その言語の適切なメインページにリダイレクトできるように設計されています。ページのノード名に2文字の国コードを使用する規則です。例えば、英語の場合は「en」、フランス語の場合は「fr」などです。
+このチュートリアルでは[言語コピー](../../help/sites-administering/tc-prep.md)については詳しく説明しませんが、HTML ヘッダーによるユーザーの優先言語の検出をルートページに実装し、その言語の適切なメインページにリダイレクトできるように設計されています。規則では、ページのノード名に2文字の国コードを使用します（例：英語は「en」、フランス語は「fr」）。
 
 ## 最初のページの作成 {#create-first-pages}
 
 [ページテンプレート](initial-app.md#createthepagetemplate)を作成したので、ここでは、/content ディレクトリで Web サイトのルートページを設定できます。
 
-1. 標準 UI では現在、サイトを作成するためのブループリントが提供されます。このチュートリアルではシンプルなサイトを作成するので、クラシックUIが便利です。
+1. 標準 UI では現在、サイトを作成するためのブループリントが提供されます。このチュートリアルではシンプルなサイトを作成するので、クラシックUIが役に立ちます。
 
    クラシック UI に切り替えるには、グローバルナビゲーションを選択し、「プロジェクト」アイコンの右側にマウスカーソルを合わせます。Select the *Switch to Classic UI* icon which appears:
 
@@ -50,26 +53,27 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
    **[!UICONTROL ページを作成]**&#x200B;ダイアログで、次のように入力します。
 
    * タイトル: `SCF Sandbox Site`
-   * 名前: `an-scf-sandbox`
+   * 名前：`an-scf-sandbox`
    * Select **[!UICONTROL An SCF Sandbox Play Template]**
    * 「**[!UICONTROL 作成]**」をクリックします。
+
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
 1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site`, and click **[!UICONTROL New]** > **[!UICONTROL New Page]**:
 
    * タイトル: `SCF Sandbox`
-   * 名前: `en`
-   * Select **An SCF Sandbox Play Template **
-   * 「**作成&#x200B;**」をクリックします。
+   * 名前：`en`
+   * Select **[!UICONTROL An SCF Sandbox Play Template]**
+   * 「**[!UICONTROL 作成]**」をクリックします。
 
 1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site/SCF Sandbox`, and click **[!UICONTROL New]** > **[!UICONTROL New Page]**
 
    * タイトル: `SCF Play`
-   * 名前: `play`
+   * 名前：`play`
    * Select **[!UICONTROL An SCF Sandbox Play Template]**
    * 「**[!UICONTROL 作成]**」をクリックします。
 
-1. Web サイトコンソールに Web サイトが次のように表示されます。エクスプローラウィンドウで選択した項目の子ページが、管理可能な右側のウィンドウに表示されます。
+1. Web サイトコンソールに Web サイトが次のように表示されます。エクスプローラペインで選択した項目の子ページが、管理可能な右側のペインに表示されます。
 
    ![chlimage_1-39](assets/chlimage_1-39.png)
 
@@ -85,12 +89,12 @@ When ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesig
 
 が定義されました。このプロパティによって、`currentDesign.getPath()` () を使用してスクリプト内のデザインアセットを参照するオプション機能が提供されます。例：
 
-* &lt;% String favIcon = currentDesign.getPath() + &quot;/favicon.ico&quot;; %>
+* `% String favIcon = currentDesign.getPath() + "/favicon.ico"; %`
 
 
-   * 名前: `cq:designPath`
-   * タイプ: `String`
-   * 値: `/etc/designs/an-scf-sandbox`
+   * 名前：`cq:designPath`
+   * 型：`String`
+   * 値：`/etc/designs/an-scf-sandbox`
 
 * Click the green `[+] Add`
 
@@ -100,10 +104,10 @@ When ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesig
 
 * Click **[!UICONTROL Save All]**
 
-[ Trouble saving? Re-login! ]
+設定の保存で問題が発生した場合は、再ログインして設定を再度行ってください。
 
 >[!NOTE]
 >
->cq:designPath の使用はオプションで、[clientlib の使用](develop-app.md#includeclientlibsintemplate)とは関係ありません。SCF コンポーネントでは [clientlib](client-customize.md#clientlibs-for-scf) を使用して JS および CSS が管理されるので、clientlib の使用は基本的に必須です。
+>The use of `cq:designPath` is optional and is unrelated to the [use of clientlibs](develop-app.md#includeclientlibsintemplate), which are essentially required as the SCF components use [clientlibs](client-customize.md#clientlibs-for-scf) to manage their JS and CSS.
 
 
