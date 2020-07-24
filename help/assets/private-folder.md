@@ -3,10 +3,10 @@ title: Adobe Experience Manager内のプライベートフォルダーを作成�
 description: Adobe Experience Managerアセット内にプライベートフォルダーを作成し、他のユーザーと共有し、それらに様々な権限を割り当てる方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 45%
+source-wordcount: '494'
+ht-degree: 44%
 
 ---
 
@@ -23,11 +23,9 @@ ht-degree: 45%
 
    ![アセットフォルダーの作成](assets/Create-folder.png)
 
-1. In the **[!UICONTROL Create Folder]** dialog, enter a title and name (optional) for the folder, and select **[!UICONTROL Private]**.
+1. In the **[!UICONTROL Create Folder]** dialog, enter a title and name (optional) for the folder, and select **[!UICONTROL Private]** option.
 
-   ![「非公開」チェックボックスを選択して、フォルダーを非公開にします](assets/private-folder.png)
-
-1. 「**[!UICONTROL 作成]**」をクリックします。UI 内にプライベートフォルダーが作成されます。
+1. 「 **[!UICONTROL 作成]**」をクリックします。 プライベートフォルダーが作成されます。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
