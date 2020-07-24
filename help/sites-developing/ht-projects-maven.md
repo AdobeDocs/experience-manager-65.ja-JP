@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1669412afb670a9f55f02476e828de55b4f7a55a
+source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
 workflow-type: tm+mt
 source-wordcount: '2424'
 ht-degree: 56%
@@ -46,7 +46,7 @@ Maven に基づく AEM プロジェクトのビルドには以下のメリット
 
 ### What is the UberJar? {#what-is-the-uberjar}
 
-「UberJar」は、アドビから提供される特別なJavaアーカイブ(JAR)ファイルに付けられる非公式な名前です。 これらのJARファイルには、Adobe Experience Managerによって公開されるすべてのパブリックJava APIが含まれます。 制限付き外部ライブラリに加えて、特にApache Sling、Apache Jackrabbit、Apache Lucene、Google Guavaから提供されるAEMで利用可能なすべてのパブリックAPIと、画像処理に使用される2つのライブラリ（Werner RandelshoferのCY JPEG ImageIOライブラリとLibrary）が含ます。 UberJarにはAPIインターフェイスとクラスのみが含まれます。つまり、AEMのOSGiバンドルによってエクスポートされたインターフェイスとクラスのみが含まれます。 They also contain a *MANIFEST.MF* file containing the correct package export versions for all of these exported packages, thus ensuring that projects built against the UberJar have the correct package import ranges.
+「UberJar」は、アドビから提供される特別なJavaアーカイブ(JAR)ファイルに付けられる非公式な名前です。 これらのJARファイルには、Adobe Experience Managerが公開するパブリックJava APIがすべて含まれています。 制限付き外部ライブラリに加えて、特にApache Sling、Apache Jackrabbit、Apache Lucene、Google Guavaから提供されるAEMで利用可能なすべてのパブリックAPIと、画像処理に使用される2つのライブラリ（Werner RandelshoferのCY JPEG ImageIOライブラリとLibrary）が含ます。 UberJarにはAPIインターフェイスとクラスのみが含まれます。つまり、AEMのOSGiバンドルによってエクスポートされたインターフェイスとクラスのみが含まれます。 They also contain a *MANIFEST.MF* file containing the correct package export versions for all of these exported packages, thus ensuring that projects built against the UberJar have the correct package import ranges.
 
 ### Why did Adobe create the UberJars? {#why-did-adobe-create-the-uberjars}
 
@@ -386,10 +386,6 @@ To add to the paths, add more `<filter>` elements:
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/myproject"/>
-    <filter root="/etc/msm/rolloutconfigs/myrolloutconfig"/>
-    <filter root="/etc/blueprints/mysite/globalsite"/>
-    <filter root="/etc/workflow/models/myproject"/>
-    <filter root="/etc/designs/myproject"/>
     <filter root="/content/myproject/sample-content"/>
 </workspaceFilter>
 ```
