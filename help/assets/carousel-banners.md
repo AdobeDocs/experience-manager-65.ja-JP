@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '4811'
+source-wordcount: '4814'
 ht-degree: 96%
 
 ---
@@ -94,7 +94,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
       ](/help/assets/adding-dynamic-media-assets-to-pages.md)AEM Sites のお客様は、インタラクティブメディアコンポーネントを使用して、カルーセルセットを AEM 内のページに直接追加できます。
 
 
-カルーセルセットを編集する必要がある場合は、[カルーセルセットの編集](#editing-carousel-sets)を参照してください。また、[カルーセルセットのプロパティ](https://helpx.adobe.com/experience-manager/6-5/help/assets/managing-assets-touch-ui.md#editingproperties)を表示および編集することができます。
+カルーセルセットを編集する必要がある場合は、[カルーセルセットの編集](#editing-carousel-sets)を参照してください。また、[カルーセルセットのプロパティ](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)を表示および編集することができます。
 
 ## ホットスポットと画像マップの変数の識別 {#identifying-hotspot-and-image-map-variables}
 
@@ -200,6 +200,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    * ページの左上隅付近にある「**[!UICONTROL スライドを追加]**」をタップします。
 
    * Near the middle of the page, tap **[!UICONTROL Tap to open Asset Selector.]**
+
    カルーセルセットに含めるアセットをタップして選択します。選択済みのアセットにはチェックマークアイコンが付いています。作業が完了したら、ページの右上隅付近にある「**選択**」をタップします。
 
    アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter キーをタップまたはクリックすることで、アセットを検索することができます。]**&#x200B;フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
@@ -226,6 +227,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    >    * ボタンのスタイル。ユーザーは点または番号をタップしてバナーの画像を切り替えることができます。セットインジケーターボタンの表示位置（とスタイルが番号か点か）と大きさを変更できます。
    >    * 画像マップまたはホットスポットに使用されるアイコンのハイライトスタイルを変更します.
    >    * ビューアプリセットを編集する前に、そのプリセットのベースとして使用するスタイルを選択してください。そうしないと、ビューアプリセットの編集を開始した後、別のプリセットに切り替えることにした場合に、変更内容をすべて失うことになります。
+
    >
    >
    >ビューアエディターの詳細や使用手順は、[カルーセルバナーに関する注意事項](/help/assets/viewer-presets.md#specialconsiderationsforcreatingacarouselbannerviewerpreset)を参照してください。
@@ -274,6 +276,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
    * ホットスポットの場合：画像の上で、ホットスポットを表示する場所をタップします。
    * 画像マップの場合：画像上でクリックし、左上から右下にドラッグして画像マップ領域を作成します。画像マップのサイズを調整するには、隅をドラッグします。
+
    必要に応じて、ホットスポットまたは画像マップを別の場所にドラッグします。必要に応じて、他のホットスポットまたは画像マップを追加します。
 
    ホットスポットまたは画像マップを削除するには、「**[!UICONTROL アクション]**」タブをタップします。「**[!UICONTROL マップとホットスポット]**」見出しの下にある「**[!UICONTROL 選択したタイプ]**」ドロップダウンメニューから、削除するホットスポットまたは画像マップの名前を選択します。Tap the **[!UICONTROL Trash]** icon next to the menu, then tap **[!UICONTROL Delete.]**
@@ -298,6 +301,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
          インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
 
       * スタンドアロンユーザーである場合は、「HREF」テキストフィールドに、リンクされる Web ページへの完全な URL パスを指定します。
+
    このリンクを新しいブラウザータブで開く（推奨のデフォルト）か同じタブで開くかを指定してください。
 
    詳しくは、[セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
@@ -354,6 +358,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    * スライドを削除するには、スライドを選択し、ツールバーの「**[!UICONTROL スライドを削除]**」をタップします。
    * プリセットを適用するには、ページの右上隅付近にある「**[!UICONTROL プリセット]**」ドロップダウンリストをタップし、ビューアプリセットを選択します。
    * To delete an entire Carousel Set, navigate to the Carousel Set, select it, then tap **[!UICONTROL Delete.]**
+
    >[!NOTE]
    ホットスポットを含むインタラクティブ画像を編集しているときに、画像を切り取ると、ホットスポットは削除されます。
 
