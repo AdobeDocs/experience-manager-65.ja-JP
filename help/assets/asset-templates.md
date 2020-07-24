@@ -3,9 +3,9 @@ title: のアセットテンプレート [!DNL Adobe Experience Manager Assets]�
 description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1556'
 ht-degree: 32%
 
 ---
@@ -106,7 +106,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
 1. 「 **[!UICONTROL プレビュー]** 」をクリックして、テキストの変更をプレビューします。
 
-   ![chlimage_1-112](assets/chlimage_1-317.png)
+   ![表示の変更](assets/view-changes.png)
 
 1. To swap an image, click the **[!UICONTROL Asset Finder]**.
 
@@ -122,11 +122,11 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
 1. 「 **[!UICONTROL プレビュー]** 」をクリックしてプレビューを行います。
 
-   ![chlimage_1-116](assets/chlimage_1-321.png)
+   ![表示の変更](assets/view-changes.png)
 
 1. 複数ページのコラテラル内の特定のページを編集するには、下部のページナビゲーターを使用します。
 
-   ![chlimage_1-117](assets/chlimage_1-322.png)
+   ![ページナビゲータ](assets/page-navigator.png)
 
 1. Click **[!UICONTROL Preview]** on the toolbar to preview all the changes. Click **[!UICONTROL Done]** to save the editing changes to the collateral.
 
@@ -172,8 +172,6 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    ![chlimage_1-122](assets/chlimage_1-327.png)
 
    また、「Omnisearch」ボックスからテンプレートを検索することもできます。
-
-   ![chlimage_1-123](assets/chlimage_1-328.png)
 
    You can browse through the [!DNL Experience Manager Assets] repository or collections, and navigate to the location of the desired templates and then select them to merge.
 
