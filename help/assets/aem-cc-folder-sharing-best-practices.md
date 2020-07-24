@@ -3,9 +3,9 @@ title: Adobe Creative Cloudフォルダー共有のベストプラクティス�
 description: Adobe Experience Managerを設定し、Experience Managerアセット内のユーザーがAdobe Creative Cloud(CC)ユーザーとフォルダーを交換できるようにします。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1082'
 ht-degree: 29%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 29%
 
 >[!CAUTION]
 >
->Creative Cloudフォルダー共有へのExperience Manager機能は非推奨となりました。 アドビでは、 [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) ( [Adobeアセットリンク)や](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)Experience Managerのデスクトップアプリケーションなど、新しい機能を使用することを強くお勧めします。 Learn more in [Experience Manager and Creative Cloud integration best practices](/help/assets/aem-cc-integration-best-practices.md).
+>Creative Cloudフォルダー共有へのExperience Manager機能は非推奨となりました。 アドビでは、 [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) ( [Adobeアセットリンク)や](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)Experience Managerのデスクトップアプリケーションなど、新しい機能を使用することを強くお勧めします。 Learn more in [Experience Manager and Creative Cloud integration best practices](/help/assets/aem-cc-integration-best-practices.md).
 
 Adobe Experience Managerは、アセット内のユーザーがAdobe Creative Cloudアプリのユーザーとフォルダーを共有できるように設定できるので、Adobe Creative Cloud Assetsサービスで共有フォルダーとして使用できます。 この機能を使用して、クリエイティブチームとアセットユーザー間でファイルを交換できます。特に、クリエイティブユーザーがアセット展開にアクセスできない（エンタープライズネットワーク上にない）場合に便利です。
 
