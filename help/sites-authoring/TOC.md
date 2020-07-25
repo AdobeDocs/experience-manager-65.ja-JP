@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5オーサリングユーザーガイド
+user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 89%
@@ -51,7 +52,7 @@ ht-degree: 89%
    + [コンポーネントコンソール](default-components-console.md)
    + [レスポンシブレイアウト](responsive-layout.md)
    + [コンテンツインサイト](content-insights.md)
-   + [アクセス可能なコンテンツ（WCAG 2.1 適合）の作成 ](creating-accessible-content.md)
+   + [アクセシブルなコンテンツ（WCAG 2.1 適合）の作成 ](creating-accessible-content.md)
    + [基礎モード](scaffolding.md)
    + [デザインモードでのコンポーネントの設定](default-components-designmode.md)
    + [基盤コンポーネント](default-components-foundation.md)
