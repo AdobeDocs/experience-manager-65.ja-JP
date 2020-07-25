@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5開発ユーザーガイド
+user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 62be4d88f6ed3df68a77a4b61f7e113bdf03002d
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 79%
@@ -170,7 +171,7 @@ ht-degree: 79%
       + [Adobe Service Frameworkのカスタマイズ](extending-analytics-framework.md)
       + [Analytics 用のサーバー側ページネーミングの実装](extending-analytics-pa-naming.md)
    + Cloud Services {#extending-cloud-services}
-      + [クラウドサービスの設定](extending-cloud-config.md)
+      + [クラウドサービス設定](extending-cloud-config.md)
       + [カスタムクラウドサービスの作成](extending-cloud-config-custom-cloud.md)
    + [カスタム拡張の作成](extending-campaign-extensions.md)
    + フォーム{#extending-forms}
