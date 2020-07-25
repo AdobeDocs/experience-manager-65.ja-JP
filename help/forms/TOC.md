@@ -4,8 +4,9 @@ product: adobe experience manager
 sub-product: フォーム[ふぉーむ]
 audience: end-user
 user-guide-title: AEM 6.5 Forms ユーザーガイド
+user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 8bb5e92140371fbfee0f946ed3701cd40a972702
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '3695'
 ht-degree: 70%
