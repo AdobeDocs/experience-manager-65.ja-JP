@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: experience manager
 audience: end-user
 user-guide-title: AEM 6.5 リリースノート
+user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 73%
@@ -17,7 +18,7 @@ ht-degree: 73%
 + [AEM 6.5の概要](home.md)
 + [一般的なリリースノート](release-notes.md)
 + Service Pack リリースノート {#service-pack}
-   + [最新情報](new-features-latest-service-pack.md)
+   + [新機能](new-features-latest-service-pack.md)
    + [Service Pack 5 リリースノート](sp-release-notes.md)
    + [以前のService Packリリースノート](previous-hotfixes-featurepacks.md)
 + [AEM Sites リリースノート](sites.md)
