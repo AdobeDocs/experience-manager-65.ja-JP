@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '599'
+ht-degree: 95%
 
 ---
 
@@ -27,11 +30,11 @@ AEM Forms では、User Management にまだ存在していないユーザーの
 1. 認証プロバイダーは、秘密鍵証明書を検証します。
 1. 認証プロバイダーは、次に、ユーザーが User Management データベースに存在するかどうかを確認します。可能性のある結果を次に示します。
 
-   **** 存在する：ユーザーが現在の状態でロック解除されている場合、User Managementは認証成功を返します。 これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
+   **存在する：** ユーザーが最新でロック解除されている場合、User Managementは認証成功を返します。 これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
 
-   **** 存在しない：User Managementは認証失敗を返します。
+   **存在しない：** User Managementは、認証失敗を返します。
 
-   **** 無効：User Managementは認証失敗を返します。
+   **無効：** User Managementは、認証失敗を返します。
 
 1. 認証プロバイダーが返した結果が評価されます。認証プロバイダーが認証成功を返した場合、ユーザーのログインが許可されます。そうでない場合は、User Management は次の認証プロバイダーに対して確認（手順 2～3）を行います。
 1. ユーザーの秘密鍵証明書を検証する利用可能な認証プロバイダーがなくなると、認証の失敗が返されます。
@@ -44,7 +47,7 @@ AEM Forms では、User Management にまだ存在していないユーザーの
 
 AEM Forms で提供するジャストインタイムプロビジョニングの API を次に示します。
 
-```as3
+```java
 package com.adobe.idp.um.spi.authentication  ;
 publ ic interface IdentityCreator {
 /**
