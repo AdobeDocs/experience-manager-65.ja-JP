@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '570'
+ht-degree: 95%
 
 ---
 
@@ -34,7 +37,7 @@ AEM Forms はフォームポータル経由で送信されたフォームデー�
 
 この応答オブジェクトにはフォーム名とそのリポジトリパスを含む JSON 配列が含まれています。応答の構造は次のとおりです。
 
-```
+```json
 [
  {formName: "<form name>",
  formPath: "<path to the form>" },
@@ -46,13 +49,13 @@ AEM Forms はフォームポータル経由で送信されたフォームデー�
 
 **要求 URL**
 
-```
+```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview
 ```
 
 **応答**
 
-```java
+```json
 [{"formPath":"/content/dam/formsanddocuments/forms-review/form2","formName":"form2"},{"formPath":"/content/dam/formsanddocuments/forms-review/form1","formName":"form1"}]
 ```
 
@@ -92,7 +95,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (オプション)</td>
-   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは次のとおりです。<br /><code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは次のとおりです。<br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (オプション)</td>
@@ -105,7 +108,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 応答オブジェクトには指定したフォームの詳細を含む JSON 配列が含まれています。応答の構造は次のとおりです。
 
-```
+```json
 {
  total: "<total number of submissions>",
  items: [{ formName: "<name of the form>", formPath: "<path to the form>", owner: "<owner of the form>"},
@@ -116,13 +119,13 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 **要求 URL**
 
-```
+```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSubmissions&formPath=/content/dam/formsanddocuments/forms-review/form2
 ```
 
 **応答**
 
-```java
+```json
 {"total":1,"items":[{"formName":"form2","formPath":"/content/dam/formsanddocuments/forms-review/form2","submitID":"1403037413508500","formType":"af","jcr:lastModified":"2015-11-05T17:52:32.243+05:30","owner":"admin"}]}
 ```
 
@@ -147,7 +150,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 **要求 URL**
 
-```
+```http
 https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
 ```
 
@@ -173,7 +176,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 応答オブジェクトには、指定した送信 ID に関連付けられているすべてのコメントを含む JSON 配列が含まれています。応答の構造は次のとおりです。
 
-```
+```json
 [{
  owner: "<name of the commenter>",
  comment: "<comment text>",
@@ -185,7 +188,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 **要求 URL**
 
-```
+```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
 ```
 
@@ -217,13 +220,13 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 **要求 URL**
 
-```
+```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
 ```
 
 **応答**
 
-```java
+```json
 {"formName":"form2","owner":"admin","jcr:lastModified":1446727516593,"path":"/content/forms/fp/admin/submit/metadata/1403037413508500.html","submitID":"1403037413508500","status":"submitted"}
 ```
 
