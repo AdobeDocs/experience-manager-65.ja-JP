@@ -1,22 +1,25 @@
 ---
 title: JEE上のAEM Formsのセキュア管理設定の指定
 seo-title: JEE上のAEM Formsのセキュア管理設定の指定
-description: JEE上のAEM Formsの実稼働環境で必要とされない、プライベート開発環境で必要なユーザーアカウントやサービスを管理する方法を説明します。
-seo-description: JEE上のAEM Formsの実稼働環境で必要とされない、プライベート開発環境で必要なユーザーアカウントやサービスを管理する方法を説明します。
+description: JEE上のAEM Formsの実稼働環境で必要とされない、プライベート開発環境に必要なユーザーアカウントやサービスを管理する方法を説明します。
+seo-description: JEE上のAEM Formsの実稼働環境で必要とされない、プライベート開発環境に必要なユーザーアカウントやサービスを管理する方法を説明します。
 uuid: 04e45d06-f57d-406c-8228-15f483199430
 content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '884'
+ht-degree: 80%
 
 ---
 
 
 # Configuring Secure Administration Settings for AEM Forms on JEE {#configuring-secure-administration-settings-for-aem-forms-on-jee}
 
-JEE上のAEM Formsの実稼働環境で必要とされない、プライベート開発環境で必要なユーザーアカウントやサービスを管理する方法を説明します。
+JEE上のAEM Formsの実稼働環境で必要とされない、プライベート開発環境に必要なユーザーアカウントやサービスを管理する方法を説明します。
 
 通常、開発者は、アプリケーションのビルドとテストに 実稼働環境は使用しません。したがって、プライベートな開発環境には必要でも実稼働環境には必要のないユーザーアカウントとサービスを管理する必要があります。
 
@@ -32,9 +35,9 @@ JEE 上の AEM Forms サービスには、少なくとも SOAP アクセスが�
 
 管理コンソールのアプリケーションおよびサービスWebページを使用して、次の手順を実行します。
 
-1. Webブラウザーに次のURLを入力して、管理コンソールにログインします。
+1. Webブラウザーで次のURLを入力して、管理コンソールにログインします。
 
-   ```as3
+   ```java
             https://[host name]:'port'/adminui
    ```
 
@@ -69,7 +72,7 @@ JEE 上の AEM Forms サービスには、少なくとも SOAP アクセスが�
 
 1. Web ブラウザーに次の URL を入力して管理コンソールにログインします。
 
-   ```as3
+   ```java
             https://[host name]:'port'/adminui
    ```
 
@@ -99,19 +102,20 @@ JEE 上の AEM Forms サービスには、少なくとも SOAP アクセスが�
    * WorkspacePropertyService
    * OutputService
    * FormsService
+
    これらのサービスをリモート起動できるようする場合は、匿名アクセスを無効にすることを考慮してください。そうしないと、これらのサービスにネットワークアクセス可能な任意の呼び出し元が、有効な資格情報を渡さずにサービスを起動するおそれがあります。
 
    匿名アクセスは、必要でないサービスでは無効にすることをお勧めします。内部サービスは、原則的にシステム内のすべてのユーザーが認証なしで呼び出せる必要があるので、多くの場合、内部サービスでは匿名認証を有効にする必要があります。
 
 ## デフォルトグローバルタイムアウトの変更 {#changing-the-default-global-time-out}
 
-エンドユーザーは、Workbench、AEM Forms Webアプリケーション、またはAEM Formsサーバーサービスを呼び出すカスタムアプリケーションを通じて、AEM Formsに対して認証を行うことができます。 グローバルタイムアウト設定を使用すると、再認証を要求されるまでにユーザーが（SAML ベースアサーションを使用して）AEM Forms とやり取りできる時間を指定することができます。デフォルト設定は 2 時間です。実稼働環境では、この時間を、設定可能な分単位の最小値に変更する必要があります。
+エンドユーザーは、Workbench、AEM FormsWebアプリケーション、またはAEM Formsサーバーサービスを呼び出すカスタムAEM Formsを通じて、に対して認証を行うことができます。 グローバルタイムアウト設定を使用すると、再認証を要求されるまでにユーザーが（SAML ベースアサーションを使用して）AEM Forms とやり取りできる時間を指定することができます。デフォルト設定は 2 時間です。実稼働環境では、この時間を、設定可能な分単位の最小値に変更する必要があります。
 
 ### 再認証時間制限の最小化 {#minimize-reauthentication-time-limit}
 
 1. Web ブラウザーに次の URL を入力して管理コンソールにログインします。
 
-   ```as3
+   ```java
             https://[host name]:'port'/adminui
    ```
 
