@@ -1,6 +1,6 @@
 ---
-title: Application ManagerサービスのJavaAPIクイック開始(SOAP)
-seo-title: Application ManagerサービスのJavaAPIクイック開始(SOAP)
+title: Application ManagerサービスJavaAPIクイック開始(SOAP)
+seo-title: Application ManagerサービスJavaAPIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 01a9bce3-868b-495b-bdee-bc60f029129e
@@ -10,34 +10,37 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 12da2a9b-4009-496e-953f-c2ae0352f59f
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
 
-# Application ManagerサービスのJavaAPIクイック開始(SOAP) {#application-manager-service-javaapi-quick-start-soap}
+# Application ManagerサービスJavaAPIクイック開始(SOAP) {#application-manager-service-javaapi-quick-start-soap}
 
-Application Managerサービスでは、Java APIクイック開始(SOAP)を使用できます。
+Application Managerサービスでは、Java API Quick開始(SOAP)を使用できます。
 
-[クイック開始:Java API(SOAP)を使用したアプリケーションのデプロイ](application-manager-service-java-api.md#quick-start-soap-mode-deploying-applications-using-the-java-api)
+[クイック開始: Java API(SOAP)を使用したアプリケーションのデプロイ](application-manager-service-java-api.md#quick-start-soap-mode-deploying-applications-using-the-java-api)
 
-[クイック開始:Java API(SOAP)を使用したアプリケーションの削除](application-manager-service-java-api.md#quick-start-soap-mode-removing-an-application-using-the-java-api)
-
->[!NOTE]
->
->アプリケーションマネージャーAPIは、AEM Forms LCAファイルのみをサポートします。 LiveCycle ES2およびES4のLCAファイルはサポートされません。
-
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+[クイック開始: Java API(SOAP)を使用したアプリケーションの削除](application-manager-service-java-api.md#quick-start-soap-mode-removing-an-application-using-the-java-api)
 
 >[!NOTE]
 >
->「AEM Formsでのプログラミング」にあるJava API(SOAP)クイック開始は、Unixなど別のオペレーティングシステムを使用している場合、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Application Manager APIは、AEM FormsのLCAファイルのみをサポートします。 LiveCycle ES2およびES4のLCAファイルはサポートしません。
 
-## クイック開始（SOAPモード）:Java APIを使用したアプリケーションのデプロイ {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
-次のJavaコードの例では、EncryptDocument.lcaという名前の既存のLCAファイルに基づいてアプリケーションを読み込 *みます*。
+>[!NOTE]
+>
+>「AEM Formsによるプログラミング」にあるJava API(SOAP)クイック開始は、Formsに基づいています（Unixなど）。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-```as3
+## クイック開始（SOAPモード）: Java APIを使用したアプリケーションのデプロイ {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+
+以下のJavaコードの例では、EncryptDocument.lcaという名前の既存のLCAファイルに基づいてアプリケーションを読み込み *ます*。
+
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -135,11 +138,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したアプリケーションの削除 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したアプリケーションの削除 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
-次のJavaコードの例は、EncryptDocumentという名前のアプリケーションを削 *除します*。
+次のJavaコードの例を使用すると、EncryptDocumentという名前のアプリケーションを削除でき *ます*。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
