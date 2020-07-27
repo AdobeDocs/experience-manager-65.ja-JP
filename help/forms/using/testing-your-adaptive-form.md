@@ -8,9 +8,9 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '969'
 ht-degree: 11%
 
 ---
@@ -213,8 +213,8 @@ AEM Formsは、アダプティブフォームのテストを自動化するテ�
 
 テストスイートには複数のテストケースを含めることができます。 テストスイート内のすべてのテストケースは、一度に実行することも、個別に実行することもできます。 テストを実行すると、アイコンに結果が示されます。
 
-* A checkmark icon indicates a passed test: ![](assets/save_icon.svg)
-* An &quot;X&quot; icon indicates a failed test: ![](assets/close-icon.svg)
+* A checkmark icon indicates a passed test: ![save_icon](assets/save_icon.svg)
+* An &quot;X&quot; icon indicates a failed test: ![close-icon](assets/close-icon.svg)
 
 1. AEMアイコン/ **[!UICONTROL ツール]**/ **[!UICONTROL 操作]**/ **[!UICONTROL テストに移動します。]**
 1. テストスイートのすべてのテストを実行するには：
