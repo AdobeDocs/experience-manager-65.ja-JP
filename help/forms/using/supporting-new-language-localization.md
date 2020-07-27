@@ -10,7 +10,10 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '715'
+ht-degree: 64%
 
 ---
 
@@ -23,14 +26,14 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 **フォーム固有の辞書** ：アダプティブフォームで使用される文字列を含みます。 例えば、ラベル、フィールド名、エラーメッセージ、ヘルプの説明文などです。It is managed as a set of XLIFF files for each locale and you can access it at `https://<host>:<port>/libs/cq/i18n/translator.html`.
 
-**グローバル辞書** 2つのグローバル辞書があり、JSONオブジェクトとしてAEMクライアントライブラリで管理されます。 これらの辞書にはデフォルトのエラーメッセージ、12 か月の名前、通貨シンボル、日付と時間のパターンなどが含まれます。これらの辞書は CRXDe Lite の /libs/fd/xfaforms/clientlibs/I18N にあります。これらの場所では、各ロケールごと別々のフォルダーが用意されています。グローバルの辞書は頻繁に更新されることはありません。各ロケールごとに別の JavaScript ファイルを保持することで、ブラウザーによりそれらがキャッシュされるため、同一サーバー上で異なるアダプティブフォームにアクセスする際に、ネットワーク帯域幅の使用量を減らすことができます。
+**グローバル辞書** 2つのグローバル辞書があり、AEMクライアントライブラリでJSONオブジェクトとして管理されます。 これらの辞書にはデフォルトのエラーメッセージ、12 か月の名前、通貨シンボル、日付と時間のパターンなどが含まれます。これらの辞書は CRXDe Lite の /libs/fd/xfaforms/clientlibs/I18N にあります。これらの場所では、各ロケールごと別々のフォルダーが用意されています。グローバルの辞書は頻繁に更新されることはありません。各ロケールごとに別の JavaScript ファイルを保持することで、ブラウザーによりそれらがキャッシュされるため、同一サーバー上で異なるアダプティブフォームにアクセスする際に、ネットワーク帯域幅の使用量を減らすことができます。
 
 ### アダプティブフォームのローカリゼーションの仕組み {#how-localization-of-adaptive-form-works}
 
 アダプティブフォームがレンダリングされるときは、指定された順序で以下のパラメーターが参照され、リクエストされたロケールが識別されます。
 
-* Request parameter `afAcceptLang`
-To override the browser locale of users, you can pass the `afAcceptLang` request parameter to force the locale. 例えば、次のURLは日本語ロケールでのフォームのレンダリングを強制します。
+* リクエストパラメーター `afAcceptLang`ユーザーのブラウザーロケールを上書きするには、 
+`afAcceptLang` リクエストパラメーターを使用して、ロケールを強制的に設定します。 例えば、次のURLは日本語ロケールでのフォームのレンダリングを強制します。
    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * The browser locale set for the user, which is specified in the request using the `Accept-Language` header.
@@ -43,7 +46,7 @@ To override the browser locale of users, you can pass the `afAcceptLang` request
 
 ## サポートされていないロケールにローカリゼーションのサポートを追加する {#add-localization-support-for-non-supported-locales}
 
-AEM Formsでは、現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語(taiwan)ロケール(zh-TW)、韓国語(ko-KR)のアダプティブフォームコンテンツのローカライゼーションをサポートしています。.
+AEM Formsは現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語(zh-TW)、韓国語(ko-KR)ロケールでのアダプティブフォームコンテンツのローカライゼーションをサポートしています。
 
 アダプティブフォーム実行時に新しいロケールのサポートを追加するには、次を参照してください。
 
@@ -65,13 +68,13 @@ AEM Formsでは、現在、英語(en)、スペイン語(es)、フランス語(fr
 
 ### XFA クライアントライブラリをロケール用に追加する {#add-xfa-client-library-for-a-locale-br}
 
-次のタイプのノードを、 `cq:ClientLibraryFolder` カテゴリ `etc/<folderHierarchy>`を含 `xfaforms.I18N.<locale>`むで作成し、クライアントライブラリに追加します。
+次のタイプのノードを「 `cq:ClientLibraryFolder``etc/<folderHierarchy>``xfaforms.I18N.<locale>`」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、」、「」、「」、「」の順に追加します。
 
-* **の定義に従って** 、I18N.js `xfalib.locale.Strings` が `<locale>` を定義しています `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`。
+* **で定義され** ているとおり、I18N.js `xfalib.locale.Strings` で `<locale>` の定義を参照してく `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`ださい。
 
 * 以下を含む **js.txt** ファイル。
 
-```
+```text
 /libs/fd/xfaforms/clientlibs/I18N/Namespace.js
 I18N.js
 /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js
@@ -79,15 +82,15 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-の下にタイプのノードを作成し、の `cq:ClientLibraryFolder` ノードを、のノードと、の `etc/<folderHierarchy>`カテゴリと依存関係を `guides.I18N.<locale>` 持たせて `xfaforms.3rdparty`くださ `xfaforms.I18N.<locale>``guide.common`い。&quot;
+の下にタイプのノードを作成し、にカテゴリを、に依存関係を、 `cq:ClientLibraryFolder` およびに依存関係 `etc/<folderHierarchy>`を付け `guides.I18N.<locale>``xfaforms.3rdparty``xfaforms.I18N.<locale>``guide.common`ます。 &quot;
 
 クライアントライブラリに次のファイルを追加します。
 
-* **i18n.js** , `guidelib.i18n`, &quot;calendarSymbols&quot;のパターンを持つ，,, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns`, `numberSymbols`, `currencySymbols`, per `typefaces``<locale>`[](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)xfa, locale setロケールset仕様を定義する， You can also see how it is defined for other supported locales in `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
-* **とを定義するLogMessages** .js `guidelib.i18n.strings` （を参照）。とは、を参照してく `guidelib.i18n.LogMessages` ださい。LogMessages.jsは、とを定義してい `<locale>``/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`ます。
+* **i18n.jsを定義し、「calendarSymbols」,** ,, `guidelib.i18n`, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns`per the per described the per Locale Set localeの仕様， `numberSymbols``currencySymbols``typefaces``<locale>`[](https://helpx.adobe.com/jp/content/dam/Adobe/specs/xfa_spec_3_3.pdf), You can also see how it is defined for other supported locales in `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
+* **とを定義するLogMessages.js** 。LogMessages.jsは、の定義に従っ `guidelib.i18n.strings` て、とを定義し `guidelib.i18n.LogMessages``<locale>``/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`ます。
 * 以下を含む **js.txt** ファイル。
 
-```
+```text
 i18n.js
 LogMessages.js
 ```
@@ -99,11 +102,11 @@ Perform this step only if the `<locale>` you are adding is not among `en`, `de`,
 1. Create an `nt:unstructured` node `languages` under `etc`, if not present already.
 
 1. すでに存在しない場合は、複数の値を持つ文字列プロパティ `languages` をノードに追加します。
-1. デフ追加ォルト `<locale>` のロケール値， `de`, `es`, `fr`, `it`, , `pt-br`, `zh-cn``zh-tw``ja``ko-kr`notは既に存在します。
+1. デ追加フォルトのロケール値(, `<locale>` , `de`, `es`,, `fr`, `it`, `pt-br``zh-cn``zh-tw``ja``ko-kr`, , if not present already)。
 
 1. Add the `<locale>` to the values of the `languages` property of `/etc/languages`.
 
-がに表 `<locale>` 示されま `https://'[server]:[port]'/libs/cq/i18n/translator.html`す。
+が `<locale>` に表示され `https://'[server]:[port]'/libs/cq/i18n/translator.html`ます。
 
 ### サーバーの再起動 {#restart-the-server}
 
