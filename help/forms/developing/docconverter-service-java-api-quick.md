@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ea4b26c8-b9cf-42c2-b4da-2884336014a9
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -26,7 +26,7 @@ DocConverterサービスでは、Java API Quick開始(SOAP)を使用できます
 
 [クイック開始（SOAPモード）: Java APIを使用したドキュメントのPDF/Aドキュメントへの変換](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIを使用してAEM Formsを実行できます。接続モードはSOAPに設定する必要があります。
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ AEM Forms操作は、厳密に型指定されたAPIを使用してAEM Formsを�
 
 次のJavaコードの例を使用すると、 *Loan.pdfというPDFドキュメントを、LoanArchive.pdfというPDFファイルとして保存されたPDF* /Aドキュメントに変換で *きます*。 (ドキュメントをPDF/Aドキュメントに [変換するを参照](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -139,7 +139,7 @@ AEM Forms操作は、厳密に型指定されたAPIを使用してAEM Formsを�
 
 次のJavaコードの例は、入力PDFドキュメントがPDF/Aに準拠しているかどうかを判定します。 DocConverterサービスに渡される入力PDFドキュメントは、LoanArchive.pdfという名前 *です*。 検証結果は、ValidationResults.xmlというXMLファイルに書き込ま *れます*。 (「PDF/Aへの準拠 [のプログラムによる決定](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)」を参照)。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
