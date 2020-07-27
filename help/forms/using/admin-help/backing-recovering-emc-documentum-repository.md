@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '832'
+ht-degree: 89%
 
 ---
 
@@ -58,7 +61,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
    次のテキストには、レイアウトのために 1 行が分割されている部分があります。そのため、このテキストをこのドキュメント以外の場所にコピーする場合は、1 ブロックずつコピーし、貼り付けたテキストから不要な改行を削除してください。
 
-   ```as3
+   ```shell
     ################################################
     # NetWorker Module for Documentum v1.2 nsrnmd_win.cfg D5.3+ example with
     # typical set of working parameters.  THIS FILE MUST BE SITE-CUSTOMISED.
@@ -204,7 +207,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
    * データベースログバックアップ（nsrnmddbl.bat）： 
 
-      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>``-U``[username]``-P``[password]``-l incr -R`*&lt;データベース名>*
+      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;database_name>*
 
       ここで、
 
@@ -212,7 +215,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
       `NetWorker_Server_Name` は、NetWorkerがインストールされているサーバです。
 
-      `username` &amp;は、 `password` データベース管理者ユーザーのユーザー名とパスワードです。
+      `username` &amp; `password` は、データベース管理者ユーザーのユーザー名とパスワードです。
 
       `database_name` は、バックアップするデータベースの名前です。
 
@@ -225,7 +228,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
    **Name：**&#x200B;共有ディレクトリのフルパス
 
-   **** メディアの種類： `File`
+   **メディアの種類：** `File`
 
 1. 新しいデバイスを右クリックして、「Operations」をクリックします。
 1. 「Label」をクリックし、名前を入力して「OK」をクリックしてから、「Mount」をクリックします。
@@ -243,7 +246,7 @@ AEM forms データの完全バックアップを完了してから、以下の�
 1. Open a command prompt, and change to `[NetWorker_root]\Legato\nsr\bin`.
 1. 次のコマンドを実行します。
 
-   ```as3
+   ```shell
     - nsrnmdsv.exe -f <path_to_cfg_file>
    ```
 
@@ -263,6 +266,6 @@ AEM forms データの完全バックアップを完了してから、以下の�
 1. Open a command prompt and change to *[NetWorker_root]*\Legato\nsr\bin
 1. 次のコマンドを実行します。
 
-   ```as3
+   ```shell
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
    ```
