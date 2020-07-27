@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
@@ -46,7 +46,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 次のコード例は、Wendy Blueという名前のAEM Formsをユーザに追加します。 (ユーザー [の追加を参照](/help/forms/developing/users.md#adding-users))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -164,7 +164,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 次のコード例は、Wendy Blueという名前のAEM Formsをユーザから削除します。 (ユーザーの [削除を参照](/help/forms/developing/users.md#deleting-users))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -260,7 +260,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 次のコードの例は、ローカルユーザーと、そのユーザーが属するローカルグループを検索します。 (「ユーザーとグループの [管理](/help/forms/developing/users.md#managing-users-and-groups)」を参照)。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -384,7 +384,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 次のコードの例では、サービスユーザーロールをプリンシパルに割り当て、プリンシパルが持つロールを印刷し、プリンシパルからロールを削除します。 このクイック開始では、2つのサービスが呼び出されます。 DirectoryManagerサービスとAuthorizationManagerサービス。(ロールと権限の [管理を参照](/help/forms/developing/users.md#managing-roles-and-permissions))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -527,7 +527,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 以下のJavaコードの例を使用して、User Management APIを使用してユーザーを同期します。 (「 [プログラムによるユーザの同期](/help/forms/developing/users.md#programmatically-synchronizing-users)」を参照)。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -636,7 +636,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 次のコード例は、Wendy Blueという名前のAEM Formsをユーザに追加します。 (ユーザー [の追加を参照](/help/forms/developing/users.md#adding-users))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -754,7 +754,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 次のコードの例では、AEM Formsに対してAdobeGroupという名前のグループを作成します。 (「グループの [作成](/help/forms/developing/users.md#creating-groups)」を参照)。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -906,7 +906,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
 
 以下のJavaコードモデルは、User Management APIを使用した環境設定ノードの管理です。 (「環境設定ノードの [プログラム管理](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)」を参照)。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1009,7 +1009,7 @@ public class ManagePreferences {
 
 次のJavaコードモデルは、User Management APIを使用して環境設定ノードを管理します(「環境設定ノードのプ [ログラムによる管理](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)」を参照)。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
