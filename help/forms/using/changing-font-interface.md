@@ -11,7 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: 9fcb80b4-cbc2-48a5-afd1-4f3bc50bc503
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 79%
 
 ---
 
@@ -28,7 +31,7 @@ Follow the [Generic steps for AEM Forms workspace customization](../../forms/usi
 
 例えば、トップナビゲーションバーのアンカーテキストのフォントを「Courier New」に変更するには、次の手順に従います。
 
-1. にアクセスしてCRXDE Liteにログインしま `https://'[server]:[port]'/lc/crx/de/index.jsp`す。
+1. にアクセスしてCRXDE Liteにログインし `https://'[server]:[port]'/lc/crx/de/index.jsp`ます。
 1. 次のいずれかの操作をおこないます。
 
    1. 既存のスタイルでフォントファミリーを変更するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
@@ -43,7 +46,7 @@ Follow the [Generic steps for AEM Forms workspace customization](../../forms/usi
 
       /apps/ws/js/runtime/templates/appnavigation.html ファイルを次のようにして更新します。
 
-      ```
+      ```jsp
       <li class="process"><a href="#" title="<%= $.t('index.header.topnav.startprocess.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.startprocess.name')%></a></li>
       <li class="todo"><a href="#/todo" title="<%= $.t('index.header.topnav.todo.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.todo.name')%></a></li>
       <li class="track"><a href="#/tracking" title="<%= $.t('index.header.topnav.tracking.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.tracking.name')%></a></li>
@@ -62,7 +65,7 @@ Follow the [Generic steps for AEM Forms workspace customization](../../forms/usi
 
       フォントファミリインラインを HTML 要素に追加するには、/apps/ws/js/runtime/templates にある appnavigation.html ファイルに以下を追加します。
 
-      ```css
+      ```jsp
       <div id="topnav" class="myNewFontStyle">
           <ul>
               <li class="process"><a href="#" title="<%= $.t('index.header.topnav.startprocess.detail')%>" ><%= $.t('index.header.topnav.startprocess.name')%></a></li>
