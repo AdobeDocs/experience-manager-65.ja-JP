@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 68e3071e-7ce6-4bdc-8561-14bcaeae2b6c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '800'
+ht-degree: 78%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
 ## 式ビルダーによる式およびリモート関数の作成 {#creating-expressions-and-remote-functions-with-expression-builder}
 
-式ビルダーは内部的にJSP ELライブラリを使用するので、式はJSPEL構文に従います。 詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
+式ビルダーは内部的にJSP ELライブラリを使用しているので、式はJSPEL構文に従います。 詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
 
 ![式ビルダー](assets/expressionbuilder.png)
 
@@ -33,11 +36,11 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
 通信管理ソリューションで使用できる、一般的な JSP EL の例は以下のとおりです。
 
-* 2つの数値を追加するには：${number1 + number2}
-* 2つの文字列を連結するには：${str1} ${str2}
-* 2つの数値を比較するには：${age &lt; 18}
+* 2つの数値を追加するには： ${number1 + number2}
+* 2つの文字列を連結するには： ${str1} ${str2}
+* 2つの数値を比較するには： ${age &lt; 18}
 
-詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側のExpression Managerは、JSP EL仕様の特定の変数と関数、特に次のものをサポートしていません。
+詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側の式マネージャーは、JSP EL仕様の特定の変数と関数をサポートしません。具体的には、次のようになります。
 
 * Collection indexes and map keys (using the [] notation) are not supported in variable names for expressions evaluated on the client-side.
 * 式に使用する関数のパラメーターの型や戻り値の型を以下に示しています。
@@ -75,7 +78,7 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 式の中で使用する独自のリモート関数は、カスタムバンドルを作成してエクスポートすることができます。独自のリモート関数をエクスポートするカスタムバンドルを作成するには、次のタスクを実行します。このデモでは、入力文字列を大文字に変換するカスタム関数を作成する例を示します。
 
 1. Expression Manager 用にエクスポートするメソッドを含んだ OSGi サービスのインターフェイスを定義します。
-1. インターフェイスAでメソッドを宣言し、@ServiceMethod注釈を付けます(com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod注釈には、次のオプションの属性が含まれており、この属性も指定できます。
+1. インターフェイスAでメソッドを宣言し、@ServiceMethod注釈を付けます(com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod注釈には、次のオプション属性があります。これらの属性も指定できます。
 
    1. **Enabled**： このメソッドを有効化するかどうかを決定します。Expression Manager では、無効なメソッドは無視されます。
    1. **familyId**：メソッドのファミリー（グループ）を指定します。空の場合、Expression Manager では、メソッドがデフォルトのファミリーに属するものと見なします。関数が選択されたファミリーのレジストリはありません（デフォルトのファミリーを除く）。Expression Manager では、様々なバンドルによって書き出されたすべての関数で指定されているすべてのファミリー ID を取得することで、レジストリが動的に作成されます。ここで指定された ID は式オーサリングユーザーインターフェイスにも表示されるので、適切に判読できることを確認します。
@@ -93,7 +96,7 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
    }
    ```
 
-   メソッドのパラメーターには、@ServiceMethodParameter注釈(com.adobe.exm.expeval.ServiceMethodParameter)を使用して、オプションで注釈を付けることもできます。 この注釈は、オーサリングユーザーインターフェイスに表示されるメソッドパラメーターの名前と説明を人間が判読できる形で指定する目的でのみ使用されます。インターフェイスメソッドのパラメーターおよび戻り値が、次の型のいずれかに属していることを確認してください。
+   メソッドのパラメーターには、必要に応じて@ServiceMethodParameter注釈(com.adobe.exm.expeval.ServiceMethodParameter)を使用して注釈を付けることもできます。 この注釈は、オーサリングユーザーインターフェイスに表示されるメソッドパラメーターの名前と説明を人間が判読できる形で指定する目的でのみ使用されます。インターフェイスメソッドのパラメーターおよび戻り値が、次の型のいずれかに属していることを確認してください。
 
    * java.lang.String
    * java.lang.Character
@@ -117,9 +120,9 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
    * java.util.List
 
 
-1. インターフェイスの実装を定義し、OSGIサービスとして設定し、次のサービスプロパティを定義します。
+1. インターフェイスの実装を定義し、OSGIサービスとして設定して、次のサービスプロパティを定義します。
 
-```
+```jsp
 @org.apache.felix.scr.annotations.Properties({
   @org.apache.felix.scr.annotations.Property(name = "connectors.jsoninvoker", boolValue = true),
   @org.apache.felix.scr.annotations.Property(name = "connectors.jsoninvoker.alias", value = "<service_id>"),
@@ -128,7 +131,7 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
 exm.service=true エントリは、式マネージャーに対して、式での使用に適したリモート関数をサービスに含めるように指示します。&lt;service_id> 値は、有効な Java 識別子である必要があります（英数字、$、_ のみ。他の特殊文字は使用できません）。この値の先頭に REMOTE_ というキーワードを付けると、式の中で使用されるプレフィックスとなります。例えば、サービスプロパティ内の注釈付きメソッド bar() およびサービス ID foo とのインターフェイスは、REMOTE_foo:bar() を使用して式内で参照できます。
 
-```
+```java
 package mergeandfuse.com;
 
 import org.apache.felix.scr.annotations.Component;
@@ -154,8 +157,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 使用するサンプルアーカイブを以下に示します。
 
-* **GoodFunctions.jar.zipは** 、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。 GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
-* **GoodFunctions.zipは** 、カスタムリモート関数を定義し、そのためのバンドルを作成するためのソースコードのパッケージです。
+* **GoodFunctions.jar.zip** は、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。 GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
+* **GoodFunctions.zip** は、カスタムのリモート関数を定義し、そのためのバンドルを作成するためのソースコードのパッケージです。
 
 GoodFunctions.jar.zip
 
