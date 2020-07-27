@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '552'
+ht-degree: 86%
 
 ---
 
@@ -41,13 +44,13 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 CustomToolbarLayoutDemo.zip
 
-[「Get File](assets/customtoolbarlayoutdemo.zip)Demo」カスタムツールバーレイアウト
+[Get File](assets/customtoolbarlayoutdemo.zip)Demoカスタムツールバーレイアウト
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}
 
 1. カスタムツールバーレイアウトを入れておくフォルダーを作成します。次に例を示します。
 
-   `/apps/customlayout/toolbar` です。
+   `/apps/customlayout/toolbar`。
 
    カスタムレイアウトを作成するには、次のフォルダーに用意されている既成のツールバーレイアウトの 1 つを使用（およびカスタマイズ）できます。
 
@@ -91,7 +94,7 @@ CustomToolbarLayoutDemo.zip
 
    サンプル `customToolbarLayout.jsp`:
 
-   ```php
+   ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
    <cq:includeClientLib categories="customtoolbarlayout" />
    <c:if test="${isEditMode}">
@@ -109,7 +112,7 @@ CustomToolbarLayoutDemo.zip
 
    サンプル `toolBarCommon.jsp`:
 
-   ```php
+   ```jsp
    <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions"%>
    <%--------------------
    This code iterates over all the tool bar items using the guideToolbar bean.
