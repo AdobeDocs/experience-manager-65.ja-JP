@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 translation-type: tm+mt
-source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '634'
+ht-degree: 76%
 
 ---
 
@@ -32,7 +35,7 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
 
 次の ServiceStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
 
-```as3
+```java
  public String getServiceId();
  public int getMajorVersion();
  public int getMinorVersion();
@@ -42,7 +45,7 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
 
 次の OperationStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
 
-```as3
+```java
  // InvocationCount: The number of times the method is invoked.
  public long getInvocationCount();
  // InvocationStartTime: The time at which the method started to execute.
@@ -72,33 +75,33 @@ JMX コンソール（JConsole）を使用すると、OperationStatistic MBean �
 
 **MBean ツリー**
 
-**** アドビのドメイン名：アプリケーションサーバーに依存します。 アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
+**Adobe Domain Name:** Application Serverによって異なります。 アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
 
-**** ServiceType:「AdobeService」は、すべてのサービスを一覧表示するために使用される名前です。
+**ServiceType:** AdobeServiceは、すべてのサービスのリストに使用される名前です。
 
-**** AdobeServiceName:サービス名またはサービスID。
+**AdobeServiceName:** サービス名またはサービスID。
 
-**** バージョン：サービスのバージョン。
+**バージョン：** サービスのバージョン。
 
 **運用の統計情報**
 
-**** 呼び出し時間：メソッドの実行に要した時間。 要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
+**Invocation Time:** メソッドの実行に要した時間。 要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
 
-**** 呼び出し回数：サービスが呼び出された回数。
+**呼び出し回数：** サービスが呼び出された回数。
 
-**** 平均呼び出し時間：サーバーの起動後に実行されたすべての呼び出しの平均時間。
+**平均呼び出し時間：** サーバーの起動後に実行したすべての呼び出しの平均時間です。
 
-**** 最大呼び出し時間：サーバーの起動後に実行した呼び出しのうち、最も長い呼び出し時間。
+**Max invocation time:** サーバーの起動後に実行した呼び出しのうち、最も長い呼び出し時間。
 
-**** 最小呼び出し時間：サーバーの起動後に実行された呼び出しの中で最も短い呼び出し時間。
+**Min invocation time:** サーバーの起動後に実行した呼び出しのうち、最も短い呼び出し時間。
 
-**** 例外数：失敗した呼び出しの数。
+**Exception Count:** 失敗につながった呼び出しの数。
 
-**** 例外メッセージ：発生した最後の例外のエラーメッセージ。
+**Exception Message:** 発生した最後の例外のエラーメッセージ。
 
-**** Last Sampling Date Time:最後の呼び出しの日付。
+**Last Sampling Date Time:** 最後の呼び出しの日付。
 
-**** 時間単位：初期設定はミリ秒です。
+**時間単位：** 初期設定はミリ秒です。
 
 JMX 監視を有効にするには、一般的にアプリケーションサーバーに何らかの設定が必要です。詳しくは、アプリケーションサーバーのドキュメントを参照してください。
 
@@ -111,7 +114,7 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
 1. InstallJBoss/bin にある run.bat ファイルを編集します。
 1. JAVA_OPTS 行を見つけ、次の内容を追加します。
 
-   ```as3
+   ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
    ```
 
@@ -120,7 +123,7 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
 1. Edit the startWebLogic.bat file that is located under `[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin`.
 1. JAVA_OPTS 行を見つけ、次の内容を追加します。
 
-   ```as3
+   ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
    ```
 
@@ -139,13 +142,13 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
 
 1. 管理コンソール（Application server／server1／Process Definition／JVM）で、Generic JVM Argument のフィールドに次の行を追加します。
 
-   ```as3
+   ```shell
     -Djavax.management.builder.initial= -Dcom.sun.management.jmxremote
    ```
 
 1. /opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties ファイル（または &lt;Your Websphere JRE>/ lib/management/management.properties）に次の 3 行を追加するか、コメントを解除します。
 
-   ```as3
+   ```shell
     com.sun.management.jmxremote.port=9999 //any port you like, but make sure you use this port when you connect
     com.sun.management.jmxremote.authenticate=false
     com.sun.management.jmxremote.ssl=false
