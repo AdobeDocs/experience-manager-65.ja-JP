@@ -9,7 +9,10 @@ topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '825'
+ht-degree: 82%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!CAUTION]
 >
->AEM formsは、アダプティブフ [ォームのテーマを作成](/help/forms/using/themes.md) 、変更するテーマエディター機能を提供 [します](/help/forms/using/themes.md)。 この記事に示す手順を実行するのは、テーマエディターのないバージョンからアップグレードした場合で、 [LESS](/help/forms/using/themes.md) /CSSファイルを使用して作成したテーマに対する既存の投資がある場合のみです（テーマエディターを使用する場合）。
+>AEM Formsには、アダプティブフォームの [テーマを作成および変更するための](/help/forms/using/themes.md) テーマエディター [機能が用意されています](/help/forms/using/themes.md)。 この記事に示す手順を実行するのは、 [テーマエディターを持たないバージョンからアップグレードした場合に、LESS/CSSファイルを使用して作成したテーマに既に投資している場合に限ります](/help/forms/using/themes.md) （テーマエディターを使用する前の方法）。
 
 ## 前提条件 {#prerequisites}
 
@@ -42,7 +45,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >この手順にしたがって同じ名前を使用すると、結果として次のスナップショットと同じようなテンプレートが出来上がるはずです：
 
-![](assets/thumbnail.png) フォレストテーマのアダプティブフォームのスナッ&#x200B;****&#x200B;プショット図：フォレスト *テーマのサンプル*
+![フォレストのテーマを設定したアダプティブフォームのスナップショット](assets/thumbnail.png)**図：** *フォレストテーマのサンプル*
 
 1. Create a node of type `cq:ClientLibraryFolder` under the `/apps`node.
 
@@ -58,17 +61,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. Add two folders, `less` and `css`, and a file `css.txt` to the node created in step 1:
 
-   * `less` フォルダ：変数を定 `less` 義し、.cssスタイルの管理に使 `less` 用する変 `less mixins` 数ファイルが含まれます。
+   * `less` folder: 変数を定義する `less` 変数ファイルが含まれます。この変数は、.cssスタイルの管理 `less``less mixins` に使用されます。
 
       このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインと変数を使用してスタイルを定義する `less` ファイルから構成されています。そして、これらすべての less ファイルは、styles.less にインポートされます。
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
+
    **LESS 変数ファイル**：これらは、CSS スタイルを定義するために使用される変数を定義または上書きするためのファイルです。
 
    アダプティブフォームは、次の LESS ファイルで定義されている OOTB 変数を提供します：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
+
    アダプティブフォームは、次のファイルで定義されているサードパーティ変数も提供しています：
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
@@ -81,7 +86,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    上書き変数の例：
 
-   ```
+   ```css
    @button-background-color: rgb(19, 102, 44);
    @button-border-color: rgb(19, 102, 44);
    @button-border-size: 0px;
@@ -96,9 +101,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
       `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
    1. 次に、上書きされた変数を含む LESS ファイルをインポートします。
+
    新しい変数の定義の例：
 
-   ```
+   ```css
    @button-focus-bg-color: rgb(40, 208, 90);
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
@@ -108,12 +114,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    アダプティブフォームは、次のファイルで定義されている OOTB ミックスインを提供します：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
+
    アダプティブフォームは、次のファイルで定義されているサードパーティミックスインも提供しています：
 
    * `/apps/clientlibs/fd/af/third-party/less/mixins.less`
+
    ミックスインの定義の例： 
 
-   ```
+   ```css
    .rounded-corners (@radius) {
      -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
@@ -138,7 +146,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * `components.less`
    * `layouts.less`
 
-   ```
+   ```css
    @import "../../../clientlibs/fd/af/guidetheme/common/less/globalvariables.less";
    @import "../../../clientlibs/fd/af/guidetheme/common/less/layoutvariables.less";
    @import "forestTheme-variables";
@@ -170,7 +178,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    次に例を示します。
 
-   ```
+   ```javascript
    #base=/apps/clientlibs/fd/af/third-party/css
    bootstrap.css
    
@@ -214,7 +222,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
       以下のサンプルコードでは、`af.theme.forest` のテーマをインポートしています。
 
-      ```
+      ```jsp
       <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
       <cq:includeClientLib categories="af.theme.forest"/>
       ```
