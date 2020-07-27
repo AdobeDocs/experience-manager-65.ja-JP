@@ -10,38 +10,41 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 1%
 
 ---
 
 
-# LiveCycleProcess Java API(SOAP)のクイック開始 {#livecycleprocess-java-api-soap-quick-start}
+# LiveCycleProcess Java API(SOAP)クイック開始 {#livecycleprocess-java-api-soap-quick-start}
 
-Java API(SOAP)クイック開始は、プロセスで使用できます。 プロ *セスインスタンス* は、呼び出しAPIなどの呼び出しメソッドによって、またはWorkspace内から開始された特定のプロセスの発生です。
+プロセスでJava API(SOAP)クイック開始を使用できます。 プ *ロセスインスタンス* は、呼び出しAPIなどの呼び出しメソッドによって開始された、またはWorkspace内から開始された、特定のプロセスのオカレンスです。
 
-[クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの検索](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したプロセスインスタンスの検索](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの休止](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したプロセスインスタンスの一時停止](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した中断されたプロセスインスタンスの開始](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用した中断されたプロセスインスタンスの開始](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの終了](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したプロセスインスタンスの終了](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したプロセスデータの削除](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したプロセスデータの削除](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したジョブのステータスの取得](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したジョブのステータスの取得](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定します。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+>「AEM Formsのプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合、Formsに基づきます。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの検索 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したプロセスインスタンスの検索 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
-次のJavaコードの例では、MortgageLoan - Prebuiltプロセスに基づくプロセスインスタ *ンスを検索します* 。
+以下のJavaコードの例では、MortgageLoan - Prebuild ** プロセスに基づくプロセスインスタンスを検索します。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -155,11 +158,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの休止 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したプロセスインスタンスの一時停止 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
 
-次のJavaコードの例は、プロセスインスタンスを中断します。 プロセスインスタンスを正常に休止するには、呼び出しAPIを使用して長期間有効なプロセスを呼び出す際に取得できるプロセス呼び出し識別子が必要です。
+以下のJavaコードの例では、プロセスインスタンスを中断します。 プロセスインスタンスを正常に休止するには、呼び出しAPIを使用して長期間有効なプロセスを呼び出すときに取得できるプロセス呼び出し識別子が必要です。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -247,11 +250,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用した中断されたプロセスインスタンスの開始 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用した中断されたプロセスインスタンスの開始 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
 
-次のJavaコードの例では、休止されたプロセス開始をインスタンスとして扱います。
+以下のJavaコードの例では、中断されたプロセスインスタンスを開始します。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -335,11 +338,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの終了 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したプロセスインスタンスの終了 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
 
-次のJavaコードの例では、識別子の値が756c22860a242fb101ec7a5bc0977fd6のプロセスインスタンスを終了します。
+次のJavaコードの例では、識別子の値756c22860a242fb101ec7a5bc0977fd6でプロセスインスタンスを終了します。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -426,11 +429,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスデータの削除 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したプロセスデータの削除 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
-次のJavaコードは、SecureDocumentという名前のプロセスからデータを削除 *します*。 inValueという名前のプロセス変数が200より大きいプロセスインスタンスのデータをパージするように指 *定するフ* ィルターが使用されます。
+次のJavaコードは、SecureDocumentという名前のプロセスからデータを削除し *ます*。 inValueという名前のプロセス変数が200より大きいプロセスインスタンスのデータを削除す *るように指定するフィルターが使用されます* 。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -533,11 +536,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したジョブのステータスの取得 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したジョブのステータスの取得 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
 
-次のコード例は、10個のAEM Formsジョブのステータスを取得します。
+次のコードの例は、10個のAEM Formsジョブのステータスを取得します。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
