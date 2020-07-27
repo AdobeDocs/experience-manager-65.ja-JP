@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 93%
@@ -33,7 +33,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
 * **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEM間でHTTPS経由で通信する場合は、AEMを次のJVMと開始します
 
-   ```
+   ```java
    argument
     -Djavax.net.ssl.trustStore=<<em>path to LC keystore</em>>
    ```
@@ -118,7 +118,7 @@ AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセ�
 
    上記のコードスニペットでは、ドキュメントを PDF に変換するために GeneratePdfServiceClient の createPDF API を開始します。次のコードを使用し、JSP で同じ呼び出しを実行できます。主な違いは、次のコードではSling ScriptHelperを使用してGeneratePdfServiceClientにアクセスする点です。
 
-   ```java
+   ```jsp
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>
    <%@ page import="com.adobe.livecycle.generatepdf.client.CreatePDFResult" %>
    <%@ page import="com.adobe.idp.Document" %>
