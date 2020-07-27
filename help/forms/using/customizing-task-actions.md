@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 55%
 
 ---
 
@@ -139,7 +142,7 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
 
 1. Copy /libs/ws/js/runtime/templates/task.html to `/apps/ws/js/runtime/templates/task.html`replace the following code snippet:
 
-   ```
+   ```html
    // Orignal code
    <div class="taskActionsPopUp">
            <!--START_TASKACTIONS-->
@@ -174,7 +177,7 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
        </div>
    ```
 
-   ```
+   ```html
    //New code
    
    <div class="taskActionsPopUp">
@@ -262,12 +265,12 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
 
 ### タスクの詳細タスクアクションポップアップメニュー {#task-details-task-action-pop-up-menu}
 
-次の手順を実行して、詳細タスクアクションポップアップメニューをカスタマイズします。
+次の手順を実行して、詳細タスクのアクションポップアップメニューをカスタマイズします。
 
 * Copy the /libs/ws/js/runtime/templates/taskdetails.html file to the `/apps/ws/js/runtime/templates/` folder:
 * テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。For example, the *new code* listed below encapsulates the icon tag inside the anchor tag:
 
-```
+```html
 // Original code
 <div class="taskActionsPopUp">
         <!--START_ACTIONBUTTONGROUP-->
@@ -310,7 +313,7 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
     </div>
 ```
 
-```
+```html
 //New code
 
 <div class="taskActionsPopUp">
