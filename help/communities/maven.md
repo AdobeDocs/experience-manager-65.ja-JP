@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: f05d7c19e3284c0627e29b9590db4749be100229
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 59%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ## 概要 {#overview}
 
-AEM Communitiesドキュメントのこのセクションには、次の内容も含まれています。
+AEM Communitiesドキュメントのこの節には、次の項が含まれます。
 
 * [Apache Mavenを使用したAEMプロジェクトの構築](../../help/sites-developing/ht-projects-maven.md)。
 
@@ -46,10 +49,10 @@ AEM Communities API jar の GAV の例を次に示します。
 1. 管理者権限でログインします。
 1. Browse to [Package Manager](../../help/sites-administering/package-manager.md). For example, [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-1. Locate the package *cq-socialcommunities-pkg-1.x.xxx*
+1. Locate the package: `cq-socialcommunities-pkg-1.x.xxx`
 1. パッケージ名からバージョンを抽出します。
    * AEM 6.3の最初のバージョンは、バージョン1.11.170です。
-   * 機能パックのバージョンは1.12.xxxです。
+   * 機能パックはバージョン1.12.xxxになります。
 
 >[!NOTE]
 >
