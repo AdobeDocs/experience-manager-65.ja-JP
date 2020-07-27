@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+workflow-type: tm+mt
+source-wordcount: '963'
+ht-degree: 36%
 
 ---
 
@@ -48,13 +51,16 @@ For managing users and groups registered in the *author* environment, is is nece
 >It will not be possible to use the Members console if the [tunnel service](deploy-communities.md#tunnel-service-on-author) is not enabled.
 
 
-![chlimage_1-119](assets/chlimage_1-119.png)
+![member-console1](assets/member-console1.png)
 
 ### 検索 {#search-features}
 
 Select the side panel icon on the left side of the `Members` header to toggle open the search side panel.
 
-![chlimage_1-120](assets/chlimage_1-120.png)![chlimage_1-121](assets/chlimage_1-121.png)
+![](assets/leftpanel-icon.png)
+
+
+![member-console2](assets/member-console2.png)
 
 Select the search icon on the left side of the `Members` header to toggle the search side panel closed.
 
@@ -74,7 +80,7 @@ Selecting the `Export CSV` link results in downloading all members as a list of 
 
 Select `Create Member` in order to create a user in the publish environment.
 
-![chlimage_1-122](assets/chlimage_1-122.png)
+![create-member1](assets/create-member1.png)
 
 ### 一般 - メンバー詳細 {#general-member-details}
 
@@ -87,8 +93,8 @@ Select `Create Member` in order to create a user in the publish environment.
 
 * **[!UICONTROL 電子メールアドレス]**
 
-(必&#x200B;*須*)メンバーの電子メールアドレス。
-プロファイルを更新する際に、メンバーは自分の電子メールアドレスを変更できます。IDが電子メールアドレスにデフォルト設定されている場合 ** 、電子メールアドレスを変更してもIDは変更されません。
+(*必須*)メンバーの電子メールアドレス。
+メンバーは、プロファイルの更新時に自分の電子メールアドレスを変更できます。デフォルトで電子メールアドレスに設定されているIDの場合、電子メールアドレスが変更されても ** 、IDは変更されません。
 
 * **[!UICONTROL パスワード]**
 
@@ -96,7 +102,7 @@ Select `Create Member` in order to create a user in the publish environment.
 
 * **[!UICONTROL パスワードの確認入力]**
 
-   (必&#x200B;*須*)確認のためのパスワードを再入力します。
+   (*必須*)確認のためにパスワードを再入力します。
 
 * **[!UICONTROL メンバーをサイトに追加]**
 
@@ -110,22 +116,23 @@ Select `Create Member` in order to create a user in the publish environment.
 
 ### 一般 - アカウント設定 {#general-account-settings}
 
-「アカウントの設定」では、コミュニティ管理者は次の操作を行うことができます。
+アカウントの設定では、コミュニティ管理者は次のことができます。
 
 * **[!UICONTROL ステータス]**
-   * 禁止されたメンバーはサインインできず、ページを表示できないか、ログインが必要なアクティビティに参加できません。 彼らは未だにオープンコミュニティサイトを匿名で訪問しているかもしれない。
+   * 禁止されたメンバーはサインインできず、ページを表示できないか、ログインが必要なアクティビティに参加できません。 未だにオープンコミュニティサイトを匿名で訪問している可能性がある。
 
    * 禁止されていないメンバーはコミュニティサイトのすべての機能にアクセスできます。
+
    デフォルトは `Not Banned` です。
 
 * **[!UICONTROL 貢献度の制限]**
 
-   オンにすると、メンバーのコンテンツを投稿する機能が制限されます。
+   オンにすると、メンバーがコンテンツを投稿する権限が制限されます。
 初期設定は、貢献度の制限の設定によって異なります。[メンバーの貢献度の制限](limits.md)を参照してください。
 
 * **[!UICONTROL パスワードを変更]**
 
-   既存のメンバーを変更する際に存在するリンク。 コミュニティ管理者がメンバーのパスワードをリセットする機能を提供します。
+   既存のメンバーの変更時に存在するリンク。 コミュニティ管理者がメンバーのパスワードをリセットする機能を提供します。
 
 ### 一般 - 写真 {#general-photo}
 
@@ -145,18 +152,18 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 
 [スコアとバッジ](implementing-scoring.md)も参照してください。
 
-![chlimage_1-123](assets/chlimage_1-123.png)
+![create-member2](assets/create-member2.png)
 
-* **[!UICONTROL バ追加ッジ]**
-   * Begin typing to select from [available badges](badges.md). バッジを選択したら、各サイト、または会員のアバターと共にバッジを表示するすべてのサイトを選択します。
+* **[!UICONTROL 追加バッジ]**
+   * Begin typing to select from [available badges](badges.md). バッジを選択したら、各サイトまたはすべてのサイトを選択します。このサイト上に、会員のアバターと共にバッジを表示します。
    * 複数のバッジとサイトを選択できます。
-* **[!UICONTROL バッジの削除]**
+* **[!UICONTROL バッジを削除]**
    * バッジの横にあるごみ箱アイコンを選択して、削除します。
 
 ## グループコンソール {#groups-console}
 
 グループコンソールはオーサー環境から使用でき、パブリッシュ環境で登録されたメンバーグループの作成や管理をおこなうことができます。特に、以下の目的で使用されます。
-* [特権メンバーグループ](users.md#privilegedmembersgroups)
+* [特権を持つメンバーグループ](users.md#privilegedmembersgroups)
 * Group-based assignment of [enablement resources](resources.md)
 
 グループコンソールにアクセスするには：
@@ -171,7 +178,7 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 
 Select `Add Group` in order to create a group in the publish environment.
 
-![chlimage_1-124](assets/chlimage_1-124.png)
+![group-console1](assets/group-console1.png)
 
 パブリッシュ側の新しいメンバーグループを作成するには、以下のフィールドを指定します。
 
