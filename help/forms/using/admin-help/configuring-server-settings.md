@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2657'
+ht-degree: 90%
 
 ---
 
@@ -55,7 +58,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 >[!NOTE]
 >
->AEM formsリリースでは、Flex Workspaceは非推奨です。
+>AEM Formsのリリースでは、Flex Workspaceは非推奨です。
 
 デフォルトでは、AEM forms によって送信される電子メールは Flex Workspace（JEE 上の AEM forms では廃止されています）へのリンクを含みます。AEM forms によって送信される電子メールが AEM Forms Workspace へのリンクを含むように設定できます。Flex Workspace（JEE 上の AEM forms では廃止されています）を上回る AEM Forms Workspace のメリットについて詳しくは、こちらの[記事](/help/forms/using/features-html-workspace-available-flex.md)を参照してください。
 
@@ -63,7 +66,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 1. タスクの割り当てテンプレートを開きます。
 1. タスク通知のテンプレートを次のとおりに設定します。 `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
-   ```as3
+   ```java
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@
    ```
 
@@ -193,7 +196,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 If your solution is deployed in a clustered environment, replace `@@notification-host@@` with the cluster address.
 
-`<`*PORTは&#x200B;*、アプリケーション`>`サーバーのHTTPリスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
+`<`*PORT *`>`は、アプリケーションサーバーのHTTPリスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
 
 **JBoss：** 8080
 
@@ -213,23 +216,23 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 ユーザーまたはグループへのリマインダー、タスクの割り当て、およびデッドラインの場合、「件名」ボックスと「通知テンプレート」ボックスで以下の変数を使用できます。
 
-**説明** :Workbenchのプロセスの開始手順(タスクポイント、「タスクの割り当て」操作または「複数のユーザーの割り当て」操作)で定義される、説明プロパティの内容。
+**description** :Workbenchのプロセスのユーザーステップ(開始ポイント、「タスクの割り当て」操作または「複数のタスクの割り当て」操作)で定義される、Descriptionプロパティの内容。
 
-**instructions** :Workbenchのプロセスのタスク手順で定義される、ユーザー手順のプロパティの内容。
+**instructions** :Workbenchのプロセスのタスク手順で定義される、User Instructionsプロパティの内容。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名。
+**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
 
 **process-name** ：プロセスの名前。
 
 **operation-name** ：ステップの名前。
 
-**taskid** 現在のタスク。
+**taskid** ：現在のタスクの一意の識別子。
 
-**actions** :受信者がクリックできる有効なルート（Approve、Rejectなど）の番号付きリストを生成します。
+**actions** :受信者がクリックできる有効なルート（Approve、Rejectなど）の番号付きリストを作成します。
 
 また、グループリマインダー、グループタスクの割り当ておよびグループのデッドラインの場合、次の変数も使用できます。
 
-**group-name** ：作業項目を割り当てたグループの名前。
+**group-name** ：作業項目に割り当てられているグループの名前。
 
 >[!NOTE]
 >
@@ -241,7 +244,7 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 **process-id** ：プロセスインスタンスの識別子。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名。
+**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
 
 停止した操作の場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
@@ -251,7 +254,7 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 **process-id** ：プロセスインスタンスの識別子。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名。
+**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
 
 ### 「件名」ボックスでの変数の使用{#using-a-variable-in-the-subject-box}
 
