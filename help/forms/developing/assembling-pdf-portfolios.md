@@ -11,22 +11,25 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 023f0d9e-bfde-4879-a839-085fadffb48e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1785'
+ht-degree: 3%
 
 ---
 
 
 # PDFポートフォリオのアセンブリ {#assembling-pdf-portfolios}
 
-Assembler javaおよびWebサービスAPIを使用して、PDFポートフォリオをアセンブルできます。 ポートフォリオでは、Wordファイル、画像ファイル（例えば、jpegファイル）、PDFドキュメントなど、様々な種類のドキュメントを組み合わせることができます。 ポートフォリオのレイアウトは、「プレビュー付きグリッド」、「画像レイアウト上 *」、「回転体」など*、様々なス *タイルに設定で* きます **。
+Assembler JavaおよびWebサービスAPIを使用して、PDFポートフォリオをアセンブルできます。 ポートフォリオは、Wordファイル、画像ファイル（jpegファイルなど）、PDFドキュメントなど、様々な種類のドキュメントを組み合わせることができます。 ポートフォリオのレイアウトは、プレビュー付き *グリッド*、画像 *レイアウト* 上、 **&#x200B;回転など、様々なスタイルに設定できます。
 
-次の図は、画像スタイルレイアウトのポートフォリオのス *クリーンショット* です。
+以下の図は、ポートフォリオと画像 *スタイルレイアウトのスクリーンショット* を示しています。
 
 ![ap_ap_portfolio](assets/ap_ap_portfolio.png)
 
-PDFポートフォリオの作成は、ドキュメントのコレクションを渡す代わりにペーパーレスで行うことができます。 AEM formsを使用すると、構造化DDXドキュメントでAssemblerサービスを呼び出してポートフォリオを作成できます。 次のDDXドキュメントは、PDFポートフォリオを作成するDDXドキュメントの例です。
+PDFポートフォリオを作成すると、ドキュメントのコレクションを渡す代わりに、ペーパーレスで行うことができます。 AEM Formsを使用すると、構造化DDXドキュメントを使用してAssemblerサービスを呼び出すことでポートフォリオを作成できます。 次のDDXドキュメントは、PDFポートフォリオを作成するDDXドキュメントの例です。
 
-```as3
+```xml
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
      <PDF result="portfolio1.pdf">
          <Portfolio>
@@ -48,7 +51,7 @@ PDFポートフォリオの作成は、ドキュメントのコレクション�
  </DDX>
 ```
 
-DXXドキュメントには、タグが入れ子になっ `Portfolio` ている必要があ `Navigator` ります。 タグは、onImageレイアウ `<Resource name="navigator/image.xxx" source="myImage.png"/>` トナビゲーターとし `myNavigator` て割り当てられている場合にのみ必要です。 `AdobeOnImage.nav`. このタグを使用すると、Assemblerサービスでポートフォリオの背景として使用する画像を選択できます。 パッケ `PackageFiles` ージフ `File` ァイルのファイル名とMIMEタイプを定義するタグとタグを含めます。
+DXXドキュメントには、タグが入れ子になっている `Portfolio` 必要があり `Navigator` ます。 タグ `<Resource name="navigator/image.xxx" source="myImage.png"/>` は、onImageレイアウトナビゲーターとして割り当てら `myNavigator` れている場合にのみ必要です。 `AdobeOnImage.nav`. このタグを使用すると、Assemblerサービスでポートフォリオの背景として使用する画像を選択できます。 パッケージファイル `PackageFiles``File` のファイル名とMIMEタイプを定義するタグとタグを含めます。
 
 >[!NOTE]
 >
@@ -56,7 +59,7 @@ DXXドキュメントには、タグが入れ子になっ `Portfolio` ている�
 
 >[!NOTE]
 >
->DDXドキュメントについて詳しくは、 [Assembler Service and DDX Referenceを参照してください](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>DDXドキュメントについて詳しくは、『 [Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)』を参照してください。
 
 ## 手順の概要 {#summary-of-steps}
 
@@ -64,7 +67,7 @@ PDFポートフォリオを作成するには、次のタスクを実行しま�
 
 1. プロジェクトファイルを含めます。
 1. PDFアセンブラクライアントを作成します。
-1. 既存のDDXドキュメントを参照します。
+1. 既存のDDXドキュメントの参照。
 1. 必要なドキュメントを参照します。
 1. 実行時オプションを設定します。
 1. ポートフォリオをアセンブルします。
@@ -72,15 +75,15 @@ PDFポートフォリオを作成するには、次のタスクを実行しま�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、必ずプロキシファイルを含めてください。
+必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar（AEM FormsがJBossにデプロイされている場合に必要）
-* jbossall-client.jar（AEM FormsをJBossにデプロイする場合に必要）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
 **PDFアセンブラクライアントの作成**
 
@@ -88,29 +91,29 @@ PDFポートフォリオを作成するには、次のタスクを実行しま�
 
 **既存のDDXドキュメントの参照**
 
-PDFポートフォリオをアセンブリするには、DDXドキュメントを参照する必要があります。 このDDXドキュメントには、、およびエレメン `Portfolio`トを含め `Navigator` る必要が `PackageFiles` あります。
+PDFポートフォリオをアセンブリするには、DDXドキュメントを参照する必要があります。 このDDXドキュメントには、 `Portfolio`、、 `Navigator` およびの各 `PackageFiles` 要素が含まれている必要があります。
 
 **必要なドキュメントの参照**
 
-PDFポートフォリオをアセンブリするには、アセンブリ対象のドキュメントを表すすべてのファイルを参照します。 例えば、DDXドキュメントで指定されているすべての画像ファイルをAssemblerサービスに渡します。 これらのファイルは、この節で指定したDDXドキュメント内で参照されます。 *myImage.png* 、 *saint_bernard.jpg*。
+PDFポートフォリオをアセンブリするには、アセンブリ対象のドキュメントを表すすべてのファイルを参照します。 例えば、DDXドキュメントで指定されているすべての画像ファイルをAssemblerサービスに渡します。 これらのファイルは、この節で指定するDDXドキュメントで参照されます。 *myImage.png* 、 *saint_bernard.jpg*。
 
-PDFポートフォリオをアセンブリする場合は、NAVファイル（ナビゲーターファイル）をAssemblerサービスに渡します。 Assemblerサービスに渡すNAVファイルは、作成するPDFポートフォリオのタイプによって異なります。 例えば、On an Imageレイアウトを作 *成するには* 、AdobeOnImage.navファイルを渡します。 NAVファイルは次のフォルダーにあります。
+PDFポートフォリオのアセンブリ時に、NAVファイル（ナビゲーターファイル）をAssemblerサービスに渡します。 Assemblerサービスに渡すNAVファイルは、作成するPDFポートフォリオのタイプに応じて異なります。 例えば、画像 *上レイアウトを作成するには、AdobeOnImage* .navファイルを渡します。 NAVファイルは次のフォルダーにあります。
 
 `<Install folder>\Acrobat 9.0\Acrobat\Navigators`
 
-Acrobat 9以降のインストールディレクトリからNAVファイルをコピーします。 NAVファイルは、クライアントアプリケーションがアクセスできる場所に配置します。 すべてのファイルは、Mapコレクションオブジェクト内でAssemblerサービスに渡されます。
+Acrobat 9（以降）のインストールディレクトリからNAVファイルをコピーします。 NAVファイルは、クライアントアプリケーションがアクセスできる場所に配置します。 すべてのファイルは、Mapコレクションオブジェクト内でAssemblerサービスに渡されます。
 
 >[!NOTE]
 >
->PDFポートフォリオのアセンブリに関連するクイックスタートでは、AdobeOnImage.navを使用します。
+>PDFポートフォリオのアセンブリに関連付けられているクイック開始では、AdobeOnImage.navを使用します。
 
 **実行時オプションの設定**
 
 ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。
 
-**ポートフォリオのアセンブル**
+**ポートフォリオの編成**
 
-PDFポートフォリオをアセンブリするには、操作を呼び出 `invokeDDX` します。 Assemblerサービスは、コレクションオブジェクト内のPDFポートフォリオを返します。
+PDFポートフォリオをアセンブリするには、この `invokeDDX` 操作を呼び出します。 Assemblerサービスは、コレクションオブジェクト内でPDFポートフォリオを返します。
 
 **組み立てたポートフォリオの保存**
 
@@ -126,7 +129,7 @@ PDFポートフォリオは、コレクションオブジェクト内で返さ�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[PDFドキュメントのプログラムによるアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[プログラムによるPDFドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
 ## Java APIを使用したPDFポートフォリオのアセンブリ {#assemble-a-pdf-portfolio-using-the-java-api}
 
@@ -141,46 +144,47 @@ Assembler Service API(Java)を使用してPDFポートフォリオをアセン�
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
    * Create an `AssemblerServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
 
-1. 既存のDDXドキュメントを参照します。
+1. 既存のDDXドキュメントの参照。
 
-   * コンストラ `java.io.FileInputStream` クターを使用し、DDXファイルの場所を指定するstring値を渡して、DDXドキュメントを表すオブジェクトを作成します。
+   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 必要なドキュメントを参照します。
 
-   * コンストラク `java.util.Map` ターを使用して、入力PDFドキュメントの保存に使用するオブジェクトを作成 `HashMap` します。
-   * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを作成します。必要なNAVファイルの場所を渡します（ポートフォリオの作成に必要な各ファイルに対してこのタスクを繰り返します）。
-   * オブジェクト `com.adobe.idp.Document` を作成し、NAVファ `java.io.FileInputStream` イルを含むオブジェクトを渡します（ポートフォリオの作成に必要な各ファイルに対してこの作業を繰り返します）。
-   * メソッドを呼び出し、次 `java.util.Map` の引数を渡して、オ `put` ブジェクトにエントリを追加します。
+   * コンストラクターを使用して、入力PDFドキュメントの格納に使用する `java.util.Map` オブジェクトを作成し `HashMap` ます。
+   * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを作成します。必要なNAVファイルの場所を渡します(ポートフォリオの作成に必要な各ファイルに対してこのタスクを繰り返します)。
+   * オブジェクトを作成し、NAVファイルを含む `com.adobe.idp.Document``java.io.FileInputStream` オブジェクトを渡します(ポートフォリオの作成に必要な各ファイルに対してこのタスクを繰り返します)。
+   * メソッド追加を呼び出し、次の引数を渡すことによって、オブジェクトに対するエントリを作成します。 `java.util.Map``put`
 
-      * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたソース要素の値と一致する必要があります。 （ポートフォリオの作成に必要な各ファイルに対して、このタスクを繰り返します）。
-      * PDFドキ `com.adobe.idp.Document` ュメントを含むオブジェクトです。 （ポートフォリオの作成に必要な各ファイルに対して、このタスクを繰り返します）。
+      * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたソース要素の値と一致する必要があります。 (ポートフォリオの作成に必要なファイルごとに、このタスクを繰り返します)。
+      * PDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。 (ポートフォリオの作成に必要なファイルごとに、このタスクを繰り返します)。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクタ `AssemblerOptionSpec` ーを使用して、実行時のオプションを格納するオブジェクトを作成します。
-   * オブジェクトに属するメソッドを呼び出して、ビジネス要件に合わせて実行時のオプションを設定 `AssemblerOptionSpec` します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、オブジェクトのメソッド `AssemblerOptionSpec` を呼び出して `setFailOnError` 渡してくださ `false`い。
+   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
+   * オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して渡し `false`ます。
 
 1. ポートフォリオをアセンブルします。
 
-   オブジェクト `AssemblerServiceClient` のメソッドを呼 `invokeDDX` び出し、次の必要な値を渡します。
+   オブジェクトの `AssemblerServiceClient``invokeDDX` メソッドを呼び出し、次の必須値を渡します。
 
-   * 使用す `com.adobe.idp.Document` るDDXドキュメントを表すオブジェクトです
-   * PDFポー `java.util.Map` トフォリオの構築に必要なファイルを含むオブジェクトです。
-   * デフォ `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` ルトフォントやジョブログレベルを含む、ランタイムオプションを指定するオブジェクト。
-   このメソ `invokeDDX` ッドは、アセンブリ `com.adobe.livecycle.assembler.client.AssemblerResult` されたPDFポートフォリオと発生した例外を含むオブジェクトを返します。
+   * 使用するDDXドキュメントを表す `com.adobe.idp.Document` オブジェクトです
+   * PDFポートフォリオの構築に必要なファイルが含まれる `java.util.Map` オブジェクトです。
+   * デフォルトフォントやジョブログレベルなど、ランタイムオプションを指定する `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` オブジェクト。
+
+   この `invokeDDX` メソッドは、アセンブリされたPDFポートフォリオと発生した例外を含む `com.adobe.livecycle.assembler.client.AssemblerResult` オブジェクトを返します。
 
 1. 組み立てたポートフォリオを保存します。
 
    PDFポートフォリオを取得するには、次の操作を実行します。
 
-   * オブジェクト `AssemblerResult` のメソッドを呼び出 `getDocuments` します。 このメソッドは、オブジェクトを `java.util.Map` 返します。
-   * 結果のオブジェクト `java.util.Map` が見つかるまで、オブジェクトを繰り返 `com.adobe.idp.Document` します。
-   * オブジェクトの `com.adobe.idp.Document` メソッドを呼び `copyToFile` 出して、PDFポートフォリオを抽出します。
+   * オブジェクトの `AssemblerResult` メソッドを呼び出し `getDocuments` ます。 このメソッドは、 `java.util.Map` オブジェクトを返します。
+   * オブジェクトを繰り返し処理して、結果のオブジ `java.util.Map``com.adobe.idp.Document` ェクトを見つけます。
+   * オブジェクトの `com.adobe.idp.Document``copyToFile` メソッドを呼び出してPDFポートフォリオを抽出します。
 
 **関連トピック**
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFポートフォリオの集成](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDFポートフォリオのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -192,70 +196,71 @@ Assembler Service API（Webサービス）を使用してPDFポートフォリ�
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 サービス参照を設定する際は、必ず次のWSDL定義を使用してください。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 サービス参照を設定する際は、次のWSDL定義を使用してください。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Formsをホ `localhost` ストするサーバーのIPアドレスで置き換えます。
+   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
 
 1. PDFアセンブラクライアントを作成します。
 
-   * デフォルトのコンス `AssemblerServiceClient` トラクターを使用して、オブジェクトを作成します。
-   * コンストラクタ `AssemblerServiceClient.Endpoint.Address` ーを使用してオブジェクトを作 `System.ServiceModel.EndpointAddress` 成します。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に渡すstring値。 属性を使用する必要はありま `lc_version` せん。 この属性は、サービス参照を作成する際に使用されます。
-   * フィールド `System.ServiceModel.BasicHttpBinding` の値を取得してオブジェクトを作成 `AssemblerServiceClient.Endpoint.Binding` します。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクト `System.ServiceModel.BasicHttpBinding` のフィールドをに `MessageEncoding` 設定しま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
-   * 次のタスクを実行して、基本HTTP認証を有効にします。
+   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
+   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
+   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `AssemblerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
+   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当てま `AssemblerServiceClient.ClientCredentials.UserName.UserName`す。
-      * 対応するパスワード値をフィールドに割り当てま `AssemblerServiceClient.ClientCredentials.UserName.Password`す。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当てま `BasicHttpBindingSecurity.Transport.ClientCredentialType`す。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当てま `BasicHttpBindingSecurity.Security.Mode`す。
+      * フィールドにAEM formsのユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
+      * 対応するパスワード値をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.Password`ます。
+      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
+      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
 
-1. 既存のDDXドキュメントを参照します。
+1. 既存のDDXドキュメントの参照。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。このオブ `BLOB` ジェクトは、DDXドキュメントの保存に使用されます。
-   * オブジェクト `System.IO.FileStream` を作成するには、コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * オブジェクトのコンテンツを格納するバイト配列を作成 `System.IO.FileStream` します。 バイト配列のサイズは、オブジェクトのプロパティを取得するこ `System.IO.FileStream` とで指定で `Length` きます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデ `System.IO.FileStream` ータを入力 `Read` します。 読み取るバイト配列、開始位置およびストリーム長を渡します。
-   * オブジェクト `BLOB` にバイト配列の内容をプロ `MTOM` パティに割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDXドキュメントの格納に使用されます。
+   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
+   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
+   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
 
 1. 必要なドキュメントを参照します。
 
-   * 各入力ファイルに対して、コンストラクターを使 `BLOB` 用してオブジェクトを作成します。 このオ `BLOB` ブジェクトは、入力ファイルの保存に使用されます。
-   * オブジェクト `System.IO.FileStream` を作成するには、コンストラクターを呼び出し、入力ファイルのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * オブジェクトのコンテンツを格納するバイト配列を作成 `System.IO.FileStream` します。 バイト配列のサイズは、オブジェクトのプロパティを取得するこ `System.IO.FileStream` とで指定で `Length` きます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデ `System.IO.FileStream` ータを入力 `Read` します。 読み取るバイト配列、開始位置およびストリーム長を渡します。
-   * オブジェクト `BLOB` にバイト配列の内容を `MTOM` フィールドに割り当てて、オブジェクトを入力します。
-   * Create a `MyMapOf_xsd_string_To_xsd_anyType` object. このコレクションオブジェクトは、PDFポートフォリオの作成に必要な入力ファイルの保存に使用されます。
-   * 入力ファイルごとに、オブジェクトを作成 `MyMapOf_xsd_string_To_xsd_anyType_Item` します。
-   * キー名を表すstring値をオブジェクトのフィールド `MyMapOf_xsd_string_To_xsd_anyType_Item` に割り当て `key` ます。 この値は、DDXドキュメントで指定されたエレメントの値と一致する必要があります。 （入力ファイルごとにこのタスクを実行します）。
-   * 入力ファイル `BLOB` を格納するオブジェクトをオブジェクトのフィー `MyMapOf_xsd_string_To_xsd_anyType_Item` ルドに割り当 `value` てます。 （入力PDFドキュメントごとにこのタスクを実行します）。
-   * オブジェクト `MyMapOf_xsd_string_To_xsd_anyType_Item` をオブジェクトに追加 `MyMapOf_xsd_string_To_xsd_anyType` します。 Invoke the `MyMapOf_xsd_string_To_xsd_anyType` object&#39;s `Add` method and pass the `MyMapOf_xsd_string_To_xsd_anyType` object. （入力PDFドキュメントごとにこのタスクを実行します）。
+   * 各入力ファイルに対して、コンストラクターを使用して `BLOB` オブジェクトを作成します。 この `BLOB` オブジェクトは、入力ファイルの保存に使用されます。
+   * コンストラクターを呼び出し、入力ファイルのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
+   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
+   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
+   * Create a `MyMapOf_xsd_string_To_xsd_anyType` object. このコレクションオブジェクトは、PDFポートフォリオの作成に必要な入力ファイルの格納に使用されます。
+   * 各入力ファイルに対して、 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
+   * キー名を表すstring値を `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` フィールドに割り当てます。 この値は、DDXドキュメントで指定された要素の値と一致する必要があります。 (このタスクは、入力ファイルごとに実行します)。
+   * 入力ファイルを格納している `BLOB` オブジェクトをオブジェクトのフィー `MyMapOf_xsd_string_To_xsd_anyType_Item` ルドに割り当て `value` ます。 (このタスクは、入力PDFドキュメントごとに実行します)。
+   * オ追加ブジェクトをオブジ `MyMapOf_xsd_string_To_xsd_anyType_Item``MyMapOf_xsd_string_To_xsd_anyType` ェクトに追加します。 Invoke the `MyMapOf_xsd_string_To_xsd_anyType` object&#39;s `Add` method and pass the `MyMapOf_xsd_string_To_xsd_anyType` object. (このタスクは、入力PDFドキュメントごとに実行します)。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクタ `AssemblerOptionSpec` ーを使用して、実行時のオプションを格納するオブジェクトを作成します。
-   * オブジェクトに属するデータメンバーに値を割り当てて、ビジネス要件に合わせて実行時オプションを設定 `AssemblerOptionSpec` します。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するには、オブジェクトの `false` データメ `AssemblerOptionSpec` ンバーに割り `failOnError` 当てます。
+   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
+   * オブジェクトに属するデータメンバに値を割り当てることで、ビジネス要件に合った実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `false` オブジェクトの `AssemblerOptionSpec``failOnError` データメンバーに割り当てます。
 
 1. ポートフォリオをアセンブルします。
 
-   オブジェクト `AssemblerServiceClient` のメソッドを `invokeDDX` 呼び出し、次の値を渡します。
+   オブジェクトの `AssemblerServiceClient``invokeDDX` メソッドを呼び出し、次の値を渡します。
 
-   * DDXドキ `BLOB` ュメントを表すオブジェクト
-   * 必要な `MyMapOf_xsd_string_To_xsd_anyType` ファイルを含むオブジェクトです
-   * 実行時 `AssemblerOptionSpec` のオプションを指定するオブジェクト
-   このメ `invokeDDX` ソッドは、ジョ `AssemblerResult` ブの結果と発生した例外を含むオブジェクトを返します。
+   * DDXドキュメントを表す `BLOB` オブジェクトです
+   * 必要なファイルを含む `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトです
+   * 実行時オプションを指定する `AssemblerOptionSpec` オブジェクトです。
+
+   この `invokeDDX` メソッドは、ジョブの結果と発生した例外を含む `AssemblerResult` オブジェクトを返します。
 
 1. 組み立てたポートフォリオを保存します。
 
    新しく作成されたPDFポートフォリオを取得するには、次の操作を実行します。
 
-   * 結果のPDFドキ `AssemblerResult` ュメントを含むオ `documents` ブジェクトのフ `Map` ィールドにアクセスします。
-   * オブジェクトを繰り返し `Map` 処理し、各結果ドキュメントを取得します。 次に、その配列メンバーをにキャス `value` トします `BLOB`。
-   * PDFドキュメントを表すバイナリデータを抽出するには、そのオブジェクトのプロパ `BLOB` ティにアクセス `MTOM` します。 PDFファイルに書き出し可能なバイト配列を返します。
+   * オブジェクトのフ `AssemblerResult` ィールドにアクセスします。この `documents` フィールドは、結果のPDFドキュメントを含む `Map` オブジェクトです。
+   * オブジェクトを繰り返し処理して、 `Map` 各結果ドキュメントを取得します。 次に、その配列メンバーをにキャスト `value` し `BLOB`ます。
+   * PDFドキュメントを表すバイナリデータを抽出するには、その `BLOB` オブジェクトの `MTOM` プロパティにアクセスします。 PDFファイルに書き出すことができるバイトの配列を返します。
 
 **関連トピック**
 
-[MTOMを使用したAEM formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
