@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '4295'
 ht-degree: 66%
@@ -414,14 +414,14 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 1. 以下のプロパティを sling.properties ファイルに追加します。
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
 
 1. （AIXのみ）sling.propertiesファイル追加に対する次のプロパティ。
 
-   ```
+   ```shell
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
 
