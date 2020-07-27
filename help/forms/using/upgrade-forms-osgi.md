@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 63%
@@ -24,7 +24,7 @@ AEM 6.3 Forms と AEM 6.4 Forms の場合、AEM 6.5 Forms へ直接アップグ�
 
 **AEM 6.0 Forms、AEM 6.1 Forms**、 **** AEM 6.2 FormsからAEM 6.5 Formsへの直接アップグレードパスは使用できません。 Perform an intermediate [upgrade to AEM 6.2 Forms](https://helpx.adobe.com/jp/experience-manager/6-2/forms/using/upgrade.html), [upgrade to AEM 6.3 Forms](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/upgrade.html), or [upgrade to AEM 6.4 Forms](/help/forms/using/upgrade.md) and then upgrade from AEM 6.3 Forms, or AEM 6.4 Forms to AEM 6.5 Forms.
 
-AEM 6.3 FormsまたはAEM 6.4 FormsからAEM 6.5 Formsにアップグレードするには、次の手順を実行します。
+Do the following to upgrade from AEM 6.3 Forms or AEM 6.4 Forms to AEM 6.5 Forms:
 
 1. 既存の AEM インスタンスを AEM 6.5 にアップグレードします。手順は次のとおりです。
 
@@ -70,14 +70,14 @@ AEM 6.3 FormsまたはAEM 6.4 FormsからAEM 6.5 Formsにアップグレード�
 
       [ドラフト統合とコンポーネント送信のサンプル](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)をデータベースで使用して旧バージョンのアップグレードを行う場合は、アップグレードの実行後に、以下の SQL クエリを実行してください。
 
-      ```
+      ```sql
       UPDATE metadata m, additionalmetadatatable am
       SET m.dataType = am.value
       WHERE m.id = am.id
       AND am.key = 'dataType'
       ```
 
-      ```
+      ```sql
       DELETE from additionalmetadatatable
       WHERE `key` = 'dataType'
       ```
