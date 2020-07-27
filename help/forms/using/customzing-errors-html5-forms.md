@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 78%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 この記事では、HTML5フォームのエラーメッセージをカスタマイズして、
 
-* エラーメッセージの外観および位置を変更できます。任意のフィールドの上、下および右にエラーを表示させることができます。
+* エラーメッセージの外観および位置を変更できます。任意のフィールドの上、下、右にエラーを表示させることができます。
 * 複数のフィールドのエラーメッセージをいつでも表示できます。
 * フィールドが選択されているかどうかに関係なく、エラーを表示します。
 
@@ -46,7 +49,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 初期設定での実装では、エラーメッセージはフィールドの右側に表示されます。エラーメッセージを上側に表示するには、次のコードを使用します。
 
-   ```
+   ```javascript
    markError: function (jqWidget, msg, type) {
                var element = jqWidget.element,                                //Gives the div containing widget
                    pos = $(element).offset(),                          //Calculates the position of the div in the view port
@@ -73,7 +76,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
            },
    ```
 
-1.  ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 1. `CustomErrorManager-1.0-SNAPSHOT` フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使ってパッケージをアップロードし、インストールします。
 
@@ -89,7 +92,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    エラー／警告メッセージのフォントサイズおよび色を変更するには、次のコードを使用します。
 
-   ```
+   ```css
    #customError {
    color: #0000FF; // it changes the color of Error Message
    display:none;
@@ -111,15 +114,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    Save the changes.
    ```
 
-1.  ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 1. CustomErrorManager-1.0-SNAPSHOT フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使ってパッケージをアップロードし、インストールします。
 
 ## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
 
-初期設定では、html5フォームはデフォルトのプロファイルを使用します。https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdpの名前>
+初期設定では、html5フォームは次のデフォルトのプロファイルを使用します。 https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
-カスタムエラーメッセージを含むフォームを表示するには、エラープロファイルを含むフォームをレンダリングします。https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdpの名前>
+カスタムエラーメッセージを使用してフォームを表示するには、次のエラープロファイルを使用してフォームをレンダリングします。 https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
 >[!NOTE]
 >
