@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1728'
+ht-degree: 72%
 
 ---
 
@@ -25,35 +28,35 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 まずは、この記事で使用される重要な用語と概念について見てみましょう。
 
-**外観** ：アダプティブフォームフィールドの様々な要素のスタイル、ルックアンドフィール、編成を指します。 通常、ラベル、入力用のインタラクティブ領域、ヘルプアイコン、ならびにフィールドについての短い説明や長い説明などが含まれます。この記事で扱われる外観のカスタマイズは、フィールドの入力領域の外観に適用できます。
+**外観** ：アダプティブフォームフィールドの様々な要素のスタイル、ルック&amp;フィール、編成を指します。 通常、ラベル、入力用のインタラクティブ領域、ヘルプアイコン、ならびにフィールドについての短い説明や長い説明などが含まれます。この記事で扱われる外観のカスタマイズは、フィールドの入力領域の外観に適用できます。
 
-**jQueryプラグイン** :jQueryウィジェットフレームワークに基づいて、代替の外観を実装するための標準的なメカニズムを提供します。
+**jQueryプラグイン** :jQueryウィジェットのフレームワークに基づく、代替の外観を実装するための標準的なメカニズムを提供します。
 
-**ClientLib** ：複雑なJavaScriptとCSSコードによって駆動される、AEMクライアント側の処理におけるクライアント側ライブラリシステム。 詳しくは、「クライアント側ライブラリの使用」を参照してください。
+**ClientLib** ：複雑なJavaScriptとCSSコードによって実行される、AEMクライアントサイドの処理におけるクライアントサイドライブラリシステム。 詳しくは、「クライアント側ライブラリの使用」を参照してください。
 
-**アーキタイプ** Mavenプロジェクトの元のパターンまたはモデルとして定義されたMavenプロジェクトテンプレートツールキット。 詳しくは、「アーキタイプの概要」を参照してください。
+**アーキタイプ** Mavenプロジェクトの元のパターンまたはモデルとして定義されたMavenプロジェクトテンプレートツールキットです。 詳しくは、「アーキタイプの概要」を参照してください。
 
-**ユーザー制御** ：フィールドの値を含むウィジェットのメイン要素を指し、カスタムウィジェットUIとアダプティブフォームモデルを連結する外観フレームワークで使用されます。
+**ユーザーコントロール** ：フィールドの値を含み、カスタムウィジェットUIとアダプティブフォームモデルを連結する外観フレームワークで使用される、ウィジェットのメイン要素です。
 
 ## カスタム外観の作成手順 {#steps-to-create-a-custom-appearance}
 
 カスタム外観を作成する手順は、高レベルでは次のようになります。
 
-1. **プロジェクトの作成**:AEMにデプロイするコンテンツパッケージを生成するMavenプロジェクトを作成します。
-1. **既存のウィジェットクラスの拡張**:既存のウィジェットクラスを拡張し、必要なクラスをオーバーライドします。
+1. **プロジェクトの作成**: AEMにデプロイするコンテンツパッケージを生成するMavenプロジェクトを作成します。
+1. **既存のウィジェットクラスを拡張します**: 既存のウィジェットクラスを拡張し、必要なクラスをオーバーライドします。
 1. **クライアントライブラリを作成する**：`clientLib: af.customwidget` ライブラリを作成して、必要な JavaScript と CSS ファイルを追加します。
 
-1. **プロジェクトの構築とインストール**:Mavenプロジェクトを構築し、生成されたコンテンツパッケージをAEMにインストールします。
-1. **アダプティブフォームの更新**:カスタム外観を使用するようにアダプティブフォームフィールドのプロパティを更新します。
+1. **プロジェクトを構築してインストールします**: Mavenプロジェクトを構築し、生成されたコンテンツパッケージをAEMにインストールします。
+1. **アダプティブフォームの更新**: カスタム外観を使用するようにアダプティブフォームフィールドのプロパティを更新します。
 
 ### プロジェクトの作成 {#create-a-project}
 
 Maven アーキタイプは、カスタム外観作成の開始点です。使用するアーキタイプの詳細は、次のとおりです。
 
-* **リポジトリ**:https://repo.adobe.com/nexus/content/groups/public/
-* **アーティファクトID**:カスタム外観アーキタイプ
-* **グループID**:com.adobe.aemforms
-* **バージョン**:1.0.4
+* **リポジトリ**: https://repo.adobe.com/nexus/content/groups/public/
+* **アーティファクトID**: カスタム外観アーキタイプ
+* **グループID**: com.adobe.aemforms
+* **バージョン**: 1.0.4
 
 次のコマンドを実行して、アーキタイプに基づいたローカルプロジェクトを作成します。
 
@@ -125,17 +128,17 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、、、 <code>&lt;a&gt;</code>、、 <code>&lt;input&gt;</code>などで <code>&lt;li&gt;</code>す。 The returned element is used as <code>$userControl</code>. If the <code>$userControl</code> specifies the above constraint, the functions of the <code>AbstractWidget</code> class work as expected, else some of the common APIs (focus, click) require changes. </td>
+   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。For example, <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;li&gt;</code>. The returned element is used as <code>$userControl</code>. If the <code>$userControl</code> specifies the above constraint, the functions of the <code>AbstractWidget</code> class work as expected, else some of the common APIs (focus, click) require changes. </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
-   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> この例 <code class="code">{
+   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> は、がHTMLイベ <code>blur</code> ントで、対応するXFAイ <code>XFA_EXIT_EVENT</code> ベントであることを示しています。 </td>
+      }</code><br /> この例では、がHTMLイベント <code>blur</code> で、対応するXFAイベント <code>XFA_EXIT_EVENT</code> であることを示します。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
-   <td>オプションの変更時に、実行すべきアクションの詳細を提供するマップを返します。キーはウィジェットに提供されるオプションで、値はオプションの変更が検出されるたびに呼び出される関数です。 ウィジェットには、すべての一般的なオプション（<code>value</code> と <code>displayValue</code> を除く）のハンドラーが用意されています。</td>
+   <td>オプションの変更時に、実行すべきアクションの詳細を提供するマップを返します。キーはウィジェットに提供されるオプションです。値はオプションの変更が検出されるたびに呼び出される関数です。 ウィジェットには、すべての一般的なオプション（<code>value</code> と <code>displayValue</code> を除く）のハンドラーが用意されています。</td>
   </tr>
   <tr>
    <td><code>getCommitValue</code></td>
@@ -158,7 +161,7 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
    * 適切なデフォルトのウィジェットクラスからウィジェットを拡張します。多くの場合は、置き換えられる既存のウィジェットに対応したウィジェットクラスになります。親クラス名は複数の場所で使用されるため、ファイル内すべての文字列 `xfaWidget.textField` のインスタンスを検索して、実際使用する親クラスで置き換えることを推奨します。
    * `render` メソッドを拡張して代替の UI を設定します。その場所から jQuery プラグインが起動し、UI またはインタラクション動作を更新します。`render` メソッドは、ユーザーコントロール要素を返します。
 
-   * `getOptionsMap` メソッドを拡張して、ウィジェット内の変更により影響を受けるオプション設定をオーバーライドします。この関数は、オプションの変更時に実行するアクションの詳細を提供するマッピングを返します。 キーはウィジェットに提供されるオプションで、値はオプションの変更が検出されるたびに呼び出される関数です。
+   * `getOptionsMap` メソッドを拡張して、ウィジェット内の変更により影響を受けるオプション設定をオーバーライドします。この関数は、オプションの変更時に実行するアクションの詳細を提供するマッピングを返します。 キーはウィジェットに提供されるオプションです。値はオプションの変更が検出されたときに毎回呼び出される関数です。
    * `getEventMap` メソッドは、そのウィジェットによりトリガーされるイベントを、アダプティブフォームモデルが必要とするイベントとあわせてマッピングします。デフォルト値ではデフォルトのウィジェットの標準 HTML イベントがマッピングされ、代替のイベントがトリガーされた場合は更新の必要があります。
    * `showDisplayValue` および `showValue` は、表示値を適用し、パターン形式文字列を編集します。また、別の動作にオーバーライドすることができます。
 
@@ -246,7 +249,7 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
 1. `bootstrap-number-input.js`（jQuery プラグイン）のコンテンツを `numericStepper-plugin.js` ファイルのコンテンツと置き換えます。
 1. In the `numericStepper-widget.js` file, add the following code to override the render method to invoke the plugin and return the `$userControl` object:
 
-   ```java
+   ```javascript
    render : function() {
         var control = $.xfaWidget.numericInput.prototype.render.apply(this, arguments);
         var $control = $(control);
@@ -266,7 +269,7 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
 
 1. In the `numericStepper-widget.js` file, override the `getOptionsMap` property to override the access option, and hide the + and - buttons in disabled mode.
 
-   ```java
+   ```javascript
    getOptionsMap: function(){
        var parentOptionsMap = $.xfaWidget.numericInput.prototype.getOptionsMap.apply(this,arguments),
    
