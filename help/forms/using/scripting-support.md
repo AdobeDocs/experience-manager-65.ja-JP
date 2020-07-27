@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '3909'
+ht-degree: 97%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 <table>
  <tbody>
   <tr>
-   <th>プロパティ </th>
+   <th>Property </th>
    <th>説明<br /> </th>
    <th>例外</th>
   </tr>
@@ -33,7 +36,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>ユーザーの操作に応じて変更される前のフィールドのコンテンツを指定します。この値は「元に戻す」と同様に、再び呼び出すことができます。</td>
    <td><p>ドロップダウンリストとリストボックスでは機能しません。次の場合、<code>PrevText </code> は正常に機能しません。</p>
     <ul>
-     <li>iPadの数値フィールドに一部の特殊文字キー(例えば、$、(、)、&amp;、@など)を入力すると、 </li>
+     <li>iPadの数値フィールドに一部の特殊文字キー(例えば、$、(、)、&amp;、@など)を入力する際、および </li>
      <li>日付フィールド（カレンダーをとおして日付が入力される場合）<br /> </li>
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td>
   </tr>
@@ -60,7 +63,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   <tr>
    <td>change</td>
    <td>ユーザーがフィールドに入力したり貼り付けたりした直後の値を表します。 </td>
-   <td><p>次の場合、changeプロパティは正しく機能しません。</p>
+   <td><p>changeプロパティは、次の場合は正しく機能しません。</p>
     <ul>
      <li>テキストを選択置換するとき。</li>
      <li>テキストの削除、コピー、およびペーストするとき。</li>
@@ -99,7 +102,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   <tr>
    <td><code>name</code></td>
    <td>現在のアプリケーションの名前を返します。</td>
-   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、 <code>Chrome &lt;version&gt;.</code></td>
+   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、次の値が返されます。 <code>Chrome &lt;version&gt;.</code></td>
   </tr>
   <tr>
    <td><code>numPages</code></td>
@@ -215,7 +218,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
-   <td>このフィールドの背景色の値を指定します。別々にborder.fill.presenceプロパティをvisibleに設定する必要があります。</td>
+   <td>このフィールドの背景色の値を指定します。</td>
    <td>それはフィールドのデフォルトの色を正しく返しません。</td>
   </tr>
   <tr>
@@ -235,7 +238,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   </tr>
   <tr>
    <td><code>borderColor</code></td>
-   <td>このフィールドの境界線の色の値を指定します。別々にborder.edge.presenceプロパティをvisibleに設定する必要があります。</td>
+   <td>このフィールドの境界線の色の値を指定します。</td>
    <td>それはフィールドのデフォルトの境界線の色を正しく返しません。</td>
   </tr>
   <tr>
@@ -457,7 +460,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>なし</td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>スクリプト式でこの要素を識別するために使用される識別子。</td>
    <td>なし</td>
   </tr>
@@ -509,7 +512,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
     </ul> </td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>このノードの名前を指定します。</td>
    <td>HTML ではスクリプトの使用による名前の設定は許可されていません。</td>
   </tr>
@@ -727,7 +730,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td> </td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td>
    <td>ランタイムでの値の設定はサポートされていません。</td>
   </tr>
@@ -815,7 +818,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>なし</td>
   </tr>
   <tr>
-   <td>名前<br /> </td>
+   <td>name<br /> </td>
    <td>スクリプト式でこの要素を識別するために使用される識別子。</td>
    <td>なし</td>
   </tr>
@@ -970,7 +973,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>exclgrp 内の個々の項目については、常にオープンを返します。 </td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td>
    <td>なし</td>
   </tr>
@@ -1254,12 +1257,12 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   </tr>
   <tr>
    <td>console.println()</td>
-   <td>この Acrobat API は JavaScript コンソールに出力をダンプします。</td>
+   <td>このAcrobat APIはJavaScriptコンソールに出力をダンプします。</td>
    <td> </td>
   </tr>
   <tr>
    <td>app.alert()</td>
-   <td>この Acrobat API は JavaScript ポップアップをとおしてアラートメッセージを送信します。</td>
+   <td>このAcrobat APIは、JavaScriptポップアップを通じて警告メッセージを送信します。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1325,7 +1328,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr>
    <td>app.formsVersion</td>
    <td>ビューアフォームソフトウェアのバージョン番号。スクリプトで下位互換性を保つ場合、このプロパティを確認して、ソフトウェアの新しいバージョンにあるオブジェクト、プロパティ、またはメソッドが使用できるかどうかを特定します。</td>
-   <td>11.001常に</td>
+   <td>11.001常に。</td>
   </tr>
   <tr>
    <td>app.language</td>
