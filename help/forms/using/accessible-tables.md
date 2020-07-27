@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 79%
 
 ---
 
@@ -18,14 +21,14 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 HTML5 フォームでのテーブルのデフォルト実装では、テーブルのレンダリングに HTML DIV 要素が使用されます。さらに、アクセシビリティ要件を満たす目的で ARIA ロールも使用されます。
 
-データテーブルで使用されるARIAの役割を完全にサポートしていないスクリーンリーダーでのアクセシビリティの問題を回避するため、HTML5フォームでは、テーブルの代替レンディションを提供しています。 これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
+ARIAロールをデータテーブルで使用できないスクリーンリーダーでアクセシビリティの問題が発生しないように、HTML5フォームではテーブル用の代替レンディションを提供しています。 これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
 
 * 行ヘッダー
 * 行幅
 
 HTML5 フォームで新しい形式を使用するには、テーブルを複雑なテーブルとしてマークする必要があります。複雑なテーブルとしてマークするには、テーブルのサブフォームの XML ソースに `extras` タグを次のように追加します。
 
-```
+```xml
 </extras>
  <text name="complexTable">1</text>
  </extras>
