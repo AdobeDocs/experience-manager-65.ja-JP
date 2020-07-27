@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3271ad3a7d0daac731803975e12d79b77905068a
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
 workflow-type: tm+mt
-source-wordcount: '6107'
+source-wordcount: '6120'
 ht-degree: 22%
 
 ---
@@ -187,7 +187,7 @@ For more information on document fragments, see [Document Fragments](/help/forms
 
    ![webchannelassets](assets/webchannelassets.png)
 
-   ドキュメントフラグメントをタップし、 ![configure_icon](assets/configure_icon.png) （設定）をタップしてから、インタラクティブコミュニケーションのサイドキックから **[!UICONTROL 「]** プロパティ」をタップします。 「 **[!UICONTROL 変数」および「データモデルオブジェクト]** 」セクションでは、非表示の変数や、ドキュメントフラグメントで使用されるデータモデルオブジェクトなどの変数をリストします。 各データモデルオブジェクトまたは各変数の横にある ![編集](assets/edit.svg) （編集）アイコンを使用して、プロパティを編集します。 また、印刷チャネルを使用してWebチャネルーで [自動生成されたドキュメントフラグメントの場合は](#synchronize) 、各データモデルオブジェクトと変数の横にある ![](assets/cancelinheritance.png) （継承のキャンセル）アイコンを使用して継承を [キャンセルし](#cancelinheritance) 、編集できるようにします。
+   ドキュメントフラグメントをタップし、 ![configure_icon](assets/configure_icon.png) （設定）をタップしてから、インタラクティブコミュニケーションのサイドキックから **[!UICONTROL 「]** プロパティ」をタップします。 「 **[!UICONTROL 変数」および「データモデルオブジェクト]** 」セクションでは、非表示の変数や、ドキュメントフラグメントで使用されるデータモデルオブジェクトなどの変数をリストします。 各データモデルオブジェクトまたは各変数の横にある ![編集](assets/edit.svg) （編集）アイコンを使用して、プロパティを編集します。 また、印刷チャネルを使用してWebチャネルで [自動生成されたドキュメントフラグメントの場合は、各データモデルオブジェクトと変数の横にある](#synchronize) cancelinherant ![（継承のキャンセル）アイコンを使用して継承を](assets/cancelinheritance.png) キャンセルし [](#cancelinheritance) 、編集できるようにします。
 
 1. Web チャネルにコンポーネントを追加するには、Web チャネルを選択した状態で「**[!UICONTROL コンポーネント]**」をタップします。必要に応じて、Interactive CommunicationのWebチャネルーにコンポーネントをドラッグ&amp;ドロップし、設定に進みます。
 
@@ -386,12 +386,12 @@ Webテンプレートのルートパネルをタップし、 **+をタップし*
 
 #### 表のセル内の追加テキストの編集 {#addedittexttable}
 
-1. テーブルのセルでデフォルトのテキストボックスを選択し、「 ![](assets/edit.png) （編集）」をタップします。
-1. テーブルのセルにテキストを入力し、をタップして保存 ![](assets/done_icon.png) します。
+1. テーブルのセルでデフォルトのテキストボックスを選択し、「 ![編集](assets/edit.png) （編集）」をタップします。
+1. テーブルのセルにテキストを入力し、 ![done_icon](assets/done_icon.png) をタップして保存します。
 
 #### 表のセルとデータモデルのオブジェクト要素間の連結の作成 {#createbindingtablecells}
 
-1. テーブル行のデフォルトのテキストボックスを選択し、「 ![](assets/edit.png) （編集）」をタップします。
+1. テーブル行のデフォルトのテキストボックスを選択し、「 ![編集](assets/edit.png) （編集）」をタップします。
 1. 「データモデルオブジェクト」ドロップダウンリストをタップし、プロパティを選択します。
 1. をタップして、テーブルセルとデータモデルオブジェクトプロパティの間の連結を保存および作成します。
 
@@ -399,10 +399,10 @@ Webテンプレートのルートパネルをタップし、 **+をタップし*
 
 #### テーブルのセル内のテキストへのハイパーリンクを作成する {#createhyperlinktable}
 
-1. テーブルのセルでデフォルトのテキストボックスを選択し、「 ![](assets/edit.svg) （編集）」をタップします。
+1. テーブルのセルでデフォルトのテキストボックスを選択し、「 ![編集](assets/edit.svg) （編集）」をタップします。
 1. テーブルセル内のテキストを選択し、ハイパーリンクアイコンをタップします。
 1. Specify the URL in the **Path** field.
-1. Tap ![](assets/done_icon.png) to save the hyperlink properties.
+1. Tap ![done_icon](assets/done_icon.png) to save the hyperlink properties.
 
 ![ハイパーリンクの作成](assets/create_hyperlink_table_new.png)
 
@@ -426,9 +426,9 @@ Interactive Communicationでは、型のコレクションのdata modelプロパ
 
 並べ替えを有効にするには：
 
-1. Select the table and tap ![](assets/configure_icon.png) (Configure). 対話型通信のサイドキックにある **コンテンツ** ・ブラウザを使用して、テーブルを選択することもできます。
+1. テーブルを選択し、「 ![configure_icon](assets/configure_icon.png) 」（設定）をタップします。 対話型通信のサイドキックにある **コンテンツ** ・ブラウザを使用して、テーブルを選択することもできます。
 1. 「並べ替えを **有効にする」を選択します。**
-1. Tap ![](assets/done_icon.png) to save the table properties. 列ヘッダー内の並べ替えアイコン（上向き矢印と下向き矢印）は、並べ替えが有効になっていることを表します。
+1. Tap ![done_icon](assets/done_icon.png) to save the table properties. 列ヘッダー内の並べ替えアイコン（上向き矢印と下向き矢印）は、並べ替えが有効になっていることを表します。
 
    ![並べ替えを有効にする](assets/enable_sorting_new-1.png)
 
@@ -479,7 +479,7 @@ Interactive Communicationでは、型のコレクションのdata modelプロパ
 ボタンを追加し、それにルールを定義するには：
 
 1. Webテンプレートのルートパネルをタップし、 **+をタップし** て、 **Button** コンポーネントをインタラクティブコミュニケーションに追加します。
-1. ボタンコンポーネントをタップし、をタップ ![](assets/edit-rules.png) して、ボタンのタップ時にルールを定義します。
+1. ボタンコンポーネントをタップし、「 ![編集規則](assets/edit-rules.png) 」をタップして、ボタンのタップに関する規則を定義します。
 1. 「 **日時** 」セクションで、ボタンのドロップダウンリストの状態から **クリックを選択します** 。
 1. In the **Then** section:
 
