@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1074'
+ht-degree: 74%
 
 ---
 
@@ -90,7 +93,7 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
    <td><p><code>"CN=</code><code>[User name]</code><code>,OU=</code><code>[Group Name]</code><code>, O=</code><code>[Company Name]</code><code>, L=</code><code>[City Name]</code><code>, S=</code><code>[State or province]</code><code>, C=</code><code>[Country Code]</code><code>"</code></p>
     <ul>
      <li><p><code><i>[User name]</i></code> は、キーストアを所有するユーザーのIDです。</p></li>
-     <li><p><code><i>[Group Name]</i></code> は、キーストアの所有者が属する企業グループのIDです。</p></li>
+     <li><p><code><i>[Group Name]</i></code> は、キーストアの所有者が属する会社グループのIDです。</p></li>
      <li><p><code><i>[Company Name]</i></code> は組織の名前です。</p></li>
      <li><p><code><i>[City Name]</i></code> は、組織の所在地の市区町村です。</p></li>
      <li><p><code><i>[State or province]</i></code> は、組織の所在地の都道府県です。</p></li>
@@ -115,7 +118,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
    次に例を示します。
 
-   ```as3
+   ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
    ```
 
@@ -135,7 +138,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
    次に例を示します。
 
-   ```as3
+   ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
    ```
 
@@ -152,7 +155,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
    次に例を示します。
 
-   ```as3
+   ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
@@ -177,7 +180,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 1. 「**Change**」をクリックしてキーストアリストをドロップダウンリストとして取得し、「**Custom Identity And Custom Trust**」を選択します。
 1. 「ID」で、次の値を指定します。
 
-   **Custom Identity Keystore**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain] *は実際のサーバー名、 *[]* サーバー名はアプリケーションサーバーの名前です。
+   **Custom Identity Keystore**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain] *は実際のパス、 *[server name]* はアプリケーションサーバーの名前を表します。
 
    **Custom Identity Keystore Type**：JKS
 
@@ -185,7 +188,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 
 1. 「Trust」で、次の値を指定します。
 
-   **Custom Trust Keystore File Name**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`は、 `*[appserverdomain]*` 実際のパス
+   **Custom Trust Keystore File Name**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`の場合、 `*[appserverdomain]*` は実際のパスです。
 
    **Custom Trust Keystore Type**：JKS
 
