@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 63%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
    たとえば、タスクの詳細ページに必要なルート選択に関する情報を追加するには、以下のキーと値のペアを task ブロックに追加することができます。
 
-   ```
+   ```json
    "todo" : {
        .
        .
@@ -53,9 +56,9 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
    >
    >対応するキーと値のペアをすべてのサポートされている言語に追加します。
 
-1. にコピ `/libs/ws/js/runtime/templates/taskdetails.html` ーしま `/apps/ws/js/runtime/templates/taskdetails.html`す。
+1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-   に追加新しい情報を追加しま `/apps/ws/js/runtime/templates/taskdetails.html`す。 次に例を示します。
+   に追加新しい情報を追加し `/apps/ws/js/runtime/templates/taskdetails.html`ます。 次に例を示します。
 
    ```css
    <div class="detailsContainer">
