@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
-source-wordcount: '1893'
+source-wordcount: '1894'
 ht-degree: 54%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 54%
          * UGC のレプリケーションなし
          * UGC はそれが入力された AEM インスタンスまたはクラスターでのみ表示
       * 初期設定は JSRP
+
    イネーブルメント機能&#x200B;**[用](/help/communities/overview.md#enablement-community)**
 
    * [FFmpeg のインストールと設定](/help/communities/ffmpeg.md)
@@ -137,7 +138,7 @@ Further information on installing bundles is found on the [Web Console](/help/si
 
 #### 例：インストール済みの MySQL コネクタバンドル {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![](../assets/chlimage_1-125.png)
 
 ### SCORM パッケージ {#scorm-package}
 
@@ -221,7 +222,7 @@ By default, the `AEM Communities Publisher Configuration` OSGi configuration is 
 
 したがって、すべてのセカンダリパブリッシュインスタンスの設定を編集して、「」チェックボックスをオフにする必要があります。******`Primary Publisher`**
 
-![](/help/communities/assets/chlimage_1-126.png)
+![](../assets/chlimage_1-126.png)
 
 パブリッシュファーム内の他のすべての（セカンダリ）パブリッシュインスタンスについて、以下をおこないます。
 
@@ -265,11 +266,11 @@ In order for some other user to have the appropriate permissions, they must be a
 
 #### デフォルトエージェント（publish） {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![configure-limits](../assets/configure-limits.png)
 
 #### リバースレプリケーションエージェント（publish reverse）{#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![](../assets/chlimage_1-128.png)
 
 ### オーサー環境のトンネルサービス {#tunnel-service-on-author}
 
@@ -292,7 +293,7 @@ When using the author environment to [create sites](/help/communities/sites-cons
 * **enable **boxをチェック
 * 「**Save**」を選択します。
 
-![](/help/communities/assets/chlimage_1-129.png)
+![](../assets/chlimage_1-129.png)
 
 ### 暗号鍵のレプリケーション {#replicate-the-crypto-key}
 
@@ -349,7 +350,7 @@ AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存す�
 
 * [Granite 暗号バンドルを更新](#refresh-the-granite-crypto-bundle)します。
 
-![](/help/communities/assets/chlimage_1-130.png)
+![](../assets/chlimage_1-130.png)
 
 #### Granite 暗号バンドルの更新 {#refresh-the-granite-crypto-bundle}
 
@@ -360,7 +361,7 @@ AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存す�
 * バン `Adobe Granite Crypto Support` ドルの検索(com.adobe.granite.crypto)
 * 「**更新**」を選択します。
 
-![](/help/communities/assets/chlimage_1-131.png)
+![](../assets/chlimage_1-131.png)
 
 * しばらくすると、**成功**ダイアログが表示されます。
    `Operation completed successfully.`
