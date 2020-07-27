@@ -9,14 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 79%
 
 ---
 
 
 # 追跡テーブルのカスタマイズ{#customize-tracking-tables}
 
-AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与するプロセスインスタンスの詳細を表示するために使用されます。 追跡テーブルを表示するには、最初に左ペインでプロセス名を選択して中央ペインでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右ペインに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
+AEM Formsワークスペースの「追跡」タブは、ログインしたユーザーが関与するプロセスインスタンスの詳細を表示するために使用されます。 追跡テーブルを表示するには、最初に左ペインでプロセス名を選択して中央ペインでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右ペインに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
 
 * ID ( `taskId`)
 * 名前 ( `stepName`)
@@ -119,7 +122,7 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
 
 1. テーブルに表示されたタスク属性とそれらの順序を変更するには、ファイル /ws/js/runtime/templates/processinstancehistory.html を設定します。
 
-   ```as3
+   ```html
    <table>
        <thead>
            <tr>
@@ -134,7 +137,7 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
    </table>
    ```
 
-   ```as3
+   ```html
    <table>
        <tbody>
            <%_.each(obj, function(task){%>
@@ -157,7 +160,7 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
 
 1. Register a click handler for `.fixedTaskTableHeader th` in the file `js/runtime/views/processinstancehistory.js`.
 
-   ```as3
+   ```javascript
    events: {
        //other handlers
        "click .fixedTaskTableHeader th": "onTaskTableHeaderClick",
@@ -167,19 +170,19 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
 
    In the handler, invoke the `onTaskTableHeaderClick` function of `js/runtime/util/history.js`.
 
-   ```as3
+   ```javascript
    onTaskTableHeaderClick: function (event) {
            history.onTaskTableHeaderClick(event);
    }
    ```
 
-1. メソッドを `TaskTableHeaderClick` に公開しま `js/runtime/util/history.js`す。
+1. で `TaskTableHeaderClick` メソッドを公開し `js/runtime/util/history.js`ます。
 
    メソッドはクリックイベントからタスク属性を検索し、その属性のタスクリストを並べ替えて、並べ替えられたタスクリストでタスクテーブルをレンダリングします。
 
    並べ替えは、比較関数を指定することによって、タスクリストコレクションの Backbone 並べ替え関数を使用して行われます。
 
-   ```as3
+   ```javascript
        return {
            //other methods
            onTaskTableHeaderClick  : onTaskTableHeaderClick,
@@ -187,7 +190,7 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
        };
    ```
 
-   ```as3
+   ```javascript
    onTaskTableHeaderClick = function (event) {
            var target = $(event.target),
             comparator,
