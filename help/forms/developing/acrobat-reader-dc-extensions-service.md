@@ -1,6 +1,6 @@
 ---
-title: Acrobat Reader DC ExtensionsサービスJava APIクイック開始(SOAP)
-seo-title: Acrobat Reader DC ExtensionsサービスJava APIクイック開始(SOAP)
+title: Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP)
+seo-title: Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
@@ -9,33 +9,36 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
 
-# Acrobat Reader DC ExtensionsサービスJava APIクイック開始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DC Extensionsサービスでは、次のクイック開始を使用できます。
+Acrobat Reader DCエクステンションサービスでは、次のクイック開始を使用できます。
 
 [クイック開始（SOAPモード）:Java APIを使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[PDFの使用権限の削除ドキュメント](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+[PDFドキュメントからの使用権限の削除](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsを使用したプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）:Java APIを使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfというPDFドキュメントに使用権限を適用します*。 使用権限を付与されたPDFドキュメントは、LoanUsageRights.pdfというPDFファイル *として保存されます*。 このPDFドキュメントには、次の使用権限が適用されます。 `enabledComments`、、 `enabledFormFillIn`および `enabledDigitalSignatures`。 (See [Applying Usage Rights to PDF Documents](/help/forms/developing/assigning-usage-rights.md).)
+次のJavaコードの例は、 *Loan.pdfというPDFドキュメントに使用権限を適用します*。 使用権限を付与されたPDFドキュメントは、LoanUsageRights.pdfというPDFファイルとして保存され *ます*。 このPDFドキュメントには、次の使用権限が適用されます。 `enabledComments`、 `enabledFormFillIn`および `enabledDigitalSignatures`。 (See [Applying Usage Rights to PDF Documents](/help/forms/developing/assigning-usage-rights.md).)
 
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -143,11 +146,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例では、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントから使 *用権限を削除します*。 (PDFドキュメント [からの使用権限の削除を参照](/help/forms/developing/assigning-usage-rights.md))。
+次のJavaコードの例を使用すると、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントから使用権限を削除でき *ます*。 (PDFドキュメントからの使用権限の [削除を参照](/help/forms/developing/assigning-usage-rights.md))。
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -243,11 +246,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-次のJavaコードの例を使用すると、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取 *得できます*。 (Retrieving [Credential Information](/help/forms/developing/assigning-usage-rights.md)を参照)。
+次のJavaコードの例を使用すると、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取得で *きます*。 (秘密鍵証明書情報の [取得を参照](/help/forms/developing/assigning-usage-rights.md))。
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
