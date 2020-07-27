@@ -10,14 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 80%
 
 ---
 
 
 # ユーザーアバターの表示 {#displaying-the-user-avatar}
 
-ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Forms Workspaceを設定して、LDAPサーバーなどのデータベースからユーザー画像を選択できます。
+ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Formsワークスペースを設定して、データベースからユーザー画像（LDAPサーバーなど）を選択できます。
 
 >[!NOTE]
 >
@@ -26,7 +29,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. 次の手順に記載されている説明を使用して DSC を作成します。For more information, see &#39;Developing Components for AEM Forms&#39; topic in [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) guide.
 1. DSC で getCurrentUserImageUrl と getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Forms ユーザーの画像 URL を取得します。Java™ コードスニペットのサンプルを以下に示します。
 
-   ```as3
+   ```java
    public class DemoUserImageURLProviderService {
      public String getCurrentUserImageUrl()
      {
@@ -43,7 +46,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    以下にサンプルのコードスニペットを示します。特定の要件に合うようにカスタマイズします。
 
-   ```as3
+   ```java
    <component xmlns="https://adobe.com/idp/dsc/component/document">
        <component-id>com.adobe.sample.DemoUsersComponent</component-id>
        <version>1.1</version>
@@ -81,5 +84,5 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    </component>
    ```
 
-1. Workbench を介して DSC をデプロイします。サービスを再 `ProcessManagementClientSessionService` 起動します。
+1. Workbench を介して DSC をデプロイします。サー `ProcessManagementClientSessionService` ビスを再起動します。
 1. ブラウザを更新するか、またはユーザーとログアウトして再度ログインする必要がある場合があります。
