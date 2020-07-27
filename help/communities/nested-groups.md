@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
+workflow-type: tm+mt
+source-wordcount: '590'
+ht-degree: 40%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 
 ## オーサー環境でのグループの作成 {#creating-groups-on-author}
 
-AEM作成者インスタンスで、グローバルナビゲーションから次の操作を行います。
+AEM Authorインスタンスで、グローバルナビゲーションから次の操作を行います。
 
 * Select **[!UICONTROL Communities] > **[!UICONTROL Sites]**.
 * Select **[!UICONTROL engage folder]** to open it.
@@ -33,26 +36,26 @@ AEM作成者インスタンスで、グローバルナビゲーションから�
 
 ![chlimage_1-91](assets/chlimage_1-91.png)
 
-グループ機能は、グループのインスタンスが作成されるフォルダーとして表示されます。グループフォルダーを選択して、開きます。公開時に作成されたグループが表示されます。
+グループ機能は、グループのインスタンスが作成されるフォルダーとして表示されます。グループフォルダーを選択して、開きます。公開時に作成されたグループは表示されます。
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 
 ## メインの Arts グループの作成 {#create-main-arts-group}
 
-このグループを作成できるのは、engage のサイト構造にグループ機能が含まれているからです。The configuration of the function in the site&#39;s `Reference Template` defaults to allowing the selection of any enabled group template. したがって、この新しいグループに対して選択されたテンプレートがになりま `Reference Group`す。
+このグループを作成できるのは、engage のサイト構造にグループ機能が含まれているからです。The configuration of the function in the site&#39;s `Reference Template` defaults to allowing the selection of any enabled group template. したがって、この新しいグループに対して選択されるテンプレートがになり `Reference Group`ます。
 
-これらのコンソールは、Communitiesのサイトコンソールに似ています。
+これらのコンソールは、コミュニティのサイトコンソールに似ています。
 
 * Select **[!UICONTROL Create Group]**.
 
 * **コミュニティグループテンプレート**：
 
-   * **[!UICONTROL コミュニティグループのタイトル]**:アート。
-   * **[!UICONTROL コミュニティグループの説明]**:様々な芸術団体の親集団。
-   * **[!UICONTROL コミュニティグループルート]**:デフォル *トのままにします*。
-   * **[!UICONTROL 利用可能なコミュニティグループの追加言語]**:ドロップダウンメニューを使用して、利用可能なコミュニティグループの言語を選択します。 このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
-   * **[!UICONTROL コミュニティグループ名]**:芸術
-   * **[!UICONTROL テンプレート]**:ドロップダウンして選択 `Reference Group.`
+   * **[!UICONTROL コミュニティグループのタイトル]**: アート。
+   * **[!UICONTROL コミュニティグループの説明]**: 様々な芸術団体の親グループ。
+   * **[!UICONTROL コミュニティグループルート]**: *デフォルトのままにします*。
+   * **[!UICONTROL 利用可能なコミュニティグループの追加言語]**: ドロップダウンメニューを使用して、使用可能なコミュニティグループ言語を選択します。 このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
+   * **[!UICONTROL コミュニティグループ名]**: 芸術
+   * **[!UICONTROL テンプレート]**: ドロップダウンして選択 `Reference Group.`
    * 「**[!UICONTROL 次へ]**」を選択します。
 
 ![ネストされたコミュニティグループ](assets/parent-to-nestedgroup.png)
@@ -83,7 +86,7 @@ AEM作成者インスタンスで、グローバルナビゲーションから�
 
 ### Arts グループ内でのグループのネスト {#nesting-groups-within-arts-group}
 
-これで、フ `groups` ォルダーに2つのグループが含まれるようになりました（ページを更新）。
+これで、 `groups` フォルダーに2つのグループが含まれるようになります（ページを更新）。
 
 ![グループのネスト](assets/create-community-group.png)
 
@@ -91,38 +94,38 @@ AEM作成者インスタンスで、グローバルナビゲーションから�
 
 `arts` グループ内でネストされるグループを作成する前に、`arts` カードにカーソルを合わせ、公開アイコンを選択してそのグループを公開します。
 
-![chlimage_1-93](assets/chlimage_1-93.png)
+![好み成分](assets/liking-component.png)
 
 グループが公開されたことが確認されるまで待機します。
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
-The `arts` group should also contain a `groups` folder, but one that is empty and in which new groups can be created. アートグループフォルダーに移動し、3つのネストされたグループを作成し、それぞれ異なるメンバーシップ設定を持ちます。
+The `arts` group should also contain a `groups` folder, but one that is empty and in which new groups can be created. アートグループフォルダーに移動し、3つのネストされたグループを作成します。それぞれ異なるメンバーシップ設定になります。
 
 1. **[!UICONTROL ビジュアル]**
 
    * タイトル: `Visual Arts`
-   * 名前: `visual`
+   * 名前：`visual`
    * テンプレート: `Reference Group`
    * Membership: select `Optional Membership`, a public group, open to all members.
 
 1. **[!UICONTROL Auditory]**
 
    * タイトル: `Auditory Arts`
-   * 名前: `auditory`
+   * 名前：`auditory`
    * テンプレート: `Reference Group`
    * Membership: select `Required Membership`, an open group, available for members to join.
 
 1. **[!UICONTROL History]**
 
    * タイトル: `Art History`
-   * 名前: `history`
+   * 名前：`history`
    * テンプレート: `Reference Group`
-   * メンバーシップ：シークレ `Restricted Membership`ットグループを選択します。招待されたメンバーにのみ表示されます。 例として、デモユーザーを招 [待します](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com`。
+   * メンバーシップ： 選択 `Restricted Membership`（秘密のグループ）。招待されたメンバーにのみ表示されます。 例として、 [デモユーザーを招待します](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com`。
 
 ページを更新して、ネストされた 3 つのグループ（サブコミュニティ）すべてを表示します。
 
-Communities Sitesコンソールからネストされたグループに移動するには：
+Communitiesのサイトコンソールからネストされたグループに移動するには：
 
 * Select **[!UICONTROL engage folder]**
 * Select **[!UICONTROL Getting Started Tutorial card]**
@@ -130,7 +133,7 @@ Communities Sitesコンソールからネストされたグループに移動す
 * Select **[!UICONTROL arts card]**
 * Select **[!UICONTROL Groups]** folder
 
-![chlimage_1-95](assets/chlimage_1-95.png)
+![設定に「いいね！」を付ける](assets/configure-liking.png)
 
 ## グループの公開 {#publishing-groups}
 
@@ -142,7 +145,7 @@ Communities Sitesコンソールからネストされたグループに移動す
 
    * グループが公開されたことの確認を待っています。
 
-* 次の場所にネストされたグループを公開する前に親グループを公開する：
+* 次の階層化されたグループを公開する前に親グループを公開する：
 
    * すべてのグループは、トップダウン方式で公開する必要があります。
 
@@ -153,7 +156,7 @@ Communities Sitesコンソールからネストされたグループに移動す
 It is possible to experience the different groups when signed in, for example with the [demo users](/help/communities/tutorials.md#demo-users) used for:
 
 * Art/History グループメンバー：emily.andrews@mailinator.com／password
-   * 制限付きの（秘密の）グループ、芸術/歴史が表示されます。
+   * 制限付き（秘密）グループ、アート/履歴が表示されます。
    * オプションの（パブリック）グループを表示できます。
    * 制限付き（開いている）グループに参加できます。
 
@@ -161,7 +164,7 @@ It is possible to experience the different groups when signed in, for example wi
 
    * オプションの（パブリック）グループを表示できます。
    * 制限付き（開いている）グループに参加できます。
-   * 制限付き（シークレット）グループを表示できません。
+   * 制限付き（秘密）グループを表示できません。
 
 オーサー環境で Communities の[メンバーコンソールとグループコンソール](/help/communities/members.md)にアクセスすると、コミュニティグループに対応する様々なメンバーグループに他のユーザーを追加できます。
 
