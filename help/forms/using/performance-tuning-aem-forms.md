@@ -10,7 +10,10 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '927'
+ht-degree: 79%
 
 ---
 
@@ -48,7 +51,7 @@ AEM Forms のデフォルトキャッシュ設定は、最適なパフォーマ�
 
 For optimal performance, it is recomended to use the following JVM `init` arguments to configure the `Java heap` and `PermGen`.
 
-```java
+```shell
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xmx8192m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:PermSize=256m
@@ -57,7 +60,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->推奨設定は、Windows 2008 R2 8 CoreおよびOracle HotSpot 1.7 （64ビット） JDK用で、システム構成に従って拡大または縮小する必要があります。
+>推奨設定は、Windows 2008 R2 8コアおよびOracle HotSpot 1.7 （64ビット） JDK用で、システム設定に従って拡大または縮小する必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
@@ -81,7 +84,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 1. Uncomment the following module configurations in `APACHE_HOME/conf/httpd.conf` file.
 
-   ```java
+   ```shell
    LoadModule proxy_balancer_module modules/mod_proxy.so
    LoadModule proxy_balancer_module modules/mod_proxy_http.so
    LoadModule deflate_module modules/mod_deflate.so
@@ -93,7 +96,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 1. crx のポート 4502 のプロキシを設定します。Add following configuration in `APACHE_HOME/conf/httpd.conf` configuration file.
 
-   ```java
+   ```shell
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
@@ -102,7 +105,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
    **HTML5 フォームの場合**
 
-   ```java
+   ```xml
    <Location /content/xfaforms>
        <IfModule mod_deflate.c>
            SetOutputFilter DEFLATE
@@ -119,7 +122,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
    **アダプティブフォームの場合**
 
-   ```java
+   ```xml
    <Location /content/forms/af>
        <IfModule mod_deflate.c>
            SetOutputFilter DEFLATE
@@ -144,9 +147,9 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 * AEM のインストールディレクトリ。このディレクトリ全体を除外できない場合は、以下の項目を除外してください。
 
-   * [AEMのインストールディレクトリ]\crx-repository\temp
-   * [AEMのインストールディレクトリ]\crx-repository\repository
-   * [AEMのインストールディレクトリ]\crx-repository\launchpad
+   * [AEMインストールディレクトリ]\crx-repository\temp
+   * [AEMインストールディレクトリ]\crx-repository\repository
+   * [AEMインストールディレクトリ]\crx-repository\launchpad
 
 * アプリケーションサーバーの一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
@@ -169,7 +172,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 >
 >* If you are using a different location for GDS and temporary directory, open AdminUI at `https://'[server]:[port]'/adminui`, navigate to **Home > Settings > Core System Settings > Core Configurations** to confirm the location in use.
 
-* 推奨ディレクトリを除外した後でもAEM Formsサーバーのパフォーマンスが低下する場合は、Java実行ファイル(java.exe)も除外します。
+* 推奨ディレクトリを除外した後でもAEM Formsサーバーの動作が遅い場合は、Java実行ファイル(java.exe)も除外します。
 
 
 
