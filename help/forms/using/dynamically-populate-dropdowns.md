@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 80%
 
 ---
 
@@ -153,9 +156,9 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
    国リストに表示する国の名前を追加します。州リストに、それを国リスト内の国の名前に基づいて自動入力するスクリプトを追加します。
 
-   ![国名の追加](assets/country-dropdown.png)![州名の「国」と「州」ドロップダウンリス](assets/state-dropdown.png)![トを埋め込むスクリプトを追加して、](assets/2dropdowns.png)
+   ![国名の追加](assets/country-dropdown.png)![州名](assets/state-dropdown.png) 「国」および「州」ドロップダウンリストを入力するスクリプトを追加して、都道府県名 ![「国」および「州」ドロップダウンメニューを収集します](assets/2dropdowns.png)
 
-   ```
+   ```javascript
    JSON.parse(
        $.ajax({
            url: "/apps/myfolder/demo/dropdown",
