@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 50%
@@ -94,7 +94,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 1. 
    * **シングルサーバーの場合、** lc_&lt;dbaname/tunkey>.xml ファイルの &lt;security-realms> セクションに次のテキストを追加します。
 
-   ```as3
+   ```xml
    <security-realm name="SSLRealm">
    <server-identities>
    <ssl>
@@ -110,13 +110,13 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
    上記のコードの後の &lt;server> セクションに次のテキストを追加します。
 
-   ```
+   ```xml
    <https-listener name="default-secure" socket-binding="https" security-realm="SSLRealm"/>
    ```
 
    * **サーバークラスターの場合** 、すべてのノードの [appserver root]\domain\configuration\host.xmlディレクトリに、&lt;security-realms>セクションの後に次の内容を追加します。
 
-   ```as3
+   ```xml
    <security-realm name="SSLRealm">
    <server-identities>
    <ssl>
@@ -132,7 +132,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
    上記のコードの後の &lt;server> セクションに次のテキストを追加します。
 
-   ```
+   ```xml
    <https-listener name="default-secure" socket-binding="https" security-realm="SSLRealm"/>
    ```
 
