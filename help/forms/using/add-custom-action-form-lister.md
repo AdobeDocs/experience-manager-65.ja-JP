@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: c34dd4c2-5fff-4355-b86d-cc8a956dd8af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '304'
+ht-degree: 90%
 
 ---
 
@@ -25,7 +28,7 @@ AEM Forms では、使用可能なフォームをリストしたポータルペ�
 
 テンプレートにアクションを追加するのに必要なコードは以下の通りです。The `onclick` attribute in the code snippet has a script to send a link of a form via email.
 
-```mxml
+```html
 <div class="__FP_boxes-container __FP_single-color">
     <div class="boxes __FP_boxes __FP_single-color" data-repeatable="true">
   <div class="__FP_boxes-thumbnail">
