@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 95%
 
 ---
 
@@ -28,6 +31,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * empid
    * reason
    * duration
+
    >[!NOTE]
    >
    >このレンダラーは概要ページのテンプレートです。
@@ -36,7 +40,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
    `apps/Employees/PtoApplication/html.esp`
 
-   ```
+   ```html
    <html>
      <body>
        <table>
@@ -74,7 +78,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
       * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。これは一意のノード名文字列です。
-      * **ノードタイプ**:タイプを **nt:unstructuredと定義します**。 このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
+      * **ノードタイプ**: タイプを **nt:unstructured**. このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
 
