@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: c72f608e-052a-4bf9-b7bc-ddf57483af35
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 57%
 
 ---
 
@@ -40,7 +43,7 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 1. Open the `template.html` file for editing.
 1. 次の文字列を探します。
 
-   ```
+   ```jsp
    <%if ( (task.description !== "") && (task.description !== null) && (typeof task.description !== null) && (typeof task.description !== 'undefined') ) {%>
                   <div class="description_details">
                     <%= task.description %>
@@ -52,7 +55,7 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. `template.html` ファイル内の次のコードを探します。
 
-   ```
+   ```jsp
    <ul id="task_menu_list">
                                    <li class="approve" title="<%= task.availableCommands.directCommands[0]%>" data-routename="<%= task.availableCommands.directCommands[0]%>">
                                        <%= task.availableCommands.directCommands[0]%>
@@ -64,7 +67,7 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. 次の行にコメントをつけ、ファイルを保存します。
 
-   ```
+   ```jsp
    task.availableCommands.directCommands[1]%>">
    <%= task.availableCommands.directCommands[1]%>
    </li>
