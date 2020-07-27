@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 245b9cc4-5837-4a22-b5f4-a1d4c5d66918
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '218'
+ht-degree: 0%
 
 ---
 
@@ -19,19 +22,19 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 Java API Quick開始(SOAP)は、Barcoded Formsサービスで使用できます。
 
-[クイック開始（SOAPモード）:Java APIを使用したバーコードフォームデータのデコード](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したバーコードフォームデータのデコード](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsを使用したプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）:Java APIを使用したバーコードフォームデータのデコード {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したバーコードフォームデータのデコード {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-次のJavaコードは、Loan.pdfとして保存されたPDFフォーム内のフォームデータをデコードします。 デコードされたデータは、extractedData.xmlという名前のXMLファイルとして保存されます。 次のコード例は、オブジェクトを `org.w3c.dom.Document` オブジェクトに変換 `com.adobe.idp.Document` します。 (「Decoding Barcoded Form Data [」を参照](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data))。
+次のJavaコードは、Loan.pdfとして保存されたPDFフォーム内のフォームデータをデコードします。 デコードされたデータは、extractedData.xmlというXMLファイルとして保存されます。 次のコードの例では、1つの `org.w3c.dom.Document` オブジェクトを1つの `com.adobe.idp.Document` オブジェクトに変換します。 (「Decoding Barcoded Form Data [」を参照](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -218,5 +221,5 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->同じアプリケーションロジック `org.w3c.dom.Document` でオブジェクトとオ `com.adobe.idp.Document` ブジェクトの両方を使用する場合は、両方のオブジェクトを完全に修飾することをお勧めします。
+>同じアプリケーションロジック内で `org.w3c.dom.Document` オブジェクトと `com.adobe.idp.Document` オブジェクトの両方を使用する場合は、両方のオブジェクトを完全に修飾することをお勧めします。
 
