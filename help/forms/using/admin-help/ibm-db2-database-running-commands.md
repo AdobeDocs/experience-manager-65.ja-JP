@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a62b68b4-7735-49b1-8938-f0d9e4c4a051
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 89%
 
 ---
 
@@ -20,8 +23,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 AEM Forms データベースの定期保守には、以下の IBM DB2 コマンドが推奨されます。DB2 データベースの保守およびパフォーマンスチューニングについて詳しくは、『*IBM DB2 Administration Guide*』を参照してください。
 
 * **runstats：**&#x200B;このコマンドは、その関連インデックスと共に、データベーステーブルの物理的特性を示す統計データを更新します。AEM Forms により生成される動的 SQL ステートメントは、更新済みのこれらの統計を自動的に使用しますが、データベース内で作成される静的 SQL ステートメントでは、`db2rbind` コマンドも実行する必要があります。
-* **** db2rbind:このコマンドは、データベース内のすべてのパッケージを再バインドします。 `runstats` ユーティリティの実行後に、このコマンドを使用してデータベース内のすべてのパッケージを再検証します。
-* **** 再構成テーブルまたはインデックス：このコマンドは、一部のテーブルとインデックスの再編成が必要かどうかを確認します。
+* **db2rbind:** このコマンドは、データベース内のすべてのパッケージを再バインドします。 `runstats` ユーティリティの実行後に、このコマンドを使用してデータベース内のすべてのパッケージを再検証します。
+* **reorg table or index:** このコマンドは、一部のテーブルとインデックスの再編成が必要かどうかを確認します。
 
    データベースは増大および変更されていくので、テーブル統計データの再計算はデータベースパフォーマンスの向上に不可欠なものであり、定期的に実行する必要があります。これらのコマンドは、スクリプトを使用して手動で実行することも、cron ジョブを使用することもできます。
 
@@ -43,7 +46,7 @@ AEM Forms データベースの定期保守には、以下の IBM DB2 コマン�
 
 正しい構文と使用法について詳しくは、データベース製造元のドキュメントを参照してください。Below, `<schema>` is used to denote the schema that is associated with your DB2 user name. 単純なデフォルトの DB2 インストール環境である場合、これはデータベーススキーマ名となります。
 
-```as3
+```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY
  
      TABLE <schema>.EDCPRINCIPALGRPCTMNTENTITY
@@ -69,7 +72,7 @@ AEM Forms データベースの定期保守には、以下の IBM DB2 コマン�
 
 以下の AEM Forms データベーステーブルおよびインデックスで `reorg` コマンドを実行します。正しい構文と使用法について詳しくは、データベース製造元のドキュメントを参照してください。
 
-```as3
+```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY
  
      TABLE <schema>.EDCPRINCIPALGRPCTMNTENTITY
