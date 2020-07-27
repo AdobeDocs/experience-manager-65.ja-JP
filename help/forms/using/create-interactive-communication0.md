@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '2020'
+ht-degree: 58%
 
 ---
 
@@ -36,11 +39,11 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、印刷チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**印刷テンプレート：**[create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
+**印刷テンプレート：** [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
 
-**Form Data Model:**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Form Data Model:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
 **レイアウトフラグメント：** [table_lf](../../forms/using/create-templates-print-web.md)
 
@@ -56,6 +59,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
 
    1. 「**作成**」をタップします。
+
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
@@ -69,30 +73,30 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    | bill_summary_first_ic | BillSummary |
    | summary_charges_first_interactive_communication | 料金 |
 
-   ![Interactive Communicationsのドキュメントフラグメント](assets/create_first_ic_doc_fragments_new.png)
+   ![対話型通信用のドキュメントフラグメント](assets/create_first_ic_doc_fragments_new.png)
 
 1. Tap **Charts** target area, and tap **+** to add a **Chart** component.
-1. Tap the Chart component and select ![](assets/configure_icon.png) (Configure). グラフのプロパティが左側のペインに表示されます：
+1. Tap the Chart component and select ![configure_icon](assets/configure_icon.png) (Configure). グラフのプロパティが左側のペインに表示されます：
 
    1. グラフ名を指定します。
    1. 「**グラフのタイプ**」ドロップダウンリストから「**円グラフ**」を選択します。
-   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。タップ ![](assets/done_icon.png).
+   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon](assets/done_icon.png)」をタップします。
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
-   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. タップ ![](assets/done_icon.png).
-   1. Tap ![](assets/done_icon.png) to save the chart properties.
+   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. 「 ![done_icon](assets/done_icon.png)」をタップします。
+   1. Tap ![done_icon](assets/done_icon.png) to save the chart properties.
 
 1. Go to the **Assets** tab and apply the filter to display only the layout fragments in the left pane. **table_lf** レイアウトフラグメントを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。
-1. Select the Text Field in the **Date** column and tap ![](assets/configure_icon.png) (Configure).
-1. 「**連結タイプ**」ドロップダウンリストから「**データモデルオブジェクト**」を選択し、**calls**／**calldate** の順に選択します。Tap ![](assets/done_icon.png) twice to save the properties.
+1. Select the Text Field in the **Date** column and tap ![configure_icon](assets/configure_icon.png) (Configure).
+1. 「**連結タイプ**」ドロップダウンリストから「**データモデルオブジェクト**」を選択し、**calls**／**calldate** の順に選択します。Tap ![done_icon](assets/done_icon.png) twice to save the properties.
 
    同様に、**時刻**、**番号**、**時間**、および&#x200B;**料金**&#x200B;のテキストフィールドについて、それぞれ&#x200B;**calltime**、**callnumber**、**callduration**、および **callcharges** との連結を作成します。
 
 1. Tap **PayNow** target area, and tap **+** to add an **Image** component.
-1. Tap the Image component and select ![](assets/configure_icon.png) (Configure). 画像のプロパティが左側のペインに表示されます：
+1. Tap the Image component and select ![configure_icon](assets/configure_icon.png) (Configure). 画像のプロパティが左側のペインに表示されます：
 
    1. 「**名前**」フィールドで、**PayNow** を画像の名前として指定します。
    1. 「**アップロード**」をタップし、ローカルのファイルシステムに保存された画像を選択して「**開く**」をタップします。
-   1. Tap ![](assets/done_icon.png) to save the image properties.
+   1. Tap ![done_icon](assets/done_icon.png) to save the image properties.
 
 1. Repeat steps 13 and 14 to add **ValueAddedServices** image to the **ValueAddedServices** target area.
 
@@ -100,11 +104,11 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、Web チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**Webテンプレート：**[Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
+**Webテンプレート：** [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
 
-**Form Data Model:**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Form Data Model:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
 **画像：** PayNowWebおよびValueAddedServicesWeb
 
@@ -118,6 +122,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
 
    1. 「**作成**」をタップします。
+
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
@@ -133,20 +138,20 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    | summary_charges_first_interactive_communication | 料金 |
 
 1. Tap **Summary of Charges** target area, and tap **+** to add a **Chart** component.
-1. Tap the Chart component and select ![](assets/configure_icon.png) (Configure). グラフのプロパティが左側のペインに表示されます：
+1. Tap the Chart component and select ![configure_icon](assets/configure_icon.png) (Configure). グラフのプロパティが左側のペインに表示されます：
 
    1. グラフ名を指定します。
    1. 「**グラフのタイプ**」ドロップダウンリストから「**円グラフ**」を選択します。
 
-   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。タップ ![](assets/done_icon.png).
+   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon](assets/done_icon.png)」をタップします。
 
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
 
-   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. タップ ![](assets/done_icon.png).
+   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. 「 ![done_icon](assets/done_icon.png)」をタップします。
 
-   1. Tap ![](assets/done_icon.png) to save the chart properties.
+   1. Tap ![done_icon](assets/done_icon.png) to save the chart properties.
 
-1. 左側のペインから「**データソース**」タブを選択し、**通話** データモデルオブジェクトを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。All properties in the **calls** data model object are displayed as table columns in the **Itemised Calls** target area in the right pane.
+1. 左側のペインから「**データソース**」タブを選択し、**通話** データモデルオブジェクトを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。**calls** データモデルオブジェクトのすべてのプロパティは、右側のペインの「 **Itemized Calls** （項目別）」ターゲット領域に、テーブル列として表示されます。
 
    ユースケースに基づいて、テーブルには、通話日、通話時刻、通話番号、通話時間、そして通話料金の列が必要です。
 
@@ -164,7 +169,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. **パス**&#x200B;フィールドで支払い URL を指定します。
    1. 「**ターゲット**」ドロップダウンリストから「**新規タブ**」を選択します。
 
-   1. Tap ![](assets/done_icon.png) to save the hyperlink properties.
+   1. Tap ![done_icon](assets/done_icon.png) to save the hyperlink properties.
 
 1. 「**プレビュー**」オプションの隣にあるドロップダウンリストから「**スタイル**」を選択します。
 
@@ -177,16 +182,17 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
    1. 「**背景**」セクションから、ボタンの背景色に赤を選択します。
    1. 「**寸法と位置**」セクションの「**余白**」フィールドで、「**同時に編集**」アイコンをタップして、**右**&#x200B;の余白を **450px** に設定します。「上」、「下」、「左」の各フィールドは空白に設定されます。
-   ![対話型コミュニケーションにハイパーリンクを挿入](assets/ic_web_hyperlink_new.png)
+
+   ![対話型通信にハイパーリンクを挿入する](assets/ic_web_hyperlink_new.png)
 
 1. Tap **Pay Now** target area, and tap **+** to add an **Image** component.
-1. Tap the Image component and select ![](assets/configure_icon.png) (Configure). 画像のプロパティが左側のペインに表示されます：
+1. Tap the Image component and select ![configure_icon](assets/configure_icon.png) (Configure). 画像のプロパティが左側のペインに表示されます：
 
    1. 「**名前**」フィールドで、**PayNow** を画像の名前として指定します。
 
    1. Tap **Upload**, select the **PayNowWeb** image saved on the local file system, and tap **Open**.
 
-   1. Tap ![](assets/done_icon.png) to save the image properties.
+   1. Tap ![done_icon](assets/done_icon.png) to save the image properties.
 
 1. Based on the use case, insert a **Subscribe** button in the Interactive Communication that provides the user an option to subscribe to the value added services by clicking the button.
 
@@ -209,6 +215,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
 
    1. 「**作成**」をタップします。
+
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
@@ -232,6 +239,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    * 請求内容コンポーネントを請求内容パネルに
    * 請求概要コンポーネントを請求概要パネルに
    * レイアウトフラグメント（テーブル）を通話明細パネルに
+
    ![Webコンテンツツリー](assets/ic_web_content_tree_new.png)
 
 1. 「[Web チャネル用インタラクティブ通信の作成](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-web-channel)」の手順 13～18 を繰り返し、「**Pay Now**」（今すぐ支払う）および「**登録**」ハイパーリンクをインタラクティブ通信の Web チャネルに挿入します。
