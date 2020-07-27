@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 85%
 
 ---
 
@@ -31,15 +34,17 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 
-   ```
+   ```javascript
    sharequeuemodel : pathprefix + 'runtime/models/sharequeue',
-   
+   ```
+
    To
-   
+
+   ```javascript
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. にエイリアス `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` の変更または追加がある場合に更新しま `main.js`す。
+1. でエイリアス `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` の変更/追加がある場合に更新 `main.js`します。
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 
@@ -48,9 +53,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
                name="sharequeue"
                path="runtime/models/sharequeue.js"
                service="service"/>
-   
+   ```
+
    To
-   
+
+   ```xml
    <sharequeue
                name="sharequeue"
                path="runtime/myModels/mySharequeue.js"
