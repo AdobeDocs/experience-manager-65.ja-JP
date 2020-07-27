@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5f470768fd3368e3b2118333b8a84f8331e7fa2e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 59%
 
 ---
 
@@ -88,7 +91,7 @@ qtip
    }
    ```
 
-   ```
+   ```javascript
    /** function for toggling the navigators **/
    var toggleNav = function () {
    
@@ -116,7 +119,7 @@ qtip
 
    さらに、.jps ファイルに含まれるスクリプトのパスを更新します。For example, update the `customPanelLayout.jsp` file as follows:
 
-   ```
+   ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -143,9 +146,9 @@ qtip
    </div>
    ```
 
-   ファ `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` イル：
+   ファイル `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` :
 
-   ```
+   ```html
    <%-- jsp governing the navigation part --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -172,9 +175,9 @@ qtip
    </ul>
    ```
 
-   更新 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
+   更新された内容 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
 
-   ```
+   ```html
    <%-- jsp governing the panel content --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -201,7 +204,7 @@ qtip
 
 1. オーサリングモードでアダプティブフォームを開きます。定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
 
-   ![カスタムパネルレイアウトを使用したアダプティブフォームのパネルレイアウトリスト](assets/auth-layt.png)![Screen shotに表示するカスタムパネルレイアウトの切り替え機能を示すスクリ](assets/s1.png)![ーンショットスクリーンショット](assets/s2.png)
+   ![カスタムパネルレイアウトが、アダプティブフォームのパネルレイアウトリスト](assets/auth-layt.png)![のスクリーンショットに表示される。カスタムパネルレイアウトの切り替え機能を示すスクリ](assets/s1.png)![ーンショットを使用](assets/s2.png)
 
 カスタムパネルレイアウトとカスタムパネルレイアウトを使用したアダプティブフォームのサンプル ZIP ファイル。
 
