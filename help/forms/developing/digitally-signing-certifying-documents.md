@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '16977'
 ht-degree: 8%
@@ -129,7 +129,7 @@ SignatureサービスがPDFドキュメントに署名フィールドを追加�
 
    * コンストラクターを使用して、署名フィールドの場所を指定する `PositionRectangle` オブジェクトを作成します。 コンストラクタ内で、座標値を指定します。
    * 必要に応じて、電子署名が署名フィールドに適用されたときにロックされるフィールドを指定する `FieldMDPOptions` オブジェクトを作成します。
-   * オ追加ブジェクトの `SignatureServiceClient``addSignatureField` メソッドを呼び出し、次の値を渡すことにより、PDFドキュメントに署名フィールドを割り当てます。
+   * オ追加ブジェクトの `SignatureServiceClient``addSignatureField` メソッドを呼び出し、次の値を渡すことによって、PDFドキュメントに署名フィールドを割り当てます。
 
       * A `com.adobe.idp`. `Document` 署名フィールドを追加するPDFドキュメントを表すオブジェクトです。
       * 署名フィールドの名前を指定するstring値です。
@@ -589,8 +589,8 @@ PDFドキュメントの署名や認証にnCipher nShield HSM秘密鍵証明書�
 
 次の設定値をcknfastrcファイルに追加できます。このファイルは/opt/nfast/cknfastrc(またはc:\nfast\cknfastrc)にあります。
 
-```as3
- CKNFAST_ASSUME_SINGLE_PROCESS=0
+```shell
+    CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
 この設定値をcknfastrcファイルに追加すると、J2EEアプリケーションサーバーを再起動しなくても、新しい秘密鍵証明書を使用できます。
@@ -1077,8 +1077,8 @@ SignatureサービスJava APIまたはSignature WebサービスAPIを使用し�
 
 次の設定値をcknfastrcファイルに追加できます。このファイルは/opt/nfast/cknfastrc(またはc:\nfast\cknfastrc)にあります。
 
-```as3
-             CKNFAST_ASSUME_SINGLE_PROCESS=0
+```shell
+    CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
 この設定値をcknfastrcファイルに追加すると、J2EEアプリケーションサーバーを再起動しなくても、新しい秘密鍵証明書を使用できます。
@@ -1343,7 +1343,7 @@ PDFドキュメントの署名を検証する際にSignatureサービスで使�
 
 証明書に対して失効確認を実行するには、 `CRLOptionSpec` オブジェクトを使用して、証明書失効リスト(CRL)サーバーへのURLを指定します。 ただし、URLをCRLサーバーに指定しない場合、Signatureサービスは証明書からURLを取得します。
 
-失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーとは異なるOCSPサーバーを使用する場合は、失効確認の実行が速くなります。 (See [Online Certificate Status Protocol](https://tools.ietf.org/html/rfc2560).)
+失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーとは異なり、OCSPサーバーを使用する場合は、失効確認の実行が高速になります。 (See [Online Certificate Status Protocol](https://tools.ietf.org/html/rfc2560).)
 
 Signatureサービスで使用するCRLおよびOCSPサーバーの順序は、Adobe Applications and Servicesを使用して設定できます。 例えば、Adobe Applications and ServicesでOCSPサーバーが最初に設定されている場合は、OCSPサーバーを確認し、次にCRLサーバーを確認します。
 
