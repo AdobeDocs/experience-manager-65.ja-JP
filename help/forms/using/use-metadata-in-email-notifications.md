@@ -8,7 +8,10 @@ topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '916'
+ht-degree: 95%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 メタデータは、キーと値のペアで保存されます。電子メールテンプレートでキーを指定すると、そのキーが実行される際（電子メール通知が生成されるとき）、値に置き換えられます。たとえば、下記のコードサンプルでは、「$ {workitem_title}」がキーになります。これは、実行時には「Loan-Request」の値で置き換えられます。
 
-```xml
+```html
 subject=Task Assigned - ${workitem_title}
 
 message=<html><body>\n\
@@ -163,7 +166,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 1. キーと値のペアにカスタムメタデータを生成するロジックを持つコードを .ecma ファイルに追加します。例えば、次の ECMAScript コードは、保険ポリシーにカスタムメタデータを生成します。
 
-   ```
+   ```javascript
    function getUserMetaData()  {
        //Commented lines below provide an overview on how to set user metadata in map and return it.
        var HashMap = Packages.java.util.HashMap;
@@ -189,14 +192,14 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
       | 名前 | jcr:title |
       |---|---|
-      | タイプ | 文字列 |
+      | 型 | String |
       | 値 | スクリプトのタイトルを指定します。例えば、ポリシーホルダーのカスタムメタデータとします。指定した値がタスクの割り当て手順に表示されます。 |
 
 ### OSGi バンドルと Java インターフェースを使用したカスタムメタデータの追加 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
 WorkitemUserMetadataService Java インターフェースを使用して電子メールテンプレートにカスタムメタデータを追加することができます。WorkitemUserMetadataService Java インターフェースを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイすることができます。これにより、タスクの割り当て手順でメタデータを選択できるようになります。
 
-Java インターフェイスを使用して OSGi バンドルを作成するには、[AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar ファイルと [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルを、外部の依存関係として OSGi バンドルプロジェクトに追加します。OSGi バンドルの作成には、任意の Java IDE を使用できます。以下の手順では、Eclipse を使用して OSGi バンドルを作成します。
+Java インターフェイスを使用して OSGi バンドルを作成するには、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar ファイルと [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルを、外部の依存関係として OSGi バンドルプロジェクトに追加します。OSGi バンドルの作成には、任意の Java IDE を使用できます。以下の手順では、Eclipse を使用して OSGi バンドルを作成します。
 
 1. Eclipse IDE を開きます。ファイル／新規プロジェクトに移動します。
 
@@ -205,10 +208,6 @@ Java インターフェイスを使用して OSGi バンドルを作成するに
 1. 新しい Maven プロジェクトではデフォルトを保持し、「次へ」をクリックします。archetype を選択して「次へ」をクリックします。例えば、maven-archetype-quickstart などです。プロジェクトにグループ ID、アーティファクト ID、バージョン、パッケージを指定して、「完了」をクリックします。プロジェクトが作成されます。
 
 1. 編集のために pom.xml ファイルを開き、ファイルのすべての中身を次で置き換えます。
-
-   ```
-   
-   ```
 
 1. WorkitemUserMetadataService Java インターフェースを使用するソースコードを追加して、電子メールテンプレートにカスタムメタデータを追加します。以下にサンプルコードを示します。
 
