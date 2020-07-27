@@ -9,7 +9,10 @@ topic-tags: author
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1158'
+ht-degree: 78%
 
 ---
 
@@ -34,11 +37,11 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 **モバイルレイアウト** ：モバイルデバイス上のフォームのナビゲーションを制御します。 デバイスの幅が 768 ピクセル以上の場合、レイアウトはモバイルと判断され、モバイルデバイス向けに最適化されます。
 
-**ツールバーレイアウト** ：フォーム内のツールバーまたはパネルツールバーにおけるアクションボタンの配置を制御します。
+**ツールバーレイアウト** ：フォーム内のツールバーまたはパネルツールバーのアクションボタンの配置をコントロールします。
 
 これらのすべてのパネルレイアウトは次の場所で定義されます。
 
-`/libs/fd/af/layouts` です。
+`/libs/fd/af/layouts`。
 
 >[!NOTE]
 >
@@ -72,11 +75,11 @@ Using this layout, you can place multiple **[!UICONTROL Panel adaptive form]** c
 
 ### ウィザード - 複数の手順を 1 つずつ表示するフォーム {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
-フォーム上にガイド付きのナビゲーションを用意したい場合、このパネルレイアウトを使用してください。例えば、ユーザーを1ステップずつガイドしながらフォーム内の必須の情報を取り込む場合に、このレイアウトを使用します。
+フォーム上にガイド付きのナビゲーションを用意したい場合、このパネルレイアウトを使用してください。例えば、ユーザーを1ステップずつガイドしながらフォーム内の必須の情報を取得したい場合に、このレイアウトを使用します。
 
 Use the `Panel adaptive form` component to provide step-by-step navigation inside a panel. このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
 
-```
+```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
 ```
 
@@ -90,7 +93,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### アコーディオンデザインのレイアウト {#layout-for-accordion-design}
 
-Using this layout, you can place the `Panel adaptive form` component in a panel with accordion style navigation. また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返し回数の最小値と最大値を定義できます。 また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
+Using this layout, you can place the `Panel adaptive form` component in a panel with accordion style navigation. また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小回数と最大回数を定義できます。 また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
 
 最小化したパネルのタイトルにエンドユーザーが提供した値を表示するために、サマリ式を使用することができます。
 
@@ -120,7 +123,7 @@ Using this layout, you can place the `Panel adaptive form` Component in a panel 
 
 このレイアウトでは、ナビゲーションバーとナビゲーションメニューを使用してナビゲーションをコントロールします。The navigation bar shows **&lt;** and **>** icon to indicate **next** and **previous** navigation steps in the form.
 
-The Mobile Layouts are available at `/libs/fd/af/layouts/mobile/` location. アダプティブフォームでは、次のモバイルレイアウトをデフォルトで使用できます。
+The Mobile Layouts are available at `/libs/fd/af/layouts/mobile/` location. アダプティブフォームでは、デフォルトで次のモバイルレイアウトを使用できます。
 
 ![アダプティブフォームのモバイルレイアウトのリスト](assets/mobile-navigation.png)
 
@@ -146,13 +149,13 @@ When using a mobile layout, the form menu, to access various form panels, is ava
 
 ## ツールバーレイアウト {#toolbar-layouts}
 
-ツールバーレイアウトは、アダプティブフォームに追加するアクションボタンの位置と表示を制御します。 このレイアウトはフォームレベルまたは各パネルレベルで追加できます。
+ツールバーレイアウトは、アダプティブフォームに追加するアクションボタンの位置と表示をコントロールします。 このレイアウトはフォームレベルまたは各パネルレベルで追加できます。
 
 ![ボタンのレイアウトをコントロールするアダプティブフォームのツールバーレイアウトのリスト](assets/toolbar-layouts.png)
 
 アダプティブフォームのツールバーレイアウトのリスト
 
-Toolbar layouts are available at `/libs/fd/af/layouts/toolbar` location. アダプティブフォームは、デフォルトで次のツールバーレイアウトを提供します。
+Toolbar layouts are available at `/libs/fd/af/layouts/toolbar` location. アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
 
 ### ツールバーのデフォルトレイアウト {#default-layout-for-toolbar}
 
