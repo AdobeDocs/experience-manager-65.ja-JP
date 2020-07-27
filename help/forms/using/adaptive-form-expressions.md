@@ -9,14 +9,17 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2766'
+ht-degree: 70%
 
 ---
 
 
 # アダプティブフォームの数式{#adaptive-form-expressions}
 
-アダプティブフォームは、ダイナミックなスクリプト機能によってエンドユーザーのフォームへの入力作業を最適化および簡素化します。これにより、式を記述して、動的なフィールドやパネルの表示/非表示など、様々な動作を追加できます。 また、計算フィールドの追加、フィールドの読み取り専用化、検証ロジックの追加などを行うこともできます。 動的動作は、ユーザー入力や事前入力に基づいています。
+アダプティブフォームは、ダイナミックなスクリプト機能によってエンドユーザーのフォームへの入力作業を最適化および簡素化します。式を作成して、ダイナミックなフィールドやパネルの表示/非表示など、様々な動作を追加できます。 また、計算指標フィールドの追加、フィールドの読み取り専用化、検証ロジックの追加などを行うこともできます。 動的動作は、ユーザー入力や事前入力に基づいています。
 
 アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの数式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html)」を参照してください。
 
@@ -43,28 +46,28 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ## 式のタイプ {#expression-types}
 
-アダプティブフォームでは、式を記述して、動的なフィールドやパネルの表示/非表示などの動作を追加できます。 また、計算フィールドの追加、式の読み取り専用化、検証ロジックの追加など、様々な機能を備えたフィールドを作成することもできます。 アダプティブフォームは次の数式をサポートします:
+アダプティブフォームでは、式を記述して、ダイナミックなフィールドやパネルの表示/非表示などの動作を追加できます。 また、式を記述して、計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。 アダプティブフォームは次の数式をサポートします:
 
 * **[アクセス数式](#access-expression-enablement-expression)**：フィールドを有効化/無効化します。
 * **[数式の計算](#calculate-expression)**：フィールドの値を自動計算します。
-* **[クリック式](#click-expression)**:をクリックして、ボタンのクリックイベントの操作を処理します。
+* **[式](#click-expression)**: をクリックして、ボタンのクリックイベント上の操作を処理します。
 * **[初期化スクリプト](#initialization-script)：**フィールドの初期化で操作を実行します。
 * **[オプション式](#options-expression)**：ドロップダウンリストを動的に埋めます。
 * **[要約式](#summary)**：アコーディオンのタイトルを動的に計算します。
 * **[検証数式](#validate-expression)**：フィールドを検証します。
-* **[値コミットスクリプト](#value-commit-script):**を使用して、フィールドの値が変更された後にフォームのコンポーネントを変更します。
+* **[値コミットスクリプト](#value-commit-script):**フィールドの値を変更した後にフォームのコンポーネントを変更する場合。
 * **[視認性の数式](#visibility-expression)**：フィールドおよびパネルの視認性をコントロールします。
-* **[ステップ完了式](#step-completion-expression)**:ユーザがウィザードの次のステップに進むのを防ぐ。
+* **[ステップ完了の式](#step-completion-expression)**: ユーザがウィザードの次のステップに進むのを防ぐ。
 
 ### アクセス式(イネーブルメント式) {#access-expression-enablement-expression}
 
-アクセス式を使用してフィールドを有効/無効にできます。式がフィールドの値を使用する場合、フィールドの値が変更されるたびに式がトリガされます。
+アクセス式を使用してフィールドを有効/無効にできます。式がフィールドの値を使用する場合、フィールドの値が変更されるたびに、式がトリガされます。
 
 **適用性：**&#x200B;フィールド
 
 ****&#x200B;戻り値の型 ：数式は、フィールドが有効/無効であることを表すブール値を返します。**trueは**&#x200B;フィールドが有効であることを表し、**falseは**&#x200B;フィールドが無効であることを表します。
 
-**例**:field1の値が **Xに設定されている場合にのみフィー** ルドを有効にする **には、次のようにア**&#x200B;クセス式します。 `field1.value == "X"`
+**例**: field1 **の値が** Xに設定されている場合にのみフィールドを有効にする場合のアクセス式は次のとおりです ****。 `field1.value == "X"`
 
 ### 数式の計算 {#calculate-expression}
 
@@ -74,7 +77,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 **戻り値の型**：数式は、式の結果が表示されるフィールドに対応する値を返します（例えば、小数値）。
 
-**例**:field1内の2つのフィールドの合計を表示する計算 **式は** 、次のとおりです。
+**例**: field1内の2つのフィールドの合計を表示するcalculate式 **は** 、次のとおりです。
 `field2.value + field3.value`
 
 ### クリック式 {#click-expression}
@@ -85,21 +88,21 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 **戻り値の型**：クリック式は値を返しません。数式が値を返した場合、その値は無視されます。
 
-**例**:ボタンのクリックアクシ **ョンで** textbox1に値 **** AEM Formsを入力するには、ボタンのクリック式を次のように指定します。 `textbox1.value="AEM Forms"`
+**例**: テキストボックス **textbox1** を値の **AEM Formsでクリックアクションに埋め込むには、ボタンのクリック式**&#x200B;を次のように指定します。 `textbox1.value="AEM Forms"`
 
 ### 初期化スクリプト {#initialization-script}
 
-初期化スクリプトは、アダプティブフォームの初期化時にトリガーされます。 シナリオに応じて、初期化スクリプトは次の方法で動作します。
+アダプティブフォームが初期化された場合に、初期化スクリプトがトリガされます。 シナリオに応じて、初期化スクリプトは次の方法で動作します。
 
 * アダプティブフォームが、データの事前入力なしでレンダリングされた場合、初期化スクリプトは、フォームが初期化された後で実行されます。
-* アダプティブフォームがデータの事前入力と共にレンダリングされる場合、スクリプトは事前入力操作の完了後に実行されます。
+* アダプティブフォームがデータの事前入力と共にレンダリングされる場合、スクリプトは事前入力操作が完了した後で実行されます。
 * アダプティブフォームのサーバー側の再検証がトリガされた場合、初期化スクリプトが実行されます。
 
 **適用先：**&#x200B;フィールドおよびパネル
 
 **戻り値の型：**&#x200B;初期化スクリプトの数式は値を返しません。数式が値を返した場合、その値は無視されます。
 
-**例：** データの事前入力シナリオでは、値がnullとして保存されたときにフィールドにデフォ `'Adaptive Forms'` ルト値を入力するために、初期化スクリプトの式は次のとおりです。
+**例：** データの事前入力シナリオでは、値がnullとして保存されたときにフィールドにデフォルト値 `'Adaptive Forms'` を入力するため、初期化スクリプトの式は次のようになります。
 `if(this.value==null) this.value='Adaptive Forms';`
 
 ### オプション式{#options-expression}
@@ -118,7 +121,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ### 要約式 {#summary}
 
-要約式はアコーディオンレイアウトパネルの子パネルのタイトルを動的に計算します。要約式はルールで指定できます。タイトルはフォームフィールドまたはカスタムロジックを使用して評価されます。式は、フォームが起動すると実行されます。フォームに事前入力する場合、式は、データが事前入力された後、または式で使用される依存フィールドの値が変更された後に実行されます。
+要約式はアコーディオンレイアウトパネルの子パネルのタイトルを動的に計算します。要約式はルールで指定できます。タイトルはフォームフィールドまたはカスタムロジックを使用して評価されます。式は、フォームが起動すると実行されます。フォームの事前入力を行っている場合、式は、データが事前入力された後、または式で使用される依存フィールドの値が変更されたときに実行されます。
 
 要約式は通常、アコーディオンレイアウトパネルの子の繰り返し処理に使用され、子パネルごとに意味のあるタイトルを作成します。
 
@@ -126,15 +129,15 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 **戻り値の型：** 式は、アコーディオンのタイトルになる文字列型(String)の値を返します。
 
-**例：** &quot;口座番号：&quot;+ textbox1.value
+**例：** &quot;口座番号： &quot;+ textbox1.value
 
 ### 数式の検証 {#validate-expression}
 
-数式の検証は、特定の数式を使ってフィールドを検証するのに使用されます。通常、このような式は、フィールド値と共に正規式を使用してフィールドを検証します。 フィールドの値が変更されると、数式はトリガされ、フィールドの検証ステータスは再計算されます。
+数式の検証は、特定の数式を使ってフィールドを検証するのに使用されます。通常、このような式では、フィールドの値と共に正規式を使用してフィールドを検証します。 フィールドの値が変更されると、数式はトリガされ、フィールドの検証ステータスは再計算されます。
 
 **適用性：**&#x200B;フィールド
 
-**戻り値の型**:式は、フィールドの検証ステータスを表すブール型(Boolean)の値を返します。 The value **false** represents that the field is invalid and **true** represents that the field is valid.
+**戻り値の型**: 式は、フィールドの検証ステータスを表すブール型(Boolean)の値を返します。 The value **false** represents that the field is invalid and **true** represents that the field is valid.
 **例**：英国の郵便番号を表すフィールドの検証式は次の通りです：
 
 (**this.value** &amp;&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
@@ -168,13 +171,13 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 **適任性**：フィールドおよびパネル
 
-****&#x200B;戻り値の型 ：数式は、フィールド/パネルが表示されているか否かを表すブール値を返します。**falseは** 、フィールドまたはパネルが表示されないことを表し、trueはフィールドまたはパネルが表示されることを表します。
+****&#x200B;戻り値の型 ：数式は、フィールド/パネルが表示されているか否かを表すブール値を返します。**false** はフィールドまたはパネルが表示されないことを表し、trueはフィールドまたはパネルが表示されることを表します。
 
 **例：**&#x200B;フィールドの値が&#x200B;****&#x200B;男性に&#x200B;**設定された場合のみ表示されるパネルの**&#x200B;表示式は次の通りです：`field1.value == "Male"`1.
 
 ### ステップ完了の式 {#step-completion-expression}
 
-ステップ完了の式は、ユーザーがウィザードの次のステップへ進むのを防ぎます。これらの数式は、パネルにウィザードのレイアウト（ワンステップずつ表示するマルチステップフォーム）がある場合に使用されます。ユーザーは、現在のセクションのすべての必須の値が入力され、有効な場合にのみ、次の手順、パネルまたはサブセクションに移動できます。
+ステップ完了の式は、ユーザーがウィザードの次のステップへ進むのを防ぎます。これらの数式は、パネルにウィザードのレイアウト（ワンステップずつ表示するマルチステップフォーム）がある場合に使用されます。ユーザーは、現在のセクションのすべての必須の値が入力され、有効な場合にのみ、次のステップ、パネルまたはサブセクションに移動できます。
 
 **適用性**：ウィザードに設定された項目がレイアウトされたパネル
 
@@ -185,7 +188,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ## アダプティブフォームにおける検証 {#validations-in-adaptive-form}
 
-アダプティブフォームにフィールド検証を追加するには複数の方法があります。検証チェックがフィールドに追加された場合、**True**&#x200B;はフィールドに入力された値が有効であることを示します。**Falseは** 、値が無効であることを表します。 フィールドの中または外にタブを付けた場合、エラーメッセージは生成されません。
+アダプティブフォームにフィールド検証を追加するには複数の方法があります。検証チェックがフィールドに追加された場合、**True**&#x200B;はフィールドに入力された値が有効であることを示します。**False** は、値が無効であることを表します。 フィールドの中または外にタブを付けた場合、エラーメッセージは生成されません。
 
 フィールドに検証を追加する方法：
 
@@ -199,7 +202,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ### 検証式 {#validation-expressions}
 
-フィールドの検証は、別のフィールドの式を使って計算することもできます。この数式は、**コンポーネントの編集ダイアログにあるスクリプトタブの検証スクリプトフィールドの中で作成されます。**********&#x200B;フィールドの検証ステータスは、フィールドが返す値によって式が異なります。 このような数式を作成する方法について詳しくは、「[数式の検証](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)」を参照してください。
+フィールドの検証は、別のフィールドの式を使って計算することもできます。この数式は、**コンポーネントの編集ダイアログにあるスクリプトタブの検証スクリプトフィールドの中で作成されます。**********&#x200B;フィールドの検証ステータスは、式が返す値によって異なります。 このような数式を作成する方法について詳しくは、「[数式の検証](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)」を参照してください。
 
 ## 追加情報 {#additional-information}
 
@@ -219,17 +222,17 @@ GuideBridgeは、ブラウザのメモリーモデルにおいてアダプティ
 
 * To reset form fields, you can trigger `guideBridge.reset()` API on the click expression of a button. Similarly there is a submit API which can be called as a click expression `guideBridge.submit()`**.**
 
-* You can use the `setFocus()` API to set focus across various fields or panels (for panel focus is set to the first field automatically). `setFocus()`パネル間のナビゲーション、前/次のトラバーサル、特定のフィールドへのフォーカスの設定など、様々なオプションを提供します。 For example, to move to the next panel, you can use: `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
+* You can use the `setFocus()` API to set focus across various fields or panels (for panel focus is set to the first field automatically). `setFocus()`は、パネル間のナビゲーション、前/次のトラバーサル間の移動、特定のフィールドへのフォーカスの設定など、幅広いオプションを提供します。 For example, to move to the next panel, you can use: `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
 
 * To validate an adaptive form or its specific panels, use `guideBridge.validate(errorList, somExpression).`
 
 #### 数式外でのGuideBridgeの使用{#using-guidebridge-outside-expressions-nbsp}
 
-GuideBridge　APIを数式の外で使用することもできます。例えば、アダプティブフォームをホストしているページHTMLとフォームモデル間の通信を設定するのにGuideBridge APIを使用することができます。さらに、フォームをホストするIframeの親からの値を設定できます。
+GuideBridge　APIを数式の外で使用することもできます。例えば、アダプティブフォームをホストしているページHTMLとフォームモデル間の通信を設定するのにGuideBridge APIを使用することができます。さらに、フォームをホストするIframeの親から取得した値を設定できます。
 
 GuideBridge APIを上記の例で使用するには、GuideBridgeのインスタンスを取得します。To capture the instance, listen to `bridgeInitializeStart`event of a `window`object:
 
-```
+```javascript
 window.addEventListener("bridgeInitializeStart", function(evnt) {
 
      // get hold of the guideBridge object
@@ -249,7 +252,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 >[!NOTE]
 >
->AEMでは、clientLibにコードを記述し、ページに含めることをお勧めします（ページのheader.jspまたはfooter.jsp）。
+>AEMでは、clientLibにコードを記述し、ページに含めることをお勧めします（ページのheader.jspまたはfooter.jsp）
 
 To use GuideBridge after the form is initialized (the `bridgeInitializeComplete` event is dispatched), get the GuideBridge instance using `window.guideBridge`.  APIを使って、`guideBride.isConnected`GuideBridge初期化ステータスを確認することができます。
 
@@ -259,7 +262,7 @@ To use GuideBridge after the form is initialized (the `bridgeInitializeComplete`
 
 次のコードを使ってハンドラーを登録してください：
 
-```
+```javascript
 guideBridge.on("elementValueChanged", function (event, data)  {
 
       // execute some logic when value of a field is changed
