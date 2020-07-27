@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '476'
+ht-degree: 77%
 
 ---
 
@@ -33,7 +36,7 @@ Analytics が有効になっているアダプティブフォームでは次の�
    <td>formNam、formTitle、formInstance、source</td>
   </tr>
   <tr>
-   <td>save</td>
+   <td>保存</td>
    <td>formName、formTitle、formInstance、panelName、source</td>
   </tr>
   <tr>
@@ -79,7 +82,7 @@ You can evaluate value of *eventName* and *variableValueMap* arguments to change
 
 In the following example, state for the *error* event of each *fieldName* attribute is maintained. エラーが再発した場合にのみ、Analytics サーバーにイベントが送信されます。
 
-```
+```javascript
 case 'error':
         if(errorOccurred[variableValueMap.fieldName] == true) {
             pushEvent(eventName, variableValueMap)
