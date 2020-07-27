@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 89%
 
 ---
 
@@ -66,7 +69,7 @@ Apache は HTTP または AJP プロトコルを使用して JBoss と通信で�
 
    次の設定を *APACHE_HOME/conf/httpd.conf* 設定ファイルに追加します。
 
-   ```java
+   ```xml
    <Location /content/xfaforms>
      <IfModule mod_deflate.c>
         SetOutputFilter DEFLATE
