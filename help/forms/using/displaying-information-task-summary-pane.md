@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 68%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 AEM Forms ワークスペースでタスクを開くと、タスクの概要ペインはタスクのサマリーを表示できます。タスクに対するこの追加の関連情報は、AEM Forms ワークスペースのエンドユーザーにとってより価値のあるものになります。
 
-AEM Forms Workspaceでは、選択したWebページをタスクの概要ペインに表示できます。 Workbench を使用してタスクの概要ペインを表示するためのプロセスを作成することができます。
+AEM Formsワークスペースを使用すると、タスクの概要ペインで選択したWebページを表示できます。 Workbench を使用してタスクの概要ペインを表示するためのプロセスを作成することができます。
 
 1. Workbench で「Assign Task」処理を作成します。「Assign Task」操作についての詳細は、[Workbench ヘルプ](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)のサービスリファレンストピックを参照してください。
 
@@ -30,12 +33,12 @@ AEM Forms Workspaceでは、選択したWebページをタスクの概要ペイ�
 1. タスクの概要 URL フィールドを設定します。リテラル値、テンプレート、変数、または XPath 式を指定できます。
 1. タスクの概要ページに関する情報を表示する例を以下に示します。
 
-   * でCRXDE Lite環境にログインしま `https://'[server]:[port]'/lc/crx/de`す。
-   * `Create a node`**SampleSummary **/` under `` with type `contentnt:`. In the properties of this node, add `` of type String and value ``. In the Access Control List of this node, add an entry for `` allowing `unstructuredsling:resourceTypeSampleSummaryPERM_WORKSPACE_USERjcr:read` privileges.`
-   * `Create a folder`**SampleSummaryを参照&#x200B;**してくだ`/apps`さい。 のアクセス制御リストで、許`/apps/SampleSummary`可するエントリを追加`PERM_WORKSPACE_USER`しま`jcr:readprivileges`す。
+   * でCRXDE Lite環境にログインし `https://'[server]:[port]'/lc/crx/de`ます。
+   * `Create a node`**SampleSummary **` under `/` with type `contentnt:`. In the properties of this node, add `unstructuredsling:` of type String and value ``. In the Access Control List of this node, add an entry for `resourceTypeSampleSummaryPERM_WORKSPACE_` allowing `USERjcr:read` privileges.`
+   * `Create a folder`**SampleSummary **」を参照して`/apps`ください。 のアクセス制御リストで、許可するエントリ`/apps/SampleSummary`を追加`PERM_WORKSPACE_USER`し`jcr:readprivileges`ます。
    * `Create a file `html.esp` at `/apps/`. For example, add the following lines in `SampleSummaryhtml.esp`.`
 
-   ```
+   ```html
    <html>
        <body>
            <h1>Sample Summary</h1>
