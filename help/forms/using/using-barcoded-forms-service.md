@@ -10,7 +10,10 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1042'
+ht-degree: 93%
 
 ---
 
@@ -42,7 +45,7 @@ Barcoded Forms サービスを使用すると、次のタスクを実行でき�
 
 Barcoded Forms サービスは、画像に含まれる各バーコードを検索してデコードし、データを抽出します。バーコードデータは、（必要に応じてエンティティエンコードを使用して）XML ドキュメントの content 要素として返されます。例えば、次の図は、2 つのバーコードを含んだフォームをスキャンした TIFF 画像です。
 
-![例](assets/example.png)
+![example](assets/example.png)
 
 Barcoded Forms サービスは、バーコードのデコード後、次の XML ドキュメントを返します。
 
@@ -136,15 +139,15 @@ AEM コンソールにある **AEMFD Barcoded Forms サービス**&#x200B;を使
 
 Barcoded Forms サービスには次の 2 つの API があります。
 
-* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：Input PDF ドキュメントまたは TIFF 画像で使用可能なすべてのバーコードをデコードします。入力ドキュメントまたは画像内で使用可能なすべてのバーコードから抽出されたデータを含む別の XML ドキュメントを返します。
+* **[decode](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：Input PDF ドキュメントまたは TIFF 画像で使用可能なすべてのバーコードをデコードします。入力ドキュメントまたは画像内で使用可能なすべてのバーコードから抽出されたデータを含む別の XML ドキュメントを返します。
 
-* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：decode API を使用してデコードされたデータを XML データに変換します。この XML データは XFA フォームと結合できます。バーコードごとに 1 つずつ XML ドキュメントのリストを返します。
+* **[extractToXML](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：decode API を使用してデコードされたデータを XML データに変換します。この XML データは XFA フォームと結合できます。バーコードごとに 1 つずつ XML ドキュメントのリストを返します。
 
 ### JSP またはサーブレットを使用した BCF サービスの使用 {#using-bcf-service-with-a-jsp-or-servlets}
 
-次のサンプルコードは、バーコードをデコードしてドキュメントに保存し、出力XMLをディスクに保存します。
+次のサンプルコードは、ドキュメント内のバーコードをデコードし、出力XMLをディスクに保存します。
 
-```java
+```jsp
 <%@ page import="java.util.List,
                 com.adobe.fd.bcf.api.BarcodedFormsService,
                 com.adobe.fd.bcf.api.CharSet,
