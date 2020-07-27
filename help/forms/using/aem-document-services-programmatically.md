@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '6355'
+ht-degree: 85%
 
 ---
 
@@ -99,9 +102,9 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
  </tbody>
 </table>
 
-PDF署名に非表示の署名フィールドを追加するJavaコードの例を次に示します。ドキュメント
+PDFドキュメントに非表示の署名フィールドを追加するJavaコードのサンプルを以下に示します。
 
-```
+```java
 /*************************************************************************
  *
  * ADOBE CONFIDENTIAL
@@ -240,7 +243,7 @@ signOptions.setSigAppearence(sigAppearence);
 
 **構文**:
 
-```
+```java
 public Document addSignatureField(Document inDoc,
  String signatureFieldName,
  Integer pageNo,
@@ -641,7 +644,7 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名が含まれている署名フィールドの名前です。署名フィールドの完全修飾名を指定します。XFA フォームに基づく PDF ドキュメントを使用する場合は、署名フィールドの名前の一部を使用できます。例えば、と指 <code>form1[0].#subform[1].SignatureField3[3]</code> 定できます <code>SignatureField3[3]</code>。</td>
+   <td>署名が含まれている署名フィールドの名前です。署名フィールドの完全修飾名を指定します。XFA フォームに基づく PDF ドキュメントを使用する場合は、署名フィールドの名前の一部を使用できます。例えば、 <code>form1[0].#subform[1].SignatureField3[3]</code> と指定でき <code>SignatureField3[3]</code>ます。</td>
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
@@ -652,7 +655,7 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
 
 以下の Java コードの例を使用することで、PDF ドキュメント内にある特定の署名フィールドの署名情報を取得することができます。
 
-```
+```java
 /*************************************************************************
  *
  * ADOBE CONFIDENTIAL
@@ -864,9 +867,9 @@ public class GetSignatureFields {
 
 PDF ドキュメント内の署名フィールドを変更できます。署名フィールドの署名フィールドロックディクショナリまたはシード値ディクショナリの値を操作することで署名フィールドを変更します。
 
-フィールドロックディクショナリは、署名フィールドへの署名時にロックするフィールドのリストを指定します。フィールドがロックされていると、ユーザーはフィールドを編集できません。 シード値ディクショナリには、署名の適用時に使用される制約情報が含まれます。例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
+フィールドロックディクショナリは、署名フィールドへの署名時にロックするフィールドのリストを指定します。フィールドがロックされると、ユーザーはフィールドを編集できなくなります。 シード値ディクショナリには、署名の適用時に使用される制約情報が含まれます。例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
 
-既存の署名フィールドを変更すると、PDF署名を編集して、ビジネス要件の変更を反映するドキュメントを作成できます。 例えば、新しいビジネス要件では、ドキュメントの署名後にすべてのドキュメントフィールドをロックする必要があります。
+既存の署名フィールドを変更すると、PDFドキュメントを編集して、ビジネス要件の変更を反映させることができます。 例えば、新しいビジネス要件では、ドキュメントの署名後にすべてのドキュメントフィールドをロックする必要があります。
 
 **構文**: `public Document modifySignatureField(Document inDoc, String signatureFieldName, PDFSignatureFieldProperties pdfSignatureFieldProperties, UnlockOptions unlockOptions)`
 
@@ -1031,13 +1034,13 @@ public class ModifySignatureField {
 
 認証署名と呼ばれる特定のタイプの署名によって PDF ドキュメントを認証することで、PDF ドキュメントを保護することができます。認証署名は、以下の方法で電子署名と区別されます。
 
-* 認証署名は PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用される場合、認証署名内の他の署名フィールドは未ドキュメントである必要があります。 認証署名は 1 つの PDF ドキュメントにつき 1 つです。PDF ドキュメントを署名および認証するには、署名の前に認証を行ってください。PDF ドキュメントの認証後、他の署名フィールドに電子署名を行うことができます。
-* ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更が可能になるように指定することができます。例えば、ドキュメントはフォームの入力やコメント入力を許可できます。 作成者が特定の変更を許可しない設定を行った場合は、Acrobat によってその方法によるドキュメントの変更が制限されます。そのような変更が行われた場合は、認証署名は無効となります。また、Acrobatは、ユーザーがユーザーを開くと警告を発します。ドキュメント （未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
+* 認証署名は PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用される場合、ドキュメント内の他の署名フィールドは未署名である必要があります。 認証署名は 1 つの PDF ドキュメントにつき 1 つです。PDF ドキュメントを署名および認証するには、署名の前に認証を行ってください。PDF ドキュメントの認証後、他の署名フィールドに電子署名を行うことができます。
+* ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更が可能になるように指定することができます。例えば、ドキュメントはフォームへの入力やコメント入力を許可できます。 作成者が特定の変更を許可しない設定を行った場合は、Acrobat によってその方法によるドキュメントの変更が制限されます。そのような変更が行われた場合は、認証署名は無効となります。また、Acrobatでは、ユーザーがドキュメントを開くと警告が表示されます。 （未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
 * 署名時に、ドキュメントのコンテンツにあいまいさや誤解をもたらす可能性のある、特定の種類のコンテンツをスキャンします。例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。そのようなコンテンツに関する、説明（法的証明）を提供することができます。
 
 **構文**:
 
-```
+```java
 secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
  SignatureOptions signatureOptions, ReaderExtensionOptions readerExtensionOptions, UnlockOptions unlockOptions)
 ```
@@ -1359,7 +1362,7 @@ PDF ドキュメントをパスワードで暗号化する場合、ユーザー�
 
 >[!NOTE]
 >
->PDF証明書を証明書で暗号化する前に、ドキュメントをAEM Trust Storeに追加する必要があります。
+>PDFドキュメントを証明書で暗号化する前に、証明書がAEM Trust Storeに追加されていることを確認する必要があります。
 
 **PDF ドキュメントへの使用権限の適用**
 
@@ -1379,7 +1382,7 @@ PDF ドキュメントは、公開鍵を用いて署名されます。署名者�
 
 >[!NOTE]
 >
->PDFキーストアに電子署名する前に、ドキュメントをAEMキーストアに追加する必要があります。 証明書は署名に使用する秘密鍵となります。
+>PDFドキュメントに電子署名する前に、AEMキーストアに秘密鍵証明書が追加されていることを確認する必要があります。 証明書は署名に使用する秘密鍵となります。
 
 >[!NOTE]
 >
@@ -1407,11 +1410,11 @@ Acrobat はユーザーのその方法によるドキュメントの変更を制
 
 >[!NOTE]
 >
->PDFキーストアに電子署名する前に、ドキュメントをAEMキーストアに追加する必要があります。 証明書は署名に使用する秘密鍵となります。
+>PDFドキュメントに電子署名する前に、AEMキーストアに秘密鍵証明書が追加されていることを確認する必要があります。 証明書は署名に使用する秘密鍵となります。
 
 **構文**:
 
-```
+```java
 secureDocument(Document inDoc,
  EncryptionOptions encryptionOptions,
  SignatureOptions signatureOptions,
@@ -1452,7 +1455,7 @@ secureDocument(Document inDoc,
 
 **サンプル 1**：このサンプルは、パスワードの暗号化、署名フィールドの認証、および PDF ドキュメントの Reader 用の拡張の実行に使用することができます。
 
-```
+```java
 /*************************************************************************
  *
  * ADOBE CONFIDENTIAL
@@ -2075,26 +2078,26 @@ public class PassEncryptSignExtend {
 }
 ```
 
-PDFの拡張時に次のエラーメッセージが表示される場合は、PDFの拡張時に次のエラードキュメントが表示されます。
+PDFドキュメントのReader用の拡張中に次のエラーメッセージが表示される場合：
 
-```xml
+```javascript
 org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.ThreadDeath: null at com.adobe.internal.pdftoolkit.services.javascript.GibsonContextFactory.observeInstructionCount(GibsonContextFactory.java:138)
 ```
 
-これは、Reader Extensionサービスが、定義されたタイムアウト間隔内にドキュメントで使用されたJavaScriptを実行できないことを示します。
+これは、Reader Extensionサービスが、定義されたタイムアウト間隔内に、ドキュメントで使用されたJavaScriptを実行できないことを示しています。
 
-次を使用して、PDFドキュメントのJavaScriptに定義されたタイムアウト間隔を管理します。
+PDFドキュメントのJavaScriptに対して定義したタイムアウト間隔を、次を使用して管理します。
 
-```xml
+```javascript
 ReaderExtensionsOptionSpec optionSpec = new ReaderExtensionsOptionSpec(usageRights, message);
 optionSpec.setJsScriptExecutionTimeoutInterval(100);
 ```
 
-100は、JavaScriptの実行に定義されたタイムアウト間隔（秒）を指します。 タイムアウト間隔に適切な値を設定します。
+100は、JavaScriptの実行に定義されたタイムアウト間隔（秒）を示します。 タイムアウト間隔に適切な値を設定します。
 
 ### 証明書の使用権限の取得 {#getting-credential-usage-rights}
 
-特定の `credentialAlias` によって指定された証明書の使用権限情報を取得するには、この API を `SecureDocument` API 内から呼び出してください。
+特定の `credentialAlias``SecureDocument` によって指定された証明書の使用権限情報を取得するには、この API を API 内から呼び出してください。
 
 **構文**: `getCredentialUsageRights(String credentialAlias, ResourceResolver resourceResolver)`
 
@@ -2748,7 +2751,7 @@ public class VerifyFieldEncryptedPDF {
 
 ### 複数のデジタル署名の検証 {#verifying-multiple-digital-signatures}
 
-AEM では、PDF ドキュメントの電子署名を検証することができます。PDFドキュメントは、複数の署名者からの署名を必要とするビジネスプロセスの対象となる場合、複数の電子署名を含むことができます。 例えば、金融取引の場合は、ローン担当者と管理者両方の署名が必要です。Signature サービス API を使用することで、PDF ドキュメント内のすべての署名を検証することができます。複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。アドビでは、電子署名を信頼する前に検証を行うことをおすすめしています。
+AEM では、PDF ドキュメントの電子署名を検証することができます。複数の署名者の署名が必要なビジネスプロセスの対象となる場合、1つのPDFドキュメントに複数の電子署名を含めることができます。 例えば、金融取引の場合は、ローン担当者と管理者両方の署名が必要です。Signature サービス API を使用することで、PDF ドキュメント内のすべての署名を検証することができます。複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。アドビでは、電子署名を信頼する前に検証を行うことをおすすめしています。
 
 **構文**: `verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
 
@@ -3192,7 +3195,7 @@ public class ClearSignatureField {
 
 以下の Java コードの例を使用して、ドキュメントの認証に使用された署名フィールドを取得することができます。
 
-```
+```java
 /*************************************************************************
  *
  * ADOBE CONFIDENTIAL
@@ -3402,7 +3405,7 @@ public class GetPDFEncryption {
 
 ### PDF のパスワード暗号化の削除 {#removing-password-encryption-from-pdf}
 
-PDFドキュメントからパスワードベースの暗号化を削除し、パスワードを指定しなくても、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができるようにします。 パスワードベースの暗号化を PDF ドキュメントから削除すると、そのドキュメントは保護されなくなります。
+PDFドキュメントからパスワードベースの暗号化を削除すると、パスワードを指定しなくても、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができます。 パスワードベースの暗号化を PDF ドキュメントから削除すると、そのドキュメントは保護されなくなります。
 
 **構文**: `Document removePDFPasswordSecurity (Document inDoc,String password)`
 
@@ -3428,75 +3431,75 @@ PDFドキュメントからパスワードベースの暗号化を削除し、�
 以下のコードのサンプルを使用することで、パスワードベースの暗号化を PDF ドキュメントから削除することができます。
 
 ```java
-package com.adobe.docassurance.samples;
+    package com.adobe.docassurance.samples;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.felix.scr.annotations.Service;
-import org.apache.sling.jcr.api.SlingRepository;
+    import java.io.File;
+    import java.io.FileNotFoundException;
+    import org.apache.felix.scr.annotations.Component;
+    import org.apache.felix.scr.annotations.Reference;
+    import org.apache.felix.scr.annotations.Service;
+    import org.apache.sling.jcr.api.SlingRepository;
 
-import com.adobe.aemfd.docmanager.Document;
-import com.adobe.fd.docassurance.client.api.DocAssuranceService;
+    import com.adobe.aemfd.docmanager.Document;
+    import com.adobe.fd.docassurance.client.api.DocAssuranceService;
 
-/**
- * The following Java code example removes password-based encryption from a PDF document.
- * The master password value used to remove password-based encryption is PermissionPassword
- *
- */
-@Component(enabled=true,immediate=true)
-@Service(value=RemovePasswordEncryption.class)
-public class RemovePasswordEncryption {
+    /**
+    * The following Java code example removes password-based encryption from a PDF document.
+    * The master password value used to remove password-based encryption is PermissionPassword
+    *
+    */
+    @Component(enabled=true,immediate=true)
+    @Service(value=RemovePasswordEncryption.class)
+    public class RemovePasswordEncryption {
 
- // Create reference for DocAssuranceService
- @Reference
- private DocAssuranceService docAssuranceService;
+    // Create reference for DocAssuranceService
+    @Reference
+    private DocAssuranceService docAssuranceService;
 
- @Reference
-    private SlingRepository slingRepository;
+    @Reference
+        private SlingRepository slingRepository;
 
- /**
-  * The below sample code demonstrates removing password encryption from a PDF using AEM EncryptionService.
-  *
-  * @param inFilePath  path of the input PDF File
-  * Path Example for Files stored at hardDisk = "C:/temp/test.pdf"
-  *
-  * @param outFilePath path where the output PDF File needs to be saved
-  * Path Example for Files stored at hardDisk = "C:/temp/test_out.pdf"
-  * @throws Exception
-  */
- public void removePasswordEncryption(String inputFile, String outputFile) throws Exception {
+    /**
+    * The below sample code demonstrates removing password encryption from a PDF using AEM EncryptionService.
+    *
+    * @param inFilePath  path of the input PDF File
+    * Path Example for Files stored at hardDisk = "C:/temp/test.pdf"
+    *
+    * @param outFilePath path where the output PDF File needs to be saved
+    * Path Example for Files stored at hardDisk = "C:/temp/test_out.pdf"
+    * @throws Exception
+    */
+    public void removePasswordEncryption(String inputFile, String outputFile) throws Exception {
 
-  File inFile = new File(inputFile);
-  Document inDoc = new Document(inFile);
+    File inFile = new File(inputFile);
+    Document inDoc = new Document(inFile);
 
-  File outFile = new File(outputFile);
-  Document outDoc = null;
+    File outFile = new File(outputFile);
+    Document outDoc = null;
 
-     try{
+        try{
 
-      String password = "PermissionPassword"; //master password with which the pdf was encrypted
-                //in case if the pdf is encrypted only with user password, specify the
-                //user password
-      //Remove password-based encryption from the PDF document
-      outDoc = docAssuranceService.removePDFPasswordSecurity(inDoc,password);
+        String password = "PermissionPassword"; //master password with which the pdf was encrypted
+                    //in case if the pdf is encrypted only with user password, specify the
+                    //user password
+        //Remove password-based encryption from the PDF document
+        outDoc = docAssuranceService.removePDFPasswordSecurity(inDoc,password);
 
-     }finally{
-                /**
-                 * always close the PDFDocument object after your processing is done.
-                 */
-                if(inDoc != null){
-                    inDoc.close();
-                }
+        }finally{
+                    /**
+                    * always close the PDFDocument object after your processing is done.
+                    */
+                    if(inDoc != null){
+                        inDoc.close();
+                    }
 
-        }
+            }
 
-        outDoc.copyToFile(outFile);
+            outDoc.copyToFile(outFile);
 
- }
+    }
 
-}
+    }
 ```
 
 ### 証明書の暗号化の削除 {#removing-certificate-encryption}
@@ -3531,94 +3534,94 @@ public class RemovePasswordEncryption {
 以下の Java コードのサンプルを使用することで、証明書ベースの暗号化を PDF ドキュメントから削除することができます。
 
 ```java
-package com.adobe.docassurance.samples;
+    package com.adobe.docassurance.samples;
 
-import java.io.File;
+    import java.io.File;
 
-import javax.jcr.Session;
+    import javax.jcr.Session;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.felix.scr.annotations.Service;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.jcr.api.SlingRepository;
-import org.apache.sling.jcr.resource.JcrResourceResolverFactory;
+    import org.apache.felix.scr.annotations.Component;
+    import org.apache.felix.scr.annotations.Reference;
+    import org.apache.felix.scr.annotations.Service;
+    import org.apache.sling.api.resource.ResourceResolver;
+    import org.apache.sling.jcr.api.SlingRepository;
+    import org.apache.sling.jcr.resource.JcrResourceResolverFactory;
 
-import com.adobe.aemfd.docmanager.Document;
-import com.adobe.fd.docassurance.client.api.DocAssuranceService;
+    import com.adobe.aemfd.docmanager.Document;
+    import com.adobe.fd.docassurance.client.api.DocAssuranceService;
 
-/**
- * The following Java code example removes certificate-based encryption from a PDF document
- *
- */
-@Component(enabled=true,immediate=true)
-@Service(value=RemovePKIEncryption.class)
-public class RemovePKIEncryption {
-
- // Create reference for docAssuranceServiceInterface
- @Reference
- private DocAssuranceService docAssuranceService;
-
- @Reference
-    private SlingRepository slingRepository;
-
- @Reference
-    private JcrResourceResolverFactory jcrResourceResolverFactory ;
-
- /**
-  * The below sample code demonstrates encrypting PDF with Password using AEM docAssuranceService.
-  *
-  * @param inFilePath  path of the input PDF File
-  * Path Example for Files stored at hardDisk = "C:/temp/test.pdf"
-  *
-  * @param outFilePath path where the output PDF File needs to be saved
-  * Path Example for Files stored at hardDisk = "C:/temp/test_Encrypted.pdf"
-  *
-  * @throws Exception
-  */
- public void removePKIEncryption(String inputFile, String outputFile) throws Exception {
-
-  File inFile = new File(inputFile);
-  Document inDoc = new Document(inFile);
-
-  File outFile = new File(outputFile);
-  Document outDoc = null;
-
-        Session adminSession = null;
-        ResourceResolver resourceResolver = null;
-        try{
-    adminSession = slingRepository.loginAdministrative(null);
-    resourceResolver = jcrResourceResolverFactory.getResourceResolver(adminSession);
-
-    //Remove certificate-based encryption from the PDF document
     /**
-     * Here the alias("encryption") of the private credential stored in the keystore of the
-     * user has been provided with the user's resource resolver
-     */
-    outDoc = docAssuranceService.removePDFCertificateSecurity(inDoc, "encryption",resourceResolver);
+    * The following Java code example removes certificate-based encryption from a PDF document
+    *
+    */
+    @Component(enabled=true,immediate=true)
+    @Service(value=RemovePKIEncryption.class)
+    public class RemovePKIEncryption {
 
-        }catch(Exception e){
+    // Create reference for docAssuranceServiceInterface
+    @Reference
+    private DocAssuranceService docAssuranceService;
 
-         // TODO Auto-generated catch block
-        }finally{
-            /**
-             * always close the PDFDocument object after your processing is done.
-             */
-            if(inDoc != null){
-                inDoc.close();
-            }
-            if(adminSession != null && adminSession.isLive()){
-                if(resourceResolver != null){
-                    resourceResolver.close();
+    @Reference
+        private SlingRepository slingRepository;
+
+    @Reference
+        private JcrResourceResolverFactory jcrResourceResolverFactory ;
+
+    /**
+    * The below sample code demonstrates encrypting PDF with Password using AEM docAssuranceService.
+    *
+    * @param inFilePath  path of the input PDF File
+    * Path Example for Files stored at hardDisk = "C:/temp/test.pdf"
+    *
+    * @param outFilePath path where the output PDF File needs to be saved
+    * Path Example for Files stored at hardDisk = "C:/temp/test_Encrypted.pdf"
+    *
+    * @throws Exception
+    */
+    public void removePKIEncryption(String inputFile, String outputFile) throws Exception {
+
+    File inFile = new File(inputFile);
+    Document inDoc = new Document(inFile);
+
+    File outFile = new File(outputFile);
+    Document outDoc = null;
+
+            Session adminSession = null;
+            ResourceResolver resourceResolver = null;
+            try{
+        adminSession = slingRepository.loginAdministrative(null);
+        resourceResolver = jcrResourceResolverFactory.getResourceResolver(adminSession);
+
+        //Remove certificate-based encryption from the PDF document
+        /**
+        * Here the alias("encryption") of the private credential stored in the keystore of the
+        * user has been provided with the user's resource resolver
+        */
+        outDoc = docAssuranceService.removePDFCertificateSecurity(inDoc, "encryption",resourceResolver);
+
+            }catch(Exception e){
+
+            // TODO Auto-generated catch block
+            }finally{
+                /**
+                * always close the PDFDocument object after your processing is done.
+                */
+                if(inDoc != null){
+                    inDoc.close();
                 }
-                adminSession.logout();
+                if(adminSession != null && adminSession.isLive()){
+                    if(resourceResolver != null){
+                        resourceResolver.close();
+                    }
+                    adminSession.logout();
+                }
             }
-        }
 
-        outDoc.copyToFile(outFile);
- }
+            outDoc.copyToFile(outFile);
+    }
 
- }
+    }
 ```
 
 ## Output サービス {#output-service}
@@ -3629,9 +3632,9 @@ Output サービスは、XDP ファイルをレンダリングするための AP
 
 * **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)：**フォームデザインとアプリケーションに保存されたデータをマージして PDF ドキュメントを生成します。
 * **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p)：**フォームデザインをデータとマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。
-* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):**ネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されたフォームデザインとデータファイルから、PCL、PostScriptまたはZPL出力を生成します。
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):**ネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されたフォームデザインとデータファイルから、PCL、PostScript、またはZPL出力を生成します。
 
-* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):**アプリケーションに保存されているフォームデザインとデータファイルから、PCL、PostScript、ZPL出力を生成します。
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):**アプリケーションに保存されているフォームデザインとデータファイルから、PCL、PostScript、およびZPL出力を生成します。
 
 ### generatePDFOutput {#generatepdfoutput}
 
@@ -3665,84 +3668,84 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
 以下の Java コードのサンプルを使用することで、フォームデザインと XML ファイルに保存されたデータをマージして PDF または PDF ドキュメントを生成することができます。
 
 ```java
-@Reference private OutputService outputService;
+    @Reference private OutputService outputService;
 
-private File generatePDFOutput(String contentRoot,File inputXML,String templateStr,String acrobatVersion,String tagged,String linearized, String locale) {
+    private File generatePDFOutput(String contentRoot,File inputXML,String templateStr,String acrobatVersion,String tagged,String linearized, String locale) {
 
-String outputFolder="C:/Output";
+    String outputFolder="C:/Output";
 
-Document doc=null;
+    Document doc=null;
 
-try {
+    try {
 
-        PDFOutputOptions option = new PDFOutputOptions();         option.setContentRoot(contentRoot);         if(acrobatVersion.equalsIgnoreCase("Acrobat_10"))
+            PDFOutputOptions option = new PDFOutputOptions();         option.setContentRoot(contentRoot);         if(acrobatVersion.equalsIgnoreCase("Acrobat_10"))
 
-        {
+            {
 
-            option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10);
+                option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10);
 
-        } else if(acrobatVersion.equalsIgnoreCase("Acrobat_10_1")) {
+            } else if(acrobatVersion.equalsIgnoreCase("Acrobat_10_1")) {
 
-            option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10_1);
+                option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10_1);
 
-        } else if(acrobatVersion.equalsIgnoreCase("Acrobat_11")) {             option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_11);
+            } else if(acrobatVersion.equalsIgnoreCase("Acrobat_11")) {             option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_11);
+
+            }
+
+            if (tagged.equalsIgnoreCase("true") ) {
+
+                option.setTaggedPDF(true );
+
+            }
+
+            if (linearized.equalsIgnoreCase("true") ) {
+
+                option.setTaggedPDF(true );
+
+            }
+
+            if(locale!=null)
+
+            {
+
+                option.setLocale(locale);
+
+            }
+
+            InputStream in = new FileInputStream(inputXML);
+
+            doc = outputService.generatePDFOutput(templateStr,new Document(in),option);         File toSave = new File(outputFolder+"Output.pdf");
+
+            doc.copyToFile(toSave);
+
+            return toSave;
+
+        } catch (OutputServiceException e) {
+
+            e.printStackTrace();
+
+        }catch (FileNotFoundException e) {
+
+            e.printStackTrace();
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }finally{
+
+                    doc.dispose();
 
         }
 
-        if (tagged.equalsIgnoreCase("true") ) {
-
-            option.setTaggedPDF(true );
-
-        }
-
-        if (linearized.equalsIgnoreCase("true") ) {
-
-            option.setTaggedPDF(true );
-
-        }
-
-        if(locale!=null)
-
-        {
-
-            option.setLocale(locale);
-
-        }
-
-        InputStream in = new FileInputStream(inputXML);
-
-        doc = outputService.generatePDFOutput(templateStr,new Document(in),option);         File toSave = new File(outputFolder+"Output.pdf");
-
-        doc.copyToFile(toSave);
-
-        return toSave;
-
-    } catch (OutputServiceException e) {
-
-         e.printStackTrace();
-
-    }catch (FileNotFoundException e) {
-
-         e.printStackTrace();
-
-    } catch (IOException e) {
-
-         e.printStackTrace();
-
-    }finally{
-
-                doc.dispose();
+        return null;
 
     }
-
-    return null;
-
-}
 ```
 
 ### generatePDFOutput {#generatepdfoutput-1}
 
-generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutput APIは、フォームデザインや、アプリケーションに保存されているデータに使用します。 If the form design and XML data are stored in on a network location, locally, or an HTTP location as literal values, use the [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API.
+generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutput APIは、フォームデザイン、またはアプリケーションに保存されているデータに使用します。 If the form design and XML data are stored in on a network location, locally, or an HTTP location as literal values, use the [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API.
 
 **構文：** `Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
 
@@ -3772,82 +3775,82 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
 以下の Java コードのサンプルを使用することで、フォームデザインと XML ファイルに保存されたデータをマージして PDF または PDF ドキュメントを生成することができます。
 
 ```java
-@Reference private OutputService outputService;
+    @Reference private OutputService outputService;
 
-private File generatePDFOutput2(String contentRoot, File inputXML, File templateStr, String acrobatVersion, String tagged, String linearized, String locale) {
+    private File generatePDFOutput2(String contentRoot, File inputXML, File templateStr, String acrobatVersion, String tagged, String linearized, String locale) {
 
-String outputFolder="C:/Output";
+    String outputFolder="C:/Output";
 
-Document doc=null;
+    Document doc=null;
 
-     try {
+        try {
 
-            PDFOutputOptions option = new PDFOutputOptions();             option.setContentRoot(contentRoot);
-            if(locale!=null)
+                PDFOutputOptions option = new PDFOutputOptions();             option.setContentRoot(contentRoot);
+                if(locale!=null)
 
-            {
+                {
 
-                option.setLocale(locale);
+                    option.setLocale(locale);
 
-            }
+                }
 
-            if(acrobatVersion.equalsIgnoreCase("Acrobat_10"))
+                if(acrobatVersion.equalsIgnoreCase("Acrobat_10"))
 
-            {
+                {
 
-                option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10);
+                    option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10);
 
-            } else if(acrobatVersion.equalsIgnoreCase("Acrobat_10_1")) {                 option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10_1);
+                } else if(acrobatVersion.equalsIgnoreCase("Acrobat_10_1")) {                 option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_10_1);
 
-            } else if(acrobatVersion.equalsIgnoreCase("Acrobat_11")) {                 option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_11);
+                } else if(acrobatVersion.equalsIgnoreCase("Acrobat_11")) {                 option.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_11);
 
-            }
+                }
 
-            if (tagged.equalsIgnoreCase("true") ) {
+                if (tagged.equalsIgnoreCase("true") ) {
 
-                option.setTaggedPDF(true );
+                    option.setTaggedPDF(true );
 
-            }
+                }
 
-            if (linearized.equalsIgnoreCase("true") ) {
+                if (linearized.equalsIgnoreCase("true") ) {
 
-                option.setTaggedPDF(true );
+                    option.setTaggedPDF(true );
 
-            }
+                }
 
-            InputStream inputXMLStream = new FileInputStream(inputXML);
+                InputStream inputXMLStream = new FileInputStream(inputXML);
 
-            InputStream templateStream = new FileInputStream(templateStr);;
+                InputStream templateStream = new FileInputStream(templateStr);;
 
-            doc = outputService.generatePDFOutput(new Document(templateStream),new             Document(inputXMLStream),option);
+                doc = outputService.generatePDFOutput(new Document(templateStream),new             Document(inputXMLStream),option);
 
-                     File toSave = new File(outputFolder,"Output.pdf");
+                        File toSave = new File(outputFolder,"Output.pdf");
 
-                     doc.copyToFile(toSave);
+                        doc.copyToFile(toSave);
 
-                    return toSave;
+                        return toSave;
 
-                } catch (OutputServiceException e) {
+                    } catch (OutputServiceException e) {
 
-                         e.printStackTrace();
+                            e.printStackTrace();
 
-               }catch (FileNotFoundException e) {
+                }catch (FileNotFoundException e) {
 
-                          e.printStackTrace();
+                            e.printStackTrace();
 
-               } catch (IOException e) {
+                } catch (IOException e) {
 
-                          e.printStackTrace();
+                            e.printStackTrace();
 
-               }finally{
+                }finally{
 
-                            doc.dispose();
+                                doc.dispose();
 
-              }
+                }
 
-                return null;
+                    return null;
 
-}
+    }
 ```
 
 ### generatePDFOutputBatch {#generatepdfoutputbatch}
@@ -3878,7 +3881,7 @@ Document doc=null;
   </tr>
   <tr>
    <td>batchOptions</td>
-   <td>変数の値を指定します <code>generateManyFiles</code>。 複数のファイルを生成するには、generateManyFiles フラグを設定します。この options パラメーターは、BatchOptions タイプのオブジェクトを受け付けます。</td>
+   <td>変数の値を指定し <code>generateManyFiles</code>ます。 複数のファイルを生成するには、generateManyFiles フラグを設定します。この options パラメーターは、BatchOptions タイプのオブジェクトを受け付けます。</td>
   </tr>
  </tbody>
 </table>
@@ -3969,7 +3972,7 @@ String outputFolder="C:/Output";
 
 ### generatePrintedOutput {#generateprintedoutput}
 
-フォームデザインとデータから、PCL、PostScript、および ZPL 出力を生成します。データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力はプリンターに直接送信したり、ファイルとして保存したりできます。generatePrintedOutput APIは、フォームデザインや、アプリケーションに保存されているデータに使用します。
+フォームデザインとデータから、PCL、PostScript、および ZPL 出力を生成します。データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力はプリンターに直接送信したり、ファイルとして保存したりできます。generatePrintedOutput APIは、フォームデザイン、またはアプリケーションに保存されているデータに使用します。
 
 **構文：** `Document generatePrintedOutput(String uriOrFileName, Document data, PrintedOutputOptions);`
 
@@ -3996,7 +3999,7 @@ String outputFolder="C:/Output";
  </tbody>
 </table>
 
-以下のJavaコードのサンプルを使用して、フォームデザインとデータからPCL、PostScript、ZPL出力を生成します。 The output type depends upon the value passed to the `printConfig`parameter.
+以下のJavaコードのサンプルを使用することで、フォームデザインとデータから、PCL、PostScript、およびZPL出力を生成することができます。 The output type depends upon the value passed to the `printConfig`parameter.
 
 ```java
 @Reference private OutputService outputService;
@@ -4087,7 +4090,7 @@ Document doc=null;
  </tbody>
 </table>
 
-以下のJavaコードのサンプルを使用して、フォームデザインとデータからPCL、PostScript、ZPL出力を生成します。 The output type depends upon the value passed to the `printConfig`parameter.
+以下のJavaコードのサンプルを使用することで、フォームデザインとデータから、PCL、PostScript、およびZPL出力を生成することができます。 The output type depends upon the value passed to the `printConfig`parameter.
 
 ```java
 @Reference private OutputService outputService;
@@ -4145,7 +4148,7 @@ Document doc=null;
 
 ### generatePrintedOutputBatch {#generateprintedoutputbatch}
 
-PS、PCL、ZPL形式のドキュメントを生成し、フォームデザインとデータを結合します。 オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutputBatch APIは、フォームデザイン、またはネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されたデータに使用します。
+フォームデザインとデータをマージして、PS、PCL、ZPL形式のドキュメントを生成します。 オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutputBatch APIは、フォームデザイン、またはネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されているデータに使用します。
 
 **構文`:`**`BatchResult generatePrintedOutputBatch(Map templates, Map data, PrintedOutputOptions options, BatchOptions batchOptions);`
 
@@ -4455,16 +4458,16 @@ PDF Generator サービスは、ネイティブファイル形式を PDF に変�
 GeneratePDFService は、さまざまなファイル形式（.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（廃止）、 .jpg、 .bmp、 .tif、 .png、.html やその他のファイル形式）を PDF に変換する API を提供します。また、PDF をさまざまなファイル形式で書き出したり、PDF を最適化する API も提供しています。このサービスは、以下の API をサポートしています。
 
 * **createPDF**：対応ファイル形式を PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式に対応しています。また、これらのアプリケーションに加えて、サードパーティ製の汎用 PDF 生成アプリケーションタイプも API にプラグインすることができます。
-* **exportPDF**：PDF ドキュメントを対応ファイル形式に変換します。このメソッドでは、PDF の内容を特定のファイル形式で読み込む（または書き出す）PDF が許可されます。PDFドキュメントは、CSS 1.0(htm、html)、JPEG(jpg、jpeg、jpe)、JPEG2000(jpf、jpx、jp2、j2k、j2c、jpc)で、HTML 3.2(htm、html)、HTML 4.01に書き出すことができます。Microsoft Wordドキュメント(doc、docx) Microsoft Excelワークブック(xlsx)、Microsoft PowerPoint Presentation(pptx)、PNG(png)、PostScript(ps)、Rich Text Format(tf)、Text(Accessible)(txt)、Text(Plain)(txt) TIFF、tiff、 XML 1.0()、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)形式。 You can also specify [custom Preflight profiles](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) for the PDF outputs.
+* **exportPDF**：PDF ドキュメントを対応ファイル形式に変換します。このメソッドでは、PDF の内容を特定のファイル形式で読み込む（または書き出す）PDF が許可されます。PDFドキュメントは、Encapsulated PostScript( eps)、HTML 3.2(htm、html)、HTML 4.01とCSS 1.0(htm、html)、JPEG(jpg、jpeg、jpe)、JPEG2000(jpf、jpx、jp2、j2k、j2c、jpc)で書き出します。Microsoft Wordドキュメント(doc、docx) Microsoft Excelワークブック(xlsx)、Microsoft PowerPoint Presentation(ptx)、PNG(png)、PostScript(ps)、Rich Text Format(txt)、Text(Accessible)(txt)、TIFF(Tif、tiff)、XML 1.0()、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)形式。 You can also specify [custom Preflight profiles](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) for the PDF outputs.
 
 * **optimizePDF**：PDF ドキュメントを最適化し、PDF ドキュメントを別の形式に変換します。このメソッドは PDF ドキュメントを入力ファイルとして受け付けます。
-* **htmlToPdf2**:HTMLページをPDFページに変換します。ドキュメント HTML ページの URL を入力値として受け付けます。
+* **htmlToPdf2**: HTMLページをPDFドキュメントに変換します。 HTML ページの URL を入力値として受け付けます。
 
 >[!NOTE]
 >
 >AIX オペレーティングシステムで稼動している AEM Forms サーバーに対する HTMLtoPDF API の使用は非推奨です。
 
-#### PDF Generator APIはMicrosoft WindowsおよびLinuxで利用可能 {#pdf-generator-api-available-on-microsoft-windows-and-linux}
+#### PDF Generator の API は Microsoft Windows および Linux で利用できます {#pdf-generator-api-available-on-microsoft-windows-and-linux}
 
 <table>
  <tbody>
@@ -4493,7 +4496,7 @@ GeneratePDFService は、さまざまなファイル形式（.doc、.docx、.ppt
    <td>✖</td>
   </tr>
   <tr>
-   <td>OCR PDF（検索可能なPDF）</td>
+   <td>OCR PDF（検索可能な PDF）</td>
    <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
@@ -4568,7 +4571,7 @@ createPDF サービスは以下の例外をスローします。
   </tr>
   <tr>
    <td>xmpDoc </td>
-   <td>生成されたPDF情報に適用されるメタデータ情報がファイルに含まれているドキュメントです。 このパラメーターはオプションです。<br /> </td>
+   <td>生成されたPDFドキュメントに適用されるメタデータ情報が含まれるファイルです。 このパラメーターはオプションです。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4651,7 +4654,7 @@ createPDF サービスは以下の例外をスローします。
 
 **構文:**
 
-```
+```java
 Map exportPDF(Document inputDoc, String inputFileName, String formatType, Document settingsDoc) throws ConversionException, InvalidParameterException, FileFormatNotSupportedException;
 ```
 
@@ -4744,7 +4747,7 @@ createPDF サービスは以下の例外をスローします。
 
 **構文:**
 
-```
+```java
 OptimizePDFResult optimizePDF(Document inputDoc, String fileTypeSettings, Document settingsDoc) throws ConversionException, InvalidParameterException, FileFormatNotSupportedException;
 ```
 
@@ -4834,7 +4837,7 @@ htmlToPdf2 サービスは以下の例外をスローします。
 
 **構文:**
 
-```
+```java
 HtmlToPdfResult htmlToPdf2(String inputUrl, String fileTypeSettingsName, String securitySettingsName, Document settingsDoc, Document xmpDoc) throws ConversionException, InvalidParameterException, FileFormatNotSupportedException;
 ```
 
@@ -4928,11 +4931,11 @@ createPDF サービスは以下の例外をスローします。
 
 #### createPDF {#createpdf-1}
 
-対応の形式を PDF ドキュメントに変換します。このメソッドは .ps、.eps、および .prn の形式を持つファイルを入力ファイルとして受け付けます。特定のセキュリティ権限、出力設定およびメタデータ情報を出力PDFドキュメントに適用できます。
+対応の形式を PDF ドキュメントに変換します。このメソッドは .ps、.eps、および .prn の形式を持つファイルを入力ファイルとして受け付けます。出力PDFドキュメントには、特定のセキュリティ権限、出力設定およびメタデータ情報を適用できます。
 
 **構文:**
 
-```
+```java
 Map createPDF(Document inputDoc, String inputFileName, String pdfSettings, String securitySettings, Document settingsDoc, Document xmpDoc) throws ConversionException, InvalidParameterException, FileFormatNotSupportedException;
 ```
 
