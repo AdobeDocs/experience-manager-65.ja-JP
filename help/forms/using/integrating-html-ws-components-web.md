@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 74%
 
 ---
 
@@ -19,17 +22,17 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusable-components.md) を固有の Web アプリケーションで使用することができます。以下のサンプルの実装は、CRX™ インスタンスにインストールされた AEM Forms Workspace Dev パッケージのコンポーネントを使用して Web アプリケーションを作成します。下記のソリューションをカスタマイズして、個々のニーズに合わせます。The sample implementation reuses `UserInfo`, `FilterList`, and `TaskList`components inside a web portal.
 
-1. でCRXDE Lite環境にログインしま `https://'[server]:[port]'/lc/crx/de/`す。 AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
-1. パスを作成しま `/apps/sampleApplication/wscomponents`す。
+1. でCRXDE Lite環境にログインし `https://'[server]:[port]'/lc/crx/de/`ます。 AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
+1. パスを作成し `/apps/sampleApplication/wscomponents`ます。
 1. css、images、js/libs、js/runtime、および js/registry.js を
 
-   * 追加の `/libs/ws`
+   * `/libs/ws` から
    * を `/apps/sampleApplication/wscomponents`.
 
 1. /apps/sampleApplication/wscomponents/js フォルダー内部に demomain.js ファイルを作成します。コードを /libs/ws/js/main.js から demomain.js にコピーします。
 1. demomain.js で、コードを削除してルーターを初期化し、以下のコードを追加します。
 
-   ```
+   ```javascript
    require(['initializer','runtime/util/usersession'],
        function(initializer, UserSession) {
            UserSession.initialize(
@@ -41,10 +44,10 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
    ```
 
 1. Create a node under /content by name `sampleApplication` and type `nt:unstructured`. In the properties of this node add `sling:resourceType` of type String and value `sampleApplication`. このノードのアクセス制御リストで、jcr:read 権限を許可する `PERM_WORKSPACE_USER` にエントリを追加します。Also, in the Access Control List of `/apps/sampleApplication` add an entry for `PERM_WORKSPACE_USER` allowing jcr:read privileges.
-1. で、テン `/apps/sampleApplication/wscomponents/js/registry.js` プレート値のから `/lc/libs/ws/` へのパ `/lc/apps/sampleApplication/wscomponents/` スを更新します。
+1. のパスをからに `/apps/sampleApplication/wscomponents/js/registry.js` 更新し、テンプレート値 `/lc/libs/ws/` に `/lc/apps/sampleApplication/wscomponents/` 対して適用。
 1. In your portal home page JSP file at `/apps/sampleApplication/GET.jsp`, add the following code to include the required components inside the portal.
 
-   ```as3
+   ```jsp
    <script data-main="/lc/apps/sampleApplication/wscomponents/js/demomain" src="/lc/apps/sampleApplication/wscomponents/js/libs/require/require.js"></script>
    <div class="UserInfoView gcomponent" data-name="userinfo"></div>
    <div class="filterListView gcomponent" data-name="filterlist"></div>
@@ -59,7 +62,7 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
 
 1. コンポーネントをカスタマイズするには、以下のように必要なコンポーネントの既存のビューを拡張します。
 
-   ```as3
+   ```javascript
    define([
        ‘jquery’,
        ‘underscore’,
@@ -81,7 +84,7 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
 
 1. ポータルの CSS を修正し、ポータル上の必要なコンポーネントのレイアウト、配置、スタイルを設定します。たとえば、このポータルの背景色を黒色に保持して userInfo コンポーネントも同様に表示するとします。You can do this by changing background color in `/apps/sampleApplication/wscomponents/css/style.css` as follows:
 
-   ```as3
+   ```css
    body {
        font-family: "Myriad pro", Arial;
        background: #000;    //This was origianlly #CCC
