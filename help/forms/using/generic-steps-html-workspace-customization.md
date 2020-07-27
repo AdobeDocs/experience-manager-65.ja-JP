@@ -11,7 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 52%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 カスタマイズを実行するための一般的な手順を以下に示します。
 
-1. にアクセスしてCRXDE Liteにログインしま `https://'[server]:[port]'/lc/crx/de/index.jsp`す。
+1. にアクセスしてCRXDE Liteにログインし `https://'[server]:[port]'/lc/crx/de/index.jsp`ます。
 1. Create a folder named `ws`at `/apps`, if it does not exist. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. Browse to `/apps/ws`, and navigate to the **[!UICONTROL Access Control]** tab.
 1. In the **[!UICONTROL Access Control]** list, click **[!UICONTROL +]** to add a new entry. もう一度「**[!UICONTROL +]**」をクリックします。
@@ -31,10 +34,10 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. Give `jcr:read` privilege to the Principal.
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. Copy the `GET.jsp` and `html.jsp`files from the `/libs/ws`folder to the `/apps/ws` folder.
-1. フォルダー内 `/libs/ws/locales` のフォルダーをコピ `/apps/ws` ーします。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. フォルダー内の `/libs/ws/locales` フォルダーをコピー `/apps/ws` します。 「**[!UICONTROL すべて保存]**」をクリックします。
 1. Update the references and relative paths in the `GET.jsp` file, as shown below, and click **[!UICONTROL Save all]**.
 
-   ```
+   ```jsp
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
    ```
 
@@ -83,18 +86,18 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    1. Create a folder named `jqueryui`at `/apps/ws/js/libs`. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   1. にコピ `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` ーしま `/apps/ws/js/libs/jqueryui`す。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` を `/apps/ws/js/libs/jqueryui` にコピーします。「**[!UICONTROL すべて保存]**」をクリックします。
 
 1. HTML のカスタマイズは以下のようにして実行します。
 
-   1. の下で、 `/apps/ws/js`という名前のフォルダを作成しま `runtime`す。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. の下 `/apps/ws/js`に、という名前のフォルダを作成し `runtime`ます。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   1. の下で、 `/apps/ws/js/runtime`という名前のフォルダを作成しま `templates`す。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. の下 `/apps/ws/js/runtime`に、という名前のフォルダを作成し `templates`ます。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   1. にコピ `/libs/ws/js/main.js` ーしま `/apps/ws/js/main.js`す。
+   1. `/libs/ws/js/main.js` を `/apps/ws/js/main.js` にコピーします。
 
    1. Copy /libs/ws/js/registry.js to `/apps/ws/js/registry.js`.
 
 1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
 
-   URLにアクセスし、管 `https://'[server]:[port]'/lc/ws` 理者/パスワードの資格情報を使用してログインします。 ブラウザーがにリダイレクトされま `https://'[server]:[port]'/lc/apps/ws/index.html`す。
+   URLにアクセス `https://'[server]:[port]'/lc/ws` し、管理者/パスワードの資格情報でログインします。 ブラウザーがにリダイレクト `https://'[server]:[port]'/lc/apps/ws/index.html`します。
