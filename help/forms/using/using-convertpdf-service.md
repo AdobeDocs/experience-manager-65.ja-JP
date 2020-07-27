@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 94%
 
 ---
 
@@ -33,13 +36,13 @@ AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用
 
 Convert PDF サービスには次の 2 つの API があります。
 
-* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：PDF ドキュメントを PostScript ファイルに変換します。
+* **[toPS](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：PDF ドキュメントを PostScript ファイルに変換します。
 
-* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：PDF ドキュメントを画像ファイルに変換します。サポートされている画像形式は、JPEG、JPEG2000、PNG および TIFF です。
+* **[toImage](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：PDF ドキュメントを画像ファイルに変換します。サポートされている画像形式は、JPEG、JPEG2000、PNG および TIFF です。
 
 ### JSP または Servlets との toPS API の使用 {#using-tops-api-with-a-jsp-or-servlets}
 
-```java
+```jsp
 <%@ page import="java.util.List, java.io.File,
 
                 com.adobe.fd.cpdf.api.ConvertPdfService,
@@ -83,7 +86,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 ### JSP または Servlets との toImage API の使用 {#using-toimage-api-with-a-jsp-or-servlets}
 
-```java
+```jsp
 <%@ page import="java.util.List, java.io.File,
 
                 com.adobe.fd.cpdf.api.ConvertPdfService,
@@ -132,11 +135,11 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 ワークフローから Convert PDF サービスを実行することは、JSP またはサーブレットから実行することに似ています。
 
-唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、このドキュメントオブジェクトは、指定されたResourceResolverオブジェクトを使用してリポジトリからコンテンツを読み取ります。
+唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、ドキュメントオブジェクトは、指定されたResourceResolverオブジェクトを使用してリポジトリからコンテンツを読み取ります。
 
 以下に示したサンプルワークフロープロセスは、入力ドキュメントを PostScript ドキュメントに変換します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
-```
+```javascript
 /*
  * Imports
  */
