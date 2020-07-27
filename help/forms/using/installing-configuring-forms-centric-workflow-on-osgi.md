@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 50%
@@ -133,7 +133,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 1. 以下のプロパティを sling.properties ファイルに追加します。
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
@@ -196,7 +196,7 @@ AEM Forms で Adobe Sign を使用するには、「[Adobe Sign を AEM Forms �
 
 OSGi機能でフォーム中心のワークフローを使用するように環境を設定済み。 この機能を使用するための手順は次のとおりです。
 
-* [OSGiでのフォーム中心のワークフローの使用](../../forms/using/aem-forms-workflow.md)
+* [Using Forms-centric workflow on OSGi](../../forms/using/aem-forms-workflow.md)
 * [ワークフローステップのリファレンス](/help/sites-developing/workflows-step-ref.md)
 * [レターとインタラクティブ通信の後処理](../../forms/using/submit-letter-topostprocess.md)
 
