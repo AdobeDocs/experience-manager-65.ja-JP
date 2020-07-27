@@ -4,9 +4,9 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 8f8134d6c4fcc0ef54f9cc8298936c5c7d746c09
 workflow-type: tm+mt
-source-wordcount: '5830'
+source-wordcount: '5860'
 ht-degree: 54%
 
 ---
@@ -275,7 +275,7 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
 * 「 **[!UICONTROL Select All]** 」チェックボックスを使用して、検索したアセットを選択します。 [!DNL Experience Manager] 最初は、100アセットをカード表示で、200アセットをリスト表示で表示します。 検索結果をスクロールすると、読み込まれるアセットが増えます。 読み込まれたアセットより多くのアセットを選択できます。 選択したアセットの数が、検索結果ページの右上隅に表示されます。 選択範囲に対して操作を実行できます。例えば、選択したアセットのダウンロード、選択したアセットのメタデータプロパティの一括更新、選択したアセットのコレクションへの追加などが可能です。 表示されている数よりも多くのアセットが選択されている場合は、選択したすべてのアセットにアクションが適用されるか、ダイアログにアセットが適用されている数が表示されます。 読み込まれなかったアセットにアクションを適用するには、すべてのアセットが明示的に選択されていることを確認します。
 * 必須メタデータを含んでいないアセットを検索する場合は、[必須メタデータ](#mandatorymetadata)を参照してください。
 * 検索では、すべてのメタデータフィールドが使用されます。12 の検索などの一般的な検索では通常、多数の結果が返されます。より良い結果を得るには、（一重引用符ではなく）二重引用符を使用するか、特殊文字のない単語に番号が続いている（例：*shoe12* など）ようにします。
-* フルテキスト検索では、 — や^などの演算子を使用できます。 これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、「Notebook - Beauty」ではなく、「&quot;Notebook - Beauty&quot;」と指定します。
+* 全文検索では、 — や^などの演算子を使用できます。 これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、「Notebook - Beauty」ではなく、「&quot;Notebook - Beauty&quot;」と指定します。
 * 検索結果が多すぎる場合は、[検索範囲](#scope)を制限して、目的のアセットを絞り込みます。これは、特定のファイルタイプ、特定の場所、特定のメタデータなど、目的のアセットを検索する良い方法がある程度わかっている場合に最も効果的です。
 
 * **タグ付け**: タグを使用すると、閲覧や検索が効率的に行えるアセットを分類できます。 タグ付けは、適切な分類を他のユーザーやワークフローに伝播するうえで役に立ちます。[!DNL Experience Manager] では、使用状況データやトレーニングでアセットのタグ付けを絶えず改善する、Adobe Sensei の AI サービスを活用して、アセットに自動的にタグを付ける手段を提供しています。この機能がアカウントで有効な場合は、アセットを検索する際にスマートタグが考慮されます。これは組み込みの検索機能と連携して機能します。[検索動作](#searchbehavior)を参照してください。検索結果の表示順序を最適化するには、選択した一部のアセットの[検索ランキングを上げる](#searchrank)ことができます。
@@ -325,6 +325,8 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
 
 アセットの検出は、メタデータを含むDAMコンテンツのインデックス作成に依存しています。 迅速で正確なアセット検出は、最適化されたインデックス作成と適切な設定に依存しています。 「 [検索インデックス](/help/assets/performance-tuning-guidelines.md#search-indexes)」、「 [oakクエリとインデックス作成](/help/sites-deploying/queries-and-indexing.md)」、「 [ベストプラクティス」を参照してください](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
+検索結果から特定のアセットを除外するには、Luceneインデックスの `excludedPath` プロパティを使用します。
+
 ### 視覚的または類似性検索 {#configvisualsearch}
 
 ビジュアル検索ではスマートタグが使用され、6.5.2.0 [!DNL Experience Manager] 以降が必要です。 スマートタグ機能を設定したら、次の手順に従います。
@@ -364,6 +366,8 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
 ### アセットのアップロード時にテキストを抽出 {#extracttextupload}
 
 PSDファイルやPDFファイルなど [!DNL Experience Manager] のアセットをアップロードする際に、アセットからテキストを抽出するように設定できます。 [!DNL Experience Manager] は、抽出されたテキストのインデックスを作成し、抽出されたテキストに基づいてこれらのアセットを検索しやすくします。 See [upload assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+
+テキスト抽出がデプロイメントにとってリソースを大量に消費する大きすぎる場合は、テキスト抽出を [無効にすることを検討](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)します。
 
 ### 検索結果をフィルターするカスタム述語 {#custompredicates}
 
