@@ -1,5 +1,5 @@
 ---
-title: 「チュートリアルを公開しない：アダプティブフォームフィールドへのルールの適用」
+title: '"チュートリアルを公開しない： アダプティブフォームフィールドへのルールの適用」'
 seo-title: アダプティブフォームのフィールドにルールを適用する
 description: このチュートリアルでは、ルールを作成して、インタラクティブ機能、ビジネスロジック、スマート検証機能をアダプティブフォームに追加する方法について説明します。
 seo-description: このチュートリアルでは、ルールを作成して、インタラクティブ機能、ビジネスロジック、スマート検証機能をアダプティブフォームに追加する方法について説明します。
@@ -8,7 +8,10 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1152'
+ht-degree: 66%
 
 ---
 
@@ -50,7 +53,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. Tap the **[!UICONTROL Select State]** drop-down and select **[!UICONTROL is changed]**.
 
-   ![whencustomeridischanged](assets/whencustomeridischanged.png)
+   ![customeridischanged](assets/whencustomeridischanged.png)
 
 1. 「**[!UICONTROL THEN]**」ステートメントの「**[!UICONTROL アクションの選択]**」ドロップダウンで「**[!UICONTROL サービスの呼び出し]**」を選択します。
 1. 「**[!UICONTROL 選択]**」ドロップダウンで「**[!UICONTROL 発送先住所を取得]**」サービスを選択します。
@@ -66,14 +69,14 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. アダプティブフォームのプレビューを表示します。「**[!UICONTROL 顧客 ID]**」フィールドに ID を入力します。これで、データベース内の顧客情報をフォームに取り込むことができます。
 
-   ![情報の検索](assets/retrieve-information.gif)
+   ![retrieve-information](assets/retrieve-information.gif)
 
 ## 手順 2：更新後の顧客住所をデータベースに追加する {#updated-customer-address}
 
 データタベースから顧客情報を取得したら、出荷先住所、都道府県、郵便番号を変更します。ここでは、フォームデータモデルサービスを呼び出し、顧客情報を変更してデータベースに保存する手順について説明します。
 
 1. 「**[!UICONTROL 送信]**」フィールドを選択して「**[!UICONTROL ルールを編集]**」アイコンをタップします。ルールエディターウィンドウが表示されます。
-1. Select the **[!UICONTROL Submit - Click]** rule and tap the **[!UICONTROL Edit]** icon. 送信ルールを編集するオプションが表示されます。
+1. Select the **[!UICONTROL Submit - Click]** rule and tap the **[!UICONTROL Edit]** icon. 送信ルールを編集するためのオプションが表示されます。
 
    ![送信規則](assets/submit-rule.png)
 
@@ -88,13 +91,13 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-   「フォームオブジェクト」タブの「 **[!UICONTROL Shipping Address, State, and Zip Code]** 」フィールドを、「 **[!UICONTROL Drop object」の対応するtablename .property（例えば、customerdetails .shippingAddress）にドラッグ&amp;ドロップするか、「]****[!UICONTROL INPUT]** 」ボックスの「here」フィールドを選択します。 tablenameというプリフィックスが付いたすべてのフィールド（この使用例ではcustomerdetails）は、アップデートサービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
+   「フォームオブジェクト」タブの「 **[!UICONTROL 配送先住所、州、郵便番号]** 」フィールドを、「 **[!UICONTROL 入力]****** 」ボックスの「オブジェクトをドロップ」(Drop object)の対応する.property（customerdetails.shippingAddressなど）にドラッグ&amp;ドロップします。 tablenameが先頭に付くすべてのフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
 
    >[!NOTE]
    >
-   >Do not drag-and-drop the **[!UICONTROL Name]** and **[!UICONTROL Customer ID]** fields to the corresponding tablename.property (for example, customerdetails.name). これは、顧客の名前とIDを誤って更新するのを防ぐのに役立ちます。
+   >Do not drag-and-drop the **[!UICONTROL Name]** and **[!UICONTROL Customer ID]** fields to the corresponding tablename.property (for example, customerdetails.name). 間違って顧客の名前やIDを更新するのを防ぐのに役立ちます。
 
-1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「id」フィールドにドロップします。先頭に  tablename（例えば、この使用事例ではcustomerdetails）は、アップデートサービスの検索パラメーターとして機能します。 The **[!UICONTROL id]** field in this use case uniquely identifies a record in the  customerdetails  table.
+1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「id」フィールドにドロップします。先頭に  tablename（この使用例ではcustomerdetailsなど）は、アップデートサービスの検索パラメーターとして機能します。 The **[!UICONTROL id]** field in this use case uniquely identifies a record in the  customerdetails  table.
 1. 「**[!UICONTROL 完了]**」をタップして、ルールを保存します。On the rule editor window, tap **[!UICONTROL Close]**.
 1. アダプティブフォームのプレビューを表示します。顧客の詳細情報を取得し、発送先住所を変更してフォームを送信します。同じ顧客の詳細情報をもう一度取得すると、更新された発送先住所が表示されます。
 
@@ -113,7 +116,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. Tap the **[!UICONTROL Select State]** drop-down and select **[!UICONTROL is changed]**.
 
-   ![whencustomeridischanged](assets/whencustomeridischanged.png)
+   ![customeridischanged](assets/whencustomeridischanged.png)
 
    「**[!UICONTROL THEN]**」ステートメントの「**[!UICONTROL アクションの選択]**」ドロップダウンで「**[!UICONTROL サービスの呼び出し]**」を選択します。
 
@@ -123,7 +126,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 「input」変数セクションのコードを以下のように変更します。
 
-   ```
+   ```javascript
    var inputs = {
        "id" : this
    };
@@ -131,7 +134,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 「guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)」セクションのコードを以下のように変更します。
 
-   ```
+   ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
      if (result) {
          result = JSON.parse(result);
