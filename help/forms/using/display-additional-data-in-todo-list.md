@@ -10,7 +10,10 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 90%
 
 ---
 
@@ -34,9 +37,9 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)」に従います。
 1. タスクに追加の情報を表示するには、対応するキーと値のペアを `translation.json` のタスクブロック内に追加する必要があります。
 
-   例えば、英語を次のよ `/apps/ws/locales/en-US/translation.json` うに変更します。
+   例えば、英語 `/apps/ws/locales/en-US/translation.json` を次のように変更します。
 
-   ```
+   ```json
    "task" : {
            "reminder" : {
                "value" : "Reminder",
@@ -112,7 +115,7 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
 
 1. たとえば、次のようにしてタスクブロック内に情報を追加します。
 
-   ```
+   ```json
    "stepname" : {
                "value" : "Step Name",
                "tooltip" : "This task belongs to __stepName__ step"
@@ -142,10 +145,10 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    * 追加の: `/libs/ws/js/runtime/templates/`
    * を: `/apps/ws/js/runtime/templates/`
 
-1. に追加新しい情報を追加しま `/apps/ws/js/runtime/templates/task.html`す。
+1. に追加新しい情報を追加し `/apps/ws/js/runtime/templates/task.html`ます。
 
-   例えば、次の下に追加しま `div class="taskProperties"`す。
+   例えば、次の下にを追加し `div class="taskProperties"`ます。
 
-   ```
+   ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
