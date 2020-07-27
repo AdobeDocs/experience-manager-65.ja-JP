@@ -10,44 +10,47 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 0%
 
 ---
 
 
 # タスクマネージャーサービスJava APIクイック開始(SOAP) {#task-manager-service-java-api-quickstart-soap}
 
-Managerサービスでは、次のクイック開始を使用できます。タスクマネージャーサービス
+タスクマネージャサービスでは、次のクイック開始を使用できます。
 
-[クイック開始（SOAPモード）:Java APIを使用したタスクの割り当て](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したタスクの割り当て](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したタスクのロック](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したタスクのロック](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用してタスクに割り当てられたユーザーを取得する](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用してユーザーに割り当てられたタスクを取得する](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したタスクからのフォームデータの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したフォームデータの変更](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したフォームデータの変更](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したタスクからの添付ファイルの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したタスクからの添付ファイルの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したタスク情報の取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したタスク情報の取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
-
->[!NOTE]
->
->WebサービスAPIを使用して、タスクに割り当てられたユーザーを検索することはできません。 このメソッドを実行するために必要な `taskList` メソッド呼び出しである、メソッドを呼び出せないためです。タスク
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>WebサービスAPIを使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを実行するために必要なメソッド呼び出しである `taskList` メソッドを呼び出すことができないためです。
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクの割り当て {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
+>[!NOTE]
+>
+>「AEM Formsを使用したプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-次のJavaコードの例では、Tony Blueという名前のタスクを割り当てています。
+## クイック開始（SOAPモード）: Java APIを使用したタスクの割り当て {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
-```as3
+次のJavaコードの例は、Tony Blueという名前のユーザーにタスクを割り当てています。
+
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -176,11 +179,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクのロック {#quick-start-soap-mode-locking-tasks-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したタスクのロック {#quick-start-soap-mode-locking-tasks-using-the-java-api}
 
-次のJavaコードの例では、2のタスク識別子の値に対応するタスクをロックします。
+次のJavaコードの例では、タスク識別子の値2に対応するタスクをロックしています。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -265,11 +268,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用してタスクに割り当てられたユーザーを取得する {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用してユーザーに割り当てられたタスクを取得する {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-次のJavaコードの例は、 *tony blueという名前のタスクに割り当てられているすべてのユーザーを取得*&#x200B;します。 このユーザーは、接続プロパティで指定されています。 識別子の値やタスクなど、返される識別子に関する情報が表示されます。
+以下のJavaコードの例を使用すると、 *tony blueという名前のタスクに割り当てられているすべてのユーザーを取得できます*。 このユーザーは、接続プロパティで指定されています。 識別子の値や説明など、返されるタスクに関する情報が表示されます。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -391,11 +394,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したタスクからのフォームデータの取得 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
-次のJavaコードの例は、識別子の値が304のタスクからフォームデータを取得します。 フォームデータは、C:\Adobeにある *FormData.xmlというXMLファイルに書き込まれます* 。
+以下のJavaコードの例を使用すると、識別子の値が304のタスクからフォームデータを取得できます。 フォームデータは、C:\AdobeにあるFormData.xml *というXMLファイルに書き込まれます* 。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -497,11 +500,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したフォームデータの変更 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したフォームデータの変更 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-次のJavaコードの例は、 *FormData.xmlファイル内のデータを使用してフォームを更新します* 。
+次のJavaコードの例では、FormData.xml *ファイル内のデータを使用してフォームを更新します* 。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -607,11 +610,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクからの添付ファイルの取得 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したタスクからの添付ファイルの取得 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
 
-次のJavaコードの例を使用して、添付ファイルを取得します。 各添付ファイルはTXTファイルとして保存されます。
+以下のJavaコードの例を使用して、添付ファイルを取得します。 各添付ファイルはTXTファイルとして保存されます。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -711,11 +714,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスク情報の取得 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したタスク情報の取得 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
-次のJavaコードの例を使用すると、MortgageLoan - Prebuiltという名前のプロセスに基づくすべてのタスク *を取得できます*。 返された各タスクのステータスがチェックされ、完了したタスクであることが確認されます。 タスクを完了したタスクの名前やユーザーが完了した日付などの情報が取得され、表示されます。
+以下のJavaコードの例を使用すると、MortgageLoan - Prebuildという名前のプロセスに基づくすべてのタスクを取得で *きます*。 返された各タスクのステータスは、完了したタスクであることを確認するためにチェックされます。 タスクを完了したタスクの名前やユーザが完了した日付などの情報を取得し、表示する。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
