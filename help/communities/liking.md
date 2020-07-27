@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
 workflow-type: tm+mt
 source-wordcount: '234'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -34,17 +34,17 @@ For necessary information, visit [Communities Components Basics](basics.md).
 
 [必要なクライアント側のライブラリが含まれる場合](essentials-liking.md#essentials-for-client-side) 、これがコンポー `Liking` ネントの表示方法です。
 
-![chlimage_1-93](assets/chlimage_1-93.png)
+![好み成分](assets/liking-component.png)
 
 ## 「いいね!」の設定{#configuring-liking}
 
 Select the placed `Liking` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![configure-new](assets/configure-new.png)
 
 Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used to record likes.
 
-![chlimage_1-95](assets/chlimage_1-95.png)
+![設定に「いいね！」を付ける](assets/configure-liking.png)
 
 * **[!UICONTROL 肯定的な返信ラベル]**
 
