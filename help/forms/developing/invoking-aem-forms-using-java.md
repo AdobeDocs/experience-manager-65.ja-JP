@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '5410'
+ht-degree: 88%
 
 ---
 
@@ -66,7 +69,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 >[!NOTE]
 >
->（自動オプションのみ）AEM Formsサーバーを開始し、EJB用のサー `standalone.bat -b <Server IP> -c lc_turnkey.xml` バーIPを指定するコマンドを使用します。
+>（自動オプションのみ）AEM Formsサーバーに開始し、EJB用のIPを指定す `standalone.bat -b <Server IP> -c lc_turnkey.xml` るコマンドを指定します
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
@@ -77,7 +80,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 <table>
  <thead>
   <tr>
-   <th><p>ファイル</p></th>
+   <th><p>File</p></th>
    <th><p>説明</p></th>
    <th><p>場所</p></th>
   </tr>
@@ -228,7 +231,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 <table>
  <thead>
   <tr>
-   <th><p>ファイル</p> </th>
+   <th><p>File</p> </th>
    <th><p>説明</p> </th>
    <th><p>場所</p> </th>
   </tr>
@@ -262,7 +265,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
-   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照先のjarが共存していない場合、必須のクラスはクラスローダーで見つかりません。</p> </td>
+   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照jarが共存していない場合、必要なクラスはクラスローダーで見つかりません。</p> </td>
    <td><p>JBoss クライアントの lib ディレクトリ</p> <p>クライアントアプリケーションを同じ J2EE アプリケーションサーバー上にデプロイする場合は、このファイルを含める必要はありません。</p> </td>
   </tr>
   <tr>
@@ -444,6 +447,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
    * If you set this connection property to `WebLogic`, the `java.naming.factory.initial` value is set to `weblogic.jndi.WLInitialContextFactory`.
    * Likewise, if you set this connection property to `JBoss`, the `java.naming.factory.initial` value is set to `org.jnp.interfaces.NamingContextFactory`.
    * デフォルトの値を使用しない場合、`java.naming.factory.initial` プロパティを要件を満たす値に設定することができます。
+
    >[!NOTE]
    >
    >Instead of using a string to set the `DSC_SERVER_TYPE` connection property, you can use a static member of the `ServiceClientFactoryProperties` class. The following values can be used: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`, or `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
@@ -461,6 +465,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
    * The `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` enumeration value
    * AEM Forms をホストする J2EE アプリケーションサーバーの URL を指定する文字列値
+
    >[!NOTE]
    >
    >If you are using the SOAP connection mode, specify the `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` enumeration value instead of the `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` enumeration value.
@@ -469,13 +474,14 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
    * The `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL` enumeration value
    * The `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` enumeration value
+
    >[!NOTE]
    >
    >If you are using the SOAP connection mode, specify the `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`enumeration value instead of the `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` enumeration value.
 
 1. To set the `DSC_SERVER_TYPE` connection property, invoke the `java.util.Properties` object’s `setProperty` method and pass the following values:
 
-   * `ServiceClientFactoryProperties.DSC_SERVER_TYPE`定義済みリスト値
+   * The `ServiceClientFactoryProperties.DSC_SERVER_TYPE`enumeration value
    * AEM Forms をホストする J2EE アプリケーションサーバーを指定する文字列値（例えば、AEM Forms が にデプロイされている場合は `JBoss`JBoss を指定します）。
 
       1. To set the `DSC_CREDENTIAL_USERNAME` connection property, invoke the `java.util.Properties` object’s `setProperty` method and pass the following values:
@@ -506,7 +512,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
 次の Java コードの例では、WebLogic にデプロイされ EJB 接続モードを使用している AEM Forms を呼び出すための接続プロパティを設定しています。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "t3://localhost:7001");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
@@ -519,7 +525,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
 次の Java コードの例では、WebSphere にデプロイされ EJB 接続モードを使用している AEM Forms を呼び出すための接続プロパティを設定しています。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "iiop://localhost:2809");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
@@ -532,7 +538,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
 次の Java コードの例では、SOAP モードで接続プロパティを設定して、JBoss にデプロイされた AEM Forms を呼び出します。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -549,7 +555,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
 次の Java コードの例では、サービスセキュリティが無効な場合に JBoss Application Server にデプロイされた AEM Forms を呼び出すために必要な接続プロパティを設定します。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "jnp://localhost:1099");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
@@ -562,7 +568,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
 **カスタム要求タイムアウト制限を含む SOAP 接続モードの設定**
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -578,7 +584,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 `authenticate` メソッドは、認証の結果を含む `AuthResult` オブジェクトを返します。コンストラクタを呼び出すことによって、`com.adobe.idp.Context` オブジェクトを作成できます。次に、次のコードに示すように、`com.adobe.idp.Context` オブジェクトの `initPrincipal` メソッドを呼び出し、`AuthResult` オブジェクトを渡します。
 
-```as3
+```java
  Context myCtx = new Context();
  myCtx.initPrincipal(authResult);
 ```
@@ -587,7 +593,7 @@ Instead of setting the `DSC_CREDENTIAL_USERNAME` or `DSC_CREDENTIAL_PASSWORD` pr
 
 次のコードの例では、`com.adobe.idp.Context` オブジェクトを作成するために使用される接続設定内で `EncryptionServiceClient` オブジェクトを使用する方法を示します。
 
-```as3
+```java
  //Authenticate a user and use the Context object within connection settings
  // Authenticate the user
  String username = "wblue";
@@ -650,7 +656,7 @@ SOAP 接続モードを使用するクライアントアプリケーションは
 
 次の例は、WebSphere にデプロイされた AEM Forms に接続するために使用される jndi.properties ファイルの内容を示しています。
 
-```as3
+```ini
  java.naming.factory.initial=com.ibm.websphere.naming.
  WsnInitialContextFactory
  java.naming.provider.url=corbaloc::appserver1:9810,:appserver2:9810
@@ -660,7 +666,7 @@ SOAP 接続モードを使用するクライアントアプリケーションは
 
 次の例は、WebLogic にデプロイされた AEM Forms に接続するために使用される jndi.properties ファイルの内容を示しています。
 
-```as3
+```ini
  java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
  java.naming.provider.url=t3://appserver1:8001, appserver2:8001
 ```
@@ -669,7 +675,7 @@ SOAP 接続モードを使用するクライアントアプリケーションは
 
 次の例は、JBoss にデプロイされている AEM Forms に接続するために使用される jndi.properties ファイルの内容を示しています。
 
-```as3
+```ini
  java.naming.factory.initial= org.jnp.interfaces.NamingContextFactory
  java.naming.provider.url= jnp://appserver1:1099, appserver2:1099,
  appserver3:1099
@@ -709,7 +715,7 @@ An application can contain both `com.adobe.idp.Document` and `org.w3c.dom.Docume
 >
 >WebLogic で `com.adobe.idp.Document` オブジェクトの使用時にメモリリークが発生しないようにするには、ドキュメント情報を 2048 バイト以下のチャンクで読み取ります。例えば、次のコードは 2048 バイトのチャンクでドキュメント情報を読み取ります。
 
-```as3
+```java
         // Set up the chunk size to prevent a potential memory leak
         int buffSize = 2048;
  
@@ -758,9 +764,9 @@ An application can contain both `com.adobe.idp.Document` and `org.w3c.dom.Docume
 
 * バイト配列
 * An existing `com.adobe.idp.Document` object
-* オブジェクト `java.io.File` です。
-* オブジェクト `java.io.InputStream` です。
-* オブジェクト `java.net.URL` です。
+* オブジェクト `java.io.File`
+* オブジェクト `java.io.InputStream`
+* オブジェクト `java.net.URL`
 
 #### バイト配列に基づいたドキュメントの作成 {#creating-a-document-based-on-a-byte-array}
 
@@ -768,7 +774,7 @@ An application can contain both `com.adobe.idp.Document` and `org.w3c.dom.Docume
 
 **バイト配列に基づいた Document オブジェクトの作成**
 
-```as3
+```java
  Document myPDFDocument = new Document(myByteArray);
 ```
 
@@ -778,7 +784,7 @@ An application can contain both `com.adobe.idp.Document` and `org.w3c.dom.Docume
 
 **別のドキュメントに基づいた Document オブジェクトの作成**
 
-```as3
+```java
  //Create a Document object based on a byte array
  InputStream is = new FileInputStream("C:\\Map.pdf");
  int len = is.available();
@@ -803,7 +809,7 @@ The following code example creates a `com.adobe.idp.Document` object that is bas
 
 **PDF ファイルに基づいた Document オブジェクトの作成**
 
-```as3
+```java
  //Create a Document object based on the map.pdf source file
  File mySourceMap = new File("C:\\map.pdf");
  Document myPDFDocument = new Document(mySourceMap,true);
@@ -815,7 +821,7 @@ The following code example creates a `com.adobe.idp.Document` object that is bas
 
 **InputStream オブジェクトに基づいたドキュメントの作成**
 
-```as3
+```java
  //Create a Document object based on an InputStream object
  InputStream is = new FileInputStream("C:\\Map.pdf");
  Document myPDFDocument = new Document(is);
@@ -827,7 +833,7 @@ The following Java code example creates a `com.adobe.idp.Document` object that i
 
 次の例に示すように、`com.adobe.idp.Document` オブジェクトに提供される URL は、元の `com.adobe.idp.Document` オブジェクトが作成されるのに伴って必ず読み取られます。
 
-```as3
+```java
      Document doc = new Document(new java.net.URL("file:c:/temp/input.pdf"));
 ```
 
@@ -835,7 +841,7 @@ C:/temp/input.pdf ファイルは、（サーバーコンピューターでは�
 
 **URL からアクセス可能なコンテンツに基づいたドキュメントの作成**
 
-```as3
+```java
  //Create a Document object based on a java.net.URL object
  URL myURL = new URL("http", "localhost", 8080,"/WebApp/map.pdf");
  
@@ -853,13 +859,13 @@ C:/temp/input.pdf ファイルは、（サーバーコンピューターでは�
 
 PDF ドキュメント（または XML データなどの他のデータ型）を出力値として返すサービス操作では、`com.adobe.idp.Document` オブジェクトが返されます。受け取った `com.adobe.idp.Document` オブジェクトは、次の形式に変換できます。
 
-* オブジェクト `java.io.File` です。
-* オブジェクト `java.io.InputStream` です。
+* オブジェクト `java.io.File`
+* オブジェクト `java.io.InputStream`
 * バイト配列
 
 次のコード行では、`com.adobe.idp.Document` オブジェクトを `java.io.InputStream` オブジェクトに変換します。Assume that `myPDFDocument` represents a `com.adobe.idp.Document` object:
 
-```as3
+```java
      java.io.InputStream resultStream = myDocument.getInputStream();
 ```
 
@@ -872,7 +878,7 @@ PDF ドキュメント（または XML データなどの他のデータ型）�
 
 **Document オブジェクトの内容のファイルへのコピー**
 
-```as3
+```java
  File outFile = new File("C:\\AnotherMap.pdf");
  myDocument.copyToFile (outFile);
 ```
@@ -934,7 +940,7 @@ Determine the MIME type of a `com.adobe.idp.Document` object by invoking the `co
 
 **Document オブジェクトのコンテンツタイプの確認**
 
-```as3
+```java
  //Determine the content type of the Document object
  String ct = myDocument.getContentType();
  System.out.println("The content type of the Document object is " +ct);
@@ -986,6 +992,7 @@ Java クライアントライブラリを使用して次の手順を実行する
    * A unique ID value by specifying `new Id()`.
    * A unique UUID value by specifying `new Lid()`.
    * リソースの名前。XDP ファイルのファイル名を指定できます。
+
    戻り値を `Resource` にキャストします。
 
 1. Create a `ResourceContent` object by invoking the `RepositoryInfomodelFactoryBean` object’s `newImage` method and casting the return value to `ResourceContent`. このオブジェクトはリポジトリに追加されるコンテンツを表します。
@@ -1036,7 +1043,7 @@ Java 呼び出し API を使用して短時間のみ有効なプロセスの `My
 1. コンストラクタを使用して `java.util.HashMap` オブジェクトを作成します。
 1. 各入力パラメーターに対して `java.util.HashMap` オブジェクトの `put` メソッドを呼び出して、長期間有効なプロセスに渡します。短時間のみ有効なプロセスの `MyApplication/EncryptDocument` では、`Document` 型の入力パラメーターが 1 つ必要です。次の例に示すように、`put` メソッドを呼び出す必要があるのは 1 回だけです。
 
-   ```as3
+   ```java
     //Create a Map object to store the parameter value for inDoc
     Map params = new HashMap();
     InputStream inFile = new FileInputStream("C:\\Adobe\Loan.pdf");
@@ -1046,7 +1053,7 @@ Java 呼び出し API を使用して短時間のみ有効なプロセスの `My
 
 1. Create an `InvocationRequest` object by invoking the `ServiceClientFactory` object’s `createInvocationRequest` method and passing the following values:
 
-   * 長期間有効なプロセスを指定する文字列値。プロセスを呼び出す `MyApplication/EncryptDocument` には、を指定しま `MyApplication/EncryptDocument`す。
+   * 長期間有効なプロセスを指定する文字列値。プロセスを呼び出すには、 `MyApplication/EncryptDocument` を指定し `MyApplication/EncryptDocument`ます。
    * プロセス操作名を表す文字列値。通常、短時間のみ有効なプロセス操作の名前は `invoke` です。
    * サービス操作に必要なパラメーター値を含む `java.util.HashMap` オブジェクト。
    * `true` を指定するブール値。これを渡すと同期要求が作成されます（この値は、短時間のみ有効なプロセスを呼び出すために適用されます）。
@@ -1059,7 +1066,7 @@ Java 呼び出し API を使用して短時間のみ有効なプロセスの `My
 
 1. `InvocationReponse` オブジェクトの `getOutputParameter` メソッドを呼び出して、出力パラメーターの名前を指定する文字列値を渡すことによって、プロセスの戻り値を取得します。In this situation, specify `outDoc` ( `outDoc` is the name of the output parameter for the `MyApplication/EncryptDocument` process). 以下の例のように、戻り値を `Document` にキャストします。
 
-   ```as3
+   ```java
     InvocationResponse response = myServiceClient.invoke(request);
     Document encryptDoc = (Document) response.getOutputParameter("outDoc");
    ```
