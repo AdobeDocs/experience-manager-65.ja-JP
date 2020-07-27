@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2113'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,7 @@ AEMワークフローモデルでは、次のことができます。
    * Form Data Model - Form Data Modelのパスを指定します。
    * ArrayList — コレクションのサブタイプを指定します。
 
-1. 変数の説明（オプション）を指定し、をタップして変更 ![](assets/done_icon.png) を保存します。 変数は、左側のペインで使用可能なリストに表示されます。
+1. 変数の説明（オプション）を指定し、「 ![done_icon](assets/done_icon.png) 」をタップして変更を保存します。 変数は、左側のペインで使用可能なリストに表示されます。
 
 変数を作成する場合、次のプラクティスをお勧めします。
 
@@ -97,10 +97,10 @@ AEMワークフローモデルでは、次のことができます。
 次の手順を実行して、変数間のマッピングを追加します。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにあるステップアイコンをタップします。
-1. 「 **変数を設定** 」の手順をワークフローエディターにドラッグ&amp;ドロップし、手順をタップして「 ![](assets/configure_icon.png) （設定）」を選択します。
+1. 「 **変数を設定** 」の手順をワークフローエディターにドラッグ&amp;ドロップし、手順をタップして「 ![configure_icon](assets/configure_icon.png) （設定）」を選択します。
 1. Set Variableダイアログで、 **[!UICONTROL Mapping]** / **[!UICONTROL Mapping]**&#x200B;を選択します。
 1. 「 **Map Variable** 」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。 マッピングモードは、変数のタイプに応じて異なります。
-1. 意味のある式を行うために、より多くの変数をマッピングします。 Tap ![](assets/done_icon.png) to save the changes.
+1. 意味のある式を行うために、より多くの変数をマッピングします。 Tap ![done_icon](assets/done_icon.png) to save the changes.
 
 ### 例1: XML変数をクエリして文字列変数の値を設定する {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -273,8 +273,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## 変数の編集 {#edit-a-variable}
 
 1. ワークフローを編集ページで、ワークフローモデルのサイドキックにある変数アイコンをタップします。 左側のペインの「変数」セクションには、既存の変数がすべて表示されます。
-1. 編集する変数名の横にある ![](assets/edit.png) （編集）アイコンをタップします。
-1. 変数情報を編集し、をタップして変更 ![](assets/done_icon.png) を保存します。 変数の「 **[!UICONTROL 名前]** 」フィールドと「 **[!UICONTROL タイプ]** 」フィールドは編集できません。
+1. 編集する変数名の横にある ![編集](assets/edit.png) （編集）アイコンをタップします。
+1. 変数情報を編集し、 ![done_icon](assets/done_icon.png) をタップして変更を保存します。 変数の「 **[!UICONTROL 名前]** 」フィールドと「 **[!UICONTROL タイプ]** 」フィールドは編集できません。
 
 ## 変数の削除 {#delete-a-variable}
 
@@ -284,7 +284,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. ワークフローを編集ページで、ワークフローモデルのサイドキックにある変数アイコンをタップします。 左側のペインの「変数」セクションには、既存の変数がすべて表示されます。
 1. 削除する変数名の横にある削除アイコンをタップします。
-1. をタップ ![](assets/done_icon.png) して、変数の確認と削除を行います。
+1. 「 ![done_icon](assets/done_icon.png) 」をタップして、変数の確認と削除を行います。
 
 ## 参照 {#references}
 
