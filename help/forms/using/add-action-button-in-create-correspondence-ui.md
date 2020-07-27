@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1910'
 ht-degree: 53%
@@ -107,7 +107,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    | **名前** | **説明** |
    |---|---|
-   | 名前 | 実行するアクションの英数字による名前。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
+   | name | 実行するアクションの英数字による名前。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
    | label | アクションボタンに表示するラベル。 |
    | tooltip | ボタンのツールチップテキスト。ボタンにカーソルを置くと表示されます。 |
    | styleName | アクションボタンに適用するカスタムスタイルの名前。 |
@@ -226,7 +226,7 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
    1. ccrcustomization.js ファイルをダブルクリックして、CRX で開きます。
    1. ファイルに次のコードを貼り付けて、「**すべて保存**」をクリックします。
 
-      ```
+      ```javascript
       /* for adding and handling custom actions in Extensible Toolbar.
         * One instance of handler will be created for each action.
         * CM.domain.CCRCustomActionHandler is actionHandler class.
@@ -432,7 +432,7 @@ For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/form
 DSCSample.jarファイルはrenderLetter APIを使用して、Cが入力として与えたXMLデータからのPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 
 1. Livecycle Workbenchを起動してログインします。
-1. **Window/Show表示/Componentsを選択します**。 コンポーネント表示がWorkbench ES2に追加されます。
+1. **Window/Show表示/Componentsを選択します**。 
 
 1. Right-click **Components** and select **Install Component**.
 
