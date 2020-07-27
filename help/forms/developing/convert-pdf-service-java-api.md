@@ -10,30 +10,33 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: bdd9bb56-14f6-448b-be4a-7c11f670e901
 translation-type: tm+mt
-source-git-commit: e103640784f9d5b00a2a78cead6e904017ad7a53
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
 # Convert PDF Service Java API Quick開始(SOAP) {#convert-pdf-service-java-api-quickstart-soap}
 
-Convert PDFサービスAPIでは、次のクイック開始を使用できます。
+Convert PDFサービスAPIには、次のクイック開始を使用できます。
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのPostScriptへの変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのPostScriptへの変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからJPEGファイルへの変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのJPEGファイルへの変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのPostScriptへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのPostScriptへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
-次のコード例は、 *Loan.pdfというPDFドキュメントを* Loan.psというPostScriptドキュメントに変 *換します*。 (PDFドキュメント [のPostScriptへの変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript))。
+次のコードの例では、 *Loan.pdfというPDFドキュメントを* Loan.psというPostScriptドキュメントに変換します **。 (PDFドキュメントのPostScriptへの [変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -144,11 +147,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからJPEGファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのJPEGファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-次のJavaコードの例では、 *Loan.pdfというPDFドキュメントをJPEGファイルのセットに変換し* 、C:\Adobe directoryフォルダーに保存します。 各ファイルには名 `tempFile[index].jpg`前が付けられ、最初の画像ファイルの名 *前はtempFile0.jpgです*。 (PDF画像 [の画像形式へのドキュメントの変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats))。
+以下のJavaコードの例を使用すると、 *Loan.pdfというPDFドキュメントを一連のJPEGファイルに変換し* 、C:\Adobe directoryフォルダーに保存することができます。 各ファイルには名前が付け `tempFile[index].jpg`られます。最初の画像ファイルの名前は *tempFile0.jpgです*。 (PDFドキュメントの画像形式への [変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
