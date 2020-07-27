@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '568'
+ht-degree: 79%
 
 ---
 
@@ -30,7 +33,7 @@ https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRo
 
 テンプレートが FormSubmission と呼ばれるアプリケーションの AEM リポジトリにある場合、URI は次のとおりです。
 
-```
+```http
 http://localhost:4502/content/xfaforms/profiles/default.html?
  contentRoot=crx:///content/dam/formsanddocuments/FormSubmission/1.0
  &template=sampleForm.xdp
@@ -65,18 +68,18 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
 
 | パラメーター | 説明 |
 |---|---|
-| dataRef | このパラメーターはテンプレートと結合されるデータファイルの&#x200B;**絶対パス**&#x200B;を指定します。このパラメーターは、xml形式でデータを返すRESTサービスへのURLにすることができます。 |
+| dataRef | このパラメーターはテンプレートと結合されるデータファイルの&#x200B;**絶対パス**&#x200B;を指定します。このパラメーターには、xml形式でデータを返すRESTサービスへのURLを指定できます。 |
 | data | このパラメーターはテンプレートと結合される UTF-8 エンコードされたデータバイトを指定します。このパラメーターが指定されている場合、HTML5 form は dataRef パラメーターを無視します。 |
 
 ### レンダリングパラメーターの送信 {#passing-the-render-parameter}
 
-HTML5 forms は 3 つの方法によるレンダリングパラメーターの送信をサポートしています。URL、キー値ペア、およびプロファイルノードを使用してパラメーターを渡すことができます。レンダリングパラメーターでは、キー値ペアは最高の優先度を持ち、プロファイルノードがその次に高い優先度を持ちます。URLリクエストパラメーターは、最も優先度が低い値を保持します。
+HTML5 forms は 3 つの方法によるレンダリングパラメーターの送信をサポートしています。URL、キー値ペア、およびプロファイルノードを使用してパラメーターを渡すことができます。レンダリングパラメーターでは、キー値ペアは最高の優先度を持ち、プロファイルノードがその次に高い優先度を持ちます。URLリクエストパラメーターは最も優先度が低いパラメーターです。
 
 * **URL リクエストパラメーター**: レンダリングパラメーターを URL で指定できます。 URL リクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されます。For example, the following submit URL contains template parameter in the URL: `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
 * **SetAttribute リクエストパラメーター**: レンダリングパラメーターをキー値ペアとして指定できます。 SetAttribute リクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されません。リクエストを他の JSP から HTML5 form のプロファイルレンダラ― JSP に転送し、リクエストオブジェクトで *setAttribute* を使用してすべてのレンダリングパラメーターを渡すことができます。この方法は最高の優先度を持ちます。
 
-* **プロファイルノードリクエストパラメーター：** レンダリングパラメータは、ノードノードのノードプロパティとしてプロファイルできます。 プロファイルノードリクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されません。プロファイルノードは、リクエストが送信されるノードです。パラメーターをノードプロパティとして指定するには、CRXDE lite を使用します。
+* **プロファイルノードリクエストパラメーター：** レンダリングパラメータは、プロファイルノードのノードプロパティとして指定できます。 プロファイルノードリクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されません。プロファイルノードは、リクエストが送信されるノードです。パラメーターをノードプロパティとして指定するには、CRXDE lite を使用します。
 
 ### 送信パラメーター {#submit-parameters}
 
