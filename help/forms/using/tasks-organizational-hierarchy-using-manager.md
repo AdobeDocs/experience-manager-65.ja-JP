@@ -11,7 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 79%
 
 ---
 
@@ -20,20 +23,20 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 AEM Forms ワークスペースで、マネージャーは階層のメンバー（直属または直属ではない部下）に割り当てられたタスクにアクセスし、さまざまなアクションを実行できるようになりました。タスクは、AEM Forms ワークスペースの「TODO」タブで利用できます。直属の部下のタスクでサポートされているアクションを以下に示します。
 
-**ダイレクト** ・レポートから任意のタスクに転送します。
+**転送** タスクを直属の部下から任意のユーザーに転送します。
 
 **要求** ：直属の部下のタスクを要求します。
 
 **要求して開く** 直属の部下のタスクを要求し、管理者のTODOリストで自動的に開きます。
 
-**拒否** ：他のユーザーによって直属の部下に転送されたタスクを拒否します。 このオプションは、他のユーザーによって直属の部下に転送されたタスクで使用できます。
+**拒否** (Reject)他のユーザーによって直属の部下に転送されたタスクを拒否します。 このオプションは、他のユーザーによって直属の部下に転送されたタスクで使用できます。
 
 AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持つユーザーのタスクのみに制限しています。そのようなチェックを行うことで、ユーザーは自分がアクセス許可を持つタスクのみを取得できることを確認します。サードパーティの Web サービスと実装を使用して階層を定義すると、組織はマネージャーと直属の部下をニーズに合うようにカスタマイズできます。
 
 1. DSC を作成します。For more information, see &#39;Developing Components for AEM Forms&#39; topic in [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) guide.
 1. DSC で、階層管理の新しい SPI を定義して、AEM Forms ユーザー内の直属の部下と階層を定義します。Java™ コードスニペットのサンプルを以下に示します。
 
-   ```as3
+   ```java
    public class MyHierarchyMgmtService
    {
         /*
@@ -68,7 +71,7 @@ AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持�
 
 1. component.xml ファイルを作成します。spec-id が以下のコードスニペットと同じである必要があることを確認してください。再利用できるサンプルコードスニペットを以下に示します。
 
-   ```as3
+   ```xml
    <component xmlns="https://adobe.com/idp/dsc/component/document">
        <component-id>com.adobe.sample.SampleDSC</component-id>
        <version>1.1</version>
@@ -110,7 +113,7 @@ AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持�
    </component>
    ```
 
-1.  Workbench を介して DSC をデプロイします。サービスを再 `ProcessManagementTeamTasksService` 起動します。
+1.  Workbench を介して DSC をデプロイします。サー `ProcessManagementTeamTasksService` ビスを再起動します。
 1. ブラウザーを更新するか、または再度ユーザーでログアウト / ログインする必要がある場合があります。
 
 次の画面は、直属の部下のタスクへのアクセスと利用可能なアクションを示しています。
