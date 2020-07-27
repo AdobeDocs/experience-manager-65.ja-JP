@@ -1,6 +1,6 @@
 ---
-title: Output Service Java API Quick開始(SOAP)
-seo-title: Output Service Java API Quick開始(SOAP)
+title: OutputサービスJava APIクイック開始(SOAP)
+seo-title: OutputサービスJava APIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 34cb1fc7-50a9-4db8-aed1-dbd3480d1323
@@ -10,48 +10,51 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1253'
+ht-degree: 0%
 
 ---
 
 
-# Output Service Java API Quick開始(SOAP) {#output-service-java-api-quick-start-soap}
+# OutputサービスJava APIクイック開始(SOAP) {#output-service-java-api-quick-start-soap}
 
 Outputサービスでは、Java API Quick開始(SOAP)を使用できます。
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したドキュメントXDPファイルに基づくPDFアプリケーションの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したPDF/Aドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDF/Aドキュメントの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用してドキュメントをOutputサービスに渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用してOutputサービスにドキュメントを渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用してAEM Formsドキュメント内のリポジトリをOutputサービスに渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用して、AEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したフラグメントに基づくPDFドキュメントの作成](#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したファイルへの印刷](#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したファイルへの印刷](#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したネットワークプリンターへの印刷ストリームの送信](output-service-java-api-quick.md#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したネットワークプリンターへの印刷ストリームの送信](output-service-java-api-quick.md#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した複数のPDFファイルの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用した複数のPDFファイルの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した検索ルールの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用した検索ルールの作成](output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの変換](output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントの変換](output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行でき、接続モードはSOAPに設定する必要があります。
+AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Forms Serverオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsによるプログラミング」にあるクイック開始は、Forms Serverオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 *Loan.pdfは、クライアントコンピューターではなく* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメント [の作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
+次のJavaコードの例を使用すると、 *Loan.pdfという名前のPDFドキュメントを作成できます*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、 *Loan.xmlという名前のXMLデータファイルに基づいています*。 Loan *.pdf* は、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメントの [作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -165,15 +168,15 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したドキュメントXDPファイルに基づくPDFアプリケーションの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 このXDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされま `Applications/FormsApplication`す。 URIパスは、です `repository:///Applications/FormsApplication/1.0/FormsFolder/`。 *Loan.pdfは、クライアントコンピューターではなく* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメント [の作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
+次のJavaコードの例を使用すると、 *Loan.pdfという名前のPDFドキュメントを作成できます*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、 *Loan.xmlという名前のXMLデータファイルに基づいています*。 XDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされ `Applications/FormsApplication`ます。 URIパスが `repository:///Applications/FormsApplication/1.0/FormsFolder/`です。 Loan *.pdf* は、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメントの [作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
 
 >[!NOTE]
 >
->このクイック開始を実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 FormsFolderという名前のアプリケーション内にフォルダーを作成し、そのフォルダーにXDPファイルを配置します。 詳しくは、「PDFの生成」を [参照してください](/help/forms/developing/creating-document-output-streams.md)*。*
+>このクイック開始を実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 アプリケーション内にFormsFolderという名前のフォルダーを作成し、そのフォルダーにXDPファイルを配置します。 詳しくは、「PDFドキュメントの [生成](/help/forms/developing/creating-document-output-streams.md)*」を参照してください。*
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -288,27 +291,27 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用して、ドキュメント内のリポジトリをOutputサービスに渡す {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用して、リポジトリ内のドキュメントをOutputサービスに渡す {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
 
-次のJavaコードは、XDPファイルをリポジトリから取得し、インスタンス内でOutputサービスに渡し `com.adobe.idp.Document` ます。 このXDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされま `Applications/FormsApplication`す。 URIパスは、です `repository:///Applications/FormsApplication/1.0/FormsFolder/`。
-
->[!NOTE]
->
->リポジトリAPIは、この場所からXDPファイルを取得するために使用されます。 ( [Reading Resources](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照)。
-
-また、コンテンツのルート値が `repository:///Applications/FormsApplication/1.0/FormsFolder/` オブジェクトのメソッ `OutputClient` ド(2番目のパ `generatePDFOutput2` ラメーター)に渡されます。 この値は、画像などのフォームコラテラルがこの場所に保存されることをOutputサービスに通知するためにOutputサービスに渡されます。
+次のJavaコードは、リポジトリからXDPファイルを取得し、それをインスタンス内のOutputサービスに渡し `com.adobe.idp.Document` ます。 XDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされ `Applications/FormsApplication`ます。 URIパスが `repository:///Applications/FormsApplication/1.0/FormsFolder/`です。
 
 >[!NOTE]
 >
->メソッドを呼び出すときと同じ方法で、コンテンツのルート値を設定で `generatePrintedOutput2` きます。
+>Repository APIは、この場所からXDPファイルを取得するために使用します。 ( [Reading Resources](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照)。
 
-*Loan.pdfは* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (リポジトリ [内のドキュメントをOutputサービスに渡すを参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service))。
+また、コンテンツのルート値 `repository:///Applications/FormsApplication/1.0/FormsFolder/` が `OutputClient` オブジェクトの `generatePDFOutput2` メソッド（2番目のパラメータ）に渡されることにも注意してください。 この値はOutputサービスに渡され、画像などのフォームコラテラルがこの場所に保存されていることをOutputサービスに通知します。
 
 >[!NOTE]
 >
->このクイック開始を実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 FormsFolderという名前のアプリケーション内にフォルダーを作成し、そのフォルダーにXDPファイルを配置します。
+>メソッドを呼び出すときと同じ方法で、コンテンツのルート値を設定でき `generatePrintedOutput2` ます。
 
-```as3
+Loan.pdf *は* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (「リポジトリ内のドキュメントーをOutputサービスに [渡す」を参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service))。
+
+>[!NOTE]
+>
+>このクイック開始を実行する前に、Applications/FormsApplicationという名前のAEM Formsアプリケーションを作成してください。 アプリケーション内にFormsFolderという名前のフォルダーを作成し、そのフォルダーにXDPファイルを配置します。
+
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -440,11 +443,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの作成 {#quick_start_soap_mode_creating_a_pdf_document_using_the_java_api-1}
+## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントの作成 {#quick_start_soap_mode_creating_a_pdf_document_using_the_java_api-1}
 
-次のJavaコードの例は、 *Loan.pdfという名前のPDFドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 *Loan.pdfは、クライアントコンピューターではなく* 、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメント [の作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
+次のJavaコードの例を使用すると、 *Loan.pdfという名前のPDFドキュメントを作成できます*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、 *Loan.xmlという名前のXMLデータファイルに基づいています*。 Loan *.pdf* は、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDFドキュメントの [作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -550,11 +553,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したPDF/Aドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したPDF/Aドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api}
 
-次のJavaコードの例は、 *LoanArchive.pdfという名前のPDF/Aドキュメントを作成します*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、Loan.xmlという名前のXMLデータファイルに基づ *いています*。 LoanArchive.pdfは ** 、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDF/A [ドキュメントの作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents))。
+以下のJavaコードの例を使用すると、LoanArchive.pdfという名前のPDF/Aドキュメント *が作成されます*。 このPDFドキュメントは、 *Loan.xdpという名前のフォームデザインと* 、 *Loan.xmlという名前のXMLデータファイルに基づいています*。 LoanArchive.pdf ** は、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (PDF/Aドキュメントの [作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -668,11 +671,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用してドキュメントをOutputサービスに渡す {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用してOutputサービスにドキュメントを渡す {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
 
-次のJavaクイック開始は、 *Content Servicesから* Loan.xdpファイルを取得します。 このXDPファイルは、内にあります `space /Company Home/Form Designs`。 XDPファイルがインスタンスで返さ `com.adobe.idp.Document` れます。 インス `com.adobe.idp.Document` タンスがOutputサービスに渡されます。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf*というPDFファイルとして保存されます。 「ファイルのURI」オプションが設定されているので、PDFファイル*Loan.pdf *もAEM FormsをホストするJ2EEアプリケーションサーバーに保存されます。 (Content Services ES2 [にあるドキュメントをOutputサービスに渡すを参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service))。
+次のJavaクイック開始は、 *Content ServicesからLoan.xdp* ファイルを取得します。 このXDPファイルは、にあり `space /Company Home/Form Designs`ます。 XDPファイルがインスタンスで返され `com.adobe.idp.Document` ます。 この `com.adobe.idp.Document` インスタンスはOutputサービスに渡されます。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf *というPDFファイルとして保存されます。 「ファイルURI」オプションが設定されているので、PDFファイル*Loan.pdf *もJ2EEアプリケーションサーバーホストAEM Formsに保存されます。 (「Content Services ES2に [あるドキュメントーをOutputサービスに渡す」を参照](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -807,11 +810,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したフラグメントに基づくPDFドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api}
 
-次のJavaコードの例は、Assemblerサービスによってドキュメントされたフォームデザインに基づいてPDFアセンブリを作成します。 Assemblerサービスは、複数のXDPファイルにあるフラグメントを1つのフォームデザインにアセンブリします。 Assemblerサービスを呼び出すアプリケーションロジックは、という名前のユーザー定義メソッドにありま `GetFormDesign`す。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf*というPDFファイルとして保存されます。 (フラグメント [を使用したPDFドキュメントの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments))。
+以下のJavaコードの例を使用すると、Assemblerサービスによってアセンブリされたフォームデザインに基づいてPDFドキュメントを作成できます。 Assemblerサービスは、複数のXDPファイルにあるフラグメントを1つのフォームデザインにアセンブリします。 Assemblerサービスを呼び出すアプリケーションロジックは、という名前のユーザー定義メソッドにあり `GetFormDesign`ます。 非インタラクティブフォームは、クライアントコンピューター上に*Loan.pdf *というPDFファイルとして保存されます。 (フラグメントを使用したPDFドキュメントの [作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1015,11 +1018,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したファイルへの印刷 {#quick-start-soap-mode-printing-to-a-file-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したファイルへの印刷 {#quick-start-soap-mode-printing-to-a-file-using-the-java-api}
 
-次のJavaコードの例は、MortgageForm.psという名前のPostScriptファイルに出力ストリームを *印刷します*。 (ファイル [への印刷を参照](/help/forms/developing/creating-document-output-streams.md#printing-to-files))。
+以下のJavaコードの例は、MortgageForm.psという名前のPostScriptファイルに出力ストリームを印刷 *します*。 (ファイルへの [印刷を参照](/help/forms/developing/creating-document-output-streams.md#printing-to-files))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1127,11 +1130,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したネットワークプリンターへの印刷ストリームの送信 {#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したネットワークプリンターへの印刷ストリームの送信 {#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api}
 
-次のJavaコードの例は、PostScript印刷ストリームを\\Printer1\Printerという名前のネットワークプリンターに送信 *します*。 2部がプリンターに送信されます。 (Sending Print Streams [to Printersを参照](/help/forms/developing/creating-document-output-streams.md#sending-print-streams-to-printers))。
+次のJavaコードの例は、PostScript印刷ストリームを\\Printer1\Printerという名前のネットワークプリンターに送信し *ます*。 2部がプリンターに送信されます。 (Sending Print Streams to Printersを参照 [](/help/forms/developing/creating-document-output-streams.md#sending-print-streams-to-printers))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1252,11 +1255,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用した複数のPDFファイルの作成 {#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用した複数のPDFファイルの作成 {#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api}
 
-次のJavaコードは、 *Loan_data_batch.xmlというXMLデータファイル内の各データレコードに対して複数のPDFファイルを作成します*。 ファイルがC:\Adobe directoryフォルダーに書き込まれます。 PDFファイルは、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (複数の出 [力ファイルの作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-multiple-output-files))。
+次のJavaコードは、 *Loan_data_batch.xmlというXMLデータファイル内のデータレコードごとに複数のPDFファイルを作成します*。 ファイルはC:\Adobe directoryフォルダーに書き込まれます。 PDFファイルは、クライアントコンピューターではなく、C:\Adobe folder located on the J2EE application server hosting AEM Formsフォルダーに書き込まれます。 (複数の出力ファイルの [作成を参照](/help/forms/developing/creating-document-output-streams.md#creating-multiple-output-files))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1373,11 +1376,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用した検索ルールの作成 {#quick-start-soap-mode-creating-search-rules-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用した検索ルールの作成 {#quick-start-soap-mode-creating-search-rules-using-the-java-api}
 
-次のJavaコードの例を使用すると、Outputサービスで検索する2つのテキストパターンを作成できます。 最初のテキストパターンは「住宅ローン」です。 見つかった場合、Outputサービスは *Mortgage.xdpという名前のフォームデザインを使用します*。 2つ目のテキストパターンは自動車です。 見つかった場合、Outputサービスは *AutomobileLoan.xdpという名前のフォームデザインを使用します*。 どちらのテキストパターンも見つからない場合、Outputサービスは、* Loan.xdpという名前のデフォルトのフォームデザインを使用します。 *(「検索ル [ールの作成](/help/forms/developing/creating-document-output-streams.md#creating-search-rules)」を参照)。
+次のJavaコードの例を使用すると、Outputサービスで検索する2つのテキストパターンを作成できます。 最初のテキストパターンは「住宅ローン」です。 見つかった場合、Outputサービスは *Mortgage.xdpという名前のフォームデザインを使用します*。 2つ目のテキストパターンは「自動車」です。 見つかった場合、OutputサービスはAutomobileLoan.xdpという名前のフォームデザインを使用 *します*。 テキストパターンが見つからない場合、OutputサービスではLoan.xdpという名前のデフォルトのフォームデザインが使用されます。 *(「検索ルールの [作成](/help/forms/developing/creating-document-output-streams.md#creating-search-rules)」を参照)。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1505,11 +1508,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの変換 {#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントの変換 {#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfという名前のインタラクティブPDFドキュメントを* 、NonInteractiveLoan.pdfという名前の非インタラクティブPDFドキュメントに変 *換します*。 (PDFドキュメント [の統合](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)を参照)。
+次のJavaコードの例を使用すると、 *Loan.pdfという名前のインタラクティブPDFドキュメントをNonInteractiveLoan.pdfという名前の非インタラクティブPDFドキュメントに変換でき***&#x200B;ます。 (PDF [ドキュメントの分割・統合を参照](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
