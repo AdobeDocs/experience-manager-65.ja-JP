@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 22%
@@ -85,11 +85,11 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 * **インボックスのパス**
 
-   (*Required*) The path, relative to the user&#39;s node (/home/users/*username*), to use for the **`inbox`** folder. パスの末尾にスラッシュ「/」を付けることはできません。 Default is */mail/inbox*.
+   (*Required*) The path, relative to the user&#39;s node (/home/users/*username*), to use for the `inbox` folder. パスの末尾にスラッシュ「/」を付けることはできません。 Default is */mail/inbox*.
 
 * **送信済みアイテムのパス**
 
-   (*Required*) The path, relative to the user&#39;s node (/home/users/*username*), to use for the **`send items`** folder. パスの末尾にスラッシュ「/」を付けることはできません。 Default is */mail/sentitems* .
+   (*Required*) The path, relative to the user&#39;s node (/home/users/*username*), to use for the `sent items` folder. パスの末尾にスラッシュ「/」を付けることはできません。 Default is */mail/sentitems* .
 
 * **サポートの添付ファイル**
 
@@ -111,13 +111,13 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
    「supportAttachments」をオンにすると、この値によりすべての添付ファイルの最大許容合計サイズ（バイト単位）が指定されます。Default is *104857600* (100 MB).
 
-* **添付ファイルの種類のブロックリスト**
+* **添付ファイルブロックリストタイプの**
 
-   ファイル名拡張子のブロックリスト。先頭に「**.**」というプレフィックス付き）のブラックリストです。ブロックリストに含まれていない場合は、拡張が許可されます。 Extensions may be added or removed using the &#39;**+**&#39; and &#39;**-**&#39; icons.
+   ファイル名拡張子のブロックリスト。先頭に「**.**」というプレフィックス付き）のブラックリストです。そうでないブロックリストに加える場合は、拡張が許可されます。 Extensions may be added or removed using the &#39;**+**&#39; and &#39;**-**&#39; icons.
 
 * **許可されている添付ファイルの種類**
 
-   **(*操作が必要*)** ブロックリスト拡張子の許可リスト（拡張子の逆）。 To allow all filename extensions, except for those blocklisted, use the &#39;**-**&#39; icon to remove the single empty entry.
+   **(*操作が必要*)** ファイル名拡張子の許可リスト(の逆)。 To allow all filename extensions, except for those blocklisted, use the &#39;**-**&#39; icon to remove the single empty entry.
 
 * **サービスセレクター**
 
