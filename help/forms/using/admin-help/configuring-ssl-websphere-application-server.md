@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1240'
+ht-degree: 96%
 
 ---
 
@@ -43,7 +46,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
 1. /etc ディレクトリにあるグループファイルをテキストエディターで開きます。
 1. 手順 2 で作成したユーザーを `root` グループに追加します。
-1.  ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 1. （SSL を有効にした UNIX）root ユーザーとして WebSphere を起動し、停止します。
 
 ### WebSphere 用の Windows ユーザーの作成 {#create-a-windows-user-for-websphere}
@@ -70,7 +73,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 1. 「Administrative」セキュリティで、「**Administrative user roles**」を選択します。
 1. 「追加」をクリックして次の手順を実行します。
 
-   1. **型(**&amp;A);ast;をクリックし、「検索」をクリックします。
+   1. Type **&amp;ast;** in the search box and click search.
    1. ロールの下の「**Administrator**」をクリックします。
    1. 新規作成したユーザーを「Mapped to role」に追加し、「Administrator」にマッピングします。
 
@@ -156,7 +159,7 @@ https で始まる URL を変換するには、その URL の署名者証明書�
 
 ## 動的ポートの設定 {#configuring-dynamic-ports}
 
-IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。永続的な制限については、https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
+IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。恒久的な制限については、https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
 
 動的ポートを設定し、問題を解決するには、次の手順を実行してください。
 
@@ -173,9 +176,9 @@ IBM WebSphere では、グローバルセキュリティが有効な場合、ORB
 ## sling.properties ファイルを構成します。{#configure-the-sling-properties-file}
 
 1. Open `[aem-forms_root]`\crx-repository\launchpad\sling.properties file for editing.
-1. プロパティを `sling.bootdelegation.ibm` 見つけ、その値 `com.ibm.websphere.ssl.*`フィールドに追加します。 更新されたフィールドは次のようになります。
+1. プロパティを見つけ `sling.bootdelegation.ibm` て、その値フィールド `com.ibm.websphere.ssl.*`に追加します。 更新されたフィールドは次のようになります。
 
-   ```as3
+   ```java
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
    ```
 
