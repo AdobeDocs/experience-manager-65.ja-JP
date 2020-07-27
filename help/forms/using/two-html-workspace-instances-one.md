@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 70%
 
 ---
 
@@ -29,7 +32,7 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
 1. /libs にあるフォルダー ws を /apps にペーストします。このフォルダーの名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。
 1. In `GET.jsp` at `/apps/ws2`, make the following code changes. 次のコードを
 
-   ```
+   ```html
    <html lang="en">
    <head>
        <meta charset="utf-8">
@@ -43,7 +46,7 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
 
    次のコードで置き換えます。
 
-   ```
+   ```html
    <html lang="en">
    <head>
        <meta charset="utf-8">
@@ -79,9 +82,9 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
    }
    ```
 
-1. atおよ `userinfo.js` びで、string `/apps/ws2/js/runtime/models` を `/apps/ws2/js/runtime/views`に変更し `/lc/content/ws` ます `lc/content/ws2`。
+1. atと `userinfo.js` で、stringを `/apps/ws2/js/runtime/models` に変更し `/apps/ws2/js/runtime/views``/lc/content/ws``lc/content/ws2`ます。
 
-1. で、関 `/apps/ws2/js/runtime/services/service.js`数内のパスをに変 `getLocalizationData` 更します `/lc/apps/ws2/Locale.html`。
+1. で、 `/apps/ws2/js/runtime/services/service.js`function内のパスをに変更 `getLocalizationData` し `/lc/apps/ws2/Locale.html`ます。
 
 1. To refer to `pdf.html` of the new Workspace, change the path of `pdf.html` in `/apps/ws2/js/runtime/views/forms/pdftaskform.js`.
 
@@ -91,4 +94,4 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
 
 1. In properties of `ws2`, change value of `sling:redirect` to `content/ws2`.
 
-1. の値をからに変 `sling:match` 更します `^[^/\||]/[^/\||]/ws2$`。
+1. の値をから `sling:match` に変更し `^[^/\||]/[^/\||]/ws2$`ます。
