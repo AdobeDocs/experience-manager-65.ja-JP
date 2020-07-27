@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 53%
 
 ---
 
@@ -22,7 +25,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 1. In the `/apps/ws/locales/en-US/translation.json` file, change the values of `wserror` to the customized values. 次に例を示します。
 
-   ```
+   ```json
    "wserror" : {
     "message" : "Message:",
     "ComponentUI" : "Component UI:",
@@ -30,15 +33,18 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
     "ok" : "Ok",
     "ErrorCode" : "Error Code:"
     }
-   
+   ```
+
    To
-    "wserror" : {
-    "message" : "Error Message:",
-    "ComponentUI" : "UI Component:",
-    "error" : "Something went wrong!!",
-    "ok" : "Ok",
-    "ErrorCode" : "Error Code:"
-    }
+
+   ```json
+   "wserror" : {
+   "message" : "Error Message:",
+   "ComponentUI" : "UI Component:",
+   "error" : "Something went wrong!!",
+   "ok" : "Ok",
+   "ErrorCode" : "Error Code:"
+   }
    ```
 
    >[!NOTE]
@@ -193,25 +199,27 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
        white-space: nowrap;
        overflow: hidden;
    }
-   
+   ```
+
    To
-   
+
+   ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
    #userSearchPopUp #actionbar span, #taskarea .action button span, .oooAction button span, .wsMessageContainerDiv .action button span
    {
-       display: block;
-       text-overflow: ellipsis;
-       white-space: nowrap;
-       overflow: hidden;
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
    }
    
    /*-------- Customized following Portion --------*/
    .error-dialog .foot-bar button span
    {
-       display: block;
-       text-overflow: ellipsis;
-       text-decoration:underline;
-       white-space: wrap;
+      display: block;
+      text-overflow: ellipsis;
+      text-decoration:underline;
+      white-space: wrap;
    }
    ```
 
@@ -236,9 +244,11 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
     box-shadow:0px 0px 10px 3px #888;
     display:none;
 }
+```
 
 To
 
+```css
 .error-dialog{
     border: 9px solid #DEDEDE;
     width: 200px;
@@ -267,9 +277,11 @@ To
     overflow: hidden;
     white-space: nowrap;
 }
+```
 
 To
 
+```css
 .error-dialog .head-bar{
     height: 40px;
     background: url(../images/error.png) no-repeat 7px 10px #DEDEDE;
