@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '4102'
 ht-degree: 60%
@@ -200,7 +200,7 @@ request属性を使用して、データソースから関連付けられたプ�
 
 1. head.jspファイルに次のテキストを含めます。
 
-   ```
+   ```jsp
    <%Map paraMap = new HashMap();
     paraMap.put("<request_attribute>",request.getParameter("<request_attribute>"));
     request.setAttribute("paramMap",paraMap);%>
@@ -411,7 +411,7 @@ In this example, you can also choose the output model object as Person and navig
 * **オフ**: 検証なし
 * **基本**: FDMは、「required」制約と「nullable」制約に基づいて検証を実行します
 
-フ `ValidationOptions`ラグに値が設定されていない場合、 **BASIC** 検証は入力データに対して実行されます。
+フ `ValidationOptions`ラグに値が設定されていない場合、 **入力データに対してBASIC** 検証が実行されます。
 
 検証フラグを **FULLに設定する例を次に示します**。
 
@@ -510,24 +510,24 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
 
 この例では、Swaggerファイルで定義されている最大制約、最小制約、必須制約に基づいて入力データが検証されます。 注文IDが存在し、その値が1 ～ 10の場合にのみ、入力データが検証条件を満たします。
 
-```xml
-parameters: [
-{
-name: "orderId",
-in: "path",
-description: "ID of pet that needs to be fetched",
-required: true,
-type: "integer",
-maximum: 10,
-minimum: 1,
-format: "int64"
-}
-]
+```json
+   parameters: [
+   {
+   name: "orderId",
+   in: "path",
+   description: "ID of pet that needs to be fetched",
+   required: true,
+   type: "integer",
+   maximum: 10,
+   minimum: 1,
+   format: "int64"
+   }
+   ]
 ```
 
 入力データが検証条件を満たさない場合は、例外が表示されます。 ログレベルが **Debugに設定されている場合**、エラーが **error.log** ファイルに記録されます。 例：
 
-```java
+```verilog
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}
 ```
 
