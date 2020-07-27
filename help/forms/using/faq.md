@@ -11,10 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 407b4d0b86c6bcbff11a085ea10bd3bf90115257
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
 workflow-type: tm+mt
 source-wordcount: '1970'
-ht-degree: 80%
+ht-degree: 79%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 80%
 
    1. フォームの初期化イベントを使用して、サブフォームのプライマリインスタンスを非表示にします。例えば、フォームを初期化する際にサブフォームのプライマリインスタンスを非表示にするには、以下のようなコードを記述します。また、このコードでアプリケーションタイプを確認し、スクリプトをクライアント側でのみ実行することもできます。
 
-      ```
+      ```javascript
       if ((xfa.host.appType == "HTML 5" || xfa.host.appType == "Exchange-Pro" || xfa.host.appType == "Reader")&&(_RepeatSubform.count == 1)&&(form1.Page1.Subform1.RepeatSubform.Key.rawValue == null)) {
       RepeatSubform.presence = "hidden";
       }
@@ -53,7 +53,7 @@ ht-degree: 80%
 
       このコードにより、サブフォームの非表示インスタンスが存在するかどうかが確認されます。サブフォームの非表示インスタンスが検出された場合は、そのインスタンスが削除され、サブフォームの新しいインスタンスが挿入されます。サブフォームの非表示インスタンスが検出されなかった場合は、単純にサブフォームの新しいインスタンスが挿入されます。
 
-      ```
+      ```javascript
       if (RepeatSubform.presence == "hidden")
       {
       RepeatSubform.instanceManager.insertInstance(0);
@@ -69,7 +69,7 @@ ht-degree: 80%
 
       このコードにより、サブフォームのカウントが確認されます。サブフォームのカウントが「1」になると、サブフォームが非表示になります。その際、サブフォームが削除されることはありません。
 
-      ```
+      ```javascript
       if (RepeatSubform.instanceManager.count == 1) {
       RepeatSubform.presence = "hidden";
       } else {
@@ -79,7 +79,7 @@ ht-degree: 80%
 
    1. フォームの presubmit イベントを編集用に開きます。このイベントに、編集前にスクリプトの非表示インスタンスを削除するための以下のスクリプトを追加します。これにより、非表示サブフォームの送信時に、そのサブフォームのデータが送信されなくなります。
 
-      ```
+      ```javascript
       if(RepeatSubform.instanceManager.count == 1 && RepeatSubform.presence == "hidden") {
       RepeatSubform.instanceManager.removeInstance(0);
       }
@@ -91,11 +91,11 @@ ht-degree: 80%
 
 1. HTML5で、一部のテキストが切り捨てられるか、正しく表示されないのはなぜですか。
 
-   回答：Draw または Caption のテキスト要素に十分なスペースが与えられていないとき、モバイルフォームのレンダリングでテキストが切り捨てらて表示されます。この切り捨ては、AEM Forms Designerのデザイン表示でも確認できます。 この切り捨ては PDF では対処できますが、HTML5 フォームでは対処できません。この問題を回避するには、AEM Forms Designer のデザインモードで切り捨てが発生しないよう、Draw または Caption のテキスト用に十分なスペースを用意します。
+   回答：Draw または Caption のテキスト要素に十分なスペースが与えられていないとき、モバイルフォームのレンダリングでテキストが切り捨てらて表示されます。この切り捨ては、AEM Formsデザイナのデザイン表示でも確認できます。 この切り捨ては PDF では対処できますが、HTML5 フォームでは対処できません。この問題を回避するには、AEM Forms Designer のデザインモードで切り捨てが発生しないよう、Draw または Caption のテキスト用に十分なスペースを用意します。
 
 1. 不足しているコンテンツまたは重なり合っているコンテンツに関連するレイアウト問題が見られます。理由は？
 
-   回答： Draw Text要素またはDraw Image要素が、同じ位置に他の重なり合う要素（例えばRectangle）と共に存在する場合、Draw Textのコンテンツが(AEM Forms Designerの階層表示で)ドキュメント順序の後に来ると、そのコンテンツは表示されません。 PDF は透明レイヤーをサポートしていますが、HTML／ブラウザーは透明レイヤーをサポートしていません。
+   回答： Draw Text要素またはDraw Image要素が、同じ位置に他の重なり合う要素（例えばRectangle）と共に存在する場合、Draw Textのコンテンツが(AEM FormsDesigner階層表示で)ドキュメント順序の後に来ると、表示されません。 PDF は透明レイヤーをサポートしていますが、HTML／ブラウザーは透明レイヤーをサポートしていません。
 
 1. HTML フォームで表示されるフォントの一部がフォームをデザインする間に使用されるものと違う理由は？
 
@@ -119,7 +119,7 @@ ht-degree: 80%
 
    PDF フォームの場合、Adobe Acrobat には中間データ構造およびオブジェクトを作成するための組み込み XTG エンジンがあります。Acrobat はレイアウトおよびスクリプトも管理します。
 
-   HTML5 フォームの場合、ブラウザーには未加工の XDP バイトで中間データ構造およびオブジェクトを作成するための組み込み XTG エンジンはありません。このため、HTML5 フォームの場合、中間構造はサーバーで生成され、クライアントに送信されます。クライアントでは、JavaScript ベースのスクリプトおよびレイアウトエンジンがこれらの中間構造を使用します。
+   HTML5 フォームの場合、ブラウザーには未加工の XDP バイトで中間データ構造およびオブジェクトを作成するための組み込み XTG エンジンはありません。このため、HTML5 フォームの場合、中間構造はサーバーで生成され、クライアントに送信されます。クライアントでは、JavaScriptベースのスクリプトおよびレイアウトエンジンはこれらの中間構造を使用します。
 
    中間構造のサイズは、元の XDP および XDP にマージされたデータのサイズによって異なります。 
 
