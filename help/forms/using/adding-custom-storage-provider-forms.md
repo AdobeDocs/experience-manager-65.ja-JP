@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 75%
 
 ---
 
@@ -24,10 +27,10 @@ By default, AEM Forms stores the user data associated with the draft and submiss
 
 ## 前提条件  {#prerequisites}
 
-* フォームポー [タルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
+* フ [ォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
 * Create a [forms portal page](/help/forms/using/creating-form-portal-page.md)
-* フォームポ [ータルのアダプティブフォームの有効化](/help/forms/using/draft-submission-component.md)
-* カスタム [ストレージの実装の詳細](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* フォームポータルでの [アダプティブフォームの有効化](/help/forms/using/draft-submission-component.md)
+* カスタムストレージの [導入の詳細を知る](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## ドラフトデータサービス {#draft-data-service}
 
@@ -181,7 +184,7 @@ public interface SubmitDataService {
 }
 ```
 
-フォームポータルでは、UUID（Universally Unique Identifier）の概念を使用して、ドラフトや送信済みフォームそれぞれに一意の ID を生成します。自分の一意の ID を作成することもできます。インターフェイスFPKeyGeneratorServiceを実装し、そのメソッドをオーバーライドし、カスタムロジックを開発して、すべてのドラフトおよび送信済みフォームに対してカスタムの一意のIDを生成できます。 また、カスタム ID 生成の実装のサービスランクを 0 より高く設定します。これにより、デフォルトの実装ではなくカスタムの実施が確実に使用されるようになります。
+フォームポータルでは、UUID（Universally Unique Identifier）の概念を使用して、ドラフトや送信済みフォームそれぞれに一意の ID を生成します。自分の一意の ID を作成することもできます。インターフェイスFPKeyGeneratorServiceを実装し、そのメソッドを上書きし、カスタムロジックを開発して、すべてのドラフトおよび送信済みフォームに対してカスタムの一意のIDを生成できます。 また、カスタム ID 生成の実装のサービスランクを 0 より高く設定します。これにより、デフォルトの実装ではなくカスタムの実施が確実に使用されるようになります。
 
 ```java
 public interface FPKeyGeneratorService {
@@ -202,8 +205,8 @@ public interface FPKeyGeneratorService {
 
 上記の注釈を使用するには、次をプロジェクトに読み込みます。
 
-```
+```java
 import org.apache.felix.scr.annotations.Properties;
- import org.apache.felix.scr.annotations.Property;
+import org.apache.felix.scr.annotations.Property;
 ```
 
