@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
 translation-type: tm+mt
-source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 84%
 
 ---
 
@@ -33,7 +36,7 @@ source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
 
 カスタムツールバーアクションを作成するには、次の手順を実行して、記入の済んだフォームを送信する前にアダプティブフォームのすべてのフィールドをエンドユーザーがレビューするためのボタンを作成します。
 
-1. All the default actions supported by adaptive forms are present in `/libs/fd/af/components/actions` folder. CRXDEで、からにノードを `fileattachmentlisting` コピーし `/libs/fd/af/components/actions/fileattachmentlisting` ます `/apps/customaction`。
+1. All the default actions supported by adaptive forms are present in `/libs/fd/af/components/actions` folder. CRXDEで、からに `fileattachmentlisting` ノードをコピー `/libs/fd/af/components/actions/fileattachmentlisting` し `/apps/customaction`ます。
 
 1. After copying the node to `apps/customaction` folder, rename the node name to `reviewbeforesubmit`. Also, change the `jcr:title` and `jcr:description` properties of the node.
 
@@ -41,20 +44,20 @@ source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
 
    ![ツールバーのカスタマイズに使用するノードの階層](assets/action3.png)
 
-1. ノード `cq:template` 内のノードを選 `reviewbeforesubmit` 択します。 Ensure that the value of `guideNodeClass` property is `guideButton` and change `jcr:title` property accordingly.
+1. ノードで `cq:template` ノードを選択 `reviewbeforesubmit` します。 Ensure that the value of `guideNodeClass` property is `guideButton` and change `jcr:title` property accordingly.
 1. Change the type property in the `cq:Template` node. この例では、タイプのプロパティをボタンに変更します。
 
    このコンポーネントで、生成された HTML に type の値が CSS クラスとして追加されます。ユーザーはこの CSS クラスを使用して、アクションのスタイルを設定できますボタン、送信、リセット、およびタイプの値を保存する際のスタイルが、モバイルとデスクトップデバイスの両方にデフォルトで用意されています。
 
 1. アダプティブフォームの編集のツールバーダイアログからカスタムアクションを選択します。パネルのツールバーにレビューボタンが表示されます。
 
-   ![カスタムアクションは、ツールバーで使用できます](assets/custom_action_available_in_toolbar.png) 。カ ![スタム作成されたツールバーアクションの表示](assets/action7.png)
+   ![カスタムアクションは、ツールバーで使用できます](assets/custom_action_available_in_toolbar.png) 。カスタムに作成されたツールバーアクションの ![表示](assets/action7.png)
 
 1. レビューボタンに機能を持たせるには、`reviewbeforesubmit` ノードにある init.jsp ファイルに JavaScript コード、CSS コード、およびサーバー側コードを追加します。
 
    `init.jsp` に次のコードを追加します。
 
-   ```
+   ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
    <guide:initializeBean name="guideField" className="com.adobe.aemds.guide.common.GuideButton"/>
    
@@ -112,7 +115,7 @@ source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
 
    `ReviewBeforeSubmit.js` ファイルに次のコードを追加します。
 
-   ```
+   ```javascript
    /*anonymous function to handle show of review before submit view */
    $(function () {
        if($("div.reviewbeforesubmit button[id*=reviewbeforesubmit]").length > 0) {
