@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b93060bd-c6e1-40d2-8acd-ccafb8ed56da
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 82%
 
 ---
 
@@ -33,8 +36,8 @@ AEM Forms モジュール（例えば、Forms、Rights Management、Output）が
 
 AEM Forms の完全な実装には、以下のアプリケーションサーバーおよびデータベースのサービスが含まれています。
 
-* *`[application server]`* （AEM forms用）
-* *`[database]`* （AEM forms用）
+* *`[application server]`* （AEM Formsの場合）
+* *`[database]`* （AEM Formsの場合）
 
 On Windows, these services are accessible through the **Administrative Tools** > **Services panel**. 例えば、自動オプションを使用して JBoss に AEM Forms をインストールした場合、システムでは以下のサービスを使用できます。
 
@@ -45,7 +48,7 @@ On Windows, these services are accessible through the **Administrative Tools** >
 
 On UNIX® or Linux, enter the following text from a command line, where *`[service name]`* is the name of the service you are verifying:
 
-```as3
+```java
      ps -A | grep [service name]
 ```
 
