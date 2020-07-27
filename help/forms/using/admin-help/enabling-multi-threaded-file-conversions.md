@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '880'
+ht-degree: 100%
 
 ---
 
@@ -59,7 +62,7 @@ Windows Server 2008 で OpenOffice、Microsoft Word または Microsoft PowerPoi
 1. 次に、/etc/sudoers ファイルに変更を加えます。このファイルの権限はデフォルトで 440 が設定されています。このファイルの権限を書き込み可能に変更します。
 1. /etc/sudoers ファイルで、追加のユーザー（forms サーバーを実行する管理者以外）のエントリを追加します。例えば、ユーザーを lcadm、サーバーを myhost として AEM Forms を実行している場合、user1 および user2 として動作させるには、/etc/sudoers に次のエントリを追加します。
 
-   ```as3
+   ```shell
     lcadm myhost=(user1) NOPASSWD: ALL
     lcadm myhost=(user2) NOPASSWD: ALL
    ```
@@ -72,7 +75,7 @@ Windows Server 2008 で OpenOffice、Microsoft Word または Microsoft PowerPoi
 
 1. また、/etc/sudoers ファイルで、この行を見つけて、行の先頭に番号記号（#）を追加してコメントアウトします。
 
-   ```as3
+   ```shell
    Defaults requiretty
    ```
 
