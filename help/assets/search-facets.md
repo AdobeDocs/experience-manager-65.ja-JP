@@ -3,10 +3,10 @@ title: 検索ファセット.
 description: Adobe Experience Managerで検索ファセットを作成、変更および使用する方法。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '2525'
-ht-degree: 78%
+source-wordcount: '2515'
+ht-degree: 77%
 
 ---
 
@@ -28,11 +28,9 @@ ht-degree: 78%
 For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「プロパティの述語」を使用すると、ユーザーが指定した 1 つのプロパティと一致するアセットが検索されます。「オプションの述語」を使用すると、特定のプロパティについて 1 つ以上の値と一致するアセットが検索されます。「日付の範囲の述語」を追加すると、指定した期間内に作成されたアセットが検索されます。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **Edit** ![edit icon](assets/do-not-localize/aemassets_edit.png).
+1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 
    ![アセット管理者の検索レールを探して選択](assets/assets_admin_searchrail.png)
-
-   アセット管理者の検索レールを探して選択
 
    >[!NOTE]
    >
@@ -76,7 +74,7 @@ For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「
 1. To close the preview, click the **[!UICONTROL Close]** ![close](assets/do-not-localize/close.png) on the upper-right corner of the preview.
 1. 「**[!UICONTROL 完了]**」をクリックして、設定を保存します。
 1. Assets ユーザーインターフェイスの検索パネルに移動します。プロパティの述語がパネルに追加されています。
-1. 検索するアセットの説明をテキストボックスに入力します。例えば、&quot;Adobe&quot; と入力します。検索を実行すると、「Adobe」に一致する説明を含むアセットが検索結果に表示されます。
+1. Enter a description for the asset to be searched in the text box. For example, enter `Adobe`. When you perform a search, assets with description matching `Adobe` are listed in the search results.
 
 ## オプションの述語の追加 {#adding-an-options-predicate}
 
@@ -90,13 +88,13 @@ For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「
 
 例えば、ファイルタイプとして「画像」を選択した場合、アセットの検索クエリは OR 演算子によって `value` プロパティを結合することで作成されます。例として、画像の検索クエリは、プロパティ `jcr:content/metadata/dc:format` に対して *image/jpeg*、*image/gif*、*image/png*、*image/pjpeg*、*image/tiff* として一致する結果を OR 演算で結合することにより作成されます。
 
-![CRXDE に見られるように、ファイルタイプの値プロパティは、検索クエリが機能するために使用されます。](assets/chlimage_1-418.png)
+![CRXDE に見られるように、ファイルタイプの値プロパティは、検索クエリが機能するために使用されます。](assets/filetype-value-property.png)
 
 CRXDE に見られるように、ファイルタイプの値プロパティは、検索クエリが機能するために使用されます。
 
 CRXDEリポジトリのオプションのノード構造を手動で作成する代わりに、対応するキーと値のペアを指定して、JSONファイルでオプションを定義できます。 JSON ファイルのパスを「**[!UICONTROL プロパティ名]**」フィールドに指定します。例えば、キーと値のペア `image/bmp`、`image/gif`、`image/jpeg`、`image/png` を定義し、次の JSON ファイルのサンプルに示すように、それらの値を指定します。In the **[!UICONTROL Property Name]** field, you can specify the CRXDE path for this file.
 
-```JSON
+```json
 {
     "options" :
  [
@@ -164,7 +162,7 @@ Tag Predicateを使用すると、アセットをタグベースで検索でき�
 1. 検索パネルに移動します。**[!UICONTROL タグ]**&#x200B;の述語が検索パネルに追加されています。
 1. アセットの検索に使用するタグを指定または表示されたリストから選択します。
 
-   ![タグ名の入力時にExperience Managerが提示する提案](assets/chlimage_1-419.png)
+   ![タグ名の入力時にExperience Managerが提示する提案](assets/tag-suggestion.png)
 
    *図： タグ名を入力する際にExperience Managerが提示する提案です。*
 
