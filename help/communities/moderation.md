@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
 workflow-type: tm+mt
 source-wordcount: '2110'
-ht-degree: 52%
+ht-degree: 51%
 
 ---
 
@@ -112,7 +112,7 @@ Only when signed in as an administrator, or as a member with [moderator permissi
 
 ### フィルターレール {#ootbfilters}
 
-![chlimage_1-212](assets/chlimage_1-212.png)
+![open-filterrail](assets/open-filterrail.png)
 
 サイドパネルアイコンにより、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールは、様々なフィルターを提供し、それぞれがコンテンツ領域に表示される参照先のUGCに直接影響します。
 
@@ -141,13 +141,13 @@ However if you check **Question** and **Pending**, you will only see content tha
 
 テキスト検索は、表示される UGC 参照を、入力したテキストを含む投稿のみに限定します。
 
-![chlimage_1-213](assets/chlimage_1-213.png)
+![text-search](assets/text-search.png)
 
 #### サイト {#site}
 
 サイトは、表示される UGC 参照を、選択したコミュニティサイトへの投稿のみに限定します。サイトがチェックされていない場合は、UGCへのすべての参照が表示されます。
 
-![chlimage_1-214](assets/chlimage_1-214.png)
+![site-panel](assets/site-panel.png)
 
 >[!NOTE]
 >
@@ -189,8 +189,7 @@ However if you check **Question** and **Pending**, you will only see content tha
    * 例えば、含まれる投票コンポーネントをフィルタするには、次のように入力します。
 
       `Voting=social/tally/components/hbs/voting`
-
-![chlimage_1-215](assets/chlimage_1-215.png)
+   ![additional-contenttype](assets/additional-contenttype.png)
 
 * 「保存」を選択します。
 * コミュニティ — モデレートコンソールを更新します。
@@ -216,25 +215,25 @@ The result is a new selectable filter for `Voting` under the `Content Type` filt
 
 Once a piece of content is flagged, it remains flagged until you unflag that single piece of content by selecting the **Flag** button once again. フラグには重要やフォローアップなどのレベルがないことに注意してください。
 
-![chlimage_1-216](assets/chlimage_1-216.png)
+![落下](assets/flagging.png)
 
 #### メンバー {#members}
 
 メンバーは、表示される UGC 参照を、特定のメンバー（メンバー名を入力して指定）が投稿した UGC のみに限定します。
 
-![chlimage_1-217](assets/chlimage_1-217.png)
+![members](assets/members.png)
 
 #### 過去に投稿済み {#posted-in-the-last}
 
 過去に投稿済みは、表示される UGC 参照を、1 時間、1 日以内、1 週間、1 ヶ月または 1 年以内に投稿されたものに限定します。
 
-![chlimage_1-218](assets/chlimage_1-218.png)
+![最後に投稿された](assets/posted-last.png)
 
 #### 好感度 {#sentiment}
 
 [好感度](/help/communities/moderate-ugc.md#sentiment) （センチメント）は、参照先のUGCに表示される投稿を、好感度値が正、負、中立の投稿に制限します。
 
-![chlimage_1-219](assets/chlimage_1-219.png)
+![sentiment](assets/sentiment.png)
 
 ## Custom Filters {#custom-filters}
 
@@ -271,7 +270,7 @@ Githubの [サンプルプロジェクト](https://github.com/Adobe-Marketing-Cl
 
 [モデレートアクション](/help/communities/moderate-ugc.md#moderation-actions)は、コンテンツ領域で選択された 1 つ以上のコンテンツに対して実行したり、コンテンツの詳細表示時に実行したりできます。
 
-To bulk-moderate the posts, in the content area click the Select ( ![selecticon](assets/selecticon.png)) icon on a post, which appears on hovering over it with the mouse (desktop) or pressing and holding a finger on the post (mobile). この操作をおこなうと、複数選択モードに入ります。複数選択モードでは、一括でモデレートする投稿をクリックするだけで選択できます。ツールバーに表示されるボタンを使用して、選択した投稿に対してモデレートアクションを実行します。どのアクションをおこなうときも、必ず確認メッセージが表示されます。
+To bulk-moderate the posts, in the content area click the Select (![selecticon](assets/selecticon.png)) icon on a post, which appears on hovering over it with the mouse (desktop) or pressing and holding a finger on the post (mobile). この操作をおこなうと、複数選択モードに入ります。複数選択モードでは、一括でモデレートする投稿をクリックするだけで選択できます。ツールバーに表示されるボタンを使用して、選択した投稿に対してモデレートアクションを実行します。どのアクションをおこなうときも、必ず確認メッセージが表示されます。
 
 コンテンツ領域内の 1 つの投稿のみをモデレートする場合は、その投稿の上にマウスポインターを置く（デスクトップの場合）か、その投稿を指で長押しして（モバイルの場合）ボタンを表示します。1 つのコンテンツを操作するときは、削除アクションの場合に限り確認メッセージが表示されます。
 
@@ -318,19 +317,19 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 
 #### 返信 {#reply}
 
-![chlimage_1-220](assets/chlimage_1-220.png)
+![返信](assets/reply.png)
 
 単一の投稿で作業する場合、UGCタイプが返信をサポートし、返信を許可するように設定されている場合は、返信アイコンが表示されます。
 
 #### アクセス設定 {#allow}
 
-![chlimage_1-221](assets/chlimage_1-221.png)
+![許可](assets/allow.png)
 
 1 つの投稿を操作するときに、その投稿がフラグ付きか、拒否されている場合は、許可アイコンが表示されます。フラグ付けされた場合、「許可」を選択すると、すべてのフラグがクリアされます。
 
 #### 拒否 {#deny}
 
-![chlimage_1-222](assets/chlimage_1-222.png)
+![拒否](assets/deny.png)
 
 The **Deny** moderation action is only available for content that is moderated, and does not appear on unmoderated content except in multi-selection mode.
 
@@ -342,19 +341,19 @@ The **Deny** moderation action is only available for content that is moderated, 
 
 #### 削除 {#delete}
 
-![chlimage_1-223](assets/chlimage_1-223.png)
+![次を削除します。](assets/delete.png)
 
 単一選択モードまたは一括モードで、アイテムを選択して削除できます。削除のアクションを実行すると、確認ダイアログが表示されます。削除すると、それらの項目はコンテンツ領域からすぐに消えます。 **UGCを削除すると、そのUGCはリポジトリから完全に削除され、後で取得することはできません**。
 
 #### 閉じる {#close}
 
-![chlimage_1-224](assets/chlimage_1-224.png)
+![close](assets/close.png)
 
 単一の投稿で作業する場合、UGCタイプでそのリソースのそれ以上の投稿を防ぐ機能がサポートされていると、閉じるアイコンが表示されます。
 
 #### Moderation History {#moderation-history}
 
-![chlimage_1-225](assets/chlimage_1-225.png)
+![モデレート](assets/moderation.png)
 
 1 つの投稿を操作するときに、投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。アイコンを選択すると、UGC投稿に関して行われたアクションの履歴を含むペインが表示されます。
 
@@ -362,11 +361,11 @@ The **Deny** moderation action is only available for content that is moderated, 
 
 次に例を示します。
 
-![chlimage_1-226](assets/chlimage_1-226.png)
+![モデレート履歴](assets/moderation-history.png)
 
 #### 詳細を表示 {#view-detail}
 
-![chlimage_1-227](assets/chlimage_1-227.png)
+![表示](assets/view.png)
 
 1 つの投稿を操作するときに、その UGC を詳細モードで開くと、より詳しい情報を表示できます。
 
@@ -376,5 +375,5 @@ To do so, hover over the post to display the `View Detail` icon and select it to
 
 次に例を示します。
 
-![chlimage_1-228](assets/chlimage_1-228.png)
+![view1](assets/view1.png)
 
