@@ -4,10 +4,10 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '9234'
-ht-degree: 63%
+source-wordcount: '9216'
+ht-degree: 62%
 
 ---
 
@@ -70,7 +70,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    サイズの大きなアセット（500 MB 超）のアップロードを一時停止して、同じページから後で再開できます。アップロード開始時に表示されるプログレスバーの横にある **[!UICONTROL 一時停止]** (Pause)をクリックします。
 
-   ![アセットのアップロードプログレスバー](assets/chlimage_1-5.png)
+   ![アセットのアップロードプログレスバー](assets/upload-progress-bar.png)
 
    サイズが大きいと見なされるアセットのサイズは変更できます。例えば、（500 MB でなく）1000 MB を超えるサイズのアセットをサイズが大きいと見なすようにシステムを設定できます。In this case, **[!UICONTROL Pause]** appears on the progress bar when assets of size greater than 1000 MB are uploaded.
 
@@ -80,7 +80,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    「 **[!UICONTROL 一時停止]**」をクリックすると **[!UICONTROL 、「]** 再生」オプションに切り替わります。 アップロードを再開するには、「 **[!UICONTROL 再生]**」をクリックします。
 
-   ![一時停止したアセットのアップロードの再開](assets/chlimage_1-6.png)
+   ![一時停止したアセットのアップロードの再開](assets/resume-paused-upload.png)
 
    進行中のアップロードをキャンセルするには、進行状況バーの横にある閉じるボタン（「`X`」）をクリックします。When you cancel the upload operation, [!DNL Assets] deletes the partially uploaded portion of the asset.
 
@@ -94,7 +94,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、既存のアセットに対して行った変更（注釈や切り抜きなど）がすべて削除されます。 If you choose to keep both assets, the new asset is renamed with number `1` appended to its name.
 
-   ![名前の競合ダイアログボックスを使用して、アセット名の競合を解決します](assets/chlimage_1-7.png)
+   ![名前の競合ダイアログボックスを使用して、アセット名の競合を解決します](assets/resolve-naming-conflict.png)
 
    >[!NOTE]
    >
@@ -108,7 +108,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
    >
    >The [!UICONTROL Duplicates Detected] dialog appears only when the duplicate detection feature is enabled. To enable the duplicate detection feature, see [Enable Duplicate Detection](/help/assets/duplicate-detection.md).
 
-   ![重複アセットが検出されましたダイアログ](assets/chlimage_1-8.png)
+   ![重複アセットが検出されましたダイアログ](assets/duplicate-asset-detected.png)
 
    重複アセットを保持するに [!DNL Assets]は、「 **[!UICONTROL 保持]**」をクリックします。 To delete the duplicate asset you uploaded, click **[!UICONTROL Delete]**.
 
@@ -123,7 +123,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    アセットファイル名の拡張子には特殊文字を含めないでください。
 
-   ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルおよびアップロードに失敗したファイルの状態が表示されます](assets/chlimage_1-10.png)
+   ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルおよびアップロードに失敗したファイルの状態が表示されます](assets/bulk-upload-progress.png)
 
    In addition, the [!DNL Assets] user interface displays the most recent asset that you upload or the folder that you created first.
 
@@ -149,7 +149,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 >[!NOTE]
 >
->Dynamic Media- Scene7モードのFTPを使用してアセットをアップロードするには、機能パック18912をオーサーインスタンスにインスト [!DNL Experience Manager] ールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行について [は、機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
+>Dynamic Media-Scene7モードでFTP経由でアセットをアップロードするには、機能パック18912をオーサーインスタンスにインスト [!DNL Experience Manager] ールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行について [は、機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
 >
 >If you use FTP for uploading assets, the upload settings specified in [!DNL Experience Manager] are ignored. 代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
@@ -236,7 +236,7 @@ PostScript（EPS）または Illustrator（AI）画像ファイルのアップ�
 |  | CMYKとしてレンダリング | CMYK カラースペースに変換します。 |
 |  | グレースケールとして強制 | グレースケールカラースペースに変換します。 |
 
-#### Photoshopのアップロードオプションの設定 {#setting-photoshop-upload-options}
+#### Photoshopアップロードオプションの設定 {#setting-photoshop-upload-options}
 
 Photoshopドキュメント(PSD)ファイルは、画像テンプレートの作成に最もよく使用されます。 When you upload a PSD file, you can create an image template automatically from the file (select the [!UICONTROL Create Template] option on the Upload screen).
 
@@ -479,10 +479,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. アセットのレンディション（オリジナルを除く）を追加または削除できます。レンディションを追加または削除するアセットの場所に移動します。
 
-1. アセットをクリックして、アセットページを開きます。
-
-   ![レンディションを管理するアセットの詳細ページ](assets/chlimage_1-15.png)
-
+1. アセットをクリックしてページを開きます。
 1. Experience Managerインターフェイスで、リストから「 **[!UICONTROL レンディション]** 」を選択します。
 
    ![左側のパネルでメニューを開き、「レンディション」オプションを選択](assets/renditions_menu.png)
@@ -515,7 +512,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    同様に、`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker` をオーバーレイして注釈ページの画像をカスタマイズできます。
 
-   ![CRXDEのOverlay renditionpickerノードを使用して注釈ページの画像をカスタマイズする](assets/chlimage_1-17.png)
+   ![CRXDEのOverlay renditionpickerノードを使用して注釈ページの画像をカスタマイズする](assets/renditionpicker-node-crxde.png)
 
    ビデオアセットのレンディションサイズを設定するには、CRX リポジトリ内の `videopicker` ノード（`/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`）に移動し、ノードをオーバーレイし、該当するプロパティを編集します。
 
@@ -671,21 +668,16 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 1. リストから必要なオプションを選択します。選択したオプションに基づいて、画像に切り抜き領域が表示されます。「**フリーハンド**」オプションを使用すると、縦横比の制限に関係なく画像を切り抜くことができます。
 
-   ![切り抜きツールオプション](assets/chlimage_1-23.png)
+   ![切り抜きツールオプション](assets/crop-options.png)
 
 1. 切り抜く領域を選択し、画像上でそのサイズまたは位置を変更します。
 
-1. Use the **[!UICONTROL Undo]** and **[!UICONTROL Redo]** options to revert to the uncropped image or retain the cropped image, respectively.
-
-   ![元に戻す/やり直しのオプション](assets/chlimage_1-25.png)
-
+1. 「 **[!UICONTROL 元に戻す]**![元に戻す](assets/do-not-localize/undo.png) 」ツールバーオプションを使用し、「やり直し **[!UICONTROL 」ツールバーオプションを使用して元に戻すか、「やり直し]**![](assets/do-not-localize/redo.png) 」ツールバーオプションを使用して切り抜いた画像を元に戻すか、切り抜いた画像を保持します。
 1. Click the appropriate **[!UICONTROL Rotate]** option to rotate the image clockwise or anti-clockwise.
 
-   ![右回りおよび左回りに回転するオプション](assets/chlimage_1-26.png)
+   ![右回りおよび左回りに回転するオプション](assets/do-not-localize/rotate-options.png)
 
-1. Click the appropriate **[!UICONTROL Flip]** option to flip the image horizontally or vertically.
-
-   ![画像を水平または垂直に反転するオプション](assets/chlimage_1-27.png)
+1. 適切な「 **[!UICONTROL 反転]** 」オプションをクリックして、画像を水平方向に ![反転したり、垂直方向に](assets/do-not-localize/flip-horizontal.png) 反転したりします ![](assets/do-not-localize/flip-vertical.png)。
 
 1. 画像の編集を完了するには、「 **[!UICONTROL 完了]**![完了」オプションをクリックします](assets/do-not-localize/check-ok-done-icon.png)。 「 **完了** 」をクリックすると、レンディションの再生成も開始されます。
 
@@ -731,23 +723,23 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
    * [クイックアクション](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * アセットを選択した後またはアセットページに移動した後に、ツールバーから
 
-   ![注釈オプション](assets/chlimage_1-29.png)
+   ![注釈オプション](assets/annotate-option.png)
 
 1. タイムラインの一番下の&#x200B;**[!UICONTROL コメント]**&#x200B;ボックスにコメントを追加します。または、画像内の任意の領域をマークアップし、**[!UICONTROL 注釈を追加]**&#x200B;ダイアログに注釈を追加します。
 
-   ![注釈ダイアログの追加コメントボックス](assets/chlimage_1-30.png)
+   ![注釈ダイアログの追加コメントボックス](assets/annotation-comment-box.png)
 
 1. 注釈についてユーザーに通知するには、ユーザーの電子メールアドレスを指定して、コメントを追加します。例えば、注釈について Aaron MacDonald というユーザーに通知するには、@aa と入力します。一致するすべてのユーザーに関するヒントがリストに表示されます。Aaron の電子メールアドレスをリストから選択し、コメントを使用してタグ付けします。同様に、注釈内の任意の場所、またはコメントの前後で追加のユーザーにタグ付けできます。
 
+   ![ユーザーの電子メールアドレスを指定し、ユーザーに通知するコメントを追加します](assets/annotation-add-user-email.png)
+
    >[!NOTE]
    >
-   >管理者以外のユーザーには、Crx-de で */home* に読み取り権限がある場合にのみ候補が表示されます。
-
-   ![ユーザーの電子メールアドレスを指定し、ユーザーに通知するコメントを追加します](assets/chlimage_1-31.png)
+   >For a non-administrator user, the suggestions appear only if the user has read permissions at `/home` path in CRXDE.
 
 1. 注釈を追加したら、「**[!UICONTROL 追加]**」をクリックして注釈を保存します。注釈に関する通知が Aaron に送信されます。
 
-   ![注釈追加を保存するボタン](assets/chlimage_1-32.png)
+   ![注釈追加を保存するボタン](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -778,15 +770,15 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 1. Experience Managerインターフェイスで、「 **[!UICONTROL タイムライン]**」を選択します。
 
-   ![Experience Managerで使用可能なオプション](assets/chlimage_1-35.png)
+   ![Experience Managerで使用可能なタイムラインオプション](assets/view-timeline.png)
 
 1. タイムラインの「**[!UICONTROL すべて表示]**」のリストから「**[!UICONTROL コメント]**」を選択し、注釈に基づいて結果にフィルターを適用します。
 
-   ![タイムラインにすべてのリストを表示](assets/chlimage_1-36.png)
+   ![タイムラインにすべてのリストを表示](assets/timeline-show-all-option.png)
 
    **[!UICONTROL タイムライン]**&#x200B;パネルでコメントをクリックし、対応する画像の注釈を表示します。
 
-   ![画像上の表示注釈に対するタイムラインパネル](assets/chlimage_1-37.png)
+   ![画像上の表示注釈に対するタイムラインパネル](assets/timeline-view-annotations.png)
 
    特定のコメントを削除するには、「**[!UICONTROL 削除]**」をクリックします。
 
@@ -806,11 +798,9 @@ To print the annotations and review status, click **[!UICONTROL Print]** and fol
 
 1. 特定の注釈を印刷するには、タイムラインから注釈を選択します。
 
-   ![タイムラインから注釈を選択して印刷します](assets/chlimage_1-38.png)
+   ![タイムラインから注釈を選択して印刷します](assets/timeline-select-annotations.png)
 
    レビューステータスのみを印刷するには、タイムラインからレビューステータスを選択します。
-
-   ![注釈のレビュー・ステータスのみを印刷するには、タイムラインから選択します](assets/chlimage_1-39.png)
 
 1. Click **[!UICONTROL Print]** from the toolbar.
 
@@ -828,7 +818,7 @@ To print the annotations and review status, click **[!UICONTROL Print]** and fol
 
 1. 「 **[!UICONTROL 印刷]**」をクリックします。 手順 2 で選択したオプションに応じて、生成される PDF の特定の位置に注釈／ステータスが表示されます。例えば、注釈とレビューステータスの両方を「**左上**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
 
-   ![生成されたPDFの注釈とレビューのステータス](assets/chlimage_1-42.png)
+   ![生成されたPDFの注釈とレビューのステータス](assets/annotation-status-pdf.png)
 
 1. 右上のオプションを使用して、PDF ![用のダウンロードオプションをダウンロードするか、PDF](assets/do-not-localize/download.png) 用の ![](assets/do-not-localize/print.png) 印刷オプションを印刷します。
 
@@ -838,7 +828,7 @@ To print the annotations and review status, click **[!UICONTROL Print]** and fol
 
    レンダリングされた PDF ファイルの外観を変更するには、Configuration Manager から&#x200B;**[!UICONTROL 注釈 PDF の設定]**&#x200B;を開き、必要なオプションを変更します。例えば、コメントとステータスのフォントカラー、サイズ、スタイル、背景色を変更できます。例えば、承認済みステータスの表示色を変更したり、対応フィールドのカラーコードを変更したりします。注釈のフォントカラーの変更について詳しくは、[注釈](/help/assets/managing-assets-touch-ui.md#annotating)を参照してください。
 
-   ![PDFドキュメントにアセット注釈を印刷するための設定](assets/chlimage_1-44.png)
+   ![PDFドキュメントにアセット注釈を印刷するための設定](assets/annotation-print-pdf-config.png)
 
    レンダリングされた PDF ファイルに戻り、更新します。更新された PDF に、変更が反映されています。
 
