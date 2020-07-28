@@ -3,10 +3,10 @@ title: でビデオアセットを管理します [!DNL Adobe Experience Manager
 description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 41%
+source-wordcount: '816'
+ht-degree: 39%
 
 ---
 
@@ -23,17 +23,11 @@ Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager 
 
 1. デジタルアセットフォルダー（またはサブフォルダー）で、デジタルアセットを追加する場所に移動します。
 1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Files]**. または、アセット領域に直接ドロップします。See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
-1. To preview a video in the Card view, click the **[!UICONTROL Play]** button on the video asset.
+1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. ビデオの一時停止や再生は、カード表示でのみ可能です。The [!UICONTROL Play] and [!UICONTROL Pause] options are not available in the list view.
 
-   ![chlimage_1-65](assets/chlimage_1-201.png)
+1. To preview the video in the asset details page, click **[!UICONTROL Edit]** on the card. ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
 
-   ビデオの一時停止や再生は、カード表示でのみ可能です。リスト表示では、[!UICONTROL 再生]および[!UICONTROL 一時停止]ボタンを使用できません。
-
-1. To preview the video in the asset details page, click **[!UICONTROL Edit]** on the card.
-
-   ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
-
-   ![chlimage_1-66](assets/chlimage_1-202.png)
+   ![ビデオ再生コントロール](assets/video-playback-controls.png)
 
 ## 2 GB を超えるアセットをアップロードするための設定 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
@@ -41,7 +35,7 @@ By default, [!DNL Assets] does not let you upload any assets that are larger tha
 
 In addition to [!DNL Assets] configuration, change the following configurations to upload large assets:
 
-* トークンの有効期間を増やします。Webコンソールの「 [!UICONTROL Adobe Granite CSRF Servlet] 」()を参照し `https://[aem_server]:[port]/system/console/configMgr`てください。 詳しくは、「 [CSRF保護](/help/sites-developing/csrf-protection.md)」を参照してください。
+* トークンの有効期間を増やします。Webコンソールの「 [!UICONTROL AdobeGranite CSRF Servlet] 」()を参照し `https://[aem_server]:[port]/system/console/configMgr`てください。 詳しくは、「 [CSRF保護](/help/sites-developing/csrf-protection.md)」を参照してください。
 * Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
 
 >[!NOTE]
