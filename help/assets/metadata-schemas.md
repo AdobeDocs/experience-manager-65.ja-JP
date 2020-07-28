@@ -3,9 +3,9 @@ title: 'のメタデータプロパティページのレイアウトを定義す
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2666'
 ht-degree: 52%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 52%
 
 新しく追加したメタデータスキーマフォームまたは既存のメタデータスキーマフォームを編集できます。メタデータスキーマフォームは、タブ内にタブとフォーム項目を含みます。 これらのフォーム項目を CRX リポジトリのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。メタデータスキーマフォームには、タブまたはフォーム項目を追加できます。 親から派生したタブおよびフォーム項目はロック状態です。子レベルではこれらを変更できません。
 
-1. メタデータ [!UICONTROL スキーマフォーム] ページで、フォームを選択し、ツールバーの **[!UICONTROL 編集]** をクリックします。
+1. メタデータ [!UICONTROL スキーマForms] ページで、フォームを選択し、ツールバーの **[!UICONTROL 編集]** をクリックします。
 
 1. メタデータ **[!UICONTROL スキーマフォームエディタ]** ページで、メタデータフォームをカスタマイズします。 必要なコンポーネントを「 **[!UICONTROL Build Form]** 」タブからいずれかのタブにドラッグします。
 
@@ -131,15 +131,15 @@ To edit the properties of a metadata component on the form, click the component 
 
 「**[!UICONTROL 必須]**」オプションを選択した場合、必須のメタデータが設定されていないアセットを検索できます。**[!UICONTROL フィルター]**&#x200B;パネルで、「**[!UICONTROL メタデータの検証]**」述語を展開して、「**[!UICONTROL 無効]**」オプションを選択します。検索結果に、スキーマフォームで設定した必須のメタデータが設定されていないアセットが表示されます。
 
-![フィルターパネルのMetadata Validation predicateで無効なオプションが選択されています ](assets/chlimage_1-178.png)
+![フィルターパネルのMetadata Validation predicateで選択されたオプション](assets/invalid-metadata-predicate.png)
 
 スキーマフォームのいずれかのタブにコンテキストメタデータコンポーネントを追加した場合、コンポーネントは、その特定のスキーマが適用されているアセットのプロパティページに  リストとして表示されます。このリストには、コンテキストメタデータコンポーネントを適用したタブを除く、他のすべてのタブが含まれます。現在、この機能は、コンテキストに応じてメタデータの表示を制御する基本的な機能を提供しています。
 
-![アセットプロパティのタブを一覧表示するContextual Metadataコンポーネント](assets/chlimage_1-179.png)
+![アセットプロパティのタブを一覧表示するコンテキストメタデータコンポーネント](assets/metadata-contextual-component-list.png)
 
 Contextual Metadataコンポーネントが適用されるタブに加えて、プロパティページにタブを表示するには、リストからタブを選択します。 タブがプロパティページに追加されます。
 
-![コンテキストメタデータリストで選択したタブは、アセットのプロパティページに表示されます](assets/contextual-metadata-asset-properties.png)
+![コンテキストメタデータリストで選択されたタブは、アセットのプロパティページに表示されます](assets/contextual-metadata-asset-properties.png)
 
 *図： アセットプロパティページのコンテキストメタデータ。*
 
@@ -151,13 +151,11 @@ Contextual Metadataコンポーネントが適用されるタブに加えて、�
 
 スキーマエディターで、タブを追加または削除できます。The default schema form includes the **[!UICONTROL Basic]**, **[!UICONTROL Advanced]** , **[!UICONTROL IPTC]**, and **[!UICONTROL IPTC Extension]** tabs.
 
-![メタデータスキーマフォームのデフォルトタブ](assets/chlimage_1-181.png)
+![メタデータスキーマフォームのデフォルトタブ](assets/metadata-schema-form-tabs.png)
 
-Click `+` to add a tab on a schema form. By default, the new tab has the name `Unnamed-1`. この名前は、「**[!UICONTROL 設定]**」タブから編集できます。
+Click `+` to add a tab on a schema form. By default, the new tab has the name `Unnamed-1`. この名前は、「**[!UICONTROL 設定]**」タブから編集できます。タブを削除するには、「`X`」をクリックします。
 
-タブを削除するには、「`X`」をクリックします。
-
-![メタデータスキーマエディターを追加使用したタブの削除](assets/chlimage_1-182.png)
+![メタデータスキーマエディターを追加使用したタブの削除](assets/metadata-schema-form-new-tab.png)
 
 ## メタデータスキーマフォームの削除 {#delete-metadata-schema-forms}
 
@@ -238,7 +236,7 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
 1. Select the folder on which to apply the modified schema and then click **[!UICONTROL Apply]**.
 
-   ![メタデータスキーマを適用するフォルダの選択](assets/chlimage_1-188.png)
+   ![メタデータスキーマを適用するフォルダの選択](assets/metadata-schema-select-folder.png)
 
 1. フォルダーに他のメタデータが適用されている場合は、既存のメタデータスキーマを上書きする旨の警告メッセージが表示されます。「**上書き**」をクリックします。
 1. 「**OK**」をクリックして、成功メッセージを閉じます。
@@ -265,7 +263,7 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
 1. フォルダーに移動し、カスタムフォームに追加した必須フィールドにメタデータが指定されていないアセットをアップロードします。必須フィールドのメタデータが見つからない場合のメッセージが、アセットのカード表示に表示されます。
 
-   ![フォルダー内のアセットのアップロード時にアセットカード表示に必須のメタデータが見つからないというメッセージ](assets/chlimage_1-192.png)
+   ![フォルダー内のアセットのアップロード時にアセットカード表示に必須のメタデータが見つからないというメッセージ](assets/metadata-missing-info-card-view.png)
 
 1. （オプション）`https://[aem_server]:[port]/system/console/components/` にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。Set a frequency at which [!DNL Experience Manager] checks for the validity of metadata on the assets. この設定により、`hasValidMetadata` プロパティがアセットの `jcr:content` に追加されます。[!DNL Experience Manager] このプロパティを使用して、検索結果内の無効なアセットをフィルタリングします。 チェックの後にアセットを追加した場合、次のスケジュール済みチェックまで、アセットにはフラグが付けら `hasValidMetadata` れません。 したがって、次にスケジュールされたチェックの後まで、無効なメタデータに関するアセットは検索フィルターに表示されません。
 
