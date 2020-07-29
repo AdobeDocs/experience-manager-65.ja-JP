@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
 workflow-type: tm+mt
 source-wordcount: '1202'
-ht-degree: 35%
+ht-degree: 33%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 35%
 
 ## パブリッシュサーバー上の新しいサイトの参照 {#browse-to-new-site-on-publish}
 
-新しく作成したコミュニティサイトが公開されたので、次はこのサイト作成時に表示された URL を参照します。ただし、このとき参照するのはパブリッシュサーバー上の URL です。次に例を示します。
+新しく作成したコミュニティサイトが公開されたので、サイトの作成時に表示されたURLを参照し、公開サーバ上に表示されます。例：
 
 * 作成者URL = https://localhost:4502/content/sites/engage/en.html
 * 発行URL = https://localhost:4503/content/sites/engage/en.html
@@ -65,13 +65,14 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 
 1. 「 **ページプロパティ**」に移動。
 
-   ![サイト認証](assets/site-authentication.png)
+   ![page-properties](assets/page-properties.png)
 
 1. 「**詳細**」タブに移動します。
 
-   ![page-properties](assets/page-properties.png)
-
 1. Enable **Authentication Requirement**.
+
+   ![サイト認証](assets/site-authentication.png)
+
 1. ログ追加インページのパス。 For example, **/content/......./GetStarted**.
 1. ページを公開します。
 
@@ -198,7 +199,7 @@ Weston McCall（weston.mccall@dodgit.com／password）としてログインし�
 
 ### Web ページリンク {#web-page-link}
 
-Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、オーサリング環境のこのページにコンテンツを追加できます。
+Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、作成者環境のこのページにコンテンツを追加できます。
 
 For example, go to **author** instance, open the `engage` folder in the [Communities Sites console](/help/communities/sites-console.md), select the **Open Site** icon to enter author edit mode. Then select preview mode to select the `Web Page` link, then select edit mode to add Title and Text components. 最後に、ページのみまたはサイト全体を再公開します。
 
