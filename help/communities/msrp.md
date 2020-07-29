@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 6a9f273c6e9eb822e2d4765700361a205019b84c
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 47%
@@ -33,7 +33,7 @@ MSRPを共通ストアとして使用するようにAEM Communitiesを設定し�
    * バージョン2.6以降
    * Mongoや共有を設定する必要がない
    * Strongly recommend use of a [replica set](#mongoreplicaset)
-   * AEMと同じホストで実行することも、リモートで実行することも可能
+   * AEMと同じホスト上で実行するか、リモートで実行可能
 
 * [Apache Solr](https://lucene.apache.org/solr/)：
 
@@ -43,7 +43,7 @@ MSRPを共通ストアとして使用するようにAEM Communitiesを設定し�
    * 実行モードの選択：
       * スタンドアロンモード
       * [SolrCloud モード](solr.md#solrcloud-mode)（実稼動環境で推奨）
-   * 多言語検索(MLS)の選択
+   * 多言語検索(MLS)の選択：
       * [標準の MLS のインストール](solr.md#installing-standard-mls)
       * [高度な MLS のインストール](solr.md#installing-advanced-mls)
 
@@ -90,9 +90,11 @@ MSRPを共通ストアとして使用するようにAEM Communitiesを設定し�
       *デフォルト*: *&lt;空白>*
 
       * **[!UICONTROL Solr URL]**スタンドアロンモードで Solr と通信するために使用する URL。SolrCloud モードで実行している場合は、空白のままにします。
+
          *デフォルト*: https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr コレクション]**Solr コレクションの名前。
+
          *デフォルト*: collection1
 
 * Select **[!UICONTROL Submit]**
@@ -237,7 +239,7 @@ GitHubには、この目的で使用できるオープンソースツールが�
 
 * [AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-移行ツールは、以前のバージョンのAEM SocialコミュニティからUGCを書き出すようにカスタマイズして、AEM Communities6.1以降に読み込むことができます。
+移行ツールは、旧バージョンのAEMソーシャルコミュニティからUGCを書き出すようにカスタマイズして、AEM Communities6.1以降に読み込むことができます。
 
 ### エラー - undefined field provider_id {#error-undefined-field-provider-id}
 
