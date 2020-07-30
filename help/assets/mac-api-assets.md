@@ -3,10 +3,10 @@ title: Assets HTTP API（ [!DNL Adobe Experience Manager] に含まれている�
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f64df3a706762cdef631e18ad1a6fdd7044a551f
+source-git-commit: 92b7ca5c4864c4cca0eb8f1fb1c6bcec9d87c21c
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 92%
+source-wordcount: '1580'
+ht-degree: 91%
 
 ---
 
@@ -253,6 +253,9 @@ Assets HTTP API には、以下の機能が含まれます。
 * `X-Overwrite` - 既存のリソースを強制的に削除する場合は `T` を、既存リソースの上書きを防ぐ場合は `F` を使用します。
 
 **リクエスト**：`MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
+
+URLには使用 `/content/dam` しないでください。 上書き中に移動するサンプルコマンドは次のとおりです。
+`curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"`
 
 **応答コード**：応答コードは次のとおりです。
 
