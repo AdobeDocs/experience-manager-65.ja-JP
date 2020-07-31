@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '10273'
 ht-degree: 85%
@@ -43,7 +43,7 @@ IPv6 を使用している場合は、コンピューター名または DNS 名�
 
 **匿名ユーザーのアクセスを許可：** 匿名ユーザーがポリシーで保護されたドキュメントを開くことを許可する共有ポリシーと個人ポリシーの作成機能を有効にするには、このオプションを選択します。 （アカウントを持たないユーザーでもドキュメントにアクセスできますが、Document Security にログインしたり、他のポリシーで保護されたドキュメントを使用したりすることはできません）。
 
-**バージョン7クライアントへのアクセスを無効にする：** ユーザーがAcrobatまたはReader 7.0を使用してサーバーに接続できるかどうかを指定します。 このオプションが選択されている場合、ユーザーは Acrobat または Reader 8.0 以降を使用して、PDF ドキュメントで Document Security の処理を実行する必要があります。ポリシーで保護されたドキュメントを開く際に、Acrobat または Reader 8.0 以降を認証モードで実行することがポリシーによって指定されている場合は、Acrobat または Reader 7 へのアクセスを無効にする必要があります（ユーザーおよびグループのドキュメント権限の指定を参照）。
+**バージョン7クライアントへのアクセスを無効にする：** ユーザーがAcrobatまたはReader7.0を使用してサーバーに接続できるかどうかを指定します。 このオプションが選択されている場合、ユーザーは Acrobat または Reader 8.0 以降を使用して、PDF ドキュメントで Document Security の処理を実行する必要があります。ポリシーで保護されたドキュメントを開く際に、Acrobat または Reader 8.0 以降を認証モードで実行することがポリシーによって指定されている場合は、Acrobat または Reader 7 へのアクセスを無効にする必要があります（ユーザーおよびグループのドキュメント権限の指定を参照）。
 
 **ドキュメントごとのオフラインアクセスを許可** :ドキュメントごとにオフラインアクセスを指定する場合は、このオプションを選択します。 この設定が有効な場合、ユーザーは少なくとも 1 回オンラインで開いたドキュメントのみに対し、オフラインアクセス権があります。
 
@@ -59,9 +59,9 @@ IPv6 を使用している場合は、コンピューター名または DNS 名�
 
 ***注意&#x200B;**：拡張認証は Adobe Acrobat リリース 11.0.6 以上を使用している Apple Mac OS X でサポートされています。*
 
-**拡張認証用の推奨されるHTML制御の幅** Acrobatで開き、ユーザーの資格情報を入力する拡張認証ダイアログの幅を指定します。
+**拡張認証用の推奨されるHTML制御幅** ：ユーザー資格情報の入力用にAcrobatで開く拡張認証ダイアログの幅を指定します。
 
-**拡張認証用の推奨されるHTMLコントロールの高さ** 拡張認証用の高さを指定します。ユーザーの資格情報を入力するためにAcrobatで開く拡張認証ダイアログの高さを指定します。
+**拡張認証用の推奨されるHTML制御の高さ** ：ユーザー資格情報の入力用にAcrobatで開く拡張認証ダイアログの高さを指定します。
 
 ***注意&#x200B;**: このダイアログボックスの幅と高さの制限値は次のとおりです。*幅： 最小= 400、最大= 900
 
@@ -365,7 +365,7 @@ Document Security では、ポリシーで保護されたドキュメント、�
 
 **同期されたクライアント** ・アプリケーションは、オフライン・アクセスを許可するために、情報をサーバと同期する必要があります。
 
-**バージョンの不一致：** サーバーと互換性のないバージョンのAEM forms SDKがサーバーに接続しようとしました。
+**バージョンの不一致：** サーバーと互換性のないAEM forms SDKのバージョンが、サーバーへの接続を試みました。
 
 **ディレクトリ同期情報：** この情報は、イベントページからは利用できません。 現在の同期状態、最後の同期時刻など、現在のディレクトリ同期情報は、ドメインの管理ページに表示されます。管理コンソールで、ドメインの管理ページにアクセスするには、設定／User Management／ドメインの管理をクリックします。
 
@@ -420,7 +420,7 @@ Document Security では、保護されたドキュメントで実行される�
 
 **クライアント証明書表示のカスタマイズ**
 
-**信頼できる秘密鍵証明書の発行者のみを表示：** このオプションを選択すると、AEM Formsで信頼するように設定されている秘密鍵証明書発行者からの証明書のみがクライアントアプリケーションによってユーザーに提示されます（証明書と秘密鍵証明書の管理を参照）。 このオプションの選択を解除すると、ユーザーのシステム上の証明書すべてがユーザーに一覧表示されます。
+**信頼できる秘密鍵証明書の発行者のみを表示：** このオプションを選択すると、AEM formsで信頼するように設定されている秘密鍵証明書発行者からの証明書のみが、クライアントアプリケーションによってユーザーに提示されます（証明書と秘密鍵証明書の管理を参照）。 このオプションの選択を解除すると、ユーザーのシステム上の証明書すべてがユーザーに一覧表示されます。
 
 ## 動的な透かしの設定 {#configure-dynamic-watermarks}
 
@@ -822,7 +822,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 1. Document Security 設定ファイルを書き出します。（[Document Security 設定ファイルの手動による編集](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)を参照）。
 1. エディターで設定ファイルを開いて、`PolicyServer` ノードを見つけます。`ClientVersionRules` ノードを `PolicyServer` ノードのすぐ下の子として追加します（存在しない場合）。
 
-   ```java
+   ```xml
     <node name="ClientVersionRules">
         <map>
             <entry key="infoURL" value="URL"/>
@@ -879,7 +879,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 
 この例では、すべての Windows クライアントがアクセスを拒否されます。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value="https://www.dont.use/windows.html"/>
@@ -897,7 +897,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 
 この例では、My Application バージョン 3.0 および My Other Application バージョン 2.0 がアクセスを拒否されます。同じ拒否情報 URL が、拒否の理由に関係なく使用されます。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -922,7 +922,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 
 この例では、Acrobat Reader DC Extensions for Microsoft Office の Microsoft PowerPoint 2007 または Microsoft PowerPoint 2010 インストール環境からのすべての要求が拒否されます。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -955,7 +955,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 
    2 番目のエントリで、「*max elements*」は、1 つの透かしで許可する要素の最大数です。初期設定は 5 です。
 
-   ```java
+   ```xml
    <entry key="maximumSizeOfWatermarkElement" value="max filesize in KB"/>
    <entry key="maximumWatermarkElementsPerWatermark" value="max elements"/>
    ```
@@ -975,7 +975,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 1. エディターで設定ファイルを開いて、`DisplaySettings` ノードを見つけます。
 1. To disable all external links, in the `DisplaySettings` node, add the following entry and then save the file: `<entry key="ExternalLinksAllowed" value="false"/>`
 
-   ```java
+   ```xml
    <entry key="ExternalLinksAllowed" value="false"/>
    ```
 
@@ -989,7 +989,7 @@ config.xml に次の変更を加えることで、TLS で招待ユーザーの�
 1. エディターで設定ファイルを開いて、`DisplaySettings` ノードを見つけます。
 1. Locate the following node: `<node name="ExternalUser">`
 
-   ```java
+   ```xml
    <node name="ExternalUser">
    ```
 
@@ -1005,7 +1005,7 @@ Document Security ドキュメントの SOAP エンドポイントを無効に�
 1. Document Security 設定ファイルを書き出します。（[Document Security 設定ファイルの手動による編集](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)を参照）。
 1. エディターで設定ファイルを開き、次のノードを探します： `<node name="DRM">`
 
-   ```java
+   ```xml
    <node name="DRM">
    ```
 
@@ -1015,7 +1015,7 @@ Document Security ドキュメントの SOAP エンドポイントを無効に�
 
 1. Document Security ドキュメントの SOAP エンドポイントを無効にするには、値の属性を **false** に設定します。
 
-   ```java
+   ```xml
    <node name="DRM">
        <map>
            <entry key="AllowUnencryptedVoucher" value="false"/>
