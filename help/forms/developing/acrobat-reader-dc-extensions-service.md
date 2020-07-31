@@ -1,6 +1,6 @@
 ---
-title: Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP)
-seo-title: Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP)
+title: Acrobat Reader DC拡張サービスJava APIクイック開始(SOAP)
+seo-title: Acrobat Reader DC拡張サービスJava APIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC拡張サービスJava APIクイック開始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DCエクステンションサービスでは、次のクイック開始を使用できます。
+Acrobat Reader DC拡張サービスでは、次のクイック開始を使用できます。
 
 [クイック開始（SOAPモード）:Java APIを使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
@@ -27,11 +27,11 @@ Acrobat Reader DCエクステンションサービスでは、次のクイック
 
 [クイック開始（SOAPモード）: Java APIを使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Forms操作は、厳密に型指定されたAPIを使用してAEM Formsを実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsを使用したプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsを使用したプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）:Java APIを使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
@@ -143,7 +143,6 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  } 
   
   
- 
 ```
 
 ## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
