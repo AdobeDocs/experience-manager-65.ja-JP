@@ -8,7 +8,7 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
+source-git-commit: a842aa85652e5c04d5825a3e88aa6b64ef8a0088
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 11%
@@ -34,7 +34,7 @@ AEM Formsは、アダプティブフォームのテストを自動化するテ�
 
 テストスイートには、テストケースが集まっています。 複数のテストスイートを設定できます。 フォームごとに個別のテストスイートを作成することをお勧めします。 テストスイートを作成するには：
 
-1. 管理者として、AEM Forms作成者インスタンスにログインします。 CRXDE Lite を開きます。EMロゴ/ **ツール** / **一般** / **CRXDE Liteをタップするか、ブラウザでhttps://localhost:4502/crx/de/index.jspを開いてCRXDE Liteを開くには**[](https://localhost:4502/crx/de/index.jsp) を開きます。
+1. 管理者として、AEM Forms作成者インスタンスにログインします。 CRXDE Lite を開きます。ロゴ/ **ツール** / **一般** /CRXDE Liteをタップして、CRXDE Liteを開くにはブラウザでhttps://localhost:4502/crx/de/index.jspAEM **URLを開く**[](https://localhost:4502/crx/de/index.jsp) か、 urlを開きます。
 
 1. CRXDE Liteの/etc/clientlibsに移動します。 /etc/clientlibs サブフォルダーを右クリックして、**作成**／**ノードを作成をクリックします。** 「名前」フィールドにWeRetailFormTestCases **と入力します**。 タイプを **cq:ClientLibraryFolderとして選択し** 、「 **OK**」をクリックします。 ノードを作成します。 WeRetailFormTestCasesの代わりに任意の名前を使用できます。
 1. Add the following properties to the WeRetailFormTestCases node and tap **Save ALL**.
@@ -101,7 +101,7 @@ AEM Formsは、アダプティブフォームのテストを自動化するテ�
 
    上記のコードは、「 **We retail - Tests**」という名前のテストスイートを作成します。
 
-1. AEMテスト用UI（AEM/ツール/操作/テスト）を開きます。 テストスイート( **市販用 — テスト** )がUIに表示されます。
+1. AEM Testing UI(AEM/ツール/操作/テスト)を開きます。 テストスイート( **市販用 — テスト** )がUIに表示されます。
 
    ![we-retail-test-suite](assets/we-retail-test-suite.png)
 
@@ -177,7 +177,7 @@ AEM Formsは、アダプティブフォームのテストを自動化するテ�
 
 1. WeRetailFormTests `prefillTest.js`ノードでファイルを作成し **** ます。 追加次のコードをファイルに追加します。 コードはテストケースを作成します。 テストケースでは、フォームのすべてのフィールドに事前入力し、一部のフィールドを検証して、正しい値が入力されていることを確認します。
 
-   ```
+   ```javascript
    (function (window, hobs) {
        'use strict';
    
@@ -207,7 +207,7 @@ AEM Formsは、アダプティブフォームのテストを自動化するテ�
    }(window, window.hobs));
    ```
 
-   テストケースが作成され、実行できる状態になります。 テストケースを作成して、計算スクリプトの実行の確認、パターンの検証、アダプティブフォームの送信エクスペリエンスの検証など、アダプティブフォームの様々な要素を検証できます。 アダプティブフォームの様々な要素のテストについて詳しくは、「アダプティブフォームのテストの自動化」を参照してください。
+   テストケースが作成され、実行できる状態になります。 テストケースを作成して、計算スクリプトの実行の確認、パターンの検証、アダプティブフォームの送信エクスペリエンスの検証など、アダプティブフォームの様々な要素を検証できます。 アダプティブフォームの様々な側面のテストについて詳しくは、「アダプティブフォームのテストの自動化」を参照してください。
 
 ## 手順3: スイート内または個々のテストケース内のすべてのテストを実行する {#step-run-all-the-tests-in-a-suite-or-individual-tests-cases}
 
