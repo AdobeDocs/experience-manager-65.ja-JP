@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '6822'
 ht-degree: 74%
@@ -33,7 +33,7 @@ Adobe Experience Manager Forms のルール編集機能により、フォーム�
 * フォームデータモデルサービス操作を呼び出し処理を実行する
 * オブジェクトのプロパティを設定する
 
-ルールエディタは、AEM 6.1 Forms以前のリリースで使用されていたスクリプティング機能を置き換えるものです。 ただし、既存のスクリプトは、新しいルールエディターからも利用できます。ルールエディタで既存のスクリプトを編集する方法の詳細については、「[既存のスクリプトに対するルールエディタの影響](../../forms/using/rule-editor.md#p-impact-of-rule-editor-on-existing-scripts-p)」を参照してください。
+ルールエディタは、AEM 6.1Forms以前のリリースのスクリプティング機能を置き換えるものです。 ただし、既存のスクリプトは、新しいルールエディターからも利用できます。ルールエディタで既存のスクリプトを編集する方法の詳細については、「[既存のスクリプトに対するルールエディタの影響](../../forms/using/rule-editor.md#p-impact-of-rule-editor-on-existing-scripts-p)」を参照してください。
 
 forms-power-users グループに追加されたユーザーは、新しいスクリプトの作成と既存のスクリプトの編集を行うことができます。forms-users グループのユーザーは、スクリプトを使用できますが、スクリプトの作成または編集はできません。
 
@@ -164,7 +164,7 @@ For more information about configuring services in form data model, see [AEM For
 
 **Save Form** ：フォームを保存します。
 
-**Submit Forms** Submits the form.
+**送信Forms** ：フォームを送信します。
 
 **フォームのリセット** ：フォームをリセットします。
 
@@ -639,7 +639,7 @@ area = function(len) {
 
 **関数表現と文関数**
 
-```
+```javascript
 var b={};
 /** */
 b.area = function(len) {
@@ -649,7 +649,7 @@ b.area = function(len) {
 
 **変数の関数宣言**
 
-```
+```javascript
 /** */
 var x1,
     area = function(len) {
@@ -662,7 +662,7 @@ var x1,
 
 **オブジェクトの関数宣言**
 
-```
+```javascript
 var c = {
     b : {
         /** */
