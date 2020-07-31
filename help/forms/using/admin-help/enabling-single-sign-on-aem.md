@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 95%
@@ -20,7 +20,7 @@ ht-degree: 95%
 
 # AEM forms でのシングルサインオンの有効化{#enabling-single-sign-on-in-aem-forms}
 
-AEM Formsでシングルサインオン(SSO)を有効にする方法は2つあります（HTTPヘッダーとSPNEGO）。
+AEM formsでは、シングルサインオン(SSO)を有効にする方法が2つ用意されています（HTTPヘッダーとSPNEGO）。
 
 SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM Forms ユーザーのログインページは不要になり、ログインページは表示されません。
 
@@ -121,14 +121,14 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 
 次のようなエラーが発生することがあります。
 
-```java
+```shell
 DsCrackNames returned 0x2 in the name entry for spnegodemo.
 ktpass:failed getting target domain for specified user.
 ```
 
 この場合、次のようにユーザーを spnegodemo@um.lc.com に指定してください。
 
-```java
+```shell
 ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 ```
 
