@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 68%
@@ -63,7 +63,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 以下は、フォームポータルが、Search &amp; Lister コンポーネントの Geometrixx Gov カードのレイアウトを取得したカスタムテンプレートの実装例です。
 
-```xml
+```html
 <div class="__FP_boxes-container __FP_single-color">
     <div class="boxes __FP_boxes __FP_single-color" data-repeatable="true">
  <div class="__FP_boxes-thumbnail">
@@ -83,7 +83,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 ## カスタムテンプレートの技術仕様 {#technical-specifications-for-custom-templates}
 
-すべてのフォームポータルコンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれています。 繰り返し可能なエントリは、リスト表示の基本エンティティです。Search &amp; Lister、ドラフト&amp;提出および Link コンポーネントなどが繰り返し可能なエントリの例です。
+すべてのFormsポータルコンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれています。 繰り返し可能なエントリは、リスト表示の基本エンティティです。Search &amp; Lister、ドラフト&amp;提出および Link コンポーネントなどが繰り返し可能なエントリの例です。
 
 フォームポータルは、プレースホルダに構文を提供してカスタム /OOTB メタデータを表示します。プレースホルダは、フォーム、ドラフトまたは提出の結果を表示した後に追加されます。
 
@@ -171,7 +171,7 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 ## ヒント、テクニックおよび既知の問題 {#tips-tricks-and-known-issues}
 
 1. カスタムテンプレートでは一重引用符（‘）を使用しないでください。
-1. For custom metadata, store this property on the **jcr:content/metadata** node only. 他の場所に保存した場合、フォームポータルはメタデータを表示できません。
+1. For custom metadata, store this property on the **jcr:content/metadata** node only. 他の場所に保存すると、Formsポータルはメタデータを表示できません。
 1. すべてのカスタムメタデータまたは既存のメタデータの名前にコロン（:）が含まれていないことを確認してください。含まれている場合、ユーザーインターフェイスに表示することができません。
 1. **data-repeatable** は、 **Link** コンポーネントに対して何の意味も持ちません。 アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
 
