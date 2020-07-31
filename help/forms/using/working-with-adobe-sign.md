@@ -10,7 +10,10 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14975f409a0e17183b3da6bdc5a42c8073080108
+source-git-commit: 70052a5a8cba16dd2d73179e6e1d617347d716bc
+workflow-type: tm+mt
+source-wordcount: '3679'
+ht-degree: 60%
 
 ---
 
@@ -46,7 +49,7 @@ Adobe Sign と AEM Forms を統合することにより、次の機能がサポ�
 
 アダプティブフォーム用に Adobe Sign を設定するには、以下の手順を実行します。
 
-1. [Adobe signのアダプティブフォームプロパティの編集](../../forms/using/working-with-adobe-sign.md#enableadobesign)
+1. [Adobe署名用のアダプティブフォームプロパティの編集](../../forms/using/working-with-adobe-sign.md#enableadobesign)
 1. [Adobe Sign のフィールドをアダプティブフォームに追加する](../../forms/using/working-with-adobe-sign.md#addadobesignfieldstoanadaptiveform)
 1. [アダプティブフォームに対して Adobe Sign を有効にする](../../forms/using/working-with-adobe-sign.md#enableadobsignforanadaptiveform)
 1. [アダプティブフォームに対して Adobe Sign クラウドサービスを選択する](../../forms/using/working-with-adobe-sign.md#selectadobesigncloudserviceforanadaptiveform)
@@ -56,46 +59,46 @@ Adobe Sign と AEM Forms を統合することにより、次の機能がサポ�
 
 ![署名者の詳細](assets/signer_details_new.png)
 
-### Adobe signのアダプティブフォームプロパティの編集 {#enableadobesign}
+### Adobe Signのアダプティブフォームプロパティの編集 {#enableadobesign}
 
-既存または新しいアダプティブフォームに対して、Adobe signのアダプティブフォームプロパティを設定します。
+既存または新規のアダプティブフォームに対して、Adobe Signのアダプティブフォームプロパティを設定します。
 
-[Adobe sign用アダプティブフォームの作成では](../../forms/using/working-with-adobe-sign.md#create-an-adaptive-form-for-adobe-sign) 、基本的なアダプティブフォームを作成する手順について説明します。 アダプティブ [フォームの作成中に使用できるその他のオプションについては](../../forms/using/creating-adaptive-form.md) 、「アダプティブフォームの作成」を参照してください。
+[「Adobe Sign向けアダプティブフォームの作成](../../forms/using/working-with-adobe-sign.md#create-an-adaptive-form-for-adobe-sign) 」では、基本的なアダプティブフォームの作成手順を説明しています。 「アダプティブフォームの [作成中に使用できるその他のオプションについては](../../forms/using/creating-adaptive-form.md) 、アダプティブフォームの作成」を参照してください。
 
-#### Adobe sign用アダプティブフォームの作成 {#create-an-adaptive-form-for-adobe-sign}
+#### Adobe Sign用アダプティブフォームの作成 {#create-an-adaptive-form-for-adobe-sign}
 
 署名が有効なアダプティブフォームを作成するには、次の手順を実行します。
 
-1. **[!UICONTROL Adobe Experience Manager]** /Forms **[!UICONTROL /]** Forms **[!UICONTROL &amp; Documents]**&#x200B;に移動します。
+1. **[!UICONTROL Adobe Experience Manager]** / **[!UICONTROL Forms]** / **** Forms&amp;ドキュメントに移動します。
 1. 「**[!UICONTROL 作成]**」をタップして、「**[!UICONTROL アダプティブフォーム]**」を選択します。テンプレートのリストが表示されます。 Select the template and tap **[!UICONTROL Next]**.
 1. In the **[!UICONTROL Basic]** tab:
 
-   1. アダプティブ **フォームの** 名前 **とタイ** トルを指定します。
+   1. アダプティブフォームの **名前** と **タイトルを指定します** 。
 
-   1. AEM FormsでのAdobe sign [の設定時に](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) 、作成した設定コンテナを選択します。
+   1. AEM Formsを使用してAdobe Signを設定する際に作成した [設定コンテナ](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) を選択します。
 
-1. 「フォームモ **[!UICONTROL デル]** 」タブで、次のいずれかのオプションを選択します。
+1. 「 **[!UICONTROL フォームモデル]** 」タブで、次のいずれかのオプションを選択します。
 
-   * 「フォームテ **[!UICONTROL ンプレートをレコードのドキュメントとして関連付け」テンプレートオプションを選択し]** 、「レコードのドキュメント」テンプレートを選択します。 フォームテンプレートベースのアダプティブフォームを使用する場合、署名用に送信されたドキュメントには、関連付けられたフォームテンプレートに基づくフィールドのみが表示されます。 アダプティブフォームのすべてのフィールドが表示されるわけではありません。
+   * 「 **[!UICONTROL フォームテンプレートをレコードのドキュメントとして]** 関連付ける」オプションを選択し、「レコードのテンプレート」のドキュメントを選択します。 フォームテンプレートベースのアダプティブフォームを使用する場合、署名用に送信されたドキュメントには、関連付けられたフォームテンプレートに基づくフィールドのみが表示されます。 アダプティブフォームのすべてのフィールドを表示するわけではありません。
 
-   * 「レコードのド **[!UICONTROL キュメントを生成]** 」オプションを選択します。 「レコードのドキュメント」オプションを有効にしたアダプティブフォームを使用する場合、署名用に送信されたドキュメントにはアダプティブフォームのすべてのフィールドが表示されます。
+   * 「レコードの **[!UICONTROL ドキュメントを]** 生成」オプションを選択します。 「レコードのドキュメント」オプションを有効にしているアダプティブフォームを使用する場合、署名用に送信されたドキュメントには、アダプティブフォームのすべてのフィールドが表示されます。
 
-1. 「**[!UICONTROL 作成」をタップします。]** 署名が有効なアダプティブフォームが作成され、Adobe signフィールドの追加に使用できます。
+1. 「**[!UICONTROL 作成」をタップします。]** 署名が有効なアダプティブフォームが作成され、Adobe Signフィールドを追加する際に使用できます。
 
-#### Adobe sign用アダプティブフォームの編集 {#editafsign}
+#### Adobe Signのアダプティブフォームの編集 {#editafsign}
 
-既存のアダプティブフォームでAdobe signを使用するには、次の手順を実行します。
+既存のアダプティブフォームでAdobe Signを使用するには、次の手順を実行します。
 
-1. **[!UICONTROL Adobe Experience Manager]** /Forms **[!UICONTROL /]** Forms **[!UICONTROL &amp; Documents]**&#x200B;に移動します。
+1. **[!UICONTROL Adobe Experience Manager]** / **[!UICONTROL Forms]** / **** Forms&amp;ドキュメントに移動します。
 1. Select the adaptive form and tap **[!UICONTROL Properties]**.
-1. 「基本」タ **[!UICONTROL ブで]** 、AEM formsでのAdobe signの設定時 [](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) に作成した設定コンテナを選択します。
-1. 「フォームモ **[!UICONTROL ード]** 」タブで、次のいずれかのオプションを選択します。
+1. 「 **[!UICONTROL 基本]** 」タブで、AEM Formsを使用してAdobe Signを設定する際に作成した [設定コンテナ](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) を選択します。
+1. 「 **[!UICONTROL フォームモード]** 」タブで、次のいずれかのオプションを選択します。
 
-   * 「フォームテ **[!UICONTROL ンプレートをレコードのドキュメントとして関連付け」テンプレートオプションを選択し]** 、「レコードのドキュメント」テンプレートを選択します。 フォームテンプレートベースのアダプティブフォームを使用する場合、署名用に送信されたドキュメントには、関連付けられたフォームテンプレートに基づくフィールドのみが表示されます。 アダプティブフォームのすべてのフィールドが表示されるわけではありません。
+   * 「 **[!UICONTROL フォームテンプレートをレコードのドキュメントとして]** 関連付ける」オプションを選択し、「レコードのテンプレート」のドキュメントを選択します。 フォームテンプレートベースのアダプティブフォームを使用する場合、署名用に送信されたドキュメントには、関連付けられたフォームテンプレートに基づくフィールドのみが表示されます。 アダプティブフォームのすべてのフィールドを表示するわけではありません。
 
-   * 「レコードのド **[!UICONTROL キュメントを生成]** 」オプションを選択します。 「レコードのドキュメント」オプションを有効にしたアダプティブフォームを使用する場合、署名用に送信されたドキュメントにはアダプティブフォームのすべてのフィールドが表示されます。
+   * 「レコードの **[!UICONTROL ドキュメントを]** 生成」オプションを選択します。 「レコードのドキュメント」オプションを有効にしているアダプティブフォームを使用する場合、署名用に送信されたドキュメントには、アダプティブフォームのすべてのフィールドが表示されます。
 
-1. Tap **[!UICONTROL Save &amp; Close]**. アダプティブフォームがAdobe signに対して有効になっている。
+1. 「**[!UICONTROL 保存して閉じる]**」をタップします。アダプティブフォームはAdobe Signで有効になっています。
 
 ### Adobe Sign のフィールドをアダプティブフォームに追加する {#addadobesignfieldstoanadaptiveform}
 
@@ -111,28 +114,28 @@ Adobe Sign には、アダプティブフォーム上に配置できるさまざ
 
    >[!NOTE]
    >
-   >    * アダプティブフォームで Adobe Sign を使用する場合、Adobe Sign ブロックの使用は必須ではありません。Adobe signブロックを使用せずに署名者にフィールドを追加すると、デフォルトの署名フィールドが署名ドキュメントの下部に表示されます。
+   >    * アダプティブフォームで Adobe Sign を使用する場合、Adobe Sign ブロックの使用は必須ではありません。署名者にAdobe Signブロックを使用してフィールドを追加しない場合は、デフォルトの署名フィールドが署名ドキュメントの下部に表示されます。
    >    * レコードのドキュメントが自動的に生成されるアダプティブフォームの場合のみ、Adobe Sign ブロックを使用してください。カスタムの XDP を使用して、レコードのドキュメントやフォームテンプレートベースのアダプティブフォームを生成する場合は、Adobe Sign ブロックを使用する必要はありません。
 
 
-1. Select the **Adobe Sign Block** component and tap the **Edit** ![aem_6_3_edit](assets/aem_6_3_edit.png) icon. フィールドを追加し、フィールドの表示形式を設定するオプションが表示されます。
+1. Select the **Adobe Sign Block** component and tap the **Edit** ![aem_6_3_edit](assets/aem_6_3_edit.png) icon. フィールドを追加したり、フィールドの表示形式を設定したりするためのオプションが表示されます。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
-   **** A.Adobe signフィールドを選択して追加します。 **** B.Adobe signブロックをフルスクリーン表示に拡張します。
+   **A.** [Adobe Sign]フィールドを選択して追加します。 **B.** [Adobe Sign]ブロックをフルスクリーン表示に展開する
 
-1. 「 **Adobe Sign Field** 」の「aem_6_3_ ![adobesign](assets/aem_6_3_adobesign.png) 」アイコンをタップします。 Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
+1. 「 **Adobe Signフィールド** aem_6_3_adobesign ![](assets/aem_6_3_adobesign.png) 」アイコンをタップします。 Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
 
    Expand the **Type** drop-down field to select a Adobe Sign field and tap the Done ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) icon to add the selected field to Adobe Sign block. 「**タイプ**」ドロップダウンフィールドには、「署名」タイプ、「署名者の情報」タイプ、「データフィールド」タイプが表示されます。Adobe Sign が AEM Forms に統合されている場合、「タイプ」ドロップダウンボックスに表示されているフィールド以外のフィールドは使用できません。Adobe Sign フィールドについて詳しくは、[Adobe Sign のドキュメント](https://helpx.adobe.com/sign/help/field-types.html)を参照してください。
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
-   フィールドには一意の名前を指定する必要があります。 フィールドを必須フィールドとしてマークするための必須オプションを選択することもできます。Adobe Sign の一部のフィールドには、「**名前**」オプションと「**必須**」オプションのほかに、追加のオプションが用意されています。例えば、マスクオプや複数行のオプションなどです。また、フィールドが Adobe Sign の同じブロック内に存在するか別のブロック内に存在するかを問わず、Adobe Sign の各フィールドに一意の名前を指定できます。
+   フィールドには一意の名前を付ける必要があります。 フィールドを必須フィールドとしてマークするための必須オプションを選択することもできます。Adobe Sign の一部のフィールドには、「**名前**」オプションと「**必須**」オプションのほかに、追加のオプションが用意されています。例えば、マスクオプや複数行のオプションなどです。また、フィールドが Adobe Sign の同じブロック内に存在するか別のブロック内に存在するかを問わず、Adobe Sign の各フィールドに一意の名前を指定できます。
 
-   ドロップダウンリ **ストから「電子署名** 」を選択すると、アダプティブフォームに電子署名を適用できます。
+   ドロップダウンリストから「 **デジタル署名** 」を選択すると、アダプティブフォームに電子署名を適用できます。
 
-   * クラウド署名を使用したオンラインで、信頼サービスプロバ [イダーがホストするデジタル](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) IDで署名します。
-   * スマートカード、USBトークンまたはファイルベースのデジタルIDを使用して、Adobe AcrobatまたはReaderでドキュメントをローカルにダウンロードする方法。
+   * クラウド署名を使用して、信頼サービスプロバイダーが [](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) ホストするデジタルIDで署名するオンライン。
+   * スマートカード、USBトークン、またはファイルベースのデジタルIDを使用して、Adobe AcrobatまたはReaderと共にドキュメントをローカルにダウンロードする。
 
 ### アダプティブフォームに対して Adobe Sign を有効にする {#enableadobsignforanadaptiveform}
 
@@ -163,7 +166,7 @@ AEM Forms の 1 つのインスタンスに対して、複数の Adobe Sign サ�
 
    同時に署名する場合は、複数の署名者がフォームを同時に署名することができます。
 
-1. [アダプティブフォームに署名者を追加し](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) 、「 [](assets/aem_6_3_forms_save.png) aem_6_3_forms_saveを完了」アイコンをタップして変更を保存します。
+1. [アダプティブフォームに署名追加し、「](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform)[](assets/aem_6_3_forms_save.png) aem_6_3_forms_saveを完了」アイコンをタップして変更を保存します。
 
 
 ### アダプティブフォームに署名者を追加する {#addsignerstoanadaptiveform}
@@ -172,16 +175,16 @@ AEM Forms の 1 つのインスタンスに対して、複数の Adobe Sign サ�
 
 1. In the Content browser, tap **Form Container**, and tap the **Configure** ![configure](assets/configure.png) icon. この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。
 1. このプロパティブラウザーで「**電子署名**」アコーディオンを展開し、「**Adobe Sign を有効にする**」オプションを選択します。この操作により、アダプティブフォームに対して Adobe Sign が有効になります。
-1. Tap **Add Signer** under **Signer Configuration**. 署名者がアダプティブフォームに追加されます。 アダプティブフォームには、複数のAdobe sign署名者を追加できます。
+1. Tap **Add Signer** under **Signer Configuration**. これにより、署名者がアダプティブフォームに追加されます。 アダプティブフォームには、複数のAdobe Sign署名者を追加できます。
 1. ![電話の詳細](assets/phone-details.png)
 
    Click the **Edit** ![aem_6_3_edit](assets/aem_6_3_edit.png) icon to specify the following information about the signer:
 
-   * **** タイトル：署名者を一意に識別するタイトルを指定します。
+   * **タイトル：** 署名者を一意に識別するタイトルを指定します。
 
-   * **** 署名者とフォームの入力者は同じですか。フォーム **の入力者と最初の署名者が同じ人物である場合は、「はい**」を選択します。 このオプションを「**いいえ**」に設定した場合は、アダプティブフォームの署名ステップコンポーネントは使用しないでください。フォームに署名ステップコンポーネントが含まれている場合は、このフィールドの値が自動的に「はい」に設定されます。
+   * **署名者とフォームの入力者は同じですか。** フォームの入力者と最初の署名者が同じ人物の場合は、 **「はい**」を選択します。 このオプションを「**いいえ**」に設定した場合は、アダプティブフォームの署名ステップコンポーネントは使用しないでください。フォームに署名ステップコンポーネントが含まれている場合は、このフィールドの値が自動的に「はい」に設定されます。
 
-   * **署名者の電子メールアドレス：**&#x200B;署名者の電子メールアドレスを指定します。署名者は、ここで指定した電子メールアドレスで、署名する必要があるドキュメントやフォームを受信します。フォームフィールドで指定した電子メールアドレスを使用することも、ログインユーザーの AEM ユーザープロファイルで指定した電子メールアドレスを使用することも、電子メールアドレスを手動で入力することもできます。このステップは、必ず実行する必要があります。最初の署名者または唯一の署名者の電子メールアドレス（単一の署名者の場合）が、AEMクラウドサービスの設定に使用されるAdobe signアカウントと同一でないことを確認します。
+   * **署名者の電子メールアドレス：**&#x200B;署名者の電子メールアドレスを指定します。署名者は、ここで指定した電子メールアドレスで、署名する必要があるドキュメントやフォームを受信します。フォームフィールドで指定した電子メールアドレスを使用することも、ログインユーザーの AEM ユーザープロファイルで指定した電子メールアドレスを使用することも、電子メールアドレスを手動で入力することもできます。このステップは、必ず実行する必要があります。最初の署名者または唯一の署名者の電子メールアドレスが、AEM cloud servicesの設定に使用されたAdobe Signアカウントと一致していないことを確認します。
 
    * **署名者の認証方法：**&#x200B;署名するフォームを開く前にユーザーを認証する方法を指定します。電話による認証、ナレッジベースによる認証、ソーシャル ID に基づく認証のいずれかを選択することができます。
    >[!NOTE]
@@ -190,11 +193,12 @@ AEM Forms の 1 つのインスタンスに対して、複数の Adobe Sign サ�
 
 
    * **Adobe Sign のフィールドに入力または署名：**&#x200B;署名者用の Adobe Sign フィールドを選択します。1 つのアダプティブフォームで複数の Adobe Sign フィールドを使用することができます。署名者用に特定のフィールドを有効にすることができます。これらのフィールドには、使用可能なすべての Adobe Sign ブロックが表示されます。いずれかのブロックを選択すると、そのブロックのすべてのフィールドが選択されます。Xアイコンを使用して、フィールドの選択を解除できます。
+
    ![signer-details](assets/signer-details.png)
 
    上の画像には、Personal-Information と Office-details という 2 つのサンプルの Adobe Sign ブロックが表示されています。
 
-   「 ![aem_6_3_forms_save」アイコンをタップします](assets/aem_6_3_forms_save.png) 。 署名者が追加され、設定されます。
+   「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」アイコンをタップします。 署名者が追加され、設定されます。
 
 ### アダプティブフォームに対して送信アクションを選択する {#selectsubmitactionforanadaptiveform}
 
@@ -210,32 +214,33 @@ Adobe Sign フィールドをアダプティブフォームに追加したら、
 
 ## アダプティブフォームのクラウド署名の設定 {#configure-cloud-signatures-for-an-adaptive-form}
 
-クラウドベースの電子署名またはリモート署名は、デスクトップ、モバイル、Webで機能する新しい世代の電子署名です。 署名者の認証に関する最高レベルのコンプライアンスと保証を満たします。 クラウドベースの電子署名を使用してアダプティブフォームに署名できます。
+クラウドベースのデジタル署名またはリモート署名は、デスクトップ、モバイル、Web上で機能する新しい世代のデジタル署名で、署名者の認証に関する最高レベルのコンプライアンスと保証を満たします。 クラウドベースの電子署名を使用してアダプティブフォームに署名することができます。
 
-Adobe Signのア [ダプティブフォームのプロパティを編集した後](../../forms/using/working-with-adobe-sign.md#enableadobesign)、次の手順を実行してアダプティブフォームにクラウド署名フィールドを追加します。
+アダプティブフォームのプロパティをAdobe署名用に [編集した後](../../forms/using/working-with-adobe-sign.md#enableadobesign)、次の手順を実行してアダプティブフォームにクラウド署名フィールドを追加します。
 
 1. **Adobe Sign ブロック**&#x200B;コンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグアンドドロップします。Adobe Sign ブロックコンポーネントには、サポート対象のすべての Adobe Sign フィールドが含まれています。By default, it adds a **Signature** field to the adaptive form.
 
    ![署名ブロック](assets/sign-block-new.png)
 
-1. Select the **Adobe Sign Block** component and tap the **Edit** ![aem_6_3_edit](assets/aem_6_3_edit.png) icon. フィールドを追加し、フィールドの表示形式を設定するオプションが表示されます。
+1. Select the **Adobe Sign Block** component and tap the **Edit** ![aem_6_3_edit](assets/aem_6_3_edit.png) icon. フィールドを追加したり、フィールドの表示形式を設定したりするためのオプションが表示されます。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
-   **** A.Adobe signフィールドを選択して追加します。 **** B.Adobe signブロックをフルスクリーン表示に拡張します。
+   **A.** [Adobe Sign]フィールドを選択して追加します。 **B.** [Adobe Sign]ブロックをフルスクリーン表示に展開する
 
-1. 「 **Adobe Sign Field** 」の「aem_6_3_ ![adobesign](assets/aem_6_3_adobesign.png) 」アイコンをタップします。 Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
+1. 「 **Adobe Signフィールド** aem_6_3_adobesign ![](assets/aem_6_3_adobesign.png) 」アイコンをタップします。 Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
 
    Expand the **Type** drop-down field to select **Digital Signature** and tap the Done icon to add the selected field to Adobe Sign block.
 
    ![デジタル署名](assets/digital_signatures_new.png)
 
-   フィールドには一意の名前を指定する必要があります。
+   フィールドには一意の名前を付ける必要があります。
 
-   次を使用してアダプティブフォームに電子署名を適用します。
+   次を使用して、アダプティブフォームに電子署名を適用します。
 
-   * Cloud signatures:信頼サービスプロバ [イダーがホストする](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 、デジタルIDを使用して署名します。
-   * Adobe AcrobatまたはAdobe Reader:Adobe AcrobatまたはAdobe Readerでドキュメントをダウンロードして開き、スマートカード、USBトークンまたはファイルベースのデジタルIDを使用して署名します。
+   * Cloud signatures: 信頼サービスプロバイダーが [ホストするデジタルIDを使用して署名します](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 。
+   * Adobe AcrobatまたはReader: Adobe AcrobatまたはReaderでドキュメントをダウンロードして開き、スマートカード、USBトークン、またはファイルベースのデジタルIDを使用して署名します。
+
    クラウド署名フィールドをアダプティブフォームに追加した後、次の手順を実行して設定プロセスを完了します。
 
    * [アダプティブフォームに対して Adobe Sign を有効にする](../../forms/using/working-with-adobe-sign.md#enableadobsignforanadaptiveform)
@@ -271,21 +276,28 @@ Adobe Signのア [ダプティブフォームのプロパティを編集した�
    * **レガシーの E-Sign コンポーネントを使用**：[AEM Forms Workspace](../../forms/using/introduction-html-workspace.md) または AEM Forms アプリケーションで個別のアダプティブフォームを使用する場合や、ベースとなるアダプティブフォームにレガシーの E-Sign コンポーネントが含まれている場合は、「**レガシーの E-Sign コンポーネントを使用**」オプションを選択します。
 
    * **設定**：設定を選択します（Adobe Sign クラウドサービス）。The drop-down box is available only if the **Use legacy E-sign component** option is enabled.
-   「 ![aem_6_3_forms_save」アイコンをタップして](assets/aem_6_3_forms_save.png) 、変更を保存します。
+
+   「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」アイコンをタップして、変更を保存します。
 
    ![署名手順](assets/signature_step_new.png)
 
    >[!NOTE]
    >
-   >    * **[!UICONTROL 署名者ステップ]**&#x200B;コンポーネントをフォームにドラッグアンドドロップすると、「**[!UICONTROL 署名者とフォーム記入者は同一ですか？]**」オプションが自動的に「**はい**」に設定されます。フォームの動作を維持する必要があります。
+   > * **[!UICONTROL 署名者ステップ]**&#x200B;コンポーネントをフォームにドラッグアンドドロップすると、「**[!UICONTROL 署名者とフォーム記入者は同一ですか？]**」オプションが自動的に「**はい**」に設定されます。フォームの動作を維持する必要があります。
       >
-      >    
-   * 署名ステップコンポーネントが含まれているセクションやパネルの場合、Adobe Sign が有効になっているアダプティブフォームで「送信」ボタンを使用することはできません。You can add a summary step after the Signature step for the manual submission or an automatic submission is triggered after the interval set using the [Adobe Sign Configuration Service](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status).
+      > 
+   * 最適なエクスペリエンスを得るには、署名手順コンポーネントの後に概要手順コンポーネントを使用します。 概要手順では、署名手順コンポーネントでフォームの署名を完了した後、自動的に直ちにフォームが送信されます。 要約手順を使用しない場合、 [Adobe Sign設定サービスを使用して設定された間隔の後にのみ、自動送信がトリガーされます](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status)。
+   > * いくつかのベストプラクティスを次に示します。
+   > * 署名手順を含むアダプティブフォームパネルは、常にアダプティブフォームの最後または2番目の最後のパネルにあります。 最後のパネルの2番目に最後のパネルになるのは、最後のパネルに概要手順が含まれている場合のみです。
+   > * 署名または概要ステップのコンポーネントを含むパネルに、他のコンポーネントを含めることはできません。
+   > * 署名手順を含むアダプティブフォームには、送信ボタンを含めることはできません。 送信は、バックグラウンドサービスまたは概要手順で処理されます。
+   > * 署名または概要の手順を含むパネルから戻れないようにフォームをデザインします。
+
 
 
 ### 「ありがとうございます」ページまたは概要ステップコンポーネントの設定{#configure-the-thank-you-page-or-summary-step-component}
 
-**概要ステップ**&#x200B;コンポーネントにより、フォームが自動的に送信され、カスタマイズ後の概要ページに情報が取り込まれ、送信されたフォームの概要情報が表示されます。また、リターンマップ内の必須情報も取得されます。概要ステップコンポーネントは、フォームで使用可能な全幅を占めます。 「概要ステップ」コンポーネントを含むセクションには、他のコンポーネントを含めないことをお勧めします。
+**概要ステップ**&#x200B;コンポーネントにより、フォームが自動的に送信され、カスタマイズ後の概要ページに情報が取り込まれ、送信されたフォームの概要情報が表示されます。また、リターンマップ内の必須情報も取得されます。概要ステップコンポーネントは、フォームで使用可能な全幅を占めます。 「概要手順」コンポーネントを含むセクションには、他のコンポーネントを含めないことをお勧めします。
 
 これで、フォーム内署名機能を使用するための準備が整いました。フォームのプレビューを表示して、署名の方法を確認することができます。
 
@@ -295,32 +307,32 @@ Adobe Signのア [ダプティブフォームのプロパティを編集した�
 
 **A:**&#x200B;拡張テンプレートを使用して作成されたアダプティブフォームは、Adobe Sign を使用するように設定されています。このエラーを修正するには、Adobe Sign のクラウド設定を作成して選択し、アダプティブフォーム用の Adobe Sign 署名者を設定してください。
 
-**A:** はい。テキストコンポーネントでテキストタグを使用して、Adobe Sign のフィールドを[レコードのドキュメント](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)（「自動生成されたレコードのドキュメント」オプション）が有効になっているアダプティブフォームに追加することができます。テキストタグを作成する手順とルールについては、[Adobe Sign のドキュメント](https://helpx.adobe.com/sign/help/text-tags.html)を参照してください。アダプティブフォームでは、テキストタグを使用する場合に制限があることにも注意してください。テキストタグを使用して作成できるのは、[Adobe Sign ブロック](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form)がサポートされているフィールドだけです。
+**A:** はい。テキストコンポーネントでテキストタグを使用して、Adobe Sign のフィールドを[レコードのドキュメント](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)（「自動生成されたレコードのドキュメント」オプション）が有効になっているアダプティブフォームに追加することができます。テキストタグを作成する手順とルールについては、[Adobe Sign のドキュメント](https://helpx.adobe.com/jp/sign/help/text-tags.html)を参照してください。アダプティブフォームでは、テキストタグを使用する場合に制限があることにも注意してください。テキストタグを使用して作成できるのは、[Adobe Sign ブロック](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form)がサポートされているフィールドだけです。
 
 **A:**&#x200B;はい。フォーム内で両方のコンポーネントを同時に使用することができます。これらのコンポーネントを使用する場合は、以下の推奨事項を参照してください。
 
-**** Adobe signブロック：Adobe signブロックを使用すると、アダプティブフォームの任意の場所にAdobe signフィールドを追加できます。 また、特定のフィールドを署名者に割り当てることもできます。アダプティブフォームのプレビュー時と発行時には、Adobe Sign ブロックがデフォルトで非表示になります。これらのブロックは、署名ドキュメント内でのみ使用することができます。署名ドキュメント内では、署名者に割り当てられているフィールド以外は使用できません。Adobe Sign ブロックは、最初の署名者だけでなく、後続の署名者も使用することができます。
+**Adobe Signブロック：** Adobe Signブロックを使用すると、アダプティブフォームの任意の場所にAdobe Signフィールドを追加できます。 また、特定のフィールドを署名者に割り当てることもできます。アダプティブフォームのプレビュー時と発行時には、Adobe Sign ブロックがデフォルトで非表示になります。これらのブロックは、署名ドキュメント内でのみ使用することができます。署名ドキュメント内では、署名者に割り当てられているフィールド以外は使用できません。Adobe Sign ブロックは、最初の署名者だけでなく、後続の署名者も使用することができます。
 
-**署名ステップコンポーネント：**&#x200B;署名ステップコンポーネントを使用すると、フォーム内署名機能を設定することができます。この機能では、最初の署名者のみ、フォームの入力時に署名を行うことができます。署名ステップコンポーネントが含まれているセクションをレンダリングすると、フォームの署名可能な PDF バージョンが表示されます。通常は最後のセクションまたは最後のセクションに続いて、フォームの概要コンポーネントが続きます。
+**署名ステップコンポーネント：**&#x200B;署名ステップコンポーネントを使用すると、フォーム内署名機能を設定することができます。この機能では、最初の署名者のみ、フォームの入力時に署名を行うことができます。署名ステップコンポーネントが含まれているセクションをレンダリングすると、フォームの署名可能な PDF バージョンが表示されます。通常、フォームの最後または最後のセクションに続き、フォームの概要コンポーネントが表示されます。
 
 ## トラブルシューティング {#troubleshoot}
 
-### Adobe sign契約の失敗 {#adobe-sign-agreement-failures}
+### Adobe Sign合意の失敗 {#adobe-sign-agreement-failures}
 
-**問題**:Adobe signサービスがアダプティブフォーム用に設定されている場合、そのサービスは基になるアダプティブフォーム用のAdobe sign契約を作成できません。
+**問題**:Adobe Signサービスがアダプティブフォーム用に設定されている場合、そのサービスは基になるアダプティブフォーム用のAdobe Sign契約の作成に失敗します。
 
 **解像度**
 
-* アダプティブ [フォームで使用されるAdobe signクラウドサービス](../../forms/using/adobe-sign-integration-adaptive-forms.md) の設定を確認します。
-* Adobe Sign cloudサービスの設定に使用するAdobe signサーバー上のAPIアプリケーションに、必要な権限があることを確認します。
-* 複数のAdobe Sign cloudサービスを使用している場合は、すべてのサ **[!UICONTROL ービスの認証URL]** を同じ **[!UICONTROL Adobe Sign Shardに指定します]**。
+* アダプティブフォームで使用されているAdobe Signクラウドサービス [の](../../forms/using/adobe-sign-integration-adaptive-forms.md) 設定を確認します。
+* Adobe Signクラウドサービスの設定に使用したAdobe Signサーバー上のAPIアプリケーションに、必要な権限があることを確認します。
+* 複数のAdobe Signクラウドサービスを使用している場合は、すべてのサービスの **[!UICONTROL 認証URL]** を同じ **[!UICONTROL Adobe Signシャードに指定します]**。
 
-* 別々の電子メールアドレスを使用して、Adobe signアカウントを設定し、最初の署名者と単一の署名者に対して設定します。 最初の署名者または唯一の署名者の電子メールアドレス（1人の署名者の場合）は、AEMクラウドサービスの設定に使用するAdobe signアカウントと同一にできません。
+* 別々の電子メールアドレスを使用して、Adobe Signアカウントと、最初の署名者および単一の署名者用の設定を行います。 最初の署名者の電子メールアドレスまたは唯一の署名者（単一の署名者の場合）は、AEM cloud servicesの設定に使用されたAdobe Signアカウントと同一にできません。
 
 ## 関連記事 {#related-articles}
 
 * [Adobe Sign を AEM Forms に統合する](../../forms/using/adobe-sign-integration-adaptive-forms.md)
 * [アダプティブフォームで Adobe Sign を使用する](../../forms/using/working-with-adobe-sign.md)
 
-* [AEM FormsでのAdobe signの使用（ビデオ）
+* [Adobe SignとAEM Formsの併用（ビデオ）
    ](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
