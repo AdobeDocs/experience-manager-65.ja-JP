@@ -1,26 +1,26 @@
 ---
-title: Assets HTTP API（ [!DNL Adobe Experience Manager] に含まれているもの）
+title: '[!DNL Assets] HTTP APIが含まれています [!DNL Adobe Experience Manager]。'
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f29eeb54c115514947a11bbc8a9e9e7df7cd082b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 91%
+source-wordcount: '1579'
+ht-degree: 87%
 
 ---
 
 
-# Assets HTTP API {#assets-http-api}
+# [!DNL Assets] HTTP API {#assets-http-api}
 
 ## 概要 {#overview}
 
-Assets HTTP API を使用すれば、デジタルアセット（メタデータ、レンディション、コメントのほか、[!DNL Experience Manager] コンテンツフラグメントを使用した構造化コンテンツも含む）に対して作成、読み取り、更新、削除（CRUD）操作を実行できます。この API は `/api/assets` で公開されており、REST API として実装されています。[コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
+The [!DNL Assets] HTTP API allows for create-read-update-delete (CRUD) operations on digital assets, including on metadata, on renditions, and on comments, together with structured content using [!DNL Experience Manager] Content Fragments. この API は `/api/assets` で公開されており、REST API として実装されています。[コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
 
 この API にアクセスするには、次の手順を実行します。
 
 1. API サービスドキュメント（`https://[hostname]:[port]/api.json`）を開きます。
-1. `https://[hostname]:[server]/api/assets.json` への Assets サービスリンクをクリックします。
+1. Follow the [!DNL Assets] service link leading to `https://[hostname]:[server]/api/assets.json`.
 
 API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションをおこなう場合は、応答コードを利用します。
 
@@ -34,7 +34,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 ## データモデル {#data-model}
 
-Assets HTTP API は、フォルダーとアセット（標準アセット用）という 2 つの主要要素を公開します。
+The [!DNL Assets] HTTP API exposes two major elements, folders and assets (for standard assets).
 
 さらに、コンテンツフラグメント内の構造化コンテンツを記述するカスタムデータモデルに対する詳細な要素が公開されます。詳しくは、[コンテンツフラグメントのデータモデル](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
 
@@ -75,7 +75,7 @@ Experience Managerでは、アセットに次の要素が含まれます。
 * プロパティ
 * リンク
 
-Assets HTTP API には、以下の機能が含まれます。
+The [!DNL Assets] HTTP API includes the following features:
 
 * [フォルダーのリストの取得](#retrieve-a-folder-listing).
 * [フォルダーを作成](#create-a-folder)します。
