@@ -3,10 +3,10 @@ title: スマートタグと検索の管理
 description: 不正確なスマートタグを更新または削除して、タグの関連性を向上させます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 70%
+source-wordcount: '444'
+ht-degree: 75%
 
 ---
 
@@ -25,15 +25,15 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 
 1. オムニサーチボックスで、タグに基づいてアセットを検索します。
 1. 検索結果を調査し、検索に関連性のない画像を特定します。
-1. 画像を選択し、ツールバーの「タグ **[!UICONTROL 管理]** 」をクリックします。
-1. **[!UICONTROL タグを管理]**&#x200B;ページで、タグを調査します。If you don&#39;t want the image to be searched based on a specific tag, select the tag and then click **[!UICONTROL Delete]** from the toolbar. Alternatively, click `X` symbol that appears beside the label.
+1. Select the image, and click **[!UICONTROL Manage Tags]** from the toolbar.
+1. **[!UICONTROL タグを管理]**&#x200B;ページで、タグを調査します。If you don&#39;t want the image to be searched based on a specific tag, select the tag and then click **[!UICONTROL Delete]** from the toolbar. または、ラベルの横に表示される `X` 記号をクリックします。
 1. To assign a higher rank to a tag, select the tag and click **[!UICONTROL Promote]** from the toolbar. 昇格したタグは、「**[!UICONTROL タグ]**」セクションに移動されます。
-1. Click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the Success dialog.
+1. 「**[!UICONTROL 保存]**」、「**[!UICONTROL OK]**」の順にクリックして、成功ダイアログを閉じます。
 1. 画像のプロパティページに移動します。昇格したタグに高い関連性が割り当てられていること、その結果として検索結果の上位に表示されることを確認します。
 
-## スマートタグを使用してExperience Managerの検索結果を把握する {#understandsearch}
+## Understand [!DNL Experience Manager] search results with smart tags {#understandsearch}
 
-By default, Experience Manager search combines the search terms with an `AND` clause. スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。しかし、スマートタグを使って「`woman`」または「`running`」のどちらかがタグ付けされているアセットは、そうした検索結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
+By default, [!DNL Experience Manager] search combines the search terms with an `AND` clause. スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。しかし、スマートタグを使って「`woman`」または「`running`」のどちらかがタグ付けされているアセットは、そうした検索クエリに表示されます。つまり、検索結果は、以下を組み合わせたものになります。
 
 * 「`woman`」と「`running`」の両方のキーワードがメタデータ内にあるアセット。
 
