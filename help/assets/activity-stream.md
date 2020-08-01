@@ -1,19 +1,19 @@
 ---
-title: タイムラインのアクティビティストリーム
+title: のタイムライン表示のデジタルアセットのアクティビティストリーム [!DNL Experience Manager]。
 description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 73%
+source-wordcount: '216'
+ht-degree: 72%
 
 ---
 
 
 # タイムラインのアクティビティストリーム {#activity-stream-in-timeline}
 
-この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Managerアセットで以下のアセット関連の操作を実行すると、アクティビティストリーム機能によってタイムラインが更新され、アクティビティが反映されます。
+この機能は、タイムラインにアセットのアクティビティログを表示します。If you perform any of the following asset-related operations in [!DNL Adobe Experience Manager Assets], the activity stream feature updates the timeline to reflect the activity.
 
 アクティビティストリームでログに記録される操作は次のとおりです。
 
@@ -26,7 +26,7 @@ ht-degree: 73%
 * 拒否
 * 移動
 
-タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into Experience Manager via [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html).
+タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into [!DNL Experience Manager] via [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
