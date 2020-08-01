@@ -3,10 +3,10 @@ title: でビデオアセットを管理します [!DNL Adobe Experience Manager
 description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 39%
+source-wordcount: '814'
+ht-degree: 37%
 
 ---
 
@@ -19,9 +19,9 @@ Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager 
 
 ## ビデオアセットのアップロードとプレビュー {#upload-and-preview-video-assets}
 
-[!DNL Adobe Experience Manager Assets] 拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 レンディションは、アセットユーザーインターフェイスでプレビューできます。
+[!DNL Adobe Experience Manager Assets] 拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFMPEGは、OGGタイプとMP4タイプのビデオレンディションを作成します。 You can preview the renditions in the [!DNL Assets] user interface.
 
-1. デジタルアセットフォルダー（またはサブフォルダー）で、デジタルアセットを追加する場所に移動します。
+1. デジタルアセットフォルダーまたはサブフォルダーで、デジタルアセットを追加する場所に移動します。
 1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Files]**. または、アセット領域に直接ドロップします。See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
 1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. ビデオの一時停止や再生は、カード表示でのみ可能です。The [!UICONTROL Play] and [!UICONTROL Pause] options are not available in the list view.
 
@@ -71,7 +71,7 @@ In addition to [!DNL Assets] configuration, change the following configurations 
 
 ## ビデオアセットに注釈を付ける {#annotate-video-assets}
 
-1. From the Assets console, click [!UICONTROL Edit] on the asset card to display the asset details page.
+1. From the [!DNL Assets] console, click [!UICONTROL Edit] on the asset card to display the asset details page.
 1. ビデオを再生するには、「 [!UICONTROL プレビュー]」をクリックします。
 1. ビデオに注釈を付けるには、「**[!UICONTROL 注釈]**」ボタンをクリックします。ビデオの特定の時間（フレーム）に注釈が追加されます。 注釈を付ける際に、キャンバスに描画して、その画像をコメントと一緒に含めることができます。コメントは自動保存されます。
 
