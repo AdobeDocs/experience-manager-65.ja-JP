@@ -1,13 +1,13 @@
 ---
 title: Smart Content Serviceトレーニングガイドライン
-description: アセットにスマートタグを適用するようにAdobe SensieのAIサービスをトレーニングします。
+description: アセットにスマートタグを適用するように、Adobe SenseiのAIサービスをトレーニングする
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 73%
+source-wordcount: '462'
+ht-degree: 77%
 
 ---
 
@@ -28,15 +28,15 @@ ht-degree: 73%
 
 ![トレーニングガイドラインの例を示すイラスト](/help/assets/assets/do-not-localize/coherence.png)
 
-**対象範囲**：トレーニングの画像には十分な多様性が必要です。アイデアは、いくつかの合理的に多様な例を提供して、Experience Managerが適切な事柄に焦点を当てるようにすることです。 見た目が大きく異なる画像に同じタグを適用する場合は、それぞれの種類に 5 つ以上の例を含めてください。
+**対象範囲**：トレーニングの画像には十分な多様性が必要です。Experience Managerが適切なものに焦点を合わせるように、いくつかの合理的に多様な例を提供することがアイデアです。 見た目が大きく異なる画像に同じタグを適用する場合は、それぞれの種類に 5 つ以上の例を含めてください。
 
-例えば、model-down-pose ** というタグの場合、タグ付け時、類似する画像をより正確に識別できるよう、以下のハイライト表示された画像に似たトレーニング画像を増やします。
+例えば、*model-down-pose* というタグの場合、タグ付け時、類似する画像をより正確に識別できるよう、以下のハイライト表示された画像に似たトレーニング画像を増やします。
 
 ![トレーニングガイドラインの例を示すイラスト](/help/assets/assets/do-not-localize/coverage_1.png)
 
 **妨害物と障害物**：サービスのトレーニングには、障害物（目立つ背景、メインとなる対象と一緒に含まれる物や人物などの関連性のない付随物）が少ない画像のほうが効果的です。
 
-例えば、casual-shoe ** というタグの場合、2 つ目の画像はトレーニングの候補として適切ではありません。
+例えば、*casual-shoe* というタグの場合、2 つ目の画像はトレーニングの候補として適切ではありません。
 
 ![トレーニングガイドラインの例を示すイラスト](/help/assets/assets/do-not-localize/distraction.png)
 
@@ -48,11 +48,11 @@ ht-degree: 73%
 
 強化されたスマートタグは、画像の学習モデルとそのタグに基づいています。 これらのモデルは、タグを識別するうえで常に完璧であるわけではありません。スマートコンテンツサービスの現行バージョンには次の制限事項があります。
 
-* 画像内の細かい違いを認識することはできません。例えば、スリムとレギュラーのフィットシャツ。
+* 画像内の細かい違いを認識することはできません。例えば、シャツのサイズが細身か標準かなどの違いは認識できません。
 * 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
-* タグ付けは、Experience Managerがサポートされているロケールでサポートされます。 言語の一覧については、](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)スマートコンテンツサービスのリリースノート[を参照してください。
+* Tagging is supported in the locales that [!DNL Experience Manager] is supported in. 言語の一覧については、](https://docs.adobe.com/content/help/ja-JP/experience-manager-64/release-notes/smart-content-service-release-notes.translate.html)スマートコンテンツサービスのリリースノート[を参照してください。
 
-スマートタグを使用してアセットを検索（通常または拡張）するには、「アセットの検索」（フルテキスト検索）を使用します。 スマートタグには個別の検索用述語はありません。
+To search for assets with smart tags (regular or enhanced), use the [!DNL Assets] Omnisearch (full-text search). スマートタグには個別の検索用述語はありません。
 
 >[!NOTE]
 >
