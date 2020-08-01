@@ -1,12 +1,12 @@
 ---
-title: Adobe Experience Manager Assetsの個人用画像ギャラリーとしてのライトボックス。
-description: Adobe Experience Manager Assetsの個人用画像ギャラリーとしてのライトボックスについて説明します。
+title: の個人画像ギャラリーとしてのライトボックス [!DNL Adobe Experience Manager Assets]。
+description: Adobe Experience Managerアセットの個人画像ギャラリーとしてのライトボックスについて説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 65%
+source-wordcount: '250'
+ht-degree: 53%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 65%
 
 Lightbox は、アセットに容易にアクセスするための特別なタイプのコレクションです。Lightbox にすぐにアクセスして、アセットを追加または削除できます。Lightbox は、個人用の画像ギャラリーとして使用することができます。
 
-Adobe Experience Manager Assets のユーザーである場合は、アプリケーションに最初にログインしたときに Lightbox が自動的に作成されます。この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
+If you are an [!DNL Adobe Experience Manager Assets] user, Lightbox is automatically created when you first log in to the application. この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
 
 ## Lightbox へのアセットの追加 {#adding-assets-to-lightbox}
 
-1. Assets のユーザーインターフェイスで、Lightbox に追加するアセットを選択します。
+1. From the [!DNL Assets] user interface, select the assets that you want to add to Lightbox.
 1. アセットを **[!UICONTROL Lightbox にドロップ]**&#x200B;ゾーンにドラッグします。Release when the drop-zone becomes active, and its label changes to **[!UICONTROL Drop to Add]**.
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
