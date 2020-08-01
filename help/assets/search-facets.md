@@ -1,19 +1,19 @@
 ---
 title: 検索ファセット.
-description: Adobe Experience Managerで検索ファセットを作成、変更および使用する方法。
+description: How to create, modify, and use search facets in [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '2515'
-ht-degree: 77%
+source-wordcount: '2488'
+ht-degree: 75%
 
 ---
 
 
 # 検索ファセット {#search-facets}
 
-企業規模でのAdobe Experience Managerアセットのデプロイメントには、多数のアセットを保存する機能があります。 Experience Managerの汎用検索機能のみを使用する場合は、適切なアセットの検索に時間がかかる場合があります。
+An enterprise-wide deployment of [!DNL Adobe Experience Manager Assets] has the capacity to store many assets. Sometimes, finding the right asset can be arduous and time-consuming if you only use the generic search capabilities of [!DNL Experience Manager].
 
 フィルターパネルの検索ファセットを使用すると、より詳細な検索が可能になり、検索機能がより効率的で柔軟になります。検索ファセットは、複数のディメンション（述語）を追加するので、ユーザーはより複雑な検索を実行できます。フィルターパネルには、いくつかの標準ファセットが含まれます。カスタム検索ファセットを追加することもできます。
 
@@ -27,16 +27,16 @@ ht-degree: 77%
 
 For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「プロパティの述語」を使用すると、ユーザーが指定した 1 つのプロパティと一致するアセットが検索されます。「オプションの述語」を使用すると、特定のプロパティについて 1 つ以上の値と一致するアセットが検索されます。「日付の範囲の述語」を追加すると、指定した期間内に作成されたアセットが検索されます。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 
-   ![アセット管理者の検索レールを探して選択](assets/assets_admin_searchrail.png)
+   ![アセットまたは管理者の検索パネルを見つけて選択します](assets/assets_admin_searchrail.png)
 
    >[!NOTE]
    >
    >以前のバージョンの事前設定済みの **アセット管理者用検索パネルからフォルダー検索機能を使用するには** 、次の手順を実行します。
    >
-   >1. CRXDEの */conf/global/settings/dam/search/facets/assets/jcr:content/items* に移動します。
+   >1. Navigate to `/conf/global/settings/dam/search/facets/assets/jcr:content/items` in CRXDE.
    >1. 「 **type** 」ノードを削除します。
    >1. パス */libs/settings/dam/search/facets/assets/jcr:content/items* から、ノード&#x200B;**アセット、ディレクトリ、typeor、excludepaths**、および **searchtype** を、手順 1 のパスにコピーします。
    >1. 変更内容を保存します。
@@ -73,7 +73,7 @@ For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「
 
 1. To close the preview, click the **[!UICONTROL Close]** ![close](assets/do-not-localize/close.png) on the upper-right corner of the preview.
 1. 「**[!UICONTROL 完了]**」をクリックして、設定を保存します。
-1. Assets ユーザーインターフェイスの検索パネルに移動します。プロパティの述語がパネルに追加されています。
+1. Navigate to the Search panel in the [!DNL Assets] user interface. プロパティの述語がパネルに追加されています。
 1. Enter a description for the asset to be searched in the text box. For example, enter `Adobe`. When you perform a search, assets with description matching `Adobe` are listed in the search results.
 
 ## オプションの述語の追加 {#adding-an-options-predicate}
@@ -112,7 +112,7 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 >
 >オプションの述語は、求める動作を実行するためにプロパティの述語を組み合わせたカスタムのラッパーです。現時点で、この機能をネイティブにサポートする REST エンドポイントは存在しません。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]**.
 1. **[!UICONTROL 検索フォームを編集]**&#x200B;ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに&#x200B;**[!UICONTROL オプションの述語]**&#x200B;をドラッグします。
 1. 「**[!UICONTROL 設定]**」タブで、プロパティのラベルと名前を入力します。例えば、アセットの形式に基づいてアセットを検索するには、ラベルに対してわかりやすい名前（例：**[!UICONTROL ファイルタイプ]**）を指定します。検索実行の基準となるプロパティをプロパティフィールドに指定します（例：`jcr:content/metadata/dc:format.`）。
@@ -132,22 +132,22 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 
 ## 複追加数値のプロパティ述語 {#adding-a-multi-value-property-predicate}
 
-複数値プロパティの述語では、複数の値でアセットを検索できます。 Assets で複数の製品の画像があり、各画像のメタデータには製品の SKU 番号が含まれているとします。この述語を利用すれば、複数の SKU 番号で製品の画像を検索できます。
+複数値プロパティの述語では、複数の値でアセットを検索できます。Consider a scenario where you have images of multiple products in [!DNL Assets] and the metadata for each image includes an SKU number associated with the product. この述語を利用すれば、複数の SKU 番号で製品の画像を検索できます。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. On the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, the click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに&#x200B;**[!UICONTROL 複数値プロパティの述語]**&#x200B;をドラッグします。
 1. 「**[!UICONTROL 設定]**」タブで、述語のラベルとプレースホルダーテキストを入力します。プロパティフィールドに検索したいプロパティ名を指定します（例：`jcr:content/metadata/dc:value`）。選択ダイアログを使用してノードを選択することもできます。
 1. 「**[!UICONTROL 区切り文字サポート]**」が選択されていることを確認します。「**[!UICONTROL 入力区切り文字]**」フィールドで、それぞれの値を区切る文字を指定します。デフォルトでは、コンマが区切り文字に指定されています。別の区切り文字を指定できます。
 1. 「**説明**」フィールドに説明を任意で入力し、「**[!UICONTROL 完了]**」をクリックします。
-1. Assets ユーザーインターフェイスのフィルターパネルに移動します。**[!UICONTROL 複数値プロパティ]**&#x200B;の述語がパネルに追加されています。
+1. Navigate to the Filters panel in the [!DNL Assets] user interface. **[!UICONTROL 複数値プロパティ]**&#x200B;の述語がパネルに追加されています。
 1. 「複数値」フィールドに、複数の値を区切り文字で区切って検索します。述語は、指定した値とテキストが完全に一致するものを返します。
 
 ## タグ用述語の追加 {#adding-a-tags-predicate}
 
-Tag Predicateを使用すると、アセットをタグベースで検索できます。 初期設定では、アセットは、指定したタグに基づいて、1つ以上の一致するタグをアセット内で検索します。 言い換えれば、検索クエリは指定したタグを用いて OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すれば、すべての指定したタグを含むアセットを検索することも可能です。
+Tag Predicateを使用すると、アセットをタグベースで検索できます。 By default, [!DNL Assets] searches assets for one or more tags matches based on the tags you specify. 言い換えれば、検索クエリは指定したタグを用いて OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すれば、すべての指定したタグを含むアセットを検索することも可能です。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]** and then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウにタグの述語をドラッグします。
 1. 「設定」タブで、述語のプレースホルダーテキストを入力します。プロパティフィールドに検索したいプロパティ名を指定します（例：*jcr:content/metadata/cq:tags*）。または、選択ダイアログから CRXDE のノードを選択することもできます。
