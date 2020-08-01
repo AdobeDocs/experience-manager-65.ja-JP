@@ -1,12 +1,12 @@
 ---
-title: Adobe Experience Managerアセットの検索機能の拡張
-description: Adobe Experience Managerアセットの検索機能をデフォルト以外に拡張します。
+title: の検索機能を拡張しました [!DNL Adobe Experience Manager Assets]。
+description: 検索機能をデフォルト以 [!DNL Adobe Experience Manager Assets] 外にも拡張できます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 74%
+source-wordcount: '841'
+ht-degree: 77%
 
 ---
 
@@ -21,7 +21,7 @@ You can also add additional tabs to the [!DNL Assets] admin panel.
 
 >[!CAUTION]
 >
->As of [!DNL Experience Manager] 6.4, Classic UI is deprecated. For announcement, see [deprecated and removed features](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). タッチ対応UIの使用をお勧めします。 For customization, see [search facets](/help/assets/search-facets.md).
+>As of [!DNL Experience Manager] 6.4, Classic UI is deprecated. For announcement, see [deprecated and removed features](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). Adobeでは、タッチ対応UIの使用をお勧めします。 For customization, see [search facets](/help/assets/search-facets.md).
 
 ## オーバーレイ {#overlaying}
 
@@ -35,7 +35,7 @@ To overlay the pre-configured predicates, copy the `facets` node from `/libs/dam
 
 ## タブの追加 {#adding-tabs}
 
-アセット管理インターフェイスで設定することで、追加の検索タブを追加できます。 追加のタブは以下の手順で作成します。
+You can add additional search tabs by configuring them in the [!DNL Assets] admin interface. 追加のタブは以下の手順で作成します。
 
 1. フォルダー構造 `/apps/wcm/core/content/damadmin/tabs,` がまだ存在しない場合は作成し、`tabs` ノードを `/libs/wcm/core/content/damadmin` からコピーして貼り付けます。
 1. 必要に応じて、2 つ目のタブを作成し設定します。
@@ -48,7 +48,7 @@ To overlay the pre-configured predicates, copy the `facets` node from `/libs/dam
 
 [!DNL Assets] には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。Customizing an Asset Share in this way is covered in [create and configure an Asset Share page](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-In addition to using pre-existing predicates, Experience Manager developers can also create their own predicates using the [Query Builder API](/help/sites-developing/querybuilder-api.md).
+In addition to using pre-existing predicates, [!DNL Experience Manager] developers can also create their own predicates using the [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
@@ -296,6 +296,6 @@ In addition to using pre-existing predicates, Experience Manager developers can 
 
 ## 検索結果のカスタマイズ {#customizing-search-results}
 
-アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。Experience Managerアセットには、アセット共有ページのカスタマイズに使用できる定義済みのレンズセットが付属しています。 この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
+アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager Assets] には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-既存のレンズを使用するだけでなく、Experience Manager開発者は独自のレンズを作成することもできます。
+In addition to using pre-existing lenses, [!DNL Experience Manager] developers can also create their own lenses.
