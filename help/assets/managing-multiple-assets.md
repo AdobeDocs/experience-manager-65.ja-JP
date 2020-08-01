@@ -1,19 +1,19 @@
 ---
-title: Adobe Enterprise Managerで、多数のアセットおよびコレクションのメタデータを管理します。
+title: 内の多数のアセットとコレクションのメタデータを管理します [!DNL Adobe Enterprise Manager]。
 description: 多数のアセットとコレクションのメタデータを同時に編集し、一般的なメタデータの変更をすばやく反映します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 63%
+source-wordcount: '487'
+ht-degree: 60%
 
 ---
 
 
 # アセットとコレクションの管理 {#managing-multiple-assets-and-collections}
 
-Adobe Enterprise Manager Assetsを使用すると、複数のアセットのメタデータを同時に編集できるので、一般的なメタデータの変更をアセットに一括してすばやく反映できます。 複数のコレクションのメタデータを同時に編集することもできます。
+[!DNL Adobe Enterprise Manager Assets] 複数のアセットのメタデータを同時に編集できるので、一般的なメタデータの変更をアセットに一括してすばやく反映できます。 複数のコレクションのメタデータを同時に編集することもできます。
 
 プロパティページを使用して、複数のアセットまたはコレクションのメタデータを変更できます。
 
@@ -28,7 +28,7 @@ Adobe Enterprise Manager Assetsを使用すると、複数のアセットのメ�
 
 ## Edit metadata properties of multiple assets {#editing-metadata-properties-of-multiple-assets}
 
-1. Assets ユーザーインターフェイスで、編集するアセットの場所に移動します。
+1. In the [!DNL Assets] user interface, navigate to the location of the assets you want to edit.
 1. 共通のプロパティを編集するアセットを選択します。
 1. From the toolbar, click **[!UICONTROL Properties]** to open the properties page for the selected assets.
 
