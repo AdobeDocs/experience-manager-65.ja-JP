@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Manager AssetsでのXMPメタデータのサポート。
-description: Experience Manager Assetsでメタデータ管理に使用されるXMP(Extensible Metadata Platform)メタデータ標準について説明します。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
+title: Support for XMP metadata in [!DNL Adobe Experience Manager Assets].
+description: Learn about the XMP (Extensible Metadata Platform) metadata standard used by [!DNL Experience Manager Assets] for metadata management. XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '776'
 ht-degree: 88%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 88%
 
 # XMP メタデータ {#xmp-metadata}
 
-XMP(Extensible Metadata Platform)は、Adobe Experience Manager Assetsですべてのメタデータ管理に使用されるメタデータ標準です。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
+XMP (Extensible Metadata Platform) is the metadata standard used by [!DNL Adobe Experience Manager Assets] for all metadata management. XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 
-XMP では、すべてのファイル形式に埋め込むことができる共通のメタデータエンコーディングのほか、リッチ[コンテンツモデル](xmp.md#xmp-core-concepts)も提供され、[アドビによるサポート](xmp.md#advantages-of-xmp)やその他各社のサポートがあるので、XMP を Assets と組み合わせて使用すると強力なプラットフォームを構築できます。
+XMP では、すべてのファイル形式に埋め込むことができる共通のメタデータエンコーディングのほか、リッチ[コンテンツモデル](xmp.md#xmp-core-concepts)も提供され、[アドビによるサポート](xmp.md#advantages-of-xmp)やその他各社のサポートがあるので、XMP を と組み合わせて使用すると強力なプラットフォームを構築できます。[!DNL Assets]
 
 [XMP の仕様](https://www.adobe.com/devnet/xmp.html)は、アドビから入手できます。
 
 ## What is XMP? {#what-is-xmp}
 
- Assets は、アドビ主導の XMP（Extensible Metadata Platform）をネイティブでサポートしています。XMP は、デジタルアセット内の標準化されたメタデータと独自メタデータを処理および格納するための規格です。XMP は、複数のアプリケーションでメタデータを効率的に使用するための共通規格となるよう設計されています。
+[!DNL Assets] は、アドビ主導の XMP（Extensible Metadata Platform）をネイティブでサポートしています。XMP は、デジタルアセット内の標準化されたメタデータと独自メタデータを処理および格納するための規格です。XMP は、複数のアプリケーションでメタデータを効率的に使用するための共通規格となるよう設計されています。
 
-実稼働者は、例えば、アドビのアプリケーションに組み込まれたXMPサポートを使用して、複数のファイル形式に情報を渡すことができます。 アセットリポジトリはXMPメタデータを抽出し、それを使用してコンテンツのライフサイクルを管理し、オファーは自動化ワークフローを作成する機能を管理します。
+例えば制作のプロフェッショナルは、アドビのアプリケーションに組み込まれた XMP サポートを使用して、複数のファイル形式に情報を渡します。[!DNL Assets] repositoryはXMPメタデータを抽出し、それを使用してコンテンツのライフサイクルを管理し、オファーは自動化ワークフローを作成する機能を管理します。
 
 XMP が提供するデータモデル、ストレージモデルおよびスキーマを使用して、メタデータの定義、作成および処理方法を規格化できます。これらの概念は、すべてこの節で説明します。
 
@@ -71,15 +71,13 @@ XMP スキーマは、一連のプロパティ名を共通の XML 名前空間�
 
 ### プロパティと値 {#properties-and-values}
 
-XMP には、1 つ以上のスキーマからプロパティを選択し含めることができます。
+XMP には、1 つ以上のスキーマからプロパティを選択し含めることができます。多くのアドビアプリケーションで使用される一般的なサブセットに含まれるプロパティの例を示します。
 
-多くのアドビアプリケーションで使用される一般的なサブセットに含まれるプロパティの例を示します。
-
-* Dublin Core スキーマ：dc:title、dc:creator、dc:subject、dc:format、dc:rights
-* XMP 基本スキーマ：xmp:CreateDate、xmp:CreatorTool、xmp:ModifyDate、xmp:metadataDate
-* XMP Rights Management スキーマ：xmpRights:WebStatement、xmpRights:Marked
-* XMP Media Management スキーマ：xmpMM:DocumentID
+* Dublin Core スキーマ：`dc:title`、`dc:creator`、`dc:subject`、`dc:format`、`dc:rights`。
+* XMP basic schema: `xmp:CreateDate`, `xmp:CreatorTool`, `xmp:ModifyDate`, `xmp:metadataDate`.
+* XMP rights management schema: `xmpRights:WebStatement`, `xmpRights:Marked`.
+* XMP media management schema: `xmpMM:DocumentID`.
 
 ### 代替言語 {#language-alternatives}
 
-XMP には、`xml:lang` プロパティをテキストプロパティに追加して、テキストの言語を指定する機能があります。
+XMP lets you add an `xml:lang` property to text properties to specify the language of the text.
