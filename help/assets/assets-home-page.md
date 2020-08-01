@@ -1,25 +1,25 @@
 ---
-title: Adobe Experience Managerアセットのホームページエクスペリエンス
-description: Experience Managerアセットホームページをパーソナライズして、豊富なスタートアップスクリーンエクスペリエンスを実現します。アセットに関する最近のアクティビティのスナップショットも含まれます。
+title: '[!DNLAdobe Experience Managerアセット]ホームページエクスペリエンス。'
+description: Personalize the [!DNL Experience Manager Assets] Home page for a rich welcome screen experience, including a snapshot of recent activities around assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '565'
 ht-degree: 32%
 
 ---
 
 
-# Adobe Experience Managerアセットのホームページエクスペリエンス {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] ホームページ体験 {#aem-assets-home-page-experience}
 
-Adobe Experience Managerアセットホームページをパーソナライズして、豊富なスタートアップスクリーンエクスペリエンスを実現します。アセットに関する最近のアクティビティのスナップショットも含まれます。
+Personalize the [!DNL Adobe Experience Manager Assets] home page for a rich welcome screen experience, including a snapshot of recent activities around assets.
 
-アセットホームページは、最近表示またはアップロードされたアセットなど、最近のアクティビティのスナップショットを含む、パーソナライズされた豊富なスタートアップスクリーンエクスペリエンスを提供します。
+[!DNL Assets] ホームページは、最近表示またはアップロードされたアセットなど、最近のアクティビティのスナップショットを含む、カスタマイズされた豊富なスタートアップスクリーンエクスペリエンスを提供します。
 
-アセットホームページは、デフォルトで無効になっています。 ホームページを有効にするには、次の手順を実行します。
+The [!DNL Assets] home page is disabled by default. ホームページを有効にするには、次の手順を実行します。
 
-1. Experience Manager構成マネージャーを開き `https://[aem_server]:[port]/system/console/configMgr`ます。
+1. Open [!DNL Experience Manager] Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`.
 1. Open the **[!UICONTROL Day CQ DAM Event Recorder]** service.
 1. Select the **[!UICONTROL Enable this service]** to enable activity recording.
 
@@ -32,7 +32,7 @@ Adobe Experience Managerアセットホームページをパーソナライズ�
    >「Asset viewed」、「Projects viewed」、「Collections viewed」の各オプションを有効にすると、記録対象のイベント数が大幅に増加します。
 
 1. Open the **[!UICONTROL DAM Asset Home Page Feature Flag]** service from Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`.
-1. Select the `isEnabled.name` option to enable the Assets Home page feature. 変更内容を保存します。
+1. Select the `isEnabled.name` option to enable the [!DNL Assets] Home page feature. 変更内容を保存します。
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
@@ -40,13 +40,13 @@ Adobe Experience Managerアセットホームページをパーソナライズ�
 
    ![ユーザ環境設定ダイアログでアセットホームページを有効にする](assets/Annotation-color.png)
 
-After enabling the Assets Home page, navigate to the Assets user interface either from the Navigation page or access it directly from the URL `https://[aem_server]:[port]/aem/assetshome.html/content/dam`.
+After enabling the [!DNL Assets] Home page, navigate to the [!DNL Assets] user interface either from the Navigation page or access it directly from the URL `https://[aem_server]:[port]/aem/assetshome.html/content/dam`.
 
 ![アセットユーザーインターフェイスのエクスペリエンスリンクの設定](assets/config-experience-link.png)
 
 Click the **[!UICONTROL Click here to configure your experience link]** to add your username, background image, and profile image.
 
-Assets のホームページには次のセクションが含まれます。
+The [!DNL Assets] Home page includes the following sections:
 
 * 「ようこそ」セクション
 * 「ウィジェット」セクション
@@ -69,7 +69,7 @@ Assets のホームページには次のセクションが含まれます。
 
 **最新**: このセクションの **[!UICONTROL 最近表示した]** Widgetには、フォルダー、コレクション、プロジェクトなど、ログインユーザーが最近アクセスしたエンティティが表示されます。
 
-**Discover**: このセクションの **[!UICONTROL 新しいウィジェットには]** 、アセットデプロイメントに最近アップロードされたアセットとレンディションが表示されます。
+**Discover**: このセクションの **[!UICONTROL 新しい]** Widgetには、デプロイメントに最近アップロードされたアセットとレンディションが表示され [!DNL Assets] ます。
 
 To enable purging of user activity data, enable the **[!UICONTROL DAM Event Purge Service]** from Configuration Manager. このサービスを有効にすると、ログインユーザーのアクティビティのうち指定した数を超えたものがシステムによって削除されます。
 
@@ -77,11 +77,11 @@ To enable purging of user activity data, enable the **[!UICONTROL DAM Event Purg
 
 >[!NOTE]
 >
->[!UICONTROL Day CQ DAMイベントレコーダー] および  DAMイベント削除サービスを有効にすると、JCRおよび検索インデックスへの書き込み操作が増え、Experience Managerサーバーの負荷が大幅に増加します。 Experience Managerサーバーに追加の負荷がかかると、そのパフォーマンスに影響を与える可能性があります。
+>[!UICONTROL Day CQ DAMイベントレコーダー] および [!UICONTROL DAMイベント削除サービスを有効にすると、JCRおよび検索インデックスへの書き込み操作が増え、][!DNL Experience Manager] サーバーの負荷が大幅に増加します。 The additional load on the [!DNL Experience Manager] server can impact its performance.
 
 >[!CAUTION]
 >
->アセットホームページに必要なユーザーアクティビティのキャプチャ、フィルタリングおよび削除は、パフォーマンスにオーバーヘッドを与えます。 そのため、管理者はターゲットユーザーのためにホームページを効果的に設定する必要があります。
+>Capturing, filtering, and purging user activities required for [!DNL Assets] home page impose an overhead on performance. そのため、管理者はターゲットユーザーのためにホームページを効果的に設定する必要があります。
 >
 >一括操作を実行する管理者およびユーザーは、ユーザーアクティビティが増えるのを避けるため、Asset のホームページ機能を使用しないことをお勧めします。In addition, administrators can exclude recording activities for specific users by configuring [!UICONTROL Day CQ DAM Event Recorder] from [!UICONTROL Configuration Manager].
 >
