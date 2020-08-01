@@ -1,25 +1,25 @@
 ---
-title: Adobe Experience Manager内のプライベートフォルダーを作成して共有します。
-description: Adobe Experience Managerアセット内にプライベートフォルダーを作成し、他のユーザーと共有し、それらに様々な権限を割り当てる方法について説明します。
+title: のプライベートフォルダーを作成して共有します [!DNL Adobe Experience Manager]。
+description: Learn how to create a private folder in the [!DNL Adobe Experience Manager Assets] and share it with other users and the assign various privileges to them.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 44%
+source-wordcount: '480'
+ht-degree: 37%
 
 ---
 
 
 # プライベートフォルダーの共有 {#private-folder-sharing}
 
-専用に使用できるAdobe Experience Managerアセットユーザーインターフェイスで、プライベートフォルダーを作成できます。 このプライベートフォルダーを他のユーザーと共有し、他のユーザーに様々な権限を割り当てることができます。 ユーザーはフォルダーに対して、割り当てられた特権のレベルに応じた様々なタスク（フォルダー内のアセットの表示、アセットの編集など）を実行できます。
+You can create a private folder in the [!DNL Adobe Experience Manager Assets] user interface that is available exclusively to you. このプライベートフォルダーを他のユーザーと共有し、他のユーザーに様々な権限を割り当てることができます。 ユーザーはフォルダーに対して、割り当てられた特権のレベルに応じた様々なタスク（フォルダー内のアセットの表示、アセットの編集など）を実行できます。
 
 >[!NOTE]
 >
 >プライベートフォルダーには、所有者の役割を持つメンバが少なくとも1つ存在します。
 
-1. In the Assets console, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Folder]** from the menu.
+1. In the [!DNL Assets] console, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Folder]** from the menu.
 
    ![アセットフォルダーの作成](assets/Create-folder.png)
 
@@ -49,9 +49,9 @@ ht-degree: 44%
    >
    >プライベートフォルダーには、所有者の役割を持つメンバが少なくとも1つ存在します。 したがって、管理者はすべての所有者メンバーをプライベートフォルダーから削除することはできません。 ただし、既存の所有者（および管理者自体）をプライベートフォルダーから削除するには、管理者は別のユーザーを所有者として追加する必要があります。
 
-1. 「**[!UICONTROL 保存]**」をクリックします。割り当てた役割に応じて、ユーザーが Assets にログインしたときに、プライベートフォルダーに対する一連の特権が割り当てられます。
+1. 「**[!UICONTROL 保存]**」をクリックします。Depending on the role you assign, the user is assigned a set of privileges on your private folder when the user logs in to [!DNL Assets].
 1. 「**[!UICONTROL OK]**」をクリックして、確認メッセージを閉じます。
-1. フォルダーを共有するユーザーに対して、共有に関する通知が送信されます。通知を確認するには、そのユーザーの資格情報で Assets にログインします。
+1. フォルダーを共有するユーザーに対して、共有に関する通知が送信されます。Log in to [!DNL Assets] with the credentials of the user to view the notification.
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
