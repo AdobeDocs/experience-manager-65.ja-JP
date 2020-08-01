@@ -3,10 +3,10 @@ title: フォルダーのアセットとコレクションのレビュー
 description: フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 62%
+source-wordcount: '784'
+ht-degree: 57%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 62%
 
 フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
-Adobe Experience Managerアセットを使用すると、フォルダーまたはコレクション内のアセットに対して臨時のレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有して、フィードバックを求めることができます。
+[!DNL Adobe Experience Manager Assets] フォルダーまたはコレクション内のアセットに対してアドホックレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有して、フィードバックを求めることができます。
 
 レビューワークフローをプロジェクトと関連付けることも、独立したレビュータスクを作成することもできます。
 
@@ -25,7 +25,7 @@ Adobe Experience Managerアセットを使用すると、フォルダーまた�
 
 ## Create a review task for folders {#creating-a-review-task-for-folders}
 
-1. Assets ユーザーインターフェイスで、レビュータスクを作成するフォルダーを選択します。
+1. From the [!DNL Assets] user interface, select the folder for which you want to create a review task.
 1. ツールバーで、「レビューを **[!UICONTROL 作成」タスク]** 「レビューを ![作成」タスクをクリックし](assets/do-not-localize/create-review-task.png) 、「 **[!UICONTROL レビュータスク]** 」ページを開きます。 If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
@@ -49,7 +49,7 @@ Adobe Experience Managerアセットを使用すると、フォルダーまた�
    ![review_name](assets/review_name.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として Assets にログインし、Assets UI に移動します。To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
+1. Log in to [!DNL Assets] as an Approver and navigate to the [!DNL Assets] UI. To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
 
    ![アセットの通知](assets/aemAssetsNotification.png)
 
@@ -59,7 +59,7 @@ Adobe Experience Managerアセットを使用すると、フォルダーまた�
    ![review_task](assets/review_task.png)
 
 1. Click **[!UICONTROL Complete]** from the toolbar. In the dialog, enter a comment and click  **[!UICONTROL Complete]** to confirm.
-1. アセットユーザーインターフェイスに移動し、フォルダーを開きます。 アセットの承認ステータスアイコンは、カードの表示とリストの表示に表示されます。
+1. Navigate to the [!DNL Assets] user interface and open the folder. アセットの承認ステータスアイコンは、カードの表示とリストの表示に表示されます。
 
    **カード表示**
 
@@ -91,7 +91,7 @@ Adobe Experience Managerアセットを使用すると、フォルダーまた�
    ![task_details-collection](assets/task_details-collection.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として Assets にログインし、アセットコンソールに移動します。To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
+1. Log in to [!DNL Assets] as an Approver and navigate to the [!DNL Assets] console. To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
 1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then click **[!UICONTROL Review]**.
 1. コレクションのすべてのアセットがレビューページに表示されます。Select the assets and click **[!UICONTROL Approve/Reject]** to approve or reject assets, as appropriate.
 
