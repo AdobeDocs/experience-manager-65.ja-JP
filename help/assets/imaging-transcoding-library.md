@@ -3,10 +3,10 @@ title: 画像トランスコーディングライブラリ
 description: エンコーディング、トランスコーディング、画像のリサンプリング、画像のサイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションであるアドビの画像トランスコーディングライブラリを設定および使用する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 35%
+source-wordcount: '992'
+ht-degree: 38%
 
 ---
 
@@ -55,7 +55,7 @@ Imaging Transcoding Libraryは、RHEL 7およびCentOS 7ディストリビュー
 
 You can configure the following options for the `-resize` parameter:
 
-* `X`: Experience Managerと同様に機能します。 例えば、-resize 319。
+* `X`: と同様の動作 [!DNL Experience Manager]です。 例えば、-resize 319。
 * `WxH`: 例えば、縦横比は維持されません `-resize 319x319`。
 * `Wx`：幅を固定し、アスペクト比を維持して高さを計算。例えば、`-resize 319x` のように指定します。
 * `xH`：高さを固定し、アスペクト比を維持して幅を計算。例えば、`-resize x319` のように指定します。
@@ -72,9 +72,9 @@ ITL処理を設定するには、設定ファイルを作成し、ワークフ�
 
 ### 抽出されたバンドルの設定ファイルを作成 {#create-conf-file}
 
-ライブラリを設定するには、次の手順でライブラリを示す.confファイルを作成します。 管理者またはルート権限が必要です。
+ライブラリを設定するには、次の手順でライブラリを示すCONFファイルを作成します。 管理者またはルート権限が必要です。
 
-1. Download the [Imaging Transcoding Library package from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) and install it using the Package Manager. このパッケージはExperience Manager6.5と互換性があります。
+1. Download the [Imaging Transcoding Library package from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) and install it using the Package Manager. パッケージは6. [!DNL Experience Manager] 5と互換性があります。
 
 1. のバンドルIDを確認するに `com.day.cq.dam.cq-dam-switchengine`は、Webコンソールにログインし、 **[!UICONTROL OSGi]** / **[!UICONTROL Bundles]**&#x200B;をクリックします。 または、バンドルコンソールを開くには、 `https://[aem_server:[port]/system/console/bundles/` URLにアクセスします。 バンドルと `com.day.cq.dam.cq-dam-switchengine` そのIDを探します。
 
@@ -92,7 +92,7 @@ ITL処理を設定するには、設定ファイルを作成し、ワークフ�
 
 1. コマンドを実行して、必要なリンクとキャッシュを作成します。 `ldconfig`
 
-1. 開始Experience Managerに使用するアカウントで、 `.bash_profile` ファイルを編集します。 次 `LD_LIBRARY_PATH` を追加追加します。
+1. 開始に使用するアカウントで [!DNL Experience Manager]、 `.bash_profile` ファイルを編集します。 次 `LD_LIBRARY_PATH` を追加追加します。
 
    ```shell
    LD_LIBRARY_PATH=.
@@ -105,7 +105,7 @@ ITL処理を設定するには、設定ファイルを作成し、ワークフ�
 
 画像処理用ライブラリを使用するように、 [!UICONTROL DAM Update Asset] Workflowを更新します。
 
-1. Experience Managerユーザーインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルを選択します]**。
+1. ユー [!DNL Experience Manager] ザーインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルを選択します]**。
 
 1. From the **[!UICONTROL Workflow Models]** page, open the **[!UICONTROL DAM Update Asset]** workflow model in edit mode.
 
@@ -137,7 +137,7 @@ For example, if you want to create thumbnails for a TIFF image using Imaging Tra
 
 1. 更新された [!UICONTROL DAM Update Asset] Workflowモデルを同期します。 ワークフローを保存します。
 
-設定の検証を行い、TIFF画像をアップロードしてerror.logファイルを監視します。 のメンションを含む `INFO` メッセージが表示され `SwitchEngineHandlingProcess execute: executing command line`ます。 ログには、生成されたレンディションが記述されています。 ワークフローが完了したら、新しいレンディションをExperience Managerで表示できます。
+設定の検証を行い、TIFF画像をアップロードしてerror.logファイルを監視します。 のメンションを含む `INFO` メッセージが表示され `SwitchEngineHandlingProcess execute: executing command line`ます。 ログには、生成されたレンディションが記述されています。 ワークフローが完了したら、で新しいレンディションを表示でき [!DNL Experience Manager]ます。
 
 >[!MORELIKETHIS]
 >
