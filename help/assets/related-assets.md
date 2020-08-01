@@ -3,10 +3,10 @@ title: 関連アセット
 description: 共通の属性を共有するデジタルアセットを関連付ける方法について説明します。 また、デジタルアセット間にソースから派生した関係を作成することもできます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 50%
+source-wordcount: '636'
+ht-degree: 47%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 50%
 
 ## アセットの関連付け {#relating-assets}
 
-1. From the Experience Manager interface, open the **[!UICONTROL Properties]** page for an asset that you want to relate.
+1. From the [!DNL Experience Manager] interface, open the **[!UICONTROL Properties]** page for an asset that you want to relate.
 
    ![アセットのプロパティページを開き、アセットを関連付けます](assets/asset-properties-relate-assets.png)
 
@@ -67,7 +67,7 @@ ht-degree: 50%
 
 ## 関連アセットの翻訳 {#translating-related-assets}
 
-関連アセット機能を使用してアセット間でソース／派生関係を作成すると、翻訳ワークフローにも役立ちます。When you run a translation workflow on a derived asset, [!DNL Experience Manager Assets] automatically fetches any asset that the source file references and includes it for translation. このようにして、ソースアセットに参照されているアセットが、ソースおよび派生アセットとともに翻訳されます。例えば、以下のように英語のコピーに派生アセットおよびそのソースファイルが含まれている場合を考えてみます。
+関連アセット機能を使用して、アセット間のソース/派生関係を作成すると、翻訳ワークフローにも役立ちます。 When you run a translation workflow on a derived asset, [!DNL Experience Manager Assets] automatically fetches any asset that the source file references and includes it for translation. このようにして、ソースアセットに参照されているアセットが、ソースおよび派生アセットとともに翻訳されます。例えば、以下のように英語のコピーに派生アセットおよびそのソースファイルが含まれている場合を考えてみます。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
