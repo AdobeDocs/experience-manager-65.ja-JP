@@ -3,10 +3,10 @@ title: アセットインサイトにデモパッケージを使用する
 description: デモパッケージを使用して、アセットインサイトで Web ページからデータを取得し、Web ページのインサイトを生成できるようにします。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 75%
+source-wordcount: '160'
+ht-degree: 78%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 75%
 
 デモパッケージを使用して、アセットインサイトでサンプル Web ページからデータを取得し、サンプル Web ページのインサイトを生成できるようにします。
 
-## サンプルWebページでのExperience Manager Assetsインサイトの使用  {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] サンプルWebページを使用したインサイト  {#using-aem-assets-insights-with-sample-web-page}
 
 1. Configure Asset Insights using the instructions in [Configuring Asset Insights](touch-ui-configuring-asset-insights.md).
 1. 次に示すサンプル Assets パッケージをダウンロードして、CRXDE パッケージマネージャーでインストールします。
@@ -34,4 +34,4 @@ ht-degree: 75%
 
    >[!NOTE]
    >
-   >外部Webページは、Experience Manager自体に配置できます。
+   >The external web page can be in [!DNL Experience Manager] itself.
