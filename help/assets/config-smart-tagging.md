@@ -3,9 +3,9 @@ title: Smart Content Serviceを使用してアセットのタグ付けを設定�
 description: Learn how to configure smart tagging and enhanced smart tagging in [!DNL Adobe Experience Manager], using the Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1103'
 ht-degree: 56%
 
 ---
@@ -19,13 +19,13 @@ You can integrate [!DNL Adobe Experience Manager] with the Smart Content Service
 
 1. Create a Smart Content Service configuration in [!DNL Experience Manager] to generate a public key. OAuth 統合用の[公開証明書を取得します](#obtain-public-certificate)。
 1. [Adobe 開発者コンソールで統合を作成](#create-adobe-i-o-integration)し、生成した公開鍵をアップロードします。
-1. [Adobe Developer ConsoleのAPIキーと他の資格情報を使用して](#configure-smart-content-service) 、デプロイメントを設定します。
+1. [AdobeデベロッパーコンソールのAPIキーと他の資格情報を使用して](#configure-smart-content-service) 、デプロイメントを設定します。
 1. [設定をテストします](#validate-the-configuration)。
 1. Optionally, [enable auto-tagging on asset upload](#enable-smart-tagging-in-the-update-asset-workflow-optional).
 
 ## 前提条件 {#prerequisites}
 
-Smart Content Serviceを使用する前に、次の手順を実行してAdobe Developer Consoleで統合を作成します。
+Smart Content Serviceを使用する前に、次の手順を実行してAdobe開発者コンソールで統合を作成します。
 
 * 組織の管理者権限を持つ Adobe ID アカウントがあること。
 * 組織でスマートコンテンツサービスが有効化されていること。
@@ -33,7 +33,7 @@ Smart Content Serviceを使用する前に、次の手順を実行してAdobe De
 <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
 -->
 
-To enable Enhanced Smart Tags, in addition to the above, also install the latest [AEM service pack](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html).
+To enable Enhanced Smart Tags, in addition to the above, also install the latest [Experience Manager service pack](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html).
 
 ## 公開証明書の取得 {#obtain-public-certificate}
 
@@ -79,9 +79,9 @@ To enable Enhanced Smart Tags, in addition to the above, also install the latest
 1. 公開証明書をダウンロードするには、「**[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**」をクリックします。
 1. [https://console.adobe.io](https://console.adobe.io) にアクセスし、**[!UICONTROL 統合]**&#x200B;ページで既存のスマートコンテンツサービスに移動します。新しい証明書をアップロードします。For more information, see the instructions in [Create Adobe Developer Console integration](#create-adobe-i-o-integration).
 
-## Adobe Developer Console統合の作成 {#create-adobe-i-o-integration}
+## Adobe開発者コンソール統合の作成 {#create-adobe-i-o-integration}
 
-Smart Content Service APIを使用するには、Adobe Developer ConsoleでAPIキー、テクニカルアカウントID、組織IDおよびクライアントシークレットを生成するための統合を作成します。
+Smart Content Service APIを使用するには、Adobeデベロッパーコンソールで統合を作成して、APIキー、テクニカルアカウントID、組織IDおよびクライアントシークレットを生成します。
 
 1. ブラウザーで [https://console.adobe.io](https://console.adobe.io/) にアクセスします。適切なアカウントを選択し、関連付けられた組織の役割がシステム管理者であることを確認します。
 1. 任意の名前でプロジェクトを作成します。「**[!UICONTROL API を追加]**」をクリックします。
@@ -94,7 +94,7 @@ Smart Content Service APIを使用するには、Adobe Developer ConsoleでAPI�
 
 ## スマートコンテンツサービスの設定 {#configure-smart-content-service}
 
-統合を設定するには、Adobe Developer Console統合の「テクニカルアカウントID」、「組織ID」、「クライアントシークレット」、「認証サーバー」および「APIキー」フィールドの値を使用します。 Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] deployment.
+統合を設定するには、Adobeデベロッパーコンソール統合の「テクニカルアカウントID」、「組織ID」、「クライアントシークレット」、「認証サーバー」、「APIキー」フィールドの値を使用します。 Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] deployment.
 
 1. In [!DNL Experience Manager], navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL Legacy Cloud Services]** to open the [!UICONTROL Cloud Services] console.
 1. 「**[!UICONTROL アセットのスマートタグ]**」で、上記で作成した設定を開きます。サービスの設定ページで、「**[!UICONTROL 編集]**」をクリックします。
