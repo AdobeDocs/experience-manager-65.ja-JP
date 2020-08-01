@@ -3,17 +3,17 @@ title: フォルダーへの翻訳クラウドサービスの適用
 description: フォルダーへの翻訳クラウドサービスの適用
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 76%
+source-wordcount: '385'
+ht-degree: 73%
 
 ---
 
 
 # フォルダーへの翻訳クラウドサービスの適用 {#applying-translation-cloud-services-to-folders}
 
-Adobe Experience Managerを使用すると、任意の翻訳プロバイダーからクラウドベースの翻訳サービスを利用し、要件に基づいてアセットが翻訳されるようにすることができます。
+[!DNL Adobe Experience Manager] 任意の翻訳プロバイダーからクラウドベースの翻訳サービスを利用して、必要に応じてアセットが翻訳されていることを確認できます。
 
 翻訳クラウドサービスをアセットフォルダーに直接適用できるので、翻訳ワークフローの間もずっとアセットを利用できます。
 
@@ -21,7 +21,7 @@ Adobe Experience Managerを使用すると、任意の翻訳プロバイダー�
 
 翻訳クラウドサービスをアセットフォルダーに直接適用すると、翻訳ワークフローの作成または変更時に翻訳サービスを設定する必要がなくなります。
 
-1. Assets ユーザーインターフェイスから翻訳サービスを適用するフォルダーを選択します。
+1. From the [!DNL Assets] user interface, select the folder to which you want to apply translation services.
 1. From the toolbar, click **[!UICONTROL Properties]** to display the **[!UICONTROL Folder Properties]** page.
 
    ![chlimage_1-215](assets/chlimage_1-215.png)
@@ -42,7 +42,7 @@ Adobe Experience Managerを使用すると、任意の翻訳プロバイダー�
 翻訳ワークフローで使用する翻訳サービスにカスタムコネクタを適用する場合、カスタムコネクタを適用するには、まずパッケージマネージャーからコネクタをインストールします。次に、Cloud Services コンソールからコネクタを設定します。コネクタを設定すると、[翻訳サービスの適用](transition-cloud-services.md#applying-the-translation-services)で説明されている「Cloud Services」タブのコネクタのリストに表示されるようになります。カスタムコネクタを適用し、翻訳ワークフローを実行すると、翻訳プロジェクトの「**[!UICONTROL 翻訳の概要]**」タイルの「**[!UICONTROL プロバイダー]**」と「**[!UICONTROL メソッド]**」という見出しの下にコネクタの詳細が表示されます。
 
 1. パッケージマネージャーからコネクタをインストールします。
-1. Click the Experience Manager logo, and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
+1. Click the [!DNL Experience Manager] logo, and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
 1. インストールしたコネクタを **[!UICONTROL Cloud Services]** ページの「**[!UICONTROL サードパーティのサービス]**」の下で探します。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
