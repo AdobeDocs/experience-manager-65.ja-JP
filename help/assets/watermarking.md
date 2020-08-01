@@ -3,9 +3,9 @@ title: デジタルアセットへの透かしの追加.
 description: 透かし処理機能を使用して、アセットにデジタル透かしを追加する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5035d3457187f4d5fe5c2af255a1a886df7291b4
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '264'
 ht-degree: 35%
 
 ---
@@ -39,4 +39,4 @@ To be able to apply watermark on assets, add the watermarking step in the [!UICO
 1. Save the **[!UICONTROL DAM Update Asset]** workflow with the watermark step.
 1. From the [!DNL Assets] user interface, upload a sample asset. 透かしがフォントサイズやカラーなどと共に、上記手順で設定した位置に表示されます。
 
-プログラムによって、または動的なドキュメントを使用してPDFの透かしを埋め込むには、 [AEMドキュメントサービス](/help/forms/using/overview-aem-document-services.md) の機能を使用することを検討します。
+プログラムによって、または動的なドキュメントを使用してPDFの透かしを作成するには、 [Experience Managerドキュメントサービス](/help/forms/using/overview-aem-document-services.md) の機能を使用することを検討します。
