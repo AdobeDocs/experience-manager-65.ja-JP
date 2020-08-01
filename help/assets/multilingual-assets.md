@@ -1,23 +1,23 @@
 ---
-title: 多言語のアセット
+title: 多言語アセットとアセット翻訳.
 description: バイナリ、メタデータ、タグなどのアセットを複数の言語に変換するワークフローの自動化方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 20%
+source-wordcount: '167'
+ht-degree: 40%
 
 ---
 
 
 # 多言語のアセット {#multilingual-assets}
 
-Adobe Experience Manager Assetsを使用すると、アセット（バイナリ、メタデータおよびタグを含む）の翻訳ワークフローを自動化し、多言語プロジェクトで使用する他の言語のアセットを生成できます。
+[!DNL Adobe Experience Manager Assets] を使用して、アセット（バイナリ、メタデータ、タグを含む）に対する翻訳ワークフローを自動化し、多言語プロジェクトで使用するために他の言語のアセットを生成できます。
 
-翻訳ワークフローを自動化するには、翻訳サービスプロバイダーをExperience Managerに統合し、アセットを複数の言語に翻訳するためのプロジェクトを作成します。 Experience Managerは、人力および機械翻訳のワークフローをサポートしています。
+To automate translation workflows, you integrate translation service providers with [!DNL Experience Manager] and create projects for translating assets into multiple languages. [!DNL Experience Manager] では人間による翻訳と機械翻訳のワークフローがサポートされます。
 
-人による翻訳： 翻訳済みのアセットが返され、Experience Managerに読み込まれます。 翻訳プロバイダーがExperience Managerと統合されている場合、アセットはExperience Managerと翻訳プロバイダーの間で自動的に送信されます。
+Human translation: The translated assets are returned and imported into [!DNL Experience Manager]. When your translation provider is integrated with [!DNL Experience Manager], assets are automatically sent between [!DNL Experience Manager] and the translation provider.
 
 機械翻訳：機械翻訳サービスでは、アセットのメタデータとタグがすぐに翻訳されます。
 
@@ -29,6 +29,6 @@ Adobe Experience Manager Assetsを使用すると、アセット（バイナリ�
 1. [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
 1. [翻訳プロジェクトの作成](translation-projects.md)
 
-If your translation service provider does not provide a connector to integrate with Experience Manager, use an [alternative process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+If your translation service provider does not provide a connector to integrate with [!DNL Experience Manager], use an [alternative process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
 
 Also see, [Create translation projects for content fragments](creating-translation-projects-for-content-fragments.md).
