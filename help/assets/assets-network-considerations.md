@@ -1,28 +1,28 @@
 ---
-title: アセットネットワークに関する考慮事項と要件
-description: Adobe Experience Managerアセットのデプロイメントを設計する際のネットワークに関する考慮事項を説明します。
+title: '[!DNL Assets]ネットワークに関する考慮事項と要件です。'
+description: Discusses network considerations when designing an [!DNL Adobe Experience Manager Assets] deployment.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 71%
+source-wordcount: '994'
+ht-degree: 70%
 
 ---
 
 
-# Assets のネットワークに関する考慮事項 {#assets-network-considerations}
+# [!DNL Assets] ネットワークの考慮事項 {#assets-network-considerations}
 
-ネットワークを理解することは、Adobe Experience Managerアセットを理解することと同じくらい重要です。 ネットワークはアップロード、ダウンロードおよびユーザーのエクスペリエンスに影響を与えることがあります。ネットワークトポロジを図解することで、ネットワークのパフォーマンスとユーザーエクスペリエンスの向上のために、ネットワーク上の渋滞地点や改善を要する部分を特定できます。
+Understanding your network is as important as understanding [!DNL Adobe Experience Manager Assets]. ネットワークはアップロード、ダウンロードおよびユーザーのエクスペリエンスに影響を与えることがあります。ネットワークトポロジを図解することで、ネットワークのパフォーマンスとユーザーエクスペリエンスの向上のために、ネットワーク上の渋滞地点や改善を要する部分を特定できます。
 
 ネットワークの図には次の情報を含めてください。
 
 * クライアントデバイス（コンピューター、モバイル、タブレットなど）からネットワークへの接続性。
 * 企業ネットワークのトポロジ.
-* 企業ネットワークおよびExperience Manager環境からインターネットにアップリンクします。
-* Experience Manager環境のトポロジ。
-* Experience Managerネットワークインターフェイスの同時コンシューマーを定義します。
-* Experience Manager導入の定義済みワークフロー。
+* Uplink to the internet from the corporate network and the [!DNL Experience Manager] environment.
+* [!DNL Experience Manager] 環境のトポロジ。
+* Define simultaneous consumers of the [!DNL Experience Manager] network interface.
+* 定義された [!DNL Experience Manager] デプロイメントのワークフロー。
 
 ## クライアントデバイスからネットワークへの接続性 {#connectivity-from-the-client-device-to-the-corporate-network}
 
@@ -30,7 +30,7 @@ ht-degree: 71%
 
 ![chlimage_1-353](assets/chlimage_1-353.png)
 
-クライアントデバイスは、共有 Wi-Fi、共有スイッチへのイーサネット、VPN など、様々な方法で企業ネットワークに接続します。このネットワークの渋滞地点を特定して理解することは、Assets の計画を立て、ネットワークを変更するうえで重要です。
+クライアントデバイスは、共有 Wi-Fi、共有スイッチへのイーサネット、VPN など、様々な方法で企業ネットワークに接続します。Identifying and understanding chokepoints on this network is important for [!DNL Assets] planning and to modify the network.
 
 この図の左上では、3 つのデバイスが 48 Mbps Wi-Fi アクセスポイントを共有しています。すべてのデバイスで同時にアップロードすると、Wi-Fi ネットワークの帯域幅がデバイス間で共有されます。システム全体と比較して、3つのクライアントに対して、この分割されたチャネルで異なるチョークポイントが発生する場合がある。
 
@@ -46,15 +46,15 @@ ht-degree: 71%
 
 図では、企業ネットワーク内で使用されているアップリンクの速度が、通常使用されるものよりも高速になっています。これらのパイプは共有リソースです。50台のクライアントを処理すると予想される共有スイッチは、チョークポイントになる可能性があります。 最初の図では、2 台のコンピューターのみがその特定の接続を共有しています。
 
-## Uplink to the internet from the corporate network and Experience Manager environment {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## Uplink to the internet from the corporate network and [!DNL Experience Manager] environment {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
 インターネットや VPC 接続については、全体における帯域幅がピーク時の負荷やプロバイダーの大規模な停止により損なわれることがあるので、未知の要素を考慮に入れることが重要です。一般的に、インターネットの接続性は信頼できます。ただし、渋滞地点となることもあります。
 
-企業ネットワークからインターネットへのアップリンクでは、他のサービスが帯域幅を使用している可能性があります。 Assets 専用または AEM Assets に優先的に割り当てる帯域幅を把握することが重要です。例えば、1 Gbpsリンクの使用率が既に80 %の場合、Experience Managerアセットに割り当てる帯域幅の最大値は20 %です。
+企業ネットワークからインターネットへのアップリンクでは、他のサービスが帯域幅を使用している可能性があります。 Assets 専用または AEM Assets に優先的に割り当てる帯域幅を把握することが重要です。For example, if a 1 Gbps link is already at 80% utilization, you can only allocate a maximum of 20% of the bandwidth for [!DNL Experience Manager Assets].
 
-企業のファイアウォールやプロキシも様々な方法で帯域幅を形成します。この種類のデバイスは QoS（Quality of Service）、ユーザーごとの帯域幅制限またはホストごとのビットレート制限を使用して帯域幅を優先的に割り当てることができます。これらの渋滞地点は Assets のユーザーエクスペリエンスに多大な影響を及ぼすので、詳しく調査する必要があります。
+企業のファイアウォールやプロキシも様々な方法で帯域幅を形成します。この種類のデバイスは QoS（Quality of Service）、ユーザーごとの帯域幅制限またはホストごとのビットレート制限を使用して帯域幅を優先的に割り当てることができます。These are important chokepoints to examine as they can significantly impact [!DNL Assets] user experience.
 
 この例では、企業には 10 Gbps のアップリンクがあります。複数のクライアントが使用するのに十分です。また、ファイアウォールはホストに 10 Mbps のレート制限を課しています。この制限は、インターネットのアップリンクが 10 Gbps であっても、単一のホストへのトラフィックを 10 Mbps にスロットルする可能性があります。
 
@@ -62,21 +62,21 @@ ht-degree: 71%
 
 このサンプル図より、6 台のデバイスが 10 Mbps の概念的なチャネルを共有していると結論付けることができます。使用しているアセットのサイズによっては、これではユーザーの期待に応えるには不十分である可能性があります。
 
-## Experience Manager環境のトポロジ {#topology-of-the-aem-environment}
+## [!DNL Experience Manager] 環境のトポロジ {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-Experience Manager環境のトポロジを設計するには、システム設定の詳細な知識と、ユーザ環境内でのネットワークの接続方法が必要です。
+Designing the topology of the [!DNL Experience Manager] environment requires detailed knowledge of the system configuration and how the network is connected within the user environment.
 
 サンプルシナリオには、5つのサーバ、S3バイナリストア、およびDynamic Mediaが設定された発行ファームが含まれます。
 
-ディスパッチャーは、100Mbpsの接続を、外部とExperience Managerのデプロイメントの2つのエンティティと共有します。 アップロードとダウンロードを同時に実行するには、この数を 2 で割る必要があります。接続された外部ストレージは別の接続を使用します。
+The dispatcher shares it&#39;s 100Mbps connection with two entities, the outside world and the [!DNL Experience Manager] deployment. アップロードとダウンロードを同時に実行するには、この数を 2 で割る必要があります。接続された外部ストレージは別の接続を使用します。
 
-Experience Managerの導入により、1 Gbpsの接続を複数のサービスと共有できます。 ネットワークトポロジの観点では、これは単一のチャネルを異なるサービスで共有することと同じです。
+The [!DNL Experience Manager] deployment shares it&#39;s 1Gbps connection with multiple services. ネットワークトポロジの観点では、これは単一のチャネルを異なるサービスで共有することと同じです。
 
-クライアントデバイスからExperience Managerの導入までネットワークを確認すると、最も小さいチョークポイントは10 Mbのエンタープライズファイアウォールスロットルのようです。 You can use these values in the sizing calculator in the [Assets Sizing Guide](assets-sizing-guide.md) to determine the user experience.
+Reviewing the network from the client device to the [!DNL Experience Manager] deployment, the smallest choke-point appears to be the 10 Mbit enterprise firewall throttle. You can use these values in the sizing calculator in the [Assets Sizing Guide](assets-sizing-guide.md) to determine the user experience.
 
-## Experience Manager導入の定義済みワークフロー {#defined-workflows-of-the-aem-deployment}
+## 定義済みの [!DNL Experience Manager] 導入ワークフロー {#defined-workflows-of-the-aem-deployment}
 
 ネットワークのパフォーマンスを考慮する際には、システムで発生するワークフローや公開を考慮することが重要であることがあります。さらに、S3 などのネットワークに接続されたストレージや入出力のリクエストはネットワークの帯域幅を消費します。そのため、完全に最適化されたネットワークであっても、パフォーマンスはディスクの入出力によって制限されることがあります。
 
@@ -90,7 +90,7 @@ Experience Managerの導入により、1 Gbpsの接続を複数のサービス�
 
 考慮すべき項目は次のとおりです。
 
-* XMPメタデータ読み取り/書き込み — バック
+* XMPメタデータの読み取り/書き込み/バック
 * 自動アクティベートおよびレプリケート
 * 透かし処理
 * サブアセットの取り込み／ページの抽出
