@@ -3,10 +3,10 @@ title: メタデータのスキーマに関する参照情報
 description: 'Dublin Core、IPTC などのメタデータのスキーマを含め、アセットメタデータを記述する際の標準規則を学習します。 '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 91%
+source-wordcount: '390'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 ## Dublin Core {#dublin-core}
 
-Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規則のセットを提供します。 Assets では、ビデオ、音楽、画像、ドキュメントなどのデジタルアセットが Dublin Core で記述されます。
+Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規則のセットを提供します。In [!DNL Assets], the Dublin Core describes digital assets including video, sound, images, and documents.
 
 シンプルな Dublin Core Metadata Element Set（DCMES）には、以下の表に示すように、15 個のメタデータ要素が含まれます。それぞれの Dublin Core 要素はオプションであり、繰り返し可能です。Dublin Core メタデータ情報は、メディアタイプ固有のメタデータと同様に、削除および追加が可能です。
 
@@ -30,7 +30,7 @@ In addition to the DCMES, there are other metadata elements created by the Dubli
 | creator | コンテンツを作成する責任を負う人または会社。 |
 | date | アセットに関連付けられた日付または期間。 |
 | description | アセットの詳細。 |
-| format | アセットのファイル形式、物理的な媒体またはサイズ。Experience Manager uses `dc:format` to denote the MIME type of the asset. |
+| format | アセットのファイル形式、物理的な媒体またはサイズ。[!DNL Experience Manager] では、`dc:format` を使用してアセットの MIME タイプを示します。 |
 | identifier | アセットの一意の参照。 |
 | language | アセットの言語（英語の場合は en、など）。 |
 | publisher | アセットを使用可能にする責任を負う人または会社。 |
