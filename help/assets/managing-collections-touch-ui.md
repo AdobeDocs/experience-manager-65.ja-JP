@@ -4,17 +4,17 @@ description: 作成、表示、削除、編集、コレクションのダウン�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 65%
+source-wordcount: '2178'
+ht-degree: 63%
 
 ---
 
 
 # コレクションの管理 {#managing-collections}
 
-コレクションとは、Adobe Experience Manager Assets 内の一連のアセットです。コレクションを使用して、ユーザー間でアセットを共有します。セットは、静的コレクションまたは検索結果に基づく動的コレクションにすることができます。
+A collection is a set of assets within [!DNL Adobe Experience Manager Assets]. コレクションを使用して、ユーザー間でアセットを共有します。セットは、静的コレクションまたは検索結果に基づく動的コレクションにすることができます。
 
 フォルダーとは異なり、1 つのコレクションに異なる複数の場所のアセットを含めることができます。異なるレベルの特権（表示、編集など）が割り当てられている様々なユーザーとコレクションを共有できます。
 
@@ -28,7 +28,7 @@ ht-degree: 65%
 
 ## コレクションコンソールのアクセス {#navigating-the-collections-console}
 
-コレクションを開くには **[!UICONTROL 、Experience Managerインターフェイスで]**、 **[!UICONTROL アセット]** / **[!UICONTROL コレクションに移動します]**。
+コレクションを開くには **[!UICONTROL 、]**&#x200B;インターフェイスで [!DNL Experience Manager] 、 **[!UICONTROL アセット]** /コレクションに移動します ****。
 
 ## コレクションを作成 {#creating-a-collection}
 
@@ -52,15 +52,15 @@ ht-degree: 65%
 
    >[!NOTE]
    >
-   >Experience Manager Assets では、アセットフォルダーのレビュータスクを作成するのと同じ方法で、コレクションのレビュータスクを作成できます。
+   >[!DNL Experience Manager Assets] では、アセットフォルダーのレビュータスクを作成するのと同じ方法で、コレクションのレビュータスクを作成できます。
 
-   コレクションにアセットを追加するには、Assets ユーザーインターフェイスに移動します。詳しくは、[コレクションへのアセットの追加](#adding-assets-to-a-collection)を参照してください。
+   To add assets to the collection, navigate to the [!DNL Assets] user interface. 詳しくは、[コレクションへのアセットの追加](#adding-assets-to-a-collection)を参照してください。
 
 ### ドロップゾーンを使用したコレクションの作成 {#create-collections-using-dropzone}
 
-Assets UI からコレクションに、アセットをドラッグできます。コレクションのコピーを作成して、そこにアセットをドラッグすることもできます。
+You can drag assets from the [!DNL Assets] user interface to a collection. コレクションのコピーを作成して、そこにアセットをドラッグすることもできます。
 
-1. Assets ユーザーインターフェイスで、コレクションに追加するアセットを選択します。
+1. From the [!DNL Assets] user interface, select the assets you want to add to a collection.
 1. アセットを「**[!UICONTROL コレクションにドロップ]**」ゾーンにドラッグします。または、ツールバー **[!UICONTROL から「コレクションへ]** 」をクリックします。
 
    ![drop_in_collection](assets/drop_in_collection.png)
@@ -78,7 +78,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 スマートコレクションを作成するには、次の手順に従います。
 
-1. アセットユーザーインターフェイスに移動し、「検索」をクリックします。
+1. ユーザーインターフェイスに移動し、「検索」をクリックし [!DNL Assets] ます。
 
 1. 「Omnisearch」ボックスに検索キーワードを入力し、を押し `Enter`ます。 フィルターパネルを開き、検索フィルターを適用します。
 
@@ -108,7 +108,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 参照元のアセットまたはフォルダーのリストを含むコレクションにアセットを追加できます。スマートコレクションでは、検索クエリを使用してアセットを設定します。そのため、アセットおよびフォルダーへの静的な参照はスマートコレクションに適用できません。
 
-1. アセットユーザーインターフェイスで、アセットを選択し、ツールバー **[!UICONTROL から「コレクション]**![に追加](assets/do-not-localize/add-to-collection.png) 」をクリックします。
+1. setsユーザーインター [!DNL A]フェイスで、アセットを選択し、ツールバーの「コレクション **** に ![追加](assets/do-not-localize/add-to-collection.png) 」をクリックします。
 または、インターフェイスの「コレクションに **[!UICONTROL ドロップ]** 」領域にアセットをドラッグすることもできます。 領域追加のラベルが「ドロップ」に変わった場合のアセット追加。 ****
 
 1. **[!UICONTROL コレクションに追加]**&#x200B;ページで、アセットを追加するコレクションを選択します。
@@ -119,9 +119,9 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 スマートコレクションは検索を保存することによって構築されるので、内容を変更するには、[保存済みの検索](#saved-searches)の検索パラメーターを変更します。
 
-1. アセットユーザーインターフェイスで、ツールバーの検索オプション ![検索オプション](assets/do-not-localize/search_icon.png) 「」をクリックします。
+1. ユーザーインターフェイスで、ツールバーの検索オプション [!DNL Assets] 検索オプション ![](assets/do-not-localize/search_icon.png) をクリックします。
 1. オムニサーチボックスにカーソルを置き、Enter キーを押します。
-1. Experience Managerインターフェイスで、フィルターパネルを開きます。
+1. インター [!DNL Experience Manager] フェイスで、フィルターパネルを開きます。
 1. 「**[!UICONTROL 保存済みの検索結果]**」リストから、変更するスマートコレクションを選択します。検索パネルに、該当する保存済みの検索用に設定されているフィルターが表示されます。
 
    ![select_smart_collection](assets/select_smart_collection.png)
@@ -156,7 +156,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
    >[!NOTE]
    >
-   >* In the [!UICONTROL Properties] page, you can remove collections from the list of collections by deselecting them. コレクションリストは、デフォルトではすべてのコレクションが選択されています。Experience Managerは、削除したコレクションのメタデータを更新しません。
+   >* In the [!UICONTROL Properties] page, you can remove collections from the list of collections by deselecting them. コレクションリストは、デフォルトではすべてのコレクションが選択されています。[!DNL Experience Manager] 削除したコレクションのメタデータは更新されません。
    >* リストの上部で、「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにして、コレクションの選択とリストの消去を切り替えます。
 
 
@@ -175,15 +175,15 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 ## コレクションの検索 {#searching-collections}
 
-コレクションコンソールからコレクションを検索できます。「Omnisearch」ボックスでキーワードを使用して検索を行うと、Assetsはコレクション名、メタデータおよびコレクションに追加されたタグを検索します。
+コレクションコンソールからコレクションを検索できます。When you search with keywords in the Omnisearch box, [!DNL Assets] searches for collection names, metadata, and the tags added to the collections.
 
-トップレベルからコレクションを検索する場合は、個々のコレクションのみ検索結果に返されます。コレクション内のアセットやフォルダーは除外されます。他のすべての場合（例：個々のコレクション内またはフォルダー階層内）では、関連するすべてのアセット、フォルダー、コレクションが返されます。
+トップレベルからコレクションを検索する場合は、個々のコレクションのみ検索結果に返されます。[!DNL Assets] またはコレクション内のフォルダーは除外されます。 他のすべての場合（例：個々のコレクション内またはフォルダー階層内）では、関連するすべてのアセット、フォルダー、コレクションが返されます。
 
 ## Search within collections {#searching-within-collections}
 
 コレクションコンソールで、コレクションをクリックして開きます。
 
-コレクション内でのExperience Manager検索は、表示しているコレクション内のアセット（およびアセットのタグとメタデータ）に制限されます。 フォルダー内を検索すると、現在のフォルダー内の一致するアセットと子フォルダーがすべて返されます。コレクション内を検索すると、一致するアセット、一致するフォルダー、（そのコレクションの直接のメンバーである）他の一致するコレクションのみ返されます。
+Within a collection, [!DNL Experience Manager] search is restricted to assets (and their tags and metadata) within the collection that you are viewing. フォルダー内を検索すると、現在のフォルダー内の一致するアセットと子フォルダーがすべて返されます。コレクション内を検索すると、一致するアセット、一致するフォルダー、（そのコレクションの直接のメンバーである）他の一致するコレクションのみ返されます。
 
 ## コレクション設定の編集 {#editing-collection-settings}
 
@@ -234,7 +234,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 ## 保存済みの検索結果 {#saved-searches}
 
-Assets ユーザーインターフェイスでは、特定のルール、検索条件またはカスタム検索ファセットに基づいてアセットの検索または絞り込みをおこなうことができます。その結果を&#x200B;**[!UICONTROL 保存済みの検索結果]**&#x200B;として保存すると、後でフィルターパネルの「**[!UICONTROL 保存済みの検索結果]**」リストからアクセスできます。保存済みの検索結果を作成すると、スマートコレクションも作成されます。
+In the [!DNL Assets] user interface, you can search or filter assets based on certain rules, search criteria, or custom search facets. その結果を&#x200B;**[!UICONTROL 保存済みの検索結果]**&#x200B;として保存すると、後でフィルターパネルの「**[!UICONTROL 保存済みの検索結果]**」リストからアクセスできます。保存済みの検索結果を作成すると、スマートコレクションも作成されます。
 
 ![saved_searches_リスト](assets/saved_searches_list.png)
 
@@ -248,9 +248,9 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 保存済みの検索結果を削除するには、次の手順に従います。
 
-1. アセットユーザーインターフェイスで、検索 ![検索オプション](assets/do-not-localize/search_icon.png)をクリックします。
+1. ユーザーインターフェイスで、検索 [!DNL Assets] 検索オプション ![](assets/do-not-localize/search_icon.png)をクリックします。
 1. Omnisearchフィールドにカーソルを置き、Returnキーを押します。
-1. Experience Managerインターフェイスで、フィルターパネルを開きます。
+1. インター [!DNL Experience Manager] フェイスで、フィルターパネルを開きます。
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection](assets/select_smart_collection.png)
