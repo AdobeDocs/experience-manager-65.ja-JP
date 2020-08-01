@@ -3,10 +3,10 @@ title: での処理でサポートされるファイル形式 [!DNL Adobe Experi
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 62085bdd8fa576e0d4eaeae19076d6edbf8c484a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1647'
-ht-degree: 58%
+source-wordcount: '1636'
+ht-degree: 59%
 
 ---
 
@@ -72,11 +72,11 @@ ht-degree: 58%
 
 ## Supported 3D formats {#support-3d-formats}
 
-次の3D形式のリストがサポートされています。
+次の 3D 形式のリストがサポートされています。
 
-Dynamic Mediaでの3Dアセットの [操作も参照してください。](/help/assets/assets-3d.md)
+[Dynamic Media での 3D アセット操作](/help/assets/assets-3d.md)も参照してください。
 
-| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | サムネールプレビュー | 3次元プレビュー | Dynamic Media配信 |
+| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | サムネールプレビュー | 3D プレビュー | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
@@ -128,7 +128,7 @@ See [Using PDF Rasterizer](aem-pdf-rasterizer.md).
 
 ## Supported Image Transcoding library {#supported-image-transcoding-library}
 
-Adobe Imaging Transcodingライブラリは、エンコード、トランスコード、リサンプリング、サイズ変更など、主な画像処理機能を実行する画像処理ソリューションです。
+Adobeイメージングトランスコーディングライブラリは、エンコーディング、トランスコード、リサンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
 画像トランスコーディングライブラリは、JPG／JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF／圧縮 TIFF（32 ビット TIFF ファイルおよび PTIFF ファイルを除く）、ICO、および ICN MIME タイプをサポートします。
 
@@ -136,9 +136,9 @@ See [Imaging Transcoding Library](imaging-transcoding-library.md).
 
 ## Supported camera raw {#supported-camera-raw}
 
-Adobe Camera Raw ライブラリを使用すると、 Assets が Raw 画像を取り込むことができます。See [Camera Raw support](camera-raw.md).
+The [!DNL Adobe Camera Raw] library enables [!DNL Assets] to ingest raw images. See [Camera Raw support](camera-raw.md).
 
-## Supported Assets document formats {#supported-document-formats}
+## Supported [!DNL Assets] document formats {#supported-document-formats}
 
 アセット管理機能でサポートされるドキュメント形式は次のとおりです。
 
@@ -249,9 +249,9 @@ Adobe Camera Raw ライブラリを使用すると、 Assets が Raw 画像を�
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、Experience Managerはファイル拡張子を使用してファイルの種類を検出します。 Experience Managerは、ファイルの内容から検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the Experience Manager Web Console.
+デフォルトでは、はファイル拡張子を使用してファイルの種類を [!DNL Experience Manager] 検出します。 [!DNL Experience Manager] は、ファイルの内容からそれを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the [!DNL Experience Manager] Web Console.
 
-サポートされるMIMEタイプのリストは、CRXDE Liteので使用でき `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`ます。
+サポートされるMIMEタイプのリストは、のCRXDE Liteで確認でき `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`ます。
 
 | ファイル拡張子 | MIME タイプ／インターネットメディアタイプ | デフォルトの jobParam 値 | 許可される jobParam 値 |
 |---|---|---|---|
