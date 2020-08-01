@@ -3,17 +3,17 @@ title: ビジネス・プロセスの達成、監査の実施、コンプライ�
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 29%
+source-wordcount: '985'
+ht-degree: 27%
 
 ---
 
 
 # デジタルアセットの処理 {#process-assets}
 
-[!DNL Adobe Experience Manager Assets] 様々な方法でデジタルアセットを操作でき、堅牢なアセット処理が可能です。 デフォルトまたはカスタマイズされた処理方法を使用して、エンドツーエンドのビジネスプロセスの完了、監査とコンプライアンス、発見と配信、デジタルアセットの基本的な健全性を確保できます。 アセット管理のタスクを実行しながら、必要な拡大・縮小とカスタマイズを行うことができます。
+[!DNL Adobe Experience Manager Assets] 様々な方法でデジタルアセットを操作でき、堅牢なアセット処理が可能です。 デフォルトまたはカスタマイズされた処理方法を使用して、エンドツーエンドのビジネスプロセスの完了、監査とコンプライアンス、発見と配信、デジタルアセットの基本的な健全性を確保できます。 アセット管理のタスクを実行しながら、必要な拡大・縮小とカスタマイズを実現できます。
 
 ## ワークフローの理解 {#understand-workflows}
 
@@ -66,7 +66,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 複数のアセットへのワークフローの適用 {#applying-a-workflow-to-multiple-assets}
 
-1. アセットコンソールから、ワークフローを開始するアセットの場所へ移動して、アセットを選択します。メニューから「 **[!UICONTROL タイムライン]** 」を選択して、タイムラインを表示します。
+1. From the [!DNL Assets] console, navigate to the location of the assets for which you want to start a workflow, and select the assets. メニューから「 **[!UICONTROL タイムライン]** 」を選択して、タイムラインを表示します。
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
