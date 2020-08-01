@@ -1,11 +1,11 @@
 ---
 title: 共有アセットのURLの生成
-description: この記事では、Experience Managerアセット内のアセット、フォルダー、コレクションを外部の関係者へのURLとして共有する方法について説明します。
+description: This article describes how to share assets, folders, and collections within [!DNL Experience Manager Assets] as a URL to external parties.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1196'
 ht-degree: 51%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 51%
 
 # リンクを使用したアセットの共有 {#asset-link-sharing}
 
-Adobe Experience Managerアセットを使用すると、アセット、フォルダー、コレクションをURLとして組織のメンバーや、パートナーやベンダーなどの外部エンティティと共有できます。 リンクによるアセットの共有は、外部の関係者が Assets にログインすることなくリソースを利用するための便利な方法です。
+[!DNL Adobe Experience Manager Assets] アセット、フォルダー、コレクションをURLとして組織のメンバーと、パートナーやベンダーを含む外部エンティティと共有できます。 Sharing assets through a link is a convenient way of making resources available to external parties without them having to first log in to [!DNL Assets].
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
 >
 >リンクをユーザーと共有する前に、Day CQ Mail Service が設定されていることを確認してください。[Day CQ Mail Service を設定](/help/assets/link-sharing.md#configmailservice)せずにリンクの共有を試行すると、エラーが発生します。
 
-1. Assets のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
+1. In the [!DNL Assets] user interface, select the asset to share as a link.
 1. From the toolbar, click the **[!UICONTROL Share Link]** ![share assets icon](assets/do-not-localize/assets_share.png).
 
    「**[!UICONTROL リンクを共有]**」フィールドにアセットリンクが自動的に作成されます。このリンクをコピーしてユーザーと共有します。リンクのデフォルトの有効期間は 1 日です。
@@ -40,7 +40,7 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
 
    >[!NOTE]
    >
-   >If you want to share links from your Experience Manager Author deployment to external entities, ensure that you only expose the following URLs (which are used for link sharing) for `GET` requests only. 他のURLをブロックして、Experience Manager作成者のセキュリティを確保します。
+   >If you want to share links from your [!DNL Experience Manager] Author deployment to external entities, ensure that you only expose the following URLs (which are used for link sharing) for `GET` requests only. 作成者のセキュリティを確保するために、他のURLをブロックし [!DNL Experience Manager] ます。
    >
    >* http://[aem_server]:[port]/linkshare.html
    >* http://[aem_server]:[port]/linksharepreview.html
@@ -51,9 +51,9 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
    >
    >共有アセットが別の場所に移動されると、そのリンクは機能しなくなります。リンクを再作成し、ユーザーと再共有します。
 
-1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールにアクセスします]**。
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールにアクセスします]**。
 
-1. **[!UICONTROL Day CQ Link Externalizerの設定を開き、「]** Domains **[!UICONTROL 」フィールドの次のプロパティを、「]** 、 `local`」、「」、「」に関する値で変更しま `author``publish`す。 For the `local` and `author` properties, provide the URL for the local and the author instance respectively. Both `local` and `author` properties have the same value if you run a single Experience Manager Author instance. For `publish`, provide the URL for the Experience Manager publish instance.
+1. **[!UICONTROL Day CQ Link Externalizerの設定を開き、「]** Domains **[!UICONTROL 」フィールドの次のプロパティを、「]** 、 `local`」、「」、「」に関する値で変更しま `author``publish`す。 For the `local` and `author` properties, provide the URL for the local and the author instance respectively. Both `local` and `author` properties have the same value if you run a single [!DNL Experience Manager] Author instance. For `publish`, provide the URL for the [!DNL Experience Manager] publish instance.
 
 1. **[!UICONTROL リンク共有]**&#x200B;ダイアログの電子メールアドレスボックスに、リンクを共有するユーザーの電子メール ID を入力します。このリンクを複数のユーザーと共有することもできます。
 
@@ -96,19 +96,19 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
 
    >[!NOTE]
    >
-   >Experience Managerでは、次のMIMEタイプのアセットのプレビューの生成がサポートされています。 JPG、PNG、GIF、BMP、INDD、PDF、PPT。 他の MIME タイプのアセットのみをダウンロードできます。
+   >[!DNL Experience Manager] は、これらの MIME タイプ（JPG、PNG、GIF、BMP、INDD、PDF、および PPT）のアセットのプレビューの生成をサポートしています。他の MIME タイプのアセットのみをダウンロードできます。
 
 1. To download the shared asset, click **[!UICONTROL Select]** from the toolbar, click the asset, and then click **[!UICONTROL Download]** from the toolbar.
 
    ![chlimage_1-262](assets/chlimage_1-547.png)
 
-1. リンクとして共有したアセットを表示するには、アセットUIに移動し、Experience Managerロゴをクリックします。 リストから「**[!UICONTROL ナビゲーション]**」を選択して、ナビゲーションウィンドウを表示します。
+1. リンクとして共有したアセットを表示するには、ユー [!DNL Assets] ザインターフェイスに移動し、ロ [!DNL Experience Manager] ゴをクリックします。 リストから「**[!UICONTROL ナビゲーション]**」を選択して、ナビゲーションウィンドウを表示します。
 1. ナビゲーションウィンドウで、「**[!UICONTROL 共有リンク]**」を選択して共有アセットのリストを表示します。
 1. To un-share an asset, select it and click **[!UICONTROL Unshare]** from the toolbar. 確認メッセージが次に表示されます。 アセットのエントリがリストから削除されます。
 
 ## Day CQ 電子メールサービスの設定 {#configmailservice}
 
-1. Experience Managerホームページで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールに移動します]**。
+1. ホームページで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** 操作 **[!UICONTROL /]** Webコンソールに移動します ****。
 1. サービスのリストから、**[!UICONTROL Day CQ Mail Service]** を探します。
 1. Click **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
@@ -123,9 +123,9 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
 
 ## 最大データサイズの設定 {#maxdatasize}
 
-リンク共有機能を使用して共有されたリンクからアセットをダウンロードすると、Experience Managerはリポジトリからアセット階層を圧縮し、ZIPファイルに戻します。 ただし、ZIP ファイルとして圧縮できるデータ量に制限がないと、膨大なデータが圧縮の対象となり、JVM のメモリ不足エラーの原因となります。この状況による潜在的な DoS 攻撃からシステムを保護するには、Configuration Manager で Day CQ DAM Adhoc Asset Share Proxy Servlet の「**[!UICONTROL Max Content Size (uncompressed)]**」パラメーターを使用して、最大サイズを設定します。アセットの未圧縮時のサイズが設定値を超えていると、アセットのダウンロード要求は拒否されます。デフォルト値は 100 MB です。
+When you download assets from the link shared using the Link Sharing feature, [!DNL Experience Manager] compresses the asset hierarchy from the repository and then returns the asset in a ZIP file. ただし、ZIP ファイルとして圧縮できるデータ量に制限がないと、膨大なデータが圧縮の対象となり、JVM のメモリ不足エラーの原因となります。この状況による潜在的な DoS 攻撃からシステムを保護するには、Configuration Manager で Day CQ DAM Adhoc Asset Share Proxy Servlet の「**[!UICONTROL Max Content Size (uncompressed)]**」パラメーターを使用して、最大サイズを設定します。アセットの未圧縮時のサイズが設定値を超えていると、アセットのダウンロード要求は拒否されます。デフォルト値は 100 MB です。
 
-1. Click the Experience Manager logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Click the [!DNL Experience Manager] logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. From the Web Console, locate the **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** configuration.
 1. 「**[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]**」設定を編集モードで開き、「**[!UICONTROL Max Content Size (uncompressed)]**」パラメーターの値を変更します。
 
@@ -136,6 +136,6 @@ Adobe Experience Managerアセットを使用すると、アセット、フォ�
 ## ベストプラクティスとトラブルシューティング {#bestpractices}
 
 * 名前に空白を含むアセットフォルダーまたはコレクションは共有されない場合があります。
-* If users cannot download the shared assets, check with your Experience Manager administrator what the [download limits](#maxdatasize) are.
-* If you cannot send email with links to shared assets or if the other users cannot receive your email, check with your Experience Manager administrator if the [email service](#configmailservice) is configured or not.
+* If users cannot download the shared assets, check with your [!DNL Experience Manager] administrator what the [download limits](#maxdatasize) are.
+* If you cannot send email with links to shared assets or if the other users cannot receive your email, check with your [!DNL Experience Manager] administrator if the [email service](#configmailservice) is configured or not.
 * リンク共有機能を使用してアセットを共有できない場合は、適切な権限を持っていることを確認してください。[アセットの共有](#sharelink)を参照してください。
