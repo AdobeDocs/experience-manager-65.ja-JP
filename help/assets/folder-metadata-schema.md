@@ -3,23 +3,23 @@ title: フォルダーメタデータスキーマ
 description: Adobe Experience Managerアセット内のアセットフォルダ用のメタデータスキーマを作成する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 71%
+source-wordcount: '1016'
+ht-degree: 74%
 
 ---
 
 
 # フォルダーメタデータスキーマ {#folder-metadata-schema}
 
-Adobe Experience Managerアセットを使用すると、アセットフォルダ用のメタデータスキーマを作成できます。このフォルダフォルダは、フォルダのプロパティページに表示されるレイアウトとメタデータを定義します。
+[!DNL Adobe Experience Manager Assets] では、フォルダープロパティページに表示されるレイアウトおよびメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。
 
 ## フォルダーメタデータスキーマフォームの追加 {#add-a-folder-metadata-schema-form}
 
 フォルダーメタデータスキーマフォームエディターを使用して、フォルダーのメタデータスキーマを作成および編集します。
 
-1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL フォルダーメタデータスキーマに移動します]**。
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** /フォルダーメタデータスキーマに移動します ****。
 1. On the [!UICONTROL Folder Metadata Schema Forms] page, click **[!UICONTROL Create]**.
 1. Specify a name for the form, and click **[!UICONTROL Create]**. The new schema form is listed in the [!UICONTROL Schema Forms] page.
 
@@ -108,7 +108,7 @@ To edit the properties of form items, click the component and edit all or a subs
 
 ### フォルダーメタデータスキーマページからのスキーマへの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL フォルダーメタデータスキーマに移動します]**。
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** /フォルダーメタデータスキーマに移動します ****。
 1. フォルダーメタデータスキーマフォームページから、フォルダーに適用するスキーマフォームを選択します。
 1. From the toolbar, click **[!UICONTROL Apply to Folder(s)]**.
 
