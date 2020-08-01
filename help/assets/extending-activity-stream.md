@@ -1,23 +1,23 @@
 ---
-title: アセットとアクティビティストリームの統合
-description: Experience Managerの記録機能と、特定のイベントを記録するように設定する方法について説明します。
+title: アクティビティストリーム [!DNL Assets] と統合します。
+description: Describes the recording capabilities of [!DNL Experience Manager] and how to configure it to record specific events.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 51%
+source-wordcount: '267'
+ht-degree: 57%
 
 ---
 
 
-# Integrate Assets with activity stream {#integrating-assets-with-activity-stream}
+# アクティビティストリーム [!DNL Assets] との統合 {#integrating-assets-with-activity-stream}
 
-Adobe Experience Manager Assetsのユーザーは、アセットの作成、アップロード、削除など、様々な操作を実行します。 ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。ここでは、Experience Managerの記録機能と、特定のイベントを記録するためのExperience Managerの設定方法について説明します。
+[!DNL Adobe Experience Manager Assets] ユーザーは、アセットの作成、アップロード、削除などの多くのアクションを実行します。ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。This section describes the recording capabilities of [!DNL Experience Manager] and how to configure [!DNL Experience Manager] in order to record specific events.
 
 ## Performance considerations and default behavior {#performance-considerations-and-default-behavior}
 
-この統合は、一括して読み込むときなどに多くの CPU およびディスク領域を消費する可能性があります。このため、アセットとアクティビティストリームの統合はデフォルトで無効になっています。
+この統合は、一括して読み込むときなどに多くの CPU およびディスク領域を消費する可能性があります。For these reasons the [!DNL Assets] integration with the Activity Stream is disabled by default.
 
 ## Supported action events {#supported-action-events}
 
@@ -39,7 +39,7 @@ Adobe Experience Manager Assetsのユーザーは、アセットの作成、ア�
 * サブアセットの更新（SUBASSET_UPDATED）
 * サブアセットの削除（SUBASSET_REMOVED）
 
-## アセットイベントの記録の設定 {#configuring-aem-assets-events-recording}
+## [!DNL Assets] イベントの記録の設定 {#configuring-aem-assets-events-recording}
 
 [Webコンソールを使用して](/help/sites-deploying/configuring-osgi.md) 、アセットイベントレコーダーのチューニングを行うことができます。 アセットイベントレコーダーを設定するには、次の手順に従います。
 
