@@ -1,40 +1,40 @@
 ---
-title: アセットサイズ変更ガイド
-description: Adobe Experience Manager Assetsの展開に必要なインフラストラクチャとリソースを見積もるための効率的な指標を決定するためのベストプラクティスです。
+title: '[!DNL Assets]サイズ調整ガイド'
+description: 導入に必要なインフラストラクチャとリソースを見積もるための効率的な指標を決定するためのベストプラクティス [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1659'
-ht-degree: 61%
+source-wordcount: '1616'
+ht-degree: 60%
 
 ---
 
 
-# Assets sizing guide {#assets-sizing-guide}
+# [!DNL Assets] サイジングガイド {#assets-sizing-guide}
 
-Adobe Experience Manager Assets実装の環境サイズを決定する際は、ディスク、CPU、メモリ、IO、およびネットワークのスループットに関して十分なリソースを確保することが重要です。 これらのリソースのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。わかりやすい指標がない場合は、ライブラリの有効期間から既存のライブラリのサイズを分割し、アセットが作成されたときの割合を見つけることができます。
+When sizing the environment for an [!DNL Adobe Experience Manager Assets] implementation, it is important to ensure that there are sufficient resources available in terms of disk, CPU, memory, IO, and network throughput. これらのリソースのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。わかりやすい指標がない場合は、ライブラリの有効期間から既存のライブラリのサイズを分割し、アセットが作成されたときの割合を見つけることができます。
 
 ## ディスク {#disk}
 
 ### データストア {#datastore}
 
-Assets の実装に必要なディスク領域をサイジングするときによくある間違いは、システムに取り込まれる Raw 画像のサイズに基づいて計算することです。デフォルトでは、Experience Managerは、Experience Manager UI要素のレンダリングに使用する元の画像に加えて3つのレンディションを作成します。 以前の実装では、これらのレンディションは取り込まれるアセットのサイズの倍と想定されていました。
+A common mistake made when sizing the required disk space for an [!DNL Assets] implementation is to base the calculations on the size of the raw images to be ingested into the system. By default, [!DNL Experience Manager] creates three renditions in addition to the original image for use in rendering the [!DNL Experience Manager] user interface elements. 以前の実装では、これらのレンディションは取り込まれるアセットのサイズの倍と想定されていました。
 
-ほとんどのユーザーは、既製のレンディションに加えてカスタムレンディションを定義します。In addition to the renditions, Assets lets you extract sub-assets from common file types, such as [!DNL Adobe InDesign] and [!DNL Adobe Illustrator].
+ほとんどのユーザーは、既製のレンディションに加えてカスタムレンディションを定義します。In addition to the renditions, [!DNL Assets] lets you extract sub-assets from common file types, such as [!DNL Adobe InDesign] and [!DNL Adobe Illustrator].
 
-最後に、Experience Managerのバージョン管理機能では、バージョン履歴にアセットの重複が保存されます。 頻繁に削除するバージョンを構成できます。 ただし、多くのユーザーはバージョンをシステムに長い間保持するので、ストレージ領域をさらに消費します。
+Finally, versioning capabilities of [!DNL Experience Manager] store duplicates of the assets in the version history. 頻繁に削除するバージョンを構成できます。 ただし、多くのユーザーはバージョンをシステムに長い間保持するので、ストレージ領域をさらに消費します。
 
 これらの要素を考慮して、ユーザーのアセットを保存するための正確なストレージ領域を計算する手法が必要です。
 
 1. システムに読み込まれるアセットのサイズと数を決定します。
-1. Experience Managerにアップロードするアセットの代表的なサンプルを参照できます。 例えば、システムに PSD、JPG、AI および PDF ファイルを読み込む場合、各ファイル形式の複数のサンプル画像が必要です。また、これらのサンプルは異なるファイルサイズや画像が混在する中で代表的なものである必要があります。
+1. Get a representative sample of the assets to be uploaded into [!DNL Experience Manager]. 例えば、システムに PSD、JPG、AI および PDF ファイルを読み込む場合、各ファイル形式の複数のサンプル画像が必要です。また、これらのサンプルは異なるファイルサイズや画像が混在する中で代表的なものである必要があります。
 1. 使用するレンディションを定義します。
-1. ImageMagickまたはアドビのCreative Cloudアプリケーションを使用して、Experience Managerでレンディションを作成します。 ユーザーが指定したレンディションに加えて、既製のレンディションを作成します。Scene7を実装しているユーザーは、ICバイナリを使用してPTIFFレンディションを生成し、Experience Managerに保存することができます。
+1. またはアプリケーションを使用して、レンディションを作成 [!DNL Experience Manager] し [!DNL ImageMagick][!DNL Adobe Creative Cloud] ます。 ユーザーが指定したレンディションに加えて、既製のレンディションを作成します。Scene7を実装するユーザーは、ICバイナリを使用してPTIFFレンディションを生成し、Experience Managerに保存することができます。
 1. サブアセットを使用する場合は、適切なファイルタイプに合わせて生成します。
 1. 出力された画像、レンディションおよびサブアセットのサイズを元の画像と比較します。これにより、システムが読み込まれたときに、期待される成長率を生成できます。 例えば、1 GB のアセットを処理した後に合計サイズが 3 GB のレンディションとサブアセットを生成した場合、レンディションの拡張係数は 3 です。
 1. アセットのバージョンがシステムで管理される最大時間を決定します。
-1. 既存のアセットがシステムで変更される頻度を決定します。Experience Managerをクリエイティブワークフローのコラボレーションのハブとして使用する場合は、変更の量が多くなります。 完了したアセットのみがシステムにアップロードされる場合、この数はかなり少なくなります。
+1. 既存のアセットがシステムで変更される頻度を決定します。If [!DNL Experience Manager] is used as a collaboration hub in creative workflows, the amount of changes are high. 完了したアセットのみがシステムにアップロードされる場合、この数はかなり少なくなります。
 1. 毎月システムに読み込まれるアセットの数を決定します。正しい数字がわからない場合は、現在使用できるアセットの数を確認し、その数を最も古いアセットの年齢で除算して、おおよその数を計算します。
 
 上記の手順を実行すると、次の項目を決定できます。
@@ -47,7 +47,7 @@ Assets の実装に必要なディスク領域をサイジングするときに�
 * 月ごとに読み込まれる新しいアセットの数.
 * ストレージ領域の割り当ての増加年数。
 
-これらの数を「ネットワークサイジング」スプレッドシートに指定してデータストアに必要な空き容量の合計を決定できます。また、アセットのバージョンの管理やアセットの変更がディスクの増加に与える影響を判断するのに役立つツールです。
+これらの数を「ネットワークサイジング」スプレッドシートに指定してデータストアに必要な空き容量の合計を決定できます。It is also a useful tool to determine the impact of maintaining asset versions or modifying assets in [!DNL Experience Manager] on disk growth.
 
 ツールに取り込まれているサンプルデータは、前述のステップを実行することの重要性を示しています。データストアのサイズを読み込まれる Raw 画像のみを基準に設定（1 TB）すると、係数が 15 になり、リポジトリサイズが少なく見積もられることがあります。
 
@@ -55,7 +55,7 @@ Assets の実装に必要なディスク領域をサイジングするときに�
 
 ### Shared datastores {#shared-datastores}
 
-大規模なデータストアの場合は、ネットワークに接続されたドライブ上の共有ファイルデータストアを介して、またはAmazon S3データストアを介して、共有データストアを実装できます。 この場合、個々のインスタンスでバイナリのコピーを管理する必要がありません。また、共有データストアは、バイナリレスのレプリケーションを容易にし、環境を発行するためにアセットをレプリケートするために使用される帯域幅を削減します。
+大規模なデータストアの場合は、ネットワークに接続されたドライブ上の共有ファイルデータストアを介して、またはAmazonS3データストアを介して、共有データストアを実装できます。 この場合、個々のインスタンスでバイナリのコピーを管理する必要がありません。また、共有データストアは、バイナリレスのレプリケーションを容易にし、環境を発行するためにアセットをレプリケートするために使用される帯域幅を削減します。
 
 #### ユースケース {#use-cases}
 
@@ -75,7 +75,7 @@ Assets の実装に必要なディスク領域をサイジングするときに�
 
 共有データストアは、ガベージコレクションなどの操作を複雑にします。通常、スタンドアロンのデータストアのガベージコレクションは、1 つのクリックで開始できます。しかし、共有データストアの場合は、単一のノードで実際のコレクションを実行することに加えて、そのデータストアを使用する各メンバーでマークスイープ操作が必要になります。
 
-AWSの運用では、EBSボリュームのRAIDアレイを構築する代わりに（Amazon S3を介して）1か所の中央サイトを実装することで、システムの複雑さと運用上のリスクを大幅に軽減できます。
+AWSの運用では、EBSボリュームのRAIDアレイを構築する代わりに(AmazonS3を介して)1か所の中央サイトを実装することで、システムの複雑さと運用上のリスクを大幅に軽減できます。
 
 #### Performance concerns {#performance-concerns}
 
@@ -102,13 +102,13 @@ S3 の実装では、バックグラウンドの書き込みスレッドによ�
 
 ## ネットワーク {#network}
 
-アセットには、多くのExperience Managerプロジェクトよりもネットワークのパフォーマンスを重要にする多くの使用例があります。 お客様は高速なサーバーを使用できますが、ネットワーク接続の大きさが、システムからアセットをアップロードおよびダウンロードするユーザの負荷をサポートするのに十分でない場合、動作は遅くなります。 There is a good methodology for determining the choke point in a user&#39;s network connection to Experience Manager at [Assets considerations for user experience, instance sizing, workflow evaluation, and network topology](/help/assets/assets-network-considerations.md).
+[!DNL Assets] には、他の多くの プロジェクトよりネットワークのパフォーマンスが重要になる使用例がいくつかあります。[!DNL Experience Manager]お客様は高速なサーバーを使用できますが、ネットワーク接続の大きさが、システムからアセットをアップロードおよびダウンロードするユーザの負荷をサポートするのに十分でない場合、動作は遅くなります。 There is a good methodology for determining the choke point in a user&#39;s network connection to [!DNL Experience Manager] at [Assets considerations for user experience, instance sizing, workflow evaluation, and network topology](/help/assets/assets-network-considerations.md).
 
 ## 制限事項 {#limitations}
 
-実装をサイジングするときは、システムの制限事項を頭に入れておくことが重要です。提案された実装がこれらの制限を超える場合は、クリエイティブの戦略（例：アセットを複数の Assets の実装全体で分割する）を採用してください。
+実装をサイジングするときは、システムの制限事項を頭に入れておくことが重要です。If the proposed implementation exceeds these limitations, employ creative strategies, such as partitioning the assets across multiple [!DNL Assets] implementations.
 
-メモリ不足（OOM）の問題を起こす要因はファイルのサイズだけではありません。画像のサイズにも依存します。開始のExperience Managerでより高いヒープサイズを指定すると、OOMの問題を回避できます。
+メモリ不足（OOM）の問題を起こす要因はファイルのサイズだけではありません。画像のサイズにも依存します。You can avoid OOM issues by providing a higher heap size when you start [!DNL Experience Manager].
 
 In addition, you can edit the threshold size property of the `com.day.cq.dam.commons.handler.StandardImageHandler` component in Configuration Manager to use intermediate temporary file greater than zero.
 
@@ -118,8 +118,8 @@ In addition, you can edit the threshold size property of the `com.day.cq.dam.com
 
 レンディションが誤って生成される場合は、Camera Raw ライブラリを使用します。ただしこの場合、画像の長いほうのサイズが 65000 ピクセルを超えてはいけません。また、画像に含めるメモリのサイズは512 MP（512 x 1024 x 1024ピクセル）以下にする必要があります。 アセットのサイズは問題になりません。
 
-ピクセルサイズの影響処理など、追加の要因による影響を受けるので、Experience Manager用の特定のヒープを使用して、すぐに使用できるTIFFファイルのサイズを正確に見積もるのは困難です。 Experience Managerでは、初期設定の状態で255 MBのファイルを処理できますが、18 MBのファイルサイズは処理できません。これは、18 MBのファイルサイズが1つのファイルに比べてピクセル数が非常に多いためです。
+It is difficult to accurately estimate the size of the TIFF file supported out-of-the-box with a specific heap for [!DNL Experience Manager] because additional factors, such as pixel size influence processing. It is possible that [!DNL Experience Manager] can process a file of size of 255 MB out-of-the-box, but cannot process a file size of 18 MB because the latter comprises of an unusually higher number pixels compared to the former.
 
 ## Size of assets {#size-of-assets}
 
-デフォルトでは、Experience Managerでは、最大2 GBのファイルサイズのアセットをアップロードできます。 非常に大きいアセットをExperience Managerにアップロードするには、非常に大きいアセットをアップロードする [ための設定を参照してください](managing-video-assets.md#configuration-to-upload-assets-that-are-larger-than-gb)。
+初期設定では、 [!DNL Experience Manager] 最大2 GBのファイルサイズのアセットをアップロードできます。 で非常に大きなアセットをアップロードするには、非常に大きなアセット [!DNL Experience Manager]をアップロードする [ための設定を参照してください](managing-video-assets.md#configuration-to-upload-assets-that-are-larger-than-gb)。
