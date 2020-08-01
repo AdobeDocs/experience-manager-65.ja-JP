@@ -3,10 +3,10 @@ title: アセットエディタの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '695'
-ht-degree: 92%
+source-wordcount: '688'
+ht-degree: 89%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 92%
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-既存のエディターコンポーネントを使用するだけでなく、Adobe Experience Managerの開発者は独自のコンポーネントを作成することもできます。
+In addition to using pre-existing editor components, [!DNL Adobe Experience Manager] developers can also create their own components.
 
 ## Create an Asset Editor template {#creating-an-asset-editor-template}
 
-Geometrixxには以下のサンプルページが含まれています。
+Geometrixxには、次のサンプルページが含まれています。
 
 * Geometrixx サンプルページ：`/content/geometrixx/en/press/asseteditor.html`
 * サンプルテンプレート：`/apps/geometrixx/templates/asseteditor`
@@ -29,9 +29,9 @@ Geometrixxには以下のサンプルページが含まれています。
 
 ### Clientlibの設定 {#configuring-clientlib}
 
- Assets コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
+[!DNL Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
 
-（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、 Assets テンプレートは次の条件を満たす必要があります。
+（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、 テンプレートは次の条件を満たす必要があります。[!DNL Assets]
 
 * テンプレートでは、（`cq.wcm.edit` ではなく）`cq.dam.edit` クライアントライブラリを組み込む必要があります。
 
@@ -41,17 +41,17 @@ Geometrixxには以下のサンプルページが含まれています。
 
 ### JSアクションの設定 {#configuring-js-actions}
 
-一部の Assets コンポーネントでは `component.js` で定義されている JS 関数が必要です。このファイルをコンポーネントディレクトリにコピーしてリンクします。
+Some of the [!DNL Assets] components require JS functions defined in `component.js`. このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-このサンプルでは、この JavaScript ソースを `head.jsp`（`/apps/geometrixx/components/asseteditor/head.jsp`）で読み込んでいます。
+The sample loads this JavaScript source in `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
 
 ### Additional style sheets {#additional-style-sheets}
 
-一部の Assets コンポーネントでは、 ウィジェットライブラリを使用します。コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+Some of the [!DNL Assets] components use the widgets library. コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
