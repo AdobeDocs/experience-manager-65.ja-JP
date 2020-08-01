@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Experience Manager6.5アセットユーザーガイド
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 56%
+source-wordcount: '630'
+ht-degree: 53%
 
 ---
 
@@ -16,21 +16,21 @@ ht-degree: 56%
 # Experience Manager6.5アセットユーザーガイド {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
-+ [AEM 6.5 Assetsリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [Experience Manager6.5アセットリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
-+ AEM Assetsの使用 {#using}
-   + [AEM Assetsホームページ体験](assets-home-page.md)
-   + [AEM でのアセットの検索](search-assets.md)
++ Experience Managerアセットの使用 {#using}
+   + [アセットホームページエクスペリエンス](assets-home-page.md)
+   + [デジタルアセットの検索](search-assets.md)
    + [多言語のアセット](multilingual-assets.md)
-   + [AEM Assets [!DNL Adobe Stock] の使用](aem-assets-adobe-stock.md)
+   + [アセット [!DNL Adobe Stock] の使用](aem-assets-adobe-stock.md)
    + [3D アセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
    + [アセットの処理](assets-workflow.md)
    + [追加画像マップ](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
-   + [アセットとAEM Sitesの接続](use-assets-across-connected-assets-instances.md)
+   + [サイトとの接続されたアセット](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Experience League 提供の Dynamic Media ニュースレター](dynamic-media-newsletter.md)
    + [Dynamic Media のセットアップ](administering-dynamic-media.md)
@@ -76,14 +76,14 @@ ht-degree: 56%
    + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
-   + [AEM Assetsのカスタマイズと拡張](extending-assets.md)
+   + [アセットのカスタマイズと拡張](extending-assets.md)
    + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [検索機能の拡張](searchx.md)
-   + [ [!DNL ImageMagick] AEM Assets と連携するための のインストールと設定](best-practices-for-imagemagick.md)
+   + [アセットを操作するためのインスト [!DNL ImageMagick] ールと設定](best-practices-for-imagemagick.md)
    + [アセットとアクティビティストリームの統合](extending-activity-stream.md)
    + [アセットエディタの拡張](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
-   + [AEM AssetsのHTTP APIでサポートされるコンテンツフラグメント](assets-api-content-fragments.md)
+   + [コンテンツフラグメントはアセットHTTP APIでサポート](assets-api-content-fragments.md)
    + [アセットプロキシの開発](proxy.md)
 + アセットの管理 {#administer}
    + [サポートされているファイル形式](assets-formats.md)
@@ -104,13 +104,13 @@ ht-degree: 56%
    + [アセット移行ガイド](assets-migration-guide.md)
    + [XMP メタデータ](xmp.md)
    + [Assets のネットワークに関する考慮事項](assets-network-considerations.md)
-   + [AEM AssetsとAEM MediaLibrary](medialibrary.md)
+   + [アセットとMediaLibrary](medialibrary.md)
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
-   + [AEM と Creative Cloud の統合のベストプラクティス](aem-cc-integration-best-practices.md)
+   + [Experience ManagerとCreative Cloudの統合](aem-cc-integration-best-practices.md)
    + [InDesign Serverとの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
-   + [アセット内のDigital Rights Management](drm.md)
+   + [資産のDigital Rights Management](drm.md)
    + [アセットのインサイトにデモパッケージを使用する](touch-ui-using-demo-package-for-asset-insights.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
    + [アセットを監視するためのベストプラクティス](assets-monitoring-best-practices.md)
@@ -123,11 +123,11 @@ ht-degree: 56%
    + [アセットの透かしの設定](watermarking.md)
    + [一括メタデータの読み込みと書き出し](metadata-import-export.md)
    + [アセットテンプレート](asset-templates.md)
-   + [Creative Cloudとフォルダーを共有するためのベストプラクティス](aem-cc-folder-sharing-best-practices.md)
+   + [フォルダーをCreative Cloudと共有するためのベストプラクティス](aem-cc-folder-sharing-best-practices.md)
    + [フォルダーメタデータスキーマ](folder-metadata-schema.md)
    + [スマートタグの管理](managing-smart-tags.md)
 + Brand Portal {#brandportal}
-   + [AEM Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)
+   + [ Assets と Brand Portal の連携の設定 ](configure-aem-assets-with-brand-portal.md)
    + [Brand Portal へのアセットの公開](brand-portal-publish-assets.md)
    + [Brand Portal へのフォルダーの公開](brand-portal-publish-folder.md)
    + [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
@@ -151,11 +151,11 @@ ht-degree: 56%
    + [ビデオアセットの管理](managing-video-assets.md)
    + [翻訳プロジェクトの作成](translation-projects.md)
    + [翻訳するアセットの準備](preparing-assets-for-translation.md)
-   + [AEM からのアセットのダウンロード](download-assets-from-aem.md)
+   + [Experience Managerからのアセットのダウンロード](download-assets-from-aem.md)
    + [非同期ジョブ](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [アセットのインサイト](touch-ui-asset-insights.md)
-   + [Adobe Launchでアセットのインサイトを有効にする](touch-ui-using-dtm-for-asset-insights.md)
+   + [Adobeの起動によるアセットのインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
    + [アセットのインサイトの設定](touch-ui-configuring-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
