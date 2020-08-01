@@ -3,9 +3,9 @@ title: アセットのメタデータ要件をカスタマイズするメタデ�
 description: アセットのメタデータプロファイルについて理解します。また、メタデータプロファイルを作成し、フォルダーのアセットに適用する方法も学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1404'
 ht-degree: 57%
 
 ---
@@ -31,11 +31,13 @@ ht-degree: 57%
    * **[!UICONTROL フィールドラベル]**: メタデータプロパティの表示名です。 ユーザーの参照用のみで使用します。
 
    * **[!UICONTROL プロパティにマップ]**: このプロパティの値は、リポジトリに保存されるアセットノードの相対パス/名前を提供します。 この値は常にと開始する必要があります。これは、パスがアセットのノード下にあることを示している `./` からです。
+
    ![chlimage_1-199](assets/chlimage_1-482.png)
 
-   The value you specify for **[!UICONTROL Map to property]** is stored as a property under the asset&#39;s metadata node. For example, if you specify . `/jcr:content/metadata/dc:desc` 「 **[!UICONTROL Map to property]**」の名前として、Assetsはアセットのメタデータノード `dc:desc` に値を保存します。
+   The value you specify for **[!UICONTROL Map to property]** is stored as a property under the asset&#39;s metadata node. For example, if you specify . `/jcr:content/metadata/dc:desc` を **[!UICONTROL Map to property]**(プロパティに [!DNL Assets] マップ)の名前として使用し、アセットのメタデータノード `dc:desc` に値が格納されます。
 
    * **[!UICONTROL デフォルト値]**：メタデータコンポーネントのデフォルト値を追加するには、このプロパティを使用します。例えば、「My description」と指定すると、この値がアセットのメタデータノードの `dc:desc` プロパティに割り当てられます。
+
    ![chlimage_1-200](assets/chlimage_1-483.png)
 
    >[!NOTE]
@@ -106,7 +108,7 @@ ht-degree: 57%
 
 メタデータプロファイルを適用する手順は、次のとおりです。
 
-1. Experience Managerのロゴをクリックし、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータプロファイルに移動します]**。
+1. Click the [!DNL Experience Manager] logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
@@ -126,7 +128,7 @@ ht-degree: 57%
 
 ### メタデータプロファイルのグローバルな適用 {#applying-a-metadata-profile-globally}
 
-フォルダーにプロファイルを適用する以外に、グローバルに1つを適用して、任意のExperience Managerー内のフォルダーアセットにアップロードされたコンテンツに選択したプロファイルが適用されるようにすることもできます。
+In addition to applying a profile to a folder, you can also apply one globally so that any content uploaded into [!DNL Experience Manager] assets in any folder has the selected profile applied.
 
 後で変更した既存のメタデータプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
@@ -148,7 +150,7 @@ ht-degree: 57%
 
 ### Remove metadata profiles from folders via Profiles user interface {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. Experience Managerのロゴをクリックし、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータプロファイルに移動します]**。
+1. Click the [!DNL Experience Manager] logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. 1 つまたは複数のフォルダーから削除するメタデータプロファイルを選択します。
 1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
@@ -156,7 +158,7 @@ ht-degree: 57%
 
 ### Remove metadata profiles from folders via Properties {#removing-metadata-profiles-from-folders-via-properties}
 
-1. Click the Experience Manager logo and navigate **[!UICONTROL Assets]** and then to the folder that you want to remove an metadata profile from.
+1. Click the [!DNL Experience Manager] logo and navigate **[!UICONTROL Assets]** and then to the folder that you want to remove an metadata profile from.
 1. On the folder, click the check mark to select it and then click **[!UICONTROL Properties]**.
 1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択して、「**[!UICONTROL 保存]**」をクリックします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
