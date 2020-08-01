@@ -3,10 +3,10 @@ title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1561'
-ht-degree: 74%
+source-wordcount: '1536'
+ht-degree: 73%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 74%
 
 タグのトレーニングが完了して準備が整ったら、サービスは、タグ付けワークフローを通じてこれらのタグをアセットに適用できるようになります。
 
-背景には、スマートコンテンツサービスはAdobe Senesi AIフレームワークを使用して、タグ構造とビジネス分類に対する画像認識アルゴリズムのトレーニングを行っています。 その後、このコンテンツインテリジェンスを使用して、アセットの個々のセットに関連性の高いタグが適用されます。
+背景には、スマートコンテンツサービスは、Adobe SenseiAIフレームワークを使用して、タグ構造とビジネス分類に対する画像認識アルゴリズムのトレーニングを行っています。 その後、このコンテンツインテリジェンスを使用して、アセットの個々のセットに関連性の高いタグが適用されます。
 
-スマートコンテンツサービスは、Adobe I/O上でホストされるクラウドサービスです。 この機能をAdobe Experience Managerで使用するには、Experience Manager管理者がシステム導入をAdobe I/Oと統合する必要があります。
+Smart Content Service is a cloud service that is hosted on Adobe I/O. To use it in [!DNL Adobe Experience Manager], the system administrator must integrate your [!DNL Experience Manager] deployment with Adobe I/O.
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
@@ -47,15 +47,15 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 ## 使用開始 {#onboarding}
 
-スマートコンテンツサービスは、Adobe Experience Manager のアドオンとして購入できます。購入後、Adobe I/Oへのリンクを記載した電子メールが組織の管理者に送信されます。
+The Smart Content Service is available for purchase as an add-on to [!DNL Experience Manager]. 購入後、AdobeI/Oへのリンクを含む電子メールが組織の管理者に送信されます。
 
-管理者は、このリンクに従ってSmart Content ServiceとExperience Managerを統合できます。 To integrate the service with Experience Manager Assets, see [Configure Smart Tags](config-smart-tagging.md).
+The administrator can follow the link to integrate the Smart Content Service with [!DNL Experience Manager]. To integrate the service with [!DNL Experience Manager Assets], see [Configure Smart Tags](config-smart-tagging.md).
 
-管理者がサービスを設定し、Experience Managerでユーザーを追加すると、オンボーディングプロセスが完了します。
+The onboarding process is complete when the administrator configures the service and adds users in [!DNL Experience Manager].
 
 >[!NOTE]
 >
->Experience Manager6.3以前のバージョンを使用し、アセットにタグ付けサービスが必要な場合は、「 [スマートタグ](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)」を参照してください。 スマートタグは最新のAI機能を使用しないので、高度なスマートタグサービスに比べて正確性が低くなります。
+>6.3以前のバージョンを使用していて、アセットにタグ付けサービスが必要な場合は、 [!DNL Experience Manager] スマートタグを参照してください [](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 スマートタグは最新のAI機能を使用しないので、高度なスマートタグサービスに比べて正確性が低くなります。
 
 ## アセットとタグの確認 {#reviewing-assets-and-tags}
 
@@ -90,13 +90,13 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-フォルダーに対してこのオプションを選択すると、Experience Managerはトレーニングワークフローを自動的に実行し、フォルダーアセットとそのタグに関するSmart Content Serviceのトレーニングを行います。 デフォルトでは、トレーニングワークフローは週に 1 回、土曜日の午前 0 時 30 分に実行されます。
+Once this option is selected for a folder, [!DNL Experience Manager] runs a training workflow automatically to train the Smart Content Service on the folder assets and their tags. デフォルトでは、トレーニングワークフローは週に 1 回、土曜日の午前 0 時 30 分に実行されます。
 
 ### オンデマンドのトレーニング {#on-demand-training}
 
 ワークフローコンソールから、必要に応じていつでもスマートコンテンツサービスのトレーニングをおこなうことができます。
 
-1. In Experience Manager interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 1. **[!UICONTROL ワークフローを実行]**&#x200B;ダイアログで、サービスのトレーニングに使用するタグ付けされたアセットが格納されているペイロードフォルダーを参照します。
 1. ワークフローのタイトルを指定し、コメントを追加します。Then, click **[!UICONTROL Run]**. アセットとタグがトレーニングのために送信されます。
@@ -111,7 +111,7 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 アセットのトレーニングセット内のタグに関するスマートコンテンツサービスのトレーニングが実施されたかどうかを確認するには、レポートコンソールでトレーニングワークフローレポートを調べます。
 
-1. Experience Managerインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートに移動します]**。
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 1. **[!UICONTROL アセットレポート]**&#x200B;ページで、「**[!UICONTROL 作成]**」をクリックします。
 1. 「**[!UICONTROL スマートタグトレーニング]**」レポートを選択し、ツールバーで「**[!UICONTROL 次へ]**」をクリックします。
 1. レポートのタイトルと説明を指定します。「**[!UICONTROL レポートをスケジュール]**」で、「**[!UICONTROL 今すぐ]**」オプションを選択したままにします。レポートを後で生成するようにスケジュールするには、「**[!UICONTROL 後で]**」を選択し、日時を指定します。次に、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
@@ -153,7 +153,7 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 #### ワークフローコンソールからのアセットのタグ付け {#tagging-assets-from-the-workflow-console}
 
-1. In Experience Manager interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. **[!UICONTROL ワークフローモデル]**&#x200B;ページで、「**[!UICONTROL DAM スマートタグアセット]**」ワークフローを選択し、ツールバーの「**[!UICONTROL ワークフローを開始]**」をクリックします。
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
@@ -167,7 +167,7 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 #### タイムラインからのアセットのタグ付け {#tagging-assets-from-the-timeline}
 
-1. Assets のユーザーインターフェイスで、スマートタグを適用するアセットが格納されているフォルダーまたは特定のアセットを選択します。
+1. From the [!DNL Assets] user interface, select the folder containing assets or specific assets to which you want to apply smart tags.
 1. 左上隅から、**[!UICONTROL タイムライン]**&#x200B;を開きます。
 1. 左側のサイドバーの下部からアクションを開き、「**[!UICONTROL 開始ワークフロー]**」をクリックします。
 
