@@ -3,7 +3,7 @@ title: Adobe Experience Manager6.5以前のService Packリリースノート
 description: Adobe Experience Manager6.5 Service Pack 3以前に固有のリリースノートです。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '8108'
 ht-degree: 35%
@@ -19,9 +19,9 @@ Adobe Experience Manager6.5.4.0は、2019 **年4月のGAリリース(GA)以降�
 
 Adobe Experience Manager6.5.4.0で導入された主な機能および機能強化には、次のものが含まれます。
 
-* Adobe I/Oコンソールを通じてBrand PortalでAdobe Experience Managerアセットが構成されるようになりました。
+* Adobe Experience Managerアセットは、AdobeI/Oコンソールを通じてBrand Portalで構成されるようになりました。
 
-* Adobe Experience Managerフォームワークフローで、新しい「 [印刷可能な出力を生成](../forms/using/aem-forms-workflow-step-reference.md) 」手順を使用できるようになりました。
+* 新しい「 [印刷可能な出力を](../forms/using/aem-forms-workflow-step-reference.md) 生成」手順が、Adobe Experience Manager Formsワークフローで使用できるようになりました。
 
 * [アダプティブフォームとインタラクティブ通信のレイアウトモードの複数列のサポート](../forms/using/resize-using-layout-mode.md) 。
 
@@ -31,7 +31,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.10.8 に更新しました。
 
-* 選択したコンテンツサブツリーを *Dynamic Mediaに同期できるようになりました。（を参照）すべて同期する代わりに、Scene7モード* （を参照）を使用し `content/dam`ます。
+* 選択したコンテンツサブツリーを、で利用可能なすべてではなく、 *Dynamic Media-Scene7モード* ()に同期できるようにな `content/dam`りました。
 
 * SOAP Webサービスとのフォームデータモデルの統合で、要素の選択グループまたは属性がサポートされるようになりました。
 
@@ -41,7 +41,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 ### Sites {#sites-fixes}
 
-* Adobe Experience ManagerサイトのページのURLにコロン(`:`)または割合記号(`%`)が含まれている場合、ブラウザーは応答を停止し、CPU使用率のスパイク(NPR-32369、NPR-31918)が発生します。
+* Adobe Experience Manager SitesのページのURLにコロン(`:`)またはパーセンテージ記号(`%`)が含まれる場合、ブラウザは応答を停止し、CPU使用のスパイク(NPR-32369、NPR-31918)が発生します。
 
 * Experience Managerサイトページを編集用に開き、コンポーネントをコピーした場合、一部のプレースホルダー(NPR-32317)では貼り付け操作が使用できないままになります。
 
@@ -63,7 +63,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * エクスペリエンスフラグメントをドラッグすると、応答時間が長くなることが観察されます(NPR-31878)。
 
-* レスポンシブグリッドのプレースホルダーにある「Drag component here」オプションを選択すると、GETリクエストが送信され、リクエストの結果HTTP 403エラーが発生します(NPR-31845)。
+* レスポンシブグリッドのプレースホルダーにある「コンポーネントをここにドラッグ」オプションを選択すると、GETリクエストが送信され、リクエストの結果HTTP 403エラーが発生します(NPR-31845)。
 
 * 同じフォルダー内のコンテンツを移動すると、ページ移動オプションは無効になります(NPR-31840)。
 
@@ -73,7 +73,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * ユーザーが「作成」ボタンをクリックすると、ページオプションは使用できません(NPR-31756)。
 
-* OOTB（初期設定の状態）デザインインポーターコンポーネント(NPR-31728)を含むAdobeキャンペーンのキャンペーンを同期できません。
+* OOTB （デフォルト）デザインインポーターコンポーネント(NPR-31728)を含むAdobeキャンペーンのキャンペーンを同期できません。
 
 * 箇条書きのリストを番号付きリストに変更しようとすると、リストの最初の2つの項目だけが変更されます(NPR-31636)。
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * アセット収集ページでワークフローをトリガーするボタンが無効になっています(NPR-32471)。
 
-* Dynamic MediaScene7の設定(NPR-32440)とExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7 Publishing System)に作成されます。
+* Dynamic MediaScene7設定(NPR-32440)にExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7Publishing System)に作成されます。
 
 * すべてのアセットを（「すべて選択」を使用して）公開済みアセットを含むフォルダーに移動する操作は、エラーが発生して失敗します(NPR-32366)。
 
@@ -107,7 +107,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * ファイル名が50文字を超えるアセットがアップロードされる場合、Experience ManagerアセットUIでファイル名が切り捨てられて表示されます(NPR-32054)。
 
-* Adobe Stockのチェックボックスツリーのレベル2のチェックボックスが選択されている場合、最初と2番目のチェックボックスがクリアされると、フィルターパネルのすべてのチェックボックスがクリアされます(NPR-31919)。
+* 1番目と2番目のチェックボックスがオフになると、フィルターパネルのすべてのチェックボックスがクリアされ、Adobe Stockのチェックボックスツリーのレベル2のチェックボックスが選択されます(NPR-31919)。
 
 * Omnisearchファセットを使用したファイルとフォルダーの検索で例外が発生する(NPR-31872)。
 
@@ -119,9 +119,9 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * タッチUI検索（Omnisearchを通じて行われる）の結果ページは自動的に上にスクロールし、ユーザーのスクロール位置が失われます(NPR-31307)。
 
-* PDFアセットのアセットの詳細ページに、Dynamic MediaのScene7実行モード(CQ-4286705)で実行されているExperience Managerで、「コレクションへ」と「レンディションへ」のボタン以外のアクションボタンが表示されません。
+* PDFアセットのアセットの詳細ページに、Dynamic MediaScene7実行モード(CQ-4286705)で実行されているExperience Managerーで、「コレクション」ボタンと「レンディション」ボタン以外のアクションボタンが表示されません。
 
-* Scene7のバッチアップロードプロセスでアセットの処理に時間がかかりすぎます(CQ-4286445)。
+* Scene7のバッチアップロード処理には、アセットの処理に時間がかかりすぎます(CQ-4286445)。
 
 * Dynamic Mediaクライアントのセットエディター(CQ-4285690)で変更を行っていない場合、「保存」ボタンを押してもリモートセットは読み込まれません。
 
@@ -213,7 +213,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 >[!NOTE]
 >
->Experience Managerサービスパックには、Experience Managerフォームに関する修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience ManagerFormsの修正を含む累積インストーラーがリリースされました。 詳しくは、「 [Experience Managerフォームのインストール」アドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) および「JEE上のExperience Managerフォームの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
+>Experience Managerサービスパックには、Experience ManagerFormsの修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
 
 * Correspondence Management: 後処理ワークフロー(NPR-32626)に送信した後、レターに追加の文字が表示されます。
 
@@ -221,17 +221,17 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * Correspondence Management: レターテンプレートで定義されているデフォルト値は、プレビューモード(NPR-32511)では表示されません。
 
-* Mobile Forms: 送信ボタンは、HTMLバージョン(NPR-32514)でXDPフォームをレンダリングする際に、サイズが拡大されて表示されます。
+* モバイルForms: 送信ボタンは、HTMLバージョン(NPR-32514)でXDPフォームをレンダリングする際に、サイズが拡大されて表示されます。
 
 * ドキュメントサービス： Service Pack 2(NPR-32508、NPR-32509)を適用した後のLettersおよびその他のページのURLアクセスの問題。
 
 * ドキュメントサービス： サーバー上のトランザクション数が特定の制限を超える場合、HTMLからPDFへの変換は失敗し、ファイルタイプの設定が [!DNL Forms] サーバー(NPR-32204)から削除されます。
 
-* アダプティブフォーム： ブラウザーアクセシビリティツールは、WCAG2 Level AAガイドライン(NPR-32312、NPR-32309、CQ-4285439)に従ってアダプティブフォーム内のエラーをレポートします。
+* アダプティブForms: ブラウザーアクセシビリティツールは、WCAG2 Level AAガイドライン(NPR-32312、NPR-32309、CQ-4285439)に従ってアダプティブフォーム内のエラーをレポートします。
 
-* アダプティブフォーム： Chromeブラウザーアクセシビリティツールが、ベストプラクティスの失敗を報告します(NPR-32310)。
+* アダプティブForms: Chromeブラウザーアクセシビリティツールが、ベストプラクティスの失敗を報告します(NPR-32310)。
 
-* アダプティブフォーム： Experience Managerサイトページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
+* アダプティブForms: Experience Managerサイトページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
 
 * Workbench: PDF Utilitiesサービス(NPR-32150)で「Get PDF Properties」操作を使用していると、エラーメッセージが表示されます。
 
@@ -241,7 +241,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * Designer: 表内に結合されたセルがある場合、アクセシビリティテストは、出力サービス(CQ-4285372)を使用してXDPフォームから変換された出力PDFファイルに対して失敗します。
 
-* Foundation JEE: Experience ManagerのFormsサーバーがクラスターから切断された場合、キャッシュの問題により、サーバーに再接続できません。(NPR-32412)
+* Foundation JEE: Experience ManagerFormsサーバーがクラスターから切断された場合、キャッシュの問題により、サーバーに再接続できません。(NPR-32412)
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -321,27 +321,27 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * アセットの一括移動が失敗し、警告メッセージが表示される(NPR-30610)。
 
-* Scene7モード(NPR-31630)で [!DNL Experience Manager] 実行している場合、アセットを別のフォルダに移動するときに、アセット名が小文字に変更され [!DNL Dynamic Media]ます。
+* [!DNL Experience Manager][!DNL Dynamic Media]-Scene7モードで実行している場合、アセットを別のフォルダーに移動するときに、アセット名が小文字に変更されます(NPR-31630)。
 
 * Scene7会社名(NPR-31340)と同じ名前のフォルダーに存在する画像に関して、リモート画像セットの編集中にエラーが発生します。
 
 * [!DNL Dynamic Media] 参照を含むアセットが公開されない(NPR-31180)。
 
-* 7- [!DNL Dynamic Media]Scene7モードからへのアップロードが完了するまでに時間がかかりすぎ [!DNL Dynamic Media Classic] ます(NPR-31048)。
+* [!DNL Dynamic Media]7-Scene7モードからへのアップロードが完了するまでに時間がかかりすぎ [!DNL Dynamic Media Classic] ます(NPR-31048)。
 
 * 画像アセットに追加されたホットスポットは、アセットの詳細ページのインタラクティブ画像ビューアでは表示されません(NPR-30979)。
 
-* 巨大なスリングジョブが作成され、でアセットに対して行われた操作がScene7に渡されると「処理」バナー [!DNL Experience manager Assets] が再表示されます(NPR-30947)。
+* 巨大なスリングジョブが作成され、でのアセットに対して行われた操作がScene7に渡されると「処理」バナー [!DNL Experience manager Assets] が再び表示されます(NPR-30947)。
 
-* アセットとアセットの言語コピーを作成すると競合が発生し、Scene7(NPR-30932)にアップロードされません。
+* アセットとアセットの言語コピーを作成すると、競合が発生し、Scene7にはアップロードされません(NPR-30932)。
 
 * ハイブリッドモード [!DNL Experience Manager] で実行されている [!DNL Dynamic Media]ときにダウンロードされたダイナミックレンディションが壊れる（画像コンテンツタイプではなく、コンテンツが「画像が見つかりません」のテキストタイプ）(NPR-30876)。
 
-* [!DNL Dynamic Media] Adobe Experience Manager時にScene7モードに移行されたビデオのサムネール [!DNL Dynamic Media Classic][!DNL Dynamic Media]の生成に失敗するビデオのエンコードワークフロー(CQ-4282011)。
+* [!DNL Dynamic Media] Adobe Experience Manager時に、ビデオのエンコードワークフローで、 [!DNL Dynamic Media Classic][!DNL Dynamic Media]Scene7モードに移行されたビデオのサムネールの生成に失敗しています。(CQ-4282011)
 
-* 異なるScene7会社IDを使用して、1つのインスタンスから別のインスタンスにアセットを移行する際にIpsApiExceptionが発生する問題を修正しました(CQ-4280548)。
+* 異なるScene7会社IDを使用して、1つのインスタンスから別のインスタンスにアセットを移行する際にIpsApiExceptionが発生する問題を修正しました。(CQ-4280548)
 
-* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報として表示されません。
+* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報としてはなりません。
 
 * 3Dアセットにカメラ表示が少ない場合は、スクロールボタンがビューアに表示されます(CQ-4283322)。
 
@@ -349,17 +349,17 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * Internet Explorer 11およびSafariのSmartCropVideoViewerではビデオを再生できません。(CQ-4281422)
 
-* 複数のアセットを1つのフォルダから別のフォルダに移動するための移動ボタンの使用は、Scene7実行モードでの [!DNL Experience Manager] 実行に失敗し [!DNL Dynamic Media]ます(CQ-4280384)。
+* 複数のアセットを1つのフォルダから別のフォルダに移動するための移動ボタンの使用は、 [!DNL Experience Manager][!DNL Dynamic Media]-Scene7実行モードでの実行に失敗します。(CQ-4280384)
 
 * MIMEタイプがMP4以外の場合、アセットの詳細に歪んだビデオが表示される(CQ-4279704)。
 
 * ビデオプロファイルを含むフォルダーに新たに取り込まれたビデオは、エンコードの割合が100 %に達した後も処理状態のままとなります。(CQ-4279389)
 
-* フォルダーからアセットを移動すると、理想的に必要なジョブ(CQ-4278664)よりも多くのSlingジョブ（Scene7 API呼び出し）が作成されます。
+* フォルダーからアセットを移動すると、理想的に必要なジョブ(CQ-4278664)よりも多くのSlingジョブ(Scene7API呼び出し)が作成されます。
 
-* Scene7では、画像セット（またはメディアセット）が作成され、DAMで適切な命名規則に従って名前が付けられている場合、画像セットの名前が小文字に変更されます(CQ-4281112)。
+* DAMで画像セット（またはメディアセット）を作成し、適切な命名規則に従って名前を付けると、Scene7では画像セットの名前が小文字に変更されます。(CQ-428112)
 
-* Scene7 Migratorで、公開状態が正しく設定されない(CQ-4263492)。
+* Scene7マイグレータが正しくパブリッシュ状態を設定しない(CQ-4263492)。
 
 * タッチUI検索（Omnisearchで実行）の結果ページは自動的に上にスクロールし、コンテンツフラグメント内でのユーザーのスクロール位置が失われます。(CQ-4282898)
 
@@ -399,7 +399,7 @@ Remove one mention of this fix.
 * 一部のエクスペリエンスフラグメントを含むページがエディター以外のモードで（プレフィックスとのない作成者で、または投稿で）開かれると、要求はHTTPステータスエラーコード `editor.html``wcmmode=disabled``500` (NPR-30743)で終了します。
 * ユーザーは、パスワードを変更したり、プロファイルページにアクセスしたりすることはできません(NPR-31161)。
 
-### 検索とユーザーインターフェイス {#search-ui-interface}
+### 検索とユーザーインターフェイス {#ui-interface-and-search}
 
 * 検索結果ページ上でカード表示からリスト表示に切り替えると、ページがスクロールされるまでに遅延が生じます(NPR-31286)。
 
@@ -472,7 +472,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「 [Experience Managerフォームのインストール」アドオン](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) および「JEE上のExperience Managerフォームの [インストール」を参照してください](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
 
 #### Forms アドオンパッケージ {#forms-add-on-package-6530}
 
@@ -488,7 +488,7 @@ Remove one mention of this fix.
 
 **Correspondence Management**
 
-* LiveCycle ES4SP1から6.5(NPR-31615)にレターを移行する際に、キャプションとツールチップが表示されません。 [!DNL Experience Manager]
+* LiveCycleES4SP1から6.5(NPR-31615)にレターを移行する際に、キャプションとツールチップが表示されません。 [!DNL Experience Manager]
 
 * **レターをドラフトとして保存する際に、Textflowの書式設定がサポートされなくなり** 、エラーメッセージが表示されるようになりました(NPR-30463)。
 
@@ -500,7 +500,7 @@ Remove one mention of this fix.
 
 * XDP フォームの HTML5 プレビューを生成すると、サブフォームのインスタンス追加中にちらつきが表示される。（NPR-30909）
 
-#### JEE上のFormsインストーラー {#forms-jee-installer-6530}
+#### JEE上のFormsのインストーラー {#forms-jee-installer-6530}
 
 **Forms - ドキュメントサービス**
 
@@ -510,7 +510,7 @@ Remove one mention of this fix.
 
 **Foundation JEE**
 
-* アクションの設定で、「フォームワークフローの送信アクションを呼び出す」のプロセス名が読み込まれません(NPR-31478)。
+* アクションの設定で、「Forms Workflow送信アクションを呼び出す」のプロセス名が読み込まれません(NPR-31478)。
 
 ### 含まれている機能パック {#feature-packs-included-6530}
 
@@ -520,7 +520,7 @@ Remove one mention of this fix.
 
 #### Forms - Foundation JEE {#forms-foundation-jee-feature}
 
-* [!DNL Experience Manager] Oracle 18c(NPR-29155)のフォームサポート。
+* [!DNL Experience Manager] Oracle 18c(NPR-29155)のFormsのサポート。
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
@@ -662,7 +662,7 @@ Remove one mention of this fix.
 
 The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
-* Added &#39;Auto&#39; setting to `RenderAtClient` in `PDFFormRenderOptions` API for [!DNL Experience Manager] Forms OSGi.
+* `RenderAtClient` FormsOSGiの `PDFFormRenderOptions`[!DNL Experience Manager] APIに「自動」設定を追加しました。
 
 #### Forms アドオンパッケージ {#forms-add-on-package}
 
@@ -840,7 +840,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 * OSGi only: Added a new attribute `PAGECOUNT` in Output and Forms Service.
 
-* OSGIのみ： Formsサービスを使用したスタティックPDFファイルの作成のサポートを有効にしました。
+* OSGIのみ： Formsサービスを使用した静的PDFファイルの作成のサポートを有効にしました。
 * 管理者およびルートユーザーに対して XMLForm.exe の権限が有効になりました。
 * Dynamics オンプレミス統合で ADFS v3.0 がサポートされるようになりました。
 
@@ -868,7 +868,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 * Adaptive Form field validation failure breaks [!DNL Adobe Sign]. CQ-4269463 のホットフィックス
 * When an [!DNL Experience Manager Forms] instance has more than 20 adaptive form fragments and name of all the form fragments starts with the same string, the search returns no or only recent 20 created fragments. CQ-4264414、CQ-4264914 のホットフィックス
 
-* アダプティブフォームアプリケーションが大きなデータセットと共に使用される場合、パフォーマンスの問題が発生する。 . CQ-4235310 のホットフィックス
+* アダプティブFormsアプリが大きなデータセットと共に使用される場合に、パフォーマンスの問題が発生する。 . CQ-4235310 のホットフィックス
 
 * 匿名アカウントでパブリッシュインスタンスにアクセスすると、GuideRuntime スクリプトを読み込めません。CQ-4268679 のホットフィックス
 
@@ -933,7 +933,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 * PDFは、フォームフィールドを使用したPDF/A-1bへの変換に失敗し、表示方法が示されません。 NPR-29940：CQ-4269618 のホットフィックス
 
 * OSGi: レンダリング中に生成されたページ数を特定できません。 NPR-28922：CQ-4270870 のホットフィックス
-* で、Formsサービスを使用したスタティックPDFファイルのサポートを有効にし [!DNL Experience Manager Forms OSGi]ました。 NPR-28572：CQ-4270869 のホットフィックス
+* で、Formsサービスを使用した静的PDFファイルのサポートを有効にし [!DNL Experience Manager Forms OSGi]ました。 NPR-28572：CQ-4270869 のホットフィックス
 * XMLForm.exe の権限を変更できません。NPR-29828、NPR-29237：CQ-4267080 のホットフィックス
 * The static PDF created by the [!DNL Experience Manager Forms] server’s output module does not populate the language attribute/tag with the language of the document created. NPR-27332：CQ-4271002 のホットフィックス
 
@@ -955,8 +955,8 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 #### Forms - ドキュメントサービス  — 含まれる
 
-* OSGiのみ： OutputおよびFormsサービスに新しい属性PAGECOUNTが追加されました。 NPR-28922：CQ-4270870 のホットフィックス
-* OSGiのみ： Formsサービスを使用したスタティックPDFファイルの作成のサポートを有効にしました。 NPR-28572：CQ-4270869 のホットフィックス
+* OSGiのみ： OutputとFormsサービスに新しい属性PAGECOUNTが追加されました。 NPR-28922：CQ-4270870 のホットフィックス
+* OSGiのみ： Formsサービスを使用した静的PDFファイルの作成のサポートを有効にしました。 NPR-28572：CQ-4270869 のホットフィックス
 * 管理者およびルートユーザーに対して XMLForm.exe の権限が有効になりました。NPR-29237：CQ-4267080 のホットフィックス
 
 ### OSGi バンドルとコンテンツパッケージ
