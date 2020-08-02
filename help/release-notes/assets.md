@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Managerアセットリリースノート
-description: Adobe Experience Manager 6.5 Assets の新機能と強化機能について説明します。
+title: リリースノート [!DNL Adobe Experience Manager Assets] 6.5。
+description: The new capabilities and enhancements to [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 44%
+source-wordcount: '901'
+ht-degree: 43%
 
 ---
 
 
-# Adobe Experience Managerアセットリリースノート {#aem-assets-release-notes}
+# [!DNL Adobe Experience Manager Assets] リリースノート {#aem-assets-release-notes}
 
-Adobe Experience Manager6.5のアセットリリースの主な機能と主な特徴を次に示します。
+Here are the key features and highlights of the [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] release.
 
 ## Integration with [!DNL Adobe Creative Cloud] and creative workflows {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
@@ -24,7 +24,7 @@ Read on to know the specific capabilities and integrations of [!DNL Experience M
 
 [!DNL Adobe Asset Link] コンテンツ作成プロセスにおけるクリエイティブとマーケティング担当者のコラボレーションを強化します。 クリエイティブは、に保存されているコンテンツ [!DNL Experience Manager Assets]に、最もなじみのあるアプリを残さずにアクセスできます。 Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign] apps.
 
-[!DNL Adobe Asset Link] は、 [Creative Cloudエンタープライズ版の製品の一部](https://www.adobe.com/jp/creativecloud/business/enterprise.html) です。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html).
+[!DNL Adobe Asset Link] は、企業向け [Creative Cloudの一部](https://www.adobe.com/jp/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html).
 
 ![Adobe Photoshopでのアセットの検索](assets/asset_search_photoshop.png)
 
@@ -36,11 +36,11 @@ Your organization can use its [!DNL Adobe Stock] enterprise plan within [!DNL Ex
 
 For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
-![Experience Managerアセット内からのAdobe Stockプレビューとライセンス](assets/stock_image_preview_license_options.png)
+![プレビューAdobe Stockの画像とExperience Managerアセット内からのライセンス](assets/stock_image_preview_license_options.png)
 
 *図： プレビュー[!DNL Adobe Stock]の画像とライセンスを内から取得[!DNL Experience Manager Assets]します。*
 
-![Experience Manager内のライセンス済みAdobe Stock画像の検索とフィルター](assets/aem-search-filters2.jpg)
+![Experience Managerでライセンスを取得したAdobe Stock画像の検索とフィルタリング](assets/aem-search-filters2.jpg)
 
 *図： でライセンスされた[!DNL Adobe Stock]画像を検索し、フィルタし[!DNL Experience Manager]ます。*
 
@@ -70,11 +70,11 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
-### 360 ビデオのサポート {#video-support}
+### 360 video support {#video-support}
 
 Manage your 360-video files directly in [!DNL Experience Manager] using the cutting edge viewers to deliver VR-experiences to desktops, mobile and VR-headsets. 詳しくは、[360 ビデオ の使用](/help/assets/360-video.md)を参照してください。
 
-### カスタムビデオのサムネール {#custom-video-thumbnails}
+### Custom video thumbnails {#custom-video-thumbnails}
 
 DAM に保存されているビデオそのものまたは他のコンテンツのフレームを使用して、ビデオアセットのサムネールをカスタマイズできるようになりました。詳しくは、[ビデオのサムネールについて](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)を参照してください。
 
@@ -82,7 +82,7 @@ DAM に保存されているビデオそのものまたは他のコンテンツ�
 
 [!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどの強化されたアクセシビリティ機能がサポートされるようになりました。 詳細については、[Dynamic Media ビューアのリリースノート](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/home.translate.html)を参照してください。
 
-## 検索エクスペリエンスの強化 {#search-experience-enhancement}
+## 検索エクスペリエンスの強化 {#experience-enhancement-for-searching}
 
 [!DNL Experience Manager] 6.5以降では、マーケターは検索結果ページで目的のアセットを迅速に見つけることができます。 検索フィルターのアセット数は、検索フィルターを適用する前でも更新されます。フィルターに対するアセット数を確認すると、検索結果を効率的にナビゲートすることができます。For more information, see [Search assets in Experience Manager](../assets/search-assets.md).
 
