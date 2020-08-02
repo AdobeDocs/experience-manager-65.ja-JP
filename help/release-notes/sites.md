@@ -1,13 +1,8 @@
 ---
 title: AEM Sites リリースノート
 description: Adobe Experience Manager 6.5 Sites 固有のリリースノート
-uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.4
-discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
-docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 64%
@@ -15,7 +10,7 @@ ht-degree: 64%
 ---
 
 
-# AEM Sites リリースノート{#aem-sites-release-notes}
+# AEM Sites リリースノート {#aem-sites-release-notes}
 
 AEM Sites 6.5 の機能強化について詳しくは、以下を参照してください。
 
@@ -27,10 +22,10 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
    * 文字列、配列、オブジェクトの&quot;in&quot;演算子
 
-      ```
+      ```html
       ${'a' in 'abc’}
-       ${100 in myArray}
-       ${'a' in myObject}
+      ${100 in myArray}
+      ${'a' in myObject}
       ```
 
    * 変数の宣言で、データスルキップが設定されている：
@@ -41,10 +36,10 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
    * データによる非ラップの識別子：
 
-      ```
+      ```html
       <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
-       text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
-       </div>
+      text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
+      </div>
       ```
 
    * 負の数のサポート
@@ -117,13 +112,13 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 >
 >AEM 6.5 のリリース時点では、at.js 2.x は AEM でサポートされていません。at.js 1.x の最新バージョンを使用してください。
 
-* Adobe Target との連携で Target Standard API を使用できるようになりました。AEMの以前のバージョンでは、非推奨となったTargetクラシックHTTP APIを使用しています。
+* Adobe Target との連携で Target Standard API を使用できるようになりました。AEMの以前のバージョンでは、非推奨のTargetクラシックHTTP APIを使用しています。
 * Adobe Target `mbox.js` version 63 is included. Adobe strongly recommends to switch implementation to `at.js` v1.x.
 * `at.js` バージョン1.5.0が含まれるようになりました。 Adobe recommends that you use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision `at.js` v1.x into the site.
 
-## AEMとアドビAnalytics {#aem-amp-adobe-analytics}
+## AEMとAdobe Analytics {#aem-amp-adobe-analytics}
 
-* `s_code.js` H.27.5が含まれます。 導入を `AppMeasurement.js`
+* `s_code.js` H.27.5が含まれます。 Adobeでは、実装を `AppMeasurement.js`
 * `AppMeasurement.js` v1.8.0が含まれます。 Adobe recommends to use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision AppMeasurement.js into the site.
 
 ## AEMとコマース {#aem-commerce}
