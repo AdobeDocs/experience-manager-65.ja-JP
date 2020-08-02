@@ -4,10 +4,10 @@ description: Adobe Experience Manager6.5 Service Pack 5の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 71c0d0263e1d0da7e33762a3b22773f38db3ba52
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '1873'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Packに含まれる [主な機能](#key-features-previous-service-packs)、およびExperience Manager6.5.4.0 [リリース以降の](#key-releases-since-last-sp) 主なリリースの一部について説明します。
 
-## Adobe Experience Managerサイト {#aem-sites}
+## Adobe Experience Manager Sites {#aem-sites}
 
 ### アクセシビリティの強化 {#accessibility-sites}
 
@@ -56,7 +56,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 * 多くのユーザーインターフェイス要素、コントロール、入力フォームフィールドには、キーボードを使用してアクセスできます。
 
-* 一部のユーザインターフェイス要素の色とコントラストが更新され、視覚が限られたユーザや、色の知覚を持たないユーザが、これらのユーザインターフェイス要素を区別できるようになりました。 例えば、星レーティングアイコンの色(アセットのプ [!UICONTROL ロパティの「] 詳細」タブの「レーティング [!UICONTROL 」セクションやカードの] 表示など  )は、適切なコントラストに合わせて変更されます。
+* 一部のユーザインターフェイス要素の色とコントラストが更新され、視覚が限られたユーザや、色の知覚を持たないユーザが、これらのユーザインターフェイス要素を区別できるようになりました。For example, the color of star rating icons (such as in [!UICONTROL Rating] section of [!UICONTROL Advanced] tab in asset [!UICONTROL Properties] or in card view) is changed for appropriate contrast.
 
    ![コントラストが向上した評価アイコン](assets/star-rating-icons.png)
 
@@ -90,11 +90,11 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 ### [!DNL Oracle WebLogic] アプリケーションサーバーサポート {#weblogic-support}
 
-Adobe Experience Managerフォームでは、JEE上のAdobe Experience Managerフォーム [!DNL Oracle WebLogic 12] のサポートが追加されました。 以前のバージョンからアップグレードするか、12.2.1.4以降のJEE上に新しいExperience Manager6.5 Formsを設定す [!DNL Oracle WebLogic] ることができます。 後で、マイナーバージョンの変更に対応します。12.2.1.xのxはバージョン番号に置き換えられます。
+Adobe Experience Manager FormsはJEEでAdobe Experience Manager Forms [!DNL Oracle WebLogic 12] の支援を追加しました。 以前のバージョンからアップグレードするか、12.2.1.4以降のJEEサーバー上に新しいExperience Manager6.5Formsを設定す [!DNL Oracle WebLogic] ることができます。 後で、マイナーバージョンの変更に対応します。12.2.1.xのxはバージョン番号に置き換えられます。
 
 ### アクセシビリティの強化 {#accessibility-improvements}
 
-Adobe Experience Managerフォームには、次のアクセシビリティの強化が含まれています。
+Adobe Experience Manager Formsでは、次のアクセシビリティの強化が行われました。
 
 * アダプティブフォームをHTMLフォームとしてプレビューした場合、「 [!UICONTROL 手書き署名] 」フィールドはタブのフォーカスを保持します。
 
@@ -108,7 +108,7 @@ Adobe Experience Managerフォームには、次のアクセシビリティの�
 
 ### その他の主な改善点 {#other-improvements}
 
-* Experience Manager6.5 JEE上のFormsドキュメントセキュリティがに基づくようになり [!DNL Apache Struts 2]ました。
+* JEE上のExperience Manager6.5Formsドキュメントセキュリティがに基づくようになり [!DNL Apache Struts 2]ました。
 
 * のサポートを追加し [!DNL Oracle Real Applications Cluster (RAC) 19c]ました。
 
@@ -134,7 +134,7 @@ Adobe Experience Managerフォームには、次のアクセシビリティの�
 
 #### 次 [!DNL Experience Manager Assets] で設定 [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-との間の認証チャネル [!DNL Experience Manager Assets] が変更 [!DNL Brand Portal] されます。 Earlier, [!DNL Brand Portal] was configured in Classic UI via Legacy OAuth Gateway, which uses the JWT token exchange to obtain an IMS Access token for authorization. [!DNL Experience Manager Assets] は、Adobe I/O [!DNL Brand Portal][!DNL Brand Portal] を介して設定され、テナントの認証用にIMSトークンを調達します。
+との間の認証チャネル [!DNL Experience Manager Assets] が変更 [!DNL Brand Portal] されます。 Earlier, [!DNL Brand Portal] was configured in Classic UI via Legacy OAuth Gateway, which uses the JWT token exchange to obtain an IMS Access token for authorization. [!DNL Experience Manager Assets] は、テナントの認証のためにIMSトークンを取得する、 [!DNL Brand Portal] AdobeI/O経由で設定されるようにな [!DNL Brand Portal] りました。
 
 The steps to configure [!DNL Experience Manager Assets] with [!DNL Brand Portal] are different depending on your [!DNL Experience Manager] version, and whether you are configuring for the first time, or upgrading the existing configurations. See [Configure Experience Manager Assets with Brand Portal](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) for details.
 
@@ -167,9 +167,9 @@ The steps to configure [!DNL Experience Manager Assets] with [!DNL Brand Portal]
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
 
-#### Experience Managerフォームワークフローでの印刷可能出力の生成(6.5.4.0) {#generate-printable-output}
+#### Experience ManagerFormsワークフローでの印刷可能出力の生成(6.5.4.0) {#generate-printable-output}
 
-印刷可能出力の生成ワークフローステップでは、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの別のコピーを印刷または保存できます。 このステップで、PCL、PostScript、ZPL、IPL、TPCLまたはDPL出力が生成されます。 この機能について詳しくは、「OSGiでの [フォーム中心のワークフロー — ステップリファレンス](../forms/using/aem-forms-workflow-step-reference.md)」を参照してください。
+印刷可能出力の生成ワークフローステップでは、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの別のコピーを印刷または保存できます。 このステップで、PCL、PostScript、ZPL、IPL、TPCLまたはDPL出力が生成されます。 この機能について詳しくは、『OSGiでの [Forms中心のワークフロー — 手順リファレンス](../forms/using/aem-forms-workflow-step-reference.md)』を参照してください。
 
 ![印刷可能な出力を生成](assets/generate-print-output-step.gif)
 
@@ -195,13 +195,13 @@ XFAフォームのテキストフィールドをHTML5フォームのリッチテ
 
 #### Accessibility enhancements (6.5.4.0) {#forms-accessibility-enhancements-6540}
 
-Experience Managerフォームには、次のアクセシビリティの強化が含まれています。
+Experience ManagerFormsには、次のアクセシビリティの強化が含まれています。
 
 * スクリーンリーダーは、アダプティブフォームで、チェックボックス、リンク、日付選択、日付入力の各フィールドについて正しく読み上げます。
 
 * アダプティブフォームの各ページに、1つのタイトルと1つのメインのランドマークラベルが含まれるようになりました。
 
-#### Experience Managerフォームユーザー(6.5.3.0)のインボックスアイテムの共有とリクエスト {#share-request-access}
+#### Experience ManagerFormsユーザーのインボックスアイテムの共有およびリクエスト(6.5.3.0) {#share-request-access}
 
 受信トレイの項目を他のユーザーと共有できます。 別のユーザーが受信トレイのアイテムにアクセスできるようになると、そのユーザーは共有アイテムに対して適切なアクションを実行できます。 同様に、他のユーザーからインボックス項目へのアクセスを要求することもできます。 詳しくは、ユーザーのインボックスアイテムの [共有およびアクセスの要求を参照してください](../forms/using/configure-shared-queues-osgi.md)。
 
@@ -216,7 +216,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 ## Adobe Experience Manager6.5 SP4以降の主なリリース {#key-releases-since-last-sp}
 
-2020年3月5日～ 2020年6月4日の間に、アドビは、サービスパックと累積修正パックに加え、次の機能をリリースしました。
+2020年3月5日～ 2020年6月4日の間に、Adobeは、サービスパックと累積修正パックに加え、次の機能をリリースしました。
 
 * [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) は、Experience Managerサービスパック、累積修正パック、ホットフィックス、および機能パックをダウンロードできます。
 
@@ -224,7 +224,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * [Experience Managerデスクトップアプリ2.0.2.0](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html).
 
-* [Experience Manager画面： 機能パック202004](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html)。
+* [Experience Manager Screens: 機能パック202004](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html)。
 
 >[!MORELIKETHIS]
 >
