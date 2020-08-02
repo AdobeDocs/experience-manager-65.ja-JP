@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+workflow-type: tm+mt
+source-wordcount: '1175'
+ht-degree: 63%
 
 ---
 
@@ -46,7 +49,7 @@ AEM は、単一の war ファイルとしてデプロイされます。
 デプロイすると、デフォルトで次のようになります。
 
 * the run mode is `author`
-* インスタンス（リポジトリ、Felix OSGI環境、バンドルなど）が現在の作業ディレ `${user.dir}/crx-quickstart`クト `${user.dir}` リにインストールされている場合、crx-quickstartへのこのパスは `sling.home`
+* インスタンス(Repository、Felix OSGI環境、バンドルなど) が現在の作業ディレクトリ `${user.dir}/crx-quickstart`で `${user.dir}` ある場所にインストールされている場合、crx-quickstartへのパスが `sling.home`
 
 * the context root is the war file name e.g : `aem-6`
 
@@ -85,11 +88,11 @@ AEM は、単一の war ファイルとしてデプロイされます。
 1. sling.home パラメーターを別のパス（絶対パスと相対パスが指定可能）に変更します。
 1. sling.run.modesを発行インスタンス用に発行に変更します。
 1. web.xmlファイルを再パックします。
-1. 異なる名前を持つように、warファイルの名前を変更します。例えば、1つはaemauthor.warに、もう1つはaempublish.warに名前を変更します。
-1. メモリの設定を高くする（例：デフォルトのAEMインスタンスでは、次を使用）。-Xmx3072m
+1. warファイルの名前を変更し、異なる名前にします。 例えば、aemauthor.warに名前を変更し、aempublish.warに名前を変更します。
+1. より大きいメモリ設定を使用します。例えば、デフォルトのAEMインスタンスでは次のように使用します。 -Xmx3072m
 1. 2 つの Web アプリケーションをデプロイします。
 1. デプロイ後に、2 つの Web アプリケーションを停止します。
-1. 作成者インスタンスと発行インスタンスの両方で、sling.propertiesファイル内で、felix.service.urlhandlers=falseというプロパティがfalseに設定されていることを確認します（デフォルトではtrueに設定されています）。
+1. 作成者インスタンスと発行インスタンスの両方で、sling.propertiesファイル内のプロパティfelix.service.urlhandlers=falseがfalseに設定されていることを保証します（デフォルトではtrueに設定されています）。
 1. 2 つの Web アプリケーションを再度起動します。
 
 ## アプリケーションサーバーのインストール手順 {#application-servers-installation-procedures}
@@ -143,9 +146,9 @@ if you use the deployment-scanner for to install the AEM web application it migh
 
 **AEM Web アプリケーションのデプロイ**
 
-* AEM webアプリケーションをJBoss管理コンソールにアップロードします。
+* AEM WebアプリケーションをJBoss管理コンソールにアップロードします。
 
-* AEM webアプリケーションを有効にします。
+* AEM Webアプリケーションを有効にします。
 
 #### Oracle WebLogic 12.1.3／12.2 {#oracle-weblogic}
 
@@ -157,24 +160,24 @@ if you use the deployment-scanner for to install the AEM web application it migh
 
 * In `${myDomain}/config/config.xml`add to the security-configuration section:
 
-   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsdで正し [い位置を確認します](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) （初期設定では、セクションの最後に配置するのはokです）。
+   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` 正しい位置については、https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd [](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) を参照してください（デフォルトでは、セクションの最後に配置するのがok）。
 
 * VM メモリ設定の値を増やします。
 
-   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh)WLS_MEM_ARGSを検索し、例えばset `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
-   * weblogic serverの再起動
+   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh)search for WLS_MEM_ARGS, set `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * WebLogic Serverの再起動
 
 * Create in `${myDomain}` a packages folder and inside a cq folder and in it a Plan folder
 
 **AEM Web アプリケーションのデプロイ**
 
 * AEM war ファイルをダウンロードします。
-* AEM warファイルを${myDomain}/packages/cqフォルダーに置きます
+* AEM warファイルを${myDomain}/packages/cqフォルダーに配置します
 * Make your configurations In `WEB-INF/web.xml` if needed (see above in the General Description)
 
-   * ファイルの `WEB-INF/web.xml`展開
+   * ファイルを解凍 `WEB-INF/web.xml`
    * sling.run.modesパラメーターを発行に変更
-   * sling.homeの初期パラメーターのコメントを解除し、必要に応じてこのパスを設定します（一般的な説明を参照）。
+   * sling.homeの最初のパラメーターのコメントを解除し、必要に応じてこのパスを設定します（一般的な説明を参照）。
    * web.xmlファイルの再パック
 
 * AEM war ファイルをアプリケーションとしてデプロイします（他の設定にはデフォルト設定を使用）。
@@ -192,23 +195,23 @@ if you use the deployment-scanner for to install the AEM web application it migh
 
       * In `bin/catalina.bat` (resp `catalina.sh` on unix) add the following setting:
       * `set "JAVA_OPTS= -Xmx2048m`
-   * Tomcatでは、インストール時に管理者とマネージャの両方のアクセスが許可されません。 したがって、次のアカウントへのアクセスを許可す `tomcat-users.xml` るには、手動で編集する必要があります。
+   * Tomcatでは、インストール時に管理者とマネージャの両方のアクセスが有効になっていません。 したがって、次のアカウントへのアクセスを許可す `tomcat-users.xml` るには、手動で編集する必要があります。
 
       * `tomcat-users.xml` を編集して、admin および manager のアクセスを含めます。設定は次の例のようになります。
-      * 
-         ```
+
+         ```xml
          <?xml version='1.0' encoding='utf-8'?>
-          <tomcat-users>
-          <role rolename="manager"/>
-          <role rolename="tomcat"/>
-          <role rolename="admin"/>
-          <role rolename="role1"/>
-          <role rolename="manager-gui"/>
-          <user username="both" password="tomcat" roles="tomcat,role1"/>
-          <user username="tomcat" password="tomcat" roles="tomcat"/>
-          <user username="admin" password="admin" roles="admin,manager-gui"/>
-          <user username="role1" password="tomcat" roles="role1"/>
-          </tomcat-users>
+         <tomcat-users>
+         role rolename="manager"/>
+         role rolename="tomcat"/>
+         <role rolename="admin"/>
+         <role rolename="role1"/>
+         <role rolename="manager-gui"/>
+         <user username="both" password="tomcat" roles="tomcat,role1"/>
+         <user username="tomcat" password="tomcat" roles="tomcat"/>
+         <user username="admin" password="admin" roles="admin,manager-gui"/>
+         <user username="role1" password="tomcat" roles="role1"/>
+         </tomcat-users>
          ```
    * コンテキストルート「/」を使用して AEM をデプロイする場合は、既存の ROOT Web アプリケーションのコンテキストルートを変更する必要があります。
 
@@ -219,15 +222,15 @@ if you use the deployment-scanner for to install the AEM web application it migh
 
       `webapps/manager/WEB-INF/web.xml`
 
-      max-file-size と max-request-size を 500 MB 以上に増やします。そのような `multipart-config` ファイルの例として、以下の `web.xml` の例を参照してください。
+      and increase the max-file-size and max-request-size to at least 500MB, see the following `multipart-config` example of such a a `web.xml` file.
 
-      ```
-        <multipart-config>
-         <!-- 500MB max -->
-         <max-file-size>524288000</max-file-size>
-         <max-request-size>524288000</max-request-size>
-         <file-size-threshold>0</file-size-threshold>
-         </multipart-config>
+      ```xml
+      <multipart-config>
+      <!-- 500MB max -->
+      <max-file-size>524288000</max-file-size>
+      <max-request-size>524288000</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+      </multipart-config>
       ```
 
 
@@ -252,4 +255,3 @@ if you use the deployment-scanner for to install the AEM web application it migh
 インストール中に発生する可能性のある問題の処理について詳しくは、以下を参照してください。
 
 * [トラブルシューティング](/help/sites-deploying/troubleshooting.md)
-
