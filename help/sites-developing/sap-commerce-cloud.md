@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 2dad235c94c73c1c624fa05ff86a7260d4d4a01b
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2329'
 ht-degree: 82%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 82%
 統合フレームワークには、API を備えた統合レイヤーが含まれます。以下を実行できます。
 
 * e コマースシステムを組み込んで、製品データを AEM に取り込む
+
 * 特定の e コマースエンジンに依存しないコマース機能用の AEM コンポーネントを作成する
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
@@ -56,6 +57,7 @@ e コマースフレームワークは任意の e コマースソリューショ
    * The `adaptTo` implementation looks for a `cq:commerceProvider` property in the resource&#39;s hierarchy:
 
       * 見つかった場合は、その値を使用してコマースサービスの検索をフィルタリングします。
+
       * 見つからなかった場合は、最上位のコマースサービスが使用されます。
    * A `cq:Commerce` mixin is used so the `cq:commerceProvider` can be added to strongly-typed resources.
 
@@ -69,7 +71,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 以下の例を参照してください。
 
 | `cq:commerceProvider = geometrixx` | 標準の AEM インストール内に具体的な実装が必要。例：geometrixx のサンプル（汎用 API に対する最小限の拡張が含まれます）。 |
-|---|---|
+|--- |--- |
 | `cq:commerceProvider = hybris` | hybris 実装 |
 
 ### 例 {#example}
@@ -117,6 +119,7 @@ hybris 4 向けの開発をおこなうには、以下が必要です。
 * OSGi 設定マネージャーで、
 
    * Default Response Parser サービスの Hybris 5 サポートを無効にします。
+
    * Hybris Basic Authentication Handler サービスのサービスランキングが Hybris OAuth Handler サービスより低くなるようにします。
 
 ### セッション処理 {#session-handling}
@@ -124,7 +127,9 @@ hybris 4 向けの開発をおこなうには、以下が必要です。
 hybris では、顧客の買い物かごなどの情報を格納するためにユーザーセッションを使用します。hybris はセッション ID を `JSESSIONID` cookie に返し、以降の hybris への要求ではこの cookie を送信する必要があります。セッション ID がリポジトリに格納されないように、セッション ID は買い物客のブラウザーに保存される別の cookie 内でエンコードされます。以下のステップが実行されます。
 
 * 最初の要求では、買い物客の要求に対して cookie は設定されません。そこで、セッションを作成するために要求が hybris インスタンスに送信されます。
+
 * その応答からセッション cookie が抽出され、新しい cookie 内でエンコードされ（例えば `hybris-session-rest`）、買い物客への応答に設定されます。新しい cookie 内でエンコーディングが必要なのは、元の cookie は特定のパスでのみ有効であり、そうしないと以降の要求でブラウザーから送り返されてこないからです。したがって、cookie の値にパス情報も追加する必要があります。
+
 * On subsequent requests, the cookies are decoded from the `hybris-session-<*xxx*>` cookies and set on the HTTP client that is used to request data from hybris.
 
 >[!NOTE]
@@ -136,6 +141,7 @@ hybris では、顧客の買い物かごなどの情報を格納するために�
 * このセッションは、 **買い物かごを「所有」します**
 
    * 追加や削除などを実行します。
+
    * は、買い物かごにさまざまな計算を行います。
 
       `commerceSession.getProductPrice(Product product)`
@@ -145,6 +151,7 @@ hybris では、顧客の買い物かごなどの情報を格納するために�
    `CommerceSession.getUserContext()`
 
 * **支払**&#x200B;処理の接続も管理します。
+
 * **フルフィルメント**&#x200B;の接続も管理します。
 
 ### 製品の同期と公開 {#product-synchronization-and-publishing}
@@ -163,33 +170,34 @@ hybris で管理されている製品データを AEM で使用できるよう�
 * hybris 内でのカタログ変更はフィードを通じて AEM に通知され、それが AEM（b）に反映されます。
 
    * カタログバージョンについて、製品が追加、削除、変更されます。
+
    * 製品が承認されます。
 
 * hybris 拡張はポーリングインポーター（&quot;hybris&quot; scheme&quot;）を提供します。このインポーターは、変更を指定の時間間隔で AEM に読み込むように設定できます（例えば 24 時間おきにする場合は、秒単位で以下のように指定します）。
 
-   * 
-
-      ```js
-      http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
-       {
-       * "jcr:mixinTypes": ["cq:PollConfig"],
-       * "enabled": true,
-       * "source": "hybris:outdoors",
-       * "jcr:primaryType": "cq:PageContent",
-       * "interval": 86400
-       }
-      ```
+   ```JavaScript
+       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
+        {
+        * "jcr:mixinTypes": ["cq:PollConfig"],
+        * "enabled": true,
+        * "source": "hybris:outdoors",
+        * "jcr:primaryType": "cq:PageContent",
+        * "interval": 86400
+        }
+   ```
 
 * AEM のカタログ構成は、**ステージング済み**&#x200B;カタログバージョンと&#x200B;**オンライン**&#x200B;カタログバージョンを認識します。
 
 * カタログバージョン間の製品同期には、対応する AEM ページのアクティベート（アクティベート解除）が必要です（a、c）。
 
    * 製品を&#x200B;**オンライン**&#x200B;カタログバージョンに追加するには、製品のページをアクティベートします。
+
    * 製品を削除するには、アクティベート解除します。
 
 * AEM 内のページをアクティベート（c）するには確認が必要で（b）、以下の場合にのみアクティベートできます。
 
    * 製品が、製品ページの&#x200B;**オンライン**&#x200B;カタログバージョン内にある
+
    * 参照される製品が、他のページ（キャンペーンページなど）の&#x200B;**オンライン**&#x200B;カタログバージョン内で利用できる
 
 * アクティベートされた製品ページは、製品データの&#x200B;**オンライン**&#x200B;バージョンにアクセスする必要があります（d）。
@@ -213,7 +221,6 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 >[!NOTE]
 >
 >In effect a variant axes is determined by whatever `Product.getVariantAxes()` returns:
->
 >* hybris ではこれを hybris 実装用に定義します。
 >
 >
@@ -224,7 +231,7 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
    >
 1. もう一度
 >
->   
+>
 This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
 
 #### 製品リファレンスと製品データ {#product-references-and-product-data}
@@ -237,7 +244,7 @@ This additional variant is selected via the `variationAxis` property of the prod
 
 製品バリエーションと製品データノードの間には 1 対 1 のマッピングが必要です。
 
-製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品にS、M、Lのバリエーションがある場合、製品データは次のようになります。
+製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品のバリエーションがS、M、Lの場合、製品データは次のようになります。
 
 ```shell
 etc
@@ -249,7 +256,7 @@ etc
 |       |──shirt-l
 ```
 
-「大きくて高い」のカタログは、
+「Big and Tall」カタログには次のバリエーションだけが含まれます。
 
 ```shell
 content
@@ -335,24 +342,30 @@ public class AxisFilter implements VariantFilter {
 
 * **一般的なストレージの構成**
 
-   * 製品ノードは nt:unstructured です。
+   * Product nodes are `nt:unstructured`.
+
    * 製品ノードは次のどちらかになります。
 
       * リファレンス。製品データは他の場所に保存されています。
 
          * Product references contain a `productData` property, which points to the product data (typically under `/etc/commerce/products`).
+
          * 製品データは階層化されています。製品属性は、製品データノードの祖先から継承されます。
+
          * 製品リファレンスには、ローカルプロパティも含めることができます。このようなプロパティは、製品データ内で指定されるプロパティをオーバーライドします。
       * 製品自体
 
          * Without a `productData` property.
+
          * すべてのプロパティをローカルに保持している（そして productData プロパティを含まない）製品ノードは、製品属性を自身の祖先から直接継承します。
 
 
 * **AEM の汎用の製品構造**
 
    * 各バリアントには、独自のリーフノードが必要です。
+
    * 製品インターフェイスは、製品とバリアントの両方を表しますが、関連リポジトリノードはそれぞれに固有です。
+
    * 製品ノードは、製品属性とバリアント軸を示します。
 
 #### 例 {#example-1}
@@ -507,6 +520,7 @@ public class AxisFilter implements VariantFilter {
 **支払い処理**
 
 * `CommerceSession` は、支払い処理の接続も管理します。
+
 * `CommerceSession` 実装には、選択された支払い処理サービスへの具体的な呼び出しを追加する必要があります。
 
 **注文のフルフィルメント**
