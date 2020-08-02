@@ -1,20 +1,18 @@
 ---
 title: AEM Communities リリースノート
 description: Adobe Experience Manager 6.5 Communities 固有のリリースノート。
-uuid: 1b436959-581c-4b34-b2df-cccc5727da59
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: c3505807-1550-491a-8619-e87839afca4f
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 64%
 
 ---
 
 
-# AEM Communities リリースノート{#aem-communities-release-notes}
+# AEM Communities release notes {#aem-communities-release-notes}
 
-6.4 リリース以降の AEM Communities の改善点について説明します。To learn about the new features in greater detail, see [AEM 6.5 Communities User Guide](https://helpx.adobe.com/experience-manager/6-4/communities/user-guide.html).
+6.4 リリース以降の AEM Communities の改善点について説明します。To learn about the new features in greater detail, see [AEM 6.5 Communities User Guide](https://helpx.adobe.com/jp/experience-manager/6-4/communities/user-guide.html).
 
 最新リリースを入手するには、このドキュメントの [Communities のデプロイ](https://helpx.adobe.com/in/experience-manager/6-4/help/communities/deploy-communities.html#LatestReleases)の節を参照してください。
 
@@ -22,25 +20,25 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
 
 ### コミュニティエンゲージメントの強化 {#enhancements-to-community-engagement}
 
-**@メンションのサポート** AEM Communitiesでは、ユーザーが生成したコンテンツで、登録済みユーザーが他の登録済みメンバーにタグ付け（メンション）して注意を引くことができるようになりました。 タグ付け（メンション）されたメンバーには、対応するユーザー生成コンテンツへのディープリンクが付いた通知が届きます。ただし、Webおよび電子メール通知を無効/有効にすることはできます。
+**@メンションのサポート** AEM Communitiesでは、ユーザー生成コンテンツで、登録ユーザーが他の登録メンバーにタグ（メンション）を付けて、注意を引くことができるようになりました。 タグ付け（メンション）されたメンバーには、対応するユーザー生成コンテンツへのディープリンクが付いた通知が届きます。ただし、Web通知や電子メール通知を無効/有効にすることはできます。
 
 ![@メンションのサポート](assets/at-mentions.png)
 
 コミュニティユーザーは、自分の名、姓またはユーザー名を検索しなくても、誰かが自分に接触してきたかどうか、または誰かが自分の注意を引く必要があるのかどうかを確認することができます。さらに、UGC 作成者は、問題に最もうまく対処し入力を追加できる特定の登録ユーザーからの応答を探すことができます。
 
-コミュニティ管理者は、登録ユーザーがこれらのコンポーネントで機能を使用できるように、「Mention **on」コミュニティコンポーネントを有効にする必要があります。
+The community administrators need to **Enable Mention** on community components to allow registered users use the functionality on those components.
 
 **グループメッセージ送信**
 
-コミュニティの登録メンバーは、同じメッセージをグループメンバーに個々に送信するのではなく、1 回の電子メール作成でダイレクトメッセージをグループに一括送信できるようになりました。To allow [group messaging](/help/communities/configure-messaging.md), enable both the instances of [Messaging Operations Service](/help/communities/messaging.md#group-messaging).
+コミュニティの登録メンバーは、同じメッセージをグループメンバーに個々に送信するのではなく、1 回の電子メール作成でダイレクトメッセージをグループに一括送信できるようになりました。[グループメッセージを許可するには](/help/communities/configure-messaging.md)、 [Messaging Operations Serviceの両方のインスタンスを有効にします](/help/communities/messaging.md#group-messaging)。
 
 ![グループメッセージ](assets/group-messaging.png)
 
 ### 一括モデレートの機能強化 {#enhancements-to-bulk-moderation}
 
-一括モデレートのカスタムフィルター
+一括モデレートでのカスタムフィルター
 
-[カスタムフィルター](/help/communities/moderation.md#custom-filters) を開発して、一括モデレートUIに追加できるようになりました。
+[カスタムフィルター](/help/communities/moderation.md#custom-filters) を開発し、一括モデレートUIに追加できるようになりました。
 
 タグによるフィルタリングの例を示す[サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)を ](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)GitHub [ で入手できます。このプロジェクトをベースに、類似のスタムフィルターを開発できます。
 
@@ -68,8 +66,10 @@ AEM 6.5 以降の Communities では、様々なコミュニティサイトや�
 
 The enablement functionality of AEM 6.5 Communities support Shareable Content Object Reference Model [(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) engine.
 
-**有効化コンポーネントのキーボードナビゲーションのサポート**AEM Communitiesの有効化コンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、アクセシビリティを向上させるためのキーボードナビゲーションをサポートします。
+* 有効化コンポーネントでのキーボードナビゲーションのサポート
+* AEM Communitiesの有効化コンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、アクセシビリティを向上させるためにキーボードナビゲーションをサポートしています。
 
 ### その他の機能強化 {#other-enhancements}
 
-* **Solr 7のサポート**AEM 6.5コミュニティは、MSRPとDSRPの設定時にApache Solr 7.0バージョンの検索プラットフォームをサポートします。
+* Solr 7のサポート
+* AEM 6.5 Communitiesでは、MSRPとDSRPの設定時に、Apache Solr 7.0バージョンの検索プラットフォームをサポートしています。
