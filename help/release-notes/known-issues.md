@@ -1,16 +1,11 @@
 ---
 title: 既知の問題
 description: Adobe Experience Manager6.5の既知の問題に関するリリースノート
-uuid: 8fbdb167-833a-4179-aad1-0a26a4e5b3a7
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 0a55ed44cb7fe3320b2196df38fe8492ee03912d
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 56%
+source-wordcount: '571'
+ht-degree: 47%
 
 ---
 
@@ -25,32 +20,32 @@ ht-degree: 56%
 
 * CRX-Quickstartとその内容が削除された場所に問題が報告されます。
 
-   これらの各アクションで、「htmllibmanager.fileSystemOutputCacheLocation **」プロパティが空の文字列でないことを確認してください。
+   次の各アクションで、プロパティが空の文字列でないこ `htmllibmanager.fileSystemOutputCacheLocation` とを確認します。
 
-   1. &quot;*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*&quot;を呼び出しています。
+   1. Calling `/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true`.
    2. AEM 6.5 へのアップグレード.
-   3. AEM 6.5で「遅延コンテンツ移行」を実行しています。
+   3. AEM 6.5での「遅延コンテンツ移行」の実行
 
    ナレッジベース [の記事には](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) 、この問題の詳細と回避策が記載されています。
 
-* JDK 11とAEM 6.5インスタンスを使用している場合、一部のパッケージをデプロイすると、一部のページが空白で表示される場合があります。 ログファイルには、次のエラーメッセージが表示されます。
+* AEM 6.5インスタンスでJDK 11を使用している場合、一部のパッケージをデプロイすると、一部のページが空白で表示される場合があります。 ログファイルには、次のエラーメッセージが表示されます。
 
-   ```
+   ```java
    *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
    java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
    ```
 
 このエラーを解決するには：
 
-1. AEM インスタンスを停止して に移動 `<aem_server_path_on_server>crx-quickstart\conf` し、 `sling.properties` ファイルを開きます。 アドビでは、このファイルのバックアップを作成することをお勧めします。
+1. AEM インスタンスを停止して に移動 `<aem_server_path_on_server>crx-quickstart\conf` し、 `sling.properties` ファイルを開きます。 Adobeでは、このファイルのバックアップを作成することをお勧めします。
 
-2. `org.osgi.framework.bootdelegation=` を検索。結果を追加次のように表示するプロパティ： `jdk.internal.reflect,jdk.internal.reflect.*`
+1. `org.osgi.framework.bootdelegation=` を検索。結果を表示す追加るプロパティ。 `jdk.internal.reflect,jdk.internal.reflect.*`
 
-   ```
-   org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.internal.reflect.*
-   ```
+```java
+org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.internal.reflect.*
+```
 
-3. ファイルを保存し、AEMインスタンスを再起動します。
+1. ファイルを保存し、AEMインスタンスを再起動します。
 
 ## Assets {#assets}
 
@@ -60,19 +55,19 @@ ht-degree: 56%
 
 ## フォーム {#forms}
 
-* AEM Forms が Linux オペレーティングシステムにインストールされている場合、ハードウェアセキュリティモジュールを使用した電子署名が機能しない（CQ-4266721）
+* AEM FormsがLinuxオペレーティングシステムにインストールされている場合、Digital Signature with Hardware Security Moduleは機能しません。 （CQ-4266721）
 * （WebSphere 上のAEM Forms のみ）**ユーザー名**&#x200B;を検索条件として&#x200B;**管理者**&#x200B;を検索する場合、**Forms のワークフロー**／**タスクの検索**&#x200B;を実行しても結果が返されない（CQ-4266457）
 
-* AEM Forms で、JPEG 圧縮の .tif および.tiff ファイルを PDF ドキュメントに変換できない（CQ-4265972）
+* AEM Formsは、JPEG圧縮を使用したTIFおよびTIFFファイルをPDFドキュメントに変換できません。 （CQ-4265972）
 * **AEM Forms の移行**&#x200B;ページの「**AEM Forms アセットスキャナー**」オプションと「**レターからインタラクティブコミュニケーションへの移行**」オプションが機能しない（CQ-4266572）
 
-* （JBoss 7のみ）前のバージョンからAEM 6.5 Formsにアップグレードし、前のバージョンでデフォルトの送信プロセスまたはデフォルトのレンダリングプロセスのコピーを作成して使用したプロセス(.lca)がある場合、そのようなプロセス(.lca)を使用したHTML5 Formsは必要な操作を実行できません。 （CQ-4243928）
+* （JBoss 7のみ）旧バージョンからAEM 6.5Formsにアップグレードし、旧バージョンでデフォルトの送信プロセスまたはデフォルトのレンダリングプロセスのコピーを作成して使用したプロセス(.lca)がある場合、これらのプロセス(.lca)を使用したHTML5Formsは必要な操作を実行できません。 （CQ-4243928）
 * アダプティブフォームで、ルールエディターからフォームデータモデルサービスを呼び出して画像選択コンポーネントの値を動的に更新する場合、画像選択コンポーネントの値が更新されない（CQ-4254754）
 * AEM Forms Designer installer requires the 32-bit version of [Visual C++ redistributable runtime package 2012](https://support.microsoft.com/ja-jp/help/2977003/the-latest-supported-visual-c-downloads) and [Visual C++ redistributable runtime packages 2013](https://support.microsoft.com/ja-jp/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). インストールを開始する前に、これらの再頒布可能ランタイムパッケージがインストールされていることを確認してください。（CQ-4265668）
 
 * PDF Generatorは、スマートカードベースの認証をサポートしていません。  管理者がWindowsサーバーでグループポリシーを有効にす `Interactive Logon: Require Smart card` ると、既存のPDF Generatorユーザーはすべて無効になります。
 
-* コンポーネントの値を動的に更新するようにアダプティブフォームが設定されていて、そのフォームをホストするパブリッシュインスタンスにディスパッチャーを通じてアクセスする場合、フィールドの値を動的に更新する機能が動作しなくなるこの問題を解決するには、パブリッシュインスタンスで CRXDE を開き、/libs/fd/af/runtime/clientlibs/guideChartReducer を探して、以下のプロパティを作成します。
+* コンポーネントの値を動的に更新するようにアダプティブフォームが設定されていて、そのフォームをホストするパブリッシュインスタンスにディスパッチャーを通じてアクセスする場合、フィールドの値を動的に更新する機能が動作しなくなるTo resolve the issue, on the publish instance, open CRXDE, navigate to `/libs/fd/af/runtime/clientlibs/guideChartReducer`, and create the property listed in below.
 
    * 名前：allowProxy
    * タイプ：Boolean
@@ -80,9 +75,8 @@ ht-degree: 56%
    * 保護：false
    * 必須：false
    * 複数：false
-   * 自動作成：false
+   * 自動作成： False
 
    このプロパティを設定すると、ランタイムフォルダー内のクライアントライブラリからプロキシにアクセスできます。（CQ-4268679）
 
-* 
-   * AEM Formsが起動すると、 `SAX Security Manager could not be setup` 警告が表示されます。
+* AEM Formsが起動すると、 `SAX Security Manager could not be setup` 警告が表示されます。
