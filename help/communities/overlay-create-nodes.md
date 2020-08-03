@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 27%
 
 ---
 
@@ -34,29 +37,29 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
 
 1. Browse to [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. Create `/apps/social` (if it does not already exist)
-   * ノードを `/apps` 選択
+   * ノードを選択 `/apps`
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `social`
-1. ノードを `social` 選択
+1. ノードを選択 `social`
    * **[!UICONTROL 作成]** / **[!UICONTROL フォルダ…]**
       * 名前を入力: `commons`
-1. ノードを `commons` 選択
+1. ノードを選択 `commons`
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `components`
-1. ノードを `components` 選択
+1. ノードを選択 `components`
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `hbs`
-1. ノードを `hbs` 選択
-   * **[!UICONTROL 作成]** /コ **[!UICONTROL ンポーネントを作成…]**
+1. ノードを選択 `hbs`
+   * **[!UICONTROL 作成]** /コンポーネント **[!UICONTROL を作成…]**
       * ラベルを入力： `comments`
       * Enter Title: `Comments`
       * Enter Description: `List of comments without showing avatars`
       * スーパータイプ： `social/commons/components/comments`
       * グループの入力： `Communities`
       * Click **[!UICONTROL Next]** until **[!UICONTROL OK]**
-1. ノードを `comments` 選択
+1. ノードを選択 `comments`
 
-   * **[!UICONTROL 作成／コンポーネントを作成...]** を選択します。
+   * **[!UICONTROL 作成]** /コンポーネント **[!UICONTROL を作成…]**
 
       * ラベルを入力： `comment`
       * Enter Title: `Comment`
@@ -79,21 +82,22 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
+
 >
 
 
 
 The overlay&#39;s own `Type`(property `sling:resourceType`) must be a relative self-reference so that any content not found in /apps is then looked for in /libs.
-* 名前: `sling:resourceType`
-* タイプ: `String`
-* 値: `social/commons/components/hbs/comments`
+* 名前：`sling:resourceType`
+* 型：`String`
+* 値：`social/commons/components/hbs/comments`
 
 1. Select the green `[+] Add`
-   * 名前: `sling:resourceType`
-   * タイプ: `String`
-   * 値: `social/commons/components/hbs/comments/comment`
+   * 名前：`sling:resourceType`
+   * 型：`String`
+   * 値：`social/commons/components/hbs/comments/comment`
 1. Select the green `[+] Add`
    * 「**[!UICONTROL すべて保存]**」を選択します。
 
-![chlimage_1-4](assets/chlimage_1-4.png)
+![create-nodes](assets/create-nodes.png)
 
