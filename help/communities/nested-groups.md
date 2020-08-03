@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 40%
+ht-degree: 39%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 40%
 
 AEM Authorインスタンスで、グローバルナビゲーションから次の操作を行います。
 
-* Select **[!UICONTROL Communities] > **[!UICONTROL Sites]**.
+* Select **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
 * Select **[!UICONTROL engage folder]** to open it.
 * Select the card for the **[!UICONTROL Getting Started Tutorial]** English site.
 
@@ -34,11 +34,11 @@ AEM Authorインスタンスで、グローバルナビゲーションから次�
 
 そうすると、[グループコンソール](/help/communities/groups.md)に移動します。
 
-![chlimage_1-91](assets/chlimage_1-91.png)
+![create-group](assets/create-group.png)
 
 グループ機能は、グループのインスタンスが作成されるフォルダーとして表示されます。グループフォルダーを選択して、開きます。公開時に作成されたグループは表示されます。
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![create-new-group](assets/create-new-group.png)
 
 ## メインの Arts グループの作成 {#create-main-arts-group}
 
@@ -94,11 +94,11 @@ AEM Authorインスタンスで、グローバルナビゲーションから次�
 
 `arts` グループ内でネストされるグループを作成する前に、`arts` カードにカーソルを合わせ、公開アイコンを選択してそのグループを公開します。
 
-![好み成分](assets/liking-component.png)
+![publish-site](assets/publish-site.png)
 
 グループが公開されたことが確認されるまで待機します。
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![グループ発行の](assets/group-published.png)
 
 The `arts` group should also contain a `groups` folder, but one that is empty and in which new groups can be created. アートグループフォルダーに移動し、3つのネストされたグループを作成します。それぞれ異なるメンバーシップ設定になります。
 
@@ -133,11 +133,11 @@ Communitiesのサイトコンソールからネストされたグループに移
 * Select **[!UICONTROL arts card]**
 * Select **[!UICONTROL Groups]** folder
 
-![設定に「いいね！」を付ける](assets/configure-liking.png)
+![create-new-group2](assets/create-new-group2.png)
 
 ## グループの公開 {#publishing-groups}
 
-![chlimage_1-96](assets/chlimage_1-96.png)
+![publish-site](assets/publish-site.png)
 
 メインコミュニティサイトの公開後：
 
@@ -149,7 +149,7 @@ Communitiesのサイトコンソールからネストされたグループに移
 
    * すべてのグループは、トップダウン方式で公開する必要があります。
 
-![chlimage_1-97](assets/chlimage_1-97.png)
+![グループ発行の](assets/group-published.png)
 
 ## パブリッシュ環境でのエクスペリエンス {#experience-on-publish}
 
