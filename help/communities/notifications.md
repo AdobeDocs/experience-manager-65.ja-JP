@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 39%
 
 ---
 
@@ -25,26 +28,26 @@ AEM Communities には、サインインしているコミュニティメンバ�
 通知は[アクティビティ](/help/communities/essentials-activities.md)や[購読](/help/communities/subscriptions.md)と同様に、以下に基づいて生成されます。：
 
 * コンテンツを投稿するメンバー。
-* メンバーが別のメンバーの後に続くことを選択した。
-* メンバーは、特定のトピック、記事、その他のコンテンツのスレッドに従うことを選択します。
+* メンバーが別のメンバーに従うことを選択した。
+* 特定のトピック、記事、その他のコンテンツのスレッドに従うことを選択したメンバー。
 * ユーザーが生成したコンテンツ内の別のコミュニティメンバーにタグ付け(@mention)するメンバー。
 
-通知とアクティビティとの違いは、次のとおりです。
+通知とアクティビティおよび購読の違いは次のとおりです。
 
 * 通知セクションへのリンクは、コミュニティサイトのヘッダーに常に表示されます。
 
    * Activities require the [activity stream function](/help/communities/functions.md#activity-stream-function) to be included in the community site&#39;s structure.
    * Subscriptions require [configuration of email](/help/communities/email.md).
 
-* 通知の実装は、拡張性とプラグ可能なチャネルを通じて
+* 通知の実装は、拡張性とプラグ可能なチャネルを通じて行われます。
 
    * アクティビティはWeb上でのみ使用できます。
-   * 購読は電子メールを使用した場合にのみ使用できます。
+   * 購読は電子メールでのみ使用できます。
 
 As of Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack), the notification channels available are:
 
 * The web channel, accessed using the `Notifications` link.
-* 電子メールチャネル。電子メールが正しく設定されている場合に使用できます。
+* 電子メールが正しく設定されている場合に使用できる電子メールチャネル。
 
 今後のチャネルとしてモバイルおよびデスクトップがあります。
 
@@ -64,11 +67,11 @@ As of Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepac
 
 * Components used within community [site templates](/help/communities/sites.md) and [group templates](/help/communities/tools-groups.md) may already be configured to follow.
 
-* メンバプロファイルは、他のメンバがフォローできるように既に設定されています。
+* メンバプロファイルは、他のメンバが従うように既に構成されています。
 
 ## フォローによる通知 {#notifications-from-following}
 
-![chlimage_1-243](assets/chlimage_1-243.png)
+![通知](assets/notifications.png)
 
 「**[!UICONTROL フォロー]**」ボタンを使用すると、エントリをアクティビティや購読、通知としてフォローできます。Each time the **[!UICONTROL Follow]** button is selected, it is possible to toggle on or off a selection. The `Email Subscriptions` selection is only present when configured.
 
@@ -76,14 +79,14 @@ As of Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepac
 
 The **[!UICONTROL Follow]** button will appear:
 
-* 別のメンバーのプロファイルを表示。
+* 別のメンバーのプロファイルを表示する場合。
 * フォーラム、QnA、ブログなどのメイン機能ページ：
 
    * その一般的な機能のすべてのアクティビティに従います。
 
 * フォーラムトピック、QnA質問、ブログ記事など、特定のエントリの場合：
 
-   * 特定のエントリのアクティビティをすべて追跡します。
+   * 特定のエントリのすべてのアクティビティに従います。
 
 ## 通知設定の管理 {#managing-notification-settings}
 
@@ -91,41 +94,41 @@ The **[!UICONTROL Follow]** button will appear:
 
 Web チャネルは常に有効になっています。
 
-![chlimage_1-244](assets/chlimage_1-244.png)
+![notifications14](assets/notifications1.png)
 
 電子メールチャネルでは、Web チャネルの場合と同様の設定が用意されていますが、別途適切な[電子メールの設定](/help/communities/email.md)が必要です。
 
 電子メールチャネルは、デフォルトでオフになっています。
 
-![chlimage_1-245](assets/chlimage_1-245.png)
+![notifications2](assets/notifications2.png)
 
 これはメンバーがオンにすることもできますが、それでも電子メールの設定によって決まります。
 
-![chlimage_1-246](assets/chlimage_1-246.png)
+![notifications3](assets/notifications3.png)
 
 ## 通知の表示 {#viewing-notifications}
 
 ### Web 通知 {#web-notifications}
 
-A [wizard created community site](/help/communities/sites-console.md) now includes a link to the `Notifications` feature in the site&#39;s header bar above the banner. メッセージとは異なり、通知は各コミュニティサイトに対して作成され、メッセージはサイト作成プロセス中に有効にする必要があります。
+A [wizard created community site](/help/communities/sites-console.md) now includes a link to the `Notifications` feature in the site&#39;s header bar above the banner. メッセージとは異なり、通知はすべてのコミュニティサイトに対して作成されますが、メッセージはサイト作成プロセス中に有効にする必要があります。
 
 When visiting the published site, selecting the `Notifications` link will display all notifications for the member.
 
-![chlimage_1-247](assets/chlimage_1-247.png)
+![notifications4](assets/notifications4.png)
 
 ### 電子メール通知 {#email-notifications}
 
 電子メールチャネルを有効にすると、メンバーは、Web 上のコンテンツへのリンクが記載されている電子メールを受信します。
 
-![chlimage_1-248](assets/chlimage_1-248.png)
+![notifications5](assets/notifications5.png)
 
 ## 電子メール通知のカスタマイズ {#customize-email-notifications}
 
-組織は、/libs/settings/community/templates/email/htmlにあ [るテンプレート](/help/communities/client-customize.md#overlays) をオーバーレイすることで、電子メール通知をカスタマイズできます ****。
+組織は [、](/help/communities/client-customize.md#overlays) /libs/settings/community/templates/email/htmlにあるテンプレートを **オーバーレイすることで**、電子メール通知をカスタマイズできます。
 
-例えば、（コミュニティコンポーネントの）メンションの電子メール通知を変更するには、 **@mentionsのサポートを有効にしたコンポーネントのテンプレートに****、Verbメンションの****** if条件を追加します。
+例えば、（コミュニティコンポーネントの）メンション電子メール通知を変更するには、 **@mentions** サポートを有効にしたコンポーネントのテンプレートに、動詞 **メンションのif****** 条件を追加します。
 
-ブログコメント内の@mentionの電子メール通知テンプレートを変更するには、次の場所にテンプレートを配置します。 **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/jp**
+ブログコメント内の@mentionの電子メール通知テンプレートを変更するには、次の場所にテンプレートを置いてください。 **/libs/settings/community/templates/email/html/social.journal**
 
 ```java
 {{#equals this.verb "mention"}}\
