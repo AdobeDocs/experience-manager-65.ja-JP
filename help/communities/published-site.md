@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
+source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 33%
@@ -34,7 +34,7 @@ ht-degree: 33%
 
 `https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}`
 
-![chlimage_1-31](assets/chlimage_1-31.png)
+![authorpublished](assets/authorpublished.png)
 
 ## 匿名のサイト訪問者 {#anonymous-site-visitor}
 
@@ -82,7 +82,7 @@ This experience assumes [Aaron McDonald](/help/communities/tutorials.md#demo-use
 
 In the upper right corner, select `Log in`, and sign with username (aaron.mcdonald@mailinator.com) and password (password). TwitterまたはFacebookの資格情報を使用してサインインする機能に注目してください。
 
-![chlimage_1-32](assets/chlimage_1-32.png)
+![ログイン](assets/login.png)
 
 登録コミュニティのメンバーとしてサインインした後は、次のメニュー項目に注目して、コミュニティサイトをクリックして参照してください。
 
@@ -95,11 +95,11 @@ In the upper right corner, select `Log in`, and sign with username (aaron.mcdona
 * [「通知](/help/communities/notifications.md) 」オプションを選択すると、通知セクションに移動します。このセクションでは、関心のあるイベントの表示や、通知の設定の編集が可能です。
 * [モデレート権限を持つ場合は、「管理](/help/communities/published-site.md#moderationlink) 」をクリックするとAEM Communitiesのモデレートページに移動します。
 
-![chlimage_1-33](assets/chlimage_1-33.png)
+![adminscreen](assets/adminscreen.png)
 
 カレンダーページがホームページになっていますが、これは、選択した参照サイトテンプレートの最初に含まれているのがカレンダー機能で、その後にアクティビティストリーム機能、フォーラム機能などが続いているからです。This structure is visible from the [Site Template](/help/communities/sites.md#edit-site-template) console or when modifying site properties in the author environment:
 
-![chlimage_1-34](assets/chlimage_1-34.png)
+![sitetemplate](assets/sitetemplate.png)
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ In the upper right corner, select `Log in`, and sign with username (aaron.mcdona
 
 サイト訪問者は、様々な方法で投稿を表示したり、並べ替えたりできます。
 
-![chlimage_1-35](assets/chlimage_1-35.png)
+![フォームリンク](assets/forumlink.png)
 
 ### グループリンク {#groups-link}
 
@@ -130,7 +130,7 @@ Aaron はグループ管理者なので、グループリンクを選択する�
 
 Groups may also be created in the author environment and managed within the community site in the author environment ([Community Groups console](/help/communities/groups.md)). The experience of [creating groups on author](/help/communities/nested-groups.md) is next in this tutorial.
 
-![classic-ui](assets/classic-ui.png)
+![grouplink](assets/grouplink.png)
 
 参照グループの作成：
 
@@ -148,11 +148,11 @@ Groups may also be created in the author environment and managed within the comm
 
 1. Select **Create Group**
 
-![classic-ui-webサイト](assets/classic-ui-website.png)
+   ![creategroup](assets/creategroup.png)
 
 新しいグループが作成されたら、その中に（ネストされる）2 つのグループを作成するために&#x200B;**新しい Sports グループを選択**&#x200B;します。サイト構造はグループ機能では始まらないので、スポーツグループを開いた後、「グループ」リンクを選択する必要があります。
 
-![classic-ui-create-page](assets/classic-ui-create-page.png)
+![grouplink1](assets/grouplink1.png)
 
 The second set of links, beginning with `Blog`, belong to the currently selected group, the `Sports` group. By selecting the Sports&#39; `Groups` link, it is possible to nest two groups within the Sports group.
 
@@ -180,7 +180,7 @@ The second set of links, beginning with `Blog`, belong to the currently selected
 
 このグループのリンクは、メインサイトのリンクの下に表示され、結果として、次のように表示されます。
 
-![classic-ui-webサイト — ページ](assets/classic-ui-website-page.png)
+![grouplink2](assets/grouplink2.png)
 
 On author - with administrative privileges, navigate to the [Communities Groups console](/help/communities/members.md) and add Weston McCall to the `Community Engage Gymnastics <uid> Members` group.
 
@@ -195,7 +195,7 @@ Baseball グループのみが表示されます。
 
 Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、オープン・ `Join` グループとプライベート・ `Baseball` グループのどちらか `enter or Leave``Gymnastics` を実行できることに注意してください。
 
-![classic-ui-repository-表示](assets/classic-ui-repository-view.png)
+![grouplink3](assets/grouplink3.png)
 
 ### Web ページリンク {#web-page-link}
 
@@ -203,7 +203,7 @@ Web ページリンクを選択すると、サイトに含まれる基本的な 
 
 For example, go to **author** instance, open the `engage` folder in the [Communities Sites console](/help/communities/sites-console.md), select the **Open Site** icon to enter author edit mode. Then select preview mode to select the `Web Page` link, then select edit mode to add Title and Text components. 最後に、ページのみまたはサイト全体を再公開します。
 
-![classic-ui-repository-path](assets/classic-ui-repository-path.png)
+![webpagelink](assets/webpagelink.png)
 
 ### モデレートリンク {#moderationlink}
 
@@ -211,7 +211,7 @@ When the community member has moderation privileges, then the Moderation link wi
 
 ブラウザーの戻るボタンを使用して、公開したサイトに戻ります。Most consoles are not accessible from global navigation in the publish environment. [](/help/communities/moderate-ugc.md)
 
-![chlimage_1-42](assets/chlimage_1-42.png)
+![moderationlink](assets/moderationlink.png)
 
 ## 自己登録 {#self-registration}
 
@@ -220,7 +220,9 @@ When the community member has moderation privileges, then the Moderation link wi
 *  `Log In`
 *  `Sign up for a new account`
 
-![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
+![登録](assets/registration.png)
+
+![入会](assets/signup.png)
 
 デフォルトでは、電子メールアドレスがログイン ID になります。選択しない場合、訪問者は独自のログインID（ユーザー名）を入力できます。 ユーザー名は、発行環境で一意である必要があります。
 
@@ -228,9 +230,9 @@ After specifying the user&#39;s name, email, and password, selecting `Sign Up` w
 
 Once signed in, the first page presented is their `Profile` page, which they can personalize.
 
-![chlimage_1-45](assets/chlimage_1-45.png)
+![プロファイル](assets/profile.png)
 
 メンバーが自分のログイン ID を忘れた場合は、電子メールアドレスを使用して回復することができます。
 
-![chlimage_1-46](assets/chlimage_1-46.png)
+![forgotusername](assets/forgotusername.png)
 
