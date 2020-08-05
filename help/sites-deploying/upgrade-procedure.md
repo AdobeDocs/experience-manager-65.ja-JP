@@ -12,7 +12,10 @@ discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+workflow-type: tm+mt
+source-wordcount: '865'
+ht-degree: 90%
 
 ---
 
@@ -24,6 +27,10 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >ほとんどの AEM のアップグレードはインプレースで実行されるので、アップグレードにはオーサー層のダウンタイムが必要になります。これらのベストプラクティスに従うことによって、パブリッシュ層のダウンタイムを最小限に抑えたり、排除したりすることができます。
 
 AEM 環境をアップグレードする場合は、作成者とエンドユーザーのダウンタイムを最小化するために、オーサー環境とパブリッシュ環境のアップグレードのアプローチの違いを考慮する必要があります。このページでは、AEM 6.x のバージョンで現在実行されている AEM トポロジをアップグレードする手順の概要を説明します。オーサー層とパブリッシュ層および Mongo ベースと TarMK ベースのデプロイメントではプロセスが異なるので、各層およびマイクロカーネルは個別の節に記載されています。デプロイメントを実行するときは、最初にオーサー環境をアップグレードし、成功を確認してから、パブリッシュ環境をアップグレードすることをお勧めします。
+
+>[!IMPORTANT]
+>
+>アップグレードを実行する前にリポジトリのインデックスを作成することで、アップグレード中のダウンタイムを大幅に短縮できます。 詳細については、「オフライン再インデックス [を使用したアップグレード中のダウンタイムの短縮」を参照してください。](/help/sites-deploying/upgrade-offline-reindexing.md)
 
 ## TarMK のオーサー層 {#tarmk-author-tier}
 
@@ -89,7 +96,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. コンテンツのオーサリングを停止します。
 1. バックアップ用のデータストアのクローンを作成します。
 1. 1 つの AEM オーサーインスタンス（プライマリオーサー）以外をすべて停止します。
-1. 1つを除くすべてのMongoDBノードをレプリカ・セットから削除します。プライマリMongoインスタンス
+1. 1つを除くすべてのMongoDBノードをレプリカセットから削除します。プライマリMongoインスタンスです
 1. Update the `DocumentNodeStoreService.cfg` file on the primary Author to reflect your single member replica set
 1. プライマリオーサーを再起動して、正常に再起動することを確認します。
 1. プライマリオーサーのレプリケーションエージェントを無効にします。
@@ -98,7 +105,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### アップグレードの実行 {#Upgrade-execution-1}
 
-![モンゴ実行](assets/mongo-execution.jpg)
+![モンゴ処刑](assets/mongo-execution.jpg)
 
 1. プライマリオーサーで[インプレースアップグレード](/help/sites-deploying/in-place-upgrade.md)を実行します。
 1. *必要に応じて*、Dispatcher モジュールまたは Web モジュールを更新します。
@@ -120,7 +127,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### If Unsuccessful (Rollback)  {#if-unsuccessful-rollback-2}
 
-![月帰り](assets/mongo-rollback.jpg)
+![1回のロールバック](assets/mongo-rollback.jpg)
 
 1. クローン作成されたデータストアに接続するために、セカンダリオーサーインスタンスを再設定します。
 
@@ -190,5 +197,5 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. コンテンツのオーサリングを再開します。
 1. [アップグレード後のチェック](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)を実行します。
 
-![最終](assets/final.jpg)
+![final](assets/final.jpg)
 
