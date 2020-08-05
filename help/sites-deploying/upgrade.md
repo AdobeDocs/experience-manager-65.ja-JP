@@ -12,7 +12,10 @@ discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+workflow-type: tm+mt
+source-wordcount: '729'
+ht-degree: 77%
 
 ---
 
@@ -24,6 +27,7 @@ source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 * [アップグレードの計画](/help/sites-deploying/upgrade-planning.md)
 * [パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)
 * [AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)
+* [オフライン再インデックスを使用したアップグレード中のダウンタイムの短縮](/help/sites-deploying/upgrade-offline-reindexing.md)
 * [アップグレード手順](/help/sites-deploying/upgrade-procedure.md)
 * [コードのアップグレードとカスタマイズ](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
@@ -50,7 +54,7 @@ AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました�
 
 アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
-6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3より古いバージョンからアップグレードする場合は、アップグレードの一環として、システムのダウンタイムを伴うリポジトリの移行が必要になります。
+6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3より古いバージョンからアップグレードする場合は、システムのダウンタイムを伴う、アップグレードの一環としてリポジトリの移行が必要になります。
 
 アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
 
@@ -68,10 +72,10 @@ AEM では最近、アップグレードの計画時に役立つ、アップグ�
 
 最近の AEM バージョンの変更点について詳しくは、完全版のリリースノートを参照してください。
 
-* [https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html](https://helpx.adobe.com/experience-manager/6-2/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html](https://helpx.adobe.com/experience-manager/6-3/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/experience-manager/6-4/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html](https://helpx.adobe.com/experience-manager/6-5/release-notes.html)
+* [https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html)
+* [https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html)
+* [https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html)
+* [https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html)
 
 ## アップグレードの概要 {#upgrade-overview}
 
@@ -87,5 +91,5 @@ There was a big focus in 6.5 to keep all the new features backward compatible, b
 
 Finally, in your 6.5 development cycle, features introduced under Sustainable Upgrades(see [Sustainable Upgrades](/help/sites-deploying/sustainable-upgrades.md)) help you follow best practices to make future upgrades even more efficient and seamless.
 
-![6_4_upgrade_overviewflowhart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
+![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
 
