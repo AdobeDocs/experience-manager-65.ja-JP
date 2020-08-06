@@ -12,10 +12,10 @@ discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 77%
+source-wordcount: '720'
+ht-degree: 78%
 
 ---
 
@@ -27,7 +27,8 @@ ht-degree: 77%
 * [アップグレードの計画](/help/sites-deploying/upgrade-planning.md)
 * [パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)
 * [AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)
-* [オフライン再インデックスを使用したアップグレード中のダウンタイムの短縮](/help/sites-deploying/upgrade-offline-reindexing.md)
+
+<!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [アップグレード手順](/help/sites-deploying/upgrade-procedure.md)
 * [コードのアップグレードとカスタマイズ](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
