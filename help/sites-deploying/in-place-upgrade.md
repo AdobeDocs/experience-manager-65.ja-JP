@@ -11,10 +11,10 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
-source-wordcount: '1275'
-ht-degree: 78%
+source-wordcount: '1242'
+ht-degree: 80%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 78%
 
 アップグレードを実行する前に、いくつかの手順を完了しておく必要があります。詳しくは、[コードのアップグレードとカスタマイズ](/help/sites-deploying/upgrading-code-and-customizations.md)および[アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)を参照してください。また、システムが新しいバージョンの AEM の要件を満たしていることを確認してください。パターン検出によってアップグレードの複雑性を推定できます。また、詳しくは、[アップグレードの計画](/help/sites-deploying/upgrade-planning.md)の「アップグレードの範囲と要件」の節を参照してください。
 
-最後に、アップグレードを実行する **前にリポジトリのインデックスを作成することで、アップグレード中のダウンタイムを大幅に短縮でき** ます。 詳細については、「オフライン再インデックス [を使用したアップグレード中のダウンタイムの短縮」を参照してください。](/help/sites-deploying/upgrade-offline-reindexing.md)
+<!--Finally, note that the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
 ## 移行の前提条件 {#migration-prerequisites}
 
