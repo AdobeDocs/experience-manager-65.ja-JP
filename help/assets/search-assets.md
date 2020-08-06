@@ -4,7 +4,7 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8f8134d6c4fcc0ef54f9cc8298936c5c7d746c09
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
 workflow-type: tm+mt
 source-wordcount: '5860'
 ht-degree: 54%
@@ -27,13 +27,13 @@ ht-degree: 54%
 | [検索ランキングおよびブースト](#searchrank) | [テキスト抽出](#extracttextupload) | [スマートコレクション](#collections) |
 | [詳細検索：検索のフィルタリングと範囲](#scope) | [カスタム述語](#custompredicates) | [予期しない検索結果と検索に関連する問題のトラブルシューティング](#troubleshoot-unexpected-search-results-and-issues) |
 | [他のソリューションおよびアプリから検索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Managerデスクトップアプリ](#desktopapp)</li><li>[Adobe Stock 画像](#adobestock)</li><li>[Dynamic Media アセット](#dynamicmedia)</li></ul> |  |  |
-| [アセットピッカー](#assetselector) |  |  |
+| [アセットピッカー](#assetpicker) |  |  |
 | [制限事項](#limitations)と[ヒント](#tips) |  |  |
 | [例を使った説明](#samples) |  |  |
 
 Search for assets using the Omnisearch field at the top of the [!DNL Experience Manager] web interface. Go to **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], click search in top bar, enter search keyword, and press return. または、キーワードショートカット/（スラッシュ）を使用して、Omnisearchフィールドを開きます。 `Location:Assets` が事前に選択されており、DAM アセットの検索に制限されています。[!DNL Experience Manager] 開始が検索キーワードを入力する際に、サーチクエリを表示します。
 
-[ **[!UICONTROL フィルター]** ]パネルを使用して、ファイルタイプ、ファイルサイズ、最終変更日、アセットのステータス、インサイトデータ、Adobe Stockライセンスなど、様々なオプション（述部）に基づいて検索結果をフィルタリングし、検索範囲を絞り込みます。 管理者は、フィルターパネルをカスタマイズし、検索ファセットを使用して検索予測を追加または削除できます。 [!UICONTROL フィルターパネルの] ファイルの種類 [!UICONTROL (File Type] )フィルターには、混在状態のチェックボックスがあります。 したがって、すべてのネストされた述語（またはフォーマット）を選択しない限り、第1レベルのチェックボックスは部分的にチェックされます。
+[ **[!UICONTROL フィルター]** ]パネルを使用して、ファイルタイプ、ファイルサイズ、最終変更日、アセットのステータス、インサイトデータ、Adobe Stockライセンスなど、様々なオプション（述語）に基づいて検索結果をフィルタリングし、検索範囲を絞り込みます。 管理者は、フィルターパネルをカスタマイズし、検索ファセットを使用して検索予測を追加または削除できます。 [!UICONTROL フィルターパネルの] ファイルの種類 [!UICONTROL (File Type] )フィルターには、混在状態のチェックボックスがあります。 したがって、すべてのネストされた述語（またはフォーマット）を選択しない限り、第1レベルのチェックボックスは部分的にチェックされます。
 
 [!DNL Experience Manager] 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
 
@@ -226,7 +226,7 @@ From within the [!DNL Experience Manager] user interface, users can search Adobe
 
 [!DNL Experience Manager] 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
 
-## アセットピッカー {#assetselector}
+## アセットピッカー {#assetpicker}
 
 アセットピッカーを使用すると、DAMアセットを特別な方法で検索、フィルタリングおよび参照できます。 Asset Picker is available at `https://[aem-server]:[port]/aem/assetpicker.html`. この機能を使用して、選択したアセットのメタデータを取得できます。 アセットタイプ（画像、ビデオ、テキスト）や選択モード（単一選択または複数選択）など、サポートされているリクエストパラメーターを使用して、アセットセレクターを起動できます。これらのパラメーターは、特定の検索インスタンスに対してアセットピッカーのコンテキストを設定し、選択範囲全体を通してそのまま残ります。
 
