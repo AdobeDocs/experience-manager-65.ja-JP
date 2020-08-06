@@ -3,9 +3,9 @@ title: アセットを一括 [!DNL Adobe Experience Manager Assets] で移行し
 description: Describes how to bring assets into [!DNL Adobe Experience Manager], apply metadata, generate renditions, and activate them to publish instances.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1799'
 ht-degree: 67%
 
 ---
@@ -17,7 +17,7 @@ When migrating assets into [!DNL Adobe Experience Manager], there are several st
 
 ## 前提条件 {#prerequisites}
 
-Before actually performing any of the steps in this methodology, please review and implement the guidance in [Assets performance tuning tips](performance-tuning-guidelines.md). ここで紹介する手順の多くは、同時に実行可能なジョブの最大数の設定など、負荷時のサーバーの安定性とパフォーマンスを大幅に改善します。システムにアセットが読み込まれた後だと、その他の手順（ファイルデータストアの設定など）を実行するのがより困難になります。
+Before actually performing any of the steps in this methodology, review and implement the guidance in [Assets performance tuning tips](performance-tuning-guidelines.md). ここで紹介する手順の多くは、同時に実行可能なジョブの最大数の設定など、負荷時のサーバーの安定性とパフォーマンスを大幅に改善します。システムにアセットが読み込まれた後だと、その他の手順（ファイルデータストアの設定など）を実行するのがより困難になります。
 
 >[!NOTE]
 >
@@ -28,6 +28,7 @@ Before actually performing any of the steps in this methodology, please review a
 >* ACS Commons の Bulk Workflow Manager
 >* ACS Commons の Fast Action Manager
 >* 合成ワークフロー
+
 >
 >
 このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ACS AEM ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ACS AEM Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
