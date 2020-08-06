@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 07b38da6-2efa-4a43-9afa-7151a241a5ad
 translation-type: tm+mt
-source-git-commit: 79914fa8fa28d5cf3fe7828d71a34ff920bc3e60
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 72%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 79914fa8fa28d5cf3fe7828d71a34ff920bc3e60
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-**アプリを管理**&#x200B;タイルとアプリを管理ページには、アプリケーションのメタデータを表示および編集するための手段が用意されています。アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。これには、共通のメタデータ、iOSメタデータ、スクリーンショットが含まれる場合があります。 See the [Manage App Tile](/help/mobile/phonegap-app-details-tile.md) for further details on common and iOS metadata.
+**アプリを管理**&#x200B;タイルとアプリを管理ページには、アプリケーションのメタデータを表示および編集するための手段が用意されています。アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。これには、一般的なメタデータ、iOSメタデータ、スクリーンショットが含まれる場合があります。 See the [Manage App Tile](/help/mobile/phonegap-app-details-tile.md) for further details on common and iOS metadata.
 
 ## アプリのデータの編集 {#editing-the-app-data}
 
@@ -33,7 +36,7 @@ source-git-commit: 79914fa8fa28d5cf3fe7828d71a34ff920bc3e60
 
 1. To view or edit details by clicking the &#39;...&#39; in the bottom right corner of the **Manage App** tile.
 
-1. 次の図に示すように、5つのタブのいずれかに詳細を入力または表示します。
+1. 次の図に示すように、使用可能な5つのタブに詳細を入力または表示します。
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
@@ -48,7 +51,7 @@ source-git-commit: 79914fa8fa28d5cf3fe7828d71a34ff920bc3e60
 
 ## スクリーンショットの追加および削除 {#add-and-remove-screenshots}
 
-アプリのスクリーンショットをメタデータのロールアップに含めることができます。ベンダーによっては、アプリをアプリストアに提出する際に正確なスクリーンショットが要求される場合があります。これらの画像は、アセットに既に存在する必要があります。 スクリーンショットのアップロードについては、[アセットピッカー](../assets/search-assets.md#assetselector)を参照してください。
+アプリのスクリーンショットをメタデータのロールアップに含めることができます。ベンダーによっては、アプリをアプリストアに提出する際に正確なスクリーンショットが要求される場合があります。これらの画像は、既にアセットに存在する必要があります。 スクリーンショットのアップロードについては、[アセットピッカー](../assets/search-assets.md#assetpicker)を参照してください。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
