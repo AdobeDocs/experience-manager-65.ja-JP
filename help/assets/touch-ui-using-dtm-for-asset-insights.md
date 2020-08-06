@@ -3,7 +3,7 @@ title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 41%
@@ -58,7 +58,7 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 
 1. `https://dtm.adobe.com` にアクセスします。Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。While creating the tool, you can set **[!UICONTROL Configuration Method]** to **[!UICONTROL Automatic]**.
 
-   ![ア追加ドビAnalyticsツール](assets/Add-Adobe-Analytics-Tool.png)
+   ![追加Adobe Analyticsツール](assets/Add-Adobe-Analytics-Tool.png)
 
    必要に応じてステージング／実稼動版レポートスイートを選択します。
 
@@ -96,7 +96,7 @@ DTM を使用してアセットインサイトを有効にするには、次の�
              "",  /** eVar to put Asset ID for Asset Click Events in, e.g. 'eVar3' */
              "",  /** event to include in tracking-calls for Asset Impression Events, e.g. 'event8' */
              "",  /** event to include in tracking-calls for Asset Click Events, e.g. 'event7' */
-             sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, please include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
+             sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
              );
        sObj.usePlugins = true;
        sObj.doPlugins = assetAnalytics.core.updateContextData;
