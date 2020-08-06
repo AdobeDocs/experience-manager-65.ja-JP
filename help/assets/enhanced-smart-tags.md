@@ -3,9 +3,9 @@ title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1533'
 ht-degree: 73%
 
 ---
@@ -68,7 +68,7 @@ The onboarding process is complete when the administrator configures the service
 >[!NOTE]
 >
 >1. トレーニングは元に戻すことができないプロセスです。キュレーション後のアセットセット内のタグを十分に確認してから、スマートコンテンツサービスに対してそれらのタグのトレーニングを実施することをお勧めします。
->1. Please do read [Smart Content Service training guidelines](smart-tags-training-guidelines.md) before starting training for any tag.
+>1. タグのトレーニングを行う前に、 [Smart Content Serviceのトレーニングガイドラインを参照してください](smart-tags-training-guidelines.md)。
 >1. スマートコンテンツサービスのトレーニングを初めておこなうときには、少なくとも 2 つの異なるタグについてトレーニングすることをお勧めします。
 
 
