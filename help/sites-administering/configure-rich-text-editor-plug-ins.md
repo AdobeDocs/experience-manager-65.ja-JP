@@ -1,12 +1,12 @@
 ---
 title: リッチテキストエディタープラグインの設定
-description: 個々の機能を有効にするAdobe Experience Managerリッチテキストエディタープラグインを設定する方法を説明します。
+description: 個々の機能を有効にするAdobe Experience Managerリッチテキストエディタープラグインの設定について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
-source-wordcount: '4400'
-ht-degree: 96%
+source-wordcount: '4397'
+ht-degree: 95%
 
 ---
 
@@ -607,7 +607,7 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 >[!NOTE]
 The message `Spell checking failed` is seen if a check is attempted for a language that is not installed. 標準辞書は、readme ファイルと一緒に `/libs/cq/spellchecker/dictionaries` にあります。これらのファイルを修正しないでください。
 
-標準のAEMインストールには、米国英語(`en_us`)および英語(`en_gb`)の辞書が含まれます。 辞書を追加するには、次の手順に従います。
+標準的なAEMのインストールには、米国英語(`en_us`)と英語(`en_gb`)の辞書が含まれます。 辞書を追加するには、次の手順に従います。
 
 1. ページ [https://extensions.openoffice.org/](https://extensions.openoffice.org/) に移動します。
 
@@ -731,7 +731,7 @@ AEM にリンクを追加する場合、次の定義が可能です。
       * **名前** `cssExternal`
       * **型** `String`
       * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。例、`.cssClass` ではなく `cssClass`）
-   * 有効な&#x200B;**プロトコル**&#x200B;の配列（http://、https://、file://、mailto: などを含む）
+   * Array of valid **protocols** (including `https://`, `https://`, `file://`, and `mailto:` amongst others)
 
       * **名前** `protocols`
       * **型** `String[]`
