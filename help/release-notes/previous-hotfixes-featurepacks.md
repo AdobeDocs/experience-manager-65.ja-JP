@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Manager6.5以前のService Packリリースノート
-description: Adobe Experience Manager6.5 Service Pack 3以前に固有のリリースノートです。
+description: Adobe Experience Manager6.5 Service Pack 3以前に関するリリースノートです。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
 source-wordcount: '8108'
 ht-degree: 35%
@@ -15,9 +15,9 @@ ht-degree: 35%
 
 ## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
 
-Adobe Experience Manager6.5.4.0は、2019 **年4月のGAリリース(GA)以降にリリースされた主な機能、お客様から要請された機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上にインストールできます。
+Adobe Experience Manager6.5.4.0は、2019 **年4月の6.5リリースの一般リリース(GA)以降にリリースされた主な機能、お客様からリクエストされた機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上に設置できます。
 
-Adobe Experience Manager6.5.4.0で導入された主な機能および機能強化には、次のものが含まれます。
+Adobe Experience Manager6.5.4.0で導入された主な機能および機能強化には、次のものがあります。
 
 * Adobe Experience Managerアセットは、AdobeI/Oコンソールを通じてBrand Portalで構成されるようになりました。
 
@@ -31,7 +31,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.10.8 に更新しました。
 
-* 選択したコンテンツサブツリーを、で利用可能なすべてではなく、 *Dynamic Media-Scene7モード* ()に同期できるようにな `content/dam`りました。
+* コンテンツの一部のサブツリーを、で利用可能なすべてではなく、 *ダイナミックメディア —Scene7モード* (Dynamic Media)に同期できるようになり `content/dam`ました。
 
 * SOAP Webサービスとのフォームデータモデルの統合で、要素の選択グループまたは属性がサポートされるようになりました。
 
@@ -73,7 +73,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * ユーザーが「作成」ボタンをクリックすると、ページオプションは使用できません(NPR-31756)。
 
-* OOTB （デフォルト）デザインインポーターコンポーネント(NPR-31728)を含むAdobeキャンペーンのキャンペーンを同期できません。
+* OOTB （初期設定）デザインインポーターコンポーネント(NPR-31728)を含むAdobeキャンペーンのキャンペーンを同期できません。
 
 * 箇条書きのリストを番号付きリストに変更しようとすると、リストの最初の2つの項目だけが変更されます(NPR-31636)。
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * アセット収集ページでワークフローをトリガーするボタンが無効になっています(NPR-32471)。
 
-* Dynamic MediaScene7設定(NPR-32440)にExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7Publishing System)に作成されます。
+* ダイナミックメディアScene7設定(NPR-32440)とExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7パブリッシングシステム)に作成されます。
 
 * すべてのアセットを（「すべて選択」を使用して）公開済みアセットを含むフォルダーに移動する操作は、エラーが発生して失敗します(NPR-32366)。
 
@@ -105,7 +105,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * 検索フィルターから複数のタグが選択されると、複数の検索クエリが実行されます(NPR-32143)。
 
-* ファイル名が50文字を超えるアセットがアップロードされる場合、Experience ManagerアセットUIでファイル名が切り捨てられて表示されます(NPR-32054)。
+* ファイル名が50文字を超えるアセットがアップロードされると、Experience ManagerアセットUIのファイル名が切り捨てられて表示されます(NPR-32054)。
 
 * 1番目と2番目のチェックボックスがオフになると、フィルターパネルのすべてのチェックボックスがクリアされ、Adobe Stockのチェックボックスツリーのレベル2のチェックボックスが選択されます(NPR-31919)。
 
@@ -119,11 +119,11 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * タッチUI検索（Omnisearchを通じて行われる）の結果ページは自動的に上にスクロールし、ユーザーのスクロール位置が失われます(NPR-31307)。
 
-* PDFアセットのアセットの詳細ページに、Dynamic MediaScene7実行モード(CQ-4286705)で実行されているExperience Managerーで、「コレクション」ボタンと「レンディション」ボタン以外のアクションボタンが表示されません。
+* PDFアセットのアセットの詳細ページに、ダイナミックメディアScene7実行モード(CQ-4286705)で実行されているExperience Managerーで、「コレクション」ボタンと「レンディション」ボタン以外のアクションボタンが表示されません。
 
 * Scene7のバッチアップロード処理には、アセットの処理に時間がかかりすぎます(CQ-4286445)。
 
-* Dynamic Mediaクライアントのセットエディター(CQ-4285690)で変更を行っていない場合、「保存」ボタンを押してもリモートセットは読み込まれません。
+* ユーザーがダイナミックメディアクライアントのセットエディター(CQ-4285690)で変更を行っていない場合、「保存」ボタンでリモートセットが読み込まれません。
 
 * 3Dアセットのサムネールは情報ではありません。サポートされている3DモデルがExperience Managerに取り込まれる場合(CQ-4283701)に役立ちます。
 
@@ -131,7 +131,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * 3Dビューアでプレビューした、アップロードされた3Dモデルのコンテナの高さが正しくないと、アセットの詳細ページに表示されます(CQ-4283309)。
 
-* Experience ManagerDynamic Mediaハイブリッドモード(CQ-4255590)で、IE 11でカルーセルエディターが開かない。
+* カルーセルエディターがIE 11のExperience Managerダイナミックメディアハイブリッドモード(CQ-4255590)で開きません。
 
 * ChromeおよびSafariブラウザー(NPR-32067)のダウンロードダイアログの電子メールドロップダウンで、キーボードのフォーカスが動かなくなる。
 
@@ -141,9 +141,9 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * フィルターパネル(NPR-32538)を使用してアセットを検索している間、マウスコントロールを既存のフィルターフィールドに留まらずに、前のフィルターフィールドに移動します。
 
-* Platformのタグ付け： タグフィールドにタグを入力して検索すると、ルート境界の外側にあるタグが表示され、タグフィールドの `rootPath` プロパティは無視されます(NPR-31895)。
+* プラットフォームのタグ付け：タグフィールドにタグを入力して検索すると、ルート境界の外側にあるタグが表示され、タグフィールドの `rootPath` プロパティは無視されます(NPR-31895)。
 
-* PlatformUI: テキストフィールドに無効なパスが追加されると、パスブラウザーが壊れます(NPR-31884)。
+* プラットフォームUI:テキストフィールドに無効なパスが追加されると、パスブラウザーが壊れます(NPR-31884)。
 
 * ページ選択時に、通知がスティッキーメニューの背後に隠れる(NPR-31628)。
 
@@ -179,7 +179,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 ### Campaign Targeting {#campaign-targeting-6540}
 
-* Targetクラウドの設定が失敗し、エラーget mboxリクエストが失敗しました。(CQ-4279880)
+* ターゲットクラウドの設定が失敗し、エラーget mboxリクエストが失敗しました。(CQ-4279880)
 
 ### Brand Portal {#assets-brand-portal-6540}
 
@@ -215,33 +215,33 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 >
 >Experience Managerサービスパックには、Experience ManagerFormsの修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
 
-* Correspondence Management: 後処理ワークフロー(NPR-32626)に送信した後、レターに追加の文字が表示されます。
+* Correspondence Management:後処理ワークフロー(NPR-32626)に送信した後、レターに追加の文字が表示されます。
 
-* Correspondence Management: レターは、後処理ワークフロー(NPR-32539)に送信した後、テキストコンポーネントとしてドロップダウンプレースホルダーを表示します。
+* Correspondence Management:レターは、後処理ワークフロー(NPR-32539)に送信した後、テキストコンポーネントとしてドロップダウンプレースホルダーを表示します。
 
-* Correspondence Management: レターテンプレートで定義されているデフォルト値は、プレビューモード(NPR-32511)では表示されません。
+* Correspondence Management:レターテンプレートで定義されているデフォルト値は、プレビューモード(NPR-32511)では表示されません。
 
-* モバイルForms: 送信ボタンは、HTMLバージョン(NPR-32514)でXDPフォームをレンダリングする際に、サイズが拡大されて表示されます。
+* モバイルForms:送信ボタンは、HTMLバージョン(NPR-32514)でXDPフォームをレンダリングする際に、サイズが拡大されて表示されます。
 
-* ドキュメントサービス： Service Pack 2(NPR-32508、NPR-32509)を適用した後のLettersおよびその他のページのURLアクセスの問題。
+* ドキュメントサービス：Service Pack 2(NPR-32508、NPR-32509)を適用した後のLettersおよびその他のページのURLアクセスの問題。
 
-* ドキュメントサービス： サーバー上のトランザクション数が特定の制限を超える場合、HTMLからPDFへの変換は失敗し、ファイルタイプの設定が [!DNL Forms] サーバー(NPR-32204)から削除されます。
+* ドキュメントサービス：サーバー上のトランザクション数が特定の制限を超える場合、HTMLからPDFへの変換は失敗し、ファイルタイプの設定が [!DNL Forms] サーバー(NPR-32204)から削除されます。
 
-* アダプティブForms: ブラウザーアクセシビリティツールは、WCAG2 Level AAガイドライン(NPR-32312、NPR-32309、CQ-4285439)に従ってアダプティブフォーム内のエラーをレポートします。
+* アダプティブForms:ブラウザーアクセシビリティツールは、WCAG2 Level AAガイドライン(NPR-32312、NPR-32309、CQ-4285439)に従ってアダプティブフォーム内のエラーをレポートします。
 
-* アダプティブForms: Chromeブラウザーアクセシビリティツールが、ベストプラクティスの失敗を報告します(NPR-32310)。
+* アダプティブForms:Chromeブラウザーアクセシビリティツールが、ベストプラクティスの失敗を報告します(NPR-32310)。
 
-* アダプティブForms: Experience Managerサイトページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
+* アダプティブForms:Experience Managerサイトページに埋め込まれたアダプティブフォームの設定中に、翻訳の問題が発生する(NPR-32168)。
 
-* Workbench: PDF Utilitiesサービス(NPR-32150)で「Get PDF Properties」操作を使用していると、エラーメッセージが表示されます。
+* Workbench:PDF Utilitiesサービス(NPR-32150)で「Get PDF Properties」操作を使用していると、エラーメッセージが表示されます。
 
-* ドキュメントセキュリティ： 保護されたPDFファイルをオフラインで開く際に、DisableGlobalOfflineSynchronizationDataオプションがTrueに設定されていると、失敗する(NPR-32078)。
+* ドキュメントセキュリティ：保護されたPDFファイルをオフラインで開く際に、DisableGlobalOfflineSynchronizationDataオプションがTrueに設定されていると、失敗する(NPR-32078)。
 
-* Designer: タグ付けオプションが有効になっている場合、生成されるPDF出力(NPR-32547、NPR-31983、NPR-31950)でサブフォームの境界線が消えます。
+* Designer:タグ付けオプションが有効になっている場合、生成されるPDF出力(NPR-32547、NPR-31983、NPR-31950)でサブフォームの境界線が消えます。
 
-* Designer: 表内に結合されたセルがある場合、アクセシビリティテストは、出力サービス(CQ-4285372)を使用してXDPフォームから変換された出力PDFファイルに対して失敗します。
+* Designer:表内に結合されたセルがある場合、アクセシビリティテストは、出力サービス(CQ-4285372)を使用してXDPフォームから変換された出力PDFファイルに対して失敗します。
 
-* Foundation JEE: Experience ManagerFormsサーバーがクラスターから切断された場合、キャッシュの問題により、サーバーに再接続できません。(NPR-32412)
+* Foundation JEE:Experience ManagerFormsサーバーがクラスターから切断された場合、キャッシュの問題により、サーバーに再接続できません。(NPR-32412)
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -307,7 +307,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * ファイルの種類フィルターで第2レベルのチェックボックスの選択を解除すると、すべてのチェックボックスがオフになり、検索バーのテキストが選択または選択解除されたプロパティ(NPR-31287)と同期されません。
 
-* すべてのメンバ（ユーザー/グループ）をフォルダーのMembersセクションから削除することはできません。 すべてのユーザーを削除しようとすると、ログインしたユーザーがリストに追加されます(NPR-31171)。
+* すべてのメンバ（ユーザー/グループ）をフォルダーのMembersセクションから削除することはできません。すべてのユーザーを削除しようとすると、ログインしたユーザーがリストに追加されます(NPR-31171)。
 
 * ファイル名にプラス記号(`+`)が付いているアセットは削除できません(NPR-31162)。
 
@@ -337,11 +337,11 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * ハイブリッドモード [!DNL Experience Manager] で実行されている [!DNL Dynamic Media]ときにダウンロードされたダイナミックレンディションが壊れる（画像コンテンツタイプではなく、コンテンツが「画像が見つかりません」のテキストタイプ）(NPR-30876)。
 
-* [!DNL Dynamic Media] Adobe Experience Manager時に、ビデオのエンコードワークフローで、 [!DNL Dynamic Media Classic][!DNL Dynamic Media]Scene7モードに移行されたビデオのサムネールの生成に失敗しています。(CQ-4282011)
+* [!DNL Dynamic Media] ビデオのエンコードワークフローで、Adobe Experience Managerの [!DNL Dynamic Media Classic][!DNL Dynamic Media]Scene7モードに移行したビデオのサムネールの生成に失敗しています。(CQ-4282011)
 
 * 異なるScene7会社IDを使用して、1つのインスタンスから別のインスタンスにアセットを移行する際にIpsApiExceptionが発生する問題を修正しました。(CQ-4280548)
 
-* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報としてはなりません。
+* 3Dアセットのサムネールは、サポートされている3Dモデルが [!DNL Experience Manager] (CQ-4283701)に取り込まれる場合には情報として表示されません。
 
 * 3Dアセットにカメラ表示が少ない場合は、スクロールボタンがビューアに表示されます(CQ-4283322)。
 
@@ -365,7 +365,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * PDFファイルのインデックスが作成されず、内のコンテンツを検索できません。(CQ-4278916)
 
-* 「グループはユーザー選択によって一覧表示されません： 「false to equal true」が期待される問題は、異なる `principalName` とを持つ閉じたユーザーグループを追加した場合に発生し `authorizableId` ます。(CQ-4278177)
+* 「グループはユーザー選択によって一覧表示されません：「false to equal true」が期待される問題は、異なる `principalName` とを持つ閉じたユーザーグループを追加した場合に発生し `authorizableId` ます。(CQ-4278177)
 
 * アセットUI列の表示に、特定のテナントのダムルートパスに関係なく、すべてのパスが表示される(CQ-4278175)。
 
@@ -421,7 +421,7 @@ Remove one mention of this fix.
 
 * Jetty ベースの HTTP サービスのバッファーサイズ設定でアップデートが保存されない。（NPR-30925）
 
-* QueryBuilderで、xpathクエリーでorderbyがサポートされ ``fn:name()`` るようになりました(NPR-31322)。
+* QueryBuilderで、xpathクエリーでorderbyがサポートされ `fn:name()` るようになりました(NPR-31322)。
 
 * 重複アクティベーションツリーは、 [!DNL Experience Manager] 6.3(NPR-31513)からのアップグレード時に作成されます。
 
@@ -431,7 +431,7 @@ Remove one mention of this fix.
 
 * Apache POIとApache Tikaバンドル(NPR-31018)の異なるバージョンが原因で、ZIPファイルを [!DNL Experience Manager Communities] 投稿に添付すると、エラーが表示されます。
 
-* この ``org.apache.sling.distribution.api`` バンドルは設定マネージャーに表示されないので、カスタムバンドル(NPR-31720)では使用できません。
+* この `org.apache.sling.distribution.api` バンドルは設定マネージャーに表示されないので、カスタムバンドル(NPR-31720)では使用できません。
 
 ### プロジェクト {#projects}
 
@@ -554,13 +554,13 @@ Remove one mention of this fix.
 
 * ACP API で生成された URL およびフォルダーメタデータのアセットパスが URL エンコードされません。GRANITE-26198：CQ-4271814 のホットフィックス
 * Unzipping an archive with a folder having a percent sign (%) in its name can not be opened using [!DNL Experience Manager Assets] interface. NPR-29989：CQ-4270467 のホットフィックス
-* タッチ操作対応UI: パブリケーションの管理ウィザードでは、投稿要求本文のページの後に参照が追加され、ページの後にすべてのアセットが発行され、ページがレンダリングされると、発行インスタンス内の一部のアセットが欠落します。 NPR-29985：CQ-4270724 のホットフィックス
+* タッチ操作対応UI:パブリケーションの管理ウィザードでは、投稿要求本文のページの後に参照が追加され、ページの後にすべてのアセットが発行され、ページがレンダリングされると、発行インスタンス内の一部のアセットが欠落します。 NPR-29985：CQ-4270724 のホットフィックス
 * 名前に特殊文字（URI エンコードされる文字）を含む関連アセットに対して、アセットの関連付け解除機能が機能しません。NPR-30387：CQ-4274446 のホットフィックス
 * コンテンツフラグメントを編集すると、間違ったユーザーでバージョンが作成されます。
 * テナントベースのシステムで、コレクションの作成が途中で失敗します。NPR-30114：CQ-4272948 のホットフィックス
 * アセット UI の列表示が現在のテナントの DAM ルートパスを無視して、すべてのテナント DAM パスにアクセスします。NPR-30636：CQ-4275481 のホットフィックス
 * 挿入された画像を表示できてしまうので、制限されているファイルに対する警告ウィンドウ経由で、クロスサイトスクリプティング（XSS）攻撃を受ける可能性があります。NPR-30617：CQ-4270133 のホットフィックス
-* MultiTenant: フォルダープロパティを保存するテナントは、「プロパティを編集できません。 権限が不十分です。」 ので、紛らわしくなります。NPR-30545：CQ-4275333 のホットフィックス
+* MultiTenant:フォルダープロパティを保存するテナントは、「プロパティを編集できません。権限が不十分です。」 ので、紛らわしくなります。NPR-30545：CQ-4275333 のホットフィックス
 * アセットセレクターダイアログでアセットを選択できないので、関連ソース置換機能を使用してソースを更新できません。NPR-30502：CQ-4275029 のホットフィックス
 * [!UICONTROL DAMアセットの更新] ワークフロー — 大きなサイズのmp4ファイルのアップロード時に古い状態が発生しています。 NPR-30480：CQ-4271352 のホットフィックス
 * ペイロードが空の場合、「レビュータスクを作成」機能が機能しないので、後続のレビュータスク関連アクションがすべて失敗します。NPR-30468：CQ-4274263 のホットフィックス
@@ -574,7 +574,7 @@ Remove one mention of this fix.
 * Share Link feature is not working on [!DNL Experience Manager] instance with DMS7 configuration. NPR-30080、NPR-30492：CQ-4273651 のホットフィックス
 * Adding the [!DNL Dynamic Media]–Scene7 component to the page, and then publishing the page does not trigger the dmscene7 configuration every time. NPR-30641：CQ-4275962 のホットフィックス
 * Added an IPSJobJournal in [!DNL Experience Manager] to create only one Intrusion Prevention Systems (IPS) job per processing profile. NPR-30490：CQ-4273614 のホットフィックス
-* [!DNL Dynamic Media]: アセットが [!DNL Experience Manager] 発行ノードに複製されるのを除外するデフォルトのフィルターを追加しました。 NPR-30538：CQ-4274678 のホットフィックス
+* [!DNL Dynamic Media]:アセットが [!DNL Experience Manager] 発行ノードに複製されるのを除外するデフォルトのフィルターを追加しました。 NPR-30538：CQ-4274678 のホットフィックス
 * 外部の再処理ワークフローが導入されて、複数のリソースがサポートされ、フォルダーをペイロードとして使用できるようになりました。ワークフローには 2 つのステップがあります。次のステップへのメタデータマップを通じてハンドルなしでアセットを再処理するステップと、単一の IPS ジョブですべてのアセットをアセットハンドルなしで S7 に再アップロードするステップです。For more details, see Configuring [!DNL Dynamic Media] Cloud Services. NPR-30489：CQ-4272903 のホットフィックス
 * 正しい CSV の後に間違った CSV をアップロードすると、正しい CSV が消去されます。CQ-4277694、CQ-4277814 のホットフィックス
 * 削除する投稿フォルダーに固有のアイコンが間違っています。CQ-4277580 のホットフィックス
@@ -592,7 +592,7 @@ Remove one mention of this fix.
 * ユーザー生成コンテンツが検索フィルターパネルに正しく表示されません。CQ-4273875 のホットフィックス
 * 類似検索オプションが TIFF 画像に使用できません。CQ-4278238 のホットフィックス
 * VideoPlayer で読み込み時にビデオをミュートするオプションが実装されました。CQ-4266465 のホットフィックス
-* ビューア — VideoViewer: poster=noneは、外部ビデオが使用されている場合に正しく機能しません。 CQ-4265536 のホットフィックス
+* ビューア — VideoViewer:poster=noneは、外部ビデオが使用されている場合に正しく機能しません。 CQ-4265536 のホットフィックス
 * IE11 および MS Edge ブラウザーでビデオ再生中に待機アイコンが表示されます。CQ-4251539 のホットフィックス
 * 3.8 SDKおよび5.13ビューアのREADMEファイルは更新されず、以前のリリースの情報が含まれています。 CQ-4273737 のホットフィックス
 * コンテンツフラグメントが、変更を保存する前でもバージョン管理されます。NPR-30616：CQ-4273088 のホットフィックス
@@ -606,7 +606,7 @@ Remove one mention of this fix.
 * 新しいBlueprintの場合、レコード数が40を超える場合、最初の40個のレコードのみが表示されます。 Blueprintでは、残りのレコードに空白行が表示されます(NPR-31182)。
 * テキストコンポーネントのRich Text Editor(RTE)プラグインは、日本語と韓国語のテキストに対して、歪んだ文字を表示します(NPR-31331)。
 * リッチテキストエディター(RTE)では、埋め込まれたテーブルをリスト項目として挿入できません(NPR-30879)。
-* 初期設定のスキャフォールドであるRich Text Editor(RTE)が、要素にインラインフォントサイズを適用します(NPR-31284)。
+* 初期設定のスキャフォールドであるリッチテキストエディタ(RTE)が、要素にインラインフォントサイズを適用します(NPR-31284)。
 * ユーザーが左側のパネルのフィールドにフォーカスし、キーボードショートカットを使用してコンテンツを貼り付けると、左側のパネルのフィールドからコピーしたコンテンツではなく、ページエディターのクリップボードのコンテンツを貼り付けます(NPR-31172)。
 * ユーザがマルチフィールドにファイルアップロードフィールドを追加すると、画像パスはマルチフィールドノード(NPR-30882)ではなくコンポーネントノードに保存されます。
 * この `ResponsiveGridExporter` APIはインター `com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter` フェイスを返しません。 パッ `com.day.cq.wcm.foundation.model.impl` ケージがプライベートパッケージとして宣言されます(NPR-31398)。
@@ -669,7 +669,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 **バックエンド統合**
 
 * AWS ホスト型負荷分散 URL を使用してフォームデータモデルを設定できません。NPR-30123：CQ-4273359 のホットフィックス
-* Web Service Definition Language(WSDL)を使用してフォームデータモデル(FDM)を作成する際、次のエラー・メッセージ `Caused by: com.adobe.aem.dermis.exception.DermisException: java.lang.Exception: Unable to handle content type` が返されます： NPR-30477: CQ-4272921の修正プログラム
+* Web Service Definition Language(WSDL)を使用してフォームデータモデル(FDM)を作成する際、次のエラー・メッセージ `Caused by: com.adobe.aem.dermis.exception.DermisException: java.lang.Exception: Unable to handle content type` が返されます：NPR-30477:CQ-4272921の修正プログラム
 
 **Correspondence Management**
 
@@ -736,7 +736,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 ### Assets
 
 * DAM DMGateway インターフェイスが更新されて、S3 マルチパートがサポートされるようになりました。NPR-29740：CQ-4226303 のホットフィックス
-* レンディションプレビューが `Only empty tenantId is currently supported`[!DNL Experience Manager] 6.5にアップグレードした後にエラーを生成する。NPR-29986: CQ-4272353の修正プログラム
+* レンディションプレビューが `Only empty tenantId is currently supported`[!DNL Experience Manager] 6.5にアップグレードした後にエラーを生成する。NPR-29986:CQ-4272353の修正プログラム
 * ジョブの削除を許可する削除ダイアログが表示されません。NPR-29720：CQ-4271074 のホットフィックス
 * After adding asset title in the properties page, when a user attempts to close the page, [!DNL Experience Manager] opens the properties page again. NPR-29627：CQ-4264929 のホットフィックス
 * VersioningTimelineEventProvider は、nt:version タイプのノードと共にルートバージョンを提供する必要があります。GRANITE-26063 のホットフィックス
@@ -840,7 +840,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 * OSGi only: Added a new attribute `PAGECOUNT` in Output and Forms Service.
 
-* OSGIのみ： Formsサービスを使用した静的PDFファイルの作成のサポートを有効にしました。
+* OSGIのみ：Formsサービスを使用した静的PDFファイルの作成のサポートを有効にしました。
 * 管理者およびルートユーザーに対して XMLForm.exe の権限が有効になりました。
 * Dynamics オンプレミス統合で ADFS v3.0 がサポートされるようになりました。
 
@@ -868,7 +868,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 * Adaptive Form field validation failure breaks [!DNL Adobe Sign]. CQ-4269463 のホットフィックス
 * When an [!DNL Experience Manager Forms] instance has more than 20 adaptive form fragments and name of all the form fragments starts with the same string, the search returns no or only recent 20 created fragments. CQ-4264414、CQ-4264914 のホットフィックス
 
-* アダプティブFormsアプリが大きなデータセットと共に使用される場合に、パフォーマンスの問題が発生する。 . CQ-4235310 のホットフィックス
+* アダプティブFormsアプリが大きなデータセットと共に使用される場合に、パフォーマンスの問題が発生する。. CQ-4235310 のホットフィックス
 
 * 匿名アカウントでパブリッシュインスタンスにアクセスすると、GuideRuntime スクリプトを読み込めません。CQ-4268679 のホットフィックス
 
@@ -932,7 +932,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 * PDFは、フォームフィールドを使用したPDF/A-1bへの変換に失敗し、表示方法が示されません。 NPR-29940：CQ-4269618 のホットフィックス
 
-* OSGi: レンダリング中に生成されたページ数を特定できません。 NPR-28922：CQ-4270870 のホットフィックス
+* OSGi:レンダリング中に生成されたページ数を特定できません。 NPR-28922：CQ-4270870 のホットフィックス
 * で、Formsサービスを使用した静的PDFファイルのサポートを有効にし [!DNL Experience Manager Forms OSGi]ました。 NPR-28572：CQ-4270869 のホットフィックス
 * XMLForm.exe の権限を変更できません。NPR-29828、NPR-29237：CQ-4267080 のホットフィックス
 * The static PDF created by the [!DNL Experience Manager Forms] server’s output module does not populate the language attribute/tag with the language of the document created. NPR-27332：CQ-4271002 のホットフィックス
@@ -955,8 +955,8 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 #### Forms - ドキュメントサービス  — 含まれる
 
-* OSGiのみ： OutputとFormsサービスに新しい属性PAGECOUNTが追加されました。 NPR-28922：CQ-4270870 のホットフィックス
-* OSGiのみ： Formsサービスを使用した静的PDFファイルの作成のサポートを有効にしました。 NPR-28572：CQ-4270869 のホットフィックス
+* OSGiのみ：OutputとFormsサービスに新しい属性PAGECOUNTが追加されました。 NPR-28922：CQ-4270870 のホットフィックス
+* OSGiのみ：Formsサービスを使用した静的PDFファイルの作成のサポートを有効にしました。 NPR-28572：CQ-4270869 のホットフィックス
 * 管理者およびルートユーザーに対して XMLForm.exe の権限が有効になりました。NPR-29237：CQ-4267080 のホットフィックス
 
 ### OSGi バンドルとコンテンツパッケージ
