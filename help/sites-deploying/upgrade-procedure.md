@@ -12,10 +12,10 @@ discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
+source-git-commit: 5f8198f0fd6c335708f2b771848b2e66dfc242b3
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 90%
+source-wordcount: '835'
+ht-degree: 93%
 
 ---
 
@@ -28,9 +28,12 @@ ht-degree: 90%
 
 AEM 環境をアップグレードする場合は、作成者とエンドユーザーのダウンタイムを最小化するために、オーサー環境とパブリッシュ環境のアップグレードのアプローチの違いを考慮する必要があります。このページでは、AEM 6.x のバージョンで現在実行されている AEM トポロジをアップグレードする手順の概要を説明します。オーサー層とパブリッシュ層および Mongo ベースと TarMK ベースのデプロイメントではプロセスが異なるので、各層およびマイクロカーネルは個別の節に記載されています。デプロイメントを実行するときは、最初にオーサー環境をアップグレードし、成功を確認してから、パブリッシュ環境をアップグレードすることをお勧めします。
 
-<!-->>[!IMPORTANT]
->アップグレードを実行する前にリポジトリのインデックスを作成することで、アップグレード中のダウンタイムを大幅に短縮できます。 詳細については、「オフライン再インデックス [を使用したアップグレード中のダウンタイムの低減](/help/sites-deploying/upgrade-offline-reindexing.md)—> 」を参照してください。
+<!--
+>[!IMPORTANT]
 >
+>The downtime during the upgrade can be significally reduced by indexing the repository before performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)
+-->
+
 ## TarMK のオーサー層 {#tarmk-author-tier}
 
 ### トポロジの開始 {#starting-topology}
