@@ -4,10 +4,10 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
 source-wordcount: '9240'
-ht-degree: 62%
+ht-degree: 63%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 62%
 
 では、アセット [!DNL Adobe Experience Manager Assets] の保存や管理だけでなく、様々な操作を行うことができます。 [!DNL Experience Manager] オファーのエンタープライズグレードのアセット管理機能。 アセットの編集と共有、高度な検索の実行、サポートされる多数のファイル形式の複数レンディションの作成、バージョンとデジタル権限の管理、アセットの処理の自動化、メタデータの管理と管理、注釈を使用した共同作業などが可能です。
 
-この記事では、作成やアップロードなど、基本的なアセット管理タスクについて説明します。 メタデータの更新； コピー、移動、削除、 アセットの公開、非公開、検索を行います。 ユーザインターフェイスについて詳しくは、「アセットユーザインターフェイス [の概要](/help/sites-authoring/basic-handling.md)」を参照してください。 To manage Content Fragments, see [manage Content Fragments](/help/assets/content-fragments/content-fragments-managing.md) assets.
+この記事では、作成やアップロードなど、基本的なアセット管理タスクについて説明します。メタデータの更新；コピー、移動、削除、アセットの公開、非公開、検索を行います。 ユーザインターフェイスについて詳しくは、「アセットユーザインターフェイス [の概要](/help/sites-authoring/basic-handling.md)」を参照してください。 To manage Content Fragments, see [manage Content Fragments](/help/assets/content-fragments/content-fragments-managing.md) assets.
 
 ## フォルダーの作成 {#creating-folders}
 
@@ -58,11 +58,11 @@ You can upload various types of assets (including images, PDF files, RAW files, 
 
 Before uploading an asset, ensure that it is in a [format](/help/assets/assets-formats.md) that [!DNL Experience Manager Assets] supports.
 
-1. In the [!DNL Assets] user interface, navigate to the location where you want to add digital assets.
+1. [!DNL Assets] ユーザーインターフェイスで、デジタルアセットを追加する場所に移動します。
 1. アセットをアップロードするには、以下のいずれかの操作をおこないます。
 
    * On the toolbar, click **[!UICONTROL Create]**. メニューで[ **[!UICONTROL ファイル]**]をクリックします。 表示されたダイアログで、必要に応じてファイル名を変更できます。
-   * In a browser that supports HTML5, drag the assets directly on the [!DNL Assets] user interface. ファイル名を変更するためのダイアログは表示されません。
+   * HTML5 をサポートするブラウザーで、アセットを [!DNL Assets] ユーザーインターフェイスに直接ドラッグします。ファイル名を変更するためのダイアログは表示されません。
 
    ![アセットをアップロードするためのオプションを作成する](assets/create-options.png)
 
@@ -82,7 +82,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    ![一時停止したアセットのアップロードの再開](assets/resume-paused-upload.png)
 
-   進行中のアップロードをキャンセルするには、進行状況バーの横にある閉じるボタン（「`X`」）をクリックします。When you cancel the upload operation, [!DNL Assets] deletes the partially uploaded portion of the asset.
+   進行中のアップロードをキャンセルするには、進行状況バーの横にある閉じるボタン（「`X`」）をクリックします。アップロード処理をキャンセルすると、[!DNL Assets] はアセットのアップロード済みの部分を削除します。
 
    アップロードを再開する機能は、帯域幅が狭く、ネットワークの誤作動によりサイズの大きなアセットのアップロードに時間がかかるシナリオで特に便利です。アップロード処理を一時停止して、後で状況が改善したときに処理を再開できます。再開すると、処理を一時停止した箇所からアップロードが開始されます。
 
@@ -110,9 +110,9 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    ![重複アセットが検出されましたダイアログ](assets/duplicate-asset-detected.png)
 
-   重複アセットを保持するに [!DNL Assets]は、「 **[!UICONTROL 保持]**」をクリックします。 To delete the duplicate asset you uploaded, click **[!UICONTROL Delete]**.
+   [!DNL Assets] で重複アセットを保持するには、「**[!UICONTROL 保持]**」をクリックします。To delete the duplicate asset you uploaded, click **[!UICONTROL Delete]**.
 
-   [!DNL Experience Manager Assets] では、ファイル名に禁止文字が含まれるアセットをアップロードできません。If you try to upload an asset with file name containing a disallowed character or more, [!DNL Assets] displays a warning message and stops the upload until you remove these characters or upload with an allowed name.
+   [!DNL Experience Manager Assets] では、ファイル名に禁止文字が含まれるアセットをアップロードできません。ファイル名に禁止文字が含まれるアセットをアップロードしようとすると、[!DNL Assets] に警告メッセージが表示され、これらの文字を削除するか使用可能な名前でアップロードするまでアップロードが停止されます。
 
    組織固有のファイル命名規則に合うように、[!UICONTROL アセットをアップロード]ダイアログでは、アップロードするファイルに長い名前を指定できます。
 
@@ -127,9 +127,9 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    In addition, the [!DNL Assets] user interface displays the most recent asset that you upload or the folder that you created first.
 
-   If you cancel the upload operation before the files are uploaded, [!DNL Assets] stops uploading the current file and refreshes the content. ただし、既にアップロードされているファイルは削除されません。
+   ファイルがアップロードされる前にアップロード操作をキャンセルすると、[!DNL Assets] が現在のファイルのアップロードを停止し、コンテンツを更新します。ただし、既にアップロードされているファイルは削除されません。
 
-   The upload progress dialog in [!DNL Assets] displays the count of successfully uploaded files and the files that failed to upload.
+   [!DNL Assets] のアップロード進行状況ダイアログには、アップロードが成功したファイルと失敗したファイルの数が表示されます。
 
 ### 順次アップロード {#serialuploads}
 
@@ -149,7 +149,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 >[!NOTE]
 >
->Dynamic Media-Scene7モードでFTP経由でアセットをアップロードするには、機能パック18912をオーサーインスタンスにインスト [!DNL Experience Manager] ールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行について [は、機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
+>ダイナミックメディア —Scene7モードでFTPを使用してアセットをアップロードするには、機能パック18912をオーサーインスタンスにインスト [!DNL Experience Manager] ールします。 Contact [Adobe Customer Care](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) to get access to FP-18912 and complete the setup of your FTP account. 詳しくは、一括アセット移行について [は、機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md)。
 >
 >If you use FTP for uploading assets, the upload settings specified in [!DNL Experience Manager] are ignored. 代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
@@ -307,7 +307,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 >[!NOTE]
 >
->サーブレットAPIバージョンが3.1より前のJEEサーバーで実行しているAdobe Experience Managerでは、ストリーミングアップロードは無効になっています。
+>サーブレットAPIバージョン3.1より前のJEEサーバーで実行しているAdobe Experience Managerでは、ストリーミングアップロードが無効になっています。
 
 ### アセットが含まれている ZIP アーカイブの抽出 {#extractzip}
 
@@ -357,7 +357,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 >[!MORELIKETHIS]
 >
->* [プレビューDynamic Mediaアセット](/help/assets/previewing-assets.md)。
+>* [プレビューダイナミックメディアアセット](/help/assets/previewing-assets.md)。
 >* [サブアセットの表示](managing-linked-subassets.md#viewing-subassets).
 
 
@@ -379,7 +379,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
    ![日付の時間選択または「時間」フィールドのキーボードキーを使用して、アセットアクティベーションの日時を追加します。](assets/datepicker.png)
 
-   *図： 日付選択を使用して、アセットのアクティベーションをスケジュールします。*
+   *図：日付選択を使用して、アセットのアクティベーションをスケジュールします。*
 
 1. 特定の期間の後にアセットのアクティベートを解除するには、「**[!UICONTROL オフタイム]**」フィールドの横にある日付選択を使用して、アクティベートを解除する日付と時間を選択します。アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。[!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、 Web インターフェイスでも HTTP API でも使用できません。[!DNL Assets]
 
@@ -695,7 +695,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
 ![アセットのタイムラインエントリの並べ替え](assets/sort_timeline.gif)
 
-*図： アセットのタイムラインエントリを並べ替えます。*
+*図：アセットのタイムラインエントリを並べ替えます。*
 
 >[!NOTE]
 >
@@ -836,7 +836,7 @@ If an asset includes annotations in foreign languages (especially non-latin lang
 1. CQ-DAM-Handler-Gibson Font Manager サービスを設定するには、以下のいずれかをおこないます。
 
    * 「システムフォントディレクトリ」オプションで、システムのフォントディレクトリの完全パスを指定する。例えば Mac ユーザーの場合、「システムフォントディレクトリ」オプションで */Library/Fonts* と指定します。[!DNL Experience Manager] はこのディレクトリからフォントを取得します。
-   * `fonts` フォルダー内に ``crx-quickstart`` という名前のディレクトリを作成する。CQ-DAM-Handler-Gibson Font Manager サービスは `crx-quickstart/fonts` からフォントを自動的に取得します。「Adobe サーバーフォントディレクトリ」オプション内でデフォルトパスを上書きすることができます。
+   * `fonts` フォルダー内に `crx-quickstart` という名前のディレクトリを作成する。CQ-DAM-Handler-Gibson Font Manager サービスは `crx-quickstart/fonts` からフォントを自動的に取得します。「Adobe サーバーフォントディレクトリ」オプション内でデフォルトパスを上書きすることができます。
 
    * システムにフォント用の新しいフォルダーを作成し、必要なフォントをこのフォルダーに保存する。次に、「カスタマーフォントディレクトリ」オプションにこのフォルダーへの完全パスを指定します。
 
@@ -875,7 +875,7 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 
    ![左側のナビゲーションメニューで、タイムラインオプションを選択します](assets/timeline.png)
 
-   *図： ページの左上の領域からメニューを開き、「[!UICONTROL タイムライン]」オプションを選択します。*
+   *図：ページの左上の領域からメニューを開き、「[!UICONTROL タイムライン]」オプションを選択します。*
 
 1. アセットのバージョンを作成するには：
 
@@ -885,7 +885,7 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 
       ![サイドバーからアセットバージョンを作成](assets/create-new-version-from-timeline.png)
 
-      *図： タイムライン[!UICONTROL 左サイドバーからアセットのバージョンを作成し]ます。*
+      *図：タイムライン[!UICONTROL 左サイドバーからアセットのバージョンを作成し]ます。*
 
 1. アセットのバージョンを表示するには：
 
@@ -903,7 +903,7 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 
       ![元に戻すバージョンを選択します](assets/select_version.png)
 
-      *図： バージョンを選択し、それに戻します。 これが現在のバージョンになり、DAMユーザーが使用できるようになります。*
+      *図：バージョンを選択し、それに戻します。 これが現在のバージョンになり、DAMユーザーが使用できるようになります。*
 
 1. 2つのバージョンの画像を比較するには、次の手順に従います。
    * 現在のバージョンと比較するバージョンをクリックします。
@@ -911,7 +911,7 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 
    ![スライダを使用して、選択したアセットのバージョンと現在のバージョンを比較する](assets/version-slider.gif)
 
-   *図： スライダを使用すると、選択したアセットのバージョンを現在のバージョンと簡単に比較できます。*
+   *図：スライダを使用すると、選択したアセットのバージョンを現在のバージョンと簡単に比較できます。*
 
 ### Start a workflow on an asset {#starting-a-workflow-on-an-asset}
 
