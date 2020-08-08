@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5 固有のリリース�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2f5072a73b11853bbfd63c4b4ce9ffcf186adad1
+source-git-commit: ca965d8495c0460b2b6bc5e08d8818b91f9fcdee
 workflow-type: tm+mt
-source-wordcount: '4522'
+source-wordcount: '4531'
 ht-degree: 7%
 
 ---
@@ -25,11 +25,11 @@ ht-degree: 7%
 
 ## Adobe Experience Manager6.5.5.0に含まれるもの {#what-s-included-in-aem}
 
-Adobe Experience Manager6.5.5.0は、2019 **年4月のGAリリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上にインストールできます。
+Adobe Experience Manager6.5.5.0は、2019 **年4月のGAリリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上に設置できます。
 
 Adobe Experience Manager6.5.5.0で導入された主な機能および機能強化には、次のものが含まれます。
 
-* Adobe Experience Managerの受信トレイに表示する列名をカスタマイズします。
+* Adobe Experience Manager受信トレイに表示する列名をカスタマイズします。
 
 * ページエディター、コアコンポーネント、RTE、管理者ユーザーインターフェイスなど、Experience ManagerWebコンテンツ管理(WCM)の様々な領域でのアクセシビリティが向上しました。
 
@@ -39,11 +39,11 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * ユーザーインターフェイスフローでの例外処理を改善 [!DNL Adobe Experience Manager Assets] しました。
 
-* Dynamic MediaScene7の公開URLを取得するために、新しいメソッド `getRemoteAssetPublishURL` がインター `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` フェイスに追加されました。
+* ダイナミックメディアScene7の公開URLを取得するために、インター `getRemoteAssetPublishURL``com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` フェイスに新しいメソッドが追加されました。
 
 * [アクセシビリティの強化](#assets-6550) (Webコンテンツアクセシビリティガイドライン(WCAG) [!DNL Adobe Experience Manager Assets] に準拠)
 
-* Adobe Experience Manager内からパッケージ共有の統合を削除しました。
+* パッケージ共有の統合がAdobe Experience Manager内から削除されました。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.22.3 に更新しました。
 
@@ -77,8 +77,9 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 * エクスペリエンスフラグメントコンポーネントのパスを選択し、「選択ダイアログを開く」チェックボックスを選択した場合、パスブラウザー(NPR-32308)で選択されたパスに移動しません。
 * Experience Manager6.2からExperience Manager6.5にアップグレードした場合、静的テンプレートのParsysコンポーネントが正しく表示されません。 Parsysコンポーネントの高さは0に設定され、その中のコンポーネントは表示されません(NPR-33663)。
 * ユーザーがレイアウトコンテナをコピーして同じページに貼り付けた場合、レイアウトコンテナのコンポーネントは表示されません(NPR-33648)。
-* Dispatcherの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33629)。
+* ディスパッチャーの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33629)。
 * PreferencesServlet(NPR-33438)でXSSが反映されている。
+* 匿名ユーザーは、CRX DE Liteの機能(GRANITE-27790)にアクセスできます。
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -92,7 +93,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * 並べ替え可能なヘッダー(リスト表示、 [!UICONTROL タイムライン、およびパブリケーション] 表示の  管理ページ)の並べ替え機能が、スクリーンリーダーによって通知され、列ヘッダーの並べ替えコントロールがキーボード(NPR-32979)を使用してアクセスできるようになりました。
 
-* コメントカード、バージョン更新、コンボボックス、メニューの山形アイコンなどのクリック可能な要素は、注目してキーボード(NPR-33514)を使用して操作できるようになりました。
+* コメントカード、バージョン更新、コンボボックス、メニューの山形アイコンなどのクリック可能な要素は、注目し、キーボード(NPR-33514)を使用して操作できるようになりました。
 
 * インサイト表示のインサイトアイコン（使用方法、インプレッション数およびクリック数）の機能（またはアクションの目的）が、スクリーンリーダー  (NPR-33513)によって正しくアナウンスされるようになりました。
 
@@ -160,7 +161,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * ビデオのボリュームを制御する機能に、（ボリュームスライダーにフォーカスするために）タブと、（ボリュームを調整するために）キーボードの(NPR-32065)矢印キーを通してアクセスできるようになりました。
 
-* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザー(NPR-32064)に対して通知されるようになりました。
+* ファイルサイズフィルターの下限([!UICONTROL 送信者])と上限(宛先)の入力フィールドの目的が、近視眼的なスクリーンリーダーユーザーに対して通知されるようになりました(NPR-32064)。
 
 * 「 [!UICONTROL 作成と翻訳] 」フォームの「 [!UICONTROL 言語] 」メニューにブラウズモードでアクセスできるようになりました。(CQ-4293906)
 
@@ -186,7 +187,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * メタデータスキーマでカスケーディングポップアップを使用する場合、（子のドロップダウンから）アポストロフィを含むドロップダウンオプションを選択して保存すると、アセットの [!UICONTROL プロパティ] (NPR-32649)を再度開いた後に、選択されたアポストロフィオプションが消えます。
 
-* [!UICONTROL 「アセットインサイトの同期ジョブ] 」は、(Analytics側で)次のエントリに移動する代わりに無効なエントリが見つかると停止し、失敗します(NPR-32674)。
+* [!UICONTROL 「アセットインサイトの同期ジョブ] 」は、（Analytics側で）次のエントリ(NPR-32674)に移動する代わりに無効なエントリが見つかると停止し、失敗します。
 
 * パノラマビューアのモバイルブラウザでは、モーションセンサーがデフォルトで無効になっているので、ジャイロは機能しません。(CQ-4272937)
 
@@ -200,7 +201,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * 10,000を超えるアセットを含むスマートコレクションを開くと、ログ内でトラバーサルの警告が観察されます(NPR-32980)。
 
-* Dynamic MediaScene7ランモード(NPR-32995)で [!DNL Adobe Experience Manager] 作業している場合、アセットを別のフォルダーに移動すると、アセット名が小文字に変更されます。
+* ダイナミックメディアScene7ランモード(NPR-32995)で [!DNL Adobe Experience Manager] 作業中にアセットを別のフォルダーに移動すると、アセット名が小文字に変更されます。
 
 * 検索されたアセットは、検索結果からそのプロパティに移動した後で検索結果に戻って削除した後は削除できません(NPR-32998)。
 
@@ -214,11 +215,11 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * スマート切り抜きプロファイルを含むフォルダーの下のPDFのレンディションパネルを開くログ(CQ-4294201)で例外が発生する。
 
-* Dynamic MediaScene7実行モード(CQ-4294200)とのExperience Managerで [!UICONTROL Dynamic Mediaの同期モード] がデフォルトで無効になっている場合、画像プリセットは公開されません。
+* ダイナミックメディアScene7実行モード(CQ-4294200)とのExperience Manager時に [!UICONTROL ダイナミックメディア同期モード] がデフォルトで無効になっている場合、画像プリセットは公開されません。
 
 * バルクアップロード中のアセット処理が停止し、ワークフローインスタンスにDAM更新アセットのスタックインスタンスが表示される(CQ-4293916)。
 
-* Experience ManagerでのDynamic Media設定の作成は機能しますが、ユーザーインターフェイスで「保存」を選択しても何も起こりません。(CQ-4292442)
+* Experience Managerでのダイナミックメディア設定の作成は機能しますが、ユーザーインターフェイスで「保存」を選択しても何も起こりません。(CQ-4292442)
 
 * Safari/Macでのプログレッシブ再生でF4Vビデオアセットのプレビューが機能しない(CQ-4289844)。
 
@@ -230,11 +231,11 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 * 6.5.5.0で修正されたパフォーマンスの問題は次のとおりです(CQ-4279206)。
 
-   * 大きなバイナリをDynamic MediaのImage Processing Serverにアップロードするには、時間がかかりすぎます。
+   * 大きなバイナリをダイナミックメディア画像処理サーバーにアップロードするには、時間がかかり過ぎます。
 
-   * Dynamic MediaのScene7建築により、Experience Managerでのサムネールの生成時間が長くなりました。
+   * ダイナミックメディアScene7アーキテクチャが原因で、Experience Manager時のサムネールの生成時間が長くなりました。
 
-* 大量のアセットを持つお客様のDynamic MediaScene7への移行の問題が発生する(CQ-4279206)。
+* 大量のアセットを持つお客様の場合、Dynamic MediaのScene7移行の問題が失敗する(CQ-4279206)。
 
 * ビデオ360ビューワのレイアウトが使用され `setVideo` ると壊れ、使用時にビデオが下に移動し `video= modifier` ます(CQ-4263201)。
 
@@ -261,12 +262,12 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 ### 統合 {#integrations-6550}
 
 * Adobe Targetコンポーネントを含むページが公開されると、内部キャッシュはクリアされます(NPR-33162)。
-* Adobe Targetとの統合は11では機能しません( [!DNL Windows Internet Explorer] NPR-33111)。
+* Adobe Targetとの統合は11では機能しません(NPR-33111) [!DNL Windows Internet Explorer] 。
 * Adobe Targetの設定時に、 [!UICONTROL 会社] と [!UICONTROL レポートスイート] (NPR-32502)の各フィールドはレポートソースの選択時に表示されません。
-* AdobeI/O [!DNL Experience Fragments] を使用して書き出す場合、Source ProductなどのメタデータはAdobe Targetに書き出されません(NPR-32159)。
+* AdobeI/O [!DNL Experience Fragments] を使用して書き出す場合、「Source Product」などのメタデータはAdobe Targetに書き出されません(NPR-32159)。
 * ローカルExperience Managerの管理者グループに属する権限のあるIMSユーザーは、IMS設定を作成または変更できません(NPR-33045)。
 * Adobeの起動の設定ページに、すべてのレコードが表示されるわけではありません(NPR-33011)。
-* JavaScriptエラー(NPR-32996)が原因で、content-authorsグループのユーザーはAdobe Targetコンポーネントのプロパティを編集できません。
+* content-authorsグループのユーザーは、JavaScriptエラー(NPR-32996)が原因で、Adobe Targetコンポーネントのプロパティを編集できません。
 * JSONのクロスサイトスクリプティング(NPR-32744)。
 
 ### 翻訳プロジェクト {#translation-6550}
@@ -310,22 +311,22 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 >[!NOTE]
 >
->Experience Managerサービスパックには、の修正が含まれていません [!DNL Forms]。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsに関する修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
+>Experience Managerサービスパックには、の修正が含まれていません [!DNL Forms]。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
 
-* Correspondence Management: レターを送信した後、ターゲット領域内のアセットの順序が変化する(NPR-33359、NPR-33153)。
-* アダプティブForms: ユーザーがアダプティブフォームを編集すると、 [!UICONTROL ページ開始] ( [!UICONTROL Page Information] )メニューの「情報のワークフロー」オプションが機能しません(NPR-33004)。
-* アダプティブForms: 複数の添付ファイルが含まれるアダプティブフォームを保存できません(NPR-32997)。
-* アダプティブForms: アダプティブフォームでパネルレイアウトを変更するとエラーが発生します(CQ-4293880)。
-* アダプティブForms: アダプティブフォームの辞書の文字列に対する新しい行で、 `&#xa;` 文字が辞書(NPR-33266)に追加されます。
-* アダプティブForms: ユーザーがアダプティブフォームをHTMLフォームとしてプレビューした場合、「 [!UICONTROL Scribble Signature] 」フィールドはタブのフォーカスを保持できません(NPR-33159)。
-* アダプティブForms: アダプティブフォームの送信時に表示されるエラーメッセージは、 `aria-describedBy` 属性(NPR-33071)にリンクされません。
-* アダプティブForms: アダプティブフォームで必須とマークされたフィールドのARIAアクセシビリティスキーマ(NPR-33070)では、必須属性が「True」に設定されていません。
-* PDFGサービス： ユーザーがテキストファイルをPDFに変換すると、日本語の文字は正しくレンダリングされません(NPR-33238)。
+* Correspondence Management:レターを送信した後、ターゲット領域内のアセットの順序が変化する(NPR-33359、NPR-33153)。
+* アダプティブForms:ユーザーがアダプティブフォームを編集すると、 [!UICONTROL ページ開始] ( [!UICONTROL Page Information] )メニューの「情報のワークフロー」オプションが機能しません(NPR-33004)。
+* アダプティブForms:複数の添付ファイルが含まれるアダプティブフォームを保存できません(NPR-32997)。
+* アダプティブForms:アダプティブフォームでパネルレイアウトを変更するとエラーが発生します(CQ-4293880)。
+* アダプティブForms:アダプティブフォームの辞書の文字列に対する新しい行で、 `&#xa;` 文字が辞書(NPR-33266)に追加されます。
+* アダプティブForms:ユーザーがアダプティブフォームをHTMLフォームとしてプレビューした場合、「 [!UICONTROL Scribble Signature] 」フィールドはタブのフォーカスを保持できません(NPR-33159)。
+* アダプティブForms:アダプティブフォームの送信時に表示されるエラーメッセージは、 `aria-describedBy` 属性(NPR-33071)にリンクされません。
+* アダプティブForms:アダプティブフォームで必須とマークされたフィールドのARIAアクセシビリティスキーマ(NPR-33070)では、必須属性が「True」に設定されていません。
+* PDFGサービス：ユーザーがテキストファイルをPDFに変換すると、日本語の文字は正しくレンダリングされません(NPR-33238)。
 * PDFGサービス： `CreatePDF` 操作は、PDFファイルをPDF OCR形式(NPR-32994)に変換できません。
-* PDFGサービス： ドキュメントの200番目のインスタンス(NPR-32766)のPDF変換は失敗し [!DNL OpenOffice] ます。
-* BackendIntegration: 非アクティブな状態が正しくないために更新トークンの期限が切れると、フォームデータモデルの要求は失敗します(NPR-33169)。
-* Designer: スクリーンリーダーは、XDPファイルで定義されているカスタムタブ順序の代わりに、デフォルトの地理的順序に基づいてタブ順序を実行します(NPR-32160)。
-* Designer: タグ付けオプションを有効にすると、生成されたPDF出力でサブフォームの境界線が非表示になります(NPR-32778)。
+* PDFGサービス：ドキュメントの200番目のインスタンス(NPR-32766)のPDF変換は失敗し [!DNL OpenOffice] ます。
+* BackendIntegration:非アクティブな状態が正しくないために更新トークンの期限が切れると、フォームデータモデルの要求は失敗します(NPR-33169)。
+* Designer:スクリーンリーダーは、XDPファイルで定義されているカスタムタブ順序の代わりに、デフォルトの地理的順序に基づいてタブ順序を実行します(NPR-32160)。
+* Designer:タグ付けオプションを有効にすると、生成されたPDF出力でサブフォームの境界線が非表示になります(NPR-32778)。
 * GuideSOMProviderServlet(NPR-32700)に格納されたXSS。
 
 ## Install 6.5.5.0 {#install}
@@ -348,7 +349,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 1. Service Packを [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)（ソフトウェア配布）からダウンロードします。
 
-1. パッケージマネージャーを開き、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。 使用方法について詳しくは、 [パッケージマネージャーを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)。
+1. Open Package Manager and click **[!UICONTROL Upload Package]** to upload the package. 使用方法について詳しくは、 [パッケージマネージャーを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
 1. Select the package and click **[!UICONTROL Install]**.
 
@@ -358,7 +359,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 
 **自動インストール**
 
-Adobe Experience Manager6.5.5.0を作業インスタンスに自動的にインストールするには、2つの方法があります。
+作業インスタンスにAdobe Experience Manager6.5.5.0を自動的にインストールするには、次の2つの方法があります。
 
 A.サーバーがオンラインで使用可能になったら、パッケージを `../crx-quickstart/install` フォルダーに配置します。 パッケージが自動的にインストールされます。
 
@@ -384,7 +385,7 @@ B. Package Managerの [HTTP APIを使用します](https://docs.adobe.com/conten
 >
 >AEM Forms を使用していない場合はスキップしてください。Adobe Experience Manager Formsの修正は、別のアドオンパッケージを通じて提供されています。
 
-1. Adobe Experience Managerサービスパックがインストールされていることを確認します。
+1. Adobe Experience ManagerService Packがインストールされていることを確認します。
 1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) for your operating system.
 1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
@@ -420,7 +421,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| 統合 | AEM cloud servicesのオプトイン **[!UICONTROL 画面は非推奨です]** 。 AEM 6.5で更新されたAEMとTargetの統合により、AdobeIMSとI/Oを介した認証を使用するTarget StandardAPIがサポートされ、AEMページの解析とパーソナライゼーションの実装でAdobeの起動の役割が大きくなり、オプトインウィザードは機能的に無関係になりました。 | 各AEM cloud servicesを介して、システム接続、AdobeIMS認証、AdobeI/O統合を設定します。 |
+| 統合 | AEM **[!UICONTROL クラウドサービスのオプトイン画面は非推奨です]** 。 AEM 6.5で更新されたAEMとターゲットの統合により、AdobeIMSとI/Oを介した認証を使用するTarget Standard APIがサポートされ、AEMページの解析とパーソナライゼーションの実装でAdobe開始の役割が増加しているため、オプトインウィザードは機能的に無関係になりました。 | 各AEMクラウドサービスを介して、システム接続、AdobeIMS認証、AdobeI/O統合を設定します。 |
 | コネクタ | AEM 6.5では、JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013のAdobeが非推奨です。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
@@ -442,7 +443,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * SUM、MAX、MINなどの集計機能が使用されると、アダプティブフォームのサーバー側検証に失敗します。 CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
-   * 買い物かご可能なバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されません。
+   * ダイナミックメディアのインタラクティブ画像のホットスポットは、買い物かご可能なバナービューアでアセットをプレビューすると表示されません。
 
 ## OSGi bundles and content packages included {#osgi-bundles-and-content-packages-included}
 
