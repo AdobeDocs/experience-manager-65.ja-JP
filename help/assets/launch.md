@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
 workflow-type: tm+mt
 source-wordcount: '6623'
 ht-degree: 96%
@@ -450,7 +450,7 @@ Adobe Analytics を設定した後、統合のために次の設定がおこな�
 
    使用できるレポートスイートがない場合は、設定を続行する前に、ユーザーまたは Adobe Analytics 管理者がレポートスイートを作成する必要があります。
 
-   [レポートとレポートスイート](https://docs.adobe.com/content/help/ja-JP/analytics/admin/manage-report-suites/report-suites-admin.html)および[レポートスイートの作成](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-console/create-report-suite.html)を参照してください。
+   [レポートとレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)および[レポートスイートの作成](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-console/create-report-suite.html)を参照してください。
 
    Adobe Analytics では、**[!UICONTROL 管理者／レポートスイート]**&#x200B;でレポートスイートを管理します。
 
@@ -464,7 +464,7 @@ Adobe Analytics を設定した後、統合のために次の設定がおこな�
 
    Adobe Analytics でサポートされている任意のタイプの変数を使用できます。変数タイプ（カスタムトラフィック [prop] や、コンバージョン [eVar] など）に関する決定は、Adobe Analytics 実装の特定のニーズによっておこなう必要があります。
 
-   [prop と eVar の概要](https://docs.adobe.com/content/help/ja-JP/analytics/implementation/vars/page-vars/evar.html)を参照してください。
+   [prop と eVar の概要](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/evar.html)を参照してください。
 
    このドキュメントの目的では、カスタムトラフィック（prop）変数のみが使用されます。これは、Web ページでアクションが発生してから数分以内にアナリティクスレポートで使用できるようになるためです。
 
@@ -591,7 +591,7 @@ Adobe Launch を使用したトラッキングの概要については、[統合
 
 ### ライブラリの公開 {#publishing-a-library}
 
-To make changes in the Adobe Launch configuration (including Property, Extensions, Rules, and Data Elements set up), you need to *publish* such changes*.* Adobe Launchでの公開は、プロパティ設定の「公開」タブから実行します。
+To make changes in the Adobe Launch configuration (including Property, Extensions, Rules, and Data Elements set up), you need to *publish* such changes*.*Adobeの起動での公開は、プロパティ設定の「公開」タブから実行します。
 
 Adobe Launch には、複数の開発環境、1 つのステージング環境、1 つの実稼動環境が存在する場合があります。デフォルトでは、AEM の Adobe Launch クラウド設定は、AEM オーサーノードを Adobe Launch のステージング環境に、AEM パブリッシュノードを Adobe Launch の実稼動環境にポイントします。この配置は、デフォルトの AEM 設定で、Adobe Launch ライブラリを AEM オーサーで使用するためにステージング環境に公開し、AEM パブリッシュで使用できるように実稼動環境に公開する必要があることを意味します。
 
@@ -660,7 +660,7 @@ Adobe Launch 環境について詳しくは、[環境](https://docs.adobe.com/co
 前提条件：
 
 * AEM は、オーサーインスタンスとパブリッシュインスタンスの両方を実行します。
-* AEM authorノードはDynamic Mediaで設定されます — Scene7実行モード(dynamicmedia_s7)
+* AEM authorノードがダイナミックメディア —Scene7の実行モード(dynamicmedia_s7)で設定されている
 * Dynamic Media WCM コンポーネントは AEM Sites で有効になっています。
 
 AEM 設定は、次の 2 つの主な手順で構成されます。
@@ -838,7 +838,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 1. 必要に応じて、**[!UICONTROL Adobe Launch 設定の作成]**&#x200B;ウィンドウの&#x200B;**[!UICONTROL 実稼動]**&#x200B;ページ（3/3 ページ）で、前の&#x200B;**[!UICONTROL ステージング]**&#x200B;ページでおこなったのと同様に、自動入力された実稼動 URI を修正します。
 1. 右上隅近くにある「**[!UICONTROL 作成]**」をクリックします。
 
-   次の例のように、新しいAdobe Launch Cloud Configurationが作成され、Webサイトの横に表示されます。
+   次の例のように、新しいAdobe起動のクラウド設定が作成され、Webサイトの横に表示されます。
 
 1. 新しい Adobe Launch クラウド設定を選択します（設定タイトルを選択すると、設定タイトルの左側にチェックマークが表示されます）。ツールバーの「**[!UICONTROL 公開]**」をクリックします。
 
