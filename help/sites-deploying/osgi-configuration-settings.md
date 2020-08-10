@@ -21,7 +21,7 @@ ht-degree: 57%
 
 # OSGi 設定{#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) はAEMの技術スタックの基本要素です。 AEMの複合バンドルとその設定を制御するために使用されます。
+[OSGi](https://www.osgi.org/) はAEMのテクノロジスタックの基本要素です。AEMの複合バンドルとその設定を制御するために使用されます。
 
 OSGi は標準化されたプリミティブを提供し、小さく再利用が可能で連携機能に優れたコンポーネントを組み合わせてアプリケーションを構築することを可能にします。これらのコンポーネントからアプリケーションを作成し、デプロイすることができます。**
 
@@ -39,19 +39,19 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 >[!NOTE]
 >
->OSGi設定の相違ツール( [AEM Tools](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)の一部)は、デフォルトのOSGi設定をリストするために使用できます。
+>AEMツールの一部であるOSGi設定相違ツールは、 [デフォルトのOSGi設定のリストに使用でき](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)ます。
 
 >[!NOTE]
 >
 >AEM 内の機能の特定の領域では、さらに多くのバンドルが必要な場合があります。この場合、設定の詳細は、該当する機能の関連ページで確認できます。
 
-**AEMレプリケーションイベントリスナー** 設定：
+**AEMレプリケーションイベントリスナー** 構成：
 
 * レプリケーション・イベントがリスナーに配布される **実行モード**。 たとえば、authorと定義した場合、これはレプリケーションを「開始」するシステムです。
 
 * プロジェクトコードが発行環境で複製イベント（逆複製）を処理する場合は、 **** 発行モードを実行する必要があります。 例えば、ディスパッチャーを使用して発行環境からフラッシュする場合や、他の発行インスタンスへの標準複製が発生する場合などです。
 
-**AEM Repository change listener** Configure:
+**AEMリポジトリ変更リスナー** ：設定：
 
 * **パス**。リポジトリイベントをリスンして配布できる状態になっている場所です。
 
@@ -94,7 +94,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 * テストを実施して、状況に応じた値を確立する必要があります。
 * これらの設定はインスタンスのパフォーマンスに影響を及ぼす可能性があるので、変更の際は十分な理由と検討が必要です。
 
-**Apache Sling GET Servlet** レンダリングの設定
+**Apache SlingGETサーブレット** ：レンダリングのいくつかの側面を設定します。
 
 * **Auto Index**：閲覧のためのディレクトリのレンダリングを有効または無効にします。
 * **Enable**（または Disable）：デフォルトのレンディション（**HTML**、**Plain Text**、**JSON**、**XML** など）を有効または無効にします。JSON を無効にしないでください。
@@ -115,7 +115,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Sling JCR Installer** これらのパラメーターは、設定はおそらく必要ありませんが、開発やデバッグを行う際に知っておくと役立ちます。 例えば、インストールフォルダーはパッケージのチェックイン／チェックアウトまたは作成に役立つ場合があります。
 
-* **インストールフォルダ名regexp** と **Max hierarchy depth of install folders** — インストールするリソースを検索する場所と深さを指定します。 ワイルドカードを使用する場合（.など）*/install)を指定すると、およびなど、該当するすべての一致が検索 `/libs/sling/install` され `/libs/cq/core/install`ます。
+* **インストールフォルダ名regexp** と **Max hierarchy depth of install folders** — インストールするリソースを検索する場所と深さを指定します。ワイルドカードを使用する場合（.など）*/install)を指定すると、およびなど、該当するすべての一致が検索 `/libs/sling/install` され `/libs/cq/core/install`ます。
 
 * **Search Path**：インストールするリソースを jcrinstall が検索するパスのリストです。そのパスの重み付け係数を示す数値も表示されます。
 
@@ -123,7 +123,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * **再試行間隔**、 **最大再試行数**、最大並列ジョブ数 **、**&#x200B;認識待ち時間 ****&#x200B;など。
 
-* これらの設定を変更すると、ジョブ数が多いシナリオでのパフォーマンスが向上します。 例えば、AEM DAMやワークフローを大量に使用している場合などです。
+* これらの設定を変更すると、ジョブ数が多いシナリオでのパフォーマンスが向上します。例えば、AEM DAMやワークフローを大量に使用している場合などです。
 * テストを実施して、状況に応じた値を確立する必要があります。
 * これらの設定は理由なく変更しないでください。変更は、考慮が必要な場合にのみ行ってください。
 
@@ -213,7 +213,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * **Virtual URLs**：バニティー URL のマッピングを定義します。
 
-* **URL Mappings** （URLマッピング）：任意のエイリアスを定義します。 例えば、から `/content` に変更し `/`ます。
+* **URL Mappings** （URLマッピング）：任意のエイリアスを定義します。例えば、から `/content` に変更し `/`ます。
 
 * **マッピングの場所**、で外部化されたマッパー設定 `/etc/map`。
 
@@ -250,7 +250,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 * Define the **Font Path** to be searched for project specific fonts.
 For example, `/apps/myapp/fonts`.
 
-**Apache HTTPコンポーネントプロキシ設定** Apache HTTPクライアントを使用するすべてのコードのプロキシ設定。HTTPが作成されたときに使用します。 例えば、レプリケーション時に
+**Apache HTTPコンポーネントプロキシ設定** Apache HTTPクライアントを使用するすべてのコードのプロキシ設定。HTTPが作成されたときに使用します。例えば、レプリケーション時に
 
 When creating a new configuration, do not make changes to the factory configuration but instead create a new factory configuration for this component using the configuration manager available here: **https://localhost:4502/system/console/configMgr/**. The proxy configuration is available in **org.apache.http.proxyconfigurator.**
 
@@ -264,7 +264,7 @@ When creating a new configuration, do not make changes to the factory configurat
 * **API キー**
 * **登録済みの URL**
 
-**Adobe Granite HTML Library Manager** ：クライアントライブラリ（cssまたはjs）の処理を制御するように設定します。 例えば、基になる構造体の見え方を含む。
+**AdobeGranite HTML Library Manager** ：クライアントライブラリ（cssまたはjs）の処理を制御するように設定します。例えば、基になる構造体の見え方を含む。
 
 * 実稼動インスタンスの場合：
 
@@ -314,7 +314,7 @@ When creating a new configuration, do not make changes to the factory configurat
 
 **Day CQ Root Mapping** Configure:
 
-* **Targetパス** : 「 `/`」への要求がリダイレクトされる先を定義します。
+* **ターゲットパス** : 「 `/`」への要求がリダイレクトされる先を定義します。
 
 AEM では次の 2 つの UI を使用できます。
 
@@ -339,13 +339,13 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 >
 >標準インストールでは、タッチ操作向け UI がデフォルトの UI です。
 
-**Adobe Granite SSO認証ハンドラー** ：シングルサインオン(SSO)の詳細の設定 これらは、多くの場合、エンタープライズ作成者の設定で必要となり、LDAPと組み合わせて使用されます。
+**AdobeGranite SSO認証ハンドラー** ：シングルサインオン(SSO)の詳細の設定これらは、多くの場合、エンタープライズ作成者の設定で必要となり、LDAPと組み合わせて使用されます。
 
 様々な設定プロパティがあります。
 
 * **Path**&#x200B;この認証ハンドラーをアクティブにする対象のパス。このパラメーターを空のままにすると、認証ハンドラーは無効になります。例えば、/ というパスを指定すると、認証ハンドラーはリポジトリ全体に対して使用されます。
 
-* **サービスのランキング** OSGiフレームワークサービスのランキング値は、このサービスの呼び出しに使用される順序を示すために使用されます。 これは、 
+* **サービスのランキング** OSGiフレームワークサービスのランキング値は、このサービスの呼び出しに使用される順序を示すために使用されます。これは、 
 `int` 値を大きくすると、優先順位が高くなります。
 デフォルト値は `0` です。
 
@@ -358,7 +358,7 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 * **Parameter Names**
 ユーザー ID を指定する可能性のある要求パラメーターの名前です。
 
-* **ユーザーマップ**&#x200B;選択したユーザーに対して、HTTP要求から抽出したユーザー名を、credentialsオブジェクト内の別のユーザー名に置き換えることができます。 マッピングはここで定義します。 ユーザー名 
+* **ユーザーマップ**&#x200B;選択したユーザーに対して、HTTP要求から抽出したユーザー名を、credentialsオブジェクト内の別のユーザー名に置き換えることができます。マッピングはここで定義します。ユーザー名 
 `admin` がマップの両側に表示される場合、マッピングは無視されます。 「=」の文字は、先頭に「\」を付けてエスケープする必要があります。
 
 * **Format**
@@ -391,9 +391,9 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 
 * **パス**：システムが `jcr:Event` をトリガーする前にページの変更をリッスンする場所のリストです。
 
-**オーサーインスタンス用のAdobe Page Impressions Tracker** :
+**Adobeページインプレッション数トラッカー** （作成者インスタンス用）は、以下のように設定します。
 
-* **sling.auth.requirements**: このプロパティの値を `-/libs/wcm/stats/tracker`
+* **sling.auth.requirements**:このプロパティの値を `-/libs/wcm/stats/tracker`
 
 >[!CAUTION]
 >
@@ -431,24 +431,24 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 
 **Day CQSE HTTP Service** Control the CQ Servlet Engine:
 
-* **HTTPの場合はNIO、**HTTPにNIOを使用するかどうか。 デフォルトはtrueです。 HTTPが有効な場合にのみ使用されます。
-* **接続タイムアウト。**接続タイムアウト（ミリ秒）。 このプロパティは、HTTP接続とHTTPS接続の両方に適用されます。 初期設定は60秒です。
+* **HTTPの場合はNIO、**HTTPにNIOを使用するかどうか。デフォルトはtrueです。HTTPが有効な場合にのみ使用されます。
+* **接続タイムアウト。**接続タイムアウト（ミリ秒）。このプロパティは、HTTP接続とHTTPS接続の両方に適用されます。初期設定は60秒です。
 
-* **HTTPSを有効にする** （HTTPSが有効かどうかを問わず）。 デフォルトはfalseです。
-* **Session Timeout**（セッションタイムアウト）。HTTPセッションのデフォルトの有効期間（分単位）です。 タイムアウトが0以下の場合、セッションはタイムアウトしません。 デフォルトは10分です。
-* **デバッグログ**（DEBUGレベルのメッセージを書き込むかどうか）。 デフォルトはfalseです。
-* **Request Buffer Size**、要求のバッファーのサイズ（バイト単位）。 初期設定は8KBです。
-* **スレッドの最大数**、要求の処理に使用するスレッドの最大数。 初期設定は200です。
+* **HTTPSを有効にする** （HTTPSが有効かどうかを問わず）。デフォルトはfalseです。
+* **Session Timeout**（セッションタイムアウト）。HTTPセッションのデフォルトの有効期間（分単位）です。タイムアウトが0以下の場合、セッションはタイムアウトしません。デフォルトは10分です。
+* **デバッグログ**（DEBUGレベルのメッセージを書き込むかどうか）。デフォルトはfalseです。
+* **Request Buffer Size**、要求のバッファーのサイズ（バイト単位）。初期設定は8KBです。
+* **スレッドの最大数**、要求の処理に使用するスレッドの最大数。初期設定は200です。
 
 以下のプロパティは、HTTPS が有効な場合にのみ適用されます。
 
-* **HTTPSポート**。HTTPS要求をリッスンするポートです。 初期設定は433です。
-* **HTTPS用のNIO**。HTTPにNIOを使用するかどうか。 HTTPプロパティのデフォルト値はNIOです。
-* **キーストア**、HTTPSに使用するキーストアの絶対パス。 HTTPSが有効な場合は必須です。
+* **HTTPSポート**。HTTPS要求をリッスンするポートです。初期設定は433です。
+* **HTTPS用のNIO**。HTTPにNIOを使用するかどうか。HTTPプロパティのデフォルト値はNIOです。
+* **キーストア**、HTTPSに使用するキーストアの絶対パス。HTTPSが有効な場合は必須です。
 * **キーストアパスワード**、キーストアにアクセスするためのパスワード。
 * **Key Alias**（キーストア内の秘密鍵のエイリアス）。
 * **Key Password**, Password（キーストア内の秘密鍵のロックを解除するためのパスワード）。
-* **クライアント証明書**、有効な証明書を提供するためのクライアントの要件。 初期設定はnoneです。
+* **クライアント証明書**、有効な証明書を提供するためのクライアントの要件。初期設定はnoneです。
 
 See also [Enabling HTTP Over SSL](/help/sites-administering/ssl-by-default.md) for details on the SSL-related options and a complete description on how to enable HTTPS for CQSE.
 
@@ -463,11 +463,11 @@ CQ リライターの HTML パーサーを制御します。
 
 これはファクトリ設定なので、複数のインスタンスを設定できます。
 
-**Adobe CQ Media DPS Sessions Service** Manage DPS Sessions for use with Publications.
+**Adobe CQメディアDPSセッションサービス** ：パブリケーションで使用するDPSセッションを管理します。
 
 具体的には、`dps.session.service.url.name`、  を定義できます。デフォルトは [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions) に設定されています。
 
-**AEMとCDN間のCDNリライタ** ー通信は、アセット/バイナリがエンドユーザーに安全な方法で配信されるように、確実に行う必要があります。 この方法では 2 つのタスクをおこないます。
+**CDN Rewriter** Communication between AEM and CDN（とCDN間の通信）は、アセット/バイナリがエンドユーザーに安全な方法で配信されるように保証する必要があります。 この方法では 2 つのタスクをおこないます。
 
 * 最初（またはキャッシュ内のリソースが期限切れになった後）に、CDN を介して AEM からリソースにアクセスします。
 * CDN にリソースがキャッシュされた後は、CDN にキャッシュされたリソースに安全にアクセスします。要求は AEM に送信されず、そのリソースにアクセスできるすべてのユーザーの処理は CDN でおこなわれます。
