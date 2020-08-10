@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 72%
+source-wordcount: '931'
+ht-degree: 70%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Sign により、アダプティブフォームの電子署名ワークフ
 
 Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは受信した申込フォームを確認し、Adobe Sign を使用してそのフォームを承認します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
-AEM Formsと共にAdobe Signを使用するには、次のようにAdobe Sign inAEM cloud servicesを設定します。
+AEM FormsでAdobe Signを使用するには、AEMクラウドサービスでAdobe Signを設定します。
 
 ## 前提条件 {#prerequisites}
 
@@ -42,7 +42,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 1. On AEM Forms author instance, navigate to **Tools** ![hammer](assets/hammer.png) > **General** > **Configuration Browser**.
 1. On the **[!UICONTROL Configuration Browser]** page, tap **[!UICONTROL Create]**.
 1. In the **[!UICONTROL Create Configuration]** dialog, specify a **[!UICONTROL Title]** for the configuration, enable **[!UICONTROL Cloud Configurations]**, and tap **[!UICONTROL Create]**. これにより、クラウドサービス用の設定コンテナが作成されます。
-1. **ツール** / ![ハンマー](assets/hammer.png) / **Cloud Service** /Adobe Sign **** コンテナに移動し、上記の手順で作成した設定を選択します。
+1. Navigate to **Tools** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign** and select the configuration container you created in the above step.
 
    >[!NOTE]
    >
@@ -65,7 +65,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
    * widget_write
    * workflow_read
 
-   Adobe Sign アプリケーション用に OAuth 設定を構成してキーを取得するための詳しい手順については、開発者用ドキュメントの「[アプリケーション用に OAuth 設定を構成する](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md)」を参照してください。
+   Adobe Sign アプリケーション用に OAuth 設定を構成してキーを取得するための詳しい手順については、開発者用ドキュメントの「[アプリケーション用に OAuth 設定を構成する](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md)」を参照してください。
 
    ![OAuth 設定](assets/oauthconfig_new.png)
 
@@ -112,6 +112,6 @@ Adobe Sign が有効になっているアダプティブフォームは、すべ
 ## 関連記事 {#related-articles}
 
 * [アダプティブフォームで Adobe Sign を使用する](../../forms/using/working-with-adobe-sign.md)
-* [AEM FormsとのAdobe Signの使用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [Adobe SignとAEM Formsの併用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
 * [Adobe Sign を AEM Forms に統合する](../../forms/using/adobe-sign-integration-adaptive-forms.md)
 
