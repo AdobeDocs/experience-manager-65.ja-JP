@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Forms ユーザーガイド
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3708'
 ht-degree: 70%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 70%
    + [フォーム管理の概要](using/introduction-managing-forms.md)
    + [自動フォーム変換サービスの概要](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
    + Tutorial: Create your First Adaptive Form {#create-first-adaptive-form}
-      + [チュートリアル： 最初のアダプティブフォームの作成](using/create-your-first-adaptive-form.md)
+      + [チュートリアル：最初のアダプティブフォームの作成](using/create-your-first-adaptive-form.md)
       + [チュートリアル：アダプティブフォームの作成](using/create-adaptive-form.md)
       + [チュートリアル：フォームデータモデルの作成](using/create-form-data-model.md)
-      + [チュートリアル： アダプティブフォームのフィールドへのルールの適用](using/apply-rules-to-adaptive-form-fields.md)
-      + [チュートリアル： アダプティブフォームのスタイル設定](using/style-your-adaptive-form.md)
-      + [チュートリアル： アダプティブフォームの発行](/help/forms/using/publish-your-adaptive-form.md)
-      + [チュートリアル： アダプティブフォームのテスト](/help/forms/using/testing-your-adaptive-form.md)
+      + [チュートリアル：アダプティブフォームのフィールドへのルールの適用](using/apply-rules-to-adaptive-form-fields.md)
+      + [チュートリアル：アダプティブフォームのスタイル設定](using/style-your-adaptive-form.md)
+      + [チュートリアル：アダプティブフォームの発行](/help/forms/using/publish-your-adaptive-form.md)
+      + [チュートリアル：アダプティブフォームのテスト](/help/forms/using/testing-your-adaptive-form.md)
    + Tutorial: Create your First Interactive Communication {#create-first-interactive-communication}
       + [チュートリアル：最初のインタラクティブ通信を作成する](using/create-your-first-interactive-communication.md)
       + [チュートリアル：インタラクティブ通信の計画](using/planning-interactive-communications.md)
@@ -58,17 +58,17 @@ ht-degree: 70%
    + [AEM Forms のアーキテクチャとデプロイメントトポロジー](using/aem-forms-architecture-deployment.md)
    + [AEM Forms のインストールに永続性タイプを選択する](using/choosing-persistence-type-for-aem-forms.md)
    + OSGi での AEM Forms のインストール {#osgi-installation}
-      + [OSGiでのAEM formsでサポートされるプラットフォーム](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/introduction/technical-requirements.html)
+      + [OSGi上のAEMフォームでサポートされるプラットフォーム](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/introduction/technical-requirements.html)
       + [ドキュメントサービスのインストールと設定](using/install-configure-document-services.md)
       + [データ取得機能をインストールして設定する](using/installing-configuring-aem-forms-osgi.md)
-      + [OSGiでのフォーム中心のワークフローのインストールと設定](using/installing-configuring-forms-centric-workflow-on-osgi.md)
+      + [OSGiでのForms中心のワークフローのインストールと設定](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [インタラクティブ通信をインストールして設定する](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [Automated Forms Conversionサービスのインストールと設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [自動Formsコンバージョンサービスのインストールと設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Install AEM Forms on JEE {#jee-installation}
       + [JEE上のAEM formsでサポートされるプラットフォーム](using/aem-forms-jee-supported-platforms.md)
-      + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss自動インストールを使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
+      + [JEE上のAEM Formsの自動インストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
       + [AEM Formsドキュメントセキュリティサーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
-      + [AEM Formsのシングルサーバーインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
+      + [AEM Formsシングルサーバのインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
       + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
       + [JEE上のAEM Formsのインストールおよびデプロイ（WebSphere版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [JEE上のAEM Formsのインストールおよびデプロイ（WebLogic版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
@@ -86,21 +86,21 @@ ht-degree: 70%
       + [Connector for Microsoft SharePoint の設定](http://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
-      + [AEM Forms用AEMデスクトップアプリ](/help/forms/using/aem-desktop-app-for-aem-forms.md)
-+ アップグレードAEM Forms {#upgrade-aem-forms}
+      + [AEM FORMS用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
++ AEM Formsのアップグレード {#upgrade-aem-forms}
    + [有効なアップグレードパス](using/upgrade.md)
    + OSGiでのAEM Formsのアップグレード {#aem-forms-osgi-upgrade}
       + [OSGi上のAEM 6.5 formsへのアップグレード](using/upgrade-forms-osgi.md)
       + [互換性パッケージをインストールする](using/compatibility-package.md)
       + [AEM Forms のアセットとドキュメントの移行](using/migration-utility.md)
-   + JEE上のAEM Formsのアップグレード {#aem-forms-jee-upgrade}
+   + JEE上のAEM Formsをアップグレード {#aem-forms-jee-upgrade}
       + [AEM Formsのアップグレードの準備](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
       + [アップグレードのチェックリストと計画](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_jp)
-      + [JEE上のAEM 6.5 Formsへのアップグレード](using/upgrade-forms-jee.md)
-      + [JEE上のAEM 6.5 FormsへのAEM Formsリリースからのアップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-      + [JEE上のAEM 6.5 FormsへのAEM Formsリリースからの自動アップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
-      + [AEM FormsリリースからJEE上のAEM 6.5 Formsへのアップグレード（WebSphere版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
-      + [JEE上のAEM 6.5 FormsへのAEM Formsリリースからのアップグレード（WebLogic版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
+      + [JEE上のAEM 6.5 formsへのアップグレード](using/upgrade-forms-jee.md)
+      + [AEM FormsリリースからJEE上のAEM 6.5Forms（JBoss版）へのアップグレード](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
+      + [AEM FormsリリースからJEE上のAEM 6.5Formsへの自動アップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
+      + [AEM FormsリリースからJEE上のAEM 6.5Forms（WebSphere版）へのアップグレード](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
+      + [AEM FormsリリースからJEE上のAEM 6.5Formsへのアップグレード（WebLogic版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65_jp)
 + AEM Forms の管理 {#manage-administer-aem-forms}
    + [OSGi 上の AEM Forms のグループと権限](using/forms-groups-privileges-tasks.md)
    + [フォームを分類するための新しいフォルダーの作成](using/creating-new-folders-categorize-forms.md)
@@ -114,7 +114,7 @@ ht-degree: 70%
    + Handling user data {#handling-user-data}
       + [OSGi でのフォームに特化したワークフロー](using/forms-workflow-osgi-handling-user-data.md)
       + [Formsユーザー管理](using/user-management-handling-user-data.md)
-      + [Forms JEEワークフロー](using/forms-workflow-jee-handling-user-data.md)
+      + [FormsJEEワークフロー](using/forms-workflow-jee-handling-user-data.md)
       + [フォームポータル](using/forms-portal-handling-user-data.md)
       + [Correspondence Management](using/correspondence-management-handling-user-data.md)
       + [Adobe Sign との統合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
@@ -183,7 +183,7 @@ ht-degree: 70%
    + [Adobe Sign を AEM Forms に統合する](using/adobe-sign-integration-adaptive-forms.md)
    + [フォームのアセットのレビューの作成と管理](using/create-reviews-forms.md)
    + [アダプティブフォームまたはインタラクティブコミュニケーションをAEM Sitesのシングルページアプリに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
-   + [アダプティブフォームの標準検証エラーメッセージ](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
+   + [アダプティブFormsの標準検証エラーメッセージ](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + インタラクティブコミュニケーション {#interactive-communications}
    + [インタラクティブ通信オーサリング UI の概要](using/introduction-interactive-communication-authoring.md)
    + [インタラクティブ通信の作成](using/create-interactive-communication.md)
@@ -252,7 +252,7 @@ ht-degree: 70%
    + [TODO リストの操作](using/todo-lists.md)
    + [AEM Forms Workspace のトラブルシューティングガイドライン](using/troubleshooting-guidelines-html-workspace.md)
 + AEM Forms アプリケーション {#aem-forms-app}
-   + [AEM Formsアプリの概要](using/aem-forms-app.md)
+   + [AEM Formsアプリの紹介](using/aem-forms-app.md)
    + [AEM Forms アプリケーションの環境設定](using/setup-environment-mobile-workspace.md)
    + [Xcode プロジェクトの設定と iOS アプリケーションの構築](using/setup-xcode-project-build-installer.md)
    + [セキュアな AEM Forms アプリケーション（iOS 用）の構築](using/building-secure-mobile-workspace-app.md)
@@ -400,7 +400,7 @@ ht-degree: 70%
    + [取引レポートの表示と理解](using/viewing-and-understanding-transaction-reports.md)
    + [トランザクションレポート請求可能API](using/transaction-reports-billable-apis.md)
    + [カスタム実装用のトランザクションの記録](using/record-transaction-custom-implementation.md)
-+ JEE上のAEM Forms向け管理ヘルプ {#administrator-help}
++ JEE上のAEM Formsの管理ヘルプ {#administrator-help}
    + はじめに {#get-started}
       + [AEM Forms の一般設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
       + [デプロイメントのライセンスの種類の更新](/help/forms/using/admin-help/update-license-type-deployment.md)
@@ -583,10 +583,11 @@ ht-degree: 70%
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
+   + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
    + [Assembler サービスおよび DDX リファレンス](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
    + [Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)
-   + JEE上のAEM Formsを使用したプログラミング {#programming-aem-forms-jee}
-      + JEE上のAEM Formsによるプログラミングの概要 {#introduction-programming-aem-forms-jee}
+   + JEEでのAEM Formsとのプログラミング {#programming-aem-forms-jee}
+      + JEE上のAEM Formsでのプログラミングの概要 {#introduction-programming-aem-forms-jee}
          + [Java API QuickStartの概要](developing/introducing-java-api-soap-quick.md)
          + [APIを使用したAEM Formsの呼び出し](developing/invoking-aem-forms-using-apis.md)
          + [AEM Formsプロセスについて](developing/aem-forms-processes.md)
@@ -595,20 +596,20 @@ ht-degree: 70%
          + [Application ManagerクライアントJavaAPIクイック開始(SOAP)](developing/application-manager-client-java-api.md)
          + [Application ManagerサービスJavaAPIクイック開始(SOAP)](developing/application-manager-service-java-api.md)
          + [Assembler Service Java API QuickStart(SOAP)](developing/assembler-service-java-api-quick.md)
-         + [Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP)](developing/acrobat-reader-dc-extensions-service.md)
+         + [Acrobat Reader DC拡張サービスJava APIクイック開始(SOAP)](developing/acrobat-reader-dc-extensions-service.md)
          + [バックアップと復元サービスのAPIQuick開始](developing/backup-restore-service-api-quick.md)
-         + [Barcoded FormsサービスJava APIQuick開始(SOAP)](developing/barcoded-forms-service-java-api.md)
+         + [Barcoded Service Java APIQuick開始(SOAP)](developing/barcoded-forms-service-java-api.md)
          + [コンポーネントとサービスJava APIQuick開始(SOAP)](developing/components-services-java-api-quick.md)
          + [Convert PDF Service Java API QuickStart(SOAP)](developing/convert-pdf-service-java-api.md)
          + [Credential Service Java API QuickStart(SOAP)](developing/credential-service-java-api-quick.md)
-         + [Distiller Service Java API QuickStart(SOAP)](developing/distiller-service-java-api-quick.md)
+         + [DistillerサービスJava API QuickStart(SOAP)](developing/distiller-service-java-api-quick.md)
          + [DocConverterサービスJava API QuickStart(SOAP)](developing/docconverter-service-java-api-quick.md)
          + [ドキュメント管理サービス（非推奨）Java APIクイック開始(SOAP)](developing/document-management-service-deprecated-java.md)
          + [ドキュメントセキュリティサービスJavaAPIクイック開始(SOAP)](developing/document-security-service-java-api.md)
          + [Encryption Service Java API QuickStart(SOAP)](developing/encryption-service-java-api-quick.md)
          + [エンドポイントレジストリJava API QuickStart(SOAP)](developing/endpoint-registry-java-api-quick.md)
          + [Form Data Integration Service JavaAPI Quick開始(SOAP)](developing/form-data-integration-service-java.md)
-         + [FormsサービスAPIのクイック開始](developing/forms-service-api-quick-starts.md)
+         + [FormsサービスAPIクイック開始](developing/forms-service-api-quick-starts.md)
          + [Generate PDF Service Java API QuickStart(SOAP)](developing/generate-pdf-service-java-api.md)
          + [呼び出しAPIクイック開始](developing/invocation-api-quick-starts.md)
          + [LiveCycleProcess Java API(SOAP)クイック開始](developing/livecycleprocess-java-api-soap-quick.md)
@@ -628,7 +629,7 @@ ht-degree: 70%
          + [HTTPトークンを使用したSSO認証を実行するFlash Builderアプリケーションの作成](developing/creating-flash-builder-applications-perform.md)
       + APIを使用したサービス操作の実行 {#performing-service-operations-using-apis}
          + [APIを使用したサービス操作の実行](developing/performing-service-operations-using-apis.md)
-         + [フォームのレンダリング](developing/rendering-forms.md)
+         + [Formsのレンダリング](developing/rendering-forms.md)
          + [PDF ドキュメントのアセンブリ](developing/assembling-pdf-documents.md)
          + [プログラムによるPDFドキュメントのアセンブリ](developing/programmatically-assembling-pdf-documents.md)
          + [ファイル形式とPDFの変換](developing/converting-file-formats-pdf.md)
@@ -639,25 +640,25 @@ ht-degree: 70%
          + [非インタラクティブPDFドキュメントのアセンブリ](developing/assembling-non-interactive-pdf-documents.md)
          + [しおりを使用したPDFドキュメントのアセンブリ](developing/assembling-pdf-documents-bookmarks.md)
          + [使用権限の割り当て](developing/assigning-usage-rights.md)
-         + [PDFポートフォリオのアセンブリ](developing/assembling-pdf-portfolios.md)
+         + [PDFPortfolioのアセンブリ](developing/assembling-pdf-portfolios.md)
          + [フォームデータの計算](developing/calculating-form-data.md)
-         + [フォームをレンダリングするWeb アプリケーションの作成](developing/creating-web-applications-renders-forms.md)
+         + [FormsをレンダリングするWeb アプリケーションの作成](developing/creating-web-applications-renders-forms.md)
          + [送信されたXMLデータを使用したPDFドキュメントの作成](developing/creating-pdf-documents-submitted-xml.md)
          + [WebサービスAPIを使用したPDFドキュメントのディスアセンブリ](developing/disassemble-pdf-document-using-web.md)
          + [ドキュメントがPDF/Aに準拠しているかどうかを確認する](developing/determining-whether-documents-pdf-a.md)
          + [DDXドキュメントの動的な作成](developing/dynamically-creating-ddx-documents.md)
-         + [送信済みフォームの処理](developing/handling-submitted-forms.md)
+         + [提出されたFormsの処理](developing/handling-submitted-forms.md)
          + [Formsサービスのパフォーマンスの最適化](developing/optimizing-performance-forms-service.md)
          + [FormsServiceにドキュメントを渡す](developing/passing-documents-forms-service.md)
-         + [編集可能なレイアウトを含むフォームの自動埋め込み](developing/prepopulating-forms-flowable-layouts.md)
-         + [フラグメントに基づくフォームのレンダリング](developing/rendering-forms-based-fragments.md)
-         + [値によるフォームのレンダリング](developing/rendering-forms-value.md)
-         + [HTML形式でのフォームのレンダリング](developing/rendering-forms-html.md)
-         + [クライアントでのフォームのレンダリング](developing/rendering-forms-client.md)
-         + [カスタムCSSファイルを使用したHTMLフォームのレンダリング](developing/rendering-html-forms-using-custom.md)
-         + [CustomToolbarsでのHTMLフォームのレンダリング](developing/rendering-html-forms-custom-toolbars.md)
+         + [編集可能なレイアウトをFormsに自動埋め込み](developing/prepopulating-forms-flowable-layouts.md)
+         + [断片に基づくFormsのレンダリング](developing/rendering-forms-based-fragments.md)
+         + [値によるFormsのレンダリング](developing/rendering-forms-value.md)
+         + [FormsをHTMLとしてレンダリング](developing/rendering-forms-html.md)
+         + [クライアントでのFormsのレンダリング](developing/rendering-forms-client.md)
+         + [カスタムCSSファイルを使用したHTMLFormsのレンダリング](developing/rendering-html-forms-using-custom.md)
+         + [CustomToolbarsでのHTMLFormsのレンダリング](developing/rendering-html-forms-custom-toolbars.md)
          + [インタラクティブPDF formsのレンダリング](developing/rendering-interactive-pdf-forms.md)
-         + [使用権限を付与されたフォームのレンダリング](developing/rendering-rights-enabled-forms.md)
+         + [使用権限を付与されたFormsのレンダリング](developing/rendering-rights-enabled-forms.md)
          + [DDXドキュメントの検証](developing/validating-ddx-documents.md)
          + [PDFからPostscriptおよび画像ファイルへの変換](developing/converting-pdf-postscript-image-files.md)
          + [PostscriptドキュメントからPDFへの変換](developing/converting-postscript-pdf-documents.md)
@@ -671,8 +672,8 @@ ht-degree: 70%
          + [秘密鍵証明書の操作](developing/credentials.md)
          + [PDF/Aドキュメントの操作](developing/pdf-a-documents.md)
          + [PDF Utilitiesの操作](developing/pdf-utilities.md)
-         + [XMP Utilitiesの使用](developing/xmp-utilities.md)
-         + [バックアップ用のAEM Formsの準備](developing/preparing-aem-forms-backup.md)
+         + [XMPユーティリティの操作](developing/xmp-utilities.md)
+         + [AEM Formsのバックアップの準備](developing/preparing-aem-forms-backup.md)
          + [エンドポイントのプログラム管理](developing/programmatically-endpoints.md)
          + [環境設定ノードのプログラム管理](developing/programmatically-preferences-nodes.md)
          + [ポリシーによるドキュメントの保護](developing/protecting-documents-policies.md)
