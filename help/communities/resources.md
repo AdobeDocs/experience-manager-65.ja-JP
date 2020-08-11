@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 4e2fa3b0a64ae2e959dad85e3a1bc4a1027a2eef
+workflow-type: tm+mt
+source-wordcount: '2979'
+ht-degree: 46%
 
 ---
 
@@ -36,14 +39,14 @@ For details, see [Configuring Enablement](enablement.md).
 
 >[!NOTE]
 >
->[AEM 6.3](deploy-communities.md#latestfeaturepack) 、および同等のCommunities機能パックAEM 6.2 FP3と [AEM 6.1 FP7](deploy-communities.md#latestfeaturepack) (https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest Feature Pack)のリリース時には、有効化機能を使用するには、 [][](mysql.md)SQLデータベースのSQLデータベースを使用する必要がなくなりました。
+>AEM 6.3 [と同等のCommunities機能パック](deploy-communities.md#latestfeaturepack) AEM 6.2 FP3 [とAEM 6.1 FP7](deploy-communities.md#latestfeaturepack) (https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest Feature Pack)のリリースに伴い、有効化機能で [][](mysql.md)My SQLデータベースファイルが必要になることはなくなりました。
 
 
 ## 用語 {#terminology}
 
-### リソース {#resource}
+### Resource {#resource}
 
-リソースは[イネーブルメントコミュニティ](overview.md#enablement-community)に欠かせないものです。彼らは、彼らの技能を向上させるために会員に割り当てられた資料です。
+リソースは[イネーブルメントコミュニティ](overview.md#enablement-community)に欠かせないものです。彼らは、技能を向上させるために会員に割り当てられる資料です。
 
 リソースの特性：
 
@@ -53,7 +56,7 @@ For details, see [Configuring Enablement](enablement.md).
    * Flash(SWF)
    * Document (PDF)
    * クイズ(SCORM)
-* 1つ以上の学習パスから参照できます。
+* は1つ以上の学習パスから参照できます。
 
 ### 学習パス {#learning-path}
 
@@ -77,7 +80,7 @@ For [engagement communities](overview.md#egagementcommunity), it is reasonable t
 
 * From global navigation: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Resources]**
 
-   ![chlimage_1-163](assets/chlimage_1-163.png)
+   ![有効化サイト](assets/enablement-sites.png)
 
 ### コミュニティサイトの選択 {#select-a-community-site}
 
@@ -87,25 +90,25 @@ For [engagement communities](overview.md#egagementcommunity), it is reasonable t
 
 特定のコミュニティサイトを選択した後は、既存のイネーブルメントリソースや学習パスにアクセスして管理や変更をおこなったり、新しいイネーブルメントリソースや学習パスを作成したりできます。
 
-![chlimage_1-164](assets/chlimage_1-164.png)
+![地域資源](assets/community-resources.png)
 
 #### 検索 {#search-features}
 
-![chlimage_1-165](assets/chlimage_1-165.png)
+![searchsite](assets/searchsite.png)
 
 イネーブルメントリソースまたは学習パスを検索するには、サイドパネル切り替えアイコンを選択します。選択すると、検索パネルがコンソールの左側に開き、検索用語を入力するためのテキストボックスが表示されます。
 
-![chlimage_1-166](assets/chlimage_1-166.png)
+![search-result](assets/search-result.png)
 
 #### 選択モード {#selection-mode}
 
-複数のイネーブルメントリソースを選択するには、まず 1 つ目のカードにカーソルを合わせてチェックマークアイコンをクリックし、選択状態にします。選択した他のカードを選択すると、そのカードが選択グループに追加されます。 もう一度選択すると、カードの選択が解除されます。
+複数のイネーブルメントリソースを選択するには、まず 1 つ目のカードにカーソルを合わせてチェックマークアイコンをクリックし、選択状態にします。選択したカードのうち、他のカードを選択すると、そのカードが選択グループに追加されます。 もう一度選択すると、カードの選択が解除されます。
 
-![chlimage_1-167](assets/chlimage_1-167.png)
+![selection-mode](assets/selection-mode.png)
 
 ## リソースの作成 {#create-a-resource}
 
-![chlimage_1-168](assets/chlimage_1-168.png)
+![create-resource](assets/create-resource1.png)
 
 コミュニティサイトに新しいイネーブルメントリソースを追加するには、
 
@@ -114,23 +117,23 @@ For [engagement communities](overview.md#egagementcommunity), it is reasonable t
 
 これにより、次の手順を実行するプロセスが開始されます。
 
-* リソース（名前、カードの画像、テキスト）を説明しています。
-* リソースの内容の選択
-* リソースの表紙画像を選択する。
+* リソースの説明（名前、カードの画像、テキスト）。
+* リソースの内容を選択する。
+* リソースの表紙画像を選択しています。
 * リソースの連絡先を識別しています。
-* メンバーへのリソースの割り当て
+* メンバーへのリソースの割り当て。
 
 リソースがコース（学習パス）に含まれている場合は、メンバーを学習パスに割り当てる必要があります。有効化リソースの作成後に割り当てを追加できます。
 
 ### 1 基本情報 {#basic-info}
 
-![chlimage_1-169](assets/chlimage_1-169.png)
+![resource-basicinfo](assets/resource-basicinfo.png)
 
 * **[!UICONTROL 画像を追加]**
 
-   (*Optional*) An image to display on the card for the enablement resource in the member&#39;s assignments page as well as the Resources console. イメージは、サーバーのローカルファイルシステムから選択されます。 画像が指定されていない場合は、アップロードされたリソースのサムネールが生成されます。
+   (*Optional*) An image to display on the card for the enablement resource in the member&#39;s assignments page as well as the Resources console. イメージは、サーバーのローカルファイルシステムから選択されます。 画像が指定されない場合、アップロードされたリソースのサムネールが生成されます。
 
-   ***注意***:推奨される画像サイズは、480 x 480ピクセルではありません。 カードのレスポンシブデザインが様々なブラウザーサイズに対応するので、表示サイズは220 X 165ピクセルから400 x 165ピクセルに変わります。
+   ***注意***:推奨される画像サイズは、480 x 480ピクセルではありません。 カードのレスポンシブデザインがブラウザーの様々なサイズに対応するので、表示サイズは220 X 165ピクセルから400 x 165ピクセルに変わります。
 
 * **[!UICONTROL サイト名]**
 
@@ -138,7 +141,7 @@ For [engagement communities](overview.md#egagementcommunity), it is reasonable t
 
 * **[!UICONTROL リソース名]**
 
-   (*Required*) The display name for the resource. 表示名から有効なノード名が作成されます。
+   (*Required*) The display name for the resource. 有効なノード名が表示名から作成されます。
 
 * **[!UICONTROL タグ]**
 
@@ -146,7 +149,7 @@ For [engagement communities](overview.md#egagementcommunity), it is reasonable t
 
 * **[!UICONTROL カタログに表示]**
 
-   オフにすると、有効化リソースはカタログに表示されません。 オンにすると、イネーブルメントリソースがすべてのカタログに表示されます。ただし、[事前にフィルタリングされている](catalog-developer-essentials.md#pre-filters)場合と、メンバーが UI からフィルタリングした場合は除きます。初期設定はオフです。
+   オフの場合、有効化リソースはどのカタログにも表示されません。 オンにすると、イネーブルメントリソースがすべてのカタログに表示されます。ただし、[事前にフィルタリングされている](catalog-developer-essentials.md#pre-filters)場合と、メンバーが UI からフィルタリングした場合は除きます。初期設定はオフです。
 
 * **[!UICONTROL 説明]**
 
@@ -154,35 +157,35 @@ For [engagement communities](overview.md#egagementcommunity), it is reasonable t
 
 * **[!UICONTROL 小さなアセット]**
 
-   (オプ&#x200B;*ション*)AEM Assetsから選択されます。 カタログ内など、パブリッシュ環境でリソースを表すサムネイル画像です。
+   (*任意*)AEM Assetsから選択。 カタログ内など、パブリッシュ環境でリソースを表すサムネイル画像です。
 
 * **[!UICONTROL 大きなアセット]**
 
-   (オプ&#x200B;*ション*)AEM Assetsから選択されます。 リソースのメインページなど、パブリッシュ環境でリソースを表す大きな画像です。
+   (*任意*)AEM Assetsから選択。 リソースのメインページなど、パブリッシュ環境でリソースを表す大きな画像です。
 
 * **[!UICONTROL コンテンツフラグメントアセット]**
 
-   (オプ&#x200B;*ション*)AEM Assetsから選択されます。 パブリッシュ環境で参照できるコンテンツフラグメント。ただし、初期設定では使用されません。
+   (*任意*)AEM Assetsから選択。 パブリッシュ環境で参照できるコンテンツフラグメント。ただし、初期設定では使用されません。
 
 * 「**[!UICONTROL 次へ]**」を選択します。
 
 ### 2 コンテンツの追加 {#add-content}
 
-![chlimage_1-170](assets/chlimage_1-170.png)
+![resource-addcontent](assets/resource-addcontent.png)
 
 複数のイネーブルメントリソースを選択できるように見えますが、選択できるのは 1 つだけです。
 
 Select the `'+' icon`, in the upper right corner, to begin the process of choosing the resource by identifying the source.
 
-![chlimage_1-171](assets/chlimage_1-171.png)
+![アップロード・リソース](assets/upload-resource1.png)
 
 * **[!UICONTROL ローカルファイルからアップロード]**
 
-   ローカルファイルシステムからアップロードする場合、ネイティブのファイルブラウザーを使用してファイルを選択し、アップロードします。 サポートされるファイルタイプは、SCORM.zip（HTML5またはSWF）、MP4ビデオ、SWF、PDF、画像タイプ(JPG、PNG、GIF、BMP)です。 ファイル名がアセットの名前になり、アセットライブラリに追加されます。
+   ローカルファイルシステムからアップロードする場合、ネイティブのファイルブラウザを使用してファイルを選択し、アップロードします。 サポートされるファイルタイプは、SCORM.zip（HTML5またはSWF）、MP4ビデオ、SWF、PDFおよび画像タイプ(JPG、PNG、GIF、BMP)です。 ファイル名がアセットの名前になり、アセットライブラリに追加されます。
 
 * **[!UICONTROL アセットライブラリを参照]**
 
-   アセットライブラリから選択します。 選択は、コミュニティサイト内に表示されるものに制限されます。
+   アセットライブラリから選択します。 選択できるのは、コミュニティサイト内で表示できるものに限られます。
 
 * **[!UICONTROL 外部 URL を追加]**
 
@@ -192,7 +195,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
    * **[!UICONTROL タイトル]**
 
-      有効化リソースのアセットの名前。
+      有効化リソースのアセットの名前です。
 
    * **[!UICONTROL URL]**
 
@@ -206,7 +209,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
    * **[!UICONTROL タイトル]**
 
-      有効化リソースのアセットの名前。
+      有効化リソースのアセットの名前です。
 
    * **[!UICONTROL URL]**
 
@@ -214,25 +217,25 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 * **[!UICONTROL 外部リソースを定義]**
 
-   材料を表示する場所を入力します。 The values for the success status and score are entered manually (see [Reports](reports.md)). アップロードされた表紙画像を使用して、追加情報を提供できます。
+   材料を表示する場所を入力します。 The values for the success status and score are entered manually (see [Reports](reports.md)). アップロードされた表紙画像は、追加情報を提供するために使用できます。
 
    表示されたダイアログに以下を入力します。
 
    * **[!UICONTROL タイトル]**
 
-      有効化リソースのアセットの名前。
+      有効化リソースのアセットの名前です。
 
    * **[!UICONTROL 場所]**
 
-      教室などの物理サイトの場所。
+      教室などの物理的なサイトの場所。
 
 #### 追加されたビデオリソースの例 {#example-of-an-added-video-resource}
 
-![chlimage_1-172](assets/chlimage_1-172.png)
+![add-video](assets/add-video.png)
 
 * **[!UICONTROL リソースのカバー画像]**
 
-   カバー画像は、イネーブルメントリソースが最初に表示されたときに表示される画像です。 例えば、ビデオリソースがまだ再生されていない場合は、カバー画像が表示されます。 カスタム画像がアップロードされない場合は、デフォルトの画像が表示されます。 For video resources, it may be possible to [generate a thumbnail](enablement.md#ffmpeg), but only when uploaded and not when the video is referenced as an URL. 場所のリソースの場合、画像を使用して追加情報を提供できます。
+   表紙画像は、有効化リソースが最初に表示されたときに表示される画像です。 例えば、ビデオリソースがまだ再生されていない場合に表紙画像が表示されます。 カスタム画像がアップロードされない場合は、デフォルトの画像が表示されます。 For video resources, it may be possible to [generate a thumbnail](enablement.md#ffmpeg), but only when uploaded and not when the video is referenced as an URL. 場所のリソースの場合、画像を使用して追加情報を提供できます。
 
    カバー画像の推奨サイズは640 x 360ピクセルです。
 
@@ -240,11 +243,11 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 ### 3 設定 {#settings}
 
-![chlimage_1-173](assets/chlimage_1-173.png)
+![resource-settings](assets/resource-settings.png)
 
 >[!NOTE]
 >
->学習パスで参照されるイネーブルメントリソースに学習者を直接登録することはできません。学習者は、学習パスに登録する必要があります。
+>学習パスで参照されるイネーブルメントリソースに学習者を直接登録することはできません。学習者は学習パスに登録する必要があります。
 >
 >メンバーがリソースとそのリソースを参照する学習パスの両方に登録されている場合、そのメンバーの割り当てには、単体のリソースと学習パス内のリソースの両方が表示されます。
 
@@ -255,7 +258,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
    * **[!UICONTROL コメントを許可]**
 
-      このオプションを選択すると、メンバーはリソースに対するコメントを許可されます。 初期設定はオンです。
+      このオプションを選択すると、メンバーはリソースにコメントを付けることができます。 初期設定はオンです。
 
    * **[!UICONTROL 評価を許可]**
 
@@ -263,27 +266,27 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
    * **[!UICONTROL 匿名アクセスを許可]**
 
-      このオプションを選択すると、匿名サイト訪問者は、コミュニティサイトで匿名アクセスが許可されている場合に、カタログ内の表示を許可されます。 初期設定はオフです。
+      このオプションを選択すると、コミュニティサイトで匿名アクセスも許可されている場合、匿名サイト訪問者はカタログ内の表示を許可されます。 初期設定はオフです。
 
 * **[!UICONTROL 期限]**
 
-   *（オプション）* 、割り当てを完了する日付を選択できます。
+   *（オプション）* 割り当てを完了する日付を選択できます。
 
 * **[!UICONTROL リソース作成者]**
 
-   *（オプション）* 、イネーブルメントリソースの作成者。 プルダウンメニューを使用して、[メンバーグループ](#members-group)のメンバーの中から選択します。
+   *（オプション）* 、有効化リソースの作成者。 プルダウンメニューを使用して、[メンバーグループ](#members-group)のメンバーの中から選択します。
 
 * **[!UICONTROL Resource Contact&amp;ast;]**
 
-   *（必須）* 、有効化リソースに関してメンバーが連絡できる人。 プルダウンメニューを使用して、[メンバーグループ](#members-group)のメンバーの中から選択します。
+   *（必須）* 有効化リソースに関して会員が連絡を取れる担当者。 プルダウンメニューを使用して、[メンバーグループ](#members-group)のメンバーの中から選択します。
 
 * **[!UICONTROL リソースエキスパート]**
 
-   *（オプション）* 、イネーブルメントリソースに関する専門知識を持つメンバーが連絡を取ることができる人。 プルダウンメニューを使用して[メンバーグループ](#members-group)のメンバーの中から選択します。
+   *（オプション）* 有効化リソースに関する専門知識を持つユーザーに連絡できる人。 プルダウンメニューを使用して[メンバーグループ](#members-group)のメンバーの中から選択します。
 
 ### 4 割り当て {#assignments}
 
-![chlimage_1-174](assets/chlimage_1-174.png)
+![リソース割り当て](assets/resource-assignments.png)
 
 * **[!UICONTROL 割り当て先を追加]**
 
@@ -291,13 +294,13 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
-   ![chlimage_1-175](assets/chlimage_1-175.png)
+   ![resourceinfo](assets/resourceinfo.png)
 
 イネーブルメントリソースが正常に作成されると、リソースコンソールに戻ります。新しく作成されたリソースが選択状態になっています。From this console, it is possible to [manage the resource](#managing-a-resource).
 
 ## 学習パスの作成 {#create-a-learning-path}
 
-![chlimage_1-176](assets/chlimage_1-176.png)
+![add-learning-path](assets/add-learning-path.png)
 
 新しい学習パスをコミュニティサイトに追加するには、
 
@@ -306,25 +309,25 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 これにより、次の手順を実行するプロセスが開始されます。
 
-* 学習パスの識別。
-* 学習者に学習パスを表すカード画像を提供する。
+* 学習パスを特定する。
+* 学習者に対して学習パスを表すカード画像を提供する。
 * 学習パスに含めるイネーブルメントリソースの参照。
-* 必要に応じて、リソースを並べ替えます。
+* オプションで、リソースを順序付けます。
 * 必要に応じて、前提条件の学習パスを識別します。
 * 学習パスの連絡先の識別。
-* メンバーの登録。
+* メンバーを登録しています。
 
 学習パスに含まれるイネーブルメントリソースについては、リソースごとではなく、学習パスの単位で割り当てをおこなう必要があります。
 
 ### 基本情報 {#basic-info-1}
 
-![chlimage_1-177](assets/chlimage_1-177.png)
+![learningpath-basic](assets/learningpath-basic1.png)
 
 * **[!UICONTROL 画像を追加]**
 
-   (*Optional*) An image to display on the card for the learning path in the member&#39;s assignments page as well as the Resources console. イメージは、サーバーのローカルファイルシステムから選択されます。 画像が指定されていない場合は、アップロードされたリソースのサムネールが生成されます。
+   (*Optional*) An image to display on the card for the learning path in the member&#39;s assignments page as well as the Resources console. イメージは、サーバーのローカルファイルシステムから選択されます。 画像が指定されない場合、アップロードされたリソースのサムネールが生成されます。
 
-   ***注意***:推奨される画像サイズが480 x 480ピクセルではなくなりました。 カードのレスポンシブデザインが様々なブラウザーサイズに対応するので、表示サイズは220 X 165ピクセルから400 x 165ピクセルに変わります。
+   ***注意***:480 x 480ピクセルではなくなったので、推奨される画像サイズにしてください。 カードのレスポンシブデザインがブラウザーの様々なサイズに対応するので、表示サイズは220 X 165ピクセルから400 x 165ピクセルに変わります。
 
 * **[!UICONTROL サイト名]**
 
@@ -332,7 +335,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 * **[!UICONTROL 学習パス名]**
 
-   (必&#x200B;*須*)学習パスの表示名。 表示名から有効なノード名が作成されます。
+   (*必須*)学習パスの表示名。 有効なノード名が表示名から作成されます。
 
 * **[!UICONTROL タグ]**
 
@@ -340,7 +343,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 * **[!UICONTROL カタログに表示]**
 
-   このチェックボックスをオフにすると、学習パスはどのカタログにも表示されません。 オンにすると、学習パスがすべてのカタログに表示されます。ただし、[事前にフィルタリングされている](catalog-developer-essentials.md#pre-filters)場合と、メンバーが UI からフィルタリングした場合は除きます。カタログに学習パスを表示すると、その中に含まれるすべてのリソースにREADアクセス権が間接的に付与されます。 初期設定はオフです。
+   選択しない場合、学習パスはどのカタログにも表示されません。 オンにすると、学習パスがすべてのカタログに表示されます。ただし、[事前にフィルタリングされている](catalog-developer-essentials.md#pre-filters)場合と、メンバーが UI からフィルタリングした場合は除きます。カタログに学習パスを表示すると、そのカタログに含まれるすべてのリソースに対して間接的にREADアクセス権が付与されます。 初期設定はオフです。
 
 * **[!UICONTROL 説明]**
 
@@ -348,21 +351,21 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 * **[!UICONTROL 小さなアセット]**
 
-   (オプ&#x200B;*ション*)AEM Assetsから選択されます。 カタログ内など、パブリッシュ環境でリソースを表すサムネイル画像です。
+   (*任意*)AEM Assetsから選択。 カタログ内など、パブリッシュ環境でリソースを表すサムネイル画像です。
 
 * **[!UICONTROL 大きなアセット]**
 
-   (オプ&#x200B;*ション*)AEM Assetsから選択されます。 リソースのメインページなど、パブリッシュ環境でリソースを表す大きな画像です。
+   (*任意*)AEM Assetsから選択。 リソースのメインページなど、パブリッシュ環境でリソースを表す大きな画像です。
 
 * **[!UICONTROL コンテンツフラグメントアセット]**
 
-   (オプ&#x200B;*ション*)AEM Assetsから選択されます。 パブリッシュ環境で参照できるコンテンツフラグメント。ただし、初期設定では使用されません。
+   (*任意*)AEM Assetsから選択。 パブリッシュ環境で参照できるコンテンツフラグメント。ただし、初期設定では使用されません。
 
 * 「**[!UICONTROL 次へ]**」を選択します。
 
 ### 前提条件を追加 {#add-prerequisites}
 
-![chlimage_1-178](assets/chlimage_1-178.png)
+![学習パスの前提条件](assets/learningpath-prerequisites.png)
 
 * **[!UICONTROL 前提条件の学習パス]**
 
@@ -372,7 +375,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 ### リソースを追加 {#add-resources}
 
-![chlimage_1-179](assets/chlimage_1-179.png)
+![learningpath-addresource](assets/learningpath-addresource.png)
 
 * **[!UICONTROL 学習パスの順序を適用]**
 
@@ -391,15 +394,15 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 ### 設定 {#settings-1}
 
-![chlimage_1-180](assets/chlimage_1-180.png)
+![learningpath-settings1](assets/learningpath-settings1.png)
 
 * **[!UICONTROL 登録を追加]**
 
-   Use the pulldown menu to select from the members and member groups (listed in bold face) who are members of the community site&#39;s [members group](#members-group). 最初に学習パスを作成する際に、割り当てを追加する必要はありません。 学習パスのプロパティを変更して、後で学習者を追加できます。
+   Use the pulldown menu to select from the members and member groups (listed in bold face) who are members of the community site&#39;s [members group](#members-group). 学習パスを最初に作成する際に、割り当てを追加する必要はありません。 学習パスのプロパティを変更して、後で学習者を追加できます。
 
-* **[!UICONTROL 学習パスの連絡先(&amp;A);ast;]**
+* **[!UICONTROL Learning Path Contact&amp;ast;]**
 
-   *（必須）* 、メンバーが学習パスに関して連絡できる人。 プルダウンメニューを使用して、コミュニティサイトの[メンバーグループ](#members-group)のメンバーの中から選択します。
+   *（必須）* 学習パスに関して会員が連絡を取れる人。 プルダウンメニューを使用して、コミュニティサイトの[メンバーグループ](#members-group)のメンバーの中から選択します。
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
@@ -414,7 +417,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 単一の有効化リソースを管理するには：
 
-* リソースコン **[!UICONTROL ソールから]** 、リソースを含むコミュニティサイトを選択します。
+* リソース **[!UICONTROL コンソールから、リソースを含むコミュニティサイトを選択します]** 。
 * リソースを選択します。
 
 選択したイネーブルメントリソースに対し、以下を実行できます。
@@ -429,7 +432,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 ### リソースの編集 {#edit-resource}
 
-![chlimage_1-181](assets/chlimage_1-181.png)
+![編集リソース](assets/edit-resource.png)
 
 鉛筆アイコンを選択すると、イネーブルメントリソースを作成したときと同じ手順が表示されるので、ここで設定を変更できます。
 
@@ -437,13 +440,13 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 ### リソースの削除 {#delete-resource}
 
-![chlimage_1-182](assets/chlimage_1-182.png)
+![delete-resource](assets/delete-resource.png)
 
 By selecting the trashcan icon, the enablement resource will be `Deleted` after confirmation.
 
 ### 公開 {#publish}
 
-![chlimage_1-183](assets/chlimage_1-183.png)
+![publish-resource](assets/publish-resource1.png)
 
 学習者が割り当てられたイネーブルメントリソースを確認できるようにするには、以下の手順でリソースを公開する必要があります。
 
@@ -455,25 +458,25 @@ By selecting the trashcan icon, the enablement resource will be `Deleted` after 
 
 ### 非公開 {#unpublish}
 
-![chlimage_1-184](assets/chlimage_1-184.png)
+![非公開](assets/unpublish.png)
 
 To temporarily make the enablement resources unaccessible to members in the publish environment without deleting it, use the world icon to `Unpublish` the resource.
 
 ### レポート {#report}
 
-![chlimage_1-185](assets/chlimage_1-185.png)
+![リソースレポート](assets/resource-reports.png)
 
-「レポート」アイコンを選択すると、学習者がパブリッシュ環境で割り当てられたイネーブルメントリソースに接したときに生成されるレポートにアクセスできます。レポートは、リソースのタイプによって異なります。
+「レポート」アイコンを選択すると、学習者がパブリッシュ環境で割り当てられたイネーブルメントリソースに接したときに生成されるレポートにアクセスできます。レポートはリソースの種類によって異なります。
 
 For all learning paths, it is possible to view a report based either on resources or learners ( `User Report`.)
 
-![chlimage_1-186](assets/chlimage_1-186.png)
+![learningpath-info](assets/learningpath-info1.png)
 
 このレポートは、現在のイネーブルメントリソースまたは学習パスに関するものです。The depth of reporting provided depends on whether or not [Adobe Analytics](analytics.md) is licensed and enabled for the community site. The [Timeline](#timeline), [Viewer Engagement](#viewer-engagement), and [Engagement by Device](#engagement-by-device) reports are imported from Adobe Analytics based on the [polling interval](analytics.md#report-importer).
 
 どのイネーブルメントリソースでも、Adobe Analytics が有効かどうかに関係なく、[担当者ステータス](#assignee-status)および[評価](#ratings)に関するレポートと、[レポートサマリ](#report-summary)テーブルを利用できます。
 
-![chlimage_1-187](assets/chlimage_1-187.png)
+![リソースレポート](assets/resource-report1.png)
 
 #### タイムライン {#timeline}
 
@@ -481,19 +484,19 @@ Analytics のタイムラインレポートには、このイネーブルメン�
 
 * **表示**
 
-   表示とは、学習者がリソースの詳細ページを訪問したときのことです。
+   表示は、学習者がリソースの詳細ページを訪問したときに発生します。
 
 * **再生**
 
-   再生とは、ビデオの再生やPDFの開き方など、すべての学習者がリソースを操作する場合のことです。
+   再生とは、ビデオの再生やPDFの開き方など、すべての学習者がリソースを操作する場合です。
 
 * **Ratings**
 
-   評価とは、学習者がリソースに星評価を割り当てたときのことです。
+   評価は、学習者がリソースに星評価を割り当てたときです。
 
 * **コメント**
 
-   コメントは、alLearnerがコメントを追加したときに使用されます。
+   コメントは、alLearnerがコメントを追加したときです。
 
 縦軸はイベント数です。
 
@@ -531,13 +534,13 @@ Analytics のデバイス別のアクションレポート（ビデオリソー�
 
 #### レポートサマリ {#report-summary}
 
-有効化リソースの場合、「レポートの概要」は表です。
+有効化リソースの場合、「レポートサマリ」は表です。
 
 * リソースに対して何らかの操作を行った各学習者
-   * 彼らのステータス
+   * 彼らの地位
    * リソースが割り当てられたかどうか
-      * カタログ内のリソースを見つけるのとは対照的に
-      * 投稿されたコメントの数
+      * カタログ内でリソースを見つけるのとは対照的に
+      * 投稿されたコメント数
       * 与えられた評価（ある場合）
 
 学習パスのリソースレポートの場合、レポートサマリには以下の内容が表示されます。
@@ -547,11 +550,11 @@ Analytics のデバイス別のアクションレポート（ビデオリソー�
    * 表示数
    * 再生回数
    * 平均評価
-   * ファイル形式
+   * 形式
    * サイズ
    * コミュニティサイト名
 
-学習パスのユーザレポートの場合、レポートサマリは表で示されます。
+学習パスのユーザーレポートの場合、レポートサマリは表になります。
 
 * 学習パスに割り当てられている各学習者：
    * 完了したリソースの数。
@@ -563,7 +566,7 @@ It is possible to adjust the display of the table by selecting columns using the
 
 コンソール上部のボタンを使用して、「レポートの概要」テーブルを CSV 形式でダウンロードできます。
 
-* 有効化リソースの場合：ボタ `Download Resource Report as CSV` ン。
-* 学習パスの場合：ボタ `Download Learning Path Report as CSV` ン。
+* 有効化リソースの場合： `Download Resource Report as CSV` ボタン。
+* 学習パスの場合： `Download Learning Path Report as CSV` ボタン。
 
 一部の列だけを表示するよう選択している場合でも、「レポートの概要」テーブルのすべての列がダウンロードされます。
