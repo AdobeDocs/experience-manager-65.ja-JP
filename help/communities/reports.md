@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 0051791da06d15a48b82cf93164a89b4ea42ce98
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 39%
 
 ---
 
@@ -30,13 +33,13 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 * [表示レポート](#views-report)
 
-   コミュニティメンバー別のコンテンツの表示と、コミュニティサイトの訪問者別のグラフを表示します。
+   コミュニティメンバーや任意のコミュニティサイトのサイト訪問者別に、コンテンツの表示のグラフを表示します。
 
 * [投稿レポート](#posts-report)
 
-   コミュニティメンバー別の様々なタイプの投稿をコミュニティサイトにグラフで表示します。
+   コミュニティメンバー別の様々なタイプの投稿を、任意のコミュニティサイトにグラフで表示します。
 
-[Adobe Analyticsが有効な場合](/help/communities/sites-console.md#analytics)、レポートには、有効化された各リソースの表示数、再生数、コメント数および評価数が経時的に含まれます。
+[Adobe Analyticsを有効にすると](/help/communities/sites-console.md#analytics)、各有効化リソースの表示数、再生数、コメント数、評価数が時間の経過と共にレポートに表示されます。
 
 表形式のレポートは .csv 形式でエクスポートして別の処理に使用できます。
 
@@ -50,7 +53,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
    * **[!UICONTROL 割り当てレポート]**
 
-      * 選択したコミュニティサイト、ユーザまたはグループ、および割り当てのレポートを生成します。
+      * 選択したコミュニティサイト、ユーザーまたはグループ、割り当てに関するレポートを生成します。
    * **[!UICONTROL 投稿レポート]**
 
       * 選択したコミュニティサイト、コンテンツタイプ、期間のレポートを生成します。
@@ -60,7 +63,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 
 
-![chlimage_1-236](assets/chlimage_1-236.png)
+![レポート](assets/reports1.png)
 
 ### イネーブルメントリソースと学習パスのレポート {#reports-for-enablement-resources-and-learning-paths}
 
@@ -69,21 +72,21 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 * 既存の有効化コミュニティサイトを選択してください：
 
    * Select **Report** icon to generate reports which cover all enablement resources.
-   * 有効化学習パスを選択します。
+   * 有効化の学習パスを選択します。
    * Select **Report** icon to generate reports for:
 
-      * 使用可能なリソースが含まれています。
+      * 付属の有効化リソース。
       * 学習パスに割り当てられた学習者。
 
-* 次の情報が表示されます。
+* これらのレポートには、次の機能があります。
 
    * 表データ（CSV形式でダウンロード可能）:
 
       * 学習者の識別
-      * 彼らのステータス
-      * 割り当て済みか、カタログを通じてアクセス済みか
+      * 彼らの地位
+      * カタログを使用して割り当てるか、アクセスするか
       * コメントの数
-      * 星評価
+      * 与えられた星評価
 
 詳しくは、リソースコンソールの[レポートセクション](/help/communities/resources.md#report)を参照してください。
 
@@ -93,7 +96,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 このレポートには、進捗状況に関する情報と、コメントや評価がある場合はそれも表示されます。
 
-![chlimage_1-237](assets/chlimage_1-237.png)
+![譲渡報告](assets/assignment-report.png)
 
 レポートのフィルタリング条件を選択します。
 
@@ -104,7 +107,8 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 * **ユーザーまたはグループ**
    * 「ユーザー」を選択して、1人の学習者のレポートを生成します。
    * 「グループ」を選択して、学習者のグループに関するレポートを生成します。
-   トンネルサービスは、発行メンバーからメンバーおよびメンバーグループにアクセス環境します。
+
+   トンネルサービスは、パブリッシュ環境からメンバーとメンバーグループにアクセスします。
 
 * **代入**
 
@@ -112,13 +116,13 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 「**生成**」を選択してレポートを作成します。
 
-![chlimage_1-238](assets/chlimage_1-238.png)
+![生成レポート](assets/generate-assignment-report.png)
 
 ## Views Report {#views-report}
 
 表示コンソールでは、指定した期間におけるコミュニティ機能別のページ表示回数のレポートを生成できます。
 
-![chlimage_1-239](assets/chlimage_1-239.png)
+![表示報告](assets/view-report.png)
 
 レポートのフィルタリング条件を選択します。
 
@@ -128,9 +132,9 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 * **[!UICONTROL コンテンツタイプ]**
 
-   「すべてのコンテンツ」を選択するか、サイトに存在する機能の1つを選択できます。
+   「すべてのコンテンツ」を選択するか、サイトに存在する機能の1つを選択します。
 
-* **[!UICONTROL 期間]**
+* **[!UICONTROL 時間枠]**
 
    次のいずれかを選択します。
 
@@ -141,13 +145,13 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 Select **[!UICONTROL Generate]** to create the report.
 
-![chlimage_1-240](assets/chlimage_1-240.png)
+![generate-表示](assets/generate-views.png)
 
 ## Posts Report {#posts-report}
 
 投稿コンソールでは、指定した期間におけるコミュニティ機能への投稿数のレポートを生成できます。
 
-![chlimage_1-241](assets/chlimage_1-241.png)
+![posts-report](assets/posts-report.png)
 
 レポートのフィルタリング条件を選択します。
 
@@ -157,9 +161,9 @@ Select **[!UICONTROL Generate]** to create the report.
 
 * **[!UICONTROL コンテンツタイプ]**
 
-   「すべてのコンテンツ」を選択するか、サイトに存在する機能の1つを選択できます。
+   「すべてのコンテンツ」を選択するか、サイトに存在する機能の1つを選択します。
 
-* **[!UICONTROL 期間]**
+* **[!UICONTROL 時間枠]**
 
    次のいずれかを選択します。
 
@@ -170,16 +174,16 @@ Select **[!UICONTROL Generate]** to create the report.
 
 Select **[!UICONTROL Generate]** to create the report.
 
-![chlimage_1-242](assets/chlimage_1-242.png)
+![生成レポート](assets/generate-posts-report.png)
 
 ## トラブルシューティング {#troubleshooting}
 
 ### コミュニティサイトが 1 つも表示されない {#no-community-sites-listed}
 
-コミュニティサイトが 1 つも表示されない場合は、Adobe Analytics がサイトに対して有効になっているかを確認してください。割り当てに関するレポートを選択する場合は、割り当て機能がコミュニティサイトの構造内にあることを確認します。
+コミュニティサイトが 1 つも表示されない場合は、Adobe Analytics がサイトに対して有効になっているかを確認してください。割り当てに関するレポートを選択する場合は、割り当て機能がコミュニティサイトの構造にあることを確認します。
 
 ### AEM作成者インスタンスにレポートが表示されない {#reports-do-not-show-in-aem-author-instance}
 
-レポートがAEM作成者インスタンスに表示されない場合は、発行インスタンスでのURLのマッピングなど、カスタマイズの有無を確認します。 URLのマッピングがコミュニティサイトのAEM発行インスタンスでのみ行われる場合は、サイトトレンドレポートのソーシャルコンポーネントファクトリの設定で、AEM作成者インスタンスで **同じ設定が行われている** ことを確認します。
+レポートがAEM作成者インスタンスに表示されない場合は、発行インスタンスでのURLのマッピングなど、カスタマイズ内容を確認します。 URLのマッピングがコミュニティサイトのAEM Publishインスタンスでのみ行われる場合は、 **サイトトレンドレポートのソーシャルコンポーネントファクトリ** の設定で、AEM Authorインスタンスで同じ設定が行われていることを確認します。
 
-![AEM作成者のURLマッピング](assets/sitetrend.png)
+![AEM作成者でのURLマッピング](assets/sitetrend.png)
