@@ -10,36 +10,39 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 0051791da06d15a48b82cf93164a89b4ea42ce98
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 38%
 
 ---
 
 
 # 評価の使用 {#using-ratings}
 
-The `Rating` component is used standalone or in conjunction with other Communities features. ここでは、ログインしたコミュニティのメンバーが、コンテンツを評価することで意見を表すことができます。
+The `Rating` component is used standalone or in conjunction with other Communities features. ここでは、ログインコミュニティのメンバーが、コンテンツを評価することで意見を述べることを可能にします。
 
 ## 評価をページに追加 {#adding-a-rating-to-a-page}
 
-作成者モード `Rating` でページにコンポーネントを追加するには、コンポーネントを見つけ、 `Communities / Rating` そのコンポーネントをページ上の位置（メンバーが評価するフィーチャに対する相対位置など）にドラッグします。
+作成者モードでページに `Rating` コンポーネントを追加するには、コンポーネントを見つけ `Communities / Rating` てページ上の位置（メンバーの評価対象機能に対する相対位置など）にドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](rating-basics.md#essentials-for-client-side) are included, this is how the `Rating` component will appear.
+[必要なクライアント側のライブラリが含まれる場合](rating-basics.md#essentials-for-client-side) 、これがコンポー `Rating` ネントの表示方法です。
 
-![chlimage_1-493](assets/chlimage_1-493.png)
+![評価](assets/rating.png)
 
 ## 評価の設定 {#configuring-rating}
 
 Select the placed `Rating` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-494](assets/chlimage_1-494.png)
+![configure-new](assets/configure-new.png)
 
 「**[!UICONTROL テキストとラベル]**」タブでは、評価の内部識別子を指定できます。
 
-![chlimage_1-495](assets/chlimage_1-495.png)
+![tallyname](assets/tallyname.png)
 
-**[!UICONTROL Tally Name]**(必&#x200B;*須*)このインスタ `Rating`ンスを一意に識別する単純な名前。 リポジトリの有効なノード名を指定する必要があります。
+**[!UICONTROL Tally Name]**(*必須*`Rating` )：このインスタンスを一意に識別する、の単純な名前。 リポジトリの有効なノード名を指定する必要があります。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -49,7 +52,7 @@ Select the placed `Rating` component to access and select the `Configure` icon w
 
 ### 匿名 {#anonymous}
 
-匿名での評価投稿はサポートされていません。サイト訪問者は登録（会員になる）し、サインインして参加する必要があります。
+匿名での評価投稿はサポートされていません。サイト訪問者は参加するには、登録（会員になる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
