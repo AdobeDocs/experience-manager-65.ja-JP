@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Experience Manager6.5アセットユーザーガイド
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 53%
+source-wordcount: '635'
+ht-degree: 52%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 53%
    + [Dynamic Media - Scene7 モードの設定](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
-   + [Dynamic MediaからハイブリッドモードへのDynamic Media- S7モードへの移行](migrate-from-hybrid-to-dms7.md)
+   + [ダイナミックメディア — ハイブリッドモードからダイナミックメディア — S7モードへの移行](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media アセットの管理](managing-assets.md)
    + [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Dynamic Media ビューアプリセットの管理](managing-viewer-presets.md)
@@ -58,7 +58,7 @@ ht-degree: 53%
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)
    + [スピンセット](spin-sets.md)
-   + [Dynamic Media内のビデオ](video.md)
+   + [ダイナミックメディアでのビデオ](video.md)
    + [カルーセルバナー](carousel-banners.md)
    + [インタラクティブ画像](interactive-images.md)
    + [インタラクティブビデオ](interactive-videos.md)
@@ -72,7 +72,7 @@ ht-degree: 53%
    + [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
    + [Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)
-   + [CDN にキャッシュされたコンテンツの無効化](invalidate-cdn-cached-content.md)
+   + [Dynamic Media Classicを使用したCDNキャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
    + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
