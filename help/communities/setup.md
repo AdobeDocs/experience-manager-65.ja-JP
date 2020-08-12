@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 45%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ## オーサーインスタンスおよびパブリッシュインスタンスの開始 {#start-author-and-publish-instances}
 
-開発およびデモの目的で、1つの作成者と1つの発行インスタンスを実行する必要があります。
+開発およびデモの目的では、1つの作成者と1つの発行インスタンスを実行する必要があります。
 
 To do so, follow the basic AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) instructions, which will result in:
 
@@ -28,15 +31,15 @@ To do so, follow the basic AEM [Getting Started](../../help/sites-deploying/depl
 
 AEM Communities では、各環境を次の目的で使用します。
 
-* 作成者の環境は次の場合に使用します。
+* 作成者環境は次の目的で使用します。
 
-   * サイト、テンプレート、およびコンポーネントの開発。
-   * 管理タスクと設定
+   * サイト、テンプレートおよびコンポーネントの開発。
+   * 管理タスクと設定環境。
 
-* 公開環境は次のものです。
+* 公開環境は次の目的で使用します。
 
-   * コンテンツの投稿とモデレートのコミュニティエクスペリエンス。
-   * コミュニティグループ、メンバーおよびメンバーグループの作成。
+   * コンテンツの投稿およびモデレートに関するコミュニティの経験。
+   * コミュニティグループ、メンバー、およびメンバーグループを作成する。
 
 >[!NOTE]
 >
@@ -57,7 +60,7 @@ This tutorial creates an [engagement community site](overview.md#engagement-comm
 
 [コミュニティサイトで Adobe Analytics が設定されている](analytics.md)場合、コミュニティアクティビティに関する情報が利用できます。これにより、コミュニティメンバーのエクスペリエンスが向上するほか、サイトの管理者はフィードバックを得られます。
 
-Adobe Analyticsとの統合はオプションです。
+Adobe Analyticsとの統合は任意です。
 
 ## 電子メール通知の設定 {#configure-email-for-notifications}
 
@@ -87,16 +90,16 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
    * For example, [http://localhost:4502/](http://localhost:4503/)
 
-* 管理者権限でサインイン
+* 管理者権限でサインインする
 
    * 例：ユーザー名「admin」/パスワード「admin」
 
 * From the main console, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 * From the **Edit **menu, select**[!UICONTROL Add User ]**
 
-* ダイアログで、次のよ `Create New User` うに入力します。
+* ダイアログで、次のように `Create New User` 入力します。
 
-   * **[!UICONTROL ID]**:シリア
+   * **[!UICONTROL ID]**:シリウス
    * **[!UICONTROL 電子メールアドレス]**：sirius.nilson@mailinator.com
    * **[!UICONTROL パスワード]**：password
    * **[!UICONTROL パスワードの確認(&amp;A);ast;]**:password
@@ -105,16 +108,16 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
-下にスクロールして次の操作を行い `Add User to Groups`ます。
+下にスクロール `Add User to Groups`:
 
-* 検索するには&#39;C&#39;と入力してください
+* &#39;C&#39;を入力して検索してください
 
    *  `Community Administrators`
    *  `Community Enablement Managers`
 
 * 「**[!UICONTROL 保存]**」を選択します。
 
-![chlimage_1-301](assets/chlimage_1-301.png)
+![create-user](assets/create-user.png)
 
 ## ソーシャルログインの有効化 {#enable-social-login}
 
@@ -140,7 +143,7 @@ Use the [Tagging console](../../help/sites-administering/tags.md#tagging-console
 * `Tutorial: Arts / Auditory`
 * `Tutorial: Arts / History`
 
-![chlimage_1-302](assets/chlimage_1-302.png)
+![tutorial-tags](assets/tutorial-tags.png)
 
 次の手順に従います。
 
@@ -153,8 +156,8 @@ AEM Communities 入門チュートリアル用に作成したタグのサンプ�
 
 ## UGC 共通ストア用の MongoDB {#mongodb-for-ugc-common-store}
 
-[MSRP](msrp.md) (MongoDB)を共通ストアとして設定することは推奨されますが、オプションです。これにより、発行環境または作成者 [](working-with-srp.md) （あるいはその両方）からすべてのUGCを柔軟にモデレートできます。
+It is recommended, but optional, to set [MSRP](msrp.md) (MongoDB) as the [common store](working-with-srp.md) to experience the flexibility of moderating all UGC from either publish and/or author environments.
 
 For instructions visit [How to Setup MongoDB for Demo](demo-mongo.md).
 
-デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、UGCが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、作成者環境には表示されないので、すべてのモデレートタスクが発行インスタンスを使用する必要があります。
+デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、JSRPが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、作成者環境には表示されないので、すべてのモデレートタスクで発行インスタンスを使用する必要があります。
