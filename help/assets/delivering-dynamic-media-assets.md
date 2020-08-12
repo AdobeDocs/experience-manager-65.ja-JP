@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 3eacfe8a79d155dddde8908d05b05790d048b0c5
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 100%
+source-wordcount: '306'
+ht-degree: 96%
 
 ---
 
@@ -42,8 +42,9 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 * [Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)
 * [レスポンシブサイト用に最適化された画像の配信](/help/assets/responsive-site.md)
 * [コンテンツの HTTP/2 配信](/help/assets/http2.md)
-* [CDN にキャッシュされたコンテンツの無効化](/help/assets/invalidate-cdn-cached-content.md)
+* [Dynamic Media Classicを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [ルールセットを使用した URL の変換](/help/assets/using-rulesets-to-transform-urls.md)
+
 
 ## Dynamic Media アセットの HTTP/2 配信 {#http-delivery-of-dynamic-media-assets}
 
