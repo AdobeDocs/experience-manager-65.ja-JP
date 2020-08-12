@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '463'
+ht-degree: 61%
 
 ---
 
@@ -26,13 +29,13 @@ The Site Templates console is very similar to the [Group Templates](tools-groups
 
 ## Site Templates Console {#site-templates-console}
 
-作成者環境で、コミュニティサイトコンソールにアクセスするには：
+作成者環境でコミュニティサイトコンソールにアクセスするには：
 
 * From global navigation: **[!UICONTROL Tools > Communities > Site Templates]**
 
 このコンソールでは、[コミュニティサイト](sites-console.md)を作成できるテンプレートが表示されます。また、新しいサイトテンプレートを作成できます。
 
-![chlimage_1-18](assets/chlimage_1-18.png)
+![site-template](assets/site-template.png)
 
 ## Create Site Template {#create-site-template}
 
@@ -42,7 +45,7 @@ To get started creating a new site template, select `Create`.
 
 ### Basic info {#basic-info}
 
-![chlimage_1-19](assets/chlimage_1-19.png)
+![site-template-basicinfo](assets/site-template-basicinfo.png)
 
 基本情報パネルでは、名前、説明およびテンプレートを有効にするか無効にするかを設定します。
 
@@ -56,17 +59,17 @@ To get started creating a new site template, select `Create`.
 
 * **[!UICONTROL 無効/有効]**
 
-   テンプレートが参照可能かどうかを制御する切り替えスイッチ。
+   テンプレートが参照可能かどうかを制御するトグルスイッチ。
 
 ### サムネール {#thumbnail}
 
-![chlimage_1-20](assets/chlimage_1-20.png)
+![site-thumbnail](assets/site-thumbnail.png)
 
 （オプション）コミュニティサイトの作成者に対し、名前と説明に加えてサムネイルを表示するには、画像をアップロードアイコンを選択します。
 
 ### 構造 {#structure}
 
-![chlimage_1-21](assets/chlimage_1-21.png)
+![部位構造](assets/site-structure.png)
 
 コミュニティ機能を追加するには、右側から左側にドラッグします。サイトメニューのリンクは追加した順番で表示されます。スタイルは、サイトの作成時にテンプレートに適用されます。
 
@@ -83,7 +86,7 @@ To get started creating a new site template, select `Create`.
 >他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
 
-![chlimage_1-22](assets/chlimage_1-22.png)
+![サイト編集者](assets/site-editor.png)
 
 ### グループ機能のためのグループテンプレート {#group-templates-for-groups-function}
 
@@ -94,11 +97,11 @@ To get started creating a new site template, select `Create`.
 >The Groups function must *not* be the *first nor the only* function in the site structure.
 
 
-![chlimage_1-23](assets/chlimage_1-23.png)
+![サイト関数](assets/site-functions.png)
 
 2 つ以上のグループテンプレートを選択することにより、グループ管理者が実際にコミュニティで新しいグループを作成するときに、テンプレートを選択できるようになります。
 
-![chlimage_1-24](assets/chlimage_1-24.png)
+![部位機能](assets/site-functions1.png)
 
 ## サイトテンプレートを編集 {#edit-site-template}
 
