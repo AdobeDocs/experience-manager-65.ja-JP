@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 60%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 * カスタムテンプレートを作成します。
 * デフォルトのサイトテンプレートパスをオーバーレイします。
-* オ追加ーバーレイパスのカスタムテンプレート。
+* オーバーレイ追加パスのカスタムテンプレート。
 * Specify the custom template by adding a `page-template` property to the `configuration` node.
 
 **デフォルトのテンプレート**：
@@ -62,7 +65,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 As an example, `vertical-sitepage.hbs` is a site template that results in the placement of menu links vertically down the left side of the page, instead of horizontally below the banner.
 
-[[ファイルの取得](assets/vertical-sitepage.hbs)]カスタムサイトテンプレートをオーバーレイフォルダに配置します。
+[ファイルの取得](assets/vertical-sitepage.hbs)カスタムサイトテンプレートをオーバーレイフォルダーに配置します。
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
@@ -70,7 +73,7 @@ Identify the custom template by adding a `page-template` property to the configu
 
 `/content/sites/sample/en/configuration`
 
-![chlimage_1-80](assets/chlimage_1-80.png)
+![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
 「**すべて保存**」を選択してカスタムコードをすべての AEM インスタンスにレプリケートしてください（コミュニティサイトコンテンツがコンソールから公開された時点ではカスタムコードは含まれていません）。
 
@@ -88,11 +91,11 @@ To export UGC, use the [AEM Communities UGC Migration Tool](https://github.com/A
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-As of AEM Communities 6.3 Service Pack 1, Delete Site icon appears on hovering over the community site from **[!UICONTROL Communities]** > **[!UICONTROL Sites]** console. 開発中に、コミュニティサイトと開始を新規に削除する場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
+As of AEM Communities 6.3 Service Pack 1, Delete Site icon appears on hovering over the community site from **[!UICONTROL Communities]** > **[!UICONTROL Sites]** console. 開発中に、コミュニティサイトと開始を新規に削除したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
-* [アセット](#enablement-assets)
+* [Assets](#enablement-assets)
 * [データベースレコード](#database-records)
 
 ### Community Unique Site ID {#community-unique-site-id}
@@ -129,7 +132,7 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 すべてのオーサーインスタンスおよびパブリッシュインスタンスで、[セキュリティコンソール](../../help/sites-administering/security.md)から、以下に該当する[ユーザーグループ](users.md)を検索して削除します。
 
-* 接頭辞 `community`
+* 先頭に `community`
 * Followed by [unique site id](#community-unique-site-id)
 
 例： `community-engage-x0e11-members`
@@ -139,8 +142,8 @@ Github から communities-srp-tools プロジェクトを取得します。
 メインコンソールから、次の手順に従います。
 
 * Select **[!UICONTROL Assets]**.
-* Enter **[!UICONTROL Select]** mode.
-* Select folder named with the [unique site Id](#community-unique-site-id).
+* **[!UICONTROL 選択]** モードに入ります。
+* [一意のサイトIDを使用して名前が付けられたフォルダーを選択します](#community-unique-site-id)。
 * Select **[!UICONTROL Delete]** (may need to select from **[!UICONTROL More...]**).
 
 ### データベースレコード {#database-records}
