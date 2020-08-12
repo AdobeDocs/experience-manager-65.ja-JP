@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+workflow-type: tm+mt
+source-wordcount: '239'
+ht-degree: 74%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 コミュニティコンポーネントの場合、[オーサー環境のリッチテキストエディター](../../help/sites-authoring/rich-text-editor.md)に似ていますが、パブリッシュ環境で入力されたテキストに影響します。
 
-![chlimage_1-410](assets/chlimage_1-410.png)
+![リッチテキストエディター](assets/rich-text-editor.png)
 
 ## リッチテキストエディターの有効化 {#enabling-rich-text-editor}
 
