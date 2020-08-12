@@ -3,7 +3,7 @@ title: でビデオアセットを管理します [!DNL Adobe Experience Manager
 description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 37%
@@ -19,7 +19,7 @@ Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager 
 
 ## ビデオアセットのアップロードとプレビュー {#upload-and-preview-video-assets}
 
-[!DNL Adobe Experience Manager Assets] 拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFMPEGは、OGGタイプとMP4タイプのビデオレンディションを作成します。 You can preview the renditions in the [!DNL Assets] user interface.
+[!DNL Adobe Experience Manager Assets] 拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 You can preview the renditions in the [!DNL Assets] user interface.
 
 1. デジタルアセットフォルダーまたはサブフォルダーで、デジタルアセットを追加する場所に移動します。
 1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Files]**. または、アセット領域に直接ドロップします。See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
@@ -79,7 +79,7 @@ In addition to [!DNL Assets] configuration, change the following configurations 
 
    注釈ウィザードを終了するには、「**[!UICONTROL 閉じる]**」をクリックします。
 
-1. ビデオ内の特定のポイントを探すには、**テキスト**&#x200B;フィールドに時刻（秒）を指定して、「**ジャンプ**」をクリックします。例えば、ビデオの最初の 20 秒をスキップするには、テキストフィールドに「10」と入力します。
+1. ビデオ内の特定のポイントを探すには、**テキスト**&#x200B;フィールドに時刻（秒）を指定して、「**ジャンプ**」をクリックします。例えば、ビデオの最初の 20 秒をスキップするには、テキストフィールドに「20」と入力します。
 
    ![ビデオ内の時間をシークして、指定された秒数だけスキップします](assets/seek-in-video.png)
 
