@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+workflow-type: tm+mt
+source-wordcount: '3292'
+ht-degree: 45%
 
 ---
 
 
 # コミュニティサイトコンソール {#communities-sites-console}
 
-Communitiesのサイトコンソールから次の項目にアクセスできます。
+Communitiesのサイトコンソールから次のアクセス権を利用できます。
 
 * サイトの作成
 * サイトの編集
 * サイト管理
-* [ネストされたグループ](/help/communities/groups.md) （サブコミュニティ）の作成と編集
+* [ネストグループ](/help/communities/groups.md) （サブコミュニティ）の作成と編集
 
 オーサー環境で素早くコミュニティサイトを作成する方法や、オーサー環境とパブリッシュ環境からコミュニティグループを作成する方法については、[AEM Communities 使用の手引き](/help/communities/getting-started.md)を参照してください。
 
@@ -39,7 +42,7 @@ Before creating a community site, it is *required* to:
 * 1つ以上の発行インスタンスが実行中であることを確認します。
 * Enable the [tunnel service](/help/communities/deploy-communities.md#tunnel-service-on-author) to manage members and member groups.
 * Identify the [primary publisher](/help/communities/deploy-communities.md#primary-publisher).
-* [プライマリパブリッシャー](/help/communities/deploy-communities.md#replication-agents-on-author) ・ポートがデフォルト(4503)でない場合は、レプリケーションを構成します。
+* [プライマリパブリッシャーポートがデフォルト(4503)でない場合は、レプリケーションを構成します](/help/communities/deploy-communities.md#replication-agents-on-author) 。
 
 サイトで様々な機能がサポートされるよう確実に準備するために、次の手順を実行することをお勧めします。
 
@@ -47,11 +50,11 @@ Before creating a community site, it is *required* to:
 * Enable [Adobe Analytics](/help/communities/analytics.md) for AEM Communities.
 * Configure [email](/help/communities/email.md)
 * Identify [Community Administrators](/help/communities/users.md#creating-community-members).
-* [OAuthハンドラーを有効にして](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) 、ソーシャルログインを行います。
+* [ソーシャルログイン用にOAuthハンドラーを有効にします](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) 。
 
 ## コミュニティサイトコンソールへのアクセス {#accessing-communities-sites-console}
 
-作成者環境で、Communities Sitesコンソールにアクセスするには：
+作成者環境で、Communitiesのサイトコンソールにアクセスするには：
 
 * From global navigation: **[!UICONTROL Communities]** > **[!UICONTROL Sites]**
 
@@ -63,13 +66,13 @@ Before creating a community site, it is *required* to:
 
 For example, the following image shows the main Communities Sites console displaying the folders for two community sites : [enable](/help/communities/getting-started-enablement.md) and [engage](/help/communities/getting-started.md):
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![site-console](assets/site-console.png)
 
 ## サイト作成 {#site-creation}
 
 サイト作成コンソールでは、選択した[コミュニティサイトテンプレート](/help/communities/sites.md)と設定に基づき、サイトの機能を段階的に組み立てることができます。
 
-作成されるサイトには、いずれもログイン機能が含まれます。これは、サイト訪問者がコンテンツの投稿、メッセージの送信またはグループへの参加をおこなう前に、サインインする必要があるからです。その他の機能には、ユーザプロファイル、メッセージング、通知、サイトメニュー、検索、テーマ設定、ブランドなどがあります。
+作成されるサイトには、いずれもログイン機能が含まれます。これは、サイト訪問者がコンテンツの投稿、メッセージの送信またはグループへの参加をおこなう前に、サインインする必要があるからです。その他の機能には、ユーザープロファイル、メッセージング、通知、サイトメニュー、検索、テーマ、ブランディングなどがあります。
 
 The process is launched by selecting the `Create` button located at the top of the Communities Sites console.
 
@@ -91,9 +94,9 @@ The process is launched by selecting the `Create` button located at the top of t
 
    サイトの説明。
 
-   説明は、公開されたサイトには表示されません。
+   説明は、公開済みのサイトには表示されません。
 
-* **コミュニティサイトのルート**
+* **コミュニティサイトルート**
 
    サイトのルートパス。
 
@@ -107,8 +110,8 @@ The process is launched by selecting the `Create` button located at the top of t
 
    URLに表示されるサイトのルートページの名前。
 
-   * 重複 — サイトの作成後に名前が簡単に変更されないので、名前を確認します。
-   * ベースURL( `https://server:port/site root/site name)``Community Site Name`が
+   * サイトの作成後に名前が容易に変更されないので、重複チェックを行います。
+   * ベースURL( `https://server:port/site root/site name)` がの下に表示され `Community Site Name`ます。
 
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
 
@@ -116,7 +119,7 @@ The process is launched by selecting the `Create` button located at the top of t
 
 * **コミュニティサイトテンプレート** メニュー
 
-   プルダウンメニューを使用して、利用可能なコミュニティサイ [トテンプレートを選択しま](/help/communities/tools.md)す。
+   プルダウンメニューを使用して、使用可能な [コミュニティサイトテンプレートを選択し](/help/communities/tools.md)ます。
 
 * 「**次へ**」を選択します。
 
@@ -128,7 +131,7 @@ The process is launched by selecting the `Create` button located at the top of t
 
 ![sitetheme](assets/sitetheme.png)
 
-このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、[Twitter Bootstrap](https://twitterbootstrap.org/) を使用しています。プリロードされた多数のブートストラップテーマの1つを選択して、選択したコミュニティサイトのテンプレートのスタイルを設定したり、ブートストラップテーマをアップロードしたりできます。
+このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、[Twitter Bootstrap](https://twitterbootstrap.org/) を使用しています。プリロードされた多数のBootstrapテーマの1つを選択して、選択したコミュニティサイトのテンプレートのスタイルを設定したり、Bootstrapテーマをアップロードしたりできます。
 
 選択すると、テーマの上に不透明な青色のチェックマークのオーバーレイが表示されます。
 
@@ -136,7 +139,7 @@ The process is launched by selecting the `Create` button located at the top of t
 
 #### コミュニティサイトブランディング {#community-site-branding}
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![サイトブランディング](assets/site-branding.png)
 
 コミュニティサイトブランディングとは、各ページ上部にヘッダーとして表示される画像のことです。
 
@@ -144,11 +147,11 @@ The process is launched by selecting the `Create` button located at the top of t
 
 画像を選択するときは、次の点に注意してください。
 
-* 画像の高さは、画像の上端から120ピクセルにトリミングされます。
+* 画像の高さは、画像の上端から120ピクセルに切り抜かれます。
 * 画像は、ブラウザーウィンドウの左端に固定されます。
 * 画像の幅が次のような場合、画像のサイズは変更されません。
 
-   * ブラウザーの幅より小さい場合、画像は水平方向に繰り返されます。
+   * ブラウザーの幅より小さい場合は、画像が水平方向に繰り返されます。
    * ブラウザーの幅より大きい場合、画像は切り抜かれたように見えます。
 
 * 「**次へ**」を選択します。
@@ -175,7 +178,7 @@ The process is launched by selecting the `Create` button located at the top of t
 >
 >したがって、オーサー環境でコミュニティサイトを作成し、信頼されているメンバーを様々な役割に割り当てる場合は、パブリッシュ環境からメンバーのデータを取得する必要があります。
 >
->これは、作成者のを有効にするこ ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` とで達成されます。
+>これは、作成者の環境を有効にす ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` ることで達成されます。
 
 
 #### ユーザー管理 {#user-management}
@@ -191,14 +194,14 @@ The process is launched by selecting the `Create` button located at the top of t
 
 * **ユーザー登録を許可**
 
-   オンにすると、サイト訪問者は自己登録によってコミュニティのメンバーになる場合があります。
+   オンにすると、サイトの訪問者は自己登録によってコミュニティのメンバーになる場合があります。
 If unchecked, the community site is *restricted* and site visitors must be assigned to the community site&#39;s members group, make a request or be sent an invitation by email. 選択しない場合、匿名アクセスは許可されません。
 非公開のコミュニティサイトの場合はオフにします。**&#x200B;初期設定はオンです。
 
 * **匿名アクセスを許可**
 
-   このオプションを選択すると、コミュニティサイトは*open *開かれ、サイト訪問者はサイトにアクセスできます。
-オフにすると、サインイン済みのメンバーのみがサイトにアクセスできます。*private *コミュニティサイトのチェックを外します。 初期設定はオンです。
+   オンにすると、コミュニティサイトは*open *になり、すべてのサイト訪問者がサイトにアクセスできます。
+オフにすると、サインイン済みのメンバーのみがサイトにアクセスできます。*private *communityサイトのチェックを外します。 初期設定はオンです。
 
 * **メッセージを許可**
 
@@ -224,13 +227,13 @@ If unchecked, the community site is *restricted* and site visitors must be assig
 
 #### タグ付け {#tagging}
 
-![chlimage_1-156](assets/chlimage_1-156.png)
+![サイトタグ付け](assets/site-tagging.png)
 
 コミュニティコンテンツに適用できるタグを制御するには、以前に[タグ付けコンソール](/help/sites-administering/tags.md#tagging-console)で定義したタグ名前空間を選択します。
 
 また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとリソースを定義するときに表示される選択肢が制限されます。See [Tagging Enablement Resources](/help/communities/tag-resources.md) for important information.
 
-* テキスト検索ボックス：開始タイプを使用して、サイトで使用できるタグを識別します。
+* テキスト検索ボックス：サイトで使用できるタグを識別するための開始入力。
 
 #### 役割 {#roles}
 
@@ -242,11 +245,11 @@ If unchecked, the community site is *restricted* and site visitors must be assig
 
 * **コミュニティマネージャー**
 
-   開始の入力を使用して、コミュニティメンバーおよびメンバーグループを管理できる1つ以上のコミュニティメンバーまたはメンバーグループを選択します。
+   開始の入力：コミュニティメンバーとメンバーグループを管理できる1人または複数のコミュニティメンバーまたはメンバーグループを選択します。
 
 * **コミュニティのモデレーター**
 
-   開始生成コンテンツのモデレーターとして信頼される1つ以上のコミュニティメンバーまたはメンバーグループを選択するための入力。
+   開始生成コンテンツのモデレーターとして信頼できるコミュニティメンバーまたはメンバーグループを1つ以上選択する場合のユーザー入力。
 
 * **コミュニティ権限を持つメンバー**
 
@@ -254,51 +257,51 @@ If unchecked, the community site is *restricted* and site visitors must be assig
 
 * **コミュニティ管理者**
 
-   開始入力を使用して、他のサイト管理者やデフォルトのコミュニティ管理者とは無関係にサイト構造を処理できる1人または複数のサイト管理者を選択します。 階層の任意のレベルでグループを作成し、ネストされたグループのデフォルトの管理者になることができます（ただし、後でネストされたグループの管理者の役割から削除することもできます）。
+   他のサイト管理者や既定のコミュニティ管理者とは無関係に、サイト構造を処理できる1人または複数のサイト管理者を選択するための開始入力。 階層の任意のレベルでグループを作成し、ネストグループのデフォルト管理者になることができます（ただし、後でネストグループの管理者の役割から削除することもできます）。
 
 #### モデレート {#moderation}
 
-![chlimage_1-157](assets/chlimage_1-157.png)
+![サイトのモデレート](assets/site-moderation.png)
 
 ユーザー生成コンテンツ（UGC）のモデレートのグローバル設定は、ここで制御します。個々のコンポーネントには、モデレートを制御するための追加設定があります。
 
 * **コンテンツを事前にモデレート**
 
-   オンにすると、投稿されたコミュニティのコンテンツはモデレーターによって承認されるまで表示されません。 初期設定はオフです。For more information, see [Moderating Community Content](/help/communities/moderate-ugc.md#premoderation).
+   オンにすると、投稿されたコミュニティのコンテンツはモデレーターが承認するまで表示されません。 初期設定はオフです。For more information, see [Moderating Community Content](/help/communities/moderate-ugc.md#premoderation).
 
 * **コンテンツが非表示になるまでのフラグ設定しきい値**
 
-   0より大きい場合は、トピックまたは投稿が公開表示に表示されないようにする前にフラグを付ける必要がある回数です。 -1に設定すると、フラグ付けされたトピックまたは投稿が公開表示に表示されません。 初期設定は 5 です。
+   0より大きい場合は、トピックまたは投稿が公開表示に表示されない前にフラグを付ける必要がある回数です。 -1に設定した場合、フラグ付けされたトピックまたは投稿はパブリック表示に表示されません。 初期設定は 5 です。
 
 #### Analytics {#analytics}
 
-![chlimage_1-158](assets/chlimage_1-158.png)
+![サイト分析](assets/site-analytics.png)
 
 * **Analytics を有効にする**
 
    Only available when Adobe Analytics has been [configured](/help/communities/analytics.md) for Communities features.
 初期設定はオフです。オンにすると、以下の追加選択メニューが表示されます。
 
-![chlimage_1-159](assets/chlimage_1-159.png)
+![site-analytics-enable](assets/site-analytics-enable.png)
 
 * **クラウド設定フレームワークの参照**
 
    プルダウンメニューから、このコミュニティサイト用に設定した Analytics クラウドサービスフレームワークを選択します。
-   `Communities` は、 [Analytics Configuration for Communities Featuresドキュメントのフレームワークの例](/help/communities/analytics.md#aem-analytics-framework-configuration) です。
+   `Communities` は、 [Analytics Configuration for Communities Features](/help/communities/analytics.md#aem-analytics-framework-configuration) （コミュニティ機能の設定）ドキュメントのフレームワークの例です。
 
 #### TRANSLATION {#translation}
 
-![chlimage_1-160](assets/chlimage_1-160.png)
+![サイト翻訳](assets/site-translation.png)
 
 * **機械翻訳を許可**
 
-   オンにすると（デフォルトではオフ）、サイト内のUGCに対して機械翻訳が有効になります。 これは、サイトが多言語サイトとして設定されている場合でも、ページコンテンツなどの他のコンテンツには影響しません。 See [Translating User Generated Content](/help/communities/translate-ugc.md) for information on configuring a licensed translation service for AEM Communities. See [Translating Content for Multilingual Sites](/help/sites-administering/translation.md) for a complete overview.
+   オンにすると（デフォルトでオフになっています）、サイト内のUGCに対して機械翻訳が有効になります。 これは、サイトが多言語サイトとして設定されている場合でも、ページコンテンツなどの他のコンテンツには影響しません。 See [Translating User Generated Content](/help/communities/translate-ugc.md) for information on configuring a licensed translation service for AEM Communities. See [Translating Content for Multilingual Sites](/help/sites-administering/translation.md) for a complete overview.
 
-![chlimage_1-161](assets/chlimage_1-161.png)
+![allow-machine-translation](assets/allow-machine-translation.png)
 
 * **選択した言語の機械翻訳を有効にする**
 
-   機械翻訳が有効になっている言語は、翻訳統合設定で指定されたシステム設定に [デフォルトで設定されま](/help/communities/translate-ugc.md#translation-integration-configuration)す。 これらのデフォルト設定は、デフォルトを削除したり、プルダウンメニューから他の言語を選択したりすることで、このサイトで上書きされる場合があります。
+   機械翻訳に対して有効にされた言語は、 [翻訳統合設定で指定されたシステム設定にデフォルトで設定されます](/help/communities/translate-ugc.md#translation-integration-configuration)。 これらのデフォルト設定は、デフォルトを削除したり、プルダウンメニューから他の言語を選択したりすることで、このサイトで上書きされる場合があります。
 
 * **変換プロバイダーを選択**
 
@@ -306,23 +309,23 @@ If unchecked, the community site is *restricted* and site visitors must be assig
 
 * **グローバル共有ストアを選択**
 
-   複数の言語コピーがあるWebサイトの場合、グローバル共有ストアでは、各言語コピーから見える単一の会話スレッドを提供します。 これを実現するには、言語コピーとして含まれているいずれかの言語を選択します。Default is *No Global Shared Store*.
+   複数の言語コピーがあるWebサイトでは、グローバル共有ストアは単一の会話スレッドを提供し、各言語コピーから見ることができます。 これを実現するには、言語コピーとして含まれているいずれかの言語を選択します。Default is *No Global Shared Store*.
 
 * **変換プロバイダー設定を選択**
 
-   ライセンスされた [翻訳プロバイダー用に](/help/sites-administering/tc-tic.md) 、作成された翻訳統合フレームワークを選択します。
+   ライセンスされた翻訳プロバイダー用に [作成された翻訳統合フレームワーク](/help/sites-administering/tc-tic.md) を選択します。
 
 * **コミュニティサイトの翻訳オプションを選択**
 
    * **ページ全体を翻訳**
 
-      選択すると、ページ上のすべてのUGCがページの基本言語に翻訳されます。
+      選択すると、ページ上のすべてのUGCがページのベース言語に翻訳されます。
 
       初期設定では選択されていません。**
 
    * **選択項目のみ翻訳**
 
-      選択すると、各投稿の横に翻訳オプションが表示され、個々の投稿をページの基本言語に翻訳できます。
+      選択すると、各投稿の横に翻訳オプションが表示され、個々の投稿をページのベース言語に翻訳できます。
 初期設定では選択されています。**
 
 * **保持オプションを選択**
@@ -331,9 +334,9 @@ If unchecked, the community site is *restricted* and site visitors must be assig
 
       初期設定では選択されていません。**
 
-   * **翻訳を保持しない**
+   * **翻訳を永続化しない**
 
-      選択した場合、翻訳はリポジトリに保存されません。
+      選択すると、変換はリポジトリに保存されません。
 
       選択されていないと、翻訳は保持されます。
 
@@ -349,15 +352,15 @@ If unchecked, the community site is *restricted* and site visitors must be assig
 
 #### イネーブルメント {#enablement}
 
-![chlimage_1-162](assets/chlimage_1-162.png)
+![現場利用可能](assets/site-enablement.png)
 
-The `ENABLEMENT`settings are applicable when the chosen community site template includes the [assignments function](/help/communities/functions.md#assignments-function), which is available when the enablement features are licensed and [configured](/help/communities/enablement.md). 割り当て機能を含むリファレンスサイトのテンプレートは、 `Reference Structured Learning Site Template.`
+The `ENABLEMENT`settings are applicable when the chosen community site template includes the [assignments function](/help/communities/functions.md#assignments-function), which is available when the enablement features are licensed and [configured](/help/communities/enablement.md). assignments関数を含むリファレンスサイトテンプレートは、次のとおりです。 `Reference Structured Learning Site Template.`
 
-* **イネーブルメントマネージャ**（必須）このイネーブルメントコミュニティを管理す `Community Enablementmanagers` るには、グループのメンバーのみが選択できます。 イネーブルメントマネージャは、メンバをリソースに割り当てる必要があります。 See also [Managing Users and User Groups](/help/communities/users.md).
+* **有効化マネージャ**`Community Enablementmanagers` （必須）この有効化コミュニティを管理するには、グループのメンバーのみが選択できます。 有効化マネージャーは、メンバーをリソースに割り当てる必要があります。 See also [Managing Users and User Groups](/help/communities/users.md).
 
 * **Marketing Cloud 組織 ID**
 
-   （オプション）ビデオハートビート分析 [ライセンスのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
+   （オプション） [ビデオハートビートAnalytics](/help/communities/analytics.md#video-heartbeat-analytics) ライセンスのID。
 
 * 「**次へ**」を選択します。
 
@@ -370,29 +373,27 @@ Once **Create** is selected and started, the process of creating the site cannot
 サイト作成後は、以下のようになります。
 
 * URL（ノード名）の変更はサポートされていません。
-* 今後、コミュニティサイトテンプレートを変更しても、作成したコミュニティサイトには影響しません。
+* 今後、コミュニティサイトテンプレートに変更を加えても、作成したコミュニティサイトには影響しません。
 * コミュニティサイトテンプレートを無効にしても、作成したコミュニティサイトには影響しません。
 * It is possible to edit the [STRUCTURE](#modify-structure) of a community site by modifying its properties.
 
-![chlimage_1-163](assets/chlimage_1-163.png)
+![create-site](assets/create-site1.png)
 
 プロセスが完了すると、新しいサイトのフォルダーがコミュニティサイトコンソールに表示されます。このコンソールで、作成者がページコンテンツを追加したり、管理者がサイトのプロパティを変更したりできます。
 
-![chlimage_1-164](assets/chlimage_1-164.png)
+![modify-site-property](assets/modify-site-property.png)
 
 コミュニティサイトを変更するには、そのプロジェクトフォルダーを選択して開きます。
 
-![siteactions-1](assets/siteactions-1.png)
+![サイトプロジェクト](assets/site-project.png)
 
 When hovering over a site with a mouse, or touching a site card, icons appear which allow for [editing the site in author mode](#authoring-site-content), [opening the site properties for modification](#modifying-site-properties), [publishing the site](#publishing-the-site), [exporting the site](#exporting-the-site), and [deleting the site](#deleting-the-site).
 
 ## サイトコンテンツのオーサリング {#authoring-site-content}
 
-![chlimage_1-165](assets/chlimage_1-165.png)
+サイトのコンテンツは、他の AEM Web サイトと同じツールを使用してオーサリングできます。To open the site for authoring, select the `Open Site` icon that appears on hovering the site with mouse. サイトが新しいタブに開き、Communitiesのサイトコンソールへのアクセスが維持されます。
 
-サイトのコンテンツは、他の AEM Web サイトと同じツールを使用してオーサリングできます。To open the site for authoring, select the `Open Site` icon that appears on hovering the site with mouse. サイトが新しいタブで開き、Communitiesのサイトコンソールにアクセスできるようになります。
-
-![chlimage_1-166](assets/chlimage_1-166.png)
+![サイトコンテンツ](assets/site-content.png)
 
 >[!NOTE]
 >
@@ -401,13 +402,13 @@ When hovering over a site with a mouse, or touching a site card, icons appear wh
 
 ## サイトプロパティの変更 {#modifying-site-properties}
 
-![chlimage_1-167](assets/chlimage_1-167.png)
+![編集サイト](assets/edit-site.png)
 
 The properties of an exisitng site, specified during the site creation process, can be modified by selecting the `Edit Site`icon that appears on hovering the site with mouse.
 
-`Details of the following properties match the descriptions provided in the` 「サイト [の作成](#site-creation) 」セクション。
+`Details of the following properties match the descriptions provided in the` [「サイトの作成](#site-creation) 」セクションを参照してください。
 
-![chlimage_1-168](assets/chlimage_1-168.png)
+![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
 ### 基本事項の変更 {#modify-basic}
 
@@ -427,7 +428,7 @@ BASICパネルでは、次の変更が可能です。
 構造パネルでは、最初にコミュニティサイトテンプレートから作成された構造を変更できます。パネルから、次の操作を行うことができます。
 
 * Drag-and-drop additional [community functions](/help/communities/functions.md) into the site structure.
-* サイト構造内のコミュニティ関数のインスタンスで、次の操作を行います。
+* サイト構造内のコミュニティ関数のインスタンスに対して、次の操作を行います。
 
    * **`gear icon`**
 
@@ -439,16 +440,16 @@ BASICパネルでは、次の変更が可能です。
 
    * **`grid icon`**
 
-      サイトのトップレベルナビゲーションバーに表示される関数の順序を変更します。
+      サイトのトップレベルナビゲーションバーに表示される機能の順序を変更します。
 
 >[!NOTE]
 >
->トップにある機能を除き、サイト構造のすべての機能の順序を変更できます。したがって、コミュニティのホームページは変更できない。
+>トップにある機能を除き、サイト構造のすべての機能の順序を変更できます。したがって、コミュニティサイトのホームページは変更できません。
 
 
 >[!CAUTION]
 >
->* 表示タイトルは副作用なしに変更できますが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしません。
+>* 表示タイトルは副作用なく変更できるが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしない。
 >
 >
 例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
@@ -463,7 +464,7 @@ BASICパネルでは、次の変更が可能です。
 
 #### 例：コミュニティのサイト構造へのカタログ機能の追加 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
-![chlimage_1-169](assets/chlimage_1-169.png)
+![add-catalog-site](assets/add-catalog-site.png)
 
 ### デザインの変更 {#modify-design}
 
@@ -472,7 +473,7 @@ BASICパネルでは、次の変更が可能です。
 * [コミュニティサイトテーマ](#community-site-theme)
 * [コミュニティサイトブランディング](#community-site-branding)
 
-   * パネルの下部までスクロールして、ブランド画像を変更します。
+   * パネルの下部にスクロールして、ブランド画像を変更します。
 
 ### 設定の変更 {#modify-settings}
 
@@ -499,11 +500,11 @@ See the [ENABLEMENT](#enablement) description.
 
 After a community site has been newly created or modified, it is possible to publish (activate) the site by selecting the `Publish Site` icon, that appears on mouse hover over the site.
 
-![chlimage_1-170](assets/chlimage_1-170.png)
+![publish-site](assets/publish-site.png)
 
 サイトが正常に公開されると、次のようなメッセージが表示されます。
 
-![chlimage_1-171](assets/chlimage_1-171.png)
+![サイトが公開した](assets/site-published.png)
 
 ### ネストされたグループでの公開 {#publishing-with-nested-groups}
 
@@ -511,7 +512,7 @@ After a community site has been newly created or modified, it is possible to pub
 
 ## サイトの書き出し {#exporting-the-site}
 
-![chlimage_1-172](assets/chlimage_1-172.png)
+![export-site](assets/export-site.png)
 
 サイトにマウスポインターを置くと表示される書き出しアイコンを選択して、コミュニティサイトのパッケージを作成します。このパッケージは、[パッケージマネージャー](/help/sites-administering/package-manager.md)に格納され、ダウンロード可能になります。
 
@@ -534,7 +535,7 @@ The name created for the member groups includes the *site-name* given the site i
 * タイトル：コミュニティ Engage モデレーター
 * 名前：community-*engage-uid*-moderators
 
-サイト作成中にモデレーターまたはグループ管理者の役割を割り当てられたメンバーは、適切なグループとメンバーグループに割り当てられます。これらのグループとメンバーの割り当ては、新しいサイトが公開されたときに発行時に作成されます。
+サイト作成中にモデレーターまたはグループ管理者の役割を割り当てられたメンバーは、適切なグループとメンバーグループに割り当てられます。これらのグループおよびメンバーの割り当ては、新しいサイトが公開される際に、公開時に作成されます。
 
 For details, see [Managing Users and User Groups](/help/communities/users.md).
 
@@ -554,7 +555,7 @@ is created, the applied [Facebook cloud service](/help/communities/social-login.
 
 正しくリダイレクトするには、サイトを設定してパブリッシュ環境にプッシュした後、以下の手順を実行し、認証失敗時にコミュニティサイトにリダイレクトされるようにします。
 
-* 各AEM発行インスタンスで使用します。
+* 各AEM発行インスタンス。
 * 管理者権限でサインインします。
 * Access the [Web Console](/help/sites-deploying/configuring-osgi.md).
 
@@ -562,7 +563,7 @@ is created, the applied [Facebook cloud service](/help/communities/social-login.
 
 * Locate `Adobe Granite Login Selector Authentication Handler`.
 * Select the `pencil` icon to open the configuration for edit.
-* 次の手順に従っ **て、ログインページのマッピング** を入力します。
+* 次のように **ログインページのマッピングを入力します** 。
 
    `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
@@ -571,22 +572,22 @@ is created, the applied [Facebook cloud service](/help/communities/social-login.
 
 * 「**保存**」を選択します。
 
-![chlimage_1-173](assets/chlimage_1-173.png)
+![auth-error](assets/auth-error.png)
 
 ### 認証リダイレクトのテスト {#test-authentication-redirection}
 
 ログインページマッピングをコミュニティサイト用に設定した前述の AEM パブリッシュインスタンス上で、次の操作をおこないます。
 
-* コミュニティサイトのホームページ。
+* コミュニティサイトホームページを参照します。
 
    * For example, [https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
 
-* 「ログアウト」を選択します。
+* 「Log Out」を選択します。
 * 「ログイン」を選択します。
 * ユーザー名「x」やパスワード「x」など、明らかに正しくない資格情報を入力します。
 * ログインページに「ログインが無効です」というエラーが表示されます。
 
-![chlimage_1-174](assets/chlimage_1-174.png)
+![テスト認証](assets/test-authentication.png)
 
 ## 主なサイトのコンソールからコミュニティサイトへのアクセス {#accessing-community-sites-from-main-sites-console}
 
@@ -594,5 +595,7 @@ From the global navigation Sites console, community sites are located in the `Co
 
 コミュニティサイトにはこの方法でアクセスできますが、管理タスクをおこなう場合は、コミュニティサイトコンソールからコミュニティサイトにアクセスする必要があります。
 
-![chlimage_1-175](assets/chlimage_1-175.png)
+![アクセスサイト](assets/access-site.png)
+
+
 
