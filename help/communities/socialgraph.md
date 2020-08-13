@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 0ce57ab1-e4c6-4c38-963d-556eef8757f2
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 1429a099288f038510cb0a194fb55632297ef371
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 23%
 
 ---
 
@@ -27,13 +30,13 @@ The `Following` component simply lists the members that are either following the
 
 ## フォロー中コンポーネントをページに追加 {#adding-following-to-a-page}
 
-作成者モードでページにコンポーネ `Following` ントを追加する場合は、コンポーネントを見つけて、ソーシャルグ `Communities / Following` ラフを表示するページ上の位置にドラッグします。
+作成者モードでページにコンポー `Following` ネントを追加する場合は、コンポーネントを見つけ `Communities / Following` て、ソーシャルグラフを表示するページ上の位置にドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](essentials-socialgraph.md#essentials-for-client-side) are included, this is how the `Following` component will appear:
+[必要なクライアント側ライブラリが含まれる場合](essentials-socialgraph.md#essentials-for-client-side) 、次のようにコンポー `Following` ネントが表示されます。
 
-![chlimage_1-447](assets/chlimage_1-447.png)
+![次の](assets/following.png)
 
 ## フォロー中コンポーネントの設定 {#configuring-following}
 
