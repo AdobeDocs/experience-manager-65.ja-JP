@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1361296ee0161c36061543459056c25ebef0e97
+source-git-commit: f34742a9d11909dcf8403e1b002b65a01e882a74
 workflow-type: tm+mt
-source-wordcount: '3839'
+source-wordcount: '3853'
 ht-degree: 57%
 
 ---
@@ -331,6 +331,7 @@ Adobe Sign フィールドをアダプティブフォームに追加したら、
 
 * 別々の電子メールアドレスを使用して、Adobe Signアカウントと、最初の署名者および単一の署名者用の設定を行います。 最初の署名者の電子メールアドレスまたは唯一の署名者（単一の署名者の場合）は、AEMクラウドサービスの設定に使用されたAdobe Signアカウントと同一にできません。
 
+### Adobe Sign対応のアダプティブフォームに構成されたAEM Formsワークフローが開始しない {#adobe-sign-aem-form-workflow-failures}
 
 **問題**:Adobe Signがアダプティブフォーム用に設定されている場合、「Forms Workflowを呼び出し」オプションを使用して設定されたワークフローは開始されません。
 
