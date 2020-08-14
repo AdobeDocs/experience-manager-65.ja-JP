@@ -8,10 +8,10 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5412d788ccebe00707f2d94dfb1e40da6cb0471c
+source-git-commit: 4c42e5e5274c41469824f12b228698a77bf5d4a6
 workflow-type: tm+mt
-source-wordcount: '5035'
-ht-degree: 3%
+source-wordcount: '4738'
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 このパッケージは **AEM Forms6.4 OSGI Author**&#x200B;向けに作成され、テスト済みであるため、次のプラットフォームバージョンでサポートされています。
 
-| AEMバージョン | AEM FORMSパッケージのバージョン | ステータス |
+| AEMバージョン | AEM FORMSパッケージ版 | ステータス |
 |---|---|---|
 | 6.4 | 5.0.86 | **サポート対象** |
 | 6.5 | 6.0.80 | **サポート対象** |
@@ -44,7 +44,7 @@ ht-degree: 3%
 
 ### このパッケージに含まれる内容 {#what-does-this-package-include}
 
-AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)は、他の複数のサブパッケージやサービスを含むパッケージとして提供されます。 パッケージには次のモジュールが含まれています。
+[AEM FormsWe.Govデモパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip) (**we-gov-forms.pkg.all-&lt;version>.zip**)は、他のサブパッケージやサービスを含むパッケージとして提供されます。 パッケージには次のモジュールが含まれています。
 
 * **we-gov-forms.pkg.all-&lt;version>.zip** - *完全なデモパッケージ*
 
@@ -59,7 +59,7 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
       * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** — サイトページ列管理用 *AEM Sitesグリッドレイアウトパッケージ*
    * **we-gov-forms.ui.content-&lt;version>.zip** — コンテンツ、ページ、画像、フォーム、インタラクティブな通信アセットなどをすべて *含みます。*
 
-   * **we-gov-forms.ui.analytics-&lt;version>.zip** — リポジトリ内に格納されるすべてのWeb.Gov FormsAnalyticsデータを *含みます。*
+   * **we-gov-forms.ui.analytics-&lt;version>.zip** — リポジトリ内に格納されるすべてのWeb.GovForms分析データを *含みます。*
 
    * **we-gov-forms.config.public-&lt;version>.zip** — フォームデータモデルやサービスバインディングの問題を回避するために、プレースホルダークラウドの設定を含むすべてのデフォルト設定ノードを *含みます。*
 
@@ -67,13 +67,13 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 このパッケージに含まれるアセットは次のとおりです。
 
 * 編集可能なテンプレートを含むAEMサイトページ
-* AEM Formsアダプティブフォーム
-* AEM Forms対話型通信(印刷およびWebチャネル)
-* AEM FormsXDPレコードのドキュメント
-* AEM FormsMS Dynamics Formsデータモデル
-* Adobe Signの統合
+* AEM Forms適応Forms
+* AEM Forms・インタラクティブ・コミュニケーション(印刷およびWebチャネル)
+* AEM FormsXDPレコードドキュメント
+* AEM FormsMSダイナミクスFormsデータモデル
+* Adobe Sign統合
 * AEMワークフローモデル
-* AEM Assetsのサンプル画像
+* AEM Assetsサンプル画像
 * Apache Derbyデータベースのサンプル（メモリ内）
 * Apache Derbyデータソース（フォームデータモデルで使用）
 
@@ -83,13 +83,13 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 ### ソフトウェア配布から {#from-software-distribution}
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
-1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
-1. In the **[!UICONTROL Filters]** section:
-   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
-   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
+1. Open [Software Distribution](https://experience.adobe.com/downloads). ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
+1. Tap **[!UICONTROL Adobe Experience Manager]** available in the header menu.
+1. 「**[!UICONTROL フィルター]**」セクションで、
+   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+   2. パッケージのバージョンとタイプを選択します。 You can also use the **[!UICONTROL Search Downloads]** option to filter the results.
 1. パッケージ名 **we-gov-forms.pkg.all-&lt;version>.zipをタップし、「EULA条件に** 同意する **[!UICONTROL 」を選択して、「]**&#x200B;ダウンロード ****」をタップします。
-1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Open [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)  and click **[!UICONTROL Upload Package]** to upload the package.
 1. Select the package and click **[!UICONTROL Install]**.
 
    ![govフォームパッケージ](assets/wegov_forms_package.jpg)
@@ -109,7 +109,7 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 1. 「開く」をクリックしてアップロードします。
 1. アップロードが完了したら、「インストール」オプションを選択してパッケージをインストールします。
 
-   ![WebGov Formsパッケージのインストール](assets/wegov_forms_package-1.jpg)
+   ![WeGovFormsパッケージのインストール](assets/wegov_forms_package-1.jpg)
 
 1. インストールプロセスを完了できるようにします。
 1. https://&lt;aemserver>:&lt;port>/content/we-gov/home.html ** ?wcmmode=disabledに移動して、インストールが正常に完了したことを確認します。
@@ -140,13 +140,13 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 1. 「**workflow-users**」グループを選択し、「Properties」をクリックします。
 1. 「メンバー」タブに移動します。
 1. 「Select User or Group **」フィールドに** wegovと入力します。
-1. 「**Web.Gov Forms Users**」ドロップダウンから選択します。
+1. [**We.GovFormsユーザ**]ドロップダウンから選択します。
 
    ![ワークフローユーザーのグループ設定の編集](assets/edit_group_settings.jpg)
 
 1. メニューバーの「保存して閉じる」をクリックします。
-1. 手順2 ～ 7を繰り返して、「**analytics**」を検索し、「**Analytics管理者**」グループを選択して、「**We.Gov Forms Users**」グループをメンバーとして追加します。
-1. 手順2 ～ 7を繰り返して、「**forms users**」を検索し、「**forms-power-users**」グループを選択し、「**We.Gov Forms Users**」グループをメンバーとして追加します。
+1. 手順2 ～ 7を繰り返して、「**Analytics**」を検索し、「**Analytics Administrators**」グループを選択して、「**We.GovFormsユーザー**」グループをメンバーとして追加します。
+1. 手順2 ～ 7を繰り返して、「**forms users**」を検索し、「**forms-power-users**」グループを選択し、「**We.GovFormsユーザー**」グループをメンバーとして追加します。
 1. 手順2 ～ 7を繰り返して、「**forms-users**」を検索し、「**forms-users**」グループを選択して、次に「**We.Gov Users**」グループをメンバーとして追加します。
 
 ### 電子メールサーバーの設定 {#email-server-configuration}
@@ -160,10 +160,10 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 1. 任意のSMTPサーバーに接続するようにサービスを設定します。
 
-   1. **SMTP Server hostname**: 例：(smtp.gmail.com)
-   1. **サーバーポート**: 例：SSLを使用したgmailの場合は(465)
+   1. **SMTP Server hostname**:例：(smtp.gmail.com)
+   1. **サーバーポート**:例：SSLを使用したgmailの場合は(465)
    1. **SMTP User:** demo@ &lt;会社名> .com
-   1. **&quot;送信者&quot;アドレス**: aemformsdemo@adobe.com
+   1. **&quot;送信者&quot;アドレス**:aemformsdemo@adobe.com
 
    ![SMTPの設定](assets/configure_smtp.jpg)
 
@@ -171,7 +171,7 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 ### （オプション）AEM SSL設定 {#aemsslconfig}
 
-この節では、Adobe Sign Cloudの設定を行うためのAEMインスタンスでのSSLの設定について詳しく説明します。
+この節では、Adobe Signクラウドの設定を行うためのAEMインスタンスでのSSLの設定について詳しく説明します。
 
 **参照:**
 
@@ -195,7 +195,7 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 ### (Optional) Adobe Sign cloud configuration {#adobe-sign-cloud-configuration}
 
-この節では、Adobe Sign Cloud Configurationの詳細と手順について説明します。
+この節では、Adobe Signクラウドの設定の詳細と手順について説明します。
 
 **参照:**
 
@@ -203,64 +203,22 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 #### Cloud configuration {#cloud-configuration}
 
-1. 前提条件を確認します。 必要なSSL設定については、「 [AEM SSL Configuration](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) 」を参照してください。
+1. 前提条件を確認します。 必要なSSL設定については、 [AEM SSL Configuration](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) （ SSL設定）を参照してください。
 1. 次の URL に移動します。
 
    *https://&lt;aemserver>:&lt;port>/libs/adobesign/cloudservices/adobesign.html/conf/we-gov*
 
    >[!NOTE]
    >
-   >AEMサーバーへのアクセスに使用するURLは、設定の問題を回避するために、Adobe Sign OAuth Redirect URIで設定されているURLと一致する必要があります(例： *https://&lt;aemserver>:&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)。
+   >AEMサーバーへのアクセスに使用するURLは、Adobe SignのOAuthリダイレクトURIに設定されたURLと一致し、設定上の問題を回避する必要があります(例： *https://&lt;aemserver>:&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)。
 
-1. 「Web.gov Adobe Sign」設定を選択します。
+1. 「We.govAdobe Sign」設定を選択します。
 1. 「プロパティ」をクリックします。
 1. 「設定」タブに移動します。
 1. 認証URLを入力します。例： [https://secure.na1.echosign.com/public/oauth](https://secure.na1.echosign.com/public/oauth)
 1. 設定済みのAdobe Signインスタンスから、設定済みのクライアントIDとクライアントシークレットを指定します。
-1. 「Adobe Signに接続」をクリックします。
+1. [Adobe Signに接続]をクリックします。
 1. 接続が完了したら、「保存して閉じる」をクリックして統合を完了します。
-
-### 複数のフォームへの入力と署名 {#fill-sign-multiple-forms}
-
-このドキュメントでは、複数のフォームに入力して署名する機能を設定する手順を説明します。 同じ機能をここで試すこともでき [ます](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 このサンプルでは、このサンプルに必要なデータをAEMリポジトリに保存します。 これは、デモアセットをローカルサーバーにデプロイする際の摩擦のないエクスペリエンスを確実に実現するためです。 実際には、お客様が選択したRDMSに同じ情報を保存します。
-
-#### 前提条件 {#pre-requisites-fill-sign-multiple-forms}
-
-* [Day CQ 電子メールサービスの設定](https://docs.adobe.com/content/help/en/experience-manager-65/communities/administer/email.html)
-
-* [Adobe SignでのAEM Formsの設定](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html)
-
-#### ローカルサーバーでのサンプルのセットアップ {#setup-sample-local-server}
-
-次の手順を実行して、ローカルサーバーでサンプルを設定します。
-
-1. パッケージをインストールします。 このパッケージには、次の内容が含まれています。
-   * アダプティブフォーム. フォームは、formsandsigndemo **** フォルダーにあります。
-   * カスタムOSGIバンドル
-   * ワークフロー
-1. Adobe Sign Configurationを使用する [ように](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/consentform.html) 、同意フォームを設定します。
-1. Adobe Sign Configurationを使用するように [マルチステートインタレストロック](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/multistateinterestratelock.html) フォームを設定します。
-1. Formsandsigningdemo [ワークフローモデルを開きます](http://localhost:4502/editor.html/conf/global/settings/workflow/models/formsandsigningdemo.html) 。
-   1. CRXの「フォームを保存」の手順を開きます。
-   1. localhostをAEMサーバーのIPアドレスに変更します。
-   1. 変更を保存します。
-   1. ワークフローを同期してランタイムモデルを生成します。
-
-      ![複数のフォームへの署名](assets/sign-multiple-forms.jpg)
-
-   1. 「 [絞り込み条件」フォームを開きます](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。
-   1. 必須フィールドに入力します。 有効な電子メールアドレスを入力し、フォームに署名して送信する1つ以上のフォームを選択してください。
-フォームに入力し、署名するためのリンクが記載された電子メールを受信します。
-
-#### トラブルシューティング {#troubleshoot-sign-multiple-forms}
-
-* デバッグログは、サーバーのログフォルダーにある `signingmultipleforms.log` ファイルに書き込まれます。
-
-* 署名するフォームは、以下に保存され `/content/formsforsigning`ます。
-
-* すべてのバンドルがアクティブ状態になっていることを確認します。
-
-* 電子メールサーバーの設定を確認します。
 
 ### （オプション） MS Dynamicsクラウドの構成 {#ms-dynamics-cloud-configuration}
 
@@ -315,16 +273,16 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 1. AEMクラウド設定でOAuth **Client Id** (OAuth **クライアントID** )として使用するアプリケーション IDをコピーします
 1. 「設定」または「マニフェスト」をクリックして、 **返信URLを設定します。**
 
-   1. このURLは、ODataサービスを設定する際に、AEMサーバーへのアクセスに使用するURLと一致する必要があります。
+   1. このURLは、ODataサービスを設定する際に、AEMサーバーへのアクセスに使用されるURLと一致する必要があります。
 
-1. 設定表示で「キー」をクリックして表示が新しいキーを作成します（これはAEMのクライアントシークレットとして使用されます）。
+1. 設定表示で、「キー」をクリックして表示が新しいキーを作成します(これはAEMのクライアントシークレットとして使用されます)。
 
-   1. 後でAzureまたはAEMで表示できないので、キーのコピーを保持してください。
+   1. 後でAzureまたはAEMで表示できないので、キーのコピーを保存してください。
 
 1. リソースURL/サービスルートURLを見つけるには、MS Dynamicsインスタンスダッシュボードに移動します。
 1. 上部ナビゲーションバーで、「Sales」をクリックするか、独自のインスタンスタイプをクリックし、「Select Settings」をクリックします。
 1. 右下の「カスタマイズ」と「開発者向けリソース」をクリックします。
-1. サービスルートURLは次のとおりです。 例：
+1. サービスルートURLは次のとおりです。例：
 
    *[https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
 
@@ -357,7 +315,7 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
    サービスをテストした後、「 **キャンセル** 」をクリックして、意図しない変更がフォームデータモデルに反映されないことを確認します。
 
    >[!NOTE]
-   データソースがFDMに正常にバインドするには、AEMサーバーの再起動が必要だと報告されています。
+   データ・ソースがFDMに正常にバインドするには、AEMサーバーの再起動が必要であったと報告されています。
 
 #### Formsデータモデルのテスト(Derby) {#test-fdm-derby}
 
@@ -381,9 +339,9 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
    * 接続をテストするには、 **HOMEMORTGAGEACCOUNTを選択し** 、getサービスを提供します。 サービスおよびシステム管理者は、取得中のデータを確認できます。
 
-### アドビAnalytics設定（オプション） {#adobe-analytics-configuration}
+### Adobe Analytics設定（オプション） {#adobe-analytics-configuration}
 
-この節では、AdobeAnalyticsクラウドの設定の詳細と手順について説明します。
+この節では、Adobe Analytics Cloud設定の詳細と説明を説明します。
 
 **参照:**
 
@@ -399,27 +357,27 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 ### Adobe Analytics cloud service configuration {#adobe-analytics-cloud-service-configuration}
 
-このパッケージは、アドビのAnalyticsに接続するように事前に設定されています。 この設定を更新するために、次の手順を実行します。
+このパッケージは、Adobe Analyticsに接続するように事前に設定されています。 この設定を更新するために、次の手順を実行します。
 
 1. https://&lt;aemserver>:&lt;port>/libs/cq/core/content/tools/cloudservices.htmlに移動し *ます。*
-1. AdobeAnalyticsセクションを探し、「設定を表示」リンクを選択します。
-1. 「We.Gov AdobeAnalytics(Analytics設定)」設定を選択します。
+1. 「Adobe Analytics」セクションを探し、「設定を表示」リンクを選択します。
+1. 「We.GovAdobe Analytics（Analytics設定）」設定を選択します。
 
    ![Analyticsクラウドサービスの設定](assets/analytics_config.jpg)
 
-1. 「編集」ボタンをクリックして、AdobeAnalytics設定を更新します（Shared Secretを指定する必要があります）。 [Analyticsに接続]をクリックして接続し、[OK]をクリックして完了します。
+1. 「Edit」ボタンをクリックして、Adobe Analytics設定を更新します（Shared Secretを指定する必要があります）。 「Analyticsに接続」をクリックして接続し、「OK」をクリックして完了します。
 
-   ![We.Gov AdobeAnalytics](assets/wegov_adobe_analytics.jpg)
+   ![ウェゴヴAdobe Analytics](assets/wegov_adobe_analytics.jpg)
 
-1. フレームワーク設定を更新する場合は、同じページで「Web.Gov Adobe Framework (Analyticsフレームワーク)」をクリックします(「AEMオーサリングの [有効化](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) 」を参照)。
+1. フレームワーク設定を更新する場合は、同じページで「Web.GovAdobe Analyticsフレームワーク（Analyticsフレームワーク）」をクリックします(オーサリングを有効にするには、AEMオーサリングを [有効にする](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) を参照)。
 
-#### アドビのAnalytics検索ユーザー資格情報 {#analytics-locating-user-credentials}
+#### Adobe Analyticsユーザ資格情報の検索 {#analytics-locating-user-credentials}
 
-アドビのAnalyticsアカウントのユーザー資格情報を見つけるには、アカウント管理者が次のタスクを実行する必要があります。
+Adobe Analyticsアカウントのユーザー資格情報を見つけるには、アカウント管理者が次のタスクを実行する必要があります。
 
 1. Adobe Experience Cloudポータルに移動します。
    * 管理者の資格情報を使用してログインします
-1. メインダッシュボードでAdobeAnalyticsアイコンを選択します。
+1. メインダッシュボードでAdobe Analyticsアイコンを選択します。
    ![迅速なアクセス](assets/aftia-quick-access.jpg)
 1. 「管理者」タブに移動し、「ユーザー管理（レガシー）」項目を選択します
    ![レポート](assets/aftia-reports.jpg)
@@ -430,23 +388,23 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
    ![アクセスを管理](assets/aftia-admin-user-access.jpg)
 1. ユーザー名と共有暗号鍵の情報は、権限ボックスの右側に表示されます。
 1. ユーザ名には名前の中にコロンが含まれることに注意してください。コロンの左にある情報はすべてユーザ名で、コロンの右にある情報はすべて会社名です。
-   * 次に例を示します。 *username : 会社名*
+   * 次に例を示します。 *username :会社名*
 
-#### アドビAnalyticsでのユーザー認証の設定 {#setup-user-authentication}
+#### Adobe Analyticsでのユーザー認証の設定 {#setup-user-authentication}
 
-管理者は、次の操作を実行して、AEM Analyticsの権限をユーザーに提供できます。
+管理者は、次の操作を実行して、ユーザーにAEM Analyticsの権限を与えることができます。
 
-1. AdobeAdmin Consoleに移動します。
+1. Adobe Admin Consoleに移動します。
 
-1. 管理コンソールに公開されているAnalyticsインスタンスをクリックします。
+1. 管理コンソールに表示されるAnalyticsインスタンスをクリックします。
 
    * これは、管理ページのメインページにあります。
 
-1. [Analytics完全管理アクセス]を選択します。
+1. 「Analyticsフル管理者アクセス」を選択します。
 
 1. プロファイル追加のユーザー。
 
-   ![Analyticsのフル管理アクセス](assets/aftia-full-admin-access.jpg)
+   ![Analyticsの完全な管理者アクセス](assets/aftia-full-admin-access.jpg)
 
 1. ユーザーIDがプロファイルにマップされたら、「権限」タブをクリックします。
 
@@ -456,20 +414,20 @@ AEM FormsWe.Govデモパッケージ(**we-gov-forms.pkg.all-&lt;version>.zip**)�
 
 1. ユーザーのログイン機能に対して権限がマッピングされると、数時間かかる場合があります。
 
-### アドビAnalyticsレポート {#adobe-analytics-reporting}
+### Adobe Analyticsレポート {#adobe-analytics-reporting}
 
-#### 表示アドビAnalyticsサイトレポート {#view-adobe-analytics-sites-reporting}
+#### 表示Adobe Analyticsサイトレポート {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
-AEM FormsAnalyticsのデータは、オフライン時、またはパッケージがインストールされている場合はAdobeAnalyticsのクラウド設定なしで利用できますが、AEM Sitesのデータにはアクティブなクラウド設定が必要です。 `we-gov-forms.ui.analytics-<version>.zip`
+AEM Forms解析データは、オフライン時に使用できます。また、パッケージがインストールされている場合は、Adobe Analyticsクラウド設定なしで使用できますが、AEM Sitesデータにはアクティブなクラウド設定が必要です。 `we-gov-forms.ui.analytics-<version>.zip`
 
 1. https://&lt;aemserver>:&lt;port>/sites.html/ *contentに移動します。*
-1. 「AEM FormsWeb.Govサイト」を選択して、サイトページを表示します。
-1. サイトページ（ホームなど）の1つを選択し、「Analyticsとレコメンデーション」を選択します。
+1. 「AEM FormsWe.Govサイト」を選択して、サイトページを表示します。
+1. サイトページ（ホームなど）の1つを選択し、「Analytics &amp;Recommendations」を選択します。
 
-   ![分析と推奨事項](assets/analytics_recommendations.jpg)
+   ![分析とRecommendations](assets/analytics_recommendations.jpg)
 
-1. このページには、AEM Sitesページに関連するアドビAnalyticsから取得した情報が表示されます(注意： 設計上、この情報はアドビのAnalyticsから定期的に更新され、リアルタイムでは表示されません)。
+1. このページには、AEM Sites・ページに関連するAdobe Analyticsから取得した情報が表示されます(注意：設計上、この情報はAdobe Analyticsから定期的に更新され、リアルタイムでは表示されません)。
 
    ![AEM Sites分析](assets/sites_analysis.jpg)
 
@@ -486,32 +444,32 @@ AEM FormsAnalyticsのデータは、オフライン時、またはパッケー�
 
    ![新しい列の表示](assets/new_columns_display.jpg)
 
-#### 表示AdobeAnalyticsフォームレポート {#view-adobe-analytics-forms-reporting}
+#### 表示Adobe Analyticsフォームズレポート {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
-AEM FormsAnalyticsのデータは、オフライン時、またはパッケージがインストールされている場合はAdobeAnalyticsのクラウド設定なしで利用できますが、AEM Sitesのデータにはアクティブなクラウド設定が必要です。 `we-gov-forms.ui.analytics-<version>.zip`
+AEM Forms解析データは、オフライン時に使用できます。また、パッケージがインストールされている場合は、Adobe Analyticsクラウド設定なしで使用できますが、AEM Sitesデータにはアクティブなクラウド設定が必要です。 `we-gov-forms.ui.analytics-<version>.zip`
 
 1.  に移動します。
 
    *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-1. 「Enrollment Application For Health Benefits」アダプティブフォームを選択し、「Analyticsレポート」オプションを選択します。
+1. 「Enrollment Application For Health Benefits」アダプティブフォームを選択し、「Analytics Report」オプションを選択します。
 
-   ![Analytics報告](assets/analytics_report.jpg)
+   ![Analyticsレポート](assets/analytics_report.jpg)
 
 1. ページが読み込まれるのを待ち、Analyticsレポートデータを表示します。
 
-   ![表示Analyticsレポートデータ](assets/analytics_report_data.jpg)
+   ![表示分析レポートデータ](assets/analytics_report_data.jpg)
 
-### Adobe Automated Forms Configuration Enablement {#automated-forms-enablement}
+### Adobe自動Forms構成有効化 {#automated-forms-enablement}
 
-Adobe Formsを使用してAEM Formsをインストールおよび設定するには、コンバージョンツールに次の機能が必要です。
+AdobeFormsとの間でAEM Formsのインストールと設定を行うには、コンバージョンツールのユーザは次の作業を行う必要があります。
 
-1. Adobe IOへのアクセス。
+1. AdobeIOへのアクセス。
 
-1. Adobe Forms Conversionサービスとの統合を作成する権限です。
+1. AdobeFormsコンバージョンサービスとの統合を作成する権限です。
 
-1. 作成者として実行されるAdobe AEM 6.5最新のサービスパック。
+1. AdobeAEM 6.5の最新のサービスパックは、作成者として実行されています。
 
 詳細な手順を読む前に、次の点を確認してください。
 
@@ -519,9 +477,9 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 #### IMS設定の作成パート1 {#creating-ims-config}
 
-フォーム変換ツールと正しく通信するようにサービスを設定するには、Identity Managementシステム(IMS)サービスがAdobe I/Oに登録できるように設定する必要があります。
+フォーム変換ツールと正しく通信するようにサービスを設定するには、ユーザーがAdobeI/Oに登録できるように、Identity Managementシステム(IMS)サービスを設定する必要があります。
 
-1. https://&lt;aemserver>:&lt;port>に移動し、左上のAdobe ExperienceManager/ツール/セキュリティ/Adobe IMS設定をクリックします。
+1. https://&lt;aemserver>:&lt;port>に移動し、左上の「AdobeExperienceManager」をクリックして、ツール/セキュリティ/AdobeIMS設定を選択します。
 
 1. 「作成」をクリックします。
 
@@ -531,16 +489,16 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 1. 証明書は必ずダウンロードしてください。
 
-1. 残りの設定は行わないでください。「Adobe I/Oでの統合の [作成」の節を確認してください。](#create-integration-adobeio)
+1. 構成の残りの部分に進まないでください。「AdobeI/Oでの統合の [作成」の節を確認してください。](#create-integration-adobeio)
 
 >[!NOTE]
-この節で作成した証明書は、Adobe I/Oで統合サービスを作成する際に使用されます。 ユーザーが統合サービスで作成した情報は、アドビのI/Oから取得した情報を使用して設定を完了できます。
+このセクションで作成された証明書は、AdobeI/Oで統合サービスを作成する際に使用されます。統合サービスでユーザーが作成されたら、AdobeI/Oからの情報を使用して構成を完了できます。
 
-#### Adobe I/Oでの統合の作成 {#create-integration-adobeio}
+#### AdobeI/Oでの統合の作成 {#create-integration-adobeio}
 
-システム管理者に連絡しない場合は、アドビのドメイン内で統合を作成する権限があることを確認してください。
+統合を作成するには、Adobe管理者に問い合わせない場合は、システムドメイン内で統合を作成できる権限があることを確認してください。
 
-1. 「 [Adobe I/Oコンソール](https://console.adobe.io/)」に移動します。
+1. [ [AdobeI/Oコンソール](https://console.adobe.io/)]に移動します。
 
 1. 「統合を作成」をクリックします。
 
@@ -548,7 +506,7 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 1. 正しいグループ(右上のドロップダウンリスト)に属していることを確認します。
 
-1. 「Experience Cloud」セクションで、フォーム変換ツールを選択します。
+1. 「Experience Cloud」セクションで、「Formsコンバージョンツール」を選択します。
 
 1. 「続行」をクリックします。
 
@@ -564,7 +522,7 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 これで、統合を作成したので、IMS設定のインストールを完了できます。
 
-1. 接続の詳細を表示するには、Adobe I/O内の統合をクリックします。
+1. AdobeI/O内の統合をクリックして、接続の詳細を表示します。
 
 1. AEM内でIMS設定に移動します（ツール/セキュリティ/IMS）。
 
@@ -574,9 +532,9 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 1. APIキーを入力します。
 
-1. クライアントシークレットを入力します（表示するには、Adobe I/Oの統合で[公開]をクリックする必要があります）。
+1. クライアントシークレットを入力します(表示するには、AdobeI/Oの[Integration]上の[Expose]をクリックする必要があります)。
 
-1. Adobe I/Oの「JWT」タブをクリックして、JWTペイロードを取得し、IMS設定のペイロードに貼り付けます。
+1. AdobeI/Oの「JWT」タブをクリックして、JWTペイロードを取得し、IMS設定のペイロードに貼り付けます。
 
    ![ペイロードIMSの設定](assets/aftia-payload-ims-config.jpg)
 
@@ -586,11 +544,11 @@ Adobe Formsを使用してAEM Formsをインストールおよび設定するに
 
 #### クラウドの設定（Web.Gov AFC実稼働環境） {#configure-cloud-configuration}
 
-IMSの設定が完了したら、AEMでクラウドの設定を確認します。 設定が存在しない場合は、次の手順を実行してAEMにクラウド設定を作成します。
+IMSの設定が完了したら、AEMでクラウドの設定を確認します。 設定が存在しない場合は、次の手順を実行してAEMでクラウド設定を作成します。
 
 1. ブラウザーを開き、システムURL https://&lt;domain_name>:&lt;system_port>に移動します。
 
-1. 画面の左上隅にある「Adobe Experience Manager」をクリックし、ツール/Cloud Service/Automated Forms会話の設定をクリックします。
+1. 画面の左上隅にあるAdobe Experience Manager/ツール/Cloud Services/Forms会話の自動設定をクリックします。
 
 1. 設定を配置する設定フォルダを選択します。
 
@@ -616,11 +574,11 @@ IMSの設定が完了したら、AEMでクラウドの設定を確認します�
 
 #### クラウド設定の設定（Web.Finance AFC実稼働環境） {#configure-cloud-configuration-wefinance}
 
-IMSの設定が完了したら、AEMでクラウド設定の作成に進むことができます。
+IMSの設定が完了したら、AEMでクラウド設定を作成できます。
 
 1. ブラウザーを開き、システムURL https://&lt;domain_name>:&lt;system_port>に移動します。
 
-1. 画面の左上隅にある「Adobe Experience Manager」をクリックし、ツール/Cloud Service/Automated Forms会話の設定をクリックします。
+1. 画面の左上隅にあるAdobe Experience Manager/ツール/Cloud Services/Forms会話の自動設定をクリックします。
 
 1. 設定を配置する設定フォルダを選択します。
 
@@ -650,7 +608,7 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
 1. AEMシステムhttps://&lt;ドメイン名>:&lt;システムポート>に移動します。
 
-1. フォーム/フォームとドキュメント/AEM FormsWeb.gov Forms/AFCをクリックします。
+1. Forms/Forms&amp;ドキュメント/AEM FormsWe.govForms/AFCをクリックします。
 
 1. Web.Gov Enrollment Application PDFを選択します。
 
@@ -682,7 +640,7 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
 #### 既知の問題とメモ {#known-issues-notes}
 
-自動フォームコンバージョンサービスには、特定の [ベストプラクティス、既知の複雑なパターン](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、 [既知の問題が含まれています](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 AEM Formsの自動フォームコンバージョンサービスの使用を開始する前に、これらを確認してください。
+自動Formsコンバージョンサービスには、特定の [ベストプラクティス、既知の複雑なパターン](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、 [既知の問題が含まれています](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 AEM Forms自動Formsコンバージョンサービスの使用を開始する前に、これらを確認してください。
 
 1. 変換後にフォームをFDMに連結する場合は、データ連結を有効にせずにアダプティブフォームを生成します。
 
@@ -698,7 +656,7 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
 *https://&lt;aemserver>:&lt;port>/libs/wcm/core/content/sites/templates.html/conf/we-gov*
 
-これらのテンプレートには、AEMサイト、アダプティブフォーム、およびインタラクティブコミュニケーションの各テンプレートが含まれ、以下の場所にあるコンポーネントを使用して作成および組み立てられます。
+これらのテンプレートには、AEMサイト、アダプティブフォーム、およびインタラクティブコミュニケーションの各テンプレートが含まれ、以下の場所にあるコンポーネントを使用して作成およびアセンブルされます。
 
 *https://&lt;aemserver>:&lt;port>/crx/de/index.jsp#/apps/we-gov/components*
 
@@ -734,7 +692,7 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
 すべてのサイトページは次の場所から利用できます。 *https://&lt;aemserver>:&lt;port>/sites.html/content/we-gov*
 
-これらのサイトページでは、AEM Gridパッケージを使用していくつかのコンポーネントのレイアウトを制御します。
+これらのサイトページでは、AEM Gridパッケージを使用して、いくつかのコンポーネントのレイアウトを制御します。
 
 #### Style system {#style-system}
 
@@ -755,8 +713,8 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 **登録申請（健康保険給付）:**
 
 * contact_id — 送信中にMS Dynamicsの連絡先IDを受け取るために使用される非表示フィールド
-* 送信 — 送信ボタンのロジックに、コールバックをサポートするためのカスタマイズが必要。 カスタマイズはドキュメントに記載されていますが、フォームデータモデルを使用してMS Dynamicsに対してPOST操作とGET操作の両方を実行する際に、フォームを送信するために大きなスクリプトが必要でした。
-* Root Panel - Initializeイベントは、すべてのAEM Inbox Granite UIコンポーネントを変更不可能なので、可能な限り軽くAEM InboxにMS Dynamicsボタンを追加するために使用します。
+* 送信 — 送信ボタンのロジックに、コールバックをサポートするためのカスタマイズが必要。 カスタマイズはドキュメントに記載されていますが、Formsデータモデルを使用してMS Dynamicsに対してPOSTとGETの両方の操作を実行する際に、フォームを送信するために大きなスクリプトが必要でした。
+* [ルートパネル — 初期化]イベントは、AEM Inbox Granite UIコンポーネントを変更できないため、できる限り押し付けがましい方法でAEM InboxにMS Dynamicsボタンを追加するために使用します。
 
 #### アダプティブフォームのスタイル設定 {#adaptive-form-styling}
 
@@ -780,7 +738,7 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 ### デモに関する考慮事項 {#demo-considerations}
 
 * AGRS-159に従って、登録アダプティブフォームで使用される連絡先の名前（最初、中間、最後）が一意であることを確認します。
-* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスを、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
+* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスは、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
 
 ### 既知の問題 {#known-issues}
 
@@ -793,7 +751,7 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
 最初にアクセシビリティテストを実行するには、Chromeプラグインをインストールする必要があります。このプラグインは [こちらから参照できます](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)。
 
-インストールが完了したら、テストするページをChromeブラウザーに読み込みます(注意： 複数のタブを開くとスコアに影響する場合があるので、タブを1つだけ開くことをお勧めします)。 ページが読み込まれたら&#x200B;**、ページを右クリックし** 、「 **監査** 」タブを選択します。 開発者は、アクセシビリティプラグインによって実行される監査のタイプを選択できます。 必要なオプションをすべて選択すると、「レポートを生成」ボタンを選択できます。 これにより、全体的なアクセシビリティの評価と、全体的なアクセシビリティの評価を高めるために使用できる要素を示すPDFドキュメントが生成されます。
+インストールが完了したら、テストするページをChromeブラウザーに読み込みます(注意：複数のタブを開くとスコアに影響する場合があるので、タブを1つだけ開くことをお勧めします)。 ページが読み込まれたら&#x200B;**、ページを右クリックし** 、「 **監査** 」タブを選択します。 開発者は、アクセシビリティプラグインによって実行される監査のタイプを選択できます。 必要なオプションをすべて選択すると、「レポートを生成」ボタンを選択できます。 これにより、全体的なアクセシビリティの評価と、全体的なアクセシビリティの評価を高めるために使用できる要素を示すPDFドキュメントが生成されます。
 
 レポートの実行後は、次の項目が表示されます。
 
@@ -807,9 +765,9 @@ IMSの設定が完了したら、AEMでクラウド設定の作成に進むこ�
 
 ### Ultramarine Theme {#ultramarine-theme}
 
-アドビが管理する一般公開されているUltramarineテーマは`we-gov-forms.pkg.all-<version>.zip` 、インストール可能なZIPファイルに組み込まれています。 CRXを使用してこのパッケージをインストールします。
+Adobeが管理する、公開されているUltramarineテーマは、インストール可能な`we-gov-forms.pkg.all-<version>.zip` ZIPファイルに組み込まれています。 CRXを使用してこのパッケージをインストールします。
 
-Package Managerを使用すると、 **フォーム** /テーマ **/リファレンステーマ** /Ultramarine-Accessible Ultralineに移動して、AEM Forms内のUltramarineテーマにアクセスできます ********。
+Package Managerを使用すると、 **Forms** / **テーマ** / **参照テーマ/ウルトラマリンアクセス可能なテーマに移動して、AEM Formsのウルトラマリンにアクセスできます******。
 
 ![Ultramarine テーマ](assets/aftia-ultramarine-theme.jpg)
 
@@ -819,7 +777,7 @@ Package Managerを使用すると、 **フォーム** /テーマ **/リファレ
 
 1. Microsoft Dynamicsエントリ
 1. Adobe Sign
-1. AEM Custom Communication Management
+1. AEMカスタムコミュニケーション管理
 1. Adobe Analytics
 
 ワークフローユーザーがワークフロー内で有効になるように設定するには、次のタスクを実行する必要があります。
