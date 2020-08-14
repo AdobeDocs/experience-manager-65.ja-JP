@@ -1,5 +1,5 @@
 ---
-title: '"チュートリアルを公開しない： アダプティブフォームフィールドへのルールの適用」'
+title: '"チュートリアルを公開しない：アダプティブフォームフィールドへのルールの適用」'
 seo-title: アダプティブフォームのフィールドにルールを適用する
 description: このチュートリアルでは、ルールを作成して、インタラクティブ機能、ビジネスロジック、スマート検証機能をアダプティブフォームに追加する方法について説明します。
 seo-description: このチュートリアルでは、ルールを作成して、インタラクティブ機能、ビジネスロジック、スマート検証機能をアダプティブフォームに追加する方法について説明します。
@@ -8,10 +8,10 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 66%
+source-wordcount: '1148'
+ht-degree: 64%
 
 ---
 
@@ -89,15 +89,15 @@ ht-degree: 66%
 
    ![update-shipping-address](assets/update-shipping-address.png)
 
-1. ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
+   ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-   「フォームオブジェクト」タブの「 **[!UICONTROL 配送先住所、州、郵便番号]** 」フィールドを、「 **[!UICONTROL 入力]****** 」ボックスの「オブジェクトをドロップ」(Drop object)の対応する.property（customerdetails.shippingAddressなど）にドラッグ&amp;ドロップします。 tablenameが先頭に付くすべてのフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
+1. 「 **[!UICONTROL フォームオブジェクト]** 」タブから、「 [!UICONTROL 配送先住所、州、郵便番号] 」フィールドを、Dropオブジェクトの対応するtablenameプロパティ（例えば、customerdetails.shippingAddress）にドラッグ&amp;ドロップするか、「INPUT」ボックスの「 **[!UICONTROL ここ」フィールドを選択し]****** ます。 tablenameが先頭に付くすべてのフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
 
    >[!NOTE]
    >
    >Do not drag-and-drop the **[!UICONTROL Name]** and **[!UICONTROL Customer ID]** fields to the corresponding tablename.property (for example, customerdetails.name). 間違って顧客の名前やIDを更新するのを防ぐのに役立ちます。
 
-1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「id」フィールドにドロップします。先頭に  tablename（この使用例ではcustomerdetailsなど）は、アップデートサービスの検索パラメーターとして機能します。 The **[!UICONTROL id]** field in this use case uniquely identifies a record in the  customerdetails  table.
+1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「id」フィールドにドロップします。先頭にtablenameが付いていないフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの検索パラメーターとして機能します。 The **[!UICONTROL id]** field in this use case uniquely identifies a record in the  **customerdetails**  table.
 1. 「**[!UICONTROL 完了]**」をタップして、ルールを保存します。On the rule editor window, tap **[!UICONTROL Close]**.
 1. アダプティブフォームのプレビューを表示します。顧客の詳細情報を取得し、発送先住所を変更してフォームを送信します。同じ顧客の詳細情報をもう一度取得すると、更新された発送先住所が表示されます。
 
@@ -107,9 +107,9 @@ ht-degree: 66%
 
 アダプティブフォームには、検証機能が組み込まれたコンポーネントがいくつか用意されています（共通のユースケースで使用できる電子メールや数値フィールドなど）。高度なユースケース（データベースからレコードが 1 件も返されなかった場合にエラーメッセージを表示するなど）の場合は、ルールエディターを使用します。
 
-次の手順は、フォームに入力された顧客IDがデータベースに存在しない場合にエラーメッセージを表示するルールを作成する方法を示しています。 また、顧客IDフィールドにフォーカスを移し、リセットします。 The rule uses [the dataIntegrationUtils API of the form data model service](/help/forms/using/invoke-form-data-model-services.md) to check if the Customer ID exists in the database.
+次の手順は、フォームに入力された顧客IDがデータベースに存在しない場合にエラーメッセージを表示するルールを作成する方法を示しています。 The rule also brings the focus to and resets the **[!UICONTROL Customer ID]** field. The rule uses [the dataIntegrationUtils API of the form data model service](/help/forms/using/invoke-form-data-model-services.md) to check if the Customer ID exists in the database.
 
-1. Tap the **[!UICONTROL Customer ID]** field and tap the `Edit Rules` icon. ルールエディターウィンドウが表示されます。
+1. Tap the **[!UICONTROL Customer ID]** field and tap the `Edit Rules` icon. The [!UICONTROL Rule Editor] window opens.
 1. 「**[!UICONTROL + 作成]**」アイコンをタップしてルールを追加します。ビジュアルエディターが表示されます。
 
    In the Visual Editor, the **[!UICONTROL WHEN]** statement is selected by default. Also, the form object (in this case, **[!UICONTROL Customer ID]**) from where you launched the rule editor is specified in the **[!UICONTROL WHEN]** statement.
@@ -132,7 +132,7 @@ ht-degree: 66%
    };
    ```
 
-1. 「guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)」セクションのコードを以下のように変更します。
+1. Replace the `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)` section with the following code:
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
