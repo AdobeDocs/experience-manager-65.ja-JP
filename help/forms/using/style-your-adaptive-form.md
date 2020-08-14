@@ -8,10 +8,10 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 69%
+source-wordcount: '2069'
+ht-degree: 64%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 69%
 
 ## このチュートリアルについて  {#about-the-tutorial}
 
-テーマを使用すると、アダプティブフォームに独自の外観やスタイルを設定できます。アダプティブフォームエディターの初期設定済みテーマを適用することも、独自のカスタムテーマを作成することもできます。AEM Forms はカスタムテーマを作成するための[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を提供します。単一のテーマを使用すると、モバイル、タブレット、デスクトップで開いた同一のアダプティブフォームに異なる外観を設定できます。テーマエディターを使用する場合、CSS や LESS の予備知識は特に必要ありません。
+テーマを使用すると、アダプティブフォームに独自の外観やスタイルを設定できます。アダプティブフォームエディターの初期設定済みテーマを適用することも、独自のカスタムテーマを作成することもできます。AEM [!DNL Forms] provide a [theme editor](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html) to create custom themes. 単一のテーマを使用すると、モバイル、タブレット、デスクトップで開いた同一のアダプティブフォームに異なる外観を設定できます。テーマエディターを使用する場合、CSS や LESS の予備知識は特に必要ありません。
 
 このチュートリアルを終了すると、以下の操作を実行できるようになります。
 
@@ -55,16 +55,16 @@ ht-degree: 69%
 
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-1. **アダプティブフォームコンテナ**&#x200B;のプロパティを開きます。プロパティブラウザーで、**基本**／**アダプティブフォームのテーマ**&#x200B;に移動します。すべての初期設定済みテーマとカスタムテーマが、「**アダプティブフォームのテーマ**」フィールドに表示されます。デフォルトではキャンバステーマが適用されます。
-1. 「**アダプティブフォームのテーマ**」フィールドでテーマを選択します（**調査テーマ**&#x200B;など）。選択したテ ![ーマを適用するには、「aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」をタップします。
+1. **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;のプロパティを開きます。プロパティブラウザーで、**[!UICONTROL 基本]**／**[!UICONTROL アダプティブフォームのテーマ]**&#x200B;に移動します。すべての初期設定済みテーマとカスタムテーマが、「**[!UICONTROL アダプティブフォームのテーマ]**」フィールドに表示されます。デフォルトではキャンバステーマが適用されます。
+1. 「**[!UICONTROL アダプティブフォームのテーマ]**」フィールドでテーマを選択します（**調査テーマ**&#x200B;など）。選択したテ ![ーマを適用するには、「aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」をタップします。
 
-![デフォルトのテーマを使用したアダプティブフォーム](assets/default-adaptive-form.png)
+   ![デフォルトのテーマを使用したアダプティブフォーム](assets/default-adaptive-form.png)
 
-**図：** *デフォルトテーマを持つアダプティブフォーム*
+   **図：***デフォルトテーマを持つアダプティブフォーム*
 
-![調査テーマを使用したアダプティブフォーム](assets/adaptive-form-with-survey-theme.png)
+   ![調査テーマを使用したアダプティブフォーム](assets/adaptive-form-with-survey-theme.png)
 
-**図：** *調査テーマを含むアダプティブフォーム*
+   **図：***調査テーマを含むアダプティブフォーム*
 
 ## 手順 2：アダプティブフォームの更新 {#step-update-your-adaptive-form}
 
@@ -76,20 +76,20 @@ ht-degree: 69%
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-   1. Tap logo image in the header component and tap ![cmppr](assets/cmppr.png) properties. 画像のプロパティで X をタップし、既存のロゴの画像を削除します。
-   1. Tap upload, select the logo.png, and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) to save the changes. The image was downloaded in the [Before you start](/help/forms/using/style-your-adaptive-form.md#before-you-start) section.
+   1. [!UICONTROL header] コンポーネントのロゴ画像をタップし、 ![cmppr](assets/cmppr.png)****&#x200B;プロパティをタップします。 In the [!UICONTROL image] property, tap X to remove the existing logo image.
+   1. 「 **[!UICONTROL アップロード]**」をタップし、logo.pngを選択し、「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」をタップして変更を保存します。 The image was downloaded in the [Before you start](/help/forms/using/style-your-adaptive-form.md#before-you-start) section.
    1. ヘッダーテキストをタップ `We.Retail`し、「 ![aem_6_3_edit](assets/aem_6_3_edit.png) 」をタップし ****&#x200B;ます。 Change header text to `we retail`. Apply bold formatting only to `we`in `we retail`.
 
-   ![we-retail-logo-text](assets/we-retail-logo-text.png)
+      ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. タイトルを削除してプレースホルダーテキストを追加します。
 
    1. Tap the Customer ID field and tap ![cmppr](assets/cmppr.png) properties.
-   1. 「**タイトル**」フィールドの内容を「**プレースホルダーテキスト**」フィールドにコピーします。
-   1. 「 **タイトル** 」フィールドの内容を削除し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+   1. 「**[!UICONTROL タイトル]**」フィールドの内容を「**[!UICONTROL プレースホルダーテキスト]**」フィールドにコピーします。
+   1. 「 **[!UICONTROL タイトル]** 」フィールドの内容を削除し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
    1. フォーム内のすべてのテキストボックス、数値ボックス、電子メールフィールドで、上記の 3 つの手順を繰り返します。
 
-   ![更新されたアダプティブフォーム](assets/updated-adaptive-form.png)
+      ![更新されたアダプティブフォーム](assets/updated-adaptive-form.png)
 
 ## 手順 3：アダプティブフォームのカスタムテーマの作成 {#step-create-a-custom-theme-for-your-adaptive-form}
 
@@ -101,33 +101,33 @@ ht-degree: 69%
 
 ### テーマを作成する {#create-a-theme}
 
-1. Log in to the AEM author instance and navigate to **Adobe Experience Manager** > **Forms** > **Themes**. The default URL is [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
-1. 「**[!UICONTROL 作成]**」をタップし、「**[!UICONTROL テーマ]**」を選択します。テーマの作成が必要なフィールドが含まれた「テーマを作成」ページが表示されます。「タイトル」と「ドキュメント名」の各フィールドは入力が必須です。
+1. Log in to the AEM author instance and navigate to **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Themes]**. The default URL is [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
+1. 「**[!UICONTROL 作成]**」をタップし、「**[!UICONTROL テーマ]**」を選択します。The [!UICONTROL Create Theme] page with the fields required to create a theme appears. 「**[!UICONTROL タイトル]**」フィールドと「**[!UICONTROL 名前]**」フィールドは入力必須です。
 
    * **タイトル：** テーマのタイトルを指定します。 （**グローバルテーマ**&#x200B;など）。タイトルはテーマのリストから目的のテーマを見つけるのに役立ちます。
    * **名前：** テーマの名前を指定します。 （**グローバルテーマ**&#x200B;など）。指定された名前のノードがリポジトリに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用することができます。無効な入力はすべてハイフンに置き換えられます。
 
-1. 「**作成**」をタップします。テーマが作成され、フォームを編集用に開くためのダイアログが表示されます。Tap **Open** to open the newly created theme in a new tab. テーマがテーマエディターで開きます。スタイルを設定する際、テーマエディターは AEM Forms に付属している初期設定済みアダプティブフォームを使用します。
+1. 「**[!UICONTROL 作成]**」をタップします。テーマが作成され、フォームを編集用に開くためのダイアログが表示されます。Tap **[!UICONTROL Open]** to open the newly created theme in a new tab. テーマがテーマエディターで開きます。For styling, the theme editor uses an out-of-the-box adaptive form shipped with AEM [!DNL Forms].
 
    For information about using theme editor UI, see [About the theme editor](/help/forms/using/themes.md#aboutthethemeeditor).
 
-1. Tap **Theme Options** ![theme-options](assets/theme-options.png) > **Configure**. In the **Preview Form** field, select the **shipping-address-add-update-form** adaptive form, tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png), tap **Save**. テーマエディターで、デフォルトのアダプティブフォームではなく独自のアダプティブフォームを使用できるようになります。テーマエディターに戻るには、「**キャンセル**」をタップします。
+1. Tap **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Configure]**. In the **[!UICONTROL Preview Form]** field, select the **shipping-address-add-update-form** adaptive form, tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png), tap **[!UICONTROL Save]**. テーマエディターで、デフォルトのアダプティブフォームではなく独自のアダプティブフォームを使用できるようになります。テーマエディターに戻るには、「**[!UICONTROL キャンセル]**」をタップします。
 
    ![カスタムテーマ](assets/custom-theme.png)
 
-   **図：** *配送先住所 — 追加 — 更新 — フォームアダプティブフォームを含むテーマエディター*
+   **図：***配送先住所 — 追加 — 更新 — フォームアダプティブフォームを含むテーマエディター*
 
    ![テーマを作成する](assets/create-a-theme.png)
 
-   **図：** *デフォルトフォームを含むアダプティブフォーム*
+   **図：***デフォルトフォームを含むアダプティブフォーム*
 
 ### ヘッダーとフッターのスタイル設定 {#style-header-and-footer}
 
 ヘッダーとフッターをアダプティブフォームで使用すると、独特な外観を作成できます。通常、ヘッダーには組織のロゴと名前が含まれ、フッターには著作権情報が含まれます。これらは組織の複数のフォーム間で統一されます。shipping-address-add-update-form アダプティブフォームのヘッダーとフッターのスタイルを設定するには、次の手順を実行します。
 
-1. セレクターパネルで&#x200B;**ヘッダー**／**テキスト**&#x200B;オプションに移動します。セレクターパネルはテーマエディターの左側にあります。If the panel is not visible, tap ![toggle-side-panel](assets/toggle-side-panel.png) Toggle Side Panel.
+1. セレクターパネルで&#x200B;**[!UICONTROL ヘッダー]**／**[!UICONTROL テキスト]**&#x200B;オプションに移動します。セレクターパネルはテーマエディターの左側にあります。If the panel is not visible, tap ![toggle-side-panel](assets/toggle-side-panel.png) Toggle Side Panel.
 
-1. Set the following properties in the **Text** accordion and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Set the following properties in the **[!UICONTROL Text]** accordion and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | プロパティ | 値 |
    |---|---|
@@ -135,10 +135,10 @@ ht-degree: 69%
    | フォントカラー | FFFFFF |
    | フォントサイズ | 54 px |
 
-1. ヘッダーウィジェットをタップし、「**ヘッダー**」をタップします。ヘッダーウィジェットのスタイルを設定するオプションが左側に表示されます。「 **寸法と位置** 」アコーディオンを展開し、「 **高さ** 」を「」に設定し `120px`て、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
-1. ヘッダーウィジェットの「背景」アコーディオンを展開し、「**背景色**」を `F6921E.` に設定します。
+1. Tap the [!UICONTROL header] widget and tap **[!UICONTROL Header]**. ヘッダーウィジェットのスタイルを設定するオプションが左側に表示されます。「 **[!UICONTROL Dimensionと位置]** 」アコーディオンを展開し、「 **[!UICONTROL 高さ]** 」を「」に設定し `120px`て、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+1. Expand the **[!UICONTROL Background]** accordion of the header widget, set the **[!UICONTROL Background Color]** to `F6921E.`
 
-   **画像とグラデーション** / **+**&#x200B;の上にカーソルを置き **、「**&#x200B;画像」をタップします。 次のプロパティを設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+   **[!UICONTROL 画像とグラデーション]** / **[!UICONTROL +]**&#x200B;の上にカーソルを置き **[!UICONTROL 、「]**&#x200B;画像」をタップします。 次のプロパティを設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
 
    | プロパティ | 値 |
    |---|---|
@@ -146,93 +146,93 @@ ht-degree: 69%
    | 位置 | 右下 |
    | タイル | 繰り返しなし |
 
-1. テーマエディターで、ヘッダーのロゴをタップし、「**ヘッダーロゴ**」をタップします。Expand the Dimensions &amp; Position accordion, set the following properties and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. テーマエディターで、ヘッダーのロゴをタップし、「**[!UICONTROL ヘッダーロゴ]**」をタップします。Expand the Dimensions &amp; Position accordion, set the following properties and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
-<table> 
- <tbody> 
-  <tr> 
-   <td>の余白</td> 
-   <td>値</td> 
-  </tr> 
-  <tr> 
-   <td>の余白</td> 
-   <td> 
-    <ul> 
-     <li>上：1.5rem</li> 
-     <li>下：-35 px</li> 
-     <li>左：1rem<strong><br /> </strong></li> 
-    </ul> <p><strong>ヒント：</strong> フィールドごとに異なる値を設定するには、<img src="assets/link.png"> リンクアイコンをタップします。<br /> </p> </td> 
-  </tr> 
-  <tr> 
-   <td>高さ</td> 
-   <td>4.75rem</td> 
-  </tr> 
- </tbody> 
-</table>
+   <table> 
+    <tbody> 
+     <tr> 
+      <td><b>の余白</b></td> 
+      <td><b>値</b></td> 
+     </tr> 
+     <tr> 
+      <td>の余白</td> 
+      <td> 
+       <ul> 
+        <li>上：1.5rem</li> 
+        <li>下：-35 px</li> 
+        <li>左：1rem<strong><br /> </strong></li> 
+       </ul> <p><strong>ヒント：</strong> フィールドごとに異なる値を設定するには、<img src="assets/link.png"> リンクアイコンをタップします。<br /> </p> </td> 
+     </tr> 
+     <tr> 
+      <td>高さ</td> 
+      <td>4.75rem</td> 
+     </tr> 
+    </tbody> 
+   </table>
 
-1. フッターウィジェットをタップし、「**フッター**」をタップします。「 **背景** 」アコーディオンを展開し、「 **背景色** 」をに設定し `F6921E`て、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+1. フッターウィジェットをタップし、「**[!UICONTROL フッター]**」をタップします。「 **[!UICONTROL 背景]** 」アコーディオンを展開し、「 **[!UICONTROL 背景色]** 」をに設定し `F6921E`て、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
 
 ### データ取得コンポーネントのスタイル設定とアダプティブフォームの背景の適用 {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
 アダプティブフォームでは複数のコンポーネントを使用してデータを取得できます。例えば、テキストボックスと数値ボックスを使用できます。すべてのデータ取得コンポーネントと同じスタイルを指定することも、各コンポーネントに対して別々のスタイルを指定することもできます。 このチュートリアルでは、数値ボックス（顧客 ID、郵便番号）とテキストボックス（顧客 ID、名前、発送先住所、状態、電子メール）に同じスタイルを適用します。データ取得コンポーネントのスタイルを設定するには：
 
-1. 「顧客 ID」フィールドをタップし、「**フィールドウィジェット**」オプションをタップします。次のプロパティを設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+1. Tap the **[!UICONTROL Customer ID]** field and tap the **[!UICONTROL Field Widget]** option. 次のプロパティを設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
 
-<table> 
- <tbody> 
-  <tr> 
-   <td>アコーディオン</td> 
-   <td>プロパティ</td> 
-   <td>値</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線の色</td> 
-   <td>A7A9AC</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線の半径 </td> 
-   <td> 
-    <ul> 
-     <li>上：7 px<br /> </li> 
-     <li>右：7 px<br /> </li> 
-     <li>下：7 px<br /> </li> 
-     <li>左：7 px<br /> </li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントファミリー</td> 
-   <td>Arial</td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントカラー</td> 
-   <td>939598<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントサイズ</td> 
-   <td>18 px</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>幅</td> 
-   <td>60%</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>の余白</td> 
-   <td> 
-    <ul> 
-     <li>左：10rem</li> 
-    </ul> </td> 
-  </tr> 
- </tbody> 
-</table>
+   <table> 
+    <tbody> 
+     <tr> 
+      <td><b>アコーディオン</b></td> 
+      <td><b>プロパティ</b></td> 
+      <td><b>値</b></td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線の色</td> 
+      <td>A7A9AC</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線の半径 </td> 
+      <td> 
+       <ul> 
+        <li>上：7 px<br /> </li> 
+        <li>右：7 px<br /> </li> 
+        <li>下：7 px<br /> </li> 
+        <li>左：7 px<br /> </li> 
+       </ul> </td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントファミリー</td> 
+      <td>Arial</td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントカラー</td> 
+      <td>939598<br /> </td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントサイズ</td> 
+      <td>18 px</td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>幅</td> 
+      <td>60%</td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>の余白</td> 
+      <td> 
+       <ul> 
+        <li>左：10rem</li> 
+       </ul> </td> 
+     </tr> 
+    </tbody> 
+    </table>
 
-1. 「顧客 ID」フィールドの上部で空白領域をタップし、「**レスポンシブパネルコンテナ**」をタップします。**背景**／**背景色**&#x200B;を F1F2F2 に設定します。「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
+1. Tap on the empty area above the **[!UICONTROL Customer ID]** field and tap **[!UICONTROL Responsive Panel Container]**. **[!UICONTROL 背景]**／**[!UICONTROL 背景色]**&#x200B;を F1F2F2 に設定します。「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
 
    ![](do-not-localize/responsive-panel-container.png)
 
@@ -240,53 +240,53 @@ ht-degree: 69%
 
 You can use a custom theme to apply an identical style to all the buttons of the adaptive form and [inline styling](/help/forms/using/inline-style-adaptive-forms.md) to apply a style to a specific button. ボタンのスタイルを設定するには、次の手順を実行します。
 
-1. 「**送信**」ボタンをタップし、「**ボタン**」オプションをタップします。次のプロパティを設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+1. 「**[!UICONTROL 送信]**」ボタンをタップし、「**[!UICONTROL ボタン]**」オプションをタップします。次のプロパティを設定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
 
-<table> 
- <tbody> 
-  <tr> 
-   <td>アコーディオン</td> 
-   <td>プロパティ</td> 
-   <td>値</td> 
-  </tr> 
-  <tr> 
-   <td>背景</td> 
-   <td>背景色</td> 
-   <td>F6921E</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー<br /> </td> 
-   <td>境界線の色</td> 
-   <td>F6921E</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線の半径 </td> 
-   <td> 
-    <ul> 
-     <li>上：7 px<br /> </li> 
-     <li>右：7 px<br /> </li> 
-     <li>下：7 px<br /> </li> 
-     <li>左：7 px</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td>テキスト<br /> </td> 
-   <td>フォントファミリー</td> 
-   <td>Arial</td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントカラー</td> 
-   <td>FFFFFF</td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントサイズ</td> 
-   <td>18 px</td> 
-  </tr> 
- </tbody> 
-</table>
+   <table> 
+    <tbody> 
+     <tr> 
+      <td><b>アコーディオン</b></td> 
+      <td><b>プロパティ&lt;/b</td> 
+      <td><b>値</b></td> 
+     </tr> 
+     <tr> 
+      <td>背景</td> 
+      <td>背景色</td> 
+      <td>F6921E</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー<br /> </td> 
+      <td>境界線の色</td> 
+      <td>F6921E</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線の半径 </td> 
+      <td> 
+       <ul> 
+        <li>上：7 px<br /> </li> 
+        <li>右：7 px<br /> </li> 
+        <li>下：7 px<br /> </li> 
+        <li>左：7 px</li> 
+       </ul> </td> 
+     </tr> 
+     <tr> 
+      <td>テキスト<br /> </td> 
+      <td>フォントファミリー</td> 
+      <td>Arial</td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントカラー</td> 
+      <td>FFFFFF</td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントサイズ</td> 
+      <td>18 px</td> 
+     </tr> 
+    </tbody> 
+   </table>
 
 1. アダプティブフォームに[カスタムテーマを適用](/help/forms/using/style-your-adaptive-form.md#step-apply-a-theme-to-your-adaptive-form)するか、グローバルテーマを適用します。スタイルがアダプティブフォームに反映されない場合は、ブラウザーのキャッシュを消去してから、やり直してください。
 
@@ -297,162 +297,163 @@ You can use a custom theme to apply an identical style to all the buttons of the
 一部のスタイルは特定のコンポーネントのみに適用されます。このようなコンポーネントのスタイルは、アダプティブフォームエディターで設定します。
 
 1. アダプティブフォームを編集用に開きます。[http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
-1. 上部バーで「**スタイル**」オプションを選択します。
+1. 上部バーで「**[!UICONTROL スタイル]**」オプションを選択します。
 
    ![style-option](assets/style-option.png)
 
-1. Tap the **Attach** button and tap the ![aem_6_3_edit](assets/aem_6_3_edit.png)icon. Set the following properties in the **Dimensions and Position** accordion:
+1. Tap the **[!UICONTROL Attach]** button and tap the ![aem_6_3_edit](assets/aem_6_3_edit.png)icon. Set the following properties in the **[!UICONTROL Dimensions and Position]** accordion:
 
    | プロパティ | 値 |
    |---|---|
    | 浮動小数 | Left |
    | 幅 | 10% |
 
-1. Tap the **Government approved address proof** option and tap the ![aem_6_3_edit](assets/aem_6_3_edit.png)icon. 次のプロパティを設定します。
+1. Tap the **[!UICONTROL Government approved address proof]** option and tap the ![aem_6_3_edit](assets/aem_6_3_edit.png)icon. 次のプロパティを設定します。
 
-<table> 
- <tbody> 
-  <tr> 
-   <td>アコーディオン</td> 
-   <td>プロパティ</td> 
-   <td>値</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>浮動小数</td> 
-   <td>Left</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>幅</td> 
-   <td>73%</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>パディング</td> 
-   <td> 
-    <ul> 
-     <li>左：10 px</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>高さ</td> 
-   <td>40 px</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置<br /> </td> 
-   <td>の余白</td> 
-   <td><br /> 
-    <ul> 
-     <li>右：2rem</li> 
-     <li>左：10rem </li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td>背景</td> 
-   <td>背景色</td> 
-   <td>FFFFFF</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線の幅</td> 
-   <td>1 px</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線のスタイル</td> 
-   <td>実線</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線の色</td> 
-   <td>A7A9AC</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線の半径</td> 
-   <td>7 px</td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントファミリー</td> 
-   <td>Arial</td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントカラー</td> 
-   <td>BCBEC0</td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>フォントサイズ</td> 
-   <td>18 px</td> 
-  </tr> 
-  <tr> 
-   <td>テキスト</td> 
-   <td>行の高さ</td> 
-   <td>2</td> 
-  </tr> 
- </tbody> 
-</table>
+   <table> 
+    <tbody> 
+     <tr> 
+      <td><b>アコーディオン</b></td> 
+      <td><b>プロパティ</b></td> 
+      <td><b>値</b></td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>浮動小数</td> 
+      <td>Left</td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>幅</td> 
+      <td>73%</td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>パディング</td> 
+      <td> 
+       <ul> 
+        <li>左：10 px</li> 
+       </ul> </td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>高さ</td> 
+      <td>40 px</td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置<br /> </td> 
+      <td>の余白</td> 
+      <td><br /> 
+       <ul> 
+        <li>右：2rem</li> 
+        <li>左：10rem </li> 
+       </ul> </td> 
+     </tr> 
+     <tr> 
+      <td>背景</td> 
+      <td>背景色</td> 
+      <td>FFFFFF</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線の幅</td> 
+      <td>1 px</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線のスタイル</td> 
+      <td>実線</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線の色</td> 
+      <td>A7A9AC</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線の半径</td> 
+      <td>7 px</td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントファミリー</td> 
+      <td>Arial</td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントカラー</td> 
+      <td>BCBEC0</td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>フォントサイズ</td> 
+      <td>18 px</td> 
+     </tr> 
+     <tr> 
+      <td>テキスト</td> 
+      <td>行の高さ</td> 
+      <td>2</td> 
+     </tr> 
+     </tr> 
+    </tbody> 
+   </table>
 
-1. Tap the **Submit** button and tap the ![aem_6_3_edit](assets/aem_6_3_edit.png) icon. 次のプロパティを設定します。
+1. Tap the **[!UICONTROL Submit]** button and tap the ![aem_6_3_edit](assets/aem_6_3_edit.png) icon. 次のプロパティを設定します。
 
-<table> 
- <tbody> 
-  <tr> 
-   <td>アコーディオン</td> 
-   <td>プロパティ</td> 
-   <td>値</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>浮動小数</td> 
-   <td>Right</td> 
-  </tr> 
-  <tr> 
-   <td>寸法と位置</td> 
-   <td>の余白</td> 
-   <td> 
-    <ul> 
-     <li>上：5rem</li> 
-     <li>右：14rem</li> 
-     <li>下：20 px</li> 
-     <li>左：20 px<br /> </li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td>背景</td> 
-   <td>背景色</td> 
-   <td>F6921E</td> 
-  </tr> 
-  <tr> 
-   <td>ボーダー</td> 
-   <td>境界線の色</td> 
-   <td>F6921E</td> 
-  </tr> 
- </tbody> 
-</table>
+   <table> 
+    <tbody> 
+     <tr> 
+      <td><b>アコーディオン</b></td> 
+      <td><b>プロパティ</b></td> 
+      <td><b>値</b></td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>浮動小数</td> 
+      <td>Right</td> 
+     </tr> 
+     <tr> 
+      <td>寸法と位置</td> 
+      <td>の余白</td> 
+      <td> 
+       <ul> 
+        <li>上：5rem</li> 
+        <li>右：14rem</li> 
+        <li>下：20 px</li> 
+        <li>左：20 px<br /> </li> 
+       </ul> </td> 
+     </tr> 
+     <tr> 
+      <td>背景</td> 
+      <td>背景色</td> 
+      <td>F6921E</td> 
+     </tr> 
+     <tr> 
+      <td>ボーダー</td> 
+      <td>境界線の色</td> 
+      <td>F6921E</td> 
+     </tr> 
+    </tbody> 
+   </table>
 
-![styled-adaptive-form-1](assets/styled-adaptive-form-1.png)
+   ![styled-adaptive-form-1](assets/styled-adaptive-form-1.png)
 
 ## 手順 5：オプション：カスタムテーマでの Web フォントの使用 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
 
 アダプティブフォームは各種フォントを使用してデザインできます。アダプティブフォームのデザインに使用するフォントが、アダプティブフォームを表示するデバイスに存在しない場合があります。Webフォントサービスを使用して、必要なフォントをターゲットデバイスに配信できます。
 
-Adobe Typekit は Web フォントサービスです。アダプティブフォームでこのサービスを設定、使用できます。アダプティブフォームでAdobe Typekitを使用するには：
+[!DNL Adobe Typekit] はwebフォントサービスです。 アダプティブフォームでこのサービスを設定、使用できます。To use [!DNL Adobe Typekit] in an adaptive form:
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) Typekitは、Adobe Fontsと呼ばれ、Creative Cloudや他の購読に含まれています。 [詳細情報](https://fonts.adobe.com/)を参照してください。
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) は、現在はAdobe Fontsと呼ばれ [!DNL Typekit] 、Creative Cloudや他の購読に含まれています。 [詳細情報](https://fonts.adobe.com/)を参照してください。
 
-1. [](https://typekit.com/) Adobe Typekitアカウントの作成、キットの作成、キットへのフォントMyriad Proの追加、キットの公開、キットIDの取得を行います。 アダプティブフォームでAdobe Typekitフォント（Webフォント）を使用する必要があります。
-1. In the AEM Forms server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Tools** ![hammer](assets/hammer.png) > **Deployment** > **Cloud Services**. On the Cloud Services page, navigate to **Third Party Services** > **Typekit**, and click **Configure** Now under Typekit. 設定が既に使用可能な場合は、「+」ボタンをクリックして新しいインスタンスを作成します。
+1. [](https://typekit.com/) Adobe Typekitアカウントの作成、キットの作成、キットへのフォントMyriadProの追加、キットの公開、キットIDの取得を行います。 It is required to use [!DNL Adobe Typekit] fonts (Web fonts) in an adaptive form.
+1. In the AEM [!DNL Forms] server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**. On the Cloud Services page, navigate to **[!UICONTROL Third Party Services]** > **[!UICONTROL Typekit]**, and click **[!UICONTROL Configure]** Now under [!UICONTROL Typekit]. 設定が既に使用可能な場合は、「+」ボタンをクリックして新しいインスタンスを作成します。
 
-   On the Create Configuration dialog, specify a **Title** for the configuration, and click **Create**. 設定ページにリダイレクトされます、In the Edit Component dialog that appears, provide your **Kit ID** and click **OK**.
+   On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. 設定ページにリダイレクトされます、In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**.
 
-1. TypeKit 設定を使用するようにテーマを設定します。On the author instance, open **Global Theme** in the theme editor. In the theme editor, navigate to Theme Options ![theme-options](assets/theme-options.png) > Configure. In **Typekit Configuration** field, select the kit, and click **Save**.
+1. Configure your theme to use the [!DNL TypeKit] configuration. On the author instance, open **[!UICONTROL Global Theme]** in the theme editor. In the theme editor, navigate to **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Configure]**. In **[!UICONTROL Typekit Configuration]** field, select the kit, and click **[!UICONTROL Save]**.
 
-   The fonts added to the Typekit are available for selection in the **Text** accordion of all the components.
+   The fonts added to the [!UICONTROL Typekit] are available for selection in the **[!UICONTROL Text]** accordion of all the components.
 
