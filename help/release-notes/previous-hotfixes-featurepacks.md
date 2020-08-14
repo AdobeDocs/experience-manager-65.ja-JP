@@ -3,9 +3,9 @@ title: Adobe Experience Manager6.5以前のService Packリリースノート
 description: Adobe Experience Manager6.5 Service Pack 3以前に関するリリースノートです。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 2639a57682c7f0696dd2515e0fe8f6d520d10c21
 workflow-type: tm+mt
-source-wordcount: '8108'
+source-wordcount: '8113'
 ht-degree: 35%
 
 ---
@@ -105,7 +105,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * 検索フィルターから複数のタグが選択されると、複数の検索クエリが実行されます(NPR-32143)。
 
-* ファイル名が50文字を超えるアセットがアップロードされると、Experience ManagerアセットUIのファイル名が切り捨てられて表示されます(NPR-32054)。
+* ファイル名が50文字を超えるアセットがアップロードされる場合、Experience ManagerアセットUIでファイル名が切り捨てられて表示されます(NPR-32054)。
 
 * 1番目と2番目のチェックボックスがオフになると、フィルターパネルのすべてのチェックボックスがクリアされ、Adobe Stockのチェックボックスツリーのレベル2のチェックボックスが選択されます(NPR-31919)。
 
@@ -506,7 +506,7 @@ Remove one mention of this fix.
 
 * .NETプロジェクトでMTOMを使用するSOAP Webサービスで、AssemblerServiceClientの呼び出しとHtmlToPDF2メソッドに関する例外が表示されます(NPR-4281771)。
 
-* [Axis jarバージョン1.4および1.4.1には、セキュリティ脆弱性(NPR-31015](https://helpx.adobe.com/jp/aem-forms/quick-fixes/6-5/jee-patch-0014.html) )が含まれています。
+* AXIS 1.4 jarで検出されたセキュリティ脆弱性2012-5784および2014-3596。 [AXIS1.4.1 jar](https://helpx.adobe.com/jp/aem-forms/quick-fixes/6-5/jee-patch-0014.html) (NPR-31015)で修正されました。
 
 **Foundation JEE**
 
@@ -610,7 +610,7 @@ Remove one mention of this fix.
 * ユーザーが左側のパネルのフィールドにフォーカスし、キーボードショートカットを使用してコンテンツを貼り付けると、左側のパネルのフィールドからコピーしたコンテンツではなく、ページエディターのクリップボードのコンテンツを貼り付けます(NPR-31172)。
 * ユーザがマルチフィールドにファイルアップロードフィールドを追加すると、画像パスはマルチフィールドノード(NPR-30882)ではなくコンポーネントノードに保存されます。
 * この `ResponsiveGridExporter` APIはインター `com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter` フェイスを返しません。 パッ `com.day.cq.wcm.foundation.model.impl` ケージがプライベートパッケージとして宣言されます(NPR-31398)。
-* 一部のエクスペリエンスフラグメントを含むページがエディター以外のモードで(プレフィックスとを含まない作成者で、または `editor.html``wcmmode=disabled`投稿で)開かれると、要求はHTTPステータスエラーコード500(NPR-30743)で終了します。
+* 一部のエクスペリエンスフラグメントを含むページがエディター以外のモードで(プレフィックスとを含まない作成者で、または `editor.html``wcmmode=disabled`発行者で)開かれると、要求はHTTPステータスエラーコード500(NPR-30743)で終了します。
 
 ### WCM - ページエディター {#wcm-page-editor-6520}
 
