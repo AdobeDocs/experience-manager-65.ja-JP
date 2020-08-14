@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 24d817bf8e52136980783ef14cea8531519ee622
 workflow-type: tm+mt
-source-wordcount: '1817'
-ht-degree: 77%
+source-wordcount: '1927'
+ht-degree: 75%
 
 ---
 
@@ -39,12 +39,12 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ## システム要件 {#system-requirements}
 
-AEM Formsのデータ取得機能をインストールおよび設定する前に、次のことを確認します。
+AEM Formsのデータキャプチャ機能をインストールおよび設定する前に、以下を確認します。
 
 * ハードウェアとソフトウェアのインフラが正しく設定されていること。サポート対象のハードウェアおよびソフトウェアの詳細な一覧については、「[技術的要件](/help/sites-deploying/technical-requirements.md)」を参照してください。
 
 * AEM インスタンスのインストールパスに空白が含まれていないこと。
-* AEM インスタンスが稼働していること。AEM の用語では、「インスタンス」は、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。AEM Forms のデータ取得機能を実行するには、少なくとも 2 つの [AEM インスタンス（1 つはオーサー、もう 1 つはパブリッシュ）](/help/sites-deploying/deploy.md)を必要とします。
+* AEM インスタンスが稼働していること。Windowsユーザーの場合は、AEMインスタンスをエレベートモードでインストールします。 AEM の用語では、「インスタンス」は、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。AEM Forms のデータ取得機能を実行するには、少なくとも 2 つの [AEM インスタンス（1 つはオーサー、もう 1 つはパブリッシュ）](/help/sites-deploying/deploy.md)を必要とします。
 
    * **オーサー：**&#x200B;コンテンツを作成、アップロード、編集し、Web サイトを管理する AEM インスタンス。公開する準備ができたコンテンツは、パブリッシュインスタンスにレプリケートされます。
    * **パブリッシュ：**&#x200B;発行されたコンテンツをインターネットまたは社内ネットワークを通じて公開する AEM インスタンス。
@@ -111,18 +111,36 @@ AEM Formsのデータ取得機能をインストールおよび設定する前�
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms データ取得およびその他の機能が含まれています。次の手順を実行してアドオンパッケージをインストールします。
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
-1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
-1. In the **[!UICONTROL Filters]** section:
-   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
-   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
-1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Open [Software Distribution](https://experience.adobe.com/downloads). ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
+1. Tap **[!UICONTROL Adobe Experience Manager]** available in the header menu.
+1. 「**[!UICONTROL フィルター]**」セクションで、
+   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+   2. パッケージのバージョンとタイプを選択します。 You can also use the **[!UICONTROL Search Downloads]** option to filter the results.
+1. Tap the package name applicable to your operating system, select **[!UICONTROL Accept EULA Terms]**, and tap **[!UICONTROL Download]**.
+1. Open [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)  and click **[!UICONTROL Upload Package]** to upload the package.
 1. Select the package and click **[!UICONTROL Install]**.
 
-   「 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 」記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` ファイルに表示されなくなるまで待ち、ログは安定しています。
+   You can also download the package via the direct link listed in the [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) article.
+1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` ファイルに表示されなくなり、ログが安定するまで待ちます。
 1. 手順 1 から 7 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
+
+### （Windowsのみ）Visual Studio再配布可能な自動インストール {#automatic-installation-visual-studio-redistributables}
+
+AEMインスタンスを管理者モードでインストールした場合、見つからないVisual Studio再配布可能ファイルは、AEM Formsアドオンパッケージのインストール時に自動的にインストールされます。
+
+Visual Studioの再配布可能ファイルが自動的にインストールされるかどうかを評価するには、ディレクトリにある `error.log` ファイルを開き `/crx-repository/logs/` ます。 ログには次のメッセージが含まれます。
+
+`Redist <service name> already installed on system, will not attempt re-installation`
+
+再配布可能なファイルをインストールできない場合、ログには次のメッセージが含まれます。
+
+`Current user does not have elevated privileges, aborting installation of redist <service name>`
+
+この問題を解決するには、AEMサーバーを再起動し、AEMをエレベートモードでインストールしてから、AEM Formsアドオンパッケージをインストールします。
+
+権限の確認が失敗した場合、ログには次のメッセージが含まれます。
+
+`Privilege escalation check failed with error: <error message>`
 
 ## インストール後の設定 {#post-installation-configurations}
 
@@ -162,7 +180,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### Dispatcher の設定 {#configure-dispatcher}
 
-ディスパッチャーは AEM のキャッシングおよびロードバランスツールです。AEM ディスパッチャーはまた、AEM サーバーを攻撃から保護することにも役立ちます。エンタープライズクラスの Web サーバーと一緒にディスパッチャーを使用することで、AEM インスタンスのセキュリティを向上できます。[Dispatcherを使用する場合](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)、AEM Formsに対して次の設定を実行します。
+ディスパッチャーは AEM のキャッシングおよびロードバランスツールです。AEM ディスパッチャーはまた、AEM サーバーを攻撃から保護することにも役立ちます。エンタープライズクラスの Web サーバーと一緒にディスパッチャーを使用することで、AEM インスタンスのセキュリティを向上できます。[Dispatcherを使用する場合は](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)、AEM Formsに対して次の設定を実行します。
 
 1. AEM Forms のアクセスの設定:
 
@@ -194,7 +212,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### フォームデータモデルに SSL 通信を設定する {#configure-ssl-communcation-for-form-data-model}
 
-フォームデータモデル用の SSL 通信を有効にすることができます。フォームデータモデル用の SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。次のコマンドを実行して、証明書を追加できます。 &quot;
+フォームデータモデル用の SSL 通信を有効にすることができます。フォームデータモデル用の SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。次のコマンドを実行して、証明書を追加できます。&quot;
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
