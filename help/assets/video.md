@@ -1,5 +1,5 @@
 ---
-title: ビデオ Dynamic Media
+title: ビデオ ダイナミックメディア
 description: Dynamic Media でビデオを使用する方法について説明します。
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: ba6f94435a4d4945d54614db19f7ff612a317692
 workflow-type: tm+mt
 source-wordcount: '11830'
 ht-degree: 89%
@@ -17,7 +17,7 @@ ht-degree: 89%
 ---
 
 
-# Dynamic Media内のビデオ {#video}
+# ダイナミックメディアでのビデオ {#video}
 
 ここでは、Dynamic Media でのビデオの操作方法について説明します。
 
@@ -27,7 +27,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Dynamic Mediaでビデオを操作する前に、AEM管理者がDynamic MediaCloud Serviceを有効にして設定していることを確認してください。Dynamic Media- Scene7モードまたはDynamic Media — ハイブリッドモードを使用します。
+>ダイナミックメディアでビデオを操作する前に、AEM管理者がダイナミックメディア —Scene7モードまたはダイナミックメディア — ハイブリッドモードでダイナミックメディアCloud Servicesを有効にし、設定済みであることを確認してください。
 >
 >* 「Dynamic Media - Scene7 モードの設定」の[ Dynamic Media クラウドサービスの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)、および[ Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
    >
@@ -100,7 +100,7 @@ ht-degree: 89%
 
 1. 次のいずれかの操作をおこなって、**Dynamic Media ビデオを公開します。**
 
-   * Webコンテンツ管理ーシステムとしてAdobe Experience Managerを使用している場合は、ビデオをWebページに直接追加できます。
+   * Webコンテンツ管理ーシステムとしてAdobe Experience Managerを使用している場合は、ビデオを直接Webページに追加できます。
 
       * [Web ページへのビデオの追加](adding-dynamic-media-assets-to-pages.md)
    * サードパーティの Web コンテンツ管理システムを使用している場合、Web ページにビデオをリンクするか、ビデオを埋め込むことができます。
@@ -983,8 +983,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports.]**
 1. ビデオレポートページで、次のいずれかの操作をおこないます。
 
-   * 右上隅近くにある「**ビデオレポートの更新**」アイコンをタップします。
-レポートの終了日が現在の日付の場合にのみ、[更新]を使用する必要があります。 これにより、前回レポートを実行した後に発生したビデオ追跡を確実に確認できます。
+   * 右上隅近くにある「**ビデオレポートの更新**」アイコンをタップします。レポートの終了日が現在の日付の場合にのみ、[更新]を使用する必要があります。これにより、前回レポートを実行した後に発生したビデオ追跡を確実に確認できます。
 
    * Near the upper-right corner, tap the **Date Picker **icon.
 Specify the beginning and end date range for which you want video data, and then tap **[!UICONTROL Run Report.]**
@@ -1016,7 +1015,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
 
    `config2` パラメーターは、HTML5 ビューアでの追跡を有効にします。また、ビデオレポートの設定情報や、お客様固有の Adobe Analytics 設定を含む、会社固有のプリセットでもあります。
 
-   config2パラメータの正しい値は、「**Embed Code **」と「**URL **」コピー関数の両方にあります。 **URL **commandのコピー元のURLの中で、検索するパラメータは `&config2=<value>` です。 この値はほぼ常に `companypreset` ですが、一部のケースでは `companypreset-1`、`companypreset-2` などとなっていることもあります。
+   config2パラメータの正しい値は、「**Embed Code **」と「**URL **」コピー関数の両方にあります。**URL **commandのコピー元のURLの中で、検索するパラメータは `&config2=<value>` です。 この値はほぼ常に `companypreset` ですが、一部のケースでは `companypreset-1`、`companypreset-2` などとなっていることもあります。
 
 1. カスタムのビデオビューアコードで、次の操作をおこなって、ビューアページに AppMeasurementBridge.jsp を追加します。
 
@@ -1091,7 +1090,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Scene7 画�
    通常、VTT ファイルの名前はビデオファイルと同じにして、言語ロケール（-EN、-FR、-DE など）を追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 
 1. AEM で、WebVTT キャプションファイルを DAM にアップロードします。
-1. アップロードしたキャプションファイルに関連付ける*公開済み*ビデオアセットに移動します。
+1. アップロードしたキャプションファイルを関連付ける、公開済み&#x200B;**&#x200B;ビデオアセットに移動します。
 
    URL をコピーするには、その&#x200B;*前に*&#x200B;アセットを&#x200B;*公開*&#x200B;しておく必要があります。
 
