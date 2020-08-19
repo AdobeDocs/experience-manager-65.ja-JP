@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '571'
+ht-degree: 22%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ## 概要 {#introduction}
 
-The `Social Tag Cloud` component highlights tags applied by community members when posting content. これは、トレンドトピックを識別し、サイトの訪問者がタグ付きコンテンツをすばやく見つける手段です。
+The `Social Tag Cloud` component highlights tags applied by community members when posting content. これは、トレンドトピックを識別し、サイト訪問者がタグ付けされたコンテンツをすばやく見つけられるようにする手段です。
 
 現在のトレンドを識別するもう 1 つの手段については、「[アクティビティのトレンド](trends.md)」を参照してください。
 
@@ -31,37 +34,38 @@ See [Administering Tags](../../help/sites-administering/tags.md) for information
 
 ## Social タグクラウドの追加 {#adding-a-social-tag-cloud}
 
-作成者モードでペ `Social Tag Cloud` ージにコンポーネントを追加するには、コンポーネントブラウザーを使用して、タグクラウドが表示さ `Communities / Social Tag Cloud` れるページ上の場所にコンポーネントを配置し、ドラッグします。
+作成者モードでページに `Social Tag Cloud` コンポーネントを追加するには、コンポーネントブラウザーを使用してタグクラウドを表示するページを探し `Communities / Social Tag Cloud` 、ドラッグして配置します。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](tag.md#essentials-for-client-side) are included, this is how the `Social Tag Cloud` component will appear:
+[必要なクライアント側ライブラリが含まれる場合](tag.md#essentials-for-client-side) 、次のようにコンポー `Social Tag Cloud` ネントが表示されます。
 
-![chlimage_1-303](assets/chlimage_1-303.png)
+![ソーシャルタグ](assets/social-tag.png)
 
 ## Social タグクラウドの設定 {#configuring-social-tag-cloud}
 
 Select the placed `Social Tag Cloud` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-304](assets/chlimage_1-304.png)
+![設定](assets/configure-new.png)
 
 Under the **[!UICONTROL Social Tag Cloud]** tab, specify which tags to display and, if the tags are active links, the location of the page for search results:
 
-![chlimage_1-305](assets/chlimage_1-305.png)
+![social-tag-cloud](assets/social-tag-cloud.png)
 
 * **[!UICONTROL 表示する Social タグ]**&#x200B;表示する UGC タグを指定します。プルダウン・オプションは次のとおりです。
 
    * `From page and child pages`
    * `All tags`
-   デフォルトは `From page and child pages`で、「page」は下の「 **Page** 」設定を指します。
+
+   デフォルト値は `From page and child pages`です。ここで、「page」は下の **「** Page」設定を指します。
 
 * **[!UICONTROL ページ]**
 
-   (Required if not `All tags)` The path to the UGC for a page. 初期設定は、空白の場合は現在のページです。
+   (Required if not `All tags)` The path to the UGC for a page. デフォルトは、空白の場合に現在のページになります。
 
 * **[!UICONTROL タグにリンクがありません]**
 
-   チェックすると、タグはプレーンテキストとしてタグクラウドに表示されます。 このチェックボックスをオフにすると、タグはアクティブなリンクとして表示され、タグが適用されるすべてのコンテンツを検索します。 Default is unchecked and requires the **[!UICONTROL Search Result Path]** to be set.
+   選択すると、タグはプレーンテキストとしてタグクラウドに表示されます。 選択しない場合、タグはアクティブリンクとして表示され、タグが適用されるすべてのコンテンツが検索されます。 Default is unchecked and requires the **[!UICONTROL Search Result Path]** to be set.
 
 * **[!UICONTROL 検索結果のパス]**
 
@@ -69,38 +73,40 @@ Under the **[!UICONTROL Social Tag Cloud]** tab, specify which tags to display a
 
 ## Social タグクラウドの表示を変更する {#change-display-of-social-tag-cloud}
 
-**Socialタグクラウドの表示を編集するには、** Design Modeに入り [、配置したコンポーネントを重複](../../help/sites-authoring/default-components-designmode.md)`Social Tag Cloud` がクリックして、追加のタブを含むダイアログを開きます。
+To edit the display of the **Social Tag Cloud**, enter [Design Mode](../../help/sites-authoring/default-components-designmode.md) and double click on the placed `Social Tag Cloud` component to open a dialog with an additional tab.
 
-Using the **[!UICONTROL Social Tag Cloud (Design)]** tab, specify how tags are displayed. タグは、単純なタグ、デフォルトの名前空間内の単一の単語、または階層的分類です。
+Using the **[!UICONTROL Social Tag Cloud (Design)]** tab, specify how tags are displayed. タグは、単純なタグ、デフォルトの名前空間内の単一の単語、または階層的な分類のいずれかです。
 
-![chlimage_1-306](assets/chlimage_1-306.png)
+![social-tag-cloud-design](assets/social-tag-cloud-design.png)
 
 * **[!UICONTROL タイトルの完全なパスを表示]**
 
-   オンにすると、適用された各タグの親タグと名前空間のタイトルが表示されます。
+   オンの場合、適用した各タグの親タグと名前空間のタイトルが表示されます。
 
    次に例を示します。
 
    * チェック: `Geometrixx Media: Gadgets / Cars`
    * 未チェック: `Cars`
+
    シンプルなタグの場合は、表示に違いは現れません。
 
    初期設定はオフです。
 
 * **[!UICONTROL リーフタグのみを表示]**
 
-   選択すると、他のタグを含まない、適用されたタグのみが表示されます。
+   オンにすると、他のタグを含まない、適用されたタグのみが表示されます。
 
-   例えば、次のTagIDを指定したとします。
+   例えば、次のタグIDを指定すると、
 
    `Geometrixx Media: Gadgets / Cars`
 
-   次の3つのタグを適用できます。
+   適用できるタグは3つあります。
 
    `Geometrixx Media (the namespace)`, `Gadgets`, および `Cars`
 
    * Checked: Only `Cars` will display, if applied.
    * Unchecked: `Geometrixx Media` and `Gadgets`as well as `Cars` will display, if applied.
+
    シンプルなタグはリーフタグです。
 
    初期設定はオフです。
@@ -111,7 +117,7 @@ Using the **[!UICONTROL Social Tag Cloud (Design)]** tab, specify how tags are d
 
 * **[!UICONTROL すべてのタグに同じサイズ]**
 
-   チェックすると、タグクラウド内のすべての単語が同じスタイルで表示されます。 このオプションをオフにすると、使用方法に応じて異なるスタイルが使用されます。 初期設定はオフです。
+   このオプションを選択すると、タグクラウド内のすべての単語に同じスタイルが適用されます。 選択しない場合、単語のスタイルは使用方法に応じて異なります。 初期設定はオフです。
 
 ## 追加情報 {#additional-information}
 
