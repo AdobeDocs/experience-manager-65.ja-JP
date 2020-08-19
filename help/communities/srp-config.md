@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 62%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ## ストレージ設定コンソール {#storage-configuration-console}
 
-![chlimage_1-188](assets/chlimage_1-188.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
 作成者環境で、ストレージ設定コンソールに移動します。
 
@@ -49,7 +52,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 選択しなかった場合は、AEM リポジトリである JCR がデフォルトで使用されることに注意してください。
 
-JCR is *not* a common store shared by the author and publish environments. コミュニティコンテンツは、作成元の作成者または発行環境からのみ表示されます。
+JCR is *not* a common store shared by the author and publish environments. コミュニティコンテンツは、そのコンテンツが作成された作成者または発行環境からのみ表示されます。
 
 詳しくは、[JCR ストア](jsrp.md)を参照してください。
 
