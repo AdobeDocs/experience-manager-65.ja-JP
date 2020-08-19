@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 61%
 
 ---
 
@@ -23,13 +26,13 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 基本的には：
 
-* [各カタログのタグ名前空間](../../help/sites-administering/tags.md#creating-a-namespace) を作成する
+* [各カタログのタグ名前空間](../../help/sites-administering/tags.md#creating-a-namespace) （タグ）の作成
 
    * [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
-   * コミュニティメンバー専用（非公開コミュニティ）
+   * コミュニティメンバーのみ（非公開コミュニティ）
 
       * Allow read access for the [community site&#39;s member group](users.md#publish-group-roles)
-   * サイト訪問者の場合、ログイン済みか匿名か（オープンコミュニティ）
+   * サイト訪問者に対して、ログイン済みか匿名か（オープンコミュニティ）を問わず、
 
       * Allow read access for the `Everyone` group
    * [タグを公開する](../../help/sites-administering/tags.md#publishing-tags)
@@ -38,14 +41,14 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 * [コミュニティサイトのタグの範囲の定義](sites-console.md#tagging)
 
-   * [サイトの構造に存在するカタログの設定](functions.md#catalog-function)
+   * [サイトの構造に存在するカタログを設定する](functions.md#catalog-function)
 
-      * カタログインスタンスにタグを追加して、UIインスタンスに表示されるタグのリストを制御できます。フィルター
+      * カタログインスタンスにタグを追加して、UIフィルターに表示されるタグのリストを制御できます。
       * Can add [pre-filters](catalog-developer-essentials.md#pre-filters), to restrict a catalog&#39;s included resources.
 
 * [コミュニティサイトの公開](sites-console.md#publishing-the-site)
-* [タグを有効化リソースに適用して](resources.md#create-a-resource) 、カテゴリ別にフィルタリングできるようにする
-* [有効化リソースの発行](resources.md#publish)
+* [タグを有効化リソースに適用して](resources.md#create-a-resource) 、カテゴリに基づいてフィルタリングされる可能性がある
+* [有効化リソースを発行する](resources.md#publish)
 
 ## コミュニティサイトタグ {#community-site-tags}
 
@@ -59,19 +62,19 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 The following is how it appears in CRXDE when an administrator applies read permissions to `/etc/tags/ski-catalog` for the group `Community Enable Members`.
 
-![chlimage_1-420](assets/chlimage_1-420.png)
+![site-tags](assets/site-tags.png)
 
 ## カタログのタグ名前空間 {#catalog-tag-namespaces}
 
-カタログ機能は、自身を定義するためにタグを使用します。コミュニティサイトでカタログ機能を設定する場合、選択するタグ名前空間のセットは、コミュニティサイトに設定されたタグメッセージの範囲によって定義されます。
+カタログ機能は、自身を定義するためにタグを使用します。コミュニティサイトでカタログ機能を設定する際、選択するタグ名前空間のセットは、コミュニティサイトに設定されたタグメッセージの範囲によって定義されます。
 
 カタログ機能には、カタログのフィルター UI に表示されるタグを定義するタグ設定が含まれています。「すべての名前空間」の設定は、コミュニティサイトに対して選択されたタグ名前空間の範囲を指します。
 
-![chlimage_1-421](assets/chlimage_1-421.png)
+![カタログ名前空間](assets/catalog-namespace.png)
 
 ## イネーブルメントリソースへのタグの適用 {#applying-tags-to-enablement-resources}
 
-Enablement resources and learning paths will appear in all catalog when `Show in Catalog` is checked. リソースと学習パスにタグを追加すると、特定のカタログに事前にフィルタリングしたり、カタログUIでフィルタリングしたりできます。
+Enablement resources and learning paths will appear in all catalog when `Show in Catalog` is checked. リソースおよび学習パスにタグを追加すると、特定のカタログに事前フィルタリングしたり、カタログUIでフィルタリングしたりできます。
 
 Restricting enablement resources and learning paths to specific catalogs is accomplished by creating [pre-filters](catalog-developer-essentials.md#pre-filters).
 
@@ -88,7 +91,7 @@ For example, if a `ski-catalog` namespace were created and set on a catalog name
 
 イネーブルメントリソースの公開後に `Ski Catalog` に表示されます。
 
-![chlimage_1-422](assets/chlimage_1-422.png)
+![basic-info](assets/applytags-basicinfo.png)
 
 ## パブリッシュ環境でのカタログの表示 {#viewing-catalog-on-publish}
 
@@ -100,5 +103,5 @@ For example, if a `ski-catalog` namespace were created and set on a catalog name
 
 カタログ表示時にタグを選択してもイネーブルメントリソースが表示されない場合は、カタログの名前空間のタグがイネーブルメントリソースに適用されているかを確認してください。
 
-![chlimage_1-423](assets/chlimage_1-423.png)
+![表示カタログ](assets/viewcatalog.png)
 
