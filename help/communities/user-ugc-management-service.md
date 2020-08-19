@@ -11,10 +11,10 @@ topic-tags: administering
 discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 40%
+ht-degree: 37%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 40%
 
 >[!IMPORTANT]
 >
->以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。 GDPR、CCPAなど
+>以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
 
 
-AEM CommunitiesはAPIをすぐに使用できる状態で公開し、ユーザープロファイルの管理や、ユーザー生成コンテンツ(UGC)の一括管理を行います。 Once enabled, the **UserUgcManagement** service allows the privileged users (community administrators and moderators) to disable user profiles, and bulk delete or bulk export UGC for specific users. また、これらのAPIを使用すると、顧客データのコントローラとプロセッサが、欧州和集合のGDPR(General Data Protection Regulations)や、他のGDPRに基づくプライバシー要件に準拠できます。
+AEM CommunitiesはAPIを標準搭載で公開しており、ユーザープロファイルを管理し、ユーザー生成コンテンツ(UGC)を一括管理できます。 Once enabled, the **UserUgcManagement** service allows the privileged users (community administrators and moderators) to disable user profiles, and bulk delete or bulk export UGC for specific users. また、これらのAPIを使用すると、顧客データのコントローラとプロセッサが、欧州和集合のGDPR(General Data Protection Regulations)や、他のGDPRに基づくプライバシー要件に準拠できます。
 
 詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html)を参照してください。
 
@@ -35,7 +35,7 @@ AEM CommunitiesはAPIをすぐに使用できる状態で公開し、ユーザ�
 >[AEM Communities 内の Adobe Analytics](/help/communities/analytics.md) サイトを設定している場合は、収集されたユーザーデータが Adobe Analytics サーバーに送信されます。Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除や、GDPR に準拠するための処理をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
 
 
-To put these APIs to use, you need to enable the `/services/social/ugcmanagement` endpoint by activating the UserUgcManagement service. To activate this service, install the [sample servlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet) available on [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet). 次に、次のようなhttpリクエストを使用して、適切なパラメーターを指定して、コミュニティサイトの発行インスタンスでエンドポイントに到達します。
+To put these APIs to use, you need to enable the `/services/social/ugcmanagement` endpoint by activating the UserUgcManagement service. To activate this service, install the [sample servlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) available on [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). 次に、次のようなhttpリクエストを使用して、適切なパラメーターを指定して、コミュニティサイトの発行インスタンスでエンドポイントに到達します。
 
 `https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`」を選択します。ただし、システム内のユーザープロファイルとユーザー生成コンテンツを管理するための UI（ユーザーインターフェイス）を構築することもできます。
 
@@ -45,8 +45,8 @@ To put these APIs to use, you need to enable the `/services/social/ugcmanagement
 
 **getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)** は、ユーザーのすべてのUGCをシステムからエクスポートするのに役立ちます。
 
-* **user**: ユーザーの承認可能なID。
-* **outputStream**: 結果は出力ストリームとして返されます。これは、ユーザーが生成したコンテンツ（jsonファイル）と添付ファイル（ユーザーがアップロードした画像またはビデオを含む）を含むzipファイルです。
+* **user**:ユーザーの承認可能なID。
+* **outputStream**:結果は出力ストリームとして返されます。これは、ユーザーが生成したコンテンツ（jsonファイル）と添付ファイル（ユーザーがアップロードした画像またはビデオを含む）を含むzipファイルです。
 
 例えば、コミュニティサイトにログインする際の許可可能 ID として weston.mccall@dodgit.com を使用する、Weston McCall という名前のユーザーの UGC を書き出すには、次のような HTTP GET リクエストを送信します。
 
@@ -56,26 +56,26 @@ To put these APIs to use, you need to enable the `/services/social/ugcmanagement
 
 **deleteUserUgc(ResourceResolver resourceResolver, String user)** は、ユーザーのすべてのUGCをシステムから削除するのに役立ちます。
 
-* **user**: ユーザーの承認可能なID。
+* **user**:ユーザーの承認可能なID。
 
-例えば、http-POSTリクエストを使用して認証可能なID weston.mccall@dodgit.comを持つユーザーのUGCを削除するには、次のパラメーターを使用します。
+例えば、認証可能なID weston.mccall@dodgit.comを持つユーザーのUGCをhttpPOSTリクエストで削除するには、次のパラメーターを使用します。
 
 * ユーザーの = `weston.mccall@dodgit.com`
 * 操作 = `deleteUgc`
 
-### アドビのAnalyticsからUGCを削除 {#delete-ugc-from-adobe-analytics}
+### Adobe AnalyticsからUGCを削除 {#delete-ugc-from-adobe-analytics}
 
-アドビのAnalyticsからユーザーデータを削除するには、 [GDPRAnalyticsのワークフローに従い](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)、 を使用しても、AdobeAnalyticsからはユーザーデータが削除されません。
+ユーザーデータをAdobe Analyticsから削除するには、 [GDPR Analyticsのワークフローに従います](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)。を使用しない場合、APIはAdobe Analyticsからユーザーデータを削除しません。
 
-AEM Communitiesが使用するAdobeAnalytics変数マッピングについては、次の図を参照してください。
+AEM Communitiesが使用するAdobe Analytics変数マッピングについては、次の図を参照してください。
 
-![AEMコミュニティでのAdobeAnalyticsの変数マッピング](assets/analytics-communities-mapping.png)
+![AEM communitiesのAdobe Analytics変数マッピング](assets/analytics-communities-mapping.png)
 
 ## ユーザーアカウントの無効化 {#disable-a-user-account}
 
 **deleteUserAccount(ResourceResolver resourceResolver, String user)** は、ユーザーアカウントを無効にするのに役立ちます。
 
-* **user**: ユーザーの承認可能なID。
+* **user**:ユーザーの承認可能なID。
 
 >[!NOTE]
 >
