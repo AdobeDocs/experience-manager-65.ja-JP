@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 51%
@@ -241,15 +241,15 @@ Once a piece of content is flagged, it remains flagged until you unflag that sin
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-Githubの [サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) では、タグフィルターを実装して、特定のタグがユーザー生成コンテンツに適用されるかどうかに基づいてUGCリストをフィルターします。 サンプルコードに従って、他の類似したUGCメタデータフィールドに類似したフィルターを作成できます。
+Githubの [サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) では、タグフィルターを実装して、特定のタグがユーザー生成コンテンツに適用されるかどうかに基づいてUGCリストをフィルターします。 サンプルコードに従って、他の類似したUGCメタデータフィールドに類似したフィルターを作成できます。
 
 タグフィルターのサンプルをインストールするには：
 
-1. AEM Author(https://[aem-author]:4502/crx/packmgr/index.jsp[)インスタンスとAEM Publish(](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)https://[aem-publish]:4503/crx/packmgr/index.jsp[](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))インスタンスでパッケージマネージャーを開きます。
+1. AEM Author(https://[aem-author]:4502/crx/packmgr/index.jsp[)インスタンスとAEM Publish(https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)[](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))インスタンスでパッケージマネージャーを開きます。
 1. Githubコード `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` からパッケージを構築し、インストールして有効にします。
-1. AEM Author( `https://[aem-author]:4502/system/console/bundles`)インスタンスとAEM Publish( `https://[aem-publish]:4503/system/console/bundles`)インスタンスのバンドルコンソールを開きます。
+1. AEM作成者( `https://[aem-author]:4502/system/console/bundles`)インスタンスとAEM発行( `https://[aem-publish]:4503/system/console/bundles`)インスタンスのバンドルコンソールを開きます。
 1. Github ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar` からパッケージを構築し、インストールして有効にします。
-1. AEM Author(https://[aem-author]:4502/crx/de/index.jsp **#/apps/social/moderation/facets** )の/apps/social/moderation/facets[ノードに移動し、AEM Publish(](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets[](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))インスタンスに移動します。
+1. AEM Author(https://[aem-author]:4502/crx/de/index.jsp **#/apps/social/moderation/facets** )およびAEM Publish([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/fasets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)[](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))インスタンスの/apps/social/modetノードに移動します。
 1. 権限を持つ追加技術ユーザー **communities** -utility-reader `jcr:read` 。
 
 既存のコミュニティサイトにカスタムフィルターを公開するには：
