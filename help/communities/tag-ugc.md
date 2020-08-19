@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 76%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ユーザー生成コンテンツ（UGC）のタグ付けは、コミュニティメンバーが他のメンバーによるコンテンツの検索を支援するための手段です。
 
-通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグが公開環境のコミュニティメンバーによって適用されるという点で一意です。
+通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグが公開環境のコミュニティメンバーによって適用されるという点で異なります。
 
 タグ名前空間と分類は、どちらで適用する場合も同じです。
 
@@ -53,5 +56,5 @@ See [Administering Tags](../../help/sites-administering/tags.md#tagging-console)
 
 The following is how it appears in CRXDE when an administrator applies read permissions to `/etc/tag/discussions` for the group `Community Engage Members`.
 
-![chlimage_1-74](assets/chlimage_1-74.png)
+![tag-permissions](assets/tag-permissions.png)
 
