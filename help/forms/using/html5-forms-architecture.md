@@ -11,7 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 84dd0d551431169239f63cff62a015e15f998e7d
+workflow-type: tm+mt
+source-wordcount: '2043'
+ht-degree: 78%
 
 ---
 
@@ -22,9 +25,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 HTML5 forms functionality is deployed as a package within the embedded AEM instance and is exposesd as a REST end point over HTTP/S using RESTful [Apache Sling Architecture](https://sling.apache.org/).
 
-`<style> .background{ display: none; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:1001; -moz-opacity: 0.8; opacity:.80; filter: alpha(opacity=80); } .content { display: none; position: fixed; top: 50%; left: 50%; width: 1200px; height: 756px; margin-left: -600px; margin-top: -378px; border:10px solid orange; background-color: white; z-index:1002; overflow: visible; } </style>` [ 01-aem-forms-architecture ![](assets/01-aem-forms-architecture.jpg)*表示（フルサイズ）*](javascript:void(0).md)
-
-[ ![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)](javascript:void(0).md)
+![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)
 
 ### Sling フレームワークの使用 {#using-sling-framework}
 
@@ -32,7 +33,7 @@ HTML5 forms functionality is deployed as a package within the embedded AEM insta
 
 For details on REST endpoint and supported request parameters, see [Rendering Form Template](/help/forms/using/rendering-form-template.md).
 
-ユーザーがiOSやAndroidブラウザーなどのクライアントデバイスから要求を行うと、Slingはまず要求URLに基づいてプロファイルノードを解決します。 この Profile ノードから、それは **sling:resourceSuperType** と **sling:resourceType** を読み取り、このフォームレンダリング要求を処理できる使用可能なスクリプトをすべて特定します。次に、それは Sling 要求セレクターを要求メソッドとともに使用して、この要求の処理に最適なスクリプトを特定します。要求がプロファイルレンダラー JSP に達したら、JSP は Forms OSGi サービスを呼び出します。
+ユーザーがiOSやAndroidブラウザーなどのクライアントデバイスから要求を行う場合、Slingはまず要求URLに基づいてプロファイルノードを解決します。 この Profile ノードから、それは **sling:resourceSuperType** と **sling:resourceType** を読み取り、このフォームレンダリング要求を処理できる使用可能なスクリプトをすべて特定します。次に、それは Sling 要求セレクターを要求メソッドとともに使用して、この要求の処理に最適なスクリプトを特定します。要求がプロファイルレンダラー JSP に達したら、JSP は Forms OSGi サービスを呼び出します。
 
 Sling スクリプトの解決について詳しくは、「[AEM Sling Cheat Sheet](https://docs.adobe.com/content/docs/en/cq/current/developing/sling_cheatsheet.html)」または「[Apache Sling Url decomposition](https://sling.apache.org/site/url-decomposition.html)」を参照してください。
 
@@ -51,9 +52,9 @@ HTML5 フォームは、フラグメントと画像の参照がないテンプ�
 Forms OSGi サービスは次の 2 つの手順でリクエストを処理します。
 
 * **レイアウトと初期フォーム状態の生成**：Forms OSGi レンダリングサービスは、フォームキャッシュコンポーネントを呼び出して、このフォームがすでにキャッシュされていて無効化されていないかを調べます。 フォームがキャッシュされ有効になっている場合は、キャッシュから生成 HTML を提供します。フォームが無効化されている場合、Forms OSGi レンダリングサービスは、初期フォームレイアウトとフォーム状態を XML 形式で生成します。この XML は Forms OSGi サービスによって HTML レイアウトと初期 JSON フォーム状態に変換されてから、後続の要求のためにキャッシュされます。
-* **事前入力されたフォーム**:レンダリング時に、ユーザーが事前入力されたデータを含むフォームを要求した場合、Forms OSGiレンダリングサービスはFormsサービスコンテナを呼び出し、マージされたデータを含む新しいフォーム状態を生成します。 ただし、上記の手順でレイアウトはすでに生成されているので、この呼び出しのほうが最初の呼び出しよりも高速です。この呼び出しはデータの結合とデータへのスクリプトの実行のみを実施します。
+* **事前入力されたForms**:レンダリング中に、ユーザーが事前入力されたデータを含むフォームを要求した場合、FormsOSGiレンダリングサービスはFormsサービスコンテナを呼び出し、マージされたデータを含む新しいフォーム状態を生成します。 ただし、上記の手順でレイアウトはすでに生成されているので、この呼び出しのほうが最初の呼び出しよりも高速です。この呼び出しはデータの結合とデータへのスクリプトの実行のみを実施します。
 
-フォームまたはフォーム内で使用されているアセットに更新がある場合、フォームキャッシュコンポーネントはその更新を検出し、その特定のフォームのキャッシュは無効になります。 Forms OSGi サービスが処理を完了したら、プロファイルレンダラー JSP はこのフォームに JavaScript ライブラリの参照とスタイル設定を追加し、応答をクライアントに返します。[Apache](https://httpd.apache.org/) のような一般的な Web サーバーは HTML 圧縮オンでここで使用できます。Webサーバーは、応答サイズ、ネットワークトラフィック、およびサーバーとクライアントコンピューター間でのデータのストリーミングに要する時間を大幅に短縮します。
+フォームまたはフォーム内で使用されるアセットに更新がある場合、フォームキャッシュコンポーネントはその更新を検出し、その特定のフォームのキャッシュは無効になります。 Forms OSGi サービスが処理を完了したら、プロファイルレンダラー JSP はこのフォームに JavaScript ライブラリの参照とスタイル設定を追加し、応答をクライアントに返します。[Apache](https://httpd.apache.org/) のような一般的な Web サーバーは HTML 圧縮オンでここで使用できます。Webサーバーは、応答サイズ、ネットワークトラフィック、およびサーバーとクライアントマシンの間でのデータのストリーミングに要する時間を削減します。
 
 When a user submits the form, the browser sends state of form in JSON format to the [submit service proxy](../../forms/using/service-proxy.md); then the submit service proxy generates a data XML using JSON data and submits that data XML to submit endpoint.
 
@@ -63,7 +64,7 @@ HTML5 フォームを有効にするには AEM Forms アドオンパッケージ
 
 ### OSGi コンポーネント（adobe-lc-forms-core.jar） {#osgi-components-adobe-lc-forms-core-jar}
 
-**Adobe XFA Forms Renderer(com.adobe.livecycle.adobe-lc-forms-core)** は、Felix管理コンソールのバンドル表示(https://[host]:[port]/system/console/bundles)から表示した場合の、HTML5 forms OSGiバンドルの表示名です。
+**AdobeXFAFormsレンダラー(com.adobe.livecycle.adobe-lc-forms-core)** は、Felix管理コンソールのバンドル表示(https://[host]:[port]/system/console/bundles)から表示した場合のHTML5フォームOSGiバンドルの表示名です。
 
 このコンポーネントにはレンダリング、キャッシュの管理、および環境設定用の OSGi コンポーネントが含まれています。
 
@@ -71,7 +72,7 @@ HTML5 フォームを有効にするには AEM Forms アドオンパッケージ
 
 この OSGi サービスには XDP を HTML としてレンダリングするロジックが含まれていて、データ XML を生成するためにフォームの送信を処理します。このサービスは Forms サービスコンテナを使用します。Forms サービスコンテナは処理を実行するネイティブコンポーネント `XMLFormService.exe` を内部的に呼び出します。
 
-レンダリング要求を受け取った場合、このコンポーネントはFormsサービスコンテナを呼び出して、レイアウトと状態の情報を生成し、HTMLおよびJSONフォームのDOM状態を生成するためにさらに処理されます。
+レンダリング要求を受け取ると、このコンポーネントはFormsサービスコンテナを呼び出してレイアウトと状態の情報を生成し、それらの情報が処理されてHTMLとJSONフォームのDOM状態が生成されます。
 
 また、このコンポーネントは送信されたフォーム状態の JSON からデータ XML も生成します。
 
@@ -142,7 +143,7 @@ HTML5 フォームのレイアウトと視覚的な側面は SVG 1.1、jQuery、
 
 #### スタイル設定 {#styling}
 
-HTML要素に関連付けられたスタイルは、インラインまたは埋め込みCSSブロックに基づいて追加されます。 フォームに依存しない一般的なスタイルの一部は、xfaforms.プロファイルというカテゴリ名のCQクライアントライブラリの一部です。
+HTML要素に関連付けられたスタイルは、インラインまたは埋め込みCSSブロックに基づいて追加されます。 フォームに依存しない一般的なスタイルの一部は、カテゴリ名がxfaforms.プロファイルのCQクライアントライブラリの一部です。
 
 デフォルトのスタイル設定プロパティに加え、各フォーム要素には要素タイプ、名前、および他のプロパティに基づいた、特定の CSS クラスが含まれています。これらのクラスを使用し、独自の CSS を指定することで要素を再スタイル設定することができます。
 
@@ -161,7 +162,7 @@ HTML要素に関連付けられたスタイルは、インラインまたは埋�
 
 #### ローカライズのリソースバンドル {#localization-resource-bundles}
 
-HTML5フォームは、イタリア語(it)、スペイン語(es)、ポルトガル語(pt_BR)、簡体字中国語(zh_CN)、繁体字中国語（限定的なサポートのみ）、韓国語(ko_KR)、英語(en_US)、フランス語(fr_FR)、ドイツ語(de_DE)をサポートしています。、日本語(ja)の言語を使用します。 要求ヘッダーで受信されるロケールに基づいて、それに対応するリソースバンドルがクライアントに送信されます。このリソースバンドルはカテゴリ名が **xfaforms.I18N** の CQ クライアントライブラリとして、プロファイル JSP に追加されます。ロケールパッケージを取得するロジックを上書きすることができます。プロファイル
+HTML5フォームは、イタリア語(it)、スペイン語(es)、ポルトガル語(pt_BR)、簡体字中国語(zh_CN)、繁体字中国語(limited support only)、韓国語(ko_KR)、英語(en_US)、フランス語(fr_FR)、ドイツ語(de_DE)をサポートしています、日本語(ja) 要求ヘッダーで受信されるロケールに基づいて、それに対応するリソースバンドルがクライアントに送信されます。このリソースバンドルはカテゴリ名が **xfaforms.I18N** の CQ クライアントライブラリとして、プロファイル JSP に追加されます。プロファイルでロケールパッケージを取得するロジックを上書きできます。
 
 ### Sling コンポーネント（adobe-lc-forms-content-pkg.zip）{#sling-components-adobe-lc-forms-content-pkg-zip}
 
