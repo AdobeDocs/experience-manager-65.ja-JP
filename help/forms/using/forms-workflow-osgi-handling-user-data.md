@@ -8,7 +8,10 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+workflow-type: tm+mt
+source-wordcount: '1011'
+ht-degree: 78%
 
 ---
 
@@ -20,7 +23,7 @@ Forms 中心の AEM ワークフローにより、Forms 中心のビジネスプ
 フォーム中心のワークフローは、次のいずれかの方法でトリガーまたは起動できます。
 
 * AEM インボックスからのアプリケーションの送信
-* AEM Forms アプリケーションからのアプリケーションの送信
+* Submitting an application from AEM [!DNL Forms] App
 * アダプティブフォームの送信
 * 監視フォルダーの使用
 * インタラクティブ通信またはレターの送信
@@ -41,8 +44,8 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
  <tbody>
   <tr>
    <td> </td>
-   <td>AEM 6.4 Forms</td>
-   <td>AEM 6.3 Forms</td>
+   <td><b>AEM 6.4 [!DNLForms]</b></td>
+   <td><b>AEM 6.3 [!DNLForms]</b></td>
   </tr>
   <tr>
    <td><strong>ワークフロー<br />インスタンス</strong></td>
@@ -87,9 +90,11 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 1. 使用可能な情報に応じて、次のいずれかのクエリを実行します。
 
    * ワークフロー開始者が分かっている場合は、次のコマンドを実行します。
+
    `SELECT &ast; FROM [cq:Workflow] AS s WHERE ISDESCENDANTNODE([path-to-workflow-instances]) and s.[initiator]='*initiator-ID*'`
 
-   * 検索するデータを持つユーザーが現在のワークフローの担当者である場合は、次を実行します。
+   * 検索しようとしているデータを現在のワークフローの担当者にしている場合は、次を実行します。
+
    `SELECT &ast; FROM [cq:WorkItem] AS s WHERE ISDESCENDANTNODE([path-to-workflow-instances]) and s.[assignee]='*assignee-id*'`
 
    クエリを実行すると、指定されたワークフロー開始者また現在のワークフロー担当者のすべてのワークフローインスタンスの場所が返されます。
@@ -102,7 +107,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
    ![status](assets/status.png)
 
-1. In the workflow instance node, navigate to `data/payload/`. `path` プロパティには、ワークフローインスタンスのペイロードへのパスが格納されます。ペイロードに保存されたデータにアクセスするパスに移動できます。
+1. In the workflow instance node, navigate to `data/payload/`. `path` プロパティには、ワークフローインスタンスのペイロードへのパスが格納されます。ペイロードに保存されたデータにアクセスするためのパスに移動できます。
 
    ![payload-path](assets/payload-path.png)
 
@@ -116,9 +121,9 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
 1. 手順 2 のクエリを実行して返されたすべてのワークフローインスタンスで手順 3 から 5 を繰り返します。
 
->[!NOTE]
->
->AEM Forms アプリケーションはオフラインモードでもデータを格納します。ワークフローインスタンスのデータを個々のデバイスにローカルで格納し、サーバーとアプリケーションを同期するときに Forms サーバーに送信することができます。
+   >[!NOTE]
+   >
+   >AEM [!DNL Forms] app also stores data in offline mode. It is possible that data for a workflow instance is locally stored on individual devices and gets submitted to the [!DNL Forms] server when the app synchronizes with the server.
 
 ### ユーザーデータの削除 {#delete-user-data}
 
@@ -136,9 +141,10 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
    1. Go to `https://'[server]:[port]'/aem/start.html` and log in with administrator credentials.
    1. **[!UICONTROL ツール／ワークフロー／インスタンス]**&#x200B;の順に移動します。
    1. ユーザーの関連ワークフローインスタンスを選択し、「**[!UICONTROL 終了]**」をタップして実行中のインスタンスを終了します。
-   For more information about working with workflow instances, see [Administering Workflow Instances](/help/sites-administering/workflows-administering.md).
 
-1. CRXDE Lite コンソールにアクセスし、ワークフローインスタンスのペイロードパスに移動して、`payload` ノードを削除します。
+      For more information about working with workflow instances, see [Administering Workflow Instances](/help/sites-administering/workflows-administering.md).
+
+1. Go to [!DNL CRXDE Lite] console, navigate to the payload path for a workflow instance, and delete the `payload` node.
 1. ワークフローインスタンスのドラフトパスに移動して、`draft` ノードを削除します。
 1. Navigate to the history path for a workflow instance, and delete the `history` node.
 1. Navigate to the workflow instance path for a workflow instance, and delete the `[workflow-instance-ID]` node for the workflow.
@@ -148,11 +154,11 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
    >ワークフローインスタンスノードを削除すると、すべてのワークフロー参加者のワークフローインスタンスが削除されます。
 
 1. ユーザーに対して特定されたすべてのワークフローインスタンスで手順 2 から 6 を繰り返します。
-1. ワークフロー参加者の AEM Forms アプリケーションの Outbox からオフラインのドラフトと送信データを特定して削除し、サーバーに送信されないようにします。
+1. Identify and delete offline draft and submission data from AEM [!DNL Forms] app outbox of workflow participants to avoid any submission to the server.
 
 また、API を使用してノードおよびプロパティにアクセスしてこれらを削除することができます。詳しくは、次の文書を参照してください。
 
 * [AEM JCR へのプログラムからのアクセス方法](/help/sites-developing/access-jcr.md)
-* [ノードおよびプロパティの削除](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
+* [ノードおよびプロパティの削除](https://docs.adobe.com/docs/jp/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
 * [API リファレンス](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
 
