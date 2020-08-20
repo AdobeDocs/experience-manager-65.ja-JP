@@ -9,14 +9,17 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+workflow-type: tm+mt
+source-wordcount: '859'
+ht-degree: 59%
 
 ---
 
 
 # Forms Portal | ユーザーデータの処理 {#forms-portal-handling-user-data}
 
-AEM Forms ポータルには、AEM Sites ページにアダプティブフォーム、HTML5 フォームおよびその他のフォームアセットを一覧表示するために使用できるコンポーネントが用意されています。さらに、ログインしたユーザーのためにドラフトや送信済みのアダプティブフォームおよび HTML5 フォームを表示するように構成することもできます。For more information about forms portal, see [Introduction to publishing forms on a portal](/help/forms/using/introduction-publishing-forms.md).
+[!DNL AEM Forms] ポータルには、 ページにアダプティブフォーム、HTML5 フォームおよびその他のフォームアセットを一覧表示するために使用できるコンポーネントが用意されています。[!DNL AEM Sites]さらに、ログインしたユーザーのためにドラフトや送信済みのアダプティブフォームおよび HTML5 フォームを表示するように構成することもできます。For more information about forms portal, see [Introduction to publishing forms on a portal](/help/forms/using/introduction-publishing-forms.md).
 
 ログインしたユーザーがアダプティブフォームをドラフトとして保存したり、送信したりすると、これらのアダプティブフォームが Forms Portal の「ドラフト」タブおよび「送信」タブに表示されます。ドラフトまたは送信済みフォームのデータは、AEM デプロイメント用に構成されたデータストアに格納されます。Forms Portal ページには、匿名ユーザーのドラフトおよび送信は表示されません。ただし、データは構成済みのデータストアに格納されます。詳しくは、「[ドラフトと送信に使用するストレージサービスの設定](/help/forms/using/configuring-draft-submission-storage.md)」を参照してください。
 
@@ -25,7 +28,7 @@ AEM Forms ポータルには、AEM Sites ページにアダプティブフォー
 Forms Portal は、次のシナリオではドラフトフォームと送信済みフォームのデータを格納します。
 
 * The submit action configured in the adaptive form is **Forms Portal Submit Action**.
-* For submit actions other than **Forms Portal Submit Action**, the **[!UICONTROL Store data in forms portal]** option is enabled in the **Submission** properties of the adaptive form container.
+* For submit actions other than **Forms Portal Submit Action**, the **[!UICONTROL Store data in forms portal]** option is enabled in the **[!UICONTROL Submission]** properties of the adaptive form container.
 
 ログインしたユーザーと匿名ユーザーのすべてのドラフトと送信済みフォームの場合、Forms Portal には次のデータが格納されます。
 
@@ -43,7 +46,7 @@ Forms Portal は、次のシナリオではドラフトフォームと送信済�
    <td><p><strong>場所</strong></p> </td>
   </tr>
   <tr>
-   <td><p>デフォルト値は</p> </td>
+   <td><p>デフォルト</p> </td>
    <td><p>オーサーインスタンスおよび発行インスタンスの AEM リポジトリ</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
@@ -55,7 +58,7 @@ Forms Portal は、次のシナリオではドラフトフォームと送信済�
   <tr>
    <td><p>データベース</p> </td>
    <td><p>オーサーインスタンスおよびデータベーステーブルの AEM リポジトリ</p> </td>
-   <td>データベース <code>data</code>テーブル、 <code>metadata</code>および <code>additionalmetadata</code></td>
+   <td>データベーステーブル <code>data</code>、 <code>metadata</code>および <code>additionalmetadata</code></td>
   </tr>
  </tbody>
 </table>
@@ -94,7 +97,7 @@ The following table explains how the data for all drafts by `srose` is stored in
 
 AEM システムで、ログインしたユーザーのドラフトおよび送信済みフォームに含まれるユーザーデータを完全に削除するには、特定ユーザーの `user ID` ノードを作成者ノードから削除する必要があります。該当するすべてのAEMインスタンスからデータを手動で削除する必要があります。
 
-Drafts and submission data for all anonymous users is stored within the common `drafts` and `submit` nodes under `/content/forms/fp/anonymous`. 匿名ユーザーのデータは、識別情報がない限り検索することはできません。このような場合、AEM リポジトリで匿名ユーザーを特定する情報を検索し、その情報が含まれているノードをすべての AEM インスタンスから手動で削除します。これにより、AEM システムからデータを削除できます。However, to delete data for all anonymous users, you can delete the `anonymous` node to remove drafts and submissions data for all anonymous users.
+Drafts and submission data for all anonymous users is stored within the common `drafts` and `submit` nodes under `/content/forms/fp/anonymous`. 特定の匿名ユーザーに関するデータを検索する方法は、特定できる情報がわからない限りありません。 この場合、AEMリポジトリで匿名ユーザーを識別する情報を検索し、該当するすべてのAEMインスタンスからその匿名ユーザーを含むノードを手動で削除して、AEMシステムからデータを削除できます。 However, to delete data for all anonymous users, you can delete the `anonymous` node to remove drafts and submissions data for all anonymous users.
 
 ### データベース {#database}
 
