@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 39%
@@ -55,11 +55,11 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 
 Select the placed `Community Activity List` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-55](assets/chlimage_1-55.png)
+![設定](assets/configure-new.png)
 
 「**コメント**」タブでは、アップロードしたファイルに対するコメントを表示するかどうかと、その方法を指定します。
 
-![chlimage_1-56](assets/chlimage_1-56.png)
+![プロパティ](assets/activity-list-properties.png)
 
 * **型**
 
@@ -119,11 +119,11 @@ Select the placed `Community Activity List` component to access and select the `
 
 **上位の訪問者**&#x200B;の設定：タイプ = メンバー、アクティビティタイプ = ビュー
 
-**上位の寄稿者** : タイプ=メンバー、アクティビティタイプ=投稿
+**上位の寄稿者** :タイプ=メンバー、アクティビティタイプ=投稿
 
-**最上位のコンテンツ** : Type = Content、アクティビティタイプ=表示、
+**最上位のコンテンツ** :Type = Content、アクティビティタイプ=表示、
 
-**トレンドコンテンツ** の設定： タイプ=コンテンツ、アクティビティタイプ=投稿
+**トレンドコンテンツ** の設定：タイプ=コンテンツ、アクティビティタイプ=投稿
 
-![chlimage_1-57](assets/chlimage_1-57.png)
+![コンポーネント](assets/activity-list-components.png)
 
