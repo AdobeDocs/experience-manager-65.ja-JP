@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 62%
@@ -41,7 +41,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 このコンソールでは、現在利用可能なバッジが表示され、新しいバッジを追加できます。
 
-![chlimage_1-242](assets/chlimage_1-242.png)
+![バッジ — ホームページ](assets/badges-homepage.png)
 
 ## バッジを作成 {#create-badge}
 
@@ -49,7 +49,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 パブリッシュ環境がパブリッシャーのファームである場合、[ユーザーの同期](/help/communities/sync.md)を設定する必要があります。
 
-![chlimage_1-243](assets/chlimage_1-243.png)
+![クリエイトバッジ](assets/create-badge.png)
 
 * **画像をアップロード**
 
