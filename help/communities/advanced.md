@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '1060'
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 41%
 
 この高度なスコアエンジンには OSGi 設定が用意されており、パラメーターを設定して高度なスコアアルゴリズムを調整できます。
 
-![chlimage_1-260](assets/chlimage_1-260.png)
+![高度採点エンジン](assets/advanced-scoring-engine.png)
 
 * **スコア重み付け**
 
@@ -103,7 +103,7 @@ ht-degree: 41%
 
 [スコアサブルール](/help/communities/implementing-scoring.md#scoring-sub-rules)を参照してください。
 
-![chlimage_1-261](assets/chlimage_1-261.png)
+![高度スコアリング型](assets/advanced-scoring-type.png)
 
 ### Stopwords {#stopwords}
 
@@ -123,13 +123,13 @@ ht-degree: 41%
 
 ポイントとバッジ画像を関連付ける必要はなく、許可するエキスパートの数と、授与するバッジ画像を指定するだけで十分です。
 
-![chlimage_1-262](assets/chlimage_1-262.png)
+![advanced-badging-rules](assets/advanced-badging-rules.png)
 
 <table>
  <tbody>
   <tr>
    <th>プロパティ</th>
-   <th>タイプ</th>
+   <th>型</th>
    <th>値の説明</th>
   </tr>
   <tr>
@@ -150,7 +150,7 @@ ht-degree: 41%
   <tr>
    <td>scoringRules</td>
    <td>String[]</td>
-   <td><em>（オプション）</em> 複数値の文字列。リストに表示されたスコアリングルールで識別されるスコアリングイベントにバッジングルールを制限します。<br /> 入力例：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 初期設定は制限なしです。</td>
+   <td><em>（オプション）</em> 複数値の文字列。リストに表示されたスコアリングルールで識別されるスコアリングイベントにバッジングルールを制限します。<br /> 入力例：<br /><code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 初期設定は制限なしです。</td>
   </tr>
  </tbody>
 </table>
@@ -165,7 +165,7 @@ ht-degree: 41%
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-263](assets/chlimage_1-263.png)
+![専門家バッジ](assets/included-badge.png)
 
 エキスパートバッジがアクティビティへのご褒美として表示されるように、以下を確認します。
 
