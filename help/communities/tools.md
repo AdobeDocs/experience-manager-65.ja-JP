@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 16%
 
 ---
 
@@ -22,17 +25,17 @@ Communitiesツールコンソールにアクセスするには、作成者イン
 
 * From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Communities]**.
 
-   ![chlimage_1-129](assets/chlimage_1-129.png)
+   ![コミュニティ](assets/communities-home.png)
 
-* [サイトテンプレート](sites.md) — サイトテンプレートの作成と管理を行うコンソール。
+* [サイトテンプレート](sites.md) — コンソール。サイトテンプレートの作成と管理を行います。
 
-* [グループテンプレート](tools-groups.md) — グループテンプレートの作成と管理のためのコンソール。
+* [グループテンプレート](tools-groups.md) — コンソール。グループテンプレートの作成と管理を行います。
 
-* [コミュニティ機能](functions.md) — コミュニティ機能の作成と管理を行うコンソール。
+* [コミュニティ機能](functions.md) — コンソール。コミュニティ機能の作成と管理を行います。
 
-* [ストレージの設定](srp-config.md) — コンソールを参照してく [ださい](working-with-srp.md)。
+* [ストレージの設定](srp-config.md) — コンソールを参照して [ください](working-with-srp.md)。
 
-* [コンポーネントガイド](components-guide.md) — インタラクティブサイトを開き、SCFコンポーネントの動作方法と、SCFコンポーネントの設定方法やカスタマイズ方法を試すことができます。
+* [コンポーネントガイド](components-guide.md) — インタラクティブサイトを開き、SCFコンポーネントの動作や設定方法、カスタマイズ方法を実験できるようにします。
 
-* [バッジ](badges.md) — コンソールで、スコアリングおよびバッジルールで使用するためのカス [タムバッジを追加できます。](implementing-scoring.md)
+* [バッジ](badges.md) — コンソールで、ス [コアリングルールおよびバッジルールに使用するカスタムバッジを追加できます。](implementing-scoring.md)
 
