@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b1cc29fbfdb80aff6b6fc5c6c4fc9093d12e418
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '687'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -27,16 +27,16 @@ ht-degree: 42%
 
 このクライアントライブラリに指定する `categories` プロパティの値は、clientlib をコンテンツページから直接含めたり、その他の clientlib に埋め込んだりする場合に使用される識別子です。
 
-1. Using **CRXDE Lite**, expand `/etc/designs`
+1. **CRXDE Liteを使用する場合**、展開します `/etc/designs`
 
 1. 右クリックし `an-scf-sandbox` て「 `Create Node`
 
    * 名前：`clientlibs`
-   * タイプ：`cq:ClientLibraryFolder`
+   * 型：`cq:ClientLibraryFolder`
 
 1. 「**OK**」をクリックします。
 
-![chlimage_1-220](assets/chlimage_1-220.png)
+![add-client-library](assets/add-client-library.png)
 
 新しい **ノードの「**&#x200B;プロパティ`clientlibs`」タブで、**categories** プロパティを入力します。
 
@@ -46,7 +46,7 @@ ht-degree: 42%
 * Click **Add**
 * Click **Save All**
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要： プ追加レースホルダー `js.tx`tと **`css.txt`** ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
+注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プ追加レースホルダー `js.tx`tと **`css.txt`** ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
 
 1. Right-click **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. Select **Create File...**
@@ -55,7 +55,7 @@ ht-degree: 42%
 1. Enter **Name:** `js.txt`
 1. Click **Save All**
 
-![chlimage_1-221](assets/chlimage_1-221.png)
+![clientlibs-css](assets/clientlibs-css.png)
 
 css.txt および js.txt の最初の行によって、後述のファイルのリストが見つかる基本の場所が特定されます。
 
@@ -87,9 +87,9 @@ css.txt の内容を次のように設定します。
 この場合は、すべてを含め、より基本的なSCFクライアントライブラリを作成者のclientlibとして扱うことをお勧めします。
 
 * 名前：**`embed`**
-* タイプ：**`String`**
+* 型：**`String`**
 * クリック **`Multi`**
-* 値: **`cq.social.scf`**
+* 値：**`cq.social.scf`**
 
    * It will pop up a dialog,
 click **`+`** after each entry to add the following clientlib categories:
@@ -104,11 +104,11 @@ click **`+`** after each entry to add the following clientlib categories:
 
 * Click **Save All**
 
-![chlimage_1-222](assets/chlimage_1-222.png)
+![scf-clientlibs](assets/scf-clientlibs.png)
 
 This is how `/etc/designs/an-scf-sandbox/clientlibs` should now appear in the repository :
 
-![chlimage_1-223](assets/chlimage_1-223.png)
+![scf-clientlibs-表示](assets/scf-clientlibs1.png)
 
 ### playpage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
 
@@ -116,11 +116,11 @@ Without including the `apps.an-scf-sandbox` ClientLibraryFolder category on the 
 
 例えば、clientlibs を挿入しなかった場合、SCF コメントコンポーネントは、スタイルが設定されていない状態で表示されます。
 
-![chlimage_1-224](assets/chlimage_1-224.png)
+![clientlibs-comment](assets/clientlibs-comment.png)
 
 apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネントは、スタイルが設定された状態で表示されます。
 
-![chlimage_1-225](assets/chlimage_1-225.png)
+![clientlibs-comment-styled](assets/clientlibs-comment1.png)
 
 The include statement belongs in the `head` section of the `html` script. The default **`foundation head.jsp`** includes a script that can be overlaid : **`headlibs.jsp`**.
 
@@ -151,7 +151,7 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![chlimage_1-226](assets/chlimage_1-226.png)
+![地域遊び](assets/community-play.png)
 
 ### これまでの作業内容の保存 {#saving-your-work-so-far}
 
