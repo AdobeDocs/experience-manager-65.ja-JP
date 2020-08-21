@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10c17fc199c476ec66059cc6bf4cbb4a0ff1af40
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 31%
@@ -44,13 +44,13 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 
 [必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-activities.md#essentials-for-client-side) 、次のようにコンポー `Activity Streams` ネントが表示されます。
 
-![chlimage_1-195](assets/chlimage_1-195.png)
+![アクティビティ流](assets/activity-component.png)
 
 ### アクティビティストリームの設定 {#configuring-activity-streams}
 
 Select the placed `Activity Streams` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-494](assets/chlimage_1-494.png)
+![設定](assets/configure-new.png)
 
 「**ユーザーアクティビティ**」タブでは、表示するアクティビティを指定します。
 
@@ -80,7 +80,7 @@ Select the placed `Activity Streams` component to access and select the `Configu
 
 フォローを有効にするようにコンポーネントを設定する必要があります。Features that allow following are [blog](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [calendar](/help/communities/calendar.md), [filelibrary](/help/communities/file-library.md), and [comments](/help/communities/comments.md).
 
-![chlimage_1-5](assets/chlimage_1-5.png)
+![後続表示](assets/following-activities.png)
 
 The **Follow** button provides a means to follow entries as activities, [notifications](/help/communities/notifications.md), or [subscriptions](/help/communities/subscriptions.md). Each time the **Follow** button is selected, it is possible to toggle on or off a selection. The `Email Subscriptions` selection is only present when configured.
 
