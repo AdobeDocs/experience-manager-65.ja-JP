@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
-source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
+source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 57%
+ht-degree: 56%
 
 ---
 
@@ -53,24 +53,24 @@ The exercise of creating a website can be useful for understanding the structure
 
 次に、AEM プラットフォームを初めて使用する開発者にとって役立つリンクをいくつか紹介します。
 
-* [はじめに](../../help/sites-deploying/deploy.md#getting-started): を参照してください。
+* [はじめに](../../help/sites-deploying/deploy.md#getting-started):aemインスタンスをデプロイする場合。
 
-   * [基本事項](../../help/sites-developing/the-basics.md): を参照してください。
-   * [作成者の最初の手順](../../help/sites-authoring/first-steps.md): 」をクリックします。
+   * [基本事項](../../help/sites-developing/the-basics.md):を参照してください。
+   * [作成者の最初の手順](../../help/sites-authoring/first-steps.md):」をクリックします。
 
 ## CRXDE Lite 開発環境の使用 {#using-crxde-lite-development-environment}
 
-AEM 開発者は、オーサーインスタンス上の [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 開発環境で多くの時間を費やすことになります。CRXDE Liteは、CRXリポジトリへのアクセスに制限が少ないことを提供します。 従来のUIツールとタッチ対応のUIコンソールは、CRXリポジトリの特定の部分に対して、より構造化されたアクセスを提供します。
+AEM 開発者は、オーサーインスタンス上の [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 開発環境で多くの時間を費やすことになります。CRXDE Liteは、CRXリポジトリへのアクセスに制限が少ない。 従来のUIツールとタッチ対応のUIコンソールは、CRXリポジトリの特定の部分に対して、より構造化されたアクセスを提供します。
 
 管理者権限でサインインした後、さまざまな方法で CRXDE Lite にアクセスできます。
 
 1. From global navigation, select navigation **[!UICONTROL Tools > CRXDE Lite]**.
 
-   ![chlimage_1-350](assets/chlimage_1-350.png)
+   ![crxde-lite](assets/tools-crxde.png)
 
 2. From the [classic UI welcome page](http://localhost:4502/welcome.html), scroll down and click **[!UICONTROL CRXDE Lite]** in the right panel.
 
-   ![chlimage_1-351](assets/chlimage_1-351.png)
+   ![classic-ui-crxde](assets/classic-ui-crxde.png)
 
 3. 直接参照 `CRXDE Lite`: `<server>:<port>/crx/de`
 
@@ -88,4 +88,4 @@ CRXDE Lite を使用するには、開発者または管理者権限でサイン
 
 ******&#x200B;疑わしい場合は、ログインし直してください。
 
-![chlimage_1-352](assets/chlimage_1-352.png)
+![再ログイン](assets/relogin.png)
