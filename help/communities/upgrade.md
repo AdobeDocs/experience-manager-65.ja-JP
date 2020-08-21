@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '677'
+ht-degree: 58%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ### Solr のインデックス再作成 {#reindex-solr}
 
-MSRPで設定された展開に新しいCommunities機能パックをインストールする場合、次の操作が必要になります。
+MSRPで設定された配置に新しいCommunities機能パックをインストールする場合、次の操作が必要になります。
 
 1. Install the [latest feature pack](/help/communities/deploy-communities.md#latestfeaturepack).
 1. Install the [latest Solr config files](/help/communities/msrp.md#upgrading).
@@ -52,7 +55,7 @@ Thus, there is the ability to instruct ASRP to use `AEM 6.0 compatability-mode` 
 AEM 6.3 のすべてのオーサーインスタンスとパブリッシュインスタンスについて:
 
 * 管理者権限でサインインします。
-* [ASRPの設定](/help/communities/asrp.md)。
+* Configure [ASRP](/help/communities/asrp.md).
 * 既存のUGCを表示するには、次の手順に従います。
 
    * Webコンソールを参照します。
@@ -62,10 +65,11 @@ AEM 6.3 のすべてのオーサーインスタンスとパブリッシュイン
       * Locate **AEM Communities Utilities** configuration.
       * 選択して設定パネルを展開します。
 
-         * *オフ*`Cloud Storage`
+         * *オフ* `Cloud Storage`
 
          * Select **Save**
-      ![chlimage_1-176](assets/chlimage_1-176.png)
+
+      ![utilities](assets/utilities.png)
 
 
 ### オンプレミスストレージ {#on-premise-storage}
@@ -76,7 +80,7 @@ AEM 6.3 のすべてのオーサーインスタンスとパブリッシュイン
 
 ### Java API {#java-apis}
 
-AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレードするときは、多くの API が異なるパッケージに再編成されていることに注意してください。IDEを使用してコミュニティ機能をカスタマイズする場合、ほとんどの問題は簡単に解決できます。
+AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレードするときは、多くの API が異なるパッケージに再編成されていることに注意してください。IDEを使用してCommunities機能をカスタマイズする場合、ほとんどの問題を簡単に解決できます。
 
 廃止された SocialUtils パッケージについて詳しくは、[SocialUtils のリファクタリング](/help/communities/socialutils.md)を参照してください。
 
@@ -84,11 +88,11 @@ AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレード�
 
 ### JSP コンポーネントテンプレートの廃止 {#no-jsp-component-templates}
 
-The [social component framework](/help/communities/scf.md) (SCF) uses the [HandlebarsJS](https://www.handlebarsjs.com/) (HBS) templating language in place of Java Server Pages (JSP) used prior to AEM 6.0.
+[ソーシャルコンポーネントフレームワーク](/help/communities/scf.md) (SCF)は、AEM 6.0より前のバージョンで使用されていたJava Server Pages(JSP)の代わりに、 [HandlebarsJS](https://www.handlebarsjs.com/) (HBS)テンプレート言語を使用します。
 
 AEM 6.0 では、JSP コンポーネントは新しい HBS フレームワークコンポーネントと同じ場所に残っています（HBS コンポーネントは通常、「hbs」という名前のサブフォルダーに存在します）。
 
-AEM 6.1 以降では JSP コンポーネントは完全に削除されています。コミュニティの場合は、JSPコンポーネントの使用をすべてSCFコンポーネントで置き換えることをお勧めします。
+AEM 6.1 以降では JSP コンポーネントは完全に削除されています。Communitiesの場合、JSPコンポーネントの使用をすべてSCFコンポーネントで置き換えることをお勧めします。
 
 ## AEM Communities UGC Migration Tool {#aem-communities-ugc-migration-tool}
 
@@ -100,8 +104,8 @@ AEM 6.1 以降では JSP コンポーネントは完全に削除されていま�
 
 概念的に、コミュニティコンポーネントには 3 つの世代があります。
 
-**第1世代**:ほぼCQ 5.4 ～ AEM 5.6.0です。これらは、複数のプラットフォーム間でUGCを同期する手段としてレプリケーションを使用して、ローカルリポジトリに **UGCを格納する** Collabコンポーネントです。 その他の違いとしては、Java Server Pages(JSP)を使用した実装と、作成者環境のみでのオーサリングから成るブログ機能があります。
+**第1世代**:CQ 5.4 ～ AEM 5.6.0の概要です。これらは、複数のプラットフォーム間でUGCを同期する手段としてレプリケーションを使用し、ローカルリポジトリにUGCを格納する **collab** コンポーネントです。 その他の違いとしては、Java Server Pages(JSP)を使用した実装と、作成者環境でのみ作成されるブログ機能があります。
 
-**第2世代**:AEM 5.6.1からAEM 6.1まで、これはCollabとSocialのコンポーネントが混在し **て** い **ます** 。 AEM 6.0 introduced the new [social component framework](/help/communities/scf.md) (SCF) and AEM 6.2 introduced a [common UGC store](/help/communities/working-with-srp.md) where UGC is accessed using a [storage resource provider](/help/communities/srp.md) (SRP).
+**第2世代**:AEM 5.6.1からAEM 6.1まで、これは **collab** と **social** のコンポーネントの組み合わせです。 AEM 6.0 introduced the new [social component framework](/help/communities/scf.md) (SCF) and AEM 6.2 introduced a [common UGC store](/help/communities/working-with-srp.md) where UGC is accessed using a [storage resource provider](/help/communities/srp.md) (SRP).
 
-**第3世代**:AEM 6.2以降では、 **SCFにHandlebars** (HBS)コンポーネントとして実装されるソーシャルコンポーネントのみが存在し、UGC用のSRPを選択する必要があります。
+**第3世代**:AEM 6.2以降では、SCFにHandlebars(HBS)コンポーネントとして実装される **ソーシャル** コンポーネントのみが存在し、UGC用のSRPを選択する必要があります。
