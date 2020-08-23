@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1491'
 ht-degree: 49%
@@ -82,8 +82,7 @@ Reference:
 #### 2. コレクションを作成 {#create-a-collection}
 
 Reference:
-[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create
-](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
+[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
 使用方法:
 ./bin/solr作成 \
@@ -244,7 +243,7 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
    1. Create a *new-config-dir*
 
       * 次のような `solr-install-dir/myconfig/`
-      * サブフォルダー `stopwords/` の作成および `lang/`
+      * サブフォルダーの作成 `stopwords/` および `lang/`
    1. Copy the contents of the existing Solr config dir to *new-config-dir*
 
       * Solr4の場合：コピー `solr-install-dir/example/solr/collection1/conf/`
