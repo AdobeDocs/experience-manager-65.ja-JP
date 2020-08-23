@@ -10,21 +10,21 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 32695db5-d62d-4959-8a24-3d56b4a19904
 translation-type: tm+mt
-source-git-commit: 6a5a8e64c6eaab816d07d8206601849c974d1e26
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 75%
 
 ---
 
 
-# AEM Updateリリース車の定義{#update-release-vehicle-definitions}
+# AEM Updateリリースの車両定義{#update-release-vehicle-definitions}
 
 このドキュメントでは、アドビから提供される完全リリース、機能パック、サービスパックなど、Adobe Experience Manager（AEM）の各種リリースについて詳しく説明します。
 
->[!Note]
+>[!NOTE]
 >
->AEMアップデートリリースのリリーススケジュールについては、 [AEMアップデートリリースロードマップを参照してください。](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)
+>AEMアップデートリリースのリリーススケジュールについては、 [AEMアップデートリリースのロードマップを参照してください。](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)
 
 ## 完全リリース {#full-release}
 
@@ -72,7 +72,7 @@ ht-degree: 75%
    <td>
     <ul>
      <li>スタンドアロンの製品インストーラーとして提供されます。</li>
-     <li>Licensing WebサイトおよびManaged Services Licensing Webサイトから入手可能</li>
+     <li>免許WebサイトとManaged Services免許Webサイトから入手可能</li>
      <li>コンテンツリポジトリの移行が必要な場合があります。</li>
     </ul> </td>
   </tr>
@@ -240,7 +240,7 @@ ht-degree: 75%
    <td><strong>定義</strong></td>
    <td>
     <ul>
-     <li>機能パックはアドオン機能であり、サービスパックを通じて提供されます。AEMバージョンの最後のService Packがリリースされた場合、アドビは将来、その機能パックを提供しなくなります。</li>
+     <li>機能パックはアドオン機能であり、サービスパックを通じて提供されます。AEMバージョンが最後のService Packをリリースした場合、Adobeは将来、その機能パックを提供しなくなります。</li>
      <li>機能パックには、製品の機能強化が含まれます。以降の製品リリースで予定されているが、アドビの製品管理部門の決定に基づいて予定より早く提供されます。</li>
      <li>機能は常に次のメジャーリリースに統合され、顧客が必要とする AEM バージョンに移植されます。</li>
      <li>Common Interest 機能パックと GA 機能パックは次のサービスパックに統合されます。</li>
@@ -272,7 +272,7 @@ ht-degree: 75%
    <td>
     <ul>
      <li>サービスパックを使用して配信</li>
-     <li>パッケージ共有で入手可能. お客様は、パッケージ共有を通じてアドビの利用条件に同意します。</li>
+     <li>パッケージ共有で入手可能. お客様は、パッケージ共有を通じてAdobeの利用条件に同意します。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -282,5 +282,5 @@ ht-degree: 75%
  </tbody>
 </table>
 
-* [1]: OAKの修正は、個々のホットフィックスとしては提供されません。 しかし、以降の累積 Oak ホットフィックスに含まれます。必要に応じて、最新の COFP 上で診断ビルドを利用できます。前提条件は、最新の COFP を実行していることです。診断ビルドは、ホットフィックスと同じレベルの品質保証を提供するだけです。したがって、累積修正パック、サービスパックまたは製品リリースと同じレベルの品質保証を提供するものではありません。最終的な修正は、次のCFPで提供されます。
+* [1]:OAKの修正は、個々のホットフィックスとしては提供されません。 しかし、以降の累積 Oak ホットフィックスに含まれます。必要に応じて、最新の COFP 上で診断ビルドを利用できます。前提条件は、最新の COFP を実行していることです。診断ビルドは、ホットフィックスと同じレベルの品質保証を提供するだけです。したがって、累積修正パック、サービスパックまたは製品リリースと同じレベルの品質保証を提供するものではありません。最終的な修正は、次のCFPで提供されます。
 
