@@ -9,17 +9,17 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3707'
-ht-degree: 89%
+ht-degree: 90%
 
 ---
 
 
 # ビデオプロファイル {#video-profiles}
 
-Dynamic Media には、事前定義済みのアダプティブビデオエンコーディングプロファイルが最初から付属しています。この標準提供プロファイルの設定は、ユーザーができる限り最高の閲覧エクスペリエンスを得られるように最適化されています。アダプティブビデオエンコーディングプロファイルを使用してプライマリソースビデオをエンコードする場合、ビデオプレーヤーは再生中、顧客のインターネット接続速度に基づいてビデオストリームの品質を自動的に調整します。 これがアダプティブストリーミングと呼ばれるものです。
+Dynamic Media には、事前定義済みのアダプティブビデオエンコーディングプロファイルが最初から付属しています。この標準提供プロファイルの設定は、ユーザーができる限り最高の閲覧エクスペリエンスを得られるように最適化されています。アダプティブビデオエンコーディングプロファイルを使用してプライマリソースビデオをエンコーディングすると、再生中、ビデオプレーヤーは顧客のインターネット接続速度に応じて、ビデオストリームの品質を自動的に調整します。これがアダプティブストリーミングと呼ばれるものです。
 
 ビデオの品質を決めるその他の要因には、次のようなものがあります。
 
@@ -37,7 +37,7 @@ Dynamic Media には、事前定義済みのアダプティブビデオエンコ
 
 >[!NOTE]
 >
->ビデオのメタデータと関連するビデオ画像サムネールを生成するためには、ビデオ自体に対して Dynamic Media のエンコーディングプロセスを実行する必要があります。AEM では、Dynamic Media を有効にしていて、ビデオクラウドサービスを設定している場合は、**[!UICONTROL Dynamic Media エンコーディングビデオ]**&#x200B;ワークフローによってビデオがエンコードされます。このワークフローは、ワークフローの処理履歴とエラー情報を取り込みます。詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。Dynamic Media を有効にし、ビデオクラウドサービスを設定済みの場合、ビデオをアップロードすると、**[!UICONTROL Dynamic Media エンコードビデオ]**&#x200B;ワークフローが自動的に有効になります（Dynamic Media を使用していない場合は、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローが有効になります）。
+>ビデオのメタデータと関連するビデオ画像サムネールを生成するためには、ビデオ自体に対して Dynamic Media のエンコーディングプロセスを実行する必要があります。AEM では、Dynamic Media を有効にしていて、ビデオ Cloud Services を設定している場合は、**[!UICONTROL Dynamic Media エンコーディングビデオ]**&#x200B;ワークフローによってビデオがエンコードされます。このワークフローは、ワークフローの処理履歴とエラー情報を取り込みます。詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。Dynamic Media を有効にし、ビデオクラウドサービスを設定済みの場合、ビデオをアップロードすると、**[!UICONTROL Dynamic Media エンコードビデオ]**&#x200B;ワークフローが自動的に有効になります（Dynamic Media を使用していない場合は、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローが有効になります）。
 >
 >メタデータは、アセットの検索時に役に立ちます。サムネールは、エンコーディング中に生成される静的なビデオ画像です。サムネールは AEM システムによって必要とされ、ユーザーインターフェイス内のカード表示、検索結果表示およびアセットのリスト表示でビデオを視覚的に識別するために使用されます。エンコードされたビデオのレンディションアイコン（絵画用パレット）をタップすれば、生成されたサムネールを確認できます。
 
@@ -198,8 +198,8 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 実行しているモードに応じて、サポートされるビデオ形式のコーデックは次のようになります。
 
-* Dynamic Media- Scene7モード： H.264 (.mp4)
-* Dynamic Media — ハイブリッドモード： H.264 (.mp4)、WebM
+* ダイナミックメディア —Scene7モード：H.264 (.mp4)
+* ダイナミックメディアハイブリッドモード：H.264 (.mp4)、WebM
 
 [アダプティブストリーミング用のビデオエンコーディングプロファイルの作成](#creating-a-video-encoding-profile-for-adaptive-streaming)も参照してください。
 
@@ -265,7 +265,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
   <tr>
    <td><strong>名前</strong></td>
    <td><strong>説明</strong><br /> </td>
-   <td><strong>タイプ</strong><br /> </td>
+   <td><strong>型</strong><br /> </td>
    <td><strong>値</strong></td>
   </tr>
   <tr>
@@ -395,7 +395,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 ### ビデオプロファイルのグローバルな適用 {#applying-a-video-profile-globally}
 
-特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM アセットにアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
+特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
 
 [処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)も参照してください。
 
@@ -429,6 +429,6 @@ You can remove a video profile from a folder from within the **[!UICONTROL Tools
 ### 「プロパティ」でフォルダーからビデオプロファイルを削除する {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. AEM のロゴをタップまたはクリックし、「**[!UICONTROL Assets]**」に移動した後、ビデオプロファイルを削除するフォルダーに移動します。
-1. On the folder, tap or click the check mark to select it and then tap or click **Properties.]**
+1. On the folder, tap or click the check mark to select it and then tap or click **[!UICONTROL Properties.]**
 1. 「**[!UICONTROL ビデオプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択して、「**[!UICONTROL 保存して閉じる」をクリックします。]**&#x200B;既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
