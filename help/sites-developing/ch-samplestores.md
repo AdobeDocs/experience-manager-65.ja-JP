@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 translation-type: tm+mt
-source-git-commit: e37ff1c9e657c580c607f2656adca01a2b39f81f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '490'
+ht-degree: 84%
 
 ---
 
@@ -23,7 +26,7 @@ ContextHub には、ソリューションで利用できるサンプルストア
 
 >[!WARNING]
 >
->サンプルストアの候補は、プロジェクト専用の設定を構築する際に役立つ参照設定として提供されているので、直接使用しないでください。
+>サンプルストアの候補は、プロジェクト専用の設定を構築する際に役立つリファレンス設定として提供されているので、直接使用しないでください。
 
 ## aem.segmentation サンプルストア候補 {#aem-segmentation-sample-store-candidate}
 
@@ -107,13 +110,13 @@ The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedJ
 
 >[!NOTE]
 >
->Chrome 50.xで導入されたセキュリティポリシーでは、すべての位置情報関連呼び出しが、セキュリティで保護された接続を介して行われる必要があります。 そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
+>Chrome 50.xで導入されたセキュリティポリシーでは、位置情報関連の呼び出しは、セキュリティで保護された接続を介して行われる必要があります。 そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
 
 ## contexthub.surferinfo サンプルストア候補 {#contexthub-surferinfo-sample-store-candidate}
 
 デバイス、ウィンドウ、ブラウザー、日付時刻など、現在のクライアント環境に関する情報を格納します。
 
-### ソースの場所{#source-location-surferinfo
+### ソースの場所 {#source-location-surferinfo}
 
 `/libs/settings/cloudsettings/legacy/contexthub/surferinfo`
 
