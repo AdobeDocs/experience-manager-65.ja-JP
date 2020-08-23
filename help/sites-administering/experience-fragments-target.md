@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e6d02717811ac78b77dc459814941d654e94733f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 47%
@@ -119,7 +119,6 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
 
 1. Under **Cloud Service Configuration**, select **Adobe Target** from the drop-down list.
 
-1. 
    >[!NOTE]
    >
    >エクスペリエンスフラグメントオファーのJSON形式はカスタマイズできます。 これを行うには、顧客エクスペリエンスフラグメントコンポーネントを定義し、コンポーネントSlingモデルでそのプロパティを書き出す方法に注釈を付けます。
