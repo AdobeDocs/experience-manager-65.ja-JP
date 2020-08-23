@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1145'
+ht-degree: 65%
 
 ---
 
@@ -65,13 +68,13 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel` タイプ `sling:OsgiConfig`
 
-1. という名前の `String` ノードにプロパティを追加しま `email.from`す。 値には、使用する電子メールアドレスを指定します。
+1. とい追加う名前のノードのプロパティ `String``email.from`。 値には、使用する電子メールアドレスを指定します。
 
 1. 「**Save All**」をクリックします。
 
 次の手順を使用して、コンテンツパッケージソースフォルダーでノードを定義します。
 
-1. 次の名前 `jcr_root/apps/*app_name*/config folder`のファイルを `com.day.cq.wcm.notification.email.impl.EmailChannel.xml`
+1. に、 `jcr_root/apps/*app_name*/config folder``com.day.cq.wcm.notification.email.impl.EmailChannel.xml`
 
 1. このノードを表現する次の XML を追加します。
 
@@ -135,14 +138,14 @@ This is an automatically generated message. Please do not reply.
 
 &lt;text_x> には、静的テキストと動的文字列変数を混在させることができます。ページ通知用の電子メールテンプレート内では次の変数を使用できます。
 
-* `${time}`の場合、イベントの日時。
+* `${time}`、イベントの日時。
 
-* `${userFullName}`に設定され、イベントをトリガーしたユーザーのフルネーム。
+* `${userFullName}`イベントをトリガーしたユーザーのフルネーム。
 
-* `${userId}`の場合、イベントをトリガーしたユーザーのID。
+* `${userId}`、イベントをトリガーしたユーザーのID。
 * `${modifications}`に、ページイベントのタイプとページパスを次の形式で示します。
 
-   &lt;page event type> => &lt;page path>
+   &lt;ページイベントタイプ> => &lt;ページパス>
 
    次に例を示します。
 
@@ -195,9 +198,9 @@ Where `<text_x>` can be a mix of static text and dynamic string variables.
 
 フォーラム通知用の電子メールテンプレート内では次の変数を使用できます。
 
-* `${time}`の場合、イベントの日時。
+* `${time}`、イベントの日時。
 
-* `${forum.path}`に設定されている場合、フォーラムページへのパスです。
+* `${forum.path}`、フォーラムページへのパス。
 
 ### ワークフロー通知用の電子メールテンプレート {#email-templates-for-workflow-notification}
 
@@ -259,23 +262,23 @@ The method `${payload.path.open}` reveals the path to the payload of the workite
 * `${event.EventType}`、イベントのタイプ
 * `${event.TimeStamp}`、イベントの日時
 * `${event.User}`、イベントをトリガーしたユーザー
-* `${initiator.home}`、イニシエータ・ノード・パス
+* `${initiator.home}`、イニシエータノードのパス
 
 * `${initiator.name}`、イニシエータ名
 
-* `${initiator.email}`、開始者の電子メールアドレス
+* `${initiator.email}`、イニシエータの電子メールアドレス
 * `${item.id}`、作業項目のID
-* `${item.node.id}`、この作業項目に関連付けられているワークフローモデル内のノードのID
+* `${item.node.id}`、この作業項目に関連付けられたワークフローモデル内のノードのid
 * `${item.node.title}`、作業項目のタイトル
 * `${participant.email}`、参加者の電子メールアドレス
 * `${participant.name}`、参加者の名前
 * `${participant.familyName}`、参加者の姓
-* `${participant.id}`、参加者のID
+* `${participant.id}`、参加者のid
 * `${participant.language}`、参加者の言語
 * `${instance.id}`、ワークフローID
 * `${instance.state}`、ワークフローの状態
 * `${model.title}`、ワークフローモデルのタイトル
-* `${model.id}`、ワークフローモデルのID
+* `${model.id}`、ワークフローモデルのid
 
 * `${model.version}`、ワークフローモデルのバージョン
 * `${payload.data}`、ペイロード
@@ -290,7 +293,7 @@ The method `${payload.path.open}` reveals the path to the payload of the workite
 
 1. In CRXDE, add a file `<language-code>.txt` below:
 
-   * `/etc/notification/email/default/com.day.cq.wcm.core.page` :ページ通知用
+   * `/etc/notification/email/default/com.day.cq.wcm.core.page` :ページ通知
    * `/etc/notification/email/default/com.day.cq.collab.forum` :フォーラム通知
    * `/etc/workflow/notification/email/default` :ワークフロー通知
 
