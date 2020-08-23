@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '6053'
+source-wordcount: '6050'
 ht-degree: 97%
 
 ---
@@ -39,7 +39,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 >[!NOTE]
 >
->ユーザーがサムネール画像をクリックすると Web ページが開かれるようにインタラクティブビデオを作成した場合、一部のデバイスでは、ポップアップ Web ページがブロックされて開きません。そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。For example, on an Apple iPhone 6, tap **[!UICONTROL Settings** > **Safari** > **Block Pop-ups**, then slide the control to **[!UICONTROL Off**. こうすると、インタラクティブビデオを再生してサムネールをクリックしたときに、ポップアップを開くかどうかを確認するメッセージが表示されます。同意すると Web ページが開きます。
+>ユーザーがサムネール画像をクリックすると Web ページが開かれるようにインタラクティブビデオを作成した場合、一部のデバイスでは、ポップアップ Web ページがブロックされて開きません。そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。例えば、Apple iPhone 6 では **[!UICONTROL 設定]**／**Safari**／**ポップアップブロック**&#x200B;をタップして、コントロールを&#x200B;**[!UICONTROL オフ]**&#x200B;にスライドします。こうすると、インタラクティブビデオを再生してサムネールをクリックしたときに、ポップアップを開くかどうかを確認するメッセージが表示されます。同意すると Web ページが開きます。
 
 ### インタラクティブビデオの作成方法を見る {#watch-how-interactive-videos-are-created}
 
@@ -112,7 +112,7 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
 
 * Google Chrome で、ブラウザーから送信されるすべての HTTP リクエストを参照するには、**F12** キー（Windows）または **Command + Options + I** キー（Mac）を押してデベロッパーツールパネルを開き、「**Network**」タブをクリックします。
 
-* Firefox では、**F12** キー（Windows）または **Command + Option + I** キー（Mac）を押して Firebug プラグインを有効にして「**Net**」タブを使用するか、組み込みの Inspector ツールとその「Network」タブを使用します。
+* Firefox では、**F12** キー（Windows）または **Command + Option + I** キー（Mac）を押して Firebug プラグインを有効にして「**`[Net]`**」タブを使用するか、組み込みの Inspector ツールとその「Network」タブを使用します。
 
 * Internet Explorer では、**F12** キーを押してデバッガーツールをアクティベートします。
 
