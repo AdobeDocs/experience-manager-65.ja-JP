@@ -3,9 +3,9 @@ title: デプロイメントを [!DNL Adobe Experience Manager Assets] 監視す
 description: Best practices to monitor the environment and performance of your [!DNL Adobe Experience Manager] deployment after it is deployed.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1671'
 ht-degree: 67%
 
 ---
@@ -28,7 +28,7 @@ Typically, [!DNL Experience Manager Assets] can be monitored in two ways, live m
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
-* [ビジュアルVM](https://visualvm.java.net/): Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、デプロイメントで実行するコードのサンプリングや評価を行うこともできます。
+* [ビジュアルVM](https://visualvm.java.net/):Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、デプロイメントで実行するコードのサンプリングや評価を行うこともできます。
 * [Top](https://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htop can be installed on most Linux systems using `yum install htop` or `apt-get install htop`.
 
@@ -37,7 +37,7 @@ Typically, [!DNL Experience Manager Assets] can be monitored in two ways, live m
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftop can be installed on most Linux systems using `yum install iftop` or `apt-get install iftop`.
 
 * Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。For more details, see [How to Use Java Flight Recorder to Diagnose CQ Runtime Problems](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
-* [!DNL Experience Manager] `error.log` ファイル： この [!DNL Experience Manager]`error.log` ファイルを調べて、システムにログインしたエラーの詳細を調べることができます。 調査するエラー `tail -F quickstart/logs/error.log` を識別するには、コマンドを使用します。
+* [!DNL Experience Manager] `error.log` ファイル：この [!DNL Experience Manager]`error.log` ファイルを調べて、システムにログインしたエラーの詳細を調べることができます。 調査するエラー `tail -F quickstart/logs/error.log` を識別するには、コマンドを使用します。
 * [ワークフローコンソール](/help/sites-administering/workflows.md)：ワークフローコンソールを使用して、遅れているワークフローや、停止しているワークフローを監視できます。
 
 Typically, you use these tools together to obtain a comprehensive idea about the performance of your [!DNL Experience Manager] deployment.
@@ -48,7 +48,7 @@ Typically, you use these tools together to obtain a comprehensive idea about the
 
 ![chlimage_1-33](assets/chlimage_1-143.png)
 
-*図： Visual VMツールを使用したライブ監視*
+*図：Visual VMツールを使用したライブ監視*
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
@@ -95,7 +95,7 @@ JVMの基準パラメーターの一部を以下に示します。
 * アラームしきい値：ヒープまたは非ヒープメモリ使用率が、対応する最大メモリの 75％を超えた場合。
 * アラーム定義：システムメモリが不十分である、またはコードにメモリリークがあります。スレッドダンプを分析して、定義を満たすかどうか判断します。
 
->[!Note]
+>[!NOTE]
 >
 >このBeanが提供する情報は、バイト単位で表されます。
 
@@ -122,7 +122,7 @@ Here are some baseline parameters that you can monitor for [!DNL Experience Mana
 
 * アラーム定義：システムにブロックされたキューが存在しており、レプリケーションターゲットがダウンしているか、または到達不能であることを示しています。多くの場合、ネットワークまたはインフラストラクチャの問題により過剰なエントリがキューに登録されています。それによってシステムのパフォーマンスに悪影響が生じる可能性があります。
 
->[!Note]
+>[!NOTE]
 >
 >For the MBean and URL parameters, replace `<AGENT_NAME>` with the name of the replication agent you want to monitor.
 
@@ -198,5 +198,5 @@ In the process of monitoring, if you encounter issues, here are some troubleshoo
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
 * ライブ監視を再確認し、他にボトルネックがないか、または特定のリソースを大量に使用している箇所がないかを確認します。
 * Investigate the egress points from the client network and the ingress points to the [!DNL Experience Manager] deployment network, including the dispatcher. 多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](/help/assets/assets-network-considerations.md)を参照してください。
-* サー [!DNL Experience Manager] バーのサイズを拡大します。 You may have an inadequately sized your [!DNL Experience Manager] deployment. アドビカスタマーケアは、お使いのサーバーが小さすぎるかどうかを特定するのに役立ちます。
+* サー [!DNL Experience Manager] バーのサイズを拡大します。 You may have an inadequately sized your [!DNL Experience Manager] deployment. Adobeカスタマーケアは、サーバーのサイズが小さいかどうかを特定するのに役立ちます。
 * `access.log` および `error.log` ファイルで、不具合の発生した時刻付近のエントリを調査します。カスタムコードの異常の兆候となるパターンを探します。それらを監視するイベントのリストに追加します。
