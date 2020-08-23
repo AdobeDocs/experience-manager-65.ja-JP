@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 456460d54650bcb71d8eee47fdf0e859a383b3d4
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3228'
 ht-degree: 84%
@@ -511,8 +511,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 上記以外の要件については、以下を参照してください。
 
 * [JEE上でのシングルサーバーのAEM Forms導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
-* [JEE 上でのクラスター化された AEM Forms の導入に必要なシステム構成
-   ](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
+* [JEE 上でのクラスター化された AEM Forms の導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
 
 ## JEE 上の AEM Forms でサポートされているクライアント {#supported-clients-for-aem-forms-on-jee}
 
