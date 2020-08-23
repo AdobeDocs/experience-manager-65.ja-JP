@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ba6f94435a4d4945d54614db19f7ff612a317692
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '11830'
+source-wordcount: '11828'
 ht-degree: 89%
 
 ---
@@ -685,7 +685,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 
 1. In the upper-left corner of AEM, click the AEM logo, then in the left rail, click **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas.]**
 1. 「**[!UICONTROL デフォルト値」をクリックします]** （「デフォルト」の左にある選択ボックスにチェックマークを追加しないでください）。
-1. **[!UICONTROL デフォルトのページで]** 、 **[!UICONTROL ビデオの左側にあるチェックボックスをオンにし、「]**&#x200B;編集 **」をクリックします。]**
+1. **[!UICONTROL デフォルトのページで]** 、 **[!UICONTROL ビデオの左側にあるチェックボックスをオンにし]**、「 **[!UICONTROL 編集」をクリックします。]**
 1. メタデータスキーマエディターページで、「**[!UICONTROL 詳細]**」タブをクリックします。
 1. Under the YouTube Publishing heading, click **[!UICONTROL YouTube Category.]**
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
@@ -715,7 +715,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
    * （オプション）ページの右側にある「設定」タブで、「フィールドラベル」テキストフィールドに「`YouTube Publishing`」と入力します。
    * 「**[!UICONTROL フォームを作成]**」タブをクリックし、「**[!UICONTROL 複数値テキスト]**」というラベルのコンポーネントをドラッグして、作成したばかりの「**[!UICONTROL YouTube への公開]**」の下にドロップします。
 
-   * 「**[!UICONTROL フィールドラベル**」をクリックして、コンポーネントを選択します。
+   * 「**[!UICONTROL フィールドラベル]**」をクリックして、コンポーネントを選択します。
    * ページの右側にある「設定」タブで、先ほどコピーした「YouTube への公開」の値（フィールドラベル値と、プロパティにマッピング値）をフォームのそれぞれのフィールドに貼り付けます。選択肢値を「デフォルト値」フィールドに貼り付けます。
 
 1. 次の手順を実行して、コピーした「YouTube のプライバシー」の値を、プロファイルに追加します。
@@ -1217,7 +1217,7 @@ AEM 内のすべてのビデオには、サムネールを関連付ける必要�
 
 1. サムネール画像を変更するアップロード済みビデオアセットに移動します。
 1. **[!UICONTROL リスト表示]**&#x200B;または&#x200B;**[!UICONTROL カード表示]**&#x200B;のアセット選択モードで、ビデオアセットをタップします。
-1. On the toolbar, tap the **[!UICONTROL Properties** icon (a circle with an &quot;i&quot; in it).
+1. ツールバーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;アイコン（丸で囲まれた「i」）をタップします。
 1. On the video&#39;s Properties page, tap **[!UICONTROL Change Thumbnail.]**
 1. サムネールを変更ページで、次のいずれかの操作をおこないます。
 
