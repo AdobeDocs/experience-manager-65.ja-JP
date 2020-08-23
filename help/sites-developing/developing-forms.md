@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1952'
+ht-degree: 76%
 
 ---
 
@@ -29,8 +32,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 フォームで使用する[新しいコンポーネントを開発する](/help/sites-developing/developing-components-samples.md)ほかに、次のこともできます。
 
 * [フォームに値をプリロードする](#preloading-form-values)
-* [（特定の）フィールドに複数値をプリロードする
-   ](#preloading-form-fields-with-multiple-values)
+* [（特定の）フィールドに複数値をプリロードする](#preloading-form-fields-with-multiple-values)
 * [新しいアクションを作成する](#developing-your-own-form-actions)
 * [新しい制約を作成する](#developing-your-own-form-constraints)
 * [特定のフォームフィールドを表示または非表示にする](#showing-and-hiding-form-components)
@@ -39,7 +41,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 >[!NOTE]
 >
->このドキュメントでは、クラシック UI の[基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)を使用したフォームの作成に重点を置いて説明します。アドビでは、タッチ操作対応 UI でのフォーム作成に新しい[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)と[非表示の条件](/help/sites-developing/hide-conditions.md)を使用することをお勧めします。
+>このドキュメントでは、クラシック UI の[基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)を使用したフォームの作成に重点を置いて説明します。アドビでは、タッチ操作対応 UI でのフォーム作成に新しい[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)と[非表示の条件](/help/sites-developing/hide-conditions.md)を使用することをお勧めします。
 
 ## フォーム値のプリロード {#preloading-form-values}
 
@@ -78,7 +80,7 @@ Note that if the values in the `String[]` are of the formatted like this:
 
 * `AL=Alabama`
 * `AK=Alaska`
-* *。*
+* *等。*
 
 次のリストが生成されます。
 
@@ -111,15 +113,15 @@ You can add your own action under `/apps` as follows:
 
 1. このノードで、次のプロパティを定義し、「**すべて保存**」をクリックして、変更を保存します。
 
-   * `sling:resourceType`  — 次のように設定 `foundation/components/form/action`
+   * `sling:resourceType` - `foundation/components/form/action`
 
-   * `componentGroup`  — 次のように定義します。 `.hidden`
+   * `componentGroup`  — 次の形式で定義 `.hidden`
 
    * 省略可能：
 
-      * `jcr:title`  — 選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。 設定されていない場合、ノード名が表示されます
+      * `jcr:title`  — 選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。 設定しない場合、ノード名が表示されます
 
-      * `jcr:description`  — 選択した説明を入力します。
+      * `jcr:description`  — 選択した内容を入力します。
 
 1. フォルダーにダイアログノードを作成します。
 
@@ -128,7 +130,8 @@ You can add your own action under `/apps` as follows:
 1. フォルダーに次のどちらかを作成します。
 
    1. ポストスクリプト。The name of the script is `post.POST.<extension>`, e.g. `post.POST.jsp`
-The post script is invoked when a form is submitted to process the form, it contains the code that handles the data arriving from the form `POST`.
+The post script is invoked when a form is submitted to process the form, it contains the code that handles the data arriving from the form 
+`POST`。
 
    1. フォームが送信されたときに呼び出される転送スクリプトを追加します。The name of the script is `forward.<extension`>, e.g. `forward.jsp`
 This script can define a path. 現在の要求が、指定されたパスに転送されます。
@@ -140,6 +143,7 @@ This script can define a path. 現在の要求が、指定されたパスに転�
 
    * `post.POST.jsp` は、アクション自体によって完全に実行される小さな操作に便利です。
    * `forward.jsp` は、委任のみが必要な場合に便利です。
+
    スクリプトは次の順序で実行されます。
 
    * Upon rendering the form ( `GET`):
@@ -148,7 +152,7 @@ This script can define a path. 現在の要求が、指定されたパスに転�
       1. for all field&#39;s constraints: `clientvalidation.jsp`
       1. form&#39;s validationRT: `clientvalidation.jsp`
       1. 設定されている場合は、読み込みリソースを介してフォームが読み込まれます
-      1. `addfields.jsp` レンダリング中 `<form></form>`
+      1. `addfields.jsp` レンダリング内で `<form></form>`
    * upon handling a form `POST`:
 
       1. `init.jsp`
@@ -168,7 +172,7 @@ This script can define a path. 現在の要求が、指定されたパスに転�
 An addfields script is invoked immediately after the HTML for the form start is written. これにより、カスタム入力フィールドなどの HTML をフォーム内に追加するアクションを実行できます。
 
    1. 初期化スクリプト。The name of the script is `init.<extension>`, e.g. `init.jsp`
-This script is invoked when the form is rendered. アクションの詳細を初期化するために使用できます。&quot;
+This script is invoked when the form is rendered. これは、アクションの詳細を初期化するために使用できます。&quot;
 
    1. クリーンアップスクリプト。The name of the script is `cleanup.<extension>`, e.g. `cleanup.jsp`
 This script can be used to perform cleanup.
@@ -207,14 +211,14 @@ You can add your own constraints for an individual field (under `/apps`) as foll
 
    * 省略可能：
 
-      * `jcr:title`  — 選択したタイトルを指定します。これは選択リストに表示されます。 設定されていない場合、ノード名が表示されます
+      * `jcr:title`  — 選択したタイトルを指定します。これは選択リストに表示されます。 設定しない場合、ノード名が表示されます
       * `hint` - ユーザーに向けたフィールドの使用方法に関する追加情報
 
 1. このフォルダー内には、少なくとも次のどちらかのスクリプトが必要です。
 
-   * クライアント検証スクリプト：スクリプトの名前(例：フ `clientvalidation.<extension>`ォームフィールドがレ `clientvalidation.jsp`ンダリングされるときに呼び出されます)。 このスクリプトを使用すると、クライアントでフィールドを検証するクライアント JavaScript を作成できます。
+   * クライアント検証スクリプト：スクリプトの名前 `clientvalidation.<extension>`(例：フォームフィールドがレンダリングされ `clientvalidation.jsp`るときに呼び出されます)。 このスクリプトを使用すると、クライアントでフィールドを検証するクライアント JavaScript を作成できます。
 
-   * サーバー検証スクリプト：スクリプトの名前(例： `servervalidation.<extension>`フォームが送信さ `servervalidation.jsp`れるときに呼び出される)。 このスクリプトを使用すると、フォームの送信後にサーバーでフィールドを検証できます。
+   * サーバー検証スクリプト：スクリプトの名前 `servervalidation.<extension>`(例： `servervalidation.jsp`フォームが送信されると呼び出されます)。 このスクリプトを使用すると、フォームの送信後にサーバーでフィールドを検証できます。
 
 >[!NOTE]
 >
@@ -241,7 +245,7 @@ You can add your own constraints for an individual field (under `/apps`) as foll
 
 フォームコンポーネントを表示または非表示にする条件を指定するには、**表示 / 非表示のルールを編集**&#x200B;ダイアログボックスを使用します。
 
-![車掌](assets/showhideeditor.png)
+![showhideeditor](assets/showhideeditor.png)
 
 ダイアログボックスの最上部にあるフィールドを使用して、次の情報を指定します。
 
@@ -254,7 +258,7 @@ You can add your own constraints for an individual field (under `/apps`) as foll
 * 演算子
 * フィールドの値と比較する値
 
-例えば、タイトルが* *のラジオグループコンポーネントには、 `Receive email notifications?`ラジオボタンとラジオボ `Yes` タンが含 `No` まれています。 「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」が選択された場合に表示されます。
+例えば、ラジオグループコンポーネントのタイトル `Receive email notifications?`が* *の場合、ラジオボタン `Yes` と `No` ラジオボタンが含まれます。 「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」が選択された場合に表示されます。
 
 ![showhidecondition](assets/showhidecondition.png)
 
@@ -276,6 +280,7 @@ JavaScript の場合、条件にはエレメント名プロパティの値を使
       * **いずれか** - 1 つでも条件を満たした場合に、コンポーネントが表示または非表示になります。
    * 条件行で（デフォルトとして 1 つだけ表示されます）、コンポーネントと演算子を選択し、値を指定します。
    * 必要に応じて、「**条件を追加**」をクリックして、条件を追加します。
+
    次に例を示します。
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
@@ -302,7 +307,7 @@ JavaScript の場合、条件にはエレメント名プロパティの値を使
 
 #### 壊れたコンポーネント参照の処理 {#handling-broken-component-references}
 
-表示／非表示の条件では、エレメント名プロパティの値を使用して、フォーム内の他のコンポーネントを参照します。表示/非表示の設定は、削除されたコンポーネントを参照している場合や、Element nameプロパティが変更された場合は無効です。 その場合は、手動で条件を更新する必要があります。更新しないと、フォームの読み込み時にエラーが発生します。
+表示／非表示の条件では、エレメント名プロパティの値を使用して、フォーム内の他のコンポーネントを参照します。削除されたコンポーネントを参照している条件や、Element Nameプロパティが変更された条件がある場合、表示/非表示の設定は無効です。 その場合は、手動で条件を更新する必要があります。更新しないと、フォームの読み込み時にエラーが発生します。
 
 表示/非表示の設定が無効な場合、設定はJavaScriptコードとしてのみ提供されます。 コードを編集して、問題を修正します。そのコードでは、コンポーネントを参照するために元々使用していたエレメント名プロパティを使用しています。
 
