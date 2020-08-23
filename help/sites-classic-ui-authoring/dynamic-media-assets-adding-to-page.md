@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 53%
+source-wordcount: '1722'
+ht-degree: 55%
 
 ---
 
@@ -30,7 +30,7 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
-Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] component to a page is the same as adding a component to any page. [!UICONTROL Dynamic Media] と [!UICONTROL インタラクティブメディア] コンポーネントについては、以下の各節で詳しく説明します。
+Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] component to a page is the same as adding a component to any page. The [!UICONTROL Dynamic Media] and [!UICONTROL Interactive Media] components are described in detail in the following sections.
 
 ページにダイナミックメディアコンポーネント／ビューアを追加するには：
 
@@ -48,7 +48,7 @@ Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] componen
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-[!UICONTROL Dynamic Media] と [!UICONTROL インタラクティブメディア] は、サイドキックの **[!UICONTROL Dynamic Mediaの下で利用できます。]****[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントを使用します。
+[!UICONTROL ダイナミックメディア] と [!UICONTROL インタラクティブメディア] は、ダイナミックメディアの [!UICONTROL 下のサイドキックで利用でき]**[!UICONTROL ます。]****[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントを使用します。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -58,7 +58,7 @@ Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] componen
 
 ### Dynamic Media コンポーネント {#dynamic-media-component}
 
-Dynamic Mediaコンポーネントはスマートです。画像とビデオのどちらを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアはHTML5ベースのビューアです。
+ダイナミックメディアコンポーネントはスマートです。画像を追加するかビデオを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアはHTML5ベースのビューアです。
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ You can edit the following Dynamic Media settings by clicking **[!UICONTROL Edit
 
 **[!UICONTROL ビューアプリセット]** — ドロップダウンメニューから既存のビューアプリセットを選択します。 探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-これは、画像セット、スピンセットまたは混在メディアセットを表示している場合に使用できる唯一のオプションです。 表示されるビューアプリセットもスマートで、関連するビューアプリセットのみが表示されます。
+これは、画像セット、スピンセットまたは混在メディアセットを表示している場合に使用できる唯一のオプションです。表示されるビューアプリセットもスマートで、関連するビューアプリセットのみが表示されます。
 
 **[!UICONTROL 画像プリセット]** — ドロップダウンメニューから既存の画像プリセットを選択します。 探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
@@ -159,7 +159,7 @@ The [!UICONTROL Interactive Media] component is smart – depending on whether y
 
 **[!UICONTROL 幅と高さ]** — ビデオを固定サイズにする場合は、値をピクセル単位で入力します。 これらの値を空にすると、アダプティブな画像になります。
 
-You can edit the following **[!UICONTROL Add To Cart** settings by clicking **[!UICONTROL Edit]** in the component.
+コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の&#x200B;**[!UICONTROL 買い物かごに追加]**&#x200B;設定を編集できます。
 
 **[!UICONTROL Show Product Asset]** — デフォルトでは、この値は選択されています。 製品アセットには、コマースモジュールで定義された製品の画像が表示されます。製品アセットを表示しない場合はチェックマークをオフにします。
 
