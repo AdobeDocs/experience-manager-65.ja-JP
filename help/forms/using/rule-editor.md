@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '6822'
+source-wordcount: '6814'
 ht-degree: 74%
 
 ---
@@ -332,11 +332,11 @@ When (任意):
 
    選択したフォームオブジェクト上に既に存在するルールは、このビューに表示されます。既存ルールの詳細な管理方法については、「[ルール管理](../../forms/using/rule-editor.md#p-manage-rules-p)」を参照してください。
 
-1. Tap **[!UICONTROL Create]** to write a new rule. ルールエディターの初回起動時は、ルールエディターの UI がビジュアルエディターモード（デフォルト）で表示されます。[ ![ルールエディターのユーザインターフェイス](assets/rule-editor-ui.png)
+1. Tap **[!UICONTROL Create]** to write a new rule. ルールエディターの初回起動時は、ルールエディターの UI がビジュアルエディターモード（デフォルト）で表示されます。
 
-   拡大画像を開くにはここをクリック
+   ![ルールエディターのユーザインターフェイス](assets/rule-editor-ui.png)
 
-   ](assets/rule-editor-ui-1.png)ルールエディターのUIの各コンポーネントを詳しく見てみましょう。
+ここからは、ルールエディターのユーザインターフェイスに含まれる各要素について説明します。
 
 ### A. コンポーネントルールの表示 {#a-component-rule-display}
 
@@ -549,22 +549,22 @@ For more information, see [usejsdoc.org](https://usejsdoc.org/).
 
 サポートされ `jsdoc` るタグ：
 
-* **プライベート**構文： 
+* **プライベート**構文：
 プライベート関数は、カスタム関数としては含まれません。`@private`
 プライベート関数は、カスタム関数としては含まれません。
 
-* **名前**構文： 
+* **名前**構文：
 または、次 `@name funcName <Function Name>`の方法 `,` を使用できます。 `@function funcName <Function Name>` **または**`@func``funcName <Function Name>`。
    `funcName` ：関数の名前です（スペースは使用不可）。
    `<Function Name>` は、関数の表示名です。
 
-* **メンバ**ーの構文： 
+* **メンバ**ーの構文：
 名前空間を関数にアタッチします。`@memberof namespace`
 名前空間を関数にアタッチします。
 
-* **パラメータ**ーの構文： 
+* **パラメータ**ーの構文：
 または、次を使用できます。 `@param {type} name <Parameter Description>`
-または、次を使用できます。 `@argument` `{type} name <Parameter Description>` **または**`@arg``{type}``name <Parameter Description>`。
+または、次を使用できます。 `@argument` `{type} name <Parameter Description>` **または**`@arg``{type}``name <Parameter Description>`
 関数で使用されるパラメータを表示します。関数には、複数のパラメータタグを設けることができます。各パラメーターは、実行順序に応じて 1 個のタグを設けることができます。
    `{type}` パラメータータイプを表します。 許可されているパラメータータイプは、以下のとおりです。
 
@@ -574,7 +574,7 @@ For more information, see [usejsdoc.org](https://usejsdoc.org/).
 
    他のすべてのパラメータの種類は、上記のいずれかに分類されます。「なし」はサポートされていません。上記のタイプのいずれかを選択していることを確認してください。タイプでは、大文字と小文字は区別されません。Spaces are not allowed in the parameter `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
-* **戻り値の型**構文： 
+* **戻り値の型**構文：
 または、「 `@return {type}`代わりに」を使用し、「」を使用することもでき `@returns {type}`ます。
 目的など、関数に関する情報を追加します。
 {type}は、関数の戻り値の型を表します。 許可されている戻り値のタイプは次のとおりです。
@@ -691,7 +691,7 @@ Any existing rules on a form object are listed when you tap the object and tap !
 
 * **編集**：ルールを編集するには、ルールタイトルの横にあるチェックボックスを選択します。ルールを編集・削除するための追加オプションが表示されます。Tap **Edit** to open the selected rule in the rule editor in visual or code editor mode depending the mode used to create the rule.
 
-* **削除**: ルールを削除するには、ルールを選択し、「 **削除**」をタップします。
+* **削除**:ルールを削除するには、ルールを選択し、「 **削除**」をタップします。
 
 * **有効 / 無効**：ルールの使用を一時的に中止しなければならないことがあります。その際、1 つ以上のルールを選択し、アクションツールバーで「無効」をタップすると、それらのルールが無効になります。ルールが無効になっている場合、実行時には実行されません。 無効化されたルールを有効化するには、そのルールを選択し、アクションツールバーで「有効」をタップします。ルールの「ステータス」列には、そのルールが有効になっているのか無効になっているのかが表示されます。
 
