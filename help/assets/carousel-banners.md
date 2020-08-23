@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '4814'
+source-wordcount: '4813'
 ht-degree: 96%
 
 ---
@@ -43,7 +43,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
 >[!NOTE]
 >
->管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users ]**グループにユーザーを追加できるシステム管理者に確認してください。
+>管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
 
 ## クイックスタート：カルーセルバナー {#quick-start-carousel-banners}
 
@@ -86,12 +86,10 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
 1. 次のいずれかの操作をおこないます。
 
-   * [Web サイトへのカルーセルバナーの追加
-      ](#adding-a-carousel-banner-to-your-website-page)Web サイトページにカルーセルバナーの URL またはコピーした埋め込みコードを追加できます。
+   * [Web サイトへのカルーセルバナーの追加](#adding-a-carousel-banner-to-your-website-page)Web サイトページにカルーセルバナーの URL またはコピーした埋め込みコードを追加できます。
 
       * [カルーセルバナーと既存のクイックビューの統合](#integrating-the-carousel-banner-with-an-existing-quickview)。サードパーティの Web コンテンツ管理システムを使用している場合は、新しいカルーセルバナーを、Web サイト上の既存のクイックビュー実装に統合する必要があります。
-   * [AEM で Web サイトへのカルーセルバナーの追加
-      ](/help/assets/adding-dynamic-media-assets-to-pages.md)AEM Sites のお客様は、インタラクティブメディアコンポーネントを使用して、カルーセルセットを AEM 内のページに直接追加できます。
+   * [AEM で Web サイトへのカルーセルバナーの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)AEM Sites のお客様は、インタラクティブメディアコンポーネントを使用して、カルーセルセットを AEM 内のページに直接追加できます。
 
 
 カルーセルセットを編集する必要がある場合は、[カルーセルセットの編集](#editing-carousel-sets)を参照してください。また、[カルーセルセットのプロパティ](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)を表示および編集することができます。
@@ -104,7 +102,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 >[!NOTE]
 >
->AEM Sites または AEM Ecommerce（あるいは両方）のユーザーである場合、この手順はスキップできます。ホットスポットや画像マップの変数を手動で識別する必要はありません。 eコマースとの統合を使用して製品統合を行うことができます。 [eCommerce の設定](/help/sites-administering/generic.md)に関する情報を参照してください。また、インタラクティブコンポーネントを使用し、Web ページにインタラクティブコンポーネントを追加できます。
+>AEM Sites または AEM Ecommerce（あるいは両方）のユーザーである場合、この手順はスキップできます。ホットスポットや画像マップの変数を手動で識別する必要はありません。eコマースとの統合を使用して製品統合を行うことができます。 [eCommerce の設定](/help/sites-administering/generic.md)に関する情報を参照してください。また、インタラクティブコンポーネントを使用し、Web ページにインタラクティブコンポーネントを追加できます。
 >
 >AEM Assets または Dynamic Media のユーザーである場合は、URL または埋め込みコードを公開してから、サードパーティのコンテンツ管理システムに統合し、ホットスポットと画像マップを手動で識別します。
 
@@ -200,8 +198,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    * ページの左上隅付近にある「**[!UICONTROL スライドを追加]**」をタップします。
 
    * Near the middle of the page, tap **[!UICONTROL Tap to open Asset Selector.]**
-
-   カルーセルセットに含めるアセットをタップして選択します。選択済みのアセットにはチェックマークアイコンが付いています。作業が完了したら、ページの右上隅付近にある「**選択**」をタップします。
+   カルーセルセットに含めるアセットをタップして選択します。選択済みのアセットにはチェックマークアイコンが付いています。作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 選択]**」をタップします。
 
    アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter キーをタップまたはクリックすることで、アセットを検索することができます。]**&#x200B;フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
 
@@ -286,7 +283,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
    * Tap **[!UICONTROL Quickview.]**
 
-      * AEM Sitesでeコマースをご利用の場合は、製品選択アイコン（虫めがね）をタップして、製品を選択ページを開きます。 使用する製品をタップしてから、ページの右上隅のチェックマークをタップして、カルーセルバナーエディターに戻ります。
+      * AEM Sitesおよびeコマースのお客様の場合は、製品選択アイコン（虫めがね）をタップして、製品を選択ページを開きます。 使用する製品をタップしてから、ページの右上隅のチェックマークをタップして、カルーセルバナーエディターに戻ります。
       * AEM Sites または AEM eCommerce のユーザーではない場合は次のようにします。
 
          * これらの変数を定義するときは、[ホットスポットの変数の識別](#identifying-hotspot-and-image-map-variables)を参照してください。
@@ -378,7 +375,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
    ![experience_fragment-carouselbanner-viewerdropdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. Tap **Preview.]**
+1. Tap **[Preview.]**
 1. 画像上のホットスポットまたは画像マップをタップし、関連付けられたアクションをテストします。
 
 **ビューアリストでカルーセルバナーをプレビューするには**
