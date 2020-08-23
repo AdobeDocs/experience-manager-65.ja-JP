@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 55%
@@ -28,7 +28,7 @@ AEM Forms Workspace では、複数のフォームタイプをシームレスに
 * 画像
 * サードパーティアプリケーション（たとえば、Correspondence Management など）
 
-このドキュメントでは、表示を中断することなく顧客の要件を満たすように、セマンティックカスタマイゼーションおよびコンポーネントの再利用の観点からこれらのレンダラーの動作を説明します。AEM Formsワークスペースでは、ユーザーインターフェイスやセマンティックの変更が可能ですが、様々なフォームタイプのレンダリングロジックは変更しないことをお勧めします。そうしないと、予測できない結果になる場合があります。 このドキュメントは、別々のポータルで同じワークスペースコンポーネントを使用する、同じフォームのレンダリングをサポートするためのガイド／ナレッジであり、レンダリングロジック自体を変更するためのものではありません。
+このドキュメントでは、表示を中断することなく顧客の要件を満たすように、セマンティックカスタマイゼーションおよびコンポーネントの再利用の観点からこれらのレンダラーの動作を説明します。AEM Formsワークスペースではユーザーインターフェイスやセマンティックの変更が可能ですが、様々なフォームタイプのレンダリングロジックは変更しないことをお勧めします。そうしないと、予測できない結果になる場合があります。 このドキュメントは、別々のポータルで同じワークスペースコンポーネントを使用する、同じフォームのレンダリングをサポートするためのガイド／ナレッジであり、レンダリングロジック自体を変更するためのものではありません。
 
 ## PDF フォーム {#pdf-forms}
 
@@ -84,15 +84,15 @@ The communication happens using `swfObject.postMessage` / `window.flexMessageHan
 
 サードパーティアプリケーションは、ExtAppTaskForm 表示を使用してレンダリングされます。
 
-**WorkspaceとAEM Formsの通信に対するサードパーティアプリケーション**
+**AEM Forms・ワークスペース通信へのサード・パーティ・アプリケーション**
 
 AEM Forms workspace listens on `window.global.postMessage([Message],[Payload])`
 
-[Message] は、 `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`が含まれ `runtimeMap`ます。 サードパーティアプリケーションは、必要に応じてAEM FormsWorkspaceに通知するには、このインターフェイスを使用する必要があります。 AEM Formsワークスペースはタスクーウィンドウをクリーンアップできるように、タスクが送信されたことを知る必要があるので、このインターフェイスの使用は必須です。
+[Message] は、 `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`が含まれ `runtimeMap`ます。 サードパーティアプリケーションは、必要に応じてAEM FormsWorkspaceに通知するには、このインターフェイスを使用する必要があります。 このインターフェイスの使用は必須です。これは、AEM Formsワークスペースがタスクーウィンドウをクリーンアップするためにタスクが送信されたことを知る必要があるからです。
 
 **AEM Formsワークスペースからサードパーティアプリケーションへの通信**
 
-AEM Formsワークスペースの直接アクションボタンが表示されている場合は、を呼び出し `window.[External-App-Name].getMessage([Action])`ます。ここで、[ `Action]` はから読み取られ `routeActionMap`ます。 The third-party application must listen on this interface, and then notify AEM Forms workspace via the `postMessage ()` API.
+AEM Formsワークスペースの直接アクションボタンが表示されている場合は、を呼び出し `window.[External-App-Name].getMessage([Action])`ます。ここで、は、から読み取 `[Action]` られ `routeActionMap`ます。 The third-party application must listen on this interface, and then notify AEM Forms workspace via the `postMessage ()` API.
 
 For example, a Flex application can define `ExternalInterface.addCallback('getMessage', listener)` to support this communication. If the third-party application wants to handle form submission via its own buttons, then you should specify `hideDirectActions = true() in the runtimeMap` and you may skip this listener. 従って、この構築はオプションです。
 
