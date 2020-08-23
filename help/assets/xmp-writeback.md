@@ -3,10 +3,10 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 57%
+source-wordcount: '789'
+ht-degree: 58%
 
 ---
 
@@ -33,7 +33,7 @@ XMPの書き戻し機能を使用すると、メタデータの変更をアセ�
 
 1. Configuration Manager を開くには、`https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 1. 「**[!UICONTROL Adobe CQ DAM Rendition Maker]**」設定を開きます。
-1. **[!UICONTROL Propagate XMP[!UICONTROL **]オプションを選択し、変更を保存します。
+1. 「**[!UICONTROL Propagate XMP]**」オプションを選択し、変更を保存します。
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
