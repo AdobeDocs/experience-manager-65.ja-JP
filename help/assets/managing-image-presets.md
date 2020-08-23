@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media画像プリセットの管理
-description: Dynamic Mediaの画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
+title: ダイナミックメディア画像プリセットの管理
+description: ダイナミックメディア画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,9 +10,9 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '3843'
+source-wordcount: '3842'
 ht-degree: 87%
 
 ---
@@ -152,7 +152,7 @@ The Media Extraction process component in the `DAM Update Asset` workflow runs s
 
 ![メディア抽出プロセスの引数で使用される ExtendScript のパス](assets/6_5_mediaextractionprocess.png)
 
-[!UICONTROL DAM Update Asset] Workflowのメディア抽出プロセスコンポーネントの引数に含まれるExtendScriptパス。
+[!UICONTROL DAM Update Asset] WorkflowのMedia抽出プロセスコンポーネントの引数内のExtendScriptパス。
 
 Dynamic Media 統合では、以下のスクリプトが使用されます。
 
@@ -219,7 +219,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 作成した画像プリセットは、アセットをプレビューする際の動的レンディションとして使用できます。AEM で、**[!UICONTROL 詳細表示／レンディションからアセットを表示すると、様々な動的レンディションが表示されます。]**&#x200B;表示されるレンディション数の制限を増減させることができます。
 
-**表示されるDynamic Media画像プリセットの数を増減するには**:
+**表示されるダイナミックメディア画像プリセットの数を増減するには**:
 
 1. CRXDE Lite（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）に移動します。
 1. 画像プリセットリストノード（`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`）に移動します。
@@ -234,9 +234,9 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
 1. Tap **[!UICONTROL Save All.]**
 
-## Dynamic Media画像プリセットの作成 {#creating-image-presets}
+## ダイナミックメディア画像プリセットの作成 {#creating-image-presets}
 
-Dynamic Mediaの画像プリセットを作成すると、プレビュー時や公開時にこれらの設定を任意の画像に適用できます。
+ダイナミックメディア画像プリセットを作成すると、プレビュー時や公開時に、これらの設定を任意の画像に適用できます。
 
 >[!NOTE]
 >
@@ -248,9 +248,9 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 >[!NOTE]
 >
->Dynamic Media画像プリセットを作成するには、AEM管理者またはAdmin Console管理者としての管理者権限が必要です。
+>ダイナミックメディア画像プリセットを作成するには、AEM管理者またはAdmin Console管理者としての管理者権限が必要です。
 
-**Dynamic Media画像プリセットを作成するには**:
+**ダイナミックメディア画像プリセットを作成するには**:
 
 1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Assets > Image Presets.]**
 1. 「**[!UICONTROL 作成」をクリックします。]****[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
@@ -265,7 +265,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
    ![6_5_imagepreset-edit](assets/6_5_imagepreset-edit.png)
 
-1. 「**[!UICONTROL 保存**」をクリックします。
+1. 「**[!UICONTROL 保存]**」をクリックします。
 
 ## Creating a responsive image preset {#creating-a-responsive-image-preset}
 
@@ -289,11 +289,11 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 画像プリセットを作成または編集するときに、ここで説明するオプションを使用できます。またアドビは、最初に使用すべきオプションとして、以下の「ベストプラクティス」のオプションをお勧めします。
 
-* **[!UICONTROL 「形式]** (**[!UICONTROL 「基本]** 」タブ)」 - **[!UICONTROL JPEG]** 、または要件に合う別の形式を選択します。 すべてのWebブラウザーがJPEG画像形式をサポートしています。 小さいファイルサイズと画質のバランスがとれています。 ただし、JPEG形式の画像は非可逆圧縮方式を使用しているので、圧縮設定が低すぎると、不要な画像アーティファクトが発生する可能性があります。 このため、アドビは圧縮品質を 75 に設定することをお勧めします。この設定は、画質と小さなファイルサイズのバランスが取れた設定です。
+* **[!UICONTROL 「形式]** (**[!UICONTROL 「基本]** 」タブ)」 - **[!UICONTROL JPEG]** 、または要件に合う別の形式を選択します。すべてのWebブラウザーがJPEG画像形式をサポートしています。小さいファイルサイズと画質のバランスがとれています。ただし、JPEG形式の画像は非可逆圧縮方式を使用しているので、圧縮設定が低すぎると、不要な画像アーティファクトが発生する可能性があります。 このため、アドビは圧縮品質を 75 に設定することをお勧めします。この設定は、画質と小さなファイルサイズのバランスが取れた設定です。
 
 * **[!UICONTROL シンプルシャープを有効にする]** - 「**[!UICONTROL シンプルシャープを有効にする]**」は選択しません（このシャープフィルターでは、アンシャープマスク設定よりも細かく制御できません）。
 
-* **[!UICONTROL シャープ： 再サンプリングモード]** - **[!UICONTROL バイキュービック法を選択します。]**
+* **[!UICONTROL シャープ：再サンプリングモード]** - **[!UICONTROL バイキュービック法を選択します。]**
 
 #### 「基本」タブオプション{#basic-tab-options}
 
@@ -490,7 +490,7 @@ Dynamic Media - ハイブリッドモードを実行している場合、画像�
 
 （Dynamic Media - Scene7 モードを実行している場合、画像プリセットは自動的に公開されるので、以下の手順を実行する必要はありません）。
 
-**Dynamic Media — ハイブリッドモードで画像プリセットを公開するには**:
+**ダイナミックメディア — ハイブリッドモードで画像プリセットを公開するには**:
 
 1. In AEM, tap or click the AEM logo to access the global navigation console and tap or click the Tools icon and navigate to **[!UICONTROL Assets > Image Presets.]**
 1. Select the image preset or multiple image presets from the list of image presets and click or tap **[!UICONTROL Publish.]**
@@ -500,7 +500,7 @@ Dynamic Media - ハイブリッドモードを実行している場合、画像�
 
 ## Deleting Dynamic Media image presets {#deleting-image-presets}
 
-1. AEMでAEMロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
+1. AEMで、AEMロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
 1. ツール **[!UICONTROL アイコンをタップし、]****[!UICONTROL アセット/画像プリセットに移動します。]**
 1. プリセットを選択し、「**[!UICONTROL 削除]**」をクリックします。プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップして削除するか、「**[!UICONTROL キャンセル]**」をタップして中止します。
 
