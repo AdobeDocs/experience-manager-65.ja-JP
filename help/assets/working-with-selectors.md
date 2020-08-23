@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '726'
 ht-degree: 99%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 99%
 
 1. カルーセルセット、インタラクティブ画像、インタラクティブビデオのいずれかに移動し、「**[!UICONTROL アクション]**」タブ（ホットスポットまたは画像マップを定義した場合のみ選択できる）をタップします。
 
-   商品セレクターは、「**アクションタイプ**」領域にあります。
+   商品セレクターは、「**[!UICONTROL アクションタイプ]**」領域にあります。
 
    ![chlimage_1-521](assets/chlimage_1-521.png)
 
