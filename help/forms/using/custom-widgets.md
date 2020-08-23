@@ -11,10 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 66%
+source-wordcount: '667'
+ht-degree: 65%
 
 ---
 
@@ -49,7 +49,7 @@ HTML5フォームは、新しいウィジェットを作成するために拡張
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> blur: XFA_EXIT_イベント,<br /> }<br /> この例は、blurがHTMLイベントであり、XFA_EXIT_イベントが対応するXFAイベントであることを示しています。 </td>
+   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> blur:XFA_EXIT_イベント,<br /> }<br /> この例は、blurがHTMLイベントであり、XFA_EXIT_イベントが対応するXFAイベントであることを示しています。 </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -92,12 +92,14 @@ window.formBridge.registerConfig("widgetConfig",
 
 ウィジェット設定は JSON オブジェクトとして提供（キーと値のペアのコレクション）されます。キーはフィールドを識別し、値はそれらのフィールドとともに使用するフィールドを示します。サンプル設定には次のようなものがあります。
 
+```
 *{*
 
-*“識別子1” : “カスタムウィジェット名”,
-“識別子2” : “カスタムウィジェット名2”,
+*“identifier1” : “customwidgetname”,
+“identifier2” : “customwidgetname2”,
 ..
 }*
+```
 
 「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを表すjQuery CSSセレクターです。 次のリストは、様々なケースでの識別子の値です。
 
@@ -105,4 +107,4 @@ window.formBridge.registerConfig("widgetConfig",
 |---|---|---|
 | fieldname の名前を持つ特定のフィールド | 識別子:&quot;div.fieldname&quot; | 「fieldname」の名前を持つすべてのフィールドはウィジェットの使用によりレンダリングされます。 |
 | 「type」タイプのすべてのフィールド（typeはNumericField、DateFieldなど）： | 識別子:&quot;div.type&quot; | TimefieldとDateTimeFieldの場合、これらのフィールドはサポートされないので、タイプはtextfieldです。 |
-| すべてのフィールド | 識別子： &quot;div.field&quot; |  |
+| すべてのフィールド | 識別子：&quot;div.field&quot; |  |
