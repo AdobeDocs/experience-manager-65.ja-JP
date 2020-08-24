@@ -3,10 +3,10 @@ title: '[!DNL Assets] HTTP APIが含まれています [!DNL Adobe Experience Ma
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: fb3fdf25718cd099ff36a206718aa4bf8a2b5068
 workflow-type: tm+mt
-source-wordcount: '1579'
-ht-degree: 87%
+source-wordcount: '1673'
+ht-degree: 82%
 
 ---
 
@@ -25,6 +25,10 @@ The [!DNL Assets] HTTP API allows for create-read-update-delete (CRUD) operation
 API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションをおこなう場合は、応答コードを利用します。
 
 [!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、[!DNL Assets] Web インターフェイスでも HTTP API でも使用できません。[!UICONTROL オンタイム]が未来の場合、または[!UICONTROL オフタイム]が過去の場合、API は 404 エラーメッセージを返します。
+
+>[!CAUTION]
+>
+>[HTTP APIは、](#update-asset-metadata)`jcr` 名前空間内のメタデータプロパティを更新します。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間内のメタデータプロパティを更新します。
 
 ## コンテンツフラグメント {#content-fragments}
 
@@ -137,7 +141,7 @@ The [!DNL Assets] HTTP API includes the following features:
 
 指定されたファイルを指定されたパスに配置し、DAMリポジトリ内にアセットを作成します。 If a `*` is provided instead of a node name, the servlet uses the parameter name or the file name as node name.
 
-**パラメータ**: パラメーターは、アセット名 `name` とファイル参照 `file` 用のものです。
+**パラメータ**:パラメーターは、アセット名 `name` とファイル参照 `file` 用のものです。
 
 **リクエスト**
 
@@ -168,7 +172,7 @@ The [!DNL Assets] HTTP API includes the following features:
 
 アセットメタデータのプロパティを更新します。`dc:` 名前空間内のプロパティを更新すると、APIは `jcr` 名前空間内の同じプロパティを更新します。API は 2 つの名前空間内のプロパティを同期させません。
 
-**リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"dc:title":"My Asset"}}'`
+**リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
 
 **応答コード**：応答コードは次のとおりです。
 
@@ -176,6 +180,27 @@ The [!DNL Assets] HTTP API includes the following features:
 * 404 - NOT FOUND（指定した URI でアセットが見つからなかったかアクセスできなかった場合）
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
+
+### 名前空間間でのメタデータの更新 `dc``jcr` の同期 {#sync-metadata-between-namespaces}
+
+APIメソッドは、 `jcr` 名前空間内のメタデータプロパティを更新します。 タッチ操作対応UIを使用して行った更新により、 `dc` 名前空間のメタデータプロパティが変更されます。 メタデータ値をとの間で同期するに `dc``jcr` は、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、との間でタイトル文字列 `dc:title` を同期し `jcr:title`ます。
+
+```javascript
+var workflowData = workItem.getWorkflowData();
+if (workflowData.getPayloadType() == "JCR_PATH")
+{
+ var path = workflowData.getPayload().toString();
+ var node = workflowSession.getSession().getItem(path);
+ var metadataNode = node.getNode("jcr:content/metadata");
+ var jcrcontentNode = node.getNode("jcr:content");
+if (jcrcontentNode.hasProperty("jcr:title"))
+{
+ var jcrTitle = jcrcontentNode.getProperty("jcr:title");
+ metadataNode.setProperty("dc:title", jcrTitle.toString());
+ metadataNode.save();
+}
+}
+```
 
 ## アセットレンディションの作成 {#create-an-asset-rendition}
 
