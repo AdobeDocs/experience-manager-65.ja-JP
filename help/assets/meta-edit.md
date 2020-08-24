@@ -3,10 +3,10 @@ title: メタデータの編集と追加
 description: Learn about asset metadata in [!DNL Adobe Experience Manager Assets] an various ways by which you can edit asset metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4748eed3ce484e8446b641ccbc7b5d76cb66f428
+source-git-commit: fc14ccc834c9a41b67eb8cf17dd8b34f5dff2406
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 23%
+source-wordcount: '473'
+ht-degree: 21%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 23%
 
    ![アセットのプロパティを選択して、メタデータを表示します](assets/asset-metadata.png)
 
-   *図： アセットの[!UICONTROL プロパティ]ページのメタデータを編集または追加します。*
+   *図：アセットの[!UICONTROL プロパティ]ページのメタデータを編集または追加します。*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
@@ -54,7 +54,11 @@ You can add your own namespaces within [!DNL Experience Manager]. Just as there 
 1. ノードタイプ管理ページにアクセス `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`します。
 1. 名前空間管理ページにアクセスするには、ページの上部にある **[!UICONTROL 名前空間]** をクリックします。
 1. 名前空間を追加するには、ページの下部にある **[!UICONTROL 新規]** (New)をクリックします。
-1. XML名前空間の規則でカスタム名前空間を指定します。 URIの形式でIDを指定し、IDに関連付けられたプレフィックスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
+1. XML名前空間の規則でカスタム名前空間を指定します。URIの形式でIDを指定し、IDに関連付けられたプレフィックスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
+
+## ヒントと制限事項 {#best-practices-limitations}
+
+* タッチUIを使用してメタデータを更新すると、 `dc` 名前空間内のメタデータのプロパティが変更されます。 HTTP APIを使用して更新を行うと、 `jcr` 名前空間内のメタデータプロパティが変更されます。 HTTP APIを使用してメタデータを更新する [方法を参照してください](/help/assets/mac-api-assets.md#update-asset-metadata)。
 
 >[!MORELIKETHIS]
 >
