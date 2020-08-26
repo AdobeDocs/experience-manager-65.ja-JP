@@ -3,9 +3,9 @@ title: でビデオアセットを管理します [!DNL Adobe Experience Manager
 description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 268689d534f8bf649335269f9169455c381f9554
+source-git-commit: 93b8fccc2a0c4663104150fdba3651ff5e4f6bbc
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '810'
 ht-degree: 37%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 37%
 
 ビデオ形式は、組織のデジタルアセットの重要な部分です。 [!DNL Adobe Experience Manager] 成熟したオファーは、ビデオアセットの作成後に、ビデオアセットのライフサイクル全体を管理するための製品と機能を提供しています。
 
-Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager Assets]. Also, if you are licensed to use [!DNL Dynamic Media], see the [Dynamic Media video documentation](/help/assets/video.md).
+Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager Assets]. 例えば、FFmpegトランスコードのようなビデオエンコーディングとトランスコードは、 [!DNL Dynamic Media] 統合を使用して可能です。
 
 ## ビデオアセットのアップロードとプレビュー {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] 拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 You can preview the renditions in the [!DNL Assets] user interface.
 
 1. デジタルアセットフォルダーまたはサブフォルダーで、デジタルアセットを追加する場所に移動します。
-1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Files]**. または、アセット領域に直接ドロップします。See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
+1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and choose **[!UICONTROL Files]**. または、ユーザーインターフェイス上でファイルをドラッグします。詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
 1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. ビデオの一時停止や再生は、カード表示でのみ可能です。The [!UICONTROL Play] and [!UICONTROL Pause] options are not available in the list view.
 
 1. To preview the video in the asset details page, click **[!UICONTROL Edit]** on the card. ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
@@ -71,13 +71,11 @@ In addition to [!DNL Assets] configuration, change the following configurations 
 
 ## ビデオアセットに注釈を付ける {#annotate-video-assets}
 
-1. From the [!DNL Assets] console, click [!UICONTROL Edit] on the asset card to display the asset details page.
-1. ビデオを再生するには、「 [!UICONTROL プレビュー]」をクリックします。
-1. ビデオに注釈を付けるには、「**[!UICONTROL 注釈]**」ボタンをクリックします。ビデオの特定の時間（フレーム）に注釈が追加されます。 注釈を付ける際に、キャンバスに描画して、その画像をコメントと一緒に含めることができます。コメントは自動保存されます。
+1. コン [!DNL Assets] ソールから、アセットカードの「 **[!UICONTROL 編集]** 」を選択して、アセットの詳細ページを表示します。
+1. ビデオを再生するには、「 **[!UICONTROL プレビュー]**」をクリックします。
+1. To annotate the video, click **[!UICONTROL Annotate]**. ビデオの特定の時間（フレーム）に注釈が追加されます。 注釈を付ける際に、キャンバスに描画して、その画像をコメントと一緒に含めることができます。コメントは自動保存されます。注釈ウィザードを終了するには、「**[!UICONTROL 閉じる]**」をクリックします。
 
    ![ビデオフレームの描画と注釈の追加](assets/annotate-video.png)
-
-   注釈ウィザードを終了するには、「**[!UICONTROL 閉じる]**」をクリックします。
 
 1. ビデオ内の特定のポイントを探すには、**テキスト**&#x200B;フィールドに時刻（秒）を指定して、「**ジャンプ**」をクリックします。例えば、ビデオの最初の 20 秒をスキップするには、テキストフィールドに「20」と入力します。
 
@@ -91,4 +89,5 @@ In addition to [!DNL Assets] configuration, change the following configurations 
 >
 >* [Experience Managerアセット内のデジタルアセットの管理](/help/assets/managing-assets-touch-ui.md)
 >* [Experience Managerアセット内のコレクションの管理](/help/assets/managing-collections-touch-ui.md)
+>* [ダイナミックメディアビデオドキュメント](/help/assets/video.md)。
 
