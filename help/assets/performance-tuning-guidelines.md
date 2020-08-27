@@ -4,9 +4,9 @@ description: 構成、ハードウェア、ソフトウェア、ネットワー�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2c8220aab9215efba2e4568961a2a6a544803920
+source-git-commit: 5a421c66930d8c7a9eb633c707b4b51d4549b303
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2746'
 ht-degree: 52%
 
 ---
@@ -152,7 +152,7 @@ For example, after executing numerous non-transient workflows (that creates work
 
 ### 並列ジョブの最大数 {#maximum-parallel-jobs}
 
-By default, [!DNL Experience Manager] runs a maximum number of parallel jobs equal to the number of processors on the server. The problem with this setting is that during periods of heavy load, all of the processors are occupied by [!UICONTROL DAM Update Asset] workflows, slowing down UI responsiveness and preventing [!DNLExperience Manager] from running other processes that safeguard server performance and stability. 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
+By default, [!DNL Experience Manager] runs a maximum number of parallel jobs equal to the number of processors on the server. The problem with this setting is that during periods of heavy load, all of the processors are occupied by [!UICONTROL DAM Update Asset] workflows, slowing down UI responsiveness and preventing [!DNL Experience Manager] from running other processes that safeguard server performance and stability. 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
 1. 「 [!DNL Experience Manager] 作成者」で、にアクセスし `https://[aem_server]:[port]/system/console/slingevent`ます。
 
