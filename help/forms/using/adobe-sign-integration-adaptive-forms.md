@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1148ac87ef6ff1afa77788e9cbd180d883290bfe
+source-git-commit: 6eb6ea86c5544329be5cb28500c59c632ccc9639
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 66%
+source-wordcount: '929'
+ht-degree: 67%
 
 ---
 
@@ -35,6 +35,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 * [Adobe Sign API アプリケーション](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 * Adobe Sign API アプリケーションの資格情報（クライアントの ID と秘密鍵）
 * 再設定時に、作成者インスタンスと発行インスタンスの両方から既存のAdobe Sign設定を削除します。
+* オーサーインスタンスとパブリッシュインスタンスに [同じ暗号化キー](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed) を使用します。
 
 ## AEM Forms を使用して Adobe Sign を設定する {#configure-adobe-sign-with-aem-forms}
 
@@ -89,16 +90,11 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 1. AEM Web コンソールを開きます。The URL is `https://'[server]:[port]'/system/console/configMgr`
 1. **Forms 共通設定サービス**&#x200B;を開きます。
 1. In the **Allow** field, **select** All users - All the users, anonymous or logged in, can preview attachments, verify and sign forms, and click **Save.**&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
-1. [パブリッシュ](/help/sites-deploying/deploy.md)インスタンスにログインし、以下の URL を開きます。
+1. 対応する発行インスタンスに同じ設定を作成するには [、レプリケーションを使用します](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) 。
 
-   `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`
+これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。To [use Adobe Sign service in an adaptive form](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form), specify the configuration container created above in adaptive form properties.
 
-1. 手順 1 ～ 12 を繰り返して、AEM Forms で Adobe Sign を設定します。設定に同じタイトル（手順3で指定）を、同じ名前（手順6で指定）を使用して、作成者インスタンスに設定された設定を複製します。
 
-   これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。To [use Adobe Sign service in an adaptive form](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form), specify the configuration container created above in adaptive form properties.
-
-   >[!NOTE]
-   > 堅牢化された環境をお持ちで、URLへのアクセス権を持っていない場合 `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`は、「作成者」の設定を完了し、 [](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) 複製を使用して、対応する発行インスタンスに同じ設定を作成します。
 
 ## Adobe Sign スケジューラーを設定して署名ステータスを同期する {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
