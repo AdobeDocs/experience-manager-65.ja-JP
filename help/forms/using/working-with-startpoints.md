@@ -10,14 +10,17 @@ topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 77%
 
 ---
 
 
 # スタートポイントの使用{#working-with-startpoints}
 
-スタートポイントは Workbench で作成されたプロセスを呼び出します。これはフォームの送信時にプロセスを呼び出すフォームに関連付けられています。プロセスについて理解するには、「[Geometrixx Finance リファレンスサイトのチュートリアル](../../forms/using/finance-reference-site-walkthrough.md)」を参照してください。
+スタートポイントは Workbench で作成されたプロセスを呼び出します。これはフォームの送信時にプロセスを呼び出すフォームに関連付けられています。
 
 >[!NOTE]
 >
@@ -32,7 +35,7 @@ To initiate a process from the AEM Forms app, you need to have a startpoint of t
 1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](../../forms/using/home-screen.md)に移動してください。
 1. On the **[!UICONTROL Home]** screen, by default, the **[!UICONTROL All Forms]** list is displayed.
 
-   スタートポイントはフォームに関連付けられています。スタートポイントに関連付けられたフォームをリストでタップして開きます。
+   スタートポイントはフォームに関連付けられています。リスト内でスタートポイントに関連付けられたフォームをタップして開きます。
 
    スタートポイントに関連付けられているフォームが開きます。
 
