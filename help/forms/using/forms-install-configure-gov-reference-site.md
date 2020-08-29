@@ -1,5 +1,5 @@
 ---
-title: Web.Govリファレンスサイトのセットアップと設定
+title: We.GovおよびWe.Financeリファレンスサイトの設定と設定
 seo-title: Web.Govリファレンスサイトのセットアップと設定
 description: AEM Formsデモパッケージをインストール、設定、カスタマイズします。
 seo-description: AEM Formsデモパッケージをインストール、設定、カスタマイズします。
@@ -8,15 +8,15 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c42e5e5274c41469824f12b228698a77bf5d4a6
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '4738'
+source-wordcount: '4742'
 ht-degree: 4%
 
 ---
 
 
-# Web.Govリファレンスサイトのセットアップと設定 {#set-up-and-configure-we-gov-reference-site}
+# We.GovおよびWe.Financeリファレンスサイトの設定と設定 {#set-up-and-configure-we-gov-reference-site}
 
 ## デモパッケージの詳細 {#demo-package-details}
 
@@ -44,7 +44,7 @@ ht-degree: 4%
 
 ### このパッケージに含まれる内容 {#what-does-this-package-include}
 
-[AEM FormsWe.Govデモパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip) (**we-gov-forms.pkg.all-&lt;version>.zip**)は、他のサブパッケージやサービスを含むパッケージとして提供されます。 パッケージには次のモジュールが含まれています。
+[AEM FormsWe.Govデモパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip) (**we-gov-forms.pkg.all-&lt;version>.zip**)は、他のサブパッケージやサービスを含むパッケージとして提供されます。 パッケージには、次のモジュールが含まれます。
 
 * **we-gov-forms.pkg.all-&lt;version>.zip** - *完全なデモパッケージ*
 
@@ -139,7 +139,7 @@ ht-degree: 4%
 1. 「**workflow**」を検索します。
 1. 「**workflow-users**」グループを選択し、「Properties」をクリックします。
 1. 「メンバー」タブに移動します。
-1. 「Select User or Group **」フィールドに** wegovと入力します。
+1. 「Select User or Group **」フィールドに「** wegov」と入力します。
 1. [**We.GovFormsユーザ**]ドロップダウンから選択します。
 
    ![ワークフローユーザーのグループ設定の編集](assets/edit_group_settings.jpg)
@@ -275,7 +275,7 @@ ht-degree: 4%
 
    1. このURLは、ODataサービスを設定する際に、AEMサーバーへのアクセスに使用されるURLと一致する必要があります。
 
-1. 設定表示で、「キー」をクリックして表示が新しいキーを作成します(これはAEMのクライアントシークレットとして使用されます)。
+1. 設定表示で、「キー」をクリックして表示で新しいキーを作成します(これは、AEMのクライアントシークレットとして使用されます)。
 
    1. 後でAzureまたはAEMで表示できないので、キーのコピーを保存してください。
 
@@ -406,7 +406,7 @@ Adobe Analyticsアカウントのユーザー資格情報を見つけるには�
 
    ![Analyticsの完全な管理者アクセス](assets/aftia-full-admin-access.jpg)
 
-1. ユーザーIDがプロファイルにマップされたら、「権限」タブをクリックします。
+1. ユーザーIDがプロファイルにマッピングされたら、「権限」タブをクリックします。
 
 1. すべての権限がプロファイルにマップされていることを確認します。
 
@@ -642,7 +642,7 @@ IMSの設定が完了したら、AEMでクラウド設定を作成できます�
 
 自動Formsコンバージョンサービスには、特定の [ベストプラクティス、既知の複雑なパターン](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、 [既知の問題が含まれています](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 AEM Forms自動Formsコンバージョンサービスの使用を開始する前に、これらを確認してください。
 
-1. 変換後にフォームをFDMに連結する場合は、データ連結を有効にせずにアダプティブフォームを生成します。
+1. 変換後にフォームをFDMに連結する場合は、データ連結を有効にせずに「アダプティブフォームを生成」を生成します。
 
 1. テンプレートフォルダーでjcr:read for everyone権限が有効になっていることを確認してください。有効になっていない場合、サービスユーザーはリポジトリからテンプレートを読み取れなくなり、変換は失敗します。
 
@@ -738,7 +738,7 @@ IMSの設定が完了したら、AEMでクラウド設定を作成できます�
 ### デモに関する考慮事項 {#demo-considerations}
 
 * AGRS-159に従って、登録アダプティブフォームで使用される連絡先の名前（最初、中間、最後）が一意であることを確認します。
-* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスは、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
+* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスを、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
 
 ### 既知の問題 {#known-issues}
 
