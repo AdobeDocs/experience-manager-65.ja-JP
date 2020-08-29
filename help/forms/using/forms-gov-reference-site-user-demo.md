@@ -1,26 +1,26 @@
 ---
-title: We.Gov リファレンスサイトのチュートリアル
-seo-title: We.Gov リファレンスサイトのチュートリアル
-description: We.Govデモパッケージを使用して架空のユーザーおよびグループを使用して、AEM Formsタスクを実行します。
-seo-description: We.Govデモパッケージを使用して架空のユーザーおよびグループを使用して、AEM Formsタスクを実行します。
+title: We.GovとWe.Financeリファレンスサイトのチュートリアル
+seo-title: We.GovとWe.Financeリファレンスサイトのチュートリアル
+description: We.GovおよびWe.Financeデモパッケージを使用して、架空のユーザーおよびグループを使用してAEM Formsタスクを実行します。
+seo-description: We.GovおよびWe.Financeデモパッケージを使用して、架空のユーザーおよびグループを使用してAEM Formsタスクを実行します。
 uuid: 797e301a-36ed-4bae-9ea8-ee77285c786d
 contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1da42d7274e9a4257b9e8effae2b754e0104aa4
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '2536'
-ht-degree: 2%
+source-wordcount: '2548'
+ht-degree: 1%
 
 ---
 
 
-# We.Gov リファレンスサイトのチュートリアル {#we-gov-reference-site-walkthrough}
+# We.GovとWe.Financeリファレンスサイトのチュートリアル {#we-gov-reference-site-walkthrough}
 
 ## 前提条件 {#pre-requisites}
 
-Set up the reference site as described in [Set up and configure We.Gov reference site](../../forms/using/forms-install-configure-gov-reference-site.md).
+We.GovおよびWe.Financeリファレンスサイトの [設定と設定の説明に従って、リファレンスサイトを設定します](../../forms/using/forms-install-configure-gov-reference-site.md)。
 
 ## ユーザーストーリー {#user-story}
 
@@ -260,7 +260,7 @@ Ayaは、サービスリクエスト申込を完了する前に、自宅のド�
 
    ![右円CTA](/help/forms/using/assets/right_circle_cta_new.png)
 
-   フォームは、Ayaの最後のエントリ時点まで入力されます。 Ayaは彼女の情報をすべて入力し、送信する準備ができています。
+   フォームは、Ayaの最後のエントリ時点まで入力されます。 Ayaは彼女の情報をすべて入力し、今すぐ送信する準備ができています。
 
    ![アダプティブフォームの送信](/help/forms/using/assets/submit_adaptive_form.png)
 
