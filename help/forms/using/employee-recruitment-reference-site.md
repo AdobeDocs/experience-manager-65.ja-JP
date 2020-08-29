@@ -8,20 +8,19 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '1435'
+ht-degree: 90%
 
 ---
 
 
 # 従業員採用 reference site walkthrough {#employee-recruitment-reference-site-walkthrough}
 
-## 前提条件 {#prerequisite}
-
-「[AEM Forms リファレンスサイトのセットアップおよび設定](/help/forms/using/setup-reference-sites.md)」を参照してリファレンスサイトをセットアップします。
-
 ## 概要 {#overview}
 
-We.Finance 社のリファレンスサイトポータルを使用すると、ユーザーは求人の募集に申し込むことができます。また、このポータルを使用して、候補者の面接スケジュール、ショートリスト、内部通信を管理します。 このサイトでは以下を管理します。
+We.Finance 社のリファレンスサイトポータルを使用すると、ユーザーは求人の募集に申し込むことができます。また、このポータルを使用して、候補者の面接スケジュール、ショートリスト、内部通信も管理します。 このサイトでは以下を管理します。
 
 * 求人の検索と申し込みの管理
 * 候補者の審査と最終候補者名簿
@@ -38,8 +37,8 @@ We.Finance 社のリファレンスサイトポータルを使用すると、ユ
 
 従業員採用のユースケースには、2 つのワークフローが含まれています。
 
-* 面接前 — We Finance社員採用ワークフロー
-* 面接後 — We Finance社員採用面接後のワークフロー
+* 面接前 — We Finance社の従業員募集ワークフロー
+* 面接後 — We Finance社員募集ポストインタビューワークフロー
 
 これらのワークフローは、AEM で作成され、次の場所で見つかります。
 
@@ -49,13 +48,13 @@ We.Finance 社のリファレンスサイトポータルを使用すると、ユ
 
 このドキュメントで後述されている We Finance 従業員採用ワークフローのモデルを以下に示します。
 
-![we-finance-employee-recluting-workflow](assets/we-finance-employee-recruiting-workflow.png)
+![we-finance-employee-recluiting-workflow](assets/we-finance-employee-recruiting-workflow.png)
 
 #### We Finance 従業員採用面接後ワークフロー {#we-finance-employee-recruiting-post-interview-workflow}
 
 このドキュメントで後述されている We Finance 従業員採用面接後ワークフローのモデルを以下に示します。
 
-![we-finance-employee-recluting-post-interview-workflow](assets/we-finance-employee-recruiting-post-interview-workflow.png)
+![we-finance-employee-recluiting-post-interview-workflow](assets/we-finance-employee-recruiting-post-interview-workflow.png)
 
 ### 登場人物 {#personas}
 
@@ -84,11 +83,11 @@ Sarah は、掲載されている求人の「Apply」（申し込む）をクリ
 
 ### 仕組み {#how-it-works}
 
-We.Finance ホームページと採用ページは、AEM サイトのページです。採用ページにはアダプティブフォームが埋め込まれており、繰り返し可能なパネルを使用して、サービスを利用している求人を取得し、ページ上に一覧表示します。アダプティブフォームは、で確認できま `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`す。
+We.Finance ホームページと採用ページは、AEM サイトのページです。採用ページにはアダプティブフォームが埋め込まれており、繰り返し可能なパネルを使用して、サービスを利用している求人を取得し、ページ上に一覧表示します。アダプティブフォームは、で確認でき `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`ます。
 
 ### 実際の動作確認 {#see-it-yourself}
 
-に移動し、「キャ `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` リア」をクリ **[!UICONTROL ックしま]**&#x200B;す。 「**[!UICONTROL Search]**」（検索）をクリックして求人のリストを表示し、特定の仕事を見つけて「**[!UICONTROL Apply]**」（申し込む）をクリックします。フォームの詳細を記入し、申込書を送信します。
+に移動し、「 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` キャリア ****」をクリックします。 「**[!UICONTROL Search]**」（検索）をクリックして求人のリストを表示し、特定の仕事を見つけて「**[!UICONTROL Apply]**」（申し込む）をクリックします。フォームの詳細を記入し、申込書を送信します。
 
 申込書に有効な電子メール ID を指定していることを確認してください。このチュートリアルで行われるすべての通信は、指定した電子メール ID を使用して行われます。
 
@@ -100,7 +99,7 @@ Sarah によって送信された求人の申込書を組織が受信します�
 
 John の AEM インボックス
 
-![候補者候補者](assets/candidate-shortlist.png)
+![候補者候補者リスト](assets/candidate-shortlist.png)
 
 John Jacobs は、Sarah Rose のプロファイルを採用担当マネージャーの最終候補者名簿に追加
 
@@ -116,7 +115,7 @@ Go to `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.ht
 
 採用担当マネージャーである Gloria は、最終候補者名簿のプロファイルをタスクとして AEM インボックスに受信します。彼女は審査を行い、候補者である Sarah Rose の面接を承認します。
 
-![花瓶](assets/gloriainbox.png)
+![ガラス箱](assets/gloriainbox.png)
 
 Gloria の AEM インボックス
 
@@ -138,11 +137,11 @@ Go to `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.ht
 
 John Doe は、インボックスに面接のスケジュールのタスクを受信します。John Doe はそのタスクを選択して開き、面接日時、場所、そして面接担当の HR を John Jacob に指定します。John Doe は「Send Invitation Email」（招待メールの送信）をクリックします。電子メールが Sarah に送信され、Sarah の面接タスクが採用担当マネージャーである Gloria に割り当てられます。
 
-![johnjacobsaeminbox](assets/johnjacobsaeminbox.png)
+![johnjacobsaeinbox](assets/johnjacobsaeminbox.png)
 
 John Doe の AEM インボックス
 
-![johndoescheduleinterview](assets/johndoescheduleinterview.png)
+![johndoesscheduleinterview](assets/johndoescheduleinterview.png)
 
 John Doe が面接をスケジュールし詳細を Sarah Rose に送信
 
@@ -158,7 +157,7 @@ Sarah Rose が面接スケジュールを受信
 
 Sarah Rose が面接を受けて合格すると、採用担当マネージャーである Gloria Rios は自分のインボックスから候補者選択タスクを開いて「Select」（選択）をクリックします。Gloria Rios の判断は HR 担当者である John Doe に伝達され、さらに処理が進められます。
 
-![gloriariosinboxoffer](assets/gloriariosinboxoffer.png)
+![gloriarisinboxoffer](assets/gloriariosinboxoffer.png)
 
 Gloria の AEM インボックス
 
@@ -170,7 +169,7 @@ Gloria の AEM インボックス
 
 候補者に組織への採用を通知する前に、経歴を確認する必要があります。John Doe は選択した応募者の詳細情報を開いて確認し、学歴と職歴の一部がまだ入力されていないことに気づきます。John Doe は、「Need More Information」（詳細情報が必要）をクリックします。
 
-![johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
+![johndoeinbox](assets/johndoeinbox.png)![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 
 John Doe は、Sarah Rose に学歴と職歴について詳細情報を要求
 
@@ -178,7 +177,7 @@ John Doe は、Sarah Rose に学歴と職歴について詳細情報を要求
 
 Sarah Rose は、申し込みの手続きを進めるには、さらに情報が必要であることを通知する電子メールを受信します。電子メールには、必要な情報の入力のためのリンクが含まれています。
 
-![sarahroseemailmoredetails](assets/sarahroseemailmoredetails.png)
+![sarahrosemailmoredetails](assets/sarahroseemailmoredetails.png)
 
 Sarah Rose は、申し込みの手続きを進めるにはさらに情報が必要であることを通知する電子メールを受信
 
@@ -208,11 +207,11 @@ John Doe が Sarah により入力された追加情報を見直して承認
 
 John Jacobs は自分のインボックスに経歴チェック要求を確認します。John Jacobs はタスクを開いて、Sarah Rose の入力した情報を確認します。経歴チェックの実行後、John Jacobs は「Go Ahead」（続行）をクリックして、経歴チェックが完了したことを通知します。
 
-![johnjaccobbackgroundcheckinbox](assets/johnjacobsbackgroundcheckinbox.png)
+![johnjaccobvisiongroundcheckinbox](assets/johnjacobsbackgroundcheckinbox.png)
 
 John Jacobs の AEM インボックス
 
-![johnjaccobvisiongroundcheckgoahead](assets/johnjacobsbackgroundcheckgoahead.png)
+![johnjaccobvisiongroundcheckgoad](assets/johnjacobsbackgroundcheckgoahead.png)
 
 経歴チェックの実行後、John Jacobs は「Go Ahead」（続行）をクリック
 
@@ -220,23 +219,23 @@ John Jacobs の AEM インボックス
 
 John Doe は、AEM インボックスに採用通知の送信要求を受信します。John はその要求を開いて詳細を確認します。John Doe は、採用通知の PDF を添付して、「Attach &amp; Send Joining Letter」（採用通知の添付と送信）をクリックします。
 
-![johndoejoiningletterinbox](assets/johndoejoiningletterinbox.png)
+![johndojoiningletterinbox](assets/johndoejoiningletterinbox.png)
 
 John Doe の AEM インボックス
 
-![johndoejoiningletterattachandsend](assets/johndoejoiningletterattachandsend.png)
+![johndojoiningletterattachandsend](assets/johndoejoiningletterattachandsend.png)
 
 John Doe は署名を求める採用通知を送信
 
 ## Sarah Rose が受信して採用通知に署名 {#sarah-rose-receives-and-signs-the-joining-letter}
 
-Sarah Rose が署名を求める採用通知を受信します。Sarahは「ここをクリックしてレターに参加し、確認して署名」をクリックします。 署名するフィールドのある採用通知の PDF が開きます。
+Sarah Rose が署名を求める採用通知を受信します。Sarahは「ここをクリックしてレターに参加中」をクリックし、確認して署名します。 署名するフィールドのある採用通知の PDF が開きます。
 
-![sarahosejoiningletteremail](assets/sarahrosejoiningletteremail.png)
+![sarahrosejoiningletteremail](assets/sarahrosejoiningletteremail.png)
 
 Sarah Rose が署名を求める採用通知を受信
 
-Sarah は、手入力、描画による手書き、署名画像の挿入、またはモバイル機器のタッチスクリーンでの描画のいずれかによって署名できます。名前を入力し、「Click to Sign」をクリックして、参加レターの署名済みコピーをダウンロードします。
+Sarah は、手入力、描画による手書き、署名画像の挿入、またはモバイル機器のタッチスクリーンでの描画のいずれかによって署名できます。名前を入力し、「Click to Sign」をクリックして、Sarahが参加するレターの署名済みコピーをダウンロードします。
 
 ![sarahrosejoininglettersign](assets/sarahrosejoininglettersign.png)
 
