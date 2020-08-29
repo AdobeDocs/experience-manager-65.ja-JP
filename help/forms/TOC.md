@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Forms ユーザーガイド
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: a1ada0e747f46923dc834c872e522e648adae073
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '3719'
+source-wordcount: '3704'
 ht-degree: 70%
 
 ---
@@ -42,11 +42,8 @@ ht-degree: 70%
       + [チュートリアル：テンプレートの作成](using/create-templates-print-web.md)
       + [チュートリアル：インタラクティブ通信の作成](using/create-interactive-communication0.md)
    + AEM Forms Reference Collaterals {#aem-forms-reference-collaterals}
-      + [Web.Financeおよび従業員のセルフサービスリファレンスサイトのセットアップと設定](using/setup-reference-sites.md)
-      + [Web.Govリファレンスサイトのセットアップと設定](/help/forms/using/forms-install-configure-gov-reference-site.md)
-      + [We.Finance リファレンスサイトのチュートリアル](using/finance-reference-site-walkthrough.md)
-      + [We.Gov リファレンスサイトのチュートリアル](/help/forms/using/forms-gov-reference-site-user-demo.md)
-      + [従業員セルフサービスリファレンスサイトのチュートリアル](/help/forms/using/employee-self-service-reference-site.md)
+      + [We.GovおよびWe.Financeリファレンスサイトの設定と設定](/help/forms/using/forms-install-configure-gov-reference-site.md)
+      + [We.GovとWe.Financeリファレンスサイトのチュートリアル](/help/forms/using/forms-gov-reference-site-user-demo.md)
       + [従業員採用リファレンスサイトのチュートリアル](/help/forms/using/employee-recruitment-reference-site.md)
       + [We.Finance Auto Insurance Renewalリファレンスサイト](/help/forms/using/finance-auto-insurance-renewal-reference-site-walkthrough.md)
       + [We.Gov リファレンスサイトの FOIA チュートリアル](/help/forms/using/gov-reference-site-foia-walkthrough.md)
