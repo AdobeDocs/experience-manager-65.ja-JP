@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 translation-type: tm+mt
-source-git-commit: dc7804c9985bf9a14bfad40f546e393b39615dab
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 73%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: dc7804c9985bf9a14bfad40f546e393b39615dab
 
 ![](do-not-localize/correspondence-management.png)
 
-Interactive Communicationsは、ビジネス通信、ドキュメント、明細書、福利厚生通知、マーケティングメール、請求書、ウェルカムキットなど、パーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
+Interactive Communicationsは、ビジネス通信、ドキュメント、明細書、メリット通知、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
 
 ## 主な機能 {#key-capabilities}
 
@@ -30,12 +33,8 @@ Interactive Communicationsは、ビジネス通信、ドキュメント、明細
 * 印刷チャネルと Web チャネル用の統合オーサリングインターフェイスが用意されています。このインターフェイスにより、印刷チャネルから Web チャネルを自動的に生成することができます。
 * 印刷チャネルと Web チャネルでグラフを使用して、視覚的に分かりやすい形式で情報を表現することができます。
 * ドキュメントフラグメントで、ルールエディターとフォームデータモデルを使用することができます。
-* エージェント・ユーザー・インタフェースに、インタラクティブ通信の印刷とWebプレビューが表示される
+* エージェント・ユーザー・インタフェースは、インタラクティブ通信の印刷およびWebプレビューを表示
 * ドラッグアンドドロップ操作でコンポーネントを配置し、印刷チャネルと Web チャネルを短時間で作成することができます。
-
-## サンプルの使用例 {#sample-use-case}
-
-The [Welcome kit for a credit card customer](/help/forms/using/finance-reference-site-walkthrough.md#credit-card-application-walkthrough) sample use case showcases the capabilities of an Interactive Communication.
 
 ## インタラクティブ通信の作成  {#interactive-communication-creation}
 
@@ -68,11 +67,11 @@ To create an Interactive Communication, have the [building blocks](#buildingbloc
 * [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
 * [ドキュメントフラグメント](/help/forms/using/document-fragments.md)
 * 画像
-* [Webチャネル](/help/forms/using/themes.md) 用のテーマ
+* [Webチャネルのテーマ](/help/forms/using/themes.md)
 
 ## インタラクティブ通信と Correspondence Management の比較 {#interactive-communications-vs-correspondence-management}
 
-顧客とのコミュニケーションを作成するためのデフォルトの方法は、Interactive Communicationです。 AEM 6.3 Forms または AEM 6.2 Forms で作成したレターを引き続き使用する場合は、[互換性パッケージをインストールする必要があります](/help/forms/using/compatibility-package.md)。以下は、Interactive CommunicationとLetterの機能の比較です。
+顧客とのコミュニケーションを作成するための、Interactive Communicationはデフォルトで推奨されるアプローチです。 AEM 6.3 Forms または AEM 6.2 Forms で作成したレターを引き続き使用する場合は、[互換性パッケージをインストールする必要があります](/help/forms/using/compatibility-package.md)。以下は、対話型通信とレターの機能の比較です。
 
 <table>
  <tbody>
@@ -108,7 +107,7 @@ To create an Interactive Communication, have the [building blocks](#buildingbloc
   <tr>
    <td>オーサリング</td>
    <td>ドラッグアンドドロップ方式のインターフェイスを使用して、印刷チャネルと Web チャネルを作成できる</td>
-   <td>ドラッグ&amp;ドロップのメカニズムなし </td>
+   <td>ドラッグ&amp;ドロップメカニズムなし </td>
   </tr>
   <tr>
    <td>グラフ</td>
