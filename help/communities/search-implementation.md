@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1189'
-ht-degree: 46%
+ht-degree: 40%
 
 ---
 
@@ -83,18 +83,18 @@ Custom search features should use the [UGC search API](#ugc-search-api).
 
 #### Oak インデックスの作成 {#oak-indexing}
 
-AEM プラットフォーム検索用に Oak インデックスが自動的に作成されることはありませんが、AEM 6.2 以降では、AEM Communities のパフォーマンスを向上させ、UGC 検索結果を表示する際のページネーションに対応する目的で、インデックスが追加されています。
+AEMプラットフォーム検索では、Oakインデックスは自動的には作成されませんが、AEM 6.2以降では、パフォーマンスを向上させ、UGC検索結果を表示する際のページネーションをサポートするため、AEM Communities向けに追加されています。
 
-カスタムプロパティを使用していて、検索速度が遅い場合は、カスタムプロパティに対して追加のインデックスを作成し、パフォーマンスを向上させる必要があります。To maintain portability, adhere to the [naming requirements](#naming-of-custom-properties) when creating custom properties that are searchable.
+カスタムプロパティが使用中で検索が遅い場合は、カスタムプロパティのパフォーマンスを高めるために、カスタムプロパティ用に追加のインデックスを作成する必要があります。 To maintain portability, adhere to the [naming requirements](#naming-of-custom-properties) when creating custom properties that are searchable.
 
-To modify existing indices or create custom indices, refer to [Oak Queries and Indexing](../../help/sites-deploying/queries-and-indexing.md).
+To modify existing indexes or create custom indexes, refer to [Oak Queries and Indexing](../../help/sites-deploying/queries-and-indexing.md).
 
 The [Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) is available from ACS AEM Commons. 次の機能が提供されます。
 
 * 既存のインデックスの表示。
 * 再インデックスを開始する機能。
 
-[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) で既存の Oak インデックスを表示するには、次の場所に移動します。
+[CRXDE Lite内の既存のOakインデックスを表示するには](../../help/sites-developing/developing-with-crxde-lite.md)、次の場所に移動します。
 
 * `/oak:index/socialLucene`
 
