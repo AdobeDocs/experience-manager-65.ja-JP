@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+workflow-type: tm+mt
+source-wordcount: '537'
+ht-degree: 93%
 
 ---
 
@@ -54,7 +57,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
 
-* **無効なJSON行インターフェイスを使用して、各行に別々のJSONドキュメントを生成する**。
+* **無効なJSON行インターフェイスを使用して、各行に個別のJSONドキュメントを生成します。
 
 これらの方法の詳細を次に示します。
 
@@ -216,7 +219,7 @@ curl からの出力全体をファイルに保存した後、`jq` または `gr
 
 * OSGi バンドルのエクスポートとインポートの不一致
 * Sling リソースタイプとスーパータイプ（検索パスのコンテンツオーバーレイを含む）の過剰使用
-* Oak インデックスの定義（互換性）
+* Oakインデックスの定義（互換性）
 * VLT パッケージ（過剰使用）
 * rep：ユーザーノードの互換性（OAuth 設定のコンテキストで）
 
