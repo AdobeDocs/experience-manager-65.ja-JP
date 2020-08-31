@@ -10,7 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+workflow-type: tm+mt
+source-wordcount: '5029'
+ht-degree: 80%
 
 ---
 
@@ -30,16 +33,16 @@ ContextHub ストアに対して発生する名前付きイベントを次の表
 | 定数 | 説明 | 値 |
 |---|---|---|
 | ContextHub.Constants.EVENT_NAMESPACE | ContextHubのイベント名前空間 | ch |
-| ContextHub.Constants.EVENT_ALL_STORES_READY | 必要なすべてのストアが登録され、初期化され、使用可能な状態であることを示す | 全店舗対応の |
-| ContextHub.Constants.EVENT_STORES_PARTIALLY_READY | 指定されたタイムアウト内にすべてのストアが初期化されなかったことを示します | 部分的に準備された |
-| ContextHub.Constants.EVENT_STORE_REGISTERED | ストアの登録時に実行 | 店舗登録の |
+| ContextHub.Constants.EVENT_ALL_STORES_READY | 必要なすべてのストアが登録、初期化され、使用可能な状態であることを示す | 全店舗対応の |
+| ContextHub.Constants.EVENT_STORES_PARTIALLY_READY | 指定されたタイムアウト内に一部のストアが初期化されなかったことを示す | 部分的に準備された |
+| ContextHub.Constants.EVENT_STORE_REGISTERED | ストアの登録時に発生します | 店舗登録の |
 | ContextHub.Constants.EVENT_STORE_READY | ストアが動作する準備ができていることを示します。 JSONP ストア（データが取得されると実行される）を除き、登録後すぐにトリガーされる。 | 店舗対応の |
-| ContextHub.Constants.EVENT_STORE_UPDATED | ストアが永続性を更新した場合に実行されます | 店舗で更新された |
-| ContextHub.Constants.PERSISTENCE_CONTAINER_NAME | 永続化コンテナ名 | ContextHubPersistence |
-| ContextHub.Constants.SERVICE_RAW_RESPONSE_KEY | 生のJSON結果が保存される特定の永続化キー名を格納します | /_/raw-response |
-| ContextHub.Constants.SERVICE_RESPONSE_TIME_KEY | JSONデータが取得された日時を示す特定のタイムスタンプを格納します | /_/response-time |
+| ContextHub.Constants.EVENT_STORE_UPDATED | ストアが永続性を更新した場合に発生します | 店舗で更新された |
+| ContextHub.Constants.PERSISTENCE_CONTAINER_NAME | 永続性コンテナ名 | ContextHubPersistence |
+| ContextHub.Constants.SERVICE_RAW_RESPONSE_KEY | 生のJSON結果が保存される特定の永続性キー名を格納します | /_/raw-response |
+| ContextHub.Constants.SERVICE_RESPONSE_TIME_KEY | JSONデータがフェッチされた日時を示す特定のタイムスタンプを格納します | /_/response-time |
 | ContextHub.Constants.SERVICE_LAST_URL_KEY | 前回の呼び出しで使用されたJSONサービスの特定のURLを格納 | /_/URL |
-| ContextHub.Constants.IS_CONTAINER_EXPANDED | ContextHubのUIが展開されているかどうかを示します | /_/container-expanded |
+| ContextHub.Constants.IS_CONTAINER_EXPANDED | ContextHubのUIが展開されているかどうかを示します | /_/コンテナ拡張 |
 
 ### UI イベント定数 {#ui-event-constants}
 
@@ -47,25 +50,25 @@ ContextHub ストアに対して発生する名前付きイベントを次の表
 
 | **定数** | **説明** | **値** |
 |---|---|---|
-| ContextHub.Constants.EVENT_UI_MODE_REGISTERED | モードが登録されると実行されます | ui-mode-registered |
-| ContextHub.Constants.EVENT_UI_MODE_UNREGISTERED | モードが未登録の場合に実行されます | ui-mode-unregistered |
-| ContextHub.Constants.EVENT_UI_MODE_RENDERER_REGISTERED | モードレンダラが登録されると実行されます | ui-mode-renderer-registered |
-| ContextHub.Constants.EVENT_UI_MODE_RENDERER_UNREGISTERED | モードレンダラーの登録を解除すると実行されます | ui-mode-renderer-unregistered |
-| ContextHub.Constants.EVENT_UI_MODE_ADDED | 新しいモードが追加されると実行されます | ui-mode-added |
-| ContextHub.Constants.EVENT_UI_MODE_REMOVED | モードが削除されると実行されます | ui-mode-removed |
+| ContextHub.Constants.EVENT_UI_MODE_REGISTERED | モードが登録されたときに発生します | ui-mode-registered |
+| ContextHub.Constants.EVENT_UI_MODE_UNREGISTERED | モードが未登録の場合に発生します | ui-mode-unregistered |
+| ContextHub.Constants.EVENT_UI_MODE_RENDERER_REGISTERED | モードレンダラーが登録されたときに発生します | ui-mode-renderer-registered |
+| ContextHub.Constants.EVENT_UI_MODE_RENDERER_UNREGISTERED | モードレンダラーの登録が解除されると発生します | ui-mode-renderer-unregistered |
+| ContextHub.Constants.EVENT_UI_MODE_ADDED | 新しいモードが追加されたときに発生します | ui-modeが追加された |
+| ContextHub.Constants.EVENT_UI_MODE_REMOVED | モードが削除されたときに発生します | ui-mode-removed |
 | ContextHub.Constants.EVENT_UI_MODE_SELECTED | ユーザーがモードを選択した場合に呼び出されます | ui-mode-selected |
-| ContextHub.Constants.EVENT_UI_MODULE_REGISTERED | 新しいモジュールが登録されると発生します | ui-module-registered |
-| ContextHub.Constants.EVENT_UI_MODULE_UNREGISTERED | モジュールが未登録のときに起動します | ui-module-unregistered |
-| ContextHub.Constants.EVENT_UI_MODULE_RENDERER_REGISTERED | モジュールレンダラーが登録されると呼び出されます。 | ui-module-renderer-registered |
-| ContextHub.Constants.EVENT_UI_MODULE_RENDERER_UNREGISTERED | モジュールレンダラが未登録のときに呼び出されます。 | ui-module-renderer-unregistered |
-| ContextHub.Constants.EVENT_UI_MODULE_ADDED | 新しいモジュールが追加されたときに呼び出されます | ui-module-added |
-| ContextHub.Constants.EVENT_UI_MODULE_REMOVED | モジュールが取り外されたときに実行 | ui-module-removed |
-| ContextHub.Constants.EVENT_UI_CONTAINER_ADDED | UIコンテナがページに追加されたときに呼び出されます | ui-container-added |
-| ContextHub.Constants.EVENT_UI_CONTAINER_OPENED | ContextHub UIが開かれたときに実行されます | ui-container-opened |
-| ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED | ContextHub UIが折りたたまれている場合に発生します | ui-container-closed |
-| ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED | プロパティが変更された場合に実行されます | ui-property-modified |
-| ContextHub.Constants.EVENT_UI_RENDERED | ContextHub UIがレンダリングされるたび（例えば、プロパティの変更後）に呼び出されます。 | ui-rendered |
-| ContextHub.Constants.EVENT_UI_INITIALIZED | UIコンテナが初期化されると発生します | ui-initialized |
+| ContextHub.Constants.EVENT_UI_MODULE_REGISTERED | 新しいモジュールが登録されたときに発生します | ui-module-registered |
+| ContextHub.Constants.EVENT_UI_MODULE_UNREGISTERED | モジュールの登録を解除すると発生します | ui-module-unregistered |
+| ContextHub.Constants.EVENT_UI_MODULE_RENDERER_REGISTERED | モジュールレンダラーが登録されたときに発生します | ui-module-renderer-registered |
+| ContextHub.Constants.EVENT_UI_MODULE_RENDERER_UNREGISTERED | モジュールレンダラーの登録が解除されたときに発生します | ui-module-renderer-unregistered |
+| ContextHub.Constants.EVENT_UI_MODULE_ADDED | 新しいモジュールが追加されたときに発生します | ui-moduleが追加された |
+| ContextHub.Constants.EVENT_UI_MODULE_REMOVED | モジュールが削除されたときに発生します | ui-module-removed |
+| ContextHub.Constants.EVENT_UI_CONTAINER_ADDED | UIコンテナがページに追加されたときに発生します | ui-コンテナが追加した |
+| ContextHub.Constants.EVENT_UI_CONTAINER_OPENED | ContextHub UIが開かれたときに発生します | ui-コンテナが開いた |
+| ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED | ContextHub UIが折りたたまれている場合に発生します | ui-コンテナ閉 |
+| ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED | プロパティが変更された場合に発生します | ui-property-modified |
+| ContextHub.Constants.EVENT_UI_RENDERED | ContextHub UIがレンダリングされるたび（例：プロパティの変更後）に実行されます | ui-rendered |
+| ContextHub.Constants.EVENT_UI_INITIALIZED | UIコンテナが初期化されたときに発生します | ui-initialized |
 | ContextHub.Constants.ACTIVE_UI_MODE | アクティブなUIモードを示します。 | /_/active-ui-mode |
 
 ## ContextHub JavaScript API リファレンス {#contexthub-javascript-api-reference-2}
@@ -151,7 +154,7 @@ ContextHub ストアのベースクラス。
 
 [ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) オブジェクト。このオブジェクトを使用して、関数をストアイベントにバインドします。For information about the default value and initialization, see [init(name,config)](/help/sites-developing/contexthub-api.md#init-name-config).
 
-#### 名前 {#name}
+#### name {#name}
 
 ストアの名前。
 
@@ -165,8 +168,8 @@ ContextHub.Utils.Persistence オブジェクト。For information about the defa
 
 データオブジェクトまたは配列とストアデータを結合します。オブジェクトのキーと値の各ペアまたは配列が（`setItem` 関数を使用して）ストアに追加されます。
 
-* **** オブジェクト：キーはプロパティ名です。
-* **配列：**&#x200B;キーは配列のインデックスです。
+* **オブジェクト：** キーはプロパティ名です。
+* **配列：** キーは配列インデックスです。
 
 値にオブジェクトを使用できます。
 
@@ -237,7 +240,7 @@ ContextHub.Utils.Persistence オブジェクト。For information about the defa
 
 **戻り値**
 
-参照キーを被参照キーのインデックスとして使用する配列。
+参照キーを参照キーのインデックスとして使用する配列：
 
 * Referencing keys correspond with the `key` parameter of the `addReference` function.
 
@@ -249,7 +252,7 @@ ContextHub.Utils.Persistence オブジェクト。For information about the defa
 
 **パラメーター**
 
-* `includeInternals:` の値は、内部的 `true` に使用されるキーと値のペアを結果に含みます。 このデータのキーは、アンダースコア（&quot;_&quot;）文字で始まります。デフォルト値は `false` です。
+* `includeInternals:` の値は、内部的に使用されたキーと値のペアを結果に `true` 含めます。 このデータのキーは、アンダースコア（&quot;_&quot;）文字で始まります。デフォルト値は `false` です。
 
 **戻り値**
 
@@ -293,7 +296,7 @@ ContextHub.Utils.Persistence オブジェクト。For information about the defa
 
 キーと値のペアをストアから削除します。
 
-キーが削除されると、この関数が `data` イベントを発生させます。イベントデータには、ストア名、削除されたキーの名前、削除された値、キーの新しい値(null)およびアクションタイプ「remove」が含まれます。
+キーが削除されると、この関数が `data` イベントを発生させます。イベントデータには、ストア名、削除されたキーの名前、削除された値、キーの新しい値(null)、およびアクションタイプ「remove」が含まれます。
 
 オプションで、`data` イベントを発生させないようにすることができます。
 
@@ -411,7 +414,7 @@ ContextHub.Store.JSONPStore extends [ContextHub.Store.Core](/help/sites-developi
    * port：（Number）サービスのポート番号。
    * secure：（String または Boolean）サービス URL に使用するプロトコルを決定します。
 
-      * auto：//
+      * auto: //
       * true：https://
       * false:https://
 
@@ -436,12 +439,12 @@ JSONP サービスへの最後の呼び出し以降キャッシュされてい�
 * **host：**（String）サーバーの名前または IP アドレス。
 * **jsonp：**（Boolean）値 true はサービスが JSONP サービスであることを示します。それ以外は false です。true の場合、{callback: &quot;ContextHub.Callbacks.*Object.name*} オブジェクトが service.params オブジェクトに追加されます。
 
-* **** params:（オブジェクト）オブジェクトプロパティとして表されるURLパラメーター。 パラメーター名はプロパティ名で、パラメーター値はプロパティ値です。
+* **params:** （オブジェクト）オブジェクトプロパティとして表されるURLパラメーター。 パラメーター名はプロパティ名で、パラメーター値はプロパティ値です。
 * **path：**（String）サービスへのパス。
 * **port：**（Number）サービスのポート番号。
 * **secure：**（String または Boolean）サービス URL に使用するプロトコルを決定します。
 
-   * auto：//
+   * auto: //
    * true：https://
    * false:https://
 
@@ -472,13 +475,13 @@ ContextHub.Store.JSONPStore オブジェクトを初期化します。
    * サービス：（オブジェクト）
 
       * host：（String）サーバーの名前または IP アドレス。
-      * jsonp：（Boolean）値 true はサービスが JSONP サービスであることを示します。それ以外は false です。trueの場合、オブジ `{callback: "ContextHub.Callbacks.*Object.name*}`ェクトはに追加されま `service.params`す。
+      * jsonp：（Boolean）値 true はサービスが JSONP サービスであることを示します。それ以外は false です。trueの場合、 `{callback: "ContextHub.Callbacks.*Object.name*}`オブジェクトはに追加され `service.params`ます。
       * params:（オブジェクト）オブジェクトプロパティとして表されるURLパラメーター。 パラメーターの名前と値は、それぞれオブジェクトのプロパティの名前と値です。
       * path：（String）サービスへのパス。
       * port：（Number）サービスのポート番号。
       * secure：（String または Boolean）サービス URL に使用するプロトコルを決定します。
 
-         * auto：//
+         * auto: //
          * true：https://
          * false:https://
       * timeout：（Number）タイムアウトまでに JSONP サービスの応答を待機する時間（ミリ秒単位）。
@@ -533,8 +536,8 @@ UI モジュールレンダラーを ContextHub に登録します。登録後�
 
 **パラメーター**
 
-* **moduleType：**（String）UI モジュールレンダラーの識別子。レンダラーが指定された値を使用して既に登録されている場合、このレンダラーが登録される前に、既存のレンダラーの登録が解除されます。
-* **** レンダラ：（文字列）UIモジュールをレンダリングするクラスの名前。
+* **moduleType：**（String）UI モジュールレンダラーの識別子。レンダラーが指定された値を使用して既に登録されている場合、このレンダラーが登録される前に、既存のレンダラーは登録されません。
+* **renderer:** （文字列） UIモジュールをレンダリングするクラスの名前。
 * **dontRender：**（Boolean）レンダラーの登録後に ContextHub UI がレンダリングされないようにするには、`true` に設定します。デフォルト値は `false` です。
 
 **例**
@@ -710,7 +713,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **パラメーター**
 
-* **** 名前：関数 [のバインドを解除する](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 、イベントの名前。
+* **name:** 関数のバインドを解除するイベント [](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) の名前。
 
 * **selector：**&#x200B;バインドを識別するセレクター(See the `selector` parameter for the [on](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents) and [once](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents) functions).
 
@@ -727,7 +730,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 * **name：**（String）関数をバインドする[イベントの名前](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)。
 
 * **handler：**（Function）イベントにバインドする関数。
-* **** selector:（文字列）バインドの一意の識別子。 `off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
+* **selector:** （文字列）バインドの一意の識別子。 `off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
 
 * **triggerForPastEvents：**（Boolean）過去に発生したイベントに対してハンドラーを実行するかどうかを示します。値 `true` は、過去のイベントに対してハンドラーを呼び出します。値 `false` は、未来のイベントに対してハンドラーを呼び出します。デフォルト値は `true` です。
 
@@ -742,7 +745,7 @@ If `triggerForPastEvents` is `false`, this function returns no value.
 
 **例**
 
-次の例では、関数を位置情報ストアのdataイベントに連結します。 この関数は、ページ上の要素にストアの緯度データ項目の値を入力します。
+次の例は、関数を位置情報ストアのデータイベントに連結します。 この関数は、ページ上の要素にストアの緯度データ項目の値を入力します。
 
 ```
 <div class="location">
@@ -769,7 +772,7 @@ If `triggerForPastEvents` is `false`, this function returns no value.
 * **name：**（String）関数をバインドする[イベントの名前](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)。
 
 * **handler：**（Function）イベントにバインドする関数。
-* **** selector:（文字列）バインドの一意の識別子。 `off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
+* **selector:** （文字列）バインドの一意の識別子。 `off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
 
 * **triggerForPastEvents：**（Boolean）過去に発生したイベントに対してハンドラーを実行するかどうかを示します。値 `true` は、過去のイベントに対してハンドラーを呼び出します。値 `false` は、未来のイベントに対してハンドラーを呼び出します。デフォルト値は `true` です。
 
@@ -863,8 +866,8 @@ ContextHub.Utils.JSON.stringify({
 
 **パラメーター**
 
-* **** ツリー：コピーされるオブジェクトです。
-* **** secondTree:オブジェクトのコピーとマージされるオブジェ `tree` クト。
+* **tree:** コピーされるオブジェクトです。
+* **secondTree:** オブジェクトのコピーと結合されるオブジェクト `tree` です。
 
 **戻り値**
 
@@ -947,7 +950,7 @@ Object {
 
 * **tree：**&#x200B;データツリーのキーの取得元となるオブジェクト。
 * **parent：**（オプション）子項目のキーを取得するデータツリー内の項目のキー。
-* **order：**（オプション）返されたキーのソート順を判断する関数（Mozilla Developer Network の [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) を参照）。
+* **order：**（オプション）返されたキーのソート順を判断する関数（Mozilla Developer Network の [Array.prototype.sort](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) を参照）。
 
 **戻り値**
 
@@ -1039,7 +1042,7 @@ myObject {
 
 作成された配列を使用して、使用可能なキーを作成します。**パラメーター**
 
-* **** キー：衛生 `string` 化する。
+* **key:** 消毒 `string` する。
 
 **戻り値**
 
@@ -1067,7 +1070,7 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 **戻り値**
 
-A copy of the `tree` object that includes the `key`/ `value` pair.
+`tree` / `key``value` ペアを含むオブジェクトのコピー。
 
 **例**
 
@@ -1142,7 +1145,7 @@ myObject オブジェクトは次の値を持ちます。
 
 * **store：**（Object）ストア候補として登録するストアオブジェクト。
 * **storeType：**（String）ストア候補の名前。この値は、ストア候補のインスタンスを作成する際に必要です。
-* **** priority:（番号）店舗候補の優先順位。
+* **priority:** （番号）ストア候補の優先順位。
 * **applies：**（Function）現在の環境内でのストアの適用可能性を評価するために呼び出す関数。この関数は、ストアを適用できる場合は `true`、それ以外の場合は `false` を返す必要があります。The default value is a function that returns true: `function() {return true;}`
 
 **例**
