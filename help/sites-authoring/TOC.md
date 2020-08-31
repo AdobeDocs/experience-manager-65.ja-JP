@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.5オーサリングユーザーガイド
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '272'
 ht-degree: 89%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 89%
 # AEM 6.5 Authoring User Guide {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEMオーサリングに不可欠なタスク、ツール、概念 {#essentials}
++ AEMオーサリングに不可欠なタスク、ツールおよび概念 {#essentials}
    + [作成者が行う最初の手順](first-steps.md)
    + [ページオーサリング](page-authoring.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
@@ -53,7 +53,6 @@ ht-degree: 89%
    + [レスポンシブレイアウト](responsive-layout.md)
    + [コンテンツインサイト](content-insights.md)
    + [アクセシブルなコンテンツ（WCAG 2.1 適合）の作成 ](creating-accessible-content.md)
-   + [基礎モード](scaffolding.md)
    + [デザインモードでのコンポーネントの設定](default-components-designmode.md)
    + [基盤コンポーネント](default-components-foundation.md)
    + [基礎モード](scaffolding.md)
