@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 translation-type: tm+mt
-source-git-commit: f465b6ffd1a93ddad3db0caf00d4ff797e1b189f
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 1%
@@ -147,7 +147,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 **生成されたインデックス定義に対してオフラインインデックス作成を実行します**
 
-Luceneの再インデックスは、oak-runを使用してオフラインで実行できます。 このプロセスは、のディスクにインデックスデータを作成し `indexing-result/indices`ます。 リポジトリに **書き込みを行わないため** 、実行中のAEMインスタンスを停止する必要はありません。 作成したテキストストアは、次の処理に入力されます。
+Luceneの再インデックスは、oak-runを使用してオフラインで実行できます。 このプロセスは、のディスクにインデックスデータを作成し `indexing-result/indexes`ます。 リポジトリに **書き込みを行わないため** 、実行中のAEMインスタンスを停止する必要はありません。 作成したテキストストアは、次の処理に入力されます。
 
 ```
 java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --reindex --doc-traversal-mode --checkpoint <checkpoint> --fds-path <datastore path> --index-definitions-file merge-index-definitions_target.json --pre-extracted-text-dir text-extraction/store
@@ -155,7 +155,7 @@ java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --re
 Sample <checkpoint> looks like r16c85700008-0-8
 —fds-path: path to data store.
 --pre-extracted-text-dir: Directory of pre-extracted text.
-merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indices in this file will be re-indexed.
+merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indexes in this file will be re-indexed.
 ```
 
 この `--doc-traversal-mode` パラメーターはMongoMKのインストールで使用すると便利です。リポジトリのコンテンツをローカルフラットファイルにスプールすることで、再インデックス時間が大幅に短縮されます。 ただし、リポジトリのサイズと同じ重複領域が追加で必要になります。
@@ -164,9 +164,9 @@ MongoMKの場合、この手順がMongoDBインスタンスに近いインスタ
 
 技術的な詳細については、 [oak-runのドキュメントでインデックス作成に関する詳細を参照してください](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)。
 
-### インデックスの読み込み {#importing-indices}
+### インデックスのインポート {#importing-indexes}
 
-AEM 6.4以降のバージョンでは、AEMには、起動シーケンスに基づいてディスクからインデックスを読み込む機能が組み込まれています。 起動中にインデックスデータが存在するかどうかをフォルダー `<repository>/indexing-result/indices` が監視します。 新しいバージョンの [ターゲット](in-place-upgrade.md#performing-the-upgrade)**** AEM jarを使用する前に、アップグレードプロセス中に、事前に作成されたインデックスを上記の場所にコピーできます。 AEMはそれをリポジトリにインポートし、対応するチェックポイントをシステムから削除します。 これにより、再インデックスを完全に回避する。
+AEM 6.4以降のバージョンでは、AEMには、起動シーケンスでディスクからインデックスをインポートする機能が組み込まれています。 起動中にインデックスデータが存在するかどうかをフォルダー `<repository>/indexing-result/indexes` が監視します。 新しいバージョンの [ターゲット](in-place-upgrade.md#performing-the-upgrade)**** AEM jarを使用する前に、アップグレードプロセス中に、事前に作成されたインデックスを上記の場所にコピーできます。 AEMはそれをリポジトリにインポートし、対応するチェックポイントをシステムから削除します。 これにより、再インデックスを完全に回避する。
 
 ## その他のヒントとトラブルシューティング {#troubleshooting}
 
