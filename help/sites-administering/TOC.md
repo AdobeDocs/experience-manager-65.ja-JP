@@ -2,12 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: AEM 6.5管理ユーザーガイド
+user-guide-title: AEM 6.5 Administering User Guide
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '619'
 ht-degree: 96%
 
 ---
@@ -137,7 +137,6 @@ ht-degree: 96%
    + [AEM Livefyre のレシピ](aem-livefyre-recipes.md)
    + [統合に関する問題のトラブルシューティング](troubleshooting-integration-issues.md)
    + [BrightEdge Content Optimizer との結合](brightedge.md)
-   + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
    + [カタログ作成](catalog-producer.md)
    + [Experience Cloud および Creative Cloud との AEM Assets 統合の設定](configure-assets-cc-integration.md)
    + [Silverpop Engage との統合](silverpop.md)
