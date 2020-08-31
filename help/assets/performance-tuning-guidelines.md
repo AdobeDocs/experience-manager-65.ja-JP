@@ -4,7 +4,7 @@ description: 構成、ハードウェア、ソフトウェア、ネットワー�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5a421c66930d8c7a9eb633c707b4b51d4549b303
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '2746'
 ht-degree: 52%
