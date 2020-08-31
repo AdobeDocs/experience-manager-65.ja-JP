@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.5デプロイガイド
 user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.5, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 95%
+source-wordcount: '328'
+ht-degree: 92%
 
 ---
 
@@ -68,6 +68,7 @@ ht-degree: 95%
    + [AEM 6.5 における後方互換性](backward-compatibility.md)
    + [アップグレード手順](upgrade-procedure.md)
    + [インプレースアップグレードの実行](in-place-upgrade.md)
+   + [オフライン再インデックスを使用したアップグレード中のダウンタイムの短縮](upgrade-offline-reindexing.md)
    + [遅延コンテンツ移行](lazy-content-migration.md)
    + [CRX2Oak 移行ツールの使用](using-crx2oak.md)
    + [アップグレード前のメンテナンスタスク](pre-upgrade-maintenance-tasks.md)
