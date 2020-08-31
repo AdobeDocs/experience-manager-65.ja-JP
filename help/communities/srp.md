@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1141'
-ht-degree: 63%
+ht-degree: 62%
 
 ---
 
@@ -61,7 +61,7 @@ UGC の場合、コンテンツは公開のパブリッシュ環境で登録済�
 
 ## SRP について {#about-srp}
 
-UGC が共有ストレージに格納される場合、ほとんどのデプロイメントでオーサー環境とパブリッシュ環境の両方からアクセスできるメンバーコンテンツの単一インスタンスがあります。SRPの選択(MSRP、ASRP、JSRP)に関係なく、すべてSRP APIを使用してプログラムからアクセスする必要があります。
+UGC が共有ストレージに格納される場合、ほとんどのデプロイメントでオーサー環境とパブリッシュ環境の両方からアクセスできるメンバーコンテンツの単一インスタンスがあります。SRPの選択(MSRP、ASRP、JSRP)に関係なく、すべてのSRP APIを使用してプログラムからアクセスする必要があります。
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ JSRP の場合、UGC は JCR に格納され、CRXDE Lite と JCR API の両方�
 
 さらに、オーサー環境とパブリッシュ環境のリポジトリは共有されません。発行インスタンスのクラスターは共有発行リポジトリになりますが、発行時に入力されたUGCは作成者に表示されないので、作成者からUGCを管理することはできません。 UGCは、そのUGCが入力されたインスタンスのAEMリポジトリ(JCR)でのみ持続します。
 
-JSRP では検索に Oak インデックスが使用されます。
+JSRPはOakインデックスをクエリに使用します。
 
 ## JCR でのシャドウノードについて {#about-shadow-nodes-in-jcr}
 
