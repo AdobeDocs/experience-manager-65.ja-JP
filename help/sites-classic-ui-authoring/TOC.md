@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Classic UIオーサリングユーザーガイド
 user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '257'
 ht-degree: 89%
 
 ---
@@ -61,10 +61,8 @@ ht-degree: 89%
 + パーソナライゼーション {#personalization}
    + [セグメント化について](classic-personalization-campaigns-segmentation.md)
    + [キャンペーンの管理](classic-personalization-campaigns.md)
-   + [ティーザーと戦略](classic-personalization-campaigns-teasers-strategy.md)
    + [ランディングページ](classic-personalization-campaigns-landingpage.md)
    + [Target オファー](classic-personalization-campaigns-target-offers.md)
-   + [Marketing Campaign Manager の使用](classic-personalization-campaigns-mktg-manager.md)
    + [電子メールマーケティング](classic-personalization-campaigns-email.md)
    + [バウンス（配信不能）電子メールの追跡](classic-personalization-campaigns-email-tracking-bounces.md)
    + [ティーザーと戦略](classic-personalization-campaigns-teasers-strategy.md)
