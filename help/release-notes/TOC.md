@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.5 リリースノート
 user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: c1af919d4c0fd984249e1a7009274c63b8ce9adb
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 73%
+source-wordcount: '57'
+ht-degree: 66%
 
 ---
 
@@ -23,8 +23,9 @@ ht-degree: 73%
    + [以前のService Packリリースノート](previous-hotfixes-featurepacks.md)
 + [AEM Sites リリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
++ [AEM FormsJEEパッチインストーラー](jee-patch-installer-65.md)
 + [AEM Communities リリースノート](communities-release-notes.md)
 + [廃止される機能および削除された機能](deprecated-removed-features.md)
 + [既知の問題](known-issues.md)
-+ [AEM Foundationとリポジトリ](wcm-platform.md)
++ [AEM FoundationとRepository](wcm-platform.md)
 + [タッチ操作対応 UI 機能のステータス](touch-ui-features-status.md)
