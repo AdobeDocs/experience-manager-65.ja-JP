@@ -156,7 +156,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 >
 >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
 
-### {#delete} を削除します。
+### を削除します。 {#delete}
 
 指定されたパスにある項目が削除されます。
 
