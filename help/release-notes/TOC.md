@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: AEM 6.5 リリースノート
 user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: c1af919d4c0fd984249e1a7009274c63b8ce9adb
+source-git-commit: 5b4c684e3ebf2f4c37cfe3244c0118cd994093fb
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 66%
@@ -19,7 +19,7 @@ ht-degree: 66%
 + [一般的なリリースノート](release-notes.md)
 + Service Pack リリースノート {#service-pack}
    + [新機能](new-features-latest-service-pack.md)
-   + [Service Pack 5 リリースノート](sp-release-notes.md)
+   + [Service Pack 6 リリースノート](sp-release-notes.md)
    + [以前のService Packリリースノート](previous-hotfixes-featurepacks.md)
 + [AEM Sites リリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
