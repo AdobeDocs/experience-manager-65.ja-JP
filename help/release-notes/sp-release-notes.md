@@ -4,7 +4,7 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6da27dfda2bb504fc7a1de24260e94141f1a22ab
+source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
 workflow-type: tm+mt
 source-wordcount: '4407'
 ht-degree: 7%
@@ -154,7 +154,7 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
    *図：[!UICONTROL []ヘルプメニューの[ヘルプ]]を検索*
 
-   * 「 [!ICONTROL ユーザー] 」オプションの「次として動作」フィールドに誤った値が入力され、フォーカスが正しくテキストフィールド(NPR-33804)に移動した場合に、エラーメッセージが表示されます。
+   * 「 [!UICONTROL ユーザー] 」オプションの「次として動作」フィールドに誤った値が入力され、フォーカスが正しくテキストフィールド(NPR-33804)に移動した場合に、エラーメッセージが表示されます。
 
    ![ヘッダーのユーザーメニュー](assets/User_aem_header.png)
 
