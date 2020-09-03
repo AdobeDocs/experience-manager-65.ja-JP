@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
+source-git-commit: 32addae877604a242c97eac3ed81bbc2f55ec60a
 workflow-type: tm+mt
-source-wordcount: '4407'
+source-wordcount: '4423'
 ht-degree: 7%
 
 ---
@@ -361,6 +361,8 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 * Designerを開くと、スタートアップスクリーンに正しくない年が表示されます(CQ-4295289)。
 
 * をサーバー [!DNL Acrobat DC] にインストールすると、「フォームの **[!UICONTROL 配布]** 」オプションは非アクティブになります(CQ-4296304)。
+
+セキュリティ更新について詳しくは、「 [Experience Managerセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)」を参照してください。
 
 ## Install 6.5.6.0 {#install}
 
