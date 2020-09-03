@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6e7368663d18dd0b5b46be9e292dba17577acf70
+source-git-commit: 6890af51d240cbdf84d8d95215ac0ea80326c713
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 4%
@@ -202,6 +202,7 @@ AEMでのアセットの [検索も参照してください。](/help/assets/sea
    | Dynamic Media に公開 | 選択的公開 | ダイナミックメディアにのみ公開。 |
    | Dynamic Media から非公開にする | 即時またはアクティベーション時 | AEM、ダイナミックメディア、またはその両方から非公開にしない。 |
    | Dynamic Media から非公開にする | 選択的公開 | ダイナミックメディアからのみ非公開。 |
+
 1. [ **[!UICONTROL スケジュール]**]で、アクティベーション解除のタイミングを設定します。
 |選択されたスケジュール |発生する操作 |
 | — | — |
