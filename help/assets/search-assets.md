@@ -4,9 +4,9 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5bbdc80f199a2af38631a5443c46daae827abb52
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '5858'
+source-wordcount: '5878'
 ht-degree: 54%
 
 ---
@@ -354,6 +354,10 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
 1. （オプション）検索フォームをカスタマイズした場合は、に `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` ノードをコピーし `/conf/global/settings/dam/search/facets/assets/jcr:content/items`ます。 変更内容を保存します。
 
 関連情報については、「Experience Managerのスマートタグ [について](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) 」および「スマートタグの管理 [方法](/help/assets/managing-smart-tags.md)」を参照してください。
+
+>[!CAUTION]
+>
+>Luceneのインデックス作成が終了した場合 [!DNL Adobe Experience Manager]は、スマートタグに基づく検索が期待どおりに動作しません。
 
 ### 必須メタデータ {#mandatorymetadata}
 
