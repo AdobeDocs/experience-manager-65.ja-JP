@@ -3,10 +3,10 @@ title: スマートタグと検索の管理
 description: 不正確なスマートタグを更新または削除して、タグの関連性を向上させます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 75%
+source-wordcount: '464'
+ht-degree: 72%
 
 ---
 
@@ -44,3 +44,7 @@ By default, [!DNL Experience Manager] search combines the search terms with an `
 1. 各種メタデータフィールド内の「`woman running`」に一致するもの。
 1. スマートタグ内の「`woman running`」に一致するもの。
 1. スマートタグ内の「`woman`」または「`running`」に一致するもの。
+
+>[!CAUTION]
+>
+>Luceneのインデックス作成が終了した場合 [!DNL Adobe Experience Manager] 、スマートタグに基づく検索が期待どおりに動作しません。
