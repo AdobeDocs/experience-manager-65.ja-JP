@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Experience Manager6.5アセットユーザーガイド
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
+source-git-commit: 32f8e42325314d5afbec3b3e1611fd696e1a4603
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 52%
+source-wordcount: '642'
+ht-degree: 51%
 
 ---
 
@@ -72,6 +72,7 @@ ht-degree: 52%
    + [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
    + [Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)
+   + [ダイナミックメディアでの一部のみの公開の操作](selective-publishing.md)
    + [Dynamic Media Classicを使用したCDNキャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
    + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
