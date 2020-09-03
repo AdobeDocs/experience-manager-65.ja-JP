@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: d357b5832a3bd95c372c26fd7553eba70583eb6f
 workflow-type: tm+mt
-source-wordcount: '5778'
-ht-degree: 81%
+source-wordcount: '5944'
+ht-degree: 79%
 
 ---
 
@@ -71,17 +71,17 @@ The installation of feature pack 18912 is *optional*.
 
 詳しくは、一括アセット移行について [機能パック18912のインストールを参照してください](/help/assets/bulk-ingest-migrate.md) 。
 
-## ダイナミックメディア設定の作成 {#configuring-dynamic-media-cloud-services}
+## Cloud Servicesでのダイナミックメディア設定の作成 {#configuring-dynamic-media-cloud-services}
 
 **Dynamic Media を設定する前**：Dynamic Media の資格情報を含んだプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)して、パスワードを変更する必要があります。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**ダイナミックメディア設定を作成するには**
+**Cloud Servicesでダイナミックメディア設定を作成するには**
 
-1. In AEM, tap the AEM logo to access the global navigation console and tap or click the Tools icon, then tap **[!UICONTROL Cloud Services > Dynamic Media Configuration.]**
+1. In AEM, tap the AEM logo to access the global navigation console and tap the Tools icon, then tap **[!UICONTROL Cloud Services > Dynamic Media Configuration.]**
 1. On the Dynamic Media Configuration Browser page, in the left pane, tap **[!UICONTROL global]** (do not tap or select the folder icon to the left of **[!UICONTROL global]**), then tap **[!UICONTROL Create.]**
-1. Dynamic Media 設定を作成ページで、タイトル、Dynamic Media アカウントの電子メールアドレス、パスワードを入力し、地域を選択します。これらは、プロビジョニング電子メールでアドビから提供されます。この電子メールを受信していない場合は、サポートにお問い合わせください。
+1. On the **[!UICONTROL Create Dynamic Media Configuration]** page, enter a title, the Dynamic Media account email address, password, then select your region. これらは、プロビジョニング電子メールでアドビから提供されます。この電子メールを受信していない場合は、サポートにお問い合わせください。
 
    Click **[!UICONTROL Connect to Dynamic Media.]**
 
@@ -89,7 +89,7 @@ The installation of feature pack 18912 is *optional*.
    >
    >Dynamic Media の資格情報を含むプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)して、パスワードを変更してください。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
-1. 接続が成功した場合は、次の設定も可能です。
+1. 接続が成功したら、次の設定を行います。 アスタリスク(*)の付いた見出しは必須です。
 
    * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。異なるサブブランドや事業部、または異なるステージング／実稼動環境のために、複数の Dynamic Media アカウントを持っていることがあります。
 
@@ -98,6 +98,7 @@ The installation of feature pack 18912 is *optional*.
    * **[!UICONTROL アセットの公開]** - 次の 3 つのオプションから選択できます。
       * **[!UICONTROL 即時公開]**&#x200B;とは、アセットがアップロードされると、システムがアセットを取り込み、URL／埋め込みをすぐに提供することを意味します。アセットを公開するためにユーザーが操作する必要はありません。
       * **[!UICONTROL アクティベーション時]**&#x200B;とは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。
+      * **[!UICONTROL 一部の発行]** ：このオプションを使用すると、ダイナミックメディアに公開するフォルダを制御でき、スマート切り抜きやダイナミックレンディションなどの機能や、プレビュー用にAEMでのみ公開するフォルダを指定できます。これらの同じアセットは、パブリックドメインの配信用にダイナミックメディアに公開され *ません* 。<br>このオプションは、 **[!UICONTROL ダイナミックメディアクラウド設定でここに設定できます。また]** 、必要に応じて、フォルダーの **[!UICONTROL プロパティ]**&#x200B;で、フォルダーレベルで設定することもできます。<br>詳しくは、ダイナミックメディアでの一部のみの公開の [操作を参照してください。](/help/assets/selective-publishing.md)<br>この設定を後で変更した場合、または後でフォルダーレベルで変更した場合、変更した内容は、その時点以降にアップロードする新しいアセットにのみ影響します。 フォルダ内の既存のアセットの公開状態は、クイック公開またはパブリケーションの **[!UICONTROL 管理ダイアログボックスから手動で変更するまで、そのままになります]****** 。
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成されると、AEM は、リモートの Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリは AEM インスタンスに送り返されません）。自社のサーバーまたは特別なサーバーを使用する特別な取り決めがない限り、この設定を指定されたとおりにしておくことをお勧めします。
 
    * **[!UICONTROL すべてのコンテンツを同期]** — デフォルトで <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->選択されています。 Dynamic Media との同期で、アセットを選択して含めるまたは除外する場合は、このオプションの選択を解除します。このオプションの選択を解除すると、次の 2 つの Dynamic Media 同期モードから選択できるようになります。
@@ -105,7 +106,7 @@ The installation of feature pack 18912 is *optional*.
    * **[!UICONTROL Dynamic Media 同期モード]**
       * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL デフォルトで無効]** - 選択したフォルダーを Dynamic Media と同期するように明示的にマークしない限り、設定はどのフォルダーにも適用されません。
-選択したフォルダーをダイナミックメディアと同期するようにマークするには、アセットフォルダーを選択し、ツールバーで「 **[!UICONTROL プロパティ」をクリックします。]** 「 **[!UICONTROL 詳細]** 」タブの「 **[!UICONTROL ダイナミックメディア同期モード]** 」ドロップダウンリストで、次の3つのオプションから選択します。 When you are done tap **[!UICONTROL Save.]** *注意：これら3つのオプションは、「すべてのコンテンツを&#x200B;**同期**」を選択した場合は使用できません。*
+選択したフォルダーをダイナミックメディアと同期するようにマークするには、アセットフォルダーを選択し、ツールバーで「 **[!UICONTROL プロパティ」をクリックします。]** 「 **[!UICONTROL 詳細]** 」タブの「 **[!UICONTROL ダイナミックメディア同期モード]** 」ドロップダウンリストで、次の3つのオプションから選択します。 When you are done tap **[!UICONTROL Save.]** *注意：これら3つのオプションは、「すべてのコンテンツを&#x200B;**同期**」を選択した場合は使用できません。* ダイナミックメディアのフォルダーレベルでの一部のみの発行の [操作も参照してください。](/help/assets/selective-publishing.md)
          * **[!UICONTROL 継承]** - フォルダーに明示的な同期値はなく、代わりに、上位フォルダーの 1 つ、またはクラウド設定のデフォルトモードから同期値を継承します。継承された詳細なステータスは、ツールチップの要領で表示されます。
          * **[!UICONTROL サブフォルダーを有効にする]** - このサブツリー内のすべての項目を、Dynamic Media との同期に含めます。フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
          * **[!UICONTROL サブフォルダーに対して無効]** - このサブツリー内のすべての項目を、Dynamic Media との同期から除外します。
