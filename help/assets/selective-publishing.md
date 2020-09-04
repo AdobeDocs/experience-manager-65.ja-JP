@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 68e3e80b1c1dda8352ff30989f85f83e82bde261
+source-git-commit: 29f91713f5760ab0b5a557b5c811ef2efee1cc61
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 6%
@@ -114,6 +114,7 @@ Dynamic Media Configurationの **[!UICONTROL Publish Assets]** 値セットと�
 
 1. In the upper-right corner of the **[!UICONTROL Manage Publication]** page, tap **[!UICONTROL Next.]**
 1. [パブリケーションの **[!UICONTROL 管理 — スコープ]** ]ページで、次のいずれかの操作を行います。
+
    * 必要に応じて、公開から削除する1つ以上のアセットを選択します。
    * 「パブリケーションの **[!UICONTROL 管理 — スコープ]** 」ページの右上隅にある「発行 **[!UICONTROL 」または「ダイナミックメディアに]** 発行 **[!UICONTROL 」をタップします。]**
 1. Tap **[!UICONTROL OK.]**
