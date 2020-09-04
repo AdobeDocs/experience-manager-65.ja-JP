@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5e5108b943907e5286298552c724d2b33873503f
+source-git-commit: 4a144e53217c4353818d778415cc303b21412566
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 6%
@@ -31,9 +31,9 @@ AEMまたはダイナミックメディアとの間で、アセットをフォ�
 
 後でフォルダー内の「 **[!UICONTROL 一部のみの発行]** 」設定を変更すると、その変更の影響を受けるのは、その時点からそのフォルダーにアップロードする新しいアセットだけです。 フォルダ内の既存のアセットの公開状態は、クイック公開またはパブリケーションの **[!UICONTROL 管理ダイアログボックスから手動で変更するまで、そのままになります]****** 。
 
-「 **[!UICONTROL ダイナミックメディア公開モード]** 」フォルダレベルのオプションでは、常に、ダイナミックメディア設定の「 **[!UICONTROL アセットを]** 公開 ****」設定にある値がデフォルト値になります。 ただし、このトピックの次の手順では、フォルダーレベルで手動でこのデフォルト値を変更して、 **[!UICONTROL ダイナミックメディア設定]** 値を上書きする方法を示します（次の手順で説明します）。
+「 **[!UICONTROL ダイナミックメディア公開モード]** 」フォルダレベルのオプションでは、常に、ダイナミックメディア設定の「 **[!UICONTROL アセットを]** 公開 **[!UICONTROL 」設定にある値がデフォルト値になります。]** ただし、このトピックの次の手順では、フォルダーレベルで手動でこのデフォルト値を変更して、 **[!UICONTROL ダイナミックメディア設定]** 値を上書きする方法を示します（次の手順で説明します）。
 
-Publish Assets **[!UICONTROL (]** 動的メディア設定の **[!UICONTROL 公開]**)値と、Folderレベルの **[!UICONTROL 動的メディア公開モードの値とのどちらを使用する場合でも、Choose Properties,]** Dynamic Media Publish Mode(アクティベーションレベルの)、Choose Properties, ************ DeminicPublish, 例えば、 **[!UICONTROL Dynamic Media設定の]** Publish Assets **[!UICONTROL 値を「アクティベーション時」に設定し]** 、Dynamic Publish Media値を「フォルダレベル」に設定し、Selective Publish Media値を「Selective Publish Media」に設定するこ ************&#x200B;ことができます。
+Dynamic Media Configurationの **[!UICONTROL Publish Assets]** 値セットと、Folder LevelのPublish Assets ****&#x200B;値セットと、Dynamic Media Publish Mode **************[!UICONTROL アクティベーションレベルのFolder Mode値セットとに依存するかに関係なく、Choose ImplostePublish,IngMent,]** 例えば、 **[!UICONTROL Dynamic Media設定の]** Publish Assets **[!UICONTROL 値を「アクティベーション時」に設定し]** 、Dynamic Publish Media値を「フォルダレベル」に設定し、Selective Publish Media値を「Selective Publish Media」に設定するこ ************&#x200B;ことができます。
 
 フォルダーで選択的発行を設定した後、次の操作を行うことができます。
 
@@ -53,13 +53,13 @@ Publish Assets **[!UICONTROL (]** 動的メディア設定の **[!UICONTROL 公�
 
    | 同期モード | 説明 |
    | --- | --- |
-   | **[!UICONTROL 継承]** | No explicit sync value on the folder; instead, the folder inherits the sync value from one of its ancestor folders or the default mode set in your **[!UICONTROL Dynamic Media Configuration]**. The detailed status for **[!UICONTROL Inherited]** shows by way of a tool tip. |
-   | **[!UICONTROL このフォルダーサブツリー内のすべてをダイナミックメディアに同期]** | ダイナミックメディアへの公開を続行するには、アセットをダイナミックメディアと同期する必要があります。 このオプションを選択すると、このサブツリー内のすべてのアセットが含まれ、ダイナミックメディアと同期されます。 フォルダ固有の設定は、 **[!UICONTROL ダイナミックメディア設定のデフォルト設定に優先します]**。 |
+   | **[!UICONTROL 継承]** | No explicit sync value on the folder; instead, the folder inherits the sync value from one of its ancestor folders or the default mode set in your **[!UICONTROL Dynamic Media Configuration.]** 「 **[!UICONTROL 継承済み]** 」の詳細なステータスは、ツールヒントによって表示されます。 |
+   | **[!UICONTROL このフォルダーサブツリー内のすべてをダイナミックメディアに同期]** | ダイナミックメディアへの公開を続行するには、アセットをダイナミックメディアと同期する必要があります。 このオプションを選択すると、このサブツリー内のすべてのアセットが含まれ、ダイナミックメディアと同期されます。 フォルダ固有の設定は、 **[!UICONTROL ダイナミックメディア設定のデフォルト設定に優先します。]** |
    | **[!UICONTROL DynamicMediaの同期からこのフォルダーサブツリー内のすべてを除外する]** | このサブツリー内のすべてのアセットを、ダイナミックメディアとの同期から除外します。 |
 
    ![フォルダーレベルの選択的発行](/help/assets/assets-dm/createfolder-properties-selectivepublish.png)
 
-1. 「 **[!UICONTROL ダイナミックメディア公開モード]** 」ドロップダウンリストで、オプションを選択します。 「 **[!UICONTROL ダイナミックメディア公開モード]** 」オプションは、常に **[!UICONTROL ダイナミックメディア設定で設定された値にデフォルト設定されることに注意してください]**。 ただし、次のいずれかのオプションを使用して、手動でこの **[!UICONTROL デフォルトのダイナミックメディア設定]** (Dynamic Media Configuration)値を上書きできます。
+1. 「 **[!UICONTROL ダイナミックメディア公開モード]** 」ドロップダウンリストで、オプションを選択します。 「 **[!UICONTROL ダイナミックメディア公開モード]** 」オプションは、常に **[!UICONTROL ダイナミックメディア設定で設定された値にデフォルト設定されることに注意してください。]** ただし、次のいずれかのオプションを使用して、手動でこの **[!UICONTROL デフォルトのダイナミックメディア設定]** (Dynamic Media Configuration)値を上書きできます。
 
    >[!IMPORTANT]
    >
@@ -92,7 +92,7 @@ Publish Assets **[!UICONTROL (]** 動的メディア設定の **[!UICONTROL 公�
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。左側で、（ツールアイコンのすぐ上にある）ナビゲーションアイコンをタップし、 **[!UICONTROL アセット/ファイルをタップします。]**
 1. 「 **[!UICONTROL カード表示]**」、「 **[!UICONTROL 列表示]**」または「 **[!UICONTROL リスト表示]**」で、次のいずれかの操作を行います。
    * アセットを発行するフォルダーに移動します。 フォルダを選択し、ツールバーの[パブリケーションの **[!UICONTROL 管理]をタップします。]**  特定のフォルダーの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** （英語）を使用すると便利です。
-   * アセットを発行するフォルダーに移動します。 フォルダーを開き、1つ以上のアセットを選択します。 On the toolbar, tap **[!UICONTROL Manage Publication]**. 特定のアセットの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** (API)を使用すると便利です。
+   * アセットを発行するフォルダーに移動します。 フォルダーを開き、1つ以上のアセットを選択します。 On the toolbar, tap **[!UICONTROL Manage Publication.]** 特定のアセットの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** (API)を使用すると便利です。
 
       >[!NOTE]
       >
@@ -112,18 +112,18 @@ Publish Assets **[!UICONTROL (]** 動的メディア設定の **[!UICONTROL 公�
    | **[!UICONTROL 今すぐ]** | アセットを直ちに公開する場合に選択します。 |
    | **[!UICONTROL 後で]** | 特定の日時にアセットを公開する場合に選択します。 |
 
-1. In the upper-right corner of the **[!UICONTROL Manage Publication]** page, tap **[!UICONTROL Next]**.
+1. In the upper-right corner of the **[!UICONTROL Manage Publication]** page, tap **[!UICONTROL Next.]**
 1. [パブリケーションの **[!UICONTROL 管理 — スコープ]** ]ページで、次のいずれかの操作を行います。
    * 必要に応じて、公開から削除する1つ以上のアセットを選択します。
    * 「パブリケーションの **[!UICONTROL 管理 — スコープ]** 」ページの右上隅にある「発行 **[!UICONTROL 」または「ダイナミックメディアに]** 発行 **[!UICONTROL 」をタップします。]**
-1. 「**[!UICONTROL OK]**」をタップします。
+1. Tap **[!UICONTROL OK.]**
 
 ### 「パブリケーションの管理」を使用して、ダイナミックメディアまたはAEMからアセットを選択して非公開にする {#selective-unpublish-manage-publication}
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。左側で、（ツールアイコンのすぐ上にある）ナビゲーションアイコンをタップし、 **[!UICONTROL アセット/ファイルをタップします。]**
 1. 「 **[!UICONTROL カード表示]**」、「 **[!UICONTROL 列表示]**」または「 **[!UICONTROL リスト表示]**」で、次のいずれかの操作を行います。
    * 非公開にするアセットのフォルダーに移動します。 フォルダを選択し、ツールバーの[パブリケーションの **[!UICONTROL 管理]をタップします。]**  特定のフォルダーの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** （英語）を使用すると便利です。
-   * 非公開にするアセットのフォルダーに移動します。 フォルダーを開き、1つ以上のアセットを選択します。 On the toolbar, tap **[!UICONTROL Manage Publication]**. 特定のアセットの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** (API)を使用すると便利です。
+   * 非公開にするアセットのフォルダーに移動します。 フォルダーを開き、1つ以上のアセットを選択します。 On the toolbar, tap **[!UICONTROL Manage Publication.]** 特定のアセットの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** (API)を使用すると便利です。
 
       >[!NOTE]
       >
@@ -143,11 +143,11 @@ Publish Assets **[!UICONTROL (]** 動的メディア設定の **[!UICONTROL 公�
    | **[!UICONTROL 今すぐ]** | アセットを直ちに非公開にする場合に選択します。 |
    | **[!UICONTROL 後で]** | 特定の日時にアセットを非公開にする場合に選択します。 |
 
-1. In the upper-right corner of the **[!UICONTROL Manage Publication]** page, tap **[!UICONTROL Next]**.
+1. In the upper-right corner of the **[!UICONTROL Manage Publication]** page, tap **[!UICONTROL Next.]**
 1. [パブリケーションの **[!UICONTROL 管理 — スコープ]** ]ページで、次のいずれかの操作を行います。
    * 非公開から削除する1つまたは複数のアセットを選択します。
-   * パブリケーションの **[!UICONTROL 管理 — スコープ]** ページの右上隅にある「非公開」または「ダイナミックメディアから **[!UICONTROL 非公開]** 」をタップします ****。
-1. 「**[!UICONTROL OK]**」をタップします。
+   * パブリケーションの **[!UICONTROL 管理 — スコープ]** ページの右上隅にある「非公開 **[!UICONTROL 」または「ダイナミックメディアから非公開]****[!UICONTROL 」をタップします。]**
+1. Tap **[!UICONTROL OK.]**
 
 ## クイック公開を使用したダイナミックメディアまたはAEMへのアセットの公開 {#quick-publish-aem-dm}
 
@@ -162,7 +162,7 @@ Publish Assets **[!UICONTROL (]** 動的メディア設定の **[!UICONTROL 公�
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。ページの左側で、（ツールアイコンのすぐ上にある）ナビゲーションアイコンをタップし、ページの右側で **[!UICONTROL アセット/ファイルをタップします。]**
 1. 「 **[!UICONTROL カード表示]**」、「 **[!UICONTROL 列表示]**」または「 **[!UICONTROL リスト表示]**」で、次のいずれかの操作を行います。
    * アセットを発行するフォルダーに移動します。 フォルダを選択し、ツールバーで「 **[!UICONTROL クイック公開」をタップします。]**  特定のフォルダーの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** （英語）を使用すると便利です。
-   * アセットを発行するフォルダーに移動します。 フォルダーを開き、1つ以上のアセットを選択します。 ツールバーの「**[!UICONTROL クイック公開]**」をタップします。特定のアセットの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** (API)を使用すると便利です。
+   * アセットを発行するフォルダーに移動します。 フォルダーを開き、1つ以上のアセットを選択します。 ツールバーの「**[!UICONTROL クイック公開」をタップします。]** 特定のアセットの公開ステータスをより簡単に確認できるように、 **[!UICONTROL リスト表示]** (API)を使用すると便利です。
 
       >[!NOTE]
       >
@@ -175,10 +175,10 @@ Publish Assets **[!UICONTROL (]** 動的メディア設定の **[!UICONTROL 公�
    | クイック公開オプション | 動作 |
    | --- | --- | 
    | AEM に公開 | 選択したアセットを直ちにAEMに公開します。 |
-   | Brand Portal  に公開 | 選択したアセットを直ちに **[!UICONTROL ブランドポータルに発行します]**。<br>このオプションは、AEM Assetsインスタンスで **[!UICONTROL ブランドポータルが既に設定されている場合にのみ使用でき]** ます。 |
-   | Dynamic Media に公開 | 選択したアセットを直ちにダイナミックメディアに公開します。<br>アセットは、既にダイナミックメディアと同期している必要があります。 必要に応じて、フォルダーのプロパティの **[!UICONTROL 同期モード]** (Sync mode **[!UICONTROL )が]**[このフォルダーのサブツリー内のすべてをDynamicmediaに同期する]に既に設定されていることを確認します。 |
+   | Brand Portal  に公開 | 選択したアセットを直ちに **[!UICONTROL ブランドポータルに公開します。]**<br>このオプションは、AEM Assetsインスタンスで**[!UICONTROL &#x200B;ブランドポータルが既に設定されている場合にのみ使用でき&#x200B;]**ます。 |
+   | Dynamic Media に公開 | 選択したアセットを直ちにダイナミックメディアに公開します。<br>アセットは、既にダイナミックメディアと同期している必要があります。 必要に応じて、フォルダーのプロパティの **[!UICONTROL 同期モード]** (Sync mode **[!UICONTROL )が[このフォルダーのサブツリー内のすべてをDynamicmediaに同期]に既に設定されていることを確認します。]** |
 
-1. 「 **[!UICONTROL OK]**」をタップし、「 **[!UICONTROL 閉じる]**」をタップします。
+1. 「 **[!UICONTROL OK]**」をタップし、「 **[!UICONTROL 閉じる」をタップします。]**
 
 ## 検索結果を使用して、アセットを選択して公開または非公開 {#selective-publish-unpublish-search-results}
 
@@ -190,7 +190,7 @@ AEMでのアセットの [検索も参照してください。](/help/assets/sea
 
 1. AEMでは、ページの左上隅にあるAEMロゴをタップして、グローバルナビゲーションコンソールにアクセスします。 ページの左側で、（ツールアイコンのすぐ上にある）ナビゲーションアイコンをタップし、 **[!UICONTROL アセット/ファイルをタップします。]**
 1. ツールバーのページ右上隅近くにある検索アイコン（虫めがね）をタップします。
-1. 「 **[!UICONTROL Type to search]** text(検索する **[!UICONTROL タイプ)」フィールドにキーワードを入力し、]** Enterキーを押します。
+1. 「 **[!UICONTROL Type to search]** text(検索する **[!UICONTROL タイプ)」フィールドにキーワードを入力し、Enterキーを押します。]**
 1. ページの右上隅近くにある **[!UICONTROL リスト表示]** アイコンをタップします。
 1. Near the upper-left corner of the page, tap the **[!UICONTROL Filters]** icon.
 
@@ -201,8 +201,8 @@ AEMでのアセットの [検索も参照してください。](/help/assets/sea
 必要に応じて、これらのチェックボックスを **[!UICONTROL 「検索述語を]** 発行 **[!UICONTROL 」と組み合わせて使用し、発行済み]** / **** 未発行のAEMアセットの検索結果を絞り込むことができます。
 1. 次のいずれかの操作をおこないます。
    * 公開または非公開にする1つまたは複数のアセットを選択します。
-   * 「 **[!UICONTROL 検索結果]** 」ページの右上隅近くにある「すべて **[!UICONTROL 選択]**」をタップします。
-1. On the toolbar, tap **[!UICONTROL Manage Publication]**. 「パブリケーションの **[!UICONTROL 管理]**」を表示するには、ツールバーの省略記号アイコンをタップする必要がある場合があります。
+   * 検索結果 **[!UICONTROL ページの右上隅近くにある「すべてを]****[!UICONTROL 選択」をタップします。]**
+1. On the toolbar, tap **[!UICONTROL Manage Publication.]** 「パブリケーションの **[!UICONTROL 管理」を表示するには、ツールバーの省略記号アイコンをタップする必要がある場合があります。]**
 1. [パブリケーションの **[!UICONTROL 管理 — オプション]** ]ページで、目的のアクションを選択します。
 
    | 選択したアクション | ダイナミックメディア設定の「アセットを公開」設定 | アセットは |
@@ -223,7 +223,7 @@ AEMでのアセットの [検索も参照してください。](/help/assets/sea
    | 今すぐ | 選択したアクションは直ちに実行されます。 |
    | 後で | 選択したアクションは、選択した特定の日時に実行されます。 |
 
-1. [パブリケーションの **[!UICONTROL 管理 — オプション]** ]ページの右上隅にある[ **[!UICONTROL 次へ]**]をタップします。
+1. [パブリケーションの **[!UICONTROL 管理 — オプション]** ]ページの右上隅にある[ **[!UICONTROL 次へ]をタップします。]**
 1. （オプション）「パブリケーションの **[!UICONTROL 管理 — スコープ]** 」ページで、選択したアセットに関する表の「 **[!UICONTROL 発行ターゲット]** 」列を確認します。
 
    | ダイナミックメディア設定の「アセットを公開」設定 | 選択したアクション | 公開ターゲット |
@@ -240,7 +240,7 @@ AEMでのアセットの [検索も参照してください。](/help/assets/sea
 1. [パブリケーションの **[!UICONTROL 管理 — スコープ]** ]ページで、次のいずれかの操作を行います。
    * 公開または非公開から削除する1つまたは複数のアセットを選択します。
    * 「パブリケーションの **[!UICONTROL 管理 — スコープ]** 」ページの右上隅にある「 **[!UICONTROL 公開]** 」または「非公開 **** 」をタップして、操作を開始します。
-1. 「**[!UICONTROL OK]**」をタップします。
+1. Tap **[!UICONTROL OK.]**
 
 ## アセットの公開ステータスの確認 {#check-publish-status-of-asset}
 
@@ -251,7 +251,7 @@ AEMでのアセットの [検索も参照してください。](/help/assets/sea
 1. AEMでは、ページの左上隅にあるAEMロゴをタップして、グローバルナビゲーションコンソールにアクセスします。 ページの左側で、（ツールアイコンのすぐ上にある）ナビゲーションアイコンをタップし、 **[!UICONTROL アセット/ファイルをタップします。]**
 1. カー **[!UICONTROL ド表示]**、 **[!UICONTROL 列表示]**、または **[!UICONTROL リスト表示(下のスクリーンショットはリスト表示]******&#x200B;のアセットを示しています)で、公開済みまたは未公開のアセットを含むを開きます。
 1. チェックマークが付くようにアセットを選択します。 例については、下のスクリーンショットを参照してください。
-1. Near the upper-left corner of the page, from the drop-down menu, select **[!UICONTROL Timeline]**. 左側のパネルの「 **[!UICONTROL ステータス]** 」領域には、選択したアセットの公開状態が表示されます。
+1. Near the upper-left corner of the page, from the drop-down menu, select **[!UICONTROL Timeline.]** 左側のパネルの「 **[!UICONTROL ステータス]** 」領域には、選択したアセットの公開状態が表示されます。
 **[!UICONTROL リスト表示を使用する場合]**、「 **[!UICONTROL ダイナミックメディア]** 」公開状態に関する追加の列が表示されます。
    * ダイナミックメディアと同期するように設定されたフォルダーには、デフォルトで **[!UICONTROL ダイナミックメディア]** 列が表示されます。
    * ダイナミックメディアと同期するように構成さ *れていないフォルダーは* 、「ダイナミックメディア」列を表示しません。
