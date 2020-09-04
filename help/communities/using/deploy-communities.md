@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
+source-git-commit: 7e05502b590fb2c7c36919f94611efe999262d32
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1890'
 ht-degree: 54%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 54%
 
 ## インストールチェックリスト {#installation-checklist}
 
-**[AEM プラットフォーム](/help/sites-deploying/deploy.md#what-is-aem)**用
+**[AEM プラットフォーム](/help/sites-deploying/deploy.md#what-is-aem)**&#x200B;用
 
 * 最新の [AEM 6.5 アップデート](#aem64updates)のインストール
 
@@ -43,7 +43,7 @@ ht-degree: 54%
 * [暗号鍵のレプリケーション](#replicate-the-crypto-key)
 * グローバリゼーションをサポートする場合、[自動翻訳の設定](/help/sites-administering/translation.md)（開発用のサンプル設定を提供しています）
 
-**[Communities 機能](/help/communities/overview.md)**用
+**[Communities 機能](/help/communities/overview.md)**&#x200B;用
 
 * [発行ファームを展開する場合](/help/sites-deploying/recommended-deploys.md#tarmk-farm)、主な発行者を [特定する](#primary-publisher)
 
@@ -152,7 +152,7 @@ AEM Communities SCORM エンジンは[イネーブルメント](/help/communitie
 
 1. パッケージ共有から [cq-social-scorm-package、バージョン2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg)をインストールします。
 1. Download `/libs/social/config/scorm/database_scormengine_data.sql` from cq instance and execute it in mysql server to create an upgraded scormEngineDB schema.
-1. CSRFフィルタ `/content/communities/scorm/RecordResults` のExcluded Pathsプロパティ(&#39;https://追加)<hostname>：<port>発行者の/system/console/configMgr&#39;。
+1. Add `/content/communities/scorm/RecordResults` in Excluded Paths property in CSRF filter from `https://<hostname>:<port>/system/console/configMgr` on publishers.
 
 #### SCORM ロギング {#scorm-logging}
 
@@ -192,7 +192,7 @@ On the local AEM instance, use package manager (for example [https://localhost:4
 
 Alternatively, accessing the package using package share from the local AEM instance (for example, [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)), the `Download`button will download to the local AEM instance&#39;s package repository.
 
-ローカルAEMインスタンスのパッケージリポジトリに移動したら、パッケージマネージャーを使用してパッケージをインストールします。
+ローカルAEMインスタンスのパッケージリポジトリに入ったら、パッケージマネージャーを使用してパッケージをインストールします。
 
 For more information, visit [How to Work With Packages](/help/sites-administering/package-manager.md#package-share).
 
@@ -299,7 +299,7 @@ When using the author environment to [create sites](/help/communities/sites-cons
 
 AEM Communities には、すべての AEM サーバーインスタンスで同じ暗号鍵を使用する必要がある機能が 2 つあります。These are [Analytics](/help/communities/analytics.md) and [ASRP](/help/communities/asrp.md).
 
-AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されなくなります。
+AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されません。
 
 オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
 
@@ -331,7 +331,7 @@ AEM 6.3以降、主要な資料はファイルシステムに保存され、リ�
 
 #### リポジトリのレプリケーション {#repository-replication}
 
-AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（これにより初期リポジトリが作成されます）。
+AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（初期リポジトリを作成します）。
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
