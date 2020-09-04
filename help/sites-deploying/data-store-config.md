@@ -12,10 +12,10 @@ discoiquuid: b97482f2-2791-4d14-ae82-388302d9eab3
 docset: aem65
 legacypath: /deploy/platform/data-store-config
 translation-type: tm+mt
-source-git-commit: f0ec3415ffef70c985828f17b32dc0d453c1ae7c
+source-git-commit: 93cb84763cfd77b67a5dd1481caab79337f6e7c4
 workflow-type: tm+mt
-source-wordcount: '3427'
-ht-degree: 69%
+source-wordcount: '3423'
+ht-degree: 68%
 
 ---
 
@@ -190,7 +190,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. ファイルを編集し、設定に必要な設定オプションを追加します。
 1. AEM を起動します。
 
-### 新しいバージョンの 1.10.x S3 コネクタへのアップグレード {#upgrading-to-a-new-version-of-the-x-s-connector}
+### 新しいバージョンの 1.10.x S3 コネクタへのアップグレード {#upgrading-to-a-new-version-of-the-s-connector}
 
 新しいバージョンの 1.10.x S3 コネクタにアップグレードする必要がある場合は（1.10.0 から 1.10.4 へのアップグレードなど）、次の手順に従います。
 
@@ -204,7 +204,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    >[!NOTE]
    >
-   >上述のファイル名は例として使用しているだけであり、他の名前である場合もあります。
+   >上記のファイル名は、説明用にのみ使用されています。
 
 1. [アドビリポジトリ](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)から最新バージョンの 1.8.x 機能パックをダウンロードします。
 1. Unzip the contents to a separate folder, then navigate to `jcr_root/libs/system/install/15`.
