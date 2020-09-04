@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4a144e53217c4353818d778415cc303b21412566
+source-git-commit: 68e3e80b1c1dda8352ff30989f85f83e82bde261
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 6%
