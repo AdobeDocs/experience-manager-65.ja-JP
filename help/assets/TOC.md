@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Experience Manager6.5アセットユーザーガイド
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: c57cc70fbdeabfdff1e8977d3bf8187f7c41ce77
+source-git-commit: d4cd304fccba9c06078790ea97bee74fc12d8df0
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 50%
+source-wordcount: '650'
+ht-degree: 51%
 
 ---
 
@@ -157,7 +157,7 @@ ht-degree: 50%
    + [非同期ジョブ](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [アセットのインサイト](touch-ui-asset-insights.md)
-   + [Adobeの起動によるアセットのインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
+   + [DTMを通じたアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
    + [アセットのインサイトの設定](touch-ui-configuring-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
