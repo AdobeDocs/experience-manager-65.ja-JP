@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Manager6.5以前のService Packリリースノート
-description: Adobe Experience Manager6.5 Service Pack 3以前に関するリリースノートです。
+title: '[!DNLAdobe Experience Manager] 6.5以前のService Packリリースノートです。'
+description: 6. [!DNL Adobe Experience Manager] 5 Service Packのリリースノート。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: a842da57a155f56ad3efc268610c167fe140998b
+source-git-commit: c27f44326f653bbdc61e866e89e60893e81a7a3b
 workflow-type: tm+mt
-source-wordcount: '11431'
+source-wordcount: '11438'
 ht-degree: 25%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 25%
 
 # 以前のサービスパックに含まれていたホットフィックスと機能パック {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.5.0 {#experience-manager-6550}
+## [!DNL Adobe Experience Manager] 6.5.5.0 {#experience-manager-6550}
 
 Adobe Experience Manager6.5.5.0は、2019 **年4月のGAリリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上に設置できます。
 
-Adobe Experience Manager6.5.5.0で導入された主な機能および機能強化には、次のものが含まれます。
+6.5.5.0で導入された主な機能および機能強化には、次のものが [!DNL Adobe Experience Manager] あります。
 
-* Adobe Experience Manager受信トレイに表示する列名をカスタマイズします。
+* CRXDE Liteへの匿名アクセスは許可されていません。 代わりに、ユーザーはログイン画面に誘導されます。 See [Developing with CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+
+* 受信トレイに表示する列名をカスタマイズし [!DNL Adobe Experience Manager] ます。
 
 * ページエディター、コアコンポーネント、RTE、管理者ユーザーインターフェイスなど、Experience ManagerWebコンテンツ管理(WCM)の様々な領域でのアクセシビリティが向上しました。
 
@@ -69,7 +71,7 @@ Adobe Experience Manager6.5.5.0で導入された主な機能および機能強�
 * ユーザーがレイアウトコンテナをコピーして同じページに貼り付けると、レイアウトコンテナのコンポーネントは表示されません(NPR-33648)。
 * ディスパッチャーの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33629)。
 * PreferencesServlet(NPR-33438)でXSSが反映されている。
-* 匿名ユーザーは、CRX DE Liteの機能(GRANITE-27790)にアクセスできます。
+* 匿名ユーザーは、CRXDE Lite機能(GRANITE-27790)にアクセスできます。
 
 ### [!DNL Assets] {#assets-6550}
 
