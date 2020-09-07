@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 097109edcf66cc06460c9d962037e49613e3405b
+source-git-commit: 8496c2fa298b5490bb2560f61de77876d66fd6f6
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '822'
 ht-degree: 37%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 37%
 
 # 電子メールの設定 {#configuring-email}
 
-AEM Communitiesは次の目的で電子メールを使用します。
+AEM Communitiesは次の電子メールを使用します。
 
 * [コミュニティの通知](notifications.md)
 * [コミュニティの購読](subscriptions.md)
@@ -112,7 +112,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 * Verify **Create post from reply email** is `unchecked`.
 
-![chlimage_1-100](assets/chlimage_1-100.png)
+![chlimage_1-100](assets/configure-email.png)
 
 ### 購読用の設定 {#configuration-for-subscriptions}
 
@@ -122,7 +122,7 @@ Communities の電子メール設定インスタンスに接続するには：
 * 編集アイコンを選択します。
 * Verify the **Name** is `subscriptions-email`.
 
-![chlimage_1-101](assets/chlimage_1-101.png)
+   ![chlimage_1-101](assets/configure-email-subscription.png)
 
 * **[!UICONTROL 名前]**
 
@@ -138,9 +138,10 @@ Communities の電子メール設定インスタンスに接続するには：
 * **[!UICONTROL 件名の最大長]**
 
    トラッカーIDが件名行に追加された場合、これは、追跡対象IDを除く、件名の最大長です。この長さを超えると、トリミングされます。 トラッカー ID 情報が失われないように、可能な限り小さい値を設定する必要があります。初期設定は 200 です。
-* **[!UICONTROL 電子メール「送信者」アドレス]**
 
-   *（必須）* 通知電子メールの配信元アドレス。 Likely the same **SMTP user** specified for the [default mail service](#configuredefaultmailservice). デフォルトは `no-reply@example.com` です。
+* **[!UICONTROL 「返信先」の電子メールアドレス]**
+
+   「返信先」の電子メールアドレスとして使用されるアドレス。 デフォルトは `communities@adobe.com` です。
 
 * **[!UICONTROL Reply-to-Delimiter]**
 
@@ -154,7 +155,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
    トラッカーIDがメッセージの本文に追加された場合は、このプレフィックスが使用されます。 デフォルトは `Please do not remove this:` です。
 
-* **[!UICONTROL HTMLとして電子メール]**: オンにすると、電子メールのコンテンツタイプがに設定され `"text/html;charset=utf-8"`ます。 初期設定はオンです。
+* **[!UICONTROL HTMLとして電子メール]**:オンにすると、電子メールのコンテンツタイプがに設定され `"text/html;charset=utf-8"`ます。 初期設定はオンです。
 
 * **[!UICONTROL デフォルトのユーザー名]**
 
@@ -178,7 +179,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
-* **[!UICONTROL タイプ]**
+* **[!UICONTROL 型]**
 
    *（必須）* プルダウンして選択し `POP3 (over SSL)`ます。
 
@@ -213,8 +214,8 @@ Communities の電子メール設定インスタンスに接続するには：
 * 管理者権限を持つプライマリパブリッシャーにログインし、https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importers/polling [を参照します](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling)。
 * 新しく作成された設定を選択し、次のプロパティを変更します。
 
-   * **feedType**: 置換 `pop3s` 文字列 **`emailreply`**
-   * **source**: ソースのプロトコルを次に置き換え `pop3s://` ます： **`emailreply://`**
+   * **feedType**:置換 `pop3s` 文字列 **`emailreply`**
+   * **source**:ソースのプロトコルを次に置き換え `pop3s://` ます： **`emailreply://`**
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
