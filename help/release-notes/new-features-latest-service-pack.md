@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8980348736825f45647a91062b1fe4e4a790b8f1
+source-git-commit: f8a072e0ab24d542a1bec8faf03da57f99747102
 workflow-type: tm+mt
-source-wordcount: '2438'
+source-wordcount: '2462'
 ht-degree: 7%
 
 ---
@@ -126,6 +126,8 @@ URL引数の代わりに、セレクターとしてロケールを指定でき�
 * スクリーンリーダーのサポートが強化されました。
 
 #### その他の主な機能強化(6.5.5.0) {#other-enhancements-sites}
+
+* CRXDE Liteへの匿名アクセスは、セキュリティを強化するために許可されていません。 代わりに、ユーザーはログイン画面に誘導されます。 See [Developing with CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 * ページツリーをコピーまたは貼り付けるときに、ルートページを貼り付けるか、ルートページをツリーのサブページと共に貼り付けるかを選択できるようになりました。
 
