@@ -3,9 +3,9 @@ title: でのメタデータのカスケード [!DNL Adobe Experience Manager As
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: c92215a6cb1f4c3d02e9a5f5b3fd36c65fc002ce
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '948'
 ht-degree: 82%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 82%
 アセットのメタデータ情報を取得するときに、ユーザーは様々なフィールドに情報を指定します。他のフィールドで選択されているオプションに応じて特定のメタデータフィールドやフィールド値を表示できます。こうした条件に応じたメタデータの表示は、カスケードメタデータと呼ばれます。つまり、特定のメタデータフィールドや値と、1 つ以上のフィールドまたはその値（あるいはその両方）との依存関係を作成できます。
 
 メタデータスキーマを使用して、カスケードメタデータを表示するルールを定義します。例えば、メタデータスキーマにアセットタイプフィールドが含まれている場合は、ユーザーが選択したアセットタイプに基づいて、表示するフィールドの関連セットを定義できます。
+
+>[!CAUTION]
+>
+>コンテンツフラグメントでは、カスケードメタデータはサポートされていません。
 
 次に、カスケードメタデータを定義できるいくつかの使用例を示します。
 
@@ -55,6 +59,7 @@ ht-degree: 82%
    * To specify the values manually, select **[!UICONTROL Add Manually]**, and click **[!UICONTROL Add Choice]** and specify the option text and value. 例えば、ビデオ、PDF、Word、画像などのアセットタイプを指定します。
 
    * JSON ファイルから値を動的に取得するには、「**[!UICONTROL JSON パスで追加]**」を選択し、JSON ファイルのパスを指定します。[!DNL Experience Manager] は、フォームがユーザーに提供されたときに、キーと値のペアをリアルタイムで取得します。
+
    両方のオプションは同時には使用できません。オプションを JSON ファイルから読み込んで手動で編集することはできません。
 
    ![add_choice](assets/add_choice.png)
@@ -108,8 +113,8 @@ ht-degree: 82%
 
    ![ビデオアセットのカスケードメタデータ](assets/video_asset.png)
 
-   *図： ビデオのカスケードメタデータ。*
+   *図：ビデオのカスケードメタデータ。*
 
    ![ドキュメントアセットのカスケードメタデータ](assets/doc_type_fields.png)
 
-   *図： ドキュメントのカスケードメタデータ。*
+   *図：ドキュメントのカスケードメタデータ。*
