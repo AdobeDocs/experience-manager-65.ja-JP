@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4db76ca1de97d8353ac88a6e66e14f41fb0b87db
+source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
 workflow-type: tm+mt
-source-wordcount: '2889'
-ht-degree: 46%
+source-wordcount: '2740'
+ht-degree: 47%
 
 ---
 
@@ -55,12 +55,12 @@ By default, `cq:ClientLibraryFolder` nodes can be placed anywhere within the `/a
 
 各ファイル `cq:ClientLibraryFolder` には、JSファイルやCSSファイルのセットと、いくつかのサポートファイルが入力されます（以下を参照）。 のプロパティ `cq:ClientLibraryFolder` は次のように設定します。
 
-* `categories`: この秋に含まれるJSファイルやCSSファイルのセットのカテゴリを特定 `cq:ClientLibraryFolder` します。 この `categories` プロパティは複数の値を取るため、ライブラリフォルダーを複数のカテゴリーの一部にすることができます（このプロパティの役立ちについては以下を参照）。
+* `categories`:この秋に含まれるJSファイルやCSSファイルのセットのカテゴリを特定 `cq:ClientLibraryFolder` します。 この `categories` プロパティは複数の値を取るため、ライブラリフォルダーを複数のカテゴリーの一部にすることができます（このプロパティの役立ちについては以下を参照）。
 
-* `dependencies`: これは、このライブラリカテゴリが依存する他のクライアントライブラリフォルダーのリストです。 例えば、2つの `cq:ClientLibraryFolder` ノードを指定し、のファイルが正しく機能するために別のファイルを `F` 必要とする場合、のファイルの中の少なくとも1つは、の `G`ノードの中の少なくとも1つでなければなりません `F``G``categories``G``dependencies``F`。
+* `dependencies`:これは、このライブラリカテゴリが依存する他のクライアントライブラリフォルダーのリストです。 例えば、2つの `cq:ClientLibraryFolder` ノードを指定し、のファイルが正しく機能するために別のファイルを `F` 必要とする場合、のファイルの中の少なくとも1つは、の `G`ノードの中の少なくとも1つでなければなりません `F``G``categories``G``dependencies``F`。
 
-* `embed`: 他のライブラリからコードを埋め込むために使用します。 ノードFがノードGとHを埋め込むと、結果のHTMLはノードGとHからのコンテンツの集合になります。
-* `allowProxy`: クライアントライブラリがの下にある場合、 `/apps`このプロパティを使用すると、プロキシサーブレット経由でアクセスできます。 See [Locating a Client Library Folder and Using the Proxy Client Libraries Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) below.
+* `embed`:他のライブラリからコードを埋め込むために使用します。 ノードFがノードGとHを埋め込むと、結果のHTMLはノードGとHからのコンテンツの集合になります。
+* `allowProxy`:クライアントライブラリがの下にある場合、 `/apps`このプロパティを使用すると、プロキシサーブレット経由でアクセスできます。 See [Locating a Client Library Folder and Using the Proxy Client Libraries Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) below.
 
 ## クライアント側ライブラリの参照 {#referencing-client-side-libraries}
 
@@ -103,7 +103,7 @@ JS、CSS またはテーマライブラリをフィルタリングするため�
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`は、以前はクライアントライブラリを含めるためによく使用されていた機能ですが、AEM 5.6以降では非推奨です。この機能は、上記の説明の代わりに使用 [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) してください。
+>`<cq:includeClientLib>`は、以前はクライアントライブラリを含めるために一般的に使用されていたもので、AEM 5.6以降では廃止されています。 [ この代わりに、上記の説明に従っ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) て使用する必要があります。
 
 ## クライアントライブラリフォルダーの作成 {#creating-client-library-folders}
 
@@ -135,7 +135,7 @@ In previous versions, client library folders were located below `/etc/clientlibs
 
 >[!NOTE]
 >
->クライアントライブラリフォルダーの下の静的リソースは、 *resourcesと呼ばれるフォルダーに存在する必要があります*。 フォルダー *リソースの下に画像などの静的リソースがない場合、その静的リソースは発行インスタンスで参照できません*。 次に例を示します。 https://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
+>クライアントライブラリフォルダーの下の静的リソースは、 *resourcesと呼ばれるフォルダーに存在する必要があります*。 フォルダー *リソースの下に画像などの静的リソースがない場合、その静的リソースは発行インスタンスで参照できません*。 次に例を示します。https://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
 
 >[!NOTE]
 >
@@ -157,7 +157,7 @@ Then you set the `allowProxy` property on `foo` to true.
 
 >[!CAUTION]
 >
->プロキシ化されたクライアントライブラリを使用する場合、AEMディスパッチャーの設定で、拡張clientlibsを持つURIが許可されるように更新する必要がある場合があります。
+>プロキシ化されたクライアントライブラリを使用する場合、AEMディスパッチャーの設定で、拡張clientlibを持つURIが許可されるように更新する必要がある場合があります。
 
 >[!CAUTION]
 >
@@ -182,8 +182,8 @@ Then you set the `allowProxy` property on `foo` to true.
 1. クライアントライブラリフォルダーを選択して、**作成／ファイルを作成**&#x200B;をクリックします。
 1. ファイル名ボックスに、次のいずれかのファイル名を入力して、「OK」をクリックします。
 
-   * **`js.txt`：**JavaScript ファイルを生成する場合はこのファイル名を使用します。
-   * **`css.txt`：**カスケーディングスタイルシート（CSS）を生成する場合はこのファイル名を使用します。
+   * **`js.txt`：** JavaScript ファイルを生成する場合はこのファイル名を使用します。
+   * **`css.txt`：** カスケーディングスタイルシート（CSS）を生成する場合はこのファイル名を使用します。
 
 1. ファイルを開き、ソースファイルのパスのルートを識別する次のテキストを入力します。
 
@@ -219,7 +219,7 @@ Then you set the `allowProxy` property on `foo` to true.
 
 ### 他のライブラリからのコードの埋め込み {#embedding-code-from-other-libraries}
 
-クライアントライブラリから別のクライアントライブラリにコードを埋め込むことができます。 実行時、埋め込みライブラリの生成されたJSファイルとCSSファイルには、埋め込みライブラリのコードが含まれます。
+クライアントライブラリから別のクライアントライブラリにコードを埋め込むことができます。実行時、埋め込みライブラリの生成されたJSファイルとCSSファイルには、埋め込みライブラリのコードが含まれます。
 
 コードの埋め込みは、リポジトリのセキュリティ保護された領域に格納されているライブラリへのアクセスを提供する際に便利です。
 
@@ -233,7 +233,7 @@ Then you set the `allowProxy` property on `foo` to true.
 * **タイプ：** String[]
 * **値：** 埋め込む `cq:ClientLibraryFolder` ノードのカテゴリプロパティの値。
 
-#### 埋め込みを使用したリクエストの最小化 {#using-embedding-to-minimize-requests}
+<!-- #### Using Embedding to Minimize Requests {#using-embedding-to-minimize-requests}
 
 In some cases you may find that the final HTML generated for typical page by your publish instance includes a relatively large number of `<script>` elements, particularly if your site is using client context information for analaytics or targeting. For example, in a non-optimized project you might find the following series of `<script>` elements in the HTML for a page:
 
@@ -247,9 +247,9 @@ In some cases you may find that the final HTML generated for typical page by you
 <script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
 ```
 
-このような場合、必要なすべてのクライアントライブラリコードを1つのファイルに組み合わせて、ページ読み込み時の前後のリクエスト数を減らすと便利です。 これを行うには、ノードのembedプロパティ `embed` を使用して、必要なライブラリをアプリ固有のクライアントライブラリに組み込み `cq:ClientLibraryFolder` ます。
+In such cases, it can be useful to combine all the required client library code in to a single file so that the number of back and forth requests on page load is reduced. To do this you can `embed` the required libraries into you app-specific client library using the embed property of the `cq:ClientLibraryFolder` node.
 
-次のクライアントライブラリカテゴリが AEM に含まれています。特定のサイトを機能させるために必要なもののみを埋め込んでください。ただし、**このリストの順序は保持する必要があります**。
+The following client library categories are incuded with AEM. You should embed only those that are required for he functioning of your particular site. However, **you should maintain the order listed here**:
 
 1. `browsermap.standard`
 1. `browsermap`
@@ -269,6 +269,10 @@ In some cases you may find that the final HTML generated for typical page by you
 1. `cq.collab.toggle`
 1. `cq.collab.forum`
 1. `cq.cleditor`
+
+EDITOR NOTE: removed as requested on CQDOC-16765
+
+-->
 
 #### CSS ファイル内のパス {#paths-in-css-files}
 
@@ -306,7 +310,7 @@ To associate a client library folder with a device group, add a property to your
 
 * **名前：** チャネル
 * **タイプ：** String[]
-* **値：** モバイルグループの名前。 ライブラリフォルダーをグループから除外するには、名前の前に感嘆符(&quot;!&quot;)を付けます。
+* **値：** モバイルグループの名前。ライブラリフォルダーをグループから除外するには、名前の前に感嘆符(&quot;!&quot;)を付けます。
 
 例えば、次の表は、`channels` カテゴリの各クライアントライブラリフォルダーの `cq.widgets` プロパティの値を示しています。
 
@@ -449,6 +453,7 @@ The `dumplibs` component includes a test selector that displays the source code 
    * Webブラウザーで次のURLを開きます（必要に応じて別のホストとポートを使用します）。
 
       * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
+
    デフォルトページに、categories 属性の値がないタグの出力が表示されます。
 
 1. To see the output for a category, type the value of the client library&#39;s `categories` property and click **Submit Query**.
