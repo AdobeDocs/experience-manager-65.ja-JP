@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Manager6.5リリースの廃止および削除された機能です。
+title: Adobe Experience Manager6.5リリースでの機能の廃止と削除
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1722'
 ht-degree: 44%
 
 ---
@@ -48,7 +48,8 @@ AEM機能の差し迫った削除または交換を伝えるには、次の規�
 | 開発者向け | `Granite.Sling.js`クライアントライブラリに埋め込みます。配布版（クイックスタート）の一部として含まれている Granite.Sling.js クライアントライブラリの機能がさらに強化される予定はありません。 | Adobeでは、ライブラリの機能に依存しているお客様に、コードを使用しなくなるようにリファクタリングすることをお勧めします。 |
 | 開発者向け | YUI を使用した JavaScript クライアントライブラリの圧縮／軽量化。YUI ライブラリがさらに更新される予定はありません。AEM 6.4までは、YUIはJavaScriptを縮小するためのデフォルトで、Google Closure Compiler(GCC)に切り替えるオプションを持っていました。 AEM 6.5 以降は、GCC がデフォルトになっています。 | Adobeでは、AEM 6.5にアップグレードしてGCCに切り替えて導入することを推奨しています。 |
 | 開発者向け | CRXDE Lite のクラシック UI ダイアログエディター. 配布版（クイックスタート）の一部として含まれているクラシック UI ダイアログエディターの機能がさらに強化される予定はありません。 | 置き換えが利用できません。 |
-| フォーム | AEM MobileとのAEM Forms統合は廃止されました。 | 置き換えはありません。 |
+| フォーム | AEM FormsとAEM Mobileの統合は廃止されます。 | 置き換えはありません。 |  | 開発者向け | CRXDE Lite のクラシック UI ダイアログエディター. 配布版（クイックスタート）の一部として含まれているクラシック UI ダイアログエディターの機能がさらに強化される予定はありません。 | 置き換えが利用できません。 |
+| フォーム | Lodash/underscoreクライアントライブラリ。 Adobeは、配布版(Quickstart)の一部として出荷されるLodash/underscoreクライアントライブラリの保守と更新を今後行う予定はありません | Adobeでは、コードにLodash/underscoreを必要とする場合でも、プロジェクトのコードベースに追加することをお勧めします。 |
 
 ## 削除された機能 {#removed-features}
 
@@ -62,8 +63,8 @@ AEM機能の差し迫った削除または交換を伝えるには、次の規�
 | フォーム | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートが削除されました。 | 代替機能はありません. |
 | フォーム | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 代替機能はありません. |
 | フォーム | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 代替機能はありません |
-| フォーム | LiveCycleES4 SP1からAEM 6.5Forms（JEE上）へのシングルホップアップグレードは利用できません | AEM Formsアップグレードドキュメントの [利用可能なアップグレードパス](../forms/using/upgrade.md) を参照してください。 |
-| フォーム | JEE上のAEM Formsから、UPDベースのクラスタリングのサポートを削除しました。 | JEE上のAEM Formsでは、TCPベースのクラスタリングのみを使用できます。 UDPマルチキャストサーバーを以前のバージョンからAEM 5.5Forms（JEE上）にアップグレードする場合は、手動設定を実行してTCPベースのGemfireクラスタリングに切り替えます。 詳細な手順については、「JEE上のAEM 6.5 formsへの [アップグレード」を参照してください。](../forms/using/upgrade-forms-jee.md) |
+| フォーム | LiveCycleES4 SP1からAEM 6.5Forms（JEE上）へのシングルホップアップグレードは利用できません | AEM Formsのアップグレードドキュメントで [利用可能なアップグレードパス](../forms/using/upgrade.md) を参照してください。 |
+| フォーム | JEE上のAEM FormsからUPDベースのクラスタリングのサポートを削除しました。 | JEE上のAEM Formsでは、TCPベースのクラスタリングのみを使用できます。 UDPマルチキャストサーバーを以前のバージョンからAEM 5.5Forms（JEE上）にアップグレードする場合は、手動設定を実行してTCPベースのGemfireクラスタリングに切り替えます。 詳細な手順については、「JEE上のAEM 6.5 formsへの [アップグレード」を参照してください。](../forms/using/upgrade-forms-jee.md) |
 | 開発者向け | デフォルトの配布版（クイックスタート）から Firebug Lite が削除されました | ブラウザー組み込みのデベロッパーコンソールを使用してください。 |
 | 開発者向け | Remove `customJavaScriptPath` support in HTML Client Library Manager. | 代替機能はありません |
 | [!DNL Assets] | アセットのオフロード機能は、 [!DNL Adobe Experience Manager] 6.5で削除されました。 | 置き換えが利用できません。 |
