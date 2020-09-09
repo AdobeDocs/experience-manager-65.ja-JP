@@ -2,7 +2,7 @@
 title: Adobe Experience Manager6.5リリースでの機能の廃止と削除
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 translation-type: tm+mt
-source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
+source-git-commit: 1e6feac534fe990d614997c4bd3ab999a4a8d479
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 44%
@@ -49,7 +49,7 @@ AEM機能の差し迫った削除または交換を伝えるには、次の規�
 | 開発者向け | YUI を使用した JavaScript クライアントライブラリの圧縮／軽量化。YUI ライブラリがさらに更新される予定はありません。AEM 6.4までは、YUIはJavaScriptを縮小するためのデフォルトで、Google Closure Compiler(GCC)に切り替えるオプションを持っていました。 AEM 6.5 以降は、GCC がデフォルトになっています。 | Adobeでは、AEM 6.5にアップグレードしてGCCに切り替えて導入することを推奨しています。 |
 | 開発者向け | CRXDE Lite のクラシック UI ダイアログエディター. 配布版（クイックスタート）の一部として含まれているクラシック UI ダイアログエディターの機能がさらに強化される予定はありません。 | 置き換えが利用できません。 |
 | フォーム | AEM FormsとAEM Mobileの統合は廃止されます。 | 置き換えはありません。 |  | 開発者向け | CRXDE Lite のクラシック UI ダイアログエディター. 配布版（クイックスタート）の一部として含まれているクラシック UI ダイアログエディターの機能がさらに強化される予定はありません。 | 置き換えが利用できません。 |
-| フォーム | Lodash/underscoreクライアントライブラリ。 Adobeは、配布版(Quickstart)の一部として出荷されるLodash/underscoreクライアントライブラリの保守と更新を今後行う予定はありません | Adobeでは、コードにLodash/underscoreを必要とする場合でも、プロジェクトのコードベースに追加することをお勧めします。 |
+| 開発者向け | Lodash/underscoreクライアントライブラリ。 Adobeは、配布版(Quickstart)の一部として出荷されるLodash/underscoreクライアントライブラリの保守と更新を今後行う予定はありません | Adobeでは、コードにLodash/underscoreを必要とする場合でも、プロジェクトのコードベースに追加することをお勧めします。 |
 
 ## 削除された機能 {#removed-features}
 
