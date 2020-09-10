@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 8496c2fa298b5490bb2560f61de77876d66fd6f6
+source-git-commit: 50c1532b2bdc41555eff2be718cd478aad1f403a
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 37%
@@ -112,7 +112,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 * Verify **Create post from reply email** is `unchecked`.
 
-![chlimage_1-100](assets/configure-email.png)
+![configure-email-reply](assets/configure-email-reply.png)
 
 ### 購読用の設定 {#configuration-for-subscriptions}
 
@@ -122,7 +122,7 @@ Communities の電子メール設定インスタンスに接続するには：
 * 編集アイコンを選択します。
 * Verify the **Name** is `subscriptions-email`.
 
-   ![chlimage_1-101](assets/configure-email-subscription.png)
+   ![configure-email-購読](assets/configure-email-subscriptions.png)
 
 * **[!UICONTROL 名前]**
 
@@ -141,7 +141,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 * **[!UICONTROL 「返信先」の電子メールアドレス]**
 
-   「返信先」の電子メールアドレスとして使用されるアドレス。 デフォルトは `communities@adobe.com` です。
+   「返信先」の電子メールアドレスとして使用されるアドレス。 デフォルトは `no-reply@example.com` です。
 
 * **[!UICONTROL Reply-to-Delimiter]**
 
