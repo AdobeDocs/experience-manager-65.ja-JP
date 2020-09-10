@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5baef6f4d570aff738444e0620b982729b897f89
+source-git-commit: 8633216807061c73f4bc692d13f9eba37845cffc
 workflow-type: tm+mt
-source-wordcount: '1996'
-ht-degree: 46%
+source-wordcount: '2028'
+ht-degree: 45%
 
 ---
 
@@ -357,6 +357,8 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
    >[!NOTE]
    >
    >レプリケーションエージェントを無効にしないでください。 これにより、一部のアセットの複製が失敗する場合があります。
+   >
+   >タイムアウトエラーを回避するために、4つのレプリケーションエージェントがすべて構成されていることを確認します。 See [troubleshoot issues in parallel publishing to Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 AEM Assets作成者インスタンスがBrand Portalで正しく設定され、次の操作ができます。
 
