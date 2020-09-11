@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '792'
 ht-degree: 55%
 
 ---
@@ -60,7 +60,7 @@ This tutorial describes how to setup [MSRP](msrp.md) for *one author* instance a
    * 定義されたデータ・ディレクトリ・パスは、&lt;mongo-dbpath>と呼ばれます。
 
 
-* MongoDBはAEMと同じホストで実行するか、リモートで実行できます。
+* MongoDBはAEMと同じホスト上で実行するか、リモートで実行できます。
 
 ### MongoDB を起動します。{#start-mongodb}
 
@@ -100,7 +100,7 @@ This tutorial describes how to setup [MSRP](msrp.md) for *one author* instance a
 * Download Solr from [Apache Lucene](https://archive.apache.org/dist/lucene/solr/):
 
    * 任意のOSに適しています。
-   * バージョン4.10またはバージョン5を使用します。
+   * Solrバージョン7.0。
    * SolrではJava 1.7以降が必要です。
 
 * 基本設定
@@ -131,7 +131,7 @@ Solr を実行する方法は、バージョンとインストール方法によ
 
 >[!NOTE]
 >
->Solr コンソールが使用できない場合は、&lt;solrinstall>/example/logs にあるログを確認します。SOLRが解決できない特定のホスト名(例： &quot;user-macbook-pro&quot;)。
+>Solr コンソールが使用できない場合は、&lt;solrinstall>/example/logs にあるログを確認します。SOLRが解決できない特定のホスト名(例：&quot;user-macbook-pro&quot;)。
 その場合、このホスト名の新しいエントリ（127.0.0.1 user-macbook-pro など）を使用して etc/hosts ファイルを更新します。すると Solr が適切に起動します。
 
 
@@ -196,4 +196,4 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
    * If the srpc node exists and contains node [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties should define MSRP to be the default provider
 
 
-1. MSRPの選択後にAEMが再起動されたことを確認します。
+1. MSRPを選択した後にAEMが再起動されたことを確認します。
