@@ -2,12 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5開発ユーザーガイド
+user-guide-title: AEM 6.5 Developing User Guide
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 79%
 
 ---
@@ -98,24 +98,24 @@ ht-degree: 79%
       + [xtype の使用（クラシック UI）](xtypes.md)
       + [フォームの開発（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
-   + [AEMとのヘッドレスおよびハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [ヘッドレスおよびAEMとのハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
    + 単一ページアプリケーション{#spas}
       + [SPAの概要とチュートリアル](spa-walkthrough.md)
       + [SPA WKNDチュートリアル](spa-wknd.md)
-      + [AEMのSPA使用の手引き — React](spa-getting-started-react.md)
+      + [AEMでのSPAの使用の手引き — React](spa-getting-started-react.md)
       + [AEMでのSPAの使用の手引き — Angular](spa-getting-started-angular.md)
       + [SPA用のReactコンポーネントの実装](spa-implementing-react-component.md)
       + [スパディープディブス](spa-deep-dives.md)
       + [SPA エディターの概要](spa-overview.md)
-      + [AEM用SPAの開発](spa-architecture.md)
+      + [AEM向けSPAの開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
       + [SPAページコンポーネント](spa-page-component.md)
       + [SPAの動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
       + [SPAモデルルーティング](spa-routing.md)
-      + [SPAとAdobe Experience Platform起動の統合](spa-launch.md)
+      + [SPAとAdobe Experience Platform Launchの統合](spa-launch.md)
       + [SPAとサーバー側のレンダリング](spa-ssr.md)
-      + [SPA JavaScript API リファレンス](spa-reference-materials.md)
+      + [SPAリファレンス資料](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
    + [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)
    + [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)
@@ -165,10 +165,10 @@ ht-degree: 79%
       + [ワークフロープロセスのリファレンス](workflows-process-ref.md)
       + [AEMワークフローの変数](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [Multi Site Manager の拡張](extending-msm.md)
-   + トラッキングとAnalytics{#extending-analytics}
+   + 追跡と分析{#extending-analytics}
       + [イベント追跡の拡張](extending-analytics.md)
-      + [コンポーネントへのAdobeAnalyticsトラッキングの追加](extending-analytics-components.md)
-      + [Adobe Service Frameworkのカスタマイズ](extending-analytics-framework.md)
+      + [コンポーネントへのAdobe Analyticsトラッキングの追加](extending-analytics-components.md)
+      + [Adobe Analyticsフレームワークのカスタマイズ](extending-analytics-framework.md)
       + [Analytics 用のサーバー側ページネーミングの実装](extending-analytics-pa-naming.md)
    + Cloud Services {#extending-cloud-services}
       + [クラウドサービス設定](extending-cloud-config.md)
