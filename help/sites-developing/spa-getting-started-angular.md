@@ -10,7 +10,10 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '1053'
+ht-degree: 31%
 
 ---
 
@@ -23,7 +26,7 @@ SPA オーサリング機能には、AEM 内で SPA をサポートするため�
 
 >[!NOTE]
 >
->この記事はAngularフレームワークに基づいています。 対応するReactフレームワークのドキュメントについては、AEM - Reactの「SPAを使用する前に [」を参照してください](/help/sites-developing/spa-getting-started-react.md)。
+>この記事はAngularフレームワークに基づいています。 対応するReactフレームワークのドキュメントについては、AEMの「SPAを使用する前に — React」を参照して [ください](/help/sites-developing/spa-getting-started-react.md)。
 
 >[!NOTE]
 >
@@ -33,7 +36,7 @@ SPA オーサリング機能には、AEM 内で SPA をサポートするため�
 
 この記事では、シンプルな SPA の基本的な機能と、SPA を運用するための最低条件の概要を説明します。
 
-AEMでのSPAの動作について詳しくは、次のドキュメントを参照してください。
+AEMでのSPAの動作方法の詳細については、次のドキュメントを参照してください。
 
 * [SPAの概要とチュートリアル](/help/sites-developing/spa-walkthrough.md)
 * [SPA オーサリングの概要](/help/sites-developing/spa-overview.md)
@@ -57,9 +60,9 @@ AEMでのSPAの動作について詳しくは、次のドキュメントを参�
 
 ```
 "dependencies": {
-  "@adobe/cq-angular-editable-components": "~1.0.3",
-  "@adobe/cq-spa-component-mapping": "~1.0.3",
-  "@adobe/cq-spa-page-model-manager": "~1.0.4"
+  "@adobe/aem-angular-editable-components": "~1.0.3",
+  "@adobe/aem-spa-component-mapping": "~1.0.5",
+  "@adobe/aem-spa-page-model-manager": "~1.0.3"
 }
 ```
 
@@ -112,13 +115,13 @@ module.exports = {
 
 ### AEM プロジェクトアーキタイプ {#aem-project-archetype}
 
-AEMプロジェクトは、ReactまたはAngularを使用してSPAプロジェクトをサポートし、SPA SDKを利用する [AEMプロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用する必要があります。
+AEMプロジェクトでは、 [AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)（ReactまたはAngularを使用するSPAプロジェクトをサポートし、SPA SDKを利用する）を活用する必要があります。
 
 ## アプリケーション構造 {#application-structure}
 
-前述の依存関係を含め、アプリを作成すると、AEMインスタンスにアップロードできる作業中のSPAパッケージが表示されます。
+前述のように依存関係を含め、アプリを作成すると、AEMインスタンスにアップロードできる有効なSPAパッケージが表示されます。
 
-このドキュメントの次の節では、AEMのSPAの構造、アプリケーションを駆動する重要なファイル、およびそれらの連携方法について説明します。
+このドキュメントの次のセクションでは、AEMのSPAの構造、アプリケーションを駆動する重要なファイル、およびそれらの連携方法について説明します。
 
 例としてシンプル化された画像コンポーネントが使用されますが、アプリケーションのすべてのコンポーネントは同じ概念に基づいています。
 
@@ -131,7 +134,7 @@ The entry point into the SPA is the `app.module.ts` file shown here simplified t
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SpaAngularEditableComponentsModule } from '@adobe/cq-angular-editable-components';
+import { SpaAngularEditableComponentsModule } from '@adobe/aem-angular-editable-components';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -160,8 +163,8 @@ export class AppModule {}
 ```
 // app.component.ts
 import { Component } from '@angular/core';
-import { ModelManager } from '@adobe/cq-spa-page-model-manager';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { ModelManager } from '@adobe/aem-spa-page-model-manager';
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-root',
@@ -195,7 +198,7 @@ export class AppComponent {
 import { Component } from '@angular/core';
 import { ModelManagerService }     from '../model-manager.service';
 import { ActivatedRoute } from '@angular/router';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-main',
@@ -286,10 +289,10 @@ AEM の SPA の中核概念は、SPA コンポーネントを AEM コンポー�
 
 ## 次の手順 {#next-steps}
 
-独自のSPAを作成する手順ガイドについては、「AEM SPA Editor - WKNDイベントの [手引きチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)」を参照してください。
+独自のSPAを作成する手順ガイドについては、「AEM SPA Editor - WKNDイベントの [概要チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)」を参照してください。
 
-AEM用のSPAを開発するための自社統計の詳細については、「AEM用のSPAの [開発](/help/sites-developing/spa-architecture.md)」を参照してください。
+AEM用のSPAを開発するための自身の編成方法の詳細については、AEM用のSPAの [開発を参照してください](/help/sites-developing/spa-architecture.md)。
 
 動的モデルとコンポーネントのマッピングおよびAEMのSPA内での動作について詳しくは、「SPAのSPA間の [動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)」を参照してください。
 
-ReactやAngular以外のフレームワーク用にAEMにSPAを実装する場合、または単にSPA SDK for AEMの仕組みを詳しく調べたい場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) の記事を参照してください。
+AEMでReactやAngular以外のフレームワーク用にSPAを実装する場合、またはAEM用のSPA SDKの仕組みを詳しく調べる場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) の記事を参照してください。
