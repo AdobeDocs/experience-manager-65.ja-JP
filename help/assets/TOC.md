@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Experience Manager6.5アセットユーザーガイド
+breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: d4cd304fccba9c06078790ea97bee74fc12d8df0
+source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 51%
