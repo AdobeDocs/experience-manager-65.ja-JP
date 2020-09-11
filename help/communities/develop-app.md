@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 51%
@@ -48,7 +48,7 @@ CRXDE Lite を使用して、次の手順を実行します。
 
 ### Head and body scripts {#head-and-body-scripts}
 
-1. **CRXDE Lite** Explorerウィンドウで、ファイルに移動し `/apps/an-scf-sandbox/components/playpage` 、重複を押しながらクリックして、編集ウィンドウ `playpage.jsp` で開きます。
+1. **CRXDE Lite** ・エクスプローラ・ペインで、ファイルに移動し `/apps/an-scf-sandbox/components/playpage``playpage.jsp` 、重複を押しながらクリックして、編集ペインで開きます。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
