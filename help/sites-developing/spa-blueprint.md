@@ -1,8 +1,8 @@
 ---
 title: SPA ブループリント
 seo-title: SPA ブループリント
-description: このドキュメントでは、編集可能なSPAコンポーネントをAEM内に実装するためにSPAフレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
-seo-description: このドキュメントでは、編集可能なSPAコンポーネントをAEM内に実装するためにSPAフレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
+description: このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
+seo-description: このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
 uuid: 48f2d415-ec34-49dc-a8e1-6feb5a8a5bbe
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -10,17 +10,17 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
 source-wordcount: '2112'
-ht-degree: 13%
+ht-degree: 12%
 
 ---
 
 
 # SPA ブループリント{#spa-blueprint}
 
-作成者がAEM SPA Editorを使用してSPAのコンテンツを編集できるようにするには、SPAが満たす必要がある要件があります。これについてはこのドキュメントで説明します。
+作成者がAEM SPA Editorを使用してSPAのコンテンツを編集できるようにするには、このドキュメントで説明するように、SPAが満たす必要がある要件があります。
 
 >[!NOTE]
 >
@@ -28,19 +28,19 @@ ht-degree: 13%
 
 ## 概要 {#introduction}
 
-このドキュメントでは、編集可能なSPAコンポーネントをAEM内に実装するためにSPAフレームワークが満たす必要がある一般的な契約（AEMサポートレイヤーの種類）について説明します。
+このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するために、SPAフレームワークが満たす必要がある一般的な契約(AEMサポート層など)について説明します。
 
 >[!NOTE]
 >
 >以下の要件は、フレームワークには依存しません。要件が満たされると、（モジュール、コンポーネントおよびサービスで構成された）フレームワーク固有のレイヤーが提供されます。
 >
->**AEMのReactおよびAngularフレームワークでは、以下の要件が既に満たされています。** この青写真の要件は、AEMで使用する別のフレームワークを実装する場合にのみ適用されます。
+>**AEMのReactフレームワークとAngularフレームワークでは、これらの要件は既に満たされています。** この青写真の要件は、AEMで使用する別のフレームワークを実装する場合にのみ適用されます。
 
 >[!CAUTION]
 >
->AEMのSPA機能はフレームワークに依存しませんが、現在、ReactおよびAngularフレームワークのみがサポートされています。
+>AEMのSPA機能はフレームワークに依存しませんが、現在、ReactフレームワークとAngularフレームワークのみがサポートされています。
 
-作成者がAEMページエディターを使用して、単一ページアプリケーションのフレームワークで公開されるデータを編集できるようにするには、プロジェクトが、AEMリポジトリ内のアプリケーション用に保存されたデータのセマンティックを表すモデルの構造を解釈できる必要があります。 この目標を達成するために、フレームワークに依存しない2つのライブラリが用意されています。 と `PageModelManager` があり `ComponentMapping`ます。
+作成者がAEMページエディターを使用して、単一ページアプリケーションのフレームワークで公開されるデータを編集できるようにするには、AEMリポジトリ内のアプリケーション用に保存されたデータのセマンティックを表すモデルの構造を解釈できる必要があります。 この目標を達成するために、フレームワークに依存しない2つのライブラリが用意されています。と `PageModelManager` があり `ComponentMapping`ます。
 
 ### PageModelManager {#pagemodelmanager}
 
@@ -48,21 +48,21 @@ ht-degree: 13%
 
 SPA に代わり、実際のコンテンツ構造を表す JSON 構造の取得および管理を抽象化します。また、SPAと同期して、コンポーネントを再レンダリングする必要が生じた時点を通知する必要もあります。
 
-NPMパッケージ「 [@adobe/cq-spa-page-model-manager」を参照してください。](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
+NPMパッケージ「 [@adobe/aem-spa-page-model-manager」を参照してください。](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 
-ライブラリを初期化する `PageModelManager`とき、ライブラリは、最初に、指定されたAppのルートモデルを読み込みます（パラメーター、メタプロパティまたは現在のURLを使用）。 ライブラリが、現在のページのモデルが取得するルートモデルの一部でないことを識別し、それを子ページのモデルとして含める場合。
+ライブラリを初期化する `PageModelManager`とき、ライブラリは、最初に、指定されたアプリケーションのルートモデルを読み込みます（パラメーター、メタプロパティまたは現在のURLを使用）。 ライブラリが、現在のページのモデルが取得するルートモデルの一部でないことを識別し、それを子ページのモデルとして含める場合。
 
 ![page_model_consolidation](assets/page_model_consolidation.png)
 
 ### ComponentMapping {#componentmapping}
 
-The `ComponentMapping` module is provided as an NPM package to the front-end project. フロントエンドコンポーネントが格納され、SPAがフロントエンドコンポーネントをAEMリソースタイプにマッピングする方法を提供します。 これにより、アプリケーションのJSONモデルを解析する際に、コンポーネントの動的な解決が可能になります。
+The `ComponentMapping` module is provided as an NPM package to the front-end project. フロントエンドコンポーネントが格納され、SPAがフロントエンドコンポーネントをAEMリソースタイプにマッピングする手段を提供します。 これにより、アプリケーションのJSONモデルを解析する際に、コンポーネントの動的な解決が可能になります。
 
-モデル内の各項目には、AEMリソースタイプを表示する `:type` フィールドが含まれています。 マウントすると、フロントエンドコンポーネントは、基になるライブラリから受け取ったモデルのフラグメントを使用して自分自身をレンダリングできます。
+モデル内の各項目には、AEMリソースタイプを表示する `:type` フィールドが含まれます。 マウントすると、フロントエンドコンポーネントは、基になるライブラリから受け取ったモデルのフラグメントを使用して自分自身をレンダリングできます。
 
 #### 動的モデルとコンポーネントのマッピング {#dynamic-model-to-component-mapping}
 
-AEM向けJavaScript SPA SDKでの動的モデルとコンポーネントとのマッピングの発生方法について詳しくは、「SPAの [動的モデルとコンポーネントとのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)」を参照してください。
+AEM向けJavaScript SPA SDKでの動的モデルとコンポーネントのマッピングの発生方法について詳しくは、「SPAの [動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)」を参照してください。
 
 ### フレームワーク固有の層 {#framework-specific-layer}
 
@@ -74,7 +74,7 @@ AEM向けJavaScript SPA SDKでの動的モデルとコンポーネントとの�
 
 ### ページモデル {#page-model}
 
-ページのコンテンツ構造は AEM に保存されます。ページのモデルは、SPA コンポーネントのマッピングとインスタンス化に使用されます。SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これを行うには、リソースタイプ（またはAEMコンポーネントへのパス）を一意のキーとして使用します。
+ページのコンテンツ構造は AEM に保存されます。ページのモデルは、SPA コンポーネントのマッピングとインスタンス化に使用されます。SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これを行うには、リソースタイプ(またはAEMコンポーネントへのパス)を一意のキーとして使用します。
 
 SPAコンポーネントは、ページモデルと同期していて、それに応じてコンテンツに変更を加えて更新する必要があります。 指定のページモデル構造に従って、コンポーネントをその場でインスタンス化するには、動的コンポーネントを利用したパターンを使用する必要があります。
 
@@ -82,34 +82,34 @@ SPAコンポーネントは、ページモデルと同期していて、それ�
 
 The page model leverages the JSON Model Exporter, which is itself based on the [Sling Model](https://sling.apache.org/documentation/bundles/models.html) API. エクスポート可能なSlingモデルは、基になるライブラリがデータモデルを解釈できるようにするために、次のフィールドのリストを公開します。
 
-* `:type`: AEMリソースのタイプ（デフォルト=リソースタイプ）
-* `:children`: 現在のリソースの階層の子。 子は現在のリソースの内部コンテンツに含まれていません（ページを表す項目に含まれています）
-* `:hierarchyType`: リソースの階層タイプ。 は、 `PageModelManager` 現在、ページタイプをサポートしています
+* `:type`:AEMリソースのタイプ（デフォルト=リソースタイプ）
+* `:children`:現在のリソースの階層の子。 子は現在のリソースの内部コンテンツに含まれていません（ページを表す項目に含まれています）
+* `:hierarchyType`:リソースの階層タイプ。 は、 `PageModelManager` 現在、ページタイプをサポートしています
 
-* `:items`: 現在のリソースの子コンテンツリソース(ネストされた構造、コンテナにのみ存在)
-* `:itemsOrder`: 子供のリストを命じた。 JSONマップオブジェクトは、フィールドの順序を保証しません。 マップと現在の配列の両方を持つことで、APIのコンシューマは、両方の構造体の利点を持ちます。
-* `:path`: 項目のコンテンツパス（ページを表す項目に存在）
+* `:items`:現在のリソースの子コンテンツリソース(ネストされた構造、コンテナにのみ存在)
+* `:itemsOrder`:子供のリストを命じた。 JSONマップオブジェクトは、フィールドの順序を保証しません。 マップと現在の配列の両方を持つことで、APIのコンシューマは、両方の構造体の利点を持ちます。
+* `:path`:項目のコンテンツパス（ページを表す項目に存在）
 
 [AEM コンテンツサービスの利用](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html)も参照してください。
 
 ### フレームワーク固有のモジュール {#framework-specific-module}
 
-懸念を分けることで、プロジェクトの実装を容易にすることができます。 したがって、npm固有のパッケージを提供する必要があります。 このパッケージは、基本モジュール、サービス、コンポーネントの集積と公開を担当します。 これらのコンポーネントは、データモデルの管理ロジックをカプセル化し、プロジェクトのコンポーネントが予期するデータへのアクセスを提供する必要があります。 モジュールは、基盤となるライブラリの有用なエントリポイントを推移的に公開する役割も果たします。
+懸念を分けることで、プロジェクトの実装を容易にすることができます。 したがって、npm固有のパッケージを提供する必要があります。 このパッケージは、基本モジュール、サービス、コンポーネントの集積と公開を担当します。 これらのコンポーネントは、データモデルの管理ロジックをカプセル化し、プロジェクトのコンポーネントが予期するデータへのアクセスを提供する必要があります。 このモジュールは、基になるライブラリの有用なエントリポイントを推移的に公開する役割も果たします。
 
-ライブラリの相互運用性を容易にするため、アドビはフレームワーク固有のモジュールに以下のライブラリをバンドルするよう勧めています。 必要に応じて、レイヤーは基になるAPIをカプセル化し、調整してから、プロジェクトに公開できます。
+ライブラリの相互運用性を容易にするため、Adobeはフレームワーク固有のモジュールに対し、以下のライブラリをバンドルするよう勧告する。 必要に応じて、レイヤーは基になるAPIをカプセル化し、調整してから、プロジェクトに公開できます。
 
-* [@adobe/cq-spa-page-model-manager](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [@adobe/cq-spa-component-mapping](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
+* [@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
 #### 実装 {#implementations}
 
 #### React {#react}
 
-npmモジュール： [@adobe/cq-react-editable-components](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
+npmモジュール： [@adobe/aem-react-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
 #### 角 {#angular}
 
-npmモジュール： 近々
+npmモジュール：近々
 
 ## メインサービスとコンポーネント {#main-services-and-components}
 
@@ -127,16 +127,16 @@ npmモジュール： 近々
 
 #### コンポーネントの宣言 {#component-declaration}
 
-次のメタデータは、プロジェクトのコンポーネントによって生成される外側のHTML要素に追加する必要があります。 ページエディターで対応する編集設定を取得できるようになります。
+プロジェクトのコンポーネントによって生成される外側のHTML要素に、次のメタデータを追加する必要があります。 ページエディターで対応する編集設定を取得できるようになります。
 
-* `data-cq-data-path`: リソースへのパス。 `jcr:content`
+* `data-cq-data-path`:リソースへのパス。 `jcr:content`
 
 #### 機能の宣言とプレースホルダの編集 {#editing-capability-declaration-and-placeholder}
 
 次のメタデータとクラス名は、プロジェクトのコンポーネントによって生成される外側のHTML要素に追加する必要があります。 ページエディターでオファー関連の機能を有効にします。
 
-* `cq-placeholder`: 空のコンポーネントのプレースホルダーを識別するクラス名
-* `data-emptytext`: コンポーネントインスタンスが空の場合にオーバーレイによって表示されるラベル
+* `cq-placeholder`:空のコンポーネントのプレースホルダーを識別するクラス名
+* `data-emptytext`:コンポーネントインスタンスが空の場合にオーバーレイによって表示されるラベル
 
 **空のコンポーネントのプレースホルダー**
 
@@ -161,14 +161,14 @@ npmモジュール： 近々
 
 レスポンシブグリッドコンポーネントはコンテナです。 列を表すモデルプロバイダーの特定のバリアントが含まれます。 レスポンシブグリッドとその列は、モデルに含まれる特定のクラス名で、プロジェクトのコンポーネントの外側のHTML要素を装飾する役割を持ちます。
 
-レスポンシブグリッドコンポーネントは、複雑でカスタマイズされることはほとんどないので、AEMの対応するコンポーネントに事前にマッピングする必要があります。
+レスポンシブグリッドコンポーネントは、AEMの対応するコンポーネントに事前にマッピングされている必要があります。このコンポーネントは複雑で、カスタマイズされることはほとんどありません。
 
 #### 特定のモデルフィールド {#specific-model-fields}
 
 * `gridClassNames:` レスポンシブグリッドに指定されたクラス名
 * `columnClassNames:` レスポンシブ列に指定されたクラス名
 
-npmリソース [@adobe/cq-react-editable-components#srccomponentsresponsevegridjsxも参照してください。](https://www.npmjs.com/package/@adobe/cq-react-editable-components#srccomponentsresponsivegridjsx)
+npmリソース [@adobe/aem-react-editable-components#srccomponentsresponsevegridjsxも参照してください。](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)
 
 #### レポンシブグリッドのプレースホルダ {#placeholder-of-the-reponsive-grid}
 
@@ -185,7 +185,8 @@ SPAコンポーネントはレスポンシブグリッドなどのグラフィ�
 >この例で使用されているクラス名は、現時点ではページエディターで必須です。
 >
 >* `"new section"`：現在の要素がコンテナのプレースホルダーであることを示します。
->* `"aem-Grid-newComponent"`: レイアウトオーサリング用のコンポーネントを標準化します
+>* `"aem-Grid-newComponent"`:レイアウトオーサリング用のコンポーネントを標準化します
+
 >
 
 
@@ -241,7 +242,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 プロジェクトコンポーネントは、少なくとも次のデータ属性を生成して、エディタが操作できるようにする必要があります。
 
-* `data-cq-data-path`: で指定されるコンポーネントの相対パス `PageModel` (例： `"root/responsivegrid/image"`)。 この属性はページに追加しないでください。
+* `data-cq-data-path`:によって提供されるコンポーネントの相対パス `PageModel` (例： `"root/responsivegrid/image"`)。 この属性はページに追加しないでください。
 
 要約すると、編集可能としてページエディターで解釈されるために、プロジェクトコンポーネントは次の契約を守る必要があります。
 
@@ -274,7 +275,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 ## ナビゲーションとルーティング {#navigation-and-routing}
 
-アプリがルーティングを所有している。 フロントエンド開発者は、まず、ナビゲーションコンポーネント（AEMナビゲーションコンポーネントにマッピング）を実装する必要があります。 このコンポーネントは、コンテンツのフラグメントを表示または非表示にする一連のルートと組み合わせて使用するURLリンクをレンダリングします。
+アプリがルーティングを所有している。 フロントエンド開発者は、まず、ナビゲーションコンポーネント(AEMナビゲーションコンポーネントにマッピング)を実装する必要があります。 このコンポーネントは、コンテンツのフラグメントを表示または非表示にする一連のルートと組み合わせて使用するURLリンクをレンダリングします。
 
 基になる [ ライブラリとその `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` [ModelRouter](/help/sites-developing/spa-routing.md)` モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対し、プリフェッチおよびアクセスを行います。
 
