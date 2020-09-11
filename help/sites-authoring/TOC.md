@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5オーサリングユーザーガイド
+breadcrumb-title: Authoring Guide
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
+source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 89%
