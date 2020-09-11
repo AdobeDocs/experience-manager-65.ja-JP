@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: experience manager
 audience: end-user
 user-guide-title: AEM 6.5 リリースノート
+breadcrumb-title: Release Notes
 user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: 5b4c684e3ebf2f4c37cfe3244c0118cd994093fb
+source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 66%
