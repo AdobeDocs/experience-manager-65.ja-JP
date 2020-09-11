@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 622fbe5eba3e737ebc25e6c57d7ed68d7bff9555
+source-git-commit: 74f1fc80bb908f7b7114177c5f8355ff892b95ed
 workflow-type: tm+mt
-source-wordcount: '4423'
+source-wordcount: '4422'
 ht-degree: 7%
 
 ---
@@ -112,7 +112,7 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
 * 検索ページと検索結果ページに、スクリーンリーダーユーザーをより深く理解するための情報が得られるタイトルが追加されました(NPR-34093)。
 
-* スクリーンリーダーは、アセットのプ [!UICONTROL ロパティボタンの「基本]」タブで選択したタグを削除し、選択したタグを削除するオプションを読み上げるようになりました(NPR-33972)。
+* スクリーンリーダーは、アセットの「プ [!UICONTROL ロパティ] 」ボタンの「基本  」タブで選択したタグを削除して、選択したタグを削除するオプションを読み上げるようになりました(NPR-33972)。
 
 * 現在は、リスト表示の各行の要素が、スクリーンリーダーによって同じ行の要素として正しく通知されます(NPR-33932)。
 
