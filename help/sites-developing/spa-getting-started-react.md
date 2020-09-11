@@ -1,6 +1,6 @@
 ---
-title: AEMのSPA使用の手引き — React
-seo-title: AEMのSPA使用の手引き — React
+title: AEMでのSPAの使用の手引き — React
+seo-title: AEMでのSPAの使用の手引き — React
 description: この記事では、サンプルのSPAアプリケーションを紹介し、SPAの組み合わせ方法を説明し、Reactフレームワークを使用して独自のSPAを使用して迅速に運用を開始できます。
 seo-description: この記事では、サンプルのSPAアプリケーションを紹介し、SPAの組み合わせ方法を説明し、Reactフレームワークを使用して独自のSPAを使用して迅速に運用を開始できます。
 uuid: 2beca277-a381-4482-99f6-85005d826d06
@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '1203'
+ht-degree: 41%
 
 ---
 
@@ -24,7 +27,7 @@ SPA オーサリング機能には、AEM 内で SPA をサポートするため�
 
 >[!NOTE]
 >
->この記事はReactフレームワークに基づいています。 Angularフレームワークの対応するドキュメントについては、「AEM - AngularでのSPAの使用の [手引き](/help/sites-developing/spa-getting-started-angular.md)」を参照してください。
+>この記事はReactフレームワークに基づいています。 Angularフレームワークの対応するドキュメントについては、AEMのSPAの [使用の手引き — Angularを参照してください](/help/sites-developing/spa-getting-started-angular.md)。
 
 >[!NOTE]
 >
@@ -34,7 +37,7 @@ SPA オーサリング機能には、AEM 内で SPA をサポートするため�
 
 この記事では、シンプルな SPA の基本的な機能と、SPA を運用するための最低条件の概要を説明します。
 
-AEMでのSPAの動作について詳しくは、次のドキュメントを参照してください。
+AEMでのSPAの動作方法の詳細については、次のドキュメントを参照してください。
 
 * [SPAの概要とチュートリアル](/help/sites-developing/spa-walkthrough.md)
 * [SPA オーサリングの概要](/help/sites-developing/spa-overview.md)
@@ -58,9 +61,9 @@ AEMでのSPAの動作について詳しくは、次のドキュメントを参�
 
 ```
   "dependencies": {
-    "@adobe/cq-react-editable-components": "~1.0.3",
-    "@adobe/cq-spa-component-mapping": "~1.0.3",
-    "@adobe/cq-spa-page-model-manager": "~1.0.4"
+    "@adobe/aem-react-editable-components": "~1.0.4",
+    "@adobe/aem-spa-component-mapping": "~1.0.5",
+    "@adobe/aem-spa-page-model-manager": "~1.0.3"
   }
 ```
 
@@ -120,13 +123,13 @@ module.exports = {
 
 ### AEM プロジェクトアーキタイプ {#aem-project-archetype}
 
-AEMプロジェクトは、ReactまたはAngularを使用してSPAプロジェクトをサポートし、SPA SDKを利用する [AEMプロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用する必要があります。
+AEMプロジェクトでは、 [AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)（ReactまたはAngularを使用するSPAプロジェクトをサポートし、SPA SDKを利用する）を活用する必要があります。
 
 ## アプリケーション構造 {#application-structure}
 
-前述の依存関係を含め、アプリを作成すると、AEMインスタンスにアップロードできる作業中のSPAパッケージが表示されます。
+前述のように依存関係を含め、アプリを作成すると、AEMインスタンスにアップロードできる有効なSPAパッケージが表示されます。
 
-このドキュメントの次の節では、AEMのSPAの構造、アプリケーションを駆動する重要なファイル、およびそれらの連携方法について説明します。
+このドキュメントの次のセクションでは、AEMのSPAの構造、アプリケーションを駆動する重要なファイル、およびそれらの連携方法について説明します。
 
 例としてシンプル化された画像コンポーネントが使用されますが、アプリケーションのすべてのコンポーネントは同じ概念に基づいています。
 
@@ -137,7 +140,7 @@ SPA のエントリポイントはもちろん `index.js` ファイルです。�
 ```
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ModelManager, Constants } from "@adobe/cq-spa-page-model-manager";
+import { ModelManager, Constants } from "@adobe/aem-spa-page-model-manager";
 
 ...
 
@@ -162,7 +165,7 @@ ReactDOM.render(
 アプリをレンダリングすることで、`index.js` は `App.js` を呼び出します。このファイルの内容を以下に示していますが、重要な部分のみに焦点を当てるために簡略化されています。
 
 ```
-import {Page, withModel } from '@adobe/cq-react-editable-components';
+import {Page, withModel } from '@adobe/aem-react-editable-components';
 
 ...
 
@@ -177,10 +180,10 @@ export default withModel(App);
 
 ### Page.js {#page-js}
 
-このページをレンダリングすると、シンプル化されたバージョンでここに示す `App.js` 呼び出し `Page.js` が実行されます。
+このページをレンダリングすると、ここに示す `App.js` 呼び出しをシンプル版 `Page.js` で表示します。
 
 ```
-import {Page, MapTo, withComponentMappingContext } from "@adobe/cq-react-editable-components";
+import {Page, MapTo, withComponentMappingContext } from "@adobe/aem-react-editable-components";
 
 ...
 
@@ -201,7 +204,7 @@ In this example the `AppPage` class extends `Page`, which contains the inner-con
 
 ```
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Image.css');
 
@@ -244,7 +247,7 @@ AEM の SPA の中核概念は、SPA コンポーネントを AEM コンポー�
 
 ```
 import React, { Component } from 'react';
-import { MapTo } from '@cq/cq-react-editable-components';
+import { MapTo } from '@adobe/aem-react-editable-components';
 
 ...
 
@@ -277,10 +280,10 @@ When exported using the `MapTo` or `withModel` functions, the `Page` component, 
 
 ## 次の手順 {#next-steps}
 
-独自のSPAを作成する手順ガイドについては、「AEM SPA Editor - WKNDイベントの [手引きチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)」を参照してください。
+独自のSPAを作成する手順ガイドについては、「AEM SPA Editor - WKNDイベントの [概要チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)」を参照してください。
 
-AEM用のSPAを開発するための自社統計の詳細については、「AEM用のSPAの [開発](/help/sites-developing/spa-architecture.md)」を参照してください。
+AEM用のSPAを開発するための自身の編成方法の詳細については、AEM用のSPAの [開発を参照してください](/help/sites-developing/spa-architecture.md)。
 
 動的モデルとコンポーネントのマッピングおよびAEMのSPA内での動作について詳しくは、「SPAのSPA間の [動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)」を参照してください。
 
-ReactやAngular以外のフレームワーク用にAEMにSPAを実装する場合、または単にSPA SDK for AEMの仕組みを詳しく調べたい場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) の記事を参照してください。
+AEMでReactやAngular以外のフレームワーク用にSPAを実装する場合、またはAEM用のSPA SDKの仕組みを詳しく調べる場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) の記事を参照してください。
