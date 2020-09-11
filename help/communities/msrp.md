@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 412200c1bb0c7050c981fc5dc2a5430f37b3beb3
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1209'
 ht-degree: 47%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 47%
 
 ## MSRP について {#about-msrp}
 
-MSRPを共通ストアとして使用するようにAEM Communitiesを設定した場合、ユーザー生成コンテンツ(UGC)は、すべての作成者インスタンスと発行インスタンスからアクセスでき、同期や複製は不要です。
+MSRPを共通ストアとして使用するようにAEM Communitiesが設定されている場合、ユーザー生成コンテンツ(UGC)は、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期や複製は不要です。
 
 [SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)と[推奨されるトポロジ](topologies.md)も参照してください。
 
@@ -37,7 +37,7 @@ MSRPを共通ストアとして使用するようにAEM Communitiesを設定し�
 
 * [Apache Solr](https://lucene.apache.org/solr/)：
 
-   * バージョン4.10またはバージョン5
+   * Solrバージョン7.0
    * Solr には Java 1.7 以降が必要です。
    * サービスは不要
    * 実行モードの選択：
@@ -64,23 +64,23 @@ MSRPを共通ストアとして使用するようにAEM Communitiesを設定し�
 
    * **[!UICONTROL MongoDB URI]**
 
-      *default*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+      *default*:mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL MongoDB データベース]**
 
-      *default*: コミュニティ
+      *default*:コミュニティ
 
    * **[!UICONTROL MongoDB UGC コレクション]**
 
-      *default*: content
+      *default*:content
 
    * **[!UICONTROL MongoDB 添付ファイルコレクション]**
 
-      *default*: attachments
+      *default*:attachments
 
 * **[!UICONTROL SolrConfiguration]**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper ホスト&#x200B;**
+   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper ホスト**
 
       When running in [SolrCloud mode](solr.md#solrcloud-mode) with an external ZooKeeper, set this value to the `HOST:PORT` for the ZooKeeper, such as *my.server.com:2181*
 
@@ -91,11 +91,11 @@ MSRPを共通ストアとして使用するようにAEM Communitiesを設定し�
 
       * **[!UICONTROL Solr URL]**スタンドアロンモードで Solr と通信するために使用する URL。SolrCloud モードで実行している場合は、空白のままにします。
 
-         *デフォルト*: https://127.0.0.1:8983/solr/
+         *デフォルト*:https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr コレクション]**Solr コレクションの名前。
 
-         *デフォルト*: collection1
+         *デフォルト*:collection1
 
 * Select **[!UICONTROL Submit]**
 
@@ -187,7 +187,7 @@ UGCツリー全体のインデックスを再作成するか、*path *dataパラ
 
 cURL -u *signin* -d *data* *reindex-url*
 
-*signin* = administrator-id:passwordExample: admin:admin
+*signin* = administrator-id:passwordExample:admin:admin
 
 *data* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
@@ -239,7 +239,7 @@ GitHubには、この目的で使用できるオープンソースツールが�
 
 * [AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-移行ツールは、旧バージョンのAEMソーシャルコミュニティからUGCを書き出すようにカスタマイズして、AEM Communities6.1以降に読み込むことができます。
+移行ツールは、AEM Social Communitiesの以前のバージョンからUGCを書き出すようにカスタマイズして、AEM Communities6.1以降に読み込むことができます。
 
 ### エラー - undefined field provider_id {#error-undefined-field-provider-id}
 
