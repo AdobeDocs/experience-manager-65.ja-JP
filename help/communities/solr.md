@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1483'
 ht-degree: 49%
 
 ---
@@ -32,7 +32,7 @@ For production environments, [SolrCloud mode](#solrcloud-mode) provides improved
 
 Apache Solr のダウンロードとインストール：
 
-* [バージョン4.10](https://archive.apache.org/dist/lucene/solr/4.10.4/) または [バージョン5.x](https://archive.apache.org/dist/lucene/solr/5.5.3/)
+* [バージョン 7.0](https://archive.apache.org/dist/lucene/solr/7.0.0/)
 
 * Solr には Java 1.7 以降が必要です。
 * サービスは不要
