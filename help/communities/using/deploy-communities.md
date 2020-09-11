@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e05502b590fb2c7c36919f94611efe999262d32
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
 source-wordcount: '1890'
 ht-degree: 54%
@@ -150,7 +150,7 @@ AEM Communities SCORM エンジンは[イネーブルメント](/help/communitie
 
 **SCORMパッケージをインストールするには**
 
-1. パッケージ共有から [cq-social-scorm-package、バージョン2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg)をインストールします。
+1. パッケージ共有から [cq-social-scorm-package、バージョン2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) をインストールします。
 1. Download `/libs/social/config/scorm/database_scormengine_data.sql` from cq instance and execute it in mysql server to create an upgraded scormEngineDB schema.
 1. Add `/content/communities/scorm/RecordResults` in Excluded Paths property in CSRF filter from `https://<hostname>:<port>/system/console/configMgr` on publishers.
 
