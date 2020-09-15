@@ -4,10 +4,10 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f8a072e0ab24d542a1bec8faf03da57f99747102
+source-git-commit: 5cf27977d3d94d39c9dfec51eb50778048f76dfd
 workflow-type: tm+mt
-source-wordcount: '2462'
-ht-degree: 7%
+source-wordcount: '2482'
+ht-degree: 6%
 
 ---
 
@@ -88,6 +88,10 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 ### 自動Formsコンバージョンサービスで [!DNL Adobe Sign] テキストタグのサポートを追加しました。 {#sign-integration-acroform-afcs}
 
 AcroFormに [!DNL Adobe Sign] テキストタグが含まれる場合、これらのフィールドが認識され、を使用して変換されたアダプティブフォームでフ [!DNL Adobe Sign] ィールドとして表されるようになり [!DNL Automated Forms Conversion service]ました。 署名者は、アダプティブフォームの署名時にこのようなフィールドに入力できます。
+
+### 色付きPDF formsのアダプティブフォームへの変換のサポート {#colore-PDF-forms}
+
+を使用して、色付きPDF forms [!DNL Automated Forms Conversion service] をアダプティブフォームに変換できます。
 
 ### SMB 2およびSMB 3プロトコルのサポート {#smb-support}
 
