@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74f1fc80bb908f7b7114177c5f8355ff892b95ed
+source-git-commit: 74606bc3e9c768c3d94b7d05c722980f29e20e0e
 workflow-type: tm+mt
-source-wordcount: '4422'
+source-wordcount: '4418'
 ht-degree: 7%
 
 ---
@@ -47,9 +47,9 @@ Adobe Experience Manager6.5.6.0で導入された主な機能および機能強�
 
 * 自動FormsコンバージョンサービスでのAdobe Signテキストタグのサポート。
 
-* SMB 2およびSMB 3プロトコルのサポート。
+* を使用して、色付きのフォームをアダプティブフォームに変換でき [!DNL Automated Forms Conversion service]ます。
 
-* 自動Forms変換サービスを使用した、色付きのフォームからアダプティブフォームへの変換のサポート。
+* SMB 2およびSMB 3プロトコルのサポート。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.22.4 に更新しました。
 
