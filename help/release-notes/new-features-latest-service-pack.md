@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5cf27977d3d94d39c9dfec51eb50778048f76dfd
+source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
 workflow-type: tm+mt
 source-wordcount: '2482'
 ht-degree: 6%
@@ -17,8 +17,6 @@ ht-degree: 6%
 Adobe Experience Manager6.5のサービスパックは、新機能、お客様から要望を受けた機能強化、パフォーマンス、安定性、セキュリティの向上を四半期ごとに提供します。 四半期ごとの可用性により、新機能や革新性に容易にアクセスし、導入できます。
 
 この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Packに含まれる [主な機能](#key-features-previous-service-packs)、およびExperience Manager6.5.5.0 [リリース以降の](#key-releases-since-last-sp) 主なリリースの一部について説明します。
-
->[!VIDEO](https://video.tv.adobe.com/v/39867)
 
 ## Adobe [!DNL Experience Manager] サイト {#aem-sites}
 
