@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74606bc3e9c768c3d94b7d05c722980f29e20e0e
+source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
 workflow-type: tm+mt
-source-wordcount: '4418'
+source-wordcount: '4458'
 ht-degree: 7%
 
 ---
@@ -210,7 +210,7 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
    >[!NOTE]
    >
    >6.5 Service Pack 6にアップグレードした場合、6.5 GAに6.5 Service Pack 5以前のバージョンをインストールしたときに実行時のコピーが削除されても、 [!DNL Experience Manager][!DNL Experience Manager] 6.5 Service Pack 6にアップグレードしても実行時のコピーは取得されません。 ランタイムコピーを取得するには、ワークフローモデルのデザイン時コピーをHTTP APIを使用してランタイムコピーと同期します。
-   `<designModelPath>/jcr:content.generate.json`。
+   `<designModelPath>/jcr:content.generate.json`.
 
 **ダイナミックメディアで修正された問題**
 
@@ -434,7 +434,7 @@ For information about installing the cumulative installer for Experience Manager
 
 ### UberJar {#uber-jar}
 
-Experience Manager6.5.6.0のUberJarは、 [AdobeパブリックMavenリポジトリで使用できます](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/)。
+Experience Manager6.5.6.0のUberJarは、 [Maven Centralリポジトリで使用できます](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/)。
 
 MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方法を参照し](/help/sites-developing/ht-projects-maven.md) 、プロジェクトPOMに次の依存関係を含めます。
 
@@ -446,6 +446,10 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
       <scope>provided</scope>
 </dependency>
 ```
+
+>[!NOTE]
+>
+>このリリース以降、UberJarおよびその他の関連アーティファクトは、AdobeのパブリックMavenリポジトリ(repo.adobe.com)ではなく、Maven Centralリポジトリで使用できます。 メインのUberJarファイルの名前がに変更され `uber-jar-<version>.jar`ます。 その結果、 `classifier`タグに値 `apis``dependency` はありません。
 
 ## 非推奨（廃止予定）の機能 {#removed-deprecated-features}
 
@@ -462,7 +466,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 
 * 6.5 GAに6.5 Service Pack 5以前のバージョンをインストールした場合、 [!DNL Experience Manager] カスタムワークフローモデル（で作成）の実行時のコピーが削除され `/var/workflow/models/dam`ます。
 ランタイムコピーを取得するには、Adobeから、カスタムワークフローモデルのデザイン時コピーを、HTTP APIを使用して実行時コピーと同期するように提案されます。
-   `<designModelPath>/jcr:content.generate.json`。
+   `<designModelPath>/jcr:content.generate.json`.
 
 * [ [!UICONTROL フォルダメタデータ]スキーマ[Formsエディタ] ]および[メタデータ]スキーマ[Formsエディタ で、[ルールの] 定義  ]ダイアログを使用してカスケードルールを編集および作成する際に問題が発生した場合は、Adobeサポートにお問い合わせください。 既に作成および保存されているルールは、期待どおりに動作していることに注意してください。
 
