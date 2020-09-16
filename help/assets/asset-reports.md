@@ -3,7 +3,7 @@ title: デジタルアセットの使用および共有に関するレポート�
 description: デジタルアセットの使用状況、アクティビティ、共有 [!DNL Adobe Experience Manager Assets] を理解するのに役立つ、アセットに関するレポートです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a8c4bc1992a48dd01a3f58498e9e924dcc9e886a
+source-git-commit: 2ac848fa360ad87ff4f87efc38ae1361ae890cb2
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 48%
@@ -25,7 +25,7 @@ The [!DNL Assets] reporting framework uses [!DNL Sling] jobs to asynchronously p
 
 ## 前提条件 {#prerequisite-for-reporting}
 
-レポートを生成するには、次の事項を確認します。
+レポートを生成するには、次の手順を実行します。
 
 * ツール [!UICONTROL /] 操作 **[!UICONTROL /Webコンソールから「]** Day CQ DAMイベントレコーダー **[!UICONTROL 」サービスを有効にします]******。
 * レポートするアクティビティまたはイベントを選択します。 例えば、ダウンロードしたアセットに関するレポートを生成するには、「 [!UICONTROL ダウンロード済みアセット(DOWNLOADED)]」を選択します。
@@ -50,7 +50,7 @@ The [!DNL Assets] reporting framework uses [!DNL Sling] jobs to asynchronously p
 
 1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL レポートをクリックします]**。
 
-![アセットレポートに移動するツールページ](assets/AssetsReportNavigation.png)
+   ![アセットレポートに移動するツールページ](assets/AssetsReportNavigation.png)
 
 1. On the [!UICONTROL Asset Reports] page, click **[!UICONTROL Create]** from the toolbar.
 1. From the **[!UICONTROL Create Report]** page, choose the report you want to create and click **[!UICONTROL Next]**.
@@ -59,11 +59,12 @@ The [!DNL Assets] reporting framework uses [!DNL Sling] jobs to asynchronously p
 
    >[!NOTE]
    >
-   >By default, the Content Fragments and link shares are included in the asset [!UICONTROL Download] report. 適切なオプションを選択して、リンク共有のレポートを作成するか、ダウンロードレポートからコンテンツフラグメントを除外します。
+   >By default, the Content Fragments and link shares are included in the Asset [!UICONTROL Download] report. 適切なオプションを選択して、リンク共有のレポートを作成するか、ダウンロードレポートからコンテンツフラグメントを除外します。
 
    >[!NOTE]
    >
-   >ダウンロ [!UICONTROL ード] レポートには、個別に選択され、クイックアクションを使用してダウンロードまたはダウンロードされたアセットの詳細のみが表示されます。 ただし、ダウンロードしたフォルダー内にあったアセットの詳細は含まれません。
+   >[!UICONTROL ダウンロード] レポートには、個別に選択した後、またはクイックアクションを使用してダウンロードされたアセットの詳細のみが表示されます。 ただし、ダウンロードしたフォルダー内のアセットの詳細は含まれません。
+
 1. タイトル、説明、サムネール、CRX リポジトリ内のフォルダーパス（レポートの保存場所）など、レポートの詳細を設定します。By default, the folder path is `/content/dam`. 別のパスを指定することもできます。
 
    ![レポートの詳細を追加するページ](assets/report_configuration.png)
