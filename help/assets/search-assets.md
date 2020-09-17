@@ -4,9 +4,9 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
+source-git-commit: cdf22fea17f6c79e3a2b565a4c6f728bf0bbd23a
 workflow-type: tm+mt
-source-wordcount: '5878'
+source-wordcount: '5888'
 ht-degree: 54%
 
 ---
@@ -65,9 +65,7 @@ Search for assets using the Omnisearch field at the top of the [!DNL Experience 
 
 関連性の高いアセットをすばやく見つけるために、この機能豊富なインターフェイスには、フィルタリング、並べ替え、選択のメカニズムが用意されています。複数の条件に基づいて結果をフィルタリングし、検索されたアセットの数を様々なフィルター別に確認できます。または、オムニサーチフィールドのクエリを変更して検索を再実行することもできます。検索用語やフィルターを変更しても、その他のフィルターは依然として適用され、検索のコンテキストが保たれます。
 
-結果が多数のアセットの場合、カード表示に最初の100が [!DNL Experience Manager] 表示され、リスト表示に200が表示されます。 ユーザがスクロールすると、読み込まれるアセットが増えます。 これは、パフォーマンスを向上させるためです。
-
->[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
+結果が多数のアセットの場合、カード表示に最初の100が [!DNL Experience Manager] 表示され、リスト表示に200が表示されます。 ユーザがスクロールすると、読み込まれるアセットが増えます。 これは、パフォーマンスを向上させるためです。 表示されるアセット [数のデモビデオをご覧ください](https://www.youtube.com/watch?v=LcrGPDLDf4o)。
 
 時には、予期しないアセットが検索結果に表示される場合があります。詳しくは、[予期しない検索結果](#troubleshoot-unexpected-search-results-and-issues)を参照してください。
 
