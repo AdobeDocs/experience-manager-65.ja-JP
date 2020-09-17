@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
+source-git-commit: b6db346f7ec2570972329a8edb089fe909120b75
 workflow-type: tm+mt
-source-wordcount: '4458'
+source-wordcount: '4402'
 ht-degree: 7%
 
 ---
@@ -106,37 +106,37 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
 **Experience Managerアセットのアクセシビリティの強化**
 
-* ユーザーは、キーボードキーを使用して、アセットの [!UICONTROL 参照] リストのインタラクティブユーザーインターフェイスオプションにアクセスし、焦点を合わせることができるようになりました。(NPR-34115)
+* キーボードのキーを使用して、アセットの [!UICONTROL 参照リスト(NPR-34115)のインタラクティブユーザーインターフェイスオプションにアクセスし、フォーカスできるようになりました] 。
 
-* スクリーンリーダーは、検索フィルターのオプションを拡大可能なアコーディオンとして読み上げるようになりました(NPR-34104)。
+* スクリーンリーダーが、検索ページ上の述部の意図したアクションを発表するようになりました(NPR-34104)。
 
 * 検索ページと検索結果ページに、スクリーンリーダーユーザーをより深く理解するための情報が得られるタイトルが追加されました(NPR-34093)。
 
-* スクリーンリーダーは、アセットの「プ [!UICONTROL ロパティ] 」ボタンの「基本  」タブで選択したタグを削除して、選択したタグを削除するオプションを読み上げるようになりました(NPR-33972)。
+* スクリーンリーダーは、アセットの [!UICONTROL プロパティ] ページの「基本  」タブで選択したタグを削除するオプションを読み上げるようになりました(NPR-33972)。
 
-* 現在は、リスト表示の各行の要素が、スクリーンリーダーによって同じ行の要素として正しく通知されます(NPR-33932)。
+* 現在は、リスト表示の各行の要素が、スクリーンリーダーによって同じ行の要素としてアナウンスされます(NPR-33932)。
 
-* Tabキーを使用して移動する際のユーザーのフォーカスが、バージョンプレビューの閉じるオプションに正しく移動するようになりました(NPR-33863)。
+* キーを使用して移動する際のユーザーのフォーカスが、バージョンプレビューの閉じるオプション(NPR-33863)に移動するようになりました。 `Tab`
 
-* Omnisearchを閉じた後、ユーザーのフォーカスが正しく検索アイコンに移動するようになりました(NPR-33705)。
+* Omnisearchが閉じられた後、ユーザーのフォーカスが検索アイコンに移動するようになりました(NPR-33705)。
 
-* 操作性の高いユーザーインターフェイスオプションで、キーボードキーを使用したフォーカス時のコントラストが強化され、より目立つ視覚的な焦点が得られるようになりました。 そのため、視覚的なキーボードユーザは焦点を合わせた領域を区別できるようになりました(NPR-33542)。
+* 操作性の高いユーザーインターフェイスオプションで、キーボードキーを使用してナビゲーションした場合のコントラストが強化され、より目立つ視覚的な焦点が得られるようになりました。 キーボードユーザは、焦点が合った領域(NPR-33542)を識別できる。
 
-* キーボードを使用したドラッグ機能が、スクリーンリーダーのブラウズモードの [!UICONTROL メタデータスキーマエディタ] (CQ-4296326)で正しく機能するようになりました。
+* スクリーンリーダーのブラウズモードで、 [!UICONTROL メタデータスキーマエディタ] (CQ-4296326)でキーボードを使用したドラッグ機能が動作するようになりました。
 
-* リンクの共有ダイアログで、参照モードで移動するときに、スクリーンリーダー、
+* リンク共有ダイアログで、参照モードで移動するときに、スクリーンリーダーが
 
-   * ダイアログが読み込まれた後、直ちに表の情報を読み込まないようにします。
+   * ダイアログが読み込まれるとすぐに、テーブル情報を読み込みません。
 
    * リストに表示されているすべての自動提案に移動できます。
 
-   * 電子メールアドレス/ [!UICONTROL 検索] (CQ-4294232)に対して自動提案が表示されるようになりました。
+   * 電子メールアドレス/ [!UICONTROL 検索] (CQ-4294232)に対して表示される自動提案のナレーションを行います。
 
-* サムネール表示からクイックアクションアイコンを削除するためにEscキーを使用した場合に、最後にフォーカスされた項目からキーボードフォーカスが削除されることはなくなりました。(CQ-4293554)
+* カードの表示からクイックアクションアイコンを削除するために `Esc` キーを使用した場合に、最後にフォーカスされたアイテムからキーボードのフォーカスが削除されることはなくなりました。(CQ-4293554)
 
-* スクリーンリーダーは、リテラル名(CQ-4272943)ではなく、アイコン（山形など）に対してその機能を表現する代替テキストを発表するようになりました。
+* ユーザーインターフェイス上のインタラクティブオプションに対して、スクリーンリーダーは、アイコンのリテラル名ではなく、その目的を発表するようになりました。(CQ-4272943)
 
-* キーボードフォーカスは [!UICONTROL Flyout], InlineInlineShoppable_Shoppable [!UICONTROL _DarkzoomBannerLightZoomVarnerVarnerVarnLightZoomVarnerVarnerDownZoomVerDownVerDownVerDownFlyキーボード内の詳細を]FlyFlyFlyoutFlyFlyFlyFlyFlyFlyoutFlyoutFlyFlyFlyFlyFlyoutFlyFlyFlyFlyoutFlyFlyoutに移動した [!UICONTROL Flyoutに移動した] FlyFlyFlyFlyoutに移動したり(CQ-4290605)
+* キーボードフォーカスは [!UICONTROL Flyout], InlineInlineInlineShoppable_Shoppable_ [!UICONTROL NarkZoom_lightBannerZoom_lightVerticalZoomVarnerVerticalZoomVarnerVarnerDownLigeKeyキーボード内の詳細を使用してFlyoutFlyFoutFlyout]Flyout [!DNL Dynamic Media] ,InInInInInInInInInIneInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInInq-4290605)
 
 * [!UICONTROL アセットの] プロパティ  ページの「保存して閉じる」オプションが、キーボードキー(NPR-34107)を使用してアクセスできるようになりました。
 
@@ -144,38 +144,35 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
 * ブラウズモードでのナビゲーション時に、 [!DNL Experience Manager] ヘッダーセクションで、スクリーンリーダーが
 
-   * 「 [!UICONTROL タイプ」のサーチクエリを自動編集し、Omnisearchでサーチクエリを検索しました] 。
+   * 「 [!UICONTROL タイプ」のサーチクエリを自動編集して、Omnisearchでサーチクエリを作成] 。
 
-   * [ [!UICONTROL ソリューション]]、[ [!UICONTROL ヘルプ]]、[受信トレイ 、[] ユー  ザー]の各オプションで、状態が展開または折りたたまれた状態になります。
+   * [ [!UICONTROL ソリューション]]、[ [!UICONTROL ヘルプ]]、[受信トレイ 、[] ユーザー]の各オプションで、展開または折りたたまれた状態を表します。
 
-   * ヘルプ [!UICONTROL オプションの「ヘルプの検索] 」フィールドに検索文字列を入力したときに表示される、 [!UICONTROL ヘルプの検索ステータスメッセージ] 。
+   * ヘルプ [!UICONTROL オプションの「ヘルプの検索] 」フィールドに検索文字列が入力されたときに表示される、 [!UICONTROL ヘルプの検索ステータスメッセージ] です。
 
    ![ヘッダーのヘルプメニュー](assets/Help_aem_header.png)
 
-   *図：[!UICONTROL []ヘルプメニューの[ヘルプ]]を検索*
+   *図：[!UICONTROL []ヘルプメニューで[ヘルプ]]を検索してください。*
 
-   * 「 [!UICONTROL ユーザー] 」オプションの「次として動作」フィールドに誤った値が入力され、フォーカスが正しくテキストフィールド(NPR-33804)に移動した場合に、エラーメッセージが表示されます。
+   * 「 [!UICONTROL User] 」オプションの下の「 [!UICONTROL Impersonate as] 」フィールドに誤った値が入力され、フォーカスが正しくテキストフィールド(NPR-33804)に移動した場合に、エラーメッセージが表示されます。
 
    ![ヘッダーのユーザーメニュー](assets/User_aem_header.png)
 
-   *図：[!UICONTROL ヘッダーの]ユーザーメニューのフィールドとして動作*
+   *図：[!UICONTROL ヘッダーの]ユーザーメニューのフィールドとして動作します。*
 
-* ユーザーは、次の範囲内のキーボードキーを使用してフォーカスを移動できるようになりました。
+* ユーザーは、次のウィンドウ内のキーボードを使用してフォーカスを変更できるようになりました。
 
-   * [!UICONTROL リンクの共有][!UICONTROL ダイアログの「検索/電子メールアドレス] 」フィールド。
+   * [!UICONTROL リンクの共有] ダイアログの「検索/追加電子メールアドレス  」フィールド
 
-   * [!UICONTROL フォルダーのプロパティ][!UICONTROL (NPR-34452)の「] 権限 [!UICONTROL 」タブの「] 閉じたユーザーグループ」の下にある「ユーザーまたはグループ  」フィールド。
+   * [!UICONTROL フォルダーのプロパティ][!UICONTROL (NPR-34452)の「] 権限 [!UICONTROL 」タブにある「] 閉じたユーザーグループ」の下の「ユーザーまたはグループ」フィールド。
 
 **Experience Managerアセットで修正された問題**
 
-[!DNL Adobe Experience Manager] 6.5.6.0 Assetsには、次の問題の修正が含まれています。
+[!DNL Adobe Experience Manager] 6.5.6.0 [!DNL Assets] には、次の問題の修正が含まれています。
 
-* ( [!DNL Adobe InDesign] INDD)テンプレートを使用して作成したマーケティングコラテラルアセット（パンフレット、チラシ、名刺など）のプレビュー時に、改行と段落区切りが保持されません(NPR-34268)。
+* テンプレートを使用して作成したマーケティングコラテラルアセット（パンフレット、チラシ、名刺など）をプレビューしても、改行と段落区切りは表示されません(NPR-34268)。 [!DNL Adobe InDesign]
 
-* アップロードされたPDFファイルのテキスト抽出が機能せず、PDFファイル内の一部の単語に対するフルテキスト検索がそのPDFファイルの取得に失敗します(NPR-34164)。
-
-   >[!NOTE]
-   >この修正を有効にするには、Service Pack 6.5.6.0をインストールした後で、Adobe Experience Managerインスタンスを再起動します。
+* テキスト抽出のため、アップロードされたPDFファイルの全文検索は機能しません(NPR-34164)。 この問題を修正するには、Service Pack 6のインストール後に [!DNL sAdobe Experience Manager] 展開を再起動します。
 
 * 複数ページのアセットのタイムラインには、アセットを閲覧する際に、特定のサブアセットに固有の注釈を表示するのではなく、すべてのサブアセットに適用された注釈がタイムライン表示に表示されます(NPR-34100)。
 
@@ -205,11 +202,7 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
 * 「 [!UICONTROL フォルダーメタデータスキーマフォーム]」でドロップダウンのルールを作成する場合、「 [!UICONTROL フィールドの選択肢] 」列(CQ-4297530)の値を選択できません。
 
-* 6.5 GA(NPR-34532)に6.5 Service Pack 5以前のバージョンをインストールすると、カスタムワークフローモデル（で作成）の実行時のコピーが削除され `/var/workflow/models/dam`ます。
-
-   >[!NOTE]
-   >
-   >6.5 Service Pack 6にアップグレードした場合、6.5 GAに6.5 Service Pack 5以前のバージョンをインストールしたときに実行時のコピーが削除されても、 [!DNL Experience Manager][!DNL Experience Manager] 6.5 Service Pack 6にアップグレードしても実行時のコピーは取得されません。 ランタイムコピーを取得するには、ワークフローモデルのデザイン時コピーをHTTP APIを使用してランタイムコピーと同期します。
+* 6.5 Service Pack 5以前のバージョンを6.5(NPR-34532)にインストールすると、カスタムワークフローモデル（で作成）の実行時 `/var/workflow/models/dam`のコピーが削除され [!DNL Experience Manager][!DNL Experience Manager] ます。 ランタイムコピーを取得するには、ワークフローモデルのデザイン時コピーをHTTP APIを使用してランタイムコピーと同期します。
    `<designModelPath>/jcr:content.generate.json`.
 
 **ダイナミックメディアで修正された問題**
@@ -410,7 +403,7 @@ B. Package Managerの [HTTP APIを使用します](https://docs.adobe.com/conten
 
 1. All OSGi bundles are either **[!UICONTROL ACTIVE]** or **[!UICONTROL FRAGMENT]** in the OSGi Console (Use Web Console: `/system/console/bundles`).
 
-1. The OSGI bundle `org.apache.jackrabbit.oak-core` is version 1.22.3 or higher (Use Web Console: `/system/console/bundles`).
+1. OSGiバンドル `org.apache.jackrabbit.oak-core` はバージョン1.22.3以降です(Webコンソールを使用： `/system/console/bundles`)をクリックします。
 
 このリリースで動作が確認されたプラットフォームについて詳しくは、 [技術要件を参照してください](/help/sites-deploying/technical-requirements.md)。
 
@@ -453,7 +446,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 
 ## 非推奨（廃止予定）の機能 {#removed-deprecated-features}
 
-この節では、AEM 6.5.6.0で非推奨としてマークされている機能と機能に関するリストを示します。今後のリリースで削除される予定の機能は、非推奨となる最初に設定され、代わりに使用するオプションがあります。
+この節では、Experience Manager6.5.6.0で非推奨とマークされた機能と機能に関するリストを示します。将来のリリースで削除される予定の機能は、非推奨となります。他の方法を使用する場合もあります。
 
 お客様は、現在の導入で機能を利用しているかどうかを確認し、別のオプションを使用するように導入を変更する計画を立てることをお勧めします。
 
@@ -464,7 +457,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 
 ## 既知の問題 {#known-issues}
 
-* 6.5 GAに6.5 Service Pack 5以前のバージョンをインストールした場合、 [!DNL Experience Manager] カスタムワークフローモデル（で作成）の実行時のコピーが削除され `/var/workflow/models/dam`ます。
+* 6.5 Service Pack 5または [!DNL Experience Manager] 以前のService Packを6.5にインストールした場合は、カスタムワークフローモデル（で作成）の実行時のコピーが [!DNL Experience Manager]`/var/workflow/models/dam`削除されます。
 ランタイムコピーを取得するには、Adobeから、カスタムワークフローモデルのデザイン時コピーを、HTTP APIを使用して実行時コピーと同期するように提案されます。
    `<designModelPath>/jcr:content.generate.json`.
 
