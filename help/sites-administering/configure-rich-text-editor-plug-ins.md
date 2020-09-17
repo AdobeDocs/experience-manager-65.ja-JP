@@ -3,9 +3,9 @@ title: リッチテキストエディタープラグインの設定
 description: 個々の機能を有効にするAdobe Experience Managerリッチテキストエディタープラグインの設定について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 6f5e650c99017c4b2f04ca8495eea8481b3236cd
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4398'
 ht-degree: 95%
 
 ---
@@ -731,7 +731,7 @@ AEM にリンクを追加する場合、次の定義が可能です。
       * **名前** `cssExternal`
       * **型** `String`
       * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。例、`.cssClass` ではなく `cssClass`）
-   * Array of valid **protocols** (including `https://`, `https://`, `file://`, and `mailto:` amongst others)
+   * 有効な **プロトコルの配列**。 サポートされているプロトコルは、、、、 `http://`、および `https://``file://``mailto:`です。
 
       * **名前** `protocols`
       * **型** `String[]`
