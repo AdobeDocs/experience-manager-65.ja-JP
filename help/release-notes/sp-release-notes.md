@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b6db346f7ec2570972329a8edb089fe909120b75
+source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
 workflow-type: tm+mt
-source-wordcount: '4402'
+source-wordcount: '4413'
 ht-degree: 7%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Manager6.5.6.0で導入された主な機能および機能強�
 
 * 自動FormsコンバージョンサービスでのAdobe Signテキストタグのサポート。
 
-* を使用して、色付きのフォームをアダプティブフォームに変換でき [!DNL Automated Forms Conversion service]ます。
+* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
 
 * SMB 2およびSMB 3プロトコルのサポート。
 
@@ -169,6 +169,8 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 **Experience Managerアセットで修正された問題**
 
 [!DNL Adobe Experience Manager] 6.5.6.0 [!DNL Assets] には、次の問題の修正が含まれています。
+
+* アセットのタイムラインから注釈を選択した場合、注釈はハイライトされません。(CQ-4302422)
 
 * テンプレートを使用して作成したマーケティングコラテラルアセット（パンフレット、チラシ、名刺など）をプレビューしても、改行と段落区切りは表示されません(NPR-34268)。 [!DNL Adobe InDesign]
 
