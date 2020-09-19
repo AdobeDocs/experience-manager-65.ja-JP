@@ -8,9 +8,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 65647a5e7c30991e06dd43125159547490fdddef
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2064'
 ht-degree: 34%
 
 ---
@@ -366,7 +366,7 @@ public class CCRDraftService implements CCRDocumentInstanceService {
         <dependency>
             <groupId>com.adobe.aemfd</groupId>
             <artifactId>aemfd-client-sdk</artifactId>
-            <version>6.0.122</version>
+            <version>6.0.146</version>
         </dependency>
     </dependencies>
 
@@ -443,4 +443,4 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 
 >[!NOTE]
 >
->ファイル内の `aemfd-client-sdk` 依存関係を6.0.122に更新してく `pom.xml` ださい。
+>ファイル内の `aemfd-client-sdk` 依存関係を6.0.146以降のバージョンに更新してく `pom.xml` ださい。
