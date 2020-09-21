@@ -3,9 +3,9 @@ title: '[!DNLAdobe Experience Manager] 6.5以前のService Packリリースノ�
 description: 6. [!DNL Adobe Experience Manager] 5 Service Packのリリースノート。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: c27f44326f653bbdc61e866e89e60893e81a7a3b
+source-git-commit: 5db4dd7ccc7d722f0503b22fdd5ff9e5508be4ea
 workflow-type: tm+mt
-source-wordcount: '11438'
+source-wordcount: '11482'
 ht-degree: 25%
 
 ---
@@ -74,6 +74,10 @@ Adobe Experience Manager6.5.5.0は、2019 **年4月のGAリリース(GA)以降�
 * 匿名ユーザーは、CRXDE Lite機能(GRANITE-27790)にアクセスできます。
 
 ### [!DNL Assets] {#assets-6550}
+
+>[!IMPORTANT]
+>
+>のWindowsユーザー [!DNL Experience Manager desktop app] には、インスタンス上のDAMリポジトリにアクセスするために、 [デスクトップアプリバージョン2.0.3.2](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html#whats-new-added)[!DNL Adobe Experience Manager 6.5.5.0] にアップグレードすることをお勧めします。 デスクトップアプリバージョン2.0.2を使用して6.5.5.0インスタンスのDAMリポジトリにアクセスする際に問題が発生する場合があります。 [!DNL Adobe Experience Manager]
 
 **Experience Managerアセットのアクセシビリティの強化**
 
