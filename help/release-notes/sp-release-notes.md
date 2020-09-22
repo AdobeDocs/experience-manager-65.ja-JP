@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
+source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
 workflow-type: tm+mt
-source-wordcount: '4413'
+source-wordcount: '4485'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,11 @@ ht-degree: 7%
 | バージョン | 6.5.6.0 |
 | 型 | Service Pack のリリース |
 | 日付 | 2020年9月3日 |
-| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip) |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
+
+>[!NOTE]
+>
+>AEM 6.5 Service Pack 6のアップデートバージョンが利用可能です。 Service Pack 6の以前のバージョンを既にインストール済みの場合は、利用可能な最新バージョンにアップグレードします。
 
 ## Adobe Experience Manager6.5.6.0に含まれるもの {#what-s-included-in-aem}
 
@@ -377,7 +381,7 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
 既存のAdobe Experience Manager6.5インスタンスにService Packをインストールするには、次の手順を実行します。
 
-1. Service Packを [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip)（ソフトウェア配布）からダウンロードします。
+1. Service Packを [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip)（ソフトウェア配布）からダウンロードします。
 
 1. Open Package Manager and click **[!UICONTROL Upload Package]** to upload the package. 使用方法について詳しくは、 [パッケージマネージャーを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
@@ -458,6 +462,16 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 | コネクタ | AEM 6.5では、JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013のAdobeが非推奨です。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
+
+* セキュリティ正常性チェックが機能せず、システムに次のエラーメッセージが表示される場合：
+   `message: Could not verify users and could not test system account logins.`問題を解決するには、次の手順を実行してください。
+   1. Go to https://&lt;*hostname*>:&lt;*port*>/system/console/configMgr.
+
+   1. `hc.impl` を検索。
+
+   1. 「 [!UICONTROL サービスのマッピング]」でをクリック `+` し、を指定し `com.adobe.granite.repository.hc.impl=[user-reader-service]`ます。
+
+   1. 「[!UICONTROL Save]」をクリックして、 設定を保存します。
 
 * 6.5 Service Pack 5または [!DNL Experience Manager] 以前のService Packを6.5にインストールした場合は、カスタムワークフローモデル（で作成）の実行時のコピーが [!DNL Experience Manager]`/var/workflow/models/dam`削除されます。
 ランタイムコピーを取得するには、Adobeから、カスタムワークフローモデルのデザイン時コピーを、HTTP APIを使用して実行時コピーと同期するように提案されます。
