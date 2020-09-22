@@ -1,8 +1,8 @@
 ---
 title: コミュニティコンポーネントの基本
 seo-title: コミュニティコンポーネントの基本
-description: 編集モードでの AEM サイトへのコミュニティ機能の付加とコンポーネントの設定
-seo-description: 編集モードでの AEM サイトへのコミュニティ機能の付加とコンポーネントの設定
+description: 編集モードでの AEM Sites へのコミュニティ機能の付加とコンポーネントの設定
+seo-description: 編集モードでの AEM Sites へのコミュニティ機能の付加とコンポーネントの設定
 uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
-source-git-commit: f1870c1222004f582ccf337a59e1f30e2dc2cf32
+source-git-commit: c77a353d43a3a6f33dffecf0b4e7672ed3e2dd3f
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 68%
@@ -22,7 +22,7 @@ ht-degree: 68%
 
 ## 概要 {#overview}
 
-このドキュメントのオーサリングセクションでは、オーサリング編集モードでの AEM サイトへのコミュニティ機能の付加や、コンポーネント設定の記述について説明します。
+このドキュメントのオーサリングセクションでは、オーサリング編集モードでの  AEM sites へのコミュニティ機能の付加や、コンポーネント設定の記述について説明します。
 
 Components may be explored using an AEM instance and the interactive [Community Components guide](components-guide.md).
 
@@ -47,11 +47,11 @@ For details, see [Configuring Components in Design Mode](../../help/sites-author
 
 次の図に、いくつかのコミュニティコンポーネントを選択して、コンポーネントブラウザーに表示する操作を示します。
 
-![chlimage_1-424](assets/chlimage_1-424.png)
+![部品設計](assets/component-design.png)
 
 選択したコンポーネントがコンポーネントブラウザーに表示されるようになりました。
 
-![chlimage_1-425](assets/chlimage_1-425.png)
+![component-design1](assets/component-design1.png)
 
 ## 必須の clientlibs {#required-clientlibs}
 
@@ -61,11 +61,11 @@ For details, see [Configuring Components in Design Mode](../../help/sites-author
 
 ### Example: Initially placed reviews without client libraries... {#example-initially-placed-reviews-without-client-libraries}
 
-![chlimage_1-426](assets/chlimage_1-426.png)
+![clientlibs1](assets/clientlibs1.png)
 
 ### ... And with client libraries {#and-with-client-libraries}
 
-![chlimage_1-427](assets/chlimage_1-427.png)
+![clientlibs2](assets/clientlibs2.png)
 
 ## タグ付け {#tagging}
 
