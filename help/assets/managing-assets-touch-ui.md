@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 2de85f2fc8daaf1cc30a1e12b7c18b20a640c747
 workflow-type: tm+mt
-source-wordcount: '9240'
+source-wordcount: '9370'
 ht-degree: 63%
 
 ---
@@ -64,7 +64,7 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
    * On the toolbar, click **[!UICONTROL Create]**. メニューで[ **[!UICONTROL ファイル]**]をクリックします。 表示されたダイアログで、必要に応じてファイル名を変更できます。
    * HTML5 をサポートするブラウザーで、アセットを [!DNL Assets] ユーザーインターフェイスに直接ドラッグします。ファイル名を変更するためのダイアログは表示されません。
 
-   ![アセットをアップロードするためのオプションを作成する](assets/create-options.png)
+   ![アセットをアップロードするためのオプションを作成](assets/create-options.png)
 
    複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPad を使用している場合、一度に選択できるファイルは 1 つだけです。
 
@@ -72,64 +72,76 @@ Before uploading an asset, ensure that it is in a [format](/help/assets/assets-f
 
    ![アセットのアップロードプログレスバー](assets/upload-progress-bar.png)
 
-   サイズが大きいと見なされるアセットのサイズは変更できます。例えば、（500 MB でなく）1000 MB を超えるサイズのアセットをサイズが大きいと見なすようにシステムを設定できます。In this case, **[!UICONTROL Pause]** appears on the progress bar when assets of size greater than 1000 MB are uploaded.
+サイズが大きいと見なされるアセットのサイズは変更できます。例えば、（500 MB でなく）1000 MB を超えるサイズのアセットをサイズが大きいと見なすようにシステムを設定できます。In this case, **[!UICONTROL Pause]** appears on the progress bar when assets of size greater than 1000 MB are uploaded.
 
-   1000 MB を超えるファイル 1 つと 1000 MB 未満のファイル 1 つをアップロードする場合、一時停止ボタンは表示されません。ただし、1000 MB 未満のファイルのアップロードをキャンセルすると、**[!UICONTROL 一時停止]**&#x200B;ボタンが表示されます。
+1000 MB を超えるファイル 1 つと 1000 MB 未満のファイル 1 つをアップロードする場合、一時停止ボタンは表示されません。ただし、1000 MB 未満のファイルのアップロードをキャンセルすると、**[!UICONTROL 一時停止]**&#x200B;ボタンが表示されます。
 
-   To modify the size limit, configure the `chunkUploadMinFileSize` property of the `fileupload`node in the CRX repository.
+To modify the size limit, configure the `chunkUploadMinFileSize` property of the `fileupload`node in the CRX repository.
 
-   「 **[!UICONTROL 一時停止]**」をクリックすると **[!UICONTROL 、「]** 再生」オプションに切り替わります。 アップロードを再開するには、「 **[!UICONTROL 再生]**」をクリックします。
+「 **[!UICONTROL 一時停止]**」をクリックすると **[!UICONTROL 、「]** 再生」オプションに切り替わります。 アップロードを再開するには、「 **[!UICONTROL 再生]**」をクリックします。
 
-   ![一時停止したアセットのアップロードの再開](assets/resume-paused-upload.png)
+![一時停止したアセットのアップロードの再開](assets/resume-paused-upload.png)
 
-   進行中のアップロードをキャンセルするには、進行状況バーの横にある閉じるボタン（「`X`」）をクリックします。アップロード処理をキャンセルすると、[!DNL Assets] はアセットのアップロード済みの部分を削除します。
+進行中のアップロードをキャンセルするには、進行状況バーの横にある閉じるボタン（「`X`」）をクリックします。アップロード処理をキャンセルすると、[!DNL Assets] はアセットのアップロード済みの部分を削除します。
 
-   アップロードを再開する機能は、帯域幅が狭く、ネットワークの誤作動によりサイズの大きなアセットのアップロードに時間がかかるシナリオで特に便利です。アップロード処理を一時停止して、後で状況が改善したときに処理を再開できます。再開すると、処理を一時停止した箇所からアップロードが開始されます。
+アップロードを再開する機能は、帯域幅が狭く、ネットワークの誤作動によりサイズの大きなアセットのアップロードに時間がかかるシナリオで特に便利です。アップロード処理を一時停止して、後で状況が改善したときに処理を再開できます。再開すると、処理を一時停止した箇所からアップロードが開始されます。
 
-   During the upload operation, [!DNL Experience Manager] saves the portions of the asset being uploaded as chunks of data in the CRX repository. When the upload completes, [!DNL Experience Manager] consolidates these chunks into a single block of data in the repository.
+During the upload operation, [!DNL Experience Manager] saves the portions of the asset being uploaded as chunks of data in the CRX repository. When the upload completes, [!DNL Experience Manager] consolidates these chunks into a single block of data in the repository.
 
-   To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
+To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 
-   アセットのアップロード先に既に存在するアセットと同じ名前のアセットをアップロードすると、警告ダイアログが表示されます。
-
-   既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、既存のアセットに対して行った変更（注釈や切り抜きなど）がすべて削除されます。 If you choose to keep both assets, the new asset is renamed with number `1` appended to its name.
-
-   ![名前の競合ダイアログボックスを使用して、アセット名の競合を解決します](assets/resolve-naming-conflict.png)
-
-   >[!NOTE]
+>[!CAUTION]
+>
+>チャンクのアップロードがトリガーされた場合のデフォルト値は500 MBで、チャンクサイズは50 MBです。 アセットのアップロードに要する時間より短い時間を [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html)`timeout configuration` ()に変更した場合は、アセットのアップロードの進行中にセッションタイムアウト状況が発生することがあります。 したがって、各チャンクリクエストがセッションを更新する `chunkUploadMinFileSize` ように、および `chunksize`を変更する必要があります。
+>
+>credential expiry-timeout、latency、bandwidthおよび予期される同時アップロードが指定されている場合、以下の2つを確実に選択できる最も高い値が選択されます。
+>
+>* アップロード中に秘密鍵証明書の有効期限が切れる可能性の高いサイズのファイルに対して、チャンクアップロードを有効にする。
    >
-   >[!UICONTROL 名前の競合]ダイアログで「**[!UICONTROL 置換]**」を選択すると、新しいアセットのアセット ID が再生成されます。この ID は以前のアセットの ID とは異なります。
    >
-   >アセットインサイトによる Adobe Analytics でのインプレッション数やクリック数の追跡が有効になっている場合は、再生成されたアセット ID により、Analytics から取得したアセットのデータが無効になります。
+* 秘密鍵証明書の有効期限が切れる前に各チャンクが確実に終了するようにする。
 
-   If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. The dialog appears only if the `SHA 1` checksum value of the binary of the existing asset matches the checksum value of the asset you upload. この場合、アセット名は問題になりません。
 
-   >[!NOTE]
-   >
-   >The [!UICONTROL Duplicates Detected] dialog appears only when the duplicate detection feature is enabled. To enable the duplicate detection feature, see [Enable Duplicate Detection](/help/assets/duplicate-detection.md).
+アセットのアップロード先に既に存在するアセットと同じ名前のアセットをアップロードすると、警告ダイアログが表示されます。
 
-   ![重複アセットが検出されましたダイアログ](assets/duplicate-asset-detected.png)
+既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、既存のアセットに対して行った変更（注釈や切り抜きなど）がすべて削除されます。 If you choose to keep both assets, the new asset is renamed with number `1` appended to its name.
 
-   [!DNL Assets] で重複アセットを保持するには、「**[!UICONTROL 保持]**」をクリックします。To delete the duplicate asset you uploaded, click **[!UICONTROL Delete]**.
+![名前の競合ダイアログボックスを使用して、アセット名の競合を解決します](assets/resolve-naming-conflict.png)
 
-   [!DNL Experience Manager Assets] では、ファイル名に禁止文字が含まれるアセットをアップロードできません。ファイル名に禁止文字が含まれるアセットをアップロードしようとすると、[!DNL Assets] に警告メッセージが表示され、これらの文字を削除するか使用可能な名前でアップロードするまでアップロードが停止されます。
+>[!NOTE]
+>
+>[!UICONTROL 名前の競合]ダイアログで「**[!UICONTROL 置換]**」を選択すると、新しいアセットのアセット ID が再生成されます。この ID は以前のアセットの ID とは異なります。
+>
+>アセットインサイトによる Adobe Analytics でのインプレッション数やクリック数の追跡が有効になっている場合は、再生成されたアセット ID により、Analytics から取得したアセットのデータが無効になります。
 
-   組織固有のファイル命名規則に合うように、[!UICONTROL アセットをアップロード]ダイアログでは、アップロードするファイルに長い名前を指定できます。
+If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. The dialog appears only if the `SHA 1` checksum value of the binary of the existing asset matches the checksum value of the asset you upload. この場合、アセット名は問題になりません。
 
-   ただし、以下の文字（スペース区切りリスト）はサポートされていません。
+>[!NOTE]
+>
+>The [!UICONTROL Duplicates Detected] dialog appears only when the duplicate detection feature is enabled. To enable the duplicate detection feature, see [Enable Duplicate Detection](/help/assets/duplicate-detection.md).
 
-   * アセットファイル名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? &`
-   * アセットフォルダー名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+![重複アセットが検出されましたダイアログ](assets/duplicate-asset-detected.png)
 
-   アセットファイル名の拡張子には特殊文字を含めないでください。
+[!DNL Assets] で重複アセットを保持するには、「**[!UICONTROL 保持]**」をクリックします。To delete the duplicate asset you uploaded, click **[!UICONTROL Delete]**.
 
-   ![アップロードの進行状況ダイアログに、正常にアップロードされたファイルおよびアップロードに失敗したファイルの状態が表示されます](assets/bulk-upload-progress.png)
+[!DNL Experience Manager Assets] では、ファイル名に禁止文字が含まれるアセットをアップロードできません。ファイル名に禁止文字が含まれるアセットをアップロードしようとすると、[!DNL Assets] に警告メッセージが表示され、これらの文字を削除するか使用可能な名前でアップロードするまでアップロードが停止されます。
 
-   In addition, the [!DNL Assets] user interface displays the most recent asset that you upload or the folder that you created first.
+組織固有のファイル命名規則に合うように、[!UICONTROL アセットをアップロード]ダイアログでは、アップロードするファイルに長い名前を指定できます。
 
-   ファイルがアップロードされる前にアップロード操作をキャンセルすると、[!DNL Assets] が現在のファイルのアップロードを停止し、コンテンツを更新します。ただし、既にアップロードされているファイルは削除されません。
+ただし、以下の文字（スペース区切りリスト）はサポートされていません。
 
-   [!DNL Assets] のアップロード進行状況ダイアログには、アップロードが成功したファイルと失敗したファイルの数が表示されます。
+* アセットファイル名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? &`
+* アセットフォルダー名に含めてはいけない文字：`* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
+アセットファイル名の拡張子には特殊文字を含めないでください。
+
+![アップロードの進行状況ダイアログに、正常にアップロードされたファイルおよびアップロードに失敗したファイルの状態が表示されます](assets/bulk-upload-progress.png)
+
+In addition, the [!DNL Assets] user interface displays the most recent asset that you upload or the folder that you created first.
+
+ファイルがアップロードされる前にアップロード操作をキャンセルすると、[!DNL Assets] が現在のファイルのアップロードを停止し、コンテンツを更新します。ただし、既にアップロードされているファイルは削除されません。
+
+[!DNL Assets] のアップロード進行状況ダイアログには、アップロードが成功したファイルと失敗したファイルの数が表示されます。
 
 ### 順次アップロード {#serialuploads}
 
