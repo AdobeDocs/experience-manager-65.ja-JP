@@ -4,10 +4,10 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
 workflow-type: tm+mt
-source-wordcount: '9368'
-ht-degree: 63%
+source-wordcount: '9410'
+ht-degree: 62%
 
 ---
 
@@ -538,25 +538,30 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 アセットを削除するには、ユーザーがに対して削除権限を持っている必要があり `dam/asset`ます。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
 
-他のページからの入力参照を解決または削除するには、アセットを削除する前に、関連する参照を更新します。参照先のアセットの削除と破損したリンクの削除をユーザーに許可しないようにするには、オーバーレイの「削除を強制」オプションを無効にします。
+他のページからの入力参照を解決または削除するには、アセットを削除する前に、関連する参照を更新します。参照されているアセットの削除と破損したリンクの削除をユーザーに許可しないようにするには、オーバーレイを使用して「削除を強制」オプションを無効にします。
 
-1. 削除するアセットの場所に移動します。
+アセットを含むアセットまたはフォルダを削除するには：
 
-1. Select the asset, and click **[!UICONTROL Delete]** ![Delete option](assets/do-not-localize/deleteoutline.png) from the toolbar.
+1. 削除するアセットまたはフォルダーの場所に移動します。
 
-1. 確認ダイアログで、次のいずれかのオプションを選択します。
+1. アセットまたはフォルダを選択し、ツールバーの **[!UICONTROL 「削除]** 」 ![「削除」オプション](assets/do-not-localize/deleteoutline.png) をクリックします。
 
-   * **[!UICONTROL キャンセル]**：アクションを停止します。
-   * **[!UICONTROL 削除]**：アクションの実行を確定します。
+   削除を確定したら、次の操作を行います。
 
-      * アセットに参照がない場合は、アセットが削除されます。
-      * アセットに参照がある場合は、「**1 つ以上のアセットが参照されています。**」というエラーメッセージが表示されます。「**[!UICONTROL 削除を強制]**」または「**[!UICONTROL キャンセル]**」を選択できます。
+   * アセットに参照がない場合は、アセットが削除されます。
 
+   * If the asset has references, an error-message informs you that **One or more assets are referenced**. You can select **[!UICONTROL Force Delete]** or **[!UICONTROL Cancel]**.
    >[!NOTE]
    >
    >* 他のページからの入力参照を解決または削除するには、アセットを削除する前に、関連する参照を更新します。また、オーバーレイを使用して「削除を強制」ボタンを無効にすることで、参照元のアセットの削除と壊れたリンクの放置を禁止します。
    >* チェックアウトされたアセットファイルが含まれる *フォルダ* を削除できます。 フォルダーを削除する前に、デジタルアセットがユーザーによってチェックアウトされていないことを確認します。
 
+
+>[!NOTE]
+>
+>上記の方法を使用してユーザーインターフェイスからフォルダーを削除すると、関連付けられたユーザーグループも削除されます。
+>
+>ただし、既存の冗長、未使用および自動生成されたユーザーグループは、JMXのオーサーインスタンス( `clean` )での`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`メソッドを使用して、リポジトリからクリーンアップできます。
 
 ## アセットのダウンロード {#downloading-assets}
 
