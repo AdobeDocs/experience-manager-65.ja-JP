@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2480'
 ht-degree: 6%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 ### アセットのその他の機能強化 {#other-enhancements-assets-6560}
 
-* プライベートフォルダーのユーザーグループは、プライベートフォルダーの削除時にリポジトリから削除されるようになりました。 プライベートフォルダーを削除すると、プライベートフォルダーが作成されるたびに作成される、孤立したユーザーグループのリポジトリがクリーンアップされます。 詳しくは、「 [ユーザーグループの削除（フォルダー削除時）](#group-removal-on-folder-deletion)」を参照してください。
+* フォルダーに関連付けられているユーザーグループ（プライベートおよび非プライベート）は、それらのフォルダーの [削除時にリポジトリから削除されるようになりました](/help/assets/private-folder.md#delete-private-folder)。 ただし、既存の冗長、親なし、未使用、自動生成されたユーザーグループは、JMXを使用して、リポジトリからクリーンアップできます。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
