@@ -3,10 +3,10 @@ title: プライベートフォルダー( [!DNL Adobe Experience Manager Assets]
 description: Learn how to create a private folder in the [!DNL Adobe Experience Manager Assets] and share it with other users and the assign various privileges to them.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: be97ef4f3bb6b904dabcfcd44025a4898bcf4dee
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 23%
+source-wordcount: '641'
+ht-degree: 19%
 
 ---
 
@@ -67,26 +67,30 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 
 >[!NOTE]
 >
->プライベートフォルダーを作成するには、プライベートフォルダーを作成する親フォルダーのACLの読み取り権限と編集権限が必要です。 If you are not an administrator, these permissions are not enabled for you by default on `/content/dam`. この場合、プライベートフォルダーを作成またはフォルダー設定を表示する前に、ユーザー ID またはグループ用にそれらの権限を取得します。
+>To create a private folder, you require Read and Modify [access control permissions](/help/sites-administering/security.md#permissions-in-aem) on the parent folder under which you want to create a private folder. If you are not an administrator, these permissions are not enabled for you by default on `/content/dam`. この場合、プライベートフォルダーを作成する前に、ユーザーID/グループに対するこれらの権限を取得する必要があります。
 
 ## プライベートフォルダーの削除 {#delete-private-folder}
 
-プライベートフォルダーを削除するには、フォルダーを選択して上部のメニューから「 [!UICONTROL 削除] 」オプションを選択するか、キーボードのBackspaceキーを使用します。
+フォルダを削除するには、フォルダを選択して上部のメニューから「 [!UICONTROL 削除] 」オプションを選択するか、キーボードのBackspaceキーを使用します。
 
-### フォルダー削除時のユーザーグループの削除 {#group-removal-on-folder-deletion}
-
-上記の方法を使用してユーザーインターフェイスからプライベートフォルダーを削除すると、関連付けられたユーザーグループも削除されます。 ただし、既存の冗長、未使用および自動生成されたユーザーグループは、 [JMXを使用してリポジトリからクリーンアップできます](#group-clean-up-jmx)。
+![トップメニューの削除オプション](assets/delete-option.png)
 
 >[!CAUTION]
 >
 >プライベートCRXDE Liteーをフォルダーから削除すると、冗長なユーザーグループがリポジトリに残ります。
 
+>[!NOTE]
+>
+>上記の方法を使用してユーザーインターフェイスからフォルダーを削除すると、関連付けられたユーザーグループも削除されます。
+ただし、既存の冗長、未使用および自動生成されたユーザーグループは、 [JMXを使用してリポジトリからクリーンアップできます](#group-clean-up-jmx)。
+
 ### JMXを使用して、未使用のユーザーグループをクリーンアップします。 {#group-clean-up-jmx}
 
 未使用のユーザー・グループのリポジトリをクリーンアップするには、次の手順に従います。
 
-1. JMXを開き、アセットの冗長グループを削除し `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`ます。
+1. JMXを開き、オーサーインスタンス上のアセットの冗長なグループを [!DNL Experience Manager] 削除し `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`ます。
+例： `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`
 
 1. このJMXから `clean` メソッドを呼び出します。
 
-すべての冗長なユーザーグループまたは自動生成されたグループ（以前に削除したグループと同じ名前でプライベートフォルダーを作成したときに作成される）が、パスから削除されることが確認でき `/home/groups/mac/default/<user_name>/<folder_name>`ます。
+すべての冗長なユーザーグループまたは自動生成されたグループ（以前に削除したグループと同じ名前のフォルダーを作成したときに作成される）が、パスから削除されることが確認でき `/home/groups/mac/default/<user_name>/<folder_name>`ます。
