@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2492'
 ht-degree: 6%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 ### アセットのその他の機能強化 {#other-enhancements-assets-6560}
 
-* プライベートフォルダーのユーザーグループは、プライベートフォルダーの削除時にリポジトリから削除されるようになりました。 プライベートフォルダーを削除すると、プライベートフォルダーが作成されるたびに作成される、孤立したユーザーグループのリポジトリがクリーンアップされます。
+* プライベートフォルダーのユーザーグループは、プライベートフォルダーの削除時にリポジトリから削除されるようになりました。 プライベートフォルダーを削除すると、プライベートフォルダーが作成されるたびに作成される、孤立したユーザーグループのリポジトリがクリーンアップされます。 詳しくは、「 [ユーザーグループの削除（フォルダー削除時）](#group-removal-on-folder-deletion)」を参照してください。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 AcroFormに [!DNL Adobe Sign] テキストタグが含まれる場合、これらのフィールドが認識され、を使用して変換されたアダプティブフォームでフ [!DNL Adobe Sign] ィールドとして表されるようになり [!DNL Automated Forms Conversion service]ました。 署名者は、アダプティブフォームの署名時にこのようなフィールドに入力できます。
 
-### 色付きPDF formsのアダプティブフォームへの変換のサポート {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
 
 を使用して、色付きPDF forms [!DNL Automated Forms Conversion service] をアダプティブフォームに変換できます。
 
