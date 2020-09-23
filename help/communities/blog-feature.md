@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1676'
 ht-degree: 44%
 
 ---
@@ -63,17 +63,13 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 
 [必要なクライアント側ライブラリが含まれる場合](/help/communities/blog-developer-basics.md#essentials-for-client-side) 、次のようにコンポー `Blog` ネントが表示されます。
 
-![chlimage_1-147](assets/chlimage_1-147.png)
-
-そして、がどのように表示され `Blog Sidebar` るか：
-
-![chlimage_1-148](assets/chlimage_1-148.png)
+![add-blog-component](assets/add-blog-component.png)
 
 ### ブログの設定 {#configuring-blog}
 
 Select the placed `Blog` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-149](assets/chlimage_1-149.png)
+![設定](assets/configure-new.png)
 
 ![ブログ設定](assets/blog-configure.png)
 
@@ -125,7 +121,7 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **1 ページのトピック数**
 
-   1ページに表示するブログエントリ数/コメント数を定義します。 デフォルトは、10 です。
+   1ページに表示するブログエントリ数/コメント数を定義します。 デフォルトは 10 です。
 
 * **モデレート**
 
@@ -307,7 +303,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合、そのユーザーは、すべてのブログ記事およびブログに投稿されたコメントに対して[モデレートタスク](/help/communities/moderate-ugc.md)を実行できます（実行可能な操作はコンポーネントの設定に従います）。
 
-![chlimage_1-152](assets/chlimage_1-152.png)
+![モデレーターのホームページ](assets/moderator-homepage.png)
 
 #### メンバー {#members}
 
@@ -322,15 +318,15 @@ When the signed in user is a community member or [privileged member](/help/commu
 * 自分のブログ記事またはコメントを削除する
 * 他の人のブログ記事またはコメントにフラグを付ける
 
-![chlimage_1-153](assets/chlimage_1-153.png)
+![会員向けホームページ](assets/member-homepage.png)
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![create-blog](assets/create-blog.png)
 
 #### 匿名 {#anonymous}
 
 サインインしていないサイト訪問者は、投稿されたブログ記事やコメントを閲覧することしかできず（サポートされている場合は翻訳も可）、ブログ記事やコメントを追加したり、他人の記事やコメントにフラグを設定することはできません。
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![匿名ユーザー表示](assets/anonymous-user-view.png)
 
 ## 追加情報 {#additional-information}
 
