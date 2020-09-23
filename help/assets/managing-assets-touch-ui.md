@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2de85f2fc8daaf1cc30a1e12b7c18b20a640c747
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '9370'
+source-wordcount: '9368'
 ht-degree: 63%
 
 ---
@@ -94,7 +94,7 @@ To configure the cleanup task for the unfinished chunk upload jobs, go to `https
 >
 >チャンクのアップロードがトリガーされた場合のデフォルト値は500 MBで、チャンクサイズは50 MBです。 アセットのアップロードに要する時間より短い時間を [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html)`timeout configuration` ()に変更した場合は、アセットのアップロードの進行中にセッションタイムアウト状況が発生することがあります。 したがって、各チャンクリクエストがセッションを更新する `chunkUploadMinFileSize` ように、および `chunksize`を変更する必要があります。
 >
->credential expiry-timeout、latency、bandwidthおよび予期される同時アップロードが指定されている場合、以下の2つを確実に選択できる最も高い値が選択されます。
+>credential expiry-timeout、latency、bandwidth、および予想される同時アップロードが指定されている場合、以下を確実に示す最大値が選択されます。
 >
 >* アップロード中に秘密鍵証明書の有効期限が切れる可能性の高いサイズのファイルに対して、チャンクアップロードを有効にする。
    >
