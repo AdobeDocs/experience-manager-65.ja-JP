@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
+source-git-commit: bd67a41e493cbcf97956de09e088d16997ab0e93
 workflow-type: tm+mt
-source-wordcount: '4485'
+source-wordcount: '4495'
 ht-degree: 7%
 
 ---
@@ -22,10 +22,6 @@ ht-degree: 7%
 | 型 | Service Pack のリリース |
 | 日付 | 2020年9月3日 |
 | ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
-
->[!NOTE]
->
->AEM 6.5 Service Pack 6のアップデートバージョンが利用可能です。 Service Pack 6の以前のバージョンを既にインストール済みの場合は、利用可能な最新バージョンにアップグレードします。
 
 ## Adobe Experience Manager6.5.6.0に含まれるもの {#what-s-included-in-aem}
 
@@ -319,6 +315,8 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
 * アダプティブフォームには、いくつかのオープンなリソースリゾルバーがあります。 これらは送信エラーを引き起こします。 この問題は断続的に発生します(CQ-4299407)。
 
+* フィールド設定を初めて開くと、プロパティアイコンは表示されません(CQ-4296284)。
+
 **ワークフロー**
 
 * ワークフローの承認者が添付ファイルをアップロードすると、添付ファイルの名前が `undefined` (NPR-33699)に変更されます。
@@ -386,6 +384,10 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 1. Open Package Manager and click **[!UICONTROL Upload Package]** to upload the package. 使用方法について詳しくは、 [パッケージマネージャーを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
 1. Select the package and click **[!UICONTROL Install]**.
+
+>[!NOTE]
+>
+>既知の問題により、更新されたService Packパッケージが使用可能です。 パッケージのインストールをお勧めします。
 
 >[!NOTE]
 >
