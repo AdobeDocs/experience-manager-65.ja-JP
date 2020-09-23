@@ -1,17 +1,17 @@
 ---
-title: のプライベートフォルダーを作成して共有します [!DNL Adobe Experience Manager]。
+title: プライベートフォルダー( [!DNL Adobe Experience Manager Assets]
 description: Learn how to create a private folder in the [!DNL Adobe Experience Manager Assets] and share it with other users and the assign various privileges to them.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 37%
+source-wordcount: '642'
+ht-degree: 23%
 
 ---
 
 
-# プライベートフォルダーの共有 {#private-folder-sharing}
+# プライベートフォルダー( [!DNL Adobe Experience Manager Assets] {#private-folder}
 
 You can create a private folder in the [!DNL Adobe Experience Manager Assets] user interface that is available exclusively to you. このプライベートフォルダーを他のユーザーと共有し、他のユーザーに様々な権限を割り当てることができます。 ユーザーはフォルダーに対して、割り当てられた特権のレベルに応じた様々なタスク（フォルダー内のアセットの表示、アセットの編集など）を実行できます。
 
@@ -19,13 +19,17 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 >
 >プライベートフォルダーには、所有者の役割を持つメンバが少なくとも1つ存在します。
 
+## プライベートフォルダーの作成と共有 {#create-share-private-folder}
+
+プライベートフォルダーを作成して共有するには：
+
 1. In the [!DNL Assets] console, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Folder]** from the menu.
 
    ![アセットフォルダーの作成](assets/Create-folder.png)
 
 1. In the **[!UICONTROL Create Folder]** dialog, enter a title and name (optional) for the folder, and select **[!UICONTROL Private]** option.
 
-1. 「 **[!UICONTROL 作成]**」をクリックします。 プライベートフォルダーが作成されます。
+1. 「 **[!UICONTROL 作成]**」をクリックします。プライベートフォルダーが作成されます。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
@@ -63,4 +67,26 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 
 >[!NOTE]
 >
->プライベートフォルダーを作成するには、プライベートフォルダーを作成する親フォルダーに対する ACL の読み取りおよび編集権限が必要です。If you are not an administrator, these permissions are not enabled for you by default on `/content/dam`. この場合、プライベートフォルダーを作成またはフォルダー設定を表示する前に、ユーザー ID またはグループ用にそれらの権限を取得します。
+>プライベートフォルダーを作成するには、プライベートフォルダーを作成する親フォルダーのACLの読み取り権限と編集権限が必要です。 If you are not an administrator, these permissions are not enabled for you by default on `/content/dam`. この場合、プライベートフォルダーを作成またはフォルダー設定を表示する前に、ユーザー ID またはグループ用にそれらの権限を取得します。
+
+## プライベートフォルダーの削除 {#delete-private-folder}
+
+プライベートフォルダーを削除するには、フォルダーを選択して上部のメニューから「 [!UICONTROL 削除] 」オプションを選択するか、キーボードのBackspaceキーを使用します。
+
+### フォルダー削除時のユーザーグループの削除 {#group-removal-on-folder-deletion}
+
+上記の方法を使用してユーザーインターフェイスからプライベートフォルダーを削除すると、関連付けられたユーザーグループも削除されます。 ただし、既存の冗長、未使用および自動生成されたユーザーグループは、 [JMXを使用してリポジトリからクリーンアップできます](#group-clean-up-jmx)。
+
+>[!CAUTION]
+>
+>プライベートCRXDE Liteーをフォルダーから削除すると、冗長なユーザーグループがリポジトリに残ります。
+
+### JMXを使用して、未使用のユーザーグループをクリーンアップします。 {#group-clean-up-jmx}
+
+未使用のユーザー・グループのリポジトリをクリーンアップするには、次の手順に従います。
+
+1. JMXを開き、アセットの冗長グループを削除し `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`ます。
+
+1. このJMXから `clean` メソッドを呼び出します。
+
+すべての冗長なユーザーグループまたは自動生成されたグループ（以前に削除したグループと同じ名前でプライベートフォルダーを作成したときに作成される）が、パスから削除されることが確認でき `/home/groups/mac/default/<user_name>/<folder_name>`ます。
