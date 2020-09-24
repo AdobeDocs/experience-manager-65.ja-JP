@@ -5,12 +5,15 @@ description: 選択したユーザーグループにルールエディターへ�
 seo-description: 選択したユーザーグループにルールエディターへの制限付きアクセスを許可します。
 uuid: efa2570a-20ac-4b43-8a0e-38247f84d02f
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ab694a93-00d2-44d7-8ded-68ab2ad50693
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 58%
 
 ---
 
@@ -30,7 +33,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    ![1-2](assets/1-2.png)
 
-1. In Web Console Window, locate and click **Adaptive Form Configuration Service**. **Adaptive Form Configuration Serviceダイアログが表示されます** 。 値を変更せずに、「**保存**」をクリックします。
+1. In Web Console Window, locate and click **Adaptive Form Configuration Service**. **Adaptive Form Configuration Service** ダイアログが表示されます。 値を変更せずに、「**保存**」をクリックします。
 
    これにより、CRX リポジトリに /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
 
@@ -39,7 +42,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
 
-   複数のグループに対するアクセスを有効にするには、コンマ区切り値のリストを指定します。
+   複数のグループに対するアクセスを有効にするには、カンマ区切り値のリストを指定します。
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup", "PermittedUserGroup"]`
 
@@ -51,7 +54,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    ルールエディターのアクセス権を持つユーザーに表示されるコンポーネントツールバー
 
-   ![componentstorelbarwithouter](assets/componentstoolbarwithoutre.png)
+   ![componentstoolbarwithouter](assets/componentstoolbarwithoutre.png)
 
    ルールエディターのアクセス権を持たないユーザーに表示されるコンポーネントツールバー
 
