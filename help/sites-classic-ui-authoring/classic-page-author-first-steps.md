@@ -7,10 +7,13 @@ uuid: 1343acf9-b104-40f3-a3f2-df42060cb4fd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
-topic-tags: page-authoring
+topic-tags: page-authoring, introduction
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 93%
 
 ---
 
@@ -21,11 +24,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 次の内容について説明します。
 
-* [はじめに](#getting-started):最初のページを作成して公開するために必要なイベントの基本的なシーケンスの詳細を説明します。
+* [はじめに](#getting-started):最初のページを作成して公開する際に必要なイベントの基本的な順序の詳細を説明します。
 
-* [その他のアクション](#further-actions):オーサリング時に使用できるその他多数のアクションについて説明します。
+* [その他のアクション](#further-actions):オーサリング時に使用できる他の多数のアクションについて説明します。
 
-## はじめに{#getting-started}
+## 概要 {#getting-started}
 
 最初のページを作成して公開するために必要になる基本的な一連のイベントについて、詳しく説明します。
 
