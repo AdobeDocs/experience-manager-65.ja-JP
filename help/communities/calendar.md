@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '1170'
-ht-degree: 40%
+ht-degree: 39%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 40%
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* カレンダー機能のAEMサイトへの追加
+* AEMサイトへのカレンダー機能の追加
 * Configuration settings for `Calendar` components
 
 ## カレンダーをページに追加 {#adding-a-calendar-to-a-page}
@@ -42,15 +42,15 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 
 [必要なクライアント側のライブラリが含まれる場合](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) 、これがコンポー `Calendar` ネントの表示方法です。
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![カレンダーコンポーネント](assets/calendar-component.png)
 
 ### カレンダーの設定 {#configuring-calendar}
 
 Select the placed `Calendar` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-113](assets/chlimage_1-113.png)
+![設定](assets/configure-new.png)
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![configure-calendar](assets/configure-calendar1.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -193,7 +193,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合は、すべてのカレンダーイベントと、イベントに投稿されたコメントに対して、（コンポーネントの設定で許可されている）[モデレートタスク](/help/communities/moderate-ugc.md)を実行できます。
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![モデレーター —表示](assets/moderators-view.png)
 
 #### メンバー {#members}
 
@@ -207,15 +207,15 @@ When the signed in user is a community member or [privileged member](/help/commu
 * 自分のカレンダーイベントまたはコメントを削除する
 * 他のユーザーの予定表イベントまたはコメントにフラグを付ける
 
-![chlimage_1-116](assets/chlimage_1-116.png)
+![作成イベント](assets/configure-calendar2.png)
 
-![chlimage_1-117](assets/chlimage_1-117.png)
+![イベントポスト](assets/configure-calendar3.png)
 
 #### 匿名 {#anonymous}
 
 サインインしていないサイト訪問者は、投稿されたカレンダーイベントを閲覧することしかできず（サポートされている場合は翻訳も可）、イベントまたはコメントを追加したり、他のユーザーのイベントまたはコメントにフラグを設定することはできません。
 
-![chlimage_1-118](assets/chlimage_1-118.png)
+![匿名ユーザー表示](assets/anonymous-user-view1.png)
 
 ## 追加情報 {#additional-information}
 
