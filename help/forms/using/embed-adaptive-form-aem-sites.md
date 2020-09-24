@@ -6,10 +6,13 @@ seo-description: アダプティブフォームを AEM サイトページに埋�
 uuid: 59b49e2f-6d95-42e5-b31e-fc40936c42d2
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: interactive-communications
+topic-tags: author, interactive-communications
 discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1114'
+ht-degree: 71%
 
 ---
 
@@ -22,15 +25,15 @@ AEM Forms を使用すると、フォーム開発者は AEM サイトページ�
 
 For information about embedding an adaptive form in an external web page, see [Embed adaptive form in external web page](/help/forms/using/embed-adaptive-form-external-web-page.md).
 
-AEMサイトページでは、次を使用してアダプティブフォームやインタラクティブな通信を追加できます。
+AEM Sitesページでは、次を使用して、アダプティブフォームまたはインタラクティブな通信を追加できます。
 
-* **[AEM Form コンテナコンポーネント](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)**AEM Forms では、サイトページに追加できるコンポーネントを提供します。AEM Form コンテナコンポーネントを使用することで、アダプティブフォームやインタラクティブ通信を埋め込むことが可能になります。
+* **[AEM Form コンテナコンポーネント](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)** AEM Forms では、サイトページに追加できるコンポーネントを提供します。AEM Form コンテナコンポーネントを使用することで、アダプティブフォームやインタラクティブ通信を埋め込むことが可能になります。
 
-* **[アセットブラウザー](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)**作成したフォームやインタラクティブ通信は、すべて「アセット」の下に表示されます。フォームは、アセットとしてページ上にドラッグ＆ドロップすることができます。
+* **[アセットブラウザー](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)** 作成したフォームやインタラクティブ通信は、すべて「アセット」の下に表示されます。フォームは、アセットとしてページ上にドラッグ＆ドロップすることができます。
 
 ## 前提条件 {#prerequisites}
 
-アダプティブフォームまたはインタラクティブ通信を、編集可能なテンプレートを使用するAEMサイトページに埋め込むには、AEM formコンポーネントが、関連するテンプレートで許可されたコンポーネントとして設定されていることを確認します。 For more information, see **Policy &amp; Properties (Layout Container)** section in [Creating Page Templates](/help/sites-authoring/templates.md).
+編集可能なテンプレートを使用するAEMサイトページにアダプティブフォームやインタラクティブな通信を埋め込むには、AEM Formコンポーネントが関連付けられたテンプレートで許可コンポーネントとして設定されていることを確認します。 For more information, see **Policy &amp; Properties (Layout Container)** section in [Creating Page Templates](/help/sites-authoring/templates.md).
 
 サイトページがスタティックテンプレートを使用している場合は、それをサイトページの段落システムから設定する必要があります。詳しくは、[デザインモードでのコンポーネントの設定](/help/sites-authoring/default-components-designmode.md)を参照してください。
 
@@ -51,18 +54,18 @@ AEM Forms コンテナコンポーネントを使用してアダプティブフ�
 1. AEM Forms コンテナを編集ダイアログで、次の設定を行います。
 
    * **アセットの種類：**&#x200B;埋め込むアセットの種類を選択します。選択肢はアダプティブフォームとインタラクティブ通信です。
-   * **Asset Path**:埋め込むアダプティブフォームまたはインタラクティブ通信を参照して選択します。 また、アセットブラウザーからドロップすると、自動的に入力されます。
+   * **Asset Path**:埋め込むアダプティブフォームまたはインタラクティブな通信を参照して選択します。 また、アセットブラウザーからドロップすると、自動的に入力されます。
    * (Adaptive form only) **Post Submission**: Select the action to trigger on form submission. お礼のメッセージを表示するため、「ありがとうございます」ページを設けることができます。
 
-      * **お礼のメッセージ**:フォームの送信時に表示するメッセージをリッチテキストエディターを使用して書き込みます。 このオプションは、「ありがとうございます」メッセージの表示を選択した場合にのみ使用できます。
-      * **「ありがとうございます**」ページフォームの送信時に表示するページを参照して選択します。 このオプションは、「ありがとうございます」ページの表示を選択した場合にのみ使用できます。
+      * **ありがとうございますメッセージ**:フォーム送信時に表示するメッセージをリッチテキストエディターを使用して作成します。 このオプションは、「ありがとうございます」メッセージの表示を選択した場合にのみ使用できます。
+      * **「ありがとうございます」ページ**:フォームの送信時に表示するページを参照して選択します。 このオプションは、「ありがとうございます」ページの表示を選択した場合にのみ使用できます。
       * **送信時にページを更新**：アダプティブフォームが埋め込まれたページを更新して「ありがとうございます」ページを表示します。この機能が無効な場合は、AEM Forms コンテナ内のアダプティブフォームの代わりに「ありがとうございます」ページが（ページの更新を待たずに）表示されます。このオプションは、「ありがとうございます」ページの表示を選択した場合にのみ使用できます。
    * **テーマ：**&#x200B;アダプティブフォームまたはインタラクティブ通信のコンポーネントのスタイルを定義するテーマを選択します。スタイル設定には、フォントスタイル、背景色、サイズ、配置など、外観のプロパティが含まれます。
    * **高さ**：コンテナの高さを指定します。自動でコンテナのサイズを調整するには、空白のままにします。
    * **CSS クライアントライブラリ**：CSS クライアントライブラリへのパスを指定します。
 
 
-1. 設定を保存します。これで、アダプティブフォームまたはインタラクティブな通信がページに埋め込まれました。
+1. 設定を保存します。これで、アダプティブフォームまたはインタラクティブな通信がページに埋め込まれます。
 
 ## Publishing embedded adaptive form and interactive communication {#publishing-embedded-adaptive-form-and-interactive-communication}
 
@@ -93,5 +96,5 @@ AEM サイトページにアダプティブフォームを埋め込む際は、�
 * ユーザードラフトと埋め込みフォームの送信はサポートされており、フォームポータル上の「下書き」タブや「送信済みフォーム」タブに表示されます。
 * 元のフォームに構築された送信アクションは、埋め込まれたフォームでも保持されます。
 * 元のフォームに構築されたのエクスペリエンスのターゲット設定と A/B テストは、埋め込まれたフォームでは動作しません。ただし、ユーザープロファイルに基づいて異なるフォームを表示するよう、サイトページ上でエクスペリエンスのターゲット設定を使用することはできます。
-* 元のフォームに対してAdobe Analyticsが設定されている場合、埋め込まれたフォームの解析データがAdobe Analyticsに取り込まれます。 ただし、フォームの分析レポートでは使用できません。
+* 元のフォームに対してAdobe Analyticsが設定している場合、埋め込まれたフォームの分析データはAdobe Analyticsで取得されます。 ただし、フォームの分析レポートでは使用できません。
 
