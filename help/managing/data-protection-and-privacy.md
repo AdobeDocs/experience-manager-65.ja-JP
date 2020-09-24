@@ -1,96 +1,99 @@
 ---
-title: データ保護とデータプライバシーに関する規制 — Adobe Experience Manager Readiness
-seo-title: Adobe Experience Manager Readiness for Data Protection and Data Privacy Regulations;（GDPR、CCPAなど）
-description: '様々なデータ保護およびデータプライバシー規制に対するAdobe Experience Managerのサポートについて説明します。eu General Data Protection Regulation(GDPR)、California Consumer Privacy Act、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
-seo-description: '様々なデータ保護およびデータプライバシー規制に対するAdobe Experience Managerのサポートについて説明します。eu General Data Protection Regulation(GDPR)、California Consumer Privacy Act、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
+title: データ保護とデータプライバシーに関する規制 —Adobe Experience Manager準備
+seo-title: Adobe Experience Manager保護対応およびデータプライバシー規制GDPR、CCPAなど
+description: '様々なData Protection and Data Privacy Regulationsに対するAdobe Experience Managerのサポートについて説明します。EU General Data Protection Regulation(GDPR)、California Consumer Privacy Act（カリフォルニア消費者プライバシー法）、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
+seo-description: '様々なData Protection and Data Privacy Regulationsに対するAdobe Experience Managerのサポートについて説明します。EU General Data Protection Regulation(GDPR)、California Consumer Privacy Act（カリフォルニア消費者プライバシー法）、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
 uuid: 9b0b8101-929c-4232-8c6e-1f9b8b2e0aa2
 contentOwner: aheimoz
+topic-tags: introduction, grdp
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
-topic-tags: grdp
 discoiquuid: 0bcd7ac4-3071-466d-bd11-701f35ccf5bd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9b16c8ae2ee28c60f35f9e0f990d79173463c33b
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '981'
+ht-degree: 23%
 
 ---
 
 
-# Adobe Experience Manager Readiness for Data Protection and Data Privacy Regulations {#aem-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager保護対応およびデータプライバシー規制 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
->本書の内容は、法律上の助言とはならず、法律上の助言の代替としての意味も持たない。
+>このドキュメントの内容は法律上の助言とはならず、法律上の助言の代わりとしての意味も持たない。
 >
->データ保護およびデータプライバシー規制に関するアドバイスについては、貴社の法務部にお問い合わせください。
+>データ保護およびデータのプライバシーに関する規制に関するアドバイスについては、会社の法務部にお問い合わせください。
 
 >[!NOTE]
 >
->プライバシーに関する問題に対するアドビの対応、およびアドビのお客様にとっての意味について詳しくは、アドビのプライバシーセ [ンターを参照してください](https://www.adobe.com/privacy.html)。
+>プライバシーに関する問題に対するAdobeの対応、およびAdobeのお客様にとっての意味について詳しくは、 [Adobeのプライバシーセンター](https://www.adobe.com/privacy.html)を参照してください。
 
-アドビは、お客様のプライバシー管理者またはAEM管理者に対し、データ保護とデータプライバシーの要請を処理し、お客様がこれらの規制に準拠できるよう支援するため、ドキュメントと手順を提供しています。 ドキュメントに記載された手順により、顧客は手動で、または、可能な場合は外部のポータルやサービスからAPIに呼び出すことで、規制要求を実行できます。
+Adobeは、お客様のプライバシー管理者またはAEM管理者がデータ保護とデータプライバシーの要請を処理し、お客様がこれらの規制に準拠できるように、ドキュメントと手順を（APIを使用して）提供しています。 ドキュメントに記載された手順により、顧客は手動で、または、可能な場合は外部のポータルやサービスからAPIに呼び出すことで、規制要求を実行できます。
 
 >[!CAUTION]
 >
->ここで説明する詳細は、Adobe Experience Managerに限定されています。
+>詳細はAdobe Experience Managerに限定。
 >
->別のアドビオンデマンドサービスのデータは、関連するプライバシーリクエストと共に、そのサービスに対して行う必要があります。
+>別のAdobeのオンデマンドサービスのデータは、関連するプライバシー要求と共に、そのサービスでの処置が必要になります。
 >
->詳しくは、アドビのプライバ [シーセンターを参照してください](https://www.adobe.com/privacy.html)。
+>詳しくは、 [Adobeのプライバシーセンターを参照してください](https://www.adobe.com/privacy.html)。
 
 ## 概要 {#introduction}
 
-Adobe Experience Managerのインスタンスとそれらで実行されるアプリケーションは、アドビのお客様が所有し、運用します。
+Adobe Experience Managerの例と、それに対して実行されるアプリケーションは、弊社のお客様が所有し、運用しています。
 
 その結果、GDPR、CCPAなどのデータ保護に関する規制は、お客様の責任が大きく左右されます。
 
-簡単に説明すると、データのプライバシーと保護に関する規制には、次の役割を果たす新しいルールが含まれます。
+簡単に説明すると、データのプライバシーと保護に関する規則には、次の役割を果たす新しい規則が含まれます。
 
-* CCPA（ビジネス・エンティティ）およびGDPR（データ・コントローラ）
+* CCPA(Business Entities)および/またはGDPR(Data Controller)
 
-* CCPA（サービス・プロバイダ）およびGDPR（データ・プロセッサ）
+* サービスプロバイダー(CCPA)および/またはGDPR(Data Processor)
 
 この規則の主な規定は次の通りである。
 
-1. 個人データの定義を拡張し、すべての一意のIDを含める。を直接または間接的に識別可能なデータに含める場合と同様です。
+1. 個人データの定義が拡張され、一意のIDがすべて含まれるようになりました。を直接または間接的に識別可能なデータとして扱う場合と同様です。
 
-2. 同意要件の強化。
+2. 同意要件を強化しました。
 
-3. 削除権限（データ消去）に重点を置くようになりました。
+3. 削除権限（データ消去）に対する焦点を高めました。
 
 4. データ販売のオプトアウトを参照してください。
 
 Adobe Experience Managerの場合：
 
-* インスタンスとそれら上で実行されるアプリケーションは、顧客が所有し、操作します。
+* インスタンスと、それらに対して実行されるアプリケーションは、顧客が所有し、操作します。
 
-   * つまり、ビジネス・エンティティやサービス・プロバイダ、データ・コントローラ、データ・プロセッサなど、規制上の役割を顧客が効果的に管理できます。
+   * つまり、ビジネス・エンティティやサービスプロバイダー、データ・コントローラ、データ・プロセッサなど、規制上の役割をお客様が管理するということです。
 
-   * 次の図に示すように、Adobe Experience PlatformプライバシーサービスはAEMのワークフローには含まれません。
+   * 下の図に示すように、Adobe Experience Platform Privacy ServiceはAEMのワークフローに含まれません。
 
-* AEMには、お客様のプライバシー管理者やAEM管理者がプライバシー規制の要請を実行するためのドキュメントと手順が含まれています。手動で、またはAPIを使用して（可能な場合）。
+* AEMには、お客様のプライバシー管理者およびAEM管理者がプライバシー規制の要請を実行するためのドキュメントと手順が含まれます。手動で、またはAPI経由で（使用可能な場合）。
 
 * 新しいサービスまたはUIが追加されていません。
 
-   * 代わりに、プライバシー規制の要求を処理する顧客UI/ポータルで使用するための手順とAPIについて説明します。
+   * 代わりに、プライバシー規制の要求を処理するお客様のUI/ポータルでの使用に関する手順とAPIについて説明しています。
 
-* AEMには、プライバシーリクエストのワークフローをサポートする追加設定なしのツールは含まれません。
+* AEMには、プライバシー要求のワークフローをサポートする追加設定なしのツールは含まれません。
 
-   * アドビは、お客様のプライバシー管理者やAEM管理者に対して、プライバシー規制に関連する要求を手動で実行できるようにドキュメントと手順を提供します。
+   * Adobeは、お客様のプライバシー管理者またはAEM管理者に関するドキュメントと手順を提供し、プライバシー規制に関する要求を手動で実行できるようにします。
 
-アドビは、Adobe Experience Managerのアクセス、削除およびオプトアウトに関するプライバシーリクエストを処理する手順を提供しています。 場合によっては、自動化を支援するために、顧客が開発したポータルまたはスクリプトから呼び出すことのできるAPIが存在します。
+Adobeは、Adobe Experience Managerのアクセス、削除、およびオプトアウトに関するプライバシー要求を処理する手順を提供しています。 場合によっては、自動化を支援するために、お客様が開発したポータルまたはスクリプトから呼び出すことのできるAPIがあります。
 
-次の図に、プライバシーリクエストのワークフローがどのようになるかを示します（Adobe Experience Manager 6.5を使用して図を示します）。
+次の図に、プライバシーリクエストワークフローの例を示します(Adobe Experience Manager6.5を使用した図を参照)。
 
 ![データ保護とプライバシー](assets/data-protection-and-privacy-01.png)
 
-## Adobe Experience ManagerとRegulatory Readiness {#aem-and-regulatory-readiness}
+## Adobe Experience Managerと規制への対応 {#aem-and-regulatory-readiness}
 
 AEMの製品領域に関する規制に関するドキュメントについては、以下の節を参照してください。
 
 ## AEM の基盤 {#aem-foundation}
 
-「AEM Foundation [のデータ保護およびプライバシー要求の処理」を参照してください](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)。
+AEM Foundationのデータ保護およびプライバシー要求の [処理を参照してください](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)。
 
 ## 集計した使用状況の統計の収集を AEM でオプトインする方法 {#aem-opting-into-aggregate-usage-statistics-collection}
 
@@ -98,24 +101,24 @@ AEMの製品領域に関する規制に関するドキュメントについて�
 
 ## AEM Sites {#aem-sites}
 
-詳しくは、 [AEMサイト — データ保護とプライバシーの準備を参照してください。](/help/sites-administering/gdpr-compliance-sites.md)
+「 [AEM Sites- Data Protection and Privacy Readiness」を参照してください。](/help/sites-administering/gdpr-compliance-sites.md)
 
 ## AEM Commerce {#aem-commerce}
 
-「 [AEMコマース — データ保護とプライバシーの準備」を参照してください](/help/sites-administering/gdpr-compliance-commerce.md)。
+「 [AEM Commerce - Data Protection and Privacy Readiness](/help/sites-administering/gdpr-compliance-commerce.md)」を参照してください。
 
 ## AEM Mobile {#aem-mobile}
 
-AEM Mobile - Data Protection and Privacy Readinessを参照してください [](/help/mobile/aem-mobile-gdpr-compliance.md)。
+「 [AEM Mobile- Data Protection and Privacy Readiness](/help/mobile/aem-mobile-gdpr-compliance.md)」を参照してください。
 
 ## Adobe Target および Adobe Analytics との AEM 統合 {#aem-integration-with-adobe-target-adobe-analytics}
 
-これらのAdobe Experience Manager統合は、データ保護とプライバシー（GDPRやCCPAなど）対応のサービスと連携しています。 Adobe targetまたはAdobe Analyticsの個人データは、統合に関連してAEMに保存されません。
+これらのAdobe Experience Manager統合は、データ保護とプライバシー（GDPRやCCPAなど）に対応したサービスを提供します。 統合に関連して、Adobe TargetやAdobe Analyticsからの個人データはAEMに格納されない。
 詳しくは、次のセクションを参照してください。
 
 * [Adobe Target — プライバシーの概要](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/privacy.html)
 
-* [Adobe Analyticsデータプライバシーワークフロー](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)
+* [Adobe Analyticsデータのプライバシーワークフロー](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)
 
 ## AEM Communities {#aem-communities}
 
@@ -125,7 +128,7 @@ AEM Communities は[デフォルトの API](/help/communities/user-ugc-managemen
 
 ## AEM Forms {#aem-forms}
 
-AEM Forms に含まれるコンポーネントやワークフローは、ビジネスプロセスの調整やデジタルトランザクションの実行のためにデータをキャプチャ、処理および格納します。コンポーネントごとに異なるデータストアが使用されますが、コンポーネントをカスタムデータストアと統合することも可能です。以下のドキュメントでは、コンポーネントのデータ保護とプライバシー（GDPRやCCPAなど）ワークフローをサポートするためにユーザーデータにアクセスし、処理する手順とガイドラインを説明しています。
+AEM Forms に含まれるコンポーネントやワークフローは、ビジネスプロセスの調整やデジタルトランザクションの実行のためにデータをキャプチャ、処理および格納します。コンポーネントごとに異なるデータストアが使用されますが、コンポーネントをカスタムデータストアと統合することも可能です。次のドキュメントでは、コンポーネントのデータ保護とプライバシー（GDPRやCCPAなど）ワークフローをサポートするために、ユーザーデータにアクセスして処理する手順とガイドラインを説明しています。
 
 * [フォームポータル](/help/forms/using/forms-portal-handling-user-data.md)
 * [Correspondence Management](/help/forms/using/correspondence-management-handling-user-data.md)
