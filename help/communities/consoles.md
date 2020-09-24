@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '345'
 ht-degree: 13%
 
 ---
@@ -41,8 +41,6 @@ In the author environment, after signing in with administrator privileges, the `
 
 ## グローバルナビゲーションパネル {#global-navigation-panel}
 
-![chlimage_1-91](assets/chlimage_1-91.png)
-
 `Adobe Experience Manager` のアイコンを選択し、グローバルナビゲーションパネルを開いて次の 2 つのアイコンにアクセスします。
 
 * [ナビゲーションコンソール](#navigation-console)
@@ -52,7 +50,7 @@ In the author environment, after signing in with administrator privileges, the `
 
 To access the various Communities consoles, from global navigation select **navigation, Communities**.
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![コミュニティ](assets/communities.png)
 
 * [Sites](sites-console.md)
 
