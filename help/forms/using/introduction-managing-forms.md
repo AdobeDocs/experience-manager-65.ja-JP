@@ -6,11 +6,11 @@ seo-description: AEM Forms は、アダプティブフォームおよび関連�
 uuid: 2275a0b6-b31e-4d8e-8154-ccdfff3705aa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: introduction
+topic-tags: forms-manager, introduction
 discoiquuid: c0e4c9bb-e12a-4f9a-a8fa-1a8ad41d3995
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8d352255ace00499412a21564f45f61f45060f4d
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '1593'
 ht-degree: 66%
