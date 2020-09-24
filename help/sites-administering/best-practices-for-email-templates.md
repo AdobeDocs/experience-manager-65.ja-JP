@@ -6,12 +6,12 @@ seo-description: AEM での電子メールテンプレートの作成に関す�
 uuid: 07417a63-7ca6-484c-b55d-57b319428329
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: integration, best-practices
 content-type: reference
-topic-tags: best-practices
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e05502b590fb2c7c36919f94611efe999262d32
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 64%
