@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+source-git-commit: f6aa95514a266a042c9bd1165634e30e80479ae7
 workflow-type: tm+mt
 source-wordcount: '402'
-ht-degree: 60%
+ht-degree: 59%
 
 ---
 
@@ -41,11 +41,11 @@ When there exists a [community function](/help/communities/functions.md) for a f
 
 ### 例：clientlib が欠落している場合のレビューの配置 {#example-placed-reviews-without-clientlibs}
 
-![chlimage_1-426](assets/chlimage_1-426.png)
+![配置されたレビュー](assets/placed-reviews.png)
 
 ### 例：clientlib が存在する場合のレビューの配置 {#example-placed-reviews-with-clientlibs}
 
-![chlimage_1-427](assets/chlimage_1-427.png)
+![reviews-clientlibs](assets/reviews-clientlibs.png)
 
 ## 必須の clientlib の識別 {#identifying-required-clientlibs}
 
@@ -58,7 +58,7 @@ For example, at the very top of the [Reviews page](https://localhost:4502/conten
 * cq.ckeditor
 * cq.social.hbs.reviews
 
-![chlimage_1-246](assets/chlimage_1-246.png)
+![clientlibs-reviews](assets/clientlibs-reviews.png)
 
 ## 必須の clientlib の追加 {#adding-required-clientlibs}
 
@@ -66,7 +66,7 @@ For example, at the very top of the [Reviews page](https://localhost:4502/conten
 
 [CRXDE|Lite](#using-crxde-lite) を使用すると、コミュニティサイトページの既存の clientlibslist を変更できます。
 
-To add a clientlib for a community site using [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
+[CRXDE Liteを使用してコミュニティサイトのclientlibを追加するには](/help/sites-developing/developing-with-crxde-lite.md):
 
 * Browse to [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de).
 * Locate the `clientlibslist` node for the page on which you wish to add the component:
@@ -94,5 +94,5 @@ To add a clientlib for a community site using [CRXDE Lite](/help/sites-developin
 
 ここでは、[AEM Communities 使用の手引き](/help/communities/getting-started.md)の例（`site-name` は *engage*）を引用し、レビューコンポーネントを追加する場合に clientliblist がどのように表示されるかを示しています。
 
-![chlimage_1-247](assets/chlimage_1-247.png)
+![レビューコンポーネント](assets/review-component.png)
 
