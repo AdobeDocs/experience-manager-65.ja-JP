@@ -9,9 +9,10 @@ tutorials-title: チュートリアル
 tutorials-url: https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-5-videos.html
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-65.ja-JP
+solution: Experience Manager
 index: y
 translation-type: tm+mt
-source-git-commit: f483581a80faf0e6160d3b9cbc3fcdb8e8171dec
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 70%
