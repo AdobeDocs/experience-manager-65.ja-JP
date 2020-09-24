@@ -6,10 +6,13 @@ seo-description: この記事では、アダプティブフォームエディタ
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
-topic-tags: correspondence-management
+topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1172'
+ht-degree: 79%
 
 ---
 
@@ -28,20 +31,20 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 | 選択したアダプティブフォームコンポーネントのルールの編集 | Ctrl + Alt + Enter | Command + Alt + Return |
 | プレビューと現在選択されているモード（編集モードや基礎モードなど）を切り替える | Ctrl + Shift + M | Ctrl + Shift + M&amp;ast; |
 | 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl + Z&amp;ast; |
-| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl + Y(&amp;A);ast; |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl + Y&amp;ast; |
 | 複数のコンポーネントを選択する | Shift キーを押しながらクリック | Shift キーを押しながらクリック |
-| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl-C&amp;A;ast; |
-| 選択した 1 つ以上のコンポーネントを切り取る切り取ったコンポーネントは、新しい位置に貼り付けられるまで表示されません。 | Ctrl + X | Ctrl-X&amp;A;ast; |
+| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl-C&amp;ast; |
+| 選択した 1 つ以上のコンポーネントを切り取る切り取ったコンポーネントは、新しい位置に貼り付けられるまで表示されません。 | Ctrl + X | Ctrl-X&amp;ast; |
 | コンポーネントを貼り付け | Ctrl + V | Ctrl + V |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Del | Ctrl + Del&amp;ast; |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Backspace | Ctrl + Backspace&amp;ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B | Ctrl +バンプ(&amp;A);ast; |
-| リッチテキストエディターコンポーネントをプレビューモードで使用中は斜体 | Ctrl + I | Ctrl + I&amp;A;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B | Ctrl + B&amp;A;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合、テキストを斜体にします。 | Ctrl + I | Ctrl + I&amp;A;ast; |
 | プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl + U&amp;A;ast; |
 
 >[!NOTE]
 >
->Mac OSのCtrlキーとCommandキーの両方で、「&amp;ast;」でマークされたショートカットを使用できます。
+>「&amp;ast;」でマークされたショートカットは、Mac OSのCtrlキーとCommandキーの両方で機能します。
 
 >[!NOTE]
 >
@@ -49,6 +52,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 >
 >* Windows：Ctrl キーを押しながら、目的のコンポーネントをクリックします。
 >* MAC OS：Command キーを押しながら、目的のコンポーネントをクリックします。
+
 >
 
 
@@ -60,32 +64,32 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 | テーマで選択したコンポーネントのプロパティブラウザーを開く | Alt + Enter | Alt + Return |
 | テーマで選択したコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
 | 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl + Z&amp;ast; |
-| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl + Y(&amp;A);ast; |
-| テーマで選択したコンポーネントのプロパティブラウザでの変更の保存 | Ctrl + S | Ctrl +サンプル(&amp;A)；末尾； |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl + Y&amp;ast; |
+| テーマで選択したコンポーネントのプロパティブラウザーでの変更の保存 | Ctrl + S | Ctrl + S&amp;ast; |
 
 >[!NOTE]
 >
->Mac OSのCtrlキーとCommandキーの両方で、「&amp;ast;」でマークされたショートカットを使用できます。
+>「&amp;ast;」でマークされたショートカットは、Mac OSのCtrlキーとCommandキーの両方で機能します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 
 | **アクション** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
 |---|---|---|
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | すべてのアコーディオンを選択する場合はCtrl + Aキーを押し、展開する場合は右向き矢印キーを押します | すべてのアコーディオンを選択するにはCommand + Aキーを押し、展開するには右向き矢印キーを押します |
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + Aキーを押してすべてのアコーディオンを選択し、左向き矢印キーを押して折りたたむ | すべてのアコーディオンを選択する場合はCommand + Aキーを押し、折りたたむ場合は左向き矢印キーを押します |
+| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | すべてのアコーディオンを選択する場合はCtrl + Aキーを押し、展開する場合は右向き矢印キーを押します | すべてのアコーディオンを選択する場合はCommand + Aを押し、次に右向き矢印を押して展開します。 |
+| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + Aキーを押してすべてのアコーディオンを選択し、左向き矢印キーを押して折りたたむ | Command + Aキーを押すと、すべてのアコーディオンを選択し、左向き矢印キーを押すと折りたたまれます |
 | 選択したアコーディオンをフォームオブジェクトツリーで展開する | 右向き矢印 | 右向き矢印 |
 | 選択したアコーディオンをフォームオブジェクトツリーで折りたたむ | 左向き矢印 | 左向き矢印 |
 | フォームオブジェクトツリーで次の項目を選択する | 下向き矢印 | 下向き矢印 |
 | フォームオブジェクトツリーで前の項目を選択する | 上向き矢印 | 上向き矢印 |
 
-[1は] 、Windowsの場合はCtrl +右向き矢印、Mac OSの場合はCommand +右向き矢印に置き換わります。\
+[1] Windowsの場合はCtrl +右向き矢印、Mac OSの場合はCommand +右向き矢印に置き換わります。\
 [2] Windowsの場合はCtrl +左向き矢印、Mac OSの場合はCommand +左向き矢印に置き換わります。
 
 ## Correspondence Management {#correspondence-management}
 
 このセクションでは、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。これらのショートカットキーを使用して、以下の操作を行うことができます。
 
-* Creating or editing a [Text](texts-interactive-communications.md) asset
+* [テキスト](texts-interactive-communications.md) アセットの作成と編集
 * Editing a text module after tapping the relevant Edit icon ( ![edittextmodule](assets/edittextmodule.png)) when [creating a correspondence](/help/forms/using/create-correspondence.md).
 
 ### テキストの選択とカーソルの移動 {#text-selection-and-moving-the-cursor-around}
