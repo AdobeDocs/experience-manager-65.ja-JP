@@ -6,12 +6,15 @@ seo-description: Adobe Experience Manager（AEM）実装プロジェクトの管
 uuid: 859f73f4-535a-49a1-9ae4-a4aacd7f36dd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
+topic-tags: managing-checklist, introduction
 content-type: reference
-topic-tags: introduction
 discoiquuid: 2bfa287a-aad0-4681-9f9c-d48e8179684c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '3316'
+ht-degree: 92%
 
 ---
 
@@ -29,11 +32,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 * ドキュメント。直接[チェックリスト](/help/managing/best-practices-checklist.md)に基づいて、以下の詳細を説明しています。
 
-   * [プロジェクトハートビート](#projectheartbeat) 分析。
-   * [役割別ステータス](#status-by-role) ：概要
+   * [Project Heartbeat](#projectheartbeat) 分析。
+   * [ロール別ステータス](#status-by-role) ：概要
    * [フェーズおよびマイルストーン](#phases-and-milestones)。
    * [主要なペルソナ](#persona)および各（関連）段階でのペルソナの関与。
-   * A [Glossary](/help/managing/best-practices-glossary.md) of the [Required Documents and Deliverables](#required-documents-and-deliverables).
+   * [必要なドキュメントと提供資料の](/help/managing/best-practices-glossary.md) 用語集 [](#required-documents-and-deliverables)。
 
 * [詳細情報](/help/managing/best-practices-further-reference.md)。特定の分野に関する詳細を提供します。
 
@@ -55,7 +58,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 ## 役割別のスタータス {#status-by-role}
 
-「**役割別のステータス**」ワークシートには、[**ヘルス&#x200B;**、**&#x200B;品質&#x200B;**および**&#x200B;完了状況&#x200B;**](#projectheartbeat)の詳細な分類が、**[&#x200B;フェーズ](#phases-and-milestones)**および&#x200B;**[ペルソナ](#persona)**別に表示されます。
+「**役割別のステータス**」ワークシートには、[**ヘルス**、**品質**&#x200B;および&#x200B;**完了状況**](#projectheartbeat)&#x200B;の詳細な分類が、**[フェーズ](#phases-and-milestones)**&#x200B;および&#x200B;**[ペルソナ](#persona)**&#x200B;別に表示されます。
 
 ## フェーズおよびマイルストーン {#phases-and-milestones}
 
@@ -199,6 +202,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
    * アプリケーション間、およびアプリケーションとユーザーとの相互動作。
    * 内部構造ではなく、アプリケーションによって消費および生成されるデータ。
+
    定義は以下の点をカバーする必要があります。
 
    * プロジェクトの基本コード構造
@@ -214,7 +218,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
    システムの統合には、以下の計画（および実装）が必要です。
 
    * すべてのサブシステムおよび[ソリューションの統合](/help/sites-administering/integration.md)をどのようにして 1 つのまとまったシステムとして動作させるか
-   * サードパーティ製システムの統合方法サードパーティ製システムがダウンした場合のオフライン/オンライン、クライアント側/ブラウザ側、フォールバー処理など、特別な考慮事項と共に使用できます。
+   * サードパーティ製システムの統合方法サードパーティ製システムがダウンした場合のオフライン/オンライン、クライアント側/ブラウザ側/フォールバー処理など、特別な考慮事項と共に使用できます。
 
 * **テスト概念**
 
@@ -238,7 +242,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
    開発前に、デプロイ、リリース、テストおよび問題の報告に必要なすべてのサポートプロセスを設定しておく必要があります。
 
-   [アドビのサポートポータル](https://helpx.adobe.com/marketing-cloud/contact-support.html)も参照してください。
+   [アドビのサポートポータル](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)も参照してください。
 
 ### 運用計画と運用 {#operations-planning-and-operations}
 
@@ -255,8 +259,9 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
    * A list of roles (i.e. groups) with `read`/ `write` access definitions for each
 
    * Definition of the use of privileges that impact the publish environment; for example, `replicate`
-   * 最小限の権限を持つユーザーに対しては、ワークフローを定義する必要があります
+   * 最小限の権限を持つユーザーに対しては、ワークフローを定義する必要があります。
    * Users in the `editor` group should not have `admin` rights nor be part of the `administrators` group
+
    For more information, see [User Administration and Security](/help/sites-administering/security.md).
 
 * **監視とメンテナンス**
@@ -265,6 +270,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
    * 何を監視する必要があるか
    * メンテナンスタスク（定期的および特殊ケース用）
+
    詳しくは、[監視とメンテナンス](/help/sites-deploying/monitoring-and-maintaining.md)も参照してください。
 
 * **移行**
@@ -355,9 +361,9 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 >[!NOTE]
 >
->テストチームは中立を保ち、テスト結果を提供することを許可する必要があります。
+>テストチームは中立を保ち、テスト結果を提供する必要があります。
 >
->結果がもたらす影響を評価し、適切なアクションを決定するのは、プロジェクトマネージャの責任です。
+>結果に伴う影響を評価し、適切な対応を決定するのは、プロジェクトマネージャの責任です。
 
 #### マイルストーン {#milestones-5}
 
@@ -367,6 +373,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
    * ソリューションがユーザーや顧客の要件を満たしていること
    * 顧客やユーザーがソリューション（機能、デザインおよびパフォーマンス）を受け入れること
+
    顧客への引き渡し用の形式化されたチェックリストが必要です。自動化され、スナップショットに対して夜間に実行されるのが理想的です。その結果をプロジェクトマネージャーおよび開発チームに送信する必要があります。
 
 * **パフォーマンステストと負荷テスト**
@@ -605,7 +612,7 @@ Deliverables are often used as **Required Documents** for either the current or 
    * [Enterprise DevOps](/help/managing/enterprise-devops.md)
    * [SEO と URL 管理のベストプラクティス](/help/managing/seo-and-url-management.md)
    * [AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)
-   * [一般的なデータ保護規則](/help/managing/data-protection-and-privacy.md)*ベストプ [ラクティスの導入と保守](/help/sites-deploying/best-practices.md)
+   * [全般的なデータ保護規制](/help/managing/data-protection-and-privacy.md)*ベスト・プラクティスの [導入と保守](/help/sites-deploying/best-practices.md)
 * [管理のベストプラクティス](/help/sites-administering/administer-best-practices.md)
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [オーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)
@@ -622,7 +629,7 @@ Deliverables are often used as **Required Documents** for either the current or 
 
       * [開発 - 基本](/help/sites-developing/the-basics.md)
       * [MSM の概念](/help/sites-administering/msm.md)
-      * [HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+      * [HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
 
 * 関連ドキュメント
 
