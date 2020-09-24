@@ -6,11 +6,11 @@ seo-description: アダプティブフォームで AEM CAPTCHA または Google 
 uuid: 0e11e98a-12ac-484c-b77f-88ebdf0f40e5
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: author
+topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 83%
@@ -28,6 +28,7 @@ AEM によるアダプティブフォームの CAPTCHA のサポートGoogleのr
 >
 >* AEM Forms は reCaptcha v2 のみをサポートします。その他のバージョンはサポートされません。
 >* アダプティブフォームの CAPTCHA は、AEM Forms アプリケーションのオフラインモードではサポートされていません。
+
 >
 
 
@@ -61,6 +62,7 @@ AEM Forms で reCAPTCHAを実装するには：
    1. 「**[!UICONTROL reCAPTCHA]**」をタップします。設定ページが表示されます。上記の手順で作成した設定コンテナを選択し、「**[!UICONTROL 作成]**」をタップします。
    1. Specify Name, Site key, and Secret Key for reCAPTCHA service and tap **[!UICONTROL Create]** to create the cloud service configuration.
    1. コンポーネントを編集ダイアログで、サイトおよび手順 1 で取得した秘密鍵を指定します。Tap **Save Settings** and then tap **OK** to complete the configuration.
+
    reCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。詳しくは、「[アダプティブフォームの CAPTCHA の使用](#using-captcha)」を参照してください。
 
 ## アダプティブフォームで CAPTCHA を使用する {#using-captcha}
