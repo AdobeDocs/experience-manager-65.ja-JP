@@ -6,11 +6,14 @@ seo-description: AEM インスタンスに対するシングルサインオン�
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: configuring, Security
 content-type: reference
-topic-tags: Security
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '755'
+ht-degree: 74%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 シングルサインオン（SSO）は、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すれば、その後は複数のシステムにアクセスできるようにするものです。個別のシステム（信頼された認証として知られる）が認証を実行し、Adobe Experience Manager に対してユーザーの資格情報を提供します。Adobe Experience Manager がそのユーザーのアクセス権を確認し、適用します（つまり、ユーザーがアクセスを許可されているリソースを決定します）。
 
-SSO認証ハンドラーサービス( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)は、信頼された認証子が提供する認証結果を処理します。 SSO認証ハンドラーは、次の順序で、特別な属性の値としてssid（SSO識別子）を検索します。
+SSO認証ハンドラーサービス( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)は、信頼された認証子が提供する認証結果を処理します。 SSO認証ハンドラは、次の順序で、特別な属性の値としてssid（SSO識別子）を検索します。
 
 1. 要求ヘッダー
 1. cookie
@@ -32,7 +35,7 @@ SSO認証ハンドラーサービス( `com.adobe.granite.auth.sso.impl.SsoAuthen
 * ログインモジュール
 * SSO 認証サービス
 
-両方のサービスに同じ属性名を指定する必要があります。 属性は、に提供されるに `SimpleCredentials` 含まれています `Repository.login`。 属性の値は無関係で無視され、その存在だけが重要で検証されます。
+両方のサービスに同じ属性名を指定する必要があります。 属性は、に指定され `SimpleCredentials` たに含まれ `Repository.login`ます。 属性の値は無関係で無視され、単に存在するだけが重要で、検証されます。
 
 ## SSO の設定 {#configuring-sso}
 
@@ -42,19 +45,20 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
    例えば、NTLM の場合は以下のように設定します。
 
-   * **** パス：必要に応じて例えば、 `/`
-   * **Header Names**: `LOGON_USER`
-   * **ID形式**: `^<DOMAIN>\\(.+)$`
+   * **パス：** 必要に応じて例えば、 `/`
+   * **ヘッダー名**: `LOGON_USER`
+   * **IDの形式**: `^<DOMAIN>\\(.+)$`
 
       Where `<*DOMAIN*>` is replaced by your own domain name.
    CoSign の場合：
 
-   * **** パス：必要に応じて例えば、 `/`
+   * **パス：** 必要に応じて例えば、 `/`
    * **ヘッダー名**：remote_user
-   * **** ID形式：現状
+   * **IDの形式：** 現状
+
    SiteMinder の場合：
 
-   * **** パス：必要に応じて例えば、 `/`
+   * **パス：** 必要に応じて例えば、 `/`
    * **ヘッダー名**：SM_USER
    * **ID 形式**：AsIs
 
@@ -83,6 +87,7 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 >
 >* `disp_iis.ini`
 >* IIS
+
 >
 >
 セット `disp_iis.ini` 内：
@@ -90,6 +95,7 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 >
 >* `servervariables=1`（IIS サーバー変数を要求ヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを、その「Basic」と同等のものに置き換えます）
+
 >
 >
 IIS では、次のように設定します。
@@ -98,6 +104,7 @@ IIS では、次のように設定します。
    >
    >
 * **統合 Windows 認証**&#x200B;を有効にします。
+
 >
 
 
@@ -124,13 +131,13 @@ Cookie: TestCookie=admin
 
 * **パス**: `/`
 
-* **Header Names**: `TestHeader`
+* **ヘッダー名**: `TestHeader`
 
 * **Cookie Names**: `TestCookie`
 
 * **パラメータ名**: `TestParameter`
 
-* **ID形式**: `AsIs`
+* **IDの形式**: `AsIs`
 
 応答は次のようになります。
 
@@ -153,7 +160,8 @@ Transfer-Encoding: chunked
 これは、次の条件を満たす場合にも機能します。
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-または、次のcurlコマンドを使用して、ヘッダーを次の場所に `TestHeader` 送信できま `admin:`す`curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
+または、次のcurlコマンドを使用して、 `TestHeader` ヘッダーを `admin:`
+`curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
@@ -165,14 +173,14 @@ SSO を使用する場合、サインインとサインアウトは外部で処�
 
 ようこそ画面のサインアウトリンクは以下の手順で削除できます。
 
-1. オーバーレイ `/libs/cq/core/components/welcome/welcome.jsp` 先： `/apps/cq/core/components/welcome/welcome.jsp`
+1. オーバーレイ `/libs/cq/core/components/welcome/welcome.jsp` 先 `/apps/cq/core/components/welcome/welcome.jsp`
 1. jsp の以下の部分を削除します。
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
 右上隅にあるユーザーの個人メニューのサインアウトリンクを削除するには、以下の手順を実行します。
 
-1. オーバーレイ `/libs/cq/ui/widgets/source/widgets/UserInfo.js` 先： `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
+1. オーバーレイ `/libs/cq/ui/widgets/source/widgets/UserInfo.js` 先 `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 
 1. このファイルの以下の部分を削除します。
 
