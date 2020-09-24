@@ -6,11 +6,11 @@ seo-description: AEM Forms は、アダプティブフォームをオーサリ�
 uuid: 3b150507-41b9-47c2-a94c-f85b903b2274
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: introduction
+topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '3075'
 ht-degree: 76%
@@ -229,7 +229,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>切り替え</td>
-   <td>切り替えまたは有効化／無効化のアクションを行う切り替えスイッチを追加します。切り替えコンポーネントでは、オプションを 3 つ以上追加することはできません。スイッチには2つの値しか設定できないため、次の2つの値を使用できます。 オンまたはオフの場合、必須は適用されません。 At-least one value is saved irrespective of the user input. <br /> </td>
+   <td>切り替えまたは有効化／無効化のアクションを行う切り替えスイッチを追加します。切り替えコンポーネントでは、オプションを 3 つ以上追加することはできません。スイッチには2つの値しか設定できないため、次の2つの値を使用できます。オンまたはオフの場合、必須は適用されません。 At-least one value is saved irrespective of the user input. <br /> </td>
   </tr>
   <tr>
    <td>テーブル</td>
@@ -306,18 +306,18 @@ For more best practices around adaptive forms, see [Best practices for working w
 
 上部のページツールバーを使用し、フォームのプレビュー、フォームプロパティの変更、フォームレイアウトの変更を行うことができます。フォームの作成者はフォームをプレビューして変更を加えることができます。ページのツールバーには、以下の項目が表示されます。
 
-* **サイドパネルを切り替え**![：サイドパネルを切り替え](assets/toggle-side-panel.png): サイドバーの表示/非表示を切り替えることができます。
+* **サイドパネル**![を切り替え](assets/toggle-side-panel.png)：サイドパネル：サイドバーの表示/非表示を切り替えることができます。
 
-* **ページ情報**![のテーマオプション](assets/theme-options.png): ページのプロパティの表示、フォームの発行と非公開、フォームワークフローの開始、フォームをクラシックUIで開く操作を行うことができます。
+* **ページ情報**![のテーマオプション](assets/theme-options.png):ページのプロパティの表示、フォームの発行と非公開、フォームワークフローの開始、フォームをクラシックUIで開く操作を行うことができます。
 
-* **エミュレータ**![ルーラ](assets/ruler.png): タブレットやスマートフォンなど、様々な画面サイズでのフォームの外観をエミュレートします。
+* **エミュレータ**![ルーラ](assets/ruler.png):タブレットやスマートフォンなど、様々な画面サイズでのフォームの外観をエミュレートします。
 
-* **編集**: 次のような他のモードを選択できます。 **[!UICONTROL 編集]**、 **[!UICONTROL スタイル]**、 **[!UICONTROL 開発者]**、 **[!UICONTROL デザイン]**。
+* **編集**:次のような他のモードを選択できます。 **[!UICONTROL 編集]**、 **[!UICONTROL スタイル]**、 **[!UICONTROL 開発者]**、 **[!UICONTROL デザイン]**。
 
    * **編集**：フォームとフォームのコンポーネントのプロパティを編集します。例えば、コンポーネントの追加、画像の削除、必須フィールドの指定などを行うことができます。
    * **スタイル**：フォームのコンポーネントのスタイルを調整します。例えば、スタイルモードでパネルを選択して、パネルの背景色を指定することができます。
 
-   * **開発者**: 開発者は次のことができます。
+   * **開発者**:開発者は次のことができます。
 
       * 開発者はフォームの構成要素を確認することができます。
       * 開発者はいつどこでどのような不具合が発生しているか確認し、問題の解決を図ることができます。
