@@ -6,11 +6,14 @@ seo-description: Adobe のエンジニアリングおよびコンサルティン
 uuid: cbb598bb-ec8f-4985-97af-7c87f5891c66
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: site-features, best-practices
 content-type: reference
-topic-tags: best-practices
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '1530'
+ht-degree: 64%
 
 ---
 
@@ -22,8 +25,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 MSM は、コンテンツのデプロイメントを自動化するための設定可能なフレームワークです。多くの場合、実装は Web サイトの主要な部分に影響を及ぼし、複数の組織や地域にわたっておこなわれます。そのため、Web サイトの計画時と同様に、最大限の注意を払って MSM の実装を計画することを強くお勧めします。
 
 * Carefully **plan structure and content flows** before starting implementation.
-* **最小限必要なカスタマイズだけをおこなってください。** MSMは高度なカスタマイズ（展開設定など）をサポートしますが、通常、Webサイトのパフォーマンス、信頼性、アップグレード性のベストプラクティスは、カスタマイズを最小限に抑えることです。
-* Establish a **governance** model early, and train users accordingly, to ensure success. A best practice from a governance point of view is to **minimize the authority that local content producers have** to allocate/connect content to other local users and their respective live copies. これは、管理されていない連鎖継承は、MSM構造の複雑さを大幅に増し、パフォーマンスと信頼性を損なう可能性があるからです。
+* **最小限必要なカスタマイズだけをおこなってください。** MSMは高度なカスタマイズ（展開設定など）をサポートしていますが、通常、Webサイトのパフォーマンス、信頼性、アップグレード性のベストプラクティスは、カスタマイズを最小限に抑えることです。
+* Establish a **governance** model early, and train users accordingly, to ensure success. A best practice from a governance point of view is to **minimize the authority that local content producers have** to allocate/connect content to other local users and their respective live copies. これは、非管理型の連鎖継承は、MSM構造の複雑さを大幅に増し、パフォーマンスと信頼性に悪影響を及ぼす可能性があるからです。
 
 * Once a plan exists for your structure, content flows, automation and governance - **prototype and thoroughly test your system**, before starting live implementation.
 * Keep in mind that **Adobe Consulting and leading System Integrators** have deep experience planning and implementing content automation with MSM, so they can help you both get started with your MSM project and throughout its entire implementation.
@@ -32,8 +35,9 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 >
 >MSM での作業に関するその他の情報については、ナレッジベースの記事を参照してください。
 >
->* [MSM に関する FAQ](https://helpx.adobe.com/experience-manager/kb/index/msm_faq.html)
->* [MSM の問題のトラブルシューティング](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-msm-issues.html)
+>* [MSM に関する FAQ](https://helpx.adobe.com/jp/experience-manager/kb/index/msm_faq.html)
+>* [MSM の問題のトラブルシューティング](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-msm-issues.html)
+
 >
 
 
@@ -43,7 +47,8 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 >また、[参照コンポーネント](/help/sites-authoring/default-components-foundation.md#reference)を使用して、単一のページまたは段落を再利用することもできます。ただし、次の点に注意してください。
 >
 >* MSM のほうが柔軟性が高く、同期するコンテンツや同期のタイミングを詳細に制御できます。
->* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)は基礎コンポーネントよりも推奨されています。
+>* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)は基礎コンポーネントよりも推奨されています。
+
 >
 
 
@@ -83,16 +88,16 @@ AEM でライブコピーを作成する方法は、主に次の 2 つです。
 
 * When [creating a Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   これは、より一般的なアプローチと見なすことができ、任意のページからライブコピーを作成できます。 ライブコピーのコンテンツ構造はソースと完全に一致します。
+   これは、任意のページからライブコピーを作成できる、より一般的な方法と考えることができます。 ライブコピーのコンテンツ構造はソースと完全に一致します。
 
-* サイ [トの作成時](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)
+* サイトの [作成時](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)
 
-   これは、主に多言語構造を持つWebサイトを作成する場合に、より特殊なアプローチです。
+   これは、主に多言語構造を持つWebサイトを作成する場合に、より専門的なアプローチです。
 
 サイトを作成する際に留意する点のいくつかを次に示します。
 
 * To create a new site, you need a [blueprint configuration](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations).
-* 新しいサイトで作成する言語パスを選択できるようにするには、対応する言語ルートがBlueprint（ソース）に存在する必要があります。
+* 言語パスを選択して新しいサイトに作成できるようにするには、対応する言語ルートが設計図（ソース）に存在する必要があります。
 * Once a [new site has been created as a live copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (using **Create**, then **Site**), the first two levels of this live copy are *shallow*. ページの子はライブ関係には属しませんが、トリガーに一致するライブ関係が見つかった場合には引き続きロールアウトが引き継がれます。
 
     次のことがおこなわれるのを防ぎます。
@@ -126,15 +131,15 @@ MSM は、次の 2 つの方法で多言語 Web サイトを作成するため�
 
 ブループリントやソースツリー内のコンテンツ構造の変更は、ライブコピーへの反映のされ方が異なります。これは、変更の内容によって変わります。
 
-* **Blueprintで新しい** ページを作成すると、標準のロールアウト設定で展開した後に、対応するページがライブコピーで作成されます。
+* **設計図で新しいページを作成すると** 、標準的なロールアウト設定で展開した後、ライブコピーで対応するページが作成されます。
 
-* **Blueprint内の** ページを削除すると、標準的なロールアウト設定で展開した後に、対応するページがライブコピーから削除されます。
+* **Blueprintでページを削除すると** 、標準的なロールアウト設定で展開した後に、対応するページがライブコピーから削除されます。
 
-* **Blueprint内で** ページを移動しても、 **** 標準的なロールアウト設定で展開した後に、対応するページがライブコピー内で移動することはありません。
+* **設計図内でページを移動しても** 、標準的なロールアウト設定で展開した後に、対応するページがライブコピー内で移動する **ことはありません** 。
 
    * この動作になる理由は、ページの移動にはページの削除が暗黙的に含まれているからです。つまり、オーサー環境でページを削除すると、パブリッシュ環境の対応するコンテンツが自動的にアクティベート解除されることになり、結果として、パブリッシュ環境で予期しない動作が発生する可能性があります。これは、リンクやブックマークなどの関連項目にも影響することがあります。
    * それぞれのライブコピーページにおけるコンテンツの継承は更新され、ブループリントのソースの新しい場所が反映されます。
-   * Blueprintからライブコピーへのページの移動を完全に実現するには、次のベストプラクティスを検討します。
+   * ブループリントからライブコピーへのページの移動を十分に実現するには、以下のベストプラクティスを検討します。
 
 >[!NOTE]
 >
@@ -146,16 +151,16 @@ MSM は、次の 2 つの方法で多言語 Web サイトを作成するため�
 
       `PageMoveAction`
 
-      この設定に他のアクションを追加しないでください。
+      この設定には、他のアクションを追加しないでください。
 
 * 新しい設定を配置します。
 
-   * ライブコピー内の古い場所で各ページを削除しながら、ページを完全にロールアウトするには：
+   * ライブコピーの古い場所にある各ページを削除しながら、ページの移動を完全にロールアウトするには：
 
       * 新規に作成した設定を標準ロールアウト設定の前に配置します。
 
          古い場所にあるページは、標準ロールアウト設定に基づいて削除されます。
-   * 各ページをライブコピーの古い場所に維持しながらページをロールアウトする（基本的にコンテンツを複製する）には：
+   * 各ページをライブコピーの古い場所に維持したまま（基本的にコンテンツを複製しながら）ページの移動をロールアウトするには：
 
       * 新規に作成した設定を標準ロールアウト設定の後に配置します。
 
@@ -168,8 +173,8 @@ MSM のロールアウト設定は高度なカスタマイズが可能です。�
 
 * automating rollouts; for example, with [onModify triggers](#onmodify),
 * [ノードタイプ／プロパティ](#node-types-properties)をカスタマイズする場合
-* 後続のワークフローの開始
-* ロールアウトの一部としてのコンテンツのアクティブ化を行います。
+* 以降のワークフローの開始、
+* ロールアウトの一部としてのコンテンツのアクティブ化、またはその両方を行います。
 
 ### onModify {#onmodify}
 
@@ -190,7 +195,7 @@ Therefore, it is recommended that you *only* use `onModify` triggers if the bene
 
 次のことに留意してください。
 
-* ロールアウトアクションのカスタマイズに加えて、MSMでは展開中のノードプロパティをカスタマイズすることもできます。 MSM の OSGi 設定では、ソースからライブコピーにコピーする[ノードタイプを除外できます](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization)。
+* ロールアウト操作をカスタマイズするだけでなく、MSMでは、ロールアウトするノードのプロパティをカスタマイズすることもできます。 MSM の OSGi 設定では、ソースからライブコピーにコピーする[ノードタイプを除外できます](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization)。
 
 ## その他の情報 {#further-information}
 
