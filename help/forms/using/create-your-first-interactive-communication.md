@@ -1,15 +1,18 @@
 ---
-title: チュートリアル — 初めての対話型通信の作成
+title: チュートリアル — 最初の対話型コミュニケーションの作成
 seo-title: 最初のインタラクティブ通信を作成する
 description: 最初のインタラクティブ通信の作成方法を説明します。
 seo-description: 最初のインタラクティブ通信の作成方法を説明します。
 uuid: ed5003c6-ba3a-4fcb-8645-c7b607b22fb5
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: interactive-communications
+topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 88%
 
 ---
 
@@ -37,7 +40,6 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 ## 使用事例{#use-case}
 
 
-
 最初に、このチュートリアルで使用するユースケースについて説明します。
 
 通信会社が月々の請求書をお客様に電子メールで送信します。この請求書がインタラクティブ通信です。電子メールには以下が含まれます。
@@ -61,7 +63,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **ゴール:**
 
-次のデータ入力モードを使用して、インタラクティブ通信の解剖学を作成するには：
+次のデータ入力モードを使用して、対話型通信の解剖学を作成する手順は、次のとおりです。
 
 * 静的テキスト
 * フォームデータモデル
@@ -143,9 +145,9 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 
 ## 手順 6：インタラクティブ通信をテストする {#step-test-your-interactive-communication}
 
-![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
+![アダプティブフォームの11テスト](assets/11-test-your-adaptive-form.png)
 
-インタラクティブ通信を作成したら、自分が行ったすべての変更をテストすることが重要です。対話型通信のすべての分野をテストするのは面倒です。 AEM Formsは、WebブラウザーでのInteractive Communicationsのテストを自動化するSDK(Calvin SDK)を提供します。
+インタラクティブ通信を作成したら、自分が行ったすべての変更をテストすることが重要です。対話型通信のすべてのフィールドをテストするのは退屈です。 AEM Formsは、WebブラウザーでのInteractive Communicationsのテストを自動化するSDK(Calvin SDK)を提供しています。
 
 **ゴール:**
 
