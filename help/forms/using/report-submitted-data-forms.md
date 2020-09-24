@@ -6,10 +6,10 @@ seo-description: AEM Forms はフォームポータルで送信済みフォー�
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: developer-reference
+topic-tags: publish, developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 95%
@@ -95,7 +95,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (オプション)</td>
-   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは次のとおりです。<br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは次のとおりです。<br /><code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (オプション)</td>
