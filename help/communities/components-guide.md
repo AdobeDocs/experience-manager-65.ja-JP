@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 3da113e88784def54e0a94e280bf1a965de015ed
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 65%
@@ -20,7 +20,7 @@ ht-degree: 65%
 
 # コミュニティコンポーネントガイド  {#community-components-guide}
 
-コミュニティコンポーネントガイドは、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)のインタラクティブ開発ツールです。使用可能なAEM Communitiesコンポーネントのリストや、複数のコンポーネントから構築されるより複雑な機能を提供します。
+コミュニティコンポーネントガイドは、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)のインタラクティブ開発ツールです。これは、使用可能なAEM Communitiesコンポーネントのリストや、複数のコンポーネントで構築されたより複雑な機能を提供します。
 
 このガイドを利用すると、各コンポーネントに関する基本情報を確認するとともに、SCF コンポーネント／機能の動作やその構成／カスタマイズ方法を試してみることができます。
 
@@ -70,22 +70,22 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 オーサーインスタンスでコンポーネントガイドを編集モードで表示した場合：
 
-![chlimage_1-404](assets/chlimage_1-404.png)
+![community-component1](assets/community-component1.png)
 
 ## コンポーネントページ {#component-pages}
 
 ページの左側のリストからコンポーネントを選択します。
 
-![chlimage_1-405](assets/chlimage_1-405.png)
+![コミュニティコンポーネントページ](assets/community-component2.png)
 
 ガイドの本文には次の情報が表示されます。
 
-1. タイトル： 選択したコンポーネントの名前
-1. [クライアント側ライブラリ](#client-side-libraries): 1つ以上の必須カテゴリのリスト
-1. [含める](scf.md#add-or-include-a-communities-component): コンポーネントを動的に含めることができる場合は、作成者編集モードで状態を切り替えることができます。
+1. タイトル：選択したコンポーネントの名前
+1. [クライアント側ライブラリ](#client-side-libraries):1つ以上の必須カテゴリのリスト
+1. [含める](scf.md#add-or-include-a-communities-component):コンポーネントを動的に含めることができる場合は、作成者編集モードで状態を切り替えることができます。
 
-   * 追加した場合、表示されるテキストは次のとおりです。 「このコンポーネントは、その各ノードを介して含まれます。」
-   * 含める場合、表示されるテキストは次のとおりです。 「このコンポーネントは動的に含まれます。」
+   * 追加した場合、表示されるテキストは次のとおりです。「このコンポーネントは、その各ノードを介して含まれます。」
+   * 含める場合、表示されるテキストは次のとおりです。「このコンポーネントは動的に含まれます。」
    * 含めることができない場合、テキストは表示されません
 
 1. サンプルコンポーネントまたは機能：コンポーネントまたは機能のアクティブインスタンスです。コンポーネントの場合は、タブセクションに表示されるテンプレート、CSS、データに対する変更を行って変更できます。
@@ -100,21 +100,21 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 コミュニティコンポーネントガイドでは、一部のコンポーネントダイアログ設定が[インクルード可能](scf.md#add-or-include-a-communities-component)切り替え状態でオーバーレイされています。既存のリソースと動的に含まれるリソースの使用を切り替えるには、編集モードで、コンポーネントと含めるテキストの両方を選択し、重複を押しながらクリックして編集ダイアログを開きます。
 
-![chlimage_1-406](assets/chlimage_1-406.png)
+![community-component3](assets/community-component3.png)
 
 「**テンプレート**」タブで、次の操作をおこないます。
 
-![chlimage_1-407](assets/chlimage_1-407.png)
+![community-component4](assets/community-component4.png)
 
 * **sling:include を使用して子コンポーネントを組み込む**
 
    チェックが解除されている場合、コンポーネントガイドはリポジトリ内の既存のリソース（各ノードの子であるjcrノード）を使用します。
 
-   * 表示されるテキスト： 「このコンポーネントは、その各ノードを介して含まれます。」
+   * 表示されるテキスト：「このコンポーネントは、その各ノードを介して含まれます。」
 
    チェックボックスをオンにした場合、sling を使用して、子ノードの resourceType のコンポーネント（存在しないリソース）が動的にインクルードされます。
 
-   * 表示されるテキスト： 「このコンポーネントは動的に含まれます。」
+   * 表示されるテキスト：「このコンポーネントは動的に含まれます。」
 
    初期設定はオフです。
 
@@ -152,7 +152,7 @@ To quickly experiment with customizations, the `scg:showIde`property must be add
 
 オーサーインスタンスまたはパブリッシュインスタンスのいずれかに管理者権限でサインインし、例としてコメントコンポーネントを使用します。
 
-1. Browse to [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
+1. [CRXDE Liteを参照](../../help/sites-developing/developing-with-crxde-lite.md)
 
    例：[http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
@@ -163,7 +163,7 @@ To quickly experiment with customizations, the `scg:showIde`property must be add
 1. プロパティの追加
 
    * **名前** `scg:showIde`
-   * **Type** `String`
+   * **型** `String`
    * **値** `true`
 
 1. 「**[!UICONTROL すべて保存]**」を選択します。
@@ -173,7 +173,9 @@ To quickly experiment with customizations, the `scg:showIde`property must be add
 
 1. テンプレート、CSS、データの3つのタブが追加されました。
 
-![chlimage_1-408](assets/chlimage_1-408.png) ![chlimage_1-409](assets/chlimage_1-409.png)
+![community-component5](assets/community-component5.png)
+
+![community-component6](assets/community-component6.png)
 
 ### 「テンプレート」タブ{#templates-tab}
 
