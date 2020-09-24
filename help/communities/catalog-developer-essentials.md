@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 46%
@@ -24,7 +24,7 @@ ht-degree: 46%
 
 コミュニティサイトにカタログ機能が用意されている場合、コミュニティメンバーは、その機能を使用して、カタログに一覧表示された実施可能リソースを参照および選択できます。
 
-The [ `enablement catalog` component](catalog.md) allows community members to access a catalog of [enablement resources](resources.md). AEMタグの使用は、カタログ内の有効化リソースの外観を管理する上で重要な部分です。
+The [ `enablement catalog` component](catalog.md) allows community members to access a catalog of [enablement resources](resources.md). AEMタグの使用は、カタログ内のイネーブルメントリソースの外観を管理する上で重要な部分です。
 
 [実施可能リソースのタグ付け](tag-resources.md)を参照してください。
 
@@ -86,7 +86,7 @@ Using the example of the [Enablement Tutorial](getting-started-enablement.md):
    * Select **[!UICONTROL Create Node]**
 
       * 名前：`filters`
-      * タイプ：`nt:unstructured`
+      * 型：`nt:unstructured`
       * 「**[!UICONTROL すべて保存]**」を選択します。
 
 * 追加 `se_resource-tags``filters` ノードのプロパティ
@@ -104,13 +104,13 @@ Using the example of the [Enablement Tutorial](getting-started-enablement.md):
 
 * コミュニティサイトの再公開
 
-![chlimage_1-189](assets/chlimage_1-189.png)
+![configure-catalog](assets/configure-catalog.png)
 
 #### 事前フィルター TagID {#pre-filter-tagids}
 
 The pre-filter [TagIDs](../../help/sites-developing/framework.md#tagid) must exactly match the tags applied to the enablement resources. これらは、サイトの `resources` フォルダーでプロパティ `se_resource-tags` の値として確認できます。
 
-![chlimage_1-190](assets/chlimage_1-190.png)
+![configure-フィルター](assets/configure-catalog1.png)
 
 ### リファレンス API {#reference-apis}
 
