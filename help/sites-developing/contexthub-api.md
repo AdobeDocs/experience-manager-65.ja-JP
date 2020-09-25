@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '5029'
 ht-degree: 80%
@@ -532,7 +532,7 @@ UI モジュールおよび UI モジュールレンダラーを管理します�
 
 #### registerRenderer(moduleType, renderer, dontRender) {#registerrenderer-moduletype-renderer-dontrender}
 
-UI モジュールレンダラーを ContextHub に登録します。登録後、レンダラーを使用して [UI モジュールを作成](/help/sites-administering/contexthub-config.md#adding-a-ui-module)できます。[ContextHub.UI.BaseModuleRenderer を拡張](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)してカスタム UI モジュールレンダラーを作成する場合は、この関数を使用します。
+UI モジュールレンダラーを ContextHub に登録します。登録後、レンダラーを使用して [UI モジュールを作成](ch-configuring.md#adding-a-ui-module)できます。[ContextHub.UI.BaseModuleRenderer を拡張](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)してカスタム UI モジュールレンダラーを作成する場合は、この関数を使用します。
 
 **パラメーター**
 
