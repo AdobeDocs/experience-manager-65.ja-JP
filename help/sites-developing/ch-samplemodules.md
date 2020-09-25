@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1194'
+ht-degree: 78%
 
 ---
 
@@ -21,7 +24,7 @@ ContextHub には、ソリューションで利用できる UI モジュール�
 * 学習用に参照できるソースコードの場所。
 * UI モジュールの設定方法。
 
-UI モジュールの ContextHub への追加については、[UI モジュールの追加](/help/sites-administering/contexthub-config.md#adding-a-ui-module)を参照してください。UI モジュールの作成については、[ContextHub UI モジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)を参照してください。
+UI モジュールの ContextHub への追加については、[UI モジュールの追加](ch-configuring.md#adding-a-ui-module)を参照してください。UI モジュールの作成については、[ContextHub UI モジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)を参照してください。
 
 ## contexthub.base UI モジュールタイプ {#contexthub-base-ui-module-type}
 
@@ -41,16 +44,16 @@ contexthub.base UI モジュールタイプは、その他すべての UI モジ
 
 contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェクトを使用して設定します。UI モジュールの機能を設定するには、次のいずれかのプロパティを含めます。
 
-* **** image:アイコンとして表示する画像のURL。
-* **** icon:Coral UIアイコンク [ラスの名前](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 。 icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
+* **image:** アイコンとして表示する画像のURL。
+* **icon:** Coral UIアイコン [クラスの名前](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 。 icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
 
-* **** title:UIモジュールのタイトル。 タイトルは、ポインターを UI モジュールアイコンに合わせると表示されます。
-* **** フルスクリーン：UIモジュールがフルスクリーンモードをサポートするかどうかを示すboolean値です。 Use `true` to support fullscreen and `false` to prevent fullscreen mode.
+* **title:** UIモジュールのタイトル。 タイトルは、ポインターを UI モジュールアイコンに合わせると表示されます。
+* **fullscreen:** UIモジュールがフルスクリーンモードをサポートするかどうかを示すboolean値です。 Use `true` to support fullscreen and `false` to prevent fullscreen mode.
 
 * **template：** ContextHub のツールバーにレンダリングするコンテンツを指定する [Handlebars](https://handlebarsjs.com/) テンプレート。Use at most two `<p>` tags.
 
 * **storeMapping：**&#x200B;キーとストアのマッピング。関連するContextHubストアデータにアクセスするには、ハンドルテンプレートのキーを使用します。
-* **** リスト：UIモジュールがクリックされたときにポーバーにリストとして表示する項目の配列です。 この項目を含める場合は、popoverTemplate を含めないでください。値は、次のキーを持つオブジェクトの配列です。
+* **リスト:** UIモジュールがクリックされたときにプロバーでリストとして表示する項目の配列です。 この項目を含める場合は、popoverTemplate を含めないでください。値は、次のキーを持つオブジェクトの配列です。
 
    * title：この項目に対して表示するテキスト
    * image：（オプション）左側に表示する画像への URL
@@ -60,10 +63,10 @@ contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェ�
 * **listType：**&#x200B;ポップオーバーリスト項目に使用するスタイル。次のいずれかの値を使用します。
 
    * checkmark
-   * checkbox
+   * チェックボックス
    * radio
 
-* **** poverTemplate:UIモジュールがクリックされたときにプロバーでレンダリングするコンテンツを指定するハンドルテンプレートです。 この項目を含める場合は、`list` 項目を含めないでください。
+* **poverTemplate:** UIモジュールがクリックされたときにプローバーでレンダリングするコンテンツを指定するハンドルテンプレートです。 この項目を含める場合は、`list` 項目を含めないでください。
 
 ### 例 {#example}
 
@@ -88,7 +91,7 @@ contexthub.browserinfo UI モジュールは、クライアント Web ブラウ�
 
 ![chlimage_1-77](assets/chlimage_1-77a.png)
 
-UIモジュールのソースコードは/libs/granite/contexthub/components/modules/browserinfoにあります。 contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
+UIモジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfoにあります。 contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
 
 ### 設定 {#configuration-1}
 
@@ -134,7 +137,7 @@ contexthub.location UI モジュールは、クライアントの緯度と経度
 
 ![chlimage_1-80](assets/chlimage_1-80a.png)
 
-UIモジュールのソースは/etc/cloudsettings/default/contexthub/geolocationにあります。
+UIモジュールのソースは、/etc/cloudsettings/default/contexthub/geolocationにあります。
 
 ### 設定 {#configuration-4}
 
@@ -177,7 +180,7 @@ contexthub.screen-orientation UI モジュールは、クライアントの現�
 
 ![chlimage_1-81](assets/chlimage_1-81a.png)
 
-UIモジュールのソースは/libs/granite/contexthub/components/modules/screen-orientationにあります。
+UIモジュールのソースは、/libs/granite/contexthub/components/modules/screen-orientationにあります。
 
 ### 設定 {#configuration-5}
 
@@ -201,7 +204,7 @@ contexthub.tagcloud UI モジュールは、タグに関する情報を表示し
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
-UIモジュールのソースは/libs/granite/contexthub/components/modules/tagcloudにあります。
+UIモジュールのソースは、/libs/granite/contexthub/components/modules/tagcloudにあります。
 
 ### 設定 {#configuration-6}
 
@@ -225,7 +228,7 @@ granite.profile ContextHub UI モジュールは、現在のユーザーの表�
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-UIモジュールのソースは/libs/granite/contexthub/components/modules/profileにあります。
+UIモジュールのソースは/libs/granite/contexthub/components/modules/modules/プロファイルにあります。
 
 ### 設定 {#configuration-7}
 
