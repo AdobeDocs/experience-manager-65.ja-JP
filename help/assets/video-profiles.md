@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '3707'
 ht-degree: 90%
@@ -368,7 +368,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 ビデオプロファイルは、特定のフォルダーに適用することも、すべてのアセットに全体的に適用することもできます。
 
-後で変更した既存のビデオプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)を参照してください。
+後で変更した既存のビデオプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
 ### 特定のフォルダーへのビデオプロファイルの適用 {#applying-video-profiles-to-specific-folders}
 
@@ -376,7 +376,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)も参照してください。
+[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)も参照してください。
 
 #### プロファイルユーザーインターフェイスを介してフォルダーにビデオプロファイルを適用する {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
@@ -397,7 +397,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
 
-[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)も参照してください。
+[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)も参照してください。
 
 **ビデオプロファイルをグローバルに適用するには**
 
