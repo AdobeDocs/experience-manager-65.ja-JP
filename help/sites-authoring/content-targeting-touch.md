@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '5374'
 ht-degree: 94%
@@ -23,7 +23,7 @@ ht-degree: 94%
 
 AEM のターゲットモードを使用してターゲットコンテンツをオーサリングします。ターゲットモードとターゲットコンポーネントには、エクスペリエンス用のコンテンツを作成するためのツールが用意されています。次のことができます。
 
-* ページ上にあるターゲットコンテンツを容易に認識すべてのターゲットコンテンツの境界線を点線で表示
+* ページ上にあるターゲットコンテンツを容易に認識すべてのターゲットコンテンツのボーダーを点線で表示
 * エクスペリエンスを表示するブランドとアクティビティを選択
 * アクティビティのエクスペリエンスを追加または削除
 * A/B テストを実行し、勝者を採用（Adobe Target のみ）
@@ -270,7 +270,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 ターゲットコンポーネントはコンテナなので、他のコンポーネントのドロップ先として表示されます。
 
-ターゲットモードでは、ターゲットコンポーネントには青い境界線と、ターゲット設定可能であることを示すターゲットドロップのメッセージが表示されます。
+ターゲットモードでは、ターゲットコンポーネントには青いボーダーと、ターゲット設定可能であることを示すターゲットドロップのメッセージが表示されます。
 
 ![chlimage_1-19](assets/chlimage_1-19.png)
 
@@ -530,7 +530,7 @@ Adobe Target をターゲティングエンジンとして使用し、アカウ�
  </tbody>
 </table>
 
-成功指標について詳しくは、[Adobe Target ドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+成功指標について詳しくは、[Adobe Target ドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
 
 ### 設定の構成（AEM ターゲティング） {#configuring-settings-aem-targeting}
 
@@ -569,13 +569,13 @@ Adobe Target を使用する場合に目標と設定を構成するには：
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
 
    右上隅の 3 つのドットをクリックし、「**名前を変更**」を選択して、目標の名前を変更できます。
 
    すべてのフィールドをクリアする必要がある場合は、右上隅の 3 つのドットをクリックし、「**すべてのフィールドをクリア**」を選択します。
 
-   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
 
    >[!NOTE]
    1 つ以上の目標を定義する必要があります。
@@ -723,7 +723,7 @@ ClientContext（クライアント側）をエンジンとして選択した場�
     <ul>
      <li><strong>第 1</strong>：キャンペーンのリストの並び順で 1 番上のエクスペリエンスが使用されます。</li>
      <li><strong>ランダム</strong>：任意のエクスペリエンスが使用されます。</li>
-     <li><strong>クリックストリームスコア</strong>: クライアントコンテキストで追跡されるタグと関連するタグヒットが使用されます。 ティーザーページに定義されている複数のタグのヒット率が比較されます。</li>
+     <li><strong>クリックストリームスコア</strong>:クライアントコンテキストで追跡されるタグと関連するタグヒットが使用されます。 ティーザーページに定義されている複数のタグのヒット率が比較されます。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -731,5 +731,4 @@ ClientContext（クライアント側）をエンジンとして選択した場�
 
 AEM と Adobe Campaign を統合している場合は、**Adobe Campaign** をエンジンとして選択します。詳しくは、[AEM と Adobe Campaign の統合](/help/sites-administering/campaign.md)を参照してください。
 
-ターゲット設定に ContextHub を使用する場合は、**ContextHub** をエンジンとして選択します。詳しくは、[ContextHub の設定](/help/sites-administering/contexthub-config.md)を参照してください。
-
+ターゲット設定に ContextHub を使用する場合は、**ContextHub** をエンジンとして選択します。詳しくは、[ContextHub の設定](/help/sites-developing/ch-configuring.md)を参照してください。
