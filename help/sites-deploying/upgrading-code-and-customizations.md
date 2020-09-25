@@ -12,7 +12,10 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '2204'
+ht-degree: 75%
 
 ---
 
@@ -28,13 +31,13 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ## 概要 {#overview}
 
-1. **パターンディテクター**[](/help/sites-deploying/pattern-detector.md) — アップグレード計画の説明に従ってパターンディテクターを実行し、このページで詳しく説明します。パターンディテクターレポートには、AEMのターゲット版で使用できないAPI/バンドルに加え、対処する必要がある領域の詳細が含まれます。 パターン検出レポートは、コードに互換性のない問題を示します。デプロイが既に6.5と互換性がない場合は、6.5の機能を利用する新しい開発を選択できますが、互換性を維持するためだけでは不要です。 非互換性がレポートされる場合は、a)互換モードで実行し、新しい6.5機能や互換性の開発を延期する、b)アップグレード後に開発を行う、手順2に進みます。 Please see please see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) for more details.
+1. **パターンディテクター** — アップグレード計画の説明に従ってパターンディテクターを実行し、 [](/help/sites-deploying/pattern-detector.md) このページで詳しく説明します。パターンディテクターレポートは、AEMのターゲット版では使用できないAPI/バンドルに加え、対処する必要がある領域の詳細を含みます。 パターン検出レポートは、コードに互換性のない問題を示します。デプロイメントが既に6.5と互換性がない場合は、6.5の機能を利用する新しい開発を選択できますが、互換性の維持のためだけに開発を行う必要はありません。 互換性のない問題が報告された場合は、a)互換モードで実行し、新しい6.5機能や互換性の開発を延期する、b)アップグレード後に開発を行う、ステップ2に進む、のいずれかを選択できます。 Please see please see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) for more details.
 
-1. ** 6.5のコードベースの開発**-ターゲットバージョンのコードベース用の専用のブランチまたはリポジトリを作成します。 アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
-1. ** 6.5 Uber jarでコンパイル**- 6.5 uber jarを指すようにコードベースのPOMを更新し、これに対してコードをコンパイルします。
-1. **AEMカスタマイズの更新*** - * AEMのカスタマイズや拡張が6.5で動作するように更新または検証し、6.5コードベースに追加する必要があります。 UI 検索フォーム、カスタマイズされているアセット、/mnt/overlay を使用するすべてのものを含めます。
+1. **6.5のコードベースの開発**-ターゲットバージョンのコードベース用の専用のブランチまたはリポジトリを作成します。 アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
+1. ** 6.5 Uber jarでコンパイル** — コードベースのPOMを6.5 uber jarを指すように更新し、これに対してコードをコンパイルします。
+1. **AEMカスタマイズの更新*** - *AEMのカスタマイズや拡張が6.5で動作するように更新または検証し、6.5コードベースに追加する必要があります。 UI 検索フォーム、カスタマイズされているアセット、/mnt/overlay を使用するすべてのものを含めます。
 
-1. **6.5環境へのデプロイ** - AEM 6.5（作成者と発行）のクリーンインスタンスは、開発/QA環境で立ち上げる必要があります。 更新されたコードベースおよび（現在の実稼動環境の）コンテンツの代表的なサンプルをデプロイする必要があります。
+1. **6.5環境へのデプロイ** -AEM 6.5（作成者+発行）のクリーンインスタンスは、開発/QA環境で立ち上がる必要があります。 更新されたコードベースおよび（現在の実稼動環境の）コンテンツの代表的なサンプルをデプロイする必要があります。
 1. **QA検証とバグ修正** - QAでは、6.5の作成者インスタンスと発行インスタンスの両方でアプリケーションを検証する必要があります。見つかったバグは修正し、6.5コードベースにコミットする必要があります。 すべてのバグが修正されるまで、必要に応じて開発サイクルを繰り返します。
 
 アップグレードに進む前に、アプリケーションコードベースを AEM のターゲットバージョンに対して十分テストし、安定したものにしておく必要があります。テストで得られた見解に基づいて、様々な方法でカスタムコードを最適化できます。リポジトリの走査を回避するためのコードのリファクタリング、検索を最適化するカスタムインデックス作成、JCR での順序なしノードの使用などが含まれます。
@@ -86,7 +89,7 @@ AEM 6.5 でも引き続きクラシック UI オーサリングを利用でき�
 
 ## 6.5 のリポジトリ構造への準拠 {#align-repository-structure}
 
-アップグレードを容易にし、アップグレード時に設定が上書きされないようにするため、リポジトリは6.4で再構造化され、設定とコンテンツを分離します。
+アップグレードを容易にし、アップグレード中に設定が上書きされないようにするため、6.4でリポジトリが再構成され、コンテンツが設定と切り離されます。
 
 Therefore, a number of settings must be moved to no longer reside under `/etc` as had been the case in the past. To review the full set of repository restructuring concerns that must be reviewed and accomodated in the updated to AEM 6.4, see [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring.md).
 
@@ -110,7 +113,7 @@ AEM の標準の機能を拡張する場合は、/libs の下のノードやフ�
 
 カスタマイズされたアセットデプロイメントを含んでいるインスタンスを、アップグレード用に準備する必要があります。これは、カスタマイズされたすべてのコンテンツに 6.4 の新しいノード構造との互換性を持たせるために必要な作業です。
 
-アセットUIのカスタマイズは、次の手順で準備できます。
+次の操作を行って、アセットUIのカスタマイズを準備できます。
 
 1. On the instance that needs to be upgraded, open CRXDE Lite by going to *https://server:port/crx/de/index.jsp*
 
@@ -146,7 +149,7 @@ Adobe recommends putting custom scripts at `/apps/settings/dam/indesign/scripts`
 
 ### ContextHub 設定の復元 {#recovering-contexthub-configurations}
 
-ContextHub設定は、アップグレードの影響を受けます。 Instructions on how to recover existing ContextHub configurations can be found [here](/help/sites-administering/contexthub-config.md#recovering-contexthub-configurations-after-upgrading).
+ContextHub設定はアップグレードの影響を受けます。 Instructions on how to recover existing ContextHub configurations can be found [here](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading).
 
 ### ワークフローのカスタマイズ {#workflow-customizations}
 
