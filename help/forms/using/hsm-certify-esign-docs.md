@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 536bcba4-b754-4799-b0d2-88960cc4c44a
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+workflow-type: tm+mt
+source-wordcount: '1010'
+ht-degree: 81%
 
 ---
 
@@ -54,8 +57,7 @@ Adobe Experience Manager Forms では、HSM や eToken に保存された資格�
    ```shell
    sling.bootdelegation.sun=sun.*,com.sun.*,sun.misc.*
    sling.bootdelegation.ibm=com.ibm.xml.*,com.ibm.*
-   sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
-   sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
+   sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*  
    ```
 
 1. sling.properties ファイルを保存して閉じます。
@@ -91,25 +93,27 @@ Adobe Experience Manager Forms では、HSM や eToken に保存された資格�
 
 >[!NOTE]
 >
->実稼働環境に移行する際は、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの証明書または評価用の証明書を更新する前に、古いReader Extensions証明書を削除してください。
+>実稼働環境に移行する際は、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、古いReader拡張機能の資格情報を削除してください。
 
 ## デバイスエイリアスの作成 {#configuredeviceinaemconsole}
 
 エイリアスには、HSM や eToken に必要なパラメータがすべて含まれます。eSign やデジタル署名に必要な HSM や eToken の各資格情報に対してエイリアスを作成するには、以下の手順を実行します。
 
-1. AEM コンソールを開きます。AEMコンソールのデフォルトのURLは、https://&lt;ホスト>:&lt;ポート>/system/console/configMgrです。
+1. AEM コンソールを開きます。AEMコンソールのデフォルトのURLは、https://&lt;host>:&lt;port>/system/console/configMgrです。
 1. 「**HSM クレデンシャル設定サービス**」を開き、次のフィールドに値を入力します。
 
-   * **Credential Alias**（クレデンシャルのエイリアス）：エイリアスを識別するための文字列を指定します。この値は、Sign Signature Field操作など、一部のDigital Signatures操作のプロパティとして使用されます。
+   * **Credential Alias**（クレデンシャルのエイリアス）：エイリアスを識別するための文字列を指定します。この値は、署名フィールドへの署名操作など、Digital Signaturesの一部の操作でプロパティとして使用されます。
    * **DLL Path**（DLL のパス）：サーバーの HSM クライアントライブラリの完全修飾パスを指定します。例えば、「c:\Program Files\LunaSA\cryptoki.dll」のように入力します。クラスター環境では、クラスター内のすべてのサーバーでこのパスが同じである必要があります。
    * **HSM Pin**:デバイスキーにアクセスするために必要なパスワードを指定します。
    * **HSM Slot Id**（HSM スロットの ID）：データタイプが integer のスロットに対して、識別子を指定します。スロット ID はクライアントごとに設定します。2 番目のマシンを別のパーティション（同じ HSM デバイスの HSMPART2 など）に登録すると、スロット 1 はこのクライアントの HSMPART2 パーティションに関連付けられます。
+
    >[!NOTE]
    >
-   >eTokenの設定時に、「HSM Slot Id」フィールドに数値を指定します。 数値は、Signatures の操作を有効にするために必要です。
+   >HSM Slot Idフィールドには、eTokenの設定時に数値を指定します。 数値は、Signatures の操作を有効にするために必要です。
 
    * **Certificate SHA1**（証明書 SHA1）：使用する秘密鍵証明書について、公開鍵（.cer）ファイルの SHA1 値（拇印）を指定します。SHA1 値にスペースが使用されていないことを確認します。物理証明書を使用している場合は、必要ありません。
    * **HSM Device Type**:HSM（Lunaなど）またはeTokenデバイスの製造元を選択します。
+
    「**保存**」をクリックします。ハードウェアセキュリティモジュールは、AEM Forms 用に構成されています。これにより、ドキュメントの署名や証明を行う際に、AEM Forms 上でハードウェアセキュリティモジュールを使用できるようになります。
 
 ## DocAssurance サービス API を使用して、デバイスに保存されたデジタルキーで文書を署名または証明する {#programatically}
