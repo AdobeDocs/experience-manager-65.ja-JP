@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 translation-type: tm+mt
-source-git-commit: e37ff1c9e657c580c607f2656adca01a2b39f81f
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '491'
+ht-degree: 63%
 
 ---
 
@@ -23,11 +26,11 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 >[!NOTE]
 >
->診断情報が返されるようにするために、デバッグモードを有効にする必要があります。そうしないと、診断ページが空白になります。デバッグモードを有効にする方法について詳しくは、[このドキュメント](/help/sites-administering/contexthub-config.md#debugging-contexthub)を参照してください。
+>診断情報が返されるようにするために、デバッグモードを有効にする必要があります。そうしないと、診断ページが空白になります。デバッグモードを有効にする方法について詳しくは、[このドキュメント](ch-configuring.md#debugging-contexthub)を参照してください。
 
 >[!NOTE]
 >
->ContextHub設定が従来のパスの下に引き続き配置されている場合、診断ページの場所はです `http://<host>:<port>/libs/settings/cloudsettings/legacy/contexthub.diagnostics.html`。
+>ContextHub設定が従来のパスの下に引き続き配置されている場合、診断ページの場所は `http://<host>:<port>/libs/settings/cloudsettings/legacy/contexthub.diagnostics.html`です。
 
 ## ストア {#stores}
 
@@ -42,7 +45,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 モジュールセクションには、設定されているすべての ContextHub UI モジュールが一覧表示されます。リストの各項目は、次の情報で構成されます。
 
-* **** タイトル：UIモジ [ュールが基に](/help/sites-developing/ch-samplemodules.md) 、UIモジュールのタイプ。
+* **タイトル：** UIモジュールが基にしている [UIモジュールタイプ](/help/sites-developing/ch-samplemodules.md) 。
 * **パス：**&#x200B;設定を保持しているリポジトリノードへのパス。
 * **リソースタイプ：** UI モジュールタイプが定義されているリポジトリノードのパス。
 * **クライアントライブラリ：**&#x200B;読み込まれ、UI モジュールタイプを実装するクライアントライブラリのカテゴリ。
@@ -59,10 +62,10 @@ Clientlibs セクションには、ContextHub によって読み込まれたす�
 
 URL セクションには、次の ContextHub 機能へのリンクが含まれます。
 
-* **** 設定エディター：ストア、UI [モード](/help/sites-administering/contexthub-config.md) 、UIモジュールを設定できるContextHub設定ページを開きます。
+* **設定エディター：** ストア、UIモ [ード](ch-configuring.md) 、UIモジュールを設定できるContextHub設定ページを開きます。
 
-* **** ContextHubモジュールの設定：/etc/cloudsettings/default/contexthub.config.kernel.jsファイルを開きます。このファイルには、ContextHubストア設定のJavaScriptオブジェクト表現が含まれています。
-* **** ContextHub UIの設定：/etc/cloudsettings/default/contexthub.config.ui.jsファイルを開きます。このファイルには、ContextHub UIモード設定のJavascriptオブジェクト表現が含まれています。
-* **** kernel.js:/etc/cloudsettings/default/contexthub.kernel.jsファイルを開きます。このファイルには、ContextHubフレームワーク、セグメントエンジンおよびストアタイプを実装するクライアントライブラリのソースコードが含まれています。
-* **** ui.js:/etc/cloudsettings/default/contexthub.ui.jsファイルを開きます。このファイルには、ContextHub UIおよびUIモジュールタイプを実装するクライアントライブラリのソースコードが含まれています。
-* **** style.css:/etc/cloudsettings/default/contexthub.styles.cssファイルを開きます。このファイルには、ContextHub UIモジュールとUIモジュールのCSSスタイルが含まれています。
+* **ContextHubモジュールの設定：** /etc/cloudsettings/default/contexthub.config.kernel.jsファイルを開きます。このファイルには、ContextHubストア設定のJavaScriptオブジェクト表現が含まれています。
+* **ContextHub UIの設定：** /etc/cloudsettings/default/contexthub.config.ui.jsファイルを開きます。このファイルには、ContextHub UIモード設定のJavascriptオブジェクト表現が含まれています。
+* **kernel.js:** /etc/cloudsettings/default/contexthub.kernel.jsファイルを開きます。このファイルには、ContextHubフレームワーク、セグメントエンジン、ストアの種類を実装するクライアントライブラリのソースコードが含まれています。
+* **ui.js:** /etc/cloudsettings/default/contexthub.ui.jsファイルを開きます。このファイルには、ContextHub UIとUIモジュールタイプを実装するクライアントライブラリのソースコードが含まれています。
+* **style.css:** /etc/cloudsettings/default/contexthub.styles.cssファイルを開きます。このファイルには、ContextHub UIおよびUIモジュールのCSSスタイルが含まれています。
