@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1781'
+ht-degree: 89%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ページに必要なプロパティを定義できます。これらはページの特性に応じて異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 
-## ページのプロパティ {#page-properties}
+## ページプロパティ {#page-properties}
 
 プロパティは次のタブに分散しています。
 
@@ -43,6 +46,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
       * 新しいタグが表示され、その右側にタグが新規であることを示す小さな星が表示されます。
    * ドロップダウン機能を使用して、既存のタグを選択できます。
    * 選択ボックスのタグエントリの上にマウスポインターを合わせると、x が表示されます。これをクリックすると、対象のタグをこのページから削除できます。
+
    タグについて詳しくは、[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
 * **ナビゲーション内で非表示にする**
@@ -89,10 +93,10 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
    >
    >* 一意である必要があるので、別のページで同じ値が使用されないように注意してください。
    >* regex パターンはサポートされていません。
-   >* 既存のページに設定しないでください。
+   >* 既存のページには設定しないでください。
 
 
-   また、バニティURLへのアクセスを有効にするために、ディスパッチャーを設定する必要があります。 詳しくは [、「バニティURLへのアクセスの有効化](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 」を参照してください。
+   また、バニティURLへのアクセスを有効にするために、ディスパッチャーを設定する必要があります。 詳しくは、「バニティURLへのアクセスの [有効化](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 」を参照してください。
 
 * **バニティ URL をリダイレクト**
 
@@ -100,7 +104,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ### アドバンス {#advanced}
 
-* **言葉遣い**
+* **言語**
 
    ページの言語です。
 
@@ -122,11 +126,11 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    >[!NOTE]
    >
-   >「Alias」は、リソ `sling:alias` ースのエイリアス名を定義するプロパティーを設定します（これは、パスではなく、リソースにのみ影響します）。
+   >「エイリアス」は、リソースのエイリアス名を定義する `sling:alias` プロパティを設定します（これはリソースにのみ影響を及ぼし、パスには影響しません）。
    >
-   >例：ノードノードのエイリアスを `latin-lang` 定義した場合 `/content/we-retail/spanish` 、このページは、 `/content/we-retail/latin-language`
+   >例えば、`/content/we-retail/spanish` ノードに `latin-lang` というエイリアスを定義した場合、このページは `/content/we-retail/latin-language` でアクセスできます。
    >
-   >詳しくは、「SEOとURL管理のベ [ストプラクティス」の「ローカライズされたページ名」を参照してください](/help/managing/seo-and-url-management.md#localized-page-names)。
+   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
 
 * **&lt;*path*> から継承**
 
@@ -150,7 +154,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    >[!CAUTION]
    >
-   >The **[Permissions](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**tab allows editing of CUG configurations based on the presence of the`granite:AuthenticationRequired`mixin. If page permissions are configured using deprecated CUG configurations, based on the presence of`cq:cugEnabled`property, a warning message will be shown under **Authentication Requirement**and the option will not be editable, nor will the[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)be editable.
+   >The **[Permissions](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** tab allows editing of CUG configurations based on the presence of the `granite:AuthenticationRequired` mixin. If page permissions are configured using deprecated CUG configurations, based on the presence of `cq:cugEnabled` property, a warning message will be shown under **Authentication Requirement** and the option will not be editable, nor will the [Permissions](/help/sites-authoring/editing-page-properties.md#permissions) be editable.
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -163,23 +167,23 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    書き出し設定を指定します。
 
-### サムネイル {#thumbnail}
+### サムネール {#thumbnail}
 
-ページサムネイル画像が表示されます。以下の操作を実行できます。
+ページサムネール画像が表示されます。以下の操作を実行できます。
 
 * **プレビューを生成**
 
-   サムネイルとして使用するページのプレビューを生成します。
+   サムネールとして使用するページのプレビューを生成します。
 
 * **画像をアップロード**
 
-   サムネイルとして使用する画像をアップロードします。
+   サムネールとして使用する画像をアップロードします。
 
 * **画像を選択**
 
    サムネールとして使用する既存のアセットを選択します。
 
-* **revert**
+* **元に戻す**
 
    このオプションは、サムネールを変更した後で使用できるようになります。変更を維持しない場合は、保存前にその変更を元に戻すことができます。
 
@@ -191,11 +195,12 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    * **Facebook に対してユーザー共有を有効にする**
    * **Pinterest に対してユーザー共有を有効にする**
-   * **優先 XF バリエーション**&#x200B;ページのメタデータの生成に使用されるエクスペリエンスフラグメントのバリエーションを定義します
+   * **優先 XF バリエーション**
+ページのメタデータの生成に使用されるエクスペリエンスフラグメントのバリエーションを定義します
 
-### クラウドサービス {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **クラウドサービス**
+* **Cloud Services**
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
@@ -203,14 +208,14 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 * **ContextHub 設定**
 
-   「[ContextHub 設定](/help/sites-administering/contexthub-config.md)」と「[セグメントのパス](/help/sites-administering/segmentation.md)」を選択します。
+   「[ContextHub 設定](/help/sites-developing/ch-configuring.md)」と「[セグメントのパス](/help/sites-administering/segmentation.md)」を選択します。
 
 * **ターゲティング設定**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-authoring/target-adobe-campaign.md)します。
 
    >[!NOTE]
-   >このオプションを使用するには、ユーザーアカウントがグループに属している必要 `Target Adminstrators`があります。
+   >このオプションを使用するには、ユーザーアカウントが `Target Adminstrators` グループに属している必要があります。
 
 ### 権限 {#permissions}
 
@@ -241,7 +246,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ### ライブコピー {#live-copy}
 
-* **Livecopy**
+* **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
@@ -257,14 +262,14 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    * [新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)します（プロパティのサブセット）
 
-   * Clicking or tapping **Properties**
+   * 「**プロパティ**」をクリックまたはタップします
 
       * 単一のページ
       * 複数のページ（まとめて編集する場合は、プロパティのサブセットのみを使用できます）
 
 * ページエディターから、次の操作をおこないます。
 
-   * 「**ページ情報**」を使用します（その後、「**プロパティを開く**」をクリック）
+   * 「**ページ情報**」（その後、「**プロパティを開く**」）を使用します
 
 ### サイトコンソールから - 単一のページ {#from-the-sites-console-single-page}
 
@@ -272,10 +277,11 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 1. **サイト**&#x200B;コンソールを使用して、プロパティを表示および編集するページの場所に移動します。
 
-1. Select the **Properties** option for the required page using either:
+1. 次のいずれかを使用して、目的のページで「**プロパティ**」オプションを選択します。
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#selectionmode)
+
    ページのプロパティが該当するタブに表示されます。
 
 1. 必要に応じてプロパティを表示または編集します。
@@ -347,6 +353,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
       * 表示モードで表示されるのは、共通の値を持つプロパティのみです。
       * フィールドが複数値（タグなど）の場合は、すべての値が共通の場合に限り、値が表示されます。**&#x200B;一部の値のみが共通の場合は、それらの値は編集時にのみ表示されます。
+
    一般的な値を含むプロパティがない場合は、メッセージが表示されます。
 
 * **編集**
@@ -357,7 +364,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
       * 新しい値は、「**完了**」を選択したときに、選択したすべてのページに適用されます。
       * フィールドが複数値（タグなど）の場合は、新しい値を追加するか、共通の値を削除できます。
-   * Fields that are common, but have different values across the various pages will be indicated with a special value such as the text `<Mixed Entries>`. そのようなフィールドを編集する際は、データが失われないように、慎重におこなう必要があります。
+   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。そのようなフィールドを編集する際は、データが失われないように、慎重におこなう必要があります。
 
 
 >[!NOTE]
