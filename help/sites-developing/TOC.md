@@ -6,9 +6,9 @@ user-guide-title: AEM 6.5 Developing User Guide
 breadcrumb-title: Developing Guide
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '823'
 ht-degree: 79%
 
 ---
@@ -138,13 +138,14 @@ ht-degree: 79%
    + [AEM Repo ツール](aem-repo-tool.md)
 + パーソナライゼーション{#personlization}
    + [ContextHub](contexthub.md)
-   + [ContextHub JavaScript API リファレンス](contexthub-api.md)
-   + [ContextHub の拡張](ch-extend.md)
+   + [Context Hubの設定](ch-configuring.md)
    + [ページへの ContextHub の追加とストアへのアクセス](ch-adding.md)
+   + [ContextHub の拡張](ch-extend.md)
    + [ContextHub ストア候補のサンプル](ch-samplestores.md)
    + [ContextHub UI モジュールタイプのサンプル](ch-samplemodules.md)
    + [ContextHub の診断](ch-diagnostics.md)
    + [ターゲットコンテンツの作成](target.md)
+   + [ContextHub JavaScript API リファレンス](contexthub-api.md)
    + ClientContext{#client-context}
       + [ClientContext の詳細](client-context.md)
       + [ClientContext JavaScript API](ccjsapi.md)
