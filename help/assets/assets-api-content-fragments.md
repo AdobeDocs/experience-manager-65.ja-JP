@@ -11,7 +11,7 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 94%
@@ -40,7 +40,7 @@ The Adobe Experience Manager (AEM) [Assets REST API](/help/assets/mac-api-assets
 
 例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、HTTP API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
 
-AEMコアコンポーネントは、この目的に必要な読み取り操作とJSON出力のカスタマイズを可能にする、非常に包括的で柔軟性とカスタマイズ性に優れたAPIを提供しますが、AEM専用のAPIページでホストする必要があるAEM WCM (Webコンテンツ管理)のノウハウが必要です。 すべての SPA 開発組織が、こうしたリソースにアクセスできるわけではありません。
+AEMコアコンポーネントは、この目的で必要な読み取り操作とJSON出力をカスタマイズできる、非常に包括的で柔軟性とカスタマイズ性に優れたAPIを提供しますが、専用のAEMテンプレートに基づく(API)ページでホストする必要があるAEM WCM(Webコンテンツ管理)ノウハウを実装する必要があります。 すべての SPA 開発組織が、こうしたリソースにアクセスできるわけではありません。
 
 これが可能なのは、Assets REST API が使用できる場合です。この場合は、アセット（画像やコンテンツフラグメントなど）に直接アクセスでき、その際に、ページにアセットを埋め込んでからコンテンツをシリアル化 JSON 形式で配信する必要はありません（Assets REST API からの JSON 出力をカスタマイズできないことに注意してください）。また、Assets REST API を使用すると、アセット、コンテンツフラグメント、フォルダーの新規作成、更新、削除のいずれかの操作でコンテンツを変更することもできます。
 
@@ -143,7 +143,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 
 API を通じて使用できる機能について詳しくは、以下を参照してください。
 
-* Assets REST API の[使用可能な機能](/help/assets/mac-api-assets.md#available-features)
+* Assets REST API の[使用可能な機能](/help/assets/mac-api-assets.md#assets)
 * [エンティティタイプ](/help/assets/assets-api-content-fragments.md#entity-types)
 
 ### ページング {#paging}
@@ -370,7 +370,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 * [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
-   * [使用可能な機能](/help/assets/mac-api-assets.md#available-features)
+   * [使用可能な機能](/help/assets/mac-api-assets.md#assets)
 
 ## その他のリソース {#additional-resources}
 
