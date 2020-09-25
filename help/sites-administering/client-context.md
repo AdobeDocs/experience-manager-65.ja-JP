@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1889'
+ht-degree: 77%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
 >[!NOTE]
 >
->ClientContext は、ContextHub に変更されました。詳しくは、[設定](/help/sites-administering/contexthub-config.md)および[開発者](/help/sites-developing/contexthub.md)に関する関連ドキュメントを参照してください。
+>ClientContext は、ContextHub に変更されました。For more details, see the related [configuration]ch-configuring.md) and [developer](/help/sites-developing/contexthub.md) documenatation.
 
 Client Contextは、現在のページと訪問者に関する特定の情報を提供するメカニズムです。 It can be opened using **Ctrl-Alt-c** (windows) or **control-option-c** (Mac):
 
@@ -48,23 +51,23 @@ Client Contextは、現在のページと訪問者に関する特定の情報を
 
 ClientContext には、（[「編集」を使用して選択した内容に応じて](#adding-a-property-component)）次のプロパティが表示されます。
 
-**サーファー情報** ：次のクライアント側情報を表示します。
+**サーファー情報** ：次のクライアント側情報を示します。
 
 * IPア **ドレス**
-* **検索エンジン** の照会に使用するキーワード
-* 使用 **中の** ブラウザ
-* 使用 **中の** OS（オペレーティングシステム）
-* 画面の解 **像度**
-* マウス **のX位** 置
+* **検索エンジンの参照に使用されるキーワード** 。
+* 使用 **中のブラウザ**
+* 使用されている **OS** （オペレーティングシステム）
+* 画面の **解像度**
+* マウス **のX** 位置
 * マウス **のY** 位置
 
-**アクティビティストリーム** ：様々なプラットフォームでのユーザーのソーシャルアクティビティに関する情報を提供します。例えば、AEMフォーラム、ブログ、評価など。
+**アクティビティストリーム** ：様々なプラットフォームにおけるユーザーのソーシャルアクティビティに関する情報を提供します。例えば、AEMフォーラム、ブログ、レーティングなど。
 
 **キャンペーン** ：作成者がキャンペーンの特定のエクスペリエンスをシミュレートできます。 このコンポーネントは通常のキャンペーンの結果とエクスペリエンスの選択をオーバーライドし、各種配列のテストを有効にします。
 
 キャンペーンの解決は、通常、キャンペーンのpriorityプロパティに基づきます。 エクスペリエンスは通常、分類に基づいて選択されます。
 
-**買い物かご** ：商品エントリ（タイトル、数量、priceFormattedなど）、解決されたプロモーション（タイトル、メッセージなど）を含む買い物かご情報を表示します。バウチャー（コード、説明など）などの買い物かごの情報を示します。
+**買い物かご** ：商品エントリ（タイトル、数量、priceFormattedなど）、解決されたプロモーション（タイトル、メッセージなど）を含む買い物かご情報を バウチャー（コード、説明など）などの買い物かごの情報を示します。
 
 買い物かごセッションストアは、ClientContextCartServlet を使用して（分類の変更に基づく）解決済みのプロモーションの変更をサーバーに通知します。
 
@@ -76,7 +79,7 @@ ClientContext には、（[「編集」を使用して選択した内容に応�
 
 汎用ストアのプロパティコンポーネントには、設定されたプロパティを（サムネールと共に）リストするデフォルトのレンダラーが含まれます。
 
-**位置情報** ：顧客の緯度と経度を表示します。 HTML5 Geolocation API を使用して現在の位置についてブラウザーでクエリを実行します。その結果、ポップアップが訪問者に表示され、ブラウザーから場所の共有に同意するかどうかを尋ねられます。
+**位置情報** ：クライアントの緯度と経度を表示します。 HTML5 Geolocation API を使用して現在の位置についてブラウザーでクエリを実行します。その結果、ポップアップが訪問者に表示されます。ブラウザは、場所の共有に同意するかどうかを尋ねます。
 
 コンテキストクラウドで表示されると、コンポーネントは Google API を使用してマップをサムネールとして表示します。コンポーネントは Google API の[使用制限](https://developers.google.com/maps/documentation/staticmaps/intro#Limits)に従います。
 
@@ -84,7 +87,7 @@ ClientContext には、（[「編集」を使用して選択した内容に応�
 >
 >AEM 6.1 では、位置情報ストアはリバースジオコーディング機能を提供していません。このため、位置情報ストアは町名や国コードなどの現在の位置に関する情報を取得しません。このストアデータを使用するセグメントは正しく機能しません。位置情報ストアには位置の緯度と経度のみが含まれます。
 
-**JSONP Store** ：インストールに依存するコンテンツを表示するコンポーネント。
+**JSONP Store** ：インストールに依存するコンテンツを表示するコンポーネントです。
 
 JSONP 標準は JSON を補完し、同一生成元ポリシーを回避します（Web アプリケーションが別のドメインにあるサーバーと通信できないようにします）。It consists in wrapping the JSON object in a function call in order to be able load it as a `<script>` from the other domain (which is an allowed exception to the same origin policy).
 
@@ -98,9 +101,9 @@ JSONP 標準は JSON を補完し、同一生成元ポリシーを回避しま�
 
 **解決済みセグメント** ：現在解決されているセグメントを表示します（多くの場合、クライアントコンテキストに表示される他の情報に依存しています）。 これは、キャンペーンを設定するときに参考となります。
 
-例えば、マウスが現在ウィンドウの左または右の部分の上にあるかどうかなどです。このセグメントは主にテストに使用されます。変更がすぐに表示される可能性があります。
+例えば、マウスが現在ウィンドウの左または右の部分の上にあるかどうかなどです。このセグメントは主にテストに使用されます。変更はすぐに確認できます。
 
-**ソーシャルグラフ** ：ユーザーの友達およびフォロワーのソーシャルグラフを表示します。
+**ソーシャルグラフ** ：ユーザーの友達とフォロワーのソーシャルグラフを表示します。
 
 >[!NOTE]
 >
@@ -113,9 +116,9 @@ JSONP 標準は JSON を補完し、同一生成元ポリシーを回避しま�
 >[!NOTE]
 訪問したページに表示される DAM アセットに設定されているタグはカウントされません。
 
-**Technographics Storeこのコンポーネントは** 、インストール環境によって異なります。
+**Technographics Store** このコンポーネントは、インストール環境に応じて異なります。
 
-**ViewedProducts** ：買い物客が閲覧した製品を追跡します。 最近閲覧した商品や、最近閲覧した商品のうち買い物かごに入っていない商品でクエリを実行できます。
+**ViewedProducts** ：買い物客が閲覧した商品を追跡します。 最近閲覧した商品や、最近閲覧した商品のうち買い物かごに入っていない商品でクエリを実行できます。
 
 このセッションストアにデフォルトの ClientContext コンポーネントはありません。
 
@@ -204,7 +207,7 @@ ClientContext を編集して、特定のプロパティの値を設定（また
 
 ### プロパティコンポーネントの追加 {#adding-a-property-component}
 
-**ClientContextデザインページを開いた後に、使用可能なコンポーネントを使用して完全に新しいプロパティを追加することもできます************** （コンポーネントはサイドキックと新しいコンポーネントを挿入ダイアログの両方に表示され、ここでドラッグコンポーネントまたはアセットボックスをダブルクリックします）。
+**ClientContextデザインページを開いた後に、使用可能なコンポーネントを使用して完全に新しいプロパティを作成することもできます**(コンポーネントは、サイドキックと **Insert New Component** (新しいコンポーネントを **挿入****** )ダイアログの両方で重複がクリックした後に開きます)。
 
 ![](assets/clientcontext_alisonparker_new.png)
 
@@ -223,7 +226,7 @@ ClientContext を編集して、特定のプロパティの値を設定（また
 JSONP ストアコンポーネントを ClientContext に追加して、Web クライアントの位置情報の取得と保存に使用できます。
 
 1. AEM オーサーインスタンスの Geometrixx Outdoors サイトの英語のホームページを開きます([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
-1. Client Contextを開くには、Ctrl + Alt + cキー(Windows)またはControl + Option + cキー(Mac)を押します。
+1. クライアントコンテキストを開くには、Ctrl-Alt-c(Windows)またはControl-Option-c(Mac)を押します。
 1. ClientContext の上部の編集アイコンをクリックして ClientContext デザイナーを開きます。
 
    ![](do-not-localize/chlimage_1.png)
