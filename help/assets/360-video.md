@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 93%
@@ -70,7 +70,7 @@ AEM にアップロードされた 360 ビデオアセットには、通常の�
 
    このアプローチを使用する場合、エンドユーザーのネットワークや CPU の要件も高くなることに注意してください。
 
-1. [フォルダーにビデオをアップロードします](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
+1. [フォルダーにビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
 ## 360 ビデオのデフォルト縦横比のオーバーライド  {#overriding-the-default-aspect-ratio-of-videos}
 
@@ -116,7 +116,7 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
    * ビデオの上でマウスポインターをドラッグして、静的なシーンの表示角度を変更します。
    * ビデオの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンをタップして再生を開始します。ビデオの再生中にビデオの上でマウスポインターをドラッグして、表示角度を変更します。
 
-   ![6_5_360video-preview-video360-social](assets/6_5_360video-preview-video360-social.png)*360 ビデオのスクリーンショット&#x200B;*
+   ![6_5_360video-preview-video360-social ](assets/6_5_360video-preview-video360-social.png)*360 ビデオのスクリーンショット*
 
    * From the Viewers list, tap **[!UICONTROL Video360VR.]**
 
