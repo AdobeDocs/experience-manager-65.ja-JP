@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 96%
@@ -223,11 +223,10 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    >    * アニメーション.デフォルトでは、各スライドのトランジションはフェードです。これをスライドのトランジションに変更できます。
    >    * ボタンのスタイル。ユーザーは点または番号をタップしてバナーの画像を切り替えることができます。セットインジケーターボタンの表示位置（とスタイルが番号か点か）と大きさを変更できます。
    >    * 画像マップまたはホットスポットに使用されるアイコンのハイライトスタイルを変更します.
-   >    * ビューアプリセットを編集する前に、そのプリセットのベースとして使用するスタイルを選択してください。そうしないと、ビューアプリセットの編集を開始した後、別のプリセットに切り替えることにした場合に、変更内容をすべて失うことになります。
+   >    * ビューアプリセットを編集する前に、そのプリセットのベースとして使用するスタイルを選択してください。そうしないと、ビューアプリセットの編集を開始した後、別のプリセットに切り替えることにした場合に、変更内容をすべて失うことになります。。
 
    >
-   >
-   >ビューアエディターの詳細や使用手順は、[カルーセルバナーに関する注意事項](/help/assets/viewer-presets.md#specialconsiderationsforcreatingacarouselbannerviewerpreset)を参照してください。
+   >ビューアエディターの詳細や使用手順は、[カルーセルバナーに関する注意事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset)を参照してください。
 
    カルーセルバナーがどのように表示されるかをプレビューすることもできます。[（オプション）カルーセルバナーのプレビュー](#optional-previewing-carousel-banners)を参照してください。
 
