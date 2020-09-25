@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2767'
 ht-degree: 70%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 70%
 
 アダプティブフォームは、ダイナミックなスクリプト機能によってエンドユーザーのフォームへの入力作業を最適化および簡素化します。式を作成して、ダイナミックなフィールドやパネルの表示/非表示など、様々な動作を追加できます。 また、計算指標フィールドの追加、フィールドの読み取り専用化、検証ロジックの追加などを行うこともできます。 動的動作は、ユーザー入力や事前入力に基づいています。
 
-アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの数式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html)」を参照してください。
+アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの数式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
 
 ## 式を記述するためのベストプラクティス {#best-practices-for-writing-expressions}
 
@@ -50,14 +50,14 @@ ht-degree: 70%
 
 * **[アクセス数式](#access-expression-enablement-expression)**：フィールドを有効化/無効化します。
 * **[数式の計算](#calculate-expression)**：フィールドの値を自動計算します。
-* **[式](#click-expression)**: をクリックして、ボタンのクリックイベント上の操作を処理します。
-* **[初期化スクリプト](#initialization-script)：**フィールドの初期化で操作を実行します。
+* **[式](#click-expression)**:をクリックして、ボタンのクリックイベント上の操作を処理します。
+* **[初期化スクリプト](#initialization-script)：**&#x200B;フィールドの初期化で操作を実行します。
 * **[オプション式](#options-expression)**：ドロップダウンリストを動的に埋めます。
 * **[要約式](#summary)**：アコーディオンのタイトルを動的に計算します。
 * **[検証数式](#validate-expression)**：フィールドを検証します。
-* **[値コミットスクリプト](#value-commit-script):**フィールドの値を変更した後にフォームのコンポーネントを変更する場合。
+* **[値コミットスクリプト](#value-commit-script):** フィールドの値を変更した後にフォームのコンポーネントを変更する場合。
 * **[視認性の数式](#visibility-expression)**：フィールドおよびパネルの視認性をコントロールします。
-* **[ステップ完了の式](#step-completion-expression)**: ユーザがウィザードの次のステップに進むのを防ぐ。
+* **[ステップ完了の式](#step-completion-expression)**:ユーザがウィザードの次のステップに進むのを防ぐ。
 
 ### アクセス式(イネーブルメント式) {#access-expression-enablement-expression}
 
@@ -67,7 +67,7 @@ ht-degree: 70%
 
 ****&#x200B;戻り値の型 ：数式は、フィールドが有効/無効であることを表すブール値を返します。**trueは**&#x200B;フィールドが有効であることを表し、**falseは**&#x200B;フィールドが無効であることを表します。
 
-**例**: field1 **の値が** Xに設定されている場合にのみフィールドを有効にする場合のアクセス式は次のとおりです ****。 `field1.value == "X"`
+**例**:field1 **の値が** Xに設定されている場合にのみフィールドを有効にする場合のアクセス式は次のとおりです ****。 `field1.value == "X"`
 
 ### 数式の計算 {#calculate-expression}
 
@@ -77,7 +77,7 @@ ht-degree: 70%
 
 **戻り値の型**：数式は、式の結果が表示されるフィールドに対応する値を返します（例えば、小数値）。
 
-**例**: field1内の2つのフィールドの合計を表示するcalculate式 **は** 、次のとおりです。
+**例**:field1内の2つのフィールドの合計を表示するcalculate式 **は** 、次のとおりです。
 `field2.value + field3.value`
 
 ### クリック式 {#click-expression}
@@ -88,7 +88,7 @@ ht-degree: 70%
 
 **戻り値の型**：クリック式は値を返しません。数式が値を返した場合、その値は無視されます。
 
-**例**: テキストボックス **textbox1** を値の **AEM Formsでクリックアクションに埋め込むには、ボタンのクリック式**&#x200B;を次のように指定します。 `textbox1.value="AEM Forms"`
+**例**:値が **AEM Formsのボタンのクリックアクションでテキストボックス** textbox1 ****&#x200B;に入力するには、ボタンのクリック式を次のように指定します。 `textbox1.value="AEM Forms"`
 
 ### 初期化スクリプト {#initialization-script}
 
@@ -129,7 +129,7 @@ ht-degree: 70%
 
 **戻り値の型：** 式は、アコーディオンのタイトルになる文字列型(String)の値を返します。
 
-**例：** &quot;口座番号： &quot;+ textbox1.value
+**例：** &quot;口座番号：&quot;+ textbox1.value
 
 ### 数式の検証 {#validate-expression}
 
@@ -137,7 +137,7 @@ ht-degree: 70%
 
 **適用性：**&#x200B;フィールド
 
-**戻り値の型**: 式は、フィールドの検証ステータスを表すブール型(Boolean)の値を返します。 The value **false** represents that the field is invalid and **true** represents that the field is valid.
+**戻り値の型**:式は、フィールドの検証ステータスを表すブール型(Boolean)の値を返します。 The value **false** represents that the field is invalid and **true** represents that the field is valid.
 **例**：英国の郵便番号を表すフィールドの検証式は次の通りです：
 
 (**this.value** &amp;&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
@@ -252,7 +252,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 >[!NOTE]
 >
->AEMでは、clientLibにコードを記述し、ページに含めることをお勧めします（ページのheader.jspまたはfooter.jsp）
+>AEMでは、clientLibにコードを記述し、ページに含めることをお勧めします（ページのheader.jspまたはfooter.jsp）。
 
 To use GuideBridge after the form is initialized (the `bridgeInitializeComplete` event is dispatched), get the GuideBridge instance using `window.guideBridge`.  APIを使って、`guideBride.isConnected`GuideBridge初期化ステータスを確認することができます。
 
@@ -282,7 +282,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 
 1. このプロパティの値は、パターンを設定するフィールドによって変わります。数値フィールドの`guideComponentType`*プロパティの値は、* fd/af/components/formatter/guideNumericBoxです。The value for the Datepicker field is *fd/af/components/formatter/guideDatepicker*.
 ``
-1. ノードにプロパティを割り当てることで`textboxpatterns`カスタムパターンを追加できます。Add a property with a name (for example `pattern1`), and set its value to the pattern you want to add. For example, add a property `pattern1` with value Fax=text{99-999-9999999}. このパターンは、アダプティブフォームで使用するすべてのテキストボックスで使用できます。
+1. ノードにプロパティを割り当てることで`textboxpatterns`カスタムパターンを追加できます。Add a property with a name (for example `pattern1`), and set its value to the pattern you want to add. For example, add a property `pattern1` with value Fax=text{99-999-9999999}. このパターンは、アダプティブFormsで使用するすべてのテキストボックスで使用できます。
 
    ![CrDeでフィールドのカスタムパターンの作成](assets/creating-custom-patterns.png)
 
