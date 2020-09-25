@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '6623'
 ht-degree: 96%
@@ -41,7 +41,7 @@ Dynamic Media ビューア 5.13 の最近のリリースと共に、Adobe Launch
 
 Adobe Launch の統合の主な事例は、AEM Assets と AEM Sites の両方を使用するお客様です。そのような場合、AEM オーサーノードと Adobe Launch の標準統合を設定し、Site インスタンスを Adobe Launch プロパティに関連付けることができます。その後、Site ページに追加された Dynamic Media WCM コンポーネントは、ビューアのデータとイベントを追跡します。
 
-[AEM Site での Dynamic Media ビューアのトラッキングについて](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites)を参照してください。
+[AEM Sites での Dynamic Media ビューアのトラッキングについて](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites)を参照してください。
 
 統合が支える 2 番目の事例は、AEM Assets のみ、または Dynamic Media Classic を使用するお客様です。その場合、ビューアの埋め込みコードを取得して、Web サイトページに追加します。次に、Adobe Launch から Adobe Launch ライブラリ実稼動用 URL を取得し、Web ページのコードに手動で追加します。
 
@@ -133,7 +133,7 @@ Experience Cloud アカウントが Adobe Analytics for Audio and Video を使�
 
 ## Dynamic Media ビューア拡張機能の使用 {#using-the-dynamic-media-viewers-extension}
 
-「[統合の事例](#use%20cases%20for%20the%20integration)」で説明したように、AEM Sites の新規 Adobe Launch 統合で、埋め込みコードを使用して Dynamic Media ビューアを追跡できます。
+「[統合の事例](#use-cases-for-the-integration)」で説明したように、AEM Sites の新規 Adobe Launch 統合で、埋め込みコードを使用して Dynamic Media ビューアを追跡できます。
 
 ### AEM Sites での Dynamic Media ビューアのトラッキング {#tracking-dynamic-media-viewers-in-aem-sites}
 
@@ -149,7 +149,7 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 AEM Sites を使用していない、または AEM Sites 以外の Web ページに Dynamic Media ビューアを埋め込んでいる、またはその両方に該当するお客様は、引き続き Adobe Launch 統合を使用できます。
 
-[Adobe Analytics の設定](#configuringadobeanalytics)および [Adobe Launch の設定](#configuringadobelaunch)の設定手順を実行する必要があります。ただし、AEM 関連の設定手順は不要です。
+[Adobe Analytics の設定](#configuring-adobe-analytics-for-the-integration)および [Adobe Launch の設定](#configuring-adobe-launch-for-the-integration)の設定手順を実行する必要があります。ただし、AEM 関連の設定手順は不要です。
 
 適切な設定をおこなえば、Dynamic Media ビューアを使用した Web ページに Adobe Launch サポートを追加できます。
 
@@ -162,7 +162,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 **埋め込みコードを使用して Dynamic Media ビューアを追跡するには**:
 
 1. Dynamic Media ビューアを埋め込む Web ページを準備します。
-1. 最初に Adobe Launch にログインして、Adobe Launch ライブラリの埋め込みコードを取得します（[Adobe Launch の設定](#configuringadobelaunch)を参照）。
+1. 最初に Adobe Launch にログインして、Adobe Launch ライブラリの埋め込みコードを取得します（[Adobe Launch の設定](#configuring-adobe-launch-for-the-integration)を参照）。
 1. **[!UICONTROL プロパティ]**&#x200B;をクリックし、「**[!UICONTROL 環境]**」タブをクリックします。
 1. Web ページの環境に関連する環境レベルを取得します。次に、「**[!UICONTROL インストール]**」列のボックスアイコンをクリックします。
 1. **[!UICONTROL Web インストール手順]**&#x200B;ダイアログボックスで、Adobe Launch ライブラリの埋め込みコード全体と、それを囲む `<script/>` タグをコピーします。
@@ -483,7 +483,7 @@ Adobe Analytics を設定した後、統合のために次の設定がおこな�
 
 1. 一般に、Adobe Analytics でのレポートの設定は、特定のプロジェクトのニーズに左右されます。したがって、詳細なレポート設定は、この統合の範囲外です。
 
-   ただし、**[Adobe Analytics 変数の設定](#setting-up-adobe-analytics-variables)**でカスタムトラフィック変数を設定すると、カスタムトラフィックレポートが Adobe Analytics で自動的に使用可能になることはわかります。
+   ただし、**[Adobe Analytics 変数の設定](#setting-up-adobe-analytics-variables)**&#x200B;でカスタムトラフィック変数を設定すると、カスタムトラフィックレポートが Adobe Analytics で自動的に使用可能になることはわかります。
 
    例えば、**[!UICONTROL ビューアアセット（prop 30）]**&#x200B;変数のレポートは、**[!UICONTROL カスタムトラフィック／カスタムトラフィック 21～30／ビューアアセット（prop 30）]**&#x200B;下のレポートメニューから使用できます。
 
@@ -690,7 +690,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
    >[!NOTE]
    >
-   >この時点で、**[!UICONTROL Adobe IMS テクニカルアカウント設定ページを***&#x200B;開いたまま&#x200B;***にします。ページは]**&#x200B;閉じずに&#x200B;******、「***次へ***」もクリックしません。このページには、手順の後半で戻ってきます。
+   >この時点で、**[!UICONTROL Adobe IMS テクニカルアカウント設定ページを&#x200B;***開いたまま***にします。ページは]**&#x200B;閉じずに&#x200B;******、「***次へ***」もクリックしません。このページには、手順の後半で戻ってきます。
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
