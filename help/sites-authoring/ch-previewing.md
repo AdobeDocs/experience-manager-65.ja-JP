@@ -10,12 +10,15 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 96%
 
 ---
 
 
-# ContextHub データを使用したページのプレビュー{#previewing-pages-using-contexthub-data}
+# ContextHub データを使用したページのプレビュー {#previewing-pages-using-contexthub-data}
 
 [ContextHub](/help/sites-developing/contexthub.md) ツールバーには、ContextHub ストアのデータが表示され、このツールバーを使用してストアデータを変更することができます。ContextHub ツールバーは、ContextHub ストア内のデータによって決定されるコンテンツのプレビューに役立ちます。
 
@@ -24,7 +27,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * UI モードは、ツールバーの左側に表示されるアイコンです。アイコンをクリックまたはタップすると、そのモードに含まれる UI モジュールがツールバーに表示されます。
 * UI モジュールは、1 つ以上の ContextHub ストアのデータを表示します。一部の UI モジュールでは、ストアデータを操作することもできます。
 
-ContextHub によって、いくつかの UI モードと UI モジュールがインストールされます。管理者によって、異なる UI モードと UI モジュールを表示するように [ContextHub が設定されている](/help/sites-administering/contexthub-config.md)場合もあります。
+ContextHub によって、いくつかの UI モードと UI モジュールがインストールされます。管理者によって、異なる UI モードと UI モジュールを表示するように [ContextHub が設定されている](/help/sites-developing/ch-configuring.md)場合もあります。
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 
@@ -48,7 +51,7 @@ ContextHub ツールバーはプレビューモードで使用できます。こ
 
 ### ツールバーコンテンツ {#toolbar-content}
 
-UI モジュールは、1 つ以上の ContextHub ストアのデータをツールバーに表示できます。UIモジュールは、アイコンとタイトルを使用して自分自身を識別します。
+UI モジュールは、1 つ以上の ContextHub ストアのデータをツールバーに表示できます。UI モジュールは、アイコンとタイトルで識別されます。
 
 ![screen_shot_2018-03-23at093936](assets/screen_shot_2018-03-23at093936.png)
 
