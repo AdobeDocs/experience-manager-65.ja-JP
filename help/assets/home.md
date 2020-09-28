@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager6.5アセットユーザーガイド
-seo-title: Adobe Experience Manager6.5アセットユーザーガイド
+title: アセットガイド
+seo-title: Adobe Experience Manager6.5アセットガイド
 description: このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
 seo-description: デジタルアセットの作成、管理、配信、最適化の方法など、すべてのExperience Managerアセットタスクについて取り上げます。
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '371'
 ht-degree: 19%
 
 ---
 
 
-# Adobe Experience Manager6.5アセットユーザーガイド
+# Adobe Experience Manager6.5アセットガイド
 
 このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
 
@@ -26,12 +26,12 @@ ht-degree: 19%
 * [最近のドキュメントの更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
-## Experience Manager6.5ユーザーガイド
+## Experience Manager6.5ガイド
 
 | ユーザーガイド | 説明 |
 |--- |---|
 | [リリースノート](/help/release-notes/home.md) | 最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止/削除された機能、既知の問題など）を提供します |
-| [Formsユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
+| [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
 | [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成できます。 |
 | [管理ガイド](/help/sites-administering/home.md) | Experience Managerの管理方法を理解します。 |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、Experience Managerでのオーサリングの概念について説明します。 |
@@ -45,11 +45,11 @@ ht-degree: 19%
 
 ## 主なExperience Managerリソース
 
-* [Experience Managerビデオチュートリアル](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [Experience ManagerビデオTutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager資産コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
-* [Dispatcherユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
+* [ディスパッチャーユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
 * [HTLユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
