@@ -1,11 +1,11 @@
 ---
-title: '[!DNLAdobe Experience Manager] [!DNL Adobe Creative Cloud] フォルダ共有のベストプラクティスに従います。'
-description: Adobe Creative Cloud(CC)ユーザーとフォルダーを交換するように [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 設定します。
+title: ベストプラクティス [!DNL Adobe Creative Cloud] へのフォルダ共有
+description: adobe creative cloud(CC)ユーザーとフォルダーを交換するように [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 設定します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '957'
 ht-degree: 18%
 
 ---
@@ -38,11 +38,11 @@ This type of integration can be used in the following use cases, especially when
 
 この統合の主要な要素は以下のとおりです。
 
-* **[!DNL Experience Manager Assets]** エンタープライズネットワーク（マネージドサービスまたはオンプレミス）に導入： ここでフォルダの共有を開始します。
-* **[!DNL Adobe Marketing Cloud Assets]コアサービス&#x200B;**: ストレージサービスとの間の仲介[!DNL Experience Manager]を行い[!DNL Creative Cloud]ます。 統合を使用する組織の管理者は、Marketing Cloud組織と[!DNL Assets]展開の間に信頼関係を確立する必要があります。 また、管理者は、 ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)します。[!DNL Assets]
+* **[!DNL Experience Manager Assets]** エンタープライズネットワーク（マネージドサービスまたはオンプレミス）に導入：ここでフォルダの共有を開始します。
+* **[!DNL Adobe Marketing Cloud Assets]コアサービス**:ストレージサービスとの間の仲介 [!DNL Experience Manager] を行い [!DNL Creative Cloud] ます。 統合を使用する組織の管理者は、Marketing Cloud組織と [!DNL Assets] 展開の間に信頼関係を確立する必要があります。 また、管理者は、 ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)します。[!DNL Assets]
 
-* **[!DNL Creative Cloud]アセットWebサービス&#x200B;**(ストレージと[!DNL Creative Cloud]ファイルWeb UI): ここでは、Creative Cloudーが共有された特定のCreative Cloudアプリユーザーが、招待を受諾して、ーアカウントストレージのフォルダーを表示できます。[!DNL Assets]
-* **Creative Cloudデスクトップアプリ**: （オプション）クリエイティブユーザーのデスクトップから、ア [!DNL Creative Cloud] セットストレージーと同期して、共有フォルダーや共有ファイルに直接アクセスできます。
+* **[!DNL Creative Cloud]アセットWebサービス** (ストレージと [!DNL Creative Cloud] ファイルWeb UI):ここでは、Creative Cloudーが共有された特定のCreative Cloudアプリユーザーが、招待を受諾して、ーアカウントストレージのフォルダーを表示できます。 [!DNL Assets]
+* **Creative Cloudデスクトップアプリ**:（オプション）クリエイティブユーザーのデスクトップから、ア [!DNL Creative Cloud] セットストレージーと同期して、共有フォルダーや共有ファイルに直接アクセスできます。
 
 ## 特徴と制限事項 {#characteristics-and-limitations}
 
@@ -56,13 +56,13 @@ This type of integration can be used in the following use cases, especially when
 
 * **必要な領域：** 共有フォルダー内のファイルも、コアサー [!DNL Experience Manager] ビスでキャッシュされたコピーと共に、に物理的に格納し、 [!DNL Creative Cloud][!DNL Marketing Cloud Assets] アカウントに格納する必要があります。
 * **ネットワークと帯域幅：** 共有フォルダー内のファイルとすべての更新を、システム間でネットワーク経由で転送する必要があります。 共有する対象は、関連するファイルおよび更新のみに限るようにしてください。
-* **フォルダの種類**: この種類の [!DNL Assets] フォルダーの共有は、での共有のコンテキストではサポートされていません `sling:OrderedFolder`[!DNL Adobe Marketing Cloud]。 If you want to share a folder, when creating it in [!DNL Assets], do not select the [!UICONTROL Ordered] option.
+* **フォルダの種類**:この種類の [!DNL Assets] フォルダーの共有は、での共有のコンテキストではサポートされていません `sling:OrderedFolder`[!DNL Adobe Marketing Cloud]。 If you want to share a folder, when creating it in [!DNL Assets], do not select the [!UICONTROL Ordered] option.
 
 ## ベストプラクティス {#best-practices}
 
 Best practices for leveraging the [!DNL Experience Manager] to [!DNL Creative Cloud] folder sharing include:
 
-* **ボリュームの考慮事項：** [!DNL Experience Manager] フォルダー共有は、特定の [!DNL Creative Cloud] キャンペーンやアクティビティに関連するなど、少数のファイルを共有する場合に使用します。 To share larger sets of assets, like all approved assets in the organization, use other distribution methods (for example, [!DNL Assets Brand Portal]) or [!DNL Experience Manager] desktop app.
+* **ボリュームの考慮事項：**[!DNL Experience Manager] フォルダー共有は、特定の [!DNL Creative Cloud] キャンペーンやアクティビティに関連するなど、少数のファイルを共有する場合に使用します。 To share larger sets of assets, like all approved assets in the organization, use other distribution methods (for example, [!DNL Assets Brand Portal]) or [!DNL Experience Manager] desktop app.
 * **階層の深い共有を避ける：** 共有は再帰的に機能し、選択的な非共有は許可されません。 通常、サブフォルダーを持たないフォルダー、または1つのサブフォルダーレベルなど非常に浅い階層を持つフォルダーのみを共有の対象とします。
 * **一方向の共有用に別々のフォルダーを作成する：** 最終アセットをファイル間で共有する場合、およびクリエイティブに対応したアセット [!DNL Assets] をファイル間で再び共有する場合は、個別のフォルダ [!DNL Creative Cloud] ーを使用する必要があり [!DNL Creative Cloud][!DNL Assets]ます。 Together with a good naming convention for these folders, it creates an easier-to-understand working environment for [!DNL Assets] and [!DNL Creative Cloud] users alike.
 * **共有フォルダーでのWIPの回避：** 共有フォルダーは作業中には使用しないでください。ファイルに頻繁に変更を加える必要がある作業を行うには、Creative Cloudファイル内の別のフォルダーを使用します。
