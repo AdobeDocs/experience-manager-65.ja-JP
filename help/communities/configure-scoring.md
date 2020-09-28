@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 50%
+ht-degree: 49%
 
 ---
 
@@ -102,7 +102,7 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 
 
-![chlimage_1-248](assets/chlimage_1-248.png)
+![debug-scoring-log](assets/debug-scoring-log.png)
 
 ログエントリを表示するには：
 
@@ -118,7 +118,7 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
    * 例：`.../crx-quickstart/logs/scoring-debug.log`
 
-![chlimage_1-249](assets/chlimage_1-249.png)
+![スコアリングログ](assets/scoring-log.png)
 
 ## スコアおよびバッジの UGC {#ugc-for-scoring-and-badging}
 
@@ -126,9 +126,9 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 ここでは、JSRP を例に挙げて、スコアおよびバッジデータにアクセスする方法を説明しています。この場合、[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して UGC に容易にアクセスできます。
 
-**作成者**: 作成者の環境を試すと、UGCは作成者の環境からのみ表示されます。
+**作成者**:作成者の環境を試すと、UGCは作成者の環境からのみ表示されます。
 
-**発行時のJSRP**: 同様に、パブリッシュ環境でテストを行う場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](/help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**発行時のJSRP**:同様に、発行環境でテストする場合は、発行インスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](/help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
@@ -217,19 +217,20 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
    ユーザーはブロンズのバッジを2つ獲得し、モデレーターバッジを与えられたので、ユーザーはこのようにフォーラムに参加して表示されます。
 
-![chlimage_1-250](assets/chlimage_1-250.png)
+   ![司会者](assets/moderator.png)
 
 >[!NOTE]
 >
 >この例では次のベストプラクティスに従っていません。
 >
 >* スコアルールの名前はグローバルレベルで一意にする必要があり、末尾を同じ名前にしてはなりません。
-   >  行わ *ない処理の例* :
+   >  実行し *ない操作の例* :
    >  /libs/settings/community/scoring/rules/site1/forums-scoring
    >  /libs/settings/community/scoring/rules/site2/forums/scoring
    >
    >
-* 異なるAEMサイト向けに一意のバッジ画像を作成する
+* 様々なAEMサイト向けの一意のバッジ画像の作成
+
 >
 
 
@@ -254,7 +255,7 @@ For the Geometrixx Engage site, the user and their score is in a path contstruct
 
 The score is stored in the property `scoreValue_tl` which may directonly contain a value or indirectly refer to an atomicCounter.
 
-![chlimage_1-251](assets/chlimage_1-251.png)
+![access-scoring-ugc](assets/access-scoring-ugc.png)
 
 ### バッジ関連の UGC へのアクセス {#access-badging-ugc}
 
@@ -270,11 +271,11 @@ The score is stored in the property `scoreValue_tl` which may directonly contain
 
 #### Awarded badge {#awarded-badge}
 
-![chlimage_1-252](assets/chlimage_1-252.png)
+![落札済みのバッジング・ウッグ](assets/access-badging-ugc.png)
 
 #### Assigned badge {#assigned-badge}
 
-![chlimage_1-253](assets/chlimage_1-253.png)
+![割り当てられたバッジ](assets/assigned-badge.png)
 
 ## 追加情報 {#additional-information}
 
