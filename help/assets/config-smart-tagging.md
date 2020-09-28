@@ -1,11 +1,11 @@
 ---
-title: Smart Content Serviceを使用してアセットのタグ付けを設定します。
+title: Smart Content Serviceを使用したアセットのタグ付けの設定
 description: Learn how to configure smart tagging and enhanced smart tagging in [!DNL Adobe Experience Manager], using the Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 506b965e4f1c18230357f25532d3fdd10f526ef0
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1240'
 ht-degree: 47%
 
 ---
@@ -44,7 +44,7 @@ To enable Enhanced Smart Tags, in addition to the above, also install the latest
 
 公開証明書により、Adobe 開発者コンソールでプロファイルを認証できます。
 
-1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** Cloud Service **[!UICONTROL /]** レガシCloud Serviceにアクセスします ****。
+1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** Cloud Services **[!UICONTROL /]** レガシCloud Servicesにアクセスします ****。
 
 1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
 
@@ -61,7 +61,7 @@ To enable Enhanced Smart Tags, in addition to the above, also install the latest
    ![コンテンツサービスURLを提供するExperience Managerスマートコンテンツサービスダイアログ](assets/aem_scs.png)
 
 
-   *図： コンテンツサービスURLを提供する「Smart Content Service」ダイアログ*
+   *図：コンテンツサービスURLを提供する「Smart Content Service」ダイアログ*
 
    >[!NOTE]
    >
@@ -72,7 +72,7 @@ To enable Enhanced Smart Tags, in addition to the above, also install the latest
    ![スマートタグ付けサービス用に作成された設定の表現](assets/smart-tags-download-public-cert.png)
 
 
-   *図： スマートタグサービスの設定*
+   *図：スマートタグサービスの設定*
 
 ### Reconfigure when a certificate expires {#certrenew}
 
@@ -113,12 +113,12 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 1. **[!UICONTROL 製品プロファイルを選択]**&#x200B;ページで、「**[!UICONTROL スマートコンテンツサービス]**」を選択します。「**[!UICONTROL 設定済み API を保存]**」をクリックします。
 
-   設定に関する詳細情報がページに表示されます。このページを開いたままにして、スマートタグを設定するには、のクラウド設定の [!UICONTROL Assets Smart Tagging Service Settings] ( [!DNL Experience Manager] Smart Taggs)にこれらの値をコピーして追加します。
+   設定に関する詳細情報がページに表示されます。このページを開いたままにして、スマートタグを設定するには、のクラウド設定の [!UICONTROL Assets Smart Tagging Service Settings] ( [!DNL Experience Manager] Smart Taggingサービスの設定)にこれらの値をコピーして追加します。
 
    ![「概要」タブで、統合について指定した情報を確認できます。](assets/integration_details.png)
 
 
-   *図： Adobeデベロッパーコンソールの統合の詳細*
+   *図：Adobeデベロッパーコンソールの統合の詳細*
 
 ## スマートコンテンツサービスの設定 {#configure-smart-content-service}
 
@@ -172,21 +172,21 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
    ![DAM更新アセットワークフローの設定とスマートタグ手順の追加](assets/smart-tag-step-properties-workflow1.png)
 
 
-   *図： DAM更新アセットワークフローの設定とスマートタグ手順の追加*
+   *図：DAM更新アセットワークフローの設定とスマートタグ手順の追加*
 
 1. 自動タグ付けのステップに失敗してもワークフローを完了させたい場合は、「**[!UICONTROL 引数]**」タブで「**[!UICONTROL エラーを無視]**」を選択します。
 
    ![DAMアセットの更新ワークフローを設定し、スマートタグ手順を追加してハンドラーの設定を選択します](assets/smart-tag-step-properties-workflow2.png)
 
 
-   *図： DAMアセットの更新ワークフローを設定し、スマートタグ手順を追加してハンドラーの設定を選択します*
+   *図：DAMアセットの更新ワークフローを設定し、スマートタグ手順を追加してハンドラーの設定を選択します*
 
    フォルダーでスマートタグが有効になっているかに関わらずアップロード時にアセットをタグ付けするには、「**[!UICONTROL スマートタグフラグを無視]**」を選択します。
 
    ![DAM Update Assetワークフローを設定し、スマートタグ手順を追加して、「スマートタグフラグを無視」を選択します](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *図： DAM Update Assetワークフローを設定し、スマートタグ手順を追加して、「スマートタグフラグを無視」を選択します*
+   *図：DAM Update Assetワークフローを設定し、スマートタグ手順を追加して、「スマートタグフラグを無視」を選択します*
 
 1. 「**[!UICONTROL OK]**」をクリックして、プロセスステップを閉じ、ワークフローを保存します。
 
