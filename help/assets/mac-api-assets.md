@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Assets] HTTP APIが含まれています [!DNL Adobe Experience Manager]。'
+title: '[!DNL Assets] HTTP API'
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: fb3fdf25718cd099ff36a206718aa4bf8a2b5068
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1672'
 ht-degree: 82%
 
 ---
