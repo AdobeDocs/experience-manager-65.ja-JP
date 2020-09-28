@@ -1,11 +1,11 @@
 ---
-title: Process assets using media handlers and workflows in [!DNL Adobe Experience Manager].
+title: メディアハンドラーとワークフローを使用したアセットの処理
 description: メディアハンドラーについて、およびワークフローを使用してデジタルアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2108'
 ht-degree: 49%
 
 ---
@@ -107,7 +107,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：
    * このクラスは、他のすべてのアセットハンドラーの実装の基礎として機能し、共通の使用済み機能と、サブアセット抽出の共通の使用済み機能を提供します。
-   * 実装を開始する最善の方法は、ほとんどの処理を行い、適切なデフォルト動作を提供する、提供された抽象実装から継承することです。 com.day.cq.dam.core.AbstractAssetHandlerクラス
+   * 実装を開始する最善の方法は、ほとんどの処理を行い、適切なデフォルト動作を提供する、提供された抽象実装から継承することです。com.day.cq.dam.core.AbstractAssetHandlerクラス
    * このクラスには、抽象的なサービス記述子が用意されています。そのため、このクラスから継承し、maven-sling-plugin を使用する場合、inherit フラグを true に設定する必要があります。
 
 以下のメソッドを実装する必要があります。
@@ -503,7 +503,7 @@ Install [!DNL ImageMagick] on the disk hosting the [!DNL Experience Manager] ser
 |---|---|
 | mime:&lt;mime-type> | オプション引数。アセットの MIME タイプが引数の MIME タイプと同じ場合にプロセスが適用されます。<br>いくつかのMIMEタイプを定義できます。 |
 | tn:&lt;width>:&lt;height> | オプション引数。プロセスにより、引数で定義されたサイズのサムネールが作成されます。<br>複数のサムネールを定義できます。 |
-| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど） <br> `${file}`: 入力ファイルのフルパス名（例：） `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: 入力ファイルのディレクトリ。例 `/tmp/cqdam0816.tmp`<br>`${basename}`: 入力ファイルの名前（拡張子なし）。例： original <br>`${extension}`: 入力ファイルの拡張子（JPGなど）。 |
+| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど） <br> `${file}`:入力ファイルのフルパス名（例：） `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`:入力ファイルのディレクトリ。例 `/tmp/cqdam0816.tmp`<br>`${basename}`:入力ファイルの名前（拡張子なし）。例： original <br>`${extension}`:入力ファイルの拡張子（JPGなど）。 |
 
 For example, if [!DNL ImageMagick] is installed on the disk hosting the [!DNL Experience Manager] server and if you create a process step using [!UICONTROL CommandLineProcess] as Implementation and the following values as [!UICONTROL Process Arguments]:
 
