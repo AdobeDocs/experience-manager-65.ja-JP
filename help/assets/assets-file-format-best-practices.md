@@ -1,12 +1,12 @@
 ---
-title: を使用して、サポートされる様々なファイル形式を処理するためのベストプラクティス [!DNL Adobe Experience Manager Assets]。
+title: サポートされるファイル形式を処理するためのベストプラクティス
 description: を使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティス [!DNL Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 46%
+source-wordcount: '465'
+ht-degree: 47%
 
 ---
 
@@ -19,15 +19,15 @@ ht-degree: 46%
 
 >[!TIP]
 >
->If you are using [!DNL Experience Manager] on Adobe Managed Services (AMS), reach out to Adobe Customer Care if you plan to process lots of large PSD or PSB files. AMSデプロイメントに関するこれらのベストプラクティスを実装し、アドビ独自の形式に関する最良のツールとモデルを選択するには、アドビカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] は、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
+>If you are using [!DNL Experience Manager] on Adobe Managed Services (AMS), reach out to Adobe Customer Care if you plan to process lots of large PSD or PSB files. AMS導入のためのこれらのベストプラクティスを実装し、Adobe独自の形式に対して可能な限り最適なツールとモデルを選択するには、Adobeカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] は、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
 
 ## [!DNL Adobe Camera Raw] ライブラリ {#adobe-camera-raw-library}
 
-最適なパフォーマンスを得るために、RAWファイルとDNGファイルには [!DNL Adobe Camera Raw] ライブラリを使用することをお勧めします。
+最適なパフォーマンスを得るために、Adobeでは、RAWファイルとDNGファイルに [!DNL Adobe Camera Raw] ライブラリを使用することをお勧めします。
 
 [!DNL Adobe Camera Raw] ライブラリは、入力としてCMYKカラープロファイルをサポートしています。 ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
 
-詳しくは、 [Camera Rawのサポートを参照してください](/help/assets/camera-raw.md)。
+詳しくは、「 [サポートCamera Raw」を参照してください](/help/assets/camera-raw.md)。
 
 ## Adobe PDF Rasterizer ライブラリ {#adobe-pdf-rasterizer-library}
 
@@ -37,7 +37,7 @@ ht-degree: 46%
 * 追加設定なしでは生成されないサムネールがある AI ファイル
 * SPOT（PMS）カラーの AI ファイル
 
-PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDF Rasterizerライブラリは、カラースペースの変換をサポートしていません。 ソースPDFファイルのカラースペースに関係なく、Adobe PDF RasterizerはRGB出力のみを生成します。
+PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDFラスタライザライブラリは、カラースペースの変換をサポートしていません。 ソースPDFファイルのカラースペースに関係なく、Adobe PDFラスタライザーはRGB出力のみを生成します。
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
@@ -62,7 +62,7 @@ To know how to set up the [!DNL ImageMagick] library in [!DNL Experience Manager
 
 ## 画像トランスコーディングライブラリ {#image-transcoding-library}
 
-Adobe Imaging Transcoding Libraryは、画像のエンコーディング、トランスコード、再サンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
+Imaging Transcoding Libraryは、画像のエンコーディング、トランスコード、再サンプリング、サイズ変更など、主要なAdobe処理機能を実行する画像処理ソリューションです。
 
 画像トランスコーディングライブラリは、以下の MIME タイプをサポートします。
 
