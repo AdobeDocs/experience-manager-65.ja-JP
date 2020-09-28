@@ -1,9 +1,9 @@
 ---
-title: 多言語アセットとアセット翻訳.
+title: 多言語アセットとアセット翻訳
 description: バイナリ、メタデータ、タグなどのアセットを複数の言語に変換するワークフローの自動化方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 40%
