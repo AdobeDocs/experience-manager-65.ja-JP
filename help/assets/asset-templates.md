@@ -1,11 +1,11 @@
 ---
-title: のアセットテンプレート [!DNL Adobe Experience Manager Assets]。
+title: アセットテンプレート
 description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1555'
 ht-degree: 32%
 
 ---
@@ -49,7 +49,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 1つ以上のINDDテンプレートをにアップロードし、あらかじめ利用でき [!DNL Experience Manager] るようにします。 Choose a template for your brochure, and click **[!UICONTROL Next]**.
+1. 1つ以上のINDDテンプレートをにアップロードし、あらかじめ使用できるように [!DNL Experience Manager] します。 Choose a template for your brochure, and click **[!UICONTROL Next]**.
 
    ![chlimage_1-103](assets/chlimage_1-308.png)
 
