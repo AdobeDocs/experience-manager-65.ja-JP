@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 79%
+source-wordcount: '1133'
+ht-degree: 68%
 
 ---
 
@@ -123,3 +123,37 @@ The **[!UICONTROL Workflow Details]** tab shows each step of the workflow. Tap *
 
 ![完了タスクワークフロー](assets/completed-task-workflow.png)
 
+## トラブルシューティング {#troubleshooting-workflows}
+
+### AEM受信トレイのAEMワークフローに関連する項目を表示できません {#unable-to-see-aem-worklow-items}
+
+ワークフローモデルの所有者は、AEM受信トレイのAEMワークフローに関連する項目を表示できません。 この問題を解決するには、次に示すインデックスをAEMリポジトリに追加し、インデックスを再構築します。
+
+1. インデックスを追加するには、次のいずれかの方法を使用します。
+
+   * CRX DEで次のノードを、次の表に示す各プロパティ `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` を使用して、で作成します。
+
+      | Node | プロパティ | 型 |
+      |---|---|---|
+      | sharedWith | sharedWith | STRING |
+      | ロックしている | ロックしている | BOOLEAN |
+      | returned | returned | BOOLEAN |
+      | allowInboxSharing | allowInboxSharing | BOOLEAN |
+      | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
+
+
+   * AEMパッケージを使用してインデックスを展開します。 AEM [アーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype) プロジェクトを使用して、デプロイ可能なAEMパッケージを作成できます。 次のサンプルコードを使用して、AEM Archetypeプロジェクトにインデックスを追加します。
+
+   ```Java
+      .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
+      .property("locked", "locked").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("returned", "returned").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("allowInboxSharing", "allowInboxSharing").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
+   ```
+
+1. [プロパティインデックスを作成し、trueに設定します](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index)。
+
+1. CRX DEでインデックスを設定した後、またはパッケージを介してデプロイした後、リポジトリの [インデックスを再作成します](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex)。
+
+https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html
