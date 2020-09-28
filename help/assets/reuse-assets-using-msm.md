@@ -1,12 +1,12 @@
 ---
-title: Reuse assets using MSM for [!DNL Adobe Experience Manager Assets].
+title: MSMを使用したアセットの再利用
 description: 親アセットから派生し、親アセットにリンクされているアセットを複数のページ／フォルダーにわたって使用します。アセットはプライマリコピーと同期され、数回クリックするだけで親アセットから更新を受け取ります。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '3368'
+source-wordcount: '3367'
 ht-degree: 73%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 73%
 Multi Site Manager (MSM) functionality in [!DNL Adobe Experience Manager] enables users to reuse content that is authored once and reused across multiple web-locations. The same is available for digital assets as MSM for [!DNL Assets] functionality. Using MSM for [!DNL Assets], you can:
 
 * 一度アセットを作成した後、そのアセットのコピーを作成して、サイトの他の領域で再利用する。
-* 複数のコピーの同期を維持し、元のプライマリ・コピーを1回更新して変更内容を子コピーにプッシュします。
+* 複数のコピーを同期させ、元のプライマリ・コピーを1回更新して、変更内容を子コピーにプッシュします。
 * 親アセットと子アセットの間のリンクを一時的または永続的に休止してローカルに変更をおこなう。
 
 ## 前提条件 {#configprereq}
@@ -72,7 +72,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
    ![Experience Managerインターフェイスからライブコピーを作成する](assets/create_lc1.png)
 
-   *図： インター[!DNL Experience Manager]フェイスからライブコピーを作成します。*
+   *図：インター[!DNL Experience Manager]フェイスからライブコピーを作成します。*
 
 1. 保存先フォルダーを選択します。「**[!UICONTROL 次へ]**」をクリックします。
 1. タイトルと名前を入力します。アセットには子はありません。フォルダーのライブコピーを作成する場合は、子を含めるか含めないかを選択できます。
@@ -84,7 +84,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
    ![Experience Managerインターフェイスからライブコピーを作成する](assets/create_lc2.png)
 
-   *図： インター[!DNL Experience Manager]フェイスからライブコピーを作成します。*
+   *図：インター[!DNL Experience Manager]フェイスからライブコピーを作成します。*
 
 1. ソースアセットまたはフォルダーを選択します。「**[!UICONTROL 次へ]**」をクリックします。
 1. 保存先フォルダーを選択します。「**[!UICONTROL 次へ]**」をクリックします。
@@ -117,7 +117,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
    ![ライブコピーの情報とステータスは、コンソールのプロパティに表示されます。](assets/lcfolder_info_properties.png)
 
-   *図： ライブコピーの情報とステータス。*
+   *図：ライブコピーの情報とステータス。*
 
 1. 子アセットがライブコピー設定を借用するかどうかを選択できます。
 
@@ -132,7 +132,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
    ![ソースのライブコピーコンソールにおけるライブコピーステータスの表示](assets/livecopy-statuses.png)
 
-   *図： ライブコピーコンソール[!UICONTROL （ソース）でのライブコピーの表示ステータス]。*
+   *図：ライブコピーコンソール[!UICONTROL （ソース）でのライブコピーの表示ステータス]。*
 
 1. ライブコピーフォルダー内の各アセットに関する詳細情報を表示するには、アセットを選択し、ツールバーの「**[!UICONTROL 関係ステータス]**」をクリックします。
 
@@ -158,13 +158,13 @@ You can view the information and MSM-related statuses of live copy such as relat
 
 ![選択したソースの参照パネルで使用可能なアクションと情報](assets/referencerail_source.png)
 
-*図： 選択したソースの参照レールで使用できるアクションと情報です。*
+*図：選択したソースの参照レールで使用できるアクションと情報です。*
 
 特定のライブコピーの場合は、「**[!UICONTROL ライブコピーを編集]**」をクリックすると、関係を休止したり、ロールアウト設定を変更したりできます。
 
 ![特定のライブコピーの場合は、ソースアセットが選択されていると、関係を休止したりロールアウト設定を変更したりするためのオプションに参照パネルからアクセスできます。](assets/referencerail_editlc_options.png)
 
-*図： 特定のライブコピーの関係を中断するか、ロールアウト構成を変更します。*
+*図：特定のライブコピーの関係を中断するか、ロールアウト構成を変更します。*
 
 ### ライブコピーの参照パネルのクイックアクション {#refraillc}
 
@@ -178,7 +178,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
 ![選択したライブコピーの参照パネルで使用可能なアクション](assets/referencerail_livecopy.png)
 
-*図： 選択したライブコピーの参照レールで使用できるアクション。*
+*図：選択したライブコピーの参照レールで使用できるアクション。*
 
 ## ソースからライブコピーへの変更の伝播 {#rolloutsync}
 
@@ -194,7 +194,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
    ![一部または全部のライブコピーへのソース変更のロールアウト](assets/livecopy_rollout_page.png)
 
-   *図： ソースの変更を数部またはすべてのライブコピーにロールアウトします。*
+   *図：ソースの変更を数部またはすべてのライブコピーにロールアウトします。*
 
 >[!NOTE]
 >
@@ -204,7 +204,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
 ![選択したライブコピーへのソース変更のロールアウト](assets/livecopy_rollout_dialog.png)
 
-*図： ソースの変更を選択したライブコピーにロールアウトします。*
+*図：ソースの変更を選択したライブコピーにロールアウトします。*
 
 ### 同期アクションについて {#aboutsync}
 
@@ -224,7 +224,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
 ![同期アクションによるソースの変更内容の取り込み](assets/livecopy_sync.png)
 
-*図： 同期アクションは、ソースに対して行われた変更を取り込みます。*
+*図：同期アクションは、ソースに対して行われた変更を取り込みます。*
 
 >[!NOTE]
 >
@@ -248,7 +248,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
 ![リセットアクションでローカルの編集内容が上書きされ、ライブコピーがソースの状態に戻る](assets/livecopy_reset.png)
 
-*図： リセット操作はローカルの編集を上書きし、ライブコピーの一部をそのソースに移動します。*
+*図：リセット操作はローカルの編集を上書きし、ライブコピーの一部をそのソースに移動します。*
 
 ## ライブ関係の解除 {#detach}
 
@@ -260,7 +260,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
    ![分離アクションによって、ソースとライブコピーとの関係が完全に解除される](assets/livecopy_detach.png)
 
-   *図： デタッチアクションは、ソースコピーとライブコピーの間の関係を完全に削除します。*
+   *図：デタッチアクションは、ソースコピーとライブコピーの間の関係を完全に削除します。*
 
    >[!CAUTION]
    >
@@ -278,7 +278,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
    ![ライブコピーの概要コンソールからライブコピーフォルダー内の多数のアセットを容易に更新できる](assets/livecopyconsole_update_many_assets.png)
 
-   *図： ライブコピーフォルダー内の多数のアセットを、[!UICONTROL ライブコピーの概要](Live Copy Overview)コンソールから簡単に更新できます。*
+   *図：ライブコピーフォルダー内の多数のアセットを、[!UICONTROL ライブコピーの概要](Live Copy Overview)コンソールから簡単に更新できます。*
 
 ## Extend MSM for [!DNL Assets] {#extendapi}
 
