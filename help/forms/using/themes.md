@@ -10,9 +10,9 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '6067'
+source-wordcount: '6062'
 ht-degree: 74%
 
 ---
@@ -345,7 +345,7 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 * **サイドパネル**![を切り替え](assets/toggle-side-panel.png)：サイドパネル：サイドバーの表示/非表示を切り替えることができます。
 * **Theme Options**![theme-options](assets/theme-options.png):3つのオプションを提供
 
-   * 設定：プレビューフォームまたは対話型通信、基本clientlib、およびtypekitの設定を選択するオプションを提供します。
+   * 設定：プレビューフォームまたは対話型通信、基本clientlib、およびAdobe Fonts設定を選択するためのオプションを提供します。
    * テーマ CSS を表示：選択したテーマの CSS が生成されます。
    * スタイルを管理：テキストと画像のスタイルを管理するためのオプションが用意されています。
    * ヘルプ：テーマエディターの画像によるガイドツアーを実行します。
@@ -478,23 +478,23 @@ Instead of selecting **Numeric Box Widget**, select **Field Widget** in the comp
 
 ### テーマ内で Web フォントを使用する {#using-web-fonts-in-a-theme}
 
-これまでに行った手順により、Web サービスで使用できるフォントを、アダプティブフォームとインタラクティブ通信でも使用できるようになりました。Adobe の Web フォントサービスである [Typekit](https://typekit.com/) は、設定サービスとしてすぐに使用することができます。To use Typekit, create a kit, and fonts in it, and obtain the Kit ID from [Typekit website](https://typekit.com/).
+これまでに行った手順により、Web サービスで使用できるフォントを、アダプティブフォームとインタラクティブ通信でも使用できるようになりました。Out-of-the-box, [Adobe Fonts](https://fonts.adobe.com/), Adobe&#39;s web font service, is available as a configuration. Adobe Fontsを使用するには、キットを作成し、フォントを追加して、 [Adobe FontsからキットIDを取得します](https://fonts.adobe.com/)。
 
-次の手順を実行して、AEM で Typekit を設定します。
+AEMでAdobe Fontsを設定するには、次の手順を実行します。
 
 1. In the author instance, click ![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager > Tools ![hammer](assets/hammer.png) > Deployment > Cloud Services.
-1. **Cloud Services** ページで、サードパーティのサービス **/Typekitに移動し、「Typekit」の下にある「今すぐ設定** 」をクリック ******** します。 If a configuration is already available, click the **+** button to create a new instance.
+1. 「 **Cloud Services** 」ページで、 **Adobe Fonts** ・オプションに移動して開きます。 configurationフォルダーを開き、「 **作成**」をクリックします。
 1. **設定を作成**&#x200B;ダイアログで、新しい設定のタイトルと名前を指定し、「**作成**」をクリックします。
 
    設定ページにリダイレクトされます、
 
 1. コンポーネントを編集ダイアログが表示されるので、キット ID を入力して「**OK**」をクリックします。
 
-TypeKit 設定を使用するようにテーマを設定するには、次の手順を実行します。
+次の手順を実行して、Adobe Fontsの設定を使用するテーマを設定します。
 
 1. オーサーインスタンスで、テーマエディターにあるテーマを開きます。
 1. In the theme editor, navigate to **Theme Options** ![theme-options](assets/theme-options.png) > **Configure**.
-1. 「**Typekit 設定**」フィールドで、キットを選択して「**保存**」をクリックします。
+1. In **Adobe Fonts Configuration** field, select a kit, and click **Save**.
 
    これで、テーマのフォントファミリーのプロパティにフォントが追加されたことが分かります。
 
