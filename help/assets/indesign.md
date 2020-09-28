@@ -1,9 +1,9 @@
 ---
-title: 統合 [!DNL Adobe Experience Manager Assets] 機能 [!DNL Adobe InDesign Server]
+title: 統合 [!DNL Assets] 機能 [!DNL InDesign Server]
 description: Learn how to integrate [!DNL Adobe Experience Manager Assets] with [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 31%
@@ -22,7 +22,7 @@ To fully upload files to [!DNL Experience Manager Assets] that you have created 
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] は、2つの異なるオファーとして提供されます。 [印刷やデジタル配布のためのページレイアウトのデザインに使用するAdobe InDesign](https://www.adobe.com/jp/products/indesign.html) デスクトップアプリケーション。 [Adobe InDesign Server](https://www.adobe.com/jp/products/indesignserver.html) では、で作成した内容に基づいて、自動ドキュメントをプログラムで作成でき [!DNL InDesign]ます。 ExtendScript [エンジンに対するインターフェイスを提供するサービスとして機能します。スクリプトは](https://www.adobe.com/jp/devnet/scripting.html) 、に似た形式で記述され [!DNL ExtendScript]てい [!DNL JavaScript]ます。 For information about [!DNL InDesign] scripts see [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting).
+>[!DNL Adobe InDesign] は、2つの異なるオファーとして提供されます。 [印刷物やデジタル配布用のページレイアウトをデザインするのに使用するAdobe InDesign](https://www.adobe.com/jp/products/indesign.html) デスクトップアプリです。 [Adobe InDesign Server](https://www.adobe.com/jp/products/indesignserver.html) では、自分が作成したものに基づいて、自動ドキュメントをプログラム的に作成でき [!DNL InDesign]ます。 これは [ExtendScript](https://www.adobe.com/jp/devnet/scripting.html) ・エンジンのインターフェースを提供するサービスとして機能します。スクリプトは、に似た形で記述され [!DNL ExtendScript]てい [!DNL JavaScript]ます。 For information about [!DNL InDesign] scripts see [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting).
 
 ## How the extraction works {#how-the-extraction-works}
 
@@ -43,9 +43,10 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
       * PDF と JPG のレンディションが生成されます。
       * HTML と IDML のレンディションが生成されます。
    * Post the resulting files back to [!DNL Experience Manager Assets].
+
    >[!NOTE]
    >
-   >IDMLは、 [!DNL InDesign] ファイルのすべてのコンテンツをレンダリングするXMLベースの形式です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、InDesign Interchange Formats INX and [IDMLを参照してください](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
+   >IDMLは、 [!DNL InDesign] ファイルのすべてのコンテンツをレンダリングするXMLベースの形式です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、「 [InDesign交換形式(INXおよびIDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8))」を参照してください。
 
    >[!CAUTION]
    >
@@ -106,11 +107,11 @@ After the setup, uploading [!DNL InDesign] files into [!DNL Experience Manager A
 
 メディア抽出の引数とスクリプトパス
 
-* **ExtendScript library**: これは、他のスクリプトで必要となる、単純なhttpのget/postメソッドライブラリです。
+* **ExtendScript図書館**:これは、他のスクリプトで必要となる、単純なhttpのget/postメソッドライブラリです。
 
-* **拡張スクリプト**: ここでは、異なるスクリプトの組み合わせを指定できます。 If you want your own scripts to be executed on the [!DNL InDesign Server], save the scripts at `/apps/settings/dam/indesign/scripts`.
+* **拡張スクリプト**:ここでは、異なるスクリプトの組み合わせを指定できます。 If you want your own scripts to be executed on the [!DNL InDesign Server], save the scripts at `/apps/settings/dam/indesign/scripts`.
 
-スクリプトについて詳し [!DNL Adobe InDesign] くは、InDesign開発者ドキュメントを参照し [てください](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)
+スクリプトについて詳しくは、 [!DNL Adobe InDesign][InDesign開発者ドキュメントを参照してください](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)
 
 >[!CAUTION]
 >
@@ -128,18 +129,18 @@ This creates an [!DNL Experience Manager] page from the extracted elements. 抽�
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **ページ抽出ハンドラ**: ポップアップリストから、使用するハンドラーを選択します。 抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。In a standard [!DNL Experience Manager] installation the following is available:
+* **ページ抽出ハンドラ**:ポップアップリストから、使用するハンドラーを選択します。 抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。In a standard [!DNL Experience Manager] installation the following is available:
    * IDML Export Extraction Handle: Operates on the `IDML` rendition generated in the MediaExtract step.
 
-* **ページ名**: 結果のページに割り当てる名前を指定します。 空白の場合、名前は「page」（「page」が既に存在する場合は派生）になります。
+* **ページ名**:結果のページに割り当てる名前を指定します。空白の場合、名前は「page」（「page」が既に存在する場合は派生）になります。
 
-* **ページタイトル**: 結果のページに割り当てるタイトルを指定します。
+* **ページタイトル**:結果のページに割り当てるタイトルを指定します。
 
-* **Page Root Path**: 結果のページのルート位置へのパス。 空白のままにすると、アセットのレンディションを保持するノードが使用されます。
+* **Page Root Path**:結果のページのルート位置へのパス。空白のままにすると、アセットのレンディションを保持するノードが使用されます。
 
-* **ページテンプレート**: 結果のページの生成時に使用するテンプレートです。
+* **ページテンプレート**:結果のページの生成時に使用するテンプレートです。
 
-* **ページデザイン**: 結果のページを生成するときに使用するページデザインです。
+* **ページデザイン**:結果のページを生成するときに使用するページデザインです。
 
 ### 次のプロキシワーカーを設定 [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
 
@@ -155,7 +156,7 @@ This creates an [!DNL Experience Manager] page from the extracted elements. 抽�
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
-   * **IDS Pool**：との通信に使用するSOAPエンドポイント [!DNL InDesign Server]。 アイテムの追加、削除、および注文は必須にすることができます。
+   * **IDS Pool**：との通信に使用するSOAPエンドポイント [!DNL InDesign Server]。アイテムの追加、削除、および注文は必須にすることができます。
 
 1. 「OK」をクリックして保存します。
 
@@ -188,7 +189,7 @@ IDS 並列ジョブ数を設定するには：
    * **Maximum Parallel Jobs** - `<*x*>`（上で計算した値）
 
 1. これらの変更を保存します。
-1. Adobe CS6以降でマルチセッションサポートを有効にするには、「 `enable.multisession.name``com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定」のチェックボックスをオンにします。
+1. AdobeCS6以降でマルチセッションサポートを有効にするには、「 `enable.multisession.name``com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定」の下にあるチェックボックスをオンにします。
 1. [IDS ワーカー設定](#configuring-the-proxy-worker-for-indesign-server)に SOAP エンドポイントを追加して、`x` 個の IDS ワーカーから成るプールを作成します。
 
    If there are multiple machines running [!DNL InDesign Server], add SOAP endpoints (number of processors per machine -1) for each machine.
