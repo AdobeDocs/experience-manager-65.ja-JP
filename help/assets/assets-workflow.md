@@ -1,11 +1,11 @@
 ---
-title: ビジネス・プロセスの達成、監査の実施、コンプライアンスの達成、基本的な健全性の維持を目的とした資産の処理
+title: ワークフローを使用したアセットの処理
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '975'
 ht-degree: 27%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 # デジタルアセットの処理 {#process-assets}
 
-[!DNL Adobe Experience Manager Assets] 様々な方法でデジタルアセットを操作でき、堅牢なアセット処理が可能です。 デフォルトまたはカスタマイズされた処理方法を使用して、エンドツーエンドのビジネスプロセスの完了、監査とコンプライアンス、発見と配信、デジタルアセットの基本的な健全性を確保できます。 アセット管理のタスクを実行しながら、必要な拡大・縮小とカスタマイズを実現できます。
+[!DNL Adobe Experience Manager Assets] 様々な方法でデジタルアセットを操作でき、堅牢なアセット処理が可能です。 デフォルトまたはカスタマイズされた処理方法を使用して、エンドツーエンドのビジネスプロセスの完了、監査とコンプライアンス、発見と配信、デジタルアセットの基本的な健全性を確保できます。 アセット管理のタスクを実行しながら、必要な拡大・縮小とカスタマイズを行うことができます。
 
 ## ワークフローの理解 {#understand-workflows}
 
@@ -27,7 +27,7 @@ ht-degree: 27%
 
 ![一部のデフォルトワークフロー](assets/aem-default-workflows.png)
 
-*図： で使用できるデフォルトのワークフローの一部[!DNL Experience Manager]です。*
+*図：で使用できるデフォルトのワークフローの一部[!DNL Experience Manager]です。*
 
 ## Apply workflows to process assets {#applying-workflows-to-assets}
 
