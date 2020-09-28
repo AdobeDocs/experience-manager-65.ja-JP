@@ -1,12 +1,12 @@
 ---
-title: 検索ファセット.
+title: 検索結果をフィルターする検索ファセット
 description: How to create, modify, and use search facets in [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2485'
-ht-degree: 76%
+source-wordcount: '2489'
+ht-degree: 78%
 
 ---
 
@@ -44,9 +44,9 @@ For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「
 
 1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに述語をドラッグします。例えば、「**[!UICONTROL プロパティの述語]**」をドラッグします。
 
-   ![述語を押して移動し、検索フィルターをカスタマイズします](assets/drag_predicate.png)
+   ![述語を押して移動し、検索フィルターをカスタマイズ](assets/drag_predicate.png)
 
-   *図： 述語を押して移動し、検索フィルターをカスタマイズします。*
+   *図：述語を押して移動し、検索フィルターをカスタマイズ。*
 
 1. 「設定」タブで、その述語のフィールドラベル、プレースホルダーテキストおよび説明を入力します。述語に関連付けるメタデータプロパティの有効な名前を指定します。
 
@@ -64,14 +64,14 @@ For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「
 
    「プロパティ名」フィールドでのメタデータプロパティと述語の関連付け
 
-1. Click the **[!UICONTROL Preview]** ![preview](assets/do-not-localize/preview_icon.png) to generate a preview of the Filters panel as it appears after you add the predicate.
+1. 「**[!UICONTROL プレビュー]**」をクリックして、![プレビュー](assets/do-not-localize/preview_icon.png)述語追加後のフィルターパネルの表示に関するプレビューを生成します。
 1. プレビューモードで述語のレイアウトを確認します。
 
    ![変更送信前の検索フォームのプレビュー](assets/preview-1.png)
 
    変更送信前の検索フォームのプレビュー
 
-1. To close the preview, click the **[!UICONTROL Close]** ![close](assets/do-not-localize/close.png) on the upper-right corner of the preview.
+1. プレビューを閉じるには、プレビューの右上隅にある「**[!UICONTROL 閉じる]**」![close](assets/do-not-localize/close.png) をクリックします。
 1. 「**[!UICONTROL 完了]**」をクリックして、設定を保存します。
 1. Navigate to the Search panel in the [!DNL Assets] user interface. プロパティの述語がパネルに追加されています。
 1. Enter a description for the asset to be searched in the text box. For example, enter `Adobe`. When you perform a search, assets with description matching `Adobe` are listed in the search results.
@@ -145,7 +145,7 @@ CRXDEリポジトリのオプションのノード構造を手動で作成する
 
 ## タグ用述語の追加 {#adding-a-tags-predicate}
 
-Tag Predicateを使用すると、アセットをタグベースで検索できます。 By default, [!DNL Assets] searches assets for one or more tags matches based on the tags you specify. 言い換えれば、検索クエリは指定したタグを用いて OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すれば、すべての指定したタグを含むアセットを検索することも可能です。
+Tag Predicateを使用すると、アセットに対してタグベースの検索を実行できます。 By default, [!DNL Assets] searches assets for one or more tags matches based on the tags you specify. 言い換えれば、検索クエリは指定したタグを用いて OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すれば、すべての指定したタグを含むアセットを検索することも可能です。
 
 1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]** and then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
@@ -164,7 +164,7 @@ Tag Predicateを使用すると、アセットをタグベースで検索でき�
 
    ![タグ名の入力時にExperience Managerが提示する提案](assets/tag-suggestion.png)
 
-   *図： タグ名を入力する際にExperience Managerが提示する提案です。*
+   *図：タグ名を入力する際にExperience Managerが提示する提案です。*
 
 1. すべての指定したタグに一致するアセットを検索するには、「**[!UICONTROL すべてに一致]**」を選択します。
 
