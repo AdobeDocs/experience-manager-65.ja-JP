@@ -10,10 +10,10 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '3075'
-ht-degree: 76%
+source-wordcount: '3115'
+ht-degree: 74%
 
 ---
 
@@ -145,7 +145,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>添付ファイル</td>
-   <td><p>サポート対象のドキュメントを参照してフォームに添付するためのボタンを追加します。</p> <p><strong>注：</strong>添付ファイルコンポーネントの場合、Adobe Sign が有効になっているアダプティブフォームで、事前に定義されたファイル形式のセットを使用することができます。詳しくは、「<a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">サポートされているファイル形式</a>」を参照してください。</p> </td>
+   <td><p>サポート対象のドキュメントを参照してフォームに添付するためのボタンを追加します。複数のファイルを添付ファイルコンポーネントに添付できます。</p> <p><strong> 注意： </strong><ul> <li> Apple Safariブラウザーで開いた添付ファイルコンポーネントに複数のファイルを添付するには、ファイルを1つずつ選択して添付します。 一度に複数のファイルを選択して添付することはできません。</li> <li>添付ファイルコンポーネントは、Adobe Sign向けに有効なアダプティブフォームで、事前定義されたファイル形式のセットをサポートします。 詳しくは、「<a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">サポートされているファイル形式</a>」を参照してください。 </li> </ul></p> </td>
   </tr>
   <tr>
    <td>ファイル添付リスト</td>
