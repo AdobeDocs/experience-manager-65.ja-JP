@@ -1,11 +1,11 @@
 ---
-title: 画像追加マップとデジタル画像へのハイパーリンク
+title: ハイパ追加ーリンクを含む画像マップ
 description: ハイパーリンクを含む画像マップを画像に追加する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '268'
 ht-degree: 13%
 
 ---
