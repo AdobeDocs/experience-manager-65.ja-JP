@@ -1,11 +1,11 @@
 ---
-title: デジタルアセットをチェックインし、編集用にチェックアウトします。
+title: アセットをチェックインして編集用にチェックアウトする
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '435'
 ht-degree: 51%
 
 ---
