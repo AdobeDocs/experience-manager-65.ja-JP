@@ -1,12 +1,12 @@
 ---
-title: での処理でサポートされるファイル形式 [!DNL Adobe Experience Manager Assets]。
+title: サポートされているファイル形式と MIME タイプ
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '1636'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
@@ -85,11 +85,11 @@ ht-degree: 59%
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
 | USDz | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 
-## Dynamic Mediaでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
+## ダイナミックメディアでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
-次のリストでは、Dynamic Mediaでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
+次のリストでは、ダイナミックメディアでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
 
-Dynamic Mediaーでサポートされていないファイル形式の [検出も参照してください](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
+ダイナミックメディアでサポートされていないファイル形式の [検出も参照してください](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
 
 * 100 MB を超える IDAT チャンクサイズを持つ PNG ファイル。
 * PSB ファイル。
@@ -163,7 +163,7 @@ The [!DNL Adobe Camera Raw] library enables [!DNL Assets] to ingest raw images. 
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## Dynamic Mediaでサポートされるドキュメント形式 {#supported-document-formats-dynamic-media}
+## ダイナミックメディアでサポートされるドキュメント形式 {#supported-document-formats-dynamic-media}
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -237,7 +237,7 @@ The [!DNL Adobe Camera Raw] library enables [!DNL Assets] to ingest raw images. 
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
-他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。ストレージ、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理など、Dynamic Media配信を除く通常のDAM機能は、すべてのファイルでサポートされます。
+他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。ストレージ、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理など、すべてのファイルで、ダイナミックメディア配信を除く通常のDAM機能がサポートされます。
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -314,5 +314,5 @@ The [!DNL Adobe Camera Raw] library enables [!DNL Assets] to ingest raw images. 
 >[!MORELIKETHIS]
 >
 >* [MIME タイプベースの Assets／Scene7 アップロードジョブパラメーターサポートの有効化](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
->* [アップロードジョブのパラメーターのサポートに対して、MIMEタイプベースの設定を行い](config-dynamic.md)ます。
+>* [アップロードジョブのパラメーターのサポートに対して、MIMEタイプベースの設定を行います](config-dynamic.md)。
 
