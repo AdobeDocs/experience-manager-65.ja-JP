@@ -1,11 +1,11 @@
 ---
-title: の個人画像ギャラリーとしてのライトボックス [!DNL Adobe Experience Manager Assets]。
-description: Adobe Experience Managerアセットの個人画像ギャラリーとしてのライトボックスについて説明します。
+title: 個人の画像ギャラリーとしてのライトボックス
+description: ライトボックスを、Adobe Experience Managerアセットの個人画像ギャラリーとして使用する方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '249'
 ht-degree: 53%
 
 ---
