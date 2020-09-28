@@ -9,10 +9,10 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 12b2b73b6363c90d784527b260d664e48c746496
 workflow-type: tm+mt
-source-wordcount: '2022'
-ht-degree: 79%
+source-wordcount: '2200'
+ht-degree: 72%
 
 ---
 
@@ -94,7 +94,7 @@ Prefill-Submit-Data-ContentPackage.zip
 XML スキーマをベースとするアダプティブフォームの事前入力 XML と送信済み XML の構造は次のとおりです。
 
 * **事前入力 XML 構造**：事前入力 XML は、関連する XML スキーマに準拠していなければなりません。連結されていないフィールドを事前入力するには、事前入力 XML 構造を /afData/afBoundData タグにラップします。
-* **送信済みXML構造**: 事前入力XMLが使用されない場合、送信されたXMLには、 `afData` wrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力 XML が使用された場合、送信済み XML は、事前入力 XML と同じ構造をしています。事前入力 XML が `afData` のルートタグで開始する場合、出力 XML もまた同じフォーマットとなります。事前入力 XML に `afData/afBoundData` のラッパーが無く、直接 `employeeData` のようなスキーマルートタグから開始する場合は、送信済み XML もまた `employeeData` タグから開始します。
+* **送信済みXML構造**:事前入力XMLが使用されない場合、送信されたXMLには、 `afData` wrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力 XML が使用された場合、送信済み XML は、事前入力 XML と同じ構造をしています。事前入力 XML が `afData` のルートタグで開始する場合、出力 XML もまた同じフォーマットとなります。事前入力 XML に `afData/afBoundData` のラッパーが無く、直接 `employeeData` のようなスキーマルートタグから開始する場合は、送信済み XML もまた `employeeData` タグから開始します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -147,7 +147,7 @@ XML スキーマをモデルとするフィールドの場合、以下の XML �
 JSON スキーマをベースとするアダプティブフォームの場合、事前入力 JSON と送信済み JSON の構造は次のようになります。詳しくは、「[JSON スキーマを使ったアダプティブフォームの作成](../../forms/using/adaptive-form-json-schema-form-model.md)」を参照してください。
 
 * **事前入力 JSON スキーマ**：事前入力 JSON は、関連する JSON スキーマに準拠していなければなりません。また、連結されていないフィールドを事前入力する場合は、オプションで、/afData/afBoundDataオブジェクトにまとめることができます。
-* **送信されたJSON構造**: 事前入力JSONが使用されない場合、送信されたJSONには、afDataのwrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力JSONを使用する場合、送信されたJSONは事前入力JSONと同じ構造を持ちます。 afDataルートオブジェクトを使用して事前入力JSON開始を設定した場合、出力JSONも同じ形式になります。 事前入力JSONにafData/afBoundDataのラッパーがなく、代わりにuserなどのスキーマルートオブジェクトから直接開始が含まれていない場合、送信されたJSONもユーザーオブジェクトと開始します。
+* **送信されたJSON構造**:事前入力JSONが使用されない場合、送信されたJSONには、afDataのwrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力JSONを使用する場合、送信されたJSONは事前入力JSONと同じ構造を持ちます。 afDataルートオブジェクトを使用して事前入力JSON開始を設定した場合、出力JSONも同じ形式になります。 事前入力JSONにafData/afBoundDataのラッパーがなく、代わりにuserなどのスキーマルートオブジェクトから直接開始が含まれていない場合、送信されたJSONもユーザーオブジェクトと開始します。
 
 ```json
 {
@@ -227,7 +227,7 @@ For adaptive forms with no form model, the data for all the fields is under the 
 
 ## Configuration Manager を使用した事前入力サービスの設定 {#configuring-prefill-service-using-configuration-manager}
 
-事前入力サービスを有効にするには、AEM Webコンソール設定で「デフォルトの事前入力サービスの設定」を指定します。 次の手順を使用して、事前入力サービスを設定します。
+事前入力サービスを有効にするには、AEM Webコンソールの設定で「デフォルトの事前入力サービスの設定」を指定します。 次の手順を使用して、事前入力サービスを設定します。
 
 >[!NOTE]
 >
@@ -246,7 +246,7 @@ For adaptive forms with no form model, the data for all the fields is under the 
 
    >[!NOTE]
    >
-   >デフォルトでは、すべてのタイプのアダプティブフォーム（XSD、XDP、JSON、FDM、フォームモデルベースではない）のcrxファイルを介して事前入力が許可されます。 事前入力は JSON ファイルおよび XML ファイルでのみ許可されます。
+   >デフォルトでは、すべてのタイプのアダプティブForms（XSD、XDP、JSON、FDM、フォームモデルベースではない）のcrxファイルを介して事前入力が許可されます。 事前入力は JSON ファイルおよび XML ファイルでのみ許可されます。
 
 1. 事前入力サービスがフォームに対して設定されました。
 
@@ -371,3 +371,20 @@ prefill-page component.zip
 1. プロパティコンソールで、AEM Form コンテナ／基本／事前入力サービスに移動します。
 1. Default Prefill Service を選択し、「**[!UICONTROL 保存]**」をクリックします。サービスはフォームに関連付けられます。
 
+## クライアントでのデータの事前入力 {#prefill-at-client}
+
+アダプティブフォームに事前入力すると、AEM Formsサーバーはデータをアダプティブフォームにマージし、入力済みのフォームをユーザーに配信します。 デフォルトでは、データの結合アクションはサーバーで実行されます。
+
+AEM Formsサーバーを設定して、サーバーではなくクライアントでデータマージ操作を実行できます。 これにより、アダプティブフォームの事前入力とレンダリングに要する時間が大幅に短縮されます。 デフォルトでは、この機能は無効になっています。 Configuration Managerまたはコマンドラインから有効にできます。
+
+* Configuration Managerを有効または無効にするには：
+   1. AEM Configuration Manager を開きます。
+   1. アダプティブフォームとInteractive Communication Webチャネル設定を探して開きます。
+   1. Configuration.af.clientside.datamerge.enabled.nameオプションを有効にします。
+* コマンドラインで有効/無効を切り替えるには：
+   * 有効にするには、次のcURLコマンドを実行します。
+      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+
+   * 無効にするには、次のcURLコマンドを実行します。
+      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+   クライアントでのデータの事前入力オプションを最大限に活用するには、FileAttachmentMap [とCustomContextを返すように事前入力サービスを更新し](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)[ます](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
