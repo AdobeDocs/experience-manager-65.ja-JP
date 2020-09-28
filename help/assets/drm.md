@@ -1,11 +1,11 @@
 ---
-title: Digital Rights Management in [!DNL Adobe Experience Manager Assets].
+title: 資産のDigital Rights Management
 description: Learn how to manage asset expiration states and information for licensed assets in [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1422'
+source-wordcount: '1423'
 ht-degree: 82%
 
 ---
@@ -23,11 +23,11 @@ You can view the expiration status of an asset in the [!DNL Assets] console in b
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*図： カードの表示では、カードのフラグは期限切れのアセットを示します。*
+*図：カードの表示では、カードのフラグは期限切れのアセットを示します。*
 
 ![expired_flag_リスト](assets/expired_flag_list.png)
 
-*図： リスト表示の「[!UICONTROL ステータス]」列には、期限切れのバナーが表示されます。*
+*図：リスト表示の「[!UICONTROL ステータス]」列には、期限切れのバナーが表示されます。*
 
 You can view the expiration status of an asset in the [!UICONTROL Timeline] in left rail.
 
