@@ -1,11 +1,11 @@
 ---
-title: '[!DNLAdobe Experience Managerアセット]ホームページエクスペリエンス。'
+title: '[!DNL Assets]ホームページエクスペリエンス'
 description: Personalize the [!DNL Experience Manager Assets] Home page for a rich welcome screen experience, including a snapshot of recent activities around assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '562'
 ht-degree: 32%
 
 ---
@@ -65,11 +65,11 @@ The [!DNL Assets] Home page includes the following sections:
 * 最近の表示
 * 最新情報
 
-**アクティビティ**: このセクションの下では、 **[!UICONTROL マイアクティビティ]** Widgetには、アセットのアップロード、ダウンロード、アセットの作成、編集、コメント、注釈、共有など、アセット（レンディションのないアセットを含む）と共にログインしたユーザーが実行した最新のアクティビティが表示されます。
+**アクティビティ**:このセクションの下では、 **[!UICONTROL マイアクティビティ]** Widgetには、アセットのアップロード、ダウンロード、アセットの作成、編集、コメント、注釈、共有など、アセット（レンディションのないアセットを含む）と共にログインしたユーザーが実行した最新のアクティビティが表示されます。
 
-**最新**: このセクションの **[!UICONTROL 最近表示した]** Widgetには、フォルダー、コレクション、プロジェクトなど、ログインユーザーが最近アクセスしたエンティティが表示されます。
+**最新**:このセクションの **[!UICONTROL 最近表示した]** Widgetには、フォルダー、コレクション、プロジェクトなど、ログインユーザーが最近アクセスしたエンティティが表示されます。
 
-**Discover**: このセクションの **[!UICONTROL 新しい]** Widgetには、デプロイメントに最近アップロードされたアセットとレンディションが表示され [!DNL Assets] ます。
+**Discover**:このセクションの **[!UICONTROL 新しい]** Widgetには、デプロイメントに最近アップロードされたアセットとレンディションが表示され [!DNL Assets] ます。
 
 To enable purging of user activity data, enable the **[!UICONTROL DAM Event Purge Service]** from Configuration Manager. このサービスを有効にすると、ログインユーザーのアクティビティのうち指定した数を超えたものがシステムによって削除されます。
 
