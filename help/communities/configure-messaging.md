@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9d952604-f9ef-498f-937b-871817c80226
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 11%
@@ -21,7 +21,7 @@ ht-degree: 11%
 
 # メッセージング機能 {#messaging-feature}
 
-フォーラムやコメントで行われる公開されたインタラクションに加えて、AEM Communitiesのメッセージング機能により、コミュニティメンバーは互いに非公開でやり取りすることができます。
+AEM Communitiesのメッセージ機能は、フォーラムやコメントで公開されたインタラクションに加え、コミュニティメンバー同士がもう一度個人的に交流できるようにします。
 
 This feature can be included when a [community site](/help/communities/overview.md#communitiessites) is created.
 
@@ -41,7 +41,9 @@ This feature can be included when a [community site](/help/communities/overview.
 
 **G** — 削除したメッセージを復元します
 
-![messaging-section](assets/messaging-section.png) ![restore-message](assets/restore-message.png)
+![messaging-section](assets/messaging-section.png)
+
+![restore-message](assets/restore-message.png)
 
 メッセージ機能を有効にして変更するには、次を参照してください。
 
