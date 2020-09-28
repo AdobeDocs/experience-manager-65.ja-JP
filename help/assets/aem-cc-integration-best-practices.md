@@ -1,9 +1,9 @@
 ---
-title: Adobe Creative Cloud [!DNL Adobe Experience Manager] と統合のベストプラクティス。
+title: Adobe Creative Cloudのベストプラクティスとの統合
 description: アセット転送ワークフローを合理化し、高いコンテンツ速度を達成するための [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 統合のベストプラクティスです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '3262'
 ht-degree: 54%
@@ -21,14 +21,14 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->[!DNL Experience Manager] を [!DNL Creative Cloud] フォルダー共有に変更することは推奨されなくなりました。 クリエイティブユーザーにで管理されるアセットへのアクセスを提供するために、 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) ( [Adobe Asset Link](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/introduction.html) )や [!DNL Experience Manager]Experience Managerデスクトップアプリケーションなど、新しい機能を使用することをお勧めします。
+>[!DNL Experience Manager] を [!DNL Creative Cloud] フォルダー共有に変更することは推奨されなくなりました。 Adobeでは、 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) 、 [Experience Managerデスクトップアプリケーションなどの新しい機能を使用して、で管理されているアセットへのアクセスをクリエイティブユーザーに提供することをお勧め](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/introduction.html)[!DNL Experience Manager]します。
 
 ## Collaboration needs of creatives, marketers, and DAM users {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
 | 要件 | 使用例 | 関係するサーフェス |
 |---|---|---|
 | デスクトップ上でクリエイティブプロフェッショナル向けのエクスペリエンスを簡素化する | Streamline access to asset from a DAM ([!DNL Experience Manager Assets]) for creative professionals, or more broadly, users on desktop working in native asset creation applications. They need an easy and straightforward way to discover, use (open), edit and save changes to [!DNL Experience Manager], as well as upload new files. | Win or Mac desktop; [!DNL Creative Cloud] apps |
-| Provide high-quality, ready-to-use assets from [!DNL Adobe Stock] | マーケティング担当者は、アセットの調達と検出を支援することでコンテンツ作成プロセスの促進に貢献します。クリエイティブプロフェッショナルは、承認されたアセットをクリエイティブツール内から直接使用します。 | [!DNL Experience Manager Assets]; [!DNL Adobe Stock] marketplace; メタデータフィールド |
+| Provide high-quality, ready-to-use assets from [!DNL Adobe Stock] | マーケティング担当者は、アセットの調達と検出を支援することでコンテンツ作成プロセスの促進に貢献します。クリエイティブプロフェッショナルは、承認されたアセットをクリエイティブツール内から直接使用します。 | [!DNL Experience Manager Assets]; [!DNL Adobe Stock] marketplace;メタデータフィールド |
 | 組織でアセットを配布および共有する | 社内部門／支店および外部のパートナー、ディストリビューター、代理店は、親組織で共有されている承認済みアセットを使用します。組織では、作成したアセットを安全かつシームレスに共有して幅広く再利用したいと考えています。 | Brand Portal、Asset Share Commons |
 
 ## コラボレーションニーズをサポートするアドビ製品／サービス {#adobe-offerings-to-support-the-collaboration-need}
@@ -41,7 +41,7 @@ ht-degree: 54%
 
 ここでは、主に、コラボレーションニーズの最初の 2 つの側面に焦点を当てます。アセットの大規模な配布と調達については、使用例として簡単に説明します。そのようなニーズに対するソリューションとしては、Adobe Brand Portal または Asset Share Commons を検討してください。[Brand Portalなどの別のソリューション](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/home.html)、 [Asset Share Commonsコンポーネントに基づいて構築できるソリューション、](https://adobe-marketing-cloud.github.io/asset-share-commons/) Link Share [、Using](/help/assets/link-sharing.md)[](/help/assets/managing-assets-touch-ui.md) Experience ManagerAssetsを使用するソリューションは、特定の要件に基づいて検討する必要があります。
 
-![Creative CloudExperience Manager用接続では、使用する機能を決定](assets/creative-connections-aem.png)
+![Experience Manager用のCreative Cloud接続、使用する機能を決定](assets/creative-connections-aem.png)
 
 ### 使用例とアドビソリューションの対応関係 {#mapping-of-use-cases-and-adobe-solutions}
 
@@ -76,9 +76,9 @@ ht-degree: 54%
 ### よく使用される用語 {#glossary-of-common-terms}
 
 * **作業中（WIP）またはクリエイティブ WIP：**&#x200B;アセットライフサイクルのフェーズ。アセットに対してまだ複数の変更がおこなわれている最中であり、通常は、より広範なチームと共有するための準備がまだできていない状態。
-* **クリエイティブなアセット：** [!DNL Assets] 広告を様々なチームと共有する準備ができているか、クリエイティブチームがマーケティングチームやLOBチームと共有するために選択または承認している。
+* **クリエイティブなアセット：**[!DNL Assets] 広告を様々なチームと共有する準備ができているか、クリエイティブチームがマーケティングチームやLOBチームと共有するために選択または承認している。
 * **アセット承認：** 既に DAM にアップロードされているアセットに対して実行される承認プロセス。通常、ブランド承認および法的承認などが含まれます。
-* **最終アセット：**&#x200B;すべての      承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
+* **最終アセット：**&#x200B;すべての          承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
 * **アセットの小規模な更新／変更：**&#x200B;デジタルアセットに対する迅速で小規模な変更。多くの場合、リタッチ作業や小規模な編集の要求、アセットレビューまたは承認に対応するためにおこなわれます（例えば、再配置、テキストサイズの変更、彩度／明るさ、色などの調整）。
 * **アセットの大規模な更新／変更：**&#x200B;デジタルアセットに加えられる、大規模な作業が必要な変更。その変更作業は比較的長期にわたる場合もあります。通常は複数の変更が含まれます。アセットは、更新中、複数回保存する必要があります。アセットの大規模な更新により、ほとんどの場合、アセットのステージは WIP になります。
 * **DAM：**&#x200B;デジタルアセット管理。In this document, it is synonymous with [!DNL Experience Manager Assets], unless specifically mentioned otherwise.
@@ -88,12 +88,12 @@ ht-degree: 54%
 ### Considerations when using [!DNL Experience Manager] and [!DNL Creative Cloud] integration {#considerations-when-using-aem-and-creative-cloud-integration}
 
 * See [desktop app best practices](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)
-* 詳しくは、 [Adobe Stockの統合を参照してください](aem-assets-adobe-stock.md)
+* 「 [Adobe Stock統合」を参照](aem-assets-adobe-stock.md)
 * See [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)
 
 This is a brief summary of best practices for [!DNL Experience Manager] and [!DNL Creative Cloud] integration. 以下のそれぞれの項目の詳細は、このドキュメントで後述されています。
 
-* **Photoshop、InDesignまたはIllustratorで作業するクリエイティブユーザー向け：** Adobe Asset Linkは、チェックアウトしたアセットに対する作業中の作業のクリーン処理など、最適なユーザーエクスペリエンスを提供 [!DNL Experience Manager]します。
+* **クリエイティブユーザーは、Photoshop、InDesignまたはIllustratorで作業します。** Adobeアセットリンクは、チェックアウト元のアセットに対する作業中の作業のクリーンハンドリングなど、最適なユーザエクスペリエンスを提供 [!DNL Experience Manager]します。
 * **任意の汎用ファイル形式やアプリケーションで、デスクトップからのアセットへのアクセスを簡略化するには、次の手順を実行します。** デスクトップ [!DNL Experience Manager] アプリを使用します。
 * **DAMにアセットを保存する理由とタイミングを理解する：** 更新を組織内の様々なチームが利用できるようにします。
 * **共有するアセットの量に注意を払う：**&#x200B;アセットを配布する場合、ガバナンスとセキュリティが最も重要な要素になる可能性があります。Brand Portal のように、大規模なアセット配布を想定したツールの使用を検討してください。
@@ -102,15 +102,16 @@ This is a brief summary of best practices for [!DNL Experience Manager] and [!DN
 
 ### ア [!DNL Adobe Stock] セットへのアクセス [!DNL Assets] {#access-to-adobe-stock-assets-from-aem-assets}
 
-[Experience ManagerとAdobe Stockの統合](/help/assets/aem-assets-adobe-stock.md) により [!DNL Experience Manager] 、からにアセットを検索、プレビュー、ライセンス、保存でき [!DNL Adobe Stock] ま [!DNL Experience Manager]す。 Licensed and saved [!DNL Stock] assets have selected [!DNL Stock] metadata, which can be used to search for them with extra filters.
+[Experience ManagerとAdobe Stockの統合](/help/assets/aem-assets-adobe-stock.md) により [!DNL Experience Manager] 、からにアセットを検索、プレビュー、ライセンス、保存でき [!DNL Adobe Stock][!DNL Experience Manager]ます。 Licensed and saved [!DNL Stock] assets have selected [!DNL Stock] metadata, which can be used to search for them with extra filters.
 
 この統合に関するいくつかの重要な点を以下に示します。
 
 * When assets from Adobe stock are saved to [!DNL Experience Manager], they become a regular [!DNL Assets], with binary saved to the [!DNL Experience Manager] repository. Some metadata related to [!DNL Adobe Stock] are saved for the asset in [!DNL Experience Manager], otherwise the ingestion process looks the same as for any other file. 例えば、スマートタグがアクティブな場合、保存時にこれらのアセットにタグが追加されます。
 * The asset saved to [!DNL Experience Manager] is a copy, not a link back into [!DNL Adobe Stock].
 
-**からに保存されたアセット[!DNL Adobe Stock]の操作」を参照[!DNL Experience Manager]してくだ[!DNL Creative Cloud]**さい。 This integration is independent of[!DNL Adobe Asset Link], but[!DNL Adobe Asset Link]recognizes these assets saved from[!DNL Stock]that way, and displays additional metadata and a[!DNL Adobe Stock]logo on these assets in[!DNL Adobe Asset Link]extension UI in[!DNL Photoshop],[!DNL Illustrator], or[!DNL InDesign]. The files are available for browsing, opening, and so on - because they are regular assets when saved to[!DNL Experience Manager].
-Creative users working in[!DNL Creative Cloud]apps with[!DNL Adobe Asset Link]extension present, in addition to having access to already-licensed assets from[!DNL Adobe Stock]into[!DNL Experience Manager], can also use[!DNL Creative Cloud]Libraries panel to search, preview, and license[!DNL Adobe Stock]assets.[!DNL Assets]に[!DNL Adobe Stock]ライセンスされ、に保存さ[!DNL Experience Manager]れたアセットは、デプロイにアクセスする様々なチームが利用できるようになります。一方、[!DNL Experience Manager Assets]ライブラリパネル[!DNL Adobe Stock]を使用したクリエイティブのライセンスアセットは、ア[!DNL Creative Cloud][!DNL Creative Cloud]カウント内でのみ自分で利用できます。
+**からに保存されたアセット[!DNL Adobe Stock]の操作」を参照[!DNL Experience Manager]してくだ[!DNL Creative Cloud]**&#x200B;さい。 This integration is independent of [!DNL Adobe Asset Link], but [!DNL Adobe Asset Link] recognizes these assets saved from [!DNL Stock] that way, and displays additional metadata and a [!DNL Adobe Stock] logo on these assets in [!DNL Adobe Asset Link] extension UI in [!DNL Photoshop], [!DNL Illustrator], or [!DNL InDesign]. The files are available for browsing, opening, and so on - because they are regular assets when saved to [!DNL Experience Manager].
+Creative users working in [!DNL Creative Cloud] apps with [!DNL Adobe Asset Link] extension present, in addition to having access to already-licensed assets from [!DNL Adobe Stock] into [!DNL Experience Manager], can also use [!DNL Creative Cloud] Libraries panel to search, preview, and license [!DNL Adobe Stock] assets.
+[!DNL Assets] に [!DNL Adobe Stock] ライセンスされ、に保存さ [!DNL Experience Manager] れたアセットは、デプロイにアクセスする様々なチームが利用できるようになります。一方、 [!DNL Experience Manager Assets] ライブラリパネル [!DNL Adobe Stock] を使用したクリエイティブのライセンスアセットは、ア [!DNL Creative Cloud][!DNL Creative Cloud] カウント内でのみ自分で利用できます。
 
 <!-- 
 TBD: A condensed version of the below content is better placed in the Adobe DAM introduction article.
