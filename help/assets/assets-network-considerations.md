@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Assets]ネットワークに関する考慮事項と要件です。'
+title: ネットワークに関する考慮事項と要件
 description: Discusses network considerations when designing an [!DNL Adobe Experience Manager Assets] deployment.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '992'
 ht-degree: 70%
 
 ---
@@ -68,7 +68,7 @@ Understanding your network is as important as understanding [!DNL Adobe Experien
 
 Designing the topology of the [!DNL Experience Manager] environment requires detailed knowledge of the system configuration and how the network is connected within the user environment.
 
-サンプルシナリオには、5つのサーバ、S3バイナリストア、およびDynamic Mediaが設定された発行ファームが含まれます。
+サンプルシナリオには、5つのサーバー、S3バイナリストア、ダイナミックメディアが設定された発行ファームが含まれます。
 
 The dispatcher shares it&#39;s 100Mbps connection with two entities, the outside world and the [!DNL Experience Manager] deployment. アップロードとダウンロードを同時に実行するには、この数を 2 で割る必要があります。接続された外部ストレージは別の接続を使用します。
 
