@@ -1,12 +1,12 @@
 ---
-title: デジタルアセット使用状況分析を取得するには、アセットインサイトを設定します。
+title: アセットインサイトを設定して、解析を取得します。
 description: Configure Asset Insights in [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 34%
+source-wordcount: '228'
+ht-degree: 35%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 34%
 1. 「**[!UICONTROL インサイト設定]**」カードをクリックします。
 1. ウィザードで、データセンターを選択し、会社名、ユーザー名、共有暗号鍵などの資格情報を指定します。
 
-   ![Experience Managerでのアセットインサイト用のAdobeAnalyticsの設定](assets/insights_config2.png)
+   ![Experience Managerでのアセットインサイト用にAdobe Analyticsを設定](assets/insights_config2.png)
 
-   *図： でアセットインサイト[!DNL Adobe Analytics]を設定し[!DNL Experience Manager]ます。*
+   *図：でアセットインサイト[!DNL Adobe Analytics]を設定し[!DNL Experience Manager]ます。*
 
 1. 「 **[!UICONTROL 認証]**」をクリックします。
 1. After [!DNL Experience Manager] authenticates your credentials, from the **[!UICONTROL Report Suite]** list, choose an [!DNL Adobe Analytics] report suite from where you want Asset Insights to fetch data. 「**[!UICONTROL 追加]**」をクリックします。
