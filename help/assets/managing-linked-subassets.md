@@ -1,11 +1,11 @@
 ---
-title: で、参照と複数ページのアセットを持つ複合アセットを管理します [!DNL Adobe Experience Manager]。
+title: 参照と複数のページを持つ複合アセットの管理
 description: 内からデジタルアセットへの参照を作成する方法を説明します [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1360'
 ht-degree: 18%
 
 ---
@@ -40,9 +40,9 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 
 1. Click **[!UICONTROL View Properties]** from the toolbar. In the [!UICONTROL Properties] page, the list of files that reference the current asset appear under the **[!UICONTROL References]** column in the **[!UICONTROL Basic]** tab.
 
-   ![アセットの詳細の「参照」列のExperience Managerアセットの参照の表示](assets/asset-references.png)
+   ![アセットの詳細の「参照」列のExperience Managerアセットの参照を表示する](assets/asset-references.png)
 
-   *図： アセットの詳細内のアセット参照。*
+   *図：アセットの詳細内のアセット参照。*
 
 ## デジタ追加ルアセット [!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -95,8 +95,8 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 サブアセットを生成するには、次のいずれかの操作を行います。
 
-* 新しいアセット： DAMアセットの更新 [!UICONTROL ワークフローは、アップロード先の新しいアセットに対して実行され][!DNL Experience Manager]ます。 サブアセットは、新しい複数ページのアセット用に自動生成されます。
-* 既存の複数ページアセット： 次のいずれかの手順に従って、手動で [!UICONTROL DAMアセットの更新] ワークフローを実行します。
+* 新しいアセット：DAMアセットの更新 [!UICONTROL ワークフローは、アップロード先の新しいアセットに対して実行され][!DNL Experience Manager]ます。 サブアセットは、新しい複数ページのアセット用に自動生成されます。
+* 既存の複数ページアセット：次のいずれかの手順に従って、手動で [!UICONTROL DAMアセットの更新] ワークフローを実行します。
 
    * アセットを選択し、 [!UICONTROL タイムラインをクリックして] 、左側のパネルを開きます。 Alternately, use the keyboard shortcut `alt + 3`. 「 [!UICONTROL 開始ワークフロー]」をクリックし、「 [!UICONTROL DAM Update Asset]」を選択して「 [!UICONTROL 開始]」をクリックし、「 続行」をクリックします。
    * アセットを選択し、ツールバーで [!UICONTROL 作成] / [!UICONTROL ワークフロー] をクリックします。 ポップアップダイアログから「 [!UICONTROL DAM Update Asset] workflow」を選択し、「 [!UICONTROL 開始]」をクリックし、「 [!UICONTROL 続行]」をクリックします。
@@ -136,7 +136,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 >[!MORELIKETHIS]
 >
 >* [Adobe Experience Manager デスクトップアプリケーションの使用](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)
->* [Adobe Experience Managerでのデスクトップアクションの設定](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [Adobe Experience ManagerでのDesktop Actionsの設定](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [リンクされたスマートオブジェクトをAdobe Photoshopで作成](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Adobe InDesignにグラフィックを配置](https://helpx.adobe.com/jp/indesign/using/placing-graphics.html)
 
