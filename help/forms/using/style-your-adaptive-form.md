@@ -8,9 +8,9 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
+source-git-commit: 0b3884301e09eba6860891f00a98508033d12ec8
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2058'
 ht-degree: 64%
 
 ---
@@ -442,18 +442,18 @@ You can use a custom theme to apply an identical style to all the buttons of the
 
 アダプティブフォームは各種フォントを使用してデザインできます。アダプティブフォームのデザインに使用するフォントが、アダプティブフォームを表示するデバイスに存在しない場合があります。Webフォントサービスを使用して、必要なフォントをターゲットデバイスに配信できます。
 
-[!DNL Adobe Typekit] はwebフォントサービスです。 アダプティブフォームでこのサービスを設定、使用できます。To use [!DNL Adobe Typekit] in an adaptive form:
+[!DNL Adobe Fonts] はwebフォントサービスです。 アダプティブフォームでこのサービスを設定、使用できます。To use [!DNL Adobe Fonts] in an adaptive form:
 
 >[!NOTE]
 >
 >![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) は、現在はAdobe Fontsと呼ばれ [!DNL Typekit] 、Creative Cloudや他の購読に含まれています。 [詳細情報](https://fonts.adobe.com/)を参照してください。
 
-1. [](https://typekit.com/) Adobe Typekitアカウントの作成、キットの作成、キットへのフォントMyriadProの追加、キットの公開、キットIDの取得を行います。 It is required to use [!DNL Adobe Typekit] fonts (Web fonts) in an adaptive form.
-1. In the AEM [!DNL Forms] server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**. On the Cloud Services page, navigate to **[!UICONTROL Third Party Services]** > **[!UICONTROL Typekit]**, and click **[!UICONTROL Configure]** Now under [!UICONTROL Typekit]. 設定が既に使用可能な場合は、「+」ボタンをクリックして新しいインスタンスを作成します。
+1. [](https://typekit.com/) Adobe Fontsアカウントの作成、キットの作成、キットへのフォントMyriadProの追加、キットの公開、キットIDの取得を行います。 It is required to use [!DNL Adobe Fonts] (Web fonts) in an adaptive form.
+1. AEM [!DNL Forms] サーバーで、 ![adobeexperiencemanagemand](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager/ToolsToolsTools]** Tools **[!UICONTROL negar]**![](assets/hammer.png)**** Adobe Fontsに移動します。 次に、設定フォルダーを開きます。 If a configuration is already available, click the **[!UICONTROL Create]** button to create a new instance.
 
    On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. 設定ページにリダイレクトされます、In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**.
 
-1. Configure your theme to use the [!DNL TypeKit] configuration. On the author instance, open **[!UICONTROL Global Theme]** in the theme editor. In the theme editor, navigate to **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Configure]**. In **[!UICONTROL Typekit Configuration]** field, select the kit, and click **[!UICONTROL Save]**.
+1. Configure your theme to use the [!DNL Adobe Fonts] configuration. On the author instance, open **[!UICONTROL Global Theme]** in the theme editor. In the theme editor, navigate to **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Configure]**. In **[!UICONTROL Adobe Fonts Configuration]** field, select the kit, and click **[!UICONTROL Save]**.
 
-   The fonts added to the [!UICONTROL Typekit] are available for selection in the **[!UICONTROL Text]** accordion of all the components.
+   **[!UICONTROL Adobe Fontsに追加されたフォントは]** 、すべてのコンポーネントの **[!UICONTROL テキスト]** アコーディオンで選択できます。
 
