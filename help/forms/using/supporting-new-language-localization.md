@@ -10,10 +10,10 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 64%
+source-wordcount: '824'
+ht-degree: 51%
 
 ---
 
@@ -30,23 +30,34 @@ ht-degree: 64%
 
 ### アダプティブフォームのローカリゼーションの仕組み {#how-localization-of-adaptive-form-works}
 
-アダプティブフォームがレンダリングされるときは、指定された順序で以下のパラメーターが参照され、リクエストされたロケールが識別されます。
+アダプティブフォームのロケールを識別する方法は2つあります。 アダプティブフォームがレンダリングされると、リクエストされたロケールが次のように識別されます。
 
-* リクエストパラメーター `afAcceptLang`ユーザーのブラウザーロケールを上書きするには、 
+* アダプティブフォームURLの `[local]` セレクターを確認する。 The format of the URL is `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`. セレクターを使用すると、アダプティブフォームをキャッシュできます。 `[local]`
+
+* 指定した順序で次のパラメーターを確認します。
+
+   * リクエストパラメーター `afAcceptLang`ユーザーのブラウザーロケールを上書きするには、 
 `afAcceptLang` リクエストパラメーターを使用して、ロケールを強制的に設定します。 例えば、次のURLは日本語ロケールでのフォームのレンダリングを強制します。
-   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* The browser locale set for the user, which is specified in the request using the `Accept-Language` header.
+   * The browser locale set for the user, which is specified in the request using the `Accept-Language` header.
 
-* AEM のユーザー指定の言語設定です。
+   * AEM のユーザー指定の言語設定です。
 
-ロケールが識別されると、アダプティブフォームはフォームに固有の辞書を参照します。リクエストされたロケールでフォームに固有の辞書が見つからない場合、代わりに英語辞書（en）が使用されます。
+   * ブラウザーのロケールはデフォルトで有効です。 ブラウザーのロケール設定を変更するには
+      * Configuration Managerを開きます。 The URL is `http://[server]:[port]/system/console/configMgr`
+      * Locate and open the **[!UICONTROL Adaptive Form and Interactive Communication Web Channel]** configuration.
+      * 「ブラウザーロケールを **[!UICONTROL 使用]** 」オプションのステータスを変更し、設定を **[!UICONTROL 保存します]** 。
+
+ロケールが識別されると、アダプティブフォームはフォームに固有の辞書を参照します。要求されたロケールに対応するフォーム固有の辞書が見つからない場合、アダプティブフォームが作成された言語用の辞書が使用されます。
+
+ロケール情報が存在しない場合、アダプティブフォームはフォームの元の言語で配信されます。 元の言語は、アダプティブフォームの開発時に使用する言語です。
 
 リクエストされたロケールでクライアントライブラリが存在しない場合、ロケールに含まれる言語コードがクライアントライブラリに存在しないかチェックします。例えば、リクエストされたロケールが `en_ZA`（南アフリカ英語）で`en_ZA`用のクライアントライブラリが存在しない場合、アダプティブフォームは、`en`（英語）言語が存在する場合、このクライアントライブラリを使用します。ただし、どちらも存在しない場合、アダプティブフォームでは`en`ロケールの辞書が使用されます。
 
 ## サポートされていないロケールにローカリゼーションのサポートを追加する {#add-localization-support-for-non-supported-locales}
 
-AEM Formsは現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語(zh-TW)、韓国語(ko-KR)ロケールでのアダプティブフォームコンテンツのローカライゼーションをサポートしています。
+AEM Formsでは、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、ポルトガル語(pt-BR)、中国語(zh-CN)、中国語 — 台湾(zh-TW)、韓国語(ko-KR)ロケールでのアダプティブフォームコンテンツのローカライゼーションをサポートしています。
 
 アダプティブフォーム実行時に新しいロケールのサポートを追加するには、次を参照してください。
 
@@ -82,11 +93,11 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-の下にタイプのノードを作成し、にカテゴリを、に依存関係を、 `cq:ClientLibraryFolder` およびに依存関係 `etc/<folderHierarchy>`を付け `guides.I18N.<locale>``xfaforms.3rdparty``xfaforms.I18N.<locale>``guide.common`ます。 &quot;
+の下にタイプのノードを作成し、にカテゴリを、に依存関係を、 `cq:ClientLibraryFolder` およびに依存関係 `etc/<folderHierarchy>`を付け `guides.I18N.<locale>``xfaforms.3rdparty``xfaforms.I18N.<locale>``guide.common`ます。&quot;
 
 クライアントライブラリに次のファイルを追加します。
 
-* **i18n.jsを定義し、「calendarSymbols」,** ,, `guidelib.i18n`, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns`per the per described the per Locale Set localeの仕様， `numberSymbols``currencySymbols``typefaces``<locale>`[](https://helpx.adobe.com/jp/content/dam/Adobe/specs/xfa_spec_3_3.pdf), You can also see how it is defined for other supported locales in `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
+* **i18n.jsを定義し、「calendarSymbols」,** ,, `guidelib.i18n`, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns``numberSymbols``currencySymbols``typefaces``<locale>`[](https://helpx.adobe.com/jp/content/dam/Adobe/specs/xfa_spec_3_3.pdf)per the per descriptions and the per descriptions in the Locale Set locale仕様， , You can also see how it is defined for other supported locales in `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
 * **とを定義するLogMessages.js** 。LogMessages.jsは、の定義に従っ `guidelib.i18n.strings` て、とを定義し `guidelib.i18n.LogMessages``<locale>``/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`ます。
 * 以下を含む **js.txt** ファイル。
 
