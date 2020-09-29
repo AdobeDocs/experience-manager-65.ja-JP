@@ -3,10 +3,10 @@ title: アセットを共有するプライベートフォルダー
 description: Learn how to create a private folder in the [!DNL Adobe Experience Manager Assets] and share it with other users and the assign various privileges to them.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 63d08f932b09e375e1b0da92cde27a60ec6e7f56
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 19%
+source-wordcount: '591'
+ht-degree: 21%
 
 ---
 
@@ -82,15 +82,4 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 >[!NOTE]
 >
 >上記の方法を使用してユーザーインターフェイスからフォルダーを削除すると、関連付けられたユーザーグループも削除されます。
-ただし、既存の冗長、未使用および自動生成されたユーザーグループは、 [JMXを使用してリポジトリからクリーンアップできます](#group-clean-up-jmx)。
-
-### JMXを使用して、未使用のユーザーグループをクリーンアップします。 {#group-clean-up-jmx}
-
-未使用のユーザー・グループのリポジトリをクリーンアップするには、次の手順に従います。
-
-1. JMXを開き、オーサーインスタンス上のアセットの冗長なグループを [!DNL Experience Manager] 削除し `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`ます。
-例： `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`
-
-1. このJMXから `clean` メソッドを呼び出します。
-
-すべての冗長なユーザーグループまたは自動生成されたグループ（以前に削除したグループと同じ名前のフォルダーを作成したときに作成される）が、パスから削除されることが確認でき `/home/groups/mac/default/<user_name>/<folder_name>`ます。
+ただし、既存の冗長、未使用および自動生成されたユーザーグループは、作成者インスタンスのJMXの `clean` メソッド(http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets)を使用して、リポジトリからクリーンアップできます。
