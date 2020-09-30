@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: add17f46dfb292aeaf8425e5f75cfe955ed93cbc
 workflow-type: tm+mt
-source-wordcount: '2424'
-ht-degree: 56%
+source-wordcount: '2468'
+ht-degree: 53%
 
 ---
 
@@ -37,7 +37,7 @@ Maven に基づく AEM プロジェクトのビルドには以下のメリット
 
 ### Maven Project Archetypes {#maven-project-archetypes}
 
-アドビでは、AEMプロジェクトのベースラインとして機能する2つのMavenアーキタイプを提供しています。 詳しくは、以下のリンクを参照してください。
+Adobeには、AEMプロジェクトのベースラインとして機能する2つのMavenアーキタイプが用意されています。 詳しくは、以下のリンクを参照してください。
 
 * [AEMプロジェクトのアーキタイプ](https://github.com/adobe/aem-project-archetype)
 * [単一ページアプリ用のMavenアーキタイプスターターキット](https://github.com/adobe/aem-spa-project-archetype)
@@ -46,22 +46,26 @@ Maven に基づく AEM プロジェクトのビルドには以下のメリット
 
 ### What is the UberJar? {#what-is-the-uberjar}
 
-「UberJar」は、アドビから提供される特別なJavaアーカイブ(JAR)ファイルに付けられる非公式な名前です。 これらのJARファイルには、Adobe Experience Managerが公開するパブリックJava APIがすべて含まれています。 制限付き外部ライブラリに加えて、特にApache Sling、Apache Jackrabbit、Apache Lucene、Google Guavaから提供されるAEMで利用可能なすべてのパブリックAPIと、画像処理に使用される2つのライブラリ（Werner RandelshoferのCY JPEG ImageIOライブラリとLibrary）が含ます。 UberJarにはAPIインターフェイスとクラスのみが含まれます。つまり、AEMのOSGiバンドルによってエクスポートされたインターフェイスとクラスのみが含まれます。 They also contain a *MANIFEST.MF* file containing the correct package export versions for all of these exported packages, thus ensuring that projects built against the UberJar have the correct package import ranges.
+「UberJar」は、Adobeが提供する特殊なJavaアーカイブ(JAR)ファイルに付ける非公式な名前です。 これらのJARファイルには、Adobe Experience Managerが公開するパブリックJava APIがすべて含まれています。 制限付き外部ライブラリに加えて、特にApache Sling、Apache Jackrabbit、Apache Lucene、Google GuavaのAEMで使用できるすべてのパブリックAPIと、画像処理に使用される2つのライブラリ（Werner RandelshoferのCYMK JPEG ImageIOライブラリとLibrary）が含まれます。 UberJarsには、APIインターフェイスとクラスのみが含まれます。つまり、AEMのOSGiバンドルによってエクスポートされたインターフェイスとクラスのみが含まれます。 They also contain a *MANIFEST.MF* file containing the correct package export versions for all of these exported packages, thus ensuring that projects built against the UberJar have the correct package import ranges.
 
 ### Why did Adobe create the UberJars? {#why-did-adobe-create-the-uberjars}
 
 これまで、開発者は様々な AEM ライブラリに対する個別の依存関係を比較的多数管理し、新しい API が使用されるたびに、個別の依存関係を 1 つ以上プロジェクトに追加する必要がありました。1 つのプロジェクトに UberJar を導入すると、30 個の個別の依存関係がプロジェクトから削除されます。
 
-AEM 6.5以降、アドビでは次の2つのUberJarを提供しています。 非推奨のインターフェイスと、その非推奨のインターフェイスを削除するインターフェイスを含むインターフェイス。 ビルド時に明示的に1つを参照することで、お客様は、廃止されたコードに依存しているかどうかを理解する必要があります。
+AEM 6.5以降、Adobeは2つのUberJarを提供します。非推奨のインターフェイスと、その非推奨のインターフェイスを削除するインターフェイスを含むインターフェイス。 ビルド時に明示的に1つを参照することで、お客様は、廃止されたコードに依存しているかどうかを理解する必要があります。
 
-2つ目のUber Jarは、非推奨のクラス、メソッド、プロパティを削除するので、ユーザーは、これらのクラス、メソッド、プロパティに対してコンパイルを行い、カスタムコードが将来の配達確認であるかを把握できます。
+2つ目のUber Jarは、非推奨のクラス、メソッド、プロパティを削除するので、ユーザーは、これらのクラス、メソッド、プロパティに対してコンパイルを行い、カスタムコードが将来の配達確認であるかどうかを把握できます。
 
 ### 使用するUberJar {#which-uberjar-to-use}
 
-AEM 6.5には、Uber Jarの2種類の味があります。
+AEM 6.5には、Uber Jarの2種類の種類が含まれています。
 
 1. Uber Jar — 非推奨とマークされていないパブリックインターフェイスのみを含みます。 これは、将来の配達確認でコードベースが非推奨APIに依存しなくなるのを助けるため、 **UberJarを使用することを推奨します** 。
-1. 非推奨のAPIを持つUber Jar — 今後のAEMのバージョンで非推奨とマークされているものを含め、すべてのパブリックインターフェイスが含まれます。
+1. 非推奨のAPIを持つUber Jar - AEMの将来のバージョンで非推奨とマークされているものを含め、すべてのパブリックインターフェイスが含まれます。
+
+>[!NOTE]
+>
+>AEM 6.5.6以降では、UberJarおよびその他の関連アーティファクトは、AdobeのパブリックMavenリポジトリ [(repo.adobe.com)ではなく、](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/) Maven Centralリポジトリで使用できます。 メインのUberJarファイルの名前がに変更され `uber-jar-<version>.jar`ます。 その結果、 `classifier`タグに値 `apis``dependency` はありません。
 
 ### UberJarsの使用方法 {#how-do-i-use-the-uberjars}
 
@@ -83,7 +87,7 @@ If you are using Apache Maven as a build system (which is the case for most AEM 
 
 >[!CAUTION]
 >
->アドビでは、今後のバージョンのAEMでアプリケーションが正しく動作するように、非推奨のAPIが**** *含まれていないUber Jarに対してデプロイすることをお勧めします。
+>Adobeでは、AEMの将来のバージョンでアプリケーションが正しく動作するように、非推奨のAPIが**** *含まれていないUber Jarに対してデプロイすることを推奨します。
 >
 >非推奨のAPIに依存するコードを変更して変更内容に合わせることができない場合にのみ、Uber Jarと非推奨のAPIのサポートを使用してください。
 
@@ -97,7 +101,7 @@ If you are using Apache Maven as a build system (which is the case for most AEM 
 </dependency>
 ```
 
-Sonatype Nexus、Apache Archiva または JFrog Artifactory などの Maven Repository Manager を既に使用している場合は、このリポジトリマネージャーを参照するための適切な設定をプロジェクトに追加し、使用しているリポジトリマネージャーにアドビの Maven リポジトリ（[https://repo.adobe.com/nexus/content/groups/public/](https://repo.adobe.com/nexus/content/groups/public/)）を追加します。
+If your company is already using a Maven Repository Manager such as Sonatype Nexus, Apache Archiva, or JFrog Artifactory, add the appropriate configuration to your project to reference this repository manager and add Adobe&#39;s Maven repository ([https://repo.maven.apache.org/maven2/](https://repo.maven.apache.org/maven2/)) to your repository manager.
 
 If you are not using a repository manager, then you will need to add a *repository* element to your *pom.xml* file:
 
@@ -106,7 +110,7 @@ If you are not using a repository manager, then you will need to add a *reposito
     <repository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </repository>
 </repositories>
@@ -114,7 +118,7 @@ If you are not using a repository manager, then you will need to add a *reposito
     <pluginRepository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </pluginRepository>
 </pluginRepositories>
