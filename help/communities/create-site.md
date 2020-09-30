@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d5f4b8a8c42df86831bb57b73949e443ec19d7ea
+source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 44%
+ht-degree: 42%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 44%
 
 ## コミュニティサイトの作成 {#create-a-community-site}
 
-作成者インスタンスを使用して、コミュニティサイトを作成します。 AEM Authorインスタンス：
+作成者インスタンスを使用して、コミュニティサイトを作成します。 AEM作成者インスタンスで：
 
 1. 管理者権限でサインインします。
-1. From global navigation, go to **Navigation, Communities, Sites.**
+1. グローバルナビゲーションから、 **[!UICONTROL コミュニティ]** / **[!UICONTROL サイトに移動します]**。
 
 コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を案内するウィザードが提供されます。It is possible to move forward to the `Next` step or `Back` to the previous step before committing the site in the final step.
 
@@ -44,9 +44,9 @@ ht-degree: 44%
 
 * **コミュニティサイトのタイトル**: `Getting Started Tutorial`
 * **コミュニティサイトの説明**: `A site for engaging with the community.`
-* **コミュニティサイトルート**: (デフォルトのルートの場合は空白のまま `/content/sites`)
+* **コミュニティサイトルート**:(デフォルトのルートの場合は空白のまま `/content/sites`)
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**: （単一言語の場合は手を付けないでください）。 英語)ドロップダウンリストを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンリストを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**：engage
 
@@ -55,7 +55,7 @@ ht-degree: 44%
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
    * *例えば*、https://localhost:4502/content/sites/ `engage/en.html`
 
-* **テンプレート**: 下に降りて～を選ぶ `Reference Site`
+* **テンプレート**:下に降りて～を選ぶ `Reference Site`
 
 * 「**次へ**」を選択します。
 
@@ -71,7 +71,7 @@ ht-degree: 44%
 
 （オプション）サイトページ全体に表示するバナー画像をアップロードします。 バナーは、ブラウザーの左端（コミュニティサイトのヘッダーとナビゲーションリンクの間）に固定されます。 バナーの高さは 120 ピクセルに切り詰められます。バナーがブラウザーの幅や 120 ピクセルの高さに合わせてリサイズされることはありません。
 
-![chlimage_1-284](assets/chlimage_1-284.png)
+![地域社会的サイトブランディング](assets/community-site-branding.png)
 
 ![upload-image-site](assets/upload-image-site.png)
 
@@ -106,10 +106,10 @@ The tags which may be applied to community content are controlled by selecting A
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
-* タイプ `tut`
+* 型 `tut`
 *  `Tutorial`
 
-![chlimage_1-286](assets/chlimage_1-286.png)
+![tagging](assets/tagging.png)
 
 #### 役割 {#roles}
 
@@ -119,7 +119,7 @@ The tags which may be applied to community content are controlled by selecting A
 
 例：
 
-* タイプ `q`
+* 型 `q`
 * Select [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
@@ -133,7 +133,7 @@ The tags which may be applied to community content are controlled by selecting A
 
 Accept the default global settings for [moderating](/help/communities/sites-console.md#moderation) user-generated content (UGC).
 
-![chlimage_1-287](assets/chlimage_1-287.png)
+![モデレート](assets/moderation1.png)
 
 #### Analytics {#analytics}
 
@@ -141,7 +141,7 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 [コミュニティ機能のための Analytics の設定](/help/communities/analytics.md)を参照してください。
 
-![chlimage_1-288](assets/chlimage_1-288.png)
+![分析](assets/analytics.png)
 
 #### TRANSLATION {#translation}
 
@@ -154,7 +154,7 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 * Select **Translate entire page**
 * デフォルトの永続性オプションをそのまま使用
 
-![chlimage_1-289](assets/chlimage_1-289.png)
+![translation-settings](assets/translation-settings.png)
 
 #### イネーブルメント {#enablement}
 
@@ -164,13 +164,13 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 「**次へ**」を選択します。
 
-![chlimage_1-290](assets/chlimage_1-290.png)
+![有効化](assets/enablement.png)
 
 ### 手順 4：コミュニティサイトの作成 {#step-create-communities-site}
 
 Select **Create.**
 
-![chlimage_1-291](assets/chlimage_1-291.png)
+![create-site](assets/create-site2.png)
 
 プロセスが完了すると、新しいサイトのフォルダーがコミュニティサイトコンソールに表示されます。
 
@@ -223,9 +223,10 @@ Select **Create.**
 >1. Select **[!UICONTROL Default Agent (publish)]**.
 >1. Next to **[!UICONTROL Settings]**, select **[!UICONTROL Edit]**.
 >1. In pop-up dialog for Agent Settings, select **[!UICONTROL Transport]** tab.
->1. URIで、ポート番号4503を目的のポート番号に変更します。 例えば、ポート6103を使用するには： https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. URIで、ポート番号4503を目的のポート番号に変更します。 例えば、ポート6103を使用するには：https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >1. 「**[!UICONTROL OK]**」を選択します。
 >1. (Optional) Select **[!UICONTROL Clear]** or **[!UICONTROL Force Retry]** to reset the replication queue.
+
 >
 
 
@@ -234,11 +235,9 @@ Select **Create.**
 
 公開サーバーが実行中であることを確認したら、地球のアイコンを選択して、コミュニティサイトを公開します。
 
-![chlimage_1-292](assets/chlimage_1-292.png)
+![publish-site](assets/publish-site.png)
 
-コミュニティサイトが正常に公開されると、次のような短いメッセージが表示されます。
-
-![chlimage_1-293](assets/chlimage_1-293.png)
+コミュニティサイトが正常に公開されると、「公開済みのサイト」というメッセージが短く表示されます。
 
 ### New Community User Groups {#new-community-user-groups}
 
@@ -247,7 +246,7 @@ Select **Create.**
 この新しいコミュニティサイトでは、手順 1 で「engage」というサイト名を指定したので、[グループコンソール](/help/communities/members.md)（グローバルナビゲーション：コミュニティ／グループ）で以下に示す 4 つの新しいユーザーグループを確認できます。
 
 * コミュニティのソーシャル管理
-* コミュニティソーシャルグループ管理者
+* コミュニティソーシャル管理グループの管理者
 * コミュニティ Engage メンバー
 * コミュニティ Engage モデレーター
 * コミュニティの権限を持つメンバー
@@ -259,11 +258,11 @@ Note that [Aaron McDonald](/help/communities/tutorials.md#demo-users) is a membe
 * コミュニティ Engage モデレーター
 * コミュニティ Engage メンバー（モデレーターグループのメンバーとして間接的に）
 
-![chlimage_1-294](assets/chlimage_1-294.png)
+![user-group](assets/user-group.png)
 
 #### https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}
 
-![chlimage_1-311](assets/chlimage_1-311.png)
+![関与する](assets/engage.png)
 
 ## 認証エラーの設定 {#configure-for-authentication-error}
 
@@ -312,24 +311,24 @@ To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the 
 1. （オプション）閲覧履歴を削除します。
 1. https://localhost:4503/を参照します。
 
-   * https://localhost:4503/content/sites/engage/en.htmlにアクセス
+   * https://localhost:4503/content/sites/engage/en.htmlにアクセスします。
 
 >[!NOTE]
 >
 >To disable, simply prefix the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
 
 
-![chlimage_1-297](assets/chlimage_1-297.png)
+![オプションステップ](assets/optional-steps.png)
 
 #### トラブルシューティング：マップ保存エラー {#troubleshooting-error-saving-map}
 
 If unable to save changes, be sure that the node name is `localhost.4503`, with a &#39;dot&#39; separator, and not `localhost:4503` with a &#39;colon&#39; separator, as `localhost`is not a valid namespace prefix.
 
-![chlimage_1-298](assets/chlimage_1-298.png)
+![error-message](assets/error-message.png)
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prefixed to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると失敗します。
+The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prefixed to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ### サイトの変更 {#modify-the-site}
 
