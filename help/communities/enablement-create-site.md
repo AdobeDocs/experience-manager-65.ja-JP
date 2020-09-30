@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1728'
 ht-degree: 49%
 
 ---
@@ -43,10 +43,10 @@ ht-degree: 49%
 
 * **コミュニティサイトの説明**: `A site for enabling the community to learn.`
 
-* **コミュニティサイトルート**: (デフォルトのルートの場合は空白のまま `/content/sites`)
+* **コミュニティサイトルート**:(デフォルトのルートの場合は空白のまま `/content/sites`)
 
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**: （単一言語の場合は手を付けないでください）。 英語)ドロップダウンを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**: `enable`
 
@@ -54,7 +54,7 @@ ht-degree: 49%
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
       *例えば*、https://localhost:4502/content/sites/ `enable/en.html`
 
-* **リファレンスサイトテンプレート**: 下に降りて～を選ぶ `Reference Structured Learning Site Template`
+* **リファレンスサイトテンプレート**:下に降りて～を選ぶ `Reference Structured Learning Site Template`
 
 「**次へ**」を選択します。
 
@@ -160,7 +160,7 @@ The tags which may be applied to community content are controlled by selecting A
    * 型 `s`
    *  `Sirius Nilson`
 
-* **Marketing Cloud組織ID**（オプション）有効化レポートに [ビデオハートビートAnalyticsを含める場合に必要な、アドビのAnalyticsアカウントのID](/help/communities/analytics.md#video-heartbeat-analytics) 。
+* **Marketing Cloud組織ID**（オプション）Adobe AnalyticsアカウントのID。有効化レポートに [Video Heartbeat Analytics](/help/communities/analytics.md#video-heartbeat-analytics) を含める場合に必要です。
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
@@ -309,7 +309,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 1. （オプション）閲覧履歴の削除
 1. https://localhost:4503/を参照します。
 
-   * https://localhost:4503/content/sites/enable/en.htmlにアクセス
+   * https://localhost:4503/content/sites/enable/en.htmlにアクセスします。
 
 >[!NOTE]
 >
@@ -326,7 +326,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-The &#39;**$**&#39; at the end of the regular expression `sling:match` string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると失敗します。
+The &#39;**$**&#39; at the end of the regular expression `sling:match` string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ## コミュニティサイトの変更 {#modifying-the-community-site}
 
@@ -349,7 +349,7 @@ The &#39;**$**&#39; at the end of the regular expression `sling:match` string is
 
 サイト構造にカタログ機能が既に含まれている場合、タイトルが変わることがあります。
 
-To modify the site&#39;s structure, navigate to the **Communities, Sites** console, open the `enable` folder, and select the **Edit Site** icon to access the properties of `Enablement Tutorial`.
+To modify the site&#39;s structure, navigate to **[!UICONTROL Communities]** > **[!UICONTROL Sites]** console, open the `enable` folder, and select the **Edit Site** icon to access the properties of `Enablement Tutorial`.
 
 構造パネルを選択し、カタログを追加するか、既存のカタログを変更します。
 
