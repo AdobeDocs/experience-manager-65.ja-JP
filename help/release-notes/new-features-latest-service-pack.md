@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
+source-git-commit: 9d549e19a22b06f010b99e5dfff1d4cef05a5bed
 workflow-type: tm+mt
-source-wordcount: '2480'
+source-wordcount: '2518'
 ht-degree: 6%
 
 ---
@@ -199,6 +199,12 @@ The steps to configure [!DNL Experience Manager Assets] with [!DNL Brand Portal]
 例えば、`On Time (MM-DD-YYYY HH:mm)` のようになります。MMは2桁の形式の月、YYYYは年、DDは2桁の形式の日、HHは24時間の軍事形式の時、mmは分です。
 
 * スクリーンリーダーは、選択したタグと選択したタグの数を読み上げ、そのタグを削除する `X` 記号を読み上げるようになりました。
+
+#### リスト表示の「作成日」の並べ替え可能な列(6.5.3.0) {#sortable-date-created-column}
+
+作成したアセットの日付の並べ替えが可能な新しい列が、DAMリスト表示およびリスト表示のアセット検索結果に追加されます。
+
+![作成日の並べ替え可能な列](assets/asset-created-date.png)
 
 #### Visual Search for [!DNL Adobe Experience Manager Assets] (6.5.2.0) {#visual-search}
 
