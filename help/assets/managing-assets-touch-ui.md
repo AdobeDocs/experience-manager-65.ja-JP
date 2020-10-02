@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cb531bfc009fc766bab20d28cf332856b1e95c7b
 workflow-type: tm+mt
-source-wordcount: '9409'
+source-wordcount: '9408'
 ht-degree: 62%
 
 ---
@@ -92,7 +92,7 @@ To configure the cleanup task for the unfinished chunk upload jobs, go to `https
 
 >[!CAUTION]
 >
->チャンクのアップロードがトリガーされた場合のデフォルト値は500 MBで、チャンクサイズは50 MBです。 アセットのアップロードに要する時間より短い時間を [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html)`timeout configuration` ()に変更した場合は、アセットのアップロードの進行中にセッションタイムアウト状況が発生することがあります。 したがって、各チャンクリクエストがセッションを更新する `chunkUploadMinFileSize` ように、および `chunksize`を変更する必要があります。
+>チャンクのアップロードがトリガーされた場合のデフォルト値は500 MBで、チャンクサイズは50 MBです。 アセットのアップロードにかかる時間より短い時間 [に設定するように](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html)`timeout configuration` Apache Jackrabbit Oak TokenConfigurationを変更すると、アセットのアップロードの進行中にセッションのタイムアウト状況が発生する場合があります。 したがって、各チャンクリクエストがセッションを更新する `chunkUploadMinFileSize` ように、および `chunksize`を変更する必要があります。
 >
 >credential expiry-timeout、latency、bandwidth、および予想される同時アップロードが指定されている場合、以下を確実に示す最大値が選択されます。
 >
