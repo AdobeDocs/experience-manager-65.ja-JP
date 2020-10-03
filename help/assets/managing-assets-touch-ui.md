@@ -4,10 +4,10 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cb531bfc009fc766bab20d28cf332856b1e95c7b
+source-git-commit: 087940d0a51c43125a309b34b82831030e7e54b4
 workflow-type: tm+mt
-source-wordcount: '9408'
-ht-degree: 62%
+source-wordcount: '9618'
+ht-degree: 60%
 
 ---
 
@@ -450,7 +450,14 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    >
    >The **[!UICONTROL Paste]** option is available in the toolbar until the paste operation is completed.
 
-### アセットの移動または名前変更 {#moving-or-renaming-assets}
+## Move and rename assets {#moving-or-renaming-assets}
+
+アセット（またはフォルダー）を別の場所に移動した場合、アセットのコピー時とは異なり、アセット（またはフォルダー）は複製されません。 アセット（またはフォルダー）はターゲットーの場所に配置され、ソースの場所から削除されます。 アセットを新しい場所に移動する際に、アセットの名前を変更することもできます。
+公開済みのアセットを別の場所に移動する場合は、アセットを再公開するオプションがあります。 デフォルトでは、公開済みアセットに対する移動操作は、自動的に非公開にします。 アセットの移動時に作成者が「再公開  」オプションを選択した場合、移動されたアセットは再公開されます。
+
+![既に公開済みのアセットを移動するときに、そのアセットを再公開できます](assets/republish-on-move.png)
+
+アセットまたはフォルダを移動するには：
 
 1. 移動するアセットの場所に移動します。
 
@@ -486,6 +493,14 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
    * Click **[!UICONTROL Cancel]** to stop the move operation.
 
    参照を更新しなければ、引き続きアセットの以前のパスが示されます。参照を調整すると、更新され、アセットの新しいパスが反映されます。
+
+### ドラッグ操作を使用したアセットの移動 {#move-using-drag}
+
+アセット（またはフォルダー）を兄弟フォルダー、 [!UICONTROL Lightbox] コレクションまたは別のコレクションに移動するには、ユーザーインターフェイスの「 [!UICONTROL 移動] 」オプションを使用する代わりに、ターゲットの場所にアセットをドラッグします。 ただし、この操作はリスト表示でのみ可能です。
+
+アセットをドラッグして移動しても、アセット [!UICONTROL を移動] ウィザードは開きません。そのため、移動中にアセットの名前を変更するオプションはありません。 また、既に公開済みのアセットは、ドラッグ操作によって再公開されます。ユーザーの再公開の承認を求めることはありません。
+
+![アセットをドラッグして、兄弟フォルダーにアセットを移動](assets/move-by-drag.gif)
 
 ## レンディションの管理 {#managing-renditions}
 
