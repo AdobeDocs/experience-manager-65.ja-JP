@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 618464d1e01986786a47a4e9c6ecce87e2a77ec3
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 58%
@@ -74,7 +74,7 @@ ht-degree: 58%
 
 パブリッシュインスタンスで[エクスペリエンスを続行](/help/communities/extend-sample-page.md#publish-sample-page)すると、同じユーザーとしてサインインしたまま、パブリッシュ環境でページを更新してアバターを削除する変更を表示できます。
 
-![chlimage_1-81](assets/chlimage_1-81.png)
+![表示変更内容](assets/view-modified-content.png)
 
 ### サンプルコメント拡張パッケージ {#sample-comment-extension-package}
 
