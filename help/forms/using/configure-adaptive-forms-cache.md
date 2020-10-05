@@ -10,10 +10,10 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d5a649337acdc01c58ecc473e7c919e06cbd0188
+source-git-commit: ade3747ba608164a792a62097b82c55626245891
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 19%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
