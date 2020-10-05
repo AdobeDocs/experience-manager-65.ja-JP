@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: d94708ee-ca6b-420c-9536-6889d752f9de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+source-git-commit: 6337a57ea12f1e026f6c754a083307ce018a1c13
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 38%
+ht-degree: 37%
 
 ---
 
@@ -37,13 +37,13 @@ The examples that follow use the community site created from the `Reference Site
 
 This is the page that loads on publish when the **Groups** menu item is selected:
 
-![chlimage_1-236](assets/chlimage_1-236.png)
+![new-group](assets/new-group.png)
 
 「**新しいグループ**」アイコンを選択すると、編集ダイアログが開きます。
 
 「**設定**」タブでは、グループの基本機能を指定します。
 
-![chlimage_1-237](assets/chlimage_1-237.png)
+![group-settings](assets/group-settings.png)
 
 * **Group Name**
 
@@ -72,21 +72,21 @@ This is the page that loads on publish when the **Groups** menu item is selected
 Under the **Template** tab is the ability to
 select from the list of community group templates that were specified when the groups function was included in the community site&#39;s structure or in a community site template.
 
-![chlimage_1-238](assets/chlimage_1-238.png)
+![group-template](assets/group-template.png)
 
 「**画像**」タブでは、コミュニティサイトのグループページにグループ用に表示する画像をアップロードできます。初期設定のスタイルシートでは、画像のサイズが170 x 90ピクセルに設定されます。
 
-![chlimage_1-239](assets/chlimage_1-239.png)
+![group-image](assets/group-image.png)
 
 「**グループを作成**」ボタンを選択すると、選択したテンプレートをベースとしてグループのページが作成され、ユーザーグループがメンバーシップ用に作成され、新しいサブコミュニティを表示するようにグループページが更新されます。
 
 例えば、画像サムネイルがアップロードされた「Focus Group」というタイトルの新しいサブコミュニティを含むグループページは、次のように表示されます（引き続きコミュニティグループ管理者としてサインインしています）。
 
-![chlimage_1-240](assets/chlimage_1-240.png)
+![グループページ](assets/group-page.png)
 
 Selecting the `Focus Group` link will open the Focus Group page in the browser, which has an initial appearance based on the chosen template, and includes a submenu underneath the main community site&#39;s menu:
 
-![chlimage_1-241](assets/chlimage_1-241.png)
+![open-group-page](assets/open-group-page.png)
 
 ### コミュニティグループメンバーのリストコンポーネント {#community-group-member-list-component}
 
