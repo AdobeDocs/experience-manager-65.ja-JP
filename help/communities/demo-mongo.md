@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: a99313c35872d3f481c3dc6f42b372cc603e7549
 workflow-type: tm+mt
 source-wordcount: '792'
-ht-degree: 55%
+ht-degree: 53%
 
 ---
 
@@ -157,26 +157,26 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 1. サインインしてコメントを投稿する：
 1. Enter text in the comment text entry box and click **[!UICONTROL Post]**
 
-   ![chlimage_1-191](assets/chlimage_1-191.png)
+   ![コメント後](assets/post-comment.png)
 
 1. Simply view the comment on the [author instance](http://localhost:4502/content/community-components/en/comments.html) (likely still signed in as admin / admin).
 
-   ![chlimage_1-192](assets/chlimage_1-192.png)
+   ![表示コメント](assets/view-comment.png)
 
-   注意：オーサーインスタンスの *asipath* の下には JCR ノードがありますが、これらは SCF フレームワーク用のものです。実際のUGCはJCRにはなく、MongoDBにあります。
+   Note: While there are JCR nodes under the *asipath* on author, these are for the SCF framework. 実際のUGCはJCRにはなく、MongoDBにあります。
 
 1. View the UGC in mongodb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** > **[!UICONTROL Content]**
 
-   ![chlimage_1-193](assets/chlimage_1-193.png)
+   ![ugc-content](assets/ugc-content.png)
 
 1. UGCをSolrで表示:
 
-   * Browse to Solr dashboard: [http://localhost:8983/solr/](http://localhost:8983/solr/)
-   * 選択 `core selector` するユーザー `collection1`
-   *  `Query`
-   *  `Execute Query`
+   * Browse to Solr dashboard: [http://localhost:8983/solr/](http://localhost:8983/solr/).
+   * 選択 `core selector` するユーザー `collection1`。
+   *  `Query`.
+   *  `Execute Query`.
 
-   ![chlimage_1-194](assets/chlimage_1-194.png)
+   ![ugc-solr](assets/ugc-solr.png)
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -186,14 +186,9 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
 1. MSRPがデフォルトのプロバイダーに設定されていることを確認します。
 
-   * すべての作成者および発行AEMインスタンスで、 [ストレージ設定コンソールに再度アクセスします](srp-config.md)
+   * On all author and publish AEM instances, revisit the [Storage Configuration console](srp-config.md) or check the AEM repository:
 
-   または、AEMリポジトリを確認します。
-
-   * In JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
-
-   * Does not contain an [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) node, it means the storage provider is JSRP
-   * If the srpc node exists and contains node [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties should define MSRP to be the default provider
-
+   * JCRでは、 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) に [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ノードが含まれていない場合、ストレージプロバイダーはJSRPであることを意味します。
+   * If the srpc node exists and contains node [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties should define MSRP to be the default provider.
 
 1. MSRPを選択した後にAEMが再起動されたことを確認します。
