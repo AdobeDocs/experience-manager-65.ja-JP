@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 48%
@@ -71,7 +71,7 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
       >[!NOTE]
       >
       >デフォルトのストレージ設定は、etc path (`/conf/global/settings/community/srpc/defaultconfiguration`)ではなくconf path(`/etc/socialconfig/srpc/defaultconfiguration`)に保存されるようになりました。 defaultsrpを期待どおりに機能させるには、 [移行手順に従うようお勧めします](#zerodt-migration-steps) 。
-   ![chlimage_1-128](assets/chlimage_1-128.png)
+   ![dsrp-config](assets/dsrp-config.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **データベース設定**
@@ -80,17 +80,17 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
       MySQL接続に指定する名前は、 [JDBC OSGi設定で入力した名前と同じである必要があります](dsrp-mysql.md#configurejdbcconnections)
 
-      *default*: コミュニティ
+      *default*:コミュニティ
 
    * **[!UICONTROL データベース名]**
 
       [init_スキーマ.sql](dsrp-mysql.md#obtain-the-sql-script) script内のスキーマに指定された名前
 
-      *default*: コミュニティ
+      *default*:コミュニティ
 
 * **SolrConfiguration**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper ホスト&#x200B;**
+   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper ホスト**
 
       内部ZooKeeperを使用してSolrを実行する場合は、この値を空白のままにします。 Else, when running in [SolrCloud mode](solr.md#solrcloud-mode) with an external ZooKeeper, set this value to the URI for the ZooKeeper, such as *my.server.com:80*
 
@@ -98,7 +98,7 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
    * **[!UICONTROL Solr URL]**
 
-      *default*: https://127.0.0.1:8983/solr/
+      *default*:https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr コレクション]**
 
@@ -106,7 +106,7 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
-### defaultsrpのダウンタイムのない移行手順 {#zerodt-migration-steps}
+### defaultsrpのダウンタイムなしの移行手順 {#zerodt-migration-steps}
 
 次の手順に従って、defaultsrpページhttp://localhost:4502/communities/admin/defaultsrp [](http://localhost:4502/communities/admin/defaultsrp) が期待どおりに動作することを確認します。
 
