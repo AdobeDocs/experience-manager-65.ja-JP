@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 53%
+ht-degree: 52%
 
 ---
 
@@ -33,7 +33,7 @@ AEM Communities では、各環境を次の目的で使用します。
 
 * 作成者環境は次の目的で使用します。
 
-   * サイト、テンプレート、コンポーネント、イネーブルメントリソース、学習パスの開発。
+   * サイト、テンプレート、コンポーネント、イネーブルメントリソース、ラーニングパスの開発。
    * 有効化リソースと学習パスへのメンバーとメンバーのグループの割り当て。
    * 割り当て、表示および投稿に関するレポートを生成します。
    * 管理タスクと設定環境。
@@ -41,7 +41,7 @@ AEM Communities では、各環境を次の目的で使用します。
 * 公開環境は次の目的で使用します。
 
    * イネーブルメントマネージャが管理するトピックに基づく学習/トレーニング
-   * コメント化と評価の有効化リソースと学習パス。
+   * コメント化と評価の有効化リソースと学習パス
    * リソースの連絡先と連絡を取る。
 
 >[!NOTE]
@@ -94,7 +94,7 @@ Use the [Tagging console](../../help/sites-administering/tags.md#tagging-console
 * `Tutorial: Arts / Auditory`
 * `Tutorial: Arts / History`
 
-![chlimage_1-417](assets/chlimage_1-417.png)
+![tutorial-tags](assets/tutorial-tags.png)
 
 次の手順に従います。
 
@@ -128,42 +128,42 @@ Instead, with the [tunnel service](#enable-the-tunnel-service) enabled, the [Mem
 
 Community Ski Class という名前の学習者グループに追加される[メンバーを作成](members.md#create-new-member)します。
 
-* **ID**: ライリー
+* **ID**:ライリー
 * **電子メール**：riley.taylor@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**: password
+* **パスワードの確認**:password
 * **名**：Riley
-* **姓**: テイラー
+* **姓**:テイラー
 
 ### Sidney Croft - 登録者 {#sidney-croft-enrollee}
 
 「Community Ski Class」グループに追加される [2 人目のメンバーを作成](members.md#create-new-member)します。
 
-* **ID**: シドニー
+* **ID**:シドニー
 * **電子メール**：sidney.croft@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**: password
+* **パスワードの確認**:password
 * **名**：Sidney
-* **姓**: クロフト
+* **姓**:クロフト
 
 ### Quinn Harper - イネーブルメントリソースの連絡先およびモデレーター {#quinn-harper-enablement-resource-contact-and-moderator}
 
 [サイトの作成後にコミュニティサイトのメンバーグループに追加されるメンバーを作成します](members.md#create-new-member) 。 This membership will allow the member to be assigned as the enablement [Resource Contact](resources.md#settings) when an enablement resource is created for the site.
 
-* **ID**: クイン
+* **ID**:クイン
 * **電子メール**：quinn.harper@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**: password
+* **パスワードの確認**:password
 * **名**：Quinn
-* **姓**: ハーパー
+* **姓**:ハーパー
 
 ### ユーザーグループを追加 - Community Ski Class {#add-a-user-group-community-ski-class}
 
 Community Ski Class という名前の[新しいグループを追加](members.md#create-new-group)します。
 
-* **ID**: コミュニティスキー教室
+* **ID**:コミュニティスキー教室
 * **名前**：Community Ski Class
-* **説明**: 有効化リソースを割り当てるためのサンプルグループ
+* **説明**:有効化リソースを割り当てるためのサンプルグループ
 * **Members To Group** &#39;add&#39;:
 
    * riley
@@ -173,7 +173,7 @@ Community Ski Class という名前の[新しいグループを追加](members.m
 
 ### Community Ski Class のプロパティ {#community-ski-class-properties}
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![スキークラスの特性](assets/ski-class-properties.png)
 
 >[!NOTE]
 >
@@ -201,12 +201,12 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
 * ダイアログで、次のように `Create New User` 入力します。
 
-   * **IDアンプ(&amp;A);ast;**: シリウス
+   * **IDアンプ(&amp;A);ast;**:シリウス
    * **電子メールアドレス**：sirius.nilson@mailinator.com
-   * **パスワード(&amp;A);ast;**: password
-   * **パスワードの確認(&amp;A);ast;**: password
+   * **パスワード(&amp;A);ast;**:password
+   * **パスワードの確認(&amp;A);ast;**:password
    * **名**：Sirius
-   * **姓(&amp;A)；姓(&amp;A);**: ニルソン
+   * **姓(&amp;A)；姓(&amp;A);**:ニルソン
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
@@ -219,5 +219,5 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
 * Select **[!UICONTROL Save]**
 
-![chlimage_1-419](assets/chlimage_1-419.png)
+![管理者ロール](assets/admin-role.png)
 
