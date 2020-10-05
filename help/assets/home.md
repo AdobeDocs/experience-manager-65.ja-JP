@@ -1,22 +1,21 @@
 ---
 title: アセットガイド
-seo-title: Adobe Experience Manager6.5アセットガイド
 description: このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
-seo-description: デジタルアセットの作成、管理、配信、最適化の方法など、すべてのExperience Managerアセットタスクについて取り上げます。
+user-guide-title: アセットガイド
 translation-type: tm+mt
-source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
+source-git-commit: e460a23ef4df14ff494d8d1472ab234787f220d7
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 19%
+source-wordcount: '339'
+ht-degree: 21%
 
 ---
 
 
-# Adobe Experience Manager6.5アセットガイド
+# アセットガイド
 
-このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
+このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべての [!DNL Experience Manager Assets] タスクについて説明します。
 
-## 主なExperience Manager記事
+## 主要 [!DNL Experience Manager] 記事
 
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
@@ -26,7 +25,7 @@ ht-degree: 19%
 * [最近のドキュメントの更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
-## Experience Manager6.5ガイド
+## [!DNL Experience Manager] 6.5ガイド
 
 | ユーザーガイド | 説明 |
 |--- |---|
@@ -43,7 +42,7 @@ ht-degree: 19%
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 | [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | このガイドでは、ユーザ生成コンテンツを共有する方法について説明 [!DNL Livefyre]します。 |
 
-## 主なExperience Managerリソース
+## 主な [!DNL Experience Manager] リソース
 
 * [Experience ManagerビデオTutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
