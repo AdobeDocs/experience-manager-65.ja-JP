@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 68%
@@ -44,7 +44,7 @@ Dispatcher のキャッシュをサポートするように設定すると、TTL
 
 ### 要件 {#requirements}
 
-* Dispatcherバージョン4.1.2以降(最新バージョンの [Dispatcherのインストール](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) を参照)
+* Dispatcherバージョン4.1.2以降(最新バージョンの場合は、「Dispatcherの [インストール](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) 」を参照)
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2 以降
@@ -61,7 +61,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 * Locate `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 新しい接続設定を作成するには、「+」アイコンを選択します
 
-   ![chlimage_1-339](assets/chlimage_1-339.png)
+   ![dispatcher](assets/dispatcher.png)
 
 * **フィルターパターン**
 
