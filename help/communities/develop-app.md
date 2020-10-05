@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 51%
+ht-degree: 50%
 
 ---
 
@@ -44,7 +44,7 @@ CRXDE Lite を使用して、次の手順を実行します。
 1. Click the green **[!UICONTROL +Add]** button.
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![ページスクリプト](assets/page-script.png)
 
 ### Head and body scripts {#head-and-body-scripts}
 
@@ -128,13 +128,13 @@ You should not only see the heading **Community Play**, but also the UI for edit
 
 サイドパネルが開くように切り替え、ウィンドウがサイドコンテンツとページコンテンツの両方を表示するのに十分な大きさである場合、アセット／コンポーネントサイドパネルが表示されます。
 
-![chlimage_1-232](assets/chlimage_1-232.png)
+![表示ページ](assets/view-page.png)
 
 * Classic UI: [http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
 
 以下に、コンテンツファインダー(cf)を含むクラシックUIでの再生ページの表示方法を示します。
 
-![chlimage_1-233](assets/chlimage_1-233.png)
+![再生ページ表示](assets/play-page-view.png)
 
 ## コミュニティコンポーネント {#communities-components}
 
