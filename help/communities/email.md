@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 50c1532b2bdc41555eff2be718cd478aad1f403a
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '822'
-ht-degree: 37%
+ht-degree: 33%
 
 ---
 
@@ -48,7 +48,7 @@ This is based on the documentation for [Configuring Email Notification](../../he
 
 例（入力されている値は例としてのみ使用されています）：
 
-![chlimage_1-98](assets/chlimage_1-98.png)
+![email-config](assets/email-config.png)
 
 * **[!UICONTROL SMTPサーバーのホスト名]**
 
@@ -98,7 +98,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 * Locate `AEM Communities Email Reply Configuration`.
 
-![chlimage_1-99](assets/chlimage_1-99.png)
+![email-reply-config](assets/email-reply-config.png)
 
 ### 通知用の設定 {#configuration-for-notifications}
 
@@ -177,7 +177,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 * Select **[!UICONTROL Add]**
 
-   ![chlimage_1-102](assets/chlimage_1-102.png)
+   ![投票輸入業者](assets/polling-importer.png)
 
 * **[!UICONTROL 型]**
 
@@ -207,7 +207,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 ### 新しいポーリングインポーターのプロトコルの調整 {#adjust-protocol-for-new-polling-importer}
 
-新しいポーリング設定が保存されたら、購読電子メールインポーターのプロパティをさらに変更し、プロトコルを `POP3` から `emailreply` に変更する必要があります
+Once the new polling configuration is saved, it is necessary to further modify properties of the subscription email importer in order to change the protocol from `POP3` to `emailreply`.
 
 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
@@ -217,7 +217,7 @@ Communities の電子メール設定インスタンスに接続するには：
    * **feedType**:置換 `pop3s` 文字列 **`emailreply`**
    * **source**:ソースのプロトコルを次に置き換え `pop3s://` ます： **`emailreply://`**
 
-![chlimage_1-103](assets/chlimage_1-103.png)
+![ポーリングプロトコル](assets/polling-protocol.png)
 
 赤い三角は、変更したプロパティを示します。変更内容を保存してください。
 
