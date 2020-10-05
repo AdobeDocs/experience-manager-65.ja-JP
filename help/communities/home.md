@@ -1,18 +1,18 @@
 ---
-title: AEM 6.5 Communitiesユーザーガイド
-seo-title: AEM 6.5 Communitiesユーザーガイド
+title: Adobe Experience Manager6.5コミュニティガイド
+seo-title: Adobe Experience Manager6.5コミュニティガイド
 description: このガイドは、フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
 seo-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 27%
+source-wordcount: '389'
+ht-degree: 28%
 
 ---
 
 
-# AEM 6.5 Communitiesユーザーガイド
+# Adobe Experience Manager6.5コミュニティガイド
 
 このガイドは、フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
 
@@ -29,14 +29,14 @@ ht-degree: 27%
 |--- |---|
 | [リリースノート](/help/release-notes/home.md) | AEMの最新リリースに関する重要な情報を紹介します。新機能、サポートされているプラットフォーム、非推奨機能、削除された機能、および既知の問題が含まれます |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
-| [Formsユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
+| [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
 | [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成できます。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
-| [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念を説明します。 |
-| [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでのAEMでのオーサリングの概念を説明します。 |
+| [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念について説明します。 |
+| [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念を説明します。 |
 | [画面ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html) | ダイナミックでインタラクティブなデジタルエクスペリエンスを公開するデジタル署名ソリューションについて説明します。 |
 | [デプロイユーザーガイド](/help/sites-deploying/home.md) | このガイドでは、AEMの基本を示します。 |
-| [開発ユーザーガイド](/help/sites-developing/home.md) | AEMインスタンスを構築する方法を説明します。 |
+| [開発ユーザーガイド](/help/sites-developing/home.md) | AEMインスタンスを構築する方法を学びます。 |
 | [ユーザガイドの管理](/help/managing/home.md) | このガイドでは、AEMプロジェクトを正常に管理する方法について説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | このガイドでは、ユーザー生成コンテンツをLivefyreと共有する方法を説明します。 |
@@ -44,7 +44,7 @@ ht-degree: 27%
 ## 主なAEMリソース
 
 * [AEMチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcherユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
+* [ディスパッチャーユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
 * [HTLユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
