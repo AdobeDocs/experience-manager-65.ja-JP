@@ -10,7 +10,7 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 42386f6e580d85efb972f2e63c5ab89112b3f734
+source-git-commit: a69e0354b5599ab555df650858f8f3200e21d2b8
 workflow-type: tm+mt
 source-wordcount: '3145'
 ht-degree: 73%
@@ -125,7 +125,7 @@ ht-degree: 73%
   </tr>
   <tr>
    <td>日付選択</td>
-   <td>日付を選択するためのカレンダーフィールドを追加します。。</td>
+   <td>日付を選択するカレンダーフィールドを追加します。</td>
   </tr>
   <tr>
    <td>ドキュメントフラグメント</td>
