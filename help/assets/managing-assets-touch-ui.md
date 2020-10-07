@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b76d93ada35f5d054c1d07bf1a7dd9deaaaec1ee
+source-git-commit: 0c6a1afff62d4a962edfc8c2e6574d65a18534ac
 workflow-type: tm+mt
 source-wordcount: '9619'
 ht-degree: 60%
@@ -452,7 +452,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 ## Move and rename assets {#moving-or-renaming-assets}
 
-アセット（またはフォルダー）を別の場所に移動した場合、アセットのコピー時とは異なり、アセット（またはフォルダー）は複製されません。 アセット（またはフォルダー）はターゲットーの場所に配置され、ソースの場所から削除されます。 アセットを新しい場所に移動する際に、アセットの名前を変更することもできます。
+アセット（またはフォルダー）を別の場所に移動した場合、アセットのコピー時と異なり、アセット（またはフォルダー）は複製されません。 アセット（またはフォルダー）はターゲットーの場所に配置され、ソースの場所から削除されます。 アセットを新しい場所に移動する際に、アセットの名前を変更することもできます。
 公開済みのアセットを別の場所に移動する場合は、アセットを再公開するオプションがあります。 デフォルトでは、公開済みアセットに対する移動操作は、自動的に非公開にします。 アセットの移動時に作成者が「再公開  」オプションを選択した場合、移動されたアセットは再公開されます。
 
 ![既に公開済みのアセットを移動するときに、そのアセットを再公開できます](assets/republish-on-move.png)
