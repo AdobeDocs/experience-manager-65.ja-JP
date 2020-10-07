@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0c6a1afff62d4a962edfc8c2e6574d65a18534ac
+source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
 workflow-type: tm+mt
-source-wordcount: '9619'
+source-wordcount: '9613'
 ht-degree: 60%
 
 ---
@@ -496,7 +496,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 ### ドラッグ操作を使用したアセットの移動 {#move-using-drag}
 
-アセット（またはフォルダー）を兄弟フォルダー、 [!UICONTROL Lightbox] コレクションまたは別のコレクションに移動するには、ユーザーインターフェイスの「 [!UICONTROL 移動] 」オプションを使用する代わりに、ターゲットの場所にアセットをドラッグします。 ただし、この操作はリスト表示でのみ可能です。
+アセット（またはフォルダ）は、ユーザインターフェイスの「 [!UICONTROL 移動] 」オプションを使用する代わりに、兄弟ターゲットにドラッグして移動できます。 ただし、この操作はリスト表示でのみ可能です。
 
 アセットをドラッグして移動しても、アセット [!UICONTROL の移動] ウィザードは開かないので、移動中にアセットの名前を変更するオプションはありません。 また、既に公開済みのアセットは、ドラッグ操作によって再公開されます。ユーザーの再公開の承認を求めることはありません。
 
