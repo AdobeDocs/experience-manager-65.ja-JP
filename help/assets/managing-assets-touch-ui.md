@@ -4,9 +4,9 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 087940d0a51c43125a309b34b82831030e7e54b4
+source-git-commit: b76d93ada35f5d054c1d07bf1a7dd9deaaaec1ee
 workflow-type: tm+mt
-source-wordcount: '9618'
+source-wordcount: '9619'
 ht-degree: 60%
 
 ---
@@ -498,7 +498,7 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 アセット（またはフォルダー）を兄弟フォルダー、 [!UICONTROL Lightbox] コレクションまたは別のコレクションに移動するには、ユーザーインターフェイスの「 [!UICONTROL 移動] 」オプションを使用する代わりに、ターゲットの場所にアセットをドラッグします。 ただし、この操作はリスト表示でのみ可能です。
 
-アセットをドラッグして移動しても、アセット [!UICONTROL を移動] ウィザードは開きません。そのため、移動中にアセットの名前を変更するオプションはありません。 また、既に公開済みのアセットは、ドラッグ操作によって再公開されます。ユーザーの再公開の承認を求めることはありません。
+アセットをドラッグして移動しても、アセット [!UICONTROL の移動] ウィザードは開かないので、移動中にアセットの名前を変更するオプションはありません。 また、既に公開済みのアセットは、ドラッグ操作によって再公開されます。ユーザーの再公開の承認を求めることはありません。
 
 ![アセットをドラッグして、兄弟フォルダーにアセットを移動](assets/move-by-drag.gif)
 
