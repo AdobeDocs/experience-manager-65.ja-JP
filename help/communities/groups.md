@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
+source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 42%
@@ -24,7 +24,7 @@ ht-degree: 42%
 
 The Groups console provides access to creating community groups when a community site&#39;s [template structure](/help/communities/sites-console.md#step1) includes the [groups function](/help/communities/functions.md#groups-function).
 
-* AEM Communitiesは、他のグループ内でのグループのネストをサポートしています。 グループのネストは、新しいグループの [構造にグループ機能が含まれる場合](/help/communities/tools-groups.md) に可能です。
+* AEM Communitiesでは、他のグループ内にグループをネストできます。 グループのネストは、新しいグループの [構造にグループ機能が含まれる場合](/help/communities/tools-groups.md) に可能です。
 * 作成者環境の場合のみ、サイト作成ウィザードに似たグループ作成ウィザードがあります。
 * グループ機能をコミュニティサイト構造またはコミュニティグループ構造に追加する場合に、メンバーが公開環境でグループを作成できるかどうかを設定できます。
 
@@ -32,21 +32,21 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 コミュニティグループの様々な側面は次のとおりです。
 
-* **作成**: 新しいグループは、作成者に対しても、オプションで発行インスタンスに対しても作成できます。
-* **コントロール**: グループは、開いている場合とシークレットの場合があります。
-* **入れ子**: groupには、0個以上のグループを含めることができます。
+* **作成**:新しいグループは、作成者に対しても、オプションで発行インスタンスに対しても作成できます。
+* **コントロール**:グループは、開いている場合とシークレットの場合があります。
+* **入れ子**:groupには、0個以上のグループを含めることができます。
 
 <!-- This is a 404 on helpx. Please update or remove.
 >[!NOTE]
 >
->Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.-->
+>Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.
+-->
 
 >[!NOTE]
 >
 >This Groups console, only accessible from the Communities Sites console, is not to be confused with the member [Groups console](/help/communities/members.md) for managing member groups.
 >
 >メンバーグループは、パブリッシュ環境に登録されたユーザーグループであり、[トンネルサービス](/help/communities/deploy-communities.md#tunnel-service-on-author)を使用してオーサー環境からアクセスします。
-
 
 ## グループ作成 {#group-creation}
 
@@ -190,7 +190,7 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 ### 手順 4：グループの作成 {#step-create-group}
 
-![community-create-group](assets/community-create-group.png)
+![コミュニティ作成グループ](assets/community-create-group.png)
 
 If any adjustments are needed, use the **Back** button to make them.
 
@@ -203,7 +203,6 @@ Once **Create** is selected and started, the process of creating the group canno
 >[!NOTE]
 >
 >それぞれのコミュニティサイトのコミュニティグループコンソールに、[手順 1：コミュニティグループテンプレート](/help/communities/groups.md#step-community-group-template)の「追加の使用可能なコミュニティグループの言語」で指定したすべての言語でグループが作成されます。
-
 
 ## 作成者グループのコンテンツ {#author-group-content}
 
@@ -242,7 +241,7 @@ Once **Create** is selected and started, the process of creating the group canno
 * サイト構造内のコミュニティ関数のインスタンスに対して、次の操作を行います。
 
    * **`Gear icon`**
-表示タイトル、URL、 [権限を持つメンバーのグループなどの設定を編集します](/help/communities/users.md#privilegedmembersgroups)。
+表示タイトル、URL、 [権限を持つメンバーのグループなど、設定を編集します](/help/communities/users.md#privilegedmembersgroups)。
 
    * **`Trashcan icon`**
 サイト構造から関数を削除（削除）します。
@@ -256,13 +255,11 @@ Once **Create** is selected and started, the process of creating the group canno
 >
 >例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
 
-
 >[!CAUTION]
 >
 >The groups function must *not* be the *first nor the only* function in the site structure.
 >
 >他の機能（[ページ機能](/help/communities/functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
-
 
 **例：サブコミュニティ（グループ）構造へのカレンダー機能の追加**
 
@@ -304,7 +301,6 @@ After a community group has been newly created or modified, it is possible to pu
 >親コミュニティサイトおよび親グループが既に公開されている必要があります。
 >
 >コミュニティサイトおよびネストされたグループは、階層の上から下の順に公開される必要があります。
-
 
 ## グループの削除 {#delete-the-group}
 
