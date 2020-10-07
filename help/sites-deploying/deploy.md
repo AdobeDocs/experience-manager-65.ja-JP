@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
+source-git-commit: cb07e24b01084f57ad46615cb463ad5a0329c181
+workflow-type: tm+mt
+source-wordcount: '1833'
+ht-degree: 75%
 
 ---
 
@@ -56,8 +59,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [リリース車両定義の更新](/help/sites-deploying/update-release-vehicle-definitions.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [AEM Screens とは](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## 基本概念 {#basic-concepts}
 
@@ -96,7 +98,7 @@ AEM の用語では、「インスタンス」は、サーバー上で実行さ�
 
 * **ディスパッチャー**：AEM ディスパッチャーモジュールで補強された静的 Web サーバー（Apache httpd、Microsoft IIS など）。パブリッシュインスタンスで生成された Web ページをキャッシュしてパフォーマンスを向上します。
 
-この設定には多くの高度なオプションや詳細情報がありますが、作成者、発行、ディスパッチャーの基本パターンは、ほとんどのデプロイメントの中核となっています。まず、比較的シンプルな設定に焦点を当てます。高度な導入オプションについては、以下で説明します。
+この設定には、多くの高度なオプションと詳細情報がありますが、作成者、発行、ディスパッチャーの基本パターンは、ほとんどのデプロイメントの中核にあります。まず、比較的単純な設定に焦点を当てます。アドバンス展開オプションについては、以下で説明します。
 
 以下のセクションでは、両方のシナリオについて説明します。
 
@@ -116,9 +118,9 @@ AEM Managed Services は、デジタルエクスペリエンス管理のため�
 
 AEM Managed Services を使用すれば、次のようなメリットを享受できます。
 
-**市場投入までの時間の短縮：** Adobe Managed Services の柔軟なクラウドインフラストラクチャにより、組織は成功するデジタルエクスペリエンスを迅速に計画し、立ち上げ、最適化することができます。資本、ハードウェア、ソフトウェアを追加する必要がなく、アドビはクラウドアーキテクチャを管理し、アドビのカスタマーサクセスエンジニアがAEMアーキテクチャの支援、プロビジョニング、バックエンドアプリへの接続のカスタマイズ、実稼動のベストプラクティスを行います。
+**市場投入までの時間の短縮：** Adobe Managed Services の柔軟なクラウドインフラストラクチャにより、組織は成功するデジタルエクスペリエンスを迅速に計画し、立ち上げ、最適化することができます。Adobeは、追加の資本、ハードウェア、ソフトウェアを必要とせずにクラウドアーキテクチャを管理し、AdobeのカスタマーサクセスエンジニアはAEMアーキテクチャ、プロビジョニング、バックエンドアプリへの接続のカスタマイズ、実稼働ベストプラクティスを支援します。
 
-**より高い性能：** 99.5％、99.9％、99.95％、および 99.99％ の 4 つのサービス可用性オプションで、ビジネスに信頼性の高いデジタル体験を提供します。また、自動バックアップおよびマルチモード災害復旧モデルを使用して、信頼性とコンティンジェンシー管理を確保できます。
+**より高い性能：** 99.5％、99.9％、99.95％、および 99.99％ の 4 つのサービス可用性オプションで、ビジネスに信頼性の高いデジタル体験を提供します。また、自動バックアップおよびマルチモードの災害復旧モデルを使用して、信頼性とコンティンジェンシーの管理を確保できます。
 
 **最適化された IT コスト：**&#x200B;事前のガイダンスと専門知識により、組織は AEM のバージョンを常に最新の状態に保つことができます。Adobe のプラチナメンテナンスおよびサポートは、AMS Enterprise／Basic の新規導入に自動的に組み込まれ、組織がミッションクリティカルなアプリケーションを維持するのに役立つ技術的専門知識と運用経験を提供します。無料の基本的なアナリティクス機能またはターゲット機能は、特に分析とパーソナライゼーションのニーズが限られている中堅企業にさらなる価値を提供します。
 
@@ -126,13 +128,13 @@ AEM Managed Services を使用すれば、次のようなメリットを享受�
 
 **クラウドマネージャー**：Adobe Experience Manager Services 製品の一部である Cloud Manager は、組織がクラウド内で Adobe Experience Manager を自己管理することをさらに可能にするセルフサービスポータルです。これには、IT チームと実装パートナーがパフォーマンスやセキュリティを犠牲にすることなくカスタマイズやアップデートの提供を迅速化できるようにする、最先端の継続的インテグレーションと継続的配信（CI／CD）パイプラインが含まれます。Cloud Manager は、Adobe Managed Service のお客様のみご利用いただけます。
 
-Cloud Manger とそのリソースの詳細については、[**Cloud Manager ユーザーガイド&#x200B;**](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)を参照してください。
+To learn more about Cloud Manger and its resources, please refer to [**Cloud Manager User Guide**](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
 
-## はじめに{#getting-started}
+## 概要 {#getting-started}
 
 ### 前提条件 {#prerequisites}
 
-While production instances are usually run on dedicated machines running an officially supported OS (see [Technical Requirements](/help/sites-deploying/technical-requirements.md)), the Experience Manager server will actually run on any system that supports [**Java Standard Edition 8 **](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+While production instances are usually run on dedicated machines running an officially supported OS (see [Technical Requirements](/help/sites-deploying/technical-requirements.md)), the Experience Manager server will actually run on any system that supports [**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 AEM に習熟したい場合や、AEM で開発する場合は、Apple OS X またはデスクトップ版の Microsoft Windows または Linux を実行しているローカルマシンにインストールされたインスタンスを使用するのが一般的です。
 
@@ -140,13 +142,13 @@ On the client-side, AEM works with all modern browsers (**Microsoft Edge**, **In
 
 ### ソフトウェアの入手 {#getting-the-software}
 
-Customers with a valid maintenance and support contract should have received a mail notification with a code and be able to download AEM from the [**Adobe Licensing Website **](https://licensing.adobe.com/). Business partners can request download access from[**spphelp@adobe.com**](mailto:spphelp@adobe.com).
+Customers with a valid maintenance and support contract should have received a mail notification with a code and be able to download AEM from the [**Adobe Licensing Website**](https://licensing.adobe.com/). Business partners can request download access from [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
 
 AEM ソフトウェアパッケージには、次の 2 つの形式があります。
 
-* **** cq-quickstart-6.5.0.jar:起動および実行に ** 必要なすべてを含むスタンドアロンの実行可能jarファイル。
+* **cq-quickstart-6.5.0.jar:** 起動および実行に必要なすべてを含む、スタンドアロンの実行可能な *jar* ファイル。
 
-* **** cq-quickstart-6.5.0.war:サード *パーティの* Application serverにデプロイするためのwarファイル。
+* **cq-quickstart-6.5.0.war:** サードパーティのアプリケーションサーバーにデプロイする *ための* warファイル。
 
 In the following section we describe the **standalone installation**. For details on installing AEM in an application server see [Application Server Install](/help/sites-deploying/application-server-install.md).
 
@@ -255,7 +257,7 @@ When the quickstart jar is launched for the first time it will unpack itself int
         readme.txt
 ```
 
-インスタンスがUIからインストールされている場合は、ブラウザーウィンドウが自動的に開き、デスクトップアプリケーションウィンドウが開き、インスタンスのホストとポートとオン/オフスイッチが表示されます。
+インスタンスがUIからインストールされている場合は、ブラウザーウィンドウが自動的に開き、デスクトップアプリケーションウィンドウも開き、インスタンスのホストとポートとオン/オフスイッチが表示されます。
 
 ![起動画面](assets/screen_shot_.png)
 
@@ -318,6 +320,4 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [リリース車両定義の更新](/help/sites-deploying/update-release-vehicle-definitions.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
-
+* [AEM Screens とは](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
