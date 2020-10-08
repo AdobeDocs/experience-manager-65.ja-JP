@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 33%
@@ -31,7 +31,6 @@ AEM Communitiesは次の電子メールを使用します。
 >[!CAUTION]
 >
 >Email for notifications and subscriptions must be configured only on the [primary publisher](deploy-communities.md#primary-publisher).
-
 
 ## デフォルトの電子メールサービス設定 {#default-mail-service-configuration}
 
