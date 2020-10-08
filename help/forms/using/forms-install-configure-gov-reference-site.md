@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '4742'
 ht-degree: 4%
@@ -788,10 +788,10 @@ Package Managerを使用すると、 **Forms** / **テーマ** / **参照テー�
 
 1. サービス定義を開き、選択したサービスをワークフロー内で呼び出せるようにします。
 
->[!NOTE]
-ユーザーがConfiguration Managerページ内でサービスを有効にしたので、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
+   >[!NOTE]
+   ユーザーがConfiguration Managerページ内でサービスを有効にしたので、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
 
-![govフォームパッケージ](assets/aftia-configuration-options.jpg)
+   ![govフォームパッケージ](assets/aftia-configuration-options.jpg)
 
 1. 設定を保存するには、「保存」ボタンをクリックします。
 
