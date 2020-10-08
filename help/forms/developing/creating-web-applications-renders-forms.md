@@ -1,6 +1,6 @@
 ---
-title: フォームをレンダリングするWeb アプリケーションの作成
-seo-title: フォームをレンダリングするWeb アプリケーションの作成
+title: FormsをレンダリングするWeb アプリケーションの作成
+seo-title: FormsをレンダリングするWeb アプリケーションの作成
 description: 'null'
 seo-description: 'null'
 uuid: 00de10c5-79bd-4d8a-ae18-32f1fd2623bf
@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 1%
@@ -19,17 +19,17 @@ ht-degree: 1%
 ---
 
 
-# フォームをレンダリングするWeb アプリケーションの作成 {#creating-web-applications-thatrenders-forms}
+# FormsをレンダリングするWeb アプリケーションの作成 {#creating-web-applications-thatrenders-forms}
 
-## フォームをレンダリングするWeb アプリケーションの作成 {#creating-web-applications-that-renders-forms}
+## FormsをレンダリングするWeb アプリケーションの作成 {#creating-web-applications-that-renders-forms}
 
-Javaサーブレットを使用してFormsサービスを呼び出し、フォームをレンダリングするWebベースのアプリケーションを作成できます。 Java™サーブレットを使用する利点の1つは、プロセスの戻り値をクライアントWebブラウザーに書き込めることです。 つまり、Javaサーブレットを、フォームを返すFormsサービスとクライアントWebブラウザーの間のリンクとして使用できます。
+Javaサーブレットを使用してFormsサービスを呼び出し、フォームをレンダリングするWebベースのアプリケーションを作成できます。 Java™サーブレットを使用する利点の1つは、プロセスの戻り値をクライアントWebブラウザーに書き込めることです。 つまり、フォームを返すFormsサービスとクライアントWebブラウザーの間のリンクとして、Javaサーブレットを使用できます。
 
 >[!NOTE]
 >
 >この節では、Formsサービスを呼び出し、フラグメントに基づいてフォームをレンダリングするJavaサーブレットを使用するWebベースのアプリケーションを作成する方法について説明します。 (See [Rendering Forms Based on Fragments](/help/forms/developing/rendering-forms-based-fragments.md).)
 
-Javaサーブレットを使用してフォームをクライアントWebブラウザーに書き込み、顧客が表示してフォームにデータを入力できるようにすることができます。 データをフォームに入力した後、Webユーザーはフォーム上の送信ボタンをクリックして情報をJavaサーブレットに送信し、Javaサーブレットでデータの取得と処理を行うことができます。 例えば、データを別のプロセスに送信できます。
+Javaサーブレットを使用してフォームをクライアントWebブラウザーに書き込み、顧客が表示してフォームにデータを入力できるようにします。 データをフォームに入力した後、Webユーザーはフォーム上の送信ボタンをクリックして情報をJavaサーブレットに送信し、Javaサーブレットでデータの取得と処理を行うことができます。 例えば、データを別のプロセスに送信できます。
 
 次の図に示すように、米国ベースのフォームデータまたはカナダベースのフォームデータを選択できるWebベースのアプリケーションの作成方法について説明します。
 
@@ -45,13 +45,13 @@ Javaサーブレットを使用してフォームをクライアントWebブラ�
 
 >[!NOTE]
 >
->フラグメントに基づくフォームデザインの作成について詳しくは、「 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照してください。
+>フラグメントを基にしたフォームデザインの作成について詳しくは、 [Formsデザイナーを参照してください](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 **サンプルファイル**
 
 この節では、次の場所にあるサンプルファイルを使用します。
 
-&lt;*Forms Designer install directory*>/Samples/Forms/Purchase Order/Form Fragments
+&lt;*Formsデザイナーのインストールディレクトリ*>/Samples/Forms/発注書/フォームフラグメント
 
 &lt;*install directory*>はインストールパスです。 クライアントアプリケーションの場合、Purchase Order Dynamic.xdpファイルがこのインストール場所からコピーされ、 *Applications/FormsApplicationという名前のFormsアプリケーションにデプロイされました*。 Purchase Order Dynamic.xdpファイルは、FormsFolderという名前のフォルダーに配置されます。 同様に、次の図に示すように、フラグメントはFragmentsという名前のフォルダーに配置されます。
 
@@ -59,11 +59,11 @@ Javaサーブレットを使用してフォームをクライアントWebブラ�
 
 Purchase Order Dynamic.xdpのフォームデザインにアクセスするには、フォーム名( `Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp` メソッドに渡される最初のパラメーター)とコンテンツルートURI値 `renderPDFForm``repository:///` を指定します。
 
-Webアプリケーションが使用するXMLデータファイルが、DataAEM Formsーから `C:\Adobe`（J2EEアプリケーションサーバーがホストするフォルダーに属するファイルシステム）に移動されました。 ファイル名はPurchase Order *Canada.xml* 、Purchase Order *US.xmlです*。
+Webアプリケーションが使用するXMLデータファイルが、Dataフォルダーから `C:\Adobe`(AEM FormsをホストするJ2EEアプリケーションサーバーに属するファイルシステム)に移動されました。 ファイル名はPurchase Order *Canada.xml* 、Purchase Order *US.xmlです*。
 
 >[!NOTE]
 >
->Workbenchを使用したFormsアプリケーションの作成に関する詳細は、『 [Workbenchヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)』を参照してください。
+>Workbenchを使用したFormsアプリケーションの作成に関する詳細は、 [Workbenchヘルプを参照してください](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
 ### 手順の概要 {#summary-of-steps}
 
@@ -78,7 +78,7 @@ Webアプリケーションが使用するXMLデータファイルが、DataAEM 
 
 >[!NOTE]
 >
->これらの手順の一部は、AEM FormsがデプロイされるJ2EEアプリケーションに依存します。 例えば、WARファイルのデプロイに使用する方法は、使用しているJ2EEアプリケーションサーバーによって異なります。 この節では、AEM FormsがJBoss®にデプロイされていることを前提としています。
+>これらの手順の一部は、AEM FormsがデプロイされているJ2EEアプリケーションに依存しています。 例えば、WARファイルのデプロイに使用する方法は、使用しているJ2EEアプリケーションサーバーによって異なります。 この節では、AEM FormsがJBoss®にデプロイされていることを前提としています。
 
 ### Creating a web project {#creating-a-web-project}
 
@@ -119,11 +119,11 @@ For the location of these JAR files, see [Including AEM Forms Java library files
 
 >[!NOTE]
 >
->Javaサーブレットを呼び出すHTMLページの作成について詳しくは、 `RenderFormFragment` Webページの[作成を参照してください](/help/forms/developing/rendering-forms.md#creating-the-web-page)。
+>Javaサーブレットを呼び出すHTMLページの作成について詳しくは、 `RenderFormFragment` Webページの [作成を参照してください](/help/forms/developing/rendering-forms.md#creating-the-web-page)。
 
 ### サーブレット用のJavaアプリケーションロジックの作成 {#creating-java-application-logic-for-the-servlet}
 
-Formsサービスを呼び出すJavaアプリケーションロジックは、Javaサーブレット内から作成します。 次のコードは、 `RenderFormFragment` Javaサーブレットの構文を示しています。
+Javaサーブレット内からFormsサービスを呼び出すJavaアプリケーションロジックを作成します。 次のコードは、 `RenderFormFragment` Javaサーブレットの構文を示しています。
 
 ```java
      public class RenderFormFragment extends HttpServlet implements Servlet {
@@ -155,7 +155,7 @@ FormsサービスAPIを使用してフラグメントに基づいてフォーム
    * ファイル名拡張子を含むフォームデザイン名を指定するstring値。
    * フォームとマージするデータを含む `com.adobe.idp.Document` オブジェクト（手順2で作成）。
    * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。 For more information, see [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * Formsサービスでフラグメントに基づいてフォームをレンダリングするために必要なURI値を含む `URLSpec` オブジェクトです。
+   * フラグメントに基づいてフォームをレンダリングするためにFormsサービスで必要なURI値を含む `URLSpec` オブジェクトです。
    * 添付ファイルを格納する `java.util.HashMap` オブジェクトです。 これはオプションのパラメーターで、フォームにファイルを添付しない `null` かどうかを指定できます。
 
    この `renderPDFForm``FormsResult` メソッドは、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを含むオブジェクトを返します。
@@ -168,7 +168,7 @@ FormsサービスAPIを使用してフラグメントに基づいてフォーム
 1. オブジェクトの `InputStream``read`メソッドを呼び出し、バイト配列を引数として渡すことで、バイト配列を作成し、フォームデータストリームと共に値を入力します。
 1. オブジェクトの `javax.servlet.ServletOutputStream``write` メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
-次のコードの例は、Formsサービスを呼び出し、フラグメントに基づいてフォームをレンダリングするJavaサーブレットを表しています。
+次のコード例は、Formsサービスを呼び出し、フラグメントに基づいてフォームをレンダリングするJavaサーブレットを表しています。
 
 ```java
  /*
@@ -379,11 +379,11 @@ Formsサービスを呼び出すJavaサーブレットをデプロイするに�
 
 1. 「 **プロジェクトエクスプローラ** 」(Project Explorer)ウィンドウで、 `FragmentsWebApplication` プロジェクトを右クリックし、「 **エクスポート** 」(Export) **/「** WARファイル」(WAR file)を選択します。
 1. 「 **Webモジュール** 」テキストボックスに、Javaプロジェクト `FragmentsWebApplication` の名前を入力します。
-1. 「 **Destination** 」テキストボックス `FragmentsWebApplication.war`**に、ファイル名&#x200B;**を入力し、WARファイルの場所を指定して、「Finish」をクリックします。
+1. 「 **Destination** 」テキストボックス `FragmentsWebApplication.war`**に、ファイル名**&#x200B;を入力し、WARファイルの場所を指定して、「Finish」をクリックします。
 
 ### J2EEアプリケーションサーバーへのWARファイルのデプロイ {#deploying-the-war-file-to-the-j2ee-application-server}
 
-WARファイルは、AEM FormsがデプロイされるJ2EEアプリケーションサーバーにデプロイできます。 WARファイルをデプロイすると、Webブラウザーを使用してHTML Webページにアクセスできます。
+WARファイルは、AEM FormsがデプロイされているJ2EEアプリケーションサーバーにデプロイできます。 WARファイルをデプロイすると、Webブラウザーを使用してHTML Webページにアクセスできます。
 
 **WARファイルをJ2EEアプリケーションサーバーにデプロイするには：**
 
@@ -391,7 +391,7 @@ WARファイルは、AEM FormsがデプロイされるJ2EEアプリケーショ�
 
 ### Webアプリケーションのテスト {#testing-your-web-application}
 
-Webアプリケーションをデプロイした後、Webブラウザーを使用してテストできます。 AEM Formsをホストしているのと同じコンピューターを使用している場合は、次のURLを指定できます。
+Webアプリケーションをデプロイした後、Webブラウザーを使用してテストできます。 AEM Formsをホストしているコンピューターと同じコンピューターを使用している場合は、次のURLを指定できます。
 
 * http://localhost:8080/FragmentsWebApplication/index.html
 
