@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c03ba5e2ec7954cca8b129f453919d151956df5
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2084'
 ht-degree: 33%
@@ -32,16 +32,14 @@ AEM Assetsは、Adobe開発者コンソールを介してBrand Portalで設定�
 >
 >従来のOAuth Gatewayを使用した設定は、2020年4月6日からサポートされなくなり、Adobe開発者コンソールに変更されました。
 
-
 >[!TIP]
 >
 >***既存のお客様のみ***
 >
 >既存のレガシーOAuth Gateway構成を引き続き使用することをお勧めします。 レガシーOAuth Gateway設定で問題が発生した場合は、既存の設定を削除し、Adobe開発者コンソールを使用して新しい設定を作成します。
 
-
-
 このヘルプでは、次の2つの使用例について説明します。
+
 * [新しい設定](#configure-new-integration-65):新しいBrand Portalユーザーで、Brand PortalでAEM Assetsの作成者インスタンスを設定する場合は、Adobe開発者コンソールで設定を作成できます。
 * [アップグレード設定](#upgrade-integration-65):既存のBrand Portalユーザーが従来のOAuth Gatewayに対して設定を行っている場合は、既存の設定を削除し、Adobe開発者コンソールを使用して新しい設定を作成します。
 
@@ -58,7 +56,6 @@ AEM Assets と Brand Portal の連携を設定するには以下が必要です�
 * 最新のService Packを含むAEM Assets作成者インスタンスを起動および実行する
 * Brand PortalテナントURL
 * Brand PortalテナントのIMS組織に対するシステム管理者権限を持つユーザー
-
 
 [AEM 6.5のダウンロードとインストール](#aemquickstart)
 
@@ -94,12 +91,9 @@ Brand PortalでAEM Assetsを設定するには、AEM Assets作成者インスタ
 1. AEM Assetsで、IMSアカウントとBrand Portalエンドポイント（組織URL）を使用してBrand Portalクラウドサービスを設定します。
 1. AEM AssetsからBrand Portalにアセットを公開して、設定をテストします。
 
-
 >[!NOTE]
 >
 >AEM Assetsの作成者インスタンスは、1つのBrand Portalテナントでのみ構成できます。
-
-
 
 ブランドポータルを使用してAEM Assetsを初めて設定する場合は、一覧に示した順序で次の手順を実行します。
 1. [公開証明書の取得](#public-certificate)
@@ -269,7 +263,6 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![IMS アカウントの設定](assets/create-new-integration6.png)
 
-
 1. その IMS アカウント設定を選択し、「**[!UICONTROL ヘルスチェック]**」をクリックします。
 
    ダイアログボックスの「**[!UICONTROL チェック]**」をクリックします。正常に設定されると、*トークンが正常に取得されました*&#x200B;というメッセージが表示されます。
@@ -281,8 +274,6 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 >IMS 設定は 1 つだけにする必要があります。
 >
 >IMS 設定がヘルスチェックに合格していることを確認します。設定がヘルスチェックに合格しない場合は無効です。削除して、新しい有効な設定を作成する必要があります。
-
-
 
 ### Cloud Service の設定{#configure-the-cloud-service}
 
@@ -326,11 +317,9 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
    ![](assets/test-integration3.png)
 
-
    >[!NOTE]
    >
    >レプリケーションエージェントは並行して動作し、ジョブの分散を均等に共有するので、パブリッシング速度を元の速度の4倍に増やします。 クラウドサービスの設定後、複数のアセットの並列発行を有効にするために、デフォルトでアクティブ化される複製エージェントを有効にするために、追加の設定は必要ありません。
-
 
 1. To verify the connection between AEM Assets and Brand Portal, click on the **[!UICONTROL Test Connection]** icon.
 
