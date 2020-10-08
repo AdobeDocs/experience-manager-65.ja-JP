@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: 4e2fa3b0a64ae2e959dad85e3a1bc4a1027a2eef
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 46%
@@ -35,12 +35,9 @@ For details, see [Configuring Enablement](enablement.md).
 >
 >コミュニティサイトの作成後に SCORM をインストールした場合は、SCORM をインストールする前に存在していたイネーブルメントリソースを作成し直す必要があります。
 
-
-
 >[!NOTE]
 >
 >AEM 6.3 [と同等のCommunities機能パック](deploy-communities.md#latestfeaturepack) AEM 6.2 FP3 [とAEM 6.1 FP7](deploy-communities.md#latestfeaturepack) (https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest Feature Pack)のリリースに伴い、有効化機能で [][](mysql.md)My SQLデータベースファイルが必要になることはなくなりました。
-
 
 ## 用語 {#terminology}
 
@@ -251,7 +248,6 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 >
 >メンバーがリソースとそのリソースを参照する学習パスの両方に登録されている場合、そのメンバーの割り当てには、単体のリソースと学習パス内のリソースの両方が表示されます。
 
-
 * **[!UICONTROL ソーシャルの設定]**
 
    これらの設定は、学習者がイネーブルメントリソースに関する入力を提供できるかどうかを制御します。 The [moderation settings](sites-console.md#moderation) are those of the parent community site.
@@ -389,7 +385,6 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 >
 >学習パスと同じレベルのリソースのみを選択できます。例えば、グループ内に作成された学習パスには、グループレベルのリソースのみを使用できます。コミュニティサイト内に作成された学習パスには、そのサイト内のリソースを追加できます。
 
-
 * 「**[!UICONTROL 次へ]**」を選択します。
 
 ### 設定 {#settings-1}
@@ -411,7 +406,6 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 >学習パスにより参照されているイネーブルメントリソースに、同じ割り当て先（学習者）を登録する必要はありません（該当する場合）。
 >
 >メンバーがイネーブルメントリソースとそのリソースを参照する学習パスの両方に登録されている場合、そのメンバーの割り当てには、単体のリソースと学習パス内のリソースの両方が表示されます。
-
 
 ## リソースの管理 {#managing-a-resource}
 
