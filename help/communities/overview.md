@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 33%
@@ -27,7 +27,7 @@ AEM Communities のライセンス、イネーブルメント機能の追加ラ�
 
 ## Communities の機能 {#communities-features}
 
-AEM Communitiesは、サイトの訪問者との関係を発展させるために役立ちます。
+AEM Communitiesは、サイト訪問者との関係を発展させる。
 
 * **ブログ** 、Q&amp;A、イベントカレンダー、
 * フォーラム **、コメント、その他のコミュニティコンテンツを通じてインサイトを** 得ながら、ユーザー生成コンテンツ(UGC)と呼ばれることもあります。
@@ -66,19 +66,18 @@ The [site creation wizard](/help/communities/sites-console.md):
 
    * Login : self-registration, [social login](/help/communities/social-login.md), user profiles
 
-      * 通知：
-メンバーは、メンバーに関連性のあるイベントと、 [@mensionedの場所にユーザー生成コンテンツを参照できます](/help/communities/overview.md#mentionssupport)。
+      * 通知：メンバーは、メンバーに関連性のあるイベントと、 [@mensionedの場所にユーザー生成コンテンツを参照できます](/help/communities/overview.md#mentionssupport)。
 
-      * メッセージ： メンバーは、コミュニティサイト内でメッセージを送信または受信できます。
-      * 検索： コミュニティサイト内を検索する機能。
+      * メッセージ：メンバーは、コミュニティサイト内でメッセージを送信または受信できます。
+      * 検索：コミュニティサイト内を検索する機能。
       * Language switching: ability to select a language for a [multilingual site](/help/sites-administering/translation.md).
 
-      * 管理： 権限を持つメンバーがコミュニティサイト内のユーザーをモデレートおよび管理できるようにするアクセス。
+      * 管理：権限を持つメンバーがコミュニティサイト内のユーザーをモデレートおよび管理できるようにするアクセス。
 
 * ページレベルのオーサリング手順を多数排除します。
 
-   * ブランディング： コミュニティサイトのすべてのページに表示するバナー画像のオプションのアップロード
-   * ナビゲーションメニュー： コミュニティサイトテンプレートに含まれる機能に対しては、ナビゲーションリンクが提供されます。
+   * ブランディング：コミュニティサイトのすべてのページに表示するバナー画像のオプションのアップロード
+   * ナビゲーションメニュー：コミュニティサイトテンプレートに含まれる機能に対しては、ナビゲーションリンクが提供されます。
 
 To experience the ease of quickly creating a new community site, visit [Getting Started with AEM Communities](/help/communities/getting-started.md).
 
@@ -175,7 +174,7 @@ From the author environment, community groups (sub-communities) may be created w
 
 * [サイトグループコンソール](/help/communities/groups.md) 。作成者環境でサブコミュニティを作成できます。
 * [グループテンプレートコンソール](/help/communities/tools-groups.md) 。グループのサイト構造を作成できます。
-* [「AEM Communitiesの使用の手引き](/help/communities/getting-started.md) 」のチュートリアルを参照して、ネストグループを含むコミュニティサイトをすばやく作成できます。
+* [「AEM Communitiesを使用する前に](/help/communities/getting-started.md) 」のチュートリアルを参照してください。
 
 ## コミュニティコンポーネント {#community-components}
 
@@ -205,7 +204,7 @@ From the author environment, community groups (sub-communities) may be created w
 * モデレート
 * 通知
 * スコアリングとバッジ
-* Analyticsレポート
+* 解析レポート
 
 To experience the ease of quickly creating a new engagement community, visit [Getting Started with AEM Communities](/help/communities/getting-started.md).
 
@@ -216,7 +215,7 @@ To experience the ease of quickly creating a new engagement community, visit [Ge
 有効化コミュニティの機能には、次のものがあります。
 
 * All the features of an [engagement community](#engagement-community).
-* コンテンツと学習を割り当てる機能 メンバーおよびメンバー・グループへのリソース。
+* コンテンツと学習を割り当てる機能メンバーおよびメンバー・グループへのリソース。
 * クイズやテストなど、SCORMコンテンツをサポートします。
 * 割り当て完了の追跡。
 * レポートと解析へのアクセス。
@@ -228,7 +227,7 @@ To experience the ease of creating a new enablement community, visit [Getting St
 
 ## AEM Demo Machine {#aem-demo-machine}
 
-[AEM Demo Machineは、AEM](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) Sites [, Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), Communities [, Communities, Communities Apps, Communities Apps, Apps Apps, Apps Appsは、QuickStartインスタンスを起動するよりもセットアップが必要な場合が多い、Forms Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)Assets, Cosets, Com, Com, Comm, Cos, Com, Dens, Dededen, Dedens, Den, Dens, Dededo, Demo, Demo, Demo, Des, Dedos, Demo, Des, Des, Des, Des, Demos, Demos, Des, Des, Des, Des, The AEM Demo Machine will setup additional [infrastructure](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) such as MongoDB, Solr, MySQL, FFmpeg and email servers.
+[AEM Demo Machineは、AEM](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) Sites [, Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), Communities [, Communities, Communities Apps, Communities Apps, Apps Apps, Apps Appsは、QuickStartインスタンスを起動するよりもセットアップが必要な場合が多い、Forms Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)Assets, Cosets, Com, Com, Comm, Cos, Com, Dens, Demos, Demos, Demos, Des, Des, Des, Des, Dens, Des, Den, Des, Des, Dens, Demos, Demos, Dens, Dens, [](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms), Demos, Demos, Des, Des, Des The AEM Demo Machine will setup additional [infrastructure](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) such as MongoDB, Solr, MySQL, FFmpeg and email servers.
 
 AEMデモマシンには次のものが含まれます。
 
@@ -244,7 +243,6 @@ AEM Demo Machineには有効なAEMライセンスが必要です。
 >[!NOTE]
 >
 >AEM Demo Machine の[紹介ビデオ](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be)を参照してください（13:26）。
-
 
 ## AEM Communities ドキュメント {#aem-communities-documentation}
 
