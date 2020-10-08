@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 78%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 これは、コミュニティコンポーネントがページテンプレートに存在せず、サイト訪問者の選択後に動的に追加される場合に実現されます。
 
-ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。ページの読み込み後に動的に追加されたSCFコンポーネントを登録するには、SCFを呼び出してコンポーネントを「サイドロード」する必要があります。
+ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。動的に追加されたSCFコンポーネントをページの読み込み後に登録するには、SCFを呼び出してコンポーネントを「サイドロード」する必要があります。
 
 コミュニティコンポーネントをサイドローディングするようページが設計されている場合、ページ全体をキャッシュすることができます。
 
@@ -33,15 +36,14 @@ SCF コンポーネントを動的に追加する手順は、次のとおりで�
 
 1. [次の2つの方法のいずれかを使用して](#sideload-by-invoking-scf) 、コンポーネントをサイドロードします。
 
-* [動的な埋め込み](#dynamic-inclusion)
-   * 動的に追加されたすべてのコンポーネントのブートストラップ
+* [動的な組み込み](#dynamic-inclusion)
+   * 動的に追加されたすべてのコンポーネントをブーストラップ
 * [動的読み込み](#dynamic-loading)
-   * 1つの追加特定のコンポーネントのオンデマンド
+   * 追加特定の1つのコンポーネントのオンデマンド
 
 >[!NOTE]
 >
 >[存在しないリソース](scf.md#add-or-include-a-communities-component)のサイドローディングはサポートされていません。
-
 
 ## DOM に対するコンポーネントの動的な追加 {#dynamically-add-component-to-dom}
 
