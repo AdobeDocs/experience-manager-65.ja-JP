@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 13%
@@ -37,7 +37,6 @@ In the author environment, after signing in with administrator privileges, the `
 >[!NOTE]
 >
 >In the publish environment, a [community site](sites-console.md) will display an `Administration` menu item when the signed in member has appropriate privileges.
-
 
 ## グローバルナビゲーションパネル {#global-navigation-panel}
 
