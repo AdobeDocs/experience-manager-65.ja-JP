@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 44%
@@ -48,7 +48,6 @@ AEM Communities のブログ機能は、オーサリングアクティビティ�
 >コンポーネント `Journal` と `Journal Sidebar` には「および」というタイトル `Blog` が付き `Blog Sidebar`ます。
 >
 >AEM 6.0 以前のリリースのブログ機能は、現在は削除されています。テンプレートに基づいており、作成者だけが作成者環境でコンテンツを作成できます。
-
 
 ## ブログコンポーネントをページに追加 {#adding-blog-components-to-a-page}
 
@@ -112,8 +111,8 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 >[!NOTE]
 >
 >ジャーナルタイトルは、ブログ用の URL を自動的に作成するために使用されます。
+>
 >ブログのURLの作成には、ここで指定するジャーナルタイトルから最大50文字（一意性のために5文字以上）が使用されます。
-
 
 * **ジャーナルの説明**
 
