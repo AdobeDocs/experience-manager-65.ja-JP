@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 48%
@@ -34,7 +34,6 @@ ht-degree: 48%
 >[!NOTE]
 >
 >デフォルトのストレージ設定は、etc path (`/conf/global/settings/community/srpc/defaultconfiguration`)ではなくconf path(`/etc/socialconfig/srpc/defaultconfiguration`)に保存されるようになりました。 defaultsrpを期待どおりに機能させるには、 [移行手順に従うようお勧めします](#zerodt-migration-steps) 。
-
 
 ## リレーショナルデータベースの設定 {#relational-database-configuration}
 
