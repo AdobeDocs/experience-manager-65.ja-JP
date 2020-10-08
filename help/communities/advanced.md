@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 40%
@@ -56,7 +56,6 @@ ht-degree: 40%
 >[!NOTE]
 >
 >高度なスコアリング機能とバッジング機能を使用するには、 [エキスパートIDパッケージをインストールします](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
-
 
 ## 設定可能なスコアエンジン {#configurable-scoring-engine}
 
@@ -150,7 +149,7 @@ ht-degree: 40%
   <tr>
    <td>scoringRules</td>
    <td>String[]</td>
-   <td><em>（オプション）</em> 複数値の文字列。リストに表示されたスコアリングルールで識別されるスコアリングイベントにバッジングルールを制限します。<br /> 入力例：<br /><code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 初期設定は制限なしです。</td>
+   <td><em>（オプション）</em> 複数値の文字列。リストに表示されたスコアリングルールで識別されるスコアリングイベントにバッジングルールを制限します。<br /> 入力例：<br /><code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 初期設定は無制限です。</td>
   </tr>
  </tbody>
 </table>
