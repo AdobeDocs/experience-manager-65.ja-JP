@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 27%
@@ -25,7 +25,6 @@ Overlay the comment system with a custom version by copying the minimal number o
 >[!CAUTION]
 >
 >再インストールやアップグレードをおこなうと、/libs フォルダーは削除されたり、置換されたりすることがありますが、/apps フォルダーの内容が変更されることはないので、/libs フォルダーの内容を編集することはありません。
-
 
 Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on an author instance, begin by creating a path in the /apps folder which is identical to the path to the overlaid components in the /libs folder.
 
@@ -82,9 +81,6 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
-
->
-
 
 
 The overlay&#39;s own `Type`(property `sling:resourceType`) must be a relative self-reference so that any content not found in /apps is then looked for in /libs.
