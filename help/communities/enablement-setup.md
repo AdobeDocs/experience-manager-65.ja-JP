@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 52%
@@ -47,7 +47,6 @@ AEM Communities では、各環境を次の目的で使用します。
 >[!NOTE]
 >
 >AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
-
 
 ## Communities の最新リリースのインストール {#install-latest-communities-release}
 
@@ -123,7 +122,6 @@ Instead, with the [tunnel service](#enable-the-tunnel-service) enabled, the [Mem
 >
 >または、これらのメンバーを後から[メンバーグループに割り当て](enablement-create-site.md#assignuserstocommunityenablemembersgroup)ます。
 
-
 ### Riley Taylor - 登録者 {#riley-taylor-enrollee}
 
 Community Ski Class という名前の学習者グループに追加される[メンバーを作成](members.md#create-new-member)します。
@@ -178,7 +176,6 @@ Community Ski Class という名前の[新しいグループを追加](members.m
 >[!NOTE]
 >
 >コミュニティサイトの作成中に、既存のメンバーおよびグループをコミュニティサイトのメンバーグループに追加できます。
-
 
 ## コミュニティ管理者の役割 {#community-administrator-role}
 
