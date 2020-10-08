@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 34%
@@ -132,8 +132,8 @@ The following example is of an event handler which listens for the `message sent
 1. 次のよう `bundle node`な任意の名前 `/apps/engage/install` を使用して、を作成します。
 
    * シンボリック名： `com.engage.media.social.messaging.MessagingNotification`
-   * 名前： はじめにチュートリアルのメッセージ通知
-   * 説明： ユーザーがメッセージを受信したときに電子メール通知を送信するためのサンプルサービス
+   * 名前：はじめにチュートリアルのメッセージ通知
+   * 説明：ユーザーがメッセージを受信したときに電子メール通知を送信するためのサンプルサービス
    * パッケージ: `com.engage.media.social.messaging.notification`
 
 1. に移動 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`し、次の操作を行います。
