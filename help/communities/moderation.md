@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 51%
@@ -62,7 +62,6 @@ Only when signed in as an administrator, or as a member with [moderator permissi
 >
 >パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトでは、ストレージはJSRPです。JSRPは、作成者および発行用の一般的なストアではありません。 See [Community Content Storage](/help/communities/working-with-srp.md).
 
-
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
 ## モデレートコンソールの UI {#moderation-console-ui}
@@ -109,7 +108,6 @@ Only when signed in as an administrator, or as a member with [moderator permissi
 > 
 >The content area features an *infinite scroll*, which means that it will allow you to continue scrolling until you have reached the end of the content. ツールバーは、スクロール時もコンテンツ領域の上の位置に固定されて表示されます。
 
-
 ### フィルターレール {#ootbfilters}
 
 ![open-filterrail](assets/open-filterrail.png)
@@ -125,7 +123,6 @@ However if you check **Question** and **Pending**, you will only see content tha
 >[!NOTE]
 >
 >コミュニティモデレーターは、モデレートコンソール UI で事前定義されたフィルターをブックマークできます。これらのフィルターは、URL の末尾に（クエリ文字列パラメーターとして）追加されるので、モデレーターはブックマークしたフィルターに戻ったり、これらのリンクを共有することもできます。
-
 
 ![searchicon](assets/searchicon.png)
 
@@ -154,7 +151,6 @@ However if you check **Question** and **Pending**, you will only see content tha
 >管理者が一括モデレートコンソールにアクセスしたときは、[サイト作成ウィザード](/help/communities/sites-console.md)を使わずに作成したサイト（Geometrixx サンプルサイトなど）も含め、すべての UGC 参照が表示されます。
 >
 >信頼されているコミュニティメンバーが一括モデレートコンソールにアクセスしたときは、そのメンバーがモデレート権限を持つコミュニティサイト用に作成された UGC 参照のみが表示されます。これらの UGC 参照はサイトフィルターでフィルタリングできます。
-
 
 #### コンテンツタイプ {#content-type}
 
@@ -205,7 +201,6 @@ The result is a new selectable filter for `Voting` under the `Content Type` filt
 >[!NOTE]
 >
 >「未回答」ステータスのみを選択すると、回答済みの質問を除く（すべてのコンテンツタイプの）すべてのコンテンツが表示されます。これは、未回答の質問とフォーラムトピックやブログ記事、コメントなどのコンテンツには、回答済みの質問に関係するプロパティが存在しないからです。
-
 
 ![ステータス](assets/statuses.png)
 
