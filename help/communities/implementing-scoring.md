@@ -12,9 +12,9 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '2897'
+source-wordcount: '2884'
 ht-degree: 53%
 
 ---
@@ -31,6 +31,7 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 * [コミュニティ内のメンバーの役割を識別するためのバッジ](#assign-and-revoke-badges) を割り当てます。
 
 * [会員の参加を促すためのバッジの基本的な付与](#enable-scoring) （コンテンツの作成数量）。
+
 * [メンバーをエキスパートとして識別するため](/help/communities/advanced.md) 、バッジの高度な付与（コンテンツの作成品質）。
 
 **バッジの付与は** 、デフォルトでは [有効になっていません](/help/communities/implementing-scoring.md#main-pars-text-237875536)。
@@ -38,7 +39,6 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 >[!CAUTION]
 >
 >CRXDE Lite で表示される実装の構造は、UI が使用可能になると変化する場合があります。
-
 
 ## バッジ {#badges}
 
@@ -76,7 +76,7 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 
    `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
-![chlimage_1-98](assets/chlimage_1-98.png)
+   ![割り当てられたバッジ](assets/assigned-badges.png)
 
 ### 授与されたバッジ {#awarded-badges}
 
@@ -101,14 +101,13 @@ Assigned (and awared) badges are stored in the selected [SRP](/help/communities/
 
    `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-![chlimage_1-99](assets/chlimage_1-99.png)
+   ![賞与済みのバッジ](assets/awarded-badges.png)
 
 >[!NOTE]
 >
 >不適切な投稿としてフラグが付けられた場合に、その投稿にマイナスのポイントを割り当て、スコアの値に反映させるようなスコアルールを設定できます。ただし、一度獲得したバッジは、スコアリングポイントの減少またはスコアリングルールの変更により、自動的に削除されません。
 >
 >授与されたバッジは、割り当てられたバッジと同じ方法で取り消すことができます。See the [Assign and Revoke Badges](#assign-and-revoke-badges) section. 今後の改善には、メンバーのバッジを管理するUIが含まれます。
-
 
 ### カスタムバッジ {#custom-badges}
 
@@ -140,8 +139,8 @@ If the node is of type `cq:Page` (recommended), then, using CRXDE|Lite, add the 
 
 | **プロパティ** | **タイプ** | **説明** |
 |---|---|---|
-| badgingRules | String[] | [バッジルール](#badging-rules)の配列リスト |
-| scoringRules | String[] | [スコアルール](#scoring-rules)の配列リスト |
+| badgingRules | String | [バッジルール](#badging-rules)の配列リスト |
+| scoringRules | String | [スコアルール](#scoring-rules)の配列リスト |
 
 >[!NOTE]
 >
@@ -156,12 +155,11 @@ If the node is of type `cq:Page` (recommended), then, using CRXDE|Lite, add the 
 
 #### 例：フォーラムコンポーネントインスタンスの allowBadges {#example-allowbadges-for-forum-component-instance}
 
-![chlimage_1-100](assets/chlimage_1-100.png)
+![enable-badges-component](assets/enable-badges-component.png)
 
 >[!NOTE]
 >
 >フォーラム、Q&amp;A およびコメントで見つかった HBS コードを例として使用すると、どのコンポーネントもバッジを表示するようにオーバーレイすることができます。
-
 
 ## スコアルール {#scoring-rules}
 
@@ -191,9 +189,9 @@ Scoring rules are nodes of type `cq:Page` with properties on its `jcr:content` n
 >スコアルールの名前はグローバルレベルで一意にする必要があり、末尾を同じ名前にしてはなりません。
 >
 >実行し *ない操作の例* :
+>
 >/libs/settings/community/scoring/rules/site1/forums-scoring
 >/libs/settings/community/scoring/rules/site2/forums/scoring
-
 
 ### Scoring Sub-Rules {#scoring-sub-rules}
 
@@ -221,7 +219,7 @@ Sub-rules are nodes of type `cq:Page` with properties on its `jcr:content`node t
   <tr>
    <th>プロパティ</th>
    <th>型</th>
-   <th> 値 説明</th>
+   <th> 値の説明</th>
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
@@ -239,7 +237,7 @@ Sub-rules are nodes of type `cq:Page` with properties on its `jcr:content`node t
   </tr>
   <tr>
    <td><code>topics</code></td>
-   <td>String[]</td>
+   <td>String</td>
    <td>
     <ul>
      <li>オプションです。サブルールを、イベントトピックで識別されるコミュニティコンポーネントのみに制限します。</li>
@@ -310,8 +308,8 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
 
 バッジルールでは、以下を指定することで、スコアルールをバッジにリンクします。
 
-* スコアリングルール。
-* 特定のバッジを待つために必要なスコア。
+* スコアリングルール
+* 特定のバッジを待つために必要なスコア
 
 バッジルールは `cq:Page` タイプのノードであり、その `jcr:content` ノードのプロパティで、スコアルールをスコアおよびバッジと関連付けます。
 
@@ -337,19 +335,18 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
 >
 >ベストプラクティスは、各 AEM サイトに固有のバッジ画像を作成することです。
 
-
-![chlimage_1-101](assets/chlimage_1-101.png)
+![badging-rule-configuration](assets/badging-rule-configuration.png)
 
 <table>
  <tbody>
   <tr>
    <th>プロパティ</th>
    <th>型</th>
-   <th>値 説明</th>
+   <th>値の説明</th>
   </tr>
   <tr>
    <td>thresholds</td>
-   <td>String[]</td>
+   <td>String</td>
    <td>（必須）「number|path」という形式の複数値文字列<em></em>
     <ul>
      <li>number = スコア</li>
@@ -364,7 +361,7 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
   </tr>
   <tr>
    <td>scoringRules</td>
-   <td>String[]</td>
+   <td>String</td>
    <td>(<em>optional</em>) A multi-value string to restrict the badging rule to scoring events identified by the scoring rules</td>
   </tr>
  </tbody>
@@ -374,9 +371,9 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
 
 このリリースには、[フォーラムとコメントのスコアルール](#includedscoringrules)に対応する 2 つのバッジルールが含まれています。
 
-* /libs/settings/community/badging/rules/comments-badging
+* `/libs/settings/community/badging/rules/comments-badging`
 
-* /libs/settings/community/badging/rules/forums-badging
+* `/libs/settings/community/badging/rules/forums-badging`
 
 **備考:**
 
@@ -399,15 +396,15 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 
 *header* = &quot;Accept:application/json&quot;カスタムヘッダーをサーバーに渡す（必須）
 
-*signin* = administrator-id:password例： admin:admin
+*signin* = administrator-id:password例：admin:admin
 
 *operation* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
 *badge* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所です。例： /libs/settings/community/badging/images/moderator/jcr:content/moderator.png
+*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所です。例：/libs/settings/community/badging/images/moderator/jcr:content/moderator.png
 
-*member-プロファイル-url* =パブリッシュ時のメンバーのプロファイルのエンドポイント。例： https://&lt;サーバー>:&lt;ポート>/home/users/community/riley/profile.social.json
+*member-プロファイル-url* =パブリッシュ時のメンバーのプロファイルのエンドポイント。例：https://&lt;サーバー>:&lt;ポート>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
@@ -415,9 +412,6 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 >
 >* May refer to an author instance if the [Tunnel Service](/help/communities/users.md#tunnel-service) is enabled.
 >* May be an obscure, random name - see [Security Checklist](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) regarding authorizable ID.
-
->
-
 
 
 ### 例: {#examples}
@@ -454,8 +448,7 @@ For the communities components delivered, the following tables describe the `ver
 >
 >コンポーネントインスタンスでバッジを表示するかどうかは、新しいブール型プロパティの `allowBadges` で指定できます。It will be configurable in updated [component edit dialogs](/help/communities/author-communities.md) through a checkbox labeled **Display Badges**.
 
-
-**[カレンダーコンポーネント](/help/communities/calendar.md)**SocialEvent`topic`=  = com/adobe/cq/social/calendar
+**[カレンダーコンポーネント](/help/communities/calendar.md)** SocialEvent `topic`=  = com/adobe/cq/social/calendar
 
 | **動詞** | **説明** |
 |---|---|
@@ -464,7 +457,7 @@ For the communities components delivered, the following tables describe the `ver
 | UPDATE | メンバーのカレンダーイベントまたはコメントが編集される |
 | DELETE | メンバーのカレンダーイベントまたはコメントが削除される |
 
-**[コメントコンポーネント](/help/communities/comments.md)**SocialEvent`topic`=  = com/adobe/cq/social/comment
+**[コメントコンポーネント](/help/communities/comments.md)** SocialEvent `topic`=  = com/adobe/cq/social/comment
 
 | **動詞** | **説明** |
 |---|---|
@@ -473,7 +466,7 @@ For the communities components delivered, the following tables describe the `ver
 | UPDATE | メンバーのコメントが編集される |
 | DELETE | メンバーのコメントが削除される |
 
-**[ファイルライブラリコンポーネント](/help/communities/file-library.md)**SocialEvent`topic`=  = com/adobe/cq/social/fileLibrary
+**[ファイルライブラリコンポーネント](/help/communities/file-library.md)** SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
 
 | **動詞** | **説明** |
 |---|---|
@@ -482,7 +475,7 @@ For the communities components delivered, the following tables describe the `ver
 | UPDATE | メンバーがフォルダーまたはファイルを更新する |
 | DELETE | メンバーがフォルダーまたはファイルを削除する |
 
-**[フォーラムコンポーネント](/help/communities/forum.md)**SocialEvent`topic`=  = com/adobe/cq/social/forum
+**[フォーラムコンポーネント](/help/communities/forum.md)** SocialEvent `topic`=  = com/adobe/cq/social/forum
 
 | **動詞** | **説明** |
 |---|---|
@@ -491,7 +484,7 @@ For the communities components delivered, the following tables describe the `ver
 | UPDATE | メンバーのフォーラムトピックまたは返信が編集される |
 | DELETE | メンバーのフォーラムトピックまたは返信が削除される |
 
-**[ジャーナルコンポーネント](/help/communities/blog-feature.md)**SocialEvent`topic`=  = com/adobe/cq/social/journal
+**[ジャーナルコンポーネント](/help/communities/blog-feature.md)** SocialEvent `topic`=  = com/adobe/cq/social/journal
 
 | **動詞** | **説明** |
 |---|---|
@@ -500,7 +493,7 @@ For the communities components delivered, the following tables describe the `ver
 | UPDATE | メンバーのブログ記事またはコメントが編集される |
 | DELETE | メンバーのブログ記事またはコメントが削除される |
 
-**[Q&amp;A コンポーネント](/help/communities/working-with-qna.md)**SocialEvent`topic`= com/adobe/cq/social/qna
+**[Q&amp;A コンポーネント](/help/communities/working-with-qna.md)** SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **動詞** | **説明** |
 |---|---|
@@ -511,7 +504,7 @@ For the communities components delivered, the following tables describe the `ver
 | UNSELECT | メンバーの回答の選択が解除される |
 | DELETE | メンバーの Q&amp;A の質問または回答が削除される |
 
-**[レビューコンポーネント](/help/communities/reviews.md)**SocialEvent`topic`=  = com/adobe/cq/social/review
+**[レビューコンポーネント](/help/communities/reviews.md)** SocialEvent `topic`=  = com/adobe/cq/social/review
 
 | **動詞** | **説明** |
 |---|---|
@@ -519,14 +512,14 @@ For the communities components delivered, the following tables describe the `ver
 | UPDATE | メンバーのレビューが編集される |
 | DELETE | メンバーのレビューが削除される |
 
-**[Rating Component](/help/communities/rating.md)**SocialEvent`topic`= com/adobe/cq/social/tally/rating
+**[Rating Component](/help/communities/rating.md)** SocialEvent `topic`= com/adobe/cq/social/tally/rating
 
 | **動詞** | **説明** |
 |---|---|
 | ADD RATING | メンバーのコンテンツの評価が上がった |
 | REMOVE RATING | メンバーのコンテンツの評価が下がった |
 
-**[投票コンポーネント](/help/communities/voting.md)**SocialEvent`topic`= com/adobe/cq/social/tally/voting
+**[投票コンポーネント](/help/communities/voting.md)** SocialEvent `topic`= com/adobe/cq/social/tally/voting
 
 | **動詞** | **説明** |
 |---|---|
@@ -574,7 +567,7 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 
 [Getting Started Tutorial](/help/communities/getting-started.md)（engage）サイトを使用すると、スコアとバッジを簡単に試すことができます。
 
-* 作成者のCRXDE Liteにアクセスします。
+* 作成者のアクセスCRXDE Lite。
 * ベースページを参照します。
 
    * /content/sites/engage/en/jcr:content
@@ -603,11 +596,11 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
 
 * Select **Save All**.
 
-![chlimage_1-102](assets/chlimage_1-102.png)
+![試験採点バッジ](assets/test-scoring-badging.png)
 
 次に、フォーラムおよびコメントコンポーネントでバッジを表示できるようにします。
 
-* CRXDE Liteを再び使用する。
+* 再びCRXDE Liteを使用。
 * フォーラムコンポーネントを参照します。
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
@@ -618,18 +611,18 @@ See the `scoringRules` property of [Badging Rules](#badging-rules).
    * **型**：`Boolean`
    * **値**: `true`
 
-![chlimage_1-103](assets/chlimage_1-103.png)
+![test-forum-component](assets/test-forum-component.png)
 
 次に、コミュニティサイトを[再公開](/help/communities/sites-console.md#publishing-the-site)します。
 
 最後に、
 
 * パブリッシュインスタンス上のコンポーネントを参照します。
-* コミュニティのメンバーとしてサインインする(例： weston.mccall@dodgit.com / password)。
+* コミュニティのメンバーとしてサインインする(例：weston.mccall@dodgit.com / password)。
 * 新しいフォーラムトピックを投稿します。
 * バッジを表示するには、ページを更新する必要があります。
 
-   * 別のコミュニティメンバーとしてログアウトし、ログインする(例： aaron.mcdonald@mailinator.com/password)。
+   * 別のコミュニティメンバーとしてログアウトし、ログインする(例：aaron.mcdonald@mailinator.com/password)。
 
 * フォーラムを選択します。
 
