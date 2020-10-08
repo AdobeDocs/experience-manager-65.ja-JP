@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 57%
@@ -32,7 +32,6 @@ ht-degree: 57%
 >1 つのサイトページで使用できるコメントシステムは 1 つのみです。
 >
 >多くのコミュニティ機能には、拡張されたコメントシステムを参照するように resourceType を変更できるコメントシステムが既に含まれています。
-
 
 ## コメントコンポーネントの作成 {#create-the-comments-component}
 
