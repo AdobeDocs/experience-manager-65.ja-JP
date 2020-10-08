@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 47%
@@ -102,7 +102,6 @@ MSRPを共通ストアとして使用するようにAEM Communitiesが設定さ�
 >[!NOTE]
 >
 >mongoDB データベース（デフォルトの名前は `communities`）を、[ノードストアまたはデータ（バイナリ）ストア](../../help/sites-deploying/data-store-config.md)で使用されているデータベースの名前に設定することはできません。See also [Storage Elements in AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
-
 
 ### MongoDB レプリカセット {#mongodb-replica-set}
 
@@ -206,7 +205,6 @@ cURL -u *signin* -d *data* *reindex-url*
 >[!NOTE]
 >
 >If you are [reindexing DSRP Solr](dsrp.md), the URL is **/services/social/datastore/rdb/reindex**
-
 
 ### MSRP インデックス再作成の例 {#msrp-reindex-example}
 
