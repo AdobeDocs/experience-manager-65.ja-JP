@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 49%
@@ -224,15 +224,14 @@ The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 >この例では次のベストプラクティスに従っていません。
 >
 >* スコアルールの名前はグローバルレベルで一意にする必要があり、末尾を同じ名前にしてはなりません。
-   >  実行し *ない操作の例* :
-   >  /libs/settings/community/scoring/rules/site1/forums-scoring
-   >  /libs/settings/community/scoring/rules/site2/forums/scoring
-   >
-   >
-* 様々なAEMサイト向けの一意のバッジ画像の作成
-
 >
-
+>  
+実行し *ない操作の例* :
+>
+>  /libs/settings/community/scoring/rules/site1/forums-scoring
+>  /libs/settings/community/scoring/rules/site2/forums/scoring
+>
+>* 様々なAEMサイト向けの一意のバッジ画像の作成
 
 
 ### スコア関連の UGC へのアクセス {#access-scoring-ugc}
