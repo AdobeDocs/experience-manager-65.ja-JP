@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 65%
@@ -46,7 +46,6 @@ AEM 6.0 以前からアップグレードする場合、すべての SRP の UGC
 >
 >代わりのユーティリティについては、[SocialUtils リファクタリング](socialutils.md)を参照してください。
 
-
 ## UGC にアクセスするためのユーティリティメソッド {#utility-method-to-access-ugc}
 
 UGC にアクセスするには、SRP から UGC へのアクセスに適したパスを返し、SocialUtils にあった廃止されたメソッドに替わる、SocialResourceUtilities パッケージのメソッドを使用します。
@@ -74,7 +73,6 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 >
 >resourceToUGCStoragePath() によって返されるパスは、**[ACL チェック](srp.md#for-access-control-acls)には適していません。
 
-
 ## Utility Method to Access ACLs {#utility-method-to-access-acls}
 
 一部の SRP 実装（ASRP や MSRP など）では、コミュニティコンテンツは ACL 検証が提供されないデータベースに格納されます。シャドウノードは、ACLを適用できるローカルリポジトリ内の場所を提供します。
@@ -101,7 +99,6 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 >[!CAUTION]
 >
 >The path returned by resourceToACLPath() is *not* suitable for [accessing the UGC](#utility-method-to-access-acls) itself.
-
 
 ## UGC 関連の格納場所 {#ugc-related-storage-locations}
 
@@ -136,4 +133,3 @@ UGC はこれらの場所のどちらにも作成されず、SRP API を呼び�
 * [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
 * [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
-
