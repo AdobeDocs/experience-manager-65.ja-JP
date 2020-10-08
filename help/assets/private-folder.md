@@ -3,7 +3,7 @@ title: アセットを共有するプライベートフォルダー
 description: Learn how to create a private folder in the [!DNL Adobe Experience Manager Assets] and share it with other users and the assign various privileges to them.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2bd850ff421494dda83bafb59fa695365498bbbe
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 21%
@@ -82,4 +82,5 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 >[!NOTE]
 >
 >上記の方法を使用してユーザーインターフェイスからフォルダーを削除すると、関連付けられたユーザーグループも削除されます。
-ただし、既存の冗長、未使用および自動生成されたユーザーグループは、JMXのオーサーインスタンス( `clean` )での`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`メソッドを使用して、リポジトリからクリーンアップできます。
+>
+>ただし、既存の冗長、未使用および自動生成されたユーザーグループは、JMXのオーサーインスタンス( `clean` )での`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`メソッドを使用して、リポジトリからクリーンアップできます。
