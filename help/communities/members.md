@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
-source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 36%
@@ -39,7 +39,6 @@ For managing users and groups registered in the *author* environment, is is nece
 >
 >サンプルコンテンツがデプロイされて有効になっていると、オーサー環境とパブリッシュ環境の両方に多数のサンプルユーザーが存在します。These users will not be present when running with [nosamplecontent runmode](../../help/sites-administering/production-ready.md).
 
-
 ## メンバーコンソール {#members-console}
 
 パブリッシュ環境で登録されたメンバーをオーサー環境で管理するには、次の場所にあるメンバーコンソールを使用します。
@@ -49,7 +48,6 @@ For managing users and groups registered in the *author* environment, is is nece
 >[!CAUTION]
 >
 >It will not be possible to use the Members console if the [tunnel service](deploy-communities.md#tunnel-service-on-author) is not enabled.
-
 
 ![member-console1](assets/member-console1.png)
 
@@ -172,7 +170,6 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 >[!CAUTION]
 >
 >[トンネルサービス](deploy-communities.md#tunnel-service-on-author)が有効でない場合、グループコンソールを使用することはできません。
-
 
 ### 新しいグループを作成 {#create-new-group}
 
