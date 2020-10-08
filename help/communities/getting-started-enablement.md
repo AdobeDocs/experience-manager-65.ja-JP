@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 translation-type: tm+mt
-source-git-commit: 341fef2b8f040848a59381b0d4996c29f352b929
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 92%
 
 ---
 
@@ -26,7 +29,6 @@ AEM Communities では、デジタルチャネルと対面チャネルにまた�
 >[!NOTE]
 >
 >This tutorial assumes installation of [Communities feature pack 1](deploy-communities.md#latestfeaturepack) or later.
-
 
 * [初期設定](enablement-setup.md)
 
