@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: 8738989c18c6f09452da95d0b9f2c05b0a2a1a81
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 46%
@@ -50,20 +50,20 @@ Notice this  home page  shows four menu items: `Assignments, Ski Catalog, What's
 >[!NOTE]
 >
 >サイト訪問者に自己登録を許可することなく、イネーブルメントサイトへの匿名アクセスを許可することができます。
+>
 >If an enablement resource is set to `show in catalog` and `allow anonymous access`, it will be possible for anonymous site visitors to view resources in the catalog.
-
 
 ### JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限により、jcrコンテンツとjsonを介してコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **[!UICONTROL を許可]** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **[!UICONTROL を許可]** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
 
 jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
-1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
+1. AEMオーサーインスタンスで、https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.htmlに移動します。
 
    >[!NOTE]
    >
-   >ローカライズされたサイトに移動しないでください。
+   >ローカライズされたサイトには移動しないでください。
 
 1. 「 **[!UICONTROL ページプロパティ]**」に移動。
 
@@ -251,7 +251,7 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 * 作成者は、管理者権限でサインインします。
 * **[!UICONTROL コミュニティ]** / **[!UICONTROL レポート]** / **[!UICONTROL 表示レポートに移動します]**。
-* Select a **Site **from the pull-down menu (select`Enablement Tutorial`).
+* Select a **Site** from the pull-down menu (select `Enablement Tutorial`).
 
 * Select **[!UICONTROL Content Type]** (select `all`).
 
