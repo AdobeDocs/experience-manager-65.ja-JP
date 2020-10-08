@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 87%
@@ -43,7 +43,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Dynamic Mediaに適用され *ます。Scene7モードは* 、AEM 6.4.6.0以降でのみ有効です。
+>ダイ *ナミックメディア —Scene7モード* (AEM 6.4.6.0以降のみ)に適用されます。
 
 後で変更した既存の処理プロファイルがあるフォルダー内のアセットを再処理できます。
 
@@ -58,7 +58,9 @@ ht-degree: 87%
 >[!NOTE]
 >
 >Dynamic Media Classic から AEM へのアセットの一括移行を実行する場合は、Dynamic Media サーバー上で移行レプリケーションエージェントを有効にする必要があります。移行が完了したら、このエージェントを必ず無効にします。
-再処理ワークフローが期待どおりに動作するように、Dynamic Media サーバー上で移行公開エージェントを無効にする必要があります。
+
+>
+>再処理ワークフローが期待どおりに動作するように、Dynamic Media サーバー上で移行公開エージェントを無効にする必要があります。
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
@@ -90,7 +92,7 @@ ht-degree: 87%
 
 ### 再処理ワークフローのバッチサイズの調整 {#adjusting-load}
 
-（オプション）再処理ワークフローのデフォルトのバッチサイズは、1 ジョブあたり 50 アセットです。この最適なバッチサイズは、平均アセットサイズと、再処理が実行されるアセットのMIMEタイプによって制御されます。 値を大きくすると、1 回の再処理ジョブのファイル数が多くなります。したがって、処理バナーが AEM アセット上に長時間表示されたままになります。ただし、平均ファイルサイズが小さい（1 MB 以下の）場合は、値を数百個（1000 以下）に増やすことをお勧めします。平均ファイルサイズが大きい（数百 MB の）場合は、バッチサイズを最大 10 までに減らすことをお勧めします。
+（オプション）再処理ワークフローのデフォルトのバッチサイズは、1 ジョブあたり 50 アセットです。この最適なバッチサイズは、平均アセットサイズと、再処理が実行されるアセットのMIMEタイプによって制御されます。 値を大きくすると、1 回の再処理ジョブのファイル数が多くなります。したがって、処理バナーが AEM Assets 上に長時間表示されたままになります。ただし、平均ファイルサイズが小さい（1 MB 以下の）場合は、値を数百個（1000 以下）に増やすことをお勧めします。平均ファイルサイズが大きい（数百 MB の）場合は、バッチサイズを最大 10 までに減らすことをお勧めします。
 
 **再処理ワークフローのバッチサイズを調整するには（オプション）**：
 
