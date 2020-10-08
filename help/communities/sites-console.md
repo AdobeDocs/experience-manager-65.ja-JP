@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '3292'
 ht-degree: 45%
@@ -33,7 +33,6 @@ Communitiesのサイトコンソールから次のアクセス権を利用でき
 >[!NOTE]
 >
 >The main Communities menus for the creation of [community sites](/help/communities/sites-console.md), [community site templates](/help/communities/sites.md), [community group templates](/help/communities/tools-groups.md) and [community functions](/help/communities/functions.md) are for use only in the author environment.
-
 
 ## 前提条件 {#prerequisites}
 
@@ -180,7 +179,6 @@ The process is launched by selecting the `Create` button located at the top of t
 >
 >これは、作成者の環境を有効にす ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` ることで達成されます。
 
-
 #### ユーザー管理 {#user-management}
 
 ![createsitesettings](assets/createsitesettings.png)
@@ -190,7 +188,6 @@ The process is launched by selecting the `Create` button located at the top of t
 >It is recommended that [enablement community sites](/help/communities/overview.md#enablement-community) be private (contact your account representative for more information).
 >
 >コミュニティサイトを非公開にするとは、匿名のサイト訪問者に対してアクセスを拒否し、自己登録やソーシャルログインを使用禁止にすることです。
-
 
 * **ユーザー登録を許可**
 
@@ -223,7 +220,6 @@ If unchecked, the community site is *restricted* and site visitors must be assig
 >**ソーシャルログインの許可**
 >
 >Facebook と Twitter のサンプル設定が存在し、選択可能な場合がありますが、[実稼動環境](/help/sites-administering/production-ready.md)では、カスタム Facebook アプリケーションとカスタム Twitter アプリケーションを作成する必要があります。[Facebook と Twitter を使用したソーシャルログイン](/help/communities/social-login.md)を参照してください。
-
 
 #### タグ付け {#tagging}
 
@@ -399,7 +395,6 @@ When hovering over a site with a mouse, or touching a site card, icons appear wh
 >
 >AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
 
-
 ## サイトプロパティの変更 {#modifying-site-properties}
 
 ![編集サイト](assets/edit-site.png)
@@ -446,7 +441,6 @@ BASICパネルでは、次の変更が可能です。
 >
 >トップにある機能を除き、サイト構造のすべての機能の順序を変更できます。したがって、コミュニティサイトのホームページは変更できません。
 
-
 >[!CAUTION]
 >
 >* 表示タイトルは副作用なく変更できるが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしない。
@@ -454,13 +448,11 @@ BASICパネルでは、次の変更が可能です。
 >
 例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
 
-
 >[!CAUTION]
 >
 >The groups function must *not* be the *first nor the only* function in the site structure.
 >
 >他の機能（[ページ機能](/help/communities/functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
-
 
 #### 例：コミュニティのサイト構造へのカタログ機能の追加 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
@@ -547,7 +539,6 @@ For details, see [Managing Users and User Groups](/help/communities/users.md).
 >
 >
 is created, the applied [Facebook cloud service](/help/communities/social-login.md#createafacebookcloudservice) should be configured to add users to this group.
-
 
 ## 認証エラーの設定 {#configure-for-authentication-error}
 
