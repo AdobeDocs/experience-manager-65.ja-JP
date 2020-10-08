@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 22%
@@ -57,7 +57,7 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 * **メッセージ数の制限**
 
-   1人のユーザーに許可されるメッセージの合計数です。 値を —1に設定した場合、許可されるメッセージの数に制限はありません。メッセージボックスのサイズ制限に従います。 Default is *10000* (10k).
+   1人のユーザーに許可されるメッセージの合計数です。 値を —1に設定した場合、許可されるメッセージの数に制限はなく、メッセージボックスのサイズ制限に従います。 Default is *10000* (10k).
 
 * **配信エラーの通知**
 
@@ -135,7 +135,6 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 >
 >To allow all filename extensions, except for those blocklisted, use the &#39;**-**&#39; icon to (again) remove the single empty entry before clicking **Save**.
 
-
 ## Group Messaging {#group-messaging}
 
 登録済みユーザーがダイレクトメッセージを一括してユーザーグループに送信できるようにするには、次の2つの **Messaging Operation Services** 設定のインスタンスで **、「グループメッセージを** 有効にする」を必ず有効にしてください。
@@ -143,11 +142,11 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-console`
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-messaging`
 
-**Messaging Operationsサービス： ソーシャルコンソール**
+**Messaging Operationsサービス：ソーシャルコンソール**
 
 ![social-console-op-service](assets/social-console-op-service.png)
 
-**Messaging Operationsサービス： 社会的メッセージ**
+**Messaging Operationsサービス：社会的メッセージ**
 
 ![social-message-op-service](assets/social-message-op-service.png)
 
