@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 61%
@@ -25,7 +25,6 @@ The Site Templates console is very similar to the [Group Templates](tools-groups
 >[!NOTE]
 >
 >The consoles for the creation of [community sites](sites-console.md), [community site templates](sites.md), [community group templates](tools-groups.md) and [community functions](functions.md) are for use only in the author environment.
-
 
 ## Site Templates Console {#site-templates-console}
 
@@ -85,7 +84,6 @@ To get started creating a new site template, select `Create`.
 >
 >他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
-
 ![サイト編集者](assets/site-editor.png)
 
 ### グループ機能のためのグループテンプレート {#group-templates-for-groups-function}
@@ -95,7 +93,6 @@ To get started creating a new site template, select `Create`.
 >[!CAUTION]
 >
 >The Groups function must *not* be the *first nor the only* function in the site structure.
-
 
 ![サイト関数](assets/site-functions.png)
 
