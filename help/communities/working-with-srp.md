@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '921'
+ht-degree: 31%
 
 ---
 
@@ -20,9 +23,9 @@ source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ## 概要 {#introduction}
 
-AEM Communities 6.1以降、ストレージ生成コンテンツ(UGC)は、ユーザーリソースプロバイダー(SRP)が提供する単一の共通ストアに保存されます。 ASRP、MSRP、JSRPなど、選択できるSRPオプションがいくつかあります。
+AEM Communities6.1以降、ユーザ生成コンテンツ(UGC)は、ストレージリソースプロバイダ(SRP)が提供する単一の共通ストアに格納されます。 ASRP、MSRP、JSRPなど、選択できるSRPオプションがいくつかあります。
 
-以前のリリースとは異なり、AEM インスタンス間の UGC のリバース／フォワードレプリケーションはありません。代わりに、UGCは、JSRPを除き、すべての作成者インスタンスとパブリッシュインスタンスから、作成、読み取り、更新、削除(CRUD)操作に直接アクセスできるようになります。
+以前のリリースとは異なり、AEM インスタンス間の UGC のリバース／フォワードレプリケーションはありません。代わりに、JSRPを除き、UGCは作成、読み取り、更新、削除(CRUD)操作の作成、削除(JSRP)操作に直接アクセスできます。
 
 Following are the [characteristics of each SRP option](#characteristics-of-srp-options), which is crucial information for the decision process when choosing the appropriate SRP and [underlying deployment](/help/communities/topologies.md).
 
@@ -32,34 +35,31 @@ For details regarding the use of SRP for UGC, see [Storage Resource Provider Ove
 >
 >SRP はコミュニティコンテンツにのみ適用されます。It does not affect where site content is stored ([node store](/help/sites-deploying/data-store-config.md)), and does not affect the secure handling of user registration, user profiles and user groups between AEM instances (see also [Managing User Data](#managing-user-data)).
 
-
 >[!CAUTION]
 >
 >As of AEM 6.1, [UGC is never replicated](#ugc-never-replicated).
 >
->デプロイメントに共通ストアが含まれていない場合（デフォルトの [JSRP](/help/communities/topologies.md#jsrp) トポロジなど）、UGC は、それが入力された AEM パブリッシュインスタンスまたはオーサーインスタンスでのみ表示可能になります。トポロジにパブリッシュクラスターが含まれる場合にのみ、UGCはパブリッシュインスタンスで表示されます。
-
+>デプロイメントに共通ストアが含まれていない場合（デフォルトの [JSRP](/help/communities/topologies.md#jsrp) トポロジなど）、UGC は、それが入力された AEM パブリッシュインスタンスまたはオーサーインスタンスでのみ表示可能になります。トポロジにパブリッシュクラスタが含まれる場合にのみ、UGCは任意のパブリッシュインスタンスで表示されます。
 
 ## SRP オプションの特性 {#characteristics-of-srp-options}
 
 [ASRP - Adobe ストレージリソースプロバイダー](/help/communities/asrp.md)
 
-このオプションを使用すると、UGCはアドビがホストし、管理するクラウドサービスでリモートで保持されます。 その場合は、追加のライセンスが必要です。また、そのライセンスのアカウントをプロビジョニングする作業は、アカウント担当者と行う必要があります。 ASRPには次のものが必要です。
+このオプションを使用すると、Adobeがホストし管理するクラウドサービスでUGCがリモートで保持されます。 その場合は、追加のライセンスが必要です。また、アカウントを特定のライセンス用にプロビジョニングするには、アカウント担当者と連携する必要があります。 ASRPには次の要件があります。
 
-* コミュニティコンテンツを保存するためにアドビが提供し、サポートする関連クラウドサービス。
+* Adobeが提供およびサポートし、コミュニティコンテンツを保存するための関連クラウドサービス。
 * 特定の地域（米国、EMEA、APAC）のデータセンターを選択。
 
 * UGCへのプログラムによるアクセスはすべてSRP APIを通じて行われます。
 
 ASRPが適しています。
 
-* TarMK発行ファーム用。
-* 地元のストレージに
+* TarMK発行ファームの場合。
+* 現地ストレージに投資する意図がない場合。
 
 >[!NOTE]
 >
->ASRPでの投稿（またはコメント）に添付ファイルをアップロードする場合は、制限があります(50 MB)。
-
+>ASRPでの投稿（またはコメント）に添付ファイルをアップロードする場合、制限はあります(50 MB)。
 
 [MSRP - MongoDB ストレージリソースプロバイダー](/help/communities/msrp.md)
 
@@ -67,7 +67,7 @@ ASRPが適しています。
 
 MSRPには次が必要です。
 
-* コミュニティのコンテンツを保存するMongoDBのローカルインストール。
+* コミュニティコンテンツを保存するMongoDBのローカルインストール。
 * Apache Solrのローカルインストール。
 * UGCへのプログラムによるアクセスはすべてSRP APIを通じて行われます。
 
@@ -87,7 +87,7 @@ DSRPには次が必要です。
 * Apache Solrのローカルインストール。
 * UGCへのプログラムによるアクセスはすべてSRP APIを通じて行われます。
 
-DSRPが適している：
+DSRPが適しています。
 
 * 既存のTarMK発行ファームの場合。
 * MongoMKまたはRdbMKクラスターの場合。
@@ -95,13 +95,13 @@ DSRPが適している：
 
 [JSRP - JCR ストレージリソースプロバイダー](/help/communities/jsrp.md)
 
-デフォルトのオプションでは、共通ストアはありません。 UGCは、入力されたAEMインスタンスと同じJCRリポジトリ内でのみ保持されます。
+デフォルトのオプションでは、共通ストアはありません。 UGCは、入力されたAEMインスタンスと同じJCRリポジトリにのみ保持されます。
 
 JSRP:
 
-* コミュニティのコンテンツを、投稿先のAEM作成者または発行インスタンスのJCRリポジトリに保存します。
+* コミュニティコンテンツは、投稿先のAEM作成者または発行インスタンスのJCRリポジトリに保存されます。
 * UGCへのすべてのプログラムによるアクセスは、SRP APIを通じて行う必要があります。
-* 複数の発行インスタンスがデプロイされている場合（TarMKファーム内の発行インスタンス間に複製メカニズムが存在しない場合）、発行クラスターが必要です。
+* 複数の発行インスタンスがデプロイされている場合（TarMKファーム内の発行インスタンス間に複製メカニズムがない場合）、発行クラスターが必要です。
 * モデレートは、発行環境でのみ実行されます（作成者と発行の間に逆/転送のレプリケーションメカニズムはありません）。
 * 開発、デモ、トレーニングに最適です。
 
@@ -122,9 +122,9 @@ JSRP:
 
 ### UGC のレプリケーションの廃止 {#ugc-never-replicated}
 
-作成者はオーサー環境でページコンテンツを作成し、パブリッシュ環境にレプリケートします。ページにコメント、レビュー、フォーラム、ブログ、QnAなどのインタラクティブなAEM Communities機能が含まれる場合、メンバー(サイト訪問者にサインイン)による発行インスタンスのインタラクションによって、発行環境にユーザー生成コンテンツ(UGC)が入力されます。
+作成者はオーサー環境でページコンテンツを作成し、パブリッシュ環境にレプリケートします。ページにコメント、レビュー、フォーラム、ブログ、QnAなどのインタラクティブなAEM Communities機能が含まれる場合、メンバーによる(サイト訪問者でサインインした)発行インスタンス上でのインタラクションは、発行環境にユーザ生成コンテンツ(UGC)を入力します。
 
-これまでは、このコミュニティコンテンツはオーサーインスタンスにリバースレプリケートされ、オーサーインスタンスからパブリッシュインスタンスにレプリケートされていました。逆複製と転送複製を使用して、AEMインスタンス間の一貫性を維持すると問題が発生していました。
+これまでは、このコミュニティコンテンツはオーサーインスタンスにリバースレプリケートされ、オーサーインスタンスからパブリッシュインスタンスにレプリケートされていました。逆複製と転送複製のAEMインスタンス間で一貫性を維持するのに問題がありました。
 
 AEM Communities 6.1 以降では、前述のように、UGC 用の共有ストレージを使用することで UGC のレプリケーションが不要になりました。
 
@@ -132,12 +132,12 @@ AEM Communities 6.1 以降では、前述のように、UGC 用の共有スト�
 
 ### ユーザーデータの管理 {#managing-user-data}
 
-Also of interest to CommunitIes are [*users *,* user groups *, and* user profiles *](/help/communities/users.md). This user-related data, when created and updated in the publish environment, needs to be made available to other publish instances when the topology is a[publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
+Also of interest to CommunitIes are [*users*, *user groups*, and *user profiles*](/help/communities/users.md). This user-related data, when created and updated in the publish environment, needs to be made available to other publish instances when the topology is a [publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
 
 AEM Communities 6.1 以降、ユーザー関連データは、レプリケーションではなく Sling ディストリビューションを使用して同期されます。For more information visit [User Synchronization](/help/communities/sync.md).
 
 ### AEM Communities 6.5 へのアップグレード {#upgrading-to-aem-communities}
 
-AEM 6.5 Communitiesにアップグレードする場合、既存のUGCを保持する必要がある場合は、AEM 5.6.1またはAEM 6.0コミュニティでアドビのオンデマンドストレージまたはオンプレミスストレージのUGCを使用したかに応じて、手順を実行する必要があります。
+AEM 6.5 Communitiesにアップグレードする場合、既存のUGCを保持する必要がある場合は、AEM 5.6.1またはAEM 6.0コミュニティでAdobeのオンデマンドストレージまたはオンプレミスストレージのUGCを使用したかに応じて、手順を実行する必要があります。
 
 詳しくは、[AEM Communities 6.5 へのアップグレード](/help/communities/upgrade.md)を参照してください。
