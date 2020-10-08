@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 51%
@@ -111,7 +111,6 @@ In the publish environment, depending on the [settings](sites-console.md#user-ma
 >
 >サイト訪問者が 1 つのオープンコミュニティサイトに登録すると、その訪問者は自動的に、同じパブリッシュ環境上の他のオープンコミュニティサイトのメンバーになります。
 
-
 ### パブリッシュグループの役割 {#publish-group-roles}
 
 | メンバーが所属するグループ | 主な役割 |
@@ -151,7 +150,6 @@ The selected members will be automatically assigned to the [appropriate group](#
 >[!NOTE]
 >
 >あるコミュニティサイトで、権限を持つメンバーグループにユーザーを追加しても、そのユーザーが同じコミュニティサイトのメンバーでもある場合は、そのユーザーに対して作成権限が与えられるだけです。
-
 
 ## コミュニティメンバーの作成 {#creating-community-members}
 
