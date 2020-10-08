@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 57%
@@ -108,7 +108,6 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 >Any CSS class name that is prefixed with `scf-js` has a specific use in javascript code. これらのクラスは、コンポーネントの状態に影響を与え（例えば、非表示から表示に切り替える）、上書きも削除もしないでください。
 >
 >While the `scf-js` classes do not affect styles, the class names may be used in stylesheets with the caveat that, as they control the states of elements, there may be side effects.
-
 
 ## JavaScript の拡張 {#extending-javascript}
 
