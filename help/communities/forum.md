@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 33%
@@ -34,7 +34,7 @@ ht-degree: 33%
 
 ドキュメントのこの節では、以下について説明します。
 
-* フォーラム機能をAEMサイトに追加する。
+* AEMサイトへのフォーラム機能の追加
 * Configuration settings for the `Forum` component.
 
 ### フォーラムをページに追加 {#adding-a-forum-to-a-page}
@@ -173,7 +173,6 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 >[!NOTE]
 >
 >トピックに対するコメントを有効にする場合は、お `AllowThreaded Replies` よび両方 `Allow users to Delete Comments and Topics` を確認する必要があります。
-
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
