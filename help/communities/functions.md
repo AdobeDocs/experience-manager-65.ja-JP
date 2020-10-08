@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1b200f9dd5fc99b37bcc629be7a785e02e8320c0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 44%
@@ -28,7 +28,6 @@ Once a community site is created, content may be added to the resulting pages us
 >[!NOTE]
 >
 >The consoles for the creation of [community sites](/help/communities/sites-console.md), [community site templates](/help/communities/sites.md), [community group templates](/help/communities/tools-groups.md), and [community functions](/help/communities/functions.md) are for use only in the author environment.
-
 
 ## Community Functions Console {#community-functions-console}
 
@@ -87,7 +86,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。E
 
 * **「マイアクティビティ」ビューを表示**
 
-   選択した場合、アクティビティページには、現在のメンバーによってコミュニティ内で生成されたアクティビティに基づいてフィルターが行われるタブが含まれます。 デフォルトで選択されています。
+   選択した場合、アクティビティページには、現在のメンバーによってコミュニティ内で生成されたアクティビティに基づいてフィルターを行うタブが含まれます。 デフォルトで選択されています。
 
 * **「すべてのアクティビティ」ビューを表示**
 
@@ -234,7 +233,6 @@ All enablement resources and learning paths for the community site shows in all 
 >
 >他の機能（[ページ機能](#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
-
 グループ機能を使用すると、パブリッシュ環境でコミュニティメンバーがコミュニティサイト内にサブコミュニティを作成できます。
 
 グループ機能を[コミュニティサイトテンプレート](/help/communities/sites.md)に含めるときの[設定](/help/communities/sites-console.md#groupmanagement)によって、グループを公開または非公開にしたり、1 つ以上のコミュニティグループテンプレートを設定しておいて、コミュニティグループを（パブリッシュ環境から）実際に作成するときにテンプレートを選択できるようにすることも可能です。A [community group template](/help/communities/tools-groups.md) specifies which Communities features are created for the group pages, such as forums and calendars.
@@ -292,7 +290,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 リーダーボード機能とは、[リーダーボーコンポーネント](/help/communities/enabling-leaderboard.md)を 1 つ含むページです。
 
-**注**: リーダーボードコンポーネントは、リーダーボード機能を含むコミュニティテンプレートからコミュニティサイトを作成 *した後* 、さらに設定する必要があります。 リーダーボードコンポーネントの [ルールを指定します](/help/communities/enabling-leaderboard.md#rules-tab)。これは、コミュニティサイトの [スコアリングとバッジの設定に依存します](/help/communities/implementing-scoring.md) 。
+**注**:リーダーボードコンポーネントは、リーダーボード機能を含むコミュニティテンプレートからコミュニティサイトを作成 *した後* 、さらに設定する必要があります。 リーダーボードコンポーネントの [ルールを指定します](/help/communities/enabling-leaderboard.md#rules-tab)。これは、コミュニティサイトの [スコアリングとバッジの設定に依存します](/help/communities/implementing-scoring.md) 。
 
 テンプレートに追加すると、次のダイアログが開きます。ここで、タイトルおよび URL 名のデフォルトと、テンプレートのデフォルト表示設定を指定します。
 
@@ -353,7 +351,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 ## Create Community Function {#create-community-function}
 
-The ability to create a community function is reached by selecting the `Create Community Function` icon located at the top of the Community Functions console. 同じAEM Blueprintに基づく複数の関数を作成し、作成者編集モードで開いて独自にカスタマイズすることができます。
+The ability to create a community function is reached by selecting the `Create Community Function` icon located at the top of the Community Functions console. 同じAEM Blueprintに基づく複数の機能を作成し、作成者編集モードで開いて独自にカスタマイズできます。
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
