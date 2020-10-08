@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85d4cdf0e2cfcb8b5e70387ce2dc556df9033257
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 36%
@@ -35,7 +35,7 @@ ht-degree: 36%
 
 ## インストールチェックリスト {#installation-checklist}
 
-**[AEM プラットフォーム](/help/sites-deploying/deploy.md#what-is-aem)**用
+**[AEM プラットフォーム](/help/sites-deploying/deploy.md#what-is-aem)**&#x200B;用
 
 * Install latest [AEM 6.5 Updates](#aem64updates)
 
@@ -44,7 +44,7 @@ ht-degree: 36%
 * If supporting globalization, [setup automated translation](/help/sites-administering/translation.md)
 (sample setup is provided for development)
 
-**[Communities 機能](/help/communities/overview.md)**用
+**[Communities 機能](/help/communities/overview.md)**&#x200B;用
 
 * [発行ファームを展開する場合](/help/sites-deploying/recommended-deploys.md#tarmk-farm)、主な発行者を [特定する](#primary-publisher)
 
@@ -81,7 +81,7 @@ ht-degree: 36%
 
    * [FFmpegのインストールと設定](/help/communities/ffmpeg.md)
    * [MySQL用JDBCドライバーのインストール](#jdbc-driver-for-mysql)
-   * [SCORM-EngineAEM Communitiesのインストール](#scorm-package)
+   * [AEM CommunitiesSCORM-Engineのインストール](#scorm-package)
    * [有効にするMySQLのインストールと設定](/help/communities/mysql.md)
 
 
@@ -192,7 +192,7 @@ On the local AEM instance, use package manager (for example [https://localhost:4
 
 Alternatively, accessing the package using package share from the local AEM instance (for example, [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)), the `Download` button will download to the local AEM instance&#39;s package repository.
 
-ローカルAEMインスタンスのパッケージリポジトリに移動したら、パッケージマネージャーを使用してパッケージをインストールします。
+ローカルAEMインスタンスのパッケージリポジトリに入ったら、パッケージマネージャーを使用してパッケージをインストールします。
 
 For more information, visit [How to Work With Packages](/help/sites-administering/package-manager.md#package-share).
 
@@ -299,7 +299,7 @@ then [configure the replication agent](#replication-agents-on-author)
 
 AEM Communities には、すべての AEM サーバーインスタンスで同じ暗号鍵を使用する必要がある機能が 2 つあります。These are [Analytics](/help/communities/analytics.md) and [ASRP](/help/communities/asrp.md).
 
-AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されなくなります。
+AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されません。
 
 オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
 
@@ -317,7 +317,7 @@ for example,
       * hmacおよびプライマリ・ノード・ファイルのコピー
 
 
-* 各ターゲットのAEMインスタンス
+* 各ターゲットAEMインスタンスに対して
 
    * 例えば、データフォルダーに移動します。
 
@@ -330,17 +330,15 @@ for example,
 >
 >既に暗号鍵に基づいて別のセキュリティ機能が設定されている場合、暗号鍵のレプリケーションをおこなうと設定が破損する可能性があります。For assistance, [contact customer care](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html).
 
-
 #### リポジトリのレプリケーション {#repository-replication}
 
-AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（これにより初期リポジトリが作成されます）。
+AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（初期リポジトリを作成します）。
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
 >[!NOTE]
 >
 >It is important to verify that the [replication agent on author](#replication-agents-on-author) is correctly configured.
-
 
 リポジトリに鍵の素材が格納されるので、オーサー環境から他のインスタンスへ暗号鍵をレプリケーションする方法は次のようになります。
 
