@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 62%
@@ -33,7 +33,6 @@ AEM Communities 6.1 以降、コミュニティコンテンツ（一般的にユ
 >[!NOTE]
 >
 >**カスタムコンポーネント**：AEM Communities の使用許諾を得たお客様の場合、SRP API は、カスタムコンポーネントの開発者が、基になるトポロジに関係なく UGC にアクセスするために使用できます。See [SRP and UGC Essentials](srp-and-ugc.md).
-
 
 関連トピック：
 
@@ -68,7 +67,6 @@ UGC が共有ストレージに格納される場合、ほとんどのデプロ�
 >See [SRP and UGC Essentials](srp-and-ugc.md) for sample code and additional details.
 >
 >コーディング時のベストプラクティスについては、[SRP による UGC へのアクセス](accessing-ugc-with-srp.md)を参照してください。
-
 
 ### ASRP {#asrp}
 
@@ -130,7 +128,6 @@ See [SRP and UGC Essentials](srp-and-ugc.md) for sample code.
 >[!CAUTION]
 >
 >シャドウノードには複数の用途があるので、シャドウノードの存在はコンポーネントが NER であることを意味しません。**
-
 
 ### 格納場所 {#storage-location}
 
