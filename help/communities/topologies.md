@@ -10,14 +10,17 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 43%
 
 ---
 
 
 # Communities 用の推奨トポロジ {#recommended-topologies-for-communities}
 
-AEM Communities 6.1では、サイト訪問者（メンバー）が発行環境から送信したユーザ生成コンテンツ(UGC)を処理するための独自のアプローチが採用されています。
+AEM Communities6.1以降、サイト訪問者（会員）が発行環境から提出したユーザ生成コンテンツ(UGC)の処理には、独自のアプローチが採用されています。
 
 この手法は、一般的にオーサー環境から管理されるサイトコンテンツを AEM プラットフォームで処理する方法とは根本的に異なります。
 
@@ -44,10 +47,9 @@ One other SRP option, [JSRP - JCR Storage Resource Provider](jsrp.md), does not 
 >
 >AEM プラットフォームについて詳しくは、[推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md)と[AEM プラットフォームの概要](../../help/sites-deploying/data-store-config.md)を参照してください。
 
-
 ## 実稼動について {#for-production}
 
-UGC用の共通ストアを確立することは重要なので、基盤となるデプロイメントは共通ストアをサポートする能力に左右されます。
+UGCに共通のストアを確立することは不可欠です。したがって、基盤となるデプロイメントは、共通のストアをサポートする能力に左右されます。
 
 2 つの例を示します。
 
@@ -63,7 +65,7 @@ For more details on Oak microkernals, visit [Recommended Deployments](../../help
 
 ### TarMK パブリッシュファーム {#tarmk-publish-farm}
 
-トポロジがパブリッシュファームの場合、重要な関連トピックは次のとおりです。
+トポロジが発行ファームの場合、重要な関連トピックは次のとおりです。
 
 * [ユーザーの同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
@@ -74,7 +76,7 @@ For more details on Oak microkernals, visit [Recommended Deployments](../../help
 |-------------|------------------------|----------------------------------|---------------------------|---------------|
 | 任意 | JCR | MySQL | DSRP | 可 |
 | 任意 | JCR | MongoDB | MSRP | 可 |
-| 任意 | JCR | アドビのオンデマンドストレージ | ASRP | Yes |
+| 任意 | JCR | Adobeのオンデマンドストレージ | ASRP | Yes |
 
 ### JSRP {#jsrp}
 
@@ -82,7 +84,7 @@ For more details on Oak microkernals, visit [Recommended Deployments](../../help
 | デプロイメント | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店 |
 |----------------------|------------------------|----------------------------------|---------------------------|---------------------------------|
 | TarMK ファーム（デフォルト） | JCR | JCR | JSRP | 不可 |
-| Oak クラスター | JCR | JCR | JSRP | はい公開環境のみ |
+| Oak クラスター | JCR | JCR | JSRP | 公開環境のみ |
 
 ## 開発について {#for-development}
 
@@ -94,20 +96,20 @@ If choosing [ASRP](asrp.md), [DSRP](dsrp.md) or [MSRP](msrp.md) for production, 
 
 * [ユーザーの同期](sync.md)
 
-   発行ファームインスタンス間でのユーザーデータの同期化を説明します。
+   発行ファームインスタンス間でのユーザーデータの同期について説明します。
 
 * [ユーザーとユーザーグループの管理](users.md)
 
-   作成者および発行ユーザーのユーザーおよびユーザーグループの役割について説明します。環境
+   作成者および公開環境におけるユーザーとユーザーグループの役割について説明します。
 
-* UGC共 [通店](working-with-srp.md)
+* UGC [共通店舗](working-with-srp.md)
 
    コミュニティコンテンツのストレージを、サイトコンテンツとは別に説明します。
 
 * [ノードストアとデータストア](../../help/sites-deploying/data-store-config.md)
 
-   基本的に、サイトのコンテンツはノードストアに保存されます。 アセットの場合、データストアはバイナリデータを格納するように設定できます。 コミュニティの場合、SRPを選択するように共通ストアを設定する必要があります。
+   基本的に、サイトのコンテンツはノードストアに保存されます。 アセットの場合、データストアはバイナリデータを格納するように設定できます。 Communitiesの場合、SRPを選択するように共通ストアを設定する必要があります。
 
 * [AEM 6.3 のストレージ要素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
-   2つのノードの実装についてストレージします。TarおよびMongoDB。
+   2つのノードストレージの実装について説明します。TarおよびMongoDB。
