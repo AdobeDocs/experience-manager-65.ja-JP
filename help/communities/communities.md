@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 59%
@@ -36,7 +36,6 @@ The foundation of a [community site](overview.md#communitiessites) is the [socia
 > 
 >[最新リリース](deploy-communities.md#latest-releases)によって常に最新状態にしておくことをお勧めします。
 
-
 ## 推奨されるデプロイメント {#recommended-deployments}
 
 * [コミュニティコンテンツストレージ](working-with-srp.md)：UGC 共通ストアの使用可能な SRP 選択肢について説明します。
@@ -44,13 +43,13 @@ The foundation of a [community site](overview.md#communitiessites) is the [socia
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-* [Social Component Framework](scf.md): フレームワークとAPIの概要を説明します。
-* [SCFハンドルヘルパー](handlebars-helpers.md): デフォルトのヘルパーおよびカスタムヘルパーの作成方法。
-* [クライアント側のカスタマイズ](client-customize.md): ブラウザーで実行するコードのカスタマイズ
-* [サーバー側のカスタマイズ](server-customize.md): サーバーで実行するコードのカスタマイズ
-* [ストレージリソースプロバイダ(SRP)](srp.md): コミュニティコンテンツのストレージの概要を示します。
-* [コーディングのガイドライン](code-guide.md): ガイドライン、ヒント、テクニックを参照してください。
-* [コミュニティコンポーネントガイド](components-guide.md): インタラクティブ開発ツール
+* [Social Component Framework](scf.md):フレームワークとAPIの概要を説明します。
+* [SCFハンドルヘルパー](handlebars-helpers.md):デフォルトのヘルパーおよびカスタムヘルパーの作成方法。
+* [クライアント側のカスタマイズ](client-customize.md):ブラウザーで実行するコードのカスタマイズ
+* [サーバー側のカスタマイズ](server-customize.md):サーバーで実行するコードのカスタマイズ
+* [ストレージリソースプロバイダ(SRP)](srp.md):コミュニティコンテンツのストレージの概要を示します。
+* [コーディングのガイドライン](code-guide.md):ガイドライン、ヒント、テクニックを参照してください。
+* [コミュニティコンポーネントガイド](components-guide.md):インタラクティブ開発ツール
 
 ## コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
 
