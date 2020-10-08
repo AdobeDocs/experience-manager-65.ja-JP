@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 50%
@@ -161,8 +161,8 @@ In addition, choose **[!UICONTROL General]** components, such as
 >[!NOTE]
 >
 >The components enabled for the page par are stored in the repository as the value of the `components` property of the
->`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` ノードの実際の値を表します。
-
+>
+>`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` node.
 
 ## ランディングページ {#landing-page}
 
