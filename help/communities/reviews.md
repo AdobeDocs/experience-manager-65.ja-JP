@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
-source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 33%
@@ -27,7 +27,6 @@ The `Reviews Summary (Display)` component provides a summary of an active or clo
 >[!NOTE]
 >
 >匿名でのレビュー投稿はサポートされていません。サイト訪問者は参加するには、登録（会員になる）し、サインインする必要があります。 ログインした訪問者は、いつでもレビューを更新できます。
-
 
 ## レビューをページに追加 {#adding-a-review-to-a-page}
 
@@ -65,7 +64,7 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 * **[!UICONTROL 必須の評価]**
 
-   許可されている評価のサブセットで、必要な評価を示します。
+   許可されている評価のサブセット。必要な評価を示します。
 
    表示される選択肢を変更するには、上向き矢印、下向き矢印および削除ボタンを使用します。
 
@@ -74,7 +73,6 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 >[!NOTE]
 >
 >If an item is entered on the **[!UICONTROL Required Ratings]** tab that is not specified on the **[!UICONTROL Allowed Ratings]** tab, then it is not included in the items to rate.
-
 
 Under the **[!UICONTROL Reviews]** tab, specify how reviews are handled.
 
@@ -92,7 +90,7 @@ Under the **[!UICONTROL Reviews]** tab, specify how reviews are handled.
 
    このオプションを選択すると、レビュー用に添付ファイルをアップロードできます。 初期設定はオフです。
 
-* **最大ファイルサイズ&#x200B;**
+* **最大ファイルサイズ**
 
    「 **[!UICONTROL Allow File Uploads]** 」がオンになっている場合にのみ関連します。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。デフォルトは 10 MB です。
 
@@ -169,7 +167,6 @@ For necessary information, visit [Communities Components Basics](basics.md).
 >[!NOTE]
 >
 >「平均」は、要約するレビューの「許可された評価」タブに指定されている最初の項目への投票を反映します。
-
 
 ### レビューの概要（表示）の設定 {#configuring-reviews-summary-display}
 
