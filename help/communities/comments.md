@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 32%
@@ -34,7 +34,6 @@ ht-degree: 32%
 >
 >匿名でのコメント投稿はサポートされていません。サイト訪問者は参加するには、登録（会員になる）し、サインインする必要があります。
 
-
 ### コメントをページに追加 {#adding-comments-to-a-page}
 
 To add a `Comments` component to a page in author mode, use the component browser to locate
@@ -52,7 +51,6 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 >[!NOTE]
 >
 >Only one `Comments` component may exist on a page. コミュニティの機能の中には、既にブログ、カレンダー、フォーラム、QnA、レビューなどのコメントが含まれているものもあります。
-
 
 ### コメントの設定 {#configuring-comments}
 
