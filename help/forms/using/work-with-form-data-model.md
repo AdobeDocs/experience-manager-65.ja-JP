@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 39ae3d8348b0c149c047c9fb3ac2eb673b610645
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '4162'
-ht-degree: 59%
+source-wordcount: '4148'
+ht-degree: 60%
 
 ---
 
@@ -199,8 +199,10 @@ request属性を使用して、データソースから関連付けられたプ�
 
    >[!NOTE]
    >
-   > * 静的テンプレートを使用する場合は、head.jspを次の場所にオーバーレイします。/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp
-   > * 編集可能なテンプレートを使用する場合は、aftemplatedpage.jspを次の場所でオーバーレイします。/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp
+   > * 静的テンプレートを使用する場合は、head.jspを次の場所にオーバーレイします。
+      >   `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+   > * 編集可能なテンプレートを使用する場合は、aftemplatedpage.jspを次の場所でオーバーレイします。
+      >   `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
 
 
 1. リクエスト属性 [!DNL paramMap] に設定します。 例えば、appsフォルダーの.jspファイルに次のコードを含めます。
@@ -425,7 +427,7 @@ In this example, you can also choose the output model object as Person and navig
 * **オフ**:検証なし
 * **基本**:FDMは、「required」制約と「nullable」制約に基づいて検証を実行します
 
-フ `ValidationOptions`ラグに値が設定されていない場合、 **入力データに対してBASIC** 検証が実行されます。
+フ `ValidationOptions`ラグに値が設定されていない場合、 **BASIC** 検証は入力データに対して実行されます。
 
 検証フラグを **FULLに設定する例を次に示します**。
 
