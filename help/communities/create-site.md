@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 42%
@@ -97,7 +97,6 @@ Visit the [Getting Started with AEM Communities for Enablement](/help/communitie
 >
 >実稼動環境では、カスタムの Facebook アプリケーションおよび Twitter アプリケーションを作成する必要があります。[Facebook と Twitter を使用したソーシャルログイン](/help/communities/social-login.md)を参照してください。
 
-
 ![コミュニティサイトの設定](assets/site-settings.png)
 
 #### タグ付け {#tagging}
@@ -125,7 +124,6 @@ The tags which may be applied to community content are controlled by selecting A
 >[!NOTE]
 >
 >[トンネルサービス](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) ：パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
-
 
 ![新しいサイトでのユーザーの役割](assets/site-admin-1.png)
 
@@ -227,9 +225,6 @@ Select **Create.**
 >1. 「**[!UICONTROL OK]**」を選択します。
 >1. (Optional) Select **[!UICONTROL Clear]** or **[!UICONTROL Force Retry]** to reset the replication queue.
 
->
-
-
 
 ### サイトの公開 {#select-publish}
 
@@ -317,7 +312,6 @@ To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the 
 >
 >To disable, simply prefix the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
 
-
 ![オプションステップ](assets/optional-steps.png)
 
 #### トラブルシューティング：マップ保存エラー {#troubleshooting-error-saving-map}
@@ -341,5 +335,3 @@ The &#39;**$**&#39; at the end of the regular expression `sling:match`string is 
 >[!NOTE]
 >
 >AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
-
-
