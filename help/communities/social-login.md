@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 42606e76742fe7698c4c186208e515ed22adc5a4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2787'
 ht-degree: 36%
@@ -20,7 +20,7 @@ ht-degree: 36%
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
 
-ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMの会員プロファイルに含まれます。
+ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMのメンバープロファイルに含まれます。
 
 ![socialloginretail](assets/socialloginweretail.png)
 
@@ -71,7 +71,6 @@ Facebook Graph APIのバージョンが1.0の場合、ソーシャルログイ�
 >
 >For older AEM versions, if you are facing an exception in logs **Can&#39;t extract a token from this**, upgrade to latest CFP for that AEM release.
 
-
 For the Facebook Graph API version information, see the [Facebook API changelog](https://developers.facebook.com/docs/apps/changelog).
 
 ### Create a Facebook App {#create-a-facebook-app}
@@ -93,7 +92,6 @@ Facebookアプリを作成するには、Facebookの指示に従ってhttps://de
 >[!NOTE]
 >
 >開発のために、http://localhost:4503が動作します。
-
 
 Once the application has been created, locate the **[!UICONTROL App ID]** and **[!UICONTROL App Secret]** settings. この情報は、 [Facebookクラウドサービスを設定する際に必要です](#createafacebookcloudservice)。
 
@@ -130,7 +128,6 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
 
    * Select **[!UICONTROL SAVE]**.
    * **[!UICONTROL 公開]**.
-
 
 
 
@@ -393,7 +390,6 @@ For example, http://localhost:4503/system/console/configMgr
 >[!CAUTION]
 >
 >Be careful to not confuse the authentication handler with a Facebook or Twitter instance of *Adobe Granite OAuth Application and Provider*.
-
 
 ![chlimage_1-490](assets/chlimage_1-490.png)
 
