@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 33%
@@ -53,15 +53,15 @@ ht-degree: 33%
 
 ### JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限により、jcrコンテンツとjsonを介してコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **を許可** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **を許可** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
 
 jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
-1. AEM Authorインスタンスで、https:// hostname:port/editor.html/content/site/sitename.htmlに移動します。
+1. AEM作成者インスタンスで、https:// hostname:port/editor.html/content/site/sitename.htmlに移動します。
 
    >[!NOTE]
    >
-   >ローカライズされたサイトに移動しないでください。
+   >ローカライズされたサイトには移動しないでください。
 
 1. 「 **ページプロパティ**」に移動。
 
@@ -93,7 +93,7 @@ In the upper right corner, select `Log in`, and sign with username (aaron.mcdona
    1. 個人やグループに送信する新しいダイレクトメッセージを作成します。
 
 * [「通知](/help/communities/notifications.md) 」オプションを選択すると、通知セクションに移動します。このセクションでは、関心のあるイベントの表示や、通知の設定の編集が可能です。
-* [モデレート権限を持つ場合は、「管理](/help/communities/published-site.md#moderationlink) 」をクリックするとAEM Communitiesのモデレートページに移動します。
+* [モデレート権限を持つ場合は、管理](/help/communities/published-site.md#moderationlink) :AEM Communitiesモデレートページに移動します。
 
 ![adminscreen](assets/adminscreen.png)
 
@@ -107,9 +107,6 @@ In the upper right corner, select `Log in`, and sign with username (aaron.mcdona
 >
 >* [コミュニティコンポーネント](/help/communities/author-communities.md)（作成者向け）
 >* [コンポーネントおよび機能の基本事項](/help/communities/essentials.md)（開発者向け）
-
->
-
 
 
 ### フォーラムリンク {#forum-link}
