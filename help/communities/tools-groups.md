@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 42%
@@ -33,10 +33,9 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 >
 >The consoles for the creation of [community sites](/help/communities/sites-console.md), [community site templates](/help/communities/sites.md), [community group templates](/help/communities/tools-groups.md) and [community functions](/help/communities/functions.md) are for use only in the author environment.
 
-
 ## Group Templates Console {#group-templates-console}
 
-AEM Author環境のグループテンプレートコンソールに移動するには：
+AEM Author環境のグループテンプレートコンソールにアクセスするには：
 
 * ツールの選択 **|コミュニティ |グローバルナビゲーションから** 、グループテンプレートを作成します。
 
@@ -83,7 +82,6 @@ To get started creating a new group template, select `Create`.
 >ネストされたグループの機能を使用できるのは、Communities [FP1](/help/communities/communities.md#latestfeaturepack) 以降です。
 >
 >テンプレート内の 1 番目の機能または唯一の機能としてグループ機能を追加することはまだできません。
-
 
 ![グループテンプレートエディター](assets/template-editor.png)
 
