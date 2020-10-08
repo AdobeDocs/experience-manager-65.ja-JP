@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1728'
 ht-degree: 49%
@@ -123,7 +123,6 @@ The tags which may be applied to community content are controlled by selecting A
 >[!NOTE]
 >
 >[トンネルサービス](/help/communities/deploy-communities.md#tunnel-service-on-author) ：パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
-
 
 ![有効化ロール](assets/site-admin.png)
 
@@ -315,7 +314,6 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 >
 >To disable, simply pre-pend the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
 
-
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
 #### トラブルシューティング：マップ保存エラー {#troubleshooting-error-saving-map}
@@ -339,7 +337,6 @@ The &#39;**$**&#39; at the end of the regular expression `sling:match` string is
 >[!NOTE]
 >
 >AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
-
 
 ### カタログの追加 {#add-a-catalog}
 
