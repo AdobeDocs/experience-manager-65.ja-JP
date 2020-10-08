@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 39%
@@ -171,7 +171,6 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 >[!NOTE]
 >
 >新しいタグ名前空間（分類）の追加方法については、「[タグの管理](/help/sites-administering/tags.md)」を参照してください。
-
 
 #### 「翻訳」タブ {#translation-tab}
 
