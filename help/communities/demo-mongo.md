@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: a99313c35872d3f481c3dc6f42b372cc603e7549
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 53%
@@ -74,7 +74,6 @@ This tutorial describes how to setup [MSRP](msrp.md) for *one author* instance a
 >
 >If MongoDB is started *after* AEM, **restart** all **AEM** instances so they properly connect to MongoDB.
 
-
 ### 実稼動デモのオプション：MongoDB レプリカセットのセットアップ {#demo-production-option-setup-mongodb-replica-set}
 
 以下のコマンドは、ローカルホストに 3 つのノードを持つレプリカセットの設定例です。
@@ -133,7 +132,6 @@ Solr を実行する方法は、バージョンとインストール方法によ
 >
 >Solr コンソールが使用できない場合は、&lt;solrinstall>/example/logs にあるログを確認します。SOLRが解決できない特定のホスト名(例：&quot;user-macbook-pro&quot;)。
 その場合、このホスト名の新しいエントリ（127.0.0.1 user-macbook-pro など）を使用して etc/hosts ファイルを更新します。すると Solr が適切に起動します。
-
 
 ### SolrCloud {#solrcloud}
 
