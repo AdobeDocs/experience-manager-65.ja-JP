@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 45%
@@ -44,7 +44,6 @@ AEM Communities では、各環境を次の目的で使用します。
 >[!NOTE]
 >
 >AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
-
 
 ## Communities の最新リリースのインストール {#install-latest-communities-release}
 
@@ -95,7 +94,7 @@ Create a user on *author*, who is assigned the role of Community Administrator:
    * 例：ユーザー名「admin」/パスワード「admin」
 
 * From the main console, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-* From the **Edit **menu, select**[!UICONTROL Add User ]**
+* From the **Edit** menu, select **[!UICONTROL Add User]**
 
 * ダイアログで、次のように `Create New User` 入力します。
 
@@ -160,4 +159,4 @@ It is recommended, but optional, to set [MSRP](msrp.md) (MongoDB) as the [common
 
 For instructions visit [How to Setup MongoDB for Demo](demo-mongo.md).
 
-デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、JSRPが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、作成者環境には表示されないので、すべてのモデレートタスクで発行インスタンスを使用する必要があります。
+デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、UGCが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、作成者環境には表示されないので、すべてのモデレートタスクで発行インスタンスを使用する必要があります。
