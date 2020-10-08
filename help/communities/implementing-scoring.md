@@ -12,7 +12,7 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
 workflow-type: tm+mt
 source-wordcount: '2884'
 ht-degree: 53%
@@ -145,7 +145,6 @@ If the node is of type `cq:Page` (recommended), then, using CRXDE|Lite, add the 
 >[!NOTE]
 >
 >スコアルールがバッジ授与に影響を与えていないように見える場合は、スコアルールがバッジルールの scoringRules でブロックされていないかを確認してください。See the section titled [Badging Rules](#badging-rules).
-
 
 ### Enable Badges for Component {#enable-badges-for-component}
 
