@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 60%
@@ -55,11 +55,9 @@ ht-degree: 60%
 >
 >オーバーレイされたパスのすべてのノードのタイプは、`Folder` である必要があります。
 
-
 >[!CAUTION]
 >
 >If the custom template is given the name *sitepage.hbs*, then all community sites will be customized.
-
 
 ### カスタムサイトテンプレートの例 {#custom-site-template-example}
 
