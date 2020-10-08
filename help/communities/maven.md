@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: f05d7c19e3284c0627e29b9590db4749be100229
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 59%
@@ -22,9 +22,9 @@ ht-degree: 59%
 
 ## 概要 {#overview}
 
-AEM Communitiesドキュメントのこの節には、次の項が含まれます。
+AEM Communitiesのドキュメントのこのセクションには、次のセクションが含まれます。
 
-* [Apache Mavenを使用したAEMプロジェクトの構築](../../help/sites-developing/ht-projects-maven.md)。
+* [Apache Mavenを使用したAEMプロジェクトの構築を参照してください](../../help/sites-developing/ht-projects-maven.md)。
 
 現在、個々のアーティファクトに代わる 2 つの「uber」アーティファクトがあります。
 
@@ -59,7 +59,6 @@ AEM Communities API jar の GAV の例を次に示します。
 >コミュニティのリリースを常に最新に保つことをお勧めします。
 >
 >最新バージョンを確認するには、[最新リリース](deploy-communities.md#latest-releases)の節を参照してください。
-
 
 ## Maven 依存関係の例 {#maven-dependency-example}
 
