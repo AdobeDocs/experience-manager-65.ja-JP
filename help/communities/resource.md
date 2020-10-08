@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
 translation-type: tm+mt
-source-git-commit: e84c9a99ce9ec0447a5fb3e0ca5ba76b41c888cd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 46%
@@ -56,7 +56,7 @@ ht-degree: 46%
 
 * **[!UICONTROL カタログに表示]**
 
-   オンに設定し **ます**。
+   「オン」に設定し **ます**。
 
 * **[!UICONTROL 説明]**
 
@@ -198,7 +198,6 @@ Enablement Tutorial のリソースのリストに戻ります。
 >[!NOTE]
 >
 >学習パスと同じレベルのリソースのみを選択できます。例えば、グループ内に作成された学習パスには、グループレベルのリソースのみを使用できます。コミュニティサイト内に作成された学習パスには、そのサイト内のリソースを追加できます。
-
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
