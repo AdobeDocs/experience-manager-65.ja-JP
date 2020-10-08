@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 47%
@@ -140,9 +140,6 @@ Follow the steps below (
 >* [JDBC 設定](#configure-jdbc-connections)
 >* [SCORM 設定](#configure-scorm)
 
->
-
-
 
 #### 手順 1：SQL ファイルを開く {#step-open-sql-file}
 
@@ -195,10 +192,10 @@ When MySQL runs on a server different from AEM, the server hostname must be spec
 
 * 次の値を入力します。
    * **[!UICONTROL JDBC ドライバークラス]**: `com.mysql.jdbc.Driver`
-   * **DBC接続URIJ **:`jdbc:mysql://localhost:3306/aem63reporting`MySQLサーバーが&#39;this&#39; AEMサーバーと同じでない場合は、localhostの代わりにserverを指定します。
-   * **[!UICONTROL ユーザー名]**: 「root」でない場合は、MySQLサーバーの設定済みユーザー名をrootにするか、入力します。
-   * **[!UICONTROL パスワード]**: MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。それ以外の場合は、MySQLユーザー名に設定済みのパスワードを入力します。
-   * **[!UICONTROL データソース名]**: MySQL接続に対して入力された名前 [](#new-connection-settings)（例： &#39;enablement&#39;）。
+   * **DBC接続URIJ**: `jdbc:mysql://localhost:3306/aem63reporting` MySQLサーバーが&#39;this&#39; AEMサーバーと同じでない場合は、localhostの代わりにserverを指定します。
+   * **[!UICONTROL ユーザー名]**:「root」でない場合は、MySQLサーバーの設定済みユーザー名をrootにするか、入力します。
+   * **[!UICONTROL パスワード]**:MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。それ以外の場合は、MySQLユーザー名に設定済みのパスワードを入力します。
+   * **[!UICONTROL データソース名]**:MySQL接続に対して入力された名前 [](#new-connection-settings)（例： &#39;enablement&#39;）。
 * 「**[!UICONTROL 保存]**」を選択します。
 
 ## SCORM の設定 {#configure-scorm}
@@ -224,12 +221,12 @@ When MySQL runs on a server different from AEM, the server hostname must be spec
 
 * Verify the following parameter values are consistent with the [JDBC Connection](#configurejdbcconnectionspool) config:
    * **[!UICONTROL JDBC接続URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB* は、SQLスクリプトのデフォルトのデータベース名です
-   * **[!UICONTROL ユーザー名]**: 「root」でない場合は、MySQLサーバーの設定済みのユーザー名をルートにするか、入力します。
-   * **[!UICONTROL パスワード]**: MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。それ以外の場合は、MySQLユーザー名に設定済みのパスワードを入力します
+   * **[!UICONTROL ユーザー名]**:「root」でない場合は、MySQLサーバーの設定済みのユーザー名をルートにするか、入力します。
+   * **[!UICONTROL パスワード]**:MySQLにパスワードが設定されていない場合は、このフィールドをクリアします。それ以外の場合は、MySQLユーザー名に設定済みのパスワードを入力します
 * 次のパラメーターに関して：
-   * **[!UICONTROL Scormユーザーパスワード]**: 編集しない
+   * **[!UICONTROL Scormユーザーパスワード]**:編集しない
 
-      内部でのみ使用する場合： AEM CommunitiesがSCORMエンジンと通信するのに使用する特別なサービスユーザー用です。
+      内部でのみ使用する場合：AEM CommunitiesがSCORMエンジンと通信するのに使う特別なサービス利用者のためです。
 * Select **[!UICONTROL Save]**
 
 ### Adobe Granite CSRF Filter {#adobe-granite-csrf-filter}
