@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 63%
@@ -52,7 +52,6 @@ When [creating a community site](sites-console.md), the default translation serv
 >
 >実稼動システムでは、ライセンスを取得した翻訳サービスが必要です。If not licensed, the default translation service should be [turned off](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
 
-
 ## UGC のグローバル翻訳 {#global-translation-of-ugc}
 
 Web サイトに[複数の言語コピー](../../help/sites-administering/tc-prep.md)がある場合、デフォルトの翻訳サービスでは、あるサイトで入力された UGC が別のサイトで入力された UGC と関連している可能性は認識されません。その UGC が本質的に同じコンポーネント（そのコンポーネントを含んでいるページの言語コピー）で生成された場合でも同様です。
@@ -70,7 +69,6 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 >While the UGC is still in the [common store](working-with-srp.md), it is located under the language-specific UGC location, while new content, added after global translation was configured, is being retrieved from the global shared store location.
 >
 >言語別のコンテンツをグローバル共有ストアに移動または統合する移行ツールはありません。
-
 
 ### 翻訳統合の設定 {#translation-integration-configuration}
 
@@ -145,7 +143,6 @@ For detailed instructions visit [Creating a Translation Integration Configuratio
 >設定言語とは、サイト訪問者がサインインして言語設定を指定したときに、ユーザープロファイルに登録される言語の設定です。
 >
 >サイト訪問者が匿名の場合、または言語設定を自分のプロファイルに登録していない場合は、ページテンプレートのベース言語が設定言語になります。
-
 
 ### ユーザーによる設定 {#user-preference}
 
