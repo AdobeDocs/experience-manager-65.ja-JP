@@ -1,16 +1,16 @@
 ---
-title: AEM 6.5 リリースノート
+title: Adobe Experience Manager6.5リリースノート
 description: AEMリリースノートでは、AEMの最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、非推奨機能および削除された機能、既知の問題など）を説明しています。
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 27%
+source-wordcount: '374'
+ht-degree: 25%
 
 ---
 
 
-# AEM 6.5 リリースノート
+# Adobe Experience Manager6.5リリースノート
 
 AEMリリースノートでは、AEMの最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、非推奨機能および削除された機能、既知の問題など）を説明しています。
 
@@ -40,7 +40,7 @@ AEMリリースノートでは、AEMの最新リリースに関する重要な�
 ## 主なAEMリソース
 
 * [AEMチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-5-videos.html)
-* [Dispatcherユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
+* [ディスパッチャーユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
 * [HTLユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
