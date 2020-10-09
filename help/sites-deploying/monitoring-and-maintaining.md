@@ -62,7 +62,8 @@ AEM インスタンスがデプロイされた後は、操作、パフォーマ�
 >そうしないと、最悪の場合、バックアップが無駄になる可能性があります。
 >
 >[!NOTE]
-バックアップのパフォーマンスについて詳しくは、[バックアップのパフォーマンス](/help/sites-deploying/configuring-performance.md#backup-performance)を参照してください。
+>
+>バックアップのパフォーマンスについて詳しくは、[バックアップのパフォーマンス](/help/sites-deploying/configuring-performance.md#backup-performance)を参照してください。
 
 ### ソフトウェアインストールのバックアップ {#backing-up-your-software-installation}
 
@@ -74,13 +75,16 @@ AEM インスタンスがデプロイされた後は、操作、パフォーマ�
 1. Back up the entire `<cq-installation-dir>` from your file system.
 
 >[!CAUTION]
-サードパーティ製のアプリケーションサーバーを使用している場合は、追加のフォルダーが別の場所に存在し、そのフォルダーのバックアップも必要になることがあります。アプリケーションサーバーのインストールについて詳しくは、[アプリケーションサーバーと共に AEM をインストールする方法](/help/sites-deploying/application-server-install.md)を参照してください。[](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with application server)
+>
+>サードパーティ製のアプリケーションサーバーを使用している場合は、追加のフォルダーが別の場所に存在し、そのフォルダーのバックアップも必要になることがあります。アプリケーションサーバーのインストールについて詳しくは、[アプリケーションサーバーと共に AEM をインストールする方法](/help/sites-deploying/application-server-install.md)を参照してください。[](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with application server)
 
 >[!CAUTION]
-ファイルデータストアの増分バックアップがサポートされています。その他のコンポーネント（Lucene インデックスなど）の増分バックアップを使用する場合は、削除済みのファイルがバックアップでも削除済みとマークされることを確認してください。
+>
+>ファイルデータストアの増分バックアップがサポートされています。その他のコンポーネント（Lucene インデックスなど）の増分バックアップを使用する場合は、削除済みのファイルがバックアップでも削除済みとマークされることを確認してください。
 
 >[!NOTE]
-ディスクミラーリングも、バックアップメカニズムとして使用できます。
+>
+>ディスクミラーリングも、バックアップメカニズムとして使用できます。
 
 ### リポジトリのバックアップ {#backing-up-your-repository}
 
@@ -132,7 +136,8 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 1. 「**パージ**」をクリックして処理を開始します。
 
 >[!CAUTION]
-パージされたノードを元に戻すには、リポジトリを復元するしかありません。設定は自己管理する必要があるので、パージの前に必ずドライランを実行することをお勧めします。
+>
+>パージされたノードを元に戻すには、リポジトリを復元するしかありません。設定は自己管理する必要があるので、パージの前に必ずドライランを実行することをお勧めします。
 
 ### コンソールの分析 {#analyzing-the-console}
 
@@ -180,7 +185,8 @@ AEM WCM では詳細なログを記録します。クイックスタートを展
 * 以前のログファイルは削除されないので、古いログファイルを定期的にクリーンアップしてディスクの使用を制限する必要があります。
 
 >[!NOTE]
-AEM をアップグレードする場合は、AEM でこれ以上使用されない既存のログファイルがディスク上に残ることに注意してください。これらは削除しても問題ありません。新しいログエントリはすべて、新しいログファイルに書き込まれます。
+>
+>AEM をアップグレードする場合は、AEM でこれ以上使用されない既存のログファイルがディスク上に残ることに注意してください。これらは削除しても問題ありません。新しいログエントリはすべて、新しいログファイルに書き込まれます。
 
 ### ログファイルの検索 {#finding-the-log-files}
 
@@ -223,7 +229,8 @@ Folio Builderから実行されるすべてのアップグレード操作のロ�
 改訂ジャーナリング情報。
 
 >[!NOTE]
-**system/console/status-Bundlelist **ページから生成された**Download Full **packageには、ImageServerとs7accessのログは含まれません。 サポートの目的で、問題が発生した場合は、カスタマーサポートに問い合わせる際に、ImageServerログとs7accessログも追加して [!DNL Dynamic Media] ください。
+>
+>**system/console/status-Bundlelist **ページから生成された**Download Full **packageには、ImageServerとs7accessのログは含まれません。 サポートの目的で、問題が発生した場合は、カスタマーサポートに問い合わせる際に、ImageServerログとs7accessログも追加して [!DNL Dynamic Media] ください。
 
 ### デバッグログレベルのアクティベート {#activating-the-debug-log-level}
 
@@ -232,7 +239,8 @@ Folio Builderから実行されるすべてのアップグレード操作のロ�
 ロガーのデバッグログレベルをアクティブにするには、リポジトリでデバッグす `org.apache.sling.commons.log.level` るプロパティを設定します。 例えば、 `/libs/sling/config/org.apache.sling.commons.log.LogManager` グローバルApache Slingログを設定す [る場合などです](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)。
 
 >[!CAUTION]
-デバッグログレベルのログを、不必要に長く残さないでください。多くのログエントリが生成され、リソースが消費されます。
+>
+>デバッグログレベルのログを、不必要に長く残さないでください。多くのログエントリが生成され、リソースが消費されます。
 
 デバッグファイルの行は、通常は DEBUG で始まり、その後にログレベル、インストーラーのアクション、ログメッセージが示されます。次に例を示します。
 
@@ -251,7 +259,8 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 ### カスタムログファイルの作成 {#create-a-custom-log-file}
 
 >[!NOTE]
-Adobe Experience Manager を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+>
+>Adobe Experience Manager を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 状況によっては、別のログレベルでカスタムログファイルを作成する必要があります。これをおこなうには、リポジトリで次の手順を実行します。
 
@@ -266,7 +275,8 @@ Adobe Experience Manager を操作しているときは、このようなサー�
 
    * タイプ：`sling:OsgiConfig`
    >[!NOTE]
-   技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
+   >
+   >技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
 
 1. このノードで次のプロパティを設定します。
 
@@ -301,33 +311,38 @@ Adobe Experience Manager を操作しているときは、このようなサー�
 
          `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
    >[!NOTE]
-   `org.apache.sling.commons.log.pattern` では、最大 6 個の引数がサポートされています。
+   >
+   >`org.apache.sling.commons.log.pattern` では、最大 6 個の引数がサポートされています。
 
    >{0} タイプが `java.util.Date` のタイムスタンプ {1} ログマーカー {2} 現在のスレッドの名前 {3} ロガーの名前 {4} ログレベル {5} ログメッセージ
 
    >ログ呼び出しに `Throwable` が含まれている場合は、スタックトレースがメッセージに付加されます。
 
    >[!CAUTION]
-   org.apache.sling.commons.log.names には値が必要です。
+   >
+   >org.apache.sling.commons.log.names には値が必要です。
 
    >[!NOTE]
-   ログライターのパスは、`crx-quickstart` の場所と相対的です。
-   したがって、ログファイルが
-   `logs/thelog.log`
+   >
+   >ログライターのパスは、`crx-quickstart` の場所と相対的です。
+   >したがって、ログファイルが
+   >`logs/thelog.log`
 
    >と指定されている場合、書き込み先は以下となります。
-   `` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
-   また、ログファイルが
-   `../logs/thelog.log`
+   >`` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
+   >また、ログファイルが
+   >`../logs/thelog.log`
 
    >と指定されている場合、書き込み先は以下のディレクトリとなります。
-   ` <*cq-installation-dir*>/logs/`
+   >` <*cq-installation-dir*>/logs/`
+
 &quot;(例： ` `&lt;*cq-installation-dir*>/の横`crx-quickstart/`)
 
 1. この手順は、新しいライターが必要な場合（つまり、デフォルトのライターとは異なる設定の場合）にのみ必要です。
 
    >[!CAUTION]
-   新しい Logging Writer Configuration は、既存のデフォルトが適切でない場合にのみ必要です。
+   >
+   >新しい Logging Writer Configuration は、既存のデフォルトが適切でない場合にのみ必要です。
 
    >明示的なライターが設定されていない場合は、デフォルトに基づいて暗黙のライターが自動的に生成されます。
 
@@ -339,7 +354,8 @@ Adobe Experience Manager を操作しているときは、このようなサー�
 
    * タイプ：`sling:OsgiConfig`
    >[!NOTE]
-   技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
+   >
+   >技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
 
    このノードで次のプロパティを設定します。
 
@@ -365,9 +381,10 @@ Adobe Experience Manager を操作しているときは、このようなサー�
 
          Value: specify as required to control file rotation by size/date; for example, `'.'yyyy-MM-dd`
    >[!NOTE]
-   `org.apache.sling.commons.log.file.size` は、次のいずれかを設定することによって、ログファイルのローテーションを制御します。
-   * 最大ファイルサイズ
-   * 時刻／日付のスケジュール
+   >
+   >`org.apache.sling.commons.log.file.size` は、次のいずれかを設定することによって、ログファイルのローテーションを制御します。
+   >* 最大ファイルサイズ
+   >* 時刻／日付のスケジュール
 
    これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
    * サイズ制限は、数値で指定できます。 サイズインジケーターを指定しない場合は、バイト数と見なされるか、サイズインジケーターの1つ( `KB`、 `MB`または `GB` （大文字と小文字は区別されません）を追加できます。
@@ -455,10 +472,11 @@ OSGi events also generate audit records which can be seen from the **Configurati
    * 必要に応じて、任意のキュー項目で&#x200B;**強制的に再試行**。
 
    >[!CAUTION]
-   パブリッシュインスタンスのリバースレプリケーションアウトボックスには、「接続をテスト」リンクは使用しないでください。
-   アウトボックスクエリ用にレプリケーションテストが実行されると、リバースレプリケーションのたびに、テストレプリケーションより古い項目がすべて再処理されます。
-   そのような項目がキュー内に既に存在する場合は、次の XPath JCR クエリを使用して検索し、削除する必要があります。
-   `/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
+   >
+   >パブリッシュインスタンスのリバースレプリケーションアウトボックスには、「接続をテスト」リンクは使用しないでください。
+   >アウトボックスクエリ用にレプリケーションテストが実行されると、リバースレプリケーションのたびに、テストレプリケーションより古い項目がすべて再処理されます。
+   >そのような項目がキュー内に既に存在する場合は、次の XPath JCR クエリを使用して検索し、削除する必要があります。
+   >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
 Again you can develop a solution to detect all replication agents (located under `/etc/replication/author` or `/etc/replication/publish`), then check the status of the agent ( `enabled`, `disabled`) and the underlying queue ( `active`, `idle`, `blocked`).
 
@@ -469,7 +487,8 @@ Again you can develop a solution to detect all replication agents (located under
 最適化のための情報収集に使用する方法は、継続中の監視にも使用できます。
 
 >[!NOTE]
-具体的な[パフォーマンス向上のための設定](/help/sites-deploying/configuring-performance.md#configuring-for-performance)も確認できます。
+>
+>具体的な[パフォーマンス向上のための設定](/help/sites-deploying/configuring-performance.md#configuring-for-performance)も確認できます。
 
 以下のリストは、よく発生するパフォーマンス上の問題と、それぞれの見分け方および対策を示しています。
 
@@ -854,7 +873,8 @@ JDK 1.6以降では、toolコマンドを使用 `jvisualvm` できます。 JDK 
 1. AEM インスタンスを起動します。
 
    >[!NOTE]
-   Java 5を使用している場合は、JVMを開始するJavaコマンドラインに `-Dcom.sun.management.jmxremote` 引数を追加できます。 JMXは、Java 6によりデフォルトで有効になります。
+   >
+   >Java 5を使用している場合は、JVMを開始するJavaコマンドラインに `-Dcom.sun.management.jmxremote` 引数を追加できます。 JMXは、Java 6によりデフォルトで有効になります。
 
 1. 次のいずれかを実行します。
 
@@ -1018,11 +1038,12 @@ To determine the total size of the `/var/dam` folder:
 以下は、特定のパフォーマンス問題が発生しはじめた場合にチェックするべきことの提案リストです。リストは（残念ながら）完全に網羅的ではありません。
 
 >[!NOTE]
-詳しくは、以下の記事も参照してください。
-* [スレッドダンプ](https://helpx.adobe.com/jp/experience-manager/kb/TakeThreadDump.html)
-* [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
-* [ビルトインプロファイラーによる分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
-* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+>
+>詳しくは、以下の記事も参照してください。
+>* [スレッドダンプ](https://helpx.adobe.com/jp/experience-manager/kb/TakeThreadDump.html)
+>* [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
+>* [ビルトインプロファイラーによる分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
+>* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
 
 
@@ -1115,5 +1136,6 @@ JConsole の場合は以下のとおりです。
 これは、使用されているメモリ量、使用されているGCアルゴリズム、実行に要する時間、およびアプリケーションのパフォーマンスに与える影響を確認するのに役立ちます。 これを使わないと、調整は単に「ランダムにタワタ動くノブ」になる。
 
 >[!NOTE]
-Oracle の VM に関しては、以下にも情報があります。
-[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+>
+>Oracle の VM に関しては、以下にも情報があります。
+>[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)

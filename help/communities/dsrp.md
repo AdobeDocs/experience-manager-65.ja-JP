@@ -70,6 +70,7 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
       >[!NOTE]
       >
       >デフォルトのストレージ設定は、etc path (`/conf/global/settings/community/srpc/defaultconfiguration`)ではなくconf path(`/etc/socialconfig/srpc/defaultconfiguration`)に保存されるようになりました。 defaultsrpを期待どおりに機能させるには、 [移行手順に従うようお勧めします](#zerodt-migration-steps) 。
+
    ![dsrp-config](assets/dsrp-config.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
