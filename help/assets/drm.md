@@ -3,10 +3,10 @@ title: 資産のDigital Rights Management
 description: Learn how to manage asset expiration states and information for licensed assets in [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 97d3edf155ddeabf3f39139c9079621c3627820b
 workflow-type: tm+mt
-source-wordcount: '1423'
-ht-degree: 82%
+source-wordcount: '1400'
+ht-degree: 79%
 
 ---
 
@@ -20,10 +20,6 @@ ht-degree: 82%
 アセットの有効期限は、アセットのライセンス要件を徹底する有効な方法です。公開済みアセットの有効期限が切れたらアセットを非公開にすることで、ライセンス違反が発生する可能性を回避します。管理者権限のないユーザーは、有効期限切れのアセットを編集、コピー、移動、公開、ダウンロードできません。
 
 You can view the expiration status of an asset in the [!DNL Assets] console in both the card and list views.
-
-![expired_flag_card](assets/expired_flag_card.png)
-
-*図：カードの表示では、カードのフラグは期限切れのアセットを示します。*
 
 ![expired_flag_リスト](assets/expired_flag_list.png)
 
@@ -40,17 +36,11 @@ You can view the expiration status of an asset in the [!UICONTROL Timeline] in l
 You can also view the expiration status of assets in the **[!UICONTROL References]** rail. ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
 
 1. 参照先の Web ページと複合アセットを表示するアセットに移動します。
-1. アセットを選択し、[!DNL Experience Manager] ロゴをクリックします。
-
-1. メニューで「**[!UICONTROL 参照]**」を選択します。
-
-   ![chlimage_1-146](assets/chlimage_1-146.png)
-
-   有効期限切れのアセットの場合、参照レールの上部に有効期限切れのステータス「**[!UICONTROL アセットは期限切れです]**」が表示されます。
+1. アセットを選択し、左側のレールで **[!UICONTROL 参照]** (References)を開きます。 For expired assets, the [!UICONTROL References] rail displays the expiry status **[!UICONTROL Asset is Expired]** at the top.
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   アセットに有効期限切れのサブアセットがある場合、参照レールにステータス「**[!UICONTROL アセットに有効期限切れのサブアセットがあります]**」が表示されます。
+   If the asset has expired subassets, the [!UICONTROL References] rail displays the status **[!UICONTROL Asset has Expired Sub-Assets]**.
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -61,17 +51,11 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 1. [!DNL Assets] コンソールで、ツールバーの「**[!UICONTROL 検索]**」をクリックしてオムニサーチボックスを表示します。
 
 1. オムニサーチボックスのカーソルで、Enter キーを押して検索結果ページを表示します。
-
-   ![chlimage_1-150](assets/chlimage_1-150.png)
-
-1. 「 [!DNL Experience Manager] logo」をクリックして検索パネルを表示します。
-1. Click the **[!UICONTROL Expiry Status]** option to expand it.
+1. 左側のレールで検索パネルを開きます。 Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. 「 **[!UICONTROL 期限切れ]**」を選択します。 有効期限切れのアセットが検索結果に表示されます。
-
-   ![chlimage_1-153](assets/chlimage_1-153.png)
+1. 「 **[!UICONTROL 期限切れ]**」を選択します。 検索結果をフィルタリングした後は、期限切れのアセットのみが表示されます。
 
 「**[!UICONTROL 期限切れ]**」オプションを選択すると、[!DNL Assets] コンソールに複合アセットによって参照されている有効期限切れのアセットとサブセットのみが表示されます。有効期限切れのサブアセットを参照する複合アセットは、サブアセットの有効期限切れの直後には表示されません。代わりに、次回スケジューラーが実行されたときに、それらのアセットが有効期限切れのサブアセットを参照していることを [!DNL Experience Manager] が検出した後で表示されます。
 
@@ -84,9 +68,7 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 1. [!DNL Experience Manager] Configuration Manager を開きます。
 1. 「**[!UICONTROL Adobe CQ DAM Expiry Notification]**」を選択します。デフォルトでは、「**[!UICONTROL Time based Scheduler]**」が選択されており、指定の時間にアセットに有効期限切れのサブアセットがあるかどうかをチェックするジョブのスケジュールを設定します。ジョブが完了すると、有効期限切れのサブアセットを持つアセットと参照元のアセットが検索結果に有効期限切れと表示されます。
 
-   ![chlimage_1-154](assets/chlimage_1-154.png)
-
-1. ジョブを定期的に実行するには、「**[!UICONTROL Time Based Scheduler Rule]**」フィールドをクリアして、「**[!UICONTROL Periodic Scheduler]**」フィールドの時間（秒数）を変更します。例えば、「0 0 0 &amp;ast; &amp;ast; ?」と指定するとジョブが 00 時間でトリガーされます。
+1. ジョブを定期的に実行するには、「**[!UICONTROL Time Based Scheduler Rule]**」フィールドをクリアして、「**[!UICONTROL Periodic Scheduler]**」フィールドの時間（秒数）を変更します。例えば、式例では、00時間にジョブを `0 0 0 &ast; &ast; ?` トリガーします。
 1. アセットの有効期限が切れたときに電子メールを受け取るには、「**[!UICONTROL send email]**」を選択します。
 
    >[!NOTE]
@@ -102,9 +84,6 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 [!DNL Assets] コンソールには、アセットの様々な状態を表示できます。特定のアセットの現在の状態により、カード表示にその状態について記述されたラベル（期限切れ、公開済み、承認済み、拒否など）が表示されます。
 
 1. [!DNL Assets] ユーザーインターフェイスでアセットを選択します。
-
-   ![chlimage_1-155](assets/chlimage_1-155.png)
-
 1. ツールバーの「**[!UICONTROL 公開]**」をクリックします。If you don&#39;t see **Publish** on the toolbar, click **[!UICONTROL More]** on the toolbar and locate **[!UICONTROL Publish]** ![publish option](assets/do-not-localize/publish-globe.png) option.
 1. メニューの「**[!UICONTROL 公開]**」を選択して、確認ダイアログを閉じます。
 1. 選択モードを終了します。アセットの公開ステータスは、カード表示のアセットのサムネールの下部に表示されます。リスト表示では、「公開」列にアセットが公開された時間が表示されます。
