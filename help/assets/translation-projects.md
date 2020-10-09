@@ -3,10 +3,10 @@ title: 翻訳プロジェクトの作成
 description: Learn how to create translation projects in [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '1898'
-ht-degree: 67%
+source-wordcount: '1885'
+ht-degree: 68%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 67%
 
 To create a language copy, trigger one of the following language copy workflows available under the References rail in the [!DNL Experience Manager] user interface.
 
-* **作成と翻訳**: このワークフローでは、翻訳対象のアセットが、翻訳先の言語の言語ルートにコピーされます。 また、選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
+* **作成と翻訳**:このワークフローでは、翻訳対象のアセットが、翻訳先の言語の言語ルートにコピーされます。 また、選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
 
-* **言語コピーの更新**: このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。 この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
+* **言語コピーの更新**:このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。 この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
 
 >[!NOTE]
 >
@@ -47,8 +47,6 @@ To create a language copy, trigger one of the following language copy workflows 
 1. Click **[!UICONTROL Create &amp; Translate]** at the bottom.
 
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
-
-   ![ターゲット言語を選択](assets/target-language.png)
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 構造のみを作成]**」を選択します。
 
@@ -113,9 +111,9 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. Navigate to the [!DNL Assets] UI, and open the Properties page for each of the translated assets to view the translated metadata.
 
-   ![アセットのプロパティページで変換済みメタデータを表示する](assets/translated-metadata-asset-properties.png)
+   ![アセットのプロパティページで変換済みメタデータの表示](assets/translated-metadata-asset-properties.png)
 
-   *図： アセットのプロパティページの変換済みメタデータ。*
+   *図：アセットのプロパティページの変換済みメタデータ。*
 
    >[!NOTE]
    >
@@ -132,8 +130,6 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
-   ![ターゲット言語を選択](assets/target-language.png)
-
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択して、翻訳ワークフローをフォルダーに対して実行します。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
@@ -143,8 +139,6 @@ To create a language copy, trigger one of the following language copy workflows 
    >「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」オプションを選択すると、プロジェクトの設定が既存のプロジェクトの設定と完全に一致する場合にのみ、翻訳プロジェクトが既存のプロジェクトに追加されます。それ以外の場合は、新しいプロジェクトが作成されます。
 
 1. 「**[!UICONTROL 既存の翻訳プロジェクト]**」リストで、翻訳のためのアセットを追加するプロジェクトを選択します。
-
-   ![chlimage_1-78](assets/chlimage_1-78.png)
 
 1. 「**[!UICONTROL 作成]**」をクリックします。翻訳されるアセットがターゲットフォルダーに追加されます。更新されたフォルダーが、「**[!UICONTROL 言語コピー]**」セクションに表示されます。
 
@@ -174,8 +168,6 @@ To create a language copy, trigger one of the following language copy workflows 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
    翻訳ジョブの開始を通知するメッセージが表示されます。
-
-   ![chlimage_1-82](assets/chlimage_1-82.png)
 
 1. 翻訳ジョブのステータスを表示するには、「**[!UICONTROL 翻訳ジョブ]**」タイルの一番下にある省略記号をクリックします。
 
@@ -210,8 +202,6 @@ To create a language copy, trigger one of the following language copy workflows 
 
 1. 「**[!UICONTROL プロジェクトタイトル]**」フィールドに、プロジェクトのタイトルを入力します。
 
-   ![chlimage_1-87](assets/chlimage_1-87.png)
-
 1. 「**[!UICONTROL 開始]**」をクリックします。
 1. プロジェクトコンソールに移動します。翻訳フォルダーはプロジェクトコンソールにコピーされます。
 
@@ -230,8 +220,6 @@ To create a language copy, trigger one of the following language copy workflows 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    翻訳ジョブの開始を通知するメッセージが表示されます。
-
-   ![chlimage_1-92](assets/chlimage_1-92.png)
 
 1. 翻訳ジョブのステータスを表示するには、「**[!UICONTROL 翻訳ジョブ]**」タイルの一番下にある省略記号をクリックします。
 
@@ -261,8 +249,6 @@ To create a language copy, trigger one of the following language copy workflows 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
 1. 「**[!UICONTROL 既存の翻訳プロジェクト]**」リストで、翻訳のためのアセットを追加するプロジェクトを選択します。
-
-   ![プロジェクトを選択](assets/select-a-project.png)
 
 1. 「**[!UICONTROL 開始]**」をクリックします。
 1. [既存の翻訳プロジェクトに追加](translation-projects.md#add-to-existing-translation-project)の手順 9～14 を参照して、この手順の続きを完了させます。
