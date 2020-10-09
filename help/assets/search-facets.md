@@ -3,10 +3,10 @@ title: 検索結果をフィルターする検索ファセット
 description: How to create, modify, and use search facets in [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '2489'
-ht-degree: 78%
+source-wordcount: '2438'
+ht-degree: 77%
 
 ---
 
@@ -42,19 +42,13 @@ For full-text searches, add the [!UICONTROL Fulltext] predicate to the form. 「
    >1. 変更内容を保存します。
 
 
-1. 検索フォームを編集ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに述語をドラッグします。例えば、「**[!UICONTROL プロパティの述語]**」をドラッグします。
+1. [!UICONTROL 検索フォームを編集]ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに述語をドラッグします。例えば、「**[!UICONTROL プロパティの述語]**」をドラッグします。
 
    ![述語を押して移動し、検索フィルターをカスタマイズ](assets/drag_predicate.png)
 
    *図：述語を押して移動し、検索フィルターをカスタマイズ。*
 
-1. 「設定」タブで、その述語のフィールドラベル、プレースホルダーテキストおよび説明を入力します。述語に関連付けるメタデータプロパティの有効な名前を指定します。
-
-   「設定」タブのヘッダーラベルは、選択した述語のタイプを示します。
-
-   ![「設定」タブを使用した述語の必須オプションの指定](assets/settings.png)
-
-   「設定」タブを使用した述語の必須オプションの指定
+1. 「[!UICONTROL 設定]」タブで、その述語のラベル、プレースホルダーテキストおよび説明を入力します。述語に関連付けるメタデータプロパティの有効な名前を指定します。The header label in the [!UICONTROL Settings] tab identifies the type of the selected predicate.
 
 1. 「**[!UICONTROL プロパティ名]**」フィールドで、述語に関連付けるメタデータプロパティの有効な名前を指定します。実行される検索に基づく名前です。例えば、`jcr:content/metadata/dc:description` や `./jcr:content/metadata/dc:description` を入力します。
 
@@ -154,17 +148,9 @@ Tag Predicateを使用すると、アセットに対してタグベースの検�
 1. この述語の「ルートタグ」の「パス」プロパティを設定して、「タグ」リストに様々なタグを表示させます。
 1. すべての指定したタグを含むアセットを検索するには、「**[!UICONTROL すべてのタグに一致オプションを表示]**」を選択します。
 
-   ![タグの述語の一般的な設定](assets/tags_predicate.png)
-
-   タグの述語の一般的な設定
-
 1. 「**[!UICONTROL 説明]**」フィールドに説明を任意で入力し、「**[!UICONTROL 完了]**」をクリックします。
 1. 検索パネルに移動します。**[!UICONTROL タグ]**&#x200B;の述語が検索パネルに追加されています。
 1. アセットの検索に使用するタグを指定または表示されたリストから選択します。
-
-   ![タグ名の入力時にExperience Managerが提示する提案](assets/tag-suggestion.png)
-
-   *図：タグ名を入力する際にExperience Managerが提示する提案です。*
 
 1. すべての指定したタグに一致するアセットを検索するには、「**[!UICONTROL すべてに一致]**」を選択します。
 
