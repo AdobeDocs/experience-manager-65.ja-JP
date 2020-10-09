@@ -3,9 +3,9 @@ title: 関連アセット
 description: 共通の属性を共有するデジタルアセットを関連付ける方法について説明します。 また、デジタルアセット間にソースから派生した関係を作成することもできます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '632'
 ht-degree: 47%
 
 ---
@@ -44,8 +44,6 @@ ht-degree: 47%
    * 派生ファイルを関連付けるには、リストから「**[!UICONTROL 派生]**」を選択します。
    * アセット間に双方向の関係を作成するには、リストから「**[!UICONTROL その他]**」を選択します。
 
-   ![chlimage_1-276](assets/chlimage_1-276.png)
-
 1. **[!UICONTROL アセットを選択]**&#x200B;画面から、関連付けをおこなうアセットの場所に移動して、選択します。
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
@@ -55,9 +53,7 @@ ht-degree: 47%
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. アセットの関連付けを解除するには、ツールバーの「 **[!UICONTROL 関連付け解除]** 」をクリックします。
-
-   ![非関連資産](assets/do-not-localize/link-unrelate-icon.png)
+1. アセットの関連付けを解除するには、ツールバーの「アセットの関連付け **[!UICONTROL を解除]** 」をクリックし ![](assets/do-not-localize/link-unrelate-icon.png) ます。
 
 1. Select the asset(s) you want to un-relate from the **[!UICONTROL Remove Relations]** dialog, and the click **[!UICONTROL Unrelate]**.
 
@@ -75,13 +71,11 @@ If the source file is related to another asset, [!DNL Experience Manager Assets]
 
 ![アセットのプロパティページには、変換に含める関連アセットのソースファイルが表示されます](assets/asset-properties-source-asset.png)
 
-*図： 翻訳に含める関連アセットのソースアセット。*
+*図：翻訳に含める関連アセットのソースアセット。*
 
 1. [新しい翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project)の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。例えば、この場合はアセットをフランス語に翻訳します。
 
 1. From the [!UICONTROL Projects] page, open the translation folder.
-
-   ![chlimage_1-283](assets/chlimage_1-283.png)
 
 1. プロジェクトタイルをクリックして詳細ページを開きます。
 
@@ -97,8 +91,4 @@ If the source file is related to another asset, [!DNL Experience Manager Assets]
 
 1. ソースに関連するアセットが翻訳済みかどうかを確認するには、ソースアセットをクリックします。
 
-   ![chlimage_1-287](assets/chlimage_1-287.png)
-
 1. Select the asset that is related to the source, and then click **[!UICONTROL Reveal in Assets]**. 翻訳された関連アセットが表示されます。
-
-   ![chlimage_1-288](assets/chlimage_1-288.png)
