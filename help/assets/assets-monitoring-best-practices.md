@@ -3,7 +3,7 @@ title: デプロイメントの [!DNL Assets] 監視のベストプラクティ�
 description: Best practices to monitor the environment and performance of your [!DNL Adobe Experience Manager] deployment after it is deployed.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 67%
@@ -28,7 +28,7 @@ Typically, [!DNL Experience Manager Assets] can be monitored in two ways, live m
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
-* [ビジュアルVM](https://visualvm.java.net/):Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、デプロイメントで実行するコードのサンプリングや評価を行うこともできます。
+* [ビジュアルVM](https://visualvm.github.io/):Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、デプロイメントで実行するコードのサンプリングや評価を行うこともできます。
 * [Top](https://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htop can be installed on most Linux systems using `yum install htop` or `apt-get install htop`.
 
