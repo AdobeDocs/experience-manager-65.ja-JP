@@ -4,10 +4,10 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '9613'
-ht-degree: 60%
+source-wordcount: '9565'
+ht-degree: 61%
 
 ---
 
@@ -508,9 +508,6 @@ After the extraction is complete, [!DNL Experience Manager] notifies you in the 
 
 1. アセットをクリックしてページを開きます。
 1. Experience Managerインターフェイスで、リストから「 **[!UICONTROL レンディション]** 」を選択します。
-
-   ![左側のパネルでメニューを開き、「レンディション」オプションを選択](assets/renditions_menu.png)
-
 1. **[!UICONTROL レンディション]**&#x200B;パネルで、アセットに生成されたレンディションのリストを表示します。
 
    ![アセットの詳細ページのレンディションパネル](assets/renditions_panel.png)
@@ -666,10 +663,6 @@ You can view, navigate through, and select assets with any of the available view
 
 リスト表示と列表示で、アセットのサムネールにポインタを合わせると、 **[!UICONTROL 選択]** (Select)オプションが表示されます。
 
-![リスト表示でのアセットの選択](assets/select_quick_in_listview.png)
-
-![列表示でのアセットの選択](assets/select_quick_in_columnview.png)
-
 カード表示では、「 **[!UICONTROL 選択]** 」オプションがクイックアクションとして表示されます。
 
 ![カード表示のクイックアクションを選択](assets/select_quick_action.png)
@@ -690,9 +683,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 
    * Select the asset and then click **[!UICONTROL Edit]** in the toolbar.
    * Click **[!UICONTROL Edit]** option that displays on an asset in the card view.
-   * ツールバーの「**[!UICONTROL 編集]**」をクリックします。
-
-   ![ツールバーの編集オプション](assets/do-not-localize/edit_icon.png)
+   * ツールバーの「 **[!UICONTROL 編集]** 」(Edit ![)オプションで、「](assets/do-not-localize/edit_icon.png)編集」(Edit)をクリックします。
 
 1. 画像を切り抜くには、「切り抜き **** オプション」をクリックして画像を切り抜き ![](assets/do-not-localize/crop.png)ます。
 
@@ -751,9 +742,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 1. Click the **[!UICONTROL Annotate]** option from one of the following:
 
    * [クイックアクション](/help/assets/managing-assets-touch-ui.md#quick-actions)
-   * アセットを選択した後またはアセットページに移動した後に、ツールバーから
-
-   ![注釈オプション](assets/annotate-option.png)
+   * アセットを選択した後またはアセットページに移動した後に、ツールバーから。
 
 1. タイムラインの一番下の&#x200B;**[!UICONTROL コメント]**&#x200B;ボックスにコメントを追加します。または、画像内の任意の領域をマークアップし、**[!UICONTROL 注釈を追加]**&#x200B;ダイアログに注釈を追加します。
 
@@ -768,8 +757,6 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
    >For a non-administrator user, the suggestions appear only if the user has read permissions at `/home` path in CRXDE.
 
 1. 注釈を追加したら、「**[!UICONTROL 追加]**」をクリックして注釈を保存します。注釈に関する通知が Aaron に送信されます。
-
-   ![注釈追加を保存するボタン](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -799,12 +786,7 @@ The editing tools in the [!DNL Assets] interface let you perform small editing j
 1. アセットに対して保存された注釈を表示するには、アセットの場所に移動して、そのアセットのアセットページを開きます。
 
 1. Experience Managerインターフェイスで、「 **[!UICONTROL タイムライン]**」を選択します。
-
-   ![Experience Managerで使用可能なタイムラインオプション](assets/view-timeline.png)
-
 1. タイムラインの「**[!UICONTROL すべて表示]**」のリストから「**[!UICONTROL コメント]**」を選択し、注釈に基づいて結果にフィルターを適用します。
-
-   ![タイムラインにすべてのリストを表示](assets/timeline-show-all-option.png)
 
    **[!UICONTROL タイムライン]**&#x200B;パネルでコメントをクリックし、対応する画像の注釈を表示します。
 
@@ -833,8 +815,6 @@ To print the annotations and review status, click **[!UICONTROL Print]** and fol
    レビューステータスのみを印刷するには、タイムラインからレビューステータスを選択します。
 
 1. Click **[!UICONTROL Print]** from the toolbar.
-
-   ![ツールバーの印刷オプション](assets/do-not-localize/print.png)
 
 1. 印刷ダイアログから、注釈／レビューステータスを PDF のどこに表示したいかを選択します。例えば、印刷する画像が含まれるページの右上に注釈／ステータスを印刷したい場合は、「**左上**」設定を使用します。デフォルトで選択されています。
 
@@ -923,8 +903,6 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 
    * タイムライン **[!UICONTROL で「すべて]** を表示 [!UICONTROL 」をクリック]します。
    * 「 **[!UICONTROL バージョン]**」をクリックします。 アセットに対して作成されたすべてのバージョンが左側のサイドバーに表示されます。
-
-      ![ タイムラインから「バージョン」オプションを選択します。](assets/versions_option.png)
 
    * アセットの特定のバージョンを選択し、「 **[!UICONTROL プレビューのバージョン]**」をクリックします。
 
