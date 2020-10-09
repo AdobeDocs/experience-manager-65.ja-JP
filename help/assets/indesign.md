@@ -3,7 +3,7 @@ title: 統合 [!DNL Assets] 機能 [!DNL InDesign Server]
 description: Learn how to integrate [!DNL Adobe Experience Manager Assets] with [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 31%
@@ -46,7 +46,7 @@ The [!DNL Adobe InDesign Server] can be integrated with [!DNL Experience Manager
 
    >[!NOTE]
    >
-   >IDMLは、 [!DNL InDesign] ファイルのすべてのコンテンツをレンダリングするXMLベースの形式です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、「 [InDesign交換形式(INXおよびIDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8))」を参照してください。
+   >IDMLは、 [!DNL InDesign] ファイルのすべてのコンテンツをレンダリングするXMLベースの形式です。 It is stored as an compressed package using [ZIP](https://www.techterms.com/definition/zip) compression. 詳しくは、「 [InDesign交換形式(INXおよびIDML](https://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8))」を参照してください。
 
    >[!CAUTION]
    >
