@@ -3,10 +3,10 @@ title: アセットテンプレート
 description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '1555'
-ht-degree: 32%
+source-wordcount: '1544'
+ht-degree: 31%
 
 ---
 
@@ -50,17 +50,11 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
 1. 1つ以上のINDDテンプレートをにアップロードし、あらかじめ使用できるように [!DNL Experience Manager] します。 Choose a template for your brochure, and click **[!UICONTROL Next]**.
-
-   ![chlimage_1-103](assets/chlimage_1-308.png)
-
 1. パンフレットの名前と、オプションで説明を指定します。
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
 1. （オプション）「 **[!UICONTROL タグ]** 」をクリックし、パンフレットに使用するタグを1つ以上選択します。 Click **[!UICONTROL Confirm]** to confirm your selection.
-
-   ![chlimage_1-105](assets/chlimage_1-310.png)
-
 1. 「**[!UICONTROL 作成]**」をクリックします。新しいパンフレットが作成されたことを確認するダイアログが表示されます。Click **[!UICONTROL Open]** to open the brochure in edit mode.
 
    <!--![chlimage_1-106](assets/.png) -->
@@ -92,8 +86,6 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    編集可能であることは右側に表示されます。For a field to be editable in [!DNL Experience Manager Assets], corresponding field in the template must be tagged in [!DNL InDesign]. In other words, they should be marked as editable in [!DNL InDesign].
 
-   ![chlimage_1-110](assets/chlimage_1-315.png)
-
    >[!NOTE]
    >
    >Ensure that your [!DNL Experience Manager] deployment is integrated with an [!DNL InDesign Server] to enable [!DNL Experience Manager Assets] to extract data from the [!DNL InDesign] template and make it available for editing. 詳しくは、Experience ManagerアセットとInDesign Serverの [統合を参照してください](/help/assets/indesign.md)。
@@ -106,11 +98,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
 1. 「 **[!UICONTROL プレビュー]** 」をクリックして、テキストの変更をプレビューします。
 
-   ![表示の変更](assets/view-changes.png)
-
-1. To swap an image, click the **[!UICONTROL Asset Finder]**.
-
-   ![chlimage_1-113](assets/chlimage_1-318.png)
+1. 画像を入れ替えるには、 **[!UICONTROL アセットファインダー]**![chlimage_1-113をクリックし](assets/chlimage_1-318.png)ます。
 
 1. 編集可能なフィールドのリストから画像フィールドを選択して、アセットピッカーから編集可能なフィールドに目的の画像をドラッグします。
 
@@ -121,12 +109,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
 1. 「 **[!UICONTROL プレビュー]** 」をクリックしてプレビューを行います。
-
-   ![表示の変更](assets/view-changes.png)
-
 1. 複数ページのコラテラル内の特定のページを編集するには、下部のページナビゲーターを使用します。
-
-   ![ページナビゲータ](assets/page-navigator.png)
 
 1. Click **[!UICONTROL Preview]** on the toolbar to preview all the changes. Click **[!UICONTROL Done]** to save the editing changes to the collateral.
 
@@ -175,11 +158,7 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    You can browse through the [!DNL Experience Manager Assets] repository or collections, and navigate to the location of the desired templates and then select them to merge.
 
-   ![chlimage_1-124](assets/chlimage_1-329.png)
-
    様々なフィルターを適用して、目的のテンプレートを検索できます。例えば、ファイルタイプやタグに基づいてテンプレートを検索できます。
-
-   ![chlimage_1-125](assets/chlimage_1-330.png)
 
 1. Click **[!UICONTROL Next]** from the toolbar.
 1. In the **[!UICONTROL Preview &amp; Reorder]** screen, rearrange the templates if required and preview the selection of templates to merge. Then, click **[!UICONTROL Next]** from the toolbar.
