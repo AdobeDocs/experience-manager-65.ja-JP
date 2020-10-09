@@ -8,10 +8,10 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 73%
+source-wordcount: '1356'
+ht-degree: 71%
 
 ---
 
@@ -30,7 +30,7 @@ AEM でのトラブルシューティングと設定に関するいくつかの�
 
 #### バイナリレスディストリビューションを有効にする方法を教えてください。 {#how-do-i-enable-binary-less-distribution}
 
-バイナリレスディストリビューションを有効にするには、共有 BLOB ストアと共にデプロイします。Check the `useBinaryReferences` property in the OSGI configuration with the factory PID ( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)*that your agent is using.
+バイナリレスディストリビューションを有効にするには、共有 BLOB ストアと共にデプロイします。Check the `useBinaryReferences` property in the OSGI configuration with the factory PID ( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* that your agent is using.
 
 #### How can I customize the error messages while navigating page hierarchy in AEM sites console? {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
 
@@ -76,7 +76,7 @@ Also, if the developers want to export a tree of components they can also implem
 
 [1] Adobe- [Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
-[2] [Apache Sling :: Slingモデル](https://sling.apache.org/documentation/bundles/models.html)
+[2] [Apache Sling ::Slingモデル](https://sling.apache.org/documentation/bundles/models.html)
 
 #### How to disable AEM 6.4 survey pop-up? {#how-to-disable-aem-survey-pop-up}
 
@@ -116,9 +116,9 @@ OSGi Component Disabler を無効にできます。このサービスの使用�
 
 #### How to configure Asset Insights with AEM 6.5 instance? {#how-to-configure-asset-insights-with-aem-instance}
 
-Adobe Activation（DTM）を介してデプロイされた Experience Manager 用の Asset Insights をセットアップおよび設定するには、[AEM Assets で Asset Insights をセットアップする](https://helpx.adobe.com/experience-manager/kt/assets/using/asset-insights-tutorial-setup.html)を参照してください。
+To setup and configure Asset Insights for Experience Manager deployed via Adobe Activation (DTM), see how to [Set up Asset Insights with AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
-#### アドミンコンソールをカスタマイズする方法を教えてください。 {#how-to-customize-admin-consoles}
+#### How to customize admin consoles? {#how-to-customize-admin-consoles}
 
 AEMには様々なメカニズムが用意されており、オーサリングインスタンスのコンソールとページオーサリング機能をカスタマイズできます。 カスタムコンソールの作成する方法、およびコンソールのデフォルトビューのカスタマイズ方法については、[コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md)を参照してください。
 
