@@ -3,9 +3,9 @@ title: '[!DNLAdobe Experience Manager] 6.5以前のService Packリリースノ�
 description: 6. [!DNL Adobe Experience Manager] 5 Service Packのリリースノート。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 359eb60c0ba3845d7aa0ca58488aa945a9f45aea
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '11484'
+source-wordcount: '11487'
 ht-degree: 25%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Manager6.5.5.0は、2019 **年4月のGAリリース(GA)以降�
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.22.3 に更新しました。
 
-機能の完全なリスト、主な特徴、Experience Manager6.5 Service Pack 5で導入された主な機能については、「Adobe Experience Manager6.5 Service Pack 5 [の新機能](new-features-latest-service-pack.md) 」を参照してください。
+機能の完全なリスト、主な特徴、Experience Manager6.5 Service Pack 5で導入された主な機能については、「Adobe Experience Manager6.5 Service Pack 5の新 [機能」を参照してください](new-features-latest-service-pack.md) 。
 
 6.5.5.0リリースでの修正のリスト [!DNL Experience Manager] を次に示します。
 
@@ -1259,7 +1259,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 #### アセット — 含まれる
 
-* Enabled Multi-Site Manager support for [!DNL Experience Manager Assets]. For more information, see [Reuse assets using MSM for Experience Manager Assets](https://helpx.adobe.com/experience-manager/6-5/help/assets/reuse-assets-using-msm.html). NPR-29199：CQ-4259922 のホットフィックス
+* Enabled Multi-Site Manager support for [!DNL Experience Manager Assets]. For more information, see [Reuse assets using MSM for Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html). NPR-29199：CQ-4259922 のホットフィックス
 
 #### サイト — 含まれる
 
