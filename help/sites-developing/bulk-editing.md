@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 translation-type: tm+mt
-source-git-commit: d14688b17f47a2b1c11833eac10413d58276f6be
+source-git-commit: b08149e00c418319ebacec71c56472ad4e8e1089
 workflow-type: tm+mt
 source-wordcount: '441'
-ht-degree: 72%
+ht-degree: 82%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 72%
 
 [ページプロパティの一括編集](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages)を使用すると、複数のページのプロパティを一度に編集できます。
 
-異なる値が存在する可能性があるため、ページプロパティはデフォルトでバルク編集に対して有効になっていません。 明示的に許可（有効）する必要があります。 バルク編集で使用できるようにページプロパティを定義する場合は、次のような特定の意味を考慮する必要があります。
+様々な値が存在する可能性があるので、ページプロパティの一括編集はデフォルトでは有効になっていません。明示的に許可する（有効にする）必要があります。一括編集できるようにページプロパティを定義する場合は、次のような避けられない影響を考慮する必要があります。
 
-* ページタイトルなど、通常は一意なフィールドがあります。1 つの値が適用される場合に、そのようなフィールドの一括編集を有効にして意味があるかどうかを決断する必要があります。
+* ページタイトルなど、通常は一意なフィールドがあります。1 つの値が適用される場合に、そのようなフィールドの一括編集を有効にして意味があるかどうかを判断する必要があります。
 * 特定のフィールドには、複数の値を持たせることができます。そのためには、レンダリング時に意味のある表現が必要です。
 
    例えば、「発行の準備ができた」を示すチェックボックスです。 これは、バルク編集の前に複数の値を持つ場合があります（例：準備完了、レビュー中、進行中）。
@@ -36,13 +36,14 @@ ht-degree: 72%
 >* クラシック UI では使用できません。
 >* ライブコピー内のページでは使用できません。
 >* リソースタイプが同じページでのみ使用できます。
+
 >
 
 
 
 >[!NOTE]
 >
->Bulk editing is also available for Assets. It is very similar, but differs in a few points. See [Editing Properties of Multiple Assets](/help/assets/managing-multiple-assets.md) for full information. You can customize the fields in the Bulk Metadata editor for Assets using the [Schema editor](/help/assets/metadata-schemas.md).
+>Bulk editing is also available for Assets. It is very similar, but differs in a few points. See [Editing Properties of Multiple Assets](/help/assets/metadata.md) for full information. You can customize the fields in the Bulk Metadata editor for Assets using the [Schema editor](/help/assets/metadata-schemas.md).
 
 ## フィールドの有効化 {#enabling-a-field}
 
@@ -56,6 +57,7 @@ ht-degree: 72%
 >* `/libs/granite/ui/components/foundation/form/datepicker`
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
+
 >
 
 
@@ -74,8 +76,9 @@ ht-degree: 72%
 1. フィールドノードで次のプロパティを定義します。
 
    * **名前**：`allowBulkEdit`
-   * **Type**: `Boolean`
+   * **型**：`Boolean`
    * **値**: `true`
+
    例えば、標準的なページの[基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)の場合：
 
    `/libs/foundation/components/page`
