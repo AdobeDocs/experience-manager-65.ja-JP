@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
 workflow-type: tm+mt
 source-wordcount: '1781'
 ht-degree: 89%
@@ -311,7 +311,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->プロパティの一括編集はアセットに対しても使用できます。操作はよく似ていますが、次の点が異なります。詳しくは、[複数のアセットのプロパティの編集](/help/assets/managing-multiple-assets.md)を参照してください。
+>プロパティの一括編集はアセットに対しても使用できます。操作はよく似ていますが、次の点が異なります。詳しくは、[複数のアセットのプロパティの編集](/help/assets/metadata.md)を参照してください。
 >
 >また、[バルクエディター](/help/sites-administering/bulk-editor.md)も用意されています。このエディターでは、GQL（Google Query Language）を使用して、複数のページからコンテンツを検索できます。コンテンツをバルクエディターで直接編集してから、変更を元のページに保存できます。
 
