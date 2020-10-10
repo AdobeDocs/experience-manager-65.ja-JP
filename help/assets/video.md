@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
 workflow-type: tm+mt
 source-wordcount: '11828'
 ht-degree: 89%
@@ -732,7 +732,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 1. Near the upper-right corner of the page, click **[!UICONTROL Save.]**
 1. YouTube への公開メタデータプロファイルを、ビデオのアップロード先フォルダーに適用します。メタデータプロファイルとビデオプロファイルを設定する必要があります。
 
-   詳しくは、[メタデータプロファイル](/help/assets/metadata-profiles.md)と[ビデオプロファイル](/help/assets/video-profiles.md)を参照してください。
+   詳しくは、[メタデータプロファイル](/help/assets/metadata-config.md#metadata-profiles)と[ビデオプロファイル](/help/assets/video-profiles.md)を参照してください。
 
 ### YouTube チャンネルへのビデオの公開 {#publishing-videos-to-your-youtube-channel}
 
