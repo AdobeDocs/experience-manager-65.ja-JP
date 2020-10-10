@@ -2,7 +2,7 @@
 title: リリースノート [!DNL Adobe Experience Manager Assets] 6.5。
 description: The new capabilities and enhancements to [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 43%
@@ -38,15 +38,15 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 ![プレビューAdobe Stockの画像とExperience Managerアセット内からのライセンス](assets/stock_image_preview_license_options.png)
 
-*図： プレビュー[!DNL Adobe Stock]の画像とライセンスを内から取得[!DNL Experience Manager Assets]します。*
+*図：プレビュー[!DNL Adobe Stock]の画像とライセンスを内から取得[!DNL Experience Manager Assets]します。*
 
 ![Experience Managerでライセンスを取得したAdobe Stock画像の検索とフィルタリング](assets/aem-search-filters2.jpg)
 
-*図： でライセンスされた[!DNL Adobe Stock]画像を検索し、フィルタし[!DNL Experience Manager]ます。*
+*図：でライセンスされた[!DNL Adobe Stock]画像を検索し、フィルタし[!DNL Experience Manager]ます。*
 
 ### Dynamic references in [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
-[!DNL Experience Manager Assets] ファイルでは動的に使用 [!DNL Adobe InDesign] されます。 参照先のアセットがリポジトリ内で移動すると、参照が自動的に更新されます。 詳しくは、複合アセットの [管理方法を参照してください](/help/assets/managing-linked-subassets.md)。
+[!DNL Experience Manager Assets] ファイルでは動的 [!DNL Adobe InDesign] に使用されます。 参照先のアセットがリポジトリ内で移動すると、参照が自動的に更新されます。 詳しくは、複合アセットの [管理方法を参照してください](/help/assets/managing-linked-subassets.md)。
 
 ## Brand Portal の機能 {#brand-portal-capabilities}
 
@@ -62,7 +62,7 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 ![アセットをデプロイメントから別のデプロイメントの [!DNL Experience Manager] ページにドラッグ [!DNL Sites][!DNL Experience Manager] する](assets/connected-assets-drag-and-drop-only.gif)
 
-*図： アセットをデプロイメントから別のデプロイメントの[!DNL Experience Manager]ページにドラッグ[!DNL Sites][!DNL Experience Manager]します。*
+*図：アセットをデプロイメントから別のデプロイメントの[!DNL Experience Manager]ページにドラッグ[!DNL Sites][!DNL Experience Manager]します。*
 
 ## Dynamic Media {#dynamic-media}
 
@@ -88,7 +88,7 @@ DAM に保存されているビデオそのものまたは他のコンテンツ�
 
 ![検索ファセットで検索結果をフィルタリングしない場合のアセット数の表示](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
-*図： 検索結果を検索ファセットでフィルタリングしないで、アセットの数を確認します。*
+*図：検索結果を検索ファセットでフィルタリングしないで、アセットの数を確認します。*
 
 ## 使いやすさの向上 {#usability-enhancement}
 
@@ -96,13 +96,13 @@ DAM に保存されているビデオそのものまたは他のコンテンツ�
 
 ![「すべて選択」オプションを使用すると、ロードされたすべてのアセットを1回のクリックで選択できます。](assets/select-all-in-aem-assets.gif)
 
-*図： 「すべて選択」オプションを使用すると、ロードされたすべてのアセットを1回のクリックで選択できます。*
+*図：「すべて選択」オプションを使用すると、ロードされたすべてのアセットを1回のクリックで選択できます。*
 
 ## メタデータの機能強化 {#metadata-enhancements}
 
-[!DNL Assets] では、フォルダープロパティページに表示されるレイアウトおよびメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。既存のフォルダーまたは新規作成するフォルダーにフォルダーメタデータスキーマを割り当てることができるようになりました。詳しくは、](/help/assets/folder-metadata-schema.md)フォルダーメタデータスキーマ[を参照してください。
+[!DNL Assets] では、フォルダープロパティページに表示されるレイアウトおよびメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。既存のフォルダーまたは新規作成するフォルダーにフォルダーメタデータスキーマを割り当てることができるようになりました。詳しくは、](/help/assets/metadata-config.md#folder-metadata-schema)フォルダーメタデータスキーマ[を参照してください。
 
-カスケードメタデータを指定すると、選択肢をフォームに手動で入力するのではなく、実行時に JSON ファイルから読み込むことができます。詳しくは、[カスケードメタデータ](/help/assets/cascading-metadata.md)を参照してください。
+カスケードメタデータを指定すると、選択肢をフォームに手動で入力するのではなく、実行時に JSON ファイルから読み込むことができます。For more information, see [cascading metadata](/help/assets/metadata-schemas.md#cascading-metadata).
 
 ## レポート機能の強化 {#reporting-enhancements}
 
