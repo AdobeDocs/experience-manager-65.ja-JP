@@ -3,10 +3,10 @@ title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 78a101cdf0b4762ff9a3e7320db464df5b96300d
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 73%
+source-wordcount: '1587'
+ht-degree: 71%
 
 ---
 
@@ -44,6 +44,7 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 * 組織の管理者権限を持つ Adobe ID アカウントがあること。
 * 組織でスマートコンテンツサービスが有効化されていること。
+* Smart Content Services Baseパッケージは、 [!DNL Sites][!DNL Assets] Baseパッケージとアドオンがライセンスされている展開にのみ追加できます。
 
 ## 使用開始 {#onboarding}
 
@@ -179,3 +180,7 @@ Once this option is selected for a folder, [!DNL Experience Manager] runs a trai
 >[!NOTE]
 >
 >後続のタグ付けサイクルでは、新しくトレーニングされたタグを使用して、変更したアセットのみが再度タグ付けされます。ただし、タグ付けワークフローの最後のタグ付けサイクルと現在のタグ付けサイクルの間のギャップが 24 時間を超える場合は、変更されないアセットもタグ付けされます。定期的なタグ付けワークフローについては、時間の間隔が 6 ヶ月を超えると、変更されていないアセットがタグ付けされます。
+
+## ヒントと制限事項 {#tips-best-practices-limitations}
+
+* Smart Content Servicesの使用は、タグ付き画像の年間使用量が最大200万個に制限されています。 処理およびタグ付けされた重複画像は、それぞれタグ付けされた画像としてカウントされます。
