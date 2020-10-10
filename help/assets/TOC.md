@@ -6,10 +6,10 @@ user-guide-title: アセットガイド
 breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 51%
+source-wordcount: '619'
+ht-degree: 50%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 51%
 + Experience Managerアセットの使用 {#using}
    + [アセットホームページエクスペリエンス](assets-home-page.md)
    + [デジタルアセットの検索](search-assets.md)
+   + [アセットメタデータの操作](metadata.md)
    + [多言語のアセット](multilingual-assets.md)
    + [アセット [!DNL Adobe Stock] の使用](aem-assets-adobe-stock.md)
    + [3D アセットのプレビュー](previewing-3d-assets.md)
@@ -91,28 +92,24 @@ ht-degree: 51%
 + アセットの管理 {#administer}
    + [サポートされているファイル形式](assets-formats.md)
    + [検索ファセット](search-facets.md)
-   + [アセットのメタデータの管理](metadata.md)
+   + [メタデータの概念について](metadata-concepts.md)
+   + [メタデータ機能の設定](metadata-config.md)
    + [レンディションへの XMP の書き戻し](xmp-writeback.md)
    + [アセットのリンク共有](link-sharing.md)
    + [アセットレポート](asset-reports.md)
    + [拡張スマートタグ](enhanced-smart-tags.md)
    + [メタデータ、画像およびビデオの処理プロファイル](processing-profiles.md)
-   + [カスケードメタデータ](cascading-metadata.md)
    + [アセットエディタページの作成と設定](assets-finder-editor.md)
    + [アセットサイズ変更ガイド](assets-sizing-guide.md)
-   + [メタデータのスキーマに関する参照情報](meta-ref.md)
    + [アセットの翻訳のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
    + [アセットパフォーマンス調整ガイド](performance-tuning-guidelines.md)
-   + [メタデータの追加と編集](meta-edit.md)
    + [アセット移行ガイド](assets-migration-guide.md)
-   + [XMP メタデータ](xmp.md)
    + [Assets のネットワークに関する考慮事項](assets-network-considerations.md)
    + [アセットとMediaLibrary](medialibrary.md)
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
    + [Experience ManagerとCreative Cloudの統合](aem-cc-integration-best-practices.md)
    + [InDesign Serverとの統合](indesign.md)
-   + [メタデータプロファイル](metadata-profiles.md)
    + [資産のDigital Rights Management](drm.md)
    + [アセットのインサイトにデモパッケージを使用する](touch-ui-using-demo-package-for-asset-insights.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
@@ -120,14 +117,11 @@ ht-degree: 51%
    + [Camera Raw サポート](camera-raw.md)
    + [Apache Tikaを使用してアセットのMIMEタイプを検出する](detect-asset-mime-type-with-tika.md)
    + [トランスコーディングライブラリのイメージング](imaging-transcoding-library.md)
-   + [IPTCメタデータのサポート](iptc-support.md)
    + [メタデータスキーマ](metadata-schemas.md)
    + [コレクション、スニペット、スニペットテンプレートのマルチテナンシー](multi-tenancy.md)
    + [アセットの透かしの設定](watermarking.md)
-   + [一括メタデータの読み込みと書き出し](metadata-import-export.md)
    + [アセットテンプレート](asset-templates.md)
    + [フォルダーをCreative Cloudと共有するためのベストプラクティス](aem-cc-folder-sharing-best-practices.md)
-   + [フォルダーメタデータスキーマ](folder-metadata-schema.md)
    + [スマートタグの管理](managing-smart-tags.md)
 + Brand Portal {#brandportal}
    + [ Assets と Brand Portal の連携の設定 ](configure-aem-assets-with-brand-portal.md)
@@ -147,7 +141,6 @@ ht-degree: 51%
 + Manage Assets {#managing}
    + [デジタルアセットの管理](managing-assets-touch-ui.md)
    + [コレクションの管理](managing-collections-touch-ui.md)
-   + [複数のアセットとコレクションの管理](managing-multiple-assets.md)
    + [Smart Content Serviceを使用したタグ付けの設定](config-smart-tagging.md)
    + [重複項目の検出の有効化](duplicate-detection.md)
    + [デジタルアセットの整理](organize-assets.md)
