@@ -4,7 +4,7 @@ description: 作成、表示、削除、編集、コレクションのダウン�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: cedefb58919d7d215040e72b4cc41159161938a8
 workflow-type: tm+mt
 source-wordcount: '2178'
 ht-degree: 63%
@@ -102,7 +102,7 @@ You can drag assets from the [!DNL Assets] user interface to a collection. コ�
 
    ![collection_listing](assets/collection_listing.png)
 
-   The label of the **[!UICONTROL Create Smart Selection]** option changes to **[!UICONTROL Edit Smart Selection]**. スマートコレクションの設定を編集するには、「**[!UICONTROL ファイルとフォルダー]**」リストから「**[!UICONTROL ファイル]**」を選択します。「Edit Smart Selection **[!UICONTROL 」]** 編集スマート・コレクション ![](assets/do-not-localize/edit-smart-collection.png) ・オプションをクリックします。
+   The label of the **[!UICONTROL Create Smart Selection]** option changes to **[!UICONTROL Edit Smart Selection]**. スマートコレクションの設定を編集するには、「**[!UICONTROL ファイルとフォルダー]**」リストから「**[!UICONTROL ファイル]**」を選択します。「スマート選択の **[!UICONTROL 編集]** 」スマートコレクションの ![編集](assets/do-not-localize/edit-smart-collection.png) ・オプションをクリックします。
 
 ## コレクションへのアセットの追加 {#adding-assets-to-a-collection}
 
@@ -137,7 +137,7 @@ You can drag assets from the [!DNL Assets] user interface to a collection. コ�
 1. Click **[!UICONTROL Overwrite]** to replace the original smart collection with the edited collection. または、「**[!UICONTROL 名前を付けて保存]**」を選択して、編集済みのコレクションを個別に保存します。
 1. In the confirmation dialog, Click **[!UICONTROL Save]** to complete the process.
 
-## コレクションのメタデータの表示と編集 {#viewing-and-editing-collection-metadata}
+## コレクションのメタデータの表示と編集 {#view-edit-collection-metadata}
 
 コレクションのメタデータは、コレクションに関するデータ（追加されたタグを含む）で構成されます。
 
@@ -192,7 +192,7 @@ Within a collection, [!DNL Experience Manager] search is restricted to assets (a
 1. Select a collection, and click **[!UICONTROL Settings]** in the toolbar. または、コレクションのサムネールの&#x200B;**[!UICONTROL 設定]**&#x200B;クイックアクションを使用します。
 1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
 
-1. 変更を保存するには、「 **[!UICONTROL 保存]**」をクリックします。
+1. To save the changes, click **[!UICONTROL Save]**.
 
 ## コレクションの削除 {#deleting-a-collection}
 
