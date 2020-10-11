@@ -3,10 +3,10 @@ title: '[!DNL Assets] HTTP API'
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: add8be813ce377384ee4d90600f54a1455a1ab0d
 workflow-type: tm+mt
-source-wordcount: '1672'
-ht-degree: 82%
+source-wordcount: '1727'
+ht-degree: 79%
 
 ---
 
@@ -170,7 +170,7 @@ The [!DNL Assets] HTTP API includes the following features:
 
 ## アセットメタデータの更新 {#update-asset-metadata}
 
-アセットメタデータのプロパティを更新します。`dc:` 名前空間内のプロパティを更新すると、APIは `jcr` 名前空間内の同じプロパティを更新します。API は 2 つの名前空間内のプロパティを同期させません。
+アセットのメタデータプロパティを更新します。 `dc:` 名前空間内のプロパティを更新すると、APIは `jcr` 名前空間内の同じプロパティを更新します。API は 2 つの名前空間内のプロパティを同期させません。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
 
@@ -307,3 +307,9 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 * 200 - OK（フォルダーが正常に削除された場合）
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
+
+## ヒントと制限事項 {#tips-best-practices-limitations}
+
+* [HTTP APIは、](#update-asset-metadata)`jcr` 名前空間内のメタデータプロパティを更新します。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間内のメタデータプロパティを更新します。
+
+* アセットAPIは、完全なメタデータを返しません。 APIでは、名前空間はハードコードされ、それらのみが返されます。 メタデータ全体が必要な場合は、アセットのパスを確認し `/jcr_content/metadata.json`ます。
