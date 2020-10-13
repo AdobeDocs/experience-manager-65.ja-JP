@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 410858ee7d1b8022070445937731644724a90155
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 47%
+source-wordcount: '1233'
+ht-degree: 45%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 47%
 >6.5.3.0
 >
 >* **Externalizerドメイン** (Externalizer Domains)を選択できるようになりました。
+   >  **注意：** Externalizerドメインは、ターゲットに送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、表示オファーコンテンツなどのメタデータには関連しません。
 >
 >
 6.5.2.0:
@@ -136,7 +137,11 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
 
    >[!CAUTION]
    >
-   >外部化子ドメインはオプションです。 AEM externalizerは、書き出したコンテンツが特定の *公開* ドメインを指すようにする場合に設定します。 詳しくは、AEM Link Externalizerの [設定を参照してください](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
+   >外部化子ドメインはオプションです。
+   >
+   > AEM externalizerは、書き出したコンテンツが特定の *公開* ドメインを指すようにする場合に設定します。 詳しくは、AEM Link Externalizerの [設定を参照してください](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
+   >
+   > また、Externalizerドメインは、表示に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、ターゲットオファーコンテンツなどのメタデータには関連しません。
 
    例えば、フォルダーの場合：
 
