@@ -10,9 +10,9 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
 workflow-type: tm+mt
-source-wordcount: '3842'
+source-wordcount: '3867'
 ht-degree: 87%
 
 ---
@@ -35,6 +35,10 @@ ht-degree: 87%
 ## Understanding Dynamic Media image presets {#understanding-image-presets}
 
 各画像プリセットはマクロと同様に、サイズおよびフォーマットのコマンドに関する事前定義済みのコレクションが、特定の名前で保存されたものです。画像プリセットの仕組みを理解するために、Web サイトで各商品画像を、デスクトップ配信用とモバイル配信用に異なるサイズ、異なる形式および圧縮率で表示する必要があるとします。
+
+>[!NOTE]
+>
+>ダイナミックメディア —Scene7モードでは、画像プリセットは画像アセットに対してのみサポートされています。
 
 デスクトップバージョン（500 x 500 ピクセル）とモバイルバージョン（150 x 150 ピクセル）の 2 つの画像プリセットを作成できます。2 つの画像プリセットを作成します。つまり、500 x 500 ピクセルで画像を表示するための `Enlarge` プリセットとで、150 x 150 ピクセルで画像を表示するための `Thumbnail` プリセットです。`Enlarge` および `Thumbnail` サイズの画像を配信するために、AEM では「拡大画像プリセット」と「サムネール画像プリセット」の定義を検索します。その後、AEM は各画像プリセットのサイズと形式の仕様に従って画像を動的に生成します。
 
@@ -62,7 +66,11 @@ You manage your image presets in AEM by tapping or clicking the AEM logo to acce
 >
 >アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択すると、様々なレンディションがシステムによって表示されます。表示される画像プリセットの数を増減させることができます。[表示される画像プリセット数の引き上げ](#increasing-or-decreasing-the-number-of-image-presets-that-display)を参照してください。
 
-### Adobe Illustrator（AI）、Postscript（EPS）および PDF のファイル形式 {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+### Smart crops, Adobe Illustrator (AI), Postscript (EPS), and PDF file formats {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+
+>[!NOTE]
+>
+>このトピックは、ダイナミックメディア — ハイブリッドモードにのみ適用できます。
 
 AI、EPS および PDF 形式の取り込みをサポートし、これらのファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。
 
