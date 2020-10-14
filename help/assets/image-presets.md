@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 95%
+source-wordcount: '325'
+ht-degree: 91%
 
 ---
 
@@ -29,6 +29,10 @@ ht-degree: 95%
 >スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、[スマートイメージング](imaging-faq.md)を参照してください。
 
 作成者は画像をプレビューするときに、いつでも画像プリセットを適用できます。
+
+>[!NOTE]
+>
+>ダイナミックメディア —Scene7モードでは、画像プリセットは画像アセットに対してのみサポートされています。
 
 **Dynamic Media 画像プリセットを適用するには**
 
