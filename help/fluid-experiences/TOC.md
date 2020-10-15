@@ -1,14 +1,14 @@
 ---
 sub-product: AEM Fluid Experiences
 user-guide-title: AEM Fluid Experiences
-breadcrumb-title: Fluid Experiences Guide
-user-guide-description: AEM Fluid Experiences draws from the powerful feature sets of AEM Sites, AEM Dynamic Media, and AEM Assets to provide a robust solution for headless content delivery.
+breadcrumb-title: 流体エクスペリエンスガイド
+user-guide-description: AEM Fluid Experiencesは、AEM Sites、AEM Dynamic Media、AEM Assetsの強力な機能セットから、ヘッドレスコンテンツ配信に対する堅牢なソリューションを提供します。
 index: n
 translation-type: tm+mt
 source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
-source-wordcount: '11'
-ht-degree: 18%
+source-wordcount: '41'
+ht-degree: 4%
 
 ---
 
