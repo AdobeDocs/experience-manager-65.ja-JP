@@ -3,9 +3,9 @@ title: デプロイメントの [!DNL Assets] 監視のベストプラクティ�
 description: Best practices to monitor the environment and performance of your [!DNL Adobe Experience Manager] deployment after it is deployed.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1668'
 ht-degree: 67%
 
 ---
@@ -32,7 +32,7 @@ Typically, [!DNL Experience Manager Assets] can be monitored in two ways, live m
 * [Top](https://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htop can be installed on most Linux systems using `yum install htop` or `apt-get install htop`.
 
-* [Iotop](https://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotop can be installed on most Linux systems using `yum install iotop` or `apt-get install iotop`.
+* Iotop：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotop can be installed on most Linux systems using `yum install iotop` or `apt-get install iotop`.
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftop can be installed on most Linux systems using `yum install iftop` or `apt-get install iftop`.
 
