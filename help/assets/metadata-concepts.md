@@ -3,7 +3,7 @@ title: メタデータの概念について
 description: アセットの分類と整理を容易にするメタデータの必要性と種類について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
 source-wordcount: '2732'
 ht-degree: 89%
@@ -120,7 +120,7 @@ Exif で定義されるメタデータフィールドは、通常、テクニカ
 * Album - [!DNL Adobe Photoshop Album]。
 * CQ - [!DNL Experience Manager Assets] で使用。
 * DAM - [!DNL Experience Manager Assets] で使用。
-* DEX - [Optima SC Description explorer](http://www.optimasc.com/products/dex/index.html) は、Windows オペレーティングシステム向けのメタデータおよびファイル管理向けのツールのコレクションです。
+* DEX - [Optima SC Description explorer](https://www.optimasc.com/products/dex/index.html) は、Windows オペレーティングシステム向けのメタデータおよびファイル管理向けのツールのコレクションです。
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/jp/camera-raw/using/introduction-camera-raw.html)。
 * LR - [!DNL Adobe Lightroom]。
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro)。
