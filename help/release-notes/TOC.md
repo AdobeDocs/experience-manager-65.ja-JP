@@ -3,18 +3,18 @@ cloud: experience-cloud
 product: experience manager
 audience: end-user
 user-guide-title: Adobe Experience Manager6.5リリースノート
-breadcrumb-title: Release Notes
-user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
+breadcrumb-title: リリースノート
+user-guide-description: AEM 6.5の最新の新機能について、リリースノートで説明します。
 translation-type: tm+mt
 source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 52%
+source-wordcount: '75'
+ht-degree: 45%
 
 ---
 
 
-# Adobe Experience Manager6.5リリースノート {#release-notes}
+# Adobe Experience Manager 6.5 Release Notes {#release-notes}
 
 + [AEM 6.5の概要](home.md)
 + [一般的なリリースノート](release-notes.md)
