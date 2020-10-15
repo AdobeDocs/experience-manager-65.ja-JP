@@ -1,18 +1,18 @@
 ---
 title: Adobe Experience Manager6.5リリースノート
-description: AEMリリースノートでは、AEMの最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、非推奨機能および削除された機能、既知の問題など）を説明しています。
+description: AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 translation-type: tm+mt
 source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 25%
+ht-degree: 45%
 
 ---
 
 
 # Adobe Experience Manager6.5リリースノート
 
-AEMリリースノートでは、AEMの最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、非推奨機能および削除された機能、既知の問題など）を説明しています。
+AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 
 ## 主要なAEM記事
 
@@ -26,7 +26,7 @@ AEMリリースノートでは、AEMの最新リリースに関する重要な�
 |--- |---|
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化します。 |
 | [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
-| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成できます。 |
+| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念について説明します。 |
 | [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念を説明します。 |
