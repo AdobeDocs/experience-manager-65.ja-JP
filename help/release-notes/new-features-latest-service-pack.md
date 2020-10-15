@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9d549e19a22b06f010b99e5dfff1d4cef05a5bed
+source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
 workflow-type: tm+mt
-source-wordcount: '2518'
+source-wordcount: '2561'
 ht-degree: 6%
 
 ---
@@ -77,7 +77,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 ### クライアントでのアダプティブフォームの事前入力 {#prefill-merge-data-at-client}
 
 アダプティブフォームに事前入力すると、 [!DNL Experience Manager Forms] サーバーはデータをアダプティブフォームにマージし、入力済みのフォームをユーザーに配信します。 デフォルトでは、データの結合アクションはサーバーで実行されます。
-これで、サーバーではなく、クライアントでデータの結合操作を実行するように [!DNL Experience Manager Forms] サーバーを設定できます。 これにより、アダプティブフォームの事前入力とレンダリングに要する時間が大幅に短縮されます。
+これで、サーバーではなく、クライアントで [!DNL Experience Manager Forms] データの結合操作を [実行するように](../../help/forms/using/prepopulate-adaptive-form-fields.md) サーバーを設定できます。 これにより、アダプティブフォームの事前入力とレンダリングに要する時間が大幅に短縮されます。
 
 ### 双方向SSL実装を備えたサーバー上のRESTful APIとフォームデータモデルを統合 {#fdm-integration-rest-apis-two-way-ssl}
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 AcroFormに [!DNL Adobe Sign] テキストタグが含まれる場合、これらのフィールドが認識され、を使用して変換されたアダプティブフォームでフ [!DNL Adobe Sign] ィールドとして表されるようになり [!DNL Automated Forms Conversion service]ました。 署名者は、アダプティブフォームの署名時にこのようなフィールドに入力できます。
 
-### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colored-PDF-forms}
 
 を使用して、色付きPDF forms [!DNL Automated Forms Conversion service] をアダプティブフォームに変換できます。
 
@@ -97,7 +97,7 @@ AcroFormに [!DNL Adobe Sign] テキストタグが含まれる場合、これ�
 
 ### 翻訳済みアダプティブフォームページのキャッシュの強化 {#enhanced-caching-translated-adaptive-forms}
 
-URL引数の代わりに、セレクターとしてロケールを指定できるようになりました。 変換済みのアダプティブフォームをにキャッシュするのに役立ち [!DNL Experience Manager Dispatcher]ます。
+アダプティブフォームURLの引数の代わりに、アダプティブフォームURLのセレクターとして [ロケールを指定できるようになりました](../../help/forms/using/supporting-new-language-localization.md)。 変換済みのアダプティブフォームをにキャッシュするのに役立ち [!DNL Experience Manager Dispatcher]ます。 変換済みのアダプティブフォームは、以前のバージョンではキャッシュできませんでした。 アダプティブフォームURLでロケールをセレクターとして使用するためのキャッシュの設定について詳しくは、「ディスパッチャーでのアダプティブフォームのキャッシュの [設定](../../help/forms/using/configure-adaptive-forms-cache.md)」を参照してください。
 
 ### フォームデータモデルサービスの出力を変数に保存 {#save-fdm-service-to-variable}
 
@@ -105,7 +105,9 @@ URL引数の代わりに、セレクターとしてロケールを指定でき�
 
 ### File Attachmentコンポーネント用に複数のファイルを添付 {#attach-multiple-files}
 
-アダプティブフォームの「添付ファイル  」コンポーネントに、複数のファイルを添付できるようになりました。
+アダプティブフォームの添付ファイルコンポー [ネントに](../../help/forms/using/introduction-forms-authoring.md) 、複数のファイルを添付できるようになりました。
+
+
 
 ## 以前のExperience Manager6.5のサービスパックの主な機能 {#key-features-previous-service-packs}
 
