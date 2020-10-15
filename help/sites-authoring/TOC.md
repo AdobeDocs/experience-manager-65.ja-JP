@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5オーサリングユーザーガイド
-breadcrumb-title: Authoring Guide
-user-guide-description: Learn key concepts for creating content and authoring in AEM.
+user-guide-title: AEM 6.5 オーサリングユーザーガイド
+breadcrumb-title: オーサリングガイド
+user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
 translation-type: tm+mt
 source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 89%
+source-wordcount: '284'
+ht-degree: 92%
 
 ---
 
 
-# AEM 6.5 Authoring User Guide {#authoring}
+# AEM 6.5 オーサリングユーザーガイド {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
 + AEMオーサリングに不可欠なタスク、ツールおよび概念 {#essentials}
