@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタ
 description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '2436'
-ht-degree: 56%
+source-wordcount: '2423'
+ht-degree: 55%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 56%
 
    ![アセットのプロパティを選択して、メタデータを表示します](assets/asset-metadata.png)
 
-   *図：アセットの[!UICONTROL プロパティ]ページのメタデータを編集または追加します。*
+   *図：アセットの [!UICONTROL プロパティ] ページのメタデータを編集または追加します。*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
@@ -68,7 +68,7 @@ XMP write-back is supported and enabled for the platforms and file formats descr
 * メタデータプロパティを共通の値に変更する
 * タグを追加または変更する
 
-メタデータプロパティの追加、変更、削除など、メタデータプロパティページをカスタマイズするには、スキーマエディターを使用します。
+To customize the metadata properties page, including adding, modifying, deleting metadata properties, use the [schema editor](metadata-config.md#folder-metadata-schema).
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ CSV形式で複数のアセットのメタデータを書き出すことがで�
 
 後で変更した既存のビデオプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
-### プロファイルユーザーインターフェイスからのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+### Apply metadata profiles to folders from [!UICONTROL Profiles] user interface {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 メタデータプロファイルを適用する手順は、次のとおりです。
 
@@ -196,7 +196,7 @@ CSV形式で複数のアセットのメタデータを書き出すことがで�
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
 1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-### 「プロパティ」からのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-properties}
+### Apply metadata profiles to folders from [!UICONTROL Properties] {#applying-metadata-profiles-to-folders-from-properties}
 
 1. In the left rail, click **[!UICONTROL Assets]** then navigate to the folder that you want to apply a metadata profile to.
 1. On the folder, click the check mark to select it and then click **[!UICONTROL Properties]**.
@@ -205,9 +205,11 @@ CSV形式で複数のアセットのメタデータを書き出すことがで�
 
 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
+<!-- TBD: Commenting as the topic in metadata-config.md is incomplete.
+
 ### Apply metadata profile globally {#metadata-profile-global}
 
-詳しくは、メタデータプロファイルをグローバルに適用するための [設定を参照してください](/help/assets/metadata-config.md#apply-a-metadata-profile-globally)。
+For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
 ### Remove a metadata profile from folders {#removing-a-metadata-profile-from-folders}
 
