@@ -3,10 +3,10 @@ title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d2bc8c7c52084a415faaf8a5b68be7dc6fc461c4
+source-git-commit: c5972647d23b7e7bfd2fcd791648cb26de1fdb68
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 91%
+source-wordcount: '2247'
+ht-degree: 90%
 
 ---
 
@@ -194,4 +194,6 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
 * [!UICONTROL コンテンツファインダー]からリモートアセットを検索できない場合は、必要な役割と権限が設定されていることを確認してください。
 * リモート DAM から取得したアセットは、1 つ以上の理由で Web ページに発行できない場合があります。リモートサーバーに存在しない、取得する適切なアクセス許可がない、ネットワーク障害、などが原因の可能性があります。アセットがリモート DAM から削除されていないことを確認してください。適切な権限が設定され、前提条件が満たされていることを確認します。アセットをページに追加し直して、再公開してください。アセット取得時のエラーについては、[非同期ジョブのリスト](/help/sites-administering/asynchronous-jobs.md)を確認してください。
-* ローカル [!DNL Sites] 展開からリモートDAM展開にアクセスできない場合は、クロスサイトCookieが許可されていることを確認してください。 クロスサイトCookieがブロックされている場合、の2つのデプロイメントは認証されない [!DNL Experience Manager] 可能性があります。 例えば、匿名モード [!DNL Google Chrome] では、サードパーティcookieがブロックされる場合があります。 で、アドレスバー [!DNL Chrome]の「目」アイコンをクリックしてcookieを許可するか、サードパーティcookieを有効にする方 [法に関するヘルプを参照してください](https://support.google.com/chrome/answer/95647)。
+* ローカル [!DNL Sites] 展開からリモートDAM展開にアクセスできない場合は、クロスサイトCookieが許可されていることを確認してください。 クロスサイトCookieがブロックされている場合、の2つのデプロイメントは認証されない [!DNL Experience Manager] 可能性があります。 例えば、匿名モード [!DNL Google Chrome] では、サードパーティcookieがブロックされる場合があります。 ブラウザーでCookieを許可するには、アドレスバーの「目」アイコンをクリックし、「サイトが動作していません」/「ブロック」に移動し、リモートDAM URLを選択して、ログイントークンCookieを許可します。 [!DNL Chrome] または、サードパーティcookieを有効にする [方法に関するヘルプを参照してください](https://support.google.com/chrome/answer/95647)。
+
+![匿名モードでのChromeでのCookieエラー](assets/chrome-cookies-incognito-dialog.png)
