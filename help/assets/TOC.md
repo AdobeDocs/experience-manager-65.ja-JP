@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: アセットガイド
-breadcrumb-title: Assets Guide
-user-guide-description: Create, manage, deliver, and optimize digital assets.
+user-guide-title: Assets ガイド
+breadcrumb-title: Assets ガイド
+user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
 source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 49%
+source-wordcount: '595'
+ht-degree: 50%
 
 ---
 
 
-# アセットガイド {#assets}
+# Assets ガイド {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
 + [[!DNL Experience Manager] 6.5アセットリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
