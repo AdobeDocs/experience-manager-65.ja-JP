@@ -3,10 +3,10 @@ title: メタデータ機能の設定と管理。
 description: メタデータの追加と管理に関連する設定および管理 [!DNL Experience Manager Assets] 機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '1959'
-ht-degree: 55%
+source-wordcount: '1953'
+ht-degree: 54%
 
 ---
 
@@ -109,7 +109,7 @@ To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]**
 1. Click **[!UICONTROL Delete Metadata Profiles]** in the toolbar.
 1. ダイアログで、「**[!UICONTROL 削除]**」をクリックして、削除操作を確定します。メタデータプロファイルがリストから削除されます。
 
-<!-- TBD: Revisit to find out the correct config. and update these steps.
+<!-- TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
 These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
@@ -269,7 +269,6 @@ Enter metadata values in the various fields and click **[!UICONTROL Save]** to s
 >[!MORELIKETHIS]
 >
 >* [メタデータの概念と理解](metadata-concepts.md)。
->* [複数コレクションのメタデータプロパティの編集](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk).
 >* [複数コレクションのメタデータプロパティの編集](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk).
 >* [Experience Managerアセットでのメタデータの読み込みと書き出し](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
 >* [メタデータ、画像およびビデオを処理するプロファイル](processing-profiles.md)。
