@@ -3,7 +3,7 @@ title: メディアハンドラーとワークフローを使用したアセッ�
 description: メディアハンドラーについて、およびワークフローを使用してデジタルアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 49%
@@ -447,7 +447,7 @@ The following conversions can be automatically run and stored within [!DNL Asset
 * EPS and AI transformation using [ImageMagick](https://www.imagemagick.org/script/index.php) and [Ghostscript](https://www.ghostscript.com/).
 * FLV video transcoding using [FFmpeg](https://ffmpeg.org/).
 * MP3 encoding using [LAME](https://lame.sourceforge.io/).
-* Audio processing using [SOX](http://sox.sourceforge.net/).
+* Audio processing using [SOX](https://sox.sourceforge.net/).
 
 >[!NOTE]
 >
@@ -489,7 +489,7 @@ Install [!DNL ImageMagick] on the disk hosting the [!DNL Experience Manager] ser
 
 変更したワークフローをテストするには、`/content/dam` にアセットを追加します。
 
-1. 名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
+1. ファイルシステムで、選択したTIFF画像を取得します。 名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット **[!UICONTROL myImage.tiff]** を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
