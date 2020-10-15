@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5ユーザーガイドの管理
-breadcrumb-title: Managing Guide
-user-guide-description: Learn how to manage an AEM project.
+user-guide-title: AEM 6.5 管理ユーザーガイド
+breadcrumb-title: 管理ガイド
+user-guide-description: AEM プロジェクトの管理方法について学びます。
 translation-type: tm+mt
 source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 79%
+source-wordcount: '72'
+ht-degree: 93%
 
 ---
 
 
-# AEM 6.5 Managing User Guide {#managing}
+# AEM 6.5 管理ユーザーガイド {#managing}
 
 + [ユーザガイドの管理](home.md)
 + 管理 - ベストプラクティスチェックリスト {#managing-best-practices-checklist}
