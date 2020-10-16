@@ -8,9 +8,9 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: 0b3884301e09eba6860891f00a98508033d12ec8
+source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2057'
 ht-degree: 64%
 
 ---
@@ -246,7 +246,7 @@ You can use a custom theme to apply an identical style to all the buttons of the
     <tbody> 
      <tr> 
       <td><b>アコーディオン</b></td> 
-      <td><b>プロパティ&lt;/b</td> 
+      <td><b>プロパティ</b></td> 
       <td><b>値</b></td> 
      </tr> 
      <tr> 
