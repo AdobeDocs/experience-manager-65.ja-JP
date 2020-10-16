@@ -6,10 +6,10 @@ user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
-source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
+source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 50%
+source-wordcount: '585'
+ht-degree: 51%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 50%
    + [アセット [!DNL Adobe Stock] の使用](aem-assets-adobe-stock.md)
    + [3D アセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
+   + [拡張スマートタグ](enhanced-smart-tags.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
    + [アセットの処理](assets-workflow.md)
    + [追加画像マップ](image-maps.md)
@@ -94,10 +95,11 @@ ht-degree: 50%
    + [検索ファセット](search-facets.md)
    + [メタデータの概念について](metadata-concepts.md)
    + [メタデータ機能の設定](metadata-config.md)
+   + [メタデータスキーマ](metadata-schemas.md)
    + [レンディションへの XMP の書き戻し](xmp-writeback.md)
    + [アセットのリンク共有](link-sharing.md)
    + [アセットレポート](asset-reports.md)
-   + [拡張スマートタグ](enhanced-smart-tags.md)
+   + [タグ付けのためのSmart Content Serviceの設定](config-smart-tagging.md)
    + [メタデータ、画像およびビデオの処理プロファイル](processing-profiles.md)
    + [アセットエディタページの作成と設定](assets-finder-editor.md)
    + [アセットサイズ変更ガイド](assets-sizing-guide.md)
@@ -117,12 +119,10 @@ ht-degree: 50%
    + [Camera Raw サポート](camera-raw.md)
    + [Apache Tikaを使用してアセットのMIMEタイプを検出する](detect-asset-mime-type-with-tika.md)
    + [トランスコーディングライブラリのイメージング](imaging-transcoding-library.md)
-   + [メタデータスキーマ](metadata-schemas.md)
    + [コレクション、スニペット、スニペットテンプレートのマルチテナンシー](multi-tenancy.md)
    + [アセットの透かしの設定](watermarking.md)
    + [アセットテンプレート](asset-templates.md)
    + [フォルダーを共有する際のベストプラクティス [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
-   + [スマートタグの管理](managing-smart-tags.md)
 + Brand Portal {#brandportal}
    + [ [!DNL Assets] 設定 [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
    + [アセットの公開先 [!DNL Brand Portal]](brand-portal-publish-assets.md)
@@ -141,7 +141,6 @@ ht-degree: 50%
 + Manage Assets {#managing}
    + [デジタルアセットの管理](managing-assets-touch-ui.md)
    + [コレクションの管理](managing-collections-touch-ui.md)
-   + [Smart Content Serviceを使用したタグ付けの設定](config-smart-tagging.md)
    + [重複項目の検出の有効化](duplicate-detection.md)
    + [デジタルアセットの整理](organize-assets.md)
    + [ビデオアセットの管理](managing-video-assets.md)
@@ -158,5 +157,4 @@ ht-degree: 50%
    + [複合アセットの管理](managing-linked-subassets.md)
    + [関連アセット](related-assets.md)
    + [プライベートフォルダーの共有](private-folder.md)
-   + [Smart Content Serviceのトレーニングガイドライン](smart-tags-training-guidelines.md)
    + [ビデオレンディション](video-renditions.md)
