@@ -3,9 +3,9 @@ title: Smart Content Serviceを使用したアセットのタグ付けの設定
 description: Learn how to configure smart tagging and enhanced smart tagging in [!DNL Adobe Experience Manager], using the Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: 1fa79a49ce3590fcba63e6e7d1a63586650251d2
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2188'
 ht-degree: 60%
 
 ---
@@ -23,7 +23,7 @@ Smart Content Serviceを使用する前に、次の事項を確認します。
    <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
   -->
 
-* 最新の [Experience Managerサービスパックをインストールします](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)。
+* 最新の [Experience Managerサービスパックをインストールします](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 ## Adobe 開発者コンソールとの統合 {#integrate-adobe-io}
 
