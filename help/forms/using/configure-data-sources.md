@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: ee2b13f2fc1f044f119ff54f332844d458663287
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 54%
+source-wordcount: '1802'
+ht-degree: 46%
 
 ---
 
@@ -52,7 +52,7 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    >    
    >    
    >    1. Go to https://&#39;[server]:[port]&#39;/system/console/crypto.
-   >    1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をクリックします。
+   >    1. In the **[!UICONTROL Plain Text]** field, specify the password or any string to encrypt and tap **[!UICONTROL Protect]**.
 
    >    
    >    
@@ -112,7 +112,7 @@ All cloud service configurations in AEM are consolidated in the `/conf` folder i
 
 ## RESTful Web サービスの設定 {#configure-restful-web-services}
 
-RESTful web service can be described using [Swagger specifications](https://swagger.io/specification/) in JSON or YAML format in a Swagger definition file. AEM cloud servicesでRESTful Webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認してください。
+RESTful web service can be described using [Swagger specifications](https://swagger.io/specification/) in JSON or YAML format in a Swagger definition file. AEMクラウドサービスでRESTful Webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認してください。
 
 RESTful サービスを設定するには、以下の手順を実行します。
 
@@ -126,13 +126,15 @@ RESTful サービスを設定するには、以下の手順を実行します。
    * 「Swagger Source」ドロップダウンから「URL」または「File」を選択し、Swagger URLをSwagger定義ファイルに指定するか、ローカルファイルシステムからSwaggerファイルをアップロードします。
    * Swagger Source入力に基づいて、次のフィールドに値が事前に入力されます。
 
-      * スキーム： REST APIで使用される転送プロトコルです。 ドロップダウンリストに表示されるスキームの種類の数は、Swaggerソースで定義されているスキームによって異なります。
-      * ホスト： REST APIを提供するホストのドメイン名またはIPアドレス。 このフィールドは必須です。
-      * 基本パス： すべてのAPIパスのURLプレフィックス。 これはオプションのフィールドです。\
+      * スキーム：REST APIで使用される転送プロトコルです。 ドロップダウンリストに表示されるスキームの種類の数は、Swaggerソースで定義されているスキームによって異なります。
+      * ホスト：REST APIを提供するホストのドメイン名またはIPアドレス。 このフィールドは必須です。
+      * 基本パス：すべてのAPIパスのURLプレフィックス。 これはオプションのフィールドです。\
          必要に応じて、これらのフィールドの事前入力された値を編集します。
-   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「APIキー」、「カスタム認証」）を選択してRESTfulサービスにアクセスし、認証の詳細を指定します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「APIキー」、「カスタム認証」、「相互認証」）を選択してRESTfulサービスにアクセスし、認証の詳細を入力します。
 
    認証タイプとして **[!UICONTROL APIキー]** を選択する場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。 「 **[!UICONTROL 場所]** 」ドロップダウンリストから次のオプションの1つを選択し、それに応じて、ヘッダーの名前またはクエリパラメーターの名前を「 **[!UICONTROL パラメーター名]** 」フィールドに指定します。
+
+   認証タイプとして「 **[!UICONTROL 相互認証]** 」を選択した場合は、「RESTfulおよびSOAP Webサービス用の [証明書ベースの相互認証](#mutual-authentication)」を参照してください。
 
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
 
@@ -149,10 +151,12 @@ SOAP ベースの Web サービスは、[Web Services Description Language（WSD
 
    * Web サービスの WSDL URL を指定します。
    * サービスエンドポイント. WSDLで指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
-   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」、「X509トークン」）を選択してSOAPサービスにアクセスし、認証の詳細を入力します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」、「X509トークン」、「相互認証」）を選択してSOAPサービスにアクセスし、認証の詳細を入力します。
 
-      認証の種類として「X509トークン」を選択した場合は、X509証明書を設定します。 詳しくは、証明書の [設定を参照してください](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
+      認証の種類として **[!UICONTROL X509トークン]** を選択した場合は、X509証明書を設定します。 詳しくは、証明書の [設定を参照してください](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
 「 **[!UICONTROL Key Alias]** 」フィールドに、X509証明書のKeyStoreエイリアスを指定します。 認証要求が有効なままになるまでの時間を秒単位でTime To Live **** Fieldに指定します。 オプションで、メッセージの本文ヘッダーとタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
+
+      認証タイプとして「 **[!UICONTROL 相互認証]** 」を選択した場合は、「RESTfulおよびSOAP Webサービス用の [証明書ベースの相互認証](#mutual-authentication)」を参照してください。
 
 1. 「**[!UICONTROL 作成]**」をタップして、SOAP Web サービス用のクラウド設定を作成します。
 
@@ -177,6 +181,19 @@ OData サービスは、そのサービスのルート URL によって識別さ
    OData エンドポイントをサービスルートとして使用して Microsoft Dynamics サービスに接続する場合は、OAuth 2.0 認証を選択する必要があります。
 
 1. Tap **Create** to create the cloud configuration for the OData service.
+
+## RESTfulおよびSOAP Webサービス用の証明書ベースの相互認証 {#mutual-authentication}
+
+フォームデータモデルの相互認証を有効にする場合、データを共有する前に、データソースとフォームデータモデルを実行するAEMサーバーの両方がお互いのIDを認証します。 RESTおよびSOAPベースの接続（データソース）に対して相互認証を使用できます。 AEM Forms環境でフォームデータモデルの相互認証を設定するには：
+
+1. 秘密鍵（証明書）を [!DNL AEM Forms] サーバーにアップロードします。 秘密鍵をアップロードするには：
+   1. 管理者として [!DNL AEM Forms] サーバーにログインします。
+   1. **[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / ****&#x200B;ユーザーに移動します。 ユーザーを選択し、 `fd-cloudservice` 「 **[!UICONTROL プロパティ]**」をタップします。
+   1. 「 **[!UICONTROL キーストア]** 」タブを開き、「KeyStoreファイル **[!UICONTROL 」オプションから「]** 秘密鍵」を展開し、「KeyStoreファイル」をアップロードし、エイリアス、パスワードを指定して、「 **[!UICONTROL 送信]**」をタップします。 証明書がアップロードされます。  秘密鍵のエイリアスは証明書で記述され、証明書の作成時に設定されます。
+1. 信頼証明書をグローバルTrust Storeにアップロードします。 証明書をアップロードするには：
+   1. **[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL Trust Storeに移動します]**。
+   1. 「 **[!UICONTROL 追加 Certificate from CER file]** 」オプションを展開し、「Select Certificate File **[!UICONTROL 」をタップし、証明書をアップロードして、「]** Submit ****」をタップします。
+1. データソースとして [SOAP](#configure-soap-web-services) または [RESTful](#configure-restful-web-services) Webサービスを設定し、認証の種類として「 **[!UICONTROL 相互認証]** 」を選択します。 ユーザーに対して複数の自己署名証明書を設定する場合は、証明書のキーエイリアス名を指定し `fd-cloudservice` ます。
 
 ## 次の手順 {#next-steps}
 
