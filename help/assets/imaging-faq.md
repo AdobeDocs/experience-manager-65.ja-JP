@@ -8,10 +8,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 283802809d665cd979e2f1a4fa969b6ddc491ed6
 workflow-type: tm+mt
-source-wordcount: '1720'
-ht-degree: 98%
+source-wordcount: '1730'
+ht-degree: 97%
 
 ---
 
@@ -96,7 +96,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 また、スマートイメージングの前提条件を理解するには、[スマートイメージングを使用するための資格を私は満たしていますか？](#am-i-eligible-to-use-smart-imaging)を参照してください。
 
-## スマートイメージングはHTTPSで動作しますか？ HTTP/2 ではどうですか？{#does-smart-imaging-working-with-https-how-about-http}
+## スマートイメージングは HTTPS で機能しますか？HTTP/2 ではどうですか？{#does-smart-imaging-working-with-https-how-about-http}
 
 スマートイメージングは、HTTP または HTTPS で配信された画像に対して機能します。また、HTTP/2 上でも機能します。
 
@@ -117,8 +117,8 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 スマートイメージングを使用するためのリクエストを開始する必要があります。自動的には有効になりません。
 
-1. テクニカルサポートリクエストを開始します（電子メール：`s7support@adobe.com`）。
-1. サポートリクエストには、以下の情報を記入してください。
+1. [Admin Consoleを使用して、サポートケースを作成します。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
+1. サポートケースに次の情報を入力します。
 
    1. 主要連絡先の氏名、電子メールアドレス、電話番号。
    1. スマートイメージングを有効にする全ドメイン（`images.company.com` や `mycompany.scene7.com`）。
