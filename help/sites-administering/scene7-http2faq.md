@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: afbe9f80-c2a3-4a46-b9d6-4c9406667d7f
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 55f6517073ace72d468bb70853b745c2980b11f2
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 98%
+source-wordcount: '761'
+ht-degree: 93%
 
 ---
 
@@ -57,12 +57,12 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 ## Dynamic Media Classic アカウントに対して HTTP/2 を有効にする方法 {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-HTTP/2 に切り替えるためのアドビテクニカルサポート（`s7support@adobe.com`）リクエストを開始する必要があります。自動的にはおこなわれません。
-
-1. サポートリクエストには、以下の情報を記入してください。
+1. Admin Consoleを [使用してサポートケースを作成し](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 、HTTP/2に切り替えるようにリクエストする必要があります。自動的には実行されません。
+1. サポートケースに次の情報を入力します。
 
    * 主要連絡先名、電子メールおよび電話番号。
    * HTTP/2 への切り替えが必要なすべてのドメイン。つまり、`images.company.com` または `mycompany.scene7.com`。
+
    ドメインを確認するには、各会社アカウントの [Scene7 Publishing System のインスタンスにログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)します。
 
    **[!UICONTROL 設定／アプリケーション設定／一般設定をクリックします。]** 「 **[!UICONTROL Published Server Name」というラベルの付いたフィールドを探します。]**
@@ -70,6 +70,7 @@ HTTP/2 に切り替えるためのアドビテクニカルサポート（`s7supp
    * リッチメディアリクエストについて、セキュリティで保護された HTTPS を使用していることを確認します。
    * 直接的関係で管理するのではなく、アドビを介して CDN を使用していることを確認します。
    * 専用ドメインを使用していることを確認します。つまり、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用の Scene7 ドメインではなく、`images.company.com` または `mycompany.scene7.com`。
+
    ドメインを確認するには、各会社アカウントの [Scene7 Publishing System のインスタンスにログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)します。
 
    **[!UICONTROL 設定／アプリケーション設定／一般設定をクリックします。]**「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在汎用 Scene7 ドメインを使用している場合は、この切り替えの一部として、独自のカスタムドメインへの移行を要求できます。
