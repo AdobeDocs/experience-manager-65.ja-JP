@@ -11,9 +11,9 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
+source-git-commit: 1718aac3d39662fb35336a4db3e3403641f9529a
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1275'
 ht-degree: 80%
 
 ---
@@ -175,6 +175,10 @@ Where `/path/to/datastore` represents the path to your File Datastore.
 ### 適切なアップグレード開始コマンドの確認 {#determining-the-correct-upgrade-start-command}
 
 アップグレードをおこなうには、jar ファイルを使用して AEM を起動し、インスタンスを実行することが重要です。For upgrading to 6.5, please also see other content restructuring and migration options in [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) that you can choose with the upgrade command.
+
+>[!IMPORTANT]
+>
+>Oracle Java 11（または一般にバージョン 8 より新しい Java）を実行している場合は、AEM の起動時にコマンドラインにさらにスイッチを追加する必要があります。詳しくは、「 [Java 11の考慮事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)」を参照してください。
 
 起動スクリプトから AEM を起動した場合、アップグレードは開始されません。ほとんどの顧客は、起動スクリプトを使用して AEM を起動します。また、メモリ設定、セキュリティ証明書など、環境設定に関するスイッチを追加するように起動スクリプトをカスタマイズしています。そのため、次の手順に従って、適切なアップグレードコマンドを確認することをお勧めします。
 
