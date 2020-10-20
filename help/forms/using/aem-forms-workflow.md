@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 149e505eb4dac0d9a56c53036ce1c6b8d16ad0f1
 workflow-type: tm+mt
 source-wordcount: '3065'
 ht-degree: 82%
@@ -136,7 +136,7 @@ AEM には、提供されているワークフローステップを使用して�
 >
 >ワークフローアプリケーションを作成して管理するには、fd-administrator グループのメンバーである必要があります。
 
-1. On your AEM author instance, go to ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]**> **[!UICONTROL Manage Workflow Application]** and taps **[!UICONTROL Create]**.
+1. On your AEM author instance, go to ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Manage Workflow Application]** and taps **[!UICONTROL Create]**.
 1. In the Create Workflow Application window, provide inputs for the following fields, and taps **Create**. 新しいアプリケーションが作成され、ワークフローアプリケーション画面にリストされます。
 
 <table>
@@ -218,7 +218,7 @@ AEM Forms アプリケーションは、AEM Forms サーバーと同期されま
 
 管理者（fd-administrator グループのメンバー）はネットワークフォルダーを設定することにより、ユーザーがそのフォルダーにファイル（PDF ファイルなど）を配置すると、設定済みワークフローが実行されるようにすることができます。ワークフローが完了したら、結果のファイルを指定した出力フォルダーに保存できます。このようなフォルダーを[監視フォルダー](../../forms/using/watched-folder-in-aem-forms.md)と呼びます。監視フォルダーがワークフローを起動するよう設定するには、以下の手順を実行します。
 
-1. On your AEM author instance, go to ![tools-1](assets/tools-1.png) **>**[!UICONTROL  Forms ]**> Configure Watched Folder.** 既に設定されている監視フォルダーのリストが表示されます。
+1. On your AEM author instance, go to ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**.  既に設定されている監視フォルダーのリストが表示されます。
 1. 「**[!UICONTROL 新規]**」をタップします。フィールドのリストが表示されます。次のフィールドの値を指定して、ワークフローに監視フォルダーを設定します。
 
 <table>
