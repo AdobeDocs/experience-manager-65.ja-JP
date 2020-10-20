@@ -11,10 +11,10 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a299e26668b1f1f08cca8d4a8085da185522ec96
+source-git-commit: 7065a6b984afb18c188acd848b9b77da7da67749
 workflow-type: tm+mt
 source-wordcount: '3118'
-ht-degree: 85%
+ht-degree: 84%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Manager をインストールするための最小要件：
 
 ### 最小サイズ要件 {#minimum-sizing-requirements}
 
-Adobe Experience Managerの実行に関する最小要件：
+Adobe Experience Managerを走らせるための最小要件：
 
 * 5 GB の空きディスク領域（インストールディレクトリ内）
 * 2 GB メモリ
@@ -47,6 +47,7 @@ Adobe Experience Managerの実行に関する最小要件：
 >
 >* デジタルアセットを使用する場合は、より多くの基本メモリが必要になります。詳しくは、[デプロイおよびメンテナンス](/help/sites-deploying/deploy.md#default-local-install)を参照してください。
 >* [AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)には 15 GB の一時領域が必要です。
+
 >
 
 
@@ -224,7 +225,7 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 | Oracle Solaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
 
-1. Linux Kernel 2.6、3.xおよび4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、Amazon Linuxなど、Red Hatディストリビューションの派生物が含まれます。 AEM Forms のアドオン機能は、CentOS 7 および Red Hat Enterprise Linux 7 でのみサポートされています。
+1. Linux Kernel 2.6、3.xおよび4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、およびAmazonLinuxを含む、Red Hatディストリビューションの派生物が含まれています。 AEM Formsのアドオン機能は、CentOS 7およびRed Hat Enterprise Linux 7でのみサポートされています。
 1. AEM Forms は Ubuntu 16.04 LTS でのみサポートされています。
 1. Adobe Managed Services でサポートされている Linux ディストリビューション
 1. Microsoft Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
@@ -252,7 +253,7 @@ Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバ
 | Microsoft IIS 10（Internet Information Server） | A：サポート対象 |
 | Microsoft IIS 8.5（Internet Information Server） | Z：サポート対象外 |
 
-1. Apache httpd のソースコードをベースとして構築された Web サーバーは、ベースとした httpd のバージョンと同じサポートレベルでサポートされます。疑わしい場合は、各サーバー製品に関連するサポートレベルをアドビに確認してもらってください。 次の場合：
+1. Apache httpd のソースコードをベースとして構築された Web サーバーは、ベースとした httpd のバージョンと同じサポートレベルでサポートされます。疑わしい場合は、各サーバ製品に関連するサポートレベルをAdobeに確認してもらってください。 次の場合：
 
    1. HTTP サーバーが公式の Apache ソースディストリビューションのみを使用して構築されている。または、
    1. HTTP サーバーが実行中のオペレーティングシステムの一部として配布されている。例：IBM HTTP Server、Oracle HTTP Server
@@ -458,7 +459,7 @@ Windows x86 の場合：
    <th><p><strong>PDF への変換でサポートされている形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic track</a> latest version</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2017 classic track</a> latest version</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
   </tr>
   <tr>
@@ -500,9 +501,11 @@ Windows x86 の場合：
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 >* 「OCR PDF」、「PDF を最適化」、「PDF を書き出し」の各機能は、Windows でのみサポートされています。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。For more information, refer to AEM Forms product description as per your deployment ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) or [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
+
    >
    >
 * PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
+
 >
 
 
@@ -518,8 +521,8 @@ XMP の書き戻しは次のプラットフォームおよびファイル形式�
    * Windows Server
    * Mac OS X（64 ビット）
 
-* **ファイル形式**: JPEG、PNG、TIFF、PDF、INDD、AI、EPS。
+* **ファイル形式**:JPEG、PNG、TIFF、PDF、INDD、AI、EPS。
 
-### AEM AssetsがLinuxでメタデータに重要なアセットを処理するための要件 {#assetsonlinux}
+### AEM AssetsがLinux上でメタデータに重要なアセットを処理するための要件 {#assetsonlinux}
 
-XMPFilesProcessorプロセスが動作するには、ライブラリGLIBC_2.14が必要です。 GLIBC_2.14を含むLinuxカーネルを使う。 PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンのGLIBCを使用すると、で始まるログでエラーが発生 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`します。
+XMPFilesProcessorプロセスが動作するには、ライブラリGLIBC_2.14が必要です。 GLIBC_2.14を含むLinuxカーネルを使う。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンのGLIBCを使用すると、で始まるログでエラーが発生 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`します。
