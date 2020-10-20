@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4865d4fb666f58ea8abe9e438ea69e9272961c43
+source-git-commit: 750e3729a33718d54dca8b2514468d4a40910d4c
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 6%
@@ -81,7 +81,8 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 ### 双方向SSL実装を備えたサーバー上のRESTful APIとフォームデータモデルを統合 {#fdm-integration-rest-apis-two-way-ssl}
 
-[!DNL Experience Manager Forms] フォームデータモデルは、双方向SSLが実装されたサーバー上のRESTful APIと統合できるようになりました。
+[!DNL Experience Manager Forms] フォームデータモデルは、双方向SSLが実装されたサーバー上のRESTful APIと [統合できるようになりました](../../help/forms/using/configure-data-sources.md)。
+
 
 ### 自動Formsコンバージョンサービスで [!DNL Adobe Sign] テキストタグのサポートを追加しました。 {#sign-integration-acroform-afcs}
 
