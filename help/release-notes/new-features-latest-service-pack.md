@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
+source-git-commit: 4865d4fb666f58ea8abe9e438ea69e9272961c43
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 6%
@@ -28,7 +28,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 
 ### CDNキャッシュコンテンツの無効化 {#invalidate-cdn-cached-content}
 
-ユーザーインターフェイスを使用して[!DNL  Dynamic Media] 、コンテンツ配信ネットワーク(CDN)のキャッシュされたコンテンツを無効にできるようになりました。 その結果、キャッシュの期限が切れるのを待つ代わりに、更新されたアセットを即座に使用できます。 CDNは次の方法で無効にできます。
+ユーザーインターフェイスを使用して、コンテンツ配信ネットワーク(CDN)のキャッシュされたコンテンツを無効にできるようになりました。 [!DNL Dynamic Media] その結果、キャッシュの期限が切れるのを待つ代わりに、更新されたアセットを即座に使用できます。 CDNは次の方法で無効にできます。
 
 * CDN無効化テンプレートの作成：アセットとフォームに関連付けられたテンプレートベースのURLの選択
 
