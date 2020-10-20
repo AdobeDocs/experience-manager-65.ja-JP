@@ -1,12 +1,12 @@
 ---
-title: '[!DNLAdobe Experience Manager] 6.5 Service Packリリースノート。'
+title: '[!DNL Adobe Experience Manager] 6.5 Service Pack リリースノート.'
 description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Service Pack 6.
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74ab94126383d53dac5f55171266c66c28757969
+source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
 workflow-type: tm+mt
-source-wordcount: '4518'
+source-wordcount: '4530'
 ht-degree: 7%
 
 ---
@@ -39,15 +39,15 @@ Adobe Experience Manager6.5.6.0で導入された主な機能および機能強�
 
 * とのデフォルトオプション `test` は、 `aiprocess` 以前のDynamic Media `Thumbnail``Rasterize` のオプションに更新され、サムネールのみを作成し、ページ抽出とキーワード抽出をスキップする必要があることを確認しました。
 
-* クライアントでアダプティブフォームに事前入力します。
+* [クライアントでアダプティブフォームに事前入力します](../../help/forms/using/prepopulate-adaptive-form-fields.md#prefill-at-client)。
 
-* 双方向SSL実装のサーバー上のRESTful APIとフォームデータモデルを統合。
+* [双方向SSL実装のサーバー上のRESTful APIとフォームデータモデルを統合](../../help/forms/using/configure-data-sources.md)。
 
-* 翻訳済みアダプティブフォームページのキャッシュが強化されました。
+* [翻訳済みアダプティブフォームページのキャッシュが強化されました](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
-* 自動FormsコンバージョンサービスでのAdobe Signテキストタグのサポート。
+* Automated [Formsコンバージョンサービスでの](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)Adobe Signテキストタグのサポート。
 
-* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
+* を使用して、色付きのフォームをアダプティブフォームに [変換するためのサポート](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) 。 [!DNL Automated Forms Conversion service]
 
 * SMB 2およびSMB 3プロトコルのサポート。
 
@@ -152,13 +152,13 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 
    ![ヘッダーのヘルプメニュー](assets/Help_aem_header.png)
 
-   *図：[!UICONTROL []ヘルプメニューで[ヘルプ]]を検索してください。*
+   *図： [!UICONTROL [] ヘルプ メニューで[ヘルプ] ]を検索してください。*
 
    * 「 [!UICONTROL User] 」オプションの下の「 [!UICONTROL Impersonate as] 」フィールドに誤った値が入力され、フォーカスが正しくテキストフィールド(NPR-33804)に移動した場合に、エラーメッセージが表示されます。
 
    ![ヘッダーのユーザーメニュー](assets/User_aem_header.png)
 
-   *図：[!UICONTROL ヘッダーの]ユーザーメニューのフィールドとして動作します。*
+   *図： [!UICONTROL ヘッダーの] ユーザー  メニューのフィールドとして動作します。*
 
 * ユーザーは、次のウィンドウ内のキーボードを使用してフォーカスを変更できるようになりました。
 
