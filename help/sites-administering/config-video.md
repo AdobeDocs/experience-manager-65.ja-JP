@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '465'
 ht-degree: 16%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 16%
 
 [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video) を使用すると、あらかじめ定義されたOOTB(Out Of The Box)ビデオアセットをページに配置できます。
 
-トランスコードを適切に行うために、管理者はFFmpegを個別にインストールします。 Fmpegの [インストールおよびAEMの設定を参照してください](#install-ffmpeg)。 Administrators also [Configure Video Profiles](#configure-video-profiles) for use with HTML5 elements.
+トランスコードを適切に行うために、管理者はFFmpegを個別にインストールします。 詳しくは、Fmpegの [インストールとAEMの設定を参照してください](#install-ffmpeg)。 Administrators also [Configure Video Profiles](#configure-video-profiles) for use with HTML5 elements.
 
 ## ビデオプロファイルの設定 {#configure-video-profiles}
 
@@ -32,7 +32,7 @@ HTML5要素を使用するには、ビデオプロファイルを定義します
 
 From this dialog, you can also configure the design of the Video component and parameters for [!UICONTROL Playback], [!UICONTROL Flash], and [!UICONTROL Advanced].
 
-## FmpegのインストールとAEMの設定 {#install-ffmpeg}
+## FFmpegのインストールとAEMの設定 {#install-ffmpeg}
 
 ビデオコンポーネントは、ビデオのトランスコードにサードパーティのオープンソース製品Fmpegを使用します。 https://ffmpeg.org/ [からダウンロード](https://ffmpeg.org/)。 FFmpegのインストール後、特定のオーディオコーデックと特定のランタイムオプションを使用するようにAEMを設定します。
 
@@ -45,7 +45,7 @@ WindowsにFFmpegをインストールするに **は**、次の手順に従い�
 
 Mac OS X **にFFmpegをインストールするには、次の手順に従います**。
 
-1. Xcodeをインストールするには、developer.apple.com/xcode [を参照してください](hhttps://developer.apple.com/xcode/)。
+1. Xcodeをインストールするには、developer.apple.com/xcode [を参照してください](https://developer.apple.com/xcode/)。
 1. XQuartzにインストールし [て](https://www.xquartz.org) 、 [X11を取得します](https://support.apple.com/ja-jp/HT201341)。
 1. www.macports.orgで入手可能なMacPortsをインストール [します](https://www.macports.org/)。
 1. コンソールで「execute」 `sudo port install ffmpeg` コマンドを実行し、画面の指示に従います。 実行可能ファイルのパスがシステム変数に追加されているこ `FFmpeg` とを確認し `PATH` ます。
@@ -78,4 +78,4 @@ To **configure AEM**, follow these steps:
 
 >[!NOTE]
 >
->デフォルトのOOTB(Out-Of-The-Box)ワークフローモデルに対する変更は、AEMインスタンスをアップグレードする際に保持されません。 変更したワークフローモデルを編集する前に、変更したワークフローモデルをコピーすることをお勧めします。 For example, copy the OOTB [!UICONTROL DAM Update Asset] model before editing the FFmpeg Transcoding step in the [!UICONTROL DAM Update Asset] model to pick video-profile names that existed before the upgrade. Then, you can overlay the `/apps` node to let AEM retrieve the custom changes to the OOTB model.
+>デフォルトのOOTB(Out Of The Box)ワークフローモデルに対する変更は、AEMインスタンスをアップグレードする際に保持されません。 Adobeでは、変更したワークフローモデルを編集する前に、変更したワークフローモデルをコピーすることをお勧めします。 For example, copy the OOTB [!UICONTROL DAM Update Asset] model before editing the FFmpeg Transcoding step in the [!UICONTROL DAM Update Asset] model to pick video-profile names that existed before the upgrade. Then, you can overlay the `/apps` node to let AEM retrieve the custom changes to the OOTB model.
