@@ -11,10 +11,10 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbb99875cc6f3c8810670ffe923756f7c13d4ace
+source-git-commit: 494551d3d886c1ed70d252a28b03cfa9d8e82a6a
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 91%
+ht-degree: 78%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 91%
 
 AEM では、[グループを作成](/help/sites-administering/user-group-ac-admin.md#group-administration)してそのグループにポリシーと[ユーザー](/help/sites-administering/user-group-ac-admin.md#user-administration)を割り当てることができます。これらのポリシーは、グループに含まれるユーザーの権限を制御します。
 
-[AEM Forms アドオンパッケージ](../../forms/using/installing-configuring-aem-forms-osgi.md)をインストールすると、この記事に記載されている forms-user や forms-power-user などのグループは、自動的に割り当て可能になります。次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
+[AEM Formsアドオンパッケージをインストールすると](../../forms/using/installing-configuring-aem-forms-osgi.md)、この記事に記載されているグループ（フォームユーザー、フォームパワーユーザーなど）が自動的に割り当て可能になります。 次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
 
 <table>
  <tbody>
@@ -32,7 +32,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>タスク</td> 
   </tr>
   <tr>
-   <td>forms-user <sup>[1]</sup></td> 
+   <td>forms-users <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>アダプティブフォームを作成、プレビュー、パブリッシュ、送信する</li> 
@@ -94,7 +94,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>Use AEM inbox applications<br /><strong>Note: </strong>AEMのインボックスでInteractive Communications Agent UIにアクセスするには、cm-agent-usersとworkflow-usersグループの割り当てが必要です。</li> 
+     <li>AEM inbox applications<br /><strong>Note: </strong>AEM受信トレイのInteractive Communications Agent UIにアクセスするには、cm-agent-usersとworkflow-usersグループの割り当てが必要です。</li> 
      <li>ワークフローインスタンスを管理する</li> 
     </ul> </td> 
   </tr>
@@ -110,6 +110,6 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
  </tbody>
 </table>
 
-1. forms-user グループ権限を持つユーザーは、アダプティブフォームのスクリプトを書くことができません。
+1. フォームユーザーのグループ権限を持つユーザーは、アダプティブフォームのスクリプトを作成できません。
 1. template-authors グループ権限を持つユーザーは、テンプレートのスクリプトを書くことができません。
 
