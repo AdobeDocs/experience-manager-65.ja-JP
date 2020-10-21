@@ -4,9 +4,9 @@ seo-title: AEM 6.5Formsガイド
 description: このガイドでは、デジタルフォームの作成、管理、発行、更新を含む、すべてのAEM Formsタスクについて説明します。
 seo-description: デジタルフォームの作成、管理、発行、更新の方法を含む、AEM Formsのすべてのタスクについて説明します。
 translation-type: tm+mt
-source-git-commit: 5b5937303dd543195b6c8300e6579a58e03a97d1
+source-git-commit: d97cc2ad393fc10ff545ae374180426eb1574ba9
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '368'
 ht-degree: 37%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 37%
 * [最近のドキュメントの更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
-## AEM 6.5ユーザーガイド
+## AEM 6.5ガイド
 
 | ユーザーガイド | 説明 |
 |--- |---|
