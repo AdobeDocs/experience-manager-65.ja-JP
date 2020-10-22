@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d97cc2ad393fc10ff545ae374180426eb1574ba9
+source-git-commit: 4e1f5d549df1db28a8679296afb4b758051d8f6c
 workflow-type: tm+mt
-source-wordcount: '3276'
-ht-degree: 83%
+source-wordcount: '3298'
+ht-degree: 82%
 
 ---
 
@@ -264,7 +264,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サービスパックと重要なアップデート</td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x) （64ビット）</br><b>注：</b> Red Hat Enterprise Linux 6がメンテナンスフェーズの終了と、2020年11月30日に延長ライフフェーズへのトランジションに達しました。 Adobeでは、アップグレードおよび新規インストールにRed Hat Enterprise Linux 7を推奨しています。</p> </td>
+   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x) （64ビット）</br><b>注：</b><a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6</a> は、メンテナンス終了フェーズに達し、2020年11月30日に延長ライフサイクルサポートフェーズにトランジションします。 Adobeでは、アップグレードと新規インストールにRed Hat Enterprise Linux 7を推奨します。 既存のインストールでは、拡張ライフサイクルサポート段階でRed Hat Enterprise Linux 6を使用できます。</p> </td>
    <td><p>A：サポート対象</p> </td>
    <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td>
   </tr>
