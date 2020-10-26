@@ -3,7 +3,7 @@ title: ビデオアセットの管理
 description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 37%
@@ -22,7 +22,7 @@ Learn how to manage and edit the video assets in [!DNL Adobe Experience Manager 
 [!DNL Adobe Experience Manager Assets] 拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 You can preview the renditions in the [!DNL Assets] user interface.
 
 1. デジタルアセットフォルダーまたはサブフォルダーで、デジタルアセットを追加する場所に移動します。
-1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and choose **[!UICONTROL Files]**. または、ユーザーインターフェイス上でファイルをドラッグします。詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
+1. To upload the asset, click **[!UICONTROL Create]** from the toolbar and choose **[!UICONTROL Files]**. または、ユーザーインターフェイス上でファイルをドラッグします。詳しくは、[アセットのアップロード](manage-assets.md#uploading-assets)を参照してください。
 1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. ビデオの一時停止や再生は、カード表示でのみ可能です。The [!UICONTROL Play] and [!UICONTROL Pause] options are not available in the list view.
 
 1. To preview the video in the asset details page, click **[!UICONTROL Edit]** on the card. ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
@@ -87,7 +87,7 @@ In addition to [!DNL Assets] configuration, change the following configurations 
 
 >[!MORELIKETHIS]
 >
->* [Experience Managerアセット内のデジタルアセットの管理](/help/assets/managing-assets-touch-ui.md)
->* [Experience Managerアセット内のコレクションの管理](/help/assets/managing-collections-touch-ui.md)
+>* [Experience Managerアセット内のデジタルアセットの管理](/help/assets/manage-assets.md)
+>* [Experience Managerアセット内のコレクションの管理](/help/assets/manage-collections.md)
 >* [ダイナミックメディアビデオドキュメント](/help/assets/video.md)。
 
