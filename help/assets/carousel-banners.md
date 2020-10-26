@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 96%
@@ -180,7 +180,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 使用する画像を既にアップロードしている場合は、次の手順（[カルーセルセットの作成](#creating-carousel-sets)）に進んでください。カルーセルで使用される画像をアップロードする前に Dynamic Media を有効にしておく必要があることに注意してください。
 
-画像バナーをアップロードするには、[アセットのアップロード](/help/assets/managing-assets-touch-ui.md)を参照してください。
+画像バナーをアップロードするには、[アセットのアップロード](/help/assets/manage-assets.md)を参照してください。
 
 ## カルーセルセットの作成 {#creating-carousel-sets}
 
