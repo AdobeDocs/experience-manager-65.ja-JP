@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 84%
@@ -27,7 +27,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](/help/assets/managing-assets-touch-ui.md)を参照してください。
+>アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](/help/assets/manage-assets.md)を参照してください。
 
 ## クイックスタート：混在メディアセット {#quick-start-mixed-media-sets}
 
@@ -67,7 +67,7 @@ ht-degree: 84%
 
    詳しくは、[Web ページへの混在メディアセットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)および[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-必要に応じて、[混在メディアセット](#editing-mixed-media-sets)を編集できます。また、[混在メディアセットのプロパティ](/help/assets/managing-assets-touch-ui.md#editing-properties)を表示および変更することができます。
+必要に応じて、[混在メディアセット](#editing-mixed-media-sets)を編集できます。また、[混在メディアセットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および変更することができます。
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ ht-degree: 84%
 
 ## 混在メディアセットの編集 {#editing-mixed-media-sets}
 
-[アセットの編集と同じように](/help/assets/managing-assets-touch-ui.md)、ユーザーインターフェイスで直接、混在メディアセット内のアセットに対して様々な編集タスクを実行できます。また、混在メディアセットでは次のアクションも実行できます。
+[アセットの編集と同じように](/help/assets/manage-assets.md)、ユーザーインターフェイスで直接、混在メディアセット内のアセットに対して様々な編集タスクを実行できます。また、混在メディアセットでは次のアクションも実行できます。
 
 * 混在メディアセットへのアセットの追加
 * 混在メディアセット内のアセットの並べ替え
