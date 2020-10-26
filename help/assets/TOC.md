@@ -6,7 +6,7 @@ user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 51%
@@ -113,7 +113,7 @@ ht-degree: 51%
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] 統合](aem-cc-integration-best-practices.md)
    + [統合対象 [!DNL InDesign Server]](indesign.md)
    + [資産のDigital Rights Management](drm.md)
-   + [アセットのインサイトにデモパッケージを使用する](touch-ui-using-demo-package-for-asset-insights.md)
+   + [アセットのインサイトにデモパッケージを使用する](use-demo-package-for-asset-insights.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
    + [アセットを監視するためのベストプラクティス](assets-monitoring-best-practices.md)
    + [Camera Raw サポート](camera-raw.md)
@@ -139,21 +139,21 @@ ht-degree: 51%
    + [コンテンツフラグメント - Markdown](content-fragments/content-fragments-markdown.md)
    + [コンテンツフラグメント用の翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
 + Manage Assets {#managing}
-   + [デジタルアセットの管理](managing-assets-touch-ui.md)
-   + [コレクションの管理](managing-collections-touch-ui.md)
+   + [デジタルアセットの管理](manage-assets.md)
+   + [コレクションの管理](manage-collections.md)
    + [重複項目の検出の有効化](duplicate-detection.md)
    + [デジタルアセットの整理](organize-assets.md)
    + [ビデオアセットの管理](managing-video-assets.md)
    + [翻訳プロジェクトの作成](translation-projects.md)
    + [翻訳するアセットの準備](preparing-assets-for-translation.md)
    + [Experience Managerからのアセットのダウンロード](download-assets-from-aem.md)
-   + [Lightbox](touch-ui-light-box.md)
-   + [アセットのインサイト](touch-ui-asset-insights.md)
-   + [DTMを通じたアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
-   + [アセットのインサイトの設定](touch-ui-configuring-asset-insights.md)
+   + [Lightbox](light-box.md)
+   + [アセットのインサイト](asset-insights.md)
+   + [DTMを通じたアセットインサイトの有効化](use-dtm-for-asset-insights.md)
+   + [アセットのインサイトの設定](configure-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
-   + [Webページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)
+   + [Webページでのページトラッカーと埋め込みコードの使用](use-page-tracker.md)
    + [複合アセットの管理](managing-linked-subassets.md)
    + [関連アセット](related-assets.md)
    + [プライベートフォルダーの共有](private-folder.md)
