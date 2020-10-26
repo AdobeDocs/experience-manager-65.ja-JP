@@ -4,7 +4,7 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '4530'
 ht-degree: 7%
@@ -248,7 +248,7 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 ### ユーザーインターフェイス {#ui-6560}
 
 * ブラウザーのオフロードインターフェイスでは、一部のジョブトピックが表示されません(NPR-34308)。
-* 設定ブラウザーのインターフェイスには、すべての設定(NPR-33644)が表示されるわけではありません。
+* 設定 [ブラウザー](/help/sites-administering/configurations.md) インターフェイスでは、すべての設定(NPR-33644)が表示されるわけではありません。
 * ユーザーが偽装するように検索する際に `Esc` キーを押すと、ユーザーリスト(NPR-34084)ではなく、 **[!UICONTROL ユーザー]** ダイアログが閉じます。
 
 ### 統合 {#integrations-6560}
