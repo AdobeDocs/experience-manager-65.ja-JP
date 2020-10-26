@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.5 Service Pack 6の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 750e3729a33718d54dca8b2514468d4a40910d4c
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 6%
@@ -194,7 +194,7 @@ The steps to configure [!DNL Experience Manager Assets] with [!DNL Brand Portal]
 
 [!DNL Experience Manager Assets] には、次のアクセシビリティの強化が含まれています。
 
-* キーボードの矢印キーを使用して、ズームされた画像内の領域を移動およびパンできます。 詳しくは、キーボードキーのみを使用した [プレビューアセットを参照してください](../assets/managing-assets-touch-ui.md#previewing-assets)。
+* キーボードの矢印キーを使用して、ズームされた画像内の領域を移動およびパンできます。 詳しくは、キーボードキーのみを使用した [プレビューアセットを参照してください](../assets/manage-assets.md#previewing-assets)。
 
 * フィルターパネル内の混在状態のチェックボックス（ネストされた述語のすべてを選択しない限り、最初のレベルのチェックボックスは選択されず、完全に読み取られます）は、スクリーンリーダーで読み取り可能です。
 
