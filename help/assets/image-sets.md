@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2076'
 ht-degree: 87%
@@ -33,7 +33,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](/help/assets/managing-assets-touch-ui.md)を参照してください。
+>アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](/help/assets/manage-assets.md)を参照してください。
 
 ## クイックスタート：画像セット {#quick-start-image-sets}
 
@@ -83,7 +83,7 @@ ht-degree: 87%
 
    詳しくは、[Web ページへの画像セットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)および[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-画像セットを編集するには、[画像セットの編集](#editing-image-sets)を参照してください。また、[画像セットのプロパティ](/help/assets/managing-assets-touch-ui.md#editing-properties)を表示および編集することができます。
+画像セットを編集するには、[画像セットの編集](#editing-image-sets)を参照してください。また、[画像セットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および編集することができます。
 
 セットの作成で問題が発生した場合は、[Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md#images-and-sets)の「画像とセット」を参照してください。
 
@@ -91,7 +91,7 @@ ht-degree: 87%
 
 まずは画像セット用の画像をアップロードします。ユーザーは画像セットビューアで画像をズームできるので、画像を選択する際にはズームを考慮します。最大サイズで 2,000 ピクセル以上の画像を使用してください。画像セットでは多くの画像ファイル形式がサポートされますが、可逆圧縮 TIFF、PNG および EPS 画像の使用が推奨されます。
 
-画像セット用の画像のアップロードは、[AEM Assets での他のアセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)と同様に実行できます。
+画像セット用の画像のアップロードは、[AEM Assets での他のアセットのアップロード](/help/assets/manage-assets.md#uploading-assets)と同様に実行できます。
 
 ### アップロード用の画像セットアセットの準備 {#preparing-image-set-assets-for-upload}
 
