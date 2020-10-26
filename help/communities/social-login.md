@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '2787'
+source-wordcount: '2803'
 ht-degree: 36%
 
 ---
@@ -109,6 +109,8 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
 1. **[!UICONTROL ツール]** / **[!UICONTROL 一般]** / **[!UICONTROL 設定ブラウザーに移動します]**。 コンテキストを選択し、プロパティを編集します。 まだ有効になっていなければ、クラウド設定を有効にします。
 
    ![config-propertiesping](assets/config-propertiespng.png)
+
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 
 1. **Facebook クラウドサービス設定を作成または編集します。**
 
@@ -259,6 +261,8 @@ The only REST request made for social login is to *[GET account/verify credentia
 1. **[!UICONTROL ツール]** / **[!UICONTROL 一般]** / **[!UICONTROL 設定ブラウザーに移動します]**。 コンテキストを選択し、プロパティを編集します。 まだ有効になっていなければ、クラウド設定を有効にします。
 
    ![twitterconfigpropng](assets/twitterconfigproppng.png)
+
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 
 1. Twitter クラウドサービス設定を作成または編集します。
 
@@ -458,7 +462,7 @@ For more information, see [Authentication with Apache Oak External Login Module]
 
 オーサーインスタンスで、管理者権限でサインインします。
 
-1. From global navigation: select **Tools,[CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md).**
+1. From global navigation: select **Tools, [CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md).**
 1. ntBaseLuceneのコピーからntBaseLucene-oauthという名前のインデックスを作成します。
 
    * ノード下 `/oak:index`
