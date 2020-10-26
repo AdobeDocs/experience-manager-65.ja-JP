@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 56c9bc1ea99dcb93af21d8b26bac8792512f4d42
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2312'
 ht-degree: 91%
@@ -24,7 +24,7 @@ Dynamic Media を使用すると、3D アセットを、没入感のあるエク
 * Adobe Dimension を使用した、高品質でインタラクティブなディメンショナルビューアプリセットで、3D アセットの表示のサポートを最適化。
 * 3D メディア WCM コンポーネントによって、AEM Sites ページに 3D アセットを簡単に追加可能。
 
-Dynamic Mediaで3Dアセットを使用する場合は、追加の設定は必要ありません。
+ダイナミックメディアで3Dアセットを使用する場合、追加の設定は必要ありません。
 
 ![3D の靴](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
@@ -32,7 +32,7 @@ Dynamic Mediaで3Dアセットを使用する場合は、追加の設定は必�
 
 ## Dynamic Media でサポートされる 3D 形式 {#supported-three-d-file-formats-in-dm}
 
-Dynamic Mediaは、次の3D形式をサポートしています。
+ダイナミックメディアは、次の3D形式をサポートしています。
 
 [サポートされる 3D 形式](/help/assets/assets-formats.md)も参照.
 
@@ -45,19 +45,19 @@ Dynamic Mediaは、次の3D形式をサポートしています。
 
 ## クイックスタート：Dynamic Media 内の 3D アセット {#quick-start-three-d}
 
-次の順を追ったワークフローに従って、3DアセットをDynamic Media- Scene7モードですばやく習得できます。
+次の順を追ったワークフローに従って、ダイナミックメディア —Scene7モードで3Dアセットをすばやく習得できます。
 
 >[!NOTE]
 >
->3Dアセットは、Dynamic Media — ハイブリッドモードではサポートされていません。
+>3Dアセットは、ダイナミックメディア — ハイブリッドモードではサポートされていません。
 
-Dynamic Mediaで3Dアセットを操作する前に、AEM管理者がDynamic Media- Scene7モードでDynamic MediaCloud Serviceを有効にし、設定済みであることを確認してください。
+ダイナミックメディアで3Dアセットを操作する前に、AEM管理者がダイナミックメディア —Scene7モードでダイナミックメディアCloud Servicesを有効にし、設定済みであることを確認してください。
 
 「Dynamic Media - Scene7 モードの設定」の[ Dynamic Media クラウドサービスの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)、および[ Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
 
 1. **3D アセットのアップロード**
 
-   * [Dynamic Media で使用する 3D アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+   * [Dynamic Media で使用する 3D アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)。
    * [Dynamic Media のアップロードでサポートされる 3D ファイル形式](#supported-three-d-file-formats-in-dm).
 
 1. **3D アセットの管理**
@@ -111,7 +111,7 @@ See also [Previewing assets using the software interface](/help/assets/previewin
 
 1. 3D アセットが AEM にアップロードされていることを確認します。
 
-   詳しくは、[Dynamic Media で使用する 3D アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
+   詳しくは、[Dynamic Media で使用する 3D アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
 1. From AEM, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets > Files.]**
 1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL Card View.]**
