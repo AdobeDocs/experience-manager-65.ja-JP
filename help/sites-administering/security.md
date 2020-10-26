@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '5487'
 ht-degree: 88%
@@ -67,19 +67,19 @@ AEM WCM では複数のユーザーとグループがインストールされま
   </tr>
   <tr>
    <td><p>admin</p> <p>デフォルトのパスワード：admin</p> </td>
-   <td>ユーザー</td>
+   <td>User</td>
    <td><p>フルアクセス権限を持つシステム管理者アカウント</p> <p>このアカウントは、AEM WCM と CRX 間の接続に使用します。</p> <p>このアカウントを誤って削除した場合は、リポジトリを再起動すると（デフォルト設定で）再作成されます。</p> <p>admin アカウントは AEM プラットフォームに必須です。つまり、このアカウントは削除できません。</p> </td>
    <td><p>このユーザーアカウントのデフォルトのパスワードを変更することを強くお勧めします。</p> <p>可能な場合はインストール時に変更してください。後から変更することもできます。</p> <p>注意：このアカウントを CQ Servlet Engine の admin アカウントと混同しないでください。</p> </td>
   </tr>
   <tr>
    <td><p>anonymous</p> <p> </p> </td>
-   <td>ユーザー</td>
+   <td>User</td>
    <td><p>インスタンスに対する未認証のアクセスのデフォルトの権限を保持します。デフォルトでは、最小限のアクセス権限が保持されます。</p> <p>このアカウントを誤って削除した場合は、起動時に再作成されます。このアカウントを完全に削除することはできませんが、無効にすることは可能です。</p> </td>
    <td>オーサーインスタンスの機能に悪影響を及ぼす可能性があるため、このアカウントを削除または無効にしないでください。削除することを義務付けているセキュリティ要件がある場合は、まずシステムに与える影響をテストするようにしてください。</td>
   </tr>
   <tr>
    <td><p>作成者</p> <p>デフォルトのパスワード：author</p> </td>
-   <td>ユーザー</td>
+   <td>User</td>
    <td><p>/content への書き込みが許可されている author アカウント。寄稿者と閲覧者の権限が含まれます。</p> <p>/content ツリー全体へのアクセスが許可されているので、Web マスターとして使用できます。</p> <p>これは組み込みのユーザーではなく、別の Geometrixx Demo のユーザーです。</p> </td>
    <td><p>このアカウントを完全に削除するか、デフォルトのパスワードを変更することをお勧めします。</p> <p>可能な場合はインストール時に変更してください。後から変更することもできます。</p> </td>
   </tr>
@@ -186,7 +186,7 @@ You can change the permissions granted/denied to a given user by selecting or cl
     <ul>
      <li>ページまたはその子ページから既存の段落を削除する。</li>
      <li>ページまたは子ページを削除する。</li>
-    </ul> <p><strong>modifyが拒否された場合</strong> 、jcr:contentの下のサブツリーは、jcr:contentの削除として特に除外され、その子ノードはページの変更と見なされます。 これは、jcr:content子ノードを定義するノードにのみ適用されます。</p> </td>
+    </ul> <p><strong>modifyが拒否された場合</strong> 、jcr:contentの下のサブツリーは、jcr:contentの削除として特に除外され、その子ノードはページの変更と見なされます。これは、jcr:content子ノードを定義するノードにのみ適用されます。</p> </td>
   </tr>
   <tr>
    <td>ACL 読み取り</td>
@@ -205,7 +205,7 @@ You can change the permissions granted/denied to a given user by selecting or cl
 
 >[!NOTE]
 >
->AEM automatically generates user groups for role-assignment (Owner, Editor, Viewer) in [Collections](/help/assets/managing-collections-touch-ui.md). ただし、それらのグループに ACL を手動で追加すると、AEM 内にセキュリティ上の脆弱性をもたらす恐れがあります。ACL を手動で追加することはお勧めしません。
+>AEM automatically generates user groups for role-assignment (Owner, Editor, Viewer) in [Collections](/help/assets/manage-collections.md). ただし、それらのグループに ACL を手動で追加すると、AEM 内にセキュリティ上の脆弱性をもたらす恐れがあります。ACL を手動で追加することはお勧めしません。
 
 ### アクセス制御リストとその評価方法 {#access-control-lists-and-how-they-are-evaluated}
 
@@ -217,9 +217,9 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 >
 >ACL はサンプルに付属しています。アプリケーションに適した ACL を確認し、決定しておくことをお勧めします。To review the ACLs that are included, go to **CRXDE **and select the **Access Control** tab for the following nodes:
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`: 全員に読み取りアクセスを許可します。
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`: 全員に読み取りアクセスを許可します。
->`/home/users/geometrixx-outdoors`: すべてのユーザーが読み取りアクセスを許可し `*/profile*` 、
+>`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:全員に読み取りアクセスを許可します。
+>`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:全員に読み取りアクセスを許可します。
+>`/home/users/geometrixx-outdoors`:すべてのユーザーが読み取りアクセスを許可し `*/profile*` 、
 >`*/social/relationships/following/*`。
 >
 >カスタムアプリケーションで、またはなど、他の関係のアクセス権を設定でき `*/social/relationships/friend/*` ま `*/social/relationships/pending-following/*`す。
@@ -496,7 +496,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 >
 >You cannot use the Security console to change the admin password. To change the password for the admin account, use the [Users console](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) that Granite Operations provides.
 >
->JEE上のAEM Formsを使用している場合は、次の手順に従ってパスワードを変更しないでください。JEE管理コンソール(/adminui)のAEM Formsを使用してパスワードを変更してください。
+>JEEでAEM Formsを使用している場合は、次の手順に従ってパスワードを変更しないでください。JEE上のAEM Forms管理コンソール(/adminui)を使用してパスワードを変更します。
 
 1. **セキュリティ**&#x200B;コンソールで、パスワードを変更するユーザーの名前をダブルクリックします。
 1. 「**プロパティ**」タブをクリックします（まだアクティブでない場合）。
