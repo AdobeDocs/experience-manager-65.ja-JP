@@ -3,7 +3,7 @@ title: ワークフローを使用したアセットの処理
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 27%
@@ -27,7 +27,7 @@ ht-degree: 27%
 
 ![一部のデフォルトワークフロー](assets/aem-default-workflows.png)
 
-*図：で使用できるデフォルトのワークフローの一部[!DNL Experience Manager]です。*
+*図：で使用できるデフォルトのワークフローの一部 [!DNL Experience Manager]です。*
 
 ## Apply workflows to process assets {#applying-workflows-to-assets}
 
@@ -84,7 +84,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## コレクションへのワークフローの適用 {#applying-a-workflow-to-a-collection}
 
-コレクションへのワークフローの [適用を参照してください](/help/assets/managing-collections-touch-ui.md#running-a-workflow-on-a-collection)。
+コレクションへのワークフローの [適用を参照してください](/help/assets/manage-collections.md#running-a-workflow-on-a-collection)。
 
 ## ワークフローの自動開始によるアセットの条件付き処理 {#auto-execute-workflow-on-some-assets}
 
