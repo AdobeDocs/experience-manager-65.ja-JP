@@ -10,10 +10,10 @@ topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 83%
+source-wordcount: '673'
+ht-degree: 82%
 
 ---
 
@@ -45,6 +45,7 @@ AEM Forms で reCAPTCHAを実装するには：
 1. クラウドサービス用の設定コンテナを作成します。
 
    1. Go to **[!UICONTROL Tools > General > Configuration Browser]**.
+      * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
    1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
       1. 設定ブラウザーで、「**[!UICONTROL global]**」フォルダーを選択して「**[!UICONTROL プロパティ]**」をタップします。
