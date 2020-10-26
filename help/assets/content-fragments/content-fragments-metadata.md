@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 148803f3-1e7b-4d35-99c5-e0d82f3adf24
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 100%
@@ -28,7 +28,7 @@ ht-degree: 100%
 1. **アセット**&#x200B;コンソールで、コンテンツフラグメントの場所に移動します。
 1. 以下のどちらかの操作をおこないます。
 
-   * [**「プロパティを表示&#x200B;**」を選択してダイアログを開きます](/help/assets/managing-assets-touch-ui.md#editing-properties)。開いて表示されたら、編集することもできます。
+   * [**「プロパティを表示**」を選択してダイアログを開きます](/help/assets/manage-assets.md#editing-properties)。開いて表示されたら、編集することもできます。
    * [編集するコンテンツフラグメント](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor)を開き、サイドパネルから「**メタデータ**」を選択します。
 
    ![cfm-6420-06](assets/cfm-6420-06.png)
