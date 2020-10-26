@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5944'
 ht-degree: 79%
@@ -236,7 +236,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 * Adobe Illustrator ファイル（.AI）または Adobe Photoshop Encapsulated Postscript ファイル（.EPS）をラスタライズする。
 * 注意：ビデオプロファイルおよびイメージプロファイルは、それぞれ、ビデオおよび画像の処理を定義するのに使用できます。
 
-[アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
+[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
 **アセット処理を設定するには**：
 
@@ -427,7 +427,7 @@ spin-01-01
 
    資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
-1. On the navigation bar near the top of the page, click **[!UICONTROL Setup]>[!UICONTROL Application Setup]>[!UICONTROL Batch Set Presets]>[!UICONTROL Batch Set Preset]**.
+1. On the navigation bar near the top of the page, click **[!UICONTROL Setup] > [!UICONTROL Application Setup] > [!UICONTROL Batch Set Presets] > [!UICONTROL Batch Set Preset]**.
 
    詳細ページの右上隅に設定されている「**[!UICONTROL フォームを表示]**」は、デフォルトの表示です。
 
