@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2e5cf93eb3ce47b65298b8de13c7d874d1989073
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '940'
 ht-degree: 67%
 
 ---
@@ -43,6 +43,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
 1. On AEM Forms author instance, navigate to **Tools** ![hammer](assets/hammer.png) > **General** > **Configuration Browser**.
 1. On the **[!UICONTROL Configuration Browser]** page, tap **[!UICONTROL Create]**.
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. In the **[!UICONTROL Create Configuration]** dialog, specify a **[!UICONTROL Title]** for the configuration, enable **[!UICONTROL Cloud Configurations]**, and tap **[!UICONTROL Create]**. これにより、クラウドサービス用の設定コンテナが作成されます。
 1. Navigate to **Tools** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign** and select the configuration container you created in the above step.
 
