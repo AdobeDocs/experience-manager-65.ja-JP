@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1812'
 ht-degree: 66%
 
 ---
@@ -48,12 +48,12 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following subforms in the XDP template:
 
 * 請求明細：ドキュメントフラグメントが含まれます
-* 顧客の詳細： ドキュメントフラグメントを含む
-* 請求書要約： ドキュメントフラグメントを含む
-* サマリ： ドキュメントフラグメント（Chargesサブフォーム）とグラフ（Chartsサブフォーム）を含みます
-* 呼び出しの項目別： テーブルを含む（レイアウトフラグメント）
-* 今すぐ支払う： 画像を含む
-* 付加価値サービス： 画像を含む
+* 顧客の詳細：ドキュメントフラグメントを含む
+* 請求書要約：ドキュメントフラグメントを含む
+* サマリ：ドキュメントフラグメント（Chargesサブフォーム）とグラフ（Chartsサブフォーム）を含みます
+* 呼び出しの項目別：テーブルを含む（レイアウトフラグメント）
+* 今すぐ支払う：画像を含む
+* 付加価値サービス：画像を含む
 
 ![create_print_template](assets/create_print_template.gif)
 
@@ -180,6 +180,7 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
 編集可能なテンプレート用のフォルダーを作成するには、次の手順を実行します。
 
 1. Tap **Tools** ![hammer-icon](assets/hammer-icon.svg) > **Configuration Browser**.
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. In the Configuration Browser page, tap **Create**.
 1. In the **Create Configuration** dialog, specify **Create_First_IC_templates** as the title for the folder, check **Editable Templates**, and tap **Create**.
 
@@ -192,10 +193,10 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
 Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following panels in the Web template:
 
 * 請求明細：ドキュメントフラグメントが含まれます
-* 顧客の詳細： ドキュメントフラグメントを含む
-* 請求書要約： ドキュメントフラグメントを含む
-* 料金の概要： ドキュメントフラグメントとグラフを含みます（2列レイアウト）
-* 呼び出しの項目別： テーブルを含む
+* 顧客の詳細：ドキュメントフラグメントを含む
+* 請求書要約：ドキュメントフラグメントを含む
+* 料金の概要：ドキュメントフラグメントとグラフを含みます（2列レイアウト）
+* 呼び出しの項目別：テーブルを含む
 * Pay Now: Includes a **Pay Now** button and an image
 * Value Added Services: Includes an image and a **Subscribe** button.
 
