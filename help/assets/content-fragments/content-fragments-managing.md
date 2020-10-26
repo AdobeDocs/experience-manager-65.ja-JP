@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c71c24a291b728ab429b18a405123c96123cf617
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 99%
@@ -120,7 +120,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->これらの多くは、[Assets](/help/assets/managing-assets-touch-ui.md) や [AEM デスクトップアプリケーション](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)に対する標準的なアクションです。
+>これらの多くは、[Assets](/help/assets/manage-assets.md) や [AEM デスクトップアプリケーション](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)に対する標準的なアクションです。
 
 ## フラグメントエディターを開く {#opening-the-fragment-editor}
 
@@ -233,7 +233,7 @@ ht-degree: 99%
 
 ## コンテンツフラグメントのタイムライン {#timeline-for-content-fragments}
 
-[タイムライン](/help/assets/managing-assets-touch-ui.md#timeline)では標準のオプションに加え、コンテンツフラグメントに固有の情報とアクションの両方が提供されます。
+[タイムライン](/help/assets/manage-assets.md#timeline)では標準のオプションに加え、コンテンツフラグメントに固有の情報とアクションの両方が提供されます。
 
 * バージョン、コメントおよび注釈に関する情報の表示
 * バージョンに関するアクション
