@@ -4,7 +4,7 @@ description: Learn how to find the required assets in [!DNL Adobe Experience Man
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5968'
 ht-degree: 51%
@@ -35,7 +35,7 @@ Search for assets using the Omnisearch field at the top of the [!DNL Experience 
 
 [ **[!UICONTROL フィルター]** ]パネルを使用して、ファイルタイプ、ファイルサイズ、最終変更日、アセットのステータス、インサイトデータ、Adobe Stockライセンスなど、様々なオプション（述語）に基づいて検索結果をフィルタリングし、検索範囲を絞り込みます。 管理者は、フィルターパネルをカスタマイズし、検索ファセットを使用して検索予測を追加または削除できます。 [!UICONTROL フィルターパネルの] ファイルの種類 [!UICONTROL (File Type] )フィルターには、混在状態のチェックボックスがあります。 したがって、すべてのネストされた述語（またはフォーマット）を選択しない限り、第1レベルのチェックボックスは部分的にチェックされます。
 
-[!DNL Experience Manager] 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
+[!DNL Experience Manager] 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/manage-collections.md)を参照してください。
 
 ## 検索インターフェイスについて {#searchui}
 
@@ -222,7 +222,7 @@ From within the [!DNL Experience Manager] user interface, users can search Adobe
 
 ### コレクションの検索 {#collections}
 
-[!DNL Experience Manager] 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/managing-collections-touch-ui.md)を参照してください。
+[!DNL Experience Manager] 検索機能では、コレクションの検索とコレクション内のアセットの検索をサポートしています。詳しくは、[コレクションの検索](/help/assets/manage-collections.md)を参照してください。
 
 ## アセットセレクター {#assetpicker}
 
@@ -374,7 +374,7 @@ The search capability in [!DNL Experience Manager Assets] has the following limi
 
 ### アセットのアップロード時にテキストを抽出 {#extracttextupload}
 
-PSDファイルやPDFファイルなど [!DNL Experience Manager] のアセットをアップロードする際に、アセットからテキストを抽出するように設定できます。 [!DNL Experience Manager] は、抽出されたテキストのインデックスを作成し、抽出されたテキストに基づいてこれらのアセットを検索しやすくします。 See [upload assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+PSDファイルやPDFファイルなど [!DNL Experience Manager] のアセットをアップロードする際に、アセットからテキストを抽出するように設定できます。 [!DNL Experience Manager] は、抽出されたテキストのインデックスを作成し、抽出されたテキストに基づいてこれらのアセットを検索しやすくします。 See [upload assets](/help/assets/manage-assets.md#uploading-assets).
 
 テキスト抽出がデプロイメントにとってリソースを大量に消費する大きすぎる場合は、テキスト抽出を [無効にすることを検討](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)します。
 
@@ -447,7 +447,7 @@ For the assets that are available in a single folder or a collection, it is easi
 * アセット、フォルダーおよび他のコレクションの静的な参照リスト
 * 検索条件に基づいてコレクション内のアセットが決まる動的リスト（スマートコレクション）。
 
-検索条件に基づいて、スマートコレクションを作成できます。**[!UICONTROL フィルター]**&#x200B;パネルで「**[!UICONTROL ファイル]**」を選択し、「**[!UICONTROL スマートコレクションを保存]**」をクリックします。詳しくは、[コレクションの管理](/help/assets/managing-collections-touch-ui.md)を参照してください。
+検索条件に基づいて、スマートコレクションを作成できます。**[!UICONTROL フィルター]**&#x200B;パネルで「**[!UICONTROL ファイル]**」を選択し、「**[!UICONTROL スマートコレクションを保存]**」をクリックします。詳しくは、[コレクションの管理](/help/assets/manage-collections.md)を参照してください。
 
 ## 予期しない検索結果や問題のトラブルシューティング {#troubleshoot-unexpected-search-results-and-issues}
 
