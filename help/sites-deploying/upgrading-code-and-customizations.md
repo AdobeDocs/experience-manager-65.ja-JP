@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '2204'
 ht-degree: 75%
@@ -133,7 +133,7 @@ AEM の標準の機能を拡張する場合は、/libs の下のノードやフ�
 
 ### 既存アセットのアセット ID の生成 {#generating-asset-ids-for-existing-assets}
 
-既存のアセットのアセット ID を生成するには、AEM 6.5 を実行するように AEM インスタンスをアップグレードする際にアセットをアップグレードします。これは、[アセットインサイト機能](/help/assets/touch-ui-asset-insights.md)を有効にするために必要な手順です。For more details, see [Add embed code](/help/assets/touch-ui-using-page-tracker.md#add-embed-code).
+既存のアセットのアセット ID を生成するには、AEM 6.5 を実行するように AEM インスタンスをアップグレードする際にアセットをアップグレードします。これは、[アセットインサイト機能](/help/assets/asset-insights.md)を有効にするために必要な手順です。For more details, see [Add embed code](/help/assets/use-page-tracker.md#add-embed-code).
 
 アセットをアップグレードするには、JMX コンソールで Associate Asset IDs パッケージを設定します。リポジトリ内のアセットの数によっては、`migrateAllAssets` に長い時間がかかることがあります。TarMK に 125,000 のアセットがある場合は、内部テストに約 1 時間かかります。
 
