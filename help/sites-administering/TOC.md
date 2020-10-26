@@ -6,9 +6,9 @@ user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
+source-git-commit: c7de7bee2368a558620aafdff5272e4bd07aae00
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '630'
 ht-degree: 97%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 97%
    + [言語コピーウィザード](tc-wizard.md)
    + [翻訳の機能強化](tc-enhancements.md)
    + [翻訳のベストプラクティス](tc-bp.md)
+   + [設定と設定ブラウザ](configurations.md)
    + [AEM FAQ](aem-faqs.md)
 + 運用 {#operations}
    + [ダッシュボード](dashboards.md)
