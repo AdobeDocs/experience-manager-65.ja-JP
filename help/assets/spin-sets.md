@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 89%
@@ -29,7 +29,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
 >[!NOTE]
 >
->アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](/help/assets/managing-assets-touch-ui.md)を参照してください。
+>アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](/help/assets/manage-assets.md)を参照してください。
 
 ## クイックスタート：スピンセット {#quick-start-spin-sets}
 
@@ -77,13 +77,13 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
    詳しくは、[Web ページへのスピンセットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)と[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-必要に応じて、[スピンセットを編集](#editing-spin-sets)できます。また、[スピンセットのプロパティ](/help/assets/managing-assets-touch-ui.md#editing-properties)の表示と変更もできます。
+必要に応じて、[スピンセットを編集](#editing-spin-sets)できます。また、[スピンセットのプロパティ](/help/assets/manage-assets.md#editing-properties)の表示と変更もできます。
 
 ## スピンセット用のアセットのアップロード {#uploading-assets-for-spin-sets}
 
 アイテムの写真は最低でも、1 次元スピンセットで 8～12 個、2 次元スピンセットで 16～24 個必要になります。アイテムが回転および反転している印象を与えるためには、写真を一定の間隔で撮影する必要があります。例えば、1 次元スピンセットに 12 個の写真を含める場合、写真を撮影するごとに 30 度ずつ（360/12）アイテムを回転します。
 
-スピンセット用の画像のアップロードは、[AEM Assets での他のアセットのアップロード](/help/assets/managing-assets-touch-ui.md)と同様に実行できます。
+スピンセット用の画像のアップロードは、[AEM Assets での他のアセットのアップロード](/help/assets/manage-assets.md)と同様に実行できます。
 
 ### スピンセット用の画像のキャプチャに関するガイドライン {#guidelines-for-shooting-spin-set-images}
 
