@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2014e4f28c63f6268606d46b5019d654bbe4aa08
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '4334'
 ht-degree: 97%
@@ -68,6 +68,7 @@ ht-degree: 97%
 >
 >* クイックビューをトリガーして、画像にインタラクティブ機能を追加する。
 >* eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+
 >
 >
 AEM の実装で AEM eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
@@ -213,7 +214,7 @@ AEM Assets に含まれる、デフォルトの標準提供インタラクティ
 
 1. インタラクティブにする画像バナーをアップロードします。
 
-   [アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
+   [アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
    これで、画像バナーにホットスポットを追加する準備が整いました。この後のタスクを参照してください。
 
@@ -281,6 +282,7 @@ AEM Assets に含まれる、デフォルトの標準提供インタラクティ
 
       * AEM Sites のユーザーである場合は、サイトセレクターアイコン（フォルダー）をタップまたはクリックして URL に移動します。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
       * スタンドアロンユーザーである場合は、「HREF」テキストフィールドに、リンクされる Web ページへの完全な URL パスを指定します。
+
    このリンクを新しいブラウザータブで開く（推奨のデフォルト）か同じタブで開くかを指定してください。
 
    詳しくは、[セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
@@ -300,7 +302,7 @@ AEM Assets に含まれる、デフォルトの標準提供インタラクティ
 1. 「**[!UICONTROL 保存]**」をタップして作業内容を保存し、参照ページに戻ります。
 1. インタラクティブ画像を公開します。公開すると、バナーをクラウドで配信できるようになり、サードパーティの Web サイトに統合する必要がある場合は埋め込みコードが生成されます。
 
-   [アセットの公開](/help/assets/managing-assets-touch-ui.md#publishing-assets)を参照してください。
+   [アセットの公開](/help/assets/manage-assets.md#publishing-assets)を参照してください。
 
    ホットスポットを追加してインタラクティブ画像を公開したら、次に既存の Web サイトにその画像を追加できます。
 
