@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 9f22cb618d487a2b02dc17149d11b81a9e9e27be
 workflow-type: tm+mt
-source-wordcount: '5899'
+source-wordcount: '5895'
 ht-degree: 75%
 
 ---
@@ -34,7 +34,7 @@ AEM インスタンスがデプロイされた後は、操作、パフォーマ�
 | [ログファイル](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)が監視されていること |  |  |
 | システム監視がバックグラウンドで（一貫して）実行されていること | CPU、メモリ、ディスクおよびネットワークの使用状況を含みます。例えば、iostat、vmstat、perfmon を使用します。 | ログに記録されたデータを可視化して、パフォーマンス問題の追跡に使用できます。生のデータにもアクセスできます。 |
 | [AEM パフォーマンスが監視されていること](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance) | トラフィックレベルを監視する[要求カウンター](/help/sites-deploying/monitoring-and-maintaining.md#request-counters)を含みます。 | 重大な、または長期にわたるパフォーマンスの損失が見られる場合は、詳細な調査をする必要があります。 |
-| You are monitoring your [Replication Agents](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents). `` |  |  |
+| [レプリケーションエージェント](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents)を監視していること。 |  |  |
 | ワークフローインスタンスを定期的にパージすること | リポジトリのサイズとワークフローのパフォーマンス。 | [ワークフローインスタンスの定期的なパージ](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)を参照してください。 |
 
 ## バックアップ {#backups}
@@ -58,9 +58,9 @@ AEM インスタンスがデプロイされた後は、操作、パフォーマ�
 >[!CAUTION]
 >
 >*実稼動インスタンスのバックアップを実装するときは、バックアップを正常に復元できることを確認するために、テストをおこなう必要があります。*
-
->そうしないと、最悪の場合、バックアップが無駄になる可能性があります。
 >
+>そうしないと、最悪の場合、バックアップが無駄になる可能性があります。
+
 >[!NOTE]
 >
 >バックアップのパフォーマンスについて詳しくは、[バックアップのパフォーマンス](/help/sites-deploying/configuring-performance.md#backup-performance)を参照してください。
@@ -100,7 +100,7 @@ CRX ドキュメントの[バックアップと復元](/help/sites-administering
 
 ### 概要 {#overview}
 
-**バージョンのパージ**&#x200B;ツールは、**[ツール](/help/sites-administering/tools-consoles.md)コンソール&#x200B;**の「**バージョン管理&#x200B;**」の下か、次の場所にあります。
+**バージョンのパージ**&#x200B;ツールは、**[ツール](/help/sites-administering/tools-consoles.md)コンソール**&#x200B;の「**バージョン管理**」の下か、次の場所にあります。
 
 `https://<server>:<port>/etc/versioning/purge.html`
 
@@ -122,7 +122,7 @@ CRX ドキュメントの[バックアップと復元](/help/sites-administering
 
 Web サイトのバージョンをパージするには、次の手順を実行します。
 
-1. **[ツール](/help/sites-administering/tools-consoles.md)****コンソール**に移動して、「**バージョン管理**」を選択し、「**バージョンのパージ**」をダブルクリックします。
+1. **[ツール](/help/sites-administering/tools-consoles.md)****コンソール**&#x200B;に移動して、「**バージョン管理**」を選択し、「**バージョンのパージ**」をダブルクリックします。
 1. Set the start path of the content to be purged (e.g. `/content/geometrixx-outdoors`).
 
    * パスで定義したノードのみをパージする場合は、「**繰り返し**」の選択を解除します。
@@ -143,19 +143,19 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 
 「**ドライラン**」と「**パージ**」の処理では、処理されたすべてのノードがリストされます。処理の間、ノードのステータスは次のうちいずれかになります。
 
-* `ignore (not versionnable)`: このノードはバージョン管理をサポートしていないので、プロセス中は無視されます。
+* `ignore (not versionnable)`:このノードはバージョン管理をサポートしていないので、プロセス中は無視されます。
 
-* `ignore (no version)`: ノードにはバージョンがなく、プロセス中は無視されます。 &quot;
+* `ignore (no version)`:ノードにはバージョンがなく、プロセス中は無視されます。
 
 * `retained`：ノードはパージされません。
-* `purged`: ノードが削除されます。
+* `purged`:ノードが削除されます。
 
 さらに、コンソールでは、バージョンに関して次のような有益な情報が提供されます。
 
-* `V 1.0`: バージョン番号。
+* `V 1.0`:バージョン番号。
 * `V 1.0.1`*：星マークは、バージョンが最新であることを示します。
 
-* `Thu Mar 15 2012 08:37:32 GMT+0100`: バージョンの日付。
+* `Thu Mar 15 2012 08:37:32 GMT+0100`:バージョンの日付。
 
 例を以下に示します。
 
@@ -223,7 +223,7 @@ AEM WCM およびリポジトリに対するアクセス要求はすべてここ
 Folio Builderから実行されるすべてのアップグレード操作のログが 
 `com.day.compat.codeupgrade` および `com.adobe.cq.upgradesexecutor` パッケージ
 
-* `<*cq-installation-dir*>/crx-quickstart/repository`
+* `<cq-installation-dir>/crx-quickstart/repository`
 
    * `revision.log`
 改訂ジャーナリング情報。
@@ -264,19 +264,19 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
 状況によっては、別のログレベルでカスタムログファイルを作成する必要があります。これをおこなうには、リポジトリで次の手順を実行します。
 
-1. 既存のものがない場合は、新しい設定フォルダー（`sling:Folder`）を、プロジェクト（`/apps/<*project-name*>/config`）用に作成します。
-1. Under `/apps/<*project-name*>/config`, create a node for the new [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration):
+1. 既存のものがない場合は、新しい設定フォルダー（`sling:Folder`）を、プロジェクト（`/apps/<project-name>/config`）用に作成します。
+1. Under `/apps/<project-name>/config`, create a node for the new [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration):
 
-   * 名前：`org.apache.sling.commons.log.LogManager.factory.config-<*identifier*>`（ロガーの場合）
+   * 名前：`org.apache.sling.commons.log.LogManager.factory.config-<identifier>`（ロガーの場合）
 
-      `<*identifier*>` の部分は、インスタンスを識別するフリーテキストに置き換えます（この情報は省略できません）。
+      `<identifier>` の部分は、インスタンスを識別するフリーテキストに置き換えます（この情報は省略できません）。
 
       例：`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
-   * タイプ：`sling:OsgiConfig`
+   * 型：`sling:OsgiConfig`
    >[!NOTE]
    >
-   >技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
+   >技術的に必須ではありませんが、`<identifier>` は一意にすることをお勧めします。
 
 1. このノードで次のプロパティを設定します。
 
@@ -284,13 +284,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
       タイプ：String
 
-      値： ログファイルを指定します。 例えば、 `logs/myLogFile.log`
+      値：ログファイルを指定します。例えば、 `logs/myLogFile.log`
 
    * 名前：`org.apache.sling.commons.log.names`
 
-      タイプ： 文字列[] （文字列+複数）
+      タイプ：文字列[] （文字列+複数）
 
-      値： ロガーがメッセージをログに記録するOSGiサービスを指定する。 例えば、次のすべての例を示します。
+      値：ロガーがメッセージをログに記録するOSGiサービスを指定する。例えば、次のすべての例を示します。
 
       * `org.apache.sling`
       * `org.apache.felix`
@@ -299,7 +299,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
       タイプ：String
 
-      値： 必要なログレベルを指定します( `debug`、 `info`、 `warn` または `error`)。 例えば `debug`
+      値：必要なログレベルを指定します( `debug`、 `info`、 `warn` または `error`)。例えば `debug`
 
    * 必要に応じてその他のパラメーターを設定します。
 
@@ -307,15 +307,25 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
          型：`String`
 
-         値： 必要に応じて、ログメッセージのパターンを指定します。 例えば、
+         値：必要に応じて、ログメッセージのパターンを指定します。例えば、
 
          `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
    >[!NOTE]
    >
    >`org.apache.sling.commons.log.pattern` では、最大 6 個の引数がサポートされています。
-
-   >{0} タイプが `java.util.Date` のタイムスタンプ {1} ログマーカー {2} 現在のスレッドの名前 {3} ロガーの名前 {4} ログレベル {5} ログメッセージ
-
+   >
+   >{0}タイプのタイムスタンプ `java.util.Date`
+   >
+   >{1}ログマーカー
+   >
+   >{2}現在のスレッドの名前
+   >
+   >{3}ロガーの名前
+   >
+   >{4}ログレベル
+   >
+   >{5}ログメッセージ
+   >
    >ログ呼び出しに `Throwable` が含まれている場合は、スタックトレースがメッセージに付加されます。
 
    >[!CAUTION]
@@ -325,37 +335,42 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >[!NOTE]
    >
    >ログライターのパスは、`crx-quickstart` の場所と相対的です。
+   >
    >したがって、ログファイルが
+   >
    >`logs/thelog.log`
-
+   >
    >と指定されている場合、書き込み先は以下となります。
-   >`` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
+   >
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`.
+   >
    >また、ログファイルが
+   >
    >`../logs/thelog.log`
-
+   >
    >と指定されている場合、書き込み先は以下のディレクトリとなります。
-   >` <*cq-installation-dir*>/logs/`
-
-&quot;(例： ` `&lt;*cq-installation-dir*>/の横`crx-quickstart/`)
+   >
+   >`<cq-installation-dir>/logs/`\
+   >(隣 `<cq-installation-dir>/crx-quickstart/`)
 
 1. この手順は、新しいライターが必要な場合（つまり、デフォルトのライターとは異なる設定の場合）にのみ必要です。
 
    >[!CAUTION]
    >
    >新しい Logging Writer Configuration は、既存のデフォルトが適切でない場合にのみ必要です。
-
+   >
    >明示的なライターが設定されていない場合は、デフォルトに基づいて暗黙のライターが自動的に生成されます。
 
-   Under `/apps/<*project-name*>/config`, create a node for the new [Apache Sling Logging Writer Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingwriterconfigurationfactoryconfiguration):
+   Under `/apps/<project-name>/config`, create a node for the new [Apache Sling Logging Writer Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingwriterconfigurationfactoryconfiguration):
 
-   * Name: `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` (as this is a Writer)
+   * Name: `org.apache.sling.commons.log.LogManager.factory.writer-<identifier>` (as this is a Writer)
 
-      As with the Logger, `<*identifier*>` is replaced by free text that you (must) enter to identify the instance (you cannot omit this information). 例：`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+      As with the Logger, `<identifier>` is replaced by free text that you (must) enter to identify the instance (you cannot omit this information). 例：`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
-   * タイプ：`sling:OsgiConfig`
+   * 型：`sling:OsgiConfig`
    >[!NOTE]
    >
-   >技術的に必須ではありませんが、`<*identifier*>` は一意にすることをお勧めします。
+   >技術的に必須ではありませんが、`<identifier>` は一意にすることをお勧めします。
 
    このノードで次のプロパティを設定します。
 
@@ -363,7 +378,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
       型：`String`
 
-      値： ロガーで指定したファイルと一致するようにログファイルを指定します。
+      値：ロガーで指定したファイルと一致するようにログファイルを指定します。
 
       この例では、 `../logs/myLogFile.log`「
 
@@ -383,25 +398,36 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >[!NOTE]
    >
    >`org.apache.sling.commons.log.file.size` は、次のいずれかを設定することによって、ログファイルのローテーションを制御します。
+   >
    >* 最大ファイルサイズ
    >* 時刻／日付のスケジュール
 
-   これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
-   * サイズ制限は、数値で指定できます。 サイズインジケーターを指定しない場合は、バイト数と見なされるか、サイズインジケーターの1つ( `KB`、 `MB`または `GB` （大文字と小文字は区別されません）を追加できます。
-   * 日時スケジュールは、 `java.util.SimpleDateFormat` パターンとして指定できます。 これは、ファイルの回転後の期間を定義します。 また、回転したファイルの末尾に付く接尾辞（識別用）。
+   >
+   >これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
+   >
+   >* サイズ制限は、数値で指定できます。 サイズインジケーターを指定しない場合は、バイト数と見なされるか、サイズインジケーターの1つ( `KB`、 `MB`または `GB` （大文字と小文字は区別されません）を追加できます。
+   >* 日時スケジュールは、 `java.util.SimpleDateFormat` パターンとして指定できます。 これは、ファイルを回転した後の期間を定義します。また、回転したファイルの末尾に付く接尾辞（識別用）。
 
-   デフォルトは「。」です。yyyy-MM-dd（日別ログローテーションの場合）
-   例えば、2010年1月20日の真夜中（またはこれ以降の最初のログメッセージが正確である場合）、../logs/error.logは../logs/error.log.2010-01-20に名前が変更されます。 1月21日のログは、次の変更時にロールオーバーするまで、（新しい空の）../logs/error.logに出力されます。
-   | `'.'yyyy-MM` | 毎月の初めにローテーション。 |
-   |---|---|
-   | `'.'yyyy-ww` | 各週の最初の日のローテーション（ロケールに応じて異なります）。 |
-   | `'.'yyyy-MM-dd` | 毎日午前0時にローテーション。 |
-   | `'.'yyyy-MM-dd-a` | 毎日午前0時と正午のローテーション。 |
-   | `'.'yyyy-MM-dd-HH` | 毎時の上部での回転。 |
-   | `'.'yyyy-MM-dd-HH-mm` | 毎分の開始時の回転。 |
-   注意： 日時を指定する場合：
-   1. 一重引用符(&#39; &#39;)のペア内のリテラルテキストは、「エスケープ」する必要があります。
-これは、特定の文字がパターン文字として解釈されるのを防ぐためです。
+   >
+   >デフォルトは「。」です。yyyy-MM-dd（日別ログローテーションの場合）
+   >
+   >例えば、2010年1月20日の真夜中（またはこれ以降の最初のログメッセージが正確である場合）、../logs/error.logは../logs/error.log.2010-01-20に名前が変更されます。 1月21日のログは、次の変更時にロールオーバーするまで、（新しい空の）../logs/error.logに出力されます。
+   >
+   >| `'.'yyyy-MM` | 毎月の初めにローテーション。 |
+   >|---|---|
+   >| `'.'yyyy-ww` | 各週の最初の日のローテーション（ロケールに応じて異なります）。 |
+   >| `'.'yyyy-MM-dd` | 毎日午前0時にローテーション。 |
+   >| `'.'yyyy-MM-dd-a` | 毎日午前0時と正午のローテーション。 |
+   >| `'.'yyyy-MM-dd-HH` | 毎時の上部での回転。 |
+   >| `'.'yyyy-MM-dd-HH-mm` | 毎分の開始時の回転。 |
+   >
+   >注意：日時を指定する場合：
+   > 1. 一重引用符(&#39; &#39;)のペア内のリテラルテキストは、「エスケープ」する必要があります。
+      >
+      >     
+      これは、特定の文字がパターン文字として解釈されるのを防ぐためです。
+      >
+      >  
    1. 有効なファイル名に使用できる文字は、オプション内の任意の場所に限られます。
 
 
@@ -433,7 +459,7 @@ Felix コンソールでは、`../system/console/slinglog` の Sling Log Support
 
 #### Web コンソールの OSGi 監査記録 {#osgi-audit-records-from-the-web-console}
 
-OSGi events also generate audit records which can be seen from the **Configuration Status** tab -> **Log Files **tab in the AEM Web Console:
+OSGi イベントで生成される監査記録は、AEM Web コンソールの「**設定ステータス**」タブ／「**ログファイル**」タブから確認できます。 
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -474,8 +500,11 @@ OSGi events also generate audit records which can be seen from the **Configurati
    >[!CAUTION]
    >
    >パブリッシュインスタンスのリバースレプリケーションアウトボックスには、「接続をテスト」リンクは使用しないでください。
+   >
    >アウトボックスクエリ用にレプリケーションテストが実行されると、リバースレプリケーションのたびに、テストレプリケーションより古い項目がすべて再処理されます。
+   >
    >そのような項目がキュー内に既に存在する場合は、次の XPath JCR クエリを使用して検索し、削除する必要があります。
+   >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
 Again you can develop a solution to detect all replication agents (located under `/etc/replication/author` or `/etc/replication/publish`), then check the status of the agent ( `enabled`, `disabled`) and the underlying queue ( `active`, `idle`, `blocked`).
@@ -644,7 +673,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 パフォーマンス分析は、request.log から始めることをお勧めします。
 
-`<*cq-installation-dir*>/crx-quickstart/logs/request.log`
+`<cq-installation-dir>/crx-quickstart/logs/request.log`
 
 ログは次のようになっています（簡潔にするために、各行を短縮しています）。
 
@@ -712,7 +741,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 ### rlog.jar を使用した所要時間の長い要求の検索 {#using-rlog-jar-to-find-requests-with-long-duration-times}
 
 AEM includes various helper tools located in:
-`<*cq-installation-dir*>/crx-quickstart/opt/helpers`
+`<cq-installation-dir>/crx-quickstart/opt/helpers`
 
 その 1 つ、`rlog.jar` を使用すると、`request.log` を短時間で分類し、所要時間を基準として、最長から最短の順序で要求を表示できます。
 
@@ -822,7 +851,7 @@ Percentage of the requests served within a certain time (ms)
 
 上記の数字は、デフォルトの AEM インストールに含まれている、geometrixx の会社ページにアクセスする標準の MAcBook Pro ラップトップ（2010 年半ば）から取得されたものです。このページは非常に単純ですが、パフォーマンスが最適化されていません。
 
-`apachebench` また、すべての同時要求に対するリクエストあたりの時間を平均として表示します。 「 `Time per request: 54.595 [ms]` （つまり、すべての同時要求に対して）」を参照してください。 concurrencyパラメーターの値 `-c` （一度に実行する複数の要求の数）を変更して、任意の効果を確認できます。
+`apachebench` また、すべての同時要求に対するリクエストあたりの時間を平均として表示します。「 `Time per request: 54.595 [ms]` （つまり、すべての同時要求に対して）」を参照してください。 concurrencyパラメーターの値 `-c` （一度に実行する複数の要求の数）を変更して、任意の効果を確認できます。
 
 ### 要求カウンター {#request-counters}
 
@@ -842,7 +871,7 @@ Percentage of the requests served within a certain time (ms)
 
 ### HTML Comments {#html-comments}
 
-すべてのプロジェクトに、サーバーのパフォーマンスを考慮し `html comments` た内容を含めることをお勧めします。 良い例がたくさん見つかる。 ページを選択し、表示するページソースを開き、下までスクロールします。次のようなコードが表示されます。
+すべてのプロジェクトに、サーバーのパフォーマンスを考慮し `html comments` た内容を含めることをお勧めします。 良い例がたくさん見つかる。ページを選択し、表示するページソースを開き、下までスクロールします。次のようなコードが表示されます。
 
 ```xml
 </body>
@@ -1040,10 +1069,13 @@ To determine the total size of the `/var/dam` folder:
 >[!NOTE]
 >
 >詳しくは、以下の記事も参照してください。
+>
 >* [スレッドダンプ](https://helpx.adobe.com/jp/experience-manager/kb/TakeThreadDump.html)
 >* [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
 >* [ビルトインプロファイラーによる分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
 >* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+
+>
 
 
 
@@ -1130,12 +1162,13 @@ JConsole の場合は以下のとおりです。
     -Dcom.sun.management.jmxremote.ssl=false
    ```
 
-* 次に、JConsoleを使用してJVMに接続します。 参照：
+* 次に、JConsoleを使用してJVMに接続します。参照：
    ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
 
-これは、使用されているメモリ量、使用されているGCアルゴリズム、実行に要する時間、およびアプリケーションのパフォーマンスに与える影響を確認するのに役立ちます。 これを使わないと、調整は単に「ランダムにタワタ動くノブ」になる。
+これは、使用されているメモリ量、使用されているGCアルゴリズム、実行に要する時間、およびアプリケーションのパフォーマンスに与える影響を確認するのに役立ちます。これを使わないと、調整は単に「ランダムにタワタ動くノブ」になる。
 
 >[!NOTE]
 >
 >Oracle の VM に関しては、以下にも情報があります。
+>
 >[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
