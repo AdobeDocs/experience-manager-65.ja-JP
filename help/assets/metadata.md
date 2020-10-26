@@ -3,7 +3,7 @@ title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタ
 description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: e49fa8ec19411648841b19bad4b8c1e0efcc1dc1
 workflow-type: tm+mt
 source-wordcount: '2423'
 ht-degree: 55%
@@ -163,7 +163,7 @@ CSV形式で複数のアセットのメタデータを書き出すことがで�
 
 ## コレクションのメタデータの編集 {#collections-metadata}
 
-詳しくは、「 [表示とコレクションのメタデータの編集](/help/assets/managing-collections-touch-ui.md#view-edit-collection-metadata) 」および「複数のコレクションのメタデータの一括 [編集」を参照してください](/help/assets/managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
+詳しくは、「 [表示とコレクションのメタデータの編集](/help/assets/manage-collections.md#view-edit-collection-metadata) 」および「複数のコレクションのメタデータの一括 [編集」を参照してください](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk)。
 
 ## フォルダーへのメタデータプロファイルの適用 {#applying-a-metadata-profile-to-folders}
 
@@ -242,7 +242,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >[!MORELIKETHIS]
 >
 >* [メタデータの概念と理解](metadata-concepts.md)。
->* [複数コレクションのメタデータプロパティの編集](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+>* [複数コレクションのメタデータプロパティの編集](manage-collections.md#editing-collection-metadata-in-bulk)
 >* [Experience Managerアセットでのメタデータの読み込みと書き出し](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
