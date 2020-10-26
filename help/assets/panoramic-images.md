@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 74%
@@ -36,7 +36,7 @@ ht-degree: 74%
 
 縦横比とキーワードの両方の条件が、アセットの詳細ページと `Panoramic Media` WCM コンポーネントのパノラマアセットに適用されます。
 
-パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
+パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
 ## Dynamic Media Classic（Scene7）の設定 {#configuring-dynamic-media-classic-scene}
 
