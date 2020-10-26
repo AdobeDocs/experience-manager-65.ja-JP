@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 89%
@@ -82,7 +82,7 @@ ht-degree: 89%
 
 ### アセットコレクション {#asset-collections}
 
-アセットと同様に、[アセットコレクション](/help/assets/managing-collections-touch-ui.md)をプロジェクトに直接追加できます。アセット内にコレクションを定義します。
+アセットと同様に、[アセットコレクション](/help/assets/manage-collections.md)をプロジェクトに直接追加できます。アセット内にコレクションを定義します。
 
 ![chlimage_1-72](assets/chlimage_1-72.png)
 
