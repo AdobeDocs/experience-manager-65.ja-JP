@@ -3,7 +3,7 @@ title: メタデータ機能の設定と管理。
 description: メタデータの追加と管理に関連する設定および管理 [!DNL Experience Manager Assets] 機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 54%
@@ -269,7 +269,7 @@ Enter metadata values in the various fields and click **[!UICONTROL Save]** to s
 >[!MORELIKETHIS]
 >
 >* [メタデータの概念と理解](metadata-concepts.md)。
->* [複数コレクションのメタデータプロパティの編集](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk).
+>* [複数コレクションのメタデータプロパティの編集](manage-collections.md#editing-collection-metadata-in-bulk).
 >* [Experience Managerアセットでのメタデータの読み込みと書き出し](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
 >* [メタデータ、画像およびビデオを処理するプロファイル](processing-profiles.md)。
 >* [処理プロファイルを使用するようにデジタルアセットを整理するためのベストプラクティス](/help/assets/organize-assets.md)。
