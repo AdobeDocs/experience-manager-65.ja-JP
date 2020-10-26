@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '11828'
 ht-degree: 89%
@@ -71,7 +71,7 @@ ht-degree: 89%
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
          [ビデオのプレビュー](managing-video-assets.md#upload-and-preview-video-assets)または[アセットのプレビュー](previewing-assets.md)。
          [ビデオレンディションの表示](video-renditions.md)
-         [ビデオレンディションの管理](managing-assets-touch-ui.md#managing-renditions)。
+         [ビデオレンディションの管理](manage-assets.md#managing-renditions)。
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの公開](publishing-dynamicmedia-assets.md)
@@ -81,16 +81,16 @@ ht-degree: 89%
          [ビデオレンディショのプロパティの表示](video-renditions.md)
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
-         [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+         [ビデオプロパティの編集](manage-assets.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
    * ビデオをレビューおよび承認し、注釈を付け、完全なバージョン管理を維持します。
 
-      * [ビデオの注釈の作成](managing-video-assets.md#annotate-video-assets) 、アセットの [注釈の作成](managing-assets-touch-ui.md#annotating)
+      * [ビデオの注釈の作成](managing-video-assets.md#annotate-video-assets) 、アセットの [注釈の作成](manage-assets.md#annotating)
 
-      * [バージョンの作成](managing-assets-touch-ui.md#asset-versioning)
-      * [アセットへのワークフローの適用](assets-workflow.md) 、またはアセットでのワークフローの [開始を参照してください。](managing-assets-touch-ui.md#starting-a-workflow-on-an-asset)
+      * [バージョンの作成](manage-assets.md#asset-versioning)
+      * [アセットへのワークフローの適用](assets-workflow.md) 、またはアセットでのワークフローの [開始を参照してください。](manage-assets.md#starting-a-workflow-on-an-asset)
 
       * [フォルダーのアセットのレビュー](bulk-approval.md)
       * [プロジェクト](../sites-authoring/projects.md)
@@ -1155,7 +1155,7 @@ Cost-efficient access to rapidly evolving technology.
     一般に、チャプター VTT ファイルの名前には、ビデオファイルと同じ名前を付けて、名前の末尾にチャプターを追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 1. AEM で、WebVTT チャプターファイルをアップロードします。
 
-   [アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
+   [アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
 1. 次のいずれかの操作をおこないます。
 
