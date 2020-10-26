@@ -4,23 +4,23 @@ description: 3D アセットのプレビュー方法について説明します�
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 87%
+ht-degree: 96%
 
 ---
 
 
-# AEMでの3Dアセットのプレビュー{#previewing-3d-assets-aem}
+# AEM での 3D アセットのプレビュー{#previewing-3d-assets-aem}
 
-Adobe Experience Managerは、オーサリングプロセスの一環として、3Dアセットのアップロード、配信、およびインタラクティブプレビューをサポートしています。
+Adobe Experience Manager では、オーサリングプロセスの一環として、3D アセットのアップロード、配信、インタラクティブプレビューをサポートしています。
 
 AEM のアセットの詳細ページから、インタラクティブ 3D ビューアを使用できます。このビューアには、3D アセットをオービット、ズームおよびパンできるインタラクティブなカメラコントロールのコレクションが含まれます。
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
-## AEMでサポートされる3Dプレビューの形式 {#supported-3d-previewing-assets}
+## AEM でサポートされる 3D プレビューの形式 {#supported-3d-previewing-assets}
 
 インタラクティブ 3D プレビューでは、次のファイル形式をサポートしています。
 
@@ -42,15 +42,15 @@ AEM のアセットの詳細ページから、インタラクティブ 3D ビュ
     material_0_baseColor.jpeg
     material_0_normal.jpeg
 
-## Performance considerations when you preview 3D assets in AEM{#performance-3d-previewing-assets}
+## AEM で 3D アセットをプレビューする際のパフォーマンスに関する考慮事項{#performance-3d-previewing-assets}
 
 アセットの詳細表示ページで 3D アセットを開くときにかかる時間は、帯域幅、画像の複雑さ、サーバーの待ち時間など、いくつかの要因によって異なります。
 
 さらに、カメラをインタラクティブに操作する際に、ワークステーション、ノートパソコン、モバイルタッチデバイスなどのクライアントコンピューターの性能を考慮することも重要です。グラフィック性能に優れ、ある程度パワフルなシステムなら、インタラクティブな 3D 表示をよりスムーズで満足なものにすることができます。
 
-**AEMで3Dアセットをプレビューするには**
+**AEM で 3D アセットをプレビューするには**
 
-1. 3D アセットが AEM にアップロードされていることを確認します。詳しくは、[3D プレビューでサポートされるファイル形式](#supported-3d-previewing-assets)と[アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
+1. 3D アセットが AEM にアップロードされていることを確認します。詳しくは、[3D プレビューでサポートされるファイル形式](#supported-3d-previewing-assets)と[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 1. From AEM, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets > Files.]**
 
    ![ナビゲーションページ](/help/assets/assets-dm/navigation-assets.png)
