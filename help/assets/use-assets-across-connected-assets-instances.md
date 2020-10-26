@@ -3,7 +3,7 @@ title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2c3836cb7e2275c30e88e8a750eafce24a05837a
+source-git-commit: 2fe2b5fcaff2b2f2402f0bc638a0df2afd335b31
 workflow-type: tm+mt
 source-wordcount: '2247'
 ht-degree: 90%
@@ -159,7 +159,7 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
 ## Limitations and best practices {#tips-and-limitations}
 
-* アセットの使用に関するインサイトを取得するには、インスタンスで [アセットインサイト](/help/assets/touch-ui-asset-insights.md) 機能を設定し [!DNL Sites] ます。
+* アセットの使用に関するインサイトを取得するには、インスタンスで [アセットインサイト](/help/assets/asset-insights.md) 機能を設定し [!DNL Sites] ます。
 
 ### 権限とアセット管理 {#permissions-and-managing-assets}
 
