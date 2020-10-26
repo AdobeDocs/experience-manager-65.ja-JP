@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '745'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 98%
 
 コンテンツフラグメントモデルを有効にするには、次の操作を実行する必要があります。
 
-* Configuration Manager でのコンテンツフラグメントモデル使用の有効化
+* [設定ブラウザーでコンテンツフラグメントモデルの使用を有効にする](/help/sites-administering/configurations.md)
 * アセットフォルダーへの設定の適用
 
 ### Configuration Manager でのコンテンツフラグメントモデルの有効化 {#enable-content-fragment-models-in-configuration-manager}
