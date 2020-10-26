@@ -3,7 +3,7 @@ title: 参照と複数のページを持つ複合アセットの管理
 description: 内からデジタルアセットへの参照を作成する方法を説明します [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 18%
@@ -28,7 +28,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 1. [Experience Managerのデスクトップアプリケーションを使用して](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)、デジタルアセットをローカルファイルシステムに取得します。 参照するアセットのファイルシステムの場所に移動します。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
-1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
+1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/manage-assets.md#uploading-assets) to the [!DNL Experience Manager] repository.
 
 1. ワークフローが完了したら、そのアセットのアセットの詳細ページに移動します。The references to existing digital assets are listed under **[!UICONTROL Dependencies]** in the **[!UICONTROL References]** column.
 
@@ -72,7 +72,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
-1. Save in [!DNL Photoshop] file to the mounted drive or or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
+1. Save in [!DNL Photoshop] file to the mounted drive or or [upload](/help/assets/manage-assets.md#uploading-assets) to the [!DNL Experience Manager] repository.
 1. After the workflow completes, the references to existing [!DNL Experience Manager] assets are listed in the asset details page.
 
    参照元のアセットを表示するには、アセットの詳細ページで[パネル](/help/sites-authoring/basic-handling.md#rail-selector)を閉じます。
