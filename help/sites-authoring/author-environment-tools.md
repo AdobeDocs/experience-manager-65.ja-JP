@@ -1,7 +1,7 @@
 ---
 title: オーサリング - 環境とツール
 seo-title: オーサリング - 環境とツール
-description: AEM のオーサリング環境は、コンテンツを構造化および編集するための様々なメカニズムを提供しています
+description: AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています
 seo-description: AEM のオーサリング環境は、コンテンツを構造化および編集するための様々なメカニズムを提供しています
 uuid: 23a8aa93-b3d2-423b-b402-9e5f3f273d9a
 contentOwner: Chris Bohnert
@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2451f4994a18b1566ea0efddbefcaa5bb8e41c99
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '2239'
+ht-degree: 97%
 
 ---
 
 
 # オーサリング - 環境とツール{#authoring-the-environment-and-tools}
 
-AEMのオーサリング環境では、コンテンツを編成および編集するための様々なメカニズムが提供されます。提供されるツールは、様々なコンソールやページエディターからアクセスできます。
+AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています。提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
 
 ## サイトの管理 {#managing-your-site}
 
@@ -46,7 +49,7 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 
 ページの編集中、**ヘルプ**&#x200B;には次の場所からアクセスできます。
 
-* [**ページ情報&#x200B;**](/help/sites-authoring/editing-page-properties.md#page-properties)セレクター。これにより、（エディターに初めてアクセスしたときに表示される）紹介用のスライドが表示されます。
+* [**ページ情報**](/help/sites-authoring/editing-page-properties.md#page-properties)&#x200B;セレクター。これにより、（エディターに初めてアクセスしたときに表示される）紹介用のスライドが表示されます。
 * 特定のコンポーネントの[設定](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)ダイアログ（ダイアログツールバーの？アイコンを使用）。これにより、コンテキスト依存のヘルプが表示されます。
 
 その他の[ヘルプ関連リソースは、コンソールから表示できます](/help/sites-authoring/basic-handling.md#accessing-help)。
@@ -55,7 +58,7 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 
 コンポーネントブラウザーには、現在のページで使用可能なすべてのコンポーネントが表示されます。これらのコンポーネントを適切な場所にドラッグして編集することで、コンテンツを追加できます。
 
-The components browser is a tab within the side panel (together with the [assets browser](/help/sites-authoring/author-environment-tools.md#assets-browser) and [content tree](/help/sites-authoring/author-environment-tools.md#content-tree)). サイドパネルを開く（または閉じる）には、ツールバーの左上にある次のアイコンを使用します。
+コンポーネントブラウザーはサイドパネル内のタブです（[アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)と[コンテンツツリー](/help/sites-authoring/author-environment-tools.md#content-tree)も同じ場所にあります）。サイドパネルを開く（または閉じる）には、ツールバーの左上にある次のアイコンを使用します。
 
 ![ateat-03](assets/ateat-03.png)
 
@@ -91,11 +94,13 @@ The components browser is a tab within the side panel (together with the [assets
 
       * 標準コンポーネントのアイコンはモノクロです。
       * 略語は常にコンポーネント名の最初の 2 文字です。
+
    **コンポーネント**&#x200B;ブラウザーの上部のツールバーでは、次の操作を実行できます。
 
    * コンポーネントを名前でフィルターします。
    * ドロップダウンから選択して特定のグループのみを表示します。
-   コンポーネントについて詳しくは、**コンポーネント**&#x200B;ブラウザー内のコンポーネントの横にある情報アイコンをクリックまたはタップしてください（使用可能な場合）。例えば、****&#x200B;の場合は、次のようになります。
+
+   コンポーネントについて詳しくは、**コンポーネント**&#x200B;ブラウザー内のコンポーネントの横にある情報アイコンをクリックまたはタップしてください（使用可能な場合）。例えば、**レイアウトコンテナ**&#x200B;の場合は、次のようになります。
 
    ![ateat-06](assets/ateat-06.png)
 
@@ -125,7 +130,7 @@ The components browser is a tab within the side panel (together with the [assets
 
 * 適切なタイプの新しいコンポーネントを作成するための段落システム内の[プレースホルダー](/help/sites-authoring/editing-content.md#component-placeholder)。
 
-   * 例えば、imageタイプのアセットを段落システムにドラッグして、imageコンポーネントを作成できます。
+   * 例えば、画像タイプのアセットを段落システムにドラッグして画像コンポーネントを作成できます。
 
 >[!NOTE]
 >
@@ -136,7 +141,7 @@ The components browser is a tab within the side panel (together with the [assets
 * 名前
 * パス
 * アセットタイプ（画像、原稿、ドキュメント、ビデオ、ページ、段落、商品など）
-* 方向（縦長、横長、正方形）、スタイル（カラー、モノクロ、グレースケール）などのアセットの特性
+* 方向（縦長、横長、正方形）やスタイル（カラー、モノクロ、グレースケール）などのアセットの特性
 
    * 特定のアセットタイプでのみ使用可能
 
@@ -162,7 +167,7 @@ The components browser is a tab within the side panel (together with the [assets
 
    ![ateat-10](assets/ateat-10.png)
 
-アセットをすばやく変更する必要がある場合は、アセット名の横にある編集アイコンをクリックして、アセットブラウザーから直接[アセットエディター](/help/assets/managing-assets-touch-ui.md)を開始できます。
+アセットをすばやく変更する必要がある場合は、アセット名の横にある編集アイコンをクリックして、アセットブラウザーから直接[アセットエディター](/help/assets/manage-assets.md)を開始できます。
 
 ![](do-not-localize/screen_shot_2018-03-22at142448.png)
 
@@ -174,7 +179,7 @@ The components browser is a tab within the side panel (together with the [assets
 
 ![](do-not-localize/screen_shot_2018-03-22at142042.png)
 
-サイドパネルを開く際、パネルは（左側から）スライドして開きます。Select the **Content Tree** tab if necessary. このタブを開くと、ページまたはテンプレートをツリービューで確認でき、コンテンツの階層的な構造を簡単に理解できます。また、複雑なページではページのコンポーネント間をジャンプしやすくなります。
+サイドパネルを開く際、パネルは（左側から）スライドして開きます。必要に応じて「**コンテンツツリー**」タブを選択します。このタブを開くと、ページまたはテンプレートをツリービューで確認でき、コンテンツの階層的な構造を簡単に理解できます。また、複雑なページではページのコンポーネント間をジャンプしやすくなります。
 
 ![ateat-11](assets/ateat-11.png)
 
@@ -188,7 +193,7 @@ The components browser is a tab within the side panel (together with the [assets
 
 >[!NOTE]
 >
->モバイルデバイス上でページを編集している場合（ブラウザーの幅が1024px未満の場合）、コンテンツツリーは使用できません。
+>ページをモバイルデバイス（ブラウザーの幅が 1,024 px より小さい場合）で編集している場合、コンテンツツリーは表示されません。
 
 コンポーネントをクリックすると、ページエディターでそのコンポーネントが強調表示されます。使用可能なアクションは、ページの状態によって異なります。
 
@@ -224,11 +229,11 @@ The components browser is a tab within the side panel (together with the [assets
 * 参照コンポーネントの使用：借りたコンテンツと貸したコンテンツ
 * 商品ページへの参照（コマース／商品コンソールから）
 
-Open the required console, then navigate to the required resource and open **References** using:
+必要なコンソールを開いたら、必要なリソースに移動し、次を使用して「**参照**」を開きます。
 
 ![screen_shot_2018-03-22at153653](assets/screen_shot_2018-03-22at153653.png)
 
-[必要なリソースを選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)し、そのリソースに関連する参照タイプの一覧を表示します。
+[必要なリソースを選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)し、そのリソースに関連する参照タイプのリストを表示します。
 
 ![ateat-22](assets/ateat-22.png)
 
@@ -239,9 +244,9 @@ Open the required console, then navigate to the required resource and open **Ref
 * **参照**&#x200B;コンポーネントを使用した借りたコンテンツおよび貸したコンテンツのインスタンス（ここから参照元／参照先ページに移動可能）
 
 * [商品ページへの参照](/help/sites-administering/generic.md#showing-product-references)（コマース／商品コンソールから使用可能）
-* [ローンチ](/help/sites-authoring/launches.md)（関連するローンチへのアクセスの提供）
-* [ライブコピー](/help/sites-administering/msm.md) ：選択したリソースに基づくすべてのライブコピーのパスが表示されます。
-* [Blueprint](/help/sites-administering/msm-best-practices.md)、詳細と様々なアクション
+* [ローンチ](/help/sites-authoring/launches.md)（関連するローンチへのアクセスを提供）
+* [](/help/sites-administering/msm.md)ライブコピー（選択したリソースに基づくすべてのライブコピーのパスを表示）
+* [Blueprint](/help/sites-administering/msm-best-practices.md)，詳細と様々なアクションを提供
 * [言語コピー](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel)（詳細と各種アクションを提供）
 
 例えば、壊れている参照は、参照コンポーネントで修正できます。
@@ -252,7 +257,7 @@ Open the required console, then navigate to the required resource and open **Ref
 
 該当するリソース（例：**サイト**&#x200B;コンソールからのページ、**アセット**&#x200B;コンソールからのアセット）では、[タイムラインを使用して、選択した項目に対する最近のアクティビティを表示できます](/help/sites-authoring/basic-handling.md#timeline)。
 
-Open the required console, then navigate to the required resource and open **Timeline**, using:
+必要なコンソールを開いたら、必要なリソースに移動し、次を使用して「**タイムライン**」を開きます。
 
 ![ateat-15](assets/ateat-15.png)
 
@@ -262,7 +267,7 @@ Open the required console, then navigate to the required resource and open **Tim
 
 ## ページ情報 {#page-information}
 
-ページ情報（イコライザアイコン）は、最後の編集と最後のパブリケーションに関する詳細も提供するメニューを開きます。 ページ、そのページのサイト、使用しているインスタンスの特性に応じて、使用できるオプションの数は異なります。
+ページ情報（イコライザーアイコン）をクリックするとメニューが開き、最後の編集および最後の公開に関する詳細も表示されます。ページ、そのページのサイト、使用しているインスタンスの特性に応じて、使用できるオプションの数は異なります。
 
 ![ateat-17](assets/ateat-17.png)
 
@@ -281,7 +286,7 @@ Open the required console, then navigate to the required resource and open **Tim
 例えば、該当する場合、**ページ情報**&#x200B;には次のオプションもあります。
 
 * [ローンチを昇格](/help/sites-authoring/launches-promoting.md)（ページがローンチの場合）
-* [このオプションが管理者によって有効にされている場合は](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 、クラシックUI [で開く(Open in Classic UI)](/help/sites-administering/enable-classic-ui-editor.md)
+* [このオプションが管理者によって](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)[有効にされている場合は、クラシックUIで開く](/help/sites-administering/enable-classic-ui-editor.md)
 
 該当する場合、**ページ情報**&#x200B;から分析や推奨を確認することもできます。
 
@@ -290,7 +295,7 @@ Open the required console, then navigate to the required resource and open **Tim
 ページの編集時には様々なモードがあり、異なるアクションをおこなうことができます。
 
 * [編集](/help/sites-authoring/editing-content.md) - ページコンテンツの編集時に使用するモード。
-* [レイアウト](/help/sites-authoring/responsive-layout.md) — デバイスに依存するレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）。
+* [レイアウト](/help/sites-authoring/responsive-layout.md) - デバイスに応じたレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）
 
 * [基礎モード](/help/sites-authoring/scaffolding.md) - 同じ構造を共有しながらコンテンツが異なるページを大量に作成する場合に役立ちます。
 * [開発者](/help/sites-developing/developer-mode.md) - 様々なアクションを実行できます（権限が必要です）。このアクションには、ページやそのコンポーネントの技術的な詳細の検査が含まれます。
@@ -313,16 +318,17 @@ Open the required console, then navigate to the required resource and open **Tim
 >[!NOTE]
 >
 >* ページの特性によっては、一部のモードを使用できないことがあります。
->* 一部のモードにアクセスするには、適切な権限が必要です。
+>* 一部のモードにアクセスするには、適切な権限または特権が必要です。
 >* 開発者モードは、スペースの制約により、モバイルデバイスでは利用できません。
->* There is a [keyboard shortcut](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`) to toggle between **Preview** and the currently selected mode (e.g. **Edit**, **Layout**, etc).
+>* [キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)（`Ctrl-Shift-M`）で、**プレビュー**&#x200B;と、現在選択されているモード（**編集モード**、**レイアウトモード**&#x200B;など）を切り替えることができます。
+
 >
 
 
 
 ## パスの選択 {#path-selection}
 
-オーサリング時に、別のリソースを選択する必要がある場合がよくあります（別のページまたはリソースへのリンクを定義する場合、画像を選択する場合など）。簡単にパスを選択するために、[パスフィールド](/help/sites-authoring/author-environment-tools.md#path-fields)にはオートコンプリート機能があり、[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)には強力な選択機能があります。
+オーサリング時に、別のリソースを選択する必要が生じる場合がよくあります（別のページまたはリソースへのリンクを定義する場合、画像を選択する場合など）。簡単にパスを選択するために、[パスフィールド](/help/sites-authoring/author-environment-tools.md#path-fields)にはオートコンプリート機能があり、[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)には強力な選択機能があります。
 
 ### パスフィールド {#path-fields}
 
@@ -345,7 +351,7 @@ Open the required console, then navigate to the required resource and open **Tim
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * リソースを選択すると、ダイアログの右上にある「**選択**」ボタンがアクティブになります。クリックまたはタップして選択内容を確認するか、「**キャンセル**」をクリックして中止します。
-* コンテキストで複数のリソースを選択できる場合、リソースを選択すると「**選択**」ボタンがアクティブ化され、選択したリソースの数がウィンドウの右上に表示されます。すべての選択を解除するには、数値の横にある **X** をクリックします。
+* コンテキストで複数のリソースを選択できる場合、リソースを選択すると「**選択**」ボタンがアクティブ化され、選択したリソースの数がウィンドウの右上に表示されます。すべての選択を解除するには、数字の横にある **X** をクリックします。
 * ツリー内を移動すると、ダイアログ上部のパンくずリストに現在の位置が反映されます。これらのパンくずリストを使用すると、リソース階層内ですばやくジャンプすることもできます。
 * ダイアログの上部にある検索フィールドはいつでも使用できます。検索をクリアするには、検索フィールドの **X** をクリックします。
 * 検索を絞り込むには、フィルターオプションを表示して、特定のパスに基づいて結果をフィルターできます。
@@ -354,4 +360,4 @@ Open the required console, then navigate to the required resource and open **Tim
 
 ## キーボードショートカット {#keyboard-shortcuts}
 
-様々な[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)も利用できます。
+様々な[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を利用できます。
