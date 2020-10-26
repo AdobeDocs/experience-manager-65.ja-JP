@@ -10,7 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 99%
 
 ---
 
@@ -35,7 +38,7 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
 >[!NOTE]
 >
->必要に応じて、注釈の追加、更新または削除時に通知を送信するワークフローを開発することもできます。
+>必要に応じて、注釈が追加、更新または削除されたときに通知を送信するワークフローを開発することもできます。
 
 ## 注釈 {#annotations}
 
@@ -49,8 +52,9 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 >
 >様々なリソースに注釈を付けることができます。
 >
->* [アセット](/help/assets/managing-assets-touch-ui.md#annotating)
+>* [アセット](/help/assets/manage-assets.md#annotating)
 >* [ビデオアセットへの注釈の追加](/help/assets/managing-video-assets.md#annotate-video-assets)
+
 >
 
 
@@ -84,13 +88,15 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
    * 注釈テキストを入力します。
    * スケッチ（線と図形）を作成して、コンポーネントの特定の領域を強調表示します。
 
-      スケッチの作成中は、カーソルが十字型に変わります。複数の異なる線を描くことができます。スケッチ線は注釈の色を反映し、矢印、円、楕円のいずれかになります。
+      スケッチの作成中は、カーソルが十字型に変わります。複数の異なる線を描くことができます。スケッチ線は注釈と同じ色で、矢印、円、楕円のいずれかにすることができます。
    ![](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * 色を選択または変更します。
+
    ![](do-not-localize/chlimage_1-19.png)
 
    * 注釈を削除します。
+
    ![](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. ダイアログの外側をクリックまたはタップして、注釈ダイアログを閉じることができます。注釈の一部の表示（最初の単語）とスケッチが一緒に表示されます。
@@ -113,7 +119,7 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
 >[!NOTE]
 >
->注釈は、別のユーザーによってロックされているページには追加できません。
+>別のユーザーによってロックされているページには、注釈を追加できません。
 
 ### 注釈インジケーター {#annotation-indicator}
 
