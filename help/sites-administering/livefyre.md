@@ -10,10 +10,10 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: d6ae8bffa2d9d59f5656b9344d8826128f12885c
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 66%
+source-wordcount: '1661'
+ht-degree: 65%
 
 ---
 
@@ -52,6 +52,7 @@ AEM 6.5 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 ### Configure AEM to use Livefyre: Create a Configuration Folder {#configure-aem-to-use-livefyre-create-a-configuration-folder}
 
 1. From the AEM homepage, click the **Tools** icon in the left rail, then navigate to **General > Configuration Browser**.
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. 「**作成**」をクリックして、設定を作成ダイアログを開きます。
 1. Name your configuration and check the **Cloud Configurations** checkbox.
 
@@ -70,7 +71,7 @@ AEM 6.5 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 
    >[!NOTE]
    >
-   >Livefyreの設定をフォルダーに追加する前に、フォルダーのプロパティでクラウド設定を有効にする必要があります。 設定フォルダーが作成され、設定ブラウザーで管理されます。
+   >Livefyreの設定をフォルダーに追加する前に、フォルダーのプロパティでクラウド設定を有効にする必要があります。 Configuration folders are created and managed in the [Configuration Browser.](/help/sites-administering/configurations.md)
    >
    >設定の名前は作成できません。フォルダーのパスによって参照されます。設定はフォルダーごとに 1 つのみです。
 
@@ -156,7 +157,7 @@ UGC を AEM Assets に読み込むには：
    * Twitter および Instagram からコンテンツを見つけるには、「Twitter」または「Instagram」タブをクリックします。検索またはフィルターを使用してコンテンツを見つけます。
 
 1. 読み込むアセットを選択します。The assets you select are automatically counted and saved under the **Selected** tab.
-1. **オプション**: 「 **選択済み** 」タブをクリックし、読み込むUGCコンテンツを確認します。
+1. **オプション**:「 **選択済み** 」タブをクリックし、読み込むUGCコンテンツを確認します。
 1. 「**次へ**」をクリックします。
 
    ![livefyre-aem-import-ugc2](assets/livefyre-aem-import-ugc2.png)
@@ -204,7 +205,7 @@ AEM Commerce ユーザーは、既存の製品カタログを Livefyre にシー
 
 製品カタログを読み込んだら、製品がリアルタイムに Livefyre インスタンスに表示されます。AEM Commerce 製品カタログの項目を編集または削除する場合、変更は Livefrye で自動的に更新されます。
 
-1. 最新のLivefyre for AEMパッケージがAEMインスタンスにインストールされていることを確認します。
+1. AEMインスタンスに最新のLivefyre for AEMパッケージがインストールされていることを確認します。
 1. From the AEM homepage, navigate to **AEM Commerce**.
 1. 新しいコレクションを作成するか、既存のコレクションを使用します。
 1. Hover over the collection and click **Collection Properties** (pencil icon).
@@ -222,7 +223,7 @@ AEM Commerce ユーザーは、既存の製品カタログを Livefyre にシー
 | コメント | X | X | X | X |
 | フィルムストリップ |  | X | X | X |
 | LiveBlog | X | X | X | X |
-| マップ | X | X | X | X |
+| Map | X | X | X | X |
 | Media Wall | X | X | X | X |
 | モザイク | X | X | X | X |
 | 投票 |  | X | X | X |
