@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2749'
 ht-degree: 84%
@@ -25,7 +25,7 @@ ht-degree: 84%
 
 * コンテンツフラグメントについて詳しくは、[コンテンツフラグメントの作成と管理](/help/assets/content-fragments/content-fragments.md)および[コンテンツフラグメントを使用したページオーサリング](/help/sites-authoring/content-fragments.md)を参照してください。
 
-* 標準アセットについて詳しくは、[アセットの管理](/help/assets/managing-assets-touch-ui.md)および[アセットのカスタマイズと拡張](/help/assets/extending-assets.md)を参照してください。
+* 標準アセットについて詳しくは、[アセットの管理](/help/assets/manage-assets.md)および[アセットのカスタマイズと拡張](/help/assets/extending-assets.md)を参照してください。
 
 ## アーキテクチャ {#architecture}
 
@@ -61,7 +61,7 @@ ht-degree: 84%
    * テンプレートでは、コンテンツフラグメントの作成時にその構造（基本的なテキストのみ）を定義します。
    * テンプレートは作成時にフラグメントにコピーされるので、それ以降にテンプレートに変更を加えても、既存のフラグメントには反映されません。
    * 新しいバリエーションを追加するときなどは、それに合わせてフラグメントを更新する必要があります。
-   * [コンテンツフラグメントテンプレートの動作は](/help/sites-developing/content-fragment-templates.md) 、AEMエコシステム内の他のテンプレート化メカニズムとは異なります（ページテンプレートなど）。 そのため、分けて考える必要があります。
+   * [コンテンツフラグメントテンプレートの動作は](/help/sites-developing/content-fragment-templates.md) 、AEMエコシステム内の他のテンプレートメカニズム（ページテンプレートなど）とは異なる方法です。 そのため、分けて考える必要があります。
    * テンプレートを基にした場合、コンテンツの MIME タイプは実際のコンテンツに基づいて管理されます。つまり、要素およびバリエーションごとに MIME タイプが異なる場合もあります。
 
 ### AEM Assets との統合 {#integration-with-assets}
@@ -131,7 +131,7 @@ ht-degree: 84%
 >
 >[コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)が推奨されます。詳しくは、[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
 
-コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[****コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。You can also extend, this** Content Fragment **core component.
+コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[****&#x200B;コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。You can also extend, this **Content Fragment** core component.
 
 * このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。`fragmentPath` プロパティは、その他のアセットタイプの類似プロパティと同じ方法で処理されます。例えば、コンテンツフラグメントが別の場所に移動された場合などです。
 
@@ -363,9 +363,9 @@ The parameters for this can be configured in the [Web Console](/help/sites-deplo
 
 * `ContentFragment` は、次のものに適応させることができます。
 
-   * `Resource`  — 基礎となるスリング資源。 基になるオブジェクトを `Resource` 直接更新する場合は、オブジェクトを再構築する必要があり `ContentFragment` ます。
+   * `Resource`  — 基礎となるスリング資源。基になるオブジェクトを `Resource` 直接更新する場合は、オブジェクトを再構築する必要があり `ContentFragment` ます。
 
-   * `Asset`  — コンテンツフラグメントを表すDAM `Asset` 抽象。 更新を `Asset` 直接行うには、オブジェクトを再構築する必要があり `ContentFragment` ます。
+   * `Asset`  — コンテンツフラグメントを表すDAM `Asset` 抽象。更新を `Asset` 直接行うには、オブジェクトを再構築する必要があり `ContentFragment` ます。
 
 * `ContentElement` は、次のものに適応させることができます。
 
