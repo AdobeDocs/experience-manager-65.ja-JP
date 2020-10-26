@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1744'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -183,7 +183,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 >[!CAUTION]
 >
->コンテンツフラグメントには、先祖として有効な言語（ISOコード）フォルダーが必要です。 これは、使用する言語モデルを決定するために使用されます。
+>コンテンツフラグメントには、先祖として有効な言語（ISOコード）フォルダーが必要です。これは、使用する言語モデルを決定するために使用されます。
 >
 >例えば、次のパスの `en/` です。
 >
@@ -193,7 +193,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >英語版は標準で提供されています。
 >
->その他の言語は、ソフトウェア配布の言語モデルパッケージとして提供されています。
+>他の言語版は、ソフトウェア配布から言語モデルパッケージとして使用できます。
 >
 >* [フランス語(fr)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 >* [ソフトウェア配布のドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
@@ -238,7 +238,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 ### 注釈の表示、編集、削除 {#viewing-editing-deleting-annotations}
 
-注釈:
+注釈：
 
 * エディターの全画面表示モードと通常モードのどちらの場合も、注釈はテキストのハイライトとして示されます。注釈の完全な詳細を表示、編集および削除するには、ハイライト表示されたテキストをクリックします。するとダイアログが再度開きます。
 
@@ -256,7 +256,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 ### フラグメントへのアセットの挿入 {#inserting-assets-into-your-fragment}
 
-コンテンツフラグメントのオーサリングプロセスを容易にするには、[アセット](/help/assets/managing-assets-touch-ui.md)（画像）をフラグメントに直接追加します。
+コンテンツフラグメントのオーサリングプロセスを容易にするには、[アセット](/help/assets/manage-assets.md)（画像）をフラグメントに直接追加します。
 
 アセットは書式設定なしでフラグメントの段落シーケンスに追加されます。[ページでフラグメントを利用、参照](/help/sites-authoring/content-fragments.md)する際に書式を設定できます。
 
@@ -363,7 +363,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >同期は、**複数行テキスト**&#x200B;データタイプに対してのみ機能します。
 >
->*バリエーションから&#x200B;**マスター&#x200B;***へ変更内容を転送することはできません。
+>*バリエーションから&#x200B;**マスター***へ変更内容を転送することはできません。
 
 1. フラグメントエディターでコンテンツフラグメントを開きます。**マスター**&#x200B;が編集されていることを確認します。
 1. 特定のバリエーションを選択し、次のいずれかから適切な同期アクションを選択します。
