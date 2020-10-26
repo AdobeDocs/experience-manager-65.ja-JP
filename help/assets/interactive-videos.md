@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '6050'
 ht-degree: 97%
@@ -228,14 +228,14 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
 
 ビデオとサムネールアセットを既にアップロードしている場合は、[ビデオへのインタラクティブ機能の追加](#adding-interactivity-to-your-video)に進んでください。
 
-誤ったビデオや画像をアップロードした場合、または必要でなくなったアップロード済みビデオや画像を削除したい場合は、[アセットの削除](/help/assets/managing-assets-touch-ui.md#deleting-assets)を参照してください。
+誤ったビデオや画像をアップロードした場合、または必要でなくなったアップロード済みビデオや画像を削除したい場合は、[アセットの削除](/help/assets/manage-assets.md#deleting-assets)を参照してください。
 
 ビデオおよび関連するサムネールアセットをアップロードするには：
 
 1. 目的の 1 つ以上のフォルダーにビデオおよび関連するサムネールアセットをアップロードします。
 
-   [アセットのアップロード](/help/assets/managing-assets-touch-ui.md)を参照してください。
-[FTP ジョブスケジューリングを使用したアセットのアップロード](/help/assets/managing-assets-touch-ui.md)を参照してください。
+   [アセットのアップロード](/help/assets/manage-assets.md)を参照してください。
+[FTP ジョブスケジューリングを使用したアセットのアップロード](/help/assets/manage-assets.md)を参照してください。
 
    これで、ビデオにインタラクティブ機能を追加できます。
 
