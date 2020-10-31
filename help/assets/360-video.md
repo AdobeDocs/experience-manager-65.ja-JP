@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: 0d5ee29141c897284f3f298d921f4f8528216f8f
 workflow-type: tm+mt
 source-wordcount: '1095'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -51,7 +51,7 @@ AEM にアップロードされた 360 ビデオアセットには、通常の�
 **360 ビデオビューアで使用するアセットをアップロードするには：**
 
 1. 360 ビデオアセット専用のフォルダーを作成します。
-1. [フォルダーにアダプティブビデオプロファイルを適用します](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
+1. [アダプティブビデオプロファイルをフォルダーに適用します。](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
 
    360 ビデオコンテンツをレンダリングする場合、ソースビデオの解像度とレンディションのエンコード解像度に関する要件が、標準の非 360 ビデオコンテンツの場合よりも高くなります。
 
@@ -97,7 +97,7 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
 360 ビデオの設定が完了したら、このビデオを公開できます。
 
-[Web ページへのビデオビューアまたは画像ビューアの埋め込み](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)を参照してください。[Web アプリケーションへの URL のリンク](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)を参照してください。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)を参照してください。
+[Web ページへのビデオビューアまたは画像ビューアの埋め込みを参照してください。](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)[Web アプリケーションへの URL のリンク](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)を参照してください。インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)を参照してください。
 
 **360 ビデオをプレビューするには**
 
