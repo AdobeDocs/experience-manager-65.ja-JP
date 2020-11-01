@@ -2,27 +2,28 @@
 title: Workbenchのインストール
 seo-title: Workbenchのインストール
 description: Workbenchをインストールします。
-uuid: null
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: null
 translation-type: tm+mt
-source-git-commit: 39ec61c3d6a49be10b50d031e8f747b66901110f
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '2246'
+ht-degree: 57%
 
 ---
 
 
 # Workbenchのインストール {#install-workbench}
 
-このドキュメントでは、AEM Forms Workbenchのインストールと設定の手順を説明します。 インストールプログラムは、Forms Designerもインストールします。
+このドキュメントでは、AEM Formsワークベンチのインストールと設定の手順について説明します。 インストールプログラムは、Formsデザイナーもインストールします。
 
 ## Who should read this document? {#who-should-read-this-doc}
 
-このドキュメントは、インストール、設定、管理または Workbench のデプロイを担当している管理者または開発者を対象としています。また、アップグレードしたAEM Formsプロセスをサポートするためにシステムを設定する際に必要な情報も含まれています。 このドキュメントで扱う内容は、Microsoft® Windows®オペレーティングシステムに関する十分な知識がある読者を想定しています。
+このドキュメントは、インストール、設定、管理または Workbench のデプロイを担当している管理者または開発者を対象としています。また、アップグレードしたAEM Formsプロセスをサポートするためにシステムを設定するために必要な情報も含まれています。 このドキュメントで扱う内容は、Microsoft® Windows®オペレーティングシステムに関する十分な知識がある読者を想定しています。
 
 ## 追加情報 {#additional-information}
 
-次の表に、AEM Formsの詳細と使用を開始する際に役立つ情報を示します。
+次の表に、AEM Formsの詳細を示し、使用を開始する際に役立つ情報を示します。
 <table>
  <tbody>
   <tr>
@@ -31,15 +32,15 @@ source-git-commit: 39ec61c3d6a49be10b50d031e8f747b66901110f
   </tr>
   <tr>
    <td><p>Workbench の手順に関する情報</p> </td>
-   <td><p><a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbench ヘルプ</a><br /> <br /> </p> </td>
+   <td><p><a href="https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbench ヘルプ</a><br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>AEM Formsと他のアドビ製品との統合に関する一般情報</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Formsの概要</a><br /><br /> </p> </td>
+   <td><p>AEM Formsに関する一般的な情報と他のAdobe製品との統合</p> </td>
+   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms概要</a><br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>AEM Formsに関するすべてのドキュメント</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Formsドキュメント</a><br /><br /> </p> </td>
+   <td><p>AEM Forms向けのすべてのドキュメント</p> </td>
+   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms文書</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>現在のバージョンに関するパッチアップデート、テクニカルノート、および追加情報</p> </td>
@@ -50,7 +51,7 @@ source-git-commit: 39ec61c3d6a49be10b50d031e8f747b66901110f
 
 >[!NOTE]
 >
->AEM formsでは、Flex Workspaceは非推奨です。 AEM Formsリリースで利用できます。
+>AEM FormsのFlexワークスペースは非推奨です。 AEM Forms版で利用可能。
 
 ## インストールの準備 {#before-you-install}
 
@@ -64,27 +65,27 @@ Workbench は、開発者およびフォーム作成者が自動化されたビ�
 
 >[!NOTE]
 >
->AEM Formsサーバーには、個別のインストールプログラムが必要です。 詳しくは、JEE上のAEM Formsインストールドキュメントを参照してください。
+>AEM Formsサーバには、別のインストールプログラムが必要です。 詳しくは、JEE上のAEM Formsのインストールドキュメントを参照してください。
 
 ![default-render-form](assets/installing-workbench.png)
 
 ## システムの前提条件 {#system-prerequisites}
 
-このセクションでは、ハードウェアおよびソフトウェアの要件とサポートされるプラットフォームについて説明します。
+このセクションでは、ハードウェアとソフトウェアの要件とサポートされるプラットフォームについて説明します。
 
 ### ハードウェアおよびソフトウェアの最小要件 {#minimum-hardware-software-requirements}
 
-**Workbenchの最**&#x200B;小要件として、次の要件が推奨されます。インストール用のディスク容量：
+**Workbench**&#x200B;最小要件として、次の要件が推奨されます。インストール用のディスク容量：
 * 680 MB（Workbench のみの場合）.
 * 2.15 GB（Workbench 、Designer およびサンプルアセンブリを 1 つのドライブにフルインストールした場合）.
 * 一時インストールディレクトリ用に 400 MB（ユーザーの ¥temp ディレクトリに 200 MB、Windows 一時ディレクトリに 200 MB）.
 
 >[!NOTE]
 >
->これらの場所がすべて1台のドライブに存在する場合は、インストール時に1.5 GBの空き容量が必要です。 一時ディレクトリにコピーされるファイルは、インストールが完了すると削除されます。
+>これらの場所がすべて1台のドライブ上にある場合は、インストール時に1.5 GBの空き容量が必要です。 一時ディレクトリにコピーされるファイルは、インストールが完了すると削除されます。
 
 * ハードウェア要件： Intel® Pentium® 4 または AMD の同等の 1 GHz プロセッサー.
-* Java™ Runtime Environment(JRE)7.0アップデート51以降、7.0へのアップデート。
+* Java™ Runtime環境(JRE)7.0 Update 51以降の7.0へのアップデート。
 * 1024 X 768 ピクセル以上のモニター解像度、16 ビットカラー以上.
 * AEM FormsサーバーへのTCP/IPv4またはTCP/IPv6ネットワーク接続。
 * Visual C++再配布可能ランタイムパッケージ2012 32ビットをインストールします。
@@ -96,11 +97,11 @@ Workbench は、開発者およびフォーム作成者が自動化されたビ�
 
 ### サポートされているプラットフォーム {#supported-platforms}
 
-「 [AEM Formsでサポートされるプラットフォーム」で、Workbenchでサポートされるプラットフォームの完全なリストを参照してください](http://adobe.com/go/learn_aemforms_supportedplatforms_65)。
+Workbenchでサポートされるプラットフォームの完全なリストについては、 [AEM Formsでサポートされるプラットフォームを参照してください](http://adobe.com/go/learn_aemforms_supportedplatforms_65_jp)。
 
 ## Designer のインストールに関する考慮事項 {#designer-installation-considerations}
 
-Workbench のインストールには、対応する Designer（英語版のみ）がデフォルトで含まれています。Workbenchインストールアプリケーションがお使いのコンピューター上でDesignerの既存のバージョンを検出した場合は、インストールが終了する場合があります。続行する前に、現在のバージョンのDesignerを削除する必要があります。
+Workbench のインストールには、対応する Designer（英語版のみ）がデフォルトで含まれています。Workbenchインストールアプリケーションがコンピューター上に既存のバージョンのDesignerを検出した場合は、インストールが終了する場合があります。続行するには、現在のバージョンのDesignerを削除する必要があります。
 次の表に、発生する可能性のある Designer のすべてのインストールシナリオと、Workbench をインストールするときに行う必要のあるすべてのアクションを一覧で示します。
 
 <table>
@@ -112,7 +113,7 @@ Workbench のインストールには、対応する Designer（英語版のみ�
   <tr>
    <td><p>Acrobat Pro または Acrobat Pro Extended（Designer が付属）</p> </td>
    <td><p>なし.<br />Workbench のインストールで、Acrobat Pro または Acrobat Pro Extended と共にインストールされた Designer のインスタンスがコンピューター上で検出されます。<br />
-Workbench 6.4用のDesigner 6.4.xとWorkbench 6.5用のDesigner 6.5.0.xなど、異なるバージョンのDesignerを同じシステム上で共存させることができます。Acrobat 10 proまたはAcrobat 10 Pro Extended以降と共にインストールされたDesignerのバージョンをアンインストールする必要はありません。
+Workbench 6.4用Designer 6.4.xとWorkbench 6.5用Designer 6.5.0.xなど、異なるバージョンのDesignerは同じシステム上で共存できます。Acrobat10 ProまたはAcrobat10 Pro Extended以降と共にインストールされたDesignerのバージョンをアンインストールする必要はありません。
 <br /></p> </td>
   </tr>
   <tr>
@@ -124,7 +125,7 @@ Workbench 6.4用のDesigner 6.4.xとWorkbench 6.5用のDesigner 6.5.0.xなど、
 
 ### To uninstall Designer (stand-alone) on Windows 10 {#uninstall-designer-standalone-windows10}
 
-1. [コントロール **パネル] > [プログラム] > [プログラムと機能]に移動します。**
+1. [ **Campaign コントロールパネル] > [プログラム] > [プログラムと機能]に移動します。**
 1. 「現在インストールされているプログラム」リストで、「**Adobe Designer**」を選択します。
 1. Click **Uninstall** and then click **Yes**.
 
@@ -141,13 +142,14 @@ Before you install Workbench, you must ensure that your environment includes the
 1. 次のいずれかのタスクを実行します。
    * インストールメディアの ¥workbench ディレクトリに移動して、run_windows_installer.bat ファイルをダブルクリックします。
    * Workbench をファイルシステムにダウンロードして解凍します。ダウンロード後、¥workbench ディレクトリに移動して run_windows_installer.bat ファイルをダブルクリックします。
+
    >[!IMPORTANT]
    >
-   >Workbenchインストーラーは、ローカルドライブからのみ実行されます。 リモートサイトから実行することはできません。
+   >Workbenchのインストーラーは、ローカルドライブからのみ実行できます。 リモートサイトから実行することはできません。
 
    >[!NOTE]
    >
-   >「Java仮想マシンを作成できませんでした」というエラーが発生した場合は、_JAVA_OPTIONSという名前の環境変数を値 —Xmx512Mで作成し、インストーラーを実行します。
+   >「Could not create the Java Virtual Machine」というエラーが発生した場合は、_JAVA_OPTIONSという名前の環境変数を値 —Xmx512Mと共に作成し、インストーラーを実行します。
 
 1. はじめに画面で「次へ」をクリックします。
 1. 使用許諾契約書を読み、「使用許諾契約書の条件に同意します」を選択して、「次へ」をクリックします。
@@ -157,31 +159,31 @@ Before you install Workbench, you must ensure that your environment includes the
    >
    >Acrobat 10 と共にインストールされた Designer を引き続き使用するには、このオプションの選択を解除したままにします。
 
-1. 表示されたデフォルトのディレクトリをそのまま使用するか、「選択」をクリックしてWorkbenchをインストールするディレクトリに移動し、「次へ」をクリックします。
+1. 表示されるデフォルトのディレクトリをそのまま使用するか、「選択」をクリックしてWorkbenchをインストールするディレクトリに移動し、「次へ」をクリックします。
 
    >[!NOTE]
    >
    >インストールディレクトリのパスには、#（ポンド）および $（ドル）文字を含めることはできません。
 
 1. インストール前の概要を確認して、「インストール」をクリックします。インストールプログラムによりインストールの進行状況が表示されます。
-1. インストールの概要を確認します。「AEM Forms Workbenchを起動」を選択してWorkbenchを起動し、「次へ」をクリックします。
+1. インストールの概要を確認します。「開始AEM Formsワークベンチ」を選択してWorkbenchを起動し、「次へ」をクリックします。
 1. リリースノートを確認して「完了」をクリックします。
 1. コンピューターに以下のアイテムがインストールされました。
-   * **Workbench**:スタートメニューからWorkbenchを実行するには、ショートカットフォルダーを保存する場合は、すべてのプログラム/AEM Forms/Workbenchを選択します。 詳しくは、Workbenchの使用に関するドキュメ <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">ントを参照してください</a> 。
-   * **Designer**:Designerには、Workbench内からアクセスできます。 For information, see Getting Started topic in <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer Help</a>.
-   * **AEM Forms SDK**:SDKの使用に関する詳細は、「AEM formsによるプログラミ <a href="http://www.adobe.com/go/learn_aemforms_programming_65">ング」を参照してください</a>。
+   * **Workbench**:開始メニューからWorkbenchを実行するには、すべてのプログラム/AEM Forms/Workbenchを選択します（ショートカットフォルダーをそこに保存する場合）。 詳しくは、『Workbench <a href="https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">の使用</a> 』ドキュメントを参照してください。
+   * **Designer**:Designerは、Workbench内からアクセスできます。 For information, see Getting Started topic in <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer Help</a>.
+   * **AEM FormsSDK**:SDKの使用について詳しくは、「 <a href="http://www.adobe.com/go/learn_aemforms_programming_65">AEM Formsでのプログラミング</a>」を参照してください。
 
 ## プロセスのアップグレード {#upgrading-processes}
 
-JEE上のAEM Formsプロセスは、アップグレードウィザードを使用してAEM Formsアプリケーションにアップグレードできます。 詳しくは、Workbenchヘルプの既存のアーティファクトのドキュメントのアップグレードを参照してください。
+JEE上のAEM Formsのプロセスは、アップグレードウィザードを使用してAEM Formsアプリケーションにアップグレードできます。 詳しくは、Workbenchヘルプの既存のアーティファクトのドキュメントのアップグレードを参照してください。
 
 ### サーバーの設定およびログイン {#configuring-and-logging-server}
 
-Workbenchを使用するには、通常は別のコンピューター上で実行しているAEM Formsのインスタンスが必要です。 AEM Formsにログインするには、ユーザー名とパスワード、およびサーバーの場所に関する詳細が必要です。
+Workbenchを使用するには、通常は別のコンピューターで、AEM Formsのインスタンスが実行されている必要があります。 AEM Formsにログインするには、ユーザー名とパスワード、およびサーバーの場所に関する詳細が必要です。
 
 >[!NOTE]
 >
->EMC DocumentumまたはIBM fileNetリポジトリプロバイダーを使用するようにAEM Formsを設定し、AEM Forms管理コンソールでデフォルトとして設定されたリポジトリ以外のリポジトリにログインする場合は、ユーザー名をusername@Repositoryに指定します。
+>EMC DocumentumまたはIBM FileNetリポジトリプロバイダーを使用するようにAEM Formsを設定し、AEM forms管理コンソールのデフォルトとして設定されたリポジトリ以外のリポジトリにログインする場合は、ユーザー名をusername@Repositoryに指定します。
 
 ### タイムアウトの設定 {#configuring-timeout-settings}
 
@@ -193,7 +195,7 @@ HTTPS経由でWorkbenchをAEM Formsサーバーに接続するには、公開鍵
 
 >[!NOTE]
 >
->[Workbench_HOMEは] 、Workbenchをインストールしたディレクトリを表します。 デフォルトの場所はC:\Program Files (x86)\Adobe Experience Manager forms Workbenchです。
+>[Workbench_HOME] は、Workbenchをインストールしたディレクトリを表します。 デフォルトの場所は、C:\Program Files (x86)\Adobe Experience Managerforms Workbenchです。
 
 HTTPS には、証明書で指定されている名前を使用して接続してください。この名前は通常、完全修飾ホスト名です。
 
@@ -236,9 +238,9 @@ Forms サービスは、ファイル名またはリポジトリの場所を参�
 * **参照によって渡されるテンプレート**：コンテンツルートおよびファイル名を使用します。この方法を使用して、固有のテンプレートが、要求ごとに異なるファイル名で渡されると、ディスクキャッシュは無制限に増えて再利用できなくなります。これを防ぐには、固有のテンプレートは同じファイル名を使用して渡し、すべての要求で同じキャッシュが更新されるようにします。
 * **値によって渡されるテンプレート**：theinDataDoc パラメーターを使用して、データと共に渡されるテンプレートのバイトを使用します。この方法を使用して、固有のテンプレートが、異なる UUID を指定して渡されると、ディスクキャッシュは無制限に増えて再利用できなくなります。これを防ぐには、すべてのテンプレートから UUID 属性を削除し、テンプレートのキャッシュが作成されないようにします。または、Null 以外の同一の UUID を渡すと、キャッシュオブジェクトは作成されますがすべての要求で同じキャッシュが更新されるようになります。
 
-キャッシュが無制限に増えるのを防ぐために、新しいAEM Forms APIを使用して動的に生成されたテンプレート（renderHTMLForm2およびrenderPDFForm2）をレンダリングする場合は、次の要因を考慮します。
+キャッシュが無制限に増えないようにするには、新しいAEM FormsAPI（renderHTMLForm2およびrenderPDFForm2）を使用して動的に生成されるテンプレートのレンダリングに関して、次の要因を考慮します。
 
-新しいAPIを使用する場合、テンプレートはドキュメントオブジェクトとして渡され、パッシブにするかどうかに基づいて、Formsサービスで処理されます。
+新しいAPIを使用する場合、テンプレートはドキュメントオブジェクトとして渡され、パッシブにするかしないかに基づいて、Formsサービス内で処理されます。
 
 UUID およびコンテンツルートがキャッシュのキーとして機能するパッシブにしたドキュメントの場合は、以下の側面を考慮します。
 * UUID が含まれないパッシブにした入力テンプレートに対しては、キャッシュは作成されません。
@@ -251,7 +253,7 @@ UUID およびコンテンツルートがキャッシュのキーとして機能
 
 ### Workbench のアンインストール {#uninstalling-workbench}
 
-コントロールパネルの[プログラムの追加と削除]機能を使用して、アンインストーラーを起動します。 Workbench および Designer アプリケーションには、個別のアンインストールプログラムがあります。
+Campaign コントロールパネルのプログラム機能追加または削除を使用して、アンインストーラを開始します。 Workbench および Designer アプリケーションには、個別のアンインストールプログラムがあります。
 
 ## Configuring AEM Forms XDC Editor {#configuring-aem-forms-xdc-editor}
 
@@ -259,11 +261,11 @@ XDC Editor を使用すると、ネットワークプリンターの管理者は
 
 ネットワークプリンターの管理者が XDC Editor を使用する前に、サンプルの XDC ファイルを配置し直して、『XDC Editor を使用したデバイスプロファイルの作成』を確認してください。
 
-**サンプルのXDCファイルを取得するには**:
+**サンプルのXDCファイルを入手するには**:
 1. On the AEM Forms server, locate the XDC folder in [AEM Forms root]\sdk\samples\Output\IVS.
 1. このフォルダーの内容を、Workbench または Eclipse システムからアクセス可能なディレクトリにコピーします。
 
-**XDC editorヘルプを入手するには**:
-1. AEM FormsドキュメントのWebサイトに移動します。
+**XDC Editorのヘルプを入手するには**:
+1. AEM FormsのドキュメントWebサイトにアクセスします。
 1. 「**開発**」タブをクリックし、「XDC Editor を使用したデバイスプロファイルの作成」へ移動します。xdc_editor_help_web.zip ファイルをダウンロードし、「お読みください」ファイル内の手順に従ってヘルプファイルをインストールします。
 
