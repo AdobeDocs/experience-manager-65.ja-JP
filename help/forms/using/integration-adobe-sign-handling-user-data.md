@@ -1,17 +1,16 @@
 ---
 title: Adobe Sign との統合| ユーザーデータの処理
 seo-title: Adobe Sign との統合| ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: Adobe Sign との統合| ユーザーデータの処理
 uuid: cb3a455d-2e33-44c8-8f71-3a7ecd939cd8
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 translation-type: tm+mt
-source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 69%
+source-wordcount: '314'
+ht-degree: 70%
 
 ---
 
