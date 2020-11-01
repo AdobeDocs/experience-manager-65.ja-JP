@@ -1,21 +1,23 @@
 ---
 title: Document Security | ユーザーデータの処理
 seo-title: Document Security | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: ドキュメントセキュリティ |ユーザーデータの処理
 uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 58%
 
 ---
 
 
 # Document Security | ユーザーデータの処理 {#document-security-handling-user-data}
 
-AEM Formsのドキュメントセキュリティを使用すると、事前定義済みのセキュリティ設定を作成、保存およびドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントを保護するには、ポリシーを使用します。ポリシーは、セキュリティ設定および許可されたユーザーの一覧を含む情報の集合です。1 つまたは複数のドキュメントにポリシーを適用して、AEM Forms JEE User Management に追加されるユーザーを許可します。
+AEM Formsドキュメントセキュリティでは、定義済みのセキュリティ設定を作成、保存、ドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントを保護するには、ポリシーを使用します。ポリシーは、セキュリティ設定および許可されたユーザーの一覧を含む情報の集合です。1 つまたは複数のドキュメントにポリシーを適用して、AEM Forms JEE User Management に追加されるユーザーを許可します。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
@@ -49,7 +51,7 @@ Document Security は保護されたドキュメントに関するポリシー�
   </tr>
   <tr>
    <td><p><code>EdcRevokationEntity</code></p> </td>
-   <td>保護されたユーザーの失効および復元に関する情報が格納されます。ドキュメント</td>
+   <td>保護されたドキュメントの失効および復元に関する情報が格納されます。</td>
   </tr>
   <tr>
    <td><code>EdcMyPolicyListEntity</code></td>
@@ -65,7 +67,7 @@ Document Security は保護されたドキュメントに関するポリシー�
   </tr>
   <tr>
    <td><code>EdcPolicyArchiveEntity</code></td>
-   <td>アーカイブされたポリシーに関する情報を格納します。アーカイブされたポリシーには、Blobオブジェクトとして保存されたポリシーXMLが含まれます。</td>
+   <td>アーカイブされたポリシーに関する情報を格納します。アーカイブポリシーには、Blobオブジェクトとして保存されたポリシーXMLが含まれます。</td>
   </tr>
   <tr>
    <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code> （OracleおよびMS SQLデータベース）</p> </td>
@@ -156,6 +158,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. Open the XML blob of each row in the `EdcPolicyXMLEntity` or `EdcPolicyArchiveEntity` table and extract the XML file. XMLファイルは、次に示すファイルに似ています。
    1. XML ファイルを編集して、目的のプリンシパル ID の Blob を削除します。
    1. その他のファイルで手順 1 と 2 を繰り返します。
+
    >[!NOTE]
    >
    >You must remove the complete blob within the `Principal` tag for a principal ID or the policy XML may get corrupt or unusable.
@@ -194,6 +197,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. As an administrator, log into the Forms JEE administration console at https://[*server*]:[*port*]/adminui.
    1. Navigate to **[!UICONTROL Services > Document Security > Policy Sets]**.
    1. ポリシーセットを開き、ポリシーからユーザーを削除します。
+
    **Document Security の Web ページの使用**
 
    個人用ポリシーを作成できる権限を持つ Document Security ユーザーは、そのポリシーからユーザーデータを削除できます。この作業を行うには：
@@ -201,6 +205,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. Users who have personal policies log into their document security web page at https://[*server*]:[*port*]/edc.
    1. Navigate to **[!UICONTROL Services > Document Security > My Policies]**.
    1. ポリシーを開き、ポリシーからユーザーを削除します。
+
    >[!NOTE]
    >
    >Administrators can search, access, and delete user data from personal policies of other users in **[!UICONTROL Services > Document Security > My Policies]** using administration console.
