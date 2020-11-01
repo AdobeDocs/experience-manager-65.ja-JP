@@ -1,8 +1,7 @@
 ---
-title: Distiller Service Java API QuickStart(SOAP)
-seo-title: Distiller Service Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+title: DistillerサービスJava API QuickStart(SOAP)
+seo-title: DistillerサービスJava API QuickStart(SOAP)
+description: DistillerサービスJava API QuickStart(SOAP)
 uuid: 7781f074-cea4-4109-892b-118cfad4ec36
 contentOwner: admin
 content-type: reference
@@ -10,27 +9,27 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 59dd61d1-c6b1-4bea-b666-4aa7897384a1
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 1%
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# Distiller Service Java APIクイック開始(SOAP) {#distiller-service-java-api-quickstart-soap}
+# DistillerサービスJava APIクイック開始(SOAP) {#distiller-service-java-api-quickstart-soap}
 
-Distiller®サービスでJava API Quick開始(SOAP)を使用できます。
+Java API Quick開始(SOAP)は、Distiller®サービスで使用できます。
 
-[クイック開始（SOAPモード）: Java APIを使用したPostScriptファイルのPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）: Java APIを使用したPostScriptファイルのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
 次のコードの例では、 *Loan.psというPostScriptファイルを* Loan.pdfというPDFファイルに変換し *ます*。 (PostScriptドキュメントのPDFへの [変換を参照](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents))。
 
