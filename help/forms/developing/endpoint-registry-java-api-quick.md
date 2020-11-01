@@ -1,8 +1,7 @@
 ---
 title: エンドポイントレジストリJava API QuickStart(SOAP)
 seo-title: エンドポイントレジストリJava API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: エンドポイントレジストリJava API QuickStart(SOAP)
 uuid: 986c55d0-e199-46f8-a3cc-a6baf5cce316
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -22,35 +21,35 @@ ht-degree: 0%
 
 Java API Quick開始(SOAP)は、Endpoint Registryで使用できます。
 
-[QuickStart: Java APIを使用したEJBエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したEJBエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用したSOAPエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したSOAPエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用した監視フォルダーエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用した監視フォルダーエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用した電子メールエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用した電子メールエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用したリモートエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したリモートエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用したTaskManagerエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したTaskManagerエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用したエンドポイントの変更](endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したエンドポイントの変更](endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用したエンドポイントの削除](endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したエンドポイントの削除](endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
 
-[QuickStart: Java APIを使用したエンドポイントコネクタ情報の取得](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[QuickStart:Java APIを使用したエンドポイントコネクタ情報の取得](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsでのプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、Formsに基づいています。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
 >Webサービスを使用してエンドポイントを操作することはできません。
 
-## QuickStart: Java APIを使用したEJBエンドポイントの追加 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用したEJBエンドポイントの追加 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
 
 次のJavaコードの例では、EJBエンドポイントをMyApplication/EncryptDocumentという名前のサービスに追加し *ます*。 (「EJBエンドポイントの [追加](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints)」を参照)。
 
@@ -149,7 +148,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用したSOAPエンドポイントの追加 {#quickstart-adding-a-soap-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用したSOAPエンドポイントの追加 {#quickstart-adding-a-soap-endpoint-using-the-java-api}
 
 次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスにSOAPエンドポイントを追加し *ます*。 (SOAPエンドポイントの [追加を参照](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints))。
 
@@ -249,13 +248,13 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用した監視フォルダーエンドポイントの追加 {#quickstart-adding-a-watched-folder-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用した監視フォルダーエンドポイントの追加 {#quickstart-adding-a-watched-folder-endpoint-using-the-java-api}
 
 次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスに監視フォルダーエンドポイントを追加し *ます*。 (See [Adding Watched Folder Endpoints](/help/forms/developing/programmatically-endpoints.md#adding-watched-folder-endpoints).)
 
 >[!NOTE]
 >
->次のクイック開始をコンパイルして実行するには、プロジェクトにWatchedFolderEndpointConfigConstants.javaファイルを含める必要があります。 ( [監視フォルダー設定値の定数ファイルを参照](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file))。
+>次のクイック開始をコンパイルして実行するには、WatchedFolderEndpointConfigConstants.javaファイルをプロジェクトに含める必要があります。 ( [監視フォルダー設定値の定数ファイルを参照](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file))。
 
 ```java
  /*
@@ -384,9 +383,9 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用した電子メールエンドポイントの追加 {#quickstart-adding-an-email-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用した電子メールエンドポイントの追加 {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスに電子メールエンドポイントを追加 *し*&#x200B;ます。 (「電子メールエンドポイントの [追加](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)」を参照)。
+次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスに電子メールエンドポイントを追加 *し*&#x200B;ます。(「電子メールエンドポイントの [追加](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)」を参照)。
 
 >[!NOTE]
 >
@@ -527,7 +526,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用したリモートエンドポイントの追加 {#quickstart-adding-a-remoting-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用したリモートエンドポイントの追加 {#quickstart-adding-a-remoting-endpoint-using-the-java-api}
 
 次のJavaコードの例は、MyApplication/EncryptDocumentという名前のサービスにリモートエンドポイントを追加 *します*。 (「リモートエンドポイントの [追加](/help/forms/developing/programmatically-endpoints.md#adding-remoting-endpoints)」を参照)。
 
@@ -632,7 +631,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用したTaskManagerエンドポイントの追加 {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用したTaskManagerエンドポイントの追加 {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
 
 次のJavaコードの例は、TaskManagerエンドポイントをMyApplication/EncryptDocumentという名前のサービスに追加し *ます*。 カテゴリの名前はEncryptProcess *です*。 (TaskManagerエンドポイントの [追加を参照](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints))。
 
@@ -741,7 +740,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用したエンドポイントの変更 {#quickstart-modifying-an-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用したエンドポイントの変更 {#quickstart-modifying-an-endpoint-using-the-java-api}
 
 次のJavaコードの例では、監視フォルダーエンドポイントを変更しています。エンドポイントは、 *MyApplication/EncryptDocument* プロセス用です。 監視フォルダーがに変更され `C:\NewWatchedFolder`ます。 (エンドポイントの [変更を参照](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints))。
 
@@ -891,7 +890,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用したエンドポイントの削除 {#quickstart-removing-an-endpoint-using-the-java-api}
+## QuickStart:Java APIを使用したエンドポイントの削除 {#quickstart-removing-an-endpoint-using-the-java-api}
 
 次のJavaコードは、MyApplication/EncryptDocumentという名前のサービスからEJBエンドポイントを削除し *ます*。 (エンドポイントの [削除を参照](/help/forms/developing/programmatically-endpoints.md#removing-endpoints))。
 
@@ -1010,7 +1009,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## QuickStart: Java APIを使用したエンドポイントコネクタ情報の取得 {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
+## QuickStart:Java APIを使用したエンドポイントコネクタ情報の取得 {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
 
 次のJavaコードは、監視フォルダーエンドポイントに関する情報を取得します。 各設定値に関する情報が取得され、表示されます。 このコードリストは、各設定値が必須か任意かを指定します。 さらに、各設定値の名前と値が表示されます。 (エンドポイントコネクタ情報の [取得を参照](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information))。
 
