@@ -1,15 +1,17 @@
 ---
 title: Correspondence Management Solution の設定
 seo-title: Correspondence Management Solution の設定
-description: 'null'
-seo-description: 'null'
+description: Correspondence Management Solution の設定
 uuid: 76b25004-fe47-44d7-9bed-7c0fd963306b
 topic-tags: correspondence-management
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 78%
 
 ---
 
