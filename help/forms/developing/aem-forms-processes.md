@@ -1,8 +1,7 @@
 ---
 title: AEM Formsプロセスについて
 seo-title: AEM Formsプロセスについて
-description: 'null'
-seo-description: 'null'
+description: AEM Formsプロセスについて
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '793'
 ht-degree: 3%
 
 ---
