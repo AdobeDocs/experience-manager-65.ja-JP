@@ -1,13 +1,15 @@
 ---
 title: 別のユーザーの代わりにドキュメントを保護する
 seo-title: 別のユーザーの代わりにドキュメントを保護する
-description: 'null'
-seo-description: 'null'
+description: 別のユーザーの代わりにドキュメントを保護する
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '376'
+ht-degree: 95%
 
 ---
 
