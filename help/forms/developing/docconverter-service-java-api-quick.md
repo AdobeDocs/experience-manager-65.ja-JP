@@ -1,8 +1,7 @@
 ---
 title: DocConverterサービスJava API QuickStart(SOAP)
 seo-title: DocConverterサービスJava API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: DocConverterサービスJava API QuickStart(SOAP)
 uuid: a02e13a5-4557-4c8a-a4be-e8d017127128
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ea4b26c8-b9cf-42c2-b4da-2884336014a9
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -22,17 +21,17 @@ ht-degree: 0%
 
 DocConverterサービスでは、Java API Quick開始(SOAP)を使用できます。
 
-[クイック開始（SOAPモード）: Java APIを使用したPDF/Aへの準拠の判断](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDF/Aへの準拠の判断](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用したドキュメントのPDF/Aドキュメントへの変換](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したドキュメントのPDF/Aドキュメントへの変換](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）: Java APIを使用したドキュメントのPDF/Aドキュメントへの変換 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したドキュメントのPDF/Aドキュメントへの変換 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
 
 次のJavaコードの例を使用すると、 *Loan.pdfというPDFドキュメントを、LoanArchive.pdfというPDFファイルとして保存されたPDF* /Aドキュメントに変換で *きます*。 (ドキュメントをPDF/Aドキュメントに [変換するを参照](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents))。
 
@@ -135,7 +134,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  }
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したPDF/Aへの準拠の判断 {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDF/Aへの準拠の判断 {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
 
 次のJavaコードの例は、入力PDFドキュメントがPDF/Aに準拠しているかどうかを判定します。 DocConverterサービスに渡される入力PDFドキュメントは、LoanArchive.pdfという名前 *です*。 検証結果は、ValidationResults.xmlというXMLファイルに書き込ま *れます*。 (「PDF/Aへの準拠 [のプログラムによる決定](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)」を参照)。
 
