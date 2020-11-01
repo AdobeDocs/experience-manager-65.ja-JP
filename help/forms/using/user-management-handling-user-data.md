@@ -1,14 +1,16 @@
 ---
 title: Forms User Management | ユーザーデータの処理
 seo-title: Forms User Management | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: Forms User Management | ユーザーデータの処理
 uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 80%
 
 ---
 
@@ -122,6 +124,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
    >
    >
 * Replace `EdcPrincipalGrpCtmntEntity` with `EdcPrincipalGrpCtmntEnti`
+
 >
 
 
@@ -184,7 +187,7 @@ To view user created in AEM repository, log into `https://'[server]:[port]'/lc/u
 
 ユーザを削除するには：
 
-1. AEM管理者の資 `https://'[server]:[port]'/lc/useradmin` 格情報を使用してに移動します。
+1. AEM管理者の資格情報 `https://'[server]:[port]'/lc/useradmin` を使用してに移動します。
 1. ユーザーを検索してユーザー名をダブルクリックし、ユーザープロパティを開きます。Copy the `Path` property.
 1. Go to AEM CRX DELite at `https://'[server]:[port]'/lc/crx/de/index.jsp` and navigate or search the user path.
 1. Delete the path and click **[!UICONTROL Save All]** to permanently delete the user from AEM repository.
