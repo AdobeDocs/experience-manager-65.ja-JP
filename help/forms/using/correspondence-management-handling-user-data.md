@@ -1,14 +1,16 @@
 ---
 title: Correspondence Management | ユーザーデータの処理
 seo-title: Correspondence Management | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: Correspondence Management | ユーザーデータの処理
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '545'
+ht-degree: 81%
 
 ---
 
@@ -37,7 +39,7 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
    <td><p><strong>場所</strong></p> </td>
   </tr>
   <tr>
-   <td><p>デフォルト値は</p> </td>
+   <td><p>デフォルト</p> </td>
    <td><p>逆複製設定で指定された発行インスタンスおよびオーサーインスタンスの AEM リポジトリ</p> </td>
    <td><p><code>/content/apps/cm/letterInstances/[yyyy]/[mm]/[dd]/[node-id]/[letter-instance-name]/</code> </p> </td>
   </tr>
@@ -52,8 +54,8 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
 上記の AEM リポジトリの場所で：
 
 * `[yyyy]/[mm]/[dd]` は、レターインスタンスが作成された日付に基づくノード構造です
-* `[node-id]` は、レターを含むフォルダーに割り当てられたIDです
-* `[letter-instance-name]` は、レターの保存または送信時に指定された名前です
+* `[node-id]` は、レターが含まれるフォルダーに割り当てられるIDです
+* `[letter-instance-name]` は、レターを保存または送信する際に指定された名前です
 
 Under the [letter-instance-name] node, the following node structure is created and the data for each letter instance is stored in the AEM repository:
 
@@ -79,6 +81,6 @@ Correspondence Management には、ドラフトおよび送信済みレターイ
 特定ユーザーのデータを含むレターインスタンスを検索するには、次の操作を実行します。
 
 * レターインスタンス名、ドラフトを保存したユーザー、または通信を送信したユーザーが分かっている場合は、Correspondence Management の API を使用します
-* 電子メールIDや名前などの個人が特定できる情報を使用してAEMリポジトリ検索を使用し、情報が保存されているノードを探します
+* 電子メールIDや名前など個人が特定できる情報を使用してAEMのリポジトリ検索を使用し、情報が保存されているノードを探す
 
 AEM システムでドラフトおよび送信済み通信に含まれるユーザーデータを完全に削除するには、適用可能なすべての AEM インスタンスからレターインスタンスノードを手動で削除する必要があります。
