@@ -1,8 +1,7 @@
 ---
 title: サービスコンテナ
 seo-title: サービスコンテナ
-description: 'null'
-seo-description: 'null'
+description: サービスコンテナにあるAEM Formsサービス
 uuid: 89f2fd3d-63d7-4b70-b335-47314441f3ec
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding, development-tools
 discoiquuid: dd9c0ec4-a195-4b78-8992-81d0efcc0a7e
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '915'
 ht-degree: 2%
 
 ---
