@@ -1,8 +1,7 @@
 ---
 title: Credential Service Java API QuickStart(SOAP)
 seo-title: Credential Service Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: Credential Service Java API QuickStart(SOAP)
 uuid: a00eabfa-3a52-41dd-bcba-c60d00394384
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -22,21 +21,21 @@ ht-degree: 0%
 
 Credentialサービスでは、Java API Quick開始(SOAP)を使用できます。
 
-[クイック開始（SOAPモード）: Java APIを使用した秘密鍵証明書の読み込み](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書の読み込み](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用した秘密鍵証明書の削除](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書の削除](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsServerに基づいています。 ただし、Unixなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsServerに基づいています。 ただし、Unixなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
 >Webサービスを使用して資格情報サービスの操作を実行することはできません。
 
-## クイック開始（SOAPモード）: Java APIを使用した秘密鍵証明書の読み込み {#quick-start-soap-mode-importing-credentials-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書の読み込み {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
 次のコードの例では、 *cred.p12という名前のファイルに基づいて秘密鍵証明書を読み込みます*。 秘密鍵証明書の読み込みに使用されるエイリアスの値はで `Secure`す。 (Trust Manager APIを使用した秘密鍵証明書の [読み込みを参照](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api))。
 
@@ -137,7 +136,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用した秘密鍵証明書の削除 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書の削除 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
 次のコードの例は、 *secureというエイリアス値に基づいて秘密鍵証明書を削除します*。 (Trust Manager APIを使用した秘密鍵証明書の [削除を参照](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api))。
 
