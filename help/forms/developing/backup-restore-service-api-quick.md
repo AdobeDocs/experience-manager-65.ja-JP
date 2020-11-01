@@ -1,8 +1,7 @@
 ---
 title: バックアップと復元サービスのAPIQuick開始
 seo-title: バックアップと復元サービスのAPIQuick開始
-description: 'null'
-seo-description: 'null'
+description: バックアップと復元サービスのAPIQuick開始
 uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -22,17 +21,17 @@ ht-degree: 0%
 
 Java API Quick開始(SOAP)は、バックアップと復元サービスAPIで使用できます。
 
-[クイック開始: Java API(SOAP)を使用したバックアップモードの開始](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
+[クイック開始:Java API(SOAP)を使用したバックアップモードの開始](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
 
-[クイック開始: Java API(SOAP)を使用したバックアップモードの終了](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
+[クイック開始:Java API(SOAP)を使用したバックアップモードの終了](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsを使用したプログラミング」にあるクイック開始は、Formsオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）: Java APIを使用したバックアップモードの開始 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したバックアップモードの開始 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
 次のJavaコードの例は、2時間間一意のラベルを持つバックアップモードに入ります。 バックアップ時間が経過した後、またはバックアップモードが明示的に終了した場合は、formsサーバーはグローバルドキュメントストレージからファイルを削除するために戻ります。 (formsサーバーでのバックアップモードの [開始を参照](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server))。
 
@@ -147,9 +146,9 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したバックアップモードの終了 {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したバックアップモードの終了 {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
 
-次のJavaコードの例では、Formsサーバーが明示的にバックアップモードを終了し、グローバルドキュメントストレージからファイルの削除に戻ります。 (formsサーバーでのバックアップモードの [終了を参照](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server))。
+次のJavaコードの例では、明示的にFormsサーバーがバックアップモードを終了し、グローバルドキュメントストレージからファイルを削除する処理に戻ります。 (formsサーバーでのバックアップモードの [終了を参照](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server))。
 
 ```java
  /*
