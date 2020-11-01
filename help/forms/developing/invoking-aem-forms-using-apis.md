@@ -1,8 +1,7 @@
 ---
 title: APIを使用したAEM Formsの呼び出し
 seo-title: APIを使用したAEM Formsの呼び出し
-description: 'null'
-seo-description: 'null'
+description: APIを使用したAEM Formsの呼び出し
 uuid: d100e106-e508-4d3c-ba8c-b5fe13c9e2d6
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding, development-tools
 discoiquuid: 1825e12c-0306-4e0a-9643-47ce1ce82132
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
