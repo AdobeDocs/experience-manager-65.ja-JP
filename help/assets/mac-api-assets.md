@@ -1,9 +1,9 @@
 ---
-title: '[!DNL Assets] HTTP API'
+title: '[!DNL Assets] HTTP API.'
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: add8be813ce377384ee4d90600f54a1455a1ab0d
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 79%
@@ -183,7 +183,7 @@ The [!DNL Assets] HTTP API includes the following features:
 
 ### 名前空間間でのメタデータの更新 `dc``jcr` の同期 {#sync-metadata-between-namespaces}
 
-APIメソッドは、 `jcr` 名前空間内のメタデータプロパティを更新します。 タッチ操作対応UIを使用して行った更新により、 `dc` 名前空間のメタデータプロパティが変更されます。 メタデータ値をとの間で同期するに `dc``jcr` は、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、との間でタイトル文字列 `dc:title` を同期し `jcr:title`ます。
+APIメソッドは、 `jcr` 名前空間内のメタデータプロパティを更新します。 ユーザーインターフェイスを使用して行った更新によって、 `dc` 名前空間のメタデータプロパティが変更されます。 メタデータ値をとの間で同期するに `dc``jcr` は、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、との間でタイトル文字列 `dc:title` を同期し `jcr:title`ます。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
