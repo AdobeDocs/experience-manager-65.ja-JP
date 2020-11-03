@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4803'
 ht-degree: 96%
 
 ---
@@ -92,7 +92,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
    * [AEM で Web サイトへのカルーセルバナーの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)AEM Sites のお客様は、インタラクティブメディアコンポーネントを使用して、カルーセルセットを AEM 内のページに直接追加できます。
 
 
-カルーセルセットを編集する必要がある場合は、[カルーセルセットの編集](#editing-carousel-sets)を参照してください。また、[カルーセルセットのプロパティ](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)を表示および編集することができます。
+カルーセルセットを編集する必要がある場合は、[カルーセルセットの編集](#editing-carousel-sets)を参照してください。また、[カルーセルセットのプロパティ](manage-assets.md#editing-properties)を表示および編集することができます。
 
 ## ホットスポットと画像マップの変数の識別 {#identifying-hotspot-and-image-map-variables}
 
