@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 100%
+source-wordcount: '114'
+ht-degree: 91%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 プレビューをするときには、画像プリセット（画像の場合のみ）またはビューアプリセット（ビデオおよび画像の場合）を適用することもできます。この両方をアセットに適用することはできません。詳しくは、[ビューアプリセットの適用](/help/assets/viewer-presets.md)および[画像プリセットの適用](/help/assets/image-sets.md)を参照してください。
 
-アセットの管理に関する一般的な情報については、[タッチ UI を使用したアセットの管理](/help/assets/manage-assets.md)を参照してください。
+アセットの管理に関する一般的な情報は、「アセットの [管理](/help/assets/manage-assets.md)」に記載されています。
 
 次のトピックでは、Dynamic Media アセットの管理に必要な事項について説明します。
 
@@ -30,4 +30,3 @@ ht-degree: 100%
 * [Dynamic Media アセットのプレビュー](/help/assets/previewing-assets.md)
 * [Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)
 * [セレクターの操作](/help/assets/working-with-selectors.md)
-
