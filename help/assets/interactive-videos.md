@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '6050'
+source-wordcount: '6056'
 ht-degree: 97%
 
 ---
@@ -80,7 +80,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 1. **AEM でのインタラクティブビデオの Web サイトへの追加** AEM Sites または AEM eCommerce（あるいは両方）を使用している場合、AEM でインタラクティブメディアコンポーネントを Web ページにドラッグすることで、インタラクティブビデオを Web ページに直接追加できます。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
 埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。
-   [](/help/assets/adding-dynamic-media-assets-to-pages.md)
+   [ページへのダイナミックメディアアセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## （オプション）クイックビュー変数の特定{#optional-identifying-quickview-variables}
 
