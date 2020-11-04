@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 75%
+source-wordcount: '355'
+ht-degree: 70%
 
 ---
 
@@ -96,6 +96,10 @@ public interface DraftDataService {
     public byte[] getAttachment (String attachmentID) throws FormsPortalException;
 }
 ```
+
+>[!NOTE]
+>
+>ドラフトIDフィールドの長さの最小値は26文字です。 Adobeでは、ドラフトIDの長さを26文字以上に設定することをお勧めします。
 
 ## 送信データサービス {#submission-data-service}
 
