@@ -3,10 +3,10 @@ title: アセットを共有するプライベートフォルダー
 description: Learn how to create a private folder in the [!DNL Adobe Experience Manager Assets] and share it with other users and the assign various privileges to them.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 21%
+source-wordcount: '572'
+ht-degree: 12%
 
 ---
 
@@ -47,11 +47,11 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 
    >[!NOTE]
    >
-   >フォルダーを共有するユーザーに、各種役割（編集者、所有者、閲覧者など）を割り当てることができます。ユーザーに所有者の役割を割り当てると、ユーザーにフォルダーにエディター特権が付与されます。さらに、フォルダーを他のユーザーと共有できるようになります。編集者の役割を割り当てると、ユーザーがプライベートフォルダーのアセットを編集できるようになります。ビューアの役割を割り当てた場合、ユーザはプライベートフォルダ内のアセットの表示のみが可能です。
+   >You can assign various roles, such as `Editor`, `Owner`, or `Viewer` to the user with whom you share the folder. If you assign an `Owner` role to the user, the user has `Editor` privileges on the folder. さらに、フォルダーを他のユーザーと共有できるようになります。If you assign an `Editor` role, the user can edit the assets in your private folder. ビューアの役割を割り当てた場合、ユーザはプライベートフォルダ内のアセットの表示のみが可能です。
 
    >[!NOTE]
    >
-   >プライベートフォルダーには、所有者の役割を持つメンバが少なくとも1つ存在します。 したがって、管理者はすべての所有者メンバーをプライベートフォルダーから削除することはできません。 ただし、既存の所有者（および管理者自体）をプライベートフォルダーから削除するには、管理者は別のユーザーを所有者として追加する必要があります。
+   >プライベートフォルダーには、 `Owner` 役割を持つメンバが少なくとも1つあります。 したがって、管理者はすべての所有者メンバーをプライベートフォルダーから削除することはできません。 ただし、既存の所有者（および管理者自体）をプライベートフォルダーから削除するには、管理者は別のユーザーを所有者として追加する必要があります。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。Depending on the role you assign, the user is assigned a set of privileges on your private folder when the user logs in to [!DNL Assets].
 1. 「**[!UICONTROL OK]**」をクリックして、確認メッセージを閉じます。
@@ -59,7 +59,7 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 「通知」をクリックして、通知のリストを開きます。
+1. 「 [!UICONTROL 通知] 」をクリックして、通知のリストを開きます。
 
    ![通知のリスト](assets/Assets-Notification.png)
 
@@ -83,4 +83,4 @@ You can create a private folder in the [!DNL Adobe Experience Manager Assets] us
 >
 >上記の方法を使用してユーザーインターフェイスからフォルダーを削除すると、関連付けられたユーザーグループも削除されます。
 >
->ただし、既存の冗長、未使用および自動生成されたユーザーグループは、JMXのオーサーインスタンス( `clean` )での`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`メソッドを使用して、リポジトリからクリーンアップできます。
+>ただし、既存の冗長、未使用および自動生成ユーザーグループは、JMXのオーサーインスタンス( `clean` )での`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`メソッドを使用して、リポジトリから削除できます。
