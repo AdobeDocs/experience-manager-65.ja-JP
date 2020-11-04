@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: d5efcec4a0397d99c899643ff13a883a0ed02c81
+source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
 workflow-type: tm+mt
-source-wordcount: '4249'
-ht-degree: 80%
+source-wordcount: '4296'
+ht-degree: 79%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Manager（AEM）Forms を使用すると、複雑なトラン�
 
 また、AEM の一般的なベストプラクティスについて、以下をお読みになることもお勧めします。
 
-* [ベストプラクティス： AEMのデプロイと保守](/help/sites-deploying/best-practices.md)
+* [ベストプラクティス：AEMのデプロイと保守](/help/sites-deploying/best-practices.md)
 * [ベストプラクティス：コンテンツのオーサリング](/help/sites-authoring/best-practices.md)
 * [ベストプラクティス：AEM の管理](/help/sites-administering/administer-best-practices.md)
 * [ベストプラクティス：ソリューションの開発](/help/sites-developing/best-practices.md)
@@ -66,9 +66,9 @@ AEM プロジェクトのセットアップを完了したら、アダプティ�
 * AEM Forms では、次のフォームモデルに基づいてアダプティブフォームを作成することができます。フォームモデルは、フォームと AEM システム間のデータ交換のためのインターフェイスとして機能し、アダプティブフォーム内外のデータフローの XML ベースの構造を提供します。また、フォームモデルはスキーマおよび XFA 制約の形式で、アダプティブフォームにルールや制約を課します。
 
    * **なし**：このオプションを使用して作成されたアダプティブフォームは、フォームモデルを使用しません。このようなフォームで生成されるデータ XML は、フィールドと対応する値を持つフラットな構造です。
-   * **XMLまたはJSONスキーマ**: XMLとJSONのスキーマは、組織のバックエンドシステムでデータが生成、消費される構造を表します。 アダプティブフォームにスキーマを関連付け、その要素を使用して、アダプティブフォームに動的なコンテンツを追加することができます。 スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブから利用できます。 スキーマ要素をドラッグ &amp; ドロップしてフォームを作成できます。
+   * **XMLまたはJSONスキーマ**:XMLとJSONのスキーマは、組織のバックエンドシステムでデータが生成、消費される構造を表します。 アダプティブフォームにスキーマを関連付け、その要素を使用して、アダプティブフォームに動的なコンテンツを追加することができます。 スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブから利用できます。 スキーマ要素をドラッグ &amp; ドロップしてフォームを作成できます。
    * **XFA フォームテンプレート**：これまで XFA ベースの HTML5 フォームに投資してきた場合、これが最適なフォームデータモデルです。XFA ベースのフォームをアダプティブフォームに直接変換する方法を提供します。すべての既存の XFA ルールは、関連付けられたアダプティブフォームに保持されます。このアダプティブフォームは、検証、イベント、プロパティ、パターンなどの XFA 構成をサポートします。
-   * **Form Data Model**: データベース、Webサービス、AEMユーザープロファイルなどのバックエンドシステムを統合して、アダプティブフォームに事前入力し、送信済みのフォームデータをバックエンドシステムに書き込む場合は、このフォームモデルをお勧めします。 フォームデータモデルエディターにより、アダプティブフォームの作成に使用できるフォームデータモデルで、エンティティとサービスを定義して設定することができます。詳しくは、「[AEM Forms のデータ統合](/help/forms/using/data-integration.md)」を参照してください。
+   * **Form Data Model**:データベース、Webサービス、AEMユーザープロファイルなどのバックエンドシステムを統合して、アダプティブフォームに事前入力し、送信済みのフォームデータをバックエンドシステムに書き込む場合は、このフォームモデルをお勧めします。 フォームデータモデルエディターにより、アダプティブフォームの作成に使用できるフォームデータモデルで、エンティティとサービスを定義して設定することができます。詳しくは、「[AEM Forms のデータ統合](/help/forms/using/data-integration.md)」を参照してください。
 
 データモデルを選択する際には、要件に適合するかどうかだけでなく、すでに XFA および XSD アセットに投資をしている場合、それらの既存の投資を拡張できるかどうかを考慮することが重要です。生成されるXMLにはスキーマが定義するXPATHに従ったデータが含まれるので、フォームテンプレートの作成にはXSDモデルを使用することをお勧めします。 フォームデータモデルのデフォルトとして XSD モデルを使用することは、データを処理して使用するバックエンドシステムからフォームデザインが切り離され、フォームフィールドとの 1 対 1 のマッピングによりフォームのパフォーマンスが向上する点でも有用です。また、フィールドの BindRef を XML でそのデータ値の XPATH にすることもできます。
 
@@ -124,13 +124,13 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
 * 複雑なルールや一般的に使用されるルールを処理する場合は、指定してアダプティブフォーム間で再利用できる別のクライアントライブラリの機能としてビジネスロジックを記述することを検討してください。 クライアントライブラリは独立のライブラリとし、jQuery および Underscore.js 以外の外部依存性はなくしてください。You can also use the client library to enforce [server-side revalidation](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) of submitted form data.
 * アダプティブフォームが提供する一連の API を使用して、アダプティブフォームと通信したり、アダプティブフォーム上でアクションを実行したりできます。主要な API には次の項目が挙げられます。詳しくは、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://adobe.com/go/learn_aemforms_documentation_63)」を参照してください。
 
-   * `guideBridge.reset()`: フォームをリセットします。
-   * `guideBridge.submit()`: フォームを送信します。
-   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`: フィールドにフォーカスを設定します。
-   * `guideBridge.validate(errorList, somExpression, focus)`: フォームを検証します。
-   * `guideBridge.getDataXML(options)`: フォームデータをXMLとして取得します。
-   * `guideBridge.resolveNode(somExpression)`: フォームオブジェクトを取得します。
-   * `guideBridge.setProperty(somList, propertyName, valueList)`: フォームオブジェクトのプロパティを設定します。
+   * `guideBridge.reset()`:フォームをリセットします。
+   * `guideBridge.submit()`:フォームを送信します。
+   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`:フィールドにフォーカスを設定します。
+   * `guideBridge.validate(errorList, somExpression, focus)`:フォームを検証します。
+   * `guideBridge.getDataXML(options)`:フォームデータをXMLとして取得します。
+   * `guideBridge.resolveNode(somExpression)`:フォームオブジェクトを取得します。
+   * `guideBridge.setProperty(somList, propertyName, valueList)`:フォームオブジェクトのプロパティを設定します。
    * 上記に加えて、以下のフィールドプロパティを使用できます。
 
       * `field.value` フィールドの値を変更します。
@@ -181,7 +181,7 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
 * 事前入力データ XML は、アダプティブフォームに関連付られたフォームモデルのスキーマに準拠している必要があります。
 * 事前入力 XML には `afBoundedData` および `afUnBoundedData` セクションを含めて、アダプティブフォームの連結されたフィールドと連結されていないフィールドのどちらにも事前入力するようにします。
 
-* フォームデータモデルに基づくアダプティブフォームの場合、AEM Formsは標準搭載のフォームデータモデル事前入力サービスを提供します。 この事前入力サービスは、アダプティブフォーム内のデータモデルオブジェクトに対してデータソースのクエリを実行し、フォームのレンダリング時に、フィールドに値を取り込みます。
+* フォームデータモデルを基にしたアダプティブフォームの場合、AEM Formsは標準搭載のフォームデータモデル事前入力サービスを提供しています。 この事前入力サービスは、アダプティブフォーム内のデータモデルオブジェクトに対してデータソースのクエリを実行し、フォームのレンダリング時に、フィールドに値を取り込みます。
 * ファイル、crx、サービス、http プロトコルを使用してアダプティブフォームに事前入力することもできます。
 * AEM Forms は、OSGi サービスとしてプラグインしてアダプティブフォームに事前入力できるカスタム事前入力サービスをサポートしています。
 
@@ -197,7 +197,7 @@ Adaptive forms では、ユーザー指定のデータを処理するために�
 
 アダプティブフォームで Adobe Sign の複数署名機能を活用できます。アダプティブフォームで Adobe Sign を設定する際は、以下を考慮してください。For details, see [Using Adobe Sign in an adaptive form](/help/forms/using/working-with-adobe-sign.md).
 
-* Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されないことに注意してください。すべての署名者がフォームに署名するまで、フォームは署名待ち状態で表示されます。
+* Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されないことに注意してください。Formsは、すべての署名者がフォームに署名するまで、署名待ち状態で表示されます。
 * フォーム内署名機能を設定する、または送信時に署名者を署名ページにリダイレクトすることができます。
 * 連続署名または並列署名のどちらか適している方を設定します。
 
@@ -258,7 +258,7 @@ AEM には、アダプティブフォームをローカライズするために�
 
    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* AEM Formsは現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、中国語(zh-CN)、中国語(zh-TW)、韓国語(ko-KR)ロケールでのアダプティブフォームコンテンツのローカライゼーションをサポートしています。 ただし、実行時にアダプティブフォームに対する新しいロケールのサポートを追加できます。詳しくは、「[アダプティブフォームのローカライズに対する新しいロケールのサポート](/help/forms/using/supporting-new-language-localization.md)」を参照してください。
+* AEM Formsでは、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(br)、ポルトガル語(pt-BR)、中国語(zh-CN)、中国語 — 台湾(zh-TW)、韓国語(ko-KR)ロケールでのアダプティブフォームコンテンツのローカライゼーションをサポートしています。 ただし、実行時にアダプティブフォームに対する新しいロケールのサポートを追加できます。詳しくは、「[アダプティブフォームのローカライズに対する新しいロケールのサポート](/help/forms/using/supporting-new-language-localization.md)」を参照してください。
 
 ## フォームプロジェクトを実稼働で使用するための準備 {#prepare-forms-project-for-production}
 
@@ -266,7 +266,7 @@ AEM には、アダプティブフォームをローカライズするために�
 
 ファイアウォール内側の保護された領域に、追加の AEM Forms サーバーを構成することもできます。このインスタンスは次の目的に使用できます。
 
-* **バッチ処理**: 定期的なジョブ、または負荷の大きいバッチでスケジュールされるジョブ。 例えば、印刷明細、通信の生成や、PDF Generator、Output、アセンブラなどのドキュメントサービスの使用が例として挙げられます。
+* **バッチ処理**:定期的なジョブ、または負荷の大きいバッチでスケジュールされるジョブ。 例えば、印刷明細、通信の生成や、PDF Generator、Output、アセンブラなどのドキュメントサービスの使用が例として挙げられます。
 * **PII データの保存**： PII データを処理サーバーに保存します。PII データの保存用にカスタムのストレージプロバイダーを使用している場合には必要ありません。
 
 ### プロジェクトの別の環境への移動 {#moving-project-to-another-environment}
@@ -307,9 +307,11 @@ AEM 全体のパフォーマンスを改善するために設定するベスト�
 
 * **ドラフトデータの保存**：アダプティブフォームの「ドラフト」機能を使用している場合は、カスタムサービスプロバイダーインターフェイス（SPI）を実装して、データベースなどのより安全なストレージにドラフトデータを保存してください。詳しくは、「[ドラフト&amp;送信コンポーネントとデータベースの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。
 
-* **送信データの保存**: フォームポータル送信ストアを使用する場合は、カスタムSPIを実装して送信データをデータベースに保存する必要があります。 See [Sample for integrating drafts &amp; submissions component with database](/help/forms/using/integrate-draft-submission-database.md) for a sample integration.
+* **送信データの保存**:フォームポータル送信ストアを使用する場合は、カスタムSPIを実装して送信データをデータベースに保存する必要があります。 See [Sample for integrating drafts &amp; submissions component with database](/help/forms/using/integrate-draft-submission-database.md) for a sample integration.
 
    安全なストレージにフォームデータと添付ファイルを保存するカスタム送信アクションを作成することもできます。See [Writing custom Submit action for adaptive forms](/help/forms/using/custom-submit-action-form.md) for more information.
+
+* **ドラフトIDの長さ**:アダプティブフォームをドラフトとして保存すると、ドラフトを一意に識別するためのドラフトIDが生成されます。 ドラフトIDフィールドの長さの最小値は26文字です。 Adobeでは、ドラフトIDの長さを26文字以上に設定することをお勧めします。
 
 ### 個人が特定できる情報の処理 {#handling-personally-identifiable-information}
 
