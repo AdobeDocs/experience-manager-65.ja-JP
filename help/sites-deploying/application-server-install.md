@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 0a082d3cff66b82ef6de551a735a16a001446a1e
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 63%
@@ -88,8 +88,8 @@ AEM は、単一の war ファイルとしてデプロイされます。
 1. sling.home パラメーターを別のパス（絶対パスと相対パスが指定可能）に変更します。
 1. sling.run.modesを発行インスタンス用に発行に変更します。
 1. web.xmlファイルを再パックします。
-1. warファイルの名前を変更し、異なる名前にします。 例えば、aemauthor.warに名前を変更し、aempublish.warに名前を変更します。
-1. より大きいメモリ設定を使用します。例えば、デフォルトのAEMインスタンスでは次のように使用します。 -Xmx3072m
+1. warファイルの名前を変更し、異なる名前にします。例えば、aemauthor.warに名前が変更され、aempublish.warに名前が変更されます。
+1. より大きいメモリ設定を使用します。例えば、デフォルトのAEMインスタンスでは次のように使用します。-Xmx3072m
 1. 2 つの Web アプリケーションをデプロイします。
 1. デプロイ後に、2 つの Web アプリケーションを停止します。
 1. 作成者インスタンスと発行インスタンスの両方で、sling.propertiesファイル内のプロパティfelix.service.urlhandlers=falseがfalseに設定されていることを保証します（デフォルトではtrueに設定されています）。
@@ -136,7 +136,7 @@ Set Memory arguments in your conf file(e.g. `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-if you use the deployment-scanner for to install the AEM web application it might be good to increase the `deployment-timeout,` for that set a `deployment-tiimeout` attribute in the xml file of your instance (e.g `configuration/standalone.xml)`:
+if you use the deployment-scanner for to install the AEM web application it might be good to increase the `deployment-timeout,` for that set a `deployment-timeout` attribute in the xml file of your instance (e.g `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
