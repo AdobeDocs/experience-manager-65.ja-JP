@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 648b9601445a46b6a2734d5a47545c0439b9c283
 workflow-type: tm+mt
-source-wordcount: '5944'
-ht-degree: 79%
+source-wordcount: '5964'
+ht-degree: 77%
 
 ---
 
@@ -154,8 +154,8 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 * [Image Server の公開設定 ](#publishing-setup-for-image-server)
 * [アプリケーションの一般設定の指定](#configuring-application-general-settings)
 * [カラーマネジメントの設定](#configuring-color-management)
-* [アセット処理の設定](#configuring-asset-processing)
-* [サポートされていない形式のカスタム MIME タイプの追加](#adding-custom-mime-types-for-unsupported-formats)
+* [サポートされる形式でのMIMEタイプの編集](#editing-mime-types-for-supported-formats)
+* [サポートされていない形式に対するMIME型の追加](#adding-mime-types-for-unsupported-formats)
 * [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
 #### Image Server の公開設定    {#publishing-setup-for-image-server}
@@ -227,18 +227,18 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 * RGB 出力を返す動的レンディションは、RGB 出力を sRGB カラースペースで返します。
 * CMYK 出力を返す動的レンディションは、CMYK 出力を *WebCoated* カラースペースで返します。
 
-#### アセット処理の設定 {#configuring-asset-processing}
+#### サポートされる形式でのMIMEタイプの編集 {#editing-mime-types-for-supported-formats}
 
 Dynamic Media によって処理されるアセットタイプを定義して、高度なアセット処理パラメーターをカスタマイズできます。例えば、アセット処理パラメーターを指定して次のことができます。
 
 * Adobe PDF を eCatalog アセットに変換する。
 * Adobe Photoshop ドキュメント（.PSD）をパーソナライズ用のバナーテンプレートアセットに変換する。
 * Adobe Illustrator ファイル（.AI）または Adobe Photoshop Encapsulated Postscript ファイル（.EPS）をラスタライズする。
-* 注意：ビデオプロファイルおよびイメージプロファイルは、それぞれ、ビデオおよび画像の処理を定義するのに使用できます。
+* [ビデオプロファイル](/help/assets/video-profiles.md) 、 [画像プロファイル](/help/assets/image-profiles.md) は、それぞれビデオの処理と画像の処理を定義するために使用できます。
 
 [アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
-**アセット処理を設定するには**：
+**サポートされる形式のMIMEタイプを編集するには**
 
 1. In AEM, click the AEM logo to access the global navigation console, then click **[!UICONTROL Tools > General > CRXDE Lite.]**
 1. 左側のレールで、次の場所に移動します。
@@ -261,11 +261,11 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 1. ページの左上隅で、「**[!UICONTROL CRXDE Lite]**」をタップして AEM に戻ります。
 
-#### サポートされていない形式のカスタム MIME タイプの追加 {#adding-custom-mime-types-for-unsupported-formats}
+#### Adding MIME types for unsupported formats {#adding-mime-types-for-unsupported-formats}
 
 AEM Assets でサポートされていない形式のカスタム MIME タイプを追加できます。To ensure that any new node you add in CRXDE Lite is not deleted by AEM, you must ensure that you move the MIME type before `image_` and its enabled value is set to **[!UICONTROL false.]**
 
-**サポートされていない形式のカスタム MIME タイプを追加するには**
+**サポートされていない形式にMIMEタイプを追加するには**
 
 1. From AEM, tap **[!UICONTROL Tools > Operations > Web Console.]**
 
@@ -520,11 +520,13 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
 1. 「**[!UICONTROL Maximum Parallel Jobs]**」フィールドで、目的の値に数値を変更します。
 
-   デフォルトでは、並列ジョブの最大数は、使用可能な CPU コア数によって異なります。例えば、4 コアサーバーでは、2 ワーカースレッドが割り当てられます。（0.0～1.0 の値は比率に基づき、1 より大きい数はワーカースレッドの数を割り当てます）。
+   ダイナミックメディアへの大量のファイルのアップロードを適切にサポートするために **[!UICONTROL 、「並列ジョブの]** 最大数」を増やすことができます。 正確な値は、ハードウェア容量に依存します。 初期移行または1回限りのバルクアップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の2倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。 そのため、特定の使用事例に基づいて値をテストし、調整する必要があります。
 
-   アドビでは、Dynamic Media Classic（Scene7）への大量のファイルのアップロードを適切にサポートするために、「**[!UICONTROL Maximum Parallel Jobs]**」を 32 に設定することをお勧めします。
+<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
-   ![chlimage_1](assets/chlimage_1.jpeg)
+   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic (Scene7). -->
+
+![chlimage_1](assets/chlimage_1.jpeg)
 
 1. Tap **[!UICONTROL Save.]**
 
