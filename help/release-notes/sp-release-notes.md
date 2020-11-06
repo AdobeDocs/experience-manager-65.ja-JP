@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2e56a44fce08bc127a7ec920d2cb985ce2842bbc
+source-git-commit: b23b66e9d57742f6771bc4b26753a47b334e06bc
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4557'
 ht-degree: 7%
 
 ---
@@ -28,6 +28,10 @@ ht-degree: 7%
 Adobe Experience Manager6.5.6.0は、2019 **年4月のGAリリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートで**&#x200B;す。 Adobe Experience Manager6.5の上に設置できます。
 
 Adobe Experience Manager6.5.6.0で導入された主な機能および機能強化には、次のものが含まれます。
+
+* クイック発行 [!DNL Experience Manager] ウィザード [!DNL Dynamic Media] またはパブリケーションの  管理ウィザードを使用して、アセットを選択して発行または非公開にします。
+
+* コンテンツ配信ネットワーク(CDN)のキャッシュされたコンテンツを無効にするには、 [!DNL Dynamic Media] ユーザーインターフェイスを使用します。
 
 * Brand PortalからExperience Managerアセットへのアセット貢献度フォルダーの公開も、プロキシサーバーを介したサポートされるようになりました。
 
