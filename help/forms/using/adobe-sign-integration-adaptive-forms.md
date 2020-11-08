@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 67%
+source-wordcount: '999'
+ht-degree: 63%
 
 ---
 
@@ -49,7 +49,10 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    >[!NOTE]
    >
-   >クラウドサービス設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM Forms サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
+   >手順1 ～ 4を実行して新しい設定コンテナを作成し、コンテナでAdobe Sign設定を作成するか、 `global` ツールハンマー **>Cloud Services>Adobe Sign>** neworkで既存のフォルダを使用し ![ま](assets/hammer.png)********&#x200B;す。 新しい設定コンテナで設定を作成する場合、アダプティブフォームを作成する際に、「 **[!UICONTROL 設定コンテナ]** 」フィールドにコンテナ名を必ず指定してください。
+
+   >[!NOTE]
+   クラウドサービス設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM Forms サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
 
 1. On the configuration page, tap **[!UICONTROL Create]** to create Adobe Sign configuration in AEM Forms.
 1. In the **[!UICONTROL General]** tab of the **[!UICONTROL Create Adobe Sign Configuration]** page, specify a **Name** for the configuration and tap **Next**. 必要に応じてタイトルを指定し、設定のサムネイルを参照して選択することもできます。
