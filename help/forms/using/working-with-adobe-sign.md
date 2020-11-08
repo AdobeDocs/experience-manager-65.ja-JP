@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
 workflow-type: tm+mt
-source-wordcount: '3853'
-ht-degree: 57%
+source-wordcount: '3904'
+ht-degree: 56%
 
 ---
 
@@ -76,6 +76,10 @@ Adobe Sign と AEM Forms を統合することにより、次の機能がサポ�
    1. アダプティブフォームの **名前** と **タイトルを指定します** 。
 
    1. Adobe SignとAEM Formsの設定時に作成した [設定コンテナ](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) を選択します。
+
+      >[!NOTE]
+      >
+      >[ **[!UICONTROL Adobe SignCloud Service]** ]ドロップダウンリストには、このフィールドで選択した設定コンテナで設定されたクラウドサービスが表示されます。 「 **[!UICONTROL Adobe SignCloud Service]** 」ドロップダウンリストは、「Adobe Signを **[!UICONTROL 有効にする]** 」オプションを選択した場合に、アダプティブフォームプロパティの「電子署名 **** 」セクションで利用できます。
 
 1. 「 **[!UICONTROL フォームモデル]** 」タブで、次のいずれかのオプションを選択します。
 
