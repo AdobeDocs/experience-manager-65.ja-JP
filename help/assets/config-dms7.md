@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 648b9601445a46b6a2734d5a47545c0439b9c283
+source-git-commit: ee527712b4d7f6ebf9ef2996de1405f6f9c3d335
 workflow-type: tm+mt
 source-wordcount: '5964'
-ht-degree: 77%
+ht-degree: 76%
 
 ---
 
@@ -73,7 +73,7 @@ The installation of feature pack 18912 is *optional*.
 
 ## Cloud Servicesでのダイナミックメディア設定の作成 {#configuring-dynamic-media-cloud-services}
 
-**Dynamic Media を設定する前**：Dynamic Media の資格情報を含んだプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)して、パスワードを変更する必要があります。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+**ダイナミックメディアを設定する前に** — ダイナミックメディアの資格情報を使用したプロビジョニング電子メールを受け取ったら、Dynamic Media Classicに [](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) ログインしてパスワードを変更する必要があります。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
