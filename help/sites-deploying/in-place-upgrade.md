@@ -11,7 +11,7 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1718aac3d39662fb35336a4db3e3403641f9529a
+source-git-commit: b8a532f45f531f36e04ff4b5f0cc2c9e729668bb
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 80%
@@ -168,7 +168,7 @@ Where `/path/to/datastore` represents the path to your File Datastore.
 
 1. 以前のバージョンの S3 コネクタに関連する、`crx-quickstart/install` 内の jar を削除します。
 
-1. Download the latest release of the 1.8.x S3 connector from [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)
+1. Download the latest release of the 1.10.x S3 connector from [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)
 
 1. Extract the package to a temporary folder and copy the contents of `jcr_root/libs/system/install` to the `crx-quickstart/install` folder.
 
