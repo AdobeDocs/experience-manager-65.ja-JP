@@ -3,10 +3,10 @@ title: ビデオアセットの管理
 description: でビデオアセットをアップロード、プレビュー、注釈、公開します [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 37%
+source-wordcount: '807'
+ht-degree: 36%
 
 ---
 
@@ -36,7 +36,7 @@ By default, [!DNL Assets] does not let you upload any assets that are larger tha
 In addition to [!DNL Assets] configuration, change the following configurations to upload large assets:
 
 * トークンの有効期間を増やします。Webコンソールの「 [!UICONTROL AdobeGranite CSRF Servlet] 」()を参照し `https://[aem_server]:[port]/system/console/configMgr`てください。 詳しくは、「 [CSRF保護](/help/sites-developing/csrf-protection.md)」を参照してください。
-* Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
+* Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
 
 >[!NOTE]
 >
