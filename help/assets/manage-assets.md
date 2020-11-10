@@ -4,7 +4,7 @@ description: デジタルアセットのアップロード、ダウンロード�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c59726cc1e6656f16a237aac703f37f3f38a87f9
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '9565'
 ht-degree: 61%
@@ -239,7 +239,7 @@ PostScript（EPS）または Illustrator（AI）画像ファイルのアップ�
 
 | オプション | サブオプション | 説明 |
 |---|---|---|
-| 処理中 |  | **[!UICONTROL ラスタライズ]**&#x200B;を選択して、ファイル内のベクターグラフィックスをビットマップ形式に変換します。 |
+| 処理 |  | **[!UICONTROL ラスタライズ]**&#x200B;を選択して、ファイル内のベクターグラフィックスをビットマップ形式に変換します。 |
 | レンダリングされた画像で透明な背景を保持する |  | ファイルの背景の透明度を維持します。 |
 | 解決方法 |  | 解像度設定を決定します。この設定により、ファイル内の 1 inch あたりに表示するピクセル数を決定します。 |
 | カラースペース |  | 「カラースペース」メニューを選択し、次のカラースペースオプションから選択します。 |
@@ -284,7 +284,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 | オプション | サブオプション | 説明 |
 |---|---|---|
-| 処理中 | ラスタライズ | （デフォルト）PDF ファイルのページをリッピングし、ベクターグラフィックスをビットマップイメージに変換します。eCatalog を作成するには、このオプションを選択します。 |
+| 処理 | ラスタライズ | （デフォルト）PDF ファイルのページをリッピングし、ベクターグラフィックスをビットマップイメージに変換します。eCatalog を作成するには、このオプションを選択します。 |
 | 抽出 | 検索ワード | PDF ファイルから単語を抽出し、eCatalog ビューア内でこのファイルをキーワード検索できるようにします。 |
 |  | リンク | PDF ファイルからリンクを抽出し、eCatalog ビューアで使用できる画像マップに変換します。 |
 | 複数ページの PDFから eCatalog を自動生成 |  | PDF ファイルから eCatalog を自動的に作成します。eCatalog の名前は、アップロードした PDF ファイルと同じになります。（このオプションは、アップロード時に PDF ファイルをラスタライズする場合にのみ使用できます。） |
@@ -879,11 +879,11 @@ Here is an example of how you can configure [!DNL Experience Manager] to print a
 * 同じ場所に存在するのと同じファイル名のアセットをアップロードします。 新しいアセットにすることも、同じアセットの変更済みバージョンにすることもできます。
 * で画像を編集し、変更 [!DNL Experience Manager] を保存します。
 * アセットのメタデータを編集します。
-* デスクトップ [!DNL Experience Manager] アプリを使用して、既存のアセットをチェックアウトし、編集して、変更内容を [アップロードします](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
+* デスクトップ [!DNL Experience Manager] アプリを使用して、既存のアセットをチェックアウトし、編集して、変更内容を [アップロードします](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#edit-assets-upload-updated-assets)。
 
 また、ワークフローを使用して、自動バージョン管理を有効にすることもできます。アセットのバージョンを作成すると、バージョンと共にメタデータとレンディションが保存されます。レンディションによって、同じ画像の代替となる画像が表示されます（例えば、アップロードされた JPEG ファイルの PNG レンディション）。
 
-1. ページの左上隅から、メニューを開き、「 **[!UICONTROL タイムライン]**」を選択します。
+1. バージョンを作成するアセットの場所に移動し、そのアセットをクリックしてプレビューを開きます。 ページの左上隅から、メニューを開き、「 **[!UICONTROL タイムライン]**」を選択します。
 
    ![左側のナビゲーションメニューで、タイムラインオプションを選択します](assets/timeline.png)
 
