@@ -3,9 +3,9 @@ title: アセットをチェックインして編集用にチェックアウト�
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '433'
 ht-degree: 49%
 
 ---
@@ -63,6 +63,6 @@ ht-degree: 49%
 
 >[!MORELIKETHIS]
 >
->* [Experience Managerのデスクトップアプリケーションでのチェックインとチェックアウトについて理解する](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#how-app-works2)
->* [アセットのチェックインとチェックアウトについて理解するためのビデオチュートリアル](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
+>* [Experience Managerのデスクトップアプリケーションでのチェックインとチェックアウトについて理解する](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
+>* [アセットのチェックインとチェックアウトについて理解するためのビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 
