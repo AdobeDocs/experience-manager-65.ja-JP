@@ -3,10 +3,10 @@ title: 参照と複数のページを持つ複合アセットの管理
 description: 内からデジタルアセットへの参照を作成する方法を説明します [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 18%
+source-wordcount: '1348'
+ht-degree: 17%
 
 ---
 
@@ -25,7 +25,7 @@ Besides eliminating redundancy, referencing the assets in [!DNL Adobe Creative C
 
 You can reference existing digital assets from within an [!DNL Adobe Illustrator] file.
 
-1. [Experience Managerのデスクトップアプリケーションを使用して](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)、デジタルアセットをローカルファイルシステムに取得します。 参照するアセットのファイルシステムの場所に移動します。
+1. デ [[!DNL Experience Manager] スクトップアプリケーションを使用して](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)、デジタルアセットをローカルファイルシステムに取得します。 参照するアセットのファイルシステムの場所に移動します。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
 1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/manage-assets.md#uploading-assets) to the [!DNL Experience Manager] repository.
@@ -68,7 +68,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 ## デジタ追加ルアセット [!DNL Adobe Photoshop] {#refps}
 
-1. デスクトップ [!DNL Experience Manager] アプリを使用してアクセス [!DNL Experience Manager Assets]します。 ローカルファイルシステム上のアセットをダウンロードして表示します。 の「リンクを [!UICONTROL 配置] 」機能を使用 [!DNL Adobe Photoshop]します。 デスクトップアプリでのア [セットの配置を参照してください](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
+1. デスクトップ [!DNL Experience Manager] アプリを使用してアクセス [!DNL Experience Manager Assets]します。 ローカルファイルシステム上のアセットをダウンロードして表示します。 の「リンクを [!UICONTROL 配置] 」機能を使用 [!DNL Adobe Photoshop]します。 デスクトップアプリでのア [セットの配置を参照してください](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
@@ -119,7 +119,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 次のオプションは、ツールバー、左側のナビゲーションバーおよびページビューアコントロールで使用できます。
 
-* **[!UICONTROL デスクトップアクション]** ：デスクトップアプリを使用して、特定のサブアセットを開いたり、表示したりし [!DNL Experience Manager] ます。 Desktop Appを使用する場合は、Desktop Actions [(デスクトップアクション](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) )を [!DNL Experience Manager] 設定する方法を参照してください。
+* **[!UICONTROL デスクトップアクション]** ：デスクトップアプリを使用して、特定のサブアセットを開いたり、表示したりし [!DNL Experience Manager] ます。 Desktop Appを使用する場合は、Desktop Actions [(デスクトップアクション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) )を [!DNL Experience Manager] 設定する方法を参照してください。
 
 * **[!UICONTROL 「プロパティ]** 」オプションを選択すると、特定のサブアセットの  プロパティページが開きます。
 
@@ -135,8 +135,8 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager デスクトップアプリケーションの使用](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)
->* [Adobe Experience ManagerでのDesktop Actionsの設定](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [Adobe Experience Manager デスクトップアプリケーションの使用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [Adobe Experience ManagerでのDesktop Actionsの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [リンクされたスマートオブジェクトをAdobe Photoshopで作成](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Adobe InDesignにグラフィックを配置](https://helpx.adobe.com/jp/indesign/using/placing-graphics.html)
 
