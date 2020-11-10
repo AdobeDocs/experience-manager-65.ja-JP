@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 9ba00322588326df6fbcc02bdfba88491d39c289
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 68%
+source-wordcount: '680'
+ht-degree: 66%
 
 ---
 
@@ -92,8 +92,13 @@ In the /clientheaders section of `dispatcher.any`, if listing a specific set of 
 >[!NOTE]
 >
 >**プロパティ名の例**
->
 >All property names shown, such as **/0050** and **/0170**, should be adjusted to fit within an existing dispatcher.any configuration file.
+
+
+>[!CAUTION]
+>
+>Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)を参照してください。また、AEMのインストールに関するその他のセキュリティの詳細については、 [AEM Security Checklist](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/security-checklist.html) （セキュリティチェックリスト）を参照してください。
+
 
 以下のエントリを /filter セクションの最後に追加する必要があります（特にすべての拒否エントリの後）。
 
