@@ -3,10 +3,10 @@ title: アセットをダウンロード
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 75%
+source-wordcount: '856'
+ht-degree: 74%
 
 ---
 
@@ -67,14 +67,14 @@ The default servlet in [!DNL Experience Manager] allows authenticated users to i
 
  パブリッシュインスタンスの `Asset Download Servlet` を無効にするには、アセットダウンロード要求をすべてブロックするように Dispatcher 設定を更新します。[!DNL Experience Manager]サーブレットは、OSGi コンソールから手動で直接無効にすることもできます。
 
-1. To block asset download requests via a dispatcher configuration, edit the `dispatcher.any` configuration and add a rule to the [filter section](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. To block asset download requests via a dispatcher configuration, edit the `dispatcher.any` configuration and add a rule to the [filter section](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
 1. 発行インスタンスでOSGiコンポーネントを無効にするには、でOSGiコンソールにアクセスし `http://[aem_server]:[port]/system/console/components`ます。 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` を探して、「**[!UICONTROL 無効にする]**」をクリックします。
 
 >[!MORELIKETHIS]
 >
->* [Brand Portalを使用したアセットのダウンロード](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
+>* [Brand Portalを使用したアセットのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [DRM で保護されたアセットのダウンロード](drm.md).
->* [WinまたはMacデスクトップで、Experience Managerのデスクトップアプリを使用してアセットをダウンロードします](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)。
+>* [WinまたはMacデスクトップで、Experience Managerのデスクトップアプリを使用してアセットをダウンロードします](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)。
 >* [サポートされている Adobe Creative Cloud アプリ内から Adobe Asset Link を使用したアセットのダウンロード](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html).
 
