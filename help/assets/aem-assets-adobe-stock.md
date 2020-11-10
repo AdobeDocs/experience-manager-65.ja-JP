@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Stock] Manageassets'
 description: 内部から、検索、取得、ライセンス、 [!DNL Adobe Stock] 管理の各セットを検索します [!DNL Adobe Experience Manager]。 ライセンス済みのアセットを他のデジタルアセットと同様に使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1080'
 ht-degree: 30%
 
 ---
@@ -19,7 +19,7 @@ Organizations can integrate their [!DNL Adobe Stock] enterprise plan with [!DNL 
 
 ## 前提条件 {#prerequisites}
 
-この統合には [企業Adobe Stock計画が必要](https://stockenterprise.adobe.com/)。
+統合には [ [!DNL Adobe Stock] 企業向けプランが必要です](https://stockenterprise.adobe.com/)。
 
 ## 統合 [!DNL Experience Manager] および [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
@@ -52,7 +52,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 >[!NOTE]
 >
->複数の [!DNL Adobe Stock] 設定がある場合は、ユーザ環境設定パネルで目的の設定を選択します。 Experience Managerホームページからパネルにアクセスするには、ユーザーアイコンをクリックし、 **[!UICONTROL ユーザー環境設定]** / **[!UICONTROL Stock設定]**)をクリックします。
+>複数の [!DNL Adobe Stock] 設定がある場合は、 [!UICONTROL ユーザ環境設定] パネルで目的の設定を選択します。 ホームページからパネルにアクセスするには、ユーザーアイコンをクリックし、 [!DNL Experience Manager] ユーザー環境設定 **[!UICONTROL /]** Stock設定 ****&#x200B;をクリックします。
 
 ## Use and manage [!DNL Adobe Stock] assets in [!DNL Experience Manager] {#usemanage}
 
@@ -60,9 +60,9 @@ Using this capability, organizations can allow its users to work using [!DNL Ado
 
 Once an [!DNL Adobe Stock] asset is licensed in [!DNL Experience Manager], it can be used and managed like a typical asset. In [!DNL Experience Manager], the users can search and preview the assets; copy and publish the assets; share the assets on [!DNL Brand Portal]; access and use the assets via [!DNL Experience Manager] desktop app; and so on.
 
-![Adobe Experience ManagerのワークスペースでAdobe Stockのアセットを検索し、結果をフィルターします](assets/adobe-stock-search-results-workspace.png)
+![ワークスペースからの [!DNL Adobe Stock][!DNL Adobe Experience Manager] アセットの検索と結果のフィルタリング](assets/adobe-stock-search-results-workspace.png)
 
-*図：インターフェイスで[!DNL Adobe Stock]アセットを検索し、結果をフィルタリング[!DNL Experience Manager]します。*
+*図：インターフェイスで [!DNL Adobe Stock] アセットを検索し、結果をフィルタリング [!DNL Experience Manager] します。*
 
 **A.**[!DNL Adobe Stock] 指定された ID のアセットと類似しているアセットを検索します。**B.** 選択した形状や向きと一致するアセットを検索します。**C.** サポートされているアセットタイプのいずれかを検索します。**D.** フィルターウィンドウを開く／折りたたみます。**E.** 選択したアセットのライセンスを取得して に保存します。[!DNL Experience Manager]**F.**[!DNL Experience Manager] アセットを透かし付きで に保存します。**G.**[!DNL Adobe Stock] 選択したアセットと類似したアセットを Web サイトで調べます。**H.**[!DNL Adobe Stock] 選択したアセットを Web サイトに表示します。**I.** 検索結果から選択したアセットの数。**J.** カード表示とリスト表示を切り替えます。
 
@@ -80,9 +80,9 @@ Your [!DNL Experience Manager] users, can search for assets in both, [!DNL Exper
 >
 >Assets searched from [!DNL Adobe Stock] are just displayed in [!DNL Experience Manager]. [!DNL Adobe Stock] アセットは、ユーザーがアセット [!DNL Experience Manager] または [ライセンスを](/help/assets/aem-assets-adobe-stock.md#saveassets) 保存してアセットを保存した後にのみ、リポジトリに取得および保存され [](/help/assets/aem-assets-adobe-stock.md#licenseassets)ます。 Assets that are already stored in [!DNL Experience Manager] are displayed and highlighted for ease of reference and access. Also, the [!DNL Stock] assets are saved with some additional metadata to indicate the source as [!DNL Stock].
 
-![検索結果でExperience Managerの検索フィルターとAdobe Stockアセットが強調表示される](assets/aem-search-filters2.jpg)
+![検索結果でのアセットの検索フィルター [!DNL Experience Manager] およびハイライト [!DNL Adobe Stock] 表示アセット](assets/aem-search-filters2.jpg)
 
-*図：検索結果でアセット[!DNL Experience Manager]を検索し、ハイライト[!DNL Adobe Stock]表示したフィルター。*
+*図：検索結果でアセット [!DNL Experience Manager] を検索し、ハイライト [!DNL Adobe Stock] 表示したフィルター。*
 
 ### 必要なアセットの保存と表示 {#saveassets}
 
@@ -98,9 +98,9 @@ Next time when you search for assets, the saved assets are highlighted with a ba
 
 Users can license [!DNL Adobe Stock] assets by using the quota of their [!DNL Adobe Stock] enterprise plan. When you license an asset, it is saved without a watermark and is available for searching and using in [!DNL Experience Manager Assets].
 
-![Experience ManagerアセットのAdobe Stockアセットをライセンス認証し、保存するためのダイアログ](assets/aem-stock_licenseandsave.jpg)
+![ア [!DNL Adobe Stock] セットをライセンス認証して保存するダイアログ [!DNL Experience Manager Assets]](assets/aem-stock_licenseandsave.jpg)
 
-*図：でア[!DNL Adobe Stock]セットのライセンスを取得して保存するダイアログ[!DNL Experience Manager Assets]。*
+*図：でア [!DNL Adobe Stock] セットのライセンスを取得して保存するダイアログ [!DNL Experience Manager Assets]。*
 
 ### メタデータおよびアセットプロパティへのアクセス {#access-metadata-and-asset-properties}
 
@@ -122,7 +122,7 @@ Users can access and preview the metadata, including the [!DNL Adobe Stock] meta
 
 >[!MORELIKETHIS]
 >
->* [Experience ManagerアセットでのAdobe Stockアセットの使用に関するビデオチュートリアル](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
->* [Adobe Stock エンタープライズプランのヘルプ](https://helpx.adobe.com/jp/enterprise/using/adobe-stock-enterprise.html)
->* [Adobe Stock の FAQ](https://helpx.adobe.com/jp/stock/faq.html)
+>* [アセットの [!DNL Adobe Stock] 使用に関するビデオチュートリアル [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
+>* [[!DNL Adobe Stock] エンタープライズプランヘルプ](https://helpx.adobe.com/jp/enterprise/using/adobe-stock-enterprise.html)
+>* [[!DNL Adobe Stock] FAQ](https://helpx.adobe.com/jp/stock/faq.html)
 
