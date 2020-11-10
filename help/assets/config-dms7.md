@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ee527712b4d7f6ebf9ef2996de1405f6f9c3d335
+source-git-commit: 24ad36d3ff329885efff319404e0d5321e8ce46d
 workflow-type: tm+mt
-source-wordcount: '5964'
-ht-degree: 76%
+source-wordcount: '5990'
+ht-degree: 75%
 
 ---
 
@@ -544,9 +544,7 @@ Granite のワークフローキューは、一時的でないワークフロー
 
 1. 「**[!UICONTROL Maximum Parallel Jobs]**」フィールドで、目的の値に数値を変更します。
 
-   デフォルトでは、並列ジョブの最大数は、使用可能な CPU コア数によって異なります。例えば、4 コアサーバーでは、2 ワーカースレッドが割り当てられます。（0.0～1.0 の値は比率に基づき、1 より大きい数はワーカースレッドの数を割り当てます）。
-
-   ほとんどの事例では、デフォルト設定の 0.5 で十分です。
+   ダイナミックメディアへの大量のファイルのアップロードを適切にサポートするために、「最大並列ジョブ数」を増やすことができます。 正確な値は、ハードウェア容量に依存します。 初期移行または1回限りのバルクアップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の2倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。 そのため、特定の使用事例に基づいて値をテストし、調整する必要があります。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
