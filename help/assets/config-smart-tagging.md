@@ -3,9 +3,9 @@ title: Smart Content Serviceを使用したアセットのタグ付けの設定
 description: Learn how to configure smart tagging and enhanced smart tagging in [!DNL Adobe Experience Manager], using the Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1fa79a49ce3590fcba63e6e7d1a63586650251d2
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2179'
 ht-degree: 60%
 
 ---
@@ -23,7 +23,7 @@ Smart Content Serviceを使用する前に、次の事項を確認します。
    <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
   -->
 
-* 最新の [Experience Managerサービスパックをインストールします](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+* 最新の [Experience Managerサービスパックをインストールします](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 ## Adobe 開発者コンソールとの統合 {#integrate-adobe-io}
 
@@ -281,12 +281,12 @@ Once this option is selected for a folder, [!DNL Experience Manager] runs a trai
 
    * 画像内の細かい違いを認識することはできません。例えば、シャツのサイズが細身か標準かなどの違いは認識できません。
    * 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
-   * Tagging is supported in the locales that [!DNL Experience Manager] is supported in. 言語の一覧については、](https://docs.adobe.com/content/help/ja-JP/experience-manager-64/release-notes/smart-content-service-release-notes.translate.html)スマートコンテンツサービスのリリースノート[を参照してください。
+   * Tagging is supported in the locales that [!DNL Experience Manager] is supported in. 言語の一覧については、](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html)スマートコンテンツサービスのリリースノート[を参照してください。
 
 * To search for assets with smart tags (regular or enhanced), use the [!DNL Assets] Omnisearch (full-text search). スマートタグには個別の検索用述語はありません。
 
 >[!MORELIKETHIS]
 >
 >* [スマートタグの概要とトレーニング方法](enhanced-smart-tags.md)
->* [スマートタグの設定方法に関するビデオチュートリアル](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)
+>* [スマートタグに関するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 
