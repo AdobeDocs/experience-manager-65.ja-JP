@@ -3,10 +3,10 @@ title: ベストプラクティス [!DNL Adobe Creative Cloud] へのフォル�
 description: adobe creative cloud(CC)ユーザーとフォルダーを交換するように [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 設定します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 18%
+source-wordcount: '953'
+ht-degree: 17%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 >[!CAUTION]
 >
->The [!DNL Experience Manager] to [!DNL Creative Cloud] Folder Sharing feature is deprecated. Adobeでは、 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) 、 [Experience Managerデスクトップアプリなど、新しい機能を使用することを強くお勧めします](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)。 Learn more in [Experience Manager and Creative Cloud integration best practices](/help/assets/aem-cc-integration-best-practices.md).
+>The [!DNL Experience Manager] to [!DNL Creative Cloud] Folder Sharing feature is deprecated. Adobeでは、 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) 、 [Experience Managerデスクトップアプリなど、新しい機能を使用することを強くお勧めします](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)。 Learn more in [Experience Manager and Creative Cloud integration best practices](/help/assets/aem-cc-integration-best-practices.md).
 
 [!DNL Adobe Experience Manager] のユーザーがアプリのユーザー [!DNL Assets] とフォルダーを共有できるように設定できます。これにより、ア [!DNL Adobe Creative Cloud] セットサービスでフォルダーを共有フォルダーとして使用できるようにな [!DNL Adobe Creative Cloud] ります。 The feature can be used to exchange files between creative teams and [!DNL Assets] users, especially when the creative users do not have access to the [!DNL Assets] deployment (they are not on the enterprise network).
 
@@ -39,7 +39,7 @@ This type of integration can be used in the following use cases, especially when
 この統合の主要な要素は以下のとおりです。
 
 * **[!DNL Experience Manager Assets]** エンタープライズネットワーク（マネージドサービスまたはオンプレミス）に導入：ここでフォルダの共有を開始します。
-* **[!DNL Adobe Marketing Cloud Assets]コアサービス**:ストレージサービスとの間の仲介 [!DNL Experience Manager] を行い [!DNL Creative Cloud] ます。 統合を使用する組織の管理者は、Marketing Cloud組織と [!DNL Assets] 展開の間に信頼関係を確立する必要があります。 また、管理者は、 ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)します。[!DNL Assets]
+* **[!DNL Adobe Marketing Cloud Assets]コアサービス**:ストレージサービスとの間の仲介 [!DNL Experience Manager] を行い [!DNL Creative Cloud] ます。 統合を使用する組織の管理者は、Marketing Cloud組織と [!DNL Assets] 展開の間に信頼関係を確立する必要があります。 また、管理者は、 ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)します。[!DNL Assets]
 
 * **[!DNL Creative Cloud]アセットWebサービス** (ストレージと [!DNL Creative Cloud] ファイルWeb UI):ここでは、Creative Cloudーが共有された特定のCreative Cloudアプリユーザーが、招待を受諾して、ーアカウントストレージのフォルダーを表示できます。 [!DNL Assets]
 * **Creative Cloudデスクトップアプリ**:（オプション）クリエイティブユーザーのデスクトップから、ア [!DNL Creative Cloud] セットストレージーと同期して、共有フォルダーや共有ファイルに直接アクセスできます。
