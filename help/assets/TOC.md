@@ -7,9 +7,9 @@ user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '583'
 ht-degree: 51%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 51%
 # Assets ガイド {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
-+ [[!DNL Experience Manager] 6.5アセットリリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [[!DNL Experience Manager] 6.5アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
 + Experience Managerアセットの使用 {#using}
