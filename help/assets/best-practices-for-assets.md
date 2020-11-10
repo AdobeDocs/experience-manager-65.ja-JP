@@ -3,10 +3,10 @@ title: Best Practices for [!DNL Assets]
 description: 導入と設定に依存するベストプラクティスを特定し、遵守することで、負荷中のシステムの安定性とパフォーマンスを向上させます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 25%
+source-wordcount: '507'
+ht-degree: 24%
 
 ---
 
@@ -24,5 +24,5 @@ Depending upon how you have positioned [!DNL Assets] for your organization and t
 * The [Assets migration guide](/help/assets/assets-migration-guide.md): If you want to migrate assets from your legacy system to Assets, there are several steps to consider to streamline the migration process. The Migration guide include best practices around the tasks you perform to bring the assets into [!DNL Experience Manager] in a phase-wise manner. これには、メタデータの適用、レンディションの生成、パブリッシュインスタンスへのアセットのアクティベートなどが含まれています。
 * The [Assets network considerations document](/help/assets/assets-network-considerations.md): When handling [!DNL Experience Manager] deployment, understanding the network topology is important to understand network performance, identify chokepoints, and describe the expected user experience. The [!DNL Assets] network considerations document discusses network considerations when designing your Asset deployment.
 * The [Assets monitoring guide](/help/assets/assets-monitoring-best-practices.md): After your [!DNL Experience Manager] deployment is deployed, you should monitor certain tasks and the system in general to ensure system integrity and efficiency of operations. この監視ガイドには、システムの様々な側面を監視するためのベストプラクティスが記載されています。
-* [Experience Managerデスクトップアプリのベストプラクティス](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/introduction.html): [!DNL Experience Manager] デスクトップアプリでは、デジタルアセット管理(DAM)ソリューションがデスクトップにリンクされるので、 [!DNL Experience Manager] webユーザーインターフェイスで使用可能なファイルをデスクトップ上で直接開くことができます。 デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジーにより有効化されます。This guide explains key capabilities and recommended use of [!DNL Experience Manager] desktop app.
+* [Experience Managerデスクトップアプリのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html): [!DNL Experience Manager] デスクトップアプリでは、デジタルアセット管理(DAM)ソリューションがデスクトップにリンクされるので、 [!DNL Experience Manager] webユーザーインターフェイスで使用可能なファイルをデスクトップ上で直接開くことができます。 デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジーにより有効化されます。This guide explains key capabilities and recommended use of [!DNL Experience Manager] desktop app.
 * [Experience ManagerとCreative Cloudの統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md):デプロイメントは、複数の方法で [!DNL Experience Manager] と統合で [!DNL Creative Cloud] きます。 ベストプラクティスに従って統合ワークフローおよびアセット転送ワークフローを効率化すると、効率を最大化することができます。このガイドには、との統合に関するベストプラクティス [!DNL Assets] が含まれて [!DNL Adobe Creative Cloud]います。
