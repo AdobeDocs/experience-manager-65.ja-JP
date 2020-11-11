@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: d510decba9b2af23bab54c78779f98a36a6172d4
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 93%
@@ -19,7 +19,7 @@ ht-degree: 93%
 ---
 
 
-# パターン検出を使用したアップグレードの複雑性の評価{#assessing-the-upgrade-complexity-with-the-pattern-detector}
+# パターン検出を使用したアップグレードの複雑性の評価
 
 ## 概要 {#overview}
 
@@ -43,9 +43,10 @@ ht-degree: 93%
 >* 検出率を上げる
 >* ビジネスにとって重大なインスタンスの減速を避ける
 
-
->ユーザーアプリケーション、コンテンツ、設定の分野において、実稼働環境にできるだけ近い&#x200B;**ステージング環境で**&#x200B;実行することをお勧めします。
 >
+>
+ユーザーアプリケーション、コンテンツ、設定の分野において、実稼働環境にできるだけ近い&#x200B;**ステージング環境で**&#x200B;実行することをお勧めします。
+
 いくつかの方法を使用して、パターン検出の出力をチェックできます。
 
 * **Felix Inventory コンソールを使用：** 
@@ -56,7 +57,6 @@ ht-degree: 93%
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
-
 * **無効なJSON行インターフェイスを使用して、各行に個別のJSONドキュメントを生成します。
 
 これらの方法の詳細を次に示します。
@@ -211,7 +211,8 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 ```
 
 >[!NOTE]
-curl からの出力全体をファイルに保存した後、`jq` または `grep` を使用して情報タイプをフィルタリングする方法をお勧めします。
+>
+>curl からの出力全体をファイルに保存した後、`jq` または `grep` を使用して情報タイプをフィルタリングする方法をお勧めします。
 
 ## 検出範囲 {#scope}
 
@@ -224,5 +225,5 @@ curl からの出力全体をファイルに保存した後、`jq` または `gr
 * rep：ユーザーノードの互換性（OAuth 設定のコンテキストで）
 
 >[!NOTE]
-パターン検出はアップグレードに関する警告を正確に予測しようとします。ただし、シナリオによっては誤検知が発生する可能性があります。
-
+>
+>パターン検出はアップグレードに関する警告を正確に予測しようとします。ただし、シナリオによっては誤検知が発生する可能性があります。
