@@ -3,9 +3,9 @@ title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2636ce720849c0e01f70f6af64a5f21e00181d33
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2252'
 ht-degree: 88%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 88%
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は、Cloud Serviceと [!DNL Experience Manager] して機能します。 詳しくは、Cloud ServiceとしてのExperience Managerでの [接続されたアセット機能を参照してください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は、Cloud Serviceと [!DNL Experience Manager] して機能します。 でのこの機能の動作について詳しくは、「Cloud ServiceとしてのExperience Managerでの [!DNL Experience Manager as a Cloud Service]接続されたアセット機能 [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)」を参照してください。
 
    |  | [!DNL Sites] as a Cloud Service | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
    |---|---|---|---|
