@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
+source-git-commit: cc3a2ce7cb3dc020f5466a4b65cf5a9714e7a344
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1571'
 ht-degree: 69%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 69%
 
 # SharePoint コネクター{#sharepoint-connector}
 
-この記事には、Adobe JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0に関する詳細が含まれています。
+この記事には、AdobeJCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013、バージョン4.0に関する詳細が含まれています。
 
 SharePoint コネクターでは次の基本機能がサポートされています。
 
@@ -45,7 +45,7 @@ SharePoint コネクターでは次の基本機能がサポートされていま
 コネクターを導入する際には、次の作業をおこなってください。
 
 * Java 7 以降がインストールされていることを確認します。
-* パッケージ共有からコネクターパッケージ配布ファイルをダウンロードします。
+* コネクタパッケージ配布ファイルをソフトウェア配布からダウンロードします。
 * *cq-quickstart-6.4.0.jar* ファイルが格納されたディレクトリに有効な *license.properties* ファイルをコピーします。
 
 * .jar ファイルをダブルクリックまたはタップして AEM を起動するか、コマンドラインから AEM を起動します。
@@ -66,7 +66,7 @@ SharePoint コネクターでは次の基本機能がサポートされていま
 * CRX および SharePoint リポジトリに対するユーザー資格情報と権限
 * [サポートされているプラットフォーム](#supported-platforms)
 
-The SharePoint connector is available for downloading from [packageshare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673).
+The SharePoint connector is available for downloading from [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673).
 
 ### サポートされているプラットフォーム {#supported-platforms}
 
@@ -89,9 +89,8 @@ The SharePoint connector is available for downloading from [packageshare](https:
 
 ### 標準インストール {#standard-installation}
 
-AEM パッケージ共有は、製品の機能、例およびホットフィックスを配布するために使用されています。For details, see the [Package Share documentation](/help/sites-administering/package-manager.md#package-share).
+ソフトウェア配布は、製品の機能、例、およびホットフィックスの配布に使用します。 詳しくは、 [ソフトウェア配布ドキュメントを参照してください](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution)。
 
-To access Package Share on the AEM Welcome page, tap/click **Tools** and then select **Package Share**. 会社の電子メールアドレスを含む有効なAdobe IDが必要です。 また、アカウントへのログイン後に、パッケージ共有へのアクセスを申請してください。
 
 #### AEM との統合 {#integrating-with-aem}
 
@@ -102,7 +101,7 @@ To access Package Share on the AEM Welcome page, tap/click **Tools** and then se
 1. Tap/click **Install** from the package description page.
 1. From the **Install Package** dialog, tap/click **Install**.
 
-   **注意**: 管理者としてログインしていることを確認します。
+   **注意**:管理者としてログインしていることを確認します。
 
 1. When the package is installed, tap/click **Close**.
 
@@ -137,7 +136,7 @@ AEM では、前述の設定手順とは別に、もう 1 つ手順を実行し�
 
 AEMで許可リストバンドルを作成するには、次の手順を実行します。
 
-1. OSGi管理コンソールに移動します。 http://localhost:4502/system/console/configMgr
+1. OSGi管理コンソールに移動します。http://localhost:4502/system/console/configMgr
 1. 「Apache Sling Login Admin Whitelist」サービスを検索します。
 1. Select **Bypass the whitelist**.
 1. Add `com.day.cq.dam.cq-dam-jcr-connectors` in whitelist bundles default
@@ -197,10 +196,10 @@ SharePoint ではクラシック認証方式と要求ベースの認証方式を
 * 要求-基本
 * 要求-フォームベース
 
-AEM JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0.は、次のモードで動作する要求ベースの認証（Microsoftによって推奨される）をサポートしています。
+AEM JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0.は、次のモードで動作する要求ベースの認証（Microsoftが推奨）をサポートしています。
 
 * **基本／NTLM 認証**：コネクターでの最初の接続試行では、基本認証が使用されます。基本認証が使用できない場合は、NTLM ベースの認証に切り替えられます。
-* **フォームベースの認証**: Sharepointは、ログインフォーム（通常はWebページ）にユーザーが入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
+* **Formsベースの認証**:Sharepointは、ログインフォーム（通常はWebページ）にユーザーが入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
 
 **フォームベースの認証の設定**
 
@@ -247,7 +246,7 @@ admin グループにユーザーを追加するには：
 
 ### トークン認証の無効化 {#disable-token-authentication}
 
-1. Download and install the package `basic auth`. `zip` をパッケージ共有から取得します。
+1. Download and install the package `basic auth`. `zip` 」を参照してください。
 
 1. クイックスタートを閉じます。
 1. ファイル *\crx-quickstart\repository\repository.xml* を開きます。
