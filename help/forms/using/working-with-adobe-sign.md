@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
+source-git-commit: 11f3e2f7cb742340388bc9421a3ea8f25deabec5
 workflow-type: tm+mt
-source-wordcount: '3904'
+source-wordcount: '3949'
 ht-degree: 56%
 
 ---
@@ -163,6 +163,8 @@ AEM Forms の 1 つのインスタンスに対して、複数の Adobe Sign サ�
 1. 既に設定されている Adobe Sign クラウドサービスのリストで、任意のクラウドサービスを選択します。
 
    If the **Adobe Sign Cloud Service** list is empty, follow the [Configure Adobe Sign with AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) artilce to configure the service.
+
+   ツール/ `global` Cloud Services **[!UICONTROL /]** Adobe Signのフォルダーに存在するクラウドサービスのドロップダウンリスト ****。 さらに、このドロップダウンには、アダプティブフォームの作成時に「 **[!UICONTROL 設定コンテナ]** 」フィールドで選択したフォルダーに存在するクラウドサービスもリストされます。
 
 1. 「**署名者は署名できます**」ダイアログボックスで、署名順序を選択します。Adobe Sign の署名者は、アダプティブフォームを&#x200B;**連続**&#x200B;して（署名者順に）署名することも、**「同時」**&#x200B;に（順不同で）署名することもできます。
 
