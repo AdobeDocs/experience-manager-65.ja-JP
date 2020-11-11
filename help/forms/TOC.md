@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3716'
 ht-degree: 70%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 70%
       + [データ取得機能をインストールして設定する](using/installing-configuring-aem-forms-osgi.md)
       + [OSGiでのForms中心のワークフローのインストールと設定](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [インタラクティブ通信をインストールして設定する](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [自動Formsコンバージョンサービスのインストールと設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [automated forms conversionサービスのインストールと設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Install AEM Forms on JEE {#jee-installation}
       + [JEE上のAEM formsでサポートされるプラットフォーム](using/aem-forms-jee-supported-platforms.md)
       + [JEE上のAEM Formsの自動インストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
@@ -193,6 +193,7 @@ ht-degree: 70%
    + [印刷チャネルと Web チャネル](using/web-channel-print-channel.md)
    + [インタラクティブ通信の設定プロパティ](using/interactive-communication-configuration-properties.md)
    + [複数の対話型通信の生成](using/generate-multiple-interactive-communication-using-batch-api.md)
+   + [レイアウトモードを使用してコンポーネントのサイズを変更する](using/resize-using-layout-mode-interactive-communication.md)
 + ワークフロー {#workflows}
    + [OSGi 上の Forms 中心のワークフロー](using/aem-forms-workflow.md)
    + [OSGi 上の Forms 中心のワークフロー - ステップリファレンス](using/aem-forms-workflow-step-reference.md)
