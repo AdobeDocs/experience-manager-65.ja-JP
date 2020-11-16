@@ -47,7 +47,7 @@ window.addEventListener("FormBridgeInitialized",
 スクリプティングライブラリのバージョン番号を返す
 
 * **入力**：なし
-* **出力**: スクリプティングライブラリのバージョン番号
+* **出力**:スクリプティングライブラリのバージョン番号
 * **エラー**：なし
 
 **isConnected()** ：フォーム状態が初期化されたかどうかを確認します
@@ -62,7 +62,7 @@ window.addEventListener("FormBridgeInitialized",
 * **必要情報**:
 
    * **handler**：Form Bridge が接続された後に実行する関数
-   * **context**: handler *関数のコンテキスト(this)が設定されるオブジェクト* 。
+   * **context**:handler *関数のコンテキスト(this)が設定されるオブジェクト* 。
 
 * **出力**：なし
 * **エラー**：なし
@@ -76,8 +76,8 @@ window.addEventListener("FormBridgeInitialized",
       * **error**：エラーハンドラー関数
       * **success**：サクセスハンドラー関数。 この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
       * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
-      * **validationChecker**: サーバーから受信した検証エラーを確認するために呼び出す関数。 検証関数にはエラー文字列の配列が渡されます。
-      * **formState**: データXMLを返す必要があるXFAフォームのJSON状態。 指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
+      * **validationChecker**:サーバーから受信した検証エラーを確認するために呼び出す関数。 検証関数にはエラー文字列の配列が渡されます。
+      * **formState**:データXMLを返す必要があるXFAフォームのJSON状態。 指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
