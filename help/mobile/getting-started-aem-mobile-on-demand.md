@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 54%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->If you are not using AEM as your content managment source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>If you are not using AEM as your content managment source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
 
 AEM には、コンテンツをモバイルアプリに統合するための複数のツールがあります。
 
@@ -33,7 +36,7 @@ AEM Preflight アプリは、アプリおよびコンテンツを公開前にプ
 
 >[!NOTE]
 >
->To learn in-depth about Preflight app, see [Using the AEM Preflight app](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) in AEM Mobile On-Demand Services Help.
+>To learn in-depth about Preflight app, see [Using the AEM Preflight app](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html) in AEM Mobile On-Demand Services Help.
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -74,7 +77,7 @@ To get started with an Administrator&#39;s roles and responsibilities, See [Admi
 
 ## AEM 開発者 {#aem-developer}
 
-An **AEM developer** extends and creates custom web templates and components to enable the *AEM Author *to create beautiful and engaging mobile experiences. これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけではありません。ただし、デバイスとAEMサーバー（任意のリモートサーバー）の両方にオムニチャネルサービスエンドポイントと通信します。 AEM&#39;s built-in content editor is used by *AEM Authors* to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
+An **AEM developer** extends and creates custom web templates and components to enable the *AEM Author *to create beautiful and engaging mobile experiences. これらのテンプレートとコンポーネントは、モバイルアプリの世界向けに最適化されているだけではありません。ただし、デバイスとAEMサーバ（任意のリモートサーバ）の両方に対して、オムニチャネルサービスエンドポイントと通信します。 AEM&#39;s built-in content editor is used by *AEM Authors* to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
 
 AEM 開発者は、AEM Mobile On-Demand Services を使用してアプリを作成するときに以下のタスクを担当します。
 
@@ -91,7 +94,7 @@ To get started with Developer&#39;s roles and responsibilities, See [Developing 
 
 ## AEM 作成者 {#aem-author}
 
-***AEM Author *(または*Marketer *)**は、あらかじめ用意されているカスタムのテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加を行います。 AEM&#39;s built-in content editor is then used by*AEM Authors *to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
+***AEM作成者* (または *Marketer*)**は、カスタムの開発済みまたは標準搭載のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加を行います。 AEM&#39;s built-in content editor is then used by *AEM Authors* to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
 
 AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作成する場合、以下のトピックについて理解しておく必要があります。
 
@@ -105,5 +108,5 @@ To get started with an Author&#39;s roles and responsibilities, See [Authoring A
 
 >[!NOTE]
 >
->また、AEM 作成者は、権利付与の設定、カードおよびレイアウトの作成、プッシュ通知の送信も担当します。AEM Mobile でのコンテンツのオーサリング、記事およびコレクションの管理、バナー、カード、レイアウトの作成方法について詳しくは、[AEM Mobile On-Demand ポータル](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2)を参照してください。
+>また、AEM 作成者は、権利付与の設定、カードおよびレイアウトの作成、プッシュ通知の送信も担当します。AEM Mobile でのコンテンツのオーサリング、記事およびコレクションの管理、バナー、カード、レイアウトの作成方法について詳しくは、[AEM Mobile On-Demand ポータル](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html#dynamicpod_reference_2)を参照してください。
 
