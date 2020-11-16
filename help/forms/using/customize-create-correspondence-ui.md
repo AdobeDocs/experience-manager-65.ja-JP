@@ -11,6 +11,9 @@ discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '1099'
+ht-degree: 73%
 
 ---
 
@@ -34,7 +37,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 1. Create the appropriate [folder structure in CRX](#creatingfolderstructure).
 1. [CRXで作成したフォルダーに](#uploadlogo) 、新しいロゴファイルをアップロードします。
 
-1. [CRXでCSSを設定し](#createcss) 、新しいロゴを参照します。
+1. [CRX上にCSS](#createcss) （WebSphere版）を設定し、新しいロゴを参照します。
 1. Clear the browser history and [refresh the Create Correspondence UI](#refreshccrui).
 
 ## 必要なフォルダ構造を作成する {#creatingfolderstructure}
@@ -45,7 +48,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 /appsブランチ（フォルダー構造）:
 
-* システムの更新時にそれらのファイルが消えても問題がないことを確認します。アップグレード、機能パック、またはホットフィックスの場合、/libsブランチが更新され、変更を/libsブランチでホストすると、変更が上書きされます。
+* システムの更新時にそれらのファイルが消えても問題がないことを確認します。アップグレード、機能パック、またはホットフィックスの場合、/libsブランチが更新され、変更を/libsブランチにホストする場合は、変更が上書きされます。
 * これは、現在の system/branch を保護するための機能です。このフォルダは、カスタムファイルのデフォルトの保存場所をそのまま使用した場合に、誤ってかき乱すおそれもあります。
 * AEM がリソースを必要としている場合は、優先度が高くなるようリソースを調整してください。AEMは、最初に/appsブランチを検索し、次に/libsブランチを検索してリソースを検索するように設定されています。 このメカニズムにより、システムではユーザーのオーバーレイ（および、そこに定義されたカスタマイズ内容）を使用します。
 
@@ -54,7 +57,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
 1. apps フォルダーにある defaultApp フォルダーを開き、名前「`css`」のフォルダを作成します。ここでのパスや構造は、ccrui フォルダ内の css フォルダーと類似しています。
 
-   CSSフォルダーの作成手順：
+   cssフォルダーの作成手順：
 
    1. Right-click the **css** folder at the following path and select **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
@@ -106,7 +109,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 ## CRX に新しいロゴをアップロードする {#uploadlogo}
 
-CRX にカスタムロゴファイルをアップロードします。ロゴの描画には、標準的なHTML規則が適用されます。サポートされる画像ファイル形式は、AEM Formsへのアクセスに使用しているブラウザーに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
+CRX にカスタムロゴファイルをアップロードします。ロゴの描画には、標準的なHTML規則が適用されます。サポートされる画像ファイル形式は、AEM Formsへのアクセスに使用しているブラウザに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
 
 * ロゴ画像のデフォルトの大きさは 48×48 ピクセルです。画像はこのサイズに近いか、または 48×48 ピクセルよりも大きいことを確認してください。
 * ロゴ画像の高さよりが 50 ピクセルを超えている場合、「通信作成用」のユーザーインターフェイスでは、ヘッダの高さである 50 ピクセルに合わせて画像を縮小表示します。画像を縮小表示する際も、「通信作成用」のユーザーインターフェイスでは画像の縦横比が維持されます。
@@ -139,11 +142,11 @@ CRX にカスタムロゴファイルをアップロードします。ロゴの�
 
    「Edit jcr:data」のダイアログが表示されます。
 
-   次に、newlogo.pngフォルダーをクリックし、重複がjcr:content(dim option)をクリックして、タイプnt:resourceを設定します。 プロパティが表示されていない場合は、まず、名前が「jcr:content」のプロパティを作成します。
+   次に、newlogo.pngフォルダーをクリックし、重複がjcr:content(dim option)をクリックして、タイプをnt:resourceに設定します。 プロパティが表示されていない場合は、まず、名前が「jcr:content」のプロパティを作成します。
 
 1. 「jcr:data の編集」ダイアログで「**参照**」をクリックし、ロゴとして使用する画像ファイルを選択します（ここでは、「CustomLogo.png」）。
 
-   サポートされる画像ファイル形式は、AEM Formsへのアクセスに使用しているブラウザーに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
+   サポートされる画像ファイル形式は、AEM Formsへのアクセスに使用しているブラウザに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
 
    ![カスタムロゴファイルのサンプル](assets/geometrixx-outdoors.png)
 
