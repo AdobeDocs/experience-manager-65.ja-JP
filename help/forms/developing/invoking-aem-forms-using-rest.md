@@ -20,23 +20,23 @@ ht-degree: 4%
 
 # REST要求を使用したAEM Formsの呼び出し {#invoking-aem-forms-using-rest-requests}
 
-Representational State Transfer（REST）要求で呼び出せるように、Workbench で作成したプロセスを設定できます。REST 要求は HTML ページから送信されます。つまり、REST要求を使用して、Webページから直接Formsプロセスを呼び出すことができます。 例えば、Webページの新しいインスタンスを開くことができます。 次に、Formsプロセスを呼び出し、HTTP POST要求で送信されたデータを含むレンダリングされたPDFドキュメントを読み込みます。
+Representational State Transfer（REST）要求で呼び出せるように、Workbench で作成したプロセスを設定できます。REST 要求は HTML ページから送信されます。つまり、REST要求を使用して、Webページから直接Formsプロセスを呼び出すことができます。 例えば、Webページの新しいインスタンスを開くことができます。 次に、Formsプロセスを呼び出し、HTTPPOST要求で送信されたデータを含むレンダリングされたPDFドキュメントを読み込みます。
 
-2種類のHTMLクライアントが存在します。 最初のHTMLクライアントは、JavaScriptで記述されるAJAXクライアントです。 2番目のクライアントは、送信ボタンを含むHTMLフォームです。 RESTクライアントとして使用できるのは、HTMLベースのクライアントアプリケーションだけではありません。 HTTP要求をサポートする任意のクライアントアプリケーションは、REST呼び出しを使用してサービスを呼び出すことができます。 例えば、PDFフォームからREST呼び出しを使用してサービスを呼び出すことができます。 (AcrobatからのMyApplication/EncryptDocumentプロセスの [呼び出しを参照](#rest-invocation-examples))。
+2種類のHTMLクライアントが存在します。 最初のHTMLクライアントは、JavaScriptで記述されるAJAXクライアントです。 2番目のクライアントは、送信ボタンを含むHTMLフォームです。 RESTクライアントとして使用できるのは、HTMLベースのクライアントアプリケーションだけではありません。 HTTP要求をサポートする任意のクライアントアプリケーションは、REST呼び出しを使用してサービスを呼び出すことができます。 例えば、PDFフォームからREST呼び出しを使用してサービスを呼び出すことができます。 (「AcrobatからのMyApplication/EncryptDocumentプロセスの [呼び出し](#rest-invocation-examples)」を参照)。
 
 REST要求を使用する場合は、Formsサービスを直接呼び出さないことをお勧めします。 代わりに、Workbenchで作成されたプロセスを呼び出します。 REST呼び出し用のプロセスを作成する場合は、プログラム型開始ポイントを使用します。 この場合、RESTエンドポイントは自動的に追加されます。 Workbenchでのプロセスの作成について詳しくは、「Workbenchの [使用](https://www.adobe.com/go/learn_aemforms_workbench_63)」を参照してください。
 
-RESTを使用してサービスを呼び出す場合は、AEM formsのユーザー名とパスワードの入力を求められます。 ただし、ユーザー名とパスワードを指定しない場合は、サービスセキュリティを無効にできます。
+RESTを使用してサービスを呼び出すと、AEM formsのユーザー名とパスワードの入力を求められます。 ただし、ユーザー名とパスワードを指定しない場合は、サービスセキュリティを無効にできます。
 
-RESTを使用してFormsサービスを呼び出す（プロセスがアクティブ化されるとプロセスがサービスになります）には、RESTエンドポイントを設定します。 ( [管理ヘルプの「エンドポイントの管理」を参照](https://www.adobe.com/go/learn_aemforms_admin_63))。
+RESTを使用してFormsサービスを呼び出す（プロセスがアクティブ化されるときにサービスになる）には、RESTエンドポイントを設定します。 ( [管理ヘルプの「エンドポイントの管理」を参照](https://www.adobe.com/go/learn_aemforms_admin_63))。
 
-RESTエンドポイントを設定した後、HTTP GETメソッドまたはPOSTメソッドを使用してFormsサービスを呼び出すことができます。
+RESTエンドポイントを設定した後、HTTPGETメソッドまたはPOSTメソッドを使用して、Formsサービスを呼び出すことができます。
 
 ```java
  action="https://hiro-xp:8080/rest/services/[ServiceName]/[OperationName]:[ServiceVersion]" method="post" enctype="multipart/form-data"
 ```
 
-必須の `ServiceName` 値は、呼び出すFormsサービスの名前です。 オプションの `OperationName` 値は、サービスの操作の名前です。 この値を指定しない場合、この名前はデフォルトで `invoke`、プロセスを開始する操作名になります。 オプションの `ServiceVersion` 値は、X.Y形式でエンコードされたバージョンです。 この値を指定しない場合は、最新バージョンが使用されます。 値をにすることもでき `enctype` ま `application/x-www-form-urlencoded`す。
+必須 `ServiceName` 値は、呼び出すFormsサービスの名前です。 オプションの `OperationName` 値は、サービスの操作の名前です。 この値を指定しない場合、この名前はデフォルトで `invoke`、プロセスを開始する操作名になります。 オプションの `ServiceVersion` 値は、X.Y形式でエンコードされたバージョンです。 この値を指定しない場合は、最新バージョンが使用されます。 値をにすることもでき `enctype` ま `application/x-www-form-urlencoded`す。
 
 ## サポートされるデータタイプ {#supported-data-types}
 
@@ -49,7 +49,7 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
    これらのデータ型は、一般に、Workbenchで作成されたプロセスへの入力値として受け入れられます。
 
-   HTTP POSTメソッドを使用してFormsサービスを呼び出した場合、HTTP要求本文内で引数が渡されます。 AEM Formsサービスの署名に文字列入力パラメーターが含まれている場合、要求本文には、入力パラメーターのテキスト値を含めることができます。 サービスの署名で複数の文字列パラメーターが定義されている場合、要求は、HTTP `application/x-www-form-urlencoded` 表記の後に、フォームのフィールド名として使用されているパラメーター名を記述することができます。
+   HTTPPOSTメソッドを使用してFormsサービスを呼び出した場合、引数はHTTP要求本文内で渡されます。 AEM Formsサービスの署名に文字列入力パラメーターがある場合、要求本文には、入力パラメーターのテキスト値を含めることができます。 サービスの署名で複数の文字列パラメーターが定義されている場合、要求は、HTTP `application/x-www-form-urlencoded` 表記の後に、フォームのフィールド名として使用されているパラメーター名を記述することができます。
 
    Formsサービスが文字列パラメーターを返す場合、結果は出力パラメーターのテキスト表現になります。 サービスが複数の文字列パラメーターを返す場合、出力パラメーターを次の形式でエンコードしたXMLドキュメントが返されます。
    ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
@@ -58,11 +58,11 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
    >
    >この `output-paramater1` 値は、出力パラメーター名を表します。
 
-   Formsサービスにパラメーターが必要な場合は、HTTP POSTメソッドを使用した場合のみ、サービスを呼び出すことができます。 `com.adobe.idp.Document` サービスに1つのパラメーターが必要な場合は、HTTP要求本文が入力ドキュメントオブジェクトのコンテンツになります。 `com.adobe.idp.Document`
+   Formsサービスにパラメーターが必要な場合は、HTTPPOSTメソッドを使用してのみサービスを呼び出すことができます。 `com.adobe.idp.Document` サービスで1つの `com.adobe.idp.Document` パラメーターが必要な場合、HTTP要求本文は入力ドキュメントオブジェクトのコンテンツになります。
 
-   AEM Formsサービスに複数の入力パラメーターが必要な場合、HTTP要求本文は、RFC 1867で定義されているマルチパート形式のMIMEメッセージである必要があります。 （RFC 1867は、WebブラウザーがファイルをWebサイトにアップロードする際に使用する標準です）。 各入力パラメーターは、マルチパート形式のメッセージの個別の部分として送信し、 `multipart/form-data` 形式でエンコードする必要があります。 各パーツの名前は、パラメータの名前と一致する必要があります。
+   AEM Formsサービスが複数の入力パラメーターを必要とする場合、HTTP要求本文は、RFC 1867で定義されているマルチパート形式のMIMEメッセージである必要があります。 （RFC 1867は、WebブラウザーがファイルをWebサイトにアップロードする際に使用する標準です）。 各入力パラメーターは、マルチパート形式のメッセージの個別の部分として送信し、 `multipart/form-data` 形式でエンコードする必要があります。 各パーツの名前は、パラメータの名前と一致する必要があります。
 
-   リストとマップは、Workbenchで作成されたAEM Formsプロセスへの入力値としても使用されます。 その結果、RESTリクエストを使用する場合は、これらのデータ型を使用できます。 Java配列は、AEM Formsプロセスの入力値として使用されないため、サポートされません。
+   リストとマップは、Workbenchで作成されたAEM Formsプロセスへの入力値としても使用されます。 その結果、RESTリクエストを使用する場合は、これらのデータ型を使用できます。 Java配列は、AEM Formsプロセスの入力値として使用されていないため、サポートされません。
 
    入力パラメーターがリストの場合、RESTクライアントは、リストーの各項目に対して1回ずつパラメーターを繰り返し指定することで、入力パラメーターを送信できます。 例えば、Aがドキュメントのリストである場合、入力はAという名前の複数のパーツから成るマルチパートメッセージである必要があります。この場合、Aという名前の各パーツは、入力リスト内のアイテムになります。 Bが文字列のリストである場合、入力はBという名前の複数のフィールドから成る `application/x-www-form-urlencoded` メッセージにすることができます。この場合、Bという名前の各フォームフィールドは、入力リスト内の項目になります。
 
@@ -89,9 +89,9 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
 ## 非同期呼び出し {#asynchronous-invocations}
 
-人間中心の長期間有効なプロセスなど、一部のAEM Formsサービスの完了に長い時間が必要になります。 これらのサービスは、非ブロッキング方式で非同期に呼び出すことができます。 （[人間中心の長期間有効なプロセスの呼び出し](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)を参照。）
+人間中心の長期間有効なプロセスなど、一部のAEM Formsサービスでは、完了に長い時間が必要です。 これらのサービスは、非ブロッキング方式で非同期に呼び出すことができます。 （[人間中心の長期間有効なプロセスの呼び出し](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)を参照。）
 
-次の例に示すように、AEM Formsサービスは、呼び出しURL `services` の代わりに使用す `async_invoke` ることで、非同期で呼び出すことができます。
+次の例に示すように、AEM Formsサービスは、呼び出しURL `services` のを代入す `async_invoke` ることで、非同期で呼び出すことができます。
 
 ```java
  http://localhost:8080/rest/async_invoke/SomeService. SomeOperation?integer_input_variable=123&string_input_variable=abc
@@ -145,7 +145,7 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
 ## セキュリティと認証 {#security-and-authentication}
 
-安全な転送でREST呼び出しを行うために、AEM forms管理者は、J2EEアプリケーションサーバーのホストAEM FormsでHTTPSプロトコルを有効にできます。 この設定は、J2EEアプリケーションサーバーに固有のものです。 formsサーバー設定の一部ではありません。
+安全な転送でREST呼び出しを行うために、AEM forms管理者は、AEM FormsをホストするJ2EEアプリケーションサーバーでHTTPSプロトコルを有効にできます。 この設定は、J2EEアプリケーションサーバーに固有のものです。formsサーバー設定の一部ではありません。
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
 ## REST呼び出しをサポートするAEM Formsサービス {#aem-forms-services-that-support-rest-invocation}
 
-サービスを直接呼び出すのではなく、Workbenchを使用して作成したプロセスを呼び出すことをお勧めしますが、いくつかのAEM Formsサービスでは、REST呼び出しをサポートしています。 サービスを直接呼び出すのではなく、プロセスを直接呼び出すことをお勧めする理由は、プロセスを呼び出す方が効率的なためです。 次のシナリオを考えてみましょう。 RESTクライアントからポリシーを作成するとします。 つまり、RESTクライアントでポリシー名、オフラインリース期間などの値を定義する必要があります。
+サービスを直接呼び出すのではなく、Workbenchを使用して作成したプロセスを呼び出すことをお勧めしますが、REST呼び出しをサポートするAEM Formsサービスがいくつかあります。 サービスを直接呼び出すのではなく、プロセスを直接呼び出すことをお勧めする理由は、プロセスを呼び出す方が効率的なためです。 次のシナリオを考えてみましょう。 RESTクライアントからポリシーを作成するとします。 つまり、RESTクライアントでポリシー名、オフラインリース期間などの値を定義する必要があります。
 
 ポリシーを作成するには、 `PolicyEntry` オブジェクトなどの複雑なデータ型を定義する必要があります。 オブジェクトは、ポリシーに関連付けられた権限などの属性を定義します。 `PolicyEntry` (ポリシーの [作成を参照](/help/forms/developing/protecting-documents-policies.md#creating-policies))。
 
@@ -174,14 +174,14 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 次に示すREST呼び出しの例を示します。
 
 * AEM Formsプロセスにブール値を渡す
-* AEM Formsプロセスに日付値を渡す
-* ドキュメントをAEM Formsプロセスに渡す
-* ドキュメント値とテキスト値をAEM Formsプロセスに渡す
-* 定義済みリスト値をAEM Formsプロセスに渡す
+* 日付値をAEM Formsプロセスに渡す
+* AEM Formsプロセスにドキュメントを渡す
+* AEM Formsプロセスにドキュメント値とテキスト値を渡す
+* AEM Formsプロセスに定義済みリスト値を渡す
 * RESTを使用したMyApplication/EncryptDocumentプロセスの呼び出し
-* AcrobatからのMyApplication/EncryptDocumentプロセスの呼び出し
+* AcrobatからMyApplication/EncryptDocumentプロセスを呼び出す
 
-   各例では、様々なデータ型をAEM Formsプロセスに渡す方法を示します
+   各例では、様々なデータ型をAEM Formsプロセスに渡す方法を示します。
 
 **プロセスにブール値を渡す**
 
@@ -224,7 +224,7 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
 **プロセスにドキュメントを渡す**
 
-次のHTMLの例は、PDFドキュメントを必要とするという名前のAEM Formsプロセス `MyApplication/EncryptDocument` を呼び出します。 このプロセスについて詳しくは、「MTOMを使用したAEM Formsの [呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)」を参照してください。
+次のHTMLの例は、PDFドキュメントを必要とする名前のAEM Formsプロセス `MyApplication/EncryptDocument` を呼び出します。 このプロセスについて詳しくは、「MTOMを使用したAEM Formsの [呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)」を参照してください。
 
 ```html
  <html>
@@ -244,7 +244,7 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
 **プロセスにドキュメント値とテキスト値を渡す**
 
-次のHTMLの例は、という名前のAEM Formsプロセスを呼び出します。このプロセスには、ドキュメント `RestTest3` と2つのテキスト値が必要です。 HTML Postメソッドが使用されていることに注意してください。
+次のHTMLの例は、ドキュメントと2つのテキスト値を必要とする名前のAEM Formsプロセス `RestTest3` を呼び出します。 HTML Postメソッドが使用されていることに注意してください。
 
 ```html
  <html>
@@ -285,7 +285,7 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
 **RESTを使用したMyApplication/EncryptDocumentプロセスの呼び出し**
 
-RESTを使用して、MyApplication/EncryptDocumentという名前の短時間のみ有効なAEM Forms *を呼び出すことができます* 。
+RESTを使用して、MyApplication/EncryptDocumentという名前のAEM Formsの短時間のみ有効なプロセス *を呼び出すことができます* 。
 
 >[!NOTE]
 >
@@ -313,9 +313,9 @@ RESTを使用して、MyApplication/EncryptDocumentという名前の短時間�
     </body>
    ```
 
-**AcrobatからのMyApplication/EncryptDocumentプロセスの呼び出し** {#invoke-process-acrobat}
+**AcrobatからMyApplication/EncryptDocumentプロセスを呼び出す** {#invoke-process-acrobat}
 
-Formsプロセスは、REST要求を使用してAcrobatから呼び出すことができます。 例えば、MyApplication/EncryptDocument ** プロセスを呼び出すことができます。 AcrobatからFormsプロセスを呼び出すには、Designer内のXDPファイルに送信ボタンを配置します。 （「[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照）。
+REST要求を使用して、AcrobatからFormsプロセスを呼び出すことができます。 例えば、MyApplication/EncryptDocument ** プロセスを呼び出すことができます。 AcrobatからFormsプロセスを呼び出すには、Designer内のXDPファイルに送信ボタンを配置します。 （「[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照）。
 
 次の図に示すように、ボタンの「 *Submit to URL* 」フィールド内でプロセスを呼び出すURLを指定します。
 
@@ -323,4 +323,4 @@ Formsプロセスは、REST要求を使用してAcrobatから呼び出すこと�
 
 プロセスで入力値としてPDFドキュメントが必要な場合は、前の図に示すように、必ずPDFとしてフォームを送信してください。 また、プロセスを正常に呼び出すには、プロセスがPDFドキュメントを返す必要があります。 そうしないと、Acrobatは戻り値を処理できず、エラーが発生します。 入力プロセス変数の名前を指定する必要はありません。 例えば、MyApplication/EncryptDocument *プロセスには、という名前の入力変数があ*`inDoc`ります。 フォームがPDFとして送信される限り、inDocを指定する必要はありません。
 
-フォームデータをXMLとしてFormsプロセスに送信することもできます。XMLデータを送信するには、ドロップダウンでXMLが指定されていることを確認し `Submit As` ます。 プロセスの戻り値はPDFドキュメントである必要があるので、PDFドキュメントはAcrobatで表示されます。
+また、フォームデータをXMLとしてFormsプロセスに送信することもできます。XMLデータを送信するには、ドロップダウンでXMLが指定されていることを確認し `Submit As` ます。 プロセスの戻り値はPDFドキュメントである必要があるので、PDFドキュメントはAcrobatに表示されます。
