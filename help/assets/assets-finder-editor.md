@@ -29,7 +29,7 @@ ht-degree: 72%
 
 デジタルアセット管理は、ますます広く使用されるようになっています。When moving from a small-scale solution for a small user group of professionally trained users - for example photographers or taxonomists - to larger and more diverse user groups - for example business users, WCM authors, journalists, and so on - the powerful user interface of [!DNL Adobe Experience Manager Assets] for professional users can provide too much information and stakeholders start to request specific user interfaces or applications to access the digital assets that are of relevance to them.
 
-アセット中心のアプリケーションは、社員が展示会の訪問や公共のWebサイトの報道機関から写真をアップロードできる、イントラネット内の単純なフォトギャラリーです。 アセット中心のアプリケーションは、買い物かご、チェックアウト、検証プロセスなどの完全なソリューションにも拡張できます。
+アセット中心のアプリケーションは、社員が展示会の訪問や公共のWebサイトの報道機関から写真をアップロードできる、イントラネット内の単純なフォトギャラリーです。アセット中心のアプリケーションは、買い物かご、チェックアウト、検証プロセスなどの完全なソリューションにも拡張できます。
 
 アセット中心型アプリケーションの作成の大部分は、コーディングを必要としない設定プロセスとなります。ここでは、ユーザーグループとそのニーズ、使用されるメタデータに関する知識のみが必要となります。Asset-centric applications created with [!DNL Assets] are extensible: with moderate coding effort reusable components for searching, viewing, and modifying assets can be created.
 
@@ -252,7 +252,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 | コンポーネント | 説明 |
 |---|---|
-| **[!UICONTROL メタデータフォーム]と[!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
+| **[!UICONTROL メタデータフォーム] と [!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
 | **[!UICONTROL サブアセット]** | サブアセットをカスタマイズできるようにします。 |
 | **タグ** | ユーザーがタグを選択してアセットに追加できるようにします。 |
 | **[!UICONTROL サムネール]** | アセットのサムネールとファイル名を表示し、代替テキストを追加できるようにします。ここでは、アセットエディターのアクションを追加することもできます。 |
@@ -425,7 +425,7 @@ With [!DNL Experience Manager Assets] you can make changes to several assets at 
 
    「**OK**」をクリックして、変更内容をフォームに書き込みます。「**Tags**」フィールドの横にあるチェックボックスが自動的にオンになります。
 
-1. 「説明」フィールドを編集します。 例えば、次の値に設定します。
+1. 「説明」フィールドを編集します。例えば、次の値に設定します。
 
    `This is a common description`
 
@@ -435,4 +435,4 @@ With [!DNL Experience Manager Assets] you can make changes to several assets at 
 
 1. 「**Update Metadata**」をクリックしてフォームを送信し、すべてのアセットの変更内容を保存します。
 
-   注意： チェック済みのメタデータのみが変更されます。
+   注意：チェック済みのメタデータのみが変更されます。
