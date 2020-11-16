@@ -12,6 +12,9 @@ discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '646'
+ht-degree: 70%
 
 ---
 
@@ -38,7 +41,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    >
    >HTML5 フォームログディレクトリ内にログを生成する場合は、ファイル名の前に ../logs/ を追加します。
 
-1. Change **Logger** to **HTMLFormsPerfLogger**. 「**保存**」をクリックします。
+1. **Logger** を **HTMLFormsPerfLoggerに変更します**。 「**保存**」をクリックします。
 
 ## クライアントロギングの設定 {#configuring-client-logging}
 
@@ -49,7 +52,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ### 要求パラメーターの使用によるログの有効化 {#enabling-logging-using-request-parameter}
 
-この方法を使用して、特定の要求に対するログを生成できます。リクエストパラメータの名前は「log」です。 ログURLは次のとおりです。
+この方法を使用して、特定の要求に対するログを生成できます。リクエストパラメータの名前は&#39;logです。 ログURLは次のとおりです。
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -96,7 +99,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   </tr>
   <tr>
    <td>2</td>
-   <td>エラー<br type="_moz" /> </td>
+   <td>ERROR<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>3</td>
@@ -169,7 +172,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 >
 >a（xfa）、b（xfaView）、および c（xfaPerf）のそれぞれのログカテゴリに対するデフォルトログレベルは 2（エラー）です。そのため、ログ設定 2-b6 では、異なるカテゴリのログレベルは：
 >a (xfa):2（デフォルトのレベルERROR）
->b (xfaView):6（ユーザー指定のTRACE）
+>b (xfaView):6(ユーザー指定TRACE)
 >a (xfaPerf):2（デフォルトのレベルERROR）
 
 ### Configuration Manager の使用によるログの有効化 {#enabling-logging-using-configuration-manager}
@@ -186,7 +189,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## ログのアップロード {#uploading-logs}
 
-宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 At this level, all logs are collected in a JS object on client side and if form is rendered with default Profile then a **Send Logs** button appears to the left of **Highlight Existing Fields** button in toolbar. ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーにポストされ、サーバー上の設定済みのエラーログファイルに記録されます。
+宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 At this level, all logs are collected in a JS object on client side and if form is rendered with default Profile then a **Send Logs** button appears to the left of **Highlight Existing Fields** button in toolbar. ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーに投稿され、サーバー上の設定済みのエラーログファイルに記録されます。
 
 デフォルトでは、すべての情報が /crx-repository/logs/ ディレクトリに保存されている error.log ファイルに追加されます。
 
@@ -199,10 +202,10 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. **ログレベル**&#x200B;をデバッグに変更します。 
 
-1. Specify path and name of the **Log File**.
+1. **ログファイルのパスと名前を指定します**。
 
    >[!NOTE]
    >
    >他のログファイルが保存されている同じディレクトリにログを作成するには、Log Files プロパティで ../logs/&lt;filename> を指定します。
 
-1. Change the **Logger** to **HTMLFormsPerfLogger** and click **Save**.
+1. **LoggerをHTMLForms** PerfLoggerに変更し、 **「** 保存 ****」をクリックします。
