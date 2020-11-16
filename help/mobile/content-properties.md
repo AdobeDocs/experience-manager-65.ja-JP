@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 translation-type: tm+mt
 source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
+workflow-type: tm+mt
+source-wordcount: '369'
+ht-degree: 51%
 
 ---
 
@@ -29,24 +32,24 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 ## 共通統合プロパティ {#common-integration-properties}
 
-| **プロパティ名** | **タイプ** | **デフォルトまたは期待値** | **説明** |
+| **プロパティ名** | **型** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | String |  | AEM Mobileにアップロードされたか、AEM Mobileから読み込まれた後、AEMによって割り当てられ、保存されます。 |
-| dps-resourceType | String | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
-| dps-version | String |  | AEM Mobileエンティティのバージョン（完全なaemm-idにも含まれます） |
-| dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/読み込みの日付 |
+| dps-id | String |  | aem mobileによって割り当てられ、1度AEM MobileにアップロードされるかAEM Mobileから輸入され、AEMによって保管される |
+| dps-resourceType | String | dps:Article | dps:Banner | dps:Collection | entity typeプロパティ |
+| dps-version | String |  | aem mobileエンティティのバージョン（完全なaemm-idに含まれる） |
+| dps-lastSynced | 日付 |  | aem mobileからAEMへの最後の同期/インポートの日付 |
 | dps-lastUploaded | 日付 |  | aemからAEM Mobileへの最後のアップロード日 |
-| dps-lastUploadedBy | 文字列：userid |  | AEMからAEM Mobileへの最後のアップロード要求を実行したIDユーザー |
+| dps-lastUploadedBy | String:userid |  | aemからAEM Mobileへの最後のアップロード要求を実行したidユーザー |
 
 ## コアメタデータプロパティ {#core-metadata-properties}
 
-| プロパティ名 | タイプ | デフォルトまたは期待値 |
+| プロパティ名 | 型 | デフォルト値または期待値 |
 |--- |--- |--- |
 | dps-title | String |  |
 | dps-shortTitle | String |  |
 | dps-abstract | String |  |
 | dps-shortAbstract | String |  |
-| DPS部門 | String |  |
+| dps-department | String |  |
 | dps-カテゴリ | String |  |
 | dps-keywords | String[] |  |
 | dps-internalKeywords | String[] |  |
@@ -54,7 +57,7 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 ### 記事 {#articles}
 
-| **プロパティ名** | **タイプ** | **デフォルトまたは期待値** |
+| **プロパティ名** | **型** | **デフォルト値または期待値** |
 |---|---|---|
 | dps-author | String |  |
 | dps-authorURL | String |  |
@@ -67,14 +70,14 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 ### バナー {#banners}
 
-| **プロパティ名** | **タイプ** | **デフォルトまたは期待値** |
+| **プロパティ名** | **型** | **デフォルト値または期待値** |
 |---|---|---|
 | dps-tapAction |  | {webLink}からのTapAction |
 | dps-tapActionUrl |  |  |
 
 ### コレクション {#collections}
 
-| プロパティ名 | タイプ | デフォルトまたは期待値 |
+| プロパティ名 | 型 | デフォルト値または期待値 |
 |--- |--- |--- |
 | dps-productId | String |  |
 | dps-readingPosition | String | {&quot;reset&quot;,&quot;retain&quot;}から |
@@ -87,26 +90,26 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 ### 共通ノード {#common-nodes}
 
-| ノード名 | タイプ | デフォルトまたは期待値 | 説明 |
+| ノード名 | 型 | デフォルト値または期待値 | 説明 |
 |--- |--- |--- |--- |
-| image | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
+| 画像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### エンティティ {#entities}
 
 #### 記事 {#articles-1}
 
-| ノード名 | タイプ | 期待値のデフォルト | 説明 |
+| ノード名 | 型 | 期待値のデフォルト | 説明 |
 |--- |--- |--- |--- |
 | ソーシャルシェアの画像 |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### バナー {#banners-1}
 
-| ノード名 | タイプ | 期待値のデフォルト | 説明 |
+| ノード名 | 型 | 期待値のデフォルト | 説明 |
 |---|---|---|---|
 | 該当なし |  |  |  |
 
 #### コレクション {#collections-1}
 
-| ノード名 | タイプ | 期待値のデフォルト | 説明 |
+| ノード名 | 型 | 期待値のデフォルト | 説明 |
 |--- |--- |--- |--- |
 | background-image | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
