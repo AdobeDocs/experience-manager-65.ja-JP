@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 89%
 
 ---
 
@@ -54,7 +57,7 @@ AEM Forms では、リポジトリ内にあるフォームやドキュメント�
 
    >[!NOTE]
    >
-   >アセットを選択するには、デフォルトのカードビューをリストビューに切り替えます。「 ![aem6forms_viewlist](assets/aem6forms_viewlist.png) 」または「aem6forms ![_viewcard](assets/aem6forms_viewcard.png) 」をクリックして表示を切り替えます。
+   >アセットを選択するには、デフォルトのカードビューをリストビューに切り替えます。「 ![aem6forms_viewlist](assets/aem6forms_viewlist.png) 」または「 ![aem6forms_viewcard](assets/aem6forms_viewcard.png) 」をクリックして表示を切り替えます。
 
 1. プレビューをクリックすると、選択されているアセットタイプで使用できるプレビューオプションが表示されます。必要なオプションをクリックすると、選択されているアセットが新しいタブにレンダリングされます。
 
