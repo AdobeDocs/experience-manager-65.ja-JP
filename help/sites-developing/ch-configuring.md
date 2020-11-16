@@ -251,7 +251,7 @@ Edit the ContextHub&#39;s configuration and check the option **Debug**
 
 Use CRXDE Lite to set the property `debug` to **true** under:
 
-* `/conf/global/settings/cloudsettings` または
+* `/conf/global/settings/cloudsettings` か  のどちらかにする必要があります。
 * `/conf/<tenant>/settings/cloudsettings`
 
 >[!NOTE]
@@ -286,5 +286,5 @@ The `yyyymmdd` portion of the node name is the date when the upgrade was perform
 
 To recover your ContextHub configurations, use CRXDE Lite to copy the nodes that represent your stores, UI modes, and UI modules from below the `default-pre-upgrade_yyyymmdd_xxxxxx` node to below:
 
-* `/conf/global/settings/cloudsettings` または
+* `/conf/global/settings/cloudsettings` か  のどちらかにする必要があります。
 * `/conf/<tenant>/settings/cloudsettings`
