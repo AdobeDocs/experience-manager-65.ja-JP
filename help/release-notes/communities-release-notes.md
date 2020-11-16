@@ -67,7 +67,7 @@ AEM 6.5 以降の Communities では、様々なコミュニティサイトや�
 The enablement functionality of AEM 6.5 Communities support Shareable Content Object Reference Model [(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) engine.
 
 * 有効化コンポーネントでのキーボードナビゲーションのサポート
-* AEM Communitiesの有効化コンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、アクセシビリティを向上させるためにキーボードナビゲーションをサポートしています。
+* AEM Communitiesの有効化コンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、キーボードナビゲーションをサポートし、アクセシビリティを向上しました。
 
 ### その他の機能強化 {#other-enhancements}
 
