@@ -1,8 +1,8 @@
 ---
 title: プロジェクトの管理
 seo-title: プロジェクトの管理
-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにし、プロジェクトを整理できます
-seo-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにし、プロジェクトを整理できます
+description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにして、プロジェクトを整理できます
+seo-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにして、プロジェクトを整理できます
 uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '1057'
+ht-degree: 88%
 
 ---
 
@@ -46,14 +49,14 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 * 製品撮影プロジェクト
 * 翻訳プロジェクト
 
-プロジェクトの作成手順は、どのプロジェクトでも同じです。プロジェクトのタイプによって異なるものとしては、使用可能な[ユーザーの役割](/help/sites-authoring/projects.md)と[ワークフロー](/help/sites-authoring/projects-with-workflows.md)があります。新しいプロジェクトを作成するには：
+プロジェクトの作成手順は、どのプロジェクトでも同じです。プロジェクトのタイプによって異なるものとしては、使用可能な[ユーザーの役割](/help/sites-authoring/projects.md)と[ワークフロー](/help/sites-authoring/projects-with-workflows.md)があります。新しいプロジェクトを作成するには、次の手順を実行します。
 
 1. **プロジェクト**&#x200B;で「**作成**」をタップまたはクリックして「**プロジェクトを作成**」ウィザードを開きます。
 1. テンプレートを選択します。Out of the box, Simple Project, Media Project, [Translation Project](/help/sites-administering/tc-manage.md), and [Product Photo Shoot Product](/help/sites-authoring/managing-product-information.md) are available and click **Next**.
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-1. Define the **Title** and **Description** and add a **Thumbnail** image if required. ユーザーおよびユーザーが属するグループを追加または削除することもできます。さらに、「**詳細**」をクリックして、URL で使用する名前を追加します。
+1. 「**タイトル**」と「**説明**」を定義し、必要に応じて「**サムネール**」画像を追加します。ユーザーおよびユーザーが属するグループを追加または削除することもできます。さらに、「**詳細**」をクリックして、URL で使用する名前を追加します。
 
    ![chlimage_1-257](assets/chlimage_1-257.png)
 
@@ -74,7 +77,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
    >
    >プロジェクトに関連付けることができるプロジェクトタイルの詳細については、[プロジェクトタイル](/help/sites-authoring/projects.md#project-tiles)で説明します。
 
-1. 「**作成**」をタップまたはクリックします。リソースはプロジェクトにリンクされ、今後はプロジェクトからアクセスできます。
+1. 「**作成**」をタップまたはクリックします。リソースがプロジェクトにリンクされ、今後はそのプロジェクトからアクセスできるようになります。
 
 ### プロジェクトまたはリソースリンクの削除 {#deleting-a-project-or-resource-link}
 
@@ -92,7 +95,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 
 >[!NOTE]
 >
->プロジェクトを作成してユーザーを各種役割に追加すると、関連する権限を管理するために、プロジェクトに関連付けられたグループが自動的に作成されます。例えば、Myproject というプロジェクトには **Myproject Owners**、**Myproject Editors**、**Myproject Observers** という 3 つのグループがあります。ただし、プロジェクトを削除しても、これらのグループは自動的には削除されません。**ツール**／**セキュリティ**／**グループ**&#x200B;で、管理者が手動でグループを削除する必要があります。
+>プロジェクトを作成してユーザーを様々な役割に追加すると、関連する権限を管理するため、プロジェクトに関連付けられたグループが自動的に作成されます。例えば、「Myproject」というプロジェクトには **Myproject Owners**、**Myproject Editors**、**Myproject Observers** という 3 つのグループがあります。ただし、プロジェクトを削除しても、これらのグループは自動的には削除されません。管理者は、**ツール**／**セキュリティ**／**グループ**&#x200B;から、手動でグループを削除する必要があります。
 
 ### タイルへの項目の追加 {#adding-items-to-a-tile}
 
@@ -100,7 +103,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 
 タイルに項目を追加するには：
 
-1. In **Projects**, navigate to the project and click the Add + icon on the tile you want to add an item to.
+1. **プロジェクト**&#x200B;で、プロジェクトに移動し、項目を追加するタイル上の追加（+）アイコンをクリックします。
 
    ![chlimage_1-259](assets/chlimage_1-259.png)
 
@@ -124,19 +127,19 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 
 ## プロジェクト統計の表示 {#viewing-project-statistics}
 
-プロジェクト統計を表示するには、**プロジェクト**&#x200B;コンソールで「**統計ビューを表示**」をクリックします。各プロジェクトの完了レベルが表示されます。Click **Show Statistics View** again to go to the **Projects** console.
+プロジェクト統計を表示するには、**プロジェクト**&#x200B;コンソールで「**統計ビューを表示**」をクリックします。各プロジェクトの完了レベルが表示されます。「**統計ビューを表示**」を再度クリックして、**プロジェクト**&#x200B;コンソールに移動します。
 
 ![chlimage_1-263](assets/chlimage_1-263.png)
 
 ### プロジェクトタイムラインの表示 {#viewing-a-project-timeline}
 
-プロジェクトタイムラインは、プロジェクト内のアセットが最後にいつ使用されたかを示します。To view the project timeline, click/tap **Timeline**, then enter selection mode and select the project. アセットが左パネルに表示されます。Click/tap **Timeline** to return to the **Projects** console.
+プロジェクトタイムラインは、プロジェクト内のアセットが最後にいつ使用されたかを示します。プロジェクトタイムラインを表示するには、「**タイムライン**」をクリックまたはタップしてから、選択モードに入ってプロジェクトを選択します。アセットが左パネルに表示されます。「**タイムライン**」をクリックまたはタップして、**プロジェクト**&#x200B;コンソールに戻ります。
 
 ![chlimage_1-264](assets/chlimage_1-264.png)
 
 ### アクティブ／非アクティブなプロジェクトの表示 {#viewing-active-inactive-projects}
 
-To toggle between your active and inactive projects, in the **Projects** console, click **Toggle Active Projects**. アイコンの横にチェックマークがある場合は、アクティブなプロジェクトが表示されています。
+アクティブなプロジェクトと非アクティブなプロジェクトを切り替えるには、**プロジェクト**&#x200B;コンソールで「**アクティブなプロジェクトを切り替え**」をクリックします。アイコンの横にチェックマークがある場合は、アクティブなプロジェクトが表示されています。
 
 ![chlimage_1-265](assets/chlimage_1-265.png)
 
