@@ -10,6 +10,9 @@ discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
 source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+workflow-type: tm+mt
+source-wordcount: '2747'
+ht-degree: 60%
 
 ---
 
@@ -22,7 +25,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 ## このチュートリアルについて {#about-the-tutorial}
 
-AEM Formsデータ統合モジュールを使用すると、AEMユーザープロファイル、RESTful Webサービス、SOAPベースのWebサービス、ODataサービス、リレーショナルデータベースなど、異なるバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、そのフォームデータモデルをアダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。フォームデータモデル内のサービスを使用して、アダプティブフォームに事前にデータを取り込み、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
+AEM Formsデータ統合モジュールを使用すると、AEMユーザープロファイル、RESTful Webサービス、SOAPベースのWebサービス、ODataサービス、およびリレーショナルデータベースなど、異なるバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、そのフォームデータモデルをアダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。フォームデータモデル内のサービスを使用して、アダプティブフォームに事前にデータを取り込み、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
 
 フォームデータの統合機能とフォームデータモデルについて詳しくは、「[AEM Forms のデータ統合機能](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html)」を参照してください。
 
@@ -30,7 +33,7 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 * [データベースの設定](../../forms/using/create-form-data-model0.md#step-set-up-the-database)
 * [MySQL データベースをデータソースとして設定する](../../forms/using/create-form-data-model0.md#step-configure-mysql-database-as-data-source)
-* [フォームデータモデルの作成](../../forms/using/create-form-data-model0.md#step-create-form-data-model)
+* [フォームデータモデルを作成する](../../forms/using/create-form-data-model0.md#step-create-form-data-model)
 * [フォームデータモデルを設定する](../../forms/using/create-form-data-model0.md#step-configure-form-data-model)
 * [フォームデータモデルのテストを行う](../../forms/using/create-form-data-model0.md#step-test-form-data-model-and-services)
 
@@ -38,7 +41,7 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 ![フォームデータモデル](assets/form_data_model_callouts_new.png)
 
-**A.** 設定済みのデータソ **ースB。** データソースのスキーマ **C.** 利用可能なサー **ビスD.** データモデルのオブジェ **クトE.** 設定済みのサービス
+**A.** Configured data sources **B.** Data source services **C.** Available services **D.****** Data model objects E. Configured services
 
 ## 前提条件 {#prerequisites}
 
@@ -54,7 +57,7 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 ![sample_data_cust](assets/sample_data_cust.png)
 
-次のDDL文を使用して、データベースに顧客 **表を** 作成します。
+Use the following DDL statement to create the **customer** table in database.
 
 ```sql
 CREATE TABLE `customer` (
@@ -69,7 +72,7 @@ CREATE TABLE `customer` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-次のDDL文を使用して、データベースに **bills** 表を作成します。
+Use the following DDL statement to create the **bills** table in database.
 
 ```sql
 CREATE TABLE `bills` (
@@ -92,7 +95,7 @@ CREATE TABLE `bills` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-次のDDL文を使用して、データベースに呼び出し **表を** 作成します。
+Use the following DDL statement to create the **calls** table in database.
 
 ```sql
 CREATE TABLE `calls` (
@@ -106,9 +109,9 @@ CREATE TABLE `calls` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-The **calls** table includes the call details such as call date, call time, call number, call duration, and call charges. The **customer** table is linked to the calls table using the Mobile Number (mobilenum) field. For each mobile number listed in the **customer** table, there are multiple records in the **calls** table. For example, you can retrieve the call details for the **1457892541** mobile number by referring to the **calls** table.
+The **calls** table includes the call details such as call date, call time, call number, call duration, and call charges. **customer** (customer)テーブルは、Mobile Number(mobilenum)フィールドを使用して呼び出しテーブルにリンクされています。 **customer** 表に示されているモバイル番号ごとに、 **** 呼び出し表に複数のレコードがあります。 For example, you can retrieve the call details for the **1457892541** mobile number by referring to the **calls** table.
 
-The **bills** table includes the bill details such as bill date, bill period, monthly charges, and call charges. The **customer** table is linked to the **bills** table using the Bill Plan field. There is a plan associated to each customer in the **customer** table. The **bills** table includes the pricing details for all the existing plans. 例えば、**Sarah** のプランの詳細を顧客テーブルから取得し、この情報を使って請求テーブルから価格の詳細を取得することができます。********
+The **bills** table includes the bill details such as bill date, bill period, monthly charges, and call charges. **顧客** 表は、「請求計画」フィールドを使用して **請求書** 表にリンクされます。 There is a plan associated to each customer in the **customer** table. The **bills** table includes the pricing details for all the existing plans. 例えば、**Sarah** のプランの詳細を顧客テーブルから取得し、この情報を使って請求テーブルから価格の詳細を取得することができます。********
 
 ## 手順 2：MySQL データベースをデータソースとして設定する {#step-configure-mysql-database-as-data-source}
 
@@ -138,9 +141,9 @@ MySQL データベースを設定するには、以下の手順を実行しま�
       * **JDBC connection URI**：データベースの接続 URL を指定します。For MySQL database running on port 3306 and schema teleca, the URL is: `jdbc:mysql://'server':3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
-      * **借用時のテスト：** [借用時にテ **スト]オプションを有効** にします。
+      * **借用時のテスト：** [借用時に **テスト** ]オプションを有効にします。
 
-      * **リターン時のテスト：** 「リターン時にテ **スト」オプションを有効** にします。
+      * **リターン時のテスト：** 「リターン時に **テスト** 」オプションを有効にします。
 
       * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。For example, **select * from customer**.
 
@@ -149,7 +152,7 @@ MySQL データベースを設定するには、以下の手順を実行しま�
 
    以下のような設定が作成されます。
 
-   ![Apacheの設定](assets/apache_configuration_new.png)
+   ![Apache設定](assets/apache_configuration_new.png)
 
 ## 手順 3：フォームデータモデルを作成する {#step-create-form-data-model}
 
@@ -157,14 +160,14 @@ AEM Forms provide an intuitive user interface to [create a form data mode](https
 
 フォームデータモデルを作成するには、以下の手順を実行します。
 
-1. In AEM author instance, navigate to **Forms** > **Data Integrations**.
-1. Tap **Create** > **Form Data Model**.
+1. AEM オーサーインスタンスで、**フォーム**／**データ統合**&#x200B;に移動します。
+1. **作成**／**フォームデータモデル**&#x200B;の順にタップします。
 1. In the Create Form Data Model wizard, specify a **name** for the form data model. For example, **FDM_Create_First_IC**. 「**次へ**」をタップします。
 1. データソース選択画面に、すべての設定済みデータソースが一覧表示されます。Select **MySQL** data source and tap **Create**.
 
    ![MYSQLデータソース](assets/fdm_mysql_data_source_new.png)
 
-1. 「**完了**」をクリックします。**FDM_Create_First_ICフォーム・データ・モデル** が作成されます。
+1. 「**完了**」をクリックします。**FDM_Create_First_IC** フォーム・データ・モデルが作成されます。
 
 ## 手順 4：フォームデータモデルを設定する {#step-configure-form-data-model}
 
@@ -196,6 +199,7 @@ AEM Forms provide an intuitive user interface to [create a form data mode](https
 
       * get
       * 更新
+
    「**選択項目を追加**」をタップして、選択したデータモデルオブジェクトとサービスをフォームデータモデルに追加します。
 
    ![データモデルオブジェクトサービスの選択](assets/select_data_model_object_services_new.png)
@@ -215,19 +219,20 @@ For more information on the **usagecharges** child computed property, see [Plan 
 
 請求データモデルオブジェクト用の計算済み子プロパティを作成するには、次の手順を実行します。
 
-1. Select the check box at the top of the **bills** data model object to select it and tap **Create Child Property**.
+1. **bills** データモデルオブジェクトの上部にあるチェックボックスを選択して選択し、「 **Create Child Property**」をタップします。
 1. **子プロパティを作成**&#x200B;ペインで、
 
    1. 子プロパティの名前として **usagecharges** を入力します。
    1. 「**計算済み**」を有効にします。
    1. Select **Float** as the type and tap **Done** to add the child property to the **bills** data model object.
+
    ![子プロパティの作成](assets/create_child_property_new.png)
 
 1. Tap **Edit Rule** to open the Rule Editor.
 1. 「**作成**」をタップします。The **Set Value** rule window opens.
 1. オプション選択ドロップダウンで、「**数式**」を選択します。
 
-   ![使用料金ルールエディター](assets/usage_charges_rule_editor_new.png)
+   ![使用料金のルールエディタ](assets/usage_charges_rule_editor_new.png)
 
 1. In the mathematical expression, select **callcharges** and **confcallcharges** as first and second objects, respectively. 演算子として「**プラス**」を選択します。数式内の領域をタップして「**拡張式**」をタップし、**smscharges**、**internetcharges**、**roamingnational**、**roamingintnl**、および **vas** を数式のオブジェクトに追加します。
 
@@ -235,14 +240,14 @@ For more information on the **usagecharges** child computed property, see [Plan 
 
    ![使用料のルール](assets/usage_charges_rule_all_new.png)
 
-1. 「**Done**」をタップします。ルールがルールエディターで作成されます。
+1. 「**完了**」をタップします。ルールがルールエディターで作成されます。
 1. Tap **Close** to close the Rule Editor window.
 
 ### データモデルオブジェクト間の関連付けの追加 {#add-associations-between-data-model-objects}
 
 データモデルオブジェクトが定義されたら、オブジェクト間の関連付けを作成できます。この関連付けは、1 対 1 の場合もあれば、1 対多の場合もあります。例えば、1 人の従業員に対して複数の扶養家族を関連付けることができます。これを、1 対多の関連付けといいます。関連するデータモデルオブジェクトを接続するライン上では、「1:n」として表示されます。それに対して、特定の従業員 ID で一意の従業員名が返される場合などは、1 対 1 の関連付けになります。
 
-データソース内の関連するデータモデルオブジェクトをフォームデータモデルに追加すると、その関連付けは保持され、矢印で結ばれた状態で表示されます。
+データソース内の関連するデータモデルオブジェクトをフォームデータモデルに追加すると、関連付けは保持され、矢印で結ばれた状態で表示されます。
 
 ユースケースに基づき、データモデルオブジェクト間で以下の関連付けを作成します。
 
@@ -264,7 +269,8 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**サービス**」ドロップダウンリストから **get** を選択します。
 
    * Tap **Add** to link the **customer** data model object to **calls** data model object using a property. ユースケースに基づいて、通話データモデルオブジェクトは顧客データモデルオブジェクトの携帯電話番号プロパティにリンクされている必要があります。The **Add Argument** dialog box opens.
-   ![追加連合](assets/add_association_new.png)
+
+   ![追加協会](assets/add_association_new.png)
 
 1. **引数を追加**&#x200B;ダイアログボックスで、
 
@@ -276,6 +282,7 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**連結値**」ドロップダウンリストから「**mobilenum**」を選択します。
 
    * 「**追加**」をタップします。
+
    ![議追加論の関連](assets/add_association_argument_new.png)
 
    mobilenum プロパティが&#x200B;**引数**&#x200B;セクションに表示されます。
@@ -302,7 +309,8 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**連結値**」ドロップダウンリストから「**customerplan**」を選択します。
 
    * Tap **Done** to create a binding between the billplan and customerplan properties.
-   ![顧追加客手形協会](assets/add_association_customer_bills_new.png)
+
+   ![顧客追加手形協会](assets/add_association_customer_bills_new.png)
 
    以下の画像は、データモデルオブジェクト間の関連付けと、関連付けの作成に使用されているプロパティを示します。
 
@@ -334,7 +342,7 @@ For more information on the **usagecharges** child computed property, see [Plan 
 
 1. Select the check box at the top of the **calls** data model object to select it and tap **Edit Properties**. **プロパティを編集**&#x200B;ペインが開きます。
 1. **トップレベルモデルオブジェクト**&#x200B;を、**通話**&#x200B;データモデルオブジェクトに対して無効にします。
-1. 「**Done**」をタップします。
+1. 「**完了**」をタップします。
 
    手順 8～10 を繰り返し、**請求**&#x200B;データモデルオブジェクトのプロパティを設定します。
 
@@ -348,16 +356,18 @@ For more information on the **usagecharges** child computed property, see [Plan 
    * 「**出力モデルオブジェクト**」ドロップダウンリストから「**顧客**」を選択します。
 
    * Tap **Done** to save the properties.
+
    ![プロパティの編集](assets/edit_properties_get_details_new.png)
 
-1. Select the **update** service and tap **Edit Properties**. **プロパティを編集**&#x200B;ペインが開きます。
+1. **update** サービスを選択し、「プロパティの **編集**」をタップします。 **プロパティを編集**&#x200B;ペインが開きます。
 1. **プロパティを編集**&#x200B;ペインで、
 
    * 任意のタイトルと説明を入力します。
    * Select **customer** from the **Input Model Object** drop-down list.
 
-   * 「**Done**」をタップします。
+   * 「**完了**」をタップします。
    * 「**保存**」をタップして、フォームデータモデルを保存します。
+
    ![サービスプロパティの更新](assets/update_service_properties_new.png)
 
 ## 手順 5：フォームデータモデルとサービスのテストを実行する {#step-test-form-data-model-and-services}
@@ -380,7 +390,7 @@ For more information on the **usagecharges** child computed property, see [Plan 
 
    指定したmobilenumプロパティに関連付けられた顧客の詳細が取得され、次に示すように「出力」セクションに表示されます。 ダイアログボックスを閉じます。
 
-   ![テストサービス](assets/test_service_new.png)
+   ![Testサービス](assets/test_service_new.png)
 
 ### サンプルデータの編集と保存 {#edit-and-save-sample-data}
 
