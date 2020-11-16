@@ -33,7 +33,7 @@ ht-degree: 75%
 
 ## ファイルのダウンロード数の追跡 {#tracking-file-downloads}
 
-関連するページからダウンロードしたファイルがアドビのAnalyticsでのダウンロードとして自動的に追跡されるように、アドビのAnalyticsフレームワークを設定します。 ダウンロード数の追跡を有効にすると、指定したファイルタイプのみが追跡されます。
+関連するページからダウンロードしたファイルがAdobe Analyticsでのダウンロードとして自動的に追跡されるように、Adobe Analyticsフレームワークを設定します。 ダウンロード数の追跡を有効にすると、指定したファイルタイプのみが追跡されます。
 
 デフォルトでは、次のファイルタイプのダウンロードが追跡されます。
 
@@ -58,7 +58,7 @@ s.trackDownloadLinks= true;
 s.linkDownloadFileTypes= 'exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls';
 ```
 
-Adobe Service Framework用のダウンロードトラッキングを有効にするには：
+お使いのAdobe Analyticsフレームワークに対してダウンロードトラッキングを有効にするには：
 
 1. [Adobe Analytics フレームワークを開き、「リンクトラッキング設定」セクションを展開](#configuring-link-tracking-for-an-adobe-analytics-framework)します。
 1. 「**ダウンロードを追跡**」を有効にします。
@@ -68,7 +68,7 @@ Adobe Service Framework用のダウンロードトラッキングを有効にす
 
 ページの外部リンク（離脱リンク）のクリックを追跡できます。
 
-AdobeAnalyticsフレームワークの外部リンクを追跡するには：
+Adobe Analyticsフレームワークの外部リンクを追跡するには：
 
 1. [Adobe Analytics フレームワークを開き、「**リンクトラッキング設定**」セクションを展開](#configuring-link-tracking-for-an-adobe-analytics-framework)します。
 1. 要件に従って、次のプロパティを設定します。
@@ -106,9 +106,9 @@ s.linkLeaveQueryString= false;
 
 ## リンククリック数を含む変数データの送信 {#sending-variable-data-with-link-clicks}
 
-ユーザーがリンクをクリックすると、イベントと変数のデータがアドビのAnalyticsに送信されるようにAEMを設定できます。 The **Link Tracking Configuration** properties enable you to specify the Adobe Analytics events and variables to track when link clicks occur.
+ユーザーがリンクをクリックしたときにイベントと変数のデータをAdobe Analyticsに送信するようにAEMを設定できます。 The **Link Tracking Configuration** properties enable you to specify the Adobe Analytics events and variables to track when link clicks occur.
 
-フレームワークマッピングは、イベントおよび変数の値を決定します。アドビのAnalytics変数は、リンクがクリックされたときに追跡するデータを保存するコンテンツコンポーネントの変数にマップできます。
+フレームワークマッピングは、イベントおよび変数の値を決定します。Adobe Analytics変数は、リンクがクリックされたときに追跡するデータを保存するコンテンツコンポーネントの変数にマップできます。
 
 リンククリック数を含む変数データを送信するには：
 
@@ -117,13 +117,13 @@ s.linkLeaveQueryString= false;
 
 リンククリック数を含む変数データを送信するためのプロパティ：
 
-* **リンクトラックイベント**&#x200B;リンククリック数のカウントに使用するアドビのAnalyticsイベント変数を入力します。
+* **リンクトラックイベント**&#x200B;リンククリック数のカウントに使用するAdobe Analyticsイベント変数を入力します。
 
    複数の変数名をコンマで区切ります。
 
    The default value of `None` causes no event tracking.
 
-* **リンク追跡変数**&#x200B;リンクがクリックされた場合にアドビAnalyticsに送信するAdobeAnalytics変数を入力します。 複数の変数名をコンマで区切ります。
+* **リンクトラック変数**：リンクがクリックされたときにAdobe Analyticsに送信するAdobe Analytics変数を入力します。 複数の変数名をコンマで区切ります。
 
    The default value of `None` causes no variable data to be sent.
 
@@ -136,7 +136,7 @@ s.linkTrackVars= 'prop4';
 
 ## リンクトラッキング設定の例 {#example-link-tracking-configuration}
 
-次の手順を実行して、AdobeAnalytics統合のリンクトラッキング動作を調べます。 この手順は、[Adobe Marketing Cloud デバッガー](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)からの結果を表示します。
+以下の手順を実行して、Adobe Analytics統合のリンクトラッキングの動作を調べます。 この手順は、[Adobe Marketing Cloud デバッガー](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)からの結果を表示します。
 
 ### 一般設定 {#general-configuration}
 
@@ -158,7 +158,7 @@ s.linkTrackVars= 'prop4';
   <tr>
    <th>CQ 変数<br /> </th>
    <th>変数ブラウザーのエントリ<br /> </th>
-   <th>AdobeAnalytics変数</th>
+   <th>Adobe Analytics変数</th>
   </tr>
   <tr>
    <td>pagedata.title</td>
@@ -180,7 +180,7 @@ s.linkTrackVars= 'prop4';
   <tr>
    <th>CQ 変数<br /> </th>
    <th>変数ブラウザーのエントリ</th>
-   <th>AdobeAnalytics変数</th>
+   <th>Adobe Analytics変数</th>
   </tr>
   <tr>
    <td>eventdata.keyword</td>
@@ -243,7 +243,7 @@ Adobe Marketing Cloud デバッガーで表示すると、呼び出しの実行�
 1. 「**クエリ文字列を維持**」を有効にします。
 1. ページプレビューをリロードし、リンクをクリックします。
 
-Adobe Marketing Cloudデバッガーに表示される呼び出しの詳細は、次の例のようになります。
+Adobe Marketing Cloudデバッガに表示される呼び出しの詳細は、次の例のようになります。
 
 ![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
 
@@ -265,7 +265,7 @@ Adobe Marketing Cloudデバッガーに表示される呼び出しの詳細は�
 
 ### アドホックリンクトラッキングの有効化 {#enabling-ad-hoc-link-tracking}
 
-アドホックリンクトラッキングを有効にするようにAdobeAnalyticsフレームワークを設定します。
+アドホックリンクトラッキングを有効にするようにAdobe Analyticsフレームワークを設定します。
 
 1. Adobe Analytics フレームワークを開き、「**リンクトラッキング設定**」セクションを展開します。
 
@@ -334,7 +334,7 @@ Adobe Marketing Cloudデバッガーに表示される呼び出しの詳細は�
 
 1. (Optional) To track events with the link click, add Adobe Analytics event names in the **Include Adobe Analytics Variables** field. 複数のイベント名はコンマで区切ります（例：）。
 
-   `event1, event22`。
+   `event1, event22`.
 
 1. (Optional) To track variable data with the link click, add Adobe Analytics variables in the **Include Adobe Analytics Variables** field. 次のいずれかの形式を使用します。
 
