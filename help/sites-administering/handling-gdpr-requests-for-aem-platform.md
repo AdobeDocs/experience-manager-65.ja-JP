@@ -8,6 +8,9 @@ contentOwner: sarchiz
 discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 translation-type: tm+mt
 source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
+workflow-type: tm+mt
+source-wordcount: '437'
+ht-degree: 57%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
 
 >[!IMPORTANT]
 >
->以下の節ではGDPRを例として挙げているが、詳細はデータ保護とプライバシーに関する規制に適用される。（GDPR、CCPAなど）
+>以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
 
 ## AEM Foundation GDPR support {#aem-foundation-gdpr-support}
 
@@ -59,7 +62,7 @@ curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/aut
 
 *ユーザーデータを取得する*
 
-上記のコマンドから返されたJSONペイロードのhomeプロパティからのノードパスを使用します。
+上記のコマンドから返されたJSONペイロードのホームプロパティのノードパスを使用する：
 
 ```shell
 curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile.-1.json'
@@ -84,7 +87,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   次に、ユーザーインターフェイスは、ユーザーがログインし、プロファイルカードにロックを追加することで非アクティブ化されたことを示します。
+   次に、ユーザーインターフェイスは、ユーザーが次のようにグレーアウトし、プロファイルカードにロックを追加することで非アクティブ化されたことを示します。
 
    ![disableduser](assets/disableduser.png)
 
@@ -101,12 +104,13 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
 
    1. The default private profile under `[!UICONTROL /profile]`
-   1. `[!UICONTROL /profiles]`に含まれる新しいプロファイルをAEM 6.5で作成した場合。
+   1. `[!UICONTROL /profiles]`AEM 6.5を使用して作成された新しいプロファイル用。
+
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
 ### HTTP API {#http-api-1}
 
-The following procedures use the `curl` command line tool to illustrate how to disable the user with the **[!UICONTROL cavery]** `userId` and delete her profiles available at the default location.
+以下の手順では `curl`コマンドラインツールを使用して、**[!UICONTROL cavery]** `userId` を持つユーザーを無効化し、デフォルト位置にあるそのユーザーのプロファイルを削除する方法を示しています。
 
 * *ユーザーホームの検索*
 
@@ -117,7 +121,7 @@ curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/aut
 
 * *ユーザーの無効化*
 
-上記のコマンドから返されたJSONペイロードのhomeプロパティからのノードパスを使用します。
+上記のコマンドから返されたJSONペイロードのホームプロパティのノードパスを使用する：
 
 ```shell
 curl -X POST -u user:password -FdisableUser="describe the reasons for disabling this user (GDPR in this case)" 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN.rw.userprops.html'
@@ -125,7 +129,7 @@ curl -X POST -u user:password -FdisableUser="describe the reasons for disabling 
 
 * *ユーザープロファイルの削除*
 
-アカウント検出コマンドから返されたJSONペイロードのホームプロパティからのノードパスと、既知の初期設定のプロファイルノードの場所を使用します。
+アカウント検出コマンドから返されたJSONペイロードのホームプロパティのノードパスと、既知のプロファイルノードの場所を使用します。
 
 ```shell
 curl -X POST -u user:password -H "Accept: application/json,**/**;q=0.9" -d ':operation=delete' 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile'
