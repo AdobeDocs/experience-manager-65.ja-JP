@@ -35,7 +35,7 @@ ht-degree: 35%
 
 ## インストールチェックリスト {#installation-checklist}
 
-**AEMプラット[フォームの場合](/help/sites-deploying/deploy.md#what-is-aem)**:
+**AEMプラット [フォームの場合](/help/sites-deploying/deploy.md#what-is-aem)**:
 
 * Install the latest [AEM 6.5 Updates](#aem64updates).
 
@@ -44,7 +44,7 @@ ht-degree: 35%
 * If supporting globalization, [setup automated translation](/help/sites-administering/translation.md)
 (sample setup is provided for development).
 
-**Communities機能[の場合](/help/communities/overview.md)**:
+**Communities機能 [の場合](/help/communities/overview.md)**:
 
 * [発行ファームを展開する場合](/help/sites-deploying/recommended-deploys.md#tarmk-farm)、主な発行者を [特定する](#primary-publisher)
 
