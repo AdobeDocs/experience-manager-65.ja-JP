@@ -12,6 +12,9 @@ discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 97%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
 
 コンポーネントコンソールを使用すると、インスタンスに定義されたすべてのコンポーネントを参照し、各コンポーネントの主な情報を確認できます。
 
-It can be accessed from **Tools ->** **General ->** **Components**. コンソールでは、カード表示およびリスト表示を使用できます。コンポーネントのツリー構造がないので、列表示は使用できません。
+**ツール**／**一般**／**コンポーネント**&#x200B;からアクセスできます。コンソールでは、カード表示およびリスト表示を使用できます。コンポーネントのツリー構造がないので、列表示は使用できません。
 
 ![screen-shot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
 
 >[!NOTE]
 >
->コンポーネントコンソールには、システムのすべてのコンポーネントが表示されます。The [Component Browser](/help/sites-authoring/author-environment-tools.md#components-browser) shows components that are available to authors and hides any component groups that begin with a period ( `.`).
+>コンポーネントコンソールには、システムのすべてのコンポーネントが表示されます。[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)には、作成者が使用できるコンポーネントが表示され、ピリオド（`.`）で始まるすべてのコンポーネントグループは非表示になります。
 
 ## 検索 {#searching}
 
@@ -53,7 +56,7 @@ It can be accessed from **Tools ->** **General ->** **Components**. コンソー
       * リソースのスーパータイプをクリックすると、そのコンポーネントが表示されます。
    >[!NOTE]
    >
-   >Because `/apps` is not editable at runtime, the Components Console is read-only.
+   >`/apps` は実行時には編集できないので、コンポーネントコンソールは読み取り専用です。
 
 * **ポリシー**
 
