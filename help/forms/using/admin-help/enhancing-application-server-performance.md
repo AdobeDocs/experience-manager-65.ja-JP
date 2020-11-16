@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 translation-type: tm+mt
 source-git-commit: a26bc4e4ea10370dd2fc3403500004b9e378c418
+workflow-type: tm+mt
+source-wordcount: '1886'
+ht-degree: 95%
 
 ---
 
@@ -105,7 +108,7 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 
    >[!NOTE]
    >
-   >JEE上のAEM Forms環境ではDocument Max Inline Sizeプロパティの値が同じである必要があり、JEE上のAEM FormsをバンドルしてOSGi上のAEM Forms環境に含める場合は同じである必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
+   >JEE環境上のAEM FormsとJEE環境上のAEM Formsバンドル上のOSGiのAEM Formsでは、ドキュメントの最大インラインサイズプロパティの値を同じにする必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
@@ -161,7 +164,7 @@ Configuration Manager を実行しているとき、またはコマンドライ�
    * (Linux and UNIX) `ejbdeploy.sh`
 
 1. Find the `-Xmx256M` parameter and change it to a higher value, such as `-Xmx1024M`.
-1. ファイルを保存します。
+1.  ファイルを保存します。
 1. `ejbdeploy` コマンドを実行するか、または Configuration Manager を使用して再デプロイします。
 
 ## LDAP を使用した Windows Server 2003 のパフォーマンスの向上 {#improving-windows-server-2003-performance-with-ldap}
