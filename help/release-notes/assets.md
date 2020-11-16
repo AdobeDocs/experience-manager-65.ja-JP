@@ -1,5 +1,5 @@
 ---
-title: リリースノート [!DNL Adobe Experience Manager Assets] 6.5。
+title: Release Notes of [!DNL Adobe Experience Manager Assets] 6.5.
 description: The new capabilities and enhancements to [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
 source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
@@ -38,11 +38,11 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 ![プレビューAdobe Stockの画像とExperience Managerアセット内からのライセンス](assets/stock_image_preview_license_options.png)
 
-*図：プレビュー[!DNL Adobe Stock]の画像とライセンスを内から取得[!DNL Experience Manager Assets]します。*
+*図：プレビュー [!DNL Adobe Stock] の画像とライセンスを内から取得 [!DNL Experience Manager Assets]します。*
 
 ![Experience Managerでライセンスを取得したAdobe Stock画像の検索とフィルタリング](assets/aem-search-filters2.jpg)
 
-*図：でライセンスされた[!DNL Adobe Stock]画像を検索し、フィルタし[!DNL Experience Manager]ます。*
+*図：でライセンスされた [!DNL Adobe Stock] 画像を検索し、フィルタし [!DNL Experience Manager]ます。*
 
 ### Dynamic references in [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
@@ -62,7 +62,7 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 ![アセットをデプロイメントから別のデプロイメントの [!DNL Experience Manager] ページにドラッグ [!DNL Sites][!DNL Experience Manager] する](assets/connected-assets-drag-and-drop-only.gif)
 
-*図：アセットをデプロイメントから別のデプロイメントの[!DNL Experience Manager]ページにドラッグ[!DNL Sites][!DNL Experience Manager]します。*
+*図：アセットをデプロイメントから別のデプロイメントの [!DNL Experience Manager] ページにドラッグ [!DNL Sites][!DNL Experience Manager] します。*
 
 ## Dynamic Media {#dynamic-media}
 
