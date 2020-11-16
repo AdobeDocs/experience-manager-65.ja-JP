@@ -12,6 +12,9 @@ discoiquuid: 962e9e98-a303-435b-a938-31319282e022
 legacypath: /content/docs/en/aem/6-1/develop/mobile-apps/apps/managing-aem-mobile-apps/configure-your-adobe-phonegap-build-cloud-service1
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '468'
+ht-degree: 45%
 
 ---
 
@@ -24,16 +27,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 The **Mobile Metrics Tile** on the command center provides real-time analytics for your mobile application.
 
-[Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK は、PhoneGap プラグインを通じて使用できます。指標は、デバイスが接続されるまでデバイス上で収集およびキャッシュされ、その時点でデータがAdobe Mobile Services cloudにプッシュされ、レポートおよび分析されます。
+[Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK は、PhoneGap プラグインを通じて使用できます。指標は収集され、デバイスに接続されるまでデバイス上にキャッシュされます。接続されると、データはAdobeのMobile Services Cloudにプッシュされ、レポートと分析が行われます。
 
 Adobe Mobile Analytics SDK は、次の機能を提供します。
 
 1. **モバイルチャネルに関するデータ収集** - すべての主要オペレーティングシステム上のモバイル Web サイトおよびアプリに関して総合的なデータを収集します。
-1. **モバイルエンゲージメント分析** — ユーザーがチャネルを起動する頻度、チャネルから購入するかどうかなど、モバイルアプリ、Webサイト、ビデオ内でのユーザーエンゲージメントを把握します。
-1. **モバイルアプリのダッシュボードとレポート** — アプリとアプリストアの指標に関するライフサイクル指標を含む使用状況レポートを取得できます。 ユーザー、起動回数、セッションの平均長さ、リテンション期間、クラッシュ回数の傾向を確認します。
-1. **モバイルキャンペーン分析** - SMS、モバイル検索広告、モバイルディスプレイ広告、QRコードなど、モバイル専用のキャンペーンの効果を定量化します。
-1. **位置情報分析** — アプリのユーザーが起動し、GPSの位置や目標地点でモバイルエクスペリエンスを操作する場所を探します。
-1. **パス分析** — ユーザーがアプリ内をどのように移動して、ユーザーを惹きつける画面やUI要素、およびユーザーをドロップオフにさせる要因を特定するかを確認します。
+1. **モバイルエンゲージメントの分析** — ユーザーがモバイルアプリ、Webサイトまたはビデオ内で行うエンゲージメントを把握できます。例えば、チャネルを起動する頻度や、消費者がアプリから購入するかどうかなどを把握できます。
+1. **モバイルアプリのダッシュボードとレポート** — アプリのライフサイクル指標やアプリストア指標を含む使用状況レポートを取得します。ユーザー、起動回数、セッションの平均長さ、リテンション期間、クラッシュの傾向を確認できます。
+1. **モバイルキャンペーン分析** - SMS、モバイル検索広告、モバイルディスプレイ広告、QRコードなど、モバイル固有のキャンペーンの効果を定量化します。
+1. **位置情報分析** — アプリのユーザーが起動し、GPSの位置や目標地点でモバイルエクスペリエンスを操作する場所を見つけます。
+1. **パス分析** — ユーザーがアプリ内をどのように移動して、ユーザーを惹きつける画面やUI要素を特定し、ユーザーをドロップオフさせる原因を確認します。
 
 >[!CAUTION]
 >
