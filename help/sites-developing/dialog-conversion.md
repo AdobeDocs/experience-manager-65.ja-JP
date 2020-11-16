@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dafe26ae-b2c5-4070-b8b1-cc1da147b464
 translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+workflow-type: tm+mt
+source-wordcount: '2172'
+ht-degree: 55%
 
 ---
 
@@ -41,7 +44,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-dialog-conversionプロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/aem-dialog-conversion)
+* [GitHubでaem-dialog-conversionプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-dialog-conversion)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-dialog-conversion/archive/master.zip)としてダウンロードします
 
 >[!NOTE]
@@ -73,10 +76,11 @@ GitHub のコード
 
    ![chlimage_1-20](assets/chlimage_1-20a.png)
 
-   この表には、入力したパスの下にある既存のすべてのレガシーダイアログが表示されます。 各ダイアログには、タイプが表示されます。 次のタイプがあります。
+   この表では、入力されたパスの下にある既存のすべての従来のダイアログがリストされます。 各ダイアログには、種類が表示されます。 次のタイプがあります。
 
-   * **** クラシック：ノード名を持 `cq:Dialog` つタイプのノー `dialog` ド、 `design_dialog`
-   * **** サンゴ2:子コンテンツ `cq:dialog` ノードでGranite UI `cq:design_dialog` /Coral 2リソースタイプを持つ、または名前が付けられたノード
+   * **クラシック：** ノード名 `cq:Dialog` を持つタイプのノード `dialog` または `design_dialog`
+   * **サンゴ2:** 子コンテンツノード `cq:dialog` にGranite UI/Coral 2リソースタイプ `cq:design_dialog` を持つ、または名前が付けられたノード
+
    各行には、ダイアログを表示するためのリンクと、そのノード構造を表示するための CRXDE Lite へのリンクが含まれています。
 
    >[!NOTE]
@@ -101,19 +105,19 @@ GitHub のコード
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
-   ダイアログが既に変換済みの場合は、変換済みダイアログへのリンクも提供されます。 兄弟の Granite UI／Coral 3 ダイアログが存在する場合、ダイアログは変換済みであると見なされます。
+   ダイアログが既に変換されている場合は、変換されたダイアログにもリンクが表示されます。 兄弟の Granite UI／Coral 3 ダイアログが存在する場合、ダイアログは変換済みであると見なされます。
 
 ## ダイアログの書き換えルール {#dialog-rewrite-rules}
 
-The dialog conversion tool is based on the concept of **graph rewriting**, consisting of transforming a subject graph by applying rewrite rules. 書き換えルールとは、パターンと置き換えグラフとのペアリングを指します。 ルールが対象となるグラフの特定の部分グラフに一致すると、その部分グラフが置き換えられます。See also [https://en.wikipedia.org/wiki/Graph_rewriting](https://en.wikipedia.org/wiki/Graph_rewriting) for details on graph rewriting.
+The dialog conversion tool is based on the concept of **graph rewriting**, consisting of transforming a subject graph by applying rewrite rules. 書き換えルールは、パターンと置き換えグラフとのペアリングです。 ルールが対象となるグラフの特定の部分グラフに一致すると、その部分グラフが置き換えられます。See also [https://en.wikipedia.org/wiki/Graph_rewriting](https://en.wikipedia.org/wiki/Graph_rewriting) for details on graph rewriting.
 
 ダイアログ変換ツールでは、この手法を使用して、従来のダイアログツリー（クラシックまたは Granite UI／Coral 2）を Granite UI／Coral 3 のダイアログツリーに書き換えます。照合が単一のノードやプロパティに対してではなく、実際のサブツリーに対しておこなわれるので、変換の柔軟性が非常に高く、複雑なコンポートも考慮できるという利点があります。
 
 ### アルゴリズム {#algorithm}
 
-書き換えアルゴリズムでは、パラメーターとして、書き換え対象のツリーと一連の書き換えルールを受け取ります。ツリーは先行順でトラバースされ、ノードごとに、そのノードをルートとするサブツリーにルールが当てはまるかどうかがチェックされます。最初に一致したルールが、そのサブツリーを書き換えるために適用されます。次に、そのルートからトラバースが再開されます。ツリー全体がトラバースされ、サブツリーに一致するルールがなくなった時点ですぐにアルゴリズムは終了します。最適化指標として、アルゴリズムは最終的なノードのセットを追跡するので、後続のトラバージョンで一致を再確認する必要はありません。 書き換えルールによって、書き換えられたツリーのどのノードが最終であるか、アルゴリズムを今後通過する際にどのノードを再確認する必要があるかを定義します。
+書き換えアルゴリズムでは、パラメーターとして、書き換え対象のツリーと一連の書き換えルールを受け取ります。ツリーは先行順でトラバースされ、ノードごとに、そのノードをルートとするサブツリーにルールが当てはまるかどうかがチェックされます。最初に一致したルールが、そのサブツリーを書き換えるために適用されます。次に、そのルートからトラバースが再開されます。ツリー全体がトラバースされ、サブツリーに一致するルールがなくなった時点ですぐにアルゴリズムは終了します。最適化の測定基準として、アルゴリズムは最終的なノードのセットを追跡し続けるので、後続のトラバルで一致を再チェックする必要はありません。 書き換えルールによって、書き換えられたツリーのどのノードが最終であるか、アルゴリズムを今後通過する際にどのノードを再確認する必要があるかを定義します。
 
-The entry point for the conversion is the `DialogConversionServlet`, which is registered on POST requests to `/libs/cq/dialogconversion/content/convert.json`. 変換する必要のあるダイアログへのパスを含む配列であるパスリクエストパラメーターを受け取ります。 次に、定義済みのすべてのダイアログ書き換えルールを適用して、各ダイアログに対して、サーブレットが対応するダイアログツリーを書き換えます。
+The entry point for the conversion is the `DialogConversionServlet`, which is registered on POST requests to `/libs/cq/dialogconversion/content/convert.json`. 変換する必要のあるダイアログへのパスを含む配列であるパス要求パラメータを受け取ります。 次に、サーブレットは、各ダイアログに対して、定義済みのダイアログ書き換え規則をすべて適用して、対応するダイアログツリーを書き換えます。
 
 ### 書き換えルールのタイプ {#rewrite-rule-types}
 
@@ -153,9 +157,9 @@ rule
       + ...
 ```
 
-次の例では、2つのパターン **(とにルートする木** )と置換(ルートする `foo` 木 `foo1`)を含むルールを定義 ****`bar`します。 パターンツリー及び置換ツリーは、ノード及びプロパティを含む任意のツリーである。 定義済みのパターンのいずれかが一致する場合、このルールはサブツリーに一致します。 パターンを一致させるには、そのパターンと同じノードが対象となるツリーに含まれている（名前が一致する）必要があります。また、パターンで定義されたすべてのプロパティがツリーのプロパティに一致する必要があります。
+次の例では、2つの **パターン** (とに根付く木 `foo` )と `foo1`置換 **(根付く木**`bar`)を含むルールを定義します。 パターンツリーと置換ツリーは、ノードとプロパティを含む任意のツリーです。 定義されたパターンのいずれかが一致する場合は、サブツリーにルールが一致します。 パターンを一致させるには、そのパターンと同じノードが対象となるツリーに含まれている（名前が一致する）必要があります。また、パターンで定義されたすべてのプロパティがツリーのプロパティに一致する必要があります。
 
-一致した場合、一致したサブツリー（元のツリーと呼ばれる）が置換によって置換されます。 置換ツリーでは、元のツリーのプロパティの値を継承するマップ済みプロパティを定義できます。 They need to be of type `String` and have the following format:
+一致した場合、一致したサブツリー（元のツリーと呼ばれる）は、置換によって置換されます。 置き換えツリーは、元のツリーのプロパティの値を継承するマップ済みプロパティを定義できます。 They need to be of type `String` and have the following format:
 
 `${<path>}`
 
@@ -163,9 +167,9 @@ rule
 
 `${<path>:<default>}`
 
-Properties that contain &#39; `:`&#39; characters can be single quoted to avoid conflict with providing a default value. Boolean properties are negated if the expression is prefixed with &#39; `!`&#39;. マッピングされたプロパティは複数値にすることができ、その場合は、一致したツリー内に存在する最初のプロパティの値が割り当てられます。
+Properties that contain &#39; `:`&#39; characters can be single quoted to avoid conflict with providing a default value. Boolean properties are negated if the expression is prefixed with &#39; `!`&#39;. マッピングされたプロパティは複数の値を持つことができ、その場合は、一致したツリー内の最初のプロパティの値が割り当てられます。
 
-例えば、次のプロパティには、 `one` 一致した元のツリーのプロパティの `./two/three` 値が割り当てられます。
+例えば、次のプロパティ `one` は、一致した元のツリーのプロパティ `./two/three` の値に割り当てられます。
 
 ```xml
 ...
@@ -181,7 +185,7 @@ Properties that contain &#39; `:`&#39; characters can be single quoted to avoid 
 
 * `cq:rewriteOptional` (ブール型)
 
-   パターンノードにこのプロパティを設定して、パターンが一致するためにノードが存在する必要がないことを示します
+   パターンを一致させるためにノードが存在する必要がないことを示すには、パターンノードにこのプロパティを設定します
 
 * `cq:rewriteRanking` （整数）
 
@@ -189,13 +193,13 @@ Properties that contain &#39; `:`&#39; characters can be single quoted to avoid 
 
 さらに、リプレースメントツリーでは以下の（名前が `cq:rewrite` で始まる）特殊なプロパティがサポートされます。
 
-* `cq:rewriteMapChildren` (文字列)
+* `cq:rewriteMapChildren` (string)
 
    The node containing this property will receive a copy of the children of the node in the original tree referenced by the property value (e.g. `cq:rewriteMapChildren=./items`).
 
 * `cq:rewriteFinal` (ブール型)
 
-   これは、このプロパティを含むノードが最終的で、一致する書き換えルールを再確認する必要がないことをアルゴリズムに伝える最適化メジャーです。 置換ノード自体に配置すると、置換ツリー全体が最終と見なされます。
+   これは、このプロパティを含むノードが最終的で、一致する書き換えルールを再チェックする必要がないことをアルゴリズムに伝える最適化メジャーです。 置き換えノード自体に配置すると、置き換えツリー全体が最終と見なされます。
 * `cq:rewriteCommonAttrs` (ブール型)
 
    Set this property on the replacement node ( `rule`/ `replacement`) to map relevant properties of the original root node to Granite common attribute equivalents in the copy root. It will handle data attributes by copying/creating the `granite:data` subnode on the target and writing `data-*` properties there.
@@ -205,9 +209,9 @@ Properties that contain &#39; `:`&#39; characters can be single quoted to avoid 
 
 In addition, a `cq:rewriteProperties` node can be added to a replacement node to define string rewrites for mapped properties in the result. このノードはリプレースメントから削除されます。The properties of the `cq:rewriteProperties` node must be named the same as those which they are rewriting and accept a string array with two parameters:
 
-* `pattern`:対応する正規表現 `"(?:coral-Icon-)(.+)"`
+* `pattern`:対応するレジックス `"(?:coral-Icon-)(.+)"`
 
-* `replacement`:matcher関数に `replaceAll` 提供されます。 `"$1"`
+* `replacement`:matcher `replaceAll` 関数に渡されます。 `"$1"`
 
 次の例では、Coral 2 の icon プロパティを Coral 3 の同等のプロパティに書き換えています。
 
@@ -250,7 +254,7 @@ Node applyTo(Node root, Set<Node> finalNodes) throws DialogRewriteException, Rep
 int getRanking();
 ```
 
-ルールが `matches` 指定されたルートノ `true` ードをルートとするサブツリーと一致する場合、メソッドが返す必要があります。 ルールが一致する場合、ツリー書き換えアルゴリズムはその後、メソッドを呼び出します。こ `applyTo` のメソッドは、指定されたルートノードをルートとするサブツリーを書き換える必要があります。 通常、このメソッドは、元のツリーの名前を一時的に変更し、新しいツリーを元のツリーの親ノードの新しい子として構築し（ノードとプロパティを使用）、最後に元のツリーを削除します。 詳細な情報は、インタフェースのJavadocに記載されて `com.adobe.cq.dialogconversion.DialogRewriteRule` います。
+指定されたルートノードをルートとするサブツリーとルールが一致する場合、 `matches``true` メソッドが返す必要があります。 ルールが一致する場合、ツリー書き換えアルゴリズムは、次に `applyTo` メソッドを呼び出します。このメソッドは、指定されたルートノードにルートを持つサブツリーを書き換える必要があります。 通常、このメソッドは、元のツリーの名前を一時的に変更し、新しいツリーを元のツリーの親ノードの新しい子として（ノードとプロパティを使用して）構築し、最後に元のツリーを削除します。 詳細な情報は、インター `com.adobe.cq.dialogconversion.DialogRewriteRule` フェイスのJavadocに記載されています。
 
 #### その他の情報 - Javadoc {#further-information-javadocs}
 
@@ -280,7 +284,7 @@ public class CustomDialogRewriteRule implements DialogRewriteRule {
 }
 ```
 
-または、以下のように拡張する `com.adobe.cq.dialogconversion.AbstractDialogRewriteRule` こともできます。 抽象クラスはメソッドを実 `getRanking` 装し、サービスの `service.ranking` OSGiプロパティを使用して、ルールのランクを決定します。
+または、以下のように拡張す `com.adobe.cq.dialogconversion.AbstractDialogRewriteRule` ることもできます。 抽象クラスは `getRanking` メソッドを実装し、サービスの `service.ranking` OSGiプロパティを使用してルールのランクを決定します。
 
 ```java
 @Component
@@ -314,18 +318,18 @@ The `cq-dialog-conversion-content` package contains several predefined rewrite r
   </tr>
   <tr>
    <td><code>com.adobe.cq.dialogconversion.rules.CqDialogRewriteRule</code></td>
-   <td>タイプのノード、異 <code>cq:Dialog</code>なるサブ構造を処理</td>
-   <td><p>レイア <code>granite/ui/components/foundation/container</code> ウトまたはレイア <code>fixedcolumns</code> ウトの <code>tabs</code> 使用</p> <p>ダイアログの実際のコンポーネントがコピーされ、アルゴリズムの後続のパスで書き換えられます。</p> </td>
+   <td>タイプのノード <code>cq:Dialog</code>、異なるサブ構造を処理</td>
+   <td><p>またはレイアウト <code>granite/ui/components/foundation/container</code> を使用 <code>fixedcolumns</code> した <code>tabs</code> レイアウト</p> <p>ダイアログの実際のコンポーネントはコピーされ、アルゴリズムの後続のパスで書き換えられます。</p> </td>
   </tr>
   <tr>
    <td><code>com.adobe.cq.dialogconversion.rules.IncludeRule</code></td>
    <td>xtype = <code>cqinclude</code></td>
-   <td>参照先のノードがGranite UI / Coral 3ダイアログにコピーされ、その後アルゴリズムによって書き換えられます。</td>
+   <td>参照先のノードはGranite UI / Coral 3ダイアログにコピーされ、（場合によっては）アルゴリズムによって書き換えられます。</td>
   </tr>
   <tr>
    <td><code>com.adobe.cq.dialogconversion.rules.MultifieldRewriteRule</code></td>
    <td>xtype = <code>multifield</code></td>
-   <td><p>A <code>granite/ui/components/coral/foundation/form/multifield</code></p> <p>子ノ <code>fieldConfig</code> ード（存在する場合）は別々に書き換えられるので、サポートされるコンポーネントが制限されません。</p> </td>
+   <td><p>A <code>granite/ui/components/coral/foundation/form/multifield</code></p> <p>子ノード（存在する場合）は、別々に書き換えられるので、サポートされるコンポーネントが制限されることはありません。 <code>fieldConfig</code></p> </td>
   </tr>
   <tr>
    <td><code>/libs/cq/dialogconversion/rules/classic</code></td>
