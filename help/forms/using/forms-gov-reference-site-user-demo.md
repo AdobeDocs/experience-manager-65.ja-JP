@@ -98,13 +98,13 @@ We.Govデモパッケージには、次の組み込みの架空のユーザー�
 1. **電子メールクライアント**:電子メールを表示する優先方法(Gmail、Outlook)
 1. **CTA**:誘い文句（CTA：コールトゥアクション）
 1. **ナビゲート**:ブラウザページで特定の基準点を指定する場合。
-1. **AFC**:自動Formsコンバージョン
+1. **AFC**:automated forms conversion
 
-## 自動Formsコンバージョン（カミラ） {#automated-forms-conversion}
+## automated forms conversion（カミラ） {#automated-forms-conversion}
 
 **この節**:CXリードは、紙ベースのプロセスの一部として使用された既存のPDFベースのフォームを持っています。 近代化の一環として、彼女はこのPDFフォームを使って新しいアダプティブFormsを自動的に作成したいと思っています。
 
-### 自動Formsコンバージョン — We.Gov（カミラ） {#automated-forms-conversion-wegov}
+### automated forms conversion- We.Gov （カミラ） {#automated-forms-conversion-wegov}
 
 1. https://&lt;aemserver>:&lt;port>/aem/start.htmlに移動し *ます。*
 
@@ -146,7 +146,7 @@ We.Govデモパッケージには、次の組み込みの架空のユーザー�
 
 **この節**:ドキュメントが変換され、アダプティブフォームが生成されたら、Camilaはアダプティブフォームをデータソースに接続する必要があります。
 
-1. Camilaは、 [自動Formsコンバージョン — We.Gov](#automated-forms-conversion-wegov).で変換されたフォームでプロパティを開きます。
+1. Camilaは、 [Automated forms conversion「We.Gov](#automated-forms-conversion-wegov)」で変換されたフォームのプロパティを開きます。
 
 1. 次に、「フォームモデル」>「選択元」ドロップダウンから「フォームデータモデルを選択」>「選択」のリストから「Web.gov登録FDMを選択」を選択します。
 
