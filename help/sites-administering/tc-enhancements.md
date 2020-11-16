@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 67%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 翻訳プロジェクトの自動化 {#translation-project-automation}
 
-翻訳プロジェクトの作業生産性を向上させるためのオプションが追加されました。例えば、翻訳起動の自動プロモーションや削除、翻訳プロジェクトの定期的な実行スケジュールの設定などです。
+翻訳プロジェクトでの作業の生産性を向上させるためのオプションが追加されました。例えば、翻訳起動の自動プロモーションや削除、翻訳プロジェクトの定期実行のスケジュール設定などです。
 
 1. 翻訳プロジェクトで、「**翻訳の概要**」タイルの下部にある省略記号をクリックまたはタップします。
 
@@ -30,17 +33,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![screen_shot_2018-04-19at223430](assets/screen_shot_2018-04-19at223430.jpg)
 
-1. 必要に応じて、翻訳済みコンテンツを受け取った後に、翻訳の起動を自動的にプロモーションおよび削除するかどうかを選択できます。
+1. 必要に応じて、翻訳済みコンテンツを受け取った後に、翻訳の起動を自動的に促進および削除するかどうかを選択できます。
 
    ![screen_shot_2018-04-19at224033](assets/screen_shot_2018-04-19at224033.jpg)
 
-1. 翻訳プロジェクトの反復実行を選択するには、「**翻訳を繰り返す**」の下のドロップダウンで頻度を選択します。定期的なプロジェクトの実行では、指定した間隔で翻訳ジョブが自動的に作成され、実行されます。
+1. 翻訳プロジェクトの反復実行を選択するには、「**翻訳を繰り返す**」の下のドロップダウンで頻度を選択します。定期的なプロジェクトの実行では、指定された間隔で自動的に翻訳ジョブが作成および実行されます。
 
    ![screen_shot_2018-04-19at223820](assets/screen_shot_2018-04-19at223820.jpg)
 
 ## 多言語翻訳プロジェクト {#multilingual-translation-projects}
 
-1つの翻訳プロジェクトで複数のターゲット言語を設定して、作成される翻訳プロジェクトの総数を減らすことができます。
+1つの翻訳プロジェクトで複数のターゲット言語を設定して、作成する翻訳プロジェクトの総数を減らすことができます。
 
 1. 翻訳プロジェクトで、「**翻訳の概要**」タイルの下部にある省略記号をクリックまたはタップします。
 
@@ -60,7 +63,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 翻訳メモリの更新 {#translation-memory-updates}
 
-翻訳済みコンテンツの手動の編集をTranslation Management System(TMS)に再び同期して、翻訳メモリをトレーニングすることができます。
+翻訳済みコンテンツの手動の編集をTranslation Management System(TMS)に再度同期して、翻訳メモリをトレーニングできます。
 
 1. From the Sites console, after updating text content in a translated page, select **Update Translation Memory**.
 
@@ -86,6 +89,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
+
 >
 >
 この `es` 言語コピーは、`en` ノードから 2 レベル離れている（americas/central-america）ので、検出されません。
