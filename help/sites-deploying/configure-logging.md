@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 83%
 
 ---
 
@@ -21,7 +24,7 @@ AEM では、次の設定が可能です。
 
 * 中央のログサービスのグローバルパラメーター
 * 要求データのログ（要求情報用の特殊なログ設定）
-* 個々のサービスに特有の設定（個々のログファイルおよびログメッセージの書式など）
+* 個々のサービス固有の設定;例えば、個々のログファイルやログメッセージの形式
 
 これらはすべて、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)です。
 
@@ -64,7 +67,7 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
 これらの要素は、該当する要素の次のパラメーターによってリンクされます。
 
-* **Logger(Logging Logger)**
+* **ロガー（Logging Logger）**
 
    メッセージを生成するサービスを定義します。
 
@@ -72,13 +75,13 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
    ログメッセージを保存する物理ファイルを定義します。
 
-   これは、Logging LoggerとLogging writerをリンクするために使用します。 接続を行うには、ログライター設定の同じパラメーターと値が同じである必要があります。
+   これは、ロギングロガーをロギングライターとリンクするために使用します。 接続を行うには、この値がLogging Writer設定の同じパラメーターと同じである必要があります。
 
-* **ログファイル（ログライタ）**
+* **ログファイル（ログライター）**
 
    ログメッセージの書き込み先となる物理ファイルを定義します。
 
-   これは、Logging Writer設定の同じパラメーターと同じである必要があります。同じでないと、一致は行われません。 一致がない場合は、暗黙的なWriterがデフォルト設定（日次ログローテーション）で作成されます。
+   これは、Logging Writer構成の同じパラメータと同じである必要があります。同じでないと、一致しません。 一致しない場合は、暗黙的なWriterがデフォルト設定（日別ログローテーション）で作成されます。
 
 ### 標準のロガーおよびライター {#standard-loggers-and-writers}
 
@@ -100,7 +103,7 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
       (org.apache.sling.engine.impl.log.RequestLogger)
 
-   * Writes the messages to either `request.log` or `access.log`.
+   * メッセージを `request.log` または `access.log` に書き込みます。
 
 これらは必要に応じてカスタマイズできますが、ほとんどのインストールには標準設定が適しています。
 
@@ -108,15 +111,15 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
 * ロガー：
 
-   * Apache Sling Logging Loggerの設定
+   * Apache Sling Logging Logger Configuration
 
       (org.apache.sling.commons.log.LogManager.factory.config)
 
-   * にメッセージ `Information` を書き込みま `logs/error.log`す。
+   * `logs/error.log` にメッセージ `Information` を書き込みます。
 
 * リンク先のライター：
 
-   * Apache Slingログライタの設定
+   * Apache Sling Logging Writer Configuration
 
       (org.apache.sling.commons.log.LogManager.factory.writer)
 
@@ -124,7 +127,7 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
    * Apache Sling Logging Logger Configuration（org.apache.sling.commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7）
 
-   * サービス `Warning` のメッセージ `../logs/error.log` をに書き込みま `org.apache.pdfbox`す。
+   * サービス `org.apache.pdfbox` のメッセージ `Warning` を `../logs/error.log` に書き込みます。
 
 * 特定のライターにリンクしないので、デフォルト設定で暗黙のライターを作成して使用します（毎日のログローテーション）。
 
