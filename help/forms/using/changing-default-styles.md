@@ -11,6 +11,9 @@ discoiquuid: 582b0fe8-a92b-4a1d-b859-57f13f53d0d8
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '390'
+ht-degree: 73%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 HTML5 フォームは HTML5 機能の使用によりレンダリングされ、レンダリングされるフォームのスタイル設定は CSS の使用によって実行されます。HTML5 フォームのデフォルトの外観は、その PDF レンダリングに似ています。開発者はカスタム CSS を使用して、HTML5 フォームのデフォルトの外観を変更できます。
 
-This article provides step-by-step information to change style of an HTML5 form and [Introduction to Styles](/help/forms/using/css-styles.md) article contains detailed information about various styling aspects of HTML5 forms. この記事に記載されている手順を実行する前に、「スタイルの概要」の記事を必ずお読みください。
+This article provides step-by-step information to change style of an HTML5 form and [Introduction to Styles](/help/forms/using/css-styles.md) article contains detailed information about various styling aspects of HTML5 forms. この記事に記載されている手順を実行する前に、「スタイルの概要」記事を必ずお読みください。
 
 次の 2 つの画像はデフォルトのスタイルとカスタマイズされたスタイルの違いを示しています。
 
@@ -40,6 +43,7 @@ This article provides step-by-step information to change style of an HTML5 form 
    1. 「ファイルを作成」ダイアログで、スタイルシートの名前を入力します。拡張子 .css を必ず使用してください (例： stylesheet.css)。
    1. ナビゲーションペインで、作成したCSSファイルを開きます。
    1. スタイル設定するコンポーネントの CSS クラスを定義し、それらのクラスにスタイルを追加します。
+
    HTML5 フォームにある特定のコンポーネントに対してどの CSS クラスを作成するかについて詳しくは、「[スタイルの概要](/help/forms/using/css-styles.md)」を参照してください。
 
 1. **Profile Renderer にスタイルシートを追加する**
