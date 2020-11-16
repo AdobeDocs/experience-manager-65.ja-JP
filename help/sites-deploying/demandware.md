@@ -14,13 +14,16 @@ pagetitle: Deploying eCommerce with Demandware
 redirecttarget: https //github.com/adobe/commerce-salesforce
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '481'
+ht-degree: 68%
 
 ---
 
 
 # Salesforce Commerce Cloud{#salesforce-commerce-cloud}
 
-必要なeコマースパッケージを展開すると、Salesforce Commerce Cloud/Demandware実装（デモカタログを含む）と共に提供されるeコマース機能のリファレンス実装と共に、eコマースフレームワークの全機能が提供されます。
+必要なeコマースパッケージの展開は、eコマースフレームワークの全機能と、SalesforceCommerce Cloud/Demandware実装（デモカタログを含む）で提供されるeコマース機能のリファレンス実装を提供します。
 
 ## Salesforce Commerce Cloud を使用した e コマースに必要なパッケージ {#packages-needed-for-ecommerce-with-salesforce-commerce-cloud}
 
@@ -50,9 +53,9 @@ e コマース機能をインストールするには、以下が必要です。
 >
 >パッケージをダウンロードするには、[パッケージ共有](/help/sites-administering/package-manager.md#package-share)に移動します。
 
-AEM と Demandware Sandbox の間のサーバー接続を設定する必要があります。ほとんどの設定は、デフォルトのパスやライブラリなどを使用して、提供されたSiteGenisisデモコンテンツパッケージで動作するように、すでに事前に設定されています。 コネクタを他のサイトやライブラリで使用する場合は、この設定を更新する必要があります。
+AEM と Demandware Sandbox の間のサーバー接続を設定する必要があります。ほとんどの設定は、デフォルトパス、ライブラリなどを使用して、提供されたSiteGenisデモコンテンツパッケージと連携するように事前に設定されています。 コネクタを他のサイトやライブラリで使用する場合は、この設定を更新する必要があります。
 
-1. https://localhost:4502/system/console/configMgrに移動 [します](https://localhost:4502/system/console/configMgr)。
+1. https://localhost:4502/system/console/configMgrに移動し [ます](https://localhost:4502/system/console/configMgr)。
 1. 「Demandware Client」をクリックします。****
 1. 必要に応じて、インスタンスのエンドポイントの IP またはホスト名を入力します。****
 
@@ -64,7 +67,7 @@ AEM と Demandware Sandbox の間のサーバー接続を設定する必要が�
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-1. 「**Save**」をクリックします。
+1. 「**保存**」をクリックします。
 
 #### レプリケーション {#replication}
 
@@ -80,7 +83,7 @@ OAuth クライアントは Demandware Sandbox インスタンスを使用する
 
 ステージングおよび実稼動システムの場合、OAuth クライアントに適切なクライアント ID とパスワードを設定する必要があります。
 
-1. https://localhost:4502/system/console/configMgrに移動 [します](https://localhost:4502/system/console/configMgr)。
+1. https://localhost:4502/system/console/configMgrに移動し [ます](https://localhost:4502/system/console/configMgr)。
 1. Click **Demandware Access Token provider**.
 
    ![chlimage_1-7](assets/chlimage_1-7.png)
