@@ -36,7 +36,7 @@ ht-degree: 81%
 
 **ソフトウェアインターフェイスを使用してアセットをプレビューするには**
 
-1. **[!UICONTROL Adobe Experience Managerから、]**&#x200B;ナビゲーション **[!UICONTROL ページで「アセット]** 」をタップし、「 **[!UICONTROL ファイル」をタップしてアセットにアクセスし]****** ます。
+1. **[!UICONTROL Adobe Experience Managerから、]**&#x200B;ナビゲーション **[!UICONTROL ページで「アセット]** 」をタップし、次に「 **[!UICONTROL ファイル]****** 」をタップしてアセットにアクセスします。
 1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View.]**
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
@@ -159,4 +159,4 @@ ht-degree: 81%
 
    * ズームされたア *セットの表示を水平または垂直に移動するには* 、それぞれの矢印キーを押します。
 
-   * +を押して表示 `<Shift>``<Tab>` をリセットし、フォーカスをアセットに戻します。
+   * +を押して表示 `<Shift>``<Tab>` をリセットし、再びアセットにフォーカスを移動します。
