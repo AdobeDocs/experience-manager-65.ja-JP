@@ -36,9 +36,9 @@ ht-degree: 78%
 
 通信管理ソリューションで使用できる、一般的な JSP EL の例は以下のとおりです。
 
-* 2つの数値を追加するには： ${number1 + number2}
-* 2つの文字列を連結するには： ${str1} ${str2}
-* 2つの数値を比較するには： ${age &lt; 18}
+* 2つの数値を追加するには：${number1 + number2}
+* 2つの文字列を連結するには：${str1} ${str2}
+* 2つの数値を比較するには：${age &lt; 18}
 
 詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側の式マネージャーは、JSP EL仕様の特定の変数と関数をサポートしません。具体的には、次のようになります。
 
