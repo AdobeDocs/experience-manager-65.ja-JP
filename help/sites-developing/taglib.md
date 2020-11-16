@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '2487'
+ht-degree: 62%
 
 ---
 
@@ -37,27 +40,27 @@ global では、[Sling ライブラリ](/help/sites-developing/taglib.md#sling-t
 
 ### <ui:includeClientLib> {#ui-includeclientlib}
 
-The `<ui:includeClientLib>` tag Includes a AEM html client library, which can be a js, a css, or a theme library. jsやcssなど、異なるタイプの複数の包含タグの場合、このタグをJSPで複数回使用する必要があります。 このタグは、` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` サービスインターフェイスを囲む便利なラッパーです。
+The `<ui:includeClientLib>` tag Includes a AEM html client library, which can be a js, a css, or a theme library. jsやcssなど、異なるタイプの複数の挿入タグの場合は、このタグをJSPで複数回使用する必要があります。 このタグは、` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` サービスインターフェイスを囲む便利なラッパーです。
 
 このタグの属性を以下に示します。
 
-**categories** — コンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
+**カテゴリ** — カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeIncludes`
 
-**テーマ** — クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
+**テーマ** — カンマ区切りのクライアントライブラリカテゴリのリスト。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeThemeInclude`
 
-**js** — クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
+**js** — カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeJsInclude`
 
-**css** — クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
+**css** — カンマ区切りのクライアントライブラリカテゴリのリスト。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeCssInclude`
 
-**themed** — テーマの設定されたライブラリまたはテーマの設定されていないライブラリのみを示すフラグを含めます。 省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
+**themed** — 主題設定されたライブラリまたは主題設定されていないライブラリのみを示すフラグを含めます。 省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
 
 The `<ui:includeClientLib>` tag can be used as follows in a jsp:
 
@@ -109,21 +112,21 @@ The `<cq:text>` tag is a convenience tag that outputs component text in a JSP.
 
 **oldValue** - diff出力に使用する値。 この属性が存在する場合は、property 属性の使用が上書きされます。
 
-**escapeXml** — 結果の文字列内の文字&lt;、>、&amp;、&#39;および&quot;を、対応する文字エンティティコードに変換するかどうかを定義します。 デフォルト値は false です。オプションの書式設定の後はエスケープが適用されます。
+**escapeXml** — 結果の文字列内の文字&lt;、>、&amp;、&#39;、&quot;を、対応する文字エンティティコードに変換するかどうかを定義します。 デフォルト値は false です。オプションの書式設定の後はエスケープが適用されます。
 
-**format** — オプションのjava.text.テキストの書式設定に使用する形式。
+**format** — オプションのjava.text.Format。テキストの書式設定に使用します。
 
-**noDiff** - diff情報が存在する場合でも、diff出力の計算を抑制します。
+**noDiff** - diff情報が存在する場合でも、diff出力の計算を省略します。
 
 **tagClass** — 空でない出力を囲む要素のCSSクラス名。 空の場合は、要素が追加されません。
 
 **tagName** — 空でない出力を囲む要素の名前。 デフォルト値は DIV です。
 
-**プレースホルダ** — 編集モードでNULLまたは空のテキスト（プレースホルダー）に使用するデフォルト値。 オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。デフォルト値は次のとおりです。
+**placeholder** — 編集モードでnullまたは空のテキスト（プレースホルダーなど）に使用するデフォルト値。 オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。デフォルト値は次のとおりです。
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
-**default** - NULLまたは空のテキストに使用するデフォルト値。 オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。
+**default** -nullまたは空のテキストに使用するデフォルト値。 オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。
 
 Some examples how the `<cq:text>` tag can be used in a JSP:
 
@@ -165,13 +168,13 @@ The `<cq:setContentBundle>` tag creates an i18n localization context and stores 
 
 **source** — ロケールの取得元。 次のいずれかの値に設定できます。
 
-* **static** — ロケールが使用可能な場合は属性から取得され、 `language` それ以外の場合はサーバーのデフォルトロケールから取得されます。
+* **static** — ロケールが使用可能な場合は `language` 属性から取得され、それ以外の場合はサーバーのデフォルトロケールから取得されます。
 
-* **page** — ロケールは、現在のページの言語またはリソース（使用可能な場合）から取得され、それ以外の場合は属性（使用可能な場合）から取得さ `language` れ、それ以外の場合はサーバーのデフォルトロケールから取得されます。
+* **page** — ロケールは、現在のページまたはリソース（使用可能な場合）の言語から取得され、使用可能な場合は `language` 属性から取得されます。それ以外の場合はサーバーのデフォルトロケールから取得されます。
 
-* **request** — ロケールはリクエストロケール( `request.getLocale()`)から取得されます。
+* **request** — ロケールは、リクエストのロケール( `request.getLocale()`)から取得されます。
 
-* **auto**`language` — ロケールが使用可能な場合は属性から取得され、それ以外の場合は現在のページまたはリソースの言語（使用可能な場合）から取得され、それ以外の場合はリクエストから取得されます。
+* **auto**`language` — ロケールが使用可能な場合は属性から取得され、それ以外の場合は現在のページまたはリソースの言語（使用可能な場合）から取得されます。それ以外の場合はリクエストから取得されます。
 
 `source` 属性が設定されていない場合：
 
@@ -250,35 +253,35 @@ Should you use `<%@ include file="myScript.jsp" %>` or `<cq:include script="mySc
 Should you use `<cq:include>` or `<sling:include>`?
 
 * When developing AEM components, Adobe recommends that you use `<cq:include>`.
-* `<cq:include>` script属性を使用する場合、スクリプトファイルを名前で直接含めることができます。 これにより、コンポーネントとリソースタイプの継承が考慮されます。多くの場合、この方法はセレクターと拡張子を使用する Sling のスクリプト解決を厳守するよりも簡単です。
+* `<cq:include>` script属性を使用する場合、名前を指定してスクリプトファイルを直接含めることができます。 これにより、コンポーネントとリソースタイプの継承が考慮されます。多くの場合、この方法はセレクターと拡張子を使用する Sling のスクリプト解決を厳守するよりも簡単です。
 
 ### <cq:includeClientLib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>` はAEM 5.6以降で非推奨となっています。代わり [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) に使用する必要があります。
+>`<cq:includeClientLib>` はAEM 5.6以降で非推奨となっています。代わりに、 [ を使用 `<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) します。
 
-The `<cq:includeClientLib>` tag Includes a AEM html client library, which can be a js, a css or a theme library. jsやcssなど、異なるタイプの複数の包含タグの場合、このタグをJSPで複数回使用する必要があります。 このタグは、`com.day.cq.widget.HtmlLibraryManager` サービスインターフェイスを囲む便利なラッパーです。
+The `<cq:includeClientLib>` tag Includes a AEM html client library, which can be a js, a css or a theme library. jsやcssなど、異なるタイプの複数の挿入タグの場合は、このタグをJSPで複数回使用する必要があります。 このタグは、`com.day.cq.widget.HtmlLibraryManager` サービスインターフェイスを囲む便利なラッパーです。
 
 このタグの属性を以下に示します。
 
-**categories** — コンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
+**カテゴリ** — カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
 
 等価な式: `com.day.cq.widget.HtmlLibraryManager#writeIncludes`
 
-**テーマ** — クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
+**テーマ** — カンマ区切りのクライアントライブラリカテゴリのリスト。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
 
 Equivalent to: `com.day.cq.widget.HtmlLibraryManager#`writeThemeInclude
 
-**js** — クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
+**js** — カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
 
 等価な式: `com.day.cq.widget.HtmlLibraryManager#writeJsInclude`
 
-**css** — クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
+**css** — カンマ区切りのクライアントライブラリカテゴリのリスト。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
 
 等価な式: `com.day.cq.widget.HtmlLibraryManager#writeCssInclude`
 
-**themed** — テーマの設定されたライブラリまたはテーマの設定されていないライブラリのみを示すフラグを含めます。 省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
+**themed** — 主題設定されたライブラリまたは主題設定されていないライブラリのみを示すフラグを含めます。 省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
 
 The `<cq:includeClientLib>` tag can be used as follows in a jsp:
 
@@ -336,7 +339,7 @@ The `<cq:defineObjects>` tag exposes the following, regularly used, scripting ob
 
 * 現在のページのページプロパティオブジェクト（org.apache.sling.api.resource.ValueMap）
 
-**properties**
+**プロパティ**
 
 * 現在のリソースのプロパティオブジェクト（org.apache.sling.api.resource.ValueMap）
 
@@ -547,7 +550,7 @@ The `<sling:include>` tag includes a resource into the current page.
 
 >[!NOTE]
 >
->リソースとタグに含まれるスクリプトの解像度は、通 `<sling:include>` 常のSling URLの解像度と同じです。 デフォルトでは、セレクター、拡張子など の値は、含まれるスクリプトにも使用されます。 タグ属性を使用して変更できます。例えば、セ `replaceSelectors="foo.bar"` レクターを上書きできます。
+>リソースとタグに含まれるスクリプトの解像度は、通常のスリングURLの解像度と同じ `<sling:include>` です。 デフォルトでは、セレクター、拡張子など の値を現在のリクエストに含めるスクリプトにも使用します。 これらは、タグ属性を使用して変更できます。例えば、セレクター `replaceSelectors="foo.bar"` を上書きできます。
 
 例：
 
