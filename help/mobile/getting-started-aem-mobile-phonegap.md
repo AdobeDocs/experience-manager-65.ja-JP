@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fbcdea8a-72e9-431b-9c32-dc02d4cdb9c8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 52%
 
 ---
 
@@ -27,11 +30,11 @@ Typically, an ***AEM Administrator*** is responsible for adding a new applicatio
 
 From here an ***AEM Author*** (or *Marketer*) is now able to use the out-of-the-box templates and components to add and edit pages, drag and drop components and add media of all types from the DAM including images, videos and text fragments (content fragments).
 
-The real power of AEM Mobile is that a *savvy* ***AEM Developer*** can extend and create custom web templates and components to enable the *AEM Author* to create beautful and engaging mobile experiences. これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけではありません。ただし、デバイスとAEMサーバー（任意のリモートサーバー）の両方にオムニチャネルサービスエンドポイントと通信します。
+The real power of AEM Mobile is that a *savvy* ***AEM Developer*** can extend and create custom web templates and components to enable the *AEM Author* to create beautful and engaging mobile experiences. これらのテンプレートとコンポーネントは、モバイルアプリの世界向けに最適化されているだけではありません。ただし、デバイスとAEMサーバ（任意のリモートサーバ）の両方に対して、オムニチャネルサービスエンドポイントと通信します。
 
 >[!NOTE]
 >
->アプリの準備が整ったら、AEM 作成者は、まず、レビューおよび承認用に、**[Adobe Verify](/help/mobile/phonegap-mobile-quickstart.md)**（AppStore でも Play Store でも入手可能）で関係者にアプリをダウンロードしてもらうことができます。**緑の信号を受け取ると、AEM Mobile ContentSyncコンテンツリリース管理ダッシュボードを使用して、この新しいコンテンツや更新されたコンテンツをユーザーに直接リリースできます。 各個人の能力とガバナンスポリシーに合わせて、1 人のユーザーが任意の数の役割を担うことができます。
+>アプリの準備が整ったら、AEM 作成者は、まず、レビューおよび承認用に、**[Adobe Verify](/help/mobile/phonegap-mobile-quickstart.md)**（AppStore でも Play Store でも入手可能）で関係者にアプリをダウンロードしてもらうことができます。**&#x200B;緑の信号を受け取ると、この新しいコンテンツや更新されたコンテンツを、AEM MobileのContentSyncコンテンツリリース管理ダッシュボードを使用してユーザに直接公開できます。 各個人の能力とガバナンスポリシーに合わせて、1 人のユーザーが任意の数の役割を担うことができます。
 
 ## 前提条件 {#prerequisites}
 
@@ -41,7 +44,7 @@ AEM Mobile を操作して、この使用の手引きに記載された手順を
 
 [AEM 使用の手引き](/help/sites-deploying/deploy.md)
 
-[AEM Mobile Control Centerのチュートリアル](/help/mobile/phonegap-authoring-apps.md)
+[AEM Mobileコントロールセンターのウォークスルー](/help/mobile/phonegap-authoring-apps.md)
 
 ## 作成者向けクイックリンク {#quicklinks-for-authors}
 
