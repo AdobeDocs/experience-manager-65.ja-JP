@@ -12,6 +12,9 @@ discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+workflow-type: tm+mt
+source-wordcount: '827'
+ht-degree: 98%
 
 ---
 
@@ -49,9 +52,10 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 * ソースページのコピーを作成できます。
 
    * コピーがローンチになります。
-   * トップレベルのソースページは、**実稼動**&#x200B;と呼ばれます。
+   * トップレベルのソースページは、「**実稼働**」と呼ばれます。
 
       * ソースページは複数の（別個の）ブランチから取得できます。
+
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
 * ローンチの設定を編集できます。
@@ -71,7 +75,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
       * 「**ローンチ****日**（**ライブ日付**）」フィールド：ローンチを作成または編集するときに設定できます。
 
       * 「**実稼動準備完了**」フラグ：ローンチを編集するときにのみ設定できます。
-      * 「**実稼動準備完了**」フラグが設定されると、ローンチは指定の「**ローンチ****日**（**ライブ日付**）」に実稼動ページに自動的に昇格されます。昇格後、実稼動ページは自動的に公開されます。\
+      * 「**実稼動準備完了**」フラグが設定されると、ローンチは指定の「**ローンチ****日**（**ライブ日付**）」に実稼動ページに自動的に昇格されます。昇格後、実稼働ページは自動的に公開されます。\
           日付が設定されていない場合、フラグの効果はありません。
 
 
@@ -79,12 +83,14 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
    * ソースページに対する変更は、ローンチコピーに自動的に反映されます（ライブコピーなど、継承するように設定されている場合）。
    * ローンチコピーに対する変更は、ソースコピーの自動更新を中断することなくおこなうことができます。
+
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
 * [ネストされたローンチ（ローンチ内にローンチ）を作成](/help/sites-authoring/launches-creating.md#creating-a-nested-launch)できます。
 
    * ソースは既存のローンチです。
    * 任意のターゲットに[ネストされたローンチを昇格](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)させることができます。親ローンチやトップレベルのソースページ（実稼動）も指定できます。
+
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
    >[!CAUTION]
@@ -93,7 +99,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 >[!NOTE]
 >
->Creating and editing launches requires access rights to `/content/launches` - as with the default group `content-authors`.
+>ローンチを作成および編集するには、デフォルトグループ `content-authors` と同様に、`/content/launches` へのアクセス権限が必要です。
 >
 >問題が発生している場合は、システム管理者にお問い合わせください。
 
@@ -103,7 +109,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 * **ツール**&#x200B;コンソールで、**ツール**／**サイト**／**ローンチ**&#x200B;と選択します。
 
-* Or directly with [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
+* または、[ に直接アクセスします。https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
 ## 「参照」のローンチ（サイトコンソール）{#launches-in-references-sites-console}
 
