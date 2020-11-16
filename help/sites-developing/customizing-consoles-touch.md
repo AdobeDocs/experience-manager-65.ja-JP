@@ -12,6 +12,9 @@ discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+workflow-type: tm+mt
+source-wordcount: '717'
+ht-degree: 78%
 
 ---
 
@@ -37,23 +40,25 @@ Overlays are based on node definitions and allow you to overlay the standard fun
 >
 >* [クライアントライブラリ](/help/sites-developing/clientlibs.md)の使用と作成
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
->* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
+>* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
+
 >
 >
 このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html) でも説明しています。
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+>`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
 >1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
    >
    >
-1. Make any changes within `/apps`
+1. `/apps` 内で変更作業をおこないます。
+
 >
 
 
@@ -66,7 +71,7 @@ For example, the following location within the `/libs` structure can be overlaid
 
 >[!NOTE]
 >
->ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」を参照してください。
+>ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」を参照してください。
 
 ## コンソールのデフォルト表示のカスタマイズ {#customizing-the-default-view-for-a-console}
 
@@ -78,7 +83,7 @@ For example, the following location within the `/libs` structure can be overlaid
 
    先頭のエントリがデフォルトになります。
 
-   使用可能なノードは、使用可能な表示オプションに関連しています。
+   使用できるノードは、使用できる表示オプションに関連しています。
 
    * `column`
    * `card`
@@ -90,8 +95,8 @@ For example, the following location within the `/libs` structure can be overlaid
 
    次のプロパティを定義します。
 
-   * **名前**: `sling:orderBefore`
-   * **タイプ**: `String`
+   * **名前**：`sling:orderBefore`
+   * **型**：`String`
    * **値**: `column`
 
 ### 新しいアクションをツールバーに追加 {#add-new-action-to-the-toolbar}
@@ -153,6 +158,7 @@ For example, the following location within the `/libs` structure can be overlaid
 
    * If you want to plug additional data, you need to write a [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) with a
       `pageInfoProviderType` プロパティの以前の場所への参照を更新します。
+
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
 
 1. これで、リスト表示の列コンフィギュレーターで列を選択できるようになります。
