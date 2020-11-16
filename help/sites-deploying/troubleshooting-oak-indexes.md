@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1486'
+ht-degree: 64%
 
 ---
 
@@ -31,7 +34,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 1. Open the Web Console and click the JMX tab or go to https://&lt;host>:&lt;port>/system/console/jmx (for example, [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)).
 1. Navigate to the `IndexStats` Mbeans.
-1. 「」と「 `IndexStats` 」のMBeanを `async`開き `fulltext-async`ます。
+1. 「」と「」の `IndexStats` MBeanを開き `async`ま `fulltext-async`す。
 
 1. For both MBeans, check if the **Done** timestamp and **LastIndexTime** timestamp are less than 45 mins from the current time.
 
@@ -61,6 +64,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
    * On the affected AEM instance, navigate to AEM OSGi Web Console>OSGi>Configuration>Apache Sling Scheduler or go to https://&lt;host>:&lt;port>/system/console/configMgr (for example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
    * 「Allowed Thread Pools」フィールドに「oak」という値でエントリを追加します。
    * 右下の「Save」をクリックして変更内容を保存します。
+
    ![chlimage_1-119](assets/chlimage_1-119.png)
 
 1. Apache Sling Scheduler の新しいスレッドプールが登録され、Apache Sling Scheduler のステータス Web コンソールに表示されることを確認します。
@@ -70,6 +74,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
       * ApacheSlingoak
       * ApacheSlingdefault
+
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
 ## 監視キューがいっぱいである {#observation-queue-is-full}
@@ -110,7 +115,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
       * *org.apache.jackrabbit.oak.plugins.index.IndexUpdate*
    * Collect data from the async `IndexStats` MBean:
 
-      * AEM OSGi Web Console/Main/JMX/IndexStat>asyncに移動します。
+      * AEM OSGi Web Console>Main>JMX>IndexStat>asyncに移動します。
 
          or go to [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
    * Use [oak-run.jar&#39;s console mode](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) to collect the details of what exists under the * `/:async`* node.
@@ -125,11 +130,11 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 1. 手順1で説明したすべての情報を収集した後、AEMを再起動します。
 
    * 同時負荷が大きい場合は（監視キューのオーバーフローや類似の現象）、AEM を再起動すると問題が解決することがあります。
-   * If a restart does not solve the problem, open an issue with [Adobe Customer Care](https://helpx.adobe.com/marketing-cloud/contact-support.html) and provide all the information collected in Step 1.
+   * If a restart does not solve the problem, open an issue with [Adobe Customer Care](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html) and provide all the information collected in Step 1.
 
 ## 非同期のインデックス再作成を安全に中止する {#safely-aborting-asynchronous-re-indexing}
 
-Re-indexing can be safely aborted (stopped before it is completed) via the `async, async-reindex`and f `ulltext-async` indexing lanes ( `IndexStats` Mbean). For more information, also see the Apache Oak documentation on [How to Abort Reindexing](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex). また、次の点を考慮します。
+Re-indexing can be safely aborted (stopped before it is completed) via the `async, async-reindex`and f `ulltext-async` indexing lanes ( `IndexStats` Mbean). For more information, also see the Apache Oak documentation on [How to Abort Reindexing](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex). また、次の点も考慮してください。
 
 * Lucene および Lucene プロパティインデックスのインデックス再作成は、これらが本来非同期であることから中止できます。
 * The re-indexing of Oak Property Indexes can only be aborted if re-indexing was intiated via the `PropertyIndexAsyncReindexMBean`.
@@ -143,12 +148,13 @@ Re-indexing can be safely aborted (stopped before it is completed) via the `asyn
 
       * 適切なレーンを識別し、IndexStats MBeanインスタンスを識別するには、Oak Indexesの「async」プロパティを確認します。 The &quot;async&quot; property will contain the lane name: `async`, `async-reindex`, or `fulltext-async`.
       * レーンは、AEM のインデックスマネージャにアクセスして、「非同期」列で識別することもできます。インデックスマネージャにアクセスするには、運営／診断／インデックスマネージャに移動します。
+
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
 1. Invoke the `abortAndPause()` command on the appropriate `IndexStats` MBean.
-1. インデックスレーンの再開時に再インデックスを再開しないように、Oakインデックス定義を適切にマークします。
+1. インデックス付けレーンの再開時に再インデックスを再開しないように、Oakインデックス定義を適切にマークします。
 
-   * When re-indexing an **existing** index, set the reindex property to false
+   * **既存のインデックスを再インデックスする場合** 、reindexプロパティをfalseに設定します
 
       * `/oak:index/someExistingIndex@reindex=false`
    * あるいは、**新規**&#x200B;インデックスの場合は次のようにします。
@@ -157,6 +163,7 @@ Re-indexing can be safely aborted (stopped before it is completed) via the `asyn
 
          * `/oak:index/someNewIndex@type=disabled`
       * または、インデックス定義を完全に削除します。
+
    完了したら、変更をリポジトリにコミットします。
 
 1. 最後に、中止したインデックス作成レーンで非同期インデックス作成を再開します。
@@ -165,4 +172,4 @@ Re-indexing can be safely aborted (stopped before it is completed) via the `asyn
 
 ## 時間のかかるインデックス再作成の回避 {#preventing-slow-re-indexing}
 
-クワイエット時（大きなコンテンツの取り込み時などではない）にインデックスを再作成することが最適で、AEMの読み込みが確認され、制御されるメンテナンス時間に理想的です。 また、インデックス再作成が他のメンテナンスアクティビティ中に実行されないようにしてください。
+静かな時間帯（大きなコンテンツの取り込み時など）に再インデックスを行うのが最適で、AEMの読み込みと制御が行われるメンテナンス時間帯に最適です。 また、インデックス再作成が他のメンテナンスアクティビティ中に実行されないようにしてください。
