@@ -1,6 +1,6 @@
 ---
-title: クラウドサービスの設定
-seo-title: クラウドサービスの設定
+title: クラウドサービス設定
+seo-title: クラウドサービス設定
 description: 既存のインスタンスを拡張して、独自の設定を作成できます
 seo-description: 既存のインスタンスを拡張して、独自の設定を作成できます
 uuid: 9d20c3a4-2a12-4d3c-80c3-fcac3137a675
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '579'
+ht-degree: 73%
 
 ---
 
 
-# クラウドサービスの設定{#cloud-service-configurations}
+# クラウドサービス設定{#cloud-service-configurations}
 
 設定は、サービス設定を保存するためのロジックと構造を提供するようにデザインされています。
 
@@ -29,18 +32,18 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 * 設定（プロパティや段落など）は、親から継承される。
 * パスによって、分析ノードから参照される。
 * 簡単に拡張できる。
-* [Adobe Analyticsなど、より複雑な設定を柔軟に対応できます](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
-* 依存関係のサポート(例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定が必要)。
+* [Adobe Analyticsなど、より複雑な設定に柔軟に対応できます](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
+* 依存関係のサポート(例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) ・プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定が必要)
 
 ## 構造 {#structure}
 
 設定のベースパスは次のとおりです。
 
-`/etc/cloudservices` です。
+`/etc/cloudservices`.
 
 設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 
-新しいサービスの設定を行うには、次の操作を行う必要があります。
+新しいサービスの設定を指定するには、次の操作が必要です。
 
 * ～にサービスページを作る
 
@@ -174,7 +177,7 @@ Available services are listed in the **Cloud Services** tab of the **Page Proper
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、ページ上のコンポーネントが含まれ<br /> (通常 <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> はタグの前 <code>body</code> に)、<br /> AnalyticsとTargetの場合は、これを使用して、訪問者の行動を追跡するJavaScript呼び出しなどの追加機能を含めます。</td>
+   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、ページ上のコンポーネントが含まれ<br /> ます <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> (通常は <code>body</code> タグの前)。<br /> Analyticsとターゲットの場合は、これを使用して、訪問者の動作を追跡するJavaScript呼び出しなどの追加機能を含めます。</td>
   </tr>
   <tr>
    <td>description</td>
