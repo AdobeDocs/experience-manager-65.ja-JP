@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 translation-type: tm+mt
 source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 67%
 
 ---
 
@@ -131,5 +134,5 @@ Eclipse では JSP との連携もサポートされます。サポートされ�
 
    >[!NOTE]
    >
-   >にまたはその他のJSP `/libs/foundation/global.jsp` を含める場合、Eclipseが含め `/libs`るJSPを解決できるように、そのJSPをプロジェクトにコピーする必要があります。 同時に、Mavenによってコンテンツパッケージにバンドルされていないことを確認する必要があります。 これを行う方法は、『Apache Mavenを使用し [たAEMプロジェクトの構築方法』で説明されています](/help/sites-developing/ht-projects-maven.md)。
+   >にその他のJSP `/libs/foundation/global.jsp``/libs`を含める場合は、そのJSPをプロジェクトにコピーして、EclipseがそのJSPの組み込みを解決できるようにする必要があります。 同時に、Mavenによってコンテンツパッケージにバンドルされていないことを確認する必要があります。 これを達成する方法は、 [How to Build AEM Projects using Apache Maven](/help/sites-developing/ht-projects-maven.md).で説明されています。
 
