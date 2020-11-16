@@ -12,13 +12,16 @@ discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+workflow-type: tm+mt
+source-wordcount: '772'
+ht-degree: 77%
 
 ---
 
 
 # デフォルトの SSL{#ssl-by-default}
 
-AEMのセキュリティを継続的に強化するため、アドビではデフォルトでSSLと呼ばれる機能を導入しました。 AEM インスタンスへの接続で HTTPS の使用を促すことがその目的です。
+AEMのセキュリティを継続的に強化するため、AdobeではデフォルトでSSLと呼ばれる機能が導入されています。 AEM インスタンスへの接続で HTTPS の使用を促すことがその目的です。
 
 ## デフォルトの SSL の有効化 {#enabling-ssl-by-default}
 
@@ -32,7 +35,7 @@ AEM ホーム画面から該当するインボックスメッセージをクリ�
 >
 >If the **Configure HTTPS** alert is not present in the Inbox, you can navigate directly to the HTTPS Wizard by going to *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
 
-**ssl-service** というサービスユーザーが、この機能のために作成されています。アラートを開くと、次の設定ウィザードに従って操作を進めます。
+**ssl-service** というサービスユーザーが、この機能のために作成されています。アラートを開くと、次の設定ウィザードに従って操作します。
 
 1. 最初に、「ストア資格情報」を設定します。These are the credentials for the **ssl-service** system user&#39;s key store that will contain the private key and trust store for the HTTPS listener.
 
@@ -153,7 +156,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 または、以下の必要な項目が既に含まれているパッケージをアップロードすることにより、SSL 設定を自動化できます。
 
 * ssl-service ユーザーのキーストア。これは、リポジトリの */home/users/system/security/ssl-service/keystore* にあります。
-* 設 `GraniteSslConnectorFactory` 定
+* 設定 `GraniteSslConnectorFactory`
 
 ### ウィザードで使用する秘密鍵／証明書ペアの生成 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
@@ -194,7 +197,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 >[!NOTE]
 >
->See [Using cURL with AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) for a centralized list of useful cURL commands in AEM.
+>See [Using cURL with AEM](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html) for a centralized list of useful cURL commands in AEM.
 
 cURL ツールを使用して SSL 設定を自動化することもできます。そのためには、設定パラメーターを次の URL に送信します。
 
@@ -204,11 +207,11 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 
 * `-F "keystorePassword=password"`  — キーストアパスワード；
 
-* `-F "keystorePasswordConfirm=password"`  — キーストアパスワードの確認；
+* `-F "keystorePasswordConfirm=password"`  — キーストアのパスワードの確認；
 
-* `-F "truststorePassword=password"` - truststore password;
+* `-F "truststorePassword=password"` - truststoreのパスワード；
 
-* `-F "truststorePasswordConfirm=password"` - truststoreパスワードの確認
+* `-F "truststorePasswordConfirm=password"` - truststoreのパスワードを確認します。
 
 * `-F "privatekeyFile=@localhostprivate.der"`  — 秘密鍵を指定します。
 
