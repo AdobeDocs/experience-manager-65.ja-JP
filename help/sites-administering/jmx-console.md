@@ -21,7 +21,7 @@ ht-degree: 48%
 
 # JMX コンソールを使用したサーバーリソースの監視{#monitoring-server-resources-using-the-jmx-console}
 
-JMXコンソールを使用すると、CRXサーバー上のサービスの監視と管理を行うことができます。 以降の節では、JMXフレームワークで公開される属性と操作をまとめます。
+JMXコンソールを使用すると、CRXサーバー上のサービスの監視と管理を行うことができます。以降の節では、JMXフレームワークで公開される属性と操作をまとめます。
 
 For information about how to use the console controls, see [Using the JMX Console](#using-the-jmx-console). For background information about JMX, see the [Java Management Extensions (JMX) Technology](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) page on the Oracle website.
 
@@ -98,8 +98,8 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * インスタンスを再起動します。 （オプション）の値を指定して、インスタンスが終了 `true` した後に再起動します。 のデフォルト値により、終了したワークフローインスタンス `false` は再起動されません。
-   * ドライ作動： （オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
+   * インスタンスを再起動します。（オプション）の値を指定して、インスタンスが終了 `true` した後に再起動します。 のデフォルト値により、終了したワークフローインスタンス `false` は再起動されません。
+   * ドライ作動：（オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
    * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの失敗したインスタンスに操作を適用するには、モデルを指定しないでください。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
@@ -117,8 +117,8 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * ドライ作動： （オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
-   * モデル： （オプション）操作が適用されるモデルのID。 すべてのワークフローモデルの失敗した作業項目に操作を適用するには、モデルを指定しないでください。 IDはモデルノードへのパスです。例：
+   * ドライ作動：（オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
+   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルの失敗した作業項目に操作を適用するには、モデルを指定しないでください。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -135,11 +135,11 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル： （オプション）操作が適用されるモデルのID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するには、モデルを指定しないようにします。 IDはモデルノードへのパスです。例：
+   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルのワークフローインスタンスに操作を適用するには、モデルを指定しないようにします。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ワークフローが開始してからの日数：パージするワークフローインスタンスの有効期間（日数）。
-   * ドライ作動： （オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
+   * ドライ作動：（オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
 
 * 戻り値：以下の列を含む、パージされたアクティブなワークフローインスタンスに関する表形式のデータ：
 
@@ -154,7 +154,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル： （オプション）操作が適用されるモデルのID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するには、モデルを指定しないようにします。 IDはモデルノードへのパスです。例：
+   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルのワークフローインスタンスに操作を適用するには、モデルを指定しないようにします。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -167,7 +167,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの古くなったインスタンスに操作を適用するには、モデルを指定しないでください。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * ドライ作動： （オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
+   * ドライ作動：（オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
 
 * 戻り値：再開されたワークフローインスタンスのリスト。
 
@@ -180,7 +180,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル： （オプション）実行中のインスタンス数が返されるモデルのID。 すべてのワークフローモデルの実行中のインスタンス数を返すには、モデルを指定しないようにします。 IDはモデルノードへのパスです。例：
+   * モデル：（オプション）実行中のインスタンス数が返されるモデルのID。すべてのワークフローモデルの実行中のインスタンス数を返すには、モデルを指定しないようにします。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -190,7 +190,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル： （オプション）完了したインスタンスの数が返されるモデルのID。 すべてのワークフローモデルの完了したインスタンスの数を返すには、モデルを指定しないようにします。 IDはモデルノードへのパスです。例：
+   * モデル：（オプション）完了したインスタンスの数が返されるモデルのID。すべてのワークフローモデルの完了したインスタンスの数を返すには、モデルを指定しないようにします。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -200,11 +200,11 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル： （オプション）操作が適用されるモデルのID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するには、モデルを指定しないようにします。 IDはモデルノードへのパスです。例：
+   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルのワークフローインスタンスに操作を適用するには、モデルを指定しないようにします。IDはモデルノードへのパスです。例：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ワークフローが完了してからの日数：ワークフローインスタンスが完了状態になっている日数。
-   * ドライ作動： （オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
+   * ドライ作動：（オプション）の値を指定して、操作 `true` を実際に実行せずに操作の結果を表示します。 のデフォルト値 `false` により、操作が実行されます。
 
 * 戻り値：以下の列を含む、パージされた完了済みのワークフローインスタンスに関する表形式のデータ：
 
@@ -372,7 +372,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.inheritance</td>
-   <td><p>ノードタイプの継承に関するリポジトリサポートのレベルを示します。以下の値が指定可能です。</p> <p>node.type.management.inheritance.minimal：プライマリノードタイプの登録は、nt:base のみをスーパータイプとして持つものに限られます。mixin ノードタイプの登録は、スーパータイプがないものに限られます。</p> <p>node.type.management.inheritance.single: 主ノードタイプの登録は、1つのスーパータイプを持つものに限定されます。 ミックスインノードタイプの登録は、最大1つのスーパータイプを持つものに制限されます。</p> <p><br /> node.type.management.inheritance.multiple: プライマリノードタイプは、1つ以上のスーパータイプに登録できます。 Mixinノードタイプは、0個以上のスーパータイプで登録できます。</p> </td>
+   <td><p>ノードタイプの継承に関するリポジトリサポートのレベルを示します。以下の値が指定可能です。</p> <p>node.type.management.inheritance.minimal：プライマリノードタイプの登録は、nt:base のみをスーパータイプとして持つものに限られます。mixin ノードタイプの登録は、スーパータイプがないものに限られます。</p> <p>node.type.management.inheritance.single:主ノードタイプの登録は、1つのスーパータイプを持つものに限定されます。ミックスインノードタイプの登録は、最大1つのスーパータイプを持つものに制限されます。</p> <p><br /> node.type.management.inheritance.multiple:プライマリノードタイプは、1つ以上のスーパータイプに登録できます。Mixinノードタイプは、0個以上のスーパータイプで登録できます。</p> </td>
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
@@ -392,7 +392,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.property.types</td>
-   <td>登録されたノードタイプで指定できるプロパティタイプを表すjavax.jcr.PropertyType定数の配列です。 長さ0の配列は、登録されたノードタイプがプロパティ定義を指定できないことを示します。 プロパティの種類は、STRING、URI、BOOLEAN、LONG、重複、DECIMAL、BINARY、DATE、NAME、PATH、WEAKREFERENCE、REFERENCE、UNDEFINED（サポートされている場合）です</td>
+   <td>an array of javax.jcr.PropertyType constants that represent the property types that a registered node type can specify. A zero-length array indicates registered node types cannot specify property definitions. Property types are STRING, URI, BOOLEAN, LONG, DOUBLE, DECIMAL, BINARY, DATE, NAME, PATH, WEAKREFERENCE, REFERENCE, and UNDEFINED (if supported)</td>
   </tr>
   <tr>
    <td>node.type.management.orderable.child.nodes.supported</td>
@@ -473,7 +473,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.activities.supported</td>
-   <td>trueは、リポジトリがアクティビティをサポートすることを示します。 アクティビティとは、ワークスペース内で実行され、別のワークスペースに統合される変更のセットです。</td>
+   <td>trueは、リポジトリがアクティビティをサポートすることを示します。アクティビティとは、ワークスペース内で実行され、別のワークスペースに統合される変更のセットです。</td>
   </tr>
   <tr>
    <td>node.type.management.multivalued.properties.supported</td>
@@ -542,7 +542,7 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * 削除： 未使用のリポジトリ項目を削除するかどうかを示すBoolean値。 値をtrueに設定すると、未使用のノードとプロパティが削除されます。 値をfalseに設定すると、すべてのノードがスキャンされますが、削除されません。
+   * 削除：未使用のリポジトリ項目を削除するかどうかを示すBoolean値。値をtrueに設定すると、未使用のノードとプロパティが削除されます。値をfalseに設定すると、すべてのノードがスキャンされますが、削除されません。
 
 * 戻り値：なし
 
@@ -555,7 +555,7 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * `target`: （オプション）リポジトリデータをアーカイブするZIPファイルまたはディレクトリの名前を表す `String` 値。 ZIPファイルを使用するには、ZIPファイル名拡張子を含めます。 ディレクトリを使用する場合は、ファイル名拡張子を含めません。
+   * `target`:（オプション）リポジトリデータをアーカイブするZIPファイルまたはディレクトリの名前を表す `String` 値。 ZIPファイルを使用するには、ZIPファイル名拡張子を含めます。 ディレクトリを使用する場合は、ファイル名拡張子を含めません。
 
       増分バックアップを実行するには、バックアップに以前使用したディレクトリを指定します。
 
@@ -590,11 +590,11 @@ CRX リポジトリに関する情報
 * 引数：なし
 * 戻り値：なし
 
-**tarIndexMerge** すべてのTARセットの上位のインデックスファイルを結合します。 最上位のインデックスファイルは、異なるメジャーバージョンを持つファイルです。 例えば、次のファイルがindex_3_1.tarファイルに結合されます。 index_1_1.tar、index_2_0.tar、index_3_0.tar 結合されたファイルは削除されます（前の例では、index_1_1.tar、index_2_0.tar、およびindex_3_0.tarは削除されます）。
+**tarIndexMerge** すべてのTARセットの上位のインデックスファイルを結合します。 最上位のインデックスファイルは、異なるメジャーバージョンを持つファイルです。 例えば、次のファイルがindex_3_1.tarファイルに結合されます。index_1_1.tar、index_2_0.tar、index_3_0.tar 結合されたファイルは削除されます（前の例では、index_1_1.tar、index_2_0.tar、およびindex_3_0.tarは削除されます）。
 
 * 引数：
 
-   * `background`: 実行中にWebコンソールを使用できるように、操作をバックグラウンドで実行するかどうかを示すBoolean値です。 値trueは、操作をバックグラウンドで実行します。
+   * `background`:実行中にWebコンソールを使用できるように、操作をバックグラウンドで実行するかどうかを示すBoolean値です。 値trueは、操作をバックグラウンドで実行します。
 
 * 戻り値：なし
 
@@ -622,7 +622,7 @@ CRX リポジトリに関する情報
 `org.apache.jackrabbit.api.stats.RepositoryStatistics` で定義される、各統計タイプの TimeSeries フィールドの値。
 
 * ドメイン: `com.adobe.granite`
-* タイプ：`TimeSeries`
+* 型：`TimeSeries`
 * Name: One of the following values from the `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum class:
 
    * BUNDLE_CACHE_ACCESS_COUNTER
@@ -654,8 +654,8 @@ CRX リポジトリに関する情報
 
 * ValuePerSecond：過去 1 分間の、1 秒あたりの測定値。読み取り専用。
 * ValuePerMinute：過去 1 時間の、1 分あたりの測定値。読み取り専用。
-* ValuePerHour: 先週の時間あたりの測定値。 読み取り専用。
-* ValuePerWeek: 過去3年間の週ごとの測定値。 読み取り専用。
+* ValuePerHour:先週の時間あたりの測定値。読み取り専用。
+* ValuePerWeek:過去3年間の週ごとの測定値。読み取り専用。
 
 ## リポジトリクエリ統計 {#repository-query-stats}
 
@@ -701,8 +701,8 @@ CRX リポジトリに関する情報
 
 **Valid** ：エージェントが正しく構成されているかどうかを示すboolean値。
 
-* `true`: 有効な設定。
-* `false` : 設定にエラーが含まれています。
+* `true`:有効な設定。
+* `false` :設定にエラーが含まれています。
 
 読み取り専用。
 
@@ -720,7 +720,7 @@ CRX リポジトリに関する情報
 
 **QueuePaused** ：ジョブキューを一時停止するかどうかを示すboolean値です。
 
-* `true`: 一時停止（一時停止）
+* `true`:一時停止（一時停止）
 * `false`：一時停止していないか、存在しません。
 
 読み取り／書き込み。
@@ -778,8 +778,8 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 **installed** ：パッケージがインストールされているかどうかを示すboolean値です。
 
-* `true`: インストール済み。
-* `false`: インストールされていません。
+* `true`:インストール済み。
+* `false`:インストールされていません。
 
 **installedBy** ：パッケージを最後にインストールしたユーザーのID。
 
@@ -803,7 +803,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 引数：
 
-* p1: 表示するメッセージを表す `String` 値。 次の図に、p1値を指定して呼び出し `log` た結果を示し `this is a log message`ます。
+* p1:表示するメッセージを表す `String` 値。 次の図に、p1値を指定して呼び出し `log` た結果を示し `this is a log message`ます。
 
 ![launcheruilog](assets/launcheruilog.png)
 
@@ -836,7 +836,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
  <tbody>
   <tr>
    <th>ドメイン</th>
-   <th>タイプ</th>
+   <th>型</th>
    <th>MBean クラス</th>
   </tr>
   <tr>
