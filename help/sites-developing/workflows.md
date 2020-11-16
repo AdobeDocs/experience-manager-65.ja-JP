@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8954e3df-3afa-4d53-a7e1-255f3b8f499f
 translation-type: tm+mt
 source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+workflow-type: tm+mt
+source-wordcount: '1535'
+ht-degree: 74%
 
 ---
 
@@ -42,13 +45,14 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 >* See the [Ask the AEM Experts Webinar on Workflows](https://bit.ly/ATACE218).
 >* For an end-to-end Community Article see [Creating a custom Adobe Experience Manager 6.3 Dynamic Participant step](https://helpx.adobe.com/experience-manager/using/dynamic-steps-aem63.html).
 >* 情報の場所の変更点については、[AEM 6.5 のリポジトリの再構成](/help/sites-deploying/repository-restructuring.md)と[ワークフローに関するベストプラクティス - 場所](/help/sites-developing/workflows-best-practices.md#locations)を参照してください。
+
 >
 
 
 
 ## モデル {#model}
 
-`WorkflowModel` は、ワークフローの定義（モデル）を表します。ANDでできて `WorkflowNodes` いる `WorkflowTransitions`。 The transitions connect the nodes and define the *flow*. モデルは常に開始ノードと終了ノードを持ちます。
+`WorkflowModel` は、ワークフローの定義（モデル）を表します。ANDででき `WorkflowNodes` てい `WorkflowTransitions`ます。 The transitions connect the nodes and define the *flow*. モデルには常に開始ノードと終了ノードがあります。
 
 ### ランタイムモデル {#runtime-model}
 
@@ -68,7 +72,7 @@ Edits to the workflow model that occur, and/or runtime models that are generated
 
 各ステップは個別のタスクを実行します。ワークフローステップには、様々な種類があります。
 
-* 参加者（ユーザー／グループ）：このステップでは、作業項目が生成され、ユーザーまたはグループに割り当てられます。ワークフローを進めるには、ユーザーが作業項目を完了する必要があります。
+* 参加者（ユーザー／グループ）：このステップでは、作業項目が生成され、ユーザーまたはグループに割り当てられます。ワークフローを進めるには、作業項目を完了する必要があります。
 * プロセス（スクリプト、Java メソッド呼び出し）：このステップは、自動的に実行されます。ECMA スクリプトまたは Java クラスでステップが実装されます。特殊なワークフローイベントを検出し、ビジネスロジックに従ってタスクを実行するようにサービスを開発できます。
 * コンテナ（サブワークフロー）：この種類のステップは別のワークフローモデルを開始します。
 * OR 分割／結合：ロジックを使用して、ワークフローで次に実行するステップを決定します。
@@ -123,17 +127,17 @@ The `WorkItems` are assigned to either the user account directly or to the group
 
 ![wf-upgraded-03](assets/wf-upgraded-03.png)
 
-* **デフォルト値は**
+* **デフォルト**
 
-   標準のAEMインスタンスに含まれる標準のワークフローです。
+   標準AEMインスタンスには、標準搭載されたワークフローが含まれています。
 
-* カスタムワークフロー（コンソールにインジケーターなし）
+* カスタムワークフロー（コンソールにインジケーターは表示されません）
 
-   これは、新規に作成されたワークフロー、またはカスタマイズがオーバーレイされた標準搭載のワークフローから作成されたワークフローです。
+   これらは、新規に作成したワークフロー、またはカスタマイズがオーバーレイされた標準搭載のワークフローから作成されたです。
 
 * **レガシー**
 
-   以前のバージョンのAEMで作成されたワークフロー。 アップグレード時に保持したり、以前のバージョンからワークフローパッケージとしてエクスポートしてから、新しいバージョンにインポートしたりできます。
+   AEMの以前のバージョンで作成されたワークフロー。 アップグレード時に保持したり、以前のバージョンからワークフローパッケージとしてエクスポートしてから、新しいバージョンにインポートしたりできます。
 
 ### 一時的なワークフロー {#transient-workflows}
 
@@ -157,6 +161,7 @@ The `WorkItems` are assigned to either the user account directly or to the group
 >* ペイロードタイプ（ビデオなど）の処理に外部のステップが必要となる。そのような場合は、ステータスの確認にランタイム履歴が必要になります。
 >* ワークフローが **AND 分割**&#x200B;に入る。そのような場合は、ステータスの確認にランタイム履歴が必要になります。
 >* 一時的ワークフローが参加者ステップに入ると、（実行時に）モードが恒久的に変更されます。ユーザーにタスクが渡されるので、履歴を保持する必要があるためです。
+
 >
 
 
@@ -187,7 +192,7 @@ Activating **Multi Resource Support** for your workflow model means that a singl
 
 ワークフローステージは、タスクを処理するときにワークフローの進行状況を確認するのに役立ちます。ワークフローステージを使用すると、ワークフローがどの処理段階にあるのかについて概要を示すことができます。ユーザーは、ワークフローを実行すると、（個々のステップとは対照的に）**ステージ**&#x200B;で表される進行状況を確認できます。
 
-個々のステップ名は具体的で技術的な名前にすることができるので、ステージ名を定義して、ワークフローの進行状況の概念的なビューを提供できます。
+個々のステップ名は具体的で技術的な名前にすることができるので、ステージ名を定義して、ワークフローの進行状況の概念的な表示を提供できます。
 
 例えば、6 つのステップと 4 つのステージがあるワークフローの場合は次のようになります。
 
@@ -195,6 +200,7 @@ Activating **Multi Resource Support** for your workflow model means that a singl
 
    * 複数のステージ名を作成できます。
    * その後、個々のステージ名を各ステップに割り当てます（1 つのステージ名を 1 つ以上のステップに割り当てることができます）。
+
    | **ステップ名** | **ステージ（ステップに割り当て）** |
    |---|---|
    | 手順 1 | 作成 |
