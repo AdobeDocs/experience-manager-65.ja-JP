@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます。
 
-![cq_welcomescreen](assets/cq_welcomescreen.png)
+![cq_welcomesscreen](assets/cq_welcomescreen.png)
 
 表示されるリンクを設定できます。設定は、特定のユーザーまたはグループ向けに定義できます。実行されるアクションは、ターゲットタイプによって異なります（アクションが表示されるコンソールのセクションと相関関係があります）。
 
@@ -46,13 +49,13 @@ AEM のメインコンソールが一覧表示されます。
 
 * **デジタルアセット:** `/libs/wcm/core/content/damadmin`
 
-* **** コミュニティ： `/libs/collab/core/content/admin`
+* **コミュニティ：** `/libs/collab/core/content/admin`
 
 * **キャンペーン:** `/libs/mcm/content/admin`
 
 * **インボックス:** `/libs/cq/workflow/content/inbox`
 
-* **** ユーザー： `/libs/cq/security/content/admin`
+* **ユーザー：** `/libs/cq/security/content/admin`
 
 * **ツール:** `/libs/wcm/core/content/misc`
 
@@ -83,7 +86,7 @@ AEM のメインコンソールが一覧表示されます。
    <td> </td>
   </tr>
   <tr>
-   <td> クラウドサービス</td>
+   <td> Cloud Services </td>
    <td><code>/libs/cq/core/content/welcome/resources/cloudservices</code></td>
   </tr>
   <tr>
@@ -189,13 +192,14 @@ AEM のメインコンソールが一覧表示されます。
 
 In `/libs/cq/core/components/welcome/welcome.jsp` use is made of [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html), which executes a query on nodes that have the property:
 
-* `jcr:mixinTypes` を次の値に置き換えます。 `cq:Console`
+* `jcr:mixinTypes` に次の値を入力します。 `cq:Console`
 
 >[!NOTE]
 >
 >既存のリストを表示するには、次のクエリーを実行します。
 >
 >* `select * from cq:Console`
+
 >
 
 
@@ -208,5 +212,5 @@ In `/libs/cq/core/components/welcome/welcome.jsp` use is made of [ConsoleUtil](h
 
 Add your custom item to the list by adding the `cq:Console` mixin to your widget or resource. 次のプロパティを定義することによって、追加をおこないます。
 
-* `jcr:mixinTypes` を次の値に置き換えます。 `cq:Console`
+* `jcr:mixinTypes` に次の値を入力します。 `cq:Console`
 
