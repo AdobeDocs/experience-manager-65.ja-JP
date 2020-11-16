@@ -23,7 +23,7 @@ To be able to apply watermark on assets, add the watermarking step in the [!UICO
 1. From the side panel, drag the **[!UICONTROL Add Watermark]** step to the [!UICONTROL DAM Update Asset] workflow.
 
    ![[!UICONTROL 透かし] 手順をドラッグし、 [!UICONTROL DAM Update Asset] ワークフロー](assets/add_watermark_step_aem_assets.png)2に追加します。
-   *図：「[!UICONTROL 追加Watermark]」ステップをドラッグし、「[!UICONTROL DAM Update Asset]」ワークフローに追加します。*
+   *図：「 [!UICONTROL 追加Watermark] 」ステップをドラッグし、「 [!UICONTROL DAM Update Asset] 」ワークフローに追加します。*
 
    >[!NOTE]
    >
@@ -34,7 +34,7 @@ To be able to apply watermark on assets, add the watermarking step in the [!UICO
 
    ![Assets における「透かしを追加」ステップの引数の指定](assets/arguments_add_watermark_aem_assets.png)
 
-   *図：の透かしの追加手順で引数を指定し[!DNL Assets]ます。*
+   *図：の透かしの追加手順で引数を指定し [!DNL Assets]ます。*
 
 1. Save the **[!UICONTROL DAM Update Asset]** workflow with the watermark step.
 1. From the [!DNL Assets] user interface, upload a sample asset. 透かしがフォントサイズやカラーなどと共に、上記手順で設定した位置に表示されます。
