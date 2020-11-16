@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 76%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ## 実装と使用の詳細 {#implementation-and-usage-details}
 
-`com.adobe.granite.ui.components.FilteringResourceWrapper` は、フィルタ対象のフィールド上にあるプロパティの存在と値に基づ `granite:hide` いてリソースをフィルタリングします。 の実装には、次 `/libs/cq/gui/components/authoring/dialog/dialog.jsp` のインスタンスが含まれます。 `FilteringResourceWrapper.`
+`com.adobe.granite.ui.components.FilteringResourceWrapper` は、フィルタ対象のフィールド上にあるプロパティの存在と値に基づいてリソースをフィルタリングします。 `granite:hide` の実装には、 `/libs/cq/gui/components/authoring/dialog/dialog.jsp` `FilteringResourceWrapper.`
 
 The implementation makes use of the Granite [ELResolver API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html) and adds a `cqDesign` custom variable via the ExpressionCustomizer.
 
@@ -55,9 +58,9 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 ## 例 {#example}
 
-非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)）で確認できます。例えば、[リストコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)について検討してみましょう。
+非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)）で確認できます。例えば、[リストコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)について検討してみましょう。
 
-[テンプレート作成者は](/help/sites-authoring/templates.md)、テンプレートエディターを使用して、デザインダイアログで、ページ作成者が使用できるリストコンポーネントのオプションを定義できます。 リストを静的リスト、子ページのリスト、タグ付けされたページのリストなどにできるようにするかどうかといったオプションを有効または無効にできます。
+[テンプレート作成者は、テンプレートエディターを使用して](/help/sites-authoring/templates.md)、デザインダイアログで、ページ作成者が使用できるリストコンポーネントのオプションを定義できます。 リストを静的リスト、子ページのリスト、タグ付けされたページのリストなどにできるようにするかどうかといったオプションを有効または無効にできます。
 
 テンプレート作成者が子ページオプションを無効にすると、デザインプロパティが設定され、非表示の条件がそのプロパティに対して評価されます。その結果、このオプションはページ作成者には表示されません。
 
@@ -69,7 +72,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. ポリシーノードがtの下に作成され、 `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`プロパティがに設定さ `disableChildren` れていま `true`す。
+1. ポリシーノードが `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`tの下に作成され、プロパティがに `disableChildren` 設定され `true`ます。
 1. The hide condition is defined as the value of a `granite:hid`e property on the dialog property node `/conf/we-retail/settings/wcm/policies/weretail/components/content/list`
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
