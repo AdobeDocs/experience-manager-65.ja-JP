@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Assets]ホームページエクスペリエンス'
+title: '[!DNL Assets] ホームページ体験'
 description: Personalize the [!DNL Experience Manager Assets] Home page for a rich welcome screen experience, including a snapshot of recent activities around assets.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 32%
 
 ---
