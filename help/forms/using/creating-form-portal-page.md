@@ -11,6 +11,9 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 13cc8ba8fda8fa0e5fac6bb92d1d4fc4849492eb
+workflow-type: tm+mt
+source-wordcount: '1668'
+ht-degree: 78%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 13cc8ba8fda8fa0e5fac6bb92d1d4fc4849492eb
 
 デフォルトでは、フォームポータルコンポーネントは使用できません。「[フォームポータルのコンポーネントを有効にする](/help/forms/using/enabling-forms-portal-components.md)」の説明に従い、フォームポータルコンポーネントにおける次のカテゴリが有効になっていることを確認してください。
 
-**Document Servicesには** 、Search &amp; Lister、Link、Drafts and Submissionsコンポーネントが含まれます。
+**ドキュメントサービス** :Search &amp; Lister、Link、Drafts and Submissionsコンポーネントが含まれます。
 
 **Document Services Predicates**：「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」のコンポーネントが含まれています。これらのコンポーネントは、「Search &amp; Lister」コンポーネントで検索を設定する際に使用します。
 
@@ -40,7 +43,7 @@ Formsポータルコンポーネントのカテゴリ
 * フォームが一覧表示される「リスト」ペイン。
 * 検索機能を追加する「検索」ペイン。
 
-Search &amp; Listerコンポーネントは、コンポーネントブラウザーのDocument Servicesコンポーネントカテゴリからページにドラッグ&amp;ドロップできます。 コンポーネントを追加すると、下記の画像のようになります。
+「Search &amp; Lister」コンポーネントは、コンポーネントブラウザーの「ドキュメントサービス」コンポーネントカテゴリからページにドラッグ&amp;ドロップできます。 コンポーネントを追加すると、下記の画像のようになります。
 
 ![ページ中のSearch &amp; Lister コンポーネント](assets/fp-grid-viw.png)
 
@@ -48,7 +51,7 @@ Search &amp; Listerコンポーネントは、コンポーネントブラウザ�
 
 ### リストペイン {#list-pane}
 
-リストペインはフォームが一覧表示される領域です。「Search &amp; Lister」コンポーネントは、「リスト」ペインでのフォームの表示を制御するために使用できる様々な設定オプションを提供します。
+リストペインはフォームが一覧表示される領域です。Search &amp; Listerコンポーネントには、リストペインでのフォームの表示を制御するために使用できる様々な設定オプションが用意されています。
 
 To configure the List pane, tap the Search and Lister component and then tap ![settings_icon](assets/settings_icon.png). The **[!UICONTROL Edit Component]** dialog opens.
 
@@ -155,7 +158,7 @@ To configure the List pane, tap the Search and Lister component and then tap ![s
 
 ### 検索ペイン {#search-pane}
 
-検索ペインでは、サイドキックの「Document Services Predicates」カテゴリから、「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」コンポーネントを追加することができます。これらのコンポーネントは、リストに表示されたフォームに対して検索を実行するための検索機能を実装します。
+検索ペインでは、サイドキックの「Document Services Predicates」カテゴリから、「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」コンポーネントを追加することができます。これらのコンポーネントは、リストに表示されるフォームに対してユーザーが検索を実行するための検索機能を実装します。
 
 **チップ：***フォームポータルに表示されるフォームのリストを既定の条件に基づいて制御し、エンドユーザーに対して検索機能を非表示にできます。フォームのリストを制御するには、検索フィルターを適用するためにPredicateコンポーネントを使用します。You can also specify the default filter values and disable the search from the Display tab of the Edit Component dialog.*
 
@@ -203,7 +206,7 @@ Properties Predicate コンポーネントを構成するには、次の手順�
 
 1. 「オプション」タブで、「**アイテムの追加**」をタップします。
 1. ドロップダウンリストからプロパティを選択し、ドロップダウンリストの下のフィールドでプロパティの検索ラベルを指定します。
-1. 手順 4 を繰り返してさらにプロパティを追加します。デフォルトのフィルター値を指定して、指定した条件に基づいてフォームを一覧表示し、エンドユーザーによる検索でプロパティを非表示にすることもできます。 プロパティの「非表示」チェックボックスを選択し、デフォルトフィルター値を指定します。例えば、タイトルに「Travel」という文字を含むフォームを表示するには、「タイトル」プロパティ横の「非表示」を選択します。さらに、デフォルトのフィルター値テキストボックスで「Travel」を指定します。
+1. 手順 4 を繰り返してさらにプロパティを追加します。また、指定した条件に基づいてリストフォームにデフォルトのフィルター値を指定し、エンドユーザーによる検索でプロパティを非表示にすることもできます。 プロパティの「非表示」チェックボックスを選択し、デフォルトフィルター値を指定します。例えば、タイトルに「Travel」という文字を含むフォームを表示するには、「タイトル」プロパティ横の「非表示」を選択します。さらに、デフォルトのフィルター値のテキストボックスで「Travel」を指定します。
 
 1. 「**OK**」をタップします。
 
@@ -230,7 +233,7 @@ Tags Predicate コンポーネントを構成するには、次の手順を実�
 
 ## モバイルデバイスへの適合性 {#mobile-device-friendliness}
 
-フォームポータルのSearch &amp; Listerコンポーネントは、モバイルデバイスフレンドリーで、デバイスに適応します。3つのデフォルトビュー：Webページも調整されるので、サイトを開くデバイスに応じてグリッド、カード、パネルが再レイアウトされます。 簡単に言えば、Search &amp; Listerは単なるコンポーネントであり、ページレベルのスタイリングは管理しません。
+フォームポータルのSearch &amp; Listerコンポーネントは、モバイルデバイスフレンドリーで、デバイスに適応します。3つのデフォルト表示すべて：Webページの幅が調整される場合、グリッド、カード、パネルは、サイトが開かれたデバイスに応じて再レイアウトされます。 簡単に言えば、Search &amp; Listerは単なるコンポーネントであり、ページレベルのスタイリングは管理しません。
 
 次の画像は、モバイルデバイス上で開いた場合の Search &amp; Lister コンポーネントを示します。
 
