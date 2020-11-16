@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 39546c0a-b72f-42df-859b-98428ee0d5fb
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1828'
+ht-degree: 80%
 
 ---
 
@@ -57,13 +60,13 @@ ERD の意味では、宣言されているデータ構造について気にし�
 
 #### 例 {#example-1}
 
-上述の「ブログ投稿」ノードなどで `lastModified` Dateプロパティを使用する例は、特別なノードタイプが必要であるという意味ではありません。 最初はブログ投稿ノ `nt:unstructured` ードに必ず使用します。 ブログアプリでは、lastModified日付を表示するだけなので（おそらく「順番」に表示する）、日付であればほとんど気にしません。 ブログ書き込みの申込書に「日付」を付けるのを暗黙的に信頼しているので、nodetypeの形式で日付の存在を宣言する必要は `lastModified` ありません。
+上記の例で、「ブログ投稿」ノードなどで `lastModified` 日付プロパティを使用する場合は、特別なノードタイプが必要であるとは限りません。 最初は、ブログ投稿ノード `nt:unstructured` に必ず使用します。 ブログアプリでは、lastModified日付を表示するだけなので（「順番」を付けても）、日付になってもほとんど気にしません。 私はブログ書きの申込書を暗黙的に信頼して&quot;date&quot;をそこに置くので、nodetypeの形式の `lastModified` 日付の存在を宣言する必要はありません。
 
 ### Rule #2: Drive the content hierarchy, don&#39;t let it happen. {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
 #### 説明 {#explanation-2}
 
-コンテンツ階層は非常に価値の高いアセットです。だから、それを実現させるのはやめて、デザインしなさい。 「良い」、人間が読み取り可能なノード名がない場合は、それを考え直す必要があるでしょう。 任意の数字が「良い名前」とはほとんど言えません。
+コンテンツ階層は非常に価値の高いアセットです。だから、それを実現させるのはやめ、設計してみてください。 ノードに「良い」人間が読み取り可能な名前がない場合は、それを再考する必要があると思います。 任意の数字が「良い名前」とはほとんど言えません。
 
 既存のリレーショナルモデルをすぐに階層モデルに変換できれば非常に簡単かもしれませんが、その際は多少の配慮が必要です。
 
@@ -75,7 +78,7 @@ ERD の意味では、宣言されているデータ構造について気にし�
 >
 >コンテンツリポジトリの構造化の方法はパフォーマンスにも影響を及ぼす可能性があります。最適なパフォーマンスを確保するために、コンテンツリポジトリ内の個々のノードに接続される子ノードの数は、通常 1,000 個以下にする必要があります。
 >
->CRXで処 [理できるデータ量を確認する](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) を参照してください。
+>CRXで処理でき [るデータ量を参照してください。](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) を参照してください。
 
 #### 例 {#example-2}
 
@@ -91,7 +94,7 @@ ERD の意味では、宣言されているデータ構造について気にし�
 /content/myblog/comments/iphone_shipping/i_like_it_too/i_hate_it
 ```
 
-私が思うに明らかになったのは、私たちは皆、この例に基づいて内容の構造を理解し、それ以上の説明をしないことです。
+私が明らかになったのは、この例に基づく内容の構造を理解している人が、それ以上の説明をすることなくいることです。
 
 「コメント（comments）」を「投稿（post）」と共に格納しないことを最初は疑問にお思いかもしれませんが、これは、アクセス制御を合理的に階層化された方法で適用したいからです。
 
@@ -178,9 +181,9 @@ If a content model exposes something that even remotely *smells* like a file or 
 
 私の経験では、多くの汎用アプリケーションで、nt:folder および nt:files とのインタラクションが暗黙的に許可されており、メタ情報が追加された場合にイベントを処理して表示する方法が認識されています。例えば、JCR をベースとしている CIFS や WebDAV のようなファイルサーバー実装との直接のインタラクションは暗黙となります。
 
-私が思うに、大ざっぱに言えば、以下のようなものが使えると思う。ファイル名とMIMEタイプを保存する必要がある場合は、 `nt:file`/はとて `nt:resource` も適切な一致です。 複数の「ファイル」を保存できる場合は、nt:folderを保存するのが適切です。
+大ざっぱに言えば、次のようなものが使えると思う。ファイル名とMIME型を格納する必要がある場合、/は `nt:file`非常に適 `nt:resource` しています。 複数の「ファイル」を保存できる場合は、nt:folderを保存するのが適切です。
 
-リソースにメタ情報を追加する必要がある場合は、「author」プロパティや「description」プロパティなど、「 `nt:resource``nt:file`nt:fileをほとんど拡張せず、頻繁に拡張しま `nt:resource`す。
+リソースにメタ情報を追加する必要がある場合は、「author」プロパティや「description」プロパティなど、「author」プロパティや「description」プロパティを追加する必要はありま `nt:resource` せん `nt:file`。 nt:fileを拡張することはほとんどありませんが、頻繁に拡張し `nt:resource`ます。
 
 #### 例 {#example-6}
 
