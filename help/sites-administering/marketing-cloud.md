@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
 source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+workflow-type: tm+mt
+source-wordcount: '1003'
+ht-degree: 86%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
 
 [Adobe Marketing Cloud](https://www.adobe.com/solutions/digital-marketing.html) には、すぐに利用可能なリアルタイムのデータおよび情報を提供してオンラインビジネスを成功に導く、強力な Web 分析および Web サイト最適化製品が含まれています。Adobe Marketing Cloud は、オンラインビジネス最適化のための統合されたオープンプラットフォームを提供します。Adobe Marketing Cloud は、顧客のインサイトを収集してその力を解き放ち、顧客の獲得、コンバージョンおよび維持の取り組みやコンテンツの作成および配信を最適化する統合アプリケーションにより構成されます。
 
-Adobe Experience Manager(AEM)を使用すると、Adobe Marketing cloudの次の製品とシームレスに統合できます。
+Adobe Experience Manager(AEM)では、Adobe Marketing Cloudの次の製品とシームレスに統合できます。
 
 * Adobe Analytics：マーケティング担当者は、オンライン戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの情報を入手できます。
 * Adobe Target：オンラインコンテンツと顧客との関連性を継続的に高め、より多くのコンバージョンを生み出すための機能をマーケティング担当者に提供します。
@@ -32,7 +35,7 @@ In addition, you can [integrate AEM with Creative Cloud](/help/assets/aem-cc-fol
 
 ## Adobe Analytics との統合 {#integrating-with-adobe-analytics}
 
-[Adobe Analyticsは](https://www.omniture.com/en/products/analytics/sitecatalyst) 、複数のマーケティングチャネルにわたるすべてのオンラインイニシアチブからの統合データを、デジタルマーケターが1か所で測定、分析、最適化できる、業界トップのソリューションです。 このソリューションを使用すると、マーケティング担当者は、デジタル戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの Web 分析情報を入手できます。Adobe Analytics を使用すると、マーケティング担当者は Web サイト内で最も収益性に優れたパスの迅速な特定、価値の高い Web の訪問者を見分けるためのトラフィックの区分、訪問者がサイトを離れた経路の判断、およびオンラインマーケティングキャンペーンにとって重要な成功指標の特定をおこなうことができます。
+[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) は、複数のマーケティングチャネルにわたるすべてのオンラインイニシアチブの統合データを、デジタルマーケターが1か所で測定、分析、最適化できる、業界トップクラスのソリューションです。 このソリューションを使用すると、マーケティング担当者は、デジタル戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの Web 分析情報を入手できます。Adobe Analytics を使用すると、マーケティング担当者は Web サイト内で最も収益性に優れたパスの迅速な特定、価値の高い Web の訪問者を見分けるためのトラフィックの区分、訪問者がサイトを離れた経路の判断、およびオンラインマーケティングキャンペーンにとって重要な成功指標の特定をおこなうことができます。
 
 Adobe Analytics は、サイトのデータを分析するために使用できます。
 
@@ -51,7 +54,7 @@ AEM と Analytics の統合について詳しくは、[Adobe Analytics との統
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-[Adobe Target](https://www.omniture.com/en/products/conversion/test-and-target) は、オンラインテストのデザインと実行、（行動に基づいた）オーディエンスセグメントの随時作成、コンテンツやオンラインエクスペリエンスのターゲティング自動化のために使用されます。
+[Adobe Target はマーケター向けのツールで、オンラインテストを設計および実行し、その場で（行動に基づいた）オーディエンスセグメントを作成し、コンテンツとオンラインエクスペリエンスのターゲット設定を自動化するために使用されます。](https://www.omniture.com/en/products/conversion/test-and-target)
 
 今日のオンラインユーザーは常にニーズを進化させてきており、幅広いサイトやコンテンツのソースから、関連性があり、パーソナライズまでされたコンテンツを選択できることを期待します。オンラインオーディエンスを引き付けるには、オンラインマーケティング担当者が、オーディエンスとの関連性がある魅力的なオファーやコンテンツをすぐに特定できることが不可欠です。この知識によって武装しながら、継続的にサイトを進化させ、様々なオーディエンスに対して適切なコンテンツをターゲティングできる必要があります。
 
