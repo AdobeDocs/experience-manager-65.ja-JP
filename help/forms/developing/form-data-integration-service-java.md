@@ -22,19 +22,19 @@ ht-degree: 0%
 
 Form Data Integrationサービスでは、次のクイック開始を使用できます。
 
-[クイック開始（SOAPモード）: Java APIを使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）: Java APIを使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-以下のJavaコードの例を使用することで、データをPDFフォームに読み込むことができます。 データは *Loan_data.xmlというXMLファイルにあり* 、PDFフォームはResultLoanForm.pdfというPDFファイルとして保存され **&#x200B;ます。 (フォームデータの [読み込みを参照](/help/forms/developing/importing-exporting-data.md#importing-form-data))。
+以下のJavaコードの例を使用することで、データをPDFフォームに読み込むことができます。 データは *Loan_data.xmlというXMLファイルにあり* 、PDFフォームはResultLoanForm.pdfというPDFファイルとして保存され *ます*。 (フォームデータの [読み込みを参照](/help/forms/developing/importing-exporting-data.md#importing-form-data))。
 
 ```java
  /*
@@ -134,7 +134,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したフォームデータの書き出し {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したフォームデータの書き出し {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
 以下のJavaコードの例は、PDFフォームからデータを書き出します。 フォームデータは、 *Loan_data.xmlというXMLファイルとして保存されます*。 (Exporting Form Data [](/help/forms/developing/importing-exporting-data.md#exporting-form-data))。
 
