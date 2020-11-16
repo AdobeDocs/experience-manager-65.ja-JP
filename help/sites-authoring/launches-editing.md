@@ -13,6 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+workflow-type: tm+mt
+source-wordcount: '517'
+ht-degree: 99%
 
 ---
 
@@ -33,28 +36,28 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 * コンポーネント（コンテンツやプロパティ）を編集するときにロック記号（小さな鍵アイコン）が表示されます。
 * 「**ライブコピー**」タブが&#x200B;**ページのプロパティ**&#x200B;に表示されます。
 
-ライブコピーは、コンテンツをソースブランチ&#x200B;*から*&#x200B;ローンチブランチ&#x200B;*に*&#x200B;同期するために使用します（ソースに加えられた変更によりローンチを最新に保ちます）。
+ライブコピーは、コンテンツをソースブランチ&#x200B;*から*&#x200B;ローンチブランチ&#x200B;*に*&#x200B;同期するために使用します（ローンチを、ソースに加えられた変更を含む最新の状態に保ちます）。
 
 標準のライブコピーを編集するのと同じ方法で変更することができます。例えば次のようにします。
 
 * 閉じられた鍵アイコンをクリックするとこの同期が解除され、ローンチのコンテンツを新たに更新できるようになります。一度ロックを解除する（鍵アイコンを開く）と、ソースブランチ内の同じ場所に対して加えられた変更により、ユーザーが加えた変更が上書きされることがなくなります。
-* **特定のペー** ジの継承を停止 ****（および再開）します。
+* 特定のページの継承を&#x200B;**一時停止**（および&#x200B;**再開**）します。
 
 詳しくは、「[ライブコピーのコンテンツの変更](/help/sites-administering/msm-livecopy.md#changing-live-copy-content)」を参照してください。
 
-## ローンチページをそのソースページと比較 {#comparing-a-launch-page-to-its-source-page}
+## ローンチページとそのソースページの比較 {#comparing-a-launch-page-to-its-source-page}
 
 おこなった変更を追跡するために、ローンチを&#x200B;**参照**&#x200B;で表示して、ローンチページをそのソースページと比較することができます。
 
 1. **サイト**&#x200B;コンソールで、[ローンチのソースページに移動してそれを選択します](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources)。
-1. **[参照](/help/sites-authoring/basic-handling.md#references)**パネルを開いて、「**ローンチ**」を選択します
-1. 特定のローンチを選択してから、次のように&#x200B;**ソースと比較します**
+1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開いて、「**ローンチ**」を選択します。
+1. 特定のローンチを選択してから、次のように&#x200B;**ソースと比較します**。
 
    ![screen-shot_2019-03-05at121952](assets/screen-shot_2019-03-05at121952.png)
 
 1. 2 つのページ（ローンチページとソースページ）が左右に並んで開きます。
 
-   この機能の使用方法について詳しくは、「[ページの差分](/help/sites-authoring/page-diff.md)」を参照してください。
+   この機能の使用方法について詳しくは、[ページの差分](/help/sites-authoring/page-diff.md)を参照してください。
 
 ## 使用するソースページの変更 {#changing-the-source-pages-used}
 
@@ -62,12 +65,13 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 1. 次のいずれかの方法を使用して、ローンチにアクセスして選択します。
 
-   * [ローンチコンソールの場合](/help/sites-authoring/launches.md#the-launches-console)：
+   * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**編集**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)。使用可能なアクションを表示します。
+   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**ローンチを編集**」を選択します。
+
    ソースページが表示されます。
 
 1. 必要な変更を加え、「**保存**」で確定します。
@@ -82,12 +86,13 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 1. 次のいずれかの方法を使用して、ローンチにアクセスして選択します。
 
-   * [ローンチコンソールの場合](/help/sites-authoring/launches.md#the-launches-console)：
+   * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**プロパティ**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)。使用可能なアクションを表示します。
+   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**プロパティを編集**」を選択します。
+
    詳細が表示されます。
 
 1. 必要な変更を加え、「**保存**」で確定します。
@@ -96,6 +101,6 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 ## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
 
-ステータスは、「参照」タブから特定のローンチを選択すると表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
+「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
 
 ![screen-shot_2019-03-05at121901](assets/screen-shot_2019-03-05at121901.png)
