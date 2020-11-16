@@ -11,6 +11,9 @@ discoiquuid: e65925ff-1fbf-4da6-bf09-0cf056c86e5a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '721'
+ht-degree: 91%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 1 つまたは複数の条件を選択し、文字列も指定すると、文字列と条件の両方に一致するものが検索結果として返されます。検索結果の質は、提供されるフォームとアセットのメタデータの質に左右されます。
 
-aem6forms_ ![searchをクリックして](assets/aem6forms_search.png)、検索パネルの表示/非表示を切り替えます。
+検索パネルの表示/非表示を切り替えるには、 ![aem6forms_search](assets/aem6forms_search.png)をクリックします。
 
 ## 基本検索 {#basic-search}
 
@@ -52,7 +55,7 @@ AEM form とアセット検索の検索フィールドおよびパラメータ�
 
 ### アセットパス {#asset-path}
 
-アセットパスフィルタを使用することにより、検索結果を現在のディレクトリに限定することができます。「Search In Current Directory」オプションが選択されていない場合には、ベースディレクトリに存在するアセットが検索結果に含まれます。現在のページがディレクトリではなく、「現在のディレクトリで検索」オプションが選択されている場合、親ディレクトリに存在するアセットが返されます。
+アセットパスフィルタを使用することにより、検索結果を現在のディレクトリに限定することができます。「Search In Current Directory」オプションが選択されていない場合には、ベースディレクトリに存在するアセットが検索結果に含まれます。現在のページがディレクトリではなく、「current directoryで検索」オプションが選択されている場合は、親ディレクトリに存在するアセットが返されます。
 
 ### アセットの変更 {#asset-modification}
 
@@ -82,7 +85,7 @@ AEM form とアセット検索の検索フィールドおよびパラメータ�
 <table>
  <tbody>
   <tr>
-   <th>Option</th> 
+   <th>オプション</th> 
    <th>説明</th> 
   </tr>
   <tr>
@@ -102,7 +105,7 @@ AEM form とアセット検索の検索フィールドおよびパラメータ�
    <td>すべてのアダプティブフォームに対して検索を行います。</td> 
   </tr>
   <tr>
-   <td>リソース</td> 
+   <td>Resource</td> 
    <td>すべてのリソースに対して検索を行います。<br /> </td> 
   </tr>
  </tbody>
