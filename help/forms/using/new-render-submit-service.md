@@ -11,6 +11,9 @@ discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '929'
+ht-degree: 83%
 
 ---
 
@@ -108,7 +111,7 @@ The process sets the `outputDocument`to the `inputDocument`retrieved from `taskC
 Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブラウザーは NPAPI ベースのプラグインを徐々にサポートしなくなっています。モバイルフォームのレンダリングを PDF から HTML に変更するには、次の手順を実行します。
 
 1. 有効なユーザーとして Workbench にログインします。
-1. Select **File** > **Get Applications**.
+1. **File** / **Get Applicationsを選択します**。
 
    Get Applications ダイアログが表示されます。
 
@@ -128,7 +131,7 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 アクションプロファイルに関するよくある質問の一部を次に示します。
 
-![gen_question_b_20追加設定なし](assets/gen_question_b_20.png)**で使用できるレンダリング/送信プロセスは何ですか。**
+![gen_question_b_20](assets/gen_question_b_20.png)**どのレンダリング/送信プロセスが追加設定なしで使用できますか。**
 
 * Guide のレンダリング（Guide は推奨されていません）
 * Render Form Guide
@@ -139,21 +142,21 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 および同等の送信プロセス。
 
-![gen_question_b_20追加設定不](assets/gen_question_b_20.png)**要なアクションプロファイルは何ですか。**
+![gen_question_b_20](assets/gen_question_b_20.png)**追加設定なしで使用できるアクションプロファイル**
 
 XDP フォームの場合：
 
 * デフォルト（新しい「デフォルトのレンダリング / 送信」プロセスを使用したレンダリング / 送信）
 
-![gen_question_b_20](assets/gen_question_b_20.png)**デバイス上でHTML、デスクトップ上でPDFにフォームをレンダリングできるようにするには、プロセスデザイナーは何を行う必要がありますか。**
+![gen_question_b_20](assets/gen_question_b_20.png)**フォームをデバイス上でHTMLに、デスクトップ上でPDFにレンダリングするには、プロセスデザイナーは何を行う必要がありますか。**
 
 何も必要ありません。デフォルトのアクションプロファイルが自動的に選択されて、レンダリングのモードも同じく自動的に対処されます。
 
-![gen_question_b_20](assets/gen_question_b_20.png) What needs **to enable the form to be rendered in a HTML on a desktop?**
+![gen_question_b_20](assets/gen_question_b_20.png)**デスクトップでフォームをHTMLにレンダリングするには、何を行う必要がありますか。**
 
 ユーザーは、デフォルトプロファイルで HTML ラジオボタンを選択する必要があります。
 
-![gen_question_b_20デフォルトのアク](assets/gen_question_b_20.png)**ションプロファイル動作の変更に対するアップグレードの影響はありますか。**
+![gen_question_b_20](assets/gen_question_b_20.png)**デフォルトのアクションプロファイルの動作を変更すると、アップグレードに何らかの影響がありますか。**
 
 はい。デフォルトのアクションプロファイルに関連付けられた以前のレンダリングと送信サービスは異なるため、それらは既存のフォームのカスタマイズとして処理されます。On clicking **Restore Defaults**, the default render and submit services are set instead.
 
