@@ -21,7 +21,7 @@ ht-degree: 79%
 
 ## レンダリングエンドポイント {#render-endpoint}
 
-HTML5 forms have the notion of **Profiles** which are exposed as REST Endpoints to enable Mobile Rendering of Form Templates. These Profiles have associated **Profile Renderer**. これらは、Forms OSGiサービスを呼び出してフォームのHTML表現を生成する役割を持つJSPページです。 Profile ノードの JCR パスがレンダリングエンドポイントの URL を決定します。「default」プロファイルを指す、フォームのデフォルトのレンダリングエンドポイントは次のようになります。
+HTML5 forms have the notion of **Profiles** which are exposed as REST Endpoints to enable Mobile Rendering of Form Templates. These Profiles have associated **Profile Renderer**. これらは、FormsOSGiサービスを呼び出してフォームのHTML表現を生成する役割を持つJSPページです。 Profile ノードの JCR パスがレンダリングエンドポイントの URL を決定します。「default」プロファイルを指す、フォームのデフォルトのレンダリングエンドポイントは次のようになります。
 
 https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*path of the folder containg form xdp*>&amp;template=&lt;*name of the xdp*>
 
