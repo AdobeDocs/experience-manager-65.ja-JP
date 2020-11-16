@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 934eda2a-bd3b-4018-86dc-dbb01d246386
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1005'
+ht-degree: 98%
 
 ---
 
@@ -48,13 +51,13 @@ Adobe Experience Manager（AEM）のデプロイメントは通常、次のよ�
 開発者の仕事は、提案されたプロジェクト（Web サイト、モバイルアプリケーション、DAM 実装など）を、必要な機能をすべて含めて開発し、カスタマイズすることです。開発者は、次の作業をおこないます。
 
 * テンプレート、コンポーネント、ワークフロー、アプリケーションなど、必要な要素の開発とカスタマイズ
-* 設計を実現する
-* 必要な機能を実装するために必要なサービスとスクリプトを開発する
+* デザインの実現
+* 必要な機能を実装するために必要なサービスおよびスクリプトの開発
 
 [開発](/help/sites-developing/best-practices.md)環境の設定には様々な要素が影響しますが、通常は次のように構成されます。
 
 * 統合されたコードベースを提供するための、バージョン管理機能を持つ統合開発システム。各開発者が使用している個々の開発環境からコードを結合し、統合するために使用します。
-* 各開発者の個人環境。通常はローカルマシン上に存在します。適切な間隔で、コードがバージョン管理システムと同期されます。
+* 各開発者の個人環境。通常はローカルマシン上に存在します。適切な間隔で、コードはバージョン管理システムと同期されます。
 
 システムの規模によっては、開発環境にオーサーインスタンスとパブリッシュインスタンスの両方を含めることができます。
 
@@ -72,12 +75,12 @@ This environment is used by the quality assurance team to comprehensively [test]
 
 ### 実稼動 - オーサーとパブリッシュ {#production-author-and-publish}
 
-The production environment consists of the environments needed to actually [author and publish](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) your implementation.
+実稼動環境は、実装を実際に[オーサリングおよび公開](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)するために必要な環境で構成されます。
 
-実稼働環境は、少なくとも1つの作成者インスタンスと1つの発行インスタンスで構成されます。
+実稼動環境は、少なくとも 1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスで構成されます。
 
 * コンテンツの入力用の[オーサー](#author)インスタンス。
-* A [publish](#publish) instance for content made available to your visitors/users.
+* 訪問者やユーザーがコンテンツを使用できるようにするための[パブリッシュ](#publish)インスタンス。
 
 プロジェクトの規模によりますが、多くの場合は複数のオーサーインスタンスやパブリッシュインスタンスで構成されます。下位レベルでは、リポジトリが複数のインスタンスにクラスター化される場合もあります。
 
@@ -85,8 +88,8 @@ The production environment consists of the environments needed to actually [auth
 
 オーサーインスタンスは、通常、内部ファイアウォールの内側に配置されます。この環境では、ユーザーやユーザーの同僚が、以下のようなオーサリングタスクを実行します。
 
-* システム全体を管理する
-* コンテンツを入力する
+* システム全体の管理
+* コンテンツの入力
 * コンテンツのレイアウトとデザインの設定
 * パブリッシュ環境に対するコンテンツのアクティベート
 
@@ -100,7 +103,7 @@ The production environment consists of the environments needed to actually [auth
 
 * オーサー環境からレプリケートされたコンテンツを保持します。
 * そのコンテンツを訪問者が利用できるようにします。
-* 訪問者が生成したユーザーデータ（コメントや他のフォーム送信など）を保存します。
+* コメントやその他のフォーム送信など、訪問者によって生成されたユーザーデータを保存します。
 * オーサー環境へリバースレプリケーションできるように、出力ボックスにこれらのユーザーデータを追加するよう設定できます。
 
 パブリッシュ環境では、コンテンツがリアルタイムで動的に生成されます。生成されたコンテンツは、個々のユーザーに合わせてパーソナライズできます。
@@ -112,7 +115,7 @@ The production environment consists of the environments needed to actually [auth
 * コードは、最初はローカルで、その後統合開発環境で開発
 * 続いて、QA 環境で十分なテストを実施
 * その後、ステージング環境でさらにテスト
-* その場合にのみ、コードを実稼働環境に導入する必要があります。
+* その後初めてコードは実稼動環境にデプロイされる
 
 コード（カスタマイズされた Web アプリケーション機能やデザインテンプレートなど）は通常、異なるコンテンツリポジトリ間でパッケージを書き出したり読み込んだりすることによって転送されます。場合によっては、このレプリケーションを自動プロセスとして設定できます。
 
