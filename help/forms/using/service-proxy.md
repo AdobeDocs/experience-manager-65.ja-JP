@@ -11,6 +11,9 @@ discoiquuid: 081f7c17-4e5d-4c7e-a5c3-5541a29b9d55
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 89%
 
 ---
 
@@ -43,7 +46,7 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
 
 #### サーバー側スクリプトと Web サービスの実行 {#execute-server-sided-scripts-and-web-services}
 
-サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、リスト側スクリプトとWebサービスで使用されるすべてのパラメーターを示します。
+サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、サーバー側スクリプトおよびWebサービスで使用されるすべてのパラメーターのリストを示します。
 
 <table>
  <tbody>
