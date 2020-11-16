@@ -12,6 +12,9 @@ discoiquuid: 3582a4d8-a47b-467a-9e25-cb45f969ec93
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+workflow-type: tm+mt
+source-wordcount: '537'
+ht-degree: 66%
 
 ---
 
@@ -67,11 +70,11 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 
 例えば、次のパターンがあるとします。
 
-**パターン**`^[^/]+/[^/]+/welcome$`
+**パターン** `^[^/]+/[^/]+/welcome$`
 
 このパターンは次のリプレースメントを呼び出します。
 
-**代替手段** `/libs/cq/core/content/welcome.html`.
+**代替機能** `/libs/cq/core/content/welcome.html`.
 
 これにより、次の要求がリダイレクトされます。
 
@@ -113,12 +116,12 @@ To create the mapping that prefixes any request to https://localhost:4503/ with 
 
    * **名前** `sling:match`
 
-      * **タイプ** `String`
+      * **型** `String`
 
       * **値** `localhost.4503/`
    * **名前** `sling:internalRedirect`
 
-      * **タイプ** `String`
+      * **型** `String`
 
       * **値** `/content/`
 
@@ -137,5 +140,5 @@ had been requested.
 
 >[!NOTE]
 >
->を使用して、公 `/etc/map.publish` 開環境の設定を保持できます。 次に、これらを複製し、新しい場所( `/etc/map.publish`)を発行環境の **Apache Sling Resource Resolverの** Mapping Location [(マッピング場所](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) )に設定する必要があります。
+>を使用して、発行環境 `/etc/map.publish` の設定を保持できます。 次に、これらを複製し、パブリッシュ環境の `/etc/map.publish`Apache Sling Resource Resolver **の** Mapping Location [](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) ()に対して設定する必要があります。
 
