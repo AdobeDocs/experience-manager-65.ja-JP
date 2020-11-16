@@ -10,6 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '2134'
+ht-degree: 92%
 
 ---
 
@@ -25,12 +28,12 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>F</td>
    <td>カテゴリ名</td>
   </tr>
@@ -74,7 +77,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    |---|---|---|
    | categoryId | F | スタートポイントが属するカテゴリの ID が含まれます。 |
    | description | F | スタートポイントの説明が含まれます。 |
-   | 名前 | F | スタートポイントの名前が含まれます。 |
+   | name | F | スタートポイントの名前が含まれます。 |
    | serializedImageTicket | F | スタートポイントに対応するイメージチケットが含まれます。このイメージチケットは、サーバーからスタートポイントのイメージを取得するために、スタートポイントのimageUrlフィールドで使用されます。 |
    | serviceName | F | スタートポイントのサービスの名前が含まれます。 |
    | startpointId | F | スタートポイントの ID が含まれます。 |
@@ -90,7 +93,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td>プロパティ<br /> </td>
+   <td>Property<br /> </td>
    <td>クライアントのみ<br /> </td>
    <td>コメント<br /> </td>
   </tr>
@@ -389,7 +392,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -399,7 +402,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    <td>キューがログインしたユーザーのデフォルトのキューである場合は true で、それ以外の場合は false です。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>名前<br type="_moz" /> </td>
+   <td>name<br type="_moz" /> </td>
    <td>F</td>
    <td>キューの所有者の名前。<br type="_moz" /> </td>
   </tr>
@@ -440,7 +443,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>dateRanges<br type="_moz" /> </td>
    <td>F</td>
-   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトでは、startDateフィールドにスケジュールの開始日が含まれ、endDateフィールドにはスケジュールの終了日が含まれます。 If endDate is null in schedule, it implies that user has not scheduled the end date of out-of-office schedule.<br type="_moz" /> </td>
+   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトで、startDateフィールドにはスケジュールの開始日が含まれ、endDateフィールドにはスケジュールの終了日が含まれます。 If endDate is null in schedule, it implies that user has not scheduled the end date of out-of-office schedule.<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>isNoPrimaryDesignate<br type="_moz" /> </td>
@@ -492,7 +495,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -554,7 +557,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -593,7 +596,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -637,7 +640,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -681,7 +684,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -763,14 +766,14 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
  </tbody>
 </table>
 
-1. ユーザー
+1. User
 
    以下にユーザーオブジェクトのプロパティを示します。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
