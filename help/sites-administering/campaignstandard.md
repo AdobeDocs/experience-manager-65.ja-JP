@@ -166,14 +166,14 @@ AEM インスタンス間のレプリケーションを設定するには：
 AEM と Adobe Campaign を一緒に使用する前に、両方のソリューション間のリンクを確立して、通信できるようにする必要があります。
 
 1. AEM オーサーインスタンスに接続します。
-1. Select **Tools** > **Operations** > **Cloud** > **Cloud Services**, then **Configure now** in the Adobe Campaign section.
+1. **ツール** / **操作** / **Cloud Cloud** /Adobe Campaignを選択します。次に、 **Cloud Servicesを設定します。次に、のセクションで、****** を設定します。
 
    ![chlimage_1-128](assets/chlimage_1-128a.png)
 
 1. Create a new configuration by entering a **Title** and click **Create**, or choose the existing configuration that you want to link with your Adobe Campaign instance.
 1. 設定を編集して、Adobe Campaign インスタンスのパラメーターと一致するようにします。
 
-   * **ユーザー名**: **aemserver**(2つのソリューション間のリンクを確立するために使用されるAdobe CampaignAEM統合パッケージ演算子)。
+   * **ユーザー名**: **aemserver**。2つのソリューション間のリンクを確立するために使用されるAdobe CampaignAEM統合パッケージ演算子です。
    * **パスワード**：Adobe Campaign aemserver 演算子のパスワード。この演算子のパスワードを Adobe Campaign で直接再指定する必要があることがあります。
    * **API エンドポイント**：Adobe Campaign インスタンス URL。
 
