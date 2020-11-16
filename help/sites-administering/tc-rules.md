@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '1162'
+ht-degree: 70%
 
 ---
 
@@ -35,10 +38,10 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 ルールには以下の情報が含まれます。
 
-* ルールを適用するノードのパス。このルールは、ノードの子孫にも適用されます。
+* ルールを適用するノードのパス。この規則は、ノードの子孫にも適用されます。
 * 翻訳するコンテンツを格納するノードプロパティの名前。特定のリソースタイプ専用のプロパティまたはすべてのリソースタイプに共通のプロパティがあります。
 
-例えば、作成者がページ上のすべてのAEM foundation textコンポーネントに追加するコンテンツを変換するルールを作成できます。 ルールは、コンポーネントの `/content` ノードとプロパ `text` ティを識別で `foundation/components/text` きます。
+例えば、作成者がページ上のすべてのAEM foundationテキストコンポーネントに追加したコンテンツを翻訳するルールを作成できます。 ルールは、コンポー `/content` ネントのノードと `text` プロパティを識別でき `foundation/components/text` ます。
 
 翻訳ルールの設定用に追加された[コンソール](#translation-rules-ui)があります。UI での定義の内容がファイルに自動的に入力されます。
 
@@ -74,7 +77,7 @@ Each of these `node` elements has the following characteristics:
    * `resourceType` 属性には、リソースタイプを実装するコンポーネントに解決されるパスが格納されます。
    * `property` 子要素は、翻訳するノードプロパティを特定します。このノードは、ノードルールの `property` 子要素と同じ方法で使用します。
 
-次のルールの例では、ノードの下のすべてのペ `text` ージについて、すべてのプロパティの内容が変換さ `/content` れます。 このルールは、foundation textコンポーネントやfoundation Imageコンポーネントなど、プロパティに `text` コンテンツを格納するコンポーネントに対して有効です。
+次のルールの例では、ノードの下のすべてのページについて、すべての `text` プロパティの内容が変換され `/content` ます。 このルールは、基礎テキストコンポーネントや基礎イメージコンポーネントなど、 `text` プロパティにコンテンツを格納するコンポーネントに対して有効です。
 
 ```xml
 <node path="/content">
@@ -116,7 +119,7 @@ Each of these `node` elements has the following characteristics:
 
 ## ルールの上書き {#overriding-rules}
 
-translation_rules.xmlファイルは、複数の子要素を持つ1 `nodelist` つの要素で構成され `node` ます。 AEMは、ノードリストを上から下に読み取ります。 複数のルールが同じノードをターゲットにする場合は、ファイル内で下位にあるルールが使用されます。 例えば、次のルールでは、ページの分岐を除く、プ `text` ロパティ内のすべてのコンテンツが翻訳 `/content/mysite/en` されます。
+translation_rules.xmlファイルは、複数の子要素を持つ `nodelist` 要素で構成され `node` ます。 AEMは、ノードリストを上から下に読み取ります。 複数のルールが同じノードにターゲットする場合は、ファイル内で下位のルールが使用されます。 例えば、次のルールでは、ページの分岐を除く、 `text` プロパティのすべてのコンテンツが翻訳され `/content/mysite/en` ます。
 
 ```xml
 <nodelist>
@@ -170,7 +173,7 @@ Then you need to select your context and then click **Edit**. これにより、
 
 There are 4 attributes that you can change via the UI: `isDeep`, `inherit`, `translate` and `updateDestinationLanguage`.
 
-**isDeep** この属性はノードフィルターに適用され、デフォルトでtrueです。 ノード（またはその上位ノード）に、フィルターで指定されたプロパティ値を持つそのプロパティが含まれているかどうかをチェックします。false の場合は、現在のノードのみでチェックします。
+**isDeep** この属性はノードのフィルターに適用され、デフォルトでtrueに設定されています。 ノード（またはその上位ノード）に、フィルターで指定されたプロパティ値を持つそのプロパティが含まれているかどうかをチェックします。false の場合は、現在のノードのみでチェックします。
 
 For example, child nodes are getting added into a translation job even when the parent node is having property `draftOnly` set to true to flag draft content. ここで、`isDeep` が機能し、親ノードの `draftOnly` プロパティが true であるかどうかをチェックして、それらの子ノードを除外します。
 
@@ -186,7 +189,7 @@ In the Editor, you can check/uncheck **Is Deep** in the **Filters** tab.
 </filter>
 ```
 
-**inherit** これはプロパティに適用されます。 デフォルトではすべてのプロパティが継承されますが、一部のプロパティが子で継承されないようにする場合は、その特定のノードのみで適用されるように、そのプロパティを false に指定できます。
+**inherit** ：これはプロパティに適用されます。 デフォルトではすべてのプロパティが継承されますが、一部のプロパティが子で継承されないようにする場合は、その特定のノードのみで適用されるように、そのプロパティを false に指定できます。
 
 UI では、「**プロパティ**」タブで「**継承**」をチェックまたはチェック解除できます。
 
