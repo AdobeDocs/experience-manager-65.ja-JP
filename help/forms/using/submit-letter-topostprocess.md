@@ -28,9 +28,9 @@ ht-degree: 59%
 
 後処理をレターとインタラクティブ通信に関連付けるには、まず後処理を設定する必要があります。送信済みのレターに対しては、次の2種類のワークフローを実行できます。
 
-1. **フォームワークフロー：** JEEのProcess ManagementワークフローのAEM Formsを次に示します。 [Forms Workflowの設定手順](#formsworkflow)。
+1. **Forms Workflow:** これらはJEE上のAEM Formsのプロセス管理ワークフローです。 [Forms Workflowの設定手順](#formsworkflow)。
 
-1. **AEMワークフロー：** AEMワークフローは、送信済みレターの後処理として使用することもできます。 [AEM Workflowの設定手順](../../forms/using/aem-forms-workflow.md)。
+1. **AEMワークフロー：** AEMワークフローは、送信済みレターの後処理としても使用できます。 Instructions for setting up [AEM Workflow](../../forms/using/aem-forms-workflow.md).
 
 ## Forms のワークフロー {#formsworkflow}
 
@@ -48,7 +48,7 @@ ht-degree: 59%
 
    「Deserialization Firewall Configuration」に移動し、「Allowlisted classes of package prefixes」の下で、sun.util.calendarを追加します。
 
-1. これで、サーバーがマッピングされ、レターの作成時にJEE上のAEM Formsの後処理がAEMユーザーインターフェイスで使用できるようになります。
+1. これで、サーバーがマッピングされ、レターの作成時に、JEE上のAEM Formsの後処理がAEMユーザーインターフェイスで使用できるようになります。
 
    ![リスト表示された後処理を使ってレター画面を作成します](assets/0configmanager.png)
 
