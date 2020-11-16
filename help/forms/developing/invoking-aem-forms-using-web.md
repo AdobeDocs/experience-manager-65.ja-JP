@@ -458,7 +458,7 @@ JAX-WSを使用して、FormsサービスのWSDLをJavaプロキシクラスに�
 
    >[!NOTE]
    >
-   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスクイック開始では、SwaRefを使用します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
+   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスのクイック開始には、SwaRefを使用します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
 
 **関連トピック**
 
