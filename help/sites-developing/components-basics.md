@@ -786,7 +786,7 @@ Each child node of type `cq:DropTargetConfig` defines a drop target in the compo
 
 は、Javaプロパティ `<drag and drop prefix>` で定義します。
 
-`com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`。
+`com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`.
 
 For example, the class name is defined as follows in the JSP of the Download component
 ( `/libs/foundation/components/download/download.jsp`), where `file` is the node name of the drop target in the edit configuration of the Download component:
