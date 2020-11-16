@@ -1,6 +1,6 @@
 ---
-title: CustomToolbarsでのHTMLフォームのレンダリング
-seo-title: CustomToolbarsでのHTMLフォームのレンダリング
+title: CustomToolbarsでのHTMLFormsのレンダリング
+seo-title: CustomToolbarsでのHTMLFormsのレンダリング
 description: 'null'
 seo-description: 'null'
 uuid: b9c9464e-ff19-4051-a39b-4ec71c512d10
@@ -19,17 +19,17 @@ ht-degree: 1%
 ---
 
 
-# CustomToolbarsでのHTMLフォームのレンダリング {#rendering-html-forms-with-customtoolbars}
+# CustomToolbarsでのHTMLFormsのレンダリング {#rendering-html-forms-with-customtoolbars}
 
-## カスタムツールバーを含むHTMLフォームのレンダリング {#rendering-html-forms-with-custom-toolbars}
+## カスタムツールバーでのHTMLFormsのレンダリング {#rendering-html-forms-with-custom-toolbars}
 
-Formsサービスを使用すると、HTMLフォームでレンダリングされるツールバーをカスタマイズできます。 ツールバーは、初期設定のCSSスタイルを上書きして外観を変更するようカスタマイズしたり、Javaスクリプトを上書きして動的な動作を追加したりすることができます。 ツールバーは、fscmenu.xmlというXMLファイルを使用してカスタマイズします。 デフォルトでは、Formsサービスは内部的に指定されたURIの場所からこのファイルを取得します。
+Formsサービスでは、HTMLフォームでレンダリングされるツールバーをカスタマイズできます。 ツールバーは、初期設定のCSSスタイルを上書きして外観を変更するようカスタマイズしたり、Javaスクリプトを上書きして動的な動作を追加したりすることができます。 ツールバーは、fscmenu.xmlというXMLファイルを使用してカスタマイズします。 デフォルトでは、Formsサービスは内部的に指定されたURIの場所からこのファイルを取得します。
 
 >[!NOTE]
 >
 >このURIの場所は、adobe-forms-core.jarファイルにあります。このファイルは、adobe-forms-dsc.jarファイル内にあります。 adobe-forms-dsc.jarファイルは、C:\Adobe\Adobe_Experience_Manager_forms\ folder (C:\ is the installation directory)にあります。 Win RARなどのファイル抽出ツールを使用して、アドビを開くことができます。
 
-この場所からfscmenu.xmlをコピーし、必要に応じて変更して、カスタムURIの場所に配置できます。 次に、Forms Service APIを使用して、指定した場所からfscmenu.xmlファイルを使用してFormsサービスを実行するための実行時オプションを設定します。 これらのアクションにより、Formsサービスは、カスタムツールバーを持つHTMLフォームをレンダリングします。
+この場所からfscmenu.xmlをコピーし、必要に応じて変更して、カスタムURIの場所に配置できます。 次に、FormsサービスAPIを使用して、指定した場所にあるfscmenu.xmlファイルを使用してFormsサービスを開始するランタイムオプションを設定します。 これらのアクションにより、Formsサービスはカスタムツールバーを持つHTMLフォームをレンダリングします。
 
 fscmenu.xmlファイルに加えて、次のファイルも取得する必要があります。
 
@@ -44,9 +44,9 @@ fscJSは、各ノードに関連付けられているJavaスクリプトです�
 
 fscCSSは、特定のノードに関連付けられたスタイルシートです。 CSSファイル内のスタイルは、ツールバーの外観を指定します。 *fscVCSS* は、レンダリングされたHTMLフォームの左側に表示される、垂直方向のツールバーのスタイルシートです。 *fscIECSS* は、Internet ExplorerでレンダリングされるHTMLフォームに使用されるスタイルシートです。
 
-上記のすべてのファイルがfscmenu.xmlファイルで参照されていることを確認します。 つまり、fscmenu.xmlファイルで、これらのファイルを指すURIの場所を指定します。これにより、Formsサービスでこれらのファイルを見つけることができます。 デフォルトでは、これらのファイルは、内部キーワード `FSWebRoot` またはで始まるURIの場所で使用でき `ApplicationWebRoot`ます。
+上記のすべてのファイルがfscmenu.xmlファイルで参照されていることを確認します。 つまり、fscmenu.xmlファイルで、これらのファイルを指すURIの場所を指定します。これにより、Formsサービスでこれらのファイルを見つけられるようになります。 デフォルトでは、これらのファイルは、内部キーワード `FSWebRoot` またはで始まるURIの場所で使用でき `ApplicationWebRoot`ます。
 
-ツールバーをカスタマイズするには、外部キーワードを使用してキーワードを置き換え `FSToolBarURI`ます。 このキーワードは、実行時にFormsサービスに渡されるURIを表します（この方法をこの節で後述します）。
+ツールバーをカスタマイズするには、外部キーワードを使用してキーワードを置き換え `FSToolBarURI`ます。 このキーワードは、実行時にFormsサービスに渡されるURIを表します（この方法は後で示します）。
 
 これらのJSファイルとCSSファイルの絶対位置を指定することもできます(例：https://www.mycompany.com/scripts/misc/fscmenu.js)。 この場合、キー `FSToolBarURI` ワードを使用する必要はありません。
 
@@ -93,7 +93,7 @@ JSファイルとCSSファイルは、adobe-forms-&lt;appserver>.earファイル
 
 >[!NOTE]
 >
->太字のテキストは、参照する必要があるCSSおよびJSファイルへのURIを表します。
+>太字のテキストは、参照する必要があるCSSファイルとJSファイルのURIを表しています。
 
 次の項目では、ツールバーのカスタマイズ方法を説明します。
 
@@ -149,11 +149,11 @@ JSファイルとCSSファイルは、adobe-forms-&lt;appserver>.earファイル
 >
 >このセクションに関連付けられているクイック開始は、前の図のように、このXMLファイルを使用してフランス語のカスタムツールバーを表示します。
 
-また、 `HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出し、ロケール値を指定する文字列値を渡すことで、有効なロケール値を指定します。 例えば、フランス語 `fr_FR` を指定するにはを渡します。 Formsサービスは、ローカライズされたツールバーにバンドルされています。
+また、 `HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出し、ロケール値を指定する文字列値を渡すことで、有効なロケール値を指定します。 例えば、フランス語 `fr_FR` を指定するにはを渡します。 Formsサービスはローカライズされたツールバーにバンドルされています。
 
 >[!NOTE]
 >
->カスタムツールバーを使用するHTMLフォームをレンダリングする前に、HTMLフォームのレンダリング方法を知っておく必要があります。 (「フォームをHTMLとして [レンダリングする」を参照](/help/forms/developing/rendering-forms-html.md))。
+>カスタムツールバーを使用するHTMLフォームをレンダリングする前に、HTMLフォームのレンダリング方法を知っておく必要があります。 (「FormsをHTMLとして [レンダリング」を参照](/help/forms/developing/rendering-forms-html.md))。
 
 For more information about the Forms service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
@@ -162,7 +162,7 @@ For more information about the Forms service, see [Services Reference for AEM Fo
 カスタムツールバーを含むHTMLフォームをレンダリングするには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. フォームJava APIオブジェクトを作成します。
+1. FormsJava APIオブジェクトを作成します。
 1. カスタムfscmenu XMLファイルを参照します。
 1. HTMLフォームをレンダリングする。
 1. フォームデータストリームをクライアントのWebブラウザーに書き込みます。
@@ -171,7 +171,7 @@ For more information about the Forms service, see [Services Reference for AEM Fo
 
 必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを含めます。
 
-**フォームJava APIオブジェクトの作成**
+**FormsJava APIオブジェクトの作成**
 
 Formsサービスがサポートする操作をプログラムで実行する前に、Formsクライアントオブジェクトを作成する必要があります。
 
@@ -187,7 +187,7 @@ HTMLフォームのレンダリングには、他のフォームタイプをレ�
 
 **フォームデータストリームをクライアントのWebブラウザーに書き込みます**
 
-Formsサービスは、HTMLフォームをレンダリングするときに、フォームデータストリームを返します。このストリームをユーザーに表示させるには、クライアントWebブラウザーに書き込む必要があります。
+Formsサービスは、HTMLフォームをレンダリングするときに、フォームデータストリームを返します。このストリームをユーザーに表示するには、クライアントのWebブラウザーに書き込む必要があります。
 
 **関連トピック**
 
@@ -199,23 +199,23 @@ Formsサービスは、HTMLフォームをレンダリングするときに、�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[FormsサービスAPIのクイック開始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[FormsサービスAPIクイック開始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[HTML形式でのフォームのレンダリング](/help/forms/developing/rendering-forms-html.md)
+[FormsをHTMLとしてレンダリング](/help/forms/developing/rendering-forms-html.md)
 
-[フォームをレンダリングするWeb アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
+[FormsをレンダリングするWeb アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### Java APIを使用してカスタムツールバーでHTMLフォームをレンダリングする {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}
 
-Forms Service API(Java)を使用して、カスタムツールバーを含むHTMLフォームをレンダリングします。
+FormsサービスAPI(Java)を使用して、カスタムツールバーを含むHTMLフォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
    Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。
 
-1. フォームJava APIオブジェクトの作成
+1. FormsJava APIオブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
    * コンストラクタを使用して `FormsServiceClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
@@ -235,7 +235,7 @@ Forms Service API(Java)を使用して、カスタムツールバーを含むHTM
 
    オブジェクトの `FormsServiceClient``renderHTMLForm` メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパス（など）を必ず指定してください `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパスを必ず指定してください（例：） `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * HTML環境設定タイプを指定する `TransformTo` enum値。 例えば、Internet Explorer 5.0以降用の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、を指定し `TransformTo.MSDHTML`ます。
    * フォームとマージするデータを含む `com.adobe.idp.Document` オブジェクト。 データをマージしない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
    * HTML実行時オプションを格納する `HTMLRenderSpec` オブジェクトです。
@@ -257,7 +257,7 @@ Forms Service API(Java)を使用して、カスタムツールバーを含むHTM
 
 **関連トピック**
 
-[クイック開始（SOAPモード）: Java APIを使用したカスタムツールバーによるHTMLフォームのレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したカスタムツールバーによるHTMLフォームのレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -265,14 +265,14 @@ Forms Service API(Java)を使用して、カスタムツールバーを含むHTM
 
 ### WebサービスAPIを使用したカスタムツールバーを使用したHTMLフォームのレンダリング {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}
 
-Forms Service API（Webサービス）を使用して、カスタムツールバーを含むHTMLフォームをレンダリングします。
+FormsサービスAPI（Webサービス）を使用して、カスタムツールバーを含むHTMLフォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
    * FormsサービスのWSDLを使用するJavaプロキシクラスを作成します。
    * クラスパスにJavaプロキシクラスを含めます。
 
-1. フォームJava APIオブジェクトの作成
+1. FormsJava APIオブジェクトの作成
 
    オブジェクトを作成し、認証値を設定し `FormsService` ます。
 
@@ -291,7 +291,7 @@ Forms Service API（Webサービス）を使用して、カスタムツールバ
 
    オブジェクトの `FormsService``renderHTMLForm` メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパス（など）を必ず指定してください `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパスを必ず指定してください（例：） `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * HTML環境設定タイプを指定する `TransformTo` enum値。 例えば、Internet Explorer 5.0以降用の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、を指定し `TransformTo.MSDHTML`ます。
    * フォームとマージするデータを含む `BLOB` オブジェクト。 データを結合したくない場合は、を渡し `null`ます。
    * HTML実行時オプションを格納する `HTMLRenderSpec` オブジェクトです。
