@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 80%
 
 ---
 
@@ -28,10 +31,10 @@ By default, AEM Forms stores the user data associated with the draft and submiss
 
 ## 前提条件 {#prerequisites}
 
-* フォームポー [タルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
+* [Formsポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
 * Create a [forms portal page](/help/forms/using/creating-form-portal-page.md)
-* フォームポ [ータルのアダプティブフォームの有効化](/help/forms/using/draft-submission-component.md)
-* カスタム [ストレージの実装の詳細](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* フォームポータルでの [アダプティブフォームの有効化](/help/forms/using/draft-submission-component.md)
+* カスタムストレージの [導入の詳細を知る](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## ドラフトデータサービス {#draft-data-service}
 
