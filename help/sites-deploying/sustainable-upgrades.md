@@ -12,6 +12,9 @@ discoiquuid: e35c9352-f0d5-4db5-b88f-0720af8f6883
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '859'
+ht-degree: 76%
 
 ---
 
@@ -52,9 +55,9 @@ AEM では、以前からオーバーレイの原理と Sling Resource Merger �
 
 * **抽象（granite:AbstractArea）** - ノードを抽象として定義します。Nodes can be overlaid or inherited ( `sling:resourceSupertype`) but must not be used directly ( `sling:resourceType`).
 
-* **最終（granite:FinalArea）** - ノードを最終として定義します。最終的に分類されたノードは、オーバーレイまたは継承しないのが理想的です。 Final nodes can be used directly via `sling:resourceType`. 最終ノードの下のサブノードは、デフォルトで内部と見なされます。
+* **最終（granite:FinalArea）** - ノードを最終として定義します。最終的な理想的に分類されるノードは、オーバーレイまたは継承しないでください。 Final nodes can be used directly via `sling:resourceType`. 最終ノードの下のサブノードは、デフォルトで内部と見なされます。
 
-* ***内部（花崗岩：InternalArea）*** *- *ノードを内部として定義します。 内部として分類されたノードは、オーバーレイ、継承、直接使用しないのが理想的です。これらのノードは、AEM の内部機能でのみ使用されます。
+* ***Internal (granite:InternalArea)*** *- *ノードをinternalと定義します。 内部として分類されたノードは、オーバーレイ、継承、直接使用しないのが理想的です。これらのノードは、AEM の内部機能でのみ使用されます。
 
 * **注釈なし** - ノードはツリー階層に基づいて分類を継承します。/ root はデフォルトで公開です。**親が内部または最終として分類されているノードも、内部として扱われます。**
 
@@ -82,13 +85,13 @@ Mixins applied in CRXDE Lite will show content nodes and trees that are marked a
 
 >[!NOTE]
 >
->AEM 6.5以降では、コンテンツアクセス違反の検出にパターンディテクターを使用することをお勧めします。 パターンディテクターレポートは、より詳細に、より多くの問題を検出し、偽陽性の確率を下げます。
+>AEM 6.5以降では、Adobeではコンテンツアクセス違反の検出にパターンディテクターを使用することを推奨します。 パターンディテクターレポートは、より詳細な情報を提供し、より多くの問題を検出して、偽陽性の発生確率を下げます。
 >
->詳しくは、「パターン検出機能を使 [用したアップグレードの複雑さの評価](/help/sites-deploying/pattern-detector.md)」を参照してください。
+>詳しくは、「パターン検出器によるアップグレードの複雑さの [評価](/help/sites-deploying/pattern-detector.md)」を参照してください。
 
 AEM 6.5 にはヘルスチェックが付属しています。オーバーレイまたは参照されたコンテンツがコンテンツ分類と一致しない方法で使用された場合は、このヘルスチェックにより警告が表示されます。
 
-** Sling/Granite Content Access Check**は、リポジトリを監視する新しいヘルスチェックで、顧客コードがAEMの保護されたノードに不正にアクセスしているかどうかを確認します。
+** Sling/Granite Content Access Check**は、リポジトリを監視する新しいヘルスチェックで、顧客コードがAEMの保護ノードに不正にアクセスしているかどうかを確認します。
 
 このヘルスチェックは **/apps** をスキャンし、通常は完了するまで数秒かかります。
 
