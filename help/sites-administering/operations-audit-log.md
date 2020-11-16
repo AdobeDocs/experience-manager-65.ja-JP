@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 translation-type: tm+mt
 source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+workflow-type: tm+mt
+source-wordcount: '615'
+ht-degree: 81%
 
 ---
 
@@ -49,6 +52,7 @@ source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
    * **Content path：**&#x200B;ルールが適用されるコンテンツのパス。
    * **Minimum age：**&#x200B;監査ログを保持しておく必要がある日数。
    * **Audit log type：**&#x200B;パージする必要がある監査ログのタイプ。
+
    >[!NOTE]
    >
    >The content path only applies to children of the `/var/audit/com.day.cq.wcm.core.page` node in the repository.
@@ -64,9 +68,9 @@ source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
 
 1. 次回実行の日付を調べて設定するか、再生ボタンをクリックして手動で実行できます。
 
-AEM 6.3では、「監査ログのクリア」タスクが完了する前にスケジュールされたメンテナンスウィンドウが閉じると、タスクは自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
+AEM 6.3では、監査ログの削除タスクが完了する前にスケジュールされたメンテナンスウィンドウが閉じると、タスクが自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
 
-**AEM 6.5では**、「停止」アイコンをクリックして、「監査ログのクリアタスク」の実行を手動で停止で **きます** 。 次回の実行時に、タスクは安全に再開されます。
+**AEM 6.5では**、「停止 **** 」アイコンをクリックして、実行中の監査ログの削除タスクを手動で停止できます。 次回の実行時に、タスクは安全に再開されます。
 
 >[!NOTE]
 >
