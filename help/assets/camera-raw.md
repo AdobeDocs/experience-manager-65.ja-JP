@@ -1,19 +1,19 @@
 ---
-title: '[!DNL Adobe Camera Raw]のサポート。'
+title: '[!DNL Adobe Camera Raw] サポート'
 description: でサポートを [!DNL Adobe Camera Raw] 有効にする方法を説明します [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 23%
+source-wordcount: '375'
+ht-degree: 35%
 
 ---
 
 
-# Camera Rawを使用した画像の処理 {#camera-raw-support}
+# 次を使用して画像をCamera Raw処理： {#camera-raw-support}
 
-CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画像のレンダリングの [!DNL Adobe Camera Raw] サポートを有効にすることができます。 この機能は、ソフトウェア配布 [!DNL Adobe Experience Manager Assets] から利用できる [Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) (Camera Raw)の使用でサポートされます。
+CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画像のレンダリングの [!DNL Adobe Camera Raw] サポートを有効にすることができます。 この機能は、ソフトウェア配布版 [!DNL Adobe Experience Manager Assets] で [使用可能な](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) パッケージの使用でサポートされます。
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画�
 
 での [!DNL Camera Raw] サポートを有効にするに [!DNL Experience Manager Assets]は、次の手順に従います。
 
-1. Software Distribution [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) （ソフトウェア配布）からCamera Rawパッケージをダウンロードします。
+1. Download the [Camera Raw package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) from Software Distribution.
 1. `https://[aem_server]:[port]/workflow` にアクセスします。Open the **[!UICONTROL DAM Update Asset]** workflow.
 1. Open the **[!UICONTROL Process Thumbnails]** step.
 1. Provide the following configuration in the **[!UICONTROL Thumbnails]** tab:
@@ -36,7 +36,7 @@ CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画�
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
 1. From the side panel, add the **[!UICONTROL Camera Raw/DNG Handler]** step below the **[!UICONTROL Thumbnail creation]** step.
-1. In the **[!UICONTROL Camera Raw/DNG Handler]** step, add the following configuration in the **[!UICONTROL Arguments]** tab:
+1. **[!UICONTROL /Camera RawDNGハンドラーの手順で、「]** 引数 **** 」タブに次の設定を追加します。
 
    * **[!UICONTROL MIMEタイプ]**: `image/dng` と `image/x-raw-(.*)`
    * **[!UICONTROL コマンド]**:
@@ -58,11 +58,11 @@ CR2、NEF、RAFなどの生のファイル形式の処理、JPEG形式での画�
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-*図： サイドペインのオプション。*
+*図：サイドペインのオプション。*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
 
-*図： このオプションを使用して、画像に対して軽量な編集を行います。*
+*図：このオプションを使用して、画像に対して軽量な編集を行います。*
 
 After saving the edits to a [!DNL Camera Raw] image, a new rendition `AdjustedPreview.jpg` is generated for the image. For other image types except [!DNL Camera Raw], the changes are reflected in all the renditions.
 
