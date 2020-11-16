@@ -11,6 +11,9 @@ discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 translation-type: tm+mt
 source-git-commit: acc2a3977353386d7e1dfd1344a61d78812fe3fc
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 44%
 
 ---
 
@@ -31,7 +34,7 @@ For example, the **[!UICONTROL Send email]** submit action sends an email on suc
 
 ## 電子メール送信アクション {#email-action}
 
-「電子メールの送信」アクションを使用すると、アダプティブフォームの送信が成功した場合に、作成者が1人または複数の受信者に自動的に電子メールを送信できます。
+「電子メールを送信」アクションを使用すると、アダプティブフォームの送信が成功した場合に、1人または複数の受信者に電子メールを自動的に送信できます。
 
 >[!NOTE]
 >
@@ -41,7 +44,7 @@ For example, the **[!UICONTROL Send email]** submit action sends an email on suc
 
 1. Open an adaptive form in **[!UICONTROL edit]** mode.
 
-1. 「コンテンツ **[!UICONTROL 」タブで、「フォーム]** コンテナ **[!UICONTROL 」をタップし、「設定]**![](assets/configure-icon.svg) 」をタップして、アダプティブフォームのプロパティを表示します。
+1. 「 **[!UICONTROL コンテンツ]** 」タブで、「 **[!UICONTROL フォームコンテナ]** 」をタップし、 ![「設定](assets/configure-icon.svg) 」をタップしてアダプティブフォームのプロパティを表示します。
 
 1. In the **[!UICONTROL Submission]** section, select **[!UICONTROL Send email]** from the **[!UICONTROL Submit Action]** drop-down list.
 
@@ -67,7 +70,7 @@ For example, the **[!UICONTROL Send email]** submit action sends an email on suc
 
 In the **[!UICONTROL Send email]** action, you can use placeholders that are processed when the action is performed. It implies that the headers of the email (such as **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]**, **[!UICONTROL Subject]**) are generated when the user submits the form.
 
-プレースホルダーを定義するには、「電子メ `${<field name>}` ールを送信」を送信アクシ **[!UICONTROL ョンとして選択し]** 、フィールドに指定します。
+プレースホルダーを定義するには、「電子メール `${<field name>}` を **[!UICONTROL 送信]** 」を送信アクションとして選択した後に、フィールドに指定します。
 
 For example, if the form contains the **[!UICONTROL Email address]** field, named `email_addr`, for capturing the email ID of a user, you can specify the following in the **[!UICONTROL To]**, **[!UICONTROL CC]**, or **[!UICONTROL BCC]** fields.
 
