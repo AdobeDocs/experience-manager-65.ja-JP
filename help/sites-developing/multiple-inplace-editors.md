@@ -1,19 +1,19 @@
 ---
 title: 複数のインプレースエディター用にRTEを設定します。
-description: リッチテキストエディターを設定して、Adobe Experience Managerに複数のインプレースエディターを作成します。
+description: リッチテキストエディターを設定して、Adobe Experience Managerで複数のインプレースエディターを作成します。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: e49411a99a80e91c983afc103a8ea826e75569b8
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
 
 # 複数のインプレースエディターの設定 {#configure-multiple-in-place-editors}
 
-リッチテキストエディタは、複数のインプレースエディタを持つようにAdobe Experience Managerで設定できます。 このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。
+Adobe Experience Managerでリッチテキストエディタを設定して、複数のインプレースエディタを使用できます。 このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。
 
 ![特定のインプレイスエディタ](assets/rte-inplace-editor.png)
 
@@ -59,18 +59,18 @@ ht-degree: 25%
 1. ノード `cq:inplaceEditing` (タイプ `cq:InplaceEditingConfig`)で次のプロパティを定義します。
 
    * 名前：`editorType`
-   * タイプ：`String`
-   * 値: `hybrid`
+   * 型：`String`
+   * 値：`hybrid`
 
 1. このノードの下で、ノードを作成します。
 
    * 名前：`cq:ChildEditors`
-   * タイプ：`nt:unstructured`
+   * 型：`nt:unstructured`
 
 1. Under `cq:childEditors` node, create a node for each in-place editor:
 
-   * 名前： 各ノードの名前は、それが表すプロパティの名前で、ドロップターゲットと同様に、 例えば、 `image` と `text`。
-   * タイプ：`cq:ChildEditorConfig`
+   * 名前：各ノードの名前は、それが表すプロパティの名前で、ドロップターゲットと同様に、 例えば、`image` と `text` です。
+   * 型：`cq:ChildEditorConfig`
 
    >[!NOTE]
    >
@@ -82,11 +82,11 @@ ht-degree: 25%
    * Value: The name of the registered in-place editor; for example, `image` and `text`.
 
    * 名前: `title`.
-   * 値： 使用可能なエディターのコンポーネント選択リストに表示されるタイトル。 例えば、 `Image` と `Text`。
+   * 値：使用可能なエディターのコンポーネント選択リストに表示されるタイトル。 例えば、`Image` と `Text` です。
 
 ### Additional configuration for Rich Text Editors {#additional-configuration-for-rich-text-editors}
 
-複数のリッチテキストエディター（RTE）の設定は、個々の RTE インスタンスをそれぞれ別個に設定できるので、やや異なります。詳しくは、「リッチテキストエディターの [設定](/help/sites-administering/rich-text-editor.md)」を参照してください。 複数のRTEに各インプレースRTEの設定を作成させる場合。 アドビでは、個々のRTEごとに異なる設定を持つこ `cq:InplaceEditingConfig` とができるので、に新しい設定ノードを作成することをお勧めします。 新しいノードで、個々のRTE設定を作成します。
+複数のリッチテキストエディター（RTE）の設定は、個々の RTE インスタンスをそれぞれ別個に設定できるので、やや異なります。詳しくは、「リッチテキストエディターの [設定](/help/sites-administering/rich-text-editor.md)」を参照してください。 複数のRTEに各インプレースRTEの設定を作成させる場合。 Adobeでは、個々のRTEごとに異なる設定を持つこ `cq:InplaceEditingConfig` とができるので、に新しい設定ノードを作成することをお勧めします。 新しいノードで、個々のRTE設定を作成します。
 
 ```xml
     texttext
