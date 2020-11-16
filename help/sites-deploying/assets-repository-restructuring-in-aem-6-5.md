@@ -10,19 +10,22 @@ topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
 translation-type: tm+mt
 source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 50%
 
 ---
 
 
 # AEM 6.5 における Assets リポジトリの再構築 {#assets-repository-restructuring-in-aem}
 
-As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM Assets Solution. 一部の変更は、AEM 6.5のアップグレードプロセス中に作業を行う必要がありますが、その他の変更は、将来のアップグレードまで延期できます。
+As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM Assets Solution. 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
 * [その他](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#misc)
 
-**今後のアップグレードの前に**
+**今後のアップグレードの前**
 
 * [アセット／収集イベント電子メール通知テンプレート](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#asset-collection-event-e-mail-notification-template)
 * [従来のアセット共有デザイン](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#classic-asset-share-designs)
@@ -52,13 +55,13 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><p>カスタムコードがこの場所に依存している（コードがこのパスに明示的に依存している）場合は、アップグレード前に、新しい場所を使用するようにコードを更新する必要があります。JCR 内の特定パスへの依存を減らすために Java API が利用可能な場合は、Java API を使用することをお勧めします。</p> <p>クライアントがダウンロードする zip ファイルを一時的に保存するための場所。クライアントがアセットのダウンロードを要求するので、更新する必要はありません。新しい場所にファイルが生成されます。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
 </table>
 
-## 今後のアップグレードの前に {#prior-to-upgrade}
+## 今後のアップグレードの前 {#prior-to-upgrade}
 
 ### アセット／収集イベント電子メール通知テンプレート {#asset-collection-event-e-mail-notification-template}
 
@@ -87,7 +90,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -117,7 +120,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> <p>For any Designs that are not managed in SCM, and modified run-time via Design Dialogs, do not move authorable designs out of <code>/etc</code>.</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -150,7 +153,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>While <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> is technically supported for look-up (takes precedence before /apps via usual Sling CAConfig lookup, but after <code>/etc</code>) the template could be placed in <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>. ただし、電子メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td>
   </tr>
  </tbody>
@@ -162,7 +165,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 |---|---|
 | **新しい場所** | `/libs/settings/dam/drm` |
 | **再構築の手引き** | 該当なし |
-| **メモ** | 該当なし |
+| **備考** | 該当なし |
 
 ### リンク共有電子メール通知テンプレート {#link-share-e-mail-notification-template}
 
@@ -191,8 +194,8 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
-   <td>While <code>/conf/global/settings/dam/adhocassetshare</code> is technically supported for look-up (it takes precedence before <code>/apps</code> via usual Sling CAConfig lookup, but after <code>/etc</code>), the template can be placed in <code>/conf/global/settings/dam/adhocassetshare</code>. ただし、電子メールテンプレートの編集を容易にするランタイムUIがないので、この方法はお勧めしません。</td>
+   <td><strong>備考</strong></td>
+   <td>While <code>/conf/global/settings/dam/adhocassetshare</code> is technically supported for look-up (it takes precedence before <code>/apps</code> via usual Sling CAConfig lookup, but after <code>/etc</code>), the template can be placed in <code>/conf/global/settings/dam/adhocassetshare</code>. ただし、電子メールテンプレートの編集を容易にするランタイムUIがないので、この方法はお勧めしません</td>
   </tr>
  </tbody>
 </table>
@@ -213,7 +216,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><strong>再構築の手引き</strong></td>
    <td><p>新しいリポジトリ構造に合わせるには：</p>
     <ol>
-     <li>カスタムスクリプトまたは変更済みスクリプトをからにコ <strong><code>/etc/dam/indesign/scripts</code></strong> ピー <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
+     <li>カスタムスクリプトまたは変更済みスクリプトをから <strong><code>/etc/dam/indesign/scripts</code></strong> にコピー <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
       <ol>
        <li>Only copy new or modified scripts as unmodified scripts provided by AEM will be available via <strong><code>/libs/settings</code></strong> in AEM 6.5</li>
       </ol> </li>
@@ -221,11 +224,11 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
       <ol>
        <li>For each instance of the Workflow Step, update the paths in config to point explicitly at the proper scripts under<strong> <code>/apps/settings/dam/indesign/scripts</code></strong> or <strong><code>/libs/settings/dam/indesign/scripts</code></strong> as appropriate.</li>
       </ol> </li>
-     <li>完全に削除<strong> (Remove <code>/etc/dam/indesign/scripts</code></strong> )。</li>
+     <li>完全に削除<strong><code>/etc/dam/indesign/scripts</code></strong> 。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>It is recommended customized scripts be stored under <code>/apps</code>, since that is the location where code should be stored.</td>
   </tr>
  </tbody>
@@ -247,12 +250,12 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td><strong>再構築の手引き</strong></td>
    <td><p>Project level customizations need to be cut and pasted under equivalent <code>/apps</code> or <code>/conf</code> paths as applicable.</p> <p>AEM 6.4 のリポジトリ構造に合わせるには：</p>
     <ol>
-     <li>変更したビデオ設定をからにコピ <code>/etc/dam/video</code> ーします <code>/apps/settings/dam/video</code></li>
+     <li>変更したビデオ設定をからにコピー <code>/etc/dam/video</code> します。 <code>/apps/settings/dam/video</code></li>
      <li>削除 <code>/etc/dam/video</code></li>
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -279,7 +282,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> <p>Note that you do not have to adjust their copyURL/embed code to point to <code>/conf</code>. The existing request to <code>/etc</code> will be re-routed to the correct content from <code>/conf</code>.</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし</td>
   </tr>
  </tbody>
@@ -299,10 +302,10 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>Adjust any references to point to the new resources under <code>/libs</code> using the <code>/etc.clientlibs/</code> allow proxy prefix.</p> <p>最後に、移行されたclientlibsのフォルダーを <code>/etc/clientlibs/foundation/</code></p> </td>
+   <td><p>Adjust any references to point to the new resources under <code>/libs</code> using the <code>/etc.clientlibs/</code> allow proxy prefix.</p> <p>最後に、 <code>/etc/clientlibs/foundation/</code></p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
