@@ -12,6 +12,9 @@ discoiquuid: 81102d77-e856-4c85-b932-f22de8ca6462
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+workflow-type: tm+mt
+source-wordcount: '884'
+ht-degree: 99%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
    ![screen-shot_2019-03-05at124139-1](assets/screen-shot_2019-03-05at124139-1.png)
 
-1. Click or tap **Create** and then **Create** **Brand**.
+1. 「**作成**」、「**ブランド****を作成**」の順にクリックまたはタップします。
 1. ブランドテンプレートを選択して、「**次へ**」をクリックまたはタップします。
 1. オファーコンソールとアクティビティコンソールに表示するブランドのタイトルを入力します。オプションで、このブランドに関連付ける 1 つ以上のタグを入力または選択します。
 1. 「**作成**」をクリックまたはタップします。
@@ -49,7 +52,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
    ![screen-shot_2019-03-05at124557](assets/screen-shot_2019-03-05at124557.png)
 
-1. Select **Folder** and click **Next**.
+1. 「**フォルダー**」を選択し、「**次へ**」をクリックします。
 1. オファーライブラリに表示するフォルダーのタイトルを入力し、タグを入力または選択します。
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
@@ -69,7 +72,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 1. **オファーページ**&#x200B;テンプレートを選択して、「**次へ**」をクリックまたはタップします。
 1. オファーのタイトルを入力し、オプションでオファーに関連付ける 1 つ以上のタグを選択または入力して、「**作成**」をクリックまたはタップします。
-1. In the confirmation dialog box, to open the offer for editing click or tap **Open Page**.
+1. このオファーを編集用に開くには、確認ダイアログボックスで「**ページを開く**」をクリックまたはタップします。
 
 ## オファーの編集 {#editing-an-offer}
 
@@ -106,5 +109,5 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 オファーを検索するには：
 
-1. オファーコンソールの上部で、虫眼鏡アイコンをクリックまたはタップします。デフォルトでは、検索はオファーに制限されます。
+1. オファーコンソールの上部で、虫眼鏡アイコンをクリックまたはタップします。デフォルトでは、検索対象はオファーに限定されます。
 1. オファーを検索するためのキーワードを入力します。結果から選択します。
