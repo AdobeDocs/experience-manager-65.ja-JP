@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 30%
 
 ---
 
@@ -33,53 +36,53 @@ The following table shows **App Properties and Nodes**.
  <tbody>
   <tr>
    <td><strong>プロパティ名</strong></td>
-   <td><strong>タイプ</strong></td>
+   <td><strong>型</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
    <td>dps-cloudConfig</td>
    <td>String:Path</td>
-   <td><p>設定済みのMobile On-Demand cloudサービスへのパス。 AEM mobileからMobileのオンデマンド操作（API呼び出し）で使用されます。</p> <p>この関連付けは、作成者がアプリを関連付けるMobile On-Demand cloudサービスを選択した場合に、接続を管理タイルを使用して設定されます。</p> </td>
+   <td><p>設定済みのMobile On-DemandCloud Serviceへのパス。 AEM MobileからMobile On-Demandへのアクション（API呼び出し）に使用</p> <p>この関連付けは、作成者がアプリを関連付けるMobile On-DemandCloud Serviceを選択した場合に、接続を管理タイルを介して設定されます。</p> </td>
   </tr>
   <tr>
    <td>dps-exportTemplate</td>
    <td>String:Path</td>
-   <td><p>アプリのエクスポート設定のパス。 書き出し設定は、2つの子ContentSync書き出し設定テンプレートを持つフォルダーです。</p> <p><i>dps-article</i>:記事のコンテンツを書き出すためのContentSync書き出し設定</p> <p><i>dps-HTMLResources</i>:アプリ/記事の共有リソースを書き出すためのContentSync書き出し設定</p> </td>
+   <td><p>アプリのエクスポート設定のパス 書き出し設定は、2つの子ContentSync書き出し設定テンプレートを持つフォルダーです。</p> <p><i>dps-article</i>:記事のコンテンツを書き出すためのContentSync書き出し設定</p> <p><i>dps-HTMLResources</i>:アプリ/記事の共有リソースを書き出すためのContentSync書き出し設定</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
-   <td>文字列</td>
-   <td><p>このアプリがリンクまたは連結されるMobile On-DemandプロジェクトのID/URI。</p> <p>この関連付けは、関連付けられたMobile On-Demand cloudサービスで使用可能なプロジェクトのリストから作成者がプロジェクトを選択した場合に、接続を管理タイルを使用して設定されます。</p> </td>
+   <td>String</td>
+   <td><p>このアプリがリンクまたは連結されるMobile On-DemandプロジェクトのID/URI。</p> <p>この関連付けは、関連付けられたMobile On-DemandCloud Serviceで使用可能なプロジェクトのリストから作成者がプロジェクトを選択した場合に、接続の管理タイルを介して設定されます。</p> </td>
   </tr>
   <tr>
    <td>dps-projectTitle</td>
-   <td>文字列</td>
+   <td>String</td>
    <td>アプリのタイトル。</td>
   </tr>
   <tr>
    <td>dps-resourceType</td>
-   <td>文字列</td>
+   <td>String</td>
    <td>コンテンツタイプ.</td>
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploaded</td>
    <td>日付</td>
-   <td>AEMからAEM mobileに共有リソースを最後にアップロードした日。</td>
+   <td>共有リソースをAEMからAEM Mobileに最後にアップロードした日付。</td>
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploadedBy</td>
-   <td>文字列：userid</td>
-   <td>AEMからAEM mobileへの共有リソースリクエストの最後のアップロードを実行したユーザーのID。</td>
+   <td>String:userid</td>
+   <td>AEMからAEM Mobileへの共有リソース要求の最後のアップロードを実行したユーザーのID。</td>
   </tr>
   <tr>
-   <td>page-dashboard-config</td>
+   <td>page-ダッシュボード-config</td>
    <td>String:Path</td>
-   <td>ダッシュボード設定へのパス パスは、必要に応じてカスタムのダッシュボード設定にリダイレクトできます。</td>
+   <td>ダッシュボード設定へのパス。 パスは、必要に応じてカスタムのダッシュボード設定にリダイレクトできます。</td>
   </tr>
   <tr>
    <td>sling:resourceType</td>
-   <td>String:パス</td>
-   <td><p>mobileapps/core/components/instanceを拡張または拡張するcq: <i>Componentへのパス。</i></p> <p>これにより、アプリカタログ内での配置とレンダリングが可能になります。</p> </td>
+   <td>文字列:パス</td>
+   <td><p>mobileapps/core/components/instanceを拡張または拡張するcq: <i>コンポーネントへのパス。</i></p> <p>これにより、アプリカタログでの配置とレンダリングが可能になります。</p> </td>
   </tr>
  </tbody>
 </table>
