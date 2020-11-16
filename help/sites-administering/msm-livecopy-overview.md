@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 97%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 The **Live Copy Overview** can be opened from the **References** side panel of the **Sites** console:
 
 1. **サイト**&#x200B;コンソールで、[ブループリントページに移動して選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. **[参照](/help/sites-authoring/basic-handling.md#references)**パネルを開き、「**ライブコピー**」を選択します。
+1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開き、「**ライブコピー**」を選択します。
 
    ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -63,7 +66,7 @@ The **Live Copy Overview** can be opened from the **References** side panel of t
 
    >[!NOTE]
    >
-   >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
+   >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
 
 1. 「**閉じる**」を使用して終了し、**サイト**&#x200B;コンソールに戻ります。
 
