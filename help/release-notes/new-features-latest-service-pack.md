@@ -84,7 +84,7 @@ Adobe Experience Manager6.5のサービスパックは、新機能、お客様�
 [!DNL Experience Manager Forms] フォームデータモデルは、双方向SSLが実装されたサーバー上のRESTful APIと [統合できるようになりました](../../help/forms/using/configure-data-sources.md)。
 
 
-### 自動Formsコンバージョンサービスで [!DNL Adobe Sign] テキストタグのサポートを追加しました。 {#sign-integration-acroform-afcs}
+### automated forms conversionサービスでの [!DNL Adobe Sign] テキストタグのサポートを追加しました。 {#sign-integration-acroform-afcs}
 
 AcroFormに [!DNL Adobe Sign] テキストタグが含まれる場合、これらのフィールドが認識され、を使用して変換されたアダプティブフォームでフ [!DNL Adobe Sign] ィールドとして表されるようになり [!DNL Automated Forms Conversion service]ました。 署名者は、アダプティブフォームの署名時にこのようなフィールドに入力できます。
 
