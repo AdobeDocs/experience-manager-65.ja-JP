@@ -10,6 +10,9 @@ discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '597'
+ht-degree: 82%
 
 ---
 
@@ -52,7 +55,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 </afData>
 ```
 
-申込フォームに別のフォームを追加して、顧客に職場の住所の記入を要求します。子フォームのスキーマのルートは `officeAddress` です。またはを `bindref` 適用 `/application/officeAddress` しま `/officeAddress`す。 `bindref` がない場合、子フォームが `officeAddress` サブツリーとして追加されます。以下のフォームのXMLを参照してください。
+申込フォームに別のフォームを追加して、顧客に職場の住所の記入を要求します。子フォームのスキーマのルートは `officeAddress` です。を適用 `bindref` し `/application/officeAddress` ま `/officeAddress`す。 `bindref` がない場合、子フォームが `officeAddress` サブツリーとして追加されます。以下のフォームのXMLを参照してください。
 
 ```xml
 <afData>
@@ -72,7 +75,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 </afData>
 ```
 
-顧客が住所を入力できる別のフォームを挿入する場合は、XMLを次 `bindref` のよ `/application/houseAddress or /houseAddress.`うに適用します。
+顧客に住所の入力を求める別のフォームを挿入する場合は、次のようなXMLを適用 `bindref` し `/application/houseAddress or /houseAddress.`ます。
 
 ```xml
 <afData>
@@ -141,5 +144,5 @@ For example, apply bindrefs `/application/address[1]` or `/address[1]` and `/app
    [ ![アセットの下でアダプティブフォームを選択する](assets/asset.png)](assets/asset-1.png)
 
 1. 子フォームとして追加するアダプティブフォームをドラッグ＆ドロップします。
-   [ サイトにアダ ![プティブフォームをドラッグ&amp;ドロッ](assets/drag-drop.png)](assets/drag-drop-1.png)プすると、ドロップしたアダプティブフォームが子フォームとして追加されます。
+   [ ![アダプティブフォームを](assets/drag-drop.png)](assets/drag-drop-1.png)サイトにドラッグ&amp;ドロップするドロップしたアダプティブフォームは、子フォームとして追加されます。
 
