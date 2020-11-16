@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
 translation-type: tm+mt
 source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+workflow-type: tm+mt
+source-wordcount: '969'
+ht-degree: 80%
 
 ---
 
@@ -32,6 +35,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >* 単一ページアプリケーション
 >* ネイティブモバイルアプリケーション
 >* AEM外部のその他のチャネルおよびタッチポイント
+
 >
 >
 その場合は、[コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)のドキュメントを参照してください。
@@ -470,7 +474,7 @@ For example, the PageInfo servlet returns the following JSON response for the `/
 
 ## ワークフローパッケージ情報のフィルター処理 {#filtering-workflow-package-information}
 
-Day CQ WCMワークフローパッケージ情報プロバイダーサービスを設定し、目的のワークフローパッケージに関する情報のみが返されるようにします。 デフォルトでは、ワークフローパッケージ情報プロバイダーサービスは、リポジトリ内のすべてのワークフローパッケージに関する情報を返します。 ワークフローパッケージのサブセットを反復すると、使用されるサーバーリソースが減少します。
+Day CQ WCMワークフローパッケージ情報プロバイダーサービスを設定し、関心のあるワークフローパッケージに関する情報のみが返されるようにします。 デフォルトでは、Workflow Package Info Providerサービスはリポジトリ内のすべてのワークフローパッケージに関する情報を返します。 ワークフローパッケージのサブセットを反復すると、使用されるサーバーリソースが減少します。
 
 >[!NOTE]
 >
@@ -501,13 +505,13 @@ The ID of the service is `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvid
 1. CRXDE Lite（[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）を開きます。
 1. アプリケーションの config フォルダーでノードを作成します。
 
-   * 名前: `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`
-   * タイプ: `sling:OsgiConfig`
+   * 名前：`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`
+   * 型：`sling:OsgiConfig`
 
 1. ノードを選択してプロパティを追加します。
 
-   * 名前: `workflowpackageinfoprovider.filter`
-   * タイプ: `String[]`
+   * 名前：`workflowpackageinfoprovider.filter`
+   * 型：`String[]`
    * 値：正しい形式を使用したワークフローパッケージのパス
 
 1. 「すべて保存」をクリックします。
@@ -540,7 +544,7 @@ The ID of the service is `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvid
 
 1. `com.day.cq.wcm.api.PageInfoProvider` インターフェイスを実装します。
 1. クラスをバンドルし、OSGi サービスとしてデプロイします。
-1. アプリケーションのページコンポーネントを作成します。プロパ `foundation/components/page` ティの値として使用し `sling:resourceSuperType` ます。
+1. アプリケーションのページコンポーネントを作成します。プロパティ `foundation/components/page` の値として使用し `sling:resourceSuperType` ます。
 
 1. Add a node below the component node named `cq:infoProviders`.
 1. `cq:infoProviders` ノードの下に、PageInfoProvider サービスのノードを追加します。ノードには、任意の名前を指定できます。
