@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 55667e62-a61b-4794-b292-8d54929c41ac
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2721'
+ht-degree: 68%
 
 ---
 
@@ -58,7 +61,7 @@ Angular ページのボディは、wcm モードが検出されたかどうか�
 
 **オーサーモード**
 
-作成者モードでは、個々のページが個別にレンダリングされます。 Angularは、ページ間のルーティングを処理せず、ページのコンポーネントを含む部分的なテンプレートの読み込みに使用するng-viewでもありません。 その代わり、ページテンプレート（template.jsp）のコンテンツが `cq:include` タグによってサーバー側にインクルードされます。
+オーサーモードでは、個々のページが個別にレンダリングされます。 Angularは、ページ間のルーティングを処理しません。また、ページのコンポーネントを含む部分的な表示の読み込みに使用されるngテンプレートもありません。 その代わり、ページテンプレート（template.jsp）のコンテンツが `cq:include` タグによってサーバー側にインクルードされます。
 
 この方法により、何も変更を加えることなく、オーサー機能（段落システム、サイドキック、デザインモードでのコンポーネントの追加および編集など）を使用可能にすることができます。アプリ向けのページなどクライアント側のレンダリングを利用するページは、AEM オーサーモードではパフォーマンスがよくありません。
 
@@ -72,11 +75,11 @@ Note that the template.jsp include is wrapped in a `div` element that contains t
 
 **パブリッシュモード**
 
-公開モード（コンテンツ同期を使用してアプリを書き出す場合など）では、すべてのページが単一ページアプリ(SPA)になります。 (To learn about SPAs, use the Angular tutorial, specifically [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07).)
+公開モード（コンテンツの同期を使用してアプリを書き出す場合など）では、すべてのページが単一のページアプリ(SPA)になります。 (To learn about SPAs, use the Angular tutorial, specifically [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07).)
 
 There is only one HTML page in a SPA (a page that contains the `<html>` element). このページは、「レイアウトテンプレート」と呼ばれています。Angular 用語では、「アプリケーション内のすべてのビューに共通するテンプレート」となります。このページは、「トップレベルのアプリページ」と考えてください。By convention the top-level app page is the `cq:Page` node of your application that is closest to the root (and is not a redirect).
 
-パブリッシュモードではアプリの実際の URI が変わらないので、このページから外部アセットを参照するには相対パスを使用する必要があります。したがって、書き出し用に画像をレンダリングする際に、この最上位のページを考慮する特別な画像コンポーネントが提供されます。
+パブリッシュモードではアプリの実際の URI が変わらないので、このページから外部アセットを参照するには相対パスを使用する必要があります。したがって、書き出す画像をレンダリングする際に、この最上位レベルのページが考慮される特別な画像コンポーネントが用意されています。
 
 SPA として、このレイアウトテンプレートページは単に ng-view ディレクティブとともに div 要素を生成します。
 
@@ -84,7 +87,7 @@ SPA として、このレイアウトテンプレートページは単に ng-vie
  <div ng-view ng-class="transition"></div>
 ```
 
-Angularルートサービスは、この要素を使用して、現在のページ（template.jspに含まれる）の許可可能なコンテンツを含む、アプリ内のすべてのページのコンテンツを表示します。
+Angularルートサービスはこの要素を使用して、現在のページ（template.jspに含まれる）の承認可能なコンテンツを含む、アプリ内のすべてのページのコンテンツを表示します。
 
 body.jsp ファイルには、header.jsp および footer.jsp が空の状態でインクルードされています。どのページにも静的コンテンツを提供する場合には、アプリでこれらのスクリプトをオーバーライドできます。
 
@@ -102,7 +105,7 @@ ng-app="<c:out value='${applicationName}'/>"
 
 また、`AppController` 変数をスコープに公開するトップレベルのコントローラーを `wcmMode` という名前で定義し、コンテンツ同期更新ペイロードを取得する URI を設定します。
 
-最後に、このモジュールは、各子孫ページ（自身を含む）を反復処理し、（angular-route-fragment.jsセレクターと拡張を介して）各ページのルートフラグメントの内容をレンダリングし、Angularの$routeProviderへの設定エントリとして含めます。 つまり、$routeProvider は特定のパスが要求されたときにどのコンテンツをレンダリングするかをアプリに指示します。
+最後に、このモジュールは各子孫ページ（自身を含む）を反復し、各ページのルートフラグメントの内容を（angular-route-fragment.jsセレクターと拡張を介して）レンダリングします。この内容は、Angularの$routeProviderへのconfigエントリとして含まれます。 つまり、$routeProvider は特定のパスが要求されたときにどのコンテンツをレンダリングするかをアプリに指示します。
 
 ### angular-route-fragment.js.jsp {#angular-route-fragment-js-jsp}
 
@@ -129,7 +132,7 @@ This code indicates to $routeProvider (defined in angular-app-module.js.jsp) tha
 
 ### angular-app-controllers.js.jsp {#angular-app-controllers-js-jsp}
 
-Angular では、コントローラーが変数を $scope にワイヤアップしてビューに公開します。angular-app-controllers.js.jspスクリプトは、angular-app-module.js.jspに示すパターンに従って、各子孫ページ（そのページ自体を含む）を繰り返し処理し、各ページが定義したコントローラーフラグメントを(controller.js.jspを介して)出力します。 このスクリプトが定義しているモジュールは、`cqAppControllers` という名前であり、ページコントローラーが使用可能になるようにトップレベルアプリモジュールの依存関係としてリストされる必要があります。
+Angular では、コントローラーが変数を $scope にワイヤアップしてビューに公開します。angular-app-controllers.js.jspスクリプトは、angular-app-module.js.jspに示すパターンに従って、そのページ自体を含む各子孫ページを繰り返し処理し、各ページが定義したコントローラーフラグメントをcontroller.js.jsp経由で出力します。 このスクリプトが定義しているモジュールは、`cqAppControllers` という名前であり、ページコントローラーが使用可能になるようにトップレベルアプリモジュールの依存関係としてリストされる必要があります。
 
 ### controller.js.jsp {#controller-js-jsp}
 
@@ -157,7 +160,7 @@ body.jspセクションで最初に導入されたtemplate.jspには、ページ
 
 ### angular-module-list.js.jsp {#angular-module-list-js-jsp}
 
-このスクリプトは、単にトップレベルの Angular アプリモジュールの Angular 依存関係を出力します。これはangular-app-module.js.jspによって参照されます。
+このスクリプトは、単にトップレベルの Angular アプリモジュールの Angular 依存関係を出力します。angular-app-module.js.jspで参照されています。
 
 ### header.jsp {#header-jsp}
 
@@ -192,7 +195,7 @@ PhoneGap アプリケーション内の特定のアセットの URI は、プラ
 
 PhoneGap 開発者に関係するコンテンツは、www ディレクトリの下にあります。アプリアセットにアクセスするには、相対パスを使用します。
 
-問題が複雑なのは、PhoneGap アプリケーションではシングルページアプリ（SPA）パターンを使用しているので、基準 URI が（ハッシュを除いて）変更されないことです。したがって、**参照するすべてのアセット、テンプレートまたはスクリプトは、最上位のページを基準にしている必要があります。 **The top level page initializes the Angular routing and controllers by virtue of `*<name>*.angular-app-module.js` and `*<name>*.angular-app-controllers.js`. このページは、リポジトリのルートに最も近いページで、sling:redirectを*拡張しません。
+問題が複雑なのは、PhoneGap アプリケーションではシングルページアプリ（SPA）パターンを使用しているので、基準 URI が（ハッシュを除いて）変更されないことです。したがって、**参照するすべてのアセット、テンプレートまたはスクリプトは、最上位レベルのページを基準とした相対位置である必要があります。 **The top level page initializes the Angular routing and controllers by virtue of `*<name>*.angular-app-module.js` and `*<name>*.angular-app-controllers.js`. このページは、リポジトリのルートに最も近いページで、sling:redirectを*拡張しない。
 
 次の複数のヘルパーメソッドで相対パスに対処できます。
 
@@ -236,7 +239,7 @@ template.jsp スクリプトは、コンポーネントのマークアップを�
 
 #### overhead.jsp {#overhead-jsp}
 
-JSONデータによって駆動されるコンポーネント（「ng-text」など）内：/libs/mobileapps/components/angular/ng-text)、overhead.jspを使用して、template.jspからすべてのJavaコードを削除できます。 overhead.jsp は template.jsp から参照され、overhead.jsp が要求で公開している変数は使用可能です。この方法により、ロジックと表示を分離でき、既存のコンポーネントから新規のコンポーネントを生成する場合にコピーして貼り付ける必要があるコードの量を抑えることができます。
+JSONデータによって駆動されるコンポーネント（「ng-text」など）の場合：/libs/mobileapps/components/angular/ng-text)、overhead.jspを使用して、template.jspからすべてのJavaコードを削除できます。 overhead.jsp は template.jsp から参照され、overhead.jsp が要求で公開している変数は使用可能です。この方法により、ロジックと表示を分離でき、既存のコンポーネントから新規のコンポーネントを生成する場合にコピーして貼り付ける必要があるコードの量を抑えることができます。
 
 #### controller.js.jsp {#controller-js-jsp-1}
 
@@ -303,7 +306,7 @@ www/
 
 ### .cordova {#cordova}
 
-これは、現在の OS 設定によっては表示されない隠しディレクトリです。このディレクトリを含むアプリフックを変更する場合は、OSを設定して、このディレクトリが表示されるようにする必要があります。
+これは、現在の OS 設定によっては表示されない隠しディレクトリです。OSに含まれるアプリケーションフックを変更する場合に、このディレクトリが表示されるようにOSを設定する必要があります。
 
 #### .cordova/hooks/ {#cordova-hooks}
 
@@ -354,7 +357,7 @@ This strategy does not require that you bundle and install the plugins to AEM ea
 
 #### platforms/ {#platforms}
 
-This directory is empty until you execute the `phonegap run <platform>` command on the project. 現在は、 `<platform>` またはを使用で `ios` きま `android`す。
+This directory is empty until you execute the `phonegap run <platform>` command on the project. 現在、 `<platform>` またはを使用でき `ios` ま `android`す。
 
 特定のプラットフォーム向けのアプリをビルドすると、対応するディレクトリが作成され、プラットフォーム固有のアプリコードが含められます。
 
