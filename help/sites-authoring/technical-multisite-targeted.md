@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: 7dd851ab-3fa7-426e-89cb-08b67e9b5999
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 100%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 以下の図は、ターゲットコンテンツ用マルチサイト管理の構造を示しています。
 
-Areas appear underneath **/content/campaigns/&lt;brand>** and by default each brand has a master area, which is created automatically. 各領域には、独自のアクティビティ、エクスペリエンスおよびオファーのセットが含まれます。
+領域は **/content/campaigns/&lt;brand>** の下に表示され、デフォルトでは、ブランドごとに自動作成されるマスター領域が 1 つあります。各領域には、独自のアクティビティ、エクスペリエンスおよびオファーのセットが含まれます。
 
 ![chlimage_1-268](assets/chlimage_1-268.png)
 
