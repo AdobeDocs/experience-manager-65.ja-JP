@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 translation-type: tm+mt
 source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+workflow-type: tm+mt
+source-wordcount: '538'
+ht-degree: 81%
 
 ---
 
@@ -36,7 +39,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
 
 >[!NOTE]
 >
->[この例については、Package shareから入手できるGeometrixx](/help/sites-developing/we-retail.md)(Geometrixx)を参照してください。
+>[この例については、「パッケージ共有](/help/sites-developing/we-retail.md)」から利用できるGeometrixxを参照してください。
 
 この例では、新しいカスタム JSSP ファイルを作成し、AEM 側から呼び出して、結果を取得します。例えば、この方法を利用して、Adobe Campaign からデータを取得したり、Adobe Campaign にデータを保存したりできます。
 
@@ -62,6 +65,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
 
    * AEM と Adobe Campaign 間に有効な接続がある
    * Adobe Campaign クラウドサービスが **/content/geometrixx-outdoors** に設定されている
+
    The most important object in this example is the **GenericCampaignConnector**, which allows you to call (get and post) jssp files on the Adobe Campaign side.
 
    コードの抜粋を以下に示します。
@@ -167,9 +171,9 @@ AEM には、サイト管理エクスプローラービューのどこでも使�
 
 >[!NOTE]
 >
->[この例については、Package shareから入手できるGeometrixx](/help/sites-developing/we-retail.md)(Geometrixx)を参照してください。
+>[この例については、「パッケージ共有](/help/sites-developing/we-retail.md)」から利用できるGeometrixxを参照してください。
 
-エクスプローラー内の各ノードにリンクされたAPIがあります。 例えば、次のノードがあります。
+エクスプローラー内の各ノードにリンクされたAPIがあります。 例えば、ノードの場合：
 
 * [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
