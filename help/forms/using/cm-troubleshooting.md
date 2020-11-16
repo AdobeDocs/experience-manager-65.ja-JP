@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## レターの保存時にエラーが発生する {#errors-when-saving-a-letter}
 
-### OS クリップボードと内部 AEM クリップボードを使用した {#issue}
+### 問題 {#issue}
 
 レターの保存時に、次のいずれかのエラーが表示される：
 
@@ -38,7 +41,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## レターのプレビュー時にエラーが発生する {#error-when-previewing-a-letter}
 
-### OS クリップボードと内部 AEM クリップボードを使用した {#issue-1}
+### 問題 {#issue-1}
 
 レターをプレビューしている間、レターに含まれる未公開のテキストアセットが公開されていても、「レターの読み込み中のエラー: XML 入力からアセットを読み込めませんでした」というエラーが表示される。
 
@@ -46,7 +49,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 次の手順を使用して公開インスタンスの文字キャッシュをリセットし、レターのプレビューを再試行します。
 
-1. に移動し、管 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 理者としてログインします。
+1. に移動し、管理者 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** としてログインします。
 1. Select **Correspondence Management Configurations**.
 1. 「**Correspondence Management の設定**」で、「**レターのキャッシュを有効にする**」を無効にして「**保存**」をクリックします。
 1. Enable **Enable Letter Cache** and then click **Save**.
