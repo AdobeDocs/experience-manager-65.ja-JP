@@ -63,6 +63,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
    * **ユーザー名**：AEM サーバーからの呼び出しの開始に使用される JEE 上の AEM Forms アカウントのユーザー名を指定します。指定したアカウントは、JEE サーバー上の AEM Forms で Document Services を開始することができる権限が付与されている必要があります。
    * **パスワード**：Username フィールドに表示される JEE 上の AEM Forms アカウントのパスワードを指定します。
+
    「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
 
 #### 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
@@ -78,6 +79,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
    * **キーストアパスワード**：キーストアファイルのパスワードを指定します。
    * **TrustStore パスワード**：Truststore ファイルのパスワードを指定します。
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
+
    「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
 
 ### サンプルポリシーで保護された PDF ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-document}
