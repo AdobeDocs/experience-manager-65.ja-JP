@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 translation-type: tm+mt
 source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+workflow-type: tm+mt
+source-wordcount: '968'
+ht-degree: 58%
 
 ---
 
@@ -84,13 +87,13 @@ Some database vendors provide JDBC drivers in an OSGi bundle, for example [MySQL
 
 次のリンクより、一般的なデータベース製品のダウンロードページを開くことができます。
 
-* [Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774)
+* [Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
 * [Oracle](https://www.oracle.com/technetwork/database/features/jdbc/index-091264.html)
 * [IBM DB2](https://www-01.ibm.com/support/docview.wss?uid=swg27007053)
 
 ### JDBC Connection Pool サービスの設定 {#configuring-the-jdbc-connection-pool-service}
 
-JDBCドライバーを使用してデータソースオブジェクトを作成する、JDBC接続プールサービスの設定を追加します。アプリケーションコードは、このサービスを使用してオブジェクトを取得し、データベースに接続します。
+JDBCドライバーを追加使用してデータソースオブジェクトを作成する、JDBC接続プールサービスの設定。アプリケーションコードは、このサービスを使用してオブジェクトを取得し、データベースに接続します。
 
 JDBC Connections Pool（`com.day.commons.datasource.jdbcpool.JdbcPoolService`）はファクトリサービスです。異なるプロパティ（読み取り専用アクセスと読み取り／書き込みアクセスなど）を使用する接続が必要な場合は、複数の設定を作成します。
 
@@ -98,20 +101,20 @@ CQ と連携する場合は、いくつかの方法でサービスの設定を�
 
 プール化された接続サービスを設定するには、次のプロパティを使用できます。プロパティ名は、Web コンソールに表示されるとおりに示しています。`sling:OsgiConfig` ノードに対応する名前を括弧内に示しています。値の例は、エイリアスが `mydb` である HSQLDB サーバーおよびデータベースのものを示しています。
 
-* JDBCドライバークラス( `jdbc.driver.class`):例えば、java.sql.Driverインターフェイスを実装するために使用するJavaクラス `org.hsqldb.jdbc.JDBCDriver`。 The data type is `String`.
+* JDBCドライバークラス( `jdbc.driver.class`):例えば、java.sql.Driverインターフェイスを実装するために使用するJavaクラス `org.hsqldb.jdbc.JDBCDriver`です。 The data type is `String`.
 
-* JDBC接続URI ( `jdbc.connection.uri`):接続の作成に使用するデータベースのURLです（例：） `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`。 URLの形式は、java.sql.DriverManagerクラスのgetConnectionメソッドで使用する場合に有効である必要があります。 The data type is `String`.
+* JDBC接続URI ( `jdbc.connection.uri`):接続の作成に使用するデータベースのURLです(例： `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`)。 URLの形式は、java.sql.DriverManagerクラスのgetConnectionメソッドで使用するために有効である必要があります。 The data type is `String`.
 
-* ユーザー名( `jdbc.username`):データベースサーバーの認証に使用するユーザー名です。 The data type is `String`.
+* ユーザ名( `jdbc.username`):データベースサーバーの認証に使用するユーザー名です。 The data type is `String`.
 
 * パスワード( `jdbc.password`):ユーザーの認証に使用するパスワードです。 The data type is `String`.
 
-* 検証クエリ( `jdbc.validation.query`):接続が成功したかどうかを検証するために使用するSQL文です(例： `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`)。 The data type is `String`.
+* 検証クエリ( `jdbc.validation.query`):接続が成功したことを検証するために使用するSQLステートメントです(例 `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`)。 The data type is `String`.
 
 * Readonly By Default（default.readonly）： この接続を読み取り専用アクセスにする場合に、このオプションを選択します。データタイプは `Boolean` です。
-* デフォルトで自動コミット( `default.autocommit`):データベースに送信されるSQLコマンドごとに別々のトランザクションを作成し、各トランザクションが自動的にコミットする場合は、このオプションを選択します。 コード内でトランザクションを明示的にコミットする場合は、このオプションを選択しないでください。 The data type is `Boolean`.
+* デフォルトで自動コミット( `default.autocommit`):データベースに送信されるSQLコマンドごとに個別のトランザクションを作成し、各トランザクションを自動的にコミットする場合は、このオプションを選択します。 コード内でトランザクションを明示的にコミットする場合は、このオプションを選択しないでください。 The data type is `Boolean`.
 
-* プールサイズ( `pool.size`):データベースで使用可能にする同時接続の数。 The data type is `Long`.
+* プールサイズ( `pool.size`):データベースで同時に使用できる接続の数。 The data type is `Long`.
 
 * プールの待機( `pool.max.wait.msec`):接続要求がタイムアウトするまでの時間。 The data type is `Long`.
 
@@ -119,7 +122,7 @@ CQ と連携する場合は、いくつかの方法でサービスの設定を�
 
 * Additional Service Properties ( `datasource.svc.properties`): A set of name/value pairs that you want to append to the connection URL. The data type is `String[]`.
 
-JDBC接続プールサービスはファクトリです。 したがって、ノードを使用して接 `sling:OsgiConfig` 続サービスを設定する場合、ノードの名前にはファクトリサービスのPIDの後に続くPIDを含める必要がありま *`-alias`*&#x200B;す。 使用するエイリアスは、そのPIDのすべての設定ノードで一意である必要があります。 ノード名の例はです `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`。
+JDBC接続プールサービスはファクトリです。 したがって、接続サービスの設定に `sling:OsgiConfig` ノードを使用する場合、ノードの名前にはファクトリサービスのPIDの後に続くPIDを含める必要があり *`-alias`*&#x200B;ます。 使用するエイリアスは、そのPIDのすべての設定ノードで一意である必要があります。 ノード名の例はで `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`す。
 
 ![chlimage_1-7](assets/chlimage_1-7a.png)
 
