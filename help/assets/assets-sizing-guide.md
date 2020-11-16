@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Assets]サイズ調整ガイド'
+title: '[!DNL Assets] サイジングガイド'
 description: 導入に必要なインフラストラクチャとリソースを見積もるための効率的な指標を決定するためのベストプラクティス [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1614'
 ht-degree: 60%
 
 ---
