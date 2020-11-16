@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1207'
+ht-degree: 92%
 
 ---
 
@@ -106,7 +109,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td><strong>手順 10 および 29</strong></td>
    <td>ネットワークレイヤーを調査します</td>
-   <td><p>ネットワークレイヤーで、飽和および遅延の問題がないかどうかを調べます。</p> <p>オーサー層の場合は、遅延が 100 ミリ秒を超えないことが推奨されます。</p> <p>パフォーマンスの最適化に関するヒントについて詳しくは、<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">このページ</a>を参照してください。</p> </td>
+   <td><p>ネットワークレイヤーで、飽和および遅延の問題がないかどうかを調べます。</p> <p>オーサー層の場合は、遅延が 100 ミリ秒を超えないことが推奨されます。</p> <p>パフォーマンスの最適化に関するヒントについて詳しくは、<a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">このページ</a>を参照してください。</p> </td>
   </tr>
   <tr>
    <td><strong>手順 11</strong></td>
@@ -183,7 +186,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <td>リポジトリチューニング</td>
    <td>
     <ul>
-     <li><a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">パフォーマンスチューニングのヒント</a></li>
+     <li><a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">パフォーマンスチューニングのヒント</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">パフォーマンスの設定</a></li>
      <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">Repository Performance Tuning</a></li>
     </ul> </td>
@@ -211,7 +214,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">アセット同期サービス</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">複数の DAM インスタンス</a></li>
-     <li><a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">こちら</a>および<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">こちら</a>にあるパフォーマンスチューニングのヒントに関する記事<br /> </li>
+     <li><a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">こちら</a>および<a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">こちら</a>にあるパフォーマンスチューニングのヒントに関する記事<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -252,12 +255,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td><strong>手順 34</strong></td>
    <td>Dispatcher のバージョンをアップグレードします</td>
-   <td><p>最新バージョンの Dispatcher は、次の場所でダウンロードできます。</p> <p><a href="https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html">リンクをたどる</a></p> </td>
+   <td><p>最新バージョンの Dispatcher は、次の場所でダウンロードできます。</p> <p><a href="https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html">リンクをたどる</a></p> </td>
   </tr>
   <tr>
    <td><strong>手順 35</strong></td>
    <td>Dispatcher を設定します</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html">Dispatcher の設定</a><br /> </td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html">Dispatcher の設定</a><br /> </td>
   </tr>
   <tr>
    <td><strong>手順 36</strong></td>
@@ -271,7 +274,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td><strong>手順 37 および 38</strong></td>
    <td>読み込みに時間がかかる</td>
-   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">AEM Web パフォーマンスに関する Gem セッションを参照してください。</a><br /> </td>
+   <td><a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">AEM Web パフォーマンスに関する Gem セッションを参照してください。</a><br /> </td>
   </tr>
   <tr>
    <td><strong>手順 39</strong></td>
@@ -291,7 +294,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td><strong>手順 49</strong></td>
    <td>ペイロードのサイズを縮小します</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td>
   </tr>
   <tr>
    <td><strong>手順 42 および 43</strong></td>
@@ -323,7 +326,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td><strong>手順 50 および 51</strong></td>
    <td>JS コードがブロックされています</td>
-   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html</a></td>
+   <td><a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html</a></td>
   </tr>
  </tbody>
 </table>
