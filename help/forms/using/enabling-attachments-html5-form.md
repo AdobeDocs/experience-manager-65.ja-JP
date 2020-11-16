@@ -10,6 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 translation-type: tm+mt
 source-git-commit: 00e14be8a0775149b3ee7ce8cd781dd7f1e49e4f
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 62%
 
 ---
 
@@ -19,14 +22,15 @@ source-git-commit: 00e14be8a0775149b3ee7ce8cd781dd7f1e49e4f
 HTML5フォームでは、添付ファイルをアップロード、プレビューおよび送信することができます。デフォルトでは、添付ファイルサポートは無効になっています。添付ファイルサポートを有効にするには：
 
 1. [ 文字列プロパティで](/help/forms/using/custom-profile.md)カスタムプロファイル`mfAttachmentOptions`を作成します。
-1. In the custom profile, specify properties `fileSizeLimit`, `multiSelect`, and `buttonTex`t to configure options of the file attachment widget. 必要に応じて、より多くのカスタムプロパティを指定することもできます。
+1. In the custom profile, specify properties `fileSizeLimit`, `multiSelect`, and `buttonTex`t to configure options of the file attachment widget. 必要に応じて、さらに多くのカスタムプロパティを指定することもできます。
 
 1. カスタムプロファイルでは、次の設定を使用します。
 
    * **multiSelect**-> trueまたはfalse （デフォルトでは true）
    * **fileSizeLimit** -> value_in_mb (say 5) （デフォルトで2 MBs）
    * **buttonText** ->ポップアップウィンドウのボタンテキスト（デフォルトでは「Attach」）
-   * **accept** ->受け入れるファイルタイプ(「audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf」（デフォルト）
+   * **accept** ->受け入れるファイルタイプ（デフォルトでは「audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf」）
+
    >[!NOTE]
    >
    >Microsoft Internet Explorer 9 では、指定された制限を超えたサイズのファイルを添付できます。これは既知の問題です。
