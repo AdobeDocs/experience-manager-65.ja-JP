@@ -11,6 +11,9 @@ discoiquuid: 136ac7e3-9d1f-4d58-bd4f-9dbe09eeafee
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '554'
+ht-degree: 87%
 
 ---
 
@@ -54,7 +57,7 @@ AEM Forms では、テーマを作成してフォームに適用できるよう�
 1. /libs/fd/af/layouts/field node からフィールドレイアウト（例えば、defaultFieldLayout）を /apps node（例えば、/apps/af-field-layout）にコピーします。
 1. コピーしたノードの名前と defaultFieldLayout.jsp ファイルの名前を変更します。例えば、errorOnRight.jsp。 
 
-1. コピーしたノードのqtipおよびjcr:descriptionプロパティの値を変更します。 例えば、プロパティの値を「Error On Right」に変更します。
+1. コピーしたノードのqtipプロパティとjcr:descriptionプロパティの値を変更します。 例えば、プロパティの値を「Error On Right」に変更します。
 
 1. 新しいスタイルおよび動作を追加するには、/etc ノードでクライアントライブラリを作成します。
 
