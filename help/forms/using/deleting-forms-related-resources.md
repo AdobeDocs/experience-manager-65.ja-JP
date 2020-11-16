@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '398'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 ## フォームの削除方法 {#how-to-delete-a-form}
 
 1. Log in to the AEM Forms user interface, by accessing `https://[hostname]:'port'/aem/forms.html.`
-1. 削除するフォームを探して選択します。ツールバ ![ーの「aem6forms_delete2を削除](assets/aem6forms_delete2.png) 」をクリックし、削除操作を確定します。
+1. 削除するフォームを探して選択します。ツールバーの「 ![aem6forms_delete2](assets/aem6forms_delete2.png) 」をクリックし、削除操作を確定します。
 
    >[!NOTE]
    >
