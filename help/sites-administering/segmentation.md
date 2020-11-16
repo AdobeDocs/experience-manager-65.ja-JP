@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '1459'
+ht-degree: 74%
 
 ---
 
@@ -42,11 +45,11 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 The **Segment Editor** allows you to easily modify a segment. セグメントを編集するには、[セグメントリスト](/help/sites-administering/segmentation.md#accessing-segments)からセグメントを選択し、「**編集**」ボタンをクリックします。
 
-![segmenteditor](assets/segmenteditor.png)
+![segmenter](assets/segmenteditor.png)
 
 Using the components browser you can add **AND** and **OR** containers to define the segment logic, then add additional components to compare properties and values or reference scripts and other segments to define the selection criteria (see [Creating a New Segment](#creating-a-new-segment)) to define the exact scenario for selecting the segment.
 
-ステートメント全体が true と評価されると、セグメントは解決されます。In the event of multiple segments being applicable, then the **Boost** factor is also used. See [Creating a New Segment](#creating-a-new-segment) for details on the [boost factor.](/help/sites-administering/campaign-segmentation.md#boost-factor)
+ステートメント全体が true と評価されると、セグメントは解決されます。In the event of multiple segments being applicable, then the **Boost** factor is also used. [ブースト率の詳細については、「新しいセグメントの](#creating-a-new-segment) 作成 [」を参照してください。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -77,30 +80,30 @@ Using the components browser you can add **AND** and **OR** containers to define
  <tbody>
   <tr>
    <td>プロパティ — 値<br /> </td>
-   <td>ストアのプロパティを定義された値と比較します<br /> </td>
+   <td>ストアのプロパティと定義済みの値を比較<br /> </td>
   </tr>
   <tr>
    <td>プロパティ — プロパティ</td>
-   <td>あるストアのプロパティと別のプロパティを比較します<br /> </td>
+   <td>ストアの1つのプロパティと別のプロパティを比較<br /> </td>
   </tr>
   <tr>
-   <td>プロパティ — セグメントの参照</td>
-   <td>店舗のプロパティを別の参照セグメントと比較<br /> </td>
+   <td>プロパティセグメントの参照</td>
+   <td>店舗のプロパティを、参照されている別のセグメントと比較します<br /> </td>
   </tr>
   <tr>
-   <td>プロパティスクリプトリファレンス</td>
-   <td>ストアのプロパティとスクリプトの結果を比較します<br /> </td>
+   <td>プロパティスクリプトの参照</td>
+   <td>ストアのプロパティとスクリプトの結果を比較<br /> </td>
   </tr>
   <tr>
    <td>セグメントリファレンススクリプトリファレンス</td>
-   <td>参照セグメントとスクリプトの結果を比較します<br /> </td>
+   <td>参照セグメントとスクリプトの結果を比較<br /> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->値を比較する際に、比較のデータタイプが設定されていない場合（つまり、自動検出に設定されている場合）、ContextHubのセグメント化エンジンは、JavaScriptが行うように値を単純に比較します。 値が想定されたタイプにキャストされないので、誤解を招く結果となることがあります。次に例を示します。
+>値を比較する際に、比較のデータタイプが設定されていない場合（つまり自動検出に設定されている場合）、ContextHubのセグメント化エンジンは、値をJavaScriptと同様に比較します。 値が想定されたタイプにキャストされないので、誤解を招く結果となることがあります。次に例を示します。
 >
 >`null < 30 // will return true`
 >
@@ -116,11 +119,11 @@ Using the components browser you can add **AND** and **OR** containers to define
  <tbody>
   <tr>
    <td>セグメントの参照<br /> </td>
-   <td>参照セグメントを評価</td>
+   <td>参照先セグメントを評価</td>
   </tr>
   <tr>
    <td>スクリプト参照</td>
-   <td>参照先のスクリプトを評価します。 詳しくは、次の「スクリプ <a href="/help/sites-administering/segmentation.md#using-script-references">トリファレンスの使用</a> 」の節を参照してください。</td>
+   <td>参照先のスクリプトを評価します。 詳しくは、次の「スクリプト参照の <a href="/help/sites-administering/segmentation.md#using-script-references">使用</a> 」の節を参照してください。</td>
   </tr>
  </tbody>
 </table>
@@ -167,7 +170,7 @@ AND および OR コンテナコンポーネントを使用すると、AEM で�
 
 30 才～ 59 才の女性
 
-最初に、OR コンテナコンポーネントをデフォルトの AND コンテナ内に配置します。ORコンテナ内で、2つのANDコンテナを追加し、その両方にプロパティまたは参照コンポーネントを追加できます。
+最初に、OR コンテナコンポーネントをデフォルトの AND コンテナ内に配置します。ORコンテナ内に2つのANDコンテナを追加し、その両方にプロパティまたは参照コンポーネントを追加できます。
 
 ![screen_shot_2012-02-02at105145am](assets/screen_shot_2012-02-02at105145ama.png)
 
@@ -225,14 +228,14 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ## セグメントの適用のテスト {#testing-the-application-of-a-segment}
 
-セグメントを定義したら、**[ContextHub](/help/sites-authoring/ch-previewing.md)**を使用して、考えられる結果についてテストすることができます。
+セグメントを定義したら、**[ContextHub](/help/sites-authoring/ch-previewing.md)** を使用して、考えられる結果についてテストすることができます。
 
 1. ページのプレビュー
 1. ContextHub アイコンをクリックして ContextHub ツールバーを表示します。
 1. 作成したセグメントと一致するペルソナを選択します。
 1. ContextHub によって、選択したペルソナに適用できるセグメントが解決されます。
 
-例えば、この例のプライムエイジグループに属するユーザーを識別するための単純なセグメント定義は、ユーザーの年齢と性別に基づいています。これらの条件に一致する特定の人物を読み込むと、セグメントが正常に解決された場合に表示されます。
+例えば、この例のプライムエイジグループに属するユーザーを識別するための単純なセグメント定義は、ユーザーの年齢と性別に基づいています。これらの条件に一致する特定の人物を読み込むと、セグメントが正常に解決されたかどうかが表示されます。
 
 ![screen_shot_2012-02-02at105926am](assets/screen_shot_2012-02-02at105926am.png)
 
