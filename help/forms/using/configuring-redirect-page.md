@@ -10,6 +10,9 @@ discoiquuid: 0ffbb4d3-9371-4705-8496-f98e22d9c4a6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 74%
 
 ---
 
@@ -31,9 +34,9 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。For all the available submit actions, `status` and `owner` parameters are passed. これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
 
-* **コンテンツ保存アクション** （非推奨）:送信 `contentPath`されたデータが保存されるリポジトリ内のノードのパス。
+* **コンテンツ保存アクション** （非推奨）: `contentPath`— 送信されたデータが保存されるリポジトリ内のノードのパス — が渡されます。
 
-* **PDFの保存アクション** （非推奨）:送信さ `contentPath`れたデータのパスと、リポジトリにPDFファイルを格納しているノードのパスが渡されます。
+* **PDFの保存アクション** （非推奨）: `contentPath`— 送信されたデータと、リポジトリにPDFファイルが格納されているノードのパス — が渡されます。
 
 * **フォームワークフローへの送信**：フォームワークフローから返される出力パラメーターが渡されます。
 
