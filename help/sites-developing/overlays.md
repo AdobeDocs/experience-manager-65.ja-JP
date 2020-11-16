@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0470b74c-2c34-4327-afed-b95eefb1d521
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 64%
 
 ---
 
@@ -25,30 +28,30 @@ In a standard instance the predefined functionality is held under `/libs` and it
 
 AEM 6.0 以降、オーバーレイの実装方法と使用方法が次のように変更されました。
 
-* AEM 6.0 以降 - [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) 関連のオーバーレイ（つまりタッチ操作対応 UI）
+* AEM 6.0 以降 - [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) 関連のオーバーレイ（つまりタッチ操作対応 UI）
 
    * 方法
 
-      * に適切な構造を再 `/libs` 構築しま `/apps`す。
+      * `/apps` の下に適切な `/libs` 構造を再構築します。
 
          This does not require a 1:1 copy, the [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) is used to cross-reference the original definitions that are required. Sling Resource Merger は、差分メカニズムによってリソースにアクセスおよびマージするためのサービスを提供します。
 
-      * Make any changes under `/apps`.
+      * 変更は `/apps` 以下でおこないます。
    * メリット
 
-      * More robust to changes under `/libs`.
+      * `/libs` 以下の変更に対する堅牢性が高まります。
       * 実際に必要な項目のみを再定義できます。
 
 
 * Granite 以外によるオーバーレイおよび AEM 6.0 より前のバージョンでのオーバーレイ
 
-   * 方法
+   * メソッド
 
-      * コンテンツをからにコピ `/libs` ー `/apps`
+      * Copy the content from `/libs` to `/apps`
 
          プロパティを含むサブブランチ全体をコピーする必要があります。
 
-      * Make any changes under `/apps`.
+      * 変更は `/apps` 以下でおこないます。
    * デメリット
 
       * Although your changes will not be lost when something changes under `/libs`, you might have to recreate certain changes that occur in your overlay under `/apps`.
@@ -56,13 +59,13 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が次のよう
 
 >[!CAUTION]
 >
->[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) および関連する手法は、[Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)と併用する場合に限り使用できます。つまり、オーバーレイをスケルトン構造で作成する方法は、標準のタッチ操作対応 UI でのみ使用できます。
+>[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) および関連する手法は、[Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) と併用する場合に限り使用できます。つまり、オーバーレイをスケルトン構造で作成する方法は、標準のタッチ操作対応 UI でのみ使用できます。
 >
 >他の領域（クラシック UI など）でのオーバーレイには、該当するノードとサブ構造全体をコピーして、必要な変更を加えます。
 
 オーバーレイは、[コンソールの設定](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)、[サイドパネル内にあるアセットブラウザーへの選択カテゴリの作成](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser)（ページのオーサリング時に使用）など、多くの変更において推奨される方法です。オーバーレイは、次の理由で必要になります。
 
-* You ***must not *make changes in the`/libs`branch **Any changes you do make may be lost, because this branch is liable to changes whenever you:
+* You ***must not* make changes in the `/libs` branch **Any changes you do make may be lost, because this branch is liable to changes whenever you:
 
    * インスタンス上のアップグレード
    * ホットフィックスの適用
@@ -79,8 +82,8 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が次のよう
    * 検索パスの順序は、上から下の順で、それぞれの優先順位を示します。
    * In a standard installation the primary defaults are `/apps`, `/libs` - so the content of `/apps` has a higher priority than that of `/libs` (i.e. it *overlays* it).
 
-* 2人のサービスユーザーは、スクリプトが保存されている場所へのJCR:READアクセス権が必要です。 これらのユーザーは次のとおりです。components-search-service(com.day.cq.wcm.coreto access/cacheコンポーネントで使用)およびsling-scripting（org.apache.sling.servlets.resolverでサーブレットを検索するために使用）。
-* 次の設定も、スクリプトを配置した場所に従って設定する必要があります（この例では/etc、/libs、または/appsの下）。
+* 2人のサービスユーザーは、スクリプトが保存されている場所へのJCR:READアクセス権が必要です。 これらのユーザーは、components-search-service(com.day.cq.wcm.coreto access/cacheコンポーネントで使用)およびsling-scripting（org.apache.sling.servlets.resolverでサーブレットを検索するために使用）。
+* 次の設定も、スクリプトの配置場所に応じて設定する必要があります（この例では/etc、/libs、または/appsの下）。
 
    ```
    PID = org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl
