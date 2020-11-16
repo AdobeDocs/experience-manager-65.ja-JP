@@ -12,6 +12,9 @@ discoiquuid: a63e5732-b1a3-4639-9838-652af401e788
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '1502'
+ht-degree: 80%
 
 ---
 
@@ -34,7 +37,7 @@ Scaffolds are stored in the **Tools** console of the site admin.
 * 「**geometrixx**」をクリックします。
 * 「**geometrixx**」で、「**ニュース**」という名前の基礎モードページ&#x200B;**&#x200B;を探し、ダブルクリックしてこのページを開きます。
 
-![howscaffored_work](assets/howscaffolds_work.png)
+![howscaffores_work](assets/howscaffolds_work.png)
 
 The scaffold consists of a form with a field for each piece of content that will make up the page to be created and four important parameters which are accessed through the **Page Properties** of the scaffold page.
 
@@ -51,10 +54,10 @@ The scaffold consists of a form with a field for each piece of content that will
 
 * **タイトル**：作成するページの名前です。このフィールドは、常にすべての基礎モードに表示されます。
 * **テキスト**：このフィールドは、生成されるページのテキストコンポーネントに対応します。
-* **画像**:このフィールドは、結果のページ上の画像コンポーネントに対応します。
+* **画像**:このフィールドは、結果のページの画像コンポーネントに対応します。
 * **画像 / 詳細**：**タイトル**：画像のタイトルです。
 * **画像 / 詳細**：**代替テキスト**：画像の代替テキストです。
-* **画像/詳細**: **説明**:画像の説明。
+* **Image/Advanced**: **説明**:画像の説明。
 * **画像 / 詳細**：**サイズ**：画像のサイズです。
 * **タグ / キーワード**：このページに割り当てられるメタデータです。このフィールドは、常にすべての基礎モードに表示されます。
 
@@ -64,7 +67,7 @@ To create a new scaffold go to the **Tools** console, then **Default Page Scaffo
 
 Go to the **Page Properties** of the new page and set the *Title Text*, *Description*, *Target Template* and *Target Path*, as described above.
 
-次に、このスキャフォールドから作成されるページの構造を定義する必要があります。To do this go into **[design mode](/help/sites-authoring/page-authoring.md#sidekick)**on the scaffold page. リンクが表示され、**ダイアログエディター**でスキャフォールドを編集できます。
+次に、このスキャフォールドから作成されるページの構造を定義する必要があります。To do this go into **[design mode](/help/sites-authoring/page-authoring.md#sidekick)** on the scaffold page. リンクが表示され、**ダイアログエディター**&#x200B;でスキャフォールドを編集できます。
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 
@@ -84,7 +87,7 @@ Now, click on the dialog field **Dialog > Tab Panel > Text > Text**, like this:
 
 このフィールドのプロパティリストは、次のように、ダイアログエディターの右側に表示されます。
 
-![list_of_properties](assets/list_of_properties.png)
+![リスト_of_プロパティ](assets/list_of_properties.png)
 
 このフィールドの name プロパティを確認してください。以下の値が設定されています。
 
@@ -105,7 +108,7 @@ Now, click on the dialog field **Dialog > Tab Panel > Text > Text**, like this:
 
 この非表示フィールドのプロパティを以下に示します。
 
-![hidden_list_props](assets/hidden_list_props.png)
+![hidden_リスト_props](assets/hidden_list_props.png)
 
 この非表示フィールドの name プロパティには以下の値が指定されています。
 
@@ -125,7 +128,7 @@ This is a boolean property used to interpret the text string stored at `./jcr:co
 
 この非表示フィールドのプロパティを以下に示します。
 
-![hidden_list_props2](assets/hidden_list_props2.png)
+![hidden_リスト_props2](assets/hidden_list_props2.png)
 
 この非表示フィールドの name プロパティには以下の値が指定されています。
 
