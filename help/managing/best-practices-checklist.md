@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 917b4fec-d5fe-4402-b69c-3c9645e6f934
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 82%
 
 ---
 
@@ -37,7 +40,7 @@ AEMプロジェクトのベストプラクティスのチェックリストv2
 * **[役割別のスタータス](/help/managing/best-practices.md#status-by-role)**
 * [ペルソナ](/help/managing/best-practices.md#persona)、[フェーズおよびマイルストーン](/help/managing/best-practices.md#phases-and-milestones)に応じた一連のチェックリスト
 * **用語集**
-   * 用語集には、プロジェクトのチェックリストにあるすべての成果物ドキュメントの詳細が一覧表示されます。
+   * 用語集リストでは、プロジェクトチェックリストのすべての成果物ドキュメントの詳細を説明します。
    * [用語集](/help/managing/best-practices-glossary.md)は、ドキュメントの一部としても入手できます。
 * **[ペルソナの定義](/help/managing/best-practices.md#persona)**
 
@@ -45,11 +48,11 @@ AEMプロジェクトのベストプラクティスのチェックリストv2
 
 高品質のプロジェクトの提供を成功させるには、チェックリスト内のすべての項目を、可能な限り順番どおりに完了する必要があります。
 
-1. The checklists are defined according to the **[Persona](/help/managing/best-practices.md#persona)**(role) involved. 各担当者は、プロジェクトでの役割に適したチェックリストを使用する必要があります。
-1. The checklists cover the **[Required Documents](/help/managing/best-practices.md#required-documents)**and**[ Deliverables](/help/managing/best-practices.md#deliverables)** for each milestone - the relevant persona must set the status and quality fields appropriate.
+1. The checklists are defined according to the **[Persona](/help/managing/best-practices.md#persona)** (role) involved. 各担当者は、プロジェクトでの役割に適したチェックリストを使用する必要があります。
+1. The checklists cover the **[Required Documents](/help/managing/best-practices.md#required-documents)** and **[Deliverables](/help/managing/best-practices.md#deliverables)** for each milestone - the relevant persona must set the status and quality fields appropriate.
 
    >[!NOTE]
    >
    >個々の必須ドキュメントと成果物の間には、直接の 1:1 の関係はありません。
 
-1. **[必須ドキュメント](/help/managing/best-practices.md#required-documents)**および**[&#x200B;成果物](/help/managing/best-practices.md#deliverables)**のスタータスに基づいて、**[プロジェクトハートビート](/help/managing/best-practices.md#project-heartbeat-dashboard)**と**[&#x200B;役割別のステータス](/help/managing/best-practices.md#status-by-role)**のワークシートは自動的に更新され、プロジェクトの進行状況とヘルスの最新情報が提示されます。
+1. **[必須ドキュメント](/help/managing/best-practices.md#required-documents)**&#x200B;および&#x200B;**[成果物](/help/managing/best-practices.md#deliverables)**&#x200B;のスタータスに基づいて、**[プロジェクトハートビート](/help/managing/best-practices.md#project-heartbeat-dashboard)**&#x200B;と&#x200B;**[役割別のステータス](/help/managing/best-practices.md#status-by-role)**&#x200B;のワークシートは自動的に更新され、プロジェクトの進行状況とヘルスの最新情報が提示されます。
