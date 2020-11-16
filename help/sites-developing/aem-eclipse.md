@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 translation-type: tm+mt
 source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+workflow-type: tm+mt
+source-wordcount: '810'
+ht-degree: 82%
 
 ---
 
@@ -33,9 +36,9 @@ AEM Developer Tools for Eclipse は、Apache License 2 に従ってリリース�
 
 ## 要件 {#requirements}
 
-AEM Developer toolsを使用する前に、次の操作を行う必要があります。
+AEM Developer Toolsを使用する前に、次の操作を行う必要があります。
 
-* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer toolsは現在、Eclipse Kepler以降をサポートしています
+* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Toolsは、現在EclipseKepler以降をサポートしています
 
 * AEMバージョン5.6.1以降で使用可能
 * Configure your eclipse installation to ensure that you have at least 1 gigabyte of heap memory by editing your `eclipse.ini` configuration file as described in the [Eclipse FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
@@ -48,7 +51,7 @@ AEM Developer toolsを使用する前に、次の操作を行う必要があり�
 
 Once you have fulfilled the [requirements](#requirements) above, you can install the plugin as follows:
 
-1. [**AEM **Developer Tools Web サイト](https://eclipse.adobe.com/aem/dev-tools/)にアクセスします。
+1. [**AEM** Developer Tools Web サイト](https://eclipse.adobe.com/aem/dev-tools/)にアクセスします。
 
 1. **インストール用リンク**&#x200B;をコピーします。
 
@@ -151,7 +154,7 @@ AEM Developer Tools for Eclipse には、サンプルのマルチモジュール
 
 Apache Sling IDE tooling for Eclipse の公式 Web サイトでは、次の役立つ情報を参照できます。
 
-* 『[**Apache Sling IDE tooling for Eclipse **ユーザーガイド](https://sling.apache.org/documentation/development/ide-tooling.html)』。このドキュメントは、全体のコンセプト、AEM Development Tools がサポートするサーバー統合およびデプロイメント機能について説明するものです。
+* 『[**Apache Sling IDE tooling for Eclipse** ユーザーガイド](https://sling.apache.org/documentation/development/ide-tooling.html)』。このドキュメントは、全体のコンセプト、AEM Development Tools がサポートするサーバー統合およびデプロイメント機能について説明するものです。
 * [トラブルシューティング情報](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)
 * [既知の問題リスト](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)
 
