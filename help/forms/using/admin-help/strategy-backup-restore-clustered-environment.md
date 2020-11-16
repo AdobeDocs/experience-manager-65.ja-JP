@@ -64,7 +64,7 @@ ht-degree: 73%
 
    回復後にローリングバックアップモードを終了する必要があることに注意してください。
 
-1. AEMに関してクラスターのセカンダリノードのいずれかをシャットダウンします。 （[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
+1. AEMに関して、クラスターのセカンダリノードのいずれかをシャットダウンします。 （[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
 1. 任意のノード上で、データベース、GDS、およびコネクターをバックアップします（[バックアップおよび回復するファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)を参照してください）。
 1. AEM リポジトリをオフラインでバックアップするには、次の手順を実行します。
 
@@ -83,7 +83,7 @@ ht-degree: 73%
 
    回復後にローリングバックアップモードを終了する必要があることに注意してください。
 
-1. AEMに関してクラスターのセカンダリノードのいずれかをシャットダウンします。 （[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
+1. AEMに関して、クラスターのセカンダリノードのいずれかをシャットダウンします。 （[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
 1. 任意のノード上で、データベース、GDS、およびコネクターをバックアップします（[バックアップおよび回復するファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)を参照してください）。
 1. AEM リポジトリをオンラインでバックアップするには、次の手順を実行します。
 
@@ -96,13 +96,13 @@ ht-degree: 73%
 
 ### ブートストラッププロパティファイルのバックアップ {#back-up-the-bootstrap-properties-file}
 
-AEMクラスターを作成すると、すべてのセカンダリノードのプロパティファイルがアプリケーションサーバーに作成されます。 ブートストラッププロパティファイルをバックアップすることをお勧めします。このファイルは、アプリケーションサーバー上の次の場所にあります。
+AEMクラスターを作成すると、すべてのセカンダリノードに対して、アプリケーションサーバーにプロパティファイルが作成されます。 ブートストラッププロパティファイルをバックアップすることをお勧めします。このファイルは、アプリケーションサーバー上の次の場所にあります。
 
 * JBoss: BIN ディレクトリ内
 * WebLogic: ドメインディレクトリ内
 * WebSphere: プロファイルディレクトリ内
 
-AEMセカンダリノードの災害復旧シナリオのためにファイルをバックアップし、復元された場合は、アプリケーションサーバー上の指定した場所に置き換える必要があります。
+AEMセカンダリノードの災害復旧シナリオ用にファイルをバックアップし、復元された場合は、アプリケーションサーバー上の指定した場所に置き換える必要があります。
 
 ## クラスター環境の回復 {#recovery-in-a-clustered-environment}
 
@@ -172,7 +172,7 @@ AEMセカンダリノードの災害復旧シナリオのためにファイル�
 >
 >次の点を考慮してください。
 
-* 失敗したノードがAEMのプライマリノードである場合は、セカンダリリポジトリフォルダーのすべてのコンテンツ（crx-repository\crx.0000のように見えます。0000は任意の桁数）をcrx-repository\リポジトリフォルダーにコピーします。
+* 障害が発生したノードがAEMプライマリノードの場合は、セカンダリリポジトリフォルダーのすべてのコンテンツ（crx-repository\crx.0000のように見えます。0000は任意の桁数）をcrx-repository\リポジトリフォルダーにコピーします。
 * クラスターノードを再起動する前に、プライマリノードからリポジトリ/clustered.txtを削除してください。
 * プライマリノードが最初に起動し、完全に立ち上がったら、他のノードを開始します。
 
