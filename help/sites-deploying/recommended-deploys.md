@@ -12,6 +12,9 @@ discoiquuid: 66d351e1-87f1-4006-bf8a-3cbbd33db9ed
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '1802'
+ht-degree: 90%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >このページでは、AEM の推奨されるトポロジについて説明します。クラスター化機能およびその設定方法について詳しくは、[Apache Sling Discovery API のドキュメント](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)を参照してください。
 
-MicroKernelは、AEM 6.2以降の永続性マネージャーとして機能します。必要に応じて1つを選択するかどうかは、インスタンスの目的と、検討しているデプロイのタイプによって異なります。
+MicroKernelは、AEM 6.2以降の永続性マネージャとして機能します。ニーズに合うように選択する方法は、インスタンスの目的と、検討しているデプロイメントの種類によって異なります。
 
 以下の例は、最も一般的な AEM 設定で推奨される使用法を示しています。
 
@@ -74,7 +77,7 @@ MicroKernelは、AEM 6.2以降の永続性マネージャーとして機能し�
 
 >[!NOTE]
 >
->この TarMK の例のコールドスタンバイデプロイメントでは、フェイルオーバーサーバーに定期的にレプリケートされるので、プライマリインスタンスとスタンバイインスタンスの両方が個別にライセンスされている必要があります。For more information about licensing, please consult the [Adobe General Licensing Terms](https://www.adobe.com/legal/terms/enterprise-licensing.html).
+>この TarMK の例のコールドスタンバイデプロイメントでは、フェイルオーバーサーバーに定期的にレプリケートされるので、プライマリインスタンスとスタンバイインスタンスの両方が個別にライセンスされている必要があります。For more information about licensing, please consult the [Adobe General Licensing Terms](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html).
 
 ### TarMK ファーム {#tarmk-farm}
 
@@ -173,7 +176,7 @@ AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプ�
 
 AEM 用の MongoMK デプロイメントを検討する場合の一連の前提条件と推奨事項があります。
 
-**MongoDBデプロイメントの必須前提条件：**
+**MongoDBの導入に必要な前提条件：**
 
 1. AEM を熟知したアドビのコンサルタントまたは MongoDB のアーキテクトの支援のもとで、MongoDB デプロイメントのアーキテクチャとサイジングをプロジェクトの実装に含める必要があります。
 1. 既存の、または新しい MongoDB 環境を適切に維持および保守できるように、MongoDB の専門知識をパートナーまたはカスタマーチーム内で共有しておく必要があります。
@@ -189,7 +192,7 @@ AEM 用の MongoMK デプロイメントを検討する場合の一連の前提�
 
 >[!NOTE]
 >
->前述のガイドライン、前提条件および推奨事項に関するその他のご質問については、[アドビのカスタマーケア](https://helpx.adobe.com/marketing-cloud/contact-support.html)までお問い合わせください。
+>前述のガイドライン、前提条件および推奨事項に関するその他のご質問については、[アドビのカスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)までお問い合わせください。
 
 ### AEM Communities に関する考慮事項 {#considerations-for-aem-communities}
 
