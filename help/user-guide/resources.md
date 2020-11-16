@@ -1,15 +1,18 @@
 ---
-title: AEM 6.5のその他のリソース
-seo-title: AEM 6.5のその他のリソース
+title: AEM 6.5その他のリソース
+seo-title: AEM 6.5その他のリソース
 description: AEM 6.5のリリースノート、認定、およびその他のリソース
 seo-description: AEM 6.5のリリースノート、認定、およびその他のリソース
 translation-type: tm+mt
 source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 25%
 
 ---
 
 
-# AEM 6.5のその他のリソース {#aem-64-additional-resources}
+# AEM 6.5その他のリソース {#aem-64-additional-resources}
 
 ## AEM 6.5 リリースノート {#aem-64-release-notes}
 
@@ -17,17 +20,17 @@ source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
 
 ## AEM 6.5チュートリアルビデオ {#aem-64-tutorial-videos}
 
-* [AEM 6.5トレーニングビデオ](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [AEM チュートリアル](https://helpx.adobe.com/experience-manager/tutorials.html)
+* [AEM 6.5トレーニングビデオ](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEM チュートリアル](https://helpx.adobe.com/jp/experience-manager/tutorials.html)
 
-## クラス及び認定 {#classes-and-certification}
+## クラスと認定 {#classes-and-certification}
 
-[個人向けおよび仮想クラスの製品により、学習を拡張できます。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
+[個人向けおよび仮想クラスの製品で学習を拡大](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
 
 ## GDPR 対応 {#gdpr-readiness}
 
-[GDPRプライバシー基準に準拠](/help/managing/data-protection-and-privacy.md)
+[GDPRのプライバシー基準に準拠](/help/managing/data-protection-and-privacy.md)
 
 ## Experience League {#experience-leauge}
 
-[Experience LeagueでAEMの学習リソースを表示します。](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#dashboard)
+[Experience LeagueのAEM向けの表示学習リソース。](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#dashboard)
