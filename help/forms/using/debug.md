@@ -106,7 +106,7 @@ In the exception details, search for word **caused by**.
 
 ### 問題：予期しないエラーが発生した {#problem-unexpected-error-encountered}
 
-1. フォームURLで、クエリパラメーターdebugClientLibsを追加し、その値をtrueに設定します(例： https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
+1. フォームURLで、クエリパラメーターdebugClientLibsを追加し、その値をtrueに設定します(例：https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
 1. Chrome のようなデスクトップブラウザーでデベロッパーツール／Console に移動します。
 1. ログを開いて、エラーのタイプを特定します。ログの詳細については、「[HTML5 フォームのログ](/help/forms/using/enable-logs.md)」を参照してください。
 1. デベロッパーツール／Console に移動します。スタックトレースを使用して、エラーを起こしているコードを探します。エラーをデバッグして問題を解決します。
