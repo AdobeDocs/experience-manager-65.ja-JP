@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '700'
+ht-degree: 97%
 
 ---
 
@@ -37,7 +40,7 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   <tr>
    <td><p>アプリケーションデータ（ユーザー、ロール、プロセス、ポリシー、エンドポイント、イベントなど）</p></td>
    <td><p>はい</p></td>
-   <td><p>いいえ</p></td>
+   <td><p>不可</p></td>
   </tr>
   <tr>
    <td><p>デプロイされたサービスコンテナ</p></td>
@@ -46,8 +49,8 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   </tr>
   <tr>
    <td><p>Document Manager </p></td>
-   <td><p>非対応</p></td>
-   <td><p>対応</p></td>
+   <td><p>不可</p></td>
+   <td><p>可</p></td>
   </tr>
   <tr>
    <td><p>Forms リポジトリ</p></td>
@@ -57,11 +60,11 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   <tr>
    <td><p>システム設定</p></td>
    <td><p>はい</p></td>
-   <td><p>いいえ</p></td>
+   <td><p>不可</p></td>
   </tr>
   <tr>
    <td><p>監視フォルダー</p></td>
-   <td><p>非対応</p></td>
+   <td><p>不可</p></td>
    <td><p>Yes</p></td>
   </tr>
  </tbody>
