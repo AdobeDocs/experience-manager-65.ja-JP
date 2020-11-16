@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 translation-type: tm+mt
 source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+workflow-type: tm+mt
+source-wordcount: '1138'
+ht-degree: 77%
 
 ---
 
@@ -45,10 +48,12 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
          * To create an add panel button, select **Add Instance**, and drag-drop the panel using ![toggle-side-panel](assets/toggle-side-panel.png) or select it using **Drop object or select here.**
          * To create a delete panel button, select **Remove Instance**, and drag-drop the panel using ![toggle-side-panel](assets/toggle-side-panel.png) or select it using **Drop object or select here.**
+
       フォームオブジェクトと関数の行で、「**コードエディター**」を選択します。「**ルールを編集**」をクリックし、コード領域で次の操作を行います。
 
       * パネルを追加ボタンを作成するには、`this.panel.instanceManager.addInstance()`()を指定します。
       * To create a delete panel button, specify `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
+
       「**完了**」をクリックします。
 
       >[!NOTE]
@@ -87,7 +92,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
       >[!NOTE]
       >
-      >パネルのすべてのインスタンスがアダプティブフォームから削除された場合、削除されたパネルのインスタンスを追加するには、_panelName構文を使用してパネルのインスタンスマネージャーを取得し、インスタンスマネージャーのaddInstance APIを使用して削除されたインスタンスを追加します。 例えば、_panelName.addInstance() は削除されたパネルのインスタンスを 1 つ追加します。
+      >パネルのすべてのインスタンスがアダプティブフォームから削除された場合、削除されたパネルのインスタンスを追加するには、_panelName構文を使用してパネルのインスタンスマネージャーを取り込み、インスタンスマネージャーのaddInstance APIを使用して削除されたインスタンスを追加します。 例えば、_panelName.addInstance() は削除されたパネルのインスタンスを 1 つ追加します。
 
 
 
@@ -114,7 +119,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 ## フォームテンプレート（XDP/XSD）からのサブフォームの繰り返しの使用{#using-repeating-subforms-from-form-template-xdp-xsd}
 
-繰り返し可能なサブフォームは、アダプティブフォームにおける繰り返し可能なパネルに似ています。AEM Forms Designerで繰り返しサブフォームを作成するには、次の手順を実行します。
+繰り返し可能なサブフォームは、アダプティブフォームにおける繰り返し可能なパネルに似ています。AEM Formsデザイナーで、次の手順を実行して繰り返しサブフォームを作成します。
 
 1. 階層パレットで、繰り返しを許可するサブフオームの親サブフォームを選択します。
 1. オブジェクトパレットの「サブフォーム」タブをクリックし、コンテンツリストで「フローレイアウト」を選択します。
