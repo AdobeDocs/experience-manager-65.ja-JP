@@ -11,6 +11,9 @@ topic-tags: introduction
 discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 translation-type: tm+mt
 source-git-commit: 844d42ed50da153077423190684aa85265bce12f
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 75%
 
 ---
 
@@ -27,11 +30,11 @@ source-git-commit: 844d42ed50da153077423190684aa85265bce12f
 
 When [editing a page](/help/sites-authoring/editing-content.md), links are not active.
 
-* [コンテンツ内の **** プレビューを使用して](/help/sites-authoring/editing-content.md#preview-mode) 、リンクモードに切り替えます。
+* [**プレビュー**](/help/sites-authoring/editing-content.md#preview-mode) モードに切り替えて、コンテンツ内のリンクを使用して移動します。
 
-### ページの構造 {#structure-pages}
+### 構造ページ {#structure-pages}
 
-ページに名前を付けることはできませ `structure`ん。 この名前のページは、ペ `structure` ージエディターで編集することはできません。
+ページに名前を付けることはできません `structure`。 名前が付けられたページ `structure` は、ページエディターで編集できません。
 
 ## CSS の制限 {#css-limitations}
 
@@ -57,7 +60,7 @@ When [editing a page](/help/sites-authoring/editing-content.md), links are not a
 
 ページの body 要素では、100 ％の高さはサポートされていません。
 
-* 次のように、body要素を「ストレッチ」してフルスクリーンボディを実装するための回避策があります。
+* 次のようにbody要素を「ストレッチ」してフルスクリーンボディを実装する場合は、回避策があります。
 
 ```xml
 body {
