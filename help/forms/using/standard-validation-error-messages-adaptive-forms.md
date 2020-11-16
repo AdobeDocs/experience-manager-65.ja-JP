@@ -68,7 +68,7 @@ ht-degree: 9%
 
 1. In adaptive form authoring mode, select the Form Container object and tap ![adaptive form properties](assets/configure_icon.png) to open its properties.
 1. In the **[!UICONTROL Submission]** properties section, enable **[!UICONTROL Use asynchronous submission]**.
-1. 送信前にサーバー上の入力フィールドの値を検証するには、 **[!UICONTROL 「サーバーで再検証]** 」を選択します。
+1. 送信前にサーバー上の入力フィールドの値を検証するには **** 、「サーバー上で再検証」を選択します。
 1. 送信アクションを選択します。
 
    * 「 **[!UICONTROL Submit using Form Data Model]** 」を選択し、適切なデータモデルを選択します(データソースとしてRESTful Webサービスベースの [フォームデータモデルを使用している場合](work-with-form-data-model.md) )。
