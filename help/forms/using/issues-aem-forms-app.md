@@ -10,6 +10,9 @@ topic-tags: forms-app
 discoiquuid: 2f45a965-590b-43b1-95c6-df4b74ad15b9
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '689'
+ht-degree: 59%
 
 ---
 
@@ -41,7 +44,7 @@ OSGi 上の AEM Forms と同期するように設定された iOS 用の AEM For
 
 ## Workspace ユーザーによって送信された HTML5 フォームドラフトがポータルに表示されない {#html-form-drafts-submitted-by-workspace-users-are-not-visible-on-the-portal}
 
-For HTML5 forms enabled in AEM Forms app with **Save as Draft** HTML Render Profile, the saved drafts are not visible to workspace users. Workspaceユーザーがポータル上で送信したHTML5フォームの保存済みドラフトを表示するには、次の手順を実行します。
+For HTML5 forms enabled in AEM Forms app with **Save as Draft** HTML Render Profile, the saved drafts are not visible to workspace users. Workspaceユーザーが送信したHTML5フォームのドラフトをポータル上に表示保存するには、次の手順を実行します。
 
 1. CRXDE を開いて管理者の資格情報でログインします。
 
@@ -80,23 +83,23 @@ Windows の AEM Forms アプリケーションでは、フォームまたはそ�
 
 ## Gradle のサポートされていないバージョン {#unsupported-version-of-gradle}
 
-**** エラーメッセージ：プロジェクトでサポートされていないバージョンのGradleが使用されています。
+**エラーメッセージ：** プロジェクトでサポートされていないバージョンのGradleが使用されています。
 
 Android Studio で AEM Forms アプリケーションを構築すると、エラーメッセージが表示されます。この問題は、システムでサポートされる Gradle のサポート対象でないバージョンにより発生します。
 
-**** 解像度：問題を解 **決するには、「Fix Gradleラッパー」をクリックし、プロジェクトを** 「再インポート」します。
+**解像度：** 「 **Fix Gradleラッパー」をクリックし、プロジェクトを再度インポートして** 、問題を解決します。
 
 ![gradle_unsupported_version](assets/gradle_unsupported_version.png)
 
 ## Gradle と Android Gradle プラグインの互換性の問題 {#gradle-and-android-gradle-plug-in-compatibility-issues}
 
-**** エラーメッセージ：Android GradleプラグインとGradleのバージョンは互換性がありません。
+**エラーメッセージ：** Android GradleプラグインとGradleのバージョンに互換性がありません。
 
 The error message is displayed when you select **Build APK** option from the **Build** menu on the Android Studio user interface.
 
 ![gradle_plugin_compatibility](assets/gradle_plugin_compatibility.png)
 
-**** 解像度：Gradle Scripts **/** gradle-wrapper.propertiesファイルを開き **、distributionUrl****** プロパティを編集します。
+**解像度：** Gradle Scripts **/** gradle-wrapper.properties **ファイルを開き、** distributionUrl **** プロパティを編集します。
 
 For example, the Android Studio console recommends downgrading the Gradle version to 3.5. Edit the version in **distributionUrl** of **gradle-wrapper.properties** file.
 
