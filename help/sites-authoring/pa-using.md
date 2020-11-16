@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 translation-type: tm+mt
 source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 92%
 
 ---
 
@@ -66,7 +69,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 1. サイトコンソールで作成者に表示する指標を選択し、「**追加**」をクリックします。
 
-   表示される列はAdobe Analyticsから取得されます。
+   表示される列は、Adobe Analyticsから取得されます。
 
    ![aa-16](assets/aa-16.png)
 
