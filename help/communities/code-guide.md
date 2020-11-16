@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 244cd43c-a573-495d-b80c-b97ba9d19b75
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 38%
 
 ---
 
@@ -34,7 +37,7 @@ AEM Communities 開発者向けのさまざまなコーディングのガイド�
 ### スクリプト {#scripts}
 
 * [Communitiesコンポーネントのサイドロード](sideloading.md) — ページの読み込み後にコンポーネントを動的に追加する方法。
-* [Rich Text Editor Essentials](rte.md) — コンテンツを投稿するためにメンバーに提供されるリッチテキストUIをカスタマイズする方法。
+* [リッチテキストエディター](rte.md) — コンテンツを投稿するためにメンバーに提供されるリッチテキストUIをカスタマイズする方法。
 
 ### IDE {#ide}
 
