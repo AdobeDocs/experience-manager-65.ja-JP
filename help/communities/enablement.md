@@ -107,7 +107,7 @@ ht-degree: 53%
 
 1. (*オプション*)Analyticsサービスの **[設定](analytics.md)**
 
-   ツール、デプロイメント、Cloud Serviceコンソールを使用します。 *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   ツール、デプロイメント、Cloud Servicesコンソールを使用します。 *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[FFmpegの設定](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
