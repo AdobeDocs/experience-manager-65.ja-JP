@@ -8,6 +8,9 @@ discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 7bf6657a8fd7677ab15e0f91324a065b684e2f92
+workflow-type: tm+mt
+source-wordcount: '1801'
+ht-degree: 77%
 
 ---
 
@@ -107,7 +110,7 @@ This is the default paste mechanism (Ctrl-V) for the component; when installed o
 
 * テキストとして貼り付け：すべてのスタイルと書式を削除して、プレーンテキストのみを貼り付けます。
 
-* Wordから貼り付け：これにより、コンテンツがHTMLとして（必要に応じて形式を変更して）貼り付けられます。
+* Wordから貼り付け：これにより、コンテンツがHTMLとして貼り付けられます（形式変更が必要になります）。
 
 ### 元に戻す、やり直し {#undo-redo}
 
@@ -149,13 +152,13 @@ AEM は、現在のコンポーネントについて直近の 50 の操作を記
 
 リストのスタイルは、カーソルをリスト内に置いて別のスタイルを選択することによって変更できます。サブリストでは、含まれているリストを異なるスタイルにすることもできます。これは（インデントによって）サブリストを作成すると適用できます。
 
-![cq55_rte_lists_use](assets/cq55_rte_lists_use.png)
+![cq55_rte_リスト_use](assets/cq55_rte_lists_use.png)
 
 ### リンク {#links}
 
 ![](do-not-localize/cq55_rte_links.png)
 
-（Webサイト内または外部の場所内の）URLへのリンクは、必要なテキストをハイライト表示し、ハイパーリンクアイコンをクリックすることで生成されます。
+（Webサイト内または外部の場所内の）URLへのリンクを生成するには、必要なテキストをハイライト表示し、ハイパーリンクアイコンをクリックします。
 
 ![](do-not-localize/chlimage_1-9.png)
 
@@ -166,7 +169,7 @@ AEM は、現在のコンポーネントについて直近の 50 の操作を記
 以下の操作を実行できます。
 
 * URIを直接入力する
-* サイトマップを使用してWebサイト内のページを選択します
+* サイトマップを使用して、Webサイト内のページを選択します
 * Enter the URI, then append the target anchor; e.g. `www.TargetUri.org#AnchorName`
 * Enter an anchor only (to reference &quot;the current page&quot;); For example, `#anchor`
 * コンテンツファインダーでページを検索し、ページアイコンをハイパーリンクダイアログにドラッグ&amp;ドロップします
@@ -277,23 +280,23 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 ![cq55_rte_tableproperties_dialog](assets/cq55_rte_tableproperties_dialog.png)
 
-* **幅**:テーブルの合計幅。
+* **幅**:テーブルの全幅。
 
 * **高さ**:テーブルの高さの合計。
 
 * **境界線**:テーブルの境界線のサイズ。
 
-* **セルのパディング**:セルの内容と境界線の間の空白を定義します。
+* **セルのパディング**:セルのコンテンツと境界線の間の空白を定義します。
 
-* **セル内間隔**:セル間の距離を定義します。
+* **セル内間隔**:これにより、セル間の距離が定義されます。
 
 >[!NOTE]
 >
->「幅」や「高さ」など、一部のセルのプロパティは、ピクセルまたはパーセントで定義できます。
+>幅や高さなど、一部のセルプロパティは、ピクセルまたはパーセントで定義できます。
 
 >[!CAUTION]
 >
->テーブルの幅は、定義することをお勧めします。
+>Adobeでは、テーブルの幅を定義することをお勧めします。
 
 #### セルのプロパティ {#cell-properties}
 
@@ -305,10 +308,10 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 * **幅**
 * **高さ**
-* **水平方向の位置揃え** - 左、中央または右
-* **垂直方向揃え** — 上揃え、中央揃え、下揃えまたはベースライン
+* **水平方向揃え** — 左揃え、中央揃え、右揃え
+* **垂直方向揃え** — 上揃え、中央揃え、下揃え、またはベースライン
 * **セルの種類**— データまたはヘッダー
-* **** 適用先：単一セル、行全体、列全体
+* **適用先：** 単一のセル、行全体、列全体
 
 #### 行の追加または削除 {#add-or-delete-rows}
 
@@ -334,7 +337,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 #### セルの統合 {#merge-cells}
 
-![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png)![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
+![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
 * セルのグループを選択した場合、それらを 1 つにマージできます。
 * 1 つのセルのみを選択した場合、右または下のセルとマージできます。
@@ -359,14 +362,14 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 >追加動作の中には、ブラウザーによって異なるものがあります。
 >
 >* Windows IE：Ctrl キーを押しながらマウスの主ボタン（通常は左）を押して、複数のセルを選択します。
->* Firefox:ポインターをドラッグしてセル範囲を選択します。
+>* Firefox:ポインターをドラッグして、セル範囲を選択します。
 
 
 #### テーブルの削除 {#remove-table}
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-このオプションを使用して、 **[!UICONTROL Textコンポーネント内から表を削除]** します。
+このオプションを使用して、 **[!UICONTROL Text]** コンポーネント内から表を削除します。
 
 ### 特殊文字 {#special-characters}
 
