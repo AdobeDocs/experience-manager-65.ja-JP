@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 598a9a03-3773-4620-8867-1f754d8ca031
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '510'
+ht-degree: 98%
 
 ---
 
@@ -33,6 +36,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
    * **ドキュメント署名証明書：**&#x200B;ドキュメントの電子署名の発行に使用する秘密鍵証明書です。
    * **Acrobat Reader DC Extensions 証明書：** Acrobat Reader DC Extensions に固有の電子証明書です。これにより、生成された PDF ドキュメントで Adobe Reader の使用権限をアクティブにすることができます。
    * **デフォルト：** Acrobat Reader DC Extensions で使用するデフォルトの証明書であることを示します。
+
    証明書の取得について詳しくは、「[AEM Forms のインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)」を参照してください。
 
 1. 「エイリアス」ボックスに、秘密鍵証明書の ID を入力します。この ID は、Acrobat Reader DC Extensions および Signature サービスで証明書の表示名として使用されます。このエイリアスは、AEM Forms SDK を使用してプログラムから秘密鍵証明書にアクセスするときにも使用されます。
