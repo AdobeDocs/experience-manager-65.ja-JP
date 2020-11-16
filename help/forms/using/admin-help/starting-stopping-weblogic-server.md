@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 77%
 
 ---
 
@@ -73,7 +76,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## WebLogic 管理コンソールの起動 {#start-weblogic-administration-console}
 
-1. If WebLogic Admin Server is not already running, from a command prompt, go to the *[appserver root]\user_projects\domains\[domainname]*directory, and enter the following command:
+1. If WebLogic Admin Server is not already running, from a command prompt, go to the *[appserver root]\user_projects\domains\[domainname]* directory, and enter the following command:
 
    * (Windows) `startWebLogic.cmd`
    * (Linux、UNIX) ./ `startWebLogic.sh`
@@ -109,7 +112,7 @@ WebLogic Server を停止した後、Node Manager を呼び出したコマンド
 
 ## WebLogic 管理対象サーバーの停止 {#stop-a-weblogic-managed-server}
 
-1. Start WebLogic Server administration console by typing `https://`*[host name]:[port ]*`/console`in the URL line of a web browser.
+1. Start WebLogic Server administration console by typing `https://`*[host name]:[port ]*`/console` in the URL line of a web browser.
 1. 「Domain Structure」で、Environment／Servers をクリックします。
 1. 右側のウィンドウで、「Control」タブをクリックします。
 1. 停止する管理対象サーバーを選択します。
