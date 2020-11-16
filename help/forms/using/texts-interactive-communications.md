@@ -89,7 +89,7 @@ Interactive Communicationのテキストドキュメントフラグメントは�
 
 ![insertfdmelementtext](assets/insertfdmelementtext.png)
 
-* To insert an form data model property into text, place the cursor where you want to insert the property, then select the **[A]** property in the left pane by tapping on it, and tap **[!UICONTROL [B]Add Selected]**. You can also just double-tap the property to insert it at the **[C]** cursor position. フォームデータモデルのプロパティは、茶色の背景色でハイライト表示されます。
+* To insert an form data model property into text, place the cursor where you want to insert the property, then select the **[A]** property in the left pane by tapping on it, and tap **[!UICONTROL [B] Add Selected]**. You can also just double-tap the property to insert it at the **[C]** cursor position. フォームデータモデルのプロパティは、茶色の背景色でハイライト表示されます。
 
 または、テキストエディターで@記号を使用して、フォームデータモデルのプロパティを検索して追加することもできます。 プロパティを挿入する場所にカーソルを置きます。 @の後に検索文字列を入力します。 検索操作は、フォームデータモデルのすべてのプロパティと、ドキュメントフラグメントで使用可能な変数に対して実行されます。 検索文字列を含むプロパティまたは変数が取得され、ドロップダウンリストとして表示されます。 検索結果を順に表示し、カーソル位置に挿入するプロパティをクリックします。 検索結果を非表示にするには、Escキーを押します。
 
