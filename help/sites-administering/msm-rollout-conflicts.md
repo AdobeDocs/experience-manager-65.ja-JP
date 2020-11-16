@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 translation-type: tm+mt
 source-git-commit: 47b69098a45f774501ebb62ee1a14a8d209ad101
+workflow-type: tm+mt
+source-wordcount: '923'
+ht-degree: 76%
 
 ---
 
 
 # MSM ロールアウトの競合{#msm-rollout-conflicts}
 
-同じページ名を持つ新しいページがBlueprintブランチと依存ライブコピーブランチの両方で作成される場合、競合が発生する可能性があります。
+同じページ名を持つ新しいページがBlueprintブランチと依存ライブコピーブランチの両方に作成された場合、競合が発生する可能性があります。
 
 このような競合はロールアウト時に処理および解決する必要があります。
 
@@ -41,7 +44,7 @@ source-git-commit: 47b69098a45f774501ebb62ee1a14a8d209ad101
 
 * blueprint: `/b`
 
-   マスターページ子ページが1つある場合は、bp-level-1を返します。
+   マスターページ；子ページが1の場合、bp-level-1。
 
 * live copy: `/b`
 
@@ -81,7 +84,7 @@ source-git-commit: 47b69098a45f774501ebb62ee1a14a8d209ad101
 
    ( `rolloutmgr.conflicthandling.enabled`)
 
-   ロールアウトマネージャが、ライブコピーで作成されたページからの競合を設計図に存在する名前で処理する必要がある場合は、trueに設定します。
+   ロールアウトマネージャが、ライブコピーで作成されたページからの競合を、設計図に存在する名前で処理する必要がある場合はtrueに設定します。
 
 AEM には[競合の処理のアクティベートが解除されたときの動作が事前定義](#behavior-when-conflict-handling-deactivated)されています。
 
@@ -111,7 +114,7 @@ AEM には次の機能があります。
 
 * live copy: `/b`
 
-   （ライブコピー内の）がに移動されま `/b_msm_moved`す。 これはバックアップとして機能し、コンテンツが失われないようにします。
+   （ライブコピー内の）がに移動され `/b_msm_moved`ます。 これはバックアップとして機能し、コンテンツが失われないようにします。
 
    * `lc-level-1` は移動されません。
 
@@ -177,11 +180,11 @@ AEM には次の機能があります。
 
 * blueprint: `/b`
 
-   はコピーされませんが、無視されます。
+   は一切コピーされませんが、無視されます。
 
 * live copy: `/b`
 
-   同じまま。
+   同じです。
 
 <table>
  <caption>
