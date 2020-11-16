@@ -28,7 +28,7 @@ Another useful tool for developers is the [Community Components guide](component
 
 The exercise of creating a website can be useful for understanding the structure of an AEM website which may include Communities features, while also providing simple pages on which to explore working with the [social component framework (SCF)](scf.md).
 
-このチュートリアルは、AEM の知識がなく、SCF コンポーネントの使用に興味を持っている開発者を主な対象としています。手順に従いながら SCF サンドボックスサイトの作成を進めることができますは、ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト表示などのサイト構造に重点を置いた、 [全機能を果たしたインターネットWebサイト](../../help/sites-developing/website.md) （英語）のチュートリアルに似ています。
+このチュートリアルは、AEM の知識がなく、SCF コンポーネントの使用に興味を持っている開発者を主な対象としています。手順に従いながら SCF サンドボックスサイトの作成を進めることができますは、ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト表示などのサイト構造に重点を置いた、 [全機能を備えたインターネットWebサイト](../../help/sites-developing/website.md) （英語）のチュートリアルに似ています。
 
 オーサーインスタンスで開発を行い、パブリッシュインスタンスでサイトを試してみるのがベストです。
 
