@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 translation-type: tm+mt
 source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 81%
 
 ---
 
@@ -42,7 +45,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 この問題は、com.day.cq.commons.date.RelativeTimeFormat の形式文字列が 5.4 と 5.5 の間に変更され、「ago」を表す「a」が許可されなくなったというものです。
 
-したがって、RelativeTimeFormat() APIを使用するコードは、次の変更が必要になります。
+したがって、RelativeTimeFormat() APIを使用するコードは、以下を変更する必要があります。
 
 * 送信元: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * 次の操作を行います。`final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
@@ -57,7 +60,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
 
-* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` が `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
 This warning can be safely ignored as `jknack.handlebars.Handlebars`, used by [SCF](scf.md#handlebarsjavascripttemplatinglanguage), comes with its own i18n helper utility. 起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
 
