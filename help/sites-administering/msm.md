@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2684'
+ht-degree: 84%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * MSM では、次の操作を実行できます。
 
-   * コンテンツを1回作成してから
+   * コンテンツの作成を何度も行う
    * このコンテンツをコピーして同じまたは別のサイトの他の領域で使用します（[ライブコピー](#live-copies)）。
 
 * その後、MSM は次の目的でソースコンテンツとライブコピーの間の（ライブ）関係を維持します。
@@ -142,7 +145,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
 
 * **参照**（**サイト**）
 
-   * The [References](/help/sites-authoring/basic-handling.md#references) rail provides information about **Live Copies** together with access to appropriate actions.
+   * [参照レールには](/help/sites-authoring/basic-handling.md#references)**** 、ライブコピーに関する情報と、該当するアクションへのアクセス権が表示されます。
 
 * **ライブコピーの概要**（**サイト**）
 
@@ -315,7 +318,7 @@ AEM にライブコピーを作成すると、ライブコピーのブランチ�
 
 #### ネストされたライブコピー {#nested-live-copies}
 
-When you (or a process) create a [new page within an existing live copy](#live-copy-with-non-live-copy-pages) this new page can also be set up as a live copy of a different blueprint. これはネストされたライブコピーと呼ばれ、2番目（内側）のライブコピーの動作は、次のように最初（外側）のライブコピーの動作の影響を受けます。
+When you (or a process) create a [new page within an existing live copy](#live-copy-with-non-live-copy-pages) this new page can also be set up as a live copy of a different blueprint. これはネストされたライブコピーと呼ばれ、2番目（内側）のライブコピーの動作は、次のように、最初（外側）のライブコピーの動作の影響を受けます。
 
 * 最上位レベルのライブコピーに対してトリガーされたディープロールアウトは、ネストされたライブコピーで継続できます（例えば、トリガーが一致する場合）。
 * ソース間のリンクは、ライブコピー内で書き直すことができます。
@@ -336,7 +339,7 @@ When you (or a process) create a [new page within an existing live copy](#live-c
 
 任意のページまたはページのブランチをライブコピーのソースとして使用できます。
 
-ただし、MSM ではソースパスを指定するブループリント設定も定義できます。Blueprint設定を使用する利点は、次のとおりです。
+ただし、MSM ではソースパスを指定するブループリント設定も定義できます。BluePrint設定を使用する利点は、次のとおりです。
 
 * Allow the author to use the **Rollout** option on a blueprint - to (explicitly) push modifications to live copies that inherit from this blueprint.
 * Allow the author to use **Create Site**; this allows the user to easily select languages and configure the structure of the live copy.
@@ -348,11 +351,11 @@ When you (or a process) create a [new page within an existing live copy](#live-c
 
 * [Blueprint構成の作成](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
 
-   この設定は、ライブコピーの作成に使用するページを事前に定義します。
+   この設定では、ライブコピーの作成に使用するページを事前に定義します。
 
 * [ページのライブコピーの作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   ライブコピー（ソースページ）の作成に使用されるページは、Blueprintページです。
+   ライブコピー（ソースページ）の作成に使用されたページは、BluePrintページです。
 
     ソースページはブループリント設定によって参照されることも、参照されないこともあります。
 
@@ -401,7 +404,7 @@ When you (or a process) create a [new page within an existing live copy](#live-c
 
 ライブコピーページのライブコピーの継承を&#x200B;**休止**&#x200B;して、ページのプロパティやコンポーネントを変更できます。継承を休止すると、ページプロパティとコンポーネントがソースと同期されなくなります。
 
-個々のページの編集時に、作成者はコンポーネントの&#x200B;**継承をキャンセル**&#x200B;できます。継承がキャンセルされると、ライブの関係が休止状態になり、そのコンポーネントの同期はおこなわれません。継承と同期のキャンセルは、コンテンツのサブセクションをカスタマイズする必要がある場合に役立ちます。
+個々のページの編集時に、作成者はコンポーネントの&#x200B;**継承をキャンセル**&#x200B;できます。継承がキャンセルされると、ライブの関係が休止状態になり、そのコンポーネントの同期はおこなわれません。継承と同期をキャンセルすると、コンテンツのサブセクションをカスタマイズする必要がある場合に役立ちます。
 
 ### ライブコピーの分離 {#detaching-a-live-copy}
 
@@ -431,7 +434,7 @@ MSM を使用してコンテンツを再利用し、ライブコピーに対す�
 1. If required, [create a blueprint configuration](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration) that identifies the source content of the live copy.
 1. [ライブコピーを作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy)します。
 1. 必要に応じてソースコンテンツを変更します。組織で確立されている通常のコンテンツのレビュー／承認プロセスを採用してください。
-1. [Blueprintをロールアウト](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) するか [、ライブコピ](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) ーを変更と同期させます。
+1. [設計図をロールアウト](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) 、またはライブコピーを変更と [同期します](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) 。
 
 ## MSM のカスタマイズ {#customizing-msm}
 
@@ -441,7 +444,7 @@ MSM にはツールが用意されており、コンテンツの共有時に例�
    インストール済みのロールアウト設定が要件を満たさない場合に[ロールアウト設定を作成](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)します。有効な任意のロールアウトトリガーおよび同期アクションを使用できます。
 
 * **カスタム同期アクション**
-   [インストールされたアクションが](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) 、特定のアプリケーション要件を満たさない場合は、カスタム同期アクションを作成します。 MSM には、カスタム同期アクションを作成するための Java API が用意されています。
+   [インストールされたアクションが特定のアプリケーション要件を満たさない場合は](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) 、カスタム同期アクションを作成します。 MSM には、カスタム同期アクションを作成するための Java API が用意されています。
 
 ## ベストプラクティス {#best-practices}
 
