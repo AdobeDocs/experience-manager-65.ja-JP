@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: de466511-d82f-4ddb-8f6a-7ca9240fdeab
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1327'
+ht-degree: 91%
 
 ---
 
@@ -29,7 +32,7 @@ AEM には、Adobe Analytics および Adobe Target との統合に役立つオ�
 
 * 統合のオプトアウト。
 
-   [手動で統合を設定する](/help/sites-administering/marketing-cloud.md)場合は、このオプションを検討してください。[DTM を使用した AEM と Adobe Target および Adobe Analytics の統合（英語）](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html)も参照してください。
+   [手動で統合を設定する](/help/sites-administering/marketing-cloud.md)場合は、このオプションを検討してください。[DTM を使用した AEM と Adobe Target および Adobe Analytics の統合（英語）](https://helpx.adobe.com/jp/experience-manager/using/integrate-digital-marketing-solutions.html)も参照してください。
 
 * スクリプトを使用してセットアップとプロビジョニングを設定します。
 
@@ -182,6 +185,7 @@ Analytics および Target との統合を設定すると、必要なクラウ�
    * `automaticProvisioning`= `true`
    * `servicename`= `analytics|target`
    * `path`=作成したクラウドサービス設定を接続する AEM ページへのパス
+
    例えば、Analytics と Target の両方の設定を作成し、それらを we.retail ページに添付する curl 要求は次のとおりです。
 
    ```shell
@@ -201,6 +205,7 @@ Analytics および Target との統合を設定すると、必要なクラウ�
    * target.clientcode= `mycompany`
    * target.email= `me@adobe.com`
    * target.password= `password`
+
    この場合、Analytics と Target の両方の設定を作成し、それらを we-retail ページに添付する curl 要求は次のようになります。
 
    ```shell
