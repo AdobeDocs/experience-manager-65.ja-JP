@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '818'
+ht-degree: 72%
 
 ---
 
@@ -37,7 +40,7 @@ Adobe Campaign で **aemserver** 演算子が設定されていることをチ�
 
 ## 画像が Adobe Campaign コンソールに表示されない場合 {#if-images-do-not-appear-in-the-adobe-campaign-console}
 
-HTML ソースをチェックし、クライアントマシンから URL を開くことができることを検証します。URLにlocalhost:4503が含まれる場合は、Adobe Campaignコンソールコンピューターからリーチ可能な発行インスタンスを指すように、作成者インスタンス上のDay CQ Link Externalizerの設定を変更します。
+HTML ソースをチェックし、クライアントマシンから URL を開くことができることを検証します。URLにlocalhost:4503が含まれる場合は、Adobe Campaignコンソールマシンから到達できる発行インスタンスを指すように、作成者インスタンスのDay CQ Link Externalizerの設定を変更します。
 
 See [Configuring the Externalizer.](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
 
@@ -77,7 +80,7 @@ AEM ログファイルに次のエラーメッセージが表示される場合�
 1. メソッド amcGetSeedMetaData の 467 行目を変更します。
 1. Change `label : [inclView.@label](mailto:inclView.@label)` to `label : String([inclView.@label](mailto:inclView.@label))`
 
-1. 保存します。
+1. 保存.
 1. サーバーを再起動します。
 
 ## Adobe Campaign で「同期」ボタンをクリックしたときにエラーが表示される場合 {#if-adobe-campaign-displays-an-error-when-clicking-the-synchronize-button}
@@ -133,4 +136,4 @@ When creating a mail template for Adobe Campaign, you must include the property 
 
 ## ログに「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」というエラーが発生する場合 {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
-カスタムテンプレートを使用すると、ログに「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」というエラーが表示されます。 この場合は、[パッケージ共有](/help/sites-administering/package-manager.md#package-share)からフィーチャーパック 6576 をインストールしてください。これは、acMappingプロパティがrecipient.firstName以外の値に設定されている場合、Adobe Campaign Manager側に空白の値が作成される問題です。
+カスタムテンプレートを使用すると、ログに「com.day.cq.mcm.キャンペーン.servlets.util.ParameterMapper」というエラーが表示されます。 この場合は、[パッケージ共有](/help/sites-administering/package-manager.md#package-share)からフィーチャーパック 6576 をインストールしてください。これは、acMappingプロパティを受信者.firstName以外の値に設定すると、Adobe Campaignマネージャ側に空白の値が作成される問題です。
