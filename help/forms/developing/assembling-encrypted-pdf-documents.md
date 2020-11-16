@@ -41,7 +41,7 @@ Assemblerサービスを使用して、PDFドキュメントをパスワード�
 
 一方、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合は、この `invokeDDX` 操作を呼び出すことができます。 この場合、入力PDFドキュメントのファイル名を `source` 属性に割り当てます。
 
-PDFドキュメントをパスワードで暗号化する場合、EncryptionサービスをAEM formsのインストールに含める必要はありません。 PDFドキュメントの [暗号化と復号化を参照してください](/help/forms/developing/encrypting-decrypting-pdf-documents.md)。
+PDFドキュメントをパスワードを使用して暗号化する場合、AEM formsのインストール環境にEncryptionサービスを含める必要はありません。 PDFドキュメントの [暗号化と復号化を参照してください](/help/forms/developing/encrypting-decrypting-pdf-documents.md)。
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ PDFドキュメントをパスワードで暗号化する場合、Encryptionサ�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 For information about the location of all AEM Forms JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 For information about the location of all AEM Forms JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Assemblerクライアントの作成**
 
@@ -91,7 +91,7 @@ PDFドキュメントをアセンブリするには、DDXドキュメントを�
 
 **実行時オプションの設定**
 
-ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、『 `AssemblerOptionSpec` AEM FormsAPIリファレンス』の [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、 `AssemblerOptionSpec` AEM FormsAPIリファレンスの [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 **ドキュメントを暗号化する**
 
@@ -152,7 +152,7 @@ Assemblerサービスに渡されるPDFドキュメントが1つだけの場合�
 
 **関連トピック**
 
-[クイック開始（SOAPモード）: Java APIを使用した暗号化PDFドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した暗号化PDFドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
 ## WebサービスAPIを使用した暗号化PDFドキュメントのアセンブリ {#assemble-an-encrypted-pdf-document-using-the-web-service-api}
 
@@ -162,17 +162,17 @@ Assemblerサービスに渡されるPDFドキュメントが1つだけの場合�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Assemblerクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
+   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `AssemblerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
