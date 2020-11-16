@@ -109,7 +109,7 @@ The process is launched by selecting the `Create` button located at the top of t
 
    URLに表示されるサイトのルートページの名前。
 
-   * サイトの作成後に名前が容易に変更されないので、重複チェックを行います。
+   * Double-check the name as it is not easily changed after the site is created.
    * ベースURL( `https://server:port/site root/site name)` がの下に表示され `Community Site Name`ます。
 
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
