@@ -12,6 +12,9 @@ discoiquuid: 44dfa10f-497e-473f-95d4-8dccae7ebf8e
 pagetitle: Deploying eCommerce with SAP Commerce Cloud
 translation-type: tm+mt
 source-git-commit: 328e13eb2ce034b0b1ec7e5e0fb184de9435d1bc
+workflow-type: tm+mt
+source-wordcount: '733'
+ht-degree: 87%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 328e13eb2ce034b0b1ec7e5e0fb184de9435d1bc
 >
 >このページには hybris Web サイトへのリンクが含まれています。ページによっては、ログインアカウントが必要となる場合があります。
 
-## SAP Commerce cloudでのeコマースのデプロイ {#deploying-ecommerce-with-sap-commerce-cloud}
+## SAPCommerce Cloudでのeコマースの導入 {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -50,6 +53,7 @@ The hybris extension of the eCommerce Integration Framework has been updated to 
 >* バージョン18.11以降をサポートします。
 >* [hybris 5 サーバー](https://www.hybris.com/en/architecture-technology)を実行するには Java 7 が必要です。
 >* hybris のアドオンである [Telco Accelerator](https://www.hybris.com/en/products/telecommunication) は、AEM 拡張でサポートされません。
+
 >
 
 
@@ -58,7 +62,7 @@ The hybris extension of the eCommerce Integration Framework has been updated to 
 
 e コマース機能をインストールするには、以下が必要です。
 
-* お客様の傲慢なサーバ
+* お使いのHybrisサーバー
 * AEM e コマースフレームワーク：
 
    * AEM の標準インストールの一部です。
@@ -139,7 +143,7 @@ e コマース機能をインストールするには、以下が必要です。
    >
    >Press `Return` when required.
 
-1. 以下のファイルを、抽出した傲慢な配布のルートフォルダーにダウンロードします。
+1. 以下のファイルを、抽出した傲慢さの配布のルートフォルダにダウンロードします。
 
    ```
        <hybris-root-directory>
@@ -202,7 +206,7 @@ e コマース機能をインストールするには、以下が必要です。
 
    次の資格情報を使用します。
    * ユーザー名：admin
-   * パスワード：ニムダ
+   * password:ニムダ
 
 1. サイドバーナビゲーションから、「**システム**」と「**ツール**」を展開します。次に、「**読み込み**」を選択して、**ウィザード : CSV の読み込み**&#x200B;ウィンドウを開きます。
 1. 「**設定**」タブで、次の読み込みファイルをアップロードします。********
