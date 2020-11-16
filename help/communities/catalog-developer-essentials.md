@@ -96,7 +96,7 @@ Using the example of the [Enablement Tutorial](getting-started-enablement.md):
 
       * 名前：`se_resource-tags`
       * タイプ：String
-      * 値：&lt;*TagID[を入力](#pre-filter-tagids)>*
+      * 値：&lt;*TagID[ を入力](#pre-filter-tagids)>*
          * Select **[!UICONTROL Multi]**
          * Select **[!UICONTROL Add]**
 
