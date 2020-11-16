@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '1152'
+ht-degree: 72%
 
 ---
 
@@ -35,11 +38,11 @@ http://localhost:4502
 
 AEM ではリポジトリコンテンツが以下のように表示されます。
 
-* このタイプのノードは、 `nt:folder` フォルダーとして表示されます。 ノードの下のノード `nt:folder` は、フォルダーのコンテンツとして表示されます。
+* このタイプのノード `nt:folder` は、フォルダーとして表示されます。 ノードの下のノード `nt:folder` は、フォルダーのコンテンツとして表示されます。
 
-* このタイプのノードは、フ `nt:file` ァイルとして表示されます。 ノードの下のノー `nt:file` ドは表示されず、ファイルのコンテンツを形成します。
+* タイプのノード `nt:file` はファイルとして表示されます。 ノードの下のノードは表示されませんが、 `nt:file` ファイルのコンテンツが形成されます。
 
-WebDAVを使用してフォルダやファイルを作成および編集する場合、AEMは必要なノードとノードを作成お `nt:folder` よび編集 `nt:file` します。 WebDAVを使用してコンテンツの読み込みと書き出しを行う場合は、およびノードタイプをできる限り `nt:file` 使用 `nt:folder` するようにしてください。
+WebDAVを使用してフォルダやファイルを作成および編集する場合、AEMは必要なノード `nt:folder``nt:file` とノードを作成および編集します。 WebDAVを使用してコンテンツの読み込みと書き出しを行う場合は、 `nt:file` および `nt:folder` ノードタイプをできる限り使用してください。
 
 >[!NOTE]
 >
@@ -80,7 +83,7 @@ WebDAV サーバーの URL の構造は以下のとおりです。
   </tr>
   <tr>
    <td><strong>説明</strong></td>
-   <td>AEMが実行されるホストとポート</td>
+   <td>AEMが稼働するホストとポート</td>
    <td>AEMリポジトリWebアプリケーションのパス</td>
    <td>WebDAV サーブレットのマッピング先のパス</td>
    <td>ワークスペースの名前</td>
@@ -154,8 +157,9 @@ Windows 環境で WebDAV を介して AEM に接続するには：
 1. マッピングの詳細を入力します。
 
    * **ドライブ**：使用可能な任意の文字を選択
-   * **フォルダ**: `http://localhost:4502`
+   * **Folder**: `http://localhost:4502`
    * 「**別の資格情報を使用して接続する**」をオン
+
    「完了」をクリックします。
 
    ![chlimage_1-113](assets/chlimage_1-113a.png)
@@ -213,14 +217,14 @@ GNOME を使用して WebDAV を介して AEM に接続するには：
 1. Click **Connect**. AEM prompts you for your password.
 1. パスワードとして「`admin`」と入力し、「**Connect**」をクリックします。
 
-GNOMEは、AEMをボリュームとしてマウントし、他のボリュームと同様に使用できるようになりました。
+GNOMEはAEMをボリュームとしてマウントし、他のボリュームと同様に使用できます。
 
 #### KDE {#kde}
 
 1. ネットワークフォルダーウィザードを開きます。
 1. 「**WebFolder**」（webdav）を選択して「Next」をクリックします。
 1. 「**Name**」に接続名を入力します。
-1. 「ユー **ザー**」に、ア `admin.` ドビでは事前設定済みの管理者アカウントを使用することを推奨します。
+1. 「 **Adobe**」に、事前設定済みの管理者アカウントを使用することを推奨する `admin.` ユーザーと入力します。
 1. 「 **Server**」に、 `http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
@@ -232,4 +236,4 @@ GNOMEは、AEMをボリュームとしてマウントし、他のボリューム
 1. 「**Save and Connect**」をクリックします。
 1. パスワードを要求する画面が表示されたら、パスワードとして「`admin`」と入力し、「**Connect**」をクリックします。
 
-KDEはAEMをボリュームとしてマウントし、他のボリュームと同様に使用できるようになりました。
+KDEはAEMをボリュームとしてマウントし、他のボリュームと同様に使用できます。
