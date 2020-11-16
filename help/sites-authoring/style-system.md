@@ -12,14 +12,14 @@ translation-type: tm+mt
 source-git-commit: 0985ba24f7430381fccc40faf3a316d3abd85a30
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 69%
+ht-degree: 96%
 
 ---
 
 
 # スタイルシステム{#style-system}
 
-スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、コンポーネントの別の視覚的なバリエーションにすることができ、コンポーネントの柔軟性を高めます。
+スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、1 つのコンポーネントの別の視覚的バリエーションとして使用することができるので、コンポーネントがより柔軟で扱いやすいものになります。
 
 このため、スタイルごとにカスタムコンポーネントを開発したり、スタイル機能を有効化するためにコンポーネントのダイアログをカスタマイズする必要がなくなりました。これにより、AEM のバックエンド開発をしなくてもそのまま再利用可能な、コンテンツ作成者のニーズにすばやく簡単に応えることができるコンポーネントの数が増加します。
 
@@ -29,7 +29,7 @@ ht-degree: 69%
 
 同様に、コンテンツ作成者には、コンテンツを構築して調整する能力だけでなく、コンテンツの視覚的な表示方法を選択する能力も必要です。
 
-スタイルシステムは、テンプレート作成者の要件とコンテンツ作成者の要件の両方に対して、統合されたソリューションを提供します。
+スタイルシステムでは、テンプレート作成者とコンテンツ作成者の両方の要件に対応する統一ソリューションを提供します。
 
 * テンプレート作成者は、コンポーネントのコンテンツポリシーのスタイルクラスを定義できます。
 * 次にコンテンツ作成者は、ページでのコンポーネント編集時にドロップダウンからこれらのクラスを選択し、対応するスタイルを適用できます。
@@ -38,7 +38,7 @@ ht-degree: 69%
 
 ## 概要 {#overview}
 
-スタイルシステムの使用方法は、通常次のようになります。
+スタイルシステムの使用は通常、次のようにおこなわれます。
 
 1. Web デザイナーは 1 つのコンポーネントに対し様々な視覚的バリエーションを作成します。
 
@@ -64,11 +64,11 @@ ht-degree: 69%
 
 ## 使用方法 {#use}
 
-この機能のデモを行うために、 [WKND](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)のコアコンポーネントの [titleコンポーネントの実装を例として使用します](https://www.adobe.com/go/aem_cmp_title_v2) 。
+この機能のデモをおこなうために、コアコンポーネントの[タイトルコンポーネント](https://www.adobe.com/go/aem_cmp_title_v2_jp)の [WKND](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) による実装を例として使用します。
 
-The following sections [As a Content Author](#as-a-content-author) and [As a Template Author](#as-a-template-author) describe how to test the functionality of the Style System using the Style System of WKND.
+次の[コンテンツ作成者として](#as-a-content-author)節と[テンプレート作成者として](#as-a-template-author)節では、WKND のスタイルシステムを使用してスタイルシステムの機能をテストする方法について説明します。
 
-独自のコンポーネントにスタイルシステムを使用する場合は、次の操作を行います。
+スタイルシステムを独自のコンポーネントに使用する場合は、次の手順に従います。
 
 1. [概要](#overview)の節の説明に従って、CSS をクライアントライブラリとしてインストールします。
 1. [テンプレート作成者として](#as-a-template-author)の節の説明に従って、コンテンツ作成者が使用できるようにする CSS クラスを設定します。
@@ -76,10 +76,10 @@ The following sections [As a Content Author](#as-a-content-author) and [As a Tem
 
 ### コンテンツ作成者として {#as-a-content-author}
 
-1. WKNDプロジェクトをインストールした後、WKNDの英語マスターホームページ()に移動し、ページ `http://<host>:<port>/sites.html/content/wknd/language-masters/en` を編集します。
-1. ページの下の **タイトル** ・コンポーネントを選択します。
+1. WKND プロジェクトをインストールした後、WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）に移動し、ページを編集します。
+1. ページの下方の&#x200B;**タイトル**&#x200B;コンポーネントを選択します。
 
-   ![作成者のスタイルシステム](assets/style-system-author.png)
+   ![作成者にとってのスタイルシステム](assets/style-system-author.png)
 
 1. **リスト**&#x200B;コンポーネントのツールバーで「**スタイル**」ボタンをタップまたはクリックしてスタイルメニューを開き、コンポーネントの外観を変更します。
 
@@ -87,17 +87,17 @@ The following sections [As a Content Author](#as-a-content-author) and [As a Tem
 
    >[!NOTE]
    >
-   >この例では、 **Colorsスタイル** (**Black**, White **Gray, White**, Gray, **Ni)は相互に、Colorsスタイル(White** Gray, White Gray, Ni)は互いに、Colorsスタイル(Underline Undirented, Spacin, Sping, Spacing, Nin Sping, Ninin)は互いに対応、 **, Spacin,S,S, Spacined, In, Nin, In,**************,S, Ninedは互いに、Ned, In,Colors, In, In, In, Ined, In, Inent, In, In, Inent, Int, Ined, In, In これは、[テンプレート作成者としてテンプレートで設定可能](#as-a-template-author)です。
+   >この例では、**カラー**&#x200B;スタイル（**黒**、**白**、**グレー**）は相互排他的ですが、**スタイル**&#x200B;オプション（**アンダーライン**、**右揃え**、**最小間隔**）は組み合わせることができます。これは、[テンプレート作成者としてテンプレートで設定可能](#as-a-template-author)です。
 
 ### テンプレート作成者として {#as-a-template-author}
 
-1. While editing WKND&#39;s English language master home page at `http://<host>:<port>/sites.html/content/wknd/language-masters/en`, edit the template of the page via **Page Information -> Edit Template**.
+1. WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）の編集時に、**ページ情報／テンプレートの編集**&#x200B;でページのテンプレートを編集します。
 
    ![テンプレートを編集](assets/style-system-edit-template.png)
 
-1. Edit the policy of the **Title** component by tapping or clicking the **Policy** button of the component.
+1. コンポーネントの「**ポリシー**」ボタンをタップまたはクリックして、**タイトル**&#x200B;コンポーネントのポリシーを編集します。
 
-   ![ポリシーの編集](assets/style-system-edit-policy.png)
+   ![ポリシーを編集](assets/style-system-edit-policy.png)
 
 1. プロパティの「スタイル」タブで、スタイルがどのように設定されているかを確認できます。
 
@@ -107,6 +107,7 @@ The following sections [As a Content Author](#as-a-content-author) and [As a Tem
    * **スタイルは結合できません：**&#x200B;そのグループ内の複数のスタイルを一度に選択できます。
    * **スタイル名：**&#x200B;コンポーネントのスタイルの設定時にコンテンツ作成者に表示されるスタイルの説明。
    * **CSS クラス：**&#x200B;スタイルと関連付けられている CSS クラスの実際の名前。
+
    ドラッグハンドルを使用して、グループの順序やグループ内のスタイルを調整します。追加アイコンや削除アイコンを使用して、グループやグループ内のスタイルを追加したり削除したりします。
 
 >[!CAUTION]
@@ -115,13 +116,13 @@ The following sections [As a Content Author](#as-a-content-author) and [As a Tem
 
 ## セットアップ {#setup}
 
-コアコンポーネントバージョン2以降では、スタイルシステムを十分に活用でき、追加の設定は必要ありません。
+コアコンポーネントのバージョン 2 以降はスタイルシステムの活用に完全に対応しているので、追加の設定は不要です。
 
-次の手順は、独自のカスタムコンポーネントに対してスタイルシステムを有効にする場合、または編集ダイアログのオプションの「スタイル」タブを [有効にする場合にのみ必要です。](#enable-styles-tab-edit)
+以下の手順は、独自のカスタムコンポーネントに対してスタイルシステムを有効にする場合、または[編集ダイアログのオプションの「スタイル」タブを有効にする](#enable-styles-tab-edit)場合にのみ必要です。
 
-### [デザイン]ダイアログで[スタイル]タブを有効にする {#enable-styles-tab-design}
+### デザインダイアログの「スタイル」タブを有効にする {#enable-styles-tab-design}
 
-コンポーネントがAEMのスタイルシステムで動作し、デザインダイアログに「スタイル」タブを表示するには、コンポーネント開発者は、コンポーネントに次の設定を持つ「スタイル」タブを含める必要があります。
+コンポーネントが AEM のスタイルシステムと連動し、デザインダイアログに「スタイル」タブが表示されるようにするには、コンポーネント開発者がコンポーネントに次の設定をおこなって「スタイル」タブを組み込む必要があります。
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
@@ -130,9 +131,9 @@ The following sections [As a Content Author](#as-a-content-author) and [As a Tem
 
 ### 編集ダイアログの「スタイル」タブを有効にする {#enable-styles-tab-edit}
 
-AEMバージョン6.5.3.0以降、編集ダイアログのオプションの「スタイル」タブが使用できるようになりました。 「デザインダイアログ」タブとは異なり、「編集」ダイアログのタブは、スタイルシステムが機能するのに必須ではありませんが、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
+AEMバージョン6.5.3.0以降、「編集」ダイアログの「スタイル」タブはオプションで使用できるようになりました。 「デザインダイアログ」タブとは異なり、編集ダイアログのタブは、スタイルシステムが機能するのに必須ではなく、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
 
-編集ダイアログタブは、デザインダイアログタブと同様の方法で含めることができます。
+編集ダイアログのタブは、デザインダイアログのタブと同様の方法で組み込むことができます。
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
@@ -156,6 +157,7 @@ AEMバージョン6.5.3.0以降、編集ダイアログのオプションの「�
 >1. HTL（`data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`）が他のすべての要素よりも優先されます。
 >1. 次に、複数のアクティブなスタイルの中で、コンポーネントのポリシーで設定されたスタイルのリストの最初のスタイルが優先されます。
 >1. 最後に、コンポーネントの `cq:htmlTag` または `cq:tagName` がフォールバック値と見なされます。
+
 >
 
 
