@@ -50,7 +50,7 @@ CustomToolbarLayoutDemo.zip
 
 1. カスタムツールバーレイアウトを入れておくフォルダーを作成します。次に例を示します。
 
-   `/apps/customlayout/toolbar`。
+   `/apps/customlayout/toolbar`.
 
    カスタムレイアウトを作成するには、次のフォルダーに用意されている既成のツールバーレイアウトの 1 つを使用（およびカスタマイズ）できます。
 
