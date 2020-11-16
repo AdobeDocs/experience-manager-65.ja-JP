@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 13a908ae-6965-4438-96d0-93516b500884
 translation-type: tm+mt
 source-git-commit: ed34f2200f4ff4f407f7b92165685af390f5f7e3
+workflow-type: tm+mt
+source-wordcount: '666'
+ht-degree: 72%
 
 ---
 
@@ -55,16 +58,16 @@ ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.Persisted
 
 ストア候補を登録して ContextHub フレームワークに統合し、ストア候補からストアを作成できるようにします。ストア候補を登録するには、[`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) クラスの `ContextHub.Utils.storeCandidates` 関数を使用します。
 
-ストアの候補を登録する際に、ストアの種類の名前を指定します。 候補からストアを作成するときは、ストアタイプを使用してベースとする候補を識別します。
+ストアの候補を登録する場合は、ストアタイプの名前を指定します。 候補からストアを作成するときは、ストアタイプを使用してベースとする候補を識別します。
 
-ストア候補を登録する際に、優先度を指定します。既に登録されている店舗候補と同じ店舗タイプで店舗候補が登録された場合は、優先度の高い候補を用いる。 そのため、新しいストア候補を既存のストア候補に優先させることができます。
+ストア候補を登録する際に、優先度を指定します。既登録店舗候補と同じ店舗種別で店舗候補が登録された場合には、優先度の高い候補を用いる。 そのため、新しいストア候補を既存のストア候補に優先させることができます。
 
 ```
 ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-ほとんどの場合、1つの候補のみが必要で、優先度をに設定できますが、より高度な登録について知りたい場合は、 `0`JavaScript条件( [)と優先度に基づいて、数少ないストア実装の1つを選択できます](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies)`applies`。
+ほとんどの場合、1つの候補のみが必要で優先度をに設定できますが、 `0`より高度な登録について学ぶことができます [。これにより、少数のストア実装のうちの1つをjavascript条件(](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies)`applies`)と優先度の候補に基づいて選択できます。
 
 ## ContextHub UI モジュールタイプの作成 {#creating-contexthub-ui-module-types}
 
