@@ -68,6 +68,7 @@ The `/libs/cq/workflow/components/model/step` component is the nearest common an
 
    * **共通**：タイトルと説明の編集用です。
    * **詳細**：電子メール通知プロパティの編集用です。
+
    ![wf-44](assets/wf-44.png)![wf-45](assets/wf-45.png)
 
    >[!NOTE]
@@ -102,8 +103,8 @@ Both `Workflow` and `WorkflowData` metadatamaps are shared over the entire workf
 
 （既存の）ベースステップコンポーネントのいずれかから継承するには、次のプロパティを `cq:Component` ノードに追加します。
 
-* 名前: `sling:resourceSuperType`
-* タイプ：`String`
+* 名前：`sling:resourceSuperType`
+* 型：`String`
 * 値：ベースコンポーネントに解決される次のパスのいずれか
 
    * `cq/workflow/components/model/process`
@@ -121,6 +122,7 @@ Both `Workflow` and `WorkflowData` metadatamaps are shared over the entire workf
 >* ステップの編集ダイアログが次の場所にタイトルと説明を保存している。 >
 >* `./jcr:title`
 >* `./jcr:description`場所：
+
 >
 >  
 This requirement is satisfied when the edit dialog uses the Common tab that the `/libs/cq/flow/components/step/step` component implements.
@@ -130,16 +132,17 @@ This requirement is satisfied when the edit dialog uses the Common tab that the 
 
 1. Below the `cq:Component` node, add the following node:
 
-   * 名前: `cq:editConfig`
-   * タイプ：`cq:EditConfig`
+   * 名前：`cq:editConfig`
+   * 型：`cq:EditConfig`
+
    >[!NOTE]
    >
    >For more information about the cq:editConfig node, see [Configuring the Edit Behavior of a Component](/help/sites-developing/developing-components.md#configuring-the-edit-behavior).
 
 1. Below the `cq:EditConfig` node, add the following node:
 
-   * 名前: `cq:formParameters`
-   * タイプ：`nt:unstructured`
+   * 名前：`cq:formParameters`
+   * 型：`nt:unstructured`
 
 1. Add `String` properties of the following names to the `cq:formParameters` node:
 
@@ -180,14 +183,15 @@ The value that is specified in this text field is added to the workflow instance
 
 1. cq:Component ノードの下に、次のノードを追加します。
 
-   * 名前: `cq:editConfig`
-   * タイプ：`cq:EditConfig`
+   * 名前：`cq:editConfig`
+   * 型：`cq:EditConfig`
+
    cq:editConfig ノードについて詳しくは、[コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
 
 1. cq:EditConfig ノードの下に、次のノードを追加します。
 
-   * 名前: `cq:formParameters`
-   * タイプ：`nt:unstructured`
+   * 名前：`cq:formParameters`
+   * 型：`nt:unstructured`
 
 1. ノード追加のプロパティで `String``cq:formParameters` す。 コンポーネントのスーパータイプによって、プロパティの名前が次のように決定されます。
 
@@ -199,7 +203,7 @@ The value that is specified in this text field is added to the workflow instance
 
    * `PROCESS`：ステップの動作を実装する ECMA スクリプトへのパスまたはサービスの PID。
    * `PARTICIPANT`：作業項目を割り当てるユーザーの ID。
-   * `DYNAMIC_PARTICIPANT`: 作業項目を割り当てるユーザーを選択するECMAスクリプトのパスまたはサービスのPID。
+   * `DYNAMIC_PARTICIPANT`:作業項目を割り当てるユーザーを選択するECMAスクリプトのパスまたはサービスのPID。
 
 1. モデル開発者がプロパティ値を変更できないようにするために、コンポーネントのスーパータイプのダイアログをオーバーライドします。
 
@@ -214,42 +218,43 @@ Peform the following procedure on your new component (see [Creating Custom Workf
 
 1. Below the `cq:Component` node, add the following node:
 
-   * 名前: `cq:editConfig`
-   * タイプ：`cq:EditConfig`
+   * 名前：`cq:editConfig`
+   * 型：`cq:EditConfig`
+
    For more information about the cq:editConfig node, see [Configuring the Edit Behavior of a Component](/help/sites-developing/components-basics.md#edit-behavior).
 
 1. cq:EditConfig ノードの下に、次のノードを追加します。
 
-   * 名前: `cq:formParameters`
-   * タイプ：`nt:unstructured`
+   * 名前：`cq:formParameters`
+   * 型：`nt:unstructured`
 
 1. 作業項目を開くとフォームが表示されるようにするには、次のプロパティを `cq:formParameters` ノードに追加します。
 
-   * 名前: `FORM_PATH`
-   * タイプ：`String`
+   * 名前：`FORM_PATH`
+   * 型：`String`
    * 値：フォームに解決されるパス
 
 1. 作業項目を完了するとカスタムダイアログが表示されるようにするには、次のプロパティを `cq:formParameters` ノードに追加します。
 
-   * 名前: `DIALOG_PATH`
-   * タイプ：`String`
+   * 名前：`DIALOG_PATH`
+   * 型：`String`
    * 値：ダイアログに解決されるパス
 
 ### ワークフローステップの実行時の動作の設定 {#configuring-the-workflow-step-runtime-behavior}
 
 Below the `cq:Component` node, add a `cq:EditConfig` node. Below that add an `nt:unstructured` node (must be named `cq:formParameters`) and to that node add the following properties:
 
-* 名前: `PROCESS_AUTO_ADVANCE`
+* 名前：`PROCESS_AUTO_ADVANCE`
 
-   * タイプ：`Boolean`
+   * 型：`Boolean`
    * 値:
 
       * when set to `true` the workflow will run that step and continue - this is default and also recommended
       * `false` に設定した場合、ワークフローはそのステップを実行して停止します。これには追加の処理が必要なので、`true` に設定することをお勧めします。
 
-* 名前: `DO_NOTIFY`
+* 名前：`DO_NOTIFY`
 
-   * タイプ：`Boolean`
+   * 型：`Boolean`
    * 値：ユーザー参加ステップについて電子メール通知を送信するかどうかを示します（メールサーバーが正しく設定されていると想定しています）。
 
 ## データの保持とアクセス {#persisting-and-accessing-data}
@@ -381,7 +386,7 @@ When creating a custom step component, the object `metaData` is available in a s
 
 OSGI サービスコンポーネント（Java バンドル）としてプロセスステップを定義する
 
-1. バンドルを作成して、OSGI コンテナにデプロイします。Refer to the documentation about creating a bundle with [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) or [Eclipse](/help/sites-developing/howto-projects-eclipse.md).
+1. バンドルを作成して、OSGI コンテナにデプロイします。[CRXDE Liteまたは](/help/sites-developing/developing-with-crxde-lite.md) Eclipseを使用したバンドルの作成に関するドキュメントを参照してください [](/help/sites-developing/howto-projects-eclipse.md)。
 
    >[!NOTE]
    >
@@ -665,15 +670,16 @@ function getParticipant() {
 >
 >* [`com.day.cq.wcm.workflow.process.ActivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/ActivatePageProcess.html)
 >* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
+
 >
 
 
 
 パッケージリソースを取得して処理するワークフローステップを作成できます。`com.day.cq.workflow.collection` パッケージの以下の構成要素は、ワークフローパッケージへのアクセスを可能にします。
 
-* `ResourceCollection`: ワークフローパッケージクラス。
+* `ResourceCollection`:ワークフローパッケージクラス。
 * `ResourceCollectionUtil`：ResourceCollection オブジェクトの取得に使用されます。
-* `ResourceCollectionManager`: コレクションを作成し、取得します。 実装は、OSGi サービスとしてデプロイされます。
+* `ResourceCollectionManager`:コレクションを作成し、取得します。 実装は、OSGi サービスとしてデプロイされます。
 
 次の Java クラスの例は、パッケージリソースの取得方法を示しています。
 
@@ -811,7 +817,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    カスタマイズしたステップの例は次のとおりです。
 
-   ![wf-34](assets/wf-34.png)
+   ![wf-36](assets/wf-34.png)
 
    >[!CAUTION]
    >
@@ -847,6 +853,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
       * プロジェクト
       * WCM ワークフロー
       * ワークフロー
+
    ![wf-35](assets/wf-35.png)
 
 1. 以上でワークフローを開いて編集できるようになります。ステップブラウザーでは、次の手順でフィルターを適用して&#x200B;**カスタムステップ**&#x200B;を表示できます。
@@ -887,6 +894,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
        モデルマップのステップカードと、**カスタム - ステップのプロパティ**&#x200B;設定ダイアログの&#x200B;**タイトル**&#x200B;フィールドのデフォルトのタイトルを設定します。
 
    * 独自のカスタムプロパティも定義できます。
+
    ![wf-40](assets/wf-40.png)
 
 1. Configure the properties on the node `cq:listeners`.
@@ -899,6 +907,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    * `afterdelete: CQ.workflow.flow.Step.afterDelete`
    * `afteredit: CQ.workflow.flow.Step.afterEdit`
    * `afterinsert: CQ.workflow.flow.Step.afterInsert`
+
    この設定は、エディターを適切に機能させるために必要です。ほとんどのケースで、この設定は変更しないでください。
 
    ただし、`cq:inherit` を true に設定した場合は（`cq:editConfig` ノードで設定します。上記を参照）、この設定を継承できるので、ステップの定義に明示的に含める必要はありません。継承が存在しない場合は、次のプロパティと値を持つこのノードを追加する必要があります。
@@ -1040,6 +1049,7 @@ The `_cq_dialog/.content.xml` sample used in this example:
 >* `/libs/dam/components`
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
+
 >
 >  
 You must not modify anything in `/libs`, simply use them as examples. If you want to leverage any of the existing steps, copy them to `/apps` and modify them there.
