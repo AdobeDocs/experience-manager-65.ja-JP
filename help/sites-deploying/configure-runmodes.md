@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 73%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 以下の操作を実行できます。
 
-* [各実行モードの設定パラメーターのコレクションを定義します](#defining-configuration-properties-for-a-run-mode)。
+* [各実行モードに対して設定パラメーターのコレクションを定義します](#defining-configuration-properties-for-a-run-mode)。
 
-   すべての実行モードに基本設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。 これらは必要に応じて適用されます。
+   すべての実行モードに対して基本的な設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。 これらは、必要に応じて適用されます。
 
 * [特定のモード用にインストールする追加のバンドルを定義します](#defining-additional-bundles-to-be-installed-for-a-run-mode)。
 
@@ -98,7 +101,7 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 * `config.<run-mode>`
 
-   適用可能な実行モードに使用されます。例えば、config
+   該当する実行モードで使用されます。例えば、config
 
 これらのフォルダー内で個々の設定ノードを定義する方法、および複数の実行モードの組み合わせに関する設定を作成する方法について詳しくは、[リポジトリでの OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を参照してください。
 
@@ -108,7 +111,7 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 ## 特定の実行モード用にインストールする追加のバンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
-特定の実行モード用にインストールする必要のある追加のバンドルも指定できます。 これらの定義については、バンドルを保持するためにインストールフォルダーが使用されます。 もう一度、実行モードはプレフィックスで示されます。
+特定の実行モードに対してインストールする必要のある追加のバンドルも指定できます。 これらの定義では、バンドルの保持にインストールフォルダーが使用されます。 再び、実行モードは、プレフィックスで示されます。
 
 * `install.author`
 * `install.publish`
@@ -119,9 +122,9 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 複数の実行モードの設定を定義した場合は、起動時にどれを使用するかを定義する必要があります。使用する実行モードを指定する方法は複数あります。優先順位は次のとおりです。
 
-1. [ `sling.properties` ファイル](#using-the-sling-properties-file)
-1. [ `-r` 選択](#using-the-r-option)
-1. [システムプロパティ(`-D`)](#using-a-system-property-in-the-start-script)
+1. [ `sling.properties` file](#using-the-sling-properties-file)
+1. [ `-r` オプション](#using-the-r-option)
+1. [システムのプロパティ(`-D`)](#using-a-system-property-in-the-start-script)
 
 1. [ファイル名検出](#filename-detection-renaming-the-jar-file)
 
@@ -135,13 +138,13 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
    `<cq-installation-dir>/crx-quickstart/conf/sling.properties`
 
-1. 次のプロパティを追加します。次の例はauthor用です。
+1. 追加次のプロパティ次に示すのは、authorの例です。
 
    `sling.run.modes=author`
 
 ### -r オプションの使用{#using-the-r-option}
 
-カスタムの実行モードは、クイックスタートの起動時にこのオプションを使 `-r` 用してアクティブ化できます。 例えば、次のコマンドを使用して、実行モードをdevに設定したAEMインスタンスを起動します。&quot;
+カスタム実行モードは、quickstartの起動時に `-r` オプションを使用してアクティブ化できます。 例えば、実行モードがdevに設定されたAEMインスタンスを起動するには、次のコマンドを使用します。&quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -151,7 +154,7 @@ java -jar cq-56-p4545.jar -r dev
 
 起動スクリプトのシステムプロパティを使用して実行モードを指定できます。
 
-* 例えば、次の例を使用して、米国内にある実稼働用発行インスタンスとしてインスタンスを起動します。
+* 例えば、次の例を使用して、米国にある実稼働用発行インスタンスとしてインスタンスを起動します。
 
    `-Dsling.run.modes=publish,prod,us`
 
@@ -160,7 +163,7 @@ java -jar cq-56-p4545.jar -r dev
 次の2つのインストール実行モードは、インストール前にインストールjarファイルの名前を変更することでアクティブ化できます。
 
 * publish
-* author
+* 作成者
 
 jar ファイルでは、次の命名規則を使用する必要があります。
 
