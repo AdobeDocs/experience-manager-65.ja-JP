@@ -10,13 +10,16 @@ discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 docset: aem65
 translation-type: tm+mt
 source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
+workflow-type: tm+mt
+source-wordcount: '417'
+ht-degree: 91%
 
 ---
 
 
 # 参照用のアダプティブフォームフラグメント{#reference-adaptive-form-fragments}
 
-[アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。アダプティブフォームフラグメントは、サイドバーのアセットブラウザーを使用してフォームにドラッグ&amp;ドロップでき、フォームエディターで編集できます。
+[アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用してアダプティブフォームフラグメントをフォームにドラッグ&amp;ドロップでき、フォームエディターで編集できます。
 
 アダプティブフォームの作成者に向けて、AEM Forms パッケージ [AEM-FORMS-6.3-REFERENCE-FRAGMENTS](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS) で参照用のフラグメントが提供されています。次のフラグメントが含まれています。
 
