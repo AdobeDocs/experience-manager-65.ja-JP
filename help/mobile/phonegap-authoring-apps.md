@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1053'
+ht-degree: 68%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-AEM Mobile ダッシュボードでは、モバイルアプリケーションの作成、ビルド、デプロイや、アプリケーションのメタデータの作成、削除、編集をおこなえます。アプリケーションが実稼働状態になると、ライフサイクルや使用指標を含むアプリケーション分析を分析し、顧客コンバージョンやブランド忠誠度を向上できます。
+AEM Mobile ダッシュボードでは、モバイルアプリケーションの作成、ビルド、デプロイや、アプリケーションのメタデータの作成、削除、編集をおこなえます。申し込みが実稼動状態になったら、ライフサイクルや使用状況指標を含む申し込み分析を分析し、顧客コンバージョンやブランド忠誠度を改善できます。
 
 To build your AEM Mobile Application, see the [Building Mobile Applications](/help/mobile/building-app-mobile-phonegap.md) page.
 
@@ -43,7 +46,7 @@ The [AEM Mobile Apps Catalog](http://localhost:4502/aem/apps.html/content/phoneg
 
 ## AEM Mobile アプリダッシュボード {#the-aem-mobile-app-dashboard}
 
-カタログから AEM Mobile アプリケーションを選択すると、そのアプリケーションのダッシュボードが表示されます。ここでは、アプリの管理、統計の表示、モバイルアプリのコンテンツの構築、デプロイおよび管理を行うことができます。
+カタログから AEM Mobile アプリケーションを選択すると、そのアプリケーションのダッシュボードが表示されます。ここでは、アプリ、表示の統計、モバイルアプリのコンテンツの構築、デプロイ、管理を行うことができます。
 
 AEM Mobile ダッシュボードの各タイルの右下隅にある「...」をクリックして、詳細を表示または編集できます。
 
@@ -51,7 +54,7 @@ AEM Mobile ダッシュボードの各タイルの右下隅にある「...」を
 
 ### アプリを管理タイル {#the-manage-app-tile}
 
-アプリを管理タイルには、アプリケーションのアイコン、名前、説明、サポートされているプラットフォーム、更新用コールホーム URL およびバージョン情報が表示されます。このタイルをドリルダウンしてPhoneGapアプリケーション設定(config.xml)を編集し、管理し、様々なアプリケーションストアに送信して配布するためのアプリケーションの準備を行うことができます。
+アプリを管理タイルには、アプリケーションのアイコン、名前、説明、サポートされているプラットフォーム、更新用コールホーム URL およびバージョン情報が表示されます。このタイルをドリルダウンしてPhoneGapアプリケーション設定(config.xml)を編集、管理し、様々なアプリケーションストアに送信して配布するためのアプリケーションの準備を行うことができます。
 
 詳しくは[こちら](/help/mobile/phonegap-app-details-tile.md)を参照してください。
 
@@ -69,7 +72,7 @@ AEM Sites とほぼ同様に、AEM Mobile でコンテンツを作成、更新�
 
 AEM アプリケーション作成者は、コンテンツパッケージを使用して AEM でページコンテンツを管理し、開発チームに PhoneGap シェルアプリケーション（アプリケーションのフレームワークまたはインフラストラクチャ）を変更してもらい、その変更を利用者に迅速に公開することができます。配信のために様々なストアに再提出するよう、開発者に協力を求める必要はありません。
 
-コンテンツパッケージは、更新ごとにコンテンツリリースパッケージと見なされる ZIP ファイルを作成します。これらのパッケージには、アプリのレンダリング中に生成されるhtmlリソースとhtmlページが含まれ、最後の更新以降に変更されたファイルのみをパッケージ化できるインテリジェントです。
+コンテンツパッケージは、更新ごとにコンテンツリリースパッケージと見なされる ZIP ファイルを作成します。これらのパッケージには、アプリのレンダリング中に生成されるhtmlリソースとhtmlページが含まれ、インテリジェントなので、最後の更新以降に変更されたファイルのみをパッケージ化できます。
 
 The Manage Content Package Tile&#39;s **Type** column will display either &#39;App&#39; to signify Application Shell content, for example framework or infrastructure of the app managed by a developer or, &#39;Content&#39; which represents page content managed by the content author.
 
@@ -79,9 +82,9 @@ The Manage Content Package Tile&#39;s **Type** column will display either &#39;A
 
 「**ステージング済み**」列には、最新のコンテンツ更新がいつ作成されたかが示されます。新しいコンテンツ更新を作成して変更をステージングするには、タイル内の任意のレコードを開いて、新しい更新を作成します。
 
-「**発行済み**」列には、いつ最新のコンテンツ更新が公開され、利用者が使用できるようになったかが示されます。コンテンツを公開するには、まずそのコンテンツをステージングし、次にこのタイルにドリルダウンしてコンテンツリリースの詳細コンソールから公開し、更新を公開する必要があります。
+「**発行済み**」列には、いつ最新のコンテンツ更新が公開され、利用者が使用できるようになったかが示されます。コンテンツを公開するには、最初にそのコンテンツを公開し、次にこのタイルにドリルダウンしてコンテンツリリースの詳細コンソールから公開し、更新を公開する必要があります。
 
-![アプリケーションシェル用の](assets/chlimage_1-139.png) Content Release Tile ![ContentSyncパッケージ](do-not-localize/chlimage_1-5.png)
+![アプリケーションシェル用のコンテンツリリースタイル](assets/chlimage_1-139.png)![ContentSyncパッケージ](do-not-localize/chlimage_1-5.png)
 
 このアイコンは、アプリケーションシェルのコンテンツリリースパッケージを表します。
 
@@ -91,7 +94,7 @@ The Manage Content Package Tile&#39;s **Type** column will display either &#39;A
 
 ### PhoneGap Build タイル {#the-phonegap-build-tile}
 
-The **PhoneGap Build Tile** connects with [https://build.phonegap.com](https://build.phonegap.com) to build and host remote buids. ビルドが完了すると、ビルドはダウンロードとして、またはQRコードを介して直接デバイスに提供されます。
+**PhoneGap Buildタイル**[](https://build.phonegap.com) は、https://build.phonegap.comに接続して、リモートビディを構築し、ホストします。 ビルドが完了すると、ビルドはダウンロードとして、またはQRコード経由でデバイスに直接提供されます。
 
 または、デバイスソースをダウンロードし、[PhoneGap CLI](https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html) を使用してローカルにビルドできます。
 
@@ -113,7 +116,7 @@ AEM Mobile integerates with Adobe Analytics through [Adobe Mobile Services SDK](
 
 ### エンティティコンテンツを管理タイル {#the-manage-entity-content-tile}
 
-エンティティコンテンツを管理タイルでは、アプリの定義を追加および管理できます。アプリの定義は、アプリに適したスペース（およびその他の設定）を特定するための手段です。 これにより、アプリを再コンパイルする必要なく、新しいスペースを追加できます。 アプリの定義が更新され、新しいスペースの情報が含まれます。
+エンティティコンテンツを管理タイルでは、アプリの定義を追加および管理できます。アプリの定義は、アプリに適したスペース（およびその他の設定）を特定する手段です。 これにより、アプリを再コンパイルすることなく、新しいスペースを追加できます。 アプリの定義が更新され、新しいスペースの情報が含まれます。
 
 アプリの定義の作成および管理については、[こちら](/help/mobile/phonegap-app-definitions.md)を参照してください。
 
