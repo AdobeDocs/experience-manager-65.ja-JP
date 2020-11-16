@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 translation-type: tm+mt
 source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
+workflow-type: tm+mt
+source-wordcount: '606'
+ht-degree: 68%
 
 ---
 
@@ -29,7 +32,8 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
    * 「**タイトル**」を指定します。
    * オプションで、リポジトリにフレームワークの詳細を保存するノードの&#x200B;**名前**&#x200B;を指定できます。
-   * Select **Adobe Analytics Classifications**
+   * **Adobe Analytics分類の選択**
+
    「**作成**」をクリックします。
 
    ![フレームワークを作成ダイアログ](assets/aa-25.png)
@@ -46,7 +50,7 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
    | 競合時に上書き | 「**はい**」を選択すると、データの競合が上書きされます。デフォルトでは、これは「**いいえ**」に設定されています。 |
    | 削除処理 | 「**はい**」に設定すると、書き出された後に処理したノードが削除されます。デフォルトは、「**False**」です。 |
    | ジョブの書き出しに関する説明 | Adobe Classifications ジョブの説明を入力します。 |
-   | 通知電子メール | Adobe Classifications通知の電子メールアドレスを入力します。 |
+   | 通知電子メール | Adobe分類通知の電子メールアドレスを入力します。 |
    | レポートスイート | 読み込みジョブを実行するレポートスイートを入力します。 |
    | データセット | 読み込みジョブを実行するデータセット関連 ID を入力します。 |
    | 変換サービス | ドロップダウンメニューから、変換サービスの実装を選択します。 |
@@ -57,9 +61,9 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 ## ページサイズの変更 {#modifying-page-size}
 
-レコードは、ページで処理されます。デフォルトでは、Adobe分類はページサイズが1000のページを作成します。
+レコードは、ページで処理されます。デフォルトでは、「Adobeの分類」はページサイズが1000のページを作成します。
 
-1つのページのサイズは、Adobe分類の定義ごとに最大25,000個に設定でき、Felixコンソールから変更できます。 エクスポート中、Adobe Classificationsはソースノードをロックして、同時に変更が行われないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
+ページのサイズは、Adobe分類の定義ごとに最大25,000個に設定でき、Felixコンソールから変更できます。 エクスポート中、Adobe分類はソースノードをロックし、同時に変更が行われないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
 
 ページサイズを変更するには：
 
