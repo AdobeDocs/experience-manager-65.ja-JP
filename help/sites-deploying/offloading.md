@@ -138,7 +138,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
   <tr>
    <td>最小イベント遅延（秒）</td>
    <td>minEventDelay</td>
-   <td><p>トポロジに変更が発生した場合、状態の変更をTOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDに遅延する時間。 状態がTOPOLOGY_CHANGINGの場合に発生する各変更は、この時間だけ遅延を増やします。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td>
+   <td><p>トポロジに変更が発生した場合、状態の変更をTOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDに遅延する時間。状態がTOPOLOGY_CHANGINGの場合に発生する各変更は、この時間だけ遅延を増やします。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td>
    <td>3</td>
   </tr>
   <tr>
@@ -228,7 +228,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 | Web コンソールでのプロパティ名 | OSGi ID | 説明 |
 |---|---|---|
-| トピック許可リスト | job.consumermanager.whitelist | ローカル JobManager サービスによって処理されるトピックのリスト。&amp;ast；のデフォルト値 を指定すると、すべてのトピックが登録済みのTopicConsumerサービスに送信されます。 |
+| トピック許可リスト | job.consumermanager.whitelist | ローカル JobManager サービスによって処理されるトピックのリスト。&amp;ast；のデフォルト値を指定すると、すべてのトピックが登録済みのTopicConsumerサービスに送信されます。 |
 | トピックブロックリスト | job.consumermanager.blacklist | ローカル JobManager サービスによって処理されないトピックのリスト。 |
 
 ## オフロードのレプリケーションエージェントの作成 {#creating-replication-agents-for-offloading}
