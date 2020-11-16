@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '907'
+ht-degree: 81%
 
 ---
 
@@ -86,6 +89,7 @@ In addition to these, various other components are also available. You can use D
 
    * 許可されたコンポーネント
    * 設定
+
    **許可されたコンポーネント**
 
    On the **Allowed Components** tab, you define which components are available for the parsys.
@@ -95,6 +99,7 @@ In addition to these, various other components are also available. You can use D
    * マイナス記号はグループの中のすべてではなく少なくとも 1 つが選択されることを示します。
    * 名前でコンポーネントをフィルターするために、検索を使用できます。
    * コンポーネントグループ名の右側に示されるカウントは、フィルターに関係なく、そのグループで選択されているコンポーネントの総数を表します。
+
    ページコンポーネントごとに設定を定義します。子ページで同じテンプレートまたは（通常は整列された）ページコンポーネントを使用すると、対応する段落システムに同じ設定が適用されます。
 
    >[!NOTE]
@@ -130,11 +135,12 @@ In addition to these, various other components are also available. You can use D
    * メイン
    * 機能
    * スタイル
+
    **プロパティ**
 
    「**プロパティ**」タブを使用すると、コンポーネントの重要なデザインパラメーターを設定できます。画像コンポーネントの例では、画像の許可される最大サイズと最小サイズを定義できます。
 
-   **機能**
+   **特長**
 
    「**機能**」タブを使用すると、コンポーネントの追加の機能を有効または無効にできます。例えば、画像コンポーネントの場合は、画像の向き、使用可能な切り抜きオプション、および画像をアップロードできるかどうかを定義できます。
 
@@ -148,7 +154,7 @@ In addition to these, various other components are also available. You can use D
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-   「** Delete **」アイコンを使用して、複数エントリのダイアログ・リストからエントリを削除します。
+   「** Delete **」アイコンを使用して、複数入力のダイアログリストからエントリを削除します。
 
    ![](do-not-localize/screen_shot_2018-03-22at103809.png)
 
