@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 58%
 
 ---
 
@@ -34,8 +37,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >* [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
->* [AEM フォーム](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM フォーム](https://helpx.adobe.com/jp/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [翻訳プロジェクト](/help/sites-administering/tc-manage.md)
+
 >
 
 
@@ -93,14 +97,14 @@ Using the **Launcher** you can:
 
    >[!NOTE]
    >
-   >The **[Transient](/help/sites-developing/workflows.md#transient-workflows)**indicator shows workflows for which the workflow history will not be persisted.
+   >The **[Transient](/help/sites-developing/workflows.md#transient-workflows)** indicator shows workflows for which the workflow history will not be persisted.
 
 1. Select **Start Workflow** from the toolbar.
 1. ワークフローを実行ダイアログが開き、次の内容を指定できます。
 
    * **ペイロード**
 
-      ページ、ノード、アセット、パッケージなどのリソースを指定できます。
+      これは、ページ、ノード、アセット、パッケージなどのリソースに含まれる場合があります。
 
    * **タイトル**
 
@@ -108,7 +112,7 @@ Using the **Launcher** you can:
 
    * **コメント**
 
-      このインスタンスの詳細を示すのに役立つ、オプションのコメントです。
+      このインスタンスの詳細を示すのに役立つオプションのコメントです。
    ![wf-104](assets/wf-104.png)
 
 ## ランチャー設定の作成 {#creating-a-launcher-configuration}
@@ -120,43 +124,44 @@ Using the **Launcher** you can:
 
    * **イベントタイプ**
 
-      ワークフローを起動するイベントタイプ：
+      ワークフローを起動するイベントタイプ:
 
       * 作成済み
       * 変更済み
       * 削除
    * **Notetype**
 
-      ワークフローランチャーが適用するノードの種類です。
+      ワークフローランチャーを適用するノードの種類です。
 
    * **パス**
 
-      ワークフローランチャーが適用するパスです。
+      ワークフローランチャーを適用するパスです。
 
    * **実行モード**
 
-      ワークフローランチャーが適用するサーバーの種類です。 Select **Author**, **Publish**, or **Author &amp; Publish**.
+      ワークフローランチャーを適用するサーバーの種類です。 Select **Author**, **Publish**, or **Author &amp; Publish**.
 
    * **条件**
 
-      評価時にワークフローを起動するかどうかを決定するノード値の条件のlistです。 例えば、次の条件では、ノードの 1 つのプロパティ名に「ユーザー」という値が含まれる場合、ワークフローが起動されます。
+      ノード値の条件のリスト。評価される際に、ワークフローを起動するかどうかを決定します。 例えば、次の条件では、ノードの 1 つのプロパティ名に「ユーザー」という値が含まれる場合、ワークフローが起動されます。
 
       name==User
 
-   * **機能**
+   * **特長**
 
-      有効にする機能のリストです。 ドロップダウンセレクターを使用して、必要な機能を選択します。
+      有効にする機能のリスト。 ドロップダウンセレクターを使用して、必要な機能を選択します。
 
    * **無効にされた機能**
-   無効にする機能のリストです。 ドロップダウンセレクターを使用して、必要な機能を選択します。
+
+   無効にする機能のリスト。 ドロップダウンセレクターを使用して、必要な機能を選択します。
 
    * **ワークフローモデル**
 
-      定義された条件の下のNodetypeまたはPathでイベントタイプが発生した場合に起動するワークフローです。
+      定義された条件の下のNodetypeやPathでイベントタイプが発生した場合に起動するワークフローです。
 
    * **説明**
 
-      ランチャーの設定を説明し、識別する独自のテキスト。
+      ランチャーの設定について説明し、特定するための独自のテキスト。
 
    * **アクティベート**
 
@@ -166,12 +171,13 @@ Using the **Launcher** you can:
       * （設定プロパティが満たされた場合でも）ワークフローを実行しないときは、「**無効にする**」を選択します。
    * **リストを除外**
 
-      ワークフローをトリガする必要があるかどうかを決定する際に除外する（つまり無視する）JCRイベントを指定します。
+      ワークフローをトリガーする必要があるかどうかを決定する際に除外する（無視する）JCRイベントを指定します。
 
-      このランチャープロパティは、項目のコンマ区切りリストです。&quot;
+      このランチャープロパティは、項目をカンマで区切ったリストです。&quot;
 
-      * `property-name` 指定したプロパテ `jcr` ィ名でトリガーされたイベントを無視します。&quot;
-      * `event-user-data:<*someValue*>` は、 `*<someValue*``user-data` API [ (https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)を介して設定された> `ObservationManager` を含むイベントを無視します]。
+      * `property-name` 指定したプロパティ名でトリガーされた `jcr` イベントを無視します。&quot;
+      * `event-user-data:<*someValue*>` は、 `*<someValue*`API `user-data`[ (https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)で `ObservationManager`]設定された>を含むイベントを無視します。
+
       次に例を示します。
 
       `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
