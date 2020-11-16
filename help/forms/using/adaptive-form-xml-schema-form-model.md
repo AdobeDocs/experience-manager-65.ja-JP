@@ -10,6 +10,9 @@ discoiquuid: 0d6c12b3-3a70-48e9-a83b-974360a8b0b6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+workflow-type: tm+mt
+source-wordcount: '1081'
+ht-degree: 89%
 
 ---
 
@@ -167,13 +170,14 @@ XML スキーマの例を示します。
 >
 >* 要素名の最初の文字を大文字にします。
 >* キャメルケースの単語の境界にスペースを挿入します。
+
 >
 >
 For example, if you add the `userFirstName` schema element, the caption generated in the adaptive form is `User First Name`.
 
 ## アダプティブフォームコンポーネントで許容される値の制限 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-XMLスキーマ要素に次の制限を追加して、アダプティブフォームコンポーネントに許容される値を制限できます。
+XMLスキーマ要素に次の制限を追加して、アダプティブフォームコンポーネントに許容される値を制限することができます。
 
 <table>
  <tbody>
@@ -185,7 +189,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>totalDigits</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>コンポーネントで許可される最大桁数を指定します。桁数は 0 以上である必要があります。</p> </td>
    <td>
     <ul>
@@ -195,7 +199,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>maximum</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>数値および日付の上限を指定します。デフォルトでは、最大値が含まれます。</p> </td>
    <td>
     <ul>
@@ -206,7 +210,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>minimum</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>数値および日付の下限を指定します。デフォルトでは、最小値が含まれます。</p> </td>
    <td>
     <ul>
@@ -239,7 +243,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>minLength</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>コンポーネントで許可される最小文字数を指定します。最小の長さは 0 以上である必要があります。</p> </td>
    <td>
     <ul>
@@ -248,7 +252,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>maxLength</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>コンポーネントで許可される最大文字数を指定します。最大長さには 0 より大きい数を指定する必要があります。</p> </td>
    <td>
     <ul>
@@ -257,7 +261,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>length</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>コンポーネントで許可される正確な文字数を指定します。長さは 0 以上である必要があります。</p> </td>
    <td>
     <ul>
@@ -266,20 +270,20 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>fractionDigits</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>コンポーネントで許可される小数の位を指定します。fractionDigits は 0 以上である必要があります。</p> </td>
    <td>
     <ul>
-     <li> 浮動小数点数型または小数型の数値ボックス</li>
+     <li> 浮動小数点数または小数のデータタイプを持つ数値ボックス</li>
     </ul> </td>
   </tr>
   <tr>
    <td><p><code>pattern</code></p> </td>
-   <td><p>文字列</p> </td>
+   <td><p>String</p> </td>
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td>
    <td>
     <ul>
-     <li>XSDスキーマにマッピングされるすべてのアダプティブフォームコンポーネント </li>
+     <li>XSDスキーマにマップされているすべてのアダプティブフォームコンポーネント </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -297,7 +301,7 @@ The bindRef</code> field shows the association between a tree element and an ele
 
 >[!NOTE]
 >
->Attributes have an `@` symbol in their `bindRef`value to distinguish them from elements. For example, `/config/projectDetails/@duration`.
+>Attributes have an `@` symbol in their `bindRef`value to distinguish them from elements. 例： `/config/projectDetails/@duration`
 
 **繰り返し可能なサブフォーム（minOccours 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
 
