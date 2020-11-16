@@ -39,11 +39,11 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、印刷チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**印刷テンプレート：** [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
+**印刷テンプレート：**[create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
 
-**Form Data Model:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Form Data Model:**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**ドキュメントフラグメント：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
 **レイアウトフラグメント：** [table_lf](../../forms/using/create-templates-print-web.md)
 
@@ -104,11 +104,11 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、Web チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**Webテンプレート：** [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
+**Webテンプレート：**[Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
 
-**Form Data Model:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Form Data Model:**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**ドキュメントフラグメント：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
 **画像：** PayNowWebおよびValueAddedServicesWeb
 
