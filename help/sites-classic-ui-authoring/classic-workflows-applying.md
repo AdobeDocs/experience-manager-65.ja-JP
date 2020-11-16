@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 86%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ワークフローは、Web サイトコンソールから、またはページの編集中にはサイドキックから開始できます。
 
-The **Status** column in the **Websites** console indicates whether a workflow has been applied to a page:
+**Webサイトコンソールの「** ステータス **** 」列には、ワークフローがページに適用されているかどうかが示されます。
 
 ![workflowstatus](assets/workflowstatus.png)
 
