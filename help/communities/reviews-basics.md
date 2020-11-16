@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 62669a9d-2107-4644-a4bf-143d0ac148b3
 translation-type: tm+mt
 source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 53%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 Reviews is a composite component based on a [comment system](essentials-comments.md) which contains one or more [rating](rating-basics.md) (tally) components.
 
-匿名でのレビュー投稿はサポートされていません。サイト訪問者は、レビューを追加するには登録し、サインインする必要があります。 サインインした訪問者（メンバー）は、いつでもレビューを更新できます。
+匿名でのレビュー投稿はサポートされていません。サイト訪問者は、レビューを追加するには登録してサインインする必要があります。 サインインした訪問者（メンバ）は、いつでもレビューを更新できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -60,8 +63,8 @@ Reviews is a composite component based on a [comment system](essentials-comments
 
 | **resourceType** | social/reviews/components/hbs/summary |
 |---|---|
-| [**インクルード可能&#x200B;**](scf.md#add-or-include-a-communities-component) | はい — プロパティは*design *modeで編集可能 |
-| [**clientllibs **](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
+| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | はい — プロパティは*design *modeで編集可能 |
+| [**clientllibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
 | **テンプレート** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
 | **プロパティ** | See [Using Reviews](reviews.md) |
@@ -86,8 +89,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリの使用方法の概要
-* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRP](accessing-ugc-with-srp.md) - Coding Guidelinesを使用したUGCへのアクセス
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
 * [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
