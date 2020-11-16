@@ -38,7 +38,7 @@ AEM Forms Workspace では、以下のタスクを実行できます。
 
 **開始プロセス：** AEM Formsワークスペースは、組織が設計および設定したとおりにプロセスをカテゴリします。 頻繁に使用するカテゴリをお気に入りに追加して、これらのカテゴリにすばやくアクセスできます。プロセスの開始時は通常、Forms ワークフローによってコントロールされるビジネスプロセスを開始するためのフォームに入力する必要があります。詳しくは、「[プロセスの開始](/help/forms/using/starting-processes.md)」を参照してください。
 
-**View and act upon tasks:** When you view your To-do lists, you see tasks from a business process that are assigned to you, or to any groups that you belong to, or are the shared tasks of other users. 必要に応じてタスクを開き、操作して完了することができます。タスクを完了するには通常、情報を入力し、フォームを承認するか拒否します。詳しくは、「[TODO リストの操作](/help/forms/using/todo-lists.md)」を参照してください。
+**表示とタスクに基づく行動：** TODOリストを表示すると、割り当てられているビジネスプロセスのタスク、または自分が所属するグループ、あるいは他のユーザーの共有タスクが表示されます。 必要に応じてタスクを開き、操作して完了することができます。タスクを完了するには通常、情報を入力し、フォームを承認するか拒否します。詳しくは、「[TODO リストの操作](/help/forms/using/todo-lists.md)」を参照してください。
 
 **タスクの追跡**：タスクを追跡するには、AEM Forms Workspace の「追跡」タブを使用します。開始または参加したアクティブなプロセスおよび完了したプロセスを検索できます。プロセスに含まれていたタスク、割り当ておよびフォームを表示できます。また、既に開始したプロセスのフォームデータを使用して、新しいプロセスを開始することもできます。詳しくは、「[プロセスの追跡](/help/forms/using/tracking-processes.md)」を参照してください。
 
