@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '977'
+ht-degree: 75%
 
 ---
 
@@ -19,8 +22,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->アドビでは、この機能をさらに強化する予定はありません(「Managing Leads and Lists」)。
->推奨事項は、 [Adobe CampaignとAEM統合を活用することです](/help/sites-administering/campaign.md)。
+>Adobeは、この機能をさらに強化する予定はありません(リードとリストの管理)。
+>推奨事項は、 [Adobe CampaignとAEM統合の活用](/help/sites-administering/campaign.md)。
 
 Users can be asked to subscribe to **Email Service Provider&#39;s** mailing lists with the help of the **Form** component used on an AEM web page. 電子メールサービスのメーリングリストの購読用のサインアップフォームを使用して AEM ページを準備するには、対応するサービス設定を潜在的購読者が訪問する AEM ページに適用する必要があります。
 
@@ -101,7 +104,7 @@ AEM ページを設定するには：
 1. In the **Form** drop-down menu, select **E-mail Service: Send auto responder email.**
 1. **電子メールを選択します** （これは、自動応答用の電子メールとして送信される電子メールです）。
 
-1. **「分類」を選択します** （この分類は電子メールの送信に使用されます）。
+1. **「分類** 」を選択します（この分類は電子メールの送信に使用されます）。
 1. Select the **Thank you** page (the page where users are directed to once they submit the form).
 
    In the **Form** tab, select the thank you page you want users to go to after they submit the form. (If left blank, the form redisplays upon submission.) 「**OK**」をクリックします。
