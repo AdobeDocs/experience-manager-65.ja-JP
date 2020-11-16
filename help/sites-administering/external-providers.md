@@ -12,6 +12,9 @@ discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+workflow-type: tm+mt
+source-wordcount: '442'
+ht-degree: 79%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
 
 Analytics は、Web サイトがどのように使用されているかに関する、重要で興味深い情報を提供できます。
 
-次に示すように、適切なサービスとの統合には、あらかじめ用意されている様々な設定を使用できます。
+次に示すように、あらかじめ用意されている様々な設定を、適切なサービスとの統合に使用できます。
 
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
