@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: aab9d622-d76b-4100-9ca6-e5b86f543381
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '129'
+ht-degree: 67%
 
 ---
 
@@ -21,4 +24,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## リモートエンドポイントの設定 {#remoting-endpoint-settings}
 
-**** Flexクライアント認証方法：呼び出されたサービスがセキュリティが有効になっている場合、呼び出された操作が匿名呼び出しをサポートせず、クライアントが無効または無効な資格情報を渡す場合に、サーバーがクライアントに返す応答のタイプを決定します。
+**Flexクライアント認証方法：** 呼び出されたサービスがセキュリティが有効になっている場合に、呼び出された操作で匿名呼び出しがサポートされず、クライアントがnoまたはinvalidの資格情報を渡すときに、サーバーがクライアントに返す応答の種類を決定します。
