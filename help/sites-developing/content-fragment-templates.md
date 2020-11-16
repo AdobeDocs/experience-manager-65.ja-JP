@@ -141,7 +141,7 @@ conf
     <tr>
      <td><code>version</code></td>
      <td><p><code>Long</code></p> <p>必須</p> </td>
-     <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>: 現在、このパラメーターはに設定する必要があり <code>2</code>ます。<br /> </p> </td>
+     <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>:現在、このパラメーターはに設定する必要があり <code>2</code>ます。<br /> </p> </td>
     </tr>
    </tbody>
   </table>
