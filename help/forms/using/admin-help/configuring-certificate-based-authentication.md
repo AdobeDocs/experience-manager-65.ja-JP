@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: d958ae65-3008-4d68-9e11-4346e149827f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '747'
+ht-degree: 94%
 
 ---
 
@@ -54,11 +57,12 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
    regex では、以下の文字を使用できます。
 
-   * にあることで画像コンポーネントに問題が生じる。（任意の文字）
-   * &amp;ast;（0回以上）
+   * ：（任意の文字）
+   * &amp;ast;（0回以上の繰り返し）
    * () （グループを括弧で囲んで指定）
    * ¥ （regex 文字を正規文字にエスケープするために使用）
    * $n （n 番目のグループを表すために使用）
+
    正規表現の例：
 
    * 「Alex Pink (Authentication)」から「Alex Pink」を抽出するには
