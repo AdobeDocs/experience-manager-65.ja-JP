@@ -12,6 +12,9 @@ discoiquuid: bee7144e-4276-4e81-a3a0-5b7273af34fe
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '1552'
+ht-degree: 84%
 
 ---
 
@@ -55,7 +58,7 @@ AEM を Salesforce と連携するよう設定するには、次の手順を実�
 
    >[!NOTE]
    >
-   >新しい設定は、新しいページ（**http://localhost:4502/etc/cloudservices/salesforce/developer.html**）にリダイレクトします。これは、Salesforceでリモートアクセスアプリケーションを作成する際にコールバックURLで指定する必要がある値と完全に同じです。 これらの値が一致しなければなりません。
+   >新しい設定は、新しいページ（**http://localhost:4502/etc/cloudservices/salesforce/developer.html**）にリダイレクトします。これは、Salesforceでリモートアクセスアプリケーションを作成する際に、コールバックURLで指定する必要があるのと完全に同じ値です。 これらの値が一致しなければなりません。
 
 1. Log in to your salesforce account (or if you do not have one, create one at [https://developer.force.com](https://developer.force.com).)
 1. In Salesforce, navigate to **Create** > **Apps** to get to **Connected Apps** (in former versions of salesforce, the workflow was **Deploy** > **Remote Access**).
