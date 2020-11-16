@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: c614a7ff-0d13-4407-bda0-c0a402a13dcd
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '973'
+ht-degree: 62%
 
 ---
 
@@ -29,11 +32,11 @@ AEM Mobile プロジェクトには、ページ、JavaScript と CSS のクラ�
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-AEM の慣例により、アプリの最初のページは、アプリのデフォルト言語（Geometrixx とスターターキットのどちらの場合でも「en」）として機能するいずれかの子ページへのリダイレクトである必要があります。トップレベルのロケールページは、通常、Over-the-air Content Syncアップデートのインストールに必要な初期化を管理する「スプラッシュページ」コンポーネント(/libs/mobileapps/components/splash-page)から継承されます(contentInitコードは/etc/clientlibs/mobile/content-sync/js/contentInit.jsで入手できます)。
+AEM の慣例により、アプリの最初のページは、アプリのデフォルト言語（Geometrixx とスターターキットのどちらの場合でも「en」）として機能するいずれかの子ページへのリダイレクトである必要があります。トップレベルのロケールページは通常、Over-the-air Content Syncアップデートのインストールをサポートするために必要な初期化を行う基礎となる「splash-page」コンポーネント(/libs/mobileapps/components/splash-page)から継承します(contentInitコードは/etc/clientlibs/mobile/content-sync/js/contentInit.jsにあります)。
 
 ## テンプレートおよびコンポーネント {#templates-and-components}
 
-アプリのテンプレートおよびコンポーネントのコードは、/apps/&lt;ブランド名>/&lt;アプリ名> にあります。規則に従って、テンプレートとコンポーネントコードを/apps/&lt;brand name>/&lt;app name>に配置する必要があります。 このパターンは、AEM のサイトでの作業経験がある開発者にはよく知られています。このパターンに従うのは通常、パブリッシュインスタンスでは /apps/ への匿名アクセスがデフォルトでロックされるからです。その結果、生の JSP コードが潜在的な攻撃者に対して非表示になります。
+アプリのテンプレートおよびコンポーネントのコードは、/apps/&lt;ブランド名>/&lt;アプリ名> にあります。規則に従って、テンプレートとコンポーネントコードは/apps/&lt;brand name>/&lt;app name>に配置する必要があります。 このパターンは、AEM のサイトでの作業経験がある開発者にはよく知られています。このパターンに従うのは通常、パブリッシュインスタンスでは /apps/ への匿名アクセスがデフォルトでロックされるからです。その結果、生の JSP コードが潜在的な攻撃者に対して非表示になります。
 
 App specific templates can be configured to only be presented by using the `allowedPaths` property node on the template itself, and setting its value to &#39;/content/mobileapps(/.&amp;ast;?&#39; に設定することです。テンプレートを単一のアプリでのみ使用する場合には、さらに具体的な値に設定することもできます。The `allowedParents` and `allowedChildren` properties can also be leveraged for very fine grained control of which templates will be available to an author based on the where the new page is being created.
 
@@ -45,7 +48,7 @@ Authorable page components, wishing to leverage AngularJS, have an equivalent `s
 
 クライアントライブラリに関して、開発者は、リポジトリ内のどこに配置するかについてのオプションがいくつかあります。次のパターンはガイダンスとして示したものであり、固定の要件ではありません。
 
-clientside コードが単独で機能でき、アプリケーションの特定のコンポーネントに関連していない（つまり、他のアプリケーションで再利用できる）場合には、/etc/clientlibs/&lt;ブランド名>/&lt;ライブラリ名> に格納することをお勧めします。一方、clientlib が単一のアプリに固有のものである場合には、アプリのデザインノードの子としてネストできます（/etc/designs/phonegap/&lt;ブランド名>/&lt;アプリ名>/clientlibs）。この clientlib のカテゴリは、他のライブラリで使用しないでください。必要に応じて他のライブラリを埋め込むために使用してください。このパターンに従うと、開発者はクライアントライブラリをアプリに追加するたびに新規コンテンツ同期設定を追加する必要がなくなり、単にアプリの design clientlib の embeds プロパティを更新するだけでよくなります。例えば、/content/phonegap/geometrixx-outdoors/jcr:content/page-app/app-config/clientlibs-allにあるGeometrixx clientlibs-all Content Sync configノードを見てみましょう。
+clientside コードが単独で機能でき、アプリケーションの特定のコンポーネントに関連していない（つまり、他のアプリケーションで再利用できる）場合には、/etc/clientlibs/&lt;ブランド名>/&lt;ライブラリ名> に格納することをお勧めします。一方、clientlib が単一のアプリに固有のものである場合には、アプリのデザインノードの子としてネストできます（/etc/designs/phonegap/&lt;ブランド名>/&lt;アプリ名>/clientlibs）。この clientlib のカテゴリは、他のライブラリで使用しないでください。必要に応じて他のライブラリを埋め込むために使用してください。このパターンに従うと、開発者はクライアントライブラリをアプリに追加するたびに新規コンテンツ同期設定を追加する必要がなくなり、単にアプリの design clientlib の embeds プロパティを更新するだけでよくなります。例えば、/content/phonegap/geometrixx-outdoors/en/jcr:content/page-app/app-config/clientlibs-allのGeometrixxclientlibs-allコンテンツ同期設定ノードを見てみましょう。
 
 クライアント側コードが特定のコンポーネントに密接に結合されている場合は、そのコードを /apps/ 内のコンポーネントの場所の下にネストされたクライアントライブラリに配置し、そのカテゴリをアプリの「design」clientlib に埋め込みます。
 
