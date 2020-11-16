@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: d0d29b99-53d4-4b0d-947b-39d91b381de7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '444'
+ht-degree: 86%
 
 ---
 
@@ -29,7 +32,7 @@ On-Demand アプリをクラウド設定に関連付けることで、Adobe Expe
 
 >[!CAUTION]
 >
->オンデマンドアプリのクラウド設定を開始する前に、AEM mobileのプロビジョニングとAEM Mobile On-Demand Servicesクライアントの設定に関する知識が必要です。
+>On-Demandアプリのクラウド設定を開始する前に、「AEM MobileプロビジョニングとAEM Mobile On-demand Servicesクライアントの設定」を理解しておく必要があります。
 >
 >For details, See [Setting up AEM Mobile On-Demand Services](/help/mobile/aem-mobile-setup.md) in the Administering section.
 
