@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3cc7efc5-bcb2-41c9-b78b-308f6b7a298e
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '718'
+ht-degree: 67%
 
 ---
 
@@ -29,9 +32,9 @@ In a standard installation the default settings are defined as properties on the
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+>`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 
 ## 取り消しとやり直しの設定 {#configuring-undo-and-redo}
 
@@ -41,72 +44,83 @@ In a standard installation the default settings are defined as properties on the
 >
 >AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-以下に、Webコンソールに表示されるプロパティと、対応するOSGiパラメーターの名前、説明とデフォルト値（該当する場合）を示します。
+次のリストは、Webコンソールに表示されるプロパティの後に、対応するOSGiパラメーターの名前と、説明とデフォルト値（該当する場合）を示します。
 
-* **Enable**( `cq.wcm.undo.enabled`)
+* **Enable（有効）**
+( 
+`cq.wcm.undo.enabled`)
 
    * **説明**：ページの作成者が変更内容を取り消しおよびやり直しできるかどうかを決定します。
    * **デフォルト**: `Selected`
-   * **タイプ**: `Boolean`
+   * **型**：`Boolean`
 
 * **パス**
-( `cq.wcm.undo.path`)
+( 
+`cq.wcm.undo.path`)
 
-   * **説明**：取り消しのバイナリデータを保持するリポジトリのパス。作成者が画像などのバイナリデータを変更すると、元のバージョンのデータがここに保持されます。バイナリデータの変更を取り消すと、このバイナリの元に戻すデータがページに復元されます。
+   * **説明**：取り消しのバイナリデータを保持するリポジトリのパス。作成者が画像などのバイナリデータを変更すると、元のバージョンのデータがここに保持されます。バイナリデータに対する変更を取り消すと、このバイナリの取り消しデータがページに復元されます。
    * **デフォルト**: `/var/undo`
-   * **タイプ**: `String`
+   * **型**：`String`
+
    >[!NOTE]
    >
    >By default, only administrators can access the `/var/undo` node. 作成者によるバイナリコンテンツの取り消しおよびやり直しが可能になるのは、バイナリ取り消しデータへのアクセスを許可された後のみです。
 
 * **Min.validity**
-( `cq.wcm.undo.validity`)
+( 
+`cq.wcm.undo.validity`)
 
-   * **説明**:バイナリの元に戻すデータが保存される最小時間（時間単位）です。 この期間を過ぎると、ディスク容量を節約するために、バイナリデータは削除可能になります。
+   * **説明**:バイナリの元に戻すデータが格納される最小時間（時間単位）です。 この期間を過ぎると、ディスク容量を節約するために、バイナリデータは削除可能になります。
    * **デフォルト**: `10`
-   * **タイプ**: `Integer`
+   * **型**：`Integer`
 
 * **手順**
-( `cq.wcm.undo.steps`)
+( 
+`cq.wcm.undo.steps`)
 
-   * **説明**:取り消し履歴に保存されるページアクションの最大数です。
+   * **説明**:元に戻す履歴に格納されるページアクションの最大数です。
    * **デフォルト**: `20`
-   * **タイプ**: `Integer`
+   * **型**：`Integer`
 
-* **Persistence**( `cq.wcm.undo.persistence`)
+* **永続性**
+( 
+`cq.wcm.undo.persistence`)
 
    * **説明**:元に戻す履歴を保持するクラス。 2 つの永続クラスが用意されています。
 
       * `CQ.undo.persistence.WindowNamePersistence`：window.name プロパティを使用して履歴を保持します。
       * `CQ.undo.persistence.CookiePersistance`:cookieを使用して履歴を保持します。
    * **デフォルト**: `CQ.undo.persistence.WindowNamePersistence`
-   * **タイプ**: `String`
+   * **型**：`String`
 
 
-* **永続化モード**( `cq.wcm.undo.persistence.mode`)
+* **永続化モード**( 
+`cq.wcm.undo.persistence.mode`)
 
-   * **説明**:取り消し履歴を保持するタイミングを指定します。 ページが編集されるごとに取り消し履歴を保持するには、このオプションをオンにします。ページの再読み込みがおこなわれるとき（ユーザーが別のページに移動するときなど）のみに保持する場合は、このオプションをオフにします。
+   * **説明**:取り消し履歴が持続するタイミングを決定します。 ページが編集されるごとに取り消し履歴を保持するには、このオプションをオンにします。ページの再読み込みがおこなわれるとき（ユーザーが別のページに移動するときなど）のみに保持する場合は、このオプションをオフにします。
 
         取り消し履歴の保持には、Web ブラウザーのリソースを使用します。ページの編集に対してユーザーのブラウザーの反応が遅い場合は、ページの再読み込み時に取り消し履歴を保持するようにしてください。
 
    * **デフォルト**: `Selected`
-   * **タイプ**: `Boolean`
+   * **型**：`Boolean`
 
-* **Marker mode**( `cq.wcm.undo.markermode`)
+* **Marker mode**( 
+`cq.wcm.undo.markermode`)
 
    * **説明**:取り消しまたはやり直しが発生した場合に影響を受ける段落を示す視覚的キューを指定します。 有効な値は次のとおりです。
 
       * flash：段落の選択インジケーターが一時的にフラッシュします。
       * select：段落が選択されています。
    * **デフォルト**: `flash`
-   * **タイプ**: `String`
+   * **型**：`String`
 
 
-* **良いコンポーネント**( `cq.wcm.undo.whitelist`)
+* **良いコンポーネント**( 
+`cq.wcm.undo.whitelist`)
 
    * **説明**：取り消しコマンドややり直しコマンドの影響を及ぼしたいコンポーネントのリスト。取り消しややり直しにより正しく機能するコンポーネントパスをこのリストに追加します。アスタリスク(&amp;ast;)を追加してコンポーネントのグループを指定します。
 
-      * 次の値は基礎文字コンポーネントを指定します。
+      * 次の値は、基礎文字コンポーネントを指定します。
 
          `foundation/components/text`
 
@@ -116,15 +130,17 @@ In a standard installation the default settings are defined as properties on the
    * このリストにないコンポーネントに対して取り消しまたはやり直しが実行されると、コマンドが信頼できない可能性があることを示すメッセージが表示されます。
 
    * **デフォルト**:このプロパティには、AEMが提供する多くのコンポーネントが入力されます。
-   * **タイプ**: `String[]`
+   * **型**：`String[]`
 
 
-* **不良コンポーネント**( `cq.wcm.undo.blacklist`)
+* **不良コンポーネント**( 
+`cq.wcm.undo.blacklist`)
 
-   * **説明**:元に戻すコマンドの影響を受けないコンポーネントやコンポーネント操作のリスト。 取り消しコマンドで正しく動作しないコンポーネントやコンポーネントの操作を追加します。
+   * **説明**:元に戻すコマンドの影響を受けないコンポーネントやコンポーネントのリスト。 取り消しコマンドで正しく動作しないコンポーネントやコンポーネントの操作を追加します。
 
       * 取り消し履歴にあるコンポーネントの操作がまったく必要ない場合はコンポーネントのパスを追加します。例：`collab/forum/components/post`
       * Append a colon (:) and an operation to the path when you want that specific operation to be omitted from the undo history (other operations function correctly), for example `collab/forum/components/post:insertParagraph.`
+
    >[!NOTE]
    >
    >リストに掲載されている操作でも、取り消し履歴には追加されます。取り消し履歴の **Bad Component** 操作の前に存在する操作は取り消すことができません。
@@ -136,7 +152,7 @@ In a standard installation the default settings are defined as properties on the
       * `moveParagraph`：段落が別の場所に移動されます。
       * `updateParagraph`：段落のプロパティが変更されます。
    * **デフォルト**：このプロパティには、複数のコンポーネントの操作が指定されます。
-   * **タイプ**: `String[]`
+   * **型**：`String[]`
 
 
 
