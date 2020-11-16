@@ -68,7 +68,7 @@ Batch APIは監視フォルダーと組み合わせて使用することも、�
 
 ### Batch APIと監視フォルダーの連携 {#using-the-batch-api-watched-folders}
 
-APIを簡単に体験できるように、AEM FormsはBatch APIを使用するように設定されたWatched Folderサービスをすぐに提供できます。 AEM FormsUIを介してサービスにアクセスし、複数の対話型通信を生成できます。 また、必要に応じてカスタムサービスを作成することもできます。 次に示す方法を使用して、監視フォルダーとBatch APIを使用できます。
+APIを簡単に体験できるように、AEM FormsではBatch APIを使用するように設定されたWatched Folderサービスをすぐに使用できます。 AEM FormsUIを介してこのサービスにアクセスし、複数の対話型通信を生成できます。 また、必要に応じてカスタムサービスを作成することもできます。 次に示す方法を使用して、監視フォルダーとBatch APIを使用できます。
 
 * インタラクティブな通信を生成するために、JSONファイル形式で入力データ（レコード）を指定する
 * 外部データソースに保存され、フォームデータモデルを介してアクセスされる入力データ（レコード）を使用して、インタラクティブな通信を作成する
@@ -81,7 +81,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
 
 1. Batch APIを使用する [ように監視フォルダーを作成](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 、設定します。
    1. AEM Forms作成者インスタンスにログインします。
-   1. **[!UICONTROL ツール]** / **[!UICONTROL フォーム]** /監視フォルダーの ****&#x200B;設定に移動します。 「**[!UICONTROL 新規]**」をタップします。
+   1. **[!UICONTROL ツール]** / **[!UICONTROL Forms]** /監視フォルダーの **[!UICONTROL 設定に移動します]**。 「**[!UICONTROL 新規]**」をタップします。
    1. フォルダーの **[!UICONTROL 名前]** と物理 **** パスを指定します。 例： `c:\batchprocessing`
    1. 「次を使用してフ **[!UICONTROL ァイルを]** 処理」フィールドで「 **[!UICONTROL サービス]** 」オプションを選択します。
    1. 「サー **[!UICONTROL ビス名]** 」フィールドで、com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl **** サービスを選択します。
@@ -93,7 +93,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
       |--- |--- |--- |
       | templatePath | String | 使用する対話型通信テンプレートのパスを指定します。 例：/content/dam/formsanddocuments/testsample/mediumic これは必須プロパティです。 |
       | recordPath | String | recordPathフィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPathフィールドの値として設定できます。 例えば、/employee/Idを指定した場合、idフィールドの値は、対応する対話型通信の名前になります。 デフォルト値はランダム [ランダムUUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())です。 |
-      | usePrefillService | Boolean | 値をFalseに設定します。 usePrefillServiceパラメーターを使用すると、対応する対話型通信用に設定された事前入力サービスから取得したデータを使用して、対話型通信を事前入力できます。 usePrefillServiceがtrueに設定されている場合、（各レコードの）入力JSONデータはFDM引数として扱われます。 デフォルト値は false です。 |
+      | usePrefillService | Boolean | 値をFalseに設定します。 usePrefillServiceパラメーターを使用すると、対応する対話型通信用に設定された事前入力サービスから取得したデータを使用して、対話型通信を事前入力できます。 usePrefillServiceがtrueに設定されている場合、（レコードごとの）入力JSONデータはFDM引数として扱われます。 デフォルト値は false です。 |
       | batchType | String | 値をPRINT、WEBまたはWEB_AND_PRINTに設定します。 デフォルト値はWEB_AND_PRINTです。 |
       | locale | String | Outputのインタラクティブ通信のロケールを指定します。 標準搭載のサービスではロケールオプションを使用しませんが、カスタムサービスを作成してローカライズされたインタラクティブ通信を生成することができます。 デフォルト値はen_USです。 |
 
@@ -143,7 +143,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
 
 1. Batch APIサービスを使用する [ように監視フォルダーを作成](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 、設定します。
    1. AEM Forms作成者インスタンスにログインします。
-   1. **[!UICONTROL ツール]** / **[!UICONTROL フォーム]** /監視フォルダーの ****&#x200B;設定に移動します。 「**[!UICONTROL 新規]**」をタップします。
+   1. **[!UICONTROL ツール]** / **[!UICONTROL Forms]** /監視フォルダーの **[!UICONTROL 設定に移動します]**。 「**[!UICONTROL 新規]**」をタップします。
    1. フォルダーの **[!UICONTROL 名前]** と物理 **** パスを指定します。 例： `c:\batchprocessing`
    1. 「次を使用してフ **[!UICONTROL ァイルを]** 処理」フィールドで「 **[!UICONTROL サービス]** 」オプションを選択します。
    1. 「サー **[!UICONTROL ビス名]** 」フィールドで、com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl **** サービスを選択します。
@@ -155,7 +155,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
       |--- |--- |--- |
       | templatePath | String | 使用する対話型通信テンプレートのパスを指定します。 例：/content/dam/formsanddocuments/testsample/mediumic これは必須プロパティです。 |
       | recordPath | String | recordPathフィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPathフィールドの値として設定できます。 例えば、/employee/Idを指定した場合、idフィールドの値は、対応する対話型通信の名前になります。 デフォルト値はランダム [ランダムUUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())です。 |  |
-      | usePrefillService | Boolean | 値をTrueに設定します。 デフォルト値は false です。この値をtrueに設定すると、Batch APIは設定されたForm Data Modelからデータを読み取り、インタラクティブ通信に入力します。 usePrefillServiceがtrueに設定されている場合、（各レコードの）入力JSONデータはFDM引数として扱われます。 |
+      | usePrefillService | Boolean | 値をTrueに設定します。 デフォルト値は false です。この値をtrueに設定すると、Batch APIは設定されたForm Data Modelからデータを読み取り、インタラクティブ通信に入力します。 usePrefillServiceがtrueに設定されている場合、（レコードごとの）入力JSONデータはFDM引数として扱われます。 |
       | batchType | String | 値をPRINT、WEBまたはWEB_AND_PRINTに設定します。 デフォルト値はWEB_AND_PRINTです。 |
       | locale | String | Outputのインタラクティブ通信のロケールを指定します。 標準搭載のサービスではロケールオプションを使用しませんが、カスタムサービスを作成してローカライズされたインタラクティブ通信を生成することができます。 デフォルト値はen_USです。 |
 
@@ -171,13 +171,13 @@ JSONファイルに保存されたレコードからインタラクティブな�
 
 ## REST要求を使用してBatch APIを呼び出す
 
-Representational State Transfer(REST)要求 [を通じてBatch API](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html) （バッチAPI）を呼び出すことができます。 これにより、他のユーザーがAPIにアクセスできるようにRESTエンドポイントを提供し、インタラクティブ通信を処理、保存、カスタマイズするための独自のメソッドを設定できます。 独自のカスタムJavaサーブレットを開発して、AEMインスタンスにAPIをデプロイできます。
+Representational State Transfer(REST)要求 [を通じてBatch API](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html) （バッチAPI）を呼び出すことができます。 これにより、他のユーザーがAPIにアクセスできるようにRESTエンドポイントを提供し、インタラクティブ通信を処理、保存、カスタマイズするための独自のメソッドを設定できます。 独自のカスタムJavaサーブレットを開発し、AEMインスタンスにAPIをデプロイできます。
 
-Javaサーブレットをデプロイする前に、インタラクティブな通信を行い、対応するデータファイルの準備が整っていることを確認します。 次の手順を実行して、Javaサーブレットを作成しデプロイします。
+Javaサーブレットをデプロイする前に、インタラクティブな通信を行い、対応するデータファイルが準備できていることを確認します。 次の手順を実行して、Javaサーブレットを作成しデプロイします。
 
 1. AEMインスタンスにログインし、インタラクティブ通信を作成します。 以下のサンプルコードで説明している対話型の通信を使用するには、ここを [クリックしてください](assets/SimpleMediumIC.zip)。
-1. [AEMインスタンスでApache Mavenを使用してAEMプロジェクトを構築](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) 、デプロイします。
-1. AEMプロジェクトのPOMファイルの依存関係リストにある追加AEM FormsクライアントSDKバージョン6.0.12 [](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 以降。 例：
+1. [AEMインスタンスでApache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) を使用してAEMプロジェクトを構築し、デプロイします。
+1. AEMプロジェクトのPOMファイルの依存関係リストにある追加、 [](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) AEM FormsクライアントSDKバージョン6.0.12以降。 例：
 
    ```xml
        <dependency>
