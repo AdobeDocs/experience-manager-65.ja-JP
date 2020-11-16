@@ -32,7 +32,7 @@ For an overview of the content translation features in AEM, see [Translating Con
 
 AEM を翻訳サービスプロバイダーに接続するためのクラウド設定を作成します。AEM には、Microsoft Translator にデフォルトで接続する機能が用意されています。 次の翻訳ベンダーは翻訳プロジェクト用の新しい API の実装を提供します。統合の詳細を参照するためのリンク：
 
-* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe交換プレミアパートナー)
 * [Clayタブレットテクノロジ](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
@@ -52,6 +52,7 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 >
 >* [AEM 人間翻訳](https://www.adobe.com/go/aem-human-translation-connectors)
 >* [AEM 機械翻訳](https://www.adobe.com/go/aem-machine-translation-connectors)
+
 >
 
 
@@ -105,7 +106,7 @@ After you configure a translation integration framework, you can [associate it w
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。 カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
+   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
   </tr>
   <tr>
    <td>タグを翻訳</td>
@@ -134,7 +135,7 @@ After you configure a translation integration framework, you can [associate it w
 | プロパティ | 説明 |
 |---|---|
 | 翻訳プロバイダー | 翻訳を実行する翻訳プロバイダーを選択します。クラウド設定の作成対象となるプロバイダーがリストに表示されます。 |
-| コンテンツのカテゴリ | 変換するコンテンツを説明するカテゴリ。 カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。 |
+| コンテンツのカテゴリ | 変換するコンテンツを説明するカテゴリ。カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。 |
 | グローバル共有ストアとして使用するロケールを選択 | (Optional) By selecting a locale for storing UGC, posts from all language copies will appear in one global conversation. By convention, choose the locale for the [base language](/help/communities/sites-console.md#translation) for the website. Choosing No Common Store will disable global translation. By default, global translation is disabled. |
 
 ### 「アセット」の設定プロパティ{#assets-configuration-properties}
@@ -162,7 +163,7 @@ Assets properties control how to configure assets. For more information about tr
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。 カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
+   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
   </tr>
   <tr>
    <td>アセットを翻訳</td>
