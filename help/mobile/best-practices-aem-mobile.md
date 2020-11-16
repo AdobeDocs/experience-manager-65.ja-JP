@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: a0647696-72c3-409b-85ba-9275d8f99cff
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '623'
+ht-degree: 67%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-AEM Mobile On-Demand Servicesアプリの作成は、Cordova（またはPhoneGap）シェルで直接実行するアプリの作成とは異なります。 開発者は、以下の事項に精通している必要があります。
+AEM Mobile On-demand Servicesアプリの作成は、Cordova（またはPhoneGap）シェルで直接実行するアプリの作成とは異なります。 開発者は、以下の事項に精通している必要があります。
 
 * 標準でサポートされているプラグイン、および AEM Mobile 固有のプラグイン。
 
@@ -29,8 +32,9 @@ AEM Mobile On-Demand Servicesアプリの作成は、Cordova（またはPhoneGap
 >
 >プラグインについて詳しくは、以下のリソースを参照してください。
 >
->* [AEM Mobile での Cordova プラグインの使用](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
->* [AEM Mobile 固有の Cordova 対応プラグインの使用](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+>* [AEM Mobile での Cordova プラグインの使用](https://helpx.adobe.com/jp/digital-publishing-solution/help/cordova-api.html)
+>* [AEM Mobile 固有の Cordova 対応プラグインの使用](https://helpx.adobe.com/jp/digital-publishing-solution/help/app-runtime-api.html)
+
 >
 
 
@@ -41,23 +45,23 @@ AEM Mobile On-Demand Servicesアプリの作成は、Cordova（またはPhoneGap
 
 ## AEM 開発者向けガイドライン {#guidelines-for-aem-developers}
 
-以下のガイドラインは、モバイルアプリのテンプレートとコンポーネントを作成するサイトの経験豊富なAEM開発者を支援します。
+次のガイドラインは、モバイルアプリのテンプレートとコンポーネントを作成するサイト開発経験があるAEM開発者の役に立ちます。
 
-**再利用性と拡張性を向上させるために AEM サイトテンプレートを構造化する**
+**再利用性と拡張性を向上させるために AEM Sites テンプレートを構造化する**
 
-* 単一のモノリシックファイルよりも複数のコンポーネントスクリプトファイルを優先
+* 1つのモノリシックファイルよりも複数のコンポーネントスクリプトファイルを優先
 
    * A number of empty extension points are provided, such as *customheaderlibs.html* and *customfooterlibs.html*, which allow the developer to change the page template while duplicating as little core code as possible
    * Templates can then be extended and customized via Sling&#39;s *sling:resourceSuperType* mechanism
 
 * 使用するテンプレート言語は、JSP よりも Sightly/HTL の方が望ましい
 
-   * これを使用すると、マークアップからコードを分離し、XSS保護に組み込まれたオファーを提供し、より親しみやすい構文を持つようになります。
+   * この方法を使用すると、XSS保護で構築されたオファーやマークアップからコードを分離することが推奨され、構文がより使い慣れています
 
 **デバイス上でのパフォーマンスを最適化する**
 
-* dps-article contentsyncテンプレートを使用して、記事のペイロードに記事固有のスクリプトとスタイルシートを含める必要があります
-* 複数の記事で共有されるスクリプトおよびスタイルシートは、dps-HTMLResources contentsyncテンプレートを使用して、共有リソースに含める必要があります
+* 記事固有のスクリプトやスタイルシートは、dps-article contentsyncテンプレートを使用して、記事のペイロードに含める必要があります
+* 複数の記事で共有されるスクリプトやスタイルシートは、dps-HTMLResources contentsyncテンプレートを使用して、共有リソースに含める必要があります
 * レンダリングを妨げる外部スクリプトを参照してはなりません。
 
 >[!NOTE]
@@ -67,7 +71,7 @@ AEM Mobile On-Demand Servicesアプリの作成は、Cordova（またはPhoneGap
 **Web 向けの汎用的な JS および CSS ライブラリよりも、アプリ固有のクライアント側 JS および CSS ライブラリの方が望ましい**
 
 * jQuery Mobile などのライブラリで多数のデバイスやブラウザーを処理する際のオーバーヘッドを回避するためです。
-* テンプレートがアプリの Web ビュー内で実行されるときに、そのアプリがサポートするプラットフォームとバージョンを自身で管理でき、JavaScript がサポートされることをあらかじめ把握できます。例えば、jQuery mobileやOnsen UIよりもイオン（おそらくCSSのみ）を優先し、Bootstrapよりもイオン(Onsen UI)を優先します。
+* テンプレートがアプリの Web ビュー内で実行されるときに、そのアプリがサポートするプラットフォームとバージョンを自身で管理でき、JavaScript がサポートされることをあらかじめ把握できます。例えば、jQuery MobileやOnsen UIよりもイオン性（おそらくCSSのみ）を、Bootstrapよりも優先します。
 
 >[!NOTE]
 >
