@@ -12,6 +12,9 @@ discoiquuid: 1876d8d6-bffa-4a1c-99c0-f6001acea825
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 95%
 
 ---
 
@@ -77,7 +80,7 @@ source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
 
    * **launchpad/startup フォルダー**：ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
 
-   * The **base.jar file**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * **base.jarファイル**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
 
    * The **BootstrapCommandFile_timestamp.txt file**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
@@ -100,6 +103,7 @@ source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
 
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
+
    この 2 つのファイルにより、AEM が TarMK ノードストアとファイルデータストアを使用するように設定されます。
 
 1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
