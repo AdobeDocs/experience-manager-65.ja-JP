@@ -12,6 +12,9 @@ discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+workflow-type: tm+mt
+source-wordcount: '2423'
+ht-degree: 72%
 
 ---
 
@@ -22,13 +25,13 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 >[!NOTE]
 >
->Many aspects of component development are common to both the classic UI and the touch-enabled UI, so **you must read[AEM Components - The Basics](/help/sites-developing/components-basics.md)before** using this page, which deals with the specifics of the classic UI.
+>Many aspects of component development are common to both the classic UI and the touch-enabled UI, so **you must read [AEM Components - The Basics](/help/sites-developing/components-basics.md) before** using this page, which deals with the specifics of the classic UI.
 
 >[!NOTE]
 >
 >クラシック UI 用のコンポーネントの開発には HTML テンプレート言語（HTL）と JSP のどちらも使用できますが、このページでは JSP を使用した開発について説明します。これは単に、クラシック UI 内では JSP が使用されてきたからです。
 >
->現在では、HTL が AEM の推奨スクリプティング言語とされています。See [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) and [Developing AEM Components](/help/sites-developing/developing-components.md) to compare methods.
+>現在では、HTL が AEM の推奨スクリプティング言語とされています。See [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html) and [Developing AEM Components](/help/sites-developing/developing-components.md) to compare methods.
 
 ## 構造 {#structure}
 
@@ -65,13 +68,13 @@ JSP スクリプトファイルの `global.jsp` は、コンポーネントの�
    * `slingRequest`  — ラップされたリクエストオブジェクト( `SlingHttpServletRequest`)。
    * `slingResponse`  — ラップされた応答オブジェクト( `SlingHttpServletResponse`)。
    * `resource` - Slingリソースオブジェクト( `slingRequest.getResource();`)。
-   * `resourceResolver` - Slingリソースリゾルバーオブジェクト( `slingRequest.getResoucreResolver();`)。
+   * `resourceResolver` - Sling Resource Resolverオブジェクト( `slingRequest.getResoucreResolver();`)。
    * `currentNode` - リクエストに対して解決された JCR ノード。
    * `log`  — デフォルトのロガー()。
    * `sling` - Slingスクリプトヘルパー。
    * `properties`  — アドレス指定されたリソース( `resource.adaptTo(ValueMap.class);`)のプロパティ。
    * `pageProperties` - 指定されたリソースのページのプロパティ。
-   * `pageManager` - AEMコンテンツページにアクセスするためのページマネー `resourceResolver.adaptTo(PageManager.class);`ジャ()。
+   * `pageManager` - AEMコンテンツページにアクセスするためのページマネージャ( `resourceResolver.adaptTo(PageManager.class);`)。
    * `component` - 現在の AEM コンポーネントのコンポーネントオブジェクト。
    * `designer`  — デザイン情報を取得するためのdesignerオブジェクト( `resourceResolver.adaptTo(Designer.class);`)。
    * `currentDesign` - 指定されたリソースのデザイン。
@@ -153,7 +156,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
 
    libs 内にあるものと同じノード構造を再作成してから、テキストコンポーネントなどの既存のコンポーネントの定義をコピーします。例えば、テキストコンポーネントをカスタマイズするには、次のようにコピーします。
 
-   * 追加の `/libs/foundation/components/text`
+   * `/libs/foundation/components/text` から
    * を `/apps/myProject/components/text`
 
 1. Modify the `jcr:title` to reflect its new name.
@@ -167,6 +170,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
       * `dialog` - クラシック UI 用ダイアログ
    * replacing the `.jsp` file (name it after your new component)
    * または、コンポーネント全体の作成し直し（必要な場合）
+
    For example, if you take a copy of the standard Text component, you can add an additional field to the dialog box, then update the `.jsp` to process the input made there.
 
    >[!NOTE]
@@ -174,7 +178,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
    >使用するコンポーネント：
    >
    >* タッチ操作対応 UI では [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) コンポーネントを使用します。
-   >* クラシック UI では [ExtJS ウィジェット](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)を使用します。
+   >* クラシック UI では [ExtJS ウィジェット](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)を使用します。
 
 
    >[!NOTE]
@@ -215,6 +219,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
       `<contextPath>/ Test.html?wcmmode=design`
 
    * サイドキックで「デザイン」をクリックします。
+
    デザインモードになり、段落システムを編集できるようになります。
 
 1. 「編集」をクリックします。
@@ -252,7 +257,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
 
 #### 既存の textimage コンポーネントの拡張 {#extending-the-existing-textimage-component}
 
-新しいコンポーネントを作成するには、標準のtextimageコンポーネントを基にして変更を加えます。 ここでは、Geometrixx AEM WCM の例のアプリケーションに新しいコンポーネントを保存します。
+新しいコンポーネントを作成するには、標準のtextimageコンポーネントを基に変更します。 ここでは、Geometrixx AEM WCM の例のアプリケーションに新しいコンポーネントを保存します。
 
 1. Copy the standard textimage component from `/libs/foundation/components/textimage` into the Geometrixx component folder, `/apps/geometrixx/components`, using textimage as the target node name. （コンポーネントに移動し、右クリックして「コピー」を選択し、ターゲットディレクトリに移動することでコンポーネントをコピーします）。
 
@@ -263,6 +268,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
    * dialog definition: `textimage/dialog`
    * component script: `textimage/textimage.jsp`
    * edit configuration node (allowing drag-and-drop of assets): `textimage/cq:editConfig`
+
    >[!NOTE]
    >
    >ダイアログの定義は、UI に依存します。
@@ -283,6 +289,7 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
    * 新しいコンポーネントの親コンポーネント（標準の textimage コンポーネント）
 
       * 設定 `sling:resourceSuperType` 先 `foundation/components/textimage`
+
    この手順を終えると、コンポーネントのノードは以下のようになります。
 
    ![chlimage_1-60](assets/chlimage_1-60a.png)
@@ -294,12 +301,13 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
 1. コンポーネントのダイアログボックスを変更して新しいオプションを含めます。新しいコンポーネントは元のコンポーネントと同じダイアログボックスのパーツを継承します。「**詳細**」タブを拡張するために、「**左**」と「**右**」のオプションのある「**画像の位置**」ドロップダウンリストだけを追加します。
 
    * Leave the `textimage/dialog`properties unchanged.
+
    `textimage/dialog/items` に、textimage ダイアログボックスの 4 つのタブを表す 4 つのサブノード（tab1 から tab4）があることを確認します。
 
    * 最初の 2 つのタブ（tab1 および tab2）：
 
       * xtype を cqinclude に変更します（標準コンポーネントから継承するため）。
-      * 値と値をそれぞれ持つパスプ `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`ロパティ `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`を追加します。
+      * 値追加と値をそれぞれ持つpathプロパティ `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json``/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`。
       * その他のすべてのプロパティとサブネットを削除します。
    * tab3：
 
@@ -312,9 +320,10 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
          * `fieldLabel`: `Image Position`
          * `type`: `select`
       * Add subnode `position/options` of type `cq:WidgetCollection` to represent the two choices for image placement, and under it create two nodes, o1 and o2 of type `nt:unstructured`.
-      * ノードに対して、次のプ `position/options/o1` ロパティを設定します。 `text` ～ `Left` に `value``left.`
-      * ノードに対して、次のプ `position/options/o2` ロパティを設定します。 `text` と `Right` と `value` に `right`。
+      * ノードに対してプロパティ `position/options/o1` を設定します。 `text` ～に `Left``value` 対して `left.`
+      * ノードに対してプロパティ `position/options/o2` を設定します。 `text` に、 `Right` および `value` に `right`。
    * tab4 を削除します。
+
    画像の位置は、`imagePosition` の段落を表すノードの `textimage` プロパティとしてコンテンツ内で保持されます。これらの手順を終えると、コンポーネントのダイアログボックスは以下のようになります。
 
    ![chlimage_1-61](assets/chlimage_1-61a.png)
@@ -372,9 +381,10 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
 1. `/apps/geometrixx/components/image/dialog/items/image` に移動します。
 1. 新しいプロパティを追加します。
 
-   * **名前**: `allowUpload`
-   * **タイプ**: `String`
+   * **名前**：`allowUpload`
+   * **型**：`String`
    * **値**: `false`
+
    ![chlimage_1-63](assets/chlimage_1-63a.png)
 
 1. 「**すべて保存**」をクリックします。コンポーネントをテストする準備ができました。
