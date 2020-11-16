@@ -33,7 +33,7 @@ ht-degree: 67%
 >
 >このページは、[コンテンツの再利用：Multi Site Manager](/help/sites-administering/msm.md)と併せて読んでください。
 >
->AEM 6.4のサイトリポジトリの再構築に関する次のセクションも参考になる場合があります。
+>AEM 6.4でのサイトリポジトリの再構築に関する次のセクションも、重要な場合があります。
 >* [Multi-site Manager のブループリント設定](https://docs.adobe.com/content/help/en/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-blueprint-configurations)
 >* [Multi-site Manager のロールアウト設定](https://docs.adobe.com/content/help/en/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-rollout-configurations)
 
@@ -112,11 +112,11 @@ The `LiveActionFactory` creates instances of the `LiveAction` class for a given 
 
 * `LiveActionFactory` クラスには次のメンバーが含まれます。
 
-   * `LIVE_ACTION_NAME`: 関連付けられたフィールドの名前を含むフィールド `LiveAction`。 この名前は、`getName` クラスの `LiveAction` メソッドが返す値と一致する必要があります。
+   * `LIVE_ACTION_NAME`:関連付けられたフィールドの名前を含むフィールド `LiveAction`。 この名前は、`getName` クラスの `LiveAction` メソッドが返す値と一致する必要があります。
 
-   * `createAction`: のインスタンスを作成し `LiveAction`ます。 オプションの `Resource` パラメーターを使用して、設定情報を提供できます。
+   * `createAction`:のインスタンスを作成し `LiveAction`ます。 オプションの `Resource` パラメーターを使用して、設定情報を提供できます。
 
-   * `createsAction`: 関連付けられたの名前を返し `LiveAction`ます。
+   * `createsAction`:関連付けられたの名前を返し `LiveAction`ます。
 
 ### LiveAction 設定ノードへのアクセス {#accessing-the-liveaction-configuration-node}
 
@@ -180,7 +180,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 新しいロールアウト設定を作成するには：
 
-1. CRXDE Liteを開く； 例：
+1. CRXDE Liteを開く；例：
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 1. 次の URL に移動します。
@@ -202,22 +202,22 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. この「 **作成** 」で、次のプロパティを持つノードを作成します。
 
-   * **名前**: ロールアウト設定のノード名。 md#installed-synchronization-actions)。例 `contentCopy` えば、または `workflow`。
+   * **名前**:ロールアウト設定のノード名。 md#installed-synchronization-actions)。例 `contentCopy` えば、または `workflow`。
    * **型**：`cq:RolloutConfig`
 
 1. このノードに次のプロパティを追加します。
    * **名前**：`jcr:title`
 
       **型**：`String`
-      **値**: UIに表示される識別タイトル。
+      **値**:UIに表示される識別タイトル。
    * **名前**：`jcr:description`
 
       **型**：`String`
-      **値**: オプションの説明。
+      **値**:オプションの説明。
    * **名前**：`cq:trigger`
 
       **型**：`String`
-      **値**: 使用する [ロールアウトトリガ](/help/sites-administering/msm-sync.md#rollout-triggers) 。 次から選択：
+      **値**:使用する [ロールアウトトリガ](/help/sites-administering/msm-sync.md#rollout-triggers) 。 次から選択：
       * `rollout`
       * `modification`
       * `publish`
@@ -231,7 +231,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 Add child nodes of type `cq:LiveSyncAction` to add synchronization actions to the rollout configuration. 同期アクションノードの順序によって、アクションが実行される順序が決まります。
 
-1. CRXDE Liteでも、 [ロールアウト設定](#create-the-rollout-configuration) ノードを選択します。
+1. 引き続きCRXDE Liteで、[ [ロールアウト設定](#create-the-rollout-configuration) ]ノードを選択します。
 
    次に例を示します。
    `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`
@@ -685,7 +685,7 @@ The language list is stored below the `/libs/wcm/core/resources/languages` node.
    * リソースの最初の子レベルにのみ適用されます
    * **型**：`String`
 
-   * **値**: は、検討中のプロパティの名前を保持します(かつ、プロパティの値に相当 `name`します。 例えば、
+   * **値**:は、検討中のプロパティの名前を保持します(かつ、プロパティの値に相当 `name`します。例えば、
       `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 `cq-msm-lockable` が定義されている場合は、次の方法でチェーンの解除またはクローズを MSM と連携できます。
