@@ -25,7 +25,7 @@ ht-degree: 60%
 
    ![アセットのプロパティの「基本」タブ（アセットタイプを変更できない場合）](assets/asset-properties-basic-tab.png)
 
-*図：アセットの[!UICONTROL プロパティの「基本」タブ]。*
+*図：アセットの [!UICONTROL プロパティの「基本」タブ]。*
 
 アセットの MIME タイプを変更するには、カスタムメタデータスキーマフォームを使用するか、既存のフォームを変更します。See [Edit Metadata Schema Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) for more information. MIMEタイプのメタデータスキーマを変更すると、アセットとすべてのサブタイプのプロパティページレイアウトが変更されます。 例えば、`default/image` 配下の jpeg スキーマを変更すると、MIME タイプが `image/jpeg` のアセットのメタデータのレイアウト（アセットプロパティ）のみが変更されます。ただし、デフォルトスキーマを編集する場合は、すべてのタイプのアセットのメタデータのレイアウトを変更します。
 
@@ -74,7 +74,7 @@ ht-degree: 60%
 
    ![アセットのプロパティページをカスタマイズするメタデータスキーマエディタ](assets/metadata-schema-editor.png)
 
-   *図：使用可能なタブを含む[!UICONTROL メタデータスキーマフォームエディタ]ページ。*
+   *図：使用可能なタブを含む [!UICONTROL メタデータスキーマフォームエディタ] ページ。*
 
 1. コンポーネントを設定するには、コンポーネントを選択して、「**[!UICONTROL 設定]**」タブでそのプロパティを変更します。
 
