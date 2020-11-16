@@ -41,7 +41,7 @@ Livefyre をカスタム AEM コンポーネントまたは WordPress、Sitecore
 **方法 1：Designer アプリの実装**
 
 * **説明：** Livefyre アプリを統合するための最も簡単で最速の方法。数分で Media Wall App をページに統合するためのカスタマイズされた JavaScript 埋め込みコードを設計、構成、および生成できます。
-* **方法：**  [Media Wallアプリの作成、プレビュー、公開、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
+* **方法：** [Media Wallアプリの作成、プレビュー、公開、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
 
 * **例：**[https://codepen.io/dharafyre/pen/bvGrLo](https://codepen.io/dharafyre/pen/bvGrLo)
 
@@ -65,7 +65,7 @@ Make sure you follow [Twitter](https://developer.twitter.com/en/developer-terms/
 
 認証を必要とする Media Wall の統合については、以下を参照してください。
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオン統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### ユースケースの概要 {#use-case-overview}
@@ -106,7 +106,7 @@ Livefyre コメントアプリケーションをカスタム AEM コンポーネ
 **方法 1：Designer アプリの実装**
 
 * **説明：** Livefyre アプリを統合するための最も簡単で最速の方法。数分で Media Wall App をページに統合するためのカスタマイズされた JavaScript 埋め込みコードを設計、構成、および生成できます。
-* **方法：** [コメントアプリの作成、プレビュー、公開、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
+* **方法：**[コメントアプリの作成、プレビュー、公開、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
 
 * **例：**[https://codepen.io/dharafyre/pen/oYoJdP](https://codepen.io/dharafyre/pen/oYoJdP)
 
@@ -129,7 +129,7 @@ For advanced customizations using the SDK, please see [StreamHub SDKs](https://g
 
 ### コメントアプリ認証の統合 {#comments-app-authentication-integration}
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオン統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-1}
@@ -191,7 +191,7 @@ Additional Ratings and Reviews APIs can be found [here](https://api.livefyre.com
 
 ### コメントアプリ認証の統合 {#comments-app-authentication-integration-1}
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオン統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-2}
