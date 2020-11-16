@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
 source-wordcount: '2979'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -77,8 +77,8 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 グローバルナビゲーションには、2 つのパネルがあり、画面の左余白にアイコンで表示されます。
 
-* **[ナビゲーション](/help/sites-authoring/basic-handling.md#navigation-panel)**- コンパスと、
-* **[ツール](/help/sites-authoring/basic-handling.md#tools-panel)**- ハンマーで表される
+* **[ナビゲーション](/help/sites-authoring/basic-handling.md#navigation-panel)** - コンパスと、
+* **[ツール](/help/sites-authoring/basic-handling.md#tools-panel)** - ハンマーで表される
 
 次に、これらのパネルで使用できるオプションについて説明します。
 
@@ -88,7 +88,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 ![bh-01](assets/bh-01.png)
 
-コンソールやコンテンツ間を移動すると、ブラウザータブのタイトルが更新され、場所が反映されます。
+コンソールやコンテンツ間を移動すると、現在の場所を反映するようにブラウザータブのタイトルが更新されます。
 
 ナビゲーションでは、次のコンソールを使用できます。
 
@@ -225,9 +225,9 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 * キーボードナビゲーション
 
-   Webサイト内を移動するには、キーボードのみを使用します。 これは、 **Tabキー(または** Opt + Tab **)の標準的なブラウザ機能を使用して、フォーカス可能なページ上の要素間を移動し**&#x200B;ます **。
+   キーボードだけを使用して Web サイト内を移動できます。This uses the standard browser functionality of the **TAB** key (or **OPT+TAB**) to move you between elements on the page that are *focusable*.
 
-   **サイトコンソールには** 、「メインコンテンツに **スキップ**」オプションが追加されています。 これは、ヘッダーオプションを *タブで移動すると表示され* 、（製品）ツールバーの標準要素をスキップしてメインコンテンツに直接移動できるので、ナビゲーションの速度が速くなります。
+   **Sites** コンソールには、「**メインコンテンツにスキップ**」するためのオプションが追加されています。This becomes visible as you *tab* through the header options, and speeds your navigation by allowing you to skip the standard elements in the (product) toolbar and taking you directly to the main content.
 
    ![bh-30](assets/bh-30.png)
 
@@ -253,7 +253,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
    コンソールに最初にアクセスしたときの[製品ナビゲーションの概要](/help/sites-authoring/basic-handling.md#product-navigation)と同様に、この概要をナビゲートします。
 
-   このスライドをもう一度表示するには、[**ページ情報&#x200B;**メニューの「**&#x200B;ヘルプ&#x200B;**](/help/sites-authoring/author-environment-tools.md#accessing-help)」を選択します。
+   このスライドをもう一度表示するには、[**ページ情報**&#x200B;メニューの「**ヘルプ**](/help/sites-authoring/author-environment-tools.md#accessing-help)」を選択します。
 
 * **ツールコンソール**
 
