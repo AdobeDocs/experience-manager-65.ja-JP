@@ -12,6 +12,9 @@ discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
+workflow-type: tm+mt
+source-wordcount: '2485'
+ht-degree: 77%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
 初めて作成する新しいワークフローモデルには、次のものが含まれています。
 
 * The steps, **Flow Start** and **Flow End**.
-これらのステップは、ワークフローの始まりと終わりを表します。これらの手順は必須で、編集または削除はできません。
+これらのステップは、ワークフローの始まりと終わりを表します。これらの手順は必須で、編集/削除はできません。
 * An example **Participant** step named **Step 1**.
 このステップは、作業項目をワークフロー開始者に割り当てるように設定されています。このステップを編集または削除し、必要に応じてステップを追加します。
 
@@ -41,7 +44,8 @@ source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
 1. 「**作成**」を選択してから、「**モデルを作成**」を選択します。
 1. **ワークフローモデルを追加**&#x200B;ダイアログが表示されます。「**タイトル**」と「**名前**」（オプション）を入力してから、「**完了**」を選択します。
 1. The new model is listed in the **Workflow Models** console.
-1. 新しいワークフローを選択し、[**「編集&#x200B;**」をクリックすると、ワークフローが設定のために開かれます](#editinganexistingworkflow)。   ![wf-01](assets/wf-01.png)
+1. 新しいワークフローを選択し、[**「編集**」をクリックすると、ワークフローが設定のために開かれます](#editinganexistingworkflow)。
+   ![wf-01](assets/wf-01.png)
 
 >[!NOTE]
 >
@@ -60,7 +64,7 @@ source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
 * [ステップ](#addingasteptoamodel-)と[パラメーター](#configuring-a-workflow-step)を定義する
 * [ステージ](#configuring-workflow-stages-that-show-workflow-progress)、[ワークフローを一時的にする](#creatingatransientworkflow-)か、[複数のリソースを使用する](#configuring-a-workflow-for-multi-resource-support)かなど、ワークフロープロパティを設定する
 
-[**デフォルトおよびレガシー&#x200B;**（初期設定）のワークフロー](#editing-a-default-or-legacy-workflow-for-the-first-time)を編集する場合は、変更を加える前に、[セーフコピー](/help/sites-developing/workflows-best-practices.md#locations-workflow-models)を作成する追加の手順が必要になります。
+[**デフォルトおよびレガシー**（初期設定）のワークフロー](#editing-a-default-or-legacy-workflow-for-the-first-time)を編集する場合は、変更を加える前に、[セーフコピー](/help/sites-developing/workflows-best-practices.md#locations-workflow-models)を作成する追加の手順が必要になります。
 
 ワークフローの変更を完了するには、「**同期**」を使用して、**ランタイムモデルを生成**&#x200B;する必要があります。詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
@@ -84,7 +88,9 @@ source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
 * ツールバーで「**編集**」操作を利用できます（右側）。
 * 次の理由から、最初はモデルとそのプロパティが読み取り専用モードで開かれます。
    * Default workflows are located in `/libs`
-   * 従来のワークフローは「編集の選択」 `/etc`にあ **ります** 。次の操作を行います。
+   * Legacy workflows are located in `/etc`
+Selecting 
+**編集する** :
 * take a copy of the workflow into `/conf`
 * ステップブラウザーを利用できるようになります。
 * 変更を加えられるようになります。
@@ -115,6 +121,7 @@ source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
    * **フィルター**&#x200B;を使用して特定のステップのみを表示する。
    * ドロップダウンセレクターを使用して、選択対象を特定のステップのグループに限定する。
    * Select the Show Description icon ![wf-stepinfo-icon](assets/wf-stepinfo-icon.png) to show more details about the appropriate step.
+
    ![wf-02](assets/wf-02.png)
 
 1. 対象のステップをドラッグしてモデル内の目的の場所に移動します。
@@ -179,25 +186,25 @@ source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
 
 ## タッチ UI でワークフローモデルを使用可能にする {#classic2touchui}
 
-If a workflow model is present in Classic UI, but missing in the selection popup menu in the **[!UICONTROL Timeline]** rail of Touch UI, then follow the configuration to make it available. 次の手順は、「Request for Activation」と呼ばれるワークフローモデルの使 **[!UICONTROL 用方法を示します]**。
+If a workflow model is present in Classic UI, but missing in the selection popup menu in the **[!UICONTROL Timeline]** rail of Touch UI, then follow the configuration to make it available. 次の手順は、アクティベーションの **[!UICONTROL 要求と呼ばれるワークフローモデルの使用を説明しています]**。
 
-1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。Access an asset using `/assets.html/content/dam` path. アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「ワー **[!UICONTROL クフローを開始]** 」をクリックし、 **[!UICONTROL Activation]** Request for Activationモデルがポップアップリストに表示されないことを確認します。
+1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。Access an asset using `/assets.html/content/dam` path. アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「 **[!UICONTROL 開始ワークフロー]** 」をクリックし、「アクティベーション **[!UICONTROL 要求]** 」モデルがポップアップリストに存在しないことを確認します。
 
-1. ツール/一 **[!UICONTROL 般/タグに移動します]**。 「**[!UICONTROL ワークフロー]**」を選択します。
+1. **[!UICONTROL ツール/一般/タグ付けに移動します]**。 「**[!UICONTROL ワークフロー]**」を選択します。
 
 1. Select **[!UICONTROL Create > Create Tag]**. Set **[!UICONTROL Title]** as `DAM` and **[!UICONTROL Name]** as `dam`. 「**[!UICONTROL 送信]**」を選択します。
    ![ワークフローモデルでタグを作成する](assets/workflow_create_tag.png)
 
-1. Navigate to **[!UICONTROL Tools > Workflow > Models]**. 「アクテ **[!UICONTROL ィベーションのリクエスト]**」を選択し、「編集」を **[!UICONTROL 選択します]**。
+1. Navigate to **[!UICONTROL Tools > Workflow > Models]**. 「 **[!UICONTROL アクティベーションの]**&#x200B;要求 **[!UICONTROL 」を選択し、「]**&#x200B;編集」を選択します。
 
-1. 「編集 **[!UICONTROL 」を選択し]**、ページ情報メニューを開き、「プロパ **[!UICONTROL ティを開く]** 」を選択して「基本」タブに移動します(まだ開いてい ******** ない場合)。
+1. 「 **[!UICONTROL 編集]**」を選択し、 **[!UICONTROL ページ情報]** メニューを開き、「 **[!UICONTROL 開くプロパティ]** 」を選択して「 **** 基本」タブに移動します（まだ開いていない場合）。
 
-1. 「タグ」フ `Workflow : DAM` ィー **[!UICONTROL ルドに追加]** 。 チェックマークを付けて選択を確定します。
+1. 「タグ `Workflow : DAM` 」フィ追加ールドに追加します **** 。 選択を確認し、チェックマークを付けます。
 
-1. 「保存して閉じる」でタグの追加を **[!UICONTROL 確認します]**。
+1. 「 **[!UICONTROL 保存して閉じる]**」でタグの追加を確認します。
    ![モデルのページプロパティの編集](assets/workflow_model_edit_activation1.png)
 
-1. 同期を使用してプロセスを完 **[!UICONTROL 了します]**。 タッチ対応UIでワークフローを使用できるようになりました。
+1. 「 **[!UICONTROL 同期]**」を使用してプロセスを完了します。 タッチ対応UIでワークフローが利用できるようになりました。
 
 ### マルチリソースのサポートのためのワークフローの設定 {#configuring-a-workflow-for-multi-resource-support}
 
@@ -308,7 +315,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
 例えば、新しいワークフローを次のようにテストします。
 
-1. [コンソールからワークフロー](/help/sites-administering/workflows-starting.md) ・モデルを起動します。
+1. [コンソールからワークフローモデル](/help/sites-administering/workflows-starting.md) を開始します。
 1. **ペイロード**&#x200B;を定義して確定します。
 
 1. ワークフローが進行するように、必要なアクションを実行します。
@@ -345,6 +352,7 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
    * 「**電子メールでユーザーに通知します**」を有効にします。
    * Select `Administrator` ( `admin`) for the **User/Group** field.
+
    >[!NOTE]
    >
    >電子メールを送信するには、[メールサービスとユーザーアカウントの詳細を設定する必要があります](/help/sites-administering/notification.md)。
@@ -355,7 +363,7 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
 1. Drag an **Or Split** onto the workflow and position it between `Validate Content` and **Flow End**.
 1. **OR 分割**&#x200B;を設定用に開きます。
-1. 次の設定をおこないます。
+1. 設定:
 
    * **共通**：分割名を指定します。
    * **ブランチ 1**：「**デフォルトのルート**」を選択します。
@@ -369,13 +377,13 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
    * **ユーザー / グループ**：`projects-administrators` など
 
-   * **電子メールでユーザーに通知**:ユーザーに電子メールで通知する場合は、をアクティブにします。
+   * **電子メールでユーザーに通知**:ユーザーに電子メールで通知する場合にアクティブ化します。
 
 1. **プロセスステップ**&#x200B;を右側のブランチにドラッグし、プロパティを開き、次の値を指定してから変更内容を確定します。
 
    * **タイトル**: `Publish Page as Requested`
 
-   * **プロセス**:を選択しま `Activate Page`す。 このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
+   * **プロセス**:を選択 `Activate Page`します。 このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
 
 1. 「**同期**」（エディターのツールバー）をクリックし、ランタイムモデルを生成します。
 
