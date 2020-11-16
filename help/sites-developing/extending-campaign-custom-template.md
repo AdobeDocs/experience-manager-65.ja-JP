@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c3f6eed4-bbda-454a-88ce-c7f2041d4217
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 61%
 
 ---
 
@@ -21,7 +24,7 @@ This page explains how to build a custom page template that uses [Adobe Campaign
 
 >[!NOTE]
 >
->[電子メールとフォームのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。パッケージ共有からサンプルのGeometrixxコンテンツをダウンロードしてください。
+>[電子メールとフォームのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。パッケージ共有からサンプルGeometrixxコンテンツをダウンロードしてください。
 
 Adobe Campaign フォームコンポーネントを使用してカスタム AEM ページテンプレートを作成するには以下が必要な条件となります。
 
@@ -29,10 +32,11 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
    Make sure the page-component inherits from `mcm/campaign/components/profile`.
 
-   情報を取得して保存するサーブレットには、これが必要です
+   情報を取得して保存するには、サーブレットに対してこれが必要です
 
    * `com.day.cq.mcm.campaign.servlets.TemplateListServlet`
    * `com.day.cq.mcm.campaign.servlets.SaveProfileServlet`
+
    ![chlimage_1-201](assets/chlimage_1-201.png)
 
 1. **ClientContext 設定**
@@ -41,6 +45,7 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
    * ClientContext points to `/etc/clientcontext/campaign`
    * 追加の *config* ノードもあります。
+
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
 1. **head.jsp（/apps/geometrixx-outdoors/components/page_campaign_profile/head.jsp）**
@@ -55,7 +60,7 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **body.jsp（/apps/geometrixx-outdoors/components/page_campaign_profile/body.jsp）**
 
-   In **body.jsp**, the cloud services are loaded at the bottom of the page:
+   **body.jsp内**、クラウドサービスはページの下部に読み込まれます。
 
    ```
    <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
