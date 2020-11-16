@@ -11,6 +11,9 @@ topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '2323'
+ht-degree: 56%
 
 ---
 
@@ -58,9 +61,11 @@ JCR BOOLEAN プロパティに一致します。Only accepts the values &quot; `
 
 #### プロパティ {#properties}
 
-* **booleanproperty**&#x200B;プロパティへの相対パス(例 `myFeatureEnabled` : `jcr:content/myFeatureEnabled`
+* **booleanproperty**&#x200B;プロパティの相対パス(例： 
+`myFeatureEnabled` か `jcr:content/myFeatureEnabled` のどちらかにする必要があります。
 
-* **プロパティ**&#x200B;をチェックする値、「」または「」 `true`の値( `false`「」)
+* **プロパティをチェックする値**&quot; 
+`true`&quot; または &quot; `false`&quot;
 
 ### contentfragment {#contentfragment}
 
@@ -206,9 +211,9 @@ This searches for the term &quot;**Management**&quot; within pages in `/content/
 
 * **&lt;predicate>**
 
-   ネストされた述語を追加します
+   入れ子の述語を追加します。
 
-* **N_&lt;述語>**
+* **N_&lt;predicate>**
 
    adds multiple nested predicates of the same time, like `1_property, 2_property, ...`
 
@@ -274,7 +279,7 @@ JCR ノード名と一致します。
 
 * **nodename**
 
-   ワイルドカードを使用できるノード名パターン： `*` =任意または文字なし、 `?` =任意の文字、 `[abc]` =角括弧内の文字のみ
+   ワイルドカードを使用できるノード名パターン： `*` =任意または文字なし= `?` 任意の文字、 `[abc]` =角括弧内の文字のみ
 
 ### notexpired {#notexpired}
 
@@ -308,11 +313,11 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
    sort direction, either &quot; `desc`&quot; for descending or &quot; `asc`&quot; for ascending (default)
 
-* **ケース**
+* **症例**
 
     「`ignore`」に設定すると、並べ替えで大文字と小文字が区別されなくなります（「a」が「B」の前になります）。空白または未指定の場合は、並べ替えで大文字と小文字が区別されます（「B」が「a」の前になります）。
 
-### path {#path}
+### パス {#path}
 
 特定のパス内を検索します。
 
@@ -324,7 +329,7 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
    path pattern; depending on exact, either the entire subtree will match (like appending `//*` in xpath, but note that this does not include the base path) (exact=false, default) or only an exact path matches, which can include wildcards ( `*`); if self is set, the entire subtree including the base node will be searched
 
-* **完全**
+* **完全一致**
 
    if `exact` is true/on, the exact path must match, but it can contain simple wildcards ( `*`), that match names, but not &quot; `/`&quot;; if it is false (default) all descendents are included (optional)
 
@@ -366,7 +371,7 @@ JCR プロパティとその値に一致します。
 
 * **深さ**
 
-   プロパティ/相対パスが存在できるワイルドカードレベルの数(例えば、 `property=size depth=2` node/size、node/&amp;ast;/sizeおよびnode/&amp;ast;/&amp;ast;/&amp;ast;/size)
+   プロパティ/相対パスが存在できるワイルドカードレベルの数（例えば、node/size、node/&amp;ast;/size、node/&amp;ast;/&amp;ast;/&amp;ast;/size） `property=size depth=2`
 
 ### rangeproperty {#rangeproperty}
 
@@ -384,7 +389,7 @@ JCR プロパティと間隔を照合します。This applies to properties with
 
 * **lowerBound**
 
-   ～の特性を調べる下限
+   ～の特性をチェックする下限
 
 * **lowerOperation**
 
@@ -392,7 +397,7 @@ JCR プロパティと間隔を照合します。This applies to properties with
 
 * **upperBound**
 
-   ～の性質を調べる上限
+   プロパティをチェックする上限
 
 * **upperOperation**
 
@@ -408,11 +413,11 @@ JCR プロパティと間隔を照合します。This applies to properties with
 
 次に例を示します。
 
-* `upperBound=1h` (そしていな `lowerBound`い)次の時間には何でも選ぶ
-* `lowerBound=-1d` (および `upperBound`)過去24時間以内に選択する
-* `lowerBound=-6M` そして、 `upperBound=-3M` 生後6ヶ月から3ヶ月の何かを選択する
-* `lowerBound=-1500` 過去 `upperBound=5500` の1500ミリ秒から将来の5500ミリ秒の間で選択します。
-* `lowerBound=1d` そして `upperBound=2d` 明後日には何でも選ぶだろう
+* `upperBound=1h` (そして `lowerBound`)次の時間には何でも選ぶ
+* `lowerBound=-1d` (そして `upperBound`)過去24時間の間に何でも選択する
+* `lowerBound=-6M` そして、生後6ヶ月から3ヶ月の何 `upperBound=-3M` かを選ぶ
+* `lowerBound=-1500` 過去 `upperBound=5500` の1500ミリ秒から将来の5500ミリ秒の間であれば何でも選択します
+* `lowerBound=1d` 明後日 `upperBound=2d` に何でも選ぶ
 
 うるう年は考慮されず、すべての月が 30 日になる点にご注意ください。
 
@@ -460,7 +465,7 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
    * **シンプル**:
 
-      、、、などの最 `path`小項目( `title`設定さ `lastmodified`れている `excerpt` 場合)
+      、 `path`、、、などの最小項目 `title``lastmodified``excerpt` （設定されている場合）
 
    * **full**:
 
@@ -496,7 +501,8 @@ Similarity search using JCR XPath&#39;s `rep:similar()`.
 
 * **similar** 類似ノードを検索するノードの絶対パス。
 
-* **local子**&#x200B;孫ノードまたは現在のノードの相 `.` 対パス(オプション、デフォルトは「 `.`」)
+* **local** 下位ノードの相対パス、または現在のノードの場合は 
+`.` 現在のノード(オプション、デフォルトは「 `.`」)
 
 ### tag {#tag}
 
