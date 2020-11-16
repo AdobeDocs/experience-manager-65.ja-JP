@@ -12,6 +12,9 @@ discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 translation-type: tm+mt
 source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
+workflow-type: tm+mt
+source-wordcount: '618'
+ht-degree: 99%
 
 ---
 
@@ -96,7 +99,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>エラー</td>
   </tr>
   <tr>
-   <td>操作</td>
+   <td>運用</td>
    <td> </td>
   </tr>
   <tr>
@@ -140,7 +143,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>ジョブ</td>
   </tr>
   <tr>
-   <td>サイト</td>
+   <td>Sites</td>
    <td> </td>
   </tr>
   <tr>
@@ -160,7 +163,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>外部リンクチェック<br /> </td>
   </tr>
   <tr>
-   <td>アセット</td>
+   <td>Assets</td>
    <td> </td>
   </tr>
   <tr>
@@ -272,16 +275,16 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>Adobe IMS 設定</td>
   </tr>
   <tr>
-   <td>クラウドサービス<br /> </td>
+   <td>Cloud Services <br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>従来のクラウドサービス</td>
+   <td>従来の Cloud Services</td>
   </tr>
   <tr>
    <td> </td>
-   <td>翻訳クラウドサービス</td>
+   <td>翻訳 Cloud Services</td>
   </tr>
   <tr>
    <td> </td>
@@ -379,7 +382,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>ClientContext はユーザーデータを動的にまとめたコレクションを表します。デフォルトの Marketing Cloud 設定はここに保持されます。<br /> </td>
   </tr>
   <tr>
-   <td>クラウドサービス設定<br /> </td>
+   <td>クラウドサービスの設定<br /> </td>
    <td>Adobe Marketing Cloud との統合に関連する設定を保持します。</td>
   </tr>
   <tr>
@@ -411,7 +414,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>受信済みのフォームの送信のリストを保持します。</td>
   </tr>
   <tr>
-   <td>輸入業者 </td>
+   <td>インポーター </td>
    <td>さまざまなオプションへのアクセスを提供します。</td>
   </tr>
   <tr>
@@ -419,7 +422,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>外部リンクチェック</td>
   </tr>
   <tr>
-   <td>Mobile</td>
+   <td>モバイル</td>
    <td>モバイルデバイス用にデザインされた Web サイトの作成を支援します。</td>
   </tr>
   <tr>
