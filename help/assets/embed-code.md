@@ -11,12 +11,12 @@ translation-type: tm+mt
 source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '371'
-ht-degree: 88%
+ht-degree: 91%
 
 ---
 
 
-# Embedding the Dynamic Media Video, Image viewer, or Dimensional viewer on a web page {#embedding-the-video-or-image-viewer-on-a-web-page}
+# Web ページへの Dynamic Media ビデオ、画像ビューア、またはディメンショナルビューアの埋め込み {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 Web ページに埋め込んでビデオを再生したりアセットを表示したりする場合は、**[!UICONTROL 埋め込みコード]**&#x200B;機能を使用します。埋め込みコードをクリップボードにコピーして、Web ページに貼り付けることができます。**[!UICONTROL 埋め込みコード]**&#x200B;ダイアログボックスでは、コードの編集はできません。
 
