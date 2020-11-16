@@ -21,7 +21,7 @@ ht-degree: 2%
 
 # フォームデータの計算 {#calculating-form-data}
 
-Formsサービスでは、ユーザーがフォームに入力した値を計算し、結果を表示できます。 フォームデータを計算するには、2つのタスクを実行する必要があります。 まず、フォームデータを計算するフォームデザインスクリプトを作成します。 フォームデザインは、3種類のスクリプトをサポートしています。 1つのスクリプトタイプはクライアントで実行され、別のスクリプトタイプはサーバーで実行され、3つ目のスクリプトタイプはサーバーとクライアントの両方で実行されます。 このトピックで説明するスクリプトタイプは、サーバー上で実行されます。 サーバー側の計算は、HTML、PDF、およびForm Guide（非推奨）の変換に対してサポートされています。
+Formsサービスでは、ユーザーがフォームに入力した値を計算し、結果を表示できます。 フォームデータを計算するには、2つのタスクを実行する必要があります。 まず、フォームデータを計算するフォームデザインスクリプトを作成します。 フォームデザインは、3種類のスクリプトをサポートしています。 1つのスクリプトタイプはクライアントで実行され、別のスクリプトタイプはサーバーで実行され、3つ目のスクリプトタイプはサーバーとクライアントの両方で実行されます。 このトピックで説明されているスクリプトタイプは、サーバー上で実行されます。 サーバー側の計算は、HTML、PDF、およびForm Guide（非推奨）の変換に対してサポートされています。
 
 フォームデザインのプロセスの一環として、演算とスクリプトを使用し、ユーザーの操作性を向上させることができます。 演算とスクリプトは、フォーム内のほとんどのフィールドとオブジェクトに追加できます。 ユーザーがインタラクティブフォームに入力したデータに対して演算操作を実行するには、フォームデザインのスクリプトを作成する必要があります。
 
@@ -30,7 +30,7 @@ Formsサービスでは、ユーザーがフォームに入力した値を計算
 * ユーザーがStartLoan.htmlというHTMLページにアクセスし、Webアプリケーションの開始ページとして機能します。 このページは、という名前のJavaサーブレットを呼び出 `GetLoanForm`します。
 * サーブレットはローンフォームをレンダリングします。 `GetLoanForm` このフォームには、スクリプト、インタラクティブフィールド、計算ボタン、送信ボタンが含まれています。
 * ユーザーがフォームのフィールドに値を入力し、「計算」ボタンをクリックします。 フォームが `CalculateData` Javaサーブレットに送信され、スクリプトが実行されます。 フォームがユーザーに送り返され、計算結果がフォームに表示されます。
-* ユーザは、満足のいく結果が表示されるまで値の入力と計算を続けます。 問題が解決したら、「送信」ボタンをクリックしてフォームを処理します。 送信されたデータを取得する別のJavaサーブレット `ProcessForm` に、フォームが送信されます。 (送信済みのフォームの [処理を参照](/help/forms/developing/rendering-forms.md#handling-submitted-forms))。
+* ユーザは、満足のいく結果が表示されるまで値の入力と計算を続けます。 問題が解決したら、「送信」ボタンをクリックしてフォームを処理します。 送信されたデータを取得する別のJavaサーブレット `ProcessForm` に、フォームが送信されます。 (提出したFormsの [処理を参照](/help/forms/developing/rendering-forms.md#handling-submitted-forms))。
 
 
 次の図に、アプリケーションのロジックのフローを示します。
@@ -53,7 +53,7 @@ Formsサービスでは、ユーザーがフォームに入力した値を計算
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Javaサーブレットは、FormsサービスクライアントAPIを使用してローンフォームをクライアントWebブラウザーにレンダリングします。 <code>GetLoanForm</code> サーバー上で実行するように設定されたスクリプトが含まれるフォームのレンダリングと、スクリプトが含まれないフォームのレンダリングの違いは、スクリプトの実行に使用するターゲットの場所を指定する必要があるということです。 ターゲットーの場所を指定しない場合、サーバー上で実行するように設定されたスクリプトは実行されません。 例えば、この節で紹介するアプリケーションについて考えてみましょう。 Javaサーブレットは、 <code>CalculateData</code> スクリプトが実行されるターゲットの場所です。</p></td>
+   <td><p>Javaサーブレットは、FormsサービスのクライアントAPIを使用して、ローンフォームをクライアントWebブラウザーにレンダリングします。 <code>GetLoanForm</code> サーバー上で実行するように設定されたスクリプトが含まれるフォームのレンダリングと、スクリプトが含まれないフォームのレンダリングの違いは、スクリプトの実行に使用するターゲットの場所を指定する必要があるということです。 ターゲットーの場所を指定しない場合、サーバー上で実行するように設定されたスクリプトは実行されません。 例えば、この節で紹介するアプリケーションについて考えてみましょう。 Javaサーブレットは、 <code>CalculateData</code> スクリプトが実行されるターゲットの場所です。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -70,7 +70,7 @@ Formsサービスでは、ユーザーがフォームに入力した値を計算
  </tbody>
 </table>
 
-通常、PDFコンテンツとして送信されるフォームには、クライアント上で実行されるスクリプトが含まれます。 ただし、サーバー側の計算を実行することもできます。 「送信」ボタンは、スクリプトの計算には使用できません。 この場合、Formsサービスではインタラクションが完了したと見なされるので、計算は実行されません。
+通常、PDFコンテンツとして送信されるフォームには、クライアント上で実行されるスクリプトが含まれます。 ただし、サーバー側の計算を実行することもできます。 「送信」ボタンは、スクリプトの計算には使用できません。 この場合、Formsサービスがインタラクションを完了と見なすので、計算は実行されません。
 
 フォームデザインのスクリプトの使用方法を説明するために、この節では、サーバー上で実行するように設定されたスクリプトを含むシンプルなインタラクティブフォームについて調べます。 次の図に示すフォームデザインには、ユーザーが最初の2つのフィールドに入力した値を追加し、その結果を3つ目のフィールドに表示するスクリプトが含まれています。
 
@@ -84,11 +84,11 @@ Formsサービスでは、ユーザーがフォームに入力した値を計算
      NumericField3 = NumericField2 + NumericField1
 ```
 
-このフォームデザインでは、「計算」ボタンはコマンドボタンで、スクリプトはこのボタンの `Click` イベントにあります。 ユーザーが最初の2つのフィールド（NumericField1とNumericField2）に値を入力し、「Calculate」ボタンをクリックすると、フォームがFormsサービスに送信され、このFormsサービスでスクリプトが実行されます。 Formsサービスは、フォームをクライアントデバイスにレンダリングし返し、計算結果をNumericField3フィールドに表示します。
+このフォームデザインでは、「計算」ボタンはコマンドボタンで、スクリプトはこのボタンの `Click` イベントにあります。 ユーザーが最初の2つのフィールド（NumericField1とNumericField2）に値を入力し、「Calculate」ボタンをクリックすると、フォームがFormsサービスに送信され、そこでスクリプトが実行されます。 Formsサービスは、フォームをクライアントデバイスにレンダリングし返し、計算の結果をNumericField3フィールドに表示します。
 
 >[!NOTE]
 >
->フォームデザインスクリプトの作成について詳しくは、「 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照してください。
+>フォームデザインスクリプトの作成について詳しくは、「 [Formsデザイナ](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照してください。
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Formsサービスでは、ユーザーがフォームに入力した値を計算
 フォームデータを計算するには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. フォームクライアントAPIオブジェクトを作成します。
+1. FormsクライアントAPIオブジェクトを作成します。
 1. 演算スクリプトを含むフォームを取得します。
 1. フォームデータストリームをクライアントのWebブラウザーに書き戻します
 
@@ -107,13 +107,13 @@ Formsサービスでは、ユーザーがフォームに入力した値を計算
 
 必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**フォームクライアントAPIオブジェクトの作成**
+**FormsクライアントAPIオブジェクトの作成**
 
-プログラムでFormsサービスのクライアントAPI操作を実行する前に、Formsサービスクライアントを作成する必要があります。 Java APIを使用している場合は、 `FormsServiceClient` オブジェクトを作成します。 Forms WebサービスAPIを使用している場合は、 `FormsServiceService` オブジェクトを作成します。
+プログラムでFormsサービスのクライアントAPI操作を実行する前に、Formsサービスクライアントを作成する必要があります。 Java APIを使用している場合は、 `FormsServiceClient` オブジェクトを作成します。 FormsWebサービスAPIを使用している場合は、 `FormsServiceService` オブジェクトを作成します。
 
 **演算スクリプトを含むフォームの取得**
 
-FormsサービスクライアントAPIを使用して、サーバー上で実行するように設定されたスクリプトが含まれるフォームを処理するアプリケーションロジックを作成します。 このプロセスは、送信されたフォームの処理と似ています。 (送信済みのフォームの [処理を参照](/help/forms/developing/handling-submitted-forms.md))。
+FormsサービスクライアントAPIを使用して、サーバー上で実行するように設定されたスクリプトが含まれるフォームを処理するアプリケーションロジックを作成します。 このプロセスは、送信されたフォームの処理と似ています。 (提出したFormsの [処理を参照](/help/forms/developing/handling-submitted-forms.md))。
 
 送信されたフォームに関連付けられている処理状態が `1``(Calculate)`、つまり、Formsサービスがフォームデータに対して計算操作を実行しており、結果をユーザーに書き戻す必要があることを確認します。 この場合、サーバー上で実行するように設定されたスクリプトが自動的に実行されます。
 
@@ -124,17 +124,17 @@ FormsサービスクライアントAPIを使用して、サーバー上で実行
 **関連項目**
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-[Java API](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)[フォームデータの計算Java API](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)[フォームデータの使用WebサービスAPI](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)[](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)[](/help/forms/developing/rendering-interactive-pdf-forms.md)[接続プロパティの設定接続プロパティの設定API開始の計算QuickCalculateインタラクティブPDF formsの作成Java API FormsWeb アプリケーションの使用](/help/forms/developing/creating-web-applications-renders-forms.md)
+[フォームデータの計算Java API](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)[](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)フォームデータWebサービスAPI[](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)接続プロパティの設定接続プロパティの[設定WebサービスAPI](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)[](/help/forms/developing/rendering-interactive-pdf-forms.md)[FormsサービスAPI開始の計算クイックFormsの計算インタラクティブPDF formsの作成Web アプリケーションの使用](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Java APIを使用してフォームデータを計算する {#calculate-form-data-using-the-java-api}
 
-Forms API(Java)を使用してフォームデータを計算します。
+FormsAPI(Java)を使用してフォームデータを計算するには：
 
 1. プロジェクトファイルを含める
 
    Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。
 
-1. フォームクライアントAPIオブジェクトの作成
+1. FormsクライアントAPIオブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
    * Create an `FormsServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
@@ -146,7 +146,7 @@ Forms API(Java)を使用してフォームデータを計算します。
 
       * フォームデータを含む `com.adobe.idp.Document` オブジェクトです。
       * 関連するすべてのHTTPヘッダーを含む環境変数を指定するstring値。 処理するコンテンツタイプを指定するには、 `CONTENT_TYPE` 環境変数に1つ以上の値を指定する必要があります。 例えば、XMLデータとPDFデータを処理するには、このパラメーターに次の文字列値を指定します。 `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
-      * ヘッダー値を指定するstring値 `HTTP_USER_AGENT` 。 例えば、 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+      * ヘッダー値を指定するstring値 `HTTP_USER_AGENT` 。例えば、 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
       * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
       この `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
@@ -170,14 +170,14 @@ Forms API(Java)を使用してフォームデータを計算します。
 
 ## WebサービスAPIを使用してフォームデータを計算する {#calculate-form-data-using-the-web-service-api}
 
-Forms API（Webサービス）を使用してフォームデータを計算します。
+FormsAPI（Webサービス）を使用してフォームデータを計算するには：
 
 1. プロジェクトファイルを含める
 
    * FormsサービスのWSDLを使用するJavaプロキシクラスを作成します。
    * クラスパスにJavaプロキシクラスを含めます。
 
-1. フォームクライアントAPIオブジェクトの作成
+1. FormsクライアントAPIオブジェクトの作成
 
    オブジェクトを作成し、認証値を設定し `FormsService` ます。
 
@@ -194,7 +194,7 @@ Forms API（Webサービス）を使用してフォームデータを計算し�
 
       * フォームデータを含む `BLOB` オブジェクトです。
       * 関連するすべてのHTTPヘッダーが含まれる環境変数を指定するstring値。 例えば、次の文字列値を指定できます。 `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * ヘッダー値を指定するstring値 `HTTP_USER_AGENT` 。 例えば、 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+      * ヘッダー値を指定するstring値 `HTTP_USER_AGENT` 。例えば、 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
       * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。 その他の情報, .
       * メソッドによって入力される空の `BLOBHolder` オブジェクトです。
       * メソッドによって入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクトです。
