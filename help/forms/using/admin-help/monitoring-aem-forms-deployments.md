@@ -75,7 +75,7 @@ JMX コンソール（JConsole）を使用すると、OperationStatistic MBean �
 
 **MBean ツリー**
 
-**Adobe Domain Name:** Application Serverによって異なります。 アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
+**Adobeドメイン名：** Application Serverによって異なります。 アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
 
 **ServiceType:** AdobeServiceは、すべてのサービスのリストに使用される名前です。
 
