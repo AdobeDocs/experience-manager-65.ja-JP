@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 89%
 
 ---
 
@@ -29,7 +32,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
-レイアウトはレスポンシブデザインスタイルに従い、使用するデバイス/ウィンドウのサイズに合わせて調整されます。
+レイアウトはレスポンシブデザインスタイルに従い、使用するデバイスやウィンドウのサイズに合わせて調整されます。
 
 例えば、解像度が 1024 px 未満（モバイルデバイスなど）になると、それに応じて表示が調整されます。
 
@@ -41,7 +44,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ヘッダーバーにはグローバル要素が表示されます。
 
-* ロゴと、現在使用している特定の製品/ソリューションAEMの場合、これはグローバルナビゲーションへのリンクも形成します。
+* 現在使用しているロゴと特定の製品/ソリューションaemの場合は、これもグローバルナビゲーションへのリンクを形成します。
 * 検索
 * ヘルプリソースにアクセスするためのアイコン
 * その他のソリューションにアクセスするためのアイコン
@@ -65,7 +68,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 左レールは、必要に応じて表示／非表示を切り替えることができます。
 
 * **タイムライン**
-* **リファレンス**
+* **参照**
 * **フィルター**
 
 デフォルトでは&#x200B;**コンテンツのみ**&#x200B;が表示されます（レールは非表示です）。
@@ -164,7 +167,7 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 
 ## その他の情報 {#further-information}
 
-タッチ操作対応UIに関する概念について詳しくは、「AEMタッチ対応UIの概念」の記 [事を参照してください](/help/sites-developing/touch-ui-concepts.md)。
+タッチ対応UIに関する概念について詳しくは、AEMタッチ対応UIの [概念に関する記事](/help/sites-developing/touch-ui-concepts.md)を参照してください。
 
-技術情報について詳しくは、タッチ対応ペ [ージエディターの](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) JSドキュメントセットを参照してください。
+技術情報について詳しくは、タッチ対応ページエディターの [JSドキュメントセット](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) （英語のみ）を参照してください。
 
