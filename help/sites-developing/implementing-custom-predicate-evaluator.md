@@ -12,6 +12,9 @@ discoiquuid: ef253905-87da-4fa2-9f6c-778f1b12bd58
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '795'
+ht-degree: 73%
 
 ---
 
@@ -58,7 +61,7 @@ GitHub のコード
 
 ### レプリケーションメタデータ用のカスタム述語エバリュエーターの実装 {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
-この節では、レプリケーション・メタデータに基づいてデータを支援するカスタム述語評価演算子の作成方法を説明します。
+例として、レプリケーション・メタデータに基づくデータを支援するカスタム述語評価基準を作成する方法を説明します。
 
 * `cq:lastReplicated`：最終レプリケーションアクションの日付を格納
 
@@ -98,7 +101,7 @@ replic.since=2013-01-01T00:00:00.000+01:00
 replic.action=Activate
 ```
 
-レプリケーションメタデータ述部をカスタム述部評価子でグループ化すると、意味のあるクエリを作成できます。
+レプリケーションメタデータ述語をカスタム述語評価子でグループ化すると、意味のあるクエリを作成するのに役立ちます。
 
 #### Maven 依存関係の更新 {#updating-maven-dependencies}
 
@@ -114,7 +117,7 @@ replic.action=Activate
 
 pom.xml
 
-The following snippet shows the differences, in [unified diff format](https://en.wikipedia.org/wiki/Diff#Unified_format)
+The following snippet shows the differences, in [unified diff format](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)
 
 ```
 @@ -120,6 +120,12 @@
@@ -146,7 +149,7 @@ The `cq-search` project contains the `AbstractPredicateEvaluator` abstract class
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   The following snippet shows the differences, in [unified diff format](https://en.wikipedia.org/wiki/Diff#Unified_format)
+   The following snippet shows the differences, in [unified diff format](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)
 
 ```
 @@ -19,8 +19,11 @@
