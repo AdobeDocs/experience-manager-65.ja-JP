@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 2ae7ea8d-fc58-4647-bc83-915d9f4b7dd8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 62%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->If you are not using Adobe Experience Manager (AEM) as your content management source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>If you are not using Adobe Experience Manager (AEM) as your content management source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
@@ -33,7 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## AEM Mobile 作成者 {#aem-mobile-author}
 
-***AEM Author *(または*Marketer *)**は、あらかじめ用意されている独自のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加を行います。 AEM&#39;s built-in content editor is then used by*AEM Authors *to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
+***AEM作成者* (または *マーケティング担当者*)**は、カスタム開発または標準搭載のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加を行います。 AEM&#39;s built-in content editor is then used by *AEM Authors* to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
 
 AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作成する場合に以下のタスクを担当します。
 
@@ -52,6 +55,7 @@ AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作�
 >
 >* [テンプレート](/help/sites-developing/templates.md)
 >* [コンポーネント](/help/sites-developing/components.md)
+
 >
 
 
