@@ -21,7 +21,7 @@ ht-degree: 82%
 
 >[!CAUTION]
 >
->AEM Formsには、アダプティブフォームの [テーマを作成および変更するための](/help/forms/using/themes.md) テーマエディター [機能が用意されています](/help/forms/using/themes.md)。 この記事に示す手順を実行するのは、 [テーマエディターを持たないバージョンからアップグレードした場合に、LESS/CSSファイルを使用して作成したテーマに既に投資している場合に限ります](/help/forms/using/themes.md) （テーマエディターを使用する前の方法）。
+>AEM Formsは、アダプティブフォームの [テーマを作成および変更する](/help/forms/using/themes.md) テーマエディター機能を提供しています [](/help/forms/using/themes.md)。 この記事に示す手順を実行するのは、 [テーマエディターを持たないバージョンからアップグレードした場合に、LESS/CSSファイルを使用して作成したテーマに既に投資している場合に限ります](/help/forms/using/themes.md) （テーマエディターを使用する前の方法）。
 
 ## 前提条件 {#prerequisites}
 
@@ -45,7 +45,7 @@ ht-degree: 82%
 >
 >この手順にしたがって同じ名前を使用すると、結果として次のスナップショットと同じようなテンプレートが出来上がるはずです：
 
-![フォレストのテーマを設定したアダプティブフォームのスナップショット](assets/thumbnail.png)**図：** *フォレストテーマのサンプル*
+![フォレストのテーマを設定したアダプティブフォームのスナップショット](assets/thumbnail.png)**図：***フォレストテーマのサンプル*
 
 1. Create a node of type `cq:ClientLibraryFolder` under the `/apps`node.
 
@@ -61,7 +61,7 @@ ht-degree: 82%
 
 1. Add two folders, `less` and `css`, and a file `css.txt` to the node created in step 1:
 
-   * `less` folder: 変数を定義する `less` 変数ファイルが含まれます。この変数は、.cssスタイルの管理 `less``less mixins` に使用されます。
+   * `less` folder:変数を定義する `less` 変数ファイルが含まれます。この変数は、.cssスタイルの管理 `less``less mixins` に使用されます。
 
       このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインと変数を使用してスタイルを定義する `less` ファイルから構成されています。そして、これらすべての less ファイルは、styles.less にインポートされます。
 
