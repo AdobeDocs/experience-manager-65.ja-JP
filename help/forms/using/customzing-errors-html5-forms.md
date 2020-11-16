@@ -120,9 +120,9 @@ ht-degree: 78%
 
 ## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
 
-初期設定では、html5フォームは次のデフォルトのプロファイルを使用します。 https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
+初期設定では、html5フォームは次のデフォルトのプロファイルを使用します。https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
-カスタムエラーメッセージを使用してフォームを表示するには、次のエラープロファイルを使用してフォームをレンダリングします。 https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
+カスタムエラーメッセージを使用してフォームを表示するには、次のエラープロファイルを使用してフォームをレンダリングします。https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
 >[!NOTE]
 >
