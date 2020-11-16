@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 translation-type: tm+mt
 source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 84%
 
 ---
 
@@ -21,8 +24,8 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 次の領域について、ベストプラクティスに関するドキュメントが提供されています。
 
-* [アセット](#assets)
-* [サイト](#sites)
+* [Assets](#assets)
+* [Sites](#sites)
 * [フォーム](#forms)
 
 管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
@@ -33,9 +36,9 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 以降の表では、特定のドキュメントの説明とリンクを示します。
 
-## アセット {#assets}
+## Assets {#assets}
 
-ダイナミックメディア機能やダイナミックメディアクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明します。
+ダイナミックメディア機能やダイナミックメディアクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明されています。
 
 <table>
  <tbody>
@@ -68,10 +71,10 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 |  |  |  |
 |---|---|---|
-| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページの作成に使用されるツールの概要を示します。 |
+| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページの作成に使用されるツールの概要が表示されます。 |
 | ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md) | 命名規則を含む、ページを最適に整理する方法の概要を説明します。 |
 
-## Forms {#forms}
+## フォーム {#forms}
 
 |  |  |  |
 |---|---|---|
