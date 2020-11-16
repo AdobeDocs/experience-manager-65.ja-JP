@@ -12,6 +12,9 @@ discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+workflow-type: tm+mt
+source-wordcount: '815'
+ht-degree: 99%
 
 ---
 
@@ -69,7 +72,7 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
    <td>
     <ol>
      <li>6.5 にアップデートします。</li>
-     <li>サイト管理、アセットなどには、デフォルトの UI を使用します。<br /> </li>
+     <li>サイト管理、アセットなどには、デフォルトの UI を使用します等。<br /> </li>
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
     </ol> <p>次に第 2 段階として、</p>
     <ol>
@@ -81,7 +84,7 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
    <td>
     <ol>
      <li>6.5 にアップデートします。</li>
-     <li>サイト管理、アセットなどには、デフォルトの UI を使用します。</li>
+     <li>サイト管理、アセットなどには、デフォルトの UI を使用します等。</li>
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
     </ol> <p>次に第 2 段階として、</p>
     <ol>
@@ -128,5 +131,5 @@ AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは�
 * [タッチ操作対応 UI のページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md)（サンプルコードを含む）。
 
 * [タッチ操作対応カスタマイズでの AEM Gem セッション](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html)。
-* [Granite UI ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)。
+* [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)。
 
