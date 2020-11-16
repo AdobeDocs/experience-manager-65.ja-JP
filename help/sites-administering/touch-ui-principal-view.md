@@ -12,6 +12,9 @@ discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 translation-type: tm+mt
 source-git-commit: a156e09e77951041dce017f2f78069bc050b6bdb
+workflow-type: tm+mt
+source-wordcount: '702'
+ht-degree: 86%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: a156e09e77951041dce017f2f78069bc050b6bdb
 
 ## 概要 {#overview}
 
-AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能は従来のUIと同じですが、より使いやすく、効率的です。
+AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能は従来のUIと同じですが、使いやすくて効率的です。
 
 ## 使用方法 {#how-to-use}
 
