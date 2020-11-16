@@ -1,8 +1,8 @@
 ---
 title: システム情報サービス API
 seo-title: システム情報サービス API
-description: このドキュメントは、システムシステムシステムが提供するAPIに関する詳細な情報を提供します。情報サービス
-seo-description: このドキュメントは、システムシステムシステムが提供するAPIに関する詳細な情報を提供します。情報サービス
+description: このドキュメントは、システム情報サービスが提供するAPIに関する詳細情報を提供します。
+seo-description: このドキュメントは、システム情報サービスが提供するAPIに関する詳細情報を提供します。
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
 content-type: reference
@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 69%
 
 ---
 
@@ -30,7 +33,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
  <tbody>
   <tr>
    <td><p>SystemInfo.properties</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties'</p></td>
+   <td><p>https://'[サーバー]:[ポート]'/rest/services/SystemInfo.properties`</p></td>
    <td><p>この API は <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API のラッパーです。それは現在の作業環境の設定を取得します。 </p></td>
   </tr>
   <tr>
