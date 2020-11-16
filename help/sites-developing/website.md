@@ -12,6 +12,9 @@ discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '4952'
+ht-degree: 69%
 
 ---
 
@@ -72,9 +75,9 @@ AEM をインストールしたら、ようこそページで CRXDE Lite のリ�
 
 CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーション構造を作成します。
 
-1. CRXDE liteの左側のツリーで、フォルダーを右クリックし、作成/フォルダ **`/apps`** ーを作成をク **リッ** クします ********。 フォルダの作 **成ダイアログで** 、フォル `mywebsite` ダ名として入力し、「 **OK」をクリックします**。
-1. Right-click the **`/apps/mywebsite`** folder and click **Create** > **Create Folder**. フォルダの作 **成ダイアログで** 、フォル `components` ダ名として入力し、「 **OK」をクリックします**。
-1. Right-click the **`/apps/mywebsite`** folder and click **Create** > **Create Folder**. フォルダの作 **成ダイアログで** 、フォル `templates` ダ名として入力し、「 **OK」をクリックします**。
+1. CRXDE Liteの左側のツリーで、フォルダーを右クリックし、 **`/apps`** 作成 **/フォルダーを** 作成 **をクリックします******。 フォルダの **作成** ダイアログで、フォルダ名 `mywebsite` としてと入力し、「 **OK**」をクリックします。
+1. Right-click the **`/apps/mywebsite`** folder and click **Create** > **Create Folder**. フォルダの **作成** ダイアログで、フォルダ名 `components` としてと入力し、「 **OK**」をクリックします。
+1. Right-click the **`/apps/mywebsite`** folder and click **Create** > **Create Folder**. フォルダの **作成** ダイアログで、フォルダ名 `templates` としてと入力し、「 **OK**」をクリックします。
 
    ツリー内の構造は次のようになります。
 
@@ -98,11 +101,11 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
-1. In the folder tree, select the **Designs** folder and then click **New** > **New Page**. タイト `mywebsite` ルを入力し、「作成」をクリッ **クします**。
+1. In the folder tree, select the **Designs** folder and then click **New** > **New Page**. タイトル `mywebsite` を入力し、「 **作成**」をクリックします。
 
 1. mywebsite という項目がテーブルに表示されない場合は、ツリーまたはテーブルを更新します。
 
-1. [https://localhost:4502にあるURLに対するWebDAV](/help/sites-administering/webdav-access.md) アクセス権を使用して、ダウンロードしたmywebsite.zipファイルからサン `static.css` プ `images` ルファイルとフォルダーをフォルダーにコピー `/etc/designs/mywebsite` します。
+1. [https://localhost:4502にあるURLへのWebDAV](/help/sites-administering/webdav-access.md) アクセスを使用して、ダウンロードしたmywebsite.zipファイルからサンプル `static.css` ファイルと `images` フォルダーを `/etc/designs/mywebsite` フォルダーにコピーします。
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
@@ -127,7 +130,8 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
    * **ラベル**：contentpage
    * **タイトル**：My Website Content Page Template
    * **説明**：This is my Website Content Page Template
-   * **** リソースタイプ：mywebsite/components/contentpage
+   * **リソースの種類：** mywebサイト/components/contentpage
+
    「ランキング」プロパティにはデフォルト値を使用します。
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
@@ -138,7 +142,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-   *許可されているpathプロパティの値は、正規*&#x200B;表現です。式と一致するパスを持つページでは、テンプレートを使用できます。この場合、正規表現は **/contentフォルダーとすべてのサブページのパスに一致します** 。
+   The value of the allowed path property is a *regular expression.* Pages that have a path that matches the expression can use the template. In this is case the regular expression matches the path of the **/content** folder and all subpages.
 
    When an author creates a page below /content, the **contentpage** template appears in a list of available templates to use.
 
@@ -156,9 +160,10 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
    * **ラベル**：contentpage
    * **タイトル**：My Website Content Page Component
    * **説明**：This is My Website Content Page Component
+
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
-   新しいコンポーネントの場所はです `/apps/mywebsite/components/contentpage`。 このパスは、contentpageテンプレートのリソースタイプ（パスの最初の部分を除く） **`/apps/`** に対応しています。
+   新しいコンポーネントの場所はです `/apps/mywebsite/components/contentpage`。 このパスは、contentpageテンプレート(パスの最初の **`/apps/`** 部分を除く)のリソースタイプに対応します。
 
    この一致は、テンプレートをコンポーネントと結び付けるものなので、Web サイトを正常に機能させるために重要です。
 
@@ -172,7 +177,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 contentpage.jsp スクリプトにコードを追加してページコンテンツを定義します。
 
-1. CRXDE Liteで、でファイルを開き `contentpage.jsp` ます `/apps/mywebsite/components/contentpage`。 ファイルには、次のコードがデフォルトで含まれています。
+1. CRXDE Liteで、ファイルを開 `contentpage.jsp` き `/apps/mywebsite/components/contentpage`ます。 ファイルにはデフォルトで次のコードが含まれています。
 
    ```java
    <%--
@@ -211,7 +216,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
 ### Web サイトページおよびコンテンツページの作成 {#creating-your-website-page-and-content-pages}
 
-この節では、すべてcontentpageテンプレートを使用する次のページを作成します。Webサイト、英語、製品、サービス、お客様。
+このセクションでは、次のページを作成し、すべてのページでcontentpageテンプレートを使用します。Webサイト、英語、製品、サービス、およびお客様
 
 1. On the AEM Welcome page ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)), click Websites.
 
@@ -221,8 +226,9 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 1. **ページを作成**&#x200B;ウィンドウで、以下を入力します。
 
    * タイトル: `My Website`
-   * 名前: `mywebsite`
+   * 名前：`mywebsite`
    *  `My Website Content Page Template`
+
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
 1. Click **Create**. In the folder tree, select the **/Websites/My Website** page and click **New** > **New Page**.
@@ -247,17 +253,19 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 1. In the folder tree, select the **/Websites/My Website/English** page and click **New** > **New Page**.
 1. **ページを作成**&#x200B;ダイアログで、以下のプロパティ値を入力して「**作成**」をクリックします。
 
-   * タイトル：顧客
+   * タイトル：お客様
    * 「My Website Content Page Template」を選択します。
+
    構造は次のようになります。
 
    ![chlimage_1-36](assets/chlimage_1-36.png)
 
-1. ページをMyWebサイトデザインにリンクするには、CRXDE liteでノードを選択し `/content/mywebsite/en/jcr:content` ます。 「プロパティ」タブで、新しいプロパティに次の値を入力し、「追加」をクリックします。
+1. ページをmywebサイトデザインにリンクするには、CRXDE Liteで `/content/mywebsite/en/jcr:content` ノードを選択します。 「プロパティ」タブで、新しいプロパティに次の値を入力し、追加をクリックします。
 
    * 名前：cq:designPath
    * タイプ：String
    * 値：/etc/designs/mywebsite
+
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
 1. In a new wb browser tab or window, open [https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html) to see the Products page:
@@ -274,18 +282,18 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
 #### 基盤ページスクリプトの使用 {#using-the-foundation-page-scripts}
 
-この練習では、スーパータイプがAEMページコンポーネントになるようにpagecontentコンポーネントを設定します。コンポーネントはスーパータイプの機能を継承するので、ページコンテンツはページコンポーネントのスクリプトとプロパティを継承します。
+この練習では、pagecontentコンポーネントを設定して、スーパータイプがAEM Pageコンポーネントになるようにします。コンポーネントはスーパータイプの機能を継承するので、ページコンテンツはページコンポーネントのスクリプトとプロパティを継承します。
 
 例えば、自分のコンポーネントの JSP コード内で、スーパータイプコンポーネントによって提供されているスクリプトを、自分のコンポーネントに含まれているかのように参照できます。
 
 1. In CRXDE Lite, add a property to the `/apps/mywebsite/components/contentpage` node.
 
    1. Select the `/apps/mywebsite/components/contentpage` node.
-   1. 「プロパティ」タブの下部で、次のプロパティ値を入力し、「追加」をクリックします。
+   1. 「プロパティ」タブの下部で、次のプロパティ値を入力し、クリックし追加ます。
 
       * **名前：** sling:resourceSuperType
       * **タイプ：** String
-      * **** 値：foundation/components/page
+      * **値：** foundation/components/page
    1. 「すべて保存」をクリックします。
 
 
@@ -487,7 +495,7 @@ contentpage コンポーネントに topnav を含めるには：
 
 この演習では、[Sling の要求処理](/help/sites-developing/the-basics.md#sling-request-processing)を実証します。ページナビゲーションリンクに使用する画像を動的に生成するスクリプトを呼び出すように topnav.jsp スクリプトを変更します。この演習では、Sling で画像ソースファイルの URL を解析し、画像のレンダリングに使用するスクリプトを特定します。
 
-例えば、製品ページへの画像リンクのソースはhttps://localhost:4502/content/mywebsite/en/products.navimage.pngになります。 Slingは、このURLを解析して、リソースタイプと、リソースをレンダリングするために使用するスクリプトを決定します。
+例えば、製品ページへの画像リンクのソースは、https://localhost:4502/content/mywebsite/en/products.navimage.pngになります。 Slingは、このURLを解析して、リソースの種類と、リソースのレンダリングに使用するスクリプトを決定します。
 
 1. Sling determines the path of the resource to be `/content/mwebysite/en/products.png.`
 1. Sling matches this path with the `/content/mywebsite/en/products` node.
@@ -513,7 +521,7 @@ contentpage コンポーネントに topnav を含めるには：
 1. Right-click the `/apps/mywebsite/components/contentpage` node and click **Create** > **Create File**.
 1. In the **Create File** window, as **Name**, type `navimage.png.java`.
 
-   .javaファイル名拡張子は、Slingに対して、Apache SlingスクリプティングJavaサポートを使用してスクリプトをコンパイルし、サーブレットを作成する必要があることを示します。
+   .javaファイル名の拡張子は、Slingに対して、Apache SlingスクリプティングJavaサポートを使用してスクリプトをコンパイルし、サーブレットを作成する必要があることを示します。
 
 1. Copy the following code into `navimage.png.java.`The code extends the AbstractImageServlet class:
 
@@ -669,9 +677,9 @@ Products ページの下に 2 つのページを作成します。特定の 2 �
    1. Select the `/content/mywebsite/en/products/product1/jcr:content` node.
    1. 「**プロパティ**」タブで、以下の値を入力します。
 
-      * 名前: `jcr:description`
-      * タイプ: `String`
-      * 値: `This is a description of the Product 1!.`
+      * 名前：`jcr:description`
+      * 型：`String`
+      * 値：`This is a description of the Product 1!.`
    1. 「**追加**」をクリックします。
    1. 「**プロパティ**」タブで、以下の値を使用してもう 1 つのプロパティを作成します。
 
@@ -709,7 +717,7 @@ listchildren コンポーネントを作成するには：
 1. In CRXDE Lite, right-click `/apps/mywebsite/components`, select **Create**, then **Create Component**.
 1. ダイアログで、以下のプロパティ値を入力して「次へ」をクリックします。
 
-   * ラベル：listchildren
+   * ラベル：listchildren.
    * タイトル：My Listchildrenコンポーネント。
    * 説明：これはMy Listchildrenコンポーネントです。
 
@@ -760,7 +768,8 @@ listchildren コンポーネントのプロパティを設定する際に使用�
 
       * **ラベル**: `dialog`
 
-      * **タイトル**:「 `Edit Component`**OK」をクリックします**。
+      * **タイトル**: `Edit Component` 「 **OK**」をクリックします。
+
    ![screen_shot_2012-03-07at45818pm](assets/screen_shot_2012-03-07at45818pm.png)
 
    次のようにプロパティを定義します。
@@ -776,21 +785,23 @@ listchildren コンポーネントのプロパティを設定する際に使用�
 
    * 名前：items
    * タイプ：cq:WidgetCollection
+
    ![screen_shot_2012-03-07at51018pm](assets/screen_shot_2012-03-07at51018pm.png)
 
 1. 以下のプロパティ値を使用して、items ノードの下にノードを作成します。
 
    * 名前：listroot
    * タイプ：cq:Widget
+
    ![screen_shot_2012-03-07at51031pm](assets/screen_shot_2012-03-07at51031pm.png)
 
-1. リストアウトノードのプロパティを追加し、テキストフィールドとして設定します。次の表に示す各行は、プロパティを表しています。完了したら、「すべて保存」をクリックします。
+1. リストア追加ウトノードをテキストフィールドとして設定するためのプロパティ。次の表に示す各行は、プロパティを表しています。終了したら、「すべて保存」をクリックします。
 
    | 名前 | タイプ | 値 |
    |---|---|---|
-   | fieldLabel | 文字列 | リストルートのパス |
-   | name | 文字列 | 。/listroot |
-   | xtype | 文字列 | textfield |
+   | fieldLabel | String | リストルートのパス |
+   | name | String | 。/listroot |
+   | xtype | String | textfield |
 
    ![screen_shot_2012-03-07at51433pm](assets/screen_shot_2012-03-07at51433pm.png)
 
@@ -825,7 +836,7 @@ contentpage コンポーネントに listchildren コンポーネントを含め
 
 1. ![chlimage_1-44](assets/chlimage_1-44.png)
 
-1. リストのルートのパスとして、次のように入力します。 `/content/mywebsite/en`.「OK」をクリックします。 ページ上のlistchildrenコンポーネントは次のようになります。
+1. リストルートのパスとして、次のように入力します。 `/content/mywebsite/en`.「OK」をクリックします。 ページ上のlistchildrenコンポーネントは次のようになります。
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
@@ -908,19 +919,19 @@ contentpage コンポーネントに listchildren コンポーネントを含め
 
    1. 以下のプロパティ値を入力して「OK」をクリックします。
 
-      * **** ラベル： `design_dialog`
+      * **ラベル：** `design_dialog`
 
       * **タイトル:** `Logo (Design)`
 
 1. design_dialog ブランチの tab1 ノードを右クリックして「削除」をクリックします。「すべて保存」をクリックします。
-1. Under the `design_dialog/items/items`node, create a new node named `img` of type `cq:Widget`. 次のプロパティを追加し、「すべて保存」をクリックします。
+1. Under the `design_dialog/items/items`node, create a new node named `img` of type `cq:Widget`. 追加次のプロパティを指定し、「すべて保存」をクリックします。
 
    | 名前 | タイプ | 値 |
    |---|---|---|
-   | fileNameParameter | 文字列 | 。/imageName |
-   | fileReferenceParameter | 文字列 | 。/imageReference |
-   | name | 文字列 | 。/image |
-   | title | 文字列 | 画像 |
+   | fileNameParameter | String | 。/imageName |
+   | fileReferenceParameter | String | 。/imageReference |
+   | name | String | 。/画像 |
+   | title | String | 画像 |
    | xtype | String | html5smartimage |
 
    ![chlimage_1-47](assets/chlimage_1-47.png)
@@ -1000,7 +1011,7 @@ public class img_GET extends AbstractImageServlet {
 
 #### contentpage コンポーネントへのロゴコンポーネントの追加 {#adding-the-logo-component-to-the-contentpage-component}
 
-1. CRXDE Liteで、下のを開き、次 `left.jsp` のコ `/apps/mywebsite/components/contentpage file` ード行を探します。
+1. CRXDE Liteで、の下のを開き、次のコ `left.jsp` ード行 `/apps/mywebsite/components/contentpage file` を探します。
 
    ```xml
    <div>logo</div>
@@ -1013,7 +1024,7 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. 変更内容を保存します。
-1. ブラウザーで、製品ページを再読み込みします。ロゴは次のように表示されますが、現在は基になるリンクのみが表示されます。
+1. ブラウザーで、製品ページを再読み込みします。ロゴは次のようになりますが、現在のところ、基になるリンクのみを表示します。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -1120,8 +1131,8 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 1. `image` コンポーネントノードを選択して、以下のプロパティ値を変更します。
 
-   * `jcr:title:` 画像コンポーネント
-   * `jcr:description`:これはマイ画像コンポーネントです。
+   * `jcr:title:` マイ画像コンポーネント
+   * `jcr:description`:これはMy Imageコンポーネントです。
 
 1. 以下のプロパティ値を使用して、`image` ノードにプロパティを追加します。
 
@@ -1188,9 +1199,9 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 | 名前 | タイプ | 値 |
 |---|---|---|
-| 同意 | 文字列 | image/(gif | jpeg | png) |
-| グループ | 文字列 | media |
-| propertyName | 文字列 | 。/imageReference |
+| 同意 | String | image/(gif | jpeg | png) |
+| グループ | String | media |
+| propertyName | String | 。/imageReference |
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
