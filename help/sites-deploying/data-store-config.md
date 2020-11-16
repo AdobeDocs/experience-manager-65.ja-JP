@@ -287,7 +287,7 @@ You can also upgrade the cache offline by using the `datastorecacheupgrade` comm
 
 **非同期アップロード**
 
-キャッシュでは、データストアへの非同期アップロードがサポートされています。ファイルは（ファイルシステム上の）キャッシュでローカルにステージングされ、非同期ジョブでファイルのアップロードが開始されます。非同期アップロードの数は、ステージングキャッシュのサイズによって制限されます。ステージングキャッシュのサイズは、`stagingSplitPercentage` パラメーターを使用して設定します。このパラメーターでは、ステージングキャッシュに使用するキャッシュサイズの割合（％）を定義します。Also, the percentage of cache available for downloads is calculated as **(100 -`stagingSplitPercentage`) *`cacheSize`**.
+キャッシュでは、データストアへの非同期アップロードがサポートされています。ファイルは（ファイルシステム上の）キャッシュでローカルにステージングされ、非同期ジョブでファイルのアップロードが開始されます。非同期アップロードの数は、ステージングキャッシュのサイズによって制限されます。ステージングキャッシュのサイズは、`stagingSplitPercentage` パラメーターを使用して設定します。このパラメーターでは、ステージングキャッシュに使用するキャッシュサイズの割合（％）を定義します。Also, the percentage of cache available for downloads is calculated as **(100 - `stagingSplitPercentage`) *`cacheSize`**.
 
 The asynchronous uploads are multi-threaded and the number of threads is configured by using the `uploadThreads` parameter.
 
