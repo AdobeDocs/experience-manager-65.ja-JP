@@ -22,11 +22,11 @@ ht-degree: 4%
 
 次のクライアントアプリケーションを使用して、Workbenchで作成された人間中心の長期間有効なプロセスをプログラムで呼び出すことができます。
 
-* 呼び出しAPIを使用するJava Webベースのクライアントアプリケーション。 (Java APIを使用したAEM Formsの [呼び出し](/help/forms/developing/invoking-aem-forms-using-java.md)(/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)を参照)。
+* 呼び出しAPIを使用するJava Webベースのクライアントアプリケーション。 (Java APIを使用した [AEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-java.md)(/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)を参照)。
 * Webサービスを使用するASP.NETアプリケーション。 (See [Invoking AEM Forms Using Web Services](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
-* Flexで構築された、Remotingを使用するクライアントアプリケーション。 (「 [AEM Formsの呼び出し」（AEM Formsでは非推奨）AEM Formsのリモート処理を使用した呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)」を参照)。
+* Remotingを使用する、Flexで構築されたクライアントアプリケーション。 (「AEM formsでは非推奨) [AEM Formsリモートを使用したAEM Formsの呼び出し」を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting))。
 
-呼び出される長期間有効なプロセスは、FirstAppSolution/PreLoanProcessという名前 *です*。 このプロセスは、「最初のAEM Formsアプリケーションの [作成」で指定したチュートリアルに従って作成できます](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)。
+呼び出される長期間有効なプロセスは、FirstAppSolution/PreLoanProcess *という名前です*。 このプロセスは、「最初のAEM Formsアプリケーションの [作成」で指定したチュートリアルに従って作成できます](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)。
 
 人間中心のプロセスには、ユーザーがWorkspaceを使用して応答できるタスクが含まれます。 例えば、Workbenchを使用する場合、銀行の管理者がローンの申し込みを承認または拒否できるプロセスを作成できます。 次の図に、FirstAppSolution/PreLoanProcess *のプロセスを示します*。
 
@@ -38,7 +38,7 @@ FirstAppSolution/PreLoanProcess *プロセスは、データタイプがXMLで�
 * プロセスは、組織の境界をまたぐことができます。
 * プロセスを終了するには、外部入力が必要です。 例えば、不在の管理者にフォームが送信される場合を考えてみます。 この場合、マネージャーがフォームを返して入力するまで、プロセスは完了しません。
 
-長期間有効なプロセスが呼び出されると、AEM Formsは、レコードの作成の一部として呼び出し識別子の値を作成します。 このレコードは、長期間有効なプロセスのステータスを追跡し、AEM Formsデータベースに保存されます。 呼び出し識別子の値を使用して、長期間有効なプロセスのステータスを追跡できます。 また、プロセス呼び出し識別子の値を使用して、実行中のプロセスインスタンスの終了など、Process Manager操作を実行できます。
+長期間有効なプロセスが呼び出されると、AEM Formsは、レコードの作成の一環として呼び出し識別子の値を作成します。 このレコードは、長期間有効なプロセスのステータスを追跡し、AEM Formsデータベースに保存されます。 呼び出し識別子の値を使用して、長期間有効なプロセスのステータスを追跡できます。 また、プロセス呼び出し識別子の値を使用して、実行中のプロセスインスタンスの終了など、Process Manager操作を実行できます。
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ FirstAppSolution/PreLoanProcess *プロセスは、データタイプがXMLで�
 
 [人間中心の長期間有効なプロセスを呼び出すASP.NET Webアプリケーションの作成](invoking-human-centric-long-lived.md#creating-an-asp-net-web-application-that-invokes-a-human-centric-long-lived-process)
 
-[人間中心の長期間有効なプロセスを呼び出すFlexで構築されたクライアントアプリケーションの作成](invoking-human-centric-long-lived.md#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process)
+[人間中心の長期間有効なプロセスを呼び出す、Flexで構築されたクライアントアプリケーションの作成](invoking-human-centric-long-lived.md#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process)
 
 ## 人間中心の長期間有効なプロセスを呼び出す Java Web アプリケーションの作成 {#creating-a-java-web-application-that-invokes-a-human-centric-long-lived-process}
 
@@ -94,7 +94,7 @@ Javaサーブレットは次のタスクを実行します。
 
 >[!NOTE]
 >
->これらの手順の一部は、AEM FormsがデプロイされるJ2EEアプリケーションに依存します。 例えば、WARファイルのデプロイに使用する方法は、使用しているJ2EEアプリケーションサーバーによって異なります。 AEM FormsがJBoss®にデプロイされていることを前提としています。
+>これらの手順の一部は、AEM FormsがデプロイされているJ2EEアプリケーションに依存しています。 例えば、WARファイルのデプロイに使用する方法は、使用しているJ2EEアプリケーションサーバーによって異なります。 AEM FormsはJBoss®にデプロイされていることを前提としています。
 
 ### Webプロジェクトの作成 {#create-a-web-project}
 
@@ -110,7 +110,7 @@ For the location of these JAR files, see [Including AEM Forms Java library files
 
 >[!NOTE]
 >
->J2EE.jarファイルは、Javaサーブレットで使用されるデータ型を定義します。 このJARファイルは、AEM FormsがデプロイされるJ2EEアプリケーションサーバーから取得できます。
+>J2EE.jarファイルは、Javaサーブレットで使用されるデータ型を定義します。 このJARファイルは、AEM FormsがデプロイされているJ2EEアプリケーションサーバーから取得できます。
 
 **Webプロジェクトの作成**
 
@@ -431,19 +431,19 @@ Javaサーブレットは、次のJavaコードを使用して、HTMLページ�
 
 1. 「 **プロジェクトエクスプローラ** 」(Project Explorer)ウィンドウで、 `InvokePreLoanProcess` プロジェクトを右クリックし、「 **エクスポート** 」(Export) **/「** WARファイル」(WAR file)を選択します。
 1. 「 **Webモジュール** 」テキストボックスに、Javaプロジェクト `InvokePreLoanProcess` の名前を入力します。
-1. 「 **Destination** 」テキストボックス `PreLoanProcess.war`**に、**ファイル名を入力し、WARファイルの場所を指定して、「Finish」をクリックします。
+1. 「 **Destination** 」テキストボックス `PreLoanProcess.war`**に、**&#x200B;ファイル名を入力し、WARファイルの場所を指定して、「Finish」をクリックします。
 
 ### WARファイルを、AEM FormsをホストするJ2EEアプリケーションサーバーにデプロイします {#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms}
 
-WARファイルを、AEM Formsのデプロイ先のJ2EEアプリケーションサーバーにデプロイします。 WARファイルをJ2EEアプリケーションサーバーにデプロイするには、WARファイルを書き出しパスからにコピーし `[AEM Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\lc_turnkey\deploy`ます。
+WARファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーにデプロイします。 WARファイルをJ2EEアプリケーションサーバーにデプロイするには、WARファイルを書き出しパスからにコピーし `[AEM Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\lc_turnkey\deploy`ます。
 
 >[!NOTE]
 >
->AEM FormsがJBossにデプロイされていない場合は、J2EE Application ServerのホスティングAEM Formsに準拠したWARファイルをデプロイする必要があります。
+>aem formsがJBossにデプロイされていない場合は、AEM FormsをホストするJ2EEアプリケーションサーバーに準拠してWARファイルをデプロイする必要があります。
 
 ### Webアプリケーションのテスト {#test-your-web-application}
 
-Webアプリケーションをデプロイした後、Webブラウザーを使用してテストできます。 AEM Formsをホストしているのと同じコンピューターを使用している場合は、次のURLを指定できます。
+Webアプリケーションをデプロイした後、Webブラウザーを使用してテストできます。 AEM Formsをホストしているコンピューターと同じコンピューターを使用している場合は、次のURLを指定できます。
 
 * http://localhost:8080/PreLoanProcess/index.html
 
@@ -514,7 +514,7 @@ Microsoft .NET C# ASP.NETWeb アプリケーションを作成します。 次�
 
 >[!NOTE]
 >
->AEM Forms `hiro-xp` をホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。 この `lc_version` オプションを使用すると、MTOMなどのAEM Forms機能を使用できるようになります。 この `lc_version`オプションを指定しないと、MTOMを使用してAEM Formsを呼び出すことはできません。 (MTOMを使用したAEM Formsの [呼び出しを参照](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom))。
+>AEM Forms `hiro-xp` をホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。 この `lc_version` オプションを使用すると、MTOMなどのAEM Forms機能を使用できるようになります。 この `lc_version`オプションを指定しないと、MTOMを使用してAEM Formsを呼び出すことはできません。 (MTOMを使用した [AEM Formsの呼び出しを参照](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom))。
 
 ### FirstAppSolution/PreLoanProcessを呼び出すASPページを作成します {#create-an-asp-page-that-invokes-firstappsolution-preloanprocess}
 
@@ -589,13 +589,13 @@ ASP.NETアプリケーションからXMLデータを必要とするプロセス�
 
    >[!NOTE]
    >
-   >「 `hiro-xp`*」は、J2EEアプリケーションサーバーのホスティングAEM FormsのIPアドレスに置き換えます。 *
+   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。*
 
 1. データメンバの値を取得して、 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `FirstAppSolution_PreLoanProcessClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
 1. オブジェクトの `System.ServiceModel.BasicHttpBinding` デー `MessageEncoding` タメンバをに設定し `WSMessageEncoding.Mtom`ます。 この値により、MTOMが使用されます。
 1. 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-   * AEM Formsのユーザー名をデータメンバーに割り当て `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.UserName`ます。
+   * AEM formsユーザー名をデータメンバーに割り当て `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.UserName`ます。
    * 対応するパスワード値をデータメンバーに割り当て `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.Password`ます。
    * 定数値をデータメンバ `HttpClientCredentialType.Basic` ーに割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をデータメンバ `BasicHttpSecurityMode.TransportCredentialOnly` ーに割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -628,7 +628,7 @@ ASP.NETアプリケーションからXMLデータを必要とするプロセス�
 1. 呼び出し識別子の値をフィー `LabelJobID.Text` ルドに割り当てます。
 1. フィールドにステータス値を割り当て `LabelStatus.Text` ます。
 
-### クイック開始: WebサービスAPIを使用した長期間有効なプロセスの呼び出し {#quick-start-invoking-a-long-lived-process-using-the-web-service-api}
+### クイック開始:WebサービスAPIを使用した長期間有効なプロセスの呼び出し {#quick-start-invoking-a-long-lived-process-using-the-web-service-api}
 
 次のC#コードの例は、 `FirstAppSolution/PreLoanProcess`プロセスを呼び出します。
 
@@ -829,11 +829,11 @@ localhostは、ASP.NETプロジェクトをホストするwebサーバーの名�
 >
 >ASP.NETアプリケーションがプロセスを呼び出したことを確認するには、開始ワークスペースを使用し、ローンを受け入れます。
 
-## 人間中心の長期間有効なプロセスを呼び出すFlexで構築されたクライアントアプリケーションの作成 {#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process}
+## 人間中心の長期間有効なプロセスを呼び出す、Flexで構築されたクライアントアプリケーションの作成 {#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process}
 
-Flexで構築されたクライアントアプリケーションを作成して、FirstAppSolution/PreLoanProcess ** プロセスを呼び出すことができます。 このアプリケーションは、Remotingを使用してFirstAppSolution/PreLoanProcess ** プロセスを呼び出します。 (「 [AEM Formsの呼び出し」（AEM Formsでは非推奨）AEM Formsのリモート処理を使用した呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)」を参照)。
+FirstAppSolution/PreLoanProcess ** プロセスを呼び出すために、Flexで構築したクライアントアプリケーションを作成できます。 このアプリケーションは、Remotingを使用してFirstAppSolution/PreLoanProcess ** プロセスを呼び出します。 (「AEM formsでは非推奨) [AEM Formsリモートを使用したAEM Formsの呼び出し」を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting))。
 
-次の図に、Flexで構築され、エンドユーザーからデータを収集するクライアントアプリケーションを示します。 データはXMLデータソースに配置され、プロセスに送信されます。
+次の図に、エンドユーザーからデータを収集するFlexで構築されたクライアントアプリケーションを示します。 データはXMLデータソースに配置され、プロセスに送信されます。
 
 プロセスの呼び出し後に、呼び出し識別子の値が表示されます。 呼び出し識別子の値は、長期間有効なプロセスのステータスを追跡するレコードの一部として作成されます。
 
@@ -848,8 +848,8 @@ Flexで構築されたクライアントアプリケーションは、次のタ�
 
 FirstAppSolution/PreLoanProcessプロセスを呼び出すことができるFlexで構築されたクライアントアプリケーションを作成するには、次の手順を実行します。
 
-1. 新しいFlexプロジェクトの開始。
-1. プロジェクトのクラスパスにadobe-remoting-provider.swcファイルを含めます。 (FlexライブラリファイルのAEM Forms [を含めるを参照](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file))。
+1. 新しいFlexプロジェクトを開始。
+1. プロジェクトのクラスパスにadobe-remoting-provider.swcファイルを含めます。 (「AEM FormsFlexライブラリファイルを [含める」を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file))。
 1. ActionScriptまたはMXMLを使用して `mx:RemoteObject` インスタンスを作成します。 (mx:RemoteObjectインスタンスの [作成を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md))。
 1. AEM Formsと通信する `ChannelSet` インスタンスを設定し、そのインスタンスに関連付け `mx:RemoteObject` ます。 (AEM Formsへのチャネルの [作成を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md))。
 1. ChannelSetの `login``setCredentials` メソッドまたはサービスのメソッドを呼び出して、ユーザー識別子の値とパスワードを指定します。 (シングルサインオン [の使用を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md#using-single-sign-on))。
@@ -877,7 +877,7 @@ FirstAppSolution/PreLoanProcessプロセスを呼び出すことができるFlex
 
 ### Remotingを使用した長期間有効なプロセスの呼び出し {#invoking-a-long-lived-process-using-remoting}
 
-次のFlexコードの例は、プロセスを呼び出し `FirstAppSolution/PreLoanProcess` ます。
+以下のFlexコードの例は、プロセスを呼び出し `FirstAppSolution/PreLoanProcess` ます。
 
 ```java
  <?xml version="1.0" encoding="utf-8"?>
