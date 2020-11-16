@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: b46058f9-4691-4fba-a656-0f8507875a79
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '690'
+ht-degree: 89%
 
 ---
 
@@ -31,10 +34,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >AEM Mobile アプリの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
->* [デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [デザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
    >
    >
-* [記事の管理](https://helpx.adobe.com/digital-publishing-solution/help/creating-articles.html)
+* [記事の管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-articles.html)
+
 >
 
 
@@ -61,7 +65,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 新しい記事を読み込むワークフローは以下のとおりです。
 
-1. Mobileから、カタログからMobile On-Demand appを選択します。
+1. Mobileで、カタログからMobile On-Demand Appを選択します。
 1. **記事を管理**&#x200B;タイルの右上隅にある下矢印をクリックし、「記事を読み込む」を選択します。
 1. ダイアログで「**記事を読み込む**」をクリックし、「閉じる」をクリックします。
 1. Your Mobile On-Demand articles now appear in the **Manage Articles** tile.
@@ -99,7 +103,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. アクションバーから「**プロパティを表示**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
 1. 必要に応じてメタデータを編集し、終わったら「**保存**」をクリックします。
-1. 必要に応じて、変更をMobile On-Demandに直ちにアップロードします。
+1. 必要に応じて、変更内容を即座にMobile On-Demandにアップロードします。
 
 ## 記事のアップロード {#uploading-an-article}
 
