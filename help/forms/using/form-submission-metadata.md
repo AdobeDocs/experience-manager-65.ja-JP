@@ -10,6 +10,9 @@ discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '709'
+ht-degree: 89%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## メタデータへのフォーム要素の追加 {#adding-form-elements-to-metadata}
 
-メタデータに要素を追加するには、次の手順を実行します。
+次の手順を実行して、メタデータに要素を追加します。
 
 1. アダプティブフォームを編集モードで開きます。\
    フォームを編集モードで開くには、フォームマネージャーでフォームを選択して、「**開く**」をタップします。
