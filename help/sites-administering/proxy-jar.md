@@ -12,6 +12,9 @@ discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+workflow-type: tm+mt
+source-wordcount: '1173'
+ht-degree: 92%
 
 ---
 
@@ -36,7 +39,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 ## プロキシサーバーツールの起動 {#starting-the-proxy-server-tool}
 
-このツールは、AEMのインストール先の/opt/helpersフォルダーにあります。 このツールを起動するには、次のように入力します。
+このツールは、AEMインストールの/opt/helpersフォルダーにあります。 このツールを起動するには、次のように入力します。
 
 ```xml
 java -jar proxy.jar <host> <remoteport> <localport> [options]
@@ -115,8 +118,8 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 
 * C は、このエントリがクライアントからの要求（Web ページの要求）であることを示します。
 * 0 は接続数です（接続カウンターは 0 から開始します）。
-* &#x200B;# 00000バイトストリーム内のオフセット。これが最初のエントリなので、オフセットは0です。
-* [GET &lt;?>は] 、リクエストの内容です。この例では、HTTPヘッダー(url)の1つです。
+* # 00000バイトストリーム内のオフセット。これは最初のエントリなので、オフセットは0です。
+* [GET&lt;?>] は、リクエストの内容です。この例では、HTTPヘッダー(url)の1つです。
 
 接続を閉じると、次の情報がログに記録されます。
 
@@ -149,7 +152,7 @@ AEM が localhost:4303 で実行されている場合は、プロキシサーバ
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
 ```
 
-プロキシサーバーを使用せずにサーバー(`localhost:4303`)にアクセスできますが、経由でアクセスした場合は、プ `localhost:4444`ロキシサーバーが通信をログに記録します。 ブラウザーを開き、上記のテンプレートで作成されたページにアクセスします。 その後、ログファイルを確認します。
+プロキシサーバーを使用せずにサーバー(`localhost:4303`)にアクセスできますが、経由でアクセスした場合 `localhost:4444`は、プロキシサーバーが通信をログに記録します。 ブラウザーを開き、上記のテンプレートで作成されたページにアクセスします。 その後、ログファイルを確認します。
 
 >[!NOTE]
 >
