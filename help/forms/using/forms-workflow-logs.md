@@ -20,7 +20,7 @@ ht-degree: 5%
 
 # AEM Formsワークフローにログインする{#logging-in-aem-forms-workflows}
 
-フォームワークフローの手順では、ワークフロー関連の問題をデバッグするための詳細なログが適宜提供されます。 AEM Formsワークフローがログの表示を行うためのデバッグログを有効にします。
+Formsワークフロー手順では、ワークフローに関連する問題をデバッグするための詳細なログが便利に提供されます。 AEM Formsワークフローのデバッグログを有効にして、ログの表示を行います。
 
 By default, all logging information is available in the **error.log** file at the */crx-repository/logs/* directory.
 
@@ -72,7 +72,7 @@ formsワークフローのデバッグログには、次が含まれます。
 ログを使用して、次の項目を評価します。
 
 * 正しいAdobe Sign設定を使用している。
-* 契約の作成に成功すると、Adobe Sign Serviceは終了します。
+* Adobe Signサービスは、契約の作成に成功すると終了します。
 * 「ドキュメントに署名」ステップが終了し、成功メッセージが表示されます。
 
 例外が発生した場合は、完全なスタックトレースを表示して、エラーの原因を評価できます。
