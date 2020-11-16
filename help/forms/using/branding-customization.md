@@ -11,13 +11,16 @@ topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '911'
+ht-degree: 78%
 
 ---
 
 
 # ブランディングのカスタマイズ {#branding-customization}
 
-アプリケーションアイコン、アプリケーション名、起動画像、ログインページをカスタマイズすることで、AEM Forms アプリケーションに組織固有のユニークな外観を与えることができます。例えば、組織のロゴを使用するために画像を変更できます。AEM Formsアプリケーションは、次のカスタマイズをサポートしています。
+アプリケーションアイコン、アプリケーション名、起動画像、ログインページをカスタマイズすることで、AEM Forms アプリケーションに組織固有のユニークな外観を与えることができます。例えば、組織のロゴを使用するために画像を変更できます。AEM Formsアプリは、次のカスタマイズをサポートしています。
 
 * アプリケーションアイコンと起動画像のカスタマイズ
 * アプリケーション名のカスタマイズ
@@ -37,11 +40,12 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 #### iOS の場合 {#for-ios}
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
-1. （***アイコンのカスタマイズの場合***）キャプチャのナビゲータービューで、**[!UICONTROL キャプチャ／キャプチャ／サポートするファイル／Capture-info.plist]** に移動します。アイコンファイルの横にあるドロップダウンをクリックします。 アイコンファイル（.png）の名前を指定し、**[!UICONTROL キャプチャ／キャプチャ／リソース／アイコン]**&#x200B;でファイルをアップロードします。現在サポートされているディメンションは次のとおりです。29x29、50x50、58x58、72x72、100x100、144x144。
+1. （***アイコンのカスタマイズの場合***）キャプチャのナビゲータービューで、**[!UICONTROL キャプチャ／キャプチャ／サポートするファイル／Capture-info.plist]** に移動します。アイコンファイルの横のドロップダウンをクリックします。 アイコンファイル（.png）の名前を指定し、**[!UICONTROL キャプチャ／キャプチャ／リソース／アイコン]**&#x200B;でファイルをアップロードします。現在サポートされているディメンションは次のとおりです。29x29、50x50、58x58、72x72、100x100、144x144。
 1. （***起動画像のカスタマイズの場合***）画像のファイル名が次のいずれかであることを確認します。
 
-   * 縦向きの場合： `Default-Portrait~ipad.png` および `Default-Portrait@2x~ipad.png`
-   * 横置きの場合： `Default-Landscape~ipad.png` および `Default-Landscape@2x~ipad.png`
+   * 縦向きの場合： `Default-Portrait~ipad.png` と `Default-Portrait@2x~ipad.png`
+   * 横置きの場合： `Default-Landscape~ipad.png` と `Default-Landscape@2x~ipad.png`
+
    これらのファイルをキャプチャプロジェクトにアップロードして、プロジェクトの既存のファイルと置き換えます。
 
    >[!NOTE]
@@ -63,6 +67,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    * `[User_Home]/Projects/[your-project]/src/android/res/drawable-xhdpi`
    * `[User_Home]/Projects/[your-project]/src/android/res/drawable-xxhdpi`
    * `[User_Home]/Projects/[your-project]/src/android/res/drawable-xxxhdpi`
+
    >[!NOTE]
    >
    >画像の名前と解像度が、プロジェクト内の置き換える画像と一致していることを確認します。
@@ -90,9 +95,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 ### iOS の場合 {#for-ios-1}
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
-1. Captureのナビゲータ表示で、Capture/Capture/ **[!UICONTROL Supporting Files/InfoPlist.stringsに移動します]**。
+1. Captureのナビゲータ・表示で、 **[!UICONTROL Capture/Capture/Supporting Files/InfoPlist.stringsに移動します]**。
 
-   属性の値を、アプリ `CFBundleDisplayName` に表示する名前に更新します。
+   属性の値を、アプリに表示したい名前に更新 `CFBundleDisplayName` します。
 
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
 
@@ -122,7 +127,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## ログインページの画像のカスタマイズ {#customizing-images-on-the-login-page}
 
-AEM Formsアプリケーションのログインページには、ロゴと背景の画像が表示されます。 ロゴはログインダイアログボックスの上に配置されており、背景の画像はログインダイアログボックスの下に配置されています。次の手順を実行してログインページのデフォルトの画像をカスタマイズします。
+AEM Formsアプリのログインページには、ロゴと背景の画像が表示されます。 ロゴはログインダイアログボックスの上に配置されており、背景の画像はログインダイアログボックスの下に配置されています。次の手順を実行してログインページのデフォルトの画像をカスタマイズします。
 
 **事前準備**
 
