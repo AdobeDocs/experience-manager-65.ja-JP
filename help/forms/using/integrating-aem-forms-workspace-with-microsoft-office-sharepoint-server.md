@@ -11,6 +11,9 @@ discoiquuid: 8990b422-f4f6-4080-871a-33cdf7ca6455
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 84%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 **- 要件**
 
-**必要な知識** AEM Forms WorkspaceをSharePoint serverに追加する前に、適切な権限を持つSharePoint serverにアクセスでき、WorkspaceにアクセスするためのURLを知っている必要があります。 以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
+**必要な知識** AEM FormsワークスペースをSharePoint Serverに追加する前に、適切な権限を持つSharePoint Serverにアクセスでき、WorkspaceにアクセスするためのURLを知っている必要があります。 以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
 
 **ユーザレベル**&#x200B;初心者
 
