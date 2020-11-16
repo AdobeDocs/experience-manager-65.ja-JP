@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: fb1abaa0-9c02-4f20-aa7c-073def067452
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '676'
+ht-degree: 85%
 
 ---
 
@@ -31,10 +34,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >AEM Mobile アプリの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
->* [デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [デザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
    >
    >
-* [バナーの作成](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+* [バナーの作成](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-banners.html)
+
 >
 
 
@@ -62,7 +66,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 新しい記事を読み込むワークフローは以下のとおりです。
 
-1. Mobileから、カタログからMobile On-Demand appを選択します。
+1. Mobileで、カタログからMobile On-Demand Appを選択します。
 1. **バナーを管理**&#x200B;タイルの右上隅にある下矢印をクリックして、「バナーを読み込む」を選択します。
 1. ダイアログで「**バナーを読み込む**」をクリックし、「閉じる」をクリックします。
 1. Your Mobile On-Demand articles now appear in the **Manage Banners** tile.
@@ -82,7 +86,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 バナーを編集するワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. 「**バナーを管理**」タイルからAEMのソースバナーを選択します。
+1. 「**バナーの管理**」タイルからAEMのソースバナーを選択します。
 1. リスト表示で、ハイライトされたバナーをクリックし、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、バナーの内容（原稿、画像、テキストなど）をドラッグします。
 
@@ -98,7 +102,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. アクションバーから「**プロパティ**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
 1. 必要に応じてメタデータを編集し、終わったら「**保存**」をクリックします。
-1. 必要に応じて、変更をMobile On-Demandに直ちにアップロードします。
+1. 必要に応じて、変更内容を即座にMobile On-Demandにアップロードします。
 
 ## バナーのアップロード {#uploading-a-banner}
 
@@ -116,7 +120,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## バナーの削除 {#deleting-a-banner}
 
-この操作により、選択したバナーがMobile On-Demandから削除されます。また、必要に応じて、ローカルAEMインスタンスからも削除されます。
+この操作により、選択したバナーがMobile On-Demandから削除されます。また、オプションでローカルのAEMインスタンスからも削除されます。
 
 バナーを削除する一般的なワークフローは以下のとおりです。
 
