@@ -10,6 +10,9 @@ discoiquuid: dac4539b-804d-4420-9170-68000ebb2638
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '1169'
+ht-degree: 83%
 
 ---
 
@@ -71,7 +74,7 @@ XDP ファイルを更新した後、変更がフラグ付けされるように�
 
 例として、次の手順を使って `sample-form.xdp` ファイルを更新します。
 
-1. 指示に従って、「 `https://<server>:<port>/projects.html.` 資格情報を入力」に移動します。
+1. 指示に従って、「資格情報を `https://<server>:<port>/projects.html.` 入力」に移動します。
 1. 左側にある「フォーム」タブをクリックします。
 1. ローカルマシンに `sample-form.xdp` ファイルをダウンロードします。The XDP file is downloaded as a `.zip` file, which can be extracted using any file decompression utility.
 
@@ -85,7 +88,7 @@ XDP ファイルが更新されると、XDP ファイルに基づいてアダプ
 
 ## アダプティブフォームと最新の XDP ファイルとの同期 {#synchronizing-adaptive-forms-with-the-latest-xdp-file}
 
-XDP ファイルと同期されていないアダプティブフォームが次回作成用に開かれたときに、次のメッセージが表示されます：**このアダプティブフォームのスキーマ / フォームテンプレートは更新されました。`Click Here`を新しいバージョンにリベースする場合。**
+XDP ファイルと同期されていないアダプティブフォームが次回作成用に開かれたときに、次のメッセージが表示されます：**このアダプティブフォームのスキーマ / フォームテンプレートは更新されました。`Click Here` を新しいバージョンにリベースします。**
 
 メッセージをクリックすると、アダプティブフォーム内のフィールドが XDP ファイル内の対応するフィールドと同期されます。
 
@@ -119,7 +122,7 @@ To update the properties in the example adaptive form, click the link (labeled `
 
 1. `sample-form.xdp` ファイルを更新し、NumericField1 を削除します。
 1. AEM Forms UI に `sample-form.xdp` ファイルをアップロードします。
-1. `sample-xfa-af` アダプティブフォームを作成のために開きます。次のエラーメッセージが表示されます。アダプティブフォームのスキーマ/フォームテンプレートが更新されました。 `Click Here` を新しいバージョンにリベースする場合。
+1. `sample-xfa-af` アダプティブフォームを作成のために開きます。次のエラーメッセージが表示されます。アダプティブフォームのスキーマ/フォームテンプレートが更新されました。 `Click Here` を新しいバージョンにリベースします。
 
 1. Click the link (labeled &quot; `Click Here`&quot;) in the message. XDP ファイルにフィールドが存在しないというエラーメッセージが表示されます。
 
