@@ -11,13 +11,16 @@ discoiquuid: 10d406db-ac10-479b-b08b-d0735116a12b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+workflow-type: tm+mt
+source-wordcount: '1423'
+ht-degree: 95%
 
 ---
 
 
 # AEM ドキュメントサービスの概要{#overview-of-aem-document-services}
 
-AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。Document Servicesには、次のサービスが含まれています。
+AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。ドキュメントサービスには、次のサービスが含まれます。
 
 ## Output サービス {#output-service}
 
@@ -85,7 +88,7 @@ DDX を使用すると、ドキュメントのアセンブリまたはディス�
 
 単純な入力マップを使用して、ソースドキュメントと結果ドキュメントの場所を指定できます。次の外部データ URL タイプも使用できます。
 
-* ファイル
+* File
 * FTP
 * HTTP/HTTPS
 
@@ -130,4 +133,4 @@ PDF ドキュメントに適切な使用権限が追加されている場合、�
 
 ## プリンターに送信サービス {#send-to-printer-service}
 
-プリンターに送信サービスは、指定したプリンターにドキュメントを送信して印刷するためのAPIを提供します。
+「Send To Printer Service」は、指定したプリンターにドキュメントを送信して印刷するためのAPIを提供します。
