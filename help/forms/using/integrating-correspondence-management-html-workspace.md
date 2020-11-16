@@ -1,7 +1,7 @@
 ---
 title: AEM Forms Workspace でのサードパーティアプリケーションの統合
 seo-title: AEM Forms Workspace でのサードパーティアプリケーションの統合
-description: Correspondence ManagementなどのサードパーティアプリケーションをAEM Formsワークスペースに統合します。
+description: Correspondence ManagementなどのサードパーティアプリケーションをAEM FormsのWorkspaceに統合します。
 seo-description: AEM Forms Workspace で Correspondence Management のようなサードパーティアプリケーションを統合する方法。
 uuid: 7654cf86-b896-4db2-8f5d-6c1b2e6c229f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -27,7 +27,7 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-AEM FormsワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 For more details, see [Create a letter template](../../forms/using/create-letter.md).
+AEM FormsのワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 For more details, see [Create a letter template](../../forms/using/create-letter.md).
 
 Correspondence ManagementテンプレートにそのURLでアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
@@ -102,7 +102,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [Get File](assets/dscsample.zip)Download DSC: サンプルDSCは、上記に添付したDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Get File](assets/dscsample.zip)Download DSC:サンプルDSCは、上記に添付したDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
