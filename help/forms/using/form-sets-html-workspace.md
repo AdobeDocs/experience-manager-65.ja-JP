@@ -12,6 +12,9 @@ discoiquuid: f550b747-2def-4317-9ef7-dc6c1e7bb404
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '384'
+ht-degree: 73%
 
 ---
 
@@ -39,7 +42,7 @@ AEM Forms Workspace はフォームセットをサポートします。フォー
 
 ## AEM Forms Workspace でのフォームセットの使用 {#using-formset-in-nbsp-aem-forms-workspace}
 
-フォームセットがスタートポイントに関連付けられると、AEM Forms Workspaceから、他のスタートポイントが呼び出されるのと同様に、そのスタートポイントを呼び出すことができます。
+フォームセットをスタートポイントに割り当てると、そのスタートポイントを、他のスタートポイントと同様に、AEM Formsのワークスペースから呼び出すことができます。
 
 AEM Forms Workspace を通じてフォームセットでサポートされる操作は次のとおりです。
 
