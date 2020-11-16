@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '885'
+ht-degree: 72%
 
 ---
 
@@ -35,11 +38,11 @@ The `DefaultPageNameProvider` service is the default service that determines the
 
 The `DefaultPageNameProvider` service determines which of these CQ variables is mapped to the `s.pageName` property in the Analytics cloud service framework. その後、Analytics レポートデータの取得に使用する適切なページプロパティを決定します。
 
-* `pagedata.path`:サービスでは、 `page.getPath()`
+* `pagedata.path`:サービスで `page.getPath()`
 
-* `pagedata.title`:サービスでは、 `page.getTitle()`
+* `pagedata.title`:サービスで `page.getTitle()`
 
-* `pagedata.navTitle`:サービスでは、 `page.getNavigationTitle()`
+* `pagedata.navTitle`:サービスで `page.getNavigationTitle()`
 
 The `page` object is the is the [ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java object for the page.
 
@@ -78,9 +81,9 @@ If you do not map a CQ variable to the `s.pageName` property in the framework, t
 
 AnalyticsPageNameProvider インターフェイスで定義されている次の 2 つのメソッドを実装する必要があります。
 
-* `getPageName`:プロパティ `String` として使用する値を表す値を返し `s.pageName` ます。
+* `getPageName`:プロパティとして使用する値を表す `String` 値を返し `s.pageName` ます。
 
-* `getResource`:プロパティ `org.apache.sling.api.resource.Resource` に関連付けられているページを表すオブジェクトを返 `s.pageName` します。
+* `getResource`:プロパティに関連付けられているページを表す `org.apache.sling.api.resource.Resource` オブジェクトを返し `s.pageName` ます。
 
 Both methods take a `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameContext` object as a parameter. `AnalyticsPageNameContext` クラスは、Analytics 呼び出しのコンテキストに関する以下の情報を提供します。
 
