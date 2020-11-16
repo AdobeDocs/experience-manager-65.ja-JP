@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1925'
+ht-degree: 91%
 
 ---
 
@@ -53,18 +56,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 #### テストツール {#testing-tools}
 
-* アドビの **Tough Day** ツールは、AEM インスタンスに負荷を発生させ、パフォーマンスデータを収集するために使用できます。アドビのAEMエンジニアリングチームは、実際にこのツールを使用してAEM製品自体の読み込みテストを行います。 Tough Day で実行されるスクリプトは、プロパティファイルと JMX XML ファイルによって設定されています。詳しくは、[Tough Day に関するドキュメント](/help/sites-developing/tough-day.md)を参照してください。
+* アドビの **Tough Day** ツールは、AEM インスタンスに負荷を発生させ、パフォーマンスデータを収集するために使用できます。AdobeのAEMエンジニアリングチームは、実際にこのツールを使用してAEM製品自体の読み込みテストを実行します。 Tough Day で実行されるスクリプトは、プロパティファイルと JMX XML ファイルによって設定されています。詳しくは、[Tough Day に関するドキュメント](/help/sites-developing/tough-day.md)を参照してください。
 
 * AEM にはすぐに使用できるツールが備わっており、問題のあるクエリ、リクエスト、エラーメッセージを素早く確認できます。詳しくは、操作ダッシュボードのドキュメントの[診断ツール](/help/sites-administering/operations-dashboard.md#diagnosis-tools)の節を参照してください。
 * Apache は **JMeter** という製品を提供しています。これは、パフォーマンスおよび負荷テストのほか、機能的性能の確認のために使用できます。オープンソースソフトウェアであり自由に使用できますが、エンタープライズ製品よりも機能セットが少なく、容易に習熟できます。JMeter can be found on Apache’s website at [https://jmeter.apache.org/](https://jmeter.apache.org/)
 
-* **Load Runnerは** 、エンタープライズグレードの負荷テスト製品です。 無料の評価版をご利用いただけます。 詳しくは、https://www.microfocus.com/en-us/products/loadrunner-load-testing/overviewを参照してくださ [い。](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
+* **Load Runner** は、エンタープライズグレードの負荷テスト製品です。 無料の評価版が提供されています。 詳しくは、https://www.microfocus.com/en-us/products/loadrunner-load-testing/overviewを参照して [ください。](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
 
 * [Neustar](https://www.neustar.biz/services/web-performance/load-testing) のようなクラウドベースの負荷テストツールも使用できます。
 * モバイルまたはレスポンシブ Web サイトをテストする際は、また別のツールセットを使用する必要があります。こうしたツールでは、ネットワーク帯域幅の制限、3G や EDGE などの低速なモバイル接続のシミュレートをおこなえます。広く利用されているツールには以下のものがあります。
 
-   * **[Network Link Conditioner](https://nshipster.com/network-link-conditioner/)**- 簡単に使用できる UI を備えており、またかなり低いレベルのネットワークスタックで動作します。OS X と iOS のバージョンがあります。[](https://nshipster.com/network-link-conditioner/)
-   * [**Charles **](https://www.charlesproxy.com/)- ネットワーク制限を使用できる Web デバッグプロキシアプリケーションです。他にも用途がいくつかあります。提供されているバージョンは、Windows、OS X および Linux です。[](https://www.charlesproxy.com/)
+   * **[Network Link Conditioner](https://nshipster.com/network-link-conditioner/)** - 簡単に使用できる UI を備えており、またかなり低いレベルのネットワークスタックで動作します。OS X と iOS のバージョンがあります。[](https://nshipster.com/network-link-conditioner/)
+   * [**Charles**](https://www.charlesproxy.com/) - ネットワーク制限を使用できる Web デバッグプロキシアプリケーションです。他にも用途がいくつかあります。提供されているバージョンは、Windows、OS X および Linux です。[](https://www.charlesproxy.com/)
 
 #### 最適化ツール {#optimization-tools}
 
@@ -138,11 +141,11 @@ For the cache named **Document-Diff**, the hit rate should be over `.90`. ヒッ
 * エラーログを見てエラーや警告を調べます。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 * メモリや CPU の使用状況のなどシステムのハードウェアリソースを監視します。これらのリソースが、パフォーマンスボトルネックの原因になっていることがよくあります。
 * キャッシュを最大限に確保するために、ページのアーキテクチャと、URL パラメーターの使用を最小限に抑えるための仕組みを最適化します。
-* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と [Performance tuning tips ](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) のドキュメントに従ってください。
+* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と [Performance tuning tips ](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html) のドキュメントに従ってください。
 
 * オーサーインスタンスでの特定のページやコンポーネントの編集に問題がある場合は、タッチ UI の開発者モードを使用して、問題のあるページを調べてください。そうすることで、ページ上の各コンテンツ領域の内訳とそれぞれの読み込み時間がわかります。
 * サイト上のすべての JS と CSS を最小限にします。具体的な方法については、こちらの[ブログ投稿](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)を参照してください。
 * コンポーネントに埋め込まれた CSS と JS を削除します。ページのレンダリングに必要な要求の数を最小限にするには、これらをクライアント側のライブラリに組み込んで最小化する必要があります。
 * Chrome の「ネットワーク」タブなどのツールを使用してサーバーリクエストを調べることで、最も時間がかかるコンポーネントを確認します。
 
-問題の領域を特定したら、パフォーマンスの最適化のためにアプリケーションコードを調べます。AEMの初期設定の機能のうち、適切に機能しないものは、アドビサポートにお問い合わせください。
+問題の領域を特定したら、パフォーマンスの最適化のためにアプリケーションコードを調べます。Adobeサポートでは、既製のAEM機能のうち、適切に動作しないものに対処できます。
