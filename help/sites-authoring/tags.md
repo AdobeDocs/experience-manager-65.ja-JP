@@ -47,7 +47,7 @@ ht-degree: 84%
 
 To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the **Tags** field and the **Select Tags** window. 「**標準タグ**」タブがデフォルトの名前空間です。これは、分類にプレフィックスされている `namespace-string:` がないことを意味します。
 
-![タグの選択ウィンドウ； Xボタンを使用して、現在選択されているタグの選択を解除します。](assets/chlimage_1-41.png)
+![タグの選択ウィンドウ；Xボタンを使用して、現在選択されているタグの選択を解除します。](assets/chlimage_1-41.png)
 
 ### タグの公開 {#publishing-tags}
 
