@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1456'
+ht-degree: 95%
 
 ---
 
@@ -39,12 +42,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 オーサーインスタンスとパブリッシュインスタンスの秘密鍵および公開証明書が必要です。
 
 * pkcs#12 または JKS 形式の秘密鍵を含める必要があります。
-* 証明書は、pkcs#12またはJKS形式で含める必要があります。また、「CER」形式に含まれる証明書もGranite Truststoreに追加できます。
+* 証明書は、pkcs#12またはJKS形式で含める必要があります。また、「CER」形式の証明書もGranite Truststoreに追加できます。
 * 自己署名証明書または認定された CA が署名した証明書を使用できます。
 
 ### JKS 形式 {#jks-format}
 
-JKS 形式の秘密鍵と証明書を生成します。秘密鍵はキーストアファイルに格納され、証明書は TrustStore ファイルに格納されます。Use [Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) to create both.
+JKS 形式の秘密鍵と証明書を生成します。秘密鍵はキーストアファイルに格納され、証明書は TrustStore ファイルに格納されます。これらを作成するには、[Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) を使用します。
 
 Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情報を作成します。
 
@@ -66,7 +69,7 @@ Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情�
 
    | オプション | オーサー | パブリッシュ |
    |---|---|---|
-   | -alias | author | publish |
+   | -alias | 作成者 | publish |
    | -keystore | author.keystore | publish.keystore |
 
 1. 証明書を書き出すには、次のコマンドを入力します。以下の表に示すオプションの値を使用してください。
@@ -77,7 +80,7 @@ Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情�
 
    | オプション | オーサー | パブリッシュ |
    |---|---|---|
-   | -alias | author | publish |
+   | -alias | 作成者 | publish |
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
@@ -131,7 +134,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
    | -in | author.cer | publish.cer |
-   | -name | author | publish |
+   | -name | 作成者 | publish |
 
 ## 作成者への秘密鍵と TrustStore のインストール {#install-the-private-key-and-truststore-on-author}
 
@@ -236,7 +239,7 @@ MSSL を有効にするには、次の表に示すように、「トランスポ
    <td><p>https://server_name:SSL_port/bin/receive?sling:authRequestLogin=1</p> <p>次に例を示します。</p> <p>http://localhost:8443/bin/receive?sling:authRequestLogin=1</p> </td>
   </tr>
   <tr>
-   <td>ユーザー</td>
+   <td>User</td>
    <td>値なし</td>
   </tr>
   <tr>
