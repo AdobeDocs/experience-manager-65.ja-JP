@@ -148,7 +148,7 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 >
 >新しいビデオプロファイルおよびビデオプロファイルに対する変更をアクティベートして公開する必要があります。
 
-1. AEMで、 **[!UICONTROL ツール]/[!UICONTROL 設定コンソールをタップします]**。
+1. AEMで、 **[!UICONTROL ツール] / [!UICONTROL 設定コンソールをタップします]**。
 1. **[!UICONTROL 設定コンソールで、ナビゲーションツリーの]** ツール **[!UICONTROL /DAM/ビデオプロファイル]** に移動します。
 1. Create a new S7 Video Profile. In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Scene7 Video Profile template. Give the new video profile page a name and click **[!UICONTROL Create.]**
 
