@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 07bf0224-6744-42d4-861f-d656ccfad171
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 75%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました。これらのサンプルは、適切なコメントを含むコードの断片であり、AEM 開発者が AEM の主要な構築ブロックを理解するのに役立ちます。The samples are available here: [https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/).
 
-A multi-part tutorial designed for developers new to AEM covering fundamental topics like project setup, Core Components, Editable Templates, Client Libraries and component development: [Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+A multi-part tutorial designed for developers new to AEM covering fundamental topics like project setup, Core Components, Editable Templates, Client Libraries and component development: [Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
-Adobe AEM コミュニティチームが、開発者向けのハウツー記事を作成しています。記事については、[こちら](https://helpx.adobe.com/experience-manager/topics/how-to.html)を参照してください。
+Adobe AEM コミュニティチームが、開発者向けのハウツー記事を作成しています。記事については、[こちら](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)を参照してください。
 
 Maven テンプレートは、独自の機能を開発するための出発点として新しい AEM プロジェクトを作成する際に使用できます。このテンプレートは[こちら](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)から入手できます。
 
