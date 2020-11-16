@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 667645a0-53d0-4f9b-a0ba-cc7e366a23a1
 translation-type: tm+mt
 source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 64%
 
 ---
 
@@ -29,7 +32,7 @@ Windows Vista™ で SSL を設定するには、認証時に RSA 鍵が設定�
 
 1. In a command prompt, navigate to *`[JAVA HOME]`*/bin and type the following command to create the certificate and keystore:
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*Host Name Group Name *`, OU=`*Name*`, O=`*Name *Name Name Name Name Company`,L=`*State Country Country Country Country Code Cort Rename Password Name Password Key*`, S=`**`, C=`**`" -alias`**`-keypass``key`****`-keystore`**Group Group Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name Name No Name Name Name Name No Nout Co Co Cout Co Co Cout`.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*Host NameGroupGroup*`, OU=`** 会社 `, O=`*名* 名 `,L=`*名名名名名名* 都市国国名名国名名名国名国名コードlc Cert Cert Cert Name Password `, S=`**`, C=`**`" -alias`**`-keypass``key`****`-keystore`*Password* `.keystore`
 
    >[!NOTE]
    >
