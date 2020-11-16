@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 64c6d198-983f-4a52-9c83-560206363868
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '824'
+ht-degree: 84%
 
 ---
 
@@ -31,10 +34,11 @@ Collections represent a well defined *bucket* filled with content such as articl
 >
 >AEM Mobile アプリの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
->* [デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [デザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
    >
    >
-* [コレクションの管理](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
+* [コレクションの管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-collections.html)
+
 >
 
 
@@ -62,7 +66,7 @@ Collections represent a well defined *bucket* filled with content such as articl
 
 新しいコレクションを読み込むワークフローは以下のとおりです。
 
-1. Mobileから、カタログからMobile On-Demand appを選択します。
+1. Mobileで、カタログからMobile On-Demand Appを選択します。
 1. **コレクションを管理**&#x200B;タイルの右上隅にある下矢印をクリックして、「コレクションを読み込む」を選択します。
 1. ダイアログで「**コレクションを読み込む**」をクリックし、「閉じる」をクリックします。
 1. Your Mobile On-Demand collections now appear in the **Manage Collections** tile.
@@ -94,7 +98,7 @@ Collections represent a well defined *bucket* filled with content such as articl
 1. アクションバーから「**プロパティ**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
 1. 必要に応じてメタデータを編集し、終わったら「**保存**」をクリックします。
-1. 必要に応じて、変更をMobile On-Demandに直ちにアップロードします。
+1. 必要に応じて、変更内容を即座にMobile On-Demandにアップロードします。
 
 ## コレクションのアップロード {#uploading-a-collection}
 
@@ -110,7 +114,7 @@ Collections represent a well defined *bucket* filled with content such as articl
 
 ## コレクションの削除 {#deleting-a-collection}
 
-この操作により、選択したコレクションがMobile On-Demandから削除されます。また、必要に応じて、ローカルAEMインスタンスからも削除されます。
+この操作により、選択したコレクションがMobile On-Demandから削除されます。また、オプションでローカルのAEMインスタンスからも削除されます。
 
 コレクションを削除する一般的なワークフローは以下のとおりです。
 
@@ -128,7 +132,7 @@ Collections represent a well defined *bucket* filled with content such as articl
 
 >[!NOTE]
 >
->コンテンツをコレクションに追加するには、Mobile On-Demandにコンテンツをアップロードする必要があります。
+>コンテンツをMobile On-Demandにアップロードしてから、コレクションに追加する必要があります。
 
 コレクションは基本的に、関連するコンテンツのカテゴリです。コレクションによって、アプリケーションのナビゲーション構造を定義するパッケージに記事やバナーなどのコンテンツが収集されます。コレクションはネスト可能です。
 
