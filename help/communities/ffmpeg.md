@@ -61,7 +61,7 @@ To modify the [!UICONTROL DAM Update Asset] workflow, and in this example, to tu
 * Double-click the **[!UICONTROL FFmpeg transcoding]** step to access the Step Properties dialog.
 * Under the **[!UICONTROL Process]** tab:
 
-   * **[!UICONTROL 軍備]**: すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+   * **[!UICONTROL 軍備]**:すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
