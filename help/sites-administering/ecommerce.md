@@ -12,13 +12,16 @@ discoiquuid: e972ee05-f0cb-40ca-9ae2-34395791c709
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 46610888fd61900c52b197e73a8a5850dc9c4c35
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 90%
 
 ---
 
 
 # e コマース{#ecommerce}
 
-* [概念](/help/sites-administering/concepts.md)
+* [概念 ](/help/sites-administering/concepts.md)
 * [管理（汎用）](/help/sites-administering/generic.md)
 
 アドビでは、2 つのバージョンの Commerce 統合フレームワークを提供しています。
@@ -84,11 +87,11 @@ source-git-commit: 46610888fd61900c52b197e73a8a5850dc9c4c35
   </tr>
   <tr>
    <td>標準化されたデータモデル</td>
-   <td>いいえ</td>
+   <td>不可</td>
    <td>あり。Magento GraphQL スキーマ</td>
   </tr>
   <tr>
-   <td>利用可能場所</td>
+   <td>入手方法</td>
    <td><p>はい。SAP Commerce Cloud（拡張機能は AEM 6.4 および Hybris 5（デフォルト）をサポートするように更新され、Hybris 4 との互換性を維持）</p> <p>Salesforce Commerce Cloud（AEM 6.4 をサポートするためにオープンソース化されたコネクタ）</p> </td>
    <td>あり。GitHub 経由のオープンソース。Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり）</td>
   </tr>
@@ -140,6 +143,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
    * 最近表示した商品
    * 割引券
    * その他
+
    ![](assets/chlimage_1-130.png)
 
    >[!NOTE]
@@ -152,13 +156,14 @@ AEM e コマースフレームワークは、以下の機能を提供します�
    * e コマースシステムの検索
    * サードパーティの検索（Search&amp;Promote など）
    * またはこれらの組み合わせ
+
    ![](assets/chlimage_1-131.png)
 
 * Uses the AEM ability to **present your content on multiple channels**, be that full browser window or mobile device. これにより、訪問者が必要とする形式でコンテンツが提供されます。
 
    ![](assets/chlimage_1-132.png)
 
-* **[AEM e コマースフレームワーク](#the-framework)**に基づいて独自の統合実装を開発する機能。
+* **[AEM e コマースフレームワーク](#the-framework)**&#x200B;に基づいて独自の統合実装を開発する機能。
 
    現在利用できる 2 つの実装は、どちらも同じ基盤、つまり一般的な API（フレームワーク）上で作成されています。新しい統合の実装は、統合に必要な機能を実装するだけです。すべての新しい実装はインターフェイスを使用する（したがって実装から独立している）ので、フロントエンドコンポーネントを使用できます。
 
@@ -166,6 +171,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
    * 1 つの例としては、合計注文金額が特定の金額を超えた場合に送料を下げることができます。
    * もう 1 つの例としては、プロファイルデータ（場所など）を使用したシーズンオファーを提供できます。必要な場合は、やはり他の要因に応じて、これらのオファーを強調表示できます。
+
    以下の例では、買い物かごの中身が 75 ドル未満なので、1 つのティーザーが表示されています。
 
    ![](assets/chlimage_1-133.png)
@@ -193,6 +199,6 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
 ### Why? {#why}
 
-* カスタマイズされたeコマースサイトを迅速に実現するために必要な基本的なメカニズムを提供する。
+* カスタマイズされたeコマースサイトを迅速に実現するのに必要な基本メカニズムを提供する。
 * 実際の e コマースサイトの開発に必要な柔軟性をもたらします。
 * ベストプラクティスを示します。
