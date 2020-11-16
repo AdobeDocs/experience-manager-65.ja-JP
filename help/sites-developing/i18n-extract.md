@@ -11,6 +11,9 @@ topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '492'
+ht-degree: 90%
 
 ---
 
@@ -64,7 +67,7 @@ i18n.any ファイルの /filter セクションでは、xgettext-maven-plugin �
 
 | プレフィックス | 効果 |
 |---|---|
-| / | JCR パスを指定します。したがって、このプレフィックスを指定した場合は、jcr_root ディレクトリの下のファイルと照合されます。 |
+| ／ | JCR パスを指定します。したがって、このプレフィックスを指定した場合は、jcr_root ディレクトリの下のファイルと照合されます。 |
 | &amp;ast; | ファイルシステム上の標準ファイルを指定します。 |
 | なし | プレフィックスがない場合または pattern がフォルダーまたはファイル名で始まる場合は、ファイルシステム上の標準ファイルを指定します。 |
 
@@ -134,7 +137,7 @@ mvn xgettext:extract
 ### 出力ファイル {#output-files}
 
 * `raw.xliff`:抽出文字列
-* `warn.log`:警告（存在する場合）を表示する場合は、 `CQ.I18n.getMessage()` APIが正しく使用されていない場合に限ります。 これらは常に修正が必要で、再実行する必要があります。
+* `warn.log`:警告（存在する場合）を返します。 `CQ.I18n.getMessage()` APIが正しく使用されていない場合は、 これらは常に修正が必要で、再実行する必要があります。
 
 * `parserwarn.log`：パーサーの警告（ある場合）。js パーサーの問題など。
 * `potentials.xliff`：抽出されなかったものの、翻訳が必要な、人間が判読できる文字列である可能性がある「候補」（無視してかまいません。大量の誤検出が生じます）。
