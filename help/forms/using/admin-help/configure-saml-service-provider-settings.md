@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 98%
 
 ---
 
@@ -40,6 +43,7 @@ SAML について詳しくは、[ Security Assertion Markup Language （SAML） 
 
    * サードパーティの SAML ID プロバイダーのログインページへのリンク。このページでは、エンタープライズドメインに属しているユーザーが認証できます。
    * AEM Forms のログインページへのリンク。このページでは、ローカルドメインに属しているユーザーが認証できます。
+
    このオプションが選択されていない場合、サードパーティの SAML ID プロバイダーのログインページに直接リンクされ、エンタープライズドメインに属しているユーザーが認証できます。
 
 1. （オプション）「アーティファクトバインディングを有効にする」を選択して、アーティファクトバインディングのサポートを有効にします。デフォルトでは、SAML と共に POST バインディングが使用されます。ただし、アーティファクトバインディングを設定した場合は、このオプションを選択します。このオプションを選択すると、実際のユーザーアサーションはブラウザーの要求を通じては渡されません。代わりに、アサーションへのポインターが渡され、バックエンド Web サービス呼び出しを使用してアサーションが取得されます。
@@ -55,6 +59,7 @@ SAML について詳しくは、[ Security Assertion Markup Language （SAML） 
       `saml.sp.use.relaystate=true`
 
    * 次のカスタムプロパティを追加して、カスタム Java Server Pages (JSP) のURLを設定します。これは ID プロバイダーの登録リストをレンダリングするのに使用されます。カスタム Web アプリケーションを展開しなかった場合は、デフォルトの User Management ページを使用してリストをレンダリングします。
+
    `saml.sp.discovery.url=/custom/custom.jsp`
 
 1. 「保存」をクリックします。
