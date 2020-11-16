@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '1795'
+ht-degree: 92%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 AEM では、**レイアウトコンテナ**&#x200B;コンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。
 
-レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。The component is used in conjunction with the [**Layout **mode](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode), which allows you to create and edit your responsive layout dependent on device.
+レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントを、[**レイアウト**&#x200B;モード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)と連動して使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
 
 レイアウトコンテナには、次の特徴があります。
 
@@ -38,15 +41,16 @@ AEM では、**レイアウトコンテナ**&#x200B;コンポーネントを使�
 
 AEM は、次のメカニズムを組み合わせて使用することにより、ページのレスポンシブレイアウトを実現します。
 
-* [**Layout Containerコンポーネント&#x200B;**](#adding-a-layout-container-and-its-content-edit-mode)
+* [**レイアウトコンテナ**](#adding-a-layout-container-and-its-content-edit-mode)&#x200B;コンポーネント
 
-   This component is available in the [component browser](/help/sites-authoring/author-environment-tools.md#components-browser) and provides a grid-paragraph system to allow you to add and position components within a responsive grid. ページ上のデフォルトの段落システムとしても設定できます。
+   このコンポーネントは、[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)で使用でき、レスポンシブグリッド内にコンポーネントを追加および配置できるグリッド段落システムを提供します。ページ上のデフォルトの段落システムとしても設定できます。
 
-* [**レイアウトモード&#x200B;**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
+* [**レイアウトモード**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
 
-   Once the layout container is positioned on your page you can use the **Layout** mode to position content within the responsive grid.
+   レイアウトコンテナをページに配置したら、**レイアウト**&#x200B;モードを使用して、レスポンシブグリッド内にコンテンツを配置できます。
 
-* [**エミュレーター&#x200B;**](#selecting-a-device-to-emulate)コンポーネントをインタラクティブにサイズ変更することによってデバイスやウィンドウのサイズに従ってレイアウトを再編成する、レスポンシブ Web サイトを作成および編集できます。その後、エミュレーターを使用して、コンテンツのレンダリング方法を確認できます。
+* [**エミュレーター**](#selecting-a-device-to-emulate)：
+コンポーネントをインタラクティブにサイズ変更することによってデバイスやウィンドウのサイズに従ってレイアウトを再編成する、レスポンシブ Web サイトを作成および編集できます。その後、エミュレーターを使用して、コンテンツのレンダリング方法を確認できます。
 
 これらのレスポンシブグリッドメカニズムを使用すると、次のことが可能になります。
 
@@ -56,11 +60,11 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 * 特定のデバイスレイアウトのコンポーネントを非表示にする。
 * 列の制御を実現する。
 
-プロジェクトに応じて、レイアウトコンテナは、ページのデフォルトの段落システムとして、またはコンポーネントブラウザ（またはその両方）を介してページに追加できるコンポーネントとして使用できます。
+プロジェクトに応じて、レイアウトコンテナはページのデフォルトの段落システム、またはコンポーネントブラウザーを使用してページに追加できるコンポーネント（またはその両方）として使用できます。
 
 >[!NOTE]
 >
->Adobe provides [GitHub documentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) of the responsive layout as a reference that can be given to front-end developers allowing them to use the AEM grid outside of AEM, for example when creating static HTML mock-ups for a future AEM site.
+>アドビはフロントエンド開発者用にレスポンシブレイアウトの [GitHub ドキュメント](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)をリファレンスとして提供しており、フロントエンド開発者は AEM の外部で AEM グリッドを使用できます（例えば、今後の AEM サイトの静的 HTML モックアップを作成する場合）。
 
 >[!NOTE]
 >
@@ -72,7 +76,7 @@ Web サイトのコンテンツを作成する場合は、使用するデバイ�
 
 AEM では、デバイスの幅に依存するレイアウトを定義できます。
 
-* エミュレーターを使用すると、これらのレイアウトを様々なデバイスに基づいてエミュレートできます。In addition to the device type, the orientation, selected by the **Rotate device** option, can impact the breakpoint selected as the width changes.
+* エミュレーターを使用すると、これらのレイアウトを様々なデバイスに基づいてエミュレートできます。デバイスタイプに加えて、**回転デバイス**&#x200B;オプションによって選択した方向も、幅の変更として選択されるブレークポイントに影響する場合があります。
 * ブレークポイントとは、レイアウトの定義を区切るポイントのことです。
 
    * ブレークポイントでは、専用のレイアウトを使用するあらゆるデバイスの最大幅を（ピクセル単位で）効果的に定義します。
@@ -80,7 +84,7 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
    * ブレークポイントの範囲は、次のブレークポイントまで、左側に広がります。
    * ブレークポイントを具体的に選択することはできず、デバイスと向きの選択によって、適切なブレークポイントが自動的に選択されます。
 
-**デスクトップ**&#x200B;デバイスには、特定の幅がなく、デフォルトのブレークポイントに関連します（つまり、すべてが最後に設定したブレークポイントを上回る）。
+**デスクトップ**&#x200B;デバイスには、特定の幅がなく、デフォルトのブレークポイントに関連します（つまり、すべてが最後に設定したブレークポイントを上回ります）。
 
 >[!NOTE]
 >
@@ -109,24 +113,29 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
    エミュレーターツールバーに追加のレイアウトオプションが表示されます。
 
    * **デバイスを回転** - 垂直方向（縦）から水平方向（横）に（またはその逆に）デバイスを回転できます。
+
    ![](do-not-localize/screen_shot_2018-03-23at084612.png) ![](do-not-localize/screen_shot_2018-03-23at084637.png)
 
    * **デバイスを選択** - エミュレートする特定のデバイスをリストから定義します（詳しくは次のステップを参照）。
+
    ![](do-not-localize/screen_shot_2018-03-23at084743.png)
 
 1. エミュレートするデバイスを選択するには、次のどちらかの方法を使用できます。
 
-   * デバイスを選択アイコンを使用して、ドロップダウンセレクターから選択します。
+   * デバイスを選択アイコンを使用して、ドロップダウンセレクターから選択する。
    * エミュレーターツールバーのデバイスのインジケーターをタップまたはクリックする。
+
    ![screen_shot_2018-03-23at084818](assets/screen_shot_2018-03-23at084818.png)
 
 1. 特定のデバイスを選択すると、次のことができます。
 
-   * See the active marker for the selected device, such as **iPad.**
-   * See the active marker for the appropriate [breakpoint](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) such as **Tablet.**
+   * 選択したデバイス（**iPad** など）のアクティブマーカーを確認する。
+   * 該当する[ブレークポイント](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)（**タブレット**&#x200B;など）のアクティブマーカーを確認する。
+
    ![screen_shot_2018-03-23at084932](assets/screen_shot_2018-03-23at084932.png)
 
    * 青い点線は、選択したデバイスの&#x200B;*フォールド*&#x200B;を表します（ここでは **iPhone 6**）。
+
    ![screen_shot_2018-03-23at084947](assets/screen_shot_2018-03-23at084947.png)
 
    * フォールドは、コンテンツのページの改行と見なすこともできます（[ブレークポイント](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)と混同しないでください）。これは、デバイスでスクロールする前にユーザーに表示されるコンテンツの部分を確認するために表示されます。
@@ -135,7 +144,7 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
 
 
 
-## Adding a Layout Container and its Content (Edit mode) {#adding-a-layout-container-and-its-content-edit-mode}
+## レイアウトコンテナとそのコンテンツの追加（編集モード） {#adding-a-layout-container-and-its-content-edit-mode}
 
 **レイアウトコンテナ**&#x200B;は、次の特徴を持つ段落システムです。
 
@@ -145,14 +154,14 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
 
 >[!NOTE]
 >
->まだ使用可能になっていない場合は、**レイアウトコンテナ**&#x200B;を明示的に[段落システムまたはページ用にアクティベート](/help/sites-administering/configuring-responsive-layout.md)する必要があります（[**デザイン&#x200B;**モードを使用するなどの方法があります）。](/help/sites-authoring/default-components-designmode.md)
+>まだ使用可能になっていない場合は、**レイアウトコンテナ**&#x200B;を明示的に[段落システムまたはページ用にアクティベート](/help/sites-administering/configuring-responsive-layout.md)する必要があります（[**デザイン**&#x200B;モードを使用するなどの方法があります）。](/help/sites-authoring/default-components-designmode.md)
 
 1. **レイアウトコンテナ**&#x200B;は、[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)で標準コンポーネントとして使用できます。ここから、ページ上の必要な場所へドラッグできます。そうすると、「**コンポーネントをここにドラッグ**」プレースホルダーが表示されます。
 1. その後、コンポーネントをレイアウトコンテナに追加できます。これらのコンポーネントには実際のコンテンツが含まれます。
 
    ![screen_shot_2018-03-23at085500](assets/screen_shot_2018-03-23at085500.png)
 
-## Selecting and Taking Action on a Layout Container (Edit mode) {#selecting-and-taking-action-on-a-layout-container-edit-mode}
+## レイアウトコンテナでの選択およびアクションの実行（編集モード）{#selecting-and-taking-action-on-a-layout-container-edit-mode}
 
 他のコンポーネントと同様に、レイアウトコンテナは、選択してからアクション（切り取り、コピー、削除）を実行できます（**編集**&#x200B;モードのとき）。
 
@@ -164,7 +173,7 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
 
    ![screen_shot_2018-03-23at085357](assets/screen_shot_2018-03-23at085357.png)
 
-   You need to select the **Parent** option.
+   **親**&#x200B;オプションを選択する必要があります。
 
    ![](do-not-localize/screen_shot_2018-03-23at085417.png)
 
@@ -175,28 +184,29 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
    * ネストの一番下のレベルのレイアウトコンテナは、黒色で描画されます。
    * ネストの次のレベルのレイアウトコンテナは、濃灰色です。
    * それ以上のコンテナは明るい灰色です。
+
    ![screen_shot_2018-03-23at085636](assets/screen_shot_2018-03-23at085636.png)
 
-1. グリッド全体が、コンテンツも含めて強調表示されます。The action toolbar will be shown, from where you can select an action such as **Delete.**
+1. グリッド全体が、コンテンツも含めて強調表示されます。アクションツールバーが表示され、ここから、「**削除**」などのアクションを選択できます。
 
    ![screen_shot_2018-03-23at085724](assets/screen_shot_2018-03-23at085724.png)
 
-## Defining Layouts (Layout mode) {#defining-layouts-layout-mode}
+## レイアウトの定義（レイアウトモード） {#defining-layouts-layout-mode}
 
 >[!NOTE]
 >
 >[ブレークポイント](#layout-definitions-device-emulation-and-breakpoints)ごとに別々のレイアウトを定義できます（エミュレートされたデバイスのタイプと向きによって決定）。
 
-To configure the layout of a responsive grid implemented with the Layout Container you need to use the **Layout** mode.
+レイアウトコンテナと共に実装されているレスポンシブグリッドのレイアウトを設定するには、**レイアウト**&#x200B;モードを使用する必要があります。
 
 **レイアウト**&#x200B;モードは 2 つの方法で開始できます。
 
-* By using the [mode menu in the toolbar](/help/sites-authoring/author-environment-tools.md#page-modes) and choosing **Layout** mode
+* [ツールバーのモードメニュー](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して&#x200B;**レイアウト**&#x200B;モードを選択する。
 
-   * Select the **Layout** mode just as you would switch to **Edit** mode or **Targeting** mode.
-   * **レイアウト** モードは永続的なままで、モードセレクターを使用して別のモ **** ードを選択するまで、レイアウトモードを終了しません。
+   * **編集**&#x200B;モードまたは&#x200B;**ターゲット設定**&#x200B;モードに切り替える場合と同様に、**レイアウト**&#x200B;モードを選択します。
+   * **レイアウト**&#x200B;モードは持続され、モードセレクターで別のモードを選択するまで、**レイアウト**&#x200B;モードのままです。
 
-* [個別のコンポーネントを編集する](/help/sites-authoring/editing-content.md#edit-component-layout)場合。
+* [個別のコンポーネントを編集する](/help/sites-authoring/editing-content.md#edit-component-layout)。
 
    * コンポーネントのクイックアクションメニューの「**レイアウト**」オプションを使用すると、**レイアウト**&#x200B;モードに切り替えることができます。
    * **レイアウト**&#x200B;モードはコンポーネントを編集している間持続し、フォーカスが別のコンポーネントに移ると&#x200B;**編集**&#x200B;モードに戻ります。
@@ -215,41 +225,47 @@ To configure the layout of a responsive grid implemented with the Layout Contain
 
    * **親**
 
-      レイアウトコンテナコンポーネント全体を選択して、全体に対してアクションを実行できます。
+      全体に対して行動を起こすためのレイアウトコンテナコンポーネント全体を選択できます。
 
    * **新規行にフロート**
 
-      コンポーネントは、グリッド内で使用可能なスペースに応じて、新しい線に移動します。
+      コンポーネントは、グリッド内で使用可能なスペースに応じて、新しい線分に移動します。
 
    * **コンポーネントを非表示**
 
-      コンポーネントは非表示になります（レイアウトコンテナのツールバーから元に戻すことができます）。
+      コンポーネントは非表示になります(レイアウトコンテナのツールバーから元に戻すことができます)。
    ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
 
-* In **Layout** mode you can tap/click on the **Drag components here** to select the entire component. そうすると、このモードのツールバーが表示されます。
+* **レイアウト**&#x200B;モードでは、「**コンポーネントをここにドラッグ**」をタップまたはクリックすると、コンポーネント全体を選択できます。そうすると、このモードのツールバーが表示されます。
 
    ツールバーには、レイアウトコンポーネントの状態やそれに属するコンポーネントに応じて異なるオプションが表示されます。次に例を示します。
 
-   * **親** — 親コンポーネントを選択します。
+   * **親** - 親コンポーネントを-選択します。
+
    ![](do-not-localize/screen_shot_2018-03-23at090823.png)
 
-   * **非表示のコンポーネントを表示** — すべてのまたは個々のコンポーネントを表示します。 数字は、現在の非表示のコンポーネントの数を示します。カウンターは、非表示のコンポーネントの数を示します。
+   * **非表示のコンポーネントを表示** — すべてのまたは個々のコンポーネントを表示します。 数値は、現在非表示になっているコンポーネントの数を示します。カウンターは、非表示になっているコンポーネントの数を示します。
+
    ![](do-not-localize/screen_shot_2018-03-23at091007.png)
 
-   * **ブレークポイントのレイアウトを元に戻す** — デフォルトのレイアウトに戻します。つまり、カスタマイズされたレイアウトは適用されません。
+   * **ブレークポイントレイアウトを元に戻す** - デフォルトのレイアウトに戻します。カスタマイズされたレイアウトが適用されなくなります。
+
    ![](do-not-localize/screen_shot_2018-03-23at091013.png)
 
-   * **Float to new line** — 間隔が許される場合は、コンポーネントを上に移動します。
+   * **新規行にフロート** - コンポーネントの位置を上に移動します（間隔がある場合）。
+
    ![screen_shot_2018-03-23at090829](assets/screen_shot_2018-03-23at090829.png)
 
-   * **Hide component** — 現在のコンポーネントを非表示にします。
+   * **コンポーネントを非表示** - 現在のコンポーネントを非表示にします。
+
    ![](do-not-localize/screen_shot_2018-03-23at090834.png)
 
    >[!NOTE]
    >
    >上記の例では、フロートと非表示のアクションが使用可能になっています。これは、このレイアウトコンテナが親レイアウトコンテナ内にネストされているからです。
 
-   * **コンポーネントを表示**&#x200B;親コンポーネントを選択して、「**非表示のコンポーネントを表示**」オプションを含むアクションツールバーを表示します。この例では、2 つのコンポーネントが非表示にされています。
+   * **Unhide components**&#x200B;親コンポーネントを選択し、 
+**「非表示のコンポーネントを表示** 」オプション この例では、2 つのコンポーネントが非表示にされています。
    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
    「**非表示のコンポーネントを表示**」オプションを選択すると、現在非表示のコンポーネントが元の場所で青色で表示されます。
