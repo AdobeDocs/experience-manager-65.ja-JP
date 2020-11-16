@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 63c94c82-ed96-4d10-b645-227fa3c09f4b
 translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 72%
 
 ---
 
 
 # エラーハンドラーによって表示されるページのカスタマイズ{#customizing-pages-shown-by-the-error-handler}
 
-AEMには、HTTPエラーを処理するための標準的なエラーハンドラーが付属しています。例えば、次のように表示します。
+AEMには、HTTPエラーを処理するための標準的なエラーハンドラが付属しています。例えば、次のように表示します。
 
 ![chlimage_1-67](assets/chlimage_1-67a.png)
 
@@ -38,7 +41,7 @@ System provided scripts exist (under `/libs/sling/servlet/errorhandler`) to resp
 
 ## エラーハンドラーによって表示されるページのカスタマイズ方法 {#how-to-customize-pages-shown-by-the-error-handler}
 
-独自のスクリプトを作成して、エラーが発生した場合にエラーハンドラーによって表示されるページをカスタマイズできます。 カスタマイズしたページがデフォルトのペ `/apps` ージの下に作成され、その下にオーバーレイされ `/libs`ます。
+エラーが発生した場合にエラーハンドラーによって表示されるページをカスタマイズする独自のスクリプトを作成できます。 カスタマイズしたページは、デフォルトのページ(下 `/apps` のページ)の下に作成され、オーバーレイ `/libs`されます。
 
 >[!NOTE]
 >
@@ -46,8 +49,9 @@ System provided scripts exist (under `/libs/sling/servlet/errorhandler`) to resp
 
 1. リポジトリ内で、デフォルトスクリプトをコピーします。
 
-   * 追加の `/libs/sling/servlet/errorhandler/`
+   * `/libs/sling/servlet/errorhandler/` から
    * を `/apps/sling/servlet/errorhandler/`
+
    コピー先のパスはデフォルトでは存在しないので、最初は作成する必要があります。
 
 1. `/apps/sling/servlet/errorhandler` に移動します。次のどちらかを実行します。
@@ -67,22 +71,24 @@ System provided scripts exist (under `/libs/sling/servlet/errorhandler`) to resp
 
 HTTP 500 エラーはサーバー側の例外によって発生します。
 
-* **[500 内部サーバーエラー](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**サーバーで予期しない状況が発生したので、要求を処理できません。
+* **[500 内部サーバーエラー](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**
+サーバーで予期しない状況が発生したので、要求を処理できません。
 
-リクエスト処理が例外の結果、Apache Slingフレームワーク（AEMが構築されているフレームワーク）:
+要求処理の結果例外が発生した場合、Apache Slingフレームワーク(AEMが構築されているフレームワーク):
 
 * 例外をロギングします。
 * 次を返します。
 
    * HTTP 応答コード 500
    * 例外スタックトレース
+
    これらは応答の本文内で返されます。
 
 [エラーハンドラーによって表示されるページをカスタマイズする](#how-to-customize-pages-shown-by-the-error-handler)ことで、`500.jsp` スクリプトを作成できます。However, it is only used if `HttpServletResponse.sendError(500)` is executed explicitly; i.e. from an exception catcher.
 
 それ以外の場合は、応答コードは に設定されますが、`500.jsp`500.  スクリプトは実行されません。
 
-500 エラーを処理するには、エラーハンドラースクリプトの名前を例外クラス（またはスーパークラス）と同じにする必要があります。このような例外をすべて処理するには、スクリプト `/apps/sling/servlet/errorhandler/Throwable.js`pまたはを作成しま `/apps/sling/servlet/errorhandler/Exception.jsp`す。
+500 エラーを処理するには、エラーハンドラースクリプトの名前を例外クラス（またはスーパークラス）と同じにする必要があります。このような例外をすべて処理するには、スクリプト `/apps/sling/servlet/errorhandler/Throwable.js`pまたはを作成し `/apps/sling/servlet/errorhandler/Exception.jsp`ます。
 
 >[!CAUTION]
 >
