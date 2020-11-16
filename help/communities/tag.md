@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '267'
+ht-degree: 61%
 
 ---
 
@@ -49,7 +52,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
