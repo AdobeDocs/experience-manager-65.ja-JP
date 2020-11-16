@@ -12,6 +12,9 @@ discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+workflow-type: tm+mt
+source-wordcount: '808'
+ht-degree: 82%
 
 ---
 
@@ -75,7 +78,7 @@ CUG をページに適用するには：
 1. 次のウィンドウで、「**詳細**」タブに移動します。
 1. 下にスクロールして、**認証要件**&#x200B;セクションのチェックボックスをオンにします。
 
-1. 下に設定パスを追加し、「保存」を押します。
+1. 下追加の設定パスを指定し、「保存」を押します。
 1. 次に、「**権限**」タブへ移動し、「**閉じられたユーザーグループを編集**」ボタンを押します。
 
    ![screenshot_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
@@ -128,7 +131,7 @@ Configure [session management in the dispatcher.any file](https://helpx.adobe.co
 >[!NOTE]
 >
 >ディスパッチャーファームでセッション管理が有効になっている場合、ファームハンドルを持つすべてのページはキャッシュされません。CUG以外のページをキャッシュするには、dispatcher.anyに2つ目のファームを作成します。
->は、CUG以外のページを処理します。
+>がCUG以外のページを処理します。
 
 1. Configure [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) by defining `/directory`; for example:
 
