@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '200'
+ht-degree: 64%
 
 ---
 
@@ -29,8 +32,9 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
 1. Under `/apps/<your-project>/` create a new node:
 
-   * **名前**: `fonts`
-   * **タイプ**: `sling:Folder`
+   * **名前**：`fonts`
+   * **型**：`sling:Folder`
+
    すべての変更を保存します。
 
 1. WebDAV などを使用して、フォントファイルをこのフォルダー内にコピーします。
@@ -39,7 +43,7 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
    >
    >Font files in the repository must have the suffix `*.ttf` or `*.TTF`.
 
-1. [OSGi設定](/help/sites-deploying/configuring-osgi.md) of [Day Commons GFX Font Helperを更新します](/help/sites-deploying/osgi-configuration-settings.md)。フォントフォルダーにパスを追加します。例えば `/apps/<your-project>/fonts`.
+1. [Day Commons GFX Font Helperの](/help/sites-deploying/configuring-osgi.md) OSGi設定 [を更新します](/help/sites-deploying/osgi-configuration-settings.md)。フォ追加ントフォルダーのパス例えば `/apps/<your-project>/fonts`.
 
 1. CRXDE Lite に戻ります。You should now see a `.fontlist` node in your folder containing the name of the imported fonts.
 
