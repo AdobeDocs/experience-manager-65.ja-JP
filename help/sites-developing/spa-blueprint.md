@@ -1,8 +1,8 @@
 ---
 title: SPA ブループリント
 seo-title: SPA ブループリント
-description: このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
-seo-description: このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
+description: このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが履行する必要がある、一般的でフレームワークに依存しない契約について説明します。
+seo-description: このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが履行する必要がある、一般的でフレームワークに依存しない契約について説明します。
 uuid: 48f2d415-ec34-49dc-a8e1-6feb5a8a5bbe
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -20,15 +20,15 @@ ht-degree: 12%
 
 # SPA ブループリント{#spa-blueprint}
 
-作成者がAEM SPA Editorを使用してSPAのコンテンツを編集できるようにするには、このドキュメントで説明するように、SPAが満たす必要がある要件があります。
+作成者がAEM SPA Editorを使用してSPAのコンテンツを編集できるようにするには、SPAが満たす必要がある要件があります。これについては、このドキュメントで説明します。
 
 >[!NOTE]
 >
->SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
+>SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 ## 概要 {#introduction}
 
-このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するために、SPAフレームワークが満たす必要がある一般的な契約(AEMサポート層など)について説明します。
+このドキュメントでは、SPAフレームワークがAEM内で編集可能なSPAコンポーネントを実装するために履行する必要がある一般的な契約(AEMサポートレイヤの種類など)について説明します。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ ht-degree: 12%
 
 >[!CAUTION]
 >
->AEMのSPA機能はフレームワークに依存しませんが、現在、ReactフレームワークとAngularフレームワークのみがサポートされています。
+>AEMのSPAの機能はフレームワークに依存しませんが、現在、ReactフレームワークとAngularフレームワークのみがサポートされています。
 
 作成者がAEMページエディターを使用して、単一ページアプリケーションのフレームワークで公開されるデータを編集できるようにするには、AEMリポジトリ内のアプリケーション用に保存されたデータのセマンティックを表すモデルの構造を解釈できる必要があります。 この目標を達成するために、フレームワークに依存しない2つのライブラリが用意されています。と `PageModelManager` があり `ComponentMapping`ます。
 
@@ -56,13 +56,13 @@ NPMパッケージ「 [@adobe/aem-spa-page-model-manager」を参照してくだ
 
 ### ComponentMapping {#componentmapping}
 
-The `ComponentMapping` module is provided as an NPM package to the front-end project. フロントエンドコンポーネントが格納され、SPAがフロントエンドコンポーネントをAEMリソースタイプにマッピングする手段を提供します。 これにより、アプリケーションのJSONモデルを解析する際に、コンポーネントの動的な解決が可能になります。
+The `ComponentMapping` module is provided as an NPM package to the front-end project. フロントエンドコンポーネントが格納され、SPAがフロントエンドコンポーネントをAEMリソースタイプにマッピングする方法を提供します。 これにより、アプリケーションのJSONモデルを解析する際に、コンポーネントの動的な解決が可能になります。
 
 モデル内の各項目には、AEMリソースタイプを表示する `:type` フィールドが含まれます。 マウントすると、フロントエンドコンポーネントは、基になるライブラリから受け取ったモデルのフラグメントを使用して自分自身をレンダリングできます。
 
 #### 動的モデルとコンポーネントのマッピング {#dynamic-model-to-component-mapping}
 
-AEM向けJavaScript SPA SDKでの動的モデルとコンポーネントのマッピングの発生方法について詳しくは、「SPAの [動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)」を参照してください。
+動的モデルとコンポーネントのマッピングがAEM用のJavascript SPA SDKでどのように行われるかについて詳しくは、SPAの「 [動的モデルとコンポーネントのマッピング」の記事を参照してください](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)。
 
 ### フレームワーク固有の層 {#framework-specific-layer}
 
@@ -76,7 +76,7 @@ AEM向けJavaScript SPA SDKでの動的モデルとコンポーネントのマ�
 
 ページのコンテンツ構造は AEM に保存されます。ページのモデルは、SPA コンポーネントのマッピングとインスタンス化に使用されます。SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これを行うには、リソースタイプ(またはAEMコンポーネントへのパス)を一意のキーとして使用します。
 
-SPAコンポーネントは、ページモデルと同期していて、それに応じてコンテンツに変更を加えて更新する必要があります。 指定のページモデル構造に従って、コンポーネントをその場でインスタンス化するには、動的コンポーネントを利用したパターンを使用する必要があります。
+SPAコンポーネントは、ページモデルと同期し、それに応じてコンテンツに変更を加えて更新する必要があります。 指定のページモデル構造に従って、コンポーネントをその場でインスタンス化するには、動的コンポーネントを利用したパターンを使用する必要があります。
 
 ### メタフィールド {#meta-fields}
 
@@ -283,7 +283,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 詳しくは、「 [SPAモデルのルーティング](/help/sites-developing/spa-routing.md) 」を参照してください。
 
-## SPA in Action {#spa-in-action}
+## SPAの動作中 {#spa-in-action}
 
 [AEM での SPA の利用](/help/sites-developing/spa-getting-started-react.md)のドキュメントに進んで簡単な SPA の仕組みを確認し、SPA を実際に試してみてください。
 
