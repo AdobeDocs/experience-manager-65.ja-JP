@@ -44,7 +44,7 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 * **[!UICONTROL 肯定的な返信ラベル]**
 
-   (*必須*)ポジティブな反応を表す内部プロパティ名です。
+   (*必須*)ポジティブな応答の内部プロパティ名です。
 
 * **[!UICONTROL 否定的な返信ラベル]**
 
