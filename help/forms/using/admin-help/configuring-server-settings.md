@@ -58,7 +58,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 >[!NOTE]
 >
->AEM Formsのリリースでは、Flex Workspaceは非推奨です。
+>AEM formsのリリースでは、FlexWorkspaceは非推奨です。
 
 デフォルトでは、AEM forms によって送信される電子メールは Flex Workspace（JEE 上の AEM forms では廃止されています）へのリンクを含みます。AEM forms によって送信される電子メールが AEM Forms Workspace へのリンクを含むように設定できます。Flex Workspace（JEE 上の AEM forms では廃止されています）を上回る AEM Forms Workspace のメリットについて詳しくは、こちらの[記事](/help/forms/using/features-html-workspace-available-flex.md)を参照してください。
 
@@ -196,7 +196,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 If your solution is deployed in a clustered environment, replace `@@notification-host@@` with the cluster address.
 
-`<`*PORT *`>`は、アプリケーションサーバーのHTTPリスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
+`<`*PORT*`>` は、アプリケーションサーバーのHTTPリスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
 
 **JBoss：** 8080
 
@@ -204,7 +204,7 @@ If your solution is deployed in a clustered environment, replace `@@notification
 
 **IBM WebSphere:** 9080
 
-To make these URLs function correctly, replace `<`*PORT *`>`with the port number that is appropriate for your environment.
+To make these URLs function correctly, replace `<`*PORT* `>` with the port number that is appropriate for your environment.
 
 >[!NOTE]
 >
@@ -228,7 +228,7 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 **taskid** ：現在のタスクの一意の識別子。
 
-**actions** :受信者がクリックできる有効なルート（Approve、Rejectなど）の番号付きリストを作成します。
+**actions** :受信者がクリックできる有効なルート（例えば、「Approve」、「Reject」）の番号付きリストを作成します。
 
 また、グループリマインダー、グループタスクの割り当ておよびグループのデッドラインの場合、次の変数も使用できます。
 
