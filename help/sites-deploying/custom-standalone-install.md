@@ -12,6 +12,9 @@ discoiquuid: deae8ecb-a2ee-4442-97ca-98bfd1b85738
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 73%
 
 ---
 
@@ -40,6 +43,7 @@ You can also set the port number by renaming the quickstart jar file, so that th
 >* ダッシュの後にこれらの数字を指定する
 >* if there are any other digits in the filename, then the port number must be prefixed with `-p`
 >* ファイル名の先頭のプレフィックス「cq5」は無視される
+
 >
 
 
@@ -105,11 +109,12 @@ By default the folder `crx-quickstart/install` is watched for files.
 AEM を Windows サービスとしてインストールして起動するには：
 
 1. crx-quickstart\opt\helpers\instsrv.bat ファイルをテキストエディターで開きます。
-1. 64ビットWindowsサーバーを設定する場合は、オペレーティングシステムに応じて、prunsrvのすべてのインスタンスを次のいずれかのコマンドに置き換えます。
+1. 64ビットWindowsサーバーを設定する場合は、prunsrvのすべてのインスタンスを、オペレーティングシステムに応じて、次のいずれかのコマンドに置き換えます。
 
    * prunsrv_amd64
    * prunsrv_ia64
-   このコマンドは、Windowsサービスデーモンを32ビットJavaではなく64ビットJavaで起動する適切なスクリプトを呼び出します。
+
+   このコマンドは、32ビットJavaではなく64ビットJavaのWindowsサービスデーモンを開始する適切なスクリプトを呼び出します。
 
 1. プロセスが複数のプロセスに分岐しないようにするには、最大ヒープサイズと PermGen JVM パラメーターの値を増やします。Locate the `set jvm_options` command and set the value as follows:
 
@@ -119,17 +124,19 @@ AEM を Windows サービスとしてインストールして起動するには�
 
    `instsrv.bat cq5`
 
-   サービスが作成されたことを確認するには、[管理ツール]コントロールパネルの[サービス]を開くか、コマンドプロンプト `start services.msc` にと入力します。 cq5サービスがリストに表示されます。
+   サービスが作成されたことを確認するには、[管理ツール]コントロールパネルで[サービス]を開くか、コマンドプロンプト `start services.msc` でと入力します。 cq5サービスがリストに表示されます。
 
 1. 次のいずれかの方法でサービスを起動します。
 
    * コントロールパネルの「サービス」で、「cq5」をクリックして、「開始」をクリックします。
+
    ![chlimage_1-11](assets/chlimage_1-11.png)
 
    * コマンドラインで、&quot;net start cq5&quot; と入力します。
+
    ![chlimage_1-12](assets/chlimage_1-12.png)
 
-1. Windowsは、サービスが実行中であることを示します。AEMが起動し、Prunsrv実行可能ファイルがTask Managerに表示されます。 Webブラウザーで、例えばAEMの使用を開始する場合は、AEM `https://localhost:4502` に移動します。
+1. Windowsは、サービスが実行中であることを示します。AEM開始とprunsrv実行可能ファイルがタスクマネージャーに表示されます。 Webブラウザーで、AEM(AEMを使用している開始など)に移動 `https://localhost:4502` します。
 
    ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -158,7 +165,7 @@ If you want to change the location of the temporary folder (for example, if you 
 
 ## クイックスタートファイルから使用可能なその他のオプション {#further-options-available-from-the-quickstart-file}
 
-その他のオプションや名前の変更規則については、-helpオプションから利用できるQuickstartヘルプファイルで説明しています。ヘルプにアクセスするには、次のように入力します。
+その他のオプションや名前の変更規則については、クイックスタートヘルプファイルを参照してください。このファイルは —helpオプションから利用できます。ヘルプにアクセスするには、次のように入力します。
 
 * `java -jar cq5-<*version*>.jar -help`
 
@@ -331,13 +338,15 @@ To open CRXDE Lite you can select **CRXDE Lite** from the welcome screen or use 
 
 #### Accessing the Web Console {#accessing-the-web-console}
 
-Adobe CQ webコンソールにアクセスするには、スタートアップスクリ **ーンから「** OSGi Console」を選択するか、ブラウザーを使用して
+Adobe CQのWebコンソールにアクセスするには、ようこそ画面から **OSGiコンソール** を選択するか、ブラウザを使用して
 
 ```
  https://<host>:<port>/system/console
 ```
 
-例：ま`https://localhost:4502/system/console`たはバンドルページ`https://localhost:4502/system/console/bundles`
+次に例を示します。`https://localhost:4502/system/console`
+またはBundlesページ用
+`https://localhost:4502/system/console/bundles`
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
