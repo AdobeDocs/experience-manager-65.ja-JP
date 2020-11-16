@@ -13,6 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '267'
+ht-degree: 87%
 
 ---
 
@@ -28,9 +31,9 @@ source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
 
 1. [AEM を翻訳プロバイダーサービスに接続](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)して、[翻訳統合フレームワーク設定を作成](/help/sites-administering/tc-tic.md)します。
 1. 翻訳サービスとフレームワークの設定に[言語マスターのページを関連付け](/help/sites-administering/tc-tic.md#configuring-pages-for-translation)ます。
-1. [翻訳するコンテンツのタイプを](/help/sites-administering/tc-rules.md) 「識別」します。
+1. [翻訳するコンテンツのタイプを特定します](/help/sites-administering/tc-rules.md) 。
 1. [翻訳するコンテンツを準備](/help/sites-administering/tc-prep.md)します。そのためには、言語マスターをオーサリングして、言語コピーのルートページを作成します。
-1. [翻訳プロジェクトを作成し](/help/sites-administering/tc-manage.md) 、翻訳するコンテンツを収集し、翻訳プロセスを準備します。
+1. [翻訳プロジェクトを作成し](/help/sites-administering/tc-manage.md) 、翻訳対象のコンテンツを収集して翻訳プロセスを準備します。
 1. 翻訳プロジェクトを使用して、[コンテンツの翻訳プロセスを管理](/help/sites-administering/tc-manage.md)します。
 
 AEM との統合のためのコネクターが翻訳サービスプロバイダーに用意されていない場合、AEM では翻訳コンテンツ（XML 形式）の手動による抽出と再挿入がサポートされます。
