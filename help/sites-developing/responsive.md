@@ -149,7 +149,7 @@ responsive-1200px.css
  responsive-480px.css
 ```
 
-**ヒント**: 説明的なファイル名を使用すると、対象となるビューポートサイズを簡単に識別できます。
+**ヒント**:説明的なファイル名を使用すると、対象となるビューポートサイズを簡単に識別できます。
 
 ### AEM ページでのメディアクエリの使用 {#using-media-queries-with-aem-pages}
 
@@ -207,7 +207,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 * 名前：`mobile.resourceTypes`
 * 型：`String[]`
-* 値： Webページをレンダリングするページコンポーネントへのパス。 例えば、geometrixx-mediaアプリでは次の値が使用されます。
+* 値：Webページをレンダリングするページコンポーネントへのパス。例えば、geometrixx-mediaアプリでは次の値が使用されます。
 
    ```
    geometrixx-media/components/page
@@ -305,7 +305,7 @@ AEM アプリケーションでアダプティブ画像を実装するには、�
 
 **HTML**
 
-picturefill.jsコードで必要となるdiv要素を生成するコンポーネントを作成します。 AEMページでは、data-src属性の値は、リポジトリ内のリソースへのパスです。 例えば、ページコンポーネントは、メディアクエリと、DAM内の画像レンディションに関連付けられたパスをハードコード化できます。 または、作成者が画像レンディションを選択したり、ランタイムレンダリングオプションを指定したりできるカスタム画像コンポーネントを作成します。
+picturefill.jsコードで必要となるdiv要素を生成するコンポーネントを作成します。AEMページでは、data-src属性の値は、リポジトリ内のリソースへのパスです。例えば、ページコンポーネントは、メディアクエリと、DAM内の画像レンディションに関連付けられたパスをハードコード化できます。または、作成者が画像レンディションを選択したり、ランタイムレンダリングオプションを指定したりできるカスタム画像コンポーネントを作成します。
 
 次の HTML の例では、同じ画像の 2 つの DAM レンディションから選択されます。
 
@@ -323,6 +323,7 @@ picturefill.jsコードで必要となるdiv要素を生成するコンポーネ
 >
 >* クライアントライブラリフォルダー: `/libs/foundation/components/adaptiveimage/clientlibs`
 >* HTMLを生成するスクリプト： `/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
+
 >
 >
 以降では、このコンポーネントの詳細について説明します。
@@ -345,12 +346,12 @@ picturefill.jsコードで必要となるdiv要素を生成するコンポーネ
 
 ブラウザーがページを読み込むときに、src 属性の値を URL として使用して画像を要求します。Sling によりこの URL が次のように分解されます。
 
-* リソース: `/content/mywebsite/en/_jcr_content/par/image_0`
+* Resource: `/content/mywebsite/en/_jcr_content/par/image_0`
 * File name extension: `.jpg`
 * セレクター: `img`
-* Suffix: `1358372073597.jpg`
+* サフィックス: `1358372073597.jpg`
 
-ノード `image_0` の `jcr:resourceType` 値は、 `foundation/components/image`の値、はの `sling:resourceSuperType` 値です `foundation/components/parbase`。 このパーベスコンポーネントには、セレクターと要求URLのファイル名拡張子に一致するimg.GET.javaスクリプトが含まれています。 CQは、このスクリプト（サーブレット）を使用してイメージをレンダリングします。
+ノード `image_0` の `jcr:resourceType` 値は、 `foundation/components/image`の値、つまりの `sling:resourceSuperType` 値 `foundation/components/parbase`です。 このパーベスコンポーネントには、セレクターと要求URLのファイル名拡張子に一致するimg.GET.javaスクリプトが含まれています。 CQは、このスクリプト（サーブレット）を使用してイメージをレンダリングします。
 
 To see the source code of the script, use CRXDE Lite to open the `/libs/foundation/components/parbase/img.GET.java`
 file.
@@ -491,7 +492,7 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
    <td>com.day.cq.wcm.foundation.impl. AdaptiveImageComponentServlet</td>
   </tr>
   <tr>
-   <th>プロパティ</th>
+   <th>Property</th>
    <td><p>サポートされる幅</p>
     <ul>
      <li>サポートされる幅を追加するには、+ ボタンをクリックし、正の整数を入力します。</li>
@@ -549,7 +550,7 @@ The `AbstractImageServlet` class provides the `doGet` method that processes the 
 
 この `AdaptiveImageComponentServlet` クラスは、 `createLayer` メソッドを上書きします。 この方法は、オブジェクトからイメージリソースのパスと要求されたイメージ幅を取得する `ImageContext` 。 次に、 `info.geometrixx.commons.impl.AdaptiveImageHelper` クラスのメソッドを呼び出し、実際の画像の拡大/縮小を実行します。
 
-また、AdaptiveImageComponentServletクラスは、writeLayerメソッドをオーバーライドします。 この方法では、画像にJPEG画質を適用します。
+また、AdaptiveImageComponentServletクラスは、writeLayerメソッドをオーバーライドします。この方法では、画像にJPEG画質を適用します。
 
 ### Image Reference Modification Servlet (Geometrixx Common) {#image-reference-modification-servlet-geometrixx-common}
 
@@ -876,7 +877,7 @@ HTML5 テクノロジーを使用すれば、グリッドを実装して、ペ�
 
 ### Designing the grid {#designing-the-grid}
 
-ページ上にコンテンツのブロックを配置する必要がある列と行を決定します。 ページレイアウトによって、グリッドにまたがる列数と行数が決まります。
+ページ上にコンテンツのブロックを配置する必要がある列と行を決定します。ページレイアウトによって、グリッドにまたがる列数と行数が決まります。
 
 **列数**
 
@@ -931,7 +932,7 @@ CSS には、次の構造を使用した一連のメディアクエリが含ま�
 
 1. すべての行を含む div 要素のクラス名を定義します（例：`content.`）。
 1. Define a CSS class for div elements that represent rows, such as `row-fluid`.
-1. コンテンツブロック要素のクラス名を定義します。 可能なすべての幅に対して、列の範囲に関してクラスが必要です。 例えば、3列にまたがる `span3` 要素に対してはクラスを使用し、4列にまたがる `div``span4` クラスを使用します。 グリッド内の列数に応じてクラスを定義します。
+1. コンテンツブロック要素のクラス名を定義します。可能なすべての幅に対して、列の範囲に関してクラスが必要です。 例えば、3列にまたがる `span3` 要素に対してはクラスを使用し、4列にまたがる `div``span4` クラスを使用します。 グリッド内の列数に応じてクラスを定義します。
 
 1. ターゲットとする表示域サイズごとに、対応するメディアクエリを CSS ファイルに追加します。各メディアクエリに次の項目を追加します。
 
