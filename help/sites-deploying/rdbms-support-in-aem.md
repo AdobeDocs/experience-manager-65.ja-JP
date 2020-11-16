@@ -12,6 +12,9 @@ discoiquuid: 6a754d42-da30-4c2f-8b9c-369e1f1f92b5
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 78%
 
 ---
 
@@ -78,27 +81,27 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `datasource.name:`データソース名。デフォルトは、`oak` です。
 
-* `url:` JDBCで使用する必要があるデータベースのURL文字列です。 データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
+* `url:` JDBCで使用する必要があるデータベースのURL文字列。 データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
 
-* `driverClassName:` JDBCドライバーのクラス名。 これは、使用するデータベースと、その後そのデータベースに接続するために必要なドライバによって異なります。 AEMでサポートされるすべてのデータベースのクラス名を次に示します。
+* `driverClassName:` JDBCドライバーのクラス名。 これは、使用するデータベースと、その後接続に必要なドライバによって異なります。 AEMがサポートするすべてのデータベースのクラス名を次に示します。
 
    * `org.postgresql.Driver` PostgreSQLの場合；
-   * `com.ibm.db2.jcc.DB2Driver` （DB2の場合）
-   * `oracle.jdbc.OracleDriver` （Oracleの場合）
+   * `com.ibm.db2.jcc.DB2Driver` for DB2;
+   * `oracle.jdbc.OracleDriver` Oracleの場合
    * `com.mysql.jdbc.Driver`（MySQL および MariaDB、試行用）
    * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server (experimental).
 
 * `username:` データベースが実行されるユーザー名。
 
-* `password:` データベースのパスワードです。
+* `password:` データベースのパスワード。
 
 ### URL 文字列の形式 {#url-string-formats}
 
 データソース設定では、使用する必要のあるデータベースタイプに応じて、異なる URL 文字列の形式を使用します。以下に、AEM で現在サポートされているデータベース向けの形式を一覧で示します。
 
 * `jdbc:postgresql:databasename` PostgreSQLの場合；
-* `jdbc:db2://localhost:port/databasename` （DB2の場合）
-* `jdbc:oracle:thin:localhost:port:SID` （Oracleの場合）
+* `jdbc:db2://localhost:port/databasename` for DB2;
+* `jdbc:oracle:thin:localhost:port:SID` Oracleの場合
 * `jdbc:mysql://localhost:3306/databasename`（MySQL および MariaDB、試行用）
 * `jdbc:sqlserver://localhost:1453;databaseName=name` (Microsoft SQL Server （試験的）用)
 
