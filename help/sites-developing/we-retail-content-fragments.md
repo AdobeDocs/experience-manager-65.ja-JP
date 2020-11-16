@@ -20,7 +20,7 @@ ht-degree: 79%
 
 # We.Retail のコンテンツフラグメントの使用{#trying-out-content-fragments-in-we-retail}
 
-コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** （AEMの標準搭載インスタンスで利用可能）は、Lofotenのフラグメント **Arctic Surfingを基本的なサンプルとして提供しています** 。 このフラグメントは、次のことを示しています。
+コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** (AEMの標準搭載インスタンスで利用可能)は、フラグメント **Arctic Surfing in Lofotenを基本的なサンプルとして提供しています** 。 このフラグメントは、次のことを示しています。
 
 * Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。
 
@@ -36,7 +36,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**は、AEM 内の異なる機能です。
+>**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
 >* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
@@ -65,7 +65,7 @@ There are several sample content fragments in We.Retail; navigate via **Assets**
 
 <!--![](do-not-localize/cf-45-aa.png) ![](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
-* **[マークダウン](/help/assets/content-fragments/content-fragments-variations.md)**を含む[バリエーション](/help/assets/content-fragments/content-fragments-markdown.md)
+* **[マークダウン](/help/assets/content-fragments/content-fragments-variations.md)**&#x200B;を含む[バリエーション](/help/assets/content-fragments/content-fragments-markdown.md)
 * **[関連コンテンツ](/help/assets/content-fragments/content-fragments-assoc-content.md)**
 * **[メタデータ](/help/assets/content-fragments/content-fragments-metadata.md)**
 
