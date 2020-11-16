@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 42a38399-f5a7-4d2f-aa6a-d409a7ec60f7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 85%
 
 ---
 
@@ -71,7 +74,7 @@ The **Manage App** Tile displays available application information:
 * **記事**
 * **コレクション**
 
-右下隅にある省略記号（...）をクリックすると、各タイルを展開して、より詳細なリストを表示できます。これらのリスト表示は、削除、アップロード、プロパティの編集など、一般的なMobile On Demandアクションにアクセスする代替手段です。
+右下隅にある省略記号（...）をクリックすると、各タイルを展開して、より詳細なリストを表示できます。これらのリスト表示を使用すると、削除、アップロード、プロパティの編集など、一般的なMobile On Demandアクションにアクセスする代替方法を使用できます。
 
 ### バナーを管理タイル {#the-manage-banners-tile}
 
@@ -90,7 +93,7 @@ The following image shows the **Manage Banners** tile in AEM Mobile Application 
 
 >[!NOTE]
 >
->バナーの作成、削除または更新については、**[バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)**を参照してください。
+>バナーの作成、削除または更新については、**[バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)**&#x200B;を参照してください。
 
 ### 記事を管理タイル {#the-manage-articles-tile}
 
@@ -109,7 +112,7 @@ The following image shows the **Manage Banners** tile in AEM Mobile Application 
 
 >[!NOTE]
 >
->記事の作成、削除または更新については、[**記事の管理&#x200B;**](/help/mobile/mobile-on-demand-managing-articles.md)を参照してください。
+>記事の作成、削除または更新については、[**記事の管理**](/help/mobile/mobile-on-demand-managing-articles.md)&#x200B;を参照してください。
 
 ### コレクションを管理タイル {#the-manage-collections-tile}
 
@@ -128,7 +131,7 @@ The following image shows the **Manage Collections** tile in AEM Mobile Applicat
 
 >[!NOTE]
 >
->コレクションの作成、削除または更新については、**[コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)**を参照してください。
+>コレクションの作成、削除または更新については、**[コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)**&#x200B;を参照してください。
 
 ### 次の手順 {#the-next-steps}
 
