@@ -39,7 +39,7 @@ AEM 6.5FormsJEEパッチインストーラーには、このパッチのリリ�
       * (Windows 32-bit) `Windows\Disk1\InstData\VM`
       * (Windows 64-bit) `Windows_64Bit`\ `Disk1\InstData\VM`
    * **Linux**&#x200B;適切なディレクトリに移動し、コマンドプロンプトで次のように入力します。 
-`./aem65_cfp_install.bin`。
+`./aem65_cfp_install.bin`.
 
       * (Linux) `Linux/Disk1/InstData/NoVM`
 
