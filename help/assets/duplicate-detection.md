@@ -21,7 +21,7 @@ If you attempt to upload an asset that exists in [!DNL Adobe Experience Manager 
 
    ![サーブレットで「重複項目の検出」オプションを選択](assets/chlimage_1-377.png)
 
-   *図： サーブレットで「重複を検出」オプションを選択します。*
+   *図：サーブレットで「重複を検出」オプションを選択します。*
 
 The detect duplicate feature is now enabled in [!DNL Assets]. When a user attempts to upload an asset that exists in [!DNL Experience Manager], the system checks for conflict and indicates it. The assets are identified using SHA-1 hash stored at `jcr:content/metadata/dam:sha1`, which means duplicate assets are detected irrespective of the filenames.
 
