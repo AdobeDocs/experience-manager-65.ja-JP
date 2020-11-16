@@ -12,6 +12,9 @@ discoiquuid: 01029a80-f80e-450c-9c73-16d0662af26d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+workflow-type: tm+mt
+source-wordcount: '694'
+ht-degree: 78%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 >
 >既製の AEM は Silverpop と&#x200B;**統合できません**。[Silverpop の統合パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content)をパッケージ共有からダウンロードしてインスタンスにインストールする必要があります。パッケージをインストールしたら、このドキュメントの説明に従って設定してください。
 
-AEMとSilverpop Engageの統合により、AEMで作成された電子メールをSilverpop経由で管理および送信できます。 また、AEMページ上のAEM formsを介したSilverpopのリード管理機能を使用することもできます。
+AEMとSilverpop Engageを統合すると、AEMで作成された電子メールをSilverpopで管理および送信できます。 また、AEMページ上のAEMフォームを介したSilverpopのリード管理機能を使用することもできます。
 
 この統合によって次の機能を使用できるようになります。
 
@@ -39,14 +42,14 @@ Silverpop 設定は、**クラウドサービス**、**ツール**&#x200B;また
 
 Silverpop 設定をクラウドサービスで設定するには：
 
-1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。(または、で直接アク `https://<hostname>:<port>/etc/cloudservices.html`セス)。
+1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。(Or directly access at `https://<hostname>:<port>/etc/cloudservices.html`.)
 1. Under third-party services, click **Silverop Engage** and then **Configure**. Silverpop 設定ウィンドウが開きます。
 
    >[!NOTE]
    >
    >Silverpop Engage のパッケージをパッケージ共有からダウンロードしない限り、Silverpop Engage をサードパーティのサービスのオプションとして使用できません。
 
-1. タイトルを入力し、オプションで名前を入力して、「**作成**」をクリックします。「** Silverpop Settings**」設定ウィンドウが開きます。
+1. タイトルを入力し、オプションで名前を入力して、「**作成**」をクリックします。[** Silverpop Settings**]設定ウィンドウが開きます。
 1. ユーザー名、パスワードを入力し、API エンドポイントをドロップダウンリストから選択します。
 1. 「**Silverpop に接続」をクリックします。**&#x200B;接続に成功したら、成功ダイアログが表示されます。「**OK**」をクリックしてウィンドウを閉じます。You can go to Silverpop by clicking **Go to Silverpop Engage**.
 1. Silverpop が設定されました。「**編集**」をクリックして、この設定を編集できます。
@@ -58,7 +61,7 @@ Silverpop 設定をクラウドサービスで設定するには：
 
 Silverpop 設定をツールで設定するには：
 
-1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。または、に移動して直接移動しま `https://<hostname>:<port>/misadmin#/etc`す。
+1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。または、に移動して直接移動し `https://<hostname>:<port>/misadmin#/etc`ます。
 1. **ツール**／**クラウドサービス設定**／**Silverpop Engage** を選択します。
 1. 「**新規**」をクリックして、**ページを作成**&#x200B;ウィンドウを開きます。
 
@@ -80,13 +83,14 @@ Silverpop 設定をツールで設定するには：
 
 API エンドポイントを設定するには：
 
-1. 次に進 `/libs/mcm/silverpop/components/silverpoppage/dialog/items/general/items/apiendpoint/options node` む `https://<hostname>:<port>/crxde.`
+1. 先に進 `/libs/mcm/silverpop/components/silverpoppage/dialog/items/general/items/apiendpoint/options node` む `https://<hostname>:<port>/crxde.`
 1. 右クリックして、**Create**／**Create Node**&#x200B;を選択します。
 1. Enter the **Name** as `sp-e0` and choose **Type** as `cq:Widget`.
 1. 新しく追加したノードに 2 つのプロパティを追加します。
 
-   1. **名前**: `text`、 **タイプ**: `String`、 **値**: `Engage 0`
-   1. **名前**: `value`、 **タイプ**: `String`、 **値**: `https://api0.silverpop.com`
+   1. **名前**: `text`, **Type**: `String`、 **値**: `Engage 0`
+   1. **名前**: `value`, **Type**: `String`、 **値**: `https://api0.silverpop.com`
+
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
    「すべて保存」ボタンをクリックします。
@@ -95,15 +99,15 @@ API エンドポイントを設定するには：
 
    新しく追加したノードに 2 つのプロパティを追加します。
 
-   1. **名前**: `text`、 **タイプ**: `String`、 **値**: `Pilot`
-   1. **名前**: `value`、 **タイプ**: `String`、 **値**: `https://apipilot.silverpop.com/XMLAPI`
+   1. **名前**: `text`, **Type**: `String`、 **値**: `Pilot`
+   1. **名前**: `value`, **Type**: `String`、 **値**: `https://apipilot.silverpop.com/XMLAPI`
 
 1. 既存の API エンドポイント（Engage 1～6）を変更するには、それぞれを 1 つずつクリックして、値を次のように置き換えます。
 
    | **ノード名** | **既存の終点の値** | **新しいエンドポイント値** |
    |---|---|---|
    | sp-e1 | https://api.engage1.silverpop.com/XMLAPI | https://api1.silverpop.com |
-   | sp-e2 | https://api.engage1.silverpop.com/XMLAPI | https://api2.silverpop.com |
+   | sp-e2 | https://api.engage2.silverpop.com/XMLAPI | https://api2.silverpop.com |
    | sp-e3 | https://api.engage3.silverpop.com/XMLAPI | https://api3.silverpop.com |
    | sp-e4 | https://api.engage4.silverpop.com/XMLAPI | https://api4.silverpop.com |
    | sp-e5 | https://api.engage5.silverpop.com/XMLAPI | https://api5.silverpop.com |
