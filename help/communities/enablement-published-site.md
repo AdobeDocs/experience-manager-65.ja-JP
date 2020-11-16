@@ -177,12 +177,12 @@ What there is, is activity by the two learners, `Riley Taylor` and `Sidney Croft
 
 学習者とイネーブルメントリソースに関するレポートにアクセスには、2 つの方法があります。
 
-On author, navigate to the **Communities,[Resources console](resources.md)**, where the enablement resources are managed, and after selecting a community site, it is possible to generate reports for
+On author, navigate to the **Communities, [Resources console](resources.md)**, where the enablement resources are managed, and after selecting a community site, it is possible to generate reports for
 
 * すべての有効化リソースと学習パス
 * 有効化に関する1つのリソースまたは学習パス
 
-Navigate to the **Communities,[Reports console](reports.md)**, and generate reports according to:
+Navigate to the **Communities, [Reports console](reports.md)**, and generate reports according to:
 
 * 有効化リソースと学習パスの割り当て
 * 特定の期間におけるコミュニティサイトへの投稿
