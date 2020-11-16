@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 00806e6e-3578-4caa-bafa-064f200a871f
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 87%
 
 ---
 
@@ -49,7 +52,7 @@ java -jar aem6.3.jar
 
 ## -nointeractive フラグの使用 {#using-the-nointeractive-flag}
 
-プロパティファイルでパスワードを指定することもできます。これは、システムプロパティと組み合わ `-nointeractive` せたフラグを使用し`-Dadmin.password.file` 、行います。
+プロパティファイルでパスワードを指定することもできます。これは、 `-nointeractive` systemプロパティと組み合わせたフラグを使用して行います`-Dadmin.password.file` 。
 
 次に例を示します。
 
