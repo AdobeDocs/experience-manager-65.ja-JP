@@ -55,8 +55,8 @@ Imaging Transcoding Libraryは、RHEL 7およびCentOS 7ディストリビュー
 
 You can configure the following options for the `-resize` parameter:
 
-* `X`: と同様の動作 [!DNL Experience Manager]です。 例えば、-resize 319。
-* `WxH`: 例えば、縦横比は維持されません `-resize 319x319`。
+* `X`:と同様の動作 [!DNL Experience Manager]です。 例えば、-resize 319。
+* `WxH`:例えば、縦横比は維持されません `-resize 319x319`。
 * `Wx`：幅を固定し、アスペクト比を維持して高さを計算。例えば、`-resize 319x` のように指定します。
 * `xH`：高さを固定し、アスペクト比を維持して幅を計算。例えば、`-resize x319` のように指定します。
 
