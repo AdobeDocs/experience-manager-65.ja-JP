@@ -1,6 +1,6 @@
 ---
 title: AEM Foundationとリポジトリ
-description: Adobe Experience Managerプラットフォームおよびリポジトリに関するリリースノートです。
+description: Adobe Experience Managerプラットフォームおよびリポジトリのリリースノートです。
 translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 55%
 
 # AEM Foundationとリポジトリ {#aem-foundation-repository}
 
-## 変更点の一覧 {#list-of-changes}
+## 変更について {#list-of-changes}
 
 ### リポジトリ {#repository}
 
