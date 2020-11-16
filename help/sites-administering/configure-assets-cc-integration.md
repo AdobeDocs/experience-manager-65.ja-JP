@@ -45,7 +45,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
 
 >[!CAUTION]
 >
->Adobe Marketing CloudのブランドがAdobe Experience Cloudに変更されました。 以下の手順では、現在のインターフェイスを反映するため、Marketing Cloud がまだ使用されています。これらの使用は後日変更される予定です。
+>Adobe Marketing CloudはAdobe Experience Cloudの烙印を押された。 以下の手順では、現在のインターフェイスを反映するため、Marketing Cloud がまだ使用されています。これらの使用は後日変更される予定です。
 
 ## アプリケーションの作成 {#create-an-application}
 
@@ -78,7 +78,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
 
 1. AEM Assets のローカルインスタンスの UI で AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 従来のクラウドサービス]**&#x200B;の順に移動します。
 
-1. **[!UICONTROL Adobe Marketing Cloud]** サービスを見つけます。 If no configurations exist, click **[!UICONTROL Configure Now]**. If configurations exist, click **[!UICONTROL Show Configurations]** and click `+` to add a new configuration.
+1. **[!UICONTROL Adobe Marketing Cloud]** ・サービスを見つけます。 If no configurations exist, click **[!UICONTROL Configure Now]**. If configurations exist, click **[!UICONTROL Show Configurations]** and click `+` to add a new configuration.
 
    >[!NOTE]
    >
@@ -123,7 +123,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
-1. 「**[!UICONTROL 更新]**」をクリックします。アセットをAEM Assetsインスタンスと今すぐ同期します。
+1. 「**[!UICONTROL 更新]**」をクリックします。アセットを今すぐAEM Assetsインスタンスと同期します。
 
 ## 同期のテスト {#test-the-synchronization}
 
@@ -159,7 +159,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
    >[!NOTE]
    `sling:OrderedFolder` タイプの Assets フォルダーの共有は、Adobe Marketing Cloud での共有の文脈ではサポートされません。フォルダーを共有したい場合は、AEM Assets でフォルダーを作成するときに「**[!UICONTROL 並べ替え]**」オプションを選択しないでください。
 
-1. AEM Assetsユーザーインターフェイスを更新します。 ローカルフォルダーインスタンスのアセットコンソールで作成したAEM AssetsーがMarketing CloudUIにコピーされます。 AEM Assetsー内のフォルダーにアップロードしたアセットは、AEMMarketing Cloudーで処理された後、フォルダー内のフォルダーのコピーに表示されます。
+1. AEM Assetsのユーザインターフェイスを更新します。 ローカルのAEM Assetsインスタンスのアセットコンソールで作成したMarketing Cloudーが、フォルダーUIにコピーされます。 AEM Assetsのフォルダにアップロードしたアセットは、AEMサーバで処理された後、Marketing Cloud内のフォルダのコピーに表示されます。
 1. Marketing Cloud 内にレプリケートされたフォルダーのコピーにアセットをアップロードすることもできます。処理された後、アセットは AEM Assets 内の共有フォルダーに表示されます。
 
 ## AEM Assets と Creative Cloud 間でのアセットの交換 {#exchange-assets-between-aem-assets-and-creative-cloud}
