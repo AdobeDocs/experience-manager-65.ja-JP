@@ -78,9 +78,9 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 パネルは、次の 2 つのタブで構成されています。
 
-* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**— 作成者の[コンテンツツリーと同様のコンポーネントツリー](/help/sites-authoring/author-environment-tools.md#content-tree)。
+* **[コンポーネント](/help/sites-developing/developer-mode.md#components)** — 作成者の [コンテンツツリーと同様のコンポーネントツリー](/help/sites-authoring/author-environment-tools.md#content-tree) 。
 
-* **[エラー](/help/sites-developing/developer-mode.md#errors)**- 問題が発生すると、各コンポーネントの詳細が表示されます。
+* **[エラー](/help/sites-developing/developer-mode.md#errors)** - 問題が発生すると、各コンポーネントの詳細が表示されます。
 
 ### コンポーネント {#components}
 
