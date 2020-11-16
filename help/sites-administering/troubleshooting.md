@@ -12,6 +12,9 @@ discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 93%
 
 ---
 
@@ -54,7 +57,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
 ## トラブルシューティングに使用する verbose オプション {#verbose-option-used-for-troubleshooting}
 
-CRXを起動すると、次のように —v（冗長）オプションをコマンドラインに追加できます。
+CRXを開始する際、次のようにコマンドラインに —v（冗長）オプションを追加できます。
 
 ` java -jar crx-<*version*>-<*edition*>.jar -v`
 
