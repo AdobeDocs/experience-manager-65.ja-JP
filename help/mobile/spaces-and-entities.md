@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1209'
+ht-degree: 74%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
 
-スペースは、コンテンツサービス REST API を介して公開されるエンティティを保存するのに便利な場所です。アプリ（または任意のチャネル）が多くのエンティティに関連付けられる可能性があるので、これは特に便利です。 エンティティをスペース内に強制的に配置すると、ベストプラクティスとして、アプリの要件が強制的にグループ化されます。必要に応じて、AEMのアプリを少数のスペースに関連付けることができます。
+スペースは、コンテンツサービス REST API を介して公開されるエンティティを保存するのに便利な場所です。これは、アプリ(または任意のチャネル)が多くのエンティティに関連付けられる可能性があるので、特に便利です。 エンティティをスペース内に強制的に配置すると、ベストプラクティスとして、アプリの要件が強制的にグループ化されます。必要に応じて、AEMのアプリケーションに少数のスペースを関連付けることができます。
 
 >[!NOTE]
 >
@@ -66,7 +69,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. Choose **Properties** from the toolbar
 1. Click **Close** when done
 
-**スペースの発行** スペースが発行されると、そのスペース内のすべてのフォルダとエンティティも発行されます。
+**スペースをパブリッシュする** ：スペースがパブリッシュされると、そのスペース内のすべてのフォルダとエンティティもパブリッシュされます。
 
 1. スペースコンソールのリスト内のアイコンをクリックして、スペースを選択します。
 1. Choose **Publish Tree**
@@ -101,7 +104,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >言語コピーは、このリリースでは十分にサポートされていません。このリリースでは構造の設定のみおこなえます。
 
-The **Language Copy** feature allows authors to copy their master Language Copy and then create a Project and Workflow to automatically translate the content. 言語コピーは正しい構造を作成します。 スペース内にフォルダーを追加すると、スペースに言語コピーを追加できます。
+The **Language Copy** feature allows authors to copy their master Language Copy and then create a Project and Workflow to automatically translate the content. 言語コピーによって正しい構造が作成されます。 スペース内にフォルダーを追加すると、スペースに言語コピーを追加できます。
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
    >
    >言語コピーノードは、スペースの直属の子要素としてのみ存在できます。
 
-1. **** コンテンツ **パッケージ言語(&amp;A);ast;タイトル(&amp;** A);ast；を入力します。言語コ **ピーを作成ダイアログ** 。
+1. Choose **Content Package Language&amp;ast;** and enter the **Title&amp;ast;** in **Create Language Copy** dialog.
 
    「**作成**」をクリックします。
 
@@ -200,7 +203,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
-   ***エンティティ作成用のテンプレートを「ページモデル***」として選択した場合は、「編集」をク **リックして** 、次の図に示すようにアセットを追加できます。
+   ***エンティティを作成するためのテンプレートをページモデル***&#x200B;として選択した場合は、 **「編集」をクリックすると** 、次の図に示すようにアセットを追加できます。
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -238,7 +241,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
 
 エンティティの公開オプションとして、「**ツリーを公開**」および「**クイック公開**」があります。
 
-1. スペースコンソールリストから図形を選択し、[**発行ツリー**]をクリックして、その図形とその子を発行します。
+1. スペースコンソールリストから図形を選択し、[**パブリッシュツリー**]をクリックして、その図形とその子をパブリッシュします。
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
