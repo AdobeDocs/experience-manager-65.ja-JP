@@ -1,8 +1,8 @@
 ---
 title: SPAの動的モデルとコンポーネントのマッピング
 seo-title: SPAの動的モデルとコンポーネントのマッピング
-description: この記事では、AEM向けJavaScript SPA SDKで、動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
-seo-description: この記事では、AEM向けJavaScript SPA SDKで、動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
+description: この記事では、AEM用のJavaScript SPA SDKで動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
+seo-description: この記事では、AEM用のJavaScript SPA SDKで動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
 uuid: 337b8d90-efd7-442e-9fac-66c33cc26212
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # SPAの動的モデルとコンポーネントのマッピング{#dynamic-model-to-component-mapping-for-spas}
 
-このドキュメントでは、AEM用JavaScript SPA SDKで、動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
+このドキュメントでは、JavaScript SPA SDK for AEMで動的モデルとコンポーネントのマッピングがどのように行われるかを説明します。
 
 >[!NOTE]
 >
->SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
+>SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 ## ComponentMapping モジュール {#componentmapping-module}
 
@@ -38,7 +38,7 @@ npmパッケージも参照してください。 [https://www.npmjs.com/package/
 
 ## モデル駆動型シングルページアプリ {#model-driven-single-page-application}
 
-AEM向けJavaScript SPA SDKを利用する単一ページアプリケーションは、モデル駆動です。
+AEM用のJavaScript SPA SDKを利用する単一ページアプリは、モデル主導です。
 
 1. フロントエンドコンポーネントは、それ自体を [コンポーネントマッピングストアに登録します](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module)。
 1. 次に、 [コンテナ](/help/sites-developing/spa-blueprint.md#container)、 [モデルプロバイダーがモデルを指定すると、そのモデルのコンテンツ](/help/sites-developing/spa-blueprint.md#the-model-provider)( `:items`)を繰り返し処理します。
