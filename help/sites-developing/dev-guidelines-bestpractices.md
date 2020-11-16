@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1105'
+ht-degree: 85%
 
 ---
 
@@ -50,7 +53,7 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 
 独自のコンポーネントを作成したり、既存のコンポーネントをカスタマイズしたりするとき、多くの場合は、既存の定義を再利用する方法が最も簡単（かつ安全）です。同じ原則が、エラーハンドラーなど、AEM 内の他の要素にも当てはまります。
 
-これは、既存の定義をコピーして上書きすることで行うことができます。 つまり、からに定義をコピーし `/libs` ます `/apps/<your-project>`。 この新しい定義は、 `/apps`の要件に従って更新できます。
+これは、既存の定義をコピーしてオーバーレイすることで実行できます。 つまり、からに定義をコピー `/libs` し `/apps/<your-project>`ます。 では、この新しい定義 `/apps`は、要件に応じて更新できます。
 
 >[!NOTE]
 >
@@ -66,23 +69,23 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 
       * 例えば、テキストコンポーネントをカスタマイズするには、次のようにコピーします。
 
-         * 追加の `/libs/foundation/components/text`
+         * `/libs/foundation/components/text` から
          * を `/apps/myProject/components/text`
 
-* [エラーハンドラーによって表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
+* [エラーハンドラーで表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
    この場合、サーブレットをオーバーレイします。
 
    * リポジトリ内で、デフォルトスクリプトをコピーします。
 
-      * 追加の `/libs/sling/servlet/errorhandler/`
+      * `/libs/sling/servlet/errorhandler/` から
       * を `/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
 >
->You **must not** change anything in the `/libs` path.
+>**パス内の設定は**`/libs`一切変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+>`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 >
 >設定およびその他の変更の手順は以下のとおりです。
 >
@@ -97,7 +100,7 @@ JCR クエリは、正しく採用すれば強力なツールとなります。�
 * コンテンツのフルテキスト検索など、実際のエンドユーザークエリ。
 * 構造化されたコンテンツがリポジトリ全体で見つかる必要がある場合。
 
-   このような場合は、クエリーは、コンポーネントの有効化やキャッシュの無効化など、絶対に必要な場合にのみ実行してください（例：ワークフローステップ、コンテンツの変更やフィルターなどでトリガーされるイベントハンドラー）。
+   そのような場合は、クエリは、コンポーネントのアクティベーション時やキャッシュの無効化時など、絶対に必要な場合にのみ実行してください(例：ワークフローステップ、コンテンツの変更やフィルター時にトリガーするイベントハンドラーなど)。
 
 JCR クエリは、純粋なレンダリング要求には決して使用しないでください。JCR クエリが不適切な場合の例は以下のとおりです。
 
