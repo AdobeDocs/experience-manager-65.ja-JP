@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: 8fb70ca4-86fc-477d-9773-35b84d5e85a8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '3057'
+ht-degree: 61%
 
 ---
 
@@ -41,17 +44,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * Handlers must implement *com.day.cq.contentsync.handler.ContentUpdateHandler* (either directly or extending a class that does)
 * ハンドラーは、*com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler* を拡張できます。
 * ハンドラーは、ContentSyncキャッシュを更新した場合にのみtrueを報告する必要があります。 それ以外の場合で true を返すと、実際には更新されていないときでも AEM が更新を作成します。
-* ハンドラーは、コンテンツが実際に変更された場合にのみ、キャッシュを更新する必要があります。ホワイトが不要な場合はキャッシュに書き込みを行わないでください。 これにより、不要な更新が作成されます。
+* ハンドラーは、コンテンツが実際に変更された場合にのみ、キャッシュを更新する必要があります。ホワイトが不要な場合は、キャッシュに書き込みを行わない。 これにより、不要な更新が作成されます。
 
 >[!NOTE]
 >
->OSGI ロガー設定を通じて、パッケージ *com.day.cq.contentsync* に対するコンテンツ同期デバッグログを有効にしてください。**&#x200B;これにより、実行されたハンドラー、およびキャッシュを更新し、キャッシュの更新を報告したかどうかを追跡できます。
+>OSGI ロガー設定を通じて、パッケージ *com.day.cq.contentsync* に対するコンテンツ同期デバッグログを有効にしてください。**&#x200B;これにより、実行されたハンドラーと、それらのハンドラーがキャッシュを更新したかどうか、およびレポートされたキャッシュの更新を追跡できます。
 
 ## コンテンツ同期のコンテンツの設定 {#configuring-the-content-sync-content}
 
 クライアントに提供される ZIP ファイルのコンテンツを指定するためのコンテンツ同期設定を作成します。任意の数のコンテンツ同期設定を作成できます。各設定には識別用の名前が付けられています。
 
-コンテンツ同期設定を作成するには、プロパ `cq:ContentSyncConfig` ティをに設定して、リポジトリにノ `sling:resourceType` ードを追加しま `contentsync/config`す。 ノード `cq:ContentSyncConfig` はリポジトリ内の任意の場所に配置できますが、AEM発行インスタンス上のユーザーがそのノードにアクセスできる必要があります。 したがって、以下にノードを追加する必要がありま `/content`す。
+コンテンツ同期の設定を作成するには、 `cq:ContentSyncConfig` プロパティをに設定して、リポジトリに `sling:resourceType` ノードを追加し `contentsync/config`ます。 ノードはリポジトリ内の任意の場所に配置できますが、AEM発行インスタンスのユーザーはノードにアクセスできる必要があります。 `cq:ContentSyncConfig` したがって、以下にノードを追加する必要があり `/content`ます。
 
 コンテンツ同期の ZIP ファイルのコンテンツを指定するには、cq:ContentSyncConfig ノードに子ノードを追加します。それぞれの子ノードの次のプロパティによって、追加するコンテンツ項目と追加の際の処理方法が特定されます。
 
@@ -87,7 +90,7 @@ Day CQ コンテンツ同期マネージャーサービスは、コンテンツ�
 
 To configure download access for a specific Content Sync configuration, add the following property to the `cq:ContentSyncConfig` node:
 
-* 名前：許可可能な
+* 名前：authorizable
 * タイプ：String
 * 値：ダウンロードを行うことのできるユーザーまたはグループの名前
 
@@ -97,14 +100,14 @@ For example, your app enables users to install updates directly from Content Syn
 
 ### コンテンツ同期キャッシュの更新のためのユーザーの設定 {#configuring-the-user-for-updating-a-content-sync-cache}
 
-ユーザーがコンテンツ同期キャッシュの更新を実行すると、特定のユーザーアカウントがユーザーに代わって操作を実行します。匿名ユーザーは、デフォルトですべてのコンテンツ同期キャッシュを更新します。
+ユーザがコンテンツ同期キャッシュの更新を行うと、特定のユーザアカウントがユーザに代わって操作を行います。匿名ユーザーは、デフォルトで、すべてのコンテンツ同期キャッシュを更新します。
 
 デフォルトのユーザーを上書きして、特定のコンテンツ同期キャッシュを更新するユーザーまたはグループを指定できます。
 
 デフォルトのユーザーを上書きするには、cq:ContentSyncConfigノードに次のプロパティを追加して、特定のコンテンツ同期設定の更新を実行するユーザーまたはグループを指定します。
 
-* 名前: `updateuser`
-* タイプ: `String`
+* 名前：`updateuser`
+* 型：`String`
 * 値：更新を実行できるユーザーまたはグループの名前
 
 If the `cq:ContentSyncConfig` node has no `updateuser` property, the default `anonymous` user updates the cache.
@@ -113,27 +116,27 @@ If the `cq:ContentSyncConfig` node has no `updateuser` property, the default `an
 
 シンプルな JSON のレンダリングからページ（参照先のアセットを含む）の本格的なレンダリングまで、様々な処理が可能です。ここでは、使用可能な設定タイプとそのパラメーターについて説明します。
 
-**コピー** ：ファイルとフォルダをコピーします。
+**copy** ：ファイルとフォルダーをコピーするだけです。
 
-* **path** — パスが1つのファイルを指す場合、そのファイルのみがコピーされます。フォルダー（ページノードを含む）を指す場合は、以下のすべてのファイルとフォルダーがコピーされます。
+* **path** — パスが単一のファイルを指す場合、そのファイルのみがコピーされます。フォルダー（ページノードを含む）を指す場合は、下のすべてのファイルとフォルダーがコピーされます。
 
-**content** 標準のSling要求処理を使用してコンテ [ンツをレンダリング](/help/sites-developing/the-basics.md#sling-request-processing)。
+**content** Slingの標準的な要求処理を使用してコンテンツをレンダリング [します](/help/sites-developing/the-basics.md#sling-request-processing)。
 
 * **path** — 出力するリソースのパス。
 * **extension** — リクエストで使用する拡張子。一般的な例は *html* と *jsonですが*、他の拡張子は使用できます。
 
-* **selector** — オプションのセレクターをドットで区切ります。一般的な例は、モバ *イルバージョンのページをレンダリングする* ためのタッチ ** 、またはJSON出力の場合は無限遠です。
+* **selector** — オプションで、ドット区切りのセレクター。一般的な例としては、モバイルバージョンのページのレンダリングには *touch* 、JSON出力には *無限* (infinity)があります。
 
-**clientlib** JavascriptまたはCSSクライアントライブラリをパッケージ化します。
+**clientlib** :JavaScriptまたはCSSクライアントライブラリをパッケージ化します。
 
 * **path** — クライアントライブラリのルートへのパス。
-* **extension** — クライアントライブラリのタイプ。現時点では、これを *js* または *css* に設定する必要があります。
+* **extension** — クライアントライブラリのタイプ。現時点では、 *js* または *css* に設定する必要があります。
 
 **アセット**
 
 アセットの元のレンディションを収集します。
 
-* **path** - /content/damの下のアセットフォルダーへのパス。
+* **path** - /content/damの下のアセットフォルダーのパス。
 
 **image** 画像を収集します。
 
@@ -144,9 +147,9 @@ image タイプは、zip ファイルに We.Retail ロゴを追加するため�
 **pages** AEMページをレンダリングし、参照アセットを収集します。
 
 * **path** - ページのパス。
-* **extension** — リクエストで使用する拡張子。ページの場合、これはほとんど常に *htmlですが*、他のページも可能です。
+* **extension** — リクエストで使用する拡張子。ページの場合、これはほとんど常に *htmlですが*、他のページはまだ可能です。
 
-* **selector** — オプションのセレクターをドットで区切ります。一般的な例は、ページのモ *バイルバージョン* (Mobile Version)をレンダリングするためのタッチ操作です。
+* **selector** — オプションで、ドット区切りのセレクター。一般的な例は、 *タッチ* （タッチ）によるページのモバイルバージョンのレンダリングです。
 
 * **deep** — 子ページも含める必要があるかどうかを決定するオプションのブール型プロパティ。デフォルト値は *trueです。*
 
@@ -154,13 +157,13 @@ image タイプは、zip ファイルに We.Retail ロゴを追加するため�
 
    デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントだけが追加の対象になります。Web コンソールで **Day CQ WCM Pages Update Handler** を設定することで、その他のリソースタイプを追加できます。
 
-**rewrite** 書き出しノードは、書き出したページでリンクを書き換える方法を定義します。 書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
+**rewrite** 「rewrite」ノードは、書き出したページでリンクを書き換える方法を定義します。 書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
 
 The `rewrite` node needs to be located below the `page` node.
 
 `rewrite` ノードには、次に示す 1 つ以上のプロパティを指定できます。
 
-* `clientlibs`:clientlibのパスを書き換えます。
+* `clientlibs`:clientlibsのパスを書き換えます。
 
 * `images`:画像のパスを書き換えます。
 * `links`:リンクのパスを書き換えます。
@@ -213,15 +216,15 @@ The `rewrite` node needs to be located below the `page` node.
   + ...
 ```
 
-**etc.designs.defaultとetc.designs.mobile設定の最初の2つのエントリは** 、明確なものにする必要があります。 多数のモバイルページを含めるには、/etc/designsの下に関連するデザインファイルが必要です。 また、追加の処理が不要なので、コピーで十分です。
+**etc.designs.defaultおよびetc.designs.mobile設定の最初の2つのエントリは、明確である必要があります。** モバイル用のページを多数含めるため、/etc/designsの下に関連するデザインファイルが必要です。 また、余分な処理が不要なので、コピーで十分です。
 
-**events.plistこのエントリは** 、少し特殊なものです。 序文で述べたように、アプリケーションは、イベントの位置のマーカーを持つマップビューを提供する必要があります。 必要な場所の情報は、PLIST形式の別のファイルとして提供します。 これを機能させるには、インデックスページで使用されるイベントリストコンポーネントにplist.jspというスクリプトを含めます。 このスクリプトは、.plist拡張子を持つコンポーネントのリソースが要求された場合に実行されます。 通常は、 [Sling要求処理を利用するので、コンポーネントのパスがpathプロパティで指定され、typeがcontentに設定されます](/help/sites-developing/the-basics.md#sling-request-processing)。
+**イベント.plist** このエントリは少し特殊です。 序文で述べたように、イベントの位置のマーカーを持つマップ表示をアプリケーションが提供する必要があります。 必要な場所の情報は、PLIST形式の別のファイルとして提供します。 これを機能させるには、インデックスページで使用されるイベントリストコンポーネントにplist.jspというスクリプトがあります。 このスクリプトは、.plist拡張子を持つコンポーネントのリソースが要求された場合に実行されます。 通常は、 [Sling要求処理を活用したいので、コンポーネントのパスがpathプロパティに指定され、タイプがcontentに設定されます](/help/sites-developing/the-basics.md#sling-request-processing)。
 
-**events.touch.html** Nextには、アプリに表示される実際のページが表示されます。 pathプロパティは、イベントのルートページに設定されます。 deepプロパティのデフォルトはtrueなので、そのページより下のすべてのイベントページも含まれます。 ページを設定タイプとして使用し、イメージまたはページ上のダウンロードコンポーネントから参照されるイメージやその他のファイルが含まれるようにします。 また、タッチセレクターを設定すると、モバイルバージョンのページが提供されます。 機能パックの設定には、この種のエントリが多く含まれていますが、ここでは簡単にするために取り上げておきません。
+**イベント.touch.html** ：次に、アプリに表示される実際のページが表示されます。 pathプロパティは、イベントのルートページに設定されます。 deepプロパティのデフォルトはtrueなので、そのページより下のすべてのイベントページも含まれます。 ページを設定タイプとして使用するので、イメージまたはページ上のダウンロードコンポーネントから参照されるイメージや他のファイルが含まれます。 また、タッチセレクターを設定すると、モバイル版のページが表示されます。 機能パックの設定には、この種のエントリが多く含まれていますが、ここでは簡単にするために取り除かれています。
 
-**logo** ロゴの設定タイプについては、これまで説明しておらず、組み込みのタイプではありません。 ただし、コンテンツ同期フレームワークはある程度まで拡張可能であり、このタイプはその一例です。フレームワークの拡張については、以降の節で説明します。
+**logo** ロゴの設定タイプについては、これまで説明しておらず、組み込みのタイプについても触れていません。 ただし、コンテンツ同期フレームワークはある程度まで拡張可能であり、このタイプはその一例です。フレームワークの拡張については、以降の節で説明します。
 
-**manifest** ：コンテンツの開始ページなど、zipファイルに何らかのメタデータを含めることが望ましい場合が多くあります。 ただし、このような情報をハードコーディングすると、後で簡単に変更できなくなります。 Content syncフレームワークは、設定内でマニフェストノードを探すことでこの使用例をサポートします。これは名前で識別されるだけで、設定タイプは不要です。 特定のノードで定義されたすべてのプロパティがファイルに追加されます。このファイルは「manifest」とも呼ばれ、zipファイルのルートに存在します。
+**manifest** ：コンテンツの開始ページなど、zipファイルに何らかのメタデータを含めることが望ましい場合が多くあります。 ただし、このような情報をハードコーディングすると、後で簡単に変更できなくなります。 Content Syncフレームワークは、設定内のマニフェストノードを探すことでこの使用例をサポートします。マニフェストノードは名前で識別されるだけで、設定タイプは必要ありません。 特定のノードに定義されているすべてのプロパティがファイルに追加されます。このファイルは「manifest」とも呼ばれ、zipファイルのルートに存在します。
 
 前述の例では、イベントリストページが初期ページになります。この情報は **indexPage** プロパティで指定され、いつでも簡単に変更できます。A second property defines the path of the *events.plist* file. 後述のとおり、これでクライアントアプリケーションはマニフェストを読み取り、それに従って動作できるようになります。
 
@@ -283,7 +286,7 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 
 ### カスタム更新ハンドラーの実装 {#implementing-a-custom-update-handler}
 
-すべての We.Retail Mobile ページには、左上隅にロゴが表示されます。当然ながら、このロゴも zip ファイルに含めます。However, for cache optimization, AEM doesn&#39;t reference the image file&#39;s real location in the repository, which prevents us from simply using the **copy** configuration type. What we need to do instead is to provide our own **logo** configuration type that makes the image available at the location requested by AEM. 次のコードは、ロゴ更新ハンドラーの完全な実装を示しています。
+すべての We.Retail Mobile ページには、左上隅にロゴが表示されます。当然ながら、このロゴも zip ファイルに含めます。However, for cache optimization, AEM doesn&#39;t reference the image file&#39;s real location in the repository, which prevents us from simply using the **copy** configuration type. What we need to do instead is to provide our own **logo** configuration type that makes the image available at the location requested by AEM. 次のコードは、ロゴ更新ハンドラの完全な実装を示しています。
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -353,8 +356,8 @@ The `LogoUpdateHandler` class implements the `ContentUpdateHandler` interface&#3
 
 * このハンドラーを呼び出す対象となる、設定エントリへのアクセスを提供する `ConfigEntry` インスタンスとそのプロパティ。
 * 前回のコンテンツ同期によってキャッシュが更新された日時を示す `lastUpdated` タイムスタンプ。このタイムスタンプ以降に変更されていないコンテンツをハンドラーで更新しないでください。
-* キャ `configCacheRoot` ッシュのルートパスを指定する引数。 このパスの下に、更新されたすべてのファイルを保存し、zipファイルに追加する必要があります。
-* キャッシュ関連のリポジトリ操作すべてに使用する必要がある管理セッション。
+* キャッシュのルートパスを指定する `configCacheRoot` 引数。 このパスの下に、更新されたすべてのファイルを保存し、zipファイルに追加する必要があります。
+* キャッシュ関連のすべてのリポジトリ操作に使用する必要がある管理セッション。
 * 特定のユーザーのコンテキストでコンテンツを更新し、ある種のパーソナライズされたコンテンツを提供するために使用できるユーザーセッション。
 
 カスタムハンドラーを実装するには、設定エントリに指定されたリソースに基づいて、Image クラスのインスタンスを最初に作成します。基本的に、これはページ上の実際のロゴコンポーネントによって行われる手順と同じです。画像のターゲットパスは、ページから参照されるパスと同じです。
@@ -365,7 +368,7 @@ The `LogoUpdateHandler` class implements the `ContentUpdateHandler` interface&#3
 
 コンテンツ同期が提供するコンテンツをモバイルアプリで使用するには、HTTP または HTTPS 接続を経由してコンテンツを要求する必要があります。その結果、取得したコンテンツ（ZIP ファイルにパッケージ化されます）がモバイルデバイスのローカルに解凍および格納されます。コンテンツは、データだけでなくロジック（つまり、完全な Web アプリケーション）も参照します。これにより、ネットワークに接続されていない場合でも、取得した Web アプリケーションと対応するデータをモバイルユーザーが実行できるようになります。
 
-コンテンツ同期は、インテリジェントな方法でコンテンツを配信します。前回の正常なデータ同期以降のデータ変更のみが配信され、データ転送に要する時間が短縮されます。1970年1月1日以降にアプリケーションデータの初回実行時には変更が要求され、その後は前回正常に同期された後に変更されたデータのみが要求されます。AEMは、iOS用のクライアント通信フレームワークを使用してデータ通信と転送をシンプル化し、iOSベースのWebアプリケーションを有効にするために必要なネイティブコードの量を最小限に抑えます。
+コンテンツ同期は、インテリジェントな方法でコンテンツを配信します。前回の正常なデータ同期以降のデータ変更のみが配信されるので、データ転送に要する時間が短縮されます。1970年1月1日以降、アプリケーションデータの最初の実行時には変更が要求され、その後、前回の同期の成功以降に変更されたデータのみが要求されます。AEMは、iOS用のクライアント通信フレームワークを利用してデータ通信と転送を簡素化し、iOSベースのWebアプリケーションを有効にするために必要なネイティブコードの量を最小限に抑えます。
 
 転送されたデータはすべて同じディレクトリ構造に解凍できます。データの解凍時に追加の手順（依存関係の確認など）を行う必要はありません。iOS では、すべてのデータが iOS アプリの Documents フォルダー内のサブフォルダーに格納されます。
 
