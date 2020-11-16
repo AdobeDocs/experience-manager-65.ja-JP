@@ -39,7 +39,7 @@ Adobe Experience Manager6.5.5.0は、2019 **年4月のGAリリース(GA)以降�
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.22.3 に更新しました。
 
-機能の完全なリスト、主な特徴、Experience Manager6.5 Service Pack 5で導入された主な機能については、「Adobe Experience Manager6.5 Service Pack 5 [の新機能](new-features-latest-service-pack.md) 」を参照してください。
+機能の完全なリスト、主な特徴、Experience Manager6.5 Service Pack 5で導入された主な機能については、「Adobe Experience Manager6.5 Service Pack 5の新 [機能」を参照してください](new-features-latest-service-pack.md) 。
 
 6.5.5.0リリースでの修正のリスト [!DNL Experience Manager] を次に示します。
 
