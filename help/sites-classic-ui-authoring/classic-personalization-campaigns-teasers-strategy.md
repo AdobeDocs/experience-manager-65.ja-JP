@@ -12,6 +12,9 @@ discoiquuid: 7f378b94-5233-4358-8d93-a7b3386df00b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+workflow-type: tm+mt
+source-wordcount: '1236'
+ht-degree: 89%
 
 ---
 
@@ -24,13 +27,13 @@ source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
 >
 >ティーザーコンポーネントは AEM 6.2 で廃止されました。代わりに [Target コンポーネント](/help/sites-authoring/content-targeting-touch.md)を使用してください。
 
-* **ブランドページは** 、Webサイトの「キャンペーン」セクション内に保存されます。 各ブランドには個々のキャンペーンが含まれます。
-* **キャンペーンページは** 、Webサイトの「キャンペーン」セクション内に保存されます。 各キャンペーンには個々のページがあり、ティーザー定義が保持されます。コンテナ（概要）ページにも個々のティーザーページに関連する特定の情報と統計情報が保持されます。
+* **ブランドページ** は、Webサイトのキャンペーンセクション内に保存されます。 各ブランドには個々のキャンペーンが含まれます。
+* **キャンペーンページ** は、Webサイトのキャンペーンセクション内に保存されます。 各キャンペーンには個々のページがあり、ティーザー定義が保持されます。コンテナ（概要）ページにも個々のティーザーページに関連する特定の情報と統計情報が保持されます。
 
 AEM 内のティーザーは、以下の複数の部品から構成されます。
 
-* **Teaserページは** 、適切なキャンペーンページの下に保存され、各キャンペーンで使用できるTeaserの段落の定義を保持します。 これらの定義は、Teaser 段落を表示するときに使用されます。コンテンツのバリエーション、バリエーションやブースト係数の選択に使用するセグメントなどがあります。
-* **ティーザーコンポーネント**&#x200B;は設定を変更せずにすぐに使用できます。また、コンテンツページに特定のティーザー段落のインスタンスを作成できます。サイドキックからティーザーコンポーネントをドラッグし、ティーザー定義を指定して独自のティーザー段落を作成できます。**** 注意：TeaserコンポーネントはAEM 6.2で非推奨となりました。代わりに [Targetコンポーネントを使用し](/help/sites-authoring/content-targeting-touch.md) 、
+* **Teaserページは** 、適切なキャンペーンページの下に保存され、特定のキャンペーンで使用できるTeaserの段落の定義が保持されます。 これらの定義は、Teaser 段落を表示するときに使用されます。コンテンツのバリエーション、バリエーションやブースト係数の選択に使用するセグメントなどがあります。
+* **ティーザーコンポーネント**&#x200B;は設定を変更せずにすぐに使用できます。また、コンテンツページに特定のティーザー段落のインスタンスを作成できます。サイドキックからティーザーコンポーネントをドラッグし、ティーザー定義を指定して独自のティーザー段落を作成できます。**注意：** AEM 6.2ではTeaserコンポーネントが廃止されました。代わりに、 [ターゲットコンポーネントを使用してください](/help/sites-authoring/content-targeting-touch.md) 。
 * **ティーザー段落**&#x200B;は、コンテンツページ内にあるティーザーの実インスタンスです。ティーザー段落は、特定の訪問者セグメントを、その人々が関心を持つコンテンツに誘導します。
 * 特定の訪問者セグメントに焦点を絞ったキャンペーンコンテンツがあるページ。通常、ティーザー段落はこのようなページに訪問者を誘導します。
 
@@ -41,8 +44,8 @@ When adding a teaser paragraph to a page you need to define the **Strategy**.
 これは、選択できるティーザーが複数ある場合に、割り当てられたセグメントがすべて適切に解決されるようにするためです。また、以下のように「**方法**」でティーザーの選択に使用できる追加の条件を指定します。
 
 * **Clickstream のスコア**：訪問者の ClientContext 内に保持されているタグと関連タグのヒットに基づいた値です（各タグを含むページを 1 人の訪問者が何回クリックしたかを示します）。ティーザーページに定義されている複数のタグのヒット率が比較されます。
-* **ランダム**（「ランダム」選択）;は、ページに対して生成されたランダムな要因を使用します。これは、クライアントコンテキストで [確認できま](/help/sites-administering/client-context.md)す。
-* **解決される** セグメントのリストの最初のリスト。 この順序は、キャンペーンコンテナページ内のティーザーの順序を指します。
+* **ランダム**（「ランダム」選択用）;は、ページに対して生成されたランダムな要因を使用します。これは、 [クライアントコンテキストで確認できます](/help/sites-administering/client-context.md)。
+* **解決されたセグメントのリストの** 1つ目。 この順序は、キャンペーンコンテナページ内のティーザーの順序を指します。
 
 The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-factor) of the segment also has an impact on the selection. これは、セグメントの定義に追加される重み付け係数であり、選択されるセグメントの相対的確率を増減させます。
 
@@ -110,7 +113,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
 
 これを以下の訪問者に適用する場合：
 
-* **S1**、 **S2** 、 **S6は正常に解決しました** 。
+* **S1**、 **S2** 、 **S6** の解決に成功しました
 
 * **マーケティング**&#x200B;タグは 3 回のヒットがあります
 * **ビジネス**&#x200B;タグは 6 回のヒットがあります
@@ -139,7 +142,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td>T1</td>
    <td>S1、S2</td>
    <td>ビジネス、マーケティング</td>
-   <td>はい</td>
+   <td>可</td>
    <td>0</td>
    <td>9</td>
   </tr>
@@ -148,7 +151,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td>T2 </td>
    <td>S1</td>
    <td><br /> </td>
-   <td>はい</td>
+   <td>可</td>
    <td>0</td>
    <td><br /> </td>
   </tr>
@@ -157,7 +160,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td>T3</td>
    <td>S3、S4</td>
    <td><br /> </td>
-   <td>いいえ</td>
+   <td>不可</td>
    <td><br /> </td>
    <td><br /> </td>
   </tr>
@@ -166,7 +169,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td>T4</td>
    <td>S2、S5</td>
    <td><br /> </td>
-   <td>はい<br /> </td>
+   <td>可<br /> </td>
    <td>0<br /> </td>
    <td><br /> </td>
   </tr>
@@ -175,7 +178,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td>T5</td>
    <td>S1、S2、S6</td>
    <td>マーケティング</td>
-   <td>はい</td>
+   <td>可</td>
    <td>100</td>
    <td>3</td>
   </tr>
@@ -184,7 +187,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td>T6</td>
    <td>S6</td>
    <td>ビジネス</td>
-   <td>はい</td>
+   <td>可</td>
    <td>100</td>
    <td>6 </td>
   </tr>
@@ -245,7 +248,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
 
    * **キャンペーンパス**&#x200B;個々のティーザーページが保存されるキャンペーンページへのパス。セグメントによって表示されるティーザーが決まります。
 
-   * **[方法](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)**適切に解決されたセグメントが複数ある場合の選択方法。
+   * **[方法](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)** 適切に解決されたセグメントが複数ある場合の選択方法。
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
 1. 「**OK**」をクリックして、保存します。ティーザーに設定したセグメントや、現在ログインに使用しているユーザーのプロファイルにより、適切なコンテンツが表示されます。
