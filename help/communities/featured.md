@@ -67,7 +67,7 @@ Select the placed `Featured Content` component to access and select the `Configu
 
 * **[!UICONTROL 表示名]**
 
-   重点コンテンツのリストのタイトル。 For example `Featured Questions` or `Featured Ideas`. 初期設定は、空のままの `Featured Content` 場合です。
+   重点コンテンツのリストのタイトル。 For example `Featured Questions` or `Featured Ideas`. 空白のままの `Featured Content` 場合、初期設定です。
 
 * **[!UICONTROL おすすめコンテンツの場所]**
 
