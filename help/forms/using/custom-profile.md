@@ -23,9 +23,9 @@ A profile is a resource node in [Apache Sling](https://sling.apache.org/). HTML5
 
 Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。ノードのレンダリングスクリプトは/libs/xfaforms/プロファイルにあります。
 
-Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。These Sling scripts are also referred as **Profile Renderer scripts**. 
+Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。These Sling scripts are also referred as **Profile Renderer scripts**. プロファイルレンダラーは、要求されたフォームをレンダリングするためにFormsOSGiサービスを呼び出します。
 
-GETおよびPOST要求のプロファイルスクリプトは、html.jspとhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、このような変更が上書きされます。
+プロファイルスクリプトは、GETおよびPOSTリクエストの場合、html.jspとhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、このような変更が上書きされます。
 
 プロファイルにはさまざまなモジュールが含まれています。これらのモジュールは、formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp、および footer.jsp です。
 
