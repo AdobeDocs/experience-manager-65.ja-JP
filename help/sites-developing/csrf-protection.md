@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 translation-type: tm+mt
 source-git-commit: c83c77c5c313099944dd73c8cbe63d429d84a518
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 63%
 
 ---
 
@@ -23,13 +26,13 @@ source-git-commit: c83c77c5c313099944dd73c8cbe63d429d84a518
 
 >[!NOTE]
 >
->匿名ユーザーの発行インスタンスにトークンはありません。
+>パブリッシュインスタンスでは、匿名ユーザーのトークンはありません。
 
 ## 要件 {#requirements}
 
 ### 依存関係 {#dependencies}
 
-依存関係に依存するコンポーネントは、CSRF `granite.jquery` 保護フレームワークによって自動的にメリットを得られます。 どのコンポーネントでもこのような状況にならない場合は、フレームワークを使用する前に、に依存関係を宣言 `granite.csrf.standalone` する必要があります。
+依存関係に依存するコンポーネントはすべて、CSRF保護フレームワークのメリットを自動的に受けます。 `granite.jquery` どのコンポーネントでもこのような状況にならない場合は、フレームワークを使用する前に、に依存関係を宣言する必要 `granite.csrf.standalone` があります。
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
