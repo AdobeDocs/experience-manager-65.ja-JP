@@ -72,7 +72,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
    ![Experience Managerインターフェイスからライブコピーを作成する](assets/create_lc1.png)
 
-   *図：インター[!DNL Experience Manager]フェイスからライブコピーを作成します。*
+   *図：インター [!DNL Experience Manager] フェイスからライブコピーを作成します。*
 
 1. 保存先フォルダーを選択します。「**[!UICONTROL 次へ]**」をクリックします。
 1. タイトルと名前を入力します。アセットには子はありません。フォルダーのライブコピーを作成する場合は、子を含めるか含めないかを選択できます。
@@ -84,7 +84,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
    ![Experience Managerインターフェイスからライブコピーを作成する](assets/create_lc2.png)
 
-   *図：インター[!DNL Experience Manager]フェイスからライブコピーを作成します。*
+   *図：インター [!DNL Experience Manager] フェイスからライブコピーを作成します。*
 
 1. ソースアセットまたはフォルダーを選択します。「**[!UICONTROL 次へ]**」をクリックします。
 1. 保存先フォルダーを選択します。「**[!UICONTROL 次へ]**」をクリックします。
@@ -132,7 +132,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
    ![ソースのライブコピーコンソールにおけるライブコピーステータスの表示](assets/livecopy-statuses.png)
 
-   *図：ライブコピーコンソール[!UICONTROL （ソース）でのライブコピーの表示ステータス]。*
+   *図：ライブコピーコンソール [!UICONTROL （ソース）でのライブコピーの表示ステータス] 。*
 
 1. ライブコピーフォルダー内の各アセットに関する詳細情報を表示するには、アセットを選択し、ツールバーの「**[!UICONTROL 関係ステータス]**」をクリックします。
 
@@ -278,7 +278,7 @@ You can view the information and MSM-related statuses of live copy such as relat
 
    ![ライブコピーの概要コンソールからライブコピーフォルダー内の多数のアセットを容易に更新できる](assets/livecopyconsole_update_many_assets.png)
 
-   *図：ライブコピーフォルダー内の多数のアセットを、[!UICONTROL ライブコピーの概要](Live Copy Overview)コンソールから簡単に更新できます。*
+   *図：ライブコピーフォルダー内の多数のアセットを、 [!UICONTROL ライブコピーの概要] (Live Copy Overview)コンソールから簡単に更新できます。*
 
 ## Extend MSM for [!DNL Assets] {#extendapi}
 
