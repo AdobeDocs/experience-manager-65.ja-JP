@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 translation-type: tm+mt
 source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+workflow-type: tm+mt
+source-wordcount: '2270'
+ht-degree: 68%
 
 ---
 
@@ -27,7 +30,7 @@ Adobe Campaign を使用すると、電子メール配信コンテンツおよ�
 
 AEM での Adobe Campaign の操作には、Adobe Campaign を使用して電子メールを送信する機能が含まれています。これについては [Adobe Campaign の操作](/help/sites-authoring/campaign.md)で説明します。また、AEM ページのフォームを使用したデータの操作も含まれます。
 
-さらに、AEM を [Adobe Campaign](https://helpx.adobe.com/support/campaign/classic.html) と統合する際に参考となるトピックを次に示します。
+さらに、AEM を [Adobe Campaign](https://helpx.adobe.com/jp/support/campaign/classic.html) と統合する際に参考となるトピックを次に示します。
 
 * [電子メールテンプレートのベストプラクティス](/help/sites-administering/best-practices-for-email-templates.md)
 * [Adobe Campaign 統合に関するトラブルシューティング](/help/sites-administering/troubleshooting-campaignintegration.md)
@@ -107,7 +110,7 @@ Adobe Campaign の設定には、次が含まれます。
 
 * [AEM オーサーインスタンス](/help/sites-deploying/deploy.md#getting-started)
 * [AEM パブリッシュインスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)
-* [Adobe Campaign Classicインスタンス](https://helpx.adobe.com/support/campaign/classic.html) （クライアントとサーバーを含む）
+* [Adobe Campaign Classicインスタンス](https://helpx.adobe.com/jp/support/campaign/classic.html) （クライアントとサーバーを含む）
 * Internet Explorer 11
 
 >[!NOTE]
@@ -123,7 +126,7 @@ Adobe Campaign の設定には、次が含まれます。
 You must install the **AEM Integration** package in Adobe Campaign. 次の手順を実行します。
 
 1. AEM とリンクしたい Adobe Campaign インスタンスに移動します。
-1. *ツール/*&#x200B;アドバンス&#x200B;*/パッ***&#x200B;ケージの読み込みを選択します。.
+1. *ツール* / *アドバンス* /パッケージの *読み込みを選択します。*.
 
    ![chlimage_1-132](assets/chlimage_1-132a.png)
 
@@ -153,6 +156,7 @@ Adobe Campaign を AEM インスタンスに接続可能な外部アカウント
 >
 >* When installing the **AEM Integration** package, an external AEM account is created. そこから AEM インスタンスへの接続を設定するか、新しいものを作成できます。
 >* AEM で、campaign-remote ユーザーのパスワードを設定してください。AEM で Adobe Campaign に接続するにはこのパスワードを設定する必要があります。管理者としてログインし、ユーザー管理コンソールで campaign-remote ユーザーを探して「**パスワードを設定**」をクリックします。
+
 >
 
 
@@ -165,7 +169,7 @@ Adobe Campaign を AEM インスタンスに接続可能な外部アカウント
 
    >[!NOTE]
    >
-   >サーバーアドレスは、末尾がスラッシュで&#x200B;**終わらない**&#x200B;ようにします。例えば、「 `https://yourserver:4502``https://yourserver:4502/`
+   >サーバーアドレスは、末尾がスラッシュで&#x200B;**終わらない**&#x200B;ようにします。For example, enter `https://yourserver:4502` instead of `https://yourserver:4502/`
 
    ![chlimage_1-135](assets/chlimage_1-135a.png) ![chlimage_1-136](assets/chlimage_1-136a.png)
 
@@ -205,7 +209,7 @@ AEM オーサーインスタンスから作成されたコンテンツは、最�
 >[!NOTE]
 >
 >If you do not want to use the replication URL but instead use the public-facing URL, you can set the **Public URL** in the following configuration setting in the OSGi (**AEM logo** >  **Tools** icon >  **Operations** > **Web Console** > **OSGi Configuration** > **AEM Campaign Integration - Configuration**):
-**** 公開URL:com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
+**パブリックURL:** com.day.cq.mcm.キャンペーン.impl.IntegrationConfigImpl#aem.mcm.キャンペーン.publicUrl
 
 また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートするためにも必要です。
 
@@ -235,7 +239,7 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 1. Create a new configuration by entering a **Title** and click **Create**, or choose the existing configuration that you want to link with your Adobe Campaign instance.
 1. 設定を編集して、Adobe Campaign インスタンスのパラメーターと一致するようにします。
 
-   * **ユーザ名**:aemserver ****。2つのソリューション間のリンクを確立するために使用するAdobe Campaign AEM統合パッケージ演算子です。
+   * **ユーザー名**: **aemserver**。2つのソリューション間のリンクを確立するために使用されるAdobe CampaignAEM統合パッケージ演算子です。
    * **パスワード**：Adobe Campaign aemserver 演算子のパスワード。この演算子のパスワードを Adobe Campaign で直接再指定する必要があることがあります。
    * **API エンドポイント**：Adobe Campaign インスタンス URL。
 
@@ -297,7 +301,7 @@ To add a new personalization field to those that are already available, you have
 
 1. 拡張されたスキーマの別のパラメーターを入力します。
 
-   * **スキーマ**:nms:seedMemberスキ **ーマを選択します** 。 ウィンドウのその他のフィールドは、自動的に入力されます。
+   * **スキーマ**:「 **nms:seedMember** 」スキーマを選択します。 ウィンドウのその他のフィールドは、自動的に入力されます。
    * **名前空間**：拡張されたスキーマの名前空間をパーソナライズします。
 
 1. スキーマの XML コードを編集して、そこに追加したいフィールドを指定します。For more information on extending schemas in Adobe Campaign, refer to the [Configuration guide](https://docs.campaign.adobe.com/doc/AC6.1/en/CFG_Editing_schemas_Extending_a_schema.html).
@@ -320,7 +324,7 @@ To add a **Registration Number** field, you must have the following elements:
 </element>
 ```
 
-The **nms:seedMember** schema extension named **cus:seedMember** contains:
+**cus:seedMemberという名前の** nms:seedMember **スキーマ拡張子には、次の値が含まれます** 。
 
 ```xml
 <element desc="Seed to insert in the export files" img="nms:unknownad.png" label="Seed addresses" labelSingular="Seed" name="seedMember">
