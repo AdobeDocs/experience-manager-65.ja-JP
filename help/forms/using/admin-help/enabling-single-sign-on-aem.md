@@ -102,7 +102,7 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 1. KtPass ユーティリティを入手します。このユーティリティは、SPN を REALM にマップする場合に使用します。KtPass ユーティリティは、Windows Server ツールパックまたはリソースキットの一部として入手できます（「[Windows Server 2003 Service Pack 1 のサポートツール](https://support.microsoft.com/kb/892777)」を参照）。
 1. コマンドプロンプトで、次の引数を指定して `ktpass` を実行します。
 
-   `ktpass -princ HTTP/`*ホスト&#x200B;*`@`*REALM*`-mapuser`*ユーザー&#x200B;*
+   `ktpass -princ HTTP/`*ホスト*`@`*REALM*`-mapuser`*ユーザー*
 
    例えば、次のようにテキストを入力します。
 
