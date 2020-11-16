@@ -69,7 +69,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
 
    1. 「**すべて保存**」をクリックします。
 
-1. 新しく作成したitemsフォルダーの下で、すべてのアセットのカスタムプロパティのノードを追加します(例： GeoLocationを参照)を使用します。
+1. 新しく作成したitemsフォルダーの下で、すべてのアセットのカスタムプロパティのノードを追加します(例：GeoLocationを参照)を使用します。
 
    1. items フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
 
@@ -212,7 +212,7 @@ Create a node for each of the properties (fields) for which you need to create a
 
       「**すべて保存**」をクリックします。
 
-1. cmmetadatapropertiesフォルダーの下で、すべてのアセット用のカスタムタブを作成するためのノードを追加します(例： commontab)を次の手順で使用します。
+1. cmmetadatapropertiesフォルダーの下で、すべてのアセット用のカスタムタブを作成するためのノードを追加します(例：commontab)を次の手順で使用します。
 
    1. cmmetadataproperties フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
 
@@ -425,7 +425,7 @@ Create a node for each of the properties (fields) for which you need to create a
 
       「**すべて保存**」をクリックします。
 
-1. 新しく作成したitemsフォルダーに、アセットのカスタムタブのノードを追加します(例： customtab)を次の手順で使用します。
+1. 新しく作成したitemsフォルダーに、アセットのカスタムタブのノードを追加します(例：customtab)を次の手順で使用します。
 
    1. items フォルダーを右クリックして、「**作成**／**ノードを作成**」を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
@@ -566,8 +566,8 @@ Create a node for each of the properties (fields) for which you need to create a
    <td>String</td>
    <td><p>このパスは、以下の場所で作成された列へのポインターです。</p>
     <ul>
-     <li>すべてのアセットタイプの共通タブ： /apps/fd/cm/ma/gui/content/cmmetadataproperties/commontab/items/col1</li>
-     <li>アセットタイプごとに異なるプロパティを設定するには、次の手順に従います。 /apps/fd/cm/ma/gui/content/cmmetadataproperties/properties//items/tabs/items/customtab/items/col1</li>
+     <li>すべてのアセットタイプの共通タブ：/apps/fd/cm/ma/gui/content/cmmetadataproperties/commontab/items/col1</li>
+     <li>アセットタイプごとに異なるプロパティを設定するには、次の手順に従います。/apps/fd/cm/ma/gui/content/cmmetadataproperties/properties//items/tabs/items/customtab/items/col1</li>
     </ul> </td>
   </tr>
   <tr>
@@ -717,7 +717,7 @@ Correspondence Management アセットにカスタムプロパティを追加し
 
       コード内の GeoLocation は、カスタムノード／フィールドの作成時に名前プロパティで設定した値です。カスタムノード／フィールドの作成時、プロパティの名前を /extendedproperties/ prefix: ./extendedproperties/GeoLocation で指定しました。コードの prefix は必須ではありません。
 
-   1. For displaying the new property in the UI, add a TD tag as following before the closing tr (&lt;/tr>) tag:
+   1. UIに新しいプロパティを表示するには、次のようにTDタグを終了tr(&lt;/tr>)タグの前に追加します。
 
       ```jsp
       <td is="coral-td" value="<%= xssAPI.encodeForHTMLAttr(geographicalLocation) %>"><%= xssAPI.encodeForHTML(geographicalLocation) %></td>
@@ -731,7 +731,7 @@ Correspondence Management アセットにカスタムプロパティを追加し
 
    この手順で追加した UI 列およびプロパティは、すべてのアセットタイプで表示されます。ただし、これらのプロパティの値は、最初にカスタムプロパティを追加したアセットタイプに対してのみ入力および表示できます。
 
-   例えば、シナリオを使用する場合： 特定のアセットタイプに対してカスタムプロパティを追加し、カスタムプロパティをテキストアセットに追加する場合は、カスタムプロパティを入力できるのはテキストアセットに対してのみです。 ただし、そのカスタムプロパティを UI に表示する場合、列はすべてのアセットタイプで表示されます。
+   例えば、シナリオを使用する場合：特定のアセットタイプに対してカスタムプロパティを追加し、カスタムプロパティをテキストアセットに追加する場合は、カスタムプロパティを入力できるのはテキストアセットに対してのみです。 ただし、そのカスタムプロパティを UI に表示する場合、列はすべてのアセットタイプで表示されます。
 
    ![custompropertyinlistview](assets/custompropertyinlistview.png)
 
