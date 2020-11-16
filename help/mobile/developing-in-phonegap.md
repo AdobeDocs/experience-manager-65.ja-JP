@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
 source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 82%
 
 ---
 
