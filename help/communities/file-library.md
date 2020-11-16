@@ -27,7 +27,7 @@ ht-degree: 41%
 
 ドキュメントのこのセクションでは、以下の内容について説明します。：
 
-* ファイルライブラリ機能をAEMサイトに追加する。
+* AEMサイトへのファイルライブラリ機能の追加
 * Configuration settings for the `File Library` component.
 
 ### ファイルライブラリをページに追加 {#adding-a-file-library-to-a-page}
@@ -62,7 +62,7 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **1 ページのコメント数**
 
-   1ページに表示するコメントの数と表示する返信の数を制限します。 デフォルトは **10** です。
+   1ページに表示するコメントの数と、表示する返信の数が制限されます。 デフォルトは **10** です。
 
 * **最大ファイルサイズ**
 
