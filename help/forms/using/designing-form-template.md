@@ -11,15 +11,18 @@ discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 58%
 
 ---
 
 
 # HTML5 フォーム用のフォームテンプレートのデザイン{#designing-form-templates-for-html-forms}
 
-AEM の HTML5 フォームコンポーネントは、HTML5 形式への XFA フォームテンプレートのレンダリングを提供します。フォームデザイナーは [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) を使用してフォームテンプレートをデザインし、HTML5 レンダリングの機能を使用することができます。これらのフォームテンプレートはアセットとともに、AEM リポジトリやファイルシステムに配置するか、http で公開することができます。ただし、Forms Managerを使用してフォームを管理する場合は、テンプレートとアセットをAEMリポジトリに格納する必要があります。
+AEM の HTML5 フォームコンポーネントは、HTML5 形式への XFA フォームテンプレートのレンダリングを提供します。フォームデザイナーは [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) を使用してフォームテンプレートをデザインし、HTML5 レンダリングの機能を使用することができます。これらのフォームテンプレートはアセットとともに、AEM リポジトリやファイルシステムに配置するか、http で公開することができます。ただし、Formsマネージャーを使用してフォームを管理する場合は、テンプレートとアセットをAEMリポジトリに置く必要があります。
 
-HTML5 フォームの動作は、その大部分が PDF フォームの動作に一致していますが、両方の形式には他方の形式で適用されない機能がいくつかあります。例えば、Adobe ReaderでPDFフォームにバーコードを適用する方法はMobileフォームとは異なり、フォームの電子署名の方法も形式によって異なります。 For more information on such variations, see [Feature differentiation between HTML5 forms and PDF Forms](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+HTML5 フォームの動作は、その大部分が PDF フォームの動作に一致していますが、両方の形式には他方の形式で適用されない機能がいくつかあります。例えば、Adobe ReaderのPDFフォームにバーコードが適用される方法は、Mobileフォームとは異なります。また、フォームの電子署名の方法も、形式によって異なります。 For more information on such variations, see [Feature differentiation between HTML5 forms and PDF Forms](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
 一般的な XFA 機能の場合、両方の形式で機能するフォームをデザインするために、次のベストプラクティスとガイドラインを参照してください。
 
@@ -35,10 +38,10 @@ HTML5 フォームの動作は、その大部分が PDF フォームの動作に
 
 #### 手書きの署名 {#scribble-signature}
 
-HTML5 フォームの主な対象はタッチデバイスです。そのため、AEM Forms Designer に新しい手書き署名コントロールが追加されました。手書き署名コントロールは、フォームテンプレート上でクリックまたはドラッグ&amp;ドロップして設定できます。 HTML5レンダリングでは手書きフィールドとしてレンダリングされ、タッチデバイスで手書き署名を行うのに使用できます。 デスクトップマシンでは、それはマウスコントロールの使用により手書きフィールドとして使用できます。For more information on how to use this feature, see [XFA Scribble Field](../../forms/using/scribble-signature.md).
+HTML5 フォームの主な対象はタッチデバイスです。そのため、AEM Forms Designer に新しい手書き署名コントロールが追加されました。手書き署名コントロールをクリックまたはドラッグ&amp;ドロップして、フォームテンプレートに設定できます。 HTML5レンダリングでは手書きフィールドとしてレンダリングされ、タッチデバイスで手書き署名を行うのに使用できます。 デスクトップマシンでは、それはマウスコントロールの使用により手書きフィールドとして使用できます。For more information on how to use this feature, see [XFA Scribble Field](../../forms/using/scribble-signature.md).
 
 ![4](assets/4.png)
 
 #### Rich text format {#rich-text-format}
 
-テキストフィールドをリッチテキストフィールドに変換できます。 テキストフィールドに、リストの形式設定オプションが追加されます。 変換するには、Forms Designerを開き、デザイン表示でテキストフィールドをタ **[!UICONTROL ップしま]**&#x200B;す。 「フィール **[!UICONTROL ド]** 」タブで、「フ **[!UICONTROL ィールドの形式]** 」ドロ **** ップダウンリストから「リッチテキスト」を選択します。 現在は、XFAフォームがHTML5フォームとしてレンダリングされると、フィールドはリッチテキストフィールドとしてレンダリングされます。 「最大化」を ![タップして](assets/maximize_icon.svg) 、追加の書式表示オプションを選択します。
+テキストフィールドは、リッチテキストフィールドに変換できます。 書式設定オプションのリストがテキストフィールドに追加されます。 変換するには、Formsデザイナを開き、 **[!UICONTROL デザイン表示でテキストフィールドをタップします]**。 「 **[!UICONTROL フィールド]** 」タブで、「フィールドの形式 **[!UICONTROL 」ドロップダウンリストから「リッチテキスト]****** 」を選択します。 現在は、XFAフォームがHTML5フォームとしてレンダリングされるとき、フィールドはリッチテキストフィールドとしてレンダリングされます。 「 ![最大化](assets/maximize_icon.svg) 」をタップして、その他の書式設定オプションを表示します。
