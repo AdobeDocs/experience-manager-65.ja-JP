@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '1375'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +28,7 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 
 * Clientlibs
 
-   clientlibsを使用すると、デフォルトの実装を拡張して、標準の関数、オブジェクトおよびメソッドを再利用しながら、新しい機能を実現できます。 When customizing, you can create your own clientlib under `/apps.` The new clientlib must:
+   clientlibを使用すると、デフォルトの実装を拡張して、標準の関数、オブジェクト、メソッドを再利用しながら新しい機能を実現できます。 When customizing, you can create your own clientlib under `/apps.` The new clientlib must:
 
    * オーサリングクライアントライブラリ `cq.authoring.editor.sites.page` を使用する必要があります。
    * 適切な `cq.authoring.editor.sites.page.hook` カテゴリに含める必要があります。
@@ -48,20 +51,21 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
 >* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
+
 >
 >
 このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html) でも説明しています。
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+>`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
 >1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
->1. Make any changes within `/apps`
+>1. `/apps` 内で変更作業をおこないます。
 
 
 ## Add New Layer (Mode) {#add-new-layer-mode}
@@ -86,7 +90,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-authoring-new-layer-modeプロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
+* [GitHubでaem-authoring-new-layer-modeプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)としてダウンロードします
 
 ## 新しい選択カテゴリをアセットブラウザーに追加 {#add-new-selection-category-to-asset-browser}
@@ -101,14 +105,14 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-authoring-extension-assetfinder-flickrプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
+* [GitHubでaem-authoring-extension-assetfinder-flickrプロジェクトを開きます。](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)としてダウンロードします
 
 ## リソースのフィルタリング {#filtering-resources}
 
 ページをオーサリングする際、ユーザーは頻繁にリソース（ページ、コンポーネント、アセットなど）から選択する必要があります。これは、例えば、作成者が項目を選択する必要があるリストの形式で表示されます。
 
-特定の用途に関連する内容を持つ妥当なサイズのリストにするには、カスタム述語の形式でフィルターを実装できます。For example, if the [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) component is used to allow the user to select the path to a particular resource, the paths presented can be filtered in the following way:
+特定の用途に関連する内容を持つ妥当なサイズのリストにするには、カスタム述語の形式でフィルターを実装できます。For example, if the [`pathbrowser`](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) component is used to allow the user to select the path to a particular resource, the paths presented can be filtered in the following way:
 
 * [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) インターフェイスを実装してカスタム述語を実装します。
 * Specify a name for the predicate, and refer that name when using the `pathbrowser`.
@@ -119,7 +123,7 @@ GitHub のコード
 >
 >`com.day.cq.commons.predicate.AbstractNodePredicate` インターフェイスの実装によるカスタム述語の実装は、クラシック UI でも機能します。
 >
->クラシック UI でカスタム述語を実装する例については、[このナレッジベースの記事](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html)を参照してください。
+>クラシック UI でカスタム述語を実装する例については、[このナレッジベースの記事](https://helpx.adobe.com/jp/experience-manager/using/creating-custom-cq-tree.html)を参照してください。
 
 ## 新しいアクションをコンポーネントツールバーに追加 {#add-new-action-to-a-component-toolbar}
 
@@ -133,7 +137,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-authoring-extension-toolbar-screenshotプロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
+* [GitHub上でaem-authoring-extension-toolbar-screenshotプロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)としてダウンロードします
 
 ## 新しいインプレースエディターの追加 {#add-new-in-place-editor}
@@ -234,7 +238,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-authoring-extension-header-backtositesプロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
+* [GitHub上にaem-authoring-extension-header-backtositesプロジェクトを開きます。](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites/archive/master.zip)としてダウンロードします
 
 ## アクティベーションをリクエストワークフローのカスタマイズ {#customizing-the-request-for-activation-workflow}
@@ -243,7 +247,7 @@ GitHub のコード
 
 To have customized behavior upon such activation you can overlay the **Request for Activation** workflow:
 
-1. オーバーレイ `/apps` で、「サイト」ウ **ィザード** :
+1. オーバーレイで、 `/apps` サイト **** ウィザードを次のように表示します。
 
    `/libs/wcm/core/content/common/managepublicationwizard`
 
