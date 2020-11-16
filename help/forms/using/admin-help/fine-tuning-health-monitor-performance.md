@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 88%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 <table>
  <thead>
   <tr>
-   <th><p>プロパティ</p></th>
+   <th><p>Property</p></th>
    <th><p>目的</p></th>
    <th><p>デフォルト値</p></th>
   </tr>
