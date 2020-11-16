@@ -31,7 +31,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
 プロパティは説明がなくても分かりますが、重要なプロパティは次のとおりです。
 
-* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEM間でHTTPS経由で通信する場合は、AEMを次のJVMと開始します
+* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEMがhttps経由で通信する場合は、次のJVMを持つ開始AEMを使用します。
 
    ```java
    argument
@@ -52,7 +52,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 1. 各サービスがクライアントクラスを提供します。サービスを開始するには、サービスのクライアントインスタンスを作成します。
 1. サービスを開始し、結果を処理します。
 
-AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycle Connectorには次の機能が用意されています。
+AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycleコネクタには次の機能があります。
 
 * Client instances as OSGi Service: The clients packaged as OSGI bundles are listed in the [Document Services list](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) section. 各クライアント jar は、OSGi Service Registry を使用する OSGi サービスとしてクライアントインスタンスを登録します。
 * ユーザー資格情報の伝播：LiveCycle サーバーに接続するために必要な接続の詳細情報は、一元的に管理されます。
