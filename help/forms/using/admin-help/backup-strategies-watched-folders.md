@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '1122'
+ht-degree: 97%
 
 ---
 
@@ -44,7 +47,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 <table>
  <thead>
   <tr>
-   <th><p>フォルダー</p></th>
+   <th><p>Folder</p></th>
    <th><p>T1</p></th>
    <th><p>T2</p></th>
    <th><p>T3</p></th>
@@ -153,7 +156,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 * 出力フォルダーおよび失敗フォルダーを頻繁に（例えば 1 時間ごとに）バックアップし、結果ファイルおよび失敗ファイルの損失を回避します。
 * 監視フォルダー以外のフォルダーに入力ファイルをバックアップします。これによって、出力フォルダーと失敗フォルダーのどちらにもファイルが見つからない場合でも、回復後にファイルを確実に利用できるようになります。ファイルの命名スキームを一貫したものにしてください。
 
-   For example, if you are saving the output with `%F.`*extension *, the output file will have the same name as the input file. これにより、操作される入力ファイルおよび再送信が必要な入力ファイルを判別できます。結果フォルダーに file1_out ファイルしか確認できず、file2_out、file3_out および file4_out が見つからない場合、file2、file3 および file4 を再送信する必要があります。
+   For example, if you are saving the output with `%F.`*extension*, the output file will have the same name as the input file. これにより、操作される入力ファイルおよび再送信が必要な入力ファイルを判別できます。結果フォルダーに file1_out ファイルしか確認できず、file2_out、file3_out および file4_out が見つからない場合、file2、file3 および file4 を再送信する必要があります。
 
 * 使用可能な監視フォルダーのバックアップが、ジョブの処理時間より古い場合は、システムが新しい監視フォルダーを作成し、ファイルを自動的に入力フォルダーに配置できるようにする必要があります。
 * 使用可能な最新のバックアップが完全な最新版ではなく、バックアップ時間がファイルの処理時間より短く、監視フォルダーが復元されている場合は、ファイルは、次のいずれかのステージで操作されています。
@@ -163,6 +166,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
    * **ステージ 3：**&#x200B;ステージフォルダーにコピーされており、プロセスが開始されています。
    * **ステージ 4：**&#x200B;プロセスが進行中です。
    * **ステージ 5：**&#x200B;結果が返されています。
+
    ファイルがステージ 1 にある場合、ファイルは操作されます。ファイルがステージ 2 または 3 にある場合、再操作用に入力フォルダーに配置されます。
 
    >[!NOTE]
