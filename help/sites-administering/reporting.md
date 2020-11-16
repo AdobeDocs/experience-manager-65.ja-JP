@@ -12,6 +12,9 @@ discoiquuid: 7e2b30a3-75ff-4735-8038-5c5391ac36f3
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+workflow-type: tm+mt
+source-wordcount: '2793'
+ht-degree: 74%
 
 ---
 
@@ -55,6 +58,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 >* [ヘルスチェック](#health-check)は、選択フィールドを使用してレポート対象のデータを指定します。
 >* [ディスク使用量](#disk-usage)は、リンクを使用してリポジトリ構造をドリルダウンします。
 >* [ワークフローレポート](/help/sites-administering/reporting.md#workflow-report)は、インスタンスで実行中のワークフローの概要を示します。
+
 >
 >
 したがって、列の設定に関する以下の手順は該当しません。詳しくは、個々のレポートの説明を参照してください。
@@ -149,7 +153,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 1. 必要な列で&#x200B;**グループ化**&#x200B;を設定します。
 1. 設定を&#x200B;**編集**&#x200B;して、スナップショット作成の頻度（時間単位または日単位）を定義します。
-1. **** 完了…スナップショットの収集を開始する定義。
+1. **完了…** スナップショットのコレクションを開始する定義。
 
    左上の赤/緑のスライダ・ボタンは、スナップショットが収集されるタイミングを示します。
 
@@ -165,9 +169,9 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 * **間隔**
 
-   月、週、日、時間を選択して、レポートのスケールと集計を行うことができます。
+   月、週、日、時間を選択して、レポートの規模と集計を行うことができます。
 
-   例えば、2011年2月に日別スナップショットを使用できる場合は、次のようになります。
+   例えば、2011年2月に日別スナップショットが使用可能な場合：
 
    * If the interval is set to `Day`, each snapshot is shown as a single value in the chart.
    * If the interval is set to `Month`, all snapshots for February are aggregated into a single value (displayed as a single &quot;dot&quot; in the chart).
@@ -178,13 +182,13 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 スナップショットを収集中に、以下の処理が可能です。
 
-* **完了**&#x200B;を使用…を再度呼び出して、コレクションを再初期化します。
+* コレクションを再初期化するには、 **「完了」を再度使用し** ます。
 
-   **レポート** の構造（レポートに割り当てられ、グループ化、並べ替え、フィルタリングなど）を「凍結」するスナップショットの作成を開始します。
+   **レポートの構造を** 「フリーズ」する（レポートに割り当てられ、グループ化、並べ替え、フィルタリングなどが行われる列） 開始がスナップショットを作成
 
-* 「編集」ダイアログ **を開き** 、「データスナ **ップショットなし** 」を選択して、必要な時間までコレクションを終了します。
+* 「 **Edit** 」ダイアログを開き、「 **No data snapshots** 」を選択して必要な時間までコレクションを終了します。
 
-   **編集は** 、スナップショットの取り込みのオン/オフを切り替えます。 スナップショットの作成が再びオンになった場合は、さらにスナップショットを作成するために最後に完了した時点のレポートの状態が使用されます。
+   **編集** ：スナップショットの作成のオン/オフのみを切り替えます。 スナップショットの作成が再び有効になった場合は、最後に完了したレポートの状態が使用され、さらにスナップショットを作成できます。
 
 >[!NOTE]
 >
@@ -195,7 +199,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 >[!NOTE]
 >
->事前設定されたレポートは、パフォーマンスを集中的に消費するわけではありませんが、実稼働環境では毎日のスナップショットを使用することをお勧めします。 可能であれば、Webサイト上での活動が少ない時間帯に毎日のスナップショットを実行します。これは、 `Daily snapshots (repconf.hourofday)` Day CQ Reporting Configurationのパラメータ **ーを使**&#x200B;用して定義できます。この設定方 [法の詳細は](/help/sites-deploying/configuring-osgi.md) 、「OSGI設定」を参照してください。
+>事前設定済みのレポートは、パフォーマンスを集中的に消費するわけではありませんが、実稼働環境では毎日のスナップショットを使用することをお勧めします。 可能であれば、Webサイトにあまりアクティビティがない時間帯に毎日のスナップショットを実行します。これは、 `Daily snapshots (repconf.hourofday)` Day CQレポート設定の **パラメーターを使用して定義できます**。この設定方法の詳細は、 [OSGI設定](/help/sites-deploying/configuring-osgi.md) (OSGI Configuration)を参照してください。
 
 #### 表示の制限 {#display-limits}
 
@@ -240,7 +244,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
    独自の説明を定義できます。
 
-* **ルートパス** (特&#x200B;*定のレポートでのみ有効*)
+* **ルートパス** (特定のレポート&#x200B;*に対してのみアクティブ*)
 
    レポートをリポジトリの（サブ）セクションに制限する場合に使用します。
 
@@ -252,11 +256,11 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
    * **データを手動で更新**
 
-      このオプションは、大量のデータがある場合に自動更新操作によって発生する遅延を防ぐために使用できます。
+      このオプションは、大量のデータがある場合の自動更新操作による遅延を防ぐために使用できます。
 
-      これを選択すると、レポート設定のいずれかの側面が変更された場合に、レポートデータを手動で更新する必要があります。 また、設定の一部を変更するとすぐに、レポート表が非表示になります。
+      これを選択した場合、レポート設定の一部が変更された場合にレポートデータを手動で更新する必要があります。 また、設定の一部を変更するとすぐに、レポート表が非表示になります。
 
-      これを選択すると、「デ **[ータを読み込み](#load-data)**」ボタンが表示されます(**レポートの「編集**」の横)。**データを読み込むと**、データが読み込まれ、表示されたレポートデータが更新されます。
+      このオプションを選択すると、「 **[データを読み込み](#load-data)** 」ボタンが表示されます(レポートの「 **編集** 」の横)。 **データの読み込み** ：データを読み込み、表示されているレポートデータを更新します。
 
 * **スナップショット**
 スナップショットの作成頻度として、日単位、時間単位、まったく作成しない、のいずれかを定義できます。
@@ -309,16 +313,16 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
    例えば、テスト時に役立ちます。
 
-* 特定のコンポーネントのインスタンスの配布方法。
+* 特定のコンポーネントのインスタンスの分散方法。
 
-   これは、特定のページ(例：「ヘビーページ」の場合)にパフォーマンスの問題が発生している問題を修正しました。
+   これは、特定のページ(「ヘビーページ」など)でパフォーマンスの問題が発生している。
 
 * サイトの中で、変更が頻繁におこなわれる部分とそうでない部分を特定。
 * 時間の経過に伴ってページコンテンツがどのように発展するかを確認。
 
 コンポーネントはすべて組み込み型で、製品の標準であり、プロジェクト専用です。**編集**&#x200B;ダイアログを使用すると、ユーザーはレポートの開始点を定義する&#x200B;**ルートパス**&#x200B;も設定できます。そのルートの下のすべてのコンポーネントがレポート用に考慮されます。
 
-![reportcomponent](assets/reportcomponent.png)![reportcompentall](assets/reportcompentall.png)
+![reportcomponent](assets/reportcomponent.png) ![reportcompentall](assets/reportcompentall.png)
 
 ### ディスク使用量 {#disk-usage}
 
@@ -333,25 +337,25 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 このレポートは、現在のリクエストログを分析します。
 
 `<cq-installation-dir>/crx-quickstart/logs/request.log`
-を使用して、特定の期間内で最も高額なリクエストを特定できます。
+を使用すると、特定の期間内で最も高価なリクエストを特定できます。
 
 レポートを生成するには、以下を指定できます。
 
 * **期間（時間）**
 
-   分析する時間（過去）。
+   分析する時間数（過去）。
 
-   デフォルト値は: `24`
+   デフォルト: `24`
 
 * **max. 結果**
 
    出力行の最大数。
 
-   デフォルト値は: `50`
+   デフォルト: `50`
 
 * **max. リクエスト**
 
-   分析するリクエストの最大数。
+   分析する要求の最大数。
 
    デフォルト： `-1` (all)
 
@@ -359,13 +363,13 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
    結果を電子メールアドレスに送信します。
 
-   オプション、デフォルト：空白
+   オプション；デフォルト：空白
 
 * **毎日(hh:mm)に実行**
 
    レポートを毎日自動的に実行する時間を指定します。
 
-   オプション、デフォルト：空白
+   オプション；デフォルト：空白
 
 ![報道官](assets/reporthealth.png)
 
@@ -377,8 +381,8 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 * ページ
 * 時刻
-* タイプ
-* ユーザー
+* 型
+* User
 
 これはつまり、以下を監視できるということです。
 
@@ -402,7 +406,7 @@ The page activity report takes all its information from the audit log. By defaul
 * IP アドレス
 * ページ
 * リファラー
-* タイプ
+* 型
 * ユーザー識別子
 
 次のことが可能です。
@@ -449,7 +453,7 @@ The page activity report takes all its information from the audit log. By defaul
 * 汎用コンポーネントをサイドキックからレポートへドラッグ。
 * 既存の汎用列の「列のプロパティ」を選択。
 
-![reportusrgenericcolm](assets/reportusrgenericcolm.png)
+![reportsurgenericcolm](assets/reportusrgenericcolm.png)
 
 「**定義**」タブから、以下を定義できます。
 
@@ -459,25 +463,25 @@ The page activity report takes all its information from the audit log. By defaul
 
 * **プロパティ**
 
-   リポジトリ（通常、ユーザーのプロファイル内）に保存されるプロパティ名。
+   リポジトリに格納されるプロパティ名(通常はユーザーのプロファイル内)。
 
 * **パス**
 
    Usually the property is taken from the `profile`.
 
-* **タイプ**
+* **型**
 
-   、、、からフィールドタイ `String`プを選 `Number`択し `Integer`ます `Date`。
+   、、 `String`、からフィールドタイプを選択し `Number`ま `Integer``Date`す。
 
 * **デフォルト集計**
 
-   これは、少なくとも1つの列をグループ化したレポートで列のグループが解除された場合にデフォルトで使用される集計を定義します。 必要な集計を、、、、、 `Count`から選 `Minimum`択 `Average`しま `Maximum`す `Sum`。
+   これは、少なくとも1つの列がグループ化されたレポートで列のグループが解除された場合にデフォルトで使用される集計を定義します。 必要な集計を、、、、、 `Count`から選択し `Minimum`ま `Average``Maximum``Sum`す。
 
-   例えば、フ *ィール* ドのCount `String``String` は、集計状態の列に対して異なる値の数が表示されることを意味します。
+   例えば、フ *ィールドの* カウント `String` ( `String` Count)とは、集計状態の列に対して個別の値の数が表示されることを意味します。
 
 「**拡張**」タブでは、使用可能な集計およびフィルターも定義できます。
 
-![reportusrgenericcolmextensted](assets/reportusrgenericcolmextented.png)
+![reportgenericcolmextensted](assets/reportusrgenericcolmextented.png)
 
 ### ワークフローインスタンスレポート {#workflow-instance-report}
 
@@ -486,7 +490,7 @@ The page activity report takes all its information from the audit log. By defaul
 次の内容に関する[情報の列](#selecting-and-positioning-the-data-columns)があります。
 
 * 完了
-* デュレーション (ms)
+* デュレーション
 * イニシエーター
 * モデル
 * ペイロード
@@ -497,7 +501,7 @@ The page activity report takes all its information from the audit log. By defaul
 
 * ワークフローの平均の期間を監視。定期的に発生する場合は、ワークフローに問題がある可能性があります。
 
-![reportworkflowintance](assets/reportworkflowintance.png)
+![reportworkflowinstance](assets/reportworkflowintance.png)
 
 ### ワークフローレポート {#workflow-report}
 
@@ -529,7 +533,7 @@ The page activity report takes all its information from the audit log. By defaul
 
 >[!CAUTION]
 >
->これらのレポートへのアクセスはセキュリティ上の問題となる可能性があります。したがって、外部訪問者が使用できないようにディスパッ `/etc/reports` チャーを設定することをお勧めします。 詳しくは、[セキュリティチェックリスト](security-checklist.md)を参照してください。
+>これらのレポートへのアクセスはセキュリティ上の問題となる場合があります。したがって、外部訪問者が使用できないようにディスパッチャーを設定するこ `/etc/reports` とをお勧めします。 詳しくは、[セキュリティチェックリスト](security-checklist.md)を参照してください。
 
 ## レポートの実行に必要な権限 {#permissions-needed-for-running-reports}
 
@@ -542,22 +546,22 @@ The page activity report takes all its information from the audit log. By defaul
 
 * **ユーザーレポート**
 
-   `user administrators`  — 読み書き
+   `user administrators`  — 読み取りと書き込み
 
 * **ページアクティビティレポート**
 
-   `contributors`  — 読み書き
+   `contributors`  — 読み取りと書き込み
 
 * **コンポーネントのレポート**
 
-   `contributors`  — 読み書き
+   `contributors`  — 読み取りと書き込み
 
 * **ユーザー生成コンテンツレポート**
 
-   `contributors`  — 読み書き
+   `contributors`  — 読み取りと書き込み
 
 * **ワークフローインスタンスレポート**
 
-   `workflow-users`  — 読み書き
+   `workflow-users`  — 読み取りと書き込み
 
 `administrators` グループのメンバーは全員が、新しいレポートの作成に必要な権限を持っています。
