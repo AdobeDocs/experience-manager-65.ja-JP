@@ -12,6 +12,9 @@ discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 64%
 
 ---
 
@@ -45,15 +48,22 @@ for example, [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 1. どちらの場合も、次のように入力します。
 
-   * **Title**(必&#x200B;*須*)タグの表示タイトル。 どのような文字でも入力できますが、次の特殊文字は使用しないことが推奨されます。
+   * **タイトル**
+(
+*必須*)タグの表示タイトル。 どのような文字でも入力できますが、次の特殊文字は使用しないことが推奨されます。
 
-      * `colon (:)`  — 名前空間区切り
+      * `colon (:)` -名前空間区切り
       * `forward slash (/)`  — サブタグ区切り文字
+
       これらの文字は入力しても表示されません。
 
-   * **Name**(必&#x200B;*須*)タグのノード名。
+   * **名前**
+(
+*必須*)タグのノード名。
 
-   * **説明**(オ&#x200B;*プション*)タグの説明。
+   * **説明**
+(
+*(オプション*)タグの説明。
 
    * 「**作成**」を選択します
 
@@ -171,7 +181,7 @@ By default the tag `titles`in the page properties are displayed in the page lang
 
 By default, the Page Properties dialog displays the tag `titles`according to the page language.
 
-一般に、ページ言語が使用可能な場合、タグの言語はページ言語から取得されます。 [`tag` ウィジェットが他のケース（フォームやダイアログなど）で使用されている場合、タグの言語はコンテキストによって変わります。](/help/sites-developing/building.md#tagging-on-the-client-side)
+一般に、ページ言語が使用可能な場合は、タグの言語はページ言語から取得されます。 [`tag` ウィジェットが他のケース（フォームやダイアログなど）で使用されている場合、タグの言語はコンテキストによって変わります。](/help/sites-developing/building.md#tagging-on-the-client-side)
 
 >[!NOTE]
 >
