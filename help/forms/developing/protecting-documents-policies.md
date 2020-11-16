@@ -22,7 +22,7 @@ ht-degree: 4%
 
 **ドキュメントセキュリティサービスについて**
 
-ドキュメントセキュリティサービスを使用すると、Adobe PDFドキュメントに動的に機密設定を適用し、ドキュメントの広範性に関係なく、ユーザーの制御を維持できます。
+ドキュメントセキュリティサービスを使用すると、ユーザーは、Adobe PDFドキュメントに対して動的に機密設定を適用でき、ドキュメントがどの程度広く配布されているかに関わらず、管理を維持できます。
 
 ドキュメントセキュリティサービスは、ユーザーがポリシーで保護されたPDFドキュメントを受信者がどのように使用するかを制御できるようにし、ユーザーの手の届く範囲を超えて情報が広がるのを防ぎます。 ユーザーは、ドキュメントを開くことのできるユーザーを指定し、そのユーザーがを使用する方法を制限し、配布後にドキュメントを監視できます。 また、ポリシーで保護されたドキュメントへのアクセスを動的に制御し、ドキュメントへのアクセスを動的に取り消すこともできます。
 
@@ -44,7 +44,7 @@ ht-degree: 4%
 * ポリシーの削除 詳しくは、「ポリシーの [削除](protecting-documents-policies.md#deleting-policies)」を参照してください。
 * PDFドキュメントにポリシーを適用します。 詳しくは、「PDFドキュメントへのポリシーの [適用](protecting-documents-policies.md#applying-policies-to-pdf-documents)」を参照してください。
 * PDFドキュメントからポリシーを削除します。 詳しくは、「PDFドキュメントからのポリシーの [削除](protecting-documents-policies.md#removing-policies-from-pdf-documents)」を参照してください。
-* ポリシーで保護されたドキュメントの検査。 詳しくは、ポリシーで保護されたPDFドキュメントの [検査を参照してください](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)。
+* Inspectのポリシーで保護されたドキュメント。 詳しくは、ポリシーで保護されたPDFドキュメントの [検査を参照してください](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)。
 * PDFドキュメントへのアクセス権限を失効させます。 詳しくは、「ドキュメントへのアクセス [の取り消し](protecting-documents-policies.md#revoking-access-to-documents)」を参照してください。
 * 失効したドキュメントへのアクセス権限の復元。 詳しくは、失効したドキュメントへの [アクセス権限の復元を参照してください](protecting-documents-policies.md#reinstating-access-to-revoked-documents)。
 * 透かしを作成します。 詳しくは、「透かしの [作成](protecting-documents-policies.md#creating-watermarks)」を参照してください。
@@ -187,15 +187,15 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 ポリシーに属する属性を設定する場合は、暗号化設定も設定できます。 これらの暗号化設定は、ポリシーがドキュメントに適用される場合に影響を受けます。 次の暗号化値を指定できます。
 
-* **AES256**: 256ビットキーを持つAES暗号化アルゴリズムを表します。
-* **AES128**: 128ビットキーを持つAES暗号化アルゴリズムを表します。
+* **AES256**:256ビットキーを持つAES暗号化アルゴリズムを表します。
+* **AES128**:128ビットキーを持つAES暗号化アルゴリズムを表します。
 * **NoEncryption:** 暗号化なしを表します。
 
 この `NoEncryption` オプションを指定する場合、この `PlaintextMetadata` オプションをに設定することはできません `false`。 これを行うと、例外が発生します。
 
 >[!NOTE]
 >
->設定できるその他の属性について詳しくは、『 `Policy` AEM FormsAPIリファレンス [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』のインターフェイスの説明を参照してください。
+>設定できるその他の属性について詳しくは、 `Policy` AEM FormsAPIリファレンスのインターフェイスの説明を参照してください [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 **ポリシーエントリの作成**
 
@@ -251,7 +251,7 @@ For information about the location of these JAR files, see [Including AEM Forms 
       * 登録するポリシーを表す `Policy` オブジェクトです。
    * ポリシーが属するポリシーセットを表すstring値です。
 
-   接続設定内でAEM forms管理者アカウントを使用して `DocumentSecurityClient` オブジェクトを作成する場合は、 `registerPolicy` メソッドの呼び出し時にポリシーセット名を指定します。 ポリシーセットの `null` 値を渡すと、そのポリシーは管理者の「 *マイポリシー* 」ポリシーセットに作成されます。
+   接続設定でAEM forms管理者アカウントを使用して `DocumentSecurityClient` オブジェクトを作成する場合は、 `registerPolicy` メソッドの呼び出し時にポリシーセット名を指定します。 ポリシーセットの `null` 値を渡すと、そのポリシーは管理者の「 *マイポリシー* 」ポリシーセットに作成されます。
 
    ドキュメントセキュリティユーザーを接続設定内で使用する場合は、ポリシーのみを受け入れる、過負荷の `registerPolicy` メソッドを呼び出すことができます。 つまり、ポリシーセット名を指定する必要はありません。 ただし、このポリシーは「 *マイポリシー*」という名前のポリシーセットに追加されます。 このポリシーセットに新しいポリシーを追加しない場合は、この `registerPolicy` メソッドを呼び出すときにポリシーセット名を指定します。
 
@@ -261,7 +261,7 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 ドキュメントセキュリティサービスを使用したコードの例については、次を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用したポリシーの作成»
+* 「クイック開始（SOAPモード）:Java APIを使用したポリシーの作成»
 
 ### WebサービスAPIを使用したポリシーの作成 {#create-a-policy-using-the-web-service-api}
 
@@ -273,17 +273,17 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `DocumentSecurityServiceClient` object by using its default constructor.
-   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `RightsManagementServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `RightsManagementServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -309,7 +309,7 @@ For information about the location of these JAR files, see [Including AEM Forms 
    * 登録するポリシーを表す `PolicySpec` オブジェクトです。
    * ポリシーが属するポリシーセットを表すstring値です。 ポリシーをMyPolices `null` ポリシーセットに追加する結果となる ** 値を指定できます。
 
-   接続設定内でAEM forms管理者アカウントを使用して `DocumentSecurityClient` オブジェクトを作成する場合は、 `registerPolicy` メソッドの呼び出し時にポリシーセット名を指定します。
+   接続設定でAEM forms管理者アカウントを使用して `DocumentSecurityClient` オブジェクトを作成する場合は、 `registerPolicy` メソッドの呼び出し時にポリシーセット名を指定します。
 
    接続設定内でドキュメントのSecurityDocument Securityユーザーを使用する場合は、ポリシーのみを受け入れる、過負荷の `registerPolicy` メソッドを呼び出すことができます。 つまり、ポリシーセット名を指定する必要はありません。 ただし、このポリシーは「 *マイポリシー*」という名前のポリシーセットに追加されます。 このポリシーセットに新しいポリシーを追加しない場合は、この `registerPolicy` メソッドを呼び出すときにポリシーセット名を指定します。
 
@@ -319,8 +319,8 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したポリシーの作成」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したポリシーの作成」
+* 「クイック開始(MTOM):WebサービスAPIを使用したポリシーの作成」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したポリシーの作成」
 
 ## ポリシーの変更 {#modifying-policies}
 
@@ -364,7 +364,7 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
 >[!NOTE]
 >
->設定できるその他の属性について詳しくは、『 `Policy` AEM FormsAPIリファレンス [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』のインターフェイスの説明を参照してください。
+>設定できるその他の属性について詳しくは、 `Policy` AEM FormsAPIリファレンスのインターフェイスの説明を参照してください [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 **ポリシーの更新**
 
@@ -401,7 +401,7 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
 **コードの例**
 
-ドキュメントセキュリティサービスを使用したコード例については、クイック開始（SOAPモード）を参照してください。 「Java API」セクションを使用してポリシーを変更する。
+ドキュメントセキュリティサービスを使用したコード例については、クイック開始（SOAPモード）を参照してください。「Java API」セクションを使用してポリシーを変更する。
 
 ### WebサービスAPIを使用した既存のポリシーの変更 {#modify-existing-policies-using-the-web-service-api}
 
@@ -413,17 +413,17 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `RightsManagementServiceClient` object by using its default constructor.
-   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `RightsManagementServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `RightsManagementServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -448,8 +448,8 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したポリシーの変更」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したポリシーの変更」
+* 「クイック開始(MTOM):WebサービスAPIを使用したポリシーの変更」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したポリシーの変更」
 
 ## ポリシーの削除 {#deleting-policies}
 
@@ -477,7 +477,7 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
 **ポリシーの削除**
 
-ポリシーを削除するには、削除するポリシーと、そのポリシーが属するポリシーセットを指定します。 AEM Formsの呼び出しに使用される設定を持つユーザーは、ポリシーを削除する権限が必要です。 それ以外の場合は、例外が発生します。 同様に、存在しないポリシーを削除しようとすると、例外が発生します。
+ポリシーを削除するには、削除するポリシーと、そのポリシーが属するポリシーセットを指定します。 AEM Formsの呼び出しに使用される設定を持つユーザーは、ポリシーを削除する権限を持っている必要があります。それ以外の場合は、例外が発生します。 同様に、存在しないポリシーを削除しようとすると、例外が発生します。
 
 ### Java APIを使用したポリシーの削除 {#delete-policies-using-the-java-api}
 
@@ -504,11 +504,11 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用したポリシーの削除」
+* 「クイック開始（SOAPモード）:Java APIを使用したポリシーの削除」
 
 ### WebサービスAPIを使用したポリシーの削除 {#delete-policies-using-the-web-service-api}
 
-ドキュメントセキュリティAPI （Webサービス）を使用してポリシーを削除する：
+ドキュメントセキュリティAPI（Webサービス）を使用してポリシーを削除します。
 
 1. プロジェクトファイルを含めます。
 
@@ -516,17 +516,17 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `RightsManagementServiceClient` object by using its default constructor.
-   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `RightsManagementServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `RightsManagementServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -543,14 +543,14 @@ Webサービスを使用してポリシーのオフラインリース期間を�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したポリシーの削除」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したポリシーの削除」
+* 「クイック開始(MTOM):WebサービスAPIを使用したポリシーの削除」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したポリシーの削除」
 
 ## PDFドキュメントへのポリシーの適用 {#applying-policies-to-pdf-documents}
 
 ドキュメントを保護するために、PDFドキュメントにポリシーを適用できます。 ポリシーをPDFドキュメントに適用すると、ドキュメントへのアクセスを制限できます。 ドキュメントが既にポリシーで保護されている場合は、ドキュメントにポリシーを適用できません。
 
-ドキュメントが開いている間は、テキストの印刷やコピー、変更、ドキュメントや注釈の追加など、AcrobatおよびAdobe Readerの機能へのアクセスを制限することもできます。 また、ドキュメントにアクセスしたくなくなった場合に、ポリシーで保護されたPDFドキュメントを無効にすることもできます。
+ドキュメントが開いている間は、テキストの印刷やコピー、変更、ドキュメントへの署名やコメントの追加など、AcrobatおよびAdobe Readerの機能へのアクセスを制限することもできます。 また、ドキュメントにアクセスしたくなくなった場合に、ポリシーで保護されたPDFドキュメントを無効にすることもできます。
 
 ポリシーで保護されたドキュメントを配布した後、その使用を監視できます。 つまり、ドキュメントの使用状況と使用者を確認できます。 例えば、誰かがドキュメントを開いた日時を調べることができます。
 
@@ -640,8 +640,8 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（EJBモード）: Java APIを使用したPDFドキュメントへのポリシーの適用」
-* 「クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントへのポリシーの適用」
+* 「クイック開始（EJBモード）:Java APIを使用したPDFドキュメントへのポリシーの適用」
+* 「クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントへのポリシーの適用」
 
 **関連トピック**
 
@@ -659,17 +659,17 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `RightsManagementServiceClient` object by using its default constructor.
-   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをFormsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをFormsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `RightsManagementServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `RightsManagementServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -711,8 +711,8 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したPDFドキュメントへのポリシーの適用」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したPDFドキュメントへのポリシーの適用」
+* 「クイック開始(MTOM):WebサービスAPIを使用したPDFドキュメントへのポリシーの適用」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したPDFドキュメントへのポリシーの適用」
 
 ## PDFドキュメントからのポリシーの削除 {#removing-policies-from-pdf-documents}
 
@@ -792,7 +792,7 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントからのポリシーの削除»
+* 「クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからのポリシーの削除»
 
 ### WebサービスAPIを使用したポリシーの削除 {#remove-a-policy-using-the-web-service-api}
 
@@ -804,17 +804,17 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `DocumentSecurityServiceClient` object by using its default constructor.
-   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `DocumentSecurityServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -842,8 +842,8 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したPDFドキュメントからのポリシーの削除」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したPDFドキュメントからのポリシーの削除」
+* 「クイック開始(MTOM):WebサービスAPIを使用したPDFドキュメントからのポリシーの削除」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したPDFドキュメントからのポリシーの削除」
 
 **関連トピック**
 
@@ -935,7 +935,7 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用したドキュメントの取り消し»
+* 「クイック開始（SOAPモード）:Java APIを使用したドキュメントの取り消し»
 
 ### WebサービスAPIを使用したドキュメントへのアクセス権限の失効 {#revoke-access-to-documents-using-the-web-service-api}
 
@@ -947,17 +947,17 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトの作成
 
    * Create a `DocumentSecurityServiceClient` object by using its default constructor.
-   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `DocumentSecurityServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -984,8 +984,8 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したドキュメントの取り消し
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したドキュメントの取り消し
+* 「クイック開始(MTOM):WebサービスAPIを使用したドキュメントの取り消し
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したドキュメントの取り消し
 
 **関連トピック**
 
@@ -1067,7 +1067,7 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: WebサービスAPIを使用した、失効したドキュメントへのアクセス権限の復元」
+* 「クイック開始（SOAPモード）:WebサービスAPIを使用した、失効したドキュメントへのアクセス権限の復元」
 
 ### WebサービスAPIを使用した、失効したドキュメントへのアクセス権の復元 {#reinstate-access-to-revoked-documents-using-the-web-service-api}
 
@@ -1079,17 +1079,17 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `DocumentSecurityServiceClient` object by using its default constructor.
-   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `DocumentSecurityServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1112,8 +1112,8 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用した、失効したドキュメントへのアクセス権限の復元」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用した、失効したドキュメントへのアクセス権限の復元」
+* 「クイック開始(MTOM):WebサービスAPIを使用した、失効したドキュメントへのアクセス権限の復元」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用した、失効したドキュメントへのアクセス権限の復元」
 
 **関連トピック**
 
@@ -1125,7 +1125,7 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスAPI（JavaおよびWebサービス）を使用して、ポリシーで保護されたPDFドキュメントを検査できます。 ポリシーで保護されたPDFドキュメントを検査すると、ポリシーで保護されたPDFドキュメントに関する情報が返されます。 例えば、ドキュメントの保護に使用されたポリシーや、ドキュメントの保護日を決定できます。
 
-お使いのLiveCycleのバージョンが8.x以前の場合は、このタスクを実行できません。 ポリシーで保護されたドキュメントの検査のサポートがAEM Formsに追加されました。 LiveCycle 8.x（またはそれ以前）を使用してポリシーで保護されたドキュメントを検査しようとすると、例外が発生します。
+お使いのLiveCycleのバージョンが8.x以前の場合は、このタスクを実行できません。 ポリシーで保護されたドキュメントの検査のサポートはAEM Formsに追加されました。 LiveCycle8.x（またはそれ以前）を使用してポリシーで保護されたドキュメントを検査しようとすると、例外が発生します。
 
 >[!NOTE]
 >
@@ -1152,7 +1152,7 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ポリシーで保護されたドキュメントを検査するには、それを取得します。 ポリシーで保護されていないドキュメントや取り消された例外を検査しようとすると、例外が発生します。
 
-**ドキュメントの検査**
+**ドキュメントInspect**
 
 ポリシーで保護されたドキュメントを取得したら、それを検査できます。
 
@@ -1170,9 +1170,9 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Java APIを使用したポリシーで保護されたPDFドキュメントの検査 {#inspect-policy-protected-pdf-documents-using-the-java-api}
+### Java APIを使用したInspectポリシーで保護されたPDFドキュメント {#inspect-policy-protected-pdf-documents-using-the-java-api}
 
-ドキュメントセキュリティサービスAPI(Java)を使用して、ポリシーで保護されたPDFドキュメントを検査します。
+ドキュメントセキュリティサービスAPI(Java)を使用した、ポリシーで保護されたPDFドキュメントのInspect:
 
 1. プロジェクトファイルを含めます。
 
@@ -1188,10 +1188,10 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
    * コンストラクターを使用して、ポリシーで保護されたPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。 PDFドキュメントの場所を指定するstring値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. ドキュメントを検査します。
+1. ドキュメントInspect。
 
    * オブジェクトの `DocumentManager` メソッドを呼び出して、 `RightsManagementClient` オブジェクトを作成 `getDocumentManager` します。
-   * オブジェクトのメソッドを呼び出して、ポリシーで保護されたドキュメント `LicenseManager` を検査し `inspectDocument` ます。 ポリシーで保護されたPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトを渡します。 ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
+   * Inspectオブジェクトのドキュメントを呼び出して、ポリシーで保護された `LicenseManager` メソッドを呼び出 `inspectDocument` します。 ポリシーで保護されたPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトを渡します。 ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
 
 1. ポリシーで保護されたドキュメントに関する情報を取得します。
 
@@ -1201,11 +1201,11 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用したポリシーで保護されたPDFドキュメントの検査»
+* 「クイック開始（SOAPモード）:Java APIを使用したポリシーで保護されたPDFドキュメントの検査»
 
-### WebサービスAPIを使用したポリシーで保護されたPDFドキュメントの検査 {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
+### WebサービスAPIを使用したInspectポリシーで保護されたPDFドキュメント {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
 
-ドキュメントセキュリティサービスAPI（Webサービス）を使用して、ポリシーで保護されたPDFドキュメントを検査します。
+ドキュメントセキュリティサービスAPI（webサービス）を使用して、ポリシーで保護されたPDFドキュメントをInspectします。
 
 1. プロジェクトファイルを含めます。
 
@@ -1213,17 +1213,17 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `RightsManagementServiceClient` object by using its default constructor.
-   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `RightsManagementServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `RightsManagementServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1237,9 +1237,9 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
    * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
    * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
 
-1. ドキュメントを検査します。
+1. ドキュメントInspect。
 
-   オブジェクトのメソッドを呼び出して、ポリシーで保護されたドキュメント `RightsManagementServiceClient` を検査し `inspectDocument` ます。 ポリシーで保護されたPDFドキュメントを含む `BLOB` オブジェクトを渡します。 ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
+   Inspectオブジェクトのドキュメントを呼び出して、ポリシーで保護された `RightsManagementServiceClient` メソッドを呼び出 `inspectDocument` します。 ポリシーで保護されたPDFドキュメントを含む `BLOB` オブジェクトを渡します。 ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
 
 1. ポリシーで保護されたドキュメントに関する情報を取得します。
 
@@ -1249,8 +1249,8 @@ PDFドキュメントにポリシーを適用するには、次の手順を実�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したポリシーで保護されたPDFドキュメントの検査」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したポリシーで保護されたPDFドキュメントの検査」
+* 「クイック開始(MTOM):WebサービスAPIを使用したポリシーで保護されたPDFドキュメントの検査」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したポリシーで保護されたPDFドキュメントの検査」
 
 **関連トピック**
 
@@ -1421,7 +1421,7 @@ Webサービスを使用して透かしを作成する場合に必要なキー�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用した透かしの作成»
+* 「クイック開始（SOAPモード）:Java APIを使用した透かしの作成»
 
 ### WebサービスAPIを使用した透かしの作成 {#create-watermarks-using-the-web-service-api}
 
@@ -1433,17 +1433,17 @@ Webサービスを使用して透かしを作成する場合に必要なキー�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `RightsManagementServiceClient` object by using its default constructor.
-   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `RightsManagementServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `RightsManagementServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1468,8 +1468,8 @@ Webサービスを使用して透かしを作成する場合に必要なキー�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用した透かしの作成」
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用した透かしの作成」
+* 「クイック開始(MTOM):WebサービスAPIを使用した透かしの作成」
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用した透かしの作成」
 
 **関連トピック**
 
@@ -1568,7 +1568,7 @@ Webサービスを使用して透かしを作成する場合に必要なキー�
 
 **コードの例**
 
-ドキュメントセキュリティサービスを使用したコード例については、クイック開始（SOAPモード）を参照してください。 「Java API」セクションを使用した透かしの変更
+ドキュメントセキュリティサービスを使用したコード例については、クイック開始（SOAPモード）を参照してください。「Java API」セクションを使用した透かしの変更
 
 ### WebサービスAPIを使用した透かしの変更 {#modify-watermarks-using-the-web-service-api}
 
@@ -1580,17 +1580,17 @@ Webサービスを使用して透かしを作成する場合に必要なキー�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `DocumentSecurityServiceClient` object by using its default constructor.
-   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `DocumentSecurityServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1616,11 +1616,11 @@ Webサービスを使用して透かしを作成する場合に必要なキー�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用した透かしの変更」
+* 「クイック開始(MTOM):WebサービスAPIを使用した透かしの変更」
 
 ## イベントの検索 {#searching-for-events}
 
-Rights Managementサービスは、ドキュメントへのポリシーの適用、ポリシーで保護されたドキュメントの開封、ドキュメントへのアクセスの失効など、特定のアクションの発生時に追跡を行います。 Rights Managementサービスでイベント監査を有効にする必要があります。有効にしないと、イベントが追跡されません。
+Rights Managementサービスは、ドキュメントへのポリシーの適用、ポリシーで保護されたドキュメントのオープン、ドキュメントへのアクセスの取り消しなど、発生する特定のアクションを追跡します。 Rights Managementサービスでイベント監査を有効にする必要があります。有効にしないと、イベントが追跡されません。
 
 イベントは、次のいずれかのカテゴリに分類されます。
 
@@ -1629,7 +1629,7 @@ Rights Managementサービスは、ドキュメントへのポリシーの適用
 * ポリシーイベントは、新しいポリシーの作成など、ポリシーに関連するアクションです。
 * サービスイベントは、Rights Managementサービスに関連するアクション（ユーザーディレクトリとの同期など）です。
 
-Rights Management Java APIまたはWebサービスAPIを使用して、特定のイベントを検索できます。 イベントを検索することで、特定のイベントのログファイルの作成などのタスクを実行できます。
+Rights ManagementのJava APIまたはWebサービスAPIを使用して、特定のイベントを検索できます。 イベントを検索することで、特定のイベントのログファイルの作成などのタスクを実行できます。
 
 >[!NOTE]
 >
@@ -1640,7 +1640,7 @@ Rights Management Java APIまたはWebサービスAPIを使用して、特定の
 Rights Managementイベントを検索するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
-1. Rights Management Client APIオブジェクトを作成します。
+1. Rights ManagementクライアントAPIオブジェクトを作成します。
 1. 検索するイベントを指定します。
 1. イベントを検索します。
 
@@ -1648,9 +1648,9 @@ Rights Managementイベントを検索するには、次の手順を実行しま
 
 必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めます。
 
-**Rights Management Client APIオブジェクトの作成**
+**Rights ManagementクライアントAPIオブジェクトの作成**
 
-プログラムを使用してRights Managementサービスの操作を実行する前に、Rights Managementサービスクライアントオブジェクトを作成する必要があります。 Java APIを使用している場合は、 `DocumentSecurityClient` オブジェクトを作成します。 Rights Management WebサービスAPIを使用している場合は、 `DocumentSecurityServiceService` オブジェクトを作成します。
+プログラムを使用してRights Managementサービスの操作を実行する前に、Rights Managementサービスクライアントオブジェクトを作成する必要があります。 Java APIを使用している場合は、 `DocumentSecurityClient` オブジェクトを作成します。 Rights ManagementWebサービスAPIを使用している場合は、 `DocumentSecurityServiceService` オブジェクトを作成します。
 
 **検索するイベントの指定**
 
@@ -1658,7 +1658,7 @@ Rights Managementイベントを検索するには、次の手順を実行しま
 
 **イベントの検索**
 
-検索するイベントを指定した後、Rights Management Java APIまたはRights Management WebサービスAPIを使用してイベントを検索できます。
+検索するイベントを指定した後、Rights ManagementJava APIまたはRights ManagementWebサービスAPIを使用してイベントを検索できます。
 
 **関連トピック**
 
@@ -1668,13 +1668,13 @@ Rights Managementイベントを検索するには、次の手順を実行しま
 
 ### Java APIを使用したイベントの検索 {#search-for-events-using-the-java-api}
 
-Rights Management API(Java)を使用してイベントを検索します。
+Rights ManagementAPI(Java)を使用してイベントを検索します。
 
 1. プロジェクトファイルを含める
 
    Javaプロジェクトのクラスパスに、adobe-rightsmanagement-client.jarなどのクライアントJARファイルを含めます。
 
-1. Rights Management Client APIオブジェクトの作成
+1. Rights ManagementクライアントAPIオブジェクトの作成
 
    コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `DocumentSecurityClient``ServiceClientFactory` オブジェクトを作成します。
 
@@ -1696,11 +1696,11 @@ Rights Management API(Java)を使用してイベントを検索します。
 
 Rights Managementサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(SOAP): Java APIを使用したイベントの検索»
+* 「クイック開始(SOAP):Java APIを使用したイベントの検索»
 
 ### WebサービスAPIを使用したイベントの検索 {#search-for-events-using-the-web-service-api}
 
-Rights Management API（Webサービス）を使用してイベントを検索します。
+Rights ManagementAPI（Webサービス）を使用してイベントを検索します。
 
 1. プロジェクトファイルを含める
 
@@ -1708,17 +1708,17 @@ Rights Management API（Webサービス）を使用してイベントを検索�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
-1. Rights Management Client APIオブジェクトの作成
+1. Rights ManagementクライアントAPIオブジェクトの作成
 
    * Create a `DocumentSecurityServiceClient` object by using its default constructor.
-   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `DocumentSecurityServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1940,8 +1940,8 @@ Rights Management API（Webサービス）を使用してイベントを検索�
 
 Rights Managementサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用したイベントの検索&quot;
-* &quot;クイック開始(SwaRef): WebサービスAPIを使用したイベントの検索&quot;
+* 「クイック開始(MTOM):WebサービスAPIを使用したイベントの検索&quot;
+* &quot;クイック開始(SwaRef):WebサービスAPIを使用したイベントの検索&quot;
 
 **関連トピック**
 
@@ -2041,7 +2041,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用したWordドキュメントへのポリシーの適用»
+* 「クイック開始（SOAPモード）:Java APIを使用したWordドキュメントへのポリシーの適用»
 
 ### WebサービスAPIを使用してWordドキュメントにポリシーを適用する {#apply-a-policy-to-a-word-document-using-the-web-service-api}
 
@@ -2053,17 +2053,17 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトを作成します。
 
    * Create a `DocumentSecurityServiceClient` object by using its default constructor.
-   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `DocumentSecurityServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `DocumentSecurityServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -2105,7 +2105,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用してWordドキュメントにポリシーを適用する»
+* 「クイック開始(MTOM):WebサービスAPIを使用してWordドキュメントにポリシーを適用する»
 
 ## Wordドキュメントからのポリシーの削除 {#removing-policies-from-word-documents}
 
@@ -2141,7 +2141,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
 接続設定で管理者が指定されている場合は、ポリシーで保護されたWordドキュメントからポリシーを削除できます。 ポリシーがない場合は、Wordドキュメントからポリシーを削除するために、ドキュメントを保護するために使用されるポリシーに `SWITCH_POLICY` 権限が含まれている必要があります。 また、AEM Forms接続設定で指定したユーザーにも、その権限が必要です。 それ以外の場合は、例外が発生します。
 
-**保護されていないWordドキュメントを保存する**
+**保護されていないWordドキュメントの保存**
 
 ドキュメントセキュリティサービスがWordドキュメントからポリシーを削除した後、保護されていないWordドキュメントをDOCファイルとして保存できます。
 
@@ -2176,7 +2176,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
    * オブジェクトの `DocumentManager` メソッドを呼び出して、 `RightsManagementClient` オブジェクトを作成 `getDocumentManager` します。
    * オブジェクトのドキュメントを呼び出し、ポリシーで保護されたWordドキュメントを含む `DocumentManager``removeSecurity``com.adobe.idp.Document` オブジェクトを渡すことで、Wordメソッドからポリシーを削除します。 このメソッドは、保護されていないWordドキュメントを含む `com.adobe.idp.Document` オブジェクトを返します。
 
-1. 保護されていないWordドキュメントを保存する
+1. 保護されていないWordドキュメントの保存
 
    * Create a `java.io.File` object and ensure that the file extension is DOC.
    * オブジェクトのメ `Document` ソッドを呼び出して、 `copyToFile` オブジェクトの内容をファイルにコピーします(メソッドから返された `Document``Document``removeSecurity` オブジェクトを必ず使用してください)。
@@ -2185,7 +2185,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始（SOAPモード）: Java APIを使用したWordドキュメントからのポリシーの削除»
+* 「クイック開始（SOAPモード）:Java APIを使用したWordドキュメントからのポリシーの削除»
 
 ### WebサービスAPIを使用してWordドキュメントからポリシーを削除する {#remove-a-policy-from-a-word-document-using-the-web-service-api}
 
@@ -2197,17 +2197,17 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. ドキュメントセキュリティクライアントAPIオブジェクトの作成
 
    * Create a `RightsManagementServiceClient` object by using its default constructor.
-   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * Create a `RightsManagementServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/RightsManagementService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `RightsManagementServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `RightsManagementServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `RightsManagementServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -2215,7 +2215,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
 1. ポリシーで保護されたWordドキュメントの取得
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、ポリシーが削除された、ポリシーで保護されたWordドキュメントの保存に使用されます。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、ポリシーが削除された、ポリシーで保護されたWordドキュメントを保存するために使用されます。
    * コンストラクターを呼び出し、Word `System.IO.FileStream` ドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、オブジェクトを作成します。
    * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
    * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
@@ -2225,7 +2225,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
    オブジェクトのドキュメントを呼び出し、ポリシーで保護されたWordドキュメントを含む `RightsManagementServiceClient``removePolicySecurity``BLOB` オブジェクトを渡すことで、Wordメソッドからポリシーを削除します。 このメソッドは、保護されていないWordドキュメントを含む `BLOB` オブジェクトを返します。
 
-1. 保護されていないWordドキュメントを保存する
+1. 保護されていないWordドキュメントの保存
 
    * コンストラクターを呼び出し、保護されていないWordドキュメントーのファイルの場所を表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
    * メソッドが返した `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成し `removePolicySecurity` ます。 オブジェクトのフィールドの値を取得して、 `BLOB` バイト配列を設定し `MTOM` ます。
@@ -2235,7 +2235,7 @@ Wordドキュメントにポリシーを適用するには、既存のポリシ�
 
 ドキュメントセキュリティサービスを使用したコードの例については、次のクイック開始を参照してください。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用してWordドキュメントからポリシーを削除する」
+* 「クイック開始(MTOM):WebサービスAPIを使用してWordドキュメントからポリシーを削除する」
 
 **関連トピック**
 
