@@ -13,6 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '816'
+ht-degree: 83%
 
 ---
 
@@ -183,11 +186,11 @@ getTitle メソッドと getDescription メソッドが返す値 String は、�
 
 **依存関係:**
 
-* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroupおよびDeviceGroupFilterインターフェイスを提供します。
+* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroupとDeviceGroupFilterインターフェイスを提供します。
 
 * `org.apache.felix.scr.annotations.jar`：Component アノテーションと Service アノテーションを提供します。
 
-DeviceGroupおよびDeviceGroupFilterインターフェイスは、Day Communique 5 WCM Mobile APIバンドルに含まれています。Felix注釈は、Apache Felix Declarative Servicesバンドルに含まれています。このJARファイルは、パブリックAdobeリポジトリから取得できます。
+DeviceGroupインターフェイスとDeviceGroupFilterインターフェイスは、Day Communique 5 WCM Mobile APIバンドルに含まれています。Felix注釈は、Apache Felix Declarative Servicesバンドルに含まれます。このJARファイルは、パブリックAdobeリポジトリから取得できます。
 
 この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。Use Adobe Web Console ([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)) to ensure this is the bundle version that is deployed in your environment.
 
