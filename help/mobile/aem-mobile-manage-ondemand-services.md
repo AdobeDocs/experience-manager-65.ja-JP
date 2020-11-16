@@ -11,6 +11,9 @@ topic-tags: administering-on-demand-services-app
 discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 96%
 
 ---
 
@@ -43,9 +46,9 @@ Mobile On-Demand プリフライトアプリでは、アクセス権を持つす
 
 >[!NOTE]
 >
->AEM Preflightアプリは、コンテンツとブラウズページをプレビューするために使用します。 プリフライトアプリについて詳しくは、[こちら](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)を参照してください。
+>AEM Preflightアプリは、コンテンツとブラウズページをプレビューする場合に使用します。 プリフライトアプリについて詳しくは、[こちら](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html)を参照してください。
 >
->AEM Preflight アプリは、[iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8)、[Google Play ストア](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&hl=en)および [Windows ストア](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq)から入手できます。
+>AEM Preflight アプリは、[iTunes App Store](https://itunes.apple.com/jp/app/adobe-experience-manager-mobile/id1042687518?mt=8)、[Google Play ストア](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=ja)および [Windows ストア](https://www.microsoft.com/ja-jp/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq)から入手できます。
 
 ### さらに先のステップ {#getting-ahead}
 
