@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
 source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+workflow-type: tm+mt
+source-wordcount: '310'
+ht-degree: 50%
 
 ---
 
 
 # 集計の基本事項 {#tally-essentials}
 
-Tallyは抽象クラスで、メンバーが特定の製品やサービスをどのように評価するかに関する標準的なフィードバック収集方法を提供します。 匿名フィードバックはサポートされていません。 サイト訪問者は、登録してサインインし、参加してフィードバックを変更する必要があります。 サインインする必要があると、モデレートが容易になり、複数の投稿を防ぎ、フィードバックの価値を高めることができます。
+Tallyは抽象クラスで、メンバーが特定の製品やサービスをどのように評価するかに関する標準的なフィードバック収集方法を提供します。 匿名フィードバックはサポートされていません。 サイト訪問者は、登録してサインインし、参加してフィードバックを変更する必要があります。 サインインする必要があるとモデレートが容易になり、複数の投稿を防ぎ、フィードバックの価値を高めることができます。
 
 抽象集計クラスを拡張することによってカスタム集計コンポーネントを作成できます。
 
@@ -27,9 +30,9 @@ Tallyは抽象クラスで、メンバーが特定の製品やサービスをど
 
 [評価](rating-basics.md)は、肯定的な意見から否定的な意見まで幅広い意見を星制度で表す集計実装です。
 
-AEM 6.1以降、ポーリングコンポーネントは使用できなくなります。
+AEM 6.1以降、pollコンポーネントは使用できなくなります。
 
-[レビュー](reviews-basics.md) は、コメントと評価のハイブリッドであるSCFコ [ンポーネ](essentials-comments.md) ント [](rating-basics.md)。
+[レビュー](reviews-basics.md) は、 [コメントと](essentials-comments.md) 評価を組み合わせたSCFコンポーネントです [](rating-basics.md)。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -53,8 +56,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリの使用方法の概要
-* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRP](accessing-ugc-with-srp.md) - Coding Guidelinesを使用したUGCへのアクセス
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
 * [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
