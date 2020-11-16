@@ -199,11 +199,11 @@ ht-degree: 89%
 
    * 完全なデータベースバックアップ（nsrnmddbf.bat）：
 
-      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P`*[password ]*`-l full`*&lt;database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]` `-P`*[password ]*`-l full`*&lt;database_name>*
 
    * 増分データベースバックアップ（nsrnmddbi.bat）：
 
-      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P``[password]``-l 1 -R`*&lt;database_name>*
+      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]` `-P``[password]``-l 1 -R`*&lt;database_name>*
 
    * データベースログバックアップ（nsrnmddbl.bat）： 
 
