@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+workflow-type: tm+mt
+source-wordcount: '420'
+ht-degree: 86%
 
 ---
 
@@ -25,8 +28,8 @@ Apache Sling Discovery 機能が提供する Java API によって、JobManager 
 
 オフロードフレームワークによって、ジョブペイロードを識別するために使用する 2 つのジョブプロパティが定義されています。これらのプロパティは、オフロードレプリケーションエージェントによって使用され、トポロジ内のインスタンスにレプリケートするリソースが識別されます。
 
-* `offloading.job.input.payload`:コンテンツパスのコンマ区切りリスト。 コンテンツは、ジョブを実行するインスタンスにレプリケートされます。
-* `offloading.job.output.payload`:コンテンツパスのコンマ区切りリスト。 ジョブの実行が完了すると、ジョブペイロードはジョブを作成したインスタンス上のこれらのパスにレプリケートされます。
+* `offloading.job.input.payload`:コンテンツパスのカンマ区切りリスト。 コンテンツは、ジョブを実行するインスタンスにレプリケートされます。
+* `offloading.job.output.payload`:コンテンツパスのカンマ区切りリスト。 ジョブの実行が完了すると、ジョブペイロードはジョブを作成したインスタンス上のこれらのパスにレプリケートされます。
 
 `OffloadingJobProperties` 列挙を使用して、プロパティ名を参照します。
 
