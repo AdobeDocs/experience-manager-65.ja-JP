@@ -12,6 +12,9 @@ discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 83%
 
 ---
 
@@ -77,7 +80,7 @@ source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
 
 ### Sling Thread Dumper の使用 {#using-sling-thread-dumper}
 
-1. **AEM Web Consoleを開きます**。例えば、で `https://localhost:4502/system/console/`す。
+1. Open the **AEM Web Console**; for example at `https://localhost:4502/system/console/`.
 1. Select the **Threads** under **Status** tab.
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
@@ -116,7 +119,7 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 
 発生する可能性のある問題の初期の兆候を OSGi バンドルのステータスで確認することもできます。
 
-1. **AEM Web Consoleを開きます**。例えば、で `https://localhost:4502/system/console/`す。
+1. Open the **AEM Web Console**; for example at `https://localhost:4502/system/console/`.
 1. Select **Bundles** under **OSGI** tab.
 1. 次の項目を確認します。
 
