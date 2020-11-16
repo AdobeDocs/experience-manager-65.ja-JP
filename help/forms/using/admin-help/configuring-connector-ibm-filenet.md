@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: be4994de-12f8-436e-926a-49a6783b006e
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 94%
 
 ---
 
@@ -78,11 +81,11 @@ FileNet と共に使用するリポジトリサービスプロバイダーを設
 
 以下のオプションが利用できます。
 
-**現在のリポジトリプロバイダー名：** 現在のリポジトリサービスプロバイダー名
+**現在のリポジトリプロバイダー名：** 現在のリポジトリサービスプロバイダーの名前
 
 **IBM FileNetリポジトリプロバイダー：** FileNetリポジトリプロバイダーをリポジトリのプロバイダーにします。 このオプションは非推奨です。
 
-**リポジトリプロバイダー：** ネイティブリポジトリプロバイダーをリポジトリのプロバイダーにします。
+**リポジトリプロバイダー：** ネイティブのリポジトリプロバイダーをリポジトリのプロバイダーにします。
 
 >[!NOTE]
 >
