@@ -11,6 +11,9 @@ discoiquuid: 8f776f30-ff93-4d19-94c6-c4bfe6f1fae2
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+workflow-type: tm+mt
+source-wordcount: '1581'
+ht-degree: 91%
 
 ---
 
@@ -99,9 +102,9 @@ AEM では、オーディエンスを作成し、それを A/B テストで使�
 
 ## A/B テストの作成 {#create-a-b-test}
 
-アダプティブフォームのA/Bテストを作成するには、次の手順を実行します。
+次の手順を実行して、アダプティブフォームのA/Bテストを作成します。
 
-1. Go to **Forms &amp; Documents** at https://&lt;*hostname*>:&lt;*port*>/aem/forms.html/content/dam/formsanddocuments.
+1. **Formsとドキュメント(https://&lt;** ホスト名&#x200B;*>:&lt;*&#x200B;ポート&#x200B;**>/aem/forms.html/content/dam/formsanddocuments)に移動します。
 
 1. アダプティブフォームを含むフォルダーに移動します。
 1. ツールバーの「**選択**」ツールをクリックして、アダプティブフォームを選択します。
