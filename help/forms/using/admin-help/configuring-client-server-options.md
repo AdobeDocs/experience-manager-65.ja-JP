@@ -63,7 +63,7 @@ IPv6 を使用している場合は、コンピューター名または DNS 名�
 
 **拡張認証用の推奨されるHTML制御の高さ** ：ユーザー資格情報の入力用にAcrobatで開く拡張認証ダイアログの高さを指定します。
 
-***注意&#x200B;**: このダイアログボックスの幅と高さの制限値は次のとおりです。*幅： 最小= 400、最大= 900
+***注意&#x200B;**:このダイアログボックスの幅と高さの制限値は次のとおりです。*幅：最小= 400、最大= 900
 
 高さ：最小 = 450、最大 = 800
 
@@ -125,7 +125,7 @@ AEM Forms は、環境に合わせてカスタマイズ可能なサンプル設�
    <entry key="sso-o" value="/ssoexample/logout.jsp"/>
    ```
 
-1. ファイルを保存し、更新したファイルを手動設定ページから読み込みます。 管理コンソールで、設定/User Management/設定/既存の設定ファイルの読み込みと書き出しをクリックします。
+1. ファイルを保存し、更新したファイルを手動設定ページから読み込みます。管理コンソールで、設定/User Management/設定/既存の設定ファイルの読み込みと書き出しをクリックします。
 
 ## オフラインセキュリティの設定 {#configuring-offline-security}
 
@@ -181,7 +181,7 @@ Document Security では、オフラインドキュメントを使用する場�
 
 1. Document Security ページで、設定／キー管理をクリックします。
 1. 「今すぐキーをロールオーバー」をクリックして、「OK」をクリックします。
-1. 10 分程度待ちます。The following log message appears in the server log: `Done RightsManagement key rollover for`*N *`principals`. （ここで、* N *は Document Security システム内のユーザー数を示します）。
+1. 10 分程度待ちます。The following log message appears in the server log: `Done RightsManagement key rollover for`*N* `principals`. （ここで、*N* は Document Security システム内のユーザー数を示します）。
 1. 「今すぐキーをロールオーバー」をクリックして、「OK」をクリックします。
 1. 10 分程度待ちます。
 
@@ -760,7 +760,7 @@ Document Security 設定ファイルでは、バックグラウンドで実行�
 1. エディターで設定ファイルを開いて、`PolicyServer` ノードを見つけます。そのノードの下で、`ServerSettings` ノードを探します。
 1. `ServerSettings` ノードで、次のエントリを追加して、ファイルを保存します。
 
-   `<entry key="BackgroundSyncFrequency" value="`*time *`"/>`
+   `<entry key="BackgroundSyncFrequency" value="`*time* `"/>`
 
    *time* は、バックグラウンドでの自動同期の間隔（秒数）です。この値を `0` にすると、常に同期が実行されます。デフォルト値は `14400` 秒（4 時間ごと）です。
 
@@ -967,7 +967,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 多くの Document Security ユーザーは、Right Management ユーザーインターフェイスを使用している間、**www.adobe.com** などの外部リンクへのアクセス権を持っていません。
 
 * `https://[host]:'port'/adminui`
-* `https://[host]:'port'/edc`。
+* `https://[host]:'port'/edc`.
 
 次の config.xml への変更は、すべての外部リンクを Right Management ユーザーインターフェイスから無効化します。
 
