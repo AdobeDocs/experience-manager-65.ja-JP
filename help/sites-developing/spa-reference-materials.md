@@ -22,11 +22,11 @@ ht-degree: 12%
 
 ## SPA JavaScript API リファレンス{#spa-javascript-api-references}
 
-AEM SPA Editor SDKフレームワーク用のNPMモジュールに関して使用可能なJavaScript APIリファレンスを次に示します。
+AEM SPAエディタSDKフレームワーク用のNPMモジュールについて、利用可能なJavaScript APIリファレンスを次に示します。
 
 >[!NOTE]
 >
->SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
+>SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
@@ -41,4 +41,4 @@ SPAライブラリ用のGitHub上のオープンソースリポジトリは次�
 * [ページモデルマネージャー](https://github.com/adobe/aem-spa-page-model-manager)
 * [React 編集可能コンポーネント](https://github.com/adobe/aem-react-editable-components)
 * [編集可能なAngularコンポーネント](https://github.com/adobe/aem-angular-editable-components)
-* [SPAプロジェクトコア](https://github.com/adobe/aem-spa-project-core)
+* [SPA Project Core](https://github.com/adobe/aem-spa-project-core)
