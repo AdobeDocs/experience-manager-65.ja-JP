@@ -11,6 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1364'
+ht-degree: 90%
 
 ---
 
@@ -45,7 +48,7 @@ Adobe PDF、HTML、および SWF ファイルを含め、様々なタイプの�
 
 1. タスクをクリックしてプロセスを選択します。プロセスに関連付けられているフォームが「フォーム」タブに開きます。
 
-   プロセス内の各フォームには、一意のURLが割り当てられます。 固有のURLを使用して、特定のプロセスとフォームでHTML Workspaceを直接起動できます。 URLの形式は、https://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;ApplicationName>%2F&lt;ProcessName>です。 &lt;ApplicationName>%2F&lt;ProcessName>文字列は、常にURLエンコードされます。 URLの例はhttp://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcessです。 この例のApplicationName%2FProcessName文字列はURLエンコードされています。
+   プロセス内の各フォームには、一意のURLが割り当てられます。 固有のURLを使用して、特定のプロセスとフォームでHTML Workspaceを直接起動できます。 URLの形式は、https://&lt;サーバー>:&lt;ポート>/lc/libs/ws/index.html#/startprocess/&lt;アプリケーション名>%2F&lt;プロセス名>です。 &lt;ApplicationName>%2F&lt;ProcessName>文字列は常にURLエンコードされます。 URLの例はhttp://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcessです。 この例のApplicationName%2FProcessName文字列はURLエンコードされています。
 
 1. フォームと共に表示される指示に従ってフォームに入力します。If necessary, click **Maximize** to increase the visible area of the form.
 1. 「添付ファイル」タブが使用可能である場合は、必要に応じて添付ファイルを追加します。
@@ -54,6 +57,7 @@ Adobe PDF、HTML、および SWF ファイルを含め、様々なタイプの�
 
    * フォームに「送信」ボタンがある場合は、フォームの「送信」ボタンをクリックします。
    * フォームに「送信」ボタンがない場合は、フォームの下部にある「完了」をクリックします。
+
    Process Management はプロセスを開始して、フォームをプロセスの次のタスクを完了する必要のある該当者の TODO リストにルーティングします。
 
    送信前にフォームを閉じる必要がある場合、入力したデータが失われないようにするには、プロセスで許可されていれば、フォームをドラフトとして保存して後で完了しますフォームとプロセスで許可されている場合は、「オフライン」****&#x200B;をクリックして、Adobe® Reader®、Adobe® Acrobat® Professional または Acrobat Standard から送信することもできます。
@@ -79,7 +83,7 @@ Adobe PDF、HTML、および SWF ファイルを含め、様々なタイプの�
 1. タスクを開いてプロセスが許可している場合は、「**メモ**」タブをクリックします。
 1. 「タイトル」****&#x200B;ボックスにメモのタイトルを入力し、「メモ」****&#x200B;ボックスにメモの内容を入力します。
 1. プロセスに参加している他のユーザーに許可する、メモに対する権限&#x200B;****&#x200B;レベルを選択します。
-1. 「**OK**」をクリックします。メモを含むテキストファイルがフォームに添付されます。メモをクリックして、テキストを直接変更することによって、メモを更新できます。メモの横にあるごみ箱の削除ボタン **** 「 ![画像](assets/icondelete.png) 」をクリックして、メモを削除できます。
+1. 「**OK**」をクリックします。メモを含むテキストファイルがフォームに添付されます。メモをクリックして、テキストを直接変更することによって、メモを更新できます。メモの横にあるごみ箱の **削除ボタン** 「 ![画像](assets/icondelete.png) 」をクリックして、メモを削除できます。
 
 ### 添付ファイルの追加 {#add-an-attachment}
 
@@ -94,7 +98,7 @@ Adobe PDF、HTML、および SWF ファイルを含め、様々なタイプの�
 1. 「添付ファイル」****&#x200B;タブをクリックして、「添付ファイル」****&#x200B;を選択します。
 1. 「参照」****&#x200B;をクリックして、添付するファイルを選択します。
 1. プロセスに参加している他のユーザーに許可する、添付ファイルに対する権限&#x200B;****&#x200B;レベルを選択します。**「読み取り」**&#x200B;を選択した場合、他のユーザーはファイルをローカルに保存できます。いずれかの編集権限を与えると、他のユーザーも新しいファイルをアップロードして添付ファイルを置き換えることができます。
-1. 「**OK**」をクリックします。ファイルがフォームに添付されます。添付ファイルの横にあるごみ箱の画像を削除 **ボタン**![をクリックして](assets/icondelete.png) 、ファイルを削除できます。
+1. 「**OK**」をクリックします。ファイルがフォームに添付されます。添付ファイルの横にあるごみ箱の **削除ボタン** 「 ![画像](assets/icondelete.png) 」をクリックして、ファイルを削除できます。
 
 ## フォームのドラフトコピーの保存 {#saving-draft-copies-of-forms}
 
