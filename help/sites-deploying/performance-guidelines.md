@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
 translation-type: tm+mt
 source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
+workflow-type: tm+mt
+source-wordcount: '2993'
+ht-degree: 82%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
 * [推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)
 * [技術要件](/help/sites-deploying/technical-requirements.md)
 
-以下に、AEMで使用可能なデプロイメントオプションを示します（スクロールしてすべてのオプションを表示）。
+次の図に、AEMで使用できるデプロイメントオプションを示します(すべてのオプションを表示するまでスクロール)。
 
 <table>
  <tbody>
@@ -51,7 +54,7 @@ source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
    <td><p>LDAP</p> </td>
    <td><p>Tar</p> </td>
    <td><p>セグメント</p> </td>
-   <td><p>プロパティ</p> </td>
+   <td><p>Property</p> </td>
    <td><p>Apache</p> </td>
    <td><p>Edge</p> </td>
    <td><p>ターゲット</p> </td>
@@ -64,11 +67,11 @@ source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
    <td><p>IBM</p> </td>
    <td><p>SAML</p> </td>
    <td><p>MongoDB</p> </td>
-   <td><p>ファイル</p> </td>
+   <td><p>File</p> </td>
    <td><p>Lucene</p> </td>
    <td><p>IIS</p> </td>
    <td><p>IE</p> </td>
-   <td><p>Analytics</p> </td>
+   <td><p>分析</p> </td>
   </tr>
   <tr>
    <td><p>Communities</p> </td>
@@ -85,7 +88,7 @@ source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
    <td><p>Campaign</p> </td>
   </tr>
   <tr>
-   <td><p>Forms</p> </td>
+   <td><p>フォーム</p> </td>
    <td><p>オーサー - オフロード</p> </td>
    <td><p>HP-UX</p> </td>
    <td><p>Tomcat</p> </td>
@@ -99,7 +102,7 @@ source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
    <td><p>Social</p> </td>
   </tr>
   <tr>
-   <td><p>Mobile</p> </td>
+   <td><p>モバイル</p> </td>
    <td><p>オーサー - クラスター</p> </td>
    <td><p>IBM AIX</p> </td>
    <td><p>JBoss</p> </td>
@@ -152,7 +155,7 @@ source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
-   <td><p>Mobile</p> </td>
+   <td><p>モバイル</p> </td>
   </tr>
   <tr>
    <td><p>Brand Portal</p> </td>
@@ -267,7 +270,7 @@ source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
 * **新バージョンへのアップグレード**：新バージョンにアップグレードする場合は、実行中の環境と比較してパフォーマンスの違いを理解することが重要です。例えば、AEM 6.1 から 6.2 へ、または AEM 6.0 CRX2 から 6.2 OAK にアップグレードする場合などです。
 * **応答時間が遅い**：選択したノードストアアーキテクチャが要件を満たさない場合は、他のトポロジオプションと比較してパフォーマンスの違いを理解することが重要です。例えば、MongoMK の代わりに TarMK をデプロイしたり、Amazon S3 または Microsoft Azure データストアの代わりにファイルデータストアを使用したりする場合です。
 * **オーサーの追加**：推奨 TarMK トポロジがパフォーマンス要件を満たさず、オーサーノードのサイズ拡張が使用可能な最大容量に達した場合は、3 つ以上のオーサーノードで MongoMK を使用する場合と比較してパフォーマンスの違いを理解することが重要です。例えば、TarMK の代わりに MongoMK をデプロイする場合などです。
-* **コンテンツの追加**：推奨データストアアーキテクチャが要件を満たさない場合は、他のデータストアオプションと比較してパフォーマンスの違いを理解することが重要です。例：ファイルデータストアの代わりにAmazon S3またはMicrosoft Azure Data storeを使用する。
+* **コンテンツの追加**：推奨データストアアーキテクチャが要件を満たさない場合は、他のデータストアオプションと比較してパフォーマンスの違いを理解することが重要です。例：ファイルデータストアの代わりに、AmazonS3またはMicrosoft Azure Data Storeを使用する。
 
 ## 概要 {#introduction}
 
@@ -303,13 +306,13 @@ AEM では、バイナリデータをコンテンツノードとは別に格納�
 
 >[!CAUTION]
 >
->リレーショナルデータベースマイクロカーネルは制限付きでサポートされます。このタイプのマイクロカーネルを使用する前に、[アドビカスタマーケア](https://helpx.adobe.com/marketing-cloud/contact-support.html)にお問い合わせください。
+>リレーショナルデータベースマイクロカーネルは制限付きでサポートされます。このタイプのマイクロカーネルを使用する前に、[アドビカスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
 ### データストア {#data-store}
 
-多数のバイナリを処理する場合は、最大限のパフォーマンスを確保するために、デフォルトのノードストアではなく外部のデータストアを使用することをお勧めします。例えば、プロジェクトに大量のメディアアセットが必要な場合、それらをファイルまたはAzure/S3 Data Storeに保存すると、MongoDBに直接保存するよりも高速にアクセスできます。
+多数のバイナリを処理する場合は、最大限のパフォーマンスを確保するために、デフォルトのノードストアではなく外部のデータストアを使用することをお勧めします。例えば、プロジェクトに大量のメディアアセットが必要な場合、FileまたはAzure/S3 Data Storeの下に格納すると、MongoDBに直接格納するよりも高速にアクセスできます。
 
 For further details on the available configuration options, see [Configuring Node and Data Stores](/help/sites-deploying/data-store-config.md).
 
@@ -428,7 +431,7 @@ TarMK の使用時に優れたパフォーマンスを実現するには、次�
 
 ### TarMK 設定ガイドライン {#tarmk-settings-guideline}
 
-優れたパフォーマンスを実現するためには、以下に示す設定ガイドラインに従う必要があります。For instructions on how to change the settings, [see this page](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+優れたパフォーマンスを実現するためには、以下に示す設定ガイドラインに従う必要があります。For instructions on how to change the settings, [see this page](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html).
 
 <table>
  <tbody>
@@ -493,7 +496,7 @@ TarMK の使用時に優れたパフォーマンスを実現するには、次�
 |---|---|
 | サーバー | ベアメタルハードウェア(HP) |
 | オペレーティングシステム | RedHat Linux |
-| CPU /コア | インテル(R) Xeon(R) CPU E5-2407 @2.40 GHz、8コア |
+| CPU/コア | インテル(R) Xeon(R) CPU E5-2407 @2.40GHz、8コア |
 | RAM | 32 GB |
 | ディスク | 磁気 |
 | Java | Oracle JREバージョン8 |
@@ -538,14 +541,14 @@ MongoMK の使用時に優れたパフォーマンスを実現するには、次
 
 ### MongoMK 設定ガイドライン {#mongomk-settings-guidelines}
 
-優れたパフォーマンスを実現するためには、以下に示す設定ガイドラインに従う必要があります。For instructions on how to change the settings, [see this page](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+優れたパフォーマンスを実現するためには、以下に示す設定ガイドラインに従う必要があります。For instructions on how to change the settings, [see this page](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html).
 
 <table>
  <tbody>
   <tr>
    <td><strong>設定</strong></td>
    <td><strong>パラメーター</strong></td>
-   <td><strong>値（デフォルト）</strong></td>
+   <td><strong>値 (default)</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
@@ -603,7 +606,7 @@ MongoMK の使用時に優れたパフォーマンスを実現するには、次
 |---|---|---|
 | サーバー | ベアメタルハードウェア(HP) | ベアメタルハードウェア(HP) |
 | オペレーティングシステム | RedHat Linux | RedHat Linux |
-| CPU /コア | インテル(R) Xeon(R) CPU E5-2407 @2.40 GHz、8コア | インテル(R) Xeon(R) CPU E5-2407 @2.40 GHz、8コア |
+| CPU/コア | インテル(R) Xeon(R) CPU E5-2407 @2.40GHz、8コア | インテル(R) Xeon(R) CPU E5-2407 @2.40GHz、8コア |
 | RAM | 32 GB | 32 GB |
 | ディスク | 磁気 — 1,000 IOPSを超える | 磁気 — 1,000 IOPSを超える |
 | Java | Oracle JREバージョン8 | 該当なし |
@@ -619,7 +622,7 @@ MongoMK の使用時に優れたパフォーマンスを実現するには、次
 >
 >以下に示す数値はベースラインとして 1 に正規化されており、実際のスループット数ではありません。
 
-![chlimage_1-10](assets/chlimage_1-10a.png)![chlimage_1-11](assets/chlimage_1-11a.png)
+![chlimage_1-10](assets/chlimage_1-10a.png) ![chlimage_1-11](assets/chlimage_1-11a.png)
 
 ## TarMK と MongoMK {#tarmk-vs-mongomk}
 
@@ -676,9 +679,9 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
    <td> </td>
   </tr>
   <tr>
-   <td>CPU /コア</td>
-   <td>インテル(R) Xeon(R) CPU E5-2407 @2.40 GHz、8コア</td>
-   <td>インテル(R) Xeon(R) CPU E5-2407 @2.40 GHz、8コア</td>
+   <td>CPU/コア</td>
+   <td>インテル(R) Xeon(R) CPU E5-2407 @2.40GHz、8コア</td>
+   <td>インテル(R) Xeon(R) CPU E5-2407 @2.40GHz、8コア</td>
    <td> </td>
   </tr>
   <tr>
@@ -725,7 +728,7 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
   </tr>
   <tr>
    <td>シナリオ</td>
-   <td><p><br /> 単一製品：1回の実行で30個の同時スレッド</p> </td>
+   <td><p><br /> 単一製品：アセット/実行あたり30個の同時スレッド</p> </td>
    <td> </td>
    <td> </td>
   </tr>
@@ -747,7 +750,7 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
   <tr>
    <td><strong> </strong></td>
    <td><strong>作成者TarMKノード</strong></td>
-   <td><strong>作成者MongoMKノード</strong></td>
+   <td><strong>MongoMKノードの作成者</strong></td>
    <td><strong>MongoDBノード</strong></td>
   </tr>
   <tr>
@@ -763,7 +766,7 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
    <td>RedHat Linux</td>
   </tr>
   <tr>
-   <td>CPU /コア</td>
+   <td>CPU/コア</td>
    <td>32</td>
    <td>32</td>
    <td>32</td>
@@ -812,7 +815,7 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
   </tr>
   <tr>
    <td>シナリオ</td>
-   <td><p><br /> <br /> 縦置きの使用例：メディア/2000の同時スレッド</p> </td>
+   <td><p><br /> <br /> 縦置き用途：メディア/2000の同時スレッド</p> </td>
    <td></td>
    <td></td>
   </tr>
@@ -842,7 +845,7 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
    * ファイルデータストアを共有する場合は、バイナリなしのレプリケーションをオンにします。
 
 * **ノードストア**&#x200B;は、ネットワーク接続ストレージ（NAS）ではなくローカルディスクに格納する必要があります。
-* When using **Amazon S3**:
+* **AmazonS3を使用する場合**:
 
    * Amazon S3 データストアは、オーサー層とパブリッシュ層の間で共有されます。
    * バイナリなしのレプリケーションをオンにする必要があります。
@@ -852,6 +855,6 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
 
    * カスタムインデックスには Lucene インデックスを使用してください。
 
-* **ワークフローのカスタマイズは**、例えば、「アセットを更新」ワークフローのビデオ手順の削除、使用されていないリスナーの無効化など、パフォーマンスを大幅に向上させます。
+* **ワークフローのカスタマイズは、パフォーマンスを大幅に向上させます**。例えば、「アセットを更新」ワークフローのビデオ手順の削除、使用されていないリスナーの無効化など。
 
 詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)のページも参照してください。
