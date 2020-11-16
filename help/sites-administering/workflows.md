@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 89%
 
 ---
 
 
 # ワークフローの管理{#administering-workflows}
 
-ワークフローにより、Adobe Experience Manager（AEM）のアクティビティを自動化できます。ワークフローとは：
+ワークフローにより、Adobe Experience Manager（AEM）のアクティビティを自動化できます。ワークフロー：
 
 * 特定の順序で実行される一連のステップで構成されます。
 
@@ -39,6 +42,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >* Applying and participating in workflows: [Working with Workflows](/help/sites-authoring/workflows.md).
 >* Creating workflow models and extending workflow functionality: [Developing and Extending Workflows](/help/sites-developing/workflows.md).
 >* 重要なサーバーリソースを使用するワークフローのパフォーマンスの向上：[ワークフローの同時処理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)
+
 >
 
 
@@ -104,6 +108,6 @@ AEM には参考になるモデルが多数用意されています。また、�
 現在のステータスによって、ワークフローインスタンスの通常の進行に介入する必要がある場合は、実行中のワークフローインスタンスに対してアクションを実行します。
 
 * **休止**：ワークフローの実行を一時的に停止します。このアクションは例外的な状況（メンテナンスなどでワークフローを進行させたくない場合）に便利です。休止を実行すると、ワークフローのステータスが「休止」に変わります。
-* **再開**:同じ設定を使用して、中断されたワークフローを、中断された同じ実行時点で再開します。
+* **再開**:同じ設定を使用して、中断されたワークフローを、中断された実行時点と同じ時点で再開します。
 * **終了**:ワークフローの実行を終了し、状態を **ABORTEDに変更します**。中止されたワークフローインスタンスは再開できません。
 
