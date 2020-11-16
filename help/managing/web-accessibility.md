@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager(AEM)とWebアクセシビリティのガイドライン
-description: Adobe Experience Managerの概要(AEM)とWebアクセシビリティガイドライン
+title: Adobe Experience Manager(AEM)とWebアクセシビリティガイドライン
+description: Adobe Experience Manager(AEM)の概要とWebアクセシビリティガイドライン
 translation-type: tm+mt
 source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 84%
 
 様々な社会的、経済的、法的動機により、Web コンテンツを設計する際には、身体的障碍や制限の有無に関係なく、対象とするオーディエンスができるだけアクセスしやすくことが求められます。したがって、Adobe Experience Manager(AEM)によるWebアクセシビリティは、優れたWebデザインのますます重要な側面となっています。
 
-AEMでアクセシブルなWebサイトやコンテンツを作成すると、次のような影響があります。
+アクセシブルなWebサイトやAEMを使用したコンテンツの作成には、次のような影響があります。
 
 * 管理者は、アクセシビリティ機能が正しく有効化されるように AEM を設定する必要があります。
 
