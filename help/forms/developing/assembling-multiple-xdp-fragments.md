@@ -138,7 +138,7 @@ subPatientContactという名前のサブフォームは、 *tuc018_contact.xdp�
 
 **アセンブリ済みXDPドキュメントの取得**
 
-アセンブリされたXDPドキュメントがコレクションオブジェクト内で返されます。 コレクションオブジェクトを繰り返し処理し、XDPドキュメントをXDPファイルとして保存します。 また、XDPドキュメントをOutputなどの別のAEM Formsサービスに渡すこともできます。
+アセンブリされたXDPドキュメントがコレクションオブジェクト内で返されます。 コレクションオブジェクトを繰り返し処理し、XDPドキュメントをXDPファイルとして保存します。 XDPドキュメントは、Outputなどの別のAEM Formsサービスに渡すこともできます。
 
 **関連トピック**
 
@@ -206,7 +206,7 @@ Assembler Service API(Java)を使用して、複数のXDPフラグメントを�
 
 **関連トピック**
 
-[複数のXDPフラグメント](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[クイック開始のアセンブリ（SOAPモード）: Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)[IncludingAEM FormsJavaライブラリファイルを使用した複数のXDPフラグメントのアセンブリ接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[の設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[複数のXDPフラグメント](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[クイック開始のアセンブリ（SOAPモード）:Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)[を使用した複数のXDPフラグメントのアセンブリ(AEM FormsJavaライブラリファイルを含む)接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[の設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## WebサービスAPIを使用した複数のXDPフラグメントのアセンブリ {#assemble-multiple-xdp-fragments-using-the-web-service-api}
 
@@ -222,7 +222,7 @@ Assembler Service API（Webサービス）を使用して、複数のXDPフラ�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. PDFアセンブラクライアントを作成します。
 
@@ -232,7 +232,7 @@ Assembler Service API（Webサービス）を使用して、複数のXDPフラ�
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * AEM formsのユーザー名を `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに割り当てます。
+      * AEM formsユーザー名をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName` ます。
       * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password`フィールドに割り当てます。
       * 定数値をフィー `HttpClientCredentialType.Basic``BasicHttpBindingSecurity.Transport.ClientCredentialType`ルドに割り当てます。
       * 定数値をフィー `BasicHttpSecurityMode.TransportCredentialOnly``BasicHttpBindingSecurity.Security.Mode`ルドに割り当てます。
@@ -283,4 +283,4 @@ Assembler Service API（Webサービス）を使用して、複数のXDPフラ�
 
 **関連トピック**
 
-[MTOMを使用した複数のXDPフラグメントのアセンブリ](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[呼び出しAEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOMを使用した複数のXDPフラグメントのアセンブリ](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[-AEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
