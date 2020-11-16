@@ -12,6 +12,9 @@ discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 translation-type: tm+mt
 source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+workflow-type: tm+mt
+source-wordcount: '982'
+ht-degree: 43%
 
 ---
 
@@ -39,9 +42,9 @@ source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
 >
 >[新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)するときにテンプレートを使用する際、ページ編集者にとって見た目的な違いはなく、またどちらのタイプのテンプレートを使用しているかについての表示もありません。
 
-### 編集可能テンプレート {#editable-templates}
+### 編集可能なテンプレート {#editable-templates}
 
-編集可能なテンプレートは、AEMでの開発に関するベストプラクティスと見なされるようになりました。
+編集可能なテンプレートは、AEMを使用した開発に関するベストプラクティスとして考えられるようになりました。
 
 編集可能テンプレートのメリットは次のとおりです。
 
@@ -60,7 +63,7 @@ source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
 
 >[!NOTE]
 >
->An AEM Community Article is available explaining how to develop an Experience Manager site with Editable Templates, see [Creating an Adobe Experience Manager 6.5 website using Editable Templates](https://helpx.adobe.com/experience-manager/using/first_aem64_website.html).
+>An AEM Community Article is available explaining how to develop an Experience Manager site with Editable Templates, see [Creating an Adobe Experience Manager 6.5 website using Editable Templates](https://helpx.adobe.com/jp/experience-manager/using/first_aem64_website.html).
 
 ### 静的テンプレート {#static-templates}
 
@@ -84,11 +87,11 @@ source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
 
 >[!CAUTION]
 >
->AEMは、「サイト」で許可されるテンプレートを制御する複数のプロパティを提 **供します**。 ただし、組み合わせると、追跡と管理が困難な非常に複雑なルールになる可能性があります。
+>AEMは、複数のプロパティをオファーして、 **Sites**（サイト）で許可されるテンプレートを制御します。 ただし、組み合わせると、追跡や管理が困難な非常に複雑なルールになる可能性があります。
 >
->したがって、以下を定義することで、シンプルに開始することをお勧めします。
+>したがって、Adobeでは、次の項目を定義して、単純な開始を行うことをお勧めします。
 >
->* 財産のみ `cq:allowedTemplates` である
+>* 唯一の `cq:allowedTemplates` 財産
    >
    >
 * サイトのルートにのみ
@@ -96,29 +99,29 @@ source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
 >
 For an example, see We.Retail: `/content/we-retail/jcr:content`
 >
->また、プロパ `allowedPaths`ティ、 `allowedParents`およびをテ `allowedChildren` ンプレートに配置して、より高度なルールを定義することもできます。 ただし、可能な場合は、許可され *るテンプレートを*`cq:allowedTemplates` さらに制限する必要がある場合は、サイトのサブセクションでさらにプロパティを定義する方がはるかに簡単です。
+>プロパティ `allowedPaths`、 `allowedParents``allowedChildren` およびをテンプレートに配置して、より高度なルールを定義することもできます。 ただし、可能な場合は、許可されるテンプレートをさらに制限する必要がある場合は ** 、サイトのサブセクションでさらに `cq:allowedTemplates` プロパティを定義する方が簡単です。
 >
->また、ページプロパティの「詳細 `cq:allowedTemplates` 」タブで作成者がプロパティを更新でき **るという利点もあ** ります ****。 その他のテンプレートプロパティは、（標準） UIを使用して更新できないので、変更が行われるたびにルールとコードのデプロイメントを管理する開発者が必要になります。
+>また、「 `cq:allowedTemplates` ページプロパティ」の「 **詳細** 」タブで、作成者がプロパティを更新できるという利点もあります ****。 その他のテンプレートプロパティは、（標準） UIを使用して更新することはできないので、変更を行うたびに、ルールとコードのデプロイメントを管理する開発者が必要になります。
 
 サイト管理インターフェイスで新しいページを作成する場合、使用可能なテンプレートのリストは、新しいページの場所と、各テンプレートで指定されている配置制限によって異なります。
 
-次のプロパティは、新しいペ `T` ージをページの子として配置する際にテンプレートを使用できるかどうかを決定しま `P`す。 これらの各プロパティは、パスとの一致に使用される0個以上の正規表現を保持する複数値の文字列です。
+次のプロパティは、新しいページをページの子として配置する場合に、テンプレート `T` を使用できるかどうかを決定 `P`します。 これらの各プロパティは、0個以上の正規式を保持する複数値の文字列で、パスとの一致に使用されます。
 
 * The `cq:allowedTemplates` property of the `jcr:content` subnode of `P` or an ancestor of `P`.
 
-* のプ `allowedPaths` ロパティ `T`。
+* の `allowedPaths` プロパティ `T`。
 
-* のプ `allowedParents` ロパティ `T`。
+* の `allowedParents` プロパティ `T`。
 
 * The `allowedChildren` property of the template of `P`.
 
 評価は次のようにおこなわれます。
 
-* で始まるページ階層を昇 `cq:allowedTemplates` 順に見つけた最初の、空でないプロパティ `P` は、のパスと一致しま `T`す。 いずれの値も一致しない場合、は拒否 `T` されます。
+* で始まるページ階層を昇順にしているときに見つかった、最初の空でない `cq:allowedTemplates` プロパティ `P` は、のパスと一致し `T`ます。 一致する値がない場合、は拒否さ `T` れます。
 
 * If `T` has a non-empty `allowedPaths` property, but none of the values match the path of `P`, `T` is rejected.
 
-* 上記のプロパティの両方が空か存在しない場合、と同じアプリケーシ `T` ョンに属していない限りは拒否されま `P`す。 `T` は、パスの第2レベル `P` の名前がパスの第2レベルの名前と同じである場合に限り、ifと同じアプリケ `T` ーションに属します `P`。 例えば、テンプレートはペ `/apps/geometrixx/templates/foo` ージと同じアプリに属しているとしま `/content/geometrixx`す。
+* 上記のプロパティの両方が空または存在しない場合、と同じアプリケーションに属し `T` ない限りは拒否され `P`ます。 `T` は、のパスの2番目のレベルの名前がのパスの2番目のレベルの名前と同じである場合 `P` に限り、ifと同じアプリケーション `T` に属し `P`ます。 例えば、テンプレート `/apps/geometrixx/templates/foo` はページと同じアプリに属してい `/content/geometrixx`ます。
 
 * If `T` has an non-empty `allowedParents` property, but none of the values match the path of `P`, `T` is rejected.
 
@@ -132,11 +135,11 @@ For an example, see We.Retail: `/content/we-retail/jcr:content`
 
 #### 子ページで使用するテンプレートの制限 {#limiting-templates-used-in-child-pages}
 
-特定のページの下に子ページを作成するために使用できるテンプレートを制限するには、ページのノードのプロパティを使用して、子ページとして許可するテンプレートのリスト `cq:allowedTemplates``jcr:content` を指定します。 例えば、リスト内の各値は、許可された子ページのテンプレートへの絶対パスである必要がありま `/apps/geometrixx/templates/contentpage`す。
+特定のページの下に子ページを作成するために使用できるテンプレートを制限するには、ページの `cq:allowedTemplates``jcr:content` nodeのプロパティを使用して、子ページとして許可するテンプレートのリストを指定します。 例えば、リストの各値は、許可されている子ページのテンプレートへの絶対パスである必要があり `/apps/geometrixx/templates/contentpage`ます。
 
 You can use the `cq:allowedTemplates` property on the template&#39;s  `jcr:content` node to have this configuration applied to all newly created pages that use this template.
 
-テンプレート階層など、さらに制約を追加する場合は、テンプレートのプロパティ `allowedParents/allowedChildren` を使用できます。 その後、テンプレートTから作成されたページを、テンプレートTから作成されたページの親/子にする必要があることを明示的に指定できます。
+テンプレート階層などに関する制約をさらに追加する場合は、テンプレートの `allowedParents/allowedChildren` プロパティを使用できます。 その後、テンプレートTから作成されたページが、テンプレートTから作成されたページの親/子である必要があることを明示的に指定できます。
 
 ## テンプレート - コンテンツフラグメント {#templates-content-fragments}
 
