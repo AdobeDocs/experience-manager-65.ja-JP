@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '455'
+ht-degree: 91%
 
 ---
 
@@ -27,22 +30,22 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >管理者権限を持つユーザー、および AEM を使用して問題のトラブルシューティングをおこなうユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に説明のあるトラブルシューティング方法を使用できます。十分な権限を持っていない場合は、AEM のトラブルシューティングに関してシステム管理者にお問い合わせください。
 
-## 古いページバージョンが公開されたサイト上にまだある {#old-page-version-still-on-published-site}
+## 公開されたサイト上に古いバージョンのページがまだある {#old-page-version-still-on-published-site}
 
 * **問題**：
 
    * ページに変更を加えてそのページを公開サイトにレプリケートしましたが、公開サイトでは古い&#x200B;**&#x200B;バージョンのページが依然として表示されます。
 
-* **原因**：
+* **理由**:
 
    * いくつかの原因が考えられます。キャッシュ（ローカルブラウザーまたは Dispatcher のキャッシュ）が原因である場合がほとんどですが、レプリケーションキューに問題があることもあります。
 
-* **解決策**：
+* **ソリューション**:
 
    * これには、様々な原因が考えられます。
    * ページが正しくレプリケートされていることを確認します。ページのステータスや、必要に応じてレプリケーションキューの状態をチェックします。
    * ローカルブラウザーのキャッシュをクリアして、ページに再度アクセスします。
-   * ペー `?` ジURLの末尾に追加します。例：
+   * ページ URL の末尾に `?` を追加します。以下に例を示します。
 
       `http://localhost:4502/sites.html/content?`
 
@@ -56,21 +59,21 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * オーサー環境でのコンテンツページの編集中にサイドキックが表示されません。
 
-* **原因**：
+* **理由**:
 
    * まれに、サイドキックのヘッダーが現在のウィンドウの範囲外になるように置かれてしまうことがあります。この場合、サイドキックの位置を再び変更することができなくなります。
 
-* **解決策**：
+* **解決策**:
 
    * 現在のセッションからログアウトして、ログインし直してください。サイドキックがデフォルトの位置に戻ります。
 
 ## 検索と置換 - すべてのインスタンスが置換されない {#find-replace-not-all-instances-are-replaced}
 
-* **問題**：
+* **問題:**
 
    * When using the **Find &amp; Replace** option it can happen that not all instances of the `find` term are replaced on a page.
 
-* **原因**：
+* **理由**:
 
    * The capability of **Find &amp; Replace** depends on how the content is saved, and whether it can be searched upon. 例えば、ブログテキストは `jcr:text` プロパティに格納されますが、このプロパティは検索対象として設定されません。検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
 
@@ -79,7 +82,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
       * `jcr:text`
       * `text`
 
-* **解決策**：
+* **解決策**:
 
    * これらの定義は、例えば次の場所にある **Web コンソール**&#x200B;を使用して、**Day CQ WCM Find Replace Servlet** を設定することで変更できます。
 
