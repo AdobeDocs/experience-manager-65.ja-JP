@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1198'
+ht-degree: 80%
 
 ---
 
@@ -40,7 +43,7 @@ We.Unlimited アプリは、完全に設定可能で管理が容易な AEM Mobil
 
 新規アプリを別のアプリのテンプレートに基づいて作成すると、作成元アプリと同じ開始点からアプリを作成することができます。
 
-アプリテンプレートに基づいて新しいアプリを作成する手順：
+アプリテンプレートに基づいて新規アプリを作成する手順：
 
 1. Navigate to the AEM Mobile app catalog: *&lt;server-url>/aem/apps.html/content/mobileapps*
 1. 以下に示すように、**アプリ**／**選択**&#x200B;を選択します。
@@ -66,8 +69,8 @@ We.Unlimited アプリは、完全に設定可能で管理が容易な AEM Mobil
 
 各エンティティタイプには、2 種類の既製のテンプレートがあります。以下のとおりです。
 
-* **** デフォルトのテンプレート：適用可能なデフォルトのプロパティ/構造を持つコンテンツの作成に使用
-* **** 読み込まれたテンプレート：適用可能なデフォルトのプロパティ/構造を持つAEM mobileからコンテンツを読み込むために使用
+* **デフォルトのテンプレート：** 適用可能なデフォルトのプロパティ/構造を持つコンテンツの作成に使用
+* **読み込まれたテンプレート：** 適用可能なデフォルトのプロパティ/構造を持つAEM Mobileからのコンテンツの読み込みに使用
 
 ### 記事テンプレート {#article-templates}
 
@@ -129,7 +132,7 @@ As per AEM templates, you can add any default properties or child nodes to the t
 
 ただし、AEM でレンダリングされるカスタムの書き出しコンテンツ同期ハンドラーがないと、カスタムコンポーネントを正しく書き出して AEM Mobile On-Demand Services にアップロードできない場合があります。
 
-コンポーネントが既にAEMページに含まれている場合、他のいくつかの構築ブロックコンポーネントと共に、そのページに別のコンポーネントを追加したり、既存のコンポーネントを編集したりできます。
+コンポーネントをAEMページに既に含めた後、他のいくつかの構築ブロックコンポーネントと共に、ページに別のコンポーネントを追加したり、既存のコンポーネントを編集したりできます。
 
 **ページに別のコンポーネントを追加するには：**
 
