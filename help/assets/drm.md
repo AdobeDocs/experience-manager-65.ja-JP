@@ -23,7 +23,7 @@ You can view the expiration status of an asset in the [!DNL Assets] console in b
 
 ![expired_flag_リスト](assets/expired_flag_list.png)
 
-*図：リスト表示の「[!UICONTROL ステータス]」列には、期限切れのバナーが表示されます。*
+*図：リスト表示の「 [!UICONTROL ステータス] 」列には、  期限切れのバナーが表示されます。*
 
 You can view the expiration status of an asset in the [!UICONTROL Timeline] in left rail.
 
@@ -96,7 +96,7 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
    ![[有効期限]フィールドにアセットの有効期限の日時を設定します。](assets/asset-properties-advanced-tab.png)
 
-   *図：[!UICONTROL アセットの有効期限を設定するための]「アセットの[!UICONTROL プロパティ]」ページの「詳細」タブ。*
+   *図： [!UICONTROL アセットの有効期限を設定するための] 「アセットの [!UICONTROL プロパティ] 」ページの「詳細」タブ。*
 
 1. 「**[!UICONTROL 保存]**」をクリックし、次に「**[!UICONTROL 閉じる]**」をクリックしてアセットコンソールを表示します。
 1. アセットの公開ステータスは、カード表示のアセットのサムネールの下部に、有効期限切れのステータスを示します。リスト表示では、アセットのステータスが「**[!UICONTROL 期限切れ]**」と表示されます。
