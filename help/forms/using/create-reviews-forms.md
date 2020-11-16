@@ -11,6 +11,9 @@ discoiquuid: d8c1c507-a6c4-44f5-be01-ee902bc28410
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 88%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ## レビューの設定 {#setting-up-a-review}
 
 1. 「フォーム」タブに移動し、フォームを選択します。
-1. If the asset does not have a review in progress, a Start Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icon appears in the Action bar. 「レビューを開 ![始」aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) 」アイコンをクリックします。
+1. If the asset does not have a review in progress, a Start Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icon appears in the Action bar. 開始レビューの ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンをクリックします。
 1. 以下の情報を入力します。
 
    * レビュー名：必須。使用可能な文字は、英数字、ハイフンまたはアンダースコアです。
@@ -57,7 +60,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 1. If an asset has a review in progress and you are the initiator of the review, a Manage Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icons appears in the Action bar. レビューの開始者のみがレビューを管理（更新 / 終了）することができます。
 
-   「レビューの管理」 ![aem6forms_review_chat_commenticonをクリック](assets/aem6forms_review_chat_comment.png)します。
+   「レビューの管理」 ![をクリックします。 aem6forms_review_chat_](assets/aem6forms_review_chat_comment.png)commenticon.
 
    開始者以外のユーザーに対しては、「レビューの管理」アイコンは表示されません。
 
