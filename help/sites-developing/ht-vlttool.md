@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
 source-git-commit: 2da3da1a36f074593e276ddd15ed8331239ab70f
+workflow-type: tm+mt
+source-wordcount: '2748'
+ht-degree: 81%
 
 ---
 
@@ -23,7 +26,7 @@ VLT ツールはコマンドラインから実行します。このドキュメ�
 
 ## 概念およびアーキテクチャ {#concepts-and-architecture}
 
-Filevaultツールの概 [念と構造の詳細については、](https://jackrabbit.apache.org/filevault/overview.html) Apache Jackrabbit Filevaultの公式ドキュメント [](https://jackrabbit.apache.org/filevault/vaultfs.html) (英語のみ [)のFilevault Overview and](https://jackrabbit.apache.org/filevault/index.html) Vault FS（Filevaultの概要とVault FS）ページを参照してください。
+Filevaultツールの概念と構造の概要については、 [Apache Jackrabbit Filevaultの公式ドキュメント](https://jackrabbit.apache.org/filevault/overview.html)[の「Filevaultの概要と](https://jackrabbit.apache.org/filevault/vaultfs.html) Vault FS [](https://jackrabbit.apache.org/filevault/index.html) 」ページを参照してください。
 
 ## VLT の導入 {#getting-started-with-vlt}
 
@@ -37,18 +40,18 @@ VLT の使用を開始するには、次の手順を実行する必要があり�
 
 ### Installing the VLT Tool {#installing-the-vlt-tool}
 
-VLT ツールを使用するには、まず VLT ツールをインストールする必要があります。追加のツールなので、デフォルトではインストールされません。 また、システムの環境変数を設定する必要があります。
+VLT ツールを使用するには、まず VLT ツールをインストールする必要があります。このツールは追加のツールなので、デフォルトではインストールされません。 また、システムの環境変数を設定する必要があります。
 
 1. FileVaultアーカイブファイルを [Mavenアーティファクトリポジトリからダウンロードします。](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
-   >VLTツールのソースはGitHubで使 [用できます。](https://github.com/apache/jackrabbit-filevault)
+   >VLTツールのソースはGitHubで [利用できます。](https://github.com/apache/jackrabbit-filevault)
 1. アーカイブを解凍します。
 1. Add `<archive-dir>/vault-cli-<version>/bin` to your environment `PATH` so that the command files `vlt` or `vlt.bat` are accessed as appropriate. 次に例を示します。
 
    `<aem-installation-dir>/crx-quickstart/opt/helpers/vault-cli-3.1.16/bin>`
 
-1. Open a command line shell and execute `vlt --help`. 出力が次のヘルプ画面に似ていることを確認します。
+1. Open a command line shell and execute `vlt --help`. 出力が次のヘルプ画面のようになっていることを確認します。
 
    ```shell
    vlt --help
@@ -141,7 +144,7 @@ filevault とリポジトリを同期する必要があります。次の手順�
 1. Edit something in `text.jsp`.
 1. See the modified files by typing `vlt st`
 1. See the changes by typing `vlt diff text.jsp`
-1. 変更をコミットします。 `vlt ci test.jsp`.
+1. 変更をコミット： `vlt ci test.jsp`.
 1. テキストコンポーネントを含むページを再読み込みして、変更が反映されているかどうかを確認します。
 
 ## VLT ツールのヘルプの表示 {#getting-help-with-the-vlt-tool}
@@ -295,7 +298,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 
 |  |  |
 |--- |--- |
-| Option | 説明 |
+| オプション | 説明 |
 | `-Xjcrlog <arg>` | 拡張された JcrLog オプション |
 | `-Xdavex <arg>` | 拡張された JCR のリモート処理のオプション |
 | `--credentials <arg>` | 使用するデフォルトの資格情報 |
@@ -327,7 +330,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | `proplist` | `pl` | ファイルまたはディレクトリのプロパティを出力します。 |
 | `propset` | `ps` | ファイルまたはディレクトリのプロパティの値を設定します。 |
 | `add` |  | ファイルとディレクトリのバージョンを管理します。 |
-| `delete` | 「`del`」または「`rm`」 | ファイルとディレクトリのバージョン管理を削除します。 |
+| `delete` | `del` か `rm` のどちらかにする必要があります。 | ファイルとディレクトリのバージョン管理を削除します。 |
 | `diff` | `di` | 2 つのパスの差分を表示します。 |
 | `console` |  | インタラクティブコンソールを実行します。 |
 | `rcp` |  | ノードツリーをリモートリポジトリ間でコピーします。 |
@@ -528,7 +531,7 @@ commit -v|-q|--force|-N <file1> [<file2> ...]
 | `-N (--non-recursive)` | 単一のディレクトリで処理が実行されます |
 | `<file> [<file> ...]` | コミットするファイルまたはディレクトリ |
 
-### revert {#revert}
+### 元に戻す {#revert}
 
 作業用コピーファイルを元の状態に復元して、大部分のローカルの編集を元に戻します。
 
@@ -690,7 +693,7 @@ diff -N <file1> [<file2> ...]
 | `-N (--non-recursive)` | 単一のディレクトリで処理が実行されます |
 | `<file> [<file> ...]` | 差分を表示するファイルまたはディレクトリ |
 
-### console {#console}
+### コンソール {#console}
 
 インタラクティブコンソールを実行します。
 
@@ -708,7 +711,7 @@ console -F <file>
 
 ### rcp {#rcp}
 
-ノードツリーをリモートリポジトリ間でコピーします。`<src>` はソースノードを指し、親ノ `<dst>` ードが存在する宛先パスを指定します。 rcp は、データをストリーミングすることでノードを処理します。
+ノードツリーをリモートリポジトリ間でコピーします。`<src>` はソースノードを指し、親ノードが存在する必要がある宛先パスを `<dst>` 指定します。 rcp は、データをストリーミングすることでノードを処理します。
 
 #### 構文 {#syntax-17}
 
@@ -722,7 +725,7 @@ rcp -q|-r|-b <size>|-t <seconds>|-u|-n|-e <arg1> [<arg2> ...] <src> <dst>
 |--- |--- |
 | `-q (--quiet)` | 出力を最小限に抑えます。 |
 | `-r (--recursive)` | 処理を再帰的に実行します。 |
-| `-b (--batchSize) <size>` | 中間保存前に処理されるノードの数。 |
+| `-b (--batchSize) <size>` | 中間保存前に処理されるノード数。 |
 | `-t (--throttle) <seconds>` | 中間保存の後に待機する秒数。 |
 | `-u (--update)` | 既存のノードを上書き／削除します。 |
 | `-n (--newer)` | lastModified プロパティを更新に適用します。 |
@@ -849,7 +852,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 * `vault.sync.syncroots`：同期のルートを定義する 1 つまたは複数のローカルファイルシステムのパス。
 
-* `vault.sync.fscheckinterval`:ファイル・システムで変更がスキャンされる頻度（秒）。 デフォルト値は 5 秒です。
+* `vault.sync.fscheckinterval`:ファイル・システムで変更をスキャンする頻度（秒）。 デフォルト値は 5 秒です。
 * `vault.sync.enabled`：サービスを有効または無効にする一般的なフラグ。
 
 >[!NOTE]
@@ -864,19 +867,19 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 * `.vlt-sync-config.properties`:設定ファイル。
 
-* `.vlt-sync.log`:同期中に実行された操作に関する情報を含むログファイル。
-* `.vlt-sync-filter.xml`:リポジトリのどの部分を同期するかを定義するフィルター。 The format of this file is decribed by the [Performing a filtered checkout](#performing-a-filtered-checkout) section.
+* `.vlt-sync.log`:同期中に実行された操作に関する情報を含むログファイルです。
+* `.vlt-sync-filter.xml`:リポジトリのどの部分が同期されるかを定義するフィルター。 The format of this file is decribed by the [Performing a filtered checkout](#performing-a-filtered-checkout) section.
 
 The `.vlt-sync-config.properties` file allows you to configure the following properties:
 
 **disabled** 同期のオン/オフを切り替えます。 デフォルトでは、このパラメーターは false に設定されており、同期が許可されます。
 
-**sync-once空でない場合** 、次のスキャンで指定した方向のフォルダが同期され、パラメータがクリアされます。 次の 2 つの値がサポートされています。
+**sync-once** 空でない場合は、次のスキャンで指定された方向のフォルダが同期され、パラメータがクリアされます。 次の 2 つの値がサポートされています。
 
 * `JCR2FS`：JCR リポジトリ内のコンテンツをすべて書き出して、ローカルディスクに書き込みます。
 * `FS2JCR`：ディスクから JCR リポジトリにすべてのコンテンツを読み込みます。
 
-**sync-logログ** ：ログのファイル名を定義します。 デフォルト値は .vlt-sync.log です。
+**sync-log** ：ログファイル名を定義します。 デフォルト値は .vlt-sync.log です。
 
 ### 開発のための VLT 同期の使用 {#using-vlt-sync-for-development}
 
