@@ -20,12 +20,12 @@ ht-degree: 45%
 
 # カスタムノードタイプ{#custom-node-types}
 
-AEMはSlingに基づいており、JCRリポジトリを使用するので、次の2つのノードタイプの両方から提供されるノードタイプを使用できます。
+AEMはSlingに基づいており、JCRリポジトリを使用するので、次の2つのノードタイプが提供されるノードタイプを使用できます。
 
 * [JCR ノードタイプ](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling ノードタイプ](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-これらに加えて、AEMは、様々なカスタムノードタイプを提供します。
+これらに加えて、AEMには、様々なカスタムノードタイプが用意されています。
 
 ## 監査 {#audit}
 
@@ -321,7 +321,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 コンポーネントの 1 つのドロップターゲットを設定します。このノードの名前が、ドラッグ＆ドロップの ID として使用されます。
 
-* `@prop accept`  — このドロップターゲットで受け入れられるMIMEタイプのリスト。 例えば `["image/*"]`
+* `@prop accept`  — このドロップターゲットで受け入れられるMIMEタイプのリスト。例えば `["image/*"]`
 * `@prop groups`  — ソースを受け入れるドラッグ&amp;ドロップグループのリスト。
 * `@prop propertyName`  — 参照の保存に使用するプロパティの名前。
 
@@ -472,7 +472,7 @@ DAM アセットを表すサムネール。
 
 The items in a `cq:Cq4ContentPage` are:
 
-* `@prop cq:csd`  — ページのContentBus CSD。
+* `@prop cq:csd`  — ページのContentBusCSD。
 * `@node cq:content`  — ページのコンテンツ。 この子ノードは、ページノードが「コンテンツなしで存在」または「削除済み」の状態の場合には存在しません。
 * `@node cq:attributes`  — ページ属性のリスト。以前はバージョンタグと呼ばれていました。 cq:contentPage タイプの場合、このノードは必須です。ページがノードのバージョン付けされる場合、属性ノードはバージョン付けされます。
 
@@ -585,7 +585,7 @@ LiveSync mixin を定義します。ノードがプライマリソース（制�
 
 LiveSyncCancelled mixin を定義します。親の1つが原因でLiveRelationshipに含まれる可能性のあるライブコピー（制御）ノードのLiveSync動作をキャンセルします。
 
-* `@prop cq:isCancelledForChildren` - LiveSyncをキャンセルするかどうかを定義します。 子供の場合も同様です。
+* `@prop cq:isCancelledForChildren` - LiveSyncをキャンセルするかどうかを定義します。子供の場合も同様です。
 
 **定義**
 
@@ -657,7 +657,7 @@ Blueprintアクション
 * `@prop cq:lastPublishedBy`— 最後にページを投稿した（使用されなくなった）ユーザー。
 * `@prop cq:lastReplicated`  — ページが最後に複製された日付。
 * `@prop cq:lastReplicatedBy`  — 最後にページを複製したユーザー。
-* `@prop cq:lastReplicationAction`  — レプリケーション操作： アクティブ化または非アクティブ化。
+* `@prop cq:lastReplicationAction`  — レプリケーション操作：アクティブ化または非アクティブ化。
 * `@prop cq:lastReplicationStatus`  — レプリケーションの状態（使用されなくなりました）。
 
 **定義**
@@ -1067,7 +1067,7 @@ Wikiのプロパティ
 
 **説明**
 
-ワークフロー設定の自動割り当て。 設定は次の構造に従います。
+ワークフロー設定の自動割り当て。設定は次の構造に従います。
 * `workflows`
    * `+ name1`
       * `- cq:path`
