@@ -22,21 +22,21 @@ ht-degree: 0%
 
 Generate PDFサービスでは、Java API Quick開始(SOAP)を使用できます。
 
-[クイック開始（SOAPモード）: Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
+[クイック開始（SOAPモード）:Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsを使用したプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）: Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
-次のコードの例では、 *Loan.doc* というWordファイルを、 *Loan.pdfというPDFドキュメントに変換します*。 (WordドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents))。
+次のコードの例では、 *Loan.doc* というWordファイルをLoan.pdfというPDFドキュメントに変換し *ます*。 (WordドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents))。
 
 ```java
  /*
@@ -148,7 +148,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  }
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
 次のJavaコードの例を使用すると、https://www.adobe.comにあるHTMLコンテンツを、AdobeHTML.pdfというPDFドキュメントに変換でき *ます*。 (HTMLドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents))。
 
@@ -254,7 +254,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  }
 ```
 
-## クイック開始（SOAPモード）: Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
+## クイック開始（SOAPモード）:Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
 次のコードの例では、 *Loan.pdfというPDFドキュメントを* Loan.rtfというRTFドキュメントに変換し **&#x200B;ます。 (PDFドキュメントの画像以外の形式への [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats))。
 
