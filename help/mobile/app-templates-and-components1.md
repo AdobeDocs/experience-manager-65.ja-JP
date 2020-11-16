@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 90%
 
 ---
 
@@ -60,11 +63,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >* [テンプレート](/help/sites-developing/templates.md)
 >* [コンポーネント](/help/sites-developing/components.md)
+
 >
 
 
 
-テンプレートとコンポーネントに関する基本的な知識が得られたら、次のリソースを参照してください。
+テンプレートとコンポーネントの基本的な理解ができたら、次のリソースを参照してください。
 
 * [テンプレートとコンポーネントの作成および追加](/help/mobile/mobile-ondemand-app-templates.md)
 * [コンテンツのプロパティを使用したコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
