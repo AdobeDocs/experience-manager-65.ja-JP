@@ -12,6 +12,9 @@ discoiquuid: 5a67aa9f-e5eb-4d7e-89da-2ee1a45eb8ce
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '1829'
+ht-degree: 92%
 
 ---
 
@@ -176,7 +179,7 @@ CRX2 から Oak へのデータ移行は、CQ 5.4 ベースのソースインス
 
 ### /etc の下にカスタマイズが存在しない{#missing-customizations-under-etc}
 
-`/apps` とは、ア `/libs` ップグレードによって適切に処理されますが、での変更は、ア `/etc` ップグレード後に手動で復元する必要がある場合 `/var/upgrade/PreUpgradeBackup` があります。 手動で統合する必要があるコンテンツについては、この場所を確認してください。
+`/apps` とは、アップグレード `/libs` によって適切に処理されますが、での変更 `/etc` は、アップグレード後に手動で復元する必要がある場合があ `/var/upgrade/PreUpgradeBackup` ります。 手動で統合する必要があるコンテンツについては、この場所を確認してください。
 
 ### error.log と upgrade.log の分析 {#analyzing-the-error.log-and-upgrade.log}
 
@@ -192,9 +195,9 @@ grep -v UnrelatedErrorString
 
 * `grep -B` エラーの前に行を追加する
 
-「」または「」
+または
 
-* `grep -A` の後に行を追加する場合。
+* `grep -A` 」をクリックします。
 
 警告メッセージにエラーが見つかることもあります。有効なケースがこの状態になってしまうこともあり、実際にエラーであるかどうかをアプリケーションが常に判断できるとは限りません。これらの警告メッセージについても確認してください。
 
