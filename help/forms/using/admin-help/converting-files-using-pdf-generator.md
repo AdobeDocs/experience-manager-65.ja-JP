@@ -67,17 +67,17 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 >* HTML から PDF への変換機能を使用する場合、システムフォントディレクトリに特定のフォントが含まれている必要があります。Linux、Solaris および AIX システムでは、システムフォントディレクトリに Courier フォントが含まれている必要があります。Windows システムでは、システムフォントディレクトリに Times New Roman が含まれている必要があります。
    >
    >
-* (UNIXベースのドキュメントのみ)日本語フォントを使用してWebページをPDFAEM Formsに変換するには、Serversサーバーで次の日本語フォントのいずれかを使用できます。
+* (UNIXベースのドキュメントのみ)AEM Formsサーバーで日本語フォントを使用して、日本語フォントのWebページをPDFシステムに変換するには、次の日本語フォントのいずれかを使用できます。
    >
    >  
 * 「Sazanami Gothic」
->  * &quot;Kozuka Gothic Pro-VI&quot;
->  * 『Kozuka Mincho Pro-VI』
+>  * &quot;Kozuka GothicPro-VI&quot;
+>  * &quot;Kozuka MinchoPro-VI&quot;
 >  * 「Sazanami Gothic」
->  * &quot;Kozuka Mincho Pr6N&quot;
+>  * &quot;Kozuka MinchoPr6N&quot;
 >  * 『サザナミ明朝』
->  * &quot;Adobe Heiti Std&quot;
->  * &quot;Adobe Song Std&quot;
+>  * &quot;AdobeハイティStd&quot;
+>  * &quot;Adobe Song標準&quot;
 
    >
    >
