@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '293'
+ht-degree: 99%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  <tbody>
   <tr>
    <td>テストチーム</td>
-   <td>責任… </td>
+   <td>責任は… </td>
    <td>参加する時期</td>
   </tr>
   <tr>
