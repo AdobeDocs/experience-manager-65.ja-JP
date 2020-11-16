@@ -79,7 +79,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Slingカスタマイズ可能な要求データロガー** 設定：
 
-* **Logger Name** and **Log Format** ：リクエストおよびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に重要です。
+* **Logger Name** and **Log Format** ：リクエストおよびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に不可欠です。
 これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
 
 詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
