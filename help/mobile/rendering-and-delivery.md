@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 translation-type: tm+mt
 source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 40%
 
 ---
 
@@ -26,7 +29,7 @@ AEM content can easily be rendered via [Sling Default Servlets](https://sling.ap
 
 また、AEM は、Sling を介して、レンダリングされるスキーマとコンテンツのフルコントロールを取得するカスタム sling レンダラーの開発および展開もサポートします。
 
-Content Servicesのデフォルトレンダラーは、標準搭載のSlingのデフォルトとカスタムの開発の間のギャップを埋め、開発を行わずにレンダリングされたコンテンツの様々な要素をカスタマイズし、制御できます。
+Content Servicesのデフォルトレンダラーは、標準搭載のSlingのデフォルトとカスタム開発の間のギャップを埋め、開発なしにレンダリングされたコンテンツの多くの要素をカスタマイズおよび制御できます。
 
 次の図に、コンテンツサービスのレンダリングの構造を示します。
 
@@ -34,21 +37,21 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
 
 ## JSON のリクエスト {#requesting-json}
 
-**&lt;RESOURCE.caasを使用します[。&lt;EXPORT-CONFIG][.&lt;EXPORT-CONFIG].json** to request JSON.
+「 **&lt;RESOURCE.cas[.」を使用します。&lt;EXPORT-CONFIG][.&lt;EXPORT-CONFIG].json** to request JSON.
 
 <table>
  <tbody>
   <tr>
    <td>リソース</td>
-   <td>/content/entitiesの下のエンティティリソース<br /> 、または/content <br /> の下のコンテンツリソース</td>
+   <td>/content/entitiesの下のエンティティリソース<br /> 、または/contentの下 <br /> のコンテンツリソース</td>
   </tr>
   <tr>
    <td>EXPORT-CONFIG</td>
-   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIGにあるエクスポート設定を指定します<br /> 。省略した場合 <br /> 、デフォルトのエクスポート設定が適用されます </p> </td>
+   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/cas/exportConfigs/EXPORT-CONFIG<br /><br /> （省略した場合、デフォルトのエクスポート設定が適用されます）にあるエクスポート設定 </p> </td>
   </tr>
   <tr>
    <td>DEPTH-INT</td>
-   <td><strong>Slingレンダリ</strong><br /><br /> ングで使用される子のレンダリング用のOPTIONAL深度再帰</td>
+   <td><strong>Slingレンダリングで使用される子のレンダリングに対するオプションの</strong><br /><br /> DEPTH再帰</td>
   </tr>
  </tbody>
 </table>
@@ -63,7 +66,7 @@ You can create a configuration node under */apps/mobileapps/caas/exportConfigs.*
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
-次の表に、エクスポート設定のプロパティを示します。
+次の表に、設定のエクスポートのプロパティを示します。
 
 <table>
  <tbody>
@@ -76,59 +79,59 @@ You can create a configuration node under */apps/mobileapps/caas/exportConfigs.*
   </tr>
   <tr>
    <td>includeComponents</td>
-   <td>文字列[]</td>
+   <td>String[]</td>
    <td>すべてを含む</td>
    <td>sling:resourceType</td>
    <td>sling:resourceTypeがJSONエクスポートから指定されたノードの詳細を除外</td>
   </tr>
   <tr>
    <td>excludeComponents</td>
-   <td>文字列[]</td>
-   <td>何も除外</td>
+   <td>String[]</td>
+   <td>何も含まない</td>
    <td>sling:resourceType</td>
-   <td>sling:resourceTypeをJSONエクスポートから指定したノードの詳細のみを含める</td>
+   <td>sling:resourceTypeがJSONエクスポートから指定されたノードについてのみ詳細を含める</td>
   </tr>
   <tr>
    <td>excludePropertyPrefixes</td>
-   <td>文字列[]</td>
-   <td>何も除外</td>
+   <td>String[]</td>
+   <td>何も含まない</td>
    <td>プロパティ接頭辞</td>
-   <td>指定した接頭辞で始まるプロパティをJSONエクスポートから除外する</td>
+   <td>JSONエクスポートから、指定したプリフィックスを持つ開始の除外プロパティ</td>
   </tr>
   <tr>
    <td>excludeProperties</td>
-   <td>文字列[]</td>
-   <td>何も除外</td>
+   <td>String[]</td>
+   <td>何も含まない</td>
    <td>プロパティ名</td>
-   <td>jsonの書き出しから指定したプロパティを除外する</td>
+   <td>JSONエクスポートから指定したプロパティを除外</td>
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>文字列[]</td>
+   <td>String[]</td>
    <td>すべてを含む</td>
    <td>プロパティ名</td>
-   <td><p>excludePropertyPrefixesが設定されている場合<br /> 、除外されるプレフィックスと一致するにもかかわらず、指定したプロパティが含まれます。</p> <p>else（除外プロパティは無視されます）は、これらのプロパティのみを含めます</p> </td>
+   <td><p>excludePropertyPrefixesが設定されている場合<br /> 、除外されるプレフィックスと一致するにもかかわらず、指定されたプロパティが含まれます。</p> <p>else（excludeプロパティは無視され、これらのプロパティのみを含めます）</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
-   <td>文字列[]</td>
+   <td>String[]</td>
    <td>すべてを含む</td>
-   <td>子名</td>
-   <td>jsonエクスポートから指定した子を除外</td>
+   <td>子の名前</td>
+   <td>指定した子をJSONエクスポートから除外</td>
   </tr>
   <tr>
    <td>excludeChildren</td>
    <td>String[]<br /> <br /> </td>
-   <td>何も除外</td>
-   <td>子名</td>
-   <td>指定した子のみをJSONエクスポートから含め、他の子を除外する</td>
+   <td>何も含まない</td>
+   <td>子の名前</td>
+   <td>JSONエクスポートから指定した子のみを含め、他を除外する</td>
   </tr>
   <tr>
    <td>renameProperties</td>
    <td>String[]<br /> <br /> </td>
    <td>名前を変更しない</td>
-   <td>&lt;実際のプロパティ名&gt;,&lt;置換プロパティ名&gt;</td>
-   <td>置換を使用してプロパティの名前を変更する</td>
+   <td>&lt;actual_property_name&gt;,&lt;replacement_property_name&gt;</td>
+   <td>置換を使用してプロパティ名を変更する</td>
   </tr>
  </tbody>
 </table>
@@ -137,7 +140,7 @@ You can create a configuration node under */apps/mobileapps/caas/exportConfigs.*
 
 Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
 
-| 名前 | resourceTypeOverrides |
+| name | resourceTypeOverrides |
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
@@ -154,10 +157,10 @@ Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
   </tr>
   <tr>
    <td>&lt;SELECTOR_TO_INC&gt;</td>
-   <td>文字列[] </td>
+   <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>次のSlingリソースタイプの場合、デフォルトのCaaS JSONエクスポートを返さないでください。<br /> リソースを次のようにレンダリングして、顧客のJSONエクスポートを返します。<br /> &lt;リソース&gt;。&lt;SELECTOR_TO_INC&gt;.json </td>
+   <td>次のSlingリソースタイプでは、デフォルトのCaaS jsonエクスポートを返さないでください。<br /> リソースを次の形式でレンダリングして、顧客のJSONエクスポートを返します。<br /> &lt;リソース&gt;.&lt;SELECTOR_TO_INC&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -187,7 +190,7 @@ Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
   </tr>
   <tr>
    <td>excludePropertyPrefixes</td>
-   <td>jcr:,sling:,cq:,oak:,page-</td>
+   <td>jcr:,sling:,cq:,oak:,pge-</td>
   </tr>
   <tr>
    <td>includeProperties</td>
@@ -211,7 +214,7 @@ Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
   </tr>
   <tr>
    <td>Sling JSONの上書き</td>
-   <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
+   <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/cas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
   </tr>
  </tbody>
 </table>
