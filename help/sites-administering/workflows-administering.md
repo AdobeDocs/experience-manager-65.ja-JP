@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '827'
+ht-degree: 82%
 
 ---
 
@@ -65,7 +68,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    >中止ステータスはユーザーアクションの結果として発生するので、正常終了と見なされます。例えば、次のような場合が当てはまります。
    >
    >* 「**終了**」アクションが使用された場合
-   >* ワークフローの対象となるページが（強制的に）削除されると、ワークフローは終了します
+   >* ワークフローの対象となるページが（強制的に）削除された場合、ワークフローは終了します
 
 
 1. 特定の項目を選択し、「**履歴を開く**」で詳細を確認します。
@@ -76,7 +79,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ワークフローが失敗した場合、AEM の&#x200B;**エラー**&#x200B;コンソールを使用してエラーの原因を調べ、特定された原因に応じて適切なアクションを取ることができます。
 
-* **エラーの詳細** 画面が開き、「**エラーメッセージ**」、「**ステップ**」および「**エラースタック**」が表示されます。
+* **失敗の詳細**：ウィンドウを開き、 
+**失敗メッセージ**、 **ステップ** 、 **失敗スタック**。
 
 * **履歴を開く** ワークフローの履歴の詳細を表示します。
 
@@ -136,7 +140,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td>Models To Purge</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>パージするワークフローモデルの ID。<br /> IDはモデルノードへのパスです。例：/conf/global/settings/workflow/models/dam/update_asset/jcr:content/modelすべてのワークフローモデルのインスタンスを削除する値を指定しません。<br /></p> <p>複数のモデルを指定するには、Web コンソールの + ボタンをクリックします。 </p> </td>
+   <td><p>パージするワークフローモデルの ID。The ID is the path to the model node, for example:<br /> /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> Specify no value to purge instances of all workflow models.</p> <p>複数のモデルを指定するには、Web コンソールの + ボタンをクリックします。 </p> </td>
   </tr>
   <tr>
    <td>Workflow Age</td>
@@ -154,7 +158,7 @@ You can set the maximum size of the inbox by configuring the **Adobe Granite Wor
 >
 >リポジトリに設定を追加する場合のサービス PID は次のとおりです。
 >
->`com.adobe.granite.workflow.core.WorkflowSessionFactory` です。
+>`com.adobe.granite.workflow.core.WorkflowSessionFactory`.
 
 | プロパティ名（Web コンソール） | OSGi のプロパティ名 |
 |---|---|
