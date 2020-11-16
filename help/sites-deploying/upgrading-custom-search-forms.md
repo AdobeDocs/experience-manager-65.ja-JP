@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1709'
+ht-degree: 81%
 
 ---
 
@@ -44,7 +47,7 @@ AEM 6.2 では、カスタマイズされた検索フォームのリポジトリ
 
 ## カスタム検索フォームのリスト {#list-of-custom-search-forms}
 
-すべてのカスタム検索フォームと、アップグレード後に必要な変更点のリストを以下に示します。の名前を指す `/conf/global/settings/cq/search/facets/sites/items`。
+すべてのカスタム検索フォームと、アップグレード後に必要な変更点のリストを以下に示します。の名前を指し `/conf/global/settings/cq/search/facets/sites/items`ます。
 
 ### Fulltext Predicate with node name &quot;fulltext&quot; {#fulltext-predicate-with-node-name-fulltext}
 
@@ -88,7 +91,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### パスブラウザーの述語 {#path-browser-predicates}
 
@@ -109,7 +112,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### タグの述語 {#tags-predicates}
 
@@ -187,7 +190,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 非表示のフィルター {#hidden-filter}
 
@@ -229,7 +232,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 範囲の述語 {#range-predicate}
 
@@ -250,7 +253,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 >[!NOTE]
 >
@@ -275,7 +278,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### スライダー範囲の述語 {#slider-range-predicate}
 
@@ -296,7 +299,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### コンポーネントの述語 {#components-predicate}
 
@@ -317,7 +320,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 作成者の述語 {#author-predicate}
 
@@ -338,7 +341,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### テンプレートの述語 {#templates-predicate}
 
@@ -359,7 +362,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ## アセット管理者の検索レール {#assets-admin-search-rail}
 
@@ -383,7 +386,7 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### MIME タイプの述語 {#mime-type-predicates}
 
@@ -392,7 +395,7 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所のように**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### ファイルサイズの述語 {#file-size-predicates}
 
@@ -434,7 +437,7 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所に**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加)
 
 ### 有効期限ステータスの述語 {#expiry-status-predicates}
 
@@ -443,7 +446,7 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所に**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加)
 
 ### メタデータの妥当性の述語 {#metadata-validity-predicates}
 
@@ -452,7 +455,7 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所に**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加)
 
 ### 評価の述語 {#rating-predicates}
 
@@ -461,7 +464,7 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/ratingpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/sliderangepredicate |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所に**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加)
 
 ### 向きの述語 {#orientation-predicate}
 
@@ -504,7 +507,7 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所に**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加)
 
 ### メインアセットの述語 {#mainasset-predicate}
 
@@ -513,4 +516,4 @@ The nodes below refer to the names in `/conf/global/settings/dam/search/facets/a
 | 6.1 のリソースタイプ | granite/ui/components/foundation/form/hidden |
 | 6.2 のリソースタイプ | granite/ui/components/coral/foundation/form/hidden |
 
-**** アクション：プロパティ `resourceType` を調整します(上記の6.**2の場所に**「/coral」を追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加)
