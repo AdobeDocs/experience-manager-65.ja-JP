@@ -11,6 +11,9 @@ discoiquuid: a81cdd53-f0fb-4ac5-b2ec-c19aeee7186e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '717'
+ht-degree: 64%
 
 ---
 
@@ -19,18 +22,18 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## 概要 {#overview}
 
-Correspondence Managementでは、レター内にエージェント署名を描画するために画像を使用することができます。エージェント署名画像を設定した後、レターの作成時に、送信者エージェントの署名としてエージェント署名画像をレンダリングできます。
+Correspondence Managementでは、レター内にエージェント署名を描画するために画像を使用することができます。エージェント署名画像を設定した後、レターの作成時に、送信者エージェントの署名としてエージェント署名画像をレターにレンダリングできます。
 
-agentSignatureImage DDE は算出された DDE として、エージェントの署名画像を表します。算出された DDE の式では、Expression Manager 構築ブロックにより公開された新しいカスタム関数を使用します。このカスタム関数は、agentID と agentFolder を入力パラメーターとして取得し、これらのパラメーターに基づき画像コンテンツを取得します。SystemContextシステムデータディクショナリは、Correspondence Managementのレターに、現在のシステムコンテキストの情報へのアクセスを提供します。 システムコンテキストには、現在ログイン中のユーザーとアクティブな設定パラメーターに関する情報が含まれます。
+agentSignatureImage DDE は算出された DDE として、エージェントの署名画像を表します。算出された DDE の式では、Expression Manager 構築ブロックにより公開された新しいカスタム関数を使用します。このカスタム関数は、agentID と agentFolder を入力パラメーターとして取得し、これらのパラメーターに基づき画像コンテンツを取得します。SystemContextシステムデータディクショナリは、Correspondence Managementのレターに、現在のシステムコンテキストの情報へのアクセスを与えます。 システムコンテキストには、現在ログイン中のユーザーとアクティブな設定パラメーターに関する情報が含まれます。
 
 画像は、cmuserroot フォルダの下に追加することができます。In [Correspondence Management Configuration Properties](/help/forms/using/cm-configuration-properties.md), using the CM User Root property you can change the folder from where agent signature image is picked up.
 
-agentFolder DDEの値は、Correspondence Management設定プロパティのCMUserRoot設定パラメーターから取得されます。 デフォルトでは、この設定パラメーターはCRXリポジトリの/content/cmUserRootを指します。 CMUserRoot設定の値は、「Configuration Properties」で変更できます。
+agentFolder DDEの値は、Correspondence Management設定プロパティのCMUserRoot設定パラメーターから取得されます。 デフォルトでは、この設定パラメーターはCRXリポジトリの/content/cmUserRootを指します。 CMUserRoot構成の値は、「Configuration Properties」で変更できます。
 また、デフォルトのカスタム関数を上書きして、ユーザー署名画像を取得するための独自のロジックを定義することもできます。
 
 ## エージェント署名画像を追加する {#adding-agent-signature-image}
 
-1. エージェント署名画像の名前と、AEMのユーザ名が一致することを確認してください。（画像のファイル名に拡張子は不要です）。
+1. エージェント署名画像の名前と、AEMのユーザ名が一致することを確認してください。（画像のファイル名に拡張子は必要ありません）。
 1. CRXで、コンテンツフォルダ内に「`cmUserRoot`」フォルダを作成します。
 
    1. `https://'[server]:[port]'/crx/de` にアクセスします。必要に応じて、管理者としてログインします。
@@ -61,7 +64,7 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
       Under the `cmUserRoot` folder, a new folder called `JohnDoe` (or the name you have given in the previous step) is created.
 
-   1. 新しく作成したフォルダをクリックします（ここでは「`JohnDoe`」）。フォルダの内容がグレー表示で表示されます。
+   1. 新しく作成したフォルダをクリックします（ここでは「`JohnDoe`」）。Content Explorerでは、フォルダの内容が暗く表示されます。
 
    1. Double-click the **jcr:content** property, set its type as **nt:resource**, and then click the green check mark to save the entry.
 
@@ -69,7 +72,7 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
       ![jcr:content property](assets/3_jcrcontentntresource.png)
 
-      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルを選択」ボタンがエントリに表示されます。 Click **Choose File** and select the image file you want to use as a logo. 画像ファイルには拡張子は不要です。
+      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルを選択」ボタンがエントリに表示されます。 Click **Choose File** and select the image file you want to use as a logo. 画像ファイルには拡張子を付ける必要はありません。
 
       ![JCR データ](assets/5_jcrdata.png)
    「**すべて保存**」をクリックします。
