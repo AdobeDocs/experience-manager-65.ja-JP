@@ -11,6 +11,9 @@ noindex: true
 redirecttarget: /content/help/en/experience-manager/6-4/mobile/using/administer-mobile-apps
 translation-type: tm+mt
 source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+workflow-type: tm+mt
+source-wordcount: '1332'
+ht-degree: 73%
 
 ---
 
@@ -47,12 +50,12 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 |---|---|
 | fieldIcon | データタイプを表すCoralUIアイコンのクラス |
 | fieldPropResourceType | データ型を設定するためのすべてのプロパティをレンダリングするコンポーネント |
-| fieldProperties | fieldPropResourceTypeがmobileapps/caas/gui/components/models/editor/datatypes/fieldの場合に使用されるプロパティコンポーネ *ントの複数値リスト* |
-| fieldResourceType | データ型の永続化されたノードのresourceType（つまり、エンティティエディターでプロパティをレンダリングするコンポーネント） |
-| fieldViewResourceType | モデルエディタービューでデータ型のレンダリングに使用するコンポーネント（このプロパティを省略した場合はfieldResourceTypeが使用されます） |
+| fieldProperties | fieldPropResourceTypeが *mobileapps/cas/gui/components/models/editor/datatypes/fieldの場合に使用されるプロパティコンポーネントの複数値リスト* |
+| fieldResourceType | データ型の持続的なノードのresourceType（つまり、エンティティエディターでプロパティをレンダリングするコンポーネント） |
+| fieldViewResourceType | モデルエディタ表示でデータ型のレンダリングに使用するコンポーネント（このプロパティを省略した場合はfieldResourceTypeが使用されます） |
 | fieldTitle | モデルエディターに表示されるデータタイプの名前 |
-| multiFieldResourceType | 複数値が選択されている場合に持続ノードで使用するリソースタイプ |
-| renderType | クライアント側レンダリングのレンダリング手がかり |
+| multiFieldResourceType | 複数値が選択された場合に持続ノードで使用するリソースタイプ |
+| renderType | クライアント側レンダリングのレンダリングのヒント |
 
 ### データタイプ設定のオーバーレイ {#data-types-config-overlay}
 
@@ -90,10 +93,10 @@ Sling リソースの統合について詳しくは、[AEM での Sling Resource
 
 | **プロパティ名** | **説明** |
 |---|---|
-| モデルのタイトル | モデル名 |
+| モデルのタイトル | モデルの名前 |
 | 説明 | モデルの説明 |
 | サムネール | モデルのサムネール画像 |
-| モデルタイプ | モデルのタイプ（単純な文字列、または実際のコンポーネントへのパス） |
+| モデルタイプ | モデルのタイプ（単純な文字列または実際のコンポーネントへのパス） |
 | 許可されている子 | このテンプレートの子として許可されているテンプレートのパス |
 | 許可された親 | このテンプレートの親として許可されているテンプレートのパス |
 
@@ -119,13 +122,13 @@ Sling リソースの統合について詳しくは、[AEM での Sling Resource
 
 単純なコンテンツ再利用のために、2 種類のシステムモデルがあらかじめ用意されています。これらのモデルは編集できません。
 
-**ページモデル** ：ページモデルは、サイトの既存のコンテンツをコンテンツサービスによる配信用に再利用するためのクイックメソッドを提供します。
+**ページモデル** ：ページモデルを使用すると、サイトの既存のコンテンツをコンテンツサービスによる配信のために再利用する簡単な方法が提供されます。
 
-ページモデルに基づくエンティティのresourceTypeは、次のとおりです。mobileapps/caas/components/data/pages
+Pagesモデルに基づくエンティティのresourceTypeは、次のとおりです。mobileapps/caas/components/data/pages
 
 パス：Sites ページへのパスです。このパス（およびその子）のコンテンツは、コンテンツサービスハンドラーによってレンダリングされます。
 
-**アセットモデル** ：アセットモデルを使用すると、アセットの既存のコンテンツをコンテンツサービスによる配信用に再利用する簡単な方法が提供されます。
+**アセットモデル** ：アセットモデルを使用すると、アセットの既存のコンテンツを、コンテンツサービスによる配信のために再利用する簡単な方法が提供されます。
 
 The resourceType of entities based on the Pages model is: *mobileapps/caas/components/data/assets.*
 
