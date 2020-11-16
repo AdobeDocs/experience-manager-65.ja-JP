@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e48e87c6-43ca-45ba-bd6b-d74c969757cd
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '437'
+ht-degree: 62%
 
 ---
 
@@ -25,25 +28,26 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. In CRXDE Lite, ceate a new node under `/apps`:
 
-   * **名前**: `acs`
-   * **タイプ**: `nt:folder`
+   * **名前**：`acs`
+   * **型**：`nt:folder`
 
 1. Create a new node under `/apps/acs`:
 
-   * **名前**: `analytics`
-   * **タイプ**: `sling:Folder`
+   * **名前**：`analytics`
+   * **型**：`sling:Folder`
 
 1. Create 2 new nodes under `/apps/acs/analytics`:
 
    * **名前**:コンポーネント
-   * **タイプ**: `sling:Folder`
+   * **型**：`sling:Folder`
+
    および
 
-   * **名前**:テンプレート
-   * **タイプ**: `sling:Folder`
+   * **名前**:templates
+   * **型**：`sling:Folder`
 
 
-1. を右クリックしま `/apps/acs/analytics/components`す。 「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
+1. を右クリックし `/apps/acs/analytics/components`ます。 「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
 
    * **ラベル**: `googleanalyticspage`
    * **タイトル**: `Google Analytics Page`
@@ -53,6 +57,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. Click **Next** twice and specify:
 
    * **許可された親:** `acs/analytics/templates/googleanalytics`
+
    Click **Next** twice and click **OK**.
 
 1. Add a property to `googleanalyticspage`:
@@ -77,73 +82,73 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. Create a new node under `/apps/acs/analytics/components/googleanalyticspage/`:
 
-   * **名前**: `dialog`
-   * **タイプ**: `cq:Dialog`
-   * **プロパティ**:
+   * **名前**：`dialog`
+   * **型**：`cq:Dialog`
+   * **プロパティ**：
 
-      * **名前**: `title`
-      * **タイプ**: `String`
+      * **名前**：`title`
+      * **型**：`String`
       * **値**: `Google Analytics Config`
-      * **名前**: `xtype`
-      * **タイプ**: `String`
+      * **名前**：`xtype`
+      * **型**：`String`
       * **値**: `dialog`
 
 1. Create a new node under `/apps/acs/analytics/components/googleanalyticspage/dialog`:
 
-   * **名前**: `items`
-   * **タイプ**: `cq:Widget`
-   * **プロパティ**:
+   * **名前**：`items`
+   * **型**：`cq:Widget`
+   * **プロパティ**：
 
-      * **名前**: `xtype`
-      * **タイプ**: `String`
+      * **名前**：`xtype`
+      * **型**：`String`
       * **値**: `tabpanel`
 
 1. Create a new node under `/apps/acs/analytics/components/googleanalyticspage/dialog/items`:
 
-   * **名前**: `items`
-   * **タイプ**: `cq:WidgetCollection`
+   * **名前**：`items`
+   * **型**：`cq:WidgetCollection`
 
 1. Create a new node under `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items`:
 
    * **名前**：tab1
-   * **タイプ**: `cq:Panel`
-   * **プロパティ**:
+   * **型**：`cq:Panel`
+   * **プロパティ**：
 
-      * **名前**: `title`
-      * **タイプ**: `String`
+      * **名前**：`title`
+      * **型**：`String`
       * **値**: `Config`
 
 1. Create a new node under `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`:
 
    * **名前**：items
-   * **タイプ**: `nt:unstructured`
-   * **プロパティ**:
+   * **型**：`nt:unstructured`
+   * **プロパティ**：
 
-      * **名前**: `fieldLabel`
+      * **名前**：`fieldLabel`
       * **種類**：string
       * **値**：アカウント ID
 
-      * **名前**: `fieldDescription`
-      * **タイプ**: `String`
+      * **名前**：`fieldDescription`
+      * **型**：`String`
       * **値**: `The account ID assigned by Google. Usually in the form UA-NNNNNN-N`
 
-      * **名前**: `name`
-      * **タイプ**: `String`
+      * **名前**：`name`
+      * **型**：`String`
       * **値**: `./accountID`
-      * **名前**: `validateOnBlur`
-      * **タイプ**: `String`
+      * **名前**：`validateOnBlur`
+      * **型**：`String`
       * **値**: `true`
-      * **名前**: `xtype`
-      * **タイプ**: `String`
+      * **名前**：`xtype`
+      * **型**：`String`
       * **値**: `textfield`
 
 1. Copy `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp` to `/apps/acs/analytics/components/googleanalyticspage/body.jsp` and change `libs` to `apps` on line 34 and make the script reference on line 79 a fully qualified path.
 1. Create a new template under `/apps/acs/analytics/templates/`:
 
-   * リソース **タイプ** = `acs/analytics/components/googleanalyticspage`
-   * ( **ラベル** =) `googleanalytics`
-   * タイ **トル**= `Google Analytics Configuration`
-   * を **許可** = `/etc/cloudservices/googleanalytics(/.*)?`
+   * ( **リソースタイプ** =) `acs/analytics/components/googleanalyticspage`
+   * ( **ラベル** =付き) `googleanalytics`
+   * ( **タイトル**=付き) `Google Analytics Configuration`
+   * ( **allowedPath** =) `/etc/cloudservices/googleanalytics(/.*)?`
    * with **allowedChildren** = `/apps/acs/analytics/templates/googleanalytics`
    * with **sling:resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage` (on template node, not the jcr:content node)
    * with **cq:designPath** = `/etc/designs/cloudservices/googleanalytics` (on jcr:content)
@@ -194,11 +199,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. Navigate to `http://localhost:4502/miscadmin#/etc/cloudservices` and create a new page:
 
    * **タイトル**: `Google Analytics`
-   * **名前**: `googleanalytics`
+   * **名前**：`googleanalytics`
+
    Go back in CRXDE Lite, and under `/etc/cloudservices/googleanalytics`, add the following property to `jcr:content`:
 
-   * **名前**: `componentReference`
-   * **タイプ**: `String`
+   * **名前**：`componentReference`
+   * **型**：`String`
    * **値**: `acs/analytics/components/googleanalytics`
 
 
@@ -206,6 +212,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * **親設定**: `/etc/cloudservices/googleanalytics`
    * **タイトル:**  `My First GA Config`
+
    「**Google Analytics 設定**」を選択し、「**作成**」をクリックします。
 
 1. **アカウント ID**（例：`AA-11111111-1`）を入力します。「**OK**」をクリックします。
