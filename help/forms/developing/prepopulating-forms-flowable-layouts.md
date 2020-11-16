@@ -1,6 +1,6 @@
 ---
-title: 編集可能なレイアウトを含むフォームの自動埋め込み
-seo-title: 編集可能なレイアウトを含むフォームの自動埋め込み
+title: 編集可能なレイアウトをFormsに自動埋め込み
+seo-title: 編集可能なレイアウトをFormsに自動埋め込み
 description: 'null'
 seo-description: 'null'
 uuid: 93ccb496-e1c2-4b79-8e89-7a2abfce1537
@@ -18,9 +18,9 @@ ht-degree: 4%
 ---
 
 
-# 編集可能なレイアウトを含むフォームの自動埋め込み {#prepopulating-forms-with-flowable-layouts1}
+# 編集可能なレイアウトをFormsに自動埋め込み {#prepopulating-forms-with-flowable-layouts1}
 
-## 編集可能なレイアウトを含むフォームの自動埋め込み {#prepopulating-forms-with-flowable-layouts2}
+## 編集可能なレイアウトをFormsに自動埋め込み {#prepopulating-forms-with-flowable-layouts2}
 
 フォームの自動埋め込みは、レンダリングされたフォーム内のユーザーにデータを表示します。 例えば、あるユーザーがユーザー名とパスワードを使用してWebサイトにログインしたとします。 認証に成功した場合、クライアントアプリケーションはユーザ情報のデータベースをクエリします。 データがフォームにマージされた後、フォームがユーザーにレンダリングされます。 その結果、ユーザーはフォーム内でパーソナライズされたデータを表示できます。
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 次の2つのXMLデータソースで、フォームの自動埋め込みを行うことができます。
 
-* XDPデータソース。XFA構文（Acrobatを使用して作成されたフォームの自動埋め込みを行うにはXFDFデータ）に準拠するXMLです。
+* XDPデータソース。XFA構文(Acrobatを使用して作成されたフォームの自動埋め込みに使用するXFDFデータ)に準拠するXMLです。
 * フォームのフィールド名と一致する名前と値のペアを含む、任意のXMLデータソース（この節の例では、任意のXMLデータソースを使用します）。
 
 自動埋め込みを行うすべてのフォームフィールドに、XML要素が存在する必要があります。 XML要素名は、フィールド名と一致する必要があります。 XML要素がフォームフィールドに対応していない場合、またはXML要素名がフィールド名と一致しない場合、XML要素は無視されます。 すべてのXML要素が指定されている限り、XML要素が表示される順序と一致させる必要はありません。
@@ -57,7 +57,7 @@ ht-degree: 4%
 
 ### 編集可能なレイアウトでのフォームの自動埋め込み {#prepopulating_forms_with_flowable_layouts-1}
 
-編集可能なレイアウトを含むフォームは、不明な量のデータをユーザーに表示する場合に役立ちます。 フォームのレイアウトはマージされるデータ量に合わせて自動的に調整されるので、固定レイアウトのフォームとは異なり、固定レイアウトやフォームのページ数を事前に決める必要はありません。
+編集可能なレイアウトを含むFormsは、不明な量のデータをユーザーに表示する場合に便利です。 フォームのレイアウトはマージされるデータ量に合わせて自動的に調整されるので、固定レイアウトのフォームとは異なり、固定レイアウトやフォームのページ数を事前に決める必要はありません。
 
 通常、フォームには実行時に取得されるデータが入力されます。 その結果、メモリ内XMLデータソースを作成し、そのデータをメモリ内XMLデータソースに直接配置することで、フォームの自動埋め込みを行うことができます。
 
@@ -104,7 +104,7 @@ ht-degree: 4%
 
 ### フォームデザインの考慮事項 {#form-design-considerations}
 
-編集可能なレイアウトを含むフォームは、Designerで作成されたフォームデザインに基づいています。 フォームデザインでは、ユーザー入力に基づく値の計算を含む、レイアウト、プレゼンテーションおよびデータ取得ルールのセットを指定します。 ルールは、データがフォームに入力されるときに適用されます。 フォームに追加されるフィールドは、フォームデザイン内のサブフォームです。 例えば、前の図に示す発注書フォームでは、各行がサブフォームです。 サブフォームを含むフォームデザインの作成について詳しくは、編集可能なレイアウトを含む発注書フォームの [作成を参照してください](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9)。
+編集可能なレイアウトを含むFormsは、Designerで作成されたフォームデザインに基づいています。 フォームデザインでは、ユーザー入力に基づく値の計算を含む、レイアウト、プレゼンテーションおよびデータ取得ルールのセットを指定します。 ルールは、データがフォームに入力されるときに適用されます。 フォームに追加されるフィールドは、フォームデザイン内のサブフォームです。 例えば、前の図に示す発注書フォームでは、各行がサブフォームです。 サブフォームを含むフォームデザインの作成について詳しくは、編集可能なレイアウトを含む発注書フォームの [作成を参照してください](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9)。
 
 ### データ・サブグループについて {#understanding-data-subgroups}
 
@@ -187,7 +187,7 @@ XMLデータソースは、フォームに固定レイアウトと編集可能�
 
 >[!NOTE]
 >
->繰り返しXML要素を含むデータソースをフォームに自動埋め込もうとし、この `RenderAtClient` オプションを「」に設定した場合、最初のデータレコードだけがフォームにマージされ `No`ます。 すべてのデータレコードを確実にフォームにマージするには、を `RenderAtClient` に設定し `Yes`ます。 この `RenderAtClient` オプションについて詳しくは、「クライアントでのフォームの [レンダリング](/help/forms/developing/rendering-forms-client.md)」を参照してください。
+>繰り返しXML要素を含むデータソースをフォームに自動埋め込もうとし、この `RenderAtClient` オプションを「」に設定した場合、最初のデータレコードだけがフォームにマージされ `No`ます。 すべてのデータレコードを確実にフォームにマージするには、を `RenderAtClient` に設定し `Yes`ます。 この `RenderAtClient` オプションについて詳しくは、「クライアントでのFormsの [レンダリング](/help/forms/developing/rendering-forms-client.md)」を参照してください。
 
 >[!NOTE]
 >
@@ -220,7 +220,7 @@ XMLデータソースは、フォームに固定レイアウトと編集可能�
 
 >[!NOTE]
 >
->FormsサービスのWSDLを使用してフォームの自動埋め込みを行う場合は、 `org.w3c.dom.Document` オブジェクトをオブジェクトに変換する必要があり `BLOB` ます。
+>FormsサービスのWSDLを使用してフォームの自動埋め込みを行う場合は、オブジェクトをオブジェクトに変換する必要があり `org.w3c.dom.Document``BLOB` ます。
 
 **事前入力されたフォームのレンダリング**
 
@@ -232,15 +232,15 @@ XMLデータソースは、フォームに固定レイアウトと編集可能�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[FormsサービスAPIのクイック開始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[FormsサービスAPIクイック開始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[フォームをレンダリングするWeb アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
+[FormsをレンダリングするWeb アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### Java APIを使用したフォームの自動埋め込み {#prepopulating-forms-using-the-java-api}
 
-Forms API(Java)を使用して、編集可能なレイアウトを含むフォームを事前入力するには、次の手順を実行します。
+FormsAPI(Java)を使用して編集可能なレイアウトを含むフォームを事前入力するには、次の手順を実行します。
 
 1. プロジェクトファイルを含める
 
@@ -264,7 +264,7 @@ Forms API(Java)を使用して、編集可能なレイアウトを含むフォ�
       ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
 
-   * フォームの静的部分に表示される各フィールドに対して最後のサブ手順を繰り返すことで、ヘッダー要素に残るす追加べての要素(XMLデータソース図では、これらのフィールドをA節に示します( [データサブグループについてを参照](#understanding-data-subgroups))。
+   * フォームの静的部分に表示される各フィールドに対して最後のサブ手順を繰り返すことで、ヘッダー要素に残るす追加べての要素(XMLデータソース図では、これらのフィールドをA節に示します。( [データサブグループについてを参照](#understanding-data-subgroups))。
    * オブジェクトの `Document``createElement` メソッドを呼び出して、XMLデータソースの詳細要素を作成します。 要素の名前を表すstring値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。次に、オブジェクトの `root``appendChild` メソッドを呼び出してルート要素に詳細要素を追加し、その詳細要素オブジェクトを引数として渡します。 detail要素に追加されるXML要素は、フォームの動的な部分に対応しています。 次のコード行に、このアプリケーションロジックを示します。
 
       ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
@@ -309,7 +309,7 @@ Forms API(Java)を使用して、編集可能なレイアウトを含むフォ�
 
 **関連トピック**
 
-[クイック開始（SOAPモード）: Java APIを使用した編集可能なレイアウトでのフォームの自動埋め込み](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用した編集可能なレイアウトでのFormsの自動埋め込み](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -317,7 +317,7 @@ Forms API(Java)を使用して、編集可能なレイアウトを含むフォ�
 
 ### WebサービスAPIを使用したフォームの自動埋め込み {#prepopulating-forms-using-the-web-service-api}
 
-Forms API（Webサービス）を使用して、編集可能なレイアウトを含むフォームを事前入力するには、次の手順を実行します。
+FormsAPI（Webサービス）を使用して編集可能なレイアウトをフォームに自動埋め込むには、次の手順を実行します。
 
 1. プロジェクトファイルを含める
 
@@ -341,7 +341,7 @@ Forms API（Webサービス）を使用して、編集可能なレイアウト�
 
       ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
-   * フォームの静的部分に表示される各フィールドに対して最後のサブ手順を繰り返すことで、ヘッダー要素に残るす追加べての要素(XMLデータソース図では、これらのフィールドをA節に示します( [データサブグループについてを参照](#understanding-data-subgroups))。
+   * フォームの静的部分に表示される各フィールドに対して最後のサブ手順を繰り返すことで、ヘッダー要素に残るす追加べての要素(XMLデータソース図では、これらのフィールドをA節に示します。( [データサブグループについてを参照](#understanding-data-subgroups))。
    * オブジェクトの `Document``createElement` メソッドを呼び出して、XMLデータソースの詳細要素を作成します。 要素の名前を表すstring値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。次に、オブジェクトの `root``appendChild` メソッドを呼び出してルート要素に詳細要素を追加し、その詳細要素オブジェクトを引数として渡します。 detail要素に追加されるXML要素は、フォームの動的な部分に対応しています。 次のコード行に、このアプリケーションロジックを示します。
 
       ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
