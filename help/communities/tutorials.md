@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
 source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 57%
 
 ---
 
@@ -45,9 +48,9 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ## How-to Instructions {#how-to-instructions}
 
-* [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
+* [AEM Communities藤堂MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVCデモでは、SCF+SRPコンポーネントを最初から開発する方法を示します。
+   ToDo MVCでは、SCF+SRPコンポーネントの開発方法を一からデモします。
 
 * [AEM Communities 使用の手引き](getting-started.md)
 
@@ -65,7 +68,7 @@ For a full list of the demo users, navigate using the Rail to **[!UICONTROL Tool
 
 [コミュニティサイトが作成されている](getting-started.md)場合、その[コミュニティユーザーグループ](users.md)にデモユーザーを割り当てることができます。
 
-***user id */*password***:
+***user id* / *password***:
 
 * aaron.mcdonald@mailinator.com／password
 * emily.andrews@mailinator.comパスワード
