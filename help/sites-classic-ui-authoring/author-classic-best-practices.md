@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
 translation-type: tm+mt
 source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 65%
 
 ---
 
@@ -21,8 +24,8 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 次の領域について、ベストプラクティスに関するドキュメントが提供されています。
 
-* [アセット](#assets)
-* [サイト](#sites)
+* [Assets](#assets)
+* [Sites](#sites)
 * [フォーム](#forms)
 
 管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
@@ -33,9 +36,9 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 以降の表では、特定のドキュメントの説明とリンクを示します。
 
-## アセット {#assets}
+## Assets {#assets}
 
-ダイナミックメディア機能やダイナミックメディアクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明します。
+ダイナミックメディア機能やダイナミックメディアクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明されています。
 
 <table>
  <tbody>
@@ -52,7 +55,7 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
   <tr>
    <td>ダイナミックイメージング</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td>
-   <td><p>ダイナミックメディア機能を使用している場合や、Dynamic Media Classicと統合している場合に、最良の結果を得るために画像にシャープを適用する方法と、画像の品質を最適化する最適な方法について説明します。 </p> </td>
+   <td><p>ダイナミックメディア機能を使用している場合、またはDynamic Media Classicと統合されている場合に、最良の結果を得るために画像にシャープを適用する方法と、画像の品質を最適化する最善の方法について説明します。 </p> </td>
   </tr>
   <tr>
    <td>多言語のアセット</td>
@@ -66,10 +69,10 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
-オーサリング：作成者 [環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
+オーサリング： [作成者の環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
 
-## Forms {#forms}
+## フォーム {#forms}
 
-アダプティブフォーム：アダプテ [ィブフォームを使用するためのベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスを説明します。
+アダプティブフォーム： [アダプティブフォームの使用に関するベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズのベストプラクティスを説明します。
 
-HTML5フォーム：HTML5フォ [ームデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作するためのベストプラクティスを説明します。
+HTML5フォーム： [HTML5フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作する上でのベストプラクティスを説明します。
