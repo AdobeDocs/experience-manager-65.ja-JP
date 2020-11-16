@@ -123,7 +123,7 @@ ht-degree: 82%
 1. 「**サブページを除外**」チェックボックスを次のように使用します。
 
    * オン：選択したページのライブコピーのみが作成されます（シャローライブコピー）
-   * 未選択： 選択したページのすべての子孫を含むライブコピーの作成（ディープライブコピー）
+   * 未選択：選択したページのすべての子孫を含むライブコピーの作成（ディープライブコピー）
 
 1. （オプション）ライブコピーに使用する 1 つ以上のロールアウト設定を指定するには、「**ロールアウトの設定**」ドロップダウンリストで選択します。選択した設定がドロップダウンセレクターの下に表示されます。
 1. 「**作成**」をクリックまたはタップします。確認メッセージが表示されます。ここで「**開く**」または「**完了**」のいずれかを選択します。
@@ -140,11 +140,11 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 サイトを作成する場合は、以下のプロパティに値を指定します。
 
-* **初期言語**: ライブコピーに含めるブループリントソースの言語ブランチ。
+* **初期言語**:ライブコピーに含めるブループリントソースの言語ブランチ。
 * **初期の章**：ライブコピーに含めるブループリントの言語ブランチの子ページ。
 * **宛先のパス**：ライブコピーサイトのルートページの場所。
 * **タイトル**：ライブコピーサイトのルートページのタイトル。
-* **名前**: （オプション）ライブコピーのルートページを格納するJCRノードの名前。 デフォルト値はタイトルに基づいています。
+* **名前**:（オプション）ライブコピーのルートページを格納するJCRノードの名前。 デフォルト値はタイトルに基づいています。
 * **サイトの所有者**：（オプション）
 * **ライブコピー**：ソースサイトとのライブの関係を確立する場合にこのオプションを選択します。このオプションを選択しない場合、ブループリントのコピーは作成されますが、後でソースと同期されることはありません。
 * **ロールアウトの設定**：（オプション）ライブコピーの同期に使用するロールアウト設定を 1 つ以上選択します。By default, the rollout configurations are inherited from the blueprint; see [Specifying the Rollout Configurations to Use](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) for more details.
@@ -233,7 +233,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    ![Blueprintの展開](assets/rollout-blueprint.png)
 
-ロールアウトは非同期ジョブとして処理され、Async Jobs Statusダッシュボード [**(Async Jobs Status **](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations))でチェックできます。Global Navigation**->**tools**-> Tools **- Operations Operations - Operations****** Jobs **
+Rollouts are processed as asynchronous jobs and can be checked in the [**Async Jobs Status** dashboard](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) at **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**
 
 >[!NOTE]
 >
@@ -241,7 +241,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 #### 参照レールからのブループリントのロールアウト {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. **サイト** コンソールで、Blueprintのページを選択し、(ツールバーから **[)](/help/sites-authoring/basic-handling.md#references)**参照パネルを開きます。
+1. **サイト** コンソールで、Blueprintのページを選択し、(ツールバーから **[)](/help/sites-authoring/basic-handling.md#references)** 参照パネルを開きます。
 1. リストから「**ブループリント**」オプションを選択し、このページに関連付けられているブループリントを表示します。
 1. リストから必要なブループリントを選択します。
 1. 「**ロールアウト**」をクリックまたはタップします。
@@ -259,7 +259,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 1. これらの詳細を確認したら、「**ロールアウト**」を選択してアクションを実行します。
 
-ロールアウトは非同期ジョブとして処理され、Async Jobs Statusダッシュボード [**(Async Jobs Status **](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations))でチェックできます。Global Navigation**->**tools**-> Tools **- Operations Operations - Operations****** Jobs **
+Rollouts are processed as asynchronous jobs and can be checked in the [**Async Jobs Status** dashboard](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) at **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**
 
 >[!NOTE]
 >
@@ -279,7 +279,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    ![Blueprintの展開](assets/rollout-blueprint.png)
 
-ロールアウトは非同期ジョブとして処理され、Async Jobs Statusダッシュボード [**(Async Jobs Status **](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations))でチェックできます。Global Navigation**->**tools**-> Tools **- Operations Operations - Operations****** Jobs **
+Rollouts are processed as asynchronous jobs and can be checked in the [**Async Jobs Status** dashboard](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) at **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**
 
 >[!NOTE]
 >
@@ -484,7 +484,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 To enable inheritance for a component, click or tap the **Re-enable Inheritance** icon on the component toolbar.
 
-![image](do-not-localize/chlimage_1-9.png)
+![画像](do-not-localize/chlimage_1-9.png)
 
 ### ライブコピーページ上のコンポーネントの順序の変更 {#changing-the-order-of-components-on-a-live-copy-page}
 
@@ -525,7 +525,7 @@ To enable inheritance for a component, click or tap the **Re-enable Inheritance*
 1. Open the properties of the live copy page using either the **View Properties** option of the **Sites** console or **Page Information** icon on the page toolbar.
 1. プロパティの継承をキャンセルするには、プロパティの右側に表示されるリンクアイコンをクリックまたはタップします。
 
-   ![image](do-not-localize/chlimage_1-10.png)
+   ![画像](do-not-localize/chlimage_1-10.png)
 
 1. **継承をキャンセル**&#x200B;確認ダイアログで、「**はい**」をクリックまたはタップします。
 
@@ -533,7 +533,7 @@ To enable inheritance for a component, click or tap the **Re-enable Inheritance*
 
 To enable inheritance for a property, click or tap the **Revert Inheritance** icon that appears next to the property.
 
-![image](do-not-localize/chlimage_1-11.png)
+![画像](do-not-localize/chlimage_1-11.png)
 
 ### ライブコピーページのリセット {#resetting-a-live-copy-page}
 
@@ -569,7 +569,7 @@ To enable inheritance for a property, click or tap the **Revert Inheritance** ic
 To track the changes you have made, you can view the blueprint page in **References** and compare it with its live copy page:
 
 1. **サイト**&#x200B;コンソールで、[ブループリントページまたはライブコピーページに移動し、ページを選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. **[参照](/help/sites-authoring/basic-handling.md#references)**パネルを開き、次のいずれかを選択します。
+1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開き、次のいずれかを選択します。
 
    * **Blueprint** （ライブコピーページが選択された場合）
    * **ライブコピー** （BluePrintページが選択された場合）
