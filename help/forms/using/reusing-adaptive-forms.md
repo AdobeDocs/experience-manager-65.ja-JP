@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: ef564750-f107-41cb-887e-fc6d22b7d32e
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 73%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 次のいずれかの方法を使用して、アダプティブフォームをコピーします。
 
-1. クイックアク ![ションからaem6forms_copy](assets/aem6forms_copy.png) アイコンをクリックします。
+1. クイックアクションから ![aem6forms_copy](assets/aem6forms_copy.png) アイコンをクリックします。
 
    >[!NOTE]
    >
@@ -51,7 +54,7 @@ Clicking the copy action automatically exits the selection mode and makes the pa
 
 同じフォルダー内に貼り付ける場合、または貼り付け先のフォルダー内に同じノード名（CRX リポジトリへの保存に使用される名前）の別のファイルがある場合は、接尾辞に 1 が追加されます（例えば、myaf は myaf1 となり、同じ場所に myaf1 がある場合は myaf が myaf2 になります）。その他のプロパティはすべて元のアダプティブフォームと同じになります。
 
-aem6forms_pasteを貼り付け ![アイコンをクリックすると](assets/aem6forms_paste.png) 、再び非表示になります。 一度に行える貼り付け操作は一回だけです。同じアセットのコピーを再度作成するには、もう一度コピーします。
+貼り付けアイコン ![aem6forms_paste](assets/aem6forms_paste.png) （貼り付け）をクリックすると、再び非表示になります。 一度に行える貼り付け操作は一回だけです。同じアセットのコピーを再び作成するには、もう一度コピーします。
 
 ### 新しいアダプティブフォームのコンテンツの変更 {#change-contents-of-new-adaptive-form}
 
@@ -61,7 +64,7 @@ aem6forms_pasteを貼り付け ![アイコンをクリックすると](assets/ae
 
    タイトルや説明など、アダプティブフォームのメタデータプロパティを変更できます。For more details about metadata properties and how they can be changed, see [Managing Form Metadata](/help/forms/using/manage-form-metadata.md)
 
-1. **XFA/XSDベースのアダプティブフォームのXFA/XSDの変更：**
+1. **XFA/XSDベースのアダプティブFormsのXFA/XSDの変更：**
 
    アダプティブフォームで使用する XFA/XSD を変更できます。これらのアダプティブフォームの変更方法について詳しくは、「[フォームメタデータの管理](/help/forms/using/manage-form-metadata.md)」を参照してください。
 
