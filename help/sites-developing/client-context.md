@@ -12,6 +12,9 @@ discoiquuid: c881ad66-bcc3-4f99-b77f-0944c23e2d29
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '3023'
+ht-degree: 83%
 
 ---
 
@@ -45,7 +48,7 @@ ClientContext フレームワークが提供する [JavaScript API](/help/sites-
 
 セッションストアのデータはクライアント上に残ります。ClientContext はデータをサーバーに書き戻しません。データをサーバーに送信するには、フォームを使用するか、カスタム JavaScript を作成してください。
 
-各セッションストアは、プロパティと値のペアのコレクションです。 セッションストアは、（あらゆる種類の）データのコレクション、すなわちデザイナーや開発者が決める概念的意味を表します。次の例のjavascriptコードは、セッションストアに含まれる可能性のあるプロファイルデータを表すオブジェクトを定義します。
+各セッションストアは、プロパティと値のペアのコレクションです。 セッションストアは、（あらゆる種類の）データのコレクション、すなわちデザイナーや開発者が決める概念的意味を表します。次の例のjavascriptコードは、セッションストアに含まれるプロファイルデータを表すオブジェクトを定義します。
 
 ```
 {
@@ -88,7 +91,7 @@ ClientContext フレームワークが提供する [JavaScript API](/help/sites-
 
 [ターゲット設定されたコンテンツ](/help/sites-authoring/content-targeting-touch.md)の配信にはプロファイル情報も使用します。
 
-![clientcontext_targetcontentdelivery](assets/clientcontext_targetedcontentdelivery.png) ![clientcontext_targetedcontentdeliverydetail](assets/clientcontext_targetedcontentdeliverydetail.png)
+![clientcontext_targetedcontentdelivery](assets/clientcontext_targetedcontentdelivery.png) ![clientcontext_targetedcontentdeliverydetail](assets/clientcontext_targetedcontentdeliverydetail.png)
 
 ## ページへの ClientContext の追加 {#adding-client-context-to-a-page}
 
@@ -142,7 +145,7 @@ ClientContext に追加または ClientContext から取得する必要がある
 * ` [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)`:これらのオブジェクトはページDOMにのみ存在します。 データはページが存続する間、作成され、保持されます。
 * ` [CQ_Analytics.PerstistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)`：このタイプのオブジェクトはページ DOM 内に存在し、ブラウザーストレージまたは cookie に保持されます。データは、ページおよびユーザーセッションをまたがって使用できます。
 
-APIは、JSONデータまたはJSONPデータの格納に特化した、次のクラスの拡張も提供します。
+また、JSONデータまたはJSONPデータの格納に特化した次のクラスの拡張も提供します。
 
 * セッション限定オブジェクト：[CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonstore) および [CQ_Analytics.JSONPStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonpstore)。
 
@@ -300,7 +303,7 @@ The `/libs/cq/personalization/components/contextstores/profiledata` context stor
 
 genericstore コンポーネントを使用してストアデータをレンダリングするには、以下を実行する必要があります。
 
-* パーソナライゼーション：storeRendererTagタグをコンポーネントのJSPスクリプトに追加して、セッションストアの名前を識別します。
+* session store追加の名前を識別するためのコンポーネントJSPスクリプトへのpersonalization:storeRendererTagタグ。
 * セッションストアクラスにレンダラーメソッドを実装します。
 
 #### genericstore セッションストアの識別 {#identifying-the-genericstore-session-store}
@@ -505,7 +508,7 @@ CQ アプリケーションを作成し、ジオロケーションコンポー�
 
 1. Right-click the `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` node and click Copy.
 1. Right-click the `/apps/myapp/contextstores/geoloc` node and click paste.
-1. /apps/myapp/contextstores/geoloc/dialog/items/items/tab1/itemsノードの下にあるすべての子ノードを削除します。
+1. /apps/myapp/contextstores/geoloc/dialog/items/items/tab1/itemsノードの下のすべての子ノードを削除します。
 
    * store
    * properties
@@ -520,9 +523,9 @@ CQ アプリケーションを作成し、ジオロケーションコンポー�
 
    | 名前 | タイプ | 値 |
    |---|---|---|
-   | cls | 文字列 | x-form-fieldset-description |
-   | text | 文字列 | ジオロケーションコンポーネントでは設定する必要がありません。 |
-   | xtype | 文字列 | static |
+   | cls | String | x-form-fieldset-description |
+   | text | String | ジオロケーションコンポーネントでは設定する必要がありません。 |
+   | xtype | String | static |
 
 1. 「すべて保存」をクリックします。
 
@@ -592,7 +595,7 @@ ClientContext でストアデータをレンダリングするには、ジオロ
 ページの読み込み時に初期化されるように、ロケーションストアコンポーネントを ClientContext に追加します。
 
 1. Open the Geometrixx Outdoors home page on the author instance ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
-1. Ctrl-Alt-c(Windows)またはControl-Option-c(Mac)をクリックして、「Client Context」を開きます。
+1. Ctrl-Alt-c(Windows)またはControl-Option-c(Mac)をクリックして、「クライアントコンテキスト」を開きます。
 1. ClientContext の上部にある編集アイコンをクリックして、ClientContext デザイナーを開きます。
 
    ![](do-not-localize/chlimage_1.png)
@@ -604,7 +607,7 @@ ClientContext でストアデータをレンダリングするには、ジオロ
 編集モードで Geometrixx Outdoors のホームページを開き、ClientContext を開いてロケーションストアコンポーネントのデータを表示します。
 
 1. Geometrixx Outdoors サイトの英語ページを開きます。([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))
-1. Client Contextを開くには、Ctrl + Alt + cキー(Windows)またはControl + Option + cキー(Mac)を押します。
+1. クライアントコンテキストを開くには、Ctrl-Alt-c(Windows)またはControl-Option-c(Mac)を押します。
 
 ## カスタマイズされた ClientContext の作成 {#creating-a-customized-client-context}
 
@@ -614,13 +617,13 @@ ClientContext でストアデータをレンダリングするには、ジオロ
 
 * サブフォルダ：
    `/content`
-には、カスタマイズされたクライアントコンテキストのコンテンツが含まれます。
+には、カスタマイズしたクライアントコンテキストの内容が含まれます。
 
-* フォルダ：
+* フォルダー：
    `/contextstores`
 コンテキストストアに対して異なる設定を定義できます。
 
 To use your customized client context, edit the property
 `path`
-in the design style of the client context component, as included in the page template. 例えば、次の標準の場所として使用できます。
+in the design style of the client context component, as included in the page template. 例えば、次の場所の標準の場所として使用できます。
 `/libs/cq/personalization/components/clientcontext/design_dialog/items/path`
