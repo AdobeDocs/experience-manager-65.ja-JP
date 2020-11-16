@@ -44,7 +44,7 @@ In AEM Forms workspace, PDFTaskForm view communicates with the `FormBridge`javas
 
 このメソッドは、親フレームと I フレーム間の標準的な通信方法です。以前に開いていた PDF フォームからの既存のイベントリスナーは、新しく追加する前に削除されます。この削除では、タスクの詳細表示でフォームタブと履歴タブを切り替えることも考慮しています。
 
-**レンダリングされた PDF 内の pdf.html -`FormBridge`javascript**
+**レンダリングされた PDF 内の pdf.html - `FormBridge` javascript**
 
 /を使用する通信 `pdfObject.postMessage` `pdfObject.messageHandler`
 
