@@ -11,6 +11,9 @@ discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 76%
 
 ---
 
@@ -29,8 +32,8 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 * 目的のデータソースから取得した XML データの URL（cmDataUrl パラメーターを使用）
 
-例えば、カスタムポータルでは、URLを\
-`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`に含まれていない場合は、ポータル上のリンクからのhrefになります。
+例えば、カスタムポータルでは、\
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`は、ポータル上のリンクからのhrefになる場合があります。
 
 >[!NOTE]
 >
@@ -48,8 +51,8 @@ Another (and a more secure) way to call the Create Correspondence application co
 
 | **名前** | **タイプ** | **説明** |
 |---|---|---|
-| cmLetterInstanceId | 文字列 | レターインスタンスの識別子。 |
-| cmLetterId | 文字列 | レターテンプレートの名前です。 |
+| cmLetterInstanceId | String | レターインスタンスの識別子。 |
+| cmLetterId | String | レターテンプレートの名前です。 |
 
 テーブル中のパラメーターの順序が、レターの読み込みに使用されるパラメーターの優先順位を指定します。
 
@@ -59,7 +62,7 @@ Another (and a more secure) way to call the Create Correspondence application co
  <tbody>
   <tr>
    <td><strong>名前</strong></td> 
-   <td><strong>タイプ</strong></td> 
+   <td><strong>型</strong></td> 
    <td><strong>説明</strong></td> 
   </tr>
   <tr>
@@ -69,7 +72,7 @@ Another (and a more secure) way to call the Create Correspondence application co
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>レターインスタンスで使用可能な xml データを使用します。</td> 
   </tr>
   <tr>
@@ -88,7 +91,7 @@ Another (and a more secure) way to call the Create Correspondence application co
  <tbody>
   <tr>
    <td><strong>名前</strong></td> 
-   <td><strong>タイプ</strong></td> 
+   <td><strong>型</strong></td> 
    <td><strong>説明</strong></td> 
   </tr>
   <tr>
@@ -104,4 +107,4 @@ Another (and a more secure) way to call the Create Correspondence application co
  </tbody>
 </table>
 
-cmDataURLにhttpまたはcqプロトコルを使用する場合、http/cqのURLは匿名でアクセスできる必要があります。
+cmDataURLにhttpまたはcqプロトコルを使用している場合、http/cqのURLは匿名でアクセスできる必要があります。
