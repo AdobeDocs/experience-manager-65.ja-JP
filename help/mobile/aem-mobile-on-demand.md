@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: cc97a926-d893-46a9-8aea-b56cbee5df01
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 47%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->If you are not using AEM as your content managment source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>If you are not using AEM as your content managment source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
@@ -30,7 +33,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >To Set up your environment for AEM Mobile On-Demand Services, see [AEM Mobile Application Dashboard or the Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-An **AEM developer** extends and creates custom web templates and components to enable the *AEM Author* to create beautiful and engaging mobile experiences. これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけではありません。ただし、デバイスとAEMサーバー（任意のリモートサーバー）の両方にオムニチャネルサービスエンドポイントと通信します。 AEM&#39;s built-in content editor is used by *AEM Authors* to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
+An **AEM developer** extends and creates custom web templates and components to enable the *AEM Author* to create beautiful and engaging mobile experiences. これらのテンプレートとコンポーネントは、モバイルアプリの世界向けに最適化されているだけではありません。ただし、デバイスとAEMサーバ（任意のリモートサーバ）の両方に対して、オムニチャネルサービスエンドポイントと通信します。 AEM&#39;s built-in content editor is used by *AEM Authors* to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
 
 AEM 開発者は、AEM Mobile On-Demand Services を使用してアプリを作成するときに以下のタスクを担当します。
 
