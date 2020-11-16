@@ -24,8 +24,8 @@ ht-degree: 6%
 
 Form Data Integrationサービスでは、データをPDFフォームに読み込んだり、PDFフォームからデータを書き出したりできます。 インポート操作とエクスポート操作では、次の2種類のPDF formsがサポートされています。
 
-* Acrobatフォーム（Acrobatで作成）は、フォームフィールドを含むPDFドキュメントです。
-* Adobe XMLフォーム（Designerで作成）は、XML Adobe XMLフォームアーキテクチャ(XFA)に準拠するPDFドキュメントです。
+* Acrobatフォーム(Acrobatで作成)は、フォームフィールドを含むPDFドキュメントです。
+* AdobeXMLフォーム（Designerで作成）は、XMLAdobeXMLFormsアーキテクチャ(XFA)に準拠するPDFドキュメントです。
 
 フォームデータは、PDFフォームの種類に応じて、次のいずれかの形式で存在する場合があります。
 
@@ -49,7 +49,7 @@ Designerで作成されたフォームにデータを読み込むには、有効
 
 ![ie_ie_loanformdata](assets/ie_ie_loanformdata.png)
 
-このフォームにデータ値を読み込むには、フォームに対応する有効なXDP XMLデータソースが必要です。 任意のXMLデータソースを使用して、Form Data Integrationサービスを使用してデータをフォームに読み込むことはできません。 任意のXMLデータソースとXDP XMLデータソースの違いは、XDPデータソースがXMLフォームアーキテクチャ(XFA)に準拠していることです。 次のXMLは、住宅ローン申し込みフォームの例に対応するXDP XMLデータソースを表しています。
+このフォームにデータ値を読み込むには、フォームに対応する有効なXDP XMLデータソースが必要です。 任意のXMLデータソースを使用して、Form Data Integrationサービスを使用してデータをフォームに読み込むことはできません。 任意のXMLデータソースとXDP XMLデータソースの違いは、XDPデータソースがXMLFormsアーキテクチャ(XFA)に準拠していることです。 次のXMLは、住宅ローン申し込みフォームの例に対応するXDP XMLデータソースを表しています。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8" ?>
@@ -117,7 +117,7 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 **PDFフォームの参照**
 
-PDFフォームにデータを読み込むには、Designerで作成されたXMLフォームまたはAcrobatで作成されたAcrobatフォームを参照する必要があります。
+PDFフォームにデータを読み込むには、Designerで作成したXMLフォームまたはAcrobatで作成したAcrobatフォームを参照する必要があります。
 
 **XMLデータソースの参照**
 
@@ -129,7 +129,7 @@ PDFフォームと有効なXMLデータソースを参照した後、データ�
 
 **PDFフォームをPDFファイルとして保存する**
 
-フォームにデータを読み込んだ後、フォームをPDFファイルとして保存できます。 PDFファイルとして保存すると、ユーザーはAdobe ReaderまたはAcrobatでフォームを開き、読み込んだデータを含むフォームを確認できます。
+フォームにデータを読み込んだ後、フォームをPDFファイルとして保存できます。 PDFファイルとして保存すると、ユーザーはAdobe ReaderまたはAcrobatでフォームを開いて、読み込んだデータを含むフォームを表示できます。
 
 **関連トピック**
 
@@ -186,7 +186,7 @@ Form Data Integration API(Java)を使用してフォームデータを読み込�
 
 [手順の概要](importing-exporting-data.md#summary-of-steps)
 
-[クイック開始（SOAPモード）: Java APIを使用したフォームデータの読み込み](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフォームデータの読み込み](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -202,17 +202,17 @@ Form Data Integration API（Webサービス）を使用してフォームデー�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Form Data Integrationサービスクライアントを作成します。
 
    * Create a `FormDataIntegrationClient` object by using its default constructor.
-   * Create a `FormDataIntegrationClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * Create a `FormDataIntegrationClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `FormDataIntegrationClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `FormDataIntegrationClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `FormDataIntegrationClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `FormDataIntegrationClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -346,7 +346,7 @@ Form Data Integration API(Java)を使用してフォームデータを書き出�
 
 [手順の概要](importing-exporting-data.md#summary-of-steps)
 
-[クイック開始（SOAPモード）: Java APIを使用したフォームデータの書き出し](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したフォームデータの書き出し](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -360,17 +360,17 @@ Form Data Integration API（Webサービス）を使用してフォームデー�
 
    MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
 
-   * サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   * AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Form Data Integrationサービスクライアントを作成します。
 
    * Create a `FormDataIntegrationClient` object by using its default constructor.
-   * Create a `FormDataIntegrationClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * Create a `FormDataIntegrationClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `FormDataIntegrationClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `FormDataIntegrationClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `FormDataIntegrationClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `FormDataIntegrationClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
