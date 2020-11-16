@@ -26,9 +26,9 @@ AEMワークフローモデルでは、次のことができます。
 
 * [データ型に格納する情報型に基づいて](../../forms/using/variable-in-aem-workflows.md#create-a-variable) 、データ型の変数を作成します。
 * [変数の値を設定するには](../../forms/using/variable-in-aem-workflows.md#set-a-variable) 、「変数を設定」ワークフローの手順を使用します。
-* [すべてのAEM Formsワークフロー手順で変数を使用して](../../forms/using/variable-in-aem-workflows.md#use-a-variable) 、保存された値を取得し、OR分割とGOTOの手順でルーティング式を定義します。
+* [すべてのAEM Formsワークフロー手順で変数](../../forms/using/variable-in-aem-workflows.md#use-a-variable) を使用して、保存された値を取得し、OR分割とGOTOの手順でルーティング式を定義します。
 
-次のビデオでは、AEMワークフローモデルで変数を作成、設定、使用する方法を示します。
+次のビデオでは、AEMワークフローモデルで変数を作成、設定および使用する方法を示します。
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
@@ -36,9 +36,9 @@ AEMワークフローモデルでは、次のことができます。
 
 ## 変数の作成 {#create-a-variable}
 
-変数は、ワークフローモデルのサイドキックにある「変数」セクションを使用して作成します。 AEMワークフロー変数は次のデータ型をサポートしています。
+変数は、ワークフローモデルのサイドキックにある「変数」セクションを使用して作成します。 AEMワークフロー変数は、次のデータ型をサポートしています。
 
-* **プリミティブデータ型**: 長い、重複、ブール、日付、文字列
+* **プリミティブデータ型**:長い、重複、ブール、日付、文字列
 * **複雑なデータ型**: [ドキュメント](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、 [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、 [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)、フォームデータモデルの各インスタンス。
 
 >[!NOTE]
@@ -49,7 +49,7 @@ AEMワークフローモデルでは、次のことができます。
 
 次の手順を実行して、変数を作成します。
 
-1. AEMインスタンスで、ツール/ワークフロー/モデルに移動 ![](/help/forms/using/assets/hammer.png) します。
+1. AEMインスタンスで、ツール ![](/help/forms/using/assets/hammer.png) /ワークフロー/モデルに移動します。
 1. 「 **[!UICONTROL 作成]** 」をタップし、ワークフローモデルのタイトルと名前（オプション）を指定します。 モデルを選択し、「 **[!UICONTROL 編集]**」をタップします。
 1. ワークフローモデルのサイドキックにある変数アイコンをタップし、「 **[!UICONTROL 追加変数]**」をタップします。
 
@@ -102,7 +102,7 @@ AEMワークフローモデルでは、次のことができます。
 1. 「 **Map Variable** 」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。 マッピングモードは、変数のタイプに応じて異なります。
 1. 意味のある式を行うために、より多くの変数をマッピングします。 Tap ![done_icon](assets/done_icon.png) to save the changes.
 
-### 例1: XML変数をクエリして文字列変数の値を設定する {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
+### 例1:XML変数をクエリして文字列変数の値を設定する {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
 XMLファイルを保存するXML型の変数を選択します。 XML変数をクエリして、XMLファイルで使用可能なプロパティの文字列変数の値を設定します。 XML変数 **フィールドに対してXPATHを** 指定を使用して、string変数に格納するプロパティを定義します。
 
@@ -110,7 +110,7 @@ XMLファイルを保存するXML型の変数を選択します。 XML変数を�
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "変数の値の設定")
 
-### 例2: 式を使用して他の変数に基づいた値を格納する {#example2}
+### 例2:式を使用して他の変数に基づいた値を格納する {#example2}
 
 式を使用して変数の合計を計算し、結果を変数に格納します。
 
@@ -151,7 +151,7 @@ For more information, see [adaptive forms rule editor](../../forms/using/rule-ed
 
 ### 変数のサポートを含むワークフロー手順 {#workflow-steps-with-support-for-variables}
 
-「ステップへ移動」(OR Split)ステップと、すべてのAEM Formsワークフローステップで変数がサポートされています。
+「移動先」、「分割」の各ステップと、すべてのAEM Formsワークフローステップで、変数がサポートされています。
 
 #### OR分割ステップ {#or-split-step}
 
@@ -183,9 +183,9 @@ OR分割の手順と同様に、ルール定義、ECMAスクリプトまたは�
 
 Goto手順でのルール定義の使用例については、Forループの [シミュレートを参照してください](/help/sites-developing/workflows-step-ref.md#simulateforloop)。
 
-#### フォームワークフロー中心のワークフローステップ {#forms-workflow-centric-workflow-steps}
+#### Formsワークフロー中心のワークフローの手順 {#forms-workflow-centric-workflow-steps}
 
-すべてのAEM Formsワークフロー手順で、変数がサポートされています。 For more information, see [Forms-centric workflow on OSGi](../../forms/using/aem-forms-workflow-step-reference.md).
+すべてのAEM Formsワークフローステップで、変数がサポートされています。 For more information, see [Forms-centric workflow on OSGi](../../forms/using/aem-forms-workflow-step-reference.md).
 
 ### 変数をサポートしないワークフロー手順 {#workflow-steps-without-support-for-variables}
 
@@ -203,7 +203,7 @@ ECMAスクリプトで次のAPIを使用して、データ型に基づいて既�
 | フォームデータモデル | Packages.com.adobe.aem.aderame.api.FormDataModelInstance fdmObject = workItem.getWorkflowData().get(variableName, Packages.com.adobe.aem.api.FormDataModelInstance.class); |
 | JSON | Packages.com.gogoogle.gson.JsonObject jsonObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.google.gson.JsonObject.class); |
 
-ドキュメントおよびフォームデータモデルの変数データ型に [](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) AEM Formsアドオンパッケージが必要です。
+ドキュメントおよびフォームデータモデルの変数データ型には [AEM Formsアドオンパッケージが必要です](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 。
 
 **例**
 
