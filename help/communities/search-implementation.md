@@ -221,7 +221,7 @@ curl -X POST http://localhost:4502/services/social/srp/cleanup?path=/content/use
 
 Solrクエリの問題のトラブルシューティングに役立つには、
 
-`com.adobe.cq.social.srp.impl.SocialSolrConnector`。
+`com.adobe.cq.social.srp.impl.SocialSolrConnector`.
 
 実際の Solr クエリが、デバッグログに URL エンコードされて表示されます。
 
