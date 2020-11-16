@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 5c8971ab-b07c-4131-b4cb-f34c52425014
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 68%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!CAUTION]
 >
->標準搭載のアプリテンプレートを使用しない場合は、新しいアプリコンテンツをOTAに公開できるようにするには、コンテンツ同期ハンドラーを設定する必要があります。
+>標準搭載のアプリテンプレートを使用していない場合は、新しいアプリコンテンツをOTAに公開できるようにするには、コンテンツ同期ハンドラーを設定する必要があります。
 >
 >See [Mobile with Content Sync](/help/mobile/phonegap-contentsync.md) in Developer&#39;s section for more details.
 
@@ -69,11 +72,11 @@ Once *AEM Authors* have added or modified content through the Manage Content Til
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
-次に、右上にある「**ステージ**」アクションを選択し、新しいコンテンツ更新の作成中に設定します。適切な更新情報を追加し、「完了」を押します。
+次に、右上にある「**ステージ**」アクションを選択し、新しいコンテンツ更新の作成中に設定します。適切な追加更新情報を入力し、「完了」を押します。
 
 ![chlimage_1-164](assets/chlimage_1-164.png)
 
-コンテンツ同期&#x200B;**&#x200B;ハンドラーにより、差分（変更内容のみ&#x200B;**&#x200B;のパッケージ）を形成することによって、必要なパッケージが作成されます。完了すると、このアップデートコンテンツパッケージは次のようにステージングされます。
+コンテンツ同期&#x200B;**&#x200B;ハンドラーにより、差分（変更内容のみ&#x200B;**&#x200B;のパッケージ）を形成することによって、必要なパッケージが作成されます。完了したら、このアップデートコンテンツパッケージは次のようにステージングされました。
 
 コンテンツに対する更新のステージングによって、OTA でモバイルデバイスに公開する前に、複数の更新を行うことができます。
 
@@ -91,7 +94,7 @@ Once *AEM Authors* have added or modified content through the Manage Content Til
 
 ### 次の手順 {#the-next-steps}
 
-アプリケーションダッシュボードでのアプリケーションコンテンツの作成と管理について詳しくは、他のオーサリングロールに関する次のリソースを参照してください。
+アプリケーションダッシュボードでのアプリコンテンツの作成と管理について詳しくは、次の他のオーサリングロールのリソースを参照してください。
 
 * [アプリを管理タイル](/help/mobile/phonegap-app-details-tile.md)
 * [アプリのメタデータの編集](/help/mobile/phonegap-editmetadata.md)
