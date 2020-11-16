@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1200'
+ht-degree: 88%
 
 ---
 
@@ -37,7 +40,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <th>説明</th>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用される識別子です。例えば、このプロパティはホストアプリケーションの名前を指定します。</td>
   </tr>
   <tr>
@@ -132,7 +135,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>click : function()</td>
-   <td>フィールドにフォーカスし、XFA_CLICK_イベントを呼び出します。</td>
+   <td>フォーカスをフィールドに移し、XFA_CLICK_イベントを呼び出します。</td>
   </tr>
   <tr>
    <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>erorrMessage: string </em>representing the error<br /> <em>errorType: string (“warning”/”error”)</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
@@ -147,7 +150,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 
 ## フィールドのタイプに固有のオプション {#options-specific-to-type-of-field}
 
-すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットがその特定のフィールドのガイドラインに従う必要があります。
+すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットはその特定のフィールドのガイドラインに従う必要があります。
 
 ### TextEdit: Text Field {#textedit-text-field}
 
@@ -213,7 +216,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td><p>addItem:<em> function(itemValues)<br /> itemValues: object containing the display and save value <br /> {sDisplayVal: &lt;displayValue&gt;, sSaveVal: &lt;save Value&gt;}</em></p> </td>
-   <td>アイテムをリストに追加</td>
+   <td>リストに項目を追加します。</td>
   </tr>
   <tr>
    <td>deleteItem<em>: function(nIndex)<br /> nIndex：リストから削除する項目のインデックス<br /> </em><br /> <br /> </td>
@@ -250,11 +253,11 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>states</td>
-   <td><p>許可される状態の数。 </p> <p>アダプティブフォームの場合は2つ（オン、オフ）、HTML5フォームの場合は3つ（オン、オフ、中間）。</p> </td>
+   <td><p>許可される状態の数。 </p> <p>アダプティブフォームの場合は2つ（オン、オフ）、HTML5フォームの場合は3つ（オン、オフ、中間）です。</p> </td>
   </tr>
   <tr>
    <td>state</td>
-   <td><p>要素の現在の状態です。</p> <p>アダプティブフォームの場合は2つ（オン、オフ）、HTML5フォームの場合は3つ（オン、オフ、中間）。</p> </td>
+   <td><p>要素の現在の状態です。</p> <p>アダプティブフォームの場合は2つ（オン、オフ）、HTML5フォームの場合は3つ（オン、オフ、中間）です。</p> </td>
   </tr>
  </tbody>
 </table>
