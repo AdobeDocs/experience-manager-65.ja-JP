@@ -12,6 +12,9 @@ discoiquuid: b7fd7954-f2a5-402d-b259-e18b5a618be9
 pagetitle: Is your hybrid app ready for AEM Mobile?
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '780'
+ht-degree: 97%
 
 ---
 
