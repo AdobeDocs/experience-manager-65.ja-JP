@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 257f3e4a-4b59-4cbb-bf61-f72f173676e6
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 85%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * [ログビューアを使用する方法](https://helpx.adobe.com/experience-manager/kb/logsviewer.html)
 * [ワークフローと監査ログをパージする方法](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)
 
-* [パフォーマンスチューニングのヒント](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+* [パフォーマンスチューニングのヒント](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)
 * [ようこそ画面から機能を削除する方法](/help/sites-developing/customizing-the-welcome-console.md)
 * [位置トラッカー機能を無効にする方法](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)
 
