@@ -32,7 +32,7 @@ MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用でき�
 
    * [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Serverバージョン5.6以降
 
-      * AEMと同じホストで実行することも、リモートで実行することも可能
+      * AEMと同じホスト上で実行するか、リモートで実行可能
    * [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
 
 
@@ -87,7 +87,7 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 1. Select the `+` icon to the right of `MySQL Connections`.
 1. ダイアログで、プラットフォーム `Setup New Connection`に適した値を入力します
 
-   デモ目的で、作成者のAEMインスタンスとMySQLを同じサーバー上に配置します。
+   デモ用に、同じサーバー上に作成者のAEMインスタンスとMySQLを置きます。
 
    * 接続名: `Communities`
    * 接続方法： `Standard (TCP/IP)`
@@ -198,7 +198,7 @@ MySQLがAEMとは異なるサーバーで実行される場合、JDBCコネク�
 
       それ以外の場合は、MySQLユーザー名用に設定済みのパスワードを入力します。
 
-   * **[!UICONTROL データソース名]**: MySQL接続に対して入力された [名前](#new-connection-settings)（例： &#39;communities&#39;）。
+   * **[!UICONTROL データソース名]**:MySQL接続に対して入力された [名前](#new-connection-settings)（例： &#39;communities&#39;）。
 
 * Select **[!UICONTROL Save]**
 
