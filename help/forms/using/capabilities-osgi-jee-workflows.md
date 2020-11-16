@@ -15,7 +15,7 @@ ht-degree: 70%
 
 ## AEM インボックスと HTML ワークスペース {#aem-inbox-and-html-workspace}
 
-AEM Inboxを使用して、OSGi上でForms中心のAEMワークフローを実行および監視できます。 一方、HTML Workspaceでは、AEM FormsJEEワークフローの実行と監視が可能です。 次の表は、OSGi上のForms中心のAEMワークフロー用AEMインボックスおよびAEM FormsJEEワークフロー用のHTML Workspaceで使用できる様々な重要なアクションを理解するうえで役立ちます。
+AEM Inboxを使用して、OSGi上でForms中心のAEMワークフローを実行および監視できます。 一方、HTML Workspaceでは、AEM FormsJEEワークフローの実行と監視が可能です。 次の表は、OSGi上のForms中心のAEMワークフロー用AEMインボックスおよびAEM FormsJEEワークフロー用のHTML Workspaceで使用可能な様々な重要なアクションを理解するうえで役立ちます。
 
 <table>
  <tbody>
