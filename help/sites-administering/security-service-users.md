@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '1788'
+ht-degree: 78%
 
 ---
 
@@ -27,7 +30,7 @@ The main way of getting an administrative session or resource resolver in AEM wa
 
 ### Priority 0: Is the feature active/needed/derelict? {#priority-is-the-feature-active-needed-derelict}
 
-管理セッションが使用されていなかったり、機能が完全に無効化されている場合があります。現在の実装環境がこれに当てはまる場合は、機能を削除するか、[NOP コード](https://en.wikipedia.org/wiki/NOP)を埋め込んでください。
+管理セッションが使用されていなかったり、機能が完全に無効化されている場合があります。現在の実装環境がこれに当てはまる場合は、機能を削除するか、[NOP コード](https://ja.wikipedia.org/wiki/NOP)を埋め込んでください。
 
 ### 優先度 1：要求セッションの使用 {#priority-use-the-request-session}
 
@@ -67,7 +70,7 @@ The main way of getting an administrative session or resource resolver in AEM wa
 
 ## 厳格なアクセス制御 {#strict-access-control}
 
-コンテンツの再構築中にアクセス制御を適用するか、新しいサービスユーザーに対してアクセス制御を適用するかに関わらず、可能な限り厳密なACLを適用する必要があります。 考えられるすべてのアクセス制御機能を使用してください。
+コンテンツの再構築時にアクセス制御を適用する場合でも、新しいサービスユーザーに対して適用する場合でも、可能な限り厳密なACLを適用する必要があります。 考えられるすべてのアクセス制御機能を使用してください。
 
 * For example, instead of applying `jcr:read` on `/apps`, only apply it to `/apps/*/components/*/analytics`
 
@@ -85,7 +88,7 @@ If the above fails, Sling 7 offers a Service User Mapping service, which allows 
 * サービスをユーザーにマッピングできます。
 * サブサービスユーザーを定義できます。
 * 中央設定ポイントは `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl` です。
-* `service-id` = `service-name`[ &quot;:&quot;サブサービス名 ] 
+* `service-id` = `service-name`[ &quot;:&quot; subservice-name ] 
 
 * `service-id` は、認証用にリソースリゾルバーまたは JCR リポジトリユーザー ID（あるいはその両方）にマッピングされます。
 * `service-name` は、サービスを提供するバンドルの記号名です。
@@ -149,10 +152,10 @@ The recommended approach is to create a service user to use the repository explo
 サービスから対応するシステムユーザーへのマッピングを追加するには、` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` サービスのファクトリ設定を作成する必要があります。この操作をモジュール化するには、[Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578)を使用してこのような設定をおこなうことができます。このような設定をバンドルと共にインストールする場合は、[Sling の初期コンテンツ読み込み機能](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)を使用することをお勧めします。
 
 1. バンドルのsrc/main/resourcesフォルダーの下にサブフォルダーSLING-INF/contentを作成します
-1. このフォルダーに、org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-&lt;ファクトリ設定の一意の名前>.xmlという名前のファイルを作成し、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を入力します。 例:
+1. このフォルダーに、org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-&lt;some unique name for your factory configuration>.xmlという名前のファイルを作成し、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を入力します。 例：
 
 1. Create a `SLING-INF/content` folder below the `src/main/resources` folder of your bundle;
-1. このフォルダーに、すべてのサブサ `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` ービスユーザーマッピングを含む、ファクトリ設定の内容を含むファイルを作成します。
+1. このフォルダーに、すべてのサブサービスユーザーマッピング `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` を含む、ファクトリ設定のコンテンツを含むファイルを作成します。
 
    例示のために、`org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml` というファイルを取り上げています。
 
@@ -173,7 +176,7 @@ The recommended approach is to create a service user to use the repository explo
    </node>
    ```
 
-1. Reference the Sling initial content in the configuration of the `maven-bundle-plugin` in the `pom.xml` of your bundle. 例:
+1. Reference the Sling initial content in the configuration of the `maven-bundle-plugin` in the `pom.xml` of your bundle. 例：
 
    ```xml
    <Sling-Initial-Content>
@@ -200,7 +203,7 @@ The most obvious solution for the security risk is to simply replace the `loginA
 
 ## JSP の管理セッション {#administrative-sessions-in-jsps}
 
-JSPs cannot use `loginService()`, because there is no associated service. ただし、JSPの管理セッションは、通常、MVCの枠組みに違反する兆候です。
+JSPs cannot use `loginService()`, because there is no associated service. ただし、JSPの管理セッションは、通常、MVCパラダイムの違反の兆候です。
 
 これは次の 2 つの方法で解決できます。
 
@@ -215,21 +218,21 @@ JSPs cannot use `loginService()`, because there is no associated service. ただ
 
 1. `user-id` をイベントペイロードに渡し、代理実行を使用します。
 
-   **** 利点：使いやすい。
+   **利点：** 使いやすい。
 
-   **** デメリット：まだ使用されてい `loginAdministrative()`ます。 認証済みの要求が再認証されます。
+   **デメリット：** まだ使用されてい `loginAdministrative()`ます。 認証済みの要求が再認証されます。
 
 1. データへのアクセス権限を持つサービスユーザーを作成または再利用します。
 
    **利点：**&#x200B;現在の設計と一貫している。変更が最小限で済みます。
 
-   **** デメリット：非常に強力なサービスユーザーが柔軟に対応でき、特権エスカレーションを容易に行う必要があります。 セキュリティモデルに抜け道ができます。
+   **デメリット：** 柔軟性に優れた非常に強力なサービス・ユーザーが必要であり、特権エスカレーションを容易に行うことができます。 セキュリティモデルに抜け道ができます。
 
 1. `Subject` のシリアル化をイベントペイロードに渡し、そのサブジェクトに基づいて `ResourceResolver` を作成します。例えば、`doAsPrivileged` で JAAS `ResourceResolverFactory` を使用します。
 
    **利点：**&#x200B;セキュリティの観点からクリーンな実装。再認証は回避し、元の権限で動作します。セキュリティ関連のコードはイベントの消費者に対して透過的です。
 
-   **** デメリット：リファクタリングが必要です。 セキュリティ関連のコードがイベントの消費者に対して透過的であることから、問題に発展する可能性があります。
+   **デメリット：** リファクタリングが必要です。 セキュリティ関連のコードがイベントの消費者に対して透過的であることから、問題に発展する可能性があります。
 
 3 番目のアプローチが現在推奨されている処理手法です。
 
