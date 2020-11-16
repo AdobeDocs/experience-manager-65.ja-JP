@@ -1,8 +1,8 @@
 ---
 title: プロセスレポートのカスタムレポート
 seo-title: プロセスレポートのカスタムレポート
-description: カスタムレポートを作成し、これらのレポートをJEE上のAEM FormsのプロセスレポートUIに追加できます。
-seo-description: カスタムレポートを作成し、これらのレポートをJEE上のAEM FormsのプロセスレポートUIに追加できます。
+description: カスタムレポートを作成し、これらのレポートをJEE上のAEM FormsプロセスレポートUIに追加できます。
+seo-description: カスタムレポートを作成し、これらのレポートをJEE上のAEM FormsプロセスレポートUIに追加できます。
 uuid: 81039fe8-d757-4c85-a1eb-88e4e6aa8500
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -26,7 +26,7 @@ QueryBuilderのRESTインターフェイスを使用するか、QueryBuilder API
 
 カスタムレポートを追加する前に、次のテンプレート手順を実行します。
 
-1. カスタムレポートで使用するデータは、プロセスレポートで使用できる必要があります。 データを確実に使用できるようにするには、cronジョブをスケジュールするか、プロセスレポートUIの **[同期](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**オプションを使用します。
+1. カスタムレポートで使用するデータは、プロセスレポートで使用できる必要があります。 データを確実に使用できるようにするには、cronジョブをスケジュールするか、プロセスレポートUIの **[同期](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** オプションを使用します。
 1. URLリクエスト(目的のクエリをカプセル化)は、適切なクエリ結果オブジェクトを返す必要があります。 クエリを作成するには、QueryBuilderのRESTインターフェイスを使用してQueryBuilder APIを使用して [OSGiサービスを作成します](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) 。 動的なクエリまたは静的な画像を作成できます。
 
 1. 結果を表示するカスタムユーザーインターフェイスを作成します。 スタンドアロンのユーザーインターフェイスを作成するか、既存のプロセスレポートUIに結果を統合することができます。
@@ -66,7 +66,7 @@ CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じ�
     predicateGroup.setAllRequired(true);
    ```
 
-1. 新しく追加作成されたpredicateGroupに述語を割り当てます。 役に立つ述語構成のいくつかは、 [JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)、JcrPropertyPredicateEvaluator [、JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)、RangePredicatePredicateEvaluator、RangeRangeRevaluator、ReETypedator。
+1. 新しく追加作成されたpredicateGroupに述語を割り当てます。 役に立つ述語構成のいくつかは、 [JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)、JcrPropertyPredicateEvaluator [、JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)、RangePredicatePredicateEvaluator、RangeRangeRangeRevaluator、ReTypredater。
 
    静的レポートでは述部をハードコードしますが、動的レポートでは、リクエストから述部を取得します。
 
