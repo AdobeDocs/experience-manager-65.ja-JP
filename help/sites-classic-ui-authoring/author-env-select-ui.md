@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: dcac2a3a-3241-47de-96ce-982ab0bc05eb
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 60%
 
 ---
 
 
 # UI の選択{#selecting-your-ui}
 
-タッチ対応UIはクラシックUIより優先されるので、AEMインスタンスのユーザーまたは管理者は、クラシックUIを引き続き使用するためにアクティブな決定を行う必要があります。 従来のUIは維持されなくなったので、オーサリングユーザーがタッチ対応UIで従来のUIから同等のUIに切り替える方法はありません。
+タッチ対応UIはクラシックUIより優先されるので、AEMインスタンスのユーザーまたは管理者は、クラシックUIを使用し続けるためにアクティブな決定を行う必要があります。 従来のUIは維持されなくなったので、オーサリングユーザーがタッチ操作対応UIで従来のUIから同等のUIに切り替える方法はありません。
 
 オーサリングユーザーが使用しやすいように、タッチ対応 UI は必要に応じてクラシック UI に切り替えることができます。詳しくは、標準オーサリングのドキュメントの [UI の選択](/help/sites-authoring/select-ui.md)を参照してください。
 
