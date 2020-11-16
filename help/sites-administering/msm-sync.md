@@ -36,7 +36,7 @@ ht-degree: 83%
 
 * **ロールアウト時**：**ロールアウト**&#x200B;コマンドがブループリントページで使用されます。または&#x200B;**同期**&#x200B;コマンドがライブコピーページで使用されます。
 
-* **変更時**: ソースページが変更された。
+* **変更時**:ソースページが変更された。
 
 * **アクティベート時**：ソースページがアクティベートされます。
 
@@ -213,7 +213,7 @@ ht-degree: 83%
   </tr>
   <tr>
    <td>mandatoryStructure</td>
-   <td>ライブコピーページのActionSet.ACTION_NAME_REMOVE ACLの権限を、特定のユーザーグループに対して読み取り専用に設定します。 このアクションはページに対してのみ使用します。</td>
+   <td>ライブコピーページのActionSet.ACTION_NAME_REMOVE ACLの権限を、特定のユーザーグループに対して読み取り専用に設定します。このアクションはページに対してのみ使用します。</td>
    <td>target：（String）権限を設定するグループの ID。 </td>
   </tr>
   <tr>
@@ -300,7 +300,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
   </tr>
   <tr>
    <td><p>Ignored Mixin NodeTypes</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
-   <td>CQ MSMコンテンツ更新アクションでのみ使用できます。 同期アクションから除外されるmixinノードタイプの名前と一致する正規式。</td>
+   <td>CQ MSMコンテンツ更新アクションでのみ使用できます。同期アクションから除外されるmixinノードタイプの名前と一致する正規式。</td>
   </tr>
  </tbody>
 </table>
@@ -358,10 +358,10 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 
 使用するロールアウト設定を指定できる場所を以下に示します。また、ライブコピーに使用するロールアウト設定を MSM がどのように決定するかについても説明します。
 
-* **[ライブコピーページのプロパティ](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page)：**1 つ以上のロールアウト設定を使用するようにライブコピーページが設定される場合、MSM ではそれらのロールアウト設定を使用します。
-* **[ブループリントページのプロパティ](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)：**ライブコピーがブループリントに基づいており、ライブコピーページがロールアウト設定を使用して設定されない場合は、ブループリントのソースページに関連付けられているロールアウト設定が使用されます。
+* **[ライブコピーページのプロパティ](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page)：** 1 つ以上のロールアウト設定を使用するようにライブコピーページが設定される場合、MSM ではそれらのロールアウト設定を使用します。
+* **[ブループリントページのプロパティ](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)：**&#x200B;ライブコピーがブループリントに基づいており、ライブコピーページがロールアウト設定を使用して設定されない場合は、ブループリントのソースページに関連付けられているロールアウト設定が使用されます。
 * **ライブコピーの親ページのプロパティ：** ライブコピーページもブループリントソースページもロールアウト設定で設定されていない場合は、ライブコピーページの親ページに適用されるロールアウト設定が使用されます。
-* **[システムのデフォルト](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration):**ライブコピーの親ページのロールアウト設定を決定できない場合は、システムの既定のロールアウト設定が使用されます。
+* **[システムのデフォルト](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration):** ライブコピーの親ページのロールアウト設定を決定できない場合は、システムの既定のロールアウト設定が使用されます。
 
 例えば、ブループリントが We.Retail 参照サイトをソースコンテンツとして使用するとします。サイトはブループリントから作成されます。次のリスト内の各項目は、ロールアウト設定の使用に関する様々なシナリオを示しています。
 
