@@ -35,7 +35,7 @@ An *activity stream* is the list of recent activities performed by a member or a
 
 ニュースフィード&#x200B;**&#x200B;とは、メンバーがフォローしている複数のアクティビティストリームを単一のストリームに統合したものです。
 
-*[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)*とは、メンバー間のフォロー関係を表したものです。
+*[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)*&#x200B;とは、メンバー間のフォロー関係を表したものです。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
