@@ -1,8 +1,8 @@
 ---
 title: JEE 上の AEM Forms 環境の堅牢化
 seo-title: JEE 上の AEM Forms 環境の堅牢化
-description: 企業のイントラネット内で実行されるJEE上のAEM Formsのセキュリティを強化するための様々なセキュリティ堅牢化設定について説明します。
-seo-description: 企業のイントラネット内で実行されるJEE上のAEM Formsのセキュリティを強化するための様々なセキュリティ堅牢化設定について説明します。
+description: 企業のイントラネット内で実行されているJEE上のAEM Formsのセキュリティを強化するための、様々なセキュリティ堅牢化設定について説明します。
+seo-description: 企業のイントラネット内で実行されているJEE上のAEM Formsのセキュリティを強化するための、様々なセキュリティ堅牢化設定について説明します。
 uuid: f6c63690-6376-4fe1-9df2-a14fbfd62aff
 content-type: reference
 topic-tags: Security
@@ -19,14 +19,14 @@ ht-degree: 71%
 
 # JEE 上の AEM Forms 環境の堅牢化 {#hardening-your-aem-forms-on-jee-environment}
 
-企業のイントラネット内で実行されるJEE上のAEM Formsのセキュリティを強化するための様々なセキュリティ堅牢化設定について説明します。
+企業のイントラネット内で実行されているJEE上のAEM Formsのセキュリティを強化するための、様々なセキュリティ堅牢化設定について説明します。
 
-この記事では、JEE 上の AEM Forms を実行するサーバーを保護するための推奨事項とベストプラクティスについて説明します。ここでは、オペレーティングシステムとアプリケーションサーバーのホストの堅牢化について包括的な説明はしません。企業のイントラネット内で実行されているJEE上のAEM Formsのセキュリティを強化するために実装する必要がある、様々なセキュリティ堅牢化設定について説明します。 なお、JEE 上の AEM Forms アプリケーションサーバーのセキュリティを確実に保つには、これだけでなく、セキュリティの監視、検出および応答の方策を実装することも必要です。
+この記事では、JEE 上の AEM Forms を実行するサーバーを保護するための推奨事項とベストプラクティスについて説明します。ここでは、オペレーティングシステムとアプリケーションサーバーのホストの堅牢化について包括的な説明はしません。企業のイントラネット内で実行しているJEE上のAEM Formsのセキュリティを強化するために実装する必要がある、様々なセキュリティ堅牢化設定について説明します。 なお、JEE 上の AEM Forms アプリケーションサーバーのセキュリティを確実に保つには、これだけでなく、セキュリティの監視、検出および応答の方策を実装することも必要です。
 
 この記事では、インストールと設定の作業において、次の各段階で適用する堅牢化手法について説明します。
 
 * **インストール前：**&#x200B;この手法は、JEE 上の AEM Forms をインストールする前に実行します。
-* **インストール：** これらの手順は、JEEでのAEM Formsのインストールプロセスで実行します。
+* **インストール：** これらの手順は、JEE上のAEM Formsのインストールプロセスで実行します。
 * **インストール後：**&#x200B;この手法は、インストール終了後と、それ以降の定期的な管理作業として実行します。
 
 JEE 上の AEM Forms は詳細なカスタマイズが可能で、様々な環境で動作します。推奨事項には、一部の組織のニーズに合わないものも含まれている可能性があります。
@@ -41,7 +41,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 
 **Windows へのインストールと設定**
 
-自動オプションインストールを使用して JBoss に JEE 上の AEM Forms をインストールする場合、または PDF Generator をインストールする場合、Windows へのインストールは管理者として実行する必要があります。また、PDF Generator をネイティブアプリケーションサポートと共に Windows にインストールする場合は、Microsoft Office をインストールしたのと同じ Windows ユーザーとしてインストールを実行する必要があります。インストールの権限について詳しくは、使用しているアプリケーションサーバー版の「* JEE上のAEM Formsのインストールおよびデプロイ」ドキュメントを参照してください。
+自動オプションインストールを使用して JBoss に JEE 上の AEM Forms をインストールする場合、または PDF Generator をインストールする場合、Windows へのインストールは管理者として実行する必要があります。また、PDF Generator をネイティブアプリケーションサポートと共に Windows にインストールする場合は、Microsoft Office をインストールしたのと同じ Windows ユーザーとしてインストールを実行する必要があります。インストールの権限について詳しくは、使用しているアプリケーションサーバー版の『JEE*上のAEM Formsのインストールおよびデプロイ』ドキュメントを参照してください。
 
 ### ネットワーク層のセキュリティ {#network-layer-security}
 
@@ -63,7 +63,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
   </tr> 
   <tr> 
    <td><p>プライベート IP アドレス</p> </td> 
-   <td><p>AEM Formsアプリケーションサーバー上のRFC 1918プライベートIPアドレスに、Network Address Translation(NAT)を使用します。 プライベートIPアドレス(10.0.0.0/8、172.16.0.0/12、192.168.0.0/16)を割り当てると、攻撃者がインターネットを介してNAT内部ホストとの間でトラフィックをルーティングするのを難しくします。</p> </td> 
+   <td><p>RFC 1918プライベートIPアドレスを含むNetwork Address Translation(NAT)をAEM Formsアプリケーションサーバーで使用します。プライベートIPアドレス(10.0.0.0/8、172.16.0.0/12、192.168.0.0/16)を割り当てると、攻撃者がインターネットを介してNAT内部ホストとの間でトラフィックをルーティングするのを難しくします。</p> </td> 
   </tr> 
   <tr> 
    <td><p>ファイアウォール</p> </td> 
@@ -189,9 +189,9 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    * サービスとしてログオン（通常は既に設定済み）
 
 1. 次のディレクトリの新しいユーザーアカウントに変更権限を与えます。
-   * **グローバルドキュメントストレージ(GDS)ディレクトリ**: GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
-   * **CRX-Repositoryディレクトリ**: デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
-   * **AEM Formsの一時ディレクトリ**:
+   * **グローバルドキュメントストレージ(GDS)ディレクトリ**:GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repositoryディレクトリ**:デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms一時ディレクトリ**:
       * （Windows）環境変数で設定されている TMP または TEMP パス
       * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
       * （Linux）/var/tmp or /usr/tmp
@@ -205,8 +205,8 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    >[!NOTE]
    >
    > JBoss Application Serverのデフォルトのインストール場所：
-   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
-   > * Linux: /opt/jboss/
+   > * Windows:C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux:/opt/jboss/
 
 1. アプリケーションサーバーを起動します。
 
@@ -476,7 +476,7 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
 
 「*リバースプロキシ*」は、1 セットの JEE 上の AEM Forms Web アプリケーションの URL を、外部ユーザーと内部ユーザーの両方から利用できるように設定するものです。この設定は、JEE 上の AEM Forms を実行するアプリケーションサーバーへのユーザーの直接接続を許可する方法よりも、高いセキュリティで保護されます。リバースプロキシは、JEE 上の AEM Forms を実行しているアプリケーションサーバーに対するすべての HTTP 要求を実行します。ユーザーは、リバースプロキシに対するネットワークアクセスしか持たないので、リバースプロキシでサポートされている URL 接続のみを試みることができます。
 
-**リバースプロキシサーバーで使用するJEEルートURL上のAEM Forms**
+**リバースプロキシサーバーで使用する、JEE上のAEM FormsのルートURL**
 
 次のアプリケーションルート URL は、各 JEE 上の AEM Forms Web アプリケーションのものです。リバースプロキシは、エンドユーザーに提供する Web アプリケーション機能の URL だけを公開するように設定する必要があります。
 
@@ -659,7 +659,7 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
 
 ## クロスサイト要求偽造攻撃からの保護 {#protecting-from-cross-site-request-forgery-attacks}
 
-クロスサイト要求偽造(CSRF)攻撃は、Webサイトがユーザに対して持つ信頼を悪用し、ユーザが許可していないコマンドを送信します。 この攻撃は、Webページにリンクやスクリプトを含めるか、電子メールメッセージにURLを含めて、ユーザーが既に認証されている別のサイトにアクセスすることで行われます。
+クロスサイト要求偽造(CSRF)攻撃は、Webサイトがユーザーに対して持つ信頼を悪用し、ユーザーが許可していないコマンドを送信します。 この攻撃は、Webページにリンクやスクリプトを含めるか、電子メールメッセージにURLを含めて、ユーザーが既に認証されている別のサイトにアクセスすることで行われます。
 
 例えば、別のWebサイトを参照しながら管理コンソールにログインしている場合があります。 CSRF 攻撃者は、このような状況を狙って、閲覧されるサイトの Web ページに含まれている HTML img タグの `src` 属性などに、攻撃対象 Web サイト内のサーバー側スクリプトを参照する URL を記述しておきます。Web ブラウザーに備わっている Cookie ベースのセッション認証メカニズムにより、攻撃者の Web サイトは正当なユーザーを装って、攻撃対象のサーバー側スクリプトに悪意ある要求を送信することができます。その他の例については、[https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples) を参照してください。
 
@@ -683,7 +683,7 @@ JEE上のAEM Formsは、転送者フィルター機能を使用してCSRF攻撃�
 
 1. forms サーバーが、呼び出しに使用される HTTP メソッドを確認します。
 
-   1. POSTの場合、formsサーバーは転送者ヘッダーの確認を実行します。
+   1. POSTの場合は、formsサーバーが転送者ヘッダーの確認を実行します。
    1. If it is GET, the forms server bypasses the Referrer check, unless *CSRF_CHECK_GETS* is set to true, in which case it performs the Referrer header check. ** CSRF_CHECK_GETS は、アプリケーションの ** web.xml ファイル内に設定されます。
 
 1. formsサーバーは、要求されたURIが許可リストーに存在するかどうかを確認します。
@@ -703,9 +703,9 @@ JEE上のAEM Formsは、転送者フィルター機能を使用してCSRF攻撃�
 
 ### 転送者フィルタの管理 {#managing-referer-filtering}
 
-JEE上のAEM Formsには、転送者リソースへのアクセスを許可する転送者を指定するサーバーフィルターが用意されています。 By default, the Referrer filter does not filter requests that use a safe HTTP method, e.g. GET, unless *CSRF_CHECK_GETS* is set to true. 「Allowed」転送者エントリのポート番号が0に設定されている場合、JEE上のAEM Formsは、ポート番号に関係なく、そのホストからの転送者を持つすべての要求を許可します。 ポート番号が指定されていない場合は、デフォルトのポート 80（HTTP）またはポート 443（HTTPS）からの要求のみが許可されます。「転送者のフィルタ」は、「許可されている転送者」リストのすべてのエントリが削除された場合は無効になります。
+JEE上のAEM Formsには、転送者リソースへのアクセスを許可する転送者を指定するサーバーフィルターが用意されています。 By default, the Referrer filter does not filter requests that use a safe HTTP method, e.g. GET, unless *CSRF_CHECK_GETS* is set to true. 「許可されている転送者」エントリのポート番号が0に設定されている場合、JEE上のAEM Formsは、ポート番号に関係なく、そのホストからの転送者を持つすべての要求を許可します。 ポート番号が指定されていない場合は、デフォルトのポート 80（HTTP）またはポート 443（HTTPS）からの要求のみが許可されます。「転送者のフィルタ」は、「許可されている転送者」リストのすべてのエントリが削除された場合は無効になります。
 
-ドキュメントサービスを最初にインストールすると、許可されている転送者のリストは、ドキュメントサービスがインストールされているサーバーのアドレスで更新されます。 サーバーのエントリには、サーバー名、IPv4 アドレス、IPv6 アドレス（IPv6 が有効の場合）、ループバックアドレス、localhost エントリなどがあります。「許可されている転送者」リストに追加された名前は、ホストのオペレーティングシステムによって返されます。 例えば、IPアドレスが10.40.54.187のサーバーには、次のエントリが含まれます。 `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. ホストオペレーティングシステムによって返された修飾されていない名前（IPv4アドレス、IPv6アドレス、または修飾ドメイン名を持たない名前）の許可リストは更新されません。 ビジネス環境に合わせて「許可されている転送者」リストを変更します。 実稼働環境にformsサーバーをデプロイする際に、デフォルトの許可されている転送者リストを使用しないでください。 許可されている転送者、転送者の例外、またはURIを変更した後は、必ずサーバーを再起動して、変更を有効にしてください。
+ドキュメントサービスを最初にインストールすると、許可されている転送者のリストは、ドキュメントサービスがインストールされているサーバーのアドレスで更新されます。 サーバーのエントリには、サーバー名、IPv4 アドレス、IPv6 アドレス（IPv6 が有効の場合）、ループバックアドレス、localhost エントリなどがあります。「許可されている転送者」リストに追加された名前は、ホストのオペレーティングシステムによって返されます。 例えば、IPアドレスが10.40.54.187のサーバーには、次のエントリが含まれます。 `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. ホストオペレーティングシステムによって返された修飾されていない名前（IPv4アドレス、IPv6アドレス、または修飾ドメイン名を持たない名前）の許可リストは更新されません。 ビジネス環境に合わせて「許可されている転送者」リストを変更します。 実稼働環境にformsサーバーをデプロイする際に、デフォルトの許可されている転送者リストを使用しないでください。 許可されている転送者、転送者の例外、またはURIを変更した後は、必ずサーバーを再起動し、変更を有効にしてください。
 
 **許可されている転送者リストの管理**
 
@@ -713,7 +713,7 @@ JEE上のAEM Formsには、転送者リソースへのアクセスを許可す�
 
 **許可されている転送者例外と許可されているURIリストの管理**
 
-JEE上のAEM Formsは、許可されている転送者の例外リストと許可されているURIリストを管理するAPIを提供しています。 この API を使用すると、リストを取得、作成、編集または削除できます。使用可能な API のリストを次に示します。
+JEE上のAEM Formsは、許可されている転送者の例外リストと許可されているURIリストを管理するためのAPIを提供しています。 この API を使用すると、リストを取得、作成、編集または削除できます。使用可能な API のリストを次に示します。
 
 * createAllowedURIsList
 * getAllowedURIsList
@@ -724,7 +724,7 @@ JEE上のAEM Formsは、許可されている転送者の例外リストと許�
 * updateAllowedRefererExceptions
 * deleteAllowedRefererExceptions
 
-APIについて詳しくは、『JEE上の*AEM FormsAPIリファレンス』を参照してください。
+APIについて詳しくは、「* JEE上のAEM FormsAPIリファレンス*」を参照してください。
 
 Use the ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list for Allowed Referrer Exceptions at the global level i.e. to define exceptions that are applicable to all applications. This list contains only URIs with either an absolute path (e.g. `/index.html`) or a relative path (e.g. `/sample/`). You can also append a regular expression to the end of a relative URI, e.g. `/sample/(.)*`.
 
@@ -746,7 +746,7 @@ Include the `-Dlc.um.csrffilter.disabled=true` JAVA argument in the startup scri
 
 管理者は、ビジネス要件に合わせて JEE 上の AEM Forms を操作するためのカスタム WAR ファイルを用意している場合があります。To enable Referrer Filtering for your custom WAR files, include ***adobe-usermanager-client.jar*** in the class path for the WAR and include a filter entry in the* web.xml* file with the following parameters:
 
-**CSRF_CHECK_GETS** は、GET要求の転送者チェックを制御します。 このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、GET 要求をフィルタリングする場合にのみ指定します。
+**CSRF_CHECK_GETS** は、GET要求に対する転送者チェックを制御します。 このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、GET 要求をフィルタリングする場合にのみ指定します。
 
 **CSRF_ALLOWED_REFERER_EXCEPTIONS** は、許可されている転送者の例外リストのIDです。 転送者フィルターを使用すると、リストIDで識別されるリスト内の転送者からの要求や、formsサーバー上のリソースを呼び出すことができません。
 
@@ -948,7 +948,7 @@ Include the `-Dlc.um.csrffilter.disabled=true` JAVA argument in the startup scri
 
 **WebSphere ポート**
 
-JEE上のAEM Formsが必要とするWebSphereポートについて詳しくは、WebSphere Application Server UIのPort number settingに移動します。
+JEE上のAEM Formsが必要とするWebSphereポートについて詳しくは、WebSphere Application Server UIのPort number settingを参照してください。
 
 ### SSL の設定 {#configuring-ssl}
 
@@ -1009,9 +1009,9 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
    * サービスとしてログオン（通常は既に設定済み）
 
 1. 次のディレクトリの新しいユーザーアカウントに変更権限を与えます。
-   * **グローバルドキュメントストレージ(GDS)ディレクトリ**: GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
-   * **CRX-Repositoryディレクトリ**: デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
-   * **AEM Formsの一時ディレクトリ**:
+   * **グローバルドキュメントストレージ(GDS)ディレクトリ**:GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repositoryディレクトリ**:デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms一時ディレクトリ**:
       * （Windows）環境変数で設定されている TMP または TEMP パス
       * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
       * （Linux）/var/tmp or /usr/tmp
@@ -1025,8 +1025,8 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
    >[!NOTE]
    >
    > JBoss Application Serverのデフォルトのインストール場所：
-   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
-   > * Linux: /opt/jboss/.
+   > * Windows:C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux:/opt/jboss/.
 
 
 1. アプリケーションサーバーサービスを起動します。
