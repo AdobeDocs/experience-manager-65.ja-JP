@@ -10,15 +10,18 @@ topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 translation-type: tm+mt
 source-git-commit: a209b2dda04985a3f2d7c6838f11f0b5dc62d520
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 48%
 
 ---
 
 
 # フォームポータルコンポーネントの有効化 {#enabling-forms-portal-components}
 
-フォームポータルコンポーネントは、デフォルトで使用できません。AEMサイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
+フォームポータルコンポーネントは、デフォルトで使用できません。コンポーネントをAEMサイドキックで使用可能なコンポーネントのリストに表示するには、次の手順を実行します。
 
-1. Webサイトの作成者インスタンスにログインし、AEMサイトページを開きます。
+1. Webサイトの作成者インスタンスにログインし、AEM Sitesページを開きます。
 
 1. 静的テンプレートを使用するページに対して、次の手順を実行します。
 
@@ -29,14 +32,14 @@ source-git-commit: a209b2dda04985a3f2d7c6838f11f0b5dc62d520
 
 1. 動的テンプレートを使用するページに対して、次の手順を実行します。
 
-   1. ページヘッダーで、プロパティ/テンプ ![レートの編](assets/properties.png) 集をタップし **** 、ページのテンプレートを開きます。
-   1. 「レイアウ **トコンテナ** 」をタップし、「FeedManagement ![」をタッ](/help/forms/using/assets/feedmanagement.png)プします。 「許可さ **れているコンポーネント** 」タブで、「 **Document Services」および「Document Services Predicates** 」オプションを有効にし、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+   1. In the page header, tap ![properties](assets/properties.png) > **Edit Template** to open the template of the page.
+   1. 「 **レイアウトコンテナ** 」をタップし、「 ![FeedManagement](/help/forms/using/assets/feedmanagement.png)」をタップします。 In the **Allowed Components** tab, enable the **Document Services and Document Services Predicates** options, and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >
 >また、コンポーネントを選択して、これらのカテゴリから特定のコンポーネントを有効にすることもできます。コンポーネントとその使用方法について詳しくは、「[フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)」と「[ページでのリンクコンポーネントの埋め込み](/help/forms/using/embedding-link-component-page.md)」を参照してください。
 
-これで、コンポーネントブラウザーで Document Services コンポーネントカテゴリと Document Services Predicates コンポーネントカテゴリを使用できるようになります。コンポーネントは、同じテンプレートを使用するすべてのページに対して有効になります。
+これで、コンポーネントブラウザーで Document Services コンポーネントカテゴリと Document Services Predicates コンポーネントカテゴリを使用できるようになります。コンポーネントは、同じテンプレートを使用するすべてのページで有効になります。
 
 ## 関連記事
 
