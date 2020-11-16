@@ -146,7 +146,7 @@ oak.queryLimitInMemory とoak.queryLimitReads のしきい値を低く設定し�
 
 #### デプロイメント後 {#post-deployment-2}
 
-* クエリが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーしているかどうかログを監視します。 &quot;
+* クエリが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーしているかどうかログを監視します。&quot;
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * クエリを最適化して、走査するノードの数を減らします。
