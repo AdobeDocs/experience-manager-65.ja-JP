@@ -26,7 +26,7 @@ ht-degree: 82%
 
 統合フレームワークには、API を備えた統合レイヤーが含まれます。これにより、特定の e コマースエンジンに依存しない e コマース機能用の AEM コンポーネントを作成できます。さらに、内部 CRX データベースを使用したり、e コマースシステムを組み込んだりして、製品データを AEM に取り込むこともできます。
 
-統合レイヤーを使用するために、標準搭載のAEMコンポーネントが多数用意されています。 現時点では、以下のようなものがあります。
+統合レイヤーを使用するために、標準搭載の多数のAEMコンポーネントが提供されています。 現時点では、以下のようなものがあります。
 
 * 製品表示コンポーネント
 * 買い物かご
@@ -45,7 +45,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEMは、および `Resource.adaptTo()` をサポート `CommerceService` します `Product`
+* AEM `Resource.adaptTo()` での `CommerceService` および `Product`
 
    * The `adaptTo` implementation looks for a `cq:commerceProvider` property in the resource&#39;s hierarchy:
 
@@ -168,7 +168,7 @@ content
       shirt-l
 ```
 
-最後に、製品データを使用するための要件はありません。カタログ内の参照の下に、すべての製品データを配置できます。 しかし、すべての製品データを複製しない限り、実際には複数のカタログを持つことはできません。
+最後に、製品データを使用するための要件はありません。カタログ内の参照の下に、すべての製品データを配置できます。しかし、すべての製品データを複製しない限り、実際には複数のカタログを持つことはできません。
 
 **API**
 
@@ -526,7 +526,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 
 * `jcr:title` （文字列） — 伝票の説明
 * `code`（String） - この割引券を適用するためにユーザーが入力する必要があるコード。
-* `promotion` （文字列） — 適用されるプロモーション。 例えば `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` （文字列） — 適用されるプロモーション。例えば `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 プロモーションハンドラーは、買い物かごを変更する OSGi サービスです。買い物かごは、`PromotionHandler` インターフェイスで定義される、複数のフックをサポートします。
 
