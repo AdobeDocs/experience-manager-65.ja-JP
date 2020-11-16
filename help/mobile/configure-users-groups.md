@@ -11,6 +11,9 @@ topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 167f3bd9-7dbc-4e6b-9868-3ee53935641b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '666'
+ht-degree: 79%
 
 ---
 
@@ -25,10 +28,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## AEM Mobile アプリケーションユーザーとグループ管理 {#aem-mobile-application-users-and-group-administration}
 
-AEM Appsの権限モデルを整理および管理するために、次の2つのグループを使用できます。
+AEM Appsの権限モデルを整理し管理するために、次の2つのグループを使用できます。
 
 * app-admins for App Admins
-* アプリ作成者用のアプリ作成者
+* アプリ作成者向けアプリ作成者
 
 ### AEM Mobile Application Content Authors (app-author group) {#aem-mobile-application-content-authors-app-author-group}
 
@@ -83,6 +86,7 @@ Members of the app-admins group can author application content with the same per
 
    * content-authors
    * workflow-users
+
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
 1. [権限コンソール](http://localhost:4502/useradmin)に移動して、次のようにクラウドサービスを管理するための権限を追加します。
@@ -94,6 +98,7 @@ Members of the app-admins group can author application content with the same per
 
    * /etc/packages/mobileapp に対して（読み取り、変更、作成、削除、複製）
    * /var/contentsync に対して（読み取り）
+
    >[!NOTE]
    >
    >オーサーインスタンスからパブリッシュインスタンスにアプリケーションの更新を公開するには、パッケージの複製を使用します。
@@ -108,16 +113,16 @@ Members of the app-admins group can author application content with the same per
 
 ## ダッシュボードタイルの権限 {#dashboard-tile-permissions}
 
-ダッシュボードタイルには、ユーザーの持つ権限に基づいて、異なるアクションが表示されることがあります。各タイルで使用できるアクションを以下に示します。
+ダッシュボードタイルには、ユーザーの持つ権限に基づいて、異なるアクションが表示されることがあります。各タイルで使用できるアクションを次に示します。
 
-ユーザーの権限に加え、現在のアプリケーションの設定方法に基づいて、アクションを表示または非表示にすることもできます。例えば、PhoneGapクラウド設定がアプリに割り当てられていない場合、「リモートビルド」アクションを公開するポイントはありません。 These will be listed below under &#39;**Configuration Condition**&#39; sections.
+ユーザーの権限に加え、現在のアプリケーションの設定方法に基づいて、アクションを表示または非表示にすることもできます。例えば、PhoneGapクラウド設定がアプリに割り当てられていない場合、「リモートビルド」アクションが公開されるポイントはありません。 These will be listed below under &#39;**Configuration Condition**&#39; sections.
 
 ### アプリを管理タイル {#manage-app-tile}
 
 現在、このタイルには、権限を必要とするアクションはありませんが、アプリケーションの詳細ページには以下のアクションが表示されます。
 
 * 編集&#x200B;**：app-author および app-admin 向け（UI トリガー - jcr:write - /content/phonegap/{suffix} に対して）
-* *app* -authorおよびapp-admin用のダウンロード（UIトリガー — /content/phonegap/{suffix}）
+* *app-authorとapp-adminのダウンロード* （UIトリガー — /content/phonegap/{suffix}）
 
 以下の図は、アプリのダウンロードおよび編集オプションを示しています。
 
