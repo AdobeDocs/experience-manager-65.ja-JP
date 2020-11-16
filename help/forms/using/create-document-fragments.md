@@ -10,6 +10,9 @@ discoiquuid: 8ae97a21-83af-4615-9be3-61e2f8065081
 docset: aem65
 translation-type: tm+mt
 source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+workflow-type: tm+mt
+source-wordcount: '1682'
+ht-degree: 57%
 
 ---
 
@@ -22,8 +25,8 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 ドキュメントフラグメントとは再利用可能な通信のコンポーネントを指し、インタラクティブ通信の作成に使用されます。ドキュメントフラグメントは、次のいずれかの種類になります。
 
-* テキスト — テキストアセットは、1つ以上の段落で構成されるコンテンツの一部です。 段落は静的または動的にすることができます。
-* リスト-リストは、テキスト、ドキュメント、条件、画像を含むリストフラグメントのグループです。
+* テキスト — テキストアセットは、1つ以上の段落で構成されるコンテンツの1つです。 段落は静的または動的にすることができます。
+* リスト-リストは、テキスト、リスト、条件、画像を含むドキュメントフラグメントのグループです。
 * 条件 — 条件を使用すると、フォームデータモデルから受信したデータに基づいて、インタラクティブ通信に含めるコンテンツを定義できます。
 
 This tutorial walks you through the steps to create multiple text document fragments based on the anatomy provided in [Plan the Interactive Communication](/help/forms/using/planning-interactive-communications.md) section. このチュートリアルを完了すると、次の操作を実行できるようになります。
@@ -32,7 +35,7 @@ This tutorial walks you through the steps to create multiple text document fragm
 * 変数の作成
 * ルールを作成して適用
 
-![text_ドキュメント_fragments](assets/text_document_fragments.gif)
+![text_ドキュメント_フラグメント](assets/text_document_fragments.gif)
 
 このチュートリアルで作成されたドキュメントフラグメントのリストは次のとおりです。
 
@@ -79,12 +82,14 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    1. 変数の名前として、**Invoicenumber** を入力します。
    1. **文字列**&#x200B;をタイプとして選択します。
    1. 「**作成**」をタップします。
-   ![String型の変数を作成](assets/variable_create_string_new.png)
+
+   ![String型の変数を作成します](assets/variable_create_string_new.png)
 
    手順 4 と 5 を繰り返し、次の変数を作成します。
 
    * Billperiod：文字列タイプ
    * BillDate：日付タイプ
+
    ![請求明細](assets/variable_bill_details_new.png)
 
 1. 右側のペインを使用して、次のフィールドのスタティックテキストを作成します。
@@ -93,6 +98,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    * 請求期間
    * 請求日
    * 計画
+
    ![静的テキスト](assets/variable_bill_details_static_text_new.png)
 
 1. 「**請求書番号**」フィールドの隣にカーソルを置き、左側のペインで、「**変数**」タブの&#x200B;**InvoiceNumber** 変数をダブルクリックします。
@@ -140,6 +146,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    1. Enter **Placesupply** as the name of the variable.
    1. **文字列**&#x200B;をタイプとして選択します。
    1. 「**作成**」をタップします。
+
    手順 4 と 5 を繰り返し、次の変数を作成します。
 
    * Statecode：番号の種類
@@ -156,7 +163,8 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    * 関係番号
    * 都道府県コード
    * 接続数
-   ![顧客の詳細の静的テキスト](assets/customer_details_static_text_new.png)
+
+   ![顧客の詳細静的テキスト](assets/customer_details_static_text_new.png)
 
 1. Place the cursor next to the **Mobile Number** field and double-click the **customer** > **mobilenum** property.
 1. Place the cursor next to the **Alternate Contact Number** field and double-click the** customer** > **alternatemobilenumber** property.
@@ -202,6 +210,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    1. Enter **Previousbalance** as the name of the variable.
    1. Select **Number** as type.
    1. 「**作成**」をタップします。
+
    手順 4 と 5 を繰り返し、次の変数を作成します。
 
    * Payments：番号の種類
@@ -219,7 +228,8 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    * 請求額
    * 期限
    * 支払期日経過後の遅延延滞金は、20 ドル
-   ![請求書の概要静的テキスト](assets/bill_summary_static_new.png)
+
+   ![請求書要約静的テキスト](assets/bill_summary_static_new.png)
 
 1. Place the cursor next to the **Previous Balance** field and double-click the **Previousbalance** variable.
 1. Place the cursor next to the **Payments** field and double-click the **Payments** variable.
@@ -234,7 +244,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
 ## 手順 4：請求概要テキストドキュメントフラグメントの作成 {#step-create-summary-of-charges-text-document-fragment}
 
-課金の概要ドキュメントフラグメントには、次のフィールドが含まれます。
+課金ドキュメントフラグメントの概要には、次のフィールドが含まれます。
 
 | フィールド | データソース |
 |---|---|
@@ -273,7 +283,8 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    * 付加価値サービス料金
    * 合計請求金額
    * 合計支払金額
-   ![請求の概要](assets/summary_charges_static_new.png)
+
+   ![料金の概要](assets/summary_charges_static_new.png)
 
 1. 「**データモデルオブジェクト**」タブを選択します。
 1. Place the cursor next to the **Call Charges** field and double-click the **bills** > **callcharges** property.
@@ -295,6 +306,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
    1. 演算子として&#x200B;**未満**&#x200B;を選択します。
    1. 「**番号**」を選択し、**60** の値を入力します。
+
    この条件に基づいて、付加価値サービス料金の列は、通話料金フィールドの値が 60 未満の場合にのみ表示されます。
 
    ![create_rules_caption](assets/create_rules_caption.gif)
