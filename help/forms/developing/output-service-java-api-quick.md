@@ -293,7 +293,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）:Java APIを使用して、リポジトリ内のドキュメントをOutputサービスに渡す {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
 
-次のJavaコードは、リポジトリからXDPファイルを取得し、それをインスタンス内のOutputサービスに渡し `com.adobe.idp.Document` ます。 XDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされ `Applications/FormsApplication`ます。 URIパスが `repository:///Applications/FormsApplication/1.0/FormsFolder/`です。
+次のJavaコードは、リポジトリからXDPファイルを取得し、そのファイルをインスタンス内のOutputサービスに渡し `com.adobe.idp.Document` ます。 XDPファイルは、という名前のAEM Formsアプリケーションの一部としてデプロイされ `Applications/FormsApplication`ます。 URIパスが `repository:///Applications/FormsApplication/1.0/FormsFolder/`です。
 
 >[!NOTE]
 >
@@ -1132,7 +1132,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）:Java APIを使用したネットワークプリンターへの印刷ストリームの送信 {#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api}
 
-次のJavaコードの例は、\\Printer1\Printerという名前のネットワークプリンターにPostScript印刷ストリームを送信し *ます*。 2部がプリンターに送信されます。 (Sending Print Streams to Printersを参照 [](/help/forms/developing/creating-document-output-streams.md#sending-print-streams-to-printers))。
+次のJavaコードの例は、PostScript印刷ストリームを\\Printer1\Printerという名前のネットワークプリンターに送信し *ます*。 2部がプリンターに送信されます。 (Sending Print Streams to Printersを参照 [](/help/forms/developing/creating-document-output-streams.md#sending-print-streams-to-printers))。
 
 ```java
  /*
