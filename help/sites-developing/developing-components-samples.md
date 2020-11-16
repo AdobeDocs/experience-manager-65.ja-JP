@@ -12,6 +12,9 @@ discoiquuid: 402c0d6b-2c26-490a-97c5-dfd4dea778e0
 legacypath: /content/docs/en/aem/6-2/develop/components/components-develop
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 94%
 
 ---
 
@@ -33,6 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >* [開発者モード](/help/sites-developing/developer-mode.md)
 >* [Hobbes.js ライブラリをベースとしてテストを自動化するためのフレームワーク](/help/sites-developing/hobbes.md)
+
 >
 
 
@@ -43,7 +47,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-authoring-dialog-fields-customizationプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
+* [GitHubでaem-authoring-dialog-fields-customizationプロジェクトを開きます。](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization/archive/master.zip)としてダウンロードします
 
 >[!NOTE]
