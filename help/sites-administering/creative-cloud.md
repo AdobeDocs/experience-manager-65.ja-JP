@@ -12,6 +12,9 @@ discoiquuid: 7699c08b-a5b8-4f8b-8856-113d09349f49
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 525b11fbb60fc3568ecc028562ffbf174b8e4c37
+workflow-type: tm+mt
+source-wordcount: '194'
+ht-degree: 65%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 525b11fbb60fc3568ecc028562ffbf174b8e4c37
 
 >[!CAUTION]
 >
->AEM／Creative Cloud フォルダー共有機能は廃止されました。Customers are strongly advised to use newer capabilities, like [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) or [AEM desktop app](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html). 詳しくは、[AEM と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
+>AEM／Creative Cloud フォルダー共有機能は廃止されました。Customers are strongly advised to use newer capabilities, like [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) or [AEM desktop app](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html). 詳しくは、[AEM と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
 
 Adobe Experience Manager（AEM）Assets では、アセットを含むフォルダーを Adobe Creative Cloud ユーザーと共有できます。For details on how to configure Adobe Marketing Cloud to let you share assets with Adobe Creative Cloud, see [Configuring Assets-Creative Cloud integration](/help/sites-administering/configure-assets-cc-integration.md).
 
