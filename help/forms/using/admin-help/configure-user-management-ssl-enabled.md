@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e6e7e2fa-579d-4b36-8598-6ced469a94b1
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. ディレクトリサーバーからクライアント証明書を書き出します。
 1. keytool プログラムを使用して、クライアント証明書ファイルを、AEM Forms アプリケーションサーバーのデフォルトの Java 仮想マシン（JVM™）証明書ストアに読み込みます。このタスクの手順は、使用している JVM とクライアントのインストールパスによって異なります。例えば、BEA WebLogic Server と JDK 1.5 を使用している場合は、コマンドプロンプトで次のテキストを入力します。
 
-   `keytool -import -alias`*alias *`-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
+   `keytool -import -alias`*alias* `-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
 
 1. プロンプトが表示されたら、パスワードを入力します（Java では、デフォルトのパスワードは `changeit` です）。証明書が正常に読み込まれたことを示すメッセージが表示されます。
 1. プロンプトが表示されたら、`Yes` と入力して証明書を信頼します。
