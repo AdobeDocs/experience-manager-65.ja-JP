@@ -21,7 +21,7 @@ ht-degree: 16%
 
 # コミュニティツール {#communities-tools}
 
-Communitiesツールコンソールにアクセスするには、作成者インスタンスにログインします。
+Communitiesツールコンソールにアクセスするには、作成者インスタンスをログインします。
 
 * From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Communities]**.
 
