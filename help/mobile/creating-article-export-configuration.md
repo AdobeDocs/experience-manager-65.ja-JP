@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: bc681589-5d46-44cd-888d-b0722a2fd006
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 73%
 
 ---
 
@@ -46,6 +49,7 @@ The ContentSync configuration found at **&lt;dps-exportTemplate>/dps-article>** 
 >* サンプルコンテンツをインストールしていること
 >* AEM インスタンスを実行していること
 >* カスタムコンテキストや異なるポートを設定していないこと
+
 >
 
 
