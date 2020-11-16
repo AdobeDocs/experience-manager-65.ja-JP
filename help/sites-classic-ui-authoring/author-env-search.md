@@ -12,6 +12,9 @@ discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 87%
 
 ---
 
@@ -43,11 +46,13 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 >
 >* [ワイルドカード](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [ブール演算子](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
+
    >
    >
 * [正規表現](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [フィールドグループ](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [ブースト](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
+
 >
 
 
@@ -76,6 +81,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
    * 置換後の語句を指定します。
    * 検索で大文字と小文字を区別するかどうかを指定します。
    * 完全に一致する語句のみを検索するかどうかを指定します（指定しなければ、サブ文字列も検索されます）。
+
    Clicking **Preview** lists where the term has been found. You can select/clear specific instances to be replaced:
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
