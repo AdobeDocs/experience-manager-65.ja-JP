@@ -12,6 +12,9 @@ discoiquuid: 9474519d-14cc-49e0-a81d-9319966fd1f6
 pagetitle: Administering hybris
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '1726'
+ht-degree: 88%
 
 ---
 
@@ -50,6 +53,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
    * name-desc (&quot;Name (descending)&quot;, name)
    * price-asc (&quot;Price (ascending)&quot;, priceValue)
    * price-desc (&quot;Price (descending)&quot;, priceValue)
+
    >[!NOTE]
    >
    >Use the context menu (usually right-button click) to select `Create Solr sort`.
@@ -107,7 +111,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 **Day CQ Commerce Hybris Configuration**( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**カタログバージョンは** 、通常、または `Online` (デフォル `Staged` ト)に設定されます。
+**カタログバージョン** は、通常、 `Online` または `Staged` （デフォルト）に設定されます。
 
 >[!NOTE]
 >
@@ -171,7 +175,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 1. OSGi バンドルの設定：
 
-   **Day CQ Commerce Hybris Default Response Parser**(`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
+   **Day CQ Commerce Hybrisデフォルト応答パーサー**(`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
    ここで、読み込みとマップに必要な、様々なオプションと属性を定義できます。
 
@@ -238,7 +242,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
        /etc/commerce/products/outdoors
    ```
 
-   CRXDE Liteで開くことができます。例：
+   これをCRXDE Liteで開ける。例：
 
    `[http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
 
@@ -248,7 +252,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/commerce/products`
 
-   CRXDE Liteで開くことができます。例：
+   これをCRXDE Liteで開ける。例：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -280,7 +284,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/commerce/products`
 
-   CRXDE Liteで開くことができます。例：
+   これをCRXDE Liteで開ける。例：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -315,7 +319,7 @@ hybris カタログは、hybris カタログ、カテゴリおよび商品用の
 
 インポーターが使用するパラメーターは、以下に合わせて設定できます。
 
-**Day CQ Commerce Hybris Catalog Importer**( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
+**Day CQコマースハイブリスカタログインポーター**( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
 
@@ -347,6 +351,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
    * **Enable product removal**
    * **Enable product asset removal**
+
    >[!NOTE]
    >
    >AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
@@ -355,6 +360,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
    * 1 回目の実行では、変更された商品セットがログリストに表示されます。
    * 2 回目の実行では、更新される商品はありません。
+
    >[!NOTE]
    >
    >1 回目の読み込みは、商品情報を初期化するためのものです。2 回目の読み込みでは、すべてが問題なく機能していることと、商品セットの準備が完了していることを確認します。
@@ -370,7 +376,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    次に例を示します。
 
    * [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit) ページを開きます。
-   * カタログの選択 `Outdoors Staged`
+   * カタログを選択 `Outdoors Staged`
    * Search for `Cajamara`
    * この商品を選択し、承認ステータスを「`unapproved`」に変更します。
 
@@ -420,13 +426,14 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
       * ClientContext に注文履歴の概要が表示されます。
       * 「以前買い物されたお客様です」というメッセージが表示されます。
+
    >[!NOTE]
    >
    >このメッセージは、次の方法で実現されています。
    >
    >* http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.htmlに移動し [ます。](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
    >
-   >  キャンペーンは1つのエクスペリエンスで構成されます。
+   >  キャンペーンは、1つのエクスペリエンスで構成されます。
    >
    >* Click on the segment ([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
       >
