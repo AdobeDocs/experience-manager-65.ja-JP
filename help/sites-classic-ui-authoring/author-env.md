@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 87%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 オーサー環境では、以下に関連するタスクを実行できます。
 
-* [オーサリング](/help/sites-authoring/author.md) (ペ [ージのオーサリング](/help/sites-authoring/qg-page-authoring.md) 、アセ [ットの管理](/help/assets/assets.md))
+* [オーサリング](/help/sites-authoring/author.md) ( [ページオーサリング](/help/sites-authoring/qg-page-authoring.md) 、アセット [の管理を含む](/help/assets/assets.md))
 
 * Web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/administer-best-practices.md)タスク
 
@@ -36,6 +39,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * デスクトップデバイス向けに設計されています。
    * もうメンテナンスはおこなわれていません。
    * 以下のドキュメントでは、このクラシック UI に焦点を当てています。最新のタッチベースの UI でのオーサリングについて詳しくは、[標準オーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。
+
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
 1. タッチ操作向け UI
@@ -46,8 +50,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * See the [standard Authoring documentation](/help/sites-authoring/author.md) for further details on how to author using the touch-based UI. 以下のドキュメントでは、クラシック UI に焦点を当てています。
 
    * デスクトップ：
+
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
    * タブレットデバイス（または幅 1024 ピクセル未満のデスクトップ）。
+
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
