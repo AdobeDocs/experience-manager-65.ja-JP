@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 89fc3701-0472-4629-95d3-da577581a0f0
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '304'
+ht-degree: 72%
 
 ---
 
@@ -25,17 +28,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## コンテンツ概要 {#content-overview}
 
-オンライン雑誌を検討する場合、主要なコンテンツは記事、広告およびカバーです。AEM内で作成できるMobile On-Demandコンテンツの主なタイプは3つです。
+オンライン雑誌を検討する場合、主要なコンテンツは記事、広告およびカバーです。AEM内では、3つの主なタイプのMobile On-Demandコンテンツを作成できます。
 
-* **記事**:情報を伝える技術と共に基づく文章
-* **** バナー：典型的なプロモーションリンク
-* **** コレクション：表紙のテーマに適 *した記事* 、バナーなどのコンテンツで埋められた明確なバケツを表す
+* **記事**:情報を伝えるための芸術と共に基づくテキスト
+* **バナー：** 通常はグラフィカルなプロモーションリンク
+* **コレクション：** 表紙のテーマに合う記事やバナーなどのコンテンツが詰まった、明確な *バケツ* 、を表す
 
-* **** 共有リソース：記事間で共通の部分を再利用または共有できる
+* **共有リソース：** 記事間で共通の部分を再利用または共有できる
 
 >[!NOTE]
 >
->To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) in Online Help.
+>To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) in Online Help.
 
 ## コンテンツの作成と管理 {#creating-and-managing-content}
 
