@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 translation-type: tm+mt
 source-git-commit: 69dfd6b41b32cb9131fd90fd7039a0c224889db5
+workflow-type: tm+mt
+source-wordcount: '846'
+ht-degree: 69%
 
 ---
 
@@ -86,11 +89,11 @@ AEM には、[SiteCatalyst](/help/sites-administering/adobeanalytics.md) デー�
 
 「**基本**」タブから次の設定エントリにアクセスできます。
 
-**タイトル** ：ダッシュボードに表示されるタイトル。
+**タイトル** :ダッシュボードに表示されるタイトル。
 
 **要求タイプ** ：データの要求方法。
 
-**SiteCatalystの設定（オプション）** :SiteCatalystへの接続に使用する設定。 指定がない場合、ダッシュボードページで（ページプロパティによって）設定されると見なされます。
+**SiteCatalyst設定（オプション）** :SiteCatalystへの接続に使用する設定。 指定がない場合、ダッシュボードページで（ページプロパティによって）設定されると見なされます。
 
 **レポートスイートID（オプション）** ：グラフの生成に使用するSiteCatalystレポートスイート。
 
@@ -102,9 +105,9 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 >
 >日付範囲を広く設定すると、ダッシュボードの応答性が低下する場合があります。
 
-**日付：自** — 絶対日またはデータの取得元の相対日。
+**Date From** ：データの取得元となる絶対日付または相対日付。
 
-**Date To** Absoluteまたはデータの取得日の相対値。
+**日付：絶対日付** 、またはデータを取得する相対日付。
 
 各コンポーネントで、固有の設定も定義されます。
 
@@ -116,17 +119,17 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 **指標** ：表示するイベントのリスト。
 
-**要素** ：グラフ内の指標データを分類する要素のリスト。
+**エレメント** ：グラフ内の指標データを分類するエレメントのリスト。
 
 #### ランクリストレポート {#ranked-list-report}
 
 ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-**要素** ：グラフ内の指標データを分類する要素。
+**エレメント** ：グラフ内の指標データを分類する要素。
 
 **指標** ：表示するイベント。
 
-**いいえ. /トップアイテム** ：レポートに表示される項目数。
+**不可. /トップアイテム** ：レポートに表示される項目数。
 
 #### ランクレポート {#ranked-report}
 
@@ -134,7 +137,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 **指標** ：表示するイベント。
 
-**要素** ：グラフ内の指標データを分類する要素。
+**エレメント** ：グラフ内の指標データを分類する要素。
 
 #### トップサイトセクションレポート {#top-site-section-report}
 
@@ -142,7 +145,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-**いいえ. /トップアイテム** ：レポートに表示されるセクションの数。
+**不可. のトップアイテム** ：レポートに表示されるセクションの数。
 
 #### トレンドレポート {#trended-report}
 
@@ -152,7 +155,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 **指標** ：表示するイベント。
 
-**要素** ：グラフ内の指標データを分類する要素。
+**エレメント** ：グラフ内の指標データを分類する要素。
 
 ## ダッシュボードの拡張 {#extending-dashboard}
 
@@ -188,7 +191,7 @@ The top author components is stored in the repository at `/apps/geometrixx-outdo
 
 次の JavaScript ファイルは、`geout.reporting.topauthors`[ のクライアントライブラリ](/help/sites-developing/clientlibs.md)でコンポーネントの子として定義されます。
 
-QueryBuilderは、 [リポジトリに対して](/help/sites-developing/querybuilder-api.md) 、ノードを読み取るためのクエリーを実行するために使用 `cq:AuditEvent` します。 クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
+QueryBuilder [は、リポジトリをクエリして](/help/sites-developing/querybuilder-api.md)`cq:AuditEvent` ノードを読み取るために使用します。 クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
 
 #### top_authors.js {#top-authors-js}
 
@@ -235,7 +238,7 @@ $.ajax({
 });
 ```
 
-には、と `JSP` の両方が含ま `global.jsp` れま `clientlib`す。
+には、と `JSP` の両方が含ま `global.jsp` れ `clientlib`ます。
 
 #### top_authors.jsp {#top-authors-jsp}
 
