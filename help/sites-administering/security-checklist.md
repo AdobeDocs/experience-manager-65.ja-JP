@@ -51,7 +51,7 @@ ht-degree: 87%
 
 ### AEM および OSGi コンソールの admin アカウントのデフォルトパスワードの変更 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
-インストール後に、（すべてのインスタンスに対する）権限のある [**AEM **`admin`アカウント](#changing-the-aem-admin-password)のパスワードを変更することを強くお勧めします。
+インストール後に、（すべてのインスタンスに対する）権限のある [**AEM** `admin` アカウント](#changing-the-aem-admin-password)のパスワードを変更することを強くお勧めします。
 
 以下のアカウントが該当します。
 
@@ -306,7 +306,7 @@ DoS の悪用を防ぐ方法は次のとおりです。
 
       **JSONの最大結果** ( `json.maximumresults`)
 
-      を [Apache Sling GET Servletの設定に含めます](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
+      ( [Apache SlingGETサーブレットの設定](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)) この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
 
    * 予防策として、デフォルトの他のレンダラー（HTML、プレーンテキスト、XML）を無効にします。この場合も [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet) を設定します。
    >[!CAUTION]
