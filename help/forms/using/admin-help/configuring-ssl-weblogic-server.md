@@ -165,7 +165,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 
 ## SSL を使用する WebLogic の設定 {#configure-weblogic-to-use-ssl}
 
-1. Start the WebLogic Server administration console by typing `https://`*[host name ]*`:7001/console`in the URL line of a web browser.
+1. Start the WebLogic Server administration console by typing `https://`*[host name ]*`:7001/console` in the URL line of a web browser.
 1. Under Environment, in Domain Configurations, select **Servers > &#39;server&#39; > Configuration > General**.
 1. 「General」の「Configuration」で、「**Listen Port Enabled**」と「**SSL Listen Port Enabled**」が選択されていることを確認します。有効でない場合は、次の手順を実行します。
 
@@ -174,7 +174,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 
 1. このサーバーが管理対象サーバーである場合は、リスンポートを未使用のポート番号（8001 など）に、SSL リスンポートを未使用のポート番号（8002 など）に変更します。スタンドアロンサーバーの場合、デフォルトの SSL ポートは 7002 です。
 1. 「**Release Configuration**」をクリックします。
-1. Under Environment, in Domain Configurations, click **Servers >[*Managed Server*]> Configuration > General**.
+1. Under Environment, in Domain Configurations, click **Servers > [*Managed Server*] > Configuration > General**.
 1. 「General」の「Configuration」で「**Keystores**」を選択します。
 1. 「Change Center」で、「**Lock &amp; Edit**」をクリックし、選択内容と値を変更します。
 1. 「**Change**」をクリックしてキーストアリストをドロップダウンリストとして取得し、「**Custom Identity And Custom Trust**」を選択します。
