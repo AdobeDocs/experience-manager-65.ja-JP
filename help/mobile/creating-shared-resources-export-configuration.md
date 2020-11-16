@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: 1edf6c76-ccb1-40b6-bdf6-924f1461cd28
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 69%
 
 ---
 
@@ -33,7 +36,7 @@ The property ***dps-exportTemplate*** mentioned in table above, defines the path
 
 以下のリソースでは、Adobe Experience Manager（AEM）から共有リソースを書き出して AEM Mobile にアップロードする手順について説明しています。
 
-共有HTMLリソースを使用すると、記事でHTMLリソースを共有できます。このHTMLリソースを共有する場合は、すべての記事で複製する必要があり、アイコン、フォント、JavaScript、CSSを含めることができます。
+共有HTMLリソースを使用すると、記事でHTMLリソースを共有できます。このHTMLリソースは、すべての記事で複製が必要になり、アイコン、フォント、javascript、cssを含むことができます。
 
 The Content Sync configuration found at **&lt;dps-exportTemplate>/dps-HTMLResources>** should be configured to export all the content an article required for property static rendering on device.
 
@@ -44,6 +47,7 @@ The Content Sync configuration found at **&lt;dps-exportTemplate>/dps-HTMLResour
 >* サンプルコンテンツをインストールしていること
 >* AEM インスタンスを実行していること
 >* カスタムコンテキストや異なるポートを設定していないこと
+
 >
 
 
