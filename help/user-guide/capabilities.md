@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
 source-wordcount: '153'
-ht-degree: 15%
+ht-degree: 38%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 15%
 
 ## AEM の基盤 {#aem-foundation}
 
-[Adobe Managed Servicesクラウドの導入を含む、Adobe Experience Manager6.5のインストール、デプロイ、およびアーキテクチャについて詳しく説明します](/help/sites-deploying/home.md)。
+[アドビのAdobe Managed Servicesクラウド展開を含む、Adobe Experience Manager6.5のインストール、展開、およびアーキテクチャについて詳しく説明します](/help/sites-deploying/home.md)。
 
 [AEMプロジェクトの管理方法を説明します](/help/managing/home.md)。
 
 ## AEM Sites {#aem-sites}
 
-[AEMでコンテンツを作成したりオーサリングを行ったりするための主要な概念について説明します](/help/sites-authoring/home.md)。
+[AEMでコンテンツを作成したりオーサリングを行うための主要な概念について説明します](/help/sites-authoring/home.md)。
 
 [AEMの管理について説明します](/help/sites-administering/home.md)。
 
@@ -32,7 +32,7 @@ ht-degree: 15%
 
 ## AEM Forms {#aem-forms}
 
-[デジタルフォームを作成、管理、発行、更新します。](/help/forms/home.md)
+[デジタルフォームを作成、管理、公開、および更新します。](/help/forms/home.md)
 
 ## AEM Screens {#aem-screens}
 
@@ -40,7 +40,7 @@ ht-degree: 15%
 
 ## AEM Communities {#aem-communities}
 
-[フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成できます。](/help/communities/home.md)
+[フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。](/help/communities/home.md)
 
 ## AEM Livefyre {#aem-livefyre}
 
@@ -48,4 +48,4 @@ ht-degree: 15%
 
 ## AEM Mobile {#aem-mobile}
 
-[モバイルアプリ用のコンテンツを作成し、管理します。](/help/mobile/home.md)
+[モバイルアプリ用のコンテンツを作成および管理します。](/help/mobile/home.md)
