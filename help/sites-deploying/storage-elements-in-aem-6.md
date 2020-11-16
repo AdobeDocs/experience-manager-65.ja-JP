@@ -12,6 +12,9 @@ discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 translation-type: tm+mt
 source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+workflow-type: tm+mt
+source-wordcount: '733'
+ht-degree: 80%
 
 ---
 
@@ -35,7 +38,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
 >[!CAUTION]
 >
->セグメントノードストアのPIDがorg.apache.jackrabbit.oakから変更されました。**以前のバージョンのAEM 6からorg.apache.jackrabbit.oak.segment.SegmentNodeStoreServiceへのプラグイン**.segment.SegmentNodeStoreService（AEM 6.3内）。この変更を反映するために、必要な設定の調整を必ず行ってください。
+>セグメントノードストアのPIDがorg.apache.jackrabbit.oakから変更されました。**aem 6の旧バージョンからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreService(AEM 6.3)へのplugins**.segment.SegmentNodeStoreService。この変更を反映するために必要な設定調整を行ってください。
 
 デフォルトでは、AEM 6 は Tar ストレージを使用して、デフォルトの設定オプションによって、ノードおよびバイナリを保存します。ストレージ設定を手動でおこなうには、次の手順に従ってください。
 
@@ -74,10 +77,10 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
 1. ファイルを編集し、設定オプションを設定します。以下のオプションが利用できます。
 
-   * `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは、 です。`mongodb://localhost:27017`
+   * `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは です。`mongodb://localhost:27017`
    * `db`：Mongo データベースの名前です。新しい AEM 6 のインストールでは、デフォルトのデータベース名として **aem-author** を使用します。
-   * `cache`：キャッシュサイズ（MB 単位）です。これは DocumentNodeStore で使用される様々なキャッシュに分散されます。デフォルトは、256 です。
-   * `changesSize`：Mongo で差分出力のキャッシュに使用される capped コレクションのサイズ（MB 単位）です。デフォルトは、256 です。
+   * `cache`：キャッシュサイズ（MB 単位）です。これは DocumentNodeStore で使用される様々なキャッシュに分散されます。デフォルトは 256 です。
+   * `changesSize`：Mongo で差分出力のキャッシュに使用される capped コレクションのサイズ（MB 単位）です。デフォルトは 256 です。
    * `customBlobStore`：カスタムデータストアが使用されることを示すブール値です。デフォルト値は false です。
 
 1. 使用するデータストアの PID を持つ設定ファイルを作成し、そのファイルを編集して設定オプションを設定します。詳しくは、[ノードストアとデータストアの設定](/help/sites-deploying/data-store-config.md)を参照してください。
@@ -95,7 +98,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ管理アルゴリズムが使用されます。AEM はきめ細かい読み取りと書き込みを実行しますが、THP は大規模な操作に最適化されています。この理由から、Tar と Mongo の両方のストレージで THP を無効にすることをお勧めします。アルゴリズムを無効にするには、次の手順に従います。
 
 1. Open the `/etc/grub.conf` file in the text editor of your choice.
-1. Add the following line to the **grub.conf** file:
+1. **grub.conf** ファイルに対する次の行。
 
    ```
    transparent_hugepage=never
@@ -118,11 +121,12 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >さらに、次の資料も参考にできます。
 >
 >* For more information regarding Transparent Huge Pages on Red Hat Linux, see this [article](https://access.redhat.com/solutions/46111).
->* For Linux tuning tips, see this [article](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+>* For Linux tuning tips, see this [article](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html).
+
 >
 
 
 
 ## リポジトリのメンテナンス {#maintaining-the-repository}
 
-リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。 リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョン・クリーンアップ・メカニズムは、リポジトリから古いデータを削除して、ディスク領域を再利用します。 リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。
+リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。 リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョンのクリーンアップメカニズムは、リポジトリから古いデータを削除してディスク領域を再利用します。 リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。
