@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) in Online Help.
+>To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) in Online Help.
 
 ## コンテンツの公開／非公開 {#publishing-unpublishing-the-content}
 
@@ -33,7 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->コンテンツを公開する前に、Mobile On-Demandにアップロードする必要があります。
+>コンテンツをMobile On-Demandにアップロードしてから、公開する必要があります。
 
 記事を公開／非公開にする一般的なワークフローは以下のとおりです。
 
