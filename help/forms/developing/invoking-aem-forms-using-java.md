@@ -69,7 +69,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 >[!NOTE]
 >
->（自動オプションのみ）AEM Formsサーバーに開始し、EJB用のIPを指定す `standalone.bat -b <Server IP> -c lc_turnkey.xml` るコマンドを指定します
+>（自動オプションのみ）EJBのサーバーIPを指定するコマンド `standalone.bat -b <Server IP> -c lc_turnkey.xml` を使用して、AEM Formsサーバーに開始します
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
@@ -1062,7 +1062,7 @@ Java 呼び出し API を使用して短時間のみ有効なプロセスの `My
 
    >[!NOTE]
    >
-   >`false` メソッドの 4 番目のパラメーターとして `createInvocationRequest` を渡すことによって、長期間有効なプロセスを呼び出すことができます。値 `false`* を渡すと、非同期要求が作成されます。*
+   >`false` メソッドの 4 番目のパラメーターとして `createInvocationRequest` を渡すことによって、長期間有効なプロセスを呼び出すことができます。値 `false`*を渡すと、非同期要求が作成されます。*
 
 1. `InvocationReponse` オブジェクトの `getOutputParameter` メソッドを呼び出して、出力パラメーターの名前を指定する文字列値を渡すことによって、プロセスの戻り値を取得します。In this situation, specify `outDoc` ( `outDoc` is the name of the output parameter for the `MyApplication/EncryptDocument` process). 以下の例のように、戻り値を `Document` にキャストします。
 
