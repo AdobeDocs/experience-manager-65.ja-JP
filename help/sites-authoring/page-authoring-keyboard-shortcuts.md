@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 translation-type: tm+mt
 source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 91%
 
 ---
 
@@ -27,14 +30,14 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 | 場所 | ショートカット | 説明 |
 |---|---|---|
-| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | Toggle between **Preview** and the currently selected [mode](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (e.g. **Edit**, **Layout**, etc)* |
-| **編集**&#x200B;モード | `Ctrl-z` | [最後に行った変更操作を取り消す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
-|  | `Ctrl-y` | [最後に行った変更操作をやり直す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
-|  | `Ctrl-Click` | 複数の段落を選択 |
-|  | `Ctrl-c` | 選択した段落をコピー |
-|  | `Ctrl-x` | 選択した段落を切り取り（切り取った段落は貼り付けるまでUIに表示されません） |
-|  | `Ctrl-v` | 以前に切り取った段落またはコピーした段落を貼り付け |
-|  | `Ctrl-Backspace` | 選択した段落を削除 |
+| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | **プレビュー**&#x200B;と、現在選択されている[モード](/help/sites-authoring/author-environment-tools.md#page-modes)</a>（**編集**、**レイアウト**&#x200B;など）を切り替える * |
+| **編集**&#x200B;モード | `Ctrl-z` | [最後におこなった変更操作を取り消す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
+|  | `Ctrl-y` | [最後におこなった変更操作をやり直す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
+|  | `Ctrl-Click` | 複数の段落を選択する |
+|  | `Ctrl-c` | 選択した段落をコピーする |
+|  | `Ctrl-x` | 選択した段落をカットする（カットされた段落は、貼り付けられるまで UI に保存されています） |
+|  | `Ctrl-v` | 以前にカットまたはコピーした段落を貼り付ける |
+|  | `Ctrl-Backspace` | 選択した段落を削除する |
 | **編集**&#x200B;モード - リッチテキストエディター | `Ctrl-b` | 太字 |
 |  | `Ctrl-I` | 斜体 |
 |  | `Ctrl-u` | 下線 |
@@ -51,7 +54,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 ## OS 特有の修飾子キー {#os-specific-modifier-keys}
 
-キーボードショートカットに使用する修飾キーは、クライアントが使用するオペレーティングシステムによって異なります。
+キーボードショートカットに使用される修飾子キーは、クライアントが使用するオペレーティングシステムによって異なります。
 
 | Windows および Linux | macOS |
 |---|---|
