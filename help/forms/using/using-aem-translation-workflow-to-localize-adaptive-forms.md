@@ -10,6 +10,9 @@ discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
 translation-type: tm+mt
 source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+workflow-type: tm+mt
+source-wordcount: '779'
+ht-degree: 83%
 
 ---
 
@@ -37,19 +40,19 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
    >[!NOTE]
    >
    >* ブラウザーウィンドウでローカライズバージョンのフォームを開く前に、ブラウザーのロケールがフォームと同じロケールに設定されていることを確認してください。例えば、フォームがドイツ語（de）に翻訳されているときは、ブラウザーのロケールをドイツ語（de）に設定します。
-   >* アダプティブフォームコンポーネントは右から左(RTL)言語をサポートしていません。 例えば、ヘブライ語。
+   >* アダプティブフォームコンポーネントは、右から左に書く(RTL)言語をサポートしていません。 例えば、ヘブライ語。
 
 
    アダプティブフォームと共に、自動生成されるレコードのドキュメントもローカライズされます。
 
-   レコードのドキュメントの設定と設定について詳しくは、次を参照してください。
+   レコードの設定と設定のドキュメントについて詳しくは、次を参照してください。
 
    [レコードのドキュメントテンプレート設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-template-configuration-p)
 
    [レコードのドキュメントの設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
 
 1. [レコードのドキュメントのブランディング情報をカスタマイズ](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)し、ブラウザーのロケールを、機械語を使用してアダプティブフォームをローカライズしたのと同じ言語に設定します。ブラウザーのロケールは、レコードのドキュメントにあるブランディング情報のローカライズに役立ちます。
-1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」をタップします。レコードのドキュメントPDFが生成され、ブラウザーの新しいタブで開かれます。
+1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」をタップします。レコードのPDFのドキュメントが生成され、ブラウザーの新しいタブに開きます。
 
 ## 人による翻訳を使用したアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
 
@@ -63,17 +66,18 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 1. 翻訳サービスとフレームワークの設定に[言語マスターのページを関連付け](/help/sites-administering/tc-tic.md)ます。
 
-1. [翻訳するコンテンツのタイプを](/help/sites-administering/tc-rules.md) 「識別」します。
+1. [翻訳するコンテンツのタイプを特定します](/help/sites-administering/tc-rules.md) 。
 
 1. [翻訳するコンテンツを準備](/help/sites-administering/tc-prep.md)します。そのためには、言語マスターをオーサリングして、言語コピーのルートページを作成します。
 
-1. [翻訳プロジェクトを作成し](/help/sites-administering/tc-manage.md) 、翻訳するコンテンツを収集し、翻訳プロセスを準備します。
+1. [翻訳プロジェクトを作成し](/help/sites-administering/tc-manage.md) 、翻訳対象のコンテンツを収集して翻訳プロセスを準備します。
 
 1. 翻訳プロジェクトを使用して、[コンテンツの翻訳プロセスを管理](/help/sites-administering/tc-manage.md)します。
 
 >[!NOTE]
 >
->* アダプティブフォームコンポーネントは右から左(RTL)言語をサポートしていません。 例えば、ヘブライ語。
+>* アダプティブフォームコンポーネントは、右から左に書く(RTL)言語をサポートしていません。 例えば、ヘブライ語。
+
 >
 
 
