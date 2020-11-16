@@ -29,7 +29,7 @@ ht-degree: 88%
 >
 >より新しく拡張性が高い[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を AEM プロジェクトで利用することをお勧めします。These are part of the [We.Retail sample content](/help/sites-developing/we-retail.md) and can also be [installed separately and used for development](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/get-started/using.html) by your administrator.
 >
->AEM Modenize Tools Suite [](https://opensource.adobe.com/aem-modernize-tools/) （最新化ツールスイート）を使用して、Foundationコンポーネントベースのサイトをリファクタリングし、コアコンポーネントを使用することができます。
+>AEMの [最新化ツールスイートを使用して](https://opensource.adobe.com/aem-modernize-tools/) 、Foundation Componentsベースのサイトをリファクタリングし、コアコンポーネントを使用できます。
 
 基盤コンポーネントは、標準の Web ページ用のコンテンツを作成するためのものです。AEM の標準のインストールでそのまま使用できるコンポーネントのサブセットを形成します。
 
@@ -195,7 +195,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 手動で、またはセレクターを使用して、パスを指定します。現在のページを親として使用するには、空のままにします。
       * **固定リストのオプション**
 
-         * **ページ**&#x200B;ページのリストを選択します。 使用する 
+         * **ページ**&#x200B;ページのリストを選択します。使用する 
 `+` をクリックして、エントリや上/下ボタンを追加して順序を調整します。
       * **検索のオプション**
 
@@ -302,7 +302,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 * **外部 Web アプリケーション**
 
-   * **Targetアプリケーション**&#x200B;統合するWebアプリケーションのURLを指定します。 例：
+   * **ターゲットアプリケーション**&#x200B;統合するWebアプリケーションのURLを指定します。例：
 
       ```
       https://en.wikipedia.org/wiki/Main_Page
@@ -735,7 +735,7 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
 
 >[!NOTE]
-**テーブル**&#x200B;基盤コンポーネントは、**[テキスト](#text)**基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
+**テーブル**&#x200B;基盤コンポーネントは、**[テキスト](#text)**&#x200B;基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
 
 **テーブル**&#x200B;コンポーネントは、テーブルの作成、入力および書式設定ができるように事前設定されています。ダイアログを使用して、テーブルを設定し、次のいずれかの方法でコンテンツを作成できます。
 
@@ -903,7 +903,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 サポートされている形式は次のとおりです。
 * `.mp4`
 * `Ogg`
-* `FLV` （Flashビデオ）
+* `FLV` (Flashビデオ)
 
 
 ## 列 {#columns}
@@ -1025,7 +1025,7 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 
    * **必須メッセージ**
 
-      このフィールドが必須であることをユーザーに通知するメッセージです。 必須フィールドにも、アスタリスクと共にフラグが付けられます。
+      このフィールドが必須であることをユーザーに通知するメッセージです。必須フィールドにも、アスタリスクと共にフラグが付けられます。
 
    * **制約**
 
@@ -1080,7 +1080,7 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
    * **アクションタイプ**
 
       フォームにはアクションが必要です。アクションは、ユーザーから送信されたデータによってトリガーされ実行される処理を定義するものです（HTML の action= に似ています）。対応する **アクション設定が必要な場合もあります**。
-標準のAEMインストールには、次のアクションタイプが含まれます。
+標準のAEMインストールには、次のアクションの種類が含まれます。
 
       * **アカウント要求**
       * **コンテンツを作成**
