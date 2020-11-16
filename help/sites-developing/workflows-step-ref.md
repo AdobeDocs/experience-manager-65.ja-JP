@@ -12,6 +12,9 @@ discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '3286'
+ht-degree: 60%
 
 ---
 
@@ -28,6 +31,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 >
 >* [AEM Forms ワークフローステップのリファレンス](/help/forms/using/aem-forms-workflow-step-reference.md)
 >* [メディアハンドラーとワークフローを使用したアセットの処理](/help/assets/media-handlers.md)
+
 >
 
 
@@ -50,7 +54,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 * **タイムアウト**
 
-   ステップが「タイムアウト」になるまでの期間。
+   ステップが「タイムアウト」されるまでの期間。
 You can select between: **Off**, **Immediate**, **1h**, **6h**, **12h**, **24h**.
 
 * **タイムアウトハンドラー**
@@ -60,7 +64,7 @@ You can select between: **Off**, **Immediate**, **1h**, **6h**, **12h**, **24h**
 
 * **ハンドラー処理の設定**
 
-   実行後にワークフローを次の手順に自動的に進めるには、このオプションを選択します。 選択しない場合、実装スクリプトでワークフローの進行を処理する必要があります。
+   実行後、ワークフローを自動的に次の手順に進める場合は、このオプションを選択します。 選択しない場合、実装スクリプトでワークフローの進行を処理する必要があります。
 
 ### ステップのプロパティ - 「ユーザー／グループ」タブ {#step-properties-user-group-tab}
 
@@ -116,10 +120,10 @@ The **AND Split** creates a split in the workflow, after which both branches wil
 
 ## 移動ステップ {#goto-step}
 
-「 **Goto Step** 」では、ワークフローモデルで次に実行する手順を指定できます。 ワークフローモデルの次の手順を評価するルーティング式として、ルール定義、外部スクリプトまたはECMAスクリプトを指定できます。
+「 **ステップへ移動** 」(Goto Step)では、ワークフローモデルで次に実行するステップを指定できます。 ルーティング式としてルール定義、外部スクリプト、またはECMAスクリプトを指定し、ワークフローモデルの次のステップを評価できます。
 
-* 指定した条件がtrueの場合、 **Goto Step** （後進ステップ）が完了し、ワークフローエンジンは指定したステップを実行します。
-* 指定した条件がtrueを保持しない場合、 **Gotoステップが完了し** 、通常のルーティングロジックによって次に実行するステップが決定されます。
+* 指定した条件がtrueを保持している場合は、 **Gotoステップ** （ステップへ進む）が完了し、ワークフローエンジンは指定したステップを実行します。
+* 指定した条件がtrueを保持しない場合は、「 **Gotoステップ** 」が完了し、通常のルーティングロジックによって次に実行するステップが決定されます。
 
 **移動ステップ**&#x200B;を使用すると、ワークフローモデル内に詳細なルーティング構造を実装できます。For example, to implement a loop, the **Goto Step** can be defined to execute a prior step in the workflow, with the routing expression evaluating a loop condition.
 
@@ -130,12 +134,12 @@ The **AND Split** creates a split in the workflow, after which both branches wil
 * [共通](#step-properties-common-tab)
 * **プロセス**
 
-   * **ターゲットステップ**:ルーティング式の条件を評価した後に実行するステップを選択します。
-   * **ルーティング式**:「ルール定義」、「外部スクリプト」または **Target手順を実行するかどうかを決定するECMAスクリプトを選択します**。
+   * **ターゲット手順**:ルーティング式の条件を評価した後に実行する手順を選択します。
+   * **ルーティング式**:「ルール定義」、「外部スクリプト」、または **ターゲット手順を実行するかどうかを決定するECMAスクリプトを選択します**。
 
-      * **** ルールの定義：式エディター [を使用して](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor) 、ルールを定義します。
-      * **** 外部スクリプト：外部スクリプトのパス。
-      * **ECMA Script**:Gotoステップを実行するかどうかを決定するス **クリプト**。
+      * **ルールの定義：** ルールを定義するには、 [式エディタ](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor) (Editor)を使用します。
+      * **外部スクリプト：** 外部スクリプトのパス。
+      * **ECMAスクリプト**:手順 **Gotoを実行するかどうかを決定するスクリプト**。
 
 #### ループのシミュレート {#simulating-a-for-loop}
 
@@ -172,15 +176,15 @@ function check(){
 
 ### ルール定義を使用したforループのシミュレーション {#simulateforloop}
 
-ルーティング式として「ルール定義」(Rule Definition)を使用して、forループをシミュレートすることもできます。 [Longデータ型 **の**](/help/forms/using/variable-in-aem-workflows.md#create-a-variable) count変数を作成します。 **Variable** stepのマッピングとして、 **[Variable](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)**stepの値を設定し、Count **variable**countの値を設定し、Set ********Variable Set Stepの各実行を設定します。
+ルーティング式として「ルール定義」を使用して、forループをシミュレートすることもできます。 [Longデータ型の **count**](/help/forms/using/variable-in-aem-workflows.md#create-a-variable) 変数を作成します。 Set Variable **ステップのマッピングモードとして** 式を使用し **[、Set Variable](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)** ステップの値を設定し、Count **Variableカウントの値を設定し、Set Variable** ステップの各実行に対して1を設定し、Set Variableステップの各実行に対して ******** を使用します。
 
 ![forループのシミュレーション](assets/variable_use_case_count_new.png)
 
-「 **Step**」で、「 **Set Variable** 」を「 **Target Step** 」として使用し、「 **** 5 goto」をルーティング式としてカウントします。
+「 **Step**」で、「 **Set Variable** 」を「 **Step** 」として使用し、「&lt; 5goto」を「 **ターゲット式」として** カウントします。
 
 ![forループをシミュレートする条件](assets/variable_use_case_count1_new.png)
 
-「 **Set Variable** 」ステップは、実行のたびに **count** 変数の値を1ずつ増分し、値が5に達するまで繰り返し実行します。
+「 **Set Variable** 」ステップは、実行のたびに **count** 変数の値を1ずつ、値が5に達するまで繰り返し増分します。
 
 ## OR 分割 {#or-split}
 
@@ -188,7 +192,7 @@ function check(){
 
 >[!NOTE]
 >
->OR分割の作成について詳しくは、次を参照してください。https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html [](https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html)
+>OR分割の作成の詳細は、次を参照してください。 [https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html](https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html)
 
 ![OR分割を使用した分岐](assets/variables_orsplit_new.png)
 
@@ -203,15 +207,16 @@ function check(){
       * 分割名を指定します。
    * **分岐(*x)***
 
-      * **** 分岐を追加：手順に分岐を追加します。
-      * **ルーティング式の選択**:アクティブなブランチを評価するルーティング式を選択します。 使用できる値は次のとおりです。ルール定義、外部スクリプト、およびECMAスクリプトを参照してください。
-      * **クリックして式を追加**:ルーティング式として「 **Rule Definition** 」を選択した場合、アクティブなブランチを評価する式を追加します。
-      * **Script Path**:ルーティング式として「外部スクリプト」を選択した場合に、アクティブなブランチを評価するスクリプトが含まれ **るファイル** のパスです。
-      * **スクリプト**:ルーティング式として **ECMA Scriptを選択した場合、アクティブなブランチを評価するスクリプトを** 、ボックスに追加します。
+      * **分岐追加:** 手順の分岐を追加増やします。
+      * **ルーティング式の選択**:アクティブなブランチを評価するルーティング式を選択します。 使用できる値は次のとおりです。ルール定義、外部スクリプト、ECMAスクリプトを参照してください。
+      * **クリックして追加式**:「ルール定義」を「追加ルーティング」式として選択した場合に、アクティブなブランチを評価する式。 ****
+      * **Script Path**:ルーティング式として「 **外部スクリプト** 」を選択した場合に、アクティブなブランチを評価するスクリプトが含まれるファイルへのパスです。
+      * **スクリプト**:ルーティング追加式として **ECMAスクリプトを選択した場合に、アクティブなブランチを評価するためのボックス内のスクリプト** 。
       * **Default Route**:複数のブランチがある場合は、デフォルトのブランチが使用されます。 デフォルトとして指定できるブランチは 1 つだけです。
+
    >[!NOTE]
    >
-   >    * 1つのブランチは、ルーティング式に基づいて一度に評価されます。
+   >    * 1つのブランチが、ルーティング式に基づいて一度に評価されます。
    >    * 分岐は上から下に評価されます。
    >    * trueに評価される最初のスクリプトが実行されます。
    >    * どの分岐もtrueと評価されない場合、ワークフローは進みません。
@@ -227,7 +232,7 @@ function check(){
 
 ### Participant Step {#participant-step}
 
-**参加者ステップ**&#x200B;では、特定のアクションの所有者を割り当てることができます。ワークフローは、ユーザーが手動で手順を確認した場合にのみ続行します。 これは、ワークフローに関するアクションを誰かに実行させる場合に使用します。例えば、レビューステップなどです。
+**参加者ステップ**&#x200B;では、特定のアクションの所有者を割り当てることができます。ワークフローは、ユーザーが手動で手順を確認した場合にのみ続行されます。 これは、ワークフローに関するアクションを誰かに実行させる場合に使用します。例えば、レビューステップです。
 
 余談になりますが、アクションを割り当てる際には、ユーザー認証を考慮する必要があります。ユーザーは、ワークフローのペイロードであるページにアクセスする必要があるからです。
 
@@ -242,8 +247,9 @@ function check(){
 >
 >次の場合、ワークフロー開始者には常に通知が送信されます。
 >
->* ワークフローが完了しました（完了）。
->* ワークフローが中止（終了）されました。
+>* ワークフローが完了しました（完了しました）。
+>* ワークフローが中止されました（終了されました）。
+
 >
 
 
@@ -268,7 +274,7 @@ function check(){
 * [ユーザー / グループ](#step-properties-user-group-tab)
 * **ダイアログ**
 
-   * **ダイアログパス**:作成するダイアログのダイアログノ [ードへのパス](#dialog-participant-step-creating-a-dialog)。
+   * **ダイアログパス**:作成する [ダイアログのダイアログノードへのパス](#dialog-participant-step-creating-a-dialog)。
 
 #### Dialog Participant Step - Creating a dialog {#dialog-participant-step-creating-a-dialog}
 
@@ -373,7 +379,7 @@ function check(){
 
 ### 動的参加者ステップ {#dynamic-participant-step}
 
-**動的参加者ステップ**&#x200B;コンポーネントは&#x200B;**[参加者ステップ](#participant-step)**に似ていますが、参加者が実行時に自動的に選択される点が異なります。
+**動的参加者ステップ**&#x200B;コンポーネントは&#x200B;**[参加者ステップ](#participant-step)**&#x200B;に似ていますが、参加者が実行時に自動的に選択される点が異なります。
 
 このステップを設定するには、ダイアログと、作業項目を割り当てる参加者を識別する&#x200B;**参加者選択**&#x200B;を選択します。
 
@@ -408,7 +414,7 @@ function check(){
 
    >[!CAUTION]
    >
-   >You ***must*** not change anything in the `/libs` path.
+   >`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
    >
    >
    >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
@@ -431,7 +437,7 @@ function check(){
 
    * `SERVICE_PROPERTY_LABEL` フィールド：このフィールドを使用して、参加者選択の名前を指定します。 この名前が、**動的参加者ステップ**&#x200B;のプロパティで使用可能な参加者選択のリストに表示されます。
 
-   * `getParticipant` メソッド：動的に解決されるプリンシパルIDを値として返 `String` します。
+   * `getParticipant` メソッド：動的に解決されるプリンシパルIDを `String` 値として返します。
    >[!CAUTION]
    >
    >The `getParticipant` method returns the dynamically resolved Principal id. この ID は、グループ ID またはユーザー ID のいずれかになります。
@@ -449,7 +455,7 @@ function check(){
 
 次の Java クラスは、`ParticipantStepChooser` インターフェイスを実装します。このクラスは、ワークフローを開始した参加者の名前を返します。The code uses the same logic that the sample script (`initiator-participant-chooser.ecma`) uses.
 
-注釈 `@Property` はフィールドの値をに設 `SERVICE_PROPERTY_LABEL` 定します `Workflow Initiator Participant Chooser`。
+注 `@Property` 釈によって、 `SERVICE_PROPERTY_LABEL` フィールドの値がに設定され `Workflow Initiator Participant Chooser`ます。
 
 ```java
 package com.adobe.example;
@@ -512,15 +518,15 @@ In the **Dynamic Participant Step** properties dialog, the **Participant Chooser
 * [ユーザー / グループ](#step-properties-user-group-tab)
 * **フォーム**
 
-   * **Form Path**:作成するフォ [ームのパス](#form-participant-step-creating-the-form)。
+   * **Form Path**:作成する [フォームへのパス](#form-participant-step-creating-the-form)。
 
 #### フォーム参加者ステップ - フォームの作成 {#form-participant-step-creating-the-form}
 
 通常どおり、**フォーム参加者ステップ**&#x200B;で使用するフォームを作成します。ただし、フォーム参加者ステップ用のフォームには、次の設定が必要です。
 
-* 「 **Start of Form** 」コンポーネントの「 **Action Type** 」プロパティーは、「 `Edit Workflow Controlled Resource(s)`」に設定されている必要があります。
+* Formコンポーネントの **開始では** 、「 **Action Type** 」プロパティが「」に設定されている必要があり `Edit Workflow Controlled Resource(s)`ます。
 * The **Start of Form** component must have a value for the `Form Identifier` property.
-* フォームコンポーネントでは、**エレメント名**&#x200B;プロパティを、フィールドデータを保存するノードのパスに設定する必要があります。パスは、ワークフローペイロードコンテンツ内でノードを見つける必要があります。 値には次の形式を使用します。
+* フォームコンポーネントでは、**エレメント名**&#x200B;プロパティを、フィールドデータを保存するノードのパスに設定する必要があります。パスは、ワークフローペイロードコンテンツ内のノードを見つける必要があります。 値には次の形式を使用します。
 
    `./jcr:content/path_to_node`
 
@@ -587,9 +593,9 @@ A **Process Step** executes an ECMAScript or calls an OSGi service to perform au
 
 ## 変数を設定 {#set-variable}
 
-「変数を設定」ステップでは、変数の値を設定し、値が設定される順序を定義できます。 変数は、変数のマッピングが変数の設定手順で示される順序で設定されます。
+「変数を設定」ステップでは、変数の値を設定し、値が設定される順序を定義できます。 変数は、変数の設定手順で変数のマッピングが表示される順序で設定されます。
 
-![変数を設定するマッピングの追加](assets/set_variable_addmappingnew.png)
+![変数追加を設定するマッピング](assets/set_variable_addmappingnew.png)
 
 ### 変数の設定 — 設定 {#setvariable}
 
@@ -598,14 +604,14 @@ A **Process Step** executes an ECMAScript or calls an OSGi service to perform au
 * [共通](/help/sites-developing/workflows-step-ref.md#step-properties-common-tab)
 * **マッピング**
 
-   * **** 変数の選択：値を設定する変数を選択するには、このオプションを使用します。
-   * **** マッピングモードの選択：マッピングモードを選択して、変数の値を設定します。 変数のデータタイプに応じて、次のオプションを使用して変数の値を設定できます。
+   * **変数を選択：** 値を設定する変数を選択するには、このオプションを使用します。
+   * **マッピングモードの選択：** マッピングモードを選択して、変数の値を設定します。 変数のデータタイプに応じて、次のオプションを使用して変数の値を設定できます。
 
       * **リテラル：**&#x200B;指定する値が正確に分かっている場合は、このオプションを使用します。
-      * **** 式：このオプションは、式に基づいて使用する値が計算される場合に使用します。 式は、提供された式エディターで作成されます。
-      * **** JSONドット表記：このオプションを使用して、JSON型またはFDM型の変数から値を取得します。
-      * **** XPATH:XML型の変数から値を取得するには、このオプションを使用します。
-      * **** ペイロードに対する相対：変数に保存する値がペイロードに対する相対パスで使用可能な場合は、このオプションを使用します。
-      * **** 絶対パス：変数に保存する値が絶対パスで使用可能な場合は、このオプションを使用します。
-   * **** 値の指定：変数にマップする値を指定します。 このフィールドで指定する値は、マッピングモードによって異なります。
-   * **** マッピングの追加：このオプションを使用して、変数の値を設定するマッピングを追加します。
+      * **式:** このオプションは、式に基づいて使用する値が計算される場合に使用します。 式は、提供された式エディタで作成されます。
+      * **JSONドット表記：** このオプションを使用して、JSONまたはFDM型の変数から値を取得します。
+      * **XPATH:** XML型の変数から値を取得するには、このオプションを使用します。
+      * **ペイロードとの相対：** 変数に保存する値がペイロードに対する相対パスで使用できる場合に、このオプションを使用します。
+      * **絶対パス：** 変数に保存する値が絶対パスで使用できる場合にこのオプションを使用します。
+   * **値を指定：** 変数にマップする値を指定します。 このフィールドで指定する値は、マッピングモードによって異なります。
+   * **追加マッピング：** このオプションを使用して、さらにマッピングを追加して変数の値を設定します。
