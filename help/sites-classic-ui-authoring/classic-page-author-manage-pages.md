@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1935'
+ht-degree: 90%
 
 ---
 
@@ -76,40 +79,40 @@ This structure can be viewed from the Websites console, which you can use to [na
 
 新しいページを作成する際の主要なフィールドは 2 つあります。
 
-* **[タイトル](#title)**:
+* **[タイトル](#title)**：
 
    * これはコンソール内のユーザーに、編集中のページコンテンツの上部に表示されます。
    * このフィールドは必須です。
 
-* **[名前](#name)**:
+* **[名前](#name)**：
 
    * これは URI の生成に使用されます。
    * このフィールドへの入力はオプションです。指定しない場合、名前はタイトルから派生します。
 
 When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.
 
-実装と使用できる文字のリストはUIによって少し異なります（タッチ対応UIの方が広がります）が、最小限の許容値は次のとおりです。
+実装と使用できる文字のリストは、UIに応じて少し異なります（タッチ対応UIの方が広くなります）が、最小限の許容値は次のとおりです。
 
 * &#39;a&#39; から &#39;z&#39;
 * &#39;A&#39; から &#39;Z&#39;
 * &#39;0&#39; から &#39;9&#39;
 * _（アンダースコア）
-* `-` （ハイフン/マイナス）
+* `-`（ハイフン／マイナス記号）
 
 これらの文字のみを使用すれば、その名前は確実に受け入れられ、使用されます（許可されるすべての文字の完全な詳細が必要な場合は、[命名規則](/help/sites-developing/naming-conventions.md)を参照してください）。
 
 #### タイトル {#title}
 
-新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**&#x200B;がこの文字列から派生され、AEM と JCR によって課された[規則に基づいてページ名が検証](/help/sites-developing/naming-conventions.md)されます。両方の UI とも、無効な文字が含まれている「**タイトル**」フィールドは受け入れられますが、派生された名前の無効な文字は別の文字に置き換えられます。次に例を示します。
+新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**[がこの文字列から派生され、AEM と JCR によって課された規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)両方の UI とも、無効な文字が含まれている「**タイトル**」フィールドは受け入れられますが、派生された名前の無効な文字は別の文字に置き換えられます。次に例を示します。
 
 | タイトル | 派生された名前 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;ast;cs+ | sc---c-.html |
+| SC%&amp;ast;cis+ | sc---c-.html |
 
 #### 名前 {#name}
 
-新しいページを作成するときにページの&#x200B;**名前**&#x200B;を指定すると、AEM では AEM と JCR によって課された[規則に基づいてページ名が検証](/help/sites-developing/naming-conventions.md)されます。
+新しいページを作成するときにページの「**名前**[」を指定すると、AEM では AEM と JCR の規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)
 
 In the Classic UI you **cannot enter invalid characters** in the **Name** field.
 
@@ -126,18 +129,15 @@ In the Classic UI you **cannot enter invalid characters** in the **Name** field.
 
 AEM では、テンプレートはページの特殊なタイプを指定するものです。テンプレートは、作成中のあらゆる新規ページの基礎として使用されます。
 
-テンプレートによって、サムネイル画像やその他のプロパティなど、ページの構造が定義されます。例えば、製品ページ、サイトマップおよび問い合わせ先に、それぞれ別のテンプレートを使用することができます。テンプレートは、[コンポーネント](#components)で構成されています。
+テンプレートによって、サムネール画像やその他のプロパティなど、ページの構造が定義されます。例えば、製品ページ、サイトマップおよび問い合わせ先に、それぞれ別のテンプレートを使用することができます。テンプレートは、[コンポーネント](#components)で構成されています。
 
 AEM では、複数のテンプレートが標準提供されています。使用するテンプレートは、個々の Web サイトや、（新しいページの作成時に）指定する必要のある情報によって異なり、また使用される UI によっても異なります。主なフィールドは次のとおりです。
 
-* **タイトル**
-生成される Web ページに表示されるタイトルです。
+* **タイトル**：生成される Web ページに表示されるタイトルです。
 
-* **名前**
-ページに名前を付ける際に使用されます。
+* **名前**：ページに名前を付ける際に使用されます。
 
-* **テンプレート**
-新しいページを生成する際に使用できるテンプレートのリストです。
+* **テンプレート**：新しいページを生成する際に使用できるテンプレートのリストです。
 
 ### コンポーネント {#components}
 
@@ -226,6 +226,7 @@ Once you have created and opened a page you can [add content using the component
 
    * 「**貼り付け**」：ページとそのすべてのサブページを貼り付けます。
    * **Shift キーを押しながら「貼り付け」**：選択したページのみを貼り付けます。
+
    ページが新しい場所に貼り付けられます。
 
    >[!NOTE]
