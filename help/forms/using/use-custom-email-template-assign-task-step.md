@@ -9,6 +9,9 @@ discoiquuid: 2ad4b7b5-2162-4599-af3f-9476f1256de6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+workflow-type: tm+mt
+source-wordcount: '540'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 電子メール通知テンプレートは、[HTML 形式の電子メール](https://en.wikipedia.org/wiki/HTML_email)をベースにしています。これらの電子メールは、様々な電子メールクライアントや画面サイズに対応します。さらに、電子メールのスタイルはテンプレート内で定義されます。
 
-次の画像は、カスタマイズされた電子メール通知を示しています。
+次の画像は、カスタマイズされた電子メール通知を表示します。
 
 ![カスタムテンプレートを使用した電子メール通知](do-not-localize/customized-email.png)
 
@@ -41,7 +44,7 @@ AEM Forms には電子メール通知用の初期設定済みテンプレート�
 
    電子メール通知のテンプレートは、[HTML 形式の電子メール](https://en.wikipedia.org/wiki/HTML_email)です。既存の html コードをカスタムのコードで置き換えることで、テンプレートの外観を変更することができます。
 
-1. ファイルを保存します。これでカスタマイズされたテンプレートが使用できるようになります。
+1.  ファイルを保存します。これでカスタマイズされたテンプレートが使用できるようになります。
 
 ## 電子メールテンプレートの作成 {#create-an-email-template}
 
@@ -57,7 +60,7 @@ AEM Forms には電子メール通知用の初期設定済みテンプレート�
 
    電子メール通知のテンプレートは、[HTML 形式の電子メール](https://en.wikipedia.org/wiki/HTML_email)です。カスタムの HTML コードをファイルに追加して、新しいテンプレートを作成します。
 
-1. ファイルを保存します。テンプレートは、タスクの割り当て手順で使用することができます。
+1.  ファイルを保存します。テンプレートは、タスクの割り当て手順で使用することができます。
 
 ## タスクの割り当て手順における電子メールテンプレートの使用 {#use-an-email-template-in-an-assign-task-step}
 
