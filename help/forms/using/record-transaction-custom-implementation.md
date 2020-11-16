@@ -21,7 +21,7 @@ ht-degree: 0%
 
 TransactionRecorder APIを使用して、トランザクションとしてカウントされないアクションを自動的に記録します
 
-カスタムコードを使用して、PDFフォームの送信、エージェントUIプレビューURLのエンドユーザーへの送信、インタラクティブな通信のプレビュー、またはAEM Formsが提供する送信メソッドの代わりにカスタムメソッドを使用したフォームの送信を行うことができます。 AEM FormsAPIの前述のすべてのアクションおよびカスタム実装は、トランザクションとして考慮されません。 AEM Formsは、トランザクションなどのアクションを記録する [API TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)を提供します。
+カスタムコードを使用して、PDFフォームの送信、エージェントUIプレビューURLのエンドユーザーへの送信、インタラクティブプレビューのためのエージェントURLの送信、またはAEM Formsが提供する送信メソッドの代わりにカスタムメソッドを使用したフォームの送信が可能です。 AEM FormsAPIの前述のすべてのアクションおよびカスタム実装は、トランザクションとして考慮されません。 AEM Formsには、トランザクションなどのアクションを記録する [APITransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)が用意されています。
 
 トランザクションを記録するには、 [標準スリングサーブレットを書き込み](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) 、クライアントからサーブレットを呼び出してトランザクションを記録します。 AJAXまたはその他の標準的な方法を使用してサーブレットを呼び出すことができます。
 
