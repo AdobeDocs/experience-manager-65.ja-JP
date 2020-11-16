@@ -27,7 +27,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 1. Log in at `/lc/crx/de` with Administrator permissions.
 1. 次のアクションを実行します。
 
-   1. 階層構造を複製します。 の `/libs/livecycle/core/content` 場所 `/apps/livecycle/core/content`。
+   1. 階層構造を複製します。の `/libs/livecycle/core/content` 場所 `/apps/livecycle/core/content`。
 
       同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
 
@@ -41,7 +41,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 1. 次の操作を実行します。
 
-   1. 階層構造を複製します。 の `/libs/livecycle/core/components/login` 場所 `/apps/livecycle/core/components/login`。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
+   1. 階層構造を複製します。の `/libs/livecycle/core/components/login` 場所 `/apps/livecycle/core/components/login`。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
 
    1. Copy the components folder: from `/libs/livecycle/core` to `/apps/livecycle/core`.
 
