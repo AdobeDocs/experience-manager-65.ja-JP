@@ -12,6 +12,9 @@ discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '1545'
+ht-degree: 98%
 
 ---
 
@@ -41,17 +44,18 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 * ページエディターを使用しているときは、ステータスバーに以下のものが表示されます。
 
-   * アクティベーションのリクエストなど、ページに適用されるワークフローの名前
-   * 完了、委任、詳細表示など、ワークフローの現在のステップで現在のユーザーが使用できる何らかのアクション
+   * アクティベーションのリクエストなど、ページに適用されるワークフローの名前。
+   * 完了、委任、詳細表示など、ワークフローの現在のステップで現在のユーザーが使用できる何らかのアクション。
    * ページが対象であるワークフローの数。以下の操作を実行できます。
 
       * 左／右の矢印を使用して、多様なワークフローのステータス情報を移動できます。
       * 実際の数字をクリック／タップして、すべての適用可能なワークフローのドロップダウンリストを開いてから、ステータスバーに表示するワークフローを選択します。
+
    ![wf-59](assets/wf-59.png)
 
    >[!NOTE]
    >
-   >The status bar is only visible to users with workflow privileges; for example, members of the `workflow-users` group.
+   >ステータスバーは、例えば `workflow-users` グループのメンバーなど、ワークフロー特権のあるユーザーだけに表示されます。
    >
    >
    >現在のユーザーがワークフローの現在のステップに直接関与している場合に、アクションが表示されます。
@@ -80,26 +84,26 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 以下の手順を使用して作業項目を完了します。
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
-1. アクションを実行するワークフロー項目を選択します（サムネイルをタップまたはクリック）。
-1. Select **Complete** from the toolbar.
-1. 「**作業項目を完了**」ダイアログボックスが開きます。Select the **Next Step** from the drop down selector and add a **Comment** if required.
-1. Use **OK** to complete the step (or the **Cancel** to abort the action).
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
+1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
+1. ツールバーの「**完了**」を選択します。
+1. 「**作業項目を完了**」ダイアログボックスが開きます。ドロップダウンセレクターで「**次のステップ**」を選択し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
+1. 「**OK**」を使用してステップを完了します（または「**キャンセル**」を使用してアクションを中止します）。
 
 #### 参加者ステップの完了 - ページエディター {#completing-a-participant-step-page-editor}
 
 以下の手順を使用して作業項目を完了します。
 
 1. 「[編集するページ](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)」を開きます。
-1. Select **Complete** from the status bar at the top.
-1. 「**作業項目を完了**」ダイアログボックスが開きます。Select the **Next Step** from the drop down selector and add a **Comment** if required.
-1. Use **OK** to complete the step (or the **Cancel** to abort the action).
+1. 上部のステータスバーの「**完了**」を選択します。
+1. 「**作業項目を完了**」ダイアログボックスが開きます。ドロップダウンセレクターで「**次のステップ**」を選択し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
+1. 「**OK**」を使用してステップを完了します（または「**キャンセル**」を使用してアクションを中止します）。
 
 #### 参加者ステップの完了 - タイムライン {#completing-a-participant-step-timeline}
 
 タイムラインを使用してステップを完了または進めることもできます。
 
-1. Select the required page and open **Timeline** (or open **Timeline** and select the page):
+1. 必要なページを選択して&#x200B;**タイムライン**&#x200B;を開きます（または&#x200B;**タイムライン**&#x200B;を開いてからページを選択します）。
 
    ![screen-shot_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
 
@@ -139,26 +143,26 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 以下の手順を使用して作業項目を委任します。
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
-1. アクションを実行するワークフロー項目を選択します（サムネイルをタップまたはクリック）。
-1. Select **Delegate** from the toolbar.
-1. ダイアログが開きます。Specify the **User** from the drop down selector (this can also be a group) and add a **Comment** if required.
-1. Use **OK** to complete the step (or the **Cancel** to abort the action).
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
+1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
+1. ツールバーの「**委任**」を選択します。
+1. ダイアログが開きます。ドロップダウンセレクターから「**ユーザー**」（グループも可）を指定し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
+1. 「**OK**」を使用してステップを完了します（または「**キャンセル**」を使用してアクションを中止します）。
 
 #### 参加者ステップの委任 - ページエディター {#delegating-a-participant-step-page-editor}
 
 以下の手順を使用して作業項目を委任します。
 
 1. 「[編集するページ](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)」を開きます。
-1. Select **Delegate** from the status bar at the top.
-1. ダイアログが開きます。Specify the **User** from the drop down selector (this can also be a group) and add a **Comment** if required.
-1. Use **OK** to complete the step (or the **Cancel** to abort the action).
+1. 上部のステータスバーの「**委任**」を選択します。
+1. ダイアログが開きます。ドロップダウンセレクターから「**ユーザー**」（グループも可）を指定し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
+1. 「**OK**」を使用してステップを完了します（または「**キャンセル**」を使用してアクションを中止します）。
 
 #### 参加者ステップの委任 - タイムライン {#delegating-a-participant-step-timeline}
 
 タイムラインを使用してステップを委任または割り当てることもできます。
 
-1. Select the required page and open **Timeline** (or open **Timeline** and select the page).
+1. 必要なページを選択して&#x200B;**タイムライン**&#x200B;を開きます（または&#x200B;**タイムライン**&#x200B;を開いてからページを選択します）。
 1. アラートバナーをクリックまたはタップして使用できるアクションを表示します。「**担当者を変更**」を選択します。
 
    ![screen-shot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
@@ -167,7 +171,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
    ![screen-shot_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
 
-1. Select **Assign** to confirm the action.
+1. 「**割り当て**」を選択して、アクションを確定します。
 
 ### 参加者ステップでの前のステップの実行 {#performing-step-back-on-a-participant-step}
 
@@ -189,27 +193,27 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 以下の手順を使用して、前のステップを実行します。
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
-1. アクションを実行するワークフロー項目を選択します（サムネイルをタップまたはクリック）。
-1. Select **Step Back** to open the dialog.
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
+1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
+1. 「**ステップバック**」を選択して、ダイアログを開きます。
 
-1. Specify the **Previous Step** and add a **Comment** if required.
-1. Use **OK** to complete the step (or the **Cancel** to abort the action).
+1. 「**前のステップ**」を指定し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
+1. 「**OK**」を使用してステップを完了します（または「**キャンセル**」を使用してアクションを中止します）。
 
 #### 参加者ステップでの前のステップの実行 - ページエディター {#performing-step-back-on-a-participant-step-page-editor}
 
 以下の手順を使用して、前のステップを実行します。
 
 1. 「[編集するページ](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)」を開きます。
-1. Select **Step Back** from the status bar at the top.
-1. Specify the **Previous Step** and add a **Comment** if required.
-1. Use **OK** to complete the step (or the **Cancel** to abort the action).
+1. 上部のステータスバーの「**前のステップ**」を選択します。
+1. 「**前のステップ**」を指定し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
+1. 「**OK**」を使用してステップを完了します（または「**キャンセル**」を使用してアクションを中止します）。
 
 #### 参加者ステップでの前のステップの実行 - タイムライン {#performing-step-back-on-a-participant-step-timeline}
 
 タイムラインを使用して前のステップにロール（ステップ）バックすることもできます。
 
-1. Select the required page and open **Timeline** (or open **Timeline** and select the page).
+1. 必要なページを選択して&#x200B;**タイムライン**&#x200B;を開きます（または&#x200B;**タイムライン**&#x200B;を開いてからページを選択します）。
 1. アラートバナーをクリックまたはタップして使用できるアクションを表示します。「**ロールバック**」を選択します。
 
    ![screen-shot_2019-03-05at121131](assets/screen-shot_2019-03-05at121131.png)
@@ -218,19 +222,19 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
    ![screen-shot_2019-03-05at121158](assets/screen-shot_2019-03-05at121158.png)
 
-1. Select **Roll back** to confirm the action.
+1. 「**ロールバック**」を選択して、アクションを確定します。
 
-### Opening a Workflow Item to View Details (and Take Actions) {#opening-a-workflow-item-to-view-details-and-take-actions}
+### ワークフロー項目を開いて詳細を表示（およびアクションを実行） {#opening-a-workflow-item-to-view-details-and-take-actions}
 
 ワークフロー作業項目の詳細を表示して、適切なアクションを実行します。
 
 ワークフロー詳細がタブに表示され、適切なアクションがツールバーに表示されます。
 
-* **「WORKITEM** 」タブ：
+* 「**作業項目**」タブ
 
    ![wf-72](assets/wf-72.png)
 
-* **「ワークフロー情報** 」タブ：
+* 「**ワークフロー情報**」タブ
 
    ![wf-73](assets/wf-73.png)
 
@@ -238,7 +242,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
    ![wf-107](assets/wf-107.png)
 
-* **「コメント** 」タブ：
+* 「**コメント**」タブ
 
    ![wf-75](assets/wf-75.png)
 
@@ -251,32 +255,32 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 ワークフロー項目を開き、詳細を表示するには
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
-1. アクションを実行するワークフロー項目を選択します（サムネイルをタップまたはクリック）。
-1. Select **Open** to open the information tabs.
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
+1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
+1. 「**開く**」を選択して、「情報」タブを開きます。
 
 1. 必要に応じて、適切なアクションを選択し、詳細を入力して「**OK**」（または「**キャンセル**」）で確認します。
-1. Use **Save** or **Cancel** to exit.
+1. 「**保存**」または「**キャンセル**」を使用して終了します。
 
 #### ワークフロー詳細を開く - ページエディター {#opening-workflow-details-page-editor}
 
 ワークフロー項目を開き、詳細を表示するには
 
 1. 「[編集するページ](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)」を開きます。
-1. Select **View Details** from the status bar to open the information tabs.
+1. ステータスバーの「**詳細の表示**」を選択して、「情報」タブを開きます。
 
 1. 必要に応じて、適切なアクションを選択し、詳細を入力して「**OK**」（または「**キャンセル**」）で確認します。
-1. Use **Save** or **Cancel** to exit.
+1. 「**保存**」または「**キャンセル**」を使用して終了します。
 
-### Viewing the Workflow Payload (Multiple Resources) {#viewing-the-workflow-payload-multiple-resources}
+### ワークフローペイロード（複数リソース）の表示 {#viewing-the-workflow-payload-multiple-resources}
 
 ワークフローインスタンスに関連付けられたペイロードの詳細を表示できます。最初にパッケージの中のリソースが表示されるので、ドリルダウンして、個別のページを表示できます。
 
 ワークフローインスタンスのペイロードおよびリソースを表示するには
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
-1. アクションを実行するワークフロー項目を選択します（サムネイルをタップまたはクリック）。
-1. Select **View Payload** from the toolbar to open the dialog.
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
+1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
+1. ツールバーの「**ペイロードを表示**」を選択して、ダイアログを開きます。
 
    ワークフローパッケージは単にリポジトリ内のパスへのポインターのコレクションなので、ここでエントリを追加／削除／変更して、ワークフローパッケージから参照されるものを調整できます。**リソース定義**&#x200B;を使用して新しいエントリを追加します。
 
