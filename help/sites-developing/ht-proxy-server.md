@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '967'
+ht-degree: 88%
 
 ---
 
@@ -72,11 +75,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **`-i <numIndentions>`**（インデントを追加）
 
-アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです。この機能は、で導入されまし `proxy.jar version 1.16`た。
+アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです。この機能は、で導入されました `proxy.jar version 1.16`。
 
 ### ログ形式 {#log-format}
 
-proxy-2.1.jarで生成されるログエントリは、すべて次の形式をとります。
+proxy-2.1.jarによって生成されるログエントリは、すべて次の形式になります。
 
 `[timestamp (optional)] [Client|Server]-[ConnectionNumber]-[BytePosition] ->[Character Stream]`
 
@@ -86,8 +89,8 @@ proxy-2.1.jarで生成されるログエントリは、すべて次の形式を�
 
 * C は、このエントリがクライアントからの要求（Web ページの要求）であることを示します。
 * 0 は接続数です（接続カウンターは 0 から開始します）。
-* &#x200B;# 00000バイトストリーム内のオフセット。これが最初のエントリなので、オフセットは0です。
-* `[GET <?>]` は、リクエストの内容で、HTTPヘッダー(url)の1つの例にあります。
+* # 00000バイトストリーム内のオフセット。これは最初のエントリなので、オフセットは0です。
+* `[GET <?>]` は、リクエストの内容です。この例では、HTTPヘッダー(url)の1つを示します。
 
 接続を閉じると、次の情報がログに記録されます。
 
