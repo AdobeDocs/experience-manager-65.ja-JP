@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 80%
 
 ---
 
@@ -30,9 +33,9 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## 整合性チェックの実行 {#perform-a-consistency-check}
 
-整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。AEMのメイン画面から、次に移動します。
+整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。AEMのメイン画面から、次のページに移動します。
 
-**ツール/Web Console/メイン（メニューバー）/JMX/com.adobe.granite(Repository)**
+**「Tools」>「Web Console」>「Main」（メニューバー）>「JMX」>「com.adobe.granite」(Repository)**
 
 デフォルトのインストールでは、このページは次の場所にあります。**[|表示|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
 
