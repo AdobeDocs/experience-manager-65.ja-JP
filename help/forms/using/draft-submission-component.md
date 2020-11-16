@@ -11,6 +11,9 @@ discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 23252989bb8649b2f0b96a58972c831257e0c5dc
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 61%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 23252989bb8649b2f0b96a58972c831257e0c5dc
 
 ドラフトと送信コンポーネントには、「ドラフト」および「送信」の 2 つのタブがあります。
 
-To enable submission of an adaptive form to appear in the submissions tab, set the **Submit action** to **[Forms Portal Submit Action](../../forms/using/configuring-submit-actions.md). Alternatively,**enable the Forms Portal Submit option. ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
+To enable submission of an adaptive form to appear in the submissions tab, set the **Submit action** to **[Forms Portal Submit Action](../../forms/using/configuring-submit-actions.md). Alternatively,** enable the Forms Portal Submit option. ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
 
 ドラフト機能は初期設定で有効になっています。ユーザーがアダプティブフォームで「**保存**」をクリックすると、フォームが「ドラフト」タブに追加されます。
 
@@ -93,13 +96,13 @@ To enable submission of an adaptive form to appear in the submissions tab, set t
 
 ## ストレージのカスタマイズ {#customizing-the-storage}
 
-「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。代わりに、ドラフトと送信済みのフォームデータを保存するために、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージに統合する必要があります。
+「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。ドラフトと送信済みのフォームデータを保存するには、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージと統合する必要があります。
 
-フォームポータルでは、データをローカルのAEMリポジトリ、リモートのAEMリポジトリ、またはデータベースに保存できます。 AEM Formsでは、ドラフトと送信用のユーザーデータの保存の実装をカスタマイズできます。 デフォルトの方法を上書きして、ドラフトデータと送信データを選択したストレージに保存する方法を指定できます。 例えば、組織に現在実装されているデータストアにデータを保存することができます。
+Formsポータルでは、ローカルのAEMリポジトリ、リモートのAEMリポジトリ、またはデータベースにデータを保存できます。 AEM Formsでは、ドラフトと送信のユーザーデータの保存の実装をカスタマイズできます。 デフォルトのメソッドを上書きして、ドラフトと送信データを任意のストレージに保存する方法を指定できます。 例えば、組織に現在実装されているデータストアにデータを保存することができます。
 
-フォームポータルは、ローカルおよびリモートのAEM forms発行インスタンスのcrx-repositoryにデータを保存する、初期設定のサービス(API)を提供します。 「ドラフトと送信のストレージサービスの設定 [](/help/forms/using/configuring-draft-submission-storage.md) 」で説明されているデフォルトの実装を、デフォルトの機能を置き換えるカスタム実装に置き換えることができます。 保護された場所にコンテンツを保存するためにカスタム実装で必要な方法について詳しくは、 [Customizing Draft and Submission data services](/help/forms/using/custom-draft-submission-data-services.md) and [Custom storage for drafts and submissions componentを参照してください。](/help/forms/using/adding-custom-storage-provider-forms.md)
+Formsポータルは、ローカルおよびリモートのAEM Forms発行インスタンスのcrx-repositoryにデータを保存するための、初期設定済みのサービス(API)を提供します。 「ドラフトと送信のストレージサービスの [設定](/help/forms/using/configuring-draft-submission-storage.md) 」の記事で説明されているデフォルトの実装を、デフォルトの機能を置き換えるカスタム実装に置き換えることができます。 保護された場所にコンテンツを保存するためにカスタム実装で必要な方法について詳しくは、「ドラフトと送信データサービスの [カスタマイズ](/help/forms/using/custom-draft-submission-data-services.md) 」および「ドラフトと送信コンポーネントの [カスタムストレージ」を参照してください。](/help/forms/using/adding-custom-storage-provider-forms.md)
 
-AEM Formsのドキュメントには、ドラフトと送 [信コンポーネントをデータベースと統合するためのサンプルが含まれていま](integrate-draft-submission-database.md)す。 サンプルの実装を使用して、独自のカスタム実装を開発できます。
+AEM Formsのドキュメントには、ドラフトと送信コンポーネントとデータベースの統合の [サンプルが含まれています](integrate-draft-submission-database.md)。 サンプルの実装を使用して、独自のカスタム実装を開発できます。
 
 ## 関連記事
 
