@@ -9,6 +9,9 @@ contentOwner: jsyal
 discoiquuid: dbc16a51-74c4-43bb-9501-081de1eb2f7d
 translation-type: tm+mt
 source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+workflow-type: tm+mt
+source-wordcount: '285'
+ht-degree: 100%
 
 ---
 
