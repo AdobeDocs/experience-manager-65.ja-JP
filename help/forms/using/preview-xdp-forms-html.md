@@ -10,6 +10,9 @@ discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '859'
+ht-degree: 76%
 
 ---
 
@@ -28,8 +31,8 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. OSGiで実行さ `https://'[server]:[port]'/system/console/configMgr` れているAEM Formsに移動または
-   `https://'[server]:[port]'/lc/system/console/configMgr` JEE上で実行されているAEM Formsの場合。
+1. OSGiで実行中 `https://'[server]:[port]'/system/console/configMgr` のAEM Formsに移動または
+   `https://'[server]:[port]'/lc/system/console/configMgr` JEE上で動いているAEM Formsで
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
 1. AEM Forms を OSGi または JEE のどちらで実行しているかにより、**Authentication Requirements** フィールドで以下を追加します。
@@ -42,6 +45,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * -/content/xfaforms
       * -/etc/clientlibs/fd/xfaforms
+
    >[!NOTE]
    >
    >Authentication Requirements フィールドで指定した値をコピーアンドペーストしないでください。値に使用されている特殊文字が文字化けするおそれがあります。代わりに、フィールドに指定の値を入力します。
@@ -69,7 +73,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
    * **Server URL**：AEM Forms サーバーの URL です。
 
    * **HTTP port number**：AEM サーバーポート。デフォルト値は 4502 です。
-   * **HTMLプレビューコンテキスト：** XFAフォームをレンダリングするプロファイルのパスです。 次のデフォルトのプロファイルを使用して、Designerでフォームのプレビューを行います。 ただし、カスタムプロファイルへのパスを指定することもできます。
+   * **HTMLプレビューコンテキスト：** XFAフォームのレンダリング用プロファイルのパス。 次のデフォルトプロファイルを使用して、Designerでフォームのプレビューを行います。 ただし、カスタムプロファイルへのパスを指定することもできます。
 
       * `/content/xfaforms/profiles/default.html` (OSGi 上の AEM Forms)
 
@@ -78,9 +82,10 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
+
    >[!NOTE]
    >
-   >AEM Formsサーバーが起動および実行中であることを確認します。 The HTML preview connects to the CRX server to *generate* a preview.
+   >AEM Formsサーバーが起動および実行されていることを確認します。 The HTML preview connects to the CRX server to *generate* a preview.
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
 
@@ -99,7 +104,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
    >[!CAUTION]
    >
-   >実際のエンドユーザーエクスペリエンスをテストするには、外部ブラウザー（Google Chrome、Microsoft Edge、Mozilla Firefoxなど）でフォームをプレビューします。 各ブラウザーは、HTMLのレンダリングに別々のプレビューを使用するので、Designerと外部ブラウザーでのフォームエンジンの違いが生じる場合があります。
+   >実際のエンドユーザーエクスペリエンスをテストするには、外部ブラウザー（Google Chrome、Microsoft Edge、Mozilla Firefoxなど）でフォームをプレビューします。 各ブラウザーは、HTMLのレンダリングに別々のエンジンを使用するので、Designerと外部ブラウザーでのフォームプレビューの違いが生じる場合があります。
 
 ## サンプルデータを使用してフォームをプレビューするには {#to-preview-a-form-using-sample-data}
 
