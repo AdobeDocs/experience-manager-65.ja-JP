@@ -12,6 +12,9 @@ discoiquuid: 32a7a50c-74f4-49bc-a0bd-a9ec142527cb
 docset: aem65
 translation-type: tm+mt
 source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
+workflow-type: tm+mt
+source-wordcount: '1435'
+ht-degree: 75%
 
 ---
 
@@ -24,7 +27,7 @@ AEM Forms サーバーは 2 つのインスタンス（作成者と発行）を�
 
 ## サポートされているアセットタイプ{#supported-assets-nbsp}
 
-AEM formsは、次の種類のアセットをサポートしています。
+AEM Formsは、次の種類のアセットをサポートしています。
 
 * アダプティブフォーム
 * アダプティブドキュメント
@@ -49,8 +52,8 @@ AEM formsは、次の種類のアセットをサポートしています。
 
    * カスタムレイアウト
    * カスタム外観
-   * CSSファイル — アダプティブフォームコンテナのプロパティダイアログで入力として使用
-   * クライアントライブラリカテゴリ — アダプティブフォームコンテナのプロパティダイアログで入力として使用
+   * CSSファイル — アダプティブフォームコンテナのプロパティダイアログで入力として取得
+   * クライアントライブラリカテゴリ — アダプティブフォームコンテナのプロパティダイアログで入力として取得
    * アダプティブフォームテンプレートの一部として含まれる可能性のあるその他のクライアントライブラリ
    * デザインパス
 
@@ -58,28 +61,29 @@ AEM formsは、次の種類のアセットをサポートしています。
 
 アセットは次のステータスを持つことができます。
 
-* **非公開**：一度も発行されていないアセット（未公開状態は、フォームアセットのみに適用されます。Correspondence Managementアセットに未発行の状態がありません。)
+* **非公開**：一度も発行されていないアセット（未公開状態は、フォームアセットのみに適用されます。Correspondence Managementアセットには、非公開の状態がありません。)
 * **発行済み**：発行済みアセット。パブリッシュインスタンスで使用できます。
-* **変更**:発行後に変更されるアセット
+* **変更済み**:発行後に変更されるアセット
 
 ## アセットの発行 {#publish-an-asset}
 
 1. AEM Forms サーバーにログインします。
 1. 次のいずれかの手順を使って、アセットを選択し発行します。
 
-   1. ポインターをアセットの上に移動し、「 **[!UICONTROL aem6forms]** _globeを発 ![行」をタップします](assets/aem6forms_globe.pngasset.png)。
+   1. ポインターをアセットの上に移動し、「 **[!UICONTROL Publish]** aem6forms_globe ![](assets/aem6forms_globe.pngasset.png)」をタップします。
    1. 次のいずれかを行い、「公開」をタップします。
 
       * If you are in the card view, tap **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png), and tap the asset. アセットが選択されます。
       * リスト表示になっている場合は、アセットのチェックボックスを選択します。アセットが選択されます。
       * 詳細を表示するアセットを表示します。
       * Display an asset&#39;s properties by tapping View Properties ![viewproperties](assets/viewproperties.png).
+
       >[!NOTE]
       >
-      >複数のアセットを選択しないでください。複数のアセットを一度に公開する機能はサポートされていません。
+      >複数のアセットを選択しないでください。複数のアセットを一度に発行する機能はサポートされていません。
 
 
-1. 発行プロセスが始まるときに、確認ダイアログが表示され、関連するすべてのアセットとリソースが表示されます。In the dialog box that contains related assets, tap **[!UICONTROL Publish]**. アセットが公開され、アセット公開成功ダイアログが表示されます。
+1. 発行プロセスが始まるときに、確認ダイアログが表示され、関連するすべてのアセットとリソースが表示されます。In the dialog box that contains related assets, tap **[!UICONTROL Publish]**. アセットが発行され、アセット発行成功ダイアログが表示されます。
 
    >[!NOTE]
    >
@@ -110,7 +114,7 @@ AEM Forms では、サーバー上のすべての Correspondence Management ア�
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
-   Publish All Correspondence Management Assetsページが表示され、前回Publish Correspondence Management Assetsプロセスが試行された時刻に関する情報が表示されます。
+   Publish All Correspondence Managementアセットページが表示され、前回Publish Correspondence Management Assetsの処理が試行された時点に関する情報が表示されます。
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
@@ -120,7 +124,7 @@ AEM Forms では、サーバー上のすべての Correspondence Management ア�
 
    >[!NOTE]
    >
-   >発行処理は、一度開始するとキャンセルすることはできません。また、発行操作の処理中は、アセットを作成、削除、変更または発行したり、「すべてのCorrespondence Managementアセットを書き出し」操作を開始したりしないでください。
+   >発行処理は、一度開始するとキャンセルすることはできません。また、発行操作の進行中は、アセットを作成、削除、変更、発行したり、「すべてのCorrespondence Managementアセットを書き出し」操作を開始したりしないでください。
 
 ## フォームとドキュメントの発行と非公開の自動化 {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 
@@ -129,9 +133,9 @@ AEM Forms では、フォームとドキュメントでアセットの発行と�
 以下の手順に従って、フォームとドキュメントアセットの発行と非公開の日時をスケジュールします。
 
 1. Select an asset and tap **[!UICONTROL View Properties]**. メタデータプロパティページが開きます。
-1. メタデータのプロパティページで **[!UICONTROL 「詳細]**」をタップし、「 **[!UICONTROL Edit]** illustratorcc_penciltool_cur_edit_2_17 ![](assets/illustratorcc_penciltool_cur_edit_2_17.png)」をタップします。
+1. メタデータプロパティページで、「 **[!UICONTROL 詳細」をタップし]**、「 **[!UICONTROL Edit]** illustratorcc_penciltool_cur_edit_2_17 ![](assets/illustratorcc_penciltool_cur_edit_2_17.png)」をタップします。
 1. **[!UICONTROL 発行オン時間]**&#x200B;フィールドと&#x200B;**[!UICONTROL 発行オフ時間]**&#x200B;フィールドで、日時を選択します。\
-   「 **[!UICONTROL Done]** ![aem6forms_check](assets/aem6forms_check.png)」をタップします。
+   「 **[!UICONTROL Done]**![aem6forms_check](assets/aem6forms_check.png)」をタップします。
 
 ## アセットの非公開 {#unpublish-an-asset}
 
