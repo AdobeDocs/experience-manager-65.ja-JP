@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 91%
 
 ---
 
@@ -43,12 +46,12 @@ Android の場合：Android 向けに開発するには、Google の Android Stu
 
 開発環境を正常にブートストラップしたら、AEM アプリのビルドタイルからソースをダウンロードします。
 
-* [PhoneGap Build]タイルのドロップダウン山形をクリックします。
+* [PhoneGap Buildタイル]ドロップダウンの山形をクリックします。
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
 * 「ソースをダウンロード」をクリックします。
-* 「ダウンロードソース」モーダルから目的のソースを選択します。
+* 「ソースをダウンロード」モーダルから目的のソースを選択します。
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -91,6 +94,7 @@ phonegap run ios
 >1. helloWorld に移動します（cd helloWorld）。
 >1. 「phonegap run android」を実行します（または上記のように android を ios に置き換えます）。
 >1. エミュレーターが開いて、新規に作成した PhoneGap アプリが実行されます。ネイティブへの JavaScript ブリッジが動作している場合には、「Device Ready」と表示されます。
+
 >
 >
 この場合、PhoneGap CLI 開発環境は正しく稼動していることになります。
