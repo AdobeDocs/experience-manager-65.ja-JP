@@ -10,6 +10,9 @@ discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '1511'
+ht-degree: 67%
 
 ---
 
@@ -20,14 +23,14 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## 概要 {#overview}
 
-条件は、インタラクティブ通信に含めることができるドキュメントフラグメントです。他のドキュメントフラグメントには、[テキストフラグメント](../../forms/using/texts-interactive-communications.md)、リストフラグメント、レイアウトフラグメントがあります。条件を使用すると、提供されたデータとルールに基づいて、インタラクティブ通信に含まれる1つ以上のコンテキストアセットを定義できます。
+条件は、インタラクティブ通信に含めることができるドキュメントフラグメントです。他のドキュメントフラグメントには、[テキストフラグメント](../../forms/using/texts-interactive-communications.md)、リストフラグメント、レイアウトフラグメントがあります。条件を使用すると、提供されたデータとルールに基づいて、対話型通信に含まれる1つ以上のコンテキストアセットを定義できます。
 
 例：
 
 * 顧客が使用しているクレジットカードの種類に基づいて、そのクレジットカードの年会費と画像を取引明細書に表示する。
 * 顧客が居住している国の税制に基づいて、保険料支払期日の通知に税額の計算結果を表示する。
 
-条件内のアセットは、適用されるルールと、そのルールに渡される値に基づいてレンダリングされます。条件のルールでは、次のタイプのデータの値を確認できます。
+条件内のアセットは、適用されるルールと、そのルールに渡される値に基づいてレンダリングされます。条件のルールでは、次のタイプのデータの値をチェックできます。
 
 * 関連するフォームデータモデルのプロパティ
 * 条件で作成する変数
@@ -42,7 +45,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. Select **[!UICONTROL Create]** > **[!UICONTROL Condition]**.
 1. 次の情報を指定します。
 
-   * **[!UICONTROL タイトル]**:（オプション）条件のタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。条件は、（利用可能な場合に）そのタイトル（サムネールやプロパティなど）によって参照されます。
+   * **[!UICONTROL タイトル]**:（オプション）条件のタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。条件は、そのタイトルによって（利用可能な場合）、サムネールやプロパティとして参照されます。
    * **[!UICONTROL 名前]**:フォルダー内の条件の一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
 
    * **[!UICONTROL 説明]**：ドキュメントフラグメントの説明を入力します。
@@ -74,13 +77,17 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[拒否の変更]。**このアイコンをタップすると、アセットと条件のルールに対して行った変更が拒否されます。   **[B]Accept Change。**このアイコンをタップして、条件のアセットおよびルールに加えた変更を受け入れます。   **[C]重複資産&#x200B;**適用対象のルール（存在する場合）と共に条件内のアセットのコピーを作成する場合は、このアイコンをタップします。その後、複製されたアセットで、ルールとアセットの編集を行うことができます。特定のコンテキストに基づいて代替のアセットを表示するための類似のルールを作成する場合は、アセットを複製すると便利です。   **[D表示]プレビュー&#x200B;**このアイコンをタップすると、プレビューの作成/条件の編集ページにアセットのアイコンが表示されます。   **&#39;server&#39;順序を変更します。** このアイコンを長押しして、アセットをドラッグ&amp;ドロップし、条件内で並べ替えます。
+   **[拒否の変更] 。** アセットおよび条件のルールに対して行った変更を拒否するには、このアイコンをタップします。
+   **[B] 変更を受け入れます。** このアイコンをタップして、条件のアセットおよびルールに対して行った変更を受け入れます。
+   **[C] 重複アセット。**適用対象のルール（存在する場合）と共に条件内のアセットのコピーを作成する場合は、このアイコンをタップします。その後、複製されたアセットで、ルールとアセットの編集を行うことができます。特定のコンテキストに基づいて代替のアセットを表示するための類似のルールを作成する場合は、アセットを複製すると便利です。
+   **[D] プレビューを表示** このアイコンをタップすると、条件を作成\編集ページ内にアセットのプレビューが表示されます。
+   **&#39;server&#39;が並べ替えられました。** このアイコンを長押しして、アセットをドラッグ&amp;ドロップし、条件内で並べ替えます。
 
    条件の実行時の動作を指定するには、次のオプションを選択します。
 
    * **複数の結果評価を無効化 / 複数の結果評価を有効化**：「複数の結果評価を有効化」オプションを選択すると、すべての条件が評価され、その結果として、すべての true ルールの要約が表示されます。「複数の結果評価を無効化」オプションを選択すると、true と判断された最初のルールだけが評価され、そのルールが条件の出力になります。
 
-   * **改ページ**:条件のアセット間に改 ![ページを追加するには](assets/break.png)、このオプション（改ページ）を選択します。 When this option is not selected ( ![nobreak](assets/nobreak.png)), if a condition is overflowing to the next page in the print output, the whole condition is shifted to the next page instead of breaking in the page between the assets in the condition.
+   * **改ページ**:条件のアセット間に改ページを追加するには、このオプション( ![改ページ](assets/break.png))を選択します。 When this option is not selected ( ![nobreak](assets/nobreak.png)), if a condition is overflowing to the next page in the print output, the whole condition is shifted to the next page instead of breaking in the page between the assets in the condition.
 
 1. 「**[!UICONTROL ルールを作成]**」をタップして、アセットの表示と非表示を切り替えるためのルールを必要に応じて追加します。ルール内で変数を使用する方法については、「[変数の作成](#variables)」を参照してください。For more information, see [Adding rules to condition](#ruleeditor).
 
@@ -102,7 +109,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## 条件の編集 {#edit-a-condition}
 
-以下の手順により、条件を編集することができます。ポップアップメニューで「フラグメントを編集」を選択して、インタラクティブ通信内で条件を編集することもできます。
+以下の手順により、条件を編集することができます。ポップアップメニューで「フラグメントを編集」を選択して、インタラクティブ通信内から条件を編集することもできます。
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. 目的の条件に移動して、その条件を選択します。
@@ -129,6 +136,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    * 関連するフォームデータモデルのプロパティ
    * 作成済みの任意の[変数](#variables)
+
    ![createruledialog](assets/createruledialog.png)
 
    評価するオプションを選択します。
@@ -144,11 +152,11 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    ポリシータイプが「標準」の場合にアセットを表示するためのルール
 
-   * While creating or editing a rule, you can also tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule/Edit Rule dialog. ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルールの作成ダイアログに戻ります。
+   * While creating or editing a rule, you can also tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule/Edit Rule dialog. ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルール作成ダイアログに戻ります。
 
    * 1 つのルールで複数の条件を作成することもできます。
 
-1. 「**[!UICONTROL Done]**」をタップします。
+1. 「**[!UICONTROL 完了]**」をタップします。
 
    これで、ルールがアセットに適用されます。
 
@@ -157,7 +165,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 While creating or editing a rule in a condition, you can tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule\Edit Rule dialog. ダイアログを拡張して全画面表示にすると、以下の操作を実行できるようになります。
 
 * ルール内で変数を作成して使用する
-* ルール内でのフォームデータモデルのプロパティと変数のドラッグ&amp;ドロップ
+* フォームデータモデルのプロパティと変数をルール内にドラッグ&amp;ドロップ
 
 サイズ変更アイコンをもう一度タップすると、通常のサイズのダイアログに戻ります。
 
@@ -167,7 +175,7 @@ While creating or editing a rule in a condition, you can tap ![icon_resize](asse
 
    拡張されたダイアログが全画面モードで表示されます。
 
-   ![expandeditruledialog](assets/expandededitruledialog.png)
+   ![expandededitruledialog](assets/expandededitruledialog.png)
 
 1. In the left pane, tap **[!UICONTROL Variables]**.
 
