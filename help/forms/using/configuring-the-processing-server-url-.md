@@ -11,6 +11,9 @@ discoiquuid: a7387bd3-8b31-4bd0-a861-daa8f7cb2d05
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 60%
 
 ---
 
@@ -31,21 +34,21 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 1. URLを使用して、発行インスタンスでConfiguration Managerを開きます。\
    *https://localhost:port/system/console/configMgr*.
 
-   ![AEM webコンソールの設定](assets/web_configuration_console_new.png)
+   ![AEM Webコンソールの設定](assets/web_configuration_console_new.png)
 
-1. **[!UICONTROL Adobe Experience Manager Web Console Configurationウィンドウで]** 、「 **[!UICONTROL AEM DS Settings]** 」オプションを探してクリックします。
+1. In the **[!UICONTROL Adobe Experience Manager Web Console Configuration]** window, locate and click the **[!UICONTROL AEM DS Settings]** option.
 
    ![DS設定](assets/ds_settings_new.png)
 
 1. **[!UICONTROL AEM DS 設定サービス]**&#x200B;ウィンドウに、AEM DS コンポーネントの共通設定が表示されます。
 
-   ![DS設定サービス](assets/ds_settings_service_new.png)
+   ![DS Settingsサービス](assets/ds_settings_service_new.png)
 
 1. 次の情報をそれぞれのフィールドに追加します。
 
-   **[!UICONTROL 処理サーバーURL]**:処理サーバーは、FormsまたはAEMワークフローをトリガーする必要があるサーバーです。 AEM作成者インスタンスのURLまたは他のサーバーURL(https://localhost:port/)と同じURLを指定できます。
+   **[!UICONTROL 処理サーバーURL]**:処理サーバーは、FormsまたはAEMワークフローをトリガーする必要があるサーバーです。 これは、AEM作成者インスタンスのURLまたは他のサーバーURL(https://localhost:port/)と同じです。
 
-   **[!UICONTROL Processing Server User Name]**:使用中のサーバーURLに基づ [くワークフローユーザーのユーザー名]
+   **[!UICONTROL 処理サーバーのユーザー名]**:使用中のサーバーURLに [基づくワークフローユーザーのユーザー名]
 
    **[!UICONTROL 処理サーバーのパスワード]**：ワークフローユーザーのパスワード
 
