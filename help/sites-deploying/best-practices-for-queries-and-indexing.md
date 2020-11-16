@@ -11,17 +11,20 @@ topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '4618'
+ht-degree: 83%
 
 ---
 
 
 # クエリとインデックスに関するベストプラクティス{#best-practices-for-queries-and-indexing}
 
-AEM 6 での Oak への移行に伴い、クエリとインデックスの管理方法に関して大きな変更がいくつか導入されました。Jackrabbit 2の下では、すべてのコンテンツはデフォルトでインデックス化され、自由にクエリできます。 In Oak, indexes must be created manually under the `oak:index` node. クエリはインデックスなしで実行できますが、大きなデータセットの場合は実行が非常に遅くなるか、中止されます。
+AEM 6 での Oak への移行に伴い、クエリとインデックスの管理方法に関して大きな変更がいくつか導入されました。Jackrabbit 2では、すべてのコンテンツのインデックスがデフォルトで作成され、自由にクエリできます。 In Oak, indexes must be created manually under the `oak:index` node. クエリはインデックスなしで実行できますが、大きなデータセットの場合は、実行が非常に遅くなるか、中止されます。
 
 この記事では、インデックスを作成するべき場合とインデックスが不要な場合、クエリが不要な場合にクエリの使用を回避するためのヒント、インデックスとクエリの機能をできる限り最適化するためのヒントを概説します。
 
-さらに、[クエリとインデックスの作成に関する Oak のドキュメント](/help/sites-deploying/queries-and-indexing.md)をお読みください。AEM 6の新しい概念であるインデックスに加え、Oakクエリには構文上の違いがあり、以前のAEMインストールからコードを移行する際に考慮する必要があります。
+さらに、[クエリとインデックスの作成に関する Oak のドキュメント](/help/sites-deploying/queries-and-indexing.md)をお読みください。AEM 6の新しい概念であるインデックスに加え、Oakクエリには構文上の違いがあり、以前のAEMからコードを移行する際に考慮する必要があります。
 
 ## クエリを使用する必要がある場合 {#when-to-use-queries}
 
@@ -65,7 +68,7 @@ the `/content/myUnstructuredContent/parentCategory/childCategory` node can simpl
 
 ## クエリの最適化 {#query-optimization}
 
-インデックスを使用していないクエリを実行すると、ノードの走査に関する警告がログに記録されます。このクエリが頻繁に実行されるものである場合は、インデックスを作成する必要があります。特定のクエリが使用しているインデックスを確認するには、[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を推奨します。詳しくは、関連する検索APIに対してDEBUGログを有効にすることもできます。
+インデックスを使用していないクエリを実行すると、ノードの走査に関する警告がログに記録されます。このクエリが頻繁に実行されるものである場合は、インデックスを作成する必要があります。特定のクエリが使用しているインデックスを確認するには、[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を推奨します。詳しくは、関連する検索APIに対してデバッグログを有効にすることができます。
 
 >[!NOTE]
 >
@@ -87,7 +90,7 @@ AEM では、次の 3 つの方法でクエリを記述できます。
 
 ### クエリーの説明を実行ツール {#the-explain-query-tool}
 
-どのクエリ言語でも、クエリ最適化の最初の手順は、クエリの実行方法を把握することです。これをおこなうには、操作ダッシュボードにある[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を使用します。このツールを使用して、クエリーをプラグインし、説明することができます。 クエリによって、大規模なリポジトリや、実行時間や使用されるインデックスに関する問題が引き起こされる場合は、警告が表示されます。このツールでは、低速なクエリやよく使用されるクエリのリストを読み込み、これらを説明および最適化できます。
+どのクエリ言語でも、クエリ最適化の最初の手順は、クエリの実行方法を把握することです。これをおこなうには、操作ダッシュボードにある[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を使用します。このツールを使うと、クエリを接続して説明することができます。 クエリによって、大規模なリポジトリや、実行時間や使用されるインデックスに関する問題が引き起こされる場合は、警告が表示されます。このツールでは、低速なクエリやよく使用されるクエリのリストを読み込み、これらを説明および最適化できます。
 
 ### クエリのための DEBUG ログ {#debug-logging-for-queries}
 
@@ -119,13 +122,13 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
 
 **開発時**
 
-Set low threshholds for `oak.queryLimitInMemory` (eg. 1,000)とオーク。 `queryLimitReads` (例： UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
+Set low threshholds for `oak.queryLimitInMemory` (eg. 10000)とoak。 `queryLimitReads` (例： UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは I/O が増加し、アプリケーションの全体的なパフォーマンスに悪影響が生じます。上述のような制限が原因で失敗するクエリは、分析して最適化する必要があります。
 
 #### **デプロイメント後** {#post-deployment}
 
-* クエリーが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーするかどうかログを監視します。&quot;
+* クエリが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーしているかどうかログを監視します。&quot;
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * クエリを最適化して、走査するノードの数を減らします。
@@ -154,7 +157,7 @@ More information available under : [https://jackrabbit.apache.org/oak/docs/query
 
 インデックスを作成すると、そのインデックスが付けられたデータを更新するたびに、インデックスも更新する必要が生じます。これはシステムのパフォーマンスに影響を与えるので、インデックスは実際に必要な場合にのみ作成する必要があります。
 
-さらに、インデックスが役に立つのは、そのインデックスのデータが十分な一意性を持っている場合に限られます。このことは、本の索引（インデックス）と、その本が扱うトピックとの関係を考えてみればわかります。本文中の一連のトピックに索引を付けると、通常は数百または数千の索引項目が作成されます。この索引項目を使用して、特定のページを素早く開き、探している情報をすぐに見つけることができます。もし索引項目が 2、3 個しかなく、各項目が数百ものページを指していれば、その索引はほとんど役に立ちません。データベースのインデックスについても同じことが言えます。一意の値がいくつかしか存在しない場合は、インデックスはあまり役立ちません。また、インデックスが大きすぎて役に立たなくなることもあります。 インデックスの統計を確認するには、前述の[インデックスの統計](/help/sites-deploying/best-practices-for-queries-and-indexing.md#index-statistics)を参照してください。
+さらに、インデックスが役に立つのは、そのインデックスのデータが十分な一意性を持っている場合に限られます。このことは、本の索引（インデックス）と、その本が扱うトピックとの関係を考えてみればわかります。本文中の一連のトピックに索引を付けると、通常は数百または数千の索引項目が作成されます。この索引項目を使用して、特定のページを素早く開き、探している情報をすぐに見つけることができます。もし索引項目が 2、3 個しかなく、各項目が数百ものページを指していれば、その索引はほとんど役に立ちません。データベースのインデックスについても同じことが言えます。一意の値がいくつかしか存在しない場合は、インデックスはあまり役立ちません。とはいえ、インデックスが大きすぎて役に立たなくなることもあります。 インデックスの統計を確認するには、前述の[インデックスの統計](/help/sites-deploying/best-practices-for-queries-and-indexing.md#index-statistics)を参照してください。
 
 ### Lucene インデックスとプロパティインデックス {#lucene-or-property-indexes}
 
@@ -221,11 +224,12 @@ Outside the reasons outlined below, initiating re-indexes of Oak indexes will **
 
 >[!NOTE]
 >
->以下の表を調べて、インデックスの再作成が役に立つかどうかを判断する前に、**常に**verify:
+>以下の表を参照して再インデックスが有用であるかを判断する前に、**常に**verify:
 >
 >* クエリが正しい
 >* クエリが予期したインデックスに解決されること（[クエリの説明を実行](/help/sites-administering/operations-dashboard.md#diagnosis-tools)を使用）
 >* インデックス作成プロセスが完了していること
+
 >
 
 
@@ -292,7 +296,7 @@ Outside the reasons outlined below, initiating re-indexes of Oak indexes will **
 
       * 既存の内容が変更の影響を受けない場合は、更新のみが必要です。
 
-         * [oak](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition) :queryIndexDefinition []@refresh=trueに設定して、luceneインデックスを更新します。
+         * [oak](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition) :queryIndexDefinition []@refresh=trueを設定して、luceneインデックスを更新します。
       * それ以外の場合は、Lucene インデックスの[再インデックス](#how-to-re-index)を実行します。
 
          * 注意：新しい再インデックスが実行されるまで、前回の正常な再インデックス（または最初のインデックス作成）のインデックス状態が使用されます。
@@ -331,13 +335,13 @@ Outside the reasons outlined below, initiating re-indexes of Oak indexes will **
 
       [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
 
-      リポジトリ内を移動すると、他のバイナリ（luceneファイル以外）が存在しないかどうかが判断されます。
+      リポジトリ内での移動は、他のバイナリ（luceneファイル以外）がないかどうかを判断する
 
    * Lucene インデックス以外のバイナリが見つからない場合は、バックアップから復元します。
    * Otherwise, [re-index](#how-to-re-index) *all* lucene indexes
    * 注意：
 
-      この状態は、データストアの設定ミスが原因で、バイナリ( アセットバイナリ)が見つからなくなります。
+      この状態は、ANYバイナリ( アセットバイナリ)が見つかりません。
 
       この場合は、正常であることがわかっている最新のリポジトリバージョンに復元し、見つからないすべてのバイナリを回復します。
 
@@ -368,7 +372,7 @@ Outside the reasons outlined below, initiating re-indexes of Oak indexes will **
    * If this does not resolve the issue, and the `AsyncIndexUpdate` exceptions persist then:
 
       1. エラーがあるインデックスの[再インデックス](#how-to-re-index)を実行します。
-      1. Also file an [Adobe Support](https://helpx.adobe.com/support.html) ticket
+      1. Also file an [Adobe Support](https://helpx.adobe.com/jp/support.html) ticket
 
 
 ### 再インデックスを実行する方法 {#how-to-re-index}
@@ -384,7 +388,7 @@ Outside the reasons outlined below, initiating re-indexes of Oak indexes will **
 
    * `[oak:queryIndexDefinition]@reindex-async=true`
 
-* PropertyIndexAsyncReindex **** MBeanを使用して、Webコンソールを使用してプロパティインデックスを非同期で再インデックスします。
+* PropertyIndexAsyncReindex **** MBeanを介して、Webコンソールを使用してプロパティインデックスを非同期的に再インデックスします。
 
    例えば、
 
@@ -435,7 +439,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 * CSV ファイルの生成および最終的な再インデックスの実行のためのメンテナンスウィンドウ
 * Oak バージョン 1.0.18 以降、1.2.3 以降
 * [oak-run.](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)jarversion 1.7.4+
-* インデックス作成AEMインスタンスからアクセス可能な抽出テキストを保存するファイルシステムフォルダー/共有
+* インデックス作成AEMインスタンスからアクセス可能な抽出テキストを保存するファイルシステムフォルダ/共有
 
    * テキスト事前抽出の OSGi 設定には、AEM インスタンスから直接それらのファイルにアクセスできるように、抽出されたテキストファイルへのファイルシステムパスが必要です（ローカルドライブまたはファイル共有マウント）。
 
@@ -443,7 +447,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 >[!NOTE]
 >
->***oak-run.jarコマンドは、https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.htmlに完全に列挙されていま[す。](https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.html)***
+>***以下に説明するoak-run.jarコマンドは、https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.htmlに完全に列挙され [ます。](https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.html)***
 >
 >上の図と後述の手順は、Apache Oak のドキュメントに記載されているテキスト事前抽出の技術的な手順を解説および補足しています。
 
@@ -479,5 +483,5 @@ Note that the entire Node Store is traversed (as specified by the paths in the o
 
 3a.Lucene インデックスの[再インデックス](#how-to-re-index)が AEM で実行されます。
 
-3b.Apache Jackrabbit Oak dataStore preExtractedTextProvider OSGi設定（ファイルシステムパスを介して抽出されたテキストを指すように設定）は、抽出されたファイルからフルテキストをソースとするOakに対して指示し、リポジトリに保存されたデータを直接ヒットして処理するのを防ぎます。
+3b.Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi設定（ファイルシステムパスを介して抽出済みテキストを指すように設定）は、抽出済みファイルからフルテキストをソースにするようOakに指示し、リポジトリに保存されたデータを直接ヒットして処理するのを防ぎます。
 
