@@ -12,6 +12,9 @@ discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 91%
 
 ---
 
@@ -29,6 +32,7 @@ source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
       * サポートされている言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
       * サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。
    1. テンプレートを選択して、「作成」をクリックします。
+
    ![newpagefr](assets/newpagefr.png)
 
 1. Web サイトコンソールの Web サイトツリーで、サイトのルートページを選択します
@@ -48,7 +52,7 @@ source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
 
    | 言語コピーのタイプ | 説明 |
    |---|---|
-   | 自動 | 親ページの動作を使用します。 |
+   | auto | 親ページの動作を使用します。 |
    | 無視 | このページとその子のコピーを作成しません。 |
    | `<language>+` （例：フランス語+） | ページとそのすべての子を対象の言語からコピーします。 |
    | `<language>` （例：フランス語） | 対象の言語からページのみをコピーします。 |
