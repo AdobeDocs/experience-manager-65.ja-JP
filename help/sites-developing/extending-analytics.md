@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e0372f4a-fe7b-4526-8391-5bb345b51d70
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '501'
+ht-degree: 49%
 
 ---
 
@@ -41,7 +44,7 @@ The syntax for `data-tracking` is
 
 * `data-tracking="{'event': ['eventName'], 'values': {'key': 'value', 'nextKey': 'nextValue'}, componentPath: 'myapp/component/mycomponent'}"`
 
-キーと値のペアは、任意の数を2番目のパラメーター（ペイロードと呼ばれます）として渡すことができます。
+キーと値のペアは、2番目のパラメーター（ペイロードと呼ばれる）として任意の数だけ渡すことができます。
 
 次に例を示します。
 
@@ -58,7 +61,7 @@ The syntax for `data-tracking` is
 </span>
 ```
 
-At page load, all `data-tracking` attributes will be collected and added to the event store of the ContextHub, where they can be mapped to Adobe Analytics events. マッピングされていないイベントはAdobe Analyticsでは追跡されません。 See [Connecting to Adobe Analytics](/help/sites-administering/adobeanalytics.md) for more details about mapping events.
+At page load, all `data-tracking` attributes will be collected and added to the event store of the ContextHub, where they can be mapped to Adobe Analytics events. マッピングされていないイベントは、Adobe Analyticsでは追跡されません。 See [Connecting to Adobe Analytics](/help/sites-administering/adobeanalytics.md) for more details about mapping events.
 
 ### ページの読み込み後のカスタムイベントの追跡 {#tracking-custom-events-after-page-load}
 
@@ -72,9 +75,9 @@ At page load, all `data-tracking` attributes will be collected and added to the 
 
 * `values`：追跡するすべての値を格納します。
 * `collect`：オプションで、イベントおよびデータオブジェクトを格納する配列を返します。
-* `options` はオプションで、HTML要素やなどのリンクトラッキングオプションが含ま `obj` れま ` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)`す。
+* `options` はオプションで、HTML要素やなどのリンクトラッキングオプション `obj` が含まれ ` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)`ます。
 
-* `componentPath` が必要な属性で、 `<%=resource.getResourceType()%>`
+* `componentPath` が必要な属性であり、 `<%=resource.getResourceType()%>`
 
 例えば、次のように定義した場合、「**Jump to top**」リンクをクリックすると `jumptop` と `headlineclick` の 2 つのイベントが実行されます。
 
@@ -86,13 +89,13 @@ At page load, all `data-tracking` attributes will be collected and added to the 
 
 ## ContextHubでの値へのアクセス {#accessing-values-in-the-contexthub}
 
-ContextHub javaScript APIには、指定したストア( `getStore(name)` ある場合)を返す関数が含まれています。 ストアには、指定 `getItem(key)` したキーの値がある場合にその値を返す関数があります。 関数を使 `getKeys()` 用すると、特定のストアに対して定義されたキーの配列を取得できます。
+ContextHub JavaScript APIには、指定されたストア（存在する場合）を返す `getStore(name)` 関数があります。 ストアには、指定したキーがある場合にその値を返す `getItem(key)` 関数があります。 関数を使用すると、特定のストアに対して定義されたキーの配列を取得できます。 `getKeys()`
 
-関数を使用して関数を連結すると、ストアの値の変更を通知でき `ContextHub.getStore(name).eventing.on(ContextHub.Constants.EVENT_STORE_UPDATED, handler, selector, triggerForPastEvents)` ます。
+関数を使用して関数を連結すると、ストアで値の変化を通知でき `ContextHub.getStore(name).eventing.on(ContextHub.Constants.EVENT_STORE_UPDATED, handler, selector, triggerForPastEvents)` ます。
 
 The best way to be notified of initial availability of the ContextHub is to use the `ContextHub.eventing.on(ContextHub.Constants.EVENT_ALL_STORES_READY, handler, selector, triggerForPastEvents);` function.
 
-**ContextHubの追加イベント：**
+**ContextHubの追加イベント:**
 
 すべてのストアに対応：
 
@@ -104,7 +107,7 @@ The best way to be notified of initial availability of the ContextHub is to use 
 
 >[!NOTE]
 >
->ContextHub APIリファレンス全 [体も参照](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub-api.html#ContextHubJavascriptAPIReference)
+>完全なContextHub APIリファレンスも参照して [ください](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub-api.html#ContextHubJavascriptAPIReference)
 
 ## レコードコールバックの追加 {#adding-record-callbacks}
 
