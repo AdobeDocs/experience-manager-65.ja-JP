@@ -59,8 +59,8 @@ AEM では、様々な種類のメディアアセットとコレクションが�
 
 混在メディアが含まれているコンテンツフラグメントを翻訳できるようにするには、最初に、コンテンツフラグメントに関連付けられたインラインアセットとコレクションの翻訳が可能になるように、デフォルトの翻訳フレームワークを編集します。
 
-1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール／デプロイメント／クラウドサービス]**&#x200B;に移動します。
-1. Locate **[!UICONTROL Translation Integration]** under **[!UICONTROL Adobe Marketing Cloud]**, and click/tap **[!UICONTROL Show Configurations]**.
+1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール／デプロイメント／Cloud Services]** に移動します。
+1. **[!UICONTROL Adobe Marketing Cloud]** の下にある「 **[!UICONTROL 翻訳の統合]**」を見つけ、「設定を **[!UICONTROL 表示]**」をクリックまたはタップします。
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
