@@ -11,6 +11,9 @@ topic-tags: administering-on-demand-services-app
 discoiquuid: c3c73e67-7f85-4308-b4cd-1b42d4f3f2d9
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '549'
+ht-degree: 79%
 
 ---
 
@@ -75,6 +78,7 @@ Members of the app-admins group can author application content with the same per
 
    * content-authors
    * workflow-users
+
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
    >[!NOTE]
@@ -89,6 +93,7 @@ Members of the app-admins group can author application content with the same per
 
    * /etc/packages/mobileapp に対して（読み取り、変更、作成、削除、複製）
    * /var/contentsync に対して（読み取り）
+
    >[!NOTE]
    >
    >オーサーインスタンスからパブリッシュインスタンスにアプリケーションの更新を公開するには、パッケージの複製を使用します。
@@ -103,8 +108,8 @@ Members of the app-admins group can author application content with the same per
 1. コンテンツを書き出すか、アップロードするには、権限を次のように設定します。
 
    * （読み取り）/etc/contentsyncで書き出しテンプレートにアクセスします。
-   * （読み取り）/varから読み取り時のパストラバーサル用
-   * /var/contentsyncの（読み取り、書き込み、変更、削除）。ContentSyncキャッシュ済みの書き出しコンテンツの書き込み、読み取り、およびクリーンアップを行います。
+   * （読み取り）/varに対して読み取り時のパストラバーサル用
+   * /var/contentsyncの（読み取り、書き込み、変更、削除）。ContentSyncキャッシュ済み書き出しコンテンツの書き込み、読み取り、およびクリーンアップを行います。
 
 ### その他のリソース {#additional-resources}
 
