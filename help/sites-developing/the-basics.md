@@ -46,7 +46,7 @@ Java コンテンツリポジトリ（JCR）の規格である [JSR 283](https:/
 
 仕様を主導しているのは、Adobe Research（スイス）AG です。
 
-JCR [API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ、javax.jcr。&amp;ast; は、リポジトリのコンテンツへの直接アクセスと操作に使用されます。
+JCR [API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ、javax.jcr。&amp;ast;は、リポジトリのコンテンツへの直接アクセスと操作に使用されます。
 
 ## Experience Server（CRX）と Jackrabbit {#experience-server-crx-and-jackrabbit}
 
@@ -111,11 +111,11 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 **host** :Webサイトの名前。
 
-**コンテンツパス** ：レンダリングするコンテンツを指定するパス。 拡張子と組み合わせて使用される。 この例では、tools/spy.htmlに変換します。
+**コンテンツパス** ：レンダリングするコンテンツを指定するパス。 拡張子と組み合わせて使用される。この例では、tools/spy.htmlに変換します。
 
-**selector(s)** ：コンテンツをレンダリングする別の方法で使用されます。 次の例では、A4形式のプリンターに適したバージョンです。
+**selector(s)** ：コンテンツをレンダリングする別の方法で使用されます。次の例では、A4形式のプリンターに適したバージョンです。
 
-**extension** Content形式； レンダリングに使用するスクリプトも指定します。
+**extension** Content形式；レンダリングに使用するスクリプトも指定します。
 
 **[サフィックス** ]追加情報を指定する場合に使用できます。
 
@@ -153,7 +153,7 @@ The path specified by the `sling:resourceType` can be either:
 * 絶対パス
 * 相対、設定パラメーターへ
 
-   移植性を高めるため、相対パスをアドビが推奨します。
+   移植性を高めるため、相対パスはAdobeが推奨します。
 
 All Sling scripts are stored in subfolders of either `/apps` or `/libs`, which will be searched in this order (see [Customizing Components and Other Elements](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
 
@@ -162,10 +162,10 @@ All Sling scripts are stored in subfolders of either `/apps` or `/libs`, which w
 * メソッド（GET、POST）が必要なときは、HTTP の仕様に従って大文字で指定します（例：jobs.POST.esp。以下を参照）。
 * 以下のような様々なスクリプトエンジンがサポートされています。
 
-   * `.esp, .ecma`: ECMAScript (JavaScript)ページ（サーバー側の実行）
-   * `.jsp`: Javaサーバーページ（サーバー側の実行）
-   * `.java`: Javaサーブレットコンパイラ（サーバ側の実行）
-   * `.jst`: JavaScriptテンプレート（クライアント側の実行）
+   * `.esp, .ecma`:ECMAScript (JavaScript)ページ（サーバー側の実行）
+   * `.jsp`:Javaサーバーページ（サーバー側の実行）
+   * `.java`:Javaサーブレットコンパイラ（サーバ側の実行）
+   * `.jst`:JavaScriptテンプレート（クライアント側の実行）
 
 The list of script engines supported by the given instance of AEM are listed on the Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
 
@@ -175,9 +175,9 @@ Using the above example, if the `sling:resourceType` is `hr/jobs` then for:
 
 * GET/HEADリクエスト、.htmlで終わるURL（デフォルトのリクエストタイプ、デフォルトの形式）
 
-   スクリプトは/apps/hr/jobs/jobs.espになります。 sling:resourceTypeの最後のセクションがファイル名を形成します。
+   スクリプトは/apps/hr/jobs/jobs.espになります。sling:resourceTypeの最後のセクションがファイル名を形成します。
 
-* POSTリクエスト（GET/HEADを除くすべてのリクエストタイプ。メソッド名は大文字にする必要があります）
+* POST要求(GET/HEADを除くすべての要求タイプ。メソッド名は大文字にする必要があります)
 
    スクリプト名にPOSTが使用されます。
 
@@ -187,15 +187,15 @@ Using the above example, if the `sling:resourceType` is `hr/jobs` then for:
 
    例：`../content/corporate/jobs/developer.pdf`
 
-   スクリプトは次のとおりで `/apps/hr/jobs/jobs.pdf.esp`す。 スクリプト名にサフィックスが追加されます。
+   スクリプトは次のとおりで `/apps/hr/jobs/jobs.pdf.esp`す。スクリプト名にサフィックスが追加されます。
 
 * セレクターを含むURL
 
    セレクターを使用して、同じコンテンツを別の形式で表示できます。 例えば、プリンターに適したバージョン、rssフィード、サマリなどです。
 
-   プリンターに適したバージョンを見てみると、セレクターが *印刷できます*。 ～と同様に `../content/corporate/jobs/developer.print.html`
+   プリンターに適したバージョンを見てみると、セレクターが *印刷できます*。～と同様に `../content/corporate/jobs/developer.print.html`
 
-   スクリプトは次のとおりで `/apps/hr/jobs/jobs.print.esp`す。 セレクターがスクリプト名に追加されます。
+   スクリプトは次のとおりで `/apps/hr/jobs/jobs.print.esp`す。セレクターがスクリプト名に追加されます。
 
 * sling:resourceType が定義されていない場合は、次のようになります。
 
@@ -294,7 +294,7 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 More complex scripts (aggregating scripts) might need to access multiple resources (for example navigation, sidebar, footer, elements of a list) and do so by including the *resource*.
 
-これを行うには、sling:include（&quot;/&lt;パス>/&lt;リソース>&quot;）コマンドを使用します。 これは、イメージをレンダリングするための既存の定義を参照する次の文のように、参照先のリソースの定義を効果的に含めます。
+これを行うには、sling:include（&quot;/&lt;パス>/&lt;リソース>&quot;）コマンドを使用します。これは、イメージをレンダリングするための既存の定義を参照する次の文のように、参照先のリソースの定義を効果的に含めます。
 
 ```xml
 %><sling:include resourceType="geometrixx/components/image/img"/><%
@@ -355,7 +355,7 @@ currentNodeを現在のノードオブジェクトにします。
 
 Node オブジェクトの操作方法について詳しくは、[Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) を参照してください。
 
-**ウィジェット** AEMでは、すべてのユーザー入力はウィジェットで管理されます。 多くの場合、これらはコンテンツの編集を制御するために使用されます。
+**Widget** AEMでは、すべてのユーザー入力はウィジェットで管理されます。 多くの場合、これらはコンテンツの編集を制御するために使用されます。
 
 ダイアログはウィジェットを組み合わせて構築されます。
 
@@ -418,7 +418,7 @@ With pageManager being the page manager object and myResource a resource object.
 
 * `/apps`
 
-   出願に関する事項 には、webサイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、で使用可能な既製のコンポーネントに基づくことができ `/libs/foundation/components`ます。
+   出願に関する事項には、webサイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、で使用可能な既製のコンポーネントに基づくことができ `/libs/foundation/components`ます。
 
 * `/content`
 
@@ -432,7 +432,7 @@ With pageManager being the page manager object and myResource a resource object.
 
 * `/libs`
 
-   AEMのコアに属するライブラリと定義です。 のサブフォルダーは、検索やレプリケーションなど、AEMの初期設定の機能を `/libs` 表します。 のコンテンツは、AEMの動作に影響するので、変更しな `/libs` いでください。 Webサイトに固有の機能は、で開発する必要があります `/apps` (「コンポーネントとその他の要素の [カスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)」を参照)。
+   AEMのコアに属するライブラリと定義。 のサブフォルダーは、検索やレプリケーションなど、 `/libs` 初期設定済みのAEM機能を表します。 のコンテンツは、AEMの動作方法に影響を与えるので、変更しないで `/libs` ください。 Webサイトに固有の機能は、で開発する必要があります `/apps` (「コンポーネントとその他の要素の [カスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)」を参照)。
 
 * `/tmp`
 
@@ -440,7 +440,7 @@ With pageManager being the page manager object and myResource a resource object.
 
 * `/var`
 
-   システムによって変更および更新されるファイル 監査ログ、統計、イベント処理など。 サブフォルダーには、コンポーネントスクリプトから生成されたソースフォームおよびコンパイル済みのフォームのJavaサーブレットが含まれます。 `/var/classes`
+   システムによって変更および更新されるファイル監査ログ、統計、イベント処理など。 サブフォルダーには、コンポーネントスクリプトから生成されたソースフォームおよびコンパイル済みのフォームのJavaサーブレットが含まれます。 `/var/classes`
 
 ## 環境 {#environments}
 
