@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 17c9b69a-3c6f-47e3-a828-841bb90eba8b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 94%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    **フル HTML：**&#x200B;すべての HTML タグを含む形（完全な HTML ページ）でフォームをレンダリングします。これがデフォルト値です。
 
-   **** フォーム本体：(完全なHTMLページではな `<BODY>` く)タグ内でフォームをレンダリングする場合。
+   **フォーム本文：** (完全なHTMLページではな `<BODY>` く)タグ内のフォームをレンダリングする場合。
 
 1. 「保存」をクリックします。
 
