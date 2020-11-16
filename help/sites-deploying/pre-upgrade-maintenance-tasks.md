@@ -12,6 +12,9 @@ discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '2158'
+ht-degree: 78%
 
 ---
 
@@ -33,7 +36,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 * [オフラインでのリビジョンクリーンアップの実行](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-offline-revision-cleanup)
 * [データストアのガベージコレクションの実行](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-datastore-garbage-collection)
 * [必要に応じてデータベーススキーマをアップグレードする](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#upgradethedatabaseschemaifneeded)
-* [アップグレードの妨げとなる可能性のあるユーザーの削除](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#delete-users-that-might-hinder-the-upgrade)
+* [アップグレードを妨げる可能性のあるユーザーの削除](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#delete-users-that-might-hinder-the-upgrade)
 
 * [ログファイルのローテーション](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#rotate-log-files)
 
@@ -102,7 +105,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   <tr>
    <td><strong>タスク</strong></td>
    <td><strong>実行モード</strong></td>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
   </tr>
   <tr>
    <td><code>TarIndexMergeTask</code></td>
@@ -173,7 +176,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
  <tbody>
   <tr>
    <td><strong>メソッド名</strong></td>
-   <td><strong>タイプ</strong></td>
+   <td><strong>型</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
@@ -188,12 +191,12 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   </tr>
   <tr>
    <td><code>runAllPreUpgradeTasks()</code></td>
-   <td>ACTION</td>
+   <td>アクション ：</td>
    <td>リスト内のすべてのアップグレード前のメンテナンスタスクを実行します。</td>
   </tr>
   <tr>
    <td><code>runPreUpgradeTask(preUpgradeTaskName)</code></td>
-   <td>ACTION</td>
+   <td>アクション ：</td>
    <td>パラメーターで指定された名前を持つアップグレード前のメンテナンスタスクを実行します。</td>
   </tr>
   <tr>
@@ -208,22 +211,22 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   </tr>
   <tr>
    <td><code>getPreUpgradeTaskLastRunTime(preUpgradeTaskName)</code></td>
-   <td>ACTION</td>
+   <td>アクション ：</td>
    <td>パラメーターで指定された名前を持つアップグレード前のメンテナンスタスクの正確な実行時間を表示します。</td>
   </tr>
   <tr>
    <td><code>getPreUpgradeTaskLastRunState(preUpgradeTaskName)</code></td>
-   <td>ACTION</td>
+   <td>アクション ：</td>
    <td>パラメーターで指定された名前を持つアップグレード前のメンテナンスタスクの最終実行状態を表示します。</td>
   </tr>
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
-   <td>ACTION</td>
+   <td>アクション ：</td>
    <td><p>Runs all the pre-upgrade health checks and saves their status in a file named <code>preUpgradeHCStatus.properties</code> that is located in the sling home path. If the <code>shutDownOnSuccess</code> parameter is set to <code>true</code>, the AEM instance will be shut down, but only if all the pre-upgrade health checks have an OK status.</p> <p>properties ファイルは今後のアップグレードの前提条件として使用され、<br />アップグレード前のヘルスチェックの実行に失敗した場合は、<br />アップグレードプロセスが停止されます。アップグレード前のヘルスチェックの結果を無視して<br />アップグレードを開始する場合は、このファイルを削除できます。</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
-   <td>ACTION</td>
+   <td>アクション ：</td>
    <td>指定された AEM バージョンにアップグレードしたときに適合しない<br />すべての読み込み済みパッケージをリストします。ターゲットの AEM バージョンは、<br />パラメーターとして指定する必要があります。</td>
   </tr>
  </tbody>
@@ -236,6 +239,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 >* JMX コンソール
 >* JMX に接続する外部アプリケーション
 >* cURL
+
 >
 
 
@@ -311,32 +315,33 @@ CRX3 インスタンスでリビジョンクリーンアップを実行した後
 
 ## 必要に応じてデータベーススキーマをアップグレードする {#upgrade-the-database-schema-if-needed}
 
-通常、基盤となるApache OakスタックAEMで永続化に使用されるデータベーススキーマは、必要に応じてアップグレードされます。
+通常、基盤となるApache OakスタックAEMで永続性を使用する場合は、必要に応じてデータベーススキーマのアップグレードが行われます。
 
-ただし、スキーマを自動的にアップグレードできない場合が考えられます。 これらは、権限が非常に限られたユーザーでデータベースが実行される、セキュリティの高い環境のほとんどです。 この場合、AEMは古いスキーマを引き続き使用します。
+ただし、スキーマを自動的にアップグレードできない場合があります。 これらは、ほとんどの場合、非常に限られた権限を持つユーザーの下でデータベースが実行される高いセキュリティ環境です。 この場合、AEMは古いスキーマを引き続き使用します。
 
-この問題が発生しないようにするには、次の手順に従ってスキーマをアップグレードする必要があります。
+このような状況を回避するには、次の手順に従ってスキーマをアップグレードする必要があります。
 
 1. アップグレードが必要なAEMインスタンスをシャットダウンします。
-1. データベーススキーマをアップグレードします。 これを行うために使用する必要のあるツールを確認するには、お使いのデータベースの種類に関するドキュメントを参照してください。
+1. データベーススキーマをアップグレードします。 この処理を行うために使用する必要のあるツールを確認するには、使用するデータベースの種類に関するドキュメントを参照してください。
 
-   Oakでのスキーマアップグレードの処理方法について詳しくは、Apache webサ [イトのこのページを参照してください](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)。
+   Oakでのスキーマのアップグレードの処理方法について詳しくは、ApacheのWebサイト [のこのページを参照してください](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)。
 
-1. AEMのアップグレードに進みます。
+1. AEMのアップグレードを続行します。
 
-## アップグレードの妨げとなる可能性のあるユーザーの削除 {#delete-users-that-might-hinder-the-upgrade}
+## アップグレードを妨げる可能性のあるユーザーの削除 {#delete-users-that-might-hinder-the-upgrade}
 
 >[!NOTE]
 >
 >このアップグレード前のメンテナンスタスクは、次の場合にのみ必要です。
 >
->* AEM 6.3より前のAEMバージョンからアップグレードしようとしている
->* アップグレード中に、次に示すエラーが発生しました。
+>* AEM 6.3より前のAEMバージョンからアップグレードしています
+>* アップグレード中に、以下に示すエラーが発生した場合。
+
 >
 
 
 
-サービスユーザーが古いバージョンのAEMに移行し、通常のユーザーとして不適切にタグ付けされる場合は、例外的なケースがあります。
+サービスユーザーが古いAEMバージョンで、通常のユーザーとして不適切にタグ付けされる場合は、例外的に発生します。
 
 この場合、アップグレードは次のようなメッセージで失敗します。
 
@@ -347,9 +352,9 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 
 この問題を回避するには、次の手順を実行します。
 
-1. 実稼動トラフィックからインスタンスを切り離す
-1. 問題を引き起こしているユーザーのバックアップを作成します。 これは、Package Managerで行うことができます。 For more information, see [How to Work with Packages.](/help/sites-administering/package-manager.md)
-1. 問題を引き起こしているユーザーを削除します。 以下に、このカテゴリに該当する可能性のあるユーザーのリストを示します。
+1. インスタンスを実稼動トラフィックから切り離す
+1. 問題の原因となるユーザーのバックアップを作成します。 これは、Package Managerで行うことができます。 For more information, see [How to Work with Packages.](/help/sites-administering/package-manager.md)
+1. 問題の原因となっているユーザーを削除します。 以下は、このカテゴリに該当する可能性のあるユーザーのリストです。
 
    1. `dynamic-media-replication`
    1. `communities-ugc-writer`
