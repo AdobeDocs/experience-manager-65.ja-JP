@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: 90e36522-3af1-4a8a-b044-1c828c52974e
 translation-type: tm+mt
 source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+workflow-type: tm+mt
+source-wordcount: '899'
+ht-degree: 40%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
 AEM Assets のカタログ作成機能で、デジタルアセットを使用して製品カタログを生成する方法を学びます。
 
-Adobe Experience Manager（AEM）Assets のカタログ作成機能を使用すると、InDesign アプリケーションから読み込んだ InDesign テンプレートを使用して、ブランドの製品のカタログを作成できます。InDesignテンプレートを読み込むには、まずAEM AssetsをInDesignサーバーと統合します。
+Adobe Experience Manager（AEM）Assets のカタログ作成機能を使用すると、InDesign アプリケーションから読み込んだ InDesign テンプレートを使用して、ブランドの製品のカタログを作成できます。InDesignテンプレートを読み込むには、まずAEM AssetsをInDesignサーバと統合します。
 
 ## InDesign サーバーとの統合 {#integrating-with-indesign-server}
 
@@ -26,9 +29,9 @@ As part of the integration process, configure the **DAM Update Asset** workflow,
 
 >[!NOTE]
 >
->AEM Assets に読み込む前に、InDesign ファイルから InDesign テンプレートを生成できます。詳しくは、[ファイルとテンプレートを使用した作業](https://helpx.adobe.com/indesign/using/files-templates.html)を参照してください。
+>AEM Assets に読み込む前に、InDesign ファイルから InDesign テンプレートを生成できます。詳しくは、[ファイルとテンプレートを使用した作業](https://helpx.adobe.com/jp/indesign/using/files-templates.html)を参照してください。
 >
->InDesign テンプレートの要素を XML タグにマッピングできます。マップされたタグは、カタログ作成機能で商品のプロパティをテンプレートのプロパティにマップした際に、プロパティとして表示されます。To learn about XML tagging in InDesign files, see [Tagging content for XML](https://helpx.adobe.com/indesign/using/tagging-content-xml.html).
+>InDesign テンプレートの要素を XML タグにマッピングできます。マップされたタグは、カタログ作成機能で商品のプロパティをテンプレートのプロパティにマップした際に、プロパティとして表示されます。To learn about XML tagging in InDesign files, see [Tagging content for XML](https://helpx.adobe.com/jp/indesign/using/tagging-content-xml.html).
 
 >[!NOTE]
 >
@@ -75,7 +78,7 @@ As part of the integration process, configure the **DAM Update Asset** workflow,
 1. To add any existing InDesign file to your catalog, tap/click **Create** from the toolbar, and choose the **Add to existing page** option.
 1. Select the InDesign file, and tap/click **Add** from the toolbar. Then, tap/click **OK** to close the dialog.
 
-   カタログページで参照する製品のメタデータが変更されても、その変更はカタログページに自動的に反映されません。 A banner labeled **Stale** appears on the product images in the referencing catalog pages, indicating that the metadata for the referenced products is not up-to-date.
+   カタログページで参照している製品のメタデータが変更されても、その変更はカタログページに自動的に反映されません。 A banner labeled **Stale** appears on the product images in the referencing catalog pages, indicating that the metadata for the referenced products is not up-to-date.
 
    ![chlimage_1-117](assets/chlimage_1-117a.png)
 
@@ -91,8 +94,8 @@ As part of the integration process, configure the **DAM Update Asset** workflow,
 
 1. 「**次へ**」をタップまたはクリックします。To add an existing InDesign file as a cover page, tap/click **Browse** beside the **Choose Cover Page** box, and specify the path for the cover page template.
 1. Tap/click **Save**, and then tap/click **Done** to close the confirmation dialog.
-「完了」オプション **を選択すると** 、.pdfレンディションを使用するかどうかを選択するダイアログボックスが開きます。
-   ![pdfに書き出し](assets/CatalogPDF.png)Acrobat(PDF)オプションが選択されている場合、 **indesignのレンディションに加えて、/jcr:content/renditions** にPDFレンディションが作成されます。 ダウンロードダイアログで「レンディション」チェックボックスを選択して、すべてのレンディションをダウンロードできます。
+「 **完了** 」オプションを選択すると、.pdfレンディションを使用するかどうかを選択するダイアログボックスが開きます。
+   ![pdfに書き出し](assets/CatalogPDF.png)Acrobat(PDF)オプションが選択されている場合、 **indesignのレンディションに加えて、** /jcr:content/renditionsにpdfレンディションが作成されます。 すべてのレンディションをダウンロードするには、ダウンロードダイアログの「レンディション」チェックボックスを選択します。
 
 1. To generate a preview for the catalog you created, select it in the **Catalogs** console, and then click the **Preview** icon from the toolbar.
 
