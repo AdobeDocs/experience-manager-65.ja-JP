@@ -218,7 +218,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
-   <td>このフィールドの背景色の値を指定します。</td>
+   <td>このフィールドの背景色の値を指定します。別々にborder.fill.presenceプロパティをvisibleに設定する必要があります。</td>
    <td>それはフィールドのデフォルトの色を正しく返しません。</td>
   </tr>
   <tr>
@@ -238,7 +238,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td><code>borderColor</code></td>
-   <td>このフィールドの境界線の色の値を指定します。</td>
+   <td>このフィールドの境界線の色の値を指定します。別々にborder.edge.presenceプロパティをvisibleに設定する必要があります。</td>
    <td>それはフィールドのデフォルトの境界線の色を正しく返しません。</td>
   </tr>
   <tr>
