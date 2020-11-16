@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 55%
+ht-degree: 59%
 
 ---
 
@@ -31,13 +31,13 @@ AEM Forms App Source Code Package refers to the `adobe-lc-mobileworkspace-src-<v
 
 Perform the following steps to download the `adobe-aemfd-forms-app-src-pkg-<version>.zip` file:
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
-1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
-1. In the **[!UICONTROL Filters]** section:
-   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
-   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
-1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Open [Software Distribution](https://experience.adobe.com/downloads). ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
+1. Tap **[!UICONTROL Adobe Experience Manager]** available in the header menu.
+1. 「**[!UICONTROL フィルター]**」セクションで、
+   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+   2. パッケージのバージョンとタイプを選択します。 You can also use the **[!UICONTROL Search Downloads]** option to filter the results.
+1. Tap the package name applicable to your operating system, select **[!UICONTROL Accept EULA Terms]**, and tap **[!UICONTROL Download]**.
+1. Open [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)  and click **[!UICONTROL Upload Package]** to upload the package.
 1. Select the package and click **[!UICONTROL Install]**.
 1. To download the source-code archive, open **https://&lt;server>:&lt;port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-&lt;version>.zip** in your browser. Androidアプリの.zipファイルがデバイスにダウンロードされます。
 1. ローカルファイルシステム上のフォルダーに .zip ファイルの内容を解凍します。For example, *C:\&lt;Folder Structure>\adobe-lc-mobileworkspace-src-2.4.20*
@@ -56,7 +56,7 @@ AEM Forms アプリケーションの構築プロセスを開始する前に、�
 
 ## 標準的な AEM Forms アプリケーションの構築 {#set-up-the-xcode-project}
 
-adobe-lc-mobileworkspace-src-&lt;version>.zipファイルをローカルファイルシステムに保存し、環境変数を設定したら、次のいずれかのオプションを使用して、標準AEM FormsのAndroidアプリを作成します。
+adobe-lc-mobileworkspace-src-&lt;version>.zipファイルをローカルファイルシステムに保存し、環境変数を設定したら、次のいずれかのオプションを使用して、標準的なAEM FormsAndroidアプリを作成します。
 
 * [Android Studio を使用した AEM Forms アプリケーションの構築](#using-android-studio)
 * [Android Studio を使用した .apk ファイルの生成](#generate-apk-android-studio)
@@ -74,7 +74,7 @@ Android Studio を使用して AEM Forms アプリケーションを構築する
    ![android_folder_studio](assets/android_folder_studio.png)
 
 1. Select **android** from the left pane and click **Run** > **Run &#39;android&#39;**.
-1. デプロイメントTargetを選択ダイアログボックスの「接続されているデバイス」セクションでAndroidデバイスを選択し、「OK」をクリックします。
+1. デプロイメントターゲットを選択ダイアログボックスの「接続されているデバイス」セクションでAndroidデバイスを選択し、「OK」をクリックします。
 
     開発環境を正しく構築すると、アプリケーションをカスタマイズできるようになります。アプリケーションをカスタマイズする場合は、次の記事を参照してください。
 
