@@ -60,7 +60,7 @@ AEM Forms では、レビュー担当者グループをフォームへ関連付�
 
 To create a group and add members to it, navigate to **Tools** > **Operations** > **Security** > **Groups**.
 For more information, see [User Administration and Services](/help/sites-administering/security.md).
-Ensure that you add the group you create as a member of the out-of-the-box user group: **forms-submission-reviewers**. このユーザーグループはAEM Formsに付属しており、送信レビュー担当者として追加されていることを確認します。
+Ensure that you add the group you create as a member of the out-of-the-box user group: **forms-submission-reviewers**. このユーザーグループはAEM Formsに出荷され、送信レビュー担当者として追加されていることを確認します。
 
 アダプティブフォームにユーザーグループを関連付けるには、次の手順に従います。
 
