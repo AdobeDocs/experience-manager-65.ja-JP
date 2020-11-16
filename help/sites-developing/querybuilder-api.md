@@ -13,6 +13,9 @@ pagetitle: Query Builder API
 tagskeywords: querybuilder
 translation-type: tm+mt
 source-git-commit: a491d4e9bd9ffc68c4ba7cac3149f48cf7576ee8
+workflow-type: tm+mt
+source-wordcount: '2350'
+ht-degree: 69%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a491d4e9bd9ffc68c4ba7cac3149f48cf7576ee8
 
 サーバー側 Query Builder（[`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)）はクエリの記述を受け入れ、XPath クエリを作成して実行します。オプションで結果セットのフィルタリング、必要に応じてファセットの抽出もおこないます。
 
-クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。例としては、XPathの関数に対応するフルテキスト述語が `jcr:contains()` あります。
+クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。例としては、XPathの `jcr:contains()` 関数に対応するフルテキスト述語があります。
 
 各述語タイプに、1 つのエバリュエーターコンポーネント（[`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)）があります。これらのコンポーネントは、XPath、フィルタリングおよびファセットの抽出に対してその特定の述語を処理する方法を理解しています。OSGi コンポーネントのランタイムによってプラグインされる、カスタムのエバリュエーターを作成するのは簡単です。
 
@@ -35,7 +38,7 @@ REST API を使用すると、JSON で送信される応答を使用した HTTP 
 
 ## Gem セッション {#gem-session}
 
-[AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) は、アドビの専門家が提供する、Adobe Experience Manager を技術的に深く掘り下げた一連のセッションです。Query Builder 専用のこのセッションは、ツールを大まかに把握したり使用したりするのに非常に便利です。
+[AEM Gems](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-index.html) は、アドビの専門家が提供する、Adobe Experience Manager を技術的に深く掘り下げた一連のセッションです。Query Builder 専用のこのセッションは、ツールを大まかに把握したり使用したりするのに非常に便利です。
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ AEM 6.0 SP2 の時点では、数値を使用してカスタムの最大結果�
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.guessTotal=50&orderby=path`
 
-デフォルトの10件の結果と同じ数値が返され、0件のオフセットが返されますが、表示される結果は最大50件までです。
+0オフセットを持つ結果10件と同じデフォルトの制限値を返しますが、表示される結果は最大50件までとなります。
 
 ```xml
 "success": true,
@@ -140,8 +143,8 @@ AEM 6.0 SP2 の時点では、数値を使用してカスタムの最大結果�
 
 * 応答は、以下のような結果になる可能性があります。
 
-   * `total=43`, `more=false` — 合計ヒット数が43であることを示します。 UI には先頭ページの一部として 10 件の結果が表示され、続く 3 ページのページネーションが提供されます。この実装を使用して、「**43 件の結果が見つかりました**」のような説明テキストを表示することもできます。
-   * `total=100`, `more=true` — 合計ヒット数が100を超え、正確な数が不明であることを示します。 UI には先頭ページの一部として 10 件の結果が表示され、続く 10 ページのページネーションが提供されます。この実装を使用して、「**100 件を超える結果が見つかりました**」のようなテキストを表示することもできます。ユーザーが次のページに移動すると、Query Builder への呼び出しによって `guessTotal` の制限と、`offset` パラメーターおよび `limit` パラメーターの制限が増やされます。
+   * `total=43`, `more=false` — ヒットの総数が43であることを示します。 UI には先頭ページの一部として 10 件の結果が表示され、続く 3 ページのページネーションが提供されます。この実装を使用して、「**43 件の結果が見つかりました**」のような説明テキストを表示することもできます。
+   * `total=100`, `more=true` — ヒットの総数が100を超え、正確な数が不明であることを示します。 UI には先頭ページの一部として 10 件の結果が表示され、続く 10 ページのページネーションが提供されます。この実装を使用して、「**100 件を超える結果が見つかりました**」のようなテキストを表示することもできます。ユーザーが次のページに移動すると、Query Builder への呼び出しによって `guessTotal` の制限と、`offset` パラメーターおよび `limit` パラメーターの制限が増やされます。
 
 UI が無限スクロールを使用する必要がある場合は、Query Builder によって正確なヒット数が決定されないように、`guessTotal` も使用する必要があります。
 
@@ -216,7 +219,7 @@ group.2_path=/content/geometrixx/en/company/bod
 
 `"Management" and ("/content/geometrixx/en/company/management" or "/content/geometrixx/en/company/bod")`
 
-例にあるグループの内部では、`path` 述語が複数回使用されています。To differentiate and order the two instances of the predicate (ordering is required for some predicates), you must prefix the predicates with *N* `_ where`*N *is the ordering index. In the previous example, the resulting predicates are`1_path`and`2_path`.
+例にあるグループの内部では、`path` 述語が複数回使用されています。To differentiate and order the two instances of the predicate (ordering is required for some predicates), you must prefix the predicates with *N* `_ where`*N* is the ordering index. In the previous example, the resulting predicates are `1_path` and `2_path`.
 
 The `p` in `p.or` is a special delimiter indicating that what follows (in this case an `or`) is a *parameter* of the group, as opposed to a subpredicate of the group, such as `1_path`.
 
@@ -297,7 +300,7 @@ property.3_value=bar
 p.hits=full
 ```
 
-この場合、各ノードのすべてのプロパティが含まれます。
+この場合、各ノードにすべてのプロパティが含まれます。
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=full&property=jcr%3atitle&property.value=Triangle`
 
@@ -313,7 +316,7 @@ p.hits=full
 p.hits=selective
 ```
 
-をクリックし、取得するプロパティを指定します
+をクリックし、取り込むプロパティを指定します
 
 ```
 p.properties
@@ -323,7 +326,7 @@ p.properties
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=selective&property=jcr%3atitle&property.value=Triangle`
 
-[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.properties=sling%3aresourceType%20jcr%3aprimaryType&property=jcr%3atitle&property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.nodedepth=5&p.properties=sling%3aresourceType%20jcr%3apath&property=jcr%3atitle&property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
+[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
 
 ```xml
 property=jcr:title
@@ -338,7 +341,7 @@ p.properties=sling:resourceType jcr:primaryType
 p.nodedepth=n
 ```
 
-は、 `n` 返すレベルの数をクエリに指定します。 子ノードを返すには、プロパティセレクターで子ノードを指定する必要があります
+ここ `n` で、クエリが返すレベルの数を指定します。 子ノードを返すには、そのノードをpropertiesセレクターで指定する必要があります
 
 ```
 p.hits=full
