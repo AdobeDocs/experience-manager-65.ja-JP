@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 96%
 
 ---
 
@@ -95,7 +98,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### アドバンス {#advanced}
 
-* **言葉遣い**
+* **言語**
 
    ページの言語です。
 
@@ -131,35 +134,35 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    書き出し設定を指定します。
 
-### サムネイル {#thumbnail}
+### サムネール {#thumbnail}
 
 * **ページサムネイル**
 
-   ページサムネイル画像が表示されます。以下の操作を実行できます。
+   ページサムネール画像が表示されます。以下の操作を実行できます。
 
    * **プレビューを生成**
 
-      サムネイルとして使用するページのプレビューを生成します。
+      サムネールとして使用するページのプレビューを生成します。
 
    * **画像をアップロード**
 
-      サムネイルとして使用する画像をアップロードします。
+      サムネールとして使用する画像をアップロードします。
 
-### クラウドサービス {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **クラウドサービス**
+* **Cloud Services**
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
-### パーソナライズパーソナライゼーション {#personalization}
+### パーソナライゼーション {#personalization}
 
-* **パーソナライズパーソナライゼーション**
+* **パーソナライズ機能**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)します。
 
 ### 権限 {#permissions}
 
-* **権限**（タッチ操作向け UI）
+* **権限** （タッチ操作向けUI）
 
    [有効な権限を表示し、新しい権限を追加します](/help/sites-administering/user-group-ac-admin.md)。
 
@@ -171,7 +174,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### ライブコピー {#live-copy}
 
-* **Livecopy**
+* **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
