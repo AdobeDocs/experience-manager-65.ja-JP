@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '336'
+ht-degree: 91%
 
 ---
 
@@ -29,6 +32,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >
 >* Windows：Ctrl キーを押しながら必要なコンポーネントをクリックします。
 >* Mac：Cmd キーを押しながら必要なコンポーネントをクリックします。
+
 >
 
 
@@ -45,22 +49,22 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td>編集モード</td>
    <td><code>Ctrl-z</code></td>
-   <td>最後の変更を取り消します。</td>
+   <td>最後におこなった変更操作を取り消す.</td>
   </tr>
   <tr>
    <td> </td>
    <td><code>Ctrl-y</code></td>
-   <td>最後の変更をやり直します。</td>
+   <td>最後におこなった変更操作をやり直す.</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Shift-Click</code></strong></td>
-   <td>複数の段落を選択します。</td>
+   <td>複数の段落を選択する.</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Click</code></strong></td>
-   <td>複数の段落を選択します。</td>
+   <td>複数の段落を選択する.</td>
   </tr>
   <tr>
    <td> </td>
@@ -166,7 +170,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   </tr>
   <tr>
    <td>編集モード</td>
-   <td><br /> URLに次のサフィックスを設定します。次 <code>?debugClientLibs=true</code><br /> に、<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>Set the following suffix in the URL:<br /> <code>?debugClientLibs=true</code><br /> Then use:<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>ページ読み込みのタイミングの統計を確認します。</td>
   </tr>
  </tbody>
