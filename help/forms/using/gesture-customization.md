@@ -11,17 +11,20 @@ topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 37%
 
 ---
 
 
 # ジェスチャーのカスタマイズ {#gesture-customization}
 
-AEM Formsアプリケーションのジェスチャーをカスタマイズして、アプリケーションと対話する独自の方法を提供できます。 例えば、新しいジェスチャーを追加して、ジェスチャーまたはスタートポイントを開いたり閉じたりするタスクを追加できます。
+AEM Formsアプリのジェスチャーをカスタマイズして、アプリと対話する独自の方法を提供できます。 例えば、新しいジェスチャーを追加して、タスクーやStartpointを開いたり閉じたりできます。
 
 ## AEM Forms アプリケーションのジェスチャーをカスタマイズするには {#to-customize-gestures-in-aem-forms-app}
 
-AEM Forms アプリケーションで、左スワイプは新しいタスクまたは Startpoint を開き、右スワイプは何もしません。次の例は、AEM Formsアプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはStartpointを開く手順を示しています。
+AEM Forms アプリケーションで、左スワイプは新しいタスクまたは Startpoint を開き、右スワイプは何もしません。次の例は、AEM Formsアプリで右スワイプジェスチャーを実行したときに新しいタスクまたはStartpointを開く手順を提供しています。
 
 1. プロジェクトを開きます。
 
@@ -34,13 +37,14 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
    * In Xcode, navigate to the **Capture > www > wsmobile > js > runtime > views** folder.
    * In Eclipse, navigate to the **assets > www > wsmobile > js > runtime > views** folder.
    * In Visual Studio, navigate to the **MWSWindows > www > wsmobile > js > runtime > views** folder.
+
    >[!NOTE]
    >
    >task.js ファイルには、タスクリストまたは Startpoint リストに表示されている各タスクまたは Startpoint に関連付けられた Backbone ビューが含まれています。
 
 1. In the `task.js` file, search for the events property of the view.
 
-   イベントプロパティは、次の形式の各エントリを持つマップです。
+   イベントプロパティは、次の形式の各エントリとのマップです。
 
    `"EventName Selector": "Function"`
 
@@ -52,7 +56,7 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
       &quot;tap .taskOpenArea&quot; :&quot;onTaskClick&quot;,
 
-      &quot;tap .タスク-content&quot; :&quot;onTaskClick&quot;,
+      &quot;tap .タスクコンテンツ&quot; :&quot;onTaskClick&quot;,
 
       &quot;tap .last_empty_div&quot; :&quot;onTaskClick&quot;,
    これを
@@ -61,9 +65,9 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
       &quot;swipe .taskOpenArea&quot; :&quot;onTaskClick&quot;,
 
-      &quot;swipe .タスクコンテンツ&quot;:&quot;onTaskClick&quot;,
+      &quot;スワイプ。タスクコンテンツ&quot;:&quot;onTaskClick&quot;,
 
-      &quot;swipe .last_empty_div&quot; :&quot;onTaskClick&quot;,
+      &quot;スワイプ.last_empty_div&quot; :&quot;onTaskClick&quot;,
 
 
 1. Save and close the `task.js` file.
