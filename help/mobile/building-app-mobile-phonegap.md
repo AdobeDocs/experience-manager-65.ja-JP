@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1094'
+ht-degree: 89%
 
 ---
 
@@ -30,7 +33,7 @@ GitHub から入手できるコードを使用してモバイルアプリケー�
 パブリッシュインスタンスにアプリケーションファイルを移動すると、モバイルアプリケーションのインストール済みインスタンスにコンテンツ更新を提供したり、公開済みコンテンツを使用してアプリケーションをビルドしたりできます。アプリケーションは、リポジトリの 2 つのノードブランチで構成されています。
 
 * `/content/phonegap/apps/<application name>`:作成者が作成し、アクティブ化するWebページです。
-* `/content/phonegap/content/<application name>`:アプリケーション設定ファイルとコンテンツ同期設定
+* `/content/phonegap/content/<application name>`:アプリケーション設定ファイルとコンテンツ同期の設定
 
 >[!NOTE]
 >
