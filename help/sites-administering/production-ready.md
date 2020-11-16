@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '397'
+ht-degree: 86%
 
 ---
 
@@ -58,10 +61,10 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 1. **Adobe Granite HTML ライブラリマネージャー**&#x200B;は次のように設定されます。
 
-   1. **** 縮小： `enabled`
+   1. **縮小：** `enabled`
    1. **デバッグ:** `disabled`
-   1. **** Gzip: `enabled`
-   1. **** タイミング： `disabled`
+   1. **Gzip:** `enabled`
+   1. **タイミング：** `disabled`
 
 1. **Apache Sling GET Servlet** は、次に示すセキュアな設定をサポートするようにデフォルトで設定されます。
 
