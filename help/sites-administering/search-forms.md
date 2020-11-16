@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: abc27987-960e-48da-9580-1008a2bdc94c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2065'
+ht-degree: 85%
 
 ---
 
@@ -37,49 +40,49 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 使用可能なデフォルト設定は次のとおりです。
 
-* **ページエディター (ドキュメント検索):**
+* **ページエディター（ドキュメント検索）：**
 
-   この設定は、（ページの編集時に）アセットブラウザーでドキュメントを検索する際に使用できるオプションを定義します。
+   この設定は、（ページの編集時に）アセットブラウザーでドキュメントを検索する場合に使用できるオプションを定義します。
 
-* **ページエディター (画像検索):**
+* **ページエディター（画像検索）：**
 
-   この設定は、（ページの編集時に）アセットブラウザーで画像を検索する際に使用できるオプションを定義します。
+   この設定は、（ページの編集時に）アセットブラウザーで画像を検索する場合に使用できるオプションを定義します。
 
-* **ページエディター (原稿検索):**
+* **ページエディター（原稿検索）：**
 
-   この設定は、（ページの編集時に）アセットブラウザーで原稿を検索する際に使用できるオプションを定義します。
+   この設定は、（ページの編集時に）アセットブラウザーで原稿を検索する場合に使用できるオプションを定義します。
 
-* **ページエディター (ページ検索):**
+* **ページエディター（ページ検索）：**
 
-   この設定は、（ページの編集時に）アセットブラウザーでページを検索する際に使用できるオプションを定義します。
+   次の設定は、（ページの編集時に）アセットブラウザーでページを検索する場合に使用できるオプションを定義します。
 
-* **ページエディター (段落検索):**
+* **ページエディター（段落検索）：**
 
-   この設定は、（ページの編集時に）アセットブラウザーで段落を検索する際に使用できるオプションを定義します。
+   この設定は、（ページの編集時に）アセットブラウザーで段落を検索する場合に使用できるオプションを定義します。
 
-* **ページエディター (製品検索):**
+* **ページエディター（製品検索）：**
 
-   この設定は、（ページの編集時に）アセットブラウザーで製品を検索する際に使用できるオプションを定義します。
+   この設定は、（ページの編集時に）アセットブラウザー内の製品を検索する場合に使用できるオプションを定義します。
 
-* **ページエディター (Scene7 検索)**:
+* **ページエディター（Scene7 検索）：**
 
-   この設定は、（ページの編集時に）アセットブラウザでScene7リソースを検索する際に使用できるオプションを定義します。
+   次の設定は、（ページの編集時に）アセットブラウザーでScene7リソースを検索する場合に使用できるオプションを定義します。
 
-* **サイト管理者の検索レール**:
+* **Sites 管理者の検索レール：**
 
-   この設定は、サイトコンソールの検索レールを使用する際にユーザーが使用できる検索オプションを定義します。
+   この設定では、サイトコンソールの検索レールを使用する場合にユーザーが使用できる検索オプションを定義します。
 
 * **ページエディター (ビデオ検索):**
 
-   この設定は、（ページの編集時に）アセットブラウザーでビデオを検索する際に使用できるオプションを定義します。
+   この設定は、（ページの編集時に）アセットブラウザーでビデオを検索する場合に使用できるオプションを定義します。
 
-* **アセット管理者の検索レール:**
+* **アセット管理者の検索レール：**
 
-   この設定は、アセットコンソールを使用する際にユーザーが使用できる検索オプションを定義します。
+   この設定は、アセットコンソールを使用する場合にユーザーが使用できる検索オプションを定義します。
 
 * **カタログ管理者の検索レール:**
 
-   この設定は、コマースカタログの検索時にユーザーが使用できる検索オプションを定義します。
+   この設定は、コマースカタログを検索する際にユーザーが使用できる検索オプションを定義します。
 
 * **注文管理者の検索レール:**
 
@@ -93,11 +96,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    この設定は、コマース製品を検索する際にユーザーが使用できる検索オプションを定義します。
 
-* **プロジェクト管理者の検索レール:**
+* **プロジェクト管理者の検索レール：**
 
-   この設定は、プロジェクトの検索時にユーザーが使用できる検索オプションを定義します。
+   この設定は、プロジェクトを検索する際にユーザーが使用できる検索オプションを定義します。
 
-## Predicates and Their Settings {#predicates-and-their-settings}
+## 述語とその設定 {#predicates-and-their-settings}
 
 ### 述語 {#predicates}
 
@@ -111,8 +114,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <th>設定</th>
   </tr>
   <tr>
-   <td>Analytics </td>
-   <td>Sitesブラウザーの検索/フィルター機能を使用して、解析用データを表示できます。Analytics検索フィルターは、マップされたカスタマイズされた分析列に合わせて読み込まれます。</td>
+   <td>分析 </td>
+   <td>Analytics データを表示する際の、Sites ブラウザーの検索／フィルター機能。Analytics の検索フィルターは、マッピングされ、カスタマイズされた Analytics 列に一致するまで読み込みます。</td>
    <td>
     <ul>
      <li>フィールドラベル</li>
@@ -147,7 +150,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
     </ul> </td>
   </tr>
   <tr>
-   <td>日付 範囲 </td>
+   <td>日付範囲 </td>
    <td>日付プロパティに指定した範囲内に作成されたアセットを検索します。検索パネルで、開始日と終了日を指定できます。</td>
    <td>
     <ul>
@@ -192,7 +195,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
     </ul> </td>
   </tr>
   <tr>
-   <td>非表示のフィルター</td>
+   <td>非表示フィルター</td>
    <td>プロパティおよび値のフィルターで、ユーザーには表示されません。</td>
    <td>
     <ul>
@@ -273,7 +276,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
     </ul> </td>
   </tr>
   <tr>
-   <td>範囲オプション </td>
+   <td>範囲 オプション </td>
    <td>アセット専用の検索述語であり、共通のスライダーの述語と同じです。下位互換性の問題により、現在も使用可能です。</td>
    <td>
     <ul>
@@ -347,12 +350,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    >
    >
 
-* サイト管理者（クラシックUI）にのみ関連する検索述語は、次の場所にあります。
+* siteadmin（クラシックUI）にのみ関連する検索述語は、次の場所にあります。
    > `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
-   >   * これらは廃止され、後方互換性のためにのみ使用できます。
+   >   * これらは廃止され、下位互換性のためにのみ使用できます。
+
 >
 >
-This information is for reference only, you must not make changes to `/libs`.
+この情報は参照用です。`/libs` には変更を加えないでください。
 
 ### 述語の設定 {#predicate-settings}
 
@@ -360,57 +364,58 @@ This information is for reference only, you must not make changes to `/libs`.
 
 * **フィールドラベル**
 
-   折りたたみ可能なヘッダーまたは述語のフィールドラベルとして表示されるラベルです。
+   述語の折りたたみ可能なヘッダーまたはフィールドラベルとして表示されるラベル。
 
 * **説明**
 
-   ユーザーの詳細。
+   ユーザーのための詳細な説明。
 
 * **プレースホルダー**
 
-   フィルタリングテキストが入力されていない場合は、空のテキストまたは述語のプレースホルダー。
+   フィルターテキストを入力しない場合は、空のテキストまたは述語のプレースホルダー。
 
 * **プロパティ名**
 
-   検索するプロパティです。 相対パスとワイルドカードを使用して、ノ `*/*/*` ードを基準としたプロパティの深さを指定します(各ア `jcr:content` スタリスクは1つのノードレベルを表します)。
+   検索対象のプロパティ。相対パスとワイルドカード `*/*/*` を使用して、`jcr:content` ノードを基準とするプロパティの深さを指定します（各アスタリスクは 1 つのノードレベルを表します）。
 
-   ノード上のプロパティを持つリソースの第1レベルの子ノードでのみ検索する場合は、次 `x` を使用し `jcr:content` ます。 `*/jcr:content/x`
+   `jcr:content` ノード上の `x` プロパティを持つリソースの第 1 レベルの子ノードでのみ検索する場合は、`*/jcr:content/x` を使用してください。
 
 * **プロパティの深さ**
 
-   リソース内でそのプロパティを検索する最大の深さです。 そのため、子のレベルが指定した深さに等しくなるまで、そのプロパティの検索をリソースと再帰的な子に対して実行できます。
+   リソース内でそのプロパティを検索する最大の深さです。そのため、子のレベルが指定の深さに等しくなるまで、そのプロパティの検索をリソースと再帰的な子に対して実行できます。
 
 * **プロパティの値**
 
-   絶対文字列または式言語としてのプロパティ値。例えば、 `cq:Page` または
+   プロパティの値は、絶対文字列または式言語です。例えば、`cq:Page` または
 
    `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}` です。
 
 * **範囲テキスト**
 
-   The label of the range field in the **Date Range** predicate.
+   **日付の範囲**&#x200B;の述語の範囲フィールドのラベル。
 
 * **オプションパス**
 
-   ユーザーは、述語設定タブの「パスブラウザー」を使用してパスを選択できます。 選択した後、 **+アイコンを使用し** て選択範囲を有効なオプションのリストに追加します(必要に応じて **-** アイコンを削除します)。
+   ユーザーは、「述語の設定」タブのパスブラウザーを使用してパスを選択できます。選択した後、**+** アイコンを使用して、有効なオプションのリストに選択を追加します（必要に応じて、**-** アイコンを削除します）。
 
    オプションは、ユーザーが作成したコンテンツノードで、次の構造を持ちます。
 
    `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
-* **オプションノードパス**
-事実上は**オプションパス**&#x200B;と同じですが、これのみが共通の述語フィールドにあり、その他はアセット専用です。
+* **オプションノードのパス**
+実質的に 
+**オプションパス**&#x200B;と同じ。前者は共通の述語フィールドにのみ存在し、後者はアセットに固有です。
 
 * **単一の選択**&#x200B;オンにすると、オプションは単一の選択のみを許可するチェックボックスとしてレンダリングされます。チェックボックスを誤って選択した場合は、選択を解除できます。
 
 * **公開とライブコピーのプロパティ名**
-サイト専用の述語の、公開およびライブコピーのチェックボックスのラベル。
+Sites 専用の述語の、公開およびライブコピーのチェックボックスのラベル。
 
 * The &amp;ast; on the field labels in the **Settings** tab means the fields are required and if left blank an error message will appear
 
-## Configuring Your Search Forms {#configuring-your-search-forms}
+## 検索フォームの設定 {#configuring-your-search-forms}
 
-### Creating/Opening a Customized Configuration {#creating-opening-a-customized-configuration}
+### カスタマイズされた設定を作成／開く {#creating-opening-a-customized-configuration}
 
 1. **ツール**／**操作**／**検索フォーム**&#x200B;に移動します。
 
@@ -427,7 +432,7 @@ This information is for reference only, you must not make changes to `/libs`.
    >* `/apps/commerce/gui/content/facets/<option>`
 
 
-### Add/Edit a Predicate Field and Define Field Settings {#add-edit-a-predicate-field-and-define-field-settings}
+### 述語フィールドの追加／編集とフィールド設定の定義 {#add-edit-a-predicate-field-and-define-field-settings}
 
 フィールドを追加または編集して、その設定を定義／更新できます。
 
@@ -438,13 +443,13 @@ This information is for reference only, you must not make changes to `/libs`.
 
 1. 状況に応じて、以下の手順を実行します。
 
-   * 新しいフィールドを追加しようとしています：
+   * 新しいフィールドを追加する場合：
 
-      述語を追加すると、「 **Settings** 」タブが開き、定義可能なプロパティが表示されます。
+      述語を追加すると、「**設定**」タブが開き、定義可能なプロパティが表示されます。
 
    * 既存の述語を更新する場合：
 
-      右側の述語フィールドを選択し、「 **Settings** 」タブを開きます。
+      右側の述語フィールドを選択し、「**設定**」タブを開きます。
    **日付の範囲の述語**&#x200B;の設定例を以下に示します。
 
    ![chlimage_1-376](assets/chlimage_1-376.png)
@@ -474,7 +479,7 @@ This information is for reference only, you must not make changes to `/libs`.
 
 1. 「**完了**」ボタンで削除およびその他の変更を確認します。
 
-### Deleting a Configuration (to Reinstate the Default) {#deleting-a-configuration-to-reinstate-the-default}
+### 設定の削除（デフォルト復帰のため）{#deleting-a-configuration-to-reinstate-the-default}
 
 設定のカスタマイズが完了すると、デフォルトが上書きされます。カスタマイズした設定を削除することにより、デフォルトの設定を復帰させることができます。
 
@@ -484,7 +489,7 @@ This information is for reference only, you must not make changes to `/libs`.
 
 カスタマイズした設定の削除は、コンソールからおこないます。
 
-1. 必要な設定「**ページエディター (段落検索)**」など）を選択して、ツールバーの「**削除**」アイコンを選択します。
+1. 必要な設定（**ページエディター（段落検索）**&#x200B;など）を選択して、ツールバーの「**削除**」アイコンを選択します。
 
    ![chlimage_1-378](assets/chlimage_1-378.png)
 
@@ -504,22 +509,23 @@ This information is for reference only, you must not make changes to `/libs`.
 
    * `jcr:title` - 検索レールに表示されるフィールドラベル
    * `value` - 検索対象のプロパティ値
+
    ![chlimage_1-379](assets/chlimage_1-379.png)
 
    >[!NOTE]
    >
-   >You ***must*** not change anything in the `/libs` path.
+   >`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
    >
-   >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+   >`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
    >
    >設定およびその他の変更に推奨される方法は次のとおりです。
    >
-   >1. Recreate the required item, as it exists in `/libs`, under `/apps`. この場合、次の場所から選択します。
+   >1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。この場合、次の場所から選択します。
    >1. `/libs/cq/gui/content/common/options/predicates`
-   >1. Make any changes within `/apps.`
+   >1. `/apps.` 内で変更作業をおこないます。
 
 
-1. **検索フォーム**&#x200B;コンソールを開いて、更新する設定を選択します。例えば、「**サイト管理者の検索レール**」を選択します。
+1. **検索フォーム**&#x200B;コンソールを開いて、更新する設定を選択します。例えば、「**Sites 管理者の検索レール**」を選択します。
 
    次に、「**検索フォームを編集**」アイコンをクリック／タップします。
 
@@ -528,13 +534,13 @@ This information is for reference only, you must not make changes to `/libs`.
 
    * **プロパティ名**
 
-      ターゲットノードで検索するノードプロパティを指定します。 次に例を示します。
+      ターゲットノードで検索するノードプロパティを指定します。次に例を示します。
 
       `jcr:content/cq:template`
 
-   * **Optionノードのパス**
+   * **オプションノードパス**
 
-      オプションを保持するパスを選択します。 次に例を示します。
+      オプションを保持するパスを選択します。次に例を示します。
 
       `/apps/cq/gui/content/common/options/predicates/templatetype`
    ![chlimage_1-380](assets/chlimage_1-380.png)
@@ -556,15 +562,15 @@ This information is for reference only, you must not make changes to `/libs`.
   </tr>
   <tr>
    <td>編集 </td>
-   <td>Read, Write permissions on the <code>/apps </code>node.</td>
+   <td><code>/apps </code> ノード上の読み取り、書き込み権限。</td>
   </tr>
   <tr>
    <td>削除</td>
-   <td>Read, Write, Delete permissions on the <code>/apps</code> node</td>
+   <td><code>/apps</code> ノード上の読み取り、書き込み、削除権限。</td>
   </tr>
   <tr>
    <td>プレビュー</td>
-   <td>Read, Write, Delete permissions on the <code>/var/dam/content</code> node.<br /> ノードに対する読み取り権限、書き込み権限 <code>/apps</code> です。</td>
+   <td><code>/var/dam/content</code> ノード上の読み取り、書き込み、削除権限。<br /><code>/apps</code> ノード上の読み取り、書き込み権限。</td>
   </tr>
  </tbody>
 </table>
