@@ -104,8 +104,8 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 * **タイトル：**&#x200B;フォームのタイトル
 * **名前**：フォーム名（多くの場合、タイトルと同じです）
 * **説明**：フォームの説明
-* **formUrl**: フォームをHTMLとしてレンダリングするURL
-* **pdfUrl**: フォームをPDFとしてレンダリングするURL
+* **formUrl**:フォームをHTMLとしてレンダリングするURL
+* **pdfUrl**:フォームをPDFとしてレンダリングするURL
 * **アセットタイプ**：アセットの種類Valid values include **Form**,**PDF Form**, **Print Form**, and **Adaptive Form**
 
 * **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は、「**__FP_display_none**」または空白です。
@@ -114,12 +114,12 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 >
 >カスタムスタイルシートでは、__FP_display_noneクラスを必ず使用してください。
 
-* **downloadUrl**: アセットをダウンロードするURL。
+* **downloadUrl**:アセットをダウンロードするURL。
 
 ローカリゼーション、ソート、ユーザーインターフェイス上での設定プロパティ使用のサポート（Search &amp; Lister のみ）:
 
-1. **ローカライゼーションサポート**: スタティックテキストをローカライズするには、属性を使用し `${localize-YOUR_TEXT}` 、ローカライズされた値が存在しない場合は、値を使用可能にします。
-   *説明した例では、属性`${localize-Apply}``${localize-Download}`と属性は、「Apply」と「Download」のテキストをローカライズするために使用されます。*
+1. **ローカライゼーションサポート**:スタティックテキストをローカライズするには、属性を使用し `${localize-YOUR_TEXT}` 、ローカライズされた値が存在しない場合は、値を使用可能にします。
+   *説明した例では、属性 `${localize-Apply}``${localize-Download}` と属性は、「Apply」と「Download」のテキストをローカライズするために使用されます。*
 
 1. **ソートのサポート**：HTML要素をクリックして検索結果をソートします。テーブルレイアウトでのソートを実行するには、特定のテーブルヘッダーに&quot;data-sortKey&quot; 属性を追加します。さらに、ソートしたいメタデータとしてその値を加えます。例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして、特定の列の値を並べ替えます。
 
@@ -128,7 +128,7 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 ### リンクコンポーネント {#link-component}
 
 * **タイトル：**&#x200B;フォームのタイトル
-* **formUrl**: フォームをHTMLとしてレンダリングするURL
+* **formUrl**:フォームをHTMLとしてレンダリングするURL
 * **ターゲット**：リンクのターゲット属性有効な値は、“_blank” および “_self”。
 * **linkText**：リンクキャプション
 
