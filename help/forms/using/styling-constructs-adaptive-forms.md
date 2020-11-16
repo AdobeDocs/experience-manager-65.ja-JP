@@ -10,6 +10,9 @@ discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+workflow-type: tm+mt
+source-wordcount: '2322'
+ht-degree: 87%
 
 ---
 
@@ -22,7 +25,7 @@ CSS と LESS フレームワークに関する知識が必要になります。
 
 ## カスタマイズの対象 {#what-can-be-customized}
 
-この記事では、公開されているアダプティブフォームの CSS クラスについて説明します。これらのクラスを活用して、アダプティブフォームの様々なコンポーネントのスタイルを設定できます。 警告を表示するダイアログやステータスバーなど、オーサリングコンポーネントのスタイル設定については、ここでは説明しません。[テーマエディター](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)を使用してコンポーネントのスタイル設定ができない場合にのみ、これらのスタイル構造を使用してスタイル（CSS または Less）を作成してください。
+この記事では、公開されているアダプティブフォームの CSS クラスについて説明します。これらのクラスを活用して、アダプティブフォームの様々なコンポーネントのスタイルを設定できます。 警告を表示するダイアログやステータスバーなど、オーサリングコンポーネントのスタイル設定については、ここでは説明しません。[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を使用してコンポーネントのスタイル設定ができない場合にのみ、これらのスタイル構造を使用してスタイル（CSS または Less）を作成してください。
 
 ## アダプティブフォームでのスタイルのカスタマイズ {#customizing-styles-in-adaptive-forms}
 
@@ -37,7 +40,7 @@ LESS フレームワークにより、アダプティブフォームでのスタ
 
 アダプティブフォームのテーマを変更して、アダプティブフォームが埋め込まれたWebページと外観が一致するようにすることができます。
 
-テーマの変更は通常、アダプティブフォームの全体的な外観をCSS プロパティを使用して変更することにより行われます。コンポーネントのレイアウトや配置の変更など、アダプティブフォームの「OK」と「操作性」に対する大きな変更は、テーマの変更とは見なされません。
+テーマの変更は通常、アダプティブフォームの全体的な外観をCSS プロパティを使用して変更することにより行われます。コンポーネントのレイアウトや配置の変更など、アダプティブフォームのログ&quot;OK&amp;FEEL&quot;に対する大きな変更は、テーマの変更とは見なされません。
 
 Web ページのテーマは、ブートストラップに基づき、次の CSS プロパティによって定義されます。
 
@@ -53,7 +56,7 @@ Web ページのテーマは、ブートストラップに基づき、次の CSS
 
 ## コンポーネントスタイルの変更 {#changing-component-style}
 
-要素の外観、レイアウト、配置、可視性を変更することができます。この作業を行うには、この記事に示すスタイル設定構成を含めるカスタム.cssファイルを作成または更新します。
+要素の外観、レイアウト、配置、可視性を変更することができます。このタスクを実現するには、この記事に示すスタイル設定構成を含めるカスタム.cssファイルを作成または更新します。
 
 アダプティブフォームにスタイルを適用するには、編集用としてアダプティブフォームを開き、アダプティブフォームコンテナのプロパティを開いて、「基本」タブでカスタム .css ファイルのパスを指定します。アダプティブフォームのデフォルトのスタイル構成は、カスタムの .css ファイル内の構成によって上書きされます。
 
@@ -63,7 +66,7 @@ Web ページのテーマは、ブートストラップに基づき、次の CSS
 
 ## コンテナのスタイル設定 {#container-styling}
 
-コンテナは、最上位のコンポーネントです。 他のパネルおよびフィールドは、コンテナコンポーネントの下に位置しています。
+コンテナは、トップレベルのコンポーネントです。 他のパネルおよびフィールドは、コンテナコンポーネントの下に位置しています。
 
 <table>
  <tbody>
@@ -164,11 +167,11 @@ The HTML element **label** used for the field includes the classes **left** or *
   </tr>
   <tr>
    <td><p><code>label-line-height</code></p> </td>
-   <td>フィールドラベルのCSS行の高さのプロパティ </td>
+   <td>フィールドラベルに対するCSSの行の高さのプロパティ </td>
   </tr>
   <tr>
    <td><p><code>label-font-weight</code></p> </td>
-   <td>フィールドラベルのCSSフォントの太さプロパティ </td>
+   <td>フィールドラベルに対するCSSフォント重み付けプロパティ </td>
   </tr>
   <tr>
    <td><p><code>label-margin</code></p> </td>
@@ -236,7 +239,7 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
   </tr>
   <tr>
    <td><p><code>widgets-line-height</code></p> </td>
-   <td>ウィジェットのCSS行の高さプロパティ </td>
+   <td>ウィジェットのCSS行の高さのプロパティ </td>
   </tr>
   <tr>
    <td><p><code>widgets-padding</code></p> </td>
@@ -283,7 +286,7 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
 
 ### ウィジェットのスタイル設定における制限事項 {#limitations-in-widget-styling}
 
-変数を使用したフォーカス時、必須、無効フィールドのスタイル設定には制限があります。ただし、スタイルをオーバーライドすることにより変更することができます。変数の使用における制限は、主に変数の数を抑えるために設けられています。制限は、フィールドの外観が大幅に変化する場合に緩和できます。これは、前述の状態のいずれかにあるためです。
+変数を使用したフォーカス時、必須、無効フィールドのスタイル設定には制限があります。ただし、スタイルをオーバーライドすることにより変更することができます。変数の使用における制限は、主に変数の数を抑えるために設けられています。制限は、フィールドの外観が大幅に変化する場合に緩和できます。これは、フィールドが前述の状態のいずれかにあるためです。
 
 ## ヘルプの説明 {#help-description}
 
@@ -317,7 +320,7 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
   </tr>
   <tr>
    <td><p><code>widgets-help-short-tooltip-bg-color</code></p> </td>
-   <td><p>ウィジェットの短いツールヒントヘルプの背景色</p> </td>
+   <td><p>ウィジェットの短いツールヒントのヘルプの背景色</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-help-short-tooltip-color</code></p> </td>
@@ -941,7 +944,7 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
 
 パネルノードは、ナビゲーターとコンテンツに分けられています。コンテンツ用の別のスタイル設定コンポーネントはありません。`` ``説明された変数は、コンテンツだけでなくナビゲーターにも適用されます。
 
-一番上のパネル(RootPanel)にはこのクラスがありません。
+The topmost panel (RootPanel) doesn&#39;t have this class.
 
 ## モバイルのスタイル設定 {#mobile-styling}
 
@@ -1073,7 +1076,7 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
 
 ## テーマ固有の変数 {#theme-specific-variable}
 
-The **Simple enrollment** theme at /etc/clientlibs/fd/af/guidetheme/simpleEnrollment and the category `guide.theme.simpleEnrollment` also introduce a few variables. シンプルな登録を強化するテーマを作成する場合は、次の「追加変数」を使用できます。
+The **Simple enrollment** theme at /etc/clientlibs/fd/af/guidetheme/simpleEnrollment and the category `guide.theme.simpleEnrollment` also introduce a few variables. シンプルな登録を強化するテーマを作成する場合は、次の「追加の変数」を使用できます。
 
 <table>
  <tbody>
@@ -1107,7 +1110,7 @@ The **Simple enrollment** theme at /etc/clientlibs/fd/af/guidetheme/simpleEnroll
   </tr>
   <tr>
    <td><p><code>active-nav-color</code></p> </td>
-   <td>現在の/アクティブなウィザードナビゲーターと対応するプログレスバーの背景色 </td>
+   <td>現在/アクティブなウィザードナビゲーターと対応するプログレスバーの背景色 </td>
   </tr>
   <tr>
    <td><p><code>visited-nav-color</code></p> </td>
