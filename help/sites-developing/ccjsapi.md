@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '3163'
+ht-degree: 90%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## CQ_Analytics.ClientContextMgr {#cq-analytics-clientcontextmgr}
 
-CQ_Analytics.ClientContextMgrオブジェクトは、自己登録済みセッションストアのセットを含むシングルトンで、セッションストアの登録、保存、管理の各メソッドを提供します。
+CQ_Analytics.ClientContextMgrオブジェクトは、自己登録済みのセッションストアのセットを含むシングルトンで、セッションストアの登録、保存、管理のためのメソッドを提供します。
 
 CQ_Analytics.PersistedSessionStore を拡張します。
 
@@ -122,7 +125,7 @@ CQ_Analytics.JSONPStore オブジェクトを作成します。
 
 **戻り値**
 
-新しいCQ_Analytics.JSONPStoreオブジェクト。storeNameがnullの場合はnullです。
+新しいCQ_Analytics.JSONPStoreオブジェクト。storeNameがnullの場合はnull。
 
 #### getServiceURL() {#getserviceurl}
 
@@ -152,7 +155,7 @@ JSONP サービスを呼び出します。JSONP の URL は、指定されたコ
 
 #### registerNewInstance(storeName, serviceURL, dynamicData, callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback}
 
-CQ_Analytics.JSONPStoreオブジェクトを作成し、Client Contextにストアを登録します。
+CQ_Analytics.JSONPStoreオブジェクトを作成し、ストアをClient Contextに登録します。
 
 **パラメーター**
 
@@ -179,7 +182,7 @@ JSON データの取得に使用する JSONP サービスの URL を設定しま
 
 ## CQ_Analytics.JSONStore {#cq-analytics-jsonstore}
 
-JSON オブジェクトのコンテナ。このクラスのインスタンスを作成し、JSONデータを含む非永続的なセッションストアを作成します。
+JSON オブジェクトのコンテナ。このクラスのインスタンスを作成して、JSONデータを含む非永続的なセッションストアを作成します。
 
 `myjsonstore = new CQ_Analytics.JSONStore`
 
@@ -275,7 +278,7 @@ B/B1: "valueBB1"
 **パラメーター**
 
 * jsonData：保存するデータを格納する JSON オブジェクト。
-* doNotClear:値をtrueに設定すると、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値をfalseに設定した場合、JSONオブジェクトから派生した初期化プロパティを追加する前に、既存の初期化プロパティが削除されます。
+* doNotClear:値をtrueに設定すると、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値をfalseに設定した場合、既存の初期化プロパティが削除された後で、JSONオブジェクトから派生した初期化プロパティが追加されます。
 
 **戻り値**
 
@@ -308,7 +311,7 @@ CQ_Analytics.JSONStore オブジェクト。
 
 * event：String。リッスンするイベントの名前。
 * fct：Function。イベント発生時に呼び出される関数。
-* スコープ：（オプション）オブジェクト。 ハンドラー関数の実行範囲。ハンドラー関数の「this」コンテキストとなります。
+* 範囲：（オプション）オブジェクト。 ハンドラー関数の実行範囲。ハンドラー関数の「this」コンテキストとなります。
 
 **戻り値**
 
@@ -351,7 +354,7 @@ CQ_Analytics.PersistedJSONPStore オブジェクトを作成します。
 
 **戻り値**
 
-新しいCQ_Analytics.PersistedJSONPStoreオブジェクト。storeNameがnullの場合はnullです。
+新しいCQ_Analytics.PersistedJSONPStoreオブジェクト。storeNameがnullの場合はnull。
 
 #### getServiceURL() {#getserviceurl-1}
 
@@ -381,7 +384,7 @@ JSONP サービスを呼び出します。JSONP の URL は、指定されたコ
 
 #### registerNewInstance(storeName, serviceURL, dynamicData, callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
 
-CQ_Analytics.PersistedJSONPStoreオブジェクトを作成し、Client Contextにストアを登録します。
+CQ_Analytics.PersistedJSONPStoreオブジェクトを作成し、ストアをクライアントコンテキストに登録します。
 
 **パラメーター**
 
@@ -476,7 +479,7 @@ B/B1: "valueBB1"
 **パラメーター**
 
 * jsonData：保存するデータを格納する JSON オブジェクト。
-* doNotClear:値をtrueに設定すると、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値をfalseに設定した場合、JSONオブジェクトから派生した初期化プロパティを追加する前に、既存の初期化プロパティが削除されます。
+* doNotClear:値をtrueに設定すると、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値をfalseに設定した場合、既存の初期化プロパティが削除された後で、JSONオブジェクトから派生した初期化プロパティが追加されます。
 
 **戻り値**
 
@@ -497,7 +500,7 @@ CQ_Analytics.PersistedJSONStore オブジェクト。
 
 ## CQ_Analytics.PersistedSessionStore {#cq-analytics-persistedsessionstore}
 
-プロパティと値のコンテナ。データは CQ_Analytics.SessionPersistence を使用して保持されます。このクラスのインスタンスを作成して、持続的なセッションストアを作成します。
+プロパティと値のコンテナ。データは CQ_Analytics.SessionPersistence を使用して保持されます。このクラスのインスタンスを作成して、永続化されたセッションストアを作成します。
 
 `mypersistedstore = new CQ_Analytics.PersistedSessionStore`
 
@@ -525,7 +528,7 @@ Retrieves the `STOREKEY` property.
 
 **戻り値**
 
-プロパティの `STOREKEY` 値。
+プ `STOREKEY` ロパティの値。
 
 #### isPersisted(name) {#ispersisted-name}
 
