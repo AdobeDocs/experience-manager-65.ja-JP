@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b23b66e9d57742f6771bc4b26753a47b334e06bc
+source-git-commit: c4e602a208fa5f66e79a5705a7f1f2f844fb23b5
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4574'
 ht-degree: 7%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Manager6.5.6.0で導入された主な機能および機能強�
 
 * [翻訳済みアダプティブフォームページのキャッシュが強化されました](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
-* Automated [Formsコンバージョンサービスでの](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)Adobe Signテキストタグのサポート。
+* automated forms conversionサービスでの [Adobe Signテキストタグのサポート](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。
 
 * を使用して、色付きのフォームをアダプティブフォームに [変換するためのサポート](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) 。 [!DNL Automated Forms Conversion service]
 
@@ -258,6 +258,12 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 ### 統合 {#integrations-6560}
 
 * 長い名前のアクティビティは [!DNL Adobe Target] (NPR-34254)と同期されません。
+
+* 新しいAdobeの起動の設定を作成する際にプロパティを選択すると、次のエラーメッセージが表示されます(NPR-33947)。
+
+   ```javascript
+   GET http://hostname:Port/libs/cq/dtm-reactor/content/configurations/createcloudconfigwizard/jcr:content/body/items/form/items/wizard/items/general/items/fixedcolumns/items/container/items/general/items/property/data.html?query=&start=0&end=25&imsConfigurationId=Adobe%20Launch&companyId=&_charset_=utf-8 400 (Bad Request)
+   ```
 
 ### 翻訳プロジェクト {#translation-6560}
 
