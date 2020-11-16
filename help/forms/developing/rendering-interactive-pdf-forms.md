@@ -21,15 +21,15 @@ ht-degree: 0%
 
 # インタラクティブPDF formsのレンダリング {#rendering-interactive-pdf-forms}
 
-Formsサービスは、ユーザーから情報を収集するために、インタラクティブなPDF formsをクライアントデバイス（通常はWebブラウザー）にレンダリングします。 インタラクティブフォームのレンダリング後、ユーザーはフォームフィールドにデータを入力し、フォーム上の送信ボタンをクリックして、情報をFormsサービスに送り返すことができます。 インタラクティブPDFフォームを表示するには、クライアントWebブラウザーをホストするコンピューターにAdobe ReaderまたはAcrobatをインストールする必要があります。
+Formsサービスは、ユーザーから情報を収集するために、クライアントデバイス（通常はWebブラウザー）に対してインタラクティブなPDF formsをレンダリングします。 インタラクティブフォームがレンダリングされた後、ユーザーはフォームフィールドにデータを入力し、フォーム上の送信ボタンをクリックして、情報をFormsサービスに送り返すことができます。 インタラクティブPDFフォームを表示するには、クライアントのWebブラウザーをホストするコンピューターにAdobe ReaderまたはAcrobatをインストールする必要があります。
 
 >[!NOTE]
 >
->Formsサービスを使用してフォームをレンダリングする前に、フォームデザインを作成します。 通常、フォームデザインはDesignerで作成され、XDPファイルとして保存されます。 フォームデザインの作成について詳しくは、「 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照してください。
+>Formsサービスを使用してフォームをレンダリングする前に、フォームデザインを作成します。 通常、フォームデザインはDesignerで作成され、XDPファイルとして保存されます。 フォームデザインの作成について詳しくは、 [Formsデザイナーを参照してください](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 **ローンの申し込み例**
 
-Formsサービスがインタラクティブフォームを使用してユーザーから情報を収集する方法を示すローン申し込みのサンプルが紹介されています。 このアプリケーションを使用すると、ユーザーはローンのセキュリティ保護に必要なデータをフォームに入力し、データをFormsサービスに送信できます。 次の図に、ローン申込のロジックの流れを示します。
+Formsサービスがユーザーから情報を収集する際にインタラクティブフォームを使用する方法を示すローン申し込み例を紹介します。 この申込みにより、ユーザーはローンのセキュリティ保護に必要なデータをフォームに入力し、データをFormsサービスに送信できます。 次の図に、ローン申込のロジックの流れを示します。
 
 ![ri_ri_finsrv_loanapp_v1](assets/ri_ri_finsrv_loanapp_v1.png)
 
@@ -49,7 +49,7 @@ Formsサービスがインタラクティブフォームを使用してユーザ
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Javaサーブレットは、FormsサービスクライアントAPIを使用してローンフォームをクライアントWebブラウザーにレンダリングします。 <code>GetLoanForm</code> (Java APIを使用したインタラクティブPDFフォームの <a href="#render-an-interactive-pdf-form-using-the-java-api">レンダリングを参照</a>)。</p></td>
+   <td><p>Javaサーブレットは、FormsサービスのクライアントAPIを使用して、ローンフォームをクライアントWebブラウザーにレンダリングします。 <code>GetLoanForm</code> (Java APIを使用したインタラクティブPDFフォームの <a href="#render-an-interactive-pdf-form-using-the-java-api">レンダリングを参照</a>)。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -57,11 +57,11 @@ Formsサービスがインタラクティブフォームを使用してユーザ
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p>Javaサーブレットは、FormsサービスクライアントAPIを使用してフォーム送信を処理し、フォームデータを取得します。 <code>HandleData</code> 次に、データをエンタープライズデータベースに格納します。 (送信済みのフォームの <a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">処理を参照</a>)。</p></td>
+   <td><p>Javaサーブレットは、 <code>HandleData</code> FormsサービスクライアントAPIを使用して、フォーム送信を処理し、フォームデータを取得します。 次に、データをエンタープライズデータベースに格納します。 (提出したFormsの <a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">処理を参照</a>)。</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>確認フォームがWebブラウザーにレンダリングされて戻されます。 ユーザーの姓や名などのデータは、レンダリング前にフォームにマージされます。 (編集可能なレイアウト <a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">を含むフォームへの自動埋め込みを参照</a>)。</p></td>
+   <td><p>確認フォームがWebブラウザーにレンダリングされて戻されます。 ユーザーの姓や名などのデータは、レンダリング前にフォームにマージされます。 (編集可能なレイアウト <a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">をFormsに自動埋め込むを参照</a>)。</p></td>
   </tr>
  </tbody>
 </table>
@@ -78,11 +78,11 @@ Formsサービスがインタラクティブフォームを使用してユーザ
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-Javaサーブレットは、 `HandleData` このフォームにユーザーの姓と名と金額を事前入力します。 フォームに事前入力された後、フォームがクライアントのWebブラウザーに送信されます。 (編集可能なレイアウト [を含むフォームへの自動埋め込みを参照](/help/forms/developing/prepopulating-forms-flowable-layouts.md))。
+Javaサーブレットは、 `HandleData` このフォームにユーザーの姓と名と金額を事前入力します。 フォームに事前入力された後、フォームがクライアントのWebブラウザーに送信されます。 (編集可能なレイアウト [をFormsに自動埋め込むを参照](/help/forms/developing/prepopulating-forms-flowable-layouts.md))。
 
 **Javaサーブレット**
 
-サンプルのローン申込書は、Javaサーブレットとして存在するFormsサービス申込書の例です。 Javaサーブレットは、WebSphereなどのJ2EEアプリケーションサーバー上で実行されるJavaプログラムで、FormsサービスクライアントAPIコードが含まれています。
+ローン申し込み例は、Javaサーブレットとして存在するFormsサービス申し込みの例です。 Javaサーブレットは、WebSphereなどのJ2EEアプリケーションサーバー上で実行されるJavaプログラムで、FormsサービスのクライアントAPIコードが含まれています。
 
 次のコードは、GetLoanFormという名前のJavaサーブレットの構文を示しています。
 
@@ -98,7 +98,7 @@ Javaサーブレットは、 `HandleData` このフォームにユーザーの�
              }
 ```
 
-通常は、FormsサービスのクライアントAPIコードをJavaサーブレット `doGet` または `doPost` メソッド内に配置しません。 このコードを別のクラスに配置し、メソッド（またはメソッド）内からクラスをインスタンス化して、適切なメソッドを呼び出す方が、プログラミング `doPost` の `doGet` 方法が適切です。 ただし、コードを簡潔にするために、この節のコード例は最小限に抑え、コード例はこの `doPost` メソッドに配置します。
+通常、FormsサービスのクライアントAPIコードは、Javaサーブレット `doGet` または `doPost` メソッド内に配置しません。 このコードを別のクラスに配置し、メソッド（またはメソッド）内からクラスをインスタンス化して、適切なメソッドを呼び出す方が、プログラミング `doPost` の `doGet` 方法が適切です。 ただし、コードを簡潔にするために、この節のコード例は最小限に抑え、コード例はこの `doPost` メソッドに配置します。
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ Javaサーブレットは、 `HandleData` このフォームにユーザーの�
 インタラクティブPDFフォームをレンダリングするには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. フォームクライアントAPIオブジェクトを作成します。
+1. FormsクライアントAPIオブジェクトを作成します。
 1. URI値を指定します。
 1. フォームへのファイルの添付（オプション）
 1. インタラクティブPDFフォームをレンダリングします。
@@ -119,13 +119,13 @@ Javaサーブレットは、 `HandleData` このフォームにユーザーの�
 
 必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**フォームクライアントAPIオブジェクトの作成**
+**FormsクライアントAPIオブジェクトの作成**
 
-プログラムでFormsサービスのクライアントAPI操作を実行する前に、Forms Client APIオブジェクトを作成する必要があります。 Java APIを使用している場合は、 `FormsServiceClient` オブジェクトを作成します。 Forms WebサービスAPIを使用している場合は、 `FormsService` オブジェクトを作成します。
+プログラムでFormsサービスのクライアントAPI操作を実行する前に、FormsクライアントAPIオブジェクトを作成する必要があります。 Java APIを使用している場合は、 `FormsServiceClient` オブジェクトを作成します。 FormsWebサービスAPIを使用している場合は、 `FormsService` オブジェクトを作成します。
 
 **URI値の指定**
 
-Formsサービスでフォームをレンダリングするために必要なURI値を指定できます。 Formsアプリケーションの一部として保存されたフォームデザインは、コンテンツルートURI値を使用して参照でき `repository:///`ます。 例えば、FormsApplicationという名前のFormsアプリケーション内にある *Loan.xdp* という名前の次のフォームデザインを考えてみましょう **。
+フォームをレンダリングするためにFormsサービスで必要なURI値を指定できます。 Formsアプリケーションの一部として保存されたフォームデザインは、コンテンツルートURI値を使用して参照でき `repository:///`ます。 例えば、FormsApplicationという名前のFormsアプリケーション内にある *Loan.xdp* という名前の次のフォームデザインを考えてみましょう **。
 
 ![ri_ri_formrepository](assets/ri_ri_formrepository.png)
 
@@ -150,13 +150,13 @@ Formsアプリケーション内のリソースへのパスは次のとおりで
 * Designerでフォームデザインをデザインする際の「Submit」ボタン
 * FormsサービスクライアントAPIを使用する
 
-ターゲットURLがフォームデザイン内で定義されている場合は、FormsサービスクライアントAPIで上書きしないでください。 つまり、Forms APIを使用してターゲットURLを設定すると、フォームデザインで指定されたURLが、APIを使用して指定されたURLにリセットされます。 PDFフォームをフォームデザインで指定されたターゲットURLに送信する場合は、プログラムでターゲットURLを空の文字列に設定します。
+ターゲットURLがフォームデザイン内で定義されている場合は、FormsサービスのクライアントAPIを使用して上書きしないでください。 つまり、FormsAPIを使用してターゲットURLを設定すると、フォームデザインで指定されたURLが、APIを使用して指定されたURLにリセットされます。 PDFフォームをフォームデザインで指定されたターゲットURLに送信する場合は、プログラムでターゲットURLを空の文字列に設定します。
 
 送信ボタンと計算ボタン（サーバーで実行される対応するスクリプトを含む）を含むフォームがある場合、スクリプトを実行するためにフォームを送信する先のURLをプログラムで定義できます。 フォームデザインの送信ボタンを使用して、フォームデータが投稿されるURLを指定します。 (フォームデータの [計算を参照](/help/forms/developing/calculating-form-data.md))。
 
 >[!NOTE]
 >
->XDPファイルを参照するURL値を指定する代わりに、Formsサービスに `com.adobe.idp.Document` インスタンスを渡すこともできます。 この `com.adobe.idp.Document` インスタンスにはフォームデザインが含まれています。 (「Formsサービスに [ドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)」を参照)。
+>XDPファイルを参照するURL値を指定する代わりに、インスタンスをFormsサービスに渡すこともでき `com.adobe.idp.Document` ます。 この `com.adobe.idp.Document` インスタンスにはフォームデザインが含まれています。 (「Formsサービスに [ドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)」を参照)。
 
 **フォームへのファイルの添付**
 
@@ -180,13 +180,13 @@ Formsアプリケーション内のリソースへのパスは次のとおりで
 
 ## Java APIを使用してインタラクティブPDFフォームをレンダリングする {#render-an-interactive-pdf-form-using-the-java-api}
 
-Forms API(Java)を使用してインタラクティブPDFフォームをレンダリングします。
+FormsAPI(Java)を使用してインタラクティブPDFフォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
    Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。
 
-1. フォームクライアントAPIオブジェクトの作成
+1. FormsクライアントAPIオブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
    * Create an `FormsServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
@@ -214,7 +214,7 @@ Forms API(Java)を使用してインタラクティブPDFフォームをレン�
 
    オブジェクトの `FormsServiceClient``renderPDFForm` メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパス（など）を必ず指定してください `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパスを必ず指定してください（例：） `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * フォームとマージするデータを含む `com.adobe.idp.Document` オブジェクト。 データをマージしない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
    * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。 これはオプションのパラメーターで、実行時のオプションを指定しない `null` かどうかを指定できます。
    * Formsサービスに必要なURI値を含む `URLSpec` オブジェクトです。
@@ -234,14 +234,14 @@ Forms API(Java)を使用してインタラクティブPDFフォームをレン�
 
 ## WebサービスAPIを使用してインタラクティブPDFフォームをレンダリングする {#render-an-interactive-pdf-form-using-the-web-service-api}
 
-Forms API（Webサービス）を使用してインタラクティブPDFフォームをレンダリングします。
+FormsAPI（Webサービス）を使用してインタラクティブPDFフォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
    * FormsサービスのWSDLを使用するJavaプロキシクラスを作成します。
    * クラスパスにJavaプロキシクラスを含めます。
 
-1. フォームクライアントAPIオブジェクトの作成
+1. FormsクライアントAPIオブジェクトの作成
 
    オブジェクトを作成し、認証値を設定し `FormsService` ます。
 
@@ -268,7 +268,7 @@ Forms API（Webサービス）を使用してインタラクティブPDFフォ�
 
    オブジェクトの `FormsService``renderPDFForm` メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパス（など）を必ず指定してください `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパスを必ず指定してください（例：） `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * フォームとマージするデータを含む `BLOB` オブジェクト。 データを結合したくない場合は、を渡し `null`ます。
    * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。 これはオプションのパラメーターで、実行時のオプションを指定しない `null` かどうかを指定できます。
    * Formsサービスに必要なURI値を含む `URLSpec` オブジェクトです。
@@ -292,4 +292,4 @@ Forms API（Webサービス）を使用してインタラクティブPDFフォ�
 
 **フォームデータストリームをクライアントのWebブラウザーに書き込みます**
 
-Formsサービスは、フォームをレンダリングするときに、フォームデータストリームを返します。このデータストリームは、クライアントのWebブラウザーに書き込む必要があります。 クライアントのWebブラウザーに書き込まれると、フォームはユーザーに表示されます。
+Formsサービスはフォームをレンダリングすると、フォームデータストリームを返します。このストリームをクライアントのWebブラウザーに書き込む必要があります。 クライアントのWebブラウザーに書き込まれると、フォームはユーザーに表示されます。
