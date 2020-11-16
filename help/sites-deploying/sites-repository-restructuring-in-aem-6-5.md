@@ -10,19 +10,22 @@ topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
 translation-type: tm+mt
 source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+workflow-type: tm+mt
+source-wordcount: '1600'
+ht-degree: 71%
 
 ---
 
 
 # AEM 6.5 における Sites リポジトリの再構築 {#sites-repository-restructuring-in-aem}
 
-As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM Sites Solution. 一部の変更は、AEM 6.5のアップグレードプロセス中に作業を行う必要がありますが、その他の変更は、将来のアップグレードまで延期できます。
+As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM Sites Solution. 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
 * [ContextHub セグメント](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#contexthub-segments)
 
-**今後のアップグレードの前に**
+**今後のアップグレードの前**
 
 * [Adobe Analytics クライアントライブラリ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-analytics-client-libraries)
 * [クラシックな Microsoft Word から Web ページへのデザイン](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#classic-microsoft-word-to-web-page-designs)
@@ -57,13 +60,13 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     <ol>
      <li>Copy any new or modified ContextHub Segments from the previous location to the appropriate new location (/<code>apps</code>, <code>/conf/global</code> or <code>/conf/&lt;tenant&gt;</code>)</li>
      <li>Update references to ContextHub Segments in the previous location to the migrated ContextHub Segments in the new locations (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>).</li>
-    </ol> <p>次の QueryBuilder クエリは、以前の場所内の ContextHub セグメントへのすべての参照を探します。<br /> これ <br /> は <code class="code">path=/content
+    </ol> <p>次の QueryBuilder クエリは、以前の場所内の ContextHub セグメントへのすべての参照を探します。<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> AEM queryBuilderデバッガーUIを <br /> 使用して実行できます <a href="/help/sites-developing/querybuilder-api.md" target="_blank"></a>。 これはトラバースクエリなので、実稼働環境に対して実行しないでください。また、必要に応じてトラバーサルの制限を調整してください。</p> </td>
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> これは、 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilderデバッガーのUIを介して実行できます</a>。 これはトラバースクエリなので、本番環境に対して実行しないでください。必要に応じてトラバーサルの制限を調整してください。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>以前の場所に保存されている ContextHub セグメントは、<strong>AEM／パーソナライゼーション／オーディエンス</strong>に読み取り専用として表示されます。</p> <p>If ContextHub Segments are to be editable in AEM, they must be migrated to the new location (<code>/conf/global</code> or <code>/conf/&lt;tenant&gt;</code>). Any new ContentHub Segments segments created in AEM are persisted to the new location (<code>/conf/global</code> or <code>/conf/&lt;tenant&gt;</code>).</p> <p>AEM Sites Page Properties only allow either the Previous Location (<code>/etc</code>) or a single new location (<code>/apps</code>, <code>/conf/global</code> or <code>/conf/&lt;tenant&gt;</code>) to be selected, thus ContextHub Segments must be migrated accordingly.</p> <p>AEM 参照サイトからの未使用の ContextHub セグメントは削除でき、新しい場所に移行されません。</p>
     <ul>
      <li>/etc/segmentation/geometrixx/</li>
@@ -73,7 +76,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
  </tbody>
 </table>
 
-## 今後のアップグレードの前に {#prior-to-upgrade}
+## 今後のアップグレードの前 {#prior-to-upgrade}
 
 ### Adobe Analytics クライアントライブラリ {#adobe-analytics-client-libraries}
 
@@ -103,7 +106,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、カテゴリプロパティを調べます.</p>
     <ul>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li>
@@ -143,7 +146,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -166,11 +169,11 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td>新しいモバイルデバイスエミュレーター設定は、新しい場所に移行する必要があります。
     <ol>
      <li>Copy any new Mobile Device Emulator Configurations from the Previous Location to the new location (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>).</li>
-     <li>モバイルデバイスエミュレーターの設定に依存するAEMサイトページの場合は、ページのノードを更新 <span class="code">し <code>
+     <li>これらのモバイルデバイスエミュレーター設定に依存するAEM Sitesページの場合は、ページの <span class="code"><code>
         jcr
        </code><code>
         :content
-       </code></span> ます。 <br /><span class="code">[cq:Page]/jcr:content@cq:       <code>
+       </code></span> ノードを更新します。 <br /> <span class="code">[cq:Page]/jcr:content@cq:       <code>
         deviceGroups
        </code> = String[ mobile/groups/responsive ]</span></li>
      <li>For any Editable Templates that depend on these Mobile Device Emulator Configurations, update the Editable Templates, pointing the <span class="code">
@@ -183,7 +186,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>モバイルデバイスエミュレータ設定の解決は、次の順序でおこなわれます。</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/mobile</code></li>
@@ -206,7 +209,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
   </tr>
   <tr>
    <td><strong>新しい場所</strong></td>
-   <td><p><code>/apps/msm</code> （お客様のBlueprint設定）</p> <p><code>/libs/msm</code> （画面のBlueprint設定はすぐに使用でき、コマース）</p> </td>
+   <td><p><code>/apps/msm</code> （お客様のBluePrint構成）</p> <p><code>/libs/msm</code> （画面の青写真の設定はすぐに使用でき、コマース）</p> </td>
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
@@ -217,7 +220,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>All AEM provided Multi-site Manager Blueprint Configurations exist in the New Location in <code>/libs</code>.</p> <p>コンテンツは Multi-site Manager のブループリント設定を参照していないため、調整するコンテンツ参照はありません。</p> </td>
   </tr>
  </tbody>
@@ -244,7 +247,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> <p>移行した Multi-site Manager のロールアウト設定を以前の場所から削除します。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>移行した Multi-site Manager のロールアウト設定を以前の場所から削除しないと、ロールアウトオプションが AEM 作成者に重複して表示されます。</td>
   </tr>
  </tbody>
@@ -272,7 +275,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>Any new or modified Page Event Notification E-mail Templates must be migrated to the new location under <code>/apps</code>:</p>
     <ol>
      <li>Copy any new or modified Page Event Notification E-mail Templates from the Previous Location to the new location (<code>/apps</code>).</li>
@@ -305,7 +308,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
    <td>以前の場所の下に作成された基礎モードは、従来の基礎モードフレームワークを使用するため、新しい場所に移行できません。新しい場所に合わせるには、サポートされている基礎モードフレームワークを使用して、従来の基礎モードを再開発する必要があります。</td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -331,7 +334,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>存在しない <code>grid_base.less</code> ファイルを参照すると、ページのレイアウトモードとテンプレートエディターが機能せず、ページレイアウトが中断されます。</td>
   </tr>
  </tbody>
@@ -364,7 +367,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>推奨されるアプローチは、デザインの代わりに構造コンテンツとポリシーを使用する編集可能なテンプレートを使用して AEM Sites とページを構築することです。</td>
   </tr>
  </tbody>
@@ -394,7 +397,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 cq:ClientLIbraryFolder ノードを検索し、カテゴリプロパティを調べます:</p>
     <ul>
      <li><code>/libs/cq/searchpromote/clientlibs/searchpromote</code></li>
@@ -433,7 +436,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 cq:ClientLIbraryFolder ノードを検索し、カテゴリプロパティを調べます:</p>
     <ul>
      <li><code>/libs/cq/testandtarget/clientlibs/testandtarget/testandtarget</code></li>
@@ -474,7 +477,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、カテゴリプロパティを調べます:</p>
     <ul>
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li>
