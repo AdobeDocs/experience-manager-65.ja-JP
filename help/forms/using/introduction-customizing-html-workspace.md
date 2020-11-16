@@ -21,7 +21,7 @@ ht-degree: 81%
 
 # AEM Forms Workspace のカスタマイズの概要{#introduction-to-customizing-aem-form-workspace}
 
-AEM Forms Workspaceは、プレゼンテーションセマンティックとインターフェイスの機能を変更する機能を提供します。 スタイル、レイアウト、書式設定、ブランド、およびコア機能を変更するカスタマイズのタイプについては、以下に説明します。
+AEM form workspaceは、プレゼンテーションセマンティックとインターフェイスの機能を変更する機能を提供します。 スタイル、レイアウト、書式設定、ブランド、およびコア機能を変更するカスタマイズのタイプについては、以下に説明します。
 
 ![cu_customized_workspace_example](assets/cu_customized_workspace_example.png)
 
@@ -122,7 +122,7 @@ Workspace をカスタマイズするには、/libs/ws/css フォルダー内に
 
 #### CSS {#css}
 
-AEM Formsワークスペースの外観は、CSSの外観を借用しています。 CSS をカスタマイズすることにより、フォント、色、ブランド、レイアウトなどの Workspace のプレゼンテーションセマンティックを変更することができます。
+AEM Formsワークスペースの外観は、CSSからの外観を借用します。 CSS をカスタマイズすることにより、フォント、色、ブランド、レイアウトなどの Workspace のプレゼンテーションセマンティックを変更することができます。
 
 CSS カスタマイズのためのトップレベルの手順を以下に示します。
 
@@ -130,11 +130,11 @@ CSS カスタマイズのためのトップレベルの手順を以下に示し�
 * この CSS にスタイルアイテムを追加します。詳細については、「CSS スタイルについて」を参照してください。
 * Update its references in `html.jsp`.
 
-For the exact steps to do these customizations, see [Generic steps for AEM Forms workspace customization](../../forms/using/generic-steps-html-workspace-customization.md). AEM Formsワークスペースに付属しているCSSファイルは、/libs/ws/css/にあります。 CSS 関連のカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+For the exact steps to do these customizations, see [Generic steps for AEM Forms workspace customization](../../forms/using/generic-steps-html-workspace-customization.md). AEM Formsワークスペースに付属のCSSファイルは、/libs/ws/css/にあります。 CSS 関連のカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
 #### 画像 {#image}
 
-AEM Formsワークスペースをカスタマイズして、ユーザーのアバターを追加したり、組織のロゴを追加したりできます。 これらのカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。
+AEM Formsのワークスペースをカスタマイズして、ユーザーのアバターを追加したり、組織のロゴを追加したりできます。 これらのカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。
 
 画像をカスタマイズするためのトップレベルの手順を以下に示します。
 
@@ -212,14 +212,14 @@ For more conceptual information, see the [Description of reusable components](/h
 
             * initializer - AEM Forms Workspace で使用するバックボーンビューやモデルを初期化するために使用する initializer.js を含みます。
             * models - AEM Forms Workspace にあるすべてのコンポーネントのバックボーンモデルを含みます。
-            * routes -開始プロセス、todo、追跡、および環境設定をAEM Formsワークスペースに読み込むJavaScriptファイルとHTMLファイルを含みます。
+            * routes -AEM Formsワークスペースに開始プロセス、todo、追跡、および環境設定を読み込むJavaScriptファイルとHTMLファイルを含みます。
             * services - AEM Forms Workspace 内で使用されている service.js を含みます。すべてのサーバー呼び出しは service.js を介して行われます。
             * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのビューの HTML ファイルを含みます。
             * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（javascrip）を含みます。
             * views - AEM Forms Workspace 内のすべてのコンポーネントのバックボーンビューを含みます。
          * main.js
          * router.js
-      * libs/ws: pdf.htmlとpluginPing.pdfは、AEM FormsのワークスペースにPDF formsを読み込むために使用され、WSNextAdapter.swfは、AEM FormsのワークスペースにSWFフォームとガイドを読み込むために使用されます。
+      * libs/ws:pdf.htmlとpluginPing.pdfはAEM FormsのワークスペースにPDF formsを読み込むために使用され、WSNextAdapter.swfはAEM FormsのワークスペースにSWFフォームとガイドを読み込むために使用されます。
       * locales:
 
          * de-DE - ドイツ語の translation.json を含みます。
@@ -354,7 +354,7 @@ client-pkg への mvn clean -P Dev install
 
       * initializer - initializer.js と modelcontrollerpath.js を含みます。
       * models - AEM Forms Workspace 内のすべてのコンポーネントのモデルを含みます。
-      * routes -開始プロセス、todo、追跡、および環境設定をAEM Formsワークスペースに読み込むJavaScriptファイルとHTMLファイルを含みます。
+      * routes -AEM Formsワークスペースに開始プロセス、todo、追跡、および環境設定を読み込むJavaScriptファイルとHTMLファイルを含みます。
       * services - AEM Forms Workspace 内で使用されている service.js を含みます。
       * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
       * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（javascrip）を含みます。
