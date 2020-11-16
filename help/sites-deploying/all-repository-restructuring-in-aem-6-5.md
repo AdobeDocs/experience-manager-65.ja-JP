@@ -20,7 +20,7 @@ ht-degree: 75%
 
 # AEM 6.5 における共通リポジトリの再構築 {#common-repository-restructuring-in-aem}
 
-As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes potentially impacting all solutions. 一部の変更は、AEM 6.5のアップグレードプロセス中に作業を行う必要がありますが、その他の変更は、将来のアップグレードまで延期することができます。
+As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes potentially impacting all solutions. 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
@@ -192,7 +192,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol>
      <li>新規または変更されたワークフロースクリプトを以前の場所から新しい場所にコピーします。<br />
       <ul>
-       <li><code>/apps/workflow/scripts</code> should be maintained in SCM.</li>
+       <li><code>/apps/workflow/scripts</code> は、SCMで維持する必要があります。</li>
       </ul> </li>
      <li>ワークフローモデルの以前の場所にある、ワークフロースクリプトへの参照を更新し、新しい場所を指すようにします。</li>
     </ol> </td>
