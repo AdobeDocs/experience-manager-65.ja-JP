@@ -27,7 +27,7 @@ Microsoft Dynamics は、顧客関係管理（CRM）および企業資源計画�
 * アダプティブフォーム送信時にMicrosoft Dynamicsにデータを書き込む
 * フォームデータモデルで定義されたカスタムエンティティを介してMicrosoft Dynamicsにデータを書き込む、またはその逆
 
-AEM Formsアドオンパッケージには、Microsoft DynamicsとAEM Formsをすばやく統合するために利用できる参照OData設定も含まれています。
+AEM Formsアドオンパッケージには、Microsoft DynamicsとAEM Formsを迅速に統合するために利用できる参照OData設定も含まれています。
 
 パッケージがインストールされると、AEM Forms インスタンス上で以下のエンティティとサービスを使用できるようになります。
 
@@ -99,7 +99,7 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
    ここで、
 
    * `Client-ID` は、任意の GUID ジェネレーターを使用して生成できるクライアント ID です。
-   * `redirect-uri` は、AEM Forms 上の Microsoft Dynamics OData クラウドサービスに対する URL です。AEM Formsパッケージと共にインストールされるデフォルトのクラウドサービスは、次のURLでデプロイされます。
+   * `redirect-uri` は、AEM Forms 上の Microsoft Dynamics OData クラウドサービスに対する URL です。AEM Formsパッケージと共にインストールされるデフォルトのクラウドサービスは、次のURLにデプロイされます。
       `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. 以下のコマンドを実行して、AD FS マシン上でアクセス権を設定します。
