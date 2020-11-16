@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1b5e0ccf-4157-45e3-8caf-1d6739d7d9d2
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '195'
+ht-degree: 36%
 
 ---
 
@@ -29,11 +32,11 @@ This script is made to ease the analysis of the `access.log` files producing a r
 
 このスクリプトは、リクエストの全体番号、GET 対 POST、リクエスト配信の推移など多くのデータを生成します。
 
-出力はMarkdown構文になっているので、pandocなどのツールを使用してPDFに変換したり、Markdown viewerなどのプラグインを使用してブラウザーに表示したりする方が簡単です。
+出力はMarkdown構文になっているので、pandocなどのツールを使用してPDFに変換したり、Markdown Viewerなどのプラグインを使用してブラウザーに表示したりすると、より簡単に行えます。
 
-コマンドラインで提供されるカスタムパスを分析できます。
+コマンドラインで提供されたカスタムパスを分析できます。
 
-ファイル内のコメントから実行方法を知らせる：
+ファイル内のコメントから、その実行方法を示す情報を取得します。
 
 Analyse CQ `access.log` extrapolating various informations and producing a Markdown output on `stdout`.
 
@@ -41,10 +44,10 @@ Analyse CQ `access.log` extrapolating various informations and producing a Markd
 
 `./analyse-access.sh access.log.2013-&ast;`
 
-コマンドラインで分析する追加のカスタムパスを指定できます
+コマンドラインで分析するカスタムパスを追加することができます
 
 `/analyse-access.sh access.log.2013-&ast; /my/custom/path/1 /my/custom/path/2`
 
-出力は、単純な配管で保存できます
+出力は、単純なパイピングで保存できます
 
 `./analyse-access.sh access.log.2013-&ast; | tee yr2013.md`
