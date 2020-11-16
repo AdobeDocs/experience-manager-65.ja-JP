@@ -218,7 +218,7 @@ Sub-rules are nodes of type `cq:Page` with properties on its `jcr:content`node t
   <tr>
    <th>プロパティ</th>
    <th>型</th>
-   <th> 値の説明</th>
+   <th> 値 説明</th>
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
@@ -341,7 +341,7 @@ Included in the release are two scoring rules for the [Forum Function](/help/com
   <tr>
    <th>プロパティ</th>
    <th>型</th>
-   <th>値の説明</th>
+   <th>値 説明</th>
   </tr>
   <tr>
    <td>thresholds</td>
