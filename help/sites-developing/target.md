@@ -32,7 +32,7 @@ ht-degree: 74%
 
 ## ページ上での Adobe Target によるターゲット設定の有効化 {#enabling-targeting-with-adobe-target-on-your-pages}
 
-Adobe Targetとやり取りするページでターゲットコンポーネントを使用するには、特定のクライアントサイドコードを&lt;head>要素に含めます。
+Adobe Targetとやり取りするページでターゲットコンポーネントを使用するには、&lt;head>要素に特定のクライアントサイドコードを含めます。
 
 ### head セクション {#the-head-section}
 
@@ -320,14 +320,14 @@ String orderID = session.getOrderId();
 
 ## Target コンポーネントについて {#understanding-the-target-component}
 
-Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。Targetコンポーネントは、/libs/cq/personalization/components/ターゲットにあります。
+Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。ターゲットコンポーネントは、/libs/cq/personalization/components/ターゲットにあります。
 
 target.jsp スクリプトは、ページのプロパティにアクセスして、コンポーネントに使用するターゲティングエンジンを決定し、適切なスクリプトを実行します。
 
-* Adobe Target: /libs/cq/personalization/components/target/engine_tnt.jsp
-* [AT.JSとのAdobe Target](/help/sites-administering/target.md): /libs/cq/personalization/components/target/engine_atjs.jsp
-* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md): /libs/cq/personalization/components/target/engine_cq_campaign.jsp
-* クライアント側のルール/ContextHub: /libs/cq/personalization/components/target/engine_cq.jsp
+* Adobe Target:/libs/cq/personalization/components/target/engine_tnt.jsp
+* [Adobe TargetとAT.JS](/help/sites-administering/target.md):/libs/cq/personalization/components/target/engine_atjs.jsp
+* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md):/libs/cq/personalization/components/target/engine_cq_campaign.jsp
+* クライアント側のルール/ContextHub:/libs/cq/personalization/components/target/engine_cq.jsp
 
 ### mbox の作成 {#the-creation-of-mboxes}
 
