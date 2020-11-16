@@ -2,7 +2,7 @@
 title: Tough Day
 seo-title: Tough Day
 description: Tough Day テストでは、約 1,000 人の作成者がいる環境で、すべての操作が同時進行しているという最悪の状況を想定して、1 日の負荷をシミュレートします。.
-seo-description: Tough Dayテストは、すべての操作が同時に実行されるワーストケースシナリオで、約1,000人の作成者の日別読み込みをシミュレートします。
+seo-description: 強靱な日のテストは、すべての操作が同時に実行される、最悪の場合に1,000人前後の作成者の日々の負荷をシミュレートします。
 uuid: 1b672182-40f5-4580-b038-2e3c8fbfb8b7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,6 +12,9 @@ discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '1909'
+ht-degree: 53%
 
 ---
 
@@ -36,7 +39,7 @@ java -jar toughday2.jar --host=localhost
 * ホームページを取得する
 * querybuilder でクエリを実行する
 * アセット階層を作成する
-* アセットを削除する
+* アセットの削除
 
 このスイートには、15 ％の書き込みアクションと 85 ％の読み取りアクションが含まれています。
 
@@ -72,12 +75,12 @@ java -jar toughday2.jar --help_full
   </tr>
   <tr>
    <td>--help</td>
-   <td>グローバル情報を出力します。例：使用可能なアクション、定義済みのスイート、実行モード、およびグローバルパラメーター。</td>
+   <td>グローバル情報を出力します。次に例を示します。使用可能なアクション、定義済みのスイート、実行モード、およびグローバルパラメーター。</td>
    <td> </td>
   </tr>
   <tr>
    <td>—help_publish</td>
-   <td>利用可能な発行者をすべて印刷します。</td>
+   <td>使用可能なすべての発行者を印刷します。</td>
    <td> </td>
   </tr>
   <tr>
@@ -87,28 +90,28 @@ java -jar toughday2.jar --help_full
   </tr>
   <tr>
    <td>—help_full</td>
-   <td>上記のすべて、テスト、パブリッシャー、およびスイートコンポーネントを印刷します。</td>
+   <td>上記のすべて、およびテスト、パブリッシャー、スイートのコンポーネントを印刷します。</td>
    <td> </td>
   </tr>
   <tr>
-   <td> —help —runmode/publishmode type=&lt;モード&gt;</td>
-   <td>指定した実行モードまたは発行モードに関する情報を表示します。</td>
+   <td> —help —runmode/publishmode type=&lt;Mode&gt;</td>
+   <td>指定した実行モードまたは公開モードに関するリスト情報。</td>
    <td><p>java -jar toughday2.jar —help —runmode type=constantload</p> <p>java -jar toughday2.jar —help —publishmode type=intervals</p> </td>
   </tr>
   <tr>
    <td>—help —suite=&lt;SuiteName&gt;</td>
-   <td>特定のスイートのすべてのテストと、それぞれ設定可能なプロパティを一覧表示します。</td>
+   <td>特定のスイートのすべてのテストと、それぞれの設定可能なプロパティをリストします。</td>
    <td><br /> java -jar toughday2.jar —help —suite=get_tests</td>
   </tr>
   <tr>
    <td> —help —tag=&lt;タグ&gt;</td>
-   <td><br /> 指定したタグを持つすべての項目を表示します。</td>
+   <td><br /> 指定したタグを持つすべての項目をリストします。</td>
    <td>java -jar toughday2.jar —help —tag=publish</td>
   </tr>
   <tr>
    <td>—help &lt;TestClass/PublisherClass&gt;</td>
-   <td><br /> 特定のテストまたはパブリッシャーの設定可能なプロパティをすべて表示します。</td>
-   <td><p>java -jar toughday2.jar —helpPDFTestのアップロード</p> <p>java -jar toughday2.jar —help CSVPublisher</p> </td>
+   <td><br /> 特定のテストまたはパブリッシャーの設定可能なすべてのプロパティをリストします。</td>
+   <td><p>java -jar toughday2.jar —help UploadPDFTest</p> <p>java -jar toughday2.jar —help CSVPublisher</p> </td>
   </tr>
  </tbody>
 </table>
@@ -125,7 +128,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 | **パラメーター** | **説明** | **デフォルト値** | **可能な値** |
 |---|---|---|---|
-| `--installsamplecontent=<Val>` | デフォルトのTough Day 2コンテンツパッケージをインストールまたはスキップします。 | true | true または false |
+| `--installsamplecontent=<Val>` | デフォルトのTufg Day 2コンテンツパッケージをインストールまたはスキップします。 | true | true または false |
 | `--protocol=<Val>` | ホストに使用するプロトコル。 | http | httpまたはhttps |
 | `--host=<Val>` | ターゲットにするホスト名またはIP。 |  |  |
 | `--port=<Val>` | ホストのポート。 | 4502 |  |
@@ -133,11 +136,11 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 | `--password=<Val>` | 指定したユーザーのパスワード。 | admin |  |
 | `--duration=<Val>` | テストの期間。 Can be expressed in (**s**)econds, (**m**)inutes, (**h**)ours and (**d**)ays. | 1d |  |
 | `--timeout=<Val>` | テストが中断され、失敗とマークされるまでの期間。 秒単位で表現できます。 | 180 |  |
-| `--suite=<Val>` | 値は、事前定義されたテストスイートの1つまたはリスト（コンマ区切り）です。 | 困難な日 |  |
+| `--suite=<Val>` | 値は、事前定義済みのテストスイートの1つまたはリスト（コンマ区切り）にすることができます。 | 厳しい日 |  |
 | `--configfile=<Val>` | 対象となるyaml設定ファイル。 |  |  |
 | `--contextpath=<Val>` | インスタンスのコンテキストパス。 |  |  |
-| `--loglevel=<Val>` | Tough Day 2エンジンのログレベルです。 | INFO | ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF |
-| `--dryrun=<Val>` | trueの場合、結果の設定を出力し、テストを実行しません。 | false | true または false |
+| `--loglevel=<Val>` | Tufg Day 2エンジンのログレベルです。 | INFO | ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF |
+| `--dryrun=<Val>` | trueの場合、結果の設定が出力され、テストは実行されません。 | false | true または false |
 
 ## カスタマイズ {#customizing}
 
@@ -285,7 +288,7 @@ Tough Day 2 can run in one of the following modes: **normal** and **constant loa
 
 The **normal** run mode has two parameters:
 
-* `concurrency` - concurrencyは、Tough Day 2でテスト実行用に作成されるスレッドの数を表します。 これらのスレッドでは、実行時間が終了するか、実行するテストがなくなるまでテストが実行されます。
+* `concurrency` - concurrencyは、Tuff Day 2でテスト実行用に作成されるスレッドの数を表します。 これらのスレッドでは、実行時間が終了するか、実行するテストがなくなるまでテストが実行されます。
 
 * `waittime` - 同じスレッド上の連続した 2 つのテスト実行の間の待機時間。この値はミリ秒単位で指定する必要があります。
 
@@ -304,7 +307,7 @@ runmode:
   concurrency : 200
 ```
 
-The **constant load** run mode differs from the normal run mode by generating a constant number of started test executions, rather than a constant number of threads. 読み込みは、同じ名前のrun modeパラメーターを使用して設定できます。
+The **constant load** run mode differs from the normal run mode by generating a constant number of started test executions, rather than a constant number of threads. 読み込みは、同じ名前を持つ実行モードパラメーターを使用して設定できます。
 
 ### テストの選択 {#test-selection}
 
@@ -316,7 +319,7 @@ Furthermore, tests can have a `count` property, which limits the number of execu
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --add CreatePageTreeTest weight=10 count=100 --runmode=normal concurrency=20
 ```
 
-「」または「」
+または
 
 ```xml
 - add : CreateAssetTreeTest
@@ -355,9 +358,9 @@ Tough Day 2 では、テストの指標とログの両方が出力されます�
 | 渡された | 成功した実行の数。 |
 | 失敗 | 失敗した実行の数。 |
 | Min* | テスト実行の最短期間。 |
-| Max* | テスト実行の最長期間。 |
-| Median* | すべてのテスト実行の計算済み中央値時間。 |
-| 平均時* | 計算されたすべてのテスト実行の平均時間。 |
+| Max* | テストの実行期間の上限。 |
+| Median* | すべてのテスト実行の計算済み中央値の期間。 |
+| 平均* | 計算されたすべてのテスト実行の平均期間。 |
 | StdDev* | 標準偏差。 |
 | 90p* | 90パーセンタイル。 |
 | 99p* | 99パーセンタイル。 |
@@ -373,7 +376,7 @@ These metrics are written with the help of publishers that can be added with the
 
 さらに、指標がレポートされるモードは2つあります。
 
-* The **simple** publish mode - reports the results from the beginning of the execution up to the point of publishing.
+* **単純公開モード** — 実行開始から公開ポイントまでの結果をレポートします。
 * The **intervals** publish mode - reports the results in a given time frame. You can set the time frame with the **interval** publish mode parameter.
 
 次の例は、コマンドラインまたは yaml 設定ファイルを使用して `intervals` パラメーターを設定する方法を示しています。
@@ -396,7 +399,7 @@ publishmode:
 
 ### ログ {#logging}
 
-Tough Day 2を実行したのと同じディレクトリにlogsフォルダーが作成されます。 このフォルダーには次の 2 種類のログが格納されます。
+「Tuff Day 2」を選択すると、Tuff Day 2を実行したのと同じディレクトリにlogsフォルダーが作成されます。 このフォルダーには次の 2 種類のログが格納されます。
 
 * **toughday.log**：アプリケーションの状態に関連したメッセージ、デバッグ情報およびグローバルメッセージが格納されます。
 * **toughday_&lt;testname>.log**：指定したテストに関連するメッセージ。
