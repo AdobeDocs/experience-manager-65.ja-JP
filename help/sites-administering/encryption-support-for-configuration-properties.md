@@ -11,6 +11,9 @@ topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 87%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 ## 概要 {#overview}
 
-この機能を使用すると、すべての OSGI 設定プロパティをクリアテキストではなく保護された暗号化形式で保存できます。Web Console UI内のフォームは、システム全体の暗号化マスターキーを使用して、クリアテキストから暗号化されたテキストを作成するために使用されます。
+この機能を使用すると、すべての OSGI 設定プロパティをクリアテキストではなく保護された暗号化形式で保存できます。WebコンソールUIのフォームは、システム全体の暗号化マスターキーを使用して、クリアテキストから暗号化テキストを作成するために使用します。
 
 OSGi 設定プラグインのサポートは、サービスによって使用される前に、プロパティを復号化するために追加されました。
 
