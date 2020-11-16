@@ -147,9 +147,9 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 * AEM のインストールディレクトリ。このディレクトリ全体を除外できない場合は、以下の項目を除外してください。
 
-   * [AEMインストールディレクトリ]\crx-repository\temp
-   * [AEMインストールディレクトリ]\crx-repository\repository
-   * [AEMインストールディレクトリ]\crx-repository\launchpad
+   * [AEM installation directory]\crx-repository\temp
+   * [AEM installation directory]\crx-repository\repository
+   * [AEM installation directory]\crx-repository\launchpad
 
 * アプリケーションサーバーの一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
