@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: d9ab4d38-1c17-477d-9341-02bda80f3c23
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 81%
 
 ---
 
@@ -30,7 +33,7 @@ Adobe Experience Manager（AEM）Mobile は、完全な AEM プラットフォ�
 
 ## PhoneGap アプリケーションのオーサリング {#authoring-phonegap-applications}
 
-An ***AEM Author *(or*Marketer *)**is able to use the out-of-the-box templates and components to add and edit pages, drag and drop components and add media of all types from the DAM including images, videos and text fragments (content fragments).
+***AEM作成者* (または *Marketer***)は、標準搭載されたテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加を行えます。
 
 まずは以下のリソースを参照してください。
 
