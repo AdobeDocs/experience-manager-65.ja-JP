@@ -15,7 +15,7 @@ translation-type: tm+mt
 source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
 workflow-type: tm+mt
 source-wordcount: '3452'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -130,9 +130,9 @@ The [edit behavior of a component is configured](/help/sites-developing/componen
 
 ### Coral UI と Granite UI {#coral-ui-and-granite-ui}
 
-AEM の現代的なルックアンドフィールは [Coral UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) と [Granite UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) で定義されています。
+AEM の現代的なルックアンドフィールは [Coral UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) と [Granite UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) で定義されています。
 
-[Granite UI で提供される幅広い基本コンポーネント（ウィジェット）](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)は、オーサー環境でダイアログを作成するために使用されます。必要な場合には、選択したウィジェットを拡張し、[独自のウィジェットを作成](#creatinganewwidget)することができます。
+[Granite UI で提供される幅広い基本コンポーネント（ウィジェット）](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)は、オーサー環境でダイアログを作成するために使用されます。必要な場合には、選択したウィジェットを拡張し、[独自のウィジェットを作成](#creatinganewwidget)することができます。
 
 Coral および Granite リソースタイプを使用してコンポーネントを開発する方法について詳しくは、[Coral／Granite リソースタイプを使用した Experience Manager コンポーネントの作成](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)を参照してください。
 
@@ -148,7 +148,7 @@ Coral および Granite リソースタイプを使用してコンポーネン�
 
    * UI コンソールおよびダイアログの構築用に Coral UI マークアップを Sling コンポーネントにラップして提供
    * [AEM Touch-Enabled UI - Granite UIの概念](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Granite UI ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
+   * [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
 >[!NOTE]
 >
@@ -214,7 +214,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->Granite UI について詳しくは、[Granite UI ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)を参照してください。
+>Granite UI について詳しくは、[Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)を参照してください。
 
 ダイアログをフォーム要素のシンプルなコンテナと見なす場合は、ダイアログコンテンツの主要コンテンツをフォームフィールドと見なすこともできます。新しいフォームフィールドを作成するには、リソースタイプを作成する必要があります。これは、新しいコンポーネントの作成と同等です。この作業を容易にするために、Granite UI は、`sling:resourceSuperType` を使用して以下を継承する汎用フィールドコンポーネントを提供しています。
 
@@ -293,7 +293,7 @@ ExtJS を使用するクラシック UI では、コンテンツ構造内に指�
 指定されたフィールドを「必須」としてマークするには、フィールドのコンテンツノードに次のプロパティを設定します。
 
 * 名前：`required`
-* タイプ：`Boolean`
+* 型：`Boolean`
 
 例えば、次を参照してください。
 
@@ -320,7 +320,7 @@ Granite UI でのフィールド検証および Granite UI コンポーネント
 デザインダイアログの定義は、[コンテンツの編集に使用されるダイアログ](#creating-a-new-dialog)の定義によく似ています。違いはノードとして定義される点です。
 
 * ノード名: `cq:design_dialog`
-* タイプ：`nt:unstructured`
+* 型：`nt:unstructured`
 
 ## インプレースエディターの作成と設定 {#creating-and-configuring-an-inplace-editor}
 
@@ -338,7 +338,7 @@ Granite UI でのフィールド検証および Granite UI コンポーネント
 
 ## 参照レール用のコンポーネント（借りた／貸したコンテンツ）の設定 {#configuring-a-component-for-the-references-rail-borrowed-lent}
 
-新しいコンポーネントが他のページのコンテンツを参照する場合は、[**参照&#x200B;**](/help/sites-authoring/basic-handling.md#references)レールの「**借りたコンテンツ**」セクションおよび「**貸したコンテンツ**」セクションに影響を与えるかどうかを考慮できます。
+新しいコンポーネントが他のページのコンテンツを参照する場合は、[**参照**](/help/sites-authoring/basic-handling.md#references)&#x200B;レールの「**借りたコンテンツ**」セクションおよび「**貸したコンテンツ**」セクションに影響を与えるかどうかを考慮できます。
 
 初期状態の AEM は参照コンポーネントのみを確認します。コンポーネントを追加するには、OSGi バンドル **WCM オーサリングコンテンツ参照設定**&#x200B;を設定する必要があります。
 
@@ -372,40 +372,40 @@ AEM では、ページの段落システムを設定するときに、常に空�
    新しいノードを作成します。
 
    * 名前：`cq:authoring`
-   * タイプ：`nt:unstructured`
+   * 型：`nt:unstructured`
 
 
 1. この下に、アセットとコンポーネントのマッピングをすべて保持する新しいノードを作成します。
 
    * 名前：`assetToComponentMapping`
-   * タイプ：`nt:unstructured`
+   * 型：`nt:unstructured`
 
 1. アセットとコンポーネントのマッピングごとに、ノードを作成します。
 
    * 名前：テキスト。アセットと関連するコンポーネントタイプを示す名前（例：image）にすることを推奨します。
-   * タイプ：`nt:unstructured`
+   * 型：`nt:unstructured`
 
    それぞれが以下のプロパティを持ちます。
 
    *  `assetGroup` の下）で、次の手順をおこないます。
 
-      * タイプ：`String`
+      * 型：`String`
       * Value: the group that the related asset belongs to; for example, `media`
    *  `assetMimetype` の下）で、次の手順をおこないます。
 
-      * タイプ：`String`
+      * 型：`String`
       * 値：関連アセットの MIME タイプ（例：`image/*`/*）
    *  `droptarget` の下）で、次の手順をおこないます。
 
-      * タイプ：`String`
+      * 型：`String`
       * 値：ドロップターゲット（例：`image`）
    *  `resourceType` の下）で、次の手順をおこないます。
 
-      * タイプ：`String`
+      * 型：`String`
       * Value: the related component resource; for example, `foundation/components/image`
    *  `type` の下）で、次の手順をおこないます。
 
-      * タイプ：`String`
+      * 型：`String`
       * 値：タイプ（例：`Images`）
 
 
