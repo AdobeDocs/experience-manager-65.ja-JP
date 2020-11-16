@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 525c4afc-e109-4546-b78c-1efee63edc43
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '146'
+ht-degree: 89%
 
 ---
 
@@ -24,6 +27,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    * リンクをクリックすると、予期するリンクではなく、ログインページに戻る。
    * リンクをクリックすると、アクセス権エラーが表示される。
+
    ベストプラクティスとしては、Mozilla Firefox などの別のブラウザーから管理コンソールを実行し、リンクの失敗がないことを確認します。
 
 * 管理コンソールで検索を実行するときはバックスラッシュ文字（）を使用しないでください。
