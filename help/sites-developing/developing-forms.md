@@ -131,7 +131,7 @@ You can add your own action under `/apps` as follows:
 
    1. ポストスクリプト。The name of the script is `post.POST.<extension>`, e.g. `post.POST.jsp`
 The post script is invoked when a form is submitted to process the form, it contains the code that handles the data arriving from the form 
-`POST`。
+`POST`.
 
    1. フォームが送信されたときに呼び出される転送スクリプトを追加します。The name of the script is `forward.<extension`>, e.g. `forward.jsp`
 This script can define a path. 現在の要求が、指定されたパスに転送されます。
