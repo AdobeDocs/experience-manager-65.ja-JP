@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '877'
+ht-degree: 96%
 
 ---
 
@@ -25,7 +28,7 @@ Correspondence Management には以下の設定プロパティがあります。
   <tr>
    <th><p><strong>プロパティ</strong></p> </th>
    <th><p><strong>説明</strong></p> </th>
-   <th><p><strong>デフォルト値は</strong></p> </th>
+   <th><p><strong>デフォルト</strong></p> </th>
    <th><p><strong>指定できる値</strong></p> </th>
   </tr>
   <tr>
