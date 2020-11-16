@@ -13,14 +13,14 @@ translation-type: tm+mt
 source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
 source-wordcount: '611'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
 
 # Adobe Target との統合{#integrating-with-adobe-target}
 
-Adobe Marketing Cloud に含まれている [Adobe Target](http://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) を使用すると、あらゆるチャネルにわたってターゲット設定と測定をおこない、コンテンツの関連性を高めることができます。Adobe Target はマーケター向けのツールで、オンラインテストを設計および実行し、その場で（行動に基づいた）オーディエンスセグメントを作成し、コンテンツとオンラインエクスペリエンスのターゲット設定を自動化するために使用されます。AEM では Adobe Target Standard に使用されているターゲット設定ワークフローが採用されています。Targetを使用する場合は、AEMのターゲット設定の編集環境に慣れている必要があります。
+Adobe Marketing Cloud に含まれている [Adobe Target](http://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) を使用すると、あらゆるチャネルにわたってターゲット設定と測定をおこない、コンテンツの関連性を高めることができます。Adobe Target はマーケター向けのツールで、オンラインテストを設計および実行し、その場で（行動に基づいた）オーディエンスセグメントを作成し、コンテンツとオンラインエクスペリエンスのターゲット設定を自動化するために使用されます。AEM では Adobe Target Standard に使用されているターゲット設定ワークフローが採用されています。ターゲットを使用する場合は、AEMのターゲット設定の編集環境に慣れている必要があります。
 
 AEM Sites を Adobe Target に統合して、ページ内のコンテンツを次のようにパーソナライズできます。
 
@@ -31,7 +31,7 @@ AEM Sites を Adobe Target に統合して、ページ内のコンテンツを�
 
 Target に統合するには、次のタスクを実行します。
 
-1. [前提条件のタスクを実行する](/help/sites-administering/target-requirements.md)：Adobe Target に登録して AEM オーサーインスタンスの特定の側面を設定します。Adobe Targetアカウントには、最低でも**approver **levelの権限が必要です。 さらに、ユーザーがアクセスできないように、パブリッシュノードのアクティビティ設定を保護する必要があります。
+1. [前提条件のタスクを実行する](/help/sites-administering/target-requirements.md)：Adobe Target に登録して AEM オーサーインスタンスの特定の側面を設定します。Adobe Targetアカウントには、最低でも**承認者*レベルの権限が必要です。 さらに、ユーザーがアクセスできないように、パブリッシュノードのアクティビティ設定を保護する必要があります。
 
 1. 以下のどちらかの操作をおこないます。
 
@@ -71,7 +71,7 @@ Target に統合するには、次のタスクを実行します。
 
 AEM と Adobe Target を統合するには、Adobe Target、AEM アクティビティの管理、AEM オーディエンスの管理に関する知識が必要です。以下を十分理解している必要があります。
 
-* Adobe Target（[Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/target-home.html)を参照）
+* Adobe Target（[Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/target-home.translate.html)を参照）
 * AEM Activities console (See [Managing Activities](/help/sites-authoring/activitylib.md)).
 * AEM オーディエンス（[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照）
 
