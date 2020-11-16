@@ -11,6 +11,9 @@ topic-tags: administering-on-demand-services-app
 discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 66%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->If you are not using AEM as your content management source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>If you are not using AEM as your content management source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
 
 ## AEM 管理者 {#aem-administrator}
 
@@ -37,7 +40,7 @@ An ***AEM administrator*** is responsible for adding a new application to the AE
 
 >[!NOTE]
 >
->For more information on setting up AEM Groups and Permissions, click [Creating User Roles and Granting Access](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) in Online Help.
+>For more information on setting up AEM Groups and Permissions, click [Creating User Roles and Granting Access](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html) in Online Help.
 
 AEM 管理者は、AEM Mobile On-Demand Services を使用してアプリを作成する際に以下のタスクを担当します。
 
