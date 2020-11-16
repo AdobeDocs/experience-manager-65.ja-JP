@@ -76,7 +76,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       「**すべて保存**」をクリックします。
 
-1. 新しく作成したitemsフォルダーに、特定のアセットのカスタムのボタン/アクションのノードを追加します(例： downloadFlatPDF)を使用します。
+1. 新しく作成したitemsフォルダーに、特定のアセットのカスタムのボタン/アクションのノードを追加します(例：downloadFlatPDF)を使用します。
 
    1. Right-click the **items** folder and select **Create** > **Create Node**.
 
@@ -105,7 +105,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
         <tr>
         <td>foundation-collection-action</td>
         <td>String</td>
-        <td><p>{"target": ".cq-manageasset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> can be single or multiple to allow selections of single or multiple assets on which the custom action is performed.</p> <p><strong>typeは</strong> 、次のうち1つ以上（カンマ区切り）です。 LETTER,TEXT,リスト，条件，DATADICTIONARY</p> </td>
+        <td><p>{"target": ".cq-manageasset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> can be single or multiple to allow selections of single or multiple assets on which the custom action is performed.</p> <p><strong>typeは</strong> 、次のうち1つ以上（カンマ区切り）です。LETTER,TEXT,リスト，条件，DATADICTIONARY</p> </td>
         </tr>
         <tr>
         <td>icon</td>
@@ -248,7 +248,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. 「**すべて保存**」をクリックします。
 
-1. 新しく作成されたitemsノードの下で、特定のアセットのカスタムのボタン/アクションのノードを追加します(例： letterpdfdownloaderを参照)を次の手順で使用します。
+1. 新しく作成されたitemsノードの下で、特定のアセットのカスタムのボタン/アクションのノードを追加します(例：letterpdfdownloaderを参照)を次の手順で使用します。
 
    1. items フォルダーを右クリックして、「**作成／ノードを作成**」を選択します。
 
@@ -266,7 +266,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
       |---|---|---|
       | sling:resourceType | 文字列 | fd/cm/ma/gui/components/admin/clientlibs/admin |
 
-1. 次の場所に、コマンドのアクション処理用のコードを使用してPOST.jspという名前のファイルを作成します。
+1. 次の場所に、コマンドのPOST処理用のコードを使用して、アクション.jspという名前のファイルを作成します。
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
@@ -274,7 +274,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-      ファイルに POST.jsp という名前を付けます。（ファイル名はPOST.jspのみにする必要があります）。
+      ファイルに POST.jsp という名前を付けます。(ファイル名は、POST.jspのみである必要があります)。
 
    1. Double-click the **POST.jsp** file to open it in CRX.
    1. POST.jsp ファイルに次のコードを追加して、「**すべて保存**」をクリックします。
