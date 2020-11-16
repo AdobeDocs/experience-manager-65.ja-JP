@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: c117b9d1-e4ae-403f-8619-6e48d424a761
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 76%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 ## タグの適用 {#applying-tags}
 
-In the author environment, authors may apply tags by accessing the page properties and entering one or more tags in the **Tags/Keywords** field.
+オーサー環境では、作成者はページのプロパティにアクセスし、「**タグ／キーワード**」フィールドに 1 つ以上のタグを入力することでタグを適用できます。
 
 To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the `Tags/Keywords` field pull-down to select from the list of tags permitted for the page. Tthe **Standard Tags** tab is the default namespace, which means there is no `namespace-string:` prefixed to the taxonomy.
 
@@ -51,13 +54,13 @@ To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Pr
 
 **アクティベート**
 
-* 個別のタグをアクティベートします。
+* 個々のタグをアクティベートします。
 
-   ページと同様、新しく作成されたタグは、発行環境で使用可能となる前にアクティベートする必要があります。
+   ページと同様、新しく作成されたタグは、パブリッシュ環境で使用可能となる前にアクティベートする必要があります。
 
 >[!NOTE]
 >
->ページをアクティブ化すると、ダイアログが自動的に開き、そのページに属する非アクティブ化されたタグをアクティブ化できます。
+>ページをアクティブ化すると、ダイアログが自動的に開き、そのページに属するアクティブ化されていないタグをアクティブ化できます。
 
 **アクティベートを解除**
 
@@ -65,7 +68,7 @@ To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Pr
 
 ## タグクラウド {#tag-clouds}
 
-タグクラウドには、現在のページ、Webサイト全体、または最も頻繁にアクセスされるタグのクラウドが表示されます。 タグクラウドは、ユーザーにとって興味のある（以前からあった）問題を強調する手段です。 タグの表示に使用されるテキストのサイズは、タグの使用に関連して異なります。
+タグクラウドには、現在のページ、Webサイト全体、または最も頻繁にアクセスされるタグのクラウドが表示されます。 タグクラウドは、ユーザーにとって興味のある（以前からある）問題を強調する手段です。 タグの表示に使用されるテキストのサイズは、タグの使用に伴って異なります。
 
 [タグクラウド](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud)コンポーネント（一般コンポーネントグループ）を使用して、ページにタグクラウドを追加します。
 
