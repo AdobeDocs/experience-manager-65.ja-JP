@@ -28,14 +28,14 @@ Endpoint Registryサービスは、エンドポイントをプログラムで管
 * SOAP
 * 監視フォルダー
 * 電子メール
-* （AEM Formsでは非推奨）Remoting
+* (AEM formsでは廃止)Remoting
 * タスクマネージャ
 
 >[!NOTE]
 >
->SOAP、EJB、および（JEE上のAEM formsでは非推奨）リモートエンドポイントは、アクティブ化された各サービスに対して自動的に作成されます。 SOAPおよびEJBエンドポイントは、すべてのサービス操作でSOAPおよびEJBを有効にします。
+>SOAP、EJB、および(JEE上のAEM formsでは非推奨)リモートエンドポイントは、アクティブ化された各サービスに対して自動的に作成されます。 SOAPおよびEJBエンドポイントは、すべてのサービス操作でSOAPおよびEJBを有効にします。
 
-リモートエンドポイントを使用すると、Flexクライアントは、エンドポイントが追加されたAEM Formsサービスで操作を呼び出すことができます。 エンドポイントと同じ名前のFlex宛先が作成され、Flexクライアントは、この宛先を指すRemoteObjectsを作成して、関連するサービスの操作を呼び出すことができます。
+リモートエンドポイントを使用すると、Flexクライアントは、エンドポイントが追加されたAEM Formsサービスの操作を呼び出すことができます。 エンドポイントと同じ名前のFlex宛先が作成され、Flexクライアントは、この宛先を指すRemoteObjectsを作成して、関連するサービスの操作を呼び出すことができます。
 
 電子メール、タスクマネージャーおよび監視フォルダーエンドポイントで公開されるのは、サービスの特定の操作のみです。 これらのエンドポイントを追加するには、呼び出すメソッドを選択し、設定パラメーターを設定し、入力パラメーターと出力パラメーターのマッピングを指定する、2つ目の設定手順が必要です。
 
@@ -55,7 +55,7 @@ Endpoint Registryサービスを使用して、次のタスクを実行できま
 
 ## EJBエンドポイントの追加 {#adding-ejb-endpoints}
 
-AEM FormsJava APIを使用して、プログラムによってEJBエンドポイントをサービスに追加できます。 EJBエンドポイントをサービスに追加すると、クライアントアプリケーションでEJBモードを使用してサービスを呼び出せるようになります。 つまり、AEM Formsの呼び出しに必要な接続プロパティを設定する場合、EJBモードを選択できます。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+プログラムでEJBエンドポイントをサービスに追加するには、AEM FormsJava APIを使用します。 EJBエンドポイントをサービスに追加すると、クライアントアプリケーションでEJBモードを使用してサービスを呼び出せるようになります。 つまり、AEM Formsの呼び出しに必要な接続プロパティを設定する場合、EJBモードを選択できます。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
 >[!NOTE]
 >
@@ -94,11 +94,11 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 サービス用のEJBエンドポイントを作成するには、次の値を指定します。
 
-* **コネクタ識別子**: 作成するエンドポイントのタイプを指定します。 EJBエンドポイントを作成するには、を指定し `EJB`ます。
-* **説明**: エンドポイントの説明を指定します。
-* **名前**: エンドポイントの名前を指定します。
-* **サービス識別子**: エンドポイントが属するサービスを指定します。
-* **操作名**: エンドポイントを使用して呼び出される操作の名前を指定します。 EJBエンドポイントを作成する場合は、ワイルドカード文字( `*`)を指定します。 ただし、すべてのサービス操作を呼び出すのではなく、特定の操作を指定する場合は、ワイルドカード文字( `*`)を使用するのではなく、操作の名前を指定します。
+* **コネクタ識別子**:作成するエンドポイントのタイプを指定します。 EJBエンドポイントを作成するには、を指定し `EJB`ます。
+* **説明**:エンドポイントの説明を指定します。
+* **名前**:エンドポイントの名前を指定します。
+* **サービス識別子**:エンドポイントが属するサービスを指定します。
+* **操作名**:エンドポイントを使用して呼び出される操作の名前を指定します。 EJBエンドポイントを作成する場合は、ワイルドカード文字( `*`)を指定します。 ただし、すべてのサービス操作を呼び出すのではなく、特定の操作を指定する場合は、ワイルドカード文字( `*`)を使用するのではなく、操作の名前を指定します。
 
 **EJBエンドポイントの作成**
 
@@ -150,7 +150,7 @@ Java APIを追加使用したEJBエンドポイント：
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用したEJBエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したEJBエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -158,7 +158,7 @@ Java APIを追加使用したEJBエンドポイント：
 
 ## SOAPエンドポイントの追加 {#adding-soap-endpoints}
 
-AEM FormsJava APIを使用して、プログラムによってSOAPエンドポイントをサービスに追加できます。 SOAPエンドポイントを追加すると、クライアントアプリケーションがSOAPモードを使用してサービスを呼び出せるようになります。 つまり、AEM Formsの呼び出しに必要な接続プロパティを設定する場合、SOAPモードを選択できます。
+AEM FormsJava APIを使用すると、プログラムによってSOAPエンドポイントをサービスに追加できます。 SOAPエンドポイントを追加すると、クライアントアプリケーションがSOAPモードを使用してサービスを呼び出せるようになります。 つまり、AEM Formsの呼び出しに必要な接続プロパティを設定する場合は、SOAPモードを選択できます。
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ SOAPエンドポイントをサービスに追加するには、次のタスク�
 * adobe-utilities.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
 
-これらのJARファイルは、SOAPエンドポイントを作成するために必要です。 ただし、SOAPエンドポイントを使用してサービスを呼び出す場合は、追加のJARファイルが必要です。 AEM FormsのJARファイルについて詳しくは、「AEM FormsJavaライブラリファイルを [含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
+これらのJARファイルは、SOAPエンドポイントを作成するために必要です。 ただし、SOAPエンドポイントを使用してサービスを呼び出す場合は、追加のJARファイルが必要です。 AEM FormsJARファイルについて詳しくは、「AEM FormsJavaライブラリファイルを [含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **EndpointRegistry Clientオブジェクトの作成**
 
@@ -199,11 +199,11 @@ SOAPエンドポイントをサービスに追加するには、次のタスク�
 
 SOAPエンドポイントをサービスに追加するには、次の値を指定します。
 
-* **コネクタ識別子の値**: 作成するエンドポイントのタイプを指定します。 SOAPエンドポイントを作成するには、を指定し `SOAP`ます。
-* **説明**: エンドポイントの説明を指定します。
-* **名前**: エンドポイント名を指定します。
-* **サービス識別子の値**: エンドポイントが属するサービスを指定します。
-* **操作名**: エンドポイントを使用して呼び出される操作の名前を指定します。 SOAPエンドポイントを作成する場合は、ワイルドカード文字( `*`)を指定します。 ただし、すべてのサービス操作を呼び出すのではなく、特定の操作を指定する場合は、ワイルドカード文字( `*`)を使用するのではなく、操作の名前を指定します。
+* **コネクタ識別子の値**:作成するエンドポイントのタイプを指定します。 SOAPエンドポイントを作成するには、を指定し `SOAP`ます。
+* **説明**:エンドポイントの説明を指定します。
+* **名前**:エンドポイント名を指定します。
+* **サービス識別子の値**:エンドポイントが属するサービスを指定します。
+* **操作名**:エンドポイントを使用して呼び出される操作の名前を指定します。 SOAPエンドポイントを作成する場合は、ワイルドカード文字( `*`)を指定します。 ただし、すべてのサービス操作を呼び出すのではなく、特定の操作を指定する場合は、ワイルドカード文字( `*`)を使用するのではなく、操作の名前を指定します。
 
 **SOAPエンドポイントの作成**
 
@@ -255,7 +255,7 @@ Java APIを追加使用したサービスへのSOAPエンドポイント：
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用したSOAPエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したSOAPエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -263,9 +263,9 @@ Java APIを追加使用したサービスへのSOAPエンドポイント：
 
 ## 監視フォルダーエンドポイントの追加 {#adding-watched-folder-endpoints}
 
-AEM FormsのJava APIを使用して、プログラムによって監視フォルダーエンドポイントをサービスに追加できます。 監視フォルダーエンドポイントを追加すると、ユーザーはファイル（PDFファイルなど）をフォルダーに配置できます。 ファイルがフォルダーに配置されると、設定済みのサービスが呼び出され、ファイルが操作されます。 サービスが指定の操作を実行した後に、変更されたファイルが指定の出力フォルダーに保存されます。監視フォルダーは、固定レートの間隔、または毎週月曜日、水曜日、金曜日の正午など、Cronスケジュールでスキャンされるように設定されています。
+プログラムで監視フォルダーエンドポイントをサービスに追加するには、AEM FormsJava APIを使用します。 監視フォルダーエンドポイントを追加すると、ユーザーはファイル（PDFファイルなど）をフォルダーに配置できます。 ファイルがフォルダーに配置されると、設定済みのサービスが呼び出され、ファイルが操作されます。 サービスが指定の操作を実行した後に、変更されたファイルが指定の出力フォルダーに保存されます。監視フォルダーは、固定レートの間隔、または毎週月曜日、水曜日、金曜日の正午など、Cronスケジュールでスキャンされるように設定されています。
 
-プログラムによって監視フォルダーエンドポイントをサービスに追加する場合は、EncryptDocumentという名前の短時間のみ有効なプロセスを考慮して *ください*。 ( [AEM Formsプロセスについてを参照](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes))。
+プログラムによって監視フォルダーエンドポイントをサービスに追加する場合は、EncryptDocumentという名前の短時間のみ有効なプロセスを考慮して *ください*。 (「 [AEM Formsプロセスについて](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)」を参照)。
 
 ![aw_aw_encryptdocumentprocess](assets/aw_aw_encryptdocumentprocess.png)
 
@@ -309,11 +309,11 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 サービスの監視フォルダーエンドポイントを作成するには、次の値を指定します。
 
-* **コネクタ識別子**: 作成されるエンドポイントの種類を指定します。 監視フォルダーエンドポイントを作成するには、を指定し `WatchedFolder`ます。
-* **説明**: エンドポイントの説明を指定します。
-* **名前**: エンドポイントの名前を指定します。
-* **サービス識別子**: エンドポイントが属するサービスを指定します。 例えば、この節で紹介するプロセス（Workbenchを使用してアクティブ化されるとプロセスがサービスになる）に監視フォルダーエンドポイントを追加するには、を指定し `EncryptDocument`ます。
-* **操作名**: エンドポイントを使用して呼び出される操作の名前を指定します。 通常、Workbenchで作成されたプロセスから派生するサービスの監視フォルダーエンドポイントを作成する場合、操作の名前はで `invoke`す。
+* **コネクタ識別子**:作成されるエンドポイントの種類を指定します。 監視フォルダーエンドポイントを作成するには、を指定し `WatchedFolder`ます。
+* **説明**:エンドポイントの説明を指定します。
+* **名前**:エンドポイントの名前を指定します。
+* **サービス識別子**:エンドポイントが属するサービスを指定します。 例えば、この節で紹介するプロセス（Workbenchを使用してアクティブ化されるとプロセスがサービスになる）に監視フォルダーエンドポイントを追加するには、を指定し `EncryptDocument`ます。
+* **操作名**:エンドポイントを使用して呼び出される操作の名前を指定します。 通常、Workbenchで作成されたプロセスから派生するサービスの監視フォルダーエンドポイントを作成する場合、操作の名前はで `invoke`す。
 
 **設定値の指定**
 
@@ -321,24 +321,24 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 次のリストは、監視フォルダーエンドポイントをプログラムでサービスに追加した場合に設定される設定値を指定します。
 
-* **url**: 監視フォルダーの場所を指定します。 クラスター環境では、この値は、クラスター内のすべてのコンピューターからアクセス可能な共有ネットワークフォルダーを指す必要があります。
-* **非同期**: 呼び出しの種類を非同期型または同期型として指定します。 一過性および同期型のプロセスは、同期型でのみ呼び出すことができます。デフォルト値は true です。非同期を推奨します。
-* **cronExpression**: Quartzで、入力ディレクトリのポーリングをスケジュールするために使用されます。 cron式の設定について詳しくは、https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.htmlを参照して [ください](https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html)。
-* **purgeDuration**: これは必須の属性です。 結果フォルダー内のファイルとフォルダーがこの値より古い場合、それらは削除されます。 この値の単位は日です。この属性は、結果フォルダーがいっぱいにならないようにするのに役立ちます。 -1 を指定すると、結果フォルダーの削除は行われません。デフォルト値は -1 です。
-* **repeatInterval**: 監視フォルダーをスキャンして入力を確認する間隔（秒単位）です。 ジョブ数の制限が有効になっていない限り、この値は平均的なジョブの処理時間より長くする必要があります。 そうしないと、システムが過負荷の状態になる可能性があります。 デフォルト値は 5 です。
-* **repeatCount**: 監視フォルダーがフォルダーまたはディレクトリをスキャンする回数です。 -1 を指定すると、無限にスキャンされます。デフォルト値は -1 です。
-* **throttleOn**: 任意の時点で処理できる監視フォルダーのジョブ数を制限します。 ジョブの最大数は、batchSize値によって決まります。
-* **userName**: 監視フォルダーからターゲットサービスを呼び出すときに使用されるユーザー名です。 この値は必須です。デフォルト値は「SuperAdmin」です。
-* **domainName**: ユーザーのドメイン。 この値は必須です。デフォルト値は「DefaultDom」です。
-* **batchSize**: 1回のスキャンで取得されるファイルまたはフォルダーの数です。 この値を使用して、システムの過負荷を防ぎます。 一度にスキャンするファイル数が多すぎると、クラッシュする場合があります。 デフォルト値は 2 です。
-* **waitTime**: 作成後にフォルダーまたはファイルをスキャンするまでの待機時間（ミリ秒）です。 例えば、待機時間が36,000,000ミリ秒（1時間）で、1分前にファイルが作成された場合、このファイルは59分以上経過した後に取得されます。 この属性は、ファイルまたはフォルダーが入力フォルダーに完全にコピーされるようにする場合に役立ちます。 例えば、処理に大きなファイルがあり、そのファイルのダウンロードに10分かかる場合は、待機時間を10&amp;ast;60&amp;ast;1000ミリ秒に設定します。 この設定は、10分間待たないファイルは監視フォルダーでスキャンされないようにします。 デフォルト値は 0 です。
-* **excludeFilePattern**: スキャンおよび取得の対象とするファイルとフォルダーを決定するために監視フォルダーが使用するパターンです。 このパターンを含むファイルまたはフォルダーは、スキャンの対象外となります。 この設定は、入力が複数のファイルを含むフォルダーである場合に役立ちます。 フォルダーの内容を、監視フォルダーの取得対象となる名前のフォルダーにコピーできます。 この手順により、フォルダーが入力フォルダーに完全にコピーされる前に監視フォルダーがフォルダーを取得しないようにすることができます。 For example, if the excludeFilePattern value is `data*`, all files and folders that match `data*` are not picked up. This includes files and folders named `data1`, `data2`, and so on. また、パターンにワイルドカードパターンを追加して、ファイルパターンを指定することもできます。 監視フォルダーは、およびなどのワイルドカードパターンをサポートするように正規式 `*.*` を変更し `*.pdf`ます。 これらのワイルドカードパターンは、正規式ではサポートされていません。
-* **includeFilePattern**: スキャンおよび取得の対象とするフォルダーとファイルを決定するために監視フォルダーが使用するパターンです。 For example, if this value is `*`, all files and folders that match `input*` are picked up. This includes files and folders named `input1`, `input2`, and so on. デフォルト値は `*` です。この値は、すべてのファイルとフォルダーを示します。 また、パターンにワイルドカードパターンを追加して、ファイルパターンを指定することもできます。 監視フォルダーは、およびなどのワイルドカードパターンをサポートするように正規式 `*.*` を変更し `*.pdf`ます。 これらのワイルドカードパターンは、正規式ではサポートされていません。 この値は必須です。
-* **resultFolderName**: 保存した結果が保存されるフォルダーです。 この場所は、絶対パスまたは相対ディレクトリパスにすることができます。 結果がこのフォルダーに表示されない場合は、失敗フォルダーを確認してください。読み取り専用ファイルは処理されず、失敗フォルダーに保存されます。デフォルト値は `result/%Y/%M/%D/` です。監視フォルダー内の結果フォルダーです。
-* **preserveFolderName**: 正常にスキャンおよび取得されたファイルが保存される場所です。 絶対パス、相対パス、またはNULLのディレクトリパスを指定できます。 デフォルト値は `preserve/%Y/%M/%D/` です。
-* **failureFolderName**: 失敗ファイルが保存されるフォルダーです。 この場所は、常に監視フォルダーからの相対パスで指定します。読み取り専用ファイルは処理されず、失敗フォルダーに保存されます。デフォルト値は `failure/%Y/%M/%D/` です。
-* **preserveOnFailure**: サービスで操作の実行に失敗した場合に入力ファイルを保持します。 デフォルト値は true です。
-* **overwriteDuplicateFilename**: trueに設定すると、結果フォルダーと保存用フォルダーにあるファイルが上書きされます。 「false」に設定した場合、ファイル名とフォルダー名の末尾に数値のインデックスが付けられます。 デフォルト値は false です。
+* **url**:監視フォルダーの場所を指定します。 クラスター環境では、この値は、クラスター内のすべてのコンピューターからアクセス可能な共有ネットワークフォルダーを指す必要があります。
+* **非同期**:呼び出しの種類を非同期型または同期型として指定します。 一過性および同期型のプロセスは、同期型でのみ呼び出すことができます。デフォルト値は true です。非同期を推奨します。
+* **cronExpression**:Quartzで、入力ディレクトリのポーリングをスケジュールするために使用されます。 cron式の設定について詳しくは、https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.htmlを参照して [ください](https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html)。
+* **purgeDuration**:これは必須の属性です。 結果フォルダー内のファイルとフォルダーがこの値より古い場合、それらは削除されます。 この値の単位は日です。この属性は、結果フォルダーがいっぱいにならないようにするのに役立ちます。 -1 を指定すると、結果フォルダーの削除は行われません。デフォルト値は -1 です。
+* **repeatInterval**:監視フォルダーをスキャンして入力を確認する間隔（秒単位）です。 ジョブ数の制限が有効になっていない限り、この値は平均的なジョブの処理時間より長くする必要があります。そうしないと、システムが過負荷の状態になる可能性があります。 デフォルト値は 5 です。
+* **repeatCount**:監視フォルダーがフォルダーまたはディレクトリをスキャンする回数です。 -1 を指定すると、無限にスキャンされます。デフォルト値は -1 です。
+* **throttleOn**:任意の時点で処理できる監視フォルダーのジョブ数を制限します。 ジョブの最大数は、batchSize値によって決まります。
+* **userName**:監視フォルダーからターゲットサービスを呼び出すときに使用されるユーザー名です。 この値は必須です。デフォルト値は「SuperAdmin」です。
+* **domainName**:ユーザーのドメイン。 この値は必須です。デフォルト値は「DefaultDom」です。
+* **batchSize**:1回のスキャンで取得されるファイルまたはフォルダーの数です。 この値を使用して、システムの過負荷を防ぎます。一度にスキャンするファイル数が多すぎると、クラッシュする場合があります。 デフォルト値は 2 です。
+* **waitTime**:作成後にフォルダーまたはファイルをスキャンするまでの待機時間（ミリ秒）です。 例えば、待機時間が36,000,000ミリ秒（1時間）で、1分前にファイルが作成された場合、このファイルは59分以上経過した後に取得されます。 この属性は、ファイルまたはフォルダーが入力フォルダーに完全にコピーされるようにする場合に役立ちます。 例えば、処理に大きなファイルがあり、そのファイルのダウンロードに10分かかる場合は、待機時間を10&amp;ast;60&amp;ast;1000ミリ秒に設定します。 この設定は、10分間待たないファイルは監視フォルダーでスキャンされないようにします。 デフォルト値は 0 です。
+* **excludeFilePattern**:スキャンおよび取得の対象とするファイルとフォルダーを決定するために監視フォルダーが使用するパターンです。 このパターンを含むファイルまたはフォルダーは、スキャンの対象外となります。 この設定は、入力が複数のファイルを含むフォルダーである場合に役立ちます。 フォルダーの内容を、監視フォルダーの取得対象となる名前のフォルダーにコピーできます。 この手順により、フォルダーが入力フォルダーに完全にコピーされる前に監視フォルダーがフォルダーを取得しないようにすることができます。 For example, if the excludeFilePattern value is `data*`, all files and folders that match `data*` are not picked up. This includes files and folders named `data1`, `data2`, and so on. また、パターンにワイルドカードパターンを追加して、ファイルパターンを指定することもできます。 監視フォルダーは、およびなどのワイルドカードパターンをサポートするように正規式 `*.*` を変更し `*.pdf`ます。 これらのワイルドカードパターンは、正規式ではサポートされていません。
+* **includeFilePattern**:スキャンおよび取得の対象とするフォルダーとファイルを決定するために監視フォルダーが使用するパターンです。 For example, if this value is `*`, all files and folders that match `input*` are picked up. This includes files and folders named `input1`, `input2`, and so on. デフォルト値は `*` です。この値は、すべてのファイルとフォルダーを示します。 また、パターンにワイルドカードパターンを追加して、ファイルパターンを指定することもできます。 監視フォルダーは、およびなどのワイルドカードパターンをサポートするように正規式 `*.*` を変更し `*.pdf`ます。 これらのワイルドカードパターンは、正規式ではサポートされていません。 この値は必須です。
+* **resultFolderName**:保存した結果が保存されるフォルダーです。 この場所は、絶対パスまたは相対ディレクトリパスにすることができます。 結果がこのフォルダーに表示されない場合は、失敗フォルダーを確認してください。読み取り専用ファイルは処理されず、失敗フォルダーに保存されます。デフォルト値は `result/%Y/%M/%D/` です。監視フォルダー内の結果フォルダーです。
+* **preserveFolderName**:正常にスキャンおよび取得されたファイルが保存される場所です。 絶対パス、相対パス、またはNULLのディレクトリパスを指定できます。 デフォルト値は `preserve/%Y/%M/%D/` です。
+* **failureFolderName**:失敗ファイルが保存されるフォルダーです。 この場所は、常に監視フォルダーからの相対パスで指定します。読み取り専用ファイルは処理されず、失敗フォルダーに保存されます。デフォルト値は `failure/%Y/%M/%D/` です。
+* **preserveOnFailure**:サービスで操作の実行に失敗した場合に入力ファイルを保持します。 デフォルト値は true です。
+* **overwriteDuplicateFilename**:trueに設定すると、結果フォルダーと保存用フォルダーにあるファイルが上書きされます。 「false」に設定した場合、ファイル名とフォルダー名の末尾に数値のインデックスが付けられます。 デフォルト値は false です。
 
 **入力パラメーター値の定義**
 
@@ -346,16 +346,16 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 監視フォルダーエンドポイントに必要な入力パラメーターの値を定義するには、次の値を指定します。
 
-**入力パラメーター名**: 入力パラメーターの名前。 入力値の名前は、プロセスに対してWorkbenchで指定されます。 入力値がサービス操作（Workbenchで作成されたプロセスではないサービス）に属する場合、入力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの入力パラメーターの名前はで `InDoc`す。
+**入力パラメーター名**:入力パラメーターの名前。 入力値の名前は、プロセスに対してWorkbenchで指定されます。 入力値がサービス操作（Workbenchで作成されたプロセスではないサービス）に属する場合、入力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの入力パラメーターの名前はで `InDoc`す。
 
-**マッピングの種類**: サービス操作の呼び出しに必要な入力値を設定するために使用します。 マッピングには次の2つのタイプがあります。
+**マッピングの種類**:サービス操作の呼び出しに必要な入力値を設定するために使用します。 マッピングには次の2つのタイプがあります。
 
-* `Literal`: 監視フォルダーエンドポイントでは、フィールドに入力された値が表示どおりに使用されます。 すべての基本 Java 型がサポートされます。例えば、String、long、int、Booleanなどの入力を使用するAPIの場合、文字列は適切な型に変換され、サービスが呼び出されます。
-* `Variable`: 入力された値は、監視フォルダーが入力の選択に使用するファイルパターンです。 例えば、マッピングの種類として「Variable」を選択し、入力ドキュメントーをPDFファイルにする必要がある場合、マッピング値 `*.pdf`として指定できます。
+* `Literal`:監視フォルダーエンドポイントでは、フィールドに入力された値が表示どおりに使用されます。 すべての基本 Java 型がサポートされます。例えば、String、long、int、Booleanなどの入力を使用するAPIの場合、文字列は適切な型に変換され、サービスが呼び出されます。
+* `Variable`:入力された値は、監視フォルダーが入力の選択に使用するファイルパターンです。 例えば、マッピングの種類として「Variable」を選択し、入力ドキュメントーをPDFファイルにする必要がある場合、マッピング値 `*.pdf`として指定できます。
 
-**マッピング値**: マッピングタイプの値を指定します。 例えば、 `Variable` マッピングの種類を選択した場合は、ファイルパターン `*.pdf` として指定できます。
+**マッピング値**:マッピングタイプの値を指定します。 例えば、 `Variable` マッピングの種類を選択した場合は、ファイルパターン `*.pdf` として指定できます。
 
-**データタイプ**: 入力値のデータタイプを指定します。 例えば、この節で紹介するプロセスの入力値のデータタイプはです `com.adobe.idp.Document`。
+**データタイプ**:入力値のデータタイプを指定します。 例えば、この節で紹介するプロセスの入力値のデータタイプはです `com.adobe.idp.Document`。
 
 **出力パラメーター値の定義**
 
@@ -363,15 +363,15 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 監視フォルダーエンドポイントに必要な出力パラメーターの値を定義するには、次の値を指定します。
 
-**出力パラメーター名**: 出力パラメーターの名前。 プロセス出力値の名前は、Workbenchで指定されます。 出力値がサービス操作（Workbenchで作成されたプロセスではないサービス）に属する場合、出力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの出力パラメーターの名前はで `SecuredDoc`す。
+**出力パラメーター名**:出力パラメーターの名前。 プロセス出力値の名前は、Workbenchで指定されます。 出力値がサービス操作（Workbenchで作成されたプロセスではないサービス）に属する場合、出力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの出力パラメーターの名前はで `SecuredDoc`す。
 
-**マッピングの種類**: サービスと操作の出力を設定するために使用します。 以下のオプションが利用できます。
+**マッピングの種類**:サービスと操作の出力を設定するために使用します。 以下のオプションが利用できます。
 
 * サービスが単一のオブジェクト(1つのドキュメント)を返す場合、パターンはで `%F.pdf` 、ソースの宛先はsourcefilename.pdfです。 例えば、この節で紹介したプロセスは、1つのドキュメントを返します。 その結果、マッピングの種類は、 `%F.pdf` (指定したファイル名を使用するこ `%F` とを意味する)と定義できます。 パターンは入力ドキュメントの拡張子を `%E` 指定します。
 * サービスがリストを返す場合、パターンは `Result\%F\`です。ソースの出力先はResult\sourcefilename\source1 (output 1)およびResult\sourcefilename\source2 (output 2)です。
 * サービスがマップを返す場合、パターンはResult\sourcefilename\file1 and Result\sourcefilename\file2 `Result\%F\`です。 マップに複数のオブジェクトがある場合、パターンはとなり、ソースの出力先はResult\sourcefilename1.pdf（出力1）、Result\sourcefilename2.pdf（出力2）のようになります。 `Result\%F.pdf`
 
-**データタイプ**: 戻り値のデータ型を指定します。 例えば、この節で紹介するプロセスの戻り値のデータ型はです `com.adobe.idp.Document`。
+**データタイプ**:戻り値のデータ型を指定します。 例えば、この節で紹介するプロセスの戻り値のデータ型はです `com.adobe.idp.Document`。
 
 **監視フォルダーエンドポイントの作成**
 
@@ -391,7 +391,7 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 ### Java APIを追加使用した監視フォルダーエンドポイント {#add-a-watched-folder-endpoint-using-the-java-api}
 
-AEM Forms追加Java APIを使用した監視フォルダーエンドポイント
+AEM Forms追加 Java APIを使用した監視フォルダーエンドポイント：
 
 1. プロジェクトファイルを含めます。
 
@@ -420,7 +420,7 @@ AEM Forms追加Java APIを使用した監視フォルダーエンドポイント
 
    >[!NOTE]
    >
-   >EncryptDocumentサービスに設定されたすべての設定値を確認するには、QuickStartにあるJavaコードの例を参照して [ください。 Java APIを使用した監視フォルダーエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)。
+   >EncryptDocumentサービスに設定されたすべての設定値を確認するには、QuickStartにあるJavaコードの例を参照して [ください。Java APIを使用した監視フォルダーエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)。
 
 1. 入力パラメーターの値を定義します。
 
@@ -449,13 +449,13 @@ AEM Forms追加Java APIを使用した監視フォルダーエンドポイント
 
 1. エンドポイントを有効にします。
 
-   オブジェクトのメソッドを呼び出し、そのメソッドから返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
+   オブジェクトのメソッドを呼び出し、そのメソッドによって返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
 
 **関連トピック**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用した監視フォルダーエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用した監視フォルダーエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -463,7 +463,7 @@ AEM Forms追加Java APIを使用した監視フォルダーエンドポイント
 
 ### 監視フォルダー設定値の定数ファイル {#watched-folder-configuration-values-constant-file}
 
-クイックス [タート： Java APIを使用して監視開始ーエンドポイントを追加すると](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) 、クイックフォルダーをコンパイルするためにJavaプロジェクトに含める必要がある定数ファイルが使用されます。 この定数ファイルは、監視フォルダーエンドポイントを追加する際に設定する必要がある設定値を表します。 次のJavaコードは定数ファイルを表しています。
+クイックス [タート：Java APIを使用して監視開始ーエンドポイントを追加すると](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) 、クイックフォルダーをコンパイルするためにJavaプロジェクトに含める必要がある定数ファイルが使用されます。 この定数ファイルは、監視フォルダーエンドポイントを追加する際に設定する必要がある設定値を表します。 次のJavaコードは定数ファイルを表しています。
 
 ```java
  /**
@@ -496,7 +496,7 @@ AEM Forms追加Java APIを使用した監視フォルダーエンドポイント
 
 ## 電子メールエンドポイントの追加 {#adding-email-endpoints}
 
-AEM FormsのJava APIを使用して、プログラムによって電子メールエンドポイントをサービスに追加できます。 電子メールエンドポイントを追加すると、1つ以上の添付ファイルが含まれた電子メールメッセージを、指定した電子メールアカウントに送信できます。 次に、configureサービス操作が呼び出され、ファイルが操作されます。 サービスが指定の操作を実行すると、送信者に電子メールメッセージが送信され、変更されたファイルが添付ファイルとして送信されます。
+AEM FormsJava APIを使用して、プログラムで電子メールエンドポイントをサービスに追加できます。 電子メールエンドポイントを追加すると、1つ以上の添付ファイルが含まれた電子メールメッセージを、指定した電子メールアカウントに送信できます。 次に、configureサービス操作が呼び出され、ファイルが操作されます。 サービスが指定の操作を実行すると、送信者に電子メールメッセージが送信され、変更されたファイルが添付ファイルとして送信されます。
 
 プログラムによって電子メールエンドポイントをサービスに追加する場合は、次のMyApplication\EncryptDocumentという短時間のみ有効なプロセスを検討して *ください*。 短時間のみ有効なプロセスについて詳しくは、「AEM Formsプロセスについて [](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)」を参照してください。
 
@@ -542,11 +542,11 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 サービスの電子メールエンドポイントを作成するには、次の値を指定します。
 
-* **コネクタ識別子の値**: 作成されるエンドポイントの種類を指定します。 電子メールエンドポイントを作成するには、を指定し `Email`ます。
-* **説明**: エンドポイントの説明を指定します。
-* **名前**: エンドポイントの名前を指定します。
-* **サービス識別子の値**: エンドポイントが属するサービスを指定します。 例えば、この節で紹介するプロセス（Workbenchを使用してアクティブ化されるとプロセスがサービスになる）に電子メールエンドポイントを追加するには、を指定し `EncryptDocument`ます。
-* **操作名**: エンドポイントを使用して呼び出される操作の名前を指定します。 通常、Workbenchで作成されたプロセスから派生するサービスの電子メールエンドポイントを作成する場合、操作の名前はで `invoke`す。
+* **コネクタ識別子の値**:作成されるエンドポイントの種類を指定します。 電子メールエンドポイントを作成するには、を指定し `Email`ます。
+* **説明**:エンドポイントの説明を指定します。
+* **名前**:エンドポイントの名前を指定します。
+* **サービス識別子の値**:エンドポイントが属するサービスを指定します。 例えば、この節で紹介するプロセス（Workbenchを使用してアクティブ化されるとプロセスがサービスになる）に電子メールエンドポイントを追加するには、を指定し `EncryptDocument`ます。
+* **操作名**:エンドポイントを使用して呼び出される操作の名前を指定します。 通常、Workbenchで作成されたプロセスから派生するサービスの電子メールエンドポイントを作成する場合、操作の名前はで `invoke`す。
 
 **設定値の指定**
 
@@ -558,32 +558,32 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 電子メールエンドポイントをプログラムでサービスに追加する場合、次の設定値が設定されます。
 
-* **cronExpression**: Cron式。Cron式を使用して電子メールをスケジュールする必要がある場合に使用します。
-* **repeatCount**: 電子メールエンドポイントがフォルダーまたはディレクトリをスキャンする回数です。 -1 を指定すると、無限にスキャンされます。デフォルト値は -1 です。
-* **repeatInterval**: 受信メールの確認に使用するスキャン速度（秒）です。 デフォルト値は 10 です。
-* **startDelay**: スケジューラーの開始後にスキャンを実行するまで待機する時間です。 デフォルトの時間は0です。
-* **batchSize**: 受信者が1回のスキャンで処理する電子メールメッセージの数で、最適なパフォーマンスを得るために必要なものです。 -1 を指定すると、すべての電子メールが処理されます。デフォルト値は 2 です。
-* **userName**: 電子メールからターゲットサービスを呼び出すときに使用されるユーザー名です。 デフォルト値は `SuperAdmin` です。
-* **domainName**: 必須の設定値です。 デフォルト値は `DefaultDom` です。
-* **domainPattern**: 受信時にプロバイダーが受け付ける電子メールのドメインパターンを指定します。 For example, if `adobe.com` is used, only email from adobe.com is processed, email from other domains is ignored.
-* **filePattern**: 受信時にプロバイダーが受け付ける添付ファイルのパターンを指定します。 特定のファイル名拡張子(&amp;ast;.dat, &amp;ast;.xml)を持つファイル、特定の名前(data)を持つファイル、名前と拡張子が複合式ーを持つファイル(&amp;ast;)などが含まれます。[dD][aA]&#39;port&#39;)。 デフォルト値は `*` です。
-* **recipientSuccessfulJob**: ジョブの成功を示すメッセージの送信先の電子メールアドレスです。 デフォルトでは、ジョブの正常終了メッセージは常に送信者に送信されます。`sender` と入力すると、電子メールの結果は送信者に送信されます。最大 100 人の受信者を指定できます。追加の受信者を電子メールアドレスと共に指定し、それぞれをコンマで区切ります。 このオプションをオフにするには、この値を空白のままにします。 場合によっては、プロセスをトリガーし、結果の電子メール通知を送信しないことが必要になります。 デフォルト値は `sender` です。
-* **recipientFailedJob**: ジョブの失敗を示すメッセージの送信先の電子メールアドレスです。 デフォルトでは、ジョブ失敗メッセージは常に送信者に送信されます。 `sender` と入力すると、電子メールの結果は送信者に送信されます。最大 100 人の受信者を指定できます。追加の受信者を電子メールアドレスと共に指定し、それぞれをコンマで区切ります。 このオプションをオフにするには、この値を空白のままにします。 デフォルト値は `sender` です。
-* **inboxHost**: 電子メールプロバイダーがスキャンを実行するインボックスのホスト名またはIPアドレスです。
-* **inboxPort**: 電子メールサーバーが使用するポートです。 POP3 のデフォルト値は「110」で、IMAP のデフォルト値は「143」です。SSL が有効になっている場合は、POP3 のデフォルト値は「995」で、IMAP のデフォルト値は「993」です。
-* **inboxProtocol**: 電子メールエンドポイントがインボックスのスキャンに使用する電子メールプロトコルです。 オプションは `IMAP` またはで `POP3`す。 指定のプロトコルはインボックスホストメールサーバーでサポートされている必要があります。
-* **inboxTimeOut**: 電子メールプロバイダーがインボックスの応答を待機する時間（秒）です。 デフォルト値は 60 です。
-* **inboxUser**: 電子メールアカウントにログインするために必要なユーザー名です。 電子メールサーバーと設定によっては、電子メールのユーザー名の部分のみを指定する場合と、完全な電子メールアドレスを指定する場合があります。
-* **inboxPassword**: インボックスユーザーのパスワードです。
-* **inboxSSLEnabled**: この値を設定すると、電子メールプロバイダーは、結果またはエラーの通知メッセージを送信する際にSSLを使用するように強制されます。 IMAPまたはPOP3ホストでSSLがサポートされていることを確認します。
-* **smtpHost**: 電子メールプロバイダーが結果およびエラーメッセージを送信するメールサーバーのホスト名です。
-* **smtpPort**: SMTPポートのデフォルト値は25です。
-* **smtpUser**: 電子メールプロバイダーが結果およびエラーの電子メール通知を送信するときに使用するユーザーアカウントです。
-* **smtpPassword**: SMTPアカウントのパスワードです。 SMTP パスワードが不要なメールサーバーもあります。
-* **charSet**: 電子メールプロバイダーが使用する文字セットです。 デフォルト値は `UTF-8` です。
-* **smtpSSLEnabled**: この値を設定すると、電子メールプロバイダーは、結果またはエラーの通知メッセージを送信する際にSSLを使用するように強制されます。 SMTPホストでSSLがサポートされていることを確認します。
-* **failedJobFolder**: SMTPメールサーバーが動作していない場合に結果を保存するディレクトリを指定します。
-* **非同期**: 同期に設定すると、すべての入力ドキュメントが処理され、単一の応答が返されます。 「asynchronous」に設定すると、処理される入力ドキュメントごとに応答が送信されます。 例えば、このトピックで紹介されるプロセス用に電子メールエンドポイントが作成され、保護されていない複数のPDFドキュメントが含まれる電子メールメッセージがエンドポイントのインボックスに送信されます。 すべてのPDFドキュメントがパスワードを使用して暗号化され、エンドポイントが同期に設定されている場合は、保護されたすべてのPDFドキュメントが添付された単一の応答電子メールメッセージが送信されます。 エンドポイントが非同期として設定されている場合は、保護されたPDFドキュメントごとに個別の応答電子メールメッセージが送信されます。 各電子メールメッセージには、添付ファイルとして1つのPDFドキュメントが含まれています。 デフォルト値は「asynchronous」です。
+* **cronExpression**:Cron式。Cron式を使用して電子メールをスケジュールする必要がある場合に使用します。
+* **repeatCount**:電子メールエンドポイントがフォルダーまたはディレクトリをスキャンする回数です。 -1 を指定すると、無限にスキャンされます。デフォルト値は -1 です。
+* **repeatInterval**:受信メールの確認に使用するスキャン速度（秒）です。 デフォルト値は 10 です。
+* **startDelay**:スケジューラーの開始後にスキャンを実行するまで待機する時間です。 デフォルトの時間は0です。
+* **batchSize**:受信者が1回のスキャンで処理する電子メールメッセージの数で、最適なパフォーマンスを得るために必要なものです。 -1 を指定すると、すべての電子メールが処理されます。デフォルト値は 2 です。
+* **userName**:電子メールからターゲットサービスを呼び出すときに使用されるユーザー名です。 デフォルト値は `SuperAdmin` です。
+* **domainName**:必須の設定値です。 デフォルト値は `DefaultDom` です。
+* **domainPattern**:受信時にプロバイダーが受け付ける電子メールのドメインパターンを指定します。 For example, if `adobe.com` is used, only email from adobe.com is processed, email from other domains is ignored.
+* **filePattern**:受信時にプロバイダーが受け付ける添付ファイルのパターンを指定します。 特定のファイル名拡張子(&amp;ast;.dat, &amp;ast;.xml)を持つファイル、特定の名前(data)を持つファイル、名前と拡張子が複合式ーを持つファイル(&amp;ast;)などが含まれます。[dD][aA]&#39;port&#39;)。 デフォルト値は `*` です。
+* **recipientSuccessfulJob**:ジョブの成功を示すメッセージの送信先の電子メールアドレスです。 デフォルトでは、ジョブの正常終了メッセージは常に送信者に送信されます。`sender` と入力すると、電子メールの結果は送信者に送信されます。最大 100 人の受信者を指定できます。追加の受信者を電子メールアドレスと共に指定し、それぞれをコンマで区切ります。 このオプションをオフにするには、この値を空白のままにします。 場合によっては、プロセスをトリガーし、結果の電子メール通知を送信しないことが必要になります。 デフォルト値は `sender` です。
+* **recipientFailedJob**:ジョブの失敗を示すメッセージの送信先の電子メールアドレスです。 デフォルトでは、ジョブ失敗メッセージは常に送信者に送信されます。 `sender` と入力すると、電子メールの結果は送信者に送信されます。最大 100 人の受信者を指定できます。追加の受信者を電子メールアドレスと共に指定し、それぞれをコンマで区切ります。 このオプションをオフにするには、この値を空白のままにします。 デフォルト値は `sender` です。
+* **inboxHost**:電子メールプロバイダーがスキャンを実行するインボックスのホスト名またはIPアドレスです。
+* **inboxPort**:電子メールサーバーが使用するポートです。 POP3 のデフォルト値は「110」で、IMAP のデフォルト値は「143」です。SSL が有効になっている場合は、POP3 のデフォルト値は「995」で、IMAP のデフォルト値は「993」です。
+* **inboxProtocol**:電子メールエンドポイントがインボックスのスキャンに使用する電子メールプロトコルです。 オプションは `IMAP` またはで `POP3`す。 指定のプロトコルはインボックスホストメールサーバーでサポートされている必要があります。
+* **inboxTimeOut**:電子メールプロバイダーがインボックスの応答を待機する時間（秒）です。 デフォルト値は 60 です。
+* **inboxUser**:電子メールアカウントにログインするために必要なユーザー名です。 電子メールサーバーと設定によっては、電子メールのユーザー名の部分のみを指定する場合と、完全な電子メールアドレスを指定する場合があります。
+* **inboxPassword**:インボックスユーザーのパスワードです。
+* **inboxSSLEnabled**:この値を設定すると、電子メールプロバイダーは、結果またはエラーの通知メッセージを送信する際にSSLを使用するように強制されます。 IMAPまたはPOP3ホストでSSLがサポートされていることを確認します。
+* **smtpHost**:電子メールプロバイダーが結果およびエラーメッセージを送信するメールサーバーのホスト名です。
+* **smtpPort**:SMTPポートのデフォルト値は25です。
+* **smtpUser**:電子メールプロバイダーが結果およびエラーの電子メール通知を送信するときに使用するユーザーアカウントです。
+* **smtpPassword**:SMTPアカウントのパスワードです。 SMTP パスワードが不要なメールサーバーもあります。
+* **charSet**:電子メールプロバイダーが使用する文字セットです。 デフォルト値は `UTF-8` です。
+* **smtpSSLEnabled**:この値を設定すると、電子メールプロバイダーは、結果またはエラーの通知メッセージを送信する際にSSLを使用するように強制されます。 SMTPホストでSSLがサポートされていることを確認します。
+* **failedJobFolder**:SMTPメールサーバーが動作していない場合に結果を保存するディレクトリを指定します。
+* **非同期**:「同期」に設定すると、すべての入力ドキュメントが処理され、単一の応答が返されます。 「asynchronous」に設定すると、処理される入力ドキュメントごとに応答が送信されます。 例えば、このトピックで紹介されるプロセス用に電子メールエンドポイントが作成され、保護されていない複数のPDFドキュメントが含まれる電子メールメッセージがエンドポイントのインボックスに送信されます。 すべてのPDFドキュメントがパスワードを使用して暗号化され、エンドポイントが同期に設定されている場合は、保護されたすべてのPDFドキュメントが添付された単一の応答電子メールメッセージが送信されます。 エンドポイントが非同期として設定されている場合は、保護されたPDFドキュメントごとに個別の応答電子メールメッセージが送信されます。 各電子メールメッセージには、添付ファイルとして1つのPDFドキュメントが含まれています。 デフォルト値は「asynchronous」です。
 
 **入力パラメーター値の定義**
 
@@ -591,16 +591,16 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 電子メールエンドポイントに必要な入力パラメーターの値を定義するには、次の値を指定します。
 
-**入力パラメーター名**: 入力パラメーターの名前。 入力値の名前は、プロセスに対してWorkbenchで指定されます。 入力値がサービス操作（Workbenchで作成されたプロセスではないFormsサービス）に属する場合、入力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの入力パラメーターの名前はで `InDoc`す。
+**入力パラメーター名**:入力パラメーターの名前。 入力値の名前は、プロセスに対してWorkbenchで指定されます。 入力値がサービス操作(Workbenchで作成されたプロセスではないFormsサービス)に属する場合、入力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの入力パラメーターの名前はで `InDoc`す。
 
-**マッピングの種類**: サービス操作の呼び出しに必要な入力値を設定するために使用します。 次に、2種類のマッピングタイプを示します。
+**マッピングの種類**:サービス操作の呼び出しに必要な入力値を設定するために使用します。 次に、2種類のマッピングタイプを示します。
 
-* `Literal`: 電子メールエンドポイントでは、フィールドに入力された値が表示どおりに使用されます。 すべての基本 Java 型がサポートされます。例えば、String、long、int および Boolean などの入力が使用される API の場合、文字列は適切な型に変換され、サービスが呼び出されます。
-* `Variable`: 入力された値は、電子メールエンドポイントが入力の選択に使用するファイルパターンです。 例えば、マッピングの種類として「Variable」を選択し、入力ドキュメントーをPDFファイルにする必要がある場合、マッピング値 `*.pdf` として指定できます。
+* `Literal`:電子メールエンドポイントでは、フィールドに入力された値が表示どおりに使用されます。 すべての基本 Java 型がサポートされます。例えば、String、long、int および Boolean などの入力が使用される API の場合、文字列は適切な型に変換され、サービスが呼び出されます。
+* `Variable`:入力された値は、電子メールエンドポイントが入力の選択に使用するファイルパターンです。 例えば、マッピングの種類として「Variable」を選択し、入力ドキュメントーをPDFファイルにする必要がある場合、マッピング値 `*.pdf` として指定できます。
 
-**マッピング値**: マッピングタイプの値を指定します。 例えば、変数マッピングの種類を選択した場合、ファイルパターン `*.pdf` として指定できます。
+**マッピング値**:マッピングタイプの値を指定します。 例えば、変数マッピングの種類を選択した場合、ファイルパターン `*.pdf` として指定できます。
 
-**データタイプ**: 入力値のデータタイプを指定します。 例えば、この節で紹介するプロセスの入力値のデータタイプはcom.adobe.idp.ドキュメントです。
+**データタイプ**:入力値のデータタイプを指定します。 例えば、この節で紹介するプロセスの入力値のデータタイプはcom.adobe.idp.ドキュメントです。
 
 **出力パラメーター値の定義**
 
@@ -608,15 +608,15 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 電子メールエンドポイントに必要な出力パラメーターの値を定義するには、次の値を指定します。
 
-**出力パラメーター名**: 出力パラメーターの名前。 プロセス出力値の名前は、Workbenchで指定されます。 出力値がサービス操作（Workbenchで作成されたプロセスではないサービス）に属する場合、出力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの出力パラメーターの名前はで `SecuredDoc`す。
+**出力パラメーター名**:出力パラメーターの名前。 プロセス出力値の名前は、Workbenchで指定されます。 出力値がサービス操作（Workbenchで作成されたプロセスではないサービス）に属する場合、出力名はcomponent.xmlファイルで指定されます。 例えば、この節で紹介するプロセスの出力パラメーターの名前はで `SecuredDoc`す。
 
-**マッピングの種類**: サービスと操作の出力を設定するために使用します。 以下のオプションが利用できます。
+**マッピングの種類**:サービスと操作の出力を設定するために使用します。 以下のオプションが利用できます。
 
 * サービスが単一のオブジェクト(1つのドキュメント)を返す場合、パターンはで `%F.pdf` 、ソースの宛先はsourcefilename.pdfです。 例えば、この節で紹介したプロセスは、1つのドキュメントを返します。 その結果、マッピングの種類は、 `%F.pdf` (指定したファイル名を使用するこ `%F` とを意味する)と定義できます。 パターンは入力ドキュメントの拡張子を `%E` 指定します。
 * サービスがリストを返す場合、パターンは `Result\%F\`です。ソースの出力先はResult\sourcefilename\source1 (output 1)およびResult\sourcefilename\source2 (output 2)です。
 * サービスがマップを返す場合、パターンはResult\sourcefilename\file1 and Result\sourcefilename\file2 `Result\%F\`です。 マップに複数のオブジェクトがある場合、パターンはとなり、ソースの出力先はResult\sourcefilename1.pdf（出力1）、Result\sourcefilename2.pdf（出力2）のようになります。 `Result\%F.pdf`
 
-**データタイプ**: 戻り値のデータ型を指定します。 例えば、この節で紹介するプロセスの戻り値のデータ型はです `com.adobe.idp.Document`。
+**データタイプ**:戻り値のデータ型を指定します。 例えば、この節で紹介するプロセスの戻り値のデータ型はです `com.adobe.idp.Document`。
 
 **電子メールエンドポイントの作成**
 
@@ -665,7 +665,7 @@ Java APIを追加使用した電子メールエンドポイント：
 
    >[!NOTE]
    >
-   >この節で紹介するEncryptDocumentサービスの設定値をすべて確認するには、QuickStartにあるJavaコードの例を参照してくだ [さい。 Java APIを使用した電子メールエンドポイントの追加を参照してください](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)。
+   >この節で紹介するEncryptDocumentサービスの設定値をすべて確認するには、QuickStartにあるJavaコードの例を参照してくだ [さい。Java APIを使用した電子メールエンドポイントの追加を参照してください](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)。
 
 1. 入力パラメーターの値を定義します。
 
@@ -694,13 +694,13 @@ Java APIを追加使用した電子メールエンドポイント：
 
 1. エンドポイントを有効にします。
 
-   オブジェクトのメソッドを呼び出し、そのメソッドから返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
+   オブジェクトのメソッドを呼び出し、そのメソッドによって返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
 
 **関連トピック**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用した監視フォルダーエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用した監視フォルダーエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -708,7 +708,7 @@ Java APIを追加使用した電子メールエンドポイント：
 
 ### 電子メール設定値の定数ファイル {#email-configuration-values-constant-file}
 
-クイックス [タート： Java APIを使用して電子メールエンドポイントを追加すると](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) 、クイック開始をコンパイルするためにJavaプロジェクトに含める必要がある定数ファイルが使用されます。 この定数ファイルは、電子メールエンドポイントを追加する際に設定する必要がある設定値を表します。 次のJavaコードは定数ファイルを表しています。
+クイックス [タート：Java APIを使用して電子メールエンドポイントを追加すると](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) 、クイック開始をコンパイルするためにJavaプロジェクトに含める必要がある定数ファイルが使用されます。 この定数ファイルは、電子メールエンドポイントを追加する際に設定する必要がある設定値を表します。 次のJavaコードは定数ファイルを表しています。
 
 ```java
  /**
@@ -750,9 +750,9 @@ Java APIを追加使用した電子メールエンドポイント：
 
 >[!NOTE]
 >
->JEE上のAEM formsでは、LiveCycle Remoting APIが廃止されました。
+>JEE上のAEM formsで非推奨のLiveCycle RemotingAPI。
 
-AEM FormsJava APIを使用して、プログラムによってリモートエンドポイントをサービスに追加できます。 リモートエンドポイントを追加すると、Flexアプリケーションがリモート処理を使用してサービスを呼び出せるようになります。 （『AEM formsでは非推奨）AEM Formsのリモートを使用したAEM Formsの [呼び出し』を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting))。
+AEM FormsJava APIを使用すると、プログラムによってリモートエンドポイントをサービスに追加できます。 リモートエンドポイントを追加すると、Flexアプリケーションがリモート処理を使用してサービスを呼び出せるようになります。 (『AEM Forms [では非推奨)AEM Formsリモートを使用したAEM Formsの呼び出し』を参照](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting))。
 
 プログラムによってリモートエンドポイントをサービスに追加する場合は、次のEncryptDocumentという短時間のみ有効なプロセスを検討して *ください*。
 
@@ -797,11 +797,11 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 サービスのリモートエンドポイントを作成するには、次の値を指定します。
 
-* **コネクタ識別子の値**: 作成されるエンドポイントの種類を指定します。 リモートエンドポイントを作成するには、を指定し `Remoting`ます。
-* **説明**: エンドポイントの説明を指定します。
-* **名前**: エンドポイントの名前を指定します。
-* **サービス識別子の値**: エンドポイントが属するサービスを指定します。 例えば、この節で紹介するプロセス（Workbench内でアクティブ化されるとプロセスがサービスになる）にリモートエンドポイントを追加するには、を指定し `EncryptDocument`ます。
-* **操作名**: エンドポイントを使用して呼び出される操作の名前を指定します。 リモートエンドポイントを作成する場合は、ワイルドカード文字(&amp;ast;)を指定します。
+* **コネクタ識別子の値**:作成されるエンドポイントの種類を指定します。 リモートエンドポイントを作成するには、を指定し `Remoting`ます。
+* **説明**:エンドポイントの説明を指定します。
+* **名前**:エンドポイントの名前を指定します。
+* **サービス識別子の値**:エンドポイントが属するサービスを指定します。 例えば、この節で紹介するプロセス（Workbench内でアクティブ化されるとプロセスがサービスになる）にリモートエンドポイントを追加するには、を指定し `EncryptDocument`ます。
+* **操作名**:エンドポイントを使用して呼び出される操作の名前を指定します。 リモートエンドポイントを作成する場合は、ワイルドカード文字(&amp;ast;)を指定します。
 
 **リモートエンドポイントの作成**
 
@@ -847,13 +847,13 @@ Java APIを追加使用したリモートエンドポイント：
 
 1. エンドポイントを有効にします。
 
-   オブジェクトのメソッドを呼び出し、そのメソッドから返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
+   オブジェクトのメソッドを呼び出し、そのメソッドによって返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
 
 **関連トピック**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用したリモートエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したリモートエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -861,7 +861,7 @@ Java APIを追加使用したリモートエンドポイント：
 
 ## TaskManagerエンドポイントの追加 {#adding-taskmanager-endpoints}
 
-AEM FormsJava APIを使用して、プログラムによってTaskManagerエンドポイントをサービスに追加できます。 TaskManagerエンドポイントをサービスに追加することで、Workspaceユーザーがサービスを呼び出せるようにします。 つまり、Workspaceで作業しているユーザーは、対応するTaskManagerエンドポイントを持つプロセスを呼び出すことができます。
+プログラムでTaskManagerエンドポイントをサービスに追加するには、AEM FormsJava APIを使用します。 TaskManagerエンドポイントをサービスに追加することで、Workspaceユーザーがサービスを呼び出せるようにします。 つまり、Workspaceで作業しているユーザーは、対応するTaskManagerエンドポイントを持つプロセスを呼び出すことができます。
 
 >[!NOTE]
 >
@@ -897,7 +897,7 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 **エンドポイントのカテゴリの作成**
 
-カテゴリは、Workspace内のサービスを整理するために使用されます。 つまり、Workspaceユーザーは、Workspace内でカテゴリを選択することで、TaskManagerエンドポイントを持つサービスを呼び出すことができます。 TaskManagerエンドポイントを作成する場合、既存のカテゴリを参照するか、新しいカテゴリをプログラムで作成できます。
+カテゴリは、Workspace内のサービスを整理するために使用されます。 つまり、Workspaceユーザーは、Workspace内でカテゴリを選択することで、TaskManagerエンドポイントを持つサービスを呼び出すことができます。 TaskManagerエンドポイントを作成する場合、既存のカテゴリを参照するか、新しいカテゴリをプログラムで作成することができます。
 
 >[!NOTE]
 >
@@ -907,12 +907,12 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 サービスのTaskManagerエンドポイントを作成するには、次の値を指定します。
 
-* **コネクタ識別子**: 作成されるエンドポイントの種類を指定します。 TaskManagerエンドポイントを作成するには、を指定し `TaskManagerConnector`ます。
-* **説明**: エンドポイントの説明を指定します。
-* **名前**: エンドポイントの名前を指定します。
-* **サービス識別子**: エンドポイントが属するサービスを指定します。
-* **カテゴリ**: TaskManagerエンドポイントに関連付けられるカテゴリ識別子の値を指定します。
-* **操作名**: 通常、Workbenchで作成されたプロセスから派生するサービスのTaskManagerエンドポイントを作成する場合、操作の名前はで `invoke`す。
+* **コネクタ識別子**:作成されるエンドポイントの種類を指定します。 TaskManagerエンドポイントを作成するには、を指定し `TaskManagerConnector`ます。
+* **説明**:エンドポイントの説明を指定します。
+* **名前**:エンドポイントの名前を指定します。
+* **サービス識別子**:エンドポイントが属するサービスを指定します。
+* **カテゴリ**:TaskManagerエンドポイントに関連付けられるカテゴリ識別子の値を指定します。
+* **操作名**:通常、Workbenchで作成されたプロセスから派生するサービスのTaskManagerエンドポイントを作成する場合、操作の名前はで `invoke`す。
 
 **TaskManagerエンドポイントの作成**
 
@@ -968,13 +968,13 @@ Java APIを追加使用したTaskManagerエンドポイント：
 
 1. エンドポイントを有効にします。
 
-   オブジェクトのメソッドを呼び出し、そのメソッドから返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
+   オブジェクトのメソッドを呼び出し、そのメソッドによって返された `EndpointRegistryClient` オブジェクトを渡して、エンドポイントを有効にし `enable``Endpoint``createEndpoint` ます。
 
 **関連トピック**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用したTaskManagerエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したTaskManagerエンドポイントの追加](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1076,7 +1076,7 @@ Java APIを使用してエンドポイントを変更します。
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用したエンドポイントの変更](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したエンドポイントの変更](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1084,7 +1084,7 @@ Java APIを使用してエンドポイントを変更します。
 
 ## エンドポイントの削除 {#removing-endpoints}
 
-AEM FormsJava APIを使用して、プログラムによってエンドポイントをサービスから削除できます。 エンドポイントを削除すると、エンドポイントで有効になっている呼び出し方法を使用してサービスを呼び出すことはできません。 例えば、サービスからSOAPエンドポイントを削除する場合、SOAPモードを使用してサービスを呼び出すことはできません。
+AEM FormsJava APIを使用すると、プログラムによってエンドポイントをサービスから削除できます。 エンドポイントを削除すると、エンドポイントで有効になっている呼び出し方法を使用してサービスを呼び出すことはできません。 例えば、サービスからSOAPエンドポイントを削除する場合、SOAPモードを使用してサービスを呼び出すことはできません。
 
 サービスからエンドポイントを削除する方法を示すために、この節では、EncryptDocumentという名前のサービスからEJBエンドポイントを削除し *ます*。
 
@@ -1154,7 +1154,7 @@ Java APIを使用したエンドポイントの削除：
    * 現在のユーザー（接続プロパティで指定）がアクセス権を持つすべてのエンドポイントのリストを取得するには、 `EndpointRegistryClient` オブジェクトの `getEndpoints` メソッドを呼び出し、フィルターとして機能する `PagingFilter` オブジェクトを渡します。 すべてのエンドポイント `(PagingFilter)null` を返すために、を渡すことができます。 このメソッドは、各要素がオブジェクトである `java.util.List` オブジェクトを返し `Endpoint` ます。
    * オブジェクトを繰り返し処理して、 `java.util.List` オブジェクトにエンドポイントがあるかどうかを確認します。 エンドポイントが存在する場合は、各要素が1つの `EndPoint` インスタンスになります。
    * オブジェクトのメソッドを呼び出して、エンドポイントに対応するサー `EndPoint` ビスを特定し `getServiceId` ます。 このメソッドは、サービス名を指定するstring値を返します。
-   * オブジェクトのメソッドを呼び出して、エンドポイントのタイプ `EndPoint` を決定し `getConnectorId` ます。 このメソッドは、エンドポイントのタイプを指定するstring値を返します。 例えば、エンドポイントがEJBエンドポイントの場合、このメソッドはを返し `EJB`ます。
+   * オブジェクトのメソッドを呼び出して、エンドポイントの種類を決定 `EndPoint` し `getConnectorId` ます。 このメソッドは、エンドポイントのタイプを指定するstring値を返します。 例えば、エンドポイントがEJBエンドポイントの場合、このメソッドはを返し `EJB`ます。
 
 1. エンドポイントを削除します。
 
@@ -1164,7 +1164,7 @@ Java APIを使用したエンドポイントの削除：
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用したエンドポイントの削除](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
+[QuickStart:Java APIを使用したエンドポイントの削除](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1182,7 +1182,7 @@ AEM FormsAPIを使用して、エンドポイントコネクタに関する情�
 
 >[!NOTE]
 >
->このトピックでは、 `ConnectorRegistryClient` APIを使用してエンドポイントコネクタに関する情報を取得します。 ( [AEM FormsAPIリファレンスを参照](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
+>このトピックでは、 `ConnectorRegistryClient` APIを使用してエンドポイントコネクタに関する情報を取得します。 (『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照)。
 
 ### 手順の概要 {#summary_of_steps-8}
 
@@ -1214,12 +1214,12 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 情報を取得するコネクタの種類を指定します。 次のタイプのコネクタが存在します。
 
-* **EJB**: クライアントアプリケーションがEJBモードを使用してサービスを呼び出せるようにします。
-* **SOAP**: クライアントアプリケーションがSOAPモードを使用してサービスを呼び出せるようにします。
-* **監視フォルダー**: 監視フォルダーからサービスを呼び出せるようにします。
-* **電子メール**: 電子メールメッセージでサービスを呼び出せるようにします。
-* **Remoting**: Flexクライアントアプリケーションがサービスを呼び出せるようにします。
-* **TaskManagerConnector**: WorkspaceユーザーがWorkspace内からサービスを呼び出せるようにします。
+* **EJB**:クライアントアプリケーションがEJBモードを使用してサービスを呼び出せるようにします。
+* **SOAP**:クライアントアプリケーションがSOAPモードを使用してサービスを呼び出せるようにします。
+* **監視フォルダー**:監視フォルダーからサービスを呼び出せるようにします。
+* **電子メール**:電子メールメッセージでサービスを呼び出せるようにします。
+* **Remoting**:Flexクライアントアプリケーションがサービスを呼び出せるようにします。
+* **TaskManagerConnector**:WorkspaceユーザーがWorkspace内からサービスを呼び出せるようにします。
 
 **設定値の取得**
 
@@ -1237,7 +1237,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 Java APIを使用して、エンドポイントコネクタ情報を取得します。
 
-1. プロジェクトファイルを含めます。 .
+1. プロジェクトファイルを含めます。.
 
    Javaプロジェクトのクラスパスに、adobe-livecycle-client.jarなどのクライアントJARファイルを含めます。
 
@@ -1259,7 +1259,7 @@ Java APIを使用して、エンドポイントコネクタ情報を取得しま
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Java APIを使用したエンドポイントコネクタ情報の取得](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[QuickStart:Java APIを使用したエンドポイントコネクタ情報の取得](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
