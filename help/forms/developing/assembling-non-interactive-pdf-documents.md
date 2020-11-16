@@ -41,7 +41,7 @@ ht-degree: 3%
 
 このDDXドキュメントには `NoXFA` 要素が含まれています。この要素は、非インタラクティブPDFドキュメントを返すようAssemblerサービスに指示します。
 
-Acrobatフォームまたは静的XFAフォームに基づく入力PDFドキュメントの場合、OutputサービスをAEM formsインストールに含めずに、非インタラクティブPDFドキュメントをAssemblerサービスでアセンブルできます。 ただし、入力PDFドキュメントがダイナミックXFAフォームの場合は、OutputサービスがAEM formsのインストールに含まれている必要があります。 動的なXFAフォームがアセンブリされたときに、OutputサービスがAEM formsインストールの一部でない場合は、例外が発生します。 「ドキュメント出力ストリームの [作成](/help/forms/developing/creating-document-output-streams.md)」を参照してください。
+Assemblerサービスは、入力PDFドキュメントがAcrobatフォームまたは静的XFAフォームを基にしている場合、OutputサービスがAEM formsインストールに含まれていなくても、非インタラクティブPDFドキュメントをアセンブルできます。 ただし、入力PDFドキュメントがダイナミックXFAフォームの場合は、OutputサービスがAEM formsのインストールに含まれている必要があります。 動的XFAフォームのアセンブリ時に、OutputサービスがAEM formsインストールの一部でない場合は、例外が発生します。 「ドキュメント出力ストリームの [作成](/help/forms/developing/creating-document-output-streams.md)」を参照してください。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Acrobatフォームまたは静的XFAフォームに基づく入力PDFドキュ�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **Assemblerクライアントの作成**
 
@@ -156,7 +156,7 @@ Assembler Service API(Java)を使用して、非インタラクティブPDFド�
    * Create a `java.io.File` object and ensure that the file name extension is .pdf.
    * Invoke the `Document` object’s `copyToFile` method to copy the contents of the `Document` object to the file. メソッドが返した `Document` オブジェクトを使用していることを確認し `invokeOneDocument` ます。
 
-* 「クイック開始（SOAPモード）: Java APIを使用した非インタラクティブPDFドキュメントのアセンブリ»
+* 「クイック開始（SOAPモード）:Java APIを使用した非インタラクティブPDFドキュメントのアセンブリ»
 
 ## WebサービスAPIを使用した非インタラクティブPDFドキュメントのアセンブリ {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 
@@ -168,17 +168,17 @@ Assembler Service API（Webサービス）を使用して非インタラクテ�
 
    >[!NOTE]
    >
-   >サーバーホスト `localhost` AEM FormsのIPアドレスに置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Assemblerクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
+   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `AssemblerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -221,7 +221,7 @@ Assembler Service API（Webサービス）を使用して非インタラクテ�
    * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
    * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
 
-* 「クイック開始(MTOM): WebサービスAPIを使用した非インタラクティブPDFドキュメントのアセンブリ」を参照してください。
+* 「クイック開始(MTOM):WebサービスAPIを使用した非インタラクティブPDFドキュメントのアセンブリ」を参照してください。
 
 **関連トピック**
 
