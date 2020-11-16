@@ -10,13 +10,16 @@ topic-tags: repo_restructuring
 discoiquuid: 28c92e7d-2106-4333-afa6-c5528a00d7b4
 translation-type: tm+mt
 source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 77%
 
 ---
 
 
 # AEM 6.5 における e コマースリポジトリの再構築{#e-commerce-repository-restructuring-in-aem}
 
-As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM E-Commerce Solution. 一部の変更は、AEM 6.5のアップグレードプロセス中に作業を行う必要がありますが、その他の変更は、将来のアップグレードまで延期できます。
+As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM E-Commerce Solution. 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
 
@@ -49,7 +52,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
     </ul> <p>大規模なカタログでは、以下の Java システムプロパティを AEM に渡して、コマース移行タスクを個別に実行することをお勧めします。</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>移行後、AEM の再起動が必要です。</p> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>備考</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
