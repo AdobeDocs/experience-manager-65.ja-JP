@@ -11,6 +11,9 @@ discoiquuid: 084075b8-826d-4f27-9342-35f33368f24f
 noindex: true
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1392'
+ht-degree: 88%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Oak-run は、コマンドラインで以下のようなインデックスに関する使用例をサポートします。AEM の JMX コンソールを使用する必要はありません。
 
-oak-run.jarインデックス・コマンドを使用してOakインデックスを管理すると、次のようなメリットが得られます。
+Oakインデックスを管理するためのoak-run.jarインデックスコマンドを使用すると、次のようなメリットが得られます。
 
 1. Oak-run indexコマンドは、AEM 6.4用の新しいインデックス作成ツールセットを提供します。
 1. Oak-run を使用すると、インデックス再作成の時間を短縮でき、大規模なリポジトリでのインデックス再作成時間を削減できます。
@@ -84,11 +87,11 @@ Valid indexes :
 
 前述の操作は、次の操作用の index コマンドを使用して実行できるようになりました。
 
-* `--index-info`  — インデックスに関連する各種統計を収集し、ダンプする
+* `--index-info`  — インデックスに関連する各種統計を収集してダンプ
 
 * `--index-definitions`  — インデックス定義を収集し、ダンプする
 
-* `--index-dump`  — インデックスコンテンツをダンプする
+* `--index-dump`  — インデックス内容をダンプします
 
 コマンドが実際にどのように機能するかについての例は、次を参照してください。
 
