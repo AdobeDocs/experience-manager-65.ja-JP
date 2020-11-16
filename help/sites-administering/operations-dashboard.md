@@ -109,11 +109,11 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    * **名前:** `sling:resourceType`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `granite/operations/components/mbean`
    * **名前:** `resource`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
@@ -165,17 +165,17 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    * **名前:** `Composite Health Check`
 
-      * **型:** `nt:unstructured`
+      * **型：**`nt:unstructured`
 
    次のようにプロパティを定義します。
 
    * **名前:** `sling:resourceType`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `granite/operations/components/mbean`
    * **名前:** `resource`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
@@ -412,7 +412,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 ログメッセージユーザーインターフェイスには、デフォルトですべてのエラーメッセージが表示されます。表示されるログメッセージを増やす場合は、該当するログレベルでロガーを設定する必要があります。
 
-ログメッセージはメモリ内ログアペンダーを使用するので、ログファイルとは関係しません。 もう1つの結果として、このUIでログレベルを変更しても、従来のログファイルに記録される情報は変更されません。 このUIでロガーを追加および削除すると、メモリ内ロガーにのみ影響します。 また、ロガー設定の変更はメモリ内ロガーの将来に反映されます。既にログに記録され、関連しなくなったエントリは削除されませんが、今後同様のエントリはログに記録されません。
+ログメッセージはメモリ内ログアペンダーを使用するので、ログファイルとは関係しません。もう1つの結果として、このUIでログレベルを変更しても、従来のログファイルに記録される情報は変更されません。このUIでロガーを追加および削除すると、メモリ内ロガーにのみ影響します。また、ロガー設定の変更はメモリ内ロガーの将来に反映されます。既にログに記録され、関連しなくなったエントリは削除されませんが、今後同様のエントリはログに記録されません。
 
 ログに記録する内容を設定するには、UI の左上にあるギアボタンから、ロガーを設定します。そこで、ロガーの設定を追加、削除または更新できます。ロガーの設定は、**ログレベル**（警告／情報／デバッグ）と&#x200B;**フィルター名**&#x200B;で構成されます。**フィルター名**&#x200B;には、記録されるログメッセージのソースをフィルター処理する役割があります。また、指定したレベルのすべてのログメッセージをロガーで取り込む必要がある場合は、フィルター名を「**root**」とします。ロガーのレベルを設定すると、指定したレベル以上のすべてのメッセージの取り込みがトリガーされます。
 
@@ -439,7 +439,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 >[!NOTE]
 >
->**AEM 6.4**&#x200B;では、メンテナンスタスクは、INFOレベルでより詳細な情報を豊富な形式で初期設定の状態でログアウトされます。 これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
+>**AEM 6.4**&#x200B;では、メンテナンスタスクはINFOレベルでより詳細な情報を豊富な形式で初期状態でログアウトされます。 これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
 >
 >メンテナンスタスクのアクティビティを監視し、対処するためにサードパーティツール（Splunk など）を使用している場合、次のログステートメントを使用できます。
 
@@ -468,7 +468,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 ### クエリパフォーマンス {#query-performance}
 
-[クエリのパフォーマンス]ページでは、システムが実行する最も遅いクエリを分析できます。 この情報は、JMX Mbeanのリポジトリによって提供されます。 Jackrabbitでは、 `com.adobe.granite.QueryStat` JMX Mbeanがこの情報を提供し、Oakリポジトリでは、 `org.apache.jackrabbit.oak.QueryStats.`
+[クエリのパフォーマンス]ページでは、システムが実行する最も遅いクエリを分析できます。この情報は、JMX Mbeanのリポジトリによって提供されます。 Jackrabbitでは、 `com.adobe.granite.QueryStat` JMX Mbeanがこの情報を提供し、Oakリポジトリでは、 `org.apache.jackrabbit.oak.QueryStats.`
 
 このページには以下の項目が表示されます。
 
@@ -521,7 +521,7 @@ It can also be accessed directly at this URL: `https://serveraddress:port/libs/g
 
 ### ステータス ZIP をダウンロード {#download-status-zip}
 
-これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling指標および統計情報が含まれており、これにより大きなファイルが作成される場合があります。 You can reduce the impact of large status files by using the **Download Status ZIP** window. The window can be accessed from:**AEM > Tools > Operations > Diagnosis > Download Status ZIP.**
+これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling指標および統計が含まれており、これにより大きなファイルが作成される場合があります。 You can reduce the impact of large status files by using the **Download Status ZIP** window. The window can be accessed from:**AEM > Tools > Operations > Diagnosis > Download Status ZIP.**
 
 このウィンドウでは、エクスポートするもの（ログファイルやスレッドダンプ）および現在の日付を基準にしてダウンロードに含めるログの日数を選択できます。
 
@@ -573,7 +573,7 @@ Lucene バイナリクリーンアップタスクを使用することで、Luce
 メンテナンスタスクは Lucene に関連したリビジョンガベージを減らすために開発されましたが、このタスクを実行すると、次のように全般的に効率が向上します。
 
 * データストアのガベージコレクションタスクの毎週の実行は、より迅速に完了します。
-* また、AEM全体のパフォーマンスがわずかに向上する可能性があります
+* また、AEM全体のパフォーマンスがわずかに向上する場合もあります
 
 You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations > Maintenance > Daily Maintenance Window > Lucene Binaries Cleanup**.
 
@@ -695,7 +695,7 @@ This will add a corresponding resource at /apps/granite/operations/config/mainte
 
 ## システム概要 {#system-overview}
 
-**システム概要ダッシュボード** には、AEMインスタンスの設定、ハードウェア、正常性の概要が表示されます。 つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
+The **System Overview Dashboard** displays a high-level overview of the configuration, hardware and health of the AEM instance. つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
 
 >[!NOTE]
 >
