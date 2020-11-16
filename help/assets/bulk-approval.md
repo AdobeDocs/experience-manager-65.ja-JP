@@ -102,8 +102,8 @@ ht-degree: 57%
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
 
-   *図： カードの表示。*
+   *図：カードの表示。*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
 
-   *図： リスト表示。*
+   *図：リスト表示。*
