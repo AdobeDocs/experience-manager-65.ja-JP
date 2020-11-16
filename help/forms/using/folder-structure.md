@@ -11,6 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: 7427858d-8eec-423d-a0a9-444140420620
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 66%
 
 ---
 
@@ -25,14 +28,14 @@ AEM Forms Workspace は Backbone を使用して MVC アーキテクチャ上で
 
 すべてのコンポーネントのアセットは、以下に示すフォルダー構造内に配置されています。To access the assets, log in to CRXDE Lite and browse to `/libs/ws/js/runtime/`.
 
-**models** ：バックボーンモデルを含みます。
+**モデル** ：バックボーンモデルを含みます。
 
-**表示** ：バックボーン表示を含む。
+**表示** ：バックボーン表示を含みます。
 
 **templates** ：コンポーネントのHTMLテンプレートのみが含まれます。
 
 **routes** ：ユニバーサルルートを含みます。 routes 内部の Templates フォルダーには、HTML コードとコンポーネントへの参照が含まれます。
 
-**services** RESTエンドポイントでAdobe Experience ManagerサーバーAPIを呼び出すためのサービスインターフェイスが含まれます。
+**services** :RESTエンドポイントのAdobe Experience ManagerサーバーAPIを呼び出すためのサービスインターフェイスが含まれます。
 
-**util** ：複数のコンポーネントで使用できる汎用ユーティリティを含みます。
+**util** ：複数のコンポーネントで使用できる汎用ユーティリティが含まれます。
