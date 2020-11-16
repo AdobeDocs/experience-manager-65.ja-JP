@@ -12,6 +12,9 @@ discoiquuid: 2de88b55-dda9-4ccf-ad4d-dd67943ef610
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 43%
 
 ---
 
@@ -26,6 +29,6 @@ From the [Getting Started with AEM Communities for Enablement](/help/communities
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの「割り当て [の基本](/help/communities/essentials-assignments.md) 」ページを参照してください。
+詳しくは、開発者向けの「 [割り当ての基本](/help/communities/essentials-assignments.md) 」ページを参照してください。
 
-The [assignments function](/help/communities/functions.md#assignments-function) is available while creating a [community site](/help/communities/sites-console.md).
+[割り当て機能](/help/communities/functions.md#assignments-function) は、 [コミュニティサイトの作成時に利用できます](/help/communities/sites-console.md)。
