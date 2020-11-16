@@ -12,6 +12,9 @@ discoiquuid: 6612f89d-c518-4e5a-8df1-6487cc330a9a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 53%
 
 ---
 
@@ -26,11 +29,11 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 ## 操作の詳細 {#operation-details}
 
-ページのバージョンを比較する場合、相違を容易にするために、比較対象の以前のバージョンがバックグラウンドでAEMによって再作成されます。 これは、並べて比較するためにコンテンツをレ [ンダリングできる必要があります](/help/sites-developing/pagediff.md#operation-details)。
+ページのバージョンを比較する場合、相違を容易にするために、ユーザーが比較したい以前のバージョンがAEMによってバックグラウンドで再作成されます。 これは、並べて比較するためにコンテンツ [をレンダリングできるようにする必要があります](/help/sites-developing/pagediff.md#operation-details)。
 
-この再作成操作は、AEMによって内部的に行われ、ユーザーに対して透過的で、介入は必要ありません。 ただし、CRX DE Liteなどでリポジトリを表示している管理者は、コンテンツ構造内で再作成されたバージョンを確認できます。
+このレクリエーション操作はAEMが内部的に行い、ユーザーに対して透過的で、介入は必要ありません。 ただし、CRX DE Liteなどでリポジトリを表示している管理者には、コンテンツ構造内で再作成されたこれらのバージョンが表示されます。
 
-コンテンツを比較すると、比較するページまでのツリー全体が次の場所に再作成されます。
+コンテンツを比較すると、比較対象のページまでのツリー全体が次の場所に再作成されます。
 
 `/tmp/versionhistory/`
 
@@ -42,7 +45,7 @@ Previously, in Classic UI, special development consideration had to be made to f
 
 ただし、開発者が考慮する必要がある制限事項はいくつかあります。
 
-* この機能では、AEM 製品の名前空間にない CSS クラスが使用されます。同じ名前を持つ他のカスタムCSSクラスまたはサードパーティCSSクラスがページに含まれている場合、相違の表示が影響を受ける可能性があります。
+* この機能では、AEM 製品の名前空間にない CSS クラスが使用されます。同じ名前を持つ他のカスタムCSSクラスまたはサードパーティのCSSクラスがページに含まれている場合は、相違の表示に影響する場合があります。
 
    * `html-added`
    * `html-removed`
