@@ -12,6 +12,9 @@ discoiquuid: 85ebc05d-ce45-4bbb-b9cc-b21810d0d877
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 93%
 
 ---
 
@@ -23,12 +26,12 @@ source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
 次の内容について説明します。
 
 * [概要](#getting-started)\
-   最初のページを作成して公開するために必要なイベントの基本的なシーケンスの詳細を説明します。
+   最初のページを作成して公開する際に必要なイベントの基本的な順序の詳細を説明します。
 
 * [その他のアクション](#further-actions)\
-   オーサリング時に使用できるその他多数のアクションについて説明します。
+   オーサリング時に使用できる他の多数のアクションについて説明します。
 
-## はじめに{#getting-started}
+## 概要 {#getting-started}
 
 最初のページを作成して公開するために必要になる基本的な一連のイベントについて、詳しく説明します。
 
