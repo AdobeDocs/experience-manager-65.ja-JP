@@ -10,6 +10,9 @@ topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 92%
 
 ---
 
@@ -35,7 +38,7 @@ MDM 管理者は ipa ファイルと apk ファイルの両方を MDM サーバ�
 
 ## AEM Forms アプリケーションに影響するプロファイル設定 {#profile-settings-affecting-the-aem-forms-app-br}
 
-お使いのプロファイルの次の設定は、お使いのデバイスのAEM Formsアプリケーションの機能に影響します。
+お使いのデバイスでの次のプロファイル設定は、お使いのデバイスのAEM Formsアプリの機能に影響を与えます。
 
 * 「**Device functionality**」セクションの「**Allow use of camera**」
 
