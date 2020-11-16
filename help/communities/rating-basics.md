@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7dc3ef57-05c3-45d4-ace3-bb3ba6ea768b
 translation-type: tm+mt
 source-git-commit: b7318370c45f37a7faf5434b2de3f145b8d64bce
+workflow-type: tm+mt
+source-wordcount: '284'
+ht-degree: 48%
 
 ---
 
@@ -75,7 +78,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
 * [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
