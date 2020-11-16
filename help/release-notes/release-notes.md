@@ -1,11 +1,11 @@
 ---
 title: General Release Notes for [!DNL Adobe Experience Manager] 6.5
-description: '[!DNLAdobe Experience Manager] 6.5では、リリース情報、新機能、インストール方法、および詳細な変更リストについて説明しています。'
+description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能情報、インストール方法および詳細な変更リストが記載されています。'
 translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 64%
+source-wordcount: '2150'
+ht-degree: 65%
 
 ---
 
@@ -82,7 +82,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 ### [!DNL Experience Manager] Sites {#experience-manager-sites}
 
-すべての変更点リストは[AEM サイトとアドオン](/help/release-notes/sites.md)を参照してください。
+変更点の完全なリストは[AEM Sites とアドオン](/help/release-notes/sites.md)を参照してください。
 
 #### 管理された単一ページアプリ {#managed-single-page-apps}
 
@@ -140,7 +140,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### Connected Assets {#connected-assets}
 
-「Connected Assets」機能は、中央AEM AssetsのDAM展開からのアセットを活用する必要がある、多数のAEM Sites展開を伴う大規模な展開をターゲットにしています。 一元的に管理されるアセットの管理を改善しながら、さまざまなサイトの導入に対するアセットの供給を効率的に行うことができます。
+「Connected Assets」機能は、中央AEM AssetsDAM展開の資産を活用する必要のあるAEM Sites展開の多い大規模な展開を対象としています。 一元的に管理されるアセットの管理を改善しながら、さまざまなサイトの導入に対するアセットの供給を効率的に行うことができます。
 
 ### Dynamic Media {#dynamic-media}
 
@@ -205,7 +205,7 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 
 * スタンドアロンクイックスタート： `cq-quickstart-6.5.0.jar`.
 * Application Server Quickstart: `cq-quickstart-6.5.0.war`.
-* 様々なWebサーバーおよびプラットフォーム用のDispatcher4.3.2以降。 「 [ダウンロードリンク」を参照](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)
+* 様々なWebサーバーおよびプラットフォーム向けのDispatcher 4.3.2以降。 「 [ダウンロードリンク」を参照](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)
 * Eclipse IDE 用プラグイン（[詳細およびダウンロード](/help/sites-developing/aem-eclipse.md)）
 
 * Brackets コードエディターの拡張機能（[詳細およびダウンロード](/help/sites-developing/aem-brackets.md)）
@@ -239,7 +239,7 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 **フォーム**
 
 * [AEM Forms の機能パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)
-* [AEM FormsOSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
+* [AEM FormsOSGiクライアントSDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
 
 ## 言語 {#languages}
 
@@ -260,7 +260,7 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 
 ## インストールと更新 {#install-update}
 
-設定要件については、「 [インストール手順](/help/sites-deploying/custom-standalone-install.md)」を参照してください。
+設定要件については、 [インストール手順を参照してください](/help/sites-deploying/custom-standalone-install.md)。
 
 手順について詳しくは、 [アップグレードドキュメントを参照してください](/help/sites-deploying/upgrade.md)。
 
