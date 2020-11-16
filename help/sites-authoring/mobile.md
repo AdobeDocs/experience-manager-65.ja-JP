@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 89%
 
 ---
 
@@ -23,16 +26,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します(See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
+>既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
 >
->AEM開発者は新しいデバイスグループを作成できます。 (See [Creating Device Group Filters](/help/sites-developing/groupfilters.md).)
+>AEM 開発者は、新しいデバイスグループを作成できます。(See [Creating Device Group Filters](/help/sites-developing/groupfilters.md).)
 
 次の手順を使用して、モバイルページをオーサリングします。
 
-1. From global navigation open the **Sites** console.
+1. グローバルナビゲーションから&#x200B;**サイト**&#x200B;コンソールを開きます。
 1. Open the page **We.Retail** -> **United States** -> **English**.
 
-1. Switch to **Preview** mode.
+1. **プレビューモードに切り替えます** 。
 1. ページ上部のデバイスアイコンをクリックして、必要なエミュレーターに切り替えます。
 1. コンポーネントをコンポーネントブラウザーからページにドラッグ&amp;ドロップします。
 
