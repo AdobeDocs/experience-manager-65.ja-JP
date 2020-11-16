@@ -21,7 +21,7 @@ ht-degree: 61%
 
 # AEM Forms Workspace ユーザーインターフェイスのロケールの変更{#changing-the-locale-of-aem-forms-workspace-user-interface}
 
-AEM Formsワークスペースでは、英語、フランス語、ドイツ語、日本語のサポートがすぐに利用できます。 また、AEM Formsワークスペースユーザーインターフェイスを他の言語にローカライズする機能も提供します。
+AEM Formsのワークスペースでは、英語、フランス語、ドイツ語、日本語に対するサポートがすぐに利用できます。 また、AEM Formsワークスペースユーザーインターフェイスを他の言語にローカライズする機能も提供します。
 
 AEM Formsワークスペースユーザーインターフェイスを任意の言語にローカライズするには：
 
@@ -50,7 +50,7 @@ Perform the following steps to add support for a language *New* and the browser 
 
 ## 折りたたまれているカテゴリ、キュー、およびプロセスのローカライズ {#localizing-collapsed-categories-queues-and-processes}
 
-AEM Formsワークスペースは、カテゴリ、キューおよびプロセスのヘッダーを表示するために画像を使用します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](introduction-customizing-html-workspace.md#building-html-workspace-code)
+AEM Formsワークスペースは、画像を使用してカテゴリ、キューおよびプロセスのヘッダーを表示します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 次の手順では、新しくローカライズされた画像ファイルは&#x200B;*Categories_nw.png*、*Queue_nw.png*、および *Processes_nw.png* であると想定しています。画像の推奨される幅は19pxです。
 
