@@ -66,7 +66,7 @@ The **cq:ActivitySettings** node under the activity&#39;s jcr:content is protect
 
 ## Configuring the AEM Link Externalizer {#configuring-the-aem-link-externalizer}
 
-Adobe Target でアクティビティを編集する場合、AEM オーサーノードで URL を変更していなければ、URL は **localhost** を指しています。書き出したコンテンツが特定の *パブリッシュ* ドメインを参照するようにする場合は、AEM Link Externalizerを設定できます。
+Adobe Target でアクティビティを編集する場合、AEM オーサーノードで URL を変更していなければ、URL は **localhost** を指しています。書き出したコンテンツが特定の *パブリッシュ* ドメインを指すようにする場合は、AEM Link Externalizerを設定できます。
 
 >[!NOTE]
 >
