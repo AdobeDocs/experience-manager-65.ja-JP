@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
 workflow-type: tm+mt
 source-wordcount: '1065'
-ht-degree: 21%
+ht-degree: 24%
 
 ---
 
@@ -20,7 +20,7 @@ AEM allows you to export a page as a complete web page including images, `.js` a
 >
 >ブラウザーと設定に応じて、ダウンロードは次のいずれかになります。
 >* アーカイブファイル(`<page-name>.export.zip`)
->* フォルダ(`<page-name>`); 効果的にアーカイブ・ファイルは既に拡張済み
+>* フォルダ(`<page-name>`);効果的にアーカイブ・ファイルは既に拡張済み
 
 
 ## ページの書き出し {#exporting-a-page}
@@ -88,7 +88,7 @@ AEM allows you to export a page as a complete web page including images, `.js` a
 
 1. In **CRXDE Lite**, create a node below `/etc/contentsync/templates`:
 
-   * `Name`: サイトに適した名前 例えば、 `<mysite>`。 ページエクスポーターテンプレートを選択すると、ページプロパティダイアログに名前が表示されます。
+   * `Name`:サイトに適した名前例えば、 `<mysite>`。 ページエクスポーターテンプレートを選択すると、ページプロパティダイアログに名前が表示されます。
 
    * `Type`: `nt:unstructured`
 
@@ -103,7 +103,7 @@ AEM allows you to export a page as a complete web page including images, `.js` a
 1. ページの `jcr:content` ノードで、プロパティを作成します。
    * `Name`: `cq:exportTemplate`
    * `Type`: `String`
-   * `Value`: テンプレートのパス 例： `/etc/contentsync/templates/mysite`
+   * `Value`:テンプレートのパス例： `/etc/contentsync/templates/mysite`
 
 ### ページエクスポーター設定ノード {#page-exporter-configuration-nodes}
 
