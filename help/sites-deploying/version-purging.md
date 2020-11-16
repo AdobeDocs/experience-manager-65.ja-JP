@@ -12,6 +12,9 @@ discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 69%
 
 ---
 
@@ -57,21 +60,21 @@ To configure the Version Manager, [create a configuration](/help/sites-deploying
 * `versionmanager.createVersionOnActivation` (ブール値、デフォルト：true)ページがアクティブ化されたときにバージョンを作成するかどうかを指定します。
 レプリケーションエージェントがバージョンの作成を抑制するように設定されていない限り、バージョンが作成されます。これはバージョンマネージャーで順守されます。A version is created only if the activation happens on a path that is contained in `versionmanager.ivPaths` (see below).
 
-* `versionmanager.ivPaths`(String[], default: `{"/"}`)をtrueに設定した場合に、アクティベーション時にバージョンが暗黙的に作成さ `versionmanager.createVersionOnActivation` れるパスを指定します。
+* `versionmanager.ivPaths`(文字列[]、デフォルト： `{"/"}`をtrueに設定した場合、アクティベーション上で暗黙的に作成されるバージョンのパス `versionmanager.createVersionOnActivation` を指定します。
 
 * `versionmanager.purgingEnabled` (ブール値、デフォルト：false)新しいバージョンが作成された場合に削除を有効にするかどうかを定義します。
 
-* `versionmanager.purgePaths` (String[], default:{&quot;/content&quot;})新しいバージョンが作成されたときにバージョンを削除するパスを指定します。
+* `versionmanager.purgePaths` (文字列[]、デフォルト：{&quot;/content&quot;})新しいバージョンが作成された場合に、バージョンを削除するパスを指定します。
 
-* `versionmanager.maxAgeDays` (int、デフォルト：30)バージョンの削除時に、設定値より古いバージョンが削除されます。 値が1未満の場合、バージョンの経過時間に基づいて削除は実行されません。
+* `versionmanager.maxAgeDays` (int、デフォルト：30)バージョンの削除時に、設定値より古いバージョンが削除されます。 値が1より小さい場合は、バージョンの経過時間に基づいて削除が実行されません。
 
-* `versionmanager.maxNumberVersions` （int、デフォルト5）バージョンの削除時に、n番目に新しいバージョンより古いバージョンが削除されます。 値が1未満の場合、バージョンの数に基づいて削除は実行されません。
+* `versionmanager.maxNumberVersions` （int、デフォルト5）バージョンの削除時に、n番目に新しいバージョンより古いバージョンが削除されます。 値が1より小さい場合、バージョン数に基づいて削除は実行されません。
 
 * `versionmanager.minNumberVersions` （int、デフォルト0）年齢に関係なく保持される最小バージョン数です。 この値を 1 未満に設定すると、保持するバージョン数の最小数は設定されません。
 
 >[!NOTE]
 >
->リポジトリに多数のバージョンを保存することはお勧めできません。そのため、バージョンパージ操作を設定するときは、パージから多くのバージョンを除外しすぎないでください。そうしないと、リポジトリサイズが適切に最適化されません。ビジネス要件が原因で多数のバージョンを維持する場合は、アドビサポートに連絡して、リポジトリサイズを最適化する別の方法を探してください。
+>リポジトリに多数のバージョンを保存することはお勧めできません。そのため、バージョンパージ操作を設定するときは、パージから多くのバージョンを除外しすぎないでください。そうしないと、リポジトリサイズが適切に最適化されません。ビジネス要件が原因で多数のバージョンを維持する場合は、Adobeサポートに問い合わせて、リポジトリサイズを最適化する別の方法を探してください。
 
 ### 保持オプションの組み合わせ {#combining-retention-options}
 
