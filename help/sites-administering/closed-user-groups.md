@@ -12,6 +12,9 @@ discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 2142df4f7579e052e18879b437fc43911010b475
+workflow-type: tm+mt
+source-wordcount: '6890'
+ht-degree: 61%
 
 ---
 
@@ -26,11 +29,11 @@ AEM 6.3 より、「閉じられたユーザーグループ」という新しい
 >
 >このドキュメントでは、説明を簡略にするために、閉じられたユーザーグループ（Closed User Group）を「CUG」という略語で表記します。
 
-新しい実装の目標は、必要な場所に既存の機能を適用し、古いバージョンの問題や設計上の制限に対応することです。 その結果として、次の特性を持つ新しい CUG デザインが生まれました。
+新しい実装の目標は、必要に応じて既存の機能を対象とし、古いバージョンの問題や設計上の制限に対処することです。 その結果として、次の特性を持つ新しい CUG デザインが生まれました。
 
 * 認証要素と承認要素の切り離し。これらの要素は、個別に使用することも、一緒に使用することもできます。
 * 他のアクセス制御設定や権限要件と競合することなく、設定済みの CUG ツリーで制限付き読み取りアクセスを反映する専用の承認モデル。
-* 制限付き読み取りアクセスのアクセス制御設定（通常オーサリングインスタンスで必要）と、公開時にのみ必要な権限評価との分離。
+* 制限付き読み取りアクセスのアクセス制御設定（通常オーサリングインスタンスで必要）と、通常は公開でのみ必要な権限の評価とは別個の設定です。
 * 権限を昇格しなくても、制限付き読み取りアクセスを編集可能。
 * 認証要件をマークするための、専用のノードタイプ拡張。
 * 認証要件に関連付けられる、オプションのログインパス。
@@ -56,20 +59,20 @@ CUG の重要な機能は、コンテンツリポジトリ内の特定のツリ�
 
 この新しいタイプのポリシーは、次の特性を持ちます。
 
-* org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy（Apache Jackrabbit APIで定義）型のアクセス制御ポリシー。
+* org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicyタイプのアクセス制御ポリシー（Apache Jackrabbit APIで定義）;
 * PrincipalSetPolicyは、変更可能なプリンシパルのセットに対する権限を付与します。
 * 付与される権限とポリシーの有効範囲は、実装の詳細です。
 
-CUGを表すために使用されるPrincipalSetPolicyの実装には、次の事項も定義されています。
+CUGを表すために使用されるPrincipalSetPolicyの実装には、次の定義も含まれます。
 
 * CUG ポリシーは、通常の JCR アイテムへの読み取りアクセスのみを付与します（例えば、アクセス制御コンテンツは除外されます）。
 * 有効範囲は、CUG ポリシーを保持する、アクセス制御されたノードによって定義されます。
 * CUG ポリシーはネストできます。ネストされた CUG は、「親」CUG のプリンシパルセットを継承しなくても、新しい CUG を開始できます。
 * ポリシーの効果は、評価が有効になっている場合は次にネストされた CUG に至るまで、サブツリー全体に継承されます。
 
-これらのCUGポリシーは、oak-authorization-cugと呼ばれる別の認証モジュールを通じてAEMインスタンスにデプロイされます。 このモジュールは、独自のアクセス制御管理および権限評価に付属しています。つまり、デフォルトの AEM のセットアップには、複数の承認メカニズムを組み合わせた Oak コンテンツリポジトリ設定が付属しています。For more info, see [this page on the Apache Oak Documentation](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html).
+これらのCUGポリシーは、oak-authorization-cugと呼ばれる別の認証モジュールを介してAEMインスタンスにデプロイされます。 このモジュールは、独自のアクセス制御管理および権限評価に付属しています。つまり、デフォルトの AEM のセットアップには、複数の承認メカニズムを組み合わせた Oak コンテンツリポジトリ設定が付属しています。For more info, see [this page on the Apache Oak Documentation](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html).
 
-この複合セットアップでは、新しいCUGは、ターゲットノードにアタッチされた既存のアクセス制御コンテンツを置き換えませんが、補助として設計され、元のアクセス制御に影響を与えずに後で削除することもできます。デフォルトでは、AEMではアクセス制御リストになります。
+この複合セットアップでは、新しいCUGは、ターゲットノードにアタッチされた既存のアクセス制御コンテンツを置き換えませんが、補助として設計されており、AEMではデフォルトでアクセス制御リストとなり、元のアクセス制御に影響を与えずに後で削除できます。
 
 前の実装とは対照的に、新しい CUG ポリシーは常にアクセス制御コンテンツとして認識、処理されます。つまり、新しい CUG ポリシーは、JCR アクセス制御管理 API を使用して作成、編集されるということです。For more info, see the [Managing CUG Policies](#managing-cug-policies) section.
 
@@ -82,21 +85,21 @@ CUG ポリシーの権限評価と、デフォルトまたは追加の承認モ�
 CUG ポリシーを処理、評価するために設計された承認モデルに関連付けられる権限評価には、次の特性が適用されます。
 
 * 通常のノードとプロパティの読み取り権限のみを処理し、アクセス制御コンテンツを読み取りません。
-* このサービスは、保護されたJCRコンテンツの変更に必要な書き込み権限や権限の種類（アクセス制御、ノードタイプ情報、バージョン管理、ロック、ユーザー管理など）を処理しません。これらの権限はCUGポリシーの影響を受けず、関連付けられた承認モデルによって評価されません。 これらの権限が付与されるかどうかは、セキュリティ設定に設定された他のモデルに応じます。
+* 書き込み権限や、保護されたJCRコンテンツの変更に必要な権限(アクセス制御、ノードタイプ情報、バージョン管理、ロック、ユーザー管理など)は処理されません。これらの権限はCUGポリシーの影響を受けず、関連付けられた承認モデルによって評価されません。 これらの権限が付与されるかどうかは、セキュリティ設定に設定された他のモデルに応じます。
 
-権限評価に対する単一のCUGポリシーの影響を要約すると、次のようになります。
+権限評価に対する単一のCUGポリシーの影響を以下に要約できます。
 
 * 読み取りアクセスは拒否されます（除外されたプリンシパルやポリシーにリストされたプリンシパルを含むサブジェクトを除く）。
-* ポリシーは、ポリシーとそのプロパティを保持するアクセス制御ノードに対して有効です。
-* この効果は、さらに階層（つまり、アクセス制御ノードによって定義されるアイテムツリー）に継承されます。
-* ただし、アクセス制御ノードの兄弟や祖先には影響しません。
+* ポリシーは、ポリシーとそのプロパティを保持するアクセス制御ノードに対して有効になります。
+* この効果は、階層（アクセス制御ノードによって定義される項目ツリー）に追加的に継承されます。
+* ただし、アクセス制御ノードの兄弟や先祖には影響しません。
 * 特定の CUG の継承は、ネストされた CUG で止まります。
 
 #### ベストプラクティス {#best-practices}
 
 CUG を介した、制限付き読み取りアクセスを定義する際は、次のベストプラクティスを考慮する必要があります。
 
-* CUG は、読み取りアクセスの制限のために必要なのか、認証要件のために必要なのかを判断します。後者の場合、または両方が必要な場合は、認証要件の詳細について、「ベストプラクティス」の節を参照してください
+* CUG は、読み取りアクセスの制限のために必要なのか、認証要件のために必要なのかを判断します。後者の場合、または両方が必要な場合は、認証要件の詳細について、「ベストプラクティス」の項を参照してください。
 * 保護する必要があるデータやコンテンツの脅威モデルを作成して、脅威の範囲を識別し、データの感度と、承認されたアクセスに関連付けられている役割を明確にします。
 * リポジトリコンテンツと CUG をモデル化して、承認に関する一般事項とベストプラクティスを覚えておきます。
 
@@ -105,7 +108,7 @@ CUG を介した、制限付き読み取りアクセスを定義する際は、�
    * ネストされた CUG が大量に必要になる場合は、コンテンツデザインに問題がある可能性があります。
    * CUG が大量に必要な場合（例えば、各ページに CUG が必要な場合）は、そのアプリケーションやコンテンツのセキュリティニーズに見合ったカスタム承認モデルを導入することが必要な可能性があります。
 
-* CUG ポリシーのためにサポートされるパスを、リポジトリ内のいくつかのツリーに制限して、最適なパフォーマンスを維持します。例えば、出荷済みの/contentノードの下のCUGだけを、AEM 6.3以降のデフォルト値として許可します。
+* CUG ポリシーのためにサポートされるパスを、リポジトリ内のいくつかのツリーに制限して、最適なパフォーマンスを維持します。例えば、/contentノードの下のCUGを、AEM 6.3以降のデフォルト値として出荷済みとして許可します。
 * CUG ポリシーは、少数のプリンシパルに読み取りアクセスを付与することを想定して設計されています。大量のプリンシパルが必要な場合は、コンテンツやアプリケーションのデザインに関する問題が発生する可能性があるので、再検討する必要があります。
 
 ### 認証：認証要件の定義 {#authentication-defining-the-auth-requirement}
@@ -118,7 +121,7 @@ CUG 機能の認証関連のパーツにより、認証を必要とするツリ�
 
 For security reasons the new implementation replaces the usage of a residual JCR property by a dedicated mixin type called `granite:AuthenticationRequired`, which defines a single optional property of type STRING for the login path `granite:loginPath`. この mixin タイプに関連するコンテンツが変更された場合にのみ、Apache Sling Authenticator に登録される要件が更新されます。The modifications are tracked upon persisting any transient modifications and thus require a `javax.jcr.Session.save()` call to become effective.
 
-The same applies for the `granite:loginPath` property. 認証要件関連のミックスインの種類で定義されている場合にのみ考慮されます。 この名前の残存プロパティを非構造化JCRノードに追加しても、望ましい効果は表示されず、OSGi登録を更新するハンドラーによってそのプロパティは無視されます。
+The same applies for the `granite:loginPath` property. 認証要件に関連するミックスインの種類で定義されている場合にのみ考慮されます。 この名前を持つ残存のプロパティを非構造化JCRノードに追加しても、望ましい効果は表示されず、OSGi登録を更新するハンドラによってそのプロパティは無視されます。
 
 >[!NOTE]
 >
@@ -126,9 +129,9 @@ The same applies for the `granite:loginPath` property. 認証要件関連のミ�
 
 #### Sling Authenticator への認証要件とログインパスの登録 {#registering-the-authentication-requirement-and-login-path-with-the-sling-authenticator}
 
-この種の認証要件は、特定の実行モードとコンテンツリポジトリ内の小さなツリーのサブセットに制限されると予想されるので、要件のミックスインタイプとログインパスプロパティの追跡は条件付きで、サポートされるパスを定義する対応する設定に連結されます（下の設定オプションを参照）。 したがって、サポートパスの有効範囲内で変更があった場合にのみ、OSGi 登録の更新が実行され、それ以外の場所では、mixin タイプもログインパスプロパティも無視されます。
+この認証要件は、特定の実行モードとコンテンツリポジトリ内の小さなツリーのサブセットに限定されると考えられるので、要件mixinタイプとログインパスプロパティの追跡は、条件付きで、サポートされるパスを定義する対応する設定に連結されます（後述の設定オプションを参照）。 したがって、サポートパスの有効範囲内で変更があった場合にのみ、OSGi 登録の更新が実行され、それ以外の場所では、mixin タイプもログインパスプロパティも無視されます。
 
-デフォルトのAEM設定では、作成者実行モードでのミックスインの設定を許可し、パブリッシュインスタンスへの複製時にのみ有効にすることで、この設定を使用するようになりました。 See [this page](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) for details how Sling enforces the authentication requirement.
+現在は、デフォルトのAEM設定でこの設定が使用され、作成者実行モードでのミックスインの設定が許可されますが、パブリッシュインスタンスへの複製時にのみ有効になります。 See [this page](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) for details how Sling enforces the authentication requirement.
 
 Adding the `granite:AuthenticationRequired` mixin type within the configured supported paths will cause the OSGi registration of the responsible handler to be updated containing an new, additional entry with the `sling.auth.requirements` property. If a given authentication requirement specifies the optional `granite:loginPath` property, the value is additionally registered with the Authenticator with a &#39;-&#39; prefix in order to be excluded from authentication requirement.
 
@@ -175,10 +178,10 @@ The `LoginPathProvider` as implemented by the new auth-requirement support in Gr
 認証要件を定義する際は、次のベストプラクティスを考慮する必要があります。
 
 * 認証要件のネストを回避します。ツリーの先頭部に認証要件マーカーを 1 つ配置するだけで十分です。そのマーカーは、ターゲットノードによって定義されるサブツリー全体に継承されます。そのツリー内に他の認証要件があると、Apache Sling 内で認証要件を評価する際にパフォーマンス上の問題となる可能性があります。承認と認証に関連する CUG エリアを切り離すことで、CUG やその他のポリシーによって読み取りアクセスを制限すると同時に、ツリー全体に認証を適用できます。
-* ネストされたサブツリーを再び要件から除外する必要がなく、認証要件がツリー全体に適用されるような、モデルリポジトリコンテンツ。
+* ネストされたサブツリーを再度要件から除外する必要なく、認証要件がツリー全体に適用されるようなモデルリポジトリコンテンツ。
 * 余分なログインパスの指定を回避するには、次のようにします。
 
-   * 継承に依存し、入れ子になったログインパスを定義しない。
+   * 継承に依存し、ネストされたログインパスを定義しない。
    * オプションのログインパスを、デフォルト値または継承された値に対応する値に設定しないでください。
    * アプリケーション開発者は、`LoginSelectorHandler` に関連付けられるグローバルなログインパス設定（デフォルトとマッピングの両方）に設定する必要があるログインパスを識別してください。
 
@@ -190,7 +193,7 @@ Oakのドキュメントでは、新しいCUGポリシーがリポジトリの�
 
 ### リポジトリでの認証要件 {#authentication-requirement-in-the-repository}
 
-別の認証要件の必要性は、ターゲットノードに専用のミックスインノードタイプを配置したリポジトリコンテンツに反映されます。 この mixin タイプは、オプションのプロパティを定義して、ターゲットノードによって定義されるツリーの専用ログインページを指定します。
+個別の認証要件の必要性は、専用のミックスインノードタイプをターゲットノードに配置したリポジトリコンテンツに反映されます。 この mixin タイプは、オプションのプロパティを定義して、ターゲットノードによって定義されるツリーの専用ログインページを指定します。
 
 ログインパスに関連付けられるページは、ツリーの内部または外部のいずれにでも配置できます。このページは、認証要件から除外されます。
 
@@ -329,13 +332,13 @@ The extensions defined by `JackrabbitAccessControlManager` that allow to edit ac
 
 ### 認証要件の管理 {#managing-the-authentication-requirement}
 
-新しい認証要件の作成、変更、または削除は、対象ノードの有効なノードタイプを変更することによって達成される。 その後、オプションのログインパスプロパティへの書き込みには、通常の JCR API を使用できます。
+新しい認証要件の作成、変更、または削除は、ターゲットノードの有効なノードタイプを変更することで達成される。 その後、オプションのログインパスプロパティへの書き込みには、通常の JCR API を使用できます。
 
 >[!NOTE]
 >
 >The modifications to a given target node mentioned above will only be reflected on the Apache Sling Authenticator if the `RequirementHandler` has been configured and the target is contained in the trees defined by the supported paths (see section Configuration Options).
 >
->詳しくは、「Mixinノードタイプの割り当て [(https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.10.3 Mixinノードタイプの割り当て)」および「ノードの追加とプ]ロパティの設定 [(https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.4ノードの追加とプロパティの設定])」を参照してください。
+>詳しくは、「Mixinノードタイプの [割り当て](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.10.3 Mixinノードタイプの割り当て)」および「ノードの [追加」および「プロパティの設定](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.4ノードの追加とプロパティの設定)」を参照してください。
 
 #### 新しい認証要件の追加 {#adding-a-new-auth-requirement}
 
@@ -469,21 +472,21 @@ while (isSupported(node)) {
 
 | **認証が必要です** | **ログインパス** | **制限付き読み取りアクセス** | **期待効果** |
 |---|---|---|---|
-| 可 | 可 | 可 | 有効な権限評価でアクセス権が付与されている場合、指定されたユーザーはCUGポリシーでマークされたサブツリーのみを表示できます。 未認証のユーザーは、指定されたログインページにリダイレクトされます。 |
-| はい | いいえ | はい | 有効な権限評価でアクセス権が付与されている場合、指定されたユーザーはCUGポリシーでマークされたサブツリーのみを表示できます。 認証されていないユーザーは、継承されたデフォルトのログインページにリダイレクトされます。 |
-| 可 | 可 | いいえ | 未認証のユーザーは、指定されたログインページにリダイレクトされます。 認証要件でマークされているツリーを表示できるかどうかは、そのサブツリーに含まれる個々のアイテムの有効な権限に応じます。読み取りアクセスを制限する専用の CUG はありません。 |
-| はい | いいえ | いいえ | 認証されていないユーザーは、継承されたデフォルトのログインページにリダイレクトされます。認証要件でマークされているツリーを表示できるかどうかは、そのサブツリーに含まれる個々のアイテムの有効な権限に応じます。読み取りアクセスを制限する専用の CUG はありません。 |
-| いいえ | いいえ | はい | 特定の認証済みユーザーまたは未認証ユーザーは、有効な権限評価でアクセスが許可されている場合にのみ、CUGポリシーでマークされたサブツリーを表示できます。 認証されていないユーザーも同じように処理され、ログインにリダイレクトされません。 |
+| はい | 可 | はい | 有効な権限評価でアクセスが許可されている場合、特定のユーザーがCUGポリシーでマークされたサブツリーの表示のみを実行できます。 未認証ユーザーは、指定されたログインページにリダイレクトされます。 |
+| はい | 不可 | 可 | 有効な権限評価でアクセスが許可されている場合、特定のユーザーがCUGポリシーでマークされたサブツリーの表示のみを実行できます。 認証されていないユーザーは、継承されたデフォルトのログインページにリダイレクトされます。 |
+| はい | はい | 不可 | 未認証ユーザーは、指定されたログインページにリダイレクトされます。 認証要件でマークされているツリーを表示できるかどうかは、そのサブツリーに含まれる個々のアイテムの有効な権限に応じます。読み取りアクセスを制限する専用の CUG はありません。 |
+| はい | 不可 | 不可 | 認証されていないユーザーは、継承されたデフォルトのログインページにリダイレクトされます。認証要件でマークされているツリーを表示できるかどうかは、そのサブツリーに含まれる個々のアイテムの有効な権限に応じます。読み取りアクセスを制限する専用の CUG はありません。 |
+| 不可 | 不可 | 可 | 特定の認証済みユーザーまたは未認証ユーザーは、有効な権限評価によってアクセスが許可される場合にのみ、CUGポリシーでマークされたサブツリーを表示できます。 認証されていないユーザーも同じように処理され、ログインにリダイレクトされません。 |
 
 >[!NOTE]
 >
->「ログインパス」は、認証要件に関連するオプションの属性なので、「認証要件」 = なし、「ログインパス」 = ありの組み合わせは存在しません。定義するmixinタイプを追加せずに同じ名前でJCRプロパティを指定しても、影響はなく、対応するハンドラーで無視されます。
+>「ログインパス」は、認証要件に関連するオプションの属性なので、「認証要件」 = なし、「ログインパス」 = ありの組み合わせは存在しません。定義するmixin型を追加せずにJCRプロパティをその名前で指定しても、影響はなく、対応するハンドラーでは無視されます。
 
 ## OSGi コンポーネントと設定 {#osgi-components-and-configuration}
 
 この節では、新しい CUG 実装によって導入された OSGi コンポーネントと個々の設定オプションの概要を示します。
 
-古い実装と新しい実装の間の設定オプションの包括的なマッピングについては、CUGマッピングのドキュメントも参照してください。
+古い実装と新しい実装の設定オプションの包括的なマッピングについては、CUGマッピングのドキュメントも参照してください。
 
 ### 承認：セットアップと設定 {#authorization-setup-and-configuration}
 
@@ -529,7 +532,7 @@ Referrer Filter が設定されていないと、ユーザーが CUG サイト�
      <li><code>cugSupportedPaths</code></li>
      <li><code>cugEnabled</code></li>
      <li><code>configurationRanking</code></li>
-    </ul> <p>後述の「設定オプシ <a href="#configuration-options">ョン</a> 」も参照してください。</p> </td>
+    </ul> <p>後述の「 <a href="#configuration-options">設定オプション</a> 」も参照してください。</p> </td>
   </tr>
   <tr>
    <td>構成ポリシー</td>
@@ -552,7 +555,7 @@ Referrer Filter が設定されていないと、ユーザーが CUG サイト�
   </tr>
   <tr>
    <td>説明</td>
-   <td>CUG評価から、設定された名前を持つプリンシパルを除外できます。</td>
+   <td>設定された名前を持つプリンシパルをCUG評価から除外できます。</td>
   </tr>
   <tr>
    <td>設定プロパティ</td>
@@ -583,7 +586,7 @@ CUG 承認モジュールに関連する設定オプションの一覧と、そ�
 
 #### CUG 評価からのプリンシパルの除外 {#excluding-principals-from-cug-evaluation}
 
-CUG 評価からの個々のプリンシパルの除外は、前の実装から採用されていました。新しいCUG認証では、CugExcludeという名前の専用インターフェイスを使用してこれを扱います。 Apache Jackrabbit Oak 1.4 には、プリンシパルの固定セットを除外するデフォルト実装と、個々のプリンシパル名を設定できる拡張実装が付属しています。拡張実装は AEM パブリッシュインスタンスに設定されます。
+CUG 評価からの個々のプリンシパルの除外は、前の実装から採用されていました。新しいCUG認証では、CugExcludeという名前の専用インターフェイスがこの機能に対応しています。 Apache Jackrabbit Oak 1.4 には、プリンシパルの固定セットを除外するデフォルト実装と、個々のプリンシパル名を設定できる拡張実装が付属しています。拡張実装は AEM パブリッシュインスタンスに設定されます。
 
 AEM 6.3 以降のデフォルトでは、次のプリンシパルは、CUG ポリシーの影響を受けません。
 
@@ -595,7 +598,7 @@ AEM 6.3 以降のデフォルトでは、次のプリンシパルは、CUG ポ�
 
 The exclusion of the &#39;administrators&#39; group can be altered or expanded in the system console in the configuration section of **Apache Jackrabbit Oak CUG Exclude List**.
 
-また、特別なニーズがある場合に除外されたプリンシパルのセットを調整するために、CugExcludeインターフェイスのカスタム実装を提供およびデプロイすることもできます。 See the documentation on [CUG pluggability](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) for details and an example implementation.
+また、特別な必要が生じた場合に除外プリンシパルのセットを調整するために、CugExcludeインターフェイスのカスタム実装を提供およびデプロイすることもできます。 See the documentation on [CUG pluggability](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) for details and an example implementation.
 
 ### 認証：セットアップと設定 {#authentication-setup-and-configuration}
 
@@ -624,7 +627,7 @@ The exclusion of the &#39;administrators&#39; group can be altered or expanded i
   </tr>
   <tr>
    <td>説明</td>
-   <td>認証要件に影響を与えるコンテンツ変更の監視者を登録する認証要件専用のOSGiサービス（ミックスインタイプを通じて）とログインパスは、認証要 <code>granite:AuthenticationRequirement</code> 件に公開されま <code>LoginSelectorHandler</code>す。 </td>
+   <td>認証要件に影響するコンテンツの変更に関してオブザーバー(Observer)を登録する認証要件専用のOSGiサービス( <code>granite:AuthenticationRequirement</code> mixinタイプを介する)とログインパスは、に公開され <code>LoginSelectorHandler</code>ます。 </td>
   </tr>
   <tr>
    <td>設定プロパティ</td>
@@ -647,9 +650,9 @@ The exclusion of the &#39;administrators&#39; group can be altered or expanded i
 
 **com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler**
 
-| ラベル | Adobe Granite認証要件とログインパスハンドラー |
+| ラベル | AdobeGranite認証要件およびログインパスハンドラ |
 |---|---|
-| 説明 | `RequirementHandler` apache Sling認証要件と、関連するログインパスの対応する除外を更新する実装。 |
+| 説明 | `RequirementHandler` Apache Sling認証要件と、関連付けられたログインパスの対応する除外を更新する実装。 |
 | 設定プロパティ | `supportedPaths` |
 | 構成ポリシー | `ConfigurationPolicy.REQUIRE` |
 | 参照 | 該当なし |
@@ -664,12 +667,12 @@ CUG のリライトの認証関連のパーツは、Adobe Granite Authentication
  <tbody>
   <tr>
    <td>プロパティ</td>
-   <td>タイプ</td>
+   <td>型</td>
    <td>デフォルト値</td>
    <td>説明</td>
   </tr>
   <tr>
-   <td><p>ラベル=サポートされるパス</p> <p>Name = 'supportedPaths'</p> </td>
+   <td><p>Label = Supported Paths</p> <p>Name = 'supportedPaths'</p> </td>
    <td>設定&lt;文字列&gt;</td>
    <td>-</td>
    <td>認証要件がこのハンドラーによって考慮されるパスです。 Leave this configuration unset if you want to add the <code>granite:AuthenticationRequirement</code> mixin type to nodes without having them enforced (for example, on author instances). 未設定にしておくと、この機能は無効になります。 </td>
@@ -683,11 +686,11 @@ AEM の新規インストールでは、デフォルトで、CUG 機能の承認
 
 ### オーサーインスタンス {#author-instances}
 
-| **「Apache Jackrabbit Oak CUGの設定」** | **説明** |
+| **&quot;Apache Jackrabbit Oak CUG Configuration&quot;** | **説明** |
 |---|---|
-| サポートされるパス `/content` | CUGpoliciesのアクセス制御管理が有効になっています。 |
-| CUG評価が有効FALSE | 権限の評価が無効になっています。 CUG ポリシーは無効です。 |
-| ランク | 200 | Oakのドキュメントを参照してください。 |
+| サポートされるパス `/content` | CUGポリシーのアクセス制御管理が有効になっています。 |
+| CUG評価が有効なFALSE | 権限の評価が無効になっています。 CUG ポリシーは無効です。 |
+| ランキング | 200 | Oakのドキュメントを参照してください。 |
 
 >[!NOTE]
 >
@@ -695,19 +698,19 @@ AEM の新規インストールでは、デフォルトで、CUG 機能の承認
 
 ### パブリッシュインスタンス {#publish-instances}
 
-| **「Apache Jackrabbit Oak CUGの設定」** | **説明** |
+| **&quot;Apache Jackrabbit Oak CUG Configuration&quot;** | **説明** |
 |---|---|
 | サポートされるパス `/content` | CUGポリシーのアクセス制御管理は、設定されたパスの下で有効になります。 |
-| CUG評価が有効なTRUE | 設定されたパスの下で権限の評価が有効になります。 CUGポリシーは、次の場合に有効になりま `Session.save()`す。 |
-| ランク | 200 | Oakのドキュメントを参照してください。 |
+| CUG評価が有効なTRUE | 設定されたパスの下で権限の評価が有効になっています。 CUGポリシーは次の場合に有効になり `Session.save()`ます。 |
+| ランキング | 200 | Oakのドキュメントを参照してください。 |
 
 | **&quot;Apache Jackrabbit Oak CUG除外リスト&quot;** | **説明** |
 |---|---|
 | プリンシパル名管理者 | 管理者プリンシパルをCUG評価から除外します。 |
 
-| **「Adobe Granite認証要件とログインパスハンドラー」** | **説明** |
+| **「AdobeGranite認証要件とログインパスハンドラー」** | **説明** |
 |---|---|
-| サポートされるパス `/content` | Mixinタイプによってリポジトリで定義される認証要件は、以 `granite:AuthenticationRequired` 下の手順に従って有 `/content` 効になりま `Session.save()`す。 Sling Authenticator は更新されます。mixin タイプをサポートパス外に追加しても無視されます。 |
+| サポートされるパス  `/content` | ミックスインタイプによってリポジトリで定義される認証要件は、以下の段階 `granite:AuthenticationRequired` で有効になり `/content``Session.save()`ます。 Sling Authenticator は更新されます。mixin タイプをサポートパス外に追加しても無視されます。 |
 
 ## CUG 承認および認証要件の無効化 {#disabling-cug-authorization-and-authentication-requirement}
 
@@ -743,7 +746,7 @@ The import mechanism of Apache Jackrabbit FileVault has been adjusted to deal wi
 
 このレプリケーションモジュールは、異なる AEM インスタンス間で CUG ポリシーをレプリケーションできるように少し調整されています。
 
-* `DurboImportConfiguration.isImportAcl()` 文字どおりに解釈され、 `javax.jcr.security.AccessControlList`
+* `DurboImportConfiguration.isImportAcl()` は文字通り解釈され、実装するアクセス制御ポリシーにのみ影響を及ぼす `javax.jcr.security.AccessControlList`
 
 * `DurboImportTransformer` は、真のACLに対してのみこの設定を適用します。
 * CUG 承認モデルによって作成される `org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy` インスタンスなどの他のポリシーは常にレプリケーションされ、設定オプション `DurboImportConfiguration.isImportAcl` () は無視されます。
@@ -762,7 +765,7 @@ CUG ポリシーのレプリケーションには 1 つ制約があります。I
 
 ### AEM ライブコピー {#aem-livecopy}
 
-LiveCopyと組み合わせてCUGを設定すると、次のように追加のノードと追加のプロパティが1つ追加され、リポジトリ内で表されます。
+LiveCopyと組み合わせてCUGを設定すると、次のように、1つの追加のノードと1つの追加のプロパティがリポジトリに追加されて表されます。
 
 * `/content/we-retail/us/en/blueprint/rep:cugPolicy`
 * `/content/we-retail/us/en/LiveCopy@granite:loginPath`
@@ -785,7 +788,7 @@ Both of these elements are created under the `cq:Page`. With the current design,
 
 ### Differences With Regards To Authorization {#differences-with-regards-to-authorization}
 
-認証パースペクティブとの主な違いを以下に示します。
+認証の観点からの主な違いは、次のリストにまとめられています。
 
 **CUG 専用のアクセス制御コンテンツ**
 
@@ -801,7 +804,7 @@ Both of these elements are created under the `cq:Page`. With the current design,
 
 CUG ポリシーは、通常は、制限付き読み取りアクセスの対象となるサブツリーを定義する JCR ノードで作成されます。CUG がツリー全体に影響する場合は、これが AEM ページになると思われます。
 
-CUGポリシーを特定のページの下にあるjcr:contentノードにのみ配置すると、特定のページのコンテンツs.strへのアクセスは制限されますが、兄弟ページや子ページには適用されません。 場合によってはこうしたケースも有効で、きめ細かなアクセスコンテンツを適用可能なリポジトリエディターによって達成できます。ただし、jcr:cugEnabledプロパティをjcr:contentノードに配置すると、ページノードに内部的に再マップされるのとは対照的です。 こうしたマッピングは今後はおこなわれません。
+CUGポリシーを特定のページの下にあるjcr:contentノードにのみ配置すると、特定のページのコンテンツs.strへのアクセスは制限されますが、兄弟ページや子ページには影響しません。 場合によってはこうしたケースも有効で、きめ細かなアクセスコンテンツを適用可能なリポジトリエディターによって達成できます。ただし、前の実装とは異なり、cq:cugEnabledプロパティをjcr:contentノードに配置すると、内部的にページノードに再マッピングされます。 こうしたマッピングは今後はおこなわれません。
 
 **CUG ポリシーによる権限評価**
 
@@ -816,9 +819,9 @@ CUG 承認モデルでは、アクセス制御管理と権限評価を個別に�
 * アクセス制御管理は、CUG を作成できるサポートパスがモジュールに 1 つ以上ある場合に有効になります。
 * 権限評価は、「**CUG Evaluation Enabled**」オプションが追加でオンになっている場合にのみ有効になります。
 
-新しい AEM のデフォルトセットアップにおける CUG ポリシーの評価では、オンデマンド評価は「パブリッシュ」実行モードでのみ有効になります。詳しくは、[AEM 6.3 以降のデフォルト設定](#default-configuration-since-aem)を参照してください。これは、特定のパスに対する有効なポリシーと、コンテンツに保存されているポリシーとを比較することで検証できます。 有効なポリシーは、CUG の権限評価が有効になっている場合にのみ表示されます。
+新しい AEM のデフォルトセットアップにおける CUG ポリシーの評価では、オンデマンド評価は「パブリッシュ」実行モードでのみ有効になります。詳しくは、[AEM 6.3 以降のデフォルト設定](#default-configuration-since-aem)を参照してください。これは、特定のパスに対する有効なポリシーと、コンテンツに保存されたポリシーとを比較することで検証できます。 有効なポリシーは、CUG の権限評価が有効になっている場合にのみ表示されます。
 
-As explained above the CUG access control policies are now always stored in the content but evaluation of the effective permissions that result from those policies will only be enforced if **CUG Evaluation Enabled** is turned on in the system console at Apache Jackrabbit Oak **CUG Configuration.** デフォルトでは、「公開」実行モードでのみ有効になっています。
+As explained above the CUG access control policies are now always stored in the content but evaluation of the effective permissions that result from those policies will only be enforced if **CUG Evaluation Enabled** is turned on in the system console at Apache Jackrabbit Oak **CUG Configuration.** デフォルトでは、「公開」実行モードでのみ有効になります。
 
 ### 認証の違い {#differences-with-regards-to-authentication}
 
@@ -842,17 +845,17 @@ mixin タイプを追加または削除するには、`jcr:nodeTypeManagement` �
 
 認証要件は、通常は、強制的なログインの対象となるサブツリーを定義する JCR ノードで作成されます。CUG がツリー全体に影響する場合は、これが AEM ページになると思われ、この新しい実装の UI により、結果として、認証要件 mixin タイプがそのページノードに追加されます。
 
-CUGポリシーを特定のページの下にあるjcr:contentノードにのみ配置すると、そのコンテンツへのアクセスは制限されますが、ページノード自体や子ページへのアクセスは制限されません。
+CUGポリシーを特定のページの下にあるjcr:contentノードにのみ配置すると、そのコンテンツへのアクセスは制限されますが、ページノード自体や子ページには影響しません。
 
-場合によってはこうしたケースも有効で、任意のノードに mixin を配置できるリポジトリエディターによって達成できます。ただし、この動作は以前の実装とは異なり、cq:cugEnabledまたはcq:cugLoginPageプロパティをjcr:contentノードに配置すると、内部的にページノードにリマップされました。 こうしたマッピングは今後はおこなわれません。
+場合によってはこうしたケースも有効で、任意のノードに mixin を配置できるリポジトリエディターによって達成できます。ただし、前者の実装とは異なり、jcr:contentノードにcq:cugEnabledまたはcq:cugLoginPageプロパティを配置すると、内部的にページノードに再マッピングされました。 こうしたマッピングは今後はおこなわれません。
 
 #### 設定済みのサポートパス {#configured-supported-paths}
 
-Both the `granite:AuthenticationRequired` mixin type and the granite:loginPath property will only be respected within the scope defined by the set of **Supported Paths** configuration option present with the **Adobe Granite Authentication Requirement and Login Path Handler**. これらのパスが指定されていないと、認証要件機能は全体で無効になります。この場合、ミックスインのタイプとプロパティは、特定のJCRノードに追加または設定されると有効になります。
+Both the `granite:AuthenticationRequired` mixin type and the granite:loginPath property will only be respected within the scope defined by the set of **Supported Paths** configuration option present with the **Adobe Granite Authentication Requirement and Login Path Handler**. これらのパスが指定されていないと、認証要件機能は全体で無効になります。この場合、ミックスインのタイプやプロパティは、特定のJCRノードに追加または設定されると有効になります。
 
 ### JCR コンテンツ、OSGi サービスおよび設定のマッピング {#mapping-of-jcr-content-osgi-services-and-configurations}
 
-以下のドキュメントでは、OSGiサービス、設定、リポジトリの内容を、古い実装と新しい実装の間で包括的にマッピングしています。
+以下のドキュメントでは、OSGiサービス、設定、およびリポジトリの内容を、以前の実装と新しい実装の間で包括的にマッピングしています。
 
 AEM 6.3 以降の CUG の対応関係
 
@@ -873,8 +876,8 @@ AEM 6.3 以降の CUG の対応関係
 
 Adobe は、新しい CUG 実装への移行ツールを提供しています。このツールを使用するには、次の手順をおこないます。
 
-1. に移動してツ `https://<serveraddress>:<serverport>/system/console/cug-migration` ールにアクセスします。
-1. CUG を調べるルートパスを入力し、「**Perform dry run**」ボタンを押します。選択した場所で変換に適したCUGをスキャンします。
+1. に移動して、ツール `https://<serveraddress>:<serverport>/system/console/cug-migration` にアクセスします。
+1. CUG を調べるルートパスを入力し、「**Perform dry run**」ボタンを押します。選択した場所で変換に適したCUGがスキャンされます。
 1. 結果を確認した後、「**Perform migration**」ボタンを押して、新しい実装に移行します。
 
 >[!NOTE]
