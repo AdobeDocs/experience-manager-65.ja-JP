@@ -427,7 +427,7 @@ In this example, you can also choose the output model object as Person and navig
 * **オフ**:検証なし
 * **基本**:FDMは、「required」制約と「nullable」制約に基づいて検証を実行します
 
-フ `ValidationOptions`ラグに値が設定されていない場合、 **BASIC** 検証は入力データに対して実行されます。
+フ `ValidationOptions`ラグに値が設定されていない場合、 **入力データに対してBASIC** 検証が実行されます。
 
 検証フラグを **FULLに設定する例を次に示します**。
 
