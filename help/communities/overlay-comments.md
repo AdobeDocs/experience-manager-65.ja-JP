@@ -12,6 +12,9 @@ discoiquuid: 502c0916-6c54-440c-be8c-eae56001fa26
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 34%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 **オーバーレイコメントコンポーネント**
 
-コメント機能を変更してWebサイトのデザインと一致させる場合は、コメントヘッダーを変更して、コメントのアバターが表示されないようにします。 アバターを非表示にするソリューションは、CSSを使用するか、ここで説明するように、appsフォルダー内のheader.jspをオーバーレイして、アバターを含むHTMLがクライアントに送信されないようにします。
+コメント機能を変更して、Webサイトのデザインと一致するようにし、コメントヘッダーを変更して、どのコメントのアバターも表示されないようにしたいとします。 アバターを非表示にするソリューションは、CSSを使用するか、ここで説明するように、appsフォルダーのheader.jspをオーバーレイして、アバターを含むHTMLがクライアントに送信されないようにします。
 
 コメントをオーバーレイするには、次の手順を実行する必要があります。
 
@@ -34,9 +37,9 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 **オーバーレイ通知電子メール**
 
-電子メール通知のメッセージをカスタマイズする場合は、 [/libs/settings](/help/communities/client-customize.md#overlays) /community/templates/email/htmlにあるテンプレートをオーバーレイして変更できます ****。
+電子メール通知のメッセージをカスタマイズする場合は、 [/libs/settings/community/templates/email/htmlにあるテンプレートを](/help/communities/client-customize.md#overlays) オーバーレイすることで ****、それを行うことができます。
 
-例えば、（ugcが作成される特定のコミュニティコンポーネントの）メンション電子メール通知を変更するには、 **@mentions** supportを有効にしたコンポーネントのテンプレートに **if条件を追加します****** 。
+例えば、（ugcが作成される特定のコミュニティコンポーネントの）メンション電子メール通知を変更するには、 **@mentions** サポートを有効にしたコンポーネントのテンプレートに、動詞 **メンション****** if条件を追加します。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -44,4 +47,4 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 {{/equals}}\
 ```
 
-ブログコメント内の@mentionの電子メール通知テンプレートを変更するには、次の場所にテンプレートを配置します。 `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+ブログコメント内の@mentionの電子メール通知テンプレートを変更するには、次の場所にテンプレートを置いてください。 `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
