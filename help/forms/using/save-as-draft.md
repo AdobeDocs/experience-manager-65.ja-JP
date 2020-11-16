@@ -10,6 +10,9 @@ topic-tags: forms-app
 discoiquuid: 9950288c-b5a2-4945-afad-be9ce2abc8e9
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '517'
+ht-degree: 80%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 You can [update the form](/help/forms/using/working-with-form.md), [annotate it](/help/forms/using/add-attachments.md) with photographs, and scribble notes. フォームの更新を続ける際は、ドラフトとして保存することをお勧めします。記入したフォームを後で送信する場合は、ドラフトとして保存しておくと便利です。
 
 To enable save as draft feature for forms saved on forms portal, see [Saving an HTML5 form as a draft](/help/forms/using/saving-html5-form-draft.md).
-To configure submission of adaptive forms, see [Drafts and submissions component](/help/forms/using/draft-submission-component.md). （AEM Forms JEEサーバーと同期されたフォームに対しては無効です）。
+To configure submission of adaptive forms, see [Drafts and submissions component](/help/forms/using/draft-submission-component.md). (AEM FormsJEEサーバーと同期しているフォームでは無効です)。
 
 To create a draft, open the form and tap the **Save as Draft** ![save-as-draft](assets/save-as-draft.png). ドラフトの名前を入力して、「**保存**」をタップします。ドラフトは Drafts フォルダーに保存され、サーバーと同期されます。アプリケーションがオフラインの場合は、Outbox フォルダーに保存されます。
 
