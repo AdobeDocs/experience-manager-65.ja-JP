@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 422ee332-23ae-46bd-8394-a4e0915beaa2
 translation-type: tm+mt
 source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+workflow-type: tm+mt
+source-wordcount: '1109'
+ht-degree: 67%
 
 ---
 
@@ -56,7 +59,7 @@ For additional details about logging, see the [Logging](/help/sites-deploying/co
 * 大量の PollingImporter が登録されていないことを確認します（下記の「PollingImporter が原因でシャットダウンに時間がかかる」を参照）。
 * `ManagedPollingImporter`OSGi コンソール[で ](/help/sites-deploying/configuring-osgi.md) を設定する CRON 式を使用して、特定の時刻にレポートインポーターを実行します。
 
-For additional details about creating custom data importer services in AEM, read the following article [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
+For additional details about creating custom data importer services in AEM, read the following article [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/jp/experience-manager/using/polling.html).
 
 ### PollingImporter が原因でシャットダウンに時間がかかる {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
@@ -83,7 +86,7 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 
 次に、トップページ（階層の上位）のみに Analytics 設定が参照されていることを確認します。
 
-For additional details about creating custom data importer services in AEM, read the following article [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
+For additional details about creating custom data importer services in AEM, read the following article [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/jp/experience-manager/using/polling.html).
 
 ## DTM（レガシー）の問題 {#dtm-legacy-issues}
 
@@ -141,7 +144,7 @@ ACL 管理の詳細については、[ユーザー管理とセキュリティ](/
 
 ### 「Missing Report Suite ID in AppMeasurement initialization」というエラーがブラウザーコンソールに表示される {#the-error-missing-report-suite-id-in-appmeasurement-initialization-is-displayed-in-the-browser-console}
 
-この問題は、Adobe AnalyticsがDTMを使用してWebサイトに実装され、カスタムコードを使用する場合に発生する可能性があります。 The cause is using the `s = new AppMeasurement()` to instantiate the `s` object.
+この問題は、Adobe AnalyticsがDTMを使用してWebサイトに実装され、カスタムコードを使用している場合に発生する可能性があります。 The cause is using the `s = new AppMeasurement()` to instantiate the `s` object.
 
 #### 解決策 {#solution-4}
 
@@ -210,7 +213,7 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-応答に `a4tEnabled:false` という行が含まれている場合、[アドビカスタマーケア](https://helpx.adobe.com/contact.html)に連絡して、アカウントを正しくプロビジョニングするようご依頼ください。
+応答に `a4tEnabled:false` という行が含まれている場合、[アドビカスタマーケア](https://helpx.adobe.com/jp/contact.html)に連絡して、アカウントを正しくプロビジョニングするようご依頼ください。
 
 ### 参考 Target API {#helpful-target-apis}
 
