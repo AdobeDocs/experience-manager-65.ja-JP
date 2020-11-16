@@ -93,8 +93,7 @@ cq:Tagノードを指していない、既存でないパスまたはパスを�
 
 次の表に、タグ ID の例とその要素、リポジトリでそのタグ ID がどのように絶対パスに解決されるかを示します。
 
-次の表に、サンプルのタグIDとその要素、およびTagIDがリポジトリ内の絶対パスに解決される方法を示します。
-次の表に、サンプルのタグIDとその要素、およびTagIDがリポジトリ内の絶対パスに解決される方法を示します。
+次の表に、サンプルのタグIDとその要素、およびTagIDがリポジトリ内の絶対パスに解決される方法を示します。次の表に、サンプルのタグIDとその要素、およびTagIDがリポジトリ内の絶対パスに解決される方法を示します。
 
 <table>
  <tbody>
@@ -185,6 +184,7 @@ In order for application developers to attach tagging to a content type, the nod
    >
    >
 * アセット( `cq:Asset`)を使用します。この場合、 `jcr:content/metadata` ノードには `cq:Taggable` mixinが常に含まれます。
+
 >
 
 
