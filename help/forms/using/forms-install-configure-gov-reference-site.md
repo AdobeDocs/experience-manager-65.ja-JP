@@ -59,7 +59,7 @@ ht-degree: 4%
       * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** — サイトページ列管理用 *AEM Sitesグリッドレイアウトパッケージ*
    * **we-gov-forms.ui.content-&lt;version>.zip** — コンテンツ、ページ、画像、フォーム、インタラクティブな通信アセットなどをすべて *含みます。*
 
-   * **we-gov-forms.ui.analytics-&lt;version>.zip** — リポジトリ内に格納されるすべてのWeb.GovForms分析データを *含みます。*
+   * **we-gov-forms.ui.analytics-&lt;version>.zip** — リポジトリ内に保存されるすべてのWeb.GovForms分析データを *含みます。*
 
    * **we-gov-forms.config.public-&lt;version>.zip** — フォームデータモデルやサービスバインディングの問題を回避するために、プレースホルダークラウドの設定を含むすべてのデフォルト設定ノードを *含みます。*
 
@@ -514,7 +514,7 @@ AdobeFormsとの間でAEM Formsのインストールと設定を行うには、�
 
 1. セクション2.1の公開鍵を使用すると、鍵の統合内に配置されます。
 
-1. 自動フォーム変換のプロファイルを選択します。
+1. automated forms conversionのプロファイルを選択します。
 
    ![新しい統合の作成](assets/aftia-create-new-integration.jpg)
 
@@ -640,7 +640,7 @@ IMSの設定が完了したら、AEMでクラウド設定を作成できます�
 
 #### 既知の問題とメモ {#known-issues-notes}
 
-自動Formsコンバージョンサービスには、特定の [ベストプラクティス、既知の複雑なパターン](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、 [既知の問題が含まれています](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 AEM Forms自動Formsコンバージョンサービスの使用を開始する前に、これらを確認してください。
+automated forms conversionサービスには、特定の [ベストプラクティス、既知の複雑なパターン](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、 [既知の問題が含まれています](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 AEM FormsAutomated forms conversionサービスの使用を開始する前に、これらを確認してください。
 
 1. 変換後にフォームをFDMに連結する場合は、データ連結を有効にせずに「アダプティブフォームを生成」を生成します。
 
@@ -738,7 +738,7 @@ IMSの設定が完了したら、AEMでクラウド設定を作成できます�
 ### デモに関する考慮事項 {#demo-considerations}
 
 * AGRS-159に従って、登録アダプティブフォームで使用される連絡先の名前（最初、中間、最後）が一意であることを確認します。
-* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスを、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
+* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスは、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
 
 ### 既知の問題 {#known-issues}
 
