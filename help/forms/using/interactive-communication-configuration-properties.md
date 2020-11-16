@@ -12,6 +12,9 @@ discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 translation-type: tm+mt
 source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 60%
 
 ---
 
@@ -33,7 +36,7 @@ Open the **Adobe Experience Manager Web Console Configuration** page using the f
 
 ## ドキュメントフラグメントの設定 {#document-fragments-configuration}
 
-**Adobe Experience Manager Web Console Configuration** ( **Adobe Experience Manager Web Console Configuration** )ページで「ドキュメントフラグメントの設定」をタップし、ドキュメントフラグメントの設定プロパティを表示します。
+Tap **Document Fragments configuration** on the **Adobe Experience Manager Web Console Configuration** page to view the configuration properties for document fragments.
 
 <table>
  <tbody> 
@@ -45,7 +48,7 @@ Open the **Adobe Experience Manager Web Console Configuration** page using the f
   </tr> 
   <tr> 
    <td>データの表示形式</td> 
-   <td>印刷およびWebチャネル用のInteractive Communicationを作成する際に使用できる、フィールド、変数およびフォームデータモデル要素のロケール固有の表示形式。</td> 
+   <td>印刷およびWebチャネル用のインタラクティブ通信を作成する際に使用できる、フィールド、変数、フォームデータモデル要素のロケール固有の表示形式。</td> 
    <td> 
     <ul> 
      <li>locale = en_US、de_DE、fr_FRおよびja_JP</li> 
@@ -103,7 +106,7 @@ Tap **Create Correspondence Configuration** on the **Adobe Experience Manager We
   </tr> 
   <tr> 
    <td>PDFへのフォントの埋め込みを有効にする</td> 
-   <td><p>PDFオプションにフォントを埋め込む場合は、このチェックボックスをドキュメントします。 このオプションを選択した後、エージェントUIを使用してPDFフォントを生成またはプレビューした後に、新しいドキュメントを埋め込むことができます。 Interactive Communicationの印刷チャネルを使用して、PDF画像を生成し、プレビューします。</p> <p>PDFの生成に使用され、PDFにアクセスするクライアントコンピューターで使用できないフォントがある場合、PDFドキュメントにフォントを埋め込むと便利です。</p> <p>フォントの埋め込みについて詳しくは、テキストエディターのカスタ <a href="../../forms/using/customize-text-editor.md" target="_blank">マイズを参照してくださ</a>い。</p> </td> 
+   <td><p>PDFドキュメントにフォントを埋め込むかどうかを指定するチェックボックスを選択します。 このオプションを選択した後、エージェントUIを使用してPDFドキュメントを生成またはプレビューした後に、新しいフォントを埋め込むことができます。 Interactive CommunicationのPrintチャネルを使用して、PDFドキュメントを生成し、プレビューします。</p> <p>PDFドキュメントにフォントを埋め込むのは、PDFの生成に使用されるコンピューターでフォントが使用可能で、PDFにアクセスするクライアントマシンでは使用できない場合に便利です。</p> <p>フォントの埋め込みについて詳しくは、「テキストエディターの <a href="../../forms/using/customize-text-editor.md" target="_blank">カスタマイズ</a>」を参照してください。</p> </td> 
    <td>未選択</td> 
    <td>該当なし</td> 
   </tr> 
