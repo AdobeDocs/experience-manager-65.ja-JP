@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 48%
 
 ---
 
@@ -86,7 +89,7 @@ In AEM, the **Call to Action** components - **ClickThroughLink** and **Graphical
  </tbody>
 </table>
 
-1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。これでフレームワークを使用する準備が整いました。
+1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。フレームワークを使用する準備が整いました。
 1. You can now create a new landing page or open an existing landing page with existing CTA components and click **Cloud Services** tab in **Page Properties** from the sidekick (in the touch-optimized UI, select **Open Properties** and click **Cloud Services**) and configure the framework to use with landing page. ドロップダウンリストからフレームワークを選択します。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
