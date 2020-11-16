@@ -12,6 +12,9 @@ discoiquuid: 9e25ea72-e7ba-400b-9cab-de256fe64888
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 79%
 
 ---
 
@@ -25,6 +28,6 @@ PDF Generator では、様々な形式のファイルを PDF に変換できま�
 ファイル処理のために、ファイルは PDF Generator に 3 種類の方法で送信できます。
 
 * 管理者は、管理コンソールで PDFG ページにアクセスできます（[PDF Generator を使用したファイルの変換](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)を参照）。
-* ユーザーは、PDFGのエンドユーザーページにアクセスするには、そこからログインし、 `http(s)://'[server]:[port]'/pdfgui.` PDFGネットワークプリンター、PDFの作成、HTMLからPDF、PDFの書き出しおよびPDFの最適化の各ページにアクセスします。
+* ユーザーは、PDFGエンドユーザーページにアクセスするには、PDFGネットワークプリンターにログインし、PDFGネットワークプリンター、PDFを作成、HTMLからPDF、Export PDFおよびOptimize PDFの各ページにアクセスします。 `http(s)://'[server]:[port]'/pdfgui.`
 * これらのサービスのエンドポイントを設定できます参照先 <!--Fix broken link to Managing Endpoints --> [Generate PDF サービスの推奨事項](configuring-watched-folder-endpoints.md#generate-pdf-service-recommendations).
 
