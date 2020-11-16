@@ -12,6 +12,9 @@ discoiquuid: aca444f6-418a-4c01-ae19-663b4e04fab9
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '910'
+ht-degree: 77%
 
 ---
 
@@ -33,6 +36,7 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 >
 >* 3.x is configured with [https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
 >* 4.x is configured with [https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+
 >
 
 
@@ -49,7 +53,7 @@ The default URL that is configured for the Search&amp;Promote service is `https:
 
 Search&amp;Promote への 1 つ以上の接続を設定して、Web ページがサービスとやり取りできるようにします。接続するには、Search&amp;Promote アカウントのメンバー ID とアカウント番号が必要です。
 
-1. From the **Tools** icon > **Deployment**, select **Cloud Services**.
+1. **ツール** アイコン **/**&#x200B;導入 **から、** Cloud Servicesを選択します。
 
    これにより、クラウドサービスダッシュボードが表示されます。ローカルマシンの場合、ダッシュボードの URI は、次のようになります。
 
@@ -75,6 +79,7 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
    * **メンバー ID**
    * **アカウント番号**
+
    >[!NOTE]
    >
    >In order to get this information **yourself,** first you need to log into
@@ -90,15 +95,15 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
    >
    >**この場合：**
    >
-   >    * **XXXXXXXXXXは** 、お客様の**メンバーID**に対応します
-   >    * **spYYYYYYYYは** 、アカウント番号に **対応します**
+   >    * **XXXXXXXXXX** は、お使いの**メンバid**に対応します
+   >    * **spYYYYYYYYYY** は、使用する **アカウント番号に対応します**
 
 
 1. 「**Search&amp;Promote に接続**」をクリックします。
 
    接続成功メッセージが表示されたら、「**OK**」をクリックします。
 
-   （接続後、ボタンのテキストが「** Search&amp;Promoteに再接続**」に変更されます）。
+   (接続後、ボタンのテキストは「**Search&amp;Promoteに再接続**」に変わります)。
 
 1. 「**OK**」をクリックします。今作成した設定の Search&amp;Promote 設定ページが表示されます。
 
