@@ -11,6 +11,9 @@ discoiquuid: cbc5af90-5d51-4fdb-ac72-eea91137975d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +29,8 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
    * 「追跡」で、使用するデータが含まれているプロセスインスタンスをクリックします。右ペインにある「プロセス履歴」ビューでスタートポイントに対応するタスク行をクリックします。
    * 「追跡」で、プロセスインスタンスのリストを表示する検索テンプレートを検索します。使用するデータが含まれているインスタンスを選択します。
    * 「**[!UICONTROL TODO]**」タブで、タスクを選択します。「**[!UICONTROL 履歴]**」タブをクリックし、プロセスインスタンスを開始したタスクを選択します。
-   ![タスクの選択](assets/start3_new.png)![タスクの選択](assets/start1_new.png)
+
+   ![タスクの選択](assets/start3_new.png) タスクの ![選択](assets/start1_new.png)
 
 1. 「タスクアクション」ツールバーで、「**[!UICONTROL 開始]**」をクリックします。データが事前入力された新しいプロセスインスタンスのアダプティブフォームが表示されます。
 
