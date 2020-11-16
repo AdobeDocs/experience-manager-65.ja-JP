@@ -23,7 +23,7 @@ ht-degree: 39%
 
 ## オーサー環境でのグループの作成 {#creating-groups-on-author}
 
-AEM Authorインスタンスで、グローバルナビゲーションから次の操作を行います。
+AEM作成者インスタンスで、グローバルナビゲーションから次の操作を行います。
 
 * Select **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
 * Select **[!UICONTROL engage folder]** to open it.
@@ -50,12 +50,12 @@ AEM Authorインスタンスで、グローバルナビゲーションから次�
 
 * **コミュニティグループテンプレート**：
 
-   * **[!UICONTROL コミュニティグループのタイトル]**: アート。
-   * **[!UICONTROL コミュニティグループの説明]**: 様々な芸術団体の親グループ。
+   * **[!UICONTROL コミュニティグループのタイトル]**:アート。
+   * **[!UICONTROL コミュニティグループの説明]**:様々な芸術団体の親グループ。
    * **[!UICONTROL コミュニティグループルート]**: *デフォルトのままにします*。
-   * **[!UICONTROL 利用可能なコミュニティグループの追加言語]**: ドロップダウンメニューを使用して、使用可能なコミュニティグループ言語を選択します。 このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
-   * **[!UICONTROL コミュニティグループ名]**: 芸術
-   * **[!UICONTROL テンプレート]**: ドロップダウンして選択 `Reference Group.`
+   * **[!UICONTROL 利用可能な追加のコミュニティグループ言語]**:ドロップダウンメニューを使用して、使用可能なコミュニティグループ言語を選択します。 このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
+   * **[!UICONTROL コミュニティグループ名]**:芸術
+   * **[!UICONTROL テンプレート]**:ドロップダウンして選択 `Reference Group.`
    * 「**[!UICONTROL 次へ]**」を選択します。
 
 ![ネストされたコミュニティグループ](assets/parent-to-nestedgroup.png)
@@ -121,7 +121,7 @@ The `arts` group should also contain a `groups` folder, but one that is empty an
    * タイトル: `Art History`
    * 名前：`history`
    * テンプレート: `Reference Group`
-   * メンバーシップ： 選択 `Restricted Membership`（秘密のグループ）。招待されたメンバーにのみ表示されます。 例として、 [デモユーザーを招待します](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com`。
+   * メンバーシップ：選択 `Restricted Membership`（秘密のグループ）。招待されたメンバーにのみ表示されます。 例として、 [デモユーザーを招待します](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com`。
 
 ページを更新して、ネストされた 3 つのグループ（サブコミュニティ）すべてを表示します。
 
