@@ -28,7 +28,7 @@ ht-degree: 65%
 
 ユーザーは、すべてのコンテンツにアクセスしていますか。ユーザーはアプリの使用を中止していますか。中止している場合、その場所はどこですか。ユーザーがアプリに留まる頻度と戻ってくる頻度はどのくらいですか。どのような変更を導入でき、どのようにして定着率を測定しますか。クラッシュ率はどうなっていますか。ユーザーに対してクラッシュが発生していますか。
 
-[Adobe Mobile Servicesとの連携により、AEMアプリの](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) モバイルアプリAnalytics [を活用できます](https://www.adobe.com/marketing-cloud/mobile-marketing.html)。
+[AdobeのMobile Servicesとの統合により、AEMアプリの](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) Mobile App Analytics [を活用できます](https://www.adobe.com/marketing-cloud/mobile-marketing.html)。
 
 AEMアプリを実装して、モバイルアプリやコンテンツに対するユーザーの関与を追跡、レポート、理解し、起動回数、アプリ内時間、クラッシュ率などの主要なライフサイクル指標を測定します。
 
@@ -39,7 +39,7 @@ AEMアプリを実装して、モバイルアプリやコンテンツに対す�
 
 ## 前提条件 {#prerequisties}
 
-AEM Mobile では、アプリでのトラッキングデータを収集してレポートするには Adobe Analytics アカウントが必要です。設定の一環として、AEM *管理者は* 、まず次の操作を行う必要があります。
+AEM Mobile では、アプリでのトラッキングデータを収集してレポートするには Adobe Analytics アカウントが必要です。設定の一環として、AEM *Administrator* はまず次の操作を行う必要があります。
 
 * Adobe Analytics アカウントを設定し、Mobile Services にアプリケーションのレポートスイートを作成します。
 * Adobe Experience Manager（AEM）に AMS クラウドサービスを設定します。
@@ -52,7 +52,7 @@ Analytics アカウントを設定したら、コンテンツをモバイルア�
 
 詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 この設定は、コンテンツ同期に対して、ADBMobileConfig を /www ディレクトリに取り込むように指示する必要があります。For example in the Geometrixx Outdoors App the Content Sync configuration is located at: */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 開発向けの設定もありますが、Geometrixx Outdoors の場合には開発以外の設定と同じものです。
 
-モバイルアプリケーションのAEM AppsダッシュボードからADBMobileConfigをダウンロードする方法について詳しくは、「Analytics- Mobile Services - Adobe Mobile Services SDK Configファイル」を参照してください。
+モバイルアプリケーションAEM AppsダッシュボードからADBMobileConfigをダウンロードする方法について詳しくは、Analytics - Mobile Services -AdobeMobile Services SDKの設定ファイルを参照してください。
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"
@@ -91,7 +91,7 @@ For iOS the file will need to be copied to the XCode project&#39;s **Resources**
 
 ### アプリでの AMS プラグインの追加 {#add-the-ams-plugin-in-the-app}
 
-アプリがデータを収集するには、アプリの一部としてAdobe Mobile Services(AMS)プラグインを含める必要があります。 アプリの config.xml にプラグインを 1 つの機能としてインクルードすることで、別の Cordova フックを使用して、PhoneGap Build プロセスでプラグインを自動的に追加できます。
+アプリがデータを収集するには、AdobeMobile Services(AMS)プラグインをアプリの一部として含める必要があります。 アプリの config.xml にプラグインを 1 つの機能としてインクルードすることで、別の Cordova フックを使用して、PhoneGap Build プロセスでプラグインを自動的に追加できます。
 
 ```xml
 <feature name="ADBMobile">
@@ -107,7 +107,7 @@ The Geometrixx Outdoors App config.xml is located at */content/phonegap/geometri
 
 There are several tracking APIs provided in the [AMS Phonegap Plugin API.](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
-これらを使用すると、ユーザーがアプリ内でどのページに移動しているか、どのコントロールが最も使用されているかなど、状態およびアクションをトラッキングできます。アプリを計測して追跡する最も簡単な方法は、AMSプラグインが提供するAnalyticsAPIを利用することです。
+これらを使用すると、ユーザーがアプリ内でどのページに移動しているか、どのコントロールが最も使用されているかなど、状態およびアクションをトラッキングできます。アプリを計測して追跡する最も簡単な方法は、AMSプラグインが提供するAnalytics APIを利用することです。
 
 * ADB.trackState()
 * ADB.trackAction()
@@ -122,7 +122,7 @@ Geometrixx Outdoors アプリのコードを見ると参考になります。Geo
 
 | **ラベル** | **説明** | **デフォルト** |
 |---|---|---|
-| APIエンドポイント | Adobe Mobile Services HTTP APIのベースURL | https://api.omniture.com |
+| APIエンドポイント | AdobeMobile Services HTTP APIのベースURL | https://api.omniture.com |
 | 設定エンドポイント | 指定したレポートスイートIDのADBモバイル設定を取得するために使用されるURL | /ams/1.0/app/config/ |
 | Mobile Service Apps | ユーザー会社ー内のアプリのリストの取得 | /ams/1.0/apps |
 
