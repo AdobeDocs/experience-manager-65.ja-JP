@@ -45,7 +45,7 @@ ht-degree: 44%
    * [レポート](reports.md)
 
 
-* Communities [*tools *](tools.md):
+* Communities [*tools*](tools.md):
 
    * [サイトテンプレート](sites.md)
    * [グループテンプレート](tools-groups.md)
@@ -59,29 +59,29 @@ ht-degree: 44%
 
 AEM Communities の主な機能の 1 つは、サインインしたサイト訪問者（メンバー）によるユーザー生成コンテンツ（UGC）の生成です。UGC の使用について詳しくは、以下を参照してください。
 
-* [共通UGCストア](working-with-srp.md): UGCの共有ストレージ用のSRPの選択
-* [UGCのモデレート](moderate-ugc.md): 信頼できるメンバーが一括またはコンテキスト内でUGCをモデレートする可能性がある
-* [タグ付けUGC](tag-ugc.md): メンバーがコンテンツにタグを付けられるように機能を設定できます。
-* [Translating UGC](translate-ugc.md): 機能を設定して、すべてのUGCを翻訳したり、メンバーが選択した投稿を翻訳できるようにしたりできます。
-* [Analytics構成](analytics.md): メンバーのアクティビティに関する様々な指標に関するレポートをアドビのAnalyticsが作成できるようにする
+* [共通UGCストア](working-with-srp.md):UGCの共有ストレージ用のSRPの選択
+* [UGCのモデレート](moderate-ugc.md):信頼できるメンバーが一括またはコンテキスト内でUGCをモデレートする可能性がある
+* [タグ付けUGC](tag-ugc.md):メンバーがコンテンツにタグを付けられるように機能を設定できます。
+* [Translating UGC](translate-ugc.md):機能を設定して、すべてのUGCを翻訳したり、メンバーが選択した投稿を翻訳できるようにしたりできます。
+* [Analytics設定](analytics.md):会員アクティビティに関する様々な指標に関するレポートをAdobe Analyticsに対して有効にする
 
 ### コミュニティメンバー {#community-members}
 
-* [ユーザーとユーザーグループの管理](users.md): 特権を持つメンバーを含む、コミュニティメンバーおよびメンバーグループの詳細。
+* [ユーザーとユーザーグループの管理](users.md):特権を持つメンバーを含む、コミュニティメンバーおよびメンバーグループの詳細。
 * [貢献度の制限](limits.md)：新しいメンバーによる投稿を制約する機能.
-* [トンネルサービス](deploy-communities.md#tunnel-service-on-author): 発行側のメンバーとメンバーグループに対して、作成者環境からアクセスできます。
-* [メンバーとグループコンソール](members.md): 発行側のメンバーとメンバーグループを作成者環境から作成および管理できます。
-* [ユーザー同期](sync.md): 複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期する場合。
-* [FacebookおよびTwitterを使用したソーシャルログイン](social-login.md): サイト訪問者がFacebookやTwitterの資格情報を使用してコミュニティのメンバーになれる機能。
-* [スコアリングとバッジ](implementing-scoring.md): 会員の役割を識別するために割り当てられるバッジと、会員がコミュニティに参加してバッジを得るための能力。
-* [通知](notifications.md): メンバーがフォローしているアクティビティを通知する機能。
+* [トンネルサービス](deploy-communities.md#tunnel-service-on-author):発行側のメンバーとメンバーグループに対して、作成者環境からアクセスできます。
+* [メンバーとグループコンソール](members.md):発行側のメンバーとメンバーグループを作成者環境から作成および管理できます。
+* [ユーザー同期](sync.md):複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期する場合。
+* [FacebookおよびTwitterを使用したソーシャルログイン](social-login.md):サイト訪問者がFacebookやTwitterの資格情報を使用してコミュニティのメンバーになれる機能。
+* [スコアリングとバッジ](implementing-scoring.md):会員の役割を識別するために割り当てられるバッジと、会員がコミュニティに参加してバッジを得るための能力。
+* [通知](notifications.md):メンバーがフォローしているアクティビティを通知する機能。
 * [購読](subscriptions.md)：メンバーが外部の電子メールを使用してコミュニティと対話する機能.
-* [メッセージ](messaging.md): 内部メッセージを使用してコミュニティとやり取りする機能。
+* [メッセージ](messaging.md):内部メッセージを使用してコミュニティとやり取りする機能。
 
 ### イネーブルメント機能 {#enablement-features}
 
 * [イネーブルメント設定](enablement.md)：イネーブルメント機能を正しくセットアップするために必要な情報.
-* [Analytics構成](analytics.md): Adobe Communitiesの機能を有効にするために必要な情報です。
+* [Analytics設定](analytics.md):コミュニティ機能でAdobe Analyticsを有効にするために必要な情報です。
 * [イネーブルメントリソースのタグ付け](tag-resources.md)：イネーブルメントカタログの作成に必要.
 
 ### デプロイメント {#deployment}
