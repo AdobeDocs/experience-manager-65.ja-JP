@@ -31,7 +31,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
    * 変数の宣言で、データスルキップが設定されている：
       `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
-   * リストと繰り返しの制御パラメータ： begin、step、end:
+   * リストと繰り返しの制御パラメータ：begin、step、end:
       `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
    * データによる非ラップの識別子：
@@ -46,10 +46,10 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
 * コアコンポーネント 2.3.2 以上（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases) を参照）。
 * レイアウトコンテナのグリッドシステム（[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid) を参照）。
-* Clientlibマネージャ： Google Closure CompilerのデフォルトをJavaScript clientlibsの縮小（以前のデフォルトはYahoo YUI）に変更し、Google Closure Compilerのバージョンをv20190121に更新
+* Clientlibマネージャ：Google Closure CompilerのデフォルトをJavaScript clientlibsの縮小（以前のデフォルトはYahoo YUI）に変更し、Google Closure Compilerのバージョンをv20190121に更新
 * テンプレートエディターとポリシー
 
-   * JS SDK（SPAエディター）を使用するシングルページアプリ用のテンプレートの作成と編集
+   * JS SDK(SPAエディター)を使用するシングルページアプリ用のテンプレートを作成および編集します。
 
 * 参照サイト We.Retail 4.0（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) を参照）。
 * Toolkit to upgrade existing sites to leverage the latest editor capabilities, see [Github repository](https://github.com/adobe/aem-modernize-tools)
@@ -86,7 +86,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 ## 翻訳 {#translation}
 
 * プロジェクトマスターを使用して、翻訳プロジェクトを手軽に作成できます。
-* デフォルトで翻訳ジョブを承認済みステータスに設定することで、翻訳プロジェクトの実行を簡単にする
+* 翻訳ジョブをデフォルトで承認済みのステータスに設定することで、翻訳プロジェクトの実行を簡略化できます。
 * サードパーティ翻訳メモリの変更点に合わせて翻訳済みページを更新できます。
 * 翻訳ジョブを JSON 形式で書き出すことができます。
 * V3 APIを使用するためにMicrosoft Translation統合を更新する
@@ -95,7 +95,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
 * PushOnModifyを使用するロールアウト設定の場合は、ページ移動操作の処理が改善され、一貫性のない状態が回避されます。
 * ライブコピー構造内に新しいページを作成すると、デフォルトでスタンドアロンページが作成されるようになりました。
-* JS SDK（SPAエディター）を使用するシングルページアプリでMSM機能を使用する
+* JS SDK(SPAエディター)を使用するシングルページアプリでMSM機能を使用する
 
 ## ローンチ {#launches}
 
@@ -112,7 +112,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 >
 >AEM 6.5 のリリース時点では、at.js 2.x は AEM でサポートされていません。at.js 1.x の最新バージョンを使用してください。
 
-* Adobe Target との連携で Target Standard API を使用できるようになりました。AEMの以前のバージョンでは、非推奨のTargetクラシックHTTP APIを使用しています。
+* Adobe Target との連携で Target Standard API を使用できるようになりました。AEMの以前のバージョンでは、非推奨のターゲットクラシックHTTP APIを使用しています。
 * Adobe Target `mbox.js` version 63 is included. Adobe strongly recommends to switch implementation to `at.js` v1.x.
 * `at.js` バージョン1.5.0が含まれるようになりました。 Adobe recommends that you use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision `at.js` v1.x into the site.
 
