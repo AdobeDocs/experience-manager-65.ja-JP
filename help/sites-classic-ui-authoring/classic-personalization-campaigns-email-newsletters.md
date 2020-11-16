@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '1128'
+ht-degree: 71%
 
 ---
 
@@ -37,7 +40,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 An email or newsletter that you want to publish to an e-mail service can be created under a campaign using the **Geometrixx Newsletter** template. You can also use the **Geometrixx Outdoors E-Mail** template. Sample email/newsletter-based on the **Geometrixx Outdoors E-Mail** template are available at `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
 
-設定した電子メールサービスに発行する新しい電子メールを作成するには：
+設定済みの電子メールサービスに発行される新しい電子メールを作成するには：
 
 1. Go to **Websites** and then **Campaigns**. キャンペーンを選択します。
 1. 「**新規**」をクリックして、**ページを作成**&#x200B;ウィンドウを開きます。
@@ -86,7 +89,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
   </tr>
   <tr>
    <td>購読センター</td>
-   <td>Subscriptionセンターは、組織から受信したメッセージを加入者が制御できるWebページです。</td>
+   <td>購読センターはWebページで、加入者が組織から受け取るメッセージを制御できます。</td>
   </tr>
   <tr>
    <td>電子メールの開封回数を追跡</td>
@@ -109,6 +112,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
    >
    >
 * 電子メールツールのうち、「**住所 (必須)**」と「**プロファイルセンター (必須)**」の 2 つは必須です。電子メールが ExactTarget に公開されると、これら 2 つの電子メールツールがデフォルトですべての電子メールの下部に追加されます。
+
 >
 
 
@@ -146,7 +150,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 1. 電子メールを開きます。
 1. 電子メールを公開する前に、正しい設定が電子メールに適用されていることを確認してください。
 1. 「**公開**」をクリックします。This opens the **Publish Newsletter To E-mail Service Provider** window.
-1. 「**ニュースレター名**」フィールドに入力します。電子メール／ニュースレターは、この名前で電子メールサービスプロバイダーに公開されます。電子メール名が指定されていない場合、電子メールはAEMのニュースレターのページ名を使用して発行されます。
+1. 「**ニュースレター名**」フィールドに入力します。電子メール／ニュースレターは、この名前で電子メールサービスプロバイダーに公開されます。電子メール名が指定されていない場合は、AEMのニュースレターのページ名を使用して電子メールが公開されます。
 1. 「**発行**」をクリックします。
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
