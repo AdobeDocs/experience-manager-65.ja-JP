@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 translation-type: tm+mt
 source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+workflow-type: tm+mt
+source-wordcount: '657'
+ht-degree: 64%
 
 ---
 
@@ -89,7 +92,7 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 1. Go to **File -> Project Structure**
 1. Select the **Content** module
 1. Click **+** above the list of modules and select **Web**
-1. [Webリソースディレクトリ]で、下のスクリ `content/src/main/content/jcr_root subdirectory` ーンショットに示すように、プロジェクトのを選択します。
+1. Webリソースディレクトリとして、下のスクリーンショットに示すように、プロジェクト `content/src/main/content/jcr_root subdirectory` の対象を選択します。
 
 ![chlimage_1-48](assets/chlimage_1-48a.png)
 
@@ -112,7 +115,7 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 1. On the **Startup/Connection** pane, adjust the port if required
 1. IntelliJ IDEA が処理するコマンドライン引数をコピーします。
 
-![chlimage_1-50](assets/chlimage_1-50a.png)![chlimage_1-51](assets/chlimage_1-51a.png)
+![chlimage_1-50](assets/chlimage_1-50a.png) ![chlimage_1-51](assets/chlimage_1-51a.png)
 
 #### デバッグモード用の AEM の設定 {#configure-aem-for-debug-mode}
 
