@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 2d0835e0-5602-49a9-b9ad-636ce5a8ad2a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '109'
+ht-degree: 40%
 
 ---
 
@@ -24,6 +27,6 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 開発者向けの情報については、以下を参照してください。
 
-* [AEMタグフレームワーク](/help/sites-developing/framework.md) — タグ付けに使用されるノードとプロパティの説明
+* [AEM Tagging Framework](/help/sites-developing/framework.md) — タグ付けに使用されるノードとプロパティの説明
 
-* [AEMアプリケーションへのタグ付けの構築](/help/sites-developing/building.md) — クライアント側およびサーバー側コードからのタグ付けフレームワークで機能するAPIの説明
+* [AEMアプリケーションへのタグ付けの構築](/help/sites-developing/building.md) — クライアント側およびサーバー側コードのタグ付けフレームワークで機能するAPIの説明
