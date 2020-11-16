@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1264'
+ht-degree: 62%
 
 ---
 
@@ -56,7 +59,7 @@ To do this, see the [Templates documentation](/help/sites-developing/page-templa
 
 1. サイト管理者として開始します。
 1. ツリー構造をたどって、選択した Web サイト内のフォームを作成したい場所に移動します。
-1. **新規/**&#x200B;新規ペ&#x200B;****&#x200B;ージを選択します。.
+1. **新規** / **新規ページ…を選択します。**.
 1. Select either **Adobe Campaign Profile (AC 6.1)** or **Adobe Campaign Profile (ACS)** template and enter the page properties.
 
    >[!NOTE]
@@ -80,7 +83,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 このセクションでは、Adobe Campaign へのリンクのみを取り上げます。For more information on a more general overview of how to use forms in Adobe Experience Manager, see [Editmode components](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md).
 
 1. 編集するフォームに移動します。
-1. **ツールボックスで、ページ/**&#x200B;ページのプ&#x200B;****&#x200B;ロパティを選択します。次に、ポップアップウ **ィンドウの** 「クラウドサービス」タブに移動します。
+1. In the toolbox, select **Page** > **Page Properties...** then go to the **Cloud Services** tab of the pop-up window.
 1. Add the Adobe Campaign service by clicking **Add service**, and then selecting the configuration that corresponds to your Adobe Campaign instance in the service&#39;s drop down list. この設定は、インスタンスとの間の接続を設定すると実行されます。For more information, see [Connecting AEM to Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
 
    >[!NOTE]
@@ -94,6 +97,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
    * **Adobe Campaign：プロファイルを保存**：Adobe Campaign で受信者を作成または更新できます（デフォルト値）。
    * **Adobe Campaign：サービスを購読**：Adobe Campaign で受信者の購読を管理できます。
    * **Adobe Campaign：サービスの購読を解除**：Adobe Campaign で受信者の購読をキャンセルできます。
+
    The **Action Configuration** field lets you specify whether or not you would like to create the recipient profile in the Adobe Campaign database if it does not yet exist. To do this, check the **Create user if not existing** option.
 
 1. 選択したコンポーネントをツールボックスからフォームにドラッグ＆ドロップして追加します。使用可能な Adobe Campaign 固有コンポーネントについては、[Adobe Campaign フォームコンポーネント](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)を参照してください。
@@ -116,7 +120,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 
 >[!NOTE]
 >
->You must have an **Encryted Primary Key** component on each form. 「コンポーネント」で「Adobe Campaign」を選択し、これらのコンポーネントのみを表示します。
+>You must have an **Encryted Primary Key** component on each form. 「コンポーネント」で、「Adobe Campaign」を選択して、これらのコンポーネントのみを表示します。
 >
 >この手順では暗号化されたプライマリキー（EPK）の番号を手動で入力しますが、実際には、ニュースレター内にこのページへの（購読解除、購読またはプロファイル更新をおこなうための）リンクが表示されます。EPK はユーザーに基づいて自動的に更新されます。
 >
