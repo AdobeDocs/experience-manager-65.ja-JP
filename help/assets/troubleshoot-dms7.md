@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media のトラブルシューティング - Scene7モード
+title: Dynamic Media のトラブルシューティング -Scene7モード
 description: Scene7 実行モードの Dynamic Media に関するトラブルシューティングです。
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
