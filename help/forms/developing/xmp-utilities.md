@@ -156,7 +156,7 @@ XMP Utilities API(Java)を使用してXMPメタデータを読み込みます。
 
    >[!NOTE]
    >
-   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラム的に呼び出すことを可能にするクラスが含まれています。
+   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラムで呼び出すことを可能にするクラスが含まれています。
 
 1. XMPUtilityServiceクライアントの作成
 
