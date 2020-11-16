@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager用アクセシブルコンテンツの作成（WCAG 2.1準拠）
-description: AEMを使用すると、障害を持つユーザーがWebコンテンツにアクセスし、利用しやすくすることができます。
+title: Adobe Experience Manager向けアクセシブルコンテンツの作成（WCAG 2.1準拠）
+description: 障害を持つユーザーがWebコンテンツにアクセスし、利用できるようにするためにAEMを使用します。
 translation-type: tm+mt
 source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
@@ -67,11 +67,11 @@ Web ページ上の情報はテキスト以外の様々な形式（写真、ビ�
 
 #### 達成方法 - テキスト以外のコンテンツ（1.1.1） {#how-to-meet-non-text-content}
 
-静的なグラフィックの場合、そのグラフィックと同等の代替テキストを指定することが基本的な要件です。それには、「**代替テキスト**」フィールドを使用します。例えば、**[画像](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)**コアコンポーネントを参照してください。
+静的なグラフィックの場合、そのグラフィックと同等の代替テキストを指定することが基本的な要件です。それには、「**代替テキスト**」フィールドを使用します。例えば、**[画像](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)**&#x200B;コアコンポーネントを参照してください。
 
 >[!NOTE]
 >
->標準搭載のコアコンポーネントには、個々の画像に代替テキスト記述を追加するための「**代替テキスト**」フィールドが用意されていないもの（**[カルーセル](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)**など）もありますが、「**ラベル&#x200B;**」フィールド（「**[アクセシビリティ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/carousel.html#accessibility-tab)**」タブ）は全コンポーネントにあります。
+>標準搭載のコアコンポーネントには、個々の画像に代替テキスト記述を追加するための「**代替テキスト**」フィールドが用意されていないもの（**[カルーセル](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)**&#x200B;など）もありますが、「**ラベル**」フィールド（「**[アクセシビリティ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/carousel.html#accessibility-tab)**」タブ）は全コンポーネントにあります。
 >
 >When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
