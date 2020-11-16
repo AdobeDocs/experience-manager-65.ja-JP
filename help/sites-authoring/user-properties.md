@@ -12,13 +12,16 @@ discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '538'
+ht-degree: 99%
 
 ---
 
 
 # アカウント環境の設定{#configuring-your-account-environment}
 
-AEM では、アカウントおよび作成者オーサー環境の特定項目を設定できます。
+AEM では、アカウントおよびオーサー環境の特定項目を設定できます。
 
 [ヘッダー](/help/sites-authoring/basic-handling.md#the-header)および関連する[環境設定](#userpreferences)ダイアログの「[ユーザー](/help/sites-authoring/user-properties.md#user-settings)」オプションを使用すると、ユーザーオプションを変更できます。
 
@@ -32,7 +35,7 @@ AEM では、アカウントおよび作成者オーサー環境の特定項目�
 
    * [次のユーザーとして動作](/help/sites-administering/security.md#impersonating-another-user)機能では、ユーザーは別のユーザーに成り代わって作業をおこなうことができます。
 
-* Profile
+* プロファイル
 
    * [ユーザー設定](/help/sites-administering/security.md)への便利なリンクを提供します。
 
@@ -50,7 +53,7 @@ AEM では、アカウントおよび作成者オーサー環境の特定項目�
 
 ![screen-shot_2019-03-05at100322](assets/screen-shot_2019-03-05at100322.png)
 
-* **言葉遣い**
+* **言語**
 
    オーサリング環境の UI で使用する言語を定義します。使用できるリストから必要な言語を選択します。
 
@@ -70,7 +73,7 @@ AEM では、アカウントおよび作成者オーサー環境の特定項目�
 
 * **アセットのデスクトップアクションを表示**
 
-   このオプションを使用するには、AEM デスクトップアプリが必要です。
+   このオプションを使用するには、AEM デスクトップアプリケーションが必要です。
 
 * **注釈カラー**
 
@@ -102,6 +105,7 @@ AEM では、アカウントおよび作成者オーサー環境の特定項目�
 
    * [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
+
    このオプションは、キーボードショートカットを有効にします。デフォルトでは有効になっていますが、例えばユーザーに特定のアクセシビリティ要件がある場合に、無効にできます。
 
 * **従来のオーサリング機能を使用**
