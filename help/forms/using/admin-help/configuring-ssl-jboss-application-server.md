@@ -33,7 +33,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 1. In a command prompt, navigate to *[JAVA HOME]*/bin and type the following command to create the credential and keystore:
 
-   `keytool -genkey -dname "CN=`*Host NameGroupGroup *`, OU=`*会社* 名 `, O=`*NameNameNameNameNameNameNameNameStateStateCountryCode City_key *`,L=`**`, S=`**`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`*_passwordkeystorename *`.keystore`
+   `keytool -genkey -dname "CN=`*Host NameGroupGroup*`, OU=`*会社* 名 `, O=`*NameNameNameNameNameNameNameNameStateStateCountryCode City_key*`,L=`**`, S=`**`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`*_passwordkeystorename* `.keystore`
 
    >[!NOTE]
    >
@@ -59,7 +59,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
    * （サーバークラスター） `keytool -export -alias "AEMForms Cert" -file AEMForms_cert.cer -keystore [appserver root]/domain/configuration/keystorename.keystore`
 
 1. パスワードの入力を求められたら、*keystore_password*&#x200B;を入力します。
-1. Copy the AEMForms_cert.cer file to the *[appserver root]\conf *directory by typing the following command:
+1. Copy the AEMForms_cert.cer file to the *[appserver root] \conf* directory by typing the following command:
 
    * (Windows Single Server) `copy AEMForms_cert.cer [appserver root]\standalone\configuration`
    * （Windows Serverクラスタ） `copy AEMForms_cert.cer [appserver root]\domain\configuration`
@@ -78,7 +78,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 1. 次のコマンドを入力して、証明書ファイルを読み込みます。
 
-   `keytool -import -alias “AEMForms Cert” -file`*AEMForms_cert *`.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
+   `keytool -import -alias “AEMForms Cert” -file`*AEMForms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. Type `changeit` as the password. Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
 1. プロンプトに対して `Trust this certificate? [no]`次のように入力し `yes`ます。 「Certificate was added to keystore」という確認メッセージが表示されます。
@@ -169,7 +169,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 1. In a command prompt, navigate to *[JAVA HOME]*/bin and type the following command to create the keystore and the key:
 
-   `keytool -genkey -dname "CN=`*Host NameGroup *`, OU=`*会社* 名 `, O=`**`, L=`**`, S=`**`, C=`**`-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`*名City NameCityNameCityNameStateCountryCountryCodeKeyKeyPasswordNameKeyGroupNameGroupNameGroupNameNameGroupNameNameGroupNameGroupNameNameGroupName *`.keystore`
+   `keytool -genkey -dname "CN=`*Host NameGroup*`, OU=`*会社* 名 `, O=`**`, L=`**`, S=`**`, C=`**`-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`*名City NameCityNameCityNameStateCountryCountryCodeKeyKeyPasswordNameKeyGroupNameGroupNameGroupNameNameGroupNameNameGroupNameGroupNameNameGroupName* `.keystore`
 
    >[!NOTE]
    >
@@ -177,7 +177,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 1. 次のコマンドを入力して証明書要求を生成し、認証局に送信します
 
-   `keytool -certreq -alias` &quot;AEMForms Cert&quot; `-keystore`*keystorename *`.keystore -file`*AEMFormscertRequest.csr*
+   `keytool -certreq -alias` &quot;AEMForms Cert&quot; `-keystore`*keystorename*`.keystore -file`*AEMFormscertRequest.csr*
 
 1. 証明書ファイルの要求が完了したら、次の手順を実行します。
 
@@ -195,7 +195,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
 1. In a command prompt, navigate to *`[JAVA HOME]`*/bin and type the following command to import the credential into the keystore:
 
-   `keytool -import -trustcacerts -file`*CACertificateName *`.crt -keystore`*keystorename* `.keystore`
+   `keytool -import -trustcacerts -file`*CACertificateName*`.crt -keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
