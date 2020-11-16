@@ -22,23 +22,23 @@ ht-degree: 0%
 
 PDF Utilitiesサービスでは、次のクイック開始を使用できます。
 
-[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントからXDPドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからXDPドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用したXDPドキュメントからPDFドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したXDPドキュメントからPDFドキュメントへの変換](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのプロパティの取得](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのプロパティの取得](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントの保存スタイルの設定](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの保存スタイルの設定](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）: PDFドキュメントのサニタイズ](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
+[クイック開始（SOAPモード）:PDFドキュメントのサニタイズ](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
-AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Forms Serverオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントからXDPドキュメントへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからXDPドキュメントへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
 次のコードの例は、PDFドキュメントをXDPドキュメントに変換します。 (PDFドキュメントのXDPドキュメントへの [変換を参照](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents))。
 
@@ -139,7 +139,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したXDPドキュメントからPDFドキュメントへの変換 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したXDPドキュメントからPDFドキュメントへの変換 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
 
 次のコードの例は、XDPドキュメントをPDFドキュメントに変換します。 (XDPドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents))。
 
@@ -239,7 +239,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのプロパティの取得 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのプロパティの取得 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
 
 次のコードの例は、ドキュメントがPDFドキュメントであるかどうかを判定します。PDFバージョンである場合は、Acrobatの最も古いバージョンで読み取ることができます。 (PDFドキュメントのプロパティ [の取得を参照](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties))。
 
@@ -356,7 +356,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントの保存スタイルの設定 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの保存スタイルの設定 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
 
 次のコードの例は、Web表示を高速にするための保存モードを設定し、PDFドキュメントを暗号化されたEncryptionサービスに渡します。 Web表示用に保存された暗号化されたPDFドキュメントは、* FastWebViewLoan.pdf*というPDFファイルとして保存されます。 (PDFドキュメントの保存モードの [設定を参照](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes))。
 
@@ -496,7 +496,7 @@ AEM Forms操作は、厳密に型指定されたAPIをAEM Formsを使用して�
  
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したドキュメントのPDF/A-2bドキュメントへの変換 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したドキュメントのPDF/A-2bドキュメントへの変換 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
 
 次のJavaコードの例を使用すると、 *Loan.pdfというPDFドキュメントをPDF/A-2bドキュメントに変換し、LoanArchive.pdfというPDFファイルとして* 保存できます **。 (ドキュメントをPDF/Aドキュメントに [変換するを参照](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents))。
 
@@ -584,7 +584,7 @@ public class CreatePDFADocument {
 }
 ```
 
-## クイック開始（SOAPモード）: PDFドキュメントのサニタイズ {#quick-start-soap-mode-sanitizing-pdf-documents}
+## クイック開始（SOAPモード）:PDFドキュメントのサニタイズ {#quick-start-soap-mode-sanitizing-pdf-documents}
 
 次のJavaコードの例は、 *Loan.pdfというPDFドキュメントをサンイズします*。
 
