@@ -8,6 +8,9 @@ contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 translation-type: tm+mt
 source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
+workflow-type: tm+mt
+source-wordcount: '694'
+ht-degree: 84%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
 
 >[!IMPORTANT]
 >
->以下の節ではGDPRを例として挙げているが、詳細はデータ保護とプライバシーに関する規制に適用される。（GDPR、CCPAなど）
+>以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
 
 ## AEM Mobile の GDPR サポート {#aem-mobile-gdpr-support}
 
@@ -26,11 +29,11 @@ AEM Mobile は、GDPR コンプライアンスの義務に関してお客様を�
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-アドビのデジタルパブリッシング製品（AEM Mobile の先行製品）では、アドビによる GDPR 対応の取り組みをサポートしています。[https://www.adobe.com/jp/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html) を参照してください。以下では、アドビと協力して GDPR 要求を開始する方法など、Digital Publishing Suite 製品における GDPR 関連機能のサポートの詳細について説明します。
+アドビのデジタルパブリッシング製品（AEM Mobile の先行製品）では、アドビによる GDPR 対応の取り組みをサポートしています。[https://www.adobe.com/jp/privacy/general-data-protection-regulation.html](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html) を参照してください。以下では、アドビと協力して GDPR 要求を開始する方法など、Digital Publishing Suite 製品における GDPR 関連機能のサポートの詳細について説明します。
 
 AEM Mobile と以前の Digital Publishing Suite 製品を混同しないように、以下から Digital Publishing Suite 製品にログインできるようになっています。
 
-[https://digitalpublishing.acrobat.com/ja/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
+[https://digitalpublishing.acrobat.com/ja/welcome.html](https://digitalpublishing.acrobat.com/ja/welcome.html)
 
 ### GDPR 要求の開始 {#initiating-a-gdpr-request}
 
@@ -50,11 +53,11 @@ Digital Publishing Suite の GDPR 要求を開始する場合は、アドビカ�
 
 ### Frequently Asked Questions (FAQ) {#frequently-asked-questions-faq}
 
-**アドビは、DELETEリクエストを開始する際にApp storeでの購入を削除しますか。**
+**Adobeは、DELETEリクエストを開始する際に、App Storeでの購入を削除しますか？**
 
 アドビが削除するのは、App Store での購入品に関する情報（例：サブスクリプションなど）です。購入品そのものは App Store の記録に残っています。アプリ（エンドユーザー）が App Store にログインしたら、それらのレシートが再度取り出されてアドビに送信されます。それ以降は、新しい購入品と見なされ、再度アクセスできるようにアプリで復元されます。
 
-**アドビは、DELETEリクエストを開始する際に、お客様が提供する権利を削除しますか。**
+**Adobeは、DELETE要求を開始する際に、ユーザーが提供したエンタイトルメントを削除しますか。**
 
 アドビが削除するのは、顧客の追加の直接権利付与に関する情報です。顧客が使用した OAuth メカニズムにアプリ（エンドユーザー）がログインした場合は、アドビに情報が送信され、サービスによって追加の権利（資格情報）が再び取り出されます。
 
@@ -78,7 +81,7 @@ Digital Publishing Suite 製品が進化するにつれて、サービスの実�
 
 GDPR 要求を開始する場合は、アドビカスタマーケアにお問い合わせください。
 
-Digital Publishing Suite GDPRリクエストの入力と結果出力の例を次に示します。
+Digital Publishing Suite GDPRリクエストの入力と出力の例を次に示します。
 
 #### Inputs: {#inputs}
 
