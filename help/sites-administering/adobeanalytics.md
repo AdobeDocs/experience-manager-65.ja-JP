@@ -59,12 +59,10 @@ Adobe Analytics と AEM の統合により、Web ページのアクティビテ�
 >Adobe Analytics をカスタムプロキシ設定で使用している場合、（例えば、Web コンソールで）**Apache HTTP Client** プロキシ設定に必要な [2 つの OSGi バンドルを設定](/help/sites-deploying/configuring-osgi.md)する必要があります。AEM の一部の機能では 3.x API を使用し、他の機能では 4.x API を使用するので、両方とも必要です。設定:
 >
 >* **Day Commons HTTP Client 3.1**（3.x API を設定）。
-   >  例：[https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
-   >
-   >
-* **Apache HTTP コンポーネントプロキシ設定**（4.x API を設定）。
-   >  例：[https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
-
+>  例：[https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>
+>* **Apache HTTP コンポーネントプロキシ設定**（4.x API を設定）。
+>  例：[https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >
 
 
