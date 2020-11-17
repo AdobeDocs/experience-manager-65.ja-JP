@@ -27,7 +27,7 @@ ht-degree: 47%
 
    ![アセットのプロパティページを開き、アセットを関連付けます](assets/asset-properties-relate-assets.png)
 
-   *図：[!DNL Assets][!UICONTROL アセットを関連付けるプロパティ]ページ。*
+   *図： [!DNL Assets] [!UICONTROL アセットを関連付けるプロパティ] ページ。*
 
    または、リスト表示からアセットを選択します。
 
