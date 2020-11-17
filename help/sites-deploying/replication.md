@@ -11,7 +11,7 @@ topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d281ea4a5e7711aafa906bc0c43009c3c2cc8947
+source-git-commit: 480e1f62e34783295133d10451ec409cf3a8bb0b
 workflow-type: tm+mt
 source-wordcount: '3661'
 ht-degree: 71%
@@ -552,7 +552,8 @@ If you navigate to `/etc/replication` you can see the following three nodes:
    >
    >
    >アウトボックスクエリ用にレプリケーションテストが実行されると、リバースレプリケーションのたびに、テストレプリケーションより古い項目がすべて再処理されます。
-
+   >
+   >
    >そのような項目がキュー内に既に存在する場合は、次の XPath JCR クエリを使用して検索し、削除する必要があります。
    >
    >
