@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c5e6098b62ff7e3e787b5f0f3c3b32a35e3981c6
+source-git-commit: a99c5794cee88d11ca3fb9eeed443c4d0178c7b3
 workflow-type: tm+mt
 source-wordcount: '2731'
 ht-degree: 77%
@@ -211,9 +211,8 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
 >[!NOTE]
 >
 >インスタンスの役割は、Sling Settings Web コンソールで **primary** または **standby** 実行モードの存在をチェックすることで、いつでも確認できます。
-
->This can be done by going to *https://localhost:4502/system/console/status-slingsettings* and checking the **&quot;Run Modes&quot;** line.
 >
+>This can be done by going to *https://localhost:4502/system/console/status-slingsettings* and checking the **&quot;Run Modes&quot;** line.
 
 ## 初回の同期 {#first-time-synchronization}
 
@@ -287,15 +286,18 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 * **スタンバイ自動クリーンアップ(`standby.autoclean`):** 同期サイクルでストアのサイズが増加した場合は、cleanupメソッドを呼び出します。
 
 >[!NOTE]
-Offloading などのサービスがプライマリとスタンバイを個別に識別できるように、これらに異なるリポジトリ ID を付与することを強く推奨します。
-この設定を確実におこなうには、スタンバイで *sling.id* ファイルを削除してインスタンスを再起動するのが最も良い方法です。
+>
+>Offloading などのサービスがプライマリとスタンバイを個別に識別できるように、これらに異なるリポジトリ ID を付与することを強く推奨します。
+>
+>この設定を確実におこなうには、スタンバイで *sling.id* ファイルを削除してインスタンスを再起動するのが最も良い方法です。
 
 ## フェイルオーバー手順 {#failover-procedures}
 
 何らかの理由でプライマリインスタンスに障害が発生した場合、以下の方法で起動時の実行モードを変更して、プライマリの役割を引き継ぐようにスタンバイインスタンスのいずれかを設定することができます。
 
 >[!NOTE]
-設定ファイルについても、プライマリインスタンスに使用される設定と一致するように変更する必要があります。
+>
+>設定ファイルについても、プライマリインスタンスに使用される設定と一致するように変更する必要があります。
 
 1. スタンバイインスタンスがインストールされている場所に移動して、そのインスタンスを停止します。
 
@@ -372,10 +374,12 @@ Offloading などのサービスがプライマリとスタンバイを個別に
 ### リビジョンクリーンアップ {#revision-clean}
 
 >[!NOTE]
-プライマリインスタンスで[オンラインリビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md)を実行した場合は、以下に示す手動での手順は必要ありません。Additionally, if you are using Online Revision Cleanup, the `cleanup ()` operation on the standby instance will pe performed automatically.
+>
+>プライマリインスタンスで[オンラインリビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md)を実行した場合は、以下に示す手動での手順は必要ありません。Additionally, if you are using Online Revision Cleanup, the `cleanup ()` operation on the standby instance will pe performed automatically.
 
 >[!NOTE]
-スタンバイでオフラインリビジョンクリーンアップを実行しないでください。オフラインコンパクションは不要であり、segmentstore のサイズは縮小されません。
+>
+>スタンバイでオフラインリビジョンクリーンアップを実行しないでください。オフラインコンパクションは不要であり、segmentstore のサイズは縮小されません。
 
 Adobeでは、時間の経過とともに過剰なリポジトリの増大を防ぐため、定期的にメンテナンスを実行することを推奨しています。 コールドスタンバイリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
 
@@ -403,5 +407,6 @@ Adobeでは、時間の経過とともに過剰なリポジトリの増大を防
    * On the standby, the data store garbage collection is available only via the **BlobGarbageCollection** MBean - `startBlobGC()`. **RepositoryManagement **MBeanはスタンバイでは使用できません。
 
    >[!NOTE]
-   共有データストアを使用していない場合は、ガベージコレクションを最初にプライマリで実行してから、スタンバイで実行する必要があります。
+   >
+   >共有データストアを使用していない場合は、ガベージコレクションを最初にプライマリで実行してから、スタンバイで実行する必要があります。
 
