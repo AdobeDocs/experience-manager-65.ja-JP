@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 translation-type: tm+mt
-source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
+source-git-commit: 69226ffeb79e0b425b28456cbc64192432863f5d
 workflow-type: tm+mt
 source-wordcount: '2780'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -94,7 +94,7 @@ Adobe Campaign と統合するには、Adobe Campaign クラウドサービス�
    ![chlimage_1-17](assets/chlimage_1-17a.png)
 
 1. 使用している Adobe Campaign インスタンスに一致する設定をドロップダウンリストから選択し、「**保存**」をクリックして確認します。
-1. 電子メールが適用されたテンプレートを表示するには、「**Adobe Campaign**」タブをクリックします。 別のテンプレートを選択したい場合は、編集時に電子メール内からテンプレートにアクセスできます。
+1. 「**Adobe Campaign**」タブをクリックすると、電子メールに適用されるテンプレートを表示できます。別のテンプレートを選択したい場合は、編集時に電子メール内からテンプレートにアクセスできます。
 
    If you would like to apply a specific email delivery template (from Adobe Campaign), other than the default mail template, in **Properties**, select the **Adobe Campaign** tab. 関連する Adobe Campaign インスタンス内での電子メール配信テンプレートの内部名を入力します。
 
@@ -322,8 +322,7 @@ AEM では、ニュースレターが単一の配信にリンクされている�
 
 >[!NOTE]
 ニュースレターが複数の配信にリンクされている場合は、リンクされている配信の数です（ただし、すべてのIDが表示されるわけではありません）。
-
->[!NOTE]
+[!NOTE]
 ワークフローステップ「**Adobe Campaign に公開**」は、AEM 6.1 で廃止されます。このステップは、Adobe Campaign との AEM 6.0 統合の一部でしたが、必要ではなくなりました。
 
 AEM で作成されたコンテンツと Adobe Campaign の配信を同期するには：
