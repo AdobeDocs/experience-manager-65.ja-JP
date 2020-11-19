@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 translation-type: tm+mt
-source-git-commit: 69226ffeb79e0b425b28456cbc64192432863f5d
+source-git-commit: 8e663a3c11523796a2bad15e9c088e484f2b573b
 workflow-type: tm+mt
 source-wordcount: '2780'
 ht-degree: 75%
@@ -53,7 +53,6 @@ AEMでAdobe Campaignコンテンツを作成する場合、Adobe Campaignサー�
 >[!NOTE]
 >
 >When adding email templates, be sure to add them under **/content/campaigns** to make them available.
-
 
 #### 新しい電子メールコンテンツの作成 {#creating-new-email-content-1}
 
@@ -160,9 +159,6 @@ Adobe Campaign コンテンツの詳細については、[Adobe Campaign コン�
 >
 >* Adobe Campaign の「**プロファイル**」ターゲティングディメンションのフィールドのみが考慮されます。
 >* When viewing Properties from **Sites**, you do not have access to the Adobe Campaign context fields. これらのフィールドには編集時に電子メール内から直接アクセスできます。
-
->
-
 
 
 パーソナライゼーションを挿入する方法
