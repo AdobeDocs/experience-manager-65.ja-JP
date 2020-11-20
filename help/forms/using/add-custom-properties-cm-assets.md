@@ -105,7 +105,6 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
 
    >[!NOTE]
    >
-
    >すべてのアセットに追加する共通プロパティは、アセットプロパティの「基本」タブに表示されます。デフォルトでは、すべてのアセットに追加する共通プロパティは、プロパティページおよびアセット作成ページに表示されます。共通のプロパティを非表示にするには、次の操作を行う必要があり <!--link to show / hide properties]-->ます。
 
 ### シナリオ：カスタムプロパティ／フィールドへのカスタムドロップダウンおよび値の追加 {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
