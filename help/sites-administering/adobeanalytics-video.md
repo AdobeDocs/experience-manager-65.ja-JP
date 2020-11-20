@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 50%
@@ -25,8 +25,8 @@ ht-degree: 50%
 
 >[!NOTE]
 >
->Before you continue, make sure** **that you have a** playable video** uploaded within AEM.
-
+>次に進む前に、AEM に&#x200B;**再生可能なビデオ**&#x200B;がアップロードされていることを確認してください。
+>
 >ページ上でビデオを再生できるようにするには、AEM でビデオファイルをトランスコードする方法について、**[こちらのチュートリアル](/help/sites-authoring/default-components-foundation.md#video)**&#x200B;を参照してください。
 
 各方式を使用してビデオトラッキングのフレームワークを設定するには、以下の手順を実行します。
