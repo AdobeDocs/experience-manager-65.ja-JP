@@ -13,7 +13,7 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 071f4a292343f0ad52ca3700c95bf60f03c307cc
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '7287'
 ht-degree: 88%
@@ -302,7 +302,8 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 * **外部 Web アプリケーション**
 
-   * **ターゲットアプリケーション**&#x200B;統合するWebアプリケーションのURLを指定します。例：
+   * **Target application**
+Specify the URL of the web application to be integrated; for example:
 
       ```
       https://en.wikipedia.org/wiki/Main_Page
@@ -386,17 +387,19 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 >[!NOTE]
 >
 >インプレースエディターでは、編集時に、画像の元のサイズと縦横比を使用します。高さと幅のプロパティも指定できます。プロパティで定義したサイズや縦横比の制限は、編集の変更内容を保存するときに適用されます。
-
->インスタンスによっては、[ページのデザイン](/help/sites-developing/designer.md)によって最小、最大の制限が課される場合もあります。これらは、プロジェクト実装時に開発されます。
 >
+>インスタンスによっては、[ページのデザイン](/help/sites-developing/designer.md)によって最小、最大の制限が課される場合もあります。これらは、プロジェクト実装時に開発されます。
+
 フルスクリーン編集モードで使用できる追加オプションがいくつか用意されています（マップ、ズームなど）。
 
 ![](do-not-localize/chlimage_1-16.png)
 
 >[!NOTE]
-Internet Explorer では、アップロードの進行状況を監視できません。
-Internet Explorer を使用する場合、アップロードした画像ファイルをプレビューに表示して変更（トリミングなど）を実行できるようにするには、画像をアップロードし「**OK**」をクリックしてから画像を再度開く必要があります。
-
+>
+>Internet Explorer では、アップロードの進行状況を監視できません。
+>
+>Internet Explorer を使用する場合、アップロードした画像ファイルをプレビューに表示して変更（トリミングなど）を実行できるようにするには、画像をアップロードし「**OK**」をクリックしてから画像を再度開く必要があります。
+>
 >See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms) section for more information about HTML5 features used by AEM.
 
 画像を読み込む際は、次の設定が可能です。
@@ -438,7 +441,8 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
    画像の高さと幅を設定します。
 
 >[!NOTE]
-一部のオプションはフルスクリーンエディターでのみ使用できます。
+>
+>一部のオプションはフルスクリーンエディターでのみ使用できます。
 
 最終的な画像（**タイトル**&#x200B;と&#x200B;**説明**&#x200B;を含む）は、次のように表示されます。
 
@@ -451,12 +455,14 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ![chlimage_1-93](assets/chlimage_1-93.png)
 
 >[!NOTE]
-このコンポーネントは [HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)を使用して実装されています。
+>
+>このコンポーネントは [HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)を使用して実装されています。
 
 ### リスト {#list}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[リストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/list.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[リストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/list.html)を利用することをお勧めします。
 
 リストコンポーネントを使用すると、リストを表示するための検索条件を設定できます。
 
@@ -529,7 +535,8 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ### ログイン {#login}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 「ユーザー名」フィールドと「パスワード」フィールドを提供します。
 
@@ -586,7 +593,8 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ### リファレンス {#reference}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コンテンツフラグメントコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/content-fragment-component.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コンテンツフラグメントコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/content-fragment-component.html)を利用することをお勧めします。
 
 **参照**&#x200B;コンポーネントを使用すると、（現在のインスタンス内にある）AEM Web サイトの別のページからテキストを参照できます。参照された段落のコンテンツは、現在のページの段落と同様に表示されます。元の段落が変更されると、コンテンツが更新されます（ページの更新が必要な場合があります）。
 
@@ -619,7 +627,8 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ### 検索 {#searching}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[クイック検索コアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/quick-search.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[クイック検索コアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/quick-search.html)を利用することをお勧めします。
 
 検索コンポーネントで、ページに検索機能を追加します。
 
@@ -686,7 +695,8 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ### サイトマップ {#sitemap}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。Adobe recommends leveraging the [Navigation](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/navigation.html), [Language Navigation](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/language-navigation.html), and [Breadcrumb Core Components](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/breadcrumb.html) instead.
+>
+>この基盤コンポーネントは廃止されました。Adobe recommends leveraging the [Navigation](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/navigation.html), [Language Navigation](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/language-navigation.html), and [Breadcrumb Core Components](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/breadcrumb.html) instead.
 
 自動的なサイトマップのリスト表示。デフォルトの設定では、現在の Web サイトのすべてのページが（アクティブなリンクとして）すべて表示されます。例えば、次のように表示されます。
 
@@ -703,7 +713,8 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ### スライドショー {#slideshow}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
 
 このコンポーネントを使用すると、ページでスライドショーとして表示する一連の画像をロードできます。画像を追加または削除し、それぞれにタイトルを割り当てることができます。「詳細」では、表示領域のサイズも指定できます。
 
@@ -732,10 +743,12 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ### テーブル {#table}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
 
 >[!NOTE]
-**テーブル**&#x200B;基盤コンポーネントは、**[テキスト](#text)**&#x200B;基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
+>
+>**テーブル**&#x200B;基盤コンポーネントは、**[テキスト](#text)**&#x200B;基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
 
 **テーブル**&#x200B;コンポーネントは、テーブルの作成、入力および書式設定ができるように事前設定されています。ダイアログを使用して、テーブルを設定し、次のいずれかの方法でコンテンツを作成できます。
 
@@ -779,10 +792,12 @@ Internet Explorer を使用する場合、アップロードした画像ファ�
 ### テキスト {#text}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
 
 >[!NOTE]
-**テキスト**&#x200B;基盤コンポーネントは、**テーブル**&#x200B;基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
+>
+>**テキスト**&#x200B;基盤コンポーネントは、**テーブル**&#x200B;基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
 
 テキストコンポーネントでは、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)で提供されている機能により、WYSIWYG エディターを使用してテキストブロックを入力できます。各種のアイコンを使用すると、テキストを書式設定できます（フォント特性、整列、リンク、リストおよびインデントを含む）。
 
@@ -806,7 +821,8 @@ When you open the **Configure** dialog, you can also set:
 ### テキストと画像 {#text-image}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[画像](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)および[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[画像](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)および[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
 
 テキストと画像コンポーネントで、テキストブロックと画像を追加します。テキストと画像を個別に追加して編集することもできます。詳しくは、[テキスト](#text)コンポーネントと[画像](#image)コンポーネントを参照してください。
 
@@ -853,7 +869,8 @@ When you open the **Configure** dialog, you can also set:
 ### タイトル {#title}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[タイトルコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/list.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[タイトルコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/list.html)を利用することをお勧めします。
 
 タイトルコンポーネントには次の機能があります。
 
@@ -881,7 +898,8 @@ When you open the **Configure** dialog, you can also set:
 ### ビデオ {#video}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 **ビデオ**&#x200B;コンポーネントを使用すると、定義済みですぐに使用できるビデオ要素をページに配置できます。
 
@@ -900,10 +918,12 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
       ビデオのネイティブサイズ（ピクセル単位の幅 × 高さ）が「サイズ」の横のボックスに表示されます（上の図を参照してください）。ビデオのネイティブ寸法を上書きする場合は、幅と高さの寸法を手動で入力します。Click **OK** to dismiss the dialog.
 
 >[!NOTE]
-サポートされている形式は次のとおりです。
-* `.mp4`
-* `Ogg`
-* `FLV` (Flashビデオ)
+>
+>サポートされている形式は次のとおりです。
+>
+>* `.mp4`
+>* `Ogg`
+>* `FLV` (Flashビデオ)
 
 
 ## 列 {#columns}
@@ -935,12 +955,14 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 ## フォーム {#form}
 
 >[!CAUTION]
-基盤コンポーネントのフォームコンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>基盤コンポーネントのフォームコンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 フォームコンポーネントは、訪問者が入力を送信するフォームを作成するために使用されます。フォームおよびフォームコンポーネントは、ユーザーからのフィードバック（例えばお客様満足度アンケート）やユーザー情報（例えばユーザー登録）などの情報を収集するのに使用できます。
 
 >[!NOTE]
-AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)を参照してください。
+>
+>AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)を参照してください。
 
 フォームは次のように多様なコンポーネントから構築されます。
 
@@ -961,7 +983,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 ![dc_form](assets/dc_form.png)
 
 >[!NOTE]
-フォームのさらなる開発およびカスタマイズについて詳しくは、[フォームの開発のページ](/help/sites-developing/developing-forms.md)を参照してください。これには、アクションや制約の追加、フィールドのプリロード、スクリプトを使用したサービスのアクション実施の呼び出しなどが含まれます。
+>
+>フォームのさらなる開発およびカスタマイズについて詳しくは、[フォームの開発のページ](/help/sites-developing/developing-forms.md)を参照してください。これには、アクションや制約の追加、フィールドのプリロード、スクリプトを使用したサービスのアクション実施の呼び出しなどが含まれます。
 
 ### （多くの）フォームコンポーネントに共通の設定 {#settings-common-to-many-form-components}
 
@@ -986,7 +1009,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
    フィールドのサイズとスタイル設定を示します。
 
 >[!NOTE]
-表示されるフィールドはコンポーネントによって大きく変わります。
+>
+>表示されるフィールドはコンポーネントによって大きく変わります。
 
 これらのタブには必要なパラメーターが表示されます。必要なパラメーターは個々のコンポーネントのタイプによって異なりますが、次のようなものがあります。
 
@@ -1050,7 +1074,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 ### フォーム（コンポーネント） {#form-component}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームコンテナコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-container.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームコンテナコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-container.html)を利用することをお勧めします。
 
 フォームコンポーネントは、**フォーム開始**&#x200B;要素および&#x200B;**フォーム終了**&#x200B;要素を使用してフォームの開始と終了の両方を定義します。フォームが確実に正しく定義されるように、これらの要素は常にペアとして使用されます。
 
@@ -1059,7 +1084,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 フォームの開始と終了の間に、ユーザーが実際に入力するフィールドを定義するフォームコンポーネントを追加できます。
 
 >[!NOTE]
-基盤コンポーネントのフォームコンポーネントでは、他のフォームコンポーネント（ボタン、テキスト、非表示など）の使用のみサポートしています。[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)のフォームコンポーネントを基盤コンポーネントフォーム内で使用すること（およびその逆の使用）はサポートされていません。
+>
+>基盤コンポーネントのフォームコンポーネントでは、他のフォームコンポーネント（ボタン、テキスト、非表示など）の使用のみサポートしています。[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)のフォームコンポーネントを基盤コンポーネントフォーム内で使用すること（およびその逆の使用）はサポートされていません。
 
 #### フォームの開始 {#start-of-form}
 
@@ -1276,7 +1302,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 ### アカウント名 {#account-name}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
 
 ユーザーがアカウント名を入力できます。
 
@@ -1285,7 +1312,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 ### アドレス {#address}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
 
 次の形式を持つ国際化対応のアドレスフィールドを追加できます。
 
@@ -1296,7 +1324,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 ### Captcha {#captcha}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 キャプチャコンポーネントを画面に表示する場合、ユーザーは英数字を入力する必要があります。更新するごとに、文字列は変わります。
 
@@ -1307,7 +1336,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 ### チェックボックスグループ {#checkbox-group}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
 
 チェックボックスを使用すると、1 つ以上のチェックボックスのリストを構築できます。チェックボックスでは同時に複数の項目を選択できます。
 
@@ -1316,13 +1346,16 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 タイトル、説明、要素名を含む様々なパラメーターを指定できます。「+」ボタンまたは「-」ボタンを使用して項目の追加または削除をおこないます。また、上向き矢印キーおよび下向き矢印キーを使用して位置を変更します。
 
 >[!NOTE]
-**項目読み込みパス**&#x200B;を使用して、チェックボックスグループのリストと値をプリロードすることができます。
-[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
+>
+>**項目読み込みパス**&#x200B;を使用して、チェックボックスグループのリストと値をプリロードすることができます。
+>
+>[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
 
 ### クレジットカードの詳細 {#credit-card-details}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 クレジットカードの詳細を入力するために必要なフィールドを提供できます。使用可能なカードの種類や、必要な情報（セキュリティコードなど）を指定するように設定できます。
 
@@ -1331,7 +1364,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 ### ドロップダウンリスト {#dropdown-list}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
 
 ドロップダウンリストを設定して、次のような選択範囲の値をユーザーに提供できます。
 
@@ -1340,38 +1374,46 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 リストに表示するタイトルと項目を指定できます。「+」または「-」ボタンを使用してリスト項目の追加または削除をおこないます。また、上下の矢印ボタンを使用して位置を変更します。リストから複数の項目を選択できるかどうかや、リストを最初に開いたときに自動的に選択する項目（初期値）を指定できます。
 
 >[!NOTE]
-**項目読み込みパス**&#x200B;を使用して、ドロップダウンリストと値をプリロードすることができます。
-[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
+>
+>**項目読み込みパス**&#x200B;を使用して、ドロップダウンリストと値をプリロードすることができます。
+>
+>[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
 
 ### ファイルのアップロード {#file-upload}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 ファイルのアップロードコンポーネントを使用すると、ユーザーがファイルを選択してアップロードできるようになります。
 
 ![dc_form_fileupload](assets/dc_form_fileupload.png)
 
 >[!NOTE]
-Sling サーブレットにファイルをアップロードするためのカスタムアップロードコンポーネントを作成できます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)を参照してください。
+>
+>Sling サーブレットにファイルをアップロードするためのカスタムアップロードコンポーネントを作成できます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)を参照してください。
 
 ### 非表示のフィールド {#hidden-field}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォーム非表示コアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-hidden.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォーム非表示コアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-hidden.html)を利用することをお勧めします。
 
 このコンポーネントでは、非表示のフィールドを作成できます。非表示のフィールドは様々な用途で使用できます。例えば、フォームの送信後にアクションの実行が必要な場合や、後処理で非表示のデータが必要な場合などです。
 
 ![dc_form_hiddenfield](assets/dc_form_hiddenfield.png)
 
 >[!NOTE]
-フォームをカスタマイズして、フォーム内の他のフィールドの値に基づき特定のファイルコンポーネントを表示または非表示にすることができます。フォームフィールドの表示の変更は、フィールドが特定の条件のみで必要となる場合に便利です。
-詳しくは、[フォームコンポーネントの表示と非表示](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)を参照してください。
+>
+>フォームをカスタマイズして、フォーム内の他のフィールドの値に基づき特定のファイルコンポーネントを表示または非表示にすることができます。フォームフィールドの表示の変更は、フィールドが特定の条件のみで必要となる場合に便利です。
+>
+>詳しくは、[フォームコンポーネントの表示と非表示](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)を参照してください。
 
 ### 画像ボタン {#image-button}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
 
 画像ボタンを使用すると、独自の画像やテキストのボタンを作成できます。
 
@@ -1380,7 +1422,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### 画像のアップロード {#image-upload}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 画像のアップロードコンポーネントを使用すると、ユーザーが画像ファイルを選択してアップロードできるようになります。
 
@@ -1389,7 +1432,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### リンクフィールド {#link-field}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 リンクフィールドを使用すると、ユーザーが URL を指定できます。
 
@@ -1400,7 +1444,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### パスワードフィールド {#password-field}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 ユーザーが自分のパスワードを入力できるようにします。
 
@@ -1409,7 +1454,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### パスワードリセット {#password-reset}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 このコンポーネントには、次の 2 つのフィールドがあります。
 
@@ -1423,7 +1469,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### ラジオグループ {#radio-group}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
 
 ラジオグループを使用すると、1 つ以上のラジオボタンのチェックボックスのリストを構築できます。このチェックボックスでは 1 つの項目のみを選択できます。
 
@@ -1432,13 +1479,16 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ![dc_form_radiogroupuse](assets/dc_form_radiogroupuse.png)
 
 >[!NOTE]
-**項目読み込みパス**&#x200B;を使用して、ラジオグループと値をプリロードすることができます。
-[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
+>
+>**項目読み込みパス**&#x200B;を使用して、ラジオグループと値をプリロードすることができます。
+>
+>[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
 
 ### 送信ボタン {#submit-button}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
 
 このコンポーネントを使用すると、デフォルトのテキストを指定した送信ボタンを作成できます。
 
@@ -1451,7 +1501,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### タグフィールド {#tags-field}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 このフィールドでは、タグを選択できます。
 
@@ -1477,7 +1528,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### テキストフィールド {#text-field}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
 
 標準テキストフィールドは、必要なサイズに設定し、独自の導入メッセージを付けることができます。
 
@@ -1486,7 +1538,8 @@ Sling サーブレットにファイルをアップロードするためのカ�
 ### Workflow Submit Button(s) {#workflow-submit-button-s}
 
 >[!CAUTION]
-この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
+>
+>この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
 
 このコンポーネントを使用すると、ワークフロー内で使用する送信ボタンを作成できます。
 
