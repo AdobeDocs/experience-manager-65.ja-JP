@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f62d2d639499c128fd4cafa5f9c39307ae9a607d
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 95%
@@ -46,16 +46,20 @@ ht-degree: 95%
 >[!NOTE]
 >
 >使用可能なアクティビティの種類は、次のオプションによって決まります。
-
+>
 >* Adobe Target の接続に AEM 側で使用される Adobe Target テナント（clientcode）で **xt_only** オプションがオンになっている場合は、XT アクティビティ&#x200B;**のみ**&#x200B;を AEM で作成できます。
    >
+   >
 * Adobe Target テナント（clientcode）で **xt_only** オプションが&#x200B;**オフ**&#x200B;になっている場合は、XT アクティビティと A/B アクティビティの&#x200B;**両方**&#x200B;を AEM で作成できます。
-
+>
+>
 **追加のメモ：** **xt_only** オプションは特定の Target テナント（clientcode）に適用される設定で、Adobe Target でのみ直接編集できます。このオプションは AEM で有効および無効にすることはできません。
 
 >[!CAUTION]
-権限のないユーザーがアクセスできないように、パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護する必要があります。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
-詳しくは、[Adobe Target との統合の前提条件](/help/sites-administering/target-requirements.md#securingtheactivitysettings)を参照してください。
+>
+>権限のないユーザーがアクセスできないように、パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護する必要があります。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
+>
+>詳しくは、[Adobe Target との統合の前提条件](/help/sites-administering/target-requirements.md#securingtheactivitysettings)を参照してください。
 
 ## アクティビティコンソールを使用したブランドの作成 {#creating-a-brand-using-the-activities-console}
 
@@ -89,8 +93,10 @@ ht-degree: 95%
 * **目標指標：** Adobe Target をターゲティングエンジンとして選択した場合、成功指標をアクティビティに追加できます。成功指標が 1 つ必要です。
 
 >[!NOTE]
-Adobe Target への同期が失敗するので、新しい Adobe Target アクティビティは、**アクティビティ**&#x200B;コンソールではなく、ターゲットコンテンツエディターで&#x200B;***作成***&#x200B;する必要があります。
-ただし、既存の Adobe Target アクティビティはアクティビティコンソールで編集できます。
+>
+>Adobe Target への同期が失敗するので、新しい Adobe Target アクティビティは、**アクティビティ**&#x200B;コンソールではなく、ターゲットコンテンツエディターで&#x200B;***作成***&#x200B;する必要があります。
+>
+>ただし、既存の Adobe Target アクティビティはアクティビティコンソールで編集できます。
 
 アクティビティを追加するには：
 
@@ -135,14 +141,16 @@ Adobe Target への同期が失敗するので、新しい Adobe Target アク�
 1. 「**保存**」をクリックまたはタップします。
 
    >[!NOTE]
-   作成したアクティビティを使用可能にするには、アクティビティを公開する必要があります。
+   >
+   >作成したアクティビティを使用可能にするには、アクティビティを公開する必要があります。
 
 ## アクティビティの公開と非公開 {#publishing-and-unpublishing-activities}
 
 アクティビティを使用可能にするには、公開する必要があります。逆に、アクティビティを使用不可にするには、非公開にします。
 
 >[!NOTE]
-アクティビティを非公開にする場合、ページを更新しない限り、アクティビティのステータスは変更されません。
+>
+>アクティビティを非公開にする場合、ページを更新しない限り、アクティビティのステータスは変更されません。
 
 アクティビティを公開または非公開にするには：
 
@@ -223,7 +231,10 @@ AEM では、アクティビティを Adobe Target と同期するときに、`t
 同期の問題を回避するには、すべてのアクティビティに一意の名前を付けてください。アクティビティの同期が失敗した場合は、同じ名前を使用しているキャンペーンを Adobe Target で削除できます（そのキャンペーンが使用中でない場合）。
 
 >[!NOTE]
-When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. Adobe Target でキャンペーンを削除しても、`thirdPartyId` は削除されません。`thirdPartyId` を異なるタイプ（AB、XT）のキャンペーンに再利用することはできません。また、手動で削除することはできません。この問題を回避するには、各キャンペーンに一意の名前を付けてください。そうすれば、キャンペーン名を異なるキャンペーンタイプで再利用できなくなります。
-同じキャンペーンタイプで同じ名前を使用する場合は、既存のキャンペーンが上書きされます。
-同期中に、「リクエストは失敗しました。`thirdPartyId` は既に存在します」というエラーが表示された場合は、キャンペーン名を変更して再度同期してください。
+>
+>When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. Adobe Target でキャンペーンを削除しても、`thirdPartyId` は削除されません。`thirdPartyId` を異なるタイプ（AB、XT）のキャンペーンに再利用することはできません。また、手動で削除することはできません。この問題を回避するには、各キャンペーンに一意の名前を付けてください。そうすれば、キャンペーン名を異なるキャンペーンタイプで再利用できなくなります。
+>
+>同じキャンペーンタイプで同じ名前を使用する場合は、既存のキャンペーンが上書きされます。
+>
+>同期中に、「リクエストは失敗しました。`thirdPartyId` は既に存在します」というエラーが表示された場合は、キャンペーン名を変更して再度同期してください。
 
