@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 79%
@@ -58,7 +58,7 @@ _gaq.push(['_trackPageview']);
 >[!CAUTION]
 >
 >The Geometrixx-Outdoors demo site is configured so that the attributes provided in the Page Properties are appended to the html source code (just above the `</html>` endtag) in the corresponding `js` script.
-
+>
 >If your own `/apps` do not inherit from the default page component ( `/libs/foundation/components/page`) you (or your developers) have to make sure that the corresponding `js` scripts are included, for example by either including `cq/cloudserviceconfigs/components/servicescomponents`, or using a similar mechanism.
 >
 >これをしないと、どのサービス（汎用、Analytics、Target など）も機能しません。
@@ -105,4 +105,5 @@ _gaq.push(['_trackPageview']);
    適切な期間が経過した後、収集された統計が表示できるようになります。
 
    >[!NOTE]
-   設定が子ページを持つページに添付されている場合、サービスはそれらにも継承されます。
+   >
+   >設定が子ページを持つページに添付されている場合、サービスはそれらにも継承されます。
