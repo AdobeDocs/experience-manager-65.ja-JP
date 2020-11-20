@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '6169'
 ht-degree: 88%
@@ -330,8 +330,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 >[!NOTE]
 Internet Explorer では、アップロードの進行状況を監視できません。
 Internet Explorer を使用する場合、アップロードした画像ファイルをプレビューに表示して変更（トリミングなど）を実行できるようにするには、画像をアップロードし「**OK**」をクリックしてから画像を再度開く必要があります。
-
->See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms) section for more information about HTML5 features used by AEM.
+See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms) section for more information about HTML5 features used by AEM.
 
 画像を読み込む際は、次の設定が可能です。
 
