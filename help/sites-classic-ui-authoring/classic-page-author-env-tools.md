@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 89%
@@ -205,12 +205,11 @@ The Website console also [provides information about the current status of the p
 >[!NOTE]
 >
 >その他に次のオプションも利用できます。
-
+>
 >* [基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
 >* [ClientContext](/help/sites-administering/client-context.md)
-* Web サイト - Web サイトコンソールを開きます。
-* 再読み込み - ページを更新します。
-
+>* Web サイト - Web サイトコンソールを開きます。
+>* 再読み込み - ページを更新します。
 
 
 ## キーボードショートカット {#keyboard-shortcuts}
