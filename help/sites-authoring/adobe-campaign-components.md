@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '2854'
 ht-degree: 81%
@@ -92,9 +92,9 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 >[!NOTE]
 >
 >インプレースエディターでは、編集時に、画像の元のサイズと縦横比を使用します。高さと幅のプロパティも指定できます。プロパティで定義したサイズや縦横比の制限は、編集の変更内容を保存するときに適用されます。
-
->インスタンスによっては、[ページのデザイン](/help/sites-developing/designer.md)によって最小、最大の制限が課される場合もあります。これらは、プロジェクト実装時に開発されます。
 >
+>インスタンスによっては、[ページのデザイン](/help/sites-developing/designer.md)によって最小、最大の制限が課される場合もあります。これらは、プロジェクト実装時に開発されます。
+
 フルスクリーン編集モードで使用できる追加オプションがいくつか用意されています（マップ、ズームなど）。
 
 ![](do-not-localize/chlimage_1-11.png)
@@ -131,8 +131,10 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 画像の高さと幅を設定します。
 
 >[!NOTE]
-「**詳細**」タブの「**代替テキスト**」フィールドに情報を入力する必要があります。入力しない場合は画像を保存できず、次のエラーメッセージが表示されます。
-`Validation failed. Verify the values of the marked fields.`
+>
+>「**詳細**」タブの「**代替テキスト**」フィールドに情報を入力する必要があります。入力しない場合は画像を保存できず、次のエラーメッセージが表示されます。
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 画像（Campaign）コンポーネントの表示例を以下に示します。
@@ -155,8 +157,10 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 * **追加の URL パラメーター**&#x200B;追加の URL パラメーターがあれば追加します。「項目を追加」をクリックして、複数の項目を追加します。
 
 >[!NOTE]
-You must enter information in the **Link Type** field in the **URL Info** tab, or the component cannot save and you see the following error message:
-`Validation failed. Verify the values of the marked fields.`
+>
+>You must enter information in the **Link Type** field in the **URL Info** tab, or the component cannot save and you see the following error message:
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 リンク（Campaign）コンポーネントの表示例を以下に示します。
@@ -227,8 +231,10 @@ You must enter information in the **Link Type** field in the **URL Info** tab, o
 画像の高さと幅を設定します。
 
 >[!NOTE]
-「**詳細**」タブの「**代替テキスト**」フィールドは必須です。入力しない場合、コンポーネントを保存できず、次のエラーメッセージが表示されます。
-`Validation failed. Verify the values of the marked fields.`
+>
+>「**詳細**」タブの「**代替テキスト**」フィールドは必須です。入力しない場合、コンポーネントを保存できず、次のエラーメッセージが表示されます。
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 テキストと画像（Campaign）コンポーネントの表示例を以下に示します。
@@ -246,15 +252,19 @@ The Text &amp; Personalization (Campaign) component lets you enter a text block 
 インプレースエディターで、テキストを追加し、ジャスティフィケーションを変更し、リンクを追加または削除し、コンテキストフィールドまたはパーソナライゼーションブロックを追加し、全画面モードに入ることができます。テキストまたはパーソナライゼーションの追加が完了したら、チェックマークを選択して変更を保存します（または「x」をクリックしてキャンセルします）。See [Inplace editing](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) for more information.
 
 >[!NOTE]
-* 使用できるパーソナライゼーションフィールドは、ニュースレターがリンクされている Adobe Campaign テンプレートによって異なります。
-* ContextHub からペルソナを選択すると、選択したプロファイルのデータでパーソナライゼーションフィールが自動的に置き換えられます。
+>
+>* 使用できるパーソナライゼーションフィールドは、ニュースレターがリンクされている Adobe Campaign テンプレートによって異なります。
+>* ContextHub からペルソナを選択すると、選択したプロファイルのデータでパーソナライゼーションフィールが自動的に置き換えられます。
 
+>
+>
 [パーソナライゼーションの挿入](/help/sites-authoring/campaign.md#inserting-personalization)を参照してください。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
 >[!NOTE]
-**nms:seedMember** スキーマまたはその拡張で定義されているフィールドのみが考慮されます。**nms:seedMember** にリンクしているテーブルの属性は使用できません。
+>
+>**nms:seedMember** スキーマまたはその拡張で定義されているフィールドのみが考慮されます。**nms:seedMember** にリンクしているテーブルの属性は使用できません。
 
 ## Adobe Campaign フォームコンポーネント {#adobe-campaign-form-components}
 
@@ -455,7 +465,8 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 このコンポーネントをフォームに追加すると、利用可能なすべての購読がチェックボックスとして表示されるので、ユーザーに目的の購読を選択させることができます。When users submit the form, this component subscribes the user to or unsubscribes the user from the selected services depending on the form action type (**Adobe Campaign: Subscribe to Services** or **Adobe Campaign: Unsubscribe from Services**).
 
 >[!NOTE]
-このコンポーネントは、ユーザーがどのサービスを購読または購読解除しているかを確認しません。
+>
+>このコンポーネントは、ユーザーがどのサービスを購読または購読解除しているかを確認しません。
 
 購読チェックリスト（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を使用できます（このコンポーネントに利用できる Adobe Campaign 設定はありません）。
 
