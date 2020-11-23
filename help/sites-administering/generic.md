@@ -1,5 +1,5 @@
 ---
-ttitle: Administering generic eCommerce
+title: 汎用 e コマースの管理
 seo-title: 汎用 e コマースの管理
 description: AEM の汎用ソリューションは、リポジトリ内に保持されているコマース情報を管理する手段を提供します。
 seo-description: AEM の汎用ソリューションは、リポジトリ内に保持されているコマース情報を管理する手段を提供します。
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9167cbe2-2efb-422d-b58b-0c24b9476fe6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 06d6696a5493f0e166e400bcd9a379b7be062c1e
 workflow-type: tm+mt
-source-wordcount: '3008'
+source-wordcount: '3011'
 ht-degree: 85%
 
 ---
