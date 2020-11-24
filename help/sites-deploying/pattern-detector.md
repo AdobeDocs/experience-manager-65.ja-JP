@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d510decba9b2af23bab54c78779f98a36a6172d4
+source-git-commit: ba7ac70858b7b2fd610d63355a22a69c3a7586e3
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 93%
+source-wordcount: '544'
+ht-degree: 89%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 93%
 
 ## 設定方法 {#how-to-set-up}
 
-パターン検出は、AEM 6.5 のアップグレードを対象とした 6.1 から 6.5 のソース AEM バージョンで動作する [1 つのパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。[パッケージマネージャー](/help/sites-administering/package-manager.md)を使用してインストールできます。
+パターン検出は、AEM 6.5 のアップグレードを対象とした 6.1 から 6.5 のソース AEM バージョンで動作する [1 つのパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。[パッケージマネージャー](/help/sites-administering/package-manager.md)を使用してインストールできます。
 
 ## 使用方法 {#how-to-use}
 
