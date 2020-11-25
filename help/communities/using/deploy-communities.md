@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
 workflow-type: tm+mt
-source-wordcount: '1891'
-ht-degree: 35%
+source-wordcount: '1890'
+ht-degree: 34%
 
 ---
 
@@ -91,7 +91,7 @@ ht-degree: 35%
 
 ## 最新リリース {#latest-releases}
 
-AEM 6.5 Communities GA は、Communities パッケージと共に出荷されます。AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities) のアップデートについて詳しくは、[AEM 6.5 リリースノート](/help/release-notes/release-notes.md#communities-release-notes.html)を参照してください。
+AEM 6.5 Communities GAにはCommunitiesパッケージが含まれます。 AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities) のアップデートについて詳しくは、[AEM 6.5 リリースノート](/help/release-notes/release-notes.md#communities-release-notes.html)を参照してください。
 
 ### AEM 6.5 のアップデート {#aem-updates}
 
