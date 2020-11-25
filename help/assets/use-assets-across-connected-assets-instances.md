@@ -3,10 +3,10 @@ title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 916b49572981115f6178c04f260ce63bcfc6d054
+source-git-commit: f0d91a32caa4d3b862d852028e3bc5547aeb8015
 workflow-type: tm+mt
-source-wordcount: '2251'
-ht-degree: 88%
+source-wordcount: '2263'
+ht-degree: 86%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 88%
 
 ## Connected Assets の概要 {#overview-of-connected-assets}
 
-作成者は、[!UICONTROL ページエディター]でページを編集しながら、別の [!DNL Assets] デプロイメント上のアセットをシームレスに検索、参照および埋め込むことができます。管理者は、[!DNL Assets] の別の（リモートの）デプロイメントと、[!DNL Sites] のデプロイメントとの 1 回限りの統合を作成します。
+作成者は、 [!UICONTROL ページエディター] (ターゲット先)でページを編集する場合、アセットのソースとして機能する別の [!DNL Assets] デプロイメントから、アセットの検索、参照および埋め込みをシームレスに行うことができます。 管理者は、の展開と機能の別の展開との、機能のある別の展開 [!DNL Experience Manager] との、1回限りの統合 [!DNL Sites] を作成し [!DNL Experience Manager][!DNL Assets] ます。
 
 [!DNL Sites] 作成者の場合、リモートアセットは読み取り専用のローカルアセットとして利用できます。この機能は、一度に少数のリモートアセットをシームレスに検索および使用できるようサポートします。多くのリモートアセットを [!DNL Sites] ローカルデプロイメントで一度に利用できるようにするには、リモートアセットを一括で移行することを検討します。詳しくは、 [Experience Managerアセット移行ガイドを参照してください](/help/assets/assets-migration-guide.md)。
 
