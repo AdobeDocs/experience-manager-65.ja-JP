@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 4533fa42fa3fa9f157d5ca8fee1251005b1d587e
 workflow-type: tm+mt
-source-wordcount: '1468'
-ht-degree: 33%
+source-wordcount: '1446'
+ht-degree: 32%
 
 ---
 
@@ -23,7 +23,9 @@ ht-degree: 33%
 
 Adobe Experience Manager（AEM）Communities では、高いパフォーマンスと優れたサイト管理機能を持つオンプレミスのコミュニティサイトを素早く作成し、サイト訪問者を価値あるコミュニティメンバーに転換できます。
 
-AEM Communities のライセンス、イネーブルメント機能の追加ライセンスおよび Adobe Analytics に関する情報については、アカウント担当者にお問い合わせください。
+<!--
+Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
+-->
 
 ## Communities の機能 {#communities-features}
 
