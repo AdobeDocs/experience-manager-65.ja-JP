@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2704'
 ht-degree: 5%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 5%
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* カードと列の表示ーでデジタルアセットを並べ替えることができます。
+* [!DNL Assets] アクセシビリティを [!DNL Dynamic Media] 強化しました。 強化された機能は、キーボードナビゲーション、スクリーンリーダーの使用、支援テクノロジー(AT)の使用を可能にする機能強化と似ています。 詳しくは、 [[!DNL Assets] 拡張機能](/help/release-notes/sp-release-notes.md#assets-6570) および [[!DNL Dynamic Media] 拡張機能を参照してください](/help/release-notes/sp-release-notes.md#dynamic-media-6570)。
 
-* [!DNL Assets] アクセシビリティを [!DNL Dynamic Media] 強化しました。 強化された機能は、キーボードナビゲーション、スクリーンリーダーの使用、支援テクノロジー(AT)の使用を可能にする機能強化と似ています。 詳しくは、 [アセットの機能強化](/help/release-notes/sp-release-notes.md#assets-6570) および [[!DNL Dynamic Media] 拡張を参照してください](/help/release-notes/sp-release-notes.md#dynamic-media-6570)。 <!-- TBD: Add link to a11y article after go-live. Adding RN link for now. -->
+* カードと列の表示ーでデジタルアセットを並べ替えることができます。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
