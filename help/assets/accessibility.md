@@ -3,10 +3,10 @@ title: ' [!DNL Experience Manager Assets] でのアクセシビリティ'
 description: Know how accessibility features in [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] help users with disabilities.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 00f5a6194c8c29d358f362441c155c9c2a52cac7
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '1906'
-ht-degree: 49%
+source-wordcount: '1919'
+ht-degree: 48%
 
 ---
 
@@ -42,8 +42,7 @@ Possible topics to cover in this article are below.
 
 準拠レベルの詳細を含むレポートを読み取るには、 [アクセシビリティ準拠レポート](https://www.adobe.com/accessibility/compliance.html) (ACR)ページを参照してください。
 
-<!-- TBD: Add link after release.
-To know how [!DNL Dynamic Media] is accessible, see [accessibility in [!DNL Dynamic Media]](/). -->
+のアクセシビリティ機能につ [!DNL Dynamic Media] いて詳しくは、の [アクセシビリティを参照してください [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)。
 
 ## 支援テクノロジー {#at-support}
 
@@ -224,7 +223,8 @@ CRUD操作、アセットのダウンロード、メタデータの追加など�
 
 >[!MORELIKETHIS]
 >
->* [各リリースで行われた機能強化のリリースノート](/help/release-notes/new-features-latest-service-pack.md)。
+>* [アクセシビリティ機能( [!DNL Dynamic Media]](/help/assets/accessibility-dm.md))。
+>* [各Service Packリリースで行われた機能強化のリリースノート](/help/release-notes/new-features-latest-service-pack.md)。
 >* [[!DNL Adobe Experience Manager] アクセシビリティガイダンス](/help/managing/web-accessibility.md)。
 >* [Adobeソリューションの準拠レポート(ACR)およびVPATリスト](https://www.adobe.com/accessibility/compliance.html)。
 
