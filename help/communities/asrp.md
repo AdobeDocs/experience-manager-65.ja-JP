@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '828'
 ht-degree: 33%
 
 ---
@@ -31,7 +31,7 @@ AEM Communitiesが共通ストアとしてASRPを使用するように設定さ�
 
 ASRP の使用には追加ライセンスが必要です。
 
-UGCにASRPを使用するようにAEM Communitiesサイトを設定するには、次の点についてアカウント担当者にお問い合わせください。
+UGC用のASRPを使用するようにAEM Communitiesサイトを設定するには、次の事項を確認します。
 
 * データセンター URL（ASRP エンドポイントのアドレス）
 * 消費者キー
