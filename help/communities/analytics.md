@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
+source-git-commit: ef57d53fc780bd222abbe994fc71e133ce8a77fc
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2756'
 ht-degree: 46%
 
 ---
@@ -125,9 +125,7 @@ By signing in to [Adobe Experience Cloud](https://docs.adobe.com/content/help/en
 
 **既存のレポートスイート**&#x200B;を使用する場合は、コミュニティサイト用の Analytics フレームワークをアクティベートする前に、[変数マッピングを変更](#modifying-analytics-variable-mapping)する必要があります。
 
-<!--
-Contact your account representative for any concerns regarding the variables dedicated to Communities.
--->
+Communities専用の変数に関する懸念は、アカウント担当者にお問い合わせください。
 
 >[!CAUTION]
 >
