@@ -1,10 +1,10 @@
 ---
-title: '[!DNL Adobe Experience Manager] 6.5 Service Pack リリースノート.'
-description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Service Pack 7.
+title: '[!DNL Adobe Experience Manager] 6.5 Service Pack リリースノート'
+description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Service Pack 7
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
+source-git-commit: 0389508f7870dd2ce6ed7bfc5fb8a9bc88fedffb
 workflow-type: tm+mt
 source-wordcount: '3796'
 ht-degree: 5%
