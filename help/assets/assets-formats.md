@@ -3,10 +3,10 @@ title: サポートされているファイル形式と MIME タイプ
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c2c0f38d0c8e403264db05064d4423ef46880d9a
+source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 58%
+source-wordcount: '1615'
+ht-degree: 59%
 
 ---
 
@@ -237,7 +237,7 @@ The [!DNL Adobe Camera Raw] library enables [!DNL Assets] to ingest raw images. 
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
-ストレージ、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理など、多くのファイル形式では、 [!DNL Dynamic Media] 配信を除く、通常のDAM機能がサポートされます。 いくつかの特定のファイル形式に対する機能の適用については、以下に説明します。
+いくつかの特定のファイル形式に対する通常のDAM機能の適用について、以下に説明します。
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
