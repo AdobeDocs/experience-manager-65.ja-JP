@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '3787'
+source-wordcount: '3796'
 ht-degree: 5%
 
 ---
@@ -139,7 +139,7 @@ ht-degree: 5%
 
 [!DNL Adobe Experience Manager] 6.5.7.0では、次の問題が [!DNL Assets] 修正され、次の機能強化が行われました。
 
-* アクセシビリティに関する次の機能強化が、 [!DNL Experience Manager Assets]
+* アクセシビリティに関して、このリリースで強化された機能は次 [!DNL Experience Manager Assets] のとおりです。 詳しくは、の [アクセシビリティ機能を参照してください [!DNL Assets]](/help/assets/accessibility.md)。
 
    * キーボードを使用してタイムラインを移動する場合、キーはフォーカスを失わずに「すべてを `Esc` 表示  」オプションを折りたたむことがあります。(CQ-4293598)
    * キーボードのTabキーを使用して移動する場合、追加したタグから最後のタグを削除した後も、タグフィールドはフォーカスを保持します(NPR-35109)。
@@ -193,7 +193,7 @@ ht-degree: 5%
 
 #### [!DNL Dynamic Media] {#dynamic-media-6570}
 
-* アクセシビリティに関して、次の主な機能強化が行われ [!DNL Dynamic Media] ました(CQ-4290306)。 詳しくは、のアクセシビリティ機能を参照してくだ [!DNL Dynamic Media]さい。  <!-- TBD: link to DM content post GA -->
+* アクセシビリティに関して、次の機能強化が [!DNL Dynamic Media] (CQ-4290306)で行われました。 詳しくは、 [アクセシビリティ機能( [!DNL Dynamic Media]](/help/assets/accessibility-dm.md))を参照してください。
 
    * スクリーンリーダー（JAWS、ナレーター）は、埋め込みサイズメニューオプションのメニュー項目の名前、役割、状態をナレーションします(CQ-4290927)。
    * ユーザーは、 `Tab` キー(CQ-4290926)を使用して電子メールリンクダイアログ内を移動できます。
