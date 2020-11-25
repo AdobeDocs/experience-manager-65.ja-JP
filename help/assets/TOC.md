@@ -7,10 +7,10 @@ user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: caf5737a05a312308f817ac24a3800965d2c2555
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 51%
+source-wordcount: '585'
+ht-degree: 57%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 51%
 + [[!DNL Experience Manager] 6.5アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
++ [ でのアクセシビリティ  [!DNL Assets]](accessibility.md)
 + Experience Managerアセットの使用 {#using}
    + [[!DNL Assets] ホームページ体験](assets-home-page.md)
    + [デジタルアセットの検索](search-assets.md)
@@ -76,9 +77,9 @@ ht-degree: 51%
    + [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
    + [Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)
-   + [ダイナミックメディアでの一部のみの公開の操作](selective-publishing.md)
-   + [ダイナミックメディアを使用したCDNキャッシュの無効化](invalidate-cdn-cache-dynamic-media.md)
-   + [Dynamic Media Classicを使用したCDNキャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
+   + [Dynamic Media での選択的公開の操作](selective-publishing.md)
+   + [Dynamic Media を使用した CDN キャッシュの無効化](invalidate-cdn-cache-dynamic-media.md)
+   + [Dynamic Media Classic を使用した CDN キャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
    + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
