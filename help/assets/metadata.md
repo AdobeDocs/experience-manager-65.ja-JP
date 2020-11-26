@@ -3,7 +3,7 @@ title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタ
 description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: d070f5dca569dfb90d3034b74c2940fd68d8ceab
 workflow-type: tm+mt
 source-wordcount: '2421'
 ht-degree: 55%
@@ -112,7 +112,7 @@ To customize the metadata properties page, including adding, modifying, deleting
 1. Navigate to the [!DNL Assets] user interface, and click **[!UICONTROL Create]** from the toolbar.
 1. メニューから「**[!UICONTROL メタデータ]**」を選択します。
 1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. メタデータが入った CSV ファイルを選択します。
-1. 次のパラメーターを指定します。 サンプルのCSVファイルについては、 [metadata-import-sample-file.csvを参照してください](assets/metadata-import-sample-file.csv)。
+1. 次のパラメーターを指定します。 サンプルのCSVファイルについては、 [metadata-import-sample-file.csvを参照してください](/help/assets/assets/metadata-import-sample-file.csv)。
 
    | メタデータ読み込みパラメーター | 説明 |
    |:---|:---|
