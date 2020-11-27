@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノ�
 description: 6. [!DNL Adobe Experience Manager] 5 Service Packのリリースノート。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 62a04c1d9f62a5a5fa6f97f415015001daa94747
+source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
 workflow-type: tm+mt
-source-wordcount: '14760'
+source-wordcount: '14804'
 ht-degree: 19%
 
 ---
@@ -326,6 +326,8 @@ Experience Manager6.5.6.0で導入された機能および拡張機能の完全�
 * アダプティブフォームには、いくつかのオープンなリソースリゾルバーがあります。 これらは送信エラーを引き起こします。 この問題は断続的に発生します(CQ-4299407)。
 
 * フィールド設定を初めて開くと、プロパティアイコンは表示されません(CQ-4296284)。
+
+* ユーザーは、アダプティブフォームの送信時に、 `afPath`やなどの送信メタデータを編集 `afSubmissionTime` でき `signers`ます。 この問題を解決するには、クライアント側のフォーム送信データからメタデータ値を削除します。 ユーザーは、この `FormSubmitInfo` オブジェクトを使用して、サーバー(NPR-33654)からこれらの値を取得できます。
 
 **ワークフロー**
 
