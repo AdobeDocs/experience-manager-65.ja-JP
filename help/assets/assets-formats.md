@@ -3,10 +3,10 @@ title: サポートされているファイル形式と MIME タイプ
 description: でサポートされるファイル形式とMIMEタイプ [!DNL Assets] and [!DNL Dynamic Media] 、および各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
+source-git-commit: eaff176bf3ffc197607b8eb39b15c1e945927f8e
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 59%
+source-wordcount: '1639'
+ht-degree: 58%
 
 ---
 
@@ -246,6 +246,10 @@ The [!DNL Adobe Camera Raw] library enables [!DNL Assets] to ingest raw images. 
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（独自の配信ドメインで設定する場合） | − | − | − | − | − | ✓ |
+
+>[!NOTE]
+>
+>JavaScriptファイルのアップロードと配布は、安全である場合とそうでない場合があります。 必要に応じて、オーバーレイを使用して、ユーザーがJSファイルをアップロードできないようにすることができます。
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
