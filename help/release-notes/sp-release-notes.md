@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0389508f7870dd2ce6ed7bfc5fb8a9bc88fedffb
+source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
 workflow-type: tm+mt
-source-wordcount: '3796'
+source-wordcount: '3789'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 | 製品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
 | バージョン | 6.5.7.0 |
-| 種類 | Service Pack のリリース |
+| 型 | Service Pack のリリース |
 | 日付 | 2020年11月26日 |
 | ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.7.zip) |
 
@@ -145,7 +145,7 @@ ht-degree: 5%
    * キーボードのTabキーを使用して移動する場合、追加したタグから最後のタグを削除した後も、タグフィールドはフォーカスを保持します(NPR-35109)。
    * [!DNL Experience Manager] コンポーネントに、スクリーンリーダーが使用する名前、役割、値に関する適切な情報が含まれるようになりました(NPR-34255)。
    * 「種類/サイズ」コンボボックス、「リンク」コンボボックス、「言語」コンボボックス、または「テキスト」編集ボックスを削除すると、キーボードフォーカスは次または前のユーザーインターフェイス要素、またはより関連性の高いユーザーインターフェイス要素(CQ-4293585)に戻ります。
-   * 様々なオプションの上にポインターを置くと、選択やダウンロードなどのヒントが表示されます。 画面の表示比率を使用しているユーザーは、カーソルを合わせると表示されるコンテンツが原因で、ファイルのサムネールの表示が困難になる場合があります。 キーを使用してオプションを削除した後に、フォーカスを保持できるようになりました( `Escape` CQ-4293554)。
+   * オプションの上にポインターを置くと、選択やダウンロードなどのヒントが表示されます。 画面の虫めがねを使用している場合、これらのヒントが原因でファイルのサムネールが表示されないことがあります。 現在は、 `Escape` キーを使用してオプションを削除した後に、フォーカスを保持できます。 (CQ-4293554).
    * ページ内にあるグリッドからグリッドセルを選択すると、フォーカスが画面に表示されるアクションバーに移動します(CQ-4282127)。
    * ビジュアルユーザーは、通常のテキストとリンクを区別できます。これは、 [!DNL Experience Manager] ホームページ内のすべてのソリューションへのリンクに視覚的なヒント（下線と山形のアイコン）が表示されるためです。(CQ-4282072)
 
@@ -405,7 +405,7 @@ MavenプロジェクトでUberJarを使用するには、UberJarの使用 [方�
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| 統合 | AEM **[!UICONTROL クラウドサービスのオプトイン画面は非推奨です]** 。 AEM 6.5で更新されたAEMとターゲットの統合により、AdobeIMSとI/Oを介した認証を使用するTarget Standard APIがサポートされ、AEMページの解析とパーソナライゼーションの実装でAdobe開始の役割が増加しているため、オプトインウィザードは機能的に無関係になりました。 | 各AEMクラウドサービスを介して、システム接続、AdobeIMS認証、AdobeI/O統合を設定します。 |
+| 統合 | AEM **[!UICONTROL クラウドサービスのオプトイン画面は非推奨です]** 。 AEM 6.5で更新されたAEMとターゲットの統合により、AdobeIMSとI/Oを介した認証を使用するTarget Standard APIがサポートされ、AEMページの解析とパーソナライゼーションの実装でAdobe開始の役割が増加しているため、オプトインウィザードは機能的に無関係になりました。 | 各AEMクラウドサービスを使用して、システム接続、AdobeIMS認証、Adobe I/O統合を設定します。 |
 | コネクタ | AEM 6.5では、JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013のAdobeが非推奨です。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
