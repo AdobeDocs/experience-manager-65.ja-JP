@@ -1,12 +1,12 @@
 ---
-title: 共有アセットのURLの生成
-description: This article describes how to share assets, folders, and collections within [!DNL Experience Manager Assets] as a URL to external parties.
+title: リンクを使用したアセットの共有
+description: アセット、フォルダーおよびコレクションをURLとして共有します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 1f6da1c69ea3b3c3f07e8ac10fd8e1e9c7208158
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 51%
+source-wordcount: '1037'
+ht-degree: 33%
 
 ---
 
@@ -15,51 +15,39 @@ ht-degree: 51%
 
 [!DNL Adobe Experience Manager Assets] アセット、フォルダー、コレクションをURLとして組織のメンバーと、パートナーやベンダーを含む外部エンティティと共有できます。 Sharing assets through a link is a convenient way of making resources available to external parties without them having to first log in to [!DNL Assets].
 
->[!NOTE]
+>[!PREREQUISITES]
 >
->リンクとして共有するフォルダーまたはアセットのACLを編集権限が必要です。
+>* リンクとして共有するフォルダーまたはアセットのACLを編集権限が必要です。
+>* ユーザーに電子メールを送信するには、 [Day CQ Mail ServiceでSMTPサーバーの詳細を設定します](#configmailservice)。
+
 
 ## アセットの共有 {#sharelink}
 
-ユーザーと共有するアセットの URL を生成するには、リンク共有ダイアログを使用します。`/var/dam/share` の場所への管理者特権または読み取り権限を持つユーザーが、共有されたリンクを表示することができます。
-
->[!NOTE]
->
->リンクをユーザーと共有する前に、Day CQ Mail Service が設定されていることを確認してください。[Day CQ Mail Service を設定](/help/assets/link-sharing.md#configmailservice)せずにリンクの共有を試行すると、エラーが発生します。
+ユーザーと共有するアセットのURLを生成するには、リンクの共有ダイアログを使用します。 `/var/dam/share` の場所への管理者特権または読み取り権限を持つユーザーが、共有されたリンクを表示することができます。
 
 1. In the [!DNL Assets] user interface, select the asset to share as a link.
 1. From the toolbar, click the **[!UICONTROL Share Link]** ![share assets icon](assets/do-not-localize/assets_share.png).
 
-   「**[!UICONTROL リンクを共有]**」フィールドにアセットリンクが自動的に作成されます。このリンクをコピーしてユーザーと共有します。リンクのデフォルトの有効期間は 1 日です。
+   「 [!UICONTROL 共有] 」をクリックした後に作成されるリンクは、あらかじめ「 [!UICONTROL 共有リンク] 」フィールドに表示されます。 リンクのデフォルトの有効期間は 1 日です。
 
    ![「リンクを共有」と表示されたダイアログ](assets/Link-sharing-dialog-box.png)
 
    *図：アセットをリンクとして共有するためのダイアログ。*
 
-   または、この手順の 3～7 に進んで電子メールの受信者を追加し、リンクの有効期限を設定して、ダイアログから送信することもできます。
-
    >[!NOTE]
    >
-   >If you want to share links from your [!DNL Experience Manager] Author deployment to external entities, ensure that you only expose the following URLs (which are used for link sharing) for `GET` requests only. 作成者のセキュリティを確保するために、他のURLをブロックし [!DNL Experience Manager] ます。
+   >If you want to share links from your [!DNL Experience Manager] Author deployment to external entities, ensure that you only expose the following URLs (which are used for link sharing) for `GET` requests only. セキュリティ上の理由から他のURLをブロックします。
    >
-   >* http://[aem_server]:[port]/linkshare.html
-   >* http://[aem_server]:[port]/linksharepreview.html
-   >* http://[aem_server]:[port]/linkexpired.html
+   >* `http://[aem_server]:[port]/linkshare.html`
+   >* `http://[aem_server]:[port]/linksharepreview.html`
+   >* `http://[aem_server]:[port]/linkexpired.html`
 
-
-   >[!NOTE]
-   >
-   >共有アセットが別の場所に移動されると、そのリンクは機能しなくなります。リンクを再作成し、ユーザーと再共有します。
 
 1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールにアクセスします]**。
 
-1. **[!UICONTROL Day CQ Link Externalizerの設定を開き、「]** Domains **[!UICONTROL 」フィールドの次のプロパティを、「]** 、 `local`」、「」、「」に関する値で変更しま `author``publish`す。 For the `local` and `author` properties, provide the URL for the local and the author instance respectively. Both `local` and `author` properties have the same value if you run a single [!DNL Experience Manager] Author instance. For `publish`, provide the URL for the [!DNL Experience Manager] publish instance.
+1. **[!UICONTROL Day CQ Link Externalizerの設定を開き、「]** Domains **[!UICONTROL 」フィールドの次のプロパティを、「]** 、 `local`」、「」、「」に関する値で変更しま `author``publish`す。 For the `local` and `author` properties, provide the URL for the local and the author instance respectively. Both `local` and `author` properties have the same value if you run a single [!DNL Experience Manager] author instance. For Publish instances, provide the URL for the [!DNL Experience Manager] publish instance.
 
-1. **[!UICONTROL リンク共有]**&#x200B;ダイアログの電子メールアドレスボックスに、リンクを共有するユーザーの電子メール ID を入力します。このリンクを複数のユーザーと共有することもできます。
-
-   ユーザーが組織内のメンバーの場合は、入力領域の下のリストに表示される電子メール ID の候補から、ユーザーの電子メール ID を選択します。外部ユーザーの場合は、完全な電子メール ID を入力してリストから選択します。
-
-   ユーザーへの電子メールの送信を有効にするには、[Day CQ Mail Service](#configmailservice) で SMTP サーバーの詳細を設定します。
+1. **[!UICONTROL リンク共有]**&#x200B;ダイアログの電子メールアドレスボックスに、リンクを共有するユーザーの電子メール ID を入力します。1人以上のユーザーを追加できます。
 
    ![アセットへのリンクをリンク共有ダイアログから直接共有する](assets/Asset-Sharing-LinkShareDialog.png)
 
@@ -69,26 +57,21 @@ ht-degree: 51%
    >
    >If you enter an email ID of a user that is not a member of your organization, the words [!UICONTROL External User] are prefixed with the email ID of the user.
 
-1. In the **[!UICONTROL Subject]** field, enter a subject for the asset you want to share.
+1. 「 **[!UICONTROL 件名]** 」フィールドに、件名を入力します。
 
 1. In the **[!UICONTROL Message]** field, enter an optional message.
 
-1. 「**[!UICONTROL 有効期限]**」フィールドに、日付選択を使用してリンクの有効期限の日付と時間を指定します。デフォルトでは、有効期限日はリンクを共有した日から 1 週間後に設定されます。
+1. In the **[!UICONTROL Expiration]** field, specify an expiration date and time for the link to stop working. デフォルトでは、有効期限日はリンクを共有した日から 1 週間後に設定されます。
 
    ![共有リンクの有効期限の設定](assets/Set-shared-link-expiration.png)
 
-1. ユーザーが元の画像をレンディションと共にダウンロードすることを許可するには、「**[!UICONTROL 元のファイルのダウンロードを許可]**」を選択します。
+1. To let users download the original asset along with the renditions, select **[!UICONTROL Allow download of original file]**. デフォルトでは、ユーザーはリンクとして共有されているアセットのレンディションのみをダウンロードできます。
 
-   >[!NOTE]
-   >
-   >デフォルトでは、ユーザーはリンクとして共有されているアセットのレンディションのみをダウンロードできます。
+1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールでユーザーと共有されていることを確認するメッセージが表示されます。
 
-1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールによってユーザーと共有されることを確認するメッセージが表示されます。
 1. 共有アセットを表示するには、ユーザーに送信する電子メール内のリンクをクリックします。 共有アセットが **[!UICONTROL Adobe Marketing Cloud]** ページに表示されます。
 
    ![chlimage_1-260](assets/chlimage_1-545.png)
-
-   リスト表示に切り替えるには、ツールバーのレイアウトオプションをクリックします。
 
 1. アセットのプレビューを生成するには、共有アセットをクリックします。 To close the preview and return to the **[!UICONTROL Marketing Cloud]** page, click **[!UICONTROL Back]** in the toolbar. If you have shared a folder, click **[!UICONTROL Parent Folder]** to return to the parent folder.
 
@@ -96,14 +79,14 @@ ht-degree: 51%
 
    >[!NOTE]
    >
-   >[!DNL Experience Manager] は、これらの MIME タイプ（JPG、PNG、GIF、BMP、INDD、PDF、および PPT）のアセットのプレビューの生成をサポートしています。他の MIME タイプのアセットのみをダウンロードできます。
+   >[!DNL Experience Manager] は、サポートされているファイルタイプのみのアセット [のプレビューの生成をサポートしています](/help/assets/assets-formats.md)。 他のMIMEタイプが共有されている場合は、アセットのダウンロードのみが可能で、プレビューはできません。
 
 1. To download the shared asset, click **[!UICONTROL Select]** from the toolbar, click the asset, and then click **[!UICONTROL Download]** from the toolbar.
 
    ![chlimage_1-262](assets/chlimage_1-547.png)
 
-1. リンクとして共有したアセットを表示するには、ユー [!DNL Assets] ザインターフェイスに移動し、ロ [!DNL Experience Manager] ゴをクリックします。 リストから「**[!UICONTROL ナビゲーション]**」を選択して、ナビゲーションウィンドウを表示します。
-1. ナビゲーションウィンドウで、「**[!UICONTROL 共有リンク]**」を選択して共有アセットのリストを表示します。
+1. リンクとして共有したアセットを表示するには、ユー [!DNL Assets] ザインターフェイスに移動し、ロ [!DNL Experience Manager] ゴをクリックします。 「 **[!UICONTROL ナビゲーション]**」を選択します。 In the Navigation pane, choose **[!UICONTROL Shared Links]** to display a list of shared assets.
+
 1. To un-share an asset, select it and click **[!UICONTROL Unshare]** from the toolbar. 確認メッセージが次に表示されます。 アセットのエントリがリストから削除されます。
 
 ## Day CQ 電子メールサービスの設定 {#configmailservice}
@@ -139,3 +122,4 @@ When you download assets from the link shared using the Link Sharing feature, [!
 * If users cannot download the shared assets, check with your [!DNL Experience Manager] administrator what the [download limits](#maxdatasize) are.
 * If you cannot send email with links to shared assets or if the other users cannot receive your email, check with your [!DNL Experience Manager] administrator if the [email service](#configmailservice) is configured or not.
 * リンク共有機能を使用してアセットを共有できない場合は、適切な権限を持っていることを確認してください。[アセットの共有](#sharelink)を参照してください。
+* 共有アセットが別の場所に移動されると、そのリンクは機能しなくなります。リンクを再作成し、ユーザーと再共有します。
