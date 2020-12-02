@@ -173,7 +173,7 @@ XML スキーマの例を示します。
 
 >
 >
-For example, if you add the `userFirstName` schema element, the caption generated in the adaptive form is `User First Name`.
+例えば、`userFirstName`スキーマ要素を追加した場合、アダプティブフォームで生成されるキャプションは`User First Name`になります。
 
 ## アダプティブフォームコンポーネントで許容される値の制限 {#limit-acceptable-values-for-an-adaptive-form-component}
 
@@ -199,7 +199,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>maximum</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>数値および日付の上限を指定します。デフォルトでは、最大値が含まれます。</p> </td>
    <td>
     <ul>
@@ -210,7 +210,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>minimum</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>数値および日付の下限を指定します。デフォルトでは、最小値が含まれます。</p> </td>
    <td>
     <ul>
@@ -232,7 +232,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
-   <td><p>Boolean</p> </td>
+   <td><p>ブール値</p> </td>
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付よりも大きい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付以上の値である必要があります。</p> </td>
    <td>
     <ul>
@@ -243,7 +243,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>minLength</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>コンポーネントで許可される最小文字数を指定します。最小の長さは 0 以上である必要があります。</p> </td>
    <td>
     <ul>
@@ -252,7 +252,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>maxLength</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>コンポーネントで許可される最大文字数を指定します。最大長さには 0 より大きい数を指定する必要があります。</p> </td>
    <td>
     <ul>
@@ -261,7 +261,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>length</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>コンポーネントで許可される正確な文字数を指定します。長さは 0 以上である必要があります。</p> </td>
    <td>
     <ul>
@@ -270,7 +270,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>fractionDigits</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>コンポーネントで許可される小数の位を指定します。fractionDigits は 0 以上である必要があります。</p> </td>
    <td>
     <ul>
@@ -279,7 +279,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>pattern</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td>
    <td>
     <ul>
@@ -293,15 +293,15 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
 
 **ツリーのどの要素がどの XML 要素に関連付けられているかをどうやって判断しますか？**
 
-When you double-click an element in Content Finder, a pop-up displays a field name and a property called `bindRef`. このプロパティはツリー要素をスキーマ内の要素または属性にマッピングします。
+コンテンツファインダーで要素を重複クリックすると、`bindRef`という名前のフィールド名とプロパティがポップアップ表示されます。 このプロパティはツリー要素をスキーマ内の要素または属性にマッピングします。
 
 ![XML スキーマ要素の bindref フィールド](assets/dblclick.png)
 
-The bindRef</code> field shows the association between a tree element and an element or attribute in a schema.
+bindRef</code>フィールドは、ツリー要素とスキーマ内の要素または属性との関連付けを示します。
 
 >[!NOTE]
 >
->Attributes have an `@` symbol in their `bindRef`value to distinguish them from elements. 例： `/config/projectDetails/@duration`
+>属性の`bindRef`値には`@`記号が含まれており、属性と要素を区別します。 例： `/config/projectDetails/@duration`
 
 **繰り返し可能なサブフォーム（minOccours 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
 
