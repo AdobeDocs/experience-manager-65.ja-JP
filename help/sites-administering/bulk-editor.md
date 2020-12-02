@@ -62,7 +62,7 @@ Bulk Editor では次のことが可能です。
 
 * [コンテンツをタブ区切りスプレッドシートから読み込みます。](#importing-content)
 
-### コンテンツの検索と編集 {#searching-and-editing-content}
+### コンテンツの検索と編集  {#searching-and-editing-content}
 
 Bulk Editor を使用して複数の項目を同時に編集するには：
 
@@ -78,15 +78,15 @@ Bulk Editor を使用して複数の項目を同時に編集するには：
   </tr>
   <tr>
    <td>ルートパス</td>
-   <td>Indicates the root path the bulk editor searches.<br /> For example, <code>/content/geometrixx/en</code>. The bulk editor searches over all child nodes.</td>
+   <td>バルクエディタが検索するルートパスを示します。<br />例えば、<code>/content/geometrixx/en</code>。バルクエディタは、すべての子ノードを検索します。</td>
   </tr>
   <tr>
    <td>クエリーのパラメーター</td>
-   <td>Using GQL parameters, enter the search string you want the bulk editor to look for in the repository; for example, <code>type:Page</code> looks for all pages in the root path, <code>text:professional</code> looks for all pages that have the word "professional" in them, and <code>"jcr:title":English</code> looks for all pages that have "English" as the title. 文字列のみを検索できます。</td>
+   <td>GQLパラメータを使用して、バルクエディタでリポジトリ内で探す検索文字列を入力します。例えば、<code>type:Page</code>はルートパス内のすべてのページを検索し、<code>text:professional</code>は「professional」という語を含むすべてのページを検索し、<code>"jcr:title":English</code>はタイトルに「English」を含むすべてのページを検索します。 文字列のみを検索できます。</td>
   </tr>
   <tr>
    <td>「コンテンツモード」チェックボックス</td>
-   <td>検索結果の <code>jcr:content</code> サブノード内にプロパティが存在する場合は、このチェックボックスを選択します。 ページにのみ使用します。プロパティ名の前に <code>"jcr:content/"</code></td>
+   <td>検索結果の<code>jcr:content</code>サブノード内にあるプロパティが存在する場合は、このチェックボックスを選択します。 ページにのみ使用します。プロパティ名の前に <code>"jcr:content/"</code></td>
   </tr>
   <tr>
    <td>プロパティ／列</td>
@@ -94,7 +94,7 @@ Bulk Editor を使用して複数の項目を同時に編集するには：
   </tr>
   <tr>
    <td>カスタムプロパティ／列</td>
-   <td>「 <strong>プロパティ/列</strong> 」フィールドにリストされていない他のプロパティを入力します。これらのカスタムプロパティは、結果ペインに表示されます。複数のプロパティを追加する場合は、コンマでプロパティを区切ります。 <i>注意：</i> まだ存在しないカスタムプロパティを追加すると、AEM WCMは空のセルを表示します。 空白のセルを変更して保存すると、そのプロパティがノードに追加されます。新しく作成されたプロパティは、ノードタイプの制約とプロパティの名前空間に従う必要があります。</td>
+   <td><strong>Properties/Columns</strong>フィールドにリストされていない他のプロパティを入力します。これらのカスタムプロパティは、結果ペインに表示されます。複数のプロパティを追加する場合は、コンマでプロパティを区切ります。 <i>注意：まだ存在しないカスタムプロパティを追加</i> すると、AEM WCMでは空のセルが表示されます。空白のセルを変更して保存すると、そのプロパティがノードに追加されます。新しく作成されたプロパティは、ノードタイプの制約とプロパティの名前空間に従う必要があります。</td>
   </tr>
  </tbody>
 </table>
@@ -120,9 +120,9 @@ Bulk Editor を使用して複数の項目を同時に編集するには：
 
 #### その他の GQL クエリパラメーター {#additional-gql-query-parameters}
 
-* **パス：** このパスの下にある検索ノードのみ。パスのプレフィックスを含む複数の用語を指定した場合は、最後の用語のみが考慮されます。
-* **type:** 渡されたノード型のノードのみを返します。これには、プライマリとミックスインのタイプが含まれます。複数のノードタイプは、コンマで区切って指定できます。GQLは、指定された任意の型のノードを返します。
-* **順序：** 指定したプロパティで結果を並べ替えます。コンマで区切った複数のプロパティ名を指定できます。結果を降順に並べるには、プロパティ名の先頭にマイナスを付けるだけです。例：order:-name。プラス記号を使用すると、結果が昇順で返されます。これもデフォルトです。
+* **パス：このパスの下にある検索ノード** のみ。パスのプレフィックスを含む複数の用語を指定した場合は、最後の用語のみが考慮されます。
+* **type:** 指定したノードタイプのノードのみを返します。これには、プライマリとミックスインのタイプが含まれます。複数のノードタイプは、コンマで区切って指定できます。GQLは、指定された任意の型のノードを返します。
+* **order：指定したプロパティで結果を** 並べ替えます。コンマで区切った複数のプロパティ名を指定できます。結果を降順に並べるには、プロパティ名の先頭にマイナスを付けるだけです。例：order:-name。プラス記号を使用すると、結果が昇順で返されます。これもデフォルトです。
 * **limit:** 間隔を使用して結果の数を制限します。例：limit:10..20間隔はゼロベースで、開始は両端を含み、両端は排他的であることに注意してください。また、開く間隔を指定することもできます。 limit:10...またはlimit:..20。ドットを省略し、1つの値のみを指定した場合、GQLは最大この数の結果を返します。例：limit:10（結果の最初の10件を返す）
 
 ### Exporting Content {#exporting-content}
@@ -145,9 +145,9 @@ Bulk Editor を使用して複数の項目を同時に編集するには：
 
    ![](assets/exportinexcel.png)
 
-### コンテンツの読み込み {#importing-content}
+### コンテンツの読み込み  {#importing-content}
 
-デフォルトでは、バルクエディタを開くと読み込み機能は非表示になります。 URLにパラメータ `hib=false` を追加するだけで、「 **インポート** 」ボタンが「バルクエディタ」ページに表示されます。 コンテンツは、タブ区切り( `.tsv`)ファイルから読み込むことができます。 読み込みが正しく機能するためには、列見出し（セルの最初の行）が、読み込み先のテーブルの列見出しと一致している必要があります。
+デフォルトでは、バルクエディタを開くと読み込み機能は非表示になります。 パラメーター`hib=false`をURLに追加すると、「Bulk Editor」ページに「**Import**」ボタンが表示されます。 コンテンツは、任意のタブ区切りファイル( `.tsv`)から読み込むことができます。 読み込みが正しく機能するためには、列見出し（セルの最初の行）が、読み込み先のテーブルの列見出しと一致している必要があります。
 
 >[!NOTE]
 >
@@ -156,7 +156,7 @@ Bulk Editor を使用して複数の項目を同時に編集するには：
 コンテンツを読み込むには：
 
 1. Bulk Editor を開きます。
-1. URL `?hib=false` へ追加のリンク(例：
+1. 追加`?hib=false`をURLに(例：
    `https://localhost:4502/etc/importers/bulkeditor.html?hib=false`
 1. 「**読み込み**」をクリックします。
-1. Select the `.tsv` file. データがリポジトリにインポートされます。
+1. `.tsv`ファイルを選択します。 データがリポジトリにインポートされます。
