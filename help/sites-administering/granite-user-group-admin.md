@@ -22,7 +22,7 @@ ht-degree: 90%
 
 Granite には JCR API 仕様の CRX リポジトリ実装が組み込まれているので、独自のユーザー管理とグループ管理が使用されます。
 
-These accounts are the underlying basis of the [AEM accounts](/help/sites-administering/security.md) and any account changes made with the Granite administration will be reflected if/when the accounts are accessed from the [AEM Users console](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (e.g. `http://localhost:4502/useradmin`). From the AEM Users console you can also manage the privileges and other AEM specifics.
+これらのアカウントは、[AEMアカウント](/help/sites-administering/security.md)の基礎となり、Granite管理で行われたアカウントの変更は、[AEMユーザーコンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)からアカウントにアクセスした場合に反映されます(例：`http://localhost:4502/useradmin`)。 AEMユーザーコンソールから、権限やその他のAEMの詳細を管理することもできます。
 
 Granite ユーザー管理コンソールとグループ管理コンソールは、どちらもタッチ操作向け UI の&#x200B;**[ツール](/help/sites-administering/tools-consoles.md)**&#x200B;コンソールから利用できます。
 
@@ -94,14 +94,14 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
       * **ステータス**
 アカウントにフラグを付けることもできます。 
-**active** （アクティブ）または **inactive（非アクティブ）**。
+**** アクティブまたは **非アクティブ**。
    * **写真**
 
       ここで、アバターとして使用する写真をアップロードできます。
 
-      Accepted file types: `.jpg .png .tif .gif`
+      受け入れられるファイルの種類：`.jpg .png .tif .gif`
 
-      推奨サイズ： `240x240px`
+      推奨サイズ：`240x240px`
 
    * **グループにユーザーを追加**
 
@@ -117,7 +117,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * 登録を中止するには、「**キャンセル**」を使用します。
    * 登録を完了するには、「**保存**」を使用します。メッセージが表示され、ユーザーアカウントの作成が確定されます。
 
-### 既存ユーザーの編集 {#editing-an-existing-user}
+### 既存ユーザーの編集  {#editing-an-existing-user}
 
 1. ユーザーコンソールで、ユーザー名のリンクからユーザー詳細にアクセスします。
 
@@ -141,7 +141,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
    パスワードが変更されたことを示すメッセージが表示されます。
 
-### 簡単なグループ割り当て {#quick-group-assignment}
+### 簡単なグループ割り当て  {#quick-group-assignment}
 
 1. クリックボックスを使用して 1 人以上のユーザーにフラグを設定します。
 1. **グループ**&#x200B;アイコンを使用します。
@@ -159,7 +159,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * 変更を中止するには、「**キャンセル**」を使用します。
    * 変更を確定するには、「**保存**」を使用します。
 
-### 既存ユーザーの詳細の削除 {#deleting-existing-user-details}
+### 既存ユーザーの詳細の削除  {#deleting-existing-user-details}
 
 1. クリックボックスを使用して 1 人以上のユーザーにフラグを設定します。
 1. **削除**&#x200B;アイコンを使用してユーザー詳細を削除します。
@@ -207,7 +207,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * 登録を中止するには、「**キャンセル**」を使用します。
    * 登録を完了するには、「**保存**」を使用します。メッセージが表示され、グループの作成が確定されます。
 
-### 既存グループの編集 {#editing-an-existing-group}
+### 既存グループの編集  {#editing-an-existing-group}
 
 1. グループコンソールで、グループ名のリンクからグループ詳細にアクセスします。
 
@@ -222,7 +222,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. **グループ設定を編集**&#x200B;フォームが開きます。
 
-   グループIDは元のIDと同じですが、先頭にはが付き `Copy of`ます。IDにスペースを含めることはできないので、これを編集する必要があります。 その他の詳細は元の情報とすべて同じです。
+   グループIDは元のIDと同じですが、先頭に`Copy of`が付きます。IDにスペースを含めることはできないので、これを編集する必要があります。 その他の詳細は元の情報とすべて同じです。
 
    [新規グループの追加](#adding-a-new-group)の場合と同様に、詳細を編集して保存できます。
 
