@@ -26,5 +26,5 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->Although there is a Scaffolding [mode](/help/sites-authoring/author-environment-tools.md#page-modes) available, the maintenance and creation of scaffolds as well as creating new pages from scaffolds is done in the classic UI. 詳しくは、クラシック UI オーサリングドキュメントの「[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)」を参照してください。
+>足場[mode](/help/sites-authoring/author-environment-tools.md#page-modes)がありますが、足場の保守と作成、および足場からの新しいページの作成は従来のUIで行われています。 詳しくは、クラシック UI オーサリングドキュメントの「[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)」を参照してください。
 
