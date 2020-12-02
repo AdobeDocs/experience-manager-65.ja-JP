@@ -82,7 +82,7 @@ ht-degree: 96%
 
    このページのバニティ URL を入力できます。これによって、短くて意味のわかりやすい URL を付けることができます。
 
-   For example, if the Vanity URL is set to w `elcome`to the page identified by the path / `v1.0/startpage`for the website h `ttp://example.com,` then h `ttp://example.com/welcome`would be the vanity URL of h `ttp://example.com/content/v1.0/startpage`
+   例えば、バニティURLがWebサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対してw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります
 
    >[!CAUTION]
    >
@@ -134,7 +134,7 @@ ht-degree: 96%
 
    書き出し設定を指定します。
 
-### サムネール {#thumbnail}
+### サムネール  {#thumbnail}
 
 * **ページサムネイル**
 
@@ -156,7 +156,7 @@ ht-degree: 96%
 
 ### パーソナライゼーション {#personalization}
 
-* **パーソナライズ機能**
+* **パーソナライゼーション**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)します。
 
@@ -172,13 +172,13 @@ ht-degree: 96%
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのブループリントページのプロパティを定義します。変更がライブコピーに適用される条件を制御します。
 
-### ライブコピー {#live-copy}
+### ライブコピー  {#live-copy}
 
 * **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
-### サイト構造 {#site-structure}
+### サイト構造  {#site-structure}
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
