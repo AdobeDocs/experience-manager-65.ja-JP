@@ -286,7 +286,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 例えば、該当する場合、**ページ情報**&#x200B;には次のオプションもあります。
 
 * [ローンチを昇格](/help/sites-authoring/launches-promoting.md)（ページがローンチの場合）
-* [このオプションが管理者によって](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)[有効にされている場合は、クラシックUIで開く](/help/sites-administering/enable-classic-ui-editor.md)
+* [このオプションが管理者によって](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)  [有効にされている場合は、クラシックUIで開く](/help/sites-administering/enable-classic-ui-editor.md)
 
 該当する場合、**ページ情報**&#x200B;から分析や推奨を確認することもできます。
 
