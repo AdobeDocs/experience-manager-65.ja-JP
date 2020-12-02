@@ -28,25 +28,25 @@ ht-degree: 39%
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
 * AEMサイトへのカレンダー機能の追加
-* Configuration settings for `Calendar` components
+* `Calendar`コンポーネントの構成設定
 
 ## カレンダーをページに追加 {#adding-a-calendar-to-a-page}
 
-To add a `Calendar` component to a page in author mode, use the component browser to locate
+作成者モードで`Calendar`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Calendar`
 
 コンポーネントを探し、ページ上の適切な位置（ユーザーにレビューしてもらう機能の近くなど）にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側のライブラリが含まれる場合](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) 、これがコンポー `Calendar` ネントの表示方法です。
+[必要なクライアント側ライブラリ](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side)が含まれる場合、`Calendar`コンポーネントは次のように表示されます。
 
 ![カレンダーコンポーネント](assets/calendar-component.png)
 
 ### カレンダーの設定 {#configuring-calendar}
 
-Select the placed `Calendar` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Calendar`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![設定](assets/configure-new.png)
 
@@ -54,7 +54,7 @@ Select the placed `Calendar` component to access and select the `Configure` icon
 
 #### 「設定」タブ{#settings-tab}
 
-Under the **Settings** tab, specify whether or not to allow tags to be applied to calendar entries.
+「**設定**」タブで、カレンダーエントリにタグを適用するかどうかを指定します。
 
 * **1 ページのイベント数**
 
@@ -74,7 +74,7 @@ Under the **Settings** tab, specify whether or not to allow tags to be applied t
 
 * **タグ付けを許可**
 
-   If checked, allow members to add tag labels to the events they post (see **Tag field** tab). 初期設定はオンです。
+   選択した場合、メンバーが投稿するイベントにタグラベルを追加できます（「**タグフィールド**」タブを参照）。 初期設定はオンです。
 
 * **ファイルのアップロードを許可**
 
@@ -86,11 +86,11 @@ Under the **Settings** tab, specify whether or not to allow tags to be applied t
 
 * **最大ファイルサイズ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **許可されるファイルタイプ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **添付する画像ファイルの最大サイズ**
 
@@ -122,9 +122,9 @@ Under the **Settings** tab, specify whether or not to allow tags to be applied t
 
 * **おすすめコンテンツを許可**
 
-   If checked, the idea is able to be identified as [featured content](/help/communities/featured.md). 初期設定はオフです。
+   チェックすると、アイデアは[特集コンテンツ](/help/communities/featured.md)として識別できます。 初期設定はオフです。
 
-Under the **User Moderation** tab, specify how the posted topics and replies (user generated content) are managed. For more information, see [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+「**ユーザーモデレート**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
@@ -162,7 +162,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 * **許可された名前空間**
 
-   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+   「**設定**」タブで`Allow Tagging`がチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **推奨の制限**
 
@@ -172,7 +172,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 >
 >新しいタグ名前空間（分類）の追加方法については、「[タグの管理](/help/sites-administering/tags.md)」を参照してください。
 
-#### 「翻訳」タブ {#translation-tab}
+#### 「翻訳」タブ  {#translation-tab}
 
 「**翻訳**」タブでは、コミュニティサイトの翻訳が有効になっている場合に、特定の投稿だけでなくスレッド全体（イベントとコメント）を翻訳するかどうかを設定できます。
 
@@ -188,7 +188,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 その他の機能は、サイト訪問者がモデレーターか、管理者か、コミュニティメンバーか、権限を持つメンバーか、匿名かによって異なります。
 
-### モデレーターおよび管理者 {#moderators-and-administrators}
+### モデレーターおよび管理者  {#moderators-and-administrators}
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合は、すべてのカレンダーイベントと、イベントに投稿されたコメントに対して、（コンポーネントの設定で許可されている）[モデレートタスク](/help/communities/moderate-ugc.md)を実行できます。
 
@@ -196,7 +196,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 #### メンバー {#members}
 
-When the signed in user is a community member or [privileged member](/help/communities/users.md#privileged-members-group) (depending on configuration), they are able to select `New Event` to create and post a new calendar event.
+サインインしたユーザーがコミュニティのメンバーまたは[特権メンバー](/help/communities/users.md#privileged-members-group)の場合（設定によって異なります）、`New Event`を選択して新しいカレンダーイベントを作成し、投稿することができます。
 
 具体的には、次のことが可能です。
 
@@ -218,10 +218,10 @@ When the signed in user is a community member or [privileged member](/help/commu
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Calendar Essentials](/help/communities/calendar-basics-for-developers.md) page for developers.
+詳しくは、開発者向けの[Calendar Essentials](/help/communities/calendar-basics-for-developers.md)ページを参照してください。
 
 カレンダーイベントとコメントのモデレートについては、「[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)」を参照してください。
 
-For tagging calendar events and comments, see [Tagging User Generated Content](/help/communities/tag-ugc.md).
+カレンダーのイベントとコメントのタグ付けについては、[ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
 
-For translation of calendar events and comments, see [Translating User Generated Content](/help/communities/translate-ugc.md).
+カレンダーイベントとコメントの翻訳については、[Translating User Generated Content](/help/communities/translate-ugc.md)を参照してください。
