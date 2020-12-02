@@ -55,9 +55,9 @@ WYSIWYG 編集ダイアログは、様々な機能を提供します。
 >
 >[!UICONTROL タイトル]コンポーネントは、改行がない短いテキストを含むものとして設計されています。インプレース編集モードでタイトルを編集するときに、改行を入力すると、タイトルの下に新しい&#x200B;**テキスト**&#x200B;コンポーネントが開きます。
 
-## リッチテキストエディターの機能 {#features-of-the-rich-text-editor}
+## リッチテキストエディターの機能  {#features-of-the-rich-text-editor}
 
-The Rich Text Editor provides a range of featues, these [depend on the configuration](/help/sites-administering/rich-text-editor.md) of the individual component. The features are available for both the touch-optimized and classic UI.
+リッチテキストエディターには様々な機能があります。[機能は、個々のコンポーネントの設定](/help/sites-administering/rich-text-editor.md)に依存します。この機能は、タッチ操作向けUIとクラシックUIの両方で利用できます。
 
 ### 基本文字形式 {#basic-character-formats}
 
@@ -75,7 +75,7 @@ The Rich Text Editor provides a range of featues, these [depend on the configura
 
 すべてオン／オフ切り替えとして動作するので、再選択すると書式が削除されます。
 
-### 事前定義済みのスタイルおよび書式 {#predefined-styles-and-formats}
+### 事前定義済みのスタイルおよび書式  {#predefined-styles-and-formats}
 
 ![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
 
@@ -97,7 +97,7 @@ The Rich Text Editor provides a range of featues, these [depend on the configura
 >
 >スタイルを適用したテキストを実際に再選択しないでください。再選択してしまうと、アイコンが非アクティブ化されます。
 
-### 切り取り、コピー、貼り付け {#cut-copy-paste}
+### 切り取り、コピー、貼り付け  {#cut-copy-paste}
 
 ![](do-not-localize/cq55_rte_cutcopypaste.png)
 
@@ -105,8 +105,8 @@ The Rich Text Editor provides a range of featues, these [depend on the configura
 
 * 切り取り（Ctrl + X）
 * コピー（Ctrl + C）
-* Paste
-This is the default paste mechanism (Ctrl-V) for the component; when installed out-of-the-box this is configured to be [!UICONTROL Paste from Word].
+* 貼り付け
+これは、コンポーネントのデフォルトの貼り付けメカニズム(Ctrl-V)です。初期設定の状態でインストールすると、[!UICONTROL Word]から貼り付けるように設定されます。
 
 * テキストとして貼り付け：すべてのスタイルと書式を削除して、プレーンテキストのみを貼り付けます。
 
@@ -170,19 +170,19 @@ AEM は、現在のコンポーネントについて直近の 50 の操作を記
 
 * URIを直接入力する
 * サイトマップを使用して、Webサイト内のページを選択します
-* Enter the URI, then append the target anchor; e.g. `www.TargetUri.org#AnchorName`
-* Enter an anchor only (to reference &quot;the current page&quot;); For example, `#anchor`
+* URIを入力し、ターゲットアンカーを追加します。例えば`www.TargetUri.org#AnchorName`
+* アンカーのみを入力（「現在のページ」を参照）例：`#anchor`
 * コンテンツファインダーでページを検索し、ページアイコンをハイパーリンクダイアログにドラッグ&amp;ドロップします
 
 >[!NOTE]
 >
->URI の先頭には、インストールで設定された任意のプロトコルを付加できます。In a standard installation these are `https://`, `ftp://`, and `mailto:`. インストールで設定されなかったプロトコルは、拒否され、無効としてマークされます。
+>URI の先頭には、インストールで設定された任意のプロトコルを付加できます。標準インストールでは、`https://`、`ftp://`、`mailto:`です。 インストールで設定されなかったプロトコルは、拒否され、無効としてマークされます。
 
 リンクを解除するには、リンクテキスト内にカーソルを置いて、次の[!UICONTROL リンク解除]アイコンをクリックします。
 
 ![](do-not-localize/chlimage_1-10.png)
 
-### アンカー {#anchors}
+### アンカー  {#anchors}
 
 ![](do-not-localize/cq55_rte_anchor.png)
 
@@ -220,7 +220,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 >[!NOTE]
 >
->AEM では、さらに詳細な画像設定のための専用コンポーネントも提供しています。For example the **Image** and **Text Image** components are available.
+>AEM では、さらに詳細な画像設定のための専用コンポーネントも提供しています。例えば、**画像**&#x200B;と&#x200B;**テキスト画像**&#x200B;のコンポーネントを使用できます。
 
 ### スペルチェッカー {#spelling-checker}
 
@@ -250,7 +250,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
    >[!NOTE]
    >
-   >Although tables are available in the RTE, it is recommended to use the **Table** component when creating tables.
+   >RTEではテーブルを使用できますが、テーブルを作成する場合は、**Table**&#x200B;コンポーネントを使用することをお勧めします。
 
 テーブル機能は、**テキスト**&#x200B;および&#x200B;**テーブル**&#x200B;コンポーネントの両方で、テーブル内で（通常、マウスの右ボタンを）クリックして表示されるコンテキストメニューから利用できます。以下に例を示します。
 
@@ -308,9 +308,9 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 * **幅**
 * **高さ**
-* **水平方向揃え** — 左揃え、中央揃え、右揃え
-* **垂直方向揃え** — 上揃え、中央揃え、下揃え、またはベースライン
-* **セルの種類**— データまたはヘッダー
+* **水平方向揃え**  — 左揃え、中央揃え、右揃え
+* **垂直方向揃え**  — 上揃え、中央揃え、下揃え、またはベースライン
+* **セルの種類** — データまたはヘッダー
 * **適用先：** 単一のセル、行全体、列全体
 
 #### 行の追加または削除 {#add-or-delete-rows}
@@ -321,7 +321,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 現在の行を削除することもできます。
 
-#### 列の追加または削除 {#add-or-delete-columns}
+#### 列の追加または削除  {#add-or-delete-columns}
 
 ![cq55_rte_columns](assets/cq55_rte_columns.png)
 
@@ -329,7 +329,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 現在の列を削除することもできます。
 
-#### すべての行またはすべての列の選択 {#selecting-entire-rows-or-columns}
+#### すべての行またはすべての列の選択  {#selecting-entire-rows-or-columns}
 
 ![chlimage_1-106](assets/chlimage_1-106.png)
 
@@ -337,12 +337,12 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 #### セルの統合 {#merge-cells}
 
-![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
+![cq55_rte_](assets/cq55_rte_cellmerge.png) ![cellmergeq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
 * セルのグループを選択した場合、それらを 1 つにマージできます。
 * 1 つのセルのみを選択した場合、右または下のセルとマージできます。
 
-#### セルの分割 {#split-cells}
+#### セルの分割  {#split-cells}
 
 ![cq55_rte_cellsplit](assets/cq55_rte_cellsplit.png)
 
@@ -351,7 +351,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 * 「左右にセルを分割」は、現在の列内の、現在のセルの右側に新しいセルを生成します。
 * 「上下にセルを分割」は、現在の行内の、現在のセルの下に新しいセルを生成します。
 
-#### ネストされたテーブルの作成 {#creating-nested-tables}
+#### ネストされたテーブルの作成  {#creating-nested-tables}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
@@ -369,7 +369,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-このオプションを使用して、 **[!UICONTROL Text]** コンポーネント内から表を削除します。
+**[!UICONTROL テキスト]**&#x200B;コンポーネント内からテーブルを削除するには、このオプションを使用します。
 
 ### 特殊文字 {#special-characters}
 
@@ -381,7 +381,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 マウスオーバーを使用して拡大された文字を表示し、クリックしてテキストの現在の位置に追加します。
 
-### ソース編集モード {#source-editing-mode}
+### ソース編集モード  {#source-editing-mode}
 
 ![](do-not-localize/cq55_rte_sourceedit.png)
 
