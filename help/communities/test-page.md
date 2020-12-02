@@ -18,5 +18,5 @@ ht-degree: 34%
 
 # テストページ {#test-page}
 
-![screen_shot_2018-03-21at084300](assets/screen_shot_2018-03-21at084300.png)![screen_shot_2018-03-21at084428](assets/screen_shot_2018-03-21at084428.png) screen_shot_2018-03-21at084727 ![screen_shot_2018-03-21at084508](assets/screen_shot_2018-03-21at084727.png)![](assets/screen_shot_2018-03-21at084508.png)![shot_2018-03-21at084830](assets/screen_shot_2018-03-21at084830.png)
+![screen_shot_2018-03-21at084300](assets/screen_shot_2018-03-21at084300.png) ![screen_shot_2018-03-21at084428](assets/screen_shot_2018-03-21at084428.png) ![screen_shot_2018-03-21at084727](assets/screen_shot_2018-03-21at084727.png) ![screen_shot_2018-03-21at084508](assets/screen_shot_2018-03-21at084508.png) ![screen_shot_2018-03-21at084830](assets/screen_shot_2018-03-21at084830.png)
 
