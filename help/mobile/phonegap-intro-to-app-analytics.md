@@ -34,20 +34,20 @@ ht-degree: 58%
 
 Adobe Mobile Services では、使用状況、アプリのクラッシュ、デバイスの詳細など、モバイルアプリの数ある重要な指標をトラッキングすることで、ユーザーがモバイルアプリをどのように使用しているかを把握できます。
 
-Adobe Experience Manager Mobile では、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を一目で確認できます。The **Mobile Metrics Tile** in the dashboard provides real-time analytics for your mobile application, allowing developers, authors and administrators to get a quick glipse of the health of your mobile app. Under the covers powering the analytics is the [Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK. AdobeのMobile Analytics SDKは、ネイティブに、またはWebビュー用のPhoneGapブリッジプラグインを通じて、アプリケーションにプラグインできます。 指標は収集され、デバイスに接続されるまでデバイス上にキャッシュされます。レポートと分析のためにデータがMobile Services Cloudにプッシュされます。
+Adobe Experience Manager Mobile では、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を一目で確認できます。ダッシュボードの&#x200B;**モバイル指標タイル**&#x200B;は、モバイルアプリのリアルタイム分析を提供します。開発者、作成者、管理者は、モバイルアプリの正常性をすばやく把握できます。 解析のパワー化の表紙には、[Adobeモバイル解析](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDKが含まれています。 AdobeのMobile Analytics SDKは、ネイティブに、またはWebビュー用のPhoneGapブリッジプラグインを通じて、アプリケーションにプラグインできます。 指標は収集され、デバイスに接続されるまでデバイス上にキャッシュされます。レポートと分析のためにデータがMobile Services Cloudにプッシュされます。
 
 Adobe Mobile Analytics SDK は、次の機能を提供します。
 
 1. **モバイルチャネルに関するデータ収集** - すべての主要オペレーティングシステム上のモバイル Web サイトおよびアプリに関して総合的なデータを収集します。
-1. **モバイルエンゲージメントの分析** — ユーザーがモバイルアプリ、Webサイトまたはビデオ内で行うエンゲージメントを把握できます。例えば、チャネルを起動する頻度や、消費者がアプリから購入するかどうかなどを把握できます。
-1. **モバイルアプリのダッシュボードとレポート** — アプリのライフサイクル指標やアプリストア指標を含む使用状況レポートを取得します。ユーザー、起動回数、セッションの平均長さ、リテンション期間、クラッシュの傾向を確認できます。
+1. **モバイルエンゲージメントの分析**  — ユーザーがモバイルアプリ、Webサイトまたはビデオ内で行うエンゲージメントを把握します。例えば、チャネルを起動する頻度や、消費者がアプリから購入するかどうかなどを把握できます。
+1. **モバイルアプリのダッシュボードとレポート**  — アプリやアプリストアの指標のライフサイクル指標を含む使用状況レポートを取得します。ユーザー、起動回数、セッションの平均長さ、リテンション期間、クラッシュの傾向を確認できます。
 1. **モバイルキャンペーン分析** - SMS、モバイル検索広告、モバイルディスプレイ広告、QRコードなど、モバイル固有のキャンペーンの効果を定量化します。
-1. **位置情報分析** — アプリのユーザーが起動し、GPSの位置や目標地点でモバイルエクスペリエンスを操作する場所を見つけます。
-1. **パス分析** — ユーザーがアプリ内をどのように移動して、ユーザーを惹きつける画面やUI要素を特定し、ユーザーをドロップオフさせる原因を確認します。
+1. **位置情報分析**  — アプリのユーザーが起動し、GPSの位置や目標地点でモバイルエクスペリエンスを操作する場所を探します。
+1. **パス分析**  — ユーザーがアプリ内をどのように移動して、ユーザーを惹きつける画面やUI要素、およびユーザーの離脱の原因を特定するかを確認します。
 
-This section describes how [AEM Developers](#developers) can then learn how to instrument AEM Mobile apps with analytics tracking.
+この節では、[AEM開発者](#developers)が、AEM Mobileアプリに解析追跡機能を実装する方法を学ぶ方法について説明します。
 
-Finally, [AEM Administrators](#administrators) learn to:
+最後に、[AEM管理者](#administrators)は次のことを学びます。
 
 * Adobe Mobile Services に対するクラウドサービスを作成します。
 * モバイルサービス設定を作成し、レポートスイートを関連付けます。
@@ -55,15 +55,15 @@ Finally, [AEM Administrators](#administrators) learn to:
 * AEM アプリケーションコマンドセンターで指標を表示します。
 * モバイルアプリに AMS SDK 設定を割り当てます。
 
-## 開発者向け - アプリへの Analytics の統合 {#for-developers-integrate-analytics-into-your-app}
+## 開発者向け - アプリへの Analytics の統合  {#for-developers-integrate-analytics-into-your-app}
 
-**前提条件：** AEM管理者は、以下で説明するように、AdobeMobile Servicesクラウドの設定 [を設定する必要があります](#amscloudserviceconfig)。
+**前提条件：** AEM管理者は、以下に説明するように、AdobeMobile Servicesクラウド設定 [を設定する必要があります](#amscloudserviceconfig)。
 
-Developers are responsible for [adding analytics to an AEM Mobile app](/help/mobile/phonegap-add-analytics-to-apps.md) as necessary to track, report and understand how you users engage with your mobile app content and to measure key lifecycle metrics such as launches, time in app, and crash rate.
+開発者は、必要に応じて[AEM Mobileアプリ](/help/mobile/phonegap-add-analytics-to-apps.md)に解析を追加し、モバイルアプリコンテンツの追跡、レポート、ユーザーの関与方法の把握、起動、アプリ内時間、クラッシュ率などの主要ライフサイクル指標の測定を行います。
 
 ## 管理者向け - Adobe Mobile Services クラウドサービスの設定 {#for-administrators-configure-the-adobe-mobile-services-cloud-service}
 
-AdobeMobile Servicesを利用するには、Adobe Analyticsのアカウント情報とAEMAdobeMobile ServicesCloud Serviceを設定する必要があります。 The Apps Command Center provides a **Analyze Metrics** tile where you can create and associate the cloud service with your mobile app.
+AdobeMobile Servicesを利用するには、Adobe Analyticsのアカウント情報とAEMAdobeMobile ServicesCloud Serviceを設定する必要があります。 Apps Command Centerには、**指標の分析**&#x200B;タイルが用意されており、ここでクラウドサービスを作成し、モバイルアプリに関連付けることができます。
 
 モバイルアプリにクラウドサービスを設定するには、まず、指標を分析タイルにある歯車アイコンをクリックします。
 
@@ -77,7 +77,7 @@ Adobe Mobile Services クラウドサービスを作成するには、サービ�
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
-Upon clicking the &#39;**+**&#39; button, the **Add Cloud Service** wizard will be displayed.
+「**+**」ボタンをクリックすると、**追加Cloud Service**&#x200B;ウィザードが表示されます。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
@@ -109,7 +109,7 @@ AEM Mobile アプリにモバイルサービス設定を関連付けたので、
 
 モバイルアプリは、ADBMobileConfig.json ファイルにアクセスできるようになったので、Adobe Analytics に通信する方法を認識し、アプリの成功を促進するのに役立つ重要な指標値に関するレポートの作成を開始します。
 
-## 次の手順 {#what-s-next}
+## 次の手順  {#what-s-next}
 
 1. [AEM Mobile アプリを使ってみる](/help/mobile/starting-aem-phonegap-app.md)
 1. [アプリのコンテンツを管理する](/help/mobile/phonegap-manage-app-content.md)
