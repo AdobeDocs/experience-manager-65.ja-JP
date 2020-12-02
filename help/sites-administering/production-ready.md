@@ -20,7 +20,7 @@ ht-degree: 86%
 
 # 実稼動準備モードでの AEM の実行{#running-aem-in-production-ready-mode}
 
-With AEM 6.1, Adobe introduces the new `"nosamplecontent"` runmode aimed at automating the steps required to prepare an AEM instance for deployment in a production environment.
+AEM 6.1では、Adobeは、実稼働環境でのデプロイメント用にAEMインスタンスを準備するために必要な手順の自動化を目的とした、新しい`"nosamplecontent"`ランモードを導入します。
 
 この新しい実行モードは、セキュリティチェックリストに記載されているセキュリティのベストプラクティスに従うようにインスタンスを自動的に設定するだけでなく、サンプルの Geometrixx アプリケーションと設定をプロセスですべて削除します。
 
@@ -32,7 +32,7 @@ With AEM 6.1, Adobe introduces the new `"nosamplecontent"` runmode aimed at auto
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-In order to run AEM in production ready mode all you need to do is add the `nosamplecontent` via the `-r` runmode switch to your existing startup arguments:
+AEMを実稼働用のレディモードで実行するには、`-r` runmodeスイッチを介して`nosamplecontent`を既存の起動引数に追加するだけです。
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -68,7 +68,7 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 1. **Apache Sling GET Servlet** は、次に示すセキュアな設定をサポートするようにデフォルトで設定されます。
 
-| **設定** | **オーサー** | **パブリッシュ** |
+| **設定** | **オーサー** | **公開** |
 |---|---|---|
 | TXT rendition | disabled | disabled |
 | HTML rendition | disabled | disabled |
