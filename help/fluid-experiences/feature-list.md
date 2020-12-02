@@ -11,11 +11,11 @@ ht-degree: 16%
 ---
 
 
-# AEM Fluid Experiences機能のリスト{#aem-fluid-experiences-feature-list}
+# AEM Fluid Experiences機能リスト{#aem-fluid-experiences-feature-list}
 
 Adobe Experience Manager流体エクスペリエンスは、AEM Sites、AEMダイナミックメディア、AEM Assetsの強力な機能セットを活用して、ヘッドレスコンテンツ配信に対する堅牢なソリューションを提供します。
 
-AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処されるという点で、従来のAEMとの違いを示します。 完全なAEM Sites、アセット、およびダイナミックメディアの各ソリューションでは、高性能のコンテンツオーサリング、配信、およびハイブリッドな使用例に対するAEMの強力なサポートが利用でき [ます。](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処されるという点で、従来のAEMとの違いを示します。 高性能のコンテンツオーサリング、配信、およびハイブリッド使用例のAEM強力なサポートは、[フルAEM Sites、アセット、ダイナミックメディアの各ソリューションで利用できます。](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/user-guide/home.html)
 
 次の表に、AEM Fluid Experiencesの機能と、関連するサポートドキュメントへのリンクを示します。
 
@@ -28,7 +28,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処さ�
 >
 >AEM Fluid ExperiencesはAEM機能のサブセットです。 これらの表にリンクされている機能には、AEMに含まれる追加の機能が含まれる場合がありますが、AEM Fluid Experiencesには含まれません。
 
-## リポジトリの機能 {#repository-features}
+## リポジトリ機能{#repository-features}
 
 |  |
 |---|
@@ -43,7 +43,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処さ�
 | [重複検出](/help/assets/duplicate-detection.md) |
 | [スマートタグ](/help/assets/enhanced-smart-tags.md) |
 
-## アクセス、API、配信機能 {#access-api-and-delivery-features}
+## アクセス、API、配信機能{#access-api-and-delivery-features}
 
 |  |
 |---|
@@ -56,7 +56,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処さ�
 | [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) |
 | [ダイナミックメディア](/help/assets/dynamic-media.md) |
 
-## 管理機能と統合機能 {#admin-and-integration-features}
+## 管理機能と統合機能{#admin-and-integration-features}
 
 |  |
 |---|
@@ -72,7 +72,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処さ�
 | [ワークフロー](/help/sites-administering/workflows-starting.md) |
 | 接続（クラウドサービス） |
 
-## 解析とパーソナライゼーション {#analytics-and-personalization}
+## 解析とパーソナライゼーション{#analytics-and-personalization}
 
 |  |
 |---|
