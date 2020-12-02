@@ -141,15 +141,15 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
        自社のドメインを調べるには、会社のアカウントにログインします。
 
-      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
+      **[!UICONTROL 設定/アプリケーション設定/全般設定をクリックします。]**
 
-      Look for the field labeled **[!UICONTROL Published Server Name.]**
+      「**[!UICONTROL Published Server Name.]**」というラベルの付いたフィールドを探します。
    1. 直接的な関係で管理されているのではなく、アドビを通じて CDN を使用していることを確認します。
    1. `s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用ドメインではなく、`images.company.com` や `mycompany.scene7.com` などの専用ドメインを使用していることを確認します。
 
        自社のドメインを調べるには、会社のアカウントにログインします。
 
-      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
+      **[!UICONTROL 設定/アプリケーション設定/全般設定をクリックします。]**
 
       「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
    1. HTTP/2 上で機能させる必要もある場合は、その旨を記載します。
