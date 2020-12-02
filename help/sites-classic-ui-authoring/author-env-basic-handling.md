@@ -60,7 +60,7 @@ ht-degree: 90%
   </tr>
   <tr>
    <td><strong>ローンチ</strong></td>
-   <td>This helps you manage your <a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>; these enable you to develop the content for a future release of one or more activated web pages.<br /> <i>注意：タッチ対応UIでは、参照レールと共に、サイトコンソールでも同じ機能のほとんどが使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。「操作」、「起動」の順に選択します。</i></td>
+   <td>これは、<a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>；の管理に役立ちます。これらを使用すると、1つ以上のアクティブ化されたwebページの将来のリリース向けにコンテンツを開発できます。<br /> <i>注意：タッチ対応UIでは、参照レールと共に、サイトコンソールでも同じ機能のほとんどが使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。「操作」、「起動」の順に選択します。</i></td>
   </tr>
   <tr>
    <td><strong>インボックス </strong></td>
