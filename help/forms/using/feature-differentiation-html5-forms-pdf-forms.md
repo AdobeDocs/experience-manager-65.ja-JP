@@ -19,7 +19,7 @@ ht-degree: 84%
 ---
 
 
-# HTML5 フォームと PDF フォーム の機能の違い {#feature-differentiation-between-html-forms-and-pdf-forms}
+# HTML5 フォームと PDF フォーム の機能の違い  {#feature-differentiation-between-html-forms-and-pdf-forms}
 
 次の表では、HTML5 フォームと PDF フォームでサポートされている機能について説明します。
 
@@ -57,7 +57,7 @@ ht-degree: 84%
   </tr>
   <tr>
    <td>ヘッダー/フッター </td>
-   <td>サポート対象. <br /> <br /> HTML5モバイルフォームは改ページをサポートしていないので、ヘッダーとフッターは1回だけ表示されます。 ただし、レイアウトを設定することにより、モバイルフォームプレビュー内の複数の場所に表示させることができます。<br /> </td>
+   <td>サポート対象. <br /> <br /> HTML5モバイルフォームは改ページをサポートしていないので、ヘッダーとフッターは1回だけ表示されます。ただし、レイアウトを設定することにより、モバイルフォームプレビュー内の複数の場所に表示させることができます。<br /> </td>
    <td>サポート対象.</td>
   </tr>
   <tr>
@@ -67,12 +67,12 @@ ht-degree: 84%
   </tr>
   <tr>
    <td>XFA スクリプト API</td>
-   <td>最も一般的に使用されるXFAスクリプト構成をサポートします。 For details list of supported constructs, see <a href="/help/forms/using/scripting-support.md">scripting support</a>.</td>
+   <td>最も一般的に使用されるXFAスクリプト構成をサポートします。 サポートされている構成要素の詳しいリストについては、<a href="/help/forms/using/scripting-support.md">スクリプティングのサポート</a>を参照してください。</td>
    <td>すべての XFA スクリプトの構成要素をサポート。</td>
   </tr>
   <tr>
    <td>Acrobat スクリプト API </td>
-   <td>HTML5 フォームは、最も一般的に使用される API をサポートしています。For details, see <a href="/help/forms/using/scripting-support.md">scripting support</a>.</td>
+   <td>HTML5 フォームは、最も一般的に使用される API をサポートしています。詳しくは、<a href="/help/forms/using/scripting-support.md">スクリプティングのサポート</a>を参照してください。</td>
    <td>PDF ファイルが Acrobat または Reader 内で開かれる場合も、それは Acrobat が提供するすべてのスクリプト API をサポートします。</td>
   </tr>
   <tr>
