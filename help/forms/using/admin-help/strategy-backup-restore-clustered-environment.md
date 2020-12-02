@@ -34,7 +34,7 @@ ht-degree: 73%
 >
 >AEM Forms セットアップで使用されているその他のデータ（例えば、カスタマーフォント、コネクターデータなど）をすべてバックアップする必要があります。
 
-## クラスター環境のバックアップ {#back-up-a-clustered-environment}
+## クラスター環境のバックアップ  {#back-up-a-clustered-environment}
 
 ここでは、AEM Forms クラスター環境をバックアップする次の方策について検討します。
 
@@ -43,7 +43,7 @@ ht-degree: 73%
 * ダウンタイムを必要としないがレスポンスに遅れが生じるオンラインバックアップ
 * ブートストラッププロパティファイルのバックアップ
 
-### ダウンタイムを必要とするオフラインバックアップ {#offline-backup-with-downtime}
+### ダウンタイムを必要とするオフラインバックアップ  {#offline-backup-with-downtime}
 
 1. クラスターと関連サービス全体をシャットダウンします（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
 1. 任意のノード上で、データベース、GDS、およびコネクターをバックアップします（[バックアップおよび回復するファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)を参照してください）。
@@ -58,7 +58,7 @@ ht-degree: 73%
 1. カスタマーフォントなど、その他すべてのデータをバックアップします。
 1. クラスターを再び起動します。
 
-### ダウンタイムを必要としないオフラインバックアップ {#offline-backup-with-no-downtime}
+### ダウンタイムを必要としないオフラインバックアップ  {#offline-backup-with-no-downtime}
 
 1. ローリングバックアップモードに入ります（[バックアップモードの開始](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)を参照してください）。
 
@@ -77,7 +77,7 @@ ht-degree: 73%
 1. カスタマーフォントなど、その他すべてのデータをバックアップします。
 1. クラスターを再び起動します。
 
-### ダウンタイムを必要としないがレスポンスに遅れが生じるオンラインバックアップ {#online-backup-with-no-downtime-but-delay-in-response}
+### ダウンタイムを必要としないがレスポンスに遅れが生じるオンラインバックアップ  {#online-backup-with-no-downtime-but-delay-in-response}
 
 1. ローリングバックアップモードに入ります（[バックアップモードの開始](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)を参照してください）。
 
@@ -94,7 +94,7 @@ ht-degree: 73%
 1. カスタマーフォントなど、その他すべてのデータをバックアップします。
 1. クラスターを再び起動します。
 
-### ブートストラッププロパティファイルのバックアップ {#back-up-the-bootstrap-properties-file}
+### ブートストラッププロパティファイルのバックアップ  {#back-up-the-bootstrap-properties-file}
 
 AEMクラスターを作成すると、すべてのセカンダリノードに対して、アプリケーションサーバーにプロパティファイルが作成されます。 ブートストラッププロパティファイルをバックアップすることをお勧めします。このファイルは、アプリケーションサーバー上の次の場所にあります。
 
@@ -112,7 +112,7 @@ AEMセカンダリノードの災害復旧シナリオ用にファイルをバ�
 
 データベースのクラッシュなどの障害でクラスター全体が故障した場合は、次の手順を実行する必要があります。復元は、使用したバックアップの方法に依存します。
 
-### 単一ノードの復元 {#restoring-a-single-node}
+### 単一ノードの復元  {#restoring-a-single-node}
 
 1. 障害ノードを停止します。
 
@@ -180,14 +180,14 @@ AEMセカンダリノードの災害復旧シナリオ用にファイルをバ�
 
 パブリッシャーノードは、クラスター環境内にプライマリとセカンダリの関係がありません。 パブリッシャーノードのバックアップは、「[バックアップと復元](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)」に従って行うことができます。
 
-### 単一パブリッシャーノードの回復 {#recover-a-single-publisher-node}
+### 単一パブリッシャーノードの回復  {#recover-a-single-publisher-node}
 
 1. 回復する必要のあるノードをシャットダウンし、そのノードが再び立ち上がるまではパブリッシュ作業を行わないようにします。
-1. 「バックアップの [復元](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring the Backup)」を使用して、パブリッシュノードを復元します。
+1. [バックアップの復元](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring the Backup)を使用して、パブリッシュノードを復元します。
 
 ### クラスターの回復 {#recover-a-cluster}
 
 1. クラスターをシャットダウンします。
-1. 「バックアップの [復元](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring the Backup)」を使用して、パブリッシュノードを復元します。
+1. [バックアップの復元](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring the Backup)を使用して、パブリッシュノードを復元します。
 1. 主ノードの後に作成者クラスターの二次ノードが続く開始。
 
