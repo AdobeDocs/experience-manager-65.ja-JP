@@ -26,12 +26,12 @@ ht-degree: 71%
 この記事では、インストールと設定の作業において、次の各段階で適用する堅牢化手法について説明します。
 
 * **インストール前：**&#x200B;この手法は、JEE 上の AEM Forms をインストールする前に実行します。
-* **インストール：** これらの手順は、JEE上のAEM Formsのインストールプロセスで実行します。
+* **インストール：この手** 法は、JEE上のAEM Formsのインストールプロセスで使用します。
 * **インストール後：**&#x200B;この手法は、インストール終了後と、それ以降の定期的な管理作業として実行します。
 
 JEE 上の AEM Forms は詳細なカスタマイズが可能で、様々な環境で動作します。推奨事項には、一部の組織のニーズに合わないものも含まれている可能性があります。
 
-## インストール前 {#preinstallation}
+## インストール前  {#preinstallation}
 
 JEE 上の AEM Forms をインストールする前には、ネットワーク層とオペレーティングシステムに対してセキュリティソリューションを適用することができます。ここでは、いくつかの問題と、この領域におけるセキュリティの脆弱性を減らすための推奨事項について説明します。
 
@@ -70,13 +70,13 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
    <td><p>次の基準を使用して、ファイアウォールソリューションを選択します。</p> 
     <ul> 
      <li><p>単純なパケットフィルタリングソリューションではなく、プロキシサーバーまたは「ステートフルインスペクション」<em></em>をサポートするファイアウォールを実装する。</p> </li> 
-     <li><p>Use a firewall that supports a <em>deny all services except those explicitly permitted</em> security paradigms.</p> </li> 
+     <li><p><em>明示的に許可されたサービス以外のすべてのサービスを</em>拒否するファイアウォールを使用してください。</p> </li> 
      <li><p>デュアルホームまたはマルチホームのファイアウォールソリューションを実装する。このアーキテクチャによって、最も高いセキュリティレベルが実現し、権限のないユーザーがファイアウォールセキュリティを迂回できないようにすることができます。</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td><p>データベースポート</p> </td> 
-   <td><p>データベースのデフォルトのリスニングポート（MySQL - 3306、Oracle - 1521、MS SQL - 1433）は、使用しないでください。データベースポートの変更について詳しくは、データベースのドキュメントを参照してください。</p> <p>データベースポートを変更すると、JEE 上の AEM Forms の設定全体に影響します。デフォルトポートを変更した場合、JEE 上の AEM Forms のデータソースなど、設定の別の領域を変更内容に合わせて修正する必要があります。</p> <p>For information about configuring data sources in AEM Forms on JEE, see Install and Upgrade AEM Forms on JEE or Upgrading to AEM Forms on JEE for your application server at <a href="/help/forms/using/introduction-aem-forms.md" target="_blank">AEM Forms user guide</a>.</p> </td> 
+   <td><p>データベースのデフォルトのリスニングポート（MySQL - 3306、Oracle - 1521、MS SQL - 1433）は、使用しないでください。データベースポートの変更について詳しくは、データベースのドキュメントを参照してください。</p> <p>データベースポートを変更すると、JEE 上の AEM Forms の設定全体に影響します。デフォルトポートを変更した場合、JEE 上の AEM Forms のデータソースなど、設定の別の領域を変更内容に合わせて修正する必要があります。</p> <p>JEE上のAEM Formsでのデータソースの設定について詳しくは、<a href="/help/forms/using/introduction-aem-forms.md" target="_blank">AEM Formsユーザーガイド</a>で、使用しているアプリケーションサーバー版の「JEE上のAEM Formsのインストールとアップグレード」または「JEE上のAEM Formsへのアップグレード」を参照してください。</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -108,7 +108,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
  </tbody> 
 </table>
 
-For additional security information for your operating system, see [“Operating system security information”](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information).
+オペレーティングシステムのセキュリティに関するその他の情報については、[&quot;オペレーティングシステムのセキュリティ情報&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)を参照してください。
 
 ## インストール {#installation}
 
@@ -140,11 +140,11 @@ For additional security information for your operating system, see [“Operating
   </tr> 
   <tr> 
    <td><p>クロスドメインポリシーファイル</p> </td> 
-   <td><p>サーバー上に <code>crossdomain.xml</code> ファイルが存在すると、そのサーバーを直ちに弱化させる可能性があります。ドメインのリストに可能な限り制限をかけることをお勧めします。ガイド<code>crossdomain.xml</code>（非推奨）<em>を使用する場合、開発環境から実稼働環境への移行中に使用される </em> ファイルを配置しないでください。Web サービスで使用されるガイドの場合、ガイドを提供するサーバーと同じサーバー上にそのサービスがあれば、<code>crossdomain.xml</code> ファイルはまったく必要ありません。しかし、サービスが別のサーバー上にある場合や、クラスターが関係している場合は、<code>crossdomain.xml</code> ファイルが存在している必要があります。Refer to <a href="https://kb2.adobe.com/cps/142/tn_14213.html">https://kb2.adobe.com/cps/142/tn_14213.html</a>, for more information on the crossdomain.xml file.</p> </td> 
+   <td><p>サーバー上に <code>crossdomain.xml</code> ファイルが存在すると、そのサーバーを直ちに弱化させる可能性があります。ドメインのリストに可能な限り制限をかけることをお勧めします。ガイド<code>crossdomain.xml</code>（非推奨）<em>を使用する場合、開発環境から実稼働環境への移行中に使用される </em> ファイルを配置しないでください。Web サービスで使用されるガイドの場合、ガイドを提供するサーバーと同じサーバー上にそのサービスがあれば、<code>crossdomain.xml</code> ファイルはまったく必要ありません。しかし、サービスが別のサーバー上にある場合や、クラスターが関係している場合は、<code>crossdomain.xml</code> ファイルが存在している必要があります。crossdomain.xmlファイルについて詳しくは、<a href="https://kb2.adobe.com/cps/142/tn_14213.html">https://kb2.adobe.com/cps/142/tn_14213.html</a>を参照してください。</p> </td> 
   </tr> 
   <tr> 
    <td><p>オペレーティングシステムのセキュリティ設定</p> </td> 
-   <td><p>If you need to use 192-bit or 256-bit XML encryption on Solaris platforms, ensure that you install <code>pkcs11_softtoken_extra.so</code> instead of <code>pkcs11_softtoken.so</code>.</p> </td> 
+   <td><p>Solarisプラットフォームで192ビットまたは256ビットのXML暗号化を使用する必要がある場合は、<code>pkcs11_softtoken.so</code>ではなく<code>pkcs11_softtoken_extra.so</code>をインストールしてください。</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -189,8 +189,8 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    * サービスとしてログオン（通常は既に設定済み）
 
 1. 次のディレクトリの新しいユーザーアカウントに変更権限を与えます。
-   * **グローバルドキュメントストレージ(GDS)ディレクトリ**:GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
-   * **CRX-Repositoryディレクトリ**:デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
+   * **グローバルドキュメントストレージ(GDS)ディレクトリ**:GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。インストール時に場所の設定が空のままの場合、`[JBoss root]/server/[type]/svcnative/DocumentStorage`にあるアプリケーションサーバーのインストール下のディレクトリがデフォルトの場所になります。
+   * **CRX-Repositoryディレクトリ**:デフォルトの場所は  `[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms一時ディレクトリ**:
       * （Windows）環境変数で設定されている TMP または TEMP パス
       * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
@@ -214,7 +214,7 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
 
 Configuration Manager は、アプリケーションサーバーにデプロイ済みのサーブレットを利用して、JEE 上の AEM Forms データベースのブートストラップを実行します。Configuration Manager は、設定が完了する前にこのサーブレットにアクセスするので、承認済みユーザーのみにアクセスを限定するセキュリティは施されていません。Configuration Manager を使用して JEE 上の AEM Forms の設定を完了した後は、このサーブレットを無効にしてください。
 
-1. Unzip the adobe-livecycle-[appserver].ear file.
+1. adobe-livecycle-[appserver].earファイルを解凍します。
 1. META-INF/application.xml ファイルを開きます。
 1. adobe-bootstrapper.war セクションを検索します。
 
@@ -274,7 +274,7 @@ Configuration Manager を使用して、Acrobat Reader DC Extensions の資格�
 
 一部の forms サーバーサービスには、匿名の呼び出しによって実行される操作があります。このようなサービスへの匿名アクセスが必要ない場合は、[サービスへの不要な匿名アクセスの無効化](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)の手順に従って、アクセスを無効にしてください。
 
-#### デフォルトの管理者パスワードの変更 {#change-the-default-administrator-password}
+#### デフォルトの管理者パスワードの変更  {#change-the-default-administrator-password}
 
 JEE 上の AEM Forms をインストールすると、上級管理者ユーザーまたはログイン ID 管理者ユーザーのために、デフォルトパスワードが「*password*」であるデフォルトユーザーアカウントが 1 つ設定されます。このパスワードは、Configuration Manager を使用して直ちに変更してください。
 
@@ -301,9 +301,9 @@ JEE 上の AEM Forms をインストールすると、上級管理者ユーザ�
 
 次の手順を実行することで CRX 管理者のデフォルトパスワードの変更もお勧めします。
 
-1. デフォルトのユーザー名/パスワード `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` を使用してログインします。
+1. デフォルトのユーザー名/パスワードを使用して`https://[server]:[port]/lc/libs/granite/security/content/useradmin.html`にログインします。
 1. 検索フィールドに「管理者」と入力し、「**移動**」をクリックします。
-1. Select **Administrator** from the search result and click the **Edit** icon at the lower right of the user interface.
+1. 検索結果から「**管理者**」を選択し、ユーザーインターフェイスの右下にある「**編集**」アイコンをクリックします。
 1. 「**新しいパスワード**」フィールドに新しいパスワードを、「**パスワード**」フィールドに古いパスワードを指定します。
 1. ユーザーインターフェイスの右下にある保存アイコンをクリックします。
 
@@ -318,7 +318,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
    ```
 
 1. **設定／コアシステム設定／設定**&#x200B;をクリックします。
-1. Deselect **Enable WSDL** and click **OK**.
+1. 「**WSDL**&#x200B;を有効にする」を選択解除し、「**OK**」をクリックします。
 
 ### アプリケーションサーバーのセキュリティ {#application-server-security}
 
@@ -338,7 +338,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
   </tr> 
   <tr> 
    <td><p>アプリケーションサーバーの cookie の設定</p> </td> 
-   <td><p>アプリケーションの cookie は、アプリケーションサーバーが管理しています。アプリケーションをデプロイするときに、アプリケーションサーバーの管理者は cookie の環境設定をサーバー全体に対してまたは個別のアプリケーションに対して指定することができます。デフォルトでは、サーバーの設定が優先します。</p> <p>アプリケーションサーバーで生成されるすべてのセッション cookie に <code>HttpOnly</code> 属性が含まれている必要があります。For example, when using the JBoss Application Server, you can modify the SessionCookie element to <code>httpOnly="true"</code> in the <code>WEB-INF/web.xml</code> file.</p> <p>cookie の送信には HTTPS のみを使用するように制限することもできます。このように設定すると、cookie が HTTP を経由して暗号化されずに送信されることはありません。アプリケーションサーバーの管理者は、サーバーの cookie 保護をグローバルに有効化する必要があります。例えば、JBoss アプリケーションサーバーを使用する場合、<code>secure=true</code> ファイルで、<code>server.xml</code> へのコネクタ要素を修正することができます。</p> <p>cookie の設定について詳しくは、アプリケーションサーバーのドキュメントを参照してください。</p> </td> 
+   <td><p>アプリケーションの cookie は、アプリケーションサーバーが管理しています。アプリケーションをデプロイするときに、アプリケーションサーバーの管理者は cookie の環境設定をサーバー全体に対してまたは個別のアプリケーションに対して指定することができます。デフォルトでは、サーバーの設定が優先します。</p> <p>アプリケーションサーバーで生成されるすべてのセッション cookie に <code>HttpOnly</code> 属性が含まれている必要があります。例えば、JBoss Application Serverを使用する場合、<code>WEB-INF/web.xml</code>ファイルでSessionCookie要素を<code>httpOnly="true"</code>に変更できます。</p> <p>cookie の送信には HTTPS のみを使用するように制限することもできます。このように設定すると、cookie が HTTP を経由して暗号化されずに送信されることはありません。アプリケーションサーバーの管理者は、サーバーの cookie 保護をグローバルに有効化する必要があります。例えば、JBoss アプリケーションサーバーを使用する場合、<code>secure=true</code> ファイルで、<code>server.xml</code> へのコネクタ要素を修正することができます。</p> <p>cookie の設定について詳しくは、アプリケーションサーバーのドキュメントを参照してください。</p> </td> 
   </tr> 
   <tr> 
    <td><p>ディレクトリの参照</p> </td> 
@@ -353,9 +353,9 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
 
 Oracle では、データベースアカウントで使用する必要がある権限は、CONNECT、RESOURCE および CREATE VIEW だけです。他のデータベースについての同様の要件については、「[JEE 上の AEM Forms のインストールの準備（シングルサーバー）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)」を参照してください。
 
-#### Windows 上での統合セキュリティの設定（JBoss 版） {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
+#### Windows 上での統合セキュリティの設定（JBoss 版）  {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
-1. 次の例のように、 [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml}を変更して接続URL `integratedSecurity=true` に追加します。
+1. [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml}を変更して、接続URLに`integratedSecurity=true`を追加します。次に例を示します。
 
    ```java
     jdbc:sqlserver://<serverhost>:<port>;databaseName=<dbname>;integratedSecurity=true
@@ -374,9 +374,9 @@ Oracle では、データベースアカウントで使用する必要がある�
    ```
 
 1. Change Center で、「**Lock &amp; Edit**」をクリックします。
-1. Under Domain Structure, click *[base_domain]* > **Services** > **JDBC** > **Data Sources** and, in the right pane, click **IDP_DS**.
+1. 「Domain Structure」で、*[base_domain]*/**Services**/**JDBC**/**Data Sources**&#x200B;をクリックし、右側のウィンドウで「**IDP_DS**」をクリックします。
 1. 次の画面の「**Configuration**」タブで「**Connection Pool**」タブをクリックし、「**Properties**」ボックスに `integratedSecurity=true` と入力します。
-1. Under Domain Structure, click **[base_domain]** > **Services** > **JDBC** > **Data Sources** and, in the right pane, click **RM_DS**.
+1. 「Domain Structure」で、**[base_domain]**/**Services**/**JDBC**/**Data Sources**&#x200B;をクリックし、右側のウィンドウで「**RM_DS**」をクリックします。
 1. 次の画面の「**Configuration**」タブで「**Connection Pool**」タブをクリックし、「**Properties**」ボックスに `integratedSecurity=true` と入力します。
 1. アプリケーションサーバーを実行しているコンピューターの Windows システムパスに sqljdbc_auth.dll ファイルを追加します。sqljdbc_auth.dll ファイルは、Microsoft SQL JDBC 6.2.1.0 ドライバーのインストールフォルダー内にあります。
 1. SQL Server のセキュリティを「**混合**」モードから「**Windows 認証のみ**」に変更します。
@@ -388,17 +388,17 @@ WebSphere では、統合セキュリティを設定できるのは外部の SQL
 1. WebSphere Administrative Console にログインします。
 1. ナビゲーションツリーで、**Resources**／**JDBC**／**Data Sources** をクリックし、右側のウィンドウで「**IDP_DS**」をクリックします。
 1. 右側のウィンドウの「Additional Properties」で「**Custom Properties**」をクリックし、「**New**」をクリックします。
-1. In the **Name** box, type `integratedSecurity` and, in the **Value** box, type `true`.
+1. 「**名前**」ボックスに`integratedSecurity`と入力し、「**値**」ボックスに`true`と入力します。
 1. ナビゲーションツリーで、**Resources**／**JDBC**／**Data Sources** をクリックし、右側のウィンドウで「**RM_DS**」をクリックします。
 1. 右側のウィンドウの「Additional Properties」で「**Custom Properties**」をクリックし、「**New**」をクリックします。
-1. In the **Name** box, type `integratedSecurity` and, in the **Value** box, type `true`.
-1. WebSphere がインストールされているコンピューター上で、Windows システムパス（C:¥Windows）に sqljdbc_auth.dll ファイルを追加します。The sqljdbc_auth.dll file is in the same location as the Microsoft SQL JDBC 1.2 driver installation (default is *[InstallDir]*/sqljdbc_1.2/enu/auth/x86).
+1. 「**名前**」ボックスに`integratedSecurity`と入力し、「**値**」ボックスに`true`と入力します。
+1. WebSphere がインストールされているコンピューター上で、Windows システムパス（C:¥Windows）に sqljdbc_auth.dll ファイルを追加します。sqljdbc_auth.dllファイルは、Microsoft SQL JDBC 1.2ドライバーのインストール先ディレクトリ（デフォルトは&#x200B;*[InstallDir]*/sqljdbc_1.2/enu/auth/x86）と同じ場所にあります。
 1. **スタート**／**コントロールパネル**／**サービス**&#x200B;を選択し、WebSphere の Windows サービス（IBM WebSphere Application Server &lt;version> - &lt;node>）を右クリックして、「**プロパティ**」を選択します。
 1. プロパティダイアログボックスで、「**ログオン**」タブをクリックします。
 1. 「**アカウント**」を選択し、必要な情報を入力して、使用するログインアカウントを設定します。
 1. SQL Server のセキュリティを「**混合**」モードから「**Windows 認証のみ**」に変更します。
 
-### データベース内の機密性の高い情報の保護 {#protecting-access-to-sensitive-content-in-the-database}
+### データベース内の機密性の高い情報の保護  {#protecting-access-to-sensitive-content-in-the-database}
 
 AEM Forms データベーススキーマには、システム設定やビジネスプロセスに関する機密性の高い情報が含まれているので、ファイアウォールの内側に隠しておく必要があります。データベースは、forms サーバーと同じ信頼境界内にあると見なされる必要があります。情報の意図しない開示やビジネスデータの盗難を防ぐために、データベース管理者（DBA）は、権限のある管理者のみにアクセスを制限するようにデータベースを設定する必要があります。
 
@@ -408,26 +408,26 @@ AEM Forms データベーススキーマには、システム設定やビジネ�
 * Trust Store HSM PIN 暗号化キー
 * ローカルユーザーパスワードハッシュ
 
-For information about vendor-specific tools, see [“Database security information”](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information).
+ベンダー固有のツールについて詳しくは、[&quot;Database security information&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)を参照してください。
 
 ### LDAP のセキュリティ {#ldap-security}
 
 LDAP（Lightweight Directory Access Protocol）ディレクトリは、通常、エンタープライズユーザーおよびグループ情報のソースとして、またパスワード認証実行の手段として JEE 上の AEM Forms で使用されます。LDAP ディレクトリが SSL（Secure Socket Layer）を使用するように設定されていること、および JEE 上の AEM Forms が SSL ポートを使用して LDAP ディレクトリにアクセスするように設定されていることを確認してください。
 
-#### LDAP のサービス拒否 {#ldap-denial-of-service}
+#### LDAP のサービス拒否  {#ldap-denial-of-service}
 
 LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認証エラーを故意に引き起こすというものです。この攻撃を受けると、LDAP ディレクトリサーバーは、すべての LDAP 依存のサービスからユーザーをロックアウトしなければならなくなります。
 
 試行できる認証エラーの回数と、それに伴うロックアウト時間の値を設定すると、AEM Forms への認証でユーザーが繰り返しエラーになったときに、AEM Forms がロックアウトを実行します。管理コンソールで、小さい値を選択します。 認証エラーの許容回数を選択するときは、許容回数に達した後に、LDAP ディレクトリサーバーより前に AEM Forms がユーザーをロックアウトすることを理解することが重要です。
 
-#### 自動アカウントロックの設定 {#set-automatic-account-locking}
+#### 自動アカウントロックの設定  {#set-automatic-account-locking}
 
 1. 管理コンソールにログインします。
 1. **設定**／**ユーザー管理**／**ドメイン管理**&#x200B;をクリックします。
 1. 「自動アカウントロックの設定」で、「**連続する認証エラーの最大回数**」を 3 などの小さい値に設定します。
 1. 「**保存**」をクリックします。
 
-### 監査とログ {#auditing-and-logging}
+### 監査とログ  {#auditing-and-logging}
 
 アプリケーションの監査およびログ機能を適切に保護した状態で使用することで、セキュリティを確保し、他の異常なイベントを追跡して、それらのイベントを可能な限り迅速に検出することができます。アプリケーション内における監査とログの効果的な使用には、成功したログインと失敗したログインの追跡、キーレコードの作成と削除などのキーアプリケーションイベントの追跡などが挙げられます。
 
@@ -472,7 +472,7 @@ LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認
 
 JEE 上の AEM Forms のインストールが完了したら、定期的に環境のセキュリティの保守を行うことが重要です。ここでは、JEE 上の AEM Forms 実稼働サーバーのセキュリティを維持するための推奨タスクについて説明します。
 
-### Web アクセスのリバースプロキシの設定 {#setting-up-a-reverse-proxy-for-web-access}
+### Web アクセスのリバースプロキシの設定  {#setting-up-a-reverse-proxy-for-web-access}
 
 「*リバースプロキシ*」は、1 セットの JEE 上の AEM Forms Web アプリケーションの URL を、外部ユーザーと内部ユーザーの両方から利用できるように設定するものです。この設定は、JEE 上の AEM Forms を実行するアプリケーションサーバーへのユーザーの直接接続を許可する方法よりも、高いセキュリティで保護されます。リバースプロキシは、JEE 上の AEM Forms を実行しているアプリケーションサーバーに対するすべての HTTP 要求を実行します。ユーザーは、リバースプロキシに対するネットワークアクセスしか持たないので、リバースプロキシでサポートされている URL 接続のみを試みることができます。
 
@@ -652,12 +652,12 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
    <td><p>/DoumentManager/*</p> </td> 
    <td><p>HTTP ドキュメント対応の SOAP トランスポートまたは EJB トランスポート経由でリモートエンドポイント、SOAP WSDL エンドポイントおよび Java SDK にアクセスするときに、処理するドキュメントをアップロードおよびダウンロードする。</p> </td> 
    <td><p>はい</p> </td> 
-   <td><p>Yes</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## クロスサイト要求偽造攻撃からの保護 {#protecting-from-cross-site-request-forgery-attacks}
+## クロスサイト要求偽造攻撃からの保護  {#protecting-from-cross-site-request-forgery-attacks}
 
 クロスサイト要求偽造(CSRF)攻撃は、Webサイトがユーザーに対して持つ信頼を悪用し、ユーザーが許可していないコマンドを送信します。 この攻撃は、Webページにリンクやスクリプトを含めるか、電子メールメッセージにURLを含めて、ユーザーが既に認証されている別のサイトにアクセスすることで行われます。
 
@@ -672,19 +672,19 @@ CSRF に共通の特性を次に示します。
 
 JEE上のAEM Formsは、転送者フィルター機能を使用してCSRF攻撃を防ぎます。 この節では、転送者のフィルタリングメカニズムについて次の用語を使用します。
 
-* **許可されている転送者:** 転送者は、要求をサーバーに送信するソースページのアドレスです。 JSPページまたはフォームの場合、転送者は通常、閲覧履歴の前のページになります。 画像の転送者は、通常、画像が表示されるページです。 サーバーリソースへのアクセスが許可されている転送者は、許可されている転送者リストに追加することで識別できます。
-* **許可されている転送者の例外：** 許可されている転送者リストの特定の転送者に対するアクセス範囲を制限する場合があります。 この制限を適用するには、その転送者の個々のパスを「許可されている転送者の例外」リストに追加します。 許可されている転送者の例外リストーのパスから要求を受け取った場合、formsサーバー上のリソースは呼び出されません。 許可されている転送者の例外は、特定のアプリケーションに対して定義できます。また、すべてのアプリケーションに適用される例外のグローバルリストを使用することもできます。
-* **許可されているURI:** これは、転送者ヘッダーを確認せずに提供されるリソースのリストです。 例えば、サーバーの状態に変更を加えることのない、リソースのヘルプページをこのリストに追加できます。許可されているURIリストー内のリソースは、転送者の種類に関係なく、転送者フィルターでブロックされることはありません。
-* **Null転送者:** 親Webページに関連付けられていない、または親Webページから派生していないサーバーリクエストは、Null転送者からのリクエストと見なされます。 例えば、新しいブラウザーウィンドウを開き、アドレスを入力してEnterキーを押すと、サーバーに送信される転送者はNULLになります。 WebサーバーにHTTPリクエストを送信するデスクトップアプリケーション（.NETまたはSWING）も、Null転送者をサーバーに送信します。
+* **許可されている転送者:** 転送者は、リクエストをサーバーに送信するソースページのアドレスです。JSPページまたはフォームの場合、転送者は通常、閲覧履歴の前のページになります。 画像の転送者は、通常、画像が表示されるページです。 サーバーリソースへのアクセスが許可されている転送者は、許可されている転送者リストに追加することで識別できます。
+* **許可されている転送者の例外：許可さ** れている転送者リスト内の特定の転送者に対するアクセス範囲を制限することができます。この制限を適用するには、その転送者の個々のパスを「許可されている転送者の例外」リストに追加します。 許可されている転送者の例外リストーのパスから要求を受け取った場合、formsサーバー上のリソースは呼び出されません。 許可されている転送者の例外は、特定のアプリケーションに対して定義できます。また、すべてのアプリケーションに適用される例外のグローバルリストを使用することもできます。
+* **許可されているURI:** これは、転送者ヘッダーを確認せずに提供されるリソースのリストです。例えば、サーバーの状態に変更を加えることのない、リソースのヘルプページをこのリストに追加できます。許可されているURIリストー内のリソースは、転送者の種類に関係なく、転送者フィルターでブロックされることはありません。
+* **Null転送者：親Webページに関連付けられていない、または親Webページから派生していない転送者リクエストは、Nullサーバーからのリクエストと見なされます。** 例えば、新しいブラウザーウィンドウを開き、アドレスを入力してEnterキーを押すと、サーバーに送信される転送者はNULLになります。 WebサーバーにHTTPリクエストを送信するデスクトップアプリケーション（.NETまたはSWING）も、Null転送者をサーバーに送信します。
 
-### 転送者フィルタリング {#referer-filtering}
+### 転送者フィルタ{#referer-filtering}
 
 転送者のフィルタリング処理は、次のように説明できます。
 
 1. forms サーバーが、呼び出しに使用される HTTP メソッドを確認します。
 
    1. POSTの場合は、formsサーバーが転送者ヘッダーの確認を実行します。
-   1. If it is GET, the forms server bypasses the Referrer check, unless *CSRF_CHECK_GETS* is set to true, in which case it performs the Referrer header check. ** CSRF_CHECK_GETS は、アプリケーションの ** web.xml ファイル内に設定されます。
+   1. GETの場合、formsサーバーは転送者チェックをバイパスします。ただし、*CSRF_CHECK_GETS*&#x200B;がtrueに設定されている場合は除きます。この場合、転送者ヘッダーの確認が実行されます。 ** CSRF_CHECK_GETS は、アプリケーションの ** web.xml ファイル内に設定されます。
 
 1. formsサーバーは、要求されたURIが許可リストーに存在するかどうかを確認します。
 
@@ -701,15 +701,15 @@ JEE上のAEM Formsは、転送者フィルター機能を使用してCSRF攻撃�
    1. Null転送者が許可されている場合、要求は渡されます。
    1. Null転送者が許可されていない場合は、要求されたURIがNull転送者の例外かどうかを確認し、それに応じて要求を処理します。
 
-### 転送者フィルタの管理 {#managing-referer-filtering}
+### 転送者フィルタリングの管理{#managing-referer-filtering}
 
-JEE上のAEM Formsには、転送者リソースへのアクセスを許可する転送者を指定するサーバーフィルターが用意されています。 By default, the Referrer filter does not filter requests that use a safe HTTP method, e.g. GET, unless *CSRF_CHECK_GETS* is set to true. 「許可されている転送者」エントリのポート番号が0に設定されている場合、JEE上のAEM Formsは、ポート番号に関係なく、そのホストからの転送者を持つすべての要求を許可します。 ポート番号が指定されていない場合は、デフォルトのポート 80（HTTP）またはポート 443（HTTPS）からの要求のみが許可されます。「転送者のフィルタ」は、「許可されている転送者」リストのすべてのエントリが削除された場合は無効になります。
+JEE上のAEM Formsには、転送者リソースへのアクセスを許可する転送者を指定するサーバーフィルターが用意されています。 デフォルトでは、転送者フィルターは、安全なHTTPメソッド(GETなど)を使用する要求（*CSRF_CHECK_GETS*&#x200B;がtrueに設定されていない場合）をフィルタリングしません。 「許可されている転送者」エントリのポート番号が0に設定されている場合、JEE上のAEM Formsは、ポート番号に関係なく、そのホストからの転送者を持つすべての要求を許可します。 ポート番号が指定されていない場合は、デフォルトのポート 80（HTTP）またはポート 443（HTTPS）からの要求のみが許可されます。「転送者のフィルタ」は、「許可されている転送者」リストのすべてのエントリが削除された場合は無効になります。
 
-ドキュメントサービスを最初にインストールすると、許可されている転送者のリストは、ドキュメントサービスがインストールされているサーバーのアドレスで更新されます。 サーバーのエントリには、サーバー名、IPv4 アドレス、IPv6 アドレス（IPv6 が有効の場合）、ループバックアドレス、localhost エントリなどがあります。「許可されている転送者」リストに追加された名前は、ホストのオペレーティングシステムによって返されます。 例えば、IPアドレスが10.40.54.187のサーバーには、次のエントリが含まれます。 `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. ホストオペレーティングシステムによって返された修飾されていない名前（IPv4アドレス、IPv6アドレス、または修飾ドメイン名を持たない名前）の許可リストは更新されません。 ビジネス環境に合わせて「許可されている転送者」リストを変更します。 実稼働環境にformsサーバーをデプロイする際に、デフォルトの許可されている転送者リストを使用しないでください。 許可されている転送者、転送者の例外、またはURIを変更した後は、必ずサーバーを再起動し、変更を有効にしてください。
+ドキュメントサービスを最初にインストールすると、許可されている転送者のリストは、ドキュメントサービスがインストールされているサーバーのアドレスで更新されます。 サーバーのエントリには、サーバー名、IPv4 アドレス、IPv6 アドレス（IPv6 が有効の場合）、ループバックアドレス、localhost エントリなどがあります。「許可されている転送者」リストに追加された名前は、ホストのオペレーティングシステムによって返されます。 例えば、IPアドレスが10.40.54.187のサーバーには、次のエントリが含まれます。`https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. ホストオペレーティングシステムによって返された修飾されていない名前（IPv4アドレス、IPv6アドレス、または修飾ドメイン名を持たない名前）の許可リストは更新されません。 ビジネス環境に合わせて「許可されている転送者」リストを変更します。 実稼働環境にformsサーバーをデプロイする際に、デフォルトの許可されている転送者リストを使用しないでください。 許可されている転送者、転送者の例外、またはURIを変更した後は、必ずサーバーを再起動して、変更を有効にしてください。
 
 **許可されている転送者リストの管理**
 
-許可されている転送者リストは、管理コンソールのUser Managementインターフェイスから管理できます。 User Management インターフェイスを使用すると、リストを作成、編集または削除できます。Refer to the * [Preventing CSRF attacks](/help/forms/using/admin-help/preventing-csrf-attacks.md)* section of the *administration help* for more information on working with the Allowed Referrer list.
+許可されている転送者リストは、管理コンソールのUser Managementインターフェイスから管理できます。 User Management インターフェイスを使用すると、リストを作成、編集または削除できます。許可される転送者リストの使用方法の詳細については、*管理ヘルプ*&#x200B;の* [CSRF攻撃の防止](/help/forms/using/admin-help/preventing-csrf-attacks.md)*の節を参照してください。
 
 **許可されている転送者例外と許可されているURIリストの管理**
 
@@ -726,7 +726,7 @@ JEE上のAEM Formsは、許可されている転送者の例外リストと許�
 
 APIについて詳しくは、「* JEE上のAEM FormsAPIリファレンス*」を参照してください。
 
-Use the ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list for Allowed Referrer Exceptions at the global level i.e. to define exceptions that are applicable to all applications. This list contains only URIs with either an absolute path (e.g. `/index.html`) or a relative path (e.g. `/sample/`). You can also append a regular expression to the end of a relative URI, e.g. `/sample/(.)*`.
+許可されている転送者の例外に対しては、グローバルレベルで&#x200B;***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION***&#x200B;リストを使用します。つまり、すべてのアプリケーションに適用される例外を定義します。 このリストーには、絶対パス(`/index.html`)または相対パス(例：`/sample/`)。 相対URIの末尾に正規式を付加することもできます。例えば、`/sample/(.)*`.
 
 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** リスト ID は、`UMConstants` 名前空間の `com.adobe.idp.um.api` クラスで定数として定義されており、`adobe-usermanager-client.jar` にあります。この AEM Forms API を使用すると、リストを取得、作成、編集または削除できます。例えば、グローバル許可転送者の例外リストを作成するには、次を使用します。
 
@@ -740,21 +740,21 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 「転送者フィルター」でformsサーバーへのアクセスが完全にブロックされ、「許可されている転送者」リストを編集できないイベントでは、サーバー起動スクリプトを更新し、転送者のフィルタリングを無効にできます。
 
-Include the `-Dlc.um.csrffilter.disabled=true` JAVA argument in the startup script and restart the server. 「許可されている転送者」リストを適切に再設定したら、JAVA引数を削除してください。
+`-Dlc.um.csrffilter.disabled=true` JAVA引数を起動スクリプトに含めて、サーバーを再起動します。 「許可されている転送者」リストを適切に再設定したら、JAVA引数を削除してください。
 
 **カスタムWARファイルの転送者フィルタリング**
 
-管理者は、ビジネス要件に合わせて JEE 上の AEM Forms を操作するためのカスタム WAR ファイルを用意している場合があります。To enable Referrer Filtering for your custom WAR files, include ***adobe-usermanager-client.jar*** in the class path for the WAR and include a filter entry in the* web.xml* file with the following parameters:
+管理者は、ビジネス要件に合わせて JEE 上の AEM Forms を操作するためのカスタム WAR ファイルを用意している場合があります。カスタムWARファイルで転送者フィルタリングを有効にするには、WARのクラスパスに&#x200B;***adobe-usermanager-client.jar***&#x200B;を含め、次のパラメーターを指定して* web.xml*ファイルにフィルターエントリを含めます。
 
-**CSRF_CHECK_GETS** は、GET要求に対する転送者チェックを制御します。 このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、GET 要求をフィルタリングする場合にのみ指定します。
+**CSRF_CHECK_** GETSは、GET要求に対する転送者チェックを制御します。このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、GET 要求をフィルタリングする場合にのみ指定します。
 
-**CSRF_ALLOWED_REFERER_EXCEPTIONS** は、許可されている転送者の例外リストのIDです。 転送者フィルターを使用すると、リストIDで識別されるリスト内の転送者からの要求や、formsサーバー上のリソースを呼び出すことができません。
+**CSRF_ALLOWED_REFERER_** EXCEPTIONSは、許可されている転送者の例外リストのIDです。転送者フィルターを使用すると、リストIDで識別されるリスト内の転送者からの要求や、formsサーバー上のリソースを呼び出すことができません。
 
 **CSRF_ALLOWED_URIS_LIST_NAME** は、許可されている URI リストの ID です。転送者フィルターは、要求の転送者ヘッダーの値に関係なく、リストIDで識別されるリスト内のリソースに対する要求をブロックしません。
 
-**CSRF_ALLOW_NULL_REFERERは、転送者がnullの場合または存在しない場合の転送者フィルターの動作を制御します。** このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、Null転送者を許可する場合にのみ指定します。 null転送者を許可すると、一部の種類のクロスサイト要求偽造攻撃が可能になる場合があります。
+**CSRF_ALLOW_NULL_** REFERERは、転送者がnullの場合または存在しない場合の転送者フィルターの動作を制御します。このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、Null転送者を許可する場合にのみ指定します。 null転送者を許可すると、一部の種類のクロスサイト要求偽造攻撃が可能になる場合があります。
 
-**CSRF_NULL_REFERER_EXCEPTIONS** は、転送者がnullの場合に転送者チェックが実行されないURIのリストです。 このパラメーターは、*CSRF_ALLOW_NULL_REFERER* が false に設定されている場合にのみ有効です。リスト内で複数の URI を指定するときはコンマで区切ります。
+**CSRF_NULL_REFERER_** EXCEPTIONSは、転送者がnullの場合に転送者チェックが実行されないURIのリストです。このパラメーターは、*CSRF_ALLOW_NULL_REFERER* が false に設定されている場合にのみ有効です。リスト内で複数の URI を指定するときはコンマで区切ります。
 
 *サンプル* WAR ファイルに対する ***web.xml*** ファイルのフィルターエントリの例を次に示します。
 
@@ -804,7 +804,7 @@ Include the `-Dlc.um.csrffilter.disabled=true` JAVA argument in the startup scri
 * クライアントがブラウザーで動作できる場合は、そのデプロイメントモデルを試してみます。
 * 最後の手段として、許可されている URI リストにリソースを追加できます。ただし、これは推奨設定ではありません。
 
-## ネットワーク設定の保護 {#secure-network-configuration}
+## ネットワーク設定の保護  {#secure-network-configuration}
 
 ここでは、JEE 上の AEM Forms が必要とするプロトコルとポートについて説明し、保護されたネットワーク設定で JEE 上の AEM Forms をデプロイするための推奨事項を示します。
 
@@ -886,7 +886,7 @@ Include the `-Dlc.um.csrffilter.disabled=true` JAVA argument in the startup scri
  </tbody> 
 </table>
 
-### アプリケーションサーバーのポート {#ports-for-application-servers}
+### アプリケーションサーバーのポート  {#ports-for-application-servers}
 
 ここでは、サポートしている各種のアプリケーションサーバーのデフォルトポート（および代替設定の範囲）について説明します。これらのポートについては、JEE 上の AEM Forms を実行しているアプリケーションサーバーに接続するクライアントに対して許可するネットワーク機能に応じて、内側のファイアウォール上で有効と無効を切り替える必要があります。
 
@@ -952,11 +952,11 @@ JEE上のAEM Formsが必要とするWebSphereポートについて詳しくは�
 
 ### SSL の設定 {#configuring-ssl}
 
-Referring to the physical architecture that is described in the section [AEM Forms on JEE physical architecture](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture), you should configure SSL for all of the connections that you plan to use. 特に SOAP 接続は、ネットワーク上にユーザー資格情報が公開されないように、すべて SSL 経由で行う必要があります。
+[JEE物理アーキテクチャ](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)上のAEM Formsで説明されている物理アーキテクチャを参照する場合は、使用するすべての接続に対してSSLを設定する必要があります。 特に SOAP 接続は、ネットワーク上にユーザー資格情報が公開されないように、すべて SSL 経由で行う必要があります。
 
 JBoss、WebLogic および WebSphere 上で SSL を設定する手順については、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_64)の「SSL の設定」を参照してください。
 
-AEM Formsサーバー用に設定されたJVM (Java Virtual Machine)に証明書を読み込む方法について詳しくは、 [AEM Formsワークベンチヘルプの「相互認証」の節を参照してください](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)。
+AEM Formsサーバー用に構成されたJVM (Java Virtual Machine)に証明書を読み込む方法については、[AEM Formsワークベンチヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)の「相互認証」の節を参照してください。
 
 ### SSL リダイレクトの設定 {#configuring-ssl-redirect}
 
@@ -972,7 +972,7 @@ WebSphere または WebLogic で SSL リダイレクトを設定するには、�
 
    &lt;subsystem xmlns=&quot;urn:jboss:domain:web:1.1&quot; native=&quot;false&quot; default-virtual-server=&quot;default-host&quot;>要素の後に、次の詳細を追加します。
 
-   &lt;connector name=&quot;https&quot; protocol=&quot;HTTP/1.1&quot; scheme=&quot;https&quot; socket-binding=&quot;https&quot; enabled=&quot;true&quot; secure=&quot;true&quot;/>
+   &lt;connector name=&quot;https&quot; protocol=&quot;HTTP/1.1&quot; scheme=&quot;https&quot; socket-binding=&quot;https&quot; enabled=&quot;true&quot; secure=&quot;true&quot; />
 
 1. httpsコ追加ネクタ要素の次のコード：
 
@@ -988,11 +988,11 @@ WebSphere または WebLogic で SSL リダイレクトを設定するには、�
 
 ここでは、JEE 上の AEM Forms の実行に使用する場合の Windows 固有のセキュリティ推奨事項について説明します。
 
-### JBoss サービスアカウント {#jboss-service-accounts}
+### JBoss サービスアカウント  {#jboss-service-accounts}
 
 JEE 上の AEM Forms 自動インストールは、デフォルトで、ローカルシステムアカウントを使用してサービスアカウントを設定します。組み込みのローカルシステムユーザーアカウントは、高いレベルのアクセス権限を付与されており、Administrators グループに属しています。ワーカープロセス ID をローカルシステムユーザーアカウントで実行した場合、ワーカープロセスはシステム全体に対してフルアクセス権限を持ちます。
 
-#### 管理者以外のアカウントでのアプリケーションサーバーの実行 {#run-the-application-server-using-a-non-administrative-account}
+#### 管理者以外のアカウントでのアプリケーションサーバーの実行  {#run-the-application-server-using-a-non-administrative-account}
 
 1. Microsoft 管理コンソール（MMC）で、forms サーバーサービスへのログインに使用するローカルユーザーを作成します。
 
@@ -1009,8 +1009,8 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
    * サービスとしてログオン（通常は既に設定済み）
 
 1. 次のディレクトリの新しいユーザーアカウントに変更権限を与えます。
-   * **グローバルドキュメントストレージ(GDS)ディレクトリ**:GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。 If the location setting remains empty during installation, the location defaults to a directory under the application server installation at `[JBoss root]/server/[type]/svcnative/DocumentStorage`
-   * **CRX-Repositoryディレクトリ**:デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository`
+   * **グローバルドキュメントストレージ(GDS)ディレクトリ**:GDSディレクトリの場所は、AEM Formsのインストールプロセス中に手動で設定します。インストール時に場所の設定が空のままの場合、`[JBoss root]/server/[type]/svcnative/DocumentStorage`にあるアプリケーションサーバーのインストール下のディレクトリがデフォルトの場所になります。
+   * **CRX-Repositoryディレクトリ**:デフォルトの場所は  `[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms一時ディレクトリ**:
       * （Windows）環境変数で設定されている TMP または TEMP パス
       * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
@@ -1031,7 +1031,7 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
 
 1. アプリケーションサーバーサービスを起動します。
 
-### ファイルシステムのセキュリティ {#file-system-security}
+### ファイルシステムのセキュリティ  {#file-system-security}
 
 JEE 上の AEM Forms は、次の方法でファイルシステムを利用します。
 
@@ -1041,7 +1041,7 @@ JEE 上の AEM Forms は、次の方法でファイルシステムを利用し�
 
 forms サーバーサービスのドキュメントを送受信する方法として監視フォルダーを使用する場合、ファイルシステムのセキュリティを確保するために一層の予防策を講じる必要があります。ユーザーが監視フォルダーにコンテンツをドロップした場合、コンテンツは監視フォルダーを通じて公開されます。この場合、サービスは実際のエンドユーザーを認証していません。代わりに、フォルダーレベルに設定されている ACL と共有レベルセキュリティに応じて、サービスを呼び出して実行することのできるユーザーを決定しています。
 
-## JBoss 固有のセキュリティに関する推奨事項 {#jboss-specific-security-recommendations}
+## JBoss 固有のセキュリティに関する推奨事項  {#jboss-specific-security-recommendations}
 
 ここでは、JEE上のAEM Formsを実行する際に使用するJBoss 7.0.6に固有のアプリケーションサーバー設定の推奨事項について説明します。
 
@@ -1049,7 +1049,7 @@ forms サーバーサービスのドキュメントを送受信する方法と�
 
 JBoss 管理コンソールと JMX コンソールへのアクセスは、自動インストールオプションを使用して JBoss に JEE 上の AEM Forms をインストールしたときに設定されます。独自の JBoss Application Server を使用している場合は、JBoss 管理コンソールおよび JMX 監視コンソールへのアクセスが保護されていることを確認してください。JMX 監視コンソールへのアクセスは、jmx-invoker-service.xml という JBoss 設定ファイルで設定されています。
 
-### ディレクトリ参照の無効化 {#disable-directory-browsing}
+### ディレクトリ参照の無効化  {#disable-directory-browsing}
 
 管理コンソールにログインした後、URLを変更して、コンソールのディレクトリ一覧を参照できます。 例えば、URL を次のいずれかの URL に変更すると、ディレクトリ一覧が表示される場合があります。
 
@@ -1062,7 +1062,7 @@ https://<servername>:8080/um/
 
 ここでは、JEE 上の AEM Forms の実行時に WebLogic 9.1 を保護するためのアプリケーションサーバー設定の推奨事項について説明します。
 
-### ディレクトリ参照の無効化 {#disable_directory_browsing-1}
+### ディレクトリ参照の無効化  {#disable_directory_browsing-1}
 
 weblogic.xml ファイルの index-directories プロパティを `false` に設定します。次に例を示します。
 
@@ -1077,18 +1077,18 @@ weblogic.xml ファイルの index-directories プロパティを `false` に設
 
 デフォルトでは、WebLogic はデフォルト SSL リスンポート 7002 を有効にしません。SSL を設定する前に、WebLogic Server 管理コンソールでこのポートを有効にしてください。
 
-## WebSphere 固有のセキュリティに関する推奨事項 {#websphere-specific-security-recommendations}
+## WebSphere 固有のセキュリティに関する推奨事項  {#websphere-specific-security-recommendations}
 
 ここでは、JEE 上の AEM Forms の実行時に WebSphere を保護するためのアプリケーションサーバー設定の推奨事項について説明します。
 
-### ディレクトリ参照の無効化 {#disable_directory_browsing-2}
+### ディレクトリ参照の無効化  {#disable_directory_browsing-2}
 
-Set the `directoryBrowsingEnabled` property in the ibm-web-ext.xml file to `false`.
+ibm-web-ext.xmlファイルの`directoryBrowsingEnabled`プロパティを`false`に設定します。
 
 ### WebSphere 管理セキュリティの有効化 {#enable-websphere-administrative-security}
 
 1. WebSphere Administrative Console にログインします。
-1. ナビゲーションツリーで、 **Security** / **Global Securityに移動します。**
+1. ナビゲーションツリーで、**セキュリティ** > **グローバルセキュリティ**&#x200B;に移動します。
 1. 「**Enable administrative security**」を選択します。
 1. 「**Enable application security**」および「**Use Java 2 security**」の選択を解除します。
 1. 「**OK**」または「**Apply**」をクリックします。
