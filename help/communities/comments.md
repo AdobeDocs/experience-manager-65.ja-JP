@@ -27,8 +27,8 @@ ht-degree: 32%
 
 このドキュメントでは、次の内容を説明します。
 
-* ページ `Comments` への追加を参照してください。
-* Configuration settings for the `Comments` component.
+* `Comments`をページに追加しています。
+* `Comments`コンポーネントの構成設定です。
 
 >[!NOTE]
 >
@@ -36,25 +36,25 @@ ht-degree: 32%
 
 ### コメントをページに追加 {#adding-comments-to-a-page}
 
-To add a `Comments` component to a page in author mode, use the component browser to locate
+作成者モードで`Comments`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Comments`
 
 コンポーネントを探し、ページ上の適切な位置（ユーザーにコメントしてもらう機能の近くなど）や、単にページの下部にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-comments.md#essentials-for-client-side) 、このようにコンポー `Comments` ネントが表示されます。
+[必要なクライアント側ライブラリ](/help/communities/essentials-comments.md#essentials-for-client-side)が含まれる場合、`Comments`コンポーネントは次のように表示されます。
 
 ![comments-component](assets/comments-component.png)
 
 >[!NOTE]
 >
->Only one `Comments` component may exist on a page. コミュニティの機能の中には、既にブログ、カレンダー、フォーラム、QnA、レビューなどのコメントが含まれているものもあります。
+>1つのページに存在できる`Comments`コンポーネントは1つだけです。 コミュニティの機能の中には、既にブログ、カレンダー、フォーラム、QnA、レビューなどのコメントが含まれているものもあります。
 
 ### コメントの設定 {#configuring-comments}
 
-Select the placed `Comments` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Comments`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![アイコンを設定](assets/configure.png)
 
@@ -106,7 +106,7 @@ Select the placed `Comments` component to access and select the `Configure` icon
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
-Under the **User Moderation** tab, specify how the posted comments are managed. For more information, see [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+「**ユーザーモデレート**」タブで、投稿されたコメントの管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
 * **事前モデレート**
 
@@ -142,45 +142,45 @@ Under the **User Moderation** tab, specify how the posted comments are managed. 
 
 * **フラグ付けの制限**
 
-   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 This number must be greater than or equal to the **Moderation Threshold**. 初期設定は 5 です。
+   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 この数値は、**モデレートしきい値**&#x200B;以上にする必要があります。 初期設定は 5 です。
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **Sort Settings** tab, specify how the posted comments are sorted when displayed.
+「**並べ替え設定**」タブで、投稿されたコメントの表示順を指定します。
 
 * **並べ替えフィールド**
 
-   プルダウンして、またはのいずれかを選択 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`しま `Most Liked`す。
+   プルダウンして`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`または`Most Liked`のいずれかを選択します。
 
 * **並べ替え順序**
 
-   プルダウンして、またはのいずれかを選択 `Ascending` しま `Descending`す。
+   プルダウンして`Ascending`または`Descending`のいずれかを選択します。
 
 ### カスタムコメントタイプへの変更 {#changing-to-a-custom-comment-type}
 
 コメントリソースタイプを変更すると、コメントシステムは、デフォルトを使用してコメントのインスタンスを生成しなくなり、開発者によってカスタマイズ（拡張）されています。
 
-Once the custom resource types are known, enter [Design Mode](/help/sites-authoring/default-components-designmode.md) and double click the placed `Comments` component to open a dialog with an extra tab.
+カスタムリソースタイプがわかったら、[デザインモード](/help/sites-authoring/default-components-designmode.md)に入り、重複が配置した`Comments`コンポーネントをクリックして、追加のタブを含むダイアログを開きます。
 
-Under the **Resource Types** tab, specify the custom resourceType for new instances of the `Comments or Voting` components:
+「**リソースタイプ**」タブで、`Comments or Voting`コンポーネントの新しいインスタンスのカスタムresourceTypeを指定します。
 
 ![リソースタイプ](assets/resource-type.png)
 
 * **コメントリソースタイプ**
 
-   /apps内の拡張 `comment` コンポーネント（1つのコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
+   /apps内の拡張`comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
 
    このリソースは、訪問者がコメントを投稿したときに作成されたUGCのresourceTypeを識別します。
 
 * **投票リソースタイプ**
 
-   /apps内の拡張 `voting` コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
+   /apps内の拡張`voting`コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
 
    このリソースは、訪問者が投票を行ったときに作成されたUGCのリソースタイプを識別します。
 
 * **コメントシステムリソースタイプ**
 
-   /apps内の拡張 `comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 Leave blank unless the page template [dynamically includes](/help/communities/scf.md#add-or-include-a-communities-component) the Comment System in the underlying script instead of being added to the page as a resource (comments node). Learn more by reading about the [{{include}} helper](/help/communities/handlebars-helpers.md#include).
+   /apps内の拡張`comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート[で、コメントシステムが基になるスクリプトに](/help/communities/scf.md#add-or-include-a-communities-component)動的に含まれている場合を除き、ページにリソース（コメントノード）として追加されるのではなく、空白のままにします。 詳しくは、[{{include}}ヘルパー](/help/communities/handlebars-helpers.md#include)を参照してください。
 
 ### サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -188,7 +188,7 @@ Under the **Resource Types** tab, specify the custom resourceType for new instan
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合は、誰がコメントを作成したかにかかわらず、コンポーネントの設定によって許可されているモデレートタスクを実行できます。
 
-#### メンバー {#members}
+#### メンバー  {#members}
 
 サイト訪問者がサインインすると、設定に応じて次のことができます。
 
@@ -203,8 +203,8 @@ Under the **Resource Types** tab, specify the custom resourceType for new instan
 
 ### 追加情報 {#additional-information}
 
-More information may be found on the [Comments Essentials](/help/communities/essentials-comments.md) page for developers.
+詳しくは、開発者向けの[コメントの基本](/help/communities/essentials-comments.md)ページを参照してください。
 
-For moderation of posted comments, see [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+投稿されたコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
 投稿されたコメントの翻訳については、[ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
