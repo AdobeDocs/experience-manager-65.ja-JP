@@ -18,9 +18,9 @@ ht-degree: 34%
 ---
 
 
-# コメントコンポーネントの拡張  {#extend-comments-component}
+# コメントコンポーネントの拡張   {#extend-comments-component}
 
-The intention of [extending](client-customize.md#extensions) a default component is to alter the appearance or behavior of a component for specific uses.
+[デフォルトのコンポーネント](client-customize.md#extensions)を拡張する目的は、特定の用途に合わせてコンポーネントの外観や動作を変更することです。
 
 コンポーネントへのパスは一意で、デフォルトコンポーネントをスーパーリソースタイプとして参照します。 コンポーネントオーバーレイのグローバルスコープと比較して、スコープが制限されるので、リスクは少なくなります。
 
@@ -34,7 +34,7 @@ The intention of [extending](client-customize.md#extensions) a default component
 
 この解決策を実装するには、既存のコンポーネントを拡張（上書き）する新しいコンポーネントを作成し、Handlebars スクリプトを変更します。新しいコメントを使用するサイトの領域では、拡張されたコメントを使用できますが、デフォルトの外観を使用するサイトは影響を受けません。
 
-コメントコンポーネントは実際には、コメントシステムを構成する 2 つのコンポーネントのうちの 1 つです。Thus, there are two components to extend: *comments* and *comment*. The script to edit is in the *comment* component&#39;s `header.hbs` file, while the parent *comments* component (the comment system) is what an author actually adds to the page.
+コメントコンポーネントは実際には、コメントシステムを構成する 2 つのコンポーネントのうちの 1 つです。したがって、次の2つのコンポーネントを拡張できます。*コメント*&#x200B;と&#x200B;*コメント*。 編集するスクリプトは、*comment*&#x200B;コンポーネントの`header.hbs`ファイル内にありますが、親の&#x200B;*comments*&#x200B;コンポーネント（コメントシステム）は作成者が実際にページに追加したものです。
 
 コメントを拡張するには、次の手順を実行する必要があります。
 
