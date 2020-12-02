@@ -47,7 +47,7 @@ ht-degree: 89%
 * Content Server で使用するデータベースタイプ用の NetWorker Module
 * NetWorker Module for Documentum
 
-## EMC Document Content Server のバックアップおよび復元の準備 {#preparing-the-emc-document-content-server-for-backup-and-recovery}
+## EMC Document Content Server のバックアップおよび復元の準備  {#preparing-the-emc-document-content-server-for-backup-and-recovery}
 
 ここでは、EMC NetWorker ソフトウェアを Content Server にインストールし設定する方法について説明します。
 
@@ -188,22 +188,22 @@ ht-degree: 89%
     NMDDE_DM_PASSWD=XAtup9pl
    ```
 
-   Keep the configuration file password field `NMDDE_DM_PASSWD` blank. パスワードは次の手順で設定します。
+   構成ファイルのパスワードフィールド`NMDDE_DM_PASSWD`は空白にしておきます。 パスワードは次の手順で設定します。
 
 1. 設定ファイルのパスワードを、次のように設定します。
 
-   * Open a command prompt, and change to `[NetWorker_root]\Legato\nsr\bin`.
-   * Run the following command: `-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
+   * コマンドプロンプトを開き、`[NetWorker_root]\Legato\nsr\bin`に変更します。
+   * 次のコマンドを実行します。`-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
 
 1. データベースのバックアップに使用する実行可能なバッチファイル（.bat）を作成します（NetWorker のマニュアルを参照）。インストールされている状態に応じて、バッチファイルの詳細を設定します。
 
    * 完全なデータベースバックアップ（nsrnmddbf.bat）：
 
-      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]` `-P`*[password ]*`-l full`*&lt;database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;networker_server_name>* `-U``[username]` `-P`*[password ]*`-l full`*&lt;database_name>*
 
    * 増分データベースバックアップ（nsrnmddbi.bat）：
 
-      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]` `-P``[password]``-l 1 -R`*&lt;database_name>*
+      `[NetWorker_database_module_root]` `-s`*&lt;networker_server_name>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;database_name>*
 
    * データベースログバックアップ（nsrnmddbl.bat）： 
 
@@ -211,7 +211,7 @@ ht-degree: 89%
 
       ここで、
 
-      `[NetWorker_database_module_root]` は、NetWorkerモジュールのインストールディレクトリです。 例えば、NetWorker Module for SQL Server のデフォルトのインストールディレクトリは、C:¥Program Files¥Legato¥nsr¥bin¥nsrsqlsv です。
+      `[NetWorker_database_module_root]` は、NetWorkerモジュールのインストールディレクトリです。例えば、NetWorker Module for SQL Server のデフォルトのインストールディレクトリは、C:¥Program Files¥Legato¥nsr¥bin¥nsrsqlsv です。
 
       `NetWorker_Server_Name` は、NetWorkerがインストールされているサーバです。
 
@@ -235,7 +235,7 @@ ht-degree: 89%
 
 バックアップファイルが保存されるデバイスが追加されます。複数のデバイスを様々な形式で追加することができます。
 
-## EMC Documentum Content Server のバックアップ {#back-up-the-emc-documentum-content-server}
+## EMC Documentum Content Server のバックアップ  {#back-up-the-emc-documentum-content-server}
 
 AEM forms データの完全バックアップを完了してから、以下のタスクを実行します（[AEM forms データのバックアップ](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data)を参照してください。）
 
@@ -243,14 +243,14 @@ AEM forms データの完全バックアップを完了してから、以下の�
 >
 >コマンドスクリプトには、[EMC Document Content Server のバックアップおよび復元の準備](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery)で作成した nsrnmd_win.cfg ファイルへのフルパスが必要です。
 
-1. Open a command prompt, and change to `[NetWorker_root]\Legato\nsr\bin`.
+1. コマンドプロンプトを開き、`[NetWorker_root]\Legato\nsr\bin`に変更します。
 1. 次のコマンドを実行します。
 
    ```shell
     - nsrnmdsv.exe -f <path_to_cfg_file>
    ```
 
-## EMC Documentum Content Server の復元 {#restore-the-emc-documentum-content-server}
+## EMC Documentum Content Server の復元  {#restore-the-emc-documentum-content-server}
 
 以下のタスクを実行してから、AEM forms データを復元します。（[AEM forms データの回復](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data)を参照してください。）
 
@@ -263,8 +263,8 @@ AEM forms データの完全バックアップを完了してから、以下の�
 1. Restore ツールをクリックし、「Normal」をクリックします。
 1. 画面の左側で、Docbase のデータベースを選択し、ツールバーの「Start」ボタンをクリックします。
 1. データベースが復元されたら、Docbase サービスを再起動します。
-1. Open a command prompt and change to *[NetWorker_root]*\Legato\nsr\bin
-1. 次のコマンドを実行します。
+1. コマンドプロンプトを開き、*[NetWorker_root]*\Legato\nsr\binに移動します。
+1. 次の コマンドを実行します。
 
    ```shell
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
