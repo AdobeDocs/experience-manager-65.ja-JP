@@ -55,7 +55,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 | 2 | 警告 | アクションは成功しましたが、問題が発生しました。CRX が正常に機能するかどうかは不明です。 |
 | 3 | 情報 | アクションが成功しました。 |
 
-## トラブルシューティングに使用する verbose オプション {#verbose-option-used-for-troubleshooting}
+## トラブルシューティングに使用する verbose オプション  {#verbose-option-used-for-troubleshooting}
 
 CRXを開始する際、次のようにコマンドラインに —v（冗長）オプションを追加できます。
 
