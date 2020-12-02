@@ -40,13 +40,13 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->WebサービスAPIを使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを実行するために必要なメソッド呼び出しである `taskList` メソッドを呼び出すことができないためです。
+>WebサービスAPIを使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを実行するために必要なメソッド呼び出しである`taskList`メソッドを呼び出すことができないからです。
 
 >[!NOTE]
 >
->「AEM Formsとのプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクの割り当て {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したタスク割り当て{#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
 次のJavaコードの例は、Tony Blueという名前のユーザーにタスクを割り当てています。
 
@@ -179,7 +179,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクのロック {#quick-start-soap-mode-locking-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-locking-tasks-using-the-java-api}を使用したタスクのロック
 
 次のJavaコードの例では、タスク識別子の値2に対応するタスクをロックしています。
 
@@ -268,9 +268,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用してユーザーに割り当てられたタスクを取得する {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}を使用して、ユーザーに割り当てられたタスクを取得しています
 
-以下のJavaコードの例を使用すると、 *tony blueという名前のタスクに割り当てられているすべてのユーザーを取得できます*。 このユーザーは、接続プロパティで指定されています。 識別子の値や説明など、返されるタスクに関する情報が表示されます。
+以下のJavaコードの例を使用すると、*tony blue*&#x200B;という名前のタスクに割り当てられているすべてのユーザーを取得できます。 このユーザーは、接続プロパティで指定されています。 識別子の値や説明など、返されるタスクに関する情報が表示されます。
 
 ```java
  /*
@@ -394,9 +394,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}を使用してタスクからフォームデータを取得する
 
-以下のJavaコードの例を使用すると、識別子の値が304のタスクからフォームデータを取得できます。 フォームデータは、C:\AdobeにあるFormData.xml *というXMLファイルに書き込まれます* 。
+以下のJavaコードの例を使用すると、識別子の値が304のタスクからフォームデータを取得できます。 フォームデータは、C:\Adobeにある&#x200B;*FormData.xml*&#x200B;というXMLファイルに書き込まれます。
 
 ```java
  /*
@@ -500,9 +500,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したフォームデータの変更 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}を使用したフォームデータの変更
 
-次のJavaコードの例では、FormData.xml *ファイル内のデータを使用してフォームを更新します* 。
+次のJavaコードの例では、*FormData.xml*&#x200B;ファイル内のデータを使用してフォームを更新します。
 
 ```java
  /*
@@ -610,7 +610,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスクからの添付ファイルの取得 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}を使用してタスクから添付ファイルを取得する
 
 以下のJavaコードの例を使用して、添付ファイルを取得します。 各添付ファイルはTXTファイルとして保存されます。
 
@@ -714,9 +714,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したタスク情報の取得 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}を使用してタスク情報を取得する
 
-以下のJavaコードの例を使用すると、MortgageLoan - Prebuildという名前のプロセスに基づくすべてのタスクを取得で *きます*。 返された各タスクのステータスは、完了したタスクであることを確認するためにチェックされます。 タスクを完了したタスクの名前やユーザが完了した日付などの情報を取得し、表示する。
+以下のJavaコードの例を使用すると、*MortgageLoan - Prebuild*&#x200B;という名前のプロセスに基づくすべてのタスクを取得できます。 返された各タスクのステータスは、完了したタスクであることを確認するためにチェックされます。 タスクを完了したタスクの名前やユーザが完了した日付などの情報を取得し、表示する。
 
 ```java
  /*
