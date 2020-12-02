@@ -18,7 +18,7 @@ ht-degree: 49%
 ---
 
 
-# おすすめコンテンツ機能 {#featured-content-feature}
+# おすすめコンテンツ機能  {#featured-content-feature}
 
 ## 概要 {#introduction}
 
@@ -37,25 +37,25 @@ ht-degree: 49%
 ドキュメントのこのセクションでは、以下の内容について説明します。：
 
 * コミュニティサイトへの重点コンテンツの追加
-* Configuration settings for the `Featured Content` component.
+* `Featured Content`コンポーネントの構成設定です。
 
 ## おすすめコンテンツをページに追加 {#adding-featured-content-to-a-page}
 
-To add a `Featured Content` component to a page in author mode, use the component browser to locate
+作成者モードで`Featured Content`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Featured Content`
 
 コンポーネントを探し、ページ上のおすすめコンテンツを表示する位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](essentials-featured.md#essentials-for-client-side) 、次のようにコンポー `Featured Content` ネントが表示されます。
+[必要なクライアント側ライブラリ](essentials-featured.md#essentials-for-client-side)が含まれる場合、`Featured Content`コンポーネントは次のように表示されます。
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
 ## おすすめコンテンツの設定 {#configuring-featured-content}
 
-Select the placed `Featured Content` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Featured Content`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
@@ -67,11 +67,11 @@ Select the placed `Featured Content` component to access and select the `Configu
 
 * **[!UICONTROL 表示名]**
 
-   重点コンテンツのリストのタイトル。 For example `Featured Questions` or `Featured Ideas`. 空白のままの `Featured Content` 場合、初期設定です。
+   重点コンテンツのリストのタイトル。 （例：`Featured Questions`、`Featured Ideas`）。 空白のままの場合の初期設定は`Featured Content`です。
 
 * **[!UICONTROL おすすめコンテンツの場所]**
 
-   *（必須）* 特集対象のコンテンツを含むページを表示します（そのページのコンポーネントは、「重点コンテンツを許可」に設定する必要があります）。 例： `/content/sites/engage/en/forum`
+   *（必須）* 特集コンテンツを含むページを参照します（そのページのコンポーネントは、「特集コンテンツを許可」に設定する必要があります）。例： `/content/sites/engage/en/forum`
 
 * **[!UICONTROL 最大表示数]**
 
@@ -81,13 +81,13 @@ Select the placed `Featured Content` component to access and select the `Configu
 
 コンテンツにおすすめコンテンツのフラグを設定する機能には、モデレーター権限が必要です。
 
-When a moderator views posted content, they have access to the in-context moderation flags, which includes the new `Feature` flag.
+モデレーター表示がコンテンツを投稿すると、新しい`Feature`フラグを含むコンテキスト内モデレートフラグにアクセスできます。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-Once flagged as feature, the modeartion flag becomes `Unfeature`.
+機能としてフラグ付けされると、モデレーションフラグは`Unfeature`になります。
 
-The page containing the `Featured Content` component, will now include this post.
+`Featured Content`コンポーネントを含むページに、この投稿が含まれるようになります。
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
