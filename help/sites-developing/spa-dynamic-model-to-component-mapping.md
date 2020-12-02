@@ -1,8 +1,8 @@
 ---
-title: SPAの動的モデルとコンポーネントのマッピング
-seo-title: SPAの動的モデルとコンポーネントのマッピング
-description: この記事では、AEM用のJavaScript SPA SDKで動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
-seo-description: この記事では、AEM用のJavaScript SPA SDKで動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
+title: SPA の動的モデルとコンポーネントのマッピング
+seo-title: SPA の動的モデルとコンポーネントのマッピング
+description: この記事では、AEM 用 JavaScript SPA SDK で動的モデルとコンポーネントとのマッピングがどのようにおこなわれるかを説明します。
+seo-description: この記事では、AEM 用 JavaScript SPA SDK で動的モデルとコンポーネントとのマッピングがどのようにおこなわれるかを説明します。
 uuid: 337b8d90-efd7-442e-9fac-66c33cc26212
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,14 +13,14 @@ translation-type: tm+mt
 source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
 source-wordcount: '370'
-ht-degree: 0%
+ht-degree: 85%
 
 ---
 
 
-# SPAの動的モデルとコンポーネントのマッピング{#dynamic-model-to-component-mapping-for-spas}
+# SPA の動的モデルとコンポーネントのマッピング{#dynamic-model-to-component-mapping-for-spas}
 
-このドキュメントでは、JavaScript SPA SDK for AEMで動的モデルとコンポーネントのマッピングがどのように行われるかを説明します。
+このドキュメントでは、AEM 用 JavaScript SPA SDK で動的モデルとコンポーネントのマッピングがどのようにおこなわれるかを説明します。
 
 >[!NOTE]
 >
@@ -28,32 +28,32 @@ ht-degree: 0%
 
 ## ComponentMapping モジュール {#componentmapping-module}
 
-The `ComponentMapping` module is provided as an NPM package to the front-end project. フロントエンドコンポーネントが格納され、シングルページアプリケーションがフロントエンドコンポーネントをAEMリソースタイプにマップする方法を提供します。 これにより、アプリケーションのJSONモデルを解析する際に、コンポーネントの動的な解決が可能になります。
+`ComponentMapping` モジュールは、プロントエンドプロジェクトに NPM パッケージとして提供されます。フロントエンドコンポーネントを格納し、単一ページアプリケーションがフロントエンドコンポーネントを AEM リソースタイプにマップする方法を提供します。これにより、アプリケーションの JSON モデルを構文解析する際に、コンポーネントの動的な解決が可能になります。
 
-モデル内の各項目には、AEMリソースタイプを表示する `:type` フィールドが含まれます。 マウントすると、フロントエンドコンポーネントは、基になるライブラリから受け取ったモデルのフラグメントを使用して自分自身をレンダリングできます。
+モデル内の各項目には、AEM リソースタイプを表示する `:type` フィールドが含まれます。フロントエンドコンポーネントは、マウントされると、基になるライブラリから受け取ったモデルのフラグメントを使用して自分自身をレンダリングできます。
 
-モデル解析とモデルへのフロントエンドコンポーネントアクセスの詳細については、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) ドキュメントを参照してください。
+モデル解析とモデルへのフロントエンドコンポーネントアクセスの詳細については、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)ドキュメントを参照してください。
 
-npmパッケージも参照してください。 [https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+npmパッケージも参照してください。[https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
-## モデル駆動型シングルページアプリ {#model-driven-single-page-application}
+## モデル駆動型単一ページアプリケーション{#model-driven-single-page-application}
 
-AEM用のJavaScript SPA SDKを利用する単一ページアプリは、モデル主導です。
+AEM 用 JavaScript SPA SDK を利用する単一ページアプリケーションは、モデル主導です。
 
-1. フロントエンドコンポーネントは、それ自体を [コンポーネントマッピングストアに登録します](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module)。
-1. 次に、 [コンテナ](/help/sites-developing/spa-blueprint.md#container)、 [モデルプロバイダーがモデルを指定すると、そのモデルのコンテンツ](/help/sites-developing/spa-blueprint.md#the-model-provider)( `:items`)を繰り返し処理します。
+1. フロントエンドコンポーネントは、自らを[コンポーネントマッピングストア](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module)に登録します。
+1. 次に、[コンテナ](/help/sites-developing/spa-blueprint.md#container)は、 [モデルプロバイダー](/help/sites-developing/spa-blueprint.md#the-model-provider)がモデルを提供した後、そのモデルコンテンツ（`:items`）を反復します。
 
-1. ページの場合、その子( `:children`)は、最初に [コンポーネントマッピングからコンポーネントクラスを取得し、次にインスタンス化します](/help/sites-developing/spa-blueprint.md#componentmapping) 。
+1. ページの場合、その子（`:children`）は、最初に [](/help/sites-developing/spa-blueprint.md#componentmapping) コンポーネントマッピングからコンポーネントクラスを取得し、次にインスタンス化します。
 
 ## アプリの初期化 {#app-initialization}
 
-各コンポーネントは、の機能で拡張され [`ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider)ます。 初期化は、次の一般的な形式をとります。
+各コンポーネントは、[ `ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider)の機能で拡張されます。 初期化は、次の一般的な形式をとります。
 
-1. 各モデルプロバイダは自身を初期化し、内部コンポーネントに対応するモデルの部分に対して行われた変更をリッスンします。
-1. 初期化フローで示されるとおりに [ 初期化する `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 必要があります [](/help/sites-developing/spa-blueprint.md)。
+1. 各モデルプロバイダーは自身を初期化し、内部コンポーネントに対応するモデルの部分に対しておこなわれる変更をリッスンします。
+1. [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)は、[初期化フロー](/help/sites-developing/spa-blueprint.md)で表されるように初期化する必要があります。
 
-1. 保存すると、ページモデルマネージャーはアプリの完全なモデルを返します。
-1. 次に、このモデルは、アプリケーションのフロントエンドルート [コンテナ](/help/sites-developing/spa-blueprint.md#container) ・コンポーネントに渡されます。
+1. 保存されると、ページモデルマネージャーはアプリの完全なモデルを返します。
+1. 次に、このモデルは、アプリケーションのフロントエンドルート[コンテナ](/help/sites-developing/spa-blueprint.md#container)コンポーネントに渡されます。
 1. モデルの断片は、最後に個々の子コンポーネントに伝播されます。
 
 ![app_model_initialization](assets/app_model_initialization.png)
