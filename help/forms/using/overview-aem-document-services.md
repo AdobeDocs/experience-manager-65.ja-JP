@@ -45,7 +45,7 @@ Output サービスを使用して XML データをフォームデザインと�
 * **generatePrintedOutput**：フォームデザインをフォームデータとマージして、レーザーネットワークプリンターまたはラベルネットワークプリンターに送信するドキュメントを生成します。
 
 * **generatePDFOutputBatch**：複数のテンプレートと複数のデータレコードをマージして、1 回の実行で複数の PDF ファイルを生成します。すべての PDF ファイルをまとめて 1 つの PDF を生成するオプションもあります。
-* **generatePrintedOutputBatch**:複数のテンプレートと複数のデータレコードをマージして、1回の呼び出しで複数の印刷ドキュメント(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。 1 つの印刷ドキュメントを生成するオプションもあります。
+* **generatePrintedOutputBatch**:複数のテンプレートと複数のデータレコードをマージして、1回の呼び出しで複数の印刷ドキュメント(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。1 つの印刷ドキュメントを生成するオプションもあります。
 
 ## Assembler サービス {#assembler-service}
 
@@ -92,7 +92,7 @@ DDX を使用すると、ドキュメントのアセンブリまたはディス�
 * FTP
 * HTTP/HTTPS
 
-## Doc Assurance サービス {#doc-assurance-service}
+## Doc Assurance サービス  {#doc-assurance-service}
 
 Doc Assurance サービスでは、ドキュメントを暗号化および復号化したり、Adobe Reader の機能に追加の使用権限を追加して拡張したり、ドキュメントに電子署名を追加したりできます。ユーザーは PDF フォームやドキュメントと簡単にやり取りできる一方、組織はセキュリティ、アーカイブ、およびコンプライアンスの準拠を向上できます。
 
@@ -108,11 +108,11 @@ Signature サービスでは、AEM サーバーで電子署名とドキュメン
 
 Signature サービスは、Trust Store に格納されている証明書および秘密鍵証明書にアクセスします
 
-### Encryption サービス {#encryption-service}
+### Encryption サービス  {#encryption-service}
 
 Encryption サービスは、ドキュメントの暗号化および復号化を有効にします。ドキュメントを暗号化すると、その内容は判読できなくなります。PDF ドキュメント全体（コンテンツ、メタデータおよび添付ファイル）を暗号化するか、そのメタデータ以外のすべてのデータを暗号化するか、または添付ファイルだけを暗号化することができます。許可されたユーザーはドキュメントを解読して、コンテンツにアクセスできます。PDF ドキュメントがパスワードで暗号化されている場合、ユーザーは開くためのパスワードを指定しないと、Adobe Reader または Adobe Acrobat でドキュメントを表示できません。PDF ドキュメントが証明書で暗号化されている場合、ユーザーはその PDF ドキュメントを秘密鍵（証明書）で復号化する必要があります。PDF ドキュメントの復号化に使用する秘密鍵は、そのドキュメントの暗号化に使用された公開鍵に対応している必要があります。
 
-### Reader Extension サービス {#reader-extension-service}
+### Reader Extension サービス  {#reader-extension-service}
 
 Reader Extensions サービスを使用すると、追加の使用権限を付与して Adobe Reader の機能を拡張することで、組織内でインタラクティブ PDF ドキュメントを簡単に共有できます。Reader Extensions サービスは、Adobe Reader 7.0 以降で使用できます。このサービスは、使用権限を PDF ドキュメントに追加します。これにより、PDF ドキュメントを Adobe Reader で開いた場合には通常使用できない機能（ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など）がアクティブになります。サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。
 
@@ -129,7 +129,7 @@ PDF ドキュメントに適切な使用権限が追加されている場合、�
 
 これらの特別なユーザー機能は、使用権限を付与された PDF ドキュメントを Adobe Reader で開くと自動的にアクティブになります。権限を付与されたドキュメントの編集を終了すると、これらの機能は Adobe Reader で再度無効になります。ユーザーが権限を付与された別のドキュメントを受け取るまで、これらの機能は無効のままです。
 
-初期状態では、Doc Assurance サービスを使用できません。To configure the DocAssurance service, see [Installing and Configuring Configuring Document Services](../../forms/using/install-configure-document-services.md).
+初期状態では、Doc Assurance サービスを使用できません。DocAssuranceサービスを設定するには、「[ドキュメントサービスのインストールと設定](../../forms/using/install-configure-document-services.md)」を参照してください。
 
 ## プリンターに送信サービス {#send-to-printer-service}
 
