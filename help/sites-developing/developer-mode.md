@@ -35,7 +35,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->開発者モードには、次の特徴があります。
+>開発者モード:
 >
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
@@ -43,7 +43,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
    >
    >   
    * ウィンドウの幅が 1024 px 未満の場合は使用できません。
->* グループのメンバーであるユーザーのみが使用でき `administrators` ます。
+>* `administrators`グループのメンバーであるユーザーのみ利用できます。
 
 
 >[!CAUTION]
@@ -70,7 +70,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 
 
-## 開発者モードを開く {#opening-developer-mode}
+## 開発者モードを開く  {#opening-developer-mode}
 
 開発者モードは、ページエディターのサイドパネルとして実装されています。パネルを開くには、ページエディターのツールバーにあるモードセレクターから「**開発者**」を選択します。
 
@@ -78,7 +78,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 パネルは、次の 2 つのタブで構成されています。
 
-* **[コンポーネント](/help/sites-developing/developer-mode.md#components)** — 作成者の [コンテンツツリーと同様のコンポーネントツリー](/help/sites-authoring/author-environment-tools.md#content-tree) 。
+* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**  — 作成者の [コンテンツツリーと同様のコンポーネントツリー](/help/sites-authoring/author-environment-tools.md#content-tree) を表示します
 
 * **[エラー](/help/sites-developing/developer-mode.md#errors)** - 問題が発生すると、各コンポーネントの詳細が表示されます。
 
@@ -127,7 +127,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->Some links point to scripts under `/libs`. However, these are for reference only, you **must not** edit anything under `/libs`, as any changes you do make may be lost. このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。Any changes you require should be made under `/apps`, see [Overlays and Overrides](/help/sites-developing/overlays.md).
+>一部のリンクは`/libs`の下のスクリプトを指しています。 ただし、これらは参照用です。変更を加えると失われる可能性があるので、**`/libs`下では**&#x200B;編集しないでください。 このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更は`/apps`の下で行う必要があります。[オーバーレイと上書き](/help/sites-developing/overlays.md)を参照してください。
 
 ### エラー {#errors}
 
@@ -144,11 +144,11 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 エラーが発生すると、「コンポーネント」タブのツリーにあるコンポーネントエントリもインジケーターでマークされます。
 
-### テスト {#tests}
+### テスト  {#tests}
 
 >[!CAUTION]
 >
 >AEM 6.2 では、開発者モードのテスト機能がスタンドアロンのツールアプリケーションとして再実装されました。
 >
->For full details see [Testing Your UI](/help/sites-developing/hobbes.md).
+>詳しくは、[UIのテスト](/help/sites-developing/hobbes.md)を参照してください。
 
