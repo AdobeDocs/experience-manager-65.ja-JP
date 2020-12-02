@@ -22,7 +22,7 @@ ht-degree: 91%
 
 PDF Generator Web ページを使用して、ファイルを変換できます。
 
-## PDF ファイルの作成 {#create-a-pdf-file}
+## PDF ファイルの作成  {#create-a-pdf-file}
 
 1. 管理コンソールで、サービス／PDF Generator／PDF の作成をクリックします。
 1. 「参照」をクリックし、ファイルを見つけて選択します。
@@ -43,7 +43,7 @@ PDF Generator Web ページを使用して、ファイルを変換できます�
 1. 「作成」をクリックします。ファイルが作成されると、そのファイルへのリンクが表示されます。変換中にエラーが発生すると、警告が表示されます。PostScript ファイルを作成している場合、警告にはログファイルへのリンクも含まれます。
 1. PDF ファイルのリンクをクリックします。Acrobat でファイルが開きます。
 
-### XMP ファイルについて {#about-xmp-files}
+### XMP ファイルについて  {#about-xmp-files}
 
 PDF Generator により Acrobat 5.0 またはそれ以降で作成される PDF ドキュメントには、XML 形式のドキュメントのメタデータが含まれます。*メタデータ*&#x200B;には、作成者の名前、キーワードおよび著作権情報などドキュメントとそのコンテンツに関する情報が含まれており、この情報は検索ユーティリティで使用できます。
 
@@ -53,7 +53,7 @@ Adobe Extensible Metadata Platform（XMP）は、パブリッシングワーク�
 
 Acrobat では、XMP ファイルを作成できます。
 
-## HTML ファイルまたは ZIP ファイルから PDF への変換 {#convert-an-html-file-or-zip-file-to-pdf}
+## HTML ファイルまたは ZIP ファイルから PDF への変換  {#convert-an-html-file-or-zip-file-to-pdf}
 
 PDF Generator を使用して、次の種類のファイルを Adobe PDF に変換できます。
 
@@ -108,7 +108,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 1. 「作成」をクリックします。ファイルが作成されると、その PDF ファイルへのリンクが表示されます。
 1. PDF ドキュメントを Acrobat で表示するには、そのリンクをクリックします。
 
-## 別のファイル形式への PDF ファイルの書き出し（Windows のみ） {#export-a-pdf-file-to-another-file-format-windows-only}
+## 別のファイル形式への PDF ファイルの書き出し（Windows のみ）  {#export-a-pdf-file-to-another-file-format-windows-only}
 
 『[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』の「Generate PDF サービス」の章で説明したように、PDF ファイルは様々なファイル形式に書き出すことができます。
 
@@ -119,11 +119,11 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
    ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻. 「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. (Optional) In the **Specify custom Preflight profile** option, click Browse, and select a [custom Preflight profile](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用します。
+1. （オプション）「カスタムのプリフライトプロファイルを指定&#x200B;**」オプションで、「参照」をクリックし、カスタムのプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を選択します。**[プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用します。
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
-## PDF の最適化 (Windows Only) {#optimize-a-pdf}
+## PDF の最適化 （Windowsのみ） {#optimize-a-pdf}
 
 PDF Generator では、PDF ファイルのサイズを低減することができます。
 
