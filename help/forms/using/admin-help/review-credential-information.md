@@ -24,7 +24,7 @@ ht-degree: 93%
 
 1. Web ブラウザーを開き、次の URL を入力します。
 
-   http://localhost:port/ReaderExtensions (where *port* is your application server’s port number)
+   http://localhost:port/ReaderExtensions（*port*&#x200B;は、アプリケーションサーバーのポート番号です）
 
 1. 次のデフォルトのユーザー名とパスワードを使用してログインします。
 
