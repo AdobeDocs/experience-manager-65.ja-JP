@@ -26,8 +26,8 @@ Java クラスの場所を作成する際には、パッケージ名がリポジ
 
 AEM の開発では、リポジトリ項目の名前にハイフンを使用することが推奨されていますが、Java パッケージ名でハイフンを使用することはできません。
 
-The underlying CRX platform must be able to distinguish between an actual underscore `_ `and a hyphen `-`. Thus, in JCR, the hyphen must be replaced with its unicode value (u002d) and escaped with an underscore `_`.
+基盤となるCRXプラットフォームでは、実際のアンダースコア`_ `とハイフン`-`を区別できる必要があります。 したがって、JCRでは、ハイフンをUnicode値(u002d)で置き換え、アンダースコア`_`でエスケープする必要があります。
 
-例えば、リポジトリパスが/apps/my-example/component/info/Info.java **の場合、パッケージ名は**、 `java package apps.my_002dexample.component.info;`
+例えば、リポジトリパスが&#x200B;**/apps/my-example/component/info/Info.java**&#x200B;の場合、パッケージ名は`java package apps.my_002dexample.component.info;`にする必要があります。
 
-Notice that an underscore must similarly be escaped, such that `_` becomes `_005f`.
+アンダースコアも同様にエスケープする必要があります。例えば、`_`が`_005f`になります。
