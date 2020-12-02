@@ -18,13 +18,13 @@ ht-degree: 67%
 ---
 
 
-# HTML5 フォーム のデバッグ {#debugging-html-forms}
+# HTML5 フォーム のデバッグ  {#debugging-html-forms}
 
-このドキュメントにはさまざまなトラブルシューティングのシナリオが含まれています。各シナリオにつき、問題をトラブルシューティングするためにいくつかの手順が提供されています。次の手順を実行し、引き続き問題が発生する場合は、ロガーを設定してエラーや警告のログを取得し、確認します。For more details about HTML5 forms logging, see [Generating Logs for HTML5 forms](/help/forms/using/enable-logs.md).
+このドキュメントにはさまざまなトラブルシューティングのシナリオが含まれています。各シナリオにつき、問題をトラブルシューティングするためにいくつかの手順が提供されています。次の手順を実行し、引き続き問題が発生する場合は、ロガーを設定してエラーや警告のログを取得し、確認します。HTML5フォームのログ記録について詳しくは、「[HTML5フォームのログの生成](/help/forms/using/enable-logs.md)」を参照してください。
 
 ## 問題：フォームをレンダリングすると、org.apache.sling.api.SlingException 例外ページが表示される {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
 
-In the exception details, search for word **caused by**.
+例外の詳細で、**caused by**&#x200B;という語を検索します。
 
 推定原因は、URL にある 1 つ以上のパラメーターが間違っていることです。
 
@@ -55,7 +55,7 @@ In the exception details, search for word **caused by**.
  </tbody>
 </table>
 
-## Problem: Unable to render a form (an error message is displayed) {#problem-unable-to-render-form}
+## 問題：フォームをレンダリングできません（エラーメッセージが表示されます）{#problem-unable-to-render-form}
 
 1. 指定したパラメーターが正しいことを確認します。パラメーター関する詳しい情報については、[パラメーターのレンダリング](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)を参照してください。
 1. CRX Package Manager(https://&lt;server>:&lt;port>/crx/packmgr/index.jsp)にログインし、次のパッケージが正しくインストールされているかどうかを確認します。
@@ -81,7 +81,7 @@ In the exception details, search for word **caused by**.
 
 ## 問題：フォームがスタイルなしでレンダリングされる {#problem-form-renders-without-styles}
 
-1. In your browser, open **Developer Tools**. Ensure that profile.css is available.
+1. ブラウザーで、**開発者ツール**&#x200B;を開きます。プロファイル.cssが使用可能であることを確認します。
 1. プロファイルのCSSファイルが使用できない場合は、https://&lt;server>:&lt;port>/crx/deでCRX DEにログインします。
 1. 左のフォルダー階層で、/etc/clientlibs/fd/xfaforms/ に移動します。フォルダーにリストされている css.txt ファイルを開きます。
 
@@ -104,7 +104,7 @@ In the exception details, search for word **caused by**.
 
 1. これらのファイルがない場合、adobe-lc-forms-runtime-pkg-&lt;version>.zip パッケージを再びインストールします。
 
-### 問題：予期しないエラーが発生した {#problem-unexpected-error-encountered}
+### 問題：予期しないエラーが発生した  {#problem-unexpected-error-encountered}
 
 1. フォームURLで、クエリパラメーターdebugClientLibsを追加し、その値をtrueに設定します(例：https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
 1. Chrome のようなデスクトップブラウザーでデベロッパーツール／Console に移動します。
@@ -119,10 +119,10 @@ In the exception details, search for word **caused by**.
 
 1. AEM サーバーにアクセスする権限を持っていること、およびサーバーに接続されていることを確認します。
 1. パラメーター submitUrl が正しいことを確認します。
-1. Enable the client side logs as mentioned at [Logs for the HTML5 forms](/help/forms/using/enable-logs.md) using debug option as **1-a5-b5-c5**. 次に、フォームをレンダリングし、送信を確認します。ブラウザーのデバッグコンソールを開き、エラーがあるかどうかを確認します。
+1. 「[HTML5フォーム](/help/forms/using/enable-logs.md)のログ」に記載されているように、**1-a5-b5-c5**&#x200B;を使用して、クライアント側ログを有効にします。 次に、フォームをレンダリングし、送信を確認します。ブラウザーのデバッグコンソールを開き、エラーがあるかどうかを確認します。
 1. 「[HTML5 フォームのログ](/help/forms/using/enable-logs.md)」に記載されている通りに、サーバーログを見つけます。サーバーログで送信の際にエラーが発生したかを確認します。
 
-## 問題：ローカライズされたエラーメッセージが表示されない {#problem-localized-error-messages-do-not-display}
+## 問題：ローカライズされたエラーメッセージが表示されない  {#problem-localized-error-messages-do-not-display}
 
 1. デスクトップブラウザーで、追加のクエリーパラメーター **debugClientLibs=true** でフォームをレンダリングしてから、デベロッパーツール／Resources に移動して、I18N.css のファイルの存在を確認します。
 1. ファイルが使用できない場合は、https://&lt;server>:&lt;port>/crx/deでCRX DEにログインします。
@@ -146,11 +146,11 @@ In the exception details, search for word **caused by**.
    ../LogMessages.js
    ```
 
-## 問題：画像が表示されない {#problem-image-not-showing-up}
+## 問題：画像が表示されない  {#problem-image-not-showing-up}
 
 1. 画像 URL が正しいことを確認します。
 1. ブラウザーがこのタイプの画像をサポートしているかどうかを確認します。
-1. In the exception details, search for word **caused by**.
+1. 例外の詳細で、**caused by**&#x200B;という語を検索します。
 
    推定原因は、URL にある 1 つ以上のパラメーターが間違っていることです。
 
