@@ -27,11 +27,11 @@ ht-degree: 75%
 
 * [パッケージマネージャー](#package-manager)：ローカルの AEM インスタンスでパッケージを管理する際に使用します。
 
-* [ソフトウェア配布](#software-distribution)：公開パッケージと会社の個人用パッケージの両方を一元的に管理します。 パブリックパッケージには、ホットフィックス、新機能、ドキュメントなどを含めることができます。
+* [ソフトウェア配布](#software-distribution)：公開パッケージと会社の個人用パッケージの両方を一元的に管理します。パブリックパッケージには、ホットフィックス、新機能、ドキュメントなどを含めることができます。
 
 パッケージは、Package Manager、ソフトウェア配布、およびファイルシステムの間で転送できます。
 
-## What are Packages? {#what-are-packages}
+## パッケージとは{#what-are-packages}
 
 パッケージとは、ファイルシステムシリアル化（「vault」シリアル化）の形式でリポジトリコンテンツが格納されている zip ファイルです。これにより、使いやすく編集しやすい方法でファイルおよびフォルダーを表現できます。
 
@@ -71,7 +71,7 @@ ht-degree: 75%
 * [パッケージスクリーンショット](#package-screenshots)
 * [パッケージアイコン](#package-icons)
 
-### パッケージ設定 {#package-settings}
+### パッケージ設定  {#package-settings}
 
 様々なパッケージ設定を編集して、パッケージの説明、関連するバグ、依存関係、プロバイダー情報などの側面を定義できます。
 
@@ -94,7 +94,7 @@ ht-degree: 75%
   <tr>
    <th><strong>フィールド</strong></th>
    <th><strong>説明</strong></th>
-   <th><strong>形式/例</strong></th>
+   <th><strong>形式／例</strong></th>
   </tr>
   <tr>
    <td>名前</td>
@@ -151,12 +151,12 @@ ht-degree: 75%
 | 依存 | 現在のパッケージを期待どおりに実行するために他のパッケージが必要な場合に配慮する必要のある依存関係情報をリストします。このフィールドはホットフィックスを使用する場合に重要です。 | groupId:name:version |
 | 置き換え | このパッケージで置き換えられる廃止されたパッケージのリスト。インストール前に、古いパッケージの必要なコンテンツがすべてこのパッケージに含まれていることを確認し、コンテンツが上書きされないようにしてください。 | groupId:name:version |
 
-### パッケージフィルター {#package-filters}
+### パッケージフィルター  {#package-filters}
 
-Filters identify the repository nodes to include in the package. A **Filter Definition** specifies the following information:
+フィルターは、パッケージに含めるリポジトリノードを識別します。**フィルター定義**&#x200B;は、次の情報を指定します。
 
 * 含めるコンテンツの&#x200B;**ルートパス**。
-* **ルートパスの下に** 、特定のノードを含めるか除外するルール。
+* **ルートパスの下に特定のノードを含めるか除外する** ルール。
 
 フィルターには、0個以上のルールを含めることができます。ルールを定義しない場合、パッケージのルートパスの下にすべてのコンテンツが含まれます。
 
@@ -207,7 +207,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
 パッケージにスクリーンショットを付加すると、コンテンツの外観を視覚的に表現できます。例えば、新機能のスクリーンショットを用意するなどです。
 
-### パッケージアイコン {#package-icons}
+### パッケージアイコン  {#package-icons}
 
 また、パッケージにアイコンを付加すると、パッケージの内容をすぐに参照できるように視覚的に表現できます。これはパッケージリストに表示され、パッケージやパッケージのクラスを簡単に識別できます。
 
@@ -227,14 +227,14 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
 ![](do-not-localize/chlimage_1-29.png)
 
-## パッケージマネージャー {#package-manager}
+## パッケージマネージャー  {#package-manager}
 
 パッケージマネージャーでは、ローカルの AEM インストール環境でパッケージが管理されます。[必要な権限の割り当て](#permissions-needed-for-using-the-package-manager)をおこなってから、Package Manager を使用してパッケージの設定、構築、ダウンロード、インストールなど様々なアクションを実行できます。設定する主な要素は次のとおりです。
 
 * [パッケージ設定](#package-settings)
 * [パッケージフィルター](#package-filters)
 
-### パッケージマネージャーの使用に必要な権限 {#permissions-needed-for-using-the-package-manager}
+### パッケージマネージャーの使用に必要な権限  {#permissions-needed-for-using-the-package-manager}
 
 パッケージを作成、変更、アップロードおよびインストールする権限をユーザーに付与するには、以下の場所で適切な権限を指定する必要があります。
 
@@ -243,11 +243,11 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
 権限の変更手順については、[権限の設定](/help/sites-administering/security.md#setting-page-permissions)を参照してください。
 
-### 新しいパッケージの作成 {#creating-a-new-package}
+### 新しいパッケージの作成  {#creating-a-new-package}
 
 新しいパッケージ定義を作成するには：
 
-1. On the AEM Welcome screen, click **Packages** (or from the **Tools** console double-click on **Packages**).
+1. AEMのようこそ画面で、「パッケージ&#x200B;****」をクリックします(または、**ツール**&#x200B;コンソールの重複から、**パッケージ**&#x200B;をクリックします)。
 
 1. 次に「**パッケージマネージャー**」を選択します。
 1. 「**パッケージを作成**」をクリックします。
@@ -307,11 +307,12 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
    * **ルートパス**
 パッケージ化するコンテンツ。サブツリーのルートを指定できます。
-   * **Rules** Rulesはオプションです。単純なパッケージ定義の場合、「含む」または「除外する」のルールを指定する必要はありません。
+   * **RulesRules**
+はオプションです。単純なパッケージ定義の場合、「含む」または「除外する」のルールを指定する必要はありません。
 
-      必要に応じて、「 [**含める** 」または「 **除外する」のルールを定義し、パッケージの内容を正確に定義できます**](#package-filters) 。
+      必要に応じて、[**「**&#x200B;を含める」または&#x200B;**「**&#x200B;を除外する」のルール](#package-filters)を定義し、パッケージの内容を正確に定義することができます。
 
-      ルール追加を「 **+」記号で囲むか、ルールを「** - **** 」記号で囲むか、削除します。 ルールは順序に従って適用され、 **上へボタンと** 下へ **** ボタンを使用して、必要に応じてルールを配置します。
+      **+**&#x200B;記号を追加使用するルール、または&#x200B;**-**&#x200B;記号を使用するルールを削除します。 ルールは順序に従って適用され、**上**&#x200B;ボタンと&#x200B;**下**&#x200B;ボタンを使用して、必要に応じて配置します。
    「**OK**」をクリックして、フィルターを保存します。
 
    >[!NOTE]
@@ -347,7 +348,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
 パッケージは、ビルド後に必要に応じて再度含めることができます。
 
-再ラップは、パッケージの内容を変更 *せずに* 、パッケージ情報を変更します。パッケージ情報は、サムネール、説明などです。つまり、 **パッケージ設定** (Package Settings **)ダイアログで編集できるものはすべて(このダイアログボックスで「**&#x200B;編集」をクリックします)。
+リラップは、パッケージの内容を&#x200B;*変更せずに*&#x200B;パッケージ情報を変更します。パッケージ情報は、サムネールや説明などです。つまり、**パッケージ設定**&#x200B;ダイアログで編集できるものはすべて&#x200B;**編集**&#x200B;をクリックします。
 
 再ラップの主な使用例は、パッケージの準備時です。 例えば、既存のパッケージを持っていて、他のユーザーと共有することを決定したとします。 サムネールを追加し、説明を追加する場合は、 すべての機能を含むパッケージ全体を再作成する代わりに（時間がかかり、パッケージが元のものと同じでなくなる可能性があります）、パッケージを再ラップして、サムネールと説明を追加するだけで済みます。
 
@@ -393,7 +394,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
 ここでは、**パッケージマネージャー**&#x200B;を使用して AEM からファイルシステムへパッケージをダウンロードする方法について説明します。
 
-1. On the AEM Welcome screen, click **Packages**, then select **Package Manager**.
+1. AEMのようこそ画面で、「**パッケージ**」をクリックし、「**パッケージマネージャー**」を選択します。
 1. ダウンロードするパッケージに移動します。
 
    ![packagedownload](assets/packagesdownload.png)
@@ -417,7 +418,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
    * **File**
 
-      You can either type the file name directly, or use the **Browse...** dialog to select the required package from your local file system (after selection click **OK**).
+      ファイル名を直接入力するか、**参照…**&#x200B;ダイアログが開き、ローカルファイルシステムから必要なパッケージを選択できます（選択後、「**OK**」をクリックします）。
 
    * **アップロードを強制**
 
@@ -428,9 +429,9 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
    >
    >AEM でコンテンツを利用できるようにするには、必ず[パッケージをインストール](#installing-packages)してください。
 
-### パッケージの検証 {#validating-packages}
+### パッケージの検証  {#validating-packages}
 
-パッケージをインストールする前に、内容を確認することが可能です。Because packages can modify overlaid files under `/apps` and/or add, modify, and remove ACLs, it is often useful to validate these changes before installing.
+パッケージをインストールする前に、内容を確認することが可能です。パッケージは`/apps`の下のオーバーレイファイルを変更したり、ACLの追加、変更、削除を行ったりする可能性があるので、多くの場合、インストール前にこれらの変更を検証すると役に立ちます。
 
 #### 検証オプション {#validation-options}
 
@@ -450,7 +451,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
    **レポート方法**
 
-   Any versioned dependencies that cannot be satisfied by the AEM instance are listed in the **Activity Log** of the Package Manager.
+   AEMインスタンスで満たされないバージョン付きの依存関係は、Package Managerの&#x200B;**アクティビティログ**&#x200B;に一覧表示されます。
 
    **エラーの状態**
 
@@ -466,7 +467,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
    この検証では、インストールするパッケージに、宛先の AEM インスタンスにすでにオーバーレイされているファイルが含まれているかどうかを確認します。
 
-   For example, given an existing overlay at `/apps/sling/servlet/errorhandler/404.jsp`, a package that contains `/libs/sling/servlet/errorhandler/404.jsp`, such that it will change the existing file at `/libs/sling/servlet/errorhandler/404.jsp`.
+   例えば、`/apps/sling/servlet/errorhandler/404.jsp`に既存のオーバーレイがある場合、`/libs/sling/servlet/errorhandler/404.jsp`を含むパッケージ（`/libs/sling/servlet/errorhandler/404.jsp`の既存のファイルが変更されるように）。
 
    **レポート方法**
 
@@ -478,7 +479,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
    **エラーの解決**
 
-   To resolve this issue, the maintainer of the of the overlay file in `/apps` must review the changes to the overlaid file in `/libs` and incorporate the changes as needed into the overlay ( `/apps`), and redeploy the overlaid file.
+   この問題を解決するには、`/apps`のオーバーレイファイルのメンテナは、`/libs`のオーバーレイファイルに対する変更を確認し、必要に応じて変更をオーバーレイに組み込み(`/apps`)、オーバーレイファイルを再展開する必要があります。
 
    >[!NOTE]
    >
@@ -506,7 +507,7 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
    >
    >ベストプラクティスとして、予期しない製品の動作を引き起こす可能性があるため、パッケージは AEM 提供の ACL に影響を与えないようにすることをお勧めします。
 
-#### 検証の実行 {#performing-validation}
+#### 検証の実行  {#performing-validation}
 
 パッケージの検証は 2 とおりの方法で行うことができます。
 
@@ -519,8 +520,8 @@ Filters identify the repository nodes to include in the package. A **Filter Defi
 
 **パッケージマネージャーによるパッケージ検証**
 
-1. Open the Package Manager at `https://<server>:<port>/crx/packmgr`
-1. Select the package in the list and then select **More** dropdown from the heading and then **Validate** from the drop-down menu.
+1. `https://<server>:<port>/crx/packmgr`のパッケージマネージャーを開きます
+1. リストーでパッケージを選択し、見出しから「**詳細**」ドロップダウンを選択し、ドロップダウンメニューから「**検証**」を選択します。
 
    >[!NOTE]
    >
@@ -548,7 +549,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
 >
 >
-The value of `type` defaults to `osgiPackageImports` if not passed.
+`type`の値は、渡されない場合はデフォルトで`osgiPackageImports`になります。
 
 以下は、cURL を使用してパッケージ検証を実行する例です。
 
@@ -568,7 +569,7 @@ The value of `type` defaults to `osgiPackageImports` if not passed.
 
 パッケージをアップロードしたら、コンテンツをインストールする必要があります。パッケージコンテンツがインストールされ、機能する状態になるには、以下の両方の条件が満たされている必要があります。
 
-* loaded into AEM (either [uploaded from your filesystem](#uploading-packages-from-your-file-system) or downloaded from [Software Distribution](#software-distribution))
+* aemに読み込まれる（ファイルシステム](#uploading-packages-from-your-file-system)からアップロードされるか、[ソフトウェア配布](#software-distribution)からダウンロードされる）[
 
 * インストールされていること
 
@@ -579,11 +580,11 @@ The value of `type` defaults to `osgiPackageImports` if not passed.
 >パッケージのコンテンツまたは影響を確認する方法は以下のとおりです。
 >
 >* 内容を変更せずに、パッケージのテストインストールを実行します。
-   >  パッケージを開き（パッケージのアイコンまたは名前をクリック）、「 **テストインストール**」をクリックします。
+   >  パッケージを開き（パッケージのアイコンまたは名前をクリック）、「**テストインストール**」をクリックします。
    >
    >
 * パッケージの内容のリストを参照してください。
-   >  パッケージを開き、「 **コンテンツ**」をクリックします。
+   >  パッケージを開き、「**目次**」をクリックします。
 
 >
 
@@ -600,7 +601,7 @@ The value of `type` defaults to `osgiPackageImports` if not passed.
 >デジタルアセットをインストールする場合は、次の手順を実行する必要があります。
 >
 >* 最初に、ワークフローランチャーをアクティベート解除します。
-   >  Use the Components menu option of the OSGi console to deactivate `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl`.
+   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl`を非アクティブにするには、OSGiコンソールの「Components」メニューオプションを使用します。
    >
    >
 * 次に、インストールが完了したら、ワークフローランチャーを再アクティベートします。
@@ -620,9 +621,9 @@ The value of `type` defaults to `osgiPackageImports` if not passed.
 
    インストールが完了すると、そのパッケージの横に「**インストール済み**」と表示されます。
 
-### ファイルシステムベースのアップロードおよびインストール {#file-system-based-upload-and-installation}
+### ファイルシステムベースのアップロードおよびインストール  {#file-system-based-upload-and-installation}
 
-別の方法でパッケージをインスタンスにアップロードおよびインストールすることもできます。In your file system, you have a `crx-quicksart` folder alongside with your jar and `license.properties` file. You need to create a folder named `install` under `crx-quickstart`. You will then have something like this: `<aem_home>/crx-quickstart/install`
+別の方法でパッケージをインスタンスにアップロードおよびインストールすることもできます。ファイルシステムには、jarファイルと`license.properties`ファイルと共に`crx-quicksart`フォルダーがあります。 `crx-quickstart`の下に`install`という名前のフォルダーを作成する必要があります。 その後、次のようなメッセージが表示されます。`<aem_home>/crx-quickstart/install`
 
 この install フォルダーにパッケージを直接追加できます。追加したパッケージは、インスタンスに自動的にアップロードおよびインストールされます。完了すると、パッケージマネージャーにそれらのパッケージが表示されるようになります。
 
@@ -632,7 +633,7 @@ The value of `type` defaults to `osgiPackageImports` if not passed.
 >
 >この作業はインスタンスの初回起動前におこなうこともできます。その場合は、`crx-quickstart` フォルダーを手動で作成し、その下に `install` フォルダーを作成してそこにパッケージを追加する必要があります。これで、インスタンスの初回起動時に、パッケージがアルファベット順にインストールされるようになります。
 
-### パッケージのアンインストール {#uninstalling-packages}
+### パッケージのアンインストール  {#uninstalling-packages}
 
 AEMでは、パッケージをアンインストールできます。 このアクションにより、パッケージのインストール直前に作成されたスナップショットに含まれているリポジトリのコンテンツが元に戻ります。
 
@@ -654,11 +655,11 @@ AEMでは、パッケージをアンインストールできます。 このア�
 >
 >パッケージからインストール済みのファイルやノードは削除&#x200B;**されません**。
 
-1. In the **Tools** console, expand the **Packages** folder to show your package in the right-hand pane.
+1. **ツール**&#x200B;コンソールで、**パッケージ**&#x200B;フォルダーを展開し、右側のウィンドウにパッケージを表示します。
 
 1. 削除するパッケージをクリックして強調表示し、以下のいずれかの手順を実行します。
 
-   * Click **Delete** in the toolbar menu.
+   * ツールバーメニューの&#x200B;**削除**&#x200B;をクリックします。
    * 右クリックして「**削除**」を選択します。
 
    ![packagedelete](assets/packagesdelete.png)
@@ -682,13 +683,13 @@ AEMでは、パッケージをアンインストールできます。 このア�
 
 パッケージ共有は、コンテンツパッケージを共有できるように一元化されたサーバです。
 
-Software Distribution( [ソフトウェア配布](#software-distribution))に置き換えられました。
+[ソフトウェア配布](#software-distribution)に置き換えられました。
 
-## ソフトウェア配布 {#software-distribution}
+## ソフトウェア配布{#software-distribution}
 
-[ソフトウェア配布](https://downloads.experiencecloud.adobe.com) (Software Distribution)は、AEMパッケージの検索とダウンロードを簡単にするように設計された新しいユーザーインターフェイスです。
+[ソフトウェア](https://downloads.experiencecloud.adobe.com) 配布は、AEMパッケージの検索とダウンロードを簡単にするように設計された新しいユーザーインターフェイスです。
 
-詳細については、 [ソフトウェア配布ドキュメントを参照してください](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)。
+詳細については、[ソフトウェア配布ドキュメント](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)を参照してください。
 
 >[!CAUTION]
 >
