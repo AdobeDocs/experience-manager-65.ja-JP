@@ -42,9 +42,9 @@ Correspondence Management は API を使用して、LetterInstanceService サー
 
 ### getAllLetterInstances の使用 {#using-nbsp-getallletterinstances}
 
-下記の API は、クエリオブジェクトに基づいてレターインスタンスを検索します（送信済みとドラフトの両方）。クエリオブジェクトがnullの場合、すべてのレターインスタンスを返します。 This API returns list of [LetterInstanceVO](https://helpx.adobe.com/experience-manager/6-2/forms/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) objects, which can be used for extracting additional information of letter instance
+下記の API は、クエリオブジェクトに基づいてレターインスタンスを検索します（送信済みとドラフトの両方）。クエリオブジェクトがnullの場合、すべてのレターインスタンスを返します。 このAPIは[LetterInstanceVO](https://helpx.adobe.com/experience-manager/6-2/forms/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html)オブジェクトのリストを返します。これはレターインスタンスの追加情報の抽出に使用できます
 
-**構文**: `List getAllLetterInstances(Query query) throws ICCException;`
+**構文**:  `List getAllLetterInstances(Query query) throws ICCException;`
 
 <table>
  <tbody>
@@ -59,9 +59,9 @@ Correspondence Management は API を使用して、LetterInstanceService サー
  </tbody>
 </table>
 
-#### 例 1：送信済みタイプのすべてのレターインスタンスを取得する {#example-fetch-all-the-letter-instances-of-type-submitted}
+#### 例 1：送信済みタイプのすべてのレターインスタンスを取得する  {#example-fetch-all-the-letter-instances-of-type-submitted}
 
-以下のコードで送信済みのレターインスタンスの一覧が返されます。To get only drafts, change the `LetterInstanceType.COMPLETE.name()` to `LetterInstanceType.DRAFT.name().`
+以下のコードで送信済みのレターインスタンスの一覧が返されます。ドラフトのみを取得するには、`LetterInstanceType.COMPLETE.name()`を`LetterInstanceType.DRAFT.name().`に変更します
 
 ```java
 @Reference
@@ -122,7 +122,7 @@ LetterInstanceVO letterInstance = letterInstanceService.getLetterInstance(letter
 
 レターインスタンスが指定した名前で存在するかどうかを確認します
 
-**構文**: `public Boolean letterInstanceExists(String letterInstanceName) throws ICCException;`
+**構文**:  `public Boolean letterInstanceExists(String letterInstanceName) throws ICCException;`
 
 | **パラメーター** | **説明** |
 |---|---|
@@ -135,14 +135,14 @@ String letterInstanceName = "sampleLetterInstance";
 Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName );
 ```
 
-## レターインスタンスを開く {#opening-letter-instances}
+## レターインスタンスを開く  {#opening-letter-instances}
 
 レターインスタンスには、送信済みタイプまたはドラフトタイプがあります。両タイプのレターインスタンスを開くと、それぞれ異なる動作を示します。
 
 * 送信済みのレターインスタンスの場合、レターインスタンスを示す PDF が開きます。サーバー上に残存する送信済みのレターインスタンスにも dataXML と処理された XDP が含まれ、それらを PDF/A の作成のようなケースの実行やカスタマイズに使用することができます。
 * ドラフトのレターインスタンスの場合、「通信を作成」UIが、ドラフトが作成された時点の正確な前の状態に再読み込みされます。
 
-### Opening Draft Letter Instance  {#opening-draft-letter-instance-nbsp}
+### ドラフトレターインスタンスを開く  {#opening-draft-letter-instance-nbsp}
 
 CCR UIは、再読み込みされたレターに使用できるcmLetterInstanceIdパラメーターをサポートします。
 
