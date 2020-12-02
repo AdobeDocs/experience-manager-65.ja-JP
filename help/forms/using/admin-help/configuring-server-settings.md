@@ -26,7 +26,7 @@ ht-degree: 90%
 * **タスク通知の設定**：エンドユーザーおよびグループに、タスクに関する電子メール通知で送信されるメッセージを有効化、無効化または変更することができます（[ユーザーおよびグループへの通知の設定](configuring-server-settings.md#configuring-notifications-for-users-and-groups)を参照）。
 * **管理者通知の設定**：管理タスクについての電子メール通知で送信されるメッセージを有効化、無効化または変更することができます（[管理者への通知の設定](configuring-server-settings.md#configuring-notifications-for-administrators)を参照）。
 
-## 電子メールの設定 {#configuring-email-settings}
+## 電子メールの設定  {#configuring-email-settings}
 
 Forms サーバーの電子メールアカウントを指定できます。この電子メールアカウントを通じて、AEM Forms ユーザーおよび管理者に電子メールメッセージの送信が行われます。これらの電子メールは、完了する必要があるタスクをユーザーに通知したり、タスクが期限切れになったことをユーザーに通知したり、発生したプロセスエラーを管理者に通知したりする際に使用されます。
 
@@ -36,7 +36,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 設計および実装するプロセスで電子メールが不要な場合は、電子メールの設定ページのオプションを設定する必要はありません。
 
-### 送信電子メールの設定 {#configure-outgoing-email-settings}
+### 送信電子メールの設定  {#configure-outgoing-email-settings}
 
 1. 管理コンソールで、サービス／forms ワークフロー／サーバー設定／電子メールの設定をクリックします。
 1. 「送信メッセージを有効化」を選択します。
@@ -54,7 +54,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 >
 >間違った情報を入力した場合は、「キャンセル」をクリックして、前に表示したページに戻ります。
 
-### AEM Forms Workspace を使用するための電子メールの設定 {#configuring-email-templates-to-use-html-workspace}
+### AEM Forms Workspace を使用するための電子メールの設定  {#configuring-email-templates-to-use-html-workspace}
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 1. 管理コンソールで、ホーム／サービス／forms ワークフロー／サーバー設定／タスク通知をクリックします。
 1. タスクの割り当てテンプレートを開きます。
-1. タスク通知のテンプレートを次のとおりに設定します。 `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
+1. タスク通知のテンプレートを次のとおりに設定します。  `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
    ```java
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@
@@ -86,7 +86,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
-### ユーザーまたはグループへのリマインダーの設定 {#configure-reminders-for-users-or-groups}
+### ユーザーまたはグループへのリマインダーの設定  {#configure-reminders-for-users-or-groups}
 
 タスク完了のデッドラインが近づいてきたら、割り当てられているユーザーまたはグループにリマインダー通知を送信することができます。リマインダー通知の正確な送信時刻を決定するルールは、プロセス開発者が決定します。
 
@@ -100,7 +100,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### ユーザーまたはグループへのタスクの割り当て通知の設定 {#configure-task-assignment-notifications-for-users-or-groups}
+### ユーザーまたはグループへのタスクの割り当て通知の設定  {#configure-task-assignment-notifications-for-users-or-groups}
 
 ユーザーまたはグループにタスクが割り当てられたときに、それぞれにタスクの割り当て通知を送信することができます。
 
@@ -114,7 +114,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### ユーザーまたはグループへのデッドライン通知の設定 {#configure-deadline-notifications-for-users-or-groups}
+### ユーザーまたはグループへのデッドライン通知の設定  {#configure-deadline-notifications-for-users-or-groups}
 
 割り当てられたタスクの実行デッドラインを過ぎた場合、ユーザーおよびグループにデッドライン通知を送信することができます。ユーザーは割り当てられたタスクを実行できないので、デッドライン通知は情報を提供するためのものに過ぎません。
 
@@ -127,11 +127,11 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### すべての電子メールの DO NOT DELETE タグを非表示 {#hide-the-do-not-delete-tag-for-all-emails}
+### すべての電子メールの DO NOT DELETE タグを非表示  {#hide-the-do-not-delete-tag-for-all-emails}
 
 人間中心のプロセスで送信されたすべての電子メールで、DO NOT DELETE 追跡タグを非表示にするよう電子メールを設定できます。詳しくは、「[How to hide the &#39;DO-NOT-DELETE&#39; tag with CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)」を参照してください。
 
-## 管理者への通知の設定 {#configuring-notifications-for-administrators}
+## 管理者への通知の設定  {#configuring-notifications-for-administrators}
 
 forms ワークフローが、管理者に送信される電子メール通知を生成する際に使用するテンプレートを設定できます。
 
@@ -140,7 +140,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 * 停止したブランチ
 * 停止した操作
 
-### 停止したブランチの通知の設定 {#configure-stalled-branch-notifications}
+### 停止したブランチの通知の設定  {#configure-stalled-branch-notifications}
 
 ブランチが停止した場合（意図的またはエラーが原因で停止した場合）、管理者または問題を調査できる別のユーザーに電子メール通知を送信することができます。
 
@@ -154,7 +154,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### 停止した操作の通知の設定 {#configure-stalled-operation-notifications}
+### 停止した操作の通知の設定  {#configure-stalled-operation-notifications}
 
 操作が停止した場合（意図的またはエラーが原因で停止した場合）、管理者または問題を調査できる別のユーザーに電子メール通知を送信することができます。
 
@@ -166,7 +166,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 1. 「通知テンプレート」ボックスに、電子メールメッセージの本文のテキストを入力します。このフィールドには、デフォルトのテキストが事前に入力されています。このフィールドのカスタマイズについて詳しくは、[通知内容のカスタマイズ](configuring-server-settings.md#customizing-the-content-of-notifications)を参照してください。
 1. 「保存」をクリックします。
 
-## 通知内容のカスタマイズ {#customizing-the-content-of-notifications}
+## 通知内容のカスタマイズ  {#customizing-the-content-of-notifications}
 
 タスク通知ページと管理者通知ページには、次に示すような、通知メッセージをカスタマイズするための様々な機能があります。
 
@@ -174,7 +174,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 * 変数選択
 * URL 生成
 
-### リッチテキストエディター {#rich-text-editor}
+### リッチテキストエディター  {#rich-text-editor}
 
 通知テンプレート領域はリッチテキストエディターなので、これを使用して電子メール通知メッセージの HTML を生成することができます。「通知テンプレート」ボックスの下に、フォントと段落の書式設定オプションがあります。フォントタイプ、サイズ、スタイル、カラーのほか、段落の配置と箇条書きについてのオプションがあります。
 
@@ -194,45 +194,45 @@ forms ワークフローが、管理者に送信される電子メール通知�
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
-If your solution is deployed in a clustered environment, replace `@@notification-host@@` with the cluster address.
+ソリューションをクラスター環境にデプロイする場合は、`@@notification-host@@`をクラスターアドレスに置き換えます。
 
-`<`*PORT*`>` は、アプリケーションサーバーのHTTPリスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
+`<`** `>` PORTは、アプリケーションサーバーのHTTPリスナーのポート番号です。サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
 
 **JBoss：** 8080
 
-**Oracle WebLogic Server:** 7001
+**OracleWebLogic Server:** 7001
 
 **IBM WebSphere:** 9080
 
-To make these URLs function correctly, replace `<`*PORT* `>` with the port number that is appropriate for your environment.
+これらのURLを正しく機能させるには、`<`*PORT* `>`を、環境に適したポート番号に置き換えます。
 
 >[!NOTE]
 >
 >Forms 以外のカスタム Web アプリケーションを使用して、タスクへのアクセスをユーザーに提供する場合は、そのカスタムアプリケーションに適した URL 形式を使用する必要があります。
 
-### 変数選択 {#variable-picker}
+### 変数選択  {#variable-picker}
 
-変数選択リストには便利な変数があり、「件名」ボックスまたは「通知テンプレート」ボックスにドラッグアンドドロップできます。When you drop a variable in the Subject or Notification Template boxes, it changes to the actual forms workflow variable name with two @ symbols on either side of it, for example, `@@taskid@@`.
+変数選択リストには便利な変数があり、「件名」ボックスまたは「通知テンプレート」ボックスにドラッグアンドドロップできます。「件名」ボックスまたは「通知テンプレート」ボックスにドロップした変数は、`@@taskid@@`のように、両側に2つの@記号が付いた、実際のformsワークフロー変数名に変わります。
 
 ユーザーまたはグループへのリマインダー、タスクの割り当て、およびデッドラインの場合、「件名」ボックスと「通知テンプレート」ボックスで以下の変数を使用できます。
 
-**description** :Workbenchのプロセスのユーザーステップ(開始ポイント、「タスクの割り当て」操作または「複数のタスクの割り当て」操作)で定義される、Descriptionプロパティの内容。
+**** 説明：Workbenchのプロセスのユーザー手順(開始ポイント、「タスクの割り当て」操作または「複数のタスクの割り当て」操作)で定義される、説明プロパティの内容。
 
-**instructions** :Workbenchのプロセスのタスク手順で定義される、User Instructionsプロパティの内容。
+**** 手順Workbenchのプロセスのタスク手順で定義される、ユーザー手順プロパティの内容。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
+**notification-** hostAEM formsアプリケーションサーバーのホスト名。
 
-**process-name** ：プロセスの名前。
+**process-** nameプロセスの名前。
 
-**operation-name** ：ステップの名前。
+**operation-** name：ステップの名前。
 
-**taskid** ：現在のタスクの一意の識別子。
+**** taskid現在のタスクの一意の識別子。
 
-**actions** :受信者がクリックできる有効なルート（例えば、「Approve」、「Reject」）の番号付きリストを作成します。
+**** actions受信者がクリックできる有効なルート（例えば、「承認」、「拒否」）の番号付きリストを作成します。
 
 また、グループリマインダー、グループタスクの割り当ておよびグループのデッドラインの場合、次の変数も使用できます。
 
-**group-name** ：作業項目に割り当てられているグループの名前。
+**group-** name作業項目を割り当てているグループの名前。
 
 >[!NOTE]
 >
@@ -240,21 +240,21 @@ To make these URLs function correctly, replace `<`*PORT* `>` with the port numbe
 
 停止したブランチの場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
-**branch-id** ：ブランチの識別子。
+**branch-** idブランチの識別子。
 
-**process-id** ：プロセスインスタンスの識別子。
+**process-** idプロセスインスタンスの識別子。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
+**notification-** hostAEM formsアプリケーションサーバーのホスト名。
 
 停止した操作の場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
-**action-id** ：操作の識別子。
+**action-** id操作の識別子。
 
-**branch-id** ：ブランチの識別子。
+**branch-** idブランチの識別子。
 
-**process-id** ：プロセスインスタンスの識別子。
+**process-** idプロセスインスタンスの識別子。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
+**notification-** hostAEM formsアプリケーションサーバーのホスト名。
 
 ### 「件名」ボックスでの変数の使用{#using-a-variable-in-the-subject-box}
 
