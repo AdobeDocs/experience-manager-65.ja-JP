@@ -17,15 +17,15 @@ ht-degree: 11%
 ---
 
 
-# Embed an adaptive form or Interactive Communication in AEM Sites Single Page Application{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
+# アダプティブフォームまたはインタラクティブコミュニケーションをAEM Sitesシングルページアプリに埋め込む{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
 
 ## 概要 {#overview}
 
 AEM Formsでは、フォーム開発者がAEM Sitesのシングルページアプリ(SPA)にアダプティブフォームとインタラクティブコミュニケーションをシームレスに埋め込むことができます。 埋め込まれたアダプティブフォームとインタラクティブ通信は完全に機能し、ユーザーはページを離れることなくフォームに入力して送信できます。 Webページ上の他の要素のコンテキストを維持し、アダプティブフォームやインタラクティブコミュニケーションと同時にやり取りするのに役立ちます。
 
-AEM Sitesシングルページアプリでは、 [AEM FormsSPAコンテナコンポーネントを使用して、アダプティブフォームまたはインタラクティブコミュニケーションを追加できます](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) これは、サイトページに追加できるAEM SitesSPAのAEM Formsコンポーネントです。
+AEM Sitesシングルページアプリでは、[AEM FormsSPAコンテナコンポーネント](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[を使用して、アダプティブフォームまたはインタラクティブコミュニケーションを追加できます。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) これは、サイトページに追加できるAEM SitesSPAのAEM Formsコンポーネントです。
 
-SPA以外のAEM Sitesにアダプティブフォームを埋め込む方法について詳しくは、「AEM Sitesページにアダプティブフォームまたはインタラクティブな通信を [埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)」を参照してください。
+SPA以外のAEM Sitesにアダプティブフォームを埋め込む方法について詳しくは、[AEM Sitesページにアダプティブフォームまたはインタラクティブな通信を埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)を参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -34,51 +34,51 @@ AEM FormsSPAコンテナコンポーネントを使用してAEMサイトSPAに�
 * Java SE開発キット8以降
 * Apache Maven 3.3.1以降
 * AEM作成者インスタンス
-* [AEM Forms6.4.2オーサーインスタンスのアドオンパッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)
+* [AEM Forms6.4.2アドオン](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) パッケージオン作成者インスタンス
 
-## AEM FormsSPAコンテナコンポーネントのインストール {#install-aem-forms-spa-container-component}
+## AEM FormsSPAコンテナコンポーネントのインストール{#install-aem-forms-spa-container-component}
 
 次の手順を実行して、AEM FormsSPAコンテナコンポーネントをインストールします。
 
 1. [SPA用のAEM Formsコンポーネントをコピーまたはダウンロードします](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa)。
-1. SPA用のAEM Formsコンポーネントをインストールします。 コンポーネントのインストール手順は、 [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa#aem-form-component) ファイルに記載されています。
+1. SPA用のAEM Formsコンポーネントをインストールします。 コンポーネントのインストール手順は、[README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa#aem-form-component)ファイルに記載されています。
 
-   コンポーネントは、SPAコンテナコンポーネントをReactベースのSPAプロジェクトと統合するために使用できる [サンプルのReactコンポーネント](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component) を含む。
+   コンポーネントは、SPAコンテナコンポーネントをReactベースのSPAプロジェクトと統合するために使用できる[サンプルのReactコンポーネント](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component)を含む。
 
 1. [リアクトベースのSPAプロジェクトのコピーまたはダウンロード](https://github.com/adobe/aem-sample-we-retail-journal)。
-1. SPAコンテナコンポーネントをReactベースのSPAプロジェクトに統合します( [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component#aem-form-react-component-for-spa---editor) ファイルの手順を参照)。
+1. [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component#aem-form-react-component-for-spa---editor)ファイルの説明に従って、SPAコンテナコンポーネントをReactベースのSPAプロジェクトに統合します。
 
    AEM FormsSPAコンテナコンポーネントをインストールし、コンポーネントとReactベースのSPAプロジェクトを統合した後、AEM SitesページにアダプティブフォームとInteractive Communicationsを埋め込むことができます。
 
-## アダプティブフォームまたはインタラクティブコミュニケーションを埋め込む {#af-component}
+## アダプティブフォームまたはインタラクティブ通信を埋め込む{#af-component}
 
 SPAコンテナコンポーネントにAEM Formsを使用してアダプティブフォームまたはインタラクティブコミュニケーションを埋め込むには：
 
 1. アダプティブフォームやインタラクティブコミュニケーションを埋め込むAEMサイトページを編集モードで開きます。
-1. 次のいずれかのオプションを使用して、SPA用 **AEMフォーム** コンポーネントをページに挿入します。
+1. 次のいずれかのオプションを使用して、**SPA**&#x200B;用AEMフォームコンポーネントをページに挿入します。
 
-   * サイトページのレイアウトコンテナをタップし、「 **+」をタップし** て、SPAコンポーネント用の **AEMフォームを選択します** 。
+   * サイトページのレイアウトコンテナをタップし、**+**&#x200B;をタップして、SPA **コンポーネント用の** AEMフォームを選択します。
 
-   * From the Component browser panel, drag-drop the **AEM Form for SPA** component on the page.
+   * コンポーネントブラウザパネルから、**SPA**&#x200B;用AEMフォームコンポーネントをページにドラッグ&amp;ドロップします。
    * アセットブラウザーでアダプティブフォームまたはインタラクティブコミュニケーションを検索し、サイトページにドラッグ&amp;ドロップします。 SPAコンポーネントコンテナ用にAEM Formsにフォームを埋め込みます。
 
    >[!NOTE]
    >
    >ページ上での複数のAEM FormsSPAコンテナコンポーネントのレンダリングはサポートされていません。 1つのページに複数のAEM FormsSPAコンテナを設定できますが、一度にレンダリングされるコンポーネントは1つだけです。 不一致を避けるために、1つのページに1つのコンポーネントのみが表示されていることを確認します。
 
-1. Tap the embedded AEM Forms SPA Container component in the sites page, and then tap ![settings_icon](assets/settings_icon.png) on the action bar. The **Edit AEM Forms SPA Container** dialog opens.
-1. In the **Edit AEM Forms Container** dialog, specify the following:
+1. サイトページに埋め込まれたAEM FormsSPAコンテナコンポーネントをタップし、アクションバーの![settings_icon](assets/settings_icon.png)をタップします。 [**AEM FormsSPAの編集**]ダイアログが開きます。
+1. **AEM Formsコンテナ**&#x200B;を編集ダイアログで、次の設定を指定します。
 
-   * **アセットの種類：**&#x200B;埋め込むアセットの種類を選択します。The options are **Adaptive Form** and **Interactive Communication**
+   * **アセットの種類：**&#x200B;埋め込むアセットの種類を選択します。オプションは、**アダプティブフォーム**&#x200B;と&#x200B;**インタラクティブコミュニケーション**&#x200B;です
 
-   * **Asset Path**:埋め込むアダプティブフォームまたはインタラクティブコミュニケーションを参照して選択します。 アダプティブフォームまたはインタラクティブ通信がアセットブラウザーを使用して挿入された場合、このフィールドには自動入力されます。
-   * **チャネル** （Interactive Communicationのみ）:埋め込むインタラクティブチャネルの種類を選択します。 「 **Webチャネル** 」と「 **印刷チャネル**」を選択できます。
+   * **Asset Path**:埋め込むアダプティブフォームまたはインタラクティブコミュニケーションを参照して選択します。アダプティブフォームまたはインタラクティブ通信がアセットブラウザーを使用して挿入された場合、このフィールドには自動入力されます。
+   * **チャネル** （対話型通信のみ）:埋め込むインタラクティブチャネルの種類を選択します。オプションは&#x200B;**Webチャネル**&#x200B;と&#x200B;**印刷チャネル**&#x200B;です。
 
-   * **テーマ**:アダプティブフォームまたはインタラクティブコミュニケーションのコンポーネントのスタイル設定を定義するテーマを選択します。 スタイル設定には、フォントスタイル、背景色、サイズ、配置など、外観のプロパティが含まれます。
+   * **テーマ**:アダプティブフォームまたはインタラクティブコミュニケーションのコンポーネントのスタイル設定を定義するテーマを選択します。スタイル設定には、フォントスタイル、背景色、サイズ、配置など、外観のプロパティが含まれます。
 
-1. Tap ![done_icon](assets/done_icon.png) to save the settings. これで、アダプティブフォームまたはインタラクティブ通信がページに埋め込まれます。
+1. ![done_icon](assets/done_icon.png)をタップして設定を保存します。 これで、アダプティブフォームまたはインタラクティブ通信がページに埋め込まれます。
 
-## 埋め込まれたアダプティブフォームとインタラクティブ通信の発行 {#publish-embedded-adaptive-form-and-interactive-communication}
+## 埋め込まれたアダプティブフォームとインタラクティブ通信を発行{#publish-embedded-adaptive-form-and-interactive-communication}
 
 埋め込みアセット（アダプティブフォームまたはインタラクティブコミュニケーション）をAEM Sitesページに発行する場合は、次のシナリオを考慮してください。
 
@@ -86,14 +86,14 @@ SPAコンテナコンポーネントにAEM Formsを使用してアダプティ�
 * 発行済みサイトページに埋め込まれたアダプティブフォームまたはインタラクティブコミュニケーションのみを変更した場合は、元のアセットを発行し、変更内容は発行済みサイトページに反映されます。 発行済みサイトページにはアセットへの参照が含まれており、ページを再発行する必要はありません。
 * サイトページと、埋め込まれたアダプティブフォームまたはインタラクティブコミュニケーションを変更した場合は、サイトページと埋め込まれたアセットを再発行します。
 
-## 埋め込まれたアダプティブフォームとインタラクティブ通信の変更 {#modify-embedded-adaptive-form-and-interactive-communication}
+## 埋め込まれたアダプティブフォームとインタラクティブ通信の変更{#modify-embedded-adaptive-form-and-interactive-communication}
 
 AEMサイトのページには、AEM Formsコンテナのアダプティブフォームとインタラクティブコミュニケーションへの参照が保持されています。 したがって、元のアダプティブフォームとインタラクティブコミュニケーションで設定されたテーマ、スタイル、送信アクションなどの設定とプロパティは、埋め込まれたアダプティブフォームとインタラクティブコミュニケーションでも保持されます。
 
 埋め込まれたアダプティブフォームおよびインタラクティブ通信の設定やプロパティを変更するには、次のいずれかを実行します。
 
 * 各エディターでアダプティブフォームまたはインタラクティブコミュニケーションでオリジナルフォームを開き、変更します。
-* Tap the adaptive form or Interactive Communication from within the Sites page in edit mode and then tap **Edit in a new window**. 元のフォームが編集モードで開きます。
+* 編集モードでサイトページ内からアダプティブフォームまたはインタラクティブコミュニケーションをタップし、**新しいウィンドウで編集**&#x200B;をタップします。 元のフォームが編集モードで開きます。
 
 ## 注意点とベストプラクティス {#considerations-and-best-practices}
 
