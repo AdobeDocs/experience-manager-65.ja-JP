@@ -28,15 +28,15 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 * PDF のフォーム
 * ドキュメント（非インタラクティブ PDF ドキュメント）
 
-サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。You can upload an asset of the type `Resource`, only alongside an XFA form in a ZIP archive.
+サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。タイプ`Resource`のアセットは、XFAフォームと一緒にZIPアーカイブでのみアップロードできます。
 
 >[!NOTE]
 >
 >XDP ファイルをアップロードすることができる `form-power-users` グループのメンバーであることを確認してください。このグループのメンバーになるには、管理者に連絡します。
 
-## フォームのアップロード {#uploading-forms}
+## フォームのアップロード  {#uploading-forms}
 
-1. Log in to the AEM Forms user interface by accessing `https://'[server]:[port]'/aem/forms.html`.
+1. `https://'[server]:[port]'/aem/forms.html`にアクセスして、AEM Formsユーザーインターフェイスにログインします。
 1. フォームまたはフォームを含むフォルダーをアップロードしたいフォルダーに移動します。
 1. アクションツールバーで、**作成／ファイルのアップロード**&#x200B;をタップします。
 
@@ -62,13 +62,13 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 
 アップロードが完了すると、アセットのプレビューに基づいて、バックグラウンドワークフローが各アセットごとにサムネイルを生成します。新しいバージョンのアセットがアップロードされた場合は、既存のアセットに上書きされます。
 
-### 保護モード {#protected-mode}
+### 保護モード  {#protected-mode}
 
 AEM Forms サーバーを使用することで、JavaScript コードを実行できます。悪質な JavaScript コードの場合、AEM Forms 環境に障害が発生する可能性があります。保護モードは、信頼済みのアセットおよび場所からのみ XDP ファイルを実行するように制限します。AEM Forms UI で使用可能なすべての XDP は、信頼済みのアセットと見なされます。
 
 保護モードは、デフォルトではオンになっています。必要に応じて、保護モードを無効にすることができます。
 
-1. AEM Web コンソールに管理者としてログインします。The URL is https://&#39;[server]:[port]&#39;/system/console/configMgr
+1. AEM Web コンソールに管理者としてログインします。URLはhttps://&#39;[server]:[port]&#39;/system/console/configMgrです。
 1. Mobile Forms の設定を編集用に開きます。
 1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードは無効です。
 
@@ -85,7 +85,7 @@ XFA を参照しているアダプティブフォームは、そのフィール�
 
 ![関連 XFA の更新後の非同期のアダプティブフォームの警告](assets/dirtyaf.png)
 
-アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。Only for dirty adaptive forms, a metadata property `Model Refresh` displays `Recommended` value.
+アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。dirtyアダプティブフォームの場合のみ、メタデータプロパティ`Model Refresh`は`Recommended`値を表示します。
 
 ![アダプティブフォームが XFA モデルと非同期であることを示す](assets/model-refresh.png)
 
