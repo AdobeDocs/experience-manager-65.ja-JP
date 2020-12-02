@@ -58,7 +58,7 @@ ht-degree: 100%
 
 1. 「**保存**」をクリックします。
 
-## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
+## ページのローンチステータスの確認  {#discovering-the-launch-status-of-a-page}
 
 ページのローンチの編集時、ローンチについての情報がサイドキックの「**バージョン管理**」タブの下部に表示されます。
 
