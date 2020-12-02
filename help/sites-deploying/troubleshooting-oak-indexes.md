@@ -28,15 +28,15 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 コンテンツのインデックス再作成のタイミングおよび方法について詳しくは、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 
-## 最初の検出 {#initial-detection}
+## 最初の検出  {#initial-detection}
 
 時間がかかっているインデックス作成を最初に検出するには、`IndexStats` JMX MBean を確認する必要があります。影響を受ける AEM インスタンスで、次の手順を実行します。
 
-1. Open the Web Console and click the JMX tab or go to https://&lt;host>:&lt;port>/system/console/jmx (for example, [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)).
-1. Navigate to the `IndexStats` Mbeans.
-1. 「」と「」の `IndexStats` MBeanを開き `async`ま `fulltext-async`す。
+1. Webコンソールを開き、「JMX」タブをクリックするか、https://&lt;host>:&lt;port>/system/console/jmxに移動します(例：[http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))。
+1. `IndexStats` Mbeansに移動します。
+1. 「 `async` 」と「 `fulltext-async` 」の`IndexStats` MBeansを開きます。
 
-1. For both MBeans, check if the **Done** timestamp and **LastIndexTime** timestamp are less than 45 mins from the current time.
+1. 両方のMBeanに対して、**完了**&#x200B;タイムスタンプと&#x200B;**LastIndexTime**&#x200B;タイムスタンプが、現在の時刻から45分未満かどうかを確認します。
 
 1. いずれかの MBean で、時間値（**Done** または **LastIndexedTime**）が現在の時刻から 45 分以上前である場合は、インデックスジョブが失敗しているか、時間がかかりすぎています。これにより、非同期インデックスが古くなります。
 
@@ -46,22 +46,22 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 1. 最初に、AEM インスタンスが強制的に終了した（AEM プロセスが強制的に kill された、または電源障害が発生した）後に再起動したかどうかを確認します。
 
-   * [AEMのログは](/help/sites-deploying/configure-logging.md) 、この目的で確認できます。
+   * [AEM ](/help/sites-deploying/configure-logging.md) loggingは、この目的で確認できます。
 
 1. 強制終了が発生した場合、再起動後 AEM ではインデックス再作成が自動的に最大 30 分停止します。
 1. AEM で通常の非同期インデックス作成操作が再開されるまで約 45 分待ってください。
 
-## スレッドプールが過負荷になる {#thread-pool-overloaded}
+## スレッドプールが過負荷になる  {#thread-pool-overloaded}
 
 >[!NOTE]
 >
->For AEM 6.1, ensure that [AEM 6.1 CFP 11](https://helpx.adobe.com/experience-manager/release-notes-aem-6-1-cumulative-fix-pack.html) is installed.
+>AEM 6.1の場合、[AEM 6.1 CFP 11](https://helpx.adobe.com/experience-manager/release-notes-aem-6-1-cumulative-fix-pack.html)がインストールされていることを確認します。
 
 例外的な状況で、非同期インデックス作成の管理に使用されるスレッドプールが過負荷になることがあります。インデックス作成プロセスを分離するために、適当な時間でコンテンツにインデックス作成する Oak の機能に他の AEM の処理が干渉しないように、スレッドプールを設定できます。そのためには、次の手順を実行します。
 
 1. Apache Sling Scheduler が非同期インデックス作成に使用する、分離された新しいスレッドプールを定義します。
 
-   * On the affected AEM instance, navigate to AEM OSGi Web Console>OSGi>Configuration>Apache Sling Scheduler or go to https://&lt;host>:&lt;port>/system/console/configMgr (for example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
+   * 影響を受けるAEMインスタンスで、AEM OSGi Web Console>OSGi>Configuration>Apache Slingスケジューラーに移動するか、https://&lt;host>:&lt;port>/system/console/configMgr(例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))に移動します。
    * 「Allowed Thread Pools」フィールドに「oak」という値でエントリを追加します。
    * 右下の「Save」をクリックして変更内容を保存します。
 
@@ -69,7 +69,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 1. Apache Sling Scheduler の新しいスレッドプールが登録され、Apache Sling Scheduler のステータス Web コンソールに表示されることを確認します。
 
-   * Navigate to the AEM OSGi Web console>Status>Sling Scheduler or go to https://&lt;host>:&lt;port>/system/console/status-slingscheduler (for example, [http://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler))
+   * AEM OSGi Webコンソール>Status>Slingスケジューラーに移動するか、https://&lt;host>:&lt;port>/system/console/status-slingscheduler(例：[http://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler))に移動します。
    * 次のプールエントリが存在することを確認します。
 
       * ApacheSlingoak
@@ -81,18 +81,18 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 リポジトリに非常に多くの変更とコミットが短時間におこなわれた場合、監視キューがいっぱいになることによってインデックス作成が遅延することがあります。まず、監視キューがいっぱいかどうかを確認します。
 
-1. Go to the Web Console and click the JMX tab or go to https://&lt;host>:&lt;port>/system/console/jmx (for example, [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+1. Webコンソールに移動し、「JMX」タブをクリックするか、https://&lt;host>:&lt;port>/system/console/jmxに移動します(例：[http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))。
 1. Oak リポジトリ統計 MBean を開き、いずれかの `ObservationQueueMaxLength` 値が 10,000 より大きいかどうかを確認します。
 
    * 通常の操作では、この最大値は（特に `per second` セクションでは）最終的に 0 になる必要があるので、`ObservationQueueMaxLength` の秒の指標が 0 であることを確認します。
    * 値が 10,000 以上で、徐々に増加する場合は、少なくとも 1 つ（あるいはそれ以上）のキューを新しい変更（コミット）が発生するのと同じ速さで処理できないことを示しています。
    * 各監視キューには制限（デフォルトは 10,000）があり、キューがこの制限に達すると処理能力が低下します。
-   * MongoMK を使用している場合は、キューの長さが長くなるにつれて内部 Oak キャッシュのパフォーマンスが低下します。This correlation can be seen in an increased `missRate` for the `DocChildren` cache in the `Consolidated Cache` statistics MBean.
+   * MongoMK を使用している場合は、キューの長さが長くなるにつれて内部 Oak キャッシュのパフォーマンスが低下します。この相関関係は、`Consolidated Cache`統計MBeanの`DocChildren`キャッシュの増加`missRate`で確認できます。
 
 1. 許容可能な監視キュー制限を超えないようにするには、次のことをお勧めします。
 
    * 通常時のコミット数を低く抑える。コミットの短時間の急増は許容できますが、通常時のコミット数は低く抑える必要があります。
-   * Increase the size of the `DiffCache` as described in [Performance tuning tips > Mongo Storage Tuning > Document cache size](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html#main-pars_text_3).
+   * [パフォーマンス調整のヒント/Mongoストレージ調整/ドキュメントキャッシュサイズ](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html#main-pars_text_3)で説明されているように、`DiffCache`のサイズを大きくします。
 
 ## 動きがないインデックス再作成プロセスの識別および修正 {#identifying-and-remediating-a-stuck-re-indexing-process}
 
@@ -113,48 +113,48 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
       * *org.apache.jackrabbit.oak.plugins.index.AsyncIndexUpdate*
       * *org.apache.jackrabbit.oak.plugins.index.IndexUpdate*
-   * Collect data from the async `IndexStats` MBean:
+   * 非同期`IndexStats` MBeanからデータを収集します。
 
       * AEM OSGi Web Console>Main>JMX>IndexStat>asyncに移動します。
 
-         or go to [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
-   * Use [oak-run.jar&#39;s console mode](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) to collect the details of what exists under the * `/:async`* node.
-   * Collect a list of repository checkpoints by using the `CheckpointManager` MBean:
+         または、[http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)に移動します。
+   * [oak-run.jarのコンソールモード](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)を使用して、* `/:async`*ノードの下に存在する内容の詳細を収集します。
+   * `CheckpointManager` MBeanを使用して、リポジトリチェックポイントのリストを収集します。
 
       * AEM OSGi Web Console>Main>JMX>CheckpointManager>listCheckpoints()
 
-         or go to [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager)
+         または、[http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager)に移動します。
 
 
 
 1. 手順1で説明したすべての情報を収集した後、AEMを再起動します。
 
    * 同時負荷が大きい場合は（監視キューのオーバーフローや類似の現象）、AEM を再起動すると問題が解決することがあります。
-   * If a restart does not solve the problem, open an issue with [Adobe Customer Care](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html) and provide all the information collected in Step 1.
+   * 再起動しても問題が解決しない場合は、[Adobeカスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)の問題を開き、手順1で収集したすべての情報を入力します。
 
 ## 非同期のインデックス再作成を安全に中止する {#safely-aborting-asynchronous-re-indexing}
 
-Re-indexing can be safely aborted (stopped before it is completed) via the `async, async-reindex`and f `ulltext-async` indexing lanes ( `IndexStats` Mbean). For more information, also see the Apache Oak documentation on [How to Abort Reindexing](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex). また、次の点も考慮してください。
+`async, async-reindex`および`ulltext-async`インデックスレーン(`IndexStats` Mbean)を介して、再インデックスを安全に中止（完了する前に停止）できます。 詳しくは、[再インデックスを中止する方法](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex)に関するApache Oakのドキュメントも参照してください。 また、次の点も考慮してください。
 
 * Lucene および Lucene プロパティインデックスのインデックス再作成は、これらが本来非同期であることから中止できます。
-* The re-indexing of Oak Property Indexes can only be aborted if re-indexing was intiated via the `PropertyIndexAsyncReindexMBean`.
+* Oakプロパティインデックスの再インデックスは、`PropertyIndexAsyncReindexMBean`を介して再インデックスが開始された場合にのみ中止できます。
 
 インデックス再作成を安全に中止するには、次の手順に従います。
 
 1. 停止する必要があるインデックス再作成レーンを制御する IndexStats MBean を識別します。
 
-   * Navigate to the appropriate IndexStats MBean via the JMX console by going to either AEM OSGi Web Console>Main>JMX or https://&lt;host>:&lt;port>/system/console/jmx (for example, [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
-   * Open the IndexStats MBean based on the re-indexing lane that you wish to stop ( `async`, `async-reindex`, or `fulltext-async`)
+   * AEM OSGi Webコンソール>Main>JMXまたはhttps://&lt;host>:&lt;port>/system/console/jmx(例：[http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))に移動し、JMXコンソールを介して適切なIndexStats MBeanに移動します。
+   * 停止する再インデックス付けレーン（`async`、`async-reindex`、または`fulltext-async`）に基づいてIndexStats MBeanを開きます。
 
-      * 適切なレーンを識別し、IndexStats MBeanインスタンスを識別するには、Oak Indexesの「async」プロパティを確認します。 The &quot;async&quot; property will contain the lane name: `async`, `async-reindex`, or `fulltext-async`.
+      * 適切なレーンを識別し、IndexStats MBeanインスタンスを識別するには、Oak Indexesの「async」プロパティを確認します。 「async」プロパティには、レーン名が含まれます。`async`、`async-reindex`、または`fulltext-async`。
       * レーンは、AEM のインデックスマネージャにアクセスして、「非同期」列で識別することもできます。インデックスマネージャにアクセスするには、運営／診断／インデックスマネージャに移動します。
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
-1. Invoke the `abortAndPause()` command on the appropriate `IndexStats` MBean.
+1. 適切な`IndexStats` MBeanで`abortAndPause()`コマンドを呼び出します。
 1. インデックス付けレーンの再開時に再インデックスを再開しないように、Oakインデックス定義を適切にマークします。
 
-   * **既存のインデックスを再インデックスする場合** 、reindexプロパティをfalseに設定します
+   * **既存の**&#x200B;インデックスを再インデックスする場合、reindexプロパティをfalseに設定します
 
       * `/oak:index/someExistingIndex@reindex=false`
    * あるいは、**新規**&#x200B;インデックスの場合は次のようにします。
@@ -168,7 +168,7 @@ Re-indexing can be safely aborted (stopped before it is completed) via the `asyn
 
 1. 最後に、中止したインデックス作成レーンで非同期インデックス作成を再開します。
 
-   * In the `IndexStats` MBean that issued the `abortAndPause()` command in Step 2, invoke the `resume()`command.
+   * 手順2で`abortAndPause()`コマンドを発行した`IndexStats` MBeanで、`resume()`コマンドを呼び出します。
 
 ## 時間のかかるインデックス再作成の回避 {#preventing-slow-re-indexing}
 
