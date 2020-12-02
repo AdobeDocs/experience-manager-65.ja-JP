@@ -1,5 +1,5 @@
 ---
-title: 'のメタデータプロパティページのレイアウトを定義するメタデータスキーマ [!DNL Adobe Experience Manager Assets]。 '
+title: 'メタデータプロパティページのレイアウトを定義するメタデータスキーマ（ [!DNL Adobe Experience Manager Assets]内）。 '
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
@@ -15,37 +15,37 @@ ht-degree: 60%
 
 組織は、アセットの検出、使用、相互運用性などを強化するメタデータモデルを考案しています。 正しいメタデータアプリケーションは、メタデータ主導のワークフローとプロセスを維持するために適切です。 組織全体のメタデータの戦略と標準に従うため、DAMユーザーの整列に役立つメタデータスキーマを使用できます。 [!DNL Adobe Experience Manager] メタデータスキーマの作成、管理および適用を、簡単で柔軟な方法で行うことができます。
 
-で [!DNL Adobe Experience Manager Assets]は、スキーマに、入力する特定の情報の特定のフィールドが含まれています。 また、メタデータフィールドをユーザにわかりやすく表示するためのレイアウト情報も含まれます。 メタデータプロパティには、タイトル、説明、MIMEタイプ、タグなどがあります。 You can use the [!UICONTROL Metadata Schema Forms] editor to modify the existing schemas or add custom metadata schemas.
+[!DNL Adobe Experience Manager Assets]では、スキーマには、入力する特定の情報に対する特定のフィールドが含まれています。 また、メタデータフィールドをユーザにわかりやすく表示するためのレイアウト情報も含まれます。 メタデータプロパティには、タイトル、説明、MIMEタイプ、タグなどがあります。 [!UICONTROL メタデータスキーマForms]エディターを使用して、既存のスキーマを変更したり、カスタムメタデータスキーマを追加したりできます。
 
 アセットのプロパティページを表示して編集するには、次の手順に従います。
 
-1. カード表示のアセットタイルにあるクイックアクションから、 **[!UICONTROL 表示のプロパティ]** (Asset Properties)オプションをクリックします。 または、アセットを選択し、ツールバーで「 **[!UICONTROL プロパティ]**![](assets/do-not-localize/info-circle-icon.png) 表示プロパティ」をクリックします。
+1. カード表示のアセットタイルのクイックアクションで、**[!UICONTROL 表示のプロパティ]**&#x200B;オプションをクリックします。 または、アセットを選択し、ツールバーの&#x200B;**[!UICONTROL プロパティ]** ![表示プロパティ](assets/do-not-localize/info-circle-icon.png)をクリックします。
 
-1. 使用可能なタブで、編集可能な様々なメタデータプロパティを編集できます。 However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
+1. 使用可能なタブで、編集可能な様々なメタデータプロパティを編集できます。 ただし、プロパティページの「[!UICONTROL 基本]」タブで[!UICONTROL Type]アセットを変更することはできません。
 
    ![アセットのプロパティの「基本」タブ（アセットタイプを変更できない場合）](assets/asset-properties-basic-tab.png)
 
 *図：アセットの [!UICONTROL プロパティの「基本」タブ]。*
 
-アセットの MIME タイプを変更するには、カスタムメタデータスキーマフォームを使用するか、既存のフォームを変更します。See [Edit Metadata Schema Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) for more information. MIMEタイプのメタデータスキーマを変更すると、アセットとすべてのサブタイプのプロパティページレイアウトが変更されます。 例えば、`default/image` 配下の jpeg スキーマを変更すると、MIME タイプが `image/jpeg` のアセットのメタデータのレイアウト（アセットプロパティ）のみが変更されます。ただし、デフォルトスキーマを編集する場合は、すべてのタイプのアセットのメタデータのレイアウトを変更します。
+アセットの MIME タイプを変更するには、カスタムメタデータスキーマフォームを使用するか、既存のフォームを変更します。詳しくは、[メタデータスキーマーの編集Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms)を参照してください。 MIMEタイプのメタデータスキーマを変更すると、アセットとすべてのサブタイプのプロパティページレイアウトが変更されます。 例えば、`default/image` 配下の jpeg スキーマを変更すると、MIME タイプが `image/jpeg` のアセットのメタデータのレイアウト（アセットプロパティ）のみが変更されます。ただし、デフォルトスキーマを編集する場合は、すべてのタイプのアセットのメタデータのレイアウトを変更します。
 
-## Metadata Schema forms {#default-metadata-schema-forms}
+## メタデータスキーマフォーム{#default-metadata-schema-forms}
 
-フォームまたはテンプレートのリストを表示するには、インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータスキーマに移動します]**。
+フォームまたはテンプレートのリストを表示するには、[!DNL Experience Manager]インターフェイスで&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL アセット]**/**[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。
 
 [!DNL Experience Manager] には、次のメタデータスキーマフォームテンプレートが用意されています。
 
 | テンプレート |  | 説明 |
 |---|---|---|
 | [!UICONTROL default] |  | アセットのベースメタデータスキーマフォーム。 |
-|  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
+|  | 次の子フォームは、[!UICONTROL デフォルト]フォームのプロパティを継承します。 |  |
 |  | <ul><li>[!UICONTROL dm_video]</li></ul> | ダイナミックメディアビデオのスキーマフォーム。 |
-|  | <ul><li>[!UICONTROL 画像]</li></ul> | MIMEタイプがandなどの画像のスキーマフォ `image/jpeg` ーム `image/png`。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]:サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]:サブタイプがTIFFのアセットのスキーマフォーム。</li></ul> |
-|  | <ul><li>[!UICONTROL アプリケーション]</li></ul> | Schema form for assets with MIME type such as `application/pdf` and `application/zip`. <br>[!UICONTROL pdf]:サブタイプがPDFのアセットのスキーマフォームです。 |
-|  | <ul><li>[!UICONTROL ビデオ]</li></ul> | MIMEタイプ（例：および）を持つビデオアセットのスキーマフォ `video/avi` ーム `video/mp4`。 |
+|  | <ul><li>[!UICONTROL 画像]</li></ul> | `image/jpeg`や`image/png`など、MIMEタイプが指定された画像のスキーマフォーム。 <br> この  画像フォームには、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]:サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]:サブタイプがTIFFのアセットのスキーマフォーム。</li></ul> |
+|  | <ul><li>[!UICONTROL アプリケーション]</li></ul> | `application/pdf`や`application/zip`など、MIMEタイプを持つアセットのスキーマフォーム。 <br>[!UICONTROL pdf]:サブタイプがPDFのアセットのスキーマフォームです。 |
+|  | <ul><li>[!UICONTROL ビデオ]</li></ul> | `video/avi`や`video/mp4`などのMIMEタイプを持つビデオアセットのスキーマフォーム。 |
 | [!UICONTROL collection] |  | コレクションのスキーマフォーム。 |
 | [!UICONTROL contentfragment] |  | [コンテンツフラグメントのスキーマフォーム](/help/sites-developing/customizing-content-fragments.md)。 |
-| [!UICONTROL forms] |  | This schema form relates to [Adobe Experience Manager Forms](/help/forms/home.md). |
+| [!UICONTROL forms] |  | このスキーマ形式は[Adobe Experience Manager Forms](/help/forms/home.md)に関するものです。 |
 | [!UICONTROL ugc_contentfragment] |  | ソーシャルメディアからExperience Managerに統合された、ユーザーが生成するコンテンツ要素およびアセットのスキーマフォーム。 |
 
 >[!NOTE]
@@ -60,25 +60,25 @@ ht-degree: 60%
 
    >[!NOTE]
    >
-   >ロック記号は、編集されていないテンプレートと共に表示されます。 テンプレートをカスタマイズしても、ロックは ![閉じられません](assets/do-not-localize/lock_closed_icon.svg)。
+   >ロック記号は、編集されていないテンプレートと共に表示されます。 テンプレートをカスタマイズした場合、ロック![ロック](assets/do-not-localize/lock_closed_icon.svg)は解除されません。
 
-1. In the dialog, provide the title of the schema form and click **[!UICONTROL Create]** to complete the form creation process.
+1. このダイアログで、スキーマフォームのタイトルを入力し、「**[!UICONTROL 作成]**」をクリックしてフォーム作成プロセスを完了します。
 
 ## メタデータスキーマフォームの編集 {#edit-metadata-schema-forms}
 
 新しく追加したメタデータスキーマフォームまたは既存のメタデータスキーマフォームを編集できます。メタデータスキーマフォームは、タブ内にタブとフォーム項目を含みます。 これらのフォーム項目を CRX リポジトリのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。メタデータスキーマフォームには、タブまたはフォーム項目を追加できます。 親から派生したタブおよびフォーム項目はロック状態です。子レベルではこれらを変更できません。
 
-1. メタデータ [!UICONTROL スキーマForms] ページで、フォームを選択し、ツールバーの **[!UICONTROL 編集]** をクリックします。
+1. [!UICONTROL メタデータスキーマForms]ページで、フォームを選択し、ツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックします。
 
-1. メタデータ **[!UICONTROL スキーマフォームエディタ]** ページで、メタデータフォームをカスタマイズします。 必要なコンポーネントを「 **[!UICONTROL Build Form]** 」タブからいずれかのタブにドラッグします。
+1. **[!UICONTROL メタデータスキーマフォームエディター]**&#x200B;ページで、メタデータフォームをカスタマイズします。 必要なコンポーネントを「**[!UICONTROL フォームを構築]**」タブからいずれかのタブにドラッグします。
 
    ![アセットのプロパティページをカスタマイズするメタデータスキーマエディタ](assets/metadata-schema-editor.png)
 
-   *図：使用可能なタブを含む [!UICONTROL メタデータスキーマフォームエディタ] ページ。*
+   *図：使用可能なタブを含む [!UICONTROL メタデータスキーマフォーム] エディタページ*
 
 1. コンポーネントを設定するには、コンポーネントを選択して、「**[!UICONTROL 設定]**」タブでそのプロパティを変更します。
 
-### Components within the [!UICONTROL Build Form] tab {#components-within-the-build-form-tab}
+### [!UICONTROL 「フォームをビルド]」タブ{#components-within-the-build-form-tab}内のコンポーネント
 
 「**[!UICONTROL フォームを作成]**」タブには、スキーマフォーム内で使用するフォーム項目が表示されます。「**[!UICONTROL 設定]**」タブに、「**[!UICONTROL フォームを作成]**」タブで選択した各項目の属性が表示されます。「**[!UICONTROL フォームを作成]**」タブで使用できるフォーム項目を次の表に示します。
 
@@ -101,11 +101,11 @@ ht-degree: 60%
 
 #### メタデータコンポーネントの編集 {#edit-the-metadata-component}
 
-To edit the properties of a metadata component on the form, click the component to edit all or a subset of the following properties in the **[!UICONTROL Settings]** tab.
+フォーム上のメタデータコンポーネントのプロパティを編集するには、コンポーネントをクリックして、「**[!UICONTROL 設定]**」タブで次のプロパティのすべてまたはサブセットを編集します。
 
 **フィールドラベル**：アセットのプロパティページに表示されるメタデータプロパティの名前。
 
-**プロパティにマップ**:このプロパティは、CRXリポジトリに保存されるアセットノードの相対パスまたは名前を指定します。 It starts with `./` to indicate that the path is under the asset&#39;s node.
+**プロパティにマップ**:このプロパティは、CRXリポジトリに保存されるアセットノードの相対パスまたは名前を指定します。`./`との開始は、パスがアセットのノードの下にあることを示します。
 
 このプロパティの有効な値は次のとおりです。
 
@@ -123,11 +123,11 @@ To edit the properties of a metadata component on the form, click the component 
 * **選択肢**：リストの選択肢を指定するには、このプロパティを使用します。
 * **説明**：メタデータコンポーネントの短い説明を追加するには、このプロパティを使用します。
 * **クラス**：プロパティに関連付けられているオブジェクトクラス。
-* **削除**:「 [!UICONTROL 削除] 」をクリックして、スキーマフォームからコンポーネントを削除します。
+* **削除**:「  削除」をクリックして、スキーマフォームからコンポーネントを削除します。
 
 >[!NOTE]
 >
->The [!UICONTROL Hidden Field] component does not include these attributes. 代わりに、属性の名前、値、フィールドラベル、説明などのプロパティが含まれています。非表示のフィールドコンポーネントの値は、アセットの保存時に常に POST パラメーターとして送信されます。この値は、アセットのメタデータとして保存されません。
+>[!UICONTROL 隠しフィールド]コンポーネントには、これらの属性は含まれません。 代わりに、属性の名前、値、フィールドラベル、説明などのプロパティが含まれています。非表示のフィールドコンポーネントの値は、アセットの保存時に常に POST パラメーターとして送信されます。この値は、アセットのメタデータとして保存されません。
 
 「**[!UICONTROL 必須]**」オプションを選択した場合、必須のメタデータが設定されていないアセットを検索できます。**[!UICONTROL フィルター]**&#x200B;パネルで、「**[!UICONTROL メタデータの検証]**」述語を展開して、「**[!UICONTROL 無効]**」オプションを選択します。検索結果に、スキーマフォームで設定した必須のメタデータが設定されていないアセットが表示されます。
 
@@ -149,11 +149,11 @@ Contextual Metadataコンポーネントが適用されるタブに加えて、�
 
 #### スキーマフォームでのタブの追加または削除 {#adding-deleting-a-tab-in-the-schema-form}
 
-スキーマエディターで、タブを追加または削除できます。The default schema form includes the **[!UICONTROL Basic]**, **[!UICONTROL Advanced]** , **[!UICONTROL IPTC]**, and **[!UICONTROL IPTC Extension]** tabs.
+スキーマエディターで、タブを追加または削除できます。デフォルトのスキーマフォームには、「基本&#x200B;]**」、「**[!UICONTROL &#x200B;詳細&#x200B;]**」、「**[!UICONTROL  IPTC ]**」、「**[!UICONTROL  IPTC拡張子&#x200B;]**」の各タブが含まれます。**[!UICONTROL 
 
 ![メタデータスキーマフォームのデフォルトタブ](assets/metadata-schema-form-tabs.png)
 
-Click `+` to add a tab on a schema form. By default, the new tab has the name `Unnamed-1`. この名前は、「**[!UICONTROL 設定]**」タブから編集できます。タブを削除するには、「`X`」をクリックします。
+`+`をクリックして、スキーマフォームにタブを追加します。 デフォルトでは、新しいタブの名前は`Unnamed-1`です。 この名前は、「**[!UICONTROL 設定]**」タブから編集できます。タブを削除するには、「`X`」をクリックします。
 
 ![メタデータスキーマエディターを追加使用したタブの削除](assets/metadata-schema-form-new-tab.png)
 
@@ -176,7 +176,7 @@ Click `+` to add a tab on a schema form. By default, the new tab has the name `U
 * 別のフィールドに指定された値に基づいて、特定のフィールドに表示されるオプションを変更します。
 * 別のフィールドに指定された値に基づいて、特定のフィールドにデフォルトのメタデータ値を設定します。
 
-### Configure cascading metadata in [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
+### [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}にカスケードメタデータを設定
 
 選択されたアセットタイプに基づいて、カスケードメタデータを表示するシナリオを検討します。いくつかの例を示します。
 
@@ -185,14 +185,14 @@ Click `+` to add a tab on a schema form. By default, the new tab has the name `U
 
 選択したアセットタイプに関係なく、著作権情報を必須フィールドとして表示します。
 
-1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータスキーマに移動します]**。
-1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
+1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL アセット]** > **[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。
+1. **[!UICONTROL スキーマForms]**&#x200B;ページでスキーマフォームを選択し、ツールバーの「**[!UICONTROL 編集]**」をクリックしてスキーマを編集します。
 
    ![select_form](assets/select_form.png)
 
 1. （オプション）メタデータスキーマエディターで、条件化する新しいフィールドを作成します。「**[!UICONTROL 設定]**」タブで、名前およびプロパティのパスを指定します。
 
-   To create a new tab, click `+` to add a tab and then add a metadata field.
+   新しいタブを作成するには、`+`をクリックしてタブを追加し、メタデータフィールドを追加します。
 
    ![add_tab](assets/add_tab.png)
 
@@ -202,7 +202,7 @@ Click `+` to add a tab on a schema form. By default, the new tab has the name `U
 
 1. キーと値のペアは、フォームユーザーに提供されるオプションです。キーと値のペアは手動でも JSON ファイルからも指定できます。
 
-   * To specify the values manually, select **[!UICONTROL Add Manually]**, and click **[!UICONTROL Add Choice]** and specify the option text and value. 例えば、ビデオ、PDF、Word、画像などのアセットタイプを指定します。
+   * 手動で値を指定するには、「**[!UICONTROL 追加手動]**」を選択し、「**[!UICONTROL 選択]**」をクリックして、オプションのテキストと値追加を指定します。 例えば、ビデオ、PDF、Word、画像などのアセットタイプを指定します。
 
    * JSON ファイルから値を動的に取得するには、「**[!UICONTROL JSON パスで追加]**」を選択し、JSON ファイルのパスを指定します。[!DNL Experience Manager] は、フォームがユーザーに提供されたときに、キーと値のペアをリアルタイムで取得します。
 
@@ -229,7 +229,7 @@ Click `+` to add a tab on a schema form. By default, the new tab has the name `U
    ![select_dependentfield](assets/select_dependentfield.png)
 
 1. 「**[!UICONTROL 要件]**」から、「**[!UICONTROL 必須、新しいルールに基づく]**」オプションを選択します。
-1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。Click **[!UICONTROL Done]** to save the changes.
+1. 「**[!UICONTROL ルール]**」をクリックし、追加「**[!UICONTROL アセットタイプ]**」フィールドを選択して、依存関係を作成します。 また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。「**[!UICONTROL 完了]**」をクリックして変更を保存します。
 
    ![define_rule](assets/define_rule.png)
 
@@ -239,7 +239,7 @@ Click `+` to add a tab on a schema form. By default, the new tab has the name `U
 
 1. 「**[!UICONTROL 視認性]**」の下で、「**[!UICONTROL 表示可、新しいルールに基づく]**」オプションを選択します。
 
-1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。Click **[!UICONTROL Done]** to save the changes.
+1. 「**[!UICONTROL ルール]**」をクリックし、追加「**[!UICONTROL アセットタイプ]**」フィールドを選択して、依存関係を作成します。 また、依存関係を作成するフィールド値も選択します。この場合は、「**[!UICONTROL ビデオ]**」を選択します。「**[!UICONTROL 完了]**」をクリックして変更を保存します。
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
@@ -273,23 +273,23 @@ Click `+` to add a tab on a schema form. By default, the new tab has the name `U
 
 >[!NOTE]
 >
->* デフォルトのフォームに対するカスタム変更を削除すると、ロック ![ロックが閉じた状態がフォームの前に再び表示され](assets/do-not-localize/lock_closed_icon.svg) ます。 これは、フォームがデフォルトの状態に戻されることを示します。
->* では、デフォルトのメタデータスキーマフォームを削除できません [!DNL Assets]。
+>* デフォルトのフォームに対するカスタム変更を削除すると、ロック![ロック](assets/do-not-localize/lock_closed_icon.svg)がフォームの前に再び表示されます。 これは、フォームがデフォルトの状態に戻されることを示します。
+>* [!DNL Assets]内のデフォルトのメタデータスキーマフォームは削除できません。
 
 
 ## MIME タイプ用のスキーマフォーム {#schema-forms-for-mime-types}
 
 [!DNL Experience Manager] には、様々な MIME タイプですぐに使用できるデフォルトのフォームが用意されています。ただし、様々な MIME タイプのアセットにカスタムのフォームを追加することができます。
 
-### Add new forms for MIME types {#add-new-forms-for-mime-types}
+### 追加MIMEタイプ用の新しいフォーム{#add-new-forms-for-mime-types}
 
-適切なフォームの種類でフォームを作成します。 For example, to add a template for the `image/png` subtype, create the form under the &quot;image&quot; forms. スキーマフォームのタイトルはサブタイプ名です。In this case, the title is `png`.
+適切なフォームの種類でフォームを作成します。 例えば、サブタイプ`image/png`のテンプレートを追加するには、「image」フォームの下にフォームを作成します。 スキーマフォームのタイトルはサブタイプ名です。この場合、タイトルは`png`です。
 
-#### Use an existing schema template for various MIME types {#use-an-existing-schema-template-for-various-mime-types}
+#### 様々なMIMEタイプに対して既存のスキーマテンプレートを使用{#use-an-existing-schema-template-for-various-mime-types}
 
 別の MIME タイプに対して既存のテンプレートを使用できます。例えば、MIME タイプ `image/png` のアセットに対して `image/jpeg` フォームを使用します。
 
-In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the CRX repository. そのノードの名前を指定し、次のプロパティを定義します。
+この場合、CRXリポジトリの`/etc/dam/metadataeditor/mimetypemappings`にノードを作成します。 そのノードの名前を指定し、次のプロパティを定義します。
 
 | 名前 | 説明 | タイプ | 値 |
 |------|-------------|------|-------|
@@ -314,7 +314,7 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
 ## メタデータスキーマへのアクセス権の付与 {#grant-access-to-metadata-schemas}
 
-メタデータスキーマ機能は、管理者のみが使用できます。ただし、管理者は、権限を変更することで、管理者以外のユーザーにアクセス権を与えることができます。 管理者以外のユーザーがフォルダーの権限を作成、変更および削除できるように `/conf` します。
+メタデータスキーマ機能は、管理者のみが使用できます。ただし、管理者は、権限を変更することで、管理者以外のユーザーにアクセス権を与えることができます。 `/conf`フォルダーの権限を作成、変更、削除する権限は、管理者以外のユーザーに提供してください。
 
 ## フォルダー固有のメタデータの適用 {#apply-folder-specific-metadata}
 
@@ -328,21 +328,21 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
 サブスキーマーに別のサブフォルダーを適用できます。 サブフォルダー内のアセットは、immediateサブフォルダーのメタデータスキーマを継承します。 サブスキーマーレベルにスキーマーまたは同じフォルダーが適用されていない場合、そのアセットは親フォルダーからスキーマを継承します。
 
-1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータスキーマに移動します]**。 **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
-1. Select the check box before a form, for example the default metadata form, and click the **[!UICONTROL Copy]** and save it as a custom form. そのフォームに `my_default` などの名前を付けます。カスタムフォームを作成することもできます。
+1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL アセット]** > **[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。 **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
+1. デフォルトのメタデータフォームなど、フォームの前のチェックボックスを選択し、「**[!UICONTROL コピー]**」をクリックしてカスタムフォームとして保存します。 そのフォームに `my_default` などの名前を付けます。カスタムフォームを作成することもできます。
 
-1. In the **[!UICONTROL Metadata Schema Forms]** page, select the `my_default` form, and then click **[!UICONTROL Edit]**.
+1. **[!UICONTROL メタデータスキーマForms]**&#x200B;ページで、`my_default`フォームを選択し、**[!UICONTROL 編集]**&#x200B;をクリックします。
 
-1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、スキーマフォームにテキストフィールドを追加します。For example, add a field with the label **[!UICONTROL Category]**.
+1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、スキーマフォームにテキストフィールドを追加します。例えば、**[!UICONTROL カテゴリ]**&#x200B;というラベルを持つフィールドを追加します。
 
    ![メタデータスキーマフォームエディタに追加されたテキストフィールド](assets/text-field-metadata-schema-editor.png)
 
    *図：メタデータスキーマフォームエディターに追加されたテキストフィールド。*
 
 1. 「**[!UICONTROL 保存]**」をクリックします。変更されたフォームは&#x200B;**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページにリストされます。
-1. Click **[!UICONTROL Apply to Folder(s)]** from the toolbar to apply the custom metadata to a folder.
+1. ツールバーの「**[!UICONTROL Apply to Folder(s)]**」をクリックし、カスタムメタデータをフォルダーに適用します。
 
-1. Select the folder on which to apply the modified schema and then click **[!UICONTROL Apply]**.
+1. 変更したフォルダーを適用するスキーマーを選択し、「**[!UICONTROL 適用]**」をクリックします。
 
    ![メタデータスキーマを適用するフォルダの選択](assets/metadata-schema-select-folder.png)
 
@@ -350,15 +350,15 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 1. 「**OK**」をクリックして、成功メッセージを閉じます。
 1. 変更したメタデータスキーマを適用したフォルダーに移動します。
 
-## 必須メタデータの定義 {#define-mandatory-metadata}
+## 必須メタデータの定義  {#define-mandatory-metadata}
 
 必須フィールドをフォルダーレベルで定義すると、そのフォルダーにアップロードされるアセットに強制的に適用されます。前に定義した必須フィールドのメタデータが欠落しているアセットをアップロードすると、メタデータが欠落している場合は、カード表示のアセットに視覚的に表示されます。
 
 >[!NOTE]
 >
->メタデータフィールドは、別のフィールドの値に基づいて、必須フィールドとして定義できます。In the card view, [!DNL Experience Manager] does not display the warning message about missing metadata for such mandatory metadata fields.
+>メタデータフィールドは、別のフィールドの値に基づいて、必須フィールドとして定義できます。カードの表示では、[!DNL Experience Manager]は、このような必須のメタデータフィールドのメタデータが見つからないことに関する警告メッセージを表示しません。
 
-1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータスキーマに移動します]**。 **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
+1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL アセット]** > **[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。 **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
 1. デフォルトのメタデータフォームをカスタムフォームとして保存します。例えば、`my_default` として保存します。
 
 1. カスタムフォームを編集します。必須フィールドを追加します。例えば、「**[!UICONTROL カテゴリ]**」フィールドを追加して、それを必須フィールドにします。
@@ -367,13 +367,13 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
    *図：メタデータスキーマフォームエディターの必須フィールド。*
 
-1. 「**[!UICONTROL 保存]**」をクリックします。変更されたフォームは&#x200B;**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページにリストされます。Select the form and then click **[!UICONTROL Apply to Folder(s)]** from the toolbar to apply the custom metadata to a folder.
+1. 「**[!UICONTROL 保存]**」をクリックします。変更されたフォームは&#x200B;**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページにリストされます。フォームを選択し、ツールバーの「フォルダーに適用」****&#x200B;をクリックして、カスタムメタデータをフォルダーに適用します。
 
 1. フォルダーに移動し、カスタムフォームに追加した必須フィールドにメタデータが指定されていないアセットをアップロードします。必須フィールドのメタデータが見つからない場合のメッセージが、アセットのカード表示に表示されます。
 
    ![フォルダー内のアセットのアップロード時にアセットカード表示に必須のメタデータが見つからないというメッセージ](assets/metadata-missing-info-card-view.png)
 
-1. （オプション）`https://[aem_server]:[port]/system/console/components/` にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。Set a frequency at which [!DNL Experience Manager] checks for the validity of metadata on the assets. この設定により、`hasValidMetadata` プロパティがアセットの `jcr:content` に追加されます。[!DNL Experience Manager] このプロパティを使用して、検索結果内の無効なアセットをフィルタリングします。 チェックの後にアセットを追加した場合、次のスケジュール済みチェックまで、アセットにはフラグが付けら `hasValidMetadata` れません。 したがって、次にスケジュールされたチェックの後まで、無効なメタデータに関するアセットは検索フィルターに表示されません。
+1. （オプション）`https://[aem_server]:[port]/system/console/components/` にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。[!DNL Experience Manager]がアセットのメタデータの有効性を確認する頻度を設定します。 この設定により、`hasValidMetadata` プロパティがアセットの `jcr:content` に追加されます。[!DNL Experience Manager] このプロパティを使用して、検索結果内の無効なアセットをフィルタリングします。チェックの後にアセットを追加した場合、次にスケジュールされたチェックが行われるまで、アセットに`hasValidMetadata`のフラグは付けられません。 したがって、次にスケジュールされたチェックの後まで、無効なメタデータに関するアセットは検索フィルターに表示されません。
 
    >[!CAUTION]
    >
