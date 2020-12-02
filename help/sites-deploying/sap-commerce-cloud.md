@@ -1,6 +1,6 @@
 ---
 title: SAP Commerce Cloud
-seo-title: SAP Commerce Cloud
+seo-title: SAPCommerce Cloud
 description: SAP Commerce Cloud を使用した e コマースのデプロイ方法について説明します。
 seo-description: SAP Commerce Cloud を使用した e コマースのデプロイ方法について説明します。
 uuid: a16ae42b-9c33-4da8-a130-52b72a779ec7
@@ -19,13 +19,13 @@ ht-degree: 87%
 ---
 
 
-# SAP Commerce Cloud{#sap-commerce-cloud}
+# SAPCommerce Cloud{#sap-commerce-cloud}
 
 >[!NOTE]
 >
 >このページには hybris Web サイトへのリンクが含まれています。ページによっては、ログインアカウントが必要となる場合があります。
 
-## SAPCommerce Cloudでのeコマースの導入 {#deploying-ecommerce-with-sap-commerce-cloud}
+## SAPCommerce Cloudを使用したeコマースの導入{#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ ht-degree: 87%
 
 [必要な e コマースパッケージ](#packages-needed-for-ecommerce-with-hybris)をデプロイすると、e コマースフレームワークのすべての機能と共に、hybris 実装（デモカタログを含む）に付属する e コマース機能のリファレンス実装が提供されます。
 
-This is available under the English (US) branch ( `/content/geometrixx-outdoors/en_US`) of the Geometrixx Outdoors site:
+これは、Geometrixx Outdoorsサイトの英語（米国）分岐(`/content/geometrixx-outdoors/en_US`)で入手できます。
 
 * [商品情報](#productinformationwithcolorvariants)（必要に応じてカラーバリエーション情報を含む）
 
@@ -44,9 +44,9 @@ This is available under the English (US) branch ( `/content/geometrixx-outdoors/
 
 * [hybris 管理コンソールへのアクセス](#accesstothehybrismanagementconsole)
 
-### 技術的要件 - hybris サーバー {#technical-requirements-hybris-server}
+### 技術的要件 - hybris サーバー  {#technical-requirements-hybris-server}
 
-The hybris extension of the eCommerce Integration Framework has been updated to support Hybris 5 (as default), while maintaining backward compatibility with [Hybris 4](/help/sites-developing/sap-commerce-cloud.md#developing-for-hybris).
+eCommerce Integration Frameworkの傲慢な拡張は、Hybris 5 （デフォルト）をサポートするように更新されました。一方、[Hybris 4](/help/sites-developing/sap-commerce-cloud.md#developing-for-hybris)との後方互換性は維持されます。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ The hybris extension of the eCommerce Integration Framework has been updated to 
 
 
 
-### hybris を使用した e コマースに必要なパッケージ {#packages-needed-for-ecommerce-with-hybris}
+### hybris を使用した e コマースに必要なパッケージ  {#packages-needed-for-ecommerce-with-hybris}
 
 e コマース機能をインストールするには、以下が必要です。
 
@@ -76,7 +76,7 @@ e コマース機能をインストールするには、以下が必要です。
    * `cq-hybris-content-6.3.2`
    * hybris 固有の API 実装
    * `cq-geometrixx-hybris-content-6.3.2`
-   * a reference implementation to illustrate use of hybris ( `geometrixx-outdoors/en_US`)
+   * おろかさの使い方を説明するための参考的な実装(`geometrixx-outdoors/en_US`)
 
 ### hybris を使用した e コマースのインストール {#installation-of-ecommerce-with-hybris}
 
@@ -141,7 +141,7 @@ e コマース機能をインストールするには、以下が必要です。
    >
    >`ant clean all`
    >
-   >Press `Return` when required.
+   >必要に応じて`Return`を押します。
 
 1. 以下のファイルを、抽出した傲慢さの配布のルートフォルダにダウンロードします。
 
