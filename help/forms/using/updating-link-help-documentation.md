@@ -18,7 +18,7 @@ ht-degree: 94%
 ---
 
 
-# ドキュメントへのリンクの更新 {#updating-the-link-to-the-documentation}
+# ドキュメントへのリンクの更新  {#updating-the-link-to-the-documentation}
 
 AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセスするには、**ヘルプ／Workspace ヘルプ**&#x200B;を選択します。これは、アドビの Web サイトのオンラインドキュメントを指しています。ただし、それを更新して他の URL を指定するようにすることができます。
 
@@ -29,7 +29,7 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
 
 オンラインドキュメントの URL を更新するには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」の後に以下の手順に従います。
 
-1. Copy the `userinfo.html` file from `/libs/ws/js/runtime/templates` to `/apps/ws/js/runtime/templates`.
+1. `userinfo.html`ファイルを`/libs/ws/js/runtime/templates`から`/apps/ws/js/runtime/templates`にコピーします。
 1. 変更点:
 
    ```html
@@ -51,4 +51,4 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
 1. 以下の操作を実行してください。
 
    1. /apps/ws/js/registry.js を開いて編集します。
-   1. Search and replace `text!/lc/libs/ws/js/runtime/templates/userinfo.html` with `text!/lc/apps/ws/js/runtime/templates/userinfo.html`.
+   1. `text!/lc/libs/ws/js/runtime/templates/userinfo.html`を検索して`text!/lc/apps/ws/js/runtime/templates/userinfo.html`に置き換えます。
