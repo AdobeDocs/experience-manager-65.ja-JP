@@ -26,13 +26,13 @@ ht-degree: 42%
 作成者インスタンスを使用して、コミュニティサイトを作成します。 AEM作成者インスタンスで：
 
 1. 管理者権限でサインインします。
-1. グローバルナビゲーションから、 **[!UICONTROL コミュニティ]** / **[!UICONTROL サイトに移動します]**。
+1. グローバルナビゲーションから、**[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**&#x200B;に移動します。
 
-コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を案内するウィザードが提供されます。It is possible to move forward to the `Next` step or `Back` to the previous step before committing the site in the final step.
+コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を案内するウィザードが提供されます。最後の手順でサイトをコミットする前に、`Next`または`Back`を前の手順に進むことができます。
 
 新しいコミュニティサイトの作成を開始するには：
 
-* ボタンを選択し `Create` ます。
+* `Create`ボタンを選択します。
 
 ![createcommunitysite](assets/createcommunitysite.png)
 
@@ -46,16 +46,16 @@ ht-degree: 42%
 * **コミュニティサイトの説明**: `A site for engaging with the community.`
 * **コミュニティサイトルート**:(デフォルトのルートの場合は空白のまま `/content/sites`)
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンリストを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンリストを使用して、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ *または* 複数のベース言語を選択します。追加された言語ごとに1つのコミュニティサイトが作成され、[多言語サイト用のコンテンツの翻訳](/help/sites-administering/translation.md)で説明されているベストプラクティスに従って、同じサイトフォルダー内に存在します。 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**：engage
 
    * サイトの作成後に名前が容易に変更されないので、重複チェックを行います。
    * コミュニティサイト名の下に最初のURLが表示されます
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
-   * *例えば*、https://localhost:4502/content/sites/ `engage/en.html`
+   * *例えば*、https://localhost:4502/content/sites/  `engage/en.html`
 
-* **テンプレート**:下に降りて～を選ぶ `Reference Site`
+* **テンプレート**:下に降りて～を選ぶ  `Reference Site`
 
 * 「**次へ**」を選択します。
 
@@ -79,9 +79,9 @@ ht-degree: 42%
 
 ### 手順 3：設定 {#step-settings}
 
-On the Settings step, before selecting `Next`, note that there are seven sections providing access to configurations involving user management, tagging, moderation, group management, analytics, translation and enablement.
+設定の手順で`Next`を選択する前に、ユーザー管理、タグ付け、モデレート、グループ管理、分析、翻訳、有効化に関する設定にアクセスできる7つのセクションがあることに注意してください。
 
-Visit the [Getting Started with AEM Communities for Enablement](/help/communities/getting-started-enablement.md) tutorial to experience working with the enablement features.
+[有効化のためのAEM Communitiesの使用の手引き](/help/communities/getting-started-enablement.md)チュートリアルにアクセスして、有効化機能の使用を体験してください。
 
 #### ユーザー管理 {#user-management}
 
@@ -101,7 +101,7 @@ Visit the [Getting Started with AEM Communities for Enablement](/help/communitie
 
 #### タグ付け {#tagging}
 
-The tags which may be applied to community content are controlled by selecting AEM namespaces previously defined through the [Tagging Console](/help/sites-administering/tags.md#tagging-console) (such as the [Tutorial namespace](/help/communities/setup.md#create-tutorial-tags)).
+コミュニティコンテンツに適用できるタグは、[タグ付けコンソール](/help/sites-administering/tags.md#tagging-console)で事前に定義したAEM名前空間([チュートリアル名前空間](/help/communities/setup.md#create-tutorial-tags)など)を選択することで制御します。
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
@@ -112,24 +112,24 @@ The tags which may be applied to community content are controlled by selecting A
 
 #### 役割 {#roles}
 
-[コミュニティメンバーの役割](/help/communities/users.md) は、[役割]セクションの設定を通じて割り当てられます。
+[コミュニティメンバ](/help/communities/users.md) ーロールは、[役割]セクションの設定を通じて割り当てられます。
 
 コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先頭入力検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
 例：
 
 * 型 `q`
-* Select [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* [クインハーパー](/help/communities/enablement-setup.md#publishcreateenablementmembers)を選択
 
 >[!NOTE]
 >
->[トンネルサービス](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) ：パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
+>[トンネル](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) サービスでは、パブリッシュ環境のみに存在するメンバーとグループを選択できます。
 
 ![新しいサイトでのユーザーの役割](assets/site-admin-1.png)
 
 #### モデレート {#moderation}
 
-Accept the default global settings for [moderating](/help/communities/sites-console.md#moderation) user-generated content (UGC).
+[モデレート](/help/communities/sites-console.md#moderation)ユーザー生成コンテンツ(UGC)のデフォルトのグローバル設定を受け入れます。
 
 ![モデレート](assets/moderation1.png)
 
@@ -141,15 +141,15 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ![分析](assets/analytics.png)
 
-#### TRANSLATION {#translation}
+#### 翻訳{#translation}
 
 [翻訳設定](/help/communities/sites-console.md#translation)では、サイトの基本言語に加えて、UGC の翻訳を許可するかどうかと、どの言語に翻訳するかを指定します。
 
-* Check **Allow Machine Translation**
+* **機械翻訳を許可**&#x200B;を確認
 * デフォルトの機械翻訳サービスで、翻訳用にデフォルトの言語を選択したままにする
 * デフォルトの翻訳プロバイダーとconfigのままにする
 * 言語コピーがないので、グローバルストアは不要です
-* Select **Translate entire page**
+* **ページ全体を翻訳**&#x200B;を選択
 * デフォルトの永続性オプションをそのまま使用
 
 ![translation-settings](assets/translation-settings.png)
@@ -166,7 +166,7 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ### 手順 4：コミュニティサイトの作成 {#step-create-communities-site}
 
-Select **Create.**
+「**作成」を選択します。**
 
 ![create-site](assets/create-site2.png)
 
@@ -174,7 +174,7 @@ Select **Create.**
 
 ![communitiesconsole](assets/communitiessitesconsole.png)
 
-## Publish the Community Site {#publish-the-community-site}
+## コミュニティサイトを公開する{#publish-the-community-site}
 
 作成したサイトは、コミュニティ - サイトコンソールで管理する必要があります。このコンソールは、新しいサイトを作成するコンソールと同じものです。
 
@@ -206,7 +206,7 @@ Select **Create.**
 
 * **サイトを削除**
 
-   Select the delete icon to delete the community site from within **[!UICONTROL Communities > Sites console]**. サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
+   **[!UICONTROL コミュニティ/サイトコンソール]**&#x200B;内からコミュニティサイトを削除するには、削除アイコンを選択します。 サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
 
 ![siteactions](assets/siteactions.png)
 
@@ -216,14 +216,14 @@ Select **Create.**
 >
 >オーサーインスタンスで、メインメニューから：
 >
->1. Navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]** menu.
->1. Select **[!UICONTROL Agents on author]**.
->1. Select **[!UICONTROL Default Agent (publish)]**.
->1. Next to **[!UICONTROL Settings]**, select **[!UICONTROL Edit]**.
->1. In pop-up dialog for Agent Settings, select **[!UICONTROL Transport]** tab.
+>1. **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL レプリケーション]**&#x200B;メニューに移動します。
+>1. 「作成者&#x200B;]**のエージェント」を選択します。**[!UICONTROL 
+>1. 「**[!UICONTROL デフォルトエージェント（発行）]**」を選択します。
+>1. 「**[!UICONTROL 設定]**」の横にある「**[!UICONTROL 編集]**」を選択します。
+>1. エージェント設定のポップアップダイアログで、「**[!UICONTROL トランスポート]**」タブを選択します。
 >1. URIで、ポート番号4503を目的のポート番号に変更します。 例えば、ポート6103を使用するには：https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >1. 「**[!UICONTROL OK]**」を選択します。
->1. (Optional) Select **[!UICONTROL Clear]** or **[!UICONTROL Force Retry]** to reset the replication queue.
+>1. （オプション）レプリケーションキューをリセットするには、「**[!UICONTROL クリア]**」または「**[!UICONTROL 再試行を強制]**」を選択します。
 
 
 ### サイトの公開 {#select-publish}
@@ -234,9 +234,9 @@ Select **Create.**
 
 コミュニティサイトが正常に公開されると、「公開済みのサイト」というメッセージが短く表示されます。
 
-### New Community User Groups {#new-community-user-groups}
+### 新しいコミュニティユーザーグループ{#new-community-user-groups}
 
-新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。For details, visit [User Groups for Community Sites](/help/communities/users.md#usergroupsforcommunitysites).
+新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。詳しくは、[コミュニティサイトのユーザーグループ](/help/communities/users.md#usergroupsforcommunitysites)を参照してください。
 
 この新しいコミュニティサイトでは、手順 1 で「engage」というサイト名を指定したので、[グループコンソール](/help/communities/members.md)（グローバルナビゲーション：コミュニティ／グループ）で以下に示す 4 つの新しいユーザーグループを確認できます。
 
@@ -247,7 +247,7 @@ Select **Create.**
 * コミュニティの権限を持つメンバー
 * Community Engage Site Content Manager
 
-Note that [Aaron McDonald](/help/communities/tutorials.md#demo-users) is a member of
+[アーロン・マクドナルド](/help/communities/tutorials.md#demo-users)は
 
 * コミュニティのソーシャル管理
 * コミュニティ Engage モデレーター
@@ -261,9 +261,9 @@ Note that [Aaron McDonald](/help/communities/tutorials.md#demo-users) is a membe
 
 ## 認証エラーの設定 {#configure-for-authentication-error}
 
-Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
+サイトが設定され、発行にプッシュされたら、発行インスタンスで[ログインマッピング](/help/communities/sites-console.md#configure-for-authentication-error)(`Adobe Granite Login Selector Authentication Handler`)を設定します。 ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
 
-追加～ `Login Page Mapping` の
+追加`Login Page Mapping`
 
 * `/content/sites/engage/en/signin:/content/sites/engage/en`
 
@@ -273,28 +273,28 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 公開サイトをデモ目的で操作するときは、デフォルトのホームページを新しいサイトに変更すると便利です。
 
-To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the [resource-mapping](/help/sites-deploying/resource-mapping.md) table on publish.
+これを行うには、[CRXDE](https://localhost:4503/crx/de) Liteを使用して、発行時に[resource-mapping](/help/sites-deploying/resource-mapping.md)テーブルを編集する必要があります。
 
 開始するには：
 
 1. 発行インスタンスで、管理者権限でサインインします。
-1. Browse to [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
-1. In the project browser, expand `/etc/map.`
-1. Select the `http` node:
+1. [https://localhost:4503/crx/de](https://localhost:4503/crx/de)を参照します。
+1. プロジェクトブラウザで`/etc/map.`を展開します。
+1. `http`ノードを選択します。
 
-   * Select **Create Node:**
+   * 「**ノードを作成：**」を選択します。
 
-      * **Name** localhost.4503( *&#39;:&#39;を使用しない* )
+      * **** Namelocalhost.4503 (&#39;:&#39;を ** 使用しないでください)
 
-      * **Type** sling [:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **** [タイプ：マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. With newly created `localhost.4503` node selected:
+1. 新しく作成した`localhost.4503`ノードを選択した状態：
 
    * 追加プロパティ：
 
    * **名前**：sling:match
       * **タイプ**：String
-      * **値** localhost.4503/$（「$」文字で終わる必要があります）
+      * **** Valuelocalhost.4503/$（「$」文字で終わる必要があります）
    * 追加プロパティ：
 
       * **名前**：sling:internalRedirect
@@ -302,7 +302,7 @@ To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the 
       * **値**：/content/sites/engage/en.html
 
 
-1. Select **Save All.**
+1. 「すべて保存」を選択します。****
 1. （オプション）閲覧履歴を削除します。
 1. https://localhost:4503/を参照します。
 
@@ -310,19 +310,19 @@ To do so requires using [CRXDE](https://localhost:4503/crx/de) Lite to edit the 
 
 >[!NOTE]
 >
->To disable, simply prefix the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
+>無効にするには、`sling:match`プロパティの値の先頭に「x」 — `xlocalhost.4503/$` — と&#x200B;**「すべて保存**」を付けます。
 
 ![オプションステップ](assets/optional-steps.png)
 
 #### トラブルシューティング：マップ保存エラー {#troubleshooting-error-saving-map}
 
-If unable to save changes, be sure that the node name is `localhost.4503`, with a &#39;dot&#39; separator, and not `localhost:4503` with a &#39;colon&#39; separator, as `localhost`is not a valid namespace prefix.
+変更を保存できない場合は、ノード名が「ドット」区切り文字の`localhost.4503`で、「コロン」区切り文字の`localhost:4503`ではなく、「a2/>」が有効な名前空間プレフィックスではないことを確認してください。`localhost`
 
 ![error-message](assets/error-message.png)
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prefixed to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
+正規式`sling:match`文字列の末尾の「**$**」が重要なので、正確に`https://localhost:4503/`のみがマッピングされます。そうでない場合、リダイレクト値はURLのserver:portの後に存在する任意のパスにプリフィックスされます。 したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ### サイトの変更 {#modify-the-site}
 
