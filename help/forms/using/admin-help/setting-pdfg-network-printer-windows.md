@@ -32,12 +32,12 @@ PDFG ネットワークプリンターを設定するには、次の手順を実
 1. 32 ビット JRE6 がユーザーのコンピューターにインストールされていることを確認します。
 1. ユーザーのコンピューターにプリンターをインストールします（[ユーザーのコンピューターへの PDFG ネットワークプリンターのインストール](setting-pdfg-network-printer-windows.md#install-pdfg-network-printer-on-a-user-s-computer)を参照）。
 
-## PDFG ネットワークプリンターの電子メール設定の指定 {#configure-email-settings-for-pdfg-network-printer}
+## PDFG ネットワークプリンターの電子メール設定の指定  {#configure-email-settings-for-pdfg-network-printer}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスの管理ページで、provider.email_sendmail_service をクリックし、SMTP 設定を指定し、「保存」をクリックします。
 
-## PDFG ネットワークプリンターの設定の指定 {#configure-the-pdfg-network-printer-settings}
+## PDFG ネットワークプリンターの設定の指定  {#configure-the-pdfg-network-printer-settings}
 
 1. 管理コンソールで、サービス／PDF Generator／PDFG ネットワークプリンターをクリックします。
 1. 「Adobe PDF 設定」および「セキュリティ設定」リストで、生成された PDF に適用するオプションを選択します。これらの設定について詳しくは、[Adobe PDF 設定の指定](/help/forms/using/admin-help/configuring-pdf-settings.md#configuring-adobe-pdf-settings)および[セキュリティ設定の指定](/help/forms/using/admin-help/configuring-security-settings.md#configuring-security-settings)を参照してください。
@@ -57,13 +57,13 @@ PDFG ネットワークプリンターを設定するには、次の手順を実
 
 元のデフォルトの電子メールテキストに戻す場合は、「電子メールコンテンツを復元」をクリックします。
 
-## ユーザーのコンピューターへの PDFG ネットワークプリンターのインストール {#install-pdfg-network-printer-on-a-user-s-computer}
+## ユーザーのコンピューターへの PDFG ネットワークプリンターのインストール  {#install-pdfg-network-printer-on-a-user-s-computer}
 
 PDFG 管理者ロールまたは PDFG ユーザーロールのいずれかを持つユーザーは、PDFG ネットワークプリンターをインストールできます。コンピューターに 32 ビット JDK をインストールしておく必要があります。
 
 1. （PDFG 管理者の場合）管理コンソールで、サービス／PDF Generator／PDFG ネットワークプリンターをクリックします。
 
-   (PDFG Users) Go to `http(s)://[host]:'port'/pdfgui` and click the link under PDFG Network Printer Installation.
+   （PDFGユーザーの場合）`http(s)://[host]:'port'/pdfgui`に移動し、「PDFGネットワークプリンターのインストール」の下のリンクをクリックします。
 
 1. 「PDFG ネットワークプリンターのインストール」にあるリンクをクリックします。ユーザーアカウント情報が求められたら、手順 1 で使用したユーザー名とパスワードを指定してログインします。プリンターが正常にインストールされたことを示すメッセージが表示されます。
 
