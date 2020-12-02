@@ -49,7 +49,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
    `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
-   Depending on the configuration of your instance, use of `/content` might be optional on the publish environment.
+   インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションになる場合があります。
 
 ```xml
   /content
@@ -71,7 +71,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
     /...
 ```
 
-This structure can be viewed from the Websites console, which you can use to [navigate through the tree structure](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
+この構造はWebサイトコンソールから表示でき、[ツリー構造](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15)内を移動するのに使用できます。
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -89,7 +89,7 @@ This structure can be viewed from the Websites console, which you can use to [na
    * これは URI の生成に使用されます。
    * このフィールドへの入力はオプションです。指定しない場合、名前はタイトルから派生します。
 
-When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.
+新しいページを作成する場合、AEMは、AEMとJCRが定めた規則](/help/sites-developing/naming-conventions.md)に従って、ページ名を[検証します。
 
 実装と使用できる文字のリストは、UIに応じて少し異なります（タッチ対応UIの方が広くなります）が、最小限の許容値は次のとおりです。
 
@@ -114,10 +114,10 @@ When creating a new page, AEM will [validate the page name according to the conv
 
 新しいページを作成するときにページの「**名前**[」を指定すると、AEM では AEM と JCR の規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)
 
-In the Classic UI you **cannot enter invalid characters** in the **Name** field.
+クラシックUIでは、****&#x200B;名前&#x200B;**フィールドに無効な文字**&#x200B;を入力することはできません。
 
 >[!NOTE]
->In the touch-enabled UI you **cannot submit invalid characters** in the **Name** field. AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
+>タッチ対応UIでは、****&#x200B;名前&#x200B;**フィールドに無効な文字**&#x200B;を送信できません。 AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
 
 >[!NOTE]
 >
@@ -149,7 +149,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 * ビデオ
 * その他
 
-Once you have created and opened a page you can [add content using the components](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph), available from the [sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
+ページを作成して開くと、[サイドキック](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)から入手できるコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)を使用して、&lt;a0/>コンテンツを追加できます。[
 
 ## ページの管理 {#managing-pages}
 
@@ -195,7 +195,7 @@ Once you have created and opened a page you can [add content using the component
 
    >[!NOTE]
    >
-   >また、既存のページの編集中にページを作成することもできます。Using **Create Child Page **from the **Page** tab of the sidekick, will create a new page directly under the page being edited.
+   >また、既存のページの編集中にページを作成することもできます。サイドキックの&#x200B;**ページ**&#x200B;タブの**子ページを作成**を使用すると、編集中のページのすぐ下に新しいページが作成されます。
 
 ### ページを開いて編集 {#opening-a-page-for-editing}
 
@@ -207,7 +207,7 @@ Once you have created and opened a page you can [add content using the component
 
 * ページを開いた後で、ハイパーリンクをクリックすると、サイト内の他のページに移動できます（その後、編集できます）。
 
-### ページのコピーと貼り付け {#copying-and-pasting-a-page}
+### ページのコピーと貼り付け  {#copying-and-pasting-a-page}
 
 コピーできる対象は次のいずれかです。
 
@@ -292,7 +292,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
       参照しているページを再発行します。この項目も、ページごとに選択または選択解除できます。
    >[!NOTE]
    >
-   >既にアクティベートされているページを移動すると、自動的にアクティベート解除されます。By default, it will be reactivated when the move is complete, but this can changed by unchecking the **Republish** field for the page in the **Move** window.
+   >既にアクティベートされているページを移動すると、自動的にアクティベート解除されます。デフォルトでは、移動が完了すると再アクティブ化されますが、**移動**&#x200B;ウィンドウでページの&#x200B;**再公開**&#x200B;フィールドのチェックを外すと、この変更が可能です。
 
 1. 「**移動**」をクリックします。確認が必要です。「**OK**」をクリックして確定します。
 
