@@ -83,9 +83,9 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 >[!NOTE]
 >
->You must enter information in the **Alt Text** field, or the image cannot be saved.
+>「**代替テキスト**」フィールドに情報を入力する必要があります。入力しないと、画像を保存できません。
 
-After the image is uploaded (and not before) you can use [inplace editing](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) to crop/rotate the image as required:
+画像がアップロードされた（以前ではなく）後で、[インプレイス編集](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui)を使用して、必要に応じて画像を切り抜き/回転できます。
 
 ![](do-not-localize/chlimage_1-10.png)
 
@@ -141,7 +141,7 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
-### Link (Campaign) {#link-campaign}
+### リンク(キャンペーン) {#link-campaign}
 
 リンク（Campaign）コンポーネントを使用して、ニュースレターにリンクを追加できます。
 
@@ -151,14 +151,15 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 
 * **リンクツールチップ**&#x200B;リンクの使用方法に関する追加情報を付加します。
 
-* **LinkType**&#x200B;ドロップダウンリストで、 
-**カスタムURL** 、 **アダプティブドキュメント**。 このフィールドは必須です。「カスタム URL」を選択した場合は、リンクの URL を指定できます。「アダプティブドキュメント」を選択した場合は、ドキュメントのパスを指定できます。
+* ****
+LinkTypeドロップダウンリストで、 
+**カスタム** URLと **アダプティブドキュメント**。このフィールドは必須です。「カスタム URL」を選択した場合は、リンクの URL を指定できます。「アダプティブドキュメント」を選択した場合は、ドキュメントのパスを指定できます。
 
 * **追加の URL パラメーター**&#x200B;追加の URL パラメーターがあれば追加します。「項目を追加」をクリックして、複数の項目を追加します。
 
 >[!NOTE]
 >
->You must enter information in the **Link Type** field in the **URL Info** tab, or the component cannot save and you see the following error message:
+>「**URL Info**」タブの「**Link Type**」フィールドに情報を入力する必要があります。入力しないと、コンポーネントは保存できず、次のエラーメッセージが表示されます。
 >
 >`Validation failed. Verify the values of the marked fields.`
 
@@ -169,11 +170,11 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 
 ### Scene7 画像テンプレート (Campaign) {#scene-image-template-campaign}
 
-[Scene7画像テンプレート](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) (Templates)はレイヤー化された画像ファイルで、コンテンツとプロパティを可変性のためにパラメータ化できます。 **画像テンプレート**&#x200B;コンポーネントを使用すると、ニュースレター内で Scene7 テンプレートを使用して、テンプレートパラメーターの値を変更できます。また、Adobe Campaignのメタデータ変数をパラメーター内で使用できるので、各ユーザーがパーソナライズされた方法で画像を体験できます。
+[Scene7画像](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) テンプレートはレイヤー化された画像ファイルで、コンテンツとプロパティを可変性のためにパラメータ化できます。**画像テンプレート**&#x200B;コンポーネントを使用すると、ニュースレター内で Scene7 テンプレートを使用して、テンプレートパラメーターの値を変更できます。また、Adobe Campaignのメタデータ変数をパラメーター内で使用できるので、各ユーザーがパーソナライズされた方法で画像を体験できます。
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-コンポーネントを設定するには、「**編集**」をクリックします。この節で説明する設定を指定できます。 This Scene7 Image template is described in detail in [Scene7 Image Template component](/help/assets/scene7.md#image-template).
+コンポーネントを設定するには、「**編集**」をクリックします。この節で説明する設定を指定できます。 このScene7画像テンプレートについて詳しくは、[Scene7画像テンプレートコンポーネント](/help/assets/scene7.md#image-template)で説明しています。
 
 さらに、パラメーターパネルに、Scene7 のテンプレート用に定義されているすべてのテンプレートパラメーターが表示されます。これらのパラメーターそれぞれに対して、値を変化させたり、変数を挿入したり、デフォルト値にリセットしたりできます。
 
@@ -187,7 +188,7 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 
 フォルダーアイコンをクリックして、参照する段落に移動します。終了したら、チェックマークをクリックします。
 
-### テキストと画像（Campaign） {#text-image-campaign}
+### テキストと画像（Campaign）  {#text-image-campaign}
 
 テキストと画像（Campaign）コンポーネントでは、テキストブロックと画像を追加します。
 
@@ -243,13 +244,13 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 
 ### テキストおよびパーソナライゼーション (Campaign) {#text-personalization-campaign}
 
-The Text &amp; Personalization (Campaign) component lets you enter a text block using a WYSIWYG editor, with functionality provided by the [Rich Text editor](/help/sites-authoring/rich-text-editor.md). さらに、このコンポーネントでは、Adobe Campaign のコンテキストフィールドとパーソナライゼーションブロックを使用できます。[パーソナライゼーションの挿入](/help/sites-authoring/campaign.md#inserting-personalization)も参照してください。
+テキストとパーソナライゼーション(キャンペーン)コンポーネントを使用すると、WYSIWYGエディターを使用してテキストブロックを入力できます。この機能は、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)で提供されます。 さらに、このコンポーネントでは、Adobe Campaign のコンテキストフィールドとパーソナライゼーションブロックを使用できます。[パーソナライゼーションの挿入](/help/sites-authoring/campaign.md#inserting-personalization)も参照してください。
 
-フォントの文字、配置、リンク、リスト、インデントなど、多様なアイコンでテキストの書式を設定できます。The functionality is basically the same in [both UIs](/help/sites-authoring/editing-content.md), although the look-and-feel is different:
+フォントの文字、配置、リンク、リスト、インデントなど、多様なアイコンでテキストの書式を設定できます。[両方のUI](/help/sites-authoring/editing-content.md)で機能は基本的に同じですが、ルック&amp;フィールは異なります。
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
-インプレースエディターで、テキストを追加し、ジャスティフィケーションを変更し、リンクを追加または削除し、コンテキストフィールドまたはパーソナライゼーションブロックを追加し、全画面モードに入ることができます。テキストまたはパーソナライゼーションの追加が完了したら、チェックマークを選択して変更を保存します（または「x」をクリックしてキャンセルします）。See [Inplace editing](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) for more information.
+インプレースエディターで、テキストを追加し、ジャスティフィケーションを変更し、リンクを追加または削除し、コンテキストフィールドまたはパーソナライゼーションブロックを追加し、全画面モードに入ることができます。テキストまたはパーソナライゼーションの追加が完了したら、チェックマークを選択して変更を保存します（または「x」をクリックしてキャンセルします）。詳しくは、[インプレース編集](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui)を参照してください。
 
 >[!NOTE]
 >
@@ -272,7 +273,7 @@ Adobe Campaign コンポーネントを使用して、ニュースレターの�
 
 各コンポーネントフィールドを Adobe Campaign データベースフィールドにリンクできます。[コンポーネントとデータタイプ](#components-and-data-type)セクションで説明しているように、利用可能なフィールドは、格納するデータのタイプによって異なります。受信者スキーマを Adobe Campaign で拡張した場合は、データタイプが一致するコンポーネントで新しいフィールドが利用可能になります。
 
-When you open a form that is configured to integrate with Adobe Campaign, you see the following components in the **Adobe Campaign** section:
+Adobe Campaignと統合するように設定されたフォームを開くと、**Adobe Campaign**&#x200B;セクションに次のコンポーネントが表示されます。
 
 * チェックボックス（Campaign）
 * 日付フィールド（Campaign）と日付フィールド／HTML5（Campaign）
@@ -290,7 +291,7 @@ When you open a form that is configured to integrate with Adobe Campaign, you se
 
 このセクションでは、各コンポーネントについて詳しく説明します。
 
-### コンポーネントとデータタイプ {#components-and-data-type}
+### コンポーネントとデータタイプ  {#components-and-data-type}
 
 以下の表に、Adobe Campaign プロファイルデータの表示および変更に利用できるコンポーネントを示します。各コンポーネントを Adobe Campaign プロファイルフィールドにマップすることで、フィールドの値をフォームに表示したり、フォームが送信されたときにフィールドを更新したりできます。各種コンポーネントは、適切なデータタイプのフィールドにのみマップできます。
 
@@ -329,13 +330,13 @@ When you open a form that is configured to integrate with Adobe Campaign, you se
  </tbody>
 </table>
 
-### 大部分のコンポーネントに共通の設定 {#settings-common-to-most-components}
+### 大部分のコンポーネントに共通の設定  {#settings-common-to-most-components}
 
 Adobe Campaign コンポーネントには、ほとんどのコンポーネント（暗号化されたプライマリキーコンポーネントと非表示の調整キーコンポーネントを除く）に共通の設定があります。
 
 大部分のコンポーネントでは、次の項目を設定できます。
 
-#### タイトルとテキスト {#title-and-text}
+#### タイトルとテキスト  {#title-and-text}
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -380,16 +381,16 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-### Date Field (Campaign) and Date Field/HTML 5 (Campaign) {#date-field-campaign-and-date-field-html-campaign}
+### 日付フィールド(キャンペーン)と日付フィールド/HTML 5 (キャンペーン) {#date-field-campaign-and-date-field-html-campaign}
 
 日付フィールドを使用して、受信者に日付を指定させることができます。例えば、受信者に誕生日を指定させることができます。日付の形式は、Adobe Campaign インスタンスで使用されている形式と一致します。
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **[制約] - [制約** ]ドロップダウン： [ **なし** ]または[ **** 日付]を選択して、日付の制約を追加するか、制約を追加しないかを指定できます。 日付を選択した場合は、回答ユーザーがフィールドに入力する日付形式を使用する必要があります。
+* **[制約 —** 制約]ドロップダウン： [ **** 日付以外]を選択して、日付の制約 **** を追加するか、制約なしを追加することができます。日付を選択した場合は、回答ユーザーがフィールドに入力する日付形式を使用する必要があります。
 
 * **制約メッセージ**&#x200B;さらに、入力値の適切なフォーマットを示す制約メッセージを追加できます。
-* **スタイル設定 — 幅** :+アイコンと **-****** アイコンをクリックまたはタップするか、数値を入力して、フィールドの幅を調整します。
+* **スタイル設定 —** 幅フィールドの幅を調整するには、+アイコンをクリックまたはタップするか、数値を入力します。 **** または、+ **アイコン** と — アイコンをタップします。
 
 幅が調整された日付フィールド（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -437,10 +438,10 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **[制約] - [制約** ]ドロップダウン： [ **なし** ]または[ **** 数値]を選択して、数値の制約を追加するか、制約なしの制約を追加することができます。 数値を選択した場合、ユーザーがフィールドに入力する答えは数値である必要があります。
+* **[拘束 —** 拘束]ドロップダウン： [ **** 非数値]を選択して、数値の制約を追加す **** るか、制約なしの制約を追加することができます。数値を選択した場合、ユーザーがフィールドに入力する答えは数値である必要があります。
 
 * **制約メッセージ**&#x200B;さらに、入力値の適切なフォーマットを示す制約メッセージを追加できます。
-* **スタイル設定 — 幅** :+アイコンと **-****** アイコンをクリックまたはタップするか、数値を入力して、フィールドの幅を調整します。
+* **スタイル設定 —** 幅フィールドの幅を調整するには、+アイコンをクリックまたはタップするか、数値を入力します。 **** または、+ **アイコン** と — アイコンをタップします。
 
 幅が設定された数値フィールド（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -462,7 +463,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 **購読チェックリスト（Campaign）**&#x200B;コンポーネントを使用して、Adobe Campaign プロファイルに関連付けられた購読を変更できます。
 
-このコンポーネントをフォームに追加すると、利用可能なすべての購読がチェックボックスとして表示されるので、ユーザーに目的の購読を選択させることができます。When users submit the form, this component subscribes the user to or unsubscribes the user from the selected services depending on the form action type (**Adobe Campaign: Subscribe to Services** or **Adobe Campaign: Unsubscribe from Services**).
+このコンポーネントをフォームに追加すると、利用可能なすべての購読がチェックボックスとして表示されるので、ユーザーに目的の購読を選択させることができます。ユーザーがフォームを送信するとき、このコンポーネントは、フォームのアクションの種類(**Adobe Campaign)に応じて、選択したサービスに対してユーザーを購読または登録解除します。サービス**&#x200B;または&#x200B;**Adobe Campaignを購読：Services**&#x200B;の登録を解除)。
 
 >[!NOTE]
 >
@@ -480,10 +481,10 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **制約 — 制約** 」ドロップダウン「 **なし」、「** 電子メール **」または「**&#x200B;名前 **** （ウムラウトなし）」を選択して、電子メールアドレス、名前、制約なしの制約を追加できます。 「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。nameを選択する場合は、名前にする必要があります（ウムラウトは使用できません）。
+* **Constraints -** Constraintdrop-down -  **None、** **Email**、または **Name**  (no umlauts)を選択すると、電子メールアドレス、名前、または制約なしの制約を追加できます。「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。nameを選択する場合は、名前にする必要があります（ウムラウトは使用できません）。
 
 * **制約メッセージ**&#x200B;さらに、入力値の適切なフォーマットを示す制約メッセージを追加できます。
-* **スタイル設定 — 幅** :+アイコンと **-****** アイコンをクリックまたはタップするか、数値を入力して、フィールドの幅を調整します。
+* **スタイル設定 —** 幅フィールドの幅を調整するには、+アイコンをクリックまたはタップするか、数値を入力します。 **** または、+ **アイコン** と — アイコンをタップします。
 
 テキストフィールド（Campaign）コンポーネントの表示例を以下に示します。
 
