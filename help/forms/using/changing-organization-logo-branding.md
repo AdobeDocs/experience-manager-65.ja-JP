@@ -18,7 +18,7 @@ ht-degree: 82%
 ---
 
 
-# ブランディングのための組織ロゴの変更 {#changing-the-organization-logo-for-branding}
+# ブランディングのための組織ロゴの変更  {#changing-the-organization-logo-for-branding}
 
 組織ロゴは AEM Forms Workspace の左上隅に表示されます。ロゴを更新するには、[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization)および次の手順に従います。
 
@@ -30,7 +30,7 @@ ht-degree: 82%
 
    >[!NOTE]
    >
-   >For more information about WebDAV access, see [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >WebDAVアクセスの詳細については、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)を参照してください。
 
 1. 次のスタイルを追加することによって、/apps/ws/css/newStyle.css にあるスタイルシートの新しいロゴ画像を参照します。
 
