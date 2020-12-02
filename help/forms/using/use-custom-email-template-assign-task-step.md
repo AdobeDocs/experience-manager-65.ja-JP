@@ -74,4 +74,4 @@ AEM Forms には電子メール通知用の初期設定済みテンプレート�
 
 1. 「OK」をクリックします。テンプレートが変更されました。
 
-電子メール通知では、[メタデータ](../../forms/using/use-metadata-in-email-notifications.md)も使用します。例えば、期限、優先度、ワークフロー名などです。You can also configure the template to use [custom metadata](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
+電子メール通知では、[メタデータ](../../forms/using/use-metadata-in-email-notifications.md)も使用します。例えば、期限、優先度、ワークフロー名などです。また、[カスタムメタデータ](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification)を使用するようにテンプレートを設定することもできます。
