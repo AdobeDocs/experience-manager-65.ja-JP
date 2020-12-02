@@ -18,9 +18,9 @@ ht-degree: 1%
 ---
 
 
-# APIを使用したサービス操作の実行 {#performing-service-operations-using-apis}
+# APIを使用したサービス操作の実行{#performing-service-operations-using-apis}
 
-AEM FormsAPIを使用してクライアントアプリケーションの開発を開始する前に、まず「AEM Formsを呼び出す」を読むことをお勧めします。ここでは、サービスを呼び出す様々な方法について説明しています。 ( [サービスコンテナを参照](/help/forms/developing/service-container.md#service-container))。
+AEM FormsAPIを使用してクライアントアプリケーションの開発を開始する前に、まず「AEM Formsを呼び出す」を読むことをお勧めします。ここでは、サービスを呼び出す様々な方法について説明しています。 ([サービスコンテナ](/help/forms/developing/service-container.md#service-container)を参照)。
 
 様々な呼び出し方法に慣れると、各サービスをプログラム的に操作する方法を学ぶことができます。 クライアントアプリケーションは、AdobeFlex®ビルダー™、Java開発環境、または公開されたWSDLをネイティブSOAPスタックでの使用に使用できるMicrosoft Visual Studio .NETなどの環境で開発できます。
 
