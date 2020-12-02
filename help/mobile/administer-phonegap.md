@@ -18,19 +18,19 @@ ht-degree: 61%
 ---
 
 
-# AEM での Adobe PhoneGap Enterprise のコンテンツの管理 {#administering-content-for-adobe-phonegap-enterprise-with-aem}
+# AEM での Adobe PhoneGap Enterprise のコンテンツの管理  {#administering-content-for-adobe-phonegap-enterprise-with-aem}
 
 >[!NOTE]
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-An ***AEM administrator*** is responsible for adding a new application to the AEM Mobile catalog, either by creating a new app using the creation wizard, or by importing an existing application. AEM administrators who create a new app using AEM Mobile&#39;s *creation wizard* typically select one of the desired app templates either from our out-of-the-box reference samples or (in most cases) a custom app template created by *AEM developers.*
+***AEM管理者***&#x200B;は、新しいアプリを作成ウィザードを使用して作成するか、既存のアプリを読み込むことで、新しいアプリをAEM Mobileカタログに追加します。 AEM MOBILEの&#x200B;*作成ウィザード*&#x200B;を使用して新しいアプリを作成するAEM管理者は、通常、標準搭載の参照サンプルから、または（ほとんどの場合は）*AEM開発者が作成したカスタムアプリテンプレートのいずれかを選択します。*
 
 HTML5 および PhoneGap を使用してモバイルアプリケーションをビルドしたら、コマンドセンター内でそのアプリケーションを管理できます。もちろん、コマンドセンターでは Cordova WebView を使用してネイティブアプリ向けの HTML5 コンテンツも管理できます（PhoneGap プラグインを利用すれば、ネイティブの機能にアクセスできます）。
 
 AEM アプリコントロールセンターでは、モバイルアプリケーションをビルドしてデプロイし、モバイルアプリケーションを公開する前にアプリケーションメタデータを作成および編集できます。また、アプリケーションストアへの提出プロセスをやり直すことなく、最新の関連するコンテンツを共同で管理して頻繁に公開できます。さらに、アプリケーションのライフサイクルおよび使用状況の指標を分析して、顧客コンバージョンおよびブランドロイヤルティを高めることができます。
 
-To build your AEM Mobile Application, see the [Building Mobile Applications](/help/mobile/building-app-mobile-phonegap.md) page, in Developers section.
+AEM Mobileアプリを作成するには、Developersセクションの[モバイルアプリの作成](/help/mobile/building-app-mobile-phonegap.md)ページを参照してください。
 
 環境を設定し、コントロールセンターを開始するには：
 
@@ -39,11 +39,11 @@ To build your AEM Mobile Application, see the [Building Mobile Applications](/he
 1. [Adobe PhoneGap Build クラウドサービスを設定します。](/help/mobile/configure-phonegap-build-cloud.md)
 1. [Adobe Analytics クラウドサービスを設定します。](/help/mobile/configure-adobe-mobile-cloud-service.md)
 
-For learn about content services Content Services, see [Administering Content Services](/help/mobile/developing-content-services.md).
+Content ServicesのContent Servicesについて詳しくは、「[Content Servicesの管理](/help/mobile/developing-content-services.md)」を参照してください。
 
 >[!NOTE]
 >
->The *AEM Verify* is a quick and an easy way to run your AEM mobile applications on any iOS or Android mobile device. The *AEM Verify* is a mobile app, on your device and you connect it to the server running the quickstart to get a list of apps to view. Click [here](/help/mobile/phonegap-mobile-quickstart.md) to view the details.
+>*AEM Verify*&#x200B;は、iOSやAndroidのモバイルデバイスでAEMモバイルアプリケーションをすばやく簡単に実行する方法です。 *AEM Verify*&#x200B;はモバイルアプリで、デバイス上でクイックスタートを実行するサーバーに接続し、表示にアプリのリストを取得します。 [ここ](/help/mobile/phonegap-mobile-quickstart.md)をクリックして詳細を表示します。
 
 ## その他のリソース {#additional-resources}
 
