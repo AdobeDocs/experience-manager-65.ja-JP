@@ -1,27 +1,27 @@
 ---
 title: アセットテンプレート
-description: Learn about Asset templates in [!DNL Adobe Experience Manager Assets] and how to use asset templates to create marketing collateral.
+description: ' [!DNL Adobe Experience Manager Assets] のアセットテンプレートと、アセットテンプレートを使用してマーケティングコラテラルを作成する方法について説明します。'
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
 source-wordcount: '1544'
-ht-degree: 31%
+ht-degree: 32%
 
 ---
 
 
-# Asset templates {#asset-templates}
+# アセットテンプレート{#asset-templates}
 
 アセットテンプレートは、デジタルメディアや印刷メディア向けに視覚的に豊富なコンテンツをすばやく再利用できる特別なアセットクラスです。 アセットテンプレートには、固定メッセージセクションと編集可能セクションの 2 つの部分があります。固定メッセージセクションには、編集できないブランドロゴおよび著作権情報など、独自のコンテンツを含めることができます。編集可能なセクションには、フィールド内の視覚的な内容とテキスト的な内容を含めることができます。これらの内容は、編集してメッセージをカスタマイズできます。
 
 グローバルな署名を保護しながら編集を制限する柔軟性により、様々な機能のコンテンツアーティファクトとして、コンテンツの迅速な適合と配信に最適なアセットテンプレートを作成できます。 コンテンツを再利用することで、印刷チャネルやデジタルチャネルの管理コストを削減し、それらの管理全体にわたって一貫性のある全体的な体験を提供できます。
 
-As a marketer, you can store and manage templates within [!DNL Experience Manager Assets] and use a single base template to create multiple personalized print experiences with ease. パンフレット、チラシ、はがき、名刺など、様々なタイプのマーケティング資料を作成して、顧客にマーケティングメッセージを明確に伝えることができます。 また、既存の、または新しいプリント出力から複数ページのプリント出力をアセンブルできます。特に、デジタルおよびプリントエクスペリエンスを簡単に同時配信して、一貫性のある統合されたエクスペリエンスをユーザーに提供できます。
+マーケティング担当者は、[!DNL Experience Manager Assets]内にテンプレートを保存および管理し、単一のベーステンプレートを使用して、パーソナライズされた複数の印刷エクスペリエンスを簡単に作成できます。 パンフレット、チラシ、はがき、名刺など、様々なタイプのマーケティング資料を作成して、顧客にマーケティングメッセージを明確に伝えることができます。 また、既存の、または新しいプリント出力から複数ページのプリント出力をアセンブルできます。特に、デジタルおよびプリントエクスペリエンスを簡単に同時配信して、一貫性のある統合されたエクスペリエンスをユーザーに提供できます。
 
-While asset templates are mostly [!DNL Adobe InDesign] files, proficiency in [!DNL Adobe InDesign] is not a barrier to creating stellar artifacts. You need not map the fields of your [!DNL Adobe InDesign] template with your product fields that you otherwise require to when creating catalogs. テンプレートは、WYSIWYGモードで直接Webインターフェイス上で編集できます。 However, for [!DNL Adobe InDesign] to process your editing changes, you must first configure [!DNL Experience Manager Assets] to integrate with [!DNL Adobe InDesign Server].
+アセットテンプレートは主に[!DNL Adobe InDesign]ファイルですが、[!DNL Adobe InDesign]の熟練度は優れたアーチファクトを作り出す上での障害にはなりません。 [!DNL Adobe InDesign]テンプレートのフィールドを、カタログの作成時に必要となる製品フィールドにマップする必要はありません。 テンプレートは、WYSIWYGモードで直接Webインターフェイス上で編集できます。 ただし、[!DNL Adobe InDesign]が編集の変更を処理するには、まず[!DNL Experience Manager Assets]を[!DNL Adobe InDesign Server]と統合するように設定する必要があります。
 
-Webインターフェイスから [!DNL Adobe InDesign] テンプレートを編集できるので、クリエイティブスタッフとマーケティングスタッフのコラボレーションが促進されます。 コンテンツの速度が速くなると、マーケティング関連資料の市場投入時間が短縮されます。
+Webインターフェイスから[!DNL Adobe InDesign]テンプレートを編集できるので、クリエイティブスタッフとマーケティングスタッフのコラボレーションが促進されます。 コンテンツの速度が速くなると、マーケティング関連資料の市場投入時間が短縮されます。
 
 アセットテンプレートを使用すると、次のことを実行できます。
 
@@ -31,48 +31,48 @@ Webインターフェイスから [!DNL Adobe InDesign] テンプレートを編
 * テンプレートの編集をプレビューする.
 * 複数のテンプレートファイルを統合して複数ページの成果物を作成する.
 
-When you choose a template for your collateral, [!DNL Experience Manager Assets] creates a copy of the template that you can edit. 元のテンプレートは保持されるので、全体的な表記の元の状態を保つことができ、再利用してブランドの一貫性を強制できます。
+コラテラル用のテンプレートを選択すると、[!DNL Experience Manager Assets]は編集可能なテンプレートのコピーを作成します。 元のテンプレートは保持されるので、全体的な表記の元の状態を保つことができ、再利用してブランドの一貫性を強制できます。
 
 更新したファイルは、親フォルダー内のINDD、PDFまたはJPG形式で書き出すことができます。 これらの形式の出力は、ローカルファイルシステムにダウンロードすることもできます。
 
-## 販促資料の作成 {#creating-a-collateral}
+## コラテラルの作成{#creating-a-collateral}
 
-今後のキャンペーンのために、パンフレット、チラシおよび広告など、デジタルの印刷可能な販促物を作成し、世界中のアウトレットストアで共有するシナリオについて考えてみます。テンプレートに基づいた販促物の作成は、チャネルをまたいで統合されたカスタマーエクスペリエンスを実現するのに役立ちます。Designers can create the campaign templates (single-page or multi-page) using a creative solution, such as [!DNL InDesign] and upload the templates to [!DNL Experience Manager Assets] for you. コラテラルを作成する前に、1つ以上のINDDテンプレートをにアップロードし、あらかじめ利用できるようにしてお [!DNL Experience Manager] きます。
+今後のキャンペーンのために、パンフレット、チラシおよび広告など、デジタルの印刷可能な販促物を作成し、世界中のアウトレットストアで共有するシナリオについて考えてみます。テンプレートに基づいた販促物の作成は、チャネルをまたいで統合されたカスタマーエクスペリエンスを実現するのに役立ちます。デザイナーは、[!DNL InDesign]などのクリエイティブソリューションを使用してキャンペーンテンプレート（シングルページまたは複数ページ）を作成し、テンプレートを[!DNL Experience Manager Assets]にアップロードできます。 コラテラルを作成する前に、1つ以上のINDDテンプレートを[!DNL Experience Manager]にアップロードし、あらかじめ用意しておく必要があります。
 
-1. インター [!DNL Experience Manager] フェイスで、「 [!UICONTROL アセット]」をクリックします。
+1. [!DNL Experience Manager]インターフェイスで、[!UICONTROL アセット]をクリックします。
 
 1. オプションから、「**[!UICONTROL テンプレート]**」を選択します。
 
    ![chlimage_1-101](assets/chlimage_1-306.png)
 
-1. Click **[!UICONTROL Create]**, and then choose the collateral you want to create from the menu. For example, choose **[!UICONTROL Brochure]**.
+1. 「**[!UICONTROL 作成]**」をクリックし、作成するコラテラルをメニューから選択します。 例えば、**[!UICONTROL パンフレット]**&#x200B;を選択します。
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 1つ以上のINDDテンプレートをにアップロードし、あらかじめ使用できるように [!DNL Experience Manager] します。 Choose a template for your brochure, and click **[!UICONTROL Next]**.
+1. 1つ以上のINDDテンプレートを[!DNL Experience Manager]に事前にアップロードしておき、&lt;a0/>で利用できるようにします。 パンフレットのテンプレートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
 1. パンフレットの名前と、オプションで説明を指定します。
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
-1. （オプション）「 **[!UICONTROL タグ]** 」をクリックし、パンフレットに使用するタグを1つ以上選択します。 Click **[!UICONTROL Confirm]** to confirm your selection.
-1. 「**[!UICONTROL 作成]**」をクリックします。新しいパンフレットが作成されたことを確認するダイアログが表示されます。Click **[!UICONTROL Open]** to open the brochure in edit mode.
+1. （オプション）「**[!UICONTROL タグ]**」をクリックし、パンフレットのタグを1つ以上選択します。 「**[!UICONTROL 確認]**」をクリックして、選択を確定します。
+1. 「**[!UICONTROL 作成]**」をクリックします。新しいパンフレットが作成されたことを確認するダイアログが表示されます。「**[!UICONTROL 開く]**」をクリックして、パンフレットを編集モードで開きます。
 
    <!--![chlimage_1-106](assets/.png) -->
 
-   または、ダイアログを閉じて、開始したテンプレートページのフォルダーに移動し、作成したパンフレットを表示します。販促物のタイプがカード表示のサムネールに表示されます。For example, in this case, the word [!UICONTROL Brochure] is displayed on the thumbnail.
+   または、ダイアログを閉じて、開始したテンプレートページのフォルダーに移動し、作成したパンフレットを表示します。販促物のタイプがカード表示のサムネールに表示されます。例えば、この場合、[!UICONTROL パンフレット]という単語がサムネールに表示されます。
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
-## コラテラルの編集 {#editing-a-collateral}
+## コラテラルの編集{#editing-a-collateral}
 
-販促物を作成したら、すぐに編集できます。Alternatively, you open it from the [!UICONTROL Templates] page or the asset page.
+販促物を作成したら、すぐに編集できます。または、[!UICONTROL テンプレート]ページまたはアセットページから開きます。
 
 1. 販促物を編集するために開くには、次のいずれかの操作をおこないます。
 
-   * Open the collateral (brochure in this case) you created in step 7 of [Create a collateral](/help/assets/asset-templates.md#creating-a-collateral).
-   * From the Templates page, navigate to a folder where you created the collateral, and click the [!UICONTROL Edit] quick action on the thumbnail of a collateral.
-   * In the asset page for the collateral, click **[!UICONTROL Edit]** from the toolbar.
-   * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
+   * [コラテラルの作成](/help/assets/asset-templates.md#creating-a-collateral)の手順7で作成したコラテラル（この場合はパンフレット）を開きます。
+   * Templatesページで、コラテラルを作成したフォルダーに移動し、コラテラルのサムネール上の「[!UICONTROL 編集]」クイックアクションをクリックします。
+   * コラテラルのアセットページで、ツールバーの「**[!UICONTROL 編集]**」をクリックします。
+   * コラテラルを選択し、ツールバーの「**[!UICONTROL 編集]**」をクリックします。
 
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
@@ -80,15 +80,15 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    テキストエディターを使用して、テキストフィールドに表示させるテキストを変更します。タグレベルで、フォントサイズ、スタイル、カラーおよびタイプを変更できます。
 
-   Using the asset finder, you can browse or search for images within [!DNL Experience Manager Assets] and replace the editable images in the template with images of your choice.
+   アセットファインダーを使用して、[!DNL Experience Manager Assets]内の画像を参照または検索し、テンプレート内の編集可能な画像を任意の画像に置き換えることができます。
 
    ![chlimage_1-109](assets/chlimage_1-314.png)
 
-   編集可能であることは右側に表示されます。For a field to be editable in [!DNL Experience Manager Assets], corresponding field in the template must be tagged in [!DNL InDesign]. In other words, they should be marked as editable in [!DNL InDesign].
+   編集可能であることは右側に表示されます。フィールドを[!DNL Experience Manager Assets]で編集するには、テンプレート内の対応するフィールドに[!DNL InDesign]でタグを付ける必要があります。 つまり、[!DNL InDesign]内で編集可能とマークする必要があります。
 
    >[!NOTE]
    >
-   >Ensure that your [!DNL Experience Manager] deployment is integrated with an [!DNL InDesign Server] to enable [!DNL Experience Manager Assets] to extract data from the [!DNL InDesign] template and make it available for editing. 詳しくは、Experience ManagerアセットとInDesign Serverの [統合を参照してください](/help/assets/indesign.md)。
+   >[!DNL Experience Manager]デプロイメントが[!DNL InDesign Server]と統合されていることを確認して、[!DNL Experience Manager Assets]が[!DNL InDesign]テンプレートからデータを抽出できるようにし、編集可能にします。 詳しくは、[Experience ManagerアセットとInDesign Server](/help/assets/indesign.md)の統合を参照してください。
 
 1. 編集可能なフィールド内のテキストを変更するには、編集可能なフィールドのリストからテキストフィールドをクリックし、フィールド内のテキストを編集します。
 
@@ -96,38 +96,38 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    提供されたオプションを使用して、フォントスタイル、色、サイズなどのテキストプロパティを編集できます。
 
-1. 「 **[!UICONTROL プレビュー]** 」をクリックして、テキストの変更をプレビューします。
+1. **[!UICONTROL プレビュー]**&#x200B;をクリックして、テキストの変更をプレビューします。
 
-1. 画像を入れ替えるには、 **[!UICONTROL アセットファインダー]**![chlimage_1-113をクリックし](assets/chlimage_1-318.png)ます。
+1. 画像を入れ替えるには、**[!UICONTROL アセットファインダー]** ![chlimage_1-113](assets/chlimage_1-318.png)をクリックします。
 
 1. 編集可能なフィールドのリストから画像フィールドを選択して、アセットピッカーから編集可能なフィールドに目的の画像をドラッグします。
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
-   また、キーワード、タグおよび公開ステータスに基づいて画像を検索できます。You can browse through the [!DNL Experience Manager Assets] repository and navigate to the location of the desired image.
+   また、キーワード、タグおよび公開ステータスに基づいて画像を検索できます。[!DNL Experience Manager Assets]リポジトリを参照して、目的の画像の場所に移動できます。
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
-1. 「 **[!UICONTROL プレビュー]** 」をクリックしてプレビューを行います。
+1. **[!UICONTROL プレビュー]**&#x200B;をクリックして、画像をプレビューします。
 1. 複数ページのコラテラル内の特定のページを編集するには、下部のページナビゲーターを使用します。
 
-1. Click **[!UICONTROL Preview]** on the toolbar to preview all the changes. Click **[!UICONTROL Done]** to save the editing changes to the collateral.
+1. ツールバーの&#x200B;**[!UICONTROL プレビュー]**&#x200B;をクリックして、すべての変更をプレビューします。 「**[!UICONTROL 完了]**」をクリックして、コラテラルに対する編集の変更を保存します。
 
    >[!NOTE]
    >
-   >「プレビュー」オプションと「完了」オプションは、コラテラル内の編集可能な画像フィールドに、見つからないアイコンがない場合にのみ有効です。 If there are missing icons in your collateral, it is because [!DNL Experience Manager] is unable to resolve the images in the [!DNL InDesign] template. Usually, [!DNL Experience Manager] is unable to resolve images in the following cases:
+   >「プレビュー」オプションと「完了」オプションは、コラテラル内の編集可能な画像フィールドに、見つからないアイコンがない場合にのみ有効です。 コラテラルに見つからないアイコンが含まれている場合は、[!DNL Experience Manager]が[!DNL InDesign]テンプレート内の画像を解決できないためです。 通常、[!DNL Experience Manager]は、次の場合はイメージを解決できません。
    >
-   >* Images are not embedded in the underlying [!DNL InDesign] template.
+   >* 画像は基になる[!DNL InDesign]テンプレートに埋め込まれません。
    >* 画像がローカルファイルシステムからリンクされている.
 
    >
-   >To enable [!DNL Experience Manager] to resolve images, do the following:
+   >[!DNL Experience Manager]で画像を解決するには、次の手順を実行します。
    >
-   >* Embed images while creating [!DNL InDesign] templates (See [About links and embedded graphics](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)).
-   >* Mount [!DNL Experience Manager] to your local file system, and then map missing icons with existing assets in [!DNL Experience Manager].
+   >* [!DNL InDesign]テンプレートの作成時に画像を埋め込みます（[リンクと埋め込みグラフィックについて](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)を参照）。
+   >* [!DNL Experience Manager]をローカルファイルシステムにマウントし、[!DNL Experience Manager]内の既存のアセットで見つからないアイコンをマップします。
 
    >
-   >For more information around working with [!DNL InDesign] documents, see [best practices to work with InDesign documents in Experience Manager](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html).
+   >[!DNL InDesign]ドキュメントの使用に関する詳細は、](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html)Experience ManagerのInDesignドキュメントを使用するための[ベストプラクティスを参照してください。
 
 1. パンフレットの PDF レンディションを生成するには、ダイアログで Acrobat オプションを選択し、「**[!UICONTROL 続行]**」をクリックします。
 1. 開始したフォルダーに販促物が作成されます。レンディションを表示するには、販促物を開いて、グローバルナビゲーションリストから「**[!UICONTROL レンディション]**」を選択します。
@@ -138,17 +138,17 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
-## Merge collateral {#merge-collateral}
+## コラテラルの結合{#merge-collateral}
 
-1. インター [!DNL Experience Manager] フェイスで、ナビゲーションページの「 [!UICONTROL アセット] 」をクリックします。
+1. [!DNL Experience Manager]インターフェイスで、ナビゲーションページの[!UICONTROL アセット]をクリックします。
 
 1. オプションから、「**[!UICONTROL テンプレート]**」を選択します。
 
-1. Click **[!UICONTROL Create]** and the choose **[!UICONTROL Merge]** from the menu.
+1. 「**[!UICONTROL 作成]**」をクリックし、メニューから「**[!UICONTROL 結合]**」を選択します。
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. テン [!UICONTROL プレートの結合] ページで、「アセットを **[!UICONTROL 結合]** 」をクリックし、アセットを ![追加します](assets/do-not-localize/assets_add_icon.png)。
+1. [!UICONTROL テンプレートの結合]ページで、**[!UICONTROL 結合]** ![アセットを追加](assets/do-not-localize/assets_add_icon.png)をクリックします。
 
 1. マージするコラテラルの場所に移動し、マージするコラテラルのサムネールをクリックして選択します。
 
@@ -156,20 +156,20 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
    また、「Omnisearch」ボックスからテンプレートを検索することもできます。
 
-   You can browse through the [!DNL Experience Manager Assets] repository or collections, and navigate to the location of the desired templates and then select them to merge.
+   [!DNL Experience Manager Assets]リポジトリまたはコレクションを参照し、目的のテンプレートの場所に移動して、それらを選択して結合できます。
 
    様々なフィルターを適用して、目的のテンプレートを検索できます。例えば、ファイルタイプやタグに基づいてテンプレートを検索できます。
 
-1. Click **[!UICONTROL Next]** from the toolbar.
-1. In the **[!UICONTROL Preview &amp; Reorder]** screen, rearrange the templates if required and preview the selection of templates to merge. Then, click **[!UICONTROL Next]** from the toolbar.
+1. ツールバーから「**[!UICONTROL 次へ]**」をクリックします。
+1. **[!UICONTROL プレビューと並べ替え]**&#x200B;画面で、必要に応じてテンプレートを並べ替え、結合するテンプレートのプレビューを行います。 次に、ツールバーの&#x200B;**[!UICONTROL 次へ]**&#x200B;をクリックします。
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. In the [!UICONTROL Configure Template] screen, specify a name for the collateral. オプションで、適切なタグを指定します。If you want to export the output in PDF format, select **[!UICONTROL Acrobat (.PDF)]**. By default, the collateral is exported in JPG and [!DNL InDesign] format. To change the display thumbnail for the multi-page collateral, click **[!UICONTROL Change Thumbnail]**.
+1. [!UICONTROL テンプレートを設定]画面で、コラテラルの名前を指定します。 オプションで、適切なタグを指定します。出力をPDF形式で書き出す場合は、**[!UICONTROL Acrobat(.PDF)]**&#x200B;を選択します。 デフォルトでは、コラテラルはJPGおよび[!DNL InDesign]形式で書き出されます。 複数ページのコラテラルの表示サムネールを変更するには、「**[!UICONTROL サムネールを変更]**」をクリックします。
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
-1. Click **[!UICONTROL Save]** and then click **[!UICONTROL OK]** in the dialog to close the dialog. 複数ページのコラテラルは、最初に使用したフォルダーに作成されます。
+1. 「**[!UICONTROL 保存]**」をクリックし、ダイアログで「**[!UICONTROL OK]**」をクリックしてダイアログを閉じます。 複数ページのコラテラルは、最初に使用したフォルダーに作成されます。
 
    >[!NOTE]
    >
@@ -177,4 +177,4 @@ When you choose a template for your collateral, [!DNL Experience Manager Assets]
 
 ## ベストプラクティスと制限事項 {#best-practices-limitations-tips}
 
-* の [!DNL InDesign] エディターはタグレベルで [!DNL Experience Manager] 機能し、1つのタグの下にあるすべてのテキストは単一のエンティティと見なされます。 編集時にテキストの書式設定とスタイルを保持するには、各段落（または異なるスタイルのテキスト）に個別にタグを付けます。
+* [!DNL Experience Manager]の[!DNL InDesign]エディターはタグレベルで機能し、1つのタグの下のすべてのテキストは単一のエンティティと見なされます。 編集時にテキストの書式設定とスタイルを保持するには、各段落（または異なるスタイルのテキスト）に個別にタグを付けます。
