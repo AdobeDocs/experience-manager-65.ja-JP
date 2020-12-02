@@ -22,13 +22,13 @@ ht-degree: 36%
 
 ## ダウンロード {#download}
 
-This script is made to ease the analysis of the `access.log` files producing a readable report for later processing.
+このスクリプトは、後で処理するために読み取り可能なレポートを生成する`access.log`ファイルの分析を容易にするために作成されました。
 
 [ファイルを入手](assets/analyse-access.sh)
 
 ## 説明 {#description}
 
-This script is made to ease the analysis of the `access.log` files producing a readable report for later processing.
+このスクリプトは、後で処理するために読み取り可能なレポートを生成する`access.log`ファイルの分析を容易にするために作成されました。
 
 このスクリプトは、リクエストの全体番号、GET 対 POST、リクエスト配信の推移など多くのデータを生成します。
 
@@ -38,7 +38,7 @@ This script is made to ease the analysis of the `access.log` files producing a r
 
 ファイル内のコメントから、その実行方法を示す情報を取得します。
 
-Analyse CQ `access.log` extrapolating various informations and producing a Markdown output on `stdout`.
+CQ `access.log`を分析し、さまざまな情報を推定して`stdout`上でMarkdown出力を生成します。
 
 ## 使用方法 {#usage}
 
