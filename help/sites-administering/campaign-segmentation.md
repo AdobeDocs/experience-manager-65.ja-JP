@@ -14,12 +14,12 @@ translation-type: tm+mt
 source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 workflow-type: tm+mt
 source-wordcount: '1080'
-ht-degree: 79%
+ht-degree: 84%
 
 ---
 
 
-# セグメント化の設定 {#configuring-segmentation}
+# セグメント化の設定  {#configuring-segmentation}
 
 >[!NOTE]
 >
@@ -29,19 +29,19 @@ ht-degree: 79%
 
 サイト訪問者についてこれまでに収集した情報と、達成する目標に応じて、ターゲットコンテンツに必要なセグメントと戦略を定義する必要があります。
 
-このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。This content is maintained in the [Campaigns](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) section of the website. ここで定義されたティーザーページは、任意のページでティーザー段落として追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
+このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、Webサイトの[キャンペーン](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)セクションに保持されます。 ここで定義されたティーザーページは、任意のページでティーザー段落として追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
 
 AEM を使用すると、セグメント、ティーザーおよびキャンペーンを簡単に作成できます。また、定義の結果を検証することもできます。
 
-The **Segment Editor** allows you to easily define a segment:
+**セグメントエディター**&#x200B;を使用すると、セグメントを簡単に定義できます。
 
 ![](assets/segmenteditor.png)
 
 各セグメントを&#x200B;**編集**&#x200B;し、**タイトル**、**説明**&#x200B;および&#x200B;**ブースト**&#x200B;係数を指定できます。サイドキックを使用すると、**AND** および **OR** コンテナを追加して&#x200B;**セグメントロジック**&#x200B;を定義してから、必要な&#x200B;**セグメント特性**&#x200B;を追加して選択基準を定義できます。
 
-## ブースト係数 {#boost-factor}
+## ブースト係数  {#boost-factor}
 
-Each segment has a **Boost** parameter that is used as a weighting factor; a higher number indicates that the segment will be selected in preference to a segment with a lower number.
+各セグメントには、**Boost**&#x200B;パラメーターがあり、重み付け係数として使用されます。数値が大きいほど、数値が小さいセグメントよりも優先してセグメントが選択されます。
 
 * 最小値：`0`
 * 最大値：`1000000`
@@ -54,11 +54,11 @@ Each segment has a **Boost** parameter that is used as a weighting factor; a hig
  <tbody>
   <tr>
    <td> AND コンテナ<br /> </td>
-   <td> The boolean AND operator.<br /> </td>
+   <td> AND ブール演算値.<br /> </td>
   </tr>
   <tr>
    <td> OR コンテナ<br /> </td>
-   <td> ブールOR演算子。</td>
+   <td> OR ブール演算値.</td>
   </tr>
  </tbody>
 </table>
@@ -108,25 +108,25 @@ Each segment has a **Boost** parameter that is used as a weighting factor; a hig
  </tbody>
 </table>
 
-You can combine these traits using the boolean operators OR and AND (see [Creating a New Segment](#creating-a-new-segment)) to define the exact scenario for selecting this segment.
+これらの特性は、ブール演算子ORとANDを使用して組み合わせることができます（[新しいセグメントの作成](#creating-a-new-segment)を参照）。このセグメントを選択するための正確なシナリオが定義されます。
 
-文全体が true と評価されると、このセグメントは解決されます。In the event of multiple segments being applicable, then the **[Boost](/help/sites-administering/campaign-segmentation.md#boost-factor)** factor is also used.
+文全体が true と評価されると、このセグメントは解決されます。複数のセグメントを適用可能な場合、**[ブースト](/help/sites-administering/campaign-segmentation.md#boost-factor)**&#x200B;係数も使用されます。
 
 >[!CAUTION]
 >
->セグメントエディターは、循環参照をチェックしません。例えば、セグメントAは別のセグメントBを参照し、次にセグメントAを参照します。セグメントAに循環参照が含まれていないことを確認する必要があります。
+>セグメントエディターは、循環参照をチェックしません。例えば、セグメント A が別のセグメント B を参照していて、そのセグメント B がセグメント A を参照している場合などです。このため、セグメントに循環参照が存在しないことを必ず確認してください。
 
 >[!NOTE]
 >
->**_i18n** サフィックスを持つプロパティは、パーソナライズのUI clientlibの一部であるスクリプトによって設定されます。 UI は公開時には必要ないので、UI 関連の clientlib はすべて作成時に読み込まれます。
+>**_i18n**&#x200B;サフィックスを持つプロパティは、パーソナライゼーションのUI clientlibの一部であるスクリプトによって設定されます。 UI は公開時には必要ないので、UI 関連の clientlib はすべて作成時に読み込まれます。
 >
->Therefore when creating a segment with such properties is it normally necessary to rely on **browserFamily** for instance instead of **browserFamily_i18n**.
+>したがって、このようなプロパティを使用してセグメントを作成する場合、通常は&#x200B;**browserFamily_i18n**&#x200B;ではなく、**browserFamily**&#x200B;を使用する必要があります。
 
 ### 新しいセグメントの作成 {#creating-a-new-segment}
 
-新しいセグメントを定義するには：
+新しいセグメントを定義するには、次の手順に従います。
 
-1. In the rail, choose **Tools > Operations > Configuration**.
+1. パネルで、**ツール/操作/設定**&#x200B;を選択します。
 1. 左側のウィンドウで&#x200B;**セグメント化**&#x200B;ページを開き、必要な場所に移動します。
 1. **セグメント**&#x200B;テンプレートを使用して[新規ページ](/help/sites-authoring/editing-content.md#creatinganewpage)を作成します。
 1. 新規ページを開いてセグメントエディターを表示します。
@@ -145,7 +145,7 @@ You can combine these traits using the boolean operators OR and AND (see [Creati
 
 1. 必要に応じて特性を追加します。**セグメントロジック**&#x200B;にある「**AND コンテナ**」および「**OR コンテナ**」コンポーネントを使用してブール式を作成することができます。セグメントエディターでは、不要になった特性やコンテナを削除したり、コンポーネントをステートメント内の別の場所へドラッグしたりすることができます。
 
-### AND コンテナと OR コンテナの使用 {#using-and-and-or-containers}
+### AND コンテナと OR コンテナの使用  {#using-and-and-or-containers}
 
 AEM で複雑なセグメントを作成できます。次の基本事項に留意してください。
 
@@ -164,12 +164,12 @@ AEM で複雑なセグメントを作成できます。次の基本事項に留�
 
 ![](assets/screen_shot_2012-02-02at105145am.png)
 
-## セグメントの適用のテスト {#testing-the-application-of-a-segment}
+## セグメントの適用のテスト  {#testing-the-application-of-a-segment}
 
 セグメントを設定したら、**[クライアントコンテキスト](/help/sites-administering/client-context.md)**&#x200B;を使用して、考えられる結果についてテストすることができます。
 
 1. テストするセグメントを選択します。
-1. **[Ctrl + Alt + C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** キーを押して、**[クライアントコンテキスト](/help/sites-administering/client-context.md)**&#x200B;を開くと、収集されたデータが表示されます。For testing purposes you can **Edit** certain values, or **Load** another profile to see the impact there.
+1. **[Ctrl + Alt + C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** キーを押して、**[クライアントコンテキスト](/help/sites-administering/client-context.md)**&#x200B;を開くと、収集されたデータが表示されます。テスト目的では、**特定の値を**&#x200B;編集するか、**別のプロファイルを読み込んで**&#x200B;影響を確認します。
 
 1. 定義した特性に応じて、現在のページで利用可能なデータはセグメント定義と一致する場合も一致しない場合もあります。一致のステータスは定義の下に表示されます。
 
@@ -185,12 +185,12 @@ AEM で複雑なセグメントを作成できます。次の基本事項に留�
 >
 >すべての特性がただちに解決されます。ただし、ほとんどの特性はページを再読み込みしたときにのみ変更されます。マウス位置の変更はすぐに表示されるため、テストの際に便利です。
 
-Such tests can also be performed on content pages and in combination with **Teaser** components.
+このようなテストは、コンテンツページ上でも、**Teaser**&#x200B;コンポーネントと組み合わせて実行できます。
 
 ティーザー段落にマウスを置くと、適用されたセグメント、セグメントが解決されたかどうか、その結果として現在のティーザーインスタンスが選択された理由が表示されます。
 
 ![](assets/chlimage_1-47.png)
 
-### セグメントの使用 {#using-your-segment}
+### セグメントの使用  {#using-your-segment}
 
 セグメントは現在[キャンペーン](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)で使用されます。これらのセグメントを使用して、特定のターゲット読者に向けられた実際のコンテンツを制御することができます。詳しくは、[セグメント化について](/help/sites-authoring/segmentation-overview.md)を参照してください。
