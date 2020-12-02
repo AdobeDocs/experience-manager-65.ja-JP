@@ -18,7 +18,7 @@ ht-degree: 97%
 ---
 
 
-# HTML5 フォームのスクリプティングのサポート {#scripting-support-for-html-forms}
+# HTML5 フォームのスクリプティングのサポート  {#scripting-support-for-html-forms}
 
 以下は、JavaScript と FormCalc プロパティ、および HTML5 フォームでサポートされているメソッドの一覧です。
 
@@ -48,7 +48,7 @@ ht-degree: 97%
   <tr>
    <td><code>newtext</code></td>
    <td>ユーザーの操作に応じて変更された後のフィールドのコンテンツを指定します。</td>
-   <td><p>The <code>newText</code> property does not work properly for following cases :</p>
+   <td><p><code>newText</code>プロパティは、次の場合は正しく機能しません。</p>
     <ul>
      <li>テキストを選択置換するとき。</li>
      <li>テキストの削除、コピー、およびペーストするとき。</li>
@@ -328,7 +328,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td>caption</td>
-   <td>  caption object describes a descriptive label associated with a form design object.<br /> </td>
+   <td> <br /> </td>
    <td>なし</td>
   </tr>
   <tr>
@@ -380,7 +380,7 @@ ht-degree: 97%
 | `remove` | ノードリストからノードを削除します。 |
 | `insert` | ノードリスト内の特定のノードの前にノードを挿入します。 |
 
-## node {#node}
+## node  {#node}
 
 | プロパティ | 説明 | 例外 |
 |---|---|---|
@@ -481,7 +481,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td>instanceManager</td>
-   <td>  instanceManager object manages the instance creation, removal, and movement of form model objects.<br /> </td>
+   <td> <br /> </td>
    <td>なし</td>
   </tr>
  </tbody>
@@ -493,7 +493,7 @@ ht-degree: 97%
 |---|---|
 | target | データの送信先 URL。この属性を省略することは、XFA 処理アプリケーションが config オブジェクトの製品固有の情報にアクセスするなどの、製品固有の技術を使用して URI を取得することを意味します。 |
 
-## tree {#tree}
+## tree  {#tree}
 
 <table>
  <tbody>
@@ -583,7 +583,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## fill {#fill}
+## fill  {#fill}
 
 <table>
  <tbody>
@@ -825,7 +825,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## imageEdit {#imageedit}
+## imageEdit  {#imageedit}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
@@ -871,7 +871,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## textEdit {#textedit}
+## textEdit  {#textedit}
 
 <table>
  <tbody>
@@ -949,7 +949,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td>caption</td>
-   <td>  caption object describes a descriptive label associated with a form design object.<br /> </td>
+   <td>  captionオブジェクトは、フォームデザインのオブジェクトに関連付けられた説明ラベルを表します。<br /> </td>
    <td>なし</td>
   </tr>
   <tr>
@@ -994,7 +994,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td>calculate</td>
-   <td>  calculate object controls the calculation of a field’s value.<br /> </td>
+   <td> <br /> </td>
    <td>なし</td>
   </tr>
  </tbody>
@@ -1115,7 +1115,7 @@ ht-degree: 97%
 
 FormCalc は e フォーム中心のロジックと計算のルートを作成するための XFA 固有の言語です。FormCalculation は強力なビルド関数のセットを提供します。
 
-### FormCalc によってサポートされている関数 {#formcalc-supported-functions}
+### FormCalc によってサポートされている関数  {#formcalc-supported-functions}
 
 ### FormCalc 式のサポート {#formcalc-expression-support}
 
@@ -1163,7 +1163,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr>
    <td>for each</td>
    <td><br type="_moz" /> </td>
-   <td>for each i in (1, 2, 3) <br /> do s = s + i endfor</td>
+   <td>for each i in (1, 2, 3)  <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>関数の宣言</td>
@@ -1173,7 +1173,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
  </tbody>
 </table>
 
-### Acrobat API のサポート {#acrobat-api-support}
+### Acrobat API のサポート  {#acrobat-api-support}
 
 1. **演算関数**
 
@@ -1338,7 +1338,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
  </tbody>
 </table>
 
-## サポートされる XFA イベント {#supported-xfa-events}
+## サポートされる XFA イベント  {#supported-xfa-events}
 
 次のクライアント側の XFA イベントがサポートされていません。
 
