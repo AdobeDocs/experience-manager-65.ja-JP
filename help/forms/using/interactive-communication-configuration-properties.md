@@ -23,7 +23,7 @@ ht-degree: 60%
 
 インタラクティブ通信には、[AEM Forms アドオン](../../forms/using/installing-configuring-aem-forms-osgi.md)パッケージのインストール後に自動的に設定されるプロパティが含まれています。インタラクティブ通信の作成者は、**Adobe Experience Manager Web コンソール設定**&#x200B;ページを使用して、これらのデフォルトの設定プロパティを編集できます。
 
-Open the **Adobe Experience Manager Web Console Configuration** page using the following URL:
+次のURLを使用して&#x200B;**Adobe Experience ManagerWebコンソール設定**&#x200B;ページを開きます。
 
 `https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
@@ -34,9 +34,9 @@ Open the **Adobe Experience Manager Web Console Configuration** page using the f
 * [アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定](#adaptive-form-and-interactive-communication-web-channel-configuration)
 * [アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
-## ドキュメントフラグメントの設定 {#document-fragments-configuration}
+## ドキュメントフラグメントの設定  {#document-fragments-configuration}
 
-Tap **Document Fragments configuration** on the **Adobe Experience Manager Web Console Configuration** page to view the configuration properties for document fragments.
+**Adobe Experience ManagerWebコンソールの設定**&#x200B;ページで&#x200B;**ドキュメントフラグメントの設定**&#x200B;をタップし、ドキュメントフラグメントの設定プロパティを表示します。
 
 <table>
  <tbody> 
@@ -57,7 +57,7 @@ Tap **Document Fragments configuration** on the **Adobe Experience Manager Web C
      <li>numberGroupSeparator = ,</li> 
      <li>numberUseGroupSeparator = true</li> 
     </ul> </td> 
-   <td><p>--</p> </td> 
+   <td><p>—</p> </td> 
   </tr> 
   <tr> 
    <td>インデント</td> 
@@ -80,9 +80,9 @@ Tap **Document Fragments configuration** on the **Adobe Experience Manager Web C
  </tbody> 
 </table>
 
-## 通信設定の作成 {#create-correspondence-configuration}
+## 通信設定の作成  {#create-correspondence-configuration}
 
-Tap **Create Correspondence Configuration** on the **Adobe Experience Manager Web Console Configuration** page to view the configuration properties for Agent UI.
+**Adobe Experience ManagerWebコンソール設定**&#x200B;ページで「通信の設定を作成」**をタップし、エージェントUIの設定プロパティを表示します。**
 
 <table>
  <tbody> 
@@ -106,16 +106,16 @@ Tap **Create Correspondence Configuration** on the **Adobe Experience Manager We
   </tr> 
   <tr> 
    <td>PDFへのフォントの埋め込みを有効にする</td> 
-   <td><p>PDFドキュメントにフォントを埋め込むかどうかを指定するチェックボックスを選択します。 このオプションを選択した後、エージェントUIを使用してPDFドキュメントを生成またはプレビューした後に、新しいフォントを埋め込むことができます。 Interactive CommunicationのPrintチャネルを使用して、PDFドキュメントを生成し、プレビューします。</p> <p>PDFドキュメントにフォントを埋め込むのは、PDFの生成に使用されるコンピューターでフォントが使用可能で、PDFにアクセスするクライアントマシンでは使用できない場合に便利です。</p> <p>フォントの埋め込みについて詳しくは、「テキストエディターの <a href="../../forms/using/customize-text-editor.md" target="_blank">カスタマイズ</a>」を参照してください。</p> </td> 
+   <td><p>PDFドキュメントにフォントを埋め込むかどうかを指定するチェックボックスを選択します。 このオプションを選択した後、エージェントUIを使用してPDFドキュメントを生成またはプレビューした後に、新しいフォントを埋め込むことができます。 Interactive CommunicationのPrintチャネルを使用して、PDFドキュメントを生成し、プレビューします。</p> <p>PDFドキュメントにフォントを埋め込むのは、PDFの生成に使用されるコンピューターでフォントが使用可能で、PDFにアクセスするクライアントマシンでは使用できない場合に便利です。</p> <p>フォントの埋め込みについて詳しくは、<a href="../../forms/using/customize-text-editor.md" target="_blank">テキストエディターのカスタマイズ</a>を参照してください。</p> </td> 
    <td>未選択</td> 
    <td>該当なし</td> 
   </tr> 
  </tbody> 
 </table>
 
-## アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
+## アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定  {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-Tap **Adaptive Form and Interactive Communication Web Channel Configuration** on the **Adobe Experience Manager Web Console Configuration** page to view the configuration properties for Adaptive Forms and Interactive Communications Web channel. 次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
+**Adobe Experience ManagerWebコンソール設定**&#x200B;ページで「**アダプティブフォームと対話型通信Webチャネルの設定**」をタップし、アダプティブFormsおよび対話型通信Webチャネルの設定プロパティを表示します。 次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
 
 | プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
@@ -123,9 +123,9 @@ Tap **Adaptive Form and Interactive Communication Web Channel Configuration** on
 | 最大キャッシュエントリ数 | キャッシュメモリを使用して取得できるアダプティブフォームおよびインタラクティブ通信の最大数を設定します。 | 100 | 数値 |
 | 一意のファイル名を作成 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に添付ファイルとして含まれているファイルに一意の名前を付けます。 | 未選択 | 該当なし |
 
-## アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定  {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-Tap **Adaptive Form and Interactive Communication Web Channel Theme Configuration** on the **Adobe Experience Manager Web Console Configuration** page to view the configuration properties for Adaptive Forms and Interactive Communications Web channel themes.
+**Adobe Experience ManagerWebコンソール設定**&#x200B;ページで「**アダプティブフォームと対話型通信Webチャネルのテーマ設定**」をタップし、アダプティブFormsおよび対話型通信Webチャネルテーマの設定プロパティを表示します。
 
 <table>
  <tbody> 
