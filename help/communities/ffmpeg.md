@@ -18,7 +18,7 @@ ht-degree: 43%
 ---
 
 
-# コミュニティのための FFmpeg {#ffmpeg-for-communities}
+# コミュニティのための FFmpeg  {#ffmpeg-for-communities}
 
 ## 概要 {#overview}
 
@@ -26,11 +26,11 @@ FFmpeg は、オーディオとビデオの変換およびストリーミング�
 
 FFmpeg は、オーサー環境で、アップロードしたイネーブルメントリソースのメタデータを取得したり、イネーブルメントリソースの一覧に表示するサムネイルを生成するときに使用します。
 
-## FFmpeg のインストール {#installing-ffmpeg}
+## FFmpeg のインストール  {#installing-ffmpeg}
 
 FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしているサーバーにインストールする必要があります。
 
-1. Go to [https://www.ffmpeg.org](https://www.ffmpeg.org/).
+1. [https://www.ffmpeg.org](https://www.ffmpeg.org/)に移動します。
 1. ご使用の環境（Macintosh、Windows、またはLinux）用の最新バージョンのFFmpegをダウンロードします。
 
    * 古いバージョンのセキュリティの脆弱性により、FMPEGを最新の状態に保つことが重要です。
@@ -45,29 +45,29 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 ## FFmpeg トランスコーディングサービスの設定 {#configure-ffmpeg-transcoding-service}
 
-By default, when FFmpeg is installed, multiple renditions are configured (transcodings) as per the [!UICONTROL DAM Update Asset] workflow definition.
+デフォルトでは、FMPEGがインストールされると、[!UICONTROL DAM Update Asset]ワークフロー定義に従って、複数のレンディションが設定（トランスコーディング）されます。
 
 トランスコーディングは CPU を集中的に使用するので、対象レンディションのリストを変更することを推奨します。ほとんどの場合、トランスコードは必要ありません。
 
-To modify the [!UICONTROL DAM Update Asset] workflow, and in this example, to turn off transcoding:
+[!UICONTROL DAM Update Asset]ワークフローを変更し、次の例でトランスコードをオフにするには：
 
 * 管理者権限で作成者インスタンスにサインインします。
-* グローバルナビゲーションから、 **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデルに移動します]**。
-* Locate **[!UICONTROL DAM Update Asset]**.
+* グローバルナビゲーションから、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動します。
+* **[!UICONTROL DAM Update Asset]**&#x200B;を探します。
 * 重複を押しながらクリックすると、編集用のワークフローがクラシックUIで開きます。
 
-   Resulting location: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+   結果の場所：[http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* Double-click the **[!UICONTROL FFmpeg transcoding]** step to access the Step Properties dialog.
-* Under the **[!UICONTROL Process]** tab:
+* **[!UICONTROL Fmpegトランスコード]**&#x200B;の手順を重複クリックして、手順のプロパティダイアログにアクセスします。
+* 「**[!UICONTROL プロセス]**」タブの下：
 
-   * **[!UICONTROL 軍備]**:すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+   * **[!UICONTROL 軍備]**:すべてのエントリを消去してトランスコードのデフォルト値を無効にします。  `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
-* Select **[!UICONTROL OK]** to close the `Step Properties` dialog.
+* 「**[!UICONTROL OK]**」を選択して`Step Properties`ダイアログを閉じます。
 
-* Select **[!UICONTROL Save]** to save the `DAM Update Asset` workflow.
+* 「**[!UICONTROL 保存]**」を選択して、`DAM Update Asset`ワークフローを保存します。
 
 
 
