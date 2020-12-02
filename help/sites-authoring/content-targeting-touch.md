@@ -32,7 +32,7 @@ AEM のターゲットモードを使用してターゲットコンテンツを�
 * 訪問者のエクスペリエンスをシミュレート
 * ターゲットコンポーネントの設定をカスタマイズ
 
-AEM または Adobe Target をターゲティングエンジンとして使用できます（Adobe Target を使用するには有効な Adobe Target アカウントが必要です）。Adobe Target を使用する場合は、まず統合を設定する必要があります。See [instructions for integrating with Adobe Target](/help/sites-administering/target.md).
+AEM または Adobe Target をターゲティングエンジンとして使用できます（Adobe Target を使用するには有効な Adobe Target アカウントが必要です）。Adobe Target を使用する場合は、まず統合を設定する必要があります。[Adobe Target](/help/sites-administering/target.md)との統合の手順を参照してください。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -53,7 +53,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 >
 >ターゲティングをおこなうとき、ブランディングとアクティビティの組み合わせは、チャネルレベルではなくユーザーレベルで保持されます。
 
-## ターゲットモードへの切り替え {#switching-to-targeting-mode}
+## ターゲットモードへの切り替え  {#switching-to-targeting-mode}
 
 ターゲットモードに切り替えて、ターゲットコンテンツをオーサリングするためのツールにアクセスします。
 
@@ -109,7 +109,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
    * エクスペリエンスターゲット設定 - Adobe Target アクティビティを AEM から管理します。
    * A/B テスト - Adobe Target の A/B テストアクティビティを AEM から作成および管理します。
 
-## ターゲット設定プロセス：作成、ターゲット、目標と設定 {#the-targeting-process-create-target-and-goals-settings}
+## ターゲット設定プロセス：作成、ターゲット、目標と設定  {#the-targeting-process-create-target-and-goals-settings}
 
 ターゲットモードを使用して、アクティビティのいくつかの要素を設定できます。次の 3 ステップのプロセスを使用して、ブランドアクティビティ用のターゲットコンテンツを作成します。
 
@@ -135,11 +135,11 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
    >
    >作業するアクティビティを変更するには、「**戻る**」をクリックまたはタップします。
 
-## 作成：エクスペリエンスのオーサリング {#create-authoring-the-experiences}
+## 作成：エクスペリエンスのオーサリング  {#create-authoring-the-experiences}
 
 コンテンツターゲット設定の作成ステップでは、エクスペリエンスを作成します。このステップでは、アクティビティのエクスペリエンスを作成または削除したり、各エクスペリエンスにオファーを追加したりできます。
 
-### ターゲットモードでのエクスペリエンスのオファーの表示 {#seeing-experience-offers-in-targeting-mode}
+### ターゲットモードでのエクスペリエンスのオファーの表示  {#seeing-experience-offers-in-targeting-mode}
 
 [ターゲット設定プロセスを開始](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)した後、エクスペリエンスを選択して、そのエクスペリエンスに提供されているオファーを表示します。エクスペリエンスを選択すると、ページ上のターゲットコンポーネントが変更されて、そのエクスペリエンスのオファーが表示されます。
 
@@ -181,14 +181,14 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 [ターゲット設定プロセス](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)の作成ステップを使用して、エクスペリエンスを追加および削除できます。さらに、エクスペリエンスを複製して、名前を変更することもできます。
 
-#### ターゲットモードを使用したエクスペリエンスの追加 {#adding-experiences-using-targeting-mode}
+#### ターゲットモードを使用したエクスペリエンスの追加  {#adding-experiences-using-targeting-mode}
 
 エクスペリエンスを追加するには：
 
-1. To add an experience, click or tap **+** **Add Experience Targeting** that appears below existing experiences in the **Audiences** pane.
+1. エクスペリエンスを追加するには、**オーディエンス**&#x200B;ウィンドウの既存のエクスペリエンスの下に表示される&#x200B;**+** **追加エクスペリエンスのターゲット設定**&#x200B;をクリックまたはタップします。
 1. オーディエンスを選択します。デフォルトでは、オーディエンス名はエクスペリエンス名になります。必要に応じて、別の名前を入力できます。「**OK**」をクリックまたはタップします。
 
-#### ターゲットモードを使用したエクスペリエンスの削除 {#removing-experiences-using-targeting-mode}
+#### ターゲットモードを使用したエクスペリエンスの削除  {#removing-experiences-using-targeting-mode}
 
 エクスペリエンスを削除するには：
 
@@ -198,7 +198,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 1. 「**削除**」をクリックします。
 
-#### ターゲットモードを使用したエクスペリエンス名の変更 {#renaming-experiences-using-targeting-mode}
+#### ターゲットモードを使用したエクスペリエンス名の変更  {#renaming-experiences-using-targeting-mode}
 
 ターゲットモードを使用してエクスペリエンス名を変更するには：
 
@@ -214,7 +214,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 1. 「**オーディエンスを編集**」をクリックし、新しいオーディエンスを選択します。
 1. 「**OK**」をクリックします。
 
-#### ターゲットモードを使用したエクスペリエンスの複製 {#duplicating-experiences-using-targeting-mode}
+#### ターゲットモードを使用したエクスペリエンスの複製  {#duplicating-experiences-using-targeting-mode}
 
 ターゲットモードを使用してエクスペリエンスをコピーするには：
 
@@ -222,7 +222,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 1. 「**複製**」をクリックして、オーディエンスを選択します。
 1. 必要に応じてエクスペリエンス名を変更し、「**OK**」をクリックします。
 
-### ターゲットモードを使用したオファーの作成 {#creating-offers-using-targeting-mode}
+### ターゲットモードを使用したオファーの作成  {#creating-offers-using-targeting-mode}
 
 エクスペリエンス用のオファーを作成するには、コンポーネントのターゲット設定をおこないます。ターゲット設定されたコンポーネントは、エクスペリエンス用のオファーとして使用されるコンテンツを提供します。
 
@@ -240,7 +240,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 * [ライブラリオファーをカスタムオファーに変換](/help/sites-authoring/content-targeting-touch.md#converting-a-library-offer-to-a-custom-library)
 * [ライブラリオファーを開いてコンテンツを編集](/help/sites-authoring/content-targeting-touch.md#editing-a-library-offer)
 
-#### 既存のコンポーネントをターゲット設定してデフォルトオファーを作成 {#creating-a-default-offer-by-targeting-an-existing-component}
+#### 既存のコンポーネントをターゲット設定してデフォルトオファーを作成  {#creating-a-default-offer-by-targeting-an-existing-component}
 
 ページ上のコンポーネントをアクティビティのデフォルトエクスペリエンス用のオファーとして使用するには、そのコンポーネントをターゲット設定します。ターゲット設定すると、そのコンポーネントがターゲットコンポーネントに包含され、そのコンテンツがデフォルトエクスペリエンス用のオファーになります。
 
@@ -305,7 +305,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
    * デフォルトエクスペリエンスの場合は、コンポーネントをターゲットドロップ領域にドラッグし、通常どおりにコンポーネントのプロパティを編集して、オファーのコンテンツを作成します。
    * デフォルト以外のエクスペリエンスの場合は、[カスタムオファーを追加](#adding-a-custom-offer)するか、[ライブラリオファーを追加](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)します。
 
-#### カスタムオファーの追加 {#adding-a-custom-offer}
+#### カスタムオファーの追加  {#adding-a-custom-offer}
 
 ターゲットコンポーネントのコンテンツをターゲットモードで作成して、オファーを作成します。カスタムオファーを作成したら、単一エクスペリエンス用のオファーとして使用します。
 
@@ -326,7 +326,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 1. コンポーネントのコンテンツを編集します。
 
-#### オファーライブラリからのオファーの追加 {#adding-an-offer-from-an-offer-library}
+#### オファーライブラリからのオファーの追加  {#adding-an-offer-from-an-offer-library}
 
 [オファーライブラリ](/help/sites-authoring/offerlib.md)からエクスペリエンスにオファーを追加します。現在ターゲット設定しているブランドのライブラリから、任意のオファーを追加できます。
 
@@ -376,7 +376,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 1. オファー名を入力し、オファーを追加するライブラリを選択して、チェックマークアイコンをクリックまたはタップします。
 
-#### ライブラリオファーからカスタムライブラリへの変換 {#converting-a-library-offer-to-a-custom-library}
+#### ライブラリオファーからカスタムライブラリへの変換  {#converting-a-library-offer-to-a-custom-library}
 
 他のエクスペリエンスで表示するオファーはそのままにして、現在のエクスペリエンス用のオファーだけを変更したい場合は、ライブラリオファーをカスタムオファーに変換します。
 
@@ -399,7 +399,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 [ターゲット設定プロセス](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)のターゲットステップでは、作成ステップで使用したエクスペリエンスとオーディエンスをマッピングします。ターゲットページには、各エクスペリエンスのターゲットとなるオーディエンスが表示されます。各エクスペリエンスのオーディエンスを指定または変更できます。Adobe Target を使用する場合は、A/B テストを作成して、オーディエンスの一定割合のトラフィックを特定のエクスペリエンスにターゲット設定することもできます。
 
-### AEM ターゲティングまたは Adobe Target（エクスペリエンスターゲット設定）を使用する場合 {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
+### AEM ターゲティングまたは Adobe Target（エクスペリエンスターゲット設定）を使用する場合  {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
 
 マッピング図の左側にオーディエンスが、右側にエクスペリエンスが表示されます。
 
@@ -421,7 +421,7 @@ AEM ターゲティング（または Adobe Target エクスペリエンスタ�
 1. （オプション）「**編集**」をクリックまたはタップし、キーワードを入力して目的のセグメントを検索します。
 1. オーディエンスのリストからオーディエンスを選択し、「**OK**」をクリックまたはタップします。
 
-### A/B テストを使用する場合（Adobe Target） {#if-you-are-using-a-b-testing-adobe-target}
+### A/B テストを使用する場合（Adobe Target）  {#if-you-are-using-a-b-testing-adobe-target}
 
 A/B テストアクティビティがある場合は、オーディエンスが左側に、各エクスペリエンスを表示する割合が中央に、エクスペリエンスが右側に表示されます。
 
@@ -437,7 +437,7 @@ A/B テストアクティビティがある場合は、オーディエンスが�
 1. パーセント単位で入力し、オーディエンスのトラフィックを各エクスペリエンスにどのようにルーティングするかを設定します。合計が 100 になるようにしてください。
 1. （オプション）エクスペリエンス名の横のドロップダウンメニューをクリックして、エクスペリエンス名を編集します。
 
-## 目標と設定：アクティビティの設定と目標の設定 {#goals-settings-configuring-the-activity-and-setting-goals}
+## 目標と設定：アクティビティの設定と目標の設定  {#goals-settings-configuring-the-activity-and-setting-goals}
 
 [ターゲット設定プロセス](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)の目標と設定ステップでは、ブランドアクティビティの動作を設定します。アクティビティの優先度や、開始と終了のタイミングを指定します。さらに、目標も追跡します。アクティビティに関して何を測定するかを具体的に決定できます。
 
@@ -465,7 +465,7 @@ Adobe Target をターゲティングエンジンとして使用し、アカウ�
    <td><strong>コンバージョン</strong></td>
    <td><p>テスト対象エクスペリエンスのどこかをクリックした訪問者の割合。コンバージョンは訪問者ごとに 1 回としてカウントすることも、訪問者がコンバージョンを達成するたびにカウントすることもできます。コンバージョン指標は次のいずれかに設定します。：</p>
     <ul>
-     <li><strong>ページの表示</strong> -オーディエンスが表示するページを定義するには、 <strong>URLを選択してURLまたは複数のURLを定義するか、</strong> URLに次の値を含む <strong></strong> (URL)を選択してパスまたはキーワードを追加します。</li>
+     <li><strong>ページの表示</strong> -オーディエンスが閲覧したページを定義するには、 <strong>URL</strong> を選択し、URLを定義するか複数のURLを定義するか、 <strong>URL</strong> コンテナを選択してパスまたはキーワードを追加します。</li>
      <li><strong>mbox が表示された</strong> - mbox 名を入力して、オーディエンスが表示した mbox を定義できます。「<strong>Mbox を追加</strong>」をクリックして、複数の mbox を入力できます。</li>
     </ul> </td>
   </tr>
@@ -532,7 +532,7 @@ Adobe Target をターゲティングエンジンとして使用し、アカウ�
 
 成功指標について詳しくは、[Adobe Target ドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
 
-### 設定の構成（AEM ターゲティング） {#configuring-settings-aem-targeting}
+### 設定の構成（AEM ターゲティング）  {#configuring-settings-aem-targeting}
 
 AEM ターゲティングを使用する場合に設定を構成するには：
 
@@ -548,7 +548,7 @@ AEM ターゲティングを使用する場合に設定を構成するには：
 
 1. アクティビティの優先度を指定するには、スライダーを使用して「**低**」、「**標準**」または「**高**」を選択します。
 
-### 目標と設定の構成（Adobe Target） {#configuring-goals-settings-adobe-target}
+### 目標と設定の構成（Adobe Target）  {#configuring-goals-settings-adobe-target}
 
 Adobe Target を使用する場合に目標と設定を構成するには：
 
@@ -569,13 +569,13 @@ Adobe Target を使用する場合に目標と設定を構成するには：
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
+1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
 
    右上隅の 3 つのドットをクリックし、「**名前を変更**」を選択して、目標の名前を変更できます。
 
    すべてのフィールドをクリアする必要がある場合は、右上隅の 3 つのドットをクリックし、「**すべてのフィールドをクリア**」を選択します。
 
-   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
+   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
 
    >[!NOTE]
    1 つ以上の目標を定義する必要があります。
@@ -597,7 +597,7 @@ Adobe Target を使用する場合に目標と設定を構成するには：
 
 設定後に、Adobe Target（エクスペリエンスまたは A/B テストのターゲット設定）を使用する[アクティビティのパフォーマンスを表示](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test)できます。さらに、A/B テストのターゲット設定を使用して、[勝者を採用](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test)することができます。
 
-## エクスペリエンスのシミュレーション {#simulating-an-experience}
+## エクスペリエンスのシミュレーション  {#simulating-an-experience}
 
 訪問者のエクスペリエンスをシミュレートし、ターゲットコンテンツのデザインに従って期待されるとおりにページコンテンツが表示されることを確認します。シミュレートの際は、様々なユーザープロファイルを読み込んで、そのユーザー向けのターゲットコンテンツを表示してみます。
 
@@ -632,7 +632,7 @@ A/B テストを使用してシミュレートをおこなった場合は、ト�
 
 1. 表示されているオファーを編集するには、ターゲットモードに切り替えます。シミュレーションアクティビティが選択されている状態で、プレビューモードで設定したコンテキストのオファーを編集します。
 
-## ターゲットコンポーネントオプションの設定 {#configuring-target-component-options}
+## ターゲットコンポーネントオプションの設定  {#configuring-target-component-options}
 
 ターゲットコンポーネントをカスタマイズするには、次の 2 つの方法のどちらかでコンポーネントのオプションにアクセスします。
 
@@ -666,7 +666,7 @@ A/B テストを使用してシミュレートをおこなった場合は、ト�
   </tr>
   <tr>
    <td><strong>エンジン</strong></td>
-   <td>Select between <strong>Client side Rules (without tracking), Adobe Target, ContextHub, </strong>and<strong> Adobe Campaign </strong>depending on which engine you would like to use.</td>
+   <td>使用するエンジンに応じて、<strong>クライアント側のルール（追跡なし）、Adobe Target、ContextHub、</strong>、<strong>Adobe Campaign</strong>のいずれかを選択します。</td>
   </tr>
  </tbody>
 </table>
@@ -683,7 +683,7 @@ A/B テストを使用してシミュレートをおこなった場合は、ト�
   </tr>
   <tr>
    <td><strong>正確なターゲット設定</strong></td>
-   <td><p>正確なターゲット設定を有効にすると、コンポーネントは ClientContext または ContextHub のデータが利用可能になるまで待ってから Adobe Target にリクエストを送信します。これによって、読み込み時間が長くなる場合があります。オーサリング時は、正確なターゲット設定は常に有効になっています。</p> <p>「<strong>正確なターゲット設定</strong>」チェックボックスをオンにした場合、mbox はまず <code>mboxDefine</code> を実行し、後で <code>mboxUpdate</code> を実行するので、データが利用可能になった時点で Ajax リクエストがおこなわれます。</p> <p>If you do not select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxCreate</code> resulting in a synchronous request right away (in this case, not all context data may be available yet).</p> <p><strong>注意：</strong>特定のコンポーネントで「正確なターゲット設定」を有効または無効にしても、グローバル設定には影響しません。コンポーネントで「正確なターゲット設定」を有効にすれば、その設定が常にグローバル設定よりも優先されます。</p> </td>
+   <td><p>正確なターゲット設定を有効にすると、コンポーネントは ClientContext または ContextHub のデータが利用可能になるまで待ってから Adobe Target にリクエストを送信します。これによって、読み込み時間が長くなる場合があります。オーサリング時は、正確なターゲット設定は常に有効になっています。</p> <p>「<strong>正確なターゲット設定</strong>」チェックボックスをオンにした場合、mbox はまず <code>mboxDefine</code> を実行し、後で <code>mboxUpdate</code> を実行するので、データが利用可能になった時点で Ajax リクエストがおこなわれます。</p> <p>「<strong>正確なターゲット設定</strong>」チェックボックスを選択しない場合、mboxはすぐに<code>mboxCreate</code>を実行し、同期リクエストを行います（この場合は、すべてのコンテキストデータがまだ使用できるとは限りません）。</p> <p><strong>注意：</strong>特定のコンポーネントで「正確なターゲット設定」を有効または無効にしても、グローバル設定には影響しません。コンポーネントで「正確なターゲット設定」を有効にすれば、その設定が常にグローバル設定よりも優先されます。</p> </td>
   </tr>
   <tr>
    <td><strong>解決されたセグメントを含める</strong></td>
@@ -695,11 +695,11 @@ A/B テストを使用してシミュレートをおこなった場合は、ト�
   </tr>
   <tr>
    <td><strong>コンテキストパラメーター</strong></td>
-   <td>Click or tap <strong>Add field</strong> to configure additional context parameters (same as what is available in Target framework). コンポーネントに追加されたコンテクストパラメーターは、そのコンポーネントに<i>のみ</i>適用されます。フレームワークに直接コンテクストパラメーターを追加した場合とは異なり、他のコンポーネントには適用されません。</td>
+   <td><strong>追加フィールド</strong>をクリックまたはタップして、追加のコンテキストパラメーターを設定します(ターゲットフレームワークで使用できるものと同じ)。 コンポーネントに追加されたコンテクストパラメーターは、そのコンポーネントに<i>のみ</i>適用されます。フレームワークに直接コンテクストパラメーターを追加した場合とは異なり、他のコンポーネントには適用されません。</td>
   </tr>
   <tr>
    <td><strong>静的パラメーター</strong></td>
-   <td>Click or tap <strong>Add field</strong> to configure additional static parameters (same as what is available in Target framework). Static parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added static parameters directly to the framework. 静的パラメーターは、コンテキスト（ContextHub または ClientContext）からは得られません。</td>
+   <td><strong>追加フィールド</strong>をクリックまたはタップして、追加の静的パラメーターを設定します(ターゲットフレームワークで使用できるものと同じ)。 コンポーネントに追加された静的パラメーターは、フレームワークに直接静的パラメーターを追加した場合と同様に、コンポーネントに<i>のみ</i>適用され、他のコンポーネントには適用されません。 静的パラメーターは、コンテキスト（ContextHub または ClientContext）からは得られません。</td>
   </tr>
  </tbody>
 </table>
@@ -723,7 +723,7 @@ ClientContext（クライアント側）をエンジンとして選択した場�
     <ul>
      <li><strong>第 1</strong>：キャンペーンのリストの並び順で 1 番上のエクスペリエンスが使用されます。</li>
      <li><strong>ランダム</strong>：任意のエクスペリエンスが使用されます。</li>
-     <li><strong>クリックストリームスコア</strong>:クライアントコンテキストで追跡されるタグと関連するタグヒットが使用されます。 ティーザーページに定義されている複数のタグのヒット率が比較されます。</li>
+     <li><strong>クリックストリームスコア</strong>:クライアントコンテキストで追跡されるタグと関連するタグヒットが使用されます。ティーザーページに定義されている複数のタグのヒット率が比較されます。</li>
     </ul> </td>
   </tr>
  </tbody>
