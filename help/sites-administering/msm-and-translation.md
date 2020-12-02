@@ -32,11 +32,11 @@ Web サイトとページを管理するための以下の管理ツールが用�
 
 * Web サイトを[多国籍化かつ多言語化](#multinational-and-multilingual-sites)するために、これらの 2 つの機能を組み合わせて使用できます。
 
-## 多国籍な多言語サイト {#multinational-and-multilingual-sites}
+## 多国籍な多言語サイト  {#multinational-and-multilingual-sites}
 
 マルチサイトマネージャーと翻訳ワークフローを併せて使用することで、多国籍な多言語サイトのコンテンツを効率的に作成できます。特定の国向けのマスターサイトを 1 つの言語で作成してから、そのコンテンツをベースに、必要に応じて翻訳を使用して他のサイトを作成します。
 
-* [マスターサイトを異なる言語に翻訳します](/help/sites-administering/translation.md) 。
+* [マスターサイトを異なる言語に翻訳](/help/sites-administering/translation.md) します。
 
 * [マルチサイトマネージャー](/help/sites-administering/msm.md)を次の用途で使用します。
 
