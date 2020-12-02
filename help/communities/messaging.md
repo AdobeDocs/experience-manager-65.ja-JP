@@ -19,7 +19,7 @@ ht-degree: 22%
 ---
 
 
-# メッセージの設定 {#configure-messaging}
+# メッセージの構成{#configure-messaging}
 
 ## 概要 {#overview}
 
@@ -29,13 +29,13 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 このページには、デフォルトの設定と可能な調整に関する情報が含まれています。
 
-For additional information for developers, see [Messaging Essentials](/help/communities/essentials-messaging.md).
+開発者向けの追加情報については、[Messaging Essentials](/help/communities/essentials-messaging.md)を参照してください。
 
 ## メッセージング操作サービス {#messaging-operations-service}
 
-The configuration [AEM Communities Messaging Operations Service](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) identifies the endpoint which handles messaging related requests, the folders the service should use for storing messages, and if messages may include file attachments, what file types are allowed.
+構成[AEM Communitiesメッセージング操作サービス](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl)は、メッセージング関連の要求を処理するエンドポイント、サービスがメッセージの格納に使用するフォルダー、およびメッセージに添付ファイルが含まれる場合は、許可されるファイルの種類を識別します。
 
-For community sites created using the `Communities Sites console`, an instance of the service already exists, with the inbox set to `/mail/inbox`.
+`Communities Sites console`を使用して作成されたコミュニティサイトでは、サービスのインスタンスが既に存在し、インボックスが`/mail/inbox`に設定されています。
 
 ### コミュニティのメッセージング操作サービス {#community-messaging-operations-service}
 
@@ -45,19 +45,19 @@ For community sites created using the `Communities Sites console`, an instance o
 
 ### 新しい設定を追加 {#add-new-configuration}
 
-To add a new configuration, select the plus &#39;**+**&#39; icon next to the service&#39;s name :
+新しい設定を追加するには、サービス名の横にあるプラス「**+**」アイコンを選択します。
 
 * **Message Fields許可リスト**
 
-   構成メッセージコンポーネントのユーザーが編集および保持できるプロパティを指定します。 新しいフォーム要素を追加する場合は、SRPに保存する必要がある場合は、要素IDを追加する必要があります。 Default is two entries: *subject* and *content*.
+   構成メッセージコンポーネントのユーザーが編集および保持できるプロパティを指定します。 新しいフォーム要素を追加する場合は、SRPに保存する必要がある場合は、要素IDを追加する必要があります。 初期設定は2つのエントリです。*subject* and *content*.
 
 * **メッセージボックスのサイズ制限**
 
-   各ユーザーのメッセージボックスの最大バイト数です。 Default is *1073741824* (1 GB).
+   各ユーザーのメッセージボックスの最大バイト数です。 デフォルトは&#x200B;*1073741824* (1 GB)です。
 
 * **メッセージ数の制限**
 
-   1人のユーザーに許可されるメッセージの合計数です。 値を —1に設定した場合、許可されるメッセージの数に制限はなく、メッセージボックスのサイズ制限に従います。 Default is *10000* (10k).
+   1人のユーザーに許可されるメッセージの合計数です。 値を —1に設定した場合、許可されるメッセージの数に制限はなく、メッセージボックスのサイズ制限に従います。 初期設定は&#x200B;*10000* (10k)です。
 
 * **配信エラーの通知**
 
@@ -65,11 +65,11 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 * **失敗配信の送信者ID**
 
-   配信失敗メッセージに表示される送信者の名前。 Default is *failureNotifier*.
+   配信失敗メッセージに表示される送信者の名前。 初期設定は&#x200B;*failureNotifier*&#x200B;です。
 
 * **失敗メッセージテンプレートのパス**
 
-   失敗した配信のメッセージテンプレートルートの絶対パス Default is */etc/notification/messaging/default*.
+   失敗した配信のメッセージテンプレートルートの絶対パス デフォルトは&#x200B;*/etc/notification/messaging/default*&#x200B;です。
 
 * **再試行数**
 
@@ -77,7 +77,7 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 * **再試行間の待機**
 
-   送信に失敗したメッセージの再送を試行するまでの間隔（秒数）です。Default is *100* (seconds).
+   送信に失敗したメッセージの再送を試行するまでの間隔（秒数）です。初期設定は&#x200B;*100* （秒）です。
 
 * **更新プールのサイズをカウント**
 
@@ -85,11 +85,11 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 * **インボックスのパス**
 
-   (*Required*) The path, relative to the user&#39;s node (/home/users/*username*), to use for the `inbox` folder. パスの末尾にスラッシュ「/」を付けることはできません。 Default is */mail/inbox*.
+   （*必須*）`inbox`フォルダーに使用する、ユーザーのノードを基準とした相対パス(/home/users/*username*)。 パスの末尾にスラッシュ「/」を付けることはできません。 初期設定は&#x200B;*/mail/inbox*&#x200B;です。
 
 * **送信済みアイテムのパス**
 
-   (*Required*) The path, relative to the user&#39;s node (/home/users/*username*), to use for the `sent items` folder. パスの末尾にスラッシュ「/」を付けることはできません。 Default is */mail/sentitems* .
+   （*必須*）`sent items`フォルダーに使用する、ユーザーのノードを基準とした相対パス(/home/users/*username*)。 パスの末尾にスラッシュ「/」を付けることはできません。 初期設定は&#x200B;*/mail/sentitems*&#x200B;です。
 
 * **サポートの添付ファイル**
 
@@ -97,9 +97,9 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 * **グループメッセージを有効にする**
 
-   選択すると、登録済みユーザーは、メンバーのグループに一括メッセージを送信できます。 Default is *deselected*.
+   選択すると、登録済みユーザーは、メンバーのグループに一括メッセージを送信できます。 初期設定は&#x200B;*未選択*&#x200B;です。
 
-* **最大数 全受信者**
+* **最大数全受信者**
 
    グループメッセージが有効な場合、グループメッセージを一度に送信できる受信者の最大数を指定します。 デフォルトは *100* です。
 
@@ -109,35 +109,35 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 * **合計添付ファイルサイズ**
 
-   「supportAttachments」をオンにすると、この値によりすべての添付ファイルの最大許容合計サイズ（バイト単位）が指定されます。Default is *104857600* (100 MB).
+   「supportAttachments」をオンにすると、この値によりすべての添付ファイルの最大許容合計サイズ（バイト単位）が指定されます。初期設定は&#x200B;*104857600*(100 MB)です。
 
 * **添付ファイルブロックリストタイプの**
 
-   ファイル名拡張子のブロックリスト。先頭に「**.**」というプレフィックス付き）のブラックリストです。そうでないブロックリストに加える場合は、拡張が許可されます。 Extensions may be added or removed using the &#39;**+**&#39; and &#39;**-**&#39; icons.
+   ファイル名拡張子のブロックリスト。先頭に「**」が付きます。**」というプレフィックス付き）のブラックリストです。そうでないブロックリストに加える場合は、拡張が許可されます。 拡張子は、「**+**」アイコンと「**-**」アイコンを使用して追加または削除できます。
 
 * **許可されている添付ファイルの種類**
 
-   **(*操作が必要*)** ファイル名拡張子の許可リスト(の逆)。 To allow all filename extensions, except for those blocklisted, use the &#39;**-**&#39; icon to remove the single empty entry.
+   **(*操作が必要*** )ファイル名拡張子の許可リスト(の逆)。これらを除くすべてのファイル名拡張子を許可するには、ブロックリストに加える&#39;**-**&#39;アイコンを使用して、空のエントリを1つ削除します。
 
 * **サービスセレクター**
 
-   (*Required*) An absolute path (endpoint) through which the service is called (a virtual resource). The root of the path chosen must be one included in the *Execution Paths* configuration setting of OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver), such as `/bin/`, `/apps/`, and `/services/`. サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントをの **`Service selector`** 値として指定します `Message List and Compose Message components` ( [メッセージ機能](/help/communities/configure-messaging.md))。
+   （*必須*）サービスが呼び出される絶対パス（エンドポイント）です（仮想リソース）。 選択するパスのルートは、*OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)の&lt;a0/>Execution Paths*&#x200B;構成設定（`/bin/`、`/apps/`、`/services/`など）に含まれている必要があります。 サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として指定します（[メッセージ機能](/help/communities/configure-messaging.md)を参照）。
 
    初期設定は */bin/messaging* です。
 
 * **フィールド許可リスト**
 
-   「 **メッセージフィールド」許可リストを使用します**。
+   **メッセージフィールド許可リスト**&#x200B;を使用します。
 
 >[!CAUTION]
 >
->Each time a `Messaging Operations Service` configuration is opened for edit, if `allowedAttachmentTypes.name` had been removed, an empty entry is re-added to make the property configurable. 1つの空のエントリを指定すると、添付ファイルが有効に無効になります。
+>編集用に`Messaging Operations Service`設定が開かれるたびに、`allowedAttachmentTypes.name`が削除されると、空のエントリが再度追加され、プロパティを設定可能にします。 1つの空のエントリを指定すると、添付ファイルが有効に無効になります。
 >
->To allow all filename extensions, except for those blocklisted, use the &#39;**-**&#39; icon to (again) remove the single empty entry before clicking **Save**.
+>これらを除くすべてのファイル名拡張子を許可するには、ブロックリストに加える&#39;**-**&#39;アイコンを使用して（もう一度）空のエントリを1つ削除してから、**「保存**」をクリックします。
 
-## Group Messaging {#group-messaging}
+## グループメッセージ{#group-messaging}
 
-登録済みユーザーがダイレクトメッセージを一括してユーザーグループに送信できるようにするには、次の2つの **Messaging Operation Services** 設定のインスタンスで **、「グループメッセージを** 有効にする」を必ず有効にしてください。
+登録ユーザーがダイレクトメッセージを一括してユーザーグループに送信できるようにするには、次の2つの&#x200B;**メッセージング操作サービス**&#x200B;構成の&#x200B;**Enable group messaging**&#x200B;に必ず従ってください。
 
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-console`
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-messaging`
@@ -152,8 +152,8 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 
 ## トラブルシューティング {#troubleshooting}
 
-One way to troubleshoot problems is to enable [debugging messages in the log.](/help/sites-administering/troubleshooting.md)
+問題のトラブルシューティングの1つの方法は、ログで[デバッグメッセージを有効にすることです。](/help/sites-administering/troubleshooting.md)
 
 [個々のサービス用のロガーとライター](/help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services)も参照してください。
 
-The package to monitor is `com.adobe.cq.social.messaging`.
+監視するパッケージは`com.adobe.cq.social.messaging`です。
