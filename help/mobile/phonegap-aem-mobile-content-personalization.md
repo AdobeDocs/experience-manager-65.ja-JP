@@ -26,7 +26,7 @@ ht-degree: 50%
 
 >[!NOTE]
 >
->This document is part of the [Getting Started with AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, a recommended starting point for AEM Mobile reference.
+>このドキュメントは、『[AEM Mobile](/help/mobile/getting-started-aem-mobile.md)はじめに』ガイドの一部です。これは、AEM Mobileリファレンスの推奨起点です。
 
 AEM Mobile のコンテンツパーソナライゼーション機能を使用すると、[AEM 作成者](#author)は、[Adobe Target](https://www.adobe.com/ca/marketing-cloud/testing-targeting.html) を使用してモバイルアプリコンテンツをパーソナライズできます。これにより、ターゲットオファーをモバイルアプリケーションのユーザーに配信できます。Adobe Experience Manager Mobile には、個々の好みに合ったコンテンツをユーザーに提供する、コンテンツの作成、ターゲティングおよび配信機能が用意されています。
 
@@ -36,11 +36,11 @@ AEM ではよくあることですが、作成者がこれらのコンテンツ�
 
 一方、AEM Mobile [開発者](#developer)は、ターゲットコンテンツのオーサリングを容易にするために、既存のスクリプトを変更する必要があります。
 
-## 管理者向け {#for-administrators}
+## 管理者向け  {#for-administrators}
 
 コンテンツ作成者がモバイルアプリ用のターゲットコンテンツを生成する際に開始を行うには、まとめておく必要がある手順がいくつかあります。ユーザーとグループに適した権限のセットを取得し、クラウドサービスを作成し、アクティビティのアプリケーションを設定して、最終的にコンテンツを生成することができます。
 
-This article will guide you through the process used to configure the [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) for targeting.
+この記事では、ターゲティング用に[AEM Mobileハイブリッド参照アプリケーション](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)を設定する手順を説明します。
 
 ここでは、AEM Mobile Hybrid Reference App が正常にデプロイされており、AEM Mobile ダッシュボードからアクセス可能であることを前提としています。
 
@@ -48,7 +48,7 @@ This article will guide you through the process used to configure the [AEM Mobil
 
 ### 権限 {#permissions}
 
-Users that need access to the personalization console need to be part of the `target-activity-authors` group.
+パーソナライゼーションコンソールへのアクセスを必要とするユーザーは、`target-activity-authors`グループに属している必要があります。
 
 ユーザーおよびグループのセットアップの一環として、target-activity-authors グループを apps-admins グループに追加することをお勧めします。ターゲットアクティビティ作成者グループを追加すると、[個人設定]ナビゲーションメニューエントリを表示できます。
 
@@ -84,13 +84,13 @@ Adobe Mobile Services（AMS）アカウントもアプリケーションにリ�
 
 ### クライアントコード {#client-code}
 
-To login to the AMS services visit [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/), select the mobile application and click the settings. 「SDKターゲットオプション」フィールドを見つけ、クライアントコードをフィールドに配置して、「保存」をクリックします。
+AMSサービスにログインするには、[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)にアクセスし、モバイルアプリケーションを選択して設定をクリックします。 「SDKターゲットオプション」フィールドを見つけ、クライアントコードをフィールドに配置して、「保存」をクリックします。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
 クライアントコードをモバイルアプリケーションと関連付けると、Adobe Mobile ダッシュボードで AMS クラウドサービスを設定する際に、サービスの設定が ADBMobileConfig.json ファイルから提供されます。
 
-### Adobe Mobile Services クラウドサービス {#adobe-mobile-service-cloud-service}
+### Adobe Mobile Services クラウドサービス  {#adobe-mobile-service-cloud-service}
 
 AMS を設定したら、次は Adobe Mobile ダッシュボードでモバイルアプリケーションを関連付けます。AEM Mobile ダッシュボードで、「クラウドサービスを管理」を探し、+ ボタンをクリックします。
 
@@ -108,23 +108,23 @@ Mobile ダッシュボードに戻ると、クラウドサービスを管理タ�
 
 ## 作成者向け {#for-authors}
 
-**前提条件：** 上記のように、管理者は、作成者がターゲットコンテンツを新たに生成できるようにする前に、Adobe Targetサービスへの接続を設定する必要があります。
+**前提条件：** 上述のとおり、管理者は、作成者がターゲットコンテンツを新たに生成する前に、Adobe Targetサービスへの接続を設定する必要があります。
 
 管理者が 2 つのクラウドサービスを設定し、開発者が mobileappoffers ハンドラーを設定したら、コンテンツ作成者はターゲットエクスペリエンスを生成できます。
 
 AEM Mobile アプリ内でターゲットコンテンツをオーサリングする手順は、AEM Sites をオーサリングする手順に似ています。
 
-See here for a complete overview on [Authoring targeted content in AEM](/help/sites-authoring/personalization.md)
+[AEM](/help/sites-authoring/personalization.md)でのターゲットコンテンツのオーサリングの概要については、こちらを参照してください
 
 ## 開発者向け {#for-developers}
 
 モバイルアプリケーションをビルドする AEM 開発者は、コンポーネントの開発時に AEM 全体でよく使用されるパターンに常に従う必要があります。ここでは、コンテンツの作成者がターゲットコンテンツを作成できるようにするための手順について説明します。
 
-### Adobe Target コンテンツ同期ハンドラー {#adobe-target-contentsync-handlers}
+### Adobe Target コンテンツ同期ハンドラー  {#adobe-target-contentsync-handlers}
 
-ユーザーのデバイスにコンテンツを配信するには、AEM コンテンツ作成者が作成したオファーをレンダリングすることにより、コンテンツを生成します。ターゲットオファーのレンダリングを処理するために、オファーを処理する新しいコンテンツ同期ハンドラーが追加されました。 Using the Hybrid Reference Application as our sample, the en (english) content package contains the ContentSyncConfig with a [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) handler. オファーをデバイスにレンダリングするには、次の手順が非常に重要です。mobileappofersハンドラーには、アプリケーションに使用するパーソナライゼーションアクティビティへのパスを識別するpathプロパティがあります。
+ユーザーのデバイスにコンテンツを配信するには、AEM コンテンツ作成者が作成したオファーをレンダリングすることにより、コンテンツを生成します。ターゲットオファーのレンダリングを処理するために、オファーを処理する新しいコンテンツ同期ハンドラーが追加されました。 ハイブリッド参照アプリケーションをサンプルとして使用する場合、en（英語）コンテンツパッケージには、[mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml)ハンドラーを含むContentSyncConfigが含まれています。 オファーをデバイスにレンダリングするには、次の手順が非常に重要です。mobileappofersハンドラーには、アプリケーションに使用するパーソナライゼーションアクティビティへのパスを識別するpathプロパティがあります。
 
-For example if there is an activity that is located at */content/campaigns/hybridref* copy this path and paste it as the value to the *path* property of the mobileappoffers handler.
+例えば、*/content/キャンペーン/hybridref*&#x200B;にあるアクティビティーがこのパスをコピーし、値としてmobileappofersハンドラーの&#x200B;*path*&#x200B;プロパティに貼り付けます。
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ mobileappoffers ハンドラーの path プロパティでアクティビティ�
 
 ### レンダリングモード {#render-mode}
 
-パブリッシュセットアップと開発セットアップでは、mobileappoffers ハンドラーの設定が異なります。For publish setups there is a property called *renderMode* with a value of *publish* set on the cq:ContentSyncConfig node. mobileappofersハンドラーはrenderModeを参照し、publishに設定した場合は、作成されるmbox IDを変更します。 デフォルトでは、AEMで作成されるmboxには —author値が追加され、mbox IDにも追加されます。 これは、アクティビティが公開されていないことを示し、オファーの解像度に未公開のキャンペーンを使用する必要があることを示します。
+パブリッシュセットアップと開発セットアップでは、mobileappoffers ハンドラーの設定が異なります。パブリッシュ設定には、cq:ContentSyncConfigノードに&#x200B;*publish*&#x200B;という値が設定された&#x200B;*renderMode*&#x200B;というプロパティがあります。 mobileappofersハンドラーはrenderModeを参照し、publishに設定した場合は、作成されるmbox IDを変更します。 デフォルトでは、AEMで作成されるmboxには —author値が追加され、mbox IDにも追加されます。 これは、アクティビティが公開されていないことを示し、オファーの解像度に未公開のキャンペーンを使用する必要があることを示します。
 
 Adobe Mobile ダッシュボードでコンテンツがステージングされると、ステージングされたコンテンツは、実稼動の準備ができたコンテンツとみなされ、開発用でないコンテンツ同期設定を使用してレンダリングされます。この方法でレンダリングすると、—authorがすべてのmbox IDから削除され、公開済みアクティビティがターゲットサーバーで使用可能になることが予期されます。 ステージコンテンツをテストする前に、アクティビティが公開されていることを確認してください。
 
@@ -146,7 +146,7 @@ Adobe Mobile ダッシュボードでコンテンツがステージングされ�
 
 次に、コンテンツターゲットを有効にするために使用される 2 つの主要なスクリプトの概要を示します。
 
-#### head.html {#head-html}
+#### head.html  {#head-html}
 
 作成者がコンテンツターゲット機能を使用するには、ターゲットメニューをページに追加して、作成者が編集モードからターゲティングモードにコンテキストを変更できるようにする必要があります。この機能を有効にするには、head.htmlスクリプトを変更して、次のコードスニペットをhead.htmlの上部付近か、または&lt;title>&lt;/title>要素の近くに含める必要があります。
 
@@ -164,7 +164,7 @@ Adobe Mobile ダッシュボードでコンテンツがステージングされ�
 
 作成者がターゲットコンテンツをプレビューする機能を使用するには、エディターで Adobe Target クラウドサービスの設定を検索できるようにする必要があります。下のコードブロックは、2つの重要なスクリプトを追加します。 最初に、ページに関連付けられたターゲットクラウドサービスの検索機能を追加し、Adobe Targetへの呼び出しを行います。 2つ目は、cq.apps.targetingカテゴリの追加です。
 
-The **cq.apps.targeting** category overrides the default cq/personalization/component/target component and uses the mobileapps/components/target component that renders offers specifically for mobile application consumption. 詳しくは、「ターゲットコンポーネント」の節で説明します。
+**cq.apps.targeting**&#x200B;カテゴリは、デフォルトのcq/personalization/component/apperationコンポーネントを上書きし、mobileapps/components/ターゲットコンポーネントを使用して、モバイルアプリケーションの使用に特化したオファーをレンダリングします。 詳しくは、「ターゲットコンポーネント」の節で説明します。
 
 コードは、head.htmlに追加し、&lt;/head>要素の直前に配置する必要があります。
 
@@ -179,7 +179,7 @@ The **cq.apps.targeting** category overrides the default cq/personalization/comp
 >
 >このコードブロックは、無効になっていない WCM モード内にラップされ、コンテンツ作成者がコンテンツを作成している間のみ機能する点に注意してください。クラウドサービスのスクリプトは、生成されたモバイルランタイムコードに追加されません。
 
-#### body.html {#body-html}
+#### body.html  {#body-html}
 
 コンテンツ作成者がさまざまなペルソナをテストできるようにするには、次のコードブロックを body 要素の最初の子として body.html スクリプトに挿入する必要があります。
 
@@ -199,7 +199,7 @@ The **cq.apps.targeting** category overrides the default cq/personalization/comp
 
 ### 参照アプリケーション {#reference-application}
 
-Examples of head.html and body.html can be found in the [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) showing the developer where to place the script blocks within the two scripts.
+head.htmlとbody.htmlの例は、[AEM Mobileハイブリッドリファレンスアプリケーション](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)にあり、2つのスクリプト内のスクリプトブロックを配置する開発者向けの場所を示しています。
 
 ### コンテンツ同期ハンドラー {#content-sync-handlers}
 
@@ -272,15 +272,15 @@ Examples of head.html and body.html can be found in the [AEM Mobile Hybrid Refer
 
 >[!NOTE]
 >
->[AEM Mobileハイブリッドリファレンスアプリケーション](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) （英語）には、デフォルトのmobileappofferハンドラーの設定があります。 サンプルのpathプロパティは、キャンペーンーの場所によって異なるので、空です。 キャンペーン作成者がキャンペーンを作成した後、アプリケーション管理者は、キャンペーンを指すパスプロパティを指定してキャンペーンをハンドラーに関連付ける必要があります。
+>[AEM Mobileハイブリッドリファレンスアプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)には、デフォルトのmobileappofferハンドラーの設定があります。 サンプルのpathプロパティは、キャンペーンーの場所によって異なるので、空です。 キャンペーン作成者がキャンペーンを作成した後、アプリケーション管理者は、キャンペーンを指すパスプロパティを指定してキャンペーンをハンドラーに関連付ける必要があります。
 
 ### ターゲットコンポーネント {#target-component}
 
 モバイルアプリケーション専用のコンテンツをレンダリングするために、AEM Mobile では mobileapps/components/target コンポーネントが使用されます。モバイルターゲットコンポーネントは、cq/personalization/components/engineコンポーネントを拡張し、engine_tnt.jspスクリプトをオーバーライドします。 engine_tnt.jspを上書きすることで、AEM Mobileはモバイルアプリの使用例で生成されたHTMLを制御できます。 コンテンツ作成者がターゲットにするすべてのコンポーネントに対して、engine_tnt.jspが関連するmboxを作成します。
 
-For each mbox an attribute of **cq-targeting** is added allowing application developers to write custom code to consume and use however they please. The [AEM Mobile Hybrid Reference App](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) has an example of a Angular directive that uses the cq-targeting attribute. コンテンツ置換の時期と方法に関する概念は、モバイルアプリケーションの開発者に大きく左右されます。 AEM /etc/clientlibs/mobileapps/js/mobileapps.jsを介して提供されるモバイルSDKが、Adobeターゲットサービスを呼び出すためのAPIを提供します。 アプリケーションのデザインに従っていつ呼び出しを行うかは、アプリケーション開発者が指定します。
+mboxごとに&#x200B;**cq-targeting**&#x200B;の属性が追加され、アプリケーション開発者はカスタムコードを記述して、使い方を自由に指定できます。 [AEM Mobileハイブリッド参照アプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)には、cqターゲティング属性を使用するAngularディレクティブの例があります。 コンテンツ置換の時期と方法に関する概念は、モバイルアプリケーションの開発者に大きく左右されます。 AEM /etc/clientlibs/mobileapps/js/mobileapps.jsを介して提供されるモバイルSDKが、Adobeターゲットサービスを呼び出すためのAPIを提供します。 アプリケーションのデザインに従っていつ呼び出しを行うかは、アプリケーション開発者が指定します。
 
-## What&#39;s Next? {#what-s-next}
+## 次の作業{#what-s-next}
 
 1. [AEM Mobile アプリを使ってみる](/help/mobile/starting-aem-phonegap-app.md)
 1. [アプリのコンテンツを管理する](/help/mobile/phonegap-manage-app-content.md)
