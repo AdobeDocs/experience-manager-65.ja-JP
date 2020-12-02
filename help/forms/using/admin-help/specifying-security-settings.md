@@ -24,7 +24,7 @@ Forms で、XML 入力で外部エンティティを解決するかどうかを�
 
 **外部エンティティへの参照を含む XML データファイルを処理しないようにする**
 
-1. In administration console, click **[!UICONTROL Services > Forms]**.
+1. 管理コンソールで、**[!UICONTROL サービス/Forms]**&#x200B;をクリックします。
 1. 「外部エンティティを解決」チェックボックスをオフにします。
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
