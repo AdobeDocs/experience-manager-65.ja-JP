@@ -21,41 +21,41 @@ ht-degree: 31%
 
 # URL の外部化{#externalizing-urls}
 
-In AEM, the **Externalizer** is an OSGI service that allows you to programmatically transform a resource path (e.g. `/path/to/my/page`) into an external and absolute URL (for example, `https://www.mycompany.com/path/to/my/page`) by prefixing the path with a pre-configured DNS.
+AEMでは、**Externalizer**&#x200B;はOSGIサービスで、リソースパス(例えば、`/path/to/my/page`)を外部URLや絶対URL（例えば`https://www.mycompany.com/path/to/my/page`）に埋め込みます。
 
 インスタンスがWebレイヤーの背後で実行されている場合は、その外部に表示されるURLを知ることはできないので、要求範囲外でリンクを作成する必要がある場合があるので、このサービスを使用して、これらの外部URLを設定して構築することができます。
 
 このページでは、**Externalizer** サービスの設定方法と使用方法について説明します。詳しくは、関連する [Javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。
 
-## Externalizer サービスの設定 {#configuring-the-externalizer-service}
+## Externalizer サービスの設定  {#configuring-the-externalizer-service}
 
-The **Externalizer** service allows you to centrally define multiple domains that can be used to programmatically prefix resource paths. Each domain is identified by a unique name that is used to programmatically reference the domain.
+**Externalizer**&#x200B;サービスを使用すると、プログラム的にリソースパスをプレフィックスするために使用できる複数のドメインを一元的に定義できます。各ドメインは、そのドメインをプログラムで参照する際に使用される一意の名前で識別されます。
 
 **Externalizer** サービスのドメインマッピングを定義するには：
 
-1. Navigate to the configuration manager via **Tools**, then **Web Console**, or enter:
+1. **ツール**&#x200B;から&#x200B;**Webコンソール**&#x200B;に移動するか、次のように入力します。
 
    `https://<host>:<port>/system/console/configMgr`
 
-1. Click **Day CQ Link Externalizer** to open the configuration dialog box.
+1. 「**Day CQ Link Externalizer**」をクリックして、設定ダイアログボックスを開きます。
 
    >[!NOTE]
    >
-   >The direct link to the configuration is `https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`
+   >構成への直接リンクは`https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`です
 
    ![aem-externalizer-01](assets/aem-externalizer-01.png)
 
-1. Define a **Domains** mapping: a mapping consists of a unique name that can be used in the code to reference the domain, a space and the domain:
+1. **ドメイン**&#x200B;マッピングを定義します。マッピングは、ドメイン、スペース、ドメインを参照するコードで使用できる一意の名前で構成されます。
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
    ここで、
 
-   * **scheme** は通常、httpまたはhttpsですが、ftpなどを指定することもできます。
+   * **** schemeは通常、httpまたはhttpsですが、ftpなども使用できます。
 
       * 必要に応じてhttpsを使用し、httpsリンクを強制する
       * URLの外部化を要求する際に、クライアントコードがスキームを上書きしない場合に使用されます。
-   * **server** はホスト名です（ドメイン名またはipアドレスを指定できます）。
+   * **** serverはホスト名です（ドメイン名またはipアドレスを指定できます）。
    * **port** （オプション）はポート番号です。
    * **contextpath** （オプション）は、AEMがwebアプリとして別のコンテキストパスの下にインストールされている場合にのみ設定されます。
 
@@ -69,17 +69,17 @@ The **Externalizer** service allows you to centrally define multiple domains tha
 
    >[!NOTE]
    >
-   >カスタム設定を使用すると、新しいカテゴリ（など）を追加でき `production`ます。また、 `staging` などの外部のAEM以外のシステムも追加でき `my-internal-webservice`ます。 プロジェクトのコードベース内の異なる場所にまたがるこのようなURLのハードコーディングを避けると便利です。
+   >カスタム設定を使用すると、`production`、`staging`などの新しいカテゴリや、`my-internal-webservice`などの外部のAEM以外のシステムを追加できます。 プロジェクトのコードベース内の異なる場所にまたがるこのようなURLのハードコーディングを避けると便利です。
 
 1. 「**保存**」をクリックして変更を保存します。
 
 >[!NOTE]
 >
->Adobe recommends that you [add the configuration to the repository](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository).
+>Adobeでは、[リポジトリ](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository)に設定を追加することを推奨します。
 
 ### Externalizer サービスの使用 {#using-the-externalizer-service}
 
-This section shows a few examples of how the **Externalizer** service can be used:
+この節では、**Externalizer**&#x200B;サービスの使用例をいくつか示します。
 
 1. **JSP で Externalizer サービスを取得する：**
 
