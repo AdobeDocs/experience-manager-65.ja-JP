@@ -10,7 +10,7 @@ translation-type: tm+mt
 source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
 workflow-type: tm+mt
 source-wordcount: '589'
-ht-degree: 56%
+ht-degree: 59%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 56%
 + [[!DNL Experience Manager] 6.5アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
-+ [ でのアクセシビリティ  [!DNL Assets]](accessibility.md)
-+ Experience Managerアセットの使用 {#using}
++ [ [!DNL Assets]](accessibility.md) のアクセシビリティ
++ Experience Managerアセットを使用{#using}
    + [[!DNL Assets] ホームページ体験](assets-home-page.md)
    + [デジタルアセットの検索](search-assets.md)
    + [アセットメタデータの操作](metadata.md)
@@ -83,7 +83,7 @@ ht-degree: 56%
    + [Dynamic Media Classic を使用した CDN キャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
    + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
-+ アセットの拡張 {#extending}
++ アセットの拡張{#extending}
    + [カスタマイズと拡張 [!DNL Assets]](extending-assets.md)
    + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [検索機能の拡張](searchx.md)
@@ -91,9 +91,9 @@ ht-degree: 56%
    + [アセットとアクティビティストリームの統合](extending-activity-stream.md)
    + [アセットエディタの拡張](asseteditorx.md)
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
-   + [コンテンツフラグメント [!DNL Assets] はinHTTP APIをサポート](assets-api-content-fragments.md)
+   + [ [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](assets-api-content-fragments.md)
    + [[!DNL Assets] 代理開発](proxy.md)
-+ アセットの管理 {#administer}
++ アセットの管理{#administer}
    + [サポートされているファイル形式](assets-formats.md)
    + [検索ファセット](search-facets.md)
    + [メタデータの概念について](metadata-concepts.md)
@@ -114,7 +114,7 @@ ht-degree: 56%
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] 統合](aem-cc-integration-best-practices.md)
-   + [統合対象 [!DNL InDesign Server]](indesign.md)
+   + [ [!DNL InDesign Server]](indesign.md) との統合
    + [資産のDigital Rights Management](drm.md)
    + [アセットのインサイトにデモパッケージを使用する](use-demo-package-for-asset-insights.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
@@ -127,8 +127,8 @@ ht-degree: 56%
    + [アセットテンプレート](asset-templates.md)
    + [フォルダーを共有する際のベストプラクティス [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
-   + [ [!DNL Assets] 設定 [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
-   + [アセットの公開先 [!DNL Brand Portal]](brand-portal-publish-assets.md)
+   + [ [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md) での  [!DNL Assets]  の設定
+   + [ [!DNL Brand Portal]](brand-portal-publish-assets.md) へのアセットの公開
    + [フォルダの発行先 [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [コレクションの公開先 [!DNL Brand Portal]](brand-portal-publish-collection.md)
 + コンテンツフラグメント {#fragments}
@@ -141,7 +141,7 @@ ht-degree: 56%
    + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments/content-fragments-delete.md)
    + [コンテンツフラグメント - Markdown](content-fragments/content-fragments-markdown.md)
    + [コンテンツフラグメント用の翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
-+ Manage Assets {#managing}
++ アセットの管理{#managing}
    + [デジタルアセットの管理](manage-assets.md)
    + [コレクションの管理](manage-collections.md)
    + [重複項目の検出の有効化](duplicate-detection.md)
