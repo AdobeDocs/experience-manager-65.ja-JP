@@ -186,7 +186,7 @@ ht-degree: 92%
    <td>リポジトリチューニング</td>
    <td>
     <ul>
-     <li><a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">パフォーマンスチューニングのヒント</a></li>
+     <li><a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">パフォーマンスチューニングのヒント</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">パフォーマンスの設定</a></li>
      <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">Repository Performance Tuning</a></li>
     </ul> </td>
@@ -214,7 +214,7 @@ ht-degree: 92%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">アセット同期サービス</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">複数の DAM インスタンス</a></li>
-     <li><a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">こちら</a>および<a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">こちら</a>にあるパフォーマンスチューニングのヒントに関する記事<br /> </li>
+     <li><a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">こちら</a>および<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">こちら</a>にあるパフォーマンスチューニングのヒントに関する記事<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -260,7 +260,7 @@ ht-degree: 92%
   <tr>
    <td><strong>手順 35</strong></td>
    <td>Dispatcher を設定します</td>
-   <td><a href="https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html">Dispatcher の設定</a><br /> </td>
+   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html">Dispatcher の設定</a><br /> </td>
   </tr>
   <tr>
    <td><strong>手順 36</strong></td>
@@ -289,12 +289,12 @@ ht-degree: 92%
   <tr>
    <td><strong>手順 45<br /> および 47</strong><br /> </td>
    <td>HTTP/2 の使用</td>
-   <td>手順 37、38 および 39 の Gem セッションを参照してください。Also, check out <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">this</a> forum post on HTTP/2 support.<br /> </td>
+   <td>手順 37、38 および 39 の Gem セッションを参照してください。また、HTTP/2のサポートに関する<a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">この</a>フォーラムの投稿を見てください。<br /> </td>
   </tr>
   <tr>
    <td><strong>手順 49</strong></td>
    <td>ペイロードのサイズを縮小します</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td>
   </tr>
   <tr>
    <td><strong>手順 42 および 43</strong></td>
@@ -314,7 +314,7 @@ ht-degree: 92%
      <li>リソースの連結（画像、CSS スプライト、JSON など）<br /> </li>
      <li>clientlibs の埋め込み
       <ol>
-       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a> — リクエストを最小限に抑えるための埋め込みの使用を参照してください。</li>
+       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a>  — リクエストを最小限に抑えるための埋め込みの使用を参照してください。</li>
       </ol> </li>
     </ol> </td>
   </tr>
@@ -326,7 +326,7 @@ ht-degree: 92%
   <tr>
    <td><strong>手順 50 および 51</strong></td>
    <td>JS コードがブロックされています</td>
-   <td><a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html</a></td>
+   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">https://docs.adobe.com/ddc/en/gems/aem-web-performance.html</a></td>
   </tr>
  </tbody>
 </table>
