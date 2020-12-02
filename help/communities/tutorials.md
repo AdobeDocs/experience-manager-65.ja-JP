@@ -22,7 +22,7 @@ ht-degree: 57%
 
 ここでは、AEM 6.1 Communities [ソーシャルコンポーネントフレームワーク（SCF）](scf.md)の学習および操作に役立つ例を紹介しています。
 
-## クライアント側のカスタマイズ {#client-side-customization}
+## クライアント側のカスタマイズ  {#client-side-customization}
 
 関連トピック：
 
@@ -34,7 +34,7 @@ ht-degree: 57%
 
 * [コメントコンポーネントの拡張](extend-comments.md)
 
-## サーバー側のカスタマイズ {#server-side-customization}
+## サーバー側のカスタマイズ  {#server-side-customization}
 
 [SCF のサーバー側のカスタマイズ](server-customize.md)も参照してください。
 
@@ -46,7 +46,7 @@ ht-degree: 57%
 
 * [SCF コンポーネントの拡張のサンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
-## How-to Instructions {#how-to-instructions}
+## 使い方説明{#how-to-instructions}
 
 * [AEM Communities藤堂MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
@@ -60,15 +60,15 @@ ht-degree: 57%
 
 * [サンプルページの作成](create-sample-page.md)
 
-## デモユーザー {#demo-users}
+## デモユーザー  {#demo-users}
 
-Geometrixxサンプルパッケージには、デモユーザーが含まれています。 There is often a difference in experience between being a visitor (not logged in) or a member (logged in) and, as long as the Geometrixx samples packages remain installed, you may use these users to simulate a logged in state when exploring with the [Community Components guide](components-guide.md).
+Geometrixxサンプルパッケージには、デモユーザーが含まれています。 訪問者（ログインしていない）とメンバー（ログインしている）の間に経験が違うことが多く、Geometrixxサンプルパッケージがインストールされている限り、[コミュニティコンポーネントガイド](components-guide.md)で調査する際に、ログイン状態をシミュレートできます。
 
-For a full list of the demo users, navigate using the Rail to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security > Users]**. Or use the Classic UI [security console](http://localhost:4502/useradmin) for managing users and groups.
+デモユーザーの完全なリストについては、パネルを使用して&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL セキュリティ>ユーザー]**&#x200B;に移動します。 または、クラシックUI [セキュリティコンソール](http://localhost:4502/useradmin)を使用してユーザーとグループを管理します。
 
 [コミュニティサイトが作成されている](getting-started.md)場合、その[コミュニティユーザーグループ](users.md)にデモユーザーを割り当てることができます。
 
-***user id* / *password***:
+***user id* /  *password***:
 
 * aaron.mcdonald@mailinator.com／password
 * emily.andrews@mailinator.comパスワード
