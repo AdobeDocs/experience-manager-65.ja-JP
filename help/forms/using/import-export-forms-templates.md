@@ -24,7 +24,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->* AEM 6.4Formsでは、crx-repositoryの構造とパスが変更されました。 以前のバージョンのアセットをAEM 6.4Formsに読み込んだ場合、フォームが古い構造に依存しているときは、依存関係を手動で書き出す必要があります。 リポジトリの構造とパスの変更の詳細は、AEMでの [リポジトリ再構築を参照してください](/help/sites-deploying/repository-restructuring.md)。
+>* AEM 6.4Formsでは、crx-repositoryの構造とパスが変更されました。 以前のバージョンのアセットをAEM 6.4Formsに読み込んだ場合、フォームが古い構造に依存しているときは、依存関係を手動で書き出す必要があります。 リポジトリの構造とパスの変更の詳細については、「[AEM](/help/sites-deploying/repository-restructuring.md)でのリポジトリ再構築」を参照してください。
 
 >
 
@@ -38,18 +38,18 @@ AEM Formsユーザーインターフェイスを介した書き出しと読み�
 
 これらのアセットタイプの場合、AEM Package Manager を使用してソースの AEM サーバー上で CRX パッケージを作成し、書き出し先のサーバーにパッケージをインストールする必要があります。パッケージの作成とインストールについて詳しくは、「[パッケージの操作](/help/sites-administering/package-manager.md)」を参照してください。
 
-### フォームとドキュメントアセットのダウンロード {#download-forms-amp-documents-assets}
+### フォームとドキュメントアセットのダウンロード  {#download-forms-amp-documents-assets}
 
 Formsおよびドキュメントのアセットをダウンロードするには：
 
 1. AEM Forms インスタンスにログインします。
-1. Tap Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) icon > navigation ![compass](assets/compass.png) icon> Forms > Forms &amp; Documents.
+1. Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)アイコン>ナビゲーション![コンパス](assets/compass.png)アイコン>Forms/Forms&amp;ドキュメントをタップします。
 1. フォームアセットを選択し、「**ダウンロード**」アイコンをタップします。
-1. In the Download Asset(s), choose one of the following options, and tap **Download**.
+1. 「アセットをダウンロード」で、次のオプションのいずれかを選択し、**ダウンロード**&#x200B;をタップします。
 
    * 「**CRX パッケージとしてダウンロード**」：選択したすべてのアセットおよび関連する依存関係を AEM Forms インスタンスからダウンロードして、別のインスタンスに移動するオプションを使用します。すべてのアセットとフォルダーを、CRX パッケージとしてダウンロードします。AEM で作成されたフォーム（アダプティブフォーム、インタラクティブ通信、アダプティブフォームフラグメント）、フォームセット、フォームテンプレート、PDF ドキュメント、各種リソース（XSD、XFS、画像）など、すべてのフォームアセットを AEM Forms の UI からパッケージとしてダウンロードすることができます。アセットをパッケージとしてダウンロードすることのメリットは、ダウンロード用に選択されたアセットによって使用されてきたアセットをもダウンロードできることです。例えば、フォームテンプレート、XSD、1 枚の画像を使用するアダプティブフォームがあるとします。このアダプティブフオームを選択してパッケージとしてダウンロードする場合、ダウンロードされるパッケージにはフォームテンプレート、XSD、画像が含まれています。そのアセットに関連付けられているメタデータプロパティ（カスタムプロパティを含む）も同様にダウンロードされます。
 
-   * 「**アセットをバイナリファイルとしてダウンロード**」：フォームテンプレート（XDP）、PDF フォーム（PDF）、ドキュメント（PDF）、リソース（画像、スキーマ、スタイルシート）のみをダウンロードするオプションを使用します。これらのアセットは外部アプリケーションで編集できます。バイナリを持つフォームアセット（XSD、XDP、画像、PDF、XDP など）を .zip ファイルとしてダウンロードします。You cannot download adaptive forms, Interactive Communications, adaptive form fragments, themes, and form sets with **Download asset(s) as binary files** option. このアセットをダウンロードするには、「**パッケージとしてダウンロード**」オプションを使用する必要があります。
+   * 「**アセットをバイナリファイルとしてダウンロード**」：フォームテンプレート（XDP）、PDF フォーム（PDF）、ドキュメント（PDF）、リソース（画像、スキーマ、スタイルシート）のみをダウンロードするオプションを使用します。これらのアセットは外部アプリケーションで編集できます。バイナリを持つフォームアセット（XSD、XDP、画像、PDF、XDP など）を .zip ファイルとしてダウンロードします。**「アセットをバイナリファイル**&#x200B;としてダウンロード」オプションを使用して、アダプティブフォーム、インタラクティブコミュニケーション、アダプティブフォームフラグメント、テーマ、フォームセットをダウンロードすることはできません。 このアセットをダウンロードするには、「**パッケージとしてダウンロード**」オプションを使用する必要があります。
 
    選択したアセットはアーカイブ（.zip ファイル）としてダウンロードされます。
 
@@ -64,11 +64,11 @@ Formsおよびドキュメントのアセットをダウンロードするには
 >[!VIDEO](https://vimeo.com/)
 
 1. AEM Forms インスタンスにログインします。
-1. Tap Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) icon > navigation ![compass](assets/compass.png) icon> Forms> Forms &amp; Documents.
+1. Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)アイコン>ナビゲーション![コンパス](assets/compass.png)アイコン>Forms>Forms&amp;ドキュメントをタップします。
 1. **作成**／**ファイルのアップロード**&#x200B;の順にタップします。フォームのアップロードまたはパッケージのアップロードダイアログが表示されます。
 1. ダイアログボックスで、読み込むパッケージまたはアーカイブを参照し、選択します。PDFドキュメント、XSD、画像、スタイルシート、XDPフォームを選択することもできます。 「**開く**」をタップします。選択するフォルダーまたはファイル名に特殊文字を含めないでください。
 
-   On the dialog box, verify the details of assets being uploaded, and tap **Upload**.
+   ダイアログボックスで、アップロードするアセットの詳細を確認し、「**アップロード**」をタップします。
 
    既存のフォームアセットをアップロードすると、そのアセットが更新されます。
 
@@ -80,14 +80,14 @@ Formsおよびドキュメントのアセットをダウンロードするには
 
 AEM Forms では、テーマを作成、ダウンロード、アップロードすることができます。テーマは、フォーム、ドキュメント、レターなど他のアセットと同様に作成することができます。テーマを作成、ダウンロードし、別のインスタンスにアップロードして再利用することができます。テーマの詳細については、「[AEM Forms におけるテーマ](../../forms/using/themes.md)」を参照してください。
 
-### テーマのダウンロード {#downloading-a-theme}
+### テーマのダウンロード  {#downloading-a-theme}
 
 他のプロジェクトやインスタンスで使用する AEM Forms のテーマをエクスポートできます。AEM では、テーマを zip ファイルとしてダウンロードし、それをインスタンスにアップロードすることができます。
 
 テーマをダウンロードするには、次の手順を実行します。
 
 1. AEM Forms インスタンスにログインします。
-1. Tap Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) icon > navigation ![compass](assets/compass.png) icon> Forms> Themes.
+1. Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)アイコン>ナビゲーション![コンパス](assets/compass.png)アイコン>Forms>テーマをタップします。
 1. テーマを選択し、「**ダウンロード**」をタップします。テーマはアーカイブ（.zipファイル）としてダウンロードされます。
 
 ### テーマのアップロード {#uploading-a-theme}
@@ -101,10 +101,10 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
 1. ファイルのアップロードプロンプトで、コンピュータ上のテーマパッケージを参照して選択し、「**アップロード**」をクリックします。アップロードしたテーマは、テーマページで使用できます。
 
 1. AEM Forms インスタンスにログインします。
-1. Tap Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) icon > navigation ![compass](assets/compass.png) icon> Forms> Themes.
+1. Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)アイコン>ナビゲーション![コンパス](assets/compass.png)アイコン>Forms>テーマをタップします。
 1. **作成**／**ファイルのアップロード**&#x200B;をクリックします。ファイルのアップロードプロンプトで、コンピュータ上のテーマパッケージを参照して選択し、「**アップロード**」をクリックします。テーマがアップロードされます。
 
-## Correspondence Management におけるアセットの読み込みと書き出し {#import-and-export-assets-in-correspondence-management}
+## Correspondence Management におけるアセットの読み込みと書き出し  {#import-and-export-assets-in-correspondence-management}
 
 データ辞書、レター、ドキュメントフラグメントなどのアセットを 2 つの異なる Correspondence Management の実装間で共有するには、.cmp ファイルを作成して共有します。.cmp ファイルには、1 つ以上のデータ辞書、レター、ドキュメントフラグメント、フォームを含めることができます。
 
@@ -118,23 +118,23 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
    ![export](assets/export.png)
 
 1. 書き出された依存関係を表示するには、「解決」をタップします。または、スキップして次の手順に進みます。依存関係は「解決」をタップしなくても書き出されます。
-1. To download the .cmp file, tap **OK**.
+1. .cmpファイルをダウンロードするには、**「OK**」をタップします。
 1. Correspondence Management によって .cmp ファイルがお使いのコンピューターにダウンロードされます。
 
    .cmp ファイル には書き出されたアセットが含まれています。他のユーザーと .cmp ファイルを共有することができます。他のユーザーは、異なるサーバーに .cmp ファイルを読み込んで、新しいサーバーですべてのアセットを取得することができます。
 
-### すべての Correspondence Management アセットをパッケージとして書き出し {#export-all-the-correspondence-management-assets-as-a-package}
+### すべての Correspondence Management アセットをパッケージとして書き出し  {#export-all-the-correspondence-management-assets-as-a-package}
 
 このオプションを使用して、すべての Correspondence Management アセットおよび関連する依存関係を、AEM Forms インスタンスからパッケージとしてダウンロードします。
 
-例えば、Correspondence Management に画像とテキストを使用しているレターが含まれている場合、ダウンロードしたパッケージにもレターに関連する画像とテキストが含まれます。そのアセットに関連付けられているメタデータプロパティ（カスタムプロパティを含む）も同様にダウンロードされます。Once you have downloaded the package (.cmp), you can [import the package to a different AEM Forms instance](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p).
+例えば、Correspondence Management に画像とテキストを使用しているレターが含まれている場合、ダウンロードしたパッケージにもレターに関連する画像とテキストが含まれます。そのアセットに関連付けられているメタデータプロパティ（カスタムプロパティを含む）も同様にダウンロードされます。パッケージ(.cmp)をダウンロードしたら、[別のAEM Formsインスタンス](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)にパッケージをインポートできます。
 
 すべての Correspondence Management アセットおよび関連する依存関係をパッケージとしてダウンロードするには、次の手順を実行します。
 
 1. AEM Forms サーバーに Forms ユーザーとしてログインします。
 1. グローバルナビゲーションバーで「**Adobe Experience Manager**」をタップします。
-1. Tap tools ( ![tools](assets/tools.png)) and then tap **Forms**.
-1. Tap **Export Correspondence Management Assets**.
+1. ツール（![ツール](assets/tools.png)）をタップし、**Forms**&#x200B;をタップします。
+1. 「**Correspondence Managementアセットを書き出し**」をタップします。
 
    ![publish-cmp-assets-1](assets/publish-cmp-assets-1.png)
 
@@ -142,7 +142,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
 
    ![export-last-run-details](assets/export-last-run-details.png)
 
-1. Tap **Export** and, in the confirm message, tap **OK**.
+1. 「**書き出し**」をタップし、確認メッセージで「**OK**」をタップします。
 
    バッチ処理が完了すると、前回の実行詳細とパッケージをダウンロードするためのリンクが更新されます。これには管理者ログインや、バッチが正常に実行されたか、失敗したかなどの情報が含まれます。アセットがパッケージに書き出されて、「書き出したパッケージをダウンロード」リンクが表示されます。
 
@@ -152,7 +152,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
 
 1. 「**書き出したパッケージをダウンロード**」リンクをタップして、パッケージファイルをダウンロードします。
 
-   To add the assets in the package to another instance of Correspondence Management, [import the package to an AEM Forms instance](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p).
+   パッケージ内のアセットをCorrespondence Managementの別のインスタンスに追加するには、[パッケージをAEM Formsインスタンス](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)に読み込みます。
 
 ### ドキュメントフラグメント、レターまたはデータ辞書の Correspondence Management への読み込み {#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
 
@@ -160,10 +160,10 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
 
 >[!NOTE]
 >
->移行したい古い Correspondence Management アセットを読み込んでいる間、管理者アカウントを使用してログインします。For more information on Migrating old Correspondence Management assets, see [Migrate Correspondence Management assets to AEM 6.1 forms](/help/forms/using/migration-utility.md).
+>移行したい古い Correspondence Management アセットを読み込んでいる間、管理者アカウントを使用してログインします。古いCorrespondence Managementアセットの移行について詳しくは、「[Correspondence ManagementアセットのAEM 6.1 formsへの移行](/help/forms/using/migration-utility.md)」を参照してください。
 
-1. On the data dictionary, letters, or document fragments page, tap **Create > File Upload** and select the .cmp file.
-1. Correspondence Management にアセットの読み込みダイアログが表示され、読み込まれるアセットが一覧表示されます。Tap **Import**.
+1. データディクショナリ、レター、ドキュメントフラグメントのページで、**作成/ファイルのアップロード**&#x200B;をタップし、.cmpファイルを選択します。
+1. Correspondence Management にアセットの読み込みダイアログが表示され、読み込まれるアセットが一覧表示されます。「**読み込み**」をタップします。
 
    アセットが読み込まれると、次のアセットのプロパティが更新されます（その他のプロパティは変更されません）。
 
@@ -174,7 +174,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
    >
    >XDP を cmp ファイルの一部として、または別の方法でアップロードできるようにするには、ユーザーは forms-power-users グループに含まれている必要があります。アクセス権については、管理者に連絡してください。
 
-## ワークフローアプリケーションの書き出し {#export-a-workflow-application}
+## ワークフローアプリケーションの書き出し  {#export-a-workflow-application}
 
 AEM Package Manger を使用して、ワークフローアプリケーションを書き出すことができます。手順は次のとおりです。
 
@@ -192,7 +192,7 @@ AEM Package Manger を使用して、ワークフローアプリケーション�
    >
    >ワークフローアプリケーションを正しく動作させるために、作業アプリケーションを使用して対応するアダプティブフォームとワークフローモデルも書き出します。
 
-## フォルダーとアセットの整理 {#folders-and-organizing-assets}
+## フォルダーとアセットの整理  {#folders-and-organizing-assets}
 
 AEM Forms のユーザーインターフェイスは、フォルダーを利用してアセットを整理します。これらのフォルダーは、AEM Forms ユーザーインターフェイスで作成されたアセットの整理に使用されます。これらのフォルダーでは、名前の変更やサブフォルダーの作成、アセットおよびドキュメントの保存を行うことができます。フォルダー内でドキュメントおよびアセットを整理すると、ファイルをグループ化して容易に管理することができます。フォルダーを選択し、ダウンロードするか削除するかを選択します。
 
@@ -200,12 +200,12 @@ AEM Forms のユーザーインターフェイスは、フォルダーを利用�
 
 ### フォルダーの作成 {#create-a-folder}
 
-1. Log in to the AEM Forms user interface at `https://<server>:<port>/aem/forms.html`.
+1. `https://<server>:<port>/aem/forms.html`のAEM Formsユーザーインターフェイスにログインします。
 1. フォルダーを作成する場所に移動します。
 1. 作成／フォルダーをタップします。
 1. 次の詳細を入力します。
 
-   * **タイトル：** フォルダの表示名
+   * **タイトル：フォルダーの** 表示名
    * **名前：***（必須）*&#x200B;リポジトリ内のフォルダーを保存するノード名
 
    >[!NOTE]
@@ -214,7 +214,7 @@ AEM Forms のユーザーインターフェイスは、フォルダーを利用�
 
 1. 定義したタイトルを持つ新しいフォルダーは、アセットリスト内の現在の場所に表示されます。
 
-   指定した名前を持つフォルダーがすでに存在する場合は、送信はエラーになり失敗します。You can view the error message by hovering over the error ![aem6forms_error_alert](assets/aem6forms_error_alert.png) icon that appears beside the name field.
+   指定した名前を持つフォルダーがすでに存在する場合は、送信はエラーになり失敗します。名前フィールドの横に表示されるエラー![aem6forms_error_alert](assets/aem6forms_error_alert.png)アイコンの上にマウスポインターを置くと、エラーメッセージを表示できます。
 
    新しく作成されたフォルダーをタップしてフォルダー内に移動し、フォルダー内でアセットまたはフォルダーを作成できます。さらに、フォルダーを選択し、ダウンロード、削除、名前の編集用にそのフォルダーをキューに入れることができます。
 
@@ -227,7 +227,7 @@ AEM Forms のユーザーインターフェイスは、フォルダーを利用�
 次の手順を実行して、アセットまたはレターのコピーを作成します。
 
 1. 関連するアセットまたはレターのページで、1 つ以上のアセットまたはレターを選択します。UI に「コピー」アイコンが表示されます。
-1. 「コピー」をタップします。UI に「貼り付け」アイコンが表示されます。また、貼り付ける前にフォルダー内を移動 / ナビゲートすることもできます。複数のフォルダーに同じ名前のアセットを保管することができます。For more information on folders, see [Folders and organizing assets](#folders-and-organizing-assets).
+1. 「コピー」をタップします。UI に「貼り付け」アイコンが表示されます。また、貼り付ける前にフォルダー内を移動 / ナビゲートすることもできます。複数のフォルダーに同じ名前のアセットを保管することができます。フォルダーについて詳しくは、[フォルダーとアセットの整理](#folders-and-organizing-assets)を参照してください。
 1. 「貼り付け」をタップします。貼り付けダイアログが表示されます。アセット/レターの新しいコピーに対して名前とタイトルが自動生成されますが、アセット/レターのタイトルと名前を編集することもできます。
 
    アセット/レターを同じ場所にコピー&amp;ペーストする場合、アセット/レターの既存の名前に接尾辞「 —CopyXX」が追加されます。 コピーしたアセットまたはレターにタイトルが付いていない場合は、自動生成されたタイトルフィールドは空のままです。
@@ -237,13 +237,13 @@ AEM Forms のユーザーインターフェイスは、フォルダーを利用�
 
 ## 検索 {#search-forms}
 
-AEM Forms の UI を使用して、コンテンツを検索することができます。Using the top bar, you can tap Search **[A]** to search your content for resources such as assets and documents.
+AEM Forms の UI を使用して、コンテンツを検索することができます。上部バーの「検索&#x200B;**[A]**」をタップすると、コンテンツ内でアセットやドキュメントなどのリソースを検索できます。
 
-アセットを検索する場合、AEM Forms にサイドパネルが表示されます。You can also tap ![assets-browser-content-only](assets/assets-browser-content-only.png) > Filter **[B]** to invoke the side panel. サイドパネルに表示される各種フィルターを使用して、検索範囲を絞り込むことができます。サイドパネルを使用して、検索を保存することもできます。
+アセットを検索する場合、AEM Forms にサイドパネルが表示されます。![assets-browser-content-only](assets/assets-browser-content-only.png)をタップして、**[B]**&#x200B;をフィルターして、サイドパネルを呼び出すこともできます。 サイドパネルに表示される各種フィルターを使用して、検索範囲を絞り込むことができます。サイドパネルを使用して、検索を保存することもできます。
 
 ![search_topbar](assets/search_topbar.png)
 
-**A.** Search **B.** Filter
+**A.** Search  **B.** Filter
 
 ![サイドパネル - フィルター](assets/search_sidepanel.png)
 
@@ -257,4 +257,4 @@ AEM Forms の UI を使用して、コンテンツを検索することができ
 
 サイドパネルを使用して、選択した名前を使用して検索設定を保存することもできます。
 
-For more information and instructions on using search, filters, saved search, and side panel, see [Search](/help/sites-authoring/search.md).
+検索、フィルター、保存済みの検索、サイドパネルの使用方法の詳細と手順については、[検索](/help/sites-authoring/search.md)を参照してください。
