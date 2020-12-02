@@ -24,12 +24,12 @@ ht-degree: 64%
 
 MSM は、コンテンツのデプロイメントを自動化するための設定可能なフレームワークです。多くの場合、実装は Web サイトの主要な部分に影響を及ぼし、複数の組織や地域にわたっておこなわれます。そのため、Web サイトの計画時と同様に、最大限の注意を払って MSM の実装を計画することを強くお勧めします。
 
-* Carefully **plan structure and content flows** before starting implementation.
+* 実装を開始する前に、注意深く&#x200B;**計画構造とコンテンツフロー**&#x200B;を設定してください。
 * **最小限必要なカスタマイズだけをおこなってください。** MSMは高度なカスタマイズ（展開設定など）をサポートしていますが、通常、Webサイトのパフォーマンス、信頼性、アップグレード性のベストプラクティスは、カスタマイズを最小限に抑えることです。
-* Establish a **governance** model early, and train users accordingly, to ensure success. A best practice from a governance point of view is to **minimize the authority that local content producers have** to allocate/connect content to other local users and their respective live copies. これは、非管理型の連鎖継承は、MSM構造の複雑さを大幅に増し、パフォーマンスと信頼性に悪影響を及ぼす可能性があるからです。
+* **ガバナンス**&#x200B;モデルを早期に確立し、それに従ってユーザーを訓練し、成功を確保します。 ガバナンスの表示点からのベストプラクティスは、**ローカルコンテンツ制作者が他のローカルユーザーとそれぞれのライブコピーにコンテンツを割り当て/接続する権限を最小限に抑えることです。**&#x200B;これは、非管理型の連鎖継承は、MSM構造の複雑さを大幅に増し、パフォーマンスと信頼性に悪影響を及ぼす可能性があるからです。
 
-* Once a plan exists for your structure, content flows, automation and governance - **prototype and thoroughly test your system**, before starting live implementation.
-* Keep in mind that **Adobe Consulting and leading System Integrators** have deep experience planning and implementing content automation with MSM, so they can help you both get started with your MSM project and throughout its entire implementation.
+* 構造、コンテンツフロー、自動化、およびガバナンスの計画が策定されたら、本番用実装を開始する前に、**プロトタイプを入念にテストし、システム**&#x200B;を入念にテストします。
+* **Adobeコンサルティングと主要なシステムインテグレーター**&#x200B;は、MSMを使用した高度な計画と導入経験があるので、MSMプロジェクトを始めて導入全体を通じて自動化できます。
 
 >[!NOTE]
 >
@@ -59,8 +59,8 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 
 ブループリント設定を使用する追加の利点は次のとおりです。
 
-* Allow the author to use the **Rollout** option on a blueprint - to (explicitly) push modifications to live copies that inherit from this blueprint.
-* Allow the author to use **Create Site**; this allows the user to easily select languages and configure the structure of the live copy.
+* 作成者がBluePrintに対して&#x200B;**ロールアウト**&#x200B;オプションを使用できるように、変更をこのBluePrintから継承するライブコピーに（明示的に）プッシュできます。
+* 作成者が&#x200B;**サイトを作成**；を使用できるようにします。これにより、ユーザーは簡単に言語を選択し、ライブコピーの構造を設定できます。
 * ブループリントと関係があるライブコピーのデフォルトのロールアウト設定を定義できます。
 
 ブループリント設定が参照されない場合、ロールアウトはライブコピー自体からのみ開始でき、基本的にはソースからコンテンツを引っ張ってきます。
@@ -86,19 +86,19 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 
 AEM でライブコピーを作成する方法は、主に次の 2 つです。
 
-* When [creating a Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
+* [ライブコピーの作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)時
 
    これは、任意のページからライブコピーを作成できる、より一般的な方法と考えることができます。 ライブコピーのコンテンツ構造はソースと完全に一致します。
 
-* サイトの [作成時](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)
+* [サイト](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)の作成時
 
    これは、主に多言語構造を持つWebサイトを作成する場合に、より専門的なアプローチです。
 
 サイトを作成する際に留意する点のいくつかを次に示します。
 
-* To create a new site, you need a [blueprint configuration](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations).
+* 新しいサイトを作成するには、[Blueprintの構成](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations)が必要です。
 * 言語パスを選択して新しいサイトに作成できるようにするには、対応する言語ルートが設計図（ソース）に存在する必要があります。
-* Once a [new site has been created as a live copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (using **Create**, then **Site**), the first two levels of this live copy are *shallow*. ページの子はライブ関係には属しませんが、トリガーに一致するライブ関係が見つかった場合には引き続きロールアウトが引き継がれます。
+* [新しいサイトがライブコピー](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)として（**作成**&#x200B;を使用して）作成されたら、**サイト**&#x200B;の最初の2つのレベルは&#x200B;*浅い*&#x200B;です。 ページの子はライブ関係には属しませんが、トリガーに一致するライブ関係が見つかった場合には引き続きロールアウトが引き継がれます。
 
     次のことがおこなわれるのを防ぎます。
 
@@ -131,11 +131,11 @@ MSM は、次の 2 つの方法で多言語 Web サイトを作成するため�
 
 ブループリントやソースツリー内のコンテンツ構造の変更は、ライブコピーへの反映のされ方が異なります。これは、変更の内容によって変わります。
 
-* **設計図で新しいページを作成すると** 、標準的なロールアウト設定で展開した後、ライブコピーで対応するページが作成されます。
+* **BluePrintで新しいページを** 作成すると、標準のロールアウト設定で展開した後、ライブコピーで対応するページが作成されます。
 
-* **Blueprintでページを削除すると** 、標準的なロールアウト設定で展開した後に、対応するページがライブコピーから削除されます。
+* **Blueprintでページを** 削除すると、標準的なロールアウト設定で展開した後に、対応するページがライブコピーから削除されます。
 
-* **設計図内でページを移動しても** 、標準的なロールアウト設定で展開した後に、対応するページがライブコピー内で移動する **ことはありません** 。
+* **Blueprint内でページを** 移動しても、標準的なロールアウト設定で展開した後に、対応するページがライブコピー内で移動される **** ことはありません。
 
    * この動作になる理由は、ページの移動にはページの削除が暗黙的に含まれているからです。つまり、オーサー環境でページを削除すると、パブリッシュ環境の対応するコンテンツが自動的にアクティベート解除されることになり、結果として、パブリッシュ環境で予期しない動作が発生する可能性があります。これは、リンクやブックマークなどの関連項目にも影響することがあります。
    * それぞれのライブコピーページにおけるコンテンツの継承は更新され、ブループリントのソースの新しい場所が反映されます。
@@ -143,7 +143,7 @@ MSM は、次の 2 つの方法で多言語 Web サイトを作成するため�
 
 >[!NOTE]
 >
->This will work only with the [On Rollout trigger](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/msm-sync.html#rollout-triggers).
+>これは[ロールアウト時トリガー](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/msm-sync.html#rollout-triggers)でのみ機能します。
 
 * カスタムロールアウト設定を作成します。
 
@@ -171,7 +171,7 @@ MSM は、次の 2 つの方法で多言語 Web サイトを作成するため�
 
 MSM のロールアウト設定は高度なカスタマイズが可能です。ロールアウトの自動化は広範囲に影響を及ぼす場合があります。ベストプラクティスとして、次のような場合はきわめて&#x200B;**&#x200B;慎重に事前計画を立てるようにしてください。
 
-* automating rollouts; for example, with [onModify triggers](#onmodify),
+* ロールアウトの自動化；例えば、[onModify triggers](#onmodify)では、
 * [ノードタイプ／プロパティ](#node-types-properties)をカスタマイズする場合
 * 以降のワークフローの開始、
 * ロールアウトの一部としてのコンテンツのアクティブ化、またはその両方を行います。
@@ -180,7 +180,7 @@ MSM のロールアウト設定は高度なカスタマイズが可能です。�
 
 [ロールアウトトリガー](/help/sites-administering/msm-sync.md#rollout-triggers) `onModify` を使用する際には、次の点に留意してください。
 
-* Automating rollouts with `onModify` triggers may have a negative impact on authoring performance as they trigger rollouts after *every* page modification.
+* `onModify`トリガーを使用してロールアウトを自動化すると、*すべての*&#x200B;ページが変更された後にロールアウトが開始されるので、オーサリングパフォーマンスに悪影響を与える場合があります。
 
 * ロールアウト結果は、次のように予想に反する場合があります。
 
@@ -189,7 +189,7 @@ MSM のロールアウト設定は高度なカスタマイズが可能です。�
 
 * このようなロールアウト設定を使用すると、同じリソースの同時更新が発生した場合にコミットが競合する可能性があります。
 
-Therefore, it is recommended that you *only* use `onModify` triggers if the benefits of automatic rollout initiation outweigh any potential performance issues.
+したがって、自動ロールアウト開始のメリットが潜在的なパフォーマンスの問題を上回る場合は、**&#x200B;のみ`onModify`トリガーを使用することをお勧めします。
 
 ### ノードタイプ／プロパティ {#node-types-properties}
 
