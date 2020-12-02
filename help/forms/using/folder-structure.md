@@ -18,7 +18,7 @@ ht-degree: 66%
 ---
 
 
-# フォルダー構造について {#understanding-the-folder-structure}
+# フォルダー構造について  {#understanding-the-folder-structure}
 
 AEM Forms Workspace は Backbone を使用して MVC アーキテクチャ上で設計されています。各コンポーネントは次のものに対してファイルを持ちます。
 
@@ -26,16 +26,16 @@ AEM Forms Workspace は Backbone を使用して MVC アーキテクチャ上で
 * インターフェイスコントロールを含む HTML ファイルであるテンプレート。
 * コントローラークラスとしてテンプレートに対して動作する表示。
 
-すべてのコンポーネントのアセットは、以下に示すフォルダー構造内に配置されています。To access the assets, log in to CRXDE Lite and browse to `/libs/ws/js/runtime/`.
+すべてのコンポーネントのアセットは、以下に示すフォルダー構造内に配置されています。アセットにアクセスするには、CRXDE Liteにログインし、`/libs/ws/js/runtime/`を参照します。
 
-**モデル** ：バックボーンモデルを含みます。
+**** モデルバックボーンモデルを含みます。
 
-**表示** ：バックボーン表示を含みます。
+**** viewsバックボーン表示を含みます。
 
-**templates** ：コンポーネントのHTMLテンプレートのみが含まれます。
+**テン** プレートコンポーネント用のHTMLテンプレートのみが含まれます。
 
-**routes** ：ユニバーサルルートを含みます。 routes 内部の Templates フォルダーには、HTML コードとコンポーネントへの参照が含まれます。
+**** routesユニバーサルルートを含みます。routes 内部の Templates フォルダーには、HTML コードとコンポーネントへの参照が含まれます。
 
-**services** :RESTエンドポイントのAdobe Experience ManagerサーバーAPIを呼び出すためのサービスインターフェイスが含まれます。
+**** servicesRESTエンドポイントのAdobe Experience ManagerサーバーAPIを呼び出すためのサービスインターフェイスが含まれます。
 
-**util** ：複数のコンポーネントで使用できる汎用ユーティリティが含まれます。
+**** util複数のコンポーネントで使用できる汎用ユーティリティを含みます。
