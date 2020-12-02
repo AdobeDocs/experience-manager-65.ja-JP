@@ -34,15 +34,15 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 デフォルトでは、JSRP が UGC 用のストレージオプションとして選択されています。
 
-[ストレージ設定コンソール](srp-config.md) では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
+[ストレージ設定コンソール](srp-config.md)では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 オーサー環境でストレージ設定コンソールに移動するには、
 
-* From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
+* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL ストレージの構成]**
 
-* Select **[!UICONTROL JCR Storage Resource Provider (JSRP)]**
+* **[!UICONTROL JCRストレージリソースプロバイダー(JSRP)]**&#x200B;を選択します
 
-* Select **[!UICONTROL Submit]**
+* **[!UICONTROL 送信]**&#x200B;を選択
 
 ![jsrp-configuration](assets/jsrp-configuration.png)
 
@@ -50,16 +50,16 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 JSRP はデフォルト設定ですが、パブリッシュ環境で同じ設定が使用されていることを確認するには、以下の手順をおこないます。
 
-* From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
-* 「 **[!UICONTROL Activate Tree]** / **[!UICONTROL 開始パス]**」を選択します。
+* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL 導入]** > **[!UICONTROL レプリケーション]**
+* **[!UICONTROL ツリーをアクティブ化]**/**[!UICONTROL 開始パス]**&#x200B;を選択します。
 
-   * 参照先 `/conf/global/settings/community/srpc/`
+   * `/conf/global/settings/community/srpc/`を参照
 
-* Select **[!UICONTROL Activate]**
+* 「**[!UICONTROL アクティブ化]**」を選択します。
 
 ## ユーザーデータの管理 {#managing-user-data}
 
-For information regarding *users*, *user profiles* and *user groups*, often entered in the publish environment, visit:
+*ユーザー*、*ユーザープロファイル*、*ユーザーグループ*&#x200B;に関する情報は、次のページにアクセスしてください。
 
 * [ユーザーの同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
@@ -72,10 +72,10 @@ For information regarding *users*, *user profiles* and *user groups*, often ente
 
 すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
-* JCRで、/conf/ [global/settings/communityの場合](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
+* JCRで、[/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * Does not contain an [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) node, it means the storage provider is JSRP.
-   * If the srpc node exists and contains node [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties should define JSRP to be the default provider.
+   * [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)ノードを含まない場合、ストレージプロバイダーがJSRPであることを意味します。
+   * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)が含まれる場合、デフォルトの設定のプロパティでJSRPをデフォルトプロバイダーとして定義する必要があります。
 
 ### UGC がオーサーインスタンスで表示されない {#ugc-not-visible-on-author-instance}
 
