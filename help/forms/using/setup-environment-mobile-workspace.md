@@ -23,7 +23,7 @@ ht-degree: 67%
 
 AEM Forms アプリケーションを構築しデプロイするためには、次のハードウェア、ソフトウェア、ライセンスが必要です。
 
-## Windows デバイスの場合 {#for-windows-devices}
+## Windows デバイスの場合  {#for-windows-devices}
 
 * Microsoft Windows 10
 * Microsoft Visual Studio 2015
@@ -38,11 +38,11 @@ AEM Forms アプリケーションを構築しデプロイするためには、�
 * 社内の iOS アプリケーション配布のためのエンタープライズ証明書
 * Apple iPad（iOS 8.4 以降搭載）
 
-## Android デバイスの場合 {#for-android-devices}
+## Android デバイスの場合  {#for-android-devices}
 
-* Android Development Toolkit (ADT bundle) that can be downloaded from [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
+* [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)からダウンロードできるAndroid開発ツールキット（ADTバンドル）
 * MAC システム上に環境が設定される場合は、Applications フォルダーに ADT をインストールする必要があります。
-* If the ADT is installed in any other location on MAC, or if the environment is set up on a Windows system, the ADT SDK path needs to be updated in `local.properties` file that is available in `src\android` folder in the extracted the source archive `mobileworkspace-src.zip`. このファイルで、`sdk.dir` 変数をデスクトップ上の ADT SDK の場所にポイントしてください。
+* ADTがMAC上の他の場所にインストールされている場合、または環境がWindowsシステム上で設定されている場合は、ADT SDKのパスを、抽出したソースアーカイブ`mobileworkspace-src.zip`の`src\android`フォルダーにある`local.properties`ファイルで更新する必要があります。 このファイルで、`sdk.dir` 変数をデスクトップ上の ADT SDK の場所にポイントしてください。
 
 >[!NOTE]
 >
