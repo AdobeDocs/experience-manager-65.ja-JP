@@ -32,13 +32,13 @@ AEM Communities 6.1 以降、コミュニティコンテンツ（一般的にユ
 
 >[!NOTE]
 >
->**カスタムコンポーネント**：AEM Communities の使用許諾を得たお客様の場合、SRP API は、カスタムコンポーネントの開発者が、基になるトポロジに関係なく UGC にアクセスするために使用できます。See [SRP and UGC Essentials](srp-and-ugc.md).
+>**カスタムコンポーネント**：AEM Communities の使用許諾を得たお客様の場合、SRP API は、カスタムコンポーネントの開発者が、基になるトポロジに関係なく UGC にアクセスするために使用できます。[SRPとUGC Essentials](srp-and-ugc.md)を参照してください。
 
 関連トピック：
 
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
-* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
+* [SocialUtilsリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
 ## リポジトリについて {#about-the-repository}
 
@@ -48,11 +48,11 @@ SRP を理解するには、AEM コミュニティサイトにおける AEM リ�
 
 JCR の 1 つの実装が AEM リポジトリである OAK です。
 
-**Apache Jackrabbit Oak（OAK）**[ OAK](../../help/sites-deploying/platform.md) は、コンテンツ中心のアプリケーション向けに特別に設計されたデータストレージシステムである JCR 2.0 の実装です。これは、非構造化データや半構造化データを対象に設計された階層型データベースの一種です。 このリポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレートおよび内部データが格納されます。The UI for accessing content is [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
+**Apache Jackrabbit Oak（OAK）**[ OAK](../../help/sites-deploying/platform.md) は、コンテンツ中心のアプリケーション向けに特別に設計されたデータストレージシステムである JCR 2.0 の実装です。これは、非構造化データや半構造化データを対象に設計された階層型データベースの一種です。 このリポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレートおよび内部データが格納されます。コンテンツにアクセスするUIは[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)です。
 
 JCR と OAK はどちらも、通常は AEM リポジトリを示すために使用されます。
 
-非公開のオーサー環境でサイトコンテンツを開発した後、それを公開のパブリッシュ環境にコピーする必要があります。This is often done through an operation called *[replication](deploy-communities.md#replication-agents-on-author)*. これは、作成者、開発者、管理者の管理下で発生します。
+非公開のオーサー環境でサイトコンテンツを開発した後、それを公開のパブリッシュ環境にコピーする必要があります。これは、*[レプリケーション](deploy-communities.md#replication-agents-on-author)*&#x200B;と呼ばれる操作で行われることがよくあります。 これは、作成者、開発者、管理者の管理下で発生します。
 
 UGC の場合、コンテンツは公開のパブリッシュ環境で登録済みサイト訪問者（コミュニティメンバー）によって生成されます。これはランダムに発生します。
 
@@ -64,11 +64,11 @@ UGC が共有ストレージに格納される場合、ほとんどのデプロ�
 
 >[!NOTE]
 >
->See [SRP and UGC Essentials](srp-and-ugc.md) for sample code and additional details.
+>サンプルコードと追加の詳細については、[SRPとUGC Essentials](srp-and-ugc.md)を参照してください。
 >
 >コーディング時のベストプラクティスについては、[SRP による UGC へのアクセス](accessing-ugc-with-srp.md)を参照してください。
 
-### ASRP {#asrp}
+### ASRP  {#asrp}
 
 ASRP の場合、UGC は JCR には格納されず、Adobe がホストおよび管理するクラウドサービスに格納されます。ASRPに保存されたUGCは、CRXDE Liteで表示したり、JCR APIを使用してアクセスしたりすることはできません。
 
@@ -78,7 +78,7 @@ ASRP の場合、UGC は JCR には格納されず、Adobe がホストおよび
 
 ASRP では検索に Adobe クラウドが使用されます。
 
-### MSRP {#msrp}
+### MSRP  {#msrp}
 
 MSRP の場合、UGC は JCR には格納されず、MongoDB に格納されます。MSRPに保存されたUGCは、CRXDE Liteで表示したり、JCR APIを使用してアクセスしたりすることはできません。
 
@@ -88,11 +88,11 @@ MSRP は ASRP と互換性がありますが、すべての AEM サーバーイ�
 
 MSRP では検索に Solr が使用されます。
 
-### JSRP {#jsrp}
+### JSRP  {#jsrp}
 
 JSRP は、単一 AEM インスタンス上のすべての UGC にアクセスするためのデフォルトのプロバイダーです。MSRPやASRPを設定しなくても、AEM Communities6.1を素早く体験できます。
 
-See [JSRP - JCR Storage Resource Provider](jsrp.md).
+[JSRP - JCRストレージリソースプロバイダー](jsrp.md)を参照してください。
 
 JSRP の場合、UGC は JCR に格納され、CRXDE Lite と JCR API の両方でアクセスできますが、JCR API は使用しないことを強くお勧めします。使用すると、今後の変更によってカスタムコードが影響を受ける可能性があります。
 
@@ -117,11 +117,11 @@ SRP API を使用すると、すべての SRP オプションによって、す�
 
 ACL チェックでは、リソースの UGC に適用される権限のチェックに適したパスを返すユーティリティメソッドが使用されます。
 
-See [SRP and UGC Essentials](srp-and-ugc.md) for sample code.
+サンプルコードについては、[SRPとUGC Essentials](srp-and-ugc.md)を参照してください。
 
 ### For Non-Existing Resources (NERs) {#for-non-existing-resources-ners}
 
-一部のコミュニティコンポーネントはスクリプトに含めることができ、したがってコミュニティ機能をサポートするために Sling アドレス可能ノードが必要です。[含まれるコンポーネント](scf.md#add-or-include-a-communities-component) は、「既存以外のリソース(NER)」と呼ばれます。
+一部のコミュニティコンポーネントはスクリプトに含めることができ、したがってコミュニティ機能をサポートするために Sling アドレス可能ノードが必要です。[含まれる](scf.md#add-or-include-a-communities-component) コンポーネントは、「既存以外のリソース(NER)」と呼ばれます。
 
 シャドウノードによって、リポジトリ内の Sling アドレス可能な場所が提供されます。
 
@@ -131,7 +131,7 @@ See [SRP and UGC Essentials](srp-and-ugc.md) for sample code.
 
 ### 格納場所 {#storage-location}
 
-Following is an example of a shadow node, using the [Comments component](http://localhost:4502/content/community-components/en/comments.html) in the [Community Components Guide](components-guide.md):
+次の例は、『[コミュニティコンポーネントガイド](components-guide.md)』の[コメントコンポーネント](http://localhost:4502/content/community-components/en/comments.html)を使用したシャドウノードの例です。
 
 * コンポーネントは次の場所にあるローカルリポジトリに存在します。
 
@@ -145,9 +145,9 @@ Following is an example of a shadow node, using the [Comments component](http://
 
 デフォルトの動作では、関連するサブツリーが読み取りまたは書き込み用に参照されるたびに、発行インスタンスにシャドウノードを設定します。
 
-As an example, suppose the deployment is [MSRP](msrp.md) with a TarMK publish farm.
+例として、デプロイメントがTarMK発行ファームの[MSRP](msrp.md)であるとします。
 
-When a [member](users.md) posts UGC on pub1 (stored in MongoDB), shadow nodes are created in JCR on pub1.
+[メンバー](users.md)がpub1にUGCを投稿する（MongoDBに格納）と、JCRのpub1にシャドウノードが作成されます。
 
 pub2でUGCを初めて読み取るとき、何も設定されていない場合は、デフォルトの動作でシャドウノードが作成されます。
 
