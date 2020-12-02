@@ -30,11 +30,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsとのプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用した使用権限の適用{#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-次のJavaコードの例は、 *Loan.pdfというPDFドキュメントに使用権限を適用します*。 使用権限を付与されたPDFドキュメントは、LoanUsageRights.pdfというPDFファイルとして保存され *ます*。 このPDFドキュメントには、次の使用権限が適用されます。 `enabledComments`、 `enabledFormFillIn`および `enabledDigitalSignatures`。 (See [Applying Usage Rights to PDF Documents](/help/forms/developing/assigning-usage-rights.md).)
+次のJavaコードの例は、*Loan.pdf*&#x200B;というPDFドキュメントに使用権限を適用します。 使用権限を付与されたPDFドキュメントは、*LoanUsageRights.pdf*&#x200B;というPDFファイルとして保存されます。 このPDFドキュメントには、次の使用権限が適用されます。`enabledComments`、`enabledFormFillIn`、`enabledDigitalSignatures`。 (「[PDFドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md)」を参照)。
 
 
 ```java
@@ -144,9 +144,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
   
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}を使用したPDFドキュメントからの使用権限の削除
 
-次のJavaコードの例を使用すると、LoanUsageRights.pdfという名前の権限を付与されたPDFドキュメントから使用権限を削除でき *ます*。 (PDFドキュメントからの使用権限の [削除を参照](/help/forms/developing/assigning-usage-rights.md))。
+次のJavaコードの例を使用すると、*LoanUsageRights.pdf*&#x200B;という名前の使用権限を有効にしたPDFドキュメントから使用権限を削除できます。 (「[PDFドキュメントからの使用権限の削除](/help/forms/developing/assigning-usage-rights.md)」を参照)。
 
 ```java
  /* 
@@ -244,9 +244,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}を使用した秘密鍵証明書情報の取得
 
-次のJavaコードの例を使用すると、LoanUsageRights.pdfという名前の使用権限を有効にしたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取得で *きます*。 (秘密鍵証明書情報の [取得を参照](/help/forms/developing/assigning-usage-rights.md))。
+次のJavaコードの例を使用すると、*LoanUsageRights.pdf*&#x200B;という名前の権限を付与されたPDFドキュメントに対する使用権限の適用に使用される秘密鍵証明書に関する情報を取得できます。 （「[秘密鍵証明書情報の取得](/help/forms/developing/assigning-usage-rights.md)」を参照）。
 
 ```java
  /* 
