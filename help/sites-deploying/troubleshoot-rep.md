@@ -23,7 +23,7 @@ ht-degree: 67%
 
 このページでは、レプリケーションに関する問題のトラブルシューティング方法について説明します。
 
-## 問題 {#problem}
+## 問題  {#problem}
 
 レプリケーション（順方向のレプリケーション）が何らかの原因で失敗する
 
@@ -43,8 +43,8 @@ ht-degree: 67%
 
 **1 つまたは複数のエージェントキューで動きがない場合：**
 
-1. Does the queue show **blocked** status? If so then is the publish instance not running or totally unresponsive? Check the publish instance to see what is wrong with it (i.e. check the logs, and see if there is an OutOfMemory error or some other issue. Then if it is just generally slow then take thread dumps and analyze them.
-1. Does the queue status show **Queue is active - # pending**? Basically the replication job could be stuck in a socket read waiting for the pubilsh instance or dispatcher to respond. This could mean that the publish instance or dispatcher is under high load or stuck in a lock. Take thread dumps from author and publish in this case.
+1. キューに&#x200B;**blocked**&#x200B;の状態が表示されますか。その場合、発行インスタンスは実行されていないか、完全に無応答ですか。発行インスタンスを調べて、問題がないか確認します（例：ログを確認し、OutOfMemoryエラーまたはその他の問題があるかどうかを確認します）。その場合、通常はスレッドダンプを取り、分析します。
+1. キューのステータスに「**キューはアクティブです — #保留中**」と表示されますか。基本的に、レプリケーションジョブは、発行インスタンスまたはディスパッチャーが応答するのを待つ読み取りソケットで停止する可能性があります。これは、発行インスタンスまたはディスパッチャーが高い読み込み下にあるか、ロック状態にあることを意味する可能性があります。この場合、作成者からスレッドダンプを取得し、発行します。
 
    * スレッドダンプアナライザーでオーサーのスレッドダンプを開き、レプリケーションエージェントの sling イベントジョブが socketRead で動かなくなっていないかを確認します。
    * 発行からのスレッドダンプをスレッドダンプアナライザーで開き、発行インスタンスが応答しない原因となっている可能性があるものを分析します。/bin/receiveというPOSTを持つスレッド（作成者からレプリケーションを受け取るスレッド）が名前に含まれているはずです。
@@ -76,7 +76,7 @@ ht-degree: 67%
 すべてのレプリケーションログを、個別のログファイルに DEBUG レベルで追加するように設定すると、場合によっては非常に便利です。次の手順を実行します。
 
 1. https://host:port/system/console/configMgrに移動し、adminとしてログインします。
-1. Find the Apache Sling Logging Logger factory and create an instance by clicking the **+** button on the right of the factory configuration. This will create a new logging logger.
+1. Apache Sling Logging Loggerファクトリを探し、ファクトリ設定の右側の&#x200B;**+**&#x200B;ボタンをクリックしてインスタンスを作成します。これにより、新しいログロガーが作成されます。
 1. 次のように設定します。
 
    * ログレベル：DEBUG
@@ -85,32 +85,32 @@ ht-degree: 67%
 
 1. 問題が何らかの形で Sling イベントまたはジョブに関連する疑いがある場合は、この Java パッケージをカテゴリ org.apache.sling.event に追加することもできます。
 
-## レプリケーションエージェントキューの一時停止  {#pausing-replication-agent-queue}
+## レプリケーションエージェントキューの一時停止   {#pausing-replication-agent-queue}
 
 オーサーシステムの負荷を軽減するために、レプリケーションキューを無効にせずに一時停止することが適している場合があります。現在、これをおこなう唯一の方法は、無効なポートを一時的に設定することです。5.4 以降は、レプリケーションエージェントキューに一時停止ボタンが表示されますが、一部の制限があります。
 
 1. 状態が永続化されません。そのため、サーバーまたはレプリケーションバンドルを再起動すると、実行中の状態に戻ります。
 1. 一時停止は短い期間（他のスレッドによるレプリケーションを含むアクティビティがなくなってから 1 時間）アイドル状態になりますが、長い期間は不可能です。スレッドのアイドル状態を防ぐ機能が Sling にあるからです。基本的には、ジョブキュースレッドが長い期間未使用の状態であるかを確認し、そうである場合はクリーンアップサイクルを開始します。クリーンアップサイクルによってスレッドが停止するので、一時停止されている設定が消失します。ジョブは永続化されるので、新しいスレッドを開始してキューを処理します。このキューには、一時停止設定の詳細情報がありません。そのため、キューが実行状態になります。
 
-## ユーザーのアクティベート時にページ権限がレプリケートされない {#page-permissions-are-not-replicated-on-user-activation}
+## ユーザーのアクティベート時にページ権限がレプリケートされない  {#page-permissions-are-not-replicated-on-user-activation}
 
 ページ権限は、ユーザーに付与されるのではなく、アクセス権が付与されるノードに保存されるので、レプリケートされません。
 
 ページ権限は一般的にオーサーからパブリッシュにレプリケートするべきではなく、デフォルトではレプリケートされません。これは、これらの 2 つの環境でアクセス権が異なる必要があるためです。そのため、パブリッシュではオーサーとは別に ACL を設定することが推奨されます。
 
-## オーサーからパブリッシュに名前空間情報をレプリケーションするときにレプリケーションキューがブロックされました {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
+## オーサーからパブリッシュに名前空間情報をレプリケーションするときにレプリケーションキューがブロックされました  {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
 
-場合によっては、オーサーインスタンスからパブリッシュインスタンスに名前空間情報をレプリケーションしようとすると、レプリケーションキューがブロックされます。This happens because the replication user does not have `jcr:namespaceManagement` privilege. この問題を回避するには、次のことを確認してください。
+場合によっては、オーサーインスタンスからパブリッシュインスタンスに名前空間情報をレプリケーションしようとすると、レプリケーションキューがブロックされます。これは、レプリケーションユーザーに`jcr:namespaceManagement`権限がないためです。 この問題を回避するには、次のことを確認してください。
 
-* The replication user (as configured under the [Transport](/help/sites-deploying/replication.md#replication-agents-configuration-parameters) tab>User) also exists on the Publish instance.
+* レプリケーションユーザー（[「トランスポート](/help/sites-deploying/replication.md#replication-agents-configuration-parameters)」タブ>Userで設定）も発行インスタンスに存在します。
 * ユーザーは、コンテンツがインストールされているパスで読み取りおよび書き込み権限を持っています。
-* The user has `jcr:namespaceManagement` privilege at the repository level. 次のようにして権限を付与できます。
+* ユーザーはリポジトリレベルで`jcr:namespaceManagement`権限を持っています。 次のようにして権限を付与できます。
 
-1. Login to CRX/DE ( `https://localhost:4502/crx/de/index.jsp`) as administrator.
+1. CRX/DE (`https://localhost:4502/crx/de/index.jsp`)に管理者としてログインします。
 1. 「**アクセス制御**」タブをクリックします。
 1. 「**リポジトリ**」を選択します。
 1. 「**エントリを追加**」（プラスアイコン）をクリックします。
 1. ユーザーの名前を入力します。
-1. Select `jcr:namespaceManagement` from the privileges list.
+1. 権限リストから`jcr:namespaceManagement`を選択します。
 1. 「OK」をクリックします。
 
