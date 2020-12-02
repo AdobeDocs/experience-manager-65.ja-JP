@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: ed34f2200f4ff4f407f7b92165685af390f5f7e3
 workflow-type: tm+mt
 source-wordcount: '666'
-ht-degree: 72%
+ht-degree: 97%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 72%
 
 提供されている ContextHub ストアやモジュールのタイプがソリューションの要件を満たさない場合は、新しいタイプを定義できます。
 
-## カスタムストア候補の作成 {#creating-custom-store-candidates}
+## カスタムストア候補の作成  {#creating-custom-store-candidates}
 
 ContextHub ストアは、登録済みのストア候補から作成します。カスタムストアを作成するには、ストア候補を作成して登録する必要があります。
 
@@ -32,18 +32,18 @@ ContextHub ストアは、登録済みのストア候補から作成します。
 contexthub.store.[storeType]
 ```
 
-The `[storeType]` part of the category is the `storeType` with which the store candidate is registered. （「[ContextHub ストア候補の登録](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate)」を参照）。例えば、storeType が `contexthub.mystore` の場合、クライアントライブラリフォルダーのカテゴリは `contexthub.store.contexthub.mystore` でなければなりません。
+カテゴリの `[storeType]` 部分は、ストア候補と一緒に登録されている `storeType` です（「[ContextHub ストア候補の登録](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate)」を参照）。例えば、storeType が `contexthub.mystore` の場合、クライアントライブラリフォルダーのカテゴリは `contexthub.store.contexthub.mystore` でなければなりません。
 
 ### ContextHub ストア候補の作成 {#creating-a-contexthub-store-candidate}
 
-To create a store candidate, you use the [`ContextHub.Utils.inheritance.inherit`](/help/sites-developing/contexthub-api.md#inherit-child-parent) function to extend one of the base stores:
+ストア候補を作成するには、[`ContextHub.Utils.inheritance.inherit`](/help/sites-developing/contexthub-api.md#inherit-child-parent) 関数を使用して、次のいずれかのベースストアを拡張します。
 
 * [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)
 * [`ContextHub.Store.SessionStore`](/help/sites-developing/contexthub-api.md#contexthub-store-sessionstore)
 * [`ContextHub.Store.JSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore)
 * [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
 
-Note that each base store extends the [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) store.
+各ベースストアは、[`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) ストアを拡張したものです。
 
 次の例では、`ContextHub.Store.PersistedStore` ストア候補の最もシンプルな拡張を作成しています。
 
@@ -52,22 +52,22 @@ myStoreCandidate = function(){};
 ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore);
 ```
 
-実際には、カスタムストア候補は追加の関数を定義するか、ストアの初期設定を上書きします。Several [sample store candidates](/help/sites-developing/ch-samplestores.md) are installed in the repository below `/libs/granite/contexthub/components/stores`. これらのサンプルを参考にするには、CRXDE Lite を使用して JavaScript ファイルを開きます。
+実際には、カスタムストア候補は追加の関数を定義するか、ストアの初期設定を上書きします。いくつかの[サンプルストア候補](/help/sites-developing/ch-samplestores.md)が、`/libs/granite/contexthub/components/stores` の下にあるリポジトリにインストールされています。これらのサンプルを参考にするには、CRXDE Lite を使用して JavaScript ファイルを開きます。
 
 ### ContextHub ストア候補の登録 {#registering-a-contexthub-store-candidate}
 
 ストア候補を登録して ContextHub フレームワークに統合し、ストア候補からストアを作成できるようにします。ストア候補を登録するには、[`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) クラスの `ContextHub.Utils.storeCandidates` 関数を使用します。
 
-ストアの候補を登録する場合は、ストアタイプの名前を指定します。 候補からストアを作成するときは、ストアタイプを使用してベースとする候補を識別します。
+ストア候補を登録する際に、ストアタイプの名前を指定します。候補からストアを作成するときは、ストアタイプを使用してベースとする候補を識別します。
 
-ストア候補を登録する際に、優先度を指定します。既登録店舗候補と同じ店舗種別で店舗候補が登録された場合には、優先度の高い候補を用いる。 そのため、新しいストア候補を既存のストア候補に優先させることができます。
+ストア候補を登録する際に、優先度を指定します。既に登録済みのストア候補と同じストアタイプを使用してストア候補を登録した場合、優先度の高い候補が使用されます。そのため、新しいストア候補を既存のストア候補に優先させることができます。
 
 ```
 ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-ほとんどの場合、1つの候補のみが必要で優先度をに設定できますが、 `0`より高度な登録について学ぶことができます [。これにより、少数のストア実装のうちの1つをjavascript条件(](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies)`applies`)と優先度の候補に基づいて選択できます。
+ほとんどの場合、1 つの候補のみが必要で優先度を `0` に設定できますが、[より高度な登録](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies)について学ぶことができます。これにより、少数のストア実装のうちの 1 つを javascript 条件（`applies`）と優先度の候補に基づいて選択できます。
 
 ## ContextHub UI モジュールタイプの作成 {#creating-contexthub-ui-module-types}
 
@@ -75,11 +75,11 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
 
 UI モジュールレンダラーを作成するには、UI モジュールをレンダリングするロジックを格納する `Class` オブジェクトを作成します。少なくとも、このクラスは次のアクションを実行する必要があります。
 
-* Extend the `ContextHub.UI.BaseModuleRenderer` class. このクラスは、すべての UI モジュールレンダラーのベースとなる実装です。`Class` オブジェクトは、このクラスが拡張されていることを示すために使用する `extend` というプロパティを定義します。
+* `ContextHub.UI.BaseModuleRenderer` クラスを拡張します。このクラスは、すべての UI モジュールレンダラーのベースとなる実装です。`Class` オブジェクトは、このクラスが拡張されていることを示すために使用する `extend` というプロパティを定義します。
 
-* デフォルトの設定を指定します。Create a `defaultConfig` property. このプロパティは、[`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI モジュール用に定義されているプロパティと、必要なその他すべてのプロパティを含むオブジェクトです。
+* デフォルトの設定を指定します。`defaultConfig` プロパティを作成します。このプロパティは、[`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI モジュール用に定義されているプロパティと、必要なその他すべてのプロパティを含むオブジェクトです。
 
-The source for `ContextHub.UI.BaseModuleRenderer` is located at /libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js.  レンダラーを登録するには、[`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) クラスの `ContextHub.UI` メソッドを使用します。モジュールタイプの名前を指定する必要があります。管理者がこのレンダラーをベースとして UI モジュールを作成する場合は、この名前を指定します。
+`ContextHub.UI.BaseModuleRenderer`のソースは/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.jsにあります。  レンダラーを登録するには、[`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) クラスの `ContextHub.UI` メソッドを使用します。モジュールタイプの名前を指定する必要があります。管理者がこのレンダラーをベースとして UI モジュールを作成する場合は、この名前を指定します。
 
 レンダラークラスを作成し、自己実行型匿名関数に登録します。次の例は、contexthub.browserinfo UI モジュールのソースコードをベースとしています。この UI モジュールは、`ContextHub.UI.BaseModuleRenderer` クラスのシンプルな拡張です。
 
@@ -108,10 +108,10 @@ The source for `ContextHub.UI.BaseModuleRenderer` is located at /libs/granite/co
 }());
 ```
 
-The javascript file that includes the code that creates and registers the renderer must be included in a [client library folder](/help/sites-developing/clientlibs.md#creating-client-library-folders). フォルダーのカテゴリは、次のパターンに一致しなければなりません。
+レンダラーを作成して登録するコードを含む JavaScript ファイルは、[クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md#creating-client-library-folders)に含める必要があります。フォルダーのカテゴリは、次のパターンに一致しなければなりません。
 
 ```xml
 contexthub.module.[moduleType]
 ```
 
-The `[moduleType]` part of the category is the `moduleType` with which the module renderer is registered. 例えば、`moduleType` が `contexthub.browserinfo` の場合、クライアントライブラリフォルダーのカテゴリは `contexthub.module.contexthub.browserinfo` でなければなりません。
+カテゴリの `[moduleType]` 部分は、モジュールレンダラーの登録に使用されている `moduleType` です。例えば、`moduleType` が `contexthub.browserinfo` の場合、クライアントライブラリフォルダーのカテゴリは `contexthub.module.contexthub.browserinfo` でなければなりません。
