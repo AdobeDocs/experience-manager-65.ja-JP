@@ -19,13 +19,13 @@ ht-degree: 65%
 ---
 
 
-# Adobe Creative Cloud とのフォルダーの共有 {#folder-sharing-with-adobe-creative-cloud}
+# Adobe Creative Cloud とのフォルダーの共有  {#folder-sharing-with-adobe-creative-cloud}
 
 >[!CAUTION]
 >
->AEM／Creative Cloud フォルダー共有機能は廃止されました。Customers are strongly advised to use newer capabilities, like [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) or [AEM desktop app](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html). 詳しくは、[AEM と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
+>AEM／Creative Cloud フォルダー共有機能は廃止されました。お客様には、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)や[AEMデスクトップアプリ](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)など、新しい機能を使用することを強くお勧めします。 詳しくは、[AEM と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
 
-Adobe Experience Manager（AEM）Assets では、アセットを含むフォルダーを Adobe Creative Cloud ユーザーと共有できます。For details on how to configure Adobe Marketing Cloud to let you share assets with Adobe Creative Cloud, see [Configuring Assets-Creative Cloud integration](/help/sites-administering/configure-assets-cc-integration.md).
+Adobe Experience Manager（AEM）Assets では、アセットを含むフォルダーを Adobe Creative Cloud ユーザーと共有できます。Adobe Creative Cloudとアセットを共有できるようにAdobe Marketing Cloudを設定する方法について詳しくは、[アセットCreative Cloud統合の設定](/help/sites-administering/configure-assets-cc-integration.md)を参照してください。
 
 1. アセットコンソールで、Creative Cloud と共有するフォルダーを選択します。
 
@@ -35,11 +35,11 @@ Adobe Experience Manager（AEM）Assets では、アセットを含むフォル�
 
    ![](assets/chlimage_1-140.png)
 
-1. From the list, select the **Adobe Creative Cloud** option.
+1. リストから&#x200B;**Adobe Creative Cloud**&#x200B;オプションを選択します。
 
    ![](assets/chlimage_1-141.png)
 
-1. In the **Creative Cloud Sharing** page, add the user to share the folder with and then click **Save**.
+1. **Creative Cloud共有**&#x200B;ページで、フォルダーを共有するユーザーを追加し、**保存**&#x200B;をクリックします。
 
    ![](assets/chlimage_1-142.png)
 
