@@ -27,11 +27,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したバーコードフォームデータのデコード {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}を使用したバーコードフォームデータのデコード
 
-次のJavaコードは、Loan.pdfとして保存されたPDFフォーム内のフォームデータをデコードします。 デコードされたデータは、extractedData.xmlというXMLファイルとして保存されます。 次のコードの例では、1つの `org.w3c.dom.Document` オブジェクトを1つの `com.adobe.idp.Document` オブジェクトに変換します。 (「Decoding Barcoded Form Data [」を参照](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data))。
+次のJavaコードは、Loan.pdfとして保存されたPDFフォーム内のフォームデータをデコードします。 デコードされたデータは、extractedData.xmlというXMLファイルとして保存されます。 次のコードの例では、`org.w3c.dom.Document`オブジェクトを`com.adobe.idp.Document`オブジェクトに変換します。 （「[Barcoded Form Dataのデコード](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)」を参照）。
 
 ```java
  /*
@@ -220,5 +220,5 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->同じアプリケーションロジック内で `org.w3c.dom.Document` オブジェクトと `com.adobe.idp.Document` オブジェクトの両方を使用する場合は、両方のオブジェクトを完全に修飾することをお勧めします。
+>同じアプリケーションロジックで`org.w3c.dom.Document`オブジェクトと`com.adobe.idp.Document`オブジェクトの両方を使用する場合は、両方のオブジェクトを完全に修飾することをお勧めします。
 
