@@ -18,12 +18,12 @@ ht-degree: 74%
 ---
 
 
-# Web アプリケーションでの AEM Forms Workspace コンポーネントの統合 {#integrating-aem-forms-workspace-components-in-web-applications}
+# Web アプリケーションでの AEM Forms Workspace コンポーネントの統合  {#integrating-aem-forms-workspace-components-in-web-applications}
 
-AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusable-components.md) を固有の Web アプリケーションで使用することができます。以下のサンプルの実装は、CRX™ インスタンスにインストールされた AEM Forms Workspace Dev パッケージのコンポーネントを使用して Web アプリケーションを作成します。下記のソリューションをカスタマイズして、個々のニーズに合わせます。The sample implementation reuses `UserInfo`, `FilterList`, and `TaskList`components inside a web portal.
+AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusable-components.md) を固有の Web アプリケーションで使用することができます。以下のサンプルの実装は、CRX™ インスタンスにインストールされた AEM Forms Workspace Dev パッケージのコンポーネントを使用して Web アプリケーションを作成します。下記のソリューションをカスタマイズして、個々のニーズに合わせます。サンプルの実装は、Webポータル内の`UserInfo`、`FilterList`および`TaskList`コンポーネントを再利用します。
 
-1. でCRXDE Lite環境にログインし `https://'[server]:[port]'/lc/crx/de/`ます。 AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
-1. パスを作成し `/apps/sampleApplication/wscomponents`ます。
+1. `https://'[server]:[port]'/lc/crx/de/`のCRXDE Lite環境にログインします。 AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
+1. パス`/apps/sampleApplication/wscomponents`を作成します。
 1. css、images、js/libs、js/runtime、および js/registry.js を
 
    * `/libs/ws` から
@@ -43,9 +43,9 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
        });
    ```
 
-1. Create a node under /content by name `sampleApplication` and type `nt:unstructured`. In the properties of this node add `sling:resourceType` of type String and value `sampleApplication`. このノードのアクセス制御リストで、jcr:read 権限を許可する `PERM_WORKSPACE_USER` にエントリを追加します。Also, in the Access Control List of `/apps/sampleApplication` add an entry for `PERM_WORKSPACE_USER` allowing jcr:read privileges.
-1. のパスをからに `/apps/sampleApplication/wscomponents/js/registry.js` 更新し、テンプレート値 `/lc/libs/ws/` に `/lc/apps/sampleApplication/wscomponents/` 対して適用。
-1. In your portal home page JSP file at `/apps/sampleApplication/GET.jsp`, add the following code to include the required components inside the portal.
+1. /contentの下に名前`sampleApplication`でノードを作成し、`nt:unstructured`と入力します。 このノードのプロパティで、String型の`sling:resourceType`と値`sampleApplication`を追加します。 このノードのアクセス制御リストで、jcr:read 権限を許可する `PERM_WORKSPACE_USER` にエントリを追加します。また、`/apps/sampleApplication`のアクセス制御リストで、jcr:read権限を許可する`PERM_WORKSPACE_USER`のエントリを追加します。
+1. `/apps/sampleApplication/wscomponents/js/registry.js`で、テンプレート値のパスを`/lc/libs/ws/`から`/lc/apps/sampleApplication/wscomponents/`に更新します。
+1. `/apps/sampleApplication/GET.jsp`にあるポータルホームページJSPファイルで、次のコードを追加してポータル内の必要なコンポーネントを含めます。
 
    ```jsp
    <script data-main="/lc/apps/sampleApplication/wscomponents/js/demomain" src="/lc/apps/sampleApplication/wscomponents/js/libs/require/require.js"></script>
@@ -82,7 +82,7 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
    });
    ```
 
-1. ポータルの CSS を修正し、ポータル上の必要なコンポーネントのレイアウト、配置、スタイルを設定します。たとえば、このポータルの背景色を黒色に保持して userInfo コンポーネントも同様に表示するとします。You can do this by changing background color in `/apps/sampleApplication/wscomponents/css/style.css` as follows:
+1. ポータルの CSS を修正し、ポータル上の必要なコンポーネントのレイアウト、配置、スタイルを設定します。たとえば、このポータルの背景色を黒色に保持して userInfo コンポーネントも同様に表示するとします。これを行うには、`/apps/sampleApplication/wscomponents/css/style.css`の背景色を次のように変更します。
 
    ```css
    body {
