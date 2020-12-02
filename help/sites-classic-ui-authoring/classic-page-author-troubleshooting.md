@@ -71,11 +71,11 @@ ht-degree: 91%
 
 * **問題:**
 
-   * When using the **Find &amp; Replace** option it can happen that not all instances of the `find` term are replaced on a page.
+   * **検索と置換**&#x200B;オプションを使用すると、`find`キーワードの一部のインスタンスがページ上で置き換えられない場合があります。
 
 * **理由**:
 
-   * The capability of **Find &amp; Replace** depends on how the content is saved, and whether it can be searched upon. 例えば、ブログテキストは `jcr:text` プロパティに格納されますが、このプロパティは検索対象として設定されません。検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
+   * **検索と置換**&#x200B;の機能は、コンテンツの保存方法と検索可能かどうかによって異なります。 例えば、ブログテキストは `jcr:text` プロパティに格納されますが、このプロパティは検索対象として設定されません。検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
 
       * `jcr:title`
       * `jcr:description`
