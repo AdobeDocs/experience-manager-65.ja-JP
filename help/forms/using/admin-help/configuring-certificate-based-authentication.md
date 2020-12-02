@@ -24,11 +24,11 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
 証明書ベースの認証を使用するには、信頼する認証局（CA）証明書を Trust Store に読み込み、証明書のマッピングを作成します。
 
-## CA 証明書の読み込み {#import-the-ca-certificate}
+## CA 証明書の読み込み  {#import-the-ca-certificate}
 
 証明書を読み込むときに、「証明書認証で信頼」と「ID で信頼」のオプションと共に、必要な他のオプションを選択します。証明書の読み込みについて詳しくは、[証明書の管理](/help/forms/using/admin-help/certificates.md#managing-certificates)を参照してください。
 
-## 証明書のマッピングの設定 {#configuring-certificate-mapping}
+## 証明書のマッピングの設定  {#configuring-certificate-mapping}
 
 ユーザーに対して証明書ベースの認証を有効にするには、証明書のマッピングを作成します。「*証明書のマッピング*」では、証明書の属性とドメイン内のユーザーの属性の間のマップが定義されます。複数の証明書を同じドメインにマップすることができます。
 
@@ -51,7 +51,7 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
    証明書の属性の内容が User Management データベース内のユーザーの属性の内容と異なる場合、Java の正規表現（regex）を使用して、2 つの属性をマッチさせることができます。例えば、証明書の共通名が「*Alex Pink (Authentication)*」や「*Alex Pink (Signing)*」などで、User Management データベースの共通名が「*Alex Pink*」である場合、regex を使用して、証明書の属性の必要な部分（この例では「*Alex Pink*」）を抽出できます。指定する正規表現は、Java regex 仕様に準拠している必要があります。
 
-   「カスタムオーダー」ボックスでグループの順序を指定すると、正規表現を変換できます。The custom order is used with the `java.util.regex.Matcher.replaceAll()` method. 結果の動作はこのメソッドの動作に対応するため、それに従って入力文字列（カスタムオーダー）を指定する必要があります。
+   「カスタムオーダー」ボックスでグループの順序を指定すると、正規表現を変換できます。カスタム注文は`java.util.regex.Matcher.replaceAll()`メソッドと共に使用されます。 結果の動作はこのメソッドの動作に対応するため、それに従って入力文字列（カスタムオーダー）を指定する必要があります。
 
    regex をテストするには、「テストパラメーター」ボックスに値を入力して、「テスト」をクリックします。
 
