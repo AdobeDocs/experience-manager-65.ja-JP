@@ -26,7 +26,7 @@ ht-degree: 89%
 
 コンテンツ管理アクションは、アプリケーション内で記事を作成および管理するのに役立つ構築ブロックです。アプリケーション内の記事に対して、以下のアクションが実行されます。
 
-## 記事の概要 {#articles-overview}
+## 記事の概要  {#articles-overview}
 
 記事は、情報を伝えるためのアートと共に、テキストを表します。
 
@@ -43,7 +43,7 @@ ht-degree: 89%
 
 
 
-## 記事の作成 {#creating-an-article}
+## 記事の作成  {#creating-an-article}
 
 記事を作成する一般的なワークフローは以下のとおりです。
 
@@ -55,7 +55,7 @@ ht-degree: 89%
 1. 準備ができたら、「**作成**」をクリックします。
 1. **記事を管理**&#x200B;タイルに新しい記事が表示されます。
 
-## 新しい記事の読み込み {#importing-a-new-article}
+## 新しい記事の読み込み  {#importing-a-new-article}
 
 既存の Mobile On-Demand コンテンツを Mobile On-Demand から AEM にダウンロードする（読み込む）ことができます。これにより、ローカルのコンテンツを編集および表示できます。
 
@@ -68,7 +68,7 @@ ht-degree: 89%
 1. Mobileで、カタログからMobile On-Demand Appを選択します。
 1. **記事を管理**&#x200B;タイルの右上隅にある下矢印をクリックし、「記事を読み込む」を選択します。
 1. ダイアログで「**記事を読み込む**」をクリックし、「閉じる」をクリックします。
-1. Your Mobile On-Demand articles now appear in the **Manage Articles** tile.
+1. これで、Mobile On-Demand記事が&#x200B;**記事を管理**&#x200B;タイルに表示されます。
 
 >[!CAUTION]
 >
@@ -91,14 +91,14 @@ ht-degree: 89%
 1. リスト表示で、ハイライトされた記事をクリックし、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、記事の内容（原稿、画像、テキストなど）をドラッグします。
 
-### 記事内のメタデータの表示および編集 {#viewing-and-editing-the-metadata-within-an-article}
+### 記事内のメタデータの表示および編集  {#viewing-and-editing-the-metadata-within-an-article}
 
 記事やバナーのようなコンテンツには、タイトル、説明、画像などの多数のプロパティがあります。このようなプロパティを表示および変更するには、この操作を使用します。オプションで、保存時に Mobile On-Demand に変更内容をアップロードすることもできます。
 
 記事を表示／編集する一般的なワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. Choose an article from the **Manage Articles** tile.
+1. **記事の管理**&#x200B;タイルから記事を選択します。
 
 1. アクションバーから「**プロパティを表示**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
@@ -111,8 +111,8 @@ ht-degree: 89%
 
 記事をアップロードする一般的なワークフローは以下のとおりです。
 
-1. From **Mobile**, choose your Mobile On-Demand app from the catalog.
-1. In the **Manage Articles** tile, select an article for upload to Mobile On-Demand.
+1. **Mobile**&#x200B;から、カタログからMobile On-Demandアプリを選択します。
+1. **記事を管理**&#x200B;タイルで、Mobile On-Demandにアップロードする記事を選択します。
 1. 必要に応じて、リスト表示からさらに記事を追加します。
 1. アクションバーから「**アップロード**」を選択し、ダイアログで「アップロード」をクリックします。
 1. 記事が Mobile On-Demand にアップロードされます。
