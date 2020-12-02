@@ -51,7 +51,7 @@ AEM のアセットの詳細ページから、インタラクティブ 3D ビュ
 **AEM で 3D アセットをプレビューするには**
 
 1. 3D アセットが AEM にアップロードされていることを確認します。詳しくは、[3D プレビューでサポートされるファイル形式](#supported-3d-previewing-assets)と[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
-1. From AEM, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets > Files.]**
+1. AEMの&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、**[!UICONTROL アセット/ファイルをタップします。]**
 
    ![ナビゲーションページ](/help/assets/assets-dm/navigation-assets.png)
 
@@ -80,4 +80,4 @@ AEM のアセットの詳細ページから、インタラクティブ 3D ビュ
    * **リセット** - ページの右下隅付近にあるリセットアイコンをタップして、視野のターゲットポイントを 3D アセットの中心に戻します。リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。
    * **全画面表示モード** - 全画面表示モードに入るには、ページの右下隅にある全画面表示アイコンをタップします。
 
-1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close.]**
+1. 完了したら、ページ右上隅近くにある「**[!UICONTROL 閉じる」をタップします。]**
