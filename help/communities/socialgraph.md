@@ -22,25 +22,25 @@ ht-degree: 23%
 
 ## 概要 {#introduction}
 
-The ability for a community member to follow [activities](activities.md) as well as be followed is established through two components: `Follow` and `Following`.
+コミュニティのメンバーが[アクティビティ](activities.md)に従う能力は、次の2つの要素を通して確立されます。`Follow`と`Following`。
 
-The `Follow` component must be associated with another resource, and this association is already established for community members and features.
+`Follow`コンポーネントは別のリソースと関連付ける必要があり、この関連付けはコミュニティのメンバーと機能に対して既に確立されています。
 
-The `Following` component simply lists the members that are either following the current member or are being followed by the current member. This social graph of the relationships between members is included in the user profile established for a [community site](overview.md#communitiessites).
+`Following`コンポーネントは、現在のメンバーに続くメンバー、または現在のメンバーの後に続くメンバーをリストするだけです。 会員間の関係のこのソーシャルグラフは、[コミュニティサイト](overview.md#communitiessites)に対して確立されたユーザプロファイルに含まれる。
 
 ## フォロー中コンポーネントをページに追加 {#adding-following-to-a-page}
 
-作成者モードでページにコンポー `Following` ネントを追加する場合は、コンポーネントを見つけ `Communities / Following` て、ソーシャルグラフを表示するページ上の位置にドラッグします。
+作成者モードでページに`Following`コンポーネントを追加する場合は、コンポーネント`Communities / Following`を見つけ、ソーシャルグラフを表示するページ上の場所にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](essentials-socialgraph.md#essentials-for-client-side) 、次のようにコンポー `Following` ネントが表示されます。
+[必要なクライアント側ライブラリ](essentials-socialgraph.md#essentials-for-client-side)が含まれる場合、`Following`コンポーネントは次のように表示されます。
 
 ![次の](assets/following.png)
 
 ## フォロー中コンポーネントの設定 {#configuring-following}
 
-Currently, it is necessary to set the property to determine whether the component displays the `follows` relationship, or the `following` relationship.
+現在、コンポーネントに`follows`関係を表示するか、`following`関係を表示するかを決定するために、プロパティを設定する必要があります。
 
 ## 追加情報 {#additional-information}
 
