@@ -178,13 +178,13 @@ ht-degree: 79%
 
    回答:
 
-   * xfa.connectionSet スクリプトではサポートが制限されています。connectionSetの場合、Webサービスのサーバー側呼び出しのみがサポートされます。 For detailed information, see [Scripting Support](/help/forms/using/scripting-support.md).
+   * xfa.connectionSet スクリプトではサポートが制限されています。connectionSetの場合、Webサービスのサーバー側呼び出しのみがサポートされます。 詳しくは、「[スクリプティングのサポート](/help/forms/using/scripting-support.md)」を参照してください。
    * クライアント側スクリプトでは $record および $data のサポートはありません。 ただし、スクリプトがformReady、layoutReadyブロックで記述されている場合は、これらのイベントがサーバー側で実行されるので、スクリプトは引き続き動作します。
    * Draw Text（またはフィールドでは Caption テキスト）の変更などの Xfa Draw 要素固有のスクリプトはサポートされていません。
 
 1. formCalc の使用に関して制限事項はありますか？
 
-   回答：formCalc スクリプトのサブセットのみが現在実装されています。For detailed information, see [Scripting Support](/help/forms/using/scripting-support.md).
+   回答：formCalc スクリプトのサブセットのみが現在実装されています。詳しくは、「[スクリプティングのサポート](/help/forms/using/scripting-support.md)」を参照してください。
 
 1. 推奨される命名規則はありますか？また、避けるべき予約済みのキーワードはありますか？
 
@@ -199,8 +199,8 @@ ht-degree: 79%
    >
    >デフォルトでは、フィールドのフローティングは有効になっていません。Forms Designer を使用して、フィールドのフローティングプロパティを設定できます。
 
-   1. Open CRXde lite and navigate to the `/content/xfaforms/profiles/default` node.
-   1. Add a property `mfDataDependentFloatingField`of type String and set the value of the property to `true`.
+   1. CRXde liteを開き、`/content/xfaforms/profiles/default`ノードに移動します。
+   1. 追加型がStringのプロパティ`mfDataDependentFloatingField`で、プロパティの値を`true`に設定します。
    1. 「**すべて保存**」をクリックします。これで、更新されたレンダリングプロファイルを使用して、HTMLFormsに対してフローティングフィールドが有効になりました。
 
       >[!NOTE]
