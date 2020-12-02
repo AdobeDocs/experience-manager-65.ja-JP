@@ -1,6 +1,6 @@
 ---
 title: Apache Tikaを使用してアセットのMIMEタイプを検出する
-description: Enable Apache Tika to help [!DNL Experience Manager Assets] detect the MIME type of assets from the content stream during the upload operation instead of the file extension.
+description: Apache Tikaを有効にすると、アップロード操作中にファイル拡張子ではなく、コンテンツストリームからアセットのMIMEタイプを [!DNL Experience Manager Assets] 検出できます。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
@@ -11,23 +11,23 @@ ht-degree: 11%
 ---
 
 
-# 次を使用してアセットのMIMEタイプを検出する [!DNL Apache Tika] {#detecting-mime-type-of-assets-using-apache-tika}
+# [!DNL Apache Tika] {#detecting-mime-type-of-assets-using-apache-tika}を使用してアセットのMIMEタイプを検出する
 
-通常、は、ファイルの拡張子からアップロードするアセットのMIMEタイプを [!DNL Adobe Experience Manager Assets] 検出します。
+通常、[!DNL Adobe Experience Manager Assets]は、ファイルの拡張子からアップロードするアセットのMIMEタイプを検出します。
 
-If you use [!DNL Apache Tika] to upload assets, [!DNL Assets] detects their MIME type from the content stream during the upload operation instead of the file extension.
+[!DNL Apache Tika]を使用してアセットをアップロードする場合、[!DNL Assets]は、アップロード中に、ファイル拡張子ではなく、コンテンツストリームからMIMEタイプを検出します。
 
-この機能はデフォルトでは無効になっています。To enable the feature, configure the **[!UICONTROL Day CQ DAM Mime Type]** service from [!UICONTROL Configuration Manager].
+この機能はデフォルトでは無効になっています。この機能を有効にするには、[!UICONTROL Configuration Manager]から&#x200B;**[!UICONTROL Day CQ DAM MIME Type]**&#x200B;サービスを設定します。
 
 >[!NOTE]
 >
->MIME type detection using the [!DNL Apache Tika] library is a resource-intensive operation.
+>[!DNL Apache Tika]ライブラリを使用したMIMEタイプの検出は、リソースを大量に消費する操作です。
 
-1. Configuration Manager Webコンソールを開くには、にアクセスし `https://[aem_server]:[port]/system/console/configMgr`ます。
+1. Configuration Manager Webコンソールを開くには、`https://[aem_server]:[port]/system/console/configMgr`にアクセスします。
 
-1. サービスのリストから、 **[!UICONTROL Day CQ DAM Mime Type Service]** を探し、「 **[!UICONTROL 編集]**」をクリックします。
+1. サービスのリストから、**[!UICONTROL Day CQ DAM MIME Type Service]**&#x200B;を探し、**[!UICONTROL Edit]**&#x200B;をクリックします。
 
-1. Select the **[!UICONTROL Detect MIME from content]** option to enable the parsing of uploaded assets to determine their MIME type while ignoring file extensions. デフォルトでは、このオプションはオフになっています。
+1. 「**[!UICONTROL コンテンツ]**&#x200B;からMIMEを検出する」オプションを選択すると、アップロードされたアセットの解析を有効にして、ファイル拡張子を無視してMIMEタイプを決定できます。 デフォルトでは、このオプションはオフになっています。
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
