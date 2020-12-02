@@ -23,9 +23,9 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->ClientContext は、ContextHub に変更されました。For more details, see the related [configuration]ch-configuring.md) and [developer](/help/sites-developing/contexthub.md) documenatation.
+>ClientContext は、ContextHub に変更されました。詳しくは、関連する[設定]ch-configuring.md)および[開発者](/help/sites-developing/contexthub.md)のドキュメントを参照してください。
 
-Client Contextは、現在のページと訪問者に関する特定の情報を提供するメカニズムです。 It can be opened using **Ctrl-Alt-c** (windows) or **control-option-c** (Mac):
+Client Contextは、現在のページと訪問者に関する特定の情報を提供するメカニズムです。 **Ctrl-Alt-c**(windows)または&#x200B;**control-option-c**(Mac)を使用して開くことができます。
 
 ![](assets/clientcontext_alisonparker.png)
 
@@ -51,35 +51,35 @@ Client Contextは、現在のページと訪問者に関する特定の情報を
 
 ClientContext には、（[「編集」を使用して選択した内容に応じて](#adding-a-property-component)）次のプロパティが表示されます。
 
-**サーファー情報** ：次のクライアント側情報を示します。
+**サーファー** 情報：次のクライアント側情報を表示します。
 
-* IPア **ドレス**
-* **検索エンジンの参照に使用されるキーワード** 。
-* 使用 **中のブラウザ**
-* 使用されている **OS** （オペレーティングシステム）
-* 画面の **解像度**
-* マウス **のX** 位置
-* マウス **のY** 位置
+* **IPアドレス**
+* **検索エンジンの参照に使用される** キーワード
+* 使用中の&#x200B;**ブラウザ**
+* 使用中の&#x200B;**OS** （オペレーティングシステム）
+* 画面&#x200B;**解像度**
+* **マウスのX**&#x200B;位置
+* **マウスのY**&#x200B;位置
 
-**アクティビティストリーム** ：様々なプラットフォームにおけるユーザーのソーシャルアクティビティに関する情報を提供します。例えば、AEMフォーラム、ブログ、レーティングなど。
+**アクティビティ** ストリーム様々なプラットフォームにおけるユーザーのソーシャルアクティビティに関する情報を提供します。例えば、AEMフォーラム、ブログ、レーティングなど。
 
-**キャンペーン** ：作成者がキャンペーンの特定のエクスペリエンスをシミュレートできます。 このコンポーネントは通常のキャンペーンの結果とエクスペリエンスの選択をオーバーライドし、各種配列のテストを有効にします。
+**** キャンペーン作成者は、キャンペーンの特定のエクスペリエンスをシミュレートできます。このコンポーネントは通常のキャンペーンの結果とエクスペリエンスの選択をオーバーライドし、各種配列のテストを有効にします。
 
 キャンペーンの解決は、通常、キャンペーンのpriorityプロパティに基づきます。 エクスペリエンスは通常、分類に基づいて選択されます。
 
-**買い物かご** ：商品エントリ（タイトル、数量、priceFormattedなど）、解決されたプロモーション（タイトル、メッセージなど）を含む買い物かご情報を バウチャー（コード、説明など）などの買い物かごの情報を示します。
+**買い物かご** 商品エントリ（タイトル、数量、priceFormattedなど）、解決されたプロモーション（タイトル、メッセージなど）を含む買い物かご情報を表示します。バウチャー（コード、説明など）などの買い物かごの情報を示します。
 
 買い物かごセッションストアは、ClientContextCartServlet を使用して（分類の変更に基づく）解決済みのプロモーションの変更をサーバーに通知します。
 
-**汎用ストア** ：ストアのコンテンツを表示する汎用コンポーネントです。 汎用ストアのプロパティコンポーネントの下位レベルのバージョンです。
+**汎用** ストアは、ストアのコンテンツを表示する汎用コンポーネントです。汎用ストアのプロパティコンポーネントの下位レベルのバージョンです。
 
 カスタマイズされた方法でデータを表示する JS レンダラーで汎用ストアを設定する必要があります。
 
-**汎用ストアプロパティ** ：ストアのコンテンツを表示する汎用コンポーネントです。 汎用ストアのプロパティコンポーネントの上位レベルのバージョンです。
+**汎用ストア** プロパティは、ストアのコンテンツを表示する汎用コンポーネントです。汎用ストアのプロパティコンポーネントの上位レベルのバージョンです。
 
 汎用ストアのプロパティコンポーネントには、設定されたプロパティを（サムネールと共に）リストするデフォルトのレンダラーが含まれます。
 
-**位置情報** ：クライアントの緯度と経度を表示します。 HTML5 Geolocation API を使用して現在の位置についてブラウザーでクエリを実行します。その結果、ポップアップが訪問者に表示されます。ブラウザは、場所の共有に同意するかどうかを尋ねます。
+**地** 域：クライアントの緯度と経度を表示します。HTML5 Geolocation API を使用して現在の位置についてブラウザーでクエリを実行します。その結果、ポップアップが訪問者に表示されます。ブラウザは、場所の共有に同意するかどうかを尋ねます。
 
 コンテキストクラウドで表示されると、コンポーネントは Google API を使用してマップをサムネールとして表示します。コンポーネントは Google API の[使用制限](https://developers.google.com/maps/documentation/staticmaps/intro#Limits)に従います。
 
@@ -87,9 +87,9 @@ ClientContext には、（[「編集」を使用して選択した内容に応�
 >
 >AEM 6.1 では、位置情報ストアはリバースジオコーディング機能を提供していません。このため、位置情報ストアは町名や国コードなどの現在の位置に関する情報を取得しません。このストアデータを使用するセグメントは正しく機能しません。位置情報ストアには位置の緯度と経度のみが含まれます。
 
-**JSONP Store** ：インストールに依存するコンテンツを表示するコンポーネントです。
+**JSONP** Storeインストールに依存するコンテンツを表示するコンポーネント。
 
-JSONP 標準は JSON を補完し、同一生成元ポリシーを回避します（Web アプリケーションが別のドメインにあるサーバーと通信できないようにします）。It consists in wrapping the JSON object in a function call in order to be able load it as a `<script>` from the other domain (which is an allowed exception to the same origin policy).
+JSONP 標準は JSON を補完し、同一生成元ポリシーを回避します（Web アプリケーションが別のドメインにあるサーバーと通信できないようにします）。JSONオブジェクトを他の接触チャネルから`<script>`として読み込めるように、関数の呼び出しでラップすることで構成されます（同じドメインポリシーで許可されている例外）。
 
   JSONP ストアは他のストアと同じですが、別のドメインからの情報を読み込むのに現在のドメインにその情報のプロキシを必要としない点が異なります。[JSONP を介して ClientContext にデータを保存](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp)する例を参照してください。
 
@@ -97,13 +97,13 @@ JSONP 標準は JSON を補完し、同一生成元ポリシーを回避しま�
 >
 >JSONP ストアは cookie に情報をキャッシュしませんが、ページが読み込まれるたびにそのデータを取得します。
 
-**プロファイルデータ** ：ユーザープロファイルで収集された情報を表示します。 例えば、性別、年齢、電子メールアドレスなどです。
+**プロファイル** データユーザプロファイルで収集された情報を表示します。例えば、性別、年齢、電子メールアドレスなどです。
 
-**解決済みセグメント** ：現在解決されているセグメントを表示します（多くの場合、クライアントコンテキストに表示される他の情報に依存しています）。 これは、キャンペーンを設定するときに参考となります。
+**解決された** セグメント現在解決されている（多くの場合、クライアントコンテキストに表示される他の情報に依存している）セグメントを表示します。これは、キャンペーンを設定するときに参考となります。
 
 例えば、マウスが現在ウィンドウの左または右の部分の上にあるかどうかなどです。このセグメントは主にテストに使用されます。変更はすぐに確認できます。
 
-**ソーシャルグラフ** ：ユーザーの友達とフォロワーのソーシャルグラフを表示します。
+**ソーシャル** グラフユーザーの友達とフォロワーのソーシャルグラフを表示します。
 
 >[!NOTE]
 >
@@ -111,14 +111,14 @@ JSONP 標準は JSON を補完し、同一生成元ポリシーを回避しま�
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` => friendsプロパティ
 
-**Tag Cloud** ：現在のページに設定されたタグと、サイトの閲覧中に収集されたタグを表示します。 タグの上にマウスを移動すると、現在のユーザーがその特定のタグを保持しているページにアクセスした回数が表示されます。
+**Tag** Cloud現在のページに設定されたタグと、サイトの閲覧中に収集されたタグを表示します。タグの上にマウスを移動すると、現在のユーザーがその特定のタグを保持しているページにアクセスした回数が表示されます。
 
 >[!NOTE]
 訪問したページに表示される DAM アセットに設定されているタグはカウントされません。
 
-**Technographics Store** このコンポーネントは、インストール環境に応じて異なります。
+**テクノグラフィックス** ストアこのコンポーネントは、インストール環境に応じて異なります。
 
-**ViewedProducts** ：買い物客が閲覧した商品を追跡します。 最近閲覧した商品や、最近閲覧した商品のうち買い物かごに入っていない商品でクエリを実行できます。
+**ViewedProducts買い物客が** 閲覧した商品を追跡します。最近閲覧した商品や、最近閲覧した商品のうち買い物かごに入っていない商品でクエリを実行できます。
 
 このセッションストアにデフォルトの ClientContext コンポーネントはありません。
 
@@ -143,7 +143,7 @@ ClientContext では、次の詳細をインタラクティブに変更できま
 
 完了したら、[プロファイルをリセット](#resetting-the-profile-to-the-current-user)できます。
 
-#### プロファイルの読み込みアイコンを使用した新しいユーザープロファイルの読み込み {#loading-a-new-visitor-profile-with-the-load-profile-icon}
+#### プロファイルの読み込みアイコンを使用した新しいユーザープロファイルの読み込み  {#loading-a-new-visitor-profile-with-the-load-profile-icon}
 
 1. 次のプロファイルの読み込みアイコンをクリックします。
 
@@ -179,7 +179,7 @@ ClientContext では、次の詳細をインタラクティブに変更できま
 
 1. 読み込むブラウザープラットフォームをクリックします。詳細が読み込まれたら、セレクター以外の場所をクリックしてセレクターを閉じます。
 
-### 位置情報の変更 {#changing-the-geolocation}
+### 位置情報の変更  {#changing-the-geolocation}
 
 1. 位置情報アイコンをダブルクリックします。展開されたマップが開きます。ここでマーカーを新しい位置にドラッグできます。
 
@@ -187,7 +187,7 @@ ClientContext では、次の詳細をインタラクティブに変更できま
 
 1. マップ以外の場所をクリックしてマップを閉じます。
 
-### タグ選択の変更 {#changing-the-tag-selection}
+### タグ選択の変更  {#changing-the-tag-selection}
 
 1. ClientContext のタグクラウドセクションをダブルクリックします。ダイアログが開きます。ここでタグを選択できます。
 
@@ -195,19 +195,19 @@ ClientContext では、次の詳細をインタラクティブに変更できま
 
 1. 「OK」をクリックして ClientContext に読み込みます。
 
-## ClientContext の編集 {#editing-the-client-context}
+## ClientContext の編集  {#editing-the-client-context}
 
 ClientContext の編集を使用して、特定のプロパティの値を設定（またはリセット）したり、新しいプロパティの追加や不要になったプロパティの削除をおこなえます。
 
-### プロパティの詳細の編集 {#editing-property-details}
+### プロパティの詳細の編集  {#editing-property-details}
 
-ClientContext を編集して、特定のプロパティの値を設定（またはリセット）できます。This allows you to test specific scenarios (particularly useful for [segmentation](/help/sites-administering/campaign-segmentation.md) and [campaigns](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)).
+ClientContext を編集して、特定のプロパティの値を設定（またはリセット）できます。これにより、特定のシナリオをテストできます(特に、[セグメント化](/help/sites-administering/campaign-segmentation.md)と[キャンペーン](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)で役立ちます)。
 
 ![](assets/clientcontext_alisonparker_edit.png)
 
 ### プロパティコンポーネントの追加 {#adding-a-property-component}
 
-**ClientContextデザインページを開いた後に、使用可能なコンポーネントを使用して完全に新しいプロパティを作成することもできます**(コンポーネントは、サイドキックと **Insert New Component** (新しいコンポーネントを **挿入****** )ダイアログの両方で重複がクリックした後に開きます)。
+**ClientContextデザインページ**&#x200B;を開いた後、使用可能なコンポーネントを使用して追加、****&#x200B;完全に新しいプロパティを&lt;a2/>&lt;a3/>できます（コンポーネントは、サイドキックと&#x200B;**Insert New Component**&#x200B;ダイアログの両方に表示されます）。ボックス):****
 
 ![](assets/clientcontext_alisonparker_new.png)
 
@@ -215,17 +215,17 @@ ClientContext を編集して、特定のプロパティの値を設定（また
 
 **ClientContext デザインページ**&#x200B;を開いたら、不要になったプロパティを&#x200B;**削除**&#x200B;できます。このようなプロパティには、初期設定のまますぐに使用できるプロパティがあります。「**リセット**」を使用すると、プロパティが削除された場合に元に戻すことができます。
 
-## JSONP を介した ClientContext へのデータの保存 {#storing-data-in-client-context-via-jsonp}
+## JSONP を介した ClientContext へのデータの保存  {#storing-data-in-client-context-via-jsonp}
 
 この例に従って JSONP ストアコンテキストストアコンポーネントを使用して、外部データを ClientContext に追加します。次に、そのデータからの情報に基づいてセグメントを作成します。この例では、WIPmania.com が提供する JSONP サービスを使用します。このサービスは、Web クライアントの IP アドレスに基づいて位置情報を返します。
 
 この例は、Geometrixx Outdoors のサンプル Web サイトを使用して ClientContext にアクセスし、作成したセグメントをテストします。ClientContext が有効になっているページであれば、別の Web サイトを使用できます（[ページへの ClientContext の追加](/help/sites-developing/client-context.md#adding-client-context-to-a-page)を参照）。
 
-### JSONP ストアコンポーネントの追加 {#add-the-jsonp-store-component}
+### JSONP ストアコンポーネントの追加  {#add-the-jsonp-store-component}
 
 JSONP ストアコンポーネントを ClientContext に追加して、Web クライアントの位置情報の取得と保存に使用できます。
 
-1. AEM オーサーインスタンスの Geometrixx Outdoors サイトの英語のホームページを開きます([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
+1. AEM オーサーインスタンスの Geometrixx Outdoors サイトの英語のホームページを開きます([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))。
 1. クライアントコンテキストを開くには、Ctrl-Alt-c(Windows)またはControl-Option-c(Mac)を押します。
 1. ClientContext の上部の編集アイコンをクリックして ClientContext デザイナーを開きます。
 
@@ -249,11 +249,11 @@ JSONP ストアコンポーネントを ClientContext に追加して、Web ク�
 
    ![](assets/chlimage_1-41.png)
 
-### セグメントの作成 {#create-the-segment}
+### セグメントの作成  {#create-the-segment}
 
 JSONP ストアコンポーネントを使用して作成したセッションストアからのデータを使用します。セグメントはセッションストアの緯度と現在の日付から、クライアントの場所が冬時間であるかどうかを判断します。
 
-1. Open the Tools console in your web browser (`https://localhost:4502/miscadmin#/etc`).
+1. Webブラウザー(`https://localhost:4502/miscadmin#/etc`)でツールコンソールを開きます。
 1. フォルダーツリーで、Tools/Segmentation フォルダーを選択して、新規／新しいフォルダーをクリックします。次のプロパティ値を指定して「作成」をクリックします。
 
    * 名前：mysegments
