@@ -25,44 +25,44 @@ Adobe Experience Manager（AEM）Assets のカタログ作成機能を使用す�
 
 ## InDesign サーバーとの統合 {#integrating-with-indesign-server}
 
-As part of the integration process, configure the **DAM Update Asset** workflow, which is suited for integration with InDesign. さらに、InDesign サーバーのプロキシワーカーを設定します。For details, see [Integrating AEM Assets with InDesign Server](/help/assets/indesign.md).
+統合プロセスの一環として、InDesignとの統合に適した&#x200B;**DAM Update Asset**&#x200B;ワークフローを設定します。 さらに、InDesign サーバーのプロキシワーカーを設定します。詳しくは、[AEM AssetsとInDesign Serverの統合](/help/assets/indesign.md)を参照してください。
 
 >[!NOTE]
 >
 >AEM Assets に読み込む前に、InDesign ファイルから InDesign テンプレートを生成できます。詳しくは、[ファイルとテンプレートを使用した作業](https://helpx.adobe.com/jp/indesign/using/files-templates.html)を参照してください。
 >
->InDesign テンプレートの要素を XML タグにマッピングできます。マップされたタグは、カタログ作成機能で商品のプロパティをテンプレートのプロパティにマップした際に、プロパティとして表示されます。To learn about XML tagging in InDesign files, see [Tagging content for XML](https://helpx.adobe.com/jp/indesign/using/tagging-content-xml.html).
+>InDesign テンプレートの要素を XML タグにマッピングできます。マップされたタグは、カタログ作成機能で商品のプロパティをテンプレートのプロパティにマップした際に、プロパティとして表示されます。InDesignファイルでのXMLタグ付けについて詳しくは、[XMLのコンテンツのタグ付け](https://helpx.adobe.com/jp/indesign/using/tagging-content-xml.html)を参照してください。
 
 >[!NOTE]
 >
 >InDesign ファイル（.indd）のみがテンプレートとして使用されます。拡張子が .indt のファイルはサポートされていません。
 
-## カタログの作成 {#creating-a-catalog}
+## カタログの作成  {#creating-a-catalog}
 
 カタログ作成機能は、商品情報管理（PIM）データを使用して、テンプレートに表示される XML プロパティで製品プロパティをマッピングします。カタログを作成するには、次の手順を実行します。
 
-1. From the Assets user interface, tap/click the **AEM logo**, and go to **Assets > Catalogs**.
-1. In the **Catalogs** page, tap/click **Create** from the toolbar, and then select **Catalog** from the list.
-1. In the **Create Catalog** page, enter a name and description (optional) for the catalog and specify tags, if any. また、カタログのサムネール画像を追加できます。
+1. アセットユーザーインターフェイスで、**AEM logo**&#x200B;をタップまたはクリックし、**アセット/カタログ**&#x200B;に移動します。
+1. **カタログ**&#x200B;ページで、ツールバーの「**作成**」をタップまたはクリックし、リストから「**カタログ**」を選択します。
+1. **カタログを作成**&#x200B;ページで、カタログの名前と説明（オプション）を入力し、タグがある場合は指定します。 また、カタログのサムネール画像を追加できます。
 
    ![create_catalog](assets/create_catalog.png)
 
-1. 「**保存**」をタップまたはクリックします。カタログが作成されたことを示す確認ダイアログが表示されます。Tap/click **Done** to close the dialog.
-1. To open the catalog you created, tap/click it from the **Catalogs** page.
+1. 「**保存**」をタップまたはクリックします。カタログが作成されたことを示す確認ダイアログが表示されます。「**完了**」をタップまたはクリックして、ダイアログを閉じます。
+1. 作成したカタログを開くには、**カタログ**&#x200B;ページでカタログをタップまたはクリックします。
 
    >[!NOTE]
    >
-   >To open the catalog, you can also tap/click **Open** in the confirmation dialog mentioned in the previous step.
+   >カタログを開くには、前の手順で説明した確認ダイアログで「**開く**」をタップまたはクリックすることもできます。
 
-1. To add pages to the catalog, tap/click **Create** from the toolbar, and then choose the **New Page** option.
-1. ウィザードで、ページに使用する InDesign テンプレートを選択します。Then, tap/click **Next**.
+1. カタログにページを追加するには、ツールバーの「**作成**」をタップまたはクリックし、「**新しいページ**」オプションを選択します。
+1. ウィザードで、ページに使用する InDesign テンプレートを選択します。次に、「**次へ**」をタップまたはクリックします。
 1. ページの名前とオプションの説明を指定します。タグを指定します（ある場合）。
-1. Tap/click the **Create** from the toolbar. Then, tap/click **Open** from the dialog. 製品のプロパティが左側のウィンドウに表示されます。InDesign テンプレートの定義済みプロパティが右側のウィンドウに表示されます。
+1. ツールバーの&#x200B;**「作成」**&#x200B;をタップまたはクリックします。 次に、ダイアログから「**開く**」をタップまたはクリックします。 製品のプロパティが左側のウィンドウに表示されます。InDesign テンプレートの定義済みプロパティが右側のウィンドウに表示されます。
 1. 左側のウィンドウから製品プロパティを InDesign テンプレートプロパティにドラッグして、それらの間のマッピングを作成します。
 
-   To view how the page appears in real time, tap/click the **Preview** tab on the right pane.
+   ページがリアルタイムでどのように表示されるかを表示するには、右側のパネルの「**プレビュー**」タブをタップまたはクリックします。
 
-1. さらにページを作成するには、手順 6～9 を繰り返します。To create similar pages for other products, select the page and tap/click the **Create similar pages** icon from the toolbar.
+1. さらにページを作成するには、手順 6～9 を繰り返します。他の製品に類似したページを作成するには、ページを選択し、ツールバーの「**類似したページを作成**」アイコンをタップまたはクリックします。
 
    ![create_similar_pages](assets/create_similar_pages.png)
 
@@ -74,30 +74,31 @@ As part of the integration process, configure the **DAM Update Asset** workflow,
 
    ![select_product](assets/select_product.png)
 
-1. From the toolbar, click/tap **Create**. Tap/click **Done** to close the dialog. 類似したページがカタログに含まれます。
-1. To add any existing InDesign file to your catalog, tap/click **Create** from the toolbar, and choose the **Add to existing page** option.
-1. Select the InDesign file, and tap/click **Add** from the toolbar. Then, tap/click **OK** to close the dialog.
+1. ツールバーで、「**作成**」をクリックまたはタップします。 「**完了**」をタップまたはクリックして、ダイアログを閉じます。 類似したページがカタログに含まれます。
+1. 既存のInDesignファイルをカタログに追加するには、ツールバーの「**作成**」をタップまたはクリックし、「**既存のページ追加へ**」オプションを選択します。
+1. InDesignファイルを選択し、ツールバーの&#x200B;**追加**&#x200B;をタップまたはクリックします。 次に、「**OK**」をタップまたはクリックして、ダイアログを閉じます。
 
-   カタログページで参照している製品のメタデータが変更されても、その変更はカタログページに自動的に反映されません。 A banner labeled **Stale** appears on the product images in the referencing catalog pages, indicating that the metadata for the referenced products is not up-to-date.
+   カタログページで参照している製品のメタデータが変更されても、その変更はカタログページに自動的に反映されません。 **Stale**&#x200B;というラベルの付いたバナーが、参照カタログページ内の製品画像に表示されます。これは、参照先の製品のメタデータが最新でないことを示します。
 
    ![chlimage_1-117](assets/chlimage_1-117a.png)
 
-   To ensure that the product images reflect the latest metadata changes, select the page in the Catalog console and click/tap the **Update page** icon from the toolbar.
+   製品の画像に最新のメタデータの変更が反映されるようにするには、カタログコンソールでページを選択し、ツールバーの&#x200B;**ページ**&#x200B;を更新アイコンをクリックまたはタップします。
 
    ![chlimage_1-118](assets/chlimage_1-118a.png)
 
    >[!NOTE]
    >
-   >To change the metadata for a referenced product, navigate to the Products console (**AEM Logo** > **Commerce** > **Products**), and select the product. Then, click/tap the **View Properties** icon from the toolbar and edit the metadata in the Properties page of the asset.
+   >参照先の製品のメタデータを変更するには、製品コンソール(**AEMロゴ** > **コマース** > **製品**)に移動し、製品を選択します。 次に、ツールバーの&#x200B;**表示のプロパティ**&#x200B;アイコンをクリックまたはタップし、アセットのプロパティページでメタデータを編集します。
 
-1. To rearrange the pages in catalog, tap/click the **Create** icon from the toolbar and then choose **Merge** from the menu. ウィザードの上部のカルーセルで、ページをドラッグして、ページの順序を並べ替えることができます。また、ページを削除することもできます。
+1. カタログ内のページを並べ替えるには、ツールバーの&#x200B;**作成**&#x200B;アイコンをタップまたはクリックし、メニューから&#x200B;**結合**&#x200B;を選択します。 ウィザードの上部のカルーセルで、ページをドラッグして、ページの順序を並べ替えることができます。また、ページを削除することもできます。
 
-1. 「**次へ**」をタップまたはクリックします。To add an existing InDesign file as a cover page, tap/click **Browse** beside the **Choose Cover Page** box, and specify the path for the cover page template.
-1. Tap/click **Save**, and then tap/click **Done** to close the confirmation dialog.
-「 **完了** 」オプションを選択すると、.pdfレンディションを使用するかどうかを選択するダイアログボックスが開きます。
-   ![pdfに書き出し](assets/CatalogPDF.png)Acrobat(PDF)オプションが選択されている場合、 **indesignのレンディションに加えて、** /jcr:content/renditionsにpdfレンディションが作成されます。 すべてのレンディションをダウンロードするには、ダウンロードダイアログの「レンディション」チェックボックスを選択します。
+1. 「**次へ**」をタップまたはクリックします。既存のInDesignファイルをカバーページとして追加するには、「**カバーページを選択**」ボックスの横の「&lt;a0/>参照&#x200B;**」をタップまたはクリックし、カバーページテンプレートのパスを指定します。**
+1. 「**保存**」をタップまたはクリックし、「**完了**」をタップまたはクリックして確認ダイアログを閉じます。
+「**完了**」オプションを選択すると、.pdfレンディションを使用するかどうかを選択するダイアログボックスが開きます。
+   ![「](assets/CatalogPDF.png)
+pdfに書き出し」「Acrobat(PDF)」オプションが選択されている場合、  **indesignのレンディションに加えて、** /jcr:content/renditionsにpdfレンディションが作成されます。すべてのレンディションをダウンロードするには、ダウンロードダイアログの「レンディション」チェックボックスを選択します。
 
-1. To generate a preview for the catalog you created, select it in the **Catalogs** console, and then click the **Preview** icon from the toolbar.
+1. 作成したカタログのプレビューを生成するには、**カタログ**&#x200B;コンソールでカタログを選択し、ツールバーの&#x200B;**プレビュー**&#x200B;アイコンをクリックします。
 
    ![chlimage_1-119](assets/chlimage_1-119a.png)
 
