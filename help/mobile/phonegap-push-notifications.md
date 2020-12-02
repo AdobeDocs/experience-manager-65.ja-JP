@@ -28,9 +28,9 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->プッシュ通知は保証型配信ではありません。むしろお知らせに近いものです。全ユーザーがプッシュ通知を受信するように最大限の努力が払われていますが、保証型配信メカニズムではありません。*Also, the time to deliver a push can vary from less than a second to up to half an hour.*
+>プッシュ通知は保証型配信ではありません。むしろお知らせに近いものです。全ユーザーがプッシュ通知を受信するように最大限の努力が払われていますが、保証型配信メカニズムではありません。*また、プッシュを配信する時間は、1秒未満から30分まで様々です。*
 
-AEM でプッシュ通知を使用するには、さまざまなテクノロジーがいくつか必要になります。まず、プッシュ通知サービスプロバイダーを使用して、通知とデバイスを管理する必要があります(AEMはまだこれを行いません)。 Two providers are configured out-of-the-box with AEM: [Amazon Simple Notification Service](https://aws.amazon.com/sns/) (or SNS), and [Pushwoosh](https://www.pushwoosh.com/). 次に、指定したモバイル OS 向けのプッシュテクノロジーは、適切なサービスである Apple のプッシュ通知サービス（APNS。iOS デバイス用）、Google Cloud Messaging（GCM。Android デバイス用）を経由する必要があります。AEMは、これらのプラットフォーム固有のサービスと直接通信しませんが、プッシュを実行するには、AEMから、通知と共に一部の関連する設定情報を提供する必要があります。
+AEM でプッシュ通知を使用するには、さまざまなテクノロジーがいくつか必要になります。まず、プッシュ通知サービスプロバイダーを使用して、通知とデバイスを管理する必要があります(AEMはまだこれを行いません)。 AEMでは、次の2つのプロバイダーが標準で構成されています。[Amazon簡易通知サービス](https://aws.amazon.com/sns/) （またはSNS）、[プッシュウッシュ](https://www.pushwoosh.com/)。 次に、指定したモバイル OS 向けのプッシュテクノロジーは、適切なサービスである Apple のプッシュ通知サービス（APNS。iOS デバイス用）、Google Cloud Messaging（GCM。Android デバイス用）を経由する必要があります。AEMは、これらのプラットフォーム固有のサービスと直接通信しませんが、プッシュを実行するには、AEMから、通知と共に一部の関連する設定情報を提供する必要があります。
 
 インストールおよび設定（下記）が完了すると、次のように機能します。
 
@@ -41,7 +41,7 @@ AEM でプッシュ通知を使用するには、さまざまなテクノロジ�
 
 AEM のこのリリースでは、iOS と Android のモバイルデバイスをサポートしています。
 
-## 概要および手順 {#overview-and-procedure}
+## 概要および手順  {#overview-and-procedure}
 
 AEM Mobile アプリでプッシュ通知を使用するには、次のおおまかな手順を実行する必要があります。
 
@@ -59,13 +59,13 @@ AEM管理者は次の操作を実行できます。
 1. プッシュ通知の送信
 1. ディープリンクの設定（オプション）**
 
-### 手順 1：Apple および Google メッセージングサービスへの登録 {#step-register-with-apple-and-google-messaging-services}
+### 手順 1：Apple および Google メッセージングサービスへの登録  {#step-register-with-apple-and-google-messaging-services}
 
-#### Using the Apple Push Notification Service (APNS) {#using-the-apple-push-notification-service-apns}
+#### Apple Push Notification Service(APNS){#using-the-apple-push-notification-service-apns}の使用
 
-Go to the Apple page [here](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html) to become familiar with the Apple Push Notification Service.
+Appleのページ[ここ](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html)に移動し、Appleのプッシュ通知サービスについて理解してください。
 
-To use APNS you will need a **Certificate** file (a .cer file), a push **Private Key** (a .p12 file) and a **Private Key Password** from Apple. Instructions on how to do that can be found [here](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html).
+APNSを使用するには、Appleの&#x200B;**証明書**&#x200B;ファイル（.cerファイル）、プッシュ&#x200B;**秘密鍵**（.p12ファイル）、および&#x200B;**秘密鍵パスワード**&#x200B;が必要です。 その方法の説明は[ここ](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html)にあります。
 
 #### Google Cloud Messaging（GCM）サービスの使用 {#using-the-google-cloud-messaging-gcm-service}
 
@@ -73,15 +73,15 @@ To use APNS you will need a **Certificate** file (a .cer file), a push **Private
 >
 >Google は、GCM を Firebase Cloud Messaging（FCM）という類似のサービスに置き換えます。FCM について詳しくは、[こちら](https://developers.google.com/cloud-messaging/faq)を参照してください。
 
-Go to the Google page [here](https://developer.android.com/google/gcm/index.html) to become familiar with Google Cloud Messaging for Android.
+Android向けGoogle Cloud Messagingについて詳しくは、Googleページ[ここ](https://developer.android.com/google/gcm/index.html)を参照してください。
 
-You will need to follow the steps [here](https://developer.android.com/google/gcm/gs.html) to **Create a Google API project**, **Enable the GCM Service**, and **Obtain an API Key**. Android デバイスにプッシュ通知を送信するには、**API キー**&#x200B;が必要になります。Also, record your **Project Number**, which is also sometimes called a **GCM Sender Id**.
+[ここ](https://developer.android.com/google/gcm/gs.html)から&#x200B;**Google APIプロジェクトを作成する**、**GCMサービスを有効にする**、**APIキーを取得する**&#x200B;の手順に従う必要があります。 Android デバイスにプッシュ通知を送信するには、**API キー**&#x200B;が必要になります。また、**プロジェクト番号**&#x200B;を記録します。これは&#x200B;**GCM送信者ID**&#x200B;とも呼ばれます。
 
 以下に、GCM API キーを作成する別の方法を示します。
 
-1. Log into google and go to the [Google&#39;s Developer page](https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm).
+1. googleにログインし、[Googleの開発者ページ](https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm)に移動します。
 1. リストからアプリを選択します（または新しいアプリを作成します）。
-1. Under Android Package Name, enter your app id, i.e. `com.adobe.cq.mobile.weretail.outdoorsapp`. （問題が解決しない場合は、「test.test」を使用して再試行します）。
+1. 「Androidパッケージ名」に、アプリケーションIDを入力します。`com.adobe.cq.mobile.weretail.outdoorsapp`. （問題が解決しない場合は、「test.test」を使用して再試行します）。
 1. 「**Continue To Choose and configure services**」をクリックします。
 1. 「Cloud Messaging」を選択し、「**Enable Google Cloud Messaging**」をクリックします。
 1. 新しいサーバー API キー（「Server API Key」）と（新規または既存の）送信者 ID（「Sender ID」）が表示されます。
@@ -90,7 +90,7 @@ You will need to follow the steps [here](https://developer.android.com/google/gc
 >
 >サーバー API キーを記録します。この値は、プッシュプロバイダーのサイトで入力します。
 
-### 手順 2：プッシュメッセージングサービスの登録および設定 {#step-register-and-configure-a-push-messaging-service}
+### 手順 2：プッシュメッセージングサービスの登録および設定  {#step-register-and-configure-a-push-messaging-service}
 
 AEM は、プッシュ通知に 3 つのサービスのうちいずれかを使用するように設定されています。
 
@@ -102,11 +102,11 @@ Amazon SNS ** および Pushwoosh ** の設定を使用すると、AEM 画面内
 
 Adobe Mobile Services ** の設定を使用すると、Adobe Analytics アカウントを使用して Adobe Mobile Services 内からプッシュ通知を設定および送信できます（ただし、AMS プッシュ通知を有効にするには、この設定をおこなってアプリをビルドする必要があります）。
 
-#### Amazon SNS メッセージングサービスの使用 {#using-the-amazon-sns-messaging-service}
+#### Amazon SNS メッセージングサービスの使用  {#using-the-amazon-sns-messaging-service}
 
 >[!NOTE]
 >
->*AmazonSNSの情報と、新しいAWSアカウントを作成するためのリンクは [こちら](https://aws.amazon.com/sns/)。 1 年間無料のアカウントを入手できます。*
+>*AmazonSNSの情報と、新しいAWSアカウントを作成するためのリンクは [こちら](https://aws.amazon.com/sns/)。1 年間無料のアカウントを入手できます。*
 
 Amazon SNS を使用しない場合には、この手順をスキップできます。
 
@@ -116,13 +116,13 @@ Amazon SNS を使用しない場合には、この手順をスキップできま
 
    1. アカウント ID を記録します。形式は12桁で、スペースやダッシュは使用できません。&quot;123456789012&quot;と表示されます。
    1. 現在の地域が「us-east」または「eu」であることを確認します。後の手順（ID プールの作成）でそのどちらかが必要になるからです。
-   1. After registering, log into the management console and select [SNS](https://console.aws.amazon.com/sns/) (Push Notification Service). 「Get Started」（はじめに）が表示されたらクリックします。
+   1. 登録後、管理コンソールにログインし、[SNS](https://console.aws.amazon.com/sns/)（プッシュ通知サービス）を選択します。 「Get Started」（はじめに）が表示されたらクリックします。
 
 1. **アクセスキーおよび ID の作成**
 
    1. 画面右上のログイン名をクリックし、メニューから「Security Credentials」を選択します。
-   1. Click on Access Keys, and in the space below, click **Create New Access Key**.
-   1. Click **Show Access Key**, and copy and save the Access Key ID and Secret Access Key shown. キーをダウンロードするオプションを選択した場合には、ダウンロードした csv ファイルにそれらと同じ値が記載されています。
+   1. [アクセスキー]をクリックし、下のスペースで[**新しいアクセスキーを作成**]をクリックします。
+   1. 「**アクセスキーを表示**」をクリックし、表示されたアクセスキーIDとシークレットアクセスキーをコピーして保存します。 キーをダウンロードするオプションを選択した場合には、ダウンロードした csv ファイルにそれらと同じ値が記載されています。
    1. このページでは、他のセキュリティ関連の証明書などを管理できます。
 
    >[!NOTE]
@@ -140,7 +140,7 @@ Amazon SNS を使用しない場合には、この手順をスキップできま
 1. **トピックの作成**
 
    1. 「**Create Topic**」をクリックし、トピック名を選択します。「Topic ARN」、「Topic Owner」、「Region」、「Display name」などすべてのフィールドを記録します。
-   1. Click **Other Topic Actions** > **Edit Topic Policy**. Under **Allow these users to subscribe to this topic**, select **Everyone.**
+   1. **その他のトピックのアクション**/**トピックポリシー**&#x200B;を編集をクリックします。 「**このトピック**&#x200B;の購読を許可する」で、「**全員」を選択します。**
    1. 「**Update Policy**」をクリックします。
 
    >[!NOTE]
@@ -151,14 +151,14 @@ Amazon SNS を使用しない場合には、この手順をスキップできま
 
    1. Applications／Create Platform Application をクリックします。名前を選択し、プラットフォーム（iOS の場合は APNS、Android の場合は GCM）を選択します。プラットフォームに応じて、他のフィールドにも入力する必要があります。
 
-      1. APNS の場合、P12 ファイル、パスワード、証明書および秘密鍵をすべて入力する必要があります。These should have been obtained in the step *Using the Apple Push Notification Service (APNS)* above.
-      1. GCM の場合、API キーを入力する必要があります。This should have been obtained in the step *Using the Google Cloud Messaging (GCM) service* above.
+      1. APNS の場合、P12 ファイル、パスワード、証明書および秘密鍵をすべて入力する必要があります。これらは、上記の手順&#x200B;*Using the Apple Push Notification Service(APNS)*&#x200B;で入手する必要があります。
+      1. GCM の場合、API キーを入力する必要があります。これは、前述の「Google Cloud Messaging(GCM)サービスの使用&#x200B;*」で入手できるはずです。*
    1. サポート対象のプラットフォームごとに 1 回、上述の手順を繰り返します。iOS と Android の両方にプッシュできるようにするには、2 つのプラットフォームアプリケーションを作成する必要があります。
 
 
 1. **ID プールの作成**
 
-   1. Use [Cognito](https://console.aws.amazon.com/cognito) to create an Identity Pool, which will store basic data of unauthenticated users. ただし、現在、Amazon・コグニトがサポートしている地域は「米国東部」と「eu」のみです。
+   1. [Cognito](https://console.aws.amazon.com/cognito)を使用してIDプールを作成します。このIDプールには、未認証ユーザーの基本的なデータが格納されます。 ただし、現在、Amazon・コグニトがサポートしている地域は「米国東部」と「eu」のみです。
    1. ID プールに名前を付け、「Enable access to unauthenticated identities」ボックスをオンにします。
    1. 次のページ（Your Cognito identities require access to your resources **）で、「Allow」をクリックします。
    1. ページの右上で、「Edit identity pool」リンクをクリックします。** IDプールIDが表示されます。 後で使用するために、このテキストを保存します。
@@ -166,7 +166,7 @@ Amazon SNS を使用しない場合には、この手順をスキップできま
 
 1. **アクセスの設定**
 
-   1. Login to [Identity and Access Management](https://console.aws.amazon.com/iam/home) (IAM)
+   1. [IDとアクセスの管理](https://console.aws.amazon.com/iam/home) (IAM)にログインします
    1. 「Roles」を選択します。
    1. 前の手順で作成した役割（Cognito_&lt;ID プール名>Unauth_Role という名前）をクリックします。表示された「ロールARN」を記録します。
    1. 「Inline Policies」をまだ開いていない場合は開きます。1Click_Cognito_&lt;yourIdentityPoolName>Unauth_Role_1234567890123のような名前のポリシーが表示されます。
@@ -214,15 +214,16 @@ Pushwoosh を使用するには：
 
 notificationsConfig という 2 つのコンテンツノードを（1 つは app-config に、もう 1 つは app-config-dev に）作成します。
 
-* /content/`<your app>`/shell/jcr:content/pge-app/app-config-dev/notificationsConfig
-* /content/`<your app>`/shell/jcr:content/pge-app/app-config/notificationsConfig
+* /content/`<your app>`/shell/jcr:content/page-app/app-config-dev/notificationsConfig
+* /content/`<your app>`/shell/jcr:content/page-app/app-config/notificationsConfig
 
-With these properties (.content.xml files) :
+次のプロパティ（.content.xmlファイル）を使用します。
 &lt;jcr:root xmlns:jcr=&quot; [https://www.jcp.org/jcr/1.0](https://www.jcp.org/jcr/1.0)&quot; xmlns:nt=&quot; [https://www.jcp.org/jcr/nt/1.0](https://www.jcp.org/jcr/nt/1.0)&quot;
 jcr:primaryType=&quot;nt:unstructured&quot;
 excludeProperties=&quot;[appAPIAccessToken]&quot;
 path=&quot;../../../..&quot;
-targetRootDirectory=&quot;www&quot;type=&quot;notificationsconfig&quot;/>
+targetRootDirectory=&quot;www&quot;
+type=&quot;notificationsconfig&quot;/>
 
 >[!NOTE]
 >
@@ -234,7 +235,7 @@ targetRootDirectory=&quot;www&quot;type=&quot;notificationsconfig&quot;/>
 
 CRXDE Lite で以下の手順に従います。
 
-1. Navigate to */etc/designs/phonegap/&lt;app name>/clientlibsall.*
+1. */etc/designs/phonegap/&lt;app name>/clientlibsallに移動します。*
 1. プロパティペインで「埋め込み」セクションをダブルクリックします。
 1. 表示されるダイアログで、+ ボタンをクリックして新規クライアントライブラリを追加します。
 1. 新規テキストフィールドで、「cq.mobile.push」を追加し、「OK」をクリックします。
@@ -245,7 +246,7 @@ CRXDE Lite で以下の手順に従います。
 >
 >アプリのスペースの都合で、プッシュ通知を削除したか、使用していない場合は、コンソールのエラーメッセージを避けるために、これらのクライアントライブラリをアプリから削除します。
 
-### 手順 4：テスト用の電話の準備 {#step-prepare-a-phone-for-testing}
+### 手順 4：テスト用の電話の準備  {#step-prepare-a-phone-for-testing}
 
 >[!NOTE]
 >
@@ -253,13 +254,13 @@ CRXDE Lite で以下の手順に従います。
 
 #### iOS {#ios}
 
-For iOS you will need to use a Mac OS computer and you need to join the [iOS Developer Program](https://developer.apple.com/programs/ios/). 一部の企業は、すべての開発者が利用できる会社ライセンスを持っています。
+iOSの場合は、Mac OSコンピューターを使用し、[iOS Developerプログラム](https://developer.apple.com/programs/ios/)に参加する必要があります。 一部の企業は、すべての開発者が利用できる会社ライセンスを持っています。
 
 XCode 8.1 では、プッシュ通知を使用する前に、プロジェクトの「Capabilities」タブに移動し、「Push Notifications」のトグルをオンに切り替える必要があります。
 
 #### Android {#android}
 
-To install the app on an Android phone using CLI (see below: **Step 6 - Build and deploy the app**), you first must put the phone in &quot;developer mode.&quot; See [Enabling On-device Developer Options](https://developer.android.com/tools/device.html#developer-device-options) for details on doing this.
+CLIを使用してAndroidスマートフォンにアプリケーションをインストールするには（以下を参照）**手順6 — アプリ**&#x200B;を作成してデプロイする)、まず電話を「developer mode」にする必要があります。 この処理について詳しくは、[デバイス上での開発者オプションの有効化](https://developer.android.com/tools/device.html#developer-device-options)を参照してください。
 
 ### 手順 5：AEM アプリでのプッシュの設定 {#step-configure-push-on-aem-apps}
 
@@ -273,17 +274,17 @@ To install the app on an Android phone using CLI (see below: **Step 6 - Build an
 1. プロバイダーのプロパティを入力し、「送信」をクリックして保存し、「完了」をクリックします。AMSの場合を除き、この段階ではリモートでの検証は行われません。
 1. クラウドサービスを管理タイルに、入力した設定が表示されます。
 
-### 手順 6：アプリのビルドおよびデプロイ {#step-build-and-deploy-the-app}
+### 手順 6：アプリのビルドおよびデプロイ  {#step-build-and-deploy-the-app}
 
-**注意：** PhoneGapアプリケーションの構築に関する説明は [](/help/mobile/building-app-mobile-phonegap.md) 、こちらも参照してください。
+**注意：PhoneGapアプリケーションの作成に関するアドビの説明書** も [](/help/mobile/building-app-mobile-phonegap.md) 参照してください。
 
 PhoneGap を使用してアプリをビルドしてデプロイするには、2 つの方法があります。
 
-**注意：** プッシュ通知はプッシュプロバイダー（AppleまたはGoogle）とデバイスの間で異なるプロトコルを使用するので、プッシュ通知テストではエミュレーターは十分ではありません。 現在の Mac／PC ハードウェアおよびエミュレーターは、これをサポートしていません。
+**注意：プッシュ通知** はプッシュプロバイダー（AppleまたはGoogle）とデバイスの間で異なるプロトコルを使用するので、プッシュ通知テストではエミュレーターは十分ではありません。現在の Mac／PC ハードウェアおよびエミュレーターは、これをサポートしていません。
 
-1. *PhoneGap Build* は、PhoneGapが提供するサービスです。PhoneGapは、アプリを自社のサーバー上で作成し、デバイスに直接ダウンロードできるようにするサービスです。 Refer to the [PhoneGap Build documentation](https://build.phonegap.com/) to learn how to set up and use PhoneGap Build.
+1. *PhoneGap* Buildは、PhoneGapが提供するサービスです。PhoneGapは自分のサーバー上でアプリを作成し、デバイスに直接ダウンロードできるようにするサービスです。PhoneGap Buildの設定方法と使用方法については、[PhoneGap Buildドキュメント](https://build.phonegap.com/)を参照してください。
 
-1. *PhoneGap Command Line Interface* (CLI)を使用すると、コマンドラインで豊富なPhoneGapコマンドを使用して、アプリの作成、デバッグ、デプロイを行うことができます。 Refer to the [PhoneGap developer documentation](https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) to learn how to set up and use PhoneGap CLI.
+1. *PhoneGap Command Line Interface* (CLI)を使用すると、コマンドラインで豊富なPhoneGapコマンドを使用して、アプリの作成、デバッグ、デプロイを行うことができます。PhoneGap CLIの設定と使用方法については、[PhoneGap開発者向けドキュメント](https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface)を参照してください。
 
 ### 手順 7：プッシュ通知の送信 {#step-send-a-push-notification}
 
@@ -314,7 +315,7 @@ AMS プッシュ通知では、AMS サーバーから通知を作成し、送信
 
 >[!NOTE]
 >
->プッシュ通知は保証型配信ではありません。むしろお知らせに近いものです。全ユーザーがプッシュ通知を受信するように最大限の努力が払われていますが、保証型配信メカニズムではありません。*Also, the time to deliver a push can vary from less than a second to up to half an hour.*
+>プッシュ通知は保証型配信ではありません。むしろお知らせに近いものです。全ユーザーがプッシュ通知を受信するように最大限の努力が払われていますが、保証型配信メカニズムではありません。*また、プッシュを配信する時間は、1秒未満から30分まで様々です。*
 
 ### プッシュ通知でのディープリンクの設定 {#configuring-deep-linking-with-push-notifications}
 
@@ -384,5 +385,5 @@ AMS プッシュ通知では、AMS サーバーから通知を作成し、送信
 
 ### 次の手順 {#the-next-steps}
 
-Once you understand the details on push notifications for your app, see [AEM Mobile Content Personalization](/help/mobile/phonegap-aem-mobile-content-personalization.md).
+アプリのプッシュ通知の詳細について理解したら、[AEM Mobileコンテンツパーソナライゼーション](/help/mobile/phonegap-aem-mobile-content-personalization.md)を参照してください。
 
