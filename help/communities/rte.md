@@ -18,7 +18,7 @@ ht-degree: 74%
 ---
 
 
-# リッチテキストエディターの基本事項 {#rich-text-editor-essentials}
+# リッチテキストエディターの基本事項  {#rich-text-editor-essentials}
 
 ## 概要 {#overview}
 
@@ -30,9 +30,9 @@ ht-degree: 74%
 
 ## リッチテキストエディターの有効化 {#enabling-rich-text-editor}
 
-ユーザー生成コンテンツ（UGC）を許可するコミュニティコンポーネントを有効にすることによって、RTE を許可することができます。Depending on whether the component was added to a page or included within a [function](functions.md), RTE may or may not be enabled by default.
+ユーザー生成コンテンツ（UGC）を許可するコミュニティコンポーネントを有効にすることによって、RTE を許可することができます。コンポーネントがページに追加されたか、[関数](functions.md)に含まれたかによって、RTEはデフォルトで有効になる場合と無効になる場合があります。
 
-If not enabled, simply enter [author edit mode](sites-console.md#authoring-site-content), select the component for edit, and select the `Rich Text Editor` checkbox.
+有効になっていない場合は、[作成者編集モード](sites-console.md#authoring-site-content)に入り、編集するコンポーネントを選択して、`Rich Text Editor`チェックボックスを選択します。
 
 RTE は、次のコミュニティコンポーネントに使用できます。
 
@@ -61,7 +61,7 @@ RTE は、次のコミュニティコンポーネントに使用できます。
 
 ツールバーにハイパーリンクオプションを追加するには：
 
-* Add a toolbar named &quot; `links`&quot;
+* 追加`links`という名前のツールバー
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
 * 「**[!UICONTROL すべて保存]**」を選択します。
 
