@@ -18,7 +18,7 @@ ht-degree: 48%
 ---
 
 
-# 初期サンドボックスコンテンツ {#initial-sandbox-content}
+# 初期サンドボックスコンテンツ  {#initial-sandbox-content}
 
 ここでは、次のページを作成します。これらのすべてのページで[ページテンプレート](initial-app.md#createthepagetemplate)を使用します。
 
@@ -36,41 +36,41 @@ ht-degree: 48%
 
 1. 標準 UI では現在、サイトを作成するためのブループリントが提供されます。このチュートリアルではシンプルなサイトを作成するので、クラシックUIが役に立ちます。
 
-   クラシック UI に切り替えるには、グローバルナビゲーションを選択し、「プロジェクト」アイコンの右側にマウスカーソルを合わせます。Select the *Switch to Classic UI* icon which appears:
+   クラシック UI に切り替えるには、グローバルナビゲーションを選択し、「プロジェクト」アイコンの右側にマウスカーソルを合わせます。*クラシックUIに切り替え*&#x200B;アイコンを選択します。次のアイコンが表示されます。
 
    ![classic-ui](assets/classic-ui.png)
 
    クラシック UI に切り替える機能は、[管理者が有効にする](../../help/sites-administering/enable-classic-ui.md)必要があります。
 
-1. From the [classic UI Welcome page](http://localhost:4502/welcome.html), select **[!UICONTROL Websites]**.
+1. [従来のUIのようこそページ](http://localhost:4502/welcome.html)から、**[!UICONTROL Webサイト]**&#x200B;を選択します。
 
    ![classic-ui-webサイト](assets/classic-ui-website.png)
 
    または、[/siteadmin](http://localhost:4502/siteadmin) を参照して、Web サイトのクラシック UI に直接アクセスします。
 
-1. In the explorer pane, select **[!UICONTROL Websites]** and then in the toolbar select **[!UICONTROL New]** > **[!UICONTROL New Page]**.
+1. エクスプローラウィンドウで、「**[!UICONTROL Webサイト]**」を選択し、ツールバーで「**[!UICONTROL 新規]**/**[!UICONTROL 新しいページ]**」を選択します。
 
    **[!UICONTROL ページを作成]**&#x200B;ダイアログで、次のように入力します。
 
    * タイトル: `SCF Sandbox Site`
    * 名前：`an-scf-sandbox`
-   * Select **[!UICONTROL An SCF Sandbox Play Template]**
+   * **[!UICONTROL SCF Sandbox再生テンプレート]**&#x200B;を選択
    * 「**[!UICONTROL 作成]**」をクリックします。
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
-1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site`, and click **[!UICONTROL New]** > **[!UICONTROL New Page]**:
+1. エクスプローラウィンドウで、作成したページ`/Websites/SCF Sandbox Site`を選択し、**[!UICONTROL 新規]**/**[!UICONTROL 新規ページ]**&#x200B;をクリックします。
 
    * タイトル: `SCF Sandbox`
    * 名前：`en`
-   * Select **[!UICONTROL An SCF Sandbox Play Template]**
+   * **[!UICONTROL SCF Sandbox再生テンプレート]**&#x200B;を選択
    * 「**[!UICONTROL 作成]**」をクリックします。
 
-1. In the explorer pane, select the page you just created, `/Websites/SCF Sandbox Site/SCF Sandbox`, and click **[!UICONTROL New]** > **[!UICONTROL New Page]**
+1. エクスプローラウィンドウで、作成したページ`/Websites/SCF Sandbox Site/SCF Sandbox`を選択し、**[!UICONTROL 新規]**/**[!UICONTROL 新規ページ]**&#x200B;をクリックします
 
    * タイトル: `SCF Play`
    * 名前：`play`
-   * Select **[!UICONTROL An SCF Sandbox Play Template]**
+   * **[!UICONTROL SCF Sandbox再生テンプレート]**&#x200B;を選択
    * 「**[!UICONTROL 作成]**」をクリックします。
 
 1. Web サイトコンソールに Web サイトが次のように表示されます。エクスプローラペインで選択した項目の子ページが、管理可能な右側のペインに表示されます。
@@ -83,7 +83,7 @@ ht-degree: 48%
 
 ## デザインパスの追加 {#add-the-design-path}
 
-When ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)` was created using the designs section of the Tools console, the property ``
+` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)`がツールコンソールのdesignsセクションを使用して作成された場合、「
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
@@ -96,16 +96,16 @@ When ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesig
    * 型：`String`
    * 値：`/etc/designs/an-scf-sandbox`
 
-* Click the green `[+] Add`
+* 緑色の`[+] Add`をクリックします
 
 リポジトリは次のようになります。
 
 ![classic-ui-repository-path](assets/classic-ui-repository-path.png)
 
-* Click **[!UICONTROL Save All]**
+* 「**[!UICONTROL すべて保存]**」をクリックします
 
 設定の保存で問題が発生した場合は、再ログインして設定を再度行ってください。
 
 >[!NOTE]
 >
->The use of `cq:designPath` is optional and is unrelated to the [use of clientlibs](develop-app.md#includeclientlibsintemplate), which are essentially required as the SCF components use [clientlibs](client-customize.md#clientlibs-for-scf) to manage their JS and CSS.
+>`cq:designPath`の使用はオプションであり、clientlibs](develop-app.md#includeclientlibsintemplate)の使用とは無関係です。これは、SCFコンポーネントがJSとCSSを管理するために[clientlibs](client-customize.md#clientlibs-for-scf)を使用するので、基本的に必要です。[
