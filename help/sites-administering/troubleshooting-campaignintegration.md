@@ -34,7 +34,7 @@ ht-degree: 72%
 * AEM の機能では、JSON の呼び出しが AEM オーサーインターフェイスからリクエストされます。HTTP 500 のエラーは発生しません。HTTP 500 のエラーが発生した場合は、`error.log` で詳細を確認してください。
 * AEM でキャンペーンクラスのデバッグレベルを上げることも問題のトラブルシューティングに役立ちます。
 
-## 接続に失敗する場合 {#if-the-connection-fails}
+## 接続に失敗する場合  {#if-the-connection-fails}
 
 Adobe Campaign で **aemserver** 演算子が設定されていることをチェックします。
 
@@ -42,7 +42,7 @@ Adobe Campaign で **aemserver** 演算子が設定されていることをチ�
 
 HTML ソースをチェックし、クライアントマシンから URL を開くことができることを検証します。URLにlocalhost:4503が含まれる場合は、Adobe Campaignコンソールマシンから到達できる発行インスタンスを指すように、作成者インスタンスのDay CQ Link Externalizerの設定を変更します。
 
-See [Configuring the Externalizer.](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
+[Externalizerの設定を参照してください。](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
 
 ## AEM から Adobe Campaign に接続できない場合 {#if-you-cannot-connect-from-aem-to-adobe-campaign}
 
@@ -52,7 +52,7 @@ Adobe Campaign で次のエラーメッセージを探します。
 
 `Make sure the DNS alias used to access the server is correct (for example, avoid hard-coded IP addresses). (iRc=16384)`
 
-To fix this issue, change the following in **$CAMPAIGN_HOME/conf/config-&lt;instance-name>.xml**:
+この問題を修正するには、**$キャンペーン_HOME/conf/config-&lt;インスタンス名>.xml**&#x200B;で次の内容を変更します。
 
 `<dataStore hosts="*" lang="en_GB">`
 
@@ -64,11 +64,11 @@ Adobe Campaign で、ポート番号の末尾がスラッシュ（/）で終わ�
 
 ## setlocale について警告が表示される場合 {#if-you-get-a-warning-about-your-setlocale}
 
-If you are starting the Apache HTTPD service and see the error `"Warning: setlocale: LC_CTYPE cannot change locale"` make sure that you have your **en_CA.ISO-8859-15 locale** installed on your system.
+Apache HTTPDサービスを起動していて、エラー`"Warning: setlocale: LC_CTYPE cannot change locale"`が表示される場合は、**en_CA.ISO-8859-15 locale**&#x200B;がシステムにインストールされていることを確認してください。
 
 `local -a` を使用することで、インストールされているかどうかをチェックできます。インストールされていない場合は、**/usr/local/neolane/nl6/env.sh** スクリプトをパッチして、ロケールをインストールされたロケールに変更します。
 
-## スクリプト「get_nms_amcGetSeedMetaData_jssp」のコンパイル中にエラーが発生した場合 {#if-you-get-an-error-while-compiling-script-get-nms-amcgetseedmetadata-jssp}
+## スクリプト「get_nms_amcGetSeedMetaData_jssp」のコンパイル中にエラーが発生した場合  {#if-you-get-an-error-while-compiling-script-get-nms-amcgetseedmetadata-jssp}
 
 AEM ログファイルに次のエラーメッセージが表示される場合：
 
@@ -78,14 +78,14 @@ AEM ログファイルに次のエラーメッセージが表示される場合�
 
 1. **$CAMPAIGN_HOME/datakit/nms/fra/js/amcIntegration.js** ファイルを開きます。
 1. メソッド amcGetSeedMetaData の 467 行目を変更します。
-1. Change `label : [inclView.@label](mailto:inclView.@label)` to `label : String([inclView.@label](mailto:inclView.@label))`
+1. `label : [inclView.@label](mailto:inclView.@label)`を`label : String([inclView.@label](mailto:inclView.@label))`に変更
 
 1. 保存.
 1. サーバーを再起動します。
 
-## Adobe Campaign で「同期」ボタンをクリックしたときにエラーが表示される場合 {#if-adobe-campaign-displays-an-error-when-clicking-the-synchronize-button}
+## Adobe Campaign で「同期」ボタンをクリックしたときにエラーが表示される場合  {#if-adobe-campaign-displays-an-error-when-clicking-the-synchronize-button}
 
-If when clicking the **Synchronize** button in Adobe Campaign Classic, you see the following error:
+Adobe Campaign Classicで「**同期**」ボタンをクリックすると、次のエラーが表示されます。
 
 `Error while executing the method ‘aemListContent' of service [nms:delivery](https://nmsdelivery/)`
 
@@ -93,7 +93,7 @@ If when clicking the **Synchronize** button in Adobe Campaign Classic, you see t
 
 **localhost** から IP アドレスに切り替えるとこの問題が解決します。
 
-## 「Cannot parse XTK Date+Time &#39;undefined」というエラーが発生する場合 {#if-you-get-a-cannot-parse-xtk-date-time-undefined-error}
+## 「Cannot parse XTK Date+Time &#39;undefined」というエラーが発生する場合  {#if-you-get-a-cannot-parse-xtk-date-time-undefined-error}
 
 「同期」をクリックした後に、「Cannot parse XTK Date+Time &#39;undefined&#39;: not a valid XTK value」とページのスクリプトが発生した内容のエラーが発生します。
 
@@ -115,7 +115,7 @@ at sun.security.ssl.AppOutputStream.write(Unknown Source)
 
 チケットを切って Adobe Campaign のサポートチームにサポートを依頼してください。
 
-## 同期ダイアログに想定していた https のリンクではなく http のリンクが表示される場合 {#if-you-see-http-instead-of-an-expected-https-links-in-the-synchronization-dialog}
+## 同期ダイアログに想定していた https のリンクではなく http のリンクが表示される場合  {#if-you-see-http-instead-of-an-expected-https-links-in-the-synchronization-dialog}
 
 セットアップは次のとおりです。
 
@@ -128,11 +128,11 @@ Adobe Campaign の配信でコンテンツを同期しようとすると、AEM �
 この問題を解決するには：
 
 * 元のプロトコルをヘッダーとして渡すように、ディスパッチャーまたはリバースプロキシを設定する必要があります。
-* The *Apache Felix Http Service SSL Filter* in the OSGi configuration ([https://&lt;host>:&lt;port>/system/console/configMgr](http://localhost:4502/system/console/configMgr)) needs to be configured to the respective header settings. See [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)
+* OSGi構成([https://&lt;host>:&lt;port>/system/console/configMgr](http://localhost:4502/system/console/configMgr))の&#x200B;*Apache Felix HttpサービスSSLフィルター*&#x200B;は、それぞれのヘッダー設定に設定する必要があります。 [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)を参照
 
 ## 自身で作成したカスタムテンプレートをページのプロパティで選択できない場合 {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 
-When creating a mail template for Adobe Campaign, you must include the property **acMapping** with the value **mapRecipient** in the **jcr:content** node of the template, or you will not be able to select the Adobe Campaign template in **Page Properties** of AEM (field is disabled).
+Adobe Campaign用の電子メールテンプレートを作成する場合は、テンプレートの&#x200B;**jcr:content**&#x200B;ノードに&#x200B;**mapRecipient**&#x200B;という値を持つ&#x200B;**acMapping**&#x200B;プロパティを含める必要があります。含めないと、AEMフィールドの&#x200B;**ページプロパティ**&#x200B;に選択でききれません)。
 
 ## ログに「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」というエラーが発生する場合 {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
