@@ -48,7 +48,7 @@ Oak は [JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html)（JCR 2.
 * ストレージを接続可能にする
 * クラスター化メカニズムを提供する
 
-### Oak Core {#oak-core}
+### Oak Core  {#oak-core}
 
 Oak Core は、ストレージレイヤーに複数のレイヤーを追加します。
 
@@ -56,7 +56,7 @@ Oak Core は、ストレージレイヤーに複数のレイヤーを追加し�
 * 検索およびインデックス作成
 * 監視
 
-### Oak JCR {#oak-jcr}
+### Oak JCR  {#oak-jcr}
 
 Oak JCR の主な目的は、JCR セマンティクスをツリー操作に変換することです。また、次の役割も果たします。
 
@@ -69,7 +69,7 @@ Oak JCR の主な目的は、JCR セマンティクスをツリー操作に変�
 
 Oak ストレージレイヤーは、コンテンツの実際のストレージに抽象化レイヤーを提供します。
 
-Currently, there are two storage implementations available in AEM6: **Tar Storage** and **MongoDB Storage**.
+現在、AEM6では2つのストレージ実装を使用できます。**Tarストレージ**&#x200B;と&#x200B;**MongoDBストレージ**。
 
 ### Tar ストレージ {#tar-storage}
 
@@ -91,7 +91,7 @@ Tar ストレージでは tar ファイルを使用します。このストレ�
 
 I/O コストを削減し、可能な限りキャッシュにコンテンツを収めるように、レコードの形式がサイズに合わせて最適化されます。
 
-### Mongo ストレージ {#mongo-storage}
+### Mongo ストレージ  {#mongo-storage}
 
 MongoDB ストレージは、MongoDB を活用してシャーディングとクラスター化をおこないます。リポジトリツリーは 1 つの MongoDB データベースに保持されます。このデータベースでは、各ノードは個別のドキュメントになります。
 
@@ -121,7 +121,7 @@ MongoDB ストレージを使用した一般的な AEM クラスターのセッ�
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-## What is different from Jackrabbit 2? {#what-is-different-from-jackrabbit}
+## ジャックラビット2とは何が違うの？{#what-is-different-from-jackrabbit}
 
 Oak は JCR 1.0 標準との下位互換性を確保するように設計されているので、ユーザーレベルでの変更はほとんどありません。ただし、Oak ベースの AEM インストールをセットアップする場合に考慮しなければならない顕著な違いがいくつか存在します。
 
