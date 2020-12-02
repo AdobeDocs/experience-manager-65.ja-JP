@@ -18,7 +18,7 @@ ht-degree: 43%
 ---
 
 
-# メンバーの貢献度の制限 {#member-contribution-limits}
+# メンバーの貢献度の制限  {#member-contribution-limits}
 
 ## 概要 {#overview}
 
@@ -42,18 +42,18 @@ ht-degree: 43%
 
 * プライマリパブリッシャー：
 * 管理者権限でサインインします。
-* Access the [Web Console](../../help/sites-deploying/configuring-osgi.md).
+* [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
 
-   * For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Locate `AEM Communities User Generated Content Contribution Limits Configuration`.
+* `AEM Communities User Generated Content Contribution Limits Configuration`を探します。
 * 編集アイコンを選択します。
 
 ![configure-limits](assets/configure-limits.png)
 
 * **[!UICONTROL UGC貢献度制限の自動適用]**
 
-   このオプションを選択すると、コミュニティメンバーとして登録するユーザーに対して貢献度の制限が自動的に設定されます。 This is reflected in the community member&#39;s profile and may be enabled/disabled from the [members console](members.md). ドメインの許可リストからの電子メールアドレスを持つ新しいメンバーは、制約を受けません。
+   このオプションを選択すると、コミュニティメンバーとして登録するユーザーに対して貢献度の制限が自動的に設定されます。 これはコミュニティのメンバーのプロファイルに反映され、[メンバーコンソール](members.md)で有効/無効にできます。 ドメインの許可リストからの電子メールアドレスを持つ新しいメンバーは、制約を受けません。
 
    初期設定はオフです。
 
@@ -85,4 +85,4 @@ ht-degree: 43%
 
    初期設定では、メッセージの受信者はいません。
 
-注意：デフォルト設定では、1時間の期間内の投稿数は10件に制限されます。
+注意：デフォルト設定では、1時間の間に10件の投稿が制限されます。
