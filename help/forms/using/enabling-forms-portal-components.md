@@ -17,7 +17,7 @@ ht-degree: 48%
 ---
 
 
-# フォームポータルコンポーネントの有効化 {#enabling-forms-portal-components}
+# フォームポータルコンポーネントの有効化  {#enabling-forms-portal-components}
 
 フォームポータルコンポーネントは、デフォルトで使用できません。コンポーネントをAEMサイドキックで使用可能なコンポーネントのリストに表示するには、次の手順を実行します。
 
@@ -25,15 +25,15 @@ ht-degree: 48%
 
 1. 静的テンプレートを使用するページに対して、次の手順を実行します。
 
-   1. In the page header, tap ![canvas-drop-down](assets/canvas-drop-down.png) > **Design** to open the page in Design mode.
-   1. Tap any component (with a blue border) and then tap ![field-level](assets/field-level.png) to select the paragraph system containing the current component.
-   1. In the paragraph system, tap ![settings_icon](assets/settings_icon.png) to open the Edit dialog for the paragraph system.
+   1. ページヘッダーで、![canvas-drop-down](assets/canvas-drop-down.png) > **Design**&#x200B;をタップし、デザインモードでページを開きます。
+   1. 任意の（青い境界線の付いた）コンポーネントをタップし、![field-level](assets/field-level.png)をタップして、現在のコンポーネントを含む段落システムを選択します。
+   1. 段落システムで![settings_icon](assets/settings_icon.png)をタップし、段落システムの編集ダイアログを開きます。
    1. 「**[!UICONTROL 許可されているコンポーネント]**」のリストから、**[!UICONTROL Document Services]** コンポーネントと **[!UICONTROL Document Services Predicates]** コンポーネントのチェックボックスをオンにします。「**[!UICONTROL OK]**」をタップします。
 
 1. 動的テンプレートを使用するページに対して、次の手順を実行します。
 
-   1. In the page header, tap ![properties](assets/properties.png) > **Edit Template** to open the template of the page.
-   1. 「 **レイアウトコンテナ** 」をタップし、「 ![FeedManagement](/help/forms/using/assets/feedmanagement.png)」をタップします。 In the **Allowed Components** tab, enable the **Document Services and Document Services Predicates** options, and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. ページヘッダーで、![プロパティ](assets/properties.png)/**テンプレートを編集**&#x200B;をタップして、ページのテンプレートを開きます。
+   1. **レイアウトコンテナ**&#x200B;をタップし、![FeedManagement](/help/forms/using/assets/feedmanagement.png)をタップします。 「**許可されているコンポーネント**」タブで、「**ドキュメントサービスとドキュメントサービスの述部**」オプションを有効にし、![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)をタップします。
 
 >[!NOTE]
 >
