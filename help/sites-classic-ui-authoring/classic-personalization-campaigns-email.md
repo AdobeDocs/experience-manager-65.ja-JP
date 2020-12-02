@@ -47,7 +47,7 @@ ht-degree: 96%
 >
 >電子メールプロバイダーを変更した場合は、ニュースレターが先にパブリッシュインスタンスに公開されていないか、パブリッシュインスタンスが使用できない状態で、フライトテストを実行するか、ニュースレターを送信すると、これらの操作が失敗します。ニュースレターが確実に公開されていることと、パブリッシュインスタンスが稼動していることを確認してください。
 
-## ニュースレターのエクスペリエンスの作成 {#creating-a-newsletter-experience}
+## ニュースレターのエクスペリエンスの作成  {#creating-a-newsletter-experience}
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Before sending newsletters, check the OSGi configuration for Day CQ Link Externalizer at `https://localhost:4502/system/console/configMgr`.
+>ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`にあるDay CQ Link ExternalizerのOSGi設定を確認してください。
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
@@ -222,7 +222,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Before sending newsletters, check the OSGi configuration for Day CQ Link Externalizer at `https://localhost:4502/system/console/configMgr`.
+>ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`にあるDay CQ Link ExternalizerのOSGi設定を確認してください。
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
@@ -257,7 +257,7 @@ ht-degree: 96%
    >
    >ニュースレターが受信されたことを確認できるように、自分も受信者の 1 人にします。
 
-### リストからのニュースレターの送信 {#sending-newsletters-from-a-list}
+### リストからのニュースレターの送信  {#sending-newsletters-from-a-list}
 
 リストからニュースレターを送信するには：
 
@@ -287,7 +287,7 @@ ht-degree: 96%
 
 ここでは、ニュースレターを購読する方法について説明します。
 
-### ニュースレターの購読 {#subscribing-to-a-newsletter-1}
+### ニュースレターの購読  {#subscribing-to-a-newsletter-1}
 
 ニュースレターを購読するには（例として Geometrixx Web サイトを使用）：
 
