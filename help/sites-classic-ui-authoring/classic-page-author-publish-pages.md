@@ -56,7 +56,7 @@ ht-degree: 82%
 
 
 
-## ページの公開 {#publishing-a-page}
+## ページの公開  {#publishing-a-page}
 
 ページをアクティベートするには、以下の 2 つの方法があります。
 
@@ -121,7 +121,7 @@ Web サイトコンソールで、ページをアクティベートできます�
 後でアクティベートするようにスケジュールを設定するには：
 
 1. Web サイトコンソールで、**アクティベート**&#x200B;メニューの「**後でアクティベート**」を選択します。
-1. In the dialog that opens you provide the date and time for activation and click **OK**. This creates a version of the page that is activated at the specified time.
+1. 開いたダイアログで、アクティベーションの日時を指定し、「**OK**」をクリックします。これにより、指定した時間にアクティブ化されるバージョンのページが作成されます。
 
    ![screen_shot_2012-02-08at14751pm](assets/screen_shot_2012-02-08at14751pm.png)
 
@@ -129,13 +129,13 @@ Web サイトコンソールで、ページをアクティベートできます�
 
 このアクティベートまたはアクティベートの解除をキャンセルする場合は、[ワークフローコンソール](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd)に移動して、対応するワークフローを終了します。
 
-### 後でアクティベートを解除 {#deactivate-later}
+### 後でアクティベートを解除  {#deactivate-later}
 
 後でアクティベートを解除するようにスケジュールを設定するには：
 
-1. In the Website console, go to the **Deactivate** menu, and select **Deactivate later**.
+1. Webサイトコンソールで、**非アクティブ化**&#x200B;メニューに移動し、**後で非アクティブ化**&#x200B;を選択します。
 
-1. In the dialog that opens you provide the date and time for deactivation and click **OK**.
+1. 開いたダイアログで、非アクティブ化の日時を指定し、「**OK**」をクリックします。
 
    ![screen_shot_2012-02-08at15129pm](assets/screen_shot_2012-02-08at15129pm.png)
 
@@ -143,7 +143,7 @@ Web サイトコンソールで、ページをアクティベートできます�
 
 このアクティベートの解除をキャンセルする場合は、[ワークフローコンソール](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd)に移動して、対応するワークフローを終了します。
 
-## アクティベート／アクティベート解除のスケジュール設定（オンタイム／オフタイム） {#scheduled-activation-deactivation-on-off-time}
+## アクティベート／アクティベート解除のスケジュール設定（オンタイム／オフタイム）  {#scheduled-activation-deactivation-on-off-time}
 
 ページの公開または非公開をおこなう時間をスケジュール設定することができます。そのためには、**ページプロパティ**&#x200B;で定義できる「**オンタイム**」と「[オフタイム](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)」を使用します。
 
@@ -151,21 +151,21 @@ Web サイトコンソールで、ページをアクティベートできます�
 
 [Web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)からステータスを確認できます。色の違いにより公開ステータスが示されます。
 
-## Web サイトのセクション全体（ツリー）のアクティベート {#activating-a-complete-section-tree-of-your-website}
+## Web サイトのセクション全体（ツリー）のアクティベート  {#activating-a-complete-section-tree-of-your-website}
 
 「**Web サイト**」タブから、個々のページをアクティベートできます。多数のコンテンツページを入力または更新した場合、これらのページがすべて同じルートページの下にあれば、ツリー全体を 1 回の操作で簡単にアクティベートできます。また、ドライランを実行してアクティベートをエミュレートし、アクティベートされたページをハイライト表示することもできます。
 
-1. Open the **Tools** console by selecting it from the **Welcome** page and then double-click **Replication** to open the console ( `https://localhost:4502/etc/replication.html`).
+1. **ツール**&#x200B;コンソールを&#x200B;**ようこそ**&#x200B;ページから選択して開き、**レプリケーション**&#x200B;を重複クリックしてコンソールを開きます(`https://localhost:4502/etc/replication.html`)。
 
    ![screen_shot_2012-02-08at125033pm](assets/screen_shot_2012-02-08at125033pm.png)
 
 1. **レプリケーション**&#x200B;コンソールで、「**ツリーをアクティベート**」をクリックします。
 
-   The following window ( `https://localhost:4502/etc/replication/treeactivation.html`) will be displayed.
+   次のウィンドウ(`https://localhost:4502/etc/replication/treeactivation.html`)が表示されます。
 
    ![screen_shot_2012-02-08at125033pm-1](assets/screen_shot_2012-02-08at125033pm-1.png)
 
-1. Enter the **Start Path**. This specifies the path to the root of the section you want to activate (publish). This page and all pages underneath are considered for activation (or used in the emulation if a Dry Run is selected).
+1. **開始パス**&#x200B;を入力します。アクティブ化（公開）するセクションのルートへのパスを指定します。 このページとその下のすべてのページは、アクティベーションの対象と見なされます（または、「ドライ作動」が選択されている場合はエミュレーションで使用されます）。
 1. 必要に応じて、次の選択基準のチェックをオンにします。
 
    * **変更済みのみ**：変更されたページのみアクティベートします。
@@ -174,6 +174,6 @@ Web サイトコンソールで、ページをアクティベートできます�
 
 1. 実行するアクションを選択します。
 
-   1. Select **Dry Run** if you want to check which pages *would* be activated. This is only an emulation, no pages will be activated.
+   1. ***が起動するページを確認する場合は、&lt;a0/>ドライ作動**を選択します。これはエミュレーションのみで、ページはアクティブ化されません。*
 
-   1. Select **Activate** if you want to activate the pages.
+   1. ページをアクティブにする場合は、「**アクティブ化**」を選択します。
