@@ -22,7 +22,7 @@ ht-degree: 59%
 
 このページでは、ファイルライブラリ機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -48,14 +48,14 @@ ht-degree: 59%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="file-library.md">File Library Feature</a></td>
+   <td><a href="file-library.md">ファイルライブラリ機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [ファイルライブラリ API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/filelibrary/client/api/package-summary.html)
 
@@ -63,11 +63,11 @@ ht-degree: 59%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### ファイルライブラリ機能 {#file-library-function}
+### ファイルライブラリ機能  {#file-library-function}
 
-A community site structure that includes the [File Library function](functions.md#file-library-function), includes a configured `file library` component.
+[ファイルライブラリ関数](functions.md#file-library-function)を含むコミュニティサイト構造には、構成された`file library`コンポーネントが含まれます。
 
-### Accessing Comments Posted for File Libraries (UGC) {#accessing-comments-posted-for-file-libraries-ugc}
+### ファイルライブラリ(UGC)用に投稿されたコメントへのアクセス{#accessing-comments-posted-for-file-libraries-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -78,7 +78,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
