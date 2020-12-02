@@ -22,7 +22,7 @@ ht-degree: 66%
 
 # AEM Forms のアセットとドキュメントの移行{#migrate-aem-forms-assets-and-documents}
 
-The Migration utility converts the [Adaptive Forms assets](../../forms/using/introduction-forms-authoring.md), [cloud configrurations](/help/sites-developing/extending-cloud-config.md), and [Correspondence Management assets](/help/forms/using/cm-overview.md) from the format used in the earlier versions to the format used in AEM 6.5 Forms. 移行ユーティリティを実行すると、次の項目が移行されます。
+移行ユーティリティは、[アダプティブFormsアセット](../../forms/using/introduction-forms-authoring.md)、[クラウド設定](/help/sites-developing/extending-cloud-config.md)、[Correspondence Managementアセット](/help/forms/using/cm-overview.md)を、以前のバージョンで使用されていた形式からAEM 6.5Formsで使用されていた形式に変換します。 移行ユーティリティを実行すると、次の項目が移行されます。
 
 * アダプティブフォームのカスタムコンポーネント
 * アダプティブフォームと Correspondence Management のテンプレート
@@ -33,29 +33,29 @@ The Migration utility converts the [Adaptive Forms assets](../../forms/using/int
 >
 >アウトオブプレースアップグレードを実行する場合（Correspondence Management のアセットを移行する場合）は、アセットをインポートするたびに、移行ユーティリティを実行することができます。Correspondence Management を移行する場合は、Forms 互換性パッケージがインストールされている必要があります。
 
-## 移行の方法 {#approach-to-migration}
+## 移行の方法  {#approach-to-migration}
 
-You can [upgrade](../../forms/using/upgrade.md) to the latest version of AEM Forms 6.5 from AEM Forms 6.4, 6.3, or 6.2 or perform a fresh installation. 以前のインストール環境をアップグレードしたのか、新規インストールを実行したのかに応じて、以下に示すいずれかの手順を実行してください。
+[](../../forms/using/upgrade.md)AEM Forms6.4、6.3、または6.2からAEM Forms6.5の最新バージョンに&lt;a0/>アップグレードするか、新しいインストールを実行できます。 以前のインストール環境をアップグレードしたのか、新規インストールを実行したのかに応じて、以下に示すいずれかの手順を実行してください。
 
 **インプレースアップグレードを実行した場合**
 
 インプレースアップグレードを実行した場合、アップグレードインスタンスにはすでにアセットやドキュメントが存在します。ただし、これらのアセットやドキュメントを使用する前に、[AEMFD 互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)（Correspondence Management 互換性パッケージが含まれています）をインストールする必要があります。
 
-Then you need to update the assets and documents by [running the Migration utility](#runningmigrationutility).
+次に、[移行ユーティリティ](#runningmigrationutility)を実行して、アセットとドキュメントを更新する必要があります。
 
 **新規インストールを実行した場合**
 
-If it is an out of place (fresh) installation, before you can use the assets and documents, you will need to install [AEMFD Compatibility package](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) (includes the Correspondence Management Compatibility package).
+アセットとドキュメントを使用する前に、アセットが不適切な（新規の）インストールである場合は、[AEMFD互換パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)（Correspondence Management互換パッケージを含む）をインストールする必要があります。
 
-Then you need to import your asset package (zip or cmp) on the new setup and then update the assets and documents by [running the Migration utility](#runningmigrationutility). Adobeでは、移行ユーティリティを実行した後にのみ、新しいセットアップで新しいアセットを作成することをお勧めします。
+次に、新しい設定でアセットパッケージ（zipまたはcmp）を読み込み、移行ユーティリティ](#runningmigrationutility)を実行して[アセットとドキュメントを更新する必要があります。 Adobeでは、移行ユーティリティを実行した後にのみ、新しいセットアップで新しいアセットを作成することをお勧めします。
 
 [後方互換性に関する要件](/help/sites-deploying/backward-compatibility.md)が変更されたことに伴い、CRX リポジトリ内のいくつかのフォルダーの場所が変更されています。以前の設定から新規環境に対して、依存関係（カスタムライブラリおよびアセット）を手動で書き出し、読み込みます。
 
-## Read before you proceed with the migration {#prerequisites}
+## 移行を進める前に{#prerequisites}を読んでください
 
 Correspondence Management のアセットを移行する場合は、以下の点に注意してください。
 
-* For the assets that are imported from the previous platform, a property gets added: **fd:version=1.0**.
+* 以前のプラットフォームから読み込んだアセットに対して、プロパティが追加されます。**fd:version=1.0**。
 * AEM 6.1 Forms 以降、コメントは初期状態では使用できません。以前に追加したコメントはアセット内で使用できますが、インターフェイスには自動的に表示されません。 コメントを表示させるには、AEM Forms のユーザーインターフェイスで extendedProperties プロパティをカスタマイズする必要があります。
 * LiveCycle ES4 など、旧バージョンの一部では Flex RichTextEditor を使用してテキストを編集しましたが、AEM 6.1 Forms 以降では HTML エディターを使用します。このレンダリングにより、フォント、フォントサイズ、フォントマージンの外観は以前のバージョンの作成者ユーザーインターフェイスでの外観と異なる可能性があります。ただし、レターは同じように表示されます。
 * テキストモジュールのリストが改善され、別々にレンダリングされるようになりました。外観や表示が今までと異なるところがあります。テキストモジュールのリストを使用している場所で、レターのレンダリングや表示を行うことをお勧めします。
@@ -112,7 +112,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
    >
    >
    >
-   >    * カスタムコンポーネントのルールとスクリプト（6.3からアップグレードした場合は不要）を移行するには、「アダプティブFormsカスタムコンポーネントの移行」をタップし、次の画面で「開始の移行」をタップします。 次の移行が行われます。   >
+   >    * カスタムコンポーネントのルールとスクリプト（6.3からアップグレードした場合は不要）を移行するには、「アダプティブFormsカスタムコンポーネントの移行」をタップし、次の画面で「開始の移行」をタップします。 次の移行が行われます。    >
       >
       >
       >        
@@ -133,16 +133,16 @@ Correspondence Management のアセットを移行する場合は、以下の点
       >        * 新しいテンプレート — /confの下のテンプレートエディターを使用して作成されたアダプティブフォームテンプレート。 これには、ルールエディターで作成されたルールとスクリプトが含まれます。
 
 
-   * To migrate adaptive form custom components, tap **Adaptive Forms Custom Components Migration** and in the Custom Components Migration page, tap **Start Migration**. 次のものが移行されます。
+   * アダプティブフォームのカスタムコンポーネントを移行するには、**「アダプティブFormsカスタムコンポーネントの移行**」をタップし、カスタムコンポーネントの移行ページで&#x200B;**開始の移行**&#x200B;をタップします。 次のものが移行されます。
 
       * アダプティブフォーム用に書き込まれたカスタムコンポーネント
       * コンポーネントのオーバーレイ（存在する場合）
-   * To migrate adaptive form templates, tap **Adaptive Forms Template Migration** and in the Custom Components Migration page, tap **Start Migration**. 次のものが移行されます。
+   * アダプティブフォームテンプレートを移行するには、**「アダプティブFormsテンプレートの移行**」をタップし、カスタムコンポーネントの移行ページで&#x200B;**「開始の移行**」をタップします。 次のものが移行されます。
 
       * AEM テンプレートエディターを使用して /apps フォルダーまたは /conf フォルダー内に作成されたアダプティブフォームテンプレート
    * 新しいコンテキスト認識クラウドサービスメカニズムを使用するには、AEM Forms クラウド設定サービスを移行する必要があります。このメカニズムには、タッチ操作が可能な UI が用意されています（/conf フォルダーに保管されています）。AEM Formsクラウド設定サービスを移行すると、/etcのクラウドサービスは/confに移動されます。 レガシーパス(/etc)に依存するクラウドサービスのカスタマイズがない場合は、6.5にアップグレードした直後に移行ユーティリティを実行し、以降の作業にはクラウド設定のタッチUIを使用することをお勧めします。 既存のクラウドサービスがカスタマイズされている場合は、移行後のパス（/conf フォルダー）に合わせてカスタマイズ内容を更新するまでは、アップグレード後のセットアップ環境で既存の UI を使用してください。カスタマイズ内容の更新が完了したら、移行ユーティリティを実行してください。
 
-   To migrate **AEM Forms cloud services**, which include the following, tap AEM Forms Cloud Configuration Migration (cloud config migration is independent of AEMFD Compatibility package), tap AEM Forms Cloud Configurations Migration and then on the Configuration Migration page, tap **Start Migration**:
+   次を含む&#x200B;**AEM Formsクラウドサービス**&#x200B;を移行するには、「AEM Formsクラウド設定の移行」をタップし（クラウド設定の移行はAEMFD互換パッケージとは独立）、「AEM Formsクラウド設定の移行」をタップし、設定の移行ページで&#x200B;**開始の移行**&#x200B;をタップします。
 
    * フォームデータモデルのクラウドサービス
 
@@ -189,17 +189,17 @@ Correspondence Management のアセットを移行する場合は、以下の点
 
 1. 移行ユーティリティが実行を終了した後、[ハウスキーピングタスク](#housekeepingtasks)に進みます。
 
-### 移行ユーティリティ実行後のハウスキーピングタスク {#housekeepingtasks}
+### 移行ユーティリティ実行後のハウスキーピングタスク  {#housekeepingtasks}
 
 移行ユーティリティを実行した後、次のハウスキーピングタスクを行います。[](../../forms/using/import-export-forms-templates.md)
 
 1. レイアウトおよびフラグメントレイアウトのXFAバージョンが3.3以降であることを確認します。 古いバージョンのレイアウトとフラグメントレイアウトを使用している場合は、レターのレンダリングで問題が発生する可能性があります。 古いXFAのバージョンを最新バージョンに更新するには、次の手順を実行します。
 
-   1. [XFAをzipファイルとしてFormsユーザーインターフェイス](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) からダウンロードします。
+   1. [XFAをzip](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) ファイルとしてFormsユーザーインターフェイスからダウンロードします。
    1. ファイルを解凍します。
    1. 最新の Designer で XFA ファイルを開き、保存します。XFA が最新バージョンに更新されます。
    1. XFA を Forms ユーザーインターフェイスでアップロードします。
 
 1. 移行前に以前のシステムで発行されたすべてのアセットを発行します。移行ユーティリティは、オーサーインスタンスでのみアセットを更新して、アセットを発行する必要のあるパブリッシュインスタンスでアセットを更新します。
-1. AEM Forms6.4および6.5では、formsユーザーグループの権限の一部が変更されています。 ユーザーが XDP やスクリプトを含むアダプティブフォームをアップロードしたりコードエディターを使用したりできるようにするには、そのユーザーを forms-power-users グループに追加する必要があります。同様に、template-authors グループのユーザーは、ルールエディターのコードエディターを使用できなくなります。ユーザーがコードエディターを使用できるようにするには、そのユーザーを af-template-script-writers グループに追加します。For instructions on adding users to groups, see [Managing Users and User Groups](/help/communities/users.md).
+1. AEM Forms6.4および6.5では、formsユーザーグループの権限の一部が変更されています。 ユーザーが XDP やスクリプトを含むアダプティブフォームをアップロードしたりコードエディターを使用したりできるようにするには、そのユーザーを forms-power-users グループに追加する必要があります。同様に、template-authors グループのユーザーは、ルールエディターのコードエディターを使用できなくなります。ユーザーがコードエディターを使用できるようにするには、そのユーザーを af-template-script-writers グループに追加します。ユーザーをグループに追加する手順については、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
 
