@@ -39,13 +39,13 @@ Oakインデックスを管理するためのoak-run.jarインデックスコマ
 1. このツールは、AEM にアクセスできない場合でも使用可能です。
 1. このツールは簡単に使用できます。
 
-Checking for corrupt indexes can be performed via `--index-consistency-check` operation:
+破損したインデックスのチェックは、`--index-consistency-check`操作を使用して実行できます：
 
 ```shell
 java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstore/ --index-consistency-check
 ```
 
-This will generate a report in `indexing-result/index-consistency-check-report.txt`. サンプルレポートについては、以下を参照してください。
+これにより、`indexing-result/index-consistency-check-report.txt`にレポートが生成されます。 サンプルレポートについては、以下を参照してください。
 
 ```
 Valid indexes :
@@ -73,7 +73,7 @@ Valid indexes :
 
 このツールを使用することにより、サポートおよびシステム管理者は、破損しているインデックスをすばやく特定し、これらのインデックスを再作成できるようになりました。
 
-## 使用例 2 - インデックス統計 {#usecase2indexstatistics}
+## 使用例 2 - インデックス統計  {#usecase2indexstatistics}
 
 以前は、クエリパフォーマンスに関して診断する場合、お客様のセットアップの既存のインデックス定義やインデックス関連統計が必要になることがありました。これらの情報は、これまで複数のリソースに散在していました。より簡単にトラブルシューティングできるように、次の特長を持つツールが用意されています。
 
@@ -99,7 +99,7 @@ Valid indexes :
 java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstore/ --index-info --index-definitions --index-dump
 ```
 
-The reports would be generated in `indexing-result/index-info.txt` and `indexing-result/index-definitions.json`
+レポートは`indexing-result/index-info.txt`と`indexing-result/index-definitions.json`に生成されます
 
 また、同じ詳細が Web コンソール経由でも提供され、設定のダンプ zip にも含まれます。この詳細には、次の場所からアクセスできます。
 
@@ -109,9 +109,9 @@ The reports would be generated in `indexing-result/index-info.txt` and `indexing
 
 このツールを使用すると、インデックス作成またはクエリの問題に関連するすべての必要な詳細をすばやく収集できるので、この情報の抽出にかかる時間を短縮できます。
 
-## 使用例 3 - インデックス再作成 {#usecase3reindexing}
+## 使用例 3 - インデックス再作成  {#usecase3reindexing}
 
-[シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)によっては、インデックス再作成の実行が必要な場合があります。Currently the reindexing is done by setting the `reindex` flag to `true` in the index definition node via CRXDE or via the Index Manager user interface. このフラグが設定されると、インデックス再作成が非同期的におこなわれます。
+[シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)によっては、インデックス再作成の実行が必要な場合があります。現在、再インデックスは、CRXDEまたはIndex Managerユーザーインターフェイスを介して、インデックス定義ノードの`reindex`フラグを`true`に設定することで行われます。 このフラグが設定されると、インデックス再作成が非同期的におこなわれます。
 
 次に、インデックス再作成に関するいくつかの注意点を示します。
 
@@ -144,7 +144,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 これには次のメリットがあります。
 
 * 実行中の AEM インスタンスへの影響が少ない。ほとんどの読み取りはセカンダリサーバーから実行できます。実行中の AEM のキャッシュは、インデックス再作成に必要とされるトラバーサルをすべて考慮しても、悪影響は受けません。
-* Users can also provide a JSON of a new or updated index via the `--index-definitions-file` option.
+* また、`--index-definitions-file`オプションを使用して、新しいインデックスや更新されたインデックスのJSONを指定することもできます。
 
 ### インデックス再作成 - SegmentNodeStore {#reindexsegmentnodestore}
 
@@ -171,7 +171,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 このシナリオでは、AEM サーバーを停止したり、新しいインスタンスをプロビジョニングしたりする必要はありません。ただし、インデックス作成にはリポジトリ全体のトラバーサルが伴うので、インストールへの I/O 負荷が増加し、実行時のパフォーマンスに悪影響があります。
 
-#### オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンスのシャットダウン {#onlinereindexsegmentnodestoreaeminstanceisdown}
+#### オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンスのシャットダウン  {#onlinereindexsegmentnodestoreaeminstanceisdown}
 
 `SegmentNodeStore` インストールでは、単一の oak-run コマンドを使用してインデックス再作成をおこなうことができます。ただし、AEM インスタンスをシャットダウンする必要があります。
 
@@ -183,19 +183,19 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 この方法と前述の方法の違いは、チェックポイントの作成とインデックスの読み込みが自動的におこなわれることです。欠点は、処理中に AEM を終了する必要があることです。
 
-#### Out of Band のインデックス再作成 - SegmentNodeStore {#outofbandreindexsegmentnodestore}
+#### Out of Band のインデックス再作成 - SegmentNodeStore  {#outofbandreindexsegmentnodestore}
 
 この使用例では、クローン作成された設定でインデックスを再作成して、実行中の AEM インスタンスへの影響を最小限に抑えることができます。
 
-1. JMX 操作でチェックポイントを作成します。これをおこなうには、[JMX コンソール](/help/sites-administering/jmx-console.md)に移動して、`CheckpointManager` を検索します。Then, click on the **createCheckpoint(long p1)** operation using a high value for expiration in seconds (for example, **2592000**).
-1. Copy the `crx-quickstart` folder to a new machine
+1. JMX 操作でチェックポイントを作成します。これをおこなうには、[JMX コンソール](/help/sites-administering/jmx-console.md)に移動して、`CheckpointManager` を検索します。次に、有効期限を秒数で示す高い値（**2592000**&#x200B;など）を使用して、**createCheckpoint(long p1)**&#x200B;操作をクリックします。
+1. `crx-quickstart`フォルダーを新しいマシンにコピーします
 1. oak-run の index コマンドを使用してインデックスを再作成します。
 
 1. 生成されたインデックスファイルを AEM サーバーにコピーします。
 
 1. JMX を使用してインデックスファイルを読み込みます。
 
-この使用例では、別のインスタンスのデータストアにアクセスできることを前提としています。`FileDataStore` が EBS などのクラウドベースのストレージソリューションに配置されている場合は、このデータストアにアクセスできないことがあります。This excludes the scenario where `FileDataStore` is also cloned. インデックス定義でフルテキストのインデックス作成が実行されない場合は、`DataStore` へのアクセスは必要ありません。
+この使用例では、別のインスタンスのデータストアにアクセスできることを前提としています。`FileDataStore` が EBS などのクラウドベースのストレージソリューションに配置されている場合は、このデータストアにアクセスできないことがあります。これは、`FileDataStore`も複製されるシナリオを除外します。 インデックス定義でフルテキストのインデックス作成が実行されない場合は、`DataStore` へのアクセスは必要ありません。
 
 ## 使用例 4 - インデックス定義の更新 {#usecase4updatingindexdefinitions}
 
@@ -207,7 +207,7 @@ oak-run では、インデックス定義を JSON 形式で提供したり、out
 
 この使用例を検討する必要があるプロセスは次のとおりです。
 
-1. A developer would update the index definitions on a local instance and then generate an index definition JSON file via the `--index-definitions` option
+1. 開発者は、ローカルインスタンスのインデックス定義を更新し、`--index-definitions`オプションを使用してインデックス定義JSONファイルを生成します
 
 1. 更新された JSON がシステム管理者に提供されます。
 1. システム管理者は out-of-band 方式に従って、別のインストールでインデックスを準備します。
