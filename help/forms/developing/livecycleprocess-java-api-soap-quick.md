@@ -18,9 +18,9 @@ ht-degree: 1%
 ---
 
 
-# LiveCycleProcess Java API(SOAP)クイック開始 {#livecycleprocess-java-api-soap-quick-start}
+# LiveCycleProcess Java API (SOAP)クイック開始{#livecycleprocess-java-api-soap-quick-start}
 
-プロセスでJava API(SOAP)クイック開始を使用できます。 プ *ロセスインスタンス* は、呼び出しAPIなどの呼び出しメソッドによって開始された、またはWorkspace内から開始された、特定のプロセスのオカレンスです。
+プロセスでJava API(SOAP)クイック開始を使用できます。 *プロセスインスタンス*&#x200B;は、呼び出しAPIなどの呼び出しメソッドによって開始された、またはWorkspace内から開始された、特定のプロセスのオカレンスです。
 
 [クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの検索](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
@@ -40,9 +40,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 >
 >「AEM Formsでのプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの検索 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}を使用したプロセスインスタンスの検索
 
-以下のJavaコードの例では、MortgageLoan - Prebuild ** プロセスに基づくプロセスインスタンスを検索します。
+次のJavaコードの例では、*MortgageLoan - Prebuild*&#x200B;プロセスに基づくプロセスインスタンスを検索します。
 
 ```java
  /*
@@ -158,7 +158,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの一時停止 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}を使用してプロセスインスタンスを中断する
 
 以下のJavaコードの例では、プロセスインスタンスを中断します。 プロセスインスタンスを正常に休止するには、呼び出しAPIを使用して長期間有効なプロセスを呼び出すときに取得できるプロセス呼び出し識別子が必要です。
 
@@ -250,7 +250,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用した中断されたプロセスインスタンスの開始 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}を使用して、中断されたプロセスインスタンスを開始する
 
 以下のJavaコードの例では、中断されたプロセスインスタンスを開始します。
 
@@ -338,7 +338,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスインスタンスの終了 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}を使用してプロセスインスタンスを終了中
 
 次のJavaコードの例では、識別子の値756c22860a242fb101ec7a5bc0977fd6でプロセスインスタンスを終了します。
 
@@ -429,9 +429,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したプロセスデータの削除 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}を使用したプロセスデータの削除
 
-次のJavaコードは、SecureDocumentという名前のプロセスからデータを削除し *ます*。 inValueという名前のプロセス変数が200より大きいプロセスインスタンスのデータを削除す *るように指定するフィルターが使用されます* 。
+次のJavaコードは、*SecureDocument*&#x200B;という名前のプロセスからデータを削除します。 *inValue*&#x200B;という名前のプロセス変数が200より大きいプロセスインスタンスのデータを削除するように指定するフィルターが使用されます。
 
 ```java
  /*
@@ -536,7 +536,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したジョブのステータスの取得 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}を使用したジョブのステータスの取得
 
 以下のコード例は、10件のAEM Formsジョブのステータスを取得します。
 
