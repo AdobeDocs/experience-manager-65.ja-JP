@@ -98,7 +98,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 1. [新しいページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)に必要な情報を収集するためのウィザードが開きます。画面に表示される手順に従ってください。
 
-### その他のアクションを実行するページの選択 {#selecting-your-page-for-further-action}
+### その他のアクションを実行するページの選択  {#selecting-your-page-for-further-action}
 
 アクションを実行するページを選択できます。ページを選択するとツールバーが自動的に更新され、そのリソースに関連するアクションが表示されます。
 
@@ -200,7 +200,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    >
    >コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
 
-### ページプロパティの編集 {#editing-the-page-properties}
+### ページプロパティの編集  {#editing-the-page-properties}
 
 [ページプロパティを編集する](/help/sites-authoring/editing-page-properties.md)には、（主に）以下の 2 つの方法があります。
 
@@ -253,7 +253,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    詳しくは、[ページの公開](/help/sites-authoring/publishing-pages.md#unpublishing-pages)を参照してください。
 
-### ページの移動、コピー、貼り付けまたは削除 {#move-copy-and-paste-or-delete-your-page}
+### ページの移動、コピー、貼り付けまたは削除  {#move-copy-and-paste-or-delete-your-page}
 
 これらのアクションはすべて次の操作で実行できます。
 
@@ -304,7 +304,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 1. 詳細を表示して適宜その他のアクションを実行するには、必要なタイプの参照をタップまたはクリックします。
 
-### ページのバージョンの作成 {#creating-a-version-of-your-page}
+### ページのバージョンの作成  {#creating-a-version-of-your-page}
 
 ページの[バージョン](/help/sites-authoring/working-with-page-versions.md)を作成するには：
 
