@@ -31,11 +31,11 @@ Formsサービスを使用して、次の操作を行います。
 * フォームデータの統合を有効にして、PDF フォームへのデータの読み込みおよび PDF フォームからのデータの抽出を行う。
 * フラグメントに基づいてフォームをレンダリングする。
 
-## PDF フォームの作成 {#creating-pdf-forms-nbsp}
+## PDF フォームの作成  {#creating-pdf-forms-nbsp}
 
 Form サービスを使用してデータキャプチャ用に PDF フォームを作成します。通常は AEM Forms Designer テンプレートを使用します。Forms サービスの `renderPDFForm`（Javadoc にリンク）操作を使用して、このテンプレートを PDF フォームに変換します。
 
-`renderPDFForm` 操作の最初のパラメーターはテンプレートファイルの名前（`ExpenseClaim.xdp` など）になります。テンプレートファイルは、ローカルファイルシステム、CRXリポジトリ、HTTPまたはFTPの場所に格納できます。 You can specify the location of the template file by setting the content root in the `PDFFormRenderOptions` parameter of the `renderPDFForm` operation. `PDFFormRenderOptions` パラメーターに対して指定できるその他のオプションの詳細については、Javadoc を参照してください。
+`renderPDFForm` 操作の最初のパラメーターはテンプレートファイルの名前（`ExpenseClaim.xdp` など）になります。テンプレートファイルは、ローカルファイルシステム、CRXリポジトリ、HTTPまたはFTPの場所に格納できます。 `renderPDFForm`操作の`PDFFormRenderOptions`パラメーターにコンテンツルートを設定して、テンプレートファイルの場所を指定できます。 `PDFFormRenderOptions` パラメーターに対して指定できるその他のオプションの詳細については、Javadoc を参照してください。
 
 `renderPDFForm` 操作は XML データを受け取ることもできます。PDFフォームを作成する場合、PDFフォームに指定したデータが含まれるように、XMLデータがテンプレートとマージされます。 `renderPDFForm` 操作の 2 番目のパラメーターは、XML データを含むドキュメント（Javadoc）オブジェクトを受け取ることができます。
 
@@ -43,7 +43,7 @@ Form サービスを使用してデータキャプチャ用に PDF フォーム�
 
 Forms サービスの `exportData`（Javadoc）操作を使用して、PDF フォームから XML データを抽出します。この操作はドキュメントを最初のパラメーターとして受け取ります。データは XDP ドキュメントまたは XML ファイルのどちらかとして書き出すことができます。データを XML ファイルとして書き出す場合、書き出されたデータは XDP エンベロープを削除してプレーン XML ファイルを返します。2 番目のパラメーターを使用してこの設定を指定できます。
 
-## PDF フォームへのデータの読み込み {#importing-data-into-pdf-forms}
+## PDF フォームへのデータの読み込み  {#importing-data-into-pdf-forms}
 
 Forms サービスを使用すると、AEM Forms Designer または `renderPDFForm` 操作を使用して作成された PDF フォームを XML データとマージすることもできます。Forms サービスの `importData`（Javadoc）操作は PDF フォームと XML データを受け取り、XML データを含んだ PDF フォームを返します。
 
