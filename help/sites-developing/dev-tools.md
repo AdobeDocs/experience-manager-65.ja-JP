@@ -22,11 +22,11 @@ ht-degree: 62%
 
 JCR、Apache Sling または AEM のアプリケーションを開発するために、以下のツールセットが用意されています。
 
-* one set consisting of [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) and WebDAV. CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルを作成、編集することができ、さらに SVN によるロギングや統合が可能です。
+* [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)とWebDAVで構成される1セット。 CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルを作成、編集することができ、さらに SVN によるロギングや統合が可能です。
 
    CRX/AEMサーバーに直接アクセスできない場合、標準搭載のコンポーネントとJavaバンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード完了、構文のハイライトが不要な場合に、CRXDE Liteをお勧めします。
 
-* one set consisting of an Integrated Development Environment (for example: [Eclipse](/help/sites-developing/howto-projects-eclipse.md) or [IntelliJ](/help/sites-developing/ht-intellij.md)), a build tool (for example: [Apache Maven](/help/sites-developing/ht-projects-maven.md)), FileVault which has been developed by Adobe to map a repository to a file system, a version control system (for example: Subversion), a bug tracker system (for example: Jira), a central dependency management system (for example: Apache Archiva) and a build automation system (for example: Apache Continuum).
+* 統合開発環境から成る1セット(例：[Eclipse](/help/sites-developing/howto-projects-eclipse.md)または[IntelliJ](/help/sites-developing/ht-intellij.md))、ビルドツール(例：[Apache Maven](/help/sites-developing/ht-projects-maven.md))、Adobeがリポジトリをファイルシステム、バージョン管理システム(例：Subversion)、バグトラッカーシステム(例：(Jira)は、中央依存関係管理システム(例：Apache Archiva)とビルド自動化システム(例：Apache Continuum)。
 
    このセットアップで、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境とプロセスに完全に統合できます。リポジトリのファイルシステムは FileVault によって様々な要素間のリンクで表わされ、前述のすべての開発ツールでファイルを操作できます。
 
@@ -38,7 +38,7 @@ JCR、Apache Sling または AEM のアプリケーションを開発するた�
 * [AEM Brackets Extension](/help/sites-developing/aem-brackets.md)
 * [AEM IntelliJ 拡張](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf)（Headwire）
 
-### その他のツール {#other-tools}
+### その他のツール  {#other-tools}
 
 AEM には開発に役立つその他のツールが付属しています。
 
@@ -61,5 +61,5 @@ AEM には開発に役立つその他のツールが付属しています。
 >[!NOTE]
 >
 >次のチュートリアルは、新しいAEMプロジェクトを開始する際に役立つ場合があります。
->[Getting Started with AEM Sites Part 1 - Project Setup](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
+>[AEM Sitesの使用の手引き1 — プロジェクトのセットアップ](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
 
