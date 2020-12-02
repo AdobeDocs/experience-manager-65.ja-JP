@@ -35,7 +35,7 @@ ht-degree: 97%
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-この例では、アプリケーションのようこそページを作成します。Taking a look at the source [https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75). アプリ開発者がようこそページを定義し、アプリでレンダリングされるページのテンプレートを提供していることがわかります。ここで、アプリ開発者と AEM 開発者が連携して作業する必要があります。Hybrid Reference App のようこそページのテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。AEM 開発者は同じパスを使用して AEM リポジトリ内にようこそページを作成するので、このパスは非常に重要です。
+この例では、アプリケーションのようこそページを作成します。ソース[https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75)を見てください。 アプリ開発者がようこそページを定義し、アプリでレンダリングされるページのテンプレートを提供していることがわかります。ここで、アプリ開発者と AEM 開発者が連携して作業する必要があります。Hybrid Reference App のようこそページのテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。AEM 開発者は同じパスを使用して AEM リポジトリ内にようこそページを作成するので、このパスは非常に重要です。
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
