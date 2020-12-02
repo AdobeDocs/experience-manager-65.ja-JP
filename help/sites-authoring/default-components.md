@@ -53,13 +53,13 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 [コンポーネントコンソール](/help/sites-authoring/default-components-console.md)では、AEM のインストールから提供されるコンポーネントグループとコンポーネントの概要を確認できます。個々のコンポーネントとその使用方法に関する主な情報を確認できます。
 
-## コンポーネント - 主な領域 {#components-major-areas}
+## コンポーネント - 主な領域  {#components-major-areas}
 
 次のページには、コンポーネントに関する重要な追加情報へのリンクが記載されています。
 
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) - コアコンポーネントは柔軟かつ機能豊富なオーサリング機能を提供します。ページを作成するうえで不可欠なコンテンツタイプが用意されています。
 
-* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。Many of these components are included when a [Community Site](/help/communities/overview.md) is created.
+* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。これらのコンポーネントの多くは、[コミュニティサイト](/help/communities/overview.md)が作成されたときに含まれます。
 
 * [eコマース](/help/sites-administering/ecommerce.md) - AEMのeコマース機能には、様々なコンポーネントも含まれています。実際の使用方法は、使用するコマースエンジンによって異なります。
 
