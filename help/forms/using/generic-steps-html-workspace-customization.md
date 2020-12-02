@@ -23,19 +23,19 @@ ht-degree: 52%
 
 カスタマイズを実行するための一般的な手順を以下に示します。
 
-1. にアクセスしてCRXDE Liteにログインし `https://'[server]:[port]'/lc/crx/de/index.jsp`ます。
-1. Create a folder named `ws`at `/apps`, if it does not exist. 「**[!UICONTROL すべて保存]**」をクリックします。
-1. Browse to `/apps/ws`, and navigate to the **[!UICONTROL Access Control]** tab.
-1. In the **[!UICONTROL Access Control]** list, click **[!UICONTROL +]** to add a new entry. もう一度「**[!UICONTROL +]**」をクリックします。
-1. Search and select the **PERM_WORKSPACE_USER** Principal.
+1. `https://'[server]:[port]'/lc/crx/de/index.jsp`にアクセスしてCRXDE Liteにログインします。
+1. `ws`という名前のフォルダーが存在しない場合は、`/apps`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. `/apps/ws`を参照し、**[!UICONTROL アクセス制御]**&#x200B;タブに移動します。
+1. **[!UICONTROL アクセス制御]**&#x200B;リストーで、**[!UICONTROL +]**&#x200B;をクリックして新しいエントリを追加します。 もう一度「**[!UICONTROL +]**」をクリックします。
+1. **PERM_WORKSPACE_USER**&#x200B;プリンシパルを検索して選択します。
 
    ![HTML Workspace をカスタマイズするための汎用手順の一部として PERM_WORKSPACE_USER プリンシパルを選択します](assets/perm_workspace_user.png)
 
-1. Give `jcr:read` privilege to the Principal.
+1. プリンシパルに`jcr:read`権限を与えます。
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
-1. Copy the `GET.jsp` and `html.jsp`files from the `/libs/ws`folder to the `/apps/ws` folder.
-1. フォルダー内の `/libs/ws/locales` フォルダーをコピー `/apps/ws` します。 「**[!UICONTROL すべて保存]**」をクリックします。
-1. Update the references and relative paths in the `GET.jsp` file, as shown below, and click **[!UICONTROL Save all]**.
+1. `GET.jsp`と`html.jsp`ファイルを`/libs/ws`フォルダーから`/apps/ws`フォルダーにコピーします。
+1. `/apps/ws`フォルダーの`/libs/ws/locales`フォルダーをコピーします。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. `GET.jsp`ファイル内の参照と相対パスを次に示すように更新し、「**[!UICONTROL すべて保存]**」をクリックします。
 
    ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
@@ -43,11 +43,11 @@ ht-degree: 52%
 
 1. CSS のカスタマイズは以下のようにして実行します。
 
-   1. Navigate to the `/apps/ws` folder and create a new folder named `css`.
+   1. `/apps/ws`フォルダーに移動し、`css`という名前の新しいフォルダーを作成します。
 
    1. `css` フォルダに `newStyle.css` という名前の新しいファイルを作成します。
 
-   1. Open `/apps/ws/html`.jsp and change from
+   1. `/apps/ws/html`.jspを開き、
 
    ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="css/style.css" />
@@ -80,24 +80,24 @@ ht-degree: 52%
 
 1. 以下の操作を実行してください。
 
-   1. Create a folder named `js`at `/apps/ws`. 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `js`という名前のフォルダーを`/apps/ws`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   1. Create a folder named `libs`at `/apps/ws/js`. 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `libs`という名前のフォルダーを`/apps/ws/js`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   1. Create a folder named `jqueryui`at `/apps/ws/js/libs`. 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `jqueryui`という名前のフォルダーを`/apps/ws/js/libs`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
    1. `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` を `/apps/ws/js/libs/jqueryui` にコピーします。「**[!UICONTROL すべて保存]**」をクリックします。
 
 1. HTML のカスタマイズは以下のようにして実行します。
 
-   1. の下 `/apps/ws/js`に、という名前のフォルダを作成し `runtime`ます。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `/apps/ws/js`の下に、`runtime`という名前のフォルダーを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   1. の下 `/apps/ws/js/runtime`に、という名前のフォルダを作成し `templates`ます。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `/apps/ws/js/runtime`の下に、`templates`という名前のフォルダーを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
    1. `/libs/ws/js/main.js` を `/apps/ws/js/main.js` にコピーします。
 
-   1. Copy /libs/ws/js/registry.js to `/apps/ws/js/registry.js`.
+   1. /libs/ws/js/registry.jsを`/apps/ws/js/registry.js`にコピーします。
 
 1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
 
-   URLにアクセス `https://'[server]:[port]'/lc/ws` し、管理者/パスワードの資格情報でログインします。 ブラウザーがにリダイレクト `https://'[server]:[port]'/lc/apps/ws/index.html`します。
+   URL `https://'[server]:[port]'/lc/ws`にアクセスし、管理者/パスワードの資格情報でログインします。 ブラウザーは`https://'[server]:[port]'/lc/apps/ws/index.html`にリダイレクトします。
