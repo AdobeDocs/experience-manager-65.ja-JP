@@ -18,7 +18,7 @@ ht-degree: 57%
 ---
 
 
-# コンポーネントの作成  {#create-the-components}
+# コンポーネントの作成   {#create-the-components}
 
 コンポーネントを拡張する例では、実際には次の 2 つのコンポーネントで構成されるコメントシステムを使用します。
 
@@ -33,9 +33,9 @@ ht-degree: 57%
 >
 >多くのコミュニティ機能には、拡張されたコメントシステムを参照するように resourceType を変更できるコメントシステムが既に含まれています。
 
-## コメントコンポーネントの作成 {#create-the-comments-component}
+## コメントコンポーネントの作成  {#create-the-comments-component}
 
-These directions specify a **Group** value other than `.hidden` so the component may be made available from the component browser (sidekick).
+これらの指示に従って、`.hidden`以外の&#x200B;**Group**&#x200B;値を指定するので、コンポーネントはコンポーネントブラウザー（サイドキック）から利用できます。
 
 デフォルトの HBS ファイルを代わりに使用するので、自動的に作成された JSP ファイルは削除します。
 
@@ -43,15 +43,15 @@ These directions specify a **Group** value other than `.hidden` so the component
 
 1. カスタムアプリケーションの場所の作成：
 
-   * Select the `/apps` node
+   * `/apps`ノードを選択
 
       * 「**フォルダーを作成**」を選択し、**[!UICONTROL custom]** という名前のフォルダーを作成します。
-   * Select the `/apps/custom` node
+   * `/apps/custom`ノードを選択
 
       * 「**フォルダーを作成**」を選択し、**[!UICONTROL components]** という名前のフォルダーを作成します。
 
 
-1. Select the `/apps/custom/components` node
+1. `/apps/custom/components`ノードを選択
 
    * **[!UICONTROL 作成／コンポーネント...]** を選択します。
 
@@ -66,24 +66,24 @@ These directions specify a **Group** value other than `.hidden` so the component
    * 「**[!UICONTROL OK]**」を選択します。
 
 
-1. Expand the node just created: `/apps/custom/components/comments`
+1. 作成したノードを展開します。`/apps/custom/components/comments`
 1. 「**[!UICONTROL すべて保存]**」を選択します。
-1. Right-click `comments.jsp`
-1. Select **[!UICONTROL Delete]**
+1. `comments.jsp`を右クリック
+1. **[!UICONTROL 削除]**&#x200B;を選択
 1. 「**[!UICONTROL すべて保存]**」を選択します。
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
 ### 子コメントコンポーネントの作成 {#create-the-child-comment-component}
 
-These directions set **Group** to `.hidden` as only the parent component should be included within a page.
+これらの方向は、**Group**&#x200B;を`.hidden`に設定します。これは、親コンポーネントのみをページに含める必要があるためです。
 
 デフォルトの HBS ファイルを代わりに使用するので、自動的に作成された JSP ファイルは削除します。
 
-1. Navigate to the `/apps/custom/components/comments` node
+1. `/apps/custom/components/comments`ノードに移動します
 1. ノードを右クリック
 
-   * Select **[!UICONTROL Create] > **[!UICONTROL Component...]**
+   * **[!UICONTROL 作成]/**[!UICONTROL コンポーネントを選択…]**
 
       * **ラベル**：comment **
       * **タイトル**：Alt Comment **
@@ -96,10 +96,10 @@ These directions set **Group** to `.hidden` as only the parent component should 
    * 「**[!UICONTROL OK]**」を選択します。
 
 
-1. Expand the node just created: `/apps/custom/components/comments/comment`
+1. 作成したノードを展開します。`/apps/custom/components/comments/comment`
 1. 「**[!UICONTROL すべて保存]**」を選択します。
-1. Right-click `comment.jsp`
-1. Select **[!UICONTROL Delete]**
+1. `comment.jsp`を右クリック
+1. **[!UICONTROL 削除]**&#x200B;を選択
 1. 「**[!UICONTROL すべて保存]**」を選択します。
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
@@ -112,12 +112,12 @@ These directions set **Group** to `.hidden` as only the parent component should 
 
 * コピー `comments.hbs`
 
-   * From [/libs/social/commons/components/hbs/comments](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
-   * To [/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
+   * [/libs/social/commons/components/hbs/comments](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)から
+   * [/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)へ
 
-* 編集 `comments.hbs` 先：
+* `comments.hbs`を編集して次を実行：
 
-   * Change the value of the `data-scf-component` attribute (~line 20):
+   * `data-scf-component`属性の値を変更（～行20）:
 
       * 送信元 `social/commons/components/hbs/comments`
       * To `/apps/custom/components/comments`
@@ -129,17 +129,17 @@ These directions set **Group** to `.hidden` as only the parent component should 
 
 * コピー `comment.hbs`
 
-   * From [/libs/social/commons/components/hbs/comments/comment](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
-   * To [/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
+   * [/libs/social/commons/components/hbs/comments/comment](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)から
+   * [/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)へ
 
-* 編集 `comment.hbs` 先：
+* `comment.hbs`を編集して次を実行：
 
    * data-scf-component属性の値の変更（～行19）
 
       * 送信元 `social/commons/components/hbs/comments/comment`
-      * To `/apps/custom/components/comments/comment`
+      * `/apps/custom/components/comments/comment`へ
 
-* ノードを選択 `/apps/custom`
+* `/apps/custom`ノードを選択
 * 「**[!UICONTROL すべて保存]**」を選択します。
 
 ## クライアントライブラリフォルダーの作成 {#create-a-client-library-folder}
@@ -148,33 +148,33 @@ These directions set **Group** to `.hidden` as only the parent component should 
 
 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* ノードを選択 `/apps/custom/components/comments`
-* Select **[!UICONTROL Create Node]**
+* `/apps/custom/components/comments`ノードを選択
+* **[!UICONTROL ノードを作成]**&#x200B;を選択
 
    * **名前**：`clientlibs`
    * **型**：`cq:ClientLibraryFolder`
-   * Add to **[!UICONTROL Properties]** tab:
+   * 追加&#x200B;**[!UICONTROL プロパティ]**&#x200B;タブ：
 
-      * **Name** `categories` Type ****`String`**Value** `cq.social.author.hbs.comments` `Multi`
-      * **Name** `dependencies` Type ****`String`**Value** `cq.social.scf` `Multi`
+      * **** `categories` **** `String` **NameTypeValue** `cq.social.author.hbs.comments` `Multi`
+      * **** `dependencies` **** `String` **NameTypeValue** `cq.social.scf` `Multi`
 
 * 「**[!UICONTROL すべて保存]**」を選択します。
-* ノード `/apps/custom/components/comments/clientlib`を選択し、3つのファイルを作成します。
+* `/apps/custom/components/comments/clientlib`のノードを選択した状態で、3つのファイルを作成します。
 
    * **名前**：`css.txt`
    * **名前**：`js.txt`
    * **名前**：customcommentsystem.js
 
-* Enter &#39;customcommentsystem.js&#39; as the content of `js.txt`
+* 「customcommentsystem.js」を`js.txt`の内容として入力
 * 「**[!UICONTROL すべて保存]**」を選択します。
 
 ![chlimage_1-73](assets/chlimage_1-73.png)
 
 ## SCF モデルおよびビューの登録 {#register-the-scf-model-view}
 
-When extending (overriding) an SCF component, the resourceType is different (overlaying makes use of the relative search mechanism that searches through `/apps` before `/libs` so that the resourceType remains the same). このため、カスタムresourceTypeのSCF JSモデルと表示を登録するために、（クライアントライブラリ内に）JavaScriptを作成する必要があります。
+SCFコンポーネントを拡張（オーバーライド）する場合、resourceTypeは異なります（オーバーレイでは、resourceTypeが同じになるように、`/apps`の前に`/libs`を検索する相対的な検索メカニズムを使用します）。 このため、カスタムresourceTypeのSCF JSモデルと表示を登録するために、（クライアントライブラリ内に）JavaScriptを作成する必要があります。
 
-Enter the following text as the content of `customcommentsystem.js`:
+次のテキストを`customcommentsystem.js`の内容として入力します。
 
 ### customcommentsystem.js {#customcommentsystem-js}
 
@@ -204,9 +204,9 @@ Enter the following text as the content of `customcommentsystem.js`:
 
 * グローバルナビゲーションから
 
-   * Select **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
-   * Select **[!UICONTROL Activate Tree]**
-   * 設定 `Start Path` 先 `/apps/custom`
-   * Uncheck **[!UICONTROL Only Modified]**
-   * Select **[!UICONTROL Activate]** button
+   * **[!UICONTROL ツール]**/**[!UICONTROL 展開]**/**[!UICONTROL レプリケーション]**&#x200B;を選択します
+   * 「**[!UICONTROL ツリーをアクティブにする]**」を選択します。
+   * `Start Path`を`/apps/custom`に設定
+   * **[!UICONTROL 変更済みのみ]**&#x200B;のチェックを外す
+   * 「**[!UICONTROL アクティブ化]**」ボタンを選択
 
