@@ -22,7 +22,7 @@ ht-degree: 100%
 
 PDF Generator では、特定のファイルの種類に対して、マルチスレッドファイル変換を有効にできます。マルチスレッドファイル変換では、同時に複数の変換を実行できるので、PDF Generator のパフォーマンスが向上します。
 
-## OpenOffice、Word および PowerPoint ドキュメントでのマルチスレッドファイル変換の有効化 {#enabling-multi-threaded-file-conversions-for-openoffice-word-and-powerpoint-documents}
+## OpenOffice、Word および PowerPoint ドキュメントでのマルチスレッドファイル変換の有効化  {#enabling-multi-threaded-file-conversions-for-openoffice-word-and-powerpoint-documents}
 
 PDF Generator では、一度に 1 つの OpenOffice、Microsoft Word または PowerPoint ドキュメントのみをデフォルトで変換できます。マルチスレッド変換を有効にすると、PDF Generator は複数のドキュメントを同時に変換できます。PDF Generator から OpenOffice または PDFMaker の複数のインスタンスが起動します（これらのインスタンスは Word 変換および PowerPoint 変換に使用されます）。
 
@@ -40,7 +40,7 @@ OpenOffice または PDFMaker の各インスタンスは、それぞれ別の�
 
 Windows Server 2003 または 2008 での OpenOffice、Microsoft Word または Microsoft PowerPoint のユーザー、あるいは Linux または Sun™ Solaris™ での OpenOffice のユーザーを追加する場合、すべてのユーザーに対して最初に表示されるアクティベート用のダイアログを閉じます。
 
-### プロセスレベルトークンを置き換えるための権限の追加 {#add-the-right-to-replace-the-process-level-token}
+### プロセスレベルトークンを置き換えるための権限の追加  {#add-the-right-to-replace-the-process-level-token}
 
 Windows オペレーティングシステムでは、PDF 変換で使用される管理者ユーザーアカウント（PDFG ユーザー）に、プロセスレベルトークンの置き換え権限が必要です。この権限は、グループポリシーエディターを使用して追加できます。
 
@@ -48,7 +48,7 @@ Windows オペレーティングシステムでは、PDF 変換で使用され�
 1. ローカルコンピューターポリシー／コンピューターの構成／Windows の設定／セキュリティの設定／ローカルポリシー／ユーザー権利の割り当てをクリックします。次に、Administrators グループが含まれるように「*プロセスレベルトークンの置き換え*」ポリシーを編集します。
 1. 「プロセスレベルトークンの置き換え」エントリにユーザーを追加します。
 
-### Windows Server 2008 での OpenOffice、Microsoft Word および Microsoft PowerPoint に必要な追加設定 {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
+### Windows Server 2008 での OpenOffice、Microsoft Word および Microsoft PowerPoint に必要な追加設定  {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
 
 Windows Server 2008 で OpenOffice、Microsoft Word または Microsoft PowerPoint を実行する場合は、追加する各ユーザーの UAC を無効にします。
 
@@ -56,7 +56,7 @@ Windows Server 2008 で OpenOffice、Microsoft Word または Microsoft PowerPoi
 1. 「ユーザーアカウント制御（UAC）を使ってコンピューターの保護に役立たせる」の選択を解除し、「OK」をクリックします。
 1. コンピューターを再起動して設定を有効にします。
 
-### Linux または Solaris での OpenOffice に必要な追加設定 {#additional-configuration-required-for-openoffice-on-linux-or-solaris}
+### Linux または Solaris での OpenOffice に必要な追加設定  {#additional-configuration-required-for-openoffice-on-linux-or-solaris}
 
 1. ユーザーアカウントを追加します（[ユーザーアカウントの追加](enabling-multi-threaded-file-conversions.md#add-a-user-account)を参照）。
 1. 次に、/etc/sudoers ファイルに変更を加えます。このファイルの権限はデフォルトで 440 が設定されています。このファイルの権限を書き込み可能に変更します。
@@ -105,14 +105,14 @@ Windows Server 2008 で OpenOffice、Microsoft Word または Microsoft PowerPoi
 
 1. forms サーバーを再起動します。
 
-### マルチスレッドファイル変換用リストからのユーザーの削除 {#remove-a-user-from-the-list-used-for-multi-threaded-file-conversions}
+### マルチスレッドファイル変換用リストからのユーザーの削除  {#remove-a-user-from-the-list-used-for-multi-threaded-file-conversions}
 
 1. 管理コンソールで、サービス／PDF Generator／ユーザーアカウントをクリックします。
 1. 削除するユーザーの横のチェックボックスをクリックし、「削除」をクリックします。
 1. 確認ページで、「削除」をクリックします。
 1. forms サーバーを再起動します。
 
-### アカウントのパスワードの変更 {#change-the-password-for-an-account}
+### アカウントのパスワードの変更  {#change-the-password-for-an-account}
 
 1. 管理コンソールで、サービス／PDF Generator／ユーザーアカウントをクリックします。
 1. ユーザー名をクリックし、新しいパスワードを入力して確認します。このパスワードは、ユーザーのシステムパスワードと同じものである必要があります。
