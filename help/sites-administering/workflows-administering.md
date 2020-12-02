@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 workflow-type: tm+mt
 source-wordcount: '827'
-ht-degree: 82%
+ht-degree: 95%
 
 ---
 
@@ -24,19 +24,19 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->The [JMX console](/help/sites-administering/jmx-console.md#workflow-maintenance) provides additional workflow maintenance operations.
+>[JMXコンソール](/help/sites-administering/jmx-console.md#workflow-maintenance)は、追加のワークフロー保守操作を提供します。
 
-ワークフローの管理用に、次の各種コンソールが用意されています。Use the [global navigation](/help/sites-authoring/basic-handling.md#global-navigation) to open the **Tools** pane, then select **Workflow**:
+ワークフローの管理用に、次の各種コンソールが用意されています。[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)を使用して&#x200B;**ツール**&#x200B;パネルを開き、その後「**ワークフロー**」を選択します。
 
 * **モデル**：ワークフロー定義を管理します
-* **インスタンス：**&#x200B;実行中のワークフローインスタンスを表示および管理します
+* **インスタンス**：実行中のワークフローインスタンスを表示および管理します
 * **ランチャー**：ワークフローの起動方法を確認します
 * **アーカイブ**：正常に完了したワークフローの履歴を表示します
 * **エラー**：エラーで終了したワークフローの履歴を表示します
 
 ## ワークフローインスタンスのステータスの監視 {#monitoring-the-status-of-workflow-instances}
 
-1. Using Navigation select **Tools**, then **Workflow**.
+1. ナビゲーションを使用して、**ツール**／**ワークフロー**&#x200B;を選択します。
 1. 「**インスタンス**」を選択して現在進行中のワークフローインスタンスのリストを表示します。
 
    ![wf-96](assets/wf-96.png)
@@ -47,7 +47,7 @@ ht-degree: 82%
 
 ## ワークフローインスタンスの休止、再開および終了 {#suspending-resuming-and-terminating-a-workflow-instance}
 
-1. Using Navigation select **Tools**, then **Workflow**.
+1. ナビゲーションを使用して、**ツール**／**ワークフロー**&#x200B;を選択します。
 1. 「**インスタンス**」を選択して現在進行中のワークフローインスタンスのリストを表示します。
 
    ![wf-96-1](assets/wf-96-1.png)
@@ -58,7 +58,7 @@ ht-degree: 82%
 
 ## アーカイブされたワークフローの表示 {#viewing-archived-workflows}
 
-1. Using Navigation select **Tools**, then **Workflow**.
+1. ナビゲーションを使用して、**ツール**／**ワークフロー**&#x200B;を選択します。
 1. 「**アーカイブ**」を選択して正常に完了したワークフローインスタンスのリストを表示します。
 
    ![wf-98](assets/wf-98.png)
@@ -68,7 +68,7 @@ ht-degree: 82%
    >中止ステータスはユーザーアクションの結果として発生するので、正常終了と見なされます。例えば、次のような場合が当てはまります。
    >
    >* 「**終了**」アクションが使用された場合
-   >* ワークフローの対象となるページが（強制的に）削除された場合、ワークフローは終了します
+   >* ワークフローの対象となるページが（強制的に）削除されたことによって、ワークフローが終了した場合
 
 
 1. 特定の項目を選択し、「**履歴を開く**」で詳細を確認します。
@@ -80,17 +80,17 @@ ht-degree: 82%
 ワークフローが失敗した場合、AEM の&#x200B;**エラー**&#x200B;コンソールを使用してエラーの原因を調べ、特定された原因に応じて適切なアクションを取ることができます。
 
 * **失敗の詳細**：ウィンドウを開き、 
-**失敗メッセージ**、 **ステップ** 、 **失敗スタック**。
+**失敗メッセージ**、 **ステップ**、 **失敗スタック**&#x200B;を表示します。
 
-* **履歴を開く** ワークフローの履歴の詳細を表示します。
+* **履歴を開く**&#x200B;ワークフローの履歴の詳細を表示します。
 
-* **ステップを再試行** スクリプトステップコンポーネントのインスタンスをもう一度実行します。発生したエラーの原因を修正した後に「ステップを再試行」コマンドを使用します。例えば、プロセスステップが実行するスクリプトのバグを修正した後にステップを再試行します。
+* **ステップを再試行**&#x200B;スクリプトステップコンポーネントのインスタンスをもう一度実行します。発生したエラーの原因を修正した後に「ステップを再試行」コマンドを使用します。例えば、プロセスステップが実行するスクリプトのバグを修正した後にステップを再試行します。
 * **終了** エラーが原因で解決できない問題がワークフローに発生した場合にワークフローを終了します。例えば、ワークフローインスタンスで無効になった環境条件（リポジトリ内の情報など）にワークフローが依存している可能性がある場合などです。
-* **終了して再試行** 元のペイロード、タイトルおよび説明を使用して新しいワークフローインスタンスが開始される点を除き、「**終了**」と同様です。
+* **終了して再試行**&#x200B;元のペイロード、タイトルおよび説明を使用して新しいワークフローインスタンスが開始される点を除き、**終了**&#x200B;と同様です。
 
 エラーを調査し、その後ワークフローを再開または停止するには、次のステップに従います。
 
-1. Using Navigation select **Tools**, then **Workflow**.
+1. ナビゲーションを使用して、**ツール**／**ワークフロー**&#x200B;を選択します。
 1. 「**エラー**」を選択して正常に完了しなかったワークフローインスタンスのリストを表示します。
 1. 特定の項目を選択し、その後適切なアクションを選択します。
 
@@ -98,7 +98,7 @@ ht-degree: 82%
 
 ## ワークフローインスタンスの定期的なパージ {#regular-purging-of-workflow-instances}
 
-ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。
+ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリーから定期的に削除できます。
 
 有効期間とステータスに応じてワークフローインスタンスをパージするように **Adobe Granite のワークフローのパージ設定**&#x200B;を設定します。また、すべてのモデルまたは特定のモデルのワークフローインスタンスをパージすることもできます。
 
@@ -108,11 +108,11 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->リポジトリに設定を追加する場合のサービス PID は次のとおりです。
+>リポジトリーに設定を追加する場合のサービス PID は次のとおりです。
 >
 >`com.adobe.granite.workflow.purge.Scheduler`
 >
->このサービスはファクトリサービスなので、`sling:OsgiConfig` ノードの名前には次のような identifier サフィックスが必要です。
+>このサービスはファクトリサービスなので、`sling:OsgiConfig` ノードの名前には次のような ID サフィックスが必要です。
 >
 >`com.adobe.granite.workflow.purge.Scheduler-myidentifier`
 
@@ -140,7 +140,7 @@ ht-degree: 82%
   <tr>
    <td>Models To Purge</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>パージするワークフローモデルの ID。The ID is the path to the model node, for example:<br /> /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> Specify no value to purge instances of all workflow models.</p> <p>複数のモデルを指定するには、Web コンソールの + ボタンをクリックします。 </p> </td>
+   <td><p>パージするワークフローモデルの ID。この ID はモデルノードのパスです（例：<br /> /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br />）。すべてのワークフローモデルのインスタンスをパージする場合は、値を指定しません。</p> <p>複数のモデルを指定するには、Web コンソールの + ボタンをクリックします。 </p> </td>
   </tr>
   <tr>
    <td>Workflow Age</td>
@@ -150,13 +150,13 @@ ht-degree: 82%
  </tbody>
 </table>
 
-## インボックスの最大サイズの設定 {#setting-the-maximum-size-of-the-inbox}
+## インボックスの最大サイズの設定  {#setting-the-maximum-size-of-the-inbox}
 
-You can set the maximum size of the inbox by configuring the **Adobe Granite Workflow Service**, using the [Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) or [add an OSGi configuration to the repository](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 次の表では、どちらの方法でも設定するプロパティについて説明しています。
+[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用して&#x200B;**AdobeGranite Workflow Service**&#x200B;を設定し、インボックスの最大サイズを設定して、リポジトリ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)にOSGi設定を追加します。 次の表では、どちらの方法でも設定するプロパティについて説明しています。
 
 >[!NOTE]
 >
->リポジトリに設定を追加する場合のサービス PID は次のとおりです。
+>リポジトリーに設定を追加する場合のサービス PID は次のとおりです。
 >
 >`com.adobe.granite.workflow.core.WorkflowSessionFactory`.
 
