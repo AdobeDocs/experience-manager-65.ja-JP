@@ -18,11 +18,11 @@ ht-degree: 33%
 ---
 
 
-# レビューおよびレビューの概要（表示）の使用 {#using-reviews-and-reviews-summary-display}
+# レビューおよびレビューの概要（表示）の使用  {#using-reviews-and-reviews-summary-display}
 
-The `Reviews` component is a composite of [Comments](comments.md) and [Rating](rating.md) components ready for use.
+`Reviews`コンポーネントは、[コメント](comments.md)と[評価](rating.md)コンポーネントの組み合わせで、使用可能です。
 
-The `Reviews Summary (Display)` component provides a summary of an active or closed instance of a `Reviews` component for display elsewhere on the site.
+`Reviews Summary (Display)`コンポーネントは、サイトの他の場所に表示する`Reviews`コンポーネントのアクティブインスタンスまたは閉じたインスタンスの概要を提供します。
 
 >[!NOTE]
 >
@@ -30,21 +30,21 @@ The `Reviews Summary (Display)` component provides a summary of an active or clo
 
 ## レビューをページに追加 {#adding-a-review-to-a-page}
 
-作成者モードでページに `Reviews` コンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索 `Communities / Reviews` し、ページ上の位置（ユーザが確認できる機能に対する相対位置など）にドラッグします。
+作成者モードで`Reviews`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して`Communities / Reviews`を検索し、ページ上にドラッグして配置します。例えば、ユーザーが確認できる機能に対する相対位置です。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側のライブラリが含まれる場合](reviews-basics.md#essentials-for-client-side) 、これがコンポー `Reviews` ネントの表示方法です。
+[必要なクライアント側ライブラリ](reviews-basics.md#essentials-for-client-side)が含まれる場合、`Reviews`コンポーネントは次のように表示されます。
 
 ![作成レビュー](assets/create-review.png)
 
 ## レビューの設定 {#configuring-reviews}
 
-Select the placed `Reviews` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Reviews`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![configure-new](assets/configure-new.png)
 
-Under the **[!UICONTROL Allowed Ratings]** tab, specify the complete list of ratings to be shown to members. The first rating should be an overall/general rating, as it is the rating which provides the average rating for the `Review Summary (Display)` component. デフォルト設定の次の2つの評価には、「サブレーティング1」または「サブレーティング2」以外の異なるタイトルを付ける必要があります。
+「**[!UICONTROL 許可されている評価]**」タブで、メンバーに表示する評価の完全なリストを指定します。 最初の評価は`Review Summary (Display)`コンポーネントの平均評価を提供する評価なので、全体/一般の評価である必要があります。 デフォルト設定の次の2つの評価には、「サブレーティング1」または「サブレーティング2」以外の異なるタイトルを付ける必要があります。
 
 ![許可格付け](assets/configure-review1.png)
 
@@ -56,7 +56,7 @@ Under the **[!UICONTROL Allowed Ratings]** tab, specify the complete list of rat
 
    評価の選択肢を追加するには、「**[!UICONTROL 項目を追加]**」をクリックします。
 
-Under the **[!UICONTROL Required Ratings]** tab, re-enter items from the list of **[!UICONTROL Allowed Ratings]** that are required to be rated. [評価の許可]タブで項目が指定されていない場合は、その項目がメンバによって送信されたときにマークが付いていない状態になることがあります。
+「**[!UICONTROL 必須の評価]**」タブで、**[!UICONTROL 評価する必要のある評価]**&#x200B;のリストから項目を再入力します。 [評価の許可]タブで項目が指定されていない場合は、その項目がメンバによって送信されたときにマークが付いていない状態になることがあります。
 
 Web サイト上では、必須の評価はアスタリスク付きで表示されます。項目が必須でマークが付いていない場合は、メンバーにメッセージが表示され、必須の評価がすべてマークされるまで送信が拒否されます。
 
@@ -72,9 +72,9 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 >[!NOTE]
 >
->If an item is entered on the **[!UICONTROL Required Ratings]** tab that is not specified on the **[!UICONTROL Allowed Ratings]** tab, then it is not included in the items to rate.
+>**[!UICONTROL 「**[!UICONTROL &#x200B;許可された評価&#x200B;]**」タブで指定されていない「&lt;a0/>必須の評価]**」タブに項目が入力された場合、評価する項目にはその項目が含まれません。
 
-Under the **[!UICONTROL Reviews]** tab, specify how reviews are handled.
+「**[!UICONTROL レビュー]**」タブで、レビューの処理方法を指定します。
 
 ![レビュー](assets/configure-review3.png)
 
@@ -92,7 +92,7 @@ Under the **[!UICONTROL Reviews]** tab, specify how reviews are handled.
 
 * **最大ファイルサイズ**
 
-   「 **[!UICONTROL Allow File Uploads]** 」がオンになっている場合にのみ関連します。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。デフォルトは 10 MB です。
+   「**[!UICONTROL ファイルのアップロードを許可]**」がオンの場合にのみ関連します。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。デフォルトは 10 MB です。
 
 * **[!UICONTROL メッセージの最大長]**
 
@@ -100,7 +100,7 @@ Under the **[!UICONTROL Reviews]** tab, specify how reviews are handled.
 
 * **[!UICONTROL 許可されるファイルタイプ]**
 
-   「 **[!UICONTROL Allow File Uploads]** 」がオンになっている場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定すると、指定されていないファイルは許可されません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+   「**[!UICONTROL ファイルのアップロードを許可]**」がオンの場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定すると、指定されていないファイルは許可されません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **[!UICONTROL リッチテキストエディター]**
 
@@ -110,7 +110,7 @@ Under the **[!UICONTROL Reviews]** tab, specify how reviews are handled.
 
    オンの場合、トピックに投票機能を含めます。 初期設定はオフです。
 
-Under the **[!UICONTROL User Moderation]** tab, specify how the posted reviews are managed. For more information, see [Moderating User Generated Content](moderate-ugc.md).
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたレビューの管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 ![user-moderation](assets/configure-review4.png)
 
@@ -148,19 +148,19 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted reviews a
 
 * **[!UICONTROL フラグ付けの制限]**
 
-   レビューが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 This number must be greater than or equal to the **[!UICONTROL Moderation Threshold]**. 初期設定は 5 です。
+   レビューが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 この数値は、**[!UICONTROL モデレートしきい値]**&#x200B;以上にする必要があります。 初期設定は 5 です。
 
 ### レビューの概要（表示）をページに追加 {#adding-a-review-summary-display-to-a-page}
 
-To add a `Reviews Summary (Display)` component to a page in author mode, locate the component
+作成者モードで`Reviews Summary (Display)`コンポーネントをページに追加するには、コンポーネントを見つけます
 
 * `Communities / Reviews Summary (Display)`
 
 コンポーネントを探し、ページ上のアクティブなレビューまたは閉じられたレビューを表示する位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側のライブラリが含まれる場合](reviews-basics.md#essentials-for-client-side) 、これがコンポー `Reviews Summary (Display)`ネントの表示方法です。
+[必要なクライアント側ライブラリ](reviews-basics.md#essentials-for-client-side)が含まれる場合、`Reviews Summary (Display)`コンポーネントは次のように表示されます。
 
 ![レビュー概要](assets/configure-review5.png)
 
@@ -168,9 +168,9 @@ For necessary information, visit [Communities Components Basics](basics.md).
 >
 >「平均」は、要約するレビューの「許可された評価」タブに指定されている最初の項目への投票を反映します。
 
-### レビューの概要（表示）の設定 {#configuring-reviews-summary-display}
+### レビューの概要（表示）の設定  {#configuring-reviews-summary-display}
 
-Select the placed `Reviews Summary (Display)` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Reviews Summary (Display)`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![設定](assets/configure-new.png)
 
@@ -180,7 +180,7 @@ Select the placed `Reviews Summary (Display)` component to access and select the
 
 * `Review Path`
 
-   要約するコン `reviews`ポーネントの配置インスタンスを入力または参照します。例えば、 [Geometrixxの関与サイトのWebページに追加した場合](getting-started.md) 、パスは次のようになります。
+   集計する`reviews`コンポーネントの配置済みインスタンスを入力または参照します。例えば、[GeometrixxエンゲージメントサイトのWebページに追加した場合、](getting-started.md)のパスは次のようになります。
 
    `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
@@ -194,27 +194,27 @@ Select the placed `Reviews Summary (Display)` component to access and select the
 
 コメントリソースタイプを変更すると、デフォルトを使用するコメントのインスタンスではなく、開発者によってカスタマイズ（拡張）されたコメントのインスタンスが生成されるようになります。
 
-Once the custom resource types is known, enter [Design Mode](../../help/sites-authoring/default-components-designmode.md) and double click on the placed `Comments` component to open a dialog with an additional tab.
+カスタムリソースタイプがわかったら、[デザインモード](../../help/sites-authoring/default-components-designmode.md)に入り、重複が配置した`Comments`コンポーネントをクリックして、追加のタブを含むダイアログを開きます。
 
-Under the **[!UICONTROL Resource Types]** tab, specify the custom resourceType for new instances of the `Comments or Voting` components:
+「**[!UICONTROL リソースタイプ]**」タブで、`Comments or Voting`コンポーネントの新しいインスタンスのカスタムresourceTypeを指定します。
 
 ![コメント投票](assets/configure-review7.png)
 
 * **[!UICONTROL コメントリソースタイプ]**
 
-   /apps内の拡張 `comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例： `/apps/social/commons/components/hbs/comments/comment`
+   /apps内の拡張`comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例： `/apps/social/commons/components/hbs/comments/comment`
 
    このリソースは、訪問者がコメントを投稿したときに作成されたUGCのresourceTypeを識別します。
 
 * **[!UICONTROL 投票リソースタイプ]**
 
-   /apps内の拡張 `voting`コンポーネントのresourceTypeに移動します。 例： `/apps/social/components/hbs/voting`
+   /apps内の拡張`voting`コンポーネントのresourceTypeに移動します。 例： `/apps/social/components/hbs/voting`
 
    このリソースは、訪問者が投票を行ったときに作成されたUGCのリソースタイプを識別します。
 
 * **[!UICONTROL コメントシステムリソースタイプ]**
 
-   /apps内の拡張 `comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 Leave blank unless the page template [dynamically includes](scf.md#add-or-include-a-communities-component) the Comment System in the underlying script instead of being added to the page as a resource (comments node). Learn more by reading about the [{{include}} helper](handlebars-helpers.md#include).
+   /apps内の拡張`comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート[で、コメントシステムが基になるスクリプトに](scf.md#add-or-include-a-communities-component)動的に含まれている場合を除き、ページにリソース（コメントノード）として追加されるのではなく、空白のままにします。 詳しくは、[{{include}}ヘルパー](handlebars-helpers.md#include)を参照してください。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -222,7 +222,7 @@ Under the **[!UICONTROL Resource Types]** tab, specify the custom resourceType f
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合は、誰がレビューを作成したかにかかわらず、コンポーネントの設定によって許可されているモデレートタスクを実行できます。
 
-### メンバー {#members}
+### メンバー  {#members}
 
 サイト訪問者がログインしたとき、設定に応じて、次の操作が行われます。
 
@@ -233,14 +233,14 @@ Under the **[!UICONTROL Resource Types]** tab, specify the custom resourceType f
 
 1 人のメンバーが付けられる評価は 1 つだけです。メンバーは、いつでも評価を変更できます。
 
-### 匿名 {#anonymous}
+### 匿名  {#anonymous}
 
 サインインしていないサイト訪問者は、投稿されたレビューを閲覧することしかできず（サポートされている場合は翻訳も可）、評価またはレビューを追加したり、他のユーザーのレビューコメントにフラグを設定することはできません。
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Review Essentials](reviews-basics.md) page for developers.
+詳しくは、開発者向けの[Review Essentials](reviews-basics.md)ページを参照してください。
 
-For moderation of posted comments, see [Moderating User Generated Content](moderate-ugc.md).
+投稿されたコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 投稿されたコメントの翻訳については、[ユーザー生成コンテンツの翻訳](translate-ugc.md)を参照してください。
