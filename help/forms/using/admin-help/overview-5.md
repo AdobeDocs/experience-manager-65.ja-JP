@@ -28,6 +28,6 @@ PDF Generator では、様々な形式のファイルを PDF に変換できま�
 ファイル処理のために、ファイルは PDF Generator に 3 種類の方法で送信できます。
 
 * 管理者は、管理コンソールで PDFG ページにアクセスできます（[PDF Generator を使用したファイルの変換](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)を参照）。
-* ユーザーは、PDFGエンドユーザーページにアクセスするには、PDFGネットワークプリンターにログインし、PDFGネットワークプリンター、PDFを作成、HTMLからPDF、Export PDFおよびOptimize PDFの各ページにアクセスします。 `http(s)://'[server]:[port]'/pdfgui.`
+* `http(s)://'[server]:[port]'/pdfgui.`にログインしてPDFGエンドユーザーページにアクセスできます。ユーザーは、そこからPDFGネットワークプリンター、PDFの作成、HTMLからPDF、Export PDFおよびOptimize PDFの各ページにアクセスできます。
 * これらのサービスのエンドポイントを設定できます参照先 <!--Fix broken link to Managing Endpoints --> [Generate PDF サービスの推奨事項](configuring-watched-folder-endpoints.md#generate-pdf-service-recommendations).
 
