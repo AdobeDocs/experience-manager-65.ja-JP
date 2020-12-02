@@ -17,7 +17,7 @@ ht-degree: 2%
 ---
 
 
-# サービスコンテナ {#service-container}
+# サービスコンテナ{#service-container}
 
 サービスコンテナに配置されたAEM Formsサービス（Encryptionサービス、長期間有効なプロセス、短時間のみ有効なプロセスなどの標準サービスを含む）は、EJBプロバイダーなど、様々なプロバイダーを使用して呼び出すことができます。 EJBプロバイダーを使用すると、AEM FormsサービスをRMI/IIOP経由で呼び出すことができます。 Webサービスプロバイダーは、SOAP/HTTPやSOAP/JMSなどの標準を使用して、サービスをWebサービス（WSDL生成）として公開します。
 
@@ -33,19 +33,19 @@ ht-degree: 2%
  <tbody>
   <tr>
    <td><p>リモート統合</p></td>
-   <td><p>リモート統合は、Flexクライアントがサービス操作を呼び出す機能を提供します。 (「AEM formsでは非推奨) <a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">AEM Formsリモートを使用したAEM Formsの呼び出し」を参照</a>)。</p></td>
+   <td><p>リモート統合は、Flexクライアントがサービス操作を呼び出す機能を提供します。 (「<a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">AEM Formsリモートを使用したAEM Formsの呼び出し(AEM formsでは廃止)</a>」を参照)。</p></td>
   </tr>
   <tr>
    <td><p>Java API</p></td>
-   <td><p>Java APIは、AEM Formsサービスを呼び出すことができます。 Java APIは、クライアントライブラリとJava Invocation APIにまとめられています。 (See <a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api">Invoking AEM Forms using the Java API</a>.)</p></td>
+   <td><p>Java APIは、AEM Formsサービスを呼び出すことができます。 Java APIは、クライアントライブラリとJava Invocation APIにまとめられています。 (<a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api">Java APIを使用したAEM Formsの呼び出し</a>を参照)。</p></td>
   </tr>
   <tr>
    <td><p>Webサービス</p></td>
-   <td><p>AEM Formsは、SOAP/HTTPなどのWebサービス標準をサポートしています。 W3Cで定義されるWebサービス標準に準拠したWSDLを使用して、サービスをWebサービスとして公開できます。</p><p>サービスは、.NET FrameworkやSun™ Web Services SDKなど、任意のWebサービススタックから呼び出すことができます。 (See <a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">Invoking AEM Forms using Web Services</a>.)</p></td>
+   <td><p>AEM Formsは、SOAP/HTTPなどのWebサービス標準をサポートしています。 W3Cで定義されるWebサービス標準に準拠したWSDLを使用して、サービスをWebサービスとして公開できます。</p><p>サービスは、.NET FrameworkやSun™ Web Services SDKなど、任意のWebサービススタックから呼び出すことができます。 (「<a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">Webサービスを使用したAEM Formsの呼び出し</a>」を参照)。</p></td>
   </tr>
   <tr>
    <td><p>REST要求</p></td>
-   <td><p>AEM FormsはREST要求をサポートします。 サービスは、HTMLページから直接呼び出すことができます。 (REST要求を使用した <a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">AEM Formsの呼び出しを参照</a>)。</p></td>
+   <td><p>AEM FormsはREST要求をサポートします。 サービスは、HTMLページから直接呼び出すことができます。 (<a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">REST要求を使用したAEM Formsの呼び出し</a>を参照)。</p></td>
   </tr>
  </tbody>
 </table>
@@ -54,16 +54,16 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->AEM FormsSDKを使用して、AEM Formsサービスを呼び出すクライアントアプリケーションを作成するほか、サービスコンテナにデプロイできるコンポーネントを作成することもできます。 例えば、プロセスで使用できるカスタムデータ型を含むBankコンポーネントを作成できます。 つまり、次のようなデータタイプを作成でき `com.adobe.idp.BankAccount`ます。 その後、クライアントアプリケーションで `com.adobe.idp.BankAccount` インスタンスを作成できます。
+>AEM FormsSDKを使用して、AEM Formsサービスを呼び出すクライアントアプリケーションを作成するほか、サービスコンテナにデプロイできるコンポーネントを作成することもできます。 例えば、プロセスで使用できるカスタムデータ型を含むBankコンポーネントを作成できます。 つまり、`com.adobe.idp.BankAccount`などのデータ型を作成できます。 その後、`com.adobe.idp.BankAccount`インスタンスをクライアントアプリケーションに作成できます。
 
 サービスコンテナには次の機能があります。
 
-* 様々なメソッドを使用してAEM Formsサービスを呼び出すことを許可します。 エンドポイントを設定してサービスを設定し、すべてのメソッドを使用して呼び出せるようにします。リモート処理、Java API、WebサービスおよびREST。 (See [Programmatically Managing Endpoints](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints).)
+* 様々なメソッドを使用してAEM Formsサービスを呼び出すことを許可します。 エンドポイントを設定してサービスを設定し、すべてのメソッドを使用して呼び出せるようにします。リモート処理、Java API、WebサービスおよびREST。 （「[エンドポイントのプログラム管理](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints)」を参照）。
 * 呼び出し要求と呼ばれる正規化された形式にメッセージを変換します。 呼び出し要求がクライアントアプリケーション（または他のサービス）からサービスコンテナ内のサービスに送信されます。 呼び出し要求には、呼び出すサービスの名前や、操作の実行に必要なデータ値などの情報が含まれます。 多くのサービスでは、操作の実行にドキュメントが必要です。 したがって、呼び出し要求には通常、PDFデータ、XDPデータ、XMLデータなどのドキュメントが含まれます。
 * 呼び出し要求を適切なサービスにルーティングします（呼び出すサービスの名前は、呼び出し要求の一部です）。
 * 呼び出し元が、指定されたサービス操作を呼び出す権限を持っているかどうかを判断するなどのタスクを実行します。 呼び出し要求には、有効なAEM formsユーザー名とパスワードを含める必要があります。
 
-   呼び出し要求をサービスに送信する方法は異なります。 また、必要な入力値をサービスに送信する方法も異なります。 例えば、Java APIを使用してPDFドキュメントを必要とするサービスを呼び出すとします。 対応するJavaメソッドには、PDFドキュメントを受け取るパラメータが含まれています。 この場合、パラメーターのデータタイプはで `com.adobe.idp.Document`す。 (See [Passing data to AEM Forms services using the Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
+   呼び出し要求をサービスに送信する方法は異なります。 また、必要な入力値をサービスに送信する方法も異なります。 例えば、Java APIを使用してPDFドキュメントを必要とするサービスを呼び出すとします。 対応するJavaメソッドには、PDFドキュメントを受け取るパラメータが含まれています。 この場合、パラメーターのデータ型は`com.adobe.idp.Document`です。 (「[Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)を使用してAEM Formsサービスにデータを渡す」を参照)。
 
    監視フォルダーを使用してサービスを呼び出す場合、設定済みの監視フォルダーにファイルを配置すると、呼び出し要求が送信されます。 電子メールを使用してサービスを呼び出す場合、設定済みのインボックスに電子メールメッセージが届くと、呼び出し要求がサービスに送信されます。
 
