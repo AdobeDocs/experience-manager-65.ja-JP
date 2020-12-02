@@ -37,15 +37,15 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 * JEE サーバー上で AEM Forms のみを使用している場合、Indexer パッケージはすでにインストールされています。
 * すべてのバンドルが正常に実行していることを確認します。アクティブ状態になっていないバンドルが存在する場合は、すべてのバンドルが起動して実行されるまで待ちます。
 
-   * For AEM Forms on OSGi, the bundles are listed at https://&#39;[server]:[port]&#39;/system/console/bundles.
-   * For AEM Forms on JEE, the bundles are listed at https://&#39;[server]:[port]&#39;/[context-path]/system/console/bundles. 例：https://localhost:8080/lc/system/console/bundles
+   * OSGi上のAEM Formsの場合、バンドルはhttps://&#39;[server]:[port]&#39;/system/console/bundlesに一覧表示されます。
+   * JEE上のAEM Formsの場合、バンドルはhttps://&#39;[server]:[port]&#39;/[context-path]/system/console/bundlesに一覧表示されます。 例：https://localhost:8080/lc/system/console/bundles
 
-* 許可リスト追加に対する *sun.util.calendar* パッケージ。 パッケージを許可リストに追加するには、次の手順を実行します。
+* 許可リスト追加に対する&#x200B;*sun.util.calendar*&#x200B;パッケージ。 パッケージを許可リストに追加するには、次の手順を実行します。
 
-   1. AEM Web コンソールを開きます。The URL is https://&#39;[server]:[port]&#39;/system/console/configMgr.
+   1. AEM Web コンソールを開きます。URLはhttps://&#39;[server]:[port]&#39;/system/console/configMgrです。
    1. **デシリアライゼーションファイアウォール設定**&#x200B;を探して開きます。
 
-   1. Add the sun.util.calendar package to the Allowlisted classes or package prefixes field and click **Save**.
+   1. sun.util.calendarパッケージ追加を「Allowlisted classes or package prefixes」フィールドに追加し、「**Save**」をクリックします。
 
 ### AEM Forms JEE と OSGi スタック間の安全な接続の確立 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 
@@ -56,7 +56,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
 #### JEE 上の AEM Forms の管理者資格情報を使用して Adobe LiveCycle Client SDK Bundle を設定します {#configure-adobe-livecycle-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
-1. AEM Web コンソールを開きます。The URL is https://&#39;[server]:[port]&#39;/system/console/configMgr.
+1. AEM Web コンソールを開きます。URLはhttps://&#39;[server]:[port]&#39;/system/console/configMgrです。
 1. **Adobe LiveCycle Client SDK Bundle** を探して開きます。次の各フィールドの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の Forms のパス> のパラメータで AEM サーバーを再起動します。
@@ -66,10 +66,10 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
    「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
 
-#### 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
+#### 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定  {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
 
 1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/jp/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
-1. AEM Web コンソールを開きます。The URL is https://&#39;[server]:[port]&#39;/system/console/configMgr.
+1. AEM Web コンソールを開きます。URLはhttps://&#39;[server]:[port]&#39;/system/console/configMgrです。
 1. **Adobe LiveCycle Client SDK** Bundle を探して開きます。次の各プロパティの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の AEM Forms のパス> のパラメータで AEM サーバーを再起動します。
@@ -82,7 +82,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
    「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
 
-### サンプルポリシーで保護された PDF ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-document}
+### サンプルポリシーで保護された PDF ドキュメントのインデックス作成  {#index-a-sample-policy-protected-pdf-document}
 
 1. 管理者として AEM Assets にログインします。
 1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護された PDF ドキュメントをアップロードします。
