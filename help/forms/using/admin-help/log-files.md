@@ -22,19 +22,19 @@ ht-degree: 72%
 
 実行時や起動時のエラーなどのイベントは、アプリケーションサーバーのログファイルに記録されます。アプリケーションサーバーへのデプロイ中に問題が発生した場合には、ログファイルを参照して問題を見つけることができます。ログファイルは、テキストエディターを使用して開くことができます。
 
-(JBoss) The following log files are located in the `[appserver root]/server/'server'/log` directory:
+(JBoss)次のログファイルが`[appserver root]/server/'server'/log`ディレクトリにあります。
 
 * boot.log
 * server.log.*[yyyy-mm-dd]*
 * server.log
 
-(WebLogic) Domain log files are located in the `[appserverdomain]` directory, and server log files are located in the `[appserverdomain]/servers/[appserver name]/logs` directory:
+(WebLogic)ドメインログファイルは`[appserverdomain]`ディレクトリに、サーバーログファイルは`[appserverdomain]/servers/[appserver name]/logs`ディレクトリにあります。
 
 * `access.log`
 * `[appserver name].log`
 * `[appserver name].out.[incremental number]`
 
-(WebSphere) The following log files are located in the `[appserver root]/profiles/default/logs/[appserver name]` directory:
+(WebSphere)次のログファイルが`[appserver root]/profiles/default/logs/[appserver name]`ディレクトリにあります。
 
 * SystemErr.log
 * SystemOut.log
