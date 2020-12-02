@@ -28,7 +28,7 @@ ht-degree: 60%
 >
 >以前のバージョンからアップグレードされたインスタンスでは、ページオーサリング用にクラシック UI が保持されます。
 >
->After upgrade, page authoring will not be automatically switched to the touch-enabled UI, but you can configure this usingthe[OSGi configuration](/help/sites-deploying/configuring-osgi.md) of the **WCM Authoring UI Mode Service** ( `AuthoringUIMode` service). [エディターの UI 上書き](#uioverridesfortheeditor)を参照してください。
+>アップグレード後、ページオーサリングはタッチ対応UIに自動的に切り替わりませんが、**WCMオーサリングUIモードサービス**（`AuthoringUIMode`サービス）の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を使用して設定できます。 [エディターの UI 上書き](#uioverridesfortheeditor)を参照してください。
 
 ## ユーザーのインスタンス用のデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
