@@ -24,7 +24,7 @@ AEM のインストールを可能な限り保護するために、セキュリ�
 
 ただし、CRXDE Lite が正しく機能するには `org.apache.sling.jcr.davex` バンドルに依存するので、WebDAV を無効にすると CRXDE Lite も無効になります。
 
-When this happens, browsing to `https://serveraddress:4502/crx/de/index.jsp` will display an empty root node, and all HTTP requests to CRXDE Lite resources will fail:
+この場合、`https://serveraddress:4502/crx/de/index.jsp`を参照すると空のルートノードが表示され、CRXDE Liteリソースに対するHTTP要求はすべて失敗します。
 
 ```xml
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
@@ -34,7 +34,7 @@ When this happens, browsing to `https://serveraddress:4502/crx/de/index.jsp` wil
 
 無効にした場合、CRXDE Lite をオンにするには次の手順を実行します。
 
-1. Go to the OSGi Components console at `http://localhost:4502/system/console/components`
+1. `http://localhost:4502/system/console/components`のOSGiコンポーネントコンソールに移動します
 1. 次のコンポーネントを検索します。
 
    * `org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`
@@ -56,7 +56,7 @@ CRXDE Lite は、次のコマンドを実行して、cURL を使用して有効�
 curl -u admin:admin -F "jcr:primaryType=sling:OsgiConfig" -F "alias=/crx/server" -F "dav.create-absolute-uri=true" -F "dav.create-absolute-uri@TypeHint=Boolean" http://localhost:4502/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
 ```
 
-## その他のリソース {#other-resources}
+## その他のリソース  {#other-resources}
 
 AEM 6 のセキュリティ機能について詳しくは、次のページを参照してください。
 
