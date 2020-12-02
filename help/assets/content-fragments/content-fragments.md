@@ -58,7 +58,7 @@ Adobe Experience Manager（AEM）コンテンツフラグメントを使用す�
 
 さらにこうしたコンテンツフラグメントを集めて組み立てることで、多様なチャネルにエクスペリエンスを提供できます。
 
-## コンテンツフラグメントとコンテンツサービス {#content-fragments-and-content-services}
+## コンテンツフラグメントとコンテンツサービス  {#content-fragments-and-content-services}
 
 AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。
 
@@ -94,7 +94,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 
 >[!NOTE]
 >
->AEM はフラグメントコンテンツの翻訳もサポートしています。See [Creating Translation Projects for Content Fragments](/help/assets/creating-translation-projects-for-content-fragments.md) for further information.
+>AEM はフラグメントコンテンツの翻訳もサポートしています。詳しくは、[コンテンツフラグメント用の翻訳プロジェクトの作成](/help/assets/creating-translation-projects-for-content-fragments.md)を参照してください。
 
 ## コンテンツフラグメントのタイプ {#types-of-content-fragment}
 
