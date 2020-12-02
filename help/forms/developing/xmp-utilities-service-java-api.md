@@ -30,11 +30,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、UNIXなど別のオペレーティングシステムを使用している場合、Formsサーバーを基にしています。windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、UNIXなど別のオペレーティングシステムを使用している場合、Formsサーバーを基にしています。windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの書き出し {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}を使用したXMPメタデータの書き出し
 
-次のコードの例は、XMPメタデータを取得、調査、保存します。 (PDFドキュメントからのメタデータの [書き出しを参照](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents))。
+次のコードの例は、XMPメタデータを取得、調査、保存します。 ([PDFドキュメントからのメタデータの書き出し](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照)。
 
 ```java
  /*
@@ -137,9 +137,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの読み込み {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}を使用したXMPメタデータの読み込み
 
-次のコードの例では、XMPメタデータを読み込み、新しいPDFファイルをディスクに保存します。 PDFドキュメントは、Loan.pdfというPDFファイルに基づいています。 PDFドキュメントに読み込むメタデータが含まれるXMLドキュメントは、LoanMetaData.xmlというXMLファイルに基づい *ています*。 このXMLファイルについて詳しくは、「PDFドキュメントへのメタデータの [読み込み](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents)」を参照してください。
+次のコードの例では、XMPメタデータを読み込み、新しいPDFファイルをディスクに保存します。 PDFドキュメントは、Loan.pdfというPDFファイルに基づいています。 PDFドキュメントに読み込むメタデータが含まれるXMLドキュメントは、*LoanMetaData.xml*&#x200B;というXMLファイルに基づいています。 このXMLファイルについて詳しくは、[PDFドキュメントへのメタデータの読み込み](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents)を参照してください。
 
 ```java
  /*
