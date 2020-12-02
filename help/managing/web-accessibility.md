@@ -24,7 +24,7 @@ ht-degree: 84%
 
 * テンプレート開発者も同様に、Web サイトデザインを実装する際に、こうした問題を認識する必要があります。
 
-Adobe Experience Manager works with the [guidelines](#wcag-accessibility-guidelines) provided by the [World Wide Web Consortium](#world-wide-web-consortium).
+Adobe Experience Managerは、[World Wide Web Consortium](#world-wide-web-consortium)が提供する[ガイドライン](#wcag-accessibility-guidelines)と協力する。
 
 >[!NOTE]
 >
