@@ -12,21 +12,21 @@ ht-degree: 40%
 ---
 
 
-# AEM 6.5導入ユーザーガイド {#aem-65-implementation-user-guides}
+# AEM 6.5導入ユーザーガイド{#aem-65-implementation-user-guides}
 
 ## AEM での開発{#developing-on-aem}
 
 AEM開発者ですか。 [AEMでの開発を開始します。](/help/sites-developing/home.md)
 
-## AEMのコアコンポーネント {#core-components-for-aem}
+## AEM {#core-components-for-aem}のコアコンポーネント
 
 [作成者がコンテンツを容易に作成できる、拡張可能なコアコンポーネントを使用します。](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 
-## AEM用のHTL(HTML Template Language) {#htl-for-aem}
+## AEM {#htl-for-aem}用のHTL（HTMLテンプレート言語）
 
 [HTMLテンプレート言語を使用してAEM用に開発します。](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
 
-## AEM版Cloud Manager {#cloud-manager-for-aem}
+## AEM用Cloud Manager {#cloud-manager-for-aem}
 
 [Cloud ManagerをAEMで使用する方法を説明します。](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 
