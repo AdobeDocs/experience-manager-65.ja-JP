@@ -52,18 +52,18 @@ Handlebars JS テンプレートでは、モデル／ビュー JS コンポー�
 コンポーネントをカスタマイズまたは拡張するには、今後のリリースへのアップグレードプロセスを簡素化する /apps ディレクトリに対してオーバーレイおよび拡張のみを記述します。
 
 * スキン表示の場合：
-   * Only the [CSS needs editing](client-customize.md#skinning-css).
+   * [CSSのみが](client-customize.md#skinning-css)の編集を必要とします。
 * For Look and Feel:
    * JSテンプレートとCSSの変更を参照してください。
 * Look, Feel &amp; UX:
-   * Change the JS Template, CSS and [extend/override Javascript](client-customize.md#extending-javascript).
+   * JSテンプレート、CSSおよび[JavaScript](client-customize.md#extending-javascript)の拡張/オーバーライドを変更します。
 * JSテンプレートまたはGETエンドポイントで使用できる情報を変更するには：
-   * Extend the [SocialComponent](server-customize.md#socialcomponent-interface).
+   * [SocialComponent](server-customize.md#socialcomponent-interface)を拡張します。
 * 操作中にカスタム処理を追加するには：
-   * Write an [OperationExtension](server-customize.md#operationextension-class).
+   * [OperationExtension](server-customize.md#operationextension-class)を書き込みます。
 * 新しいカスタム操作を追加するには：
-   * Create a new [Sling Post Operation](server-customize.md#postoperation-class).
-   * Use existing [OperationServices](server-customize.md#operationservice-class) as needed.
+   * 新しい[Sling Post操作](server-customize.md#postoperation-class)を作成します。
+   * 必要に応じて、既存の[OperationServices](server-customize.md#operationservice-class)を使用します。
    * 必要に応じて追加、クライアント側から操作を呼び出すJavaScriptコード。
 
 ## サーバー側フレームワーク {#server-side-framework}
@@ -76,7 +76,7 @@ Java API では、継承またはサブクラス化が容易な抽象クラス�
 
 メインクラスについては、[サーバー側のカスタマイズ](server-customize.md)ページで説明します。
 
-Visit [Storage Resource Provider Overview](srp.md) to learn about working with UGC.
+UGCの使用方法については、[ストレージリソースプロバイダーの概要](srp.md)を参照してください。
 
 ### HTTP API {#http-api}
 
@@ -84,14 +84,14 @@ HTTP API によって、PhoneGap アプリ、ネイティブアプリ、その�
 
 ### HTTP API - GET 要求 {#http-api-get-requests}
 
-すべての SocialComponent に対して、フレームワークによって HTTP ベースの API エンドポイントが提供されます。エンドポイントにアクセスするには、「.social.json」セレクター+拡張子を使用してGETリクエストをリソースに送信します。 Using Sling, the request is handed to the `DefaultSocialGetServlet`.
+すべての SocialComponent に対して、フレームワークによって HTTP ベースの API エンドポイントが提供されます。エンドポイントにアクセスするには、「.social.json」セレクター+拡張子を使用してGETリクエストをリソースに送信します。 Slingを使用して、リクエストは`DefaultSocialGetServlet`に渡されます。
 
 **`DefaultSocialGetServlet`**
 
-1. Passes the resource (resourceType) to the `SocialComponentFactoryManager` and receives a SocialComponentFactory capable of selecting a `SocialComponent` representing the resousrce.
+1. リソース(resourceType)を`SocialComponentFactoryManager`に渡し、リソースを表す`SocialComponent`を選択できるSocialComponentFactoryを受け取ります。
 
-1. Invokes the factory and receives a `SocialComponent` capable of handling the resource and request.
-1. Invokes the `SocialComponent`, which process the request and returns a JSON representation of the results.
+1. ファクトリを呼び出し、リソースと要求を処理できる`SocialComponent`を受け取ります。
+1. `SocialComponent`を呼び出します。これは、要求を処理し、結果のJSON表現を返します。
 1. クライアントに対するJSON応答を返します。
 
 **`GET Request`**
@@ -114,19 +114,19 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 ### ストレージリソースプロバイダー（SRP）{#storage-resource-provider-srp}
 
-To learn about handling UGC stored in the [community content store](working-with-srp.md), see:
+[コミュニティコンテンツストア](working-with-srp.md)に保存されたUGCの処理については、次を参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRP APIユーティリティのメソッドと例
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
 
 ### サーバー側のカスタマイズ {#server-side-customizations}
 
 サーバー側のコミュニティコンポーネントのビジネスロジックおよび動作のカスタマイズについて詳しくは、[サーバー側のカスタマイズ](server-customize.md)を参照してください。
 
-## Handlebars JS テンプレート言語 {#handlebars-js-templating-language}
+## Handlebars JS テンプレート言語  {#handlebars-js-templating-language}
 
-One of the more noticeable changes in the new framework is the use of the [Handlebars JS templating language (HBS)](https://www.handlebarsjs.com/), a popular open-source technology for server-client rendering.
+この新しいフレームワークの顕著な変更の1つは、サーバークライアントレンダリング用の一般的なオープンソーステクノロジーである[Handlebars JSテンプレート言語(HBS)](https://www.handlebarsjs.com/)の使用です。
 
 HBS スクリプトは、単純で、ロジックがなく、サーバーとクライアントの両方でコンパイルされ、オーバーレイやカスタマイズが容易であり、HBS ではクライアント側のレンダリングがサポートされているのでクライアント UX と自然にバインドします。
 
@@ -142,11 +142,11 @@ Handlebars（HBS）テンプレートファイル（.hbs）は、.jsp および 
 
 .hbs ファイルへの HTTP アクセスは禁止できません。
 
-### コミュニティコンポーネントの追加またはインクルード {#add-or-include-a-communities-component}
+### コミュニティコンポーネントの追加またはインクルード  {#add-or-include-a-communities-component}
 
-ほとんどのコミュニティコンポーネントは、Sling アドレス可能リソースとして追加する必要があります。** A select few of the Communities components may be *included* in a template as a non-existing resource to allow for dynamic inclusion and customization of the location at which to write user generated content (UGC).
+ほとんどのコミュニティコンポーネントは、Sling アドレス可能リソースとして追加する必要があります。**&#x200B;一部のCommunitiesコンポーネントは、ユーザー生成コンテンツ(UGC)を書き込む場所を動的に含めたりカスタマイズしたりするために、既存でないリソースとしてテンプレートに&#x200B;*含める*&#x200B;ことができます。
 
-In either case, the component&#39;s [required client libraries](clientlibs.md) must also be present.
+どちらの場合も、コンポーネントの[必要なクライアントライブラリ](clientlibs.md)も存在する必要があります。
 
 **コンポーネントの追加**
 
@@ -156,7 +156,7 @@ In either case, the component&#39;s [required client libraries](clientlibs.md) m
 
 **コンポーネントのインクルード**
 
-Including a component refers to the process of adding a reference to a [&quot;non-existing&quot; resource](srp.md#for-non-existing-resources-ners) (no JCR node) within the template, such as using a scripting language.
+コンポーネントを含めると、スクリプト言語の使用など、テンプレート内の[&quot;存在しない&quot;リソース](srp.md#for-non-existing-resources-ners)（JCRノードなし）に参照を追加するプロセスを指します。
 
 AEM 6.1以降では、コンポーネントが追加される代わりに動的に含まれる場合、コンポーネントのプロパティをauthor *design *modeで編集できます。
 
@@ -167,9 +167,9 @@ AEM 6.1以降では、コンポーネントが追加される代わりに動的�
 * [レビュー](reviews-basics.md)
 * [投票](essentials-voting.md)
 
-The [Community Components Guide](components-guide.md) allows includable components to be toggled from being added to being included.
+[コミュニティコンポーネントガイド](components-guide.md)では、インクルード可能なコンポーネントを追加から含めるに切り替えることができます。
 
-**Handlebars** テンプレート言語を使用する場合、既存でないリソースは、そのresourceTypeを指定して [includeヘルパーを使用して含められます](handlebars-helpers.md#include) 。
+**Handlebarstemplaking言語を使用する場合、既存でないリソースは、そのresourceTypeを指定してinclude**  [](handlebars-helpers.md#include) helperbyを使用して含められます。
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
@@ -184,11 +184,11 @@ The [Community Components Guide](components-guide.md) allows includable componen
 >
 >コンポーネントを、テンプレートに追加またはインクルードせずに、ページに動的に追加するには、[コンポーネントのサイドローディング](sideloading.md)を参照してください。
 
-### Handlebars ヘルパー {#handlebars-helpers}
+### Handlebars ヘルパー  {#handlebars-helpers}
 
 SCF で使用できるカスタムヘルパーのリストおよび説明については、[SCF Handlebars ヘルパー](handlebars-helpers.md)を参照してください。
 
-## クライアント側フレームワーク {#client-side-framework}
+## クライアント側フレームワーク  {#client-side-framework}
 
 ### モデル - ビュー JavaScript フレームワーク {#model-view-javascript-framework}
 
@@ -215,7 +215,7 @@ CSS クラスの定義と使用に推奨される規則を以下に示します�
 * [JavaScript の拡張](client-customize.md#extending-javascript)
 * [SCF の clientlib](client-customize.md#clientlibs-for-scf)
 
-## 機能とコンポーネントの基本事項 {#feature-and-component-essentials}
+## 機能とコンポーネントの基本事項  {#feature-and-component-essentials}
 
 開発者にとっての基本情報が、[機能とコンポーネントの基本事項](essentials.md)の節で説明されています。
 
