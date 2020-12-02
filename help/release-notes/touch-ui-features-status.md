@@ -1,6 +1,6 @@
 ---
 title: タッチ操作対応 UI 機能のステータス
-description: タッチ対応UI [!DNL Adobe Experience Manager] に関するリリースノートです。
+description: ' [!DNL Adobe Experience Manager] タッチ対応UIに関するリリースノート'
 translation-type: tm+mt
 source-git-commit: d938f52766154b68df2f6db2c8c49a0ad97e7e6d
 workflow-type: tm+mt
@@ -12,15 +12,15 @@ ht-degree: 48%
 
 # タッチ操作対応 UI 機能のステータス {#touch-ui-feature-status}
 
-AEM 6.4以降の [Classic UIは非推奨](../release-notes/deprecated-removed-features.md)。 Adobeでは、クラシックUIの機能はさらに強化されません。タッチ操作対応UIの強力な新機能を利用することをお勧めします。
+AEM 6.4以降の[クラシックUIは非推奨です](../release-notes/deprecated-removed-features.md)。 Adobeでは、クラシックUIの機能はさらに強化されません。タッチ操作対応UIの強力な新機能を利用することをお勧めします。
 
-Starting with version 6.0, AEM introduced a new user interface referred as the &quot;touch-enabled UI&quot; (simply called &quot;Touch UI&quot;) that is aligned to the [!DNL Adobe Experience Cloud] and to the overall Adobe user interface guidelines. ほぼ機能のパリティに達したので、これは従来のデスクトップ指向インターフェイスを「クラシックUI」と呼ぶのに対し、AEMの標準UIになりました。
+バージョン6.0以降、AEMでは、「タッチ対応UI」と呼ばれる新しいユーザーインターフェイス（「タッチ対応UI」と呼ばれる）が導入され、[!DNL Adobe Experience Cloud]とAdobeのユーザーインターフェイスの全体的なガイドラインに合わせています。 ほぼ機能のパリティに達したので、これは従来のデスクトップ指向インターフェイスを「クラシックUI」と呼ぶのに対し、AEMの標準UIになりました。
 
 ほとんどの機能はタッチ操作対応 UI に搭載されていますが、まだ完成せず、今後のリリースで追加される機能もあります。
 
 次のリストは、AEM 6.5で実装された機能の現在のステータスを示しています。
 
-For recommendations for customers that upgrade to AEM 6.5, see [User interface recommendations for customers](/help/sites-deploying/ui-recommendations.md).
+AEM 6.5にアップグレードするお客様向けの推奨事項については、[お客様向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)を参照してください。
 
 >[!NOTE]
 >
@@ -40,11 +40,11 @@ For recommendations for customers that upgrade to AEM 6.5, see [User interface r
 
 ## 機能ステータス：サイト管理 {#feature-status-sites-admin}
 
-This is a list of capabilities the classic UI Site Admin (`/siteadmin`) has and the status in the touch-enabled UI (`/sites.html`).
+これは、従来のUIサイト管理者(`/siteadmin`)が持つ機能とタッチ操作対応UI(`/sites.html`)のステータスのリストです。
 
 | 機能 | ステータス | コメント |
 |--- |--- |--- |
-| サイト階層を移動 | 完了 | AEM 6.4では、 [コンテンツツリー表示が導入されました](/help/sites-authoring/basic-handling.md#content-tree)。 |
+| サイト階層を移動 | 完了 | AEM 6.4では、[コンテンツツリー表示](/help/sites-authoring/basic-handling.md#content-tree)が導入されました。 |
 | ワークフローを開始 | 完了 |  |
 | ページを新規作成 | 完全 |  |
 | サイトを新規作成 | 完全 |  |
@@ -78,7 +78,7 @@ This is a list of capabilities the classic UI Site Admin (`/siteadmin`) has and 
 
 ## 機能ステータス：ページエディター {#feature-status-page-editor}
 
-This is a list of capabilities the classic UI Page Editor (`/cf#`) has and the status in the touch-enabled (`/editor.html`).
+これは、従来のUIページエディター(`/cf#`)が持つ機能とタッチ対応のステータス(`/editor.html`)のリストです。
 
 | 機能 | ステータス | コメント |
 |--- |--- |--- |
@@ -106,7 +106,7 @@ This is a list of capabilities the classic UI Page Editor (`/cf#`) has and the s
 | ページをコピー | 削除 | サイト管理を使用して[ページをコピー](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page)します。 |
 | ページを移動 | 削除 | サイト管理を使用して[ページを移動](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)します。 |
 | ページを削除 | 削除 | サイト管理を使用して[ページを削除](/help/sites-authoring/managing-pages.md#deleting-a-page)します。 |
-| 参照を表示 | 削除 | Use Site Admin to see the [detailed reference list](/help/sites-authoring/author-environment-tools.md#references). |
+| 参照を表示 | 削除 | サイト管理者を使用して、[詳細な参照リスト](/help/sites-authoring/author-environment-tools.md#references)を表示します。 |
 | 監査ログ | 削除 | サイト管理を使用し、[アクティビティレールを開き](/help/sites-authoring/author-environment-tools.md#events-timeline)ます。 |
 | バージョンを作成 | 削除 | サイト管理を使用して[バージョンを新規作成](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)します。 |
 | バージョンを復元 | 削除 | サイト管理を使用して[バージョンを復元](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)します。 |
@@ -130,7 +130,7 @@ This is a list of capabilities the classic UI Page Editor (`/cf#`) has and the s
 | 機能 | ステータス | コメント |
 |--- |--- |--- |
 | リッチテキストエディター | 完了 | インプレイス、ダイアログ、フルスクリーンで使用できます。 |
-| RTEプラグインの有効化/無効化 | 完了 | テンプレートエディターを使用して実行でき [ます](/help/sites-authoring/templates.md)。 |
+| RTEプラグインの有効化/無効化 | 完了 | [テンプレートエディター](/help/sites-authoring/templates.md)を使用して実行できます。 |
 | プレーンテキストにRTEを使用 | 完了 |  |
 | RTEプラグイン：リンクとアンカー | 完了 |  |
 | RTEプラグイン：文字マップ | 完了 |  |
@@ -151,7 +151,7 @@ This is a list of capabilities the classic UI Page Editor (`/cf#`) has and the s
 | テーブルエディタ | 完了 | インプレイス、ダイアログ、フルスクリーンで使用できます。 |
 | 画像をテーブルのセルにドラッグ | 完了 | 使用可能なインライン |
 | 画像エディター | 完了 | インプレイス、ダイアログ、フルスクリーンで使用できます。 |
-| IPEプラグインの有効化/無効化 | 完了 | AEM 6.3では、テン [プレートエディターにUIが追加されました](/help/sites-authoring/templates.md)。 |
+| IPEプラグインの有効化/無効化 | 完了 | AEM 6.3では、[テンプレートエディター](/help/sites-authoring/templates.md)にUIが追加されました。 |
 | IPEプラグイン：切り抜き | 完了 |  |
 | IPEプラグイン：反転 | 完了 |  |
 | IPEプラグイン：取り消し/やり直し | 完了 |  |
@@ -167,13 +167,13 @@ This is a list of capabilities the classic UI Page Editor (`/cf#`) has and the s
 |--- |--- |--- |
 | タスク管理 | 置換 | 6.0で導入されたプロジェクトとタスク。 |
 | ワークフロー受信トレイ | 完了 |  |
-| ページへのワークフローテンプレートの設定(`/etc/workflow/wcm/templates.html`) | 消失 | クラシック UI を使用します。 |
+| ページテンプレートの構成(`/etc/workflow/wcm/templates.html`)へのワークフロー | 消失 | クラシック UI を使用します。 |
 | 管理UIのタグ付け | 完了 |  |
 | MSM/Blueprintコントロールセンター | 完了 |  |
 | Blueprint Manager UI | 完了 |  |
 | ロールアウト設定UI | 消失 | クラシック UI を使用します。 |
 | ユーザー、グループ、権限UI | ほとんど完了 | 高度な権限編集には、クラシックUIを使用します。 |
-| Purge Versions(`/etc/versioning/purge.html`) | 消失 | クラシック UI を使用します。 |
+| パージバージョン(`/etc/versioning/purge.html`) | 消失 | クラシック UI を使用します。 |
 | 外部リンクチェック (`/etc/linkchecker.html`) | 消失 | クラシック UI を使用します。 |
 | バルクエディタ(`/etc/importers/bulkeditor.html`) | 消失 | クラシック UI を使用します。 |
 | サムネールをアップロードして追加または上書き | 消失 | クラシック UI を使用します。 |
