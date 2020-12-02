@@ -24,10 +24,10 @@ ht-degree: 45%
 
 開発およびデモの目的では、1つの作成者と1つの発行インスタンスを実行する必要があります。
 
-To do so, follow the basic AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) instructions, which will result in:
+これを行うには、基本的なAEM [はじめに](../../help/sites-deploying/deploy.md#getting-started)の手順に従います。これにより、次のようになります。
 
-* Author environment on [localhost:4502](http://localhost:4502/)
-* Publish environment on [localhost:4503](http://localhost:4503/)
+* [localhost:4502](http://localhost:4502/)の作成者環境
+* [localhost:4503](http://localhost:4503/)の公開環境
 
 AEM Communities では、各環境を次の目的で使用します。
 
@@ -47,7 +47,7 @@ AEM Communities では、各環境を次の目的で使用します。
 
 ## Communities の最新リリースのインストール {#install-latest-communities-release}
 
-This tutorial creates an [engagement community site](overview.md#engagement-community) and is based on AEM Communities 6.2 feature pack version 1.10.
+このチュートリアルでは、[エンゲージメントコミュニティサイト](overview.md#engagement-community)を作成し、AEM Communities6.2機能パックバージョン1.10に基づいています。
 
 最新の機能パックがインストールされていることを確認するには、次のページにアクセスします。
 
@@ -55,7 +55,7 @@ This tutorial creates an [engagement community site](overview.md#engagement-comm
 
 [イネーブルメントコミュニティサイト](overview.md#enablement-community)の作成に関するチュートリアルについては、[イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)を参照してください。
 
-## Analytics の設定 {#configure-analytics}
+## Analytics の設定  {#configure-analytics}
 
 [コミュニティサイトで Adobe Analytics が設定されている](analytics.md)場合、コミュニティアクティビティに関する情報が利用できます。これにより、コミュニティメンバーのエクスペリエンスが向上するほか、サイトの管理者はフィードバックを得られます。
 
@@ -63,51 +63,51 @@ Adobe Analyticsとの統合は任意です。
 
 ## 電子メール通知の設定 {#configure-email-for-notifications}
 
-The notifications feature, available by default for all sites created using the `Communities Sites` console, provides an email channel for notifications.
+通知機能は、デフォルトで`Communities Sites`コンソールを使用して作成されたすべてのサイトで使用でき、通知の電子メールチャネルを提供します。
 
 これを使用するには、電子メールをサイト用に適切に設定する必要があります。
 
 [電子メールの設定](email.md)を参照してください。
 
-## トンネルサービスの有効化 {#enable-the-tunnel-service}
+## トンネルサービスの有効化  {#enable-the-tunnel-service}
 
-オーサー環境でコミュニティサイトを作成するときに、トンネルサービスを使用すると、パブリッシュ環境に登録されている信頼済みのコミュニティメンバーに対して役割を割り当てることができます。The tunnel service also allows access to community members from the [Members and Groups consoles](members.md) in the author environment.
+オーサー環境でコミュニティサイトを作成するときに、トンネルサービスを使用すると、パブリッシュ環境に登録されている信頼済みのコミュニティメンバーに対して役割を割り当てることができます。トンネルサービスでは、作成者環境の[メンバーとグループコンソール](members.md)からコミュニティメンバーにアクセスすることもできます。
 
-The convention is for members and member groups created in the publish environment to *not* be recreated in the author environment. 詳しくは、[ユーザーとユーザーグループの管理](users.md)を参照してください。
+規則は、発行環境で作成されたメンバーおよびメンバーグループが&#x200B;*に作成された場合、作成者環境で再作成されないようにするためです。*&#x200B;詳しくは、[ユーザーとユーザーグループの管理](users.md)を参照してください。
 
-For simple instructions to enable the tunnel service on an **author** instance, see [Tunnel Service](deploy-communities.md#tunnel-service-on-author).
+**author**&#x200B;インスタンスでトンネルサービスを有効にする簡単な手順については、[トンネルサービス](deploy-communities.md#tunnel-service-on-author)を参照してください。
 
 ## コミュニティ管理者の役割 {#community-administrator-role}
 
 コミュニティ管理者グループのメンバーは、コミュニティサイトの作成、サイトの管理、メンバーの管理（コミュニティの利用を禁止可能）およびコンテンツのモデレートを実行できます。
 
-### ユーザーを作成 {#create-user}
+### ユーザーを作成  {#create-user}
 
-Create a user on *author*, who is assigned the role of Community Administrator:
+*author*&#x200B;にユーザーを作成し、コミュニティ管理者の役割を割り当てます。
 
 * 作成者インスタンス
 
-   * For example, [http://localhost:4502/](http://localhost:4503/)
+   * 例：[http://localhost:4502/](http://localhost:4503/)
 
 * 管理者権限でサインインする
 
    * 例：ユーザー名「admin」/パスワード「admin」
 
-* From the main console, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-* From the **Edit** menu, select **[!UICONTROL Add User]**
+* メインコンソールから、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL セキュリティ]**/**[!UICONTROL ユーザー]**&#x200B;に移動します。
+* **編集**&#x200B;メニューから、**[!UICONTROL 追加ユーザー]**&#x200B;を選択します
 
-* ダイアログで、次のように `Create New User` 入力します。
+* `Create New User`ダイアログで、次のように入力します。
 
    * **[!UICONTROL ID]**:シリウス
    * **[!UICONTROL 電子メールアドレス]**：sirius.nilson@mailinator.com
    * **[!UICONTROL パスワード]**：password
-   * **[!UICONTROL パスワードの確認(&amp;A);ast;]**:password
+   * **[!UICONTROL パスワードの確認(&amp;A);]**:password
    * **[!UICONTROL 名]**：Sirius
    * **[!UICONTROL 姓]**:ニルソン
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
-下にスクロール `Add User to Groups`:
+`Add User to Groups`まで下にスクロールします。
 
 * &#39;C&#39;を入力して検索してください
 
@@ -122,18 +122,18 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
 Facebook および Twitter でデモバージョンのソーシャルログインを使用するには、先に以下をおこなう必要があります。
 
-1. Install a fix pack or [latest feature pack](deploy-communities.md#latestfeaturepack) (for March 2017 Facebook API changes).
-1. [発行環境でOAuthプロバイダーを有効にします](social-login.md#adobe-granite-oauth-authentication-handler) 。
+1. 修正パックまたは[最新の機能パック](deploy-communities.md#latestfeaturepack)をインストールします（2017年3月のFacebook APIの変更の場合）。
+1. [発行環境でOAuth](social-login.md#adobe-granite-oauth-authentication-handler) プロバイダーを有効にします。
 
 実稼動サーバーでは、ソーシャルログインの提供に必要なクラウドサービスを作成する必要があります。
 
 [Facebook と Twitter を使用したソーシャルログイン](social-login.md)を参照してください。
 
-## チュートリアルタグの作成 {#create-tutorial-tags}
+## チュートリアルタグの作成  {#create-tutorial-tags}
 
 `Tutorial` のタグ名前空間を使用して、エンゲージメントチュートリアルとイネーブルメントチュートリアルに使用するタグを作成します。
 
-Use the [Tagging console](../../help/sites-administering/tags.md#tagging-console) to create the following tags:
+[タグ付けコンソール](../../help/sites-administering/tags.md#tagging-console)を使用して、次のタグを作成します。
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -155,8 +155,8 @@ AEM Communities 入門チュートリアル用に作成したタグのサンプ�
 
 ## UGC 共通ストア用の MongoDB {#mongodb-for-ugc-common-store}
 
-It is recommended, but optional, to set [MSRP](msrp.md) (MongoDB) as the [common store](working-with-srp.md) to experience the flexibility of moderating all UGC from either publish and/or author environments.
+[MSRP](msrp.md) (MongoDB)を[共通ストア](working-with-srp.md)に設定することは推奨されますが、この設定はオプションです。発行環境または作成者からすべてのUGCを柔軟にモデレートできます。
 
-For instructions visit [How to Setup MongoDB for Demo](demo-mongo.md).
+手順については、[MongoDBをデモ用に設定する方法](demo-mongo.md)を参照してください。
 
 デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、UGCが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、作成者環境には表示されないので、すべてのモデレートタスクで発行インスタンスを使用する必要があります。
