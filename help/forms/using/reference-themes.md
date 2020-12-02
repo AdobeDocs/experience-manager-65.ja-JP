@@ -19,7 +19,7 @@ ht-degree: 75%
 
 # リファレンステーマ{#reference-themes}
 
-[テーマ](../../forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。In addition to the default theme, you can get the following themes by installing the [AEM-FORMS-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES) package:
+[テーマ](../../forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM-FORMS-REFERENCE-テーマ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES)パッケージをインストールすると、次のテーマが得られます。
 
 * Beryl
 * Exec
@@ -36,7 +36,7 @@ ht-degree: 75%
 
 このパッケージに含まれるテーマはレスポンシブで、これらのテーマ内のスタイルはモバイルおよびデスクトップ表示用として定義されています。様々なデバイス上のほとんどの最新のブラウザーは、これらのテーマのいずれかが適用されたフォームを問題なくレンダリングできます。
 
-For more information on installing the package, see [How to Work With Packages](/help/sites-administering/package-manager.md).
+パッケージのインストールについて詳しくは、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。
 
 ## Beryl {#beryl}
 
