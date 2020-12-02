@@ -24,9 +24,9 @@ ht-degree: 42%
 
 メンバーがコミュニティ機能と対話する際には、通知やゲーミフィケーション（スコアおよびバッジ）のような非同期リスナーを呼び出す OSGi イベントが送信されます。
 
-A component&#39;s [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) instance records the events as `actions` that occur for a `topic`. The SocialEvent includes a method to return a `verb` associated with the action. There is an *n-1* relationship between `actions` and `verbs`.
+コンポーネントの[SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)インスタンスは、`topic`に対して発生する`actions`としてイベントを記録します。 SocialEventには、アクションに関連付けられた`verb`を返すメソッドが含まれます。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係がある。
 
-For the Communities components delivered in the release, the following tables describe the `verbs` defined for each `topic` available for use.
+このリリースで提供されるCommunitiesコンポーネントでは、次の表に、使用可能な各`topic`に対して定義された`verbs`について説明します。
 
 ## トピックと動詞 {#topics-and-verbs}
 
@@ -44,7 +44,7 @@ For the Communities components delivered in the release, the following tables de
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバがコメントを作成する |
-| ADD | コメントへのメンバの返信 |
+| 追加 | コメントへのメンバの返信 |
 | UPDATE | メンバーのコメントが編集されます |
 | DELETE | メンバーのコメントが削除されました |
 
@@ -62,7 +62,7 @@ For the Communities components delivered in the release, the following tables de
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがフォーラムトピックを作成します |
-| ADD | フォーラムトピックへのメンバーの返信 |
+| 追加 | フォーラムトピックへのメンバーの返信 |
 | UPDATE | メンバーのフォーラムトピックまたは返信が編集されました |
 | DELETE | メンバーのフォーラムトピックまたは返信が削除されました |
 
@@ -71,7 +71,7 @@ For the Communities components delivered in the release, the following tables de
 | **動詞** | **説明** |
 |---|---|
 | POST | 会員がブログ記事を作成する |
-| ADD | ブログ記事に対するメンバーコメント |
+| 追加 | ブログ記事に対するメンバーコメント |
 | UPDATE | 会員のブログ記事またはコメントが編集されました |
 | DELETE | 会員のブログ記事またはコメントが削除されました |
 
@@ -80,7 +80,7 @@ For the Communities components delivered in the release, the following tables de
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバがQnA質問を作成します |
-| ADD | メンバはQnA応答を作成します |
+| 追加 | メンバはQnA応答を作成します |
 | UPDATE | メンバーのQnAの質問または回答が編集されました |
 | SELECT | メンバの回答が選択されました |
 | UNSELECT | メンバーの回答が選択解除されました |
@@ -121,9 +121,9 @@ For the Communities components delivered in the release, the following tables de
 
 ## カスタムコンポーネントのイベント {#events-for-custom-components}
 
-For a custom component, the [SocialEvent abstract class](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) must be extended d to record the component&#39;s events as `actions`that occur for a `topic`.
+カスタムコンポーネントの場合、[SocialEvent抽象クラス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)を拡張して、`topic`に対して発生する`actions`としてコンポーネントのイベントを記録する必要があります。
 
-The custom event would override the method `getVerb()` so that an appropriate `verb`is returned for each `action`. The `verb` returned for an action may be one commonly used (such as `POST`) or one specialized for the component (such as `ADD RATING`). There is an *n-1* relationship between `actions`and `verbs`.
+カスタムイベントは、`getVerb()`メソッドを上書きして、`action`ごとに適切な`verb`が返されるようにします。 アクションに対して返される`verb`は、一般的に使用されるもの（`POST`など）か、コンポーネントに特化したもの（`ADD RATING`など）です。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係がある。
 
 >[!NOTE]
 >
@@ -131,7 +131,10 @@ The custom event would override the method `getVerb()` so that an appropriate `v
 
 ### カスタムコンポーネントイベントの疑似コード {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.イベント.イベント](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);[com.adobe.cq.soscial.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);[com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
+[org.osgi.service.イベント.イベント](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
+[com.adobe.cq.soscial.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);
+[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);
+[com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
 package com.mycompany.recipe;
@@ -233,7 +236,7 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 
 次の疑似コードのサンプルでは、コメントコンポーネントの DELETE イベントをアクティビティストリームから削除します。
 
-### EventListener の疑似コード {#pseudo-code-for-eventlistener}
+### EventListener の疑似コード  {#pseudo-code-for-eventlistener}
 
 [最新の機能パック](deploy-communities.md#latestfeaturepack)が必要です。
 
