@@ -23,7 +23,7 @@ ht-degree: 65%
 
 ## 概要 {#introduction}
 
-When the deployment is a [publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm), members need to be able to log in and see their data on any publish node.
+展開が[発行ファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)の場合、メンバーはログインして、任意の発行ノードでデータを確認できる必要があります。
 
 パブリッシュ環境で作成されたユーザーとユーザーグループ（ユーザーデータ）は、オーサー環境では必要ありません。
 
@@ -35,7 +35,7 @@ AEM 6.1以降、ユーザー同期が有効になっている場合、ユーザ�
 
 ## Sling 配布 {#sling-distribution}
 
-The user data, along with their [ACLs](/help/sites-administering/security.md), are stored in the [Oak Core](/help/sites-deploying/platform.md), the layer below Oak JCR, and are accessed using the [Oak API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html). With infrequent updates, it is reasonable for user data to be synchronized with other publish instances using [Sling Content Distribution](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md) (Sling distribution).
+ユーザーデータは、[ACL](/help/sites-administering/security.md)と共に、Oak JCRの下の[Oak Core](/help/sites-deploying/platform.md)に保存され、[Oak API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html)を使用してアクセスされます。 まれに更新される場合は、[Sling Content Distribution](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md)（Sling配布）を使用して、ユーザーデータを他の発行インスタンスと同期させるのが妥当です。
 
 従来のレプリケーションと比較して、Sling配布を使用したユーザー同期のメリットは次のとおりです。
 
@@ -43,7 +43,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 
 * Sling 配布により JCR イベントにプロパティが設定されることで、レプリケーションが無限に繰り返されることなく、パブリッシュ側のイベントリスナーで実行できます
 * Sling 配布は派生元でないパブリッシュインスタンスにのみユーザーデータを送信するので、不要なトラフィックが発生しません
-* [ユーザーノードに設定されたACL](/help/sites-administering/security.md) 、同期に含まれる
+* [ユーザーノード内の](/help/sites-administering/security.md) ACLssetは、同期に含まれます
 
 >[!NOTE]
 >
@@ -53,13 +53,13 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 >
 >ユーザー同期が有効化されている場合でも、***administrators*** グループの同期はサポートされません。代わりに、「diffをインポート」できない場合は、エラーログに記録されます。
 >
->Therefore, when the deployment is a publish farm, if a user is added to or removed from the ***administrators** group, the modification must be manually made on each publish instance.
+>したがって、展開が発行ファームの場合、ユーザーが***administrators**&#x200B;グループに追加または削除された場合、各発行インスタンスで手動で変更を行う必要があります。
 
 ## ユーザー同期の有効化 {#enable-user-sync}
 
 >[!NOTE]
 >
->By default, user sync is `disabled`.
+>デフォルトでは、ユーザー同期は`disabled`です。
 >
 >ユーザー同期を有効にするには、OSGi の既存の&#x200B;**&#x200B;設定を変更する必要があります。
 >
@@ -71,7 +71,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 
 ### 前提条件 {#prerequisites}
 
-1. If users and user groups have already been created on one publisher, it is recommended to [manually sync](#manually-syncing-users-and-user-groups) the user data to all publishers prior to configuring and enabling user sync.
+1. ユーザーとユーザーグループが既に1つのパブリッシャー上に作成されている場合は、ユーザーの同期を設定および有効にする前に、[ユーザーデータをすべてのパブリッシャーに手動で](#manually-syncing-users-and-user-groups)同期することをお勧めします。
 
 ユーザー同期を有効にすると、新規に作成されたユーザーおよびグループのみが同期されるようになります。
 
@@ -90,34 +90,35 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * locate `Apache Sling Distribution Agent - Sync Agents Factory`
+   * `Apache Sling Distribution Agent - Sync Agents Factory`を検索
 
-      * select the existing configuration to open for edit (pencil icon)
-Verify `name`: **`socialpubsync`**
+      * 編集用に開く既存の設定を選択（鉛筆アイコン）
+確認`name`:**`socialpubsync`**
 
-      * select the `Enabled` checkbox
-      * select `Save`
+      * `Enabled`チェックボックスを選択
+      * `Save`を選択
 
 
 ![](assets/chlimage_1-20.png)
 
 ### 2. 承認済みユーザーの作成 {#createauthuser}
 
-**権限の設定**&#x200B;この許可されたユーザーは、手順3で作成者のSling配布を設定するために使用されます。
+**権限の設定**
+この許可されたユーザーは、手順3で作成者のSling配布を設定するために使用されます。
 
 * **各パブリッシュインスタンスで**
 
    * 管理者権限でログインします
    * [セキュリティコンソール](/help/sites-administering/security.md)にアクセスします
 
-      * for example, [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
+      * 例：[https://localhost:4503/useradmin](https://localhost:4503/useradmin)
    * 新しいユーザーを作成します
 
-      * for example, `usersync-admin`
-   * add this user to the **`administrators`** user group
+      * 例：`usersync-admin`
+   * このユーザーを&#x200B;**`administrators`**&#x200B;ユーザーグループに追加
    * [このユーザーのACLを/homeに追加](#howtoaddacl)
 
-      * `Allow jcr:all` 制限を加えて `rep:glob=*/activities/*`
+      * `Allow jcr:all` 制限を加えて  `rep:glob=*/activities/*`
 
 
 
@@ -136,16 +137,16 @@ Verify `name`: **`socialpubsync`**
 
 * CRXDE Lite にアクセスします
 
-   * for example, [https://localhost:4503/crx/de](https://localhost:4503/crx/de)
+   * 例：[https://localhost:4503/crx/de](https://localhost:4503/crx/de)
 
-* ノードを選択 `/home`
-* 右側のウィンドウで、 `Access Control` タブを選択します
-* select the `+` button to add an ACL entry
+* `/home`ノードを選択
+* 右側のウィンドウで、「`Access Control`」タブを選択します
+* `+`ボタンを選択してACLエントリを追加します
 
    * **プリンシパル**：ユーザー同期用に作成されたユーザーを検索&#x200B;**
    * **型**：`Allow`
-   * **権限**: `jcr:all`
-   * **制限** :rep:glob: `*/activities/*`
+   * **権限**:  `jcr:all`
+   * **** Restrictionsrep:glob:  `*/activities/*`
    * 「**OK**」を選択します。
 
 * 「**すべて保存**」を選択します。
@@ -155,13 +156,13 @@ Verify `name`: **`socialpubsync`**
 関連トピック
 
 * [アクセス権限の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)
-* Troubleshooting section [Modify Operation Exception During Response Processing](#modify-operation-exception-during-response-processing).
+* トラブルシューティングの節[応答処理中に操作の例外を変更する](#modify-operation-exception-during-response-processing)
 
 ### 3. Adobe Granite Distribution - Encrypted Password Transport Secret Provider {#adobegraniteencpasswrd}
 
 **権限の設定**
 
-Once an authorized user, a member of the **`administrators`**user group, has been created on all publish instances, that authorized user must be identified on author as having permission to sync user data from author to publish.
+認証されたユーザー（**`administrators`**ユーザーグループのメンバー）がすべての発行インスタンスで作成されたら、その権限を持つユーザーは、作成者から発行するユーザーデータを同期する権限を持つユーザーとして識別される必要があります。
 
 * **オーサー環境で**
 
@@ -169,13 +170,13 @@ Once an authorized user, a member of the **`administrators`**user group, has bee
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * locate `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
-   * select the existing configuration to open for edit (pencil icon)
-Verify `property name`: **`socialpubsync-publishUser`**
+   * `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`を検索
+   * 編集用に開く既存の設定を選択（鉛筆アイコン）
+確認`property name`:**`socialpubsync-publishUser`**
 
    * 手順 2 でパブリッシュ環境で作成した[承認済みユーザー](#createauthuser)のユーザー名とパスワードを設定します
 
-      * for example, `usersync-admin`
+      * 例：`usersync-admin`
 
 
 ![](assets/chlimage_1-22.png)
@@ -190,13 +191,13 @@ Verify `property name`: **`socialpubsync-publishUser`**
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
-   * locate `Apache Sling Distribution Agent - Queue Agents Factory`
+   * `Apache Sling Distribution Agent - Queue Agents Factory`を検索
 
-      * select the existing configuration to open for edit (pencil icon)
-Verify `Name`: `socialpubsync-reverse`
+      * 編集用に開く既存の設定を選択（鉛筆アイコン）
+確認`Name`:`socialpubsync-reverse`
 
-      * select the `Enabled` checkbox
-      * select `Save`
+      * `Enabled`チェックボックスを選択
+      * `Save`を選択
    * **発行インスタンスごとに**繰り返し
 
 
@@ -213,14 +214,14 @@ Verify `Name`: `socialpubsync-reverse`
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
-   * locate **`Adobe Social Sync - Diff Observer Factory`**
+   * **`Adobe Social Sync - Diff Observer Factory`**&#x200B;を検索
 
       * 編集する既存の設定を選択します（鉛筆アイコン）
 
          検証 `agent name`: `socialpubsync-reverse`
 
-      * select the `Enabled` checkbox
-      * select `Save`
+      * `Enabled`チェックボックスを選択
+      * `Save`を選択
 
 
 ![](assets/screen-shot_2019-05-24at090809.png)
@@ -237,13 +238,13 @@ Verify `Name`: `socialpubsync-reverse`
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * locate `Apache Sling Distribution Trigger - Scheduled Triggers Factory`
+   * `Apache Sling Distribution Trigger - Scheduled Triggers Factory`を検索
 
       * 編集する既存の設定を選択します（鉛筆アイコン）
 
          * 検証 `Name`: `socialpubsync-scheduled-trigger`
-      * set the `Interval in Seconds` to the desired interval
-      * select `Save`
+      * `Interval in Seconds`を目的の間隔に設定する
+      * `Save`を選択
 
 
 
@@ -263,10 +264,10 @@ Verify `Name`: `socialpubsync-reverse`
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * locate `Apache Sling Distribution Agent - Sync Agents Factory`
+   * `Apache Sling Distribution Agent - Sync Agents Factory`を検索
 
-      * select the existing configuration to open for edit (pencil icon)
-Verify `Name`: `socialpubsync`
+      * 編集用に開く既存の設定を選択（鉛筆アイコン）
+確認`Name`:`socialpubsync`
 
 
 ![](assets/chlimage_1-25.png)
@@ -276,12 +277,13 @@ Verify `Name`: `socialpubsync`
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
-* **インポーターエンドポイント**&#x200B;各発行者にはインポーターエンドポイントが必要です。 例えば、パブリッシャーが localhost:4503 と 4504 の 2 つの場合、次の 2 つのエントリが必要です。
+* **インポーター**
+エンドポイント各発行者にはインポーターエンドポイントが必要です。例えば、パブリッシャーが localhost:4503 と 4504 の 2 つの場合、次の 2 つのエントリが必要です。
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
 
-* select `Save`
+* `Save`を選択
 
 ### 8. AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
 
@@ -294,10 +296,10 @@ Verify `Name`: `socialpubsync`
    * 管理者権限でサインインします。
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * for example, `https://localhost:4503/system/console/configMgr`
-   * locate `AEM Communities User Sync Listener`
-   * select the existing configuration to open for edit (pencil icon)
-Verify `Name`: `socialpubsync-scheduled-trigger`
+      * 例：`https://localhost:4503/system/console/configMgr`
+   * `AEM Communities User Sync Listener`を検索
+   * 編集用に開く既存の設定を選択（鉛筆アイコン）
+確認`Name`:`socialpubsync-scheduled-trigger`
 
 
 ![](assets/chlimage_1-26.png)
@@ -323,7 +325,7 @@ Verify `Name`: `socialpubsync-scheduled-trigger`
    * social/relationships
    * activities
 
-### 9. 一意の Sling ID {#unique-sling-id}
+### 9. 一意の Sling ID  {#unique-sling-id}
 
 >[!CAUTION]
 >
@@ -333,7 +335,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 すべての Sling ID の値が異なることを確認するには、各パブリッシュインスタンスで次の手順を実行します。
 
-1. 参照 `http://<host>:<port>/system/console/status-slingsettings`
+1. `http://<host>:<port>/system/console/status-slingsettings`を参照
 1. **Sling ID** の値を確認する
 
 ![](assets/chlimage_1-27.png)
@@ -359,7 +361,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 すべてのパブリッシュインスタンスの Sling ID が一意になるまでこの手順を繰り返します。
 
-## Vault Package Builder Factory {#vault-package-builder-factory}
+## Vault Package Builder Factory  {#vault-package-builder-factory}
 
 更新が適切に同期されるようにするには、ユーザー同期用に Vault Package Builder を変更する必要があります。
 
@@ -368,12 +370,12 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
    * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
-* を探す `Apache Sling Distribution Packaging - Vault Package Builder Factory`
+* `Apache Sling Distribution Packaging - Vault Package Builder Factory`を探す
 
    * `Builder name: socialpubsync-vlt`
 
 * 編集アイコンを選択します。
-* 2つ追加 `Package Node Filters`:
+* 2つの`Package Node Filters`を追加：
 
    * `/home/users|-.*/.tokens`
    * `/home/users|-.*/rep:cache`
@@ -390,13 +392,13 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 ![Vault Package Builder Factory](assets/vault-package-builder-factory.png)
 
-## What Happens When ... {#what-happens-when}
+## ... {#what-happens-when}
 
 ### パブリッシュ環境でのユーザーの自己登録またはプロファイルの編集 {#user-self-registers-or-edits-profile-on-publish}
 
 仕様上、パブリッシュ環境で作成されたユーザーとプロファイル（自己登録）は、オーサー環境では表示されません。
 
-When the topology is a [publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm) and user sync has been correctly configured, the *user *and *user profile* is synchronized across the publish farm using Sling distribution.
+トポロジが[発行ファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)で、ユーザー同期が正しく設定されている場合、*user *と&#x200B;*ユーザープロファイル*&#x200B;は、Sling配布を使用して発行ファーム全体で同期されます。
 
 ### セキュリティコンソールでのユーザーまたはユーザーグループの作成 {#users-or-user-groups-are-created-using-security-console}
 
@@ -414,36 +416,36 @@ When the topology is a [publish farm](/help/sites-deploying/recommended-deploys.
 
 * オーサー環境で:
 
-   * using [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)
+   * [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)を使用
 
-      * look for entries in `/var/sling/distribution/packages`
+      * `/var/sling/distribution/packages`のエントリを探す
 
          * `distrpackage_*` _* という名前パターンを持つフォルダー名
    * [パッケージマネージャー](/help/sites-administering/package-manager.md)を使用する場合
 
       * （まだインストールされていない）保留中のパッケージを探します
 
-         * named with the pattern `socialpubsync-vlt*`
-         * created by `communities-user-admin`
+         * `socialpubsync-vlt*`というパターンで名前が付けられます
+         * `communities-user-admin`によって作成
 
 
 配布キューが空である場合は、ユーザー同期を無効にします。
 
 * オーサー環境で
 
-   * *uncheck *the `Enabled` checkbox for [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+   * *[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)の`Enabled`チェックボックスをオフにします。
 
 タスク完了後にユーザー同期を再び有効にするには：
 
 * オーサー環境で
 
-   * check the `Enabled` checkbox for [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+   * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)の`Enabled`チェックボックスをオンにします。
 
 ### ユーザー同期診断 {#user-sync-diagnostics}
 
 ユーザー同期診断は、設定をチェックして問題の特定を試みるツールです。
 
-On author, simply navigate from the main console through **Tools, Operations, Diagnosis, User Sync Diagnostics.**
+作成者は、メインコンソールから&#x200B;**ツール、操作、診断、ユーザー同期診断を通じて移動します。**
 
 結果はユーザー同期診断コンソールに表示されます。
 
@@ -453,9 +455,9 @@ On author, simply navigate from the main console through **Tools, Operations, Di
 
 #### パブリッシャーに対する診断の実行方法 {#how-to-run-diagnostics-for-publishers}
 
-When the diagnostic is run from the author environment, the pass/fail results will include an [INFO] section displaying the list of configured publish instances for confirmation.
+作成者環境から診断を実行すると、合格/不合格の結果には、確認用に設定されたパブリッシュインスタンスのリストを示す[INFO]セクションが含まれます。
 
-このリストには、診断が実行される各パブリッシュインスタンスの URL が記載されています。The url param `syncUser` is appended to the diagnostics URL with its value set to the *authorized sync user* created in [Step 2](#createauthuser).
+このリストには、診断が実行される各パブリッシュインスタンスの URL が記載されています。URLパラメーター`syncUser`は、診断URLに追加され、[手順2](#createauthuser)で作成された&#x200B;*許可された同期ユーザー*&#x200B;に値が設定されます。
 
 **注意**：URL を起動するには、承認済み同期ユーザー&#x200B;**&#x200B;がそのパブリッシュインスタンスに既にログインしている必要があります。
 
@@ -463,7 +465,7 @@ When the diagnostic is run from the author environment, the pass/fail results wi
 
 ### 正しく追加されていない設定 {#configuration-improperly-added}
 
-ユーザー同期が正しく機能しないのは、主に余分な設定が追加されていることが原因です。** Instead, the *existing *default configuration should have been *edited*.
+ユーザー同期が正しく機能しないのは、主に余分な設定が追加されていることが原因です。**&#x200B;代わりに、*既存の*デフォルトの設定は&#x200B;*編集*&#x200B;する必要があります。
 
 Web コンソールに表示される、編集されたデフォルトの設定は次のとおりです。複数のインスタンスが表示される場合は、追加した設定を削除する必要があります。
 
@@ -495,9 +497,9 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Then verify that the section [2. Create Authorized User](#createauthuser) was properly followed.
+次に、[2セクションを確認します。 「Create Authorized User](#createauthuser)」は正しく実行されました。
 
-この節では、すべてのパブリッシュインスタンスに存在する承認済みユーザーを作成し、それらをオーサー環境の「秘密鍵プロバイダー」OSGi 設定で特定する方法について説明します。By default, the user is `admin`.
+この節では、すべてのパブリッシュインスタンスに存在する承認済みユーザーを作成し、それらをオーサー環境の「秘密鍵プロバイダー」OSGi 設定で特定する方法について説明します。デフォルトでは、ユーザーは`admin`です。
 
 承認済みユーザーは **`administrators`** ユーザーグループのメンバーにして、そのグループの権限は変更しないでください。
 
@@ -506,10 +508,10 @@ Then verify that the section [2. Create Authorized User](#createauthuser) was pr
 | **パス** | **jcr:all** | **rep:glob** |
 |---|---|---|
 | /home | X | */activities/* |
-| /home/users | X | */activities/* |
-| /home/groups | X | */activities/* |
+| /home/users | X | */アクティビティ/* |
+| /home/groups | X | */アクティビティ/* |
 
-As a member of the `administrators` group, the authorized user should have the following privileges on all publish instances:
+`administrators`グループのメンバーとして、許可されたユーザーは、すべての発行インスタンスに対して次の権限を持つ必要があります。
 
 | **パス** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
@@ -519,23 +521,23 @@ As a member of the `administrators` group, the authorized user should have the f
 | /var/eventing |  | X | X |
 | /var/sling/distribution |  | X | X |
 
-### ユーザーグループ同期の失敗 {#user-group-sync-failed}
+### ユーザーグループ同期の失敗  {#user-group-sync-failed}
 
 2 つ以上のパブリッシュインスタンスで Sling ID が一致すると、ユーザーグループの同期が失敗します。
 
 [9.一意の Sling ID](#unique-sling-id) の節を参照してください
 
-### ユーザーおよびユーザーグループの手動同期 {#manually-syncing-users-and-user-groups}
+### ユーザーおよびユーザーグループの手動同期  {#manually-syncing-users-and-user-groups}
 
 * ユーザーおよびユーザーグループが存在するパブリッシャーで：
 
    * [ユーザー同期が有効になっている場合は無効にします](#how-to-take-user-sync-offline)
-   * [パッケージを作る](/help/sites-administering/package-manager.md#creating-a-new-package) `/home`
+   * [～の](/help/sites-administering/package-manager.md#creating-a-new-package) 包みを作る  `/home`
 
       * パッケージの編集時
 
-         * Filters tab: Add Filter: Root path: `/home`
-         * Advanced tab: AC Handling: `Overwrite`
+         * 「フィルター」タブ：追加フィルタ：ルートパス：`/home`
+         * 「詳細」タブ：AC処理：`Overwrite`
    * [パッケージを書き出し](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)ます
 
 
@@ -543,7 +545,7 @@ As a member of the `administrators` group, the authorized user should have the f
 
    * [パッケージを読み込み](/help/sites-administering/package-manager.md#installing-packages)ます
 
-To configure or enable user sync, go to step 1: [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+ユーザー同期を設定または有効にするには、手順1に進みます。[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
 
 ### パブリッシャーが使用不能になった場合 {#when-a-publisher-becomes-unavailable}
 
@@ -574,4 +576,4 @@ To configure or enable user sync, go to step 1: [Apache Sling Distribution Agent
       * `Importer Endpoints`
    * ユーザー同期を再び有効にします
 
-      * check the `Enabled` checkbox for [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+      * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)の`Enabled`チェックボックスをオンにします。
