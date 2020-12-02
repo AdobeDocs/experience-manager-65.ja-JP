@@ -11,17 +11,18 @@ ht-degree: 2%
 ---
 
 
-# Multi-tenancy for Collections, snippets, and snippet templates {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# コレクション、スニペット、スニペットテンプレートのマルチテナンシー{#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 マルチテナンシー機能を使用すると、組織のプレフィックスと組織IDに基づいてCRX内のコンテンツを分類し、他の組織のユーザーによる不正アクセスからコンテンツを保護できます。
 
-[!DNL Adobe Experience Manager Assets] 各組織のデータを異なるパスに保存します。 各組織固有のパスは、異なるタイプのアセットがCRXに保存される従来の場所に含まれる組織のプレフィックスと組織IDで識別されます。
+[!DNL Adobe Experience Manager Assets] 各組織のデータを異なるパスに保存します。組織固有の各パスは、組織のプレフィックスと組織IDによって識別されます
+の値は、様々なタイプのアセットがCRXに保存される従来の場所に含まれています。
 
-例えば、という名前のフォルダーを作成した場合 `Demo`、 [!DNL Experience Manager] アセットは従来、このフォルダーをに保存してい `../content/dam/Demo`ました。 マルチテナンシーを有効にした場合、 `../content/dam/<organization prefix>/<organization id>Demo`
+例えば、`Demo`という名前のフォルダーを作成した場合、[!DNL Experience Manager]アセットは従来、`../content/dam/Demo`にフォルダーを保存していました。 マルチテナンシーを有効にすると、`../content/dam/<organization prefix>/<organization id>Demo`にデータを格納できるようになります。
 
-For example, if for [!DNL Adobe Marketing Cloud] users of [!DNL Assets] (on demand) that are assigned to the `aodpremium` organization, you can use the multi-tenancy feature to configure `../content/dam/<mac>/<aodpremium>Demo` path to segregate their content. この例で、は組織のプレフィックス `mac` で、 `aodpremium` は組織IDです。
+例えば、`aodpremium`組織に割り当てられている[!DNL Assets]の[!DNL Adobe Marketing Cloud]ユーザー（オンデマンド）の場合、マルチテナンシー機能を使用して、コンテンツを分離する`../content/dam/<mac>/<aodpremium>Demo`パスを設定できます。 この例では、`mac`が組織のプレフィックス、`aodpremium`が組織IDです。
 
-Based on the user&#39;s organization and ID, this qualified path is displayed in the [!DNL Assets] interface and various wizards, including the Move and Snippet creation wizards to enforce segregation.
+ユーザーの組織とIDに基づいて、この修飾パスは[!DNL Assets]インターフェイスや、分離を強制する移動およびスニペット作成ウィザードなどの様々なウィザードに表示されます。
 
 マルチテナンシー機能を使用すると、次のタイプのアセットとコンポーネントを分類できます。
 
