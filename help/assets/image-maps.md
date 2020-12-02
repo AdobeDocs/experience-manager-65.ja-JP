@@ -11,38 +11,38 @@ ht-degree: 13%
 ---
 
 
-# 追加画像マップ {#adding-image-maps}
+# 追加画像マップ{#adding-image-maps}
 
 画像マップを使用すると、ハイパーリンクが指定された 1 つ以上の領域を追加できます。この領域は、他のハイパーリンクと同様に機能します。
 
-1. Do any one of the following to open **[!UICONTROL In-place Image Editor]**:
+1. 次のいずれかの操作を行って、**[!UICONTROL インプレースイメージエディタ]**&#x200B;を開きます。
 
-   * Using Quick Actions, click **[!UICONTROL Edit]** that appears on an asset in the **[!UICONTROL Card]** view. In the List view, select the asset and click **[!UICONTROL Edit]** option in the toolbar.
+   * クイックアクションを使用して、**[!UICONTROL カード]**&#x200B;表示ー内のアセットに表示される「**[!UICONTROL 編集]**」をクリックします。 リスト表示でアセットを選択し、ツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;オプションをクリックします。
 
       >[!NOTE]
       >
-      >Quick Actions is not available in the **[!UICONTROL List]** view.
+      >クイックアクションは&#x200B;**[!UICONTROL リスト]**&#x200B;表示では使用できません。
 
-   * In the **[!UICONTROL Card]** or **[!UICONTROL List]** view, select the asset and click **[!UICONTROL Edit]** on the toolbar.
-   * Click **[!UICONTROL Edit]** from the asset page.
+   * **[!UICONTROL カード]**&#x200B;または&#x200B;**[!UICONTROL リスト]**&#x200B;表示で、アセットを選択し、ツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックします。
+   * アセットページで「**[!UICONTROL 編集]**」をクリックします。
 
       ![編集オプション](assets/do-not-localize/edit_icon.png)
 
-1. 画像マップを挿入するには、ツールバーの「マップ **** 画像マップを起動 ![](assets/do-not-localize/image-map-icon.png) 」をクリックします。
+1. 画像マップを挿入するには、ツールバーの&#x200B;**[!UICONTROL マップを起動]** ![画像マップ](assets/do-not-localize/image-map-icon.png)をクリックします。
 1. 画像マップの図形を選択します。選択した図形のホットスポットが画像上に置かれます。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. ホットスポットをクリックし、URLとAltテキストを入力します。 From the **[!UICONTROL Target]** list, specify where you want the image map displayed, for example the same tab, a new tab, or an iFrame. For example, enter `https://www.adobe.com` as the URL, `Adobe website` as the Alt text, and specify **[!UICONTROL New Tab]** from the **[!UICONTROL Target]** list for the image map to open in a new tab.
+1. ホットスポットをクリックし、URLとAltテキストを入力します。 **[!UICONTROL ターゲット]**&#x200B;リストから、同じタブ、新しいタブ、iFrameなど、画像マップを表示する場所を指定します。 例えば、URLに`https://www.adobe.com`、代替テキストに`Adobe website`を入力し、画像マップの&#x200B;**[!UICONTROL ターゲット]**&#x200B;リストから&#x200B;**[!UICONTROL 新しいタブ]**&#x200B;を指定して、新しいタブで開きます。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. 「 **[!UICONTROL 確認]** 」をクリックし、「 **[!UICONTROL 完了]** 」をクリックして、ツールバーから「チェック完了 ![](assets/do-not-localize/check-ok-done-icon.png) 」を選択し、変更を保存します。
+1. 「**[!UICONTROL 確認]**」をクリックし、「**[!UICONTROL 完了]** ![」をクリックして、ツールバーから「確認完了](assets/do-not-localize/check-ok-done-icon.png)」を選択し、変更を保存します。
 
-   To delete the image map, click the hot-spot and click **[!UICONTROL Delete]** ![delete](assets/do-not-localize/delete-solid-line.png).
+   画像マップを削除するには、ホットスポットをクリックし、「**[!UICONTROL 削除]**![削除](assets/do-not-localize/delete-solid-line.png)」をクリックします。
 
 1. 画像マップを表示するには、アセットの詳細ページに移動し、画像の上にカーソルを置きます。
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   If the Dynamic Media option is enabled, navigate to the Asset editor and click **[!UICONTROL Map]** to view all the applied image maps.
+   「ダイナミックメディア」オプションが有効な場合、アセットエディターに移動し、「**[!UICONTROL マップ]**」をクリックして、適用するすべての画像マップを表示します。
