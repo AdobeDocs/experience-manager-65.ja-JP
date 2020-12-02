@@ -48,7 +48,7 @@ Microsoft Dynamics の設定を開始する前に、以下の項目が使用可�
 
 * [Microsoft Azure Active DirectoryにMicrosoft Dynamics Onlineサービス用のアプリケーションを登録しました](https://docs.microsoft.com/ja-jp/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory)。登録済みサービスのクライアントID(アプリケーション IDとも呼ばれます)とクライアントシークレットの値を控えておきます。 これらの値は [Microsoft Dynamics サービス用にクラウドサービスを設定する](../../forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service)時に使用します。
 
-## 登録された Microsoft Dynamics アプリケーションの応答 URL を設定する {#set-reply-url-for-registered-microsoft-dynamics-application}
+## 登録された Microsoft Dynamics アプリケーションの応答 URL を設定する  {#set-reply-url-for-registered-microsoft-dynamics-application}
 
 以下の手順で、登録された Microsoft Dynamics アプリケーションの応答 URL を設定します。
 
@@ -64,7 +64,7 @@ Microsoft Dynamics の設定を開始する前に、以下の項目が使用可�
 
 1. 設定を保存します。
 
-## IFD 用に Microsoft Dynamics を設定する {#configure-microsoft-dynamics-for-ifd}
+## IFD 用に Microsoft Dynamics を設定する  {#configure-microsoft-dynamics-for-ifd}
 
 外部のユーザーは、Microsoft Dynamics でクレームベース認証を使用して、Microsoft Dynamics CRM サーバー上のデータにアクセスすることができます。この機能を有効にするには、以下の手順により、インターネット接続展開（IFD）用に Microsoft Dynamics を有効にして、クレーム設定を構成します。
 
