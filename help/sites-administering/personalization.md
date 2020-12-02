@@ -20,7 +20,7 @@ ht-degree: 85%
 
 # パーソナライゼーション{#personalization}
 
-## What is Personalization? {#what-is-personalization}
+## パーソナライゼーションとは{#what-is-personalization}
 
 インターネット、エクストラネット、またはイントラネット Web サイトなど、今日入手可能なコンテンツは増え続けています。
 
@@ -55,7 +55,7 @@ ht-degree: 85%
 * 単純なフィルタリング：事前定義されたプロファイルに基づいて、ユーザーやグループのレベルで選択がおこなわれます。
 * 共用／推奨フィルタリング：事前定義されたルールに従ってユーザーの行動が登録されます。このルールは、  同様の考えを持つ人々に見られる動作に基づきます。収集された情報を使用して、ユーザーに表示する情報が調整されます。特に「お勧め」という形で表示されます。
 
-## パーソナライゼーションを使用する場合とタイミング {#how-and-when-can-personalization-be-used}
+## パーソナライゼーションを使用する場合とタイミング  {#how-and-when-can-personalization-be-used}
 
 パーソナライゼーションは多くの場合に使用できます。次に例を示します。
 
@@ -121,7 +121,7 @@ ht-degree: 85%
 
 * 多くのユーザーがデータ保護とセキュリティに関心を持っています。特に、Web 閲覧時のユーザーの行動を追跡して取得されるデータについて懸念されます。
 
-## パーソナライゼーションとアクセス {#personalization-and-access}
+## パーソナライゼーションとアクセス  {#personalization-and-access}
 
 パーソナライゼーションはアクセス制御とは別に考慮する必要がありますが、この 2 つは相互に関係しています。
 
@@ -129,7 +129,7 @@ ht-degree: 85%
 
 一方、アクセス制御を使用して、パーソナライゼーションを形成することができます。コンテンツへのユーザーアクセスを許可または拒否すると、必然的にコンテンツの選択肢に影響するので、Web エクスペリエンスがパーソナライズされることになります。
 
-## パーソナライゼーションのために使用できるコンポーネント {#components-available-for-personalization}
+## パーソナライゼーションのために使用できるコンポーネント  {#components-available-for-personalization}
 
 パーソナライゼーションを実現するために、AEM には様々なコンポーネントが用意されています。ユーザーのログインやプロファイルの編集を許可するものや、ユーザーによる特定のページの設定を許可するもの（マイガジェットなど）があります。
 
@@ -164,11 +164,11 @@ ht-degree: 85%
 | タグクラウド | Web サイト内の一連のタグをグラフィカルに表現したタグクラウド |
 | ティーザー | メインページに表示される 1 つのコンテンツ（通常は画像）であり、その基になるコンテンツにアクセスするようにユーザーを「誘導」します。 |
 
-## パーソナライゼーションとコミュニティのコンテンツ {#personalization-and-community-content}
+## パーソナライゼーションとコミュニティのコンテンツ  {#personalization-and-community-content}
 
-ブログ、フォーラム、カレンダーなど、結果としてコミュニティのコンテンツが作成されるコミュニティの機能は、一般的にユーザー生成コンテンツ（UGC）と呼ばれます。When UGC is entered in a publish environment consisting of multiple AEM instances (a [publish farm](/help/communities/topologies.md)), one major issue has been how to synchronize UGC across all instances.
+ブログ、フォーラム、カレンダーなど、結果としてコミュニティのコンテンツが作成されるコミュニティの機能は、一般的にユーザー生成コンテンツ（UGC）と呼ばれます。複数のAEMインスタンス（[発行ファーム](/help/communities/topologies.md)）で構成される発行環境にUGCを入力すると、1つの大きな問題は、すべてのインスタンスでUGCを同期する方法です。
 
-With [AEM Communities 6.1](/help/communities/overview.md) extension, this issue is solved by using a [common store for UGC](/help/communities/working-with-srp.md). In regards, to personalization, Communities includes [Social Login](/help/communities/social-login.md) - the ability to provide the option for site visitors to sign in with Facebook and Twitter.
+[AEM Communities6.1](/help/communities/overview.md)の拡張子が付いたこの問題は、UGC](/help/communities/working-with-srp.md)の[共通ストアを使用することで解決できます。 関しては、パーソナライゼーションに関して、Communitiesには[ソーシャルログイン](/help/communities/social-login.md) (サイト訪問者がFacebookやTwitterにサインインするためのオプションを提供する機能)が含まれます。
 
 Communities の拡張機能がない場合、UGC の整合性の問題に対処する方法は次のとおりです。
 
