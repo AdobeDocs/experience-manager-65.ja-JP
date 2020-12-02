@@ -17,11 +17,11 @@ ht-degree: 4%
 ---
 
 
-# プロセスレポートのトラブルシューティング {#troubleshooting-process-reporting}
+# プロセスレポートのトラブルシューティング{#troubleshooting-process-reporting}
 
-## Microsoft Windows 7上のInternet Explorer 9でフィルターを作成する際に発生した問題 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
+## Microsoft Windows 7上のInternet Explorer 9でフィルターを作成する際に発生した問題{#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
 
-事前定義済みレポートのフィルターを作成すると、 **Internet Explorer 9** for **Microsoft Windows 7** 環境で次の問題が断続的に発生します。
+事前定義されたレポートのフィルターを作成すると、**Microsoft Windows 7**&#x200B;環境の&#x200B;**Internet Explorer 9**&#x200B;で次の問題が断続的に発生します。
 
 * 「値」フィールドのドロップダウンリストには、値の代わりに一意の識別子が表示されます。
 * 「値」フィールドのカレンダーコントロールには、日本語の文字が表示されます。
