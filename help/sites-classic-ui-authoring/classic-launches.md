@@ -26,12 +26,12 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->The theory behind launches is described in detail under [Launches](/help/sites-authoring/launches.md) in the standard authoring documentation.
+>起動の原因となる理論は、標準のオーサリングドキュメントの[起動回数](/help/sites-authoring/launches.md)で詳しく説明されています。
 >
->Information specific to using launches in the classic UI can be found in the following documentation together with [Creating Launches](/help/sites-classic-ui-authoring/classic-launches-creating.md), [Editing Launches](/help/sites-classic-ui-authoring/classic-launches-editing.md), and [Promoting Launches](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>クラシックUIで起動を使用する場合に特有の情報は、[起動の作成](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[起動の編集](/help/sites-classic-ui-authoring/classic-launches-editing.md)、[起動のプロモーション](/help/sites-classic-ui-authoring/classic-launches-promoting.md)と共に、次のドキュメントに記載されています。
 
 >[!CAUTION]
 >
 >クラシック UI では、1 つのローンチに対して複数のソースブランチを持つことはできません。
 
-The Launches console can be directly accessed with [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
+起動コンソールには[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)から直接アクセスできます。
