@@ -23,20 +23,20 @@ ht-degree: 13%
 グローバルナビゲーションパネルから作成者環境で使用できるAEM Communitiesコンソールは、次のような管理タスクにアクセスできます。
 
 * [コミュニティサイトの作成](sites-console.md)
-* Adding [groups](groups.md) nested within the site
-* Managing [community site templates](sites.md)
-* Managing [community members](members.md)
-* [モデレート](moderate-ugc.md) （ユーザー生成コンテンツ）
-* Create [custom badges](badges.md)
-* Configuring the [default storage for UGC](srp-config.md)
+* サイト内にネストされた[グループ](groups.md)を追加
+* [コミュニティサイトテンプレート](sites.md)の管理
+* [コミュニティメンバー](members.md)の管理
+* [モ](moderate-ugc.md) デレートユーザー生成コンテンツ(UGC)
+* [カスタムバッジ](badges.md)を作成
+* [UGCのデフォルトストレージ](srp-config.md)の設定
 
-When [UGC storage](working-with-srp.md) is configured to be a common store shared by author and publish environments, the [moderation console](moderation.md), available from both author and publish environments, operates on a solitary instance of UGC.
+[UGCストレージ](working-with-srp.md)が作成者と発行環境が共有する共通のストアに設定されている場合、作成者と発行環境の両方から利用できる[モデレートコンソール](moderation.md)は、UGCの単一のインスタンスに対して動作します。
 
-In the author environment, after signing in with administrator privileges, the `Communities` consoles are available from the navigation and tools consoles.
+作成者環境では、管理者権限でサインインした後、`Communities`コンソールはナビゲーションコンソールとツールコンソールから使用できます。
 
 >[!NOTE]
 >
->In the publish environment, a [community site](sites-console.md) will display an `Administration` menu item when the signed in member has appropriate privileges.
+>発行環境では、ログインメンバーが適切な権限を持つ場合、[コミュニティサイト](sites-console.md)に`Administration`メニュー項目が表示されます。
 
 ## グローバルナビゲーションパネル {#global-navigation-panel}
 
@@ -47,17 +47,17 @@ In the author environment, after signing in with administrator privileges, the `
 
 ## ナビゲーションコンソール {#navigation-console}
 
-To access the various Communities consoles, from global navigation select **navigation, Communities**.
+様々なコミュニティコンソールにアクセスするには、グローバルナビゲーションから&#x200B;**ナビゲーションを選択し、Communities**&#x200B;を選択します。
 
 ![コミュニティ](assets/communities.png)
 
 * [Sites](sites-console.md)
 
-   The Sites console is accessible in the author environment for the purpose of creating and managing community sites and its [groups](groups.md).
+   サイトコンソールは、作成者環境でコミュニティサイトとその[グループ](groups.md)を作成および管理する目的でアクセスできます。
 
 * [モデレート](moderation.md)
 
-   モデレートコンソールは、UGCの一括モデレートと作成者環境用です。 A similar bulk moderation console is accessible in the publish environment to community members assigned the role of [community moderator](users.md#publishenvironmentusersandgroups) for one or more community sites.
+   モデレートコンソールは、UGCの一括モデレートと作成者環境用です。 1つ以上のコミュニティサイトに対して[コミュニティモデレーター](users.md#publishenvironmentusersandgroups)の役割を割り当てられたコミュニティメンバーにも、同様の一括モデレートコンソールを発行環境でアクセスできます。
 
 * [メンバー、グループ](members.md)
 
@@ -65,12 +65,12 @@ To access the various Communities consoles, from global navigation select **navi
 
 * [レポート](reports.md)
 
-   The Reports console is where reports on assignments, page views, and posted content (UGC) may be generated when a community site has [enabled Adobe Analytics](sites-console.md#analytics). コンソールは、作成者環境でのみ使用できます。
+   レポートコンソールでは、コミュニティサイトで[有効なAdobe Analytics](sites-console.md#analytics)がある場合に、割り当て、ページ表示および投稿されたコンテンツ(UGC)に関するレポートを生成できます。 コンソールは、作成者環境でのみ使用できます。
 
 * [リソース](resources.md)
 
-   The Resources console is where [enablement managers](enablement.md#communitymanagers) create, manage and assign resources to members of an [enablement community site](overview.md#enablement-community). コンソールは、作成者環境でのみ使用できます。
+   リソースコンソールは、[有効化マネージャー](enablement.md#communitymanagers)がリソースを作成、管理し、[有効化コミュニティサイト](overview.md#enablement-community)のメンバーに割り当てる場所です。 コンソールは、作成者環境でのみ使用できます。
 
 ## ツールコンソール {#tools-console}
 
-To access [Communities Tools](tools.md) (formerly the administration console), from global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Communities]**
+[Communities Tools](tools.md)（旧称管理コンソール）にグローバルナビゲーションからアクセスするには：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]**
