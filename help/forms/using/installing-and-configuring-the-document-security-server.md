@@ -15,7 +15,7 @@ ht-degree: 42%
 ---
 
 
-# ドキュメントセキュリティサーバーのインストールと設定 {#installing-and-configuring-the-document-security-server}
+# ドキュメントセキュリティサーバーのインストールと設定{#installing-and-configuring-the-document-security-server}
 
 ドキュメントセキュリティを使用して、サポートされている形式で保存した情報を安全に配布します。 保護されたドキュメントにアクセスできるのは、許可されたユーザーのみです。
 
@@ -25,7 +25,7 @@ Adobe Experience Manager Forms の Document Security を使用して、許可さ
 
 ポリシーは Document Security に保存されます。クライアントアプリケーションを使用してそのポリシーをドキュメントに適用します。ドキュメントにポリシーを適用すると、ドキュメントに含まれる情報は、ポリシーで指定されている機密設定で保護されます。ポリシーで保護されたドキュメントを、ポリシーで許可された受信者に配布できます。
 
-ドキュメントセキュリティは、ドキュメント、表示で保護されたドキュメント、インデックスで保護されたドキュメントを保護するクライアント、ビューア、インデクサーも提供します。 ドキュメントセキュリティについて詳しくは、ドキュメントセキュリティ [についてを参照してください](/help/forms/using/admin-help/document-security.md)。
+ドキュメントセキュリティは、ドキュメント、表示で保護されたドキュメント、インデックスで保護されたドキュメントを保護するクライアント、ビューア、インデクサーも提供します。 ドキュメントセキュリティについて詳しくは、[ドキュメントセキュリティ](/help/forms/using/admin-help/document-security.md)を参照してください。
 
 ## デプロイメントトポロジ  {#deployment-topology}
 
@@ -39,13 +39,13 @@ Adobe Experience Manager Forms の Document Security を使用して、許可さ
 
 ![](do-not-localize/document-security-typical-environment.png)
 
-## JEEへのAEM Formsのインストール {#installing-aem-forms-on-jee}
+## JEEへのAEM Formsのインストール{#installing-aem-forms-on-jee}
 
 次の手順を実行して、JEE上のAEM Formsをインストールおよび設定します。
 
 1. JEE 上の AEM 6.5 Forms のインストーラーを、[アドビライセンス Web サイト（LWS）](https://licensing.adobe.com/)からダウンロードします。インストーラーをダウンロードするには、有効なメンテナンス＆サポートの契約が必要です。
-1. JEEでの [](/help/forms/using/aem-forms-jee-supported-platforms.md) AEM Formsのサポート対象プラットフォームドキュメントを読み、JEEにAEM Formsをインストールする準備ができているソフトウェア、ハードウェア、オペレーティングシステム、アプリケーションサーバー、データベース、JDK、およびその他のインフラストラクチャを確認します。
-1. （自動インストール以外のインストールの場合のみ） [『AEM Formsシングルサーバーのインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) 』または『AEM Formsサーバークラスターのインストールの準備 [](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) 』を読み、環境がJEE上のAEM Formsをインストールして設定できるようにします。
+1. [JEEサポート対象プラットフォームのAEM Formsドキュメント](/help/forms/using/aem-forms-jee-supported-platforms.md)を読み、JEEにAEM Formsをインストールする準備ができたソフトウェア、ハードウェア、オペレーティングシステム、アプリケーションサーバー、データベース、JDK、およびその他のインフラストラクチャを確認します。
+1. （自動インストール以外のインストールの場合のみ）「[AEM Formsシングルサーバーのインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)」または「[AEM Formsサーバークラスターのインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64)」を読み、環境のJEEへのAEM Formsのインストールと設定の準備を行います。
 1. 環境とアプリケーションサーバーに応じて、次のいずれかのドキュメントを選択し、指示に従ってインストールを完了します
 
    * [JEE 上の AEM Forms のインストールとデプロイ（JBoss 自動インストールを使用）](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)
