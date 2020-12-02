@@ -23,7 +23,7 @@ ht-degree: 31%
 
 ## 概要 {#introduction}
 
-The activities of a signed in community member, such as posting to a forum or blog, are collected into a stream which may be filtered and displayed in various ways through configuration of the `Activity Streams` component.
+フォーラムやブログへの投稿など、ログインしたコミュニティメンバーのアクティビティは、`Activity Streams`コンポーネントの設定を通じて、様々な方法でフィルタリングおよび表示できるストリームに収集されます。
 
 コミュニティメンバーが関心のある投稿をフォローしたり、他のコミュニティメンバーのアクティビティをフォローしているときは、フォロー機能によって、アクティビティを別の見方で捉えることができます。
 
@@ -34,21 +34,21 @@ The activities of a signed in community member, such as posting to a forum or bl
 
 ### アクティビティストリームをページに追加 {#adding-activity-streams-to-a-page}
 
-If it is desired to add an `Activity Streams` component to a page in author mode, use the component browser to locate
+作成者モードで`Activity Streams`コンポーネントをページに追加する場合は、コンポーネントブラウザーを使用して
 
 * `Communities / Activity Streams`
 
 コンポーネントを探し、ページ上のアクティビティストリームを表示したい位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-activities.md#essentials-for-client-side) 、次のようにコンポー `Activity Streams` ネントが表示されます。
+[必要なクライアント側ライブラリ](/help/communities/essentials-activities.md#essentials-for-client-side)が含まれる場合、`Activity Streams`コンポーネントは次のように表示されます。
 
 ![アクティビティ流](assets/activity-component.png)
 
 ### アクティビティストリームの設定 {#configuring-activity-streams}
 
-Select the placed `Activity Streams` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Activity Streams`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![設定](assets/configure-new.png)
 
@@ -78,15 +78,15 @@ Select the placed `Activity Streams` component to access and select the `Configu
 
 ### フォロービュー {#following-view}
 
-フォローを有効にするようにコンポーネントを設定する必要があります。Features that allow following are [blog](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [calendar](/help/communities/calendar.md), [filelibrary](/help/communities/file-library.md), and [comments](/help/communities/comments.md).
+フォローを有効にするようにコンポーネントを設定する必要があります。次の機能を使用できるのは、[blog](/help/communities/blog-feature.md)、[フォーラム](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[カレンダー](/help/communities/calendar.md)、[ファイルライブラリ](/help/communities/file-library.md)、[コメント](/help/communities/comments.md)です。
 
 ![後続表示](assets/following-activities.png)
 
-The **Follow** button provides a means to follow entries as activities, [notifications](/help/communities/notifications.md), or [subscriptions](/help/communities/subscriptions.md). Each time the **Follow** button is selected, it is possible to toggle on or off a selection. The `Email Subscriptions` selection is only present when configured.
+「**フォロー**」ボタンを使用すると、アクティビティ、[通知](/help/communities/notifications.md)、[購読](/help/communities/subscriptions.md)のエントリをフォローできます。 「**フォロー**」ボタンを選択するたびに、選択のオン/オフを切り替えることができます。 `Email Subscriptions`選択は、設定時にのみ存在します。
 
-フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 For convenience, it is possible to select `Unfollow All` to toggle off all methods.
+フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 便宜上、`Unfollow All`を選択して、すべてのメソッドをオフにすることができます。
 
-The **Follow** button will appear:
+「**フォロー**」ボタンが表示されます。
 
 * 別のメンバーのプロファイルを表示するとき。
 * フォーラム、QnA、ブログなど、メイン機能ページ。
