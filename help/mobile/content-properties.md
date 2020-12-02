@@ -18,7 +18,7 @@ ht-degree: 51%
 ---
 
 
-# コンテンツのプロパティとノード {#content-properties-and-nodes}
+# コンテンツのプロパティとノード  {#content-properties-and-nodes}
 
 >[!NOTE]
 >
@@ -30,13 +30,13 @@ ht-degree: 51%
 
 以下の表では、コンテンツのプロパティとノードについて説明します。
 
-## 共通統合プロパティ {#common-integration-properties}
+## 共通統合プロパティ  {#common-integration-properties}
 
 | **プロパティ名** | **型** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
 | dps-id | String |  | aem mobileによって割り当てられ、1度AEM MobileにアップロードされるかAEM Mobileから輸入され、AEMによって保管される |
-| dps-resourceType | String | dps:Article | dps:Banner | dps:Collection | entity typeプロパティ |
-| dps-version | String |  | aem mobileエンティティのバージョン（完全なaemm-idに含まれる） |
+| dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | entity typeプロパティ |
+| dps-version | 文字列 |  | aem mobileエンティティのバージョン（完全なaemm-idに含まれる） |
 | dps-lastSynced | 日付 |  | aem mobileからAEMへの最後の同期/インポートの日付 |
 | dps-lastUploaded | 日付 |  | aemからAEM Mobileへの最後のアップロード日 |
 | dps-lastUploadedBy | String:userid |  | aemからAEM Mobileへの最後のアップロード要求を実行したidユーザー |
@@ -45,28 +45,28 @@ ht-degree: 51%
 
 | プロパティ名 | 型 | デフォルト値または期待値 |
 |--- |--- |--- |
-| dps-title | String |  |
-| dps-shortTitle | String |  |
-| dps-abstract | String |  |
-| dps-shortAbstract | String |  |
-| dps-department | String |  |
-| dps-カテゴリ | String |  |
+| dps-title | 文字列 |  |
+| dps-shortTitle | 文字列 |  |
+| dps-abstract | 文字列 |  |
+| dps-shortAbstract | 文字列 |  |
+| dps-department | 文字列 |  |
+| dps-カテゴリ | 文字列 |  |
 | dps-keywords | String[] |  |
-| dps-internalKeywords | String[] |  |
-| dps-importance | String[] | {&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;}からの重要度 |
+| dps-internalKeywords | 文字列[] |  |
+| dps-importance | 文字列[] | {&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;}からの重要度 |
 
 ### 記事 {#articles}
 
 | **プロパティ名** | **型** | **デフォルト値または期待値** |
 |---|---|---|
-| dps-author | String |  |
-| dps-authorURL | String |  |
+| dps-author | 文字列 |  |
+| dps-authorURL | 文字列 |  |
 | dps-hideFromBrowsePage | Boolean |  |
-| dps-access | String | ProtectedAccess from {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
+| dps-access | 文字列 | ProtectedAccess from {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
 | **Social** |  |  |
-| dps-socialShareURL | String |  |
-| dps-articleText | String |  |
-| dps-url | String |  |
+| dps-socialShareURL | 文字列 |  |
+| dps-articleText | 文字列 |  |
+| dps-url | 文字列 |  |
 
 ### バナー {#banners}
 
@@ -79,12 +79,12 @@ ht-degree: 51%
 
 | プロパティ名 | 型 | デフォルト値または期待値 |
 |--- |--- |--- |
-| dps-productId | String |  |
-| dps-readingPosition | String | {&quot;reset&quot;,&quot;retain&quot;}から |
-| dps-horizontalSwipe | Boolean |  |
-| dps-allowDownload | Boolean |  |
-| dps-openDefault | String | {&quot;browsePage&quot;,&quot;contentView&quot;}から |
-| dps-layout | String |  |
+| dps-productId | 文字列 |  |
+| dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;}から |
+| dps-horizontalSwipe | ブール値 |  |
+| dps-allowDownload | ブール値 |  |
+| dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;}から |
+| dps-layout | 文字列 |  |
 
 ## コンテンツノード {#content-nodes}
 
