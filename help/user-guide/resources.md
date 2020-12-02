@@ -12,18 +12,18 @@ ht-degree: 25%
 ---
 
 
-# AEM 6.5その他のリソース {#aem-64-additional-resources}
+# AEM 6.5追加のリソース{#aem-64-additional-resources}
 
 ## AEM 6.5 リリースノート {#aem-64-release-notes}
 
 [AEM 6.5の最新の新機能について、リリースノートで説明します。](/help/release-notes/home.md)
 
-## AEM 6.5チュートリアルビデオ {#aem-64-tutorial-videos}
+## AEM 6.5チュートリアルビデオ{#aem-64-tutorial-videos}
 
 * [AEM 6.5トレーニングビデオ](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)
 * [AEM チュートリアル](https://helpx.adobe.com/jp/experience-manager/tutorials.html)
 
-## クラスと認定 {#classes-and-certification}
+## クラスと認定{#classes-and-certification}
 
 [個人向けおよび仮想クラスの製品で学習を拡大](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
 
