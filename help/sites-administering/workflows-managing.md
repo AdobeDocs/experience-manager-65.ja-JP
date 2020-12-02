@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 94%
 >
 >これらのバージョンは最小要件です。具体的なステップを実行するには、アカウントが割り当て済みの参加者または割り当て済みのグループのメンバーである必要があります。
 
-## ワークフローへのアクセスの設定 {#configuring-access-to-workflows}
+## ワークフローへのアクセスの設定  {#configuring-access-to-workflows}
 
 ワークフローモデルは、ユーザーがワークフローを操作する方法を制御するためのデフォルトのアクセス制御リスト（ACL）を継承します。ユーザーアクセスをワークフロー用にカスタマイズするには、リポジトリでワークフローモデルノードを含むフォルダーのアクセス制御リスト（ACL）を変更します。
 
@@ -52,9 +52,9 @@ ht-degree: 94%
 >
 >CRXDE Lite を使用して ACL を設定する方法については、[アクセス権限の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)を参照してください。
 
-### 特定のワークフローモデル用の ACL の /var/workflow/models への適用 {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
+### 特定のワークフローモデル用の ACL の /var/workflow/models への適用  {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
 
-If the workflow model is stored within `/var/workflow/models` then you can assign a specific ACL, relevant to only that workflow, on the folder:
+ワークフローモデルが`/var/workflow/models`内に保存されている場合は、次のフォルダーに、そのワークフローにのみ関連する特定のACLを割り当てることができます。
 
 1. Web ブラウザーで CRXDE Lite を開きます（例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
 1. ノードツリーで、次のワークフローモデルフォルダーのノードを選択します。
@@ -65,9 +65,9 @@ If the workflow model is stored within `/var/workflow/models` then you can assig
 1. 「**ローカルアクセス制御ポリシー**」（**アクセス制御リスト**）のテーブルで、プラスアイコンをクリックして&#x200B;**エントリを追加**&#x200B;します。
 1. **新しいエントリを追加**&#x200B;ダイアログで、次のプロパティを含む新しい ACE を追加します。
 
-   * **プリンシパル**: `content-authors`
+   * **プリンシパル**:  `content-authors`
    * **型**：`Deny`
-   * **権限**: `jcr:read`
+   * **権限**:  `jcr:read`
    * **rep:glob**： 特定のワークフローへの参照
 
    ![wf-108](assets/wf-108.png)
@@ -102,9 +102,9 @@ If the workflow model is stored within `/var/workflow/models` then you can assig
 1. 「**ローカルアクセス制御ポリシー**」（**アクセス制御リスト**）のテーブルで、プラスアイコンをクリックして&#x200B;**エントリを追加**&#x200B;します。
 1. **新しいエントリを追加**&#x200B;ダイアログで、次のプロパティを含む新しい ACE を追加します。
 
-   * **プリンシパル**: `content-authors`
+   * **プリンシパル**:  `content-authors`
    * **型**：`Deny`
-   * **権限**: `jcr:read`
+   * **権限**:  `jcr:read`
 
    >[!NOTE]
    >
