@@ -18,9 +18,9 @@ ht-degree: 70%
 ---
 
 
-# インターフェイスのカラースキーム変更 {#changing-the-color-scheme-of-the-interface}
+# インターフェイスのカラースキーム変更  {#changing-the-color-scheme-of-the-interface}
 
-AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。In addition to the steps discussed in this article, see [Generic steps for AEM Forms workspace customization](/help/forms/using/generic-steps-html-workspace-customization.md).
+AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事で説明されている手順に加えて、[「AEM Formsワークスペースのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
 
 ## トップナビゲーションバー {#top-navigation-bar}
 
@@ -33,7 +33,7 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
 
    >[!NOTE]
    >
-   >For more information about WebDAV access, see [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >WebDAVアクセスの詳細については、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)を参照してください。
 
 1. 次のスタイルを追加することによって、/apps/ws/css/newStyle.css にある新しい背景画像を参照します。
 
@@ -43,7 +43,7 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
    }
    ```
 
-### CSS におけるカラープロパティの使用 {#using-color-property-in-css}
+### CSS におけるカラープロパティの使用  {#using-color-property-in-css}
 
 1. /apps/ws/css にある newStyle.css に次のスタイルを追加します。
 
@@ -56,7 +56,7 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
 
 ## カテゴリコンポーネント {#category-component}
 
-カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。 To change its color, define the background color in `.category` element of the CSS file.
+カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。 色を変更するには、CSSファイルの`.category`要素で背景色を定義します。
 
 ## タスクコンポーネント {#task-component}
 
