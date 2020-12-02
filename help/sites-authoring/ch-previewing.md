@@ -1,8 +1,8 @@
 ---
 title: ContextHub データを使用したページのプレビュー
 seo-title: ContextHub データを使用したページのプレビュー
-description: ContextHub ツールバーは、ContextHub ストアからのデータを表示し、ストアデータを変更することができ、コンテンツのプレビューに役立ちます。
-seo-description: ContextHub ツールバーは、ContextHub ストアからのデータを表示し、ストアデータを変更することができ、コンテンツのプレビューに役立ちます。
+description: ContextHub ツールバーは、ContextHub ストアからのデータを表示し、ストアデータを変更することができ、コンテンツのプレビューに立ちます。
+seo-description: ContextHub ツールバーは、ContextHub ストアからのデータを表示し、ストアデータを変更することができ、コンテンツのプレビューに立ちます。
 uuid: 0150555a-0a92-4692-a706-bbe59fd34d6a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -49,7 +49,7 @@ ContextHub ツールバーはプレビューモードで使用できます。こ
 
 提供する機能セットは UI モジュールごとに異なりますが、以下のタイプの機能は共通です。UI モジュールは拡張可能なので、開発者は必要に応じて他の機能を実装できます。
 
-### ツールバーコンテンツ {#toolbar-content}
+### ツールバーコンテンツ  {#toolbar-content}
 
 UI モジュールは、1 つ以上の ContextHub ストアのデータをツールバーに表示できます。UI モジュールは、アイコンとタイトルで識別されます。
 
@@ -65,7 +65,7 @@ UI モジュールは、1 つ以上の ContextHub ストアのデータをツー
 
 モジュールのポップアップオーバーレイには、ContextHub ストア内のデータを変更するためのフォーム要素を含めることができます。ページコンテンツがストアデータによって決定される場合は、このフォームを使用してページコンテンツの変更を監視できます。
 
-### 全画面表示モード {#fullscreen-mode}
+### 全画面表示モード  {#fullscreen-mode}
 
 ポップアップオーバーレイには、クリックまたはタップするとポップアップコンテンツを拡張してブラウザーウィンドウまたは画面全体に表示するアイコンを含めることができます。
 
