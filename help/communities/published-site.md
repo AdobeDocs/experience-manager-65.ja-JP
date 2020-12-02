@@ -51,9 +51,9 @@ ht-degree: 33%
 
 様々なリンクを選択すると、それらは読み取り専用モードになっています。
 
-### JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
+### JCR {#prevent-anonymous-access-on-jcr}での匿名アクセスの禁止
 
-既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **を許可** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを介してコミュニティサイトのコンテンツが匿名訪問者に公開されますが、**allow anonymous access**&#x200B;はサイトのコンテンツに対して無効になっています。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
 
 jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
@@ -63,41 +63,41 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
    >
    >ローカライズされたサイトには移動しないでください。
 
-1. 「 **ページプロパティ**」に移動。
+1. **ページプロパティ**&#x200B;に移動します。
 
    ![page-properties](assets/page-properties.png)
 
 1. 「**詳細**」タブに移動します。
 
-1. Enable **Authentication Requirement**.
+1. **認証要件**&#x200B;を有効にします。
 
    ![サイト認証](assets/site-authentication.png)
 
-1. ログ追加インページのパス。 For example, **/content/......./GetStarted**.
+1. ログ追加インページのパス。 例えば、**/content/......./GetStarted**.
 1. ページを公開します。
 
 ## 信頼されているコミュニティメンバー {#trusted-community-member}
 
-This experience assumes [Aaron McDonald](/help/communities/tutorials.md#demo-users) was assigned the roles of [community manager and moderator](/help/communities/create-site.md#roles). If not, return to the author environment to [modify the site settings](/help/communities/sites-console.md#modifying-site-properties) and select Aaron McDonald as both community manager and moderator.
+この経験では、[Aaron McDonald](/help/communities/tutorials.md#demo-users)が[コミュニティマネージャーおよびモデレーター](/help/communities/create-site.md#roles)の役割を割り当てられたと想定しています。 そうでない場合は、作成者環境に戻って[サイト設定](/help/communities/sites-console.md#modifying-site-properties)を変更し、コミュニティマネージャーとモデレーターの両方としてAaron McDonaldを選択します。
 
-In the upper right corner, select `Log in`, and sign with username (aaron.mcdonald@mailinator.com) and password (password). TwitterまたはFacebookの資格情報を使用してサインインする機能に注目してください。
+右上隅の「`Log in`」を選択し、ユーザー名(aaron.mcdonald@mailinator.com)とパスワード(password)で署名します。 TwitterまたはFacebookの資格情報を使用してサインインする機能に注目してください。
 
 ![ログイン](assets/login.png)
 
 登録コミュニティのメンバーとしてサインインした後は、次のメニュー項目に注目して、コミュニティサイトをクリックして参照してください。
 
-* **プロファイル** ・オプションを使用すると、プロファイルの表示と編集が可能です。
-* [「メッセージ](/help/communities/configure-messaging.md) 」オプションを選択すると、ダイレクトメッセージングセクションに移動し、次の操作を行うことができます。
+* **「** Profile」オプションを使用すると、プロファイルを表示および編集できます。
+* [「](/help/communities/configure-messaging.md) メッセージ」オプションを選択すると、ダイレクトメッセージングセクションに移動し、次の操作を行うことができます。
 
    1. 受信したダイレクトメッセージ（受信トレイ）、送信済み（送信済みアイテム）、削除済み（ごみ箱）の表示。
    1. 個人やグループに送信する新しいダイレクトメッセージを作成します。
 
-* [「通知](/help/communities/notifications.md) 」オプションを選択すると、通知セクションに移動します。このセクションでは、関心のあるイベントの表示や、通知の設定の編集が可能です。
-* [モデレート権限を持つ場合は、管理](/help/communities/published-site.md#moderationlink) :AEM Communitiesモデレートページに移動します。
+* [「](/help/communities/notifications.md) 通知」オプションを選択すると、通知セクションに移動します。このセクションでは、関心のあるイベントの表示や、通知の設定の編集が可能です。
+* [モデレート権限を持つ場合は、](/help/communities/published-site.md#moderationlink) 管理により、AEM Communitiesのモデレートページに移動します。
 
 ![adminscreen](assets/adminscreen.png)
 
-カレンダーページがホームページになっていますが、これは、選択した参照サイトテンプレートの最初に含まれているのがカレンダー機能で、その後にアクティビティストリーム機能、フォーラム機能などが続いているからです。This structure is visible from the [Site Template](/help/communities/sites.md#edit-site-template) console or when modifying site properties in the author environment:
+カレンダーページがホームページになっていますが、これは、選択した参照サイトテンプレートの最初に含まれているのがカレンダー機能で、その後にアクティビティストリーム機能、フォーラム機能などが続いているからです。この構造体は、[サイトテンプレート](/help/communities/sites.md#edit-site-template)コンソールから、または作成者環境でサイトのプロパティを変更する場合に表示されます。
 
 ![sitetemplate](assets/sitetemplate.png)
 
@@ -125,25 +125,25 @@ Aaron はグループ管理者なので、グループリンクを選択する�
 
 パブリッシュ環境でグループを作成する例を次に示します。
 
-Groups may also be created in the author environment and managed within the community site in the author environment ([Community Groups console](/help/communities/groups.md)). The experience of [creating groups on author](/help/communities/nested-groups.md) is next in this tutorial.
+また、グループは作成者環境で作成し、作成者環境のコミュニティサイト内で管理することもできます（[コミュニティグループコンソール](/help/communities/groups.md)）。 [作成者](/help/communities/nested-groups.md)でのグループ作成の経験は、このチュートリアルで次に説明します。
 
 ![grouplink](assets/grouplink.png)
 
 参照グループの作成：
 
-1. Select **New Group**
+1. 「**新しいグループ**」を選択します
 1. **「設定」タブ**
 
    * Group Name : `Sports`
    * 説明 : `A parent group for various sporting groups`.
    * グループ URL 名 : `sports`
-   * Select `Open Group` (allow any community member to participate by joining)
+   * `Open Group`を選択（コミュニティのメンバーが参加できるようにする）
 
 1. **「テンプレート」タブ**
 
-   * Select `Reference Group` (contains a groups function in its structure to allow nested groups)
+   * `Reference Group`を選択します（ネストされたグループを許可するため、構造にグループ関数を含む）
 
-1. Select **Create Group**
+1. 「**グループを作成**」を選択します
 
    ![creategroup](assets/creategroup.png)
 
@@ -151,25 +151,25 @@ Groups may also be created in the author environment and managed within the comm
 
 ![grouplink1](assets/grouplink1.png)
 
-The second set of links, beginning with `Blog`, belong to the currently selected group, the `Sports` group. By selecting the Sports&#39; `Groups` link, it is possible to nest two groups within the Sports group.
+`Blog`で始まる2番目のリンクセットは、現在選択されているグループ`Sports`に属しています。 「スポーツ」`Groups`リンクを選択すると、スポーツグループ内に2つのグループをネストできます。
 
-例として、2つ追加し `new groups`ます。
+例として、`new groups`を2つ追加します。
 
-* One named `Baseball`
+* `Baseball`という名前の1つ
 
-   * Leave it set as an `Open Group` (required membership).
-   * 「テンプレート」タブで、を選択し `Conversational Group`ます。
+   * `Open Group`（必須メンバーシップ）のままにします。
+   * 「テンプレート」タブで、`Conversational Group`を選択します。
 
-* One named `Gymnastics`
+* `Gymnastics`という名前の1つ
 
-   * 設定を（制限付きメンバーシップ）に変更 `Member Only Group` します。
-   * 「テンプレート」タブで、を選択し `Conversational Group`ます。
+   * 設定を`Member Only Group` （制限付きメンバーシップ）に変更します。
+   * 「テンプレート」タブで、`Conversational Group`を選択します。
 
 **注意**：
 
 * 両方のグループを表示する前に、ページを更新する必要がある場合があります。
-* This template does *not* include the groups function, so no further nesting of groups will be possible.
-* On author, the [Groups console](/help/communities/groups.md) provides a third choice - a `Public Group` (optional membership).
+* このテンプレートには&#x200B;*グループ機能が*&#x200B;含まれていないので、グループをこれ以上ネストすることはできません。
+* 作成者の場合、[グループコンソール](/help/communities/groups.md)は、3つ目の選択肢として`Public Group` （オプションのメンバーシップ）を提供します。
 
 両方のグループが作成されたら、Baseball グループ（オープングループ）を選択し、そのリンクに注目します。
 
@@ -179,18 +179,18 @@ The second set of links, beginning with `Blog`, belong to the currently selected
 
 ![grouplink2](assets/grouplink2.png)
 
-On author - with administrative privileges, navigate to the [Communities Groups console](/help/communities/members.md) and add Weston McCall to the `Community Engage Gymnastics <uid> Members` group.
+作成者 — 管理者権限で、[Communities Groupsコンソール](/help/communities/members.md)に移動し、`Community Engage Gymnastics <uid> Members`グループにWeston McCallを追加します。
 
 引き続きパブリッシュ環境で、Aaron McDonald としてログアウトし、次のように匿名のサイト訪問者として Sports グループ内のグループを表示します。
 
 * ホームページから
-* Select `Groups` link
-* Select `Sports` link
-* Select the Sports&#39; `Groups` link
+* `Groups`リンクを選択
+* `Sports`リンクを選択
+* 「スポーツ」`Groups`リンクを選択
 
 Baseball グループのみが表示されます。
 
-Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、オープン・ `Join` グループとプライベート・ `Baseball` グループのどちらか `enter or Leave``Gymnastics` を実行できることに注意してください。
+Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、開いている`Baseball`グループと`enter or Leave`プライベート`Gymnastics`グループのどちらかを`Join`できることに注意してください。
 
 ![grouplink3](assets/grouplink3.png)
 
@@ -198,15 +198,15 @@ Weston McCall（weston.mccall@dodgit.com／password）としてログインし�
 
 Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、作成者環境のこのページにコンテンツを追加できます。
 
-For example, go to **author** instance, open the `engage` folder in the [Communities Sites console](/help/communities/sites-console.md), select the **Open Site** icon to enter author edit mode. Then select preview mode to select the `Web Page` link, then select edit mode to add Title and Text components. 最後に、ページのみまたはサイト全体を再公開します。
+例えば、**author**&#x200B;インスタンスに移動し、[Communitiesのサイトコンソール](/help/communities/sites-console.md)で`engage`フォルダーを開き、**サイトを開く**&#x200B;アイコンを選択して、作成者編集モードにします。 次に、プレビューモードを選択して`Web Page`リンクを選択し、編集モードを選択してタイトルとテキストコンポーネントを追加します。 最後に、ページのみまたはサイト全体を再公開します。
 
 ![webpagelink](assets/webpagelink.png)
 
-### モデレートリンク {#moderationlink}
+### モデレートリンク{#moderationlink}
 
-When the community member has moderation privileges, then the Moderation link will be visible and selecting it will display the community content posted and allow it to be [moderated](/help/communities/moderate-ugc.md) in a manner similar to the [moderation console](/help/communities/moderation.md) in the author environment.
+コミュニティメンバーがモデレート権限を持つ場合、モデレートリンクが表示され、リンクを選択すると、投稿されたコミュニティコンテンツが表示され、作成者環境の[モデレートコンソール](/help/communities/moderation.md)と同様の方法で[モデレート](/help/communities/moderate-ugc.md)できます。
 
-ブラウザーの戻るボタンを使用して、公開したサイトに戻ります。Most consoles are not accessible from global navigation in the publish environment. [](/help/communities/moderate-ugc.md)
+ブラウザーの戻るボタンを使用して、公開したサイトに戻ります。ほとんどのコンソールは、公開環境のグローバルナビゲーションからはアクセスできません。[](/help/communities/moderate-ugc.md)
 
 ![moderationlink](assets/moderationlink.png)
 
@@ -223,9 +223,9 @@ When the community member has moderation privileges, then the Moderation link wi
 
 デフォルトでは、電子メールアドレスがログイン ID になります。選択しない場合、訪問者は独自のログインID（ユーザー名）を入力できます。 ユーザー名は、発行環境で一意である必要があります。
 
-After specifying the user&#39;s name, email, and password, selecting `Sign Up` will create the user and enable them to sign.
+ユーザーの名前、電子メール、パスワードを指定した後、`Sign Up`を選択すると、ユーザーが作成され、ユーザーの署名が有効になります。
 
-Once signed in, the first page presented is their `Profile` page, which they can personalize.
+サインインすると、最初に表示されるページは`Profile`ページで、これをパーソナライズできます。
 
 ![プロファイル](assets/profile.png)
 
