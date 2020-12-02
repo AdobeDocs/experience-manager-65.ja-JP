@@ -102,7 +102,7 @@ ht-degree: 92%
 * [クイック公開](/help/sites-authoring/publishing-pages.md#quick-publish)
 * [公開を管理](/help/sites-authoring/publishing-pages.md#manage-publication)
 
-#### クイック公開 {#quick-publish}
+#### クイック公開  {#quick-publish}
 
 **クイック公開**&#x200B;は、単純な場合のためのもので、選択したページが即座に公開されます。他に何か操作する必要はありません。このため、すべての非公開の参照も自動的に公開されます。
 
@@ -122,7 +122,7 @@ ht-degree: 92%
 >
 >クイック公開は、浅い公開です。つまり、選択したページだけが公開され、子ページは公開されません。
 
-#### 公開を管理 {#manage-publication}
+#### 公開を管理  {#manage-publication}
 
 **公開を管理**&#x200B;には、クイック公開よりも多くのオプションがあります。子ページを含めたり、参照をカスタマイズしたり、使用可能なワークフローを開始したり、後日公開するためのオプションを提供したりします。
 
@@ -145,7 +145,7 @@ ht-degree: 92%
 
    「**次へ**」をクリックして次に進みます。
 
-1. In the next step of the Manage Publication wizard, **Scope**, you can define the scope of the publication/unpublication such as including to include child pages and/or including references.
+1. パブリケーションの管理ウィザード&#x200B;**スコープ**&#x200B;の次の手順では、子ページを含めたり、参照を含めたりするなど、パブリケーション/非パブリケーションの範囲を定義できます。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -195,7 +195,7 @@ ht-degree: 92%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。See the [previous note on this page](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) regarding publishing privileges as well as [Managing Access to Workflows](/help/sites-administering/workflows-managing.md) and [Applying Workflows to Pages](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) for details.
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳細については、このページ](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)の[前の注意事項&lt;a1/>、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページ](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)へのワークフローの適用を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションがあります。
 
@@ -216,11 +216,11 @@ ht-degree: 92%
 * [ページエディターから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [サイトコンソールから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
 
-### エディターから非公開にする {#unpublishing-from-the-editor}
+### エディターから非公開にする  {#unpublishing-from-the-editor}
 
 ページを編集する際に、そのページを非公開にする場合、[ページを公開](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)するときと同じように、**ページ情報**&#x200B;メニューで「**ページを非公開にする**」を選択します。
 
-### コンソールから非公開にする {#unpublishing-from-the-console}
+### コンソールから非公開にする  {#unpublishing-from-the-console}
 
 [「公開を管理」オプションを使用して公開する](/help/sites-authoring/publishing-pages.md#manage-publication)場合と同様に、「公開を管理」オプションを使用して非公開にできます。
 
@@ -262,7 +262,7 @@ ht-degree: 92%
 
    「**公開済みの参照**」オプションを使用して、公開する参照を確認することもできます。
 
-1. [通常どおり](#manage-publication) 、[パブリケーションの管理]ウィザードを続行して、ツリーのパブリケーションまたはパブリケーション解除を完了します。
+1. [ツリーのパブリケーションまたは非パブリケーションを完了するには、](#manage-publication) 通常どおり[パブリケーションの管理]ウィザードを続行します。
 
 ## 公開ステータスの判別 {#determining-publication-status}
 
