@@ -30,7 +30,7 @@ ht-degree: 95%
 
 ## フォームポータルの概要 {#getting-started-with-forms-portal}
 
-発行済みのフォームポータルページに移動します。For more information about creating a forms portal page, see [Creating a forms portal page](../../forms/using/creating-form-portal-page.md).
+発行済みのフォームポータルページに移動します。フォームポータルページの作成について詳しくは、「[フォームポータルページの作成](../../forms/using/creating-form-portal-page.md)」を参照してください。
 
 フォームポータルの Search &amp; Lister コンポーネントは、AEM サーバーの公開インスタンス上で利用可能なフォームを表示します。このリストには、すべてのフォームまたはフォームポータルページの作成時のフィルターで定義されたフォームが含まれています。次の画像が示すように、フォームポータルページは似ています。
 
@@ -65,7 +65,7 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 リスターは、検索パラメーターに基づいたフォームを表示します。検索結果内の各フォームは、関連フォームへのハイパーリンク付きのアイコンで表示されます。アイコンをクリックして開き、関連フォームを使用します。
 
-### フォームへの入力 {#filling-a-form}
+### フォームへの入力  {#filling-a-form}
 
 ![アダプティブフォームのサンプル](assets/filling_a_form.png)
 
@@ -75,7 +75,7 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 各フォームには、ユーザーがフォームに入力できるようにするヘルプ情報が含まれています。
 
-#### ドラフト &amp; 送信 {#drafts-and-submission}
+#### ドラフト &amp; 送信  {#drafts-and-submission}
 
 ユーザーは、オプションとして保存ボタンをクリックすることでフォームのドラフトを保存することができます。これによって、ユーザーは、フォームを送信するまでの一定期間、フォームで作業することができます。
 
