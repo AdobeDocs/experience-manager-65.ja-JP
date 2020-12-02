@@ -31,7 +31,7 @@ ht-degree: 69%
 
 デフォルトのコマース統合では AEM がエクスペリエンスレイヤーとなり、サービスを利用して得られたデータをヘッドレスモードで動作する顧客のコマースプラットフォームに送り返します。
 
-For some commerce platforms, we store profile information ( `/home/users`) and commerce tokens (to login in the commerce platform) in AEM. これらのユースケースについては、[AEM プラットフォームでの GDPR 要求の処理](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)をお読みください。
+一部のコマースプラットフォームでは、プロファイル情報(`/home/users`)とコマーストークン（コマースプラットフォームにログインするため）をAEMに格納します。 これらのユースケースについては、[AEM プラットフォームでの GDPR 要求の処理](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)をお読みください。
 
 ![screen_shot_2018-03-22at11621](assets/screen_shot_2018-03-22at111621.jpg)
 
