@@ -19,7 +19,7 @@ ht-degree: 96%
 
 # Correspondence Management設定プロパティ {#correspondence-management-configuration-properties}
 
-To configure these properties, open the following URL in a browser: `https://<server>:<port>/<contextPath>/system/console/configMgr` and select **Correspondence Management Configurations**.
+これらのプロパティを設定するには、ブラウザーで次のURLを開きます。`https://<server>:<port>/<contextPath>/system/console/configMgr`を選択し、**Correspondence Management設定**&#x200B;を選択します。
 
 Correspondence Management には以下の設定プロパティがあります。
 
@@ -155,13 +155,13 @@ Correspondence Management には以下の設定プロパティがあります。
    <td><p>日付の表示形式</p> </td>
    <td><p>データのロケール固有表示を指定します</p> </td>
    <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=truelocale=de_DE; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator=.; numberUseGroupSeparator=truelocale=fr_FR; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator= ; numberUseGroupSeparator=truelocale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
   </tr>
   <tr>
    <td><p>日付の編集形式</p> </td>
    <td><p>データの編集形式これは、データを文字列として書き込む、または文字列から解析する場合に使用されます</p> </td>
-   <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td>--<p> </p> </td>
+   <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.;numberGroupSeparator=,;numberUseGroupSeparator=true</p> </td>
+   <td>—<p> </p> </td>
   </tr>
   <tr>
    <td><p>「発行」でレターインスタンスを管理</p> </td>
@@ -244,7 +244,7 @@ Correspondence Management には以下の設定プロパティがあります。
   <tr>
    <td><p>CM ユーザールート</p> </td>
    <td><p>すべてのCorrespondence Managementユーザーアセットを含むフォルダーのURL</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
    <td><p>有効なフォルダーの位置</p> </td>
   </tr>
   <tr>
@@ -255,7 +255,7 @@ Correspondence Management には以下の設定プロパティがあります。
   </tr>
   <tr>
    <td><p>レターキャッシュの有効化</p> </td>
-   <td><p>レターキャッシュを有効化または無効化します。</p> <p>この値を変更すると、 <code>in-memory </code> cache.</p> </td>
+   <td><p>レターキャッシュを有効化または無効化します。</p> <p>この値を変更すると、  <code>in-memory </code> キャッシュ。</p> </td>
    <td><p>true</p> </td>
    <td><p>true ／ false</p> </td>
   </tr>
@@ -291,7 +291,7 @@ Correspondence Management には以下の設定プロパティがあります。
   </tr>
   <tr>
    <td><p>Debugディレクトリ </p> <p> </p> </td>
-   <td>デバッグのファイルシステムフォルダーの場所。ディレクトリが <code>exists</code>, no debug dumps will be generated.</td>
+   <td>デバッグのファイルシステムフォルダーの場所。ディレクトリが  <code>exists</code>に設定されていない場合、デバッグダンプは生成されません。</td>
    <td>acm.debugディレクトリ</td>
    <td> </td>
   </tr>
