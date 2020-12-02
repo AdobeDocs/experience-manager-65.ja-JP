@@ -27,7 +27,7 @@ ht-degree: 99%
 >
 >コンテンツフラグメントは、ページのオーサリングで使用します。[コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md)を参照してください。
 
-## コンテンツフラグメントの作成 {#creating-content-fragments}
+## コンテンツフラグメントの作成  {#creating-content-fragments}
 
 ### コンテンツモデルの作成 {#creating-a-content-model}
 
@@ -162,7 +162,7 @@ ht-degree: 99%
    >
    >「**保存**」または「**キャンセル**」のどちらをクリックした場合も、エディターが終了します。これらの両方のオプションがコンテンツフラグメントにどのように動作するかについて詳しくは、[保存、キャンセルおよびバージョン](#save-cancel-and-versions)を参照してください。
 
-## 保存、キャンセルおよびバージョン {#save-cancel-and-versions}
+## 保存、キャンセルおよびバージョン  {#save-cancel-and-versions}
 
 >[!NOTE]
 >
@@ -219,19 +219,19 @@ ht-degree: 99%
 
 フラグメントを開いたら、「[バリエーション](/help/assets/content-fragments/content-fragments-variations.md)」タブを使用してコンテンツをオーサリングできます。
 
-## フラグメント内のバリエーションの作成と管理 {#creating-and-managing-variations-within-your-fragment}
+## フラグメント内のバリエーションの作成と管理  {#creating-and-managing-variations-within-your-fragment}
 
 マスターコンテンツを作成したら、そのコンテンツの[バリエーション](/help/assets/content-fragments/content-fragments-variations.md)を作成して管理できます。
 
-## コンテンツをフラグメントと関連付ける {#associating-content-with-your-fragment}
+## コンテンツをフラグメントと関連付ける  {#associating-content-with-your-fragment}
 
 フラグメントに[コンテンツを関連付ける](/help/assets/content-fragments/content-fragments-assoc-content.md)こともできます。これにより関連性を付加して、フラグメントをコンテンツページに追加するときに、アセット（画像など）を（オプションで）フラグメントと一緒に使用できるようになります。
 
-## フラグメントのメタデータ（プロパティ）の表示と編集 {#viewing-and-editing-the-metadata-properties-of-your-fragment}
+## フラグメントのメタデータ（プロパティ）の表示と編集  {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
 「[メタデータ](/help/assets/content-fragments/content-fragments-metadata.md)」タブを使用し、フラグメントのプロパティを表示して編集できます。
 
-## コンテンツフラグメントのタイムライン {#timeline-for-content-fragments}
+## コンテンツフラグメントのタイムライン  {#timeline-for-content-fragments}
 
 [タイムライン](/help/assets/manage-assets.md#timeline)では標準のオプションに加え、コンテンツフラグメントに固有の情報とアクションの両方が提供されます。
 
