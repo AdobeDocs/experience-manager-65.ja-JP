@@ -18,57 +18,57 @@ ht-degree: 36%
 ---
 
 
-# メンバーコンソールとグループ管理コンソール {#members-groups-management-consoles}
+# メンバーコンソールとグループ管理コンソール  {#members-groups-management-consoles}
 
 ## 概要 {#overview}
 
-AEM Communities の機能の多くは、サイト訪問者に対して、パブリッシュ環境でコミュニティに参加する前に登録とサインインを求めます。Their user registration need only exist in the publish environment and they are commonly referred to as *members* to distinguish them from *users* registered in the author environment.
+AEM Communities の機能の多くは、サイト訪問者に対して、パブリッシュ環境でコミュニティに参加する前に登録とサインインを求めます。ユーザー登録は発行環境にのみ存在する必要があり、一般に&#x200B;*メンバー*&#x200B;と呼ばれ、作成者環境に登録された&#x200B;*ユーザー*&#x200B;と区別します。
 
 ### パブリッシュ環境のメンバー（ユーザー） {#members-users-on-publish}
 
-Using the Communities Members and Groups consoles, members and member groups registered in the *publish* environment may be created and managed from the *author* environment. This is only possible when the [tunnel service](deploy-communities.md#tunnel-service-on-author) is enabled.
+Communitiesのメンバーとグループのコンソールを使用して、*publish*&#x200B;環境に登録されたメンバーとメンバーグループを&#x200B;*author*&#x200B;環境から作成し、管理できます。 これは[トンネルサービス](deploy-communities.md#tunnel-service-on-author)が有効な場合にのみ可能です。
 
 ### オーサー環境のユーザー {#users-on-author}
 
-For managing users and groups registered in the *author* environment, is is necessary to use the platform&#39;s security console:
+*author*&#x200B;環境に登録されたユーザーとグループを管理するには、プラットフォームのセキュリティコンソールを使用する必要があります。
 
-* From global navigation, select **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-* From global navigation, select **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]**.
+* グローバルナビゲーションから、**[!UICONTROL ツール]**/**[!UICONTROL セキュリティ]**/**[!UICONTROL ユーザー]**&#x200B;を選択します。
+* グローバルナビゲーションから、**[!UICONTROL ツール]**/**[!UICONTROL セキュリティ]**/**[!UICONTROL グループ]**&#x200B;を選択します。
 
 >[!NOTE]
 >
->サンプルコンテンツがデプロイされて有効になっていると、オーサー環境とパブリッシュ環境の両方に多数のサンプルユーザーが存在します。These users will not be present when running with [nosamplecontent runmode](../../help/sites-administering/production-ready.md).
+>サンプルコンテンツがデプロイされて有効になっていると、オーサー環境とパブリッシュ環境の両方に多数のサンプルユーザーが存在します。[nosamplecontent runmode](../../help/sites-administering/production-ready.md)で実行する場合、これらのユーザーは存在しません。
 
 ## メンバーコンソール {#members-console}
 
 パブリッシュ環境で登録されたメンバーをオーサー環境で管理するには、次の場所にあるメンバーコンソールを使用します。
 
-* From global navigation, select **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Members]**
+* グローバルナビゲーションから、**[!UICONTROL ナビゲーション]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL メンバー]**&#x200B;を選択します。
 
 >[!CAUTION]
 >
->It will not be possible to use the Members console if the [tunnel service](deploy-communities.md#tunnel-service-on-author) is not enabled.
+>[tunnel service](deploy-communities.md#tunnel-service-on-author)が有効になっていない場合は、Membersコンソールを使用できません。
 
 ![member-console1](assets/member-console1.png)
 
 ### 検索 {#search-features}
 
-Select the side panel icon on the left side of the `Members` header to toggle open the search side panel.
+`Members`ヘッダーの左側にあるサイドパネルアイコンを選択して、検索サイドパネルを開きます。
 
 ![](assets/leftpanel-icon.png)
 
 
 ![member-console2](assets/member-console2.png)
 
-Select the search icon on the left side of the `Members` header to toggle the search side panel closed.
+`Members`ヘッダーの左側にある検索アイコンを選択すると、検索側パネルが閉じられた状態に切り替わります。
 
 ### メンバーの統計 {#member-statistics}
 
-The columns displaying `Views`, `Posts`, `Follows` and `Likes` are updated when the user is a member of one or more community sites with Adobe Analytics [enabled](sites-console.md#analytics).
+`Views`、`Posts`、`Follows`、`Likes`の各列は、Adobe Analytics[が有効](sites-console.md#analytics)で、1つ以上のコミュニティサイトのメンバーである場合に更新されます。
 
 ### CSV の書き出し {#export-csv}
 
-Selecting the `Export CSV` link results in downloading all members as a list of comma-separated values, suitable for importing into a spreadsheet.
+`Export CSV`リンクを選択すると、すべてのメンバーがコンマ区切り値のリストとしてダウンロードされ、スプレッドシートへのインポートに適しています。
 
 列ヘッダーは次のとおりです。
 
@@ -76,7 +76,7 @@ Selecting the `Export CSV` link results in downloading all members as a list of 
 
 ## 新しいメンバーを作成 {#create-new-member}
 
-Select `Create Member` in order to create a user in the publish environment.
+公開環境にユーザを作成するには、`Create Member`を選択します。
 
 ![create-member1](assets/create-member1.png)
 
@@ -86,38 +86,40 @@ Select `Create Member` in order to create a user in the publish environment.
 
 * **[!UICONTROL ID]**
 
-(*Required*) The authorizable ID is the member&#39;s sign-in ID.
+（*必須*）許可可能なIDは、メンバーのログインIDです。
 デフォルトでは、ID は必須の電子メールアドレスの値に設定されています。*IDは作成後は変更できません*。
 
 * **[!UICONTROL 電子メールアドレス]**
 
-(*必須*)メンバーの電子メールアドレス。
-メンバーは、プロファイルの更新時に自分の電子メールアドレスを変更できます。デフォルトで電子メールアドレスに設定されているIDの場合、電子メールアドレスが変更されても ** 、IDは変更されません。
+（*必須*）メンバーの電子メールアドレス。
+会員はプロファイルを更新する際に、自分のメールアドレスを変更することができます。
+IDがデフォルトで電子メールアドレスに設定されている場合、電子メールアドレスが変更されても、IDは**&#x200B;変更されません。
 
 * **[!UICONTROL パスワード]**
 
-   (*Required*) The sign-in password.
+   （*必須*）サインインパスワード。
 
 * **[!UICONTROL パスワードの確認入力]**
 
-   (*必須*)確認のためにパスワードを再入力します。
+   （*必須*）確認のためにパスワードを再入力します。
 
 * **[!UICONTROL メンバーをサイトに追加]**
 
-   (*Optional*) Select from existing community sites in order to add the member to the community site&#39;s members group.
+   （*オプション*）既存のコミュニティサイトからメンバを選択して、コミュニティサイトのメンバグループに追加します。
 
 * **[!UICONTROL メンバーをグループに追加]**
 
-   (*Optional*) Select from existing member groups in order to add the member to that group.
+   （*オプション*）既存のメンバーグループから選択して、そのグループにメンバーを追加します。
 
-* Select **[!UICONTROL Save]**
+* **[!UICONTROL 保存]**&#x200B;を選択
 
 ### 一般 - アカウント設定 {#general-account-settings}
 
 アカウントの設定では、コミュニティ管理者は次のことができます。
 
 * **[!UICONTROL ステータス]**
-   * 禁止されたメンバーはサインインできず、ページを表示できないか、ログインが必要なアクティビティに参加できません。 未だにオープンコミュニティサイトを匿名で訪問している可能性がある。
+   * 禁止
+メンバーがサインインできないため、ページを表示できないか、ログインが必要なアクティビティに参加できません。 未だにオープンコミュニティサイトを匿名で訪問している可能性がある。
 
    * 禁止されていないメンバーはコミュニティサイトのすべての機能にアクセスできます。
 
@@ -146,14 +148,14 @@ Select `Create Member` in order to create a user in the publish environment.
 
 ### 「バッジ」タブ{#badges-tab}
 
-The `BADGES` panel provides the ability to manually assign badges as well as revoke them. バッジは通常、獲得するものですが、役割の割り当てに使用することもできます。
+`BADGES`パネルでは、手動でバッジを割り当てたり、取り消したりできます。 バッジは通常、獲得するものですが、役割の割り当てに使用することもできます。
 
 [スコアとバッジ](implementing-scoring.md)も参照してください。
 
 ![create-member2](assets/create-member2.png)
 
 * **[!UICONTROL 追加バッジ]**
-   * Begin typing to select from [available badges](badges.md). バッジを選択したら、各サイトまたはすべてのサイトを選択します。このサイト上に、会員のアバターと共にバッジを表示します。
+   * [使用可能なバッジ](badges.md)から選択するには、入力を開始します。 バッジを選択したら、各サイトまたはすべてのサイトを選択します。このサイト上に、会員のアバターと共にバッジを表示します。
    * 複数のバッジとサイトを選択できます。
 * **[!UICONTROL バッジを削除]**
    * バッジの横にあるごみ箱アイコンを選択して、削除します。
@@ -162,10 +164,10 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 
 グループコンソールはオーサー環境から使用でき、パブリッシュ環境で登録されたメンバーグループの作成や管理をおこなうことができます。特に、以下の目的で使用されます。
 * [特権を持つメンバーグループ](users.md#privilegedmembersgroups)
-* Group-based assignment of [enablement resources](resources.md)
+* [有効化リソース](resources.md)のグループベースの割り当て
 
 グループコンソールにアクセスするには：
-* From global navigation, select **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]**.
+* グローバルナビゲーションから、**[!UICONTROL ナビゲーション]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL グループ]**&#x200B;を選択します。
 
 >[!CAUTION]
 >
@@ -173,7 +175,7 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 
 ### 新しいグループを作成 {#create-new-group}
 
-Select `Add Group` in order to create a group in the publish environment.
+公開環境にグループを作成するには、`Add Group`を選択します。
 
 ![group-console1](assets/group-console1.png)
 
@@ -181,30 +183,30 @@ Select `Add Group` in order to create a group in the publish environment.
 
 * **[!UICONTROL ID]**
 
-   (*Required*) The group unique ID.
+   （*必須*）グループの一意のID。
 
    *ID は一度作成すると変更できません。*
 
 * **[!UICONTROL 名前]**
 
-   (*Optional*) The display name for the group.
+   （*オプション*）グループの表示名。
 
    デフォルトの値は ID です。
 
 * **[!UICONTROL 説明]**
 
-   (*Optional*) A description of the group&#39;s purpose and permissions.
+   （*オプション*）グループの目的と権限の説明。
 
 * **[!UICONTROL メンバーをグループに追加]**
 
-   (*Optional*) Select publish-side members to be included as initial members of the group.
+   （*オプション*）グループの最初のメンバーとして含めるパブリッシュ側のメンバーを選択します。
 
-* Select **[!UICONTROL Save]**
+* **[!UICONTROL 保存]**&#x200B;を選択
 
 ## 承認された管理者 {#authorized-administrators}
 
-When working with members in the Communities members console, it is necessary to be signed in as a user with appropriate permissions, and for the replication agent used by the [tunnel service](deploy-communities.md#tunnel-service-on-author) to be correctly configured.
+Communitiesのメンバーコンソールでメンバーを操作する場合、適切な権限を持つユーザーとしてログインする必要があります。また、[tunnel service](deploy-communities.md#tunnel-service-on-author)で使用されるレプリケーションエージェントを正しく構成する必要があります。
 
-If not signed in as `admin`, then the signed in user must be a member of the `administrators` user group.
+`admin`としてサインインしていない場合、サインインしたユーザーは`administrators`ユーザーグループのメンバーである必要があります。
 
-See also [Replication Agents on Author](deploy-communities.md#replication-agents-on-author).
+作成者](deploy-communities.md#replication-agents-on-author)の[複製エージェントも参照してください。
