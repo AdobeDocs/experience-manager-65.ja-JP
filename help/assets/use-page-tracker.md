@@ -11,9 +11,9 @@ ht-degree: 70%
 ---
 
 
-# Use page tracker and embed code in web pages {#using-page-tracker-and-embed-code-in-web-pages}
+# ページトラッカーと埋め込みコードをWebページで使用する{#using-page-tracker-and-embed-code-in-web-pages}
 
-Page Tracker is a piece of JavaScript code that you include in third-party websites&#39; code to enable Adobe Analytics to capture usage data around [!DNL Adobe Experience Manager Assets] on these websites.
+ページトラッカーはJavaScriptコードの1つで、Adobe AnalyticsがこれらのWebサイトの[!DNL Adobe Experience Manager Assets]付近の使用状況データを取り込めるようにするために、サードパーティWebサイトのコードに含めます。
 
 アセット固有のイベント（クリックなど）を取得するには、サードパーティの Web サイトコードに埋め込みコードも含めます。
 
@@ -59,7 +59,7 @@ Page Tracker is a piece of JavaScript code that you include in third-party websi
 </html>
 ```
 
-## Add page tracker code {#adding-page-tracker-code}
+## 追加ページトラッカーコード{#adding-page-tracker-code}
 
 ページトラッカーコードは Web サイトコードのヘッダーセクションに追加します。次のコードスニペットは、サンプル Web ページに組み込まれたページトラッカーコードです。
 
@@ -79,7 +79,7 @@ Page Tracker is a piece of JavaScript code that you include in third-party websi
  </head>
 ```
 
-## 追加埋め込みコード {#add-embed-code}
+## 追加埋め込みコード{#add-embed-code}
 
 埋め込みコードは Web サイトコードの本文に追加します。次のコードスニペットは、サンプル Web ページに組み込まれた埋め込みコードです。
 
