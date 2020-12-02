@@ -32,7 +32,7 @@ ht-degree: 68%
 >
 >**前提条件**：
 >
->In [Deploying and Maintaining](/help/sites-deploying/deploy.md), developers became familiar with AEM&#39;s system of components and templates.
+>[導入と保守](/help/sites-deploying/deploy.md)では、開発者はコンポーネントとテンプレートのAEMシステムに慣れていました。
 
 ## ページコンテンツを管理タイル {#the-manage-page-content-tile}
 
@@ -40,13 +40,13 @@ ht-degree: 68%
 >
 >標準搭載のアプリテンプレートを使用していない場合は、新しいアプリコンテンツをOTAに公開できるようにするには、コンテンツ同期ハンドラーを設定する必要があります。
 >
->See [Mobile with Content Sync](/help/mobile/phonegap-contentsync.md) in Developer&#39;s section for more details.
+>詳しくは、開発者向けのセクションの[コンテンツが同期されたモバイル](/help/mobile/phonegap-contentsync.md)を参照してください。
 
 AEM Sites 内とほぼ同じ方法で、AEM Mobile でコンテンツを作成、編集および削除できます。
 
-The **Manage Page Content tile** displays the number of pages of managed content and last modified for a particular payload. タイルの各レコードをクリックすることによって、コンテンツにドリルダウンしてページを作成、コピー、移動、削除および更新できます。
+**ページコンテンツを管理タイル**&#x200B;には、管理対象コンテンツのページ数と、特定のペイロードに対して最後に変更されたページ数が表示されます。 タイルの各レコードをクリックすることによって、コンテンツにドリルダウンしてページを作成、コピー、移動、削除および更新できます。
 
-Once content has been updated, administrators can publish a content update payload Over-the-Air (OTA) to customers through the **Manage Content Packages tile.**
+コンテンツが更新されると、管理者は、**コンテンツパッケージの管理タイルを通じて、コンテンツ更新ペイロードOver-the-Air(OTA)を顧客に公開できます。**
 
 ![chlimage_1-161](assets/chlimage_1-161.png)
 
@@ -54,7 +54,7 @@ Once content has been updated, administrators can publish a content update paylo
 
 すべてのものがコンテンツである&#x200B;**&#x200B;ことに注意してください。つまり、アプリケーションスタイル、コピー（テキスト）、メディア、ページ、ナビゲーションおよびコンテンツのターゲット設定を、すべて App Store に移動せずに OTA で編集および更新できます。
 
-In order to edit AEM Mobile content, *AEM authors *will need a solid understanding of AEM&#39;s content editiing interface: [Authoring pages in AEM.](/help/sites-authoring/qg-page-authoring.md)
+AEM Mobileのコンテンツを編集するには、*AEM作成者*はAEMのコンテンツ編集インターフェイスについてしっかりと理解する必要があります。[AEMでのオーサリングページ。](/help/sites-authoring/qg-page-authoring.md)
 
 ## コンテンツパッケージを管理タイル {#the-manage-content-packages-tile}
 
@@ -62,13 +62,13 @@ AEM 管理者&#x200B;**&#x200B;は、開発者や App Store 再送信を必要�
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-Once *AEM Authors* have added or modified content through the Manage Content Tile, *AEM Administrators* are able to push those changes out to customers with a Content Packages update.
+*AEM作成者*&#x200B;がコンテンツタイルを管理してコンテンツを追加または変更すると、*AEM管理者*&#x200B;は、コンテンツパッケージをアップデートしたお客様に対して、これらの変更をプッシュできます。
 
 コンテンツパッケージアクションによって、AEM 作成者&#x200B;**&#x200B;はページコンテンツを作成および編集できます。一方で、開発チームは、ナビゲーション、スタイル、サーバー側ロジック、テンプレート、コンポーネントなどのホストアプリケーション設計および実装を変更して、配布のために様々なストアに再送信することなく、変更を利用者に OTA で公開できます。
 
 **新しいコンテンツまたは更新したコンテンツを公開するには**
 
-コンテンツパッケージをタイルから選択します（この例では English パッケージ）。Notice a content update dialog lists the relevant *Content Sync* configuration. If app content has been modified since a previous update, the status will display *Pending*, as shown below.
+コンテンツパッケージをタイルから選択します（この例では English パッケージ）。コンテンツ更新ダイアログに、関連する&#x200B;*コンテンツ同期*&#x200B;設定がリストされています。 アプリのコンテンツが以前の更新以降に変更されている場合は、以下のように&#x200B;*保留*&#x200B;と表示されます。
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -84,7 +84,7 @@ Once *AEM Authors* have added or modified content through the Manage Content Til
 >
 >ステージングされたコンテンツは、公開前に AEM Verify アプリを使用して検証できます。
 >
->See [Mobile Quickstart for AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) for more details on AEM Verify app.
+>AEM Verifyアプリの詳細については、[AEM Verify](/help/mobile/phonegap-mobile-quickstart.md)のMobile Quickstartを参照してください。
 
 ![chlimage_1-165](assets/chlimage_1-165.png)
 
