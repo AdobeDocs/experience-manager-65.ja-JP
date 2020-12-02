@@ -23,31 +23,31 @@ ht-degree: 59%
 
 ## 概要 {#overview}
 
-Interactive communication is the default and recommended approach to create customer communications in AEM Forms 6.5. To continue using letters in AEM Forms 6.5, you need to install the latest [AEMFD Compatibility package](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html).
+対話型通信は、AEM Forms6.5で顧客とのコミュニケーションを作成するためのデフォルトで推奨されるアプローチです。AEM Forms6.5でレターを使用し続けるには、最新の[AEMFD互換パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールする必要があります。
 
-The AEMFD Compatibility package also allows you to [use the following assets from AEM Forms 6.4, 6.3 and 6.2 on AEM Forms 6.5:](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
+AEMFD互換パッケージでは、AEM Forms6.5のAEM Forms6.4、6.3、6.2の次のアセットを[使用することもできます。](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
 * ドキュメントフラグメント
 * レター
 * データディクショナリ
 * アダプティブフォームの非推奨になったテンプレートおよびページ
 
-For more information, see [Assets made compatible with AEM Forms 6.5 by installing the Compatibility package](../../forms/using/compatibility-package.md#assetsmadecompatible).
+詳しくは、[互換性パッケージ](../../forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、&lt;a0/>AEM Forms6.5と互換性のあるアセットを参照してください。
 
-## Add support for AEM Forms 6.4, 6.3 and 6.2 assets in AEM Forms 6.5 {#add-support-for-aem-forms-and-assets-in-aem-forms}
+## AEM Forms6.5のAEM Forms6.4、6.3、追加6.2アセットのサポート{#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 アップグレードを実行した後、AEMFD 互換性パッケージをインストールしてアセットに 6.5 との互換性を持たせるには、以下を実行します。
 
-Ensure that you have [AEM Compatibility package](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) pre-installed.
+[AEM互換パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)がプレインストールされていることを確認します。
 
-1. Install the latest 6.5 [Compatibility package](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html).
+1. 最新の6.5 [互換性パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)をインストールします。
 
    パッケージのアップロードおよびインストールについて詳しくは、「[パッケージの作業方法](/help/sites-administering/package-manager.md)」を参照してください。
 
 1. ログの状態が安定したら、サーバーを再起動します。
 1. アセットに 6.5 との互換性を持たせるには、移行ユーティリティを使用します。
 
-   For more information, see [migration utility](../../forms/using/migration-utility.md).
+   詳しくは、[移行ユーティリティ](../../forms/using/migration-utility.md)を参照してください。
 
 ## 互換性パッケージをインストールすることにより AEM Forms 6.5 と互換性を持つようになったアセット {#assetsmadecompatible}
 
