@@ -31,11 +31,11 @@ Adobe Experience Manager(AEM)では、Adobe Marketing Cloudの次の製品とシ
 * Adobe Search&amp;Promote：サイトの検索結果を管理および最適化できる機能をマーケティング担当者に提供します。
 * Adobe Campaign では、電子メール配信コンテンツを Adobe Experience Manager で直接管理できます。
 
-In addition, you can [integrate AEM with Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md) and with [third-party services](/help/sites-administering/third-party-services.md).
+また、AEMをCreative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md)と[サードパーティのサービス](/help/sites-administering/third-party-services.md)と[統合することもできます。
 
 ## Adobe Analytics との統合 {#integrating-with-adobe-analytics}
 
-[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) は、複数のマーケティングチャネルにわたるすべてのオンラインイニシアチブの統合データを、デジタルマーケターが1か所で測定、分析、最適化できる、業界トップクラスのソリューションです。 このソリューションを使用すると、マーケティング担当者は、デジタル戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの Web 分析情報を入手できます。Adobe Analytics を使用すると、マーケティング担当者は Web サイト内で最も収益性に優れたパスの迅速な特定、価値の高い Web の訪問者を見分けるためのトラフィックの区分、訪問者がサイトを離れた経路の判断、およびオンラインマーケティングキャンペーンにとって重要な成功指標の特定をおこなうことができます。
+[Adobe](https://www.omniture.com/en/products/analytics/sitecatalyst) 分析は、複数のマーケティングチャネルにわたるすべてのオンラインイニシアチブの統合データを、デジタルマーケターが1か所で測定、分析、最適化できる、業界をリードするソリューションです。このソリューションを使用すると、マーケティング担当者は、デジタル戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの Web 分析情報を入手できます。Adobe Analytics を使用すると、マーケティング担当者は Web サイト内で最も収益性に優れたパスの迅速な特定、価値の高い Web の訪問者を見分けるためのトラフィックの区分、訪問者がサイトを離れた経路の判断、およびオンラインマーケティングキャンペーンにとって重要な成功指標の特定をおこなうことができます。
 
 Adobe Analytics は、サイトのデータを分析するために使用できます。
 
@@ -72,7 +72,7 @@ Analytics や Target との統合をオプトインすれば、そのページ�
 
 詳しくは、[Adobe Analytics および Adobe Target との統合のオプトイン](/help/sites-administering/opt-in.md)を参照してください。
 
-## Scene7 との統合 {#integrating-with-scene}
+## Scene7 との統合  {#integrating-with-scene}
 
 [Adobe Scene7](https://www.adobe.com/products/scene7.html) は、ダイナミックマーケティングアセットやリッチビジュアルマーチャンダイジングを公開、管理、拡張したり、Web、モバイル、電子メール、ソーシャルメディア、インターネットに接続されたディスプレイやプリンターへ配信したりするためのホスト型ソリューションです。
 
@@ -87,7 +87,7 @@ AEM から Scene7 に直接デジタルアセットを公開できます。ま�
 * Flash テンプレート
 * 画像テンプレート
 
-For more information on how AEM integrates with Scene7, see the [Integrating with Scene7 documentation](/help/sites-administering/scene7.md).
+AEMとScene7の統合方法について詳しくは、[Scene7との統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
 
 ## Adobe Dynamic Tag Management との統合 {#integrating-with-adobe-dynamic-tag-management}
 
@@ -107,11 +107,11 @@ Adobe Search&amp;Promote は、信頼性とスケーラビリティに優れた�
 
 AEM と Search&amp;Promote の統合について詳しくは、[Adobe Search&amp;Promote との統合](/help/sites-administering/search-and-promote.md)を参照してください。
 
-## Adobe Campaign との統合 {#integrating-with-adobe-campaign}
+## Adobe Campaign との統合  {#integrating-with-adobe-campaign}
 
 [Adobe Campaign](https://www.adobe.com/solutions/campaign-management.html) では、電子メール配信コンテンツを Adobe Experience Manager で直接管理できます。
 
-For information on how AEM integrates with Adobe Campaign, see [Integrating with Adobe Campaign](/help/sites-administering/campaignstandard.md).
+AEMとAdobe Campaignの統合方法について詳しくは、[Adobe Campaignとの統合](/help/sites-administering/campaignstandard.md)を参照してください。
 
 ## Livefyre との統合 {#integrating-with-livefyre}
 
