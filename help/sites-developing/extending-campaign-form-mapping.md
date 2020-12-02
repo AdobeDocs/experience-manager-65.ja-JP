@@ -31,7 +31,7 @@ Adobe Campaign にカスタムテーブルを作成したら、そのカスタ�
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-See [Integrating AEM with Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md) for more information.
+詳しくは、[AEMとAdobe Campaign Classic](/help/sites-administering/campaignonpremise.md)の統合を参照してください。
 
 ## カスタムフォームマッピングの作成 {#creating-custom-form-mappings-2}
 
@@ -44,7 +44,7 @@ See [Integrating AEM with Adobe Campaign Classic](/help/sites-administering/camp
 1. 作成した配信を使用するフォームを AEM で作成。
 1. フォームを送信してテスト。
 
-### Adobe Campaign でのカスタムテーブルの作成 {#creating-the-custom-table-in-adobe-campaign}
+### Adobe Campaign でのカスタムテーブルの作成  {#creating-the-custom-table-in-adobe-campaign}
 
 まず、Adobe Campaign でカスタムテーブルを作成します。この例では、次の定義を使用してイベントテーブルを作成します。
 
@@ -59,13 +59,13 @@ See [Integrating AEM with Adobe Campaign Classic](/help/sites-administering/camp
 
 イベントテーブルを作成したら、**データベース構造更新ウィザード**&#x200B;を実行して、テーブルを作成します。
 
-### シードテーブルの拡張 {#extending-the-seed-table}
+### シードテーブルの拡張  {#extending-the-seed-table}
 
 Adobe Campaign で、「**追加**」をタップまたはクリックして、**シードアドレス（nms）**&#x200B;テーブルの新しい拡張を作成します。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
-Now, use the fields from the **event** table to extend the **seed** table:
+次に、**イベント**&#x200B;テーブルのフィールドを使用して、**シード**&#x200B;テーブルを拡張します。
 
 ```xml
 <element label="Event" name="custom_cus_event">
@@ -78,7 +78,7 @@ Now, use the fields from the **event** table to extend the **seed** table:
 
 拡張後、**データベース更新ウィザード**&#x200B;を実行して、変更を適用します。
 
-### カスタムターゲットマッピングの作成 {#creating-custom-target-mapping}
+### カスタムターゲットマッピングの作成  {#creating-custom-target-mapping}
 
 **管理／キャンペーン管理**&#x200B;で、**ターゲットマッピング**&#x200B;に移動し、新しい&#x200B;**ターゲットマッピング**&#x200B;を追加します。
 
