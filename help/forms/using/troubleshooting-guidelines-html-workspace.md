@@ -18,23 +18,23 @@ ht-degree: 80%
 ---
 
 
-# AEM Forms Workspace のトラブルシューティングガイドライン {#troubleshooting-guidelines-for-aem-forms-workspace}
+# AEM Forms Workspace のトラブルシューティングガイドライン  {#troubleshooting-guidelines-for-aem-forms-workspace}
 
 この記事では、ログを有効にしてブラウザーでデバッガーを使用することによって、AEM Forms Workspace をデバッグする方法について説明します。また、AEM Forms Workspace および回避策を使用する場合に直面する共通の問題についても説明します。
 
-## AEM Forms Workspace パッケージをインストールできない {#unable-to-install-aem-forms-workspace-package}
+## AEM Forms Workspace パッケージをインストールできない  {#unable-to-install-aem-forms-workspace-package}
 
-パッチをインストールした後、AEM Forms Workspace を開きます。If you encounter the No Resource Found error, open the CRX Package Manager, and reinstalling the `adobe-lc-workspace-pkg-<version>.zip` package.
+パッチをインストールした後、AEM Forms Workspace を開きます。リソースが見つかりませんでしたエラーが発生した場合は、CRXパッケージマネージャーを開き、`adobe-lc-workspace-pkg-<version>.zip`パッケージを再インストールします。
 
-While installling the package, if you encounter an error `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`, perform the following steps:
+パッケージのインストール中に`javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`エラーが発生した場合は、次の手順を実行します。
 
-1. CRX DE Lite にログインします。The default url is `https://[localhost]:'port'/lc/crx/de/index.jsp`
+1. CRX DE Lite にログインします。デフォルトのURLは`https://[localhost]:'port'/lc/crx/de/index.jsp`です
 1. 次のノードを削除します。
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
 1. Package Manager に移動します。デフォルトの URL は次のとおりです。`https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
-1. Search and install the `adobe-lc-workspace-pkg-[version].zip` package.
+1. `adobe-lc-workspace-pkg-[version].zip`パッケージを検索してインストールします。
 1. アプリケーションサーバーを再起動します。
 
 ## AEM Forms Workspace のログ {#aem-forms-workspace-nbsp-logging}
@@ -43,11 +43,11 @@ While installling the package, if you encounter an error `javax.jcr.nodetype.Con
 
 AEM Forms Workspace では次の操作が可能です。
 
-* To get the logging information about a specific component file, append `/log/<ComponentFile>/<LogLevel>` in the URL, and press `Enter`. 特定のログレベルにおけるコンポーネントファイルのすべてのログ情報は、コンソールに印刷されます。
+* 特定のコンポーネントファイルに関するログ情報を取得するには、URLに`/log/<ComponentFile>/<LogLevel>`を追加し、`Enter`を押します。 特定のログレベルにおけるコンポーネントファイルのすべてのログ情報は、コンソールに印刷されます。
 
-* To get logging information of all component files, append `/log/all/trace` in the URL, and press `Enter`.
+* すべてのコンポーネントファイルのログ情報を取得するには、URLに`/log/all/trace`を追加して`Enter`を押します。
 
-* Log format: `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
+* ログ形式：`<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ AEM Forms Workspace では次の操作が可能です。
 
 * ユーザーによって設定されたログレベルは、そのブラウザーセッションでのみ保持されます。ユーザーがページを更新すると、ログレベルはすべてのコンポーネントに対してその初期値に設定されます。
 
-### AEM Forms Workspace のコンポーネントファイルのリスト {#list-of-component-files-in-nbsp-aem-forms-workspace}
+### AEM Forms Workspace のコンポーネントファイルのリスト  {#list-of-component-files-in-nbsp-aem-forms-workspace}
 
 <table>
  <tbody>
@@ -142,7 +142,7 @@ AEM Forms Workspace では次の操作が可能です。
  </tbody>
 </table>
 
-### AEM Forms Workspaceアプリで使用可能なログレベル {#log-levels-available-in-nbsp-aem-forms-workspace}
+### AEM Forms Workspaceアプリで使用可能なログレベル  {#log-levels-available-in-nbsp-aem-forms-workspace}
 
 * FATAL
 * ERROR
@@ -160,7 +160,7 @@ AEM Forms Workspace では次の操作が可能です。
 
 * **Chromeでのデバッグ**:Chromeでデバッガーを開くには、次のショートカットを使用します。Ctrl + Shift + I詳しくは、次を参照してください。 [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
 
-* **Firefox でのデバッグ**：複数のアドオンを Firefox でスクリプトおよびスタイルのデバッグに使用することができます。For example, Firebug is one such debugging utility ([https://getfirebug.com](https://getfirebug.com)).
+* **Firefox でのデバッグ**：複数のアドオンを Firefox でスクリプトおよびスタイルのデバッグに使用することができます。例えば、Firebugはデバッグユーティリティの1つです([https://getfirebug.com](https://getfirebug.com))。
 
 ## FAQ {#faqs}
 
