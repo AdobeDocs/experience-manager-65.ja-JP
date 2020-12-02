@@ -22,7 +22,7 @@ ht-degree: 96%
 
 出力ストリームをエンコードするための文字セットを指定できます。
 
-1. In administration console, click **[!UICONTROL Services > output]**.
+1. 管理コンソールで、**[!UICONTROL サービス/output]**&#x200B;をクリックします。
 1. 「国際化対応」の「文字セット」リストで、文字セットを選択します。この設定は、API 経由で指定される `TransformationFormat` と `PrintFormat` の値によって異なります。リストにない文字セットを指定するには、「カスタム」を選択し、表示されたボックスでエンコーディング値を指定します。
 
    `TransformationFormat` が PDF か PDF/A である場合、または `PrintFormat` が PCL、PostScript、Zebra Label、IPL、DPL、TPCL、GenericColorPCL または GenericPSLevel3 である場合、特定の文字セットのみがサポートされます。
