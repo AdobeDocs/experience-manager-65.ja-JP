@@ -17,9 +17,9 @@ ht-degree: 3%
 ---
 
 
-# AEM Formsプロセスについて {#understanding-aem-forms-processes}
+# AEM Formsプロセスについて{#understanding-aem-forms-processes}
 
-一般的な使用例は、一連のAEM Formsサービスが1つのドキュメント上で動作する場合です。 Workbenchを使用してプロセスを作成すると、サービスコンテナにリクエストを送信できます。 プロセスとは、自動化するビジネスプロセスを表します。 プロセスの作成について詳しくは、「Workbenchの [使用](https://www.adobe.com/go/learn_aemforms_workbench_63)」を参照してください。
+一般的な使用例は、一連のAEM Formsサービスが1つのドキュメント上で動作する場合です。 Workbenchを使用してプロセスを作成すると、サービスコンテナにリクエストを送信できます。 プロセスとは、自動化するビジネスプロセスを表します。 プロセスの作成について詳しくは、「[Workbenchの使用](https://www.adobe.com/go/learn_aemforms_workbench_63)」を参照してください。
 
 プロセスがアクティブ化されると、そのプロセスはサービスになり、他のサービスと同様に呼び出すことができます。 Encryptionサービスなどの標準サービスとプロセスに由来するサービスの違いの1つは、標準サービスには多くのアクションを実行する1つの操作があるということです。 一方、標準のサービスには多くの操作があります。 通常、各操作は1つの操作(ポリシーのドキュメントへの適用、ドキュメントの暗号化など)を実行します。
 
@@ -41,19 +41,19 @@ ht-degree: 3%
 
 **短時間のみ有効なプロセスの例**
 
-次の図は、MyApplication/EncryptDocumentという名前の短時間のみ有効なプロセスの例 *です*。
+次の図は、*MyApplication/EncryptDocument*&#x200B;という短時間のみ有効なプロセスの例です。
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスに基づいていません。このプロセスの呼び出し方法について説明するコード例に従うには、Workbenchを `MyApplication/EncryptDocument` 使用した名前のプロセスを作成します。 （[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照。）
+>このプロセスは、既存の AEM Forms プロセスに基づいていません。このプロセスの呼び出し方法について説明するコード例に従うには、Workbenchを使用して`MyApplication/EncryptDocument`という名前のプロセスを作成します。 （[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照。）
 
 この短時間のみ有効なプロセスを呼び出すと、次のアクションが実行されます。
 
 1. プロセスに渡される、保護されていないPDFドキュメントを入力値として取得します。
-1. PDF ドキュメントをパスワードで暗号化します。このプロセスの入力パラメーターの名前はです。データタイプ `inDoc` はドキュメントです。
-1. パスワードで暗号化されたPDFドキュメントをPDFファイルとしてローカルファイルシステムに保存します。 このプロセスは、暗号化されたPDFドキュメントを出力値として返します。 このプロセスの出力パラメーターの名前はです。データタイプ `outDoc` は「ドキュメント」です。
+1. PDF ドキュメントをパスワードで暗号化します。このプロセスの入力パラメーターの名前は`inDoc`で、データタイプはドキュメントです。
+1. パスワードで暗号化されたPDFドキュメントをPDFファイルとしてローカルファイルシステムに保存します。 このプロセスは、暗号化されたPDFドキュメントを出力値として返します。 このプロセスの出力パラメーターの名前は`outDoc`で、データタイプはドキュメントです。
 
-   このプロセスは、呼び出された同じ実行スレッドで同期的に完了します。 この短時間のみ有効なプロセスの名前 `MyApplication/EncryptDocument`と操作はで `invoke`す。
+   このプロセスは、呼び出された同じ実行スレッドで同期的に完了します。 この短時間のみ有効なプロセスの名前は`MyApplication/EncryptDocument`で、その操作は`invoke`です。
 
    >[!NOTE]
    >
@@ -64,7 +64,7 @@ ht-degree: 3%
    * [AEM Formsリモートを使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (Flexアプリケーションを使用)
    * [呼び出しAPI](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java Invocation API)を使用した短時間のみ有効なプロセスの呼び出し
    * [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Webサービスの例）
-   * [MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Webサービスの例）
+   * [MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Webサービスの例）を使用したAEM Formsの呼び出し
    * [SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （Webサービスの例）を使用したAEM Formsの呼び出し
    * [HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) （Webサービスの例）を介したBLOBデータを使用したAEM Formsの呼び出し
    * [DIMEを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) （Webサービスの例）
@@ -74,8 +74,8 @@ ht-degree: 3%
 
 次の図は、長期間有効なプロセスの例です。
 
-このプロセスは、申込者がローンフォームを送信したときに呼び出されます。 この処理は、ローン担当者がローン要求を承認または拒否するまで完了しません。 この長期間有効なプロセスの名前はFirstAppSolution/PreLoanProcess *で、操作は*`invoke_Async`です。 このプロセスは、非同期で呼び出す必要があります。 For information about programmatically invoking this long-lived process, see [Invoking Human-Centric Long-Lived Processes](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
+このプロセスは、申込者がローンフォームを送信したときに呼び出されます。 この処理は、ローン担当者がローン要求を承認または拒否するまで完了しません。 この長期間有効なプロセスの名前は&#x200B;*FirstAppSolution/PreLoanProcess*&#x200B;で、操作は`invoke_Async`です。 このプロセスは、非同期で呼び出す必要があります。 この長期間有効なプロセスをプログラムで呼び出す方法については、[人間中心の長期間有効なプロセスの呼び出し](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)を参照してください。
 
 >[!NOTE]
 >
->このプロセスは、「最初のAEM Formsアプリケーションの [作成」で指定したチュートリアルに従って作成できます](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)。
+>このプロセスは、[最初のAEM Formsアプリケーションの作成](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)で指定したチュートリアルに従って作成できます。
