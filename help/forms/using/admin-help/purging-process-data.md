@@ -24,5 +24,5 @@ ht-degree: 89%
 
 * 管理コンソールを使用して、長期間有効なプロセスに関連する古いレコードを一度に削除したり、定期的に自動で削除するようにスケジュールしたりできます（[ジョブマネージャーのデータベースからの古いレコードの削除](/help/forms/using/admin-help/purge-records-job-manager-database.md#purge-records-from-the-job-manager-database)を参照）。
 * AEM Forms の Java API および Web サービス API を使用して、長期間有効なプロセスに関連するプロセスデータをプログラムで削除できます（「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」の「プロセスデータの削除」を参照してください。）
-* プロセス名および他のパラメーターに基づいてプロセスをクリアするには、プロセス削除ツールを使用します。For details, see the process purge tool readme file, located in *[aem_forms root]*\sdk\misc\Foundation\ProcessPurgeTool\ReadMe.txt.
+* プロセス名および他のパラメーターに基づいてプロセスをクリアするには、プロセス削除ツールを使用します。詳しくは、*[aem_forms root]*\sdk\misc\Foundation\ProcessPurgeTool\ReadMe.txtにある、プロセス削除ツールのお読みくださいファイルを参照してください。
 
