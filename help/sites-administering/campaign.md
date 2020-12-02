@@ -36,5 +36,5 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 >[!NOTE]
 >
->To review a related AEM Community article, see: [Integrating Adobe Experience Manager and Adobe Campaign Standard to create Newletters](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html).
+>関連するAEMコミュニティの記事を確認するには、次を参照してください。[Adobe Experience ManagerとAdobe Campaign Standardを統合してニューレター](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html)を作ります。
 
