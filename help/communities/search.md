@@ -24,9 +24,9 @@ ht-degree: 30%
 
 コミュニティメンバーが入力した投稿（ユーザー生成コンテンツ（UGC））を検索する機能を追加するときは、[検索](#search)と[検索結果](#search-results)という 2 つのコンポーネントを使用します。
 
-The page that includes the `Search Results` component supports both searching and the display of results.
+`Search Results`コンポーネントを含むページは、検索と結果の表示の両方をサポートしています。
 
-The page that includes the `Search` component provides a place to launch a search with results appearing on the `Search Results` page.
+`Search`コンポーネントを含むページは、`Search Results`ページに結果が表示される検索を開始する場所を提供します。
 
 検索機能は、サイト訪問者やメンバーに向けてコンテンツを表示する他の機能と共に使用できます。
 
@@ -34,21 +34,21 @@ The page that includes the `Search` component provides a place to launch a searc
 
 ### 検索をページに追加 {#add-search-to-a-page}
 
-作成者モードでページに `Search` コンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索 `Communities / Search` し、ページ上の配置にドラッグします。 の使用 `Search` には、 `Search Results.`
+作成者モードで`Search`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して`Communities / Search`を探し、ページ上の配置にドラッグします。 `Search`を使用するには、`Search Results.`の2ページ目が必要です
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-When the required client-side library, `cq.social.hbs.search`, is included, this is how the `Search` component will appear.
+必要なクライアント側ライブラリ`cq.social.hbs.search`が含まれる場合、`Search`コンポーネントは次のように表示されます。
 
 ![追加検索](assets/add-search.png)
 
 ### 追加した検索を設定 {#configure-the-added-search}
 
-Select the placed `Search` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Search`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![告白](assets/configure-new.png)
 
-Under the **[!UICONTROL Search Settings]** tab, specify how what paths are are search when a query is entered by a visitor.
+「**[!UICONTROL 検索設定]**」タブで、訪問者がクエリを入力した場合の検索パスを指定します。
 
 ![search-settings](assets/search-settings.png)
 
@@ -56,34 +56,35 @@ Under the **[!UICONTROL Search Settings]** tab, specify how what paths are are s
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
-* **[!UICONTROL 結果ページ]**：結果は、ブラウザーを使用して 
+* **[!UICONTROL 結果]**
+ページ結果は、ブラウザーを使用して 
 `Search Results` component.
 
 ## 検索結果 {#search-results}
 
 ### 検索結果をページに追加 {#add-search-results-to-a-page}
 
-To add a `Search Results` component to a page in author mode, use the component browser to locate
+作成者モードで`Search Results`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Search Results`
 
 コンポーネントを探し、ページ上の位置にドラッグします。検索コンポーネントとは異なり、2番目のページは必要ありません。結果が同じページに表示されるためです。
 
-If using Search elsewhere within the website, this one page with `Search Results` may be configured to be the `Result Page` for any or all instances of `Search`.
+Webサイト内の他の場所で検索を使用する場合、`Search Results`を含むこの1ページは、`Search`のインスタンスのいずれかまたはすべての`Result Page`に設定できます。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-When the required client-side library, `cq.social.hbs.search`, is included, this is how the `Search Result` component will appear:
+必要なクライアント側ライブラリ`cq.social.hbs.search`が含まれる場合、`Search Result`コンポーネントは次のように表示されます。
 
 ![search-result](assets/search-result1.png)
 
 ### 追加した検索結果を設定 {#configure-the-added-search-result}
 
-Select the placed `Search Results` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Search Results`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![設定](assets/configure-new.png)
 
-Under the **[!UICONTROL Search Result Settings]** tab, it is possible to specify what paths are included in the search when a query is entered by a visitor.
+「**[!UICONTROL Search Result Settings]**」タブでは、訪問者がクエリを入力した場合に検索に含めるパスを指定できます。
 
 ![search-result-settings](assets/search-result-settings.png)
 
@@ -97,4 +98,4 @@ Under the **[!UICONTROL Search Result Settings]** tab, it is possible to specify
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Search Essentials](search-implementation.md) page for developers.
+詳しくは、[Search Essentials](search-implementation.md)ページの開発者向けページを参照してください。
