@@ -50,7 +50,7 @@ AEM インスタンスが標準インストールされている場合、コン�
 
    ![](do-not-localize/chlimage_1.png)
 
-1. Click **Edit** on the Paragraph system (**Design of par**).
+1. 段落システムの「**編集**」をクリックします（「**パー**&#x200B;のデザイン」）。
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
@@ -64,7 +64,7 @@ AEM インスタンスが標準インストールされている場合、コン�
 
    ![](do-not-localize/sidekick-collapsed.png)
 
-## コンポーネントのデザインの設定 {#configuring-the-design-of-a-component}
+## コンポーネントのデザインの設定  {#configuring-the-design-of-a-component}
 
 デザインモードでは、個々のコンポーネントの属性も設定できます。コンポーネントにはそれぞれ独自のパラメーターがあります。次に、**画像**&#x200B;コンポーネントの例を示します。
 
@@ -74,7 +74,7 @@ AEM インスタンスが標準インストールされている場合、コン�
 
 1. コンポーネントのデザインを設定できます。
 
-   For example, if you click **Edit** on the Image component (**Design of image**) you can configure the component specific parameters:
+   例えば、画像コンポーネント（**画像のデザイン**）の&#x200B;**編集**&#x200B;をクリックすると、コンポーネント固有のパラメーターを設定できます。
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
