@@ -46,7 +46,7 @@ e コマース機能をインストールするには、以下が必要です。
 （デモカタログ Geometrixx Outdoors を使用して）Demandware コマース統合設定で AEM をインストールするには、次の基本的な手順に従います。
 
 1. [AEM をインストール](/help/sites-deploying/deploy.md)します。
-1. Install the content package using the [package manager](/help/sites-administering/package-manager.md):
+1. [package manager](/help/sites-administering/package-manager.md)を使用してコンテンツパッケージをインストールします。
 1. AEM で必要な補助ページを[作成](/help/sites-authoring/page-authoring.md)します。
 
 >[!NOTE]
@@ -55,7 +55,7 @@ e コマース機能をインストールするには、以下が必要です。
 
 AEM と Demandware Sandbox の間のサーバー接続を設定する必要があります。ほとんどの設定は、デフォルトパス、ライブラリなどを使用して、提供されたSiteGenisデモコンテンツパッケージと連携するように事前に設定されています。 コネクタを他のサイトやライブラリで使用する場合は、この設定を更新する必要があります。
 
-1. https://localhost:4502/system/console/configMgrに移動し [ます](https://localhost:4502/system/console/configMgr)。
+1. [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)に移動します。
 1. 「Demandware Client」をクリックします。****
 1. 必要に応じて、インスタンスのエンドポイントの IP またはホスト名を入力します。****
 
@@ -71,26 +71,26 @@ AEM と Demandware Sandbox の間のサーバー接続を設定する必要が�
 
 #### レプリケーション {#replication}
 
-The replication should be enabled after the package installation, you can verify that here: [https://localhost:4502/etc/replication/agents.author/demandware.html](https://localhost:4502/etc/replication/agents.author/demandware.html)
+パッケージのインストール後にレプリケーションを有効にする必要がある場合は、次の点を確認してください。[https://localhost:4502/etc/replication/agents.author/demandware.html](https://localhost:4502/etc/replication/agents.author/demandware.html)
 
 >[!NOTE]
 >
 >レプリケーションエージェントはデフォルトで情報ログレベルに設定されています。詳しい情報が必要な場合は、ログレベルをデバッグに切り替えることができます。
 
-#### OAuth {#oauth}
+#### OAuth  {#oauth}
 
 OAuth クライアントは Demandware Sandbox インスタンスを使用するように設定されています。テストが目的の場合は、変更する必要はありません。
 
 ステージングおよび実稼動システムの場合、OAuth クライアントに適切なクライアント ID とパスワードを設定する必要があります。
 
-1. https://localhost:4502/system/console/configMgrに移動し [ます](https://localhost:4502/system/console/configMgr)。
-1. Click **Demandware Access Token provider**.
+1. [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)に移動します。
+1. **Demandwareアクセストークンプロバイダー**&#x200B;をクリックします。
 
    ![chlimage_1-7](assets/chlimage_1-7.png)
 
 1. 必要に応じて値を修正し、「Save」をクリックします。****
 
-### Salesforce Commerce Cloud サンドボックス {#salesforce-commerce-cloud-sandbox}
+### Salesforce Commerce Cloud サンドボックス  {#salesforce-commerce-cloud-sandbox}
 
 Demandware Sandbox は、新しい Velocity テンプレートエンジンを実行するように設定する必要があります。
 
@@ -98,15 +98,15 @@ Demandware Sandbox は、新しい Velocity テンプレートエンジンを実
 >
 >次のウィザードは AEM Demandware コネクタに含まれるものではありません。これは、デモコンテンツパッケージの一部としてそのまま提供されており、SiteGenesis デモページをすばやく設定するのに役立ちます。
 
-1. Navigate to [https://localhost:4502/etc/demandware/init.html](https://localhost:4502/etc/demandware/init.html).
+1. [https://localhost:4502/etc/demandware/init.html](https://localhost:4502/etc/demandware/init.html)に移動します。
 1. 「**編集**」をクリックします。
 1. 値を確認し、「OK」をクリックします。****
 1. 「初期化」をクリックします。****
-1. Go to the WebDAV folder and check for published template files, for example under `adobe01-tech-prtnr-na01-dw.demandware.net/on/demandware.servlet/webdav/Sites/Dynamic/SiteGenesis`.
+1. WebDAVフォルダーに移動し、`adobe01-tech-prtnr-na01-dw.demandware.net/on/demandware.servlet/webdav/Sites/Dynamic/SiteGenesis`の下など、公開済みのテンプレートファイルがないかどうかを確認します。
 
    >[!NOTE]
    >
-   >The extension will be `.vs`.
+   >拡張子は`.vs`になります。
 
-1. Check also for exported JS and CSS files, for example under `adobe01-tech-prtnr-na01-dw.demandware.net/on/demandware.servlet/webdav/Sites/Libraries/SiteGenesisSharedLibrary`.
+1. 書き出したJSファイルとCSSファイル（例えば`adobe01-tech-prtnr-na01-dw.demandware.net/on/demandware.servlet/webdav/Sites/Libraries/SiteGenesisSharedLibrary`下）も確認します。
 
