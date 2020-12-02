@@ -36,14 +36,14 @@ ht-degree: 99%
 
 エンタープライズドメインを作成したら、User Management でディレクトリを使用する前に、手動でディレクトリを同期するか、同期を行うトリガーを作成する必要があります。その後、必要に応じてディレクトリの同期スケジュールを設定したり、手動で同期を実行したりすることができます（[ディレクトリの同期](/help/forms/using/admin-help/synchronizing-directories.md#synchronizing-directories)を参照）。
 
-## ローカルドメインの追加 {#add-a-local-domain}
+## ローカルドメインの追加  {#add-a-local-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「新規ローカルドメイン」をクリックします。
 1. 「ID」ボックスにドメインの固有な識別子を入力し、「名前」ボックスにドメインの識別名を入力します（[ドメイン名および ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids)を参照）。
 1. アカウントロックを有効にするかどうかを指定して、「OK」をクリックします（[アカウントロックの設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)を参照）。デフォルトでは、「アカウントロックを有効にする」が選択されています。
 
-## ハイブリッドドメインの追加 {#add-a-hybrid-domain}
+## ハイブリッドドメインの追加  {#add-a-hybrid-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「新しいハイブリッドドメイン」をクリックします。
@@ -52,7 +52,7 @@ ht-degree: 99%
 1. 必要な追加情報をページに入力します（[認証の設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings)を参照）。
 1. 「OK」をクリックし、「OK」を再度クリックします。
 
-## ドメイン名および ID に関する重要な考慮事項 {#important-considerations-for-domain-names-and-ids}
+## ドメイン名および ID に関する重要な考慮事項  {#important-considerations-for-domain-names-and-ids}
 
 ドメイン名および ID の選択時には、次の点を考慮してください。
 
@@ -61,7 +61,7 @@ ht-degree: 99%
 * DB2 以外のデータベースプロバイダーを使用している場合、ドメイン ID には、最大 50 バイトまで含めることができます。1 バイトの ASCII 文字を使用する場合、上限は 50 文字です。ドメイン ID にマルチバイト文字が含まれている場合、この上限は低くなります。例えば、ID に 3 バイト文字が含まれるドメインを作成した場合、上限は 16 文字です。また、4 バイト文字を含むドメインは作成できません。この上限を超えるドメイン ID を作成すると、AEM Forms が不安定な状態になります。この不安定な状態から回復するには、（このページ）[拡張文字またはマルチバイト文字を含むドメインの削除](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)を参照してください。
 * AEM Forms 内で作成できるエンタープライズドメインとローカルドメインの数は、各ドメイン ID の長さによって異なります。エンタープライズドメインまたはハイブリッドドメインを追加すると、User Management によって AEM Forms 設定ファイル（config.xml）の AuthProviders ノードの configInstance 文字列が更新されます。configInstance 文字列には、認証プロバイダーに関連付けられているすべてのドメインの絶対パスをコロン区切りで記載したリストが含まれます。この文字列のサイズの上限は 8,192 文字です。この上限に達すると、追加のドメインを作成できません。
 
-### DB2 を使用する場合の考慮事項 {#considerations-when-using-db2}
+### DB2 を使用する場合の考慮事項  {#considerations-when-using-db2}
 
 AEM Forms データベースに DB2 を使用する場合、ドメイン ID の許容される最大長は使用する文字の種類によって異なります。
 
@@ -69,7 +69,7 @@ AEM Forms データベースに DB2 を使用する場合、ドメイン ID の�
 * 2 バイト文字で 50 文字（例えば、中国語、日本語または韓国語で使用されている文字）
 * 4 バイト文字で 25 文字（例えば、繁体字中国語で使用されている文字）
 
-### MySQL を使用する場合の考慮事項 {#considerations-when-using-mysql}
+### MySQL を使用する場合の考慮事項  {#considerations-when-using-mysql}
 
 AEM forms データベースとして MySQL を使用している場合、以下の制限があります。
 
@@ -83,7 +83,7 @@ AEM forms データベースとして MySQL を使用している場合、以下
 1. 設定ファイルを開き、Domains ノード以下から、拡張文字またはマルチバイト文字を使用して作成したドメイン名と name 属性が一致するノードを探します。そのドメインに関連するノード全体を削除します。
 1. データベースの edcprincipaldomainentity テーブル内でドメインを検索します。
 
-   * Select `*` from edcprincipaldomainentity.
+   * edcprincipaldomainentityから`*`を選択します。
    * 拡張文字またはマルチバイト文字を含むドメイン名を検索し、ステータスを「旧バージョン」に設定します。
 
 1. 「[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)」の説明に従って、更新した設定ファイルを読み込みます。
