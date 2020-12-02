@@ -20,7 +20,7 @@ ht-degree: 78%
 ---
 
 
-# AEM 6.5 へのアップグレード {#upgrading-to-aem}
+# AEM 6.5 へのアップグレード  {#upgrading-to-aem}
 
 この節では、AEM 6.5 への AEM インストール環境のアップグレードについて説明します。
 
@@ -47,7 +47,7 @@ ht-degree: 78%
 >
 >アップグレードの信頼性を向上させるための取り組みの一環として、AEM は包括的なリポジトリの再構築を実施しました。新しい構造体に合わせる方法の詳細は、[AEM におけるリポジトリ再構成](/help/sites-deploying/repository-restructuring.md)を参照してください。
 
-## What Has Changed? {#what-has-changed}
+## 変更点{#what-has-changed}
 
 以下に、AEM の最近のいくつかのリリースでの注目すべき主な変更点を示します。
 
@@ -86,11 +86,11 @@ AEM のアップグレードには複数の段階があり、場合によって�
 
 ## アップグレードフロー {#upgrade-overview-1}
 
-以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。The upgrade should start with the Pattern Detector(see [Assessing the Upgrade Complexity with Pattern Detector](/help/sites-deploying/pattern-detector.md)) which should let you decide the path you want to take for compatibility with AEM 6.4 based on the patterns in the generated report.
+以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、パターンディテクターと開始する必要があります（[パターンディテクターによるアップグレードの複雑さの評価](/help/sites-deploying/pattern-detector.md)を参照）。これにより、生成されたレポート内のパターンに基づいて、AEM 6.4との互換性を確保するパスを決定できます。
 
-There was a big focus in 6.5 to keep all the new features backward compatible, but in cases where you still see some backward compatibility issues, the compatibility mode allows you to temporarily defer development to keep your custom code compliant with 6.5. This approach helps you avoid development effort immediately after the upgrade(see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
+6.5では、すべての新機能の下位互換性を維持するために大きな焦点が当てられましたが、下位互換性の問題が引き続き発生する場合は、カスタムコードを6.5に準拠させる開発を一時的に延期できます。[](/help/sites-deploying/backward-compatibility.md)
 
-Finally, in your 6.5 development cycle, features introduced under Sustainable Upgrades(see [Sustainable Upgrades](/help/sites-deploying/sustainable-upgrades.md)) help you follow best practices to make future upgrades even more efficient and seamless.
+最後に、6.5開発サイクルで、「持続可能なアップグレード」（「[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)」を参照）に導入された機能を使用すると、今後のアップグレードをより効率的かつシームレスに行うためのベストプラクティスに従うことができます。
 
 ![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
 
