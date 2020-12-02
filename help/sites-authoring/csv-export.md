@@ -56,7 +56,7 @@ ht-degree: 86%
 
 ![etc-01](assets/etc-01.png)
 
-The create **CSV Report** option is available when browsing the **Sites** console (in List view): it is an option of the **Create** drop down menu:
+**CSVレポートを作成**&#x200B;オプションは、(リスト表示で)**サイト**&#x200B;コンソールを参照する際に使用できます。これは、**作成**&#x200B;ドロップダウンメニューのオプションです。
 
 ![etc-02](assets/etc-02.png)
 
