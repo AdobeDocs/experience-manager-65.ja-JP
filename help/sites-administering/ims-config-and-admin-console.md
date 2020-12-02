@@ -1,8 +1,8 @@
 ---
-title: Adobe IMS Authentication and [!DNL Admin Console] Support for AEM Managed Services
-seo-title: Adobe IMS Authentication and [!DNL Admin Console] Support for AEM Managed Services
-description: Learn how to use the [!DNL Admin Console] in AEM.
-seo-description: Learn how to use the [!DNL Admin Console] in AEM.
+title: AdobeIMS認証および [!DNL Admin Console] AEMManaged Servicesのサポート
+seo-title: AdobeIMS認証および [!DNL Admin Console] AEMManaged Servicesのサポート
+description: AEMで [!DNL Admin Console] を使用する方法を学びます。
+seo-description: AEMで [!DNL Admin Console] を使用する方法を学びます。
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,7 +18,7 @@ ht-degree: 60%
 ---
 
 
-# Adobe IMS Authentication and [!DNL Admin Console] Support for AEM Managed Services {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
+# AdobeIMS認証と[!DNL Admin Console] AEMManaged Servicesのサポート{#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
 >[!NOTE]
 >
@@ -26,16 +26,16 @@ ht-degree: 60%
 
 ## 概要 {#introduction}
 
-AEM 6.4.3.0 introduces [!DNL Admin Console] support for AEM instances and Adobe IMS(Identity Management System) based authentication for **AEM Managed Services** customers.
+AEM 6.4.3.0では、AEMインスタンスとAdobeIMS(Identity Managementシステム)ベースの認証を&#x200B;**AEMManaged Services**&#x200B;のお客様に対して[!DNL Admin Console]サポートします。
 
-AEM onboarding to the [!DNL Admin Console] will allow AEM Managed Services customers to manage all Experience Cloud users in one console. ユーザーとグループをAEMインスタンスに関連付けられた製品プロファイルに割り当て、特定のインスタンスにログインできます。
+AEM onboarding to [!DNL Admin Console]を使用すると、AEMManaged Servicesのお客様は1つのコンソールですべてのExperience Cloudユーザーを管理できます。 ユーザーとグループをAEMインスタンスに関連付けられた製品プロファイルに割り当て、特定のインスタンスにログインできます。
 
 ## 主なハイライト {#key-highlights}
 
 * AEM の IMS 認証サポートは、AEM 作成者、管理者、または開発者のみを対象としており、サイト訪問者のような顧客サイトの外部エンドユーザーを対象としていません。
-* The [!DNL Admin Console] will represent AEM Managed Services customers as IMS Organizations and their Instances as Product Contexts. 顧客システムおよび製品管理者は、インスタンスへのアクセスを管理できるようになります。
-* AEM Managed Services will sync customer topologies with the [!DNL Admin Console]. There will be one instance of AEM Managed Services Product Context per Instance in the [!DNL Admin Console].
-* Product Profiles in [!DNL Admin Console] will determine which instances a user can access
+* [!DNL Admin Console]は、AEMManaged Servicesのお客様をIMS組織として、そのインスタンスを製品コンテキストとして表します。 顧客システムおよび製品管理者は、インスタンスへのアクセスを管理できるようになります。
+* AEMManaged Servicesは顧客トポロジを[!DNL Admin Console]と同期します。 [!DNL Admin Console]には、インスタンスごとにAEMManaged Services製品コンテキストのインスタンスが1つあります。
+* [!DNL Admin Console]内の製品プロファイルは、ユーザーがアクセスできるインスタンスを決定します
 * お客様独自の SAML 2 準拠の ID プロバイダーを使用したフェデレーテッド認証がサポートされています。
 * 個人用の Adobe ID ではなく、エンタープライズ ID またはフェデレーデッド ID（お客様のシングルサインオン用）のみがサポートされます。
 * [!DNL User Management] (Adobe内 [!DNL Admin Console])は、引き続き顧客の管理者が所有します。
@@ -50,13 +50,13 @@ IMS 認証は、AEM と Adobe IMS エンドポイントの間で OAuth プロト
 
 ## 設定方法 {#how-to-set-up}
 
-### Onboarding Organizations to [!DNL Admin Console] {#onboarding-organizations-to-admin-console}
+### 組織を[!DNL Admin Console] {#onboarding-organizations-to-admin-console}にオンボーディング
 
-The customer onboarding to [!DNL Admin Console] is a pre-requisite to using Adobe IMS for AEM authentication.
+お客様が[!DNL Admin Console]にオンボーディングするのは、AEM認証にAdobeIMSを使用する前提条件です。
 
-最初のステップとして、Adobe IMS に組織をプロビジョニングする必要があります。Adobe Enterprise customers are represented as IMS Organizations in the [Adobe [!DNL Admin Console]](https://helpx.adobe.com/jp/enterprise/using/admin-console.html).
+最初のステップとして、Adobe IMS に組織をプロビジョニングする必要があります。[Adobe [!DNL Admin Console]](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)では、Adobe企業のお客様はIMS組織として表されます。
 
-AEM Managed Services customers should already have an organization provisioned, and as part of the IMS provisioning, the customer instances will be made available in the [!DNL Admin Console] for managing user entitlements and access.
+AEMManaged Servicesのお客様は、既に組織をプロビジョニングしておく必要があります。また、IMSプロビジョニングの一環として、お客様のインスタンスを[!DNL Admin Console]で利用して、ユーザーの権利付与とアクセスを管理できます。
 
 ユーザー認証のための IMS への移行は、AMS とお客様の共同作業となり、それぞれがワークフローを完了させます。
 
@@ -64,35 +64,35 @@ AEM Managed Services customers should already have an organization provisioned, 
 
 ![image2018-9-23_23-33-25](assets/image2018-9-23_23-33-25.png)
 
-1. The designated System Admin receives an invite to log in to the [!DNL Admin Console]
+1. 指定されたシステム管理者が[!DNL Admin Console]にログインするための招待を受け取る
 1. システム管理者は、ドメインの所有権を確認するためにドメインを要求する（この例では acme.com）
 1. システム管理者はユーザーディレクトリを設定する
-1. The System Admin configures the Identity Provider (IDP) in the [!DNL Admin Console] for SSO setup.
+1. システム管理者は、SSO設定用に[!DNL Admin Console]にIDプロバイダー(IDP)を設定します。
 1. AEM 管理者は、通常どおりローカルグループ、権限、および特権を管理する。「ユーザーとグループの同期」を参照してください。
 
 >[!NOTE]
 >
 >IDP 設定を含む Adobe Identity Management Basics の詳細については、[このページ](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)の記事を参照してください。
 >
->For more info about the Enterprise Administration and [!DNL Admin Console] see the article [this page](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html).
+>エンタープライズ管理と[!DNL Admin Console]について詳しくは、[このページ](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html)を参照してください。
 
-### ユーザーを [!DNL Admin Console] {#onboarding-users-to-the-admin-console}
+### ユーザーを[!DNL Admin Console] {#onboarding-users-to-the-admin-console}にオンボーディング
 
 お客様の規模と好みに応じて、ユーザーをオンボードする方法は 3 つあります。
 
-1. 手動で [!DNL Admin Console]
+1. [!DNL Admin Console]内にユーザーとグループを手動で作成
 1. ユーザーと一緒に CSV ファイルをアップロードする
 1. お客様のエンタープライズ Active Directory からユーザーとグループを同期する
 
-#### Manual Addition through [!DNL Admin Console] UI {#manual-addition-through-admin-console-ui}
+#### [!DNL Admin Console] UI {#manual-addition-through-admin-console-ui}を介した手動の追加
 
-Users and Groups can be manually created in the [!DNL Admin Console] UI. この方法は、管理するユーザー数が多くない場合に使用できます。（例：AEM ユーザーが 50 人未満の場合）
+ユーザーとグループは、[!DNL Admin Console] UIで手動で作成できます。 この方法は、管理するユーザー数が多くない場合に使用できます。（例：AEM ユーザーが 50 人未満の場合）
 
 Analytics、Target、Creative Cloud などの他の Adobe 製品を管理するためにすでにこの方法を使用している場合は、ユーザーを手動で作成することもできます。
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
-#### UIでのファイルのアップロード [!DNL Admin Console] {#file-upload-in-the-admin-console-ui}
+#### [!DNL Admin Console] UI {#file-upload-in-the-admin-console-ui}でのファイルのアップロード
 
 ユーザー作成を簡単に処理するには、CSV ファイルをアップロードしてまとめて追加します。
 
@@ -102,9 +102,9 @@ Analytics、Target、Creative Cloud などの他の Adobe 製品を管理する�
 
 ユーザー同期ツール（UST）は、Active Directory または他のテスト済み OpenLDAP ディレクトリサービスを利用して、Adobe ユーザーを作成または管理することができます。対象ユーザーは、このツールをインストールおよび設定できる IT ID 管理者（エンタープライズディレクトリとシステムの管理者）です。オープンソースツールはカスタマイズ可能であるため、顧客は特定の要件に合うように開発者に修正させることができます。
 
-When User Sync runs, it fetches a list of users from the organization’s Active Directory (or any other compatible data source) and compares it with the list of users within the [!DNL Admin Console]. It then calls the Adobe [!DNL User Management] API so that the [!DNL Admin Console] is synchronized with the organization’s directory. The change flow is entirely one-way; any edits made in the [!DNL Admin Console] do not get pushed out to the directory.
+ユーザー同期を実行すると、組織のActive Directory（または他の互換性のあるデータソース）からユーザーのリストが取得され、[!DNL Admin Console]内のユーザーのリストと比較されます。 次に、Adobe[!DNL User Management] APIを呼び出して、[!DNL Admin Console]が組織のディレクトリと同期されるようにします。 変化の流れは完全に一方向です。[!DNL Admin Console]で行った編集は、ディレクトリにプッシュされません。
 
-The tool allows the system admin to map user groups in the customer’s directory with product configuration and user groups in the [!DNL Admin Console], the new UST version also allows dynamic creation of user groups in the [!DNL Admin Console].
+このツールを使用すると、システム管理者は顧客のディレクトリ内のユーザーグループを製品構成と[!DNL Admin Console]内のユーザーグループにマッピングできます。新しいUSTバージョンでは、[!DNL Admin Console]内にユーザーグループを動的に作成することもできます。
 
 ユーザー同期を設定するには、[[!DNL User Management]  API](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html) を使用する場合と同様に、組織が一連の資格情報を作成する必要があります。
 
@@ -114,9 +114,9 @@ The tool allows the system admin to map user groups in the customer’s director
 
 [https://github.com/adobe-apiplatform/user-sync.py/releases/latest](https://github.com/adobe-apiplatform/user-sync.py/releases/latest)
 
-Note that a pre-release version 2.4RC1 is available with dynamic group creation support and can be found here: [https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
+プレリリース版のバージョン2.4RC1は、動的グループ作成のサポートで利用でき、次の場所にあります。[https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
 
-The major features for this release are the ability to dynamically map new LDAP groups for user membership in the [!DNL Admin Console], as well as dynamic user group creation.
+このリリースの主な機能は、[!DNL Admin Console]のユーザーメンバーシップに対して新しいLDAPグループを動的にマッピングする機能と、動的なユーザーグループの作成です。
 
 新しいグループ機能の詳細については、次を参照してください。
 
@@ -132,7 +132,7 @@ The major features for this release are the ability to dynamically map new LDAP 
 >Adobe I/O コンソールのドキュメントは[ここ](https://www.adobe.io/apis/cloudplatform/console.html)を参照してください。
 >
 >
->The [!DNL User Management] API that is used by the User Sync Tool is covered at this [location](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
+>ユーザー同期ツールで使用される[!DNL User Management] APIは、この[場所](https://www.adobe.io/apis/cloudplatform/umapi-new.html)で扱います。
 
 >[!NOTE]
 >
@@ -140,9 +140,9 @@ The major features for this release are the ability to dynamically map new LDAP 
 
 ## 使用方法 {#how-to-use}
 
-### Managing Products and User Access in [!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}
+### [!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}での製品とユーザーアクセスの管理
 
-When the customer Product Administrator logs in to [!DNL Admin Console], they will see multiple instances of the AEM Managed Services Product Context as shown below:
+お客様の製品管理者が[!DNL Admin Console]にログインすると、AEMManaged Services製品コンテキストの複数のインスタンスが次のように表示されます。
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
@@ -180,7 +180,7 @@ AEM では引き続き、管理ユーザーのローカルログインをサポ�
 
 ![screen_shot_2018-09-17at115629pm](assets/screen_shot_2018-09-17at115629pm.png)
 
-If a federated IDP is configured during initial [!DNL Admin Console] setup, then the user will be redirected to the customer IDP for SSO.
+[!DNL Admin Console]の初回セットアップ中にFederated IDPが設定された場合、ユーザーはSSO用のお客様のIDPにリダイレクトされます。
 
 以下の例では、IDP は Okta です。
 
@@ -198,13 +198,13 @@ AEMリポジトリ内の既存のユーザー（ローカルソース、LDAPま�
 
 このユーティリティは、IMS プロビジョニングの一部として AMS チームによって実行されます。
 
-### AEM での権限と ACL の管理 {#managing-permissions-and-acls-in-aem}
+### AEM での権限と ACL の管理  {#managing-permissions-and-acls-in-aem}
 
 アクセス制御と権限は、AEMで引き続き管理されます。これは、IMSからのユーザーグループ(下の例ではAEM-GRP-008)と、権限とアクセス制御が定義されたローカルグループを分離することで実現できます。 IMS から同期されたユーザーグループは、ローカルグループに割り当てられ、権限を継承することができます。
 
 以下の例では、同期グループをローカル *Dam_Users* グループに追加しています。
 
-Here, a user has also been assigned to a few groups in the [!DNL Admin Console]. ( Please note that the users and groups can be synced from LDAP using the user sync tool or created locally, please see the section **Onboarding Users to the[!DNL Admin Console]** above).
+ここでは、[!DNL Admin Console]内のいくつかのグループにも1人のユーザーが割り当てられています。 （ユーザーとグループは、ユーザー同期ツールを使用してLDAPから同期できるか、ローカルに作成できます。上記の&#x200B;**Onboarding Users to the[!DNL Admin Console]**&#x200B;を参照してください）。
 
 &amp;ast；ユーザーグループは、ユーザーがインスタンスにログインした場合にのみ同期されます。大量のユーザーとグループを持つお客様の場合は、グループ同期ユーティリティをAMSで実行して、上述のアクセス制御および権限管理用のグループを事前取得できます。
 
