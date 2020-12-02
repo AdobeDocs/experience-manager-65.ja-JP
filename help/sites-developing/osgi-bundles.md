@@ -22,13 +22,13 @@ ht-degree: 64%
 
 ## セマンティックバージョニングを使用する {#use-semantic-versioning}
 
-Agreed upon best practices for semantic version numbering can be found at [https://semver.org/](https://semver.org/).
+セマンティックバージョン番号付けに関して合意されたベストプラクティスは、[https://semver.org/](https://semver.org/)にあります。
 
 ## 厳密に必要な数を超えるクラスおよび jar を OSGi バンドルに埋め込まない {#do-not-embed-more-classes-and-jars-than-strictly-needed-in-osgi-bundles}
 
 共通ライブラリは個別のバンドルに取り出す必要があります。これで、共通ライブラリをバンドル全体で再利用できるようになります。OSGi バンドルに *JAR* をラップするときは、オンラインソースを調べて、誰かが既にこのラップをおこなっていないかどうかを確認してください。既存のバンドルラッパーを探す一般的な場所としては、Apache Felix、Apache Sling、Apache Geronimo、Apache ServiceMix、Eclipse Bundle Recipes および SpringSource Enterprise Bundle Repository があります。
 
-## 最低限必要なバンドルバージョンに依存する {#depend-on-the-lowest-needed-bundle-versions}
+## 最低限必要なバンドルバージョンに依存する  {#depend-on-the-lowest-needed-bundle-versions}
 
 POM ファイルのコンパイル時依存関係の場合、常に、必要な API を公開するために最低限必要なバージョンに依存するようにします。これにより、後方互換性が高くなり、古いリリースのバックポートの修正が容易になります。
 
@@ -38,10 +38,10 @@ POM ファイルのコンパイル時依存関係の場合、常に、必要な 
 
 実装は、必ず個別の *impl* パッケージに配置する必要があります。デフォルトでは、*maven-bundle-plugin* は、名前に *impl* が含まれていないプロジェクトにあるものをすべてエクスポートします。
 
-## エクスポートしたパッケージごとに必ずセマンティックバージョニングを明示的に定義する {#always-explicitly-define-a-semantic-version-for-each-package-exported}
+## エクスポートしたパッケージごとに必ずセマンティックバージョニングを明示的に定義する  {#always-explicitly-define-a-semantic-version-for-each-package-exported}
 
 このようにすることで、API の利用者も新しいバージョンに取り組むことができます。その場合は、必ずセマンティックのバージョン管理のベストプラクティスに従ってください。 これにより、APIの利用者は、新しいバージョンで予想される変更のタイプを知ることができます。
 
 ## 公開場所に関するメタタイプ情報を含める {#include-metatype-information-where-exposed}
 
-意味のあるメタタイプ情報を指定することで、Felix コンソールでのサービスおよびコンポーネントが理解しやすくなります。A list of SCR annotations and attributes can be found at: [https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html).
+意味のあるメタタイプ情報を指定することで、Felix コンソールでのサービスおよびコンポーネントが理解しやすくなります。SCR注釈と属性のリストは、次の場所で確認できます。[https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html).
