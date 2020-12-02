@@ -32,7 +32,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
 現在、AEM6 には Tar ストレージと MongoDB ストレージという 2 つのノードストレージ実装があります。
 
-### Tar ストレージ {#tar-storage}
+### Tar ストレージ  {#tar-storage}
 
 #### 新規にインストールした AEM インスタンスと Tar ストレージの実行 {#running-a-freshly-installed-aem-instance-with-tar-storage}
 
@@ -47,7 +47,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
    `java -jar cq-quickstart-6.jar -unpack`
 
-1. Create a folder named `crx-quickstart\install` in the installation directory.
+1. インストールディレクトリに`crx-quickstart\install`という名前のフォルダーを作成します。
 
 1. 新しく作成したフォルダー内に `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` というファイルを作成します。
 
@@ -70,10 +70,10 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
    `java -jar cq-quickstart-6.jar -unpack`
 
 1. MongoDB がインストールされていること、および `mongod` のインスタンスが実行されていることを確認します。詳しくは、[MongoDB のインストール](https://docs.mongodb.org/manual/installation/)を参照してください。
-1. Create a folder named `crx-quickstart\install` in the installation directory.
+1. インストールディレクトリに`crx-quickstart\install`という名前のフォルダーを作成します。
 1. ノードストアを設定します。使用する設定の名前を持つ設定ファイルを `crx-quickstart\install` ディレクトリに作成します。
 
-   The Document Node Store (which is the basis for AEM&#39;s MongoDB storage implementation) uses a file called `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
+   ドキュメントノードストア(AEM MongoDBストレージの実装の基盤)では、`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`という名前のファイルが使用されます
 
 1. ファイルを編集し、設定オプションを設定します。以下のオプションが利用できます。
 
@@ -91,14 +91,14 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
    java -jar cq-quickstart-6.jar -r crx3,crx3mongo
    ```
 
-   Where **`-r`** is the backend runmode. この例では、MongoDB サポートを指定して起動します。
+   **`-r`**&#x200B;はバックエンドの実行モードです。 この例では、MongoDB サポートを指定して起動します。
 
 #### Transparent Huge Pages の無効化 {#disabling-transparent-huge-pages}
 
 Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ管理アルゴリズムが使用されます。AEM はきめ細かい読み取りと書き込みを実行しますが、THP は大規模な操作に最適化されています。この理由から、Tar と Mongo の両方のストレージで THP を無効にすることをお勧めします。アルゴリズムを無効にするには、次の手順に従います。
 
-1. Open the `/etc/grub.conf` file in the text editor of your choice.
-1. **grub.conf** ファイルに対する次の行。
+1. `/etc/grub.conf`ファイルを選択したテキストエディタで開きます。
+1. &lt;追加a0/>grub.conf **ファイルへの次の行**
 
    ```
    transparent_hugepage=never
@@ -120,8 +120,8 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >
 >さらに、次の資料も参考にできます。
 >
->* For more information regarding Transparent Huge Pages on Red Hat Linux, see this [article](https://access.redhat.com/solutions/46111).
->* For Linux tuning tips, see this [article](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html).
+>* Red Hat Linux上のTransparent Huge Pagesに関する詳細は、[](https://access.redhat.com/solutions/46111)の記事を参照してください。
+>* Linuxの調整のヒントについては、[](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)を参照してください。
 
 >
 
