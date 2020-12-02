@@ -18,7 +18,7 @@ ht-degree: 79%
 ---
 
 
-# ユーザーとユーザーグループの設定 {#configure-your-users-and-user-groups}
+# ユーザーとユーザーグループの設定  {#configure-your-users-and-user-groups}
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ ht-degree: 79%
 
 ## AEM Mobile アプリケーションユーザーとグループ管理 {#aem-mobile-application-users-and-group-administration}
 
-### AEM Mobile Application Content Authors (app-author group) {#aem-mobile-application-content-authors-app-author-group}
+### AEM Mobileアプリコンテンツ作成者（app-authorグループ） {#aem-mobile-application-content-authors-app-author-group}
 
 app-authors グループのメンバーが、ページ、テキスト、画像、ビデオなど AEM Mobile アプリケーションコンテンツのオーサリングを担当します。
 
@@ -36,7 +36,7 @@ app-authors グループのメンバーが、ページ、テキスト、画像�
 
 1. 「app-authors」という新しいユーザーグループを作成します。
 
-   Navigate to the User Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   ユーザーAdmin Consoleに移動します。[http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    ユーザーグループコンソールから + ボタンを選択して、グループを作成します。
 
@@ -59,9 +59,9 @@ app-authors グループのメンバーが、ページ、テキスト、画像�
    * /etc/designs
    * /etc/cloudservices/dps2015
 
-### AEM Mobile Application Administrators Group (app-admins group) {#aem-mobile-application-administrators-group-app-admins-group}
+### AEM Mobileアプリ管理者グループ（app-adminsグループ） {#aem-mobile-application-administrators-group-app-admins-group}
 
-Members of the app-admins group can author application content with the same permissions included with app-authors **AND** in addition are also responsible for:
+app-adminsグループのメンバーは、アプリの作成者&#x200B;**AND**&#x200B;に含まれるのと同じ権限を持つアプリのコンテンツを作成することもできます。また、次のことも行います。
 
 * アプリケーション ContentSync OTA 更新のステージング、公開および消去
 
@@ -71,7 +71,7 @@ Members of the app-admins group can author application content with the same per
 >
 >app-admins には表示されるいくつかのオプションが、app-authors には表示されません。
 
-### グループの設定 - app-admins {#group-configuration-app-admins}
+### グループの設定 - app-admins  {#group-configuration-app-admins}
 
 1. add-admins という新しいグループを作成します。
 1. 新しい app-admins グループに次のグループを追加します。
