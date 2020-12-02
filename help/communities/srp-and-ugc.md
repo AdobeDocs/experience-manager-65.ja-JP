@@ -26,7 +26,7 @@ ht-degree: 65%
 
 ドキュメントのこの節では、SRP および UGC に関する基本情報について説明します。
 
-## StorageResourceProvider API {#storageresourceprovider-api}
+## StorageResourceProvider API  {#storageresourceprovider-api}
 
 SocialResourceProvider API（SRP API）は、様々な Sling リソースプロバイダー API の拡張です。ページネーションとアトミックインクリメントのサポートが含まれます（割り込みとスコアリングに役立ちます）。
 
@@ -38,7 +38,7 @@ SRP API は、抽象クラスではなくインターフェイスです。新し
 
 SRP API を使用するための手段は、提供されるユーティリティ（SocialResourceUtilities パッケージで見つかるものなど）です。
 
-AEM 6.0 以前からアップグレードする場合、すべての SRP の UGC の移行が必要になります。そのために、オープンソースのツールを使用できます。See [Upgrading to AEM Communities 6.3](upgrade.md).
+AEM 6.0 以前からアップグレードする場合、すべての SRP の UGC の移行が必要になります。そのために、オープンソースのツールを使用できます。[AEM Communities6.3へのアップグレード](upgrade.md)を参照してください。
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ AEM 6.0 以前からアップグレードする場合、すべての SRP の UGC
 >
 >代わりのユーティリティについては、[SocialUtils リファクタリング](socialutils.md)を参照してください。
 
-## UGC にアクセスするためのユーティリティメソッド {#utility-method-to-access-ugc}
+## UGC にアクセスするためのユーティリティメソッド  {#utility-method-to-access-ugc}
 
 UGC にアクセスするには、SRP から UGC へのアクセスに適したパスを返し、SocialUtils にあった廃止されたメソッドに替わる、SocialResourceUtilities パッケージのメソッドを使用します。
 
@@ -98,17 +98,17 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->The path returned by resourceToACLPath() is *not* suitable for [accessing the UGC](#utility-method-to-access-acls) itself.
+>resourceToACLPath()から返されるパスは&#x200B;**&#x200B;ではありません。[UGC](#utility-method-to-access-acls)自体にアクセスするのに適しています。
 
 ## UGC 関連の格納場所 {#ugc-related-storage-locations}
 
-格納場所に関する以下の説明は、JSRP または MSRP を使用した開発時に役立つ場合があります。There is currently no UI to access UGC stored in ASRP, as there is for JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) and MSRP (MongoDB tools).
+格納場所に関する以下の説明は、JSRP または MSRP を使用した開発時に役立つ場合があります。JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))やMSRP （MongoDBツール）の場合のため、現在、ASRPに格納されたUGCにアクセスするUIはありません。
 
 **コンポーネントの場所**
 
 メンバーがパブリッシュ環境で UGC を入力する場合、AEM サイトの一部としてのコンポーネントとやり取りしています。
 
-An example of such a component is the [comments component](http://localhost:4502/content/community-components/en/comments.html) that exists in the [Community Components Guide](components-guide.md) site. ローカルリポジトリ内のコメントノードへのパスは次のとおりです。
+このようなコンポーネントの例としては、[コミュニティコンポーネントガイド](components-guide.md)サイトに存在する[コメントコンポーネント](http://localhost:4502/content/community-components/en/comments.html)が挙げられます。 ローカルリポジトリ内のコメントノードへのパスは次のとおりです。
 
 * コンポーネントパス = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
@@ -130,6 +130,6 @@ UGC はこれらの場所のどちらにも作成されず、SRP API を呼び�
 
 ## 関連情報 {#related-information}
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
-* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
+* [SocialUtilsリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
