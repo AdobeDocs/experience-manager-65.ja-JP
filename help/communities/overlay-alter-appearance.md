@@ -19,7 +19,7 @@ ht-degree: 43%
 ---
 
 
-# 外観の変更 {#alter-the-appearance}
+# 外観の変更  {#alter-the-appearance}
 
 ## スクリプトの変更 {#modify-the-script}
 
@@ -27,16 +27,16 @@ comment.hbsスクリプトは、各コメントの全体的なHTMLを作成し�
 
 投稿された各コメントの横のアバターを表示しないようにするには：
 
-1. コピー `comment.hbs`元 `libs`: `apps`
+1. `comment.hbs`を`libs`から`apps`にコピー
 
    1.  `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
-   1. Select **[!UICONTROL Copy]**
+   1. **[!UICONTROL コピー]**&#x200B;を選択
    1.  `/apps/social/commons/components/hbs/comments/comment`
-   1. Select **[!UICONTROL Paste]**
+   1. **[!UICONTROL 貼り付け]**&#x200B;を選択
 
-1. Open the overlaid `comment.hbs`
+1. オーバーレイされた`comment.hbs`を開きます
 
-   * ノードを重複クリック `comment.hbs` する `/apps/social/commons/components/hbs/comments/comment folder`
+   * `/apps/social/commons/components/hbs/comments/comment folder`のノード`comment.hbs`を重複クリック
 
 1. 次の行を探し、削除するかコメントアウトします。
 
@@ -45,7 +45,7 @@ comment.hbsスクリプトは、各コメントの全体的なHTMLを作成し�
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-Either delete the lines, or surround them with `<!--` and `-->` to comment them out. また、アバターの位置を視覚的に示すインジケーターとして「xxx」という文字が追加されています。
+行を削除するか、`<!--`と`-->`で囲んでコメントアウトします。 また、アバターの位置を視覚的に示すインジケーターとして「xxx」という文字が追加されています。
 
 ```xml
    xxx
@@ -62,9 +62,9 @@ Either delete the lines, or surround them with `<!--` and `-->` to comment them 
 >
 >より強固なレプリケーション形式は、パッケージマネージャーでパッケージを作成し、それを[アクティベート](/help/sites-administering/package-manager.md#replicating-packages)することです。パッケージは、書き出しおよびアーカイブできます。
 
-From the global navigation, select **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** and click **[!UICONTROL Activate Tree]**.
+グローバルナビゲーションで、**[!UICONTROL ツール]**/**[!UICONTROL デプロイメント]**/**[!UICONTROL レプリケーション]**&#x200B;を選択し、**[!UICONTROL ツリーをアクティブ化]**&#x200B;をクリックします。
 
-For the Start Path enter `/apps/social/commons` and select **[!UICONTROL Activate]**.
+[開始パス]に`/apps/social/commons`と入力し、[**[!UICONTROL アクティブ化]**]を選択します。
 
 ![verify-content-template](assets/verify-content-template.png)
 
