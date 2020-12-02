@@ -18,7 +18,7 @@ ht-degree: 80%
 ---
 
 
-# ドロップダウンリストの動的な自動入力 {#dynamically-populating-drop-down-lists}
+# ドロップダウンリストの動的な自動入力  {#dynamically-populating-drop-down-lists}
 
 ## 前提条件 {#prerequisites}
 
@@ -27,7 +27,7 @@ ht-degree: 80%
 * [アダプティブフオームの作成](../../forms/using/creating-adaptive-form.md)
 * [アダプティブフォームのオーサリング](../../forms/using/introduction-forms-authoring.md)
 
-## ドロップダウンリストを動的に自動入力する手順 {#procedure-to-dynamically-populate-drop-down-lists}
+## ドロップダウンリストを動的に自動入力する手順  {#procedure-to-dynamically-populate-drop-down-lists}
 
 **国**&#x200B;ドロップダウンリストで選択した値に基づいて、**州**&#x200B;ドロップダウンリストに自動入力するシナリオを考えてみます。**国**&#x200B;ドロップダウンリストでオーストラリアを選択した場合、**州**&#x200B;ドロップダウンリストにはオーストラリアの州名が表示されます。次の手順では、このタスクを実行する手順を説明します。
 
@@ -147,7 +147,7 @@ ht-degree: 80%
    }
    ```
 
-1. アプリ内の特定のフォルダー階層の下にドロップダウンノードを作成します（例えば、/apps/myfolder/demoの下にノードを作成します）。 Ensure that the `sling:resourceType` parameter for the node is the same as that to which the servlet points (/apps/populatedropdown).
+1. アプリ内の特定のフォルダー階層の下にドロップダウンノードを作成します（例えば、/apps/myfolder/demoの下にノードを作成します）。 ノードの`sling:resourceType`パラメーターが、サーブレットがポイントするパラメーター(/apps/populatedropdown)と同じであることを確認します。
 
    ![ドロップダウンノードの作成](assets/dropdown-node.png)
 
@@ -156,7 +156,7 @@ ht-degree: 80%
 
    国リストに表示する国の名前を追加します。州リストに、それを国リスト内の国の名前に基づいて自動入力するスクリプトを追加します。
 
-   ![国名の追加](assets/country-dropdown.png)![州名](assets/state-dropdown.png) 「国」および「州」ドロップダウンリストを入力するスクリプトを追加して、都道府県名 ![「国」および「州」ドロップダウンメニューを収集します](assets/2dropdowns.png)
+   ![国](assets/country-dropdown.png) ![名の追加州名を入力するスクリプトの追加](assets/state-dropdown.png) ![国ドロップダウンリストと州ドロップダウンメニューの収集](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(
