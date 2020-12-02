@@ -30,11 +30,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}を使用したフォームデータの読み込み
 
-以下のJavaコードの例を使用することで、データをPDFフォームに読み込むことができます。 データは *Loan_data.xmlというXMLファイルにあり* 、PDFフォームはResultLoanForm.pdfというPDFファイルとして保存され *ます*。 (フォームデータの [読み込みを参照](/help/forms/developing/importing-exporting-data.md#importing-form-data))。
+以下のJavaコードの例を使用することで、データをPDFフォームに読み込むことができます。 データは&#x200B;*Loan_data.xml*&#x200B;というXMLファイルにあり、PDFフォームは&#x200B;*ResultLoanForm.pdf*&#x200B;というPDFファイルとして保存されます。 （「[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)」を参照）。
 
 ```java
  /*
@@ -134,9 +134,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したフォームデータの書き出し {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}を使用したフォームデータの書き出し
 
-以下のJavaコードの例は、PDFフォームからデータを書き出します。 フォームデータは、 *Loan_data.xmlというXMLファイルとして保存されます*。 (Exporting Form Data [](/help/forms/developing/importing-exporting-data.md#exporting-form-data))。
+以下のJavaコードの例は、PDFフォームからデータを書き出します。 フォームデータは、*Loan_data.xml*&#x200B;というXMLファイルとして保存されます。 （「[フォームデータの書き出し](/help/forms/developing/importing-exporting-data.md#exporting-form-data)」を参照）。
 
 ```java
  /*
