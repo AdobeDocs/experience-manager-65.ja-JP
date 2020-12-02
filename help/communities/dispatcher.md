@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: 9ba00322588326df6fbcc02bdfba88491d39c289
 workflow-type: tm+mt
 source-wordcount: '680'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
 
-# Communities 用の Dispatcher の設定 {#configuring-dispatcher-for-communities}
+# Communities 用の Dispatcher の設定  {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
@@ -26,9 +26,9 @@ AEM Communities では、[コミュニティサイト](overview.md#community-sit
 
 特定のデプロイメントとサイトデザインにとって何が必要かについては
 
-* Contact [Customer Care](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)
+* [カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)に連絡
 
-See also the main [Dispatcher documentation](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
+メインの[ディスパッチャードキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)も参照してください。
 
 ## Dispatcher のキャッシュ {#dispatcher-caching}
 
@@ -44,7 +44,7 @@ Dispatcher のキャッシュをサポートするように設定すると、TTL
 
 ### 要件 {#requirements}
 
-* Dispatcherバージョン4.1.2以降(最新バージョンの場合は、「Dispatcherの [インストール](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) 」を参照)
+* Dispatcherバージョン4.1.2以降（最新バージョンの場合は[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)のインストールを参照）
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2 以降
@@ -54,26 +54,26 @@ Dispatcher のキャッシュをサポートするように設定すると、TTL
 
 OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」で、指定されたパスに保存されるキャッシュされたページの有効期限を設定します。
 
-* From the [Web Console](../../help/sites-deploying/configuring-osgi.md)
+* [Webコンソール](../../help/sites-deploying/configuring-osgi.md)から
 
-   * For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Locate `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`を検索
 * 新しい接続設定を作成するには、「+」アイコンを選択します
 
    ![dispatcher](assets/dispatcher.png)
 
 * **フィルターパターン**
 
-   *（必須）* コミュニティページへの1つ以上のパス。 例： `/content/sites/engage/(.*)`
+   *（必須）* コミュニティページへの1つ以上のパス。例： `/content/sites/engage/(.*)`
 
 * **Cache-Controlの最大経過時間**
 
-   *（必須）* [キャッシュコントロール]ヘッダに追加する最大経過時間（秒）。 この値はゼロ（0）より大きくする必要があります。
+   *（必須）* キャッシュコントロールのヘッダーに追加する最大経過時間（秒）。この値はゼロ（0）より大きくする必要があります。
 
-## Dispatcher クライアントヘッダー {#dispatcher-client-headers}
+## Dispatcher クライアントヘッダー  {#dispatcher-client-headers}
 
-In the /clientheaders section of `dispatcher.any`, if listing a specific set of headers, it is necessary to include `"CSRF-Token"` in order for the [Enablement feature](enablement.md) to work properly.
+`dispatcher.any`の/clientheadersセクションで、特定のヘッダーのセットをリストする場合は、[有効化機能](enablement.md)が正しく動作するために、`"CSRF-Token"`を含める必要があります。
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
@@ -92,12 +92,12 @@ In the /clientheaders section of `dispatcher.any`, if listing a specific set of 
 >[!NOTE]
 >
 >**プロパティ名の例**
->All property names shown, such as **/0050** and **/0170**, should be adjusted to fit within an existing dispatcher.any configuration file.
+>表示されるすべてのプロパティ名（例：**/0050**、**/0170**）は、既存のdispatcher.any設定ファイルに合うように調整する必要があります。
 
 
 >[!CAUTION]
 >
->Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)を参照してください。また、AEMのインストールに関するその他のセキュリティの詳細については、 [AEM Security Checklist](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/security-checklist.html) （セキュリティチェックリスト）を参照してください。
+>Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)を参照してください。また、AEMのインストールに関する追加のセキュリティの詳細については、[AEM Security Cheklist](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/security-checklist.html)を参照してください。
 
 
 以下のエントリを /filter セクションの最後に追加する必要があります（特にすべての拒否エントリの後）。
@@ -172,7 +172,7 @@ In the /clientheaders section of `dispatcher.any`, if listing a specific set of 
 /7001 { /type "allow" /glob "GET /libs/cq/security/userinfo.json?cq_ck=*"
 ```
 
-## Dispatcher ルール {#dispatcher-rules}
+## Dispatcher ルール  {#dispatcher-rules}
 
 `dispatcher.any` のルールセクションは、要求された URL に基づいてキャッシュされる応答を定義します。Communitiesの場合、ルールセクションは、キャッシュしない対象を定義するために使用します。
 
