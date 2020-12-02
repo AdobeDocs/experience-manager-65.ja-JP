@@ -20,9 +20,9 @@ ht-degree: 34%
 
 ## 概要 {#overview}
 
-AEM Forms を使用すると、アダプティブフォームフィールド内からフォームデータモデルで構成されたサービスを呼び出すことで、フォーム作成者はフォームへの記入作業を簡略化および強化することができます。To invoke a data model service, you can either create a rule in the visual editor or specify a JavaScript using the `guidelib.dataIntegrationUtils.executeOperation` API in the code editor of the [rule editor](/help/forms/using/rule-editor.md).
+AEM Forms を使用すると、アダプティブフォームフィールド内からフォームデータモデルで構成されたサービスを呼び出すことで、フォーム作成者はフォームへの記入作業を簡略化および強化することができます。データモデルサービスを呼び出すには、ビジュアルエディターでルールを作成するか、[ルールエディター](/help/forms/using/rule-editor.md)のコードエディターで`guidelib.dataIntegrationUtils.executeOperation` APIを使用してJavaScriptを指定します。
 
-This document focuses on writing a JavaScript using the `guidelib.dataIntegrationUtils.executeOperation` API to invoke a service.
+このドキュメントでは、`guidelib.dataIntegrationUtils.executeOperation` APIを使用してサービスを呼び出すJavaScriptの作成に重点を置いています。
 
 ## API の使用 {#using-the-api}
 
@@ -32,7 +32,7 @@ This document focuses on writing a JavaScript using the `guidelib.dataIntegratio
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
-The structure of the `guidelib.dataIntegrationUtils.executeOperation` API specifies details about the service operation. この構造の構文は以下のとおりです。
+`guidelib.dataIntegrationUtils.executeOperation` APIの構造はサービス操作の詳細を指定します。 この構造の構文は以下のとおりです。
 
 ```javascript
 var operationInfo = {
@@ -76,24 +76,24 @@ API 構造は、サービス操作の以下の詳細を指定します。
   </tr>
   <tr>
    <td><code>Outputs</code></td>
-   <td>Maps one or more form objects to output values from the service operation to populate form fields<br /> </td>
+   <td>1つ以上のフォームオブジェクトを、サービス操作の出力値にマップして、フォームフィールドに入力します。<br /> </td>
   </tr>
   <tr>
    <td><code>success</code></td>
-   <td>サービス操作の入力引数に基づいて値を返します。 コールバック関数として使用されるオプションのパラメーターです。<br /> </td>
+   <td>サービス操作の入力引数に基づいて値を返します。 コールバック関数として使用されるオプションのパラメータです。<br /> </td>
   </tr>
   <tr>
    <td><code>failure</code></td>
-   <td>successコールバック関数が入力引数に基づいて出力値を表示できない場合に、エラーメッセージを表示します。 コールバック関数として使用されるオプションのパラメーターです。<br /> </td>
+   <td>successコールバック関数が入力引数に基づいて出力値を表示できない場合に、エラーメッセージを表示します。 コールバック関数として使用されるオプションのパラメータです。<br /> </td>
   </tr>
  </tbody>
 </table>
 
 ## サービスを呼び出すスクリプトのサンプル {#sample-script-to-invoke-a-service}
 
-The following sample script uses the `guidelib.dataIntegrationUtils.executeOperation` API to invoke the `getAccountById` service operation configured in the `employeeAccount` form data model.
+次のサンプルスクリプトでは、`guidelib.dataIntegrationUtils.executeOperation` APIを使用して、`employeeAccount`フォームデータモデルで設定された`getAccountById`サービス操作を呼び出します。
 
-The `getAccountById` operation takes the value in the `employeeID` form field as input for the `empId` argument and returns employee name, account number, and account balance for the corresponding employee. この出力値は指定されたフォームフィールドに入力されます。For example, the value in `name` argument is populated in the `fullName` form element and value for `accountNumber` argument in `account` form element.
+`getAccountById`演算は、`empId`引数の入力として`employeeID`フォームフィールドの値を受け取り、対応する従業員の従業員名、口座番号、口座残高を返します。 この出力値は指定されたフォームフィールドに入力されます。例えば、`name`引数の値が`fullName`フォーム要素に入力され、`account`フォーム要素の`accountNumber`引数の値が入力されます。
 
 ```javascript
 var operationInfo = {
@@ -111,25 +111,25 @@ var outputs = {
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 ```
 
-## コールバック関数でのAPIの使用 {#using-the-api-callback}
+## コールバック関数{#using-the-api-callback}でAPIを使用する
 
-APIとコールバック関数を使用してフォームデータモデルサービスを呼び出すこ `guidelib.dataIntegrationUtils.executeOperation` ともできます。 API 構文は以下のとおりです。
+`guidelib.dataIntegrationUtils.executeOperation` APIとコールバック関数を使用してフォームデータモデルサービスを呼び出すこともできます。 API 構文は以下のとおりです。
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
 ```
 
-コールバック関数は、 `success` および `failure` コールバック関数を持つことができます。
+コールバック関数は、`success`および`failure`コールバック関数を持つことができます。
 
-### 成功コールバック関数と失敗コールバック関数を含むサンプルスクリプト {#callback-function-success-failure}
+### 成功コールバック関数と失敗コールバック関数を持つサンプルスクリプト{#callback-function-success-failure}
 
-The following sample script uses the `guidelib.dataIntegrationUtils.executeOperation` API to invoke the `GETOrder` service operation configured in the `employeeOrder` form data model.
+次のサンプルスクリプトでは、`guidelib.dataIntegrationUtils.executeOperation` APIを使用して、`employeeOrder`フォームデータモデルで設定された`GETOrder`サービス操作を呼び出します。
 
-この `GETOrder` 操作は、フォームフィールド内の値を `Order ID` 引数の入力として受け取り、 `orderId``success` コールバック関数に注文数量の値を返します。  コールバック関数が注文数量を返さない場合、 `success` コールバック関数は `failure``Error occured` メッセージを表示します。
+`GETOrder`操作は、`orderId`引数の入力として`Order ID`フォームフィールドの値を受け取り、`success`コールバック関数に注文数量の値を返します。  `success`コールバック関数が注文数を返さない場合、`failure`コールバック関数は`Error occured`メッセージを表示します。
 
 >[!NOTE]
 >
-> callback関数を使用する場合、出力値は指定したフォームフィールドに入力されません。 `success`
+> `success`コールバック関数を使用する場合、指定したフォームフィールドに出力値が入力されません。
 
 ```javascript
 var operationInfo = {
