@@ -48,7 +48,7 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td>See <a href="creating-groups.md">Community Group</a></td>
+   <td><a href="creating-groups.md">コミュニティグループ</a>を参照</td>
   </tr>
  </tbody>
 </table>
@@ -62,7 +62,7 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
    <td>social/group/components/hbs/communitygroups</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
@@ -78,7 +78,7 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [コミュニティグループ API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
@@ -88,11 +88,11 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 
 ### グループ機能 {#groups-function}
 
-A community site structure that includes a [Groups function](functions.md#groups-function) will support the creation of new `community groups` from the publish and author environments. The community group created will include a `community groups member list` component that will list the members of the group.
+[Groups関数](functions.md#groups-function)を含むコミュニティサイト構造は、発行環境と作成者要素からの新しい`community groups`の作成をサポートします。 作成されたコミュニティグループには、グループのメンバーをリストする`community groups member list`コンポーネントが含まれます。
 
-One or more [community group templates](tools-groups.md), which provide the design of the community group page(s), may be configured for the Groups function when the function is being added to a [community site template](sites.md) or nested within a community group template.
+コミュニティグループページのデザインを提供する1つ以上の[コミュニティグループテンプレート](tools-groups.md)は、[コミュニティサイトテンプレート](sites.md)に追加する際、またはコミュニティグループテンプレート内にネストする際に、Groups機能用に構成できます。
 
-The inclusion of multiple community group templates results in a choice of design being presented to the authorized user at the time a new community group is created for the community site, as shown in the section on [community groups](creating-groups.md) for authors.
+複数のコミュニティグループテンプレートを組み込むと、コミュニティサイト用に新しいコミュニティグループが作成されたときに、許可されたユーザーにデザインが提示されます（作成者向けの[コミュニティグループ](creating-groups.md)の節を参照）。
 
 ### ネストされたグループ {#nested-groups}
 
