@@ -18,9 +18,9 @@ ht-degree: 87%
 ---
 
 
-# 再利用可能なコンポーネントの説明 {#description-of-reusable-components}
+# 再利用可能なコンポーネントの説明  {#description-of-reusable-components}
 
-AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html-ws-components-web.md) components which are organized in a specific [folder structure](/help/forms/using/folder-structure.md) in CRX™. 各コンポーネントは、フォルダー構造内の指定場所にあるモデル、表示、およびテンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JapaScript オブジェクトを持ちます。再利用可能なコンポーネントの完全なリストを、構成ファイル名と依存関係と共に以下に示します。
+AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/help/forms/using/folder-structure.md)に編成された[再利用可能な](/help/forms/using/integrating-html-ws-components-web.md)コンポーネントで構成されています。 各コンポーネントは、フォルダー構造内の指定場所にあるモデル、表示、およびテンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JapaScript オブジェクトを持ちます。再利用可能なコンポーネントの完全なリストを、構成ファイル名と依存関係と共に以下に示します。
 
 ## TaskList {#tasklist}
 
@@ -114,7 +114,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >Workspace は、TaskList モデルの Tasks 関数を呼び出して、このコンポーネントの Task モデルを作成します。
 
-## FilterList {#filterlist}
+## FilterList  {#filterlist}
 
 <table>
  <tbody>
@@ -186,7 +186,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## TeamQueues {#teamqueues}
+## TeamQueues  {#teamqueues}
 
 <table>
  <tbody>
@@ -223,7 +223,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## TeamFilter {#teamfilter}
+## TeamFilter  {#teamfilter}
 
 <table>
  <tbody>
@@ -266,7 +266,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >TeamFilter は、TaskList コンポーネントから選択されているタスクを示すイベントを取得します。これらのコンポーネントはモデルクラスを共有しますが、依存関係はありません。
 
-## TaskDetails {#taskdetails}
+## TaskDetails  {#taskdetails}
 
 <table>
  <tbody>
@@ -324,7 +324,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## CategoryList {#categorylist}
+## CategoryList  {#categorylist}
 
 <table>
  <tbody>
@@ -407,7 +407,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## StartPointList {#startpointlist}
+## StartPointList  {#startpointlist}
 
 <table>
  <tbody>
@@ -458,7 +458,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >StartPointList と CategoryList コンポーネントはモデルクラスを共有するため、前者は後者に依存します。 CategoryList は、どのカテゴリのスタートポイントが表示されるかについての情報にアクセスします。StartPointList を独立して使用するには、CategoryList からのイベントトリガーをシミュレートします。
 
-## StartPoint {#startpoint}
+## StartPoint  {#startpoint}
 
 <table>
  <tbody>
@@ -489,7 +489,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## StartProcess {#startprocess}
+## StartProcess  {#startprocess}
 
 <table>
  <tbody>
@@ -552,7 +552,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >StartProcess と StartPointList コンポーネントは、モデルクラスを共有します。このコンポーネントは、StartPointList から startpoint を選択すると関連が生じます。
 
-## ProcessNameList {#processnamelist}
+## ProcessNameList  {#processnamelist}
 
 <table>
  <tbody>
@@ -592,7 +592,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >ProcessNameList は、他のコンポーネントに依存しません。ただし、他のコンポーネントに依存する ProcessInstanceList モデルクラスに内部的に依存します。したがって、ProcessNameList は、ProcessInstanceList、ProcessInstance、TaskList、Teamtask、Task など、多くのモデルクラスを使用します。これらの依存関係以外は、ProcessNameList は独立して使用可能です。
 
-## ProcessName {#processname}
+## ProcessName  {#processname}
 
 <table>
  <tbody>
@@ -623,7 +623,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## ProcessInstanceList {#processinstancelist}
+## ProcessInstanceList  {#processinstancelist}
 
 <table>
  <tbody>
@@ -662,7 +662,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >ProcessInstanceList は、インスタンスを取得し表示するために、プロセス名を示す ProcessNameList からのイベントを期待します。ProcessInstanceList を独立して使用するには、イベントトリガーを個別にシミュレートします。
 
-## ProcessInstance {#processinstance}
+## ProcessInstance  {#processinstance}
 
 <table>
  <tbody>
@@ -693,7 +693,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## ProcessInstanceHistory {#processinstancehistory}
+## ProcessInstanceHistory  {#processinstancehistory}
 
 <table>
  <tbody>
@@ -737,7 +737,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >ProcessInstanceHistory は、どのプロセスインスタンスの履歴を表示するかどうかを示す ProcessInstanceList からのイベントを期待します。この依存関係以外は、コンポーネントは独立して使用可能です。
 
-## OutofOffice {#outofoffice}
+## OutofOffice  {#outofoffice}
 
 <table>
  <tbody>
@@ -778,7 +778,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >OutofOffice は独立して使用可能です。
 
-## ShareQueue {#sharequeue}
+## ShareQueue  {#sharequeue}
 
 <table>
  <tbody>
@@ -822,7 +822,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >ShareQueue は独立して使用可能です。
 
-## UISettings {#uisettings}
+## UISettings  {#uisettings}
 
 <table>
  <tbody>
@@ -861,7 +861,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >UISettings は独立して使用可能です。
 
-## AppNavigation {#appnavigation}
+## AppNavigation  {#appnavigation}
 
 <table>
  <tbody>
@@ -896,7 +896,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >AppNavigation は独立して使用可能です。
 
-## UserInfo {#userinfo}
+## UserInfo  {#userinfo}
 
 <table>
  <tbody>
@@ -925,7 +925,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
    <td>
     <ul>
      <li>userImageUrlFetched - userinfo モデル</li>
-     <li>sessionRenewed - userinfo モデル <br /> </li>
+     <li>sessionRenewed - userinfo モデル  <br /> </li>
      <li>sessionExpired - userinfo モデル </li>
     </ul> </td>
   </tr>
@@ -936,7 +936,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
 >
 >UserInfo は独立して使用可能です。
 
-## WSError {#wserror}
+## WSError  {#wserror}
 
 <table>
  <tbody>
@@ -967,7 +967,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## UserSearch {#usersearch}
+## UserSearch  {#usersearch}
 
 <table>
  <tbody>
@@ -1002,7 +1002,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## SearchTemplate {#searchtemplate}
+## SearchTemplate  {#searchtemplate}
 
 <table>
  <tbody>
@@ -1033,7 +1033,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## SearchTemplateList {#searchtemplatelist}
+## SearchTemplateList  {#searchtemplatelist}
 
 <table>
  <tbody>
@@ -1064,7 +1064,7 @@ AEM Forms workspace is composed of [reusable](/help/forms/using/integrating-html
  </tbody>
 </table>
 
-## SearchTemplateDetails {#searchtemplatedetails}
+## SearchTemplateDetails  {#searchtemplatedetails}
 
 <table>
  <tbody>
