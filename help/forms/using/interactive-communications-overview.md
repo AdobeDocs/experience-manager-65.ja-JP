@@ -42,13 +42,13 @@ Interactive Communicationsは、ビジネス通信、ドキュメント、明細
 
 ### ワークフロー {#workflow}
 
-To create an Interactive Communication, have the [building blocks](#buildingblocks) for Interactive Communication ready and then complete the following steps:
+対話型通信を作成するには、対話型通信用の[構築ブロック](#buildingblocks)を準備し、次の手順を実行します。
 
-1. Choose to [create an Interactive Communication](/help/forms/using/create-interactive-communication.md).
+1. [対話型通信](/help/forms/using/create-interactive-communication.md)を作成します。
 
 1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。印刷チャネルからWebチャネルを生成するように選択できます。
 
-1. Using the [drag-and-drop interface](/help/forms/using/introduction-interactive-communication-authoring.md), add document fragments, images, components to print and web channel of the Interactive Communication as required.
+1. [ドラッグ&amp;ドロップインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)を使用して、必要に応じて、ドキュメントフラグメント、画像、コンポーネントを印刷およびWebチャネルに追加します。
 1. 追加したコンポーネントのプロパティを設定します。例えば、以下のようなコンポーネントがあります。
 
    1. [画像](/help/forms/using/create-interactive-communication.md#step2)
@@ -67,7 +67,7 @@ To create an Interactive Communication, have the [building blocks](#buildingbloc
 * [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
 * [ドキュメントフラグメント](/help/forms/using/document-fragments.md)
 * 画像
-* [Webチャネルのテーマ](/help/forms/using/themes.md)
+* [Webチャネル](/help/forms/using/themes.md) のテーマ
 
 ## インタラクティブ通信と Correspondence Management の比較 {#interactive-communications-vs-correspondence-management}
 
