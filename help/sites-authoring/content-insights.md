@@ -51,7 +51,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->コンテンツインサイトのレポートを使用するには、管理者が AEM と SiteCatalyst、Target および BrightEdge を連携させる必要があります。See [Integrating with SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrating with Adobe Target](/help/sites-administering/target.md), and [Integrating with BrightEdge](/help/sites-administering/brightedge.md).
+>コンテンツインサイトのレポートを使用するには、管理者が AEM と SiteCatalyst、Target および BrightEdge を連携させる必要があります。[SightCatalystとの統合](/help/sites-administering/adobeanalytics.md)、[Adobe Targetとの統合](/help/sites-administering/target.md)、[BrightEdgeとの統合](/help/sites-administering/brightedge.md)を参照してください。
 
 ## 表示レポート {#the-views-report}
 
