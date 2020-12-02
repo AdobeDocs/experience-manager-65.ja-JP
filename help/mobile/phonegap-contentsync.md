@@ -27,7 +27,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->This document is part of the [Getting Started with AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, a recommended starting point for AEM Mobile reference.
+>このドキュメントは、『[AEM Mobile](/help/mobile/getting-started-aem-mobile.md)はじめに』ガイドの一部です。これは、AEM Mobileリファレンスの推奨起点です。
 
 コンテンツをパッケージ化してネイティブモバイルアプリケーションで使用できるようにするには、コンテンツ同期を使用します。AEM で作成されるページは、デバイスがオフラインの場合でもアプリコンテンツとして使用できます。さらに、AEM ページは Web 標準に基づいているので、ネイティブラッパーに AEM ページを埋め込むことを可能にするクロスプラットフォームを使用します。この戦略によって、開発の作業を削減し、アプリコンテンツを簡単に更新できます。
 
@@ -48,13 +48,13 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->To get more information on guidelines for developing Content Sync handlers ade see out of the box app handlers, See [Developing Content Sync Handlers](/help/mobile/contentsync-app-handlers.md).
+>コンテンツ同期ハンドラーの開発に関するガイドラインの詳細については、「既製のアプリハンドラーを参照」を参照してください。[](/help/mobile/contentsync-app-handlers.md)
 
 ## コンテンツ同期のコンテンツの設定 {#configuring-the-content-sync-content}
 
 クライアントに提供される ZIP ファイルのコンテンツを指定するためのコンテンツ同期設定を作成します。任意の数のコンテンツ同期設定を作成できます。各設定には識別用の名前が付けられています。
 
-コンテンツ同期の設定を作成するには、 `cq:ContentSyncConfig` プロパティをに設定して、リポジトリに `sling:resourceType` ノードを追加し `contentsync/config`ます。 ノードはリポジトリ内の任意の場所に配置できますが、AEM発行インスタンスのユーザーはノードにアクセスできる必要があります。 `cq:ContentSyncConfig` したがって、以下にノードを追加する必要があり `/content`ます。
+コンテンツ同期の設定を作成するには、`cq:ContentSyncConfig`プロパティを`contentsync/config`に設定して、リポジトリに&lt;a0/>ノードを追加します。 `sling:resourceType``cq:ContentSyncConfig`ノードはリポジトリ内の任意の場所に配置できますが、AEM発行インスタンスのユーザーはこのノードにアクセスできる必要があります。 したがって、`/content`の下にノードを追加する必要があります。
 
 コンテンツ同期の ZIP ファイルのコンテンツを指定するには、cq:ContentSyncConfig ノードに子ノードを追加します。それぞれの子ノードの次のプロパティによって、追加するコンテンツ項目と追加の際の処理方法が特定されます。
 
@@ -69,7 +69,7 @@ ht-degree: 57%
 >
 >コンテンツ同期フレームワークは、アセットとデザインに関連するファイルの依存関係がコンテンツ同期パッケージに含まれているかどうかを確認しません。必要なファイルをすべて ZIP ファイルに含めてください。
 
-### コンテンツ同期のダウンロードへのアクセスの設定 {#configuring-access-to-content-sync-downloads}
+### コンテンツ同期のダウンロードへのアクセスの設定  {#configuring-access-to-content-sync-downloads}
 
 コンテンツ同期からダウンロードを行うことのできるユーザーまたはグループを指定します。コンテンツ同期のすべてのキャッシュからダウンロードを行うことのできるデフォルトのユーザーまたはグループを設定できます。このデフォルト設定を上書きして、特定のコンテンツ同期設定のためのアクセスを設定できます。
 
@@ -88,13 +88,13 @@ Day CQ コンテンツ同期マネージャーサービスは、コンテンツ�
 
 #### コンテンツ同期キャッシュのダウンロードアクセスの上書き {#overriding-download-access-for-a-content-sync-cache}
 
-To configure download access for a specific Content Sync configuration, add the following property to the `cq:ContentSyncConfig` node:
+特定のコンテンツ同期設定のダウンロードアクセスを設定するには、次のプロパティを`cq:ContentSyncConfig`ノードに追加します。
 
 * 名前：authorizable
 * タイプ：String
 * 値：ダウンロードを行うことのできるユーザーまたはグループの名前
 
-For example, your app enables users to install updates directly from Content Sync. To enable all users to download the update, you set the value of the authorizable property to `everyone`.
+例えば、ユーザーがコンテンツの同期からアップデートを直接インストールできるようにするアプリです。すべてのユーザーが更新をダウンロードできるようにするには、authorizableプロパティの値を`everyone`に設定します。
 
 `cq:ContentSyncConfig` ノードに authorizable プロパティがない場合は、Day CQ コンテンツ同期マネージャーサービスの「許可可能なフォールバックキャッシュ」プロパティに設定されているデフォルトのユーザーまたはグループによって、ダウンロードを行うことのできるユーザーが決定されます。
 
@@ -116,30 +116,30 @@ cq:ContentSyncConfigノードにupdateuserプロパティがない場合、デ�
 
 シンプルな JSON のレンダリングからページ（参照先のアセットを含む）の本格的なレンダリングまで、様々な処理が可能です。ここでは、使用可能な設定タイプとそのパラメーターについて説明します。
 
-**copy** ：ファイルとフォルダーをコピーするだけです。
+**** copyファイルとフォルダーを単純にコピーします。
 
-* **path** — パスが単一のファイルを指す場合、そのファイルのみがコピーされます。フォルダー（ページノードを含む）を指す場合は、下のすべてのファイルとフォルダーがコピーされます。
+* **path**  — パスが単一のファイルを指す場合、そのファイルのみがコピーされます。フォルダー（ページノードを含む）を指す場合は、下のすべてのファイルとフォルダーがコピーされます。
 
-**content** Sling標準の要求処理を使用してコンテンツをレンダリングします。
+**contentRender標準のSling要求処理を使用した** コンテンツ。
 
-* **path** — 出力するリソースのパス。
-* **extension** — リクエストで使用する拡張子。一般的な例は *html* と *jsonですが*、他の拡張子は使用できます。
+* **path**  — 出力するリソースのパス。
+* **extension**  — リクエストで使用する拡張子。一般的な例は ** htmland  *jsonですが*、他の拡張子は使用できます。
 
-* **selector** — オプションで、ドット区切りのセレクター。一般的な例としては、モバイルバージョンのページのレンダリングには *touch* 、JSON出力には *無限* (infinity)があります。
+* **selector**  — オプションで、ドット区切りのセレクター。一般的な例は、モバイルバージョンのページのレンダリングのた ** めのタッチ、またはJSON出力 ** のための不定です。
 
-**clientlib** :JavaScriptまたはCSSクライアントライブラリをパッケージ化します。
+**clientlibJavascriptまたはCSSクライアントライブラリの** パッケージ化
 
-* **path** — クライアントライブラリのルートへのパス。
-* **extension** — クライアントライブラリのタイプ。現時点では、 *js* または *css* に設定する必要があります。
+* **path**  — クライアントライブラリのルートへのパス。
+* **extension**  — クライアントライブラリのタイプ。この値は、現時点では、 ** jsor  ** cssに設定する必要があります。
 
-* **includeFolders** - Typeは文字列の配列で、クライアントライブラリでスキャンする追加のフォルダーを指定して、ファイル（カスタムフォントなど）を取得できます。
+* **includeFolders** - Typeは文字列の配列で、ユーザーはクライアントライブラリでスキャンする追加のフォルダーを指定して、ファイル（カスタムフォントなど）を取得できます。
 
 **アセット**
 
 アセットの元のレンディションを収集します。
 
-* **path** - /content/damの下のアセットフォルダーのパス。
-* **renditions** - Typeは文字列の配列で、ユーザーはデフォルトの画像の代わりに使用するレンディションを指定できます。 次のリストでは、あらかじめ用意されているレンディションの概要を示します。ただし、ワークフローで作成された任意のレンディションを使用することもできます。
+* **path**  - /content/damの下のアセットフォルダーのパス。
+* **renditions**  - Typeは文字列の配列で、ユーザーはデフォルトの画像の代わりに使用するレンディションを指定できます。次のリストでは、あらかじめ用意されているレンディションの概要を示します。ただし、ワークフローで作成された任意のレンディションを使用することもできます。
 
    * *オリジナル*
    * *cq5dam.thumbnail.48.48.png*
@@ -147,26 +147,26 @@ cq:ContentSyncConfigノードにupdateuserプロパティがない場合、デ�
    * *cq5dam.thumbnail.140.100.png*
    * *cq5dam.web.1280.1280.png*
 
-**image** 画像を収集します。
+**image画像** を収集します。
 
-* **path** — イメージリソースへのパス。
+* **path**  — イメージリソースへのパス。
 
 image タイプは、zip ファイルに We.Retail ロゴを追加するために使用します。
 
-**pages** AEMページをレンダリングし、参照アセットを収集します。
+**** pagesAEMページをレンダリングし、参照アセットを収集します。
 
 * **path** - ページのパス。
-* **extension** — リクエストで使用する拡張子。ページの場合、これはほとんど常に *htmlですが*、他のページはまだ可能です。
+* **extension**  — リクエストで使用する拡張子。ページの場合、これはほとんど常に *htmlですが*、他のページはまだ可能です。
 
-* **selector** — オプションで、ドット区切りのセレクター。一般的な例は、 *タッチ* （タッチ）によるページのモバイルバージョンのレンダリングです。
+* **selector**  — オプションで、ドット区切りのセレクター。一般的な例は、モバイルバージョンのページのレンダリングに関する ** タッチです。
 
-* **deep** — 子ページも含める必要があるかどうかを決定するオプションのブール型プロパティ。デフォルト値は *trueです。*
+* **deep**  — 子ページも含める必要があるかどうかを決定するオプションのブール型プロパティ。デフォルト値は *trueです。*
 
 * **includeImages** - 画像を含める必要があるかどうかを指定する、オプションンのブールプロパティ。デフォルト値は *true* です。デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントだけが追加の対象になります。Web コンソールで **Day CQ WCM Pages Update Handler** を設定することで、その他のリソースタイプを追加できます。
 
-**rewrite** 「rewrite」ノードは、書き出したページでリンクを書き換える方法を定義します。 書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
+**rewrite** rewriteノードは、書き出したページでリンクを書き換える方法を定義します。書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
 
-The `rewrite` node needs to be located below the `page` node.
+`rewrite`ノードは`page`ノードの下に配置する必要があります。
 
 `rewrite` ノードには、次に示す 1 つ以上のプロパティを指定できます。
 
@@ -179,9 +179,9 @@ The `rewrite` node needs to be located below the `page` node.
 
 * `REWRITE_RELATIVE`：ファイルシステム上のページの .html ファイルを基準とした相対位置を使用してパスを書き換えます。
 
-* `REWRITE_EXTERNAL`:aem [Externalizerサービスを使用して、サーバー上のリソースを指してパスを書き換えます](/help/sites-developing/externalizer.md)。
+* `REWRITE_EXTERNAL`:aem  [Externalizerサービスを使用して、サーバー上のリソースを指してパスを書き換えます](/help/sites-developing/externalizer.md)。
 
-**PathRewriterTransformerFactory** という名前の AEM サービスを使用すると、書き換える特定の html 属性を設定できます。The service can be configured in the Web console and has a configuration for each property of the `rewrite` node: `clientlibs`, `images` and `links`.
+**PathRewriterTransformerFactory** という名前の AEM サービスを使用すると、書き換える特定の html 属性を設定できます。このサービスはWebコンソールで設定でき、`rewrite`ノードの各プロパティの設定を持ちます。`clientlibs`、`images`および`links`。
 
 この機能は AEM 5.5 で追加されました。
 
@@ -223,19 +223,19 @@ The `rewrite` node needs to be located below the `page` node.
   + ...
 ```
 
-**etc.designs.defaultおよびetc.designs.mobile設定の最初の2つのエントリは、明確である必要があります。** モバイル用のページを多数含めるため、/etc/designsの下に関連するデザインファイルが必要です。 また、余分な処理が不要なので、コピーで十分です。
+**etc.designs.defaultとetc.designs.** mobile設定の最初の2つのエントリは明確である必要があります。モバイル用のページを多数含めるため、/etc/designsの下に関連するデザインファイルが必要です。 また、余分な処理が不要なので、コピーで十分です。
 
-**イベント.plist** このエントリは少し特殊です。 序文で述べたように、イベントの位置のマーカーを持つマップ表示をアプリケーションが提供する必要があります。 必要な場所の情報は、PLIST形式の別のファイルとして提供します。 これを機能させるには、インデックスページで使用されるイベントリストコンポーネントにplist.jspというスクリプトがあります。 このスクリプトは、.plist拡張子を持つコンポーネントのリソースが要求された場合に実行されます。 通常、コンポーネントのパスはpathプロパティで指定され、typeはcontentに設定されます。これは、Sling要求処理を利用したいからです。
+**イベント.** plistこのエントリは少し特殊です。序文で述べたように、イベントの位置のマーカーを持つマップ表示をアプリケーションが提供する必要があります。 必要な場所の情報は、PLIST形式の別のファイルとして提供します。 これを機能させるには、インデックスページで使用されるイベントリストコンポーネントにplist.jspというスクリプトがあります。 このスクリプトは、.plist拡張子を持つコンポーネントのリソースが要求された場合に実行されます。 通常、コンポーネントのパスはpathプロパティで指定され、typeはcontentに設定されます。これは、Sling要求処理を利用したいからです。
 
-**イベント.touch.html** ：次に、アプリに表示される実際のページが表示されます。 pathプロパティは、イベントのルートページに設定されます。 deepプロパティのデフォルトはtrueなので、そのページより下のすべてのイベントページも含まれます。 ページを設定タイプとして使用するので、イメージまたはページ上のダウンロードコンポーネントから参照されるイメージや他のファイルが含まれます。 また、タッチセレクターを設定すると、モバイル版のページが表示されます。 機能パックの設定には、この種のエントリが多く含まれていますが、ここでは簡単にするために取り除かれています。
+**イベント.touch.** htmlNextには、アプリに表示される実際のページが示されます。pathプロパティは、イベントのルートページに設定されます。 deepプロパティのデフォルトはtrueなので、そのページより下のすべてのイベントページも含まれます。 ページを設定タイプとして使用するので、イメージまたはページ上のダウンロードコンポーネントから参照されるイメージや他のファイルが含まれます。 また、タッチセレクターを設定すると、モバイル版のページが表示されます。 機能パックの設定には、この種のエントリが多く含まれていますが、ここでは簡単にするために取り除かれています。
 
-**logo** ロゴの設定タイプについては、これまで説明しておらず、組み込みのタイプについても触れていません。 ただし、コンテンツ同期フレームワークはある程度まで拡張可能であり、このタイプはその一例です。フレームワークの拡張については、以降の節で説明します。
+**** logoロゴ設定の種類については、これまで説明しておらず、組み込みの種類についても触れていません。ただし、コンテンツ同期フレームワークはある程度まで拡張可能であり、このタイプはその一例です。フレームワークの拡張については、以降の節で説明します。
 
-**manifest** ：コンテンツの開始ページなど、zipファイルに何らかのメタデータを含めることが望ましい場合が多くあります。 ただし、このような情報をハードコーディングすると、後で簡単に変更できなくなります。 Content Syncフレームワークは、設定内のマニフェストノードを探すことでこの使用例をサポートします。マニフェストノードは名前で識別されるだけで、設定タイプは必要ありません。 特定のノードに定義されているすべてのプロパティがファイルに追加されます。このファイルは「manifest」とも呼ばれ、zipファイルのルートに存在します。
+**manifest** Itの多くの場合、コンテンツの開始ページなど、zipファイルに何らかのメタデータを含めることが望ましいです。ただし、このような情報をハードコーディングすると、後で簡単に変更できなくなります。 Content Syncフレームワークは、設定内のマニフェストノードを探すことでこの使用例をサポートします。マニフェストノードは名前で識別されるだけで、設定タイプは必要ありません。 特定のノードに定義されているすべてのプロパティがファイルに追加されます。このファイルは「manifest」とも呼ばれ、zipファイルのルートに存在します。
 
-前述の例では、イベントリストページが初期ページになります。この情報は **indexPage** プロパティで指定され、いつでも簡単に変更できます。A second property defines the path of the *events.plist* file. 後述のとおり、これでクライアントアプリケーションはマニフェストを読み取り、それに従って動作できるようになります。
+前述の例では、イベントリストページが初期ページになります。この情報は **indexPage** プロパティで指定され、いつでも簡単に変更できます。2つ目のプロパティは、*イベント.plist*&#x200B;ファイルのパスを定義します。 後述のとおり、これでクライアントアプリケーションはマニフェストを読み取り、それに従って動作できるようになります。
 
-設定が完了したらすぐに、ブラウザーまたはその他の任意の HTTP クライアントでコンテンツをダウンロードできます。iOS 用の開発をおこなう場合は、専用の WAppKitSync クライアントライブラリを使用できます。The download location is made up of the configuration&#39;s path and the *.zip* extension, e.g. when working with a local AEM instance: *https://localhost:4502/content/weretail_go.zip*
+設定が完了したらすぐに、ブラウザーまたはその他の任意の HTTP クライアントでコンテンツをダウンロードできます。iOS 用の開発をおこなう場合は、専用の WAppKitSync クライアントライブラリを使用できます。ダウンロード先は、設定のパスと&#x200B;*.zip*&#x200B;拡張子で構成されています。例えば、ローカルのAEMインスタンスを使用する場合は、次のようになります。*https://localhost:4502/content/weretail_go.zip*
 
 ### コンテンツ同期コンソール {#the-content-sync-console}
 
@@ -260,7 +260,7 @@ The `rewrite` node needs to be located below the `page` node.
 
 多数の設定オプションが用意されているとしても、特定の使用例のすべての要件に対応することはできない可能性があります。ここでは、コンテンツ同期フレームワークの拡張ポイントとカスタム設定タイプを作成する方法について説明します。
 
-For each configuration type, there is a *Content Update Handler*, which is an OSGi component factory that is registered for that specific type. These handlers collect content, process it, and add it to a cache that is maintained by the Content Sync framework. Implement the following interface or abstract base class:
+設定タイプごとに、*コンテンツ更新ハンドラー*&#x200B;が存在します。これは、その特定のタイプに対して登録されるOSGiコンポーネントファクトリです。これらのハンドラーは、コンテンツを収集し、処理し、コンテンツ同期フレームワークで保持されるキャッシュに追加します。次のインターフェイスまたは抽象基本クラスを実装します。
 
 * `com.day.cq.contentsync.handler.ContentUpdateHandler` - すべての更新ハンドラーが実装する必要のあるインターフェイス
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - Sling を使用してリソースのレンダリングを簡略化する抽象クラス
@@ -289,11 +289,11 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 
 >[!CAUTION]
 >
->When building upon the AbstractSlingResourceUpdateHandler base class, you must add the *inherit* definition. Otherwise the OSGi container will not set the required references that are declared in the base class.
+>AbstractSlingResourceUpdateHandler基本クラスを基に構築する場合は、*inherit*&#x200B;定義を追加する必要があります。そうしないと、OSGiコンテナは基本クラスで宣言されている必要な参照を設定しません。
 
 ### カスタム更新ハンドラーの実装 {#implementing-a-custom-update-handler}
 
-すべての We.Retail Mobile ページには、左上隅にロゴが表示されます。当然ながら、このロゴも zip ファイルに含めます。However, for cache optimization, AEM doesn&#39;t reference the image file&#39;s real location in the repository, which prevents us from simply using the **copy** configuration type. What we need to do instead is to provide our own **logo** configuration type that makes the image available at the location requested by AEM. 次のコードは、ロゴ更新ハンドラの完全な実装を示しています。
+すべての We.Retail Mobile ページには、左上隅にロゴが表示されます。当然ながら、このロゴも zip ファイルに含めます。ただし、キャッシュの最適化のために、AEMはイメージファイルのリポジトリ内の実際の場所を参照しないので、**copy**&#x200B;の設定タイプを単に使用できません。 代わりに、AEMが要求した場所で画像を使用できるようにする独自の&#x200B;**logo**&#x200B;設定タイプを提供する必要があります。 次のコードは、ロゴ更新ハンドラの完全な実装を示しています。
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -359,11 +359,11 @@ public class LogoUpdateHandler implements ContentUpdateHandler {
 }
 ```
 
-The `LogoUpdateHandler` class implements the `ContentUpdateHandler` interface&#39;s `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` method, which takes a number of arguments:
+`LogoUpdateHandler`クラスは、`ContentUpdateHandler`インターフェイスの`updateCacheEntry(ConfigEntry, Long, String, Session, Session)`メソッドを実装します。このメソッドは、次のような引数を取ります。
 
 * このハンドラーを呼び出す対象となる、設定エントリへのアクセスを提供する `ConfigEntry` インスタンスとそのプロパティ。
 * 前回のコンテンツ同期によってキャッシュが更新された日時を示す `lastUpdated` タイムスタンプ。このタイムスタンプ以降に変更されていないコンテンツをハンドラーで更新しないでください。
-* キャッシュのルートパスを指定する `configCacheRoot` 引数。 このパスの下に、更新されたすべてのファイルを保存し、zipファイルに追加する必要があります。
+* キャッシュのルートパスを指定する`configCacheRoot`引数。 このパスの下に、更新されたすべてのファイルを保存し、zipファイルに追加する必要があります。
 * キャッシュ関連のすべてのリポジトリ操作に使用する必要がある管理セッション。
 * 特定のユーザーのコンテキストでコンテンツを更新し、ある種のパーソナライズされたコンテンツを提供するために使用できるユーザーセッション。
 
@@ -389,7 +389,7 @@ iOS ベースの AEM モバイルアプリの一般的な実行パスは次の�
 
 接続を確立できなかった場合は、以前にダウンロードしたデータが表示されます。
 
-### さらに先のステップ {#getting-ahead}
+### さらに先のステップ  {#getting-ahead}
 
 管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
