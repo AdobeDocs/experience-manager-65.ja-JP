@@ -22,7 +22,7 @@ ht-degree: 56%
 
 このページでは、Q&amp;A（質問および回答）フォーラム機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -48,14 +48,14 @@ ht-degree: 56%
   </tr>
   <tr>
    <td> properties</td>
-   <td>See <a href="working-with-qna.md">Q&amp;A Forum Feature</a></td>
+   <td><a href="working-with-qna.md">Q&amp;Aフォーラム機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [Q&amp;A API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
@@ -63,11 +63,11 @@ ht-degree: 56%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### Q&amp;A 機能 {#qna-function}
+### Q&amp;A 機能  {#qna-function}
 
-A community site structure that includes the [QnA function](functions.md#qna-function) will have a configured `QnA` component, as well as settings affecting moderation and tagging. The QnA function supports identifying a [privileged member user group](users.md#privileged-members-group).
+[QnA関数](functions.md#qna-function)を含むコミュニティサイト構造には、設定済みの`QnA`コンポーネントと、モデレートとタグに影響する設定が含まれます。 QnA関数は、[特権メンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
 
-### Accessing QnA Forum Posts (UGC) {#accessing-qna-forum-posts-ugc}
+### QnAフォーラム投稿(UGC)へのアクセス{#accessing-qna-forum-posts-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -78,7 +78,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
