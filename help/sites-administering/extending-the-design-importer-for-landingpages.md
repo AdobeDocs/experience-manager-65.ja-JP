@@ -36,7 +36,7 @@ ht-degree: 74%
 
    * タグハンドラーファクトリは、タグハンドラーのインスタンスの生成を管理する OSGi コンポーネント（シングルトン）です。
    * タグハンドラーファクトリは、「tagpattern.name」と呼ばれる OSGi プロパティを公開する必要があります。このプロパティの値は、入力された HTML タグと一致します。
-   * 入力htmlタグに一致する複数のタグハンドラーが存在する場合は、ランクの高いタグハンドラーが選択されます。 The ranking itself is exposed as an OSGi property **service.ranking**.
+   * 入力htmlタグに一致する複数のタグハンドラーが存在する場合は、ランクの高いタグハンドラーが選択されます。 ランキング自体は、OSGiプロパティ&#x200B;**service.ranking**&#x200B;として公開されます。
    * TagHandlerFactory は OSGi コンポーネントです。TagHandler に参照を提供する場合、その参照はこのファクトリを経由する必要があります。
 
 1. デフォルトを上書きする場合は、TagHandlerFactoryのランクがより適切であることを確認してください。
@@ -68,17 +68,17 @@ zip ファイルのレイアウトの例を以下に示します。
 * /img -> すべての画像とアセット
 * /js -> JS clientlib への追加用
 
-このレイアウトは、HTML5 Boilerplate のレイアウトのベストプラクティスに基づいています。Read more at [https://html5boilerplate.com/](https://html5boilerplate.com/)
+このレイアウトは、HTML5 Boilerplate のレイアウトのベストプラクティスに基づいています。詳しくは[https://html5boilerplate.com/](https://html5boilerplate.com/)を参照
 
 >[!NOTE]
 >
 >少なくとも、デザインパッケージのルートレベルに **index.html** ファイルを&#x200B;**含める必要があります**。読み込むランディングページにモバイルバージョンがある場合は、この zip ファイルのルートレベルに **mobile.index.html** と **index.html** を含める必要があります。
 
-### ランディングページの HTML の準備 {#preparing-the-landing-page-html}
+### ランディングページの HTML の準備  {#preparing-the-landing-page-html}
 
 HTML を読み込むには、キャンバス div をランディングページ HTML に追加する必要があります。
 
-The canvas div is an html **div** with `id="cqcanvas"` that must be inserted within the HTML `<body>` tag and must wrap the content intended for conversion.
+キャンバスdivはhtml **div**&#x200B;で、`id="cqcanvas"`はHTML `<body>`タグ内に挿入する必要があり、変換を目的としたコンテンツを含める必要があります。
 
 キャンバス div を追加した後のランディングページ HTML のスニペットの例を次に示します。
 
@@ -98,7 +98,7 @@ The canvas div is an html **div** with `id="cqcanvas"` that must be inserted wit
 </html>
 ```
 
-### HTML に編集可能な AEM コンポーネントを含める準備 {#preparing-the-html-to-include-editable-aem-components}
+### HTML に編集可能な AEM コンポーネントを含める準備  {#preparing-the-html-to-include-editable-aem-components}
 
 ランディングページを読み込むとき、ページを現状維持で読み込むことができます。この場合、ランディングページの読み込み後、読み込まれたいずれの項目も AEM では編集できません（AEM コンポーネントをページに追加することは引き続き可能です）。
 
@@ -116,9 +116,9 @@ The canvas div is an html **div** with `id="cqcanvas"` that must be inserted wit
 
 読み込みをおこなう前に、次の制限事項に注意してください。
 
-### &amp;lt;body> タグに適用された class や id などの属性は保持されない {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### &amp;lt;body> タグに適用された class や id などの属性は保持されない  {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-If any attribute like id or class is applied on the body tag for example `<body id="container">` then it is not preserved after the import. So the design being imported should not have any dependencies on the attributes applied on the `<body>` tag.
+bodyタグ（例：`<body id="container">`）にIDやクラスなどの属性が適用されている場合、読み込み後は保持されません。 したがって、読み込まれるデザインは、`<body>`タグに適用される属性に依存しないでください。
 
 ### zip ファイルのドラッグ＆ドロップ {#drag-and-drop-zip}
 
@@ -134,7 +134,7 @@ Internet ExplorerおよびFirefoxバージョン3.6以前では、ドラッグ&a
 
 デザインパッケージを読み込む前に、ページプロパティ（カスタムドメイン、強制 HTTPS など）を（空白のランディングページテンプレートを使用する）ページに設定した場合、このプロパティはデザインが読み込まれた後に失われます。したがって、デザインパッケージを読み込んだ後でページプロパティを設定することをお勧めします。
 
-### HTML のみのマークアップを想定 {#html-only-markup-assumed}
+### HTML のみのマークアップを想定  {#html-only-markup-assumed}
 
 読み込み時に、セキュリティ上の理由から、また、無効なマークアップが読み込まれて公開されないように、マークアップがサニタイズ削除されます。この場合、HTML のみのマークアップと、その他のあらゆる形式の要素（インライン SVG や Web コンポーネントなど）が除外されることを前提としています。
 
@@ -148,7 +148,7 @@ Internet ExplorerおよびFirefoxバージョン3.6以前では、ドラッグ&a
 
 上記のマークアップを HTML 内に含めると、次の操作がおこなわれます。
 
-* Creates an editable AEM text component ( `sling:resourceType=foundation/components/text`) in the landing page created after importing the design package.
+* デザインパッケージの読み込み後に作成されたランディングページに、編集可能なAEMテキストコンポーネント(`sling:resourceType=foundation/components/text`)を作成します。
 * 作成されたテキストコンポーネントの `text` プロパティに、`div` で囲まれた HTML を設定します。
 
 **短縮形のコンポーネントタグ宣言**：
@@ -180,7 +180,7 @@ Internet ExplorerおよびFirefoxバージョン3.6以前では、ドラッグ&a
 
 ### タイトル {#title}
 
-HTML markup to insert a title component ( `wcm/landingpage/components/title`) in the HTML within design package:
+デザインパッケージ内のHTMLにタイトルコンポーネント(`wcm/landingpage/components/title`)を挿入するHTMLマークアップ：
 
 ```xml
 <div data-cq-component="title"> <h1>This is some editable title text</h1> </div>
@@ -188,11 +188,11 @@ HTML markup to insert a title component ( `wcm/landingpage/components/title`) in
 
 上記のマークアップを HTML 内に含めると、次の操作がおこなわれます。
 
-* Creates an editable AEM title component ( `sling:resourceType=wcm/landingpage/components/title`) in the landing page created after importing the design package.
+* デザインパッケージの読み込み後に作成されたランディングページに、編集可能なAEMタイトルコンポーネント(`sling:resourceType=wcm/landingpage/components/title`)を作成します。
 * 作成されたタイトルコンポーネントの `jcr:title` プロパティに、div で囲まれた見出しタグ内のテキストを設定します。
 * `type` プロパティに見出しタグ（この場合は `h1`）を設定します。
 
-titleコンポーネントは、との7種類をサポート `h1, h2, h3, h4, h5, h6` し `default`ます。
+titleコンポーネントは、`h1, h2, h3, h4, h5, h6`と`default`の7種類のタイプをサポートします。
 
 **短縮形のコンポーネントタグ宣言**：
 
@@ -212,12 +212,12 @@ titleコンポーネントは、との7種類をサポート `h1, h2, h3, h4, h5
 
 上記のマークアップを HTML 内に含めると、次の操作がおこなわれます。
 
-* Creates an editable AEM image component ( `sling:resourceType=foundation/components/image`) in the landing page created after importing the design package.
+* デザインパッケージの読み込み後に作成されたランディングページに、編集可能なAEM画像コンポーネント(`sling:resourceType=foundation/components/image`)を作成します。
 * 作成された画像コンポーネントの `fileReference` プロパティに、src 属性で指定された画像の読み込み先のパスを設定します。
-* Sets the `alt` property to the value of alt attribute in the img tag.
-* Sets the `title` property to the value of title attribute in the img tag.
-* Sets the `width` property to the value of width attribute in the img tag.
-* Sets the `height` property to the value of height attribute in the img tag.
+* `alt`プロパティをimgタグのalt属性の値に設定します。
+* `title`プロパティにimgタグのtitle属性の値を設定します。
+* `width`プロパティにimgタグのwidth属性の値を設定します。
+* `height`プロパティにimgタグのheight属性の値を設定します。
 
 **短縮形のコンポーネントタグ宣言：**
 
@@ -225,9 +225,9 @@ titleコンポーネントは、との7種類をサポート `h1, h2, h3, h4, h5
 <img data-cq-component="image" src="test.png" alt="Image component shorthand"/>
 ```
 
-#### 画像コンポーネントの div 内で絶対 URL の img src はサポートされない {#absolute-url-img-src-not-supported-within-image-component-div}
+#### 画像コンポーネントの div 内で絶対 URL の img src はサポートされない  {#absolute-url-img-src-not-supported-within-image-component-div}
 
-If an `<img>` tag with an absolute url src is attempted for component conversion, an appropriate **UnsupportedTagContentException** is raised. 例えば、次のような記述はサポートされません。
+絶対URL srcを持つ`<img>`タグをコンポーネントの変換に使用しようとすると、適切な&#x200B;**UnsupportedTagContentException**&#x200B;が発生します。 例えば、次のような記述はサポートされません。
 
 `<div data-cq-component="image">`
 
@@ -237,14 +237,14 @@ If an `<img>` tag with an absolute url src is attempted for component conversion
 
 これ以外の、画像コンポーネントの div に含まれていない img タグの場合は、絶対 URL の画像がサポートされます。
 
-### コールトゥアクションコンポーネント {#call-to-action-components}
+### コールトゥアクションコンポーネント  {#call-to-action-components}
 
 ランディングページの一部を「編集可能なコールトゥアクションコンポーネント」として読み込むためにマークすることができます。これにより読み込まれたコールトゥアクションコンポーネントは、ランディングページの読み込み後に編集できます。AEM には次のようなコールトゥアクション（CTA）コンポーネントが含まれています。
 
 * クリックスルーリンク：訪問者がクリックするとターゲット URL に移動するテキストリンクを追加できます。
 * グラフィックリンク：訪問者がクリックするとターゲット URL に移動する画像を追加できます。
 
-#### クリックスルーリンク {#click-through-link}
+#### クリックスルーリンク  {#click-through-link}
 
 この CTA コンポーネントを使用して、ランディングページにテキストリンクを追加できます。
 
@@ -303,7 +303,7 @@ HTML タグを使用して、読み込まれた zip ファイルにグラフィ�
 
 >[!NOTE]
 >
->To create a clickthroughgraphical link, you need to wrap an anchor tag and the image tag inside a div with `data-cq-component="clickthroughgraphicallink"` attribute.
+>クリックスルーグラフィカルリンクを作成するには、`data-cq-component="clickthroughgraphicallink"`属性を持つdiv内でアンカータグと画像タグをラップする必要があります。
 >
 >例：`<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
@@ -315,7 +315,7 @@ HTML タグを使用して、読み込まれた zip ファイルにグラフィ�
 >
 >`</div>`
 >
->関連して `css .hasbackground { background-image: pathtoimage }`
+>`css .hasbackground { background-image: pathtoimage }`を関連付け
 
 
 ### リードフォーム {#lead-form}
@@ -331,9 +331,9 @@ HTML タグを使用して、読み込まれた zip ファイルにグラフィ�
 * ユーザーは &quot;label&quot; タグを使用してタイトルを設定したり、スタイル属性 &quot;class&quot; を使用してスタイルを設定することができます（CTA リードフォームコンポーネントでのみ有効）。
 * 「ありがとうございます」ページと購読のリストは、フォームの非表示のパラメーター（index.htmに存在）として提供するか、「リードフォームの開始」の編集バーから追加/編集できます。
 
-   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
+   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot; />
 
-   &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
+   &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot; />
 
 *  — 必須などの制約は、各コンポーネントの編集設定から指定できます。
 
@@ -419,7 +419,7 @@ parsys コンポーネント（`foundation/components/parsys`）をデザイン�
 * HTML での文字セットのエンコーディングを指定する。
 * インポーターページテンプレートをオーバーレイする。
 
-### 読み込まれた HTML で定義されているメタデータを抽出し、ページプロパティを設定 {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
+### 読み込まれた HTML で定義されているメタデータを抽出し、ページプロパティを設定  {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
 
 読み込まれた HTML の冒頭で宣言されている次のメタデータは、デザインインポーターによって「jcr:description」プロパティとして抽出され保持されます。
 
@@ -441,15 +441,15 @@ HTML タグに設定されている lang 属性セットは、デザインイン
 
 読み込まれた HTML でエンコーディングが指定されていない場合、デザインインポーターによって設定されるデフォルトのエンコーディングセットは UTF-8 です。
 
-### テンプレートのオーバーレイ {#overlaying-template}
+### テンプレートのオーバーレイ  {#overlaying-template}
 
-The Blank Landing Page template can be overlayed by creating a new one at: `/apps/<appName>/designimporter/templates/<templateName>`
+空白のランディングページテンプレートは、次の場所で新しいテンプレートを作成することでオーバーレイできます。`/apps/<appName>/designimporter/templates/<templateName>`
 
-Steps for creating a new template in AEM are explained [here](/help/sites-developing/templates.md).
+AEMで新しいテンプレートを作成する手順は、[ここ](/help/sites-developing/templates.md)で説明します。
 
 ### ランディングページにあるコンポーネントの参照 {#referring-a-component-from-landing-page}
 
-data-cq-component 属性を使用して HTML で参照したいコンポーネントがあり、デザインインポーターによってコンポーネントにこの参照の場所が含まれるようにするとします。e.g., you want to reference the table component ( `resourceType = /libs/foundation/components/table`). この場合、HTML に次の行を追加する必要があります。
+data-cq-component 属性を使用して HTML で参照したいコンポーネントがあり、デザインインポーターによってコンポーネントにこの参照の場所が含まれるようにするとします。例えば、テーブルコンポーネント(`resourceType = /libs/foundation/components/table`)を参照するとします。 この場合、HTML に次の行を追加する必要があります。
 
 `<div data-cq-component="/libs/foundation/components/table">foundation table</div>`
 
@@ -473,7 +473,7 @@ data-cq-component 内のパスは、コンポーネントの resourceType で指
 
 * 上記と同じような構造に依存するスクリプトを、AEM コンポーネントへの変換用にマークする要素と共に使用することも推奨されません。
 * &lt;div data-cq-component=&quot;&amp;ast;&quot;>のようなコンポーネント変換用のマークアップタグでのスタイルの使用はお勧めしません。
-* デザインレイアウトは、HTML5 Boilerplate のベストプラクティスに従って作成する必要があります。Read more on: [https://html5boilerplate.com/](https://html5boilerplate.com/).
+* デザインレイアウトは、HTML5 Boilerplate のベストプラクティスに従って作成する必要があります。詳細情報：[https://html5boilerplate.com/](https://html5boilerplate.com/).
 
 ## OSGi モジュールの設定 {#configuring-osgi-modules}
 
@@ -505,7 +505,7 @@ OSGIコンソールを介して設定可能なプロパティを公開するコ�
   </tr>
   <tr>
    <td>モバイルランディングページビルダー</td>
-   <td>File Pattern</td>
+   <td>ファイルパターン</td>
    <td>ランディングページビルダーは、通常の式に一致するHTMLファイルを、ファイルパターンで定義したとおりに処理するように設定できます。</td>
   </tr>
   <tr>
@@ -534,14 +534,14 @@ OSGIコンソールを介して設定可能なプロパティを公開するコ�
 >例えば、デフォルト設定が
 >`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->また、 >`CQ_DESIGN_PATH` を検索パタ `VIPURL` ーンに含めると、検索パターンは次のようになります。
+>また、 >`CQ_DESIGN_PATH` を検索パターンに`VIPURL`含めると、検索パターンは次のようになります。
 `/\* *VIPURL *\*/ *(['"])`
 
 ## トラブルシューティング {#troubleshooting}
 
 デザインパッケージの読み込み時に発生する可能性のあるいくつかのエラーについて説明します。
 
-### ランディングページに関連するコンポーネントによるサイドキックの初期化 {#initialization-of-sidekick-with-landing-page-relevant-components}
+### ランディングページに関連するコンポーネントによるサイドキックの初期化  {#initialization-of-sidekick-with-landing-page-relevant-components}
 
 デザインパッケージに parsys コンポーネントのマークアップが含まれる場合、読み込み後のサイドキックには最初、ランディングページに関連するコンポーネントが表示されます。新しいコンポーネントを、ランディングページ内の parsys コンポーネントにドラッグ＆ドロップすることができます。また、デザインモードに移動して、新しいコンポーネントをサイドキックに追加することもできます。
 
@@ -560,7 +560,7 @@ OSGIコンソールを介して設定可能なプロパティを公開するコ�
 * HTMLとは、パッケージ内に存在しないスクリプトを指します。
 * HTMLは、パッケージ内に存在しないスタイルを参照します。
 
-### Where are the files of the ZIP file being stored in AEM? {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
+### ZIPファイルのファイルはAEMのどこに保存されますか。{#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 
 ランディングページが読み込まれた後、デザインパッケージ内のファイル（画像、CSS、js など）はAEM の次の場所に格納されます。
 
@@ -600,5 +600,5 @@ height="116" /></div>Some Text </p>
 ```
 
 >[!NOTE]
-Also, designers should be aware that only code inside the **id=cqcanvas** tag is recognized by the importer, otherwise design is not preserved.
+また、デザイナーは、**id=cqcanvas**&#x200B;タグ内のコードのみがインポーターで認識されることに注意する必要があります。認識されない場合、デザインは保持されません。
 
