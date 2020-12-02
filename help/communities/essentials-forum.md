@@ -22,7 +22,7 @@ ht-degree: 48%
 
 このページでは、フォーラム機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -48,14 +48,14 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="forum.md">Forum Feature</a></td>
+   <td><a href="forum.md">フォーラム機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [フォーラム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
@@ -63,11 +63,11 @@ ht-degree: 48%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### フォーラム機能 {#forum-function}
+### フォーラム機能  {#forum-function}
 
-A community site structure that includes the [Forum function](functions.md#forum-function), includes a configured `forum` component, as well as settings affecting moderation, tagging and translation.
+[フォーラム機能](functions.md#forum-function)を含むコミュニティサイト構造は、設定済みの`forum`コンポーネントと、モデレート、タグ付け、翻訳に影響する設定を含みます。
 
-### Accessing Forum Posts (UGC) {#accessing-forum-posts-ugc}
+### フォーラム投稿(UGC)へのアクセス{#accessing-forum-posts-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -77,8 +77,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
-* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
+* [SocialUtilsリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
