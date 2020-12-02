@@ -10,14 +10,14 @@ ht-degree: 55%
 ---
 
 
-# AEM Foundationとリポジトリ {#aem-foundation-repository}
+# AEM Foundation and Repository {#aem-foundation-repository}
 
-## 変更について {#list-of-changes}
+## 変更について  {#list-of-changes}
 
 ### リポジトリ {#repository}
 
 * Adobe Experience Manager 6.5 の基盤は、アップデートバージョンの OSGi ベースのフレームワーク（Apache Sling および Apache Felix）と Java コンテンツリポジトリの Apache Jackrabbit Oak 1.10.2 上に構築されています。
-* 修正された問題の概要については、 [Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、 [Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt) 、 [Apache Jackrabbit Oak Jira v. 1.10.2を参照してください](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)。
+* 修正された問題の概要については、[Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt)および[Apache Jackrabbit Oar v. 1.1.1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)を参照してください。
 
 >[!CAUTION]
 >
@@ -27,7 +27,7 @@ ht-degree: 55%
 
 * Java 11および既にサポートされているJava 8の新しいサポート。
 * 最適なパフォーマンスを得るには、デフォルトの GC 値を他の値に置き換えてください。詳しくは、](/help/sites-deploying/custom-standalone-install.md)インストールとアップデート[の節を参照してください。
-* Java 11およびJava 8のメンテナンス更新は、AEM関連のプロジェクトでのお客様の使用を目的として、Oracleから公開できない場合に、Adobeによって配布されます。
+* Java 11およびJava 8のメンテナンスアップデートは、Oracleで公開されていない場合、AEM関連のプロジェクトでのお客様の利用を目的として、Adobeから配布されます。
 
 ### OSGi {#osgi}
 
@@ -35,7 +35,7 @@ ht-degree: 55%
 
 ### プロジェクトとワークフロー {#projects-and-workflows}
 
-* New Workflow Model editor introduced in 6.4 has been improved to include more operations like Copy and Publish, Variable support in Workflow steps and enhanced `OR` and `AND` splits.
+* 6.4で導入された新しいワークフローモデルエディターが強化され、コピーと公開、ワークフローステップでの変数のサポート、強化された`OR`分割、`AND`分割などの操作が追加されました。
 
 ### 検索 {#searching}
 
@@ -58,14 +58,14 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 >[!CAUTION]
 >
->Adobeでは、クラシックUIの機能をさらに強化することはできません。 Experience Manager6.5には、下位互換性を確保するためのクラシックUIが含まれています。 Classic UI remains fully supported while being deprecated [Read more](/help/sites-deploying/ui-recommendations.md).
+>Adobeでは、クラシックUIの機能をさらに強化することはできません。 Experience Manager6.5には、下位互換性を確保するためのクラシックUIが含まれています。 従来のUIは、非推奨の[詳細情報](/help/sites-deploying/ui-recommendations.md)を読む間も、引き続き完全にサポートされます。
 
 ### アップグレード {#upgrade}
 
 * アップグレード手順は 6.5 でもほぼ変わりません。
 * 6.4 で導入された下位互換性、アップグレードの複雑さの評価、持続可能なアップグレードの機能を引き続きサポートしています。必要に応じて、これらの分野でバージョン固有の更新がおこなわれてきました。
 * パターン検出パッケージが簡素化され、利用可能なソースバージョンごとに、6.5 へのアップグレードを評価するパッケージが 1 つ用意されるようになりました。
-* アップグレード手順について詳しくは、アップグレード [ドキュメントを参照してください](/help/sites-deploying/upgrade.md)。
+* アップグレード手順について詳しくは、[アップグレードドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
 
 ### Web サーバー {#web-server}
 
