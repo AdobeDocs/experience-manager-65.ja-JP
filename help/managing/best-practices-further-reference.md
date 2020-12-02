@@ -22,19 +22,19 @@ ht-degree: 65%
 
 このページでは、[プロジェクトの管理 - ベストプラクティスチェックリスト](/help/managing/best-practices.md)で扱ったドキュメントの内容や原則を拡張および補足する詳細情報を提供します。
 
-## AEM - 何を使用するか {#aem-what-will-you-be-using}
+## AEM - 何を使用するか  {#aem-what-will-you-be-using}
 
 >[!CAUTION]
 >
 >ここに示すリストは完全ではなく、概要として示しています。
 
-### AEM 内の機能 {#features-within-aem}
+### AEM 内の機能  {#features-within-aem}
 
-When implementing AEM (particularly for the first time) you will need to review the [capabilites and workflows of AEM](https://www.adobe.com/marketing/experience-manager.html) to be sure of which areas you want/need.
+AEMを（特に初めて）実装する場合は、AEM](https://www.adobe.com/marketing/experience-manager.html)の[機能とワークフローを確認し、どの領域が必要かを確認する必要があります。
 
 次のような使用する AEM の機能と、デザインへの影響を検討します。
 
-* [コマース](/help/sites-administering/ecommerce.md)
+* [Commerce](/help/sites-administering/ecommerce.md)
 * [スクリーン](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [タグ](/help/sites-administering/tags.md)
@@ -45,13 +45,13 @@ When implementing AEM (particularly for the first time) you will need to review 
 
 また、[リリースノート](/help/release-notes/release-notes.md)で AEM の様々なバージョンをチェックして、新機能が追加された時期を確認してください。
 
-### 統合 {#integrations}
+### 統合  {#integrations}
 
 AEM は、他のアドビ製品やサードパーティのサービスと統合できます。統合により、さらなるパワーと機能を自由に利用できます。
 
 詳しくは、[ソリューションの統合](/help/sites-administering/integration.md)を参照してください。
 
-## 移行かアップグレードか {#migrate-or-upgrade}
+## 移行かアップグレードか  {#migrate-or-upgrade}
 
 主に考慮する点は、以下のいずれを実行するかです。
 
@@ -63,13 +63,13 @@ AEM は、他のアドビ製品やサードパーティのサービスと統合�
 * [パッケージマネージャー](/help/sites-administering/package-manager.md)を使用して、旧システムから新システムにすべてのコンテンツおよびアプリケーションコードをエクスポートします。
 * 配置済みの旧システムを[アップグレード](/help/sites-deploying/upgrade.md)します。ほとんどの場合、このオプションが推奨されます。
 
-## 基本ルール {#basic-ground-rules}
+## 基本ルール  {#basic-ground-rules}
 
 あらゆるプロジェクトと同様に、できるだけ早い時期に基本原則を確立することが重要です。有効なタイプには以下が含まれます。
 
 >[!NOTE]
 >
->These points are generic, the [Best Practices Checklist](/help/managing/best-practices.md) deals with specifics in relation to AEM.
+>これらのポイントは一般的なもので、[ベストプラクティスチェックリスト](/help/managing/best-practices.md)はAEMに関する詳細を扱います。
 
 * **役割**
 
@@ -133,7 +133,7 @@ AEM は、他のアドビ製品やサードパーティのサービスと統合�
 * 関係者全員には、情報が明確に伝えられます。 標準的なプロジェクト管理方法ではありますが、役割定義が明確であるかや、伝達が良好であるかによって、プロジェクトの成否が左右されるということを繰り返し肝に銘じてください。
 * バグ追跡や問題追跡など、追跡される情報は、1 つのバージョンだけを保持する。
 
-## 主要業績評価指標とターゲット指標 {#key-performance-indicators-and-target-metrics}
+## 主要業績評価指標とターゲット指標  {#key-performance-indicators-and-target-metrics}
 
 組織は主要業績評価指標（KPI）を使用して、ターゲット達成の成功を評価します。これらの指標は測定可能な値です。これにより、特定の目的がいかに効果的に達成されているかを示すことができます。
 
@@ -188,7 +188,7 @@ AEM は、他のアドビ製品やサードパーティのサービスと統合�
 >
 >本節では、検討すべき基本原則及び課題について取り組む。 各インストールは異なるので、実際の測定値は異なります。
 
-### すべての基礎となるプロジェクトデザイン {#everything-rests-on-your-project-design}
+### すべての基礎となるプロジェクトデザイン  {#everything-rests-on-your-project-design}
 
 測定されるすべての指標は、ある意味で、プロジェクトのデザインの影響を受けます。 逆に、多くの問題は設計の変更によって解決するのが最善策です。
 
@@ -205,7 +205,7 @@ Web サイトの構造を作成する際には、AEM Web サイトで推奨さ�
 
 デザインがガイドラインに従っていない場合、または意味が不明な場合は、プログラミング段階を開始するかコンテンツを入力する前に、これらの問題を明確にしてください。
 
-### インフラストラクチャ {#infrastructure}
+### インフラストラクチャ  {#infrastructure}
 
 インフラストラクチャを定義または評価する際に、次のようなターゲット値を定義するのに役立ちます。
 
@@ -230,7 +230,7 @@ Web サイトの構造を作成する際には、AEM Web サイトで推奨さ�
 
 * 検索リクエストの応答時間
 
-This section can be read in conjunction with [Performance Optimization](/help/sites-deploying/configuring-performance.md) that expands the technical details of actually measuring the performance.
+このセクションは、パフォーマンスを実際に測定する技術的な詳細を拡張する[パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と組み合わせて読むことができます。
 
 #### 個々のページの応答時間 {#response-times-for-individual-pages}
 
@@ -259,7 +259,7 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
       * コンテンツがキャッシュされる
       * ロードバランシングが適用される
 
-#### ターゲット応答時間の設定 {#setting-target-response-times}
+#### ターゲット応答時間の設定  {#setting-target-response-times}
 
 以上に基づき、どうすれば達成可能な（平均）応答時間を決定できるでしょうか。これは多くの場合、経験の問題です。
 
@@ -287,7 +287,7 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
 
 * **AEM request.log を使用した応答時間の監視**
 
-   パフォーマンス分析を開始するのに適したのは、要求ログです。 その他の情報として、この情報を使用して個々のリクエストの応答時間を確認できます。 詳しくは、「 [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md) 」を参照してください。
+   パフォーマンス分析を開始するのに適したのは、要求ログです。 その他の情報として、この情報を使用して個々のリクエストの応答時間を確認できます。 詳しくは、[パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)を参照してください。
 
 * **HTML コメントを使用した応答時間の監視**
 
@@ -295,7 +295,7 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
 
    `</body> </html>v <-- Page took 58 milliseconds to be rendered by the server --> Response times for search requests`
 
-#### 検索要求 {#search-requests}
+#### 検索要求{#search-requests}
 
 検索要求は、以下の両方の点で、Web サイトに重大な影響を与える可能性があります。
 
@@ -325,7 +325,7 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
 
    検索要求に関して収集する情報、および検索要求のパフォーマンスをカスタマイズするには、プロジェクトのソースコードに情報収集を含めることをお勧めします。詳しくは、[パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)を参照してください。
 
-### 並行性 {#concurrency}
+### 並行性  {#concurrency}
 
 Web サイトは、オーサー環境とパブリッシュ環境の両方で多数のユーザー／訪問者に公開されます。ユーザーの数は通常、テスト時に使用したユーザー数より多くなりますが、同時に変動があり、予測が困難です。パフォーマンスへの悪影響を意識せずに作業できる同時ユーザー／訪問者数の平均値を考慮して、Web サイトをデザインする必要があります。この場合も `request.log` を使用して、同時実行をテストできます。詳しくは、[パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)を参照してください。
 
@@ -340,7 +340,7 @@ Web サイトは、オーサー環境とパブリッシュ環境の両方で多�
    * これは予測が難しいので、ターゲット値を選択する必要があります。 これは、現在のWebサイトの経験と、新しいWebサイトに対する現実的な期待に基づくものです。
    * 特別なイベント（例えば非常に人気のあるコンテンツを新規公開する場合）では、予測を超えたり、（イベントのチケットの発売時に報道されると）処理能力を超えたりすることもあります。
 
-### 処理能力とボリューム {#capacity-and-volume}
+### 処理能力とボリューム  {#capacity-and-volume}
 
 関連するメトリックについて説明する前に、いくつかの用語の大まかな定義を示します。
 
@@ -365,7 +365,7 @@ Web サイトは、オーサー環境とパブリッシュ環境の両方で多�
    | テンプレート | Webサーバーの計算能力。 | テンプレートの複雑さ。 |
    | リポジトリ | リポジトリのパフォーマンス。 | リポジトリから読み込まれたページ数。 |
 
-### その他のメトリック {#other-metrics}
+### その他のメトリック  {#other-metrics}
 
 以上の節では、定義される主なメトリックについて説明しました。
 
@@ -377,7 +377,7 @@ Web サイトは、オーサー環境とパブリッシュ環境の両方で多�
 
 セキュリティはきわめて重要であり、対処すべき課題として深刻性を増しています。プロジェクトの早期の段階からセキュリティについて検討し、計画する必要があります。******
 
-[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)では、デプロイ時に AEM インストールを確実に保護するための手順が詳細に説明されています。Other security aspects are covered under [Security (when developing)](/help/sites-developing/security.md) and [User Administration and Security](/help/sites-administering/security.md).
+[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)では、デプロイ時に AEM インストールを確実に保護するための手順が詳細に説明されています。その他のセキュリティの側面は、[セキュリティ（開発時）](/help/sites-developing/security.md)と[ユーザ管理とセキュリティ](/help/sites-administering/security.md)に含まれています。
 
 ## 並列タスクと反復タスク {#parallel-and-iterative-tasks}
 
@@ -385,7 +385,7 @@ Web サイトは、オーサー環境とパブリッシュ環境の両方で多�
 >
 >このセクションでは、以下の点について留意してください。
 >
->* Offers an overview related to the *first* implemention of an AEM project.
+>* AEMプロジェクトの&#x200B;*最初の*&#x200B;実装に関する概要をオファーに説明します。
 >* 抽象的な概要を示すことを意図しています。具体的なフェーズ／マイルストーン／タスクについては、[プロジェクトチェックリスト](/help/managing/best-practices.md)を参照してください。
 >* 時間単位は理論上のものです。
 
@@ -471,7 +471,7 @@ Web サイトは、オーサー環境とパブリッシュ環境の両方で多�
    * リファクタリング後の「スプリント中移行」を計画します。
    * 「コンテンツバーンダウン」（実稼動コンテンツのサイトマップ）を計画します。
 
-## 時間と労力の見積もり {#estimating-time-and-effort}
+## 時間と労力の見積もり  {#estimating-time-and-effort}
 
 結果のタスクリストに応じて、（高レベルの）タスク定義に関する時間と労力の初期予測を作成できます。 これには、誰（顧客またはパートナー）が何をいつ実行するかを示す指示が含まれます。
 
@@ -530,10 +530,10 @@ Web サイトは、オーサー環境とパブリッシュ環境の両方で多�
    <td><p>AEM自体は、アプリケーションの監視、テスト、調査、デバッグを行うのに役立つ様々なメカニズムを備えています。含める：</p>
     <ul>
      <li><a href="/help/sites-developing/developer-mode.md">開発者モード</a></li>
-     <li>テスト <a href="/help/sites-developing/hobbes.md">コンソール</a></li>
+     <li><a href="/help/sites-developing/hobbes.md">テストコンソール</a></li>
      <li><a href="/help/sites-administering/operations-dashboard.md">操作ダッシュボード</a></li>
      <li><a href="/help/sites-authoring/content-insights.md">コンテンツインサイト</a></li>
-     <li>コン <a href="/help/sites-authoring/author-environment-tools.md#content-tree">テンツツリー</a></li>
+     <li><a href="/help/sites-authoring/author-environment-tools.md#content-tree">コンテンツツリー</a></li>
     </ul> </td>
   </tr>
   <tr>
@@ -558,11 +558,11 @@ Web サイトは、オーサー環境とパブリッシュ環境の両方で多�
   </tr>
   <tr>
    <td>Eclipse</td>
-   <td><p>Eclipse は、様々なプロジェクトからなるオープンソース IDE です。ソフトウェアをライフサイクルに沿って構築、デプロイ、管理するために必要な広範なフレームワーク、ツールおよびランタイムで構成されるオープン開発プラットフォームを構築することに焦点を当てています。</p> <p>See <a href="/help/sites-developing/howto-projects-eclipse.md">How to Develop AEM Projects Using Eclipse</a> for more information.</p> </td>
+   <td><p>Eclipse は、様々なプロジェクトからなるオープンソース IDE です。ソフトウェアをライフサイクルに沿って構築、デプロイ、管理するために必要な広範なフレームワーク、ツールおよびランタイムで構成されるオープン開発プラットフォームを構築することに焦点を当てています。</p> <p>詳しくは、<a href="/help/sites-developing/howto-projects-eclipse.md">Eclipseを使用したAEMプロジェクトの開発方法</a>を参照してください。</p> </td>
   </tr>
   <tr>
    <td>IntelliJ</td>
-   <td><p>各種機能を包括的に備えたプロフェッショナル向け IDE です（そのため、ライセンス費が発生します）。 </p> <p>See <a href="/help/sites-developing/ht-intellij.md">How to Develop AEM Projects using IntelliJ IDEA</a> for more information.</p> </td>
+   <td><p>各種機能を包括的に備えたプロフェッショナル向け IDE です（そのため、ライセンス費が発生します）。 </p> <p>詳細については、<a href="/help/sites-developing/ht-intellij.md">IntelliJ IDEAを使用したAEMプロジェクトの開発方法</a>を参照してください。</p> </td>
   </tr>
   <tr>
    <td>Maven</td>
