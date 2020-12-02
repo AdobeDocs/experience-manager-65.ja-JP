@@ -59,7 +59,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->詳細は、「OSGiの [設定](/help/sites-deploying/configuring-osgi.md) 」を参照してください。
+>詳細は、[OSGi](/help/sites-deploying/configuring-osgi.md)の設定を参照してください。
 
 次に例を示します。
 
