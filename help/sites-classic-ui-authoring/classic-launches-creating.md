@@ -23,7 +23,7 @@ ht-degree: 94%
 
 ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
 
-* The title appears in the **Sidekick**, from where authors can access them to work on them.
+* タイトルは&#x200B;**サイドキック**&#x200B;に表示されます。ここから作成者はサイドキックにアクセスして作業できます。
 * デフォルトで、ソースページの子ページがローンチに含まれています。希望に応じて、ソースページのみを使用することもできます。
 * デフォルトでは、[ライブコピー](/help/sites-administering/msm.md)によってソースページの変更に合わせてローンチページが自動的に更新されます。静的なコピーを作成して自動更新をおこなわないように指定できます。
 
@@ -33,7 +33,7 @@ ht-degree: 94%
 
 次の手順を使用して、ローンチを作成します。
 
-1. Open the Website administration page ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)).
+1. Webサイト管理ページ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))を開きます。
 1. 「**新規...**」をクリックし、「**新しいローンチ...**」をクリックします。
 1. **ローンチを作成**&#x200B;ダイアログで、次のプロパティの値を指定します。
 
