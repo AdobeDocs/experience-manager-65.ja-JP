@@ -41,7 +41,7 @@ AEM でのリレーショナルデータベースのサポートレベルにつ�
 
 リポジトリは、`DocumentNodeStoreService` OSGi サービスを設定することで作成されます。このサービスは、MongoDB に加えてリレーショナルデータベース永続性もサポートするように拡張されています。
 
-このサービスが動作するためには、AEM でデータソースを設定する必要があります。This is done via the `org.apache.sling.datasource.DataSourceFactory.config` file. ローカル設定内の OSGi バンドルとは別に、対応するデータベースの JDBC ドライバを指定する必要があります。
+このサービスが動作するためには、AEM でデータソースを設定する必要があります。これは`org.apache.sling.datasource.DataSourceFactory.config`ファイルを通して行われます。 ローカル設定内の OSGi バンドルとは別に、対応するデータベースの JDBC ドライバを指定する必要があります。
 
 JDBC ドライバ用の OSGi バンドルの作成手順については、Apache Sling Web サイトの[こちらのドキュメント](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle)を参照してください。
 
@@ -49,7 +49,7 @@ JDBC ドライバ用の OSGi バンドルの作成手順については、Apache
 
 1. データベースのデーモンが起動しており、AEM で使用するためのアクティブなデータベースがあることを確認します。
 1. AEM 6.3 jar をインストールディレクトリにコピーします。
-1. Create a folder called `crx-quickstart\install` in the installation directory.
+1. インストールディレクトリに`crx-quickstart\install`という名前のフォルダーを作成します。
 1. ドキュメントノードストアを設定するために、この `crx-quickstart\install` ディレクトリ内に、次の名前の設定ファイルを作成します。
 
    * `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
@@ -63,11 +63,11 @@ JDBC ドライバ用の OSGi バンドルの作成手順については、Apache
 
 1. 次に、AEM で使用する JDBC OSGi バンドルを準備します。
 
-   1. In the `crx-quickstart/install` folder, create a folder named `9`.
+   1. `crx-quickstart/install`フォルダーに、`9`という名前のフォルダーを作成します。
 
    1. この新しいフォルダー内に JDBC jar を配置します。
 
-1. Finally, start AEM with the `crx3` and `crx3rdb` runmodes:
+1. 最後に、`crx3`と`crx3rdb`の実行モードを持つ開始AEM:
 
    ```java
    java -jar quickstart.jar -r crx3,crx3rdb
@@ -81,15 +81,15 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `datasource.name:`データソース名。デフォルトは、`oak` です。
 
-* `url:` JDBCで使用する必要があるデータベースのURL文字列。 データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
+* `url:` JDBCで使用する必要があるデータベースのURL文字列。データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
 
-* `driverClassName:` JDBCドライバーのクラス名。 これは、使用するデータベースと、その後接続に必要なドライバによって異なります。 AEMがサポートするすべてのデータベースのクラス名を次に示します。
+* `driverClassName:` JDBCドライバーのクラス名。これは、使用するデータベースと、その後接続に必要なドライバによって異なります。 AEMがサポートするすべてのデータベースのクラス名を次に示します。
 
    * `org.postgresql.Driver` PostgreSQLの場合；
    * `com.ibm.db2.jcc.DB2Driver` for DB2;
-   * `oracle.jdbc.OracleDriver` Oracleの場合
+   * `oracle.jdbc.OracleDriver` oracleの
    * `com.mysql.jdbc.Driver`（MySQL および MariaDB、試行用）
-   * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server (experimental).
+   * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server （試験的）。
 
 * `username:` データベースが実行されるユーザー名。
 
@@ -101,7 +101,7 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `jdbc:postgresql:databasename` PostgreSQLの場合；
 * `jdbc:db2://localhost:port/databasename` for DB2;
-* `jdbc:oracle:thin:localhost:port:SID` Oracleの場合
+* `jdbc:oracle:thin:localhost:port:SID` oracleの
 * `jdbc:mysql://localhost:3306/databasename`（MySQL および MariaDB、試行用）
 * `jdbc:sqlserver://localhost:1453;databaseName=name` (Microsoft SQL Server （試験的）用)
 
