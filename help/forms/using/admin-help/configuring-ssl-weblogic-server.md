@@ -27,7 +27,7 @@ WebLogic Server に SSL を設定するには、認証用の SSL 秘密鍵証明
 
 その後、作成したカスタム ID キーストアとカスタム信頼キーストアを使用するように、WebLogic を設定します。また、キーストアファイルの作成に使用する識別名には、WebLogic をホストするコンピューターの名前が含まれていないので、WebLogic のホスト名の検証機能を無効にします。
 
-## WebLogic Server で使用する SSL 秘密鍵証明書の作成 {#creating-an-ssl-credential-for-use-on-weblogic-server}
+## WebLogic Server で使用する SSL 秘密鍵証明書の作成  {#creating-an-ssl-credential-for-use-on-weblogic-server}
 
 keytool コマンドは通常 Java の jre/bin ディレクトリにあります。このコマンドでは、次の表に示す複数のオプションとオプション値を指定する必要があります。
 
@@ -59,8 +59,8 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
    <td><p>キーストアファイルの場所と名前。</p><p>場所は、ファイルの絶対パスとして指定します。または、keytool コマンドを入力したコマンドプロンプトの現在のディレクトリを基準とした相対ディレクトリとして指定します。</p></td>
    <td>
     <ul>
-     <li><p>Custom Identity keystore: <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[server name]</i><code>/ads-ssl.jks</code></p></li>
-     <li><p>Custom Trust keystore: <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[server name]</i><code>/ads-ca.jks</code></p></li>
+     <li><p>カスタムIDキーストア：<code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[server name]</i><code>/ads-ssl.jks</code></p></li>
+     <li><p>カスタム信頼キーストア：<code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[server name]</i><code>/ads-ca.jks</code></p></li>
     </ul></td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
   <tr>
    <td><p>-keypass</p></td>
    <td><p>キーペアの秘密鍵を保護するためのパスワード。</p></td>
-   <td><p>Use the same password that you used for the <code>-storepass</code> option. キーパスワードは 6 文字以上で指定する必要があります。</p></td>
+   <td><p><code>-storepass</code>オプションと同じパスワードを使用します。 キーパスワードは 6 文字以上で指定する必要があります。</p></td>
   </tr>
   <tr>
    <td><p>-dname</p></td>
@@ -105,16 +105,16 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
 
 keytool コマンドの使用方法について詳しくは、JDK マニュアルに含まれている keytool.html ファイルを参照してください。
 
-## カスタム ID および信頼キーストアの作成 {#create-the-custom-identity-and-trust-keystores}
+## カスタム ID および信頼キーストアの作成  {#create-the-custom-identity-and-trust-keystores}
 
-1. From a command prompt, navigate to *[appserverdomain]*/adobe/*[server name]*.
+1. コマンドプロンプトで、*[appserverdomain]*/adobe/*[server name]*&#x200B;に移動します。
 1. 以下のコマンドを入力します。
 
    `[JAVA_HOME]/bin/keytool -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass store_password -keypass key_password -dname "CN=Hostname, OU=Group Name, O=Company Name, L=City Name, S=State,C=Country Code`
 
    >[!NOTE]
    >
-   >Replace `[JAVA_HOME]`*with the directory where the JDK is installed, and replace the text in italic with values that correspond with your environment.*
+   >`[JAVA_HOME]`*をJDKがインストールされているディレクトリに置き換え、斜体のテキストを環境に対応する値に置き換えます。*
 
    次に例を示します。
 
@@ -122,7 +122,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
    ```
 
-   The Custom Identity keystore file named ‘‘ads-credentials.jks” is created in the [appserverdomain]/adobe/[server name] directory.
+   「ads-credentials.jks」という名前のカスタムIDキーストアファイルが[appserverdomain]/adobe/[server name]ディレクトリに作成されます。
 
 1. 次のコマンドを入力して、ads-credentials キーストアから証明書を抽出します。
 
@@ -134,7 +134,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
    >[!NOTE]
    >
-   >Replace `[JAVA_HOME]` with the directory where the JDK is installed, and replace `store`*_* `password`* with the password for the Custom Identity keystore.*
+   >`[JAVA_HOME]`をJDKがインストールされているディレクトリに置き換え、`store`*_* `password`*をカスタムIDキーストアのパスワードに置き換えます。*
 
    次に例を示します。
 
@@ -142,7 +142,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
    ```
 
-   The certificate file named “ads-ca.cer” is created in the [appserverdomain]/adobe/[*server name*] directory.
+   「ads-ca.cer」という名前の証明書ファイルが[appserverdomain]/adobe/[*server name*]&#x200B;ディレクトリに作成されます。
 
 1. ads-ca.cer ファイルを、アプリケーションサーバーとのセキュリティで保護された通信を必要とする任意のホストコンピューターにコピーします。
 1. 次のコマンドを入力して、証明書を新しいキーストアファイル（カスタム信頼キーストア）に挿入します。
@@ -151,7 +151,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
    >[!NOTE]
    >
-   >Replace `[JAVA_HOME]` with the directory where the JDK is installed, and replace `store`*_* `password` and `key`*_* `password` *with your own passwords.*
+   >`[JAVA_HOME]`をJDKがインストールされているディレクトリに置き換え、`store`*_* `password`と&#x200B;`key`*_* `password` *を独自のパスワードに置き換えます。*
 
    次に例を示します。
 
@@ -159,14 +159,14 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [appserverdomain]/adobe/&#39;server&#39; directory.
+「ads-ca.jks」という名前のカスタム信頼キーストアファイルが[appserverdomain]/adobe/&#39;server&#39;ディレクトリに作成されます。
 
 作成したカスタム ID キーストアとカスタム信頼キーストアを使用するように、WebLogic を設定します。また、キーストアファイルの作成に使用する識別名には、WebLogic Server をホストするコンピューターの名前が含まれていないので、WebLogic のホスト名の検証機能を無効にします。
 
-## SSL を使用する WebLogic の設定 {#configure-weblogic-to-use-ssl}
+## SSL を使用する WebLogic の設定  {#configure-weblogic-to-use-ssl}
 
-1. Start the WebLogic Server administration console by typing `https://`*[host name ]*`:7001/console` in the URL line of a web browser.
-1. Under Environment, in Domain Configurations, select **Servers > &#39;server&#39; > Configuration > General**.
+1. WebブラウザーのURL行に`https://`*[host name ]*`:7001/console`と入力して、WebLogic Server管理コンソールを開始します。
+1. 「環境」の「ドメインの設定」で、**Servers/&#39;server&#39;/Configuration/General**&#x200B;を選択します。
 1. 「General」の「Configuration」で、「**Listen Port Enabled**」と「**SSL Listen Port Enabled**」が選択されていることを確認します。有効でない場合は、次の手順を実行します。
 
    1. 「Change Center」で、「**Lock &amp; Edit**」をクリックし、選択内容と値を変更します。
@@ -174,13 +174,13 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 
 1. このサーバーが管理対象サーバーである場合は、リスンポートを未使用のポート番号（8001 など）に、SSL リスンポートを未使用のポート番号（8002 など）に変更します。スタンドアロンサーバーの場合、デフォルトの SSL ポートは 7002 です。
 1. 「**Release Configuration**」をクリックします。
-1. Under Environment, in Domain Configurations, click **Servers > [*Managed Server*] > Configuration > General**.
+1. 「環境」の下の「Domain Configurations」で、**Servers/[*Managed Server*]/Configuration/General**&#x200B;をクリックします。
 1. 「General」の「Configuration」で「**Keystores**」を選択します。
 1. 「Change Center」で、「**Lock &amp; Edit**」をクリックし、選択内容と値を変更します。
 1. 「**Change**」をクリックしてキーストアリストをドロップダウンリストとして取得し、「**Custom Identity And Custom Trust**」を選択します。
 1. 「ID」で、次の値を指定します。
 
-   **Custom Identity Keystore**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain] *は実際のパス、 *[server name]* はアプリケーションサーバーの名前を表します。
+   **Custom Identity Keystore**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain] *は実際のパス、 *[server]* nameはアプリケーションサーバーの名前を表します。
 
    **Custom Identity Keystore Type**：JKS
 
@@ -204,7 +204,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 
 1. 「**Release Configuration**」をクリックします。
 
-## ホスト名の検証機能の無効化 {#disable-the-hostname-verification-feature}
+## ホスト名の検証機能の無効化  {#disable-the-hostname-verification-feature}
 
 1. 「Configuration」タブで、「SSL」をクリックします。
 1. 「Advanced」の「Hostname Verification」リストで、「None」を選択します。
