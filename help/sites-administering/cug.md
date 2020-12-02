@@ -55,7 +55,7 @@ Web サイト内にこのような領域を設定するには、次の操作を�
    ![screenshot_2018-10-30at145502](assets/screenshot_2018-10-30at145502.png)
 
 1. 新しいグループを作成するには、右上隅にある「**作成**」ボタンをクリックします。
-1. Name your new group; for example, `cug_access`.
+1. 新しいグループに名前を付けます。例：`cug_access`
 
    ![screenshot_2018-10-30at151459](assets/screenshot_2018-10-30at151459.png)
 
@@ -91,7 +91,7 @@ CUG をページに適用するには：
 
 1. 次のウィンドウで CUG を探して追加します。この場合は、**cug_access** という名前のグループを追加します。最後に、「**保存**」を押します。
 1. 「**有効**」をクリックして、このページ（およびすべての子ページ）が CUG に属していることを定義します。
-1. Specify the **Login Page** that members of the group will use; for example:
+1. グループのメンバーが使用する&#x200B;**ログインページ**&#x200B;を指定します。例：
 
    `/content/geometrixx/en/toolbar/login.html`
 
@@ -103,13 +103,13 @@ CUG をページに適用するには：
 
 パブリッシュ環境におけるプロファイルおよびログイン／ログアウト用のフォームの指定については、[ID 管理](/help/sites-administering/identity-management.md)を参照してください。
 
-## 領域へのリンク {#linking-to-the-realm}
+## 領域へのリンク  {#linking-to-the-realm}
 
 CUG 領域へのリンクのターゲットは匿名ユーザーには表示されないので、そのようなリンクはリンクチェックによって削除されます。
 
 この問題を回避するには、CUG 領域内のページを指す、保護されていないリダイレクトページを作成することをお勧めします。これで、ナビゲーションエントリがレンダリングされます。リンクチェックが問題の原因になることはありません。ユーザーがログイン資格情報を正しく指定した後、実際にリダイレクトページにアクセスした場合にのみ、CUG 領域内にリダイレクトされます。
 
-## CUG 用の Dispatcher の設定 {#configure-dispatcher-for-cugs}
+## CUG 用の Dispatcher の設定  {#configure-dispatcher-for-cugs}
 
 Dispatcher を使用する場合は、次のプロパティを使用して Dispatcher ファームを定義する必要があります。
 
@@ -117,9 +117,9 @@ Dispatcher を使用する場合は、次のプロパティを使用して Dispa
 * \sessionmanagement：以下を参照してください。
 * [cache](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)：CUG が適用されたファイル専用のキャッシュディレクトリです。
 
-### CUG 用の Dispatcher セッション管理の設定 {#configuring-dispatcher-session-management-for-cugs}
+### CUG 用の Dispatcher セッション管理の設定  {#configuring-dispatcher-session-management-for-cugs}
 
-Configure [session management in the dispatcher.any file](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) for the CUG. The authentication handler that is used when access is requested for CUG pages determines how you configure session management.
+CUG用にdispatcher.anyファイル](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)の[セッション管理を設定します。CUGページへのアクセスが要求されたときに使用される認証ハンドラーによって、セッション管理の設定方法が決まります。
 
 ```xml
 /sessionmanagement
@@ -133,7 +133,7 @@ Configure [session management in the dispatcher.any file](https://helpx.adobe.co
 >ディスパッチャーファームでセッション管理が有効になっている場合、ファームハンドルを持つすべてのページはキャッシュされません。CUG以外のページをキャッシュするには、dispatcher.anyに2つ目のファームを作成します。
 >がCUG以外のページを処理します。
 
-1. Configure [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) by defining `/directory`; for example:
+1. [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)を設定するには、`/directory`；を定義します。例：
 
    ```xml
    /sessionmanagement
