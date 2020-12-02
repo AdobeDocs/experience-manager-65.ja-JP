@@ -36,21 +36,21 @@ QnA（質問と回答）フォーラム機能を使用すると、コミュニ�
 ドキュメントでは、以下について説明しています。
 
 * AEMサイトへのQnAフォーラム機能の追加
-* Configuration settings for the `QnA`component.
+* `QnA`コンポーネントの構成設定です。
 
 ## Q&amp;A フォーラムをページに追加 {#adding-a-q-a-forum-to-a-page}
 
-作成者モードでページに `QnA` コンポーネントを追加するには、コンポーネントブラウザーを使用してQnAフォーラムが表示されるページを探し `Communities / QnA` 、その場所にドラッグします。
+作成者モードで`QnA`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して`Communities / QnA`を探し、QnAフォーラムが表示されるページ上にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](/help/communities/qna-essentials.md#essentials-for-client-side) 、次のようにコンポー `QnA` ネントが表示されます。
+[必要なクライアント側ライブラリ](/help/communities/qna-essentials.md#essentials-for-client-side)が含まれる場合、`QnA`コンポーネントは次のように表示されます。
 
 ![qna-component](assets/qna-component.png)
 
 ### Q&amp;A の設定 {#configuring-qna}
 
-Select the placed `QnA` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`QnA`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![設定](assets/configure-new.png)
 
@@ -94,7 +94,7 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
 
 * **タグ付けを許可**
 
-   If checked, allow members to add tag labels to their post (see **Tag field** tab). デフォルト値はオフです。
+   オンにした場合、メンバーは自分の投稿にタグラベルを追加できます（「**タグフィールド**」タブを参照）。 デフォルト値はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -102,7 +102,7 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
 
 * **フォローを許可**
 
-   If checked, include the following feature for forum posts, which allows members to be [notified](/help/communities/notifications.md) of new posts. デフォルト値はオフです。
+   オンにした場合、フォーラム投稿に次の機能を含めます。この機能を使用すると、メンバーに新しい投稿の[通知](/help/communities/notifications.md)を送信できます。 デフォルト値はオフです。
 
 * **ピン留めを許可**
 
@@ -110,15 +110,15 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
 
 * **電子メール購読を許可**
 
-   If checked, allow members to be notified of new posts by email ([subscription](/help/communities/subscriptions.md)). 「フォローを許可」をオンにして、[電子メールを設定](/help/communities/email.md)する必要があります。デフォルト値はオフです。
+   オンにした場合、メンバーに電子メールで新しい投稿の通知を許可します([購読](/help/communities/subscriptions.md))。 「フォローを許可」をオンにして、[電子メールを設定](/help/communities/email.md)する必要があります。デフォルト値はオフです。
 
 * **最大ファイルサイズ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。初期設定は104857600(10 Mb)です。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。初期設定は104857600(10 Mb)です。
 
 * **許可されるファイルタイプ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 区切り文字「ドット」を含むファイル拡張子のカンマ区切りリスト。 例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプが指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、** **すべてのファイルタイプを許可するように指定されていません。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 区切り文字「ドット」を含むファイル拡張子のカンマ区切りリスト。 例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプが指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、** **すべてのファイルタイプを許可するように指定されていません。
 
 * **添付する画像ファイルの最大サイズ**
 
@@ -149,11 +149,11 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
    オンの場合、最初に表示される回答は選択された回答です。 デフォルト値はオフです。
 * **バッジを表示**
 
-   If checked, display earned and assigned [badges](/help/communities/implementing-scoring.md) with a member&#39;s blog entry. デフォルト値はオフです。
+   オンの場合、獲得したバッジを表示し、会員のブログエントリに[バッジ](/help/communities/implementing-scoring.md)を割り当てます。 デフォルト値はオフです。
 
 * **おすすめコンテンツを許可**
 
-   if checked, the idea is able to be identified as [featured content](/help/communities/featured.md). デフォルト値はオフです。
+   チェックすると、アイデアは[特集コンテンツ](/help/communities/featured.md)として識別できます。 デフォルト値はオフです。
 
 * **メンションを有効化**
 
@@ -169,7 +169,7 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
-Under the **User Moderation** tab, specify how the posted topics (questions) and answers (user generated content) are managed. For more information, see [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+「**ユーザーモデレート**」タブで、投稿されたトピック（質問）と回答（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
 * **回答を拒否**
 
@@ -203,11 +203,11 @@ Under the **User Moderation** tab, specify how the posted topics (questions) and
 
 #### 「タグフィールド」タブ{#tag-field-tab}
 
-Under the **Tag field** tab, the tags that can be applied, if allowed under the **Settings** tab, are limited according to namespaces chosen.
+「**タグフィールド**」タブで、**「設定」**&#x200B;タブで許可されている場合、適用できるタグは、選択した名前空間に応じて制限されます。
 
 * **許可された名前空間**
 
-   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+   「**設定**」タブで`Allow Tagging`がチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **推奨の制限**
 
@@ -215,11 +215,11 @@ Under the **Tag field** tab, the tags that can be applied, if allowed under the 
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **Sort Settings** tab, specify how the posted comments are sorted when displayed.
+「**並べ替え設定**」タブで、投稿されたコメントの表示順を指定します。
 
 * **並べ替え**
 
-   許可されている並べ替えの選択項目をすべて選択： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
+   許可されている並べ替えの選択項目をすべて選択：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **デフォルトとして設定**
 
@@ -227,17 +227,17 @@ Under the **Sort Settings** tab, specify how the posted comments are sorted when
 
 * **Analytics 並べ替えのタイムオプションを選択**
 
-   ドロップダウンしていずれかを選択し `All, Last 24 Hours, Last 7 Days, Last 30 Days`ます。 デフォルトは `All` です。
+   ドロップダウンして`All, Last 24 Hours, Last 7 Days, Last 30 Days`の1つを選択します。 デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
 ### 回答の指定 {#identifying-answers}
 
-One answer can be marked as a correct or useful answer using the `Select Answer` button. Once a Question is marked as Answered, another answer cannot be selected until the first one has been deselected using the `Unmark Chosen Answer` button.
+1つの回答は、`Select Answer`ボタンを使用して、正しい回答または有用な回答としてマークできます。 質問が回答済みとマークされると、最初の質問の選択が`Unmark Chosen Answer`ボタンで解除されるまで、別の回答を選択できません。
 
-実行可能な回答として選択した後は、 `Unmark Chosen Answer` ボタンを使用して選択を解除できます。
+実行可能な回答として選択した後は、`Unmark Chosen Answer`ボタンを使用して選択を解除できます。
 
-Once an answer is selected as the viable answer, an indication that the question has been `Answered` is displayed next to the question topic on the main QnA page.
+実行可能な回答として回答が選択されると、その質問が`Answered`であることを示すメッセージが、メインのQnAページの質問トピックの横に表示されます。
 
 #### モデレーターおよび管理者 {#moderators-and-administrators}
 
@@ -260,7 +260,7 @@ Once an answer is selected as the viable answer, an indication that the question
 
 ## 追加情報 {#additional-information}
 
-More information can be found on the [QnA Essentials](/help/communities/qna-essentials.md) page for developers.
+詳しくは、[QnA Essentials](/help/communities/qna-essentials.md)ページを参照してください。
 
 投稿されたトピックとコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
