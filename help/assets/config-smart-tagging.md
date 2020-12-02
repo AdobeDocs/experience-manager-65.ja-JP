@@ -1,6 +1,6 @@
 ---
 title: Smart Content Serviceを使用したアセットのタグ付けの設定
-description: Learn how to configure smart tagging and enhanced smart tagging in [!DNL Adobe Experience Manager], using the Smart Content Service.
+description: Smart Content Serviceを使用して、 [!DNL Adobe Experience Manager]でスマートタグを設定し、高度なスマートタグを設定する方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
@@ -11,9 +11,9 @@ ht-degree: 60%
 ---
 
 
-# スマートタグ [!DNL Assets] の準備 {#configure-asset-tagging-using-the-smart-content-service}
+# [!DNL Assets]のスマートタグの準備{#configure-asset-tagging-using-the-smart-content-service}
 
-Smart Content Servicesを使用してアセットのタグ付けを開始できるようにする前に、Adobeデベロッパーコンソール [!DNL Experience ManageR Assets] と統合して、のスマートサービスを活用し [!DNL Adobe Sensei]ます。 設定が完了すると、いくつかの画像とタグを使用してサービスのトレーニングを行います。
+Smart Content Servicesを使用してアセットのタグ付けを開始できるようにする前に、[!DNL Experience ManageR Assets]をAdobeデベロッパーコンソールに統合し、[!DNL Adobe Sensei]のスマートサービスを活用します。 設定が完了すると、いくつかの画像とタグを使用してサービスのトレーニングを行います。
 
 Smart Content Serviceを使用する前に、次の事項を確認します。
 
@@ -23,11 +23,11 @@ Smart Content Serviceを使用する前に、次の事項を確認します。
    <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
   -->
 
-* 最新の [Experience Managerサービスパックをインストールします](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+* 最新の[Experience Managerサービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)をインストールします。
 
 ## Adobe 開発者コンソールとの統合 {#integrate-adobe-io}
 
-Adobe開発者コンソールと統合する場合、 [!DNL Experience Manager] サーバーは、要求をSmart Content Serviceに転送する前に、AdobeDeveloper Consoleゲートウェイを使用してサービス資格情報を認証します。 統合するには、組織の管理者権限を持つAdobe IDアカウントと、組織用に購入され有効にされたSmart Content Serviceライセンスが必要です。
+Adobe開発者コンソールと統合する場合、[!DNL Experience Manager]サーバーは、要求をSmart Content Serviceに転送する前に、Adobe開発者コンソールゲートウェイを使用してサービス資格情報を認証します。 統合するには、組織の管理者権限を持つAdobe IDアカウントと、組織用に購入され有効にされたSmart Content Serviceライセンスが必要です。
 
 Smart Content Serviceを設定するには、次のトップレベルの手順に従います。
 
@@ -35,19 +35,19 @@ Smart Content Serviceを設定するには、次のトップレベルの手順�
 
 1. [Adobe 開発者コンソールで統合を作成](#create-adobe-i-o-integration)し、生成した公開鍵をアップロードします。
 
-1. [AdobeデベロッパーコンソールのAPIキーと他の資格情報を使用して](#configure-smart-content-service) 、デプロイメントを設定します。
+1. [AdobeデベロッパーコンソールのAPIキーと他の資格情報を使用して、](#configure-smart-content-service) デプロイを設定します。
 
 1. [設定をテストします](#validate-the-configuration)。
 
-1. Optionally, [enable auto-tagging on asset upload](#enable-smart-tagging-in-the-update-asset-workflow-optional).
+1. 必要に応じて、[アセットのアップロード時に自動タグ付けを有効にする](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
 
-### 公開証明書を取得するためのSmart Content Service設定の作成 {#obtain-public-certificate}
+### 公開証明書を取得するためのSmart Content Service設定の作成{#obtain-public-certificate}
 
 公開証明書により、Adobe 開発者コンソールでプロファイルを認証できます。
 
-1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** Cloud Services **[!UICONTROL /]** レガシCloud Servicesにアクセスします ****。
+1. [!DNL Experience Manager]ユーザーインターフェイスで、**[!UICONTROL ツール]**/**[!UICONTROL Cloud Services]**/**[!UICONTROL レガシーCloud Services]**&#x200B;にアクセスします。
 
-1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
+1. Cloud Servicesページで、「**[!UICONTROL アセットのスマートタグ]**」の下の「今すぐ設定&#x200B;]**」をクリックします。**[!UICONTROL 
 
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、スマートタグ設定のタイトルと名前を指定します。「**[!UICONTROL 作成]**」をクリックします。
 
@@ -66,16 +66,16 @@ Smart Content Serviceを設定するには、次のトップレベルの手順�
 
    >[!NOTE]
    >
-   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. この設定は、 [!UICONTROL サービスURL] パラメーターと同じ値で正常に機能します。 For the overall service status and maintenance schedule, see [https://status.adobe.com](https://status.adobe.com).
+   >[!UICONTROL サービスURL]として指定されたURLは、ブラウザーを介してアクセスできず、404エラーが発生します。 この設定は、[!UICONTROL Service URL]パラメーターと同じ値で正常に機能します。 全体的なサービスの状態とメンテナンスのスケジュールについては、[https://status.adobe.com](https://status.adobe.com)を参照してください。
 
-1. Click **[!UICONTROL Download Public Certificate for OAuth Integration]**, and download the public certificate file `AEM-SmartTags.crt`.
+1. 「**[!UICONTROL OAuth統合用の公開証明書をダウンロード]**」をクリックし、公開証明書ファイル`AEM-SmartTags.crt`をダウンロードします。
 
    ![スマートタグ付けサービス用に作成された設定の表現](assets/smart-tags-download-public-cert.png)
 
 
    *図：スマートタグサービスの設定*
 
-#### Reconfigure when a certificate expires {#certrenew}
+#### 証明書の有効期限が切れた場合に再設定{#certrenew}
 
 証明書の有効期限が切れると、信頼されなくなります。 期限切れの証明書は更新できません。新しい証明書を追加するには、以下の手順に従います。
 
@@ -94,11 +94,11 @@ Smart Content Serviceを設定するには、次のトップレベルの手順�
 
 1. 公開証明書をダウンロードするには、「**[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**」をクリックします。
 
-1. [https://console.adobe.io](https://console.adobe.io) にアクセスし、**[!UICONTROL 統合]**&#x200B;ページで既存のスマートコンテンツサービスに移動します。新しい証明書をアップロードします。For more information, see the instructions in [Create Adobe Developer Console integration](#create-adobe-i-o-integration).
+1. [https://console.adobe.io](https://console.adobe.io) にアクセスし、**[!UICONTROL 統合]**&#x200B;ページで既存のスマートコンテンツサービスに移動します。新しい証明書をアップロードします。詳しくは、[Adobe開発者コンソール統合の作成](#create-adobe-i-o-integration)の手順を参照してください。
 
-### Adobe開発者コンソール統合の作成 {#create-adobe-i-o-integration}
+### Adobe開発者コンソール統合の作成{#create-adobe-i-o-integration}
 
-Smart Content Service APIを使用するには、Adobe開発者コンソールで統合を作成し、 [!UICONTROL APIキー] (Adobe開発者コンソール統合の [!UICONTROL CLIENT ID] フィールドで生成)、技術アカウントID、 [!UICONTROL 組織ID、CLIENT SECRET][!DNL Experience Manager]ID、assets Smart Service Settingsクラウドのタグ付け設定のでのクラウドのタグ付け
+Smart Content Service APIを使用するには、Adobe開発者コンソールで統合を作成して、[!UICONTROL APIキー](Adobe開発者コンソール統合の[!UICONTROL CLIENT ID]フィールドで生成)、[!UICONTROL 技術的なアカウントID]、[!UICONTROL ORGANIZATIONを取得します[!UICONTROL アセットのスマートタグサービス設定]のID]と[!UICONTROL CLIENT SECRET]（[!DNL Experience Manager]のクラウド設定）。
 
 1. ブラウザーで [https://console.adobe.io](https://console.adobe.io/) にアクセスします。適切なアカウントを選択し、関連付けられた組織の役割がシステム管理者であることを確認します。
 
@@ -114,7 +114,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 1. **[!UICONTROL 製品プロファイルを選択]**&#x200B;ページで、「**[!UICONTROL スマートコンテンツサービス]**」を選択します。「**[!UICONTROL 設定済み API を保存]**」をクリックします。
 
-   設定に関する詳細情報がページに表示されます。このページを開いたままにして、スマートタグを設定するには、のクラウド設定の [!UICONTROL Assets Smart Tagging Service Settings] ( [!DNL Experience Manager] Smart Taggingサービスの設定)にこれらの値をコピーして追加します。
+   設定に関する詳細情報がページに表示されます。このページを開いたままにして、スマートタグを設定するには、[!DNL Experience Manager]のクラウド設定の[!UICONTROL Assets Smart Tagging Service Settings]にこれらの値をコピーして追加します。
 
    ![「概要」タブで、統合について指定した情報を確認できます。](assets/integration_details.png)
 
@@ -123,15 +123,15 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 ### スマートコンテンツサービスの設定 {#configure-smart-content-service}
 
-統合を設定するには、 [!UICONTROL AdobeDeveloper Console統合の「]技術アカウントID [!UICONTROL 」、「]組織ID [!UICONTROL 」、「]CLIENT SECRET [!UICONTROL 」、「] CLIENT ID SECRET」の各フィールドの値を使用します。 Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] deployment.
+統合を設定するには、Adobeデベロッパーコンソール統合の[!UICONTROL TECHNICAL ACCOUNT ID]、[!UICONTROL ORGANIZATION ID]、[!UICONTROL CLIENT SECRET]および[!UICONTROL CLIENT ID]フィールドの値を使用します。 Smart Tagsクラウド設定を作成すると、[!DNL Experience Manager]デプロイメントからAPIリクエストを認証できます。
 
-1. In [!DNL Experience Manager], navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL Legacy Cloud Services]** to open the [!UICONTROL Cloud Services] console.
+1. [!DNL Experience Manager]で、**[!UICONTROL ツール]**/**[!UICONTROL Cloud Service]**/**[!UICONTROL レガシーCloud Services]**&#x200B;に移動し、[!UICONTROL Cloud Services]コンソールを開きます。
 
 1. 「**[!UICONTROL アセットのスマートタグ]**」で、上記で作成した設定を開きます。サービスの設定ページで、「**[!UICONTROL 編集]**」をクリックします。
 
 1. **[!UICONTROL AEM スマートコンテンツサービス]**&#x200B;ダイアログで、「**[!UICONTROL サービス URL]**」および「**[!UICONTROL 認証サーバー]**」フィールドに事前入力された値を使用します。
 
-1. フィールド [!UICONTROL Apiキー]、 [!UICONTROL 技術アカウントID]、 [!UICONTROL 組織ID][](#create-adobe-i-o-integration)、クライアントクライアントクライアントのコピー、秘密Adobeの次の値を使用する秘密統合開発者コンソール統合の値を使用する。
+1. [!UICONTROL Apiキー]、[!UICONTROL テクニカルアカウントID]、[!UICONTROL 組織ID]、[!UICONTROL クライアントシークレット]の各フィールドに対して、[Adobe開発者コンソール](#create-adobe-i-o-integration)で生成された以下の値をコピーして使用します。
 
    | [!UICONTROL アセットのスマートタグサービス設定] | [!DNL Adobe Developer Console] 統合フィールド |
    |--- |--- |
@@ -144,19 +144,19 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 設定が完了したら、JMX MBeanを使用して設定を検証できます。 検証するには、次の手順に従います。
 
-1. で [!DNL Experience Manager] サーバーにアクセスし `https://[aem_server]:[port]`ます。
+1. `https://[aem_server]:[port]`の[!DNL Experience Manager]サーバーにアクセスします。
 
-1. **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **** Webコンソールに移動し、OSGiコンソールを開きます。 **[!UICONTROL メイン] / [!UICONTROL JMXをクリックします]**。
+1. **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL Webコンソール]**&#x200B;に移動して、OSGiコンソールを開きます。 **[!UICONTROL メイン]/[!UICONTROL JMX]**&#x200B;をクリックします。
 
-1. 「`com.day.cq.dam.similaritysearch.internal.impl`」をクリックします。It opens **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.
+1. 「`com.day.cq.dam.similaritysearch.internal.impl`」をクリックします。**[!UICONTROL 類似性検索のその他のタスク]**&#x200B;を開きます。
 
-1. 「`validateConfigs()`」をクリックします。In the **[!UICONTROL Validate Configurations]** dialog, click **[!UICONTROL Invoke]**.
+1. 「`validateConfigs()`」をクリックします。**[!UICONTROL 設定を検証]**&#x200B;ダイアログで、**[!UICONTROL 呼び出し]**&#x200B;をクリックします。
 
 検証結果は、同じダイアログに表示されます。
 
-### Enable smart tagging in the [!UICONTROL DAM Update Asset] workflow (Optional) {#enable-smart-tagging-in-the-update-asset-workflow-optional}
+### [!UICONTROL DAMアセットを更新]ワークフローでスマートタグを有効にする（オプション） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-1. In [!DNL Experience Manager], go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. [!DNL Experience Manager]で、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動します。
 
 1. **[!UICONTROL ワークフローモデル]**&#x200B;ページで、「**[!UICONTROL DAM アセットの更新]**」ワークフローモデルを選択します。
 
@@ -191,7 +191,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 1. 「**[!UICONTROL OK]**」をクリックして、プロセスステップを閉じ、ワークフローを保存します。
 
-## Smart Content Serviceのトレーニング {#training-the-smart-content-service}
+## Smart Content Serviceのトレーニング{#training-the-smart-content-service}
 
 スマートコンテンツサービスでビジネス上の分類を認識できるように、ビジネスに関連するタグが既に含まれているアセットのセットに対してサービスを実行します。ブランド画像に効果的にタグを付けるには、Smart Content Serviceで、トレーニング画像が特定のガイドラインに従っている必要があります。 トレーニングが完了すると、サービスは、類似するアセットのセットに同じ分類を適用できるようになります。
 
@@ -237,20 +237,20 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 ### 定期的なトレーニング {#periodic-training}
 
-スマートコンテンツサービスを有効にして、フォルダー内のアセットおよび関連するタグに関する定期的なトレーニングを実施することができます。Open the [!UICONTROL Properties] page of your asset folder, select **[!UICONTROL Enable Smart Tags]** under the **[!UICONTROL Details]** tab, and save the changes.
+スマートコンテンツサービスを有効にして、フォルダー内のアセットおよび関連するタグに関する定期的なトレーニングを実施することができます。アセットフォルダーの[!UICONTROL プロパティ]ページを開き、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL スマートタグを有効にする]**」を選択して、変更を保存します。
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-Once this option is selected for a folder, [!DNL Experience Manager] runs a training workflow automatically to train the Smart Content Service on the folder assets and their tags. デフォルトでは、トレーニングワークフローは週に 1 回、土曜日の午前 0 時 30 分に実行されます。
+フォルダーに対してこのオプションを選択すると、[!DNL Experience Manager]はトレーニングワークフローを自動的に実行し、フォルダーアセットとそのタグに関するSmart Content Serviceのトレーニングを行います。 デフォルトでは、トレーニングワークフローは週に 1 回、土曜日の午前 0 時 30 分に実行されます。
 
-### オンデマンドのトレーニング {#on-demand-training}
+### オンデマンドのトレーニング  {#on-demand-training}
 
 ワークフローコンソールから、必要に応じていつでもスマートコンテンツサービスのトレーニングをおこなうことができます。
 
-1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
+1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動します。
+1. **[!UICONTROL ワークフローモデル]**&#x200B;ページから、**[!UICONTROL スマートタグトレーニング]**&#x200B;ワークフローを選択し、ツールバーの&#x200B;**[!UICONTROL 開始ワークフロー]**&#x200B;をクリックします。
 1. **[!UICONTROL ワークフローを実行]**&#x200B;ダイアログで、サービスのトレーニングに使用するタグ付けされたアセットが格納されているペイロードフォルダーを参照します。
-1. ワークフローのタイトルを指定し、コメントを追加します。Then, click **[!UICONTROL Run]**. アセットとタグがトレーニングのために送信されます。
+1. ワークフローのタイトルを指定し、コメントを追加します。次に、「**[!UICONTROL 実行]**」をクリックします。 アセットとタグがトレーニングのために送信されます。
 
    ![workflow_dialog](assets/workflow_dialog.png)
 
@@ -258,11 +258,11 @@ Once this option is selected for a folder, [!DNL Experience Manager] runs a trai
 >
 >フォルダー内のアセットがトレーニング用に処理されると、変更されたアセットのみが後続のトレーニングサイクルで処理されます。
 
-### 表示トレーニングレポート {#viewing-training-reports}
+### 表示トレーニングレポート{#viewing-training-reports}
 
 アセットのトレーニングセット内のタグに関するスマートコンテンツサービスのトレーニングが実施されたかどうかを確認するには、レポートコンソールでトレーニングワークフローレポートを調べます。
 
-1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
+1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL アセット]** > **[!UICONTROL レポート]**&#x200B;に移動します。
 1. **[!UICONTROL アセットレポート]**&#x200B;ページで、「**[!UICONTROL 作成]**」をクリックします。
 1. 「**[!UICONTROL スマートタグトレーニング]**」レポートを選択し、ツールバーで「**[!UICONTROL 次へ]**」をクリックします。
 1. レポートのタイトルと説明を指定します。「**[!UICONTROL レポートをスケジュール]**」で、「**[!UICONTROL 今すぐ]**」オプションを選択したままにします。レポートを後で生成するようにスケジュールするには、「**[!UICONTROL 後で]**」を選択し、日時を指定します。次に、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
@@ -281,9 +281,9 @@ Once this option is selected for a folder, [!DNL Experience Manager] runs a trai
 
    * 画像内の細かい違いを認識することはできません。例えば、シャツのサイズが細身か標準かなどの違いは認識できません。
    * 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
-   * Tagging is supported in the locales that [!DNL Experience Manager] is supported in. 言語の一覧については、](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html)スマートコンテンツサービスのリリースノート[を参照してください。
+   * タグ付けは、[!DNL Experience Manager]がサポートされているロケールでサポートされています。 言語の一覧については、](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html)スマートコンテンツサービスのリリースノート[を参照してください。
 
-* To search for assets with smart tags (regular or enhanced), use the [!DNL Assets] Omnisearch (full-text search). スマートタグには個別の検索用述語はありません。
+* スマートタグ（標準または拡張タグ）を使用してアセットを検索するには、[!DNL Assets] Omnisearch（フルテキスト検索）を使用します。 スマートタグには個別の検索用述語はありません。
 
 >[!MORELIKETHIS]
 >
