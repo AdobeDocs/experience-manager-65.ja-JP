@@ -17,21 +17,21 @@ ht-degree: 48%
 ---
 
 
-# ルートアクションで使用されるイメージのカスタマイズ {#customize-images-used-in-route-actions}
+# ルートアクションで使用されるイメージのカスタマイズ  {#customize-images-used-in-route-actions}
 
 ルートアクションで使用されるイメージをカスタマイズするには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」で説明されている手順を実行し、次にこの記事で説明する手順を実行します。
 
-## ルートアクションのイメージ {#images-for-route-actions}
+## ルートアクションのイメージ  {#images-for-route-actions}
 
 1. 次の場所の CSS に新しいルートアクションのイメージを定義するスタイルを追加します。
 
    `/apps/ws/css/newStyle.css`
 
-   For example: Add a new style called `myStyle1`as shown below and upload the image file `myStyleIcon1.png` to the `/apps/ws/image`s folder using a WebDAV client.
+   次に例を示します。次に示すように追加、`myStyle1`という新しいスタイルを作成し、WebDAVクライアントを使用して画像ファイル`myStyleIcon1.png`を`/apps/ws/image`フォルダーにアップロードします。
 
    >[!NOTE]
    >
-   >For more information about WebDAV access, see [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >WebDAVアクセスの詳細については、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)を参照してください。
 
    >[!NOTE]
    >
@@ -45,13 +45,13 @@ ht-degree: 48%
        }
    ```
 
-## タスクリストタスクアクションポップアップ {#task-list-task-action-popup}
+## タスクリストタスクアクションポップアップ  {#task-list-task-action-popup}
 
-1. Create a task list action popup, see [Building AEM Forms workspace code](introduction-customizing-html-workspace.md#building-html-workspace-code). これには、Dev パッケージを使用する必要があります。
+1. タスクリストアクションポップアップを作成します(「[AEM Formsワークスペースコードの作成](introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照)。 これには、Dev パッケージを使用する必要があります。
 
 1. `/libs/ws/js/runtime/templates/task.html` を `/apps/ws/js/runtime/templates/task.html` にコピーします。
 
-1. If the name of the CSS style is same as the route action name coming from the server, modify the following code in `/apps/ws/js/runtime/templates/task.html`:
+1. CSSスタイルの名前がサーバーからのルートアクション名と同じである場合は、`/apps/ws/js/runtime/templates/task.html`内の次のコードを変更します。
 
    ```jsp
    <%if(routeList == null){%>
@@ -81,7 +81,7 @@ ht-degree: 48%
                <%}%>
    ```
 
-1. If the name of the CSS style is different from the route action name coming from the server, modify the following code in `/apps/ws/js/runtime/templates/task.html`. これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
+1. CSSスタイルの名前がサーバーからのルートアクション名と異なる場合は、`/apps/ws/js/runtime/templates/task.html`で次のコードを変更します。 これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
 
 ```jsp
 <%if(routeList == null){%>
@@ -121,7 +121,7 @@ To
 
 1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-1. If the name of the CSS style is same as the route action name coming from the server, modify the following code in `/apps/ws/js/runtime/templates/taskdetails.html`:
+1. CSSスタイルの名前がサーバーからのルートアクション名と同じである場合は、`/apps/ws/js/runtime/templates/taskdetails.html`内の次のコードを変更します。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -141,7 +141,7 @@ To
                        <%}%>
    ```
 
-1. If the name of the CSS style is different from the route action name coming from the server, modify the following code in `/apps/ws/js/runtime/templates/taskdetails.html`. これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
+1. CSSスタイルの名前がサーバーからのルートアクション名と異なる場合は、`/apps/ws/js/runtime/templates/taskdetails.html`で次のコードを変更します。 これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -169,7 +169,7 @@ To
                <%}%>
    ```
 
-1. Open `/apps/ws/js/registry.js` for editing and look for the following text :
+1. `/apps/ws/js/registry.js`を開いて編集し、次のテキストを探します。
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
 1. テキストを次の文字列に置き換えます。
