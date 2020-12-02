@@ -30,16 +30,16 @@ ht-degree: 97%
 
 * ロールアウトアクションの実行
 
-## ライブコピーの概要を開く {#opening-the-live-copy-overview}
+## ライブコピーの概要を開く  {#opening-the-live-copy-overview}
 
 ライブコピーの概要は、以下から開くことができます。
 
 * [ブループリントページの参照サイドパネル（サイトコンソール）](#opening-live-copy-overview-references-for-a-blueprint-page)
 * [ブループリントページのプロパティ](#opening-live-copy-overview-properties-of-a-blueprint-page)
 
-### ライブコピーの概要を開く - ブループリントページの参照 {#opening-live-copy-overview-references-for-a-blueprint-page}
+### ライブコピーの概要を開く - ブループリントページの参照  {#opening-live-copy-overview-references-for-a-blueprint-page}
 
-The **Live Copy Overview** can be opened from the **References** side panel of the **Sites** console:
+**ライブコピーの概要**&#x200B;は、**サイト**&#x200B;コンソールの&#x200B;**参照**&#x200B;サイドパネルから開くことができます。
 
 1. **サイト**&#x200B;コンソールで、[ブループリントページに移動して選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開き、「**ライブコピー**」を選択します。
@@ -53,7 +53,7 @@ The **Live Copy Overview** can be opened from the **References** side panel of t
 1. 「**ライブコピーの概要**」を選択して、選択したブループリントに関連するすべてのライブコピーの概要を表示および使用します。
 1. 「**閉じる**」を使用して終了し、**サイト**&#x200B;コンソールに戻ります。
 
-### ライブコピーの概要を開く - ブループリントページのプロパティ {#opening-live-copy-overview-properties-of-a-blueprint-page}
+### ライブコピーの概要を開く - ブループリントページのプロパティ  {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
 **ライブコピーの概要**&#x200B;は、ブループリントページのプロパティを表示しているときに開くことができます。
 
@@ -70,14 +70,14 @@ The **Live Copy Overview** can be opened from the **References** side panel of t
 
 1. 「**閉じる**」を使用して終了し、**サイト**&#x200B;コンソールに戻ります。
 
-## ライブコピーの概要の使用 {#using-the-live-copy-overview}
+## ライブコピーの概要の使用  {#using-the-live-copy-overview}
 
 **ライブコピーの概要**&#x200B;を使用して、ライブコピーに対するアクションを実行することもできます。
 
 1. **ライブコピーの概要**&#x200B;を開きます。
 1. 必要なブループリントページまたはライブコピーページを選択します。ツールバーが更新され、使用できるアクションが表示されます。使用できる[アクション](/help/sites-administering/msm.md#terms-used)は、[ブループリント](#actions-for-a-blueprint-page)ページと[ライブコピー](#actions-for-a-live-copy-page)ページのどちらを選択したかによって異なります。
 
-### ブループリントページのアクション {#actions-for-a-blueprint-page}
+### ブループリントページのアクション  {#actions-for-a-blueprint-page}
 
 ブループリントページを選択した場合は、以下のアクションを使用できます。
 
@@ -91,7 +91,7 @@ The **Live Copy Overview** can be opened from the **References** side panel of t
 
    * ロールアウトを実行して、ソースからライブコピーに変更をプッシュします。
 
-### ライブコピーページのアクション {#actions-for-a-live-copy-page}
+### ライブコピーページのアクション  {#actions-for-a-live-copy-page}
 
 ライブコピーページを選択した場合は、以下のアクションを使用できます。
 
@@ -125,14 +125,14 @@ The **Live Copy Overview** can be opened from the **References** side panel of t
 
    * ライブコピーとそのブループリントページの間のライブ関係を永続的に削除します。
 
-## 関係ステータス {#relationship-status}
+## 関係ステータス  {#relationship-status}
 
 **関係ステータス**&#x200B;コンソールには、様々な機能を提供する 2 つのタブがあります。
 
 * [関係ステータス情報](#relationship-status-information)
 * [ライブコピー情報](#live-copy-information)
 
-### 関係ステータス情報 {#relationship-status-information}
+### 関係ステータス情報  {#relationship-status-information}
 
 このタブには、ブループリントとライブコピーの間の関係のステータスに関する詳細情報が表示されます。
 
