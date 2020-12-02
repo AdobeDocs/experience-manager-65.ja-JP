@@ -46,7 +46,7 @@ AEM Sites コンポーネントはデフォルトでは、訪問者によって�
 
 ## オプトイン／オプトアウト {#opt-in-opt-out}
 
-AEM has a [cookie opt-out service](/help/sites-developing/cookie-optout.md) that can be used for managing the opt-in/opt-out for users.
+AEMには、ユーザーのオプトイン/オプトアウトの管理に使用できる[cookieオプトアウトサービス](/help/sites-developing/cookie-optout.md)があります。
 
 ## Analytics によるインサイトの拡張 {#enhanced-insights-by-analytics}
 
@@ -54,7 +54,7 @@ AEM Sitesには、Adobe Analytics On-demand サービス内の機能を使用し
 
 Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html) を参照してください。
 
-## Target によるパーソナライゼーションの拡張 {#enhanced-personalization-by-target}
+## Target によるパーソナライゼーションの拡張  {#enhanced-personalization-by-target}
 
 AEM Sitesには、Adobe Target On-demand サービス内の機能を使用した、Target によるパーソナライゼーションの拡張との統合（オプション）が含まれています。
 
@@ -62,7 +62,7 @@ Adobe Target に関連する GDPR データサブジェクトリクエストの�
 
 ## ContextHub {#contexthub}
 
-AEM provides an optional data layer with [ContextHub](/help/sites-developing/contexthub.md). ContextHub を使用する場合、訪問者固有のデータがブラウザー内に格納され、そのデータに基づいてルールベースのパーソナライゼーションが実行されます。
+AEMは、[ContextHub](/help/sites-developing/contexthub.md)を持つオプションのデータレイヤーを提供します。 ContextHub を使用する場合、訪問者固有のデータがブラウザー内に格納され、そのデータに基づいてルールベースのパーソナライゼーションが実行されます。
 
 この訪問者データはデフォルトでは AEM に格納されません。ブラウザー内でパーソナライゼーションに関する決定をおこなうためのルールが、AEM からデータレイヤーに送信されます。
 
@@ -72,7 +72,7 @@ AEM provides an optional data layer with [ContextHub](/help/sites-developing/con
 >
 >Adobe CQ 5.5 以前はサポートが終了している（EOL）ので、このドキュメントでは説明しません。
 
-### オプトイン／オプトアウトの実装 {#implementing-opt-in-opt-out}
+### オプトイン／オプトアウトの実装  {#implementing-opt-in-opt-out}
 
 サイトの所有者は、オプトアウトコンポーネントを実装する際、以下のガイドラインに従う必要があります。
 
@@ -104,7 +104,7 @@ AEM provides an optional data layer with [ContextHub](/help/sites-developing/con
    // if isOptedOut is true, ContextHub is running in opt-out mode
    ```
 
-### ContextHub の永続性のプレビュー {#previewing-persistence-of-contexthub}
+### ContextHub の永続性のプレビュー  {#previewing-persistence-of-contexthub}
 
 ContextHub で使用されている永続性をプレビューするには、次の方法があります。
 
@@ -192,7 +192,7 @@ var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persiste
 console.log(storage.getTree());
 ```
 
-### ContextHub の永続性の解除 {#clearing-persistence-of-contexthub}
+### ContextHub の永続性の解除  {#clearing-persistence-of-contexthub}
 
 ContextHub の永続性を解除するには：
 
