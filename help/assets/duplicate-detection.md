@@ -13,17 +13,17 @@ ht-degree: 22%
 
 # 重複アセットの検出の有効化 {#enable-detection-of-duplicate-assets}
 
-If you attempt to upload an asset that exists in [!DNL Adobe Experience Manager Assets], the duplicate detection feature identifies it as duplicate. 重複項目の検出はデフォルトで無効になっています。この機能を有効にするには、次の手順を実行します。
+[!DNL Adobe Experience Manager Assets]に存在するアセットをアップロードしようとすると、重複検出機能によって重複と認識されます。 重複項目の検出はデフォルトで無効になっています。この機能を有効にするには、次の手順を実行します。
 
-1. にアクセスして、 [!DNL Experience Manager] Webコンソール設定ページを開き `https://[aem_server]:[port]/system/console/configMgr`ます。
-1. Edit the configuration for the servlet **[!UICONTROL Day CQ DAM Create Asset]**.
-1. Select the **[!UICONTROL detect duplicate]** option, and click **[!UICONTROL Save]**.
+1. [!DNL Experience Manager]にアクセスして&lt;a0/> Webコンソール設定ページを開きます。`https://[aem_server]:[port]/system/console/configMgr`
+1. サーブレット&#x200B;**[!UICONTROL Day CQ DAM Create Asset]**&#x200B;の設定を編集します。
+1. 「**[!UICONTROL 重複を検出]**」オプションを選択し、「**[!UICONTROL 保存]**」をクリックします。
 
    ![サーブレットで「重複項目の検出」オプションを選択](assets/chlimage_1-377.png)
 
    *図：サーブレットで「重複を検出」オプションを選択します。*
 
-The detect duplicate feature is now enabled in [!DNL Assets]. When a user attempts to upload an asset that exists in [!DNL Experience Manager], the system checks for conflict and indicates it. The assets are identified using SHA-1 hash stored at `jcr:content/metadata/dam:sha1`, which means duplicate assets are detected irrespective of the filenames.
+検出重複機能が[!DNL Assets]で有効になりました。 ユーザーが[!DNL Experience Manager]に存在するアセットをアップロードしようとすると、システムは競合がないかどうかを確認し、それを示します。 アセットは、`jcr:content/metadata/dam:sha1`に保存されているSHA-1ハッシュを使用して識別されます。つまり、ファイル名に関係なく、重複アセットが検出されます。
 
 >[!MORELIKETHIS]
 >
