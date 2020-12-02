@@ -17,7 +17,7 @@ ht-degree: 70%
 ---
 
 
-# sendToPrinter API の使用 {#using-the-sendtoprinter-api}
+# sendToPrinter API の使用  {#using-the-sendtoprinter-api}
 
 ## 概要 {#overview}
 
@@ -30,8 +30,8 @@ AEM Forms では、SendToPrinter サービスを使用することで、プリ�
      ドキュメントをプリンターに送信する場合は、次のいずれかの印刷プロトコルを指定します。 
 
    * **CUPS** `: A printing protocol named common UNIX printing system. This protocol is used for UNIX operating systems and enables a computer to function as a print server. The print server accepts print requests from client applications, processes them, and sends them to configured printers. On the IBM AIX® operating system, usage of CUPS is not recommended.`
-   * ``**DirectIP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
-   * ``**LPD** `: A printing protocol named Line Printer Daemon protocol or Line Printer Remote (LPR) protocol. This protocol provides network print server functionality for UNIX-based systems.`
+   * &quot;**DirectIP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
+   * &quot;**LPD** `: A printing protocol named Line Printer Daemon protocol or Line Printer Remote (LPR) protocol. This protocol provides network print server functionality for UNIX-based systems.`
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**:Outputサービスは、Common Internet File System(CIFS)印刷プロトコルをサポートしています。
 
@@ -50,15 +50,15 @@ AEM Forms では、SendToPrinter サービスを使用することで、プリ�
 | LPD | 空白 | 任意 | 必須の引数sPrintServerUriを空にすることはできないという内容の例外がスローされます。 |
 | LPD | 無効 | 空白 | 必須の引数sPrinterNameを空にすることはできないという内容の例外がスローされます。 |
 | LPD | 無効 | 空でない | sPrintServerUriが見つからないという内容の例外がスローされます。 |
-| LPD | Valid | 無効 | プリンターが見つからないという内容の例外がスローされます。 |
-| LPD | Valid | Valid | 印刷ジョブが正常に作成されます。 |
+| LPD | 有効 | 無効 | プリンターが見つからないという内容の例外がスローされます。 |
+| LPD | 有効 | 有効 | 印刷ジョブが正常に作成されます。 |
 | CUPS | 空白 | 任意 | 必須の引数sPrintServerUriを空にすることはできないという内容の例外がスローされます。 |
 | CUPS | 無効 | 任意 | プリンターが見つからないという内容の例外がスローされます。 |
-| CUPS | Valid | 任意 | 印刷ジョブが正常に作成されます。 |
+| CUPS | 有効 | 任意 | 印刷ジョブが正常に作成されます。 |
 | DirectIP | 空白 | 任意 | 必須の引数sPrintServerUriを空にすることはできないという内容の例外がスローされます。 |
 | DirectIP | 無効 | 任意 | プリンターが見つからないという内容の例外がスローされます。 |
-| DirectIP | Valid | 任意 | 印刷ジョブが正常に作成されます。 |
-| CIFS | Valid | 空白 | 印刷ジョブが正常に作成されます。 |
+| DirectIP | 有効 | 任意 | 印刷ジョブが正常に作成されます。 |
+| CIFS | 有効 | 空白 | 印刷ジョブが正常に作成されます。 |
 | CIFS | 無効 | 任意 | CIFS を使用した印刷中に不明なエラーがスローされます。 |
 | CIFS | 空白 | 任意 | 必須の引数sPrintServerUriを空にすることはできないという内容の例外がスローされます。 |
 
