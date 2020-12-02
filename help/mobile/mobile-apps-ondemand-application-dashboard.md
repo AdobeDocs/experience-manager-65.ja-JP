@@ -18,7 +18,7 @@ ht-degree: 85%
 ---
 
 
-# AEM Mobile アプリケーションダッシュボード {#aem-mobile-application-dashboard}
+# AEM Mobile アプリケーションダッシュボード  {#aem-mobile-application-dashboard}
 
 >[!NOTE]
 >
@@ -38,9 +38,9 @@ ht-degree: 85%
 
 最後に、管理者が更新されたアプリコンテンツを戦略的に公開します。
 
-## アプリを管理タイル {#the-manage-app-tile}
+## アプリを管理タイル  {#the-manage-app-tile}
 
-The **Manage App** Tile displays available application information:
+**アプリの管理**&#x200B;タイルに、利用可能なアプリの情報が表示されます。
 
 * タイトル
 * 説明
@@ -78,7 +78,7 @@ The **Manage App** Tile displays available application information:
 
 ### バナーを管理タイル {#the-manage-banners-tile}
 
-The **Manage Banners** tile allows you to manage the content for a banner. バナーでは以下の情報が表示されます。
+**バナーの管理**&#x200B;タイルを使用すると、バナーのコンテンツを管理できます。 バナーでは以下の情報が表示されます。
 
 * 画像
 * **タイトル**：バナーの名前
@@ -87,7 +87,7 @@ The **Manage Banners** tile allows you to manage the content for a banner. バ�
 * **公開**：AEM からの最後の公開要求の日付
 * **ソース**：ソース（AEM のローカル、または Mobile On Demand からのリモート）
 
-The following image shows the **Manage Banners** tile in AEM Mobile Application Dashboard:
+次の画像は、AEM Mobileアプリダッシュボードの&#x200B;**バナーの管理**&#x200B;タイルを示しています。
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
@@ -95,7 +95,7 @@ The following image shows the **Manage Banners** tile in AEM Mobile Application 
 >
 >バナーの作成、削除または更新については、**[バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)**&#x200B;を参照してください。
 
-### 記事を管理タイル {#the-manage-articles-tile}
+### 記事を管理タイル  {#the-manage-articles-tile}
 
 **記事を管理**&#x200B;タイルでは、記事のコンテンツを管理できます。記事では以下の情報が表示されます。
 
@@ -114,9 +114,9 @@ The following image shows the **Manage Banners** tile in AEM Mobile Application 
 >
 >記事の作成、削除または更新については、[**記事の管理**](/help/mobile/mobile-on-demand-managing-articles.md)&#x200B;を参照してください。
 
-### コレクションを管理タイル {#the-manage-collections-tile}
+### コレクションを管理タイル  {#the-manage-collections-tile}
 
-The **Manage Collections** tile allows you to manage the content for a collection. コレクションでは以下の情報が表示されます。
+**コレクションの管理**&#x200B;タイルを使用すると、コレクションのコンテンツを管理できます。 コレクションでは以下の情報が表示されます。
 
 * 画像
 * **タイトル**：コレクションの名前
@@ -125,7 +125,7 @@ The **Manage Collections** tile allows you to manage the content for a collectio
 * **公開**：AEM からの最後の公開要求の日付
 * **ソース**：ソース（AEM ローカルまたは Mobile On-Demand からのリモート）
 
-The following image shows the **Manage Collections** tile in AEM Mobile Application Dashboard:
+次の画像は、AEM Mobileアプリダッシュボードの&#x200B;**コレクションの管理**&#x200B;タイルを示しています。
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
