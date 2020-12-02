@@ -43,7 +43,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/image2019-3-20_23-52-51.png)
 
-### プリンシパルの権限の表示 {#viewing-permissions-for-a-principal}
+### プリンシパルの権限の表示  {#viewing-permissions-for-a-principal}
 
 左側のフレームでは、下にスクロールしてプリンシパルを見つけるか、下に示すように、選択したフィルターに基づいてグループまたはユーザーを検索できます。
 
@@ -53,7 +53,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/trei-1.png)
 
-### プリンシパルへの新規アクセス制御エントリの追加 {#adding-new-access-control-entry-for-a-principal}
+### プリンシパルへの新規アクセス制御エントリの追加  {#adding-new-access-control-entry-for-a-principal}
 
 「ACE を追加」ボタンをクリックして新しいアクセス制御エントリを追加することで、新しい権限を追加できます。
 
@@ -67,7 +67,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/sase-1.png)
 
-After the path is selected, the workflow goes back to this screen, where the user can then select one or more of the privileges from the available namespaces (like `jcr`, `rep` or `crx`) as shown i below.
+パスを選択すると、ワークフローはこの画面に戻り、次に示すように、使用可能な名前空間（`jcr`、`rep`、`crx`など）から1つ以上の権限を選択できます。
 
 テキストフィールドを使用して検索し、リストから選択することで権限を追加できます。
 
@@ -81,7 +81,7 @@ After the path is selected, the workflow goes back to this screen, where the use
 
 ![](assets/screen_shot_2019-03-17at63938pm.png) ![](assets/screen_shot_2019-03-17at63947pm.png)
 
-### 制限の使用 {#using-restrictions}
+### 制限の使用  {#using-restrictions}
 
 与えられたパス上の特権と許可の種類のリストに加えて、この画面では、以下に示すように、きめ細かいアクセス制御の制限を追加することもできます。
 
@@ -93,7 +93,7 @@ After the path is selected, the workflow goes back to this screen, where the use
 
 以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。 ![](assets/sapte-1.png) ![](assets/opt-1.png)
 
-新しい ACE がアクセス制御リストに反映されます。Note that `jcr:write` is an aggregate privilege that includes `jcr:removeNode` that was added above, but is not shown below as its covered under `jcr:write`.
+新しい ACE がアクセス制御リストに反映されます。`jcr:write`は、上に追加された`jcr:removeNode`を含む集計権限ですが、`jcr:write`の下では説明しません。
 
 ### ACE の編集 {#editing-aces}
 
@@ -111,7 +111,7 @@ After the path is selected, the workflow goes back to this screen, where the use
 
 ![](assets/image2019-3-21_0-45-35.png)
 
-Changes can be saved by clicking the **Save** button on top right, and the changes will reflect in the new permissions for **dam-users **as shown below:
+右上の「**保存**」ボタンをクリックして変更を保存できます。変更内容は**dam-users **の新しい権限に反映されます。次に示すように変更を加えます。
 
 ![](assets/zece-1.png)
 
@@ -121,7 +121,7 @@ Changes can be saved by clicking the **Save** button on top right, and the chang
 
 ![](assets/image2019-3-21_0-53-19.png) ![](assets/unspe.png)
 
-### クラシック UI 権限の組み合わせ {#classic-ui-privilege-combinations}
+### クラシック UI 権限の組み合わせ  {#classic-ui-privilege-combinations}
 
 新しい権限 UI は、付与された基本的な特権を正確に反映しなかった定義済みの組み合わせではなく、基本的な権限セットを明示的に使用しています。
 
