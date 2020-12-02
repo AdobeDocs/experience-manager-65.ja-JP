@@ -33,17 +33,17 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->If not familiar with the authoring environment, view the documentation on [basic handling](/help/sites-authoring/basic-handling.md) and a [quick guide to authoring pages](/help/sites-authoring/qg-page-authoring.md).
+>オーサリング環境に詳しくない場合は、[基本操作](/help/sites-authoring/basic-handling.md)のドキュメントと、[オーサリングページのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を表示してください。
 
 ## 使用可能なコミュニティコンポーネント {#available-communities-components}
 
 以下の表に、コンポーネントブラウザー（サイドキック）で有効なときに作成者に表示されるコミュニティコンポーネントを示します。
 
-See also the interactive [Community Components guide](/help/communities/components-guide.md).
+インタラクティブな[コミュニティコンポーネントガイド](/help/communities/components-guide.md)も参照してください。
 
 >[!NOTE]
 >
->Read [Communities Components Basics](/help/communities/basics.md) as it contains information necessary for authoring with Communities components.
+>[Communities Components Basics](/help/communities/basics.md)をお読みください。Communitiesコンポーネントを使用したオーサリングに必要な情報が含まれています。
 
 | **コンポーネントのタイトル** | **機能** |
 |---|---|
@@ -84,9 +84,9 @@ See also the interactive [Community Components guide](/help/communities/componen
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* Visit [Deploying Communities](/help/communities/deploy-communities.md) to learn about recommended deployments.
+* 推奨される展開については、[Communitiesの展開](/help/communities/deploy-communities.md)を参照してください。
 
 * コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](/help/communities/administer-landing.md)を参照してください。
 
-* Visit [Developing Communities](/help/communities/communities.md) to learn about the social component framework (SCF) and customizing Communities components and features.
+* Social Component Framework(SCF)とCommunitiesのコンポーネントと機能のカスタマイズについては、[Developing Communities](/help/communities/communities.md)を参照してください。
 
