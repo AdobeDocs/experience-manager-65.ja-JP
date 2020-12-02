@@ -28,7 +28,7 @@ ht-degree: 73%
 
 開発者は、リポジトリ内のモデル構造を熟知している必要があります。アプリの要件に従って、独自のモデルやエンティティを作成することができます。
 
-## モデルタイプの作成 {#creating-model-types}
+## モデルタイプの作成  {#creating-model-types}
 
 */libs/settings/mobileapps/model-types* に、システム提供のモデルタイプが 2 つ含まれています。これらのシステムモデルタイプを上書きする場合は、上書きの適用先となる設定ノードの下に *mobileapps/model-types* ノードを作成する必要があります。
 
@@ -40,9 +40,9 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->A **Scaffolding** is a page that defines the data types that can be edited by an entity based on the model. 個々のデータタイプについて、UI 上でフィールドをどのように表示するかや、データ値をどのように永続化するかを定義することもできます。
+>**スキャフォールド**&#x200B;は、モデルに基づいてエンティティで編集できるデータタイプを定義するページです。 個々のデータタイプについて、UI 上でフィールドをどのように表示するかや、データ値をどのように永続化するかを定義することもできます。
 
-### データタイプ設定 {#data-types-config}
+### データタイプ設定  {#data-types-config}
 
 データタイプ設定ノードには、データタイプ項目のリストが含まれます。各データタイプ項目では、そのデータタイプをモデルエディターでどのように表示するかと、最終的にエンティティによってレンダリングされるためにどのように永続化する必要があるかを指定します。
 
@@ -50,7 +50,7 @@ ht-degree: 73%
 |---|---|
 | fieldIcon | データタイプを表すCoralUIアイコンのクラス |
 | fieldPropResourceType | データ型を設定するためのすべてのプロパティをレンダリングするコンポーネント |
-| fieldProperties | fieldPropResourceTypeが *mobileapps/cas/gui/components/models/editor/datatypes/fieldの場合に使用されるプロパティコンポーネントの複数値リスト* |
+| fieldProperties | fieldPropResourceTypeが&#x200B;*mobileapps/cas/gui/components/models/editor/datatypes/field*&#x200B;の場合に使用されるプロパティコンポーネントの複数値リスト |
 | fieldResourceType | データ型の持続的なノードのresourceType（つまり、エンティティエディターでプロパティをレンダリングするコンポーネント） |
 | fieldViewResourceType | モデルエディタ表示でデータ型のレンダリングに使用するコンポーネント（このプロパティを省略した場合はfieldResourceTypeが使用されます） |
 | fieldTitle | モデルエディターに表示されるデータタイプの名前 |
@@ -75,11 +75,11 @@ Sling リソースの統合について詳しくは、[AEM での Sling Resource
 
 カスタムデータタイプの例は、「/libs/mobileapps/caas/components/form/contentreference」を参照してください。
 
-すべてのプリミティブデータタイプでは、既存の Granite フォームコンポーネントが利用されます。See: [https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html)
+すべてのプリミティブデータタイプでは、既存の Granite フォームコンポーネントが利用されます。詳しくは、[https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html)
 
 データタイプ設定にカスタムデータタイプを追加すると、そのデータタイプをモデルエディターで使用できるようになります。
 
-## モデルの作成 {#creating-models}
+## モデルの作成  {#creating-models}
 
 必要なすべてのモデルタイプとデータタイプを開発したら、モデルの作成に進むことができます。最終的に、作成者はモデルを使用してエンティティを作成し、コンテンツサービスはエンティティを使用してデータをレンダリングします。
 
@@ -87,7 +87,7 @@ Sling リソースの統合について詳しくは、[AEM での Sling Resource
 
 ダッシュボードからのモデルの作成および管理について詳しくは、モバイルアプリのオーサリングに関する節の[モデルの作成](/help/mobile/administer-mobile-apps.md)を参照してください。
 
-### モデルのプロパティ {#properties-of-a-model}
+### モデルのプロパティ  {#properties-of-a-model}
 
 以下の表では、モデルに定義されたプロパティを示します。
 
@@ -106,7 +106,7 @@ Sling リソースの統合について詳しくは、[AEM での Sling Resource
 >
 >「モデルタイプ」**&#x200B;に関して、すべてのモデルは *mobileapps/caas/components/data/entity* のスーパータイプを持っている必要がありますが、サブタイプを指定して、コンテンツ配信をカスタマイズできます。また、すべてのモデルタイプを一意にすることで、コンテンツサービスのクライアントがデータのオブジェクトを識別できるようになります。
 
-### モデルの編集 {#editing-a-model}
+### モデルの編集  {#editing-a-model}
 
 モデルを編集するには、編集するモデルに関連付けられている基礎モードダイアログフォームを開きます。通常、基礎モードはモデルの子ノードですが、「cq:scaffolding」プロパティを使用してパスを指定すれば、必要に応じてモデルの外に配置することができます。この方法は、異なるプロパティを指定する必要がある複数のモデルで同じ基礎モードを共有する場合に便利です。
 
@@ -114,26 +114,26 @@ Sling リソースの統合について詳しくは、[AEM での Sling Resource
 
 >[!NOTE]
 >
->すべてのモデルはテンプレートなので、すべての AEM テンプレートルールに従います。This allows using properties such as *allowedParents* and *allowedChildren* properties. これらは、モデルに基づいて新しいエンティティを作成するときに有効になります。テンプレートルールにより、エンティティの階層に応じた特定のモデルのみに基づいてエンティティを作成することができます。
+>すべてのモデルはテンプレートなので、すべての AEM テンプレートルールに従います。これにより、*allowedParents*&#x200B;や&#x200B;*allowedChildren*&#x200B;プロパティなどのプロパティを使用できます。 これらは、モデルに基づいて新しいエンティティを作成するときに有効になります。テンプレートルールにより、エンティティの階層に応じた特定のモデルのみに基づいてエンティティを作成することができます。
 >
->To learn about editing a model from the dashboard, see [Creating a Model](/help/mobile/administer-mobile-apps.md) under authoring section for Mobile Apps.
+>ダッシュボードからのモデルの編集について詳しくは、モバイルアプリのオーサリングセクションの「[モデル](/help/mobile/administer-mobile-apps.md)の作成」を参照してください。
 
 ### システムモデル {#system-models}
 
 単純なコンテンツ再利用のために、2 種類のシステムモデルがあらかじめ用意されています。これらのモデルは編集できません。
 
-**ページモデル** ：ページモデルを使用すると、サイトの既存のコンテンツをコンテンツサービスによる配信のために再利用する簡単な方法が提供されます。
+**ページ** モデルページモデルは、サイトの既存のコンテンツをコンテンツサービスによる配信のために再利用するためのクイックメソッドです。
 
 Pagesモデルに基づくエンティティのresourceTypeは、次のとおりです。mobileapps/caas/components/data/pages
 
 パス：Sites ページへのパスです。このパス（およびその子）のコンテンツは、コンテンツサービスハンドラーによってレンダリングされます。
 
-**アセットモデル** ：アセットモデルを使用すると、アセットの既存のコンテンツを、コンテンツサービスによる配信のために再利用する簡単な方法が提供されます。
+**アセット** モデルアセットモデルを使用すると、アセットの既存のコンテンツをContent Servicesによる配信用に再利用する簡単な方法が提供されます。
 
-The resourceType of entities based on the Pages model is: *mobileapps/caas/components/data/assets.*
+Pagesモデルに基づくエンティティのresourceTypeは、次のとおりです。*mobileapps/cas/components/data/assets.*
 
 アセットリスト：Assets からのパスのリストです。各アセットは子エンティティノードとして追加され、resourceType は *wcm/foundation/components/image* となります。
 
 >[!NOTE]
 >
->To learn more about using these templates for creating models from the dashboard, see [Creating a Model](/help/mobile/administer-mobile-apps.md) under authoring section for Mobile Apps.
+>これらのテンプレートを使用してダッシュボードからモデルを作成する方法について詳しくは、モバイルアプリのオーサリングセクションの「[モデル](/help/mobile/administer-mobile-apps.md)の作成」を参照してください。
