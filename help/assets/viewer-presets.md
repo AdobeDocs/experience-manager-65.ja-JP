@@ -28,7 +28,7 @@ ht-degree: 94%
 
 ## アセットへの Dynamic Media ビューアプリセットの適用 {#applying-a-viewer-preset-to-an-asset}
 
-1. Open the asset and in the left rail, and tap **[!UICONTROL Viewers.]**
+1. アセットを開き、左のナビゲーションバーの&#x200B;**[!UICONTROL ビューアをタップします。]**
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
