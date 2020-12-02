@@ -27,10 +27,10 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 ## 事前準備 {#before-you-start}
 
 * AEM Forms Document Security をインストールして設定します。
-* Add package sun.util.calendar to the allowlist of the **Deserialization Firewall Configuration.** 設定は、に一覧表示され `https://'[server]:[port]'/system/console/configMgr`ます。
-* すべての AEM バンドルが正常に実行していることを確認します。バンドルはに一覧が表示され `https://'[server]:[port]'/system/console/bundles`ます。 アクティブ状態になっていないバンドルが存在する場合、数分間待ってからバンドルの状態を確認してください。
+* sun.util.calendar追加を&#x200B;**デシリアル化ファイアウォール構成の許可リストにパッケージ化します。** 設定は、に一覧表示され `https://'[server]:[port]'/system/console/configMgr`ます。
+* すべての AEM バンドルが正常に実行していることを確認します。バンドルは`https://'[server]:[port]'/system/console/bundles`に一覧表示されます。 アクティブ状態になっていないバンドルが存在する場合、数分間待ってからバンドルの状態を確認してください。
 
-## Establish a secure connection within AEM Forms workflow (AEM Forms on JEE) {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
+## AEM Formsワークフロー(JEE上のAEM Forms){#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}内での安全な接続の確立
 
 安全な接続は、JEE 上の AEM Forms と、同じサーバー上で実行している OSGi サービスとの間の情報の流れをシームレスにします。次のいずれかの方法を使用して安全な接続を確立します。
 
@@ -49,7 +49,7 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 
    「**保存**」をクリックします。AEM は、Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントの検索が有効になっています。
 
-### 相互認証を使用して AEM Forms Client SDK Bundle を設定します {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
+### 相互認証を使用して AEM Forms Client SDK Bundle を設定します  {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
 
 1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/jp/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
 1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトのURLはhttps://&lt;serverName>:&lt;port>/lc/system/console/configMgrです。
@@ -65,7 +65,7 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 
    「**保存**」をクリックします。AEM は、Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントの検索が有効になっています。
 
-## サンプルポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
+## サンプルポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントのインデックス作成  {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
 
 1. 管理者として AEM Assets にログインします。
 1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントをアップロードします。これで AEM 検索を使用してポリシーで保護されたドキュメントのコンテンツを検索できます。検索したテキストを含むドキュメントを返す必要があります。
