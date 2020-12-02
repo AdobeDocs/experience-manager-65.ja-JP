@@ -17,7 +17,7 @@ ht-degree: 63%
 ---
 
 
-# Customizing the task details page {#customizing-the-task-details-page}
+# タスクの詳細ページのカスタマイズ{#customizing-the-task-details-page}
 
 タスクの詳細ページには、タスクおよびそのプロセスに関する情報が含まれています。しかしながら、タスクの詳細ページをカスタマイズして情報を追加したり、削除したりすることができます。
 
@@ -29,9 +29,9 @@ ht-degree: 63%
 タスクの詳細ページをカスタマイズするには：
 
 1. [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従います。
-1. To show any additional information, add corresponding key-value pairs to the `translation.json` file at `todo`block > `details`block > `app`block > [ `required`block].
+1. 追加の情報を表示するには、対応するキーと値のペアを`translation.json`ファイル(`todo`block > `details`block > `app`block > [ block `required` a6/>)に追加します。]
 
-   The [ `required`block] refers to available blocks, such as the task block for task information, process block for process information, and currentpendingtask block for pending tasks information.
+   [ `required`block]は、タスク情報のタスクブロック、プロセス情報のプロセスブロック、保留中のタスク情報のcurrentpendingtaskブロックなど、使用可能なブロックを参照します。
 
    たとえば、タスクの詳細ページに必要なルート選択に関する情報を追加するには、以下のキーと値のペアを task ブロックに追加することができます。
 
@@ -58,7 +58,7 @@ ht-degree: 63%
 
 1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-   に追加新しい情報を追加し `/apps/ws/js/runtime/templates/taskdetails.html`ます。 次に例を示します。
+   追加`/apps/ws/js/runtime/templates/taskdetails.html`に対する新しい情報。 次に例を示します。
 
    ```css
    <div class="detailsContainer">
@@ -81,10 +81,10 @@ ht-degree: 63%
 
 1. /apps/ws/js/registry.js を開いて編集します。
 
-   Search and replace `text!/lc/libs/ws/js/runtime/templates/taskdetails.html` with `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`.
+   `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`を検索して`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`に置き換えます。
 
 >[!NOTE]
 >
->To customize the task details page with tasks created in the **Start Process** tab of AEM Forms workspace, add the new information to `/apps/ws/js/runtime/templates/startprocess.html`.
+>AEM Formsワークスペースの&#x200B;**開始プロセス**&#x200B;タブで作成されたタスクでタスクの詳細ページをカスタマイズするには、`/apps/ws/js/runtime/templates/startprocess.html`に新しい情報を追加します。
 >
->To add new styles for the information added in the details page, modify the CSS file by using the *User interface changes* section in [Workspace Customization](changing-locale-user-interface.md).
+>詳細ページに追加された情報に新しいスタイルを追加するには、[Workspaceのカスタマイズ](changing-locale-user-interface.md)の&#x200B;*ユーザーインターフェイスの変更*&#x200B;セクションを使用してCSSファイルを変更します。
