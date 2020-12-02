@@ -32,26 +32,26 @@ ht-degree: 84%
 
 デフォルトで提供される一連のアクションに加え、カスタムアクションをツールバーに作成することができます。例えば、アクションを追加することで、フォームを送信する前にアダプティブフォームのすべてのフィールドを、ユーザーがレビューできるようにすることが可能です。
 
-## Steps to create a custom action in an adaptive forms {#steps}
+## アダプティブフォーム{#steps}でのカスタムアクションの作成手順
 
 カスタムツールバーアクションを作成するには、次の手順を実行して、記入の済んだフォームを送信する前にアダプティブフォームのすべてのフィールドをエンドユーザーがレビューするためのボタンを作成します。
 
-1. All the default actions supported by adaptive forms are present in `/libs/fd/af/components/actions` folder. CRXDEで、からに `fileattachmentlisting` ノードをコピー `/libs/fd/af/components/actions/fileattachmentlisting` し `/apps/customaction`ます。
+1. アダプティブフォームでサポートされているすべてのデフォルトアクションは`/libs/fd/af/components/actions`フォルダーに存在します。 CRXDEで、`fileattachmentlisting`ノードを`/libs/fd/af/components/actions/fileattachmentlisting`から`/apps/customaction`にコピーします。
 
-1. After copying the node to `apps/customaction` folder, rename the node name to `reviewbeforesubmit`. Also, change the `jcr:title` and `jcr:description` properties of the node.
+1. ノードを`apps/customaction`フォルダーにコピーした後、ノード名を`reviewbeforesubmit`に変更します。 また、ノードの`jcr:title`プロパティと`jcr:description`プロパティを変更します。
 
    `jcr:title` のプロパティには、ツールバーダイアログに表示されるアクションの名前が含まれます。`jcr:description` のプロパティには、アクションにマウスオーバーしたときに表示される詳細情報が含まれます。
 
    ![ツールバーのカスタマイズに使用するノードの階層](assets/action3.png)
 
-1. ノードで `cq:template` ノードを選択 `reviewbeforesubmit` します。 Ensure that the value of `guideNodeClass` property is `guideButton` and change `jcr:title` property accordingly.
-1. Change the type property in the `cq:Template` node. この例では、タイプのプロパティをボタンに変更します。
+1. `reviewbeforesubmit`ノードで`cq:template`ノードを選択します。 `guideNodeClass`プロパティの値が`guideButton`であることを確認し、それに応じて`jcr:title`プロパティを変更します。
+1. `cq:Template`ノードのtypeプロパティを変更します。 この例では、タイプのプロパティをボタンに変更します。
 
    このコンポーネントで、生成された HTML に type の値が CSS クラスとして追加されます。ユーザーはこの CSS クラスを使用して、アクションのスタイルを設定できますボタン、送信、リセット、およびタイプの値を保存する際のスタイルが、モバイルとデスクトップデバイスの両方にデフォルトで用意されています。
 
 1. アダプティブフォームの編集のツールバーダイアログからカスタムアクションを選択します。パネルのツールバーにレビューボタンが表示されます。
 
-   ![カスタムアクションは、ツールバーで使用できます](assets/custom_action_available_in_toolbar.png) 。カスタムに作成されたツールバーアクションの ![表示](assets/action7.png)
+   ![カスタムアクションは、](assets/custom_action_available_in_toolbar.png) ![toolbarで使用できます。カスタムに作成されたツールバーアクションの表示](assets/action7.png)
 
 1. レビューボタンに機能を持たせるには、`reviewbeforesubmit` ノードにある init.jsp ファイルに JavaScript コード、CSS コード、およびサーバー側コードを追加します。
 
