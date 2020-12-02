@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# 環境設定ノードのプログラム管理 {#programmatically-managing-the-preferencesnodes}
+# 環境設定ノードのプログラム管理{#programmatically-managing-the-preferencesnodes}
 
 このトピックでは、Preferences Manager Service API(Java)を使用して、環境設定ノードをプログラムで管理する方法について説明します。
 
-設定は、管理者UIから手動で変更できます。 オプションを変更するには、に移動し `Home>Settings>User Management> Configuration>Manual Configuration`ます。 変更を行っ `config.xml` た後でインポートすると、ノードで行った変更以外の変更はすべて失わ `/Adobe/Adobe Experience Manager Forms/Config/UM persist` れます。 User Managementのインポートとエクスポートのプレビューでは、他のコンポーネントの構成設定の変更はサポートされていません。 現在は、これらの変更はAPIを使用して行うことができ `PreferencesManagerServiceClient` ます。
+設定は、管理者UIから手動で変更できます。 オプションを変更するには、`Home>Settings>User Management> Configuration>Manual Configuration`に移動します。 変更を行った後で`config.xml`を読み込むと、ノード`/Adobe/Adobe Experience Manager Forms/Config/UM persist`で行われた変更以外の変更はすべて失われます。 User Managementのインポートとエクスポートのプレビューでは、他のコンポーネントの構成設定の変更はサポートされていません。 現在は、`PreferencesManagerServiceClient` APIを使用してこれらの変更を行うことができます。
 
 **手**&#x200B;順の概要環境設定ノードをプログラムで管理するには、次の手順を実行します。
 
