@@ -14,10 +14,10 @@ ht-degree: 84%
 ---
 
 
-# AEM 6.5 Classic UI Authoring User Guide {#classic-ui}
+# AEM 6.5 Classic UIオーサリングユーザーガイド{#classic-ui}
 
 + [クラシックUIオーサリングガイドの概要](home.md)
-+ クラシックUIオーサリングの概要 {#introduction}
++ クラシックUIオーサリングの概要{#introduction}
    + [作成者が行う最初の手順](classic-page-author-first-steps.md)
    + [クラシック UI でのオーサリング](classicui.md)
    + [オーサー環境の操作](author-env.md)
@@ -78,7 +78,7 @@ ht-degree: 84%
    + [Adobe Campaign コンポーネント](classic-personalization-ac-components.md)
    + [Adobe Campaign のターゲット設定](classic-personalization-ac-target.md)
    + [AEM での Adobe Campaign フォームの作成](classic-personalization-ac-forms.md)
-+ クラシックUIでのアセットのオーサリング {#assets}
++ クラシックUIでのアセットのオーサリング{#assets}
    + [アセットの操作](classicui-assets.md)
    + [Dynamic Media アセットの配信](dynamic-media-assets-delivering.md)
    + [ページへのダイナミックメディアアセットの追加](dynamic-media-assets-adding-to-page.md)
