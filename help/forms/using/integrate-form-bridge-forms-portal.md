@@ -20,21 +20,21 @@ ht-degree: 81%
 
 # Form Bridge と HTML5 フォームのカスタムポータルの統合{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge はフォームとのやりとりを可能にする HTML5 フォームのブリッジ API です。For the FormBridge API reference, see [FormBridge API reference](/help/forms/using/form-bridge-apis.md).
+FormBridge はフォームとのやりとりを可能にする HTML5 フォームのブリッジ API です。FormBridge APIリファレンスについては、[FormBridge APIリファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
 
 FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定できます。たとえば、API を使用してウィザードのような経験を築くことができます。
 
 既存の HTML アプリケーションは FormBridge API を利用してフォームとやりとりし、それを HTML ページに埋め込むことができます。次の手順を使用して、Form Bridge API を使用してフィールドの値を設定できます。
 
-## HTML5 フォームと Web ページの統合 {#integrating-html-forms-to-a-web-page}
+## HTML5 フォームと Web ページの統合  {#integrating-html-forms-to-a-web-page}
 
 1. **プロファイルの選択またはプロファイルの作成**
 
-   1. In the CRX DE interface, navigate to: `https://'[server]:[port]'/crx/de`.
+   1. CRX DEインターフェイスで、次の場所に移動します。`https://'[server]:[port]'/crx/de`.
    1. 管理者の資格情報を使用してログインします。
    1. プロファイルを作成するか、既存のプロファイルを選択します。
 
-      For details on how to create a profile, see [Creating a new Profile](/help/forms/using/custom-profile.md).
+      プロファイルの作成方法について詳しくは、[新しいプロファイルの作成](/help/forms/using/custom-profile.md)を参照してください。
 
 1. **HTML プロファイルの変更**
 
@@ -76,7 +76,7 @@ FormBridge API を使用して、HTML ページからフォームフィールド
 
    >[!NOTE]
    >
-   >The **line 9**, contains additional JSP reference for CSS styles and JavaScript files to design the page.
+   >**9**&#x200B;行目には、ページをデザインするCSSスタイルとJavaScriptファイルの追加JSP参照が含まれます。
    >
    >
    >**18 行目**&#x200B;の &lt;div id=&quot;rightdiv&quot;> タグには XFA フォームの HTML スニペットが含まれています。
@@ -91,9 +91,9 @@ FormBridge API を使用して、HTML ページからフォームフィールド
 
    次にあるのは、フォームフィールドの値を設定するために追加できるサンプルのスクリプトです。
 
-   For example, if you want to set the **EmployeeName** using the values in the Fields **First Name** and **Last Name**, call the **window.formBridge.setFieldValue** function.
+   例えば、**名**&#x200B;フィールドと&#x200B;**姓**&#x200B;フィールドの値を使用して&#x200B;**EmployeeName**&#x200B;を設定する場合は、**window.formBridge.setFieldValue**&#x200B;関数を呼び出します。
 
-   Similarly, you can read the value by calling **window.formBridge.getFieldValue** API.
+   同様に、**window.formBridge.getFieldValue** APIを呼び出すことで値を読み取ることができます。
 
    ```javascript
    $(function() {
