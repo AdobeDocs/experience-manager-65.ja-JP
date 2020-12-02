@@ -18,7 +18,7 @@ ht-degree: 81%
 ---
 
 
-# 共有リソースのアップロード {#uploading-shared-resources}
+# 共有リソースのアップロード  {#uploading-shared-resources}
 
 >[!NOTE]
 >
@@ -28,26 +28,26 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) in Online Help.
+>AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの「[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)」を参照してください。
 
 >[!CAUTION]
 >
 >最初に Mobile On-Demand の接続を関連付ける必要があります。
 
-## 共有リソースのアップロード {#uploading-shared-resources-1}
+## 共有リソースのアップロード  {#uploading-shared-resources-1}
 
 通常、記事などのコンテンツは、作成者およびアプリを問わず常に同じ外観と操作性である必要があります。したがって、スクリプト、CSS およびフォントをすべての作成者およびアプリに対して利用可能にすることが必要です。このように運用すると、こうした共有リソースが Mobile On-Demand に送信されるので、後で必要に応じて利用できます。
 
-アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。For detailed steps on associating your app to a cloud configuration, click [here](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md).
+アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。アプリをクラウド設定に関連付ける詳細な手順については、[ここ](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)をクリックしてください。
 
 >[!NOTE]
 >
->共有リソースでは、コンテンツ同期を使用して様々なリソースを収集します。See [Mobile with ContentSync](/help/mobile/mobile-ondemand-contentsync.md) for more details.
+>共有リソースでは、コンテンツ同期を使用して様々なリソースを収集します。詳しくは、[Mobile with ContentSync](/help/mobile/mobile-ondemand-contentsync.md)を参照してください。
 
 以下の手順に従って、記事の共有リソースをアップロードします。
 
-1. Select the article from **Manage Articles** tile.
-1. Click **Upload Shared Resources** to upload your shared HTML resources.
+1. **記事の管理**&#x200B;タイルから記事を選択します。
+1. 「**Upload Shared Resources**」をクリックして、共有HTMLリソースをアップロードします。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
