@@ -17,13 +17,13 @@ ht-degree: 59%
 ---
 
 
-# HTML5 フォームのカスタムプロファイルの作成 {#creating-a-custom-profile-for-html-forms}
+# HTML5 フォームのカスタムプロファイルの作成  {#creating-a-custom-profile-for-html-forms}
 
-A profile is a resource node in [Apache Sling](https://sling.apache.org/). HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、およびやりとりをカスタマイズできます。 A profile node exists in the `/content` folder in the JCR repository. You can place the node directly under the `/content` folder or any subfolder of the `/content` folder.
+プロファイルは、[Apache Sling](https://sling.apache.org/)のリソースノードです。 HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、およびやりとりをカスタマイズできます。 プロファイルノードは、JCRリポジトリの`/content`フォルダーに存在します。 ノードは`/content`フォルダーの直下か、`/content`フォルダーのサブフォルダーに配置できます。
 
 Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。ノードのレンダリングスクリプトは/libs/xfaforms/プロファイルにあります。
 
-Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。These Sling scripts are also referred as **Profile Renderer scripts**. プロファイルレンダラーは、要求されたフォームをレンダリングするためにFormsOSGiサービスを呼び出します。
+Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。これらのSlingスクリプトは、**プロファイルレンダラースクリプト**&#x200B;とも呼ばれます。 プロファイルレンダラーは、要求されたフォームをレンダリングするためにFormsOSGiサービスを呼び出します。
 
 プロファイルスクリプトは、GETおよびPOSTリクエストの場合、html.jspとhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、このような変更が上書きされます。
 
@@ -41,7 +41,7 @@ config.jsp モジュールには、ロギング、プロキシサービス、動
 
 toolbar.jspには、色付きのツールバーを作成するコードが含まれています。 ツールバーを削除するには、toolbar.jsp を HTML.jsp から削除します。
 
-## formBody.jsp {#formbody-jsp}
+## formBody.jsp  {#formbody-jsp}
 
 formBody.jspモジュールは、XFAフォームのHTML表現用です。
 
@@ -59,7 +59,7 @@ footer.jsp モジュールは空です。ユーザーの操作にのみ使用す
 
 ### プロファイルノードの作成 {#create-profile-node}
 
-1. Navigate to the CRX DE interface at the URL: `https://'[server]:[port]'/crx/de` and log in to the interface with administrator credentials.
+1. URLのCRX DEインターフェイスに移動します。`https://'[server]:[port]'/crx/de`にログインし、管理者の資格情報を使用してインターフェイスにログインします。
 
 1. 左のペインで */content/xfaforms/profiles* の場所に移動します。
 
@@ -73,14 +73,14 @@ footer.jsp モジュールは空です。ユーザーの操作にのみ使用す
 
 カスタムプロファイルの作成後、このプロファイルにレンダラーの情報を追加します。新しいプロファイルの要求を受け取る際に、CRX はレンダリングする JSP ページの /apps フォルダーの存在を確認します。JSP ページを /apps フォルダーで作成します。
 
-1. In the left pane, navigate to the `/apps` folder.
-1. Right-click on the `/apps` folder and choose to create a folder with name **hrform**.
-1. Insider the **hrform** folder create a folder named **demo**.
+1. 左側のウィンドウで、`/apps`フォルダーに移動します。
+1. `/apps`フォルダーを右クリックし、**hrform**&#x200B;という名前のフォルダーを作成するよう選択します。
+1. **hrform**&#x200B;フォルダー内で、**demo**&#x200B;という名前のフォルダーを作成します。
 1. 「**すべて保存**」ボタンをクリックします。
-1. Navigate to `/libs/xfaforms/profile/html.jsp` and copy the node **html.jsp**.
-1. Paste **html.jsp** node into the `/apps/hrform/demo` folder created above with same name **html.jsp** and click **Save**.
+1. `/libs/xfaforms/profile/html.jsp`に移動し、ノード&#x200B;**html.jsp**&#x200B;をコピーします。
+1. **html.jsp**&#x200B;ノードを&#x200B;**html.jsp**&#x200B;と同じ名前で作成した`/apps/hrform/demo`フォルダーに貼り付け、**保存**&#x200B;をクリックします。
 1. プロファイルスクリプトのその他のコンポーネントを持っている場合は、手順 1 から 6 に従って、/apps/hrform/demo フォルダーにそのコンポーネントをコピーします。
 
-1. To verify that th profile is created, open URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
+1. プロファイルが作成されたことを確認するには、URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`を開きます。
 
 フォームを検証するには、ローカルファイルシステムから AEM Forms に[フォームを読み込み](/help/forms/using/get-xdp-pdf-documents-aem.md)、AEM サーバーオーサーインスタンスで[フォームをプレビュー](/help/forms/using/previewing-forms.md)します。
