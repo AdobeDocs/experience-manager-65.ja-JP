@@ -18,7 +18,7 @@ ht-degree: 80%
 ---
 
 
-# ユーザーアバターの表示 {#displaying-the-user-avatar}
+# ユーザーアバターの表示  {#displaying-the-user-avatar}
 
 ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Formsワークスペースを設定して、データベースからユーザー画像（LDAPサーバーなど）を選択できます。
 
@@ -26,7 +26,7 @@ ht-degree: 80%
 >
 >サポートされているユーザー画像の縦横比は 1:1 です。
 
-1. 次の手順に記載されている説明を使用して DSC を作成します。For more information, see &#39;Developing Components for AEM Forms&#39; topic in [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) guide.
+1. 次の手順に記載されている説明を使用して DSC を作成します。詳しくは、『[AEM Formsでのプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)』ガイドの「AEM Formsのコンポーネントの開発」トピックを参照してください。
 1. DSC で getCurrentUserImageUrl と getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Forms ユーザーの画像 URL を取得します。Java™ コードスニペットのサンプルを以下に示します。
 
    ```java
@@ -84,5 +84,5 @@ ht-degree: 80%
    </component>
    ```
 
-1. Workbench を介して DSC をデプロイします。サー `ProcessManagementClientSessionService` ビスを再起動します。
+1. Workbench を介して DSC をデプロイします。`ProcessManagementClientSessionService`サービスを再起動します。
 1. ブラウザを更新するか、またはユーザーとログアウトして再度ログインする必要がある場合があります。
