@@ -17,13 +17,13 @@ ht-degree: 53%
 ---
 
 
-# エラーダイアログのカスタマイズ {#customizing-error-dialogs}
+# エラーダイアログのカスタマイズ  {#customizing-error-dialogs}
 
-AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。Perform the [Generic steps for AEM Forms workspace customization](/help/forms/using/generic-steps-html-workspace-customization.md) followed by the steps below to customize error dialogs.
+AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[「AEM Formsワークスペースのカスタマイズ](/help/forms/using/generic-steps-html-workspace-customization.md)の一般的な手順」を実行し、次の手順に従ってエラーダイアログをカスタマイズします。
 
 ## テキストのカスタマイズ {#customizing-text}
 
-1. In the `/apps/ws/locales/en-US/translation.json` file, change the values of `wserror` to the customized values. 次に例を示します。
+1. `/apps/ws/locales/en-US/translation.json`ファイルで、`wserror`の値をカスタマイズした値に変更します。 次に例を示します。
 
    ```json
    "wserror" : {
@@ -53,7 +53,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 ## CSS のカスタマイズ {#customizing-css}
 
-1. You can update dialog, header, content area, foot-bar, foot-bar buttons, and other collaterals by adding the following snippet in the `/apps/ws/css/newStyle.css` file:
+1. `/apps/ws/css/newStyle.css`ファイルに次のスニペットを追加することで、ダイアログ、ヘッダー、コンテンツ領域、フットバー、フットバーボタン、その他の関連項目を更新できます。
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -188,7 +188,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-1. For the foot bar button span, separate the `.error-dialog` and `.foot-bar` button spans from the composite list. この変更を行うには、次を newStyle.css ファイルに追加します。
+1. フットバーボタンの範囲については、`.error-dialog`ボタン範囲と`.foot-bar`ボタン範囲を複合リストから分離します。 この変更を行うには、次を newStyle.css ファイルに追加します。
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -201,7 +201,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-   To
+   宛先
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -225,7 +225,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 >[!NOTE]
 >
->If you are referring to additional images, add them at the desired hierarchy under `/apps/ws/images`.
+>追加の画像を参照している場合は、`/apps/ws/images`の下の目的の階層に画像を追加します。
 
 ## 例 {#examples}
 
@@ -246,7 +246,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 }
 ```
 
-To
+宛先
 
 ```css
 .error-dialog{
@@ -279,7 +279,7 @@ To
 }
 ```
 
-To
+宛先
 
 ```css
 .error-dialog .head-bar{
