@@ -71,7 +71,7 @@ GitHub のコード
 
 #### デフォルトの述語エバリュエーターを使用したレプリケーションメタデータのクエリ {#querying-replication-metadata-with-default-predicate-evaluators}
 
-The following query fetches the list of nodes in `/content` branch that have been activated by `admin` since the beginning of the year.
+次のクエリは、`admin`が年の初めからアクティブ化した`/content`ブランチのノードのリストを取得します。
 
 ```xml
 path=/content
@@ -113,11 +113,11 @@ replic.action=Activate
 
 >[!NOTE]
 >
->The scope of the `cq-search` dependency is set to `provided` because `cq-search` will be provided by the `OSGi` container.
+>`cq-search`依存関係の範囲は`provided`に設定されます。これは、`cq-search`が`OSGi`コンテナによって提供されるからです。
 
 pom.xml
 
-The following snippet shows the differences, in [unified diff format](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)
+次のスニペットは、[unified diff形式](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)の違いを示しています
 
 ```
 @@ -120,6 +120,12 @@
@@ -134,22 +134,22 @@ The following snippet shows the differences, in [unified diff format](https://ja
              <version>3.8.1</version></dependency>
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
 
 #### ReplicationPredicateEvaluator の作成 {#writing-the-replicationpredicateevaluator}
 
-The `cq-search` project contains the `AbstractPredicateEvaluator` abstract class. This can be extended with a few steps to implement your own custom predicate evaluator `(PredicateEvaluator`).
+`cq-search`プロジェクトには`AbstractPredicateEvaluator`抽象クラスが含まれています。 これは、独自のカスタム述語評価演算子`(PredicateEvaluator`を実装するためのいくつかの手順で拡張できます)。
 
 >[!NOTE]
 >
->次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。Another option would be to implement the `includes` method that selects data on a row basis. 詳しくは、[Java のドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
+>次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。もう1つの方法は、行単位でデータを選択する`includes`メソッドを実装することです。 詳しくは、[Java のドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
 
 1. `com.day.cq.search.eval.AbstractPredicateEvaluator` を拡張する新しい Java クラスを作成します。
-1. Annotate your class with a `@Component` like the following
+1. 次のように`@Component`をクラスに注釈を付けます。
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   The following snippet shows the differences, in [unified diff format](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)
+   次のスニペットは、[unified diff形式](https://en.wikipedia.org/wiki/Diff#Unified_format)の違いを示しています
 
 ```
 @@ -19,8 +19,11 @@
@@ -166,11 +166,11 @@ The `cq-search` project contains the `AbstractPredicateEvaluator` abstract class
  }
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
 
 >[!NOTE]
 >
->The `factory`must be a unique string starting with `com.day.cq.search.eval.PredicateEvaluator/`and ending with the name of your custom `PredicateEvaluator`.
+>`factory`は、`com.day.cq.search.eval.PredicateEvaluator/`で始まり、カスタム`PredicateEvaluator`の名前で終わる一意の文字列である必要があります。
 
 >[!NOTE]
 >
@@ -309,4 +309,4 @@ public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
 }
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
