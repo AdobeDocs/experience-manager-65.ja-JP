@@ -33,7 +33,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->アセットユーザーインターフェイスについて詳しくは、アセットの [管理を参照してください](/help/assets/manage-assets.md)。
+>アセットユーザーインターフェイスについて詳しくは、[アセットの管理](/help/assets/manage-assets.md)を参照してください。
 
 ## クイックスタート：画像セット {#quick-start-image-sets}
 
@@ -62,9 +62,9 @@ ht-degree: 87%
 
 1. 必要に応じて[画像セットビューアプリセット](/help/assets/managing-viewer-presets.md)を追加します。
 
-   管理者は、画像セットビューアプリセットを作成または編集できます。To see your image set with a viewer preset, select the image set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers.]**
+   管理者は、画像セットビューアプリセットを作成または編集できます。ビューアプリセットを使用して画像セットを表示するには、画像セットを選択し、左側のパネルのドロップダウンメニューで「**[!UICONTROL ビューア」を選択します。]**
 
-   **[!UICONTROL ツール／Assets／ビューアプリセット]**&#x200B;を選択して、ビューアプリセットを作成または編集します。
+   **[!UICONTROL ツール／アセット／ビューアプリセット]**&#x200B;を選択して、ビューアプリセットを作成または編集します。
 
 1. （オプション）バッチセットプリセットを使用して作成した[画像セットの表示](/help/assets/image-sets.md#viewing-image-sets)
 1. [画像セットをプレビューします。](/help/assets/previewing-assets.md)
@@ -79,7 +79,7 @@ ht-degree: 87%
 
    画像セットの URL コールが作成され、画像セットの公開後にそれらの URL コールがアクティベートされます。アセットをプレビューする際に、これらの URL をコピーできます。または、URL を Web サイトに埋め込むこともできます。
 
-   Select the Image Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers.]**
+   画像セットを選択し、左側のパネルのドロップダウンメニューで、「**[!UICONTROL ビューア」を選択します。]**
 
    詳しくは、[Web ページへの画像セットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)および[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
@@ -111,7 +111,7 @@ ht-degree: 87%
 >* ブラック、ブラウンおよびグリーンの色のサムネール。
 
 
-## 画像セットの作成 {#creating-image-sets}
+## 画像セットの作成  {#creating-image-sets}
 
 画像セットは、ユーザーインターフェイスまたは API 経由で作成できます。ここでは、UI で画像セットを作成する方法について説明します。
 
@@ -140,12 +140,12 @@ ht-degree: 87%
 
 1. 次のいずれかの操作をおこないます。
 
-   * Near the upper-left corner of the Image Set Editor page, tap **[!UICONTROL Add Asset.]**
+   * 画像セットエディタページの左上隅近くにある「**[!UICONTROL 追加アセット」をタップします。]**
 
-   * Near the middle of the Image Set Editor page, tap **[!UICONTROL Tap to open Asset Selector.]**
-   画像セットに含めるアセットをタップして選択しします。選択済みのアセットにはチェックマークアイコンが付いています。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select.]**
+   * 画像セットエディターページの中央近くにある「**[!UICONTROL タップしてアセットセレクターを開きます。]**
+   画像セットに含めるアセットをタップして選択しします。選択済みのアセットにはチェックマークアイコンが付いています。終了したら、ページ右上隅近くにある「**[!UICONTROL 選択」をタップします。]**
 
-   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter キーをタップまたはクリックすることで、アセットを検索することができます。]**&#x200B;フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
+   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter キーをタップまたはクリックすることで、アセットを検索することができます。]**&#x200B;フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。表示アイコンをタップし、**[!UICONTROL 列表示]**、**[!UICONTROL カード表示]**、**[!UICONTROL リスト表示を選択して、表示を変更します。]**
 
    [セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
 
@@ -157,16 +157,16 @@ ht-degree: 87%
 
    ![6_5_imageset-reorderassets](assets/6_5_imageset-reorderassets.png)
 
-   サムネールまたはスウォッチを変更する場合は、画像の横の「**+**」**サムネール**&#x200B;アイコンをクリックし、必要なサムネールまたはスウォッチに移動します。When done selecting all the images click **[!UICONTROL Save.]**
+   サムネールまたはスウォッチを変更する場合は、画像の横の「**+**」**サムネール**&#x200B;アイコンをクリックし、必要なサムネールまたはスウォッチに移動します。すべての画像の選択が完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
 1. （オプション）次のいずれかの操作をおこないます。
 
-   * To delete an image, select the image and tap **[!UICONTROL Delete Asset.]**
+   * 画像を削除するには、画像を選択し、「アセットを削除」をタップします。****
 
-   * ページの右上隅付近にプリセットを適用するには、「]**プリセット**[!UICONTROL 」をタップした後、すべてのアセットに一度に適用するプリセットを選択します。
+   * ページの右上隅付近にプリセットを適用するには、「**[!UICONTROL プリセット]**」をタップした後、すべてのアセットに一度に適用するプリセットを選択します。
    >[!NOTE]
    >
-   >画像セットを作成するときに、画像セットのサムネールを変更したり、画像セット内のアセットに基づいて AEM がサムネールを自動的に選択するように設定したりできます。サムネールを選択するには、画像セットエディターページの「タイトル」フィールドの上にある「]**サムネールを変更**[!UICONTROL 」をタップし、任意の画像を選択します（他のフォルダーに移動して画像を検索することもできます）。If you have selected a thumbnail and then decide that you want AEM to generate one from the image set, select **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail.]**
+   >画像セットを作成するときに、画像セットのサムネールを変更したり、画像セット内のアセットに基づいて AEM がサムネールを自動的に選択するように設定したりできます。サムネールを選択するには、画像セットエディターページの「タイトル」フィールドの上にある「**[!UICONTROL サムネールを変更]**」をタップし、任意の画像を選択します（他のフォルダーに移動して画像を検索することもできます）。サムネールを選択し、AEMで画像セットから生成する場合は、「**** **[!UICONTROL 自動サムネールに切り替えます。]**
 
 1. 「**[!UICONTROL 保存」をクリックします。]**&#x200B;新しく作成した画像セットが、作成先のフォルダーに表示されます。
 
@@ -176,7 +176,7 @@ ht-degree: 87%
 
 >[!IMPORTANT]
 >
->Batch sets are created by the IPS [Image Production System] as part of asset ingestion and are available only in Dynamic Media - Scene7 mode.)
+>バッチセットは、IPS [Image Production System]によってアセット取り込みの一部として作成され、ダイナミックメディア —Scene7モードでのみ使用できます。
 
 ただし、バッチセットプリセットを使用して作成したセットは、ユーザーインターフェイスに表示&#x200B;*されません*。これらのセットは 3 つの異なる方法で表示できます（これらの方法は、画像セットをユーザーインターフェイスで作成した場合も使用できます）。
 
@@ -188,7 +188,7 @@ ht-degree: 87%
 
    ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* From search, you can select **[!UICONTROL Filter]**, then expand **[!UICONTROL Dynamic Media]** and select **[!UICONTROL Sets.]**
+* 検索から、「**[!UICONTROL フィルター]**」を選択し、「**[!UICONTROL ダイナミックメディア]**」を展開して、「**[!UICONTROL セット」を選択します。]**
 
    検索結果として、UI で手動で作成した一致するセットか、バッチセットプリセットを使用して自動的に作成した一致するセットが返されます。自動セットの場合、検索クエリは、AEM での検索とは異なる「次の値で始まる」検索条件を使用して実行されます。AEM での検索は、「次を含む」検索条件に基づいて実行されます。フィルターを「**[!UICONTROL セット]**」に設定するのが、自動セットを検索する唯一の方法です。
 
@@ -198,7 +198,7 @@ ht-degree: 87%
 >
 >[画像セットの編集](#editing-image-sets)の説明に従って、ユーザーインターフェイスを通じて画像セットを表示できます。
 
-## 画像セットの編集 {#editing-image-sets}
+## 画像セットの編集  {#editing-image-sets}
 
 画像セットには、次のような様々な編集タスクを実行できます。
 
@@ -212,9 +212,9 @@ ht-degree: 87%
 
 1. 次のいずれかの操作をおこないます。
 
-   * 画像セットアセット上にマウスポインターを置き、]**編集**[!UICONTROL （鉛筆アイコン）をタップします。
+   * 画像セットアセット上にマウスポインターを置き、**[!UICONTROL 編集]**（鉛筆アイコン）をタップします。
    * 画像セットアセット上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップした後、ツールバーの「**[!UICONTROL 編集]**」をタップします。
-   * 画像セットアセットをタップしてから、ツールバーの&#x200B;]**編集**[!UICONTROL （鉛筆アイコン）をタップします。
+   * 画像セットアセットをタップしてから、ツールバーの&#x200B;**[!UICONTROL 編集]**（鉛筆アイコン）をタップします。
 
 1. 画像セット内の画像を編集するには、次のいずれかの操作をおこないます。
 
@@ -225,10 +225,10 @@ ht-degree: 87%
       >[!NOTE]
       >
       >AEM でサムネール用に使用されている画像を別の画像に置き換えて削除しても、元のアセットは表示されたままになります。
-   * To delete an asset, select it and tap or click **[!UICONTROL Delete Asset.]**
+   * アセットを削除するには、アセットを選択し、「**[!UICONTROL アセットを削除」をタップまたはクリックします。]**
    * プリセットを適用するには、ページの右上隅付近にある「**[!UICONTROL プリセット]**」をタップし、ビューアプリセットを選択します。
-   * サムネールを追加または変更するには、該当するアセットの右横にあるサムネールアイコンを選択します。Navigate to the new thumbnail or swatch asset, select it, then tap **[!UICONTROL Select.]**
-   * To delete an entire Image Set, navigate to the Image Set, select it, and tap **[!UICONTROL Delete.]**
+   * サムネールを追加または変更するには、該当するアセットの右横にあるサムネールアイコンを選択します。新しいサムネールまたはスウォッチアセットに移動し、そのアセットを選択して、「**[!UICONTROL 選択」をタップします。]**
+   * 画像セット全体を削除するには、画像セットに移動して選択し、「**[!UICONTROL 削除」をタップします。]**
 
    >[!NOTE]
    >
@@ -236,10 +236,10 @@ ht-degree: 87%
 
 1. 編集が完了したら、「**[!UICONTROL 保存]**」をタップします。
 
-## 画像セットのプレビュー {#previewing-image-sets}
+## 画像セットのプレビュー  {#previewing-image-sets}
 
 詳しくは、[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
-## 画像セットの公開 {#publishing-image-sets}
+## 画像セットの公開  {#publishing-image-sets}
 
 [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
