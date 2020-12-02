@@ -21,15 +21,15 @@ ht-degree: 53%
 
 # コンポーネントデータと Adobe Analytics プロパティとのマッピング{#mapping-component-data-with-adobe-analytics-properties}
 
-Adobe Analytics に送信するデータを収集するフレームワークにコンポーネントを追加します。分析データを収集するために設計されたコンポーネントは、適切な **CQ 変数**&#x200B;にデータを保存します。When you add such a component to a framework, the framework displays the list of CQ variables so that you can each to the appropriate **Analytics variable**.
+Adobe Analytics に送信するデータを収集するフレームワークにコンポーネントを追加します。分析データを収集するために設計されたコンポーネントは、適切な **CQ 変数**&#x200B;にデータを保存します。このようなコンポーネントをフレームワークに追加すると、フレームワークにCQ変数のリストが表示されるので、各変数を適切な&#x200B;**Analytics変数**&#x200B;に対応させることができます。
 
 ![aa-11](assets/aa-11.png)
 
-When the **AEM view** is open the Analytics variables appear in the content finder.
+**AEM表示**&#x200B;が開くと、Analytics変数がコンテンツファインダーに表示されます。
 
 ![aa-12](assets/aa-12.png)
 
-You can map multiple Analytics variables with the same **CQ variable**.
+同じ&#x200B;**CQ変数**&#x200B;を使用して、複数のAnalytics変数をマッピングできます。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
@@ -40,13 +40,13 @@ You can map multiple Analytics variables with the same **CQ variable**.
 
 CQコンポーネント変数をAdobe Analyticsレポートプロパティにマッピングするには、次の手順を実行します。
 
-1. In the **AEM view**, drag a tracking component from sidekick onto the framework. For example, drag the **Page** component component from the **General** category.
+1. **AEM表示**&#x200B;で、サイドキックからフレームワークにトラッキングコンポーネントをドラッグします。 例えば、**ページ**&#x200B;コンポーネントを&#x200B;**一般**&#x200B;カテゴリからドラッグします。
 
    ![aa-13](assets/aa-13.png)
 
    デフォルトのコンポーネントグループには、「**一般**」、「**コマース**」、「**コミュニティ**」、「**Search&amp;Promote**」および「**その他**」があります。AEM インスタンスは、異なるグループおよびコンポーネントを表示するように設定されていることがあります。
 
-1. To map Adobe Analytics variables with variables that are defined in the component, drag an **Analytics variable** from the content finder onto a field on the tracking component. 例えば、にドラッグ `Page Name (pageName)` し `pagedata.title`ます。
+1. コンポーネントで定義された変数を使用してAdobe Analytics変数をマッピングするには、**Analytics変数**&#x200B;をコンテンツファインダーからトラッキングコンポーネントのフィールドにドラッグします。 例えば、`Page Name (pageName)`を`pagedata.title`にドラッグします。
 
    ![aa-14](assets/aa-14.png)
 
@@ -58,19 +58,19 @@ CQコンポーネント変数をAdobe Analyticsレポートプロパティにマ
 
    >[!NOTE]
    >
-   >You can map multiple Analytics variables (e.g. `props`, `eVars`, `events`) to the same CQ variable (e.g. `pagedata.title`)
+   >複数のAnalytics変数(同じCQ変数(例：`pagedata.title`)`eVars``events``props`
 
    >[!CAUTION]
    >
    >次の状態が強く推奨されます。
    >    
-   >    * `eVars` の値 `props``pagedata.X` は、または `eventdata.X`
+   >    * `eVars` の値 `props` は、CQ変数にマッピングされ `pagedata.X` ます。  `eventdata.X`
       >    
       >    
    * それに対して、イベントは`eventdata.events.X` で始まる変数にマッピングされる必要があること
 
 
-1. To make the framework available on the publish instance of your site, open the **Page** tab of sidekick, and click **Activate Framework.**
+1. サイトの発行インスタンスでフレームワークを使用できるようにするには、サイドキックの「**ページ**」タブを開き、「**フレームワークをアクティブ化**」をクリックします。
 
 ## 製品関連変数のマッピング {#mapping-product-related-variables}
 
@@ -108,7 +108,7 @@ AEMでは、製品関連の変数およびAdobe Analytics製品関連のプロ�
 * イベント
 
 RSID が選択されている場合、その RSID に属するすべての変数がリストに追加されます。\
-The `cf#` is needed in order to map Analytics variables to the CQ variables present on the different tracking components. 基本トラッキングのためのフレームワークのセットアップを参照してください。
+Analytics変数を様々なトラッキングコンポーネントに存在するCQ変数にマップするには、`cf#`が必要です。 基本トラッキングのためのフレームワークのセットアップを参照してください。
 
 フレームワーク用に選択した表示に応じて、コンテンツファインダーは、Analytics変数(AEM表示内)またはCQ変数(Analytics表示内)によって入力されます。
 
@@ -117,8 +117,8 @@ The `cf#` is needed in order to map Analytics variables to the CQ variables pres
 1. **AEM ビュー**&#x200B;では、リストは、3 つのフィルターボタンを使用してどの変数の型が選択されているかに応じて、フィルターできます。
 
    * どのボタンも選択されて&#x200B;*いない*&#x200B;場合、完全なリストが表示されます。
-   * If the **Traffic** button is selected, the list will only show the variables belonging to the Traffic section.
-   * If the **Conversion** button is selected, the list will only show the variables belonging to the Conversion section.
+   * 「**トラフィック**」ボタンが選択されている場合、リストには「トラフィック」セクションに属する変数のみが表示されます。
+   * 「**コンバージョン**」ボタンが選択されている場合、リストには「コンバージョン」セクションに属する変数のみが表示されます。
    * 「**イベント**」ボタンが選択されている場合、リストには、「イベント」セクションに属する変数のみが表示されます。
 
    >[!NOTE]
@@ -137,11 +137,11 @@ The `cf#` is needed in order to map Analytics variables to the CQ variables pres
 
 1. Adobe Analytics表示では、コンテンツファインダーにCQ表示内にドラッグされたトラッキングコンポーネントに属するすべてのCQ変数が表示されます。
 
-   * e.g. in case the **Download component** is the *only one dragged* in CQ view (which has two mappable variables *eventdata.downloadLink* and *eventdata.events.startDownload*), the Content Finder wil look like this when switching to Adobe Analytics view:
+   * 例えば、**ダウンロードコンポーネント**&#x200B;がCQ表示内でドラッグされた1つ&#x200B;*のみ*&#x200B;である場合(マッピング可能な変数&#x200B;*eventdata.downloadLink*&#x200B;と&#x200B;*eventdata.イベント.startDownload*&#x200B;の2つ)、コンテンツファインダーは次のようになりますAdobe Analytics表示に切り替え：
 
    ![aa-22](assets/aa-22.png)
 
-   * The variables can be dragged&amp;dropped onto any Adobe Analytics variable belonging to either one of the 3 variable sections (**Traffic**, **Conversion** and **Events**).
+   * 変数は、3つの変数セクション(**トラフィック**、**コンバージョン**、**イベント**)のいずれかに属する任意のAdobe Analytics変数にドラッグ&amp;ドロップできます。
 
    * 新しいトラッキングコンポーネントをCQ表示のフレームワークにドラッグすると、そのコンポーネントに属するCQ変数が自動的にAdobe Analytics表示のコンテンツファインダー(cf#)に追加されます。
    >[!NOTE]
@@ -181,7 +181,7 @@ The `cf#` is needed in order to map Analytics variables to the CQ variables pres
 
 ![aa-24](assets/aa-24.png)
 
-1. This view can be accessed by switching to the **Analytics view** tab on the framework.
+1. この表示にアクセスするには、フレームワークの&#x200B;**Analytics表示**&#x200B;タブに切り替えます。
 1. 左側：コンテンツファインダー（cf#）は、CQ ビューのフレームワークにドラッグしたコンポーネントに基づく CQ 変数によって入力されます。
 1. タブヘッダー（**AEM ビュー**&#x200B;と **Analytics ビュー**）：2 つのビューを切り替えるのに使用します。
 
@@ -189,17 +189,17 @@ The `cf#` is needed in order to map Analytics variables to the CQ variables pres
 
    * **トラフィック**：
 
-      * Traffic variable ( `prop1`) mapped to a CQ variable ( `eventdata.downloadLink`)
+      * CQ変数(`prop1`)にマッピングされるトラフィック変数(`eventdata.downloadLink`)
 
       * コンポーネントの隣に鍵アイコンがある場合、これは、親フレームワークからの継承であり、そのため編集できないことを意味します。
    * **コンバージョン**:
 
-      * Conversion variable ( `eVar1`) mapped to a CQ variable ( `pagedata.title`)
+      * コンバージョン変数(`eVar1`)がCQ変数(`pagedata.title`)にマッピングされる
 
       * CQ 変数フィールドをダブルクリックしてコードを手動で入力することにより、JavaScript 式にマッピングされたコンバージョン変数（`eVar3`）をインラインで追加しました。
    * **イベント**:
 
-      * Event variable ( `event1`) mapped to a CQ event ( `eventdata.events.pageView`)
+      * イベント変数(`event1`)がCQイベント(`eventdata.events.pageView`)にマップされている
 
 
 
@@ -207,9 +207,9 @@ The `cf#` is needed in order to map Analytics variables to the CQ variables pres
 >
 >すべての表の CQ 変数列は、フィールドをダブルクリックしてテキストを追加することで、インラインで入力することもできます。これらのフィールドは、JavaScript を入力として受け取ります。
 >
->* 例：次の列 `prop3` に
+>* 例えば、&lt;a0/の横にある`prop3`
 >* `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
-   >  を使用して、ページの *タイトル* と *sitesectionを連結して送信するには**:* （コロン）で始まり、 *Adobe* : `prop3`
+   >  *:*（コロン）を使用し、*Adobe*&#x200B;を`prop3`としてプレフィックス付きで、*サイトセクション*&#x200B;と連結されたページの&#x200B;*タイトル*&#x200B;を送信するには
 
 >
 
