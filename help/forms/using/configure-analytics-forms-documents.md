@@ -50,8 +50,8 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
 次の手順を実行して、レポートスイートを作成します。
 
-1. Log in at [https://sc.omniture.com/login/](https://sc.omniture.com/login/)
-1. In the Marketing Cloud, select **Admin** > **Admin Console** > **Report Suites**.
+1. [https://sc.omniture.com/login/](https://sc.omniture.com/login/)にログインします。
+1. Marketing Cloudーで、**管理者**/**Admin Console**/**レポートスイート**&#x200B;を選択します。
 1. Report Suite Manager で、**新規作成**／**レポートスイート**&#x200B;を選択します。
 
    ![新しいレポートスイートの作成](assets/newreportsuite_new.png)
@@ -73,20 +73,20 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
    一般的なアカウント設定
 
-1. In General Account Settings screen, enable **Geography Reporting**, and click **Save.**
+1. 一般的なアカウント設定画面で、**地域レポート**&#x200B;を有効にし、**「保存」をクリックします。**
 1. **設定を編集**／**トラフィック**／**トラフィック変数**&#x200B;の順に移動します。
 1. レポートスイートで、次のトラフィック変数を設定し、有効化します。
 
    * **formName**：アダプティブフォームの識別子。
    * **formInstance**：アダプティブフォームインスタンスの識別子。この変数のパスレポートを有効にします。
-   * **fieldName**:アダプティブフォームフィールドの識別子。 この変数のパスレポートを有効にします。
-   * **panelName**:アダプティブフォームパネルの識別子。 この変数のパスレポートを有効にします。
+   * **fieldName**:アダプティブフォームフィールドの識別子。この変数のパスレポートを有効にします。
+   * **panelName**:アダプティブフォームパネルの識別子。この変数のパスレポートを有効にします。
    * **formTitle**：フォームのタイトル。
    * **fieldTitle**：フォームフィールドのタイトル。
    * **panelTitle**：フォームパネルのタイトル。
    * **analyticsVersion**：フォーム分析のバージョン。
 
-1. Navigate to **Edit Settings** > **Conversion** > **Success Events**. 次の成功イベントを定義し、有効にします。
+1. **設定を編集**/**コンバージョン**/**成功イベント**&#x200B;に移動します。 次の成功イベントを定義し、有効にします。
 
    | 成功イベント | 型 |
    |---|---|
@@ -102,19 +102,19 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
    >[!NOTE]
    >
-   >An event number and prop number used to configure AEM Forms analytics must be different from event number and prop number used in [AEM analytics](/help/sites-administering/adobeanalytics.md) configuration.
+   >AEM Forms解析の設定に使用するイベント番号とprop番号は、[AEM analytics](/help/sites-administering/adobeanalytics.md)設定で使用するイベント番号とprop番号とは異なる番号にする必要があります。
 
 1. Adobe Marketing Cloud アカウントからログアウトします。
 
-## クラウドサービス設定の作成 {#creating-cloud-service-configuration}
+## クラウドサービス設定の作成  {#creating-cloud-service-configuration}
 
 クラウドサービス設定は、Adobe Analytics アカウントに関する情報です。この設定で Adobe Experience Manager（AEM）を有効化し、Adobe Analytics に接続します。使用する各 Analytics アカウントに対してそれぞれ個別の設定を作成します。
 
 1.  管理者として、AEM のオーサーインスタンスにログインします。
-1. In the top-left corner, click **Adobe Experience Manager** > **Tools** ![](/help/forms/using/assets/tools.png) > **Deployment** > **Cloud Services**.
-1. 「**Adobe Analytics**」アイコンを見つけます。Click **Show Configurations** and then proceed to click **[+]** to add new configuration.
+1. 左上隅の&#x200B;**Adobe Experience Manager**/**ツール**![](/help/forms/using/assets/tools.png)/**展開**/**Cloud Services**&#x200B;をクリックします。
+1. 「**Adobe Analytics**」アイコンを見つけます。「**設定を表示**」をクリックし、続けて「**[+]**」をクリックして、新しい設定を追加します。
 
-   If you are a first-time user, click **Configure now**.
+   初めて使用する場合は、**「今すぐ設定**」をクリックします。
 
 1. 新しい設定にタイトルを追加します（名前フィールドへの記入はオプションです）。例えば、My analytics configuration などとします。「**作成**」をクリックします。
 
@@ -132,7 +132,7 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数の間の一連のマッピングです。フレームワークを使用して、フォームから Adobe Analytics レポートにデータを入力する方法を設定します。フレームワークは、Adobe Analytics の設定に関連付けられています。設定ごとに複数のフレームワークを作成できます。
 
 1. AEM クラウドサービスコンソールで、Adobe Analytics の下にある「**設定を表示**」をクリックします。
-1. Click the **[+]** link next to next to your Analytics configuration.
+1. Analytics設定の横にある&#x200B;**[+]**&#x200B;リンクをクリックします。
 
    ![Adobe Analytics 設定](assets/adobe-analytics-cloud-services.png)
 
@@ -144,7 +144,7 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 
    ![information_to_send_to_report_suite](assets/information_to_send_to_report_suite.png)
 
-1. Drag a **Form Analytics component** from the **other** category from SideKick onto the framework.
+1. SideKickの&#x200B;**他の**&#x200B;カテゴリーからフレームワークに&#x200B;**Form Analyticsコンポーネント**&#x200B;をドラッグします。
 1. コンポーネントで定義された変数を使用して Analytics 変数をマッピングするには、AEM Content Finder からトラッキングコンポーネントのフィールド上に変数をドラッグします。
 
    ![Adobe Analytics の変数を使用して AEM の変数をマップする](assets/analytics_new.png)
@@ -153,14 +153,14 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 
 ## AEM Forms Analytics Configuration サービスの設定 {#configuring-aem-forms-analytics-configuration-service}
 
-1. On author instance, open AEM Web Console Configuration manager at `https://<server>:<port>;/system/console/configMgr`.
+1. 作成者インスタンスで、`https://<server>:<port>;/system/console/configMgr`にあるAEM Web Console Configuration Managerを開きます。
 1. AEM Forms分析設定を検索して開きます
 
    ![AEM Forms Analytics Configuration サービス](assets/analytics_configuration.png)
 
    AEM Forms Analytics Configuration サービス
 
-1. Specify appropriate values for the following fields and click **Save**.
+1. 次のフィールドに適切な値を指定し、「**保存**」をクリックします。
 
    * **SiteCatalyst フレームワーク**：「追跡用にフレームワークを設定」セクションで定義したフレームワークまたは設定を選択します。
    * **フィールド時間追跡ベースライン**：フィールド訪問を追跡する必要のある時間を秒単位で指定します。デフォルト値は 0 です。0（ゼロ）よりも大きな値を指定すると、2 つの独立した追跡イベントが Adobe Analytics サーバーに送信されます。最初のイベントは、完了フィールドの追跡を停止するように Analytics サーバーに指示を出します。指定された時間が経過すると、2 番目のイベントが送信されます。2 番目のイベントは、訪問フィールドの追跡を開始するように Analytics サーバーに指示を出します。このように 2 つの独立したイベントを使用することにより、特定のフィールドの処理にかかった時間を正確に測定することができます。値として 0（ゼロ）を指定すると、1 つの追跡イベントが Adobe Analytics サーバーに送信されます。
@@ -176,16 +176,16 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 
 これで、フォーム用に Analytics を有効化して、分析レポートを生成できるようになりました。
 
-## フォームまたはドキュメント用に Analytics を有効化する {#enabling-analytics-for-a-form-or-document}
+## フォームまたはドキュメント用に Analytics を有効化する  {#enabling-analytics-for-a-form-or-document}
 
-1. Log in to AEM portal at `https://[hostname]:'port'`.
+1. `https://[hostname]:'port'`でAEM portalにログインします。
 1. **フォーム／フォームとドキュメント**&#x200B;をクリックしてフォームまたはドキュメントを選択し、「**Analytics を有効にする**」をクリックします。Analytics が有効になります。
 
    ![フォームまたはドキュメント用に Analytics を有効化する](assets/enable-analytics-1.png)
 
    フォーム用に Analytics を有効化する
 
-   **A.** Enable Analyticsボタン **B.** Selected form
+   **A.「Analyticsを** 有効にする」ボタン **B.** 選択されたフォーム
 
-   For detailed information on viewing forms analytics reports, see [Viewing and understanding AEM Forms analytics reports](../../forms/using/view-understand-aem-forms-analytics-reports.md)
+   フォーム分析レポートの表示について詳しくは、「[AEM Forms分析レポートの確認方法と詳細](../../forms/using/view-understand-aem-forms-analytics-reports.md)」を参照してください。
 
