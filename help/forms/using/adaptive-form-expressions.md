@@ -23,13 +23,13 @@ ht-degree: 70%
 
 アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの数式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
 
-## 式を記述するためのベストプラクティス {#best-practices-for-writing-expressions}
+## 式を記述するためのベストプラクティス  {#best-practices-for-writing-expressions}
 
 * 式を記述したり、フィールドやパネルにアクセスしたりする場合は、フィールド名またはパネル名を使用します。フィールドの値にアクセスするには、valueプロパティを使用します。例：`field1.value`
 * フォーム間でフィールド名およびパネル名には一意の名前を付けてください。式を記述する場合に使用されているフィールド名を使用すると競合を回避しやすくなります。
 * 複数行にわたる式を記述する場合、セミコロンを使用して分を終了します。
 
-## 繰り返しパネルを含む式のベストプラクティス {#best-practices-for-expressions-involving-repeating-panel}
+## 繰り返しパネルを含む式のベストプラクティス  {#best-practices-for-expressions-involving-repeating-panel}
 
 繰り返しパネルは、スクリプティングAPIまたは事前に入力されたデータを使用して追加または削除されたインスタンスのパネルです。繰り返しパネルの使用に関して詳しくは、[繰り返し可能なセクションでのフォーム作成](/help/forms/using/creating-forms-repeatable-sections.md)を参照してください。
 
@@ -39,10 +39,10 @@ ht-degree: 70%
 * アダプティブフォームには、合計、カウント、最小値、最大値、フィルター等の繰り返しパネルの計算を簡素化するためのいくつかの特別な機能があります。全機能のリストについては、[JavaScript ライブラリアダプティブフォームのAPI リファレンス](https://helpx.adobe.com/aem-forms/6/javascript-api/af.html)を参照してください。
 * 繰り返しパネルのインスタンスを操作するためのAPIは：
 
-   * To add a panel instance: `panel1.instanceManager.addInstance()`
-   * To get a panel repeat index: `panel1.instanceIndex`
-   * パネルのinstanceManagerを取得するには： `_panel1 or panel1.instanceManager`
-   * To remove an instance of a panel: `_panel1.removeInstance(panel1.instanceIndex)`
+   * パネルインスタンスを追加するには：`panel1.instanceManager.addInstance()`
+   * パネルの繰り返しのインデックスを取得するには：`panel1.instanceIndex`
+   * パネルのinstanceManagerを取得するには：`_panel1 or panel1.instanceManager`
+   * パネルのインスタンスを削除するには：`_panel1.removeInstance(panel1.instanceIndex)`
 
 ## 式のタイプ {#expression-types}
 
@@ -55,7 +55,7 @@ ht-degree: 70%
 * **[オプション式](#options-expression)**：ドロップダウンリストを動的に埋めます。
 * **[要約式](#summary)**：アコーディオンのタイトルを動的に計算します。
 * **[検証数式](#validate-expression)**：フィールドを検証します。
-* **[値コミットスクリプト](#value-commit-script):** フィールドの値を変更した後にフォームのコンポーネントを変更する場合。
+* **[値コミットスクリプト](#value-commit-script)：フィールド** の値が変更された後にフォームのコンポーネントを変更します。
 * **[視認性の数式](#visibility-expression)**：フィールドおよびパネルの視認性をコントロールします。
 * **[ステップ完了の式](#step-completion-expression)**:ユーザがウィザードの次のステップに進むのを防ぐ。
 
@@ -67,28 +67,28 @@ ht-degree: 70%
 
 ****&#x200B;戻り値の型 ：数式は、フィールドが有効/無効であることを表すブール値を返します。**trueは**&#x200B;フィールドが有効であることを表し、**falseは**&#x200B;フィールドが無効であることを表します。
 
-**例**:field1 **の値が** Xに設定されている場合にのみフィールドを有効にする場合のアクセス式は次のとおりです ****。 `field1.value == "X"`
+**例**:field1の値を **Xに設定した場合にのみフィールド** を有効にするに **は、次のアクセス式を使用します**。  `field1.value == "X"`
 
 ### 数式の計算 {#calculate-expression}
 
-数式の計算は、式を使ってフィールドの値を自動計算するのに使用されます。通常、この式には、他のフィールドの値プロパティを使用します。例えば、`field2.value + field3.value` のようになります。Whenever value of the `field2`or `field3`changes, the expression is retriggered and the value is recomputed.
+数式の計算は、式を使ってフィールドの値を自動計算するのに使用されます。通常、この式には、他のフィールドの値プロパティを使用します。例えば、`field2.value + field3.value` のようになります。`field2`または`field3`の値が変更されると、式はトリガされ、値は再計算されます。
 
 **適用性：**&#x200B;フィールド
 
 **戻り値の型**：数式は、式の結果が表示されるフィールドに対応する値を返します（例えば、小数値）。
 
-**例**:field1内の2つのフィールドの合計を表示するcalculate式 **は** 、次のとおりです。
+**例**:field1内の2つのフィールドの合計を表示するcalculate式 **は次** のとおりです。 
 `field2.value + field3.value`
 
 ### クリック式 {#click-expression}
 
-クリック式は、数式をクリック：ボタンのクリックイベント上で実行された操作を処理します。GuideBridgeは、送信や検証などのクリック式と共に使用される様々な機能を実行するためにAPIをデフォルトで提供します。For complete list of the APIs, see [GuideBridge APIs](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html).
+クリック式は、数式をクリック：ボタンのクリックイベント上で実行された操作を処理します。GuideBridgeは、送信や検証などのクリック式と共に使用される様々な機能を実行するためにAPIをデフォルトで提供します。APIの完全なリストについては、[GuideBridge APIs](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)を参照してください。
 
 **適任性**：ボタンフィールド
 
 **戻り値の型**：クリック式は値を返しません。数式が値を返した場合、その値は無視されます。
 
-**例**:値が **AEM Formsのボタンのクリックアクションでテキストボックス** textbox1 ****&#x200B;に入力するには、ボタンのクリック式を次のように指定します。 `textbox1.value="AEM Forms"`
+**例**:ボタンのクリック操作でテキストボックス **textbox1** に値 **** AEM Formsを入力するには、ボタンのクリック式を次のように指定します。  `textbox1.value="AEM Forms"`
 
 ### 初期化スクリプト {#initialization-script}
 
@@ -102,7 +102,7 @@ ht-degree: 70%
 
 **戻り値の型：**&#x200B;初期化スクリプトの数式は値を返しません。数式が値を返した場合、その値は無視されます。
 
-**例：** データの事前入力シナリオでは、値がnullとして保存されたときにフィールドにデフォルト値 `'Adaptive Forms'` を入力するため、初期化スクリプトの式は次のようになります。
+**例：データ** の事前入力シナリオでは、値がnullとして保存された `'Adaptive Forms'` ときにフィールドにデフォルト値を入力するため、初期化スクリプト式は次のようになります。 
 `if(this.value==null) this.value='Adaptive Forms';`
 
 ### オプション式{#options-expression}
@@ -125,11 +125,11 @@ ht-degree: 70%
 
 要約式は通常、アコーディオンレイアウトパネルの子の繰り返し処理に使用され、子パネルごとに意味のあるタイトルを作成します。
 
-**適用先：** レイアウトがアコーディオンとして設定されたパネルの直接の子であるパネル。
+**適用性：アコーディオンとして設定された** パネルの直接の子であるパネル。
 
-**戻り値の型：** 式は、アコーディオンのタイトルになる文字列型(String)の値を返します。
+**戻り値の型：** 式は、アコーディオンのタイトルになる文字列型(String)を返します。
 
-**例：** &quot;口座番号：&quot;+ textbox1.value
+**例：** &quot;アカウント番号：&quot;+ textbox1.value
 
 ### 数式の検証 {#validate-expression}
 
@@ -137,7 +137,7 @@ ht-degree: 70%
 
 **適用性：**&#x200B;フィールド
 
-**戻り値の型**:式は、フィールドの検証ステータスを表すブール型(Boolean)の値を返します。 The value **false** represents that the field is invalid and **true** represents that the field is valid.
+**戻り値の型**:式は、フィールドの検証ステータスを表すブール型(Boolean)の値を返します。値&#x200B;**false**&#x200B;はフィールドが無効であることを表し、**true**はフィールドが有効であることを表します。
 **例**：英国の郵便番号を表すフィールドの検証式は次の通りです：
 
 (**this.value** &amp;&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
@@ -163,15 +163,15 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->フィールドの値がプログラムによって変更された場合、値コミットスクリプトを無効にすることができます。To do so, go to https://&#39;[server]:[port]&#39;/system/console/configMgr and change **Adaptive Forms Version for Compatibility** to **AEM Forms 6.1**. 以降、値コミットスクリプトは、ユーザーがフィールドの値をUIから変更した場合にのみ実行されます。
+>フィールドの値がプログラムによって変更された場合、値コミットスクリプトを無効にすることができます。これを行うには、https://&#39;[server]:[port]&#39;/system/console/configMgrに移動し、**Adaptive Server Version for Compatibility**&#x200B;を&#x200B;**AEM Forms6.1**&#x200B;に変更します。 以降、値コミットスクリプトは、ユーザーがフィールドの値をUIから変更した場合にのみ実行されます。
 
-### 表示式 {#visibility-expression}
+### 表示式  {#visibility-expression}
 
 表示式は、フィールド／パネルの視認性を制御するのに使用されます。通常、表示式にはフィールドの値プロパティが使用され、値が変更される度に再トリガされます。
 
 **適任性**：フィールドおよびパネル
 
-****&#x200B;戻り値の型 ：数式は、フィールド/パネルが表示されているか否かを表すブール値を返します。**false** はフィールドまたはパネルが表示されないことを表し、trueはフィールドまたはパネルが表示されることを表します。
+****&#x200B;戻り値の型 ：数式は、フィールド/パネルが表示されているか否かを表すブール値を返します。**falseフィールドまたはパネルが表示されないことを** 表し、trueはフィールドまたはパネルが表示されていることを表します。
 
 **例：**&#x200B;フィールドの値が&#x200B;****&#x200B;男性に&#x200B;**設定された場合のみ表示されるパネルの**&#x200B;表示式は次の通りです：`field1.value == "Male"`1.
 
@@ -183,12 +183,12 @@ ht-degree: 70%
 
 ****&#x200B;戻り値の型 ：数式は、既存のパネルが有効か無効かを表すブール値を返します。**True**&#x200B;は既存のパネルが有効で、ユーザーが次のステップに移動できることを表します。
 
-**例**：様々なパネルに表示されるフォームでは、次のパネルに移動する前に既存のパネルが検証されます。このような場合、ステップ完了の式を使用します。一般的に、これらの数式にはGuildBridge検証APIが使用されます。An example of step completion expression is:
+**例**：様々なパネルに表示されるフォームでは、次のパネルに移動する前に既存のパネルが検証されます。このような場合、ステップ完了の式を使用します。一般的に、これらの数式にはGuildBridge検証APIが使用されます。ステップ完了式の例を次に示します。
 `window.guideBridge.validate([],this.panel.navigationContext.currentItem.somExpression)`
 
 ## アダプティブフォームにおける検証 {#validations-in-adaptive-form}
 
-アダプティブフォームにフィールド検証を追加するには複数の方法があります。検証チェックがフィールドに追加された場合、**True**&#x200B;はフィールドに入力された値が有効であることを示します。**False** は、値が無効であることを表します。 フィールドの中または外にタブを付けた場合、エラーメッセージは生成されません。
+アダプティブフォームにフィールド検証を追加するには複数の方法があります。検証チェックがフィールドに追加された場合、**True**&#x200B;はフィールドに入力された値が有効であることを示します。**False** は、値が無効であることを表します。フィールドの中または外にタブを付けた場合、エラーメッセージは生成されません。
 
 フィールドに検証を追加する方法：
 
@@ -210,7 +210,7 @@ ht-degree: 70%
 
 表示形式は、異なる形式でデータを表示するのに使用されます。例えば、ハイフンが入った電話番号、郵便番号または日付選択を表示するのに、表示形式を使うことができます。表示形式は、**コンポーネントの編集ダイアログにあるパターンセクションから**&#x200B;選択することができます。上記の検証パターンに類似したパターンをカスタムで作成することも可能です。
 
-### GuideBridge - APIとイベント {#guidebridge-apis-and-events}
+### GuideBridge - APIとイベント  {#guidebridge-apis-and-events}
 
 GuideBridgeは、ブラウザのメモリーモデルにおいてアダプティブフォームを操作するのに使うAPIが集まったものです。Guide Bridge API、クラスメソッド、公開されたイベントに関する詳細の紹介は、[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/aem-forms/6/javascript-api/)を参照してください。
 
@@ -218,19 +218,19 @@ GuideBridgeは、ブラウザのメモリーモデルにおいてアダプティ
 >
 >数式でGuideBridgeイベントリスナーの使用は避けることをお勧めします。
 
-#### 様々な数式におけるGuideBridgeの使用方法 {#guidebridge-usage-in-various-expressions}
+#### 様々な数式におけるGuideBridgeの使用方法  {#guidebridge-usage-in-various-expressions}
 
-* To reset form fields, you can trigger `guideBridge.reset()` API on the click expression of a button. Similarly there is a submit API which can be called as a click expression `guideBridge.submit()`**.**
+* フォームフィールドをリセットするには、ボタンのclick式で`guideBridge.reset()` APIをトリガーします。 同様に、送信APIはクリック式&#x200B;`guideBridge.submit()`**として呼び出すことができます。**
 
-* You can use the `setFocus()` API to set focus across various fields or panels (for panel focus is set to the first field automatically). `setFocus()`は、パネル間のナビゲーション、前/次のトラバーサル間の移動、特定のフィールドへのフォーカスの設定など、幅広いオプションを提供します。 For example, to move to the next panel, you can use: `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
+* `setFocus()` APIを使用して、様々なフィールドやパネルにフォーカスを設定できます（パネルフォーカスは自動的に最初のフィールドに設定されます）。 `setFocus()`は、パネル間のナビゲーション、前/次のトラバーサル間の移動、特定のフィールドへのフォーカスの設定など、幅広いオプションを提供します。例えば、次のパネルに移動するには、次を使用できます。`guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
 
-* To validate an adaptive form or its specific panels, use `guideBridge.validate(errorList, somExpression).`
+* アダプティブフォームまたはその特定のパネルを検証するには、`guideBridge.validate(errorList, somExpression).`を使用します
 
 #### 数式外でのGuideBridgeの使用{#using-guidebridge-outside-expressions-nbsp}
 
 GuideBridge　APIを数式の外で使用することもできます。例えば、アダプティブフォームをホストしているページHTMLとフォームモデル間の通信を設定するのにGuideBridge APIを使用することができます。さらに、フォームをホストするIframeの親から取得した値を設定できます。
 
-GuideBridge APIを上記の例で使用するには、GuideBridgeのインスタンスを取得します。To capture the instance, listen to `bridgeInitializeStart`event of a `window`object:
+GuideBridge APIを上記の例で使用するには、GuideBridgeのインスタンスを取得します。インスタンスを取得するには、`window`オブジェクトの`bridgeInitializeStart`イベントをリッスンします。
 
 ```javascript
 window.addEventListener("bridgeInitializeStart", function(evnt) {
@@ -254,11 +254,11 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 >
 >AEMでは、clientLibにコードを記述し、ページに含めることをお勧めします（ページのheader.jspまたはfooter.jsp）。
 
-To use GuideBridge after the form is initialized (the `bridgeInitializeComplete` event is dispatched), get the GuideBridge instance using `window.guideBridge`.  APIを使って、`guideBride.isConnected`GuideBridge初期化ステータスを確認することができます。
+フォームの初期化後(`bridgeInitializeComplete`イベントがディスパッチされた後)にGuideBridgeを使用するには、`window.guideBridge`を使用してGuideBridgeインスタンスを取得します。  APIを使って、`guideBride.isConnected`GuideBridge初期化ステータスを確認することができます。
 
 #### GuideBridgeイベント {#guidebridge-events}
 
-またGuideBridgeは、ホストページ内の外部スクリプトのために特定のイベントも提供します。外部スクリプトは、これらのイベントを聞いて様々な操作を行います。例えば、フォームのユーザー名が変更される場合は、ページのヘッダー部分に表示される名前も常に変更されます。For more details about such events, see [JavaScript Library API reference for adaptive forms](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html).
+またGuideBridgeは、ホストページ内の外部スクリプトのために特定のイベントも提供します。外部スクリプトは、これらのイベントを聞いて様々な操作を行います。例えば、フォームのユーザー名が変更される場合は、ページのヘッダー部分に表示される名前も常に変更されます。このようなイベントについて詳しくは、「[アダプティブフォームのJavaScriptライブラリAPIリファレンス](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)」を参照してください。
 
 次のコードを使ってハンドラーを登録してください：
 
@@ -270,19 +270,19 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 });
 ```
 
-### フィールドのカスタムパターンの作成 {#creating-custom-patterns-for-a-field}
+### フィールドのカスタムパターンの作成  {#creating-custom-patterns-for-a-field}
 
 前述のように、アダプティブフォームでは、作成者が検証または表示形式のパターンを提供することができます。デフォルトパターンの使用に加えて、アダプティブフォームコンポーネントに再利用可能なカスタムパターンを設定することも可能です。例えば、テキストフィールドや数値フィールドを定義できます。 設定が終われば、特定の種類のコンポーネントのすべてのフォームにおいてこれらのパターンを使用することができます。例えば、テキストフィールドのカスタムパターンを作成し、アダプティブフォームのテキストフィールドで使用することができます。 コンポーネントの編集ダイアログでパターンセクションにアクセスすることで、カスタムパターンを選択できます。パターン設定またはフォーマットに関する詳細は、「[HTML5 のパターン形式文字列サポート](/help/forms/using/picture-clause-support.md)」を参照してください。
 
 特定のフィールドタイプのカスタムパターンを作成して、同じ種類のフィールドに再利用するには、次のステップを実行してください。
 
 1. 自分のオーサーインスタンスで CRXDE Lite に移動します。
-1. カスタムパターンを管理するためのフォルダーを作成します。アプリケーションディレクトリの下で、sling:folderタイプのノードを作成します。For example, create a node with the name `customPatterns`. Under this node, create another node of type `nt:unstructed` and name it `textboxpatterns`. このノードには、追加しておくとよい様々なカスタムパターンが含まれています。
+1. カスタムパターンを管理するためのフォルダーを作成します。アプリケーションディレクトリの下で、sling:folderタイプのノードを作成します。例えば、`customPatterns`という名前のノードを作成します。 このノードの下に、`nt:unstructed`型の別のノードを作成し、`textboxpatterns`という名前を付けます。 このノードには、追加しておくとよい様々なカスタムパターンが含まれています。
 1. 作成したノードのプロパティタブを開きます。例えば、`textboxpatterns`のプロパティタブを開きます。このノードにプロパティ`guideComponentType`を追加して、その値を&#x200B;*fd/af/components/formatter/guideTextBox*&#x200B;に設定します。
 
-1. このプロパティの値は、パターンを設定するフィールドによって変わります。数値フィールドの`guideComponentType`*プロパティの値は、* fd/af/components/formatter/guideNumericBoxです。The value for the Datepicker field is *fd/af/components/formatter/guideDatepicker*.
-``
-1. ノードにプロパティを割り当てることで`textboxpatterns`カスタムパターンを追加できます。Add a property with a name (for example `pattern1`), and set its value to the pattern you want to add. For example, add a property `pattern1` with value Fax=text{99-999-9999999}. このパターンは、アダプティブFormsで使用するすべてのテキストボックスで使用できます。
+1. このプロパティの値は、パターンを設定するフィールドによって変わります。数値フィールドの`guideComponentType`*プロパティの値は、* fd/af/components/formatter/guideNumericBoxです。日付選択フィールドの値は&#x200B;*fd/af/components/formatter/guideDatepicker*です。
+&quot;
+1. ノードにプロパティを割り当てることで`textboxpatterns`カスタムパターンを追加できます。名前追加を持つプロパティ（例：`pattern1`）を指定し、その値を追加するパターンに設定します。 例えば、Fax=text{99-999-9999999}の値を持つプロパティ`pattern1`を追加します。 このパターンは、アダプティブFormsで使用するすべてのテキストボックスで使用できます。
 
    ![CrDeでフィールドのカスタムパターンの作成](assets/creating-custom-patterns.png)
 
