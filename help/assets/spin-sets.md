@@ -23,13 +23,13 @@ ht-degree: 88%
 
 スピンセットは、360 度の閲覧エクスペリエンスをシミュレートします。Dynamic Media は、ビューアがアイテムを回転できる単一軸のスピンセットを提供します。さらに、ユーザーは「自由形式」のズームを実行し、マウスを数回クリックするだけで任意のビューをパンできます。このようにして、ユーザーは特定の視点からより詳しくアイテムを調べることができます。
 
-Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In addition, if the Spin Set is published, then the publish date, indicated by the **[!UICONTROL World]** icon is on the banner along with the last modification date, indicated by the **[!UICONTROL Pencil]** icon displays.
+スピンセットは、「**[!UICONTROL SPINSET.]**」という語を含むバナーで指定されます。また、スピンセットが公開される場合は、**[!UICONTROL World]**&#x200B;アイコンで示される公開日と最後の変更日がバナーに表示されます。]****[!UICONTROL 
 
 ![chlimage_1-](assets/chlimage_1-380.png)
 
 >[!NOTE]
 >
->アセットユーザーインターフェイスについて詳しくは、アセットの [管理を参照してください](/help/assets/manage-assets.md)。
+>アセットユーザーインターフェイスについて詳しくは、[アセットの管理](/help/assets/manage-assets.md)を参照してください。
 
 ## クイックスタート：スピンセット {#quick-start-spin-sets}
 
@@ -73,7 +73,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
    スピンセットの URL コールが作成され、スピンセットの公開後にそれらの URL コールがアクティベートされます。アセットをプレビューする際に、これらの URL をコピーできます。または、URL を Web サイトに埋め込むこともできます。
 
-   Select the Spin Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers.]**
+   スピンセットを選択し、左側のパネルのドロップダウンメニューで、「**[!UICONTROL ビューア」を選択します。]**
 
    詳しくは、[Web ページへのスピンセットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)と[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
@@ -95,7 +95,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 * 製品の細部に十分に光を当て、ピントを合わせるようにします。
 * ファッション衣料の場合は、マネキンやモデルに着せてスピン画像を撮影します。多くの場合、ガラス製のマネキンを使用してマネキンを完全にマスクするか、画像内に定型化されたマネキンを表示します。角度を定義することで、モデルによるスピンセットを作成できます。床にテープを貼って角度をマークし、モデルが撮影ごとに動いて向きを変えるための手助けをします。
 
-## スピンセットの作成 {#creating-spin-sets}
+## スピンセットの作成  {#creating-spin-sets}
 
 ここでは、AEM でスピンセットを作成する方法について説明します。
 
@@ -122,16 +122,16 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
    >[!NOTE]
    >
-   >スピンセットを作成するときに、スピンセットのサムネールを変更したり、AEM でスピンセット内のアセットに基づいてサムネールを自動的に選択したりすることができます。サムネールを選択するには、「**[!UICONTROL サムネールを変更]**」をクリックし、画像を選択します（他のフォルダーに移動して画像を探すこともできます）。If you have selected a thumbnail and then decide that you want AEM to generate one from the spin set, select **[!UICONTROL Switch to Automatic thumbnail.]**
+   >スピンセットを作成するときに、スピンセットのサムネールを変更したり、AEM でスピンセット内のアセットに基づいてサムネールを自動的に選択したりすることができます。サムネールを選択するには、「**[!UICONTROL サムネールを変更]**」をクリックし、画像を選択します（他のフォルダーに移動して画像を探すこともできます）。サムネールを選択し、AEMでスピンセットから生成する場合は、**[!UICONTROL 自動サムネールに切り替えを選択します。]**
 
 1. 次のいずれかの操作をおこないます。
 
-   * Near the upper-left corner of the Spin Set Editor page, tap **[!UICONTROL Add Asset.]**
+   * スピンセットエディターページの左上隅近くにある「**[!UICONTROL 追加アセット」をタップします。]**
 
-   * Near the middle of the Spin Set Editor page, tap **[!UICONTROL Tap to open Asset Selector.]**
-   スピンセットに含めるアセットをタップして選択しします。選択済みのアセットにはチェックマークアイコンが付いています。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select.]**
+   * スピンセットエディターページの中央近くにある「**[!UICONTROL タップしてアセットセレクターを開きます。]**
+   スピンセットに含めるアセットをタップして選択しします。選択済みのアセットにはチェックマークアイコンが付いています。終了したら、ページ右上隅近くにある「**[!UICONTROL 選択」をタップします。]**
 
-   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter]** キーをタップすることで、アセットを検索することができます。フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
+   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter]** キーをタップすることで、アセットを検索することができます。フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。表示アイコンをタップし、**[!UICONTROL 列表示]**、**[!UICONTROL カード表示]**、**[!UICONTROL リスト表示を選択して、表示を変更します。]**
 
    [セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
 
@@ -147,11 +147,11 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
 1. （オプション）次のいずれかの操作をおこないます。
 
-   * To delete an image, select the image and tap **[!UICONTROL Delete Asset.]**
+   * 画像を削除するには、画像を選択し、「アセットを削除」をタップします。****
 
-   * ページの右上隅付近にプリセットを適用するには、「]**プリセット**[!UICONTROL 」をタップした後、すべてのアセットに一度に適用するプリセットを選択します。
+   * ページの右上隅付近にプリセットを適用するには、「**[!UICONTROL プリセット]**」をタップした後、すべてのアセットに一度に適用するプリセットを選択します。
 
-1. Click **[!UICONTROL Save.]** Your newly created Spin Set appears in the folder you created it in.
+1. 「**[!UICONTROL 保存」をクリックします。]**&#x200B;新しく作成したスピンセットが、作成したフォルダーに表示されます。
 
 ## スピンセットの表示 {#viewing-spin-sets}
 
@@ -171,7 +171,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
    ![chlimage_1-157](assets/chlimage_1-385.png)
 
-1. From search, you can Select **[!UICONTROL Filters]**, then expand **[!UICONTROL Dynamic Media]** and select **[!UICONTROL Sets.]**
+1. 検索から、**[!UICONTROL フィルター]**&#x200B;を選択し、**[!UICONTROL ダイナミックメディア]**&#x200B;を展開して、**[!UICONTROL セットを選択します。]**
 
    検索結果として、UI で手動で作成した一致するセットか、バッチセットプリセットを使用して自動的に作成した一致するセットが返されます。自動セットの場合、検索クエリは、AEM での検索とは異なる「`Starts with`」検索条件を使用して実行されます。AEM での検索は、「`Contains`」検索条件に基づいて実行されます。フィルターを「**[!UICONTROL セット]**」に設定するのが、自動セットを検索する唯一の方法です。
 
@@ -201,7 +201,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
    * 画像を並べ替えるには、画像を新しい位置までドラッグします（並べ替えアイコンを選択して項目を移動します）。
    * 項目を昇順または降順に並べ替えるには、列の見出しをクリックします。
    * アセットを追加するか既存のアセットを更新するには、「**[!UICONTROL アセットを追加」をクリックします。]**&#x200B;アセットに移動して選択し、右上隅の「**[!UICONTROL 選択]**」をタップします。AEM でサムネール用に使用されている画像を別の画像に置き換えて削除しても、元のアセットは表示されたままになります。
-   * To delete an asset, select it and click or tap **[!UICONTROL Delete Asset.]**
+   * アセットを削除するには、アセットを選択し、「**[!UICONTROL アセットを削除」をクリックまたはタップします。]**
    * プリセットを適用するには、「プリセット」アイコンをタップまたはクリックし、プリセットを選択します。
    * スピンセット全体を削除するには、スピンセットに移動して選択し、「**[!UICONTROL 削除]**」を選択します
 
@@ -211,10 +211,10 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
 1. 編集が完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
-## スピンセットのプレビュー {#previewing-spin-sets}
+## スピンセットのプレビュー  {#previewing-spin-sets}
 
 詳しくは、[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
-## スピンセットの公開 {#publishing-spin-sets}
+## スピンセットの公開  {#publishing-spin-sets}
 
 [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
