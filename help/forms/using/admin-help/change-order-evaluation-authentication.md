@@ -44,7 +44,7 @@ ht-degree: 91%
     </node>
    ```
 
-   In `<entry key="order" value="3" />`, edit the value for each node to set the order of the authentication evaluation.
+   `<entry key="order" value="3" />`で、各ノードの値を編集して、認証評価の順序を設定します。
 
 1. 更新したファイルを読み込むには、User Management で、設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. 「参照」をクリックしてファイルを探し、「読み込み」をクリックして「OK」をクリックします。
