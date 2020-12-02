@@ -22,11 +22,11 @@ ht-degree: 19%
 
 キャッシュは、データへのアクセスにかかる時間を短縮し、遅延を削減して I/O 速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これは、クライアントでのアダプティブフォームのレンダリングに要する時間を短縮するのに役立ちます。 これは、アダプティブフォーム専用に設計されています。
 
-## 作成者インスタンスと発行インスタンスでのアダプティブフォームのキャッシュの設定 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
+## 作成者インスタンスと発行インスタンスでアダプティブフォームのキャッシュを設定{#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
-1. Go to AEM web console configuration manager at `https://[server]:[port]/system/console/configMgr`.
+1. `https://[server]:[port]/system/console/configMgr`のAEM Web Console Configuration Managerに移動します。
 1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定]**」をクリックして、設定値を編集します。
-1. In the [!UICONTROL edit configuration values] dialog, specify the maximum number of forms or documents an instance of the AEM [!DNL Forms] server can cache in the **[!UICONTROL Number of Adaptive Forms]** field. デフォルト値は 100 です。
+1. [!UICONTROL 設定値の編集]ダイアログで、AEM [!DNL Forms]サーバーのインスタンスがキャッシュできるフォームまたはドキュメントの最大数を&#x200B;**[!UICONTROL アダプティブFormsの数]**&#x200B;フィールドに指定します。 デフォルト値は 100 です。
 
    >[!NOTE]
    >
@@ -39,25 +39,25 @@ ht-degree: 19%
 環境は、アダプティブフォームおよび関連アセットをキャッシュするように設定されています。
 
 
-## （オプション）ディスパッチャーでのアダプティブフォームのキャッシュの設定 {#configure-the-cache}
+## （オプション）ディスパッチャーでアダプティブフォームのキャッシュを設定{#configure-the-cache}
 
 また、パフォーマンスをさらに向上させるために、ディスパッチャーでアダプティブフォームのキャッシングを設定することもできます。
 
 ### 前提条件 {#pre-requisites}
 
-* クライアントでのデータの [結合または事前入力を有効にします](prepopulate-adaptive-form-fields.md#prefill-at-client) 。 これは、事前入力されたフォームの各インスタンスの一意のデータをマージするのに役立ちます。
-* [すべての発行インスタンスに対してフラッシュエージェントを有効にします](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。 これにより、アダプティブフォームのキャッシュパフォーマンスを向上できます。 フラッシュエージェントのデフォルトURLはで `http://[server]:[port]]/etc/replication/agents.publish/flush.html`す。
+* [クライアント](prepopulate-adaptive-form-fields.md#prefill-at-client)でのデータの結合または事前入力を有効にします。 これは、事前入力されたフォームの各インスタンスの一意のデータをマージするのに役立ちます。
+* [すべての発行インスタンスに対してフラッシュエージェントを有効にします](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。これにより、アダプティブフォームのキャッシュパフォーマンスを向上できます。 フラッシュエージェントのデフォルトURLは`http://[server]:[port]]/etc/replication/agents.publish/flush.html`です。
 
-### ディスパッチャー上のアダプティブフォームのキャッシュに関する考慮事項 {#considerations}
+### ディスパッチャー{#considerations}上のアダプティブフォームをキャッシュする際の考慮点
 
-* When using the adaptive forms cache, use the AEM [!DNL Dispatcher] to cache client libraries (CSS and JavaScript) of an adaptive form.
+* アダプティブフォームのキャッシュを使用する場合は、AEM [!DNL Dispatcher]を使用してアダプティブフォームのクライアントライブラリ（CSSおよびJavaScript）をキャッシュします。
 * カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
-* 拡張子のないURLはキャッシュされません。 例えば、パターンパターンを持つURLはキャッシュされ`/content/forms/[folder-structure]/[form-name].html` 、パターンを持つURLはキャッシュされません `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`。 したがって、URLに拡張子を付けて使用すると、キャッシュの利点を活用できます。
+* 拡張子のないURLはキャッシュされません。 例えば、パターンパターン`/content/forms/[folder-structure]/[form-name].html`のURLはキャッシュされ、パターン`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`のURLはキャッシュされません。 したがって、URLに拡張子を付けて使用すると、キャッシュの利点を活用できます。
 * ローカライズされたアダプティブフォームの考慮事項：
-   * URL形式を使用し `http://host:port/content/forms/af/<afName>.<locale>.html` て、アダプティブフォームのローカライズ版をリクエストし、 `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
-   * [形式を指定したURLに対するブラウザーロケール](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) の使用を無効に `http://host:port/content/forms/af/<adaptivefName>.html`します。
-   * URL形式を使用し、Configuration Manager `http://host:port/content/forms/af/<adaptivefName>.html`の「 **** ブラウザーロケールを使用」が無効になっている場合、アダプティブフォームのローカライズされていないバージョンが提供されます。 ローカライズされていない言語は、アダプティブフォームの開発時に使用される言語です。 ブラウザーに設定されているロケール（ブラウザーのロケール）は考慮されず、アダプティブフォームのローカライズされていないバージョンが提供されます。
-   * 「URL形式を使用」を選択し、Configuration Manager `http://host:port/content/forms/af/<adaptivefName>.html`で「ブラウザーロケールを **** 使用」を有効にすると、ローカライズ版のアダプティブフォームが提供されます（使用可能な場合）。 ローカライズされたアダプティブフォームの言語は、ブラウザー（ブラウザーのロケール）に設定されたロケールに基づきます。 これにより、アダプティブフォームの最初のインスタンスの [みがキャッシュされる可能性があり]ます。 インスタンスで問題が発生しないようにするには、トラブルシューティングを参照して [ください](#only-first-insatnce-of-adptive-forms-is-cached)。
+   * `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`の代わりに、URL形式`http://host:port/content/forms/af/<afName>.<locale>.html`を使用してアダプティブフォームのローカライズ版をリクエストする
+   * [形式を指定したURLに対するブラウザー](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) ロケールの使用を無効に `http://host:port/content/forms/af/<adaptivefName>.html`します。
+   * URL形式`http://host:port/content/forms/af/<adaptivefName>.html`を使用し、Configuration Managerで&#x200B;**[!UICONTROL 「ブラウザーロケールを使用」]**&#x200B;が無効になると、ローカライズされていないバージョンのアダプティブフォームが提供されます。 ローカライズされていない言語は、アダプティブフォームの開発時に使用される言語です。 ブラウザーに設定されているロケール（ブラウザーのロケール）は考慮されず、アダプティブフォームのローカライズされていないバージョンが提供されます。
+   * URL形式`http://host:port/content/forms/af/<adaptivefName>.html`を使用し、Configuration Managerで「**[!UICONTROL ブラウザーロケールを使用]**」が有効な場合、ローカライズ版のアダプティブフォームが提供されます（使用可能な場合）。 ローカライズされたアダプティブフォームの言語は、ブラウザー（ブラウザーのロケール）に設定されたロケールに基づきます。 [アダプティブフォーム]の最初のインスタンスのみをキャッシュする原因になる場合があります。 インスタンスで問題が発生しないようにするには、[トラブルシューティング](#only-first-insatnce-of-adptive-forms-is-cached)を参照してください。
 
 ### ディスパッチャーでのキャッシュの有効化
 
@@ -94,8 +94,8 @@ ht-degree: 19%
 
    * アダプティブフォームは、更新されたバージョンのフォームが発行されない限り、キャッシュに残ります。
 
-   * アダプティブフォーム内で参照されている新しいバージョンのリソースが発行されると、影響を受けたアダプティブフォームは自動的に無効になります。 参照先リソースの自動無効化には、いくつかの例外があります。 例外の回避策については、 [トラブルシューティング](#troubleshooting) の節を参照してください。
-1. [次追加のルールは、dispatcher.anyまたはカスタムルールファイル](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。 キャッシュをサポートしないURLは除外されます。 例えば、Interactive Communicationなどです。
+   * アダプティブフォーム内で参照されている新しいバージョンのリソースが発行されると、影響を受けたアダプティブフォームは自動的に無効になります。 参照先リソースの自動無効化には、いくつかの例外があります。 例外の回避策については、[トラブルシューティング](#troubleshooting)の節を参照してください。
+1. [次追加のルールは、dispatcher.anyまたはカスタムルールファイル](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。キャッシュをサポートしないURLは除外されます。 例えば、Interactive Communicationなどです。
 
    ```JSON
       /0000 {
@@ -129,11 +129,11 @@ ht-degree: 19%
       }
    ```
 
-AEM環境は、アダプティブフォームをキャッシュするように設定されています。 すべてのタイプのアダプティブフォームをキャッシュします。 キャッシュされたページを配信する前に、ページのユーザーアクセス権限を確認する必要がある場合は、セキュリティで保護されたコンテンツの [キャッシュを参照してください](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+AEM環境は、アダプティブフォームをキャッシュするように設定されています。 すべてのタイプのアダプティブフォームをキャッシュします。 キャッシュされたページを配信する前に、ページのユーザーアクセス権限を確認する必要がある場合は、[セキュリティで保護されたコンテンツのキャッシュ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)を参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 
-### 画像やビデオを含む一部のアダプティブフォームは、ディスパッチャーのキャッシュから自動的に無効にされません {#videos-or-images-not-auto-invalidated}
+### 画像やビデオを含む一部のアダプティブフォームは、ディスパッチャーキャッシュ{#videos-or-images-not-auto-invalidated}から自動的に無効にされません
 
 #### 問題 {#issue1}
 
@@ -143,7 +143,7 @@ AEM環境は、アダプティブフォームをキャッシュするように�
 
 画像とビデオを公開した後、これらのアセットを参照するアダプティブフォームの公開を明示的に取り消し、公開を取り消します。
 
-### コンテンツフラグメントまたはエクスペリエンスフラグメントを含むアダプティブフォームの一部は、ディスパッチャーのキャッシュから自動的に無効化されません {#content-or-experience-fragment-not-auto-invalidated}
+### コンテンツフラグメントまたはエクスペリエンスフラグメントを含むアダプティブフォームの一部は、ディスパッチャーキャッシュ{#content-or-experience-fragment-not-auto-invalidated}から自動的に無効にされません
 
 #### 問題 {#issue2}
 
@@ -153,11 +153,11 @@ AEM環境は、アダプティブフォームをキャッシュするように�
 
 更新されたコンテンツフラグメントまたはエクスペリエンスフラグメントの発行後、これらのアセットを使用するアダプティブフォームの公開を明示的に取り消し、発行します。
 
-### アダプティブフォームの最初のインスタンスのみがキャッシュされます{#only-first-insatnce-of-adptive-forms-is-cached}
+### アダプティブフォームの最初のインスタンスのみがキャッシュ{#only-first-insatnce-of-adptive-forms-is-cached}されます。
 
 #### 問題 {#issue3}
 
-アダプティブフォームURLにローカライゼーション情報がなく、Configuration Managerの「ブラウザーロケールを **** 使用」が有効な場合は、ローカライズされたバージョンのアダプティブフォームが提供され、アダプティブフォームの最初のインスタンスのみがキャッシュされ、後続のすべてのユーザーに配信されます。
+アダプティブフォームURLにローカライゼーション情報がなく、Configuration Managerの&#x200B;**[!UICONTROL ブラウザーロケールを使用]**&#x200B;が有効な場合、アダプティブフォームのローカライズ版が提供され、アダプティブフォームの最初のインスタンスのみがキャッシュされ、後続のすべてのユーザーに配信されます。
 
 #### 解決策 {#Solution3}
 
