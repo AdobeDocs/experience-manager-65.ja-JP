@@ -28,7 +28,7 @@ AEM Formsは、次のAssemblerサービスAPIを呼び出すためのカスタ�
 
 ### Invoke DDX ワークフロー {#invoke-ddx-workflow}
 
-The **Invoke DDX** workflow invokes the `Invoke` Assembler service API, which you can use to assemble or disassemble documents, add watermark to a PDF, and so on.
+**Invoke DDX**&#x200B;ワークフローは、`Invoke` AssemblerサービスAPIを呼び出します。このAPIを使用して、ドキュメントのアセンブルやディスアセンブリ、PDFへの透かしの追加などを行うことができます。
 
 1. Sidekickの中のフォームのワークフローの下で、**[!UICONTROL Invoke DDX]**&#x200B;ワークフローステップをドラッグします。
 1. 追加されたワークフローステップをダブルクリックしてコンポーネントを編集します。
@@ -44,9 +44,9 @@ Invoke DDXワークフローには以下の入力ドキュメントが必要で�
    * *ペイロードの使用*：ワークフロー項目のペイロードはDDXドキュメントとして使用されます。
    * *絶対パス*：CRXリポジトリの中のDDXドキュメントへの絶対パスです。
 
-* **PayLoadからマップを作成**:選択すると、ペイロードフォルダー下のすべてのドキュメントが、Assemblerの `invoke` APIの入力ドキュメントのマップに追加されます。 各ドキュメントのノード名は、マップのキーとして使用されます。
+* **PayLoadからマップを作成**:選択すると、ペイロードフォルダー下のすべてのドキュメントが、Assemblerの `invoke` APIの入力ドキュメントのマップに追加されます。各ドキュメントのノード名は、マップのキーとして使用されます。
 
-* **入力ドキュメントのマップ**:入力ドキュメントのマップを指定します。 各エントリがマップのキーおよびドキュメントのソースのエントリを指定するすべてのエントリ数を追加することができます。
+* **入力ドキュメントのマップ**:入力ドキュメントのマップを指定します。各エントリがマップのキーおよびドキュメントのソースのエントリを指定するすべてのエントリ数を追加することができます。
 
 #### 環境オプション {#environment-options}
 
@@ -91,7 +91,7 @@ PDF/Aワークフローステップへの変換は、「 Assembler Service API�
 * *結果レベル*：PDF/A変換ログに使用するログレベルを指定します。
 * *署名*：入力ドキュメントの署名が、変換中にどのように処理されなければならないかを指定します。
 * *カラースペース*：事前に定義された出力PDF/Aドキュメントに使用されるカラースペースを指定します。
-* *Verify* Conversion:変換後のPDF/Aドキュメントが、変換後のPDF/Aに準拠しているかどうかを指定します。
+* ** VerifyConversion:変換後のPDF/Aドキュメントが、変換後のPDF/Aに準拠しているかどうかを指定します。
 * **&#x200B;ジョブのログレベル：処理ログのログレベルを指定します。
 
 * *Metadata Extension Schema*：PDF文書のメタデータのXMPプロパティに使用するMetadata extension schemaを指定します。
@@ -123,7 +123,7 @@ Render PDF Formワークフローは、`renderPDFForm`Forms service APIの周り
 
 * *出力ドキュメント*：生成したPDFフォームの名前を指定します。
 
-#### その他のパラメーター {#additional-parameters}
+#### その他のパラメーター  {#additional-parameters}
 
 * *Content Root*：入力XDPテンプレートに使用されているフラグメントまたは画像が保存されているリポジトリ内のフォルダーへのパスを指定します。
 * 送信 Url *：生成されたPDFフォームのデフォルト送信URLを指定します。*
@@ -152,7 +152,7 @@ Generate Non Interactive PDFワークフローは、`generatePDFOutput`Outputサ
 
 *出力ドキュメント*：生成されたPDFフォームの名前を指定します。
 
-#### その他のパラメーター {#additional-parameters-1}
+#### その他のパラメーター  {#additional-parameters-1}
 
 * *Content Root*：入力XDPテンプレートに使用されているフラグメントまたは画像が保存されているリポジトリ内のフォルダーへのパスを指定します。
 * ロケール&#x200B;*：生成されたPDFフォームのデフォルトロケールを指定します。*
