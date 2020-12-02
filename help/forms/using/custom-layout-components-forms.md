@@ -24,15 +24,15 @@ ht-degree: 59%
 
 カスタムレイアウトの作成および使用を可能にするレイアウトについての知識が必要です。「[パネルレイアウトの変更](../../forms/using/layout-capabilities-adaptive-forms.md)」を参照してください。
 
-## アダプティブフォームのパネルレイアウトのコンポーネント {#adaptive-form-panel-layout-component}
+## アダプティブフォームのパネルレイアウトのコンポーネント  {#adaptive-form-panel-layout-component}
 
 アダプティブフォームのパネルレイアウトのコンポーネントは、ユーザーインターフェイスに考慮して、パネル内のアダプティブフォームのコンポーネントをどのようにレイアウトするかをコントロールします。
 
-## カスタムパネルレイアウトの作成 {#creating-a-custom-panel-layout}
+## カスタムパネルレイアウトの作成  {#creating-a-custom-panel-layout}
 
-1. Navigate to the location `/crx/de`.
-1. Copy a panel layout from the location `/libs/fd/af/layouts/panel` (for example, `tabbedPanelLayout`) to `/apps` (for example, `/apps/af-custom-layout`).
-1. Rename the layout you copied to `customPanelLayout`. Change the properties of the nodes `qtip` and `jcr:description`. For example, change them to `Custom layout - Toggle tabs`.
+1. `/crx/de`に移動します。
+1. パネルレイアウトを`/libs/fd/af/layouts/panel`（例：`tabbedPanelLayout`）から`/apps`（例：`/apps/af-custom-layout`）にコピーします。
+1. コピーしたレイアウトの名前を`customPanelLayout`に変更します。 ノード`qtip`と`jcr:description`のプロパティを変更します。 例えば、`Custom layout - Toggle tabs`に変更します。
 
 qtip
 
@@ -40,9 +40,9 @@ qtip
 
 >[!NOTE]
 >
->Setting the property `guideComponentType`to the value `fd/af/layouts/panel` determines that the layout is a panel-layout.
+>プロパティ`guideComponentType`を値`fd/af/layouts/panel`に設定すると、レイアウトがパネルレイアウトになります。
 
-1. Rename the file `tabbedPanelLayout.jsp` under the new layout to customPanelLayout.jsp.
+1. 新しいレイアウトの下のファイル`tabbedPanelLayout.jsp`の名前をcustomPanelLayout.jspに変更します。
 1. 新しいスタイルおよび動作を追加するには、`etc` ノードでクライアントライブラリを作成します。例えば、/etc/af-custom-layout-clientlibで、ノードclient-libraryを作成します。 このノードにカテゴリのプロパティ af.panel.custom を設定します。このプロパティには次の .css ファイルと .js ファイルがあります。
 
    ```css
@@ -115,9 +115,9 @@ qtip
    });
    ```
 
-1. To enhance the appearance and behavior, you can include a `client library`.
+1. 外観と動作をより良くするために、`client library`を含めることができます。
 
-   さらに、.jps ファイルに含まれるスクリプトのパスを更新します。For example, update the `customPanelLayout.jsp` file as follows:
+   さらに、.jps ファイルに含まれるスクリプトのパスを更新します。例えば、`customPanelLayout.jsp`ファイルを次のように更新します。
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -146,7 +146,7 @@ qtip
    </div>
    ```
 
-   ファイル `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` :
+   `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp`ファイル：
 
    ```html
    <%-- jsp governing the navigation part --%>
@@ -175,7 +175,7 @@ qtip
    </ul>
    ```
 
-   更新された内容 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
+   更新された`/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
 
    ```html
    <%-- jsp governing the panel content --%>
@@ -204,7 +204,7 @@ qtip
 
 1. オーサリングモードでアダプティブフォームを開きます。定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
 
-   ![カスタムパネルレイアウトが、アダプティブフォームのパネルレイアウトリスト](assets/auth-layt.png)![のスクリーンショットに表示される。カスタムパネルレイアウトの切り替え機能を示すスクリ](assets/s1.png)![ーンショットを使用](assets/s2.png)
+   ![パネルレイアウトリストに表示されたカスタムパネルレイアウトアダプティブフォームの](assets/auth-layt.png) ![スクリーンショットカスタムパネル](assets/s1.png) ![レイアウトを使用したスクリーンショットカスタムレイアウトの切り替え機能を示したスクリーンショット](assets/s2.png)
 
 カスタムパネルレイアウトとカスタムパネルレイアウトを使用したアダプティブフォームのサンプル ZIP ファイル。
 
