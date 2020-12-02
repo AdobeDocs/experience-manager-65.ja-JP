@@ -26,7 +26,7 @@ ht-degree: 85%
 
 コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。アプリケーション内のコンテンツに対して以下のアクションを実行します。
 
-## バナーの概要 {#banners-overview}
+## バナーの概要  {#banners-overview}
 
 バナーは、通常、グラフィカルなプロモーションリンクです。
 
@@ -43,7 +43,7 @@ ht-degree: 85%
 
 
 
-## バナーの作成 {#creating-a-banner}
+## バナーの作成  {#creating-a-banner}
 
 記事を作成する一般的なワークフローは以下のとおりです。
 
@@ -69,13 +69,13 @@ ht-degree: 85%
 1. Mobileで、カタログからMobile On-Demand Appを選択します。
 1. **バナーを管理**&#x200B;タイルの右上隅にある下矢印をクリックして、「バナーを読み込む」を選択します。
 1. ダイアログで「**バナーを読み込む**」をクリックし、「閉じる」をクリックします。
-1. Your Mobile On-Demand articles now appear in the **Manage Banners** tile.
+1. これで、Mobile On-Demand記事が&#x200B;**バナーの管理**&#x200B;タイルに表示されます。
 
 >[!CAUTION]
 >
 >最初に Mobile On-Demand の接続を関連付ける必要があります。
 
-## バナーの編集 {#editing-a-banner}
+## バナーの編集  {#editing-a-banner}
 
 記事を追加または変更するには、組み込みの AEM ドラッグ＆ドロップエディターを使用します。テキストや画像などのコンポーネントを追加したり、削除したりすることができます。DAM アセットの画像を挿入することもできます。
 
@@ -90,14 +90,14 @@ ht-degree: 85%
 1. リスト表示で、ハイライトされたバナーをクリックし、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、バナーの内容（原稿、画像、テキストなど）をドラッグします。
 
-### バナー内のメタデータの表示および編集 {#viewing-and-editing-the-metadata-within-a-banner}
+### バナー内のメタデータの表示および編集  {#viewing-and-editing-the-metadata-within-a-banner}
 
 バナーには、タイトル、説明、画像など多くのプロパティがあります。このようなプロパティを表示および変更するには、この操作を使用します。オプションで、保存時に Mobile On-Demand に変更内容をアップロードすることもできます。
 
 記事を表示／編集する一般的なワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. Choose a banner from the **Manage Banners** tile.
+1. **バナーの管理**&#x200B;タイルからバナーを選択します。
 
 1. アクションバーから「**プロパティ**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
@@ -110,8 +110,8 @@ ht-degree: 85%
 
 バナーをアップロードする一般的なワークフローは以下のとおりです。
 
-1. From **Mobile**, choose your Mobile On-Demand app from the catalog.
-1. In the **Manage Banners** tile, select a banner for upload to Mobile On-Demand.
+1. **Mobile**&#x200B;から、カタログからMobile On-Demandアプリを選択します。
+1. **バナーの管理**&#x200B;タイルで、Mobile On-Demandにアップロードするバナーを選択します。
 1. 必要に応じて、リスト表示からさらにバナーを追加します。
 1. アクションバーから「**アップロード**」を選択し、ダイアログで「アップロード」をクリックします。
 1. これで、バナーがMobile On-Demandにアップロードされました。
