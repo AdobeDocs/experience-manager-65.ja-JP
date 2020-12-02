@@ -34,7 +34,7 @@ HTML5 フォームで新しい形式を使用するには、テーブルを複�
  </extras>
 ```
 
-The tables which are marked as *complexTable* follow the native HTML rendition, and provide better accessibility support for certain screen readers.  行幅を作成するには、テーブル内の 1 つの列で連続する複数のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL セルの結合]**」をクリックします。
+*complexTable*&#x200B;とマークされたテーブルはネイティブHTMLレンディションに従い、特定のスクリーンリーダーに対するより優れたアクセシビリティサポートを提供します。  行幅を作成するには、テーブル内の 1 つの列で連続する複数のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL セルの結合]**」をクリックします。
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ The tables which are marked as *complexTable* follow the native HTML rendition, 
 
 セルを列ヘッダーとしてマークするには、その列内の任意のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL ヘッダーをマーク]**」をクリックします。
 
-Limitations in new *AccessibleTable* format:
+新しい&#x200B;*AccessibleTable*&#x200B;形式の制限：
 
 * テーブルに行幅を設定する場合は、拡大可能なフィールドを使用できない
 * ネストされたテーブル（テーブルのセルに含まれている別のテーブル）は使用できない
