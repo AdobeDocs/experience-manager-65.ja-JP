@@ -28,27 +28,27 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
 1. プロジェクトを開きます。
 
-   * For iOS, open `Capture.xcodeproj` in Xcode
+   * iOSの場合は、Xcodeで`Capture.xcodeproj`を開きます。
    * Android の場合、Eclipse で Android プロジェクトを開きます。
-   * For Windows, open `MWSWindows.sln` in Visual Studio.
+   * Windowsの場合は、Visual Studioで`MWSWindows.sln`を開きます。
 
-1. Navigate to the views folder and open the `task.js` file for editing.
+1. 表示フォルダーに移動し、`task.js`ファイルを開いて編集します。
 
-   * In Xcode, navigate to the **Capture > www > wsmobile > js > runtime > views** folder.
-   * In Eclipse, navigate to the **assets > www > wsmobile > js > runtime > views** folder.
-   * In Visual Studio, navigate to the **MWSWindows > www > wsmobile > js > runtime > views** folder.
+   * Xcodeで、**Capture > www > wsmobile > js > runtime > luntime >表示**&#x200B;フォルダーに移動します。
+   * Eclipseで、**assets > www > wsmobile > js > runtime > luntime >表示**&#x200B;フォルダーに移動します。
+   * Visual Studioで、**MWSWindows > www > wsmobile > js > runtime > luntime > livers**&#x200B;表示ーに移動します。
 
    >[!NOTE]
    >
    >task.js ファイルには、タスクリストまたは Startpoint リストに表示されている各タスクまたは Startpoint に関連付けられた Backbone ビューが含まれています。
 
-1. In the `task.js` file, search for the events property of the view.
+1. `task.js`ファイルで、表示のイベントプロパティを検索します。
 
    イベントプロパティは、次の形式の各エントリとのマップです。
 
    `"EventName Selector": "Function"`
 
-   When you trigger a Javascript event named `EventName`on an HTML element specified by `Selector`, the `Function`is called.
+   `Selector`で指定されたHTMLイベントで`EventName`という名前のJavaScript要素をトリガーすると、`Function`が呼び出されます。
 
 1. 検索
 
@@ -70,7 +70,7 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
       &quot;スワイプ.last_empty_div&quot; :&quot;onTaskClick&quot;,
 
 
-1. Save and close the `task.js` file.
+1. `task.js`ファイルを保存して閉じます。
 1. AEM Forms アプリケーションをビルドし実行します。これで、左スワイプと右スワイプを使用してタスクを開くことができます。
 
 同様に、さまざまな組み合わせのジェスチャー、HTML 要素、および関数に対して、他のビューで変更を行うことができます。
