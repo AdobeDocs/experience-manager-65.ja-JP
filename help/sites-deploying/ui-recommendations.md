@@ -103,7 +103,7 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
 
 詳しくは、ナレッジベースの記事 [Touch UI Authoring FAQ](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html) を参照してください。クラシック UI の廃止予定に関する情報も提供しています。
 
-### UI の選択 {#selecting-your-ui}
+### UI の選択  {#selecting-your-ui}
 
 システムを必要に応じて設定する方法について詳しくは、[UI の選択](/help/sites-authoring/select-ui.md)を参照してください。
 
