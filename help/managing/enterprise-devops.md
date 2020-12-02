@@ -1,6 +1,6 @@
 ---
 title: Enterprise DevOps
-seo-title: Enterprise DevOps
+seo-title: エンタープライズ開発運用
 description: デプロイメントやコラボレーションを簡単にするために必要なプロセス、メソッドおよびコミュニケーションについて学習します。
 seo-description: デプロイメントやコラボレーションを簡単にするために必要なプロセス、メソッドおよびコミュニケーションについて学習します。
 uuid: ca4806d2-c845-4c18-9498-4b66f0980a5e
@@ -18,7 +18,7 @@ ht-degree: 98%
 ---
 
 
-# Enterprise DevOps{#enterprise-devops}
+# エンタープライズ開発運用{#enterprise-devops}
 
 DevOps は、以下の目的で必要なプロセス、メソッドおよびコミュニケーションをカバーしています。
 
@@ -63,9 +63,9 @@ Adobe Experience Manager（AEM）のデプロイメントは通常、次のよ�
 
 ### 品質保証 {#quality-assurance}
 
-This environment is used by the quality assurance team to comprehensively [test](/help/sites-developing/test-plan.md) your new system; both design and function. 適切なコンテンツを持つオーサー環境とパブリッシュ環境の両方を含み、完全なテストを実施するために必要なすべてのサービスを提供する必要があります。
+この環境は、品質保証チームが新しいシステムを包括的に[テスト](/help/sites-developing/test-plan.md)するために使用します。デザインと機能の両方 適切なコンテンツを持つオーサー環境とパブリッシュ環境の両方を含み、完全なテストを実施するために必要なすべてのサービスを提供する必要があります。
 
-### ステージング {#staging}
+### ステージング  {#staging}
 
 ステージング環境は、設定、コードおよびコンテンツに関して、実稼動環境のミラーである必要があります。
 
@@ -73,7 +73,7 @@ This environment is used by the quality assurance team to comprehensively [test]
 * 実稼動環境にデプロイする前の最終テスト（デザイン、機能およびインターフェイス）に使用できます。
 * ステージング環境を実稼動環境とまったく同じにすることが不可能な場合もありますが、パフォーマンスや負荷のテストができるように、可能な限り近付ける必要があります。
 
-### 実稼動 - オーサーとパブリッシュ {#production-author-and-publish}
+### 実稼動 - オーサーとパブリッシュ  {#production-author-and-publish}
 
 実稼動環境は、実装を実際に[オーサリングおよび公開](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)するために必要な環境で構成されます。
 
@@ -84,7 +84,7 @@ This environment is used by the quality assurance team to comprehensively [test]
 
 プロジェクトの規模によりますが、多くの場合は複数のオーサーインスタンスやパブリッシュインスタンスで構成されます。下位レベルでは、リポジトリが複数のインスタンスにクラスター化される場合もあります。
 
-#### オーサー {#author}
+#### オーサー  {#author}
 
 オーサーインスタンスは、通常、内部ファイアウォールの内側に配置されます。この環境では、ユーザーやユーザーの同僚が、以下のようなオーサリングタスクを実行します。
 
@@ -97,7 +97,7 @@ This environment is used by the quality assurance team to comprehensively [test]
 
 パブリッシュ環境で生成したデータを、オーサー環境へリバースレプリケーションするには、オーサー環境のレプリケーションリスナーがパブリッシュ環境をポーリングし、それらのコンテンツをパブリッシュ環境のリバースレプリケーション出力ボックスから取得します。
 
-#### パブリッシュ {#publish}
+#### 公開 {#publish}
 
 パブリッシュ環境は通常、Demilitarized Zone（DMZ）にあります。この環境では、訪問者は、公開されているかイントラネット内かにかかわらず、コンテンツにアクセス（Web サイト経由、モバイルアプリケーションの形で、など）して操作します。パブリッシュ環境では、次の処理がおこなわれます。
 
