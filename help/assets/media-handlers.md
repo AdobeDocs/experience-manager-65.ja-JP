@@ -11,21 +11,21 @@ ht-degree: 49%
 ---
 
 
-# Process assets using media handlers and workflows {#processing-assets-using-media-handlers-and-workflows}
+# メディアハンドラーとワークフローを使用してアセットを処理{#processing-assets-using-media-handlers-and-workflows}
 
 [!DNL Adobe Experience Manager Assets] には、アセットの処理に使用するデフォルトのワークフローとメディアハンドラーのセットが付属しています。ワークフローは、アセットに対して実行されるタスクを定義し、特定のタスク(サムネールの生成やメタデータ抽出など)をメディアハンドラーに委任します。
 
-特定のMIMEタイプのアセットがアップロードされたときに、自動的に実行されるようにワークフローを設定できます。 The processing steps are defined in terms of a series of [!DNL Assets] media handlers. [!DNL Experience Manager] には、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタムで開発](#creating-a-new-media-handler)したり、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義したりできます。
+特定のMIMEタイプのアセットがアップロードされたときに、自動的に実行されるようにワークフローを設定できます。 処理手順は、一連の[!DNL Assets]メディアハンドラーに関して定義されます。 [!DNL Experience Manager] には、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタムで開発](#creating-a-new-media-handler)したり、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義したりできます。
 
-Media handlers are services in [!DNL Assets] that perform specific actions on assets. For example, when an MP3 audio file is uploaded into [!DNL Experience Manager], a workflow triggers an MP3 handler that extracts the metadata and generates a thumbnail. 通常、メディアハンドラーはワークフローと組み合わせて使用されます。Most common MIME types are supported within [!DNL Experience Manager]. アセットに対して特定のタスクを実行するには、ワークフローを拡張または作成するか、メディアハンドラーを拡張または作成するか、メディアハンドラーを無効または有効にします。
+メディアハンドラーは、[!DNL Assets]内のサービスで、アセットに対して特定のアクションを実行します。 例えば、MP3オーディオファイルが[!DNL Experience Manager]にアップロードされると、ワークフローは、メタデータを抽出してサムネールを生成するMP3ハンドラをトリガします。 通常、メディアハンドラーはワークフローと組み合わせて使用されます。[!DNL Experience Manager]内では、一般的なMIMEタイプのほとんどがサポートされています。 アセットに対して特定のタスクを実行するには、ワークフローを拡張または作成するか、メディアハンドラーを拡張または作成するか、メディアハンドラーを無効または有効にします。
 
 >[!NOTE]
 >
->See the [Assets supported formats](assets-formats.md) page for a description of all the formats supported by [!DNL Assets] as well as features supported for each format.
+>[サポートされるすべての形式](assets-formats.md)の説明と、各形式でサポートされる機能については、&lt;a0/>サポートされるアセットの形式&lt;a1/>のページを参照してください。[!DNL Assets]
 
-## Default media handlers {#default-media-handlers}
+## デフォルトのメディアハンドラー{#default-media-handlers}
 
-The following media handlers are available within [!DNL Assets] and handle the most common MIME types:
+[!DNL Assets]内では次のメディアハンドラを使用でき、最も一般的なMIME型を処理します。
 
 <!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
 -->
@@ -52,13 +52,13 @@ The following media handlers are available within [!DNL Assets] and handle the m
 
 アクティブなメディアハンドラを表示するには：
 
-1. In your browser, navigate to `http://localhost:4502/system/console/components`.
+1. ブラウザーで`http://localhost:4502/system/console/components`に移動します。
 1. 「`com.day.cq.dam.core.impl.store.AssetStoreImpl`」をクリックします。
 1. すべてのアクティブなメディアハンドラーリストが表示されます。次に例を示します。
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## Use media handlers in workflows to perform tasks on assets {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## ワークフロー内でメディアハンドラーを使用してアセット{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}に対してタスクを実行する
 
 通常、メディアハンドラーはワークフローと組み合わせて使用されるサービスです。
 
@@ -68,7 +68,7 @@ The following media handlers are available within [!DNL Assets] and handle the m
 
 以下の例は、**[!UICONTROL AEM Assets 同期]**&#x200B;ワークフローを拡張して、PDF ドキュメント以外のすべてのアセットについてサブアセットを生成するための方法を示しています。
 
-### メディアハンドラーの無効化または有効化 {#disabling-enabling-a-media-handler}
+### メディアハンドラーを無効または有効にする{#disabling-enabling-a-media-handler}
 
 メディアハンドラーを無効または有効にするには、Apache Felix Web Management Console を使用します。メディアハンドラーを無効にすると、そのアセットに対してメディアハンドラーのタスクは実行されません。
 
@@ -79,11 +79,11 @@ The following media handlers are available within [!DNL Assets] and handle the m
 1. ページを更新します。メディアハンドラーの横に、無効であることを示すアイコンが表示されます。
 1. メディアハンドラーを有効にするには、メディアハンドラーの名前の横にある「**[!UICONTROL Enable]**」をクリックします。
 
-### Create a new media handler {#creating-a-new-media-handler}
+### 新しいメディアハンドラーの作成{#creating-a-new-media-handler}
 
 新しいメディアタイプをサポートしたり、アセットで特定のタスクを実行したりするには、新しいメディアハンドラーを作成する必要があります。ここでは、その進め方について説明します。
 
-#### Important classes and interfaces {#important-classes-and-interfaces}
+#### 重要なクラスとインターフェイス{#important-classes-and-interfaces}
 
 実装を開始するための最適な方法は、最も多くの点について対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。それが `com.day.cq.dam.core.AbstractAssetHandler` クラスです。
 
@@ -126,42 +126,42 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
 
-#### Example: create a specific text handler {#example-create-a-specific-text-handler}
+#### 例：特定のテキストハンドラーを作成する{#example-create-a-specific-text-handler}
 
 ここでは、透かしありのサムネールを生成する固有の Text Handler を作成します。
 
 以下の手順を実行します。
 
-プラグインを使用してEclipseをインストールおよび設定し、プ [ロジェクトに必要な依存関係を設定するには、「](../sites-developing/dev-tools.md) 開発ツール [!DNL Maven][!DNL Maven] 」を参照してください。
+[!DNL Maven]プラグインを使用してEclipseをインストールおよび設定し、[!DNL Maven]プロジェクトに必要な依存関係を設定する方法については、[開発ツール](../sites-developing/dev-tools.md)を参照してください。
 
-After you perform the following procedure, when you upload a TXT file into [!DNL Experience Manager], the file&#39;s metadata are extracted and two thumbnails with a watermark are generated.
+次の手順を実行した後、TXTファイルを[!DNL Experience Manager]にアップロードすると、ファイルのメタデータが抽出され、透かし付きの2つのサムネールが生成されます。
 
-1. Eclipseで、 `myBundle` プロジェクトを作成し [!DNL Maven] ます。
+1. Eclipseで、`myBundle` [!DNL Maven]プロジェクトを作成します。
 
-   1. In the Menu bar, click **[!UICONTROL File]** > **[!UICONTROL New]** > **[!UICONTROL Other]**.
-   1. In the dialog, expand the [!DNL Maven] folder, select [!DNL Maven] project and click **[!UICONTROL Next]**.
-   1. Check the Create a simple project box and the Use default Workspace locations box, then click **[!UICONTROL Next]**.
-   1. プ [!DNL Maven] ロジェクトの定義：
+   1. メニューバーで、**[!UICONTROL ファイル]**/**[!UICONTROL 新規]**/**[!UICONTROL その他]**&#x200B;をクリックします。
+   1. ダイアログで、[!DNL Maven]フォルダーを展開し、[!DNL Maven]プロジェクトを選択して、**[!UICONTROL 次へ]**&#x200B;をクリックします。
+   1. 「単純なプロジェクトを作成」ボックスと「デフォルトのワークスペースの場所を使用」ボックスをオンにし、「**[!UICONTROL 次へ]**」をクリックします。
+   1. [!DNL Maven]プロジェクトの定義：
 
-      * Group Id: `com.day.cq5.myhandler`.
+      * グループID:`com.day.cq5.myhandler`.
       * Artifact Id：myBundle.
-      * Name: My [!DNL Experience Manager] bundle.
-      * Description: This is my [!DNL Experience Manager] bundle.
+      * 名前：[!DNL Experience Manager]バンドル。
+      * 説明：これは私の[!DNL Experience Manager]バンドルです。
    1. 「**[!UICONTROL Finish]**」をクリックします。
 
 
-1. Set the [!DNL Java] compiler to version 1.5:
+1. [!DNL Java]コンパイラをバージョン1.5に設定します。
 
-   1. Right-click the `myBundle` project, select [!UICONTROL Properties].
-   1. Select [!UICONTROL Java Compiler] and set following properties to 1.5:
+   1. `myBundle`プロジェクトを右クリックし、「[!UICONTROL プロパティ]」を選択します。
+   1. 「[!UICONTROL Javaコンパイラー]」を選択し、次のプロパティを1.5に設定します。
 
       * Compiler compliance level
       * Generated .class files compatibility
       * Source compatibility
-   1. 「**[!UICONTROL OK]**」をクリックします。In the dialog window, click **[!UICONTROL Yes]**.
+   1. 「**[!UICONTROL OK]**」をクリックします。ダイアログウィンドウで、「**[!UICONTROL はい]**」をクリックします。
 
 
-1. Replace the code in the `pom.xml` file with the following code:
+1. `pom.xml`ファイル内のコードを次のコードに置き換えます。
 
    ```xml
    <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
@@ -278,16 +278,16 @@ After you perform the following procedure, when you upload a TXT file into [!DNL
     </dependencies>
    ```
 
-1. 次の下にあるクラス `com.day.cq5.myhandler` を含むパッケージ [!DNL Java] を作成し `myBundle/src/main/java`ます。
+1. `myBundle/src/main/java`の下に[!DNL Java]クラスを含むパッケージ`com.day.cq5.myhandler`を作成します。
 
-   1. Under myBundle, right-click `src/main/java`, select New, then Package.
-   1. Name it `com.day.cq5.myhandler` and click Finish.
+   1. 「myBundle」で`src/main/java`を右クリックし、「新規」、「パッケージ」の順に選択します。
+   1. `com.day.cq5.myhandler`という名前を付け、「完了」をクリックします。
 
-1. ク [!DNL Java] ラスの作成 `MyHandler`:
+1. [!DNL Java]クラス`MyHandler`を作成します。
 
-   1. の下 [!DNL Eclipse]で、 `myBundle/src/main/java`パッケージ `com.day.cq5.myhandler` を右クリックします。 「 [!UICONTROL 新規]」、「 [!UICONTROL クラス]」の順に選択します。
-   1. In the dialog window, name the [!DNL Java] class `MyHandler` and click [!UICONTROL Finish]. [!DNL Eclipse] ファイルを作成して開き `MyHandler.java`ます。
-   1. In `MyHandler.java` replace the existing code with the following and then save the changes:
+   1. [!DNL Eclipse]の`myBundle/src/main/java`で、`com.day.cq5.myhandler`パッケージを右クリックします。 「[!UICONTROL 新規]」を選択し、「[!UICONTROL クラス]」を選択します。
+   1. ダイアログウィンドウで、[!DNL Java]クラス`MyHandler`に名前を付け、[!UICONTROL 完了]をクリックします。 [!DNL Eclipse] ファイルを作成して開き `MyHandler.java`ます。
+   1. `MyHandler.java`で既存のコードを次のコードに置き換え、変更を保存します。
 
    ```java
    package com.day.cq5.myhandler;
@@ -429,49 +429,49 @@ After you perform the following procedure, when you upload a TXT file into [!DNL
    }
    ```
 
-1. Compile the [!DNL Java] class and create the bundle:
+1. [!DNL Java]クラスをコンパイルし、バンドルを作成します。
 
-   1. Right-click the `myBundle` project, select **[!UICONTROL Run As]**, then **[!UICONTROL Maven Install]**.
-   1. The bundle `myBundle-0.0.1-SNAPSHOT.jar` (containing the compiled class) is created under `myBundle/target`.
+   1. `myBundle`プロジェクトを右クリックし、「**[!UICONTROL 実行]**」を選択してから、「**[!UICONTROL Mavenインストール]**」を選択します。
+   1. バンドル`myBundle-0.0.1-SNAPSHOT.jar` （コンパイルされたクラスを含む）が`myBundle/target`の下に作成されます。
 
-1. In CRX explorer, create a new node under `/apps/myApp`. Name = `install`, Type = `nt:folder`.
-1. Copy the bundle `myBundle-0.0.1-SNAPSHOT.jar` and store it under `/apps/myApp/install` (for example with WebDAV). The new text handler is now active in [!DNL Experience Manager].
-1. In your browser, open the [!UICONTROL Apache Felix Web Management Console]. Select the [!UICONTROL Components] tab and disable the default text handler `com.day.cq.dam.core.impl.handler.TextHandler`.
+1. CRXエクスプローラーで、`/apps/myApp`の下に新しいノードを作成します。 名前= `install`、種類= `nt:folder`。
+1. バンドル`myBundle-0.0.1-SNAPSHOT.jar`をコピーし、`/apps/myApp/install`の下に格納します（WebDAVなど）。 新しいテキストハンドラーが[!DNL Experience Manager]でアクティブになりました。
+1. ブラウザーで、[!UICONTROL Apache Felix Web Management Console]を開きます。 「[!UICONTROL コンポーネント]」タブを選択し、デフォルトのテキストハンドラー`com.day.cq.dam.core.impl.handler.TextHandler`を無効にします。
 
-## Command Line based media handler {#command-line-based-media-handler}
+## コマンドラインベースのメディアハンドラ{#command-line-based-media-handler}
 
-[!DNL Experience Manager] を使用すると、ワークフロー内で任意のコマンドラインツールを実行して、アセットを変換し（ など）、新しいレンディションをアセットに追加できます。[!DNL ImageMagick]You only need to install the command-line tool on the disk hosting the [!DNL Experience Manager] server and to add and configure a process step to the workflow. また、`CommandLineProcess` という起動プロセスによって、特定の MIME タイプに従ってフィルター処理を実行し、新しいレンディションに基づいて複数のサムネールを作成することもできます。
+[!DNL Experience Manager] を使用すると、ワークフロー内で任意のコマンドラインツールを実行して、アセットを変換し（ など）、新しいレンディションをアセットに追加できます。[!DNL ImageMagick][!DNL Experience Manager]サーバーをホストするディスクにコマンドラインツールをインストールし、ワークフローにプロセスステップを追加して設定するだけです。 また、`CommandLineProcess` という起動プロセスによって、特定の MIME タイプに従ってフィルター処理を実行し、新しいレンディションに基づいて複数のサムネールを作成することもできます。
 
-The following conversions can be automatically run and stored within [!DNL Assets]:
+次の変換は、[!DNL Assets]内で自動的に実行および保存できます。
 
-* EPS and AI transformation using [ImageMagick](https://www.imagemagick.org/script/index.php) and [Ghostscript](https://www.ghostscript.com/).
-* FLV video transcoding using [FFmpeg](https://ffmpeg.org/).
-* MP3 encoding using [LAME](https://lame.sourceforge.io/).
-* Audio processing using [SOX](https://sox.sourceforge.net/).
+* [ImageMagick](https://www.imagemagick.org/script/index.php)と[Ghostscript](https://www.ghostscript.com/)を使用したEPS変換とAI変換。
+* [FFmpeg](https://ffmpeg.org/)を使用したFLVビデオトランスコード。
+* [LAME](https://lame.sourceforge.io/)を使用したMP3エンコード。
+* [SOX](https://sox.sourceforge.net/)を使用したオーディオ処理。
 
 >[!NOTE]
 >
->Windows以外のシステムでは、Fmpegツールは、ファイル名に一重引用符(&#39;)が含まれるビデオアセットのレンディションの生成中にエラーを返します。 If the name of your video file includes a single quote, remove it before uploading to [!DNL Experience Manager].
+>Windows以外のシステムでは、Fmpegツールは、ファイル名に一重引用符(&#39;)が含まれるビデオアセットのレンディションの生成中にエラーを返します。 ビデオファイルの名前に一重引用符が含まれている場合は、削除してから[!DNL Experience Manager]にアップロードしてください。
 
 `CommandLineProcess` プロセスは、リストに表示されている順序で以下の操作を実行します。
 
 * MIME タイプを指定した場合、そのタイプに従ってファイルをフィルターします。
-* Creates a temporary directory on the disk hosting the [!DNL Experience Manager] server.
+* [!DNL Experience Manager]サーバーをホストするディスク上に一時ディレクトリを作成します。
 * 元のファイルを一時ディレクトリにストリーミングします。
-* ステップの引数で定義されたコマンドを実行します。The command is being executed within the temporary directory with the permissions of the user running [!DNL Experience Manager].
-* Streams the result back into the rendition folder of the [!DNL Experience Manager] server.
+* ステップの引数で定義されたコマンドを実行します。[!DNL Experience Manager]を実行するユーザーの権限で、一時ディレクトリ内でコマンドを実行しています。
+* 結果を[!DNL Experience Manager]サーバーのレンディションフォルダーにストリーミングして戻します。
 * 一時ディレクトリを削除します。
 * 指定した場合は、それらのレンディションに基づいてサムネールを作成します。サムネールの数とサイズは、ステップの引数で定義されます。
 
-### An example using [!DNL ImageMagick] {#an-example-using-imagemagick}
+### [!DNL ImageMagick] {#an-example-using-imagemagick}の使用例
 
-The following example shows you how to set up the command line process step so that every time an asset with the miMIME e-type GIF or TIFF is added to `/content/dam` on the [!DNL Experience Manager] server, a flipped image of the original is created together with three additional thumbnails (140x100, 48x48, and 10x250).
+次の例は、miMIME eタイプGIFまたはTIFFを持つアセットが[!DNL Experience Manager]サーバーの`/content/dam`に追加されるたびに、元のアセットの反転画像が3つの追加のサムネール(140x100、48x48、10x25)と共に作成されるように、コマンドライン処理手順を設定する方法を示しています0)。
 
-To do this, use [!DNL ImageMagick]. [!DNL ImageMagick] は、ビットマップ画像の作成、編集、構成に使用する無料のコマンドラインソフトウェアです。
+これを行うには、[!DNL ImageMagick]を使用します。 [!DNL ImageMagick] は、ビットマップ画像の作成、編集、構成に使用する無料のコマンドラインソフトウェアです。
 
-Install [!DNL ImageMagick] on the disk hosting the [!DNL Experience Manager] server:
+[!DNL Experience Manager]サーバーをホストするディスクに[!DNL ImageMagick]をインストールします。
 
-1. Install [!DNL ImageMagick]: See [ImageMagick documentation](https://www.imagemagick.org/script/download.php).
+1. [!DNL ImageMagick]をインストール：[ImageMagickのドキュメント](https://www.imagemagick.org/script/download.php)を参照してください。
 1. コマンドラインで convert を実行できるようにツールを設定します。
 1. ツールが適切にインストールされているかどうかを確認するには、コマンド `convert -h` をコマンドラインで実行します。
 
@@ -479,12 +479,12 @@ Install [!DNL ImageMagick] on the disk hosting the [!DNL Experience Manager] ser
 
    >[!NOTE]
    >
-   >In some versions of Windows, the convert command may fail to run because it conflicts with the native convert utility that is part of [!DNL Windows] installation. In this case, mention the complete path for the [!DNL ImageMagick] software used to convert image files to thumbnails. 例： `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
+   >Windowsの一部のバージョンでは、[!DNL Windows]のインストールに含まれるネイティブの変換ユーティリティと競合するので、convertコマンドの実行に失敗する場合があります。 この場合、画像ファイルをサムネールに変換するために使用する[!DNL ImageMagick]ソフトウェアの完全なパスに言及します。 例： `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
-1. To see if the tool runs properly, add a JPG image to the working directory and run the command convert `<image-name>.jpg -flip <image-name>-flipped.jpg` on the command line. 反転画像がディレクトリに追加されます。Then, add the command line process step to the **[!UICONTROL DAM Update Asset]** workflow.
+1. ツールが正しく実行されるかどうかを確認するには、作業ディレクトリにJPG画像を追加し、コマンドラインでconvert `<image-name>.jpg -flip <image-name>-flipped.jpg`コマンドを実行します。 反転画像がディレクトリに追加されます。次に、コマンドライン処理手順を&#x200B;**[!UICONTROL DAM Update Asset]**&#x200B;ワークフローに追加します。
 1. **[!UICONTROL ワークフロー]**&#x200B;コンソールを開きます。
 1. 「**[!UICONTROL モデル]**」タブで、**[!UICONTROL DAM アセット更新]**&#x200B;モデルを編集します。
-1. [!UICONTROL Web対応レンディションの] 引数 **[!UICONTROL (Arguments]** of the Web enabled rendition)を次に変更します。 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`.
+1. **[!UICONTROL Web対応のレンディション]**&#x200B;の[!UICONTROL 引数]を次のように変更します。`mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`。
 1. ワークフローを保存します。
 
 変更したワークフローをテストするには、`/content/dam` にアセットを追加します。
@@ -493,35 +493,35 @@ Install [!DNL ImageMagick] on the disk hosting the [!DNL Experience Manager] ser
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット **[!UICONTROL myImage.tiff]** を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
-#### Configure the CommandLineProcess process step {#configuring-the-commandlineprocess-process-step}
+#### CommandLineProcessプロセスステップ{#configuring-the-commandlineprocess-process-step}を設定
 
 ここでは、[!UICONTROL CommandLineProcess] の[!UICONTROL プロセス引数]を設定する方法について説明します。
 
-「 [!UICONTROL Process Arguments] 」の値は、コンマで区切ります。空白で開始しないでください。
+[!UICONTROL プロセスの引数]の値はコンマで区切り、空白で開始しないでください。
 
 | 引数のフォーマット | 説明 |
 |---|---|
 | mime:&lt;mime-type> | オプション引数。アセットの MIME タイプが引数の MIME タイプと同じ場合にプロセスが適用されます。<br>いくつかのMIMEタイプを定義できます。 |
 | tn:&lt;width>:&lt;height> | オプション引数。プロセスにより、引数で定義されたサイズのサムネールが作成されます。<br>複数のサムネールを定義できます。 |
-| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど） <br> `${file}`:入力ファイルのフルパス名（例：） `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`:入力ファイルのディレクトリ。例 `/tmp/cqdam0816.tmp`<br>`${basename}`:入力ファイルの名前（拡張子なし）。例： original <br>`${extension}`:入力ファイルの拡張子（JPGなど）。 |
+| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど）  <br> `${file}`:入力ファイルのフルパス名（例：）  `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`:入力ファイルのディレクトリ。例 `/tmp/cqdam0816.tmp` <br>`${basename}`:入力ファイルの名前（拡張子なし）。例： original  <br>`${extension}`:入力ファイルの拡張子（JPGなど）。 |
 
-For example, if [!DNL ImageMagick] is installed on the disk hosting the [!DNL Experience Manager] server and if you create a process step using [!UICONTROL CommandLineProcess] as Implementation and the following values as [!UICONTROL Process Arguments]:
+例えば、[!DNL Experience Manager]サーバーをホストするディスクに[!DNL ImageMagick]がインストールされていて、[!UICONTROL CommandLineProcess]をImplementationとして使用し、次の値を[!UICONTROL Process Arguments]としてプロセス手順を作成する場合：
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-then, when the workflow runs, the step only applies to assets that have `image/gif` or `mime:image/tiff` as `mime-types`, it creates a flipped image of the original, converts it into JPG and creates three thumbnails that have the dimensions: 140x100, 48x48, and 10x250.
+次に、ワークフローを実行すると、手順は`image/gif`または`mime:image/tiff`が`mime-types`であるアセットにのみ適用され、元の画像のフリップ画像が作成され、JPGに変換され、次の3つのサイズのサムネールが作成されます。140x100、48x48、10x250
 
-Use the following [!UICONTROL Process Arguments] to create the three standard thumbnails using [!DNL ImageMagick]:
+次の[!UICONTROL プロセスの引数]を使用して、[!DNL ImageMagick]を使用して3つの標準サムネールを作成します。
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=319x319 -thumbnail "319x319>" -background transparent -gravity center -extent 319x319 -write png:cq5dam.thumbnail.319.319.png -thumbnail "140x100>" -background transparent -gravity center -extent 140x100 -write cq5dam.thumbnail.140.100.png -thumbnail "48x48>" -background transparent -gravity center -extent 48x48 cq5dam.thumbnail.48.48.png`
 
-Use the following [!UICONTROL Process Arguments] to create the web-enabled rendition using [!DNL ImageMagick]:
+[!DNL ImageMagick]を使用してWeb対応のレンディションを作成するには、次の[!UICONTROL Process Arguments]を使用します。
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=1280x1280 -thumbnail "1280x1280>" cq5dam.web.1280.1280.jpeg`
 
 >[!NOTE]
 >
->The [!UICONTROL CommandLineProcess] step only applies to assets (nodes of type `dam:Asset`) or descendants of an asset.
+>[!UICONTROL CommandLineProcess]ステップは、アセット（タイプ`dam:Asset`のノード）またはアセットの子孫にのみ適用されます。
 
 >[!MORELIKETHIS]
 >
