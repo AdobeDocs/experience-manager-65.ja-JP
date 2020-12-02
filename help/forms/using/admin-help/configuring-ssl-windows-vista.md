@@ -30,13 +30,13 @@ Windows Vista™ で SSL を設定するには、認証時に RSA 鍵が設定�
 
 **SSL 証明書の作成**
 
-1. In a command prompt, navigate to *`[JAVA HOME]`*/bin and type the following command to create the certificate and keystore:
+1. コマンドプロンプトで、*`[JAVA HOME]`*/binに移動し、次のコマンドを入力して証明書とキーストアを作成します。
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*Host NameGroupGroup*`, OU=`** 会社 `, O=`*名* 名 `,L=`*名名名名名名* 都市国国名名国名名名国名国名コードlc Cert Cert Cert Name Password `, S=`**`, C=`**`" -alias`**`-keypass``key`****`-keystore`*Password* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*Host* `, OU=`*NameGroup* `, O=`*NameCompany* `,L=`*NameCity NameNameStateCountry Code* `, S=`** `, C=`*&quot;LC Cert&quot;* `" -alias`*_* `-keypass` `key`** ** `-keystore`*passwordkeystorename* `.keystore`
 
    >[!NOTE]
    >
-   >Replace *`[JAVA_HOME]`with the directory where the JDK is installed, and replace the text in italic with values that correspond with your environment.*
+   >*`[JAVA_HOME]`をJDKがインストールされているディレクトリに置き換え、斜体のテキストを環境に対応する値に置き換えます。*
 
-1. Type `changeit` as the password. Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
+1. パスワードとして`changeit`と入力します。 Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
 
