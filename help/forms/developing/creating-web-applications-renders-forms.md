@@ -19,15 +19,15 @@ ht-degree: 1%
 ---
 
 
-# FormsをレンダリングするWeb アプリケーションの作成 {#creating-web-applications-thatrenders-forms}
+# FormsをレンダリングするWeb アプリケーションの作成{#creating-web-applications-thatrenders-forms}
 
-## FormsをレンダリングするWeb アプリケーションの作成 {#creating-web-applications-that-renders-forms}
+## FormsをレンダリングするWeb アプリケーションの作成{#creating-web-applications-that-renders-forms}
 
 Javaサーブレットを使用してFormsサービスを呼び出し、フォームをレンダリングするWebベースのアプリケーションを作成できます。 Java™サーブレットを使用する利点の1つは、プロセスの戻り値をクライアントWebブラウザーに書き込めることです。 つまり、フォームを返すFormsサービスとクライアントWebブラウザーの間のリンクとして、Javaサーブレットを使用できます。
 
 >[!NOTE]
 >
->この節では、Formsサービスを呼び出し、フラグメントに基づいてフォームをレンダリングするJavaサーブレットを使用するWebベースのアプリケーションを作成する方法について説明します。 (See [Rendering Forms Based on Fragments](/help/forms/developing/rendering-forms-based-fragments.md).)
+>この節では、Formsサービスを呼び出し、フラグメントに基づいてフォームをレンダリングするJavaサーブレットを使用するWebベースのアプリケーションを作成する方法について説明します。 (「[フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms-based-fragments.md)」を参照)。
 
 Javaサーブレットを使用してフォームをクライアントWebブラウザーに書き込み、顧客が表示してフォームにデータを入力できるようにします。 データをフォームに入力した後、Webユーザーはフォーム上の送信ボタンをクリックして情報をJavaサーブレットに送信し、Javaサーブレットでデータの取得と処理を行うことができます。 例えば、データを別のプロセスに送信できます。
 
@@ -45,27 +45,27 @@ Javaサーブレットを使用してフォームをクライアントWebブラ�
 
 >[!NOTE]
 >
->フラグメントを基にしたフォームデザインの作成について詳しくは、 [Formsデザイナーを参照してください](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>フラグメントを基にしたフォームデザインの作成について詳しくは、[Formsデザイナー](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
 
 **サンプルファイル**
 
 この節では、次の場所にあるサンプルファイルを使用します。
 
-&lt;*Formsデザイナーのインストールディレクトリ*>/Samples/Forms/発注書/フォームフラグメント
+&lt;>Formsデザイナーのインストールディレクトリ&#x200B;*>/Samples/Forms/発注書/フォームフラグメント*
 
-&lt;*install directory*>はインストールパスです。 クライアントアプリケーションの場合、Purchase Order Dynamic.xdpファイルがこのインストール場所からコピーされ、 *Applications/FormsApplicationという名前のFormsアプリケーションにデプロイされました*。 Purchase Order Dynamic.xdpファイルは、FormsFolderという名前のフォルダーに配置されます。 同様に、次の図に示すように、フラグメントはFragmentsという名前のフォルダーに配置されます。
+ここで、&lt;*install directory*>はインストールパスです。 クライアントアプリケーションの場合、Purchase Order Dynamic.xdpファイルはこのインストール場所からコピーされ、*Applications/FormsApplication*&#x200B;という名前のFormsアプリケーションにデプロイされます。 Purchase Order Dynamic.xdpファイルは、FormsFolderという名前のフォルダーに配置されます。 同様に、次の図に示すように、フラグメントはFragmentsという名前のフォルダーに配置されます。
 
 ![cw_cw_fragmentsrepository](assets/cw_cw_fragmentsrepository.png)
 
-Purchase Order Dynamic.xdpのフォームデザインにアクセスするには、フォーム名( `Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp` メソッドに渡される最初のパラメーター)とコンテンツルートURI値 `renderPDFForm``repository:///` を指定します。
+Purchase Order Dynamic.xdpのフォームデザインにアクセスするには、フォーム名（`renderPDFForm`メソッドに渡される最初のパラメーター）として`Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp`を指定し、コンテンツルートURI値として`repository:///`を指定します。
 
-Webアプリケーションが使用するXMLデータファイルが、Dataフォルダーから `C:\Adobe`(AEM FormsをホストするJ2EEアプリケーションサーバーに属するファイルシステム)に移動されました。 ファイル名はPurchase Order *Canada.xml* 、Purchase Order *US.xmlです*。
+Webアプリケーションが使用するXMLデータファイルが、Dataフォルダーから`C:\Adobe`(AEM FormsをホストするJ2EEアプリケーションサーバーに属するファイルシステム)に移動されました。 ファイル名はPurchase Order *Canada.xml*&#x200B;およびPurchase Order *US.xml*&#x200B;です。
 
 >[!NOTE]
 >
->Workbenchを使用したFormsアプリケーションの作成に関する詳細は、 [Workbenchヘルプを参照してください](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+>Workbenchを使用したFormsアプリケーションの作成について詳しくは、[workbenchヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください。
 
-### 手順の概要 {#summary-of-steps}
+### 手順{#summary-of-steps}の概要
 
 フラグメントに基づいてフォームをレンダリングするWebベースのアプリケーションを作成するには、次の手順を実行します。
 
@@ -80,9 +80,9 @@ Webアプリケーションが使用するXMLデータファイルが、Dataフ�
 >
 >これらの手順の一部は、AEM FormsがデプロイされているJ2EEアプリケーションに依存しています。 例えば、WARファイルのデプロイに使用する方法は、使用しているJ2EEアプリケーションサーバーによって異なります。 この節では、AEM FormsがJBoss®にデプロイされていることを前提としています。
 
-### Creating a web project {#creating-a-web-project}
+### Webプロジェクトの作成{#creating-a-web-project}
 
-Formsサービスを呼び出すことのできるJavaサーブレットを含むWebアプリケーションを作成する最初の手順は、新しいWebプロジェクトを作成することです。 このドキュメントが基盤とするJava IDEはEclipse 3.3です。Eclipse IDEを使用してWebプロジェクトを作成し、必要なJARファイルをプロジェクトに追加します。 最後に、 *index.htmlという名前のHTMLページとJavaサーブレットをプロジェクトに追加します* 。
+Formsサービスを呼び出すことのできるJavaサーブレットを含むWebアプリケーションを作成する最初の手順は、新しいWebプロジェクトを作成することです。 このドキュメントが基盤とするJava IDEはEclipse 3.3です。Eclipse IDEを使用してWebプロジェクトを作成し、必要なJARファイルをプロジェクトに追加します。 最後に、*index.html*&#x200B;という名前のHTMLページとJavaサーブレットをプロジェクトに追加します。
 
 次のリストは、Webプロジェクトに追加する必要があるJARファイルを指定します。
 
@@ -91,39 +91,39 @@ Formsサービスを呼び出すことのできるJavaサーブレットを含�
 * adobe-usermanager-client.jar
 * adobe-utilities.jar
 
-For the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所については、[「AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **Webプロジェクトを作成するには：**
 
-1. 開始Eclipseを開き、 **File** / **New Project**&#x200B;をクリックします。
-1. **新規プロジェクト** ダイアログボックスで、 **Web** / **ダイナミックWebプロジェクト**&#x200B;を選択します。
-1. プロジェクト `FragmentsWebApplication` の名前を入力し、「 **完了**」をクリックします。
+1. 開始Eclipseを開き、**ファイル**/**新しいプロジェクト**&#x200B;をクリックします。
+1. **新しいプロジェクト**&#x200B;ダイアログボックスで、**Web**/**ダイナミックWebプロジェクト**&#x200B;を選択します。
+1. プロジェクト名に「`FragmentsWebApplication`」と入力し、「**完了**」をクリックします。
 
 **必要なJARファイルをプロジェクトに追加するには：**
 
-1. 「プロジェクト・エクスプローラ」ウィンドウで、 `FragmentsWebApplication` プロジェクトを右クリックし、「 **プロパティ**」を選択します。
-1. 「 **Java build path** 」をクリックし、「 **Libraries** 」タブをクリックします。
-1. 「 **External JARs** 」ボタンをクリックし、含めるJARファイルを参照します。
+1. 「プロジェクトエクスプローラ」ウィンドウで`FragmentsWebApplication`プロジェクトを右クリックし、「**プロパティ**」を選択します。
+1. 「**Javaビルドパス**」をクリックし、「**ライブラリ**」タブをクリックします。
+1. 「**追加 External JARs**」ボタンをクリックし、含めるJARファイルを参照します。
 
 **プロジェクトにJavaサーブレットを追加するには：**
 
-1. 「プロジェクト・エクスプローラ」ウィンドウで、 `FragmentsWebApplication` プロジェクトを右クリックし、「 **新規** 」>「 **その他**」を選択します。
-1. [ **Web** ]フォルダを展開し、[ **サーブレット**]を選択して[ **次へ**]をクリックします。
-1. 「サーブレットを作成」ダイアログで、サーブレットの名前 `RenderFormFragment` を入力し、「 **完了**」をクリックします。
+1. 「プロジェクトエクスプローラ」ウィンドウで、`FragmentsWebApplication`プロジェクトを右クリックし、**新規**/**その他**&#x200B;を選択します。
+1. **Web**&#x200B;フォルダーを展開し、「**サーブレット**」を選択して、「**次へ**」をクリックします。
+1. [サーブレットを作成]ダイアログボックスで、サーブレットの名前に「`RenderFormFragment`」と入力し、「**完了**」をクリックします。
 
 **プロジェクトにHTMLページを追加するには：**
 
-1. 「プロジェクト・エクスプローラ」ウィンドウで、 `FragmentsWebApplication` プロジェクトを右クリックし、「 **新規** 」>「 **その他**」を選択します。
-1. 「 **Web** 」フォルダーを展開し、「 **HTML**」を選択して「 **次へ**」をクリックします。
-1. 新規HTMLダイアログボックスで、ファイル名 `index.html` を入力し、「 **完了**」をクリックします。
+1. 「プロジェクトエクスプローラ」ウィンドウで、`FragmentsWebApplication`プロジェクトを右クリックし、**新規**/**その他**&#x200B;を選択します。
+1. **Web**&#x200B;フォルダーを展開し、「**HTML**」を選択して、「**次へ**」をクリックします。
+1. 新規HTMLダイアログボックスで、ファイル名に「`index.html`」と入力し、「**完了**」をクリックします。
 
 >[!NOTE]
 >
->Javaサーブレットを呼び出すHTMLページの作成について詳しくは、 `RenderFormFragment` Webページの [作成を参照してください](/help/forms/developing/rendering-forms.md#creating-the-web-page)。
+>`RenderFormFragment` Javaサーブレットを呼び出すHTMLページの作成について詳しくは、[Webページの作成](/help/forms/developing/rendering-forms.md#creating-the-web-page)を参照してください。
 
-### サーブレット用のJavaアプリケーションロジックの作成 {#creating-java-application-logic-for-the-servlet}
+### サーブレット{#creating-java-application-logic-for-the-servlet}用のJavaアプリケーションロジックの作成
 
-Javaサーブレット内からFormsサービスを呼び出すJavaアプリケーションロジックを作成します。 次のコードは、 `RenderFormFragment` Javaサーブレットの構文を示しています。
+Javaサーブレット内からFormsサービスを呼び出すJavaアプリケーションロジックを作成します。 次のコードは、`RenderFormFragment` Javaサーブレットの構文を示しています。
 
 ```java
      public class RenderFormFragment extends HttpServlet implements Servlet {
@@ -138,35 +138,35 @@ Javaサーブレット内からFormsサービスを呼び出すJavaアプリケ�
              }
 ```
 
-通常、クライアントコードはJavaサーブレット `doGet` または `doPost` メソッド内に配置しません。 このコードを別のクラスに配置し、メソッド（またはメソッド）内からクラスをインスタンス化して、適切なメソッドを呼び出す方が、より良いプログラミング方法で `doPost` す `doGet` 。 ただし、コードを簡潔にするために、この節のコード例は最小限に抑え、コード例はこの `doPost` メソッドに配置します。
+通常、クライアントコードはJavaサーブレットの`doGet`メソッドまたは`doPost`メソッド内に配置しません。 このコードを別のクラスに配置し、`doPost`メソッド（または`doGet`メソッド）内からクラスをインスタンス化して、適切なメソッドを呼び出す方が、より良いプログラミング方法です。 ただし、コードを簡潔にするために、この節のコード例は最小限に抑え、コード例は`doPost`メソッドに配置します。
 
 FormsサービスAPIを使用してフラグメントに基づいてフォームをレンダリングするには、次のタスクを実行します。
 
 1. Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。 これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
-1. HTMLフォームから送信されたラジオボタンの値を取得し、米国のデータを使用するか、カナダのデータを使用するかを指定します。 米国製品が送信された場合は、 `com.adobe.idp.Document` Purchase Order US.xml *内のデータを格納するURLを作成します*。 同様に、カナダの場合は、 `com.adobe.idp.Document` Purchase Order Canada.xml ** ファイル内のデータを格納するファイルを作成します。
+1. HTMLフォームから送信されたラジオボタンの値を取得し、米国のデータを使用するか、カナダのデータを使用するかを指定します。 米国製が送信された場合は、*発注書US.xml*&#x200B;にあるデータを保存する`com.adobe.idp.Document`を作成します。 同様に、カナダの場合は、*Purchase Order Canada.xml*&#x200B;ファイルにデータを格納する`com.adobe.idp.Document`を作成します。
 1. 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
-1. Create an `FormsServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
-1. コンストラクターを使用して、URI値を格納する `URLSpec` オブジェクトを作成します。
-1. オブジェクトの `URLSpec``setApplicationWebRoot` メソッドを呼び出し、アプリケーションのWebルートを表すstring値を渡します。
-1. オブ `URLSpec` ジェクトの `setContentRootURI` メソッドを呼び出し、コンテンツルートURI値を指定するstring値を渡します。 フォームデザインとフラグメントがコンテンツルートURI内にあることを確認します。 そうでない場合、Formsサービスは例外をスローします。 AEM Formsリポジトリを参照するには、を指定し `repository://`ます。
-1. オブジェクトの `URLSpec``setTargetURL` メソッドを呼び出し、フォームデータのポスト先のターゲットURL値を指定するstring値を渡します。 フォームデザインでターゲットURLを定義する場合は、空の文字列を渡すことができます。 演算を実行するために、フォームの送信先URLを指定することもできます。
-1. オブジェクトの `FormsServiceClient``renderPDFForm` メソッドを呼び出し、次の値を渡します。
+1. コンストラクターを使用し、`FormsServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
+1. コンストラクターを使用して、URI値を格納する`URLSpec`オブジェクトを作成します。
+1. `URLSpec`オブジェクトの`setApplicationWebRoot`メソッドを呼び出し、アプリケーションのWebルートを表す文字列値を渡します。
+1. `URLSpec`オブジェクトの`setContentRootURI`メソッドを呼び出し、コンテンツルートURI値を指定する文字列値を渡します。 フォームデザインとフラグメントがコンテンツルートURI内にあることを確認します。 そうでない場合、Formsサービスは例外をスローします。 AEM Formsリポジトリを参照するには、`repository://`を指定します。
+1. `URLSpec`オブジェクトの`setTargetURL`メソッドを呼び出し、フォームデータのポスト先のターゲットURL値を指定する文字列値を渡します。 フォームデザインでターゲットURLを定義する場合は、空の文字列を渡すことができます。 演算を実行するために、フォームの送信先URLを指定することもできます。
+1. `FormsServiceClient`オブジェクトの`renderPDFForm`メソッドを呼び出し、次の値を渡します。
 
    * ファイル名拡張子を含むフォームデザイン名を指定するstring値。
-   * フォームとマージするデータを含む `com.adobe.idp.Document` オブジェクト（手順2で作成）。
-   * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。 For more information, see [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * フラグメントに基づいてフォームをレンダリングするためにFormsサービスで必要なURI値を含む `URLSpec` オブジェクトです。
-   * 添付ファイルを格納する `java.util.HashMap` オブジェクトです。 これはオプションのパラメーターで、フォームにファイルを添付しない `null` かどうかを指定できます。
+   * フォームとマージするデータを含む`com.adobe.idp.Document`オブジェクト（手順2で作成）。
+   * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。 詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   * フラグメントに基づいてフォームをレンダリングするためにFormsサービスで必要なURI値を含む`URLSpec`オブジェクトです。
+   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターです。フォームにファイルを添付しない場合は、`null`を指定できます。
 
-   この `renderPDFForm``FormsResult` メソッドは、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを含むオブジェクトを返します。
+   `renderPDFForm`メソッドは、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを含む`FormsResult`オブジェクトを返します。
 
-1. オブジェクトの `com.adobe.idp.Document` メソッドを呼び出して、 `FormsResult` オブジェクトを作成し `getOutputContent` ます。
-1. メソッドを呼び出して、 `com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得し `getContentType` ます。
-1. メソッドを呼び出し、オブジェクトの `javax.servlet.http.HttpServletResponse` コンテンツタイプを渡すことで、 `setContentType``com.adobe.idp.Document` オブジェクトのコンテンツタイプを設定します。
-1. オブジェクトの `javax.servlet.ServletOutputStream` メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに書き込むために使用する `javax.servlet.http.HttpServletResponse``getOutputStream` オブジェクトを作成します。
-1. オブジェクトの `java.io.InputStream` メソッドを呼び出して、 `com.adobe.idp.Document` オブジェクトを作成 `getInputStream` します。
-1. オブジェクトの `InputStream``read`メソッドを呼び出し、バイト配列を引数として渡すことで、バイト配列を作成し、フォームデータストリームと共に値を入力します。
-1. オブジェクトの `javax.servlet.ServletOutputStream``write` メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
+1. `FormsResult`オブジェクト&#39;s `getOutputContent`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトを作成します。
+1. `getContentType`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを取得します。
+1. `javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定するには、`setContentType`メソッドを呼び出し、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを渡します。
+1. `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに書き込むために使用する`javax.servlet.ServletOutputStream`オブジェクトを作成します。
+1. `com.adobe.idp.Document`オブジェクトの`getInputStream`メソッドを呼び出して、`java.io.InputStream`オブジェクトを作成します。
+1. `InputStream`オブジェクトの`read`メソッドを呼び出し、バイト配列を引数として渡すことで、バイト配列を作成し、フォームデータストリームを入力します。
+1. `javax.servlet.ServletOutputStream`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに送信します。 バイト配列を`write`メソッドに渡します。
 
 次のコード例は、Formsサービスを呼び出し、フラグメントに基づいてフォームをレンダリングするJavaサーブレットを表しています。
 
@@ -305,9 +305,9 @@ FormsサービスAPIを使用してフラグメントに基づいてフォーム
  }
 ```
 
-### Webページの作成 {#creating-the-web-page}
+### Webページの作成{#creating-the-web-page}
 
-index.html Webページは、Javaサーブレットへのエントリポイントを提供し、Formsサービスを呼び出します。 このWebページは、2つのラジオボタンと1つの送信ボタンを含む基本的なHTMLフォームです。 ラジオボタンの名前はradioです。 ユーザーが「送信」ボタンをクリックすると、フォームデータが `RenderFormFragment` Javaサーブレットに投稿されます。
+index.html Webページは、Javaサーブレットへのエントリポイントを提供し、Formsサービスを呼び出します。 このWebページは、2つのラジオボタンと1つの送信ボタンを含む基本的なHTMLフォームです。 ラジオボタンの名前はradioです。 ユーザーが送信ボタンをクリックすると、フォームデータが`RenderFormFragment` Javaサーブレットにポストされます。
 
 Javaサーブレットは、次のJavaコードを使用して、HTMLページから投稿されたデータを取得します。
 
@@ -329,7 +329,7 @@ Javaサーブレットは、次のJavaコードを使用して、HTMLページ�
              }
 ```
 
-次のHTMLコードは、開発環境のセットアップ時に作成されたindex.htmlファイルにあります。 (See [Creating a web project](/help/forms/developing/rendering-forms.md#creating-a-web-project).)
+次のHTMLコードは、開発環境のセットアップ時に作成されたindex.htmlファイルにあります。 （「[Webプロジェクトの作成](/help/forms/developing/rendering-forms.md#creating-a-web-project)」を参照）。
 
 ```xml
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -371,25 +371,25 @@ Javaサーブレットは、次のJavaコードを使用して、HTMLページ�
  </html>
 ```
 
-### Webアプリケーションのパッケージ化 {#packaging-the-web-application}
+### Webアプリケーションのパッケージ化{#packaging-the-web-application}
 
 Formsサービスを呼び出すJavaサーブレットをデプロイするには、WebアプリケーションをWARファイルにパッケージ化します。 コンポーネントのビジネスロジックが依存する外部JARファイル（adobe-livecycle-client.jarやadobe-forms-client.jarなど）もWARファイルに含めてください。
 
 **WebアプリケーションをWARファイルにパッケージ化するには：**
 
-1. 「 **プロジェクトエクスプローラ** 」(Project Explorer)ウィンドウで、 `FragmentsWebApplication` プロジェクトを右クリックし、「 **エクスポート** 」(Export) **/「** WARファイル」(WAR file)を選択します。
-1. 「 **Webモジュール** 」テキストボックスに、Javaプロジェクト `FragmentsWebApplication` の名前を入力します。
-1. 「 **Destination** 」テキストボックス `FragmentsWebApplication.war`**に、ファイル名**&#x200B;を入力し、WARファイルの場所を指定して、「Finish」をクリックします。
+1. **プロジェクトエクスプローラー**&#x200B;ウィンドウで`FragmentsWebApplication`プロジェクトを右クリックし、**エクスポート**/**WARファイル**&#x200B;を選択します。
+1. 「**Web module**」テキストボックスに、Javaプロジェクトの名前として「`FragmentsWebApplication`」と入力します。
+1. 「**宛先**」テキストボックスに、**ファイル名に`FragmentsWebApplication.war`**&#x200B;と入力し、WARファイルの場所を指定して、「完了」をクリックします。
 
-### J2EEアプリケーションサーバーへのWARファイルのデプロイ {#deploying-the-war-file-to-the-j2ee-application-server}
+### J2EEアプリケーションサーバーへのWARファイルのデプロイ{#deploying-the-war-file-to-the-j2ee-application-server}
 
 WARファイルは、AEM FormsがデプロイされているJ2EEアプリケーションサーバーにデプロイできます。 WARファイルをデプロイすると、Webブラウザーを使用してHTML Webページにアクセスできます。
 
 **WARファイルをJ2EEアプリケーションサーバーにデプロイするには：**
 
-* エクスポートパスからにWARファイルをコピーし `[Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\all\deploy`ます。
+* エクスポートパスから`[Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\all\deploy`にWARファイルをコピーします。
 
-### Webアプリケーションのテスト {#testing-your-web-application}
+### Webアプリケーションのテスト{#testing-your-web-application}
 
 Webアプリケーションをデプロイした後、Webブラウザーを使用してテストできます。 AEM Formsをホストしているコンピューターと同じコンピューターを使用している場合は、次のURLを指定できます。
 
