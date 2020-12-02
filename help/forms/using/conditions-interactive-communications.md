@@ -42,14 +42,14 @@ ht-degree: 67%
 ## 条件の作成 {#createcondition}
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
-1. Select **[!UICONTROL Create]** > **[!UICONTROL Condition]**.
+1. **[!UICONTROL 作成]**/**[!UICONTROL 条件]**&#x200B;を選択します。
 1. 次の情報を指定します。
 
-   * **[!UICONTROL タイトル]**:（オプション）条件のタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。条件は、そのタイトルによって（利用可能な場合）、サムネールやプロパティとして参照されます。
-   * **[!UICONTROL 名前]**:フォルダー内の条件の一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
+   * **[!UICONTROL タイトル]**:（オプション）条件のタイトルを入力します。タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。条件は、そのタイトルによって（利用可能な場合）、サムネールやプロパティとして参照されます。
+   * **[!UICONTROL 名前]**:フォルダー内の条件の一意の名前。どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
 
    * **[!UICONTROL 説明]**：ドキュメントフラグメントの説明を入力します。
-   * **[!UICONTROL フォームデータモデル]**：（任意）フォームデータモデルに基づいて条件を作成する場合は、「フォームデータモデル」ラジオボタンを選択します。When you select Form Data Model radio button, **[!UICONTROL Form Data Model]** field appears. フォームデータモデルを参照して選択します。インタラクティブ通信用の条件を作成する場合は、そのインタラクティブ通信で使用するものと同じデータモデルを使用する必要があります。For more information on form data model, see [Data Integration](../../forms/using/data-integration.md).
+   * **[!UICONTROL フォームデータモデル]**：（任意）フォームデータモデルに基づいて条件を作成する場合は、「フォームデータモデル」ラジオボタンを選択します。「Form Data Model」ラジオボタンを選択すると、「**[!UICONTROL Form Data Model]**」フィールドが表示されます。 フォームデータモデルを参照して選択します。インタラクティブ通信用の条件を作成する場合は、そのインタラクティブ通信で使用するものと同じデータモデルを使用する必要があります。フォームデータモデルについて詳しくは、「[データ統合](../../forms/using/data-integration.md)」を参照してください。
 
    * **[!UICONTROL タグ]**：（任意）カスタムタグを作成する場合は、テキストフィールドに値を入力して Enter キーをタップします。この条件を保存すると、新しく追加されたタグが作成されます。
 
@@ -59,7 +59,7 @@ ht-degree: 67%
 
    ![createcondition](assets/createcondition.png)
 
-1. Tap **[!UICONTROL Add Assets]**.
+1. 「**[!UICONTROL 追加アセット]**」をタップします。
 
    アセットの選択ページが表示されます。このページには、条件内に追加できるテキスト、リスト、条件、画像が表示されます。
 
@@ -77,19 +77,19 @@ ht-degree: 67%
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[拒否の変更] 。** アセットおよび条件のルールに対して行った変更を拒否するには、このアイコンをタップします。
-   **[B] 変更を受け入れます。** このアイコンをタップして、条件のアセットおよびルールに対して行った変更を受け入れます。
-   **[C] 重複アセット。**適用対象のルール（存在する場合）と共に条件内のアセットのコピーを作成する場合は、このアイコンをタップします。その後、複製されたアセットで、ルールとアセットの編集を行うことができます。特定のコンテキストに基づいて代替のアセットを表示するための類似のルールを作成する場合は、アセットを複製すると便利です。
-   **[D] プレビューを表示** このアイコンをタップすると、条件を作成\編集ページ内にアセットのプレビューが表示されます。
+   **[] ARejectの変更。** アセットおよび条件のルールに対して行った変更を拒否するには、このアイコンをタップします。
+   **[変] 更を許可** このアイコンをタップして、条件のアセットおよびルールに対して行った変更を受け入れます。
+   **[アセ] ットをCDuplicate。**適用対象のルール（存在する場合）と共に条件内のアセットのコピーを作成する場合は、このアイコンをタップします。その後、複製されたアセットで、ルールとアセットの編集を行うことができます。特定のコンテキストに基づいて代替のアセットを表示するための類似のルールを作成する場合は、アセットを複製すると便利です。
+   **[] DShowプレビュー。** このアイコンをタップすると、条件を作成\編集ページ内にアセットのプレビューが表示されます。
    **&#39;server&#39;が並べ替えられました。** このアイコンを長押しして、アセットをドラッグ&amp;ドロップし、条件内で並べ替えます。
 
    条件の実行時の動作を指定するには、次のオプションを選択します。
 
    * **複数の結果評価を無効化 / 複数の結果評価を有効化**：「複数の結果評価を有効化」オプションを選択すると、すべての条件が評価され、その結果として、すべての true ルールの要約が表示されます。「複数の結果評価を無効化」オプションを選択すると、true と判断された最初のルールだけが評価され、そのルールが条件の出力になります。
 
-   * **改ページ**:条件のアセット間に改ページを追加するには、このオプション( ![改ページ](assets/break.png))を選択します。 When this option is not selected ( ![nobreak](assets/nobreak.png)), if a condition is overflowing to the next page in the print output, the whole condition is shifted to the next page instead of breaking in the page between the assets in the condition.
+   * **改ページ**:条件のアセット間に改ページを追加するには、このオプション( ![改ページ](assets/break.png))を選択します。このオプションを選択しない場合(![nobreak](assets/nobreak.png))、印刷出力で条件が次のページにオーバーフローすると、条件内のアセット間で条件が区切られるのではなく、条件全体が次のページに移動します。
 
-1. 「**[!UICONTROL ルールを作成]**」をタップして、アセットの表示と非表示を切り替えるためのルールを必要に応じて追加します。ルール内で変数を使用する方法については、「[変数の作成](#variables)」を参照してください。For more information, see [Adding rules to condition](#ruleeditor).
+1. 「**[!UICONTROL ルールを作成]**」をタップして、アセットの表示と非表示を切り替えるためのルールを必要に応じて追加します。ルール内で変数を使用する方法については、「[変数の作成](#variables)」を参照してください。詳しくは、[条件](#ruleeditor)へのルールの追加を参照してください。
 
    作成されたルールが、条件作成画面の「ルール」列に表示されます。
 
@@ -107,15 +107,15 @@ ht-degree: 67%
    >
    >新しい条件や編集後の条件を保存するには、条件内に追加する各アセットについて、1 つ以上のルールを設定する必要があります。
 
-## 条件の編集 {#edit-a-condition}
+## 条件の編集  {#edit-a-condition}
 
 以下の手順により、条件を編集することができます。ポップアップメニューで「フラグメントを編集」を選択して、インタラクティブ通信内から条件を編集することもできます。
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. 目的の条件に移動して、その条件を選択します。
 1. 「**[!UICONTROL 編集]**」をタップします。
-1. 条件内で、必要な変更を行います。For more details on the information you can change in a condition, see [Create condition](#createcondition).
-1. Tap **[!UICONTROL Save]** and then tap **[!UICONTROL Close]**.
+1. 条件内で、必要な変更を行います。条件で変更できる情報について詳しくは、[条件の作成](#createcondition)を参照してください。
+1. 「**[!UICONTROL 保存]**」をタップし、「**[!UICONTROL 閉じる]**」をタップします。
 
 ## 条件内でルールを作成する {#ruleeditor}
 
@@ -128,9 +128,9 @@ ht-degree: 67%
 * 関連するフォームデータモデルのプロパティ
 * 作成済みの任意の[変数](#variables)
 
-### 条件内でルールを作成する {#create-rule-in-condition}
+### 条件内でルールを作成する  {#create-rule-in-condition}
 
-1. While creating or editing a condition, tap ![ruleeditoricon](assets/ruleeditoricon.png) (Rule Editor) icon for the relevant asset.
+1. 条件の作成時または編集時に、関連アセットの![ルールエディターアイコン](assets/ruleeditoricon.png) （ルールエディター）アイコンをタップします。
 
    ルール作成ダイアログが表示されます。文字列、数値、数式、日付のほかに、以下のデータをルールエディターで使用して、ルールのステートメントを作成することができます。
 
@@ -152,7 +152,7 @@ ht-degree: 67%
 
    ポリシータイプが「標準」の場合にアセットを表示するためのルール
 
-   * While creating or editing a rule, you can also tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule/Edit Rule dialog. ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルール作成ダイアログに戻ります。
+   * ルールを作成または編集中に、![icon_resize](assets/icon_resize.png) （サイズ変更）をタップして、ルールを作成/ルールを編集ダイアログを展開することもできます。 ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルール作成ダイアログに戻ります。
 
    * 1 つのルールで複数の条件を作成することもできます。
 
@@ -160,9 +160,9 @@ ht-degree: 67%
 
    これで、ルールがアセットに適用されます。
 
-## 条件内で変数を作成して使用する {#variables}
+## 条件内で変数を作成して使用する  {#variables}
 
-While creating or editing a rule in a condition, you can tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule\Edit Rule dialog. ダイアログを拡張して全画面表示にすると、以下の操作を実行できるようになります。
+条件内のルールを作成または編集中に、![icon_resize](assets/icon_resize.png) （サイズ変更）をタップして、ルールを作成\ルールを編集ダイアログを展開できます。 ダイアログを拡張して全画面表示にすると、以下の操作を実行できるようになります。
 
 * ルール内で変数を作成して使用する
 * フォームデータモデルのプロパティと変数をルール内にドラッグ&amp;ドロップ
@@ -171,13 +171,13 @@ While creating or editing a rule in a condition, you can tap ![icon_resize](asse
 
 ### 変数の作成 {#create-variables}
 
-1. While creating or editing a rule in a condition, you can tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule\Edit Rule dialog.
+1. 条件内のルールを作成または編集中に、![icon_resize](assets/icon_resize.png) （サイズ変更）をタップして、ルールを作成\ルールを編集ダイアログを展開できます。
 
    拡張されたダイアログが全画面モードで表示されます。
 
    ![expandededitruledialog](assets/expandededitruledialog.png)
 
-1. In the left pane, tap **[!UICONTROL Variables]**.
+1. 左側のウィンドウで、**[!UICONTROL 変数]**&#x200B;をタップします。
 
    変数ペインが表示されます。
 
@@ -187,19 +187,19 @@ While creating or editing a rule in a condition, you can tap ![icon_resize](asse
 
    変数作成ペインが表示されます。
 
-1. Enter the following information and tap **[!UICONTROL Create]**:
+1. 次の情報を入力し、「**[!UICONTROL 作成]**」をタップします。
 
    * **[!UICONTROL 名前]**:変数の名前。
    * **[!UICONTROL 説明]**:必要に応じて、変数の説明を入力します。
    * **[!UICONTROL タイプ]**:変数のタイプを選択します。文字列、数値、ブール値または日付。
-   * **[!UICONTROL 特定の値のみ許可]**：文字列タイプまたは数値タイプの変数の場合、このオプションを選択すると、エージェント UI のプレースホルダーの特定の値セットから、エージェントによって値が選択されます。To specify the set of values, select this option and then specify comma-separated values that are allowed in the **[!UICONTROL Values]** field.
+   * **[!UICONTROL 特定の値のみ許可]**：文字列タイプまたは数値タイプの変数の場合、このオプションを選択すると、エージェント UI のプレースホルダーの特定の値セットから、エージェントによって値が選択されます。値のセットを指定するには、このオプションを選択し、**[!UICONTROL 値]**&#x200B;フィールドで許可する値をコンマで区切って指定します。
 
 1. 「**[!UICONTROL 作成]**」をタップします。
 
    作成された変数が変数ペインに表示されます。
 
 1. ルール内に変数を挿入するには、ルール内の任意のオプションのプレースホルダーにその変数をドラッグアンドドロップします。
-1. After you have constructed a valid rule, tap **[!UICONTROL Done]**.
+1. 有効なルールを構築したら、「**[!UICONTROL 完了]**」をタップします。
 
    必要に応じて、条件内でさらに変更を行い、その変更内容を保存します。
 
