@@ -33,7 +33,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 * CRX および JavaScript についての知識
 * LiveCycle サーバー
 
-## シナリオ：通信を作成ユーザーインターフェイスにボタンを作成してレビュー用のレターを送信する {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
+## シナリオ：通信を作成ユーザーインターフェイスにボタンを作成してレビュー用のレターを送信する  {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
 
 通信を作成ユーザーインターフェイスにボタンを追加して、ボタンのアクション（ここではレビュー用のレターの送信）を指定するには、次の操作を行います。
 
@@ -43,10 +43,10 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
 ### 通信を作成ユーザーインターフェイスへのボタンの追加 {#add-the-button-to-the-create-correspondence-user-interface}
 
-1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
-1. In the apps folder, create a folder named `defaultApp` with path/structure similar to the defaultApp folder (located in config folder). フォルダーの作成手順は次のとおりです。
+1. `https://'[server]:[port]'/[ContextPath]/crx/de`に移動し、管理者としてログインします。
+1. appsフォルダーに、（configフォルダー内の）defaultAppフォルダーに類似したパス/構造で`defaultApp`という名前のフォルダーを作成します。 フォルダーの作成手順は次のとおりです。
 
-   1. Right-click the **defaultApp** folder at the following path and select **Overlay Node**:
+   1. 次のパスにある&#x200B;**defaultApp**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
       /libs/fd/cm/config/defaultApp/
 
@@ -58,7 +58,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** チェック済み
+      **ノードタイプを一致：** オン
 
       ![ノードをオーバーレイ](assets/2_defaultappoverlaynode.png)
 
@@ -69,7 +69,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    1. 「/libs/fd/cm/config/defaultApp/acmExtensionsConfig.xml」に移動します。
 
-   1. Right click the acmExtensionsConfig.xml file and select **Copy**.
+   1. acmExtensionsConfig.xmlファイルを右クリックし、「**コピー**」を選択します。
 
       ![acmExtensionsConfig.xml をコピーします](assets/3_acmextensionsconfig_xml_copy.png)
 
@@ -111,7 +111,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
    | label | アクションボタンに表示するラベル。 |
    | tooltip | ボタンのツールチップテキスト。ボタンにカーソルを置くと表示されます。 |
    | styleName | アクションボタンに適用するカスタムスタイルの名前。 |
-   | permissionName | 対応するアクションは、ユーザーがpermissionNameで指定された権限を持つ場合にのみ表示されます。 When you specify permissionName as `forms-users`, all the users get access to this option. |
+   | permissionName | 対応するアクションは、ユーザーがpermissionNameで指定された権限を持つ場合にのみ表示されます。 permissionNameを`forms-users`と指定すると、すべてのユーザーがこのオプションにアクセスできます。 |
    | actionHandler | ユーザーがボタンをクリックしたときに呼び出されるActionHandlerクラスの完全修飾名です。 |
 
    上記のパラメーター以外に、customAction には追加の設定を関連付けることができます。これらの追加の設定は、CustomActionオブジェクトを通じてハンドラーで使用できます。
@@ -124,11 +124,11 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
 1. 「**すべて保存**」をクリックします。
 
-#### /apps branch 内のプロパティファイルを使用したローカルフォルダーの作成 {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
+#### /apps branch 内のプロパティファイルを使用したローカルフォルダーの作成  {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
 
 ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザーインターフェイスの様々なフィールドのラベルとツールチップメッセージが含まれています。 カスタマイズしたアクションやボタンを機能させるために、/apps branch にこのファイルのコピーを作成します。
 
-1. Right-click the **locale** folder at the following path and select **Overlay Node**:
+1. 次のパスにある&#x200B;**locale**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
    /libs/fd/cm/config/defaultApp/locale
 
@@ -138,11 +138,11 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
    **オーバーレイの場所：** /apps/
 
-   **ノードタイプを一致：** チェック済み
+   **ノードタイプを一致：** オン
 
 1. 「**OK**」をクリックします。
 1. 「**すべて保存**」をクリックします。
-1. Right-click the following file and select **Copy**:
+1. 次のファイルを右クリックし、「**コピー**」を選択します。
 
    `/libs/fd/cm/config/defaultApp/locale/ACMExtensionsMessages.properties`
 
@@ -152,7 +152,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
    ACMExtensionsMessages.properties ファイルがローカルフォルダーにコピーされます。
 
-1. To localize the labels of the newly added custom action/button, create the ACMExtensionsMessages.properties file for the relevant locale in `/apps/fd/cm/config/defaultApp/locale/`.
+1. 新しく追加されたカスタムアクションまたはカスタムボタンのラベルをローカライズするには、関連するロケールのACMExtensionsMessages.propertiesファイルを`/apps/fd/cm/config/defaultApp/locale/`に作成します。
 
    たとえば、この記事で作成したカスタムアクションまたはボタンをローカライズするには、次のエントリを使用して ACMExtensionsMessages_fr.properties という名前のファイルを作成します。
 
@@ -162,7 +162,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
 1. 「**すべて保存**」をクリックします。
 
-#### Adobe Asset Composer 構築ブロックバンドルの再起動 {#restart-the-adobe-asset-composer-building-block-bundle}
+#### Adobe Asset Composer 構築ブロックバンドルの再起動  {#restart-the-adobe-asset-composer-building-block-bundle}
 
 サーバー側の変更をすべて加えた後、Adobe Asset Composer 構築ブロックバンドルを再起動します。このシナリオでは、サーバー側のacmExtensionsConfig.xmlファイルとACMExtensionsMessages.propertiesファイルが編集されるので、AdobeAsset Composer構築ブロックバンドルを再起動する必要があります。
 
@@ -178,7 +178,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
 Adobe Asset Composer 構築ブロックバンドルを再起動した後、通信を作成ユーザーインターフェイスにカスタムボタンが表示されます。通信を作成ユーザーインターフェイスでレターを開いて、カスタムボタンをプレビューできます。
 
-### ボタンへのアクション処理の追加 {#add-action-handling-to-the-button}
+### ボタンへのアクション処理の追加  {#add-action-handling-to-the-button}
 
 通信を作成ユーザーインターフェイスはデフォルトで、次の場所にある cm.domain.js ファイルの ActionHandler を実装します。
 
@@ -200,7 +200,7 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
    フォルダーの作成手順は次のとおりです。
 
-   1. Right-click the **js** folder at the following path and select **Overlay Node**:
+   1. 次のパスにある&#x200B;**js**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
       `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
@@ -210,14 +210,14 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** チェック済み
+      **ノードタイプを一致：** オン
 
    1. 「**OK**」をクリックします。
    1. 「**すべて保存**」をクリックします。
 
 1. 次の手順を使用して、ccrcustomization.jsという名前のファイルをjsフォルダーに作成し、ボタンのアクション処理のコードを指定します。
 
-   1. Right-click the **js** folder at the following path and select **Create > Create File**:
+   1. 次のパスにある&#x200B;**js**&#x200B;フォルダーを右クリックし、**作成/ファイルを作成**&#x200B;を選択します。
 
       `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
@@ -323,7 +323,7 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
       '</div>';
       ```
 
-### LiveCycle プロセスの追加によるアクション<span class="acrolinxCursorMarker"></code>処理の有効化 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### LiveCycle プロセスの追加によるアクション<span class="acrolinxCursorMarker"></code>処理の有効化  {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 このシナリオでは、次のコンポーネントを有効にします。これらのコンポーネントは、添付されたcomponents.zipファイルの一部です。
 
@@ -332,7 +332,7 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
 components.zipファイルをダウンロードして解凍し、DSCSample.jarファイルとSendLetterForReview.lcaファイルを取得します。 これらのファイルは、次の手順に従って使用します。components.zip
 
-#### LiveCycle サーバーの設定と LCA プロセスの実行 {#configure-the-livecycle-server-to-run-the-lca-process}
+#### LiveCycle サーバーの設定と LCA プロセスの実行  {#configure-the-livecycle-server-to-run-the-lca-process}
 
 >[!NOTE]
 >
@@ -340,10 +340,10 @@ components.zipファイルをダウンロードして解凍し、DSCSample.jar�
 
 LCA プロセスは LiveCycle サーバー上で実行され、サーバーアドレスとログイン情報が必要になります。
 
-1. Go to `https://'[server]:[port]'/system/console/configMgr` and login as Administrator.
+1. `https://'[server]:[port]'/system/console/configMgr`に移動し、管理者としてログインします。
 1. Adobe LiveCycle Client SDK Configuration を見つけて、「**編集**」（編集アイコン）をクリックします。「設定」パネルが開きます。
 
-1. Enter the following details and click **Save**:
+1. 次の詳細を入力し、「**保存**」をクリックします。
 
    * **Server Url**:アクションハンドラーコードが使用するSend For ReviewサービスのLCサーバーのURLです。
    * **ユーザー名**:LCサーバーの管理者ユーザー名
@@ -351,7 +351,7 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
    ![Adobe LiveCycle Client SDK Configuration](assets/3_clientsdkconfiguration.png)
 
-#### Install LiveCycle Archive (LCA) {#install-livecycle-archive-lca}
+#### LiveCycleアーカイブ(LCA)のインストール{#install-livecycle-archive-lca}
 
 電子メールサービスプロセスを有効にするために必要なLiveCycleプロセス。
 
@@ -359,7 +359,7 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 >
 >このプロセスの処理を表示するか、独自の類似プロセスを作成するには、Workbench が必要になります。
 
-1. Log in as Administrator to Livecycle Server adminui at `https:/[lc server]/:[lc port]/adminui`.
+1. `https:/[lc server]/:[lc port]/adminui`で、Livecycleサーバーに管理者としてログインします。
 
 1. **ホーム／サービス／アプリケーションおよびサービス／アプリケーションの管理**&#x200B;に移動します。
 
@@ -369,38 +369,38 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
 1. 「**読み込み**」をクリックします。
 
-1. Click **Choose File** and select SendLetterForReview.lca.
+1. 「**ファイルを選択**」をクリックし、SendLetterForReview.lcaを選択します。
 
    ![SendLetterForReview.lca ファイルを選択します](assets/14_sendletterforreview_lca.png)
 
 1. 「**プレビュー**」をクリックします。
 
-1. Select **Deploy assets to runtime when import is complete**.
+1. 「**読み込みの完了時にアセットをランタイムにデプロイ**」を選択します。
 
 1. 「**読み込み**」をクリックします。
 
-#### Adding ServiceName to the Allowlist Service list {#adding-servicename-to-the-allowlist-service-list}
+#### 許可リストサービスリスト{#adding-servicename-to-the-allowlist-service-list}へのServiceNameの追加
 
 AEM サーバーにアクセスする必要のある LiveCycle サービスを AEM サーバーで指定します。
 
-1. 管理者としてにログインし `https:/[host]:'port'/system/console/configMgr`ます。
+1. `https:/[host]:'port'/system/console/configMgr`に管理者としてログインします。
 
-1. Locate and click **Adobe LiveCycle Client SDK Configuration**. AdobeLiveCycleのクライアントSDKの設定パネルが表示されます。
-1. In the Service Name list, click + icon and add a serviceName **SendLetterForReview/SendLetterForReviewProcess**.
+1. **AdobeLiveCycleクライアントSDK設定**&#x200B;を探してクリックします。 AdobeLiveCycleのクライアントSDKの設定パネルが表示されます。
+1. サービス名リストで+アイコンをクリックし、serviceName **SendLetterForReview/SendLetterForReviewProcess**&#x200B;を追加します。
 
 1. 「**保存**」をクリックします。
 
-#### 電子メールサービスの設定 {#configure-the-email-service}
+#### 電子メールサービスの設定  {#configure-the-email-service}
 
 このシナリオでは、Correspondence Management で電子メールを送信できるようにするため、LiveCycle サーバーで電子メールサービスを設定します。
 
-1. Log in with Admin credentials to Livecycle Server adminui at `https:/[lc server]:[lc port]/adminui`.
+1. `https:/[lc server]:[lc port]/adminui`のLivecycleサーバーに管理者の資格情報を使用してログインします。
 
 1. **ホーム／サービス／アプリケーションおよびサービス／サービスの管理**&#x200B;に移動します。
 
 1. 「**電子メールサービス**」を検索してクリックします。
 
-1. In **SMTP Host**, configure the email service.
+1. **SMTP Host**&#x200B;で、電子メールサービスを設定します。
 
 1. 「**保存**」をクリックします。
 
@@ -408,7 +408,7 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 Correspondence Management APIを使用するには、DSCSample.jar(このドキュメントに添付されているcomponents.zipに含まれています)をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされると、AEMサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
 
-For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
+詳しくは、[AdobeLiveCycleとのAEM Formsの接続](/help/forms/using/aem-livecycle-connector.md)を参照してください。
 
 1. DSCSample.jarのcmsa.propertiesにあるAEMサーバーURLを更新します。次の場所にあります。
 
@@ -425,19 +425,19 @@ For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/form
    >
    >サーバー側で変更を加えるたびに LiveCycle サーバーは再起動します。独自の LiveCycle コンポーネントの作成について詳しくは、「[カスタムの DSC 開発を通じた LiveCycle ES ソフトウェアの拡張](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html)」を参照してください。
 
-   DSCSample.jarファイルはrenderLetter APIを使用します。 For more Information about the renderLetter API, see [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
+   DSCSample.jarファイルはrenderLetter APIを使用します。 renderLetter APIについて詳しくは、[インターフェイスLetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)を参照してください。
 
 #### LiveCyle への DSC の読み込み {#import-dsc-to-livecyle}
 
-DSCSample.jarファイルはrenderLetter APIを使用して、Cが入力として与えたXMLデータからのPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
+DSCSample.jarファイルはrenderLetter APIを使用して、Cが入力として与えたXMLデータからのPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 
 1. Livecycle Workbenchを起動してログインします。
-1. **Window/Show表示/Componentsを選択します**。 コンポーネント表示がWorkbench ES2に追加されます。
+1. **Window/Show表示/Components**&#x200B;を選択します。 コンポーネント表示がWorkbench ES2に追加されます。
 
-1. Right-click **Components** and select **Install Component**.
+1. 「**コンポーネント**」を右クリックし、「**コンポーネントをインストール**」を選択します。
 
-1. Select the **DSCSample.jar** file through the file browser and click **Open**.
-1. Right-click **RenderWrapper** and select **Start Component**. コンポーネントが起動すると、コンポーネント名の横に緑色の矢印が表示されます。
+1. ファイルブラウザーで&#x200B;**DSCSample.jar**&#x200B;ファイルを選択し、「**開く**」をクリックします。
+1. **RenderWrapper**&#x200B;を右クリックし、「**開始コンポーネント**」を選択します。 コンポーネントが起動すると、コンポーネント名の横に緑色の矢印が表示されます。
 
 ## レビュー用のレターの送信 {#send-letter-for-review}
 
@@ -445,7 +445,7 @@ DSCSample.jarファイルはrenderLetter APIを使用して、Cが入力とし�
 
 1. ブラウザーのキャッシュをクリアします。
 
-1. In the Create Correspondence UI, click **Letter Review** and specify the reviewer&#39;s email ID.
+1. 通信を作成UIで、「**レターのレビュー**」をクリックし、レビュー担当者の電子メールIDを指定します。
 
 1. 「**送信**」をクリックします。
 
