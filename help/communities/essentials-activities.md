@@ -29,7 +29,7 @@ ht-degree: 64%
 
 ## 概念 {#concepts}
 
-An *activity stream* is the list of recent activities performed by a member or a list of recent activities on a single thread of content, such as a forum topic or blog.
+*アクティビティストリーム*&#x200B;は、アクティビティや最近のアクティビティのリストが、フォーラムトピックやブログなどのコンテンツの単一のスレッドに対して行った最近ののリストです。
 
 メンバーは、別の個人やコンテンツをフォローすることによって、アクティビティストリームをフォローできます。
 
@@ -37,7 +37,7 @@ An *activity stream* is the list of recent activities performed by a member or a
 
 *[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)*&#x200B;とは、メンバー間のフォロー関係を表したものです。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -63,14 +63,14 @@ An *activity stream* is the list of recent activities performed by a member or a
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="/help/communities/activities.md">Activity Streams Feature</a></td>
+   <td><a href="/help/communities/activities.md">アクティビティストリーム機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](/help/communities/client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
@@ -78,6 +78,6 @@ An *activity stream* is the list of recent activities performed by a member or a
 
 * [サーバー側のカスタマイズ](/help/communities/server-customize.md)
 
-### アクティビティストリーム機能 {#activity-stream-function}
+### アクティビティストリーム機能  {#activity-stream-function}
 
-A community site structure that includes the [Activity Stream function](/help/communities/functions.md#activity-stream-function), includes a configured `activity streams` component.
+[アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)を含むコミュニティサイト構造は、構成された`activity streams`コンポーネントを含みます。
