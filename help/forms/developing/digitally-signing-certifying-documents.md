@@ -18,7 +18,7 @@ ht-degree: 8%
 ---
 
 
-# デジタル署名と認証ドキュメント {#digitally-signing-and-certifying-documents}
+# デジタル署名と認証ドキュメント{#digitally-signing-and-certifying-documents}
 
 **Signatureサービスについて**
 
@@ -30,28 +30,28 @@ Signatureサービスを使用すると、組織は、配布および受信す�
 
 **署名フィールド名**
 
-一部のSignatureサービス操作では、操作を実行する署名フィールドの名前を指定する必要があります。 例えば、PDFドキュメントに署名する場合、署名する署名フィールドの名前を指定します。 署名フィールドのフルネームが次のようになるとし `form1[0].Form1[0].SignatureField1[0]`ます。 代わりに、を指定 `SignatureField1[0]` でき `form1[0].Form1[0].SignatureField1[0]`ます。
+一部のSignatureサービス操作では、操作を実行する署名フィールドの名前を指定する必要があります。 例えば、PDFドキュメントに署名する場合、署名する署名フィールドの名前を指定します。 署名フィールドのフルネームが`form1[0].Form1[0].SignatureField1[0]`であるとします。 `form1[0].Form1[0].SignatureField1[0]`の代わりに`SignatureField1[0]`を指定できます。
 
-競合が原因でSignatureサービスが誤ったフィールドに署名する（または、署名フィールド名を必要とする別の操作を実行する）場合があります。 この競合は、同じPDFドキュメント内の複数の場所に名前が表示さ `SignatureField1[0]` れた結果です。 例えば、という名前の2つの署名フィールドが含まれ、かつ指定したPDFドキュメント `form1[0].Form1[0].SignatureField1[0]` があると `form1[0].Form1[0].SubForm1[0].SignatureField1[0]` し `SignatureField1[0]`ます。 この場合、Signatureサービスは、ドキュメント内のすべての署名フィールドを反復する際に、検出された最初の署名フィールドに署名します。
+競合が原因でSignatureサービスが誤ったフィールドに署名する（または、署名フィールド名を必要とする別の操作を実行する）場合があります。 この競合は、同じPDFドキュメント内の複数の場所に`SignatureField1[0]`という名前が表示された結果です。 例えば、`form1[0].Form1[0].SignatureField1[0]`と`form1[0].Form1[0].SubForm1[0].SignatureField1[0]`という2つの署名フィールドが含まれるPDFドキュメントで、`SignatureField1[0]`を指定したとします。 この場合、Signatureサービスは、ドキュメント内のすべての署名フィールドを反復する際に、検出された最初の署名フィールドに署名します。
 
-1つのPDFドキュメント内に複数の署名フィールドがある場合は、署名フィールドの完全な名前を指定することをお勧めします。 つまり、の `form1[0].Form1[0].SignatureField1[0]`代わりにを指定し `SignatureField1[0]`ます。
+1つのPDFドキュメント内に複数の署名フィールドがある場合は、署名フィールドの完全な名前を指定することをお勧めします。 つまり、`SignatureField1[0]`の代わりに`form1[0].Form1[0].SignatureField1[0]`を指定します。
 
 Signatureサービスを使用して、次のタスクを実行できます。
 
-* PDFドキュメント追加の電子署名フィールドを削除します。 (署名フィールドの [追加を参照](digitally-signing-certifying-documents.md#adding-signature-fields))。
-* PDFドキュメント内の署名フィールドの名前を取得します。 (署名フィールド名の [取得を参照](digitally-signing-certifying-documents.md#retrieving-signature-field-names))。
-* 署名フィールドを変更します。 (Modifying Signature Fieldsを参照 [](digitally-signing-certifying-documents.md#modifying-signature-fields))。
-* PDFドキュメントへのデジタル署名。 (See [Digitally Signing PDF Documents](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
-* PDFドキュメントを認証します。 (See [Certifying PDF Documents](digitally-signing-certifying-documents.md#certifying-pdf-documents).)
-* PDFドキュメント内の電子署名を検証します。 (デジタル署名の [検証を参照](digitally-signing-certifying-documents.md#verifying-digital-signatures))。
-* PDFドキュメント内のすべての電子署名を検証します。 (See [Verifying Multiple Digital Signatures](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
-* 署名フィールドから電子署名を削除します。 (電子署名の [削除を参照](digitally-signing-certifying-documents.md#removing-digital-signatures))。
+* PDFドキュメント追加の電子署名フィールドを削除します。 （「[署名フィールドの追加](digitally-signing-certifying-documents.md#adding-signature-fields)」を参照）。
+* PDFドキュメント内の署名フィールドの名前を取得します。 （[署名フィールド名の取得](digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照）。
+* 署名フィールドを変更します。 （「[署名フィールドの変更](digitally-signing-certifying-documents.md#modifying-signature-fields)」を参照）。
+* PDFドキュメントへのデジタル署名。 (「[PDFドキュメントのデジタル署名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)」を参照)。
+* PDFドキュメントを認証します。 ([PDFドキュメントの認証](digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照)。
+* PDFドキュメント内の電子署名を検証します。 （[電子署名の検証](digitally-signing-certifying-documents.md#verifying-digital-signatures)を参照）。
+* PDFドキュメント内のすべての電子署名を検証します。 （[複数のデジタル署名の検証](digitally-signing-certifying-documents.md#verifying-digital-signatures)を参照）。
+* 署名フィールドから電子署名を削除します。 （「[電子署名の削除](digitally-signing-certifying-documents.md#removing-digital-signatures)」を参照）。
 
 >[!NOTE]
 >
->For more information about the Signature service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)..
+>Signatureサービスについて詳しくは、「[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
 
-## 署名フィールドの追加 {#adding-signature-fields}
+## 署名フィールドの追加{#adding-signature-fields}
 
 電子署名は、署名のグラフィック表現を含むフォームフィールドである署名フィールドに表示されます。 署名フィールドは、表示または非表示に設定することができます。署名者は、既存の署名フィールドを使用することも、プログラムを使用して署名フィールドを追加することもできます。 どちらの場合においても、PDF ドキュメントに署名できるようにするには、署名フィールドが存在している必要があります。
 
@@ -59,9 +59,9 @@ Signatureサービスを使用して、次のタスクを実行できます。
 
 >[!NOTE]
 >
->一部のPDFドキュメントタイプでは、プログラムによって署名フィールドを追加できません。 Signatureサービスと署名フィールドの追加について詳しくは、『AEM Forms [サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>一部のPDFドキュメントタイプでは、プログラムによって署名フィールドを追加できません。 Signatureサービスと署名フィールドの追加について詳しくは、『[AEM Forms向けサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary-of-steps}
+### 手順{#summary-of-steps}の概要
 
 署名フィールドをPDFドキュメントに追加するには、次のタスクを実行します。
 
@@ -107,7 +107,7 @@ SignatureサービスがPDFドキュメントに署名フィールドを追加�
 
 [PDFドキュメントへのデジタル署名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-### Java APIを追加使用した署名フィールド {#add-signature-fields-using-the-java-api}
+### Java API &lt;a0追加/>を使用した署名フィールド{#add-signature-fields-using-the-java-api}
 
 署名API追加 (Java)を使用した署名フィールド：
 
@@ -122,88 +122,88 @@ SignatureサービスがPDFドキュメントに署名フィールドを追加�
 
 1. 署名フィールドが追加されたPDFドキュメントの取得
 
-   * 署名フィールドの追加先のPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。そのためには、コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡します。
+   * 署名フィールドの追加先のPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。そのためには、コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 追加署名フィールド
 
-   * コンストラクターを使用して、署名フィールドの場所を指定する `PositionRectangle` オブジェクトを作成します。 コンストラクタ内で、座標値を指定します。
-   * 必要に応じて、電子署名が署名フィールドに適用されたときにロックされるフィールドを指定する `FieldMDPOptions` オブジェクトを作成します。
-   * オ追加ブジェクトの `SignatureServiceClient``addSignatureField` メソッドを呼び出し、次の値を渡すことによって、PDFドキュメントに署名フィールドを割り当てます。
+   * コンストラクターを使用して、署名フィールドの場所を指定する`PositionRectangle`オブジェクトを作成します。 コンストラクタ内で、座標値を指定します。
+   * 必要に応じて、電子署名が署名フィールドに適用されたときにロックされるフィールドを指定する`FieldMDPOptions`オブジェクトを作成します。
+   * 追加`SignatureServiceClient`オブジェクトの`addSignatureField`メソッドを呼び出し、次の値を渡すことによって、PDFドキュメントに署名フィールドを挿入します。
 
       * A `com.adobe.idp`. `Document` 署名フィールドを追加するPDFドキュメントを表すオブジェクトです。
       * 署名フィールドの名前を指定するstring値です。
-      * 署名フィールドを追加するページ番号を表す `java.lang.Integer` 値です。
-      * 署名フィールドの場所を指定する `PositionRectangle` オブジェクトです。
-      * 電子署名が署名フィールドに適用された後にロックされるPDFドキュメント内のフィールドを指定する `FieldMDPOptions` オブジェクトです。 このパラメーターの値はオプションで、渡すことができ `null`ます。
-   * 様々な実行時値を指定する `PDFSeedValueOptions` オブジェクト。 このパラメーターの値はオプションで、渡すことができ `null`ます。
+      * 署名フィールドを追加するページ番号を表す`java.lang.Integer`値です。
+      * 署名フィールドの場所を指定する`PositionRectangle`オブジェクトです。
+      * 電子署名が署名フィールドに適用された後にロックされるPDFドキュメントのフィールドを指定する`FieldMDPOptions`オブジェクトです。 このパラメーターの値はオプションで、`null`を渡すことができます。
+   * 様々な実行時値を指定する`PDFSeedValueOptions`オブジェクト。 このパラメーターの値はオプションで、`null`を渡すことができます。
 
-      この `addSignatureField` メソッドは、aを返し `com.adobe.idp`ます。 `Document` 署名フィールドが含まれるPDFドキュメントを表すオブジェクトです。
+      `addSignatureField`メソッドは`com.adobe.idp`を返します。 `Document` 署名フィールドが含まれるPDFドキュメントを表すオブジェクトです。
    >[!NOTE]
    >
-   >この `SignatureServiceClient` オブジェクトの `addInvisibleSignatureField` メソッドを呼び出して、非表示の署名フィールドを追加できます。
+   >`SignatureServiceClient`オブジェクトの`addInvisibleSignatureField`メソッドを呼び出して、非表示の署名フィールドを追加できます。
 
 1. PDFドキュメントをPDFファイルとして保存
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * を呼び出し `com.adobe.idp`ます。 `Document` オブジェクトの `copyToFile` メソッドを使用して、オブジェクトの内容をフ `Document` ァイルにコピーします。 を必ず使用してくだ `com.adobe.idp`さい。 `Document` メソッドによって返されたオブジェクト `addSignatureField` 。
+   * `com.adobe.idp`を呼び出します。 `Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトの内容をファイルにコピーします。`com.adobe.idp`を使用していることを確認します。 `Document` メソッドによって返されたオブ `addSignatureField` ジェクト。
 
 **関連トピック**
 
 [SignatureサービスAPIのクイック開始](/help/forms/developing/signature-service-java-api-quick.md#signature-service-java-api-quick-start-soap)
 
-### webサ追加ービスAPIを使用した署名フィールド {#add-signature-fields-using-the-web-service-api}
+### web追加サービスAPI {#add-signature-fields-using-the-web-service-api}を使用した署名フィールド
 
 署名API（Webサービス）を使用して署名フィールドを追加するには：
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 署名フィールドが追加されたPDFドキュメントの取得
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、署名フィールドを含むPDFドキュメントを保存するために使用されます。
-   * コンストラクターを呼び出し、PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、署名フィールドを含むPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、PDFドキュメントーのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに`MTOM`プロパティを割り当て、バイト配列の内容を指定します。
 
 1. 追加署名フィールド
 
-   オ追加ブジェクトのメソッドを呼び出し、次の値を渡すことにより、署名フィールドをPDFドキュメントに割り当てます。 `SignatureServiceClient``addSignatureField`
+   追加`SignatureServiceClient`オブジェクトの`addSignatureField`メソッドを呼び出し、次の値を渡すことによって、PDFドキュメントに署名フィールドを挿入します。
 
-   * A `BLOB` object that represents the PDF document to which a signature field is added.
+   * 署名フィールドを追加するPDFドキュメントを表す`BLOB`オブジェクトです。
    * 署名フィールド名を指定するstring値です。
    * 署名フィールドを追加するページ番号を表すinteger値です。
-   * 署名フィールドの場所を指定する `PositionRect` オブジェクトです。
-   * 電子署名が署名フィールドに適用された後にロックされるPDFドキュメント内のフィールドを指定する `FieldMDPOptions` オブジェクトです。 このパラメーターの値はオプションで、渡すことができ `null`ます。
-   * 様々な実行時値を指定する `PDFSeedValueOptions` オブジェクト。 このパラメーターの値はオプションで、渡すことができ `null`ます。
+   * 署名フィールドの場所を指定する`PositionRect`オブジェクトです。
+   * 電子署名が署名フィールドに適用された後にロックされるPDFドキュメントのフィールドを指定する`FieldMDPOptions`オブジェクトです。 このパラメーターの値はオプションで、`null`を渡すことができます。
+   * 様々な実行時値を指定する`PDFSeedValueOptions`オブジェクト。 このパラメーターの値はオプションで、`null`を渡すことができます。
 
-   署名フィールドを含むPDFドキュメントを表す `addSignatureField``BLOB` オブジェクトを返します。
+   `addSignatureField`メソッドは、署名フィールドを含むPDFドキュメントを表す`BLOB`オブジェクトを返します。
 
 1. PDFドキュメントをPDFファイルとして保存
 
-   * コンストラクターを呼び出し、署名フィールドとファイルを開くモードを含むPDFドキュメントのファイルの場所を表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `addSignatureField` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `binaryData` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、署名フィールドとファイルを開くモードを含むPDFドキュメントのファイルの場所を表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `addSignatureField`メソッドから返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`binaryData`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -211,15 +211,15 @@ SignatureサービスがPDFドキュメントに署名フィールドを追加�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 署名フィールド名の取得 {#retrieving-signature-field-names}
+## 署名フィールド名の取得{#retrieving-signature-field-names}
 
-署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。The Signature service returns the fully qualified name of the signature field, such as `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。Signatureサービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]`などの署名フィールドの完全修飾名を返します。
 
 >[!NOTE]
 >
->For more information about the Signature service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)
+>Signatureサービスについて詳しくは、[『AEM Forms用サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-1}
+### 手順{#summary_of_steps-1}の概要
 
 署名フィールド名を取得するには、次のタスクを実行します。
 
@@ -240,7 +240,7 @@ SignatureサービスがPDFドキュメントに署名フィールドを追加�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-For information about the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **署名クライアントの作成**
 
@@ -266,7 +266,7 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 [署名フィールドの追加](digitally-signing-certifying-documents.md#adding-signature-fields)
 
-### Java APIを使用した署名フィールド名の取得 {#retrieve-signature-field-names-using-the-java-api}
+### Java API {#retrieve-signature-field-names-using-the-java-api}を使用した署名フィールド名の取得
 
 署名API(Java)を使用して署名フィールド名を取得します。
 
@@ -281,13 +281,13 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 1. 署名フィールドを含むPDFドキュメントの取得
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡すことで、署名フィールドを含むPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * 署名フィールドを含むPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。そのためには、コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 署名フィールド名の取得
 
-   * オブジェクトの `SignatureServiceClient` メソッドを呼び出し、署名フィールドを含むPDFドキュメントを含む `getSignatureFieldList``com.adobe.idp.Document` オブジェクトを渡して、署名フィールド名を取得します。 このメソッドは、 `java.util.List` オブジェクトを返します。このオブジェクト内の各要素には、1つの `PDFSignatureField` オブジェクトが含まれます。 このオブジェクトを使用すると、署名フィールドが表示されているかどうかなど、署名フィールドに関する追加情報を取得できます。
-   * オブジェクトを繰り返し処理して、署名フィールド名があるかどうかを確認します。 `java.util.List` PDFドキュメントの各署名フィールドに対して、別々の `PDFSignatureField` オブジェクトを取得できます。 署名フィールドの名前を取得するには、 `PDFSignatureField` オブジェクトの `getName` メソッドを呼び出します。 このメソッドは、署名フィールド名を指定するstring値を返します。
+   * `SignatureServiceClient`オブジェクトの`getSignatureFieldList`メソッドを呼び出し、署名フィールドを含むPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを渡して、署名フィールド名を取得します。 このメソッドは、`java.util.List`オブジェクトを返します。このオブジェクト内の各要素には`PDFSignatureField`オブジェクトが含まれます。 このオブジェクトを使用すると、署名フィールドが表示されているかどうかなど、署名フィールドに関する追加情報を取得できます。
+   * `java.util.List`オブジェクトを繰り返し処理して、署名フィールド名があるかどうかを確認します。 PDFドキュメントの各署名フィールドに対して、個別の`PDFSignatureField`オブジェクトを取得できます。 署名フィールドの名前を取得するには、`PDFSignatureField`オブジェクトの`getName`メソッドを呼び出します。 このメソッドは、署名フィールド名を指定するstring値を返します。
 
 **関連トピック**
 
@@ -299,43 +299,43 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した署名フィールドの取得 {#retrieve-signature-field-using-the-web-service-api}
+### WebサービスAPI {#retrieve-signature-field-using-the-web-service-api}を使用して署名フィールドを取得する
 
 署名API（Webサービス）を使用して署名フィールド名を取得します。
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 署名フィールドを含むPDFドキュメントの取得
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、署名フィールドを含むPDFドキュメントを保存するために使用されます。
-   * コンストラクターを呼び出し、PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトにバイト配列の内容をフィールドに割り当てて、 `BLOB` オブジェクトを入力し `MTOM` ます。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、署名フィールドを含むPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、PDFドキュメントーのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトにバイト配列の内容を`MTOM`フィールドに割り当てて入力します。
 
 1. 署名フィールド名の取得
 
-   * オブジェクトの `SignatureServiceClient` メソッドを呼び出し、署名フィールドを含むPDFドキュメントを含む `getSignatureFieldList``BLOB` オブジェクトを渡して、署名フィールド名を取得します。 このメソッドは、各要素にオブジェクトが含まれる `MyArrayOfPDFSignatureField` コレクションオブジェクトを返し `PDFSignatureField` ます。
-   * オブジェクトを繰り返し処理して、署名フィールド名があるかどうかを確認します。 `MyArrayOfPDFSignatureField` PDFドキュメントの各署名フィールドに対して、 `PDFSignatureField` オブジェクトを取得できます。 署名フィールドの名前を取得するには、 `PDFSignatureField` オブジェクトの `getName` メソッドを呼び出します。 このメソッドは、署名フィールド名を指定するstring値を返します。
+   * `SignatureServiceClient`オブジェクトの`getSignatureFieldList`メソッドを呼び出し、署名フィールドを含むPDFドキュメントを含む`BLOB`オブジェクトを渡して、署名フィールド名を取得します。 このメソッドは、`MyArrayOfPDFSignatureField`コレクションオブジェクトを返します。各要素には`PDFSignatureField`オブジェクトが含まれます。
+   * `MyArrayOfPDFSignatureField`オブジェクトを繰り返し処理して、署名フィールド名があるかどうかを判断します。 PDFドキュメントの各署名フィールドに対して、`PDFSignatureField`オブジェクトを取得できます。 署名フィールドの名前を取得するには、`PDFSignatureField`オブジェクトの`getName`メソッドを呼び出します。 このメソッドは、署名フィールド名を指定するstring値を返します。
 
 **関連トピック**
 
@@ -345,11 +345,11 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Modifying Signature Fields {#modifying-signature-fields}
+## 署名フィールドの変更{#modifying-signature-fields}
 
 Java APIとWebサービスAPIを使用して、PDFドキュメント内の署名フィールドを変更できます。 署名フィールドの署名フィールドロックディクショナリまたはシード値ディクショナリの値を操作することで署名フィールドを変更します。
 
-A *field lock dictionary* specifies a list of fields that are locked when the signature field is signed. フィールドがロックされると、ユーザーはフィールドを変更できません。A *seed value dictionary* contains constraining information that is used at the time the signature is applied. 例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
+*フィールドロックディクショナリ*&#x200B;は、署名フィールドが署名されたときにロックされるフィールドのリストを指定します。 フィールドがロックされると、ユーザーはフィールドを変更できません。*シード値ディクショナリ*&#x200B;には、署名の適用時に使用される制約情報が含まれています。 例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
 
 既存の署名フィールドを変更すると、PDFドキュメントに変更を加え、ビジネス要件の変更を反映させることができます。 例えば、新しいビジネス要件では、ドキュメントの署名後にすべてのドキュメントフィールドのロックが必要になる場合があります。
 
@@ -357,9 +357,9 @@ A *field lock dictionary* specifies a list of fields that are locked when the si
 
 >[!NOTE]
 >
->Signatureサービスと署名フィールドの変更について詳しくは、『AEM Forms [サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>Signatureサービスと署名フィールドの変更について詳しくは、『[AEM Forms向けサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-2}
+### 手順{#summary_of_steps-2}の概要
 
 PDFドキュメント内の署名フィールドを変更するには、次のタスクを実行します。
 
@@ -382,7 +382,7 @@ PDFドキュメント内の署名フィールドを変更するには、次の�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-For information about the location of these JAR files, see [Including LiveCycle Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[LiveCycleJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **署名クライアントの作成**
 
@@ -399,21 +399,21 @@ For information about the location of these JAR files, see [Including LiveCycle 
 次のシード値ディクショナリ値を設定できます。
 
 * **リビジョンの確認**:署名フィールドに署名が適用された場合に失効確認を実行するかどうかを指定します。
-* **証明書のオプション**:証明書のシード値ディクショナリに値を割り当てます。 証明書のオプションを指定する前に、証明書のシード値ディクショナリについて理解することをお勧めします。 (『 [PDF Reference](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)』を参照)。
-* **ダイジェストオプション**:署名に使用するダイジェストアルゴリズムを割り当てます。 有効な値はSHA1、SHA256、SHA384、SHA512およびRIPEMD160です。
-* **フィルタ**:署名フィールドで使用するフィルターを指定します。 例えば、Adobe.PPKLiteフィルターを使用できます。 (『 [PDF Reference](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)』を参照)。
-* **フラグのオプション**:この署名フィールドに関連付けられているフラグ値を指定します。 値が1の場合、署名者は指定された値のみをエントリに使用する必要があります。 値が0の場合、他の値も許可されます。 ビット位置は次のとおりです。
+* **証明書のオプション**:証明書のシード値ディクショナリに値を割り当てます。証明書のオプションを指定する前に、証明書のシード値ディクショナリについて理解することをお勧めします。 （「[PDFリファレンス](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)」を参照）。
+* **ダイジェストオプション**:署名に使用するダイジェストアルゴリズムを割り当てます。有効な値はSHA1、SHA256、SHA384、SHA512およびRIPEMD160です。
+* **フィルタ**:署名フィールドで使用するフィルターを指定します。例えば、Adobe.PPKLiteフィルターを使用できます。 （「[PDFリファレンス](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)」を参照）。
+* **フラグのオプション**:この署名フィールドに関連付けられているフラグ値を指定します。値が1の場合、署名者は指定された値のみをエントリに使用する必要があります。 値が0の場合、他の値も許可されます。 ビット位置は次のとおりです。
 
-   * **1（フィルタ）:** 署名フィールドへの署名に使用する署名ハンドラーです
-   * **2(SubFilter):** 署名時に使用する有効なエンコーディングを示す名前の配列です
+   * **1(Filter)：署名フィ** ールドへの署名に使用する署名ハンドラーです
+   * **2(SubFilter)：署名時** に使用する有効なエンコーディングを示す名前の配列
    * **3(V)**:署名フィールドへの署名に使用する署名ハンドラーの必要最小限のバージョン番号です
-   * **4（理由）:** ドキュメントに署名する理由を指定する文字列の配列です
-   * **5(PDFLegalWarnings):** 考えられる法的証明を指定する文字列の配列です
+   * **4(Reasons):ドキュメント** に署名する理由を指定する文字列の配列です
+   * **5(PDFLegalWarnings)：考えら** れる法的証明を指定する文字列の配列です
 
-* **法的証明**:ドキュメントを認証すると、ドキュメントの表示されるコンテンツをあいまいにしたり誤解を招く可能性のある、特定の種類のコンテンツを自動的にスキャンします。 例えば、注釈によって、認証対象を把握するために重要なテキストが隠される場合があります。 スキャン処理では、この種類のコンテンツの存在を示す警告が生成されます。 また、警告を生成した可能性のあるコンテンツに関する追加の説明も提供します。
+* **法的証明**:ドキュメントを認証すると、ドキュメントの表示されるコンテンツをあいまいにしたり誤解を招く可能性のある、特定の種類のコンテンツを自動的にスキャンします。例えば、注釈によって、認証対象を把握するために重要なテキストが隠される場合があります。 スキャン処理では、この種類のコンテンツの存在を示す警告が生成されます。 また、警告を生成した可能性のあるコンテンツに関する追加の説明も提供します。
 * **権限**:署名を無効にすることなく、PDFドキュメントで使用できる権限を指定します。
 * **理由**:このドキュメントに署名が必要な理由を指定します。
-* **タイムスタンプ**:タイムスタンプオプションを指定します。 例えば、使用するタイムスタンプサーバーのURLを設定できます。
+* **タイムスタンプ**:タイムスタンプオプションを指定します。例えば、使用するタイムスタンプサーバーのURLを設定できます。
 * **バージョン**:署名フィールドへの署名に使用する署名ハンドラーの最小バージョン番号を指定します。
 
 **署名フィールドの変更**
@@ -434,7 +434,7 @@ Signatureサービスクライアントを作成した後、変更する署名�
 
 [PDFドキュメントへのデジタル署名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-### Java APIを使用した署名フィールドの変更 {#modify-signature-fields-using-the-java-api}
+### Java API {#modify-signature-fields-using-the-java-api}を使用した署名フィールドの変更
 
 署名API (Java)を使用して署名フィールドを変更します。
 
@@ -449,101 +449,101 @@ Signatureサービスクライアントを作成した後、変更する署名�
 
 1. 変更する署名フィールドが含まれているPDFドキュメントの取得
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、変更する署名フィールドを含むPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、変更する署名フィールドを含むPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. ディクショナリ値の設定
 
-   * コンストラクタを使用して `PDFSignatureFieldProperties` オブジェクトを作成します。オブジェクトは、署名フィールドロックディクショナリとシード値ディクショナリ情報を格納します。 `PDFSignatureFieldProperties`
+   * コンストラクタを使用して `PDFSignatureFieldProperties` オブジェクトを作成します。`PDFSignatureFieldProperties`オブジェクトは、署名フィールドロックディクショナリとシード値ディクショナリ情報を格納します。
    * コンストラクタを使用して `PDFSeedValueOptionSpec` オブジェクトを作成します。このオブジェクトを使用すると、シード値ディクショナリの値を設定できます。
-   * オブジェクトの `PDFSeedValueOptionSpec` メソッドを呼び出し、 `setMdpValue``MDPPermissions.NoChanges` 定義済みリスト値を渡すことで、PDFドキュメントに対する変更を許可しないようにします。
+   * `PDFSeedValueOptionSpec`オブジェクトの`setMdpValue`メソッドを呼び出し、`MDPPermissions.NoChanges`定義済みリスト値を渡すことで、PDFドキュメントの変更を許可しない。
    * コンストラクタを使用して `FieldMDPOptionSpec` オブジェクトを作成します。このオブジェクトを使用すると、署名フィールドロックディクショナリの値を設定できます。
-   * オブジェクトのメソッドを呼び出し、 `FieldMDPOptionSpec``setMdpValue``FieldMDPAction.ALL` 定義済みリスト値を渡すことで、PDFドキュメントのすべてのフィールドをロックします。
-   * オブジェクトのメソッドを呼び出し、オブジェクトを渡して、シ `PDFSignatureFieldProperties` ード値ディクショナリ情報を設定し `setSeedValue` ま `PDFSeedValueOptionSpec` す。
-   * オブジェクトのメソッドを呼び出し、 `PDFSignatureFieldProperties`オブジェクトを渡すことで、署名フィールドロックディクショナリ情報を設定し `setFieldMDP``FieldMDPOptionSpec` ます。
+   * `FieldMDPOptionSpec`オブジェクトの`setMdpValue`メソッドを呼び出し、`FieldMDPAction.ALL`定義済みリスト値を渡すことで、PDFドキュメント内のすべてのフィールドをロックします。
+   * `PDFSignatureFieldProperties`オブジェクトの`setSeedValue`メソッドを呼び出し、`PDFSeedValueOptionSpec`オブジェクトを渡して、シード値ディクショナリ情報を設定します。
+   * `PDFSignatureFieldProperties`オブジェクトの`setFieldMDP`メソッドを呼び出し、`FieldMDPOptionSpec`オブジェクトを渡して、署名フィールドロックディクショナリ情報を設定します。
 
    >[!NOTE]
    >
-   >設定可能なすべてのシード値ディクショナリ値を確認するには、クラス参照を参照して `PDFSeedValueOptionSpec` ください。 (『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照)。
+   >設定可能なシード値ディクショナリの値をすべて表示するには、`PDFSeedValueOptionSpec`クラス参照を参照してください。 (「[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照)。
 
 1. 署名フィールドの変更
 
-   署名フィールドを変更するには、 `SignatureServiceClient` オブジェクトの `modifySignatureField` メソッドを呼び出し、次の値を渡します。
+   `SignatureServiceClient`オブジェクトの`modifySignatureField`メソッドを呼び出し、次の値を渡して、署名フィールドを変更します。
 
-   * 変更する署名フィールドが含まれるPDFドキュメントを格納する `com.adobe.idp.Document` オブジェクトです
+   * 変更する署名フィールドを含むPDFドキュメントを格納する`com.adobe.idp.Document`オブジェクトです
    * 署名フィールドの名前を指定するstring値です
-   * 署名フィールドロックディクショナリとシード値ディクショナリの情報を格納する `PDFSignatureFieldProperties` オブジェクトです
+   * 署名フィールドロックディクショナリとシード値ディクショナリ情報を格納する`PDFSignatureFieldProperties`オブジェクト
 
-   この `modifySignatureField` メソッドは、変更された署名フィールドを含むPDFドキュメントを格納する `com.adobe.idp.Document` オブジェクトを返します。
+   `modifySignatureField`メソッドは、変更された署名フィールドを含むPDFドキュメントを格納する`com.adobe.idp.Document`オブジェクトを返します。
 
 1. PDFドキュメントをPDFファイルとして保存
 
-   * Create a `java.io.File` object and ensure that the file name extension is .pdf.
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method to copy the contents of the `com.adobe.idp.Document` object to the file. メソッドが返した `com.adobe.idp.Document` オブジェクトを使用していることを確認し `modifySignatureField` ます。
+   * `java.io.File`オブジェクトを作成し、ファイル名の拡張子が.pdfであることを確認します。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします。 `modifySignatureField`メソッドが返した`com.adobe.idp.Document`オブジェクトを使用していることを確認してください。
 
-### WebサービスAPIを使用した署名フィールドの変更 {#modify-signature-fields-using-the-web-service-api}
+### WebサービスAPI {#modify-signature-fields-using-the-web-service-api}を使用して署名フィールドを変更する
 
 Signature API（Webサービス）を使用して署名フィールドを変更します。
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 変更する署名フィールドが含まれているPDFドキュメントの取得
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、変更する署名フィールドが含まれるPDFドキュメントの保存に使用されます。
-   * コンストラクターを呼び出し、PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、変更する署名フィールドを含むPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、PDFドキュメントーのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`プロパティにバイト配列の内容を割り当てて入力します。
 
 1. ディクショナリ値の設定
 
    * コンストラクタを使用して `PDFSignatureFieldProperties` オブジェクトを作成します。このオブジェクトは、署名フィールドロックディクショナリとシード値ディクショナリの情報を格納します。
    * コンストラクタを使用して `PDFSeedValueOptionSpec` オブジェクトを作成します。このオブジェクトを使用すると、シード値ディクショナリの値を設定できます。
-   * PDFドキュメントの変更を許可しない場合は、 `MDPPermissions.NoChanges` 定義済みリスト値を `PDFSeedValueOptionSpec` オブジェクトの `mdpValue` データメンバーに割り当てます。
+   * `MDPPermissions.NoChanges`定義済みリスト値を`PDFSeedValueOptionSpec`オブジェクトの`mdpValue`データメンバに割り当てて、PDFドキュメントの変更を許可しない。
    * コンストラクタを使用して `FieldMDPOptionSpec` オブジェクトを作成します。このオブジェクトを使用すると、署名フィールドロックディクショナリの値を設定できます。
-   * PDFドキュメント内のすべてのフィールドをロックするには、 `FieldMDPAction.ALL` 定義済みリスト値を `FieldMDPOptionSpec` オブジェクトの `mdpValue` データメンバーに割り当てます。
-   * シード値ディクショナリ情報を設定するには、 `PDFSeedValueOptionSpec` オブジェクトを `PDFSignatureFieldProperties` オブジェクトの `seedValue` データメンバーに割り当てます。
-   * 署名フィールドロックディクショナリ情報を設定するには、 `FieldMDPOptionSpec` オブジェクトを `PDFSignatureFieldProperties` オブジェクトの `fieldMDP` データメンバに割り当てます。
+   * `FieldMDPAction.ALL`定義済みリスト値を`FieldMDPOptionSpec`オブジェクトの`mdpValue`データメンバに割り当てて、PDFドキュメント内のすべてのフィールドをロックします。
+   * シード値ディクショナリ情報を設定するには、`PDFSeedValueOptionSpec`オブジェクトを`PDFSignatureFieldProperties`オブジェクトの`seedValue`データメンバに割り当てます。
+   * `FieldMDPOptionSpec`オブジェクトを`PDFSignatureFieldProperties`オブジェクトの`fieldMDP`データメンバに割り当てて、署名フィールドロックディクショナリ情報を設定します。
 
    >[!NOTE]
    >
-   >設定可能なすべてのシード値ディクショナリ値を確認するには、クラス参照を参照して `PDFSeedValueOptionSpec` ください。 (『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照)。
+   >設定可能なシード値ディクショナリの値をすべて表示するには、`PDFSeedValueOptionSpec`クラス参照を参照してください。 (「[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照)。
 
 1. 署名フィールドの変更
 
-   署名フィールドを変更するには、 `SignatureServiceClient` オブジェクトの `modifySignatureField` メソッドを呼び出し、次の値を渡します。
+   `SignatureServiceClient`オブジェクトの`modifySignatureField`メソッドを呼び出し、次の値を渡して、署名フィールドを変更します。
 
-   * 変更する署名フィールドが含まれるPDFドキュメントを格納する `BLOB` オブジェクトです
+   * 変更する署名フィールドを含むPDFドキュメントを格納する`BLOB`オブジェクトです
    * 署名フィールドの名前を指定するstring値です
-   * 署名フィールドロックディクショナリとシード値ディクショナリの情報を格納する `PDFSignatureFieldProperties` オブジェクトです
+   * 署名フィールドロックディクショナリとシード値ディクショナリ情報を格納する`PDFSignatureFieldProperties`オブジェクト
 
-   この `modifySignatureField` メソッドは、変更された署名フィールドを含むPDFドキュメントを格納する `BLOB` オブジェクトを返します。
+   `modifySignatureField`メソッドは、変更された署名フィールドを含むPDFドキュメントを格納する`BLOB`オブジェクトを返します。
 
 1. PDFドキュメントをPDFファイルとして保存
 
-   * オブジェクトを作成するには、コンストラクターを呼び出し、署名フィールドを含むPDFドキュメントのファイルの場所と、ファイルを開くモードを表すstring値を渡します。 `System.IO.FileStream`
-   * メソッドが返す `BLOB` オブジェクトの内容を格納するバイト配列を作成し `addSignatureField` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、署名フィールドを含むPDFドキュメントのファイルの場所、およびファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `addSignatureField`メソッドが返す`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -551,7 +551,7 @@ Signature API（Webサービス）を使用して署名フィールドを変更�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Digitally Signing PDF Documents {#digitally-signing-pdf-documents}
+## PDFドキュメントへのデジタル署名{#digitally-signing-pdf-documents}
 
 セキュリティレベルの提供のため、PDF に電子署名を適用することができます。手書き署名のような電子署名は、署名者を識別したり、ドキュメントに関するステートメントを作成する手段として使用できます。ドキュメントの電子署名に使用されている技術は、署名者と受信者の両方が、何に署名されているのかを明確にし、その署名によりドキュメントに変更がないことを確認するのに役立ちます。
 
@@ -559,7 +559,7 @@ PDF ドキュメントは、公開鍵を用いて署名されます。署名者�
 
 >[!NOTE]
 >
->PDFドキュメントに電子署名する前に、証明書がAEM Formsに追加されていることを確認する必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 (Trust Manager APIを使用した秘密鍵証明書の [読み込みを参照](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api))。
+>PDFドキュメントに電子署名する前に、証明書がAEM Formsに追加されていることを確認する必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 （「[Trust Manager APIを使用した秘密鍵証明書の読み込み](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)」を参照）。
 
 PDFドキュメントにプログラムによってデジタル署名を行うことができます。 PDFドキュメントに電子署名する場合は、AEM Formsに存在するセキュリティ証明書を参照する必要があります。 証明書は署名に使用する秘密鍵となります。
 
@@ -569,19 +569,19 @@ Signatureサービスは、PDFドキュメントが署名されるときに次�
 1. Truststoreは、指定した秘密鍵証明書を検索します。
 1. 秘密鍵証明書がSignatureサービスに返され、ドキュメントへの署名に使用されます。 証明書は、後で要求を行う場合にエイリアスに対してもキャッシュされます。
 
-セキュリティ証明書の処理について詳しくは、使用しているアプリケーションサーバー版の『 *インストールおよびデプロイ(AEM Forms* )』ガイドを参照してください。
+セキュリティ証明書の処理について詳しくは、使用しているアプリケーションサーバー版の『*AEM Formsのインストールと展開*』ガイドを参照してください。
 
 >[!NOTE]
 >
->署名ドキュメントと認証ユーザーには違いがあります。 (See [Certifying PDF Documents](digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+>署名ドキュメントと認証ユーザーには違いがあります。 ([PDFドキュメントの認証](digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照)。
 
 >[!NOTE]
 >
->PDFドキュメントによっては、署名がサポートされていない場合があります。 Signatureサービスと電子署名ドキュメントの詳細については、『 [Services Reference for Digitally signing](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>PDFドキュメントによっては、署名がサポートされていない場合があります。 Signatureサービスとデジタル署名ドキュメントの詳細については、『[AEM Forms向けサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
 >[!NOTE]
 >
->Signatureサービスは、ドキュメントの認証など、操作への入力としてPDFデータが埋め込まれたXDPファイルをサポートしません。 この操作により、Signatureサービスでは、 `PDFOperationException`この問題を解決するには、PDF Utilitiesサービスを使用してXDPファイルをPDFファイルに変換し、変換したPDFファイルをSignatureサービス操作に渡します。 (「PDF Utilitiesの [操作](/help/forms/developing/pdf-utilities.md#working-with-pdf-utilities)」を参照)。
+>Signatureサービスは、ドキュメントの認証など、操作への入力としてPDFデータが埋め込まれたXDPファイルをサポートしません。 この操作により、Signatureサービスは`PDFOperationException`をスローします。 この問題を解決するには、PDF Utilitiesサービスを使用してXDPファイルをPDFファイルに変換し、変換したPDFファイルをSignatureサービス操作に渡します。 （「[PDFユーティリティの操作](/help/forms/developing/pdf-utilities.md#working-with-pdf-utilities)」を参照）。
 
 **nCipher nShield HSM秘密鍵証明書**
 
@@ -601,12 +601,12 @@ PDFドキュメントの署名や認証にnCipher nShield HSM秘密鍵証明書�
 
 **XFAベースのフォームである署名ドキュメント**
 
-SignatureサービスAPIを使用してXFAベースのフォームに署名しようとすると、データが `View` Acrobatに `Signed``Version` あるかもしれません。 例えば、次のワークフローを考えてみましょう。
+SignatureサービスAPIを使用してXFAベースのフォームに署名しようとすると、Acrobatにある`View` `Signed` `Version`にデータがない可能性があります。 例えば、次のワークフローを考えてみましょう。
 
 * Designerを使用して作成したXDPファイルを使用して、署名フィールドを含むフォームデザインと、フォームデータを含むXMLデータを結合します。 インタラクティブPDFドキュメントを生成するには、Formsサービスを使用します。
 * SignatureサービスAPIを使用してPDFドキュメントに署名します。
 
-### 手順の概要 {#summary_of_steps-3}
+### 手順{#summary_of_steps-3}の概要
 
 PDFドキュメントに電子署名するには、次のタスクを実行します。
 
@@ -644,18 +644,18 @@ PDFドキュメントに署名する場合、Signatureサービスで使用す�
 * 失効確認
 * タイムスタンプ値
 
-外観のオプションは、 `PDFSignatureAppearanceOptionSpec` オブジェクトを使用して設定します。 例えば、 `PDFSignatureAppearanceOptionSpec` オブジェクトの `setShowDate` メソッドを呼び出して渡すことで、署名内の日付を表示でき `true`ます。
+`PDFSignatureAppearanceOptionSpec`オブジェクトを使用して外観のオプションを設定します。 例えば、`PDFSignatureAppearanceOptionSpec`オブジェクトの`setShowDate`メソッドを呼び出して`true`を渡すことで、署名内に日付を表示できます。
 
 PDFドキュメントのデジタル署名に使用される証明書が失効したかどうかを判定する失効確認を実行するかどうかを指定することもできます。 失効確認を実行するには、次のいずれかの値を指定します。
 
 * **NoCheck**:失効確認を実行しません。
-* **BestEffort**:常に、チェーン内のすべての証明書の失効を確認しようとします。 チェックで何らかの問題が発生した場合、失効は有効であると見なされます。 エラーが発生した場合は、証明書が失効していないと想定します。
-* **CheckIfAvailable:** 失効情報が利用できる場合、チェーン内のすべての証明書の失効を確認します。 チェックで問題が発生した場合、失効は無効であると見なされます。 エラーが発生した場合は、証明書が失効し、無効であると仮定します。 （これがデフォルト値です）。
-* **AlwaysCheck**:チェーン内のすべての証明書の失効を確認します。 どの証明書にも失効情報が存在しない場合、失効は無効であると見なされます。
+* **BestEffort**:常に、チェーン内のすべての証明書の失効を確認しようとします。チェックで何らかの問題が発生した場合、失効は有効であると見なされます。 エラーが発生した場合は、証明書が失効していないと想定します。
+* **CheckIfAvailable：失効情報が利用可能な場合に、チェーン内のすべての証明書の失効を** 確認します。チェックで問題が発生した場合、失効は無効であると見なされます。 エラーが発生した場合は、証明書が失効し、無効であると仮定します。 （これがデフォルト値です）。
+* **AlwaysCheck**:チェーン内のすべての証明書の失効を確認します。どの証明書にも失効情報が存在しない場合、失効は無効であると見なされます。
 
-証明書に対して失効確認を実行するには、 `CRLOptionSpec` オブジェクトを使用して、証明書失効リスト(CRL)サーバーへのURLを指定します。 ただし、失効確認を実行する場合で、CRLサーバーへのURLを指定しない場合は、Signatureサービスは証明書からURLを取得します。
+証明書に対して失効確認を実行するには、`CRLOptionSpec`オブジェクトを使用して、証明書失効リスト(CRL)サーバーへのURLを指定します。 ただし、失効確認を実行する場合で、CRLサーバーへのURLを指定しない場合は、Signatureサービスは証明書からURLを取得します。
 
-失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーとは異なり、OCSPサーバーを使用する場合は、失効確認の実行が高速になります。 (https://tools.ietf.org/html/rfc2560の「Online Certificate Status Protocol」を参照 [](https://tools.ietf.org/html/rfc2560))。
+失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーとは異なり、OCSPサーバーを使用する場合は、失効確認の実行が高速になります。 ([https://tools.ietf.org/html/rfc2560](https://tools.ietf.org/html/rfc2560)の「Online Certificate Status Protocol」を参照)。
 
 SignatureサービスでAdobeのアプリケーションおよびサービスを使用するCRLおよびOCSPサーバーの順序を設定できます。 例えば、「Adobeアプリケーションおよびサービス」でOCSPサーバーを最初に設定した場合、OCSPサーバーを確認し、次にCRLサーバーを確認します。 （AACヘルプの「Trust Storeを使用した証明書と秘密鍵証明書の管理」を参照）。
 
@@ -663,17 +663,17 @@ SignatureサービスでAdobeのアプリケーションおよびサービスを
 
 >[!NOTE]
 >
->証明書ではCRLまたはOCSPサーバーを指定できますが、証明書で指定されているURLを上書きするには、およびオブジ `CRLOptionSpec``OCSPOptionSpec` ェクトを使用します。 例えば、CRLサーバーを上書きするには、 `CRLOptionSpec` オブジェクトの `setLocalURI` メソッドを呼び出します。
+>証明書にはCRLまたはOCSPサーバーが指定されている場合がありますが、`CRLOptionSpec`および`OCSPOptionSpec`オブジェクトを使用して、証明書で指定されているURLを上書きできます。 例えば、CRLサーバーを上書きするには、`CRLOptionSpec`オブジェクトの`setLocalURI`メソッドを呼び出します。
 
-タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時間を追跡するプロセスを指します。 ドキュメントの署名後は、ドキュメントの所有者によっても、署名を変更しないでください。 タイムスタンプ機能を使用すると、署名済みまたは認証済みのドキュメントの有効性を強化できます。 タイムスタンプオプションは、 `TSPOptionSpec` オブジェクトを使用して設定できます。 例えば、タイムスタンププロバイダー(TSP)サーバーのURLを指定できます。
+タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時間を追跡するプロセスを指します。 ドキュメントの署名後は、ドキュメントの所有者によっても、署名を変更しないでください。 タイムスタンプ機能を使用すると、署名済みまたは認証済みのドキュメントの有効性を強化できます。 `TSPOptionSpec`オブジェクトを使用して、タイムスタンプオプションを設定できます。 例えば、タイムスタンププロバイダー(TSP)サーバーのURLを指定できます。
 
 >[!NOTE]
 >
 >JavaおよびWebサービスのセクションや対応するクイック開始のウォークスルーでは、失効確認が使用されます。 CRLまたはOCSPサーバー情報が指定されていないので、サーバー情報は、PDFドキュメントのデジタル署名に使用される証明書から取得されます。
 
-PDFドキュメントに正しく署名するには、電子署名を含める署名フィールドの完全修飾名を指定します（例：） `form1[0].#subform[1].SignatureField3[3]`。 XFAフォームフィールドを使用する場合は、署名フィールドの名前の一部を使用することもできます。 `SignatureField3[3]`.
+PDFドキュメントに正しく署名するには、`form1[0].#subform[1].SignatureField3[3]`など、電子署名を含む署名フィールドの完全修飾名を指定します。 XFAフォームフィールドを使用する場合は、署名フィールドの名前の一部を使用することもできます。`SignatureField3[3]`.
 
-また、PDFドキュメントに電子署名するためのセキュリティ証明書を参照する必要もあります。 セキュリティ証明書を参照するには、エイリアスを指定します。 エイリアスは、PKCS#12ファイル（拡張子.pfx付き）またはハードウェアセキュリティモジュール(HSM)内の実際の秘密鍵証明書への参照です。 セキュリティ証明書について詳しくは、使用しているアプリケーションサーバー版の『 *インストールおよびデプロイ(AEM Forms* )』ガイドを参照してください。
+また、PDFドキュメントに電子署名するためのセキュリティ証明書を参照する必要もあります。 セキュリティ証明書を参照するには、エイリアスを指定します。 エイリアスは、PKCS#12ファイル（拡張子.pfx付き）またはハードウェアセキュリティモジュール(HSM)内の実際の秘密鍵証明書への参照です。 セキュリティ証明書について詳しくは、使用しているアプリケーションサーバー版の『*AEM Forms*&#x200B;のインストールおよびデプロイ』ガイドを参照してください。
 
 **署名済みPDFドキュメントの保存**
 
@@ -693,7 +693,7 @@ SignatureサービスがPDFドキュメントに電子署名した後、その�
 
 [署名フィールド名の取得](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
 
-### Java APIを使用したPDFドキュメントへのデジタル署名 {#digitally-sign-pdf-documents-using-the-java-api}
+### Java API {#digitally-sign-pdf-documents-using-the-java-api}を使用したPDFドキュメントへのデジタル署名
 
 署名API(Java)を使用してPDFドキュメントに電子署名する：
 
@@ -708,31 +708,31 @@ SignatureサービスがPDFドキュメントに電子署名した後、その�
 
 1. PDFドキュメントに署名を依頼する
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、デジタル署名するPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、デジタル署名するPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. PDFドキュメントへの署名
 
-   オブジェクトの `SignatureServiceClient``sign` メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
+   `SignatureServiceClient`オブジェクトの`sign`メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
 
-   * A `com.adobe.idp.Document` object that represents the PDF document to sign.
+   * 署名するPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトです。
    * 電子署名を含む署名フィールドの名前を表すstring値です。
-   * A `Credential` object that represents the credential that is used to digitally sign the PDF document. オブジェクトの静的な `Credential` メソッドを呼び出し、セキュリティ証明書に対応するエイリアス値を指定する文字列値を渡して、 `Credential``getInstance` オブジェクトを作成します。
-   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクトです。 例えば、SHA1アルゴリズム `HashAlgorithm.SHA1` を使用するように指定できます。
+   * PDFドキュメントのデジタル署名に使用される秘密鍵証明書を表す`Credential`オブジェクトです。 `Credential`オブジェクトの静的な`getInstance`メソッドを呼び出し、セキュリティ証明書に対応するエイリアス値を指定する文字列値を渡して、`Credential`オブジェクトを作成します。
+   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する`HashAlgorithm`オブジェクトです。 例えば、`HashAlgorithm.SHA1`にSHA1アルゴリズムを使用するよう指定できます。
    * PDFドキュメントがデジタル署名された理由を表すstring値です。
    * 署名者の連絡先情報を表すstring値です。
-   * 電子署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
-   * 署名者の証明書に対して失効確認を実行するかどうかを指定する `java.lang.Boolean` オブジェクトです。
-   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する `OCSPOptionSpec` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * 証明書失効リスト(CRL)の環境設定を格納する `CRLPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * タイムスタンププロバイダー(TSP)でサポートされる環境設定を格納する `TSPPreferences` オブジェクトです。 このパラメーターはオプションで、を指定でき `null`ます。 For more information, see [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * 電子署名の外観を制御する`PDFSignatureAppearanceOptions`オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
+   * 署名者の証明書に対して失効確認を実行するかどうかを指定する`java.lang.Boolean`オブジェクトです。
+   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する`OCSPOptionSpec`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * 証明書失効リスト(CRL)の環境設定を格納する`CRLPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * タイムスタンププロバイダー(TSP)サポートの環境設定を格納する`TSPPreferences`オブジェクトです。 このパラメーターはオプションで、`null`にすることができます。 詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
 
-   署名済みPDFドキュメントを表す `sign``com.adobe.idp.Document` オブジェクトを返します。
+   `sign`メソッドは、署名済みPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトを返します。
 
 1. 署名済みPDFドキュメントの保存
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method and pass `java.io.File`to copy the contents of the `Document` object to the file. `com.adobe.idp.Document` メソッドから返された `sign` オブジェクトを必ず使用してください。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出し、`java.io.File`を渡して`Document`オブジェクトの内容をファイルにコピーします。 `com.adobe.idp.Document` メソッドから返された `sign` オブジェクトを必ず使用してください。
 
 **関連トピック**
 
@@ -744,65 +744,65 @@ SignatureサービスがPDFドキュメントに電子署名した後、その�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したPDFドキュメントへのデジタル署名 {#digitally-signing-pdf-documents-using-the-web-service-api}
+### WebサービスAPI {#digitally-signing-pdf-documents-using-the-web-service-api}を使用したPDFドキュメントへのデジタル署名
 
 Signature API（Webサービス）を使用してPDFドキュメントに電子署名するには：
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Signaturesクライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. PDFドキュメントに署名を依頼する
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、署名されたPDFドキュメントの保存に使用されます。
-   * コンストラクターを呼び出し、署名するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、署名されたPDFドキュメントの保存に使用されます。
+   * コンストラクターを呼び出し、署名するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`プロパティにバイト配列の内容を割り当てて入力します。
 
 1. PDFドキュメントへの署名
 
-   オブジェクトの `SignatureServiceClient``sign` メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
+   `SignatureServiceClient`オブジェクトの`sign`メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
 
-   * A `BLOB` object that represents the PDF document to sign.
+   * 署名するPDFドキュメントを表す`BLOB`オブジェクトです。
    * 電子署名を含む署名フィールドの名前を表すstring値です。
-   * A `Credential` object that represents the credential that is used to digitally sign the PDF document. コンストラクターを使用して `Credential` オブジェクトを作成し、オブジェクトのプロパティに値を割り当ててエイリアスを指定し `Credential` ま `alias` す。
-   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクトです。 例えば、SHA1アルゴリズム `HashAlgorithm.SHA1` を使用するように指定できます。
+   * PDFドキュメントのデジタル署名に使用される秘密鍵証明書を表す`Credential`オブジェクトです。 `Credential`オブジェクトを作成するには、コンストラクターを使用します。また、`Credential`オブジェクトの`alias`プロパティに値を割り当ててエイリアスを指定します。
+   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する`HashAlgorithm`オブジェクトです。 例えば、`HashAlgorithm.SHA1`にSHA1アルゴリズムを使用するよう指定できます。
    * ハッシュアルゴリズムを使用するかどうかを指定するBoolean値です。
    * PDFドキュメントがデジタル署名された理由を表すstring値です。
    * 署名者の場所を表すstring値です。
    * 署名者の連絡先情報を表すstring値です。
-   * 電子署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
-   * 署名者の証明書に対して失効確認を実行するかどうかを指定する `System.Boolean` オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
-   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する `OCSPOptionSpec` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。 このオブジェクトについて詳しくは、『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照してください。
-   * 証明書失効リスト(CRL)の環境設定を格納する `CRLPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * タイムスタンププロバイダー(TSP)でサポートされる環境設定を格納する `TSPPreferences` オブジェクトです。 このパラメーターはオプションで、を指定でき `null`ます。
+   * 電子署名の外観を制御する`PDFSignatureAppearanceOptions`オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
+   * 署名者の証明書に対して失効確認を実行するかどうかを指定する`System.Boolean`オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
+   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する`OCSPOptionSpec`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。 このオブジェクトについて詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   * 証明書失効リスト(CRL)の環境設定を格納する`CRLPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * タイムスタンププロバイダー(TSP)サポートの環境設定を格納する`TSPPreferences`オブジェクトです。 このパラメーターはオプションで、`null`にすることができます。
 
-   署名済みPDFドキュメントを表す `sign``BLOB` オブジェクトを返します。
+   `sign`メソッドは、署名済みPDFドキュメントを表す`BLOB`オブジェクトを返します。
 
 1. 署名済みPDFドキュメントの保存
 
-   * Create a `System.IO.FileStream` object by invoking its constructor. 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `sign` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
+   * `sign`メソッドから返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -812,7 +812,7 @@ Signature API（Webサービス）を使用してPDFドキュメントに電子�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## デジタル署名インタラクティブForms {#digitally-signing-interactive-forms}
+## デジタル署名インタラクティブForms{#digitally-signing-interactive-forms}
 
 Formsサービスが作成するインタラクティブフォームに署名できます。 例えば、次のワークフローを考えてみましょう。
 
@@ -823,15 +823,15 @@ Formsサービスが作成するインタラクティブフォームに署名で
 
 >[!NOTE]
 >
->インタラクティブフォームに電子署名する前に、証明書をAEM Formsに追加しておく必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 (Trust Manager APIを使用した秘密鍵証明書の [読み込みを参照](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api))。
+>インタラクティブフォームに電子署名する前に、証明書をAEM Formsに追加しておく必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 （「[Trust Manager APIを使用した秘密鍵証明書の読み込み](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)」を参照）。
 
-FormsサービスAPIを使用する場合、 `GenerateServerAppearance` 実行時オプションをに設定し `true`ます。 この実行時オプションを使用すると、サーバーで生成されたフォームの外観を、AcrobatまたはAdobe Readerで開いたときにも有効なままにすることができます。 FormsAPIを使用して署名するインタラクティブフォームを生成する場合は、このランタイムオプションを設定することをお勧めします。
+FormsサービスAPIを使用する場合は、`GenerateServerAppearance`ランタイムオプションを`true`に設定します。 この実行時オプションを使用すると、サーバーで生成されたフォームの外観を、AcrobatまたはAdobe Readerで開いたときにも有効なままにすることができます。 FormsAPIを使用して署名するインタラクティブフォームを生成する場合は、このランタイムオプションを設定することをお勧めします。
 
 >[!NOTE]
 >
->「デジタル署名のインタラクティブForms」を読む前に、PDFドキュメントの署名について理解しておくことをお勧めします。 (See [Digitally Signing PDF Documents](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+>「デジタル署名のインタラクティブForms」を読む前に、PDFドキュメントの署名について理解しておくことをお勧めします。 (「[PDFドキュメントのデジタル署名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)」を参照)。
 
-### 手順の概要 {#summary_of_steps-4}
+### 手順{#summary_of_steps-4}の概要
 
 Formsサービスが返すインタラクティブフォームに電子署名するには、次のタスクを実行します。
 
@@ -854,7 +854,7 @@ Formsサービスが返すインタラクティブフォームに電子署名す
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-For information about the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **Formsおよび署名クライアントの作成**
 
@@ -862,13 +862,13 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 **Formsサービスを使用してインタラクティブフォームを取得する**
 
-Formsサービスを使用して、署名するインタラクティブPDFフォームを取得できます。 AEM Forms時点では、レンダリングするフォームを含む `com.adobe.idp.Document` オブジェクトをFormsサービスに渡すことができます。 このメソッドの名前はです `renderPDFForm2`。 このメソッドは、署名するフォームを含む `com.adobe.idp.Document` オブジェクトを返します。 この `com.adobe.idp.Document` インスタンスはSignatureサービスに渡すことができます。
+Formsサービスを使用して、署名するインタラクティブPDFフォームを取得できます。 AEM Forms時点では、レンダリングするフォームを含むFormsサービスに`com.adobe.idp.Document`オブジェクトを渡すことができます。 このメソッドの名前は`renderPDFForm2`です。 このメソッドは、署名するフォームを含む`com.adobe.idp.Document`オブジェクトを返します。 この`com.adobe.idp.Document`インスタンスをSignatureサービスに渡すことができます。
 
-同様に、Webサービスを使用している場合は、Formsサービスが返す `BLOB` インスタンスをSignatureサービスに渡すことができます。
+同様に、Webサービスを使用している場合は、Formsサービスが返す`BLOB`インスタンスをSignatureサービスに渡すことができます。
 
 >[!NOTE]
 >
->[デジタル署名のインタラクティブForms]セクションに関連付けられているクイック開始は、この `renderPDFForm2` メソッドを呼び出します。
+>[デジタル署名のインタラクティブなForms]セクションに関連付けられたクイック開始は、`renderPDFForm2`メソッドを呼び出します。
 
 **インタラクティブフォームに署名する**
 
@@ -878,7 +878,7 @@ PDFドキュメントに署名する場合、Signatureサービスで使用す�
 * 失効確認
 * タイムスタンプ値
 
-外観のオプションは、 `PDFSignatureAppearanceOptionSpec` オブジェクトを使用して設定します。 例えば、 `PDFSignatureAppearanceOptionSpec` オブジェクトの `setShowDate` メソッドを呼び出して渡すことで、署名内の日付を表示でき `true`ます。
+`PDFSignatureAppearanceOptionSpec`オブジェクトを使用して外観のオプションを設定します。 例えば、`PDFSignatureAppearanceOptionSpec`オブジェクトの`setShowDate`メソッドを呼び出して`true`を渡すことで、署名内に日付を表示できます。
 
 **署名済みPDFドキュメントの保存**
 
@@ -898,7 +898,7 @@ SignatureサービスがPDFドキュメントに電子署名した後、その�
 
 [インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)
 
-### Java APIを使用したインタラクティブフォームへの電子署名 {#digitally-sign-an-interactive-form-using-the-java-api}
+### Java API {#digitally-sign-an-interactive-form-using-the-java-api}を使用したインタラクティブフォームへのデジタル署名
 
 Formsおよび署名API(Java)を使用して、インタラクティブフォームに電子署名する：
 
@@ -914,46 +914,46 @@ Formsおよび署名API(Java)を使用して、インタラクティブフォー
 
 1. Formsサービスを使用してインタラクティブフォームを取得する
 
-   * コンストラクターを使用して、Formsサービスに渡すPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。 PDFドキュメントの場所を指定するstring値を渡します。
+   * コンストラクターを使用して、Formsサービスに渡すPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。 PDFドキュメントの場所を指定するstring値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
-   * コンストラクターを使用して、Formsサービスに渡すフォームデータを含むXMLドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。 XMLファイルの場所を指定するstring値を渡します。
+   * コンストラクターを使用して、Formsサービスに渡すフォームデータを含むXMLドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。 XMLファイルの場所を指定するstring値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
-   * 実行時オプションの設定に使用する `PDFFormRenderSpec` オブジェクトを作成します。 オブジェクトの `PDFFormRenderSpec` メソッドを呼び出し、 `setGenerateServerAppearance` 渡し `true`ます。
-   * オブジェクトの `FormsServiceClient``renderPDFForm2` メソッドを呼び出し、次の値を渡します。
+   * 実行時オプションの設定に使用する`PDFFormRenderSpec`オブジェクトを作成します。 `PDFFormRenderSpec`オブジェクトの`setGenerateServerAppearance`メソッドを呼び出し、`true`を渡します。
+   * `FormsServiceClient`オブジェクトの`renderPDFForm2`メソッドを呼び出し、次の値を渡します。
 
-      * レンダリングするPDFフォームを含む `com.adobe.idp.Document` オブジェクトです。
-      * フォームとマージするデータを含む `com.adobe.idp.Document` オブジェクト。
-      * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。
-      * Formsサービスに必要なURI値を含む `URLSpec` オブジェクトです。 このパラメーター値 `null` を指定できます。
-      * 添付ファイルを格納する `java.util.HashMap` オブジェクトです。 これはオプションのパラメーターで、フォームにファイルを添付しない `null` かどうかを指定できます。
+      * レンダリングするPDFフォームを含む`com.adobe.idp.Document`オブジェクト。
+      * フォームとマージするデータを含む`com.adobe.idp.Document`オブジェクト。
+      * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。
+      * Formsサービスに必要なURI値を含む`URLSpec`オブジェクト。 このパラメーター値には`null`を指定できます。
+      * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターです。フォームにファイルを添付しない場合は、`null`を指定できます。
 
-      この `renderPDFForm2` メソッドは、フォームデータストリームを含む `FormsResult` オブジェクトを返します
+      `renderPDFForm2`メソッドは、フォームデータストリームを含む`FormsResult`オブジェクトを返します
 
-   * オブジェクトのメソッドを呼び出して、PDF `FormsResult` フォームを取得し `getOutputContent` ます。 このメソッドは、インタラクティブフォームを表す `com.adobe.idp.Document` オブジェクトを返します。
+   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、PDFフォームを取得します。 このメソッドは、インタラクティブフォームを表す`com.adobe.idp.Document`オブジェクトを返します。
 
 
 1. インタラクティブフォームに署名する
 
-   オブジェクトの `SignatureServiceClient``sign` メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
+   `SignatureServiceClient`オブジェクトの`sign`メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
 
-   * A `com.adobe.idp.Document` object that represents the PDF document to sign. このオブジェクトが、Formsサービスから取得された `com.adobe.idp.Document` オブジェクトであることを確認します。
+   * 署名するPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトです。 このオブジェクトが、Formsサービスから取得した`com.adobe.idp.Document`オブジェクトであることを確認します。
    * 署名された署名フィールドの名前を表すstring値です。
-   * A `Credential` object that represents the credential that is used to digitally sign the PDF document. オブジェクトのスタティック `Credential` メソッドを呼び出して、 `Credential``getInstance` オブジェクトを作成します。 セキュリティ秘密鍵証明書に対応するエイリアス値を指定するstring値を渡します。
-   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクトです。 例えば、SHA1アルゴリズム `HashAlgorithm.SHA1` を使用するように指定できます。
+   * PDFドキュメントのデジタル署名に使用される秘密鍵証明書を表す`Credential`オブジェクトです。 `Credential`オブジェクトの静的`getInstance`メソッドを呼び出して、`Credential`オブジェクトを作成します。 セキュリティ秘密鍵証明書に対応するエイリアス値を指定するstring値を渡します。
+   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する`HashAlgorithm`オブジェクトです。 例えば、`HashAlgorithm.SHA1`にSHA1アルゴリズムを使用するよう指定できます。
    * PDFドキュメントがデジタル署名された理由を表すstring値です。
    * 署名者の連絡先情報を表すstring値です。
-   * 電子署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
-   * 署名者の証明書に対して失効確認を実行するかどうかを指定する `java.lang.Boolean` オブジェクトです。
-   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する `OCSPPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * 証明書失効リスト(CRL)の環境設定を格納する `CRLPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * タイムスタンププロバイダー(TSP)でサポートされる環境設定を格納する `TSPPreferences` オブジェクトです。 このパラメーターはオプションで、を指定でき `null`ます。
+   * 電子署名の外観を制御する`PDFSignatureAppearanceOptions`オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
+   * 署名者の証明書に対して失効確認を実行するかどうかを指定する`java.lang.Boolean`オブジェクトです。
+   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する`OCSPPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * 証明書失効リスト(CRL)の環境設定を格納する`CRLPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * タイムスタンププロバイダー(TSP)サポートの環境設定を格納する`TSPPreferences`オブジェクトです。 このパラメーターはオプションで、`null`にすることができます。
 
-   署名済みPDFドキュメントを表す `sign``com.adobe.idp.Document` オブジェクトを返します。
+   `sign`メソッドは、署名済みPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトを返します。
 
 1. 署名済みPDFドキュメントの保存
 
-   * Create a `java.io.File` object and ensure that the filename extension is .pdf.
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method and pass `java.io.File`to copy the contents of the `Document` object to the file. メソッドが返した `com.adobe.idp.Document` オブジェクトを使用していることを確認し `sign` ます。
+   * `java.io.File`オブジェクトを作成し、ファイル名の拡張子が.pdfであることを確認します。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出し、`java.io.File`を渡して`Document`オブジェクトの内容をファイルにコピーします。 `sign`メソッドが返した`com.adobe.idp.Document`オブジェクトを使用していることを確認してください。
 
 **関連トピック**
 
@@ -965,34 +965,34 @@ Formsおよび署名API(Java)を使用して、インタラクティブフォー
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したインタラクティブフォームへの電子署名 {#digitally-sign-an-interactive-form-using-the-web-service-api}
+### WebサービスAPI {#digitally-sign-an-interactive-form-using-the-web-service-api}を使用してインタラクティブフォームにデジタル署名する
 
 Formsおよび署名API（Webサービス）を使用して、インタラクティブフォームに電子署名する：
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 このクライアントアプリケーションは2つのAEM Formsサービスを呼び出すので、2つのサービス参照を作成します。 Signatureサービスに関連付けられたサービス参照には、次のWSDL定義を使用します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 このクライアントアプリケーションは2つのAEM Formsサービスを呼び出すので、2つのサービス参照を作成します。 Signatureサービスに関連付けられたサービス参照には、次のWSDL定義を使用します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
-   Formsサービスに関連付けられたサービス参照には、次のWSDL定義を使用します。 `http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`.
+   Formsサービスに関連付けられたサービス参照には、次のWSDL定義を使用します。`http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`.
 
-   この `BLOB` データ型は両方のサービス参照に共通なので、使用する場合は `BLOB` データ型を完全に限定します。 対応するWebサービスクイック開始では、すべての `BLOB` インスタンスが完全修飾されます。
+   `BLOB`データ型は両方のサービス参照に共通なので、`BLOB`データ型を使用する場合は完全に修飾します。 対応するWebサービスクイック開始では、すべての`BLOB`インスタンスが完全修飾されます。
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Formsおよび署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-   * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+   * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
    >[!NOTE]
    >
@@ -1000,56 +1000,56 @@ Formsおよび署名API（Webサービス）を使用して、インタラクテ
 
 1. Formsサービスを使用してインタラクティブフォームを取得する
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、署名されたPDFドキュメントの保存に使用されます。
-   * コンストラクターを呼び出し、署名するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、フォームデータの格納に使用されます。
-   * コンストラクターを呼び出し、フォームデータを含むXMLファイルのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
-   * 実行時オプションの設定に使用する `PDFFormRenderSpec` オブジェクトを作成します。 値をオブジェクト `true` のフ `PDFFormRenderSpec``generateServerAppearance` ィールドに割り当てます。
-   * オブジェクトの `FormsServiceClient``renderPDFForm2` メソッドを呼び出し、次の値を渡します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、署名されたPDFドキュメントの保存に使用されます。
+   * コンストラクターを呼び出し、署名するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`プロパティにバイト配列の内容を割り当てて入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、フォームデータの格納に使用されます。
+   * コンストラクターを呼び出し、フォームデータを含むXMLファイルのファイル位置、およびファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`プロパティにバイト配列の内容を割り当てて入力します。
+   * 実行時オプションの設定に使用する`PDFFormRenderSpec`オブジェクトを作成します。 値`true`を`PDFFormRenderSpec`オブジェクトの`generateServerAppearance`フィールドに割り当てます。
+   * `FormsServiceClient`オブジェクトの`renderPDFForm2`メソッドを呼び出し、次の値を渡します。
 
-      * レンダリングするPDFフォームを含む `BLOB` オブジェクトです。
-      * フォームとマージするデータを含む `BLOB` オブジェクト。
-      * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。
-      * Formsサービスに必要なURI値を含む `URLSpec` オブジェクトです。 このパラメーター値 `null` を指定できます。
-      * 添付ファイルを格納する `java.util.HashMap` オブジェクトです。 これはオプションのパラメーターで、フォームにファイルを添付しない `null` かどうかを指定できます。
+      * レンダリングするPDFフォームを含む`BLOB`オブジェクト。
+      * フォームとマージするデータを含む`BLOB`オブジェクト。
+      * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。
+      * Formsサービスに必要なURI値を含む`URLSpec`オブジェクト。 このパラメーター値には`null`を指定できます。
+      * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターです。フォームにファイルを添付しない場合は、`null`を指定できます。
       * フォーム内のページ数を保存するために使用される長い出力パラメーター。
       * ロケール値に使用される文字列出力パラメーターです。
-      * インタラクティブフォームの保存に使用される出力パラメーターである `FormResult` 値です。
-   * オブジェクトのフィールドを呼び出して、PDFフォーム `FormsResult` を取得し `outputContent` ます。 このフィールドには、インタラクティブフォームを表す `BLOB` オブジェクトが格納されます。
+      * インタラクティブフォームの保存に使用される出力パラメーターである`FormResult`値。
+   * `FormsResult`オブジェクトの`outputContent`フィールドを呼び出して、PDFフォームを取得します。 このフィールドには、インタラクティブフォームを表す`BLOB`オブジェクトが格納されます。
 
 
 1. インタラクティブフォームに署名する
 
-   オブジェクトの `SignatureServiceClient``sign` メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
+   `SignatureServiceClient`オブジェクトの`sign`メソッドを呼び出し、次の値を渡して、PDFドキュメントに署名します。
 
-   * A `BLOB` object that represents the PDF document to sign. Formsサービスから返される `BLOB` インスタンスを使用します。
+   * 署名するPDFドキュメントを表す`BLOB`オブジェクトです。 Formsサービスから返される`BLOB`インスタンスを使用します。
    * 署名された署名フィールドの名前を表すstring値です。
-   * A `Credential` object that represents the credential that is used to digitally sign the PDF document. コンストラクターを使用して `Credential` オブジェクトを作成し、オブジェクトのプロパティに値を割り当ててエイリアスを指定し `Credential` ま `alias` す。
-   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクトです。 例えば、SHA1アルゴリズム `HashAlgorithm.SHA1` を使用するように指定できます。
+   * PDFドキュメントのデジタル署名に使用される秘密鍵証明書を表す`Credential`オブジェクトです。 `Credential`オブジェクトを作成するには、コンストラクターを使用します。また、`Credential`オブジェクトの`alias`プロパティに値を割り当ててエイリアスを指定します。
+   * PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムを表す静的データメンバーを指定する`HashAlgorithm`オブジェクトです。 例えば、`HashAlgorithm.SHA1`にSHA1アルゴリズムを使用するよう指定できます。
    * ハッシュアルゴリズムを使用するかどうかを指定するBoolean値です。
    * PDFドキュメントがデジタル署名された理由を表すstring値です。
    * 署名者の場所を表すstring値です。
    * 署名者の連絡先情報を表すstring値です。
-   * 電子署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
-   * 署名者の証明書に対して失効確認を実行するかどうかを指定する `System.Boolean` オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
-   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する `OCSPPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。 このオブジェクトについて詳しくは、『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照してください。
-   * 証明書失効リスト(CRL)の環境設定を格納する `CRLPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * タイムスタンププロバイダー(TSP)でサポートされる環境設定を格納する `TSPPreferences` オブジェクトです。 このパラメーターはオプションで、を指定でき `null`ます。
+   * 電子署名の外観を制御する`PDFSignatureAppearanceOptions`オブジェクトです。 例えば、このオブジェクトを使用して、電子署名にカスタムロゴを追加できます。
+   * 署名者の証明書に対して失効確認を実行するかどうかを指定する`System.Boolean`オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
+   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する`OCSPPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。 このオブジェクトについて詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   * 証明書失効リスト(CRL)の環境設定を格納する`CRLPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * タイムスタンププロバイダー(TSP)サポートの環境設定を格納する`TSPPreferences`オブジェクトです。 このパラメーターはオプションで、`null`にすることができます。
 
-   署名済みPDFドキュメントを表す `sign``BLOB` オブジェクトを返します。
+   `sign`メソッドは、署名済みPDFドキュメントを表す`BLOB`オブジェクトを返します。
 
 1. 署名済みPDFドキュメントの保存
 
-   * Create a `System.IO.FileStream` object by invoking its constructor. 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `sign` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
+   * `sign`メソッドから返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -1065,7 +1065,7 @@ Formsおよび署名API（Webサービス）を使用して、インタラクテ
 * ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更が可能になるように指定することができます。例えば、フォームへの入力やコメント入力を許可するドキュメントなどがあります。作成者が特定の変更を許可しないように設定を行った場合は、Acrobat はユーザーのその方法によるドキュメントの変更を制限します。別のアプリケーションを使用するなどしてそのような変更が行われた場合は、認証署名は無効となり、Acrobat はユーザーがドキュメントを開いた際に警告を発します。（未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
 * 署名時に、ドキュメントのコンテンツにあいまいさや誤解をもたらす可能性のある、特定の種類のコンテンツをスキャンします。例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。そのようなコンテンツに関する、説明（法的証明）を提供することができます。
 
-SignatureサービスJava APIまたはSignature WebサービスAPIを使用して、PDFドキュメントをプログラムで認証できます。 PDFドキュメントを認証する場合は、秘密鍵証明書サービスに存在するセキュリティ秘密鍵証明書を参照する必要があります。 セキュリティ証明書について詳しくは、使用しているアプリケーションサーバー版の『 *インストールおよびデプロイ(AEM Forms* )』ガイドを参照してください。
+SignatureサービスJava APIまたはSignature WebサービスAPIを使用して、PDFドキュメントをプログラムで認証できます。 PDFドキュメントを認証する場合は、秘密鍵証明書サービスに存在するセキュリティ秘密鍵証明書を参照する必要があります。 セキュリティ証明書について詳しくは、使用しているアプリケーションサーバー版の『*AEM Forms*&#x200B;のインストールおよびデプロイ』ガイドを参照してください。
 
 >[!NOTE]
 >
@@ -1085,9 +1085,9 @@ SignatureサービスJava APIまたはSignature WebサービスAPIを使用し�
 
 >[!NOTE]
 >
->Signatureサービスとドキュメントの認証について詳しくは、『 [サービスリファレンス(AEM Forms版)](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>Signatureサービスとドキュメントの認証について詳しくは、『[AEM Forms向けサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-5}
+### 手順{#summary_of_steps-5}の概要
 
 PDFドキュメントを認証するには、次のタスクを実行します。
 
@@ -1109,7 +1109,7 @@ PDFドキュメントを認証するには、次のタスクを実行します�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-For information about the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **署名クライアントの作成**
 
@@ -1117,26 +1117,26 @@ For information about the location of these JAR files, see [Including AEM Forms 
 
 **認証用のPDFドキュメントの取得**
 
-PDFドキュメントを認証するには、署名フィールドを含むPDFドキュメントを取得する必要があります。 PDFドキュメントに署名フィールドが含まれていない場合は、認証できません。 署名フィールドは、Designerを使用して追加することも、プログラムを使用して追加することもできます。 プログラムによる署名フィールドの追加について詳しくは、「署名フィールドの [追加](digitally-signing-certifying-documents.md#adding-signature-fields)」を参照してください。
+PDFドキュメントを認証するには、署名フィールドを含むPDFドキュメントを取得する必要があります。 PDFドキュメントに署名フィールドが含まれていない場合は、認証できません。 署名フィールドは、Designerを使用して追加することも、プログラムを使用して追加することもできます。 プログラムによる署名フィールドの追加について詳しくは、「[署名フィールドの追加](digitally-signing-certifying-documents.md#adding-signature-fields)」を参照してください。
 
 **PDFドキュメントの認証**
 
 PDFドキュメントを正常に認証するには、SignatureサービスでPDFドキュメントの認証に使用される次の入力値が必要です。
 
-* **PDFドキュメント**:署名フィールドを含むPDFドキュメントです。署名フィールドは、認証署名のグラフィック表現を含むフォームフィールドです。 PDFドキュメントを認証するには、その前に署名フィールドがPDF署名に含まれている必要があります。 署名フィールドは、Designerを使用して追加することも、プログラムを使用して追加することもできます。 (署名フィールドの [追加を参照](digitally-signing-certifying-documents.md#adding-signature-fields))。
-* **署名フィールド名**:認証される署名フィールドの完全修飾名です。 次の値は例です。 `form1[0].#subform[1].SignatureField3[3]`. XFAフォームフィールドを使用する場合は、署名フィールドの名前の一部を使用することもできます。 `SignatureField3[3]`. フィールド名にnull値が渡されると、非表示の署名フィールドが動的に作成され、認証されます。
-* **セキュリティ証明書**:PDFドキュメントの認証に使用する秘密鍵証明書です。 このセキュリティ証明書には、パスワードとエイリアスが含まれています。これは、Credentialサービス内の秘密鍵証明書に表示されるエイリアスと一致する必要があります。 エイリアスは、PKCS#12ファイル（拡張子.pfx付き）またはハードウェアセキュリティモジュール(HSM)内の実際の秘密鍵証明書への参照です。
+* **PDFドキュメント**:署名フィールドを含むPDFドキュメントです。署名フィールドは、認証署名のグラフィック表現を含むフォームフィールドです。PDFドキュメントを認証するには、その前に署名フィールドがPDF署名に含まれている必要があります。 署名フィールドは、Designerを使用して追加することも、プログラムを使用して追加することもできます。 （「[署名フィールドの追加](digitally-signing-certifying-documents.md#adding-signature-fields)」を参照）。
+* **署名フィールド名**:認証される署名フィールドの完全修飾名です。次の値は例です。`form1[0].#subform[1].SignatureField3[3]`. XFAフォームフィールドを使用する場合は、署名フィールドの名前の一部を使用することもできます。`SignatureField3[3]`. フィールド名にnull値が渡されると、非表示の署名フィールドが動的に作成され、認証されます。
+* **セキュリティ証明書**:PDFドキュメントの認証に使用する秘密鍵証明書です。このセキュリティ証明書には、パスワードとエイリアスが含まれています。これは、Credentialサービス内の秘密鍵証明書に表示されるエイリアスと一致する必要があります。 エイリアスは、PKCS#12ファイル（拡張子.pfx付き）またはハードウェアセキュリティモジュール(HSM)内の実際の秘密鍵証明書への参照です。
 * **ハッシュアルゴリズム**:PDFドキュメントのダイジェストの作成に使用するハッシュアルゴリズムです。
 * **署名の理由**:PDFドキュメントが認証された理由を他のユーザーが把握できるように、AcrobatまたはAdobe Readerに表示される値です。
 * **署名者の場所**:秘密鍵証明書で指定された署名者の場所です。
 * **連絡先情報**:署名者の住所や電話番号などの連絡先情報。
-* **権限情報**:認証署名を無効にすることなく、エンドユーザーがドキュメントに対して実行できる操作を制御する権限です。 例えば、権限を設定して、PDFドキュメントを変更すると認証署名が無効になるようにすることができます。
-* **法的説明**:ドキュメントを認証すると、ドキュメントのコンテンツをあいまいにしたり誤解を招く可能性のある、特定のタイプのコンテンツを自動的にスキャンします。 例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。スキャン処理では、この種のコンテンツに関する警告が生成されます。 この値は、警告が生成された可能性のあるコンテンツに関する追加の説明を提供します。
-* **外観オプション**:認証署名の外観を制御するオプションです。 例えば、認証署名には日付情報を表示できます。
-* **失効確認**:この値は、署名者の証明書に対して失効確認を行うかどうかを指定します。 デフォルト設定ので `false` は、失効確認は行われません。
-* **OCSP settings**:PDFドキュメントの認証に使用される秘密鍵証明書のステータスに関する情報を提供する、オンライン証明書ステータスプロトコル(OCSP)サポートの設定です。 例えば、PDFドキュメントへのサインオンに使用する秘密鍵証明書に関する情報を提供するサーバーのURLを指定できます。
-* **CRL settings**:失効確認が行われた場合の証明書失効リスト(CRL)の環境設定です。 例えば、秘密鍵証明書が失効したかどうかを常に確認するように指定できます。
-* **タイムスタンプ**:認証署名に適用されるタイムスタンプ情報を定義する設定です。 タイムスタンプは、特定のデータが特定の時間の前に確立されたことを示します。 この情報は、署名者と検証者の間に信頼関係を構築するのに役立ちます。
+* **権限情報**:認証署名を無効にすることなく、エンドユーザーがドキュメントに対して実行できる操作を制御する権限です。例えば、権限を設定して、PDFドキュメントを変更すると認証署名が無効になるようにすることができます。
+* **法的説明**:ドキュメントを認証すると、ドキュメントのコンテンツをあいまいにしたり誤解を招く可能性のある、特定のタイプのコンテンツを自動的にスキャンします。例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。スキャン処理では、この種のコンテンツに関する警告が生成されます。 この値は、警告が生成された可能性のあるコンテンツに関する追加の説明を提供します。
+* **外観オプション**:認証署名の外観を制御するオプションです。例えば、認証署名には日付情報を表示できます。
+* **失効確認**:この値は、署名者の証明書に対して失効確認を行うかどうかを指定します。デフォルト設定の`false`では、失効確認は実行されません。
+* **OCSP settings**:PDFドキュメントの認証に使用される秘密鍵証明書のステータスに関する情報を提供する、オンライン証明書ステータスプロトコル(OCSP)サポートの設定です。例えば、PDFドキュメントへのサインオンに使用する秘密鍵証明書に関する情報を提供するサーバーのURLを指定できます。
+* **CRL settings**:失効確認が行われた場合の証明書失効リスト(CRL)の環境設定です。例えば、秘密鍵証明書が失効したかどうかを常に確認するように指定できます。
+* **タイムスタンプ**:認証署名に適用されるタイムスタンプ情報を定義する設定です。タイムスタンプは、特定のデータが特定の時間の前に確立されたことを示します。 この情報は、署名者と検証者の間に信頼関係を構築するのに役立ちます。
 
 **認証済みPDFドキュメントをPDFファイルとして保存する**
 
@@ -1154,7 +1154,7 @@ SignatureサービスがPDFドキュメントを認証した後、その画像�
 
 [署名フィールドの追加](digitally-signing-certifying-documents.md#adding-signature-fields)
 
-### Java APIを使用したPDFドキュメントの認証 {#certify-pdf-documents-using-the-java-api}
+### Java API {#certify-pdf-documents-using-the-java-api}を使用してPDFドキュメントを認証する
 
 Signature API(Java)を使用してPDFドキュメントを認証します。
 
@@ -1169,34 +1169,34 @@ Signature API(Java)を使用してPDFドキュメントを認証します。
 
 1. 認証用のPDFドキュメントの取得
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、認証するPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、認証するPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. PDFドキュメントの認証
 
-   オブジェクトの `SignatureServiceClient` メソッドを呼び出し、次の値を渡して、PDFドキュメントを認証し `certify` ます。
+   `SignatureServiceClient`オブジェクトの`certify`メソッドを呼び出し、次の値を渡して、PDFドキュメントを認証します。
 
-   * 認証するPDFドキュメントを表す `com.adobe.idp.Document` オブジェクトです。
+   * 認証するPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトです。
    * 署名を含む署名フィールドの名前を表すstring値です。
-   * A `Credential` object that represents the credential that is used to certify the PDF document. オブジェクトの静的な `Credential` メソッドを呼び出し、セキュリティ証明書に対応するエイリアス値を指定する文字列値を渡して、 `Credential``getInstance` オブジェクトを作成します。
-   * PDFドキュメントのダイジェストの作成に使用されるハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクトです。 例えば、SHA1アルゴリズム `HashAlgorithm.SHA1` を使用するように指定できます。
+   * PDFドキュメントの認証に使用される秘密鍵証明書を表す`Credential`オブジェクトです。 `Credential`オブジェクトの静的な`getInstance`メソッドを呼び出し、セキュリティ証明書に対応するエイリアス値を指定する文字列値を渡して、`Credential`オブジェクトを作成します。
+   * PDFドキュメントのダイジェストの作成に使用されるハッシュアルゴリズムを表す静的データメンバーを指定する`HashAlgorithm`オブジェクトです。 例えば、`HashAlgorithm.SHA1`にSHA1アルゴリズムを使用するよう指定できます。
    * PDFドキュメントが認証された理由を表すstring値です。
    * 署名者の連絡先情報を表すstring値です。
-   * 署名を無効にするPDFドキュメントで実行できるアクションを指定する `MDPPermissions` オブジェクトです。
-   * 認証署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクトです。 必要に応じて、などのメソッドを呼び出して、署名の外観を変更し `setShowDate`ます。
+   * 署名を無効にするPDFドキュメントで実行できるアクションを指定する`MDPPermissions`オブジェクトです。
+   * 認証署名の外観を制御する`PDFSignatureAppearanceOptions`オブジェクトです。 必要に応じて、`setShowDate`などのメソッドを呼び出して、署名の外観を変更します。
    * 署名を無効にするアクションについての説明を提供するstring値です。
-   * 署名者の証明書に対して失効確認を実行するかどうかを指定する `java.lang.Boolean` オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
-   * 認証する署名フィールドがロックされているかどうかを指定する `java.lang.Boolean` オブジェクトです。 フィールドをロックすると、署名フィールドは読み取り専用としてマークされ、プロパティを変更できなくなり、必要な権限を持たないユーザーはこのフィールドをクリアできなくなります。 デフォルトは、`false` です。
-   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する `OCSPPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。 このオブジェクトについて詳しくは、『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照してください。
-   * 証明書失効リスト(CRL)の環境設定を格納する `CRLPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * タイムスタンププロバイダー(TSP)でサポートされる環境設定を格納する `TSPPreferences` オブジェクトです。 例えば、 `TSPPreferences` オブジェクトを作成した後、オブジェクトの `TSPPreferences``setTspServerURL` メソッドを呼び出して、TSPサーバーのURLを設定できます。 このパラメーターはオプションで、を指定でき `null`ます。 For more information, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+   * 署名者の証明書に対して失効確認を実行するかどうかを指定する`java.lang.Boolean`オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
+   * 認証する署名フィールドがロックされているかどうかを指定する`java.lang.Boolean`オブジェクトです。 フィールドをロックすると、署名フィールドは読み取り専用としてマークされ、プロパティを変更できなくなり、必要な権限を持たないユーザーはこのフィールドをクリアできなくなります。 デフォルトは、`false` です。
+   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する`OCSPPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。 このオブジェクトについて詳しくは、「[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照してください。
+   * 証明書失効リスト(CRL)の環境設定を格納する`CRLPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * タイムスタンププロバイダー(TSP)サポートの環境設定を格納する`TSPPreferences`オブジェクトです。 例えば、`TSPPreferences`オブジェクトを作成した後、`TSPPreferences`オブジェクトの`setTspServerURL`メソッドを呼び出して、TSPサーバーのURLを設定できます。 このパラメーターはオプションで、`null`にすることができます。 詳しくは、[『AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)サービスリファレンス』を参照してください。
 
-   認証済みのPDFドキュメントを表す `certify``com.adobe.idp.Document` オブジェクトを返します。
+   `certify`メソッドは、認証済みPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトを返します。
 
 1. 認証済みPDFドキュメントをPDFファイルとして保存する
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method to copy the contents of the `com.adobe.idp.Document` object to the file.
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします。
 
 **関連トピック**
 
@@ -1208,70 +1208,70 @@ Signature API(Java)を使用してPDFドキュメントを認証します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したPDFドキュメントの認証 {#certify-pdf-documents-using-the-web-service-api}
+### WebサービスAPI {#certify-pdf-documents-using-the-web-service-api}を使用してPDFドキュメントを認証する
 
 Signature API（Webサービス）を使用してPDFドキュメントを認証します。
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 認証用のPDFドキュメントの取得
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、認証済みのPDFドキュメントの保存に使用されます。
-   * コンストラクターを呼び出し、認証するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * データメンバにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、認証済みのPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、認証するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`データメンバにバイト配列の内容を割り当てて、&lt;a0/>オブジェクトを入力します。
 
 1. PDFドキュメントの認証
 
-   オブジェクトの `SignatureServiceClient` メソッドを呼び出し、次の値を渡して、PDFドキュメントを認証し `certify` ます。
+   `SignatureServiceClient`オブジェクトの`certify`メソッドを呼び出し、次の値を渡して、PDFドキュメントを認証します。
 
-   * 認証するPDFドキュメントを表す `BLOB` オブジェクトです。
+   * 認証するPDFドキュメントを表す`BLOB`オブジェクトです。
    * 署名を含む署名フィールドの名前を表すstring値です。
-   * A `Credential` object that represents the credential that is used to certify the PDF document. コンストラクターを使用して `Credential` オブジェクトを作成し、オブジェクトのプロパティに値を割り当ててエイリアスを指定し `Credential` ま `alias` す。
-   * PDFドキュメントのダイジェストの作成に使用されるハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクトです。 例えば、SHA1アルゴリズム `HashAlgorithm.SHA1` を使用するように指定できます。
+   * PDFドキュメントの認証に使用される秘密鍵証明書を表す`Credential`オブジェクトです。 `Credential`オブジェクトを作成するには、コンストラクターを使用します。エイリアスを指定するには、`Credential`オブジェクトの`alias`プロパティに値を割り当てます。
+   * PDFドキュメントのダイジェストの作成に使用されるハッシュアルゴリズムを表す静的データメンバーを指定する`HashAlgorithm`オブジェクトです。 例えば、`HashAlgorithm.SHA1`にSHA1アルゴリズムを使用するよう指定できます。
    * ハッシュアルゴリズムを使用するかどうかを指定するBoolean値です。
    * PDFドキュメントが認証された理由を表すstring値です。
    * 署名者の場所を表すstring値です。
    * 署名者の連絡先情報を表すstring値です。
-   * 署名を無効にするPDFドキュメントで実行できるアクションを指定する `MDPPermissions` オブジェクトの静的データメンバーです。
-   * 前のパラメーター値として渡された `MDPPermissions` オブジェクトを使用するかどうかを指定するBoolean値です。
+   * 署名を無効にするPDFドキュメントで実行できるアクションを指定する`MDPPermissions`オブジェクトの静的データメンバーです。
+   * 前のパラメーター値として渡された`MDPPermissions`オブジェクトを使用するかどうかを指定するBoolean値。
    * 署名を無効にするアクションを説明するstring値です。
-   * 認証署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクトです。 コンストラクタを使用して `PDFSignatureAppearanceOptions` オブジェクトを作成します。データメンバーの1つを設定して、署名の外観を変更できます。
-   * 署名者の証明書に対して失効確認を実行するかどうかを指定する `System.Boolean` オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
-   * 認証する署名フィールドがロックされているかどうかを指定する `System.Boolean` オブジェクトです。 フィールドをロックすると、署名フィールドは読み取り専用としてマークされ、プロパティを変更できなくなり、必要な権限を持たないユーザーはこのフィールドをクリアできなくなります。 デフォルトは、`false` です。
-   * 署名フィールドをロックするかどうかを指定する `System.Boolean` オブジェクトです。 つまり、前のパラメーター `true` に渡した場合は、このパラメーター `true` に渡します。
-   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する `OCSPPreferences` オブジェクトです。PDFドキュメントの認証に使用される秘密鍵証明書のステータスに関する情報を提供します。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * 証明書失効リスト(CRL)の環境設定を格納する `CRLPreferences` オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、指定でき `null`ます。
-   * タイムスタンププロバイダー(TSP)でサポートされる環境設定を格納する `TSPPreferences` オブジェクトです。 例えば、 `TSPPreferences` オブジェクトを作成した後に、オブジェクトの `TSPPreferences``tspServerURL` データメンバーを設定して、TSPのURLを設定できます。 このパラメーターはオプションで、を指定でき `null`ます。
+   * 認証署名の外観を制御する`PDFSignatureAppearanceOptions`オブジェクトです。 コンストラクタを使用して `PDFSignatureAppearanceOptions` オブジェクトを作成します。データメンバーの1つを設定して、署名の外観を変更できます。
+   * 署名者の証明書に対して失効確認を実行するかどうかを指定する`System.Boolean`オブジェクトです。 この失効確認が行われると、署名に埋め込まれます。 デフォルトは、`false` です。
+   * 認証する署名フィールドがロックされているかどうかを指定する`System.Boolean`オブジェクトです。 フィールドをロックすると、署名フィールドは読み取り専用としてマークされ、プロパティを変更できなくなり、必要な権限を持たないユーザーはこのフィールドをクリアできなくなります。 デフォルトは、`false` です。
+   * 署名フィールドをロックするかどうかを指定する`System.Boolean`オブジェクトです。 つまり、前のパラメーターに`true`を渡す場合は、このパラメーターに`true`を渡します。
+   * オンライン証明書ステータスプロトコル(OCSP)サポートの環境設定を格納する`OCSPPreferences`オブジェクトです。PDFドキュメントの認証に使用される秘密鍵証明書のステータスに関する情報を提供します。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * 証明書失効リスト(CRL)の環境設定を格納する`CRLPreferences`オブジェクトです。 失効確認が実行されない場合、このパラメーターは使用されず、`null`を指定できます。
+   * タイムスタンププロバイダー(TSP)サポートの環境設定を格納する`TSPPreferences`オブジェクトです。 例えば、`TSPPreferences`オブジェクトを作成した後、`TSPPreferences`オブジェクトの`tspServerURL`データメンバーを設定することで、TSPのURLを設定できます。 このパラメーターはオプションで、`null`にすることができます。
 
-   認証済みのPDFドキュメントを表す `certify``BLOB` オブジェクトを返します。
+   `certify`メソッドは、認証済みPDFドキュメントを表す`BLOB`オブジェクトを返します。
 
 1. 認証済みPDFドキュメントをPDFファイルとして保存する
 
-   * コンストラクターを呼び出し、認証済みのPDF `System.IO.FileStream` ドキュメントと、そのファイルを開くモードを含むPDFドキュメントのファイルの場所を表すstring値を渡して、オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `certify` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `binaryData` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、認証済みのPDFドキュメントーとファイルを開くモードを含むPDFドキュメントーのファイルの場所を表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `certify`メソッドから返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`binaryData`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -1281,7 +1281,7 @@ Signature API（Webサービス）を使用してPDFドキュメントを認証�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Verifying Digital Signatures {#verifying-digital-signatures}
+## デジタル署名の検証{#verifying-digital-signatures}
 
 電子署名を検証することで、署名された PDF ドキュメントに変更がなく、電子署名が有効であることを確認することができます。電子署名を検証する際に、署名のステータスや、署名者のIDなどの署名のプロパティを確認できます。 電子署名を信用する前に、検証することをおすすめします。電子署名を検証する際、電子署名を含む PDF ドキュメントを参照します。
 
@@ -1293,9 +1293,9 @@ Signature API（Webサービス）を使用してPDFドキュメントを認証�
 
 >[!NOTE]
 >
->Signatureサービスと電子署名の検証について詳しくは、『 [サービスリファレンス(AEM Forms版)](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>Signatureサービスと電子署名の検証について詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-6}
+### 手順{#summary_of_steps-6}の概要
 
 電子署名を検証するには、次のタスクを実行します。
 
@@ -1319,7 +1319,7 @@ Signature API（Webサービス）を使用してPDFドキュメントを認証�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-For information about the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **署名クライアントの作成**
 
@@ -1337,13 +1337,13 @@ PDFドキュメントの署名を検証する際にSignatureサービスで使�
 * 失効確認
 * タイムスタンプ値
 
-これらのオプションの設定の一環として、検証時刻を指定できます。 例えば、現在の時間（バリデーターのコンピューター上の時間）を選択できます。これは現在の時間を使用することを示します。 様々な時間値について詳しくは、 `VerificationTime` AEM FormsAPIリファレンスの [定義済みリスト値を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+これらのオプションの設定の一環として、検証時刻を指定できます。 例えば、現在の時間（バリデーターのコンピューター上の時間）を選択できます。これは現在の時間を使用することを示します。 異なる時間値について詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の`VerificationTime`定義済みリスト値を参照してください。
 
-検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。 例えば、失効確認を実行して、証明書が失効したかどうかを判断できます。 失効確認オプションについて詳しくは、『 `RevocationCheckStyle` AEM FormsAPIリファレンス [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』の「定義済みリストの値」を参照してください。
+検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。 例えば、失効確認を実行して、証明書が失効したかどうかを判断できます。 失効確認オプションについて詳しくは、『[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』の`RevocationCheckStyle`定義済みリスト値を参照してください。
 
-証明書に対して失効確認を実行するには、 `CRLOptionSpec` オブジェクトを使用して、証明書失効リスト(CRL)サーバーへのURLを指定します。 ただし、URLをCRLサーバーに指定しない場合、Signatureサービスは証明書からURLを取得します。
+証明書に対して失効確認を実行するには、`CRLOptionSpec`オブジェクトを使用して、証明書失効リスト(CRL)サーバーへのURLを指定します。 ただし、URLをCRLサーバーに指定しない場合、Signatureサービスは証明書からURLを取得します。
 
-失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーとは異なるOCSPサーバーを使用する場合、失効確認は高速に実行されます。 (See [Online Certificate Status Protocol](https://tools.ietf.org/html/rfc2560).)
+失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーとは異なるOCSPサーバーを使用する場合、失効確認は高速に実行されます。 （[オンライン証明書ステータスプロトコル](https://tools.ietf.org/html/rfc2560)を参照）。
 
 Signatureサービスで使用するCRLおよびOCSPAdobeの順序は、「Applications and Services」を使用して設定できます。 例えば、「Adobeアプリケーションおよびサービス」でOCSPサーバーを最初に設定した場合、OCSPサーバーを確認し、次にCRLサーバーを確認します。
 
@@ -1351,23 +1351,23 @@ Signatureサービスで使用するCRLおよびOCSPAdobeの順序は、「Appli
 
 >[!NOTE]
 >
->証明書で指定されたURLは、とオブジェクトを使用して上書き `CRLOptionSpec` でき `OCSPOptionSpec` ます。 例えば、CRLサーバーを上書きするには、 `CRLOptionSpec` オブジェクトの `setLocalURI` メソッドを呼び出します。
+>`CRLOptionSpec`および`OCSPOptionSpec`オブジェクトを使用して、証明書で指定されたURLを上書きできます。 例えば、CRLサーバーを上書きするには、`CRLOptionSpec`オブジェクトの`setLocalURI`メソッドを呼び出します。
 
-タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時間を追跡するプロセスです。 ドキュメントに署名した後は、誰もその署名を変更できません。 タイムスタンプ機能を使用すると、署名済みまたは認証済みのドキュメントの有効性を強化できます。 タイムスタンプオプションは、 `TSPOptionSpec` オブジェクトを使用して設定できます。 例えば、タイムスタンププロバイダー(TSP)サーバーのURLを指定できます。
+タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時間を追跡するプロセスです。 ドキュメントに署名した後は、誰もその署名を変更できません。 タイムスタンプ機能を使用すると、署名済みまたは認証済みのドキュメントの有効性を強化できます。 `TSPOptionSpec`オブジェクトを使用して、タイムスタンプオプションを設定できます。 例えば、タイムスタンププロバイダー(TSP)サーバーのURLを指定できます。
 
 >[!NOTE]
 >
->JavaおよびWebサービスのクイック開始では、検証時刻はに、失効確認は `VerificationTime.CURRENT_TIME` に設定され `RevocationCheckStyle.BestEffort`ます。 CRLまたはOCSPサーバー情報が指定されていないので、サーバー情報は証明書から取得されます。
+>JavaおよびWebサービスのクイック開始では、検証時刻は`VerificationTime.CURRENT_TIME`に、失効確認は`RevocationCheckStyle.BestEffort`に設定されます。 CRLまたはOCSPサーバー情報が指定されていないので、サーバー情報は証明書から取得されます。
 
 **電子署名の検証**
 
-署名を正しく検証するには、署名が含まれる署名フィールドの完全修飾名を指定します（例：） `form1[0].#subform[1].SignatureField3[3]`。 XFAフォームフィールドを使用する場合は、署名フィールドの名前の一部を使用することもできます。 `SignatureField3`.
+署名を正しく検証するには、署名が含まれる署名フィールドの完全修飾名を指定します（例：`form1[0].#subform[1].SignatureField3[3]`）。 XFAフォームフィールドを使用する場合は、署名フィールドの名前の一部を使用することもできます。`SignatureField3`.
 
 デフォルトでは、Signatureサービスでは、検証後にドキュメントに署名できる時間が65分に制限されます。 ユーザーが現在の時刻に署名を検証しようとしたときに、署名時刻が現在の時刻より後で65分以内になった場合、Signatureサービスでは検証エラーは作成されません。
 
 >[!NOTE]
 >
->署名を検証する際に必要なその他の値については、『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照してください。
+>署名を検証する際に必要なその他の値については、『[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照してください。
 
 **署名のステータスの確認**
 
@@ -1391,7 +1391,7 @@ Signatureサービスで使用するCRLおよびOCSPAdobeの順序は、「Appli
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Java APIを使用した電子署名の検証 {#verify-digital-signatures-using-the-java-api}
+### Java APIを使用した電子署名の検証{#verify-digital-signatures-using-the-java-api}
 
 Signature Service API(Java)を使用して電子署名を検証します。
 
@@ -1406,34 +1406,34 @@ Signature Service API(Java)を使用して電子署名を検証します。
 
 1. 検証する署名が含まれているPDFドキュメントを取得します
 
-   * 検証対象の署名が含まれているPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを、コンストラクターを使用して作成します。 PDFドキュメントの場所を指定するstring値を渡します。
+   * 検証する署名が含まれているPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを、コンストラクターを使用して作成します。 PDFドキュメントの場所を指定するstring値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. PKIランタイムオプションの設定
 
    * コンストラクタを使用して `PKIOptions` オブジェクトを作成します。
-   * 検証時刻を設定するには、 `PKIOptions` オブジェクトの `setVerificationTime` メソッドを呼び出し、検証時刻を指定する `VerificationTime` 定義済みリスト値を渡します。
-   * 失効確認オプションを設定するには、 `PKIOptions` オブジェクトの `setRevocationCheckStyle` メソッドを呼び出し、失効確認を実行するかどうかを指定する `RevocationCheckStyle` 定義済みリスト値を渡します。
+   * `PKIOptions`オブジェクトの`setVerificationTime`メソッドを呼び出し、検証時刻を指定する`VerificationTime`定義済みリスト値を渡して、検証時刻を設定します。
+   * `PKIOptions`オブジェクトの`setRevocationCheckStyle`メソッドを呼び出し、失効確認を実行するかどうかを指定する`RevocationCheckStyle`定義済みリスト値を渡して、失効確認オプションを設定します。
 
 1. 電子署名の検証
 
-   オブジェクトの `SignatureServiceClient``verify2` メソッドを呼び出し、次の値を渡して署名を検証します。
+   `SignatureServiceClient`オブジェクトの`verify2`メソッドを呼び出し、次の値を渡して、署名を検証します。
 
-   * デジタル署名された、または認証されたPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
+   * デジタル署名された、または認証されたPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトです。
    * 検証する署名が含まれている署名フィールド名を表すstring値です。
-   * PKI実行時オプションを含む `PKIOptions` オブジェクトです。
-   * SPI情報を含む `VerifySPIOptions` インスタンスです。 このパラメーター `null` を指定できます。
+   * PKIランタイムオプションを含む`PKIOptions`オブジェクト。
+   * SPI情報を含む`VerifySPIOptions`インスタンスです。 このパラメーターには`null`を指定できます。
 
-   この `verify2``PDFSignatureVerificationInfo` メソッドは、電子署名の検証に使用できる情報を含むオブジェクトを返します。
+   `verify2`メソッドは、デジタル署名の検証に使用できる情報を含む`PDFSignatureVerificationInfo`オブジェクトを返します。
 
 1. 署名のステータスの確認
 
-   * オブジェクトのメソッドを呼び出して、署名のステータス `PDFSignatureVerificationInfo` を特定し `getStatus` ます。 このメソッドは、署名ステータスを指定する `SignatureStatus` オブジェクトを返します。 例えば、署名済みPDFドキュメントが変更されていない場合、このメソッドはを返し `SignatureStatus.DocumentSigNoChanges`ます。
+   * `PDFSignatureVerificationInfo`オブジェクトの`getStatus`メソッドを呼び出して、署名のステータスを判断します。 このメソッドは、署名の状態を指定する`SignatureStatus`オブジェクトを返します。 例えば、署名済みPDFのドキュメントが変更されていない場合、このメソッドは`SignatureStatus.DocumentSigNoChanges`を返します。
 
 1. 署名者のIDの確認
 
-   * オブジェクトのメソッドを呼び出して、署名者のID `PDFSignatureVerificationInfo` を特定し `getSigner` ます。 このメソッドは、 `IdentityInformation` オブジェクトを返します。
-   * 署名者のIDを決定するために、 `IdentityInformation` オブジェクトの `getStatus` メソッドを呼び出します。 このメソッドは、IDを指定する `IdentityStatus` 定義済みリスト値を返します。 例えば、署名者が信頼できる場合、このメソッドは、を返し `IdentityStatus.TRUSTED`ます。
+   * `PDFSignatureVerificationInfo`オブジェクトの`getSigner`メソッドを呼び出して、署名者のIDを特定します。 このメソッドは、`IdentityInformation`オブジェクトを返します。
+   * `IdentityInformation`オブジェクトの`getStatus`メソッドを呼び出して、署名者のIDを特定します。 このメソッドは、IDを指定する`IdentityStatus`定義済みリスト値を返します。 例えば、署名者が信頼できる場合、このメソッドは`IdentityStatus.TRUSTED`を返します。
 
 **関連トピック**
 
@@ -1445,64 +1445,64 @@ Signature Service API(Java)を使用して電子署名を検証します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した電子署名の検証 {#verify-digital-signatures-using-the-web-service-api}
+### WebサービスAPI {#verify-digital-signatures-using-the-web-service-api}を使用した電子署名の検証
 
 Signature Service API（Webサービス）を使用して電子署名を検証します。
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 検証する署名が含まれているPDFドキュメントを取得します
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、検証するデジタル署名または認証署名が含まれているPDFドキュメントの保存に使用されます。
-   * Create a `System.IO.FileStream` object by invoking its constructor. 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、検証するデジタル署名または認証署名が含まれるPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * `BLOB`オブジェクトに、`MTOM`プロパティにバイト配列の内容を割り当てて入力します。
 
 1. PKIランタイムオプションの設定
 
    * コンストラクタを使用して `PKIOptions` オブジェクトを作成します。
-   * 検証時刻を設定するには、 `PKIOptions` オブジェクトの `verificationTime` データメンバに検証時刻を指定する `VerificationTime` 定義済みリスト値を割り当てます。
-   * 失効確認オプションを設定するには、 `PKIOptions` オブジェクトの `revocationCheckStyle` データメンバに失効確認を実行するかどうかを指定する `RevocationCheckStyle` 定義済みリスト値を割り当てます。
+   * `PKIOptions`オブジェクトの`verificationTime`データメンバに検証時刻を指定する`VerificationTime`定義済みリスト値を割り当てて、検証時刻を設定します。
+   * 失効確認オプションを設定するには、`PKIOptions`オブジェクトの`revocationCheckStyle`データメンバに失効確認を実行するかどうかを指定する`RevocationCheckStyle`定義済みリスト値を割り当てます。
 
 1. 電子署名の検証
 
-   オブジェクトの `SignatureServiceClient``verify2` メソッドを呼び出し、次の値を渡して署名を検証します。
+   `SignatureServiceClient`オブジェクトの`verify2`メソッドを呼び出し、次の値を渡して、署名を検証します。
 
-   * デジタル署名された、または認証されたPDFドキュメントを含む `BLOB` オブジェクトです。
+   * デジタル署名された、または認証されたPDFドキュメントを含む`BLOB`オブジェクトです。
    * 検証する署名が含まれている署名フィールド名を表すstring値です。
-   * PKI実行時オプションを含む `PKIOptions` オブジェクトです。
-   * SPI情報を含む `VerifySPIOptions` インスタンスです。 このパラメーター `null` を指定できます。
+   * PKIランタイムオプションを含む`PKIOptions`オブジェクト。
+   * SPI情報を含む`VerifySPIOptions`インスタンスです。 このパラメーターには`null`を指定できます。
 
-   この `verify2``PDFSignatureVerificationInfo` メソッドは、電子署名の検証に使用できる情報を含むオブジェクトを返します。
+   `verify2`メソッドは、デジタル署名の検証に使用できる情報を含む`PDFSignatureVerificationInfo`オブジェクトを返します。
 
 1. 署名のステータスの確認
 
-   オブジェクトの `PDFSignatureVerificationInfo``status` データメンバーの値を取得して、署名のステータスを決定します。 このデータメンバーには、署名のステータスを指定する `SignatureStatus` オブジェクトが格納されます。 例えば、署名済みPDFドキュメントが変更された場合、 `status` データメンバーに値が格納され `SignatureStatus.DocumentSigNoChanges`ます。
+   `PDFSignatureVerificationInfo`オブジェクトの`status`データメンバーの値を取得して、署名のステータスを決定します。 このデータメンバーには、署名のステータスを指定する`SignatureStatus`オブジェクトが格納されます。 例えば、署名済みPDFドキュメントが変更された場合、`status`データメンバーに値`SignatureStatus.DocumentSigNoChanges`が格納されます。
 
 1. 署名者のIDの確認
 
-   * オブジェクトのデータメンバーの値を取得して、署名者のID `PDFSignatureVerificationInfo``signer` を特定します。 このメンバは、 `IdentityInformation` オブジェクトを返します。
-   * 署名者のIDを特定する `IdentityInformation` オブジェクトの `status` データメンバーを取得します。 このデータメンバは、IDを指定する `IdentityStatus` 定義済みリスト値を返します。 例えば、署名者が信頼できる場合、このメンバーは、を返し `IdentityStatus.TRUSTED`ます。
+   * `PDFSignatureVerificationInfo`オブジェクトの`signer`データメンバの値を取得して、署名者のIDを特定します。 このメンバは`IdentityInformation`オブジェクトを返します。
+   * `IdentityInformation`オブジェクトの`status`データメンバーを取得して、署名者のIDを特定します。 このデータメンバは、IDを指定する`IdentityStatus`定義済みリスト値を返します。 例えば、署名者が信頼できる場合、このメンバーは`IdentityStatus.TRUSTED`を返します。
 
 **関連トピック**
 
@@ -1512,15 +1512,15 @@ Signature Service API（Webサービス）を使用して電子署名を検証�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Verifying Multiple Digital Signatures {#verifying-multiple-digital-signatures}
+## 複数の電子署名の検証{#verifying-multiple-digital-signatures}
 
 AEM Formsは、PDFドキュメント内のすべての電子署名を検証する手段を提供します。 複数の署名者からの署名が必要なビジネスプロセスの結果として、PDFドキュメントに複数の電子署名が含まれているとします。 例えば、融資担当者の署名と管理者の署名の両方が必要な金融トランザクションについて考えてみましょう。 SignatureサービスのJava APIまたはWebサービスのAPIを使用して、PDFドキュメント内のすべての署名を検証できます。 複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。電子署名を信頼する前に、検証することをお勧めします。 単一の電子署名の検証について詳しく知ることをお勧めします。
 
 >[!NOTE]
 >
->Signatureサービスと電子署名の検証について詳しくは、『 [サービスリファレンス(AEM Forms版)](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>Signatureサービスと電子署名の検証について詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-7}
+### 手順{#summary_of_steps-7}の概要
 
 複数の電子署名を検証するには、次のタスクを実行します。
 
@@ -1543,7 +1543,7 @@ AEM Formsは、PDFドキュメント内のすべての電子署名を検証す�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-For information about the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **署名クライアントの作成**
 
@@ -1561,13 +1561,13 @@ PDFドキュメントのすべての署名を検証する際にSignatureサー�
 * 失効確認
 * タイムスタンプ値
 
-これらのオプションの設定の一環として、検証時刻を指定できます。 例えば、現在の時間（バリデーターのコンピューター上の時間）を選択できます。これは現在の時間を使用することを示します。 様々な時間値について詳しくは、 `VerificationTime` AEM FormsAPIリファレンスの [定義済みリスト値を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+これらのオプションの設定の一環として、検証時刻を指定できます。 例えば、現在の時間（バリデーターのコンピューター上の時間）を選択できます。これは現在の時間を使用することを示します。 異なる時間値について詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の`VerificationTime`定義済みリスト値を参照してください。
 
-検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。 例えば、失効確認を実行して、証明書が失効したかどうかを判断できます。 失効確認オプションについて詳しくは、『 `RevocationCheckStyle` AEM FormsAPIリファレンス [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』の「定義済みリストの値」を参照してください。
+検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。 例えば、失効確認を実行して、証明書が失効したかどうかを判断できます。 失効確認オプションについて詳しくは、『[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』の`RevocationCheckStyle`定義済みリスト値を参照してください。
 
-証明書に対して失効確認を実行するには、 `CRLOptionSpec` オブジェクトを使用して、証明書失効リスト(CRL)サーバーへのURLを指定します。 ただし、CRLサーバーへのURLを指定しない場合、Signatureサービスは証明書からURLを取得します。
+証明書に対して失効確認を実行するには、`CRLOptionSpec`オブジェクトを使用して、証明書失効リスト(CRL)サーバーへのURLを指定します。 ただし、CRLサーバーへのURLを指定しない場合、Signatureサービスは証明書からURLを取得します。
 
-失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーではなくOCSPサーバーを使用する場合は、失効確認の実行が高速になります。 (See [Online Certificate Status Protocol](https://tools.ietf.org/html/rfc2560).)
+失効確認を実行する際は、CRLサーバーを使用する代わりに、オンライン証明書ステータスプロトコル(OCSP)サーバーを使用できます。 通常、CRLサーバーではなくOCSPサーバーを使用する場合は、失効確認の実行が高速になります。 （[オンライン証明書ステータスプロトコル](https://tools.ietf.org/html/rfc2560)を参照）。
 
 Signatureサービスで使用するCRLおよびOCSPAdobeの順序は、「Applications and Services」を使用して設定できます。 例えば、「Adobeアプリケーションおよびサービス」でOCSPサーバーが最初に設定されている場合、OCSPサーバーがチェックされ、次にCRLサーバーがチェックされます。
 
@@ -1575,13 +1575,13 @@ Signatureサービスで使用するCRLおよびOCSPAdobeの順序は、「Appli
 
 >[!NOTE]
 >
->証明書で指定されたURLは、とオブジェクトを使用して上書き `CRLOptionSpec` でき `OCSPOptionSpec` ます。 例えば、CRLサーバーを上書きするには、 `CRLOptionSpec` オブジェクトの `setLocalURI` メソッドを呼び出します。
+>`CRLOptionSpec`および`OCSPOptionSpec`オブジェクトを使用して、証明書で指定されたURLを上書きできます。 例えば、CRLサーバーを上書きするには、`CRLOptionSpec`オブジェクトの`setLocalURI`メソッドを呼び出します。
 
-タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時間を追跡するプロセスです。 ドキュメントに署名した後は、誰もその署名を変更できません。 タイムスタンプ機能を使用すると、署名済みまたは認証済みのドキュメントの有効性を強化できます。 タイムスタンプオプションは、 `TSPOptionSpec` オブジェクトを使用して設定できます。 例えば、タイムスタンププロバイダー(TSP)サーバーのURLを指定できます。
+タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時間を追跡するプロセスです。 ドキュメントに署名した後は、誰もその署名を変更できません。 タイムスタンプ機能を使用すると、署名済みまたは認証済みのドキュメントの有効性を強化できます。 タイムスタンプオプションは、`TSPOptionSpec`オブジェクトを使用して設定できます。 例えば、タイムスタンププロバイダー(TSP)サーバーのURLを指定できます。
 
 >[!NOTE]
 >
->JavaおよびWebサービスのクイック開始では、検証時刻はに、失効確認は `VerificationTime.CURRENT_TIME` に設定され `RevocationCheckStyle.BestEffort`ます。 CRLまたはOCSPサーバー情報が指定されていないので、サーバー情報は証明書から取得されます。
+>JavaおよびWebサービスのクイック開始では、検証時刻は`VerificationTime.CURRENT_TIME`に、失効確認は`RevocationCheckStyle.BestEffort`に設定されます。 CRLまたはOCSPサーバー情報が指定されていないので、サーバー情報は証明書から取得されます。
 
 **すべての電子署名を取得する**
 
@@ -1593,7 +1593,7 @@ PDFドキュメント内のすべての電子署名を検証するには、PDF�
 
 **すべての署名を繰り返し実行**
 
-各署名を繰り返し処理します。 つまり、各署名について、デジタル署名を検証し、署名者のIDと各署名のステータスを確認します。 (デジタル署名の [検証を参照](#verify-digital-signatures-using-the-java-api))。
+各署名を繰り返し処理します。 つまり、各署名について、デジタル署名を検証し、署名者のIDと各署名のステータスを確認します。 （[電子署名の検証](#verify-digital-signatures-using-the-java-api)を参照）。
 
 >[!NOTE]
 >
@@ -1609,7 +1609,7 @@ PDFドキュメント内のすべての電子署名を検証するには、PDF�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Java APIを使用した複数の電子署名の検証 {#verify-multiple-digital-signatures-using-the-java-api}
+### Java APIを使用した複数の電子署名の検証{#verify-multiple-digital-signatures-using-the-java-api}
 
 Signature Service API(Java)を使用して複数の電子署名を検証します。
 
@@ -1624,29 +1624,29 @@ Signature Service API(Java)を使用して複数の電子署名を検証しま�
 
 1. 検証する署名が含まれているPDFドキュメントを取得します
 
-   * 複数の電子署名を含むPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成し、そのコンストラクターを使用して検証を行います。 PDFドキュメントの場所を指定するstring値を渡します。
+   * 複数の電子署名を含むPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成し、そのコンストラクターを使用して検証します。 PDFドキュメントの場所を指定するstring値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. PKIランタイムオプションの設定
 
    * コンストラクタを使用して `PKIOptions` オブジェクトを作成します。
-   * 検証時刻を設定するには、 `PKIOptions` オブジェクトの `setVerificationTime` メソッドを呼び出し、検証時刻を指定する `VerificationTime` 定義済みリスト値を渡します。
-   * 失効確認オプションを設定するには、 `PKIOptions` オブジェクトの `setRevocationCheckStyle` メソッドを呼び出し、失効確認を実行するかどうかを指定する `RevocationCheckStyle` 定義済みリスト値を渡します。
+   * `PKIOptions`オブジェクトの`setVerificationTime`メソッドを呼び出し、検証時刻を指定する`VerificationTime`定義済みリスト値を渡して、検証時刻を設定します。
+   * `PKIOptions`オブジェクトの`setRevocationCheckStyle`メソッドを呼び出し、失効確認を実行するかどうかを指定する`RevocationCheckStyle`定義済みリスト値を渡して、失効確認オプションを設定します。
 
 1. すべての電子署名を取得する
 
-   オブジェクトの `SignatureServiceClient``verifyPDFDocument` メソッドを呼び出し、次の値を渡します。
+   `SignatureServiceClient`オブジェクトの`verifyPDFDocument`メソッドを呼び出し、次の値を渡します。
 
-   * 複数の電子署名を含むPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
-   * PKI実行時オプションを含む `PKIOptions` オブジェクトです。
-   * SPI情報を含む `VerifySPIOptions` インスタンスです。 このパラメーター `null` を指定できます。
+   * 複数の電子署名を含むPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトです。
+   * PKIランタイムオプションを含む`PKIOptions`オブジェクト。
+   * SPI情報を含む`VerifySPIOptions`インスタンスです。 このパラメーターには`null`を指定できます。
 
-   この `verifyPDFDocument``PDFDocumentVerificationInfo` メソッドは、PDFドキュメント内のすべての電子署名に関する情報を含むオブジェクトを返します。
+   `verifyPDFDocument`メソッドは、PDFドキュメント内のすべての電子署名に関する情報を含む`PDFDocumentVerificationInfo`オブジェクトを返します。
 
 1. すべての署名を繰り返し実行
 
-   * オブジェクトの `PDFDocumentVerificationInfo``getVerificationInfos` メソッドを呼び出して、すべての署名を繰り返し実行します。 このメソッドは、各要素がオブジェクトである `java.util.List` オブジェクトを返し `PDFSignatureVerificationInfo` ます。 署名のリストを繰り返すには、 `java.util.Iterator` オブジェクトを使用します。
-   * この `PDFSignatureVerificationInfo` オブジェクトを使用すると、オブジェクトの `PDFSignatureVerificationInfo``getStatus` メソッドを呼び出して、署名のステータスを特定するなどのタスクを実行できます。 このメソッドは、署名のステータスを通知する静的データメンバーを持つ `SignatureStatus` オブジェクトを返します。 例えば、署名が不明な場合は、このメソッドはを返し `SignatureStatus.DocumentSignatureUnknown`ます。
+   * `PDFDocumentVerificationInfo`オブジェクトの`getVerificationInfos`メソッドを呼び出すことで、すべての署名を繰り返します。 このメソッドは、`java.util.List`オブジェクトを返します。各要素は`PDFSignatureVerificationInfo`オブジェクトです。 署名のリストを繰り返すには、`java.util.Iterator`オブジェクトを使用します。
+   * `PDFSignatureVerificationInfo`オブジェクトを使用すると、`PDFSignatureVerificationInfo`オブジェクトの`getStatus`メソッドを呼び出して、署名のステータスを特定するなどのタスクを実行できます。 このメソッドは、署名の状態を通知する静的データメンバーの`SignatureStatus`オブジェクトを返します。 例えば、署名が不明な場合、このメソッドは`SignatureStatus.DocumentSignatureUnknown`を返します。
 
 **関連トピック**
 
@@ -1660,59 +1660,59 @@ Signature Service API(Java)を使用して複数の電子署名を検証しま�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した複数の電子署名の検証 {#verifying-multiple-digital-signatures-using-the-web-service-api}
+### WebサービスAPI {#verifying-multiple-digital-signatures-using-the-web-service-api}を使用した複数の電子署名の検証
 
 Signature Service API（Webサービス）を使用して複数の電子署名を検証します。
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 検証する署名が含まれているPDFドキュメントを取得します
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、検証する複数の電子署名が含まれるPDFドキュメントを保存します。
-   * Create a `System.IO.FileStream` object by invoking its constructor. PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、検証する複数の電子署名を含むPDFドキュメントを保存します。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * `BLOB`オブジェクトに、`MTOM`プロパティにバイト配列の内容を割り当てて入力します。
 
 1. PKIランタイムオプションの設定
 
    * コンストラクタを使用して `PKIOptions` オブジェクトを作成します。
-   * 検証時刻を設定するには、 `PKIOptions` オブジェクトの `verificationTime` データメンバに検証時刻を指定する `VerificationTime` 定義済みリスト値を割り当てます。
-   * 失効確認オプションを設定するには、 `PKIOptions` オブジェクトの `revocationCheckStyle` データメンバに失効確認を実行するかどうかを指定する `RevocationCheckStyle` 定義済みリスト値を割り当てます。
+   * `PKIOptions`オブジェクトの`verificationTime`データメンバに検証時刻を指定する`VerificationTime`定義済みリスト値を割り当てて、検証時刻を設定します。
+   * 失効確認オプションを設定するには、`PKIOptions`オブジェクトの`revocationCheckStyle`データメンバに失効確認を実行するかどうかを指定する`RevocationCheckStyle`定義済みリスト値を割り当てます。
 
 1. すべての電子署名を取得する
 
-   オブジェクトの `SignatureServiceClient``verifyPDFDocument` メソッドを呼び出し、次の値を渡します。
+   `SignatureServiceClient`オブジェクトの`verifyPDFDocument`メソッドを呼び出し、次の値を渡します。
 
-   * 複数の電子署名を含むPDFドキュメントを含む `BLOB` オブジェクトです。
-   * PKI実行時オプションを含む `PKIOptions` オブジェクトです。
-   * SPI情報を含む `VerifySPIOptions` インスタンスです。 このパラメーターにはnullを指定できます。
+   * 複数の電子署名を含むPDFドキュメントを含む`BLOB`オブジェクトです。
+   * PKIランタイムオプションを含む`PKIOptions`オブジェクト。
+   * SPI情報を含む`VerifySPIOptions`インスタンスです。 このパラメーターにはnullを指定できます。
 
-   この `verifyPDFDocument``PDFDocumentVerificationInfo` メソッドは、PDFドキュメント内のすべての電子署名に関する情報を含むオブジェクトを返します。
+   `verifyPDFDocument`メソッドは、PDFドキュメント内のすべての電子署名に関する情報を含む`PDFDocumentVerificationInfo`オブジェクトを返します。
 
 1. すべての署名を繰り返し実行
 
-   * オブジェクトの `PDFDocumentVerificationInfo``verificationInfos` データメンバーを取得して、すべての署名を繰り返し処理します。 このデータ・メンバは、各要素が `Object``PDFSignatureVerificationInfo` オブジェクトである配列を戻します。
-   * この `PDFSignatureVerificationInfo` オブジェクトを使用すると、オブジェクトの `PDFSignatureVerificationInfo``status` データメンバーを取得して、署名のステータスを判断するなどのタスクを実行できます。 このデータ・メンバーは、静的データ・メンバーが署名のステータスを通知する `SignatureStatus` オブジェクトを戻します。 例えば、署名が不明な場合は、このメソッドはを返し `SignatureStatus.DocumentSignatureUnknown`ます。
+   * `PDFDocumentVerificationInfo`オブジェクトの`verificationInfos`データメンバーを取得して、すべての署名を繰り返します。 このデータメンバは、`Object`配列を返します。各要素は`PDFSignatureVerificationInfo`オブジェクトです。
+   * `PDFSignatureVerificationInfo`オブジェクトを使用すると、`PDFSignatureVerificationInfo`オブジェクトの`status`データメンバを取得して、署名のステータスの特定などのタスクを実行できます。 このデータメンバは、`SignatureStatus`オブジェクトを返します。このオブジェクトの静的データメンバは、署名の状態を通知します。 例えば、署名が不明な場合、このメソッドは`SignatureStatus.DocumentSignatureUnknown`を返します。
 
 **関連トピック**
 
@@ -1722,15 +1722,15 @@ Signature Service API（Webサービス）を使用して複数の電子署名�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Removing Digital Signatures {#removing-digital-signatures}
+## 電子署名の削除{#removing-digital-signatures}
 
 新しい電子署名を適用する前に、電子署名を署名フィールドから削除する必要があります。 電子署名は上書きできません。 署名が含まれる署名フィールドに電子署名を適用しようとすると、例外が発生します。
 
 >[!NOTE]
 >
->For more information about the Signature service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Signatureサービスについて詳しくは、「[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
 
-### 手順の概要 {#summary_of_steps-8}
+### 手順{#summary_of_steps-8}の概要
 
 署名フィールドから電子署名を削除するには、次のタスクを実行します。
 
@@ -1752,7 +1752,7 @@ Signature Service API（Webサービス）を使用して複数の電子署名�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-For information about the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **署名クライアントの作成**
 
@@ -1782,7 +1782,7 @@ Signatureサービスで署名フィールドから電子署名を削除した�
 
 [署名フィールドの追加](digitally-signing-certifying-documents.md#adding-signature-fields)
 
-### Java APIを使用した電子署名の削除 {#remove-digital-signatures-using-the-java-api}
+### Java API {#remove-digital-signatures-using-the-java-api}を使用した電子署名の削除
 
 署名API(Java)を使用して電子署名を削除します。
 
@@ -1797,22 +1797,22 @@ Signatureサービスで署名フィールドから電子署名を削除した�
 
 1. 削除する署名が含まれているPDFドキュメントの取得
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、削除するドキュメントが含まれるPDF署名を表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、削除するドキュメントが含まれるPDF署名を表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 署名フィールドからの電子署名の削除
 
-   オブジェクトのメソッドを呼び出し、次の値を渡して、署名フィールドから電子署名を削除し `SignatureServiceClient` ま `clearSignatureField` す。
+   `SignatureServiceClient`オブジェクトの`clearSignatureField`メソッドを呼び出し、次の値を渡して、署名フィールドから電子署名を削除します。
 
-   * 削除する署名が含まれているPDFドキュメントを表す `com.adobe.idp.Document` オブジェクトです。
+   * 削除する署名が含まれているPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトです。
    * 電子署名が含まれる署名フィールドの名前を指定するstring値です。
 
-   電子署名が削除されたPDFドキュメントを表す `clearSignatureField``com.adobe.idp.Document` オブジェクトを返します。
+   `clearSignatureField`メソッドは、電子署名が削除されたPDFドキュメントを表す`com.adobe.idp.Document`オブジェクトを返します。
 
 1. PDFドキュメントをPDFファイルとして保存
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * オブジェクトの `com.adobe.idp.Document` メソッドを呼び出し `copyToFile` ます。 オブジェクトを渡して、 `java.io.File` オブジェクトの内容をフ `com.adobe.idp.Document` ァイルにコピーします。 `Document` メソッドから返された `clearSignatureField` オブジェクトを必ず使用してください。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出します。 `java.io.File`オブジェクトを渡して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします。 `Document` メソッドから返された `clearSignatureField` オブジェクトを必ず使用してください。
 
 **関連トピック**
 
@@ -1824,54 +1824,54 @@ Signatureサービスで署名フィールドから電子署名を削除した�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した電子署名の削除 {#remove-digital-signatures-using-the-web-service-api}
+### WebサービスAPI {#remove-digital-signatures-using-the-web-service-api}を使用した電子署名の削除
 
 Signature API（Webサービス）を使用して電子署名を削除します。
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 署名クライアントの作成
 
-   * Create a `SignatureServiceClient` object by using its default constructor.
-   * Create a `SignatureServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/SignatureService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `SignatureServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `SignatureServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`SignatureServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `SignatureServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `SignatureServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `SignatureServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`SignatureServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`SignatureServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 削除する署名が含まれているPDFドキュメントの取得
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、削除する電子署名が含まれるPDFドキュメントを保存するために使用されます。
-   * コンストラクターを呼び出し、署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、削除する電子署名を含むPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * `BLOB`オブジェクトに`MTOM`プロパティを割り当て、バイト配列の内容を指定します。
 
 1. 署名フィールドからの電子署名の削除
 
-   オブジェクトのメソッドを呼び出し、次の値を渡して、電子署名を削除し `SignatureServiceClient``clearSignatureField` ます。
+   `SignatureServiceClient`オブジェクトの`clearSignatureField`メソッドを呼び出し、次の値を渡して、デジタル署名を削除します。
 
-   * 署名済みPDFドキュメントを含む `BLOB` オブジェクトです。
+   * 署名済みPDFドキュメントを含む`BLOB`オブジェクトです。
    * 削除する電子署名が含まれている署名フィールドの名前を表すstring値です。
 
-   電子署名が削除されたPDFドキュメントを表す `clearSignatureField``BLOB` オブジェクトを返します。
+   `clearSignatureField`メソッドは、電子署名が削除されたPDFドキュメントを表す`BLOB`オブジェクトを返します。
 
 1. PDFドキュメントをPDFファイルとして保存
 
-   * オブジェクトを作成するには、コンストラクターを呼び出し、空の署名フィールドとファイルを開くドキュメントを含むPDFのファイルの場所を表すstring値を渡します。 `System.IO.FileStream`
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `sign` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、空の署名フィールドとファイルを開くモードを含むPDFドキュメントのファイルの場所を表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `sign`メソッドから返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
