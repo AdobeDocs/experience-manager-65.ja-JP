@@ -21,19 +21,19 @@ ht-degree: 65%
 
 # HTML5 フォームのカスタム外観の作成{#create-custom-appearances-in-html-forms}
 
-Mobile Forms でカスタムウィジェットをプラグインできます。外観フレームワークを使用することで、既存の jQuery ウィジェットの拡張や、独自のカスタムウィジェットの開発を行うことができます。XFA engine uses various widgets, see [Appearance framework for adaptive and HTML5 forms](/help/forms/using/introduction-widgets.md) for detailed information.
+Mobile Forms でカスタムウィジェットをプラグインできます。外観フレームワークを使用することで、既存の jQuery ウィジェットの拡張や、独自のカスタムウィジェットの開発を行うことができます。XFAエンジンは様々なウィジェットを使用します。詳しくは、「[アダプティブフォームおよびHTML5フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md)」を参照してください。
 
 ![デフォルトおよびカスタムウェジェットの例](assets/custom-widgets.jpg)
 
 デフォルトおよびカスタムウェジェットの例
 
-## HTML5 Forms でのカスタムウィジェットの統合 {#integrating-custom-widgets-with-html-forms}
+## HTML5 Forms でのカスタムウィジェットの統合  {#integrating-custom-widgets-with-html-forms}
 
-### Create a profile  {#create-a-profile-nbsp}
+### プロファイルの作成  {#create-a-profile-nbsp}
 
 プロファイルを作成するか、または既存のプロファイルを選択してカスタムウィジェットを追加できます。プロファイル作成について詳しくは、「[カスタムプロファイルの作成](/help/forms/using/custom-profile.md)」を参照してください。
 
-### ウィジェットを作成します {#create-a-widget}
+### ウィジェットを作成します  {#create-a-widget}
 
 HTML5フォームは、新しいウィジェットを作成するために拡張できるウィジェットフレームワークの実装を提供します。 この実装は jQuery ウィジェット *abstractWidget* です。これを拡張して新しいウィジェットを作成することができます。新しいウィジェットは、以下に記述する関数を拡張 / 上書きすることによって機能させることができます。
 
@@ -70,15 +70,15 @@ HTML5フォームは、新しいウィジェットを作成するために拡張
  </tbody>
 </table>
 
-独自のウィジェットを作成するには、上記で作成されたプロファイルに、上書きされた関数と新しく追加された関数を含む JavaScript ファイルの参照を含めます。For example, the *sliderNumericFieldWidget* is a widget for numeric Fields. ヘッダーセクション内のプロファイルでウィジェットを使用するには、次の行を含めます。
+独自のウィジェットを作成するには、上記で作成されたプロファイルに、上書きされた関数と新しく追加された関数を含む JavaScript ファイルの参照を含めます。例えば、*sliderNumericFieldWidget*&#x200B;は数値フィールド用のウィジェットです。 ヘッダーセクション内のプロファイルでウィジェットを使用するには、次の行を含めます。
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 ```
 
-### XFA スクリプティングエンジンでのカスタムウィジェットの登録 {#register-custom-widget-with-xfa-scripting-engine-nbsp}
+### XFA スクリプティングエンジンでのカスタムウィジェットの登録  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
-When the custom widget code is ready, register the widget with the scripting engine by using `registerConfig`API for [Form Bridge](/help/forms/using/form-bridge-apis.md). それは widgetConfigObject を入力として受け取ります。
+カスタムウィジェットのコードの準備が整ったら、[Form Bridge](/help/forms/using/form-bridge-apis.md)の`registerConfig`APIを使用して、ウィジェットをスクリプティングエンジンに登録します。 それは widgetConfigObject を入力として受け取ります。
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig",
@@ -88,7 +88,7 @@ window.formBridge.registerConfig("widgetConfig",
     );
 ```
 
-#### widgetConfigObject {#widgetconfigobject}
+#### widgetConfigObject  {#widgetconfigobject}
 
 ウィジェット設定は JSON オブジェクトとして提供（キーと値のペアのコレクション）されます。キーはフィールドを識別し、値はそれらのフィールドとともに使用するフィールドを示します。サンプル設定には次のようなものがあります。
 
