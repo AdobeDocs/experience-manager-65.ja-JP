@@ -82,7 +82,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
    * 検索で大文字と小文字を区別するかどうかを指定します。
    * 完全に一致する語句のみを検索するかどうかを指定します（指定しなければ、サブ文字列も検索されます）。
 
-   Clicking **Preview** lists where the term has been found. You can select/clear specific instances to be replaced:
+   キーワードが見つかった場合に&#x200B;**プレビュー**&#x200B;リストをクリックします。置換する特定のインスタンスを選択/クリアできます。
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
@@ -95,7 +95,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 * `jcr:text`
 * `text`
 
-The scope can be changed using the Apache Felix Web Management Console (for example, at `https://localhost:4502/system/console/configMgr`). Select `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` and configure the scope as required.
+範囲は、Apache Felix Web Management Console（例えば、`https://localhost:4502/system/console/configMgr`）を使用して変更できます。 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)`を選択し、必要に応じて範囲を設定します。
 
 >[!NOTE]
 >
