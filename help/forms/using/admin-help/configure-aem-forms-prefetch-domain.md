@@ -22,8 +22,8 @@ ht-degree: 72%
 
 ユーザーが多数のグループに属している場合（例えば、500 以上）や、グループのネストが深い場合（例えば、30 レベル）、応答時間が遅くなる可能性があります。この問題が発生している場合は、特定のドメインから情報をプリフェッチするように AEM Forms を設定できます。
 
-1. In administration console, click **[!UICONTROL Settings > User Management > Configuration > Import And Export Configuration Files]**.
-1. To export the current configuration setting to a file, click **[!UICONTROL Export]** and save the configuration file in another location.
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/設定/既存の設定ファイルの読み込みと書き出し]**&#x200B;をクリックします。
+1. 現在の設定をファイルに書き出すには、「**[!UICONTROL 書き出し]**」をクリックし、設定ファイルを別の場所に保存します。
 1. 次のノード（太字でマーク）を追加します。
 
    ```xml
@@ -43,6 +43,6 @@ ht-degree: 72%
 
    この例では、複数のドメインがプリフェッチ用に設定されています。ドメイン名は「/」によって区切られます。このことは、上の例において *Domain_Name1*、*Domain_Name2*&#x200B;および&#x200B;*Domain_Name3* として示されています。
 
-1. To import the updated file, in User Management, click **[!UICONTROL Configuration > Import And Export Configuration Files]**.
-1. Click **[!UICONTROL Browse]** to find the file, click Import, and then click **[!UICONTROL OK]**.
+1. 更新したファイルを読み込むには、User Managementで、**[!UICONTROL 設定/構成ファイルの読み込みと書き出し]**&#x200B;をクリックします。
+1. 「**[!UICONTROL 参照]**」をクリックしてファイルを探し、「読み込み」をクリックします。次に「**[!UICONTROL OK]**」をクリックします。
 
