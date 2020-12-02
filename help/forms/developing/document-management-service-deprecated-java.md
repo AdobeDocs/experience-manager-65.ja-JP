@@ -45,11 +45,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 
-「AEMフォームのプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+「AEMフォームのプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用してContent Servicesスペースを作成する {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）{#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}を使用してContent Servicesスペースを作成します
 
-次のJavaコードの例では、会社ホームに *Test Directory* という名前の新しいスペースを作成します。 新しいスペースのID値がコンソールに書き込まれます。
+次のJavaコードの例では、会社ホームに&#x200B;*Test Directory*&#x200B;という名前の新しいスペースを作成しています。 新しいスペースのID値がコンソールに書き込まれます。
 
 ```java
  /*
@@ -143,7 +143,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの削除 {#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの削除{#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
 
 次のJavaコードの例は、/会社ホーム/テストディレクトリという名前のスペースを削除します。
 
@@ -243,9 +243,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API(追加非推奨)を使用したContent Servicesのコンテンツ {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）追加を使用したContent Servicesのコンテンツ{#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-次のJavaコードの例では、 *MortgageForm.pdfというPDFファイルを/会社ホーム* /Test Directoryという名前のフォルダーに追加しています。 作成者と説明の属性が設定されます。 新しいコンテンツのID値がコンソールに書き込まれます。
+次のJavaコードの例では、*MortgageForm.pdf*&#x200B;というPDFファイルを/会社ホーム/Test Directoryという名前のフォルダーに追加しています。 作成者と説明の属性が設定されます。 新しいコンテンツのID値がコンソールに書き込まれます。
 
 ```java
  /*
@@ -366,9 +366,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesからのコンテンツの取得 {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用してContent Servicesからコンテンツを取得する{#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-次のJavaコードの例を使用すると、/ *会社ホームからMortgageForm.pdfというPDFファイルを取得できます* 。 PDFファイルはローカルファイルシステムに保存され、UpdatedMortgageForm.pdfという名前が付けら *れます*。
+次のJavaコードの例を使用すると、/会社ホームから&#x200B;*MortgageForm.pdf*&#x200B;というPDFファイルを取得できます。 PDFファイルはローカルファイルシステムに保存され、*UpdatedMortgageForm.pdf*&#x200B;という名前が付けられます。
 
 ```java
  /*
@@ -472,9 +472,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesのコンテンツの移動 {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用してContent Servicesのコンテンツを移動{#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
 
-次のJavaコードの例では、 *MortgageForm.pdfという名前のPDFファイルを/* 会社ホーム/Test Directoryから/会社ホームに移動します。 移動されたコンテンツの識別値がコンソールに書き込まれる。
+次のJavaコードの例を使用すると、*MortgageForm.pdf*&#x200B;というPDFファイルが/会社ホーム/Test Directoryから/会社ホームに移動されます。 移動されたコンテンツの識別値がコンソールに書き込まれる。
 
 ```java
  /*
@@ -573,7 +573,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用したリストContent Servicesコンテンツ {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したリストContent Servicesコンテンツ{#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
 
 次のJavaコードの例では、/会社ホームにあるコンテンツをリストします。 各ノードタイプとノード名が表示されます。
 
@@ -686,7 +686,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Servicesコンテンツの検索 {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用してContent Servicesのコンテンツを検索{#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
 
 次のJavaコードは、/会社ホームでテキストMortgageFormを含むドキュメントを検索します。 サブフォルダも検索されます。
 
@@ -796,9 +796,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Services権限の設定 {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用したContent Services権限の設定{#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-次のJavaコードの例は、tony blueという名前のユーザーに権限を設定します。 指定するドメインがデフォルトのドメインです。 Consumer権限が指定され、ノードは `/Company Home/Test Directory`です。
+次のJavaコードの例は、tony blueという名前のユーザーに権限を設定します。 指定するドメインがデフォルトのドメインです。 Consumer権限が指定され、ノードは`/Company Home/Test Directory`です。
 
 ```java
  /*
@@ -906,7 +906,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API（非推奨）を使用した関連付けの作成 {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
+## クイック開始（SOAPモード）:Java API（非推奨）を使用した関連付けの作成{#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
 
 次のJavaコードは、XMLデータファイルとPDFフォームの関連付けを作成します。 この種類の関連付けはLinkedByという名前です。PDFドキュメントには、アスペクトリンク可能なアスペクトリンクが適用されている必要があります。
 
