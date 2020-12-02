@@ -34,7 +34,7 @@ ht-degree: 94%
 >
 AEM Assets HTTP API の現在の実装は REST です。
 
-The Adobe Experience Manager (AEM) [Assets REST API](/help/assets/mac-api-assets.md) allows developers to access content (stored in AEM) directly over the HTTP API, via CRUD operations (Create, Read, Update, Delete).
+Adobe Experience Manager(AEM) [Assets REST API](/help/assets/mac-api-assets.md)を使用すると、開発者はHTTP API経由で(AEMに保存された)コンテンツに、CRUD操作（作成、読み取り、更新、削除）経由で直接アクセスできます。
 
 この API では、コンテンツサービスを JavaScript フロントエンドアプリケーションに提供することで、AEM をヘッドレス CMS（コンテンツ管理システム）として動作させることができます。または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。
 
@@ -98,8 +98,8 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
   </tr>
   <tr>
    <td>アクセス</td>
-   <td><p>直接アクセスできます。</p> <p><code>/api/assets </code> エンドポイントを使用し、（リポジトリ内の）<code>/content/dam</code> にマッピングします。</p> <p>For example, to access:<code class="code">
-       /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br /> request:<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
+   <td><p>直接アクセスできます。</p> <p><code>/api/assets </code> エンドポイントを使用し、（リポジトリ内の）<code>/content/dam</code> にマッピングします。</p> <p>例えば、<code class="code">
+       /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br />リクエストにアクセスするには：<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
    <td><p>AEM ページ上の AEM コンポーネントを通じて参照する必要があります。</p> <p><code>.model</code> セレクターを使用して JSON 表現を作成します。</p> <p>URLの例を次に示します。<br /> <code>https://localhost:4502/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.model.json</code></p> </td>
   </tr>
   <tr>
@@ -203,7 +203,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 標準アセット（画像やオーディオなど）との違いがいくつかあるので、それらの処理には追加のルールが適用されます。**
 
-#### 表現 {#representation}
+#### 表現  {#representation}
 
 コンテンツフラグメント：
 
@@ -212,7 +212,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 * アトミックと見なされます。つまり、エレメントとバリエーションは、リンクまたは子エンティティとしてではなく、フラグメントのプロパティの一部として公開されます。これにより、フラグメントのペイロードに効率的にアクセスできます。
 
-#### コンテンツモデルとコンテンツフラグメント {#content-models-and-content-fragments}
+#### コンテンツモデルとコンテンツフラグメント  {#content-models-and-content-fragments}
 
 現在、コンテンツフラグメントの構造を定義するモデルは、HTTP API では公開されません。そのため、コンシューマーは（最低でも）フラグメントのモデルについて理解する必要があります。ただし、ほとんどの情報はペイロードから推測することができます。データタイプなど&#x200B;**&#x200B;は定義の一部だからです。
 
@@ -273,7 +273,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 本文には、特定コンテンツフラグメントの更新内容の JSON 表現を含める必要があります。
 
-これには、コンテンツフラグメントのタイトルや説明、単一のエレメント、またはすべての要素値やメタデータを使用できます。It is also mandatory to provide a valid `cq:model` property for updates.
+これには、コンテンツフラグメントのタイトルや説明、単一のエレメント、またはすべての要素値やメタデータを使用できます。また、更新のための有効な`cq:model`プロパティを指定する必要もあります。
 
 ### 削除 {#delete}
 
@@ -363,11 +363,11 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
    }
    ```
 
-## API リファレンス {#api-reference}
+## API リファレンス  {#api-reference}
 
 詳細な API リファレンスについては、こちらを参照してください。
 
-* [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
    * [使用可能な機能](/help/assets/mac-api-assets.md#assets)
