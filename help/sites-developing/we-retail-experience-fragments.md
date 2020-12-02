@@ -18,7 +18,7 @@ ht-degree: 40%
 ---
 
 
-# Trying out Experience Fragments in We.Retail{#trying-out-experience-fragments-in-we-retail}
+# Web.Retailでのエクスペリエンスフラグメントの試用{#trying-out-experience-fragments-in-we-retail}
 
 Web.Retailでのエクスペリエンスフラグメントの試用
 
@@ -39,13 +39,13 @@ Web.Retailでのエクスペリエンスフラグメントの試用
 >
 エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
 
-## Web.Retailでのエクスペリエンスフラグメントの作成場所 {#where-to-create-experience-fragments-in-we-retail}
+## Web.Retailのエクスペリエンスフラグメントの作成場所{#where-to-create-experience-fragments-in-we-retail}
 
-グローバルナビゲーションから「**エクスペリエンスフラグメント**」を選択します。ここでは、エクスペリエンスフラグメントと関連する [バリエーションを設定、](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) 作成 [、](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) 編集します [](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation)。
+グローバルナビゲーションから「**エクスペリエンスフラグメント**」を選択します。ここでは、設定、[エクスペリエンスフラグメントを](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment)作成[編集](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment)、関連する[バリエーション](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation)を行います。
 
-## Web.Retailのエクスペリエンスフラグメントの使用場所 {#where-to-use-experience-fragments-in-we-retail}
+## Web.Retailのエクスペリエンスフラグメントの使用場所{#where-to-use-experience-fragments-in-we-retail}
 
-エクスペリ [エンスフラグメント](/help/sites-authoring/experience-fragments.md#using-your-experience-fragment) （他のコンポーネントと同様）は、グローバルナビゲーションの「 [サイト](/help/sites-authoring/editing-content.md)**** 」の下にある任意のページで使用できます。
+グローバルナビゲーションの&#x200B;**サイト**&#x200B;の下の[ページ](/help/sites-authoring/editing-content.md)にある[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md#using-your-experience-fragment)を（他のコンポーネントと同様に）使用できます。
 
 ## その他の情報 {#further-information}
 
