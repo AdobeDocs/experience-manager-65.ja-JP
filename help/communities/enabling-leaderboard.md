@@ -19,28 +19,28 @@ ht-degree: 49%
 ---
 
 
-# リーダーボード機能 {#leaderboard-feature}
+# リーダーボード機能  {#leaderboard-feature}
 
 ## 概要 {#introduction}
 
-The `Leaderboard` component provides the ability to obtain a sense of how members are interacting within the community by ranking members according to points earned (basic scoring) or their expertise (advanced scoring).
+`Leaderboard`コンポーネントは、獲得点（基本スコア）またはその専門知識（高度スコア）に従ってメンバーをランク付けすることで、コミュニティ内でのメンバーの関わり方を把握できます。
 
 ページにリーダーボードコンポーネントを含める前に、[コミュニティのスコアとバッジ](/help/communities/implementing-scoring.md)を設定する必要があります。
 
 ドキュメントのこのセクションでは、以下の内容について説明します。：
 
-* Adding the `Leaderboard` component to a [community site](/help/communities/overview.md#community-sites).
-* Configuration settings for the `Leaderboard` component.
+* `Leaderboard`コンポーネントを[コミュニティサイト](/help/communities/overview.md#community-sites)に追加します。
+* `Leaderboard`コンポーネントの構成設定です。
 
 ### リーダーボードをページに追加 {#adding-a-leaderboard-to-a-page}
 
-To add a `Leaderboard` component to a page in author mode, locate the component
+作成者モードで`Leaderboard`コンポーネントをページに追加するには、コンポーネントを見つけます
 
 * `Communities / Leaderboard`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
@@ -48,7 +48,7 @@ For necessary information, visit [Communities Components Basics](/help/communiti
 
 ### リーダーボードの設定 {#configuring-leaderboard}
 
-Select the placed `Leaderboard` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Leaderboard`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
@@ -61,7 +61,7 @@ Select the placed `Leaderboard` component to access and select the `Configure` i
 * **表示名**
 
    ボードに表示するわかりやすい名前。バッジとスコアの表示に選択したルールを反映します。
-Default is `Leaderboard`, if nothing entered.
+何も入力しなかった場合の初期設定は`Leaderboard`です。
 
 * **バッジ**
 
@@ -147,6 +147,6 @@ Default is `Leaderboard`, if nothing entered.
 
 ### 追加情報 {#additional-information}
 
-More information may be found on the [Leaderboard Essentials](/help/communities/leaderboard.md) page for developers.
+詳しい情報は[Leaderboard Essentials](/help/communities/leaderboard.md)ページの開発者向けページにあります。
 
-Instructions for creating rules are provided on the [Communities Scoring and Badges](/help/communities/implementing-scoring.md) page for administrators.
+ルールの作成手順は、管理者向けの[コミュニティスコアリングとバッジ](/help/communities/implementing-scoring.md)ページに記載されています。
