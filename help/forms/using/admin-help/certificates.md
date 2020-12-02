@@ -33,9 +33,9 @@ Trust Store の管理では、電子署名の検証および証明書認証の�
 
 Trust Manager API を使用して証明書の読み込みおよび削除を行うこともできます。詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」の「Trust Manager API を使用した証明書の読み込み」および「Trust Manager API を使用した証明書の削除」を参照してください。
 
-## 証明書の読み込み {#import-a-certificate}
+## 証明書の読み込み  {#import-a-certificate}
 
-1. In administration console, click **[!UICONTROL Settings > Trust Store Management > Certificates]**.
+1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
 1. 「読み込み」をクリックし、「Trust Store の種類」で次のいずれかのオプションを選択します。
 
    * **SSL 接続で信頼：** SSL 経由で外部システムに接続するために AEM Forms で証明書を使用できることを指定します。
@@ -50,25 +50,25 @@ Trust Manager API を使用して証明書の読み込みおよび削除を行�
    >Trust Store ではアドビのルート証明書の証明書認証、署名、署名の認証および ID が暗黙的に信頼されます。
 
 1. 「エイリアス」ボックスに、この証明書の ID を入力します。
-1. Click **[!UICONTROL Browse]** to locate the certificate and then click **[!UICONTROL OK]**.
+1. 「**[!UICONTROL 参照]**」をクリックして証明書を探し、「**[!UICONTROL OK]**」をクリックします。
 
 ## 証明書の書き出し {#export-a-certificate}
 
-1. In administration console, click **[!UICONTROL Settings > Trust Store Management > Certificates]**.
-1. 書き出す証明書のエイリアス名をクリックします。The **[!UICONTROL Certificate Details]** page is displayed.
-1. Click **[!UICONTROL Export]**, follow the directions to export the certificate, and then click **[!UICONTROL OK]**.
+1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
+1. 書き出す証明書のエイリアス名をクリックします。**[!UICONTROL 証明書の詳細]**&#x200B;ページが表示されます。
+1. 「**[!UICONTROL 書き出し]**」をクリックし、指示に従って証明書を書き出し、「**[!UICONTROL OK]**」をクリックします。
 
 ## 証明書の信頼設定と Trust Store の種類の編集 {#edit-a-certificate-s-trust-settings-and-trust-store-type}
 
-1. In administration console, click **[!UICONTROL Settings > Trust Store Management > Certificates]**.
+1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
 1. 編集する証明書のエイリアス名をクリックします。
-1. Click **[!UICONTROL Update Certificate]**.
+1. 「**[!UICONTROL 証明書を更新]**」をクリックします。
 1. 証明書のエイリアス名を変更するには、「エイリアス」ボックスに新しい名前を入力します。
 1. 証明書の Trust Store の種類を更新するには、適切な Trust Store の種類を選択します。
-1. To update the policy restrictions, in the Certificate Policies box, type the policy information, and then click **[!UICONTROL OK]**.
+1. ポリシー制限を更新するには、「証明書ポリシー」ボックスにポリシー情報を入力し、「**[!UICONTROL OK]**」をクリックします。
 
 ## 証明書の削除 {#delete-a-certificate}
 
-1. In administration console, click **[!UICONTROL Settings > Trust Store Management > Certificates]**.
-1. Select the check boxes for the certificates to delete, click **[!UICONTROL Delete]**, and then click **[!UICONTROL OK]**.
+1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
+1. 削除する証明書のチェックボックスを選択し、「**[!UICONTROL 削除]**」をクリックして、「**[!UICONTROL OK]**」をクリックします。
 
