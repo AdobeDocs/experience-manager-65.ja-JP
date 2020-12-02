@@ -31,7 +31,7 @@ ht-degree: 80%
 
 ## 基礎モードの機能 {#how-scaffolding-works}
 
-Scaffolds are stored in the **Tools** console of the site admin.
+スキャフォルドは、サイト管理者の&#x200B;**ツール**&#x200B;コンソールに保存されます。
 
 * **ツール**&#x200B;コンソールを開き、「**デフォルトのページの基礎モード**」をクリックします。
 * 「**geometrixx**」をクリックします。
@@ -39,7 +39,7 @@ Scaffolds are stored in the **Tools** console of the site admin.
 
 ![howscaffores_work](assets/howscaffolds_work.png)
 
-The scaffold consists of a form with a field for each piece of content that will make up the page to be created and four important parameters which are accessed through the **Page Properties** of the scaffold page.
+足場は、作成するページを構成するコンテンツの各部分に対するフィールドを持つフォームと、足場ページの&#x200B;**ページプロパティ**&#x200B;を介してアクセスされる4つの重要なパラメーターから構成されます。
 
 ![pageprops](assets/pageprops.png)
 
@@ -48,9 +48,9 @@ The scaffold consists of a form with a field for each piece of content that will
 * **タイトルテキスト**：この基礎モードページの名前です。この例では、「ニュース」です。
 * **説明**：基礎モードページのタイトルの下に表示されます。
 * **ターゲットテンプレート**：この基礎モードで新しいページを作成する際に使用するテンプレートです。この例では、Geometrixx コンテンツページ&#x200B;**&#x200B;テンプレートが使用されます。
-* **ターゲットパス**：親ページのパスです。この基礎モードは、その親ページの下に新しいページを作成します。In this example the path is */content/geometrixx/en/news*.
+* **ターゲットパス**：親ページのパスです。この基礎モードは、その親ページの下に新しいページを作成します。この例では、パスは&#x200B;*/content/geometrixx/en/news*&#x200B;です。
 
-基礎モードの本文はフォームに入力します。ユーザーが基礎モードを使用してページを作成する場合、ユーザーは、フォームに入力して、下部にある「作成」**&#x200B;をクリックします。In the **News** example above the form has the following fields:
+基礎モードの本文はフォームに入力します。ユーザーが基礎モードを使用してページを作成する場合、ユーザーは、フォームに入力して、下部にある「作成」**&#x200B;をクリックします。上の&#x200B;**News**&#x200B;の例では、次のフィールドがフォームに含まれています。
 
 * **タイトル**：作成するページの名前です。このフィールドは、常にすべての基礎モードに表示されます。
 * **テキスト**：このフィールドは、生成されるページのテキストコンポーネントに対応します。
@@ -61,13 +61,13 @@ The scaffold consists of a form with a field for each piece of content that will
 * **画像 / 詳細**：**サイズ**：画像のサイズです。
 * **タグ / キーワード**：このページに割り当てられるメタデータです。このフィールドは、常にすべての基礎モードに表示されます。
 
-### 基礎モードの作成 {#creating-a-scaffold}
+### 基礎モードの作成  {#creating-a-scaffold}
 
-To create a new scaffold go to the **Tools** console, then **Default Page Scaffolding** and create a new page. A single page template type will be available, the *Scaffolding Template.*
+新しい足場を作成するには、**ツール**&#x200B;コンソールに移動し、**デフォルトのページの足場**&#x200B;を開き、新しいページを作成します。 1つのページテンプレートタイプ、*スキャフォールドテンプレート*&#x200B;が使用可能になります。
 
-Go to the **Page Properties** of the new page and set the *Title Text*, *Description*, *Target Template* and *Target Path*, as described above.
+新しいページの&#x200B;**ページプロパティ**&#x200B;に移動し、前述のように、*タイトルテキスト*、*説明*、*ターゲットテンプレート*、*ターゲットパス*&#x200B;を設定します。
 
-次に、このスキャフォールドから作成されるページの構造を定義する必要があります。To do this go into **[design mode](/help/sites-authoring/page-authoring.md#sidekick)** on the scaffold page. リンクが表示され、**ダイアログエディター**&#x200B;でスキャフォールドを編集できます。
+次に、このスキャフォールドから作成されるページの構造を定義する必要があります。これを行うには、スカフォールドページで&#x200B;**[デザインモード](/help/sites-authoring/page-authoring.md#sidekick)**&#x200B;に移動します。 リンクが表示され、**ダイアログエディター**&#x200B;でスキャフォールドを編集できます。
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 
@@ -81,7 +81,7 @@ Go to the **Page Properties** of the new page and set the *Title Text*, *Descrip
 
 ダイアログエディターの&#x200B;**ニュース**&#x200B;基礎モードダイアログの例で、この動作を確認できます。基礎モードページでデザインモードに切り替えて、ダイアログエディターのリンクをクリックします。
 
-Now, click on the dialog field **Dialog > Tab Panel > Text > Text**, like this:
+次に示すように、ダイアログフィールド&#x200B;**ダイアログ/タブパネル/テキスト/テキスト**&#x200B;をクリックします。
 
 ![textedit](assets/textedit.png)
 
@@ -102,7 +102,7 @@ Now, click on the dialog field **Dialog > Tab Panel > Text > Text**, like this:
 
 通常のコンポーネントダイアログでは、このダイアログが既に特定のコンポーネントにバインドされていることが暗黙的に定義されているので、この情報を指定する必要がないことに注意してください。
 
-これら 2 つの情報を指定するには、非表示フィールドを使用します。Click on the first hidden field **Dialog > Tab Panel > Text > Hidden**, like this:
+これら 2 つの情報を指定するには、非表示フィールドを使用します。次のように、最初の非表示フィールド&#x200B;**ダイアログ/タブパネル/テキスト/隠す**&#x200B;をクリックします。
 
 ![hidden](assets/hidden.png)
 
@@ -114,13 +114,13 @@ Now, click on the dialog field **Dialog > Tab Panel > Text > Text**, like this:
 
 `./jcr:content/par/text/textIsRich`
 
-This is a boolean property used to interpret the text string stored at `./jcr:content/par/text/text`.
+これは、`./jcr:content/par/text/text`に保存されているテキスト文字列を解釈するために使用されるブール型プロパティです。
 
 テキストはリッチテキストとして解釈する必要があるので、このフィールドの `value` プロパティを `true` に指定します。
 
 >[!CAUTION]
 >
->The dialog editor allows the user to change the values of *existing* properties in the dialog definition. 新しいプロパティを追加するには、[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用する必要があります。例えば、ダイアログエディターを使用して新しい非表示フィールドをダイアログ定義に追加したとき、*value* プロパティ（つまり、「value」という名前のプロパティ）はありません。この非表示フィールドにデフォルトの *value* プロパティを設定する必要がある場合、いずれかの CRX ツールを使用して、このプロパティを手動で追加する必要があります。ダイアログエディターのみを使用する場合は、この value プロパティを追加できません。ただし、プロパティを追加したら、その値はダイアログエディターで編集できます。
+>ダイアログエディターを使用すると、ユーザーはダイアログ定義の&#x200B;*既存の*&#x200B;プロパティの値を変更できます。 新しいプロパティを追加するには、[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用する必要があります。例えば、ダイアログエディターを使用して新しい非表示フィールドをダイアログ定義に追加したとき、*value* プロパティ（つまり、「value」という名前のプロパティ）はありません。この非表示フィールドにデフォルトの *value* プロパティを設定する必要がある場合、いずれかの CRX ツールを使用して、このプロパティを手動で追加する必要があります。ダイアログエディターのみを使用する場合は、この value プロパティを追加できません。ただし、プロパティを追加したら、その値はダイアログエディターで編集できます。
 
 2 つ目の非表示フィールドは、以下のようにクリックして表示できます。
 
@@ -138,7 +138,7 @@ This is a boolean property used to interpret the text string stored at `./jcr:co
 
 `foundation/components/textimage`
 
-これは、この段落のテキストコンテンツのレンダリングに使用するコンポーネントがテキスト画像&#x200B;**&#x200B;コンポーネントであることを指定しています。Using with the `isRichText` boolean specified in the other hidden field, the component can render the actual text string stored at `./jcr:content/par/text/text` in the desired way.
+これは、この段落のテキストコンテンツのレンダリングに使用するコンポーネントがテキスト画像&#x200B;**&#x200B;コンポーネントであることを指定しています。他の非表示フィールドで指定された`isRichText`ブール値を使用して、`./jcr:content/par/text/text`に保存された実際のテキスト文字列を希望の方法でレンダリングできます。
 
 ### MSM の継承による基礎モード {#scaffolding-with-msm-inheritance}
 
@@ -168,4 +168,4 @@ This is a boolean property used to interpret the text string stored at `./jcr:co
 
 >[!NOTE]
 >
->If the inheritance is canceled at the page level (from the Livecopy tab of Page Properties) then all components will be editable in **Scaffolding** mode (they will be shown in unlocked state).
+>継承がページレベルで（ページプロパティの「Livecopy」タブから）キャンセルされると、すべてのコンポーネントが&#x200B;**Scaffolding**&#x200B;モードで編集可能になります（ロック解除状態で表示されます）。
