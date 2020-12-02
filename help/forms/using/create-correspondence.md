@@ -21,55 +21,55 @@ ht-degree: 63%
 
 ## 通信を作成ユーザーインターフェイスで通信を作成する {#create-correspondence-in-the-create-correspondence-user-interface}
 
-After a [letter template is created in Correspondence Management](../../forms/using/create-letter.md), the end user/agent/claim adjustor can open the letter in the Create Correspondence user interface and create a correspondence by entering data, setting up content, and managing attachments. 最終的に、要求処理担当者またはエージェントはプレビューモードでコンテンツを管理し、レターを送信します。
+Correspondence Management](../../forms/using/create-letter.md)で[レターテンプレートを作成した後、エンドユーザー/エージェント/要求処理担当者は通信を作成ユーザーインターフェイスでレターを開き、データの入力、コンテンツの設定、添付ファイルの管理を行って通信を作成できます。 最終的に、要求処理担当者またはエージェントはプレビューモードでコンテンツを管理し、レターを送信します。
 
-### 通信のプレビュー {#preview-a-correspondence}
+### 通信のプレビュー  {#preview-a-correspondence}
 
 プレビューするレターを次の手順で選択します。
 
-1. On the Letters page, tap **Select**.
+1. レターページで、「**選択**」をタップします。
 1. 必要なレターをタップして選択します。
 
    ![レターを選択](assets/1_selectletter.png)
 
    レターを選択
 
-1. For a Data Dictionary based letter, select **Preview** > **Preview**. データディクショナリベース以外のレターでは、「**プレビュー**」を選択します。レターの上にマウスカーソルを置き（選択しないで）、レターのプレビューアイコンをタップすることでレターをプレビューできます。
+1. データディクショナリベースのレターの場合は、**プレビュー** > **プレビュー**&#x200B;を選択します。 データディクショナリベース以外のレターでは、「**プレビュー**」を選択します。レターの上にマウスカーソルを置き（選択しないで）、レターのプレビューアイコンをタップすることでレターをプレビューできます。
 
    >[!NOTE]
    >
-   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。それ以外の場合は、レターがデータディクショナリベースの場合、Correspondence Managementは、プレビューとカスタムのオプションをプレビューメニューに表示し、2つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。When the [Data Dictionary has associated test data](../../forms/using/data-dictionary.md#p-working-with-test-data-p), then on selecting the preview option, the normal preview opens with the test data populated.
+   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。それ以外の場合は、レターがデータディクショナリベースの場合、Correspondence Managementは、プレビューとカスタムのオプションをプレビューメニューに表示し、2つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。[データディクショナリがテストデータ](../../forms/using/data-dictionary.md#p-working-with-test-data-p)を関連付けている場合、プレビューオプションを選択すると、通常のプレビューが開き、テストデータが入力されます。
 
 1. プレビュー中に通信をレンダリングするには、管理者か、次のいずれかのグループの一部である必要があります。
 
    * forms-users（オーサーインスタンスをプレビューする場合）
    * cm-agent-users（発行インスタンスをレンディションする場合）
 
-   必要なアクセス権を持っていない場合は、管理者に適切なアクセス権を要求します。For more information on creating and adding users to groups, see [Adding Users or Groups to a Group](/help/sites-administering/security.md). 適切な権限を持たない通信をレンダリングしようとすると、404エラーページが表示されます。
+   必要なアクセス権を持っていない場合は、管理者に適切なアクセス権を要求します。ユーザーを作成してグループに追加する方法の詳細については、[ユーザーまたはグループをグループに追加](/help/sites-administering/security.md)を参照してください。 適切な権限を持たない通信をレンダリングしようとすると、404エラーページが表示されます。
 
-1. If you&#39;ve selected **Preview** > **Custom**, a dialog opens. In the dialog, select a data file, corresponding to the data dictionary, to preview the letter with and then select **Preview**. 特定のレターのデータディクショナリに基づいてデータファイルが作成されます。For more information on the data file, see [Data Dictionary](../../forms/using/data-dictionary.md#p-working-with-test-data-p).
+1. **プレビュー** > **カスタム**&#x200B;を選択した場合は、ダイアログが開きます。 ダイアログで、データディクショナリに対応するデータファイルを選択してレターをプレビューし、**プレビュー**&#x200B;を選択します。 特定のレターのデータディクショナリに基づいてデータファイルが作成されます。データファイルについて詳しくは、[データディクショナリ](../../forms/using/data-dictionary.md#p-working-with-test-data-p)を参照してください。
 
    ![レターをプレビュー](assets/8_previewcustomdatafile.png)
 
 1. デフォルトでは、使用中の「データ」タブでレターの HTML プレビュー（モバイルフォームプレビュー）が開きます。
 
-   For more information on mobile forms and the features they support, see [Feature differentiation between Mobile Forms and PDF Forms](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
+   モバイルフォームとそのサポートする機能について詳しくは、[モバイルFormsとPDF formsの機能の違い](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html)を参照してください。
 
    3 つのタブ（データ、コンテンツ、および添付ファイル）があります。データ要素（プレースホルダー変数およびレイアウトフィールド）がない場合、表示される「コンテンツ」タブで直接レターは開きます。「添付ファイル」タブは、添付ファイルが存在するか、ライブラリアクセスが有効な場合にのみ使用できます。
 
    >[!NOTE]
    >
-   >For more information on switching between HTML or PDF rendition mode of letter preview, see [Change rendition mode of letter](#changerenditionmode). For more information on PDF support in Correspondence Management and AEM, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html).
+   >レタープレビューのHTMLまたはPDFレンディションモードの切り替えについて詳しくは、[「レター](#changerenditionmode)のレンディションモードの切り替え」を参照してください。 Correspondence ManagementおよびAEMでのPDFのサポートについて詳しくは、「[NPAPIブラウザープラグインのサポート終了と、その影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)および[HTML5Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html)へのPDF forms&lt;a0/>」を参照してください。
 
 ### データを入力 {#enterdata}
 
 「データ」タブで、使用可能なレイアウトフィールドとプレースホルダーを入力します。
 
-1. 必要に応じて、フィールドにデータとコンテンツの変数を入力します。Fill up all the mandatory fields marked with an asterisk (*) to enable the **Submit** button.
+1. 必要に応じて、フィールドにデータとコンテンツの変数を入力します。アスタリスク(*)の付いた必須フィールドをすべて入力し、「**送信**」ボタンを有効にします。
 
    「データ」タブで HTML レタープレビューのデータフィールド値をタップして、対応するデータフィールドをハイライト表示します。
 
-   ![レター](assets/2_enterdata.png) 2_1_enterdataにデータを入力し ![ます](assets/2_1_enterdata.png)
+   ![レター](assets/2_enterdata.png) ![2_1_enterdataにデータを入力](assets/2_1_enterdata.png)
 
 ### コンテンツを管理 {#managecontent}
 
@@ -85,19 +85,19 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    ![4_highlightmoduleincontent](assets/4_highlightmoduleincontent.png)
 
-   In the Content or Data tab, by tapping Highlight Selected Modules ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) on upper left of the HTML letter preview, you can disable or enable functionality to go to the content/data module when the relevant text, paragraph, or data field is selected in the letter preview.
+   「コンテンツ」または「データ」タブで、HTMLレタープレビューの左上にある選択したモジュールをハイライト表示(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))をタップすると、関連するテキスト、段落またはデータフィールドがレタープレビューで選択されたときに、コンテンツ/データモジュールに移動する機能を無効または有効にできます。
 
-   For more information on the actions available for various modules in the Create Correspondence user interface, see [Actions and info available in the Create Correspondence user interface](#actions-and-info-available-in-the-create-correspondence-content-tab).
+   通信を作成ユーザーインターフェイスの様々なモジュールで使用できるアクションについて詳しくは、「[通信を作成ユーザーインターフェイスで使用できるアクションと情報](#actions-and-info-available-in-the-create-correspondence-content-tab)」を参照してください。
 
 1. コンテンツモジュールを配置するには、「検索」フィールドを使用します。コンテンツモジュールの名前やタイトルの一部または全部を入力して、通信を検索します。
-1. Tap the Display icon ( ![display](assets/display.png)) in front of a list, text, condition, or target area to show or hide it in the letter.
-1. To edit an inline or editable text module, tap the relevant **Edit** icon ( ![edittextmodule](assets/edittextmodule.png)) or double-click the relevant text module in the letter preview.
+1. リスト、テキスト、条件、またはターゲット領域の前にある表示アイコン(![display](assets/display.png))をタップして、レター内で表示または非表示にします。
+1. インラインまたは編集可能なテキストモジュールを編集するには、関連する&#x200B;**編集**&#x200B;アイコン(![edittextmodule](assets/edittextmodule.png))をタップするか、レタープレビューで関連するテキストモジュールを重複クリックします。
 
    テキストを編集および書式設定するためのテキストエディターが表示されます。
 
    ブラウザーのデフォルトのスペルチェッカーにより、テキストエディターのスペルチェックが行われます。スペルチェックや文法チェックを管理するにはブラウザーのスペルチェッカーの設定を編集するか、スペルチェックや文法チェックのためのブラウザーのプラグインまたはアドオンをインストールします。
 
-   また、テキストエディタで様々なキーボードショートカットを使用して、テキストの管理、編集、書式設定を行うこともできます。 For more information on [Text Editor](/help/forms/using/keyboard-shortcuts.md#correspondence-management) keyboard shortcuts in Correspondence Management Keyboard Shortcuts.
+   また、テキストエディタで様々なキーボードショートカットを使用して、テキストの管理、編集、書式設定を行うこともできます。 Correspondence Managementのキーボードショートカットの[テキストエディター](/help/forms/using/keyboard-shortcuts.md#correspondence-management)について詳しくは、
 
    ![5.edittextmodule](assets/5_edittextmodule.png)
 
@@ -123,7 +123,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    >[!NOTE]
    >
-   >For more information on setting up tab spacing for your text modules and letters, see [More information on using tab spacing for arranging text](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
+   >テキストモジュールとレターのタブ間隔の設定について詳しくは、[テキストの配置にタブ間隔を使用する方法の詳細](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)を参照してください。
 
 1. 必要に応じて、通信に特殊文字を挿入します。例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
 
@@ -133,24 +133,24 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    ![specialcharacters](assets/specialcharacters.png)
 
-   Correspondence Managementhas では、210 種類の特殊文字に初期状態から対応しています。The admin can [add support for more/custom special characters by customization](../../forms/using/custom-special-characters.md).
+   Correspondence Managementhas では、210 種類の特殊文字に初期状態から対応しています。管理者は、カスタマイズ](../../forms/using/custom-special-characters.md)によって、追加/カスタムの特殊文字のサポートを追加できます。[
 
 1. 編集可能なインラインモジュールのテキストの一部をハイライト表示または強調するには、テキストを選択して「ハイライト表示の色」をタップします。
 
    ![letterbackgroundcolor](assets/letterbackgroundcolor.png)
 
-   You can either directly tap a basic color `**[A]**` present in the Basic Colors palette or tap **Select** after using the slider `**[B]**` to choose the appropriate shade of the color.
+   基本色パレットに表示されている基本色`**[A]**`を直接タップするか、スライダ`**[B]**`を使用して色の適切な濃さを選択した後で「**選択**」をタップします。
 
-   Optionally, you can also go to the Advanced tab to select the appropriate Hue, Lightness, and Saturation `**[C]**` to create the precise color and then tap Select `**[D]**` to apply the color to highlight the text.
+   必要に応じて、「詳細」タブに移動し、適切な色相、明るさ、彩度`**[C]**`を選択して正確な色を作成し、「`**[D]**`を選択」をタップして色を適用してテキストをハイライトすることもできます。
 
    ![textbackgroundcolor](assets/textbackgroundcolor.png)
 
-1. Make the appropriate content and format changes and tap **Save**. Tap ( ![editnextmoduleccr](assets/editnextmoduleccr.png)) to move between editable text modules, or tap **Save and Next** to save the changes and move to the next editable text module.
+1. コンテンツと形式の変更を適切に行い、「**保存**」をタップします。 (![editnextmoduleccr](assets/editnextmoduleccr.png))をタップして編集可能なテキストモジュール間を移動するか、**「保存して次へ**」をタップして変更を保存し、次の編集可能なテキストモジュールに移動します。
 1. また、各ブランチごとに未入力の変数も表示されます。未入力の変数が無くなると、未入力の変数は 0 として表示されます。未入力の変数がある場合は、ブランチをタップして展開し、未入力の変数を探します。コンテンツツールバーを使用して、コンテンツの削除、コンテンツのインデントの増減、コンテンツの前後に改ページの挿入を行います。
 
    データモジュールがリストや条件の一部に含まれていても、データモジュールの前後に改ページを挿入できます。
 
-1. Tap Open/Close Content Variable ( ![opencontentvariables](assets/opencontentvariables.png)) to open the content variables and fill them appropriately.
+1. コンテンツ変数を開く/閉じる(![opencontentvariables](assets/opencontentvariables.png))をタップして、コンテンツ変数を開き、適切に入力します。
 1. 未入力変数に正しく入力すると、未入力変数のカウントが 0 に設定されます。
 
    通信を作成ユーザーインターフェイスでは、少なくとも 1 つの変数を含むモジュールの階層の各レベルに、未入力変数カウントが表示されます。モジュールに未入力変数が含まれている場合は、変数、モジュール、ターゲット領域、およびレターテンプレートレベルでカウントが表示されます。
@@ -168,16 +168,16 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    レターテンプレート内のモジュールは、未入力変数カウントを以下のように表示します。
 
-   * **テキスト** ：テキストモジュールに含まれる一意の未入力プレースホルダー変数とデータディクショナリ要素の合計を表示します。
-   * **条件** ：条件に含まれる一意の未入力条件変数と、結果のモジュールに含まれる変数の合計を表示します。
-   * **リスト** :リストに割り当てられたモジュールに含まれるすべての一意の未入力変数を表示します。
-   * **ターゲット領域** :ターゲット領域に割り当てられたモジュールに含まれるすべての一意の未入力変数を表示します。
+   * **テ** キストテキストモジュールに含まれる一意の未入力プレースホルダー変数とデータディクショナリ要素の合計を表示します。
+   * **条件条件** に含まれる一意の未入力条件変数と、結果のモジュールに含まれる変数の合計を表示します。
+   * **** リストリストに割り当てられたモジュールに含まれる一意の未入力変数の合計を表示します。
+   * **ターゲット** 領域ターゲット領域に割り当てられたモジュールに含まれる一意の未入力変数の合計を表示します。
 
    デフォルト値を持つ変数について次のことに留意してください。
 
-   * A Boolean variable field defaults to *false*. ただし、この変数は未入力として解釈されます。This implies that the variable count includes all Boolean variable fields with value *false*.
+   * ブール変数フィールドはデフォルトで&#x200B;*false*&#x200B;に設定されます。 ただし、この変数は未入力として解釈されます。これは、変数カウントに、値&#x200B;*false*&#x200B;を持つすべてのブール変数フィールドが含まれることを意味します。
 
-   * A numeric variable field defaults to *0 (zero)*. ただし、この変数は未入力として解釈されます。This implies that the variable count includes all numeric variable fields with value *0 (zero)*.
+   * 数値変数フィールドのデフォルト値は&#x200B;*0（ゼロ）*&#x200B;です。 ただし、この変数は未入力として解釈されます。これは、変数カウントに、値&#x200B;*0（ゼロ）*&#x200B;を持つすべての数値変数フィールドが含まれることを意味します。
 
 
 
@@ -209,9 +209,9 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
 ### 添付ファイルの管理 {#manage-attachments}
 
-1. Select **Attachments**. Correspondence Managementには、レターテンプレートの作成時に設定された、使用可能な添付ファイルが表示されます。
+1. 「**添付ファイル**」を選択します。 Correspondence Managementには、レターテンプレートの作成時に設定された、使用可能な添付ファイルが表示されます。
 1. ビューアイコンをタップすることで、レターの添付ファイルを送信しないように選択できます。また、添付ファイルの × 印をタップすると、添付ファイルをレターから削除できます。指定された添付ファイルがレターテンプレートの作成時に必須として設定されたものに対しては、ビューアイコンと削除アイコンは表示されません。
-1. Tap the Library Access ( ![libraryaccess](assets/libraryaccess.png)) icon to access Content Library to insert DAM assets as attachments.
+1. ライブラリアクセス（![ライブラリアクセス](assets/libraryaccess.png)）アイコンをタップしてコンテンツライブラリにアクセスし、添付ファイルとしてDAMアセットを挿入します。
 
    >[!NOTE]
    >
@@ -221,11 +221,11 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    詳しくは、「[添付ファイルの配信](#attachmentdelivery)」を参照してください。
 
-### プレビューでコンテンツを管理しレターを送信 {#manage-content-in-preview-and-submit-the-letter}
+### プレビューでコンテンツを管理しレターを送信  {#manage-content-in-preview-and-submit-the-letter}
 
 レイアウトやコンテンツに関する変更を行って、レターの表示を意図に合ったものにするとともに、様々なポストプロセスに送信することができます。
 
-1. To highlight all the editable content in the letter, tap **Highlight Editable Sections**.
+1. レター内のすべての編集可能コンテンツをハイライト表示するには、「**編集可能なセクションをハイライト**」をタップします。
 
    レターの編集可能コンテンツがグレーの背景でハイライト表示されます。
 
@@ -235,11 +235,11 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    例えば、下の図で「To allow us to access...」を選択すると、「コンテンツ」タブで対応するコンテンツモジュールが選択されます。
 
-   By tapping Highlight Selected Modules in Content ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)), you can disable or enable functionality to highlight the content module in Content tab when the relevant text, paragraph, or data field is tapped in the letter preview.
+   「コンテンツ内の選択したモジュールをハイライト」(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))をタップすると、レタープレビューで関連するテキスト、段落またはデータフィールドをタップしたときに、「コンテンツ」タブでコンテンツモジュールをハイライト表示する機能を無効または有効にできます。
 
-   For more information on the actions available for various modules in the Create Correspondence user interface, see [Actions and info available in the Create Correspondence user interface](#actions-and-info-available-in-the-create-correspondence-content-tab).
+   通信を作成ユーザーインターフェイスの様々なモジュールで使用できるアクションについて詳しくは、「[通信を作成ユーザーインターフェイスで使用できるアクションと情報](#actions-and-info-available-in-the-create-correspondence-content-tab)」を参照してください。
 
-1. To add a page break to the letter, tap where you want to insert a page break and select Page Break Before or Page Break After ( ![pagebreakbeforeafter](assets/pagebreakbeforeafter.png)).
+1. レターに改ページを追加するには、改ページを挿入する位置をタップし、前の改ページまたは後の改ページ(![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))を選択します。
 
    レターに、改ページのプレースホルダーが明示的に挿入されます。明示的な改ページによりレターがどの程度影響を受けるか表示するには、統合された PDF プレビューを確認します。
 
@@ -255,7 +255,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    ドラフトレター名ダイアログにレターインスタンス ID が表示されます。この ID はオプションで編集することができます。レター ID をメモした後、「**完了**」をタップします。後でこの ID を使用して、[ドラフトレターを再読み込み](submit-letter-topostprocess.md#reloaddraft)できます。
 
-1. To preview the letter as a flattened PDF with the exact layout and page breaks as it will be submitted, tap ( ![preview](assets/preview.png)) Preview.
+1. レターを統合されたPDFとして、送信される状態のレイアウトと改ページでプレビューするには、(![プレビュー](assets/preview.png))プレビューをタップします。
 
    レターは、統合された PDF として表示されます。統合された PDF は、レターのフォント、改ページ、レイアウトなど、送信されるレターの状態を正確に表示します。
 
@@ -263,7 +263,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
    >
    >Mozilla Firefox と HTML レンディションを使用する場合、統合された PDF をプレビューするには、Acrobat のプラグインではなく、必ずネイティブのブラウザプラグインを使用してください。ネイティブのブラウザプラグインを選択するには、Mozilla Firefox の設定に移動し、「ファイルの種類（Content Type）」の「PDF文書」から「Firefox でプレビュー表示」を選択してください。
 
-1. If you find the flattened PDF preview to be satisfactory, tap **Submit** to submit the letter. Or to make changes to the letter, tap **Exit Preview** to go back to the Create Correspondence UI preview of the letter to make changes in the letter. 「送信」をタップすると、レターインスタンスの管理設定が発行インスタンスで有効になっている場合、レターの送信インスタンスが生成されます。
+1. 統合されたPDFプレビューが十分な結果を得られると判断した場合は、「**送信**」をタップしてレターを送信します。 レターを変更するには、**「プレビュー**&#x200B;を終了」をタップしてレターの通信を作成UIプレビューに戻り、レターに変更を加えます。 「送信」をタップすると、レターインスタンスの管理設定が発行インスタンスで有効になっている場合、レターの送信インスタンスが生成されます。
 
    詳しくは、「ドラフトの保存とレターインスタンスの送信」の「ドラフトインスタンス」を参照してください。
 
@@ -271,7 +271,7 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
    必要な変更を行った後、HTML5 プレビューからレターを送信するか、「プレビュー」を再度タップして統合された PDF 出力をレビューできます。
 
-   For information on differences between HTML5 forms and PDF forms, see [Feature differentiation between HTML5 forms and PDF forms](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+   HTML5フォームとPDF formsの違いについて詳しくは、[HTML5フォームとPDF formsの機能の違い](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md)を参照してください。
 
 ## ドラフトの保存とレターインスタンスの送信 {#savingdrafts}
 
@@ -286,8 +286,8 @@ After a [letter template is created in Correspondence Management](../../forms/us
 これらのインスタンスは、レターが発行インスタンスで表示されているときにのみ保存できます。デフォルトでは、インスタンスでの保存は無効になっています。レターインスタンスの保存を有効にするには、次の手順を実行します。
 
 1. AEMで、次のURLを使用して、ご使用のサーバのAdobe Experience ManagerWebコンソール設定を開きます。https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
-1. Locate **[!UICONTROL Correspondence Management Configurations]** and click it.
-1. Check **[!UICONTROL Manage Letter Instances on Publish]** configuration and then click **[!UICONTROL Save]**.
+1. **[!UICONTROL Correspondence Management Configurations]**&#x200B;を探してクリックします。
+1. 「**[!UICONTROL 発行]**&#x200B;設定でレターインスタンスを管理」をオンにし、「**[!UICONTROL 保存]**」をクリックします。
 
 レターインスタンスの保存が有効にされると、レターインスタンスの保存場所を選択するためのオプションが表示されます。レターインスタンスを保存するための 2 つのオプション（ローカル保存とリモート保存）があります。
 
@@ -299,21 +299,21 @@ After a [letter template is created in Correspondence Management](../../forms/us
 
 このオプションは、発行インスタンスでユーザーデータを保存することが心配な人のためのもので、一般には企業ファイアウォールの外側に保存することになるからです。リモート保存が有効になっていると、レターインスタンスは発行インスタンスでは保存されず、LiveCycle Client SDK の設定で指定された処理作成者でリモートに保存されます。
 
-#### リモート保存を有効にする {#enable-remote-save}
+#### リモート保存を有効にする  {#enable-remote-save}
 
-1. In AEM, open Adobe Experience Manager Web Console Configuration for your server using the following URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
-1. Search for **[!UICONTROL Correspondence Management Configurations]** and click it.
-1. Locate the **[!UICONTROL Remote Save]** configuration, check it, and the click **[!UICONTROL Save]**.
+1. AEMで、次のURLを使用して、ご使用のサーバのAdobe Experience ManagerWebコンソール設定を開きます。`https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. **[!UICONTROL Correspondence Management Configurations]**&#x200B;を検索し、クリックします。
+1. **[!UICONTROL リモート保存]**&#x200B;の構成を探し、確認して、**[!UICONTROL 保存]**&#x200B;をクリックします。
 
 #### 処理作成者設定を指定する {#specify-processing-author-settings}
 
-1. In AEM, open Adobe Experience Manager Web Console Configuration for your server using the following URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. AEMで、次のURLを使用して、ご使用のサーバのAdobe Experience ManagerWebコンソール設定を開きます。`https://<server>:<port>/<contextpath>/system/console/configMgr`
 
    ![Adobe Experience Manager Web Console Configuration を使用する場合](assets/2configmanager.png)
 
 1. このページで、Adobe LiveCycle Client SDK Configuration を探し、それをクリックして展開します。
 
-1. In the Processing Server URL, enter the name of your LiveCycle server, provide the login information, and then click **Save**.
+1. 「処理サーバーURL」に、LiveCycleサーバーの名前を入力し、ログイン情報を入力して、「**保存**」をクリックします。
 
    ![LiveCycle サーバーで名前とログイン情報を入力](assets/3configmanager.png)
 
@@ -326,9 +326,9 @@ After a [letter template is created in Correspondence Management](../../forms/us
 * レターテンプレートに関連付けられた後処理が、通信を作成ユーザーインターフェイスを使用して、通信を送信または通信を完了の操作の一部として読み込まれた場合、添付ファイルは AttachmentDocs パラメーター内の List&lt;com.adobe.idp.Document> として渡されます。
 * 追加設定不要な配信メカニズム（電子メールや印刷など）は、生成された通信の PDF とともに添付ファイルも配信します。
 
-## レタープレビューのレンディションモード：モバイルフォームプレビューと PDF プレビュー {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
+## レタープレビューのレンディションモード：モバイルフォームプレビューと PDF プレビュー  {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
 
-AEM Forms Correspondence Management は、「通信を作成」UI でレターを HTML で表示します。ただし、Correspondence Management では、HTML プレビューの代わりに PDF プレビューに戻すことをサポートしています。For more information on switching between HTML and PDF mode of preview, see [Change rendition mode of letter](#changerenditionmode).
+AEM Forms Correspondence Management は、「通信を作成」UI でレターを HTML で表示します。ただし、Correspondence Management では、HTML プレビューの代わりに PDF プレビューに戻すことをサポートしています。プレビューのHTMLモードとPDFモードの切り替えについて詳しくは、[「レター](#changerenditionmode)のレンディションモードの切り替え」を参照してください。
 
 HTML および PDF プレビューの利点と使用できる機能は以下のとおりです。
 
@@ -345,19 +345,19 @@ HTML および PDF プレビューの利点と使用できる機能は以下の�
 * **改ページ**:PDFプレビューでは、レター内の改ページが出力に与える影響を正確に表示できます。
 * **最終プレビュー**： PDF プレビューでは、レターが出力に表示されるため、レターの書式や表示をそのまま確認できます。
 
-For information on scripting support in PDF forms, see [Scripting Support](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
+PDF formsでのスクリプティングのサポートについて詳しくは、[スクリプティングのサポート](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html)を参照してください。
 
-For more information on scripting support in HTML5 forms, see [Scripting support for HTML5 forms](/help/forms/using/scripting-support.md).
+HTML5フォームのスクリプティングのサポートについて詳しくは、「[HTML5フォームのスクリプティングのサポート](/help/forms/using/scripting-support.md)」を参照してください。
 
 ### レターのレンディションモードの変更 {#changerenditionmode}
 
 デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レターのプレビューモードはPDFに変更できます。 ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
 
-For more information on browser compatibility with letter preview, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
+レタープレビューとのブラウザーの互換性について詳しくは、[「NPAPIブラウザープラグインのサポート終了とその影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)」を参照してください。
 
 レターのプレビューモードを変更するには、次の手順を完了してください。
 
-1. Go to `https://[system]:'port'/system/console/configMgr` and, if necessary, log in as Admin.
-1. Go to **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** and select **HTML Rendition** (Default) or **PDF Rendition**.
+1. `https://[system]:'port'/system/console/configMgr`に移動し、必要に応じて管理者としてログインします。
+1. **[!UICONTROL Correspondence Management設定]**/**[!UICONTROL レンディションの種類]**&#x200B;に移動し、**HTMLレンディション**（デフォルト）または&#x200B;**PDFレンディション**&#x200B;を選択します。
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
