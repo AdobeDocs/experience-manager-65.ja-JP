@@ -34,7 +34,7 @@ AEM では様々な設定をおこなえます。
 
    これは、OSGiバンドルとサービスを設定する際の標準的な場所です。
 
-   詳細および推奨プラクティスについては、「OSGiの [設定](/help/sites-deploying/configuring-osgi.md) 」を参照してください。
+   詳細と推奨プラクティスについては、[OSGi](/help/sites-deploying/configuring-osgi.md)の設定を参照してください。
 
 * **リポジトリ**
 
@@ -62,7 +62,7 @@ AEM では様々な設定をおこなえます。
 >
 >変更内容によっては、アプリケーションに大きな影響が及ぶ場合があります。したがって、AEM の設定を開始する前に必要な経験と知識があることを確認し、本当に必要な変更のみをおこなうようにしてください。OSGi コンソール経由でおこなわれた変更は、実行中のシステムに&#x200B;**即時に**&#x200B;適用されます（再起動は不要です）。
 
-## 設定に関する主な考慮事項 {#primary-configuration-considerations}
+## 設定に関する主な考慮事項  {#primary-configuration-considerations}
 
 このリストでは、新しいプロジェクトに共通して設定される主な領域の詳細を説明します。すべてが必要なわけではありませんが、リストを読んで検討し、実際のプロジェクトに該当するものを確認してください。
 
@@ -95,19 +95,19 @@ AEM のすべての要素（リポジトリ、Dispatcher など）は、IPv4 と
 
 * IPv6アドレス
 
-   for example `https://[ab12::34c5:6d7:8e90:1234]:4502`
+   例：`https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4アドレス
 
-   for example `https://123.1.1.4:4502`
+   例：`https://123.1.1.4:4502`
 
 * サーバー名
 
-   for example, `https://www.yourserver.com:4502`
+   例：`https://www.yourserver.com:4502`
 
-* the default case of `localhost` will be interpreted for both IPv4 and IPv6 network installations
+* `localhost`のデフォルトのケースは、IPv4とIPv6の両方のネットワークインストールに対して解釈されます
 
-   for example, `http://localhost:4502`
+   例：`http://localhost:4502`
 
 ### バージョンのパージ {#version-purging}
 
@@ -137,24 +137,24 @@ AEM では、次の設定が可能です。
 
 詳しくは、[実行モード](/help/sites-deploying/configure-runmodes.md)を参照してください。
 
-### シングルサインオン {#single-sign-on}
+### シングルサインオン  {#single-sign-on}
 
 シングルサインオン（SSO）は、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すれば、その後は複数のシステムにアクセスできるようにするものです。個別のシステム（信頼された認証として知られる）が認証を実行し、Adobe Experience Manager に対してユーザーの資格情報を提供します。Adobe Experience Manager がそのユーザーのアクセス権を確認し、適用します（つまり、ユーザーがアクセスを許可されているリソースを決定します）。
 
 詳しくは、[シングルサインオン](/help/sites-deploying/single-sign-on.md)を参照してください。
 
-### リソースマッピング {#resource-mapping}
+### リソースマッピング  {#resource-mapping}
 
 リソースマッピングは、リダイレクト、バニティー URL および AEM 用の仮想ホストを定義するために使用します。
 
 例えば、これらのマッピングを使用すると次のことが可能です。
 
-* Prefix all requests with `/content` so that the internal structure is hidden from the visitors to your website.
-* Define a redirect so that all requests to the `/content/en/gateway` page of your website are redirected to `https://gbiv.com/`.
+* 内部構造がWebサイトの訪問者ーに表示されないように、すべてのリクエストの先頭に`/content`を付けます。
+* Webサイトの`/content/en/gateway`ページへのすべてのリクエストが`https://gbiv.com/`にリダイレクトされるように、リダイレクトを定義します。
 
 詳しくは、[リソースマッピング](/help/sites-deploying/resource-mapping.md)を参照してください。
 
-### レプリケーション、リバースレプリケーションおよびレプリケーションエージェント {#replication-reverse-replication-and-replication-agents}
+### レプリケーション、リバースレプリケーションおよびレプリケーションエージェント  {#replication-reverse-replication-and-replication-agents}
 
 レプリケーションエージェントは AEM の中核であり、次の目的で使用されます。
 
@@ -166,29 +166,29 @@ AEM では、次の設定が可能です。
 
 ### OSGi 設定 {#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) はAEMのテクノロジスタックの基本要素です。AEMの複合バンドルとその設定を制御するために使用されます。
+[](https://www.osgi.org/) OSGはAEMのテクノロジスタックの基本要素です。AEMの複合バンドルとその設定を制御するために使用されます。
 
 プロジェクト実装に関連する様々なバンドルのリストについては、[OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください（バンドルに基づいてリストされています）。リストされているすべての設定に調整が必要なわけではなく、一部の設定は AEM の動作を説明する目的で記載されています。
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-### LDAP の設定 {#configuring-ldap}
+### LDAP の設定  {#configuring-ldap}
 
 LDAP 認証は、Active Directory などの（中央の）LDAP ディレクトリに格納されているユーザーを認証するために必要です。これにより、ユーザーアカウントの管理に必要な労力が軽減されます。
 
-LDAP 認証はリポジトリレベルでおこなわれるので、リポジトリによって直接処理されます。For further details, see [Configuring LDAP with AEM](/help/sites-administering/ldap-config.md).
+LDAP 認証はリポジトリレベルでおこなわれるので、リポジトリによって直接処理されます。詳しくは、[AEMでのLDAPの設定](/help/sites-administering/ldap-config.md)を参照してください。
 
 AEM 内のユーザー管理（アクセス権の割り当てを含む）について詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
-### Dispatcher の設定 {#configuring-the-dispatcher}
+### Dispatcher の設定  {#configuring-the-dispatcher}
 
 ディスパッチャーは、Adobe Experience Managerのキャッシュおよびロードバランシングのツールで、エンタープライズクラスのWebサーバーと組み合わせて使用できます。
 
-詳しくは、[Dispatcher ](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)を参照してください。特に、設定の詳細については、[Dispatcher の設定](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を参照してください。
+詳しくは、[Dispatcher ](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)を参照してください。特に、設定の詳細については、[Dispatcher の設定](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)を参照してください。
 
 ### AEM LiveCycle Connector の設定 {#configuring-aem-livecycle-connector}
 
-With the release of the AEM Doc Services and AEM Doc Security, we now have the capability to invoke the LiveCycle doc services to render an XFA form, convert a document to PDF and policy protect a document. Please read [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) for more details.
+AEM Doc ServicesとAEM Doc Securityのリリースにより、LiveCycleドキュメントサービスを呼び出してXFAフォームをレンダリングし、ドキュメントをPDFに変換し、ドキュメントをポリシーで保護できるようになりました。詳しくは、[AEMLiveCycleコネクタ](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html)をお読みください。
 
 ### ジョブのオフロードとトポロジの管理 {#job-offloading-and-topology-administration}
 
@@ -198,13 +198,13 @@ With the release of the AEM Doc Services and AEM Doc Security, we now have the c
 
 トポロジメンバーシップの表示または変更方法について詳しくは、[トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies)を参照してください。
 
-### ようこそコンソールの設定 {#configuring-the-welcome-console}
+### ようこそコンソールの設定  {#configuring-the-welcome-console}
 
 クラシック UI のようこそコンソールには、AEM 内の様々なコンソールおよび機能へのリンクのリストが表示されます。
 
 表示可能なリンクを設定することもできます。詳しくは、[ようこそコンソールの設定](/help/sites-developing/customizing-the-welcome-console.md)を参照してください。
 
-### パフォーマンスの設定 {#configuring-for-performance}
+### パフォーマンスの設定  {#configuring-for-performance}
 
 [パフォーマンス](/help/sites-deploying/configuring-performance.md)はプロジェクトの鍵となります。パフォーマンスを最適化するために AEM（および基盤となるリポジトリ）の特定の要素を設定できます。
 
@@ -224,7 +224,7 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
 詳しくは、[ノードストアとデータストアの設定](/help/sites-deploying/data-store-config.md)を参照してください。
 
-## 設定に関するその他の考慮事項 {#further-configuration-considerations}
+## 設定に関するその他の考慮事項  {#further-configuration-considerations}
 
 ### HTTP over SSL の有効化 {#enabling-http-over-ssl}
 
@@ -232,11 +232,11 @@ HTTP over SSL を有効にして、サーバーへの接続のセキュリティ
 
 詳しくは、[HTTP over SSL の有効化](/help/sites-administering/ssl-by-default.md)を参照してください。
 
-### AEM ポータルとポートレット {#aem-portals-and-portlets}
+### AEM ポータルとポートレット  {#aem-portals-and-portlets}
 
 ポータルとは、パーソナライズ、シングルサインオン、別々のソースからのコンテンツ統合を提供し、情報システムのプレゼンテーションレイヤーをホストする Web アプリケーションです。ポートレットコンポーネントでも、ポートレットをページに埋め込むことができます。CQ5 WCM で提供されているコンテンツにアクセスするために、ポータルサーバーを CQ5 Portal Director Portlet に組み込むことができます。これをおこなうには、ポートレットをインストールして設定し、ポータルページに追加します。
 
-詳しくは、「 [ポータルとポートレット](/help/sites-administering/aem-as-portal.md) 」を参照してください。
+詳しくは、[ポータルとポートレット](/help/sites-administering/aem-as-portal.md)を参照してください。
 
 ### 静的オブジェクトの有効期限 {#expiration-of-static-objects}
 
@@ -244,11 +244,11 @@ HTTP over SSL を有効にして、サーバーへの接続のセキュリティ
 
 詳しくは、[静的オブジェクトの有効期限](/help/sites-deploying/expiration-static-objects.md)を参照してください。
 
-### Java プロセスでファイルを開く {#open-files-in-the-java-process}
+### Java プロセスでファイルを開く  {#open-files-in-the-java-process}
 
 個々の Java プロセスがファイルにアクセスする場合がありますが、これにはシステムリソースが必要です。この理由から、プロセスごとに同時にアクセスできるファイル数の上限が定義されています。これを超えると、例外エラーが発生する場合があります。
 
-If the AEM process exceeds this maximum, then the message &quot; `too many open files`&quot; will be seen in `error.log`.
+AEMプロセスがこの最大値を超えると、`too many open files`にメッセージ「&lt;a0/>」が表示されます。`error.log`
 
 このような例外を回避するには、次の処理をおこなう必要があります。
 
@@ -265,7 +265,7 @@ If the AEM process exceeds this maximum, then the message &quot; `too many open 
 
    この新しい値は、現在のニーズと将来のピークの両方に適している必要があるので、現在のニーズを重複することをお勧めします。
 
-   デフォルトでは、 `serverctl` は次 `CQ_MAX_OPEN_FILES` に設定し `8192`ます。これは、ほとんどのシナリオで十分です。
+   デフォルトでは、`serverctl`は`CQ_MAX_OPEN_FILES`を`8192`に設定します。これは、ほとんどのシナリオで十分です。
 
 ### リッチテキストエディターの設定 {#configuring-the-rich-text-editor}
 
@@ -273,23 +273,23 @@ If the AEM process exceeds this maximum, then the message &quot; `too many open 
 
 詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
 
-### ページ編集のための取り消しの設定 {#configuring-undo-for-page-editing}
+### ページ編集のための取り消しの設定  {#configuring-undo-for-page-editing}
 
 ページ編集操作の取り消し／やり直しコマンドの動作を制御するためのプロパティがいくつかあります。これらのプロパティの設定については、[ページ編集のための取り消しの設定](/help/sites-administering/config-undo.md)を参照してください。
 
-### ビデオコンポーネントの設定 {#configuring-the-video-component}
+### ビデオコンポーネントの設定  {#configuring-the-video-component}
 
 [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video)を使用すると、ページに定義済みの標準提供ビデオ要素を配置できます。
 
 適切なトランスコーディングをおこなうには、管理者が個別に [FFmpeg をインストール](/help/sites-administering/config-video.md#install-ffmpeg)する必要があります。また、HTML5 要素で使用するように[ビデオプロファイルを設定](/help/sites-administering/config-video.md#configure-video-profiles)することもできます。
 
-### レポートの設定とカスタマイズ {#configuring-and-customizing-reports}
+### レポートの設定とカスタマイズ  {#configuring-and-customizing-reports}
 
 インスタンスの状態を監視および分析しやすいように、CQ ではデフォルトのレポートが提供されており、個々の要件に合わせて設定できます。
 
 詳しくは、[レポートのカスタマイズの基本](/help/sites-administering/reporting.md#the-basics-of-report-customization)を参照してください。
 
-### 電子メール通知の設定 {#configuring-email-notification}
+### 電子メール通知の設定  {#configuring-email-notification}
 
 CQ は、次のようなユーザーに電子メール通知を送信します。
 
