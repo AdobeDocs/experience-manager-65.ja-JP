@@ -28,15 +28,15 @@ ht-degree: 72%
 
 まずは、この記事で使用される重要な用語と概念について見てみましょう。
 
-**外観** ：アダプティブフォームフィールドの様々な要素のスタイル、ルック&amp;フィール、編成を指します。 通常、ラベル、入力用のインタラクティブ領域、ヘルプアイコン、ならびにフィールドについての短い説明や長い説明などが含まれます。この記事で扱われる外観のカスタマイズは、フィールドの入力領域の外観に適用できます。
+**** 外観：アダプティブフォームフィールドの様々な要素のスタイル、ルック&amp;フィール、編成を指します。通常、ラベル、入力用のインタラクティブ領域、ヘルプアイコン、ならびにフィールドについての短い説明や長い説明などが含まれます。この記事で扱われる外観のカスタマイズは、フィールドの入力領域の外観に適用できます。
 
-**jQueryプラグイン** :jQueryウィジェットのフレームワークに基づく、代替の外観を実装するための標準的なメカニズムを提供します。
+**jQuery** pluginjQueryウィジェットフレームワークに基づく、代替の外観を実装するための標準的なメカニズムを提供します。
 
-**ClientLib** ：複雑なJavaScriptとCSSコードによるAEMクライアントサイドの処理におけるクライアントサイドライブラリシステム。 詳しくは、「クライアント側ライブラリの使用」を参照してください。
+**ClientLib複雑なJavaScriptとCSSコードによって実行される、AEMのクライアントサイドの処理におけるクライアントサイドのライブラリシステム。** 詳しくは、「クライアント側ライブラリの使用」を参照してください。
 
-**アーキタイプ** Mavenプロジェクトの元のパターンまたはモデルとして定義されたMavenプロジェクトテンプレートツールキットです。 詳しくは、「アーキタイプの概要」を参照してください。
+**アー** キタイプMavenプロジェクトのオリジナルのパターンまたはモデルとして定義されるMavenプロジェクトテンプレートツールキットです。詳しくは、「アーキタイプの概要」を参照してください。
 
-**ユーザーコントロール** ：フィールドの値を含み、カスタムウィジェットUIとアダプティブフォームモデルを連結する外観フレームワークで使用される、ウィジェットのメイン要素です。
+**ユーザー** 制御フィールドの値を含むウィジェットのメイン要素を指し、カスタムウィジェットUIとアダプティブフォームモデルを連結する外観フレームワークで使用されます。
 
 ## カスタム外観の作成手順 {#steps-to-create-a-custom-appearance}
 
@@ -114,7 +114,7 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
 
 1. プロジェクトにサードパーティのプラグインを含めます。
 
-   1. Place the third-party or custom jQuery plugins in the `jqueryplugin/javascript` folder and related CSS files in the `jqueryplugin/css` folder. For more details, see the JS and CSS files under the `jqueryplugin/javascript and jqueryplugin/css` folder.
+   1. サードパーティまたはカスタムのjQueryプラグインを`jqueryplugin/javascript`フォルダーに配置し、関連するCSSファイルを`jqueryplugin/css`フォルダーに配置します。 詳しくは、`jqueryplugin/javascript and jqueryplugin/css`フォルダーのJSファイルとCSSファイルを参照してください。
 
    1. `js.txt` および `css.txt` ファイルを変更して、jQuery プラグインの JavaScript ファイルと CSS ファイルが含まれるようにします。
 
@@ -128,13 +128,13 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。For example, <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;li&gt;</code>. The returned element is used as <code>$userControl</code>. If the <code>$userControl</code> specifies the above constraint, the functions of the <code>AbstractWidget</code> class work as expected, else some of the common APIs (focus, click) require changes. </td>
+   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、<code>&lt;a&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;li&gt;</code>のように指定します。 返される要素は<code>$userControl</code>として使用されます。 <code>$userControl</code>が上記の制約を指定する場合、<code>AbstractWidget</code>クラスの関数は期待どおりに動作します。そうでない場合、一部の一般的なAPI （フォーカス、クリック）は変更を必要とします。 </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
    <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> この例では、がHTMLイベント <code>blur</code> で、対応するXFAイベント <code>XFA_EXIT_EVENT</code> であることを示します。 </td>
+      }</code><br /> この例は、がHTMLイベント <code>blur</code> で、対応するXFAイベント <code>XFA_EXIT_EVENT</code> であることを示しています。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
@@ -146,18 +146,18 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
   </tr>
   <tr>
    <td><code>showValue</code></td>
-   <td>デフォルトでは、XFA での enter イベント時に、フィールドの <code>rawValue</code> が表示されます。This function is called to show the <code>rawValue</code> to the user. </td>
+   <td>デフォルトでは、XFA での enter イベント時に、フィールドの <code>rawValue</code> が表示されます。この関数が呼び出され、<code>rawValue</code>がユーザーに表示されます。 </td>
   </tr>
   <tr>
    <td><code>showDisplayValue</code></td>
-   <td>デフォルトでは、XFA での exit イベント時に、フィールドの <code>formattedValue</code> が表示されます。This function is called to show the <code>formattedValue</code> to the user. </td>
+   <td>デフォルトでは、XFA での exit イベント時に、フィールドの <code>formattedValue</code> が表示されます。この関数が呼び出され、<code>formattedValue</code>がユーザーに表示されます。 </td>
   </tr>
  </tbody>
 </table>
 
 1. 必要に応じて `integration/javascript` フォルダーの JavaScript ファイルを更新します。
 
-   * Replace the text `__widgetName__` with the actual widget name.
+   * テキスト`__widgetName__`を実際のウィジェット名に置き換えます。
    * 適切なデフォルトのウィジェットクラスからウィジェットを拡張します。多くの場合は、置き換えられる既存のウィジェットに対応したウィジェットクラスになります。親クラス名は複数の場所で使用されるため、ファイル内すべての文字列 `xfaWidget.textField` のインスタンスを検索して、実際使用する親クラスで置き換えることを推奨します。
    * `render` メソッドを拡張して代替の UI を設定します。その場所から jQuery プラグインが起動し、UI またはインタラクション動作を更新します。`render` メソッドは、ユーザーコントロール要素を返します。
 
@@ -169,7 +169,7 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
 
    * テンプレートファイルでは、さまざまなメソッドでの導入例が紹介されています。拡張しないメソッドは削除してください。
 
-### クライアントライブラリの作成 {#create-a-client-library}
+### クライアントライブラリの作成  {#create-a-client-library}
 
 Maven アーキタイプで生成されたサンプルプロジェクトは、必要なクライアントライブラリを自動で作成し、`af.customwidgets` カテゴリでそれらをクライアントライブラリに含めます。`af.customwidgets` で使用できる JavaScript および CSS ファイルはランタイム時に自動で含まれます。
 
@@ -189,9 +189,9 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
 
 1. アダプティブフォームを編集モードで開きます。
 1. カスタム外観を適用するフィールドの **Property** ダイアログを開きます。
-1. In the **Styling** tab, update the `CSS class` property to add the appearance name in the `widget_<widgetName>` format. 例えば、**widget_numericstepper** です。
+1. 「**スタイル設定**」タブで、`CSS class`プロパティを更新して`widget_<widgetName>`形式で外観の名前を追加します。 例えば、**widget_numericstepper** です。
 
-## サンプル：カスタム外観の作成 {#sample-create-a-custom-appearance-nbsp}
+## サンプル：カスタム外観の作成  {#sample-create-a-custom-appearance-nbsp}
 
 それでは、数値のフィールドを数値ステッパーまたはスライダーとして表示されるようにカスタム外観を作成する例をみてみましょう。以下の手順を実行します。
 
@@ -236,18 +236,18 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
 
    Eclipse プロジェクトでは、`plugin.js` ファイルのプラグインコードを見直して、外観の要件を満たすようにします。このサンプルでは、外観は以下の要件を満たしています。
 
-   * The numeric stepper should extend from `- $.xfaWidget.numericInput`.
+   * 数値ステッパーは`- $.xfaWidget.numericInput`から拡張する必要があります。
    * フィールドにフォーカスすると、ウィジェットの `set value` メソッドが値を設定します。これは、アダプティブフォームウィジェットでは必須要件です。
    * `render` メソッドを起動するには、`bootstrapNumber` メソッドをオーバーライドする必要があります。
 
    * プラグインのメインソースコード以外でプラグインに依存しません。
    * サンプルではステッパーのスタイル設定を実行しないため、CSS の追加を必要としません。
-   * The `$userControl` object should be available to the `render` method. これは、`text` タイプのフィールドであり、プラグインコードで複製されます。
+   * `$userControl`オブジェクトは、`render`メソッドで使用できる必要があります。 これは、`text` タイプのフィールドであり、プラグインコードで複製されます。
 
    * フィールドが無効の場合に「**+**」および「**-**」ボタンが無効になります。
 
 1. `bootstrap-number-input.js`（jQuery プラグイン）のコンテンツを `numericStepper-plugin.js` ファイルのコンテンツと置き換えます。
-1. In the `numericStepper-widget.js` file, add the following code to override the render method to invoke the plugin and return the `$userControl` object:
+1. `numericStepper-widget.js`ファイルに次のコードを追加し、プラグインを呼び出して`$userControl`オブジェクトを返すレンダリングメソッドをオーバーライドします。
 
    ```javascript
    render : function() {
@@ -267,7 +267,7 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
    }
    ```
 
-1. In the `numericStepper-widget.js` file, override the `getOptionsMap` property to override the access option, and hide the + and - buttons in disabled mode.
+1. `numericStepper-widget.js`ファイルで、`getOptionsMap`プロパティを上書きしてアクセスオプションを上書きし、無効モードで「+」ボタンと「 — 」ボタンを非表示にします。
 
    ```javascript
    getOptionsMap: function(){
@@ -309,7 +309,7 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
     }
    ```
 
-1. Save the changes, navigate to the folder containing the `pom.xml` file, and execute the following Maven command to build the project:
+1. 変更を保存し、`pom.xml`ファイルを含むフォルダーに移動し、次のMavenコマンドを実行してプロジェクトを構築します。
 
    `mvn clean install`
 
