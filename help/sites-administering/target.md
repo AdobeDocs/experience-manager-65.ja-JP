@@ -67,12 +67,12 @@ Target に統合するには、次のタスクを実行します。
 >
 >AEM オーサーインスタンスでコンポーネントをターゲット設定すると、そのコンポーネントが、キャンペーンの登録、オファーの設定、Adobe Target セグメントの取得（設定されている場合）をおこなうために、Adobe Target に対して一連のサーバー側呼び出しを実行します。AEM Publish から Adobe Target にサーバー側呼び出しは作成されません。
 
-## 背景情報ソース {#background-information-sources}
+## 背景情報ソース  {#background-information-sources}
 
 AEM と Adobe Target を統合するには、Adobe Target、AEM アクティビティの管理、AEM オーディエンスの管理に関する知識が必要です。以下を十分理解している必要があります。
 
 * Adobe Target（[Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/target-home.translate.html)を参照）
-* AEM Activities console (See [Managing Activities](/help/sites-authoring/activitylib.md)).
+* AEMアクティビティコンソール([アクティビティの管理](/help/sites-authoring/activitylib.md)を参照)。
 * AEM オーディエンス（[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照）
 
 >[!NOTE]
