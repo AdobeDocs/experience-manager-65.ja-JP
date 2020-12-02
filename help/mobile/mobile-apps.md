@@ -32,4 +32,4 @@ AEM Mobile では、複数の方法でアプリを作成できます。以下の
 
 >[!NOTE]
 >
->If you are new to Adobe Experience Manager, you may want to walk through [Getting Started with AEM](/help/sites-deploying/deploy.md).
+>Adobe Experience Managerを初めて使用する場合は、[AEM](/help/sites-deploying/deploy.md)はじめにを参照してください。
