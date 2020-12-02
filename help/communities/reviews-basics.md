@@ -22,7 +22,7 @@ ht-degree: 53%
 
 この機能は、連携して動作する 2 つのコンポーネント（レビューとレビュー概要）で構成されます。
 
-Reviews is a composite component based on a [comment system](essentials-comments.md) which contains one or more [rating](rating-basics.md) (tally) components.
+レビューとは、1つ以上の[評価](rating-basics.md) （割合）コンポーネントを含む[コメントシステム](essentials-comments.md)に基づく複合コンポーネントです。
 
 匿名でのレビュー投稿はサポートされていません。サイト訪問者は、レビューを追加するには登録してサインインする必要があります。 サインインした訪問者（メンバ）は、いつでもレビューを更新できます。
 
@@ -54,7 +54,7 @@ Reviews is a composite component based on a [comment system](essentials-comments
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td>See <a href="reviews.md">Using Reviews</a></td>
+   <td><a href="reviews.md">レビューの使用</a>を参照</td>
   </tr>
  </tbody>
 </table>
@@ -64,14 +64,14 @@ Reviews is a composite component based on a [comment system](essentials-comments
 | **resourceType** | social/reviews/components/hbs/summary |
 |---|---|
 | [**インクルード可能**](scf.md#add-or-include-a-communities-component) | はい — プロパティは*design *modeで編集可能 |
-| [**clientllibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
+| [**clientlibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
 | **テンプレート** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
-| **プロパティ** | See [Using Reviews](reviews.md) |
+| **プロパティ** | [レビューの使用](reviews.md)を参照 |
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [レビュー API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/review/client/api/package-summary.html)
 
@@ -79,7 +79,7 @@ Reviews is a composite component based on a [comment system](essentials-comments
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿されたレビュー（UGC）へのアクセス {#accessing-posted-reviews-ugc}
+### 投稿されたレビュー（UGC）へのアクセス  {#accessing-posted-reviews-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -89,8 +89,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
-* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
+* [SocialUtilsリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
