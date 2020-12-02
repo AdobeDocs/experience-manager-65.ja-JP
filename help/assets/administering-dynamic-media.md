@@ -14,20 +14,20 @@ ht-degree: 71%
 ---
 
 
-# Dynamic Media のセットアップ {#setting-up-dynamic-media}
+# Dynamic Media のセットアップ  {#setting-up-dynamic-media}
 
 [Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
 
 >[!NOTE]
 >
->このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。If you are using Dynamic Media Classic (previously called Scene7) integrated into AEM, see [Dynamic Media Classic integration documentation](/help/sites-administering/scene7.md).
+>このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたダイナミックメディアクラシック(旧称Scene7)を使用している場合は、[ダイナミックメディアクラシック統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
 >
->See [Dual Use Scenario](/help/sites-administering/scene7.md#dual-use-scenario) for times when you may want to use AEM integrated with Dynamic Media Classic along with Dynamic Media.
+>ダイナミックメディアと統合されたAEMを使用したい場合は、[デュアル使用シナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
 
 Dynamic Media の管理者には、次のトピックが参考になります。
 
-* [ダイナミックメディア —Scene7モードの設定](config-dms7.md) — この設定は、ダイナミックメディアを初めてお使いの場合に使用します。
-* [ダイナミックメディアハイブリッドモードの設定](config-dynamic.md) — 既存のダイナミックメディアユーザーアップグレードAEMの場合は、この設定を使用します。
+* [ダイナミックメディア —Scene7モードの設定](config-dms7.md)  — この設定は、ダイナミックメディアを初めてお使いの場合に使用します。
+* [ダイナミックメディアハイブリッドモードの設定](config-dynamic.md)  — 既存のダイナミックメディアユーザーアップグレードAEMの場合は、この設定を使用します。
 * [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
 * [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
