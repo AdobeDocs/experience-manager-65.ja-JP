@@ -17,16 +17,16 @@ ht-degree: 51%
 ---
 
 
-# タスクのタブのカスタマイズ {#customizing-tabs-for-a-task}
+# タスクのタブのカスタマイズ  {#customizing-tabs-for-a-task}
 
-Uber表示でコンポーネントのタブ名をカスタマイズしたり、Uber表示で `Start Process` コンポーネントのタブ名をカスタマイ `Start Process``Task Details``ToDo` ズすることができます。
+`Start Process` Uber表示内の`Start Process`コンポーネントおよび`ToDo` Uber表示内の`Task Details`コンポーネントのタブ名をカスタマイズできます。
 
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に従います。
-1. Change the value of `tabname`in the `translation.json` file.
+1. `translation.json`ファイルの`tabname`の値を変更します。
 
-   For example, change `/apps/ws/locales/en-US/translation.json` for English to the following.
+   例えば、英語の場合は`/apps/ws/locales/en-US/translation.json`を次のように変更します。
 
-   * For tasks initiated in the start process, use the following snippet from the `"startprocess" : {}` block.
+   * 開始プロセスで開始されたタスクに対しては、`"startprocess" : {}`ブロックの次のスニペットを使用します。
 
    ```json
    "tabname" : {
@@ -37,7 +37,7 @@ Uber表示でコンポーネントのタブ名をカスタマイズしたり、U
            }
    ```
 
-   * For tasks in To-do, use the following snippet from the `"todo" : {}` block.
+   * TODO内のタスクに対しては、`"todo" : {}`ブロックの次のスニペットを使用します。
 
    ```json
    "tabname" : {
