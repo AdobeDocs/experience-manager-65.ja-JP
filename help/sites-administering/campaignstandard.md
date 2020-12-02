@@ -40,7 +40,7 @@ Adobe Campaign との統合を拡張する場合は、次のページが参考�
 * [カスタム拡張の作成](/help/sites-developing/extending-campaign-extensions.md)
 * [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)
 
-## Adobe Campaign の設定 {#configuring-adobe-campaign}
+## Adobe Campaign の設定  {#configuring-adobe-campaign}
 
 Adobe Campaign の設定には、次が含まれます。
 
@@ -51,7 +51,7 @@ Adobe Campaign の設定には、次が含まれます。
 
 >[!NOTE]
 >
->To perform these operations, you must have the **administration** role in Adobe Campaign.
+>これらの操作を実行するには、Adobe Campaignに&#x200B;**管理**&#x200B;ロールが必要です。
 
 ### 前提条件 {#prerequisites}
 
@@ -63,13 +63,13 @@ Adobe Campaign の設定には、次が含まれます。
 
 >[!CAUTION]
 >
->Operations detailed in the [Configuring Adobe Campaign](#configuring-adobe-campaign) and [Configuring Adobe Experience Manager](#configuring-adobe-experience-manager) sections are necessary for the integration functionalities between AEM and Adobe Campaign to work correctly.
+>AEMとAdobe Campaign間の統合機能が正しく動作するためには、[Adobe Campaignの設定](#configuring-adobe-campaign)と[Adobe Experience Managerの設定](#configuring-adobe-experience-manager)の節に記載されている作業が必要です。
 
 ### Configuring the aemserver user {#configuring-the-aemserver-user}
 
-The **aemserver** user must be configured in Adobe Campaign. The **aemserver** is a technical user that will be used to connect the AEM server to Adobe Campaign.
+**aemserver**&#x200B;ユーザーは、Adobe Campaignで構成する必要があります。 **aemserver**&#x200B;は、AEMサーバーをAdobe Campaignに接続する際に使用する技術ユーザーです。
 
-**管理** / **ユーザーとセキュリティ** /ユーザーに移動し、aemserver ******** userを選択します。 クリックしてユーザー設定を開きます。
+**管理**/**ユーザーとセキュリティ**/**ユーザー**&#x200B;に移動し、**aemserver**&#x200B;ユーザーを選択します。 クリックしてユーザー設定を開きます。
 
 * このユーザーにパスワードを設定する必要があります。これは UI では実行できません。技術管理者が REST で設定する必要があります。
 * **deliveryPrepare** など、特定の役割をこのユーザーに割り当てることができます。これにより、ユーザーは配信を作成および編集できます。
@@ -84,29 +84,29 @@ Adobe Campaign を AEM インスタンスに接続可能な外部アカウント
 
 AEM 外部アカウントを設定するには：
 
-1. **管理** / **アプリケーション設定** / **外部アカウントに移動します**。
+1. **管理**/**アプリケーション設定**/**外部アカウント**&#x200B;に移動します。
 
    ![chlimage_1-124](assets/chlimage_1-124a.png)
 
-1. Select the default **aemInstance** external account or create a new one by clicking the **Create** button.
-1. Select **Adobe Experience Manager** i n the **Type** field and enter the access parameters used for your AEM authoring instance: server address, account name and password.
+1. デフォルトの&#x200B;**aemInstance**&#x200B;外部アカウントを選択するか、**「**&#x200B;を作成」ボタンをクリックして新しいインスタンスを作成します。
+1. 「**タイプ**」フィールドで「**Adobe Experience Manager** i」を選択し、AEMオーサリングインスタンスに使用するアクセスパラメーターを入力します。サーバーアドレス、アカウント名およびパスワード。
 
    >[!NOTE]
    >
    >URL の末尾に **/**（スラッシュ）を追加しないようにします。追加した場合、接続が機能しなくなります。
 
-1. Make sure that the **Enabled** checkbox is selected, then click **Save** to save your modifications.
+1. 「**有効**」チェックボックスが選択されていることを確認し、「**保存**」をクリックして変更を保存します。
 
 ### AEMResourceTypeFilter オプションの検証 {#verifying-the-aemresourcetypefilter-option}
 
-The **AEMResourceTypeFilter** option is used to filter types of AEM resources that can be used in Adobe Campaign. これにより、Adobe Campaign でのみ使用されるように特別に設計された AEM コンテンツを Adobe Campaign で取得できます。
+**AEMResourceTypeFilter**&#x200B;オプションは、Adobe Campaignで使用できるAEMリソースの種類をフィルターするのに使用します。 これにより、Adobe Campaign でのみ使用されるように特別に設計された AEM コンテンツを Adobe Campaign で取得できます。
 
 このオプションは事前設定済みです。ただし、このオプションを変更すると、統合が機能しなくなる可能性があります。
 
 **AEMResourceTypeFilter** オプションが設定されていることを検証するには：
 
 1. **管理**／**（アプリケーション設定**／**オプション**&#x200B;に移動します。
-1. In the list, you can ensure that the **AEMResourceTypeFilter** option is listed and that the paths are correct.
+1. リストで、**AEMResourceTypeFilter**&#x200B;オプションが一覧に表示され、パスが正しいことを確認できます。
 
 ### AEM 専用の電子メール配信テンプレートの作成 {#creating-an-aem-specific-email-delivery-template}
 
@@ -115,8 +115,8 @@ The **AEMResourceTypeFilter** option is used to filter types of AEM resources th
 AEM 専用の電子メール配信テンプレートを作成するには：
 
 1. **リソース**／**テンプレート**／**配信テンプレート**&#x200B;に移動します。
-1. **アクションバーのチェックマークをクリックし** 、既存の **標準電子メール（電子メール）** デフォルトテンプレートを選択して選択を有効にします。次に、 **コピー** アイコンをクリックし、「 **確認**」をクリックして重複します。
-1. Disable the selection mode by clicking the **x** and open the newly created **Copy of Standard email (mail)** template, then select **Edit properties** from the action bar of the template dashboard.
+1. **アクションバーのチェックマークをクリックし、既存の** 標準電子メール（電子メール） **デフォルトテンプレートを選択して選択を有効にし、** コピーアイコンをクリックし、「 **** 確認 ****」をクリックして重複します。
+1. **x**&#x200B;をクリックして選択モードを無効にし、新しく作成した&#x200B;**標準電子メール(mail)**&#x200B;テンプレートを開き、テンプレートダッシュボードのアクションバーで「**プロパティを編集**」を選択します。
 
    テンプレートの&#x200B;**ラベル**&#x200B;を変更できます。
 
@@ -136,7 +136,7 @@ AEM を設定するには、次の手順を実行する必要があります。
 * AEM から Adobe Campaign に接続します。
 * Externalizer を設定します。
 
-### AEM インスタンス間のレプリケーションの設定 {#configuring-replication-between-aem-instances}
+### AEM インスタンス間のレプリケーションの設定  {#configuring-replication-between-aem-instances}
 
 AEM オーサーインスタンスから作成されたコンテンツは、最初にパブリッシュインスタンスに送信されます。このパブリッシュインスタンスは、次にコンテンツを Adobe Campaign に転送します。レプリケーションエージェントは、その結果として、AEM オーサーインスタンスから AEM パブリッシュインスタンスにレプリケートするように設定される必要があります。
 
@@ -149,14 +149,14 @@ AEM オーサーインスタンスから作成されたコンテンツは、最�
 
 AEM インスタンス間のレプリケーションを設定するには：
 
-1. From the authoring instance, select **AEM logo**> **Tools** > **Deployment** > **Replication** > **Agents on author**, then click **Default Agent**.
+1. オーサリングインスタンスから、**AEM logo****&lt;a2/>ツール**/**導入**/**レプリケーション**/**作成者**&#x200B;のエージェントを選択し、**デフォルトエージェント**&#x200B;をクリックします。
 
    ![chlimage_1-126](assets/chlimage_1-126a.png)
 
    >[!NOTE]
    パブリッシュおよびオーサーインスタンスが両方とも同じコンピューターにある場合を除いて、Adobe Campaign との統合を設定する際に、localhost（これは、AEM のローカルコピーです）を使用するのを回避します。
 
-1. Click **Edit** then select the **Transport** tab.
+1. 「**編集**」をクリックし、「**トランスポート**」タブを選択します。
 1. **localhost** を IP アドレスまたは AEM パブリッシュインスタンスのアドレスに置き換えることで、URI を設定します。
 
    ![chlimage_1-127](assets/chlimage_1-127a.png)
@@ -166,18 +166,18 @@ AEM インスタンス間のレプリケーションを設定するには：
 AEM と Adobe Campaign を一緒に使用する前に、両方のソリューション間のリンクを確立して、通信できるようにする必要があります。
 
 1. AEM オーサーインスタンスに接続します。
-1. **ツール** / **操作** / **Cloud Cloud** /Adobe Campaignを選択します。次に、 **Cloud Servicesを設定します。次に、のセクションで、****** を設定します。
+1. 「Adobe Campaign」セクションで、**ツール**/**操作**/**Cloud**/**Cloud Services**&#x200B;を選択し、**今すぐ設定**&#x200B;を選択します。
 
    ![chlimage_1-128](assets/chlimage_1-128a.png)
 
-1. Create a new configuration by entering a **Title** and click **Create**, or choose the existing configuration that you want to link with your Adobe Campaign instance.
+1. **タイトル**&#x200B;を入力し、**作成**&#x200B;をクリックして新しい設定を作成するか、Adobe Campaignインスタンスとリンクする既存の設定を選択します。
 1. 設定を編集して、Adobe Campaign インスタンスのパラメーターと一致するようにします。
 
    * **ユーザー名**: **aemserver**。2つのソリューション間のリンクを確立するために使用されるAdobe CampaignAEM統合パッケージ演算子です。
    * **パスワード**：Adobe Campaign aemserver 演算子のパスワード。この演算子のパスワードを Adobe Campaign で直接再指定する必要があることがあります。
    * **API エンドポイント**：Adobe Campaign インスタンス URL。
 
-1. Select **Connect to Adobe Campaign** and click **OK**.
+1. 「**Adobe Campaignに接続**」を選択し、「**OK**」をクリックします。
 
    ![chlimage_1-129](assets/chlimage_1-129a.png)
 
@@ -193,11 +193,11 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 
 
 
-### Externalizer の設定 {#configuring-the-externalizer}
+### Externalizer の設定  {#configuring-the-externalizer}
 
 オーサーインスタンスの AEM に [Externalizer を設定](/help/sites-developing/externalizer.md)する必要があります。Externalizer は、リソースパスを外部 URL および絶対 URL に変換できる OSGi サービスです。このサービスは、これらの外部 URL を設定および構築するための一元化された場所を提供します。
 
-一般的な指示については、[Externalizer の設定](/help/sites-developing/externalizer.md)を参照してください。For the Adobe Campaign integration, make sure you configure the publish server at `https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl` not point to `localhost:4503` but to a server that is reachable by the Adobe Campaign console.
+一般的な指示については、[Externalizer の設定](/help/sites-developing/externalizer.md)を参照してください。Adobe Campaign統合の場合は、`https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`でパブリッシュサーバーを`localhost:4503`ではなく、Adobe Campaignコンソールから到達可能なサーバーを指すように設定してください。
 
 `localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、Adobe Campaign コンソールに画像が表示されません。
 
