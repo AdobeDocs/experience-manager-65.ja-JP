@@ -24,7 +24,7 @@ ht-degree: 59%
 
 AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能により、ユーザ生成コンテンツ(UGC)が公開環境に入力されます。
 
-The foundation of a [community site](overview.md#communitiessites) is the [social component framework](scf.md) (SCF). Creation of a community site begins with the selection of a [community site template](sites-console.md) that is composed of [community functions](functions.md).
+[コミュニティサイト](overview.md#communitiessites)の基盤は、[ソーシャルコンポーネントフレームワーク](scf.md) (SCF)です。 コミュニティサイトの作成は、[コミュニティ機能](functions.md)で構成される[コミュニティサイトテンプレート](sites-console.md)の選択から始まります。
 
 概要および使用の手引きのチュートリアルについては、以下を参照してください。
 
@@ -36,7 +36,7 @@ The foundation of a [community site](overview.md#communitiessites) is the [socia
 > 
 >[最新リリース](deploy-communities.md#latest-releases)によって常に最新状態にしておくことをお勧めします。
 
-## 推奨されるデプロイメント {#recommended-deployments}
+## 推奨されるデプロイメント  {#recommended-deployments}
 
 * [コミュニティコンテンツストレージ](working-with-srp.md)：UGC 共通ストアの使用可能な SRP 選択肢について説明します。
 * [コミュニティに推奨されるトポロジ](topologies.md)：使用例および SRP 選択肢に基づいてトポロジについて説明します。
@@ -61,7 +61,7 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 * [コミュニティグループテンプレート](tools-groups.md)
 * [コミュニティサイトテンプレート](sites.md)
 
-## コミュニティメンバー {#community-members}
+## コミュニティメンバー  {#community-members}
 
 * [ユーザーとユーザーグループの管理](users.md)
 * [Facebook と Twitter を使用したソーシャルログイン](social-login.md)
@@ -76,10 +76,10 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 * [ユーザーとユーザーグループの管理](users.md)
 * [作成者のコミュニティグループ](creating-groups.md)
 
-## データの管理 {#managing-data}
+## データの管理  {#managing-data}
 
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
-* [Tag Essentials](tag.md) — コミュニティメンバーがUGCやカタログ化された有効化リソースにタグ付けする機能
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRP APIユーティリティのメソッドと例
+* [Tag Essentials](tag.md)  — コミュニティメンバーがUGCやカタログ化された有効化リソースにタグ付けする機能
 
 ## チュートリアル {#tutorials}
 
@@ -92,11 +92,11 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 * [トラブルシューティング](troubleshooting.md)
 * [既知の問題](/help/release-notes/known-issues.md)
 
-## 関連するコミュニティドキュメント {#related-communities-documentation}
+## 関連するコミュニティドキュメント  {#related-communities-documentation}
 
-* Visit [Deploying Communities](deploy-communities.md) to learn about recommended deployments and dispatcher configuration.
+* 推奨されるデプロイメントとディスパッチャーの設定については、[Deploying Communities](deploy-communities.md)を参照してください。
 
 * コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](administer-landing.md)を参照してください。
 
-* Visit [Authoring Communities Components](author-communities.md) to learn how to author with and configure Communities components.
+* Communitiesコンポーネントの作成方法と設定方法については、[Authoring Communities Components](author-communities.md)を参照してください。
 
