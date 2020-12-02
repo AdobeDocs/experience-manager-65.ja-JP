@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '7912'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
 
-# Dynamic Media - ハイブリッドモードの設定 {#configuring-dynamic-media-hybrid-mode}
+# Dynamic Media - ハイブリッドモードの設定  {#configuring-dynamic-media-hybrid-mode}
 
 Dynamic Media - ハイブリッドを使用するには、有効化して設定する必要があります。Dynamic Media では、使用例に応じて、[サポートされる設定](#supported-dynamic-media-configurations)がいくつか用意されています。
 
@@ -43,7 +43,7 @@ Dynamic Media での[ビデオ](/help/assets/video.md)の操作方法を参照�
 
 >
 >
-They are documented in [Monitoring and Maintaining your AEM instance](/help/sites-deploying/monitoring-and-maintaining.md).
+これらは、[AEMインスタンスの監視と保守](/help/sites-deploying/monitoring-and-maintaining.md)に記載されています。
 
 ハイブリッド公開および配信は、Adobe Experience Manager に対して Dynamic Media によって追加される中心機能です。ハイブリッドパブリッシングでは、画像、セット、ビデオなどのダイナミックメディアアセットを、AEMパブリッシングノードからではなく、クラウドから配信できます。
 
@@ -99,7 +99,7 @@ Dynamic Media を画像専用、ビデオ専用、またはその両方の用途
    <td>
     <ol>
      <li>AEM <strong>オーサー</strong>ノードで、<a href="#enabling-dynamic-media">Dynamic Media を有効化</a>します。</li>
-     <li>On AEM <strong>publish</strong> node, <a href="#enabling-dynamic-media">enable dynamic media</a>.</li>
+     <li>AEM <strong>publish</strong>ノードで、<a href="#enabling-dynamic-media">ダイナミックメディアを有効に</a>します。</li>
      <li><a href="#replicating-viewer-presets">ビューアプリセットをレプリケート</a>します。</li>
      <li><a href="#setting-up-asset-filters-for-imaging-in-non-production-deployments">実稼動環境以外の画像用のアセットフィルター</a>をセットアップします。</li>
      <li><a href="#configuring-dynamic-media-image-server-settings">Dynamic Media Image Server を設定します。</a></li>
@@ -146,9 +146,9 @@ Dynamic Media を画像専用、ビデオ専用、またはその両方の用途
 >
 >実行モードで Dynamic Media を有効にすると、`dynamicMediaEnabled` フラグを **[!UICONTROL true に設定することで Dynamic Media を有効にした AEM 6.1 および AEM 6.0 の機能が置き換えられます。]**&#x200B;このフラグは AEM 6.2 以降では機能しません。さらに、クイックスタートを再起動して Dynamic Media を有効にする必要はありません。
 
-By enabling Dynamic Media, the dynamic media features will be available in the UI and every uploaded image asset receives a *cqdam.pyramid.tiff* rendition that is used for fast delivery of dynamic image renditions. これらのPTIFFには、(1)1つのプライマリソース画像のみを管理し、追加のストレージなしで無制限のレンディションをその場で生成する機能、(2)ズーム、パン、スピンなどのインタラクティブなビジュアライゼーションを使用する機能など、大きな利点があります。
+ダイナミックメディアを有効にすると、ダイナミックメディア機能がUIで使用でき、アップロードされた各画像アセットに、動的な画像レンディションの高速配信に使用される&#x200B;*cqdam.pyramid.tiff*&#x200B;レンディションが割り当てられます。 これらのPTIFFには、(1)1つのプライマリソース画像のみを管理し、追加のストレージなしで無制限のレンディションをその場で生成する機能、(2)ズーム、パン、スピンなどのインタラクティブなビジュアライゼーションを使用する機能など、大きな利点があります。
 
-If you want to use Dynamic Media Classic (Scene7) in AEM, you should not enable Dynamic Media unless you are using a [specific scenario](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media). Dynamic Media は、実行モードを使用して有効にしない限り、無効化されたままです。
+AEMでダイナミックメディアクラシック(Scene7)を使用する場合は、[特定のシナリオ](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)を使用しない限り、ダイナミックメディアを有効にしないでください。 Dynamic Media は、実行モードを使用して有効にしない限り、無効化されたままです。
 
 Dynamic Media を有効にするには、コマンドラインまたはクイックスタートのファイル名から Dynamic Media の実行モードを有効にする必要があります。
 
@@ -156,7 +156,7 @@ Dynamic Media を有効にするには、コマンドラインまたはクイッ
 
 1. コマンドラインでクイックスタートを起動するときに、次のようにします。
 
-   * Add `-r dynamicmedia` to the end of the command line when starting the jar file.
+   * 追加`-r dynamicmedia`を指定します。
 
    ```shell
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -r dynamicmedia
@@ -170,22 +170,22 @@ Dynamic Media を有効にするには、コマンドラインまたはクイッ
     -Djavax.net.ssl.trustStorePassword=<passwordForTrustStoreFile>
    ```
 
-1. Request `https://localhost:4502/is/image` and make sure Image Server is now running.
+1. `https://localhost:4502/is/image`を要求し、Image Serverが実行中であることを確認します。
 
    >[!NOTE]
    >
-   >To troubleshoot issues with Dynamic Media, see the following logs in the `crx-quickstart/logs/` directory:
+   >ダイナミックメディアに関する問題のトラブルシューティングを行うには、`crx-quickstart/logs/`ディレクトリの次のログを参照してください。
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServerログは、内部ImageServerプロセスの動作を分析する際に使用する統計情報と分析情報を提供します。
 
-   Example of an Image Server log file name: `ImageServer-57346-2020-07-25.log`
-   * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - The s7access log records each request made to Dynamic Media through `/is/image` and `/is/content`.
+   Image Serverログファイル名の例：`ImageServer-57346-2020-07-25.log`
+   * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7accessログは、ダイナミックメディアに対して`/is/image`と`/is/content`を介して行われた各リクエストを記録します。
 
-   これらのログは、Dynamic Media が有効の場合のみ使用されます。They are not included in the **Download Full** package that is generated from the `system/console/status-Bundlelist` page; when calling Customer Support if you have a Dynamic Media issue, please append both these logs to the issue.
+   これらのログは、Dynamic Media が有効の場合のみ使用されます。これらは、`system/console/status-Bundlelist`ページから生成された&#x200B;**完全なダウンロード**&#x200B;パッケージには含まれません。ダイナミックメディアに関する問題が発生した場合は、カスタマーサポートに問い合わせる際に、これらのログを両方問題に追加してください。
 
-### If you installed AEM to a different port or context path ... {#if-you-installed-aem-to-a-different-port-or-context-path}
+### AEMを別のポートまたはコンテキストパスにインストールした場合… {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-If you are deploying [AEM to an application server](/help/sites-deploying/application-server-install.md) and have Dynamic Media enabled, you need to configure the **self** domain in the externalizer. Otherwise, thumbnail generation for assets will not work properly for dynamic media assets.
+[AEMをアプリケーションサーバー](/help/sites-deploying/application-server-install.md)にデプロイし、ダイナミックメディアを有効にする場合は、外部化子で&#x200B;**self**&#x200B;ドメインを設定する必要があります。サムネールの生成が行われないと、ダイナミックメディアアセットではアセットのサムネールの生成が正常に機能しません。
 
 さらに、異なるポートまたはコンテキストパスで quickstart を実行する場合、**self** ドメインを変更する必要もあります。
 
@@ -194,24 +194,24 @@ If you are deploying [AEM to an application server](/help/sites-deploying/applic
 AEM では、
 
 * [Externalizer](/help/sites-developing/externalizer.md) の **self** ドメインがポート番号とコンテキストパスの両方を取得するために使用されます。
-* If no **self** domain is configured, the port number and context path are retrieved from the Jetty HTTP service.
+* **self**&#x200B;ドメインが設定されていない場合、ポート番号とコンテキストパスはJetty HTTPサービスから取得されます。
 
-In an AEM QuickStart WAR deployment, the port number and context path cannot be derived, therefore you must configure a **self** domain. See [externalizer documentation](/help/sites-developing/externalizer.md) on how to configure the **self** domain.
+AEM QuickStart WARデプロイメントでは、ポート番号とコンテキストパスを取得できないので、**自己**&#x200B;ドメインを構成する必要があります。**self**&#x200B;ドメインの設定方法については、[externalizerドキュメント](/help/sites-developing/externalizer.md)を参照してください。
 
 >[!NOTE]
 [AEM Quickstart スタンドアロンデプロイメント](/help/sites-deploying/deploy.md)では、**self** ドメインは通常設定する必要がありません。ポート番号とコンテキストパスは自動設定されます。ただし、ネットワークインターフェイスがオフの場合は、**self** ドメインを設定する必要があります。
 
-## Dynamic Media の無効化  {#disabling-dynamic-media}
+## Dynamic Media の無効化   {#disabling-dynamic-media}
 
 Dynamic Media はデフォルトでは有効になっていません。しかし、以前に Dynamic Media を有効にした場合は、後で無効にすることができます。
 
-To disable dynamic media after you have enabled it, you remove the `-r dynamicmedia` run mode flag.
+ダイナミックメディアを有効にした後に無効にするには、`-r dynamicmedia`実行モードフラグを削除します。
 
 **ダイナミックメディアを有効にした後に無効にするには**
 
 1. コマンドラインでクイックスタートを起動するときに、次のいずれかを実行します。
 
-   * Do not add `-r dynamicmedia` to the command line when starting the jar file.
+   * jarファイルを起動する際は、コマンドラインに`-r dynamicmedia`を追加しないでください。
 
    ```shell
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar
@@ -220,12 +220,12 @@ To disable dynamic media after you have enabled it, you remove the `-r dynamicme
 1. リクエスト `https://localhost:4502/is/image`. Dynamic Media が無効化されたことを示すメッセージが表示されます。
 
    >[!NOTE]
-   After the Dynamic Media run mode is disabled, the workflow step that generates the `cqdam.pyramid.tiff` rendition is skipped automatically. また、動的レンディションのサポートやその他の Dynamic Media 機能も無効になります。
+   ダイナミックメディアの実行モードが無効になると、`cqdam.pyramid.tiff`レンディションを生成するワークフロー手順は自動的にスキップされます。 また、動的レンディションのサポートやその他の Dynamic Media 機能も無効になります。
    また、AEM サーバーを設定した後で Dynamic Media 実行モードを無効にすると、その実行モードの下でアップロードされたアセットがすべて無効になることにも注意してください。
 
 ## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.5 にダウンタイムなしで移行{#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-If you are upgrading AEM Dynamic Media from 6.3 to 6.5 (which now includes the ability for zero downtime deployments), you are required to run the following curl command to migrate all your presets and configurations from `/etc` to `/conf` in CRXDE Lite.
+AEM Dynamic Mediaを6.3から6.5にアップグレードする場合（ダウンタイムをゼロにする機能が含まれます）、次のcurlコマンドを実行して、すべてのプリセットと設定をCRXDE Lite内の`/etc`から`/conf`に移行する必要があります。
 
 **注意**:互換性モードでAEMインスタンスを実行する場合（つまり、互換性パッケージがインストールされている場合）、これらのコマンドを実行する必要はありません。
 
@@ -233,7 +233,7 @@ If you are upgrading AEM Dynamic Media from 6.3 to 6.5 (which now includes the a
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
-To migrate any custom viewer presets and configurations that you have created from `/etc` to `/conf`, run the following Linux curl command:
+`/etc`から`/conf`に作成したカスタムビューアプリセットと設定を移行するには、次のLinuxのcurlコマンドを実行します。
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets.migratedmcontent.json`
 
@@ -258,17 +258,17 @@ PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール／
 
 ### 認証の設定 {#setting-up-authentication}
 
-Dynamic Media 画像配信サービスに画像をレプリケートするには、作成者にレプリケーション認証を設定する必要があります。You do this by obtaining a KeyStore and then saving it under the **[!UICONTROL dynamic-media-replication]** user and configuring it. キーストアファイルとプロビジョニング処理中に必要な資格情報が記載されたようこそメールが会社の管理者に送信されます。このメッセージを受け取っていない場合は、カスタマーケアにお問い合わせください。
+Dynamic Media 画像配信サービスに画像をレプリケートするには、作成者にレプリケーション認証を設定する必要があります。これを行うには、KeyStoreを取得し、**[!UICONTROL dynamic-media-replication]**&#x200B;ユーザーの下に保存して設定します。 キーストアファイルとプロビジョニング処理中に必要な資格情報が記載されたようこそメールが会社の管理者に送信されます。このメッセージを受け取っていない場合は、カスタマーケアにお問い合わせください。
 
 **認証を設定するには**
 
 1. キーストアファイルとパスワードをまだ受け取っていない場合は、カスタマーケアに問い合わせます。これはプロビジョニングの一部であり、これによりキーがアカウントに関連付けられます。
-1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Security > Users.]**
-1. On the User Management page, navigate to the **[!UICONTROL dynamic-media-replication]** user, then tap to open.
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/セキュリティ/ユーザーをタップします。]**
+1. ユーザー管理ページで、**[!UICONTROL dynamic-media-replication]**&#x200B;ユーザーに移動し、をタップして開きます。
 
    ![dm複製](assets/dm-replication.png)
 
-1. In the Edit User Settings For dynamic-media-replication page, tap the **[!UICONTROL Keystore]** tab, then click **[!UICONTROL Create KeyStore.]**
+1. Edit User Settings For dynamic-media-replicationページで、「**[!UICONTROL キーストア]**」タブをタップし、「**[!UICONTROL キーストアを作成」をクリックします。]**
 
    ![dm-replication-keystore](assets/dm-replication-keystore.png)
 
@@ -281,11 +281,11 @@ Dynamic Media 画像配信サービスに画像をレプリケートするには
 
 1. **[!UICONTROL dynamic-media-replication のユーザー設定を編集]**&#x200B;ページで「**秘密鍵をキーストアファイルから追加**」領域を展開し、以下の情報を追加します（下の画像を参照）。
 
-   * In the **[!UICONTROL New Alias]** field, enter the name of an alias that you will later use in the replication configuration; for example, `replication`.
+   * [**[!UICONTROL 新しいエイリアス]**]フィールドに、後でレプリケーション構成で使用するエイリアスの名前を入力します。例：`replication`。
    * 「**[!UICONTROL キーストアファイル」をタップします。]**&#x200B;アドビから提供されたキーストアファイルに移動して選択し、「**[!UICONTROL 開く」をタップします。]**
-   * In the **[!UICONTROL KeyStore File Password]** field, enter the KeyStore File password. これは、手順 5 で作成したキーストアパスワード&#x200B;**ではなく**、プロビジョニング中に送信されたようこそメールでアドビから提供されたキーストアファイルパスワードです。キーストアファイルパスワードを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
+   * 「**[!UICONTROL KeyStore File Password]**」フィールドに、KeyStore Fileのパスワードを入力します。 これは、手順 5 で作成したキーストアパスワード&#x200B;**ではなく**、プロビジョニング中に送信されたようこそメールでアドビから提供されたキーストアファイルパスワードです。キーストアファイルパスワードを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
    * 「**[!UICONTROL 秘密鍵のパスワード]**」フィールドで、秘密鍵のパスワードを入力します（以前の手順で指定した秘密鍵のパスワードと同じでも可）。秘密鍵のパスワードは、プロビジョニング中にアドビから送信されたようこそメールに記載されています。秘密鍵のパスワードを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
-   * In the **[!UICONTROL Private Key Alias]** field, enter the private key alias. For example, `*companyname*-alias`. 秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたようこそメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
+   * 「**[!UICONTROL 秘密鍵のエイリアス]**」フィールドに、秘密鍵のエイリアスを入力します。例えば、`*companyname*-alias`です。 秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたようこそメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -293,30 +293,30 @@ Dynamic Media 画像配信サービスに画像をレプリケートするには
 
    次に、[レプリケーションエージェントを設定します。](#configuring-the-replication-agent)
 
-### レプリケーションエージェントの設定 {#configuring-the-replication-agent}
+### レプリケーションエージェントの設定  {#configuring-the-replication-agent}
 
-1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Deployment > Replication > Agents on author.]**
-1. On the Agents on author page, tap **[!UICONTROL Dynamic Media Hybrid Image Replication (s7delivery).]**
-1. Tap **[!UICONTROL Edit.]**
-1. Tap the **[!UICONTROL Settings]** tab, then enter the following:
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/導入/レプリケーション/作成者のエージェントをタップします。]**
+1. 作成者ページの「エージェント」で、**[!UICONTROL 「ダイナミックメディアハイブリッド画像レプリケーション(s7配信)」をタップします。]**
+1. 「**[!UICONTROL 編集」をタップします。]**
+1. 「**[!UICONTROL 設定]**」タブをタップし、次のように入力します。
 
    * **[!UICONTROL 有効]** - レプリケーションエージェントを有効にするには、このチェックボックスを選択します。
-   * **[!UICONTROL 地域]** — 適切な地域に設定します。北米、ヨーロッパ、アジア
-   * **[!UICONTROL テナントID]** — この値は、レプリケーションサービスに発行する会社またはテナントの名前です。 この値は、プロビジョニング時にAdobeから送信されるお知らせメールに含まれるテナントIDです。 この情報を受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
-   * **[!UICONTROL Key Store Alias]** — この値は、「認証の [設定](#setting-up-authentication)」でキーを生成する際に設定された** New Alias**値と同じです。例えば、 `replication`。 (See step 7 in [Setting Up Authentication](#setting-up-authentication).)
-   * **[!UICONTROL キーストアパスワード]** — キーストアの **[!UICONTROL 作成をタップしたときに作成されたキーストアパスワードです。]**&#x200B;このパスワードはアドビが提供するものではありません。See step 5 of [Setting up Authentication](#setting-up-authentication).
+   * **[!UICONTROL 地域]**  — 適切な地域に設定します。北米、ヨーロッパ、アジア
+   * **[!UICONTROL テナントID]** ：この値は、レプリケーションサービスに発行する会社またはテナントの名前です。この値は、プロビジョニング時にAdobeから送信されるお知らせメールに含まれるテナントIDです。 この情報を受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
+   * **[!UICONTROL Key Store Alias]**  — この値は、「認証の [設定」でキーを生成する際に設定される「**新しいエイリアス**」の値と同じです](#setting-up-authentication)。例えば、 `replication`。（[認証の設定](#setting-up-authentication)の手順7を参照）。
+   * **[!UICONTROL Key Store Password]**  — キーストアの **[!UICONTROL 作成をタップしたときに作成されたキーストアのパスワードです。]**&#x200B;このパスワードはアドビが提供するものではありません。[認証の設定](#setting-up-authentication)の手順5を参照してください。
 
    次の画像はサンプルデータが入力されたレプリケーションエージェントを示します。
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
 
-1. Tap **[!UICONTROL OK.]**
+1. 「**[!UICONTROL OK]**」をタップします。
 
 ### Dynamic Media 用のレプリケーションエージェントの検証 {#validating-the-replication-agent-for-dynamic-media}
 
 ダイナミックメディア用のレプリケーションエージェントを検証するには、次の手順を実行します。
 
-「 **[!UICONTROL 接続のテスト」をタップします。]**&#x200B;次のように出力されます。
+「**[!UICONTROL 接続のテスト」をタップします。]**&#x200B;次のように出力されます。
 
 ```shell
 11.03.2016 10:57:55 - Transferring content for ReplicationAction{type=TEST, path[0]='/content/dam', time=1457722675402, userId='admin', revision='null'}
@@ -335,7 +335,7 @@ Replication test succeeded
 >[!NOTE]
 次のいずれかを実行してチェックすることもできます。
 * レプリケーションログをチェックしてアセットがレプリケートされていることを確認する。
-* 画像を公開する。Tap the image and select **[!UICONTROL Viewers]** in drop-down menu. 次に、ビューアプリセットを選択し、「URL」をクリックし、URLをコピー&amp;ペーストして、画像が表示されることを確認します。
+* 画像を公開する。画像をタップし、ドロップダウンメニューで「**[!UICONTROL ビューア]**」を選択します。 次に、ビューアプリセットを選択し、「URL」をクリックし、URLをコピー&amp;ペーストして、画像が表示されることを確認します。
 
 
 
@@ -343,7 +343,7 @@ Replication test succeeded
 
 認証の設定時に発生する可能性がある問題と、その解決策を紹介します。その前に、レプリケーションが設定済みであることを確認してください。
 
-#### 問題：HTTP ステータスコード 401 メッセージ - 認証が必要 {#problem-http-status-code-with-message-authorization-required}
+#### 問題：HTTP ステータスコード 401 メッセージ - 認証が必要  {#problem-http-status-code-with-message-authorization-required}
 
 この問題は、`dynamic-media-replication` ユーザーのキーストアの設定に失敗したことによって発生する可能性があります。
 
@@ -366,7 +366,7 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**解決方法**:が `KeyStore` dynamic-media-replication **** userに保存され、正しいパスワードが指定されていることを確認します。
+**解決方法**:が `KeyStore` dynamic-media- **** replicationuserに保存され、正しいパスワードが指定されていることを確認してください。
 
 #### 問題：鍵を復号化できない - データを復号化できない {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
@@ -384,7 +384,7 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 
 **解決策**：パスワードを確認します。レプリケーションエージェントに保存されたパスワードがキーストアの作成に使用されたパスワードと同じでありません。
 
-#### 問題：InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
+#### 問題：InvalidAlgorithmParameterException  {#problem-invalidalgorithmparameterexception}
 
 この問題は AEM オーサーインスタンスの設定エラーが原因です。Author の java プロセスが正しい `javax.net.ssl.trustStore` を取得していません。このエラーは次のレプリケーションログで確認できます。
 
@@ -424,7 +424,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. ユーザー管理ページに移動します。
    `localhost:4502/libs/granite/security/content/useradmin.html`
-1. On the User Management page, navigate to the `dynamic-media-replication` user, then tap to open.
+1. ユーザー管理ページで`dynamic-media-replication`ユーザーに移動し、をタップして開きます。
 1. 「**[!UICONTROL キーストア]**」タブをクリックします。「**[!UICONTROL キーストアを作成]**」ボタンが表示された場合は、前述の[認証の設定](#setting-up-authentication)の手順をやり直す必要があります。
 1. キーストアの設定をやり直す必要があった場合は、[レプリケーションエージェントの設定](/help/assets/config-dynamic.md#configuring-the-replication-agent)も再度おこなう必要がある可能性があります。
 
@@ -433,7 +433,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. 「**[!UICONTROL 接続をテスト]**」をタップして設定が有効であることを確認します。
 
-#### 問題：公開エージェントが OAuth ではなく SSL を使用している {#problem-publish-agent-is-using-ssl-instead-of-oauth}
+#### 問題：公開エージェントが OAuth ではなく SSL を使用している  {#problem-publish-agent-is-using-ssl-instead-of-oauth}
 
 この問題は、ホットフィックスまたは機能パックが正しくインストールされなかったか設定を上書きしたことが原因で発生する可能性があります。
 
@@ -451,7 +451,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 **解決策:**
 
-1. In AEM, click **[!UICONTROL Tools > General > CRXDE Lite.]**
+1. AEMで、**[!UICONTROL ツール/一般/CRXDE Liteをクリックします。]**
 
    `localhost:4502/crx/de/index.jsp`
 
@@ -462,7 +462,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
    `enableOauth=true`
 
-1. Near the upper-left corner of the page, tap **[!UICONTROL Save All.]**
+1. ページの左上隅近くにある「**[!UICONTROL すべて保存」をタップします。]**
 
 ### 設定のテスト {#testing-your-configuration}
 
@@ -475,10 +475,10 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 **設定をテストするには**
 
-1. 画像アセットをアップロードします(In Assets, tap **[!UICONTROL Create > Files]** and select the file.)
+1. 画像アセットをアップロードします（アセットで、**[!UICONTROL 作成/ファイル]**&#x200B;をタップし、ファイルを選択します）。
 1. ワークフローが完了するまで待ちます。
-1. 画像アセットを公開します(Select the asset and tap **[!UICONTROL Quick Publish.]**)
-1. Navigate to the renditions for that image by opening the image, and tapping **[!UICONTROL Renditions.]**
+1. 画像アセットを公開します（アセットを選択し、「**[!UICONTROL クイック発行」をタップします。]**）
+1. 画像を開き、**[!UICONTROL レンディションをタップして、その画像のレンディションに移動します。]**
 
    ![chlimage_1-510](assets/chlimage_1-510.png)
 
@@ -488,7 +488,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 アセットが配信されたことをテストするもう 1 つの方法は、URL に req=exists を追加することです。
 
-## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
+## Dynamic Media クラウドサービスの設定  {#configuring-dynamic-media-cloud-services}
 
 Dynamic Media クラウドサービスは、画像とビデオのハイブリッド公開および配信、ビデオ分析、ビデオエンコーディングなどの様々なクラウドサービスをサポートします。
 
@@ -499,19 +499,19 @@ Dynamic Media クラウドサービスを設定する前に、パブリッシュ
 
 Dynamic Media Cloud Services を設定するには：
 
-1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Cloud Services > Dynamic Media Configuration (Pre-6.3).]**
-1. On the Dynamic Media Configuration Browser page, in the left pane, select **[!UICONTROL global]**, then tap **[!UICONTROL Create.]**
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/Cloud Services/ダイナミックメディア設定（6.3より前）をタップします。]**
+1. Dynamic Media Configuration Browserページの左側のペインで、**[!UICONTROL グローバル]**&#x200B;を選択し、**[!UICONTROL 作成をタップします。]**
 1. **[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ダイアログボックスで、「タイトル」フィールドにタイトルを入力します。
 1. ビデオ用に Dynamic Media を設定する場合は、次の操作をおこないます。
 
    * 「**[!UICONTROL 登録 ID]**」フィールドに登録 ID を入力します。
-   * In the **V[!UICONTROL ideo Service URL]** field, enter the video service URL for the Dynamic Media Gateway.
+   * 「**V[!UICONTROL ビデオサービスURL]**」フィールドに、ダイナミックメディアゲートウェイのビデオサービスURLを入力します。
 
 1. 画像用に Dynamic Media を設定する場合は、「**[!UICONTROL 画像サービスの URL]**」フィールドに Dynamic Media ゲートウェイの画像サービスの URL を入力します。
 1. 「**[!UICONTROL 保存]**」をタップして Dynamic Media 設定ブラウザーページに戻ります。
 1. AEM のロゴをタップしてグローバルナビゲーションコンソールにアクセスします。
 
-## ビデオレポートの設定 {#configuring-video-reporting}
+## ビデオレポートの設定  {#configuring-video-reporting}
 
 Dynamic Media ハイブリッドを使用する複数の AEM インストールにわたってビデオレポートを設定できます。
 
@@ -537,7 +537,7 @@ Dynamic Media ハイブリッドを使用する複数の AEM インストール�
 1. パッケージをビルドします。
 1. ビデオ分析プリセットパッケージを後続の新しいオーサーノードで共有できるように、パッケージをダウンロードまたは共有します。
 
-### 追加のオーサーノードを設定する前にビデオ分析プリセットパッケージをインストールする {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### 追加のオーサーノードを設定する前にビデオ分析プリセットパッケージをインストールする  {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 このタスクは必ず、Dynamic Media 設定（6.3 以前）を設定する「前」に実行してください。******&#x200B;これに失敗すると、未使用のレポートスイートが別に作成されます。 また、ビデオレポートが引き続き正しく機能しますが、データ収集は最適化されません。
 
@@ -547,16 +547,16 @@ Dynamic Media ハイブリッドを使用する複数の AEM インストール�
 1. ビデオ分析プリセットパッケージをインストールします。
 1. Dynamic Media 設定（6.3 以前）を設定します。
 
-### パッケージインストールの確認やデバッグ {#verifying-and-debugging-the-package-installation}
+### パッケージインストールの確認やデバッグ  {#verifying-and-debugging-the-package-installation}
 
 1. 以下のいずれかをおこなってパッケージのインストールを確認し、必要に応じてそのデバッグをおこないます。
 
    * **JCR 経由でビデオ分析プリセットをチェックする** JCR 経由でビデオ分析プリセットをチェックするには、CRXDE Lite にアクセスできる必要があります。
 
-      AEM - In CRXDE Lite, navigate to `/conf/global/settings/
-dam/dm/presets/analytics/jcr:content/userdata`
+      AEM -CRXDE Liteで、`/conf/global/settings/
+dam/dm/presets/analytics/jcr:content/userdata`に移動します。
 
-      That is `https://localhost:4502/crx/de/index.jsp#/conf/global/settings/dam/dm/presets/analytics/jcr%3Acontent/userdata`
+      `https://localhost:4502/crx/de/index.jsp#/conf/global/settings/dam/dm/presets/analytics/jcr%3Acontent/userdata`
 
       作成者ノードのCRXDE Liteにアクセスできない場合は、公開サーバを使用してプリセットを確認できます。
 
@@ -576,7 +576,8 @@ dam/dm/presets/analytics/jcr:content/userdata`
        trackingServer=aemvideodal.d2.sc.omtrdc.net
       ```
 
-   * **AEMのビデオレポートツールで、ツール/アセット/ビデオレポートを**&#x200B;タッ **[!UICONTROL プし、ビデオ分析プリセットを確認します。]**
+   * **AEMTapのツール/アセット/ビデオレポートで、ビデオレポートツールを使用して**
+Video Analyticsプ **[!UICONTROL リセットを確認します]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -593,13 +594,13 @@ dam/dm/presets/analytics/jcr:content/userdata`
 
    このエラーは、Dynamic Media 設定（6.3 以前）サービスの設定前にビデオレポートが実行された場合にも表示されます。
 
-### ビデオレポートの設定のトラブルシューティング {#troubleshooting-the-video-reporting-configuration}
+### ビデオレポートの設定のトラブルシューティング  {#troubleshooting-the-video-reporting-configuration}
 
 * インストール中に Analytics API サーバーへの接続がタイムアウトすることがあります。インストール中に接続が 20 回再試行されますが、それでも失敗します。この状況が発生すると、ログファイルに複数のエラーが記録されます。`SiteCatalystReportService` を検索。
 * 最初に分析プリセットパッケージをインストールしないと、新しいレベルスイートが作成されてしまう可能性があります。
 * AEM 6.3 から AEM 6.4 または AEM 6.4.1 にアップグレードした後で Dynamic Media 設定（6.3 以前）を設定しても、レポートスイートが作成されます。これは既知の問題であり、AEM 6.4.2 で修正される予定です。
 
-### ビデオ分析プリセットについて {#about-the-video-analytics-preset}
+### ビデオ分析プリセットについて  {#about-the-video-analytics-preset}
 
 ビデオ分析プリセット（単に分析プリセットと呼ばれることもある）は、Dynamic Media 内でビューアプリセットの隣に格納されます。これは基本的にはビューアプリセットと同じですが、AppMeasurement および Video Heartbeat レポートの設定に使用される情報が付加されています。
 
@@ -610,7 +611,7 @@ dam/dm/presets/analytics/jcr:content/userdata`
 * `trackingNamespace`
 * `marketingCloudOrgId`（古い AEM バージョンには存在しない）
 
-AEM 6.4以降のバージョンでは、このプリセットは次の場所に保存されます。 `/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
+AEM 6.4以降のバージョンでは、このプリセットは`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`に保存されます。
 
 ## カタログ設定のレプリケート {#replicating-catalog-settings}
 
@@ -625,33 +626,33 @@ AEM 6.4以降のバージョンでは、このプリセットは次の場所に�
    `https://<*server*>:<*port*>/crx/de/index.jsp#/conf/global/settings/dam/dm/imageserver/`
 
 1. 「**[!UICONTROL レプリケーション]**」タブをタップします。
-1. Tap **[!UICONTROL Replicate.]**
+1. **[!UICONTROL 複製]**&#x200B;をタップします。
 
 ## ビューアプリセットのレプリケート {#replicating-viewer-presets}
 
-To deliver *an asset with a viewer preset, you must replicate/publish* the viewer preset. (All viewer presets must be activated *and* replicated to obtain the URL or embed code for an asset.
+ビューアプリセットを使用して&#x200B;*アセットを配信するには、ビューアプリセットを複製/公開*&#x200B;する必要があります。 (アセットのURLまたは埋め込みコードを取得するには、すべてのビューアプリセットを&#x200B;*および*複製する必要があります。
 詳しくは、[ビューアプリセットの公開](/help/assets/managing-viewer-presets.md#publishing-viewer-presets)を参照してください。
 
 >[!NOTE]
-By default, the system shows a variety of renditions when you select **[!UICONTROL Renditions]** and a variety of viewer presets when you select **[!UICONTROL Viewers]** in the asset&#39;s detail view. 表示される数を増減させることができます。See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+初期設定では、「**[!UICONTROL レンディション]**」を選択した場合は様々なレンディションが表示され、アセットの詳細表示で「**[!UICONTROL ビューア]**」を選択した場合は様々なビューアプリセットが表示されます。 表示される数を増減させることができます。詳しくは、[表示する画像プリセットの数の増加](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセットの数の増加](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
 
 ## レプリケーション用のアセットのフィルタリング {#filtering-assets-for-replication}
 
-In non-Dynamic Media deployments, you replicate *all* assets (both images and video) from your AEM author environment to the AEM publish node. AEMパブリッシュサーバーもアセットを配信するので、このワークフローが必要です。
+非ダイナミックメディアデプロイメントでは、AEM作成者環境からAEM発行ノードに、*すべての*&#x200B;アセット（画像とビデオの両方）を複製します。 AEMパブリッシュサーバーもアセットを配信するので、このワークフローが必要です。
 
 ただし、ダイナミックメディアデプロイメントでは、アセットはクラウド経由で配信されるので、AEMの公開ノードに同じアセットを複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴うストレージの余分なコストと処理時間を回避します。 Dynamic Media ビューア、サイトページ、静的コンテンツなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
 
 アセットの複製の他に、次の非アセットも複製されます。
 
-* ダイナミックメディア配信の設定： `/conf/global/settings/dam/dm/imageserver/jcr:content`
+* ダイナミックメディア配信の設定：`/conf/global/settings/dam/dm/imageserver/jcr:content`
 * 画像プリセット: `/conf/global/settings/dam/dm/presets/macros`
 * ビューアプリセット: `/conf/global/settings/dam/dm/presets/viewer`
 
 フィルターによって、アセットを AEM パブリッシュノードへのレプリケート対象から&#x200B;**&#x200B;除外することができます。
 
-### レプリケーション用のデフォルトのアセットフィルターの使用 {#using-default-asset-filters-for-replication}
+### レプリケーション用のデフォルトのアセットフィルターの使用  {#using-default-asset-filters-for-replication}
 
-If you are using Dynamic Media for (1) imaging in production **or** (2) imaging and video, then you can use the default filters that we provide as-is. 次のフィルターがデフォルトでアクティブです。
+本番用&#x200B;**または** (2)イメージングとビデオで(1)イメージングにダイナミックメディアを使用している場合は、デフォルトのフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
 
 <table>
  <tbody>
@@ -677,8 +678,8 @@ If you are using Dynamic Media for (1) imaging in production **or** (2) imaging 
    <td><strong>video/</strong> で始まる</td>
    <td>標準提供の「filter-video」では、次のようになります。
     <ul>
-     <li>Include proxy video renditions, video thumbnail/poster image, metadata (both at parent video and video renditions) for replication (Any rendition starting with <strong>cqdam</strong>).</li>
-     <li>元のビデオと静的なサムネールレンディションを複製から除外します。<br /> <br /> <strong>注意：</strong> プロキシビデオレンディションにはバイナリは含まれず、単なるノードプロパティです。 このため、公開者のリポジトリサイズには影響しません。</li>
+     <li>レプリケーション用のプロキシビデオレンディション、ビデオサムネール/ポスター画像、メタデータ（親ビデオとビデオレンディションの両方）を含めます（<strong>cqdam</strong>で始まるレンディションを使用）。</li>
+     <li>元のビデオと静的なサムネールレンディションを複製から除外します。<br /> <br /> <strong>注意：プロキシビデオレンディション</strong> にはバイナリは含まれず、単なるノードプロパティです。このため、公開者のリポジトリサイズには影響しません。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -701,43 +702,43 @@ If you are using Dynamic Media for (1) imaging in production **or** (2) imaging 
 
 Dynamic Media をビデオのみに使用している場合は、次の手順に従ってレプリケーション用のアセットフィルターを設定します。
 
-1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Deployment > Replication > Agents on author.]**
-1. On the Agents on author page, tap **[!UICONTROL Default Agent (publish).]**
-1. Tap **[!UICONTROL Edit.]**
-1. In the **[!UICONTROL Agent Settings]** dialog box, in the **[!UICONTROL Settings]** tab, check **[!UICONTROL Enabled]** to turn on the agent.
-1. Tap **[!UICONTROL OK.]**
-1. In AEM, tap **[!UICONTROL Tools > General > CRXDE Lite.]**
-1. In the left folder tree, navigate to `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
-1. **[!UICONTROL filter-videoを探し、右クリックして]**「 **[!UICONTROL コピー」を選択します。]**
-1. In the left folder tree, navigate to `/etc/replication/agents.author/publish`
-1. Locate **[!UICONTROL jcr:content]**, right-click it and select **[!UICONTROL Paste.]**
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/導入/レプリケーション/作成者のエージェントをタップします。]**
+1. 作成者ページのエージェントで、**[!UICONTROL デフォルトのエージェント（発行）をタップします。]**
+1. 「**[!UICONTROL 編集」をタップします。]**
+1. **[!UICONTROL エージェント設定]**&#x200B;ダイアログボックスの「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL 有効]**」をオンにしてエージェントを有効にします。
+1. 「**[!UICONTROL OK]**」をタップします。
+1. AEMで、**[!UICONTROL ツール/一般/CRXDE Liteをタップします。]**
+1. 左のフォルダーツリーで、`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`に移動します
+1. **[!UICONTROL filter-video]**&#x200B;を探し、右クリックして「**[!UICONTROL コピー」を選択します。]**
+1. 左のフォルダーツリーで、`/etc/replication/agents.author/publish`に移動します
+1. **[!UICONTROL jcr:content]**&#x200B;を探して右クリックし、「**[!UICONTROL 貼り付け]**」を選択します。
 
 これにより AEM のパブリッシュインスタンスがビデオのポスター画像と再生に必要なビデオのメタデータを配信するように設定され、ビデオ自体は Dynamic Media メディアクラウドサービスによって配信されます。また、パブリッシュインスタンスに不要な元のビデオと静的なサムネールのレンディションがフィルターによってレプリケーションから除外されます。
 
-### 実稼動環境以外のデプロイメントでの画像用のアセットフィルターのセットアップ {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
+### 実稼動環境以外のデプロイメントでの画像用のアセットフィルターのセットアップ  {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
 実稼動環境以外のデプロイメントで画像に Dynamic Media を使用している場合は、次の手順に従ってレプリケーション用のアセットフィルターを設定します。
 
-1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Deployment > Replication > Agents on author.]**
-1. On the Agents on author page, tap **[!UICONTROL Default Agent (publish).]**
-1. Tap **[!UICONTROL Edit.]**
-1. In the **[!UICONTROL Agent Settings]** dialog box, in the **[!UICONTROL Settings]** tab, check **[!UICONTROL Enabled]** to turn on the agent.
-1. Tap **[!UICONTROL OK.]**
-1. In AEM, tap **[!UICONTROL Tools > General > CRXDE Lite.]**
-1. In the left folder tree, navigate to `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/導入/レプリケーション/作成者のエージェントをタップします。]**
+1. 作成者ページのエージェントで、**[!UICONTROL デフォルトのエージェント（発行）をタップします。]**
+1. 「**[!UICONTROL 編集」をタップします。]**
+1. **[!UICONTROL エージェント設定]**&#x200B;ダイアログボックスの「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL 有効]**」をオンにしてエージェントを有効にします。
+1. 「**[!UICONTROL OK]**」をタップします。
+1. AEMで、**[!UICONTROL ツール/一般/CRXDE Liteをタップします。]**
+1. 左のフォルダーツリーで、`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`に移動します
 
    ![image-2018-01-16-10-22-40-410](assets/image-2018-01-16-10-22-40-410.png)
 
-1. **[!UICONTROL filter-imagesを探し]**、右クリックして「 **[!UICONTROL コピー」を選択します。]**
-1. In the left folder tree, navigate to `/etc/replication/agents.author/publish`
-1. Locate **[!UICONTROL jcr:content]**, right-click it and select **[!UICONTROL Create > Create Node.]** タイプ名 `damRenditionFilters` を入力し `nt:unstructured`ます。
-1. Locate `damRenditionFilters`, right-click it and select **[!UICONTROL Paste.]**
+1. **[!UICONTROL filter-images]**&#x200B;を探し、右クリックして「**[!UICONTROL コピー」を選択します。]**
+1. 左のフォルダーツリーで、`/etc/replication/agents.author/publish`に移動します
+1. **[!UICONTROL jcr:content]**&#x200B;を探して右クリックし、**[!UICONTROL 作成/ノードを作成を選択します。]** タイプ名 `damRenditionFilters` を入力し `nt:unstructured`ます。
+1. `damRenditionFilters`を探し、右クリックして「**[!UICONTROL 貼り付け」を選択します。]**
 
 これにより、AEM のパブリッシュインスタンスが画像を実稼動以外の環境に配信します。また、パブリッシュインスタンスに不要な元の画像と静的なレンディションがフィルターによってレプリケーションから除外されます。
 
 >[!NOTE]
 1 人の作成者に異なるフィルターが多数ある場合は、各エージェントに異なるユーザーを割り当てる必要があります。Granite コードでは、ユーザーごとに 1 つのフィルターというモデルが適用されます。フィルターを設定するたびに、必ず、異なるユーザーを使用してください。
-If you are using more than one filter on a server - for example, one filter for replication to publish and a second filter for s7delivery - then you need to ensure that these two filters have a different **userId** assigned to them in the **jcr:content** node. 次の画像を参照してください。
+サーバーで複数のフィルターを使用する場合(例えば、レプリケーションを公開するフィルターとs7配信を2つのフィルターで公開する場合)、これらの2つのフィルターに異なる&#x200B;**userId**&#x200B;が&#x200B;**jcr:content**&#x200B;ノードで割り当てられていることを確認する必要があります。 次の画像を参照してください。
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
@@ -745,24 +746,24 @@ If you are using more than one filter on a server - for example, one filter for 
 
 （オプション）レプリケーション用のアセットフィルターをカスタマイズするには：
 
-1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > General > CRXDE Lite.]**
-1. In the left folder tree, navigate to `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters` to review the filters.
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/一般/CRXDE Liteをタップします。]**
+1. 左のフォルダーツリーで、`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`に移動してフィルターを確認します。
 
    ![chlimage_1-511](assets/chlimage_1-511.png)
 
 1. フィルターの MIME タイプを定義するために、次のように MIME タイプを特定することができます。
 
-   In the left rail, expand `content > dam > <locate_your_asset> >  jcr:content > metadata` and then in the table, locate **[!UICONTROL dc:format.]**
+   左側のレールで`content > dam > <locate_your_asset> >  jcr:content > metadata`を展開し、テーブルで&#x200B;**[!UICONTROL dc:format.]**&#x200B;を探します。
 
    次の図は、あるアセットの dc:format へのパスの例を示しています。
 
    ![chlimage_1-512](assets/chlimage_1-512.png)
 
-   Notice that the `dc:format` for the asset `Fiji Red.jpg` is `image/jpeg`.
+   アセット`Fiji Red.jpg`の`dc:format`は`image/jpeg`です。
 
-   To have this filter apply to all images, regardless of their format, set the value to `image/*` where `*` is a regular expression that is applied to all images of any format.
+   このフィルターをすべての画像に適用するには、その形式に関係なく、値を`image/*`に設定します。`*`は、任意の形式のすべての画像に適用される正規式です。
 
-   To have the filter apply only to images of the type JPEG, enter a value of `image/jpeg`.
+   JPEG形式の画像にのみフィルターを適用するには、`image/jpeg`の値を入力します。
 
 1. レプリケーションに含めるレンディションまたは除外するレンディションを定義します。
 
@@ -795,22 +796,22 @@ If you are using more than one filter on a server - for example, one filter for 
 
 ![chlimage_1-513](assets/chlimage_1-4.png)
 
-Using the example above, if you only wanted to replicate the PTIFF (Pyramid TIFF), then you would enter `+cqdam,*` which includes all the renditions that start with `cqdam`. Inthe example, that rendition is `cqdam.pyramid.tiff`.
+上記の例を使用して、PTIFF（ピラミッドTIFF）を複製するだけの場合は、`+cqdam,*`と入力します。この中には、`cqdam`と開始するすべてのレンディションが含まれます。 例では、そのレンディションは`cqdam.pyramid.tiff`です。
 
-If you only wanted to replicate the original, then you would enter `+original`.
+オリジナルを複製したい場合は、`+original`と入力します。
 
 ## Dynamic Media 画像サーバーの設定 {#configuring-dynamic-media-image-server-settings}
 
 Dynamic Media 画像サーバーの設定では、Adobe CQ Scene7 ImageServer バンドルと Adobe CQ Scene7 PlatformServer バンドルの編集をおこないます。
 
 >[!NOTE]
-Dynamic Media works out-of-the-box [after it is enabled](#enabling-dynamic-media). ただし、オプションで、Dynamic Media 画像サーバーを特定の仕様や要件に合うように設定することで、インストールを細かく調整することもできます。
+ダイナミックメディアは、](#enabling-dynamic-media)を有効にした後、すぐに使用できる[機能します。 ただし、オプションで、Dynamic Media 画像サーバーを特定の仕様や要件に合うように設定することで、インストールを細かく調整することもできます。
 
-**前提条件**: *Dynamic Media Image* Serverを設定する前に、WindowsのVMにMicrosoft Visual C++ Librariesがインストールされていることを確認してください。 Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[ここから Microsoft Visual C++ 2010 再頒布可能パッケージ（x64）をダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=14632)できます。
+**前提条件**: *Dynamic Media Image Serverを設定する* 前に、WindowsのVMにMicrosoft Visual C++ライブラリがインストールされていることを確認してください。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[ここから Microsoft Visual C++ 2010 再頒布可能パッケージ（x64）をダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=14632)できます。
 
 Dynamic Media 画像サーバーを設定するには：
 
-1. In the upper-left corner of AEM, tap **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then tap **[!UICONTROL Tools > Operations > Web Console.]**
+1. AEMの左上隅にある&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;をタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/操作/Webコンソールをタップします。]**
 1. Adobe Experience Manager Web Console Configuration ページで、**[!UICONTROL OSGi ／Configuration]** をタップして、AEM で現在実行中のすべてのバンドルを表示します。
 
    ダイナミックメディア配信サーバは、リスト内の次の名前の下にあります。
@@ -864,8 +865,8 @@ Dynamic Media 画像サーバーを設定するには：
  </tbody>
 </table>
 
-1. Tap **[!UICONTROL Save.]**
-1. In the list of bundles, to the right of Adobe CQ Scene7 PlatformServer, tap the **[!UICONTROL Edit]** icon.
+1. 「**[!UICONTROL 保存]**」をタップします。
+1. バンドルのリストで、Adobe CQScene7プラットフォームサーバーの右側にある&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップします。
 1. Adobe CQ Scene7 PlatformServer ダイアログボックスで、次のデフォルト値のオプションを設定します。
 
    >[!NOTE]
@@ -882,7 +883,7 @@ Dynamic Media 画像サーバーを設定するには：
 
 デフォルトのマニフェストでは、ダイナミックメディア配信の応答の生成に使用するデフォルトを設定できます。画質（JPEGの画質、解像度、リサンプリングモード）、キャッシュ（有効期限）を微調整して、大きすぎる画像(defaultpix、defaultthumbpix、maxpix)のレンダリングを防ぐことができます。
 
-デフォルトのマニフェスト設定の場所は、**[!UICONTROL Adobe CQ Scene7 PlatformServer]** バンドルの **[!UICONTROL Catalog root]** デフォルト値から取得されます。By default this value is located at the following path within **[!UICONTROL Tools > General > CRXDE Lite]**:
+デフォルトのマニフェスト設定の場所は、**[!UICONTROL Adobe CQ Scene7 PlatformServer]** バンドルの **[!UICONTROL Catalog root]** デフォルト値から取得されます。デフォルトでは、この値は&#x200B;**[!UICONTROL ツール/一般/CRXDE Lite]**&#x200B;内の次のパスにあります。
 
 `/conf/global/settings/dam/dm/imageserver/`
 
@@ -890,9 +891,9 @@ Dynamic Media 画像サーバーを設定するには：
 
 下の表に記載されているプロパティの値を変更するには、新しい値を入力します。
 
-When you are finished making changes to the default manifest, in the upper-left corner of the page, tap **[!UICONTROL Save All.]**
+デフォルトのマニフェストの変更が完了したら、ページの左上隅にある「**[!UICONTROL すべて保存」をタップします。]**
 
-Be sure you tap the **[!UICONTROL Access Control]** tab (to the right of the Properties tab), then set the access control privileges to `jcr:read` for the everyone and dynamic-media-replication users.
+「プロパティ」タブの右にある「**[!UICONTROL アクセス制御]**」タブをタップし、全員およびDynamic Media Replicationユーザーのアクセス制御権限を`jcr:read`に設定してください。
 
 ![configimageservercrxdeleteaccesscontroltab](assets/configimageservercrxdeliteaccesscontroltab.png)
 
@@ -901,7 +902,7 @@ Be sure you tap the **[!UICONTROL Access Control]** tab (to the right of the Pro
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>デフォルト値</strong></td>
    <td><strong>説明</strong></td>
   </tr>
@@ -948,12 +949,12 @@ Be sure you tap the **[!UICONTROL Access Control]** tab (to the right of the Pro
   <tr>
    <td>thumbnailtime</td>
    <td>1%,11%,21%,31%,41%,51%,61%,71%,81%,91%</td>
-   <td>These values represent a snapshot of video playtime and are passed to <a href="https://encoding.com/">encoding.com</a>. 詳しくは、<a href="/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode">ビデオサムネールについて</a>を参照してください。</td>
+   <td>これらの値は、ビデオ再生時間のスナップショットを表し、<a href="https://encoding.com/">encoding.com</a>に渡されます。 詳しくは、<a href="/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode">ビデオサムネールについて</a>を参照してください。</td>
   </tr>
  </tbody>
 </table>
 
-## Dynamic Media カラーマネジメントの設定 {#configuring-dynamic-media-color-management}
+## Dynamic Media カラーマネジメントの設定  {#configuring-dynamic-media-color-management}
 
 Dynamic Media カラーマネジメントを使用すると、プレビュー用にアセットをカラー補正できます。
 
@@ -963,24 +964,24 @@ Adobe カラーマネジメントは ICC プロファイルを使用していま
 
 Dynamic Media カラーマネジメントを設定して、CMYK、RGB またはグレー出力を使用する画像プリセットを設定できます。[画像プリセットの設定](/help/assets/managing-image-presets.md)を参照してください。
 
-Advanced use cases could use a manual configure `icc=` modifier to explicitly select an output color profile:
+高度な使用例では、手動設定`icc=`修飾子を使用して出力色プロファイルを明示的に選択することができます。
 
-* `icc` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html)
+* `icc` -  [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html)
 
-* `iccEmbed` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
+* `iccEmbed` -  [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
-The standard set of Adobe color profiles are only available if you have [Feature Pack 12445 from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installed. All feature packs and service packs are available at [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 機能パック 12445 は、Adobe カラープロファイルを提供します。
+標準のAdobeカラープロファイルセットは、Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445)の[Feature Pack 12445がインストールされている場合にのみ使用できます。 すべての機能パックとサービスパックは、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)で入手できます。 機能パック 12445 は、Adobe カラープロファイルを提供します。
 
-### 機能パック 12445 のインストール {#installing-feature-pack}
+### 機能パック 12445 のインストール  {#installing-feature-pack}
 
 Dynamic Media のカラーマネジメント機能を使用するには、機能パック 12445 をインストールする必要があります。
 
 **機能パック12445をインストールするには**
 
-1. Navigate to [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) and download either `cq-6.3.0-featurepack-12445`.
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)に移動し、`cq-6.3.0-featurepack-12445`をダウンロードします。
 
-   See [How to work with packages](/help/sites-administering/package-manager.md) for more information on using packages in [!DNL Adobe Experience Manager].
+   [!DNL Adobe Experience Manager]でのパッケージの使い方の詳細は、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。
 
 1. 機能パックをインストールします。
 
@@ -990,15 +991,15 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
 
 **デフォルトのカラープロファイルを設定するには**
 
-1. In **[!UICONTROL Tools > General > CRXDE Lite]**, navigate to `/conf/global/settings/dam/dm/imageserver/jcr:content` which contains the default Adobe Color Profiles.
+1. **[!UICONTROL ツール/一般/CRXDE Lite]**&#x200B;で、デフォルトのAdobe Colorプロファイルが含まれる`/conf/global/settings/dam/dm/imageserver/jcr:content`に移動します。
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
-1. Add a color correction property by scrolling to the bottom of the **[!UICONTROL Properties]** tab and manually entering the property name, type, and value, which are described in the following tables. After you enter the values, tap **[!UICONTROL Add]** and then **[!UICONTROL Save All]** to save your values.
+1. 「**[!UICONTROL 追加プロパティ]**」タブの下部にスクロールし、プロパティ名、タイプ、値を手動で入力することによる色修正プロパティ。次の表で説明します。 値を入力したら、**[!UICONTROL 追加]**&#x200B;をタップし、次に&#x200B;**[!UICONTROL すべて保存]**&#x200B;をタップして値を保存します。
 
    カラー補正プロパティは、**カラー補正プロパティ**&#x200B;の表に記載しています。カラー補正プロパティに割り当てることができる値は、**カラープロファイル**&#x200B;の表に記載しています。
 
-   For example, in **[!UICONTROL Name]**, add `iccprofilecmyk`, select **[!UICONTROL Type]** `String`, and add `WebCoated` as a **[!UICONTROL Value.]** 次に、 **[!UICONTROL 追加をタップし]** 、「すべて **[!UICONTROL 保存]** 」をタップして値を保存します。
+   例えば、**[!UICONTROL 名前]**&#x200B;に`iccprofilecmyk`を追加し、**[!UICONTROL タイプ]** `String`を選択して、`WebCoated`を&#x200B;**[!UICONTROL 値として追加します。]** 次に、「 **** 追加」をタップし、「 **[!UICONTROL すべて保存」]** をタップして値を保存します。
 
    ![chlimage_1-515](assets/chlimage_1-515.png)
 
@@ -1016,35 +1017,35 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html">icprofilergb</a></td>
    <td>String</td>
    <td>&lt;空白&gt;</td>
-   <td>初期設定のRGBカラープロファイルの名前。</td>
+   <td>初期設定の RGB カラープロファイルの名前。</td>
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html">icprofilecmyk</a></td>
-   <td>String</td>
+   <td>文字列</td>
    <td>&lt;空白&gt;</td>
-   <td>初期設定のCMYKカラープロファイルの名前。</td>
+   <td>初期設定の CMYK カラープロファイルの名前。</td>
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html">icprofilegray</a></td>
-   <td>String</td>
+   <td>文字列</td>
    <td>&lt;空白&gt;</td>
-   <td>デフォルトのグレーカラープロファイルの名前。</td>
+   <td>初期設定のグレーカラープロファイルの名前。</td>
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html">icprofilesrcrgb</a></td>
-   <td>String</td>
+   <td>文字列</td>
    <td>&lt;空白&gt;</td>
    <td>カラープロファイルが埋め込まれていないRGBプロファイルに使用される初期設定のRGBカラー画像の名前</td>
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html">iccprofilesrccmyk</a></td>
-   <td>String</td>
+   <td>文字列</td>
    <td>&lt;空白&gt;</td>
    <td>カラープロファイルが埋め込まれていないCMYKプロファイルに使用される初期設定のCMYKカラー画像の名前です。</td>
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html">iccprofilesrcgray</a></td>
-   <td>String</td>
+   <td>文字列</td>
    <td>&lt;空白&gt;</td>
    <td>カラープロファイルが埋め込まれていないCMYKプロファイルに使用される初期設定のグレー画像の名前です。</td>
   </tr>
@@ -1056,15 +1057,15 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html">icdither</a></td>
-   <td>Boolean</td>
+   <td>ブール値</td>
    <td>False</td>
    <td>カラー補正中にディザリングを行うかどうかを指定します。</td>
   </tr>
   <tr>
    <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html">icrenderintent</a></td>
-   <td>String</td>
+   <td>文字列</td>
    <td>relative</td>
-   <td><p>レンダリングインテントを指定します。 Acceptable values are: <strong>perceptual, relative, saturation, absolute. </strong><i></i>Adobeでは、 <strong>相対パスがデフォルト </strong><i></i>として推奨されます。</p> </td>
+   <td><p>レンダリングインテントを指定します。指定できる値は次のとおりです。<strong>知覚的、相対的、飽和、絶対的。 </strong><i></i>アドビでは、デフォルトとして<strong>相対</strong><i></i>をお勧めします。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -1159,7 +1160,7 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
    <td>Japan Web Coated (Ad)</td>
   </tr>
   <tr>
-   <td>NewsprintSNAP2007</td>
+   <td>新聞印刷SNAP2007</td>
    <td>CMYK</td>
    <td>US Newsprint(SNAP 2007)</td>
   </tr>
@@ -1246,9 +1247,9 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
  </tbody>
 </table>
 
-1. Tap **[!UICONTROL Save All.]**
+1. 「**[!UICONTROL すべて保存」をタップします。]**
 
-For example, you could set the **[!UICONTROL iccprofilergb]** to `sRGB`, and **[!UICONTROL iccprofilecmyk]** to **[!UICONTROL WebCoated.]**
+例えば、**[!UICONTROL iccprofilergb]**&#x200B;を`sRGB`に設定し、**[!UICONTROL iccprofilecmyk]**&#x200B;を&#x200B;**[!UICONTROL WebCoated.]**&#x200B;に設定できます。
 
 それには、次のようにします。
 
@@ -1260,7 +1261,7 @@ For example, you could set the **[!UICONTROL iccprofilergb]** to `sRGB`, and **[
 
 ## Delivering Assets {#delivering-assets}
 
-上記のすべてのタスクを完了すると、アクティブ化されたダイナミックメディアアセットは画像またはビデオサービスから提供されます。 In AEM, this ability shows up in a **[!UICONTROL Copy Image URL]**, **[!UICONTROL Copy Viewer URL]**, **[!UICONTROL Embed Viewer Code]**, and in the WCM.
+上記のすべてのタスクを完了すると、アクティブ化されたダイナミックメディアアセットは画像またはビデオサービスから提供されます。 AEMでは、この機能は、「画像URLをコピー&#x200B;]**」、「**[!UICONTROL &#x200B;ビューアURLをコピー&#x200B;]**」、「**[!UICONTROL &#x200B;埋め込みビューアコード&#x200B;]**」、およびWCMに表示されます。**[!UICONTROL 
 
 [Dynamic Media アセットの配信](/help/assets/delivering-dynamic-media-assets.md)を参照してください。
 
@@ -1303,6 +1304,6 @@ For example, you could set the **[!UICONTROL iccprofilergb]** to `sRGB`, and **[
  </tbody>
 </table>
 
-### WCM の Dynamic Media コンポーネントとインタラクティブメディアコンポーネント {#wcm-dynamic-media-and-interactive-media-components}
+### WCM の Dynamic Media コンポーネントとインタラクティブメディアコンポーネント  {#wcm-dynamic-media-and-interactive-media-components}
 
 Dynamic Media コンポーネントとインタラクティブメディアコンポーネントを参照する WCM ページは、配信サービスを参照します。
