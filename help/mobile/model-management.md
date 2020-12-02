@@ -54,15 +54,15 @@ ht-degree: 67%
 
 ダッシュボードとリポジトリでのモデルの作成および管理について詳しくは、**[モデル](/help/mobile/administer-mobile-apps.md)**&#x200B;を参照してください。
 
-### コンテンツモデルのエンティティ {#entities-in-content-model}
+### コンテンツモデルのエンティティ  {#entities-in-content-model}
 
 エンティティは、コンテンツモデルのインスタンスです。エンティティは、Content Services APIを介してクライアント側ライブラリに公開され、ネイティブアプリがチャネルに依存しない方法でコンテンツにアクセスする方法を提供します。
 
 既存の AEM コンテンツの場合、エンティティは、モデルと AEM コンテンツソースを使用して生成されます。例えば、ページエンティティは、AEMページとページモデルから生成されるチャネルとレイアウトに依存しないオブジェクトです。
 
-エンティティの参照先コンテンツが変更されると、そのエンティティも変更されます。For example, if a *cq:page* is updated, then any entities that are based on that page will be updated as well.
+エンティティの参照先コンテンツが変更されると、そのエンティティも変更されます。例えば、*cq:page*&#x200B;が更新されると、そのページを基にするエンティティもすべて更新されます。
 
-See **[Working with Entities](/help/mobile/spaces-and-entities.md)** to create custom entities from models.
+モデルからカスタムエンティティを作成するには、**[エンティティ](/help/mobile/spaces-and-entities.md)**&#x200B;の操作を参照してください。
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ AEM の側から見ると、スペースは、関連するエンティティを�
 
 *例*：
 
-ユーザーが、エンティティを汎用的な 3 つのグループに分類しています。1つは内部での使用のみを目的とし、もう1つは公開での使用が承認されます。もう1つは、多くのアプリで使用される一般的なエンティティ用です。 To make it easy to manage, the user creates three spaces namely *internal*, *public* (with both english and french content), and *common* for managing the appropriate entities as mentioned below:
+ユーザーが、エンティティを汎用的な 3 つのグループに分類しています。1つは内部での使用のみを目的とし、もう1つは公開での使用が承認されます。もう1つは、多くのアプリで使用される一般的なエンティティ用です。 管理を容易にするために、ユーザーは、次に示す適切なエンティティを管理するための3つのスペース(*内部*、*パブリック*（英語とフランス語の両方のコンテンツを含む）、*共通*&#x200B;を作成します。
 
 * /content/entities/internal
 * /content/entities/public/en
@@ -86,14 +86,14 @@ AEM の側から見ると、スペースは、関連するエンティティを�
 
 スペースにサービスエンドポイントが提供されるので、ネイティブクライアントライブラリで、スペースのコンテンツのリストをリクエストできます。この「リスト」は、JSON オブジェクトとして返されます。
 
-See **[Spaces and Entities](/help/mobile/spaces-and-entities.md)** for creating and publishing spaces.
+スペースを作成およびパブリッシュする方法については、**[スペースとエンティティ](/help/mobile/spaces-and-entities.md)**&#x200B;を参照してください。
 
 >[!NOTE]
 >
 >1 つのスペースを多数のアプリで使用できます。また、1 つのアプリで多数のスペースを使用できます。
 
-### コンテンツモデルのフォルダー {#folders-in-content-model}
+### コンテンツモデルのフォルダー  {#folders-in-content-model}
 
 フォルダーを使用すると、必要に応じてエンティティを整理し、より細かな ACL コントロールを促進できます。スペース内にフォルダーを含めると、コンテンツやアセットを簡単に整理できます。ユーザーは、スペース下に自分独自のフォルダー階層を作成できます。
 
-See **[Working with Folders in a Space](/help/mobile/spaces-and-entities.md)** to create and manage folders within a space.
+スペース内のフォルダの作成と管理については、**[スペース内のフォルダの操作](/help/mobile/spaces-and-entities.md)**&#x200B;を参照してください。
