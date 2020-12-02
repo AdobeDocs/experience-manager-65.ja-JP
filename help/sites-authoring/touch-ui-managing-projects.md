@@ -38,7 +38,7 @@ ht-degree: 88%
 
 >[!CAUTION]
 >
->For users in projects to see other users/groups while using Projects functionality like creating projects, creating tasks/workflows, seeing and managing the team, those users need to have read access on **/home/users** and **/home/groups**. The easiest way to implement this is to give the **projects-users** group read access to **/home/users** and **/home/groups**.
+>プロジェクトのユーザーが、プロジェクトの作成、タスク/ワークフローの作成、チームの表示と管理など、プロジェクト機能を使用して他のユーザー/グループを表示するには、**/home/users**&#x200B;と&#x200B;**/home/groups**&#x200B;で読み取りアクセス権が必要です。 これを実装する最も簡単な方法は、**projects-users**&#x200B;グループに&#x200B;**/home/users**&#x200B;と&#x200B;**/home/groups**&#x200B;への読み取りアクセスを与えることです。
 
 ## プロジェクトの作成 {#creating-a-project}
 
@@ -52,7 +52,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 プロジェクトの作成手順は、どのプロジェクトでも同じです。プロジェクトのタイプによって異なるものとしては、使用可能な[ユーザーの役割](/help/sites-authoring/projects.md)と[ワークフロー](/help/sites-authoring/projects-with-workflows.md)があります。新しいプロジェクトを作成するには、次の手順を実行します。
 
 1. **プロジェクト**&#x200B;で「**作成**」をタップまたはクリックして「**プロジェクトを作成**」ウィザードを開きます。
-1. テンプレートを選択します。Out of the box, Simple Project, Media Project, [Translation Project](/help/sites-administering/tc-manage.md), and [Product Photo Shoot Product](/help/sites-authoring/managing-product-information.md) are available and click **Next**.
+1. テンプレートを選択します。初期設定では、シンプルプロジェクト、メディアプロジェクト、[翻訳プロジェクト](/help/sites-administering/tc-manage.md)、[製品フォトシュート製品](/help/sites-authoring/managing-product-information.md)が用意され、**次へ**&#x200B;をクリックします。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -62,7 +62,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 
 1. 「**作成**」をタップまたはクリックします。新しいプロジェクトを開くか、コンソールに戻るかを確認するメッセージが表示されます。
 
-### リソースとプロジェクトの関連付け {#associating-resources-with-your-project}
+### リソースとプロジェクトの関連付け  {#associating-resources-with-your-project}
 
 プロジェクトではリソースを 1 つのエンティティにグループ化できるので、リソースをプロジェクトに関連付けできます。これらのリソースは「**タイル**」と呼ばれます。追加できるリソースのタイプについては、[プロジェクトタイル](/help/sites-authoring/projects.md#project-tiles)で説明します。
 
