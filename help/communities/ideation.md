@@ -18,7 +18,7 @@ ht-degree: 66%
 ---
 
 
-# アイディエーションの基本事項 {#ideation-essentials}
+# アイディエーションの基本事項  {#ideation-essentials}
 
 このページでは、アイディエーション機能の操作に関する基本情報をまとめています。この機能は、フォーラムに似ていますが、ドラフトとして保存する機能があるほか、共同作業しやすくなります。
 
@@ -48,13 +48,13 @@ ht-degree: 66%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="ideation-feature.md">Ideation Feature</a></td>
+   <td><a href="ideation-feature.md">イデエーション機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-### アイディエーション機能 {#ideation-function}
+### アイディエーション機能  {#ideation-function}
 
-A community site structure that includes the [Ideation function](functions.md#ideation-function), includes a configured `ideation` component.
+[イデエーション関数](functions.md#ideation-function)を含むコミュニティサイト構造は、構成された`ideation`コンポーネントを含みます。
