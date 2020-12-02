@@ -22,19 +22,19 @@ ht-degree: 2%
 
 # 複数のXDPフラグメントのアセンブリ{#assembling-multiple-xdp-fragments}
 
-複数のXDPフラグメントを1つのXDPドキュメントにアセンブリできます。 例えば、各XDPファイルに、ヘルスフォームの作成に使用される1つ以上のサブフォームが含まれているXDPフラグメントについて考えてみましょう。 次の図に、アウトライン表示を示します(複数のXDPフラグメントの *アセンブリのクイック開始で使用されるtuc018_template_flowed.xdpファイルを表します* )。
+複数のXDPフラグメントを1つのXDPドキュメントにアセンブリできます。 例えば、各XDPファイルに、ヘルスフォームの作成に使用される1つ以上のサブフォームが含まれているXDPフラグメントについて考えてみましょう。 次の図に、アウトライン表示を示します（tuc018_template_flowed.xdpファイルを表します）。このファイルは、*複数のXDPフラグメントのアセンブリ*&#x200B;クイック開始で使用されます。
 
 ![am_am_forma](assets/am_am_forma.png)
 
-次の図に、患者のセクションを示します(複数のXDPフラグメントの *アセンブリのクイック開始で使用されるtuc018_contact.xdpファイルを表します* )。
+次の図に、患者のセクション(*複数のXDPフラグメントのアセンブリ*&#x200B;クイック開始で使用されるtuc018_contact.xdpファイルを表します)を示します。
 
 ![am_am_formb](assets/am_am_formb.png)
 
-次の図に、患者の正常性の節を示します(複数のXDPフラグメントの *アセンブリのクイック開始で使用されるtuc018_patient.xdpファイルを表します* )。
+次の図に、患者の正常性のセクションを示します(*複数のXDPフラグメントのアセンブリ*&#x200B;クイック開始で使用されるtuc018_patient.xdpファイルを表します)。
 
 ![am_am_formc](assets/am_am_formc.png)
 
-このフラグメントには、 *subPatientPhysical* およびsubPatientHealthという2つのサブフォームが含まれてい *ます*。 これらのサブフォームは両方とも、Assemblerサービスに渡されるDDXドキュメントで参照されます。 次の図に示すように、Assemblerサービスを使用すると、これらすべてのXDPフラグメントを1つのXDPドキュメントに結合できます。
+このフラグメントには、*subPatientPhysical*&#x200B;および&#x200B;*subPatientHealth*&#x200B;という2つのサブフォームが含まれています。 これらのサブフォームは両方とも、Assemblerサービスに渡されるDDXドキュメントで参照されます。 次の図に示すように、Assemblerサービスを使用すると、これらすべてのXDPフラグメントを1つのXDPドキュメントに結合できます。
 
 ![am_am_formd](assets/am_am_formd.png)
 
@@ -53,7 +53,7 @@ ht-degree: 2%
  </DDX>
 ```
 
-DDXドキュメントには、結果の名前を指定するXDP `result` タグが含まれています。 この場合、値はです `tuc018result.xdp`。 この値は、Assemblerサービスが結果を返した後にXDPドキュメントを取得するために使用されるアプリケーションロジックで参照されます。 例えば、アセンブリ済みのXDPドキュメントを取得するために使用される次のJavaアプリケーションロジックについて考えてみます（値は太字で示しています）。
+DDXドキュメントには、結果の名前を指定するXDP `result`タグが含まれています。 この場合、値は`tuc018result.xdp`です。 この値は、Assemblerサービスが結果を返した後にXDPドキュメントを取得するために使用されるアプリケーションロジックで参照されます。 例えば、アセンブリ済みのXDPドキュメントを取得するために使用される次のJavaアプリケーションロジックについて考えてみます（値は太字で示しています）。
 
 ```java
  //Iterate through the map object to retrieve the result XDP document
@@ -74,19 +74,19 @@ DDXドキュメントには、結果の名前を指定するXDP `result` タグ�
  }
 ```
 
-この `XDP source` タグは、XDPフラグメントを追加するコンテナとして、またはXDPフラグメントを追加する多数のドキュメントの1つとして使用できる完全なXDPドキュメントを表すXDPファイルを指定します。 この場合、XDPドキュメントはコンテナとしてのみ使用されます(最初の図は「 *複数のXDPフラグメントの*&#x200B;アセンブリ」に示しています)。 つまり、他のXDPファイルはXDPコンテナ内に配置されます。
+`XDP source`タグは、XDPフラグメントを追加するコンテナとして、またはXDPフラグメントを追加する多数のドキュメントの1つとして使用できる完全なXDPドキュメントを表すXDPファイルを指定します。 この場合、XDPドキュメントはコンテナとしてのみ使用されます（最初の図は「*複数のXDPフラグメントのアセンブリ*」に示しています）。 つまり、他のXDPファイルはXDPコンテナ内に配置されます。
 
-各サブフォームに対して、要素を追加できます(この `XDPContent` 要素はオプションです)。 上の例では、3つのサブフォームがあることに注意してください。 `subPatientContact`、 `subPatientPhysical`および `subPatientHealth`。 サブフォームとサブフォ `subPatientPhysical``subPatientHealth` ームの両方が同じXDPファイルtuc018_patient.xdpに存在します。 フラグメント要素は、Designerで定義されたサブフォームの名前を指定します。
-
->[!NOTE]
->
->For more information about the Assembler service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+各サブフォームに対して、`XDPContent`要素を追加できます（この要素はオプションです）。 上の例では、3つのサブフォームがあることに注意してください。`subPatientContact`、`subPatientPhysical`、`subPatientHealth`。 `subPatientPhysical`サブフォームと`subPatientHealth`サブフォームはどちらも同じXDPファイルtuc018_patient.xdpに存在します。 フラグメント要素は、Designerで定義されたサブフォームの名前を指定します。
 
 >[!NOTE]
 >
->DDXドキュメントについて詳しくは、『 [Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)』を参照してください。
+>Assemblerサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-## 手順の概要 {#summary-of-steps}
+>[!NOTE]
+>
+>DDXドキュメントについて詳しくは、「[Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)」を参照してください。
+
+## 手順{#summary-of-steps}の概要
 
 複数のXDPフラグメントをアセンブリするには、次のタスクを実行します。
 
@@ -116,17 +116,17 @@ DDXドキュメントには、結果の名前を指定するXDP `result` タグ�
 
 **既存のDDXドキュメントの参照**
 
-複数のXDPドキュメントをアセンブリするには、DDXドキュメントを参照する必要があります。 このDDXドキュメントには、 `XDP result`、、 `XDP source`およびの各 `XDPContent` 要素が含まれている必要があります。
+複数のXDPドキュメントをアセンブリするには、DDXドキュメントを参照する必要があります。 このDDXドキュメントには、`XDP result`、`XDP source`および`XDPContent`の各要素を含める必要があります。
 
 **XDPドキュメントの参照**
 
-複数のXDPドキュメントをアセンブリするには、結果のXDPドキュメントのアセンブリに使用されるすべてのXDPファイルを参照します。 属性で参照されるXDPドキュメントに含まれるサブフォームの名前が、属性で指定されているこ `source` とを確認し `fragment` ます。 サブフォームはDesignerで定義されます。 例えば、次のXMLを考えてみましょう。
+複数のXDPドキュメントをアセンブリするには、結果のXDPドキュメントのアセンブリに使用されるすべてのXDPファイルを参照します。 `source`属性で参照されるXDPドキュメントに含まれるサブフォームの名前が`fragment`属性で指定されていることを確認します。 サブフォームはDesignerで定義されます。 例えば、次のXMLを考えてみましょう。
 
 ```xml
  <XDPContent insertionPoint="ddx_fragment" source="tuc018_contact.xdp" fragment="subPatientContact" required="false"/>
 ```
 
-subPatientContactという名前のサブフォームは、 *tuc018_contact.xdpという名前のXDPファイル内に存在する* 必要があります **。
+*subPatientContact*&#x200B;という名前のサブフォームは、*tuc018_contact.xdp*&#x200B;という名前のXDPファイル内に存在する必要があります。
 
 **実行時オプションの設定**
 
@@ -134,7 +134,7 @@ subPatientContactという名前のサブフォームは、 *tuc018_contact.xdp�
 
 **複数のXDPドキュメントのアセンブリ**
 
-複数のXDPファイルをアセンブリするには、 `invokeDDX` 操作を呼び出します。 Assemblerサービスは、コレクションオブジェクト内でアセンブルされたXDPドキュメントを返します。
+複数のXDPファイルをアセンブリするには、`invokeDDX`操作を呼び出します。 Assemblerサービスは、コレクションオブジェクト内でアセンブルされたXDPドキュメントを返します。
 
 **アセンブリ済みXDPドキュメントの取得**
 
@@ -154,7 +154,7 @@ subPatientContactという名前のサブフォームは、 *tuc018_contact.xdp�
 
 [フラグメントを使用したPDFドキュメントの作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-## Java APIを使用した複数のXDPフラグメントのアセンブリ {#assemble-multiple-xdp-fragments-using-the-java-api}
+## Java API {#assemble-multiple-xdp-fragments-using-the-java-api}を使用した複数のXDPフラグメントのアセンブリ
 
 Assembler Service API(Java)を使用して、複数のXDPフラグメントをアセンブリします。
 
@@ -165,50 +165,53 @@ Assembler Service API(Java)を使用して、複数のXDPフラグメントを�
 1. PDFアセンブラクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `AssemblerServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`AssemblerServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 既存のDDXドキュメントの参照。
 
-   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. XDPドキュメントを参照します。
 
-   * コンストラクターを使用して、入力XDPドキュメントの格納に使用する `java.util.Map` オブジェクトを作成し `HashMap` ます。
-   * オブジェクトを作成し、入力XDPファイルを含む `com.adobe.idp.Document``java.io.FileInputStream` オブジェクトを渡します(このタスクはXDPファイルごとに繰り返します)。
-   * メソッド追加を呼び出し、次の引数を渡すことによって、オブジェクトに対するエントリを作成します。 `java.util.Map``put`
+   * `HashMap`コンストラクターを使用して、入力XDPドキュメントの格納に使用する`java.util.Map`オブジェクトを作成します。
+   * `com.adobe.idp.Document`オブジェクトを作成し、入力XDPファイルを含む`java.io.FileInputStream`オブジェクトを渡します(このタスクを各XDPファイルに対して繰り返します)。
+   * &lt;a0追加/>オブジェクトへのエントリ。その`java.util.Map`メソッドを呼び出し、次の引数を渡すことによって作成します。`put`
 
-      * キー名を表すstring値です。 この値は、DDXドキュメントで指定された `source` element値と一致する必要があります(このタスクを各XDPファイルに対して繰り返します)。
-      * 要素に対応するXDPドキュメントを含む `com.adobe.idp.Document` オブジェクト( `source` このタスクをXDPファイルごとに繰り返します)。
+      * キー名を表すstring値です。 この値は、DDXドキュメントで指定された`source`要素の値と一致する必要があります(XDPファイルごとにこのタスクを繰り返します)。
+      * `source`要素に対応するXDPドキュメントを含む`com.adobe.idp.Document`オブジェクト(XDPファイルごとにこのタスクを繰り返します)。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して渡し `false`ます。
+   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
+   * `AssemblerOptionSpec`オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、`AssemblerOptionSpec`オブジェクトの`setFailOnError`メソッドを呼び出し、`false`を渡します。
 
 1. 複数のXDPドキュメントをアセンブリします。
 
-   オブジェクトの `AssemblerServiceClient``invokeDDX` メソッドを呼び出し、次の必須値を渡します。
+   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の必須値を渡します。
 
-   * 使用するDDXドキュメントを表す `com.adobe.idp.Document` オブジェクトです
-   * 入力XDPファイルを含む `java.util.Map` オブジェクト
-   * デフォルトフォントやジョブログレベルなど、実行時のオプションを指定する `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` オブジェクト。
+   * 使用するDDXドキュメントを表す`com.adobe.idp.Document`オブジェクト
+   * 入力XDPファイルが含まれる`java.util.Map`オブジェクト
+   * デフォルトフォントとジョブログレベルを含む、実行時のオプションを指定する`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`オブジェクト
 
-   この `invokeDDX` メソッドは、アセンブリされたXDPドキュメントを含む `com.adobe.livecycle.assembler.client.AssemblerResult` オブジェクトを返します。
+   `invokeDDX`メソッドは、アセンブリされたXDPドキュメントを含む`com.adobe.livecycle.assembler.client.AssemblerResult`オブジェクトを返します。
 
 1. アセンブリ済みのXDPドキュメントを取得します。
 
    アセンブリ済みのXDPドキュメントを取得するには、次の操作を実行します。
 
-   * オブジェクトの `AssemblerResult` メソッドを呼び出し `getDocuments` ます。 このメソッドは、 `java.util.Map` オブジェクトを返します。
-   * オブジェクトを繰り返し処理して、結果のオブジ `java.util.Map``com.adobe.idp.Document` ェクトを見つけます。
-   * オブジェクトの `com.adobe.idp.Document``copyToFile` メソッドを呼び出して、アセンブリ済みのXDPドキュメントを抽出します。
+   * `AssemblerResult`オブジェクトの`getDocuments`メソッドを呼び出します。 このメソッドは、`java.util.Map`オブジェクトを返します。
+   * `java.util.Map`オブジェクトを繰り返し処理して、結果の`com.adobe.idp.Document`オブジェクトを見つけます。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、アセンブリ済みのXDPドキュメントを抽出します。
 
 **関連トピック**
 
-[複数のXDPフラグメント](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[クイック開始のアセンブリ（SOAPモード）:Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)[を使用した複数のXDPフラグメントのアセンブリ(AEM FormsJavaライブラリファイルを含む)接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[の設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[複数のXDP](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
+[フラグメントのアセンブリクイック開始（SOAPモード）:Java APIを使用した複数のXDPフラグメントのアセンブリ(AEM FormsJavaライブラリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[ファイルを含む)接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPIを使用した複数のXDPフラグメントのアセンブリ {#assemble-multiple-xdp-fragments-using-the-web-service-api}
+## WebサービスAPI {#assemble-multiple-xdp-fragments-using-the-web-service-api}を使用して複数のXDPフラグメントをアセンブリする
 
 Assembler Service API（Webサービス）を使用して、複数のXDPフラグメントをアセンブリします。
 
@@ -222,65 +225,66 @@ Assembler Service API（Webサービス）を使用して、複数のXDPフラ�
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. PDFアセンブラクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(など `https://localhost:8080/soap/services/AssemblerService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `AssemblerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `AssemblerServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`AssemblerServiceClient.Endpoint.Address`オブジェクトを作成します。 `https://localhost:8080/soap/services/AssemblerService?blob=mtom`など、WSDLをAEM Formsサービスに渡す文字列値を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。
+   * `AssemblerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * AEM formsユーザー名をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName` ます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password`フィールドに割り当てます。
-      * 定数値をフィー `HttpClientCredentialType.Basic``BasicHttpBindingSecurity.Transport.ClientCredentialType`ルドに割り当てます。
-      * 定数値をフィー `BasicHttpSecurityMode.TransportCredentialOnly``BasicHttpBindingSecurity.Security.Mode`ルドに割り当てます。
+      * AEM formsユーザー名を`AssemblerServiceClient.ClientCredentials.UserName.UserName`フィールドに割り当てます。
+      * 対応するパスワード値を`AssemblerServiceClient.ClientCredentials.UserName.Password`フィールドに割り当てます。
+      * `HttpClientCredentialType.Basic`定数値を`BasicHttpBindingSecurity.Transport.ClientCredentialType`フィールドに割り当てます。
+      * `BasicHttpSecurityMode.TransportCredentialOnly`定数値を`BasicHttpBindingSecurity.Security.Mode`フィールドに割り当てます。
 
 1. 既存のDDXドキュメントの参照。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDXドキュメントの格納に使用されます。
-   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、DDXドキュメントの保存に使用されます。
+   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * `BLOB`オブジェクトに`MTOM`プロパティを割り当て、バイト配列の内容を指定します。
 
 1. XDPドキュメントを参照します。
 
-   * 入力XDPファイルごとに、コンストラクターを使用して `BLOB` オブジェクトを作成します。 この `BLOB` オブジェクトは、入力ファイルの保存に使用されます。
-   * コンストラクターを呼び出し、入力ファイルのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
-   * Create a `MyMapOf_xsd_string_To_xsd_anyType` object. このコレクションオブジェクトは、アセンブリされたXDPドキュメントの作成に必要な入力ファイルの格納に使用します。
-   * 各入力ファイルに対して、 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
-   * キー名を表すstring値を `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` フィールドに割り当てます。 この値は、DDXドキュメントで指定された要素の値と一致する必要があります。 (このタスクは、入力XDPファイルごとに実行します)。
-   * 入力ファイルを格納している `BLOB` オブジェクトをオブジェクトのフィー `MyMapOf_xsd_string_To_xsd_anyType_Item` ルドに割り当て `value` ます。 (このタスクは、入力XDPファイルごとに実行します)。
-   * オ追加ブジェクトをオブジ `MyMapOf_xsd_string_To_xsd_anyType_Item``MyMapOf_xsd_string_To_xsd_anyType` ェクトに追加します。 Invoke the `MyMapOf_xsd_string_To_xsd_anyType` object&#39;s `Add` method and pass the `MyMapOf_xsd_string_To_xsd_anyType` object. (このタスクは、入力XDPドキュメントごとに実行します)。
+   * 各入力XDPファイルに対して、コンストラクターを使用して`BLOB`オブジェクトを作成します。 `BLOB`オブジェクトは、入力ファイルの保存に使用されます。
+   * コンストラクターを呼び出し、入力ファイルのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * `BLOB`オブジェクトに、`MTOM`フィールドにバイト配列の内容を割り当てて入力します。
+   * `MyMapOf_xsd_string_To_xsd_anyType`オブジェクトを作成します。 このコレクションオブジェクトは、アセンブリされたXDPドキュメントの作成に必要な入力ファイルの格納に使用します。
+   * 入力ファイルごとに、`MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクトを作成します。
+   * キー名を表すstring値を`MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクトの`key`フィールドに割り当てます。 この値は、DDXドキュメントで指定された要素の値と一致する必要があります。 (このタスクは、入力XDPファイルごとに実行します)。
+   * 入力ファイルを保存する`BLOB`オブジェクトを`MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクトの`value`フィールドに割り当てます。 (このタスクは、入力XDPファイルごとに実行します)。
+   * 追加`MyMapOf_xsd_string_To_xsd_anyType`オブジェクトの`MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクト。 `MyMapOf_xsd_string_To_xsd_anyType`オブジェクトの`Add`メソッドを呼び出し、`MyMapOf_xsd_string_To_xsd_anyType`オブジェクトを渡します。 (このタスクは、入力XDPドキュメントごとに実行します)。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * オブジェクトに属するデータメンバに値を割り当てることで、ビジネス要件に合った実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `false` オブジェクトの `AssemblerOptionSpec``failOnError` データメンバーに割り当てます。
+   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
+   * `AssemblerOptionSpec`オブジェクトに属するデータメンバに値を割り当てて、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、`false`を`AssemblerOptionSpec`オブジェクトの`failOnError`データメンバーに割り当てます。
 
 1. 複数のXDPドキュメントをアセンブリします。
 
-   オブジェクトの `AssemblerServiceClient``invokeDDX` メソッドを呼び出し、次の値を渡します。
+   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
 
-   * DDXドキュメントを表す `BLOB` オブジェクトです
-   * 必要なファイルを含む `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトです
-   * 実行時オプションを指定する `AssemblerOptionSpec` オブジェクトです。
+   * DDXドキュメントを表す`BLOB`オブジェクト
+   * 必要なファイルを含む`MyMapOf_xsd_string_To_xsd_anyType`オブジェクト
+   * 実行時オプションを指定する`AssemblerOptionSpec`オブジェクト
 
-   この `invokeDDX` メソッドは、ジョブの結果と発生した例外を含む `AssemblerResult` オブジェクトを返します。
+   `invokeDDX`メソッドは、ジョブの結果と発生した例外を含む`AssemblerResult`オブジェクトを返します。
 
 1. アセンブリ済みのXDPドキュメントを取得します。
 
    新しく作成されたXDPドキュメントを取得するには、次の操作を実行します。
 
-   * オブジェクトのフ `AssemblerResult` ィールドにアクセスします。この `documents` フィールドは、結果のPDFドキュメントを含む `Map` オブジェクトです。
-   * オブジェクトを繰り返し処理して、 `Map` 各結果ドキュメントを取得します。 次に、その配列メンバーをにキャスト `value` し `BLOB`ます。
-   * PDFドキュメントを表すバイナリデータを抽出するには、その `BLOB` オブジェクトの `MTOM` プロパティにアクセスします。 XDPファイルに書き出すことができるバイト配列を返します。
+   * `AssemblerResult`オブジェクトの`documents`フィールドにアクセスします。これは、結果のPDFドキュメントを含む`Map`オブジェクトです。
+   * `Map`オブジェクトを繰り返し処理して、各結果ドキュメントを取得します。 次に、その配列メンバーの`value`を`BLOB`にキャストします。
+   * `BLOB`オブジェクトの`MTOM`プロパティにアクセスして、PDFドキュメントを表すバイナリデータを抽出します。 XDPファイルに書き出すことができるバイト配列を返します。
 
 **関連トピック**
 
-[MTOMを使用した複数のXDPフラグメントのアセンブリ](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[-AEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[複数のXDP](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
+[フラグメントのアセンブリMTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
