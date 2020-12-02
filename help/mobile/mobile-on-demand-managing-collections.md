@@ -26,9 +26,9 @@ ht-degree: 84%
 
 コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。アプリケーション内のコンテンツに対して以下のアクションを実行します。
 
-## コレクションの概要 {#collections-overview}
+## コレクションの概要  {#collections-overview}
 
-Collections represent a well defined *bucket* filled with content such as articles or banners that suits the cover&#39;s theme.
+コレクションは、表紙のテーマに合った記事やバナーなどのコンテンツが埋められた、適切に定義された&#x200B;*バケット*&#x200B;を表します。
 
 >[!NOTE]
 >
@@ -69,31 +69,31 @@ Collections represent a well defined *bucket* filled with content such as articl
 1. Mobileで、カタログからMobile On-Demand Appを選択します。
 1. **コレクションを管理**&#x200B;タイルの右上隅にある下矢印をクリックして、「コレクションを読み込む」を選択します。
 1. ダイアログで「**コレクションを読み込む**」をクリックし、「閉じる」をクリックします。
-1. Your Mobile On-Demand collections now appear in the **Manage Collections** tile.
+1. これで、Mobile On-Demandコレクションが&#x200B;**コレクションの管理**&#x200B;タイルに表示されます。
 
 >[!CAUTION]
 >
 >最初に Mobile On-Demand の接続を関連付ける必要があります。
 
-## コレクションの編集 {#editing-a-collection}
+## コレクションの編集  {#editing-a-collection}
 
 記事を追加または変更するには、組み込みの AEM ドラッグ＆ドロップエディターを使用します。テキストや画像などのコンポーネントを追加したり、削除したりすることができます。DAM アセットの画像を挿入することもできます。
 
 コレクションを編集するワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. Select an AEM sourced article from the **Manage Collections** tile.
+1. **コレクションの管理**&#x200B;タイルからAEMのソース記事を選択します。
 1. リスト表示で、ハイライトされたコレクションをクリックし、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、コレクションの内容（原稿、画像、テキストなど）をドラッグします。
 
-### コレクション内のメタデータの表示および編集 {#viewing-and-editing-the-metadata-within-a-collection}
+### コレクション内のメタデータの表示および編集  {#viewing-and-editing-the-metadata-within-a-collection}
 
 コレクションには、タイトル、説明、画像など多くのプロパティがあります。このようなプロパティを表示および変更するには、この操作を使用します。オプションで、保存時に Mobile On-Demand に変更内容をアップロードすることもできます。
 
 コレクションを表示／編集する一般的なワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. Choose a collection from the **Manage Collections** tile.
+1. **コレクションの管理**&#x200B;タイルからコレクションを選択します。
 
 1. アクションバーから「**プロパティ**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
@@ -106,8 +106,8 @@ Collections represent a well defined *bucket* filled with content such as articl
 
 コレクションをアップロードする一般的なワークフローは以下のとおりです。
 
-1. From **Mobile**, choose your Mobile On-Demand app from the catalog.
-1. In the **Manage Collections** tile, select an article for upload to Mobile On-Demand.
+1. **Mobile**&#x200B;から、カタログからMobile On-Demandアプリを選択します。
+1. **コレクションの管理**&#x200B;タイルで、Mobile On-Demandにアップロードする記事を選択します。
 1. 必要に応じて、リスト表示からさらにコレクションを追加します。
 1. アクションバーから「**アップロード**」を選択し、ダイアログで「アップロード」をクリックします。
 1. コレクションがMobile On-Demandにアップロードされました。
@@ -126,7 +126,7 @@ Collections represent a well defined *bucket* filled with content such as articl
 1. 「**削除**」をクリックします。
 1. コレクションがリストから削除されます。
 
-## コレクションへのコンテンツの追加 {#adding-content-to-collections}
+## コレクションへのコンテンツの追加  {#adding-content-to-collections}
 
 コレクションは基本的に、関連するコンテンツのカテゴリです。コレクションによって、アプリケーションのナビゲーション構造を定義するパッケージに記事やバナーなどのコンテンツが収集されます。コレクションはネスト可能です。
 
