@@ -1,6 +1,6 @@
 ---
-title: Compareおよび [!DNL Assets] Media Libraryの機能
-description: CompareとMedia Libraryの各ソリューショ [!DNL Experience Manager Assets] ンの違いを理解しています。
+title: ' [!DNL Assets] とメディアライブラリの比較'
+description: ' [!DNL Experience Manager Assets] とメディアライブラリを比較し、違いを把握。'
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
@@ -11,60 +11,60 @@ ht-degree: 22%
 ---
 
 
-# [!DNL Experience Manager Assets] 対 [!DNL Experience Manager] 応メディアライブラリ {#aem-assets-vs-aem-medialibrary}
+# [!DNL Experience Manager Assets] 対 [!DNL Experience Manager] 応メディアライブラリ  {#aem-assets-vs-aem-medialibrary}
 
-[!DNL Adobe Experience Manager Assets] はプラットフォームの不可欠な部 [!DNL Experience Manager] 分です。 This smooth integration is seen as a major advantage of [!DNL Experience Manager] and ensures consistency in content management and high productivity for content authors.
+[!DNL Adobe Experience Manager Assets] は、 [!DNL Experience Manager] プラットフォームの不可欠な部分です。このスムーズな統合は[!DNL Experience Manager]の主な利点と見なされ、コンテンツ管理の一貫性とコンテンツ作成者の生産性の高さを保証します。
 
 ## よくある質問 {#frequently-asked-questions}
 
-### What is [!DNL Assets]? {#what-is-aem-assets}
+### [!DNL Assets]とは{#what-is-aem-assets}
 
-[!DNL Assets] は、ユーザー [!DNL Experience Manager] がwebベースのリポジトリでデジタルアセット(画像、ビデオ、ドキュメント、オーディオクリップ)を管理できる機能です。 [!DNL Assets] には、メタデータのサポート、レンディション、ファインダー、管理インターフェイスが含まれます。
+[!DNL Assets] は、ユーザー [!DNL Experience Manager] がwebベースのリポジトリでデジタルアセット(画像、ビデオ、ドキュメント、オーディオクリップ)を管理できる機能です。[!DNL Assets] には、メタデータのサポート、レンディション、ファインダー、管理インターフェイスが含まれます。
 
-### What is the [!DNL Experience Manager] Media Library? {#what-is-the-aem-media-library}
+### [!DNL Experience Manager]メディアライブラリとは{#what-is-the-aem-media-library}
 
-The [!DNL Experience Manager] Media Library is a designated part of the [!DNL Experience Manager] WCM content repository where images and other shared resources are stored. メディアライブラリは、WCMに基本的なデジタルアセット管理機能を提供します。
+[!DNL Experience Manager]メディアライブラリは、[!DNL Experience Manager] WCMコンテンツリポジトリの指定された部分です。このリポジトリには、画像や他の共有リソースが格納されます。 メディアライブラリは、WCMに基本的なデジタルアセット管理機能を提供します。
 
-### What do I get from [!DNL Assets] that is not part of WCM? {#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
+### WCMに含まれない[!DNL Assets]から得る情報{#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
 
-Unique features that are only available to customers of [!DNL Assets] are:
+[!DNL Assets]のお客様のみが利用できる独自の機能は次のとおりです。
 
 * タイトル、タグ、説明以外のメタデータを抽出して編集する機能
-* スタートアップスクリーンから [!DNL Assets] 使用できる管理者。
+* [!DNL Assets]管理者。スタートアップスクリーンから入手できます。
 * 取り込み、アセット削除、サブアセット処理、メタデータ抽出など、Digital Asset Managementに関連するすべてのワークフローステップ。
-* ライブラリ `dam` を含めます。
+* パッケージ領域に`dam`を含むライブラリ。
 
-Using these features requires a valid license of [!DNL Assets].
+これらの機能を使用するには、[!DNL Assets]の有効なライセンスが必要です。
 
-### Is [!DNL Assets] available as a separate Package? {#is-aem-assets-available-as-a-separate-package}
+### [!DNL Assets]は別のパッケージとして提供されていますか？{#is-aem-assets-available-as-a-separate-package}
 
-いいえ。To ease installation and deployment, all [!DNL Experience Manager] applications and add-ons are delivered in one single package with all functionality included. これは、パッケージに含まれるすべての機能の使用権がユーザーにあることを表すわけではありません。
+いいえ。インストールと導入を容易にするために、すべての[!DNL Experience Manager]アプリケーションとアドオンは、すべての機能を含む1つのパッケージで提供されます。 これは、パッケージに含まれるすべての機能の使用権がユーザーにあることを表すわけではありません。
 
-### デジタルアセットのメタデータを編集したいのですが、Do I need [!DNL Assets]? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
+### デジタルアセットのメタデータを編集したいのですが、[!DNL Assets]が必要ですか？{#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
-If you are planning to edit metadata other than title, description and tags, it is required to license [!DNL Assets].
+タイトル、説明、タグ以外のメタデータを編集する場合は、[!DNL Assets]のライセンスを取得する必要があります。
 
-### Web サイトでカテゴリ述語を使用したいのですが、Do I need [!DNL Assets]? {#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
+### Web サイトでカテゴリ述語を使用したいのですが、[!DNL Assets]が必要ですか？{#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
 
-はい、カテゴリ述語はの一部であり、 [!DNL Assets][!DNL Assets] ライセンスが必要です。
+はい、カテゴリ述語は[!DNL Assets]の一部で、[!DNL Assets]ライセンスが必要です。
 
-### 画像を読み込むときに自動的にサイズ変更したいのですが、Do I need [!DNL Assets]? {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
+### 画像を読み込むときに自動的にサイズ変更したいのですが、[!DNL Assets]が必要ですか？{#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
 
-いいえ。Resizing and automatic workflow-driven transformation of static images as well as the ability to manage renditions are part of [!DNL Experience Manager] Media Library. These features do not require an [!DNL Assets] license.
+いいえ。静的な画像のサイズ変更とワークフローに基づく自動変換、およびレンディション管理機能は、[!DNL Experience Manager]メディアライブラリの一部です。 これらの機能には[!DNL Assets]ライセンスは必要ありません。
 
-### カスタマイズされた画像コンポーネントを使用して画像をサイズ変更したいのですが、Do I need [!DNL Assets]? {#i-want-to-resize-images-using-a-customized-image-component-do-i-need-aem-assets}
+### カスタマイズされた画像コンポーネントを使用して画像をサイズ変更したいのですが、[!DNL Assets]が必要ですか？{#i-want-to-resize-images-using-a-customized-image-component-do-i-need-aem-assets}
 
-画像コンポーネントは WCM に含まれています。The graphics library that is being used by the image component (but also by [!DNL Assets]) is part of the [!DNL Experience Manager] platform and does not require an [!DNL Assets] license.
+画像コンポーネントは WCM に含まれています。画像コンポーネント（および[!DNL Assets]によって使用される）のグラフィックスライブラリは、[!DNL Experience Manager]プラットフォームの一部であり、[!DNL Assets]ライセンスは必要ありません。
 
-### How can I prevent my users from using [!DNL Assets] if I did not license [!DNL Assets]? {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
+### [!DNL Assets]のライセンスを取得しなかった場合、ユーザーが[!DNL Assets]を使用するのを防ぐにはどうすればよいですか。{#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
 
-You can remove all [!DNL Assets]-specific workflows, components, taxonomies, options and the [!DNL Assets] admin from [!DNL Experience Manager]. Doing so prevents your users from accidentally using [!DNL Assets] features that you did not license.
+[!DNL Assets]に固有のワークフロー、コンポーネント、分類、オプション、および[!DNL Assets]管理者をすべて[!DNL Experience Manager]から削除できます。 これにより、ライセンスを取得していない[!DNL Assets]機能を誤ってユーザが使用するのを防ぐことができます。
 
-### ページに画像を追加し、その画像の切り抜きやサイズ変更を実行したいのですが、Do I need Assets? {#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
+### ページに画像を追加し、その画像の切り抜きやサイズ変更を実行したいのですが、アセットが必要ですか？{#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
 
-For this use case it is not required to buy [!DNL Assets], even the use of the Media Library is not required to use images on a website as the smart image component allows uploading images directly into the page.
+この場合、[!DNL Assets]を購入する必要はありません。スマート画像コンポーネントを使用して画像をページに直接アップロードできるので、メディアライブラリを使用してWebサイト上の画像を使用する必要はありません。
 
-### A detailed list of features available in [!DNL Assets] vs Media Library {#listoffeatures}
+### [!DNL Assets]とメディアライブラリ{#listoffeatures}で使用できる機能の詳細リスト
 
 **Experience Manager Assets**
 
