@@ -26,7 +26,7 @@ ht-degree: 78%
 
 デフォルトでは、フォームポータルコンポーネントは使用できません。「[フォームポータルのコンポーネントを有効にする](/help/forms/using/enabling-forms-portal-components.md)」の説明に従い、フォームポータルコンポーネントにおける次のカテゴリが有効になっていることを確認してください。
 
-**ドキュメントサービス** :Search &amp; Lister、Link、Drafts and Submissionsコンポーネントが含まれます。
+**ドキュメント** サービス：Search &amp; Lister、Link、Drafts and Submissionsコンポーネントが含まれます。
 
 **Document Services Predicates**：「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」のコンポーネントが含まれています。これらのコンポーネントは、「Search &amp; Lister」コンポーネントで検索を設定する際に使用します。
 
@@ -53,13 +53,13 @@ Formsポータルコンポーネントのカテゴリ
 
 リストペインはフォームが一覧表示される領域です。Search &amp; Listerコンポーネントには、リストペインでのフォームの表示を制御するために使用できる様々な設定オプションが用意されています。
 
-To configure the List pane, tap the Search and Lister component and then tap ![settings_icon](assets/settings_icon.png). The **[!UICONTROL Edit Component]** dialog opens.
+リストペインを設定するには、「Search &amp; Lister」コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 「**[!UICONTROL コンポーネントを編集]**」ダイアログが開きます。
 
 ![編集モードのリストペイン](assets/edit-list.png)
 
 編集モードのリストペイン
 
-「**編集**」ダイアログには複数のタブが含まれており、以下の表で説明される設定オプションを提供します。Tap **OK** to save the configuration, when done.
+「**編集**」ダイアログには複数のタブが含まれており、以下の表で説明される設定オプションを提供します。終了したら、「**OK**」をタップして設定を保存します。
 
 <table>
  <tbody>
@@ -101,17 +101,17 @@ To configure the List pane, tap the Search and Lister component and then tap ![s
   <tr>
    <td> </td>
    <td>結果のテキスト</td>
-   <td><p>結果のテキストを設定します（例えば、1-12/601の</strong>「結果」<strong>）。デフォルト値は<strong>「Results」</strong>です。</strong></p> <p>For example, if you specify <strong>Forms </strong>in this field and there are a total of 601 forms, the result text changes to 1-12 of 601 <strong>Forms.</strong></p> </td>
+   <td><p>結果のテキストを設定します（例えば、1-12/601の</strong>「結果」<strong>）。デフォルト値は<strong>「Results」</strong>です。</strong></p> <p>例えば、このフィールドに<strong>Forms</strong>を指定し、合計601のフォームがある場合、結果のテキストは1 ～ 12/ 601 <strong>Formsに変わります。</strong></p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>ページテキスト</td>
-   <td><p>Configures the page text (for example, <strong>Page </strong>1 of 51). デフォルト値は<strong>「ページ」</strong>です。</p> <p>For example, if you specify <strong>Application Form </strong>in this field and there are 51 pages, the page text changes to <strong>Application Form </strong>1 of 51.</p> </td>
+   <td><p>ページテキストを設定します（例：<strong>ページ</strong>1/51）。 デフォルト値は<strong>「ページ」</strong>です。</p> <p>例えば、このフィールドに<strong>申込みフォーム</strong>を指定し、51ページある場合、ページのテキストは<strong>申込みフォーム</strong>1/51に変更されます。</p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>/ テキスト</td>
-   <td><p>Replaces the word <strong>of</strong> with the specified text (Page 1 <strong>of </strong>51). デフォルト値は <strong>/</strong> です。</p> <p>For example, if you specify <strong>out of </strong>in this field, the text changes to Page 1 <strong>out of </strong>51.</p> </td>
+   <td><p></strong>の<strong>を指定したテキスト（</strong>51のページ1 <strong>）に置き換えます。 デフォルト値は <strong>/</strong> です。</strong></strong></p> <p>例えば、このフィールドで</strong>のうち<strong>を指定すると、テキストは</strong>51の<strong>ページ1に変わります。</strong></strong></p> </td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>フォームリンク</strong></code></td>
@@ -146,7 +146,7 @@ To configure the List pane, tap the Search and Lister component and then tap ![s
   <tr>
    <td><span class="uicontrol"><strong>スタイル</strong></code></td>
    <td>スタイルタイプ</td>
-   <td>Allows you to specify <strong>No Style, Default Style</strong>, or <strong>Custom Style </strong>for listing the forms.</td>
+   <td>フォームのリスト表示に<strong>「スタイルなし」、「デフォルトのスタイル」</strong>、または<strong>カスタムスタイル</strong>を指定できます。</td>
   </tr>
   <tr>
    <td> </td>
@@ -160,7 +160,7 @@ To configure the List pane, tap the Search and Lister component and then tap ![s
 
 検索ペインでは、サイドキックの「Document Services Predicates」カテゴリから、「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」コンポーネントを追加することができます。これらのコンポーネントは、リストに表示されるフォームに対してユーザーが検索を実行するための検索機能を実装します。
 
-**チップ：***フォームポータルに表示されるフォームのリストを既定の条件に基づいて制御し、エンドユーザーに対して検索機能を非表示にできます。フォームのリストを制御するには、検索フィルターを適用するためにPredicateコンポーネントを使用します。You can also specify the default filter values and disable the search from the Display tab of the Edit Component dialog.*
+**チップ：***フォームポータルに表示されるフォームのリストを既定の条件に基づいて制御し、エンドユーザーに対して検索機能を非表示にできます。フォームのリストを制御するには、検索フィルターを適用するためにPredicateコンポーネントを使用します。また、デフォルトのフィルタ値を指定し、[コンポーネントを編集]ダイアログの[表示]タブで検索を無効にすることもできます。*
 
 ![日付、フルテキスト、プロパティ、およびTags Predicate付きの検索パネル](assets/search-with-predicates.png)
 
@@ -172,7 +172,7 @@ To configure the List pane, tap the Search and Lister component and then tap ![s
 
 「Date Predicate」コンポーネントを構成するには、次の手順を実行します。
 
-1. Tap the component and then tap ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
+1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 編集ダイアログが開きます。
 1. 以下のプロパティを指定します。
 
    * **タイプ：**&#x200B;選択できるオプションは「**最終変更日**」のみです。
@@ -191,7 +191,7 @@ To configure the List pane, tap the Search and Lister component and then tap ![s
 
 Full Text Predicate コンポーネントを構成するには、次の手順を実行します。
 
-1. Tap the component and then tap ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
+1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 編集ダイアログが開きます。
 1. 「**メインタイトル**」フィールドにタイトルを指定します。
 1. 「**OK**」をタップします。
 
@@ -201,7 +201,7 @@ Properties Predicateコンポーネントは、フォームプロパティ（タ
 
 Properties Predicate コンポーネントを構成するには、次の手順を実行します。
 
-1. Tap the component and then tap ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
+1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 編集ダイアログが開きます。
 1. 「全般」タブで、検索ラベルを指定します。デフォルト値は、**プロパティ**&#x200B;です。
 
 1. 「オプション」タブで、「**アイテムの追加**」をタップします。
@@ -216,7 +216,7 @@ Tags Predicate コンポーネントは、Forms Manager で定義されている
 
 Tags Predicate コンポーネントを構成するには、次の手順を実行します。
 
-1. Tap the component and then tap ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
+1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 編集ダイアログが開きます。
 1. 「タグ」フィールド横の下向き矢印ボタンをタップします。
 1. 適切なタグを選択します。
 1. 「**OK**」をタップします。
@@ -227,11 +227,11 @@ Tags Predicate コンポーネントを構成するには、次の手順を実�
 
 ページ上でフォームを一覧表示するには、そのページに&#x200B;**[!UICONTROL Search &amp; Listerコンポーネントを追加し、]**&#x200B;リストペインを設定します&#x200B;****。エンドユーザーが、日付、テキスト、およびタグでフォームを検索できるようにするには、**[!UICONTROL 検索ペイン]**&#x200B;コンポーネントを追加します。
 
-ページ上の任意の場所からフォームにリンクするには、リンクコンポーネントを使用します。For more information about link component, see [Embedding link component in a page](../../forms/using/embedding-link-component-page.md).
+ページ上の任意の場所からフォームにリンクするには、リンクコンポーネントを使用します。リンクコンポーネントについて詳しくは、[ページ](../../forms/using/embedding-link-component-page.md)へのリンクコンポーネントの埋め込みを参照してください。
 
 ドラフト状態で、既に送信済みのフォームをリストするには、「**[!UICONTROL ドラフト&amp;送信]**」コンポーネントを使用します。詳しくは、「[ドラフト・送信コンポーネントのカスタマイズ](../../forms/using/draft-submission-component.md)」を参照してください。
 
-## モバイルデバイスへの適合性 {#mobile-device-friendliness}
+## モバイルデバイスへの適合性  {#mobile-device-friendliness}
 
 フォームポータルのSearch &amp; Listerコンポーネントは、モバイルデバイスフレンドリーで、デバイスに適応します。3つのデフォルト表示すべて：Webページの幅が調整される場合、グリッド、カード、パネルは、サイトが開かれたデバイスに応じて再レイアウトされます。 簡単に言えば、Search &amp; Listerは単なるコンポーネントであり、ページレベルのスタイリングは管理しません。
 
@@ -243,9 +243,9 @@ Search &amp; Listerコンポーネント
 
 ## フォームポータルページのカスタマイズ {#customizing-a-forms-portal-page-br}
 
-フォームポータルページをカスタマイズすることで、特徴のある外観にすることができます。また、メタデータを追加することで、検索機能の改善、ページのレイアウト変更、およびカスタムCCSスタイルの追加を行うこともできます。For more information, see [Customizing templates for Forms Portal Components](../../forms/using/customizing-templates-forms-portal-components.md).
+フォームポータルページをカスタマイズすることで、特徴のある外観にすることができます。また、メタデータを追加することで、検索機能の改善、ページのレイアウト変更、およびカスタムCCSスタイルの追加を行うこともできます。詳しくは、[Formsポータルコンポーネントのテンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)を参照してください。
 
-AEMフォームUIでは、カスタムメタデータをフォームに追加することができます。カスタムメタデータは、エンドユーザーに対してフォームの展開・検索機能を提供するのに役に立ちます。For more information about Custom metadata, see [Customizing templates for Forms Portal Components](../../forms/using/customizing-templates-forms-portal-components.md).
+AEMフォームUIでは、カスタムメタデータをフォームに追加することができます。カスタムメタデータは、エンドユーザーに対してフォームの展開・検索機能を提供するのに役に立ちます。カスタムメタデータについて詳しくは、[Formsポータルコンポーネントのテンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)を参照してください。
 
 フォームポータルは、デフォルトでレンダリングアクションを提供します。フォームポータルをカスタマイズして、他のオプションを追加することもできます。詳しくは、「[フォームリスター項目にカスタムアクションボタンを追加する](../../forms/using/add-custom-action-form-lister.md)」を参照してください。
 
