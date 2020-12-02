@@ -22,7 +22,7 @@ ht-degree: 55%
 
 ## 概要 {#overview}
 
-AEM Brackets Extension は、AEM コンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、[Brackets](https://brackets.io/) コードエディターのパワーを活用して、コードエディター内から Photoshop ファイルおよびレイヤーにアクセスできるようにします。この拡張機能によって（Maven や File Vault は不要です）同期が容易になるので、開発者の効率性が向上すると共に、AEM に関する知識が限られているフロントエンド開発者もプロジェクトに参加できます。This extension also provides some support for the [HTML Template Language (HTL)](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html), which takes away the complexity of JSP to make component development easier and more secure.
+AEM Brackets Extension は、AEM コンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、[Brackets](https://brackets.io/) コードエディターのパワーを活用して、コードエディター内から Photoshop ファイルおよびレイヤーにアクセスできるようにします。この拡張機能によって（Maven や File Vault は不要です）同期が容易になるので、開発者の効率性が向上すると共に、AEM に関する知識が限られているフロントエンド開発者もプロジェクトに参加できます。この拡張機能は、[HTML Template Language (HTL)](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)もサポートします。これにより、コンポーネントの開発を容易にし、より安全にするためにJSPの複雑さが解消されます。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -33,7 +33,7 @@ AEM Brackets Extension の主な機能には次のものがあります。
 * 変更されたファイルをAEM開発インスタンスに自動で同期します。
 * ファイルとフォルダーの手動の双方向同期。
 * プロジェクトの完全なコンテンツパッケージの同期。
-* HTL code completion for expressions and `data-sly-*` block statements.
+* 式および`data-sly-*`ブロック文のHTLコード補完
 
 さらに、Brackets には AEM フロントエンド開発者の役に立つ機能が数多く付属しています。
 
@@ -48,7 +48,7 @@ AEM Brackets Extension の主な機能には次のものがあります。
 
 AEM Brackets Extension は、Brackets バージョン 1.0 以上をサポートしています。
 
-Download the latest Brackets version from [brackets.io](https://brackets.io/).
+[brackets.io](https://brackets.io/)から最新のBracketsバージョンをダウンロードします。
 
 ### AEM Brackets Extension {#the-extension}
 
@@ -62,7 +62,7 @@ Download the latest Brackets version from [brackets.io](https://brackets.io/).
 1. 「**インストール**」をクリックします。
 1. インストールが完了したら、ダイアログと Extension Manager を閉じます。
 
-## 概要 {#getting-started}
+## はじめに {#getting-started}
 
 ### コンテンツパッケージプロジェクト {#the-content-package-project}
 
@@ -70,52 +70,52 @@ Download the latest Brackets version from [brackets.io](https://brackets.io/).
 
 プロジェクトには、少なくとも次のものが必要です。
 
-1. フォ `jcr_root` ルダー( `myproject/jcr_root`)
+1. `jcr_root`フォルダー(例：`myproject/jcr_root`)
 
-1. a `filter.xml` file (e.g. `myproject/META-INF/vault/filter.xml`); for more details about the structure of the `filter.xml` file please see the [Workspace Filter definition](https://jackrabbit.apache.org/filevault/filter.html).
+1. `filter.xml`ファイル(例：`myproject/META-INF/vault/filter.xml`);`filter.xml`ファイルの構造の詳細については、[ワークスペースフィルター定義](https://jackrabbit.apache.org/filevault/filter.html)を参照してください。
 
 Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_root` フォルダーまたは親プロジェクトフォルダーを選択します。
 
 >[!NOTE]
 >
->If you don&#39;t have of your own a project with a content-package, you can try the [HTL TodoMVC Example](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). On GitHub, click **Download ZIP**, extract the files locally, and as instructed above, open the `jcr_root` folder in Brackets. Then follow the steps below to setup the **Project Settings**, and finally upload the whole package to your AEM development instance by doing an **Export Content Package** as instructed further down in the Full Content-Package Synchronization section.
+>コンテンツパッケージを持つプロジェクトがない場合は、[HTL TodoMVCの例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)を試してみてください。 GitHubで、「**ZIPをダウンロード**」をクリックし、ファイルをローカルに展開します。上記の指示に従って、Bracketsの`jcr_root`フォルダーを開きます。 次に、次の手順に従って&#x200B;**プロジェクト設定**&#x200B;を設定し、最後に、「コンテンツパッケージ全体の同期」セクションの指示に従って&#x200B;**コンテンツパッケージを書き出し**&#x200B;を実行し、AEM開発インスタンスにパッケージ全体をアップロードします。
 >
->After these steps, you should be able to access the `/content/todo.html` URL on your AEM development instance and you can start doing modifications to the code in Brackets and see how, after doing a refresh in the web browser, the changes were immediately synchronized to the AEM server.
+>これらの手順を実行すると、AEM開発インスタンスの`/content/todo.html` URLにアクセスできるはずです。Brackets内のコードを変更する開始は、Webブラウザーでの更新後に変更がAEMサーバーに直ちに同期された方法を確認できます。
 
 ### プロジェクト設定 {#project-settings}
 
-コンテンツを AEM 開発インスタンスに、または AEM 開発インスタンスから同期するには、プロジェクト設定を定義する必要があります。This can be done by going to the **AEM** menu and choosing **Project Settings…**
+コンテンツを AEM 開発インスタンスに、または AEM 開発インスタンスから同期するには、プロジェクト設定を定義する必要があります。これを行うには、**AEM**&#x200B;メニューに移動し、**プロジェクト設定…**&#x200B;を選択します。
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
 プロジェクト設定を使用して、次のものを定義できます。
 
-1. The server URL (e.g. `http://localhost:4502`)
+1. サーバーのURL(例：`http://localhost:4502`)
 1. 有効なHTTPS証明書を持たないサーバーを許容するかどうか（必要な場合を除き、チェックを外しておく）
 1. コンテンツの同期に使用するユーザー名（例：`admin`）
-1. The user&#39;s password (e.g. `admin`)
+1. ユーザーのパスワード(`admin`)
 
 ## コンテンツの同期 {#synchronizing-content}
 
-The AEM Brackets Extension provides following types of content synchronization for files and folders that are allowed by the filtering rules defined in `filter.xml`:
+AEM Brackets Extensionは、`filter.xml`で定義されたフィルタリング規則で許可されるファイルおよびフォルダに対して、次の種類のコンテンツ同期を提供します。
 
 ### 変更されたファイルの自動同期 {#automated-synchronization-of-changed-files}
 
 これは、変更内容を Brackets から AEM インスタンスへという方向にのみ同期するもので、逆方向には同期しません。
 
-### 手動双方向同期 {#manual-bidirectional-synchronization}
+### 手動双方向同期  {#manual-bidirectional-synchronization}
 
-In the Project Explorer, open the contextual menu by right-clicking on any file or folder, and the **Export to Server** or **Import from Server** options can be accessed.
+Project Explorerで、任意のファイルまたはフォルダーを右クリックしてコンテキストメニューを開き、**Export to Server**&#x200B;または&#x200B;**Import from Server**&#x200B;オプションにアクセスできます。
 
 ![chlimage_1-56](assets/chlimage_1-56a.png)
 
 >[!NOTE]
 >
->If the selected entry is outside of the `jcr_root` folder, the **Export to Server** and **Import from Server** contextual menu entries are disabled.
+>選択したエントリが`jcr_root`フォルダー外にある場合、**Export to Server**&#x200B;と&#x200B;**Import from Server**&#x200B;コンテキストメニューのエントリは無効になります。
 
 ### コンテンツパッケージ全体の同期 {#full-content-package-synchronization}
 
-In the **AEM** menu, the **Export Content Package** or **Import Content Package** options allow to synchronize the whole project with the server.
+**AEM**&#x200B;メニューでは、「**コンテンツパッケージを書き出し**」または「**コンテンツパッケージを読み込み**」オプションを使用して、プロジェクト全体をサーバーと同期できます。
 
 ![chlimage_1-57](assets/chlimage_1-57a.png)
 
@@ -136,7 +136,7 @@ AEM Brackets Extension によって、Brackets ウィンドウの右側のツー
 >
 >使用する同期方法にかかわらず、`filter.xml` のフィルタリングルールによって「含める」とマークされているコンテンツのみが同期されます。
 >
->Additionally, `.vltignore` files are supported for excluding content from synchronizing to and from the repository.
+>また、`.vltignore`ファイルは、リポジトリとの同期およびリポジトリとの同期からのコンテンツの除外に対してサポートされています。
 
 ## HTL コードの編集 {#editing-htl-code}
 
@@ -147,19 +147,19 @@ AEM Brackets Extension によって、HTL 属性および式の作成を容易�
 1. HTML 属性に「`sly`」と入力します。この属性は、「`data-sly-`」-」にオートコンプリートされます。
 1. ドロップダウンリストでこの HTL 属性を選択します。
 
-### 式のオートコンプリート {#expression-auto-completion}
+### 式のオートコンプリート  {#expression-auto-completion}
 
-Within an expression `${}`, common variable names are auto-completed.
+式`${}`内では、共通の変数名は自動入力されます。
 
 ## 詳細情報 {#more-information}
 
 AEM Brackets Extension はオープンソースのプロジェクトで、Apache License バージョン 2.0 に従って、[Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) チームにより GitHub にホストされています。
 
 * コードリポジトリ：[https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
-* Apache License, version 2.0: [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
+* Apacheライセンス、バージョン2.0:[https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-The Brackets code editor is also an open-source project, hosted on GitHub by the [Adobe Systems Incorporated](https://github.com/adobe) organization:
+Bracketsコードエディターもオープンソースプロジェクトで、[Adobe Systems Incorporated](https://github.com/adobe)組織がGitHub上でホストしています。
 
-* Code repository: [https://github.com/adobe/brackets](https://github.com/adobe/brackets)
+* コードリポジトリ：[https://github.com/adobe/brackets](https://github.com/adobe/brackets)
 
 ご自由に投稿してください。
