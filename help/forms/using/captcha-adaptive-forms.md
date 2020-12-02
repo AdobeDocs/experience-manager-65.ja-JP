@@ -33,7 +33,7 @@ AEM によるアダプティブフォームの CAPTCHA のサポートGoogleのr
 
 
 
-## Google が提供する reCAPTCHA サービスの設定 {#google-recaptcha}
+## Google が提供する reCAPTCHA サービスの設定  {#google-recaptcha}
 
 フォームの作成者は、Google による reCAPTCHA サービスを使用してアダプティブフォームに CAPTCHA を実装することができます。これにより、サイトを保護する高度な CAPTCHA 機能が提供されます。reCAPTCHA の仕組みについて詳しくは、「[Google reCAPTCHA](https://developers.google.com/recaptcha/)」を参照してください。
 
@@ -44,8 +44,8 @@ AEM Forms で reCAPTCHAを実装するには：
 1. Google から [reCAPTCHA API キーペア](https://www.google.com/recaptcha/admin)を取得します。これにはサイトキーと秘密鍵が含まれます。
 1. クラウドサービス用の設定コンテナを作成します。
 
-   1. Go to **[!UICONTROL Tools > General > Configuration Browser]**.
-      * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
+   1. **[!UICONTROL ツール/一般/設定ブラウザー]**&#x200B;に移動します。
+      * 詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
    1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
       1. 設定ブラウザーで、「**[!UICONTROL global]**」フォルダーを選択して「**[!UICONTROL プロパティ]**」をタップします。
@@ -54,19 +54,19 @@ AEM Forms で reCAPTCHAを実装するには：
       1. 「**[!UICONTROL 保存して閉じる]**」をタップして設定内容を保存し、ダイアログを閉じます。
    1. 設定ブラウザーで「**[!UICONTROL 作成]**」をタップします。
    1. 設定を作成ダイアログでフォルダーのタイトルを指定し、「**[!UICONTROL クラウド設定]**」を有効にします。
-   1. Tap **[!UICONTROL Create]** to create the folder enabled for cloud service configurations.
+   1. 「**[!UICONTROL 作成]**」をタップして、クラウドサービス設定用に有効なフォルダーを作成します。
 
 
 1. reCAPTCHA のクラウドサービスを設定します。
 
-   1. On your AEM author instance, go to ![tools-1](assets/tools-1.png) > **Cloud Services**.
+   1. AEMオーサーインスタンスで、![tools-1](assets/tools-1.png) > **Cloud Services**&#x200B;に移動します。
    1. 「**[!UICONTROL reCAPTCHA]**」をタップします。設定ページが表示されます。上記の手順で作成した設定コンテナを選択し、「**[!UICONTROL 作成]**」をタップします。
-   1. Specify Name, Site key, and Secret Key for reCAPTCHA service and tap **[!UICONTROL Create]** to create the cloud service configuration.
-   1. コンポーネントを編集ダイアログで、サイトおよび手順 1 で取得した秘密鍵を指定します。Tap **Save Settings** and then tap **OK** to complete the configuration.
+   1. reCAPTCHAサービスの名前、サイトキー、秘密キーを指定し、「**[!UICONTROL 作成]**」をタップして、クラウドサービスの設定を作成します。
+   1. コンポーネントを編集ダイアログで、サイトおよび手順 1 で取得した秘密鍵を指定します。「**設定を保存**」をタップし、「**OK**」をタップして設定を完了します。
 
    reCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。詳しくは、「[アダプティブフォームの CAPTCHA の使用](#using-captcha)」を参照してください。
 
-## アダプティブフォームで CAPTCHA を使用する {#using-captcha}
+## アダプティブフォームで CAPTCHA を使用する  {#using-captcha}
 
 アダプティブフォームで CAPTCHA を使用するには：
 
@@ -86,9 +86,9 @@ AEM Forms で reCAPTCHAを実装するには：
    >
    >Captcha は、約 1 分間で期限切れになります。そのため、アダプティブフォームに「送信」ボタンを配置する直前に Captcha コンポーネントを配置することをお勧めします。
 
-1. Select the Captcha component you added and tap ![cmppr](assets/cmppr.png) to edit its properties.
-1. CAPTCHA ウィジェットのタイトルを指定します。The default value is **Captcha**. タイトルを表示しない場合は、「**タイトルを非表示にする**」を選択します。
-1. From the **Captcha service** drop-down, select **reCaptcha** to enable reCAPTCHA service if you configured it as described in [ReCAPTCHA service by Google](#google-recaptcha). 「設定」ドロップダウンから設定を選択します。また、reCAPTCHA ウィジェットのサイズを「**標準**」または「**コンパクト**」から選択します。
+1. 追加したCaptchaコンポーネントを選択し、![cmppr](assets/cmppr.png)をタップしてプロパティを編集します。
+1. CAPTCHA ウィジェットのタイトルを指定します。デフォルト値は&#x200B;**Captcha**&#x200B;です。 タイトルを表示しない場合は、「**タイトルを非表示にする**」を選択します。
+1. **Captcha service**&#x200B;ドロップダウンから、**reCaptcha**&#x200B;を選択し、Google](#google-recaptcha)による[ReCAPTCHAサービスの説明に従ってreCAPTCHAサービスを設定した場合に、このサービスを有効にします。 「設定」ドロップダウンから設定を選択します。また、reCAPTCHA ウィジェットのサイズを「**標準**」または「**コンパクト**」から選択します。
 
    >[!NOTE]
    >
