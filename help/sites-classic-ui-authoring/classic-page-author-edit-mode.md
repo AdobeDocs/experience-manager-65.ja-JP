@@ -31,9 +31,9 @@ ht-degree: 88%
 >
 >インスタンスによっては、要件に合わせて明示的に開発されたカスタマイズコンポーネントが存在する場合があります。これらは、ここで説明するいくつかのコンポーネントと同じ名前の場合があります。
 
-The components are available when [editing a page](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) from the **Components** tab of the sidekick and the **Insert New Component** selector (when you double-click in the **Drag components or assets here** area).
+コンポーネントは、サイドキックの&#x200B;**コンポーネント**&#x200B;タブと&#x200B;**新しいコンポーネント**&#x200B;を挿入セレクターから[ページ](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)を編集するとき（**コンポーネントまたはアセットをここにドラッグ**）に使用できます。
 
-You can select a component and drag it to the required location on your page and then [Edit Content and Properties](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties).
+コンポーネントを選択し、ページ上の必要な場所にドラッグしてから、[「コンテンツとプロパティを編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)」をクリックします。
 
 コンポーネントは、次のような様々なカテゴリ（コンポーネントグループ）に従って並べ替えられます（ページオーサリング用）。
 
@@ -45,13 +45,13 @@ You can select a component and drag it to the required location on your page and
 
 一般コンポーネントは、コンテンツの作成に使用する基本的なコンポーネントです。
 
-### アカウント項目 {#account-item}
+### アカウント項目  {#account-item}
 
 タイトルと説明を含むリンクを定義できます。
 
 ![](do-not-localize/chlimage_1-2.png)
 
-### アダプティブ画像 {#adaptive-image}
+### アダプティブ画像  {#adaptive-image}
 
 アダプティブ画像基盤コンポーネントは、Web ページを開いたウィンドウに合うようにサイズが調整される画像を生成します。このコンポーネントを使用するには、ファイルシステムと DAM のいずれかから画像リソースを指定します。Web ページが開くと、Web ブラウザーにより、現在のウィンドウに適したサイズに調整された画像のコピーがダウンロードされます。
 
@@ -165,7 +165,8 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 手動で、またはセレクターを使用して、パスを指定します。現在のページを親として使用するには、空のままにします。
       * **固定リストのオプション**
 
-         * **ページ**&#x200B;ページのリストを選択します。使用する 
+         * ****
+ページページのリストを選択します。使用する 
 `+` をクリックして、エントリや上/下ボタンを追加して順序を調整します。
       * **検索のオプション**
 
@@ -179,8 +180,9 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
          * **QueryBuilder 述語の表記**
 「QueryBuilder 述語の表記」を使用して検索クエリを入力できます。例えば、「fulltext=Marketing」と入力すると、コンテンツに「Marketing」が含まれるすべてのページがカルーセルに表示されます。
 クエリ式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
-   * **選択順**&#x200B;序 
-`jcr:title`、、 `jcr:created`、 `cq:lastModified`またはドロップダウンメニュー `cq:template` から選択します。
+   * **Order**
+bySelect 
+`jcr:title`、 `jcr:created`、 `cq:lastModified`またはドロップダウンメニュー `cq:template` から
 
    * **制限**
 カルーセルで使用する項目の最大数。これはオプションです。
@@ -192,7 +194,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 >[!NOTE]
 AEM DAM にあるデジタルアセットを表示する Adobe Experience Manager のカスタムカルーセルコンポーネントを作成できます。詳しくは、[Adobe Experience Manager のカスタムカルーセルコンポーネントの作成](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)を参照してください。
 
-### グラフ {#chart}
+### グラフ  {#chart}
 
 グラフコンポーネントを使用すると、棒グラフ、折れ線ブラフまたは円グラフを追加できます。AEM では、指定したデータからグラフが作成されます。データは、「データ」タブに直接入力するか、スプレッドシートをコピーして貼り付けます。
 
@@ -277,7 +279,7 @@ AEM JCR にあるデータを表示する AEM チャートコントロールを�
 >[!NOTE]
 使用事例によっては、その他のオプションが外部アプリケーションの統合で有効になります（例：[ポートレットの統合](/help/sites-administering/aem-as-portal.md)）。
 
-### Flash {#flash}
+### Flash  {#flash}
 
 Flash コンポーネントを使用すると、Flash ムービーをロードできます。コンテンツファインダーからコンポーネントに Flash アセットをドラッグするか、ダイアログを使用できます。
 
@@ -330,7 +332,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 >[!NOTE]
 Internet Explorer では、アップロードの進行状況を監視できません。
 Internet Explorer を使用する場合、アップロードした画像ファイルをプレビューに表示して変更（トリミングなど）を実行できるようにするには、画像をアップロードし「**OK**」をクリックしてから画像を再度開く必要があります。
-See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms) section for more information about HTML5 features used by AEM.
+AEMで使用されるHTML5機能の詳細については、「[認定プラットフォーム](/help/release-notes/release-notes.md#certifiedplatforms)」の節を参照してください。
 
 画像を読み込む際は、次の設定が可能です。
 
@@ -422,7 +424,7 @@ See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplat
             クエリー式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
       * **タグ**
 
-         **親ページ**、 **タグ** /キーワード、および必要な一致条件を指定します。
+         **親ページ**、**タグ/キーワード**、および必要な一致条件を指定します。
    * **表示方法**
 
       リンク、ティーザー、ニュースなどの項目のリストを表示する方法。
@@ -546,7 +548,7 @@ See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplat
 
    * **ノードタイプ**
 
-      If the search is to be restricted to specific node type list them here; for example, `cq:Page`.
+      検索を特定のノードタイプに制限する場合は、ここでリストします。例：`cq:Page`
 
    * **検索場所のパス**
 
@@ -614,7 +616,7 @@ See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplat
 
       リストを開始するパス。
 
-### スライドショー {#slideshow}
+### スライドショー  {#slideshow}
 
 このコンポーネントを使用すると、ページでスライドショーとして表示する一連の画像をロードできます。画像を追加または削除し、それぞれにタイトルを割り当てることができます。「詳細」では、表示領域のサイズも指定できます。
 
@@ -624,7 +626,7 @@ See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplat
 
    * **新しいスライド**
 
-      You can specify a selection of slides using the **Add** (and **Remove**) buttons.
+      **追加** （および&#x200B;**削除**）ボタンを使用して、選択したスライドを指定できます。
 
    * **タイトル**
 
@@ -786,7 +788,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
    * **サイズ**
 
-      ビデオのネイティブサイズ（ピクセル単位の幅 × 高さ）が「サイズ」の横のボックスに表示されます（上の図を参照してください）。ビデオのネイティブ寸法を上書きする場合は、幅と高さの寸法を手動で入力します。Click **OK** to dismiss the dialog.
+      ビデオのネイティブサイズ（ピクセル単位の幅 × 高さ）が「サイズ」の横のボックスに表示されます（上の図を参照してください）。ビデオのネイティブ寸法を上書きする場合は、幅と高さの寸法を手動で入力します。「**OK**」をクリックして、ダイアログを閉じます。
 
 >[!NOTE]
 サポートされている形式は次のとおりです。
@@ -808,7 +810,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 デフォルトが 2 つの同じ列に設定されている列の制御コンポーネント。
 
-### 3 列 {#columns-2}
+### 3 列  {#columns-2}
 
 デフォルトが 3 つの同じ列に設定されている列の制御コンポーネント。
 
@@ -822,7 +824,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
       レンダリングする列数を選択します。作成された各列には、コンテンツを追加する際にコンポーネントまたはアセットをドラッグするための独自のリンクが表示されます。
 
-## フォーム {#form}
+## フォーム  {#form}
 
 フォームコンポーネントは、訪問者が入力を送信するフォームを作成するために使用されます。フォームおよびフォームコンポーネントは、ユーザーからのフィードバック（例えばお客様満足度アンケート）やユーザー情報（例えばユーザー登録）などの情報を収集するのに使用できます。
 
@@ -934,7 +936,7 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 
    * **CSS**
 
-### フォーム（コンポーネント） {#form-component}
+### フォーム（コンポーネント）  {#form-component}
 
 フォームコンポーネントは、**フォーム開始**&#x200B;要素および&#x200B;**フォーム終了**&#x200B;要素を使用してフォームの開始と終了の両方を定義します。フォームが確実に正しく定義されるように、これらの要素は常にペアとして使用されます。
 
@@ -942,7 +944,7 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 
 フォームの開始と終了の間に、ユーザーが実際に入力するフィールドを定義するフォームコンポーネントを追加できます。
 
-#### フォームの最初 {#start-of-form}
+#### フォームの最初  {#start-of-form}
 
 このコンポーネントは、ページの新しいフォームの開始を定義するために必要です。次の項目を設定できます。
 
@@ -960,7 +962,7 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 
    * **アクションタイプ**
 
-      フォームにはアクションが必要です。アクションは、ユーザーから送信されたデータによってトリガーされ実行される処理を定義するものです（HTML の action= に似ています）。対応する **アクション設定が必要な場合もあります**。
+      フォームにはアクションが必要です。アクションは、ユーザーから送信されたデータによってトリガーされ実行される処理を定義するものです（HTML の action= に似ています）。対応する&#x200B;**アクションの設定**&#x200B;が必要な場合もあります。
 
       標準のAEMインストールには、次のアクションの種類が含まれます。
 
@@ -1013,7 +1015,7 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
          `/apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
    * **アクションの設定**
 
-      The options available in **Action Configuration** are dependent on the **Action Type** selected:
+      **アクションの設定**&#x200B;で使用できるオプションは、選択した&#x200B;**アクションの種類**&#x200B;によって異なります。
 
       * **アカウント要求**
 
@@ -1021,8 +1023,8 @@ AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)�
 新規アカウントの作成時に使用されるページ。
       * **コンテンツを作成**
 
-         * Content Path
-The content path for any content that the form dumps. Enter a path that ends with a slash `/`. The slash means that for each form port, a new node is created at the given location; for example:
+         * コンテンツパス
+フォームがダンプするすべてのコンテンツのコンテンツパスです。スラッシュ`/`で終わるパスを入力します。スラッシュは、フォームの各ポートに対して、指定された場所に新しいノードが作成されることを意味します。例：
             `/forms/feedback/`
 
          * **型**
@@ -1039,14 +1041,14 @@ The content path for any content that the form dumps. Enter a path that ends wit
 
          * **リソースタイプ**
 
-            設定した場合、これは `sling:resourceType`
+            設定した場合、これは各コメントに`sling:resourceType`として追加されます。
 
          * **表示セレクター**
       * **リードを作成**
 
          * **このリストにリードが追加されます**
 必要なリードリストを指定します。
-      * **Create and Update Account**
+      * **アカウントの作成と更新**
 
          * **初期グループ**
 
@@ -1062,7 +1064,7 @@ The content path for any content that the form dumps. Enter a path that ends wit
 
          * **データを表示...**
 
-            このボタンをクリックして、バルクエディターのフォームの結果に関する情報にアクセスします。From here, you can export the information to a `.tsv` (tab-separated) file (for use, for example, in an Excel spreadsheet).
+            このボタンをクリックして、バルクエディターのフォームの結果に関する情報にアクセスします。ここから、情報を`.tsv`（タブ区切りの）ファイル（Excelスプレッドシートなど）にエクスポートできます。
       * **メール**
 
          * **開始日**
@@ -1093,7 +1095,7 @@ The content path for any content that the form dumps. Enter a path that ends wit
 
          * **コンテンツのパス**
 
-            フォームがダンプするコンテンツのコンテンツパス。Enter a path that ends with a slash `/`. スラッシュは、フォームのポートごとに、特定の場所に新しいノードが作成されることを意味します。次に例を示します。
+            フォームがダンプするコンテンツのコンテンツパス。スラッシュ`/`で終わるパスを入力します。 スラッシュは、フォームのポートごとに、特定の場所に新しいノードが作成されることを意味します。次に例を示します。
             `/forms/feedback/`
 
          * **データを表示...**
@@ -1101,7 +1103,7 @@ The content path for any content that the form dumps. Enter a path that ends wit
             このボタンをクリックして、バルクエディターのフォームの結果に関する情報にアクセスします。ここから、情報を.tsv（タブ区切り）ファイルにエクスポートできます（例えば、Excelスプレッドシートで使用）。
       * **コンテンツをアップロードデータと共に保存**
 
-         これは、「 **コンテンツを保存**」と同じオプションを持ちます。
+         これは、**コンテンツを保存**&#x200B;と同じオプションを持ちます。
 
       * **購読者の購読を解除**
 
@@ -1162,7 +1164,7 @@ The content path for any content that the form dumps. Enter a path that ends wit
 
 コンポーネントはすぐに使用できるように設定されていますが、必要に応じて設定を変更できます。例えば、アドレスの個々の要素に制約を追加できます。フィールドを空にすると、デフォルトの設定が使用されます。
 
-### Captcha {#captcha}
+### Captcha  {#captcha}
 
 キャプチャコンポーネントを画面に表示する場合、ユーザーは英数字を入力する必要があります。更新するごとに、文字列は変わります。
 
@@ -1170,7 +1172,7 @@ The content path for any content that the form dumps. Enter a path that ends wit
 
 このコンポーネントには、Captcha 文字列が無効な場合に表示するメッセージなどの様々なパラメーターを設定できます。
 
-### チェックボックスグループ {#checkbox-group}
+### チェックボックスグループ  {#checkbox-group}
 
 チェックボックスを使用すると、1 つ以上のチェックボックスのリストを構築できます。チェックボックスでは同時に複数の項目を選択できます。
 
@@ -1308,7 +1310,7 @@ Sling サーブレットにファイルをアップロードするためのカ�
 
 ![dc_form_text](assets/dc_form_text.png)
 
-### Workflow Submit Button(s) {#workflow-submit-button-s}
+### ワークフロー送信ボタン{#workflow-submit-button-s}
 
 このコンポーネントを使用すると、ワークフロー内で使用する送信ボタンを作成できます。
 
