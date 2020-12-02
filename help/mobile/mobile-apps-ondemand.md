@@ -26,17 +26,17 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->If you are not using Adobe Experience Manager (AEM) as your content management source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
+>コンテンツ管理ソースとしてAdobe Experience Manager(AEM)を使用していない場合は、[AEM Mobile On-demand Servicesのヘルプ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html)を参照してください。
 
 >[!NOTE]
 >
 >**前提条件：**
 >
->Before working with AEM Mobile On-Demand Services and following the steps within this getting started guide, users should be familiar with [AEM](/help/sites-deploying/deploy.md).
+>AEM Mobile On-demand Servicesで作業し、この入門ガイドの手順に従う前に、[AEM](/help/sites-deploying/deploy.md)に精通している必要があります。
 
 ## AEM Mobile 作成者 {#aem-mobile-author}
 
-***AEM作成者* (または *マーケティング担当者*)**は、カスタム開発または標準搭載のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加を行います。 AEM&#39;s built-in content editor is then used by *AEM Authors* to create rich and relevent experiences within the app, including integration with the rest of the Adobe Marketing Cloud.
+***AEM Author*（または&#x200B;*Marketer*）**は、カスタム開発または標準搭載のテンプレートとコンポーネントを使用して、ページの追加や編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加を行います。 次に、AEM組み込みコンテンツエディターが&#x200B;*AEM作成者*によって使用され、Adobe Marketing Cloudの他の地域との統合など、豊富で関連性のあるエクスペリエンスをアプリ内で作成します。
 
 AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作成する場合に以下のタスクを担当します。
 
