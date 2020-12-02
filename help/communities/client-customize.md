@@ -18,7 +18,7 @@ ht-degree: 57%
 ---
 
 
-# クライアント側のカスタマイズ  {#client-side-customization}
+# クライアント側のカスタマイズ   {#client-side-customization}
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
@@ -36,15 +36,15 @@ ht-degree: 57%
 
 コンポーネントのオーバーレイは、デフォルトのコンポーネントに変更を加える方法で、デフォルトを使用するすべてのインスタンスに影響を与えます。
 
-The overlay is accomplished by modifying a copy of the default component in the /**apps** directory, rather than modifying the original component in the /**libs** directory. コンポーネントは、「libs」を「apps」に置き換える以外、同じ相対パスを使用して構築されます。
+オーバーレイは、/**libs**&#x200B;ディレクトリ内の元のコンポーネントを変更する代わりに、/&lt;a0/>apps **ディレクトリ内のデフォルトコンポーネントのコピーを変更することで実行されます。**&#x200B;コンポーネントは、「libs」を「apps」に置き換える以外、同じ相対パスを使用して構築されます。
 
 /appsディレクトリは、要求を解決するために検索される最初の場所です。見つからない場合は、/libsディレクトリ内のデフォルトのバージョンが使用されます。
 
 /libs ディレクトリ内のデフォルトコンポーネントは変更しないでください。/libs ディレクトリは、今後のパッチおよびアップグレードによって、公開インターフェイスのメンテナンス中に必要な方法で自由に変更されます。
 
-This is different from [extending](#extensions) a default component where the desire is to make modifications for a specific use, creating an unique path to the component and relying on referencing the original default component in the /libs directory as the super resource type.
+これは、特定の用途に対して変更を加え、コンポーネントへの一意のパスを作成し、/libsディレクトリ内の元のデフォルトコンポーネントをスーパーリソースタイプとして参照することを望むデフォルトコンポーネントの[拡張](#extensions)とは異なります。
 
-For a quick example of overlaying the comments component, try the [Overlay Comments Component tutorial](overlay-comments.md).
+コメントコンポーネントのオーバーレイの簡単な例については、[オーバーレイコメントコンポーネントのチュートリアル](overlay-comments.md)を参照してください。
 
 ## 拡張 {#extensions}
 
@@ -54,11 +54,11 @@ For a quick example of overlaying the comments component, try the [Overlay Comme
 
 コメントコンポーネントの拡張の簡単な例については、[コメントコンポーネントの拡張チュートリアル](extend-comments.md)を試してください。
 
-## JavaScript バインド {#javascript-binding}
+## JavaScript バインド  {#javascript-binding}
 
 コンポーネントの HBS スクリプトは、この機能を実装する JavaScript オブジェクト、モデルおよびビューにバインドされる必要があります。
 
-The value of the `data-scf-component` attribute may be the default, such as **`social/tally/components/hbs/rating`**, or an extended (customized) component for customized functionality, such as **weretail/components/hbs/rating**.
+`data-scf-component`属性の値は、デフォルト（**`social/tally/components/hbs/rating`**&#x200B;など）にするか、**weretail/components/hbs/rating**&#x200B;などのカスタマイズされた機能用の拡張（カスタマイズ）コンポーネントにすることができます。
 
 コンポーネントをバインドするには、以下の属性を使用してコンポーネントスクリプト全体を &lt;div> 要素で囲む必要があります。
 
@@ -68,7 +68,7 @@ The value of the `data-scf-component` attribute may be the default, such as **`s
 
 * `data-scf-component`=&quot;*&lt;resourceType>*
 
-例えば、from `/apps/weretail/components/hbs/rating/rating.hbs`:
+例えば、`/apps/weretail/components/hbs/rating/rating.hbs`から：
 
 ```xml
 <div class="we-Rating" data-component-id="{{id}}" data-scf-component="weretail/components/hbs/rating">
@@ -97,7 +97,7 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 1. 変更する要素（コンポーザー領域、ツールバーボタン、メッセージフォントなど）を指定します。
 1. これらの要素に影響する CSS クラス／ルールを識別します。
 1. スタイルシートファイル（.css）を作成します。
-1. Include the stylesheet in a client library folder ([clientlibs](#clientlibs-for-scf)) for your site and make sure it is included from your templates and pages with [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
+1. サイトのクライアントライブラリフォルダ([clientlibs](#clientlibs-for-scf))にスタイルシートを含め、[ui:includeClientLib](../../help/sites-developing/clientlibs.md)を使用して、テンプレートとページからスタイルシートが含まれていることを確認します。
 
 1. スタイルシートで指定したCSSクラスとルール(#2)を再定義し、スタイルを追加します。
 
@@ -105,9 +105,9 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 >[!CAUTION]
 >
->Any CSS class name that is prefixed with `scf-js` has a specific use in javascript code. これらのクラスは、コンポーネントの状態に影響を与え（例えば、非表示から表示に切り替える）、上書きも削除もしないでください。
+>`scf-js`のプレフィックスが付いたCSSクラス名は、JavaScriptコードで特に使用されます。 これらのクラスは、コンポーネントの状態に影響を与え（例えば、非表示から表示に切り替える）、上書きも削除もしないでください。
 >
->While the `scf-js` classes do not affect styles, the class names may be used in stylesheets with the caveat that, as they control the states of elements, there may be side effects.
+>`scf-js`クラスはスタイルに影響を与えませんが、クラス名は、要素の状態を制御するので、スタイルシートで使用される場合があります。
 
 ## JavaScript の拡張 {#extending-javascript}
 
@@ -148,7 +148,7 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 スクリプトタグは、クライアント側のフレームワークに固有の部分です。 これらは、サーバー側で生成されたマークアップをクライアント側のモデルおよびビューにバインドするために役立ちます。
 
-コンポーネントをオーバーレイまたは優先するときに SCF スクリプト内のスクリプトタグを削除しないでください。SCF script tags auto created for injecting JSON in the HTML are identified with the attribute `data-scf-json=true`.
+コンポーネントをオーバーレイまたは優先するときに SCF スクリプト内のスクリプトタグを削除しないでください。HTMLにJSONを挿入するためにSCFスクリプトタグが自動的に作成されると、`data-scf-json=true`属性で識別されます。
 
 ## SCF の clientlib {#clientlibs-for-scf}
 
@@ -159,9 +159,9 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 | clientlib のバリアント | カテゴリプロパティのパターン |
 |--- |--- |
 | 完全 clientlib | cq.social.hbs.&lt;component name> |
-| オーサー clientlib | cq.social.author.hbs.&lt;component name> |
+| オーサー clientlib | cq.social.author.hbs.&lt;component name=&quot;&quot;> |
 
-### 完全 clientlib {#complete-clientlibs}
+### 完全 clientlib  {#complete-clientlibs}
 
 完全（オーサー以外）clientlib には依存関係が含まれており、ui:includeClientLib を使用して含める場合に便利です。
 
@@ -171,14 +171,14 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 次に例を示します。
 
-* クライアントフォルダーノード： `/etc/clientlibs/social/hbs/forum`
-* カテゴリプロパティ： `cq.social.hbs.forum`
+* クライアントフォルダーノード：`/etc/clientlibs/social/hbs/forum`
+* カテゴリプロパティ：`cq.social.hbs.forum`
 
 [コミュニティコンポーネントガイド](components-guide.md)によって、各 SCF コンポーネントに必要なすべての clientlib が一覧表示されます。
 
 [コミュニティコンポーネントの clientlib](clientlibs.md) では、clientlib をページに追加する方法が説明されています。
 
-### オーサー clientlib {#author-clientlibs}
+### オーサー clientlib  {#author-clientlibs}
 
 オーサーバージョンの clientlib は、コンポーネントを実装するために必要な最小限の JavaScript に縮小されています。
 
@@ -190,8 +190,8 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 次に例を示します。
 
-* クライアントフォルダーノード： `/libs/social/forum/hbs/forum/clientlibs`
-* カテゴリプロパティ： `cq.social.author.hbs.forum`
+* クライアントフォルダーノード：`/libs/social/forum/hbs/forum/clientlibs`
+* カテゴリプロパティ：`cq.social.author.hbs.forum`
 
 注意：オーサー clientlib によって他のライブラリは埋め込まれませんが、依存関係は示されます。他のライブラリに埋め込まれた場合、依存関係は自動的に取り込まれず、埋め込む必要があります。
 
