@@ -18,7 +18,7 @@ ht-degree: 65%
 ---
 
 
-# コミュニティコンポーネントガイド  {#community-components-guide}
+# コミュニティコンポーネントガイド   {#community-components-guide}
 
 コミュニティコンポーネントガイドは、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)のインタラクティブ開発ツールです。これは、使用可能なAEM Communitiesコンポーネントのリストや、複数のコンポーネントで構築されたより複雑な機能を提供します。
 
@@ -26,7 +26,7 @@ ht-degree: 65%
 
 各コンポーネントに関連する開発の基本事項については、[コンポーネントと機能の基本事項](essentials.md)を参照してください。
 
-## 概要 {#getting-started}
+## はじめに {#getting-started}
 
 このガイドは、オーサーインスタンス（localhost:4502）とパブリッシュインスタンス（localhost:4503）の開発用インストール環境での使用を意図しています。
 
@@ -39,9 +39,9 @@ ht-degree: 65%
 * サーバー（作成者または発行）。
 * サイト訪問者がサインインしているかどうかを示します。
 * サインインした場合、メンバーに割り当てられる権限。
-* Whether or not the default SRP, [JSRP](jsrp.md), is in use.
+* デフォルトのSRP [JSRP](jsrp.md)が使用中かどうか。
 
-On author, to enter edit mode, insert either `editor.html` or `cf#` as the first path segment after the server name:
+作成者が編集モードに入るには、`editor.html`または`cf#`を最初のパスセグメントとしてサーバー名の後に挿入します。
 
 * 標準 UI:
 
@@ -49,7 +49,7 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 * クラシック UI：
 
-   [https://&lt;サーバー>:&lt;ポート>/cf#/content/community-components/en.html](http://localhost:4502/cf#/content/community-components/en.html)
+   [https://&lt;server>:&lt;port>/cf#/content/community-components/en.html](http://localhost:4502/cf#/content/community-components/en.html)
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 >
 >コンポーネントページをブラウザーに表示した状態で、編集モードに戻し、コンポーネントの編集ダイアログを開きます。
 >
->For general authoring information, view the [quick guide to authoring pages](../../help/sites-authoring/qg-page-authoring.md).
+>一般的なオーサリング情報については、[オーサリングページのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を表示してください。
 >
 >AEM に精通していない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントを参照してください。
 
@@ -93,9 +93,9 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 >
 >ブラウザーウィンドウが狭すぎる場合、左側のコンポーネントリストで選択したコンポーネントは、リストの横ではなく下に表示されます。
 
-### オーサーインタラクション {#author-interactions}
+### オーサーインタラクション  {#author-interactions}
 
-オーサーインスタンスでガイドを使用する場合、コンポーネントの設定時にダイアログが開くことがあります。Information for developers is provided in the [Component and Feature Essentials](essentials.md) section of the documentation, while the dialog settings are described in [Communities Components](author-communities.md) section for authors.
+オーサーインスタンスでガイドを使用する場合、コンポーネントの設定時にダイアログが開くことがあります。開発者向けの情報は、ドキュメントの[コンポーネントと機能の初期設定](essentials.md)セクションに記載されています。ダイアログの設定については、作成者向けの[コミュニティのコンポーネント](author-communities.md)セクションに記載されています。
 
 コミュニティコンポーネントガイドでは、一部のコンポーネントダイアログ設定が[インクルード可能](scf.md#add-or-include-a-communities-component)切り替え状態でオーバーレイされています。既存のリソースと動的に含まれるリソースの使用を切り替えるには、編集モードで、コンポーネントと含めるテキストの両方を選択し、重複を押しながらクリックして編集ダイアログを開きます。
 
@@ -125,17 +125,17 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 >
 >SRP がデフォルトの [JSRP](jsrp.md) のままになっている場合、パブリッシュインスタンスで生成された UGC はパブリッシュインスタンスでのみ表示され、オーサーインスタンスの[モデレート](moderate-ugc.md)コンソールからは表示できない&#x200B;**&#x200B;ことに留意してください。
 
-## クライアント側ライブラリ {#client-side-libraries}
+## クライアントサイドライブラリ {#client-side-libraries}
 
 コンポーネントごとに一覧表示されるクライアント側ライブラリ（clientlib）は、該当するコンポーネントをページに配置するときに参照する必要がある&#x200B;**&#x200B;ライブラリです。clientlibは、ブラウザーでコンポーネントをレンダリングする際に使用するJavaScriptとCSSのダウンロードを管理および最適化する手段を提供します。
 
 詳しくは、[コミュニティコンポーネントの clientlib](clientlibs.md) を参照してください。
 
-## 偽装 {#impersonation}
+## 偽装  {#impersonation}
 
 管理者または開発者としてサインインすることが多いオーサーインスタンスで、別のユーザーとしてログインしてコンポーネントを操作するには、「**[!UICONTROL 偽装]**」ボタンの左側にあるテキストボックスにユーザー名を入力するか、プルダウンリストから選択してボタンをクリックします。「Revert」をクリックして、他のユーザーとしてサインアウトし、終了します。
 
-パブリッシュインスタンスではこのような偽装操作は不要です。Simply use the Login/Logout link to impersonate various users, such as the [demo users](tutorials.md#demo-users).
+パブリッシュインスタンスではこのような偽装操作は不要です。「ログイン/ログアウト」リンクを使用して、[デモユーザー](tutorials.md#demo-users)など、様々なユーザーとして動作します。
 
 ## カスタマイズ {#customization}
 
@@ -147,15 +147,15 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 >
 >**このツールは読み取り専用です**。テンプレート、CSSまたはデータに対して行った編集はリポジトリに保存されません。
 
-To quickly experiment with customizations, the `scg:showIde`property must be added to the component page&#39;s content JCR node and set to true.
+カスタマイズをすばやく試すには、`scg:showIde`プロパティをコンポーネントページのコンテンツJCRノードに追加し、trueに設定する必要があります。
 
 オーサーインスタンスまたはパブリッシュインスタンスのいずれかに管理者権限でサインインし、例としてコメントコンポーネントを使用します。
 
-1. [CRXDE Liteを参照](../../help/sites-developing/developing-with-crxde-lite.md)
+1. [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)を参照
 
    例：[http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
-1. コンポーネントの `jcr:content` ノードを選択
+1. コンポーネントの`jcr:content`ノードを選択
 
    例：`/content/community-components/en/comments/jcr:content`
 
@@ -194,7 +194,7 @@ CSS エディターを使用すると、CSS を変更し、ページ上のサン
 
 ガッター部分でルールの横をクリックしてルールを選択すると、そのルールを使用する DOM の各部が強調表示されます。
 
-### 「データ」タブ {#data-tab}
+### 「データ」タブ  {#data-tab}
 
 「データ」タブを選択すると、.social.json エンドポイントデータが表示されます。このデータは編集可能であり、サンプルコンポーネントインスタンスに適用されます。
 
