@@ -34,17 +34,17 @@ AEM には次の機能があります。
 
 Selenium は、ブラウザーでの 1 人のユーザーによる 1 アクティビティごとの機能テストに使用します。テスト手順（クリック数）をHTMLテーブルまたはJavaクラスとして記録します。
 
-For more information see [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
+詳しくは、[https://www.seleniumhq.org/](https://www.seleniumhq.org/)を参照してください。
 
 **JMeter**
 
 JMeter は、要求の追跡に使用します。機能テスト、パフォーマンステスト、ストレステストに使用できます。
 
-For more information see [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
+詳しくは、[https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter)を参照してください。
 
 テストの自動化やテスト計画管理のための専用ツールも数多く存在します。
 
-### 追跡 {#tracking}
+### 追跡  {#tracking}
 
 以下のツールは簡単に入手できます。 ただし、どのような場合でも重要な問題は、プロジェクトチームのすべてのメンバー（パートナーやお客様）に対してデータを利用できることです。
 
