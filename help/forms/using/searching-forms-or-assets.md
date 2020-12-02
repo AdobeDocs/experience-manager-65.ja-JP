@@ -24,7 +24,7 @@ ht-degree: 91%
 
 1 つまたは複数の条件を選択し、文字列も指定すると、文字列と条件の両方に一致するものが検索結果として返されます。検索結果の質は、提供されるフォームとアセットのメタデータの質に左右されます。
 
-検索パネルの表示/非表示を切り替えるには、 ![aem6forms_search](assets/aem6forms_search.png)をクリックします。
+![aem6forms_search](assets/aem6forms_search.png)をクリックして、検索パネルの表示/非表示を切り替えます。
 
 ## 基本検索 {#basic-search}
 
@@ -38,10 +38,10 @@ Adobe Experience Manager が、メタデータプロパティ内で入力され�
 
 * 検索は、フォームとアセットのメタデータプロパティを利用して実行されます。
 * 複数の単語を入力した場合には、テキスト全体に一致する検索結果が返されます。
-* 検索では、大文字と小文字は区別されません。For example, when you type `geometrixx`, assets with titles `Geometrixx`, `GEOMETRIXX`, and `GeoMetRixx` are displayed in the search results.
+* 検索では、大文字と小文字は区別されません。例えば、`geometrixx`と入力すると、`Geometrixx`、`GEOMETRIXX`、`GeoMetRixx`のタイトルを持つアセットが検索結果に表示されます。
 
 * 単語の部分一致はサポートされていません。文字列の一部を使って検索するには、ワイルドカード (*) を使用します。ただし、検索クエリが単語全体に一致する場合は、対応するフォームまたはアセットが表示されます。
-* 空白は考慮され、検索時にトリミングされません。For example, `My form` is not the same search query as `My form`.
+* 空白は考慮され、検索時にトリミングされません。例えば、`My form`は`My form`と同じ検索クエリではありません。
 
 * メタデータプロパティのフィールドがデータと表示値を別々に持つ場合、表示値を検索パラメーターとして使用することはできません。例えば、変更済み、発行済みなどのステータスのプロパティは、異なる形式で保存されているため、これらを基に検索することはできません。
 
