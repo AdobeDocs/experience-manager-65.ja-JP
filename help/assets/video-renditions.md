@@ -42,6 +42,6 @@ DM エンコードされたレンディションのプロキシサーバーを�
 
 >[!NOTE]
 >
->Microsoft Internet Explorer 11上のOGGファイルとWAVファイルでは、オーディオの再生が動作しません。 An error `Invalid Source` displays up on the asset details page for assets with extension OGG or WAV.
+>Microsoft Internet Explorer 11上のOGGファイルとWAVファイルでは、オーディオの再生が動作しません。 拡張子がOGGまたはWAVのアセットのアセットの詳細ページにエラー`Invalid Source`が表示されます。
 >
 >MS EdgeおよびiPadでは、OGGファイルは再生されず、サポートされていないフォーマットエラーが発生します。
