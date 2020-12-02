@@ -25,7 +25,7 @@ JMX コンソールを使用してサービスを管理する MBean を作成し
 
 JMX コンソールの使用については、[JMX コンソールを使用したサーバーリソースの監視](/help/sites-administering/jmx-console.md)を参照してください。
 
-## Felix および CQ5 の JMX フレームワーク {#the-jmx-framework-in-felix-and-cq}
+## Felix および CQ5 の JMX フレームワーク  {#the-jmx-framework-in-felix-and-cq}
 
 Apache Felix プラットフォーム上で、MBean を OSGi サービスとしてデプロイします。MBeanサービスがOSGi Service Registryに登録されると、Aries JMX WhiteboardモジュールはMBeanをMBeanサーバーに自動的に登録します。 すると、公開属性および操作を公開する JMX コンソールに MBean が表示されます。
 
@@ -41,7 +41,7 @@ CQ5 または CRX リソースを管理するために作成する MBean は、j
 
 管理インターフェイスの定義に加え、このインターフェイスで OSGi サービスインターフェイスも定義します。実装クラスによって OSGi サービスが実装されます。
 
-### 注釈を使用した MBean 情報の提供 {#using-annotations-to-provide-mbean-information}
+### 注釈を使用した MBean 情報の提供  {#using-annotations-to-provide-mbean-information}
 
 [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) パッケージには、MBean メタデータを JMX コンソールに簡単に提供するための注釈とクラスがいくつか用意されています。MBean の MBeanInfo オブジェクトに情報を直接追加する代わりに、これらの注釈とクラスを使用してください。
 
@@ -50,7 +50,7 @@ CQ5 または CRX リソースを管理するために作成する MBean は、j
 注釈を管理インターフェイスに追加して、MBean メタデータを指定します。この情報は、デプロイされている実装クラスごとに JMX コンソールに表示されます。以下の注釈を使用できます（詳しくは、[com.adobe.granite.jmx.annotation に関する JavaDoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) を参照してください）。
 
 * **Description：** MBean クラスまたはメソッドの説明を提供します。クラスの宣言に対して使用する場合、MBean の JMX コンソールページに説明が表示されます。メソッドに対して使用する場合、対応する属性または操作のテキストにマウスポインターを置くと、説明が表示されます。
-* **Impact：**&#x200B;メソッドの影響。Valid parameter values are the fields defined by [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
+* **Impact：**&#x200B;メソッドの影響。有効なパラメーター値は、[javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html)で定義されるフィールドです。
 
 * **Name：**&#x200B;操作パラメーターに対して表示する名前を指定します。この注釈を使用して、インターフェイスで使用されているメソッドパラメーターの実際の名前をオーバーライドします。
 * **OpenTypeInfo：** JMX コンソールでの複合データまたは表形式データの表示に使用するクラスを指定します。Open MBean と併用します。
@@ -61,7 +61,7 @@ CQ5 または CRX リソースを管理するために作成する MBean は、j
 クラスは、インターフェイスに追加した注釈を利用する Dynamic MBean を作成するために指定します。
 
 * **AnnotatedStandardMBean：** javax.management.StandardMBean クラスのサブクラスで、注釈メタデータを JMX コンソールに自動的に提供します。
-* **OpenAnnotatedStandardMBean:** OpenTypeInfo注釈を使用するOpen Mbeanを作成するためのAnnotatedStandardMBeanクラスのサブクラス。
+* **OpenAnnotatedStandardMBean:OpenTypeInfo注釈** を使用するOpen Mbeanを作成するためのAnnotatedStandardMBeanクラスのサブクラス。
 
 ### MBean のデプロイ {#developing-mbeans}
 
@@ -140,9 +140,9 @@ MBean を OSGi サービスとして登録すると、MBean サーバーに自�
 
 OSGi 関連メタデータ以外にも、Aries JMX Whiteboard モジュールが MBean を MBean サーバーに登録するために必要な次のメタデータを提供する必要があります。
 
-* **DynamicMBeanインターフェイスの名前：** MBeanサービスが `javax.management.DynamicMBea`nインターフェイスを実装することを宣言します。 この宣言によって、このサービスが MBean サービスであることが Aries JMX Whiteboard モジュールに通知されます。
+* **DynamicMBeanインターフェイスの名前：MBeanサービスがインター**  `javax.management.DynamicMBea`フェイスを実装することを宣言します。この宣言によって、このサービスが MBean サービスであることが Aries JMX Whiteboard モジュールに通知されます。
 
-* **MBeanドメインおよびキーのプロパティ：** Felixでは、この情報をMBeanのOSGiサービスのプロパティとして指定します。 This is the same information that you ordinarily provide to the MBean Server in a `javax.management.ObjectName` object.
+* **MBeanドメインおよびキープロパティ：** Felixでは、この情報をMBeanのOSGiサービスのプロパティとして指定します。これは、`javax.management.ObjectName`オブジェクトで通常MBeanサーバーに提供するのと同じ情報です。
 
 MBean が単一のサービスを表している場合、必要な MBean サービスのインスタンスは 1 つだけです。この場合、Felix SCR Maven プラグインを使用していれば、MBean 実装クラスに Apache Felix Service Component Runtime（SCR）注釈を使用して、JMX 関連メタデータを指定できます。複数の MBean インスタンスをインスタンス化するために、MBean の OSGi サービスの登録を実行する別のクラスを作成できます。この場合、JMX 関連メタデータは実行時に生成されます。
 
@@ -196,7 +196,7 @@ BundleContext を使用して、MBean を OSGi サービスとして登録しま
 
 次のコードサンプルでは、ExampleMBean サービスをプログラムによって登録しています。componentContext オブジェクトは ComponentContext で、BundleContext へのアクセスを提供します。
 
-#### コードスニペット：プログラムによる MBean サービスの登録 {#code-snippet-programmatic-mbean-service-registration}
+#### コードスニペット：プログラムによる MBean サービスの登録  {#code-snippet-programmatic-mbean-service-registration}
 
 ```java
 Dictionary mbeanProps = new Hashtable();
@@ -210,7 +210,7 @@ ServiceRegistration serviceregistration =
 
 MBean サービスマネージャーは、サービス設定がリポジトリに保存されている場合に役立ちます。このマネージャーは、サービス情報を取得し、対応する MBean の設定と作成に使用できます。マネージャークラスは、リポジトリ変更イベントをリスンし、それに応じて MBean サービスを更新することもできます。
 
-## 例：JMX を使用したワークフローモデルの監視 {#example-monitoring-workflow-models-using-jmx}
+## 例：JMX を使用したワークフローモデルの監視  {#example-monitoring-workflow-models-using-jmx}
 
 このサンプルの MBean は、リポジトリに保存されている CQ5 ワークフローモデルに関する情報を提供します。MBean マネージャークラスは、リポジトリに保存されているワークフローモデルに基づいて MBean を作成し、その OSGi サービスを実行時に登録します。このサンプルは、以下のメンバーを含む単一のバンドルで構成されています。
 
@@ -219,7 +219,7 @@ MBean サービスマネージャーは、サービス設定がリポジトリ�
 * WorkflowMBeanManager：MBean マネージャークラスのインターフェイス。
 * WorkflowMBeanManagerImpl：MBean マネージャーの実装クラス。
 
-**注意：** 簡単にするために、この例のコードは、ログ記録やスローされた例外に対する反応を実行しません。
+**注意：簡単** にするために、この例のコードは、ログ記録やスローされた例外に対する反応を実行しません。
 
 WorkflowMBeanManagerImpl には、コンポーネントアクティベーションメソッドが含まれています。コンポーネントをアクティベートすると、このメソッドによって以下のタスクが実行されます。
 
@@ -236,7 +236,7 @@ JMX コンソールに、ドメインが com.adobe.example、タイプが workfl
 
 このサンプルには、MBean インターフェイスと、`com.day.cq.workflow.model.WorkflowModel` インターフェイスを表す実装が必要です。この例では、デザインの設定とデプロイメントの面に集中できるように、MBean は非常にシンプルになっています。この MBean は、単一の属性であるモデル名を公開します。
 
-#### WorkflowMBean インターフェイス {#workflowmbean-interface}
+#### WorkflowMBean インターフェイス  {#workflowmbean-interface}
 
 ```java
 package com.adobe.example.myapp.api;
@@ -291,7 +291,7 @@ WorkflowMBeanManager サービスには、WorkflowMBean サービスを作成す
 >WorkflowMBeanManager 実装は、コンポーネントがアクティベートされたときに存在するモデル設定の MBean サービスのみを作成します。さらに堅牢な実装では、新しいモデル設定や、既存のモデル設定の変更または削除に関するリポジトリイベントをリスンします。変更が発生すると、マネージャーは対応する WorkflowMBean サービスを作成、変更または削除できます。
 
 
-#### WorkflowMBeanManager インターフェイス {#workflowmbeanmanager-interface}
+#### WorkflowMBeanManager インターフェイス  {#workflowmbeanmanager-interface}
 
 ```java
 package com.adobe.example.myapp.api;
@@ -438,7 +438,7 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 
 **注意：**&#x200B;執筆時点では、Maven の scr プラグインは Eclipse の m2e プラグインと互換性がありません（[Felix bug 3170](https://issues.apache.org/jira/browse/FELIX-3170) を参照）。Eclipse IDE を使用するには、Maven をインストールして、コマンドラインインターフェイスでビルドを実行します。
 
-#### サンプル POM ファイル {#example-pom-file}
+#### サンプル POM ファイル  {#example-pom-file}
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"
