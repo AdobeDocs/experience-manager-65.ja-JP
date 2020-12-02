@@ -30,7 +30,7 @@ AEM Forms の Digital Signatures では、HSM に保存されている秘密鍵�
 >
 >HSM の設定を変更したら、AEM Forms サーバーを再起動してください。
 
-## HSM デバイスがオンラインである場合の HSM 秘密鍵証明書のエイリアスの作成 {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
+## HSM デバイスがオンラインである場合の HSM 秘密鍵証明書のエイリアスの作成  {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
 
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックし、「追加」をクリックします。
 1. 「プロファイル名」ボックスに、エイリアスの識別に使用する文字列を入力します。この値は、署名フィールドへの署名操作など、Digital Signatures の一部の操作でプロパティとして使用されます。
@@ -45,7 +45,7 @@ AEM Forms の Digital Signatures では、HSM に保存されている秘密鍵�
 1. 「トークン PIN」ボックスに、HSM キーにアクセスするために必要なパスワードを入力し、「次へ」をクリックします。
 1. 「秘密鍵証明書」ボックスで、秘密鍵証明書を選択します。「保存」をクリックします。
 
-## HSM デバイスがオフラインである場合の HSM 秘密鍵証明書のエイリアスの作成 {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-offline}
+## HSM デバイスがオフラインである場合の HSM 秘密鍵証明書のエイリアスの作成  {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-offline}
 
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックし、「追加」をクリックします。
 1. 「プロファイル名」ボックスに、エイリアスの識別に使用する文字列を入力します。この値は、署名フィールドへの署名操作など、Digital Signatures の一部の操作でプロパティとして使用されます。
@@ -68,37 +68,37 @@ AEM Forms の Digital Signatures では、HSM に保存されている秘密鍵�
 
 1. 「パスワード」ボックスに、指定したスロット情報の HSM キーにアクセスするために必要なパスワードを入力し、「保存」をクリックします。
 
-## HSM 秘密鍵証明書エイリアスのプロパティの表示 {#view-hsm-credential-alias-properties}
+## HSM 秘密鍵証明書エイリアスのプロパティの表示  {#view-hsm-credential-alias-properties}
 
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックします。
 1. プロパティを表示する秘密鍵証明書エイリアスのエイリアス名をクリックし、「OK」をクリックします。
 
-## HSM 秘密鍵証明書のステータスの確認 {#check-the-status-of-an-hsm-credential}
+## HSM 秘密鍵証明書のステータスの確認  {#check-the-status-of-an-hsm-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックします。
 1. 確認する秘密鍵証明書の横にあるチェックボックスをオンにし、「ステータスを確認」をクリックします。
 
 「ステータス」列に、秘密鍵証明書の現在のステータスが反映されます。エラーが発生した場合は、「ステータス」列に赤の X が表示されます。X の上にマウスを置くと、エラーの理由を含むツールヒントが表示されます。
 
-## HSM 秘密鍵証明書エイリアスのプロパティの更新 {#update-hsm-credential-alias-properties}
+## HSM 秘密鍵証明書エイリアスのプロパティの更新  {#update-hsm-credential-alias-properties}
 
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックします。
 1. 秘密鍵証明書エイリアスのエイリアス名をクリックします。
 1. 「秘密鍵証明書を更新」をクリックし、必要に応じて設定を更新します。
 
-## すべての HSM 接続のリセット {#reset-all-hsm-connections}
+## すべての HSM 接続のリセット  {#reset-all-hsm-connections}
 
 forms サーバーと HSM デバイス間のネットワークセッションが中断された後に HSM デバイスへのオープン接続をリセットします。例えば、ネットワーク障害が発生した場合や、ソフトウェア更新のために HSM デバイスがオフラインになったときに、セッションが中断される可能性があります。中断が発生すると既存の接続は古くなり、これらの接続に対するすべての署名要求が失敗します。「すべての HSM 接続をリセット」オプションを使用すると、古い接続がクリアされます。
 
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックします。
 1. 「すべての HSM 接続をリセット」をクリックします
 
-## HSM 秘密鍵証明書エイリアスの削除 {#delete-an-hsm-credential-alias}
+## HSM 秘密鍵証明書エイリアスの削除  {#delete-an-hsm-credential-alias}
 
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックします。
 1. 削除する HSM 秘密鍵証明書のチェックボックスを選択して「削除」をクリックし、「OK」をクリックします。
 
-## リモート HSM サポートの設定 {#configure-remote-hsm-support}
+## リモート HSM サポートの設定  {#configure-remote-hsm-support}
 
 AEM Forms は、Web サービスベースの IPC/RPC メカニズムを使用します。このメカニズムによって、AEM Forms でリモートコンピューターにインストールされた HSM を使用できます。この機能を使用するには、HSM がインストールされているリモートコンピューター上に、Web サービスをインストールする必要があります。詳しくは、「[Windows 64 ビットプラットフォームでの Sun JDK を使用した AEM Forms ES の HSM サポートの設定](https://kb2.adobe.com/cps/808/cpsid_80835.html)」を参照してください。
 
