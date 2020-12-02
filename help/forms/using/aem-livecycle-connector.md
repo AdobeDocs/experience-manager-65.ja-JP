@@ -17,7 +17,7 @@ ht-degree: 93%
 ---
 
 
-# AEM Forms と Adobe LiveCycle の接続 {#connecting-aem-forms-with-adobe-livecycle}
+# AEM Forms と Adobe LiveCycle の接続  {#connecting-aem-forms-with-adobe-livecycle}
 
 Adobe Experience Manager (AEM) LiveCycle Connector を使用し、AEM Web アプリとワークフローから Adobe LiveCycle ES4 Document Services を呼び出すことができます。LiveCycle はリッチクライアント SDK を提供します。これにより、クライアントアプリケーションは Java API を使用して LiveCycle サービスを開始します。AEM LiveCycle Connector は OSGi 環境でこれらの API の使用を簡素化します。
 
@@ -44,7 +44,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 * **パスワード** - パスワードを指定します。
 * **サービス名** - 「Username」と「Password」フィールドで入力するユーザー資格情報を使用して開始されるサービスを指定します。デフォルトでは、LiveCycle サービスを開始する間に資格情報は渡されません。
 
-## Document Services の開始 {#starting-document-services}
+## Document Services の開始  {#starting-document-services}
 
 クライアントアプリケーションは、Java API、 Web サービス、Remoting、REST を使用して LiveCycle サービスをプログラムで開始することができます。Java クライアントの場合、アプリケーションは LiveCycle SDK を使用できます。LiveCycle SDK は、これらのサービスをリモートで開始する Java API を提供します。例えば、Microsoft Word ドキュメントを PDF に変換するには、クライアントは GeneratePDFService を開始します。呼び出しのフローは次の手順から成ります。
 
@@ -54,11 +54,11 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
 AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycleコネクタには次の機能があります。
 
-* Client instances as OSGi Service: The clients packaged as OSGI bundles are listed in the [Document Services list](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) section. 各クライアント jar は、OSGi Service Registry を使用する OSGi サービスとしてクライアントインスタンスを登録します。
+* OSGiサービスとしてのクライアントインスタンス：OSGIバンドルとしてパッケージ化されたクライアントは、[ドキュメントサービスリスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)のセクションに一覧表示されます。 各クライアント jar は、OSGi Service Registry を使用する OSGi サービスとしてクライアントインスタンスを登録します。
 * ユーザー資格情報の伝播：LiveCycle サーバーに接続するために必要な接続の詳細情報は、一元的に管理されます。
 * ServiceClientFactory サービス：プロセスを開始するために、クライアントアプリケーションは ServiceClientFactory インスタンスにアクセスできます。
 
-### Service References を介した OSGi Service Registry からの開始 {#starting-via-service-references-from-osgi-service-registry}
+### Service References を介した OSGi Service Registry からの開始  {#starting-via-service-references-from-osgi-service-registry}
 
 公開されたサービスを AEM の中から開始するには、次の手順を実行します。
 
@@ -156,11 +156,11 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 LiveCycle のほとんどの Document Service には認証が必要です。次のオプションのいずれかを使用すると、コードに資格情報を明示的に指定せずにこれらのサービスを開始できます。
 
-### 許可リスト設定 {#allowlist-configuration}
+### 許可リスト構成{#allowlist-configuration}
 
 LiveCycle Client SDK 設定には、サービス名についての設定が含まれています。この設定は、呼び出しロジックが追加設定なしに管理者資格情報を使用するサービスのリストです。例えば、DirectoryManager サービス（User Management API の一部）をこのリストに追加する場合、すべてのクライアントコードはこのサービスを直接使用することが可能で、呼び出しレイヤーは LiveCycle サーバーに送信された要求の一部として、設定された資格情報を自動的に渡します。
 
-### RunAsManager {#runasmanager}
+### RunAsManager  {#runasmanager}
 
 統合の一部として、新しいサービス RunAsManager を提供しています。このサービスにより、LiveCycle サーバーへの呼び出しをする際に、資格情報をプログラムで制御できます。
 
@@ -192,7 +192,7 @@ List<Component> components = runAsManager.doPrivileged(new PrivilegedAction<List
 },credential);
 ```
 
-### InvocationRequest プロパティ {#invocationrequest-property}
+### InvocationRequest プロパティ  {#invocationrequest-property}
 
 プロセスを呼び出す場合、または ServiceClientFactory を直接使用して InvocationRequest を作成する場合は、設定済みの資格情報を呼び出しレイヤーが使用する必要があることをプロパティが示すように指定できます。
 
