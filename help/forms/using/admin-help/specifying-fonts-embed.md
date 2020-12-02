@@ -26,8 +26,8 @@ Forms サービスで生成されるフォームに常に埋め込むフォン�
 >
 >Forms のカスタム XCI ファイルを指定している場合、これらの設定より、XCI ファイルのフォントの埋め込みオプションが優先されます（[Forms の場所の設定](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)を参照）。
 
-1. In administration console, click **[!UICONTROL Services > Forms]**.
-1. Under **[!UICONTROL Font Embedding Settings]**, in the **[!UICONTROL Always Embed Fonts]** box, type the names of the fonts to embed with the forms, separated by commas. 指定するフォントは、生成されたフォームで使用されている場合にのみそのフォームに埋め込まれます。サービスに渡される XCI ファイルでフォントの埋め込みオプションが有効になっていると、この設定は無視されます。この場合は、PDF で使用されるすべてのフォントが常に埋め込まれるためです。
-1. In the **[!UICONTROL Never Embed Fonts]** box, type the names of the fonts not to embed with the forms, separated by commas. 指定するフォントは、生成された PDF で使用されていてもその PDF に埋め込まれません。サービスに渡される XCI ファイルでフォントの埋め込みオプションが無効になっていると、この設定は無視されます。この場合は、PDF で使用されるフォントが一切埋め込まれないためです。
+1. 管理コンソールで、**[!UICONTROL サービス/Forms]**&#x200B;をクリックします。
+1. 「**[!UICONTROL フォント埋め込み設定]**」の「**[!UICONTROL 常に埋め込むフォント]**」ボックスに、フォームに埋め込むフォントの名前をコンマで区切って入力します。 指定するフォントは、生成されたフォームで使用されている場合にのみそのフォームに埋め込まれます。サービスに渡される XCI ファイルでフォントの埋め込みオプションが有効になっていると、この設定は無視されます。この場合は、PDF で使用されるすべてのフォントが常に埋め込まれるためです。
+1. 「**[!UICONTROL 常に埋め込まないフォント]**」ボックスに、フォームに埋め込まないフォントの名前をコンマで区切って入力します。 指定するフォントは、生成された PDF で使用されていてもその PDF に埋め込まれません。サービスに渡される XCI ファイルでフォントの埋め込みオプションが無効になっていると、この設定は無視されます。この場合は、PDF で使用されるフォントが一切埋め込まれないためです。
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
