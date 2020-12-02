@@ -28,7 +28,7 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 >
 >以前のリリースでは、ECM リポジトリにアセットを格納できました。最新のリリースでは、アセットが AEM Forms ネイティブリポジトリに格納され、Repository Provider サービスは推奨されなくなりました。ECM リポジトリから AEM Forms リポジトリへのアセットの移行は、AEM Forms への更新を実行するときに行われます。詳しくは、使用しているアプリケーションサーバー版の AEM Forms アップグレードガイドを参照してください。
 
-## サーバー接続の設定 {#configuring-the-server-connection}
+## サーバー接続の設定  {#configuring-the-server-connection}
 
 ここでは、環境設定ページで実行できる Connector for EMC Documentum のタスクについて説明します。
 
@@ -36,7 +36,7 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 >
 >すべての設定を同時に行う場合は、「保存」をクリックする必要があるのは一度だけです。
 
-### サーバーの設定 {#configure-the-server}
+### サーバーの設定  {#configure-the-server}
 
 接続ブローカーサーバー情報を設定する必要があります。この情報は、Documentum コンテンツリポジトリに接続し、Connector for EMC Documentum を起動するために必要です。
 
@@ -44,7 +44,7 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 1. 「Documentum の設定情報」領域で、ホスト名または IP アドレスおよび接続ブローカーのポート番号を入力します。ポート番号は、正の整数（例えば、1489）である必要があります。
 1. 「保存」をクリックします。
 
-### プリンシパル秘密鍵証明書の設定 {#configure-principal-credentials}
+### プリンシパル秘密鍵証明書の設定  {#configure-principal-credentials}
 
 プリンシパル秘密鍵証明書の設定時に指定するリポジトリ名は、明示的なリポジトリ名がログイン時に示されるかどうかによって異なります。
 
@@ -58,29 +58,29 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 1. ログイン時に明示的なリポジトリ名が示されない場合は、秘密鍵証明書が関連付けられているリポジトリ名を入力します。
 1. 「保存」をクリックします。
 
-### リポジトリサービスプロバイダーの変更 {#change-the-repository-service-provider}
+### リポジトリサービスプロバイダーの変更  {#change-the-repository-service-provider}
 
 Documentum と共に使用するリポジトリサービスプロバイダーを設定できます。リポジトリサービスの呼び出しは、設定したプロバイダーに対して委任されます。以下のオプションが利用できます。
 
 **現在のリポジトリサービスプロバイダー名：** 現在のリポジトリサービスプロバイダーの名前
 
-**ECM Documentumリポジトリプロバイダー：** Documentumリポジトリプロバイダーをリポジトリのプロバイダーにします。 このオプションは非推奨です。
+**ECM Documentumリポジトリプロバイダー：Documentumリポジトリプロバイダー** をリポジトリのプロバイダーにします。このオプションは非推奨です。
 
-**リポジトリプロバイダー：** ネイティブのリポジトリプロバイダーをリポジトリのプロバイダーにします。
+**リポジトリプロバイダー：ネイティブのリポジトリプロバイダーをリポジトリのプロバイダーに** します。
 
 >[!NOTE]
 >
->To select a repository service provider other than those listed, configure RepositoryService in Applications and Services > Service Management. <!-- Fix broken link (See Managing Services) -->.
+>リストに表示された以外のリポジトリサービスプロバイダーを選択するには、Applications and Services/Service ManagementでRepositoryServiceを設定します。<!-- Fix broken link (See Managing Services) -->.
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 「リポジトリサービスプロバイダー」領域で、代替リポジトリサービスプロバイダーを選択します。
 1. 「保存」をクリックします。
 
-## リポジトリ証明書の設定 {#configuring-repository-credentials}
+## リポジトリ証明書の設定  {#configuring-repository-credentials}
 
 Documentum 秘密鍵証明書情報は、AEM Forms のシステムコンテキストで使用されます。リポジトリ証明書は、Documentum の特定のリポジトリに固有のものです。任意の数のリポジトリに対して秘密鍵証明書を提供することができますが、各リポジトリに指定できる秘密鍵証明書のセットは 1 つだけです。
 
-### リポジトリ証明書の追加 {#add-a-repository-credential}
+### リポジトリ証明書の追加  {#add-a-repository-credential}
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／リポジトリ証明書の設定をクリックします。
 1. 「追加」をクリックします。Documentum システム秘密鍵証明書に関する情報ページが表示されます。
@@ -90,12 +90,12 @@ Documentum 秘密鍵証明書情報は、AEM Forms のシステムコンテキ�
 
 Content Repository Connector for EMC Documentum サービスや Repository Service for EMC Documentum が実行されている場合、秘密鍵証明書情報は、データベースに保存される前に、指定したリポジトリに対して検証されます。秘密鍵証明書が無効な場合または既に存在している場合は、エラーメッセージが表示されます。
 
-### リポジトリ証明書の削除 {#remove-a-repository-credential}
+### リポジトリ証明書の削除  {#remove-a-repository-credential}
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 証明書を削除するリポジトリ横のチェックボックスをオンにし、「削除」をクリックします。選択したリポジトリに対する秘密鍵証明書がデータベースから削除されます。
 
-### リポジトリ証明書のユーザー名とパスワードの変更 {#change-the-user-name-and-password-for-a-repository-credential}
+### リポジトリ証明書のユーザー名とパスワードの変更  {#change-the-user-name-and-password-for-a-repository-credential}
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 証明書を編集するリポジトリの名前をクリックします。
@@ -104,7 +104,7 @@ Content Repository Connector for EMC Documentum サービスや Repository Servi
 
 Content Repository Connector for EMC Documentum サービスや Repository Service for EMC Documentum が実行されている場合、秘密鍵証明書情報は、データベースに保存される前に、指定したリポジトリに対して検証されます。秘密鍵証明書が無効な場合または既に存在している場合は、エラーメッセージが表示されます。
 
-## Workspace のタスクキュー共有の要求の有効化 {#enable-the-request-for-sharing-of-workspace-task-queues}
+## Workspace のタスクキュー共有の要求の有効化  {#enable-the-request-for-sharing-of-workspace-task-queues}
 
 Workspace のタスクキュー共有の要求機能が Connector for EMC Documentum で正常に機能するように、いくつかの手順を手動で行う必要があります。
 
