@@ -26,7 +26,7 @@ ht-degree: 32%
 
 コンテンツ同期ハンドラーの開発については、以下のガイドラインを参照してください。
 
-* Handlers must implement *com.day.cq.contentsync.handler.ContentUpdateHandler* (either directly or extending a class that does)
+* ハンドラーは、*com.day.cq.contentsync.handler.ContentUpdateHandler*&#x200B;を実装する必要があります（直接または拡張して実行するクラスを実装する必要があります）
 * ハンドラーは、*com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler* を拡張できます。
 * ハンドラーは、ContentSyncキャッシュを更新した場合にのみtrueをレポートする必要があります。 誤って true を返すと、AEM で更新が作成されます。
 * ハンドラーは、コンテンツが実際に変更された場合にのみ、キャッシュを更新する必要があります。白が不要な場合はキャッシュに書き込まず、不要な更新の作成を回避します。
@@ -35,40 +35,40 @@ ht-degree: 32%
 
 以下に、既製のアプリハンドラーのリストを示します。
 
-**mobilepages** ：アプリのページをレンダリングします。
+**mobilepagesアプリのページを** レンダリングします。
 
 * ***type - String*** - mobileappsages
-* ***path - String*** — ページへのパス
-* ***extension - String*** — リクエストで使用する拡張子。 For pages this is almost always *html*, but others are still possible.
+* ***path - String***  — ページへのパス
+* ***extension - String***  — リクエストで使用する拡張子。ページの場合、これはほとんど常に&#x200B;*html*&#x200B;ですが、それ以外はまだ可能です。
 
-* ***selector - String*** — オプションで、ドット区切りのセレクター。 Common examples are *touch* for rendering mobile versions of a page.
+* ***selector - String***  — オプションで、ドット区切りのセレクター。一般的な例は、ページのモバイルバージョンをレンダリングする場合の&#x200B;*touch*&#x200B;です。
 
-* ***deep - Boolean*** — 子ページも含めるかどうかを決定するブール型のプロパティ（オプション）。 デフォルト値は *true* です。
+* ***deep - Boolean***  — 子ページも含めるかどうかを決定するブール型のプロパティ（オプション）。デフォルト値は *true* です。
 
-* ***includeImages - Boolean*** — 画像を含めるかどうかを決定するブールのプロパティ（オプション）。 デフォルト値は *true* です。
+* ***includeImages — ブール型***  — 画像を含めるかどうかを決定するオプションのブール型プロパティ。デフォルト値は *true* です。
 
    * デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントだけが追加の対象になります。
 
-* ***includeVideos - Boolean*** — オプションのブール型プロパティで、ビデオを含める必要があるかどうかを指定します。 デフォルト値は *true* です。
+* ***includeVideos - Boolean***  — オプションのブール型プロパティで、ビデオを含めるかどうかを指定します。デフォルト値は *true* です。
 
-* ***includeModifiedPagesOnly - Boolean*** - falseの場合、または省略した場合、すべてのページをレンダリングし、レンダリング時に更新を確認します。 true の場合、最後に変更されたページに対する変更に基づいて差異を処理します。
+* ***includeModifiedPagesOnly - Boolean***  - falseの場合、または省略した場合は、すべてのページをレンダリングし、レンダリング時に更新を確認します。true の場合、最後に変更されたページに対する変更に基づいて差異を処理します。
 * ***+ rewrite（ノード）***
-   ***- relativeParentPath - String*** — 他のすべてのパスを書き込む相対パス。
+   ***- relativeParentPath - String***  — 他のすべてのパスを書き込む相対パス。
 
 >[!NOTE]
 >
->The resource type of the image and video components that are affected by this handler is set by configuring the properties of the *com.adobe.cq.mobile.platform.impl.contentsync.handler*.*MobilePagesUpdateHandler* OSGi サービスのプロパティによって設定します。
+>このハンドラーの影響を受ける画像およびビデオコンポーネントのリソースタイプは、*com.adobe.cq.mobile.platform.impl.contentsync.handler*&#x200B;のプロパティを設定することで設定されます。*MobilePagesUpdateHandler* OSGi サービスのプロパティによって設定します。
 
-**mobilepageassets** アプリのページアセットを収集します。
+**mobilepageassetsアプリ** のページアセットを収集します。
 
-**mobilecontentlisting** リストは、ContentSync zipの内容を提供します。 これは、デバイスのクライアント側 js によって使用され、AEM アプリで必要な最初のファイルコピーを実行します。
+**** mobilecontentlistingContentSync zipの内容を表示します。これは、デバイスのクライアント側 js によって使用され、AEM アプリで必要な最初のファイルコピーを実行します。
 
 このハンドラーは、すべての AEM アプリコンテンツ同期設定に追加する必要があります。
 
 * ***type - String - mobilecontentlisting***
-* ***path*** - String — 空白のままにする。有効なハンドラーとして表示するには空である必要がありますが、パスは現在のContentSyncキャッシュと推定されます。 この値は無視されます。
+* ***path*** - String — 空のままにする。有効なハンドラーとして表示するには空である必要がありますが、パスは現在のContentSyncキャッシュと推定されます。この値は無視されます。
 * ***targetRootDirectory* -**String — このハンドラーのコンテンツを更新する際のターゲットルートとしてパスに追加するプレフィックス。
-* ***order - Long* -**ContentSyncでこのハンドラーを実行するための順序。 この番号は、他のすべてのハンドラーよりも大きい値に設定する必要があります（100 など）。従来のコンテンツハンドラーの後に実行する必要があります。
+* ***order - ContentSyncの長い* **順序で、このハンドラーを実行します。この番号は、他のすべてのハンドラーよりも大きい値に設定する必要があります（100 など）。従来のコンテンツハンドラーの後に実行する必要があります。
 
 ```xml
 {
@@ -88,14 +88,14 @@ ht-degree: 32%
 }
 ```
 
-**mobilecontentpackages指定したアプリ内のAEMコンテンツパッケージと** 、更新要求を行うserverURLをリスト化します。 これは、クライアント側のデバイス上のJSを使用して、コンテンツの更新をリクエストします
+**mobilecontentpackageslisting特定のアプリ内のAEMコンテンツパッケージと、更新要求を行うserverURLを表示します。** これは、クライアント側のデバイス上のJSを使用して、コンテンツの更新をリクエストします
 
 このハンドラーは、AEM App ShellのContentSync Config（page-type=app-instanceのノード）で使用する必要があります。
 
 * ***type - String - mobilecontentpackageslisting***
-* ***path **-**String*** — アプリケーションシェルのパス（page-type=app-instanceのノード）
-* ***targetRootDirectory - String*** — このハンドラーのコンテンツを更新する際のターゲットルートとしてパスに追加するプレフィックス。
-* ***order - Long* -**ContentSyncがこのハンドラーを実行する順序。 この番号は、他のすべてのハンドラーよりも大きい値に設定する必要があります（100 など）。従来のコンテンツハンドラーの後に実行する必要があります。
+* ***path **-**String***  — アプリケーションシェルのパス（page-type=app-instanceのノード）
+* ***targetRootDirectory - String***  — このハンドラーのコンテンツを更新する際のターゲットルートとしてパスに追加するプレフィックス。
+* ***order - ContentSyncがこのハンドラーを実行するための長い* **順序。この番号は、他のすべてのハンドラーよりも大きい値に設定する必要があります（100 など）。従来のコンテンツハンドラーの後に実行する必要があります。
 
 >[!NOTE]
 >
@@ -123,75 +123,75 @@ ht-degree: 32%
 }
 ```
 
-**widgetconfig** ：コマンドセンターで行った編集を提供されたconfig.xmlとマージする、更新されたconfig.xmlが含まれます。 このハンドラーがアプリに含まれていない場合、管理インターフェイスで変更された詳細はキャッシュに含まれません。
+**widgetconfigコマンドセンターで行った編集を提供されたconfig.xmlとマージする、更新されたconfig.xmlが含まれます。** このハンドラーがアプリに含まれていない場合、管理インターフェイスで変更された詳細はキャッシュに含まれません。
 
-This handler should be used on a AEM App Shell ContentSync config (node with pge-type=[app-instance]).
+このハンドラーは、AEM App Shell ContentSyncの設定（page-type=[app-instance]のノード）で使用する必要があります。
 
 * ***type - String* - **widgetconfig
-* ***path **-**String*** — 任意のアプリシェルの子ノードのパス(page-type=[app-instance])
-* ***targetRootDirectory - String*** — このハンドラーのコンテンツを更新する際のターゲットルートとしてパスに追加するプレフィックス。
-* ***targetIconDirectory - String*** — アプリケーションのアイコンを配置するディレクトリ
+* ***path **-**String***  — 任意のアプリシェルの子ノードのパス(page-type=[app-instance])
+* ***targetRootDirectory - String***  — このハンドラーのコンテンツを更新する際のターゲットルートとしてパスに追加するプレフィックス。
+* ***targetIconDirectory - String***  — アプリケーションのアイコンを配置するディレクトリ
 
-**mobileADBMobileConfigJSON** AMSクラウドサービスが設定されている場合は、ADBMobileConfig.JSONファイルを含めます。
+**AMSクラウドサービスが設定されている** 場合、mobileADBMobileConfigJSONInclude the ADBMobileConfig.JSON file if the ADBMobileConfig.JSON file include the ADBMobileConfig.JSON file include the AD
 
 これは、解析をサポートするための AMS プラグインを設定するためにコンパイル時に使用されます。
 
 このハンドラーは、AEM App ShellのContentSync Config（page-type=app-instanceのノード）で使用する必要があります。
 
 * ***type - String*** - mobileADBMobileConfigJSON
-* ***path - String*** — アプリケーションシェルのパス（page-type=app-instanceのノードまたは/libs/mobileapps/core/components/instanceを拡張するRT）
-* ***targetRootDirectory - String*** — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス
+* ***path - String***  — アプリケーションシェルのパス（page-type=app-instanceのノードまたは/libs/mobileapps/core/components/instanceを拡張するRT）
+* ***targetRootDirectory - String***  — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス
 
-**notificationsconfig** ：デバイスで必要な通知設定を抽出します。 プロパティは、アプリに関連付けられた各プッシュサービスクラウドサービス設定から抽出されます。
+**** 通知sconfigデバイスで必要な通知設定を抽出します。プロパティは、アプリに関連付けられた各プッシュサービスクラウドサービス設定から抽出されます。
 
-Non-AEM properties in the cloud service&#39;s jcr:content node are extracted and added to the **pge-notifications-config.json** JSON  file for inclusion in the app content&#39;s www root.
+クラウドサービスのjcr:contentノード内のAEM以外のプロパティが抽出され、**page-notifications-config.json** JSONファイルに追加されて、アプリコンテンツのwwwルートに含められます。
 
 AEM プロパティは、「cq」、「sling」または「jcr」のネームスペースが付いたプロパティです。他のプロパティは、コンテンツ同期設定ノードの「excludeProperties」プロパティを使用して除外できます。
 
 * ***type - String*** - notificationsconfig
-* ***excludeProperties - String[]*** — 除外するプロパティ
+* ***excludeProperties — 除外する文字列[]***  — プロパティ
 
-**contentsyncconfigcontent** ：既存のContentSync設定からコンテンツを収集します。
+**contentsyncconfigcontent既存のContentSync設定から** コンテンツを収集します。
 
 * ***type - String*** - contentsyncconfigcontent
-* ***path - String*** — 次のいずれかのパス：
+* ***path - String***  — 次のいずれかのパス：
 
    * 別のコンテンツ同期設定
    * をコンテンツパッケージに追加します（phonegap-exportTemplateプロパティを使用してContentSyncの設定を検索します）。
    * をMobile Resourceに追加します（app-contentはそのリソースの下に見つかります。これらのコンテンツパッケージにpage-includeInBuildプロパティがtrueの場合、phonegap-exportTemplateを使用してContentSyncの設定が見つかります）。
 
-* ***autoCreateFirstUpdateBeforeImport — ブール値*** - trueの場合は、ターゲット設定内に初期 **更新を作成してから読み込みます** （既に1回しか存在しない場合）
+* ***autoCreateFirstUpdateBeforeImport — ブール値*** - trueの場合は、ターゲット設定内に初期 **** 更新を作成してから読み込みます（まだ1回しか存在しない場合）
 
-* ***autoFillBeforeImport — ブール値*** - trueの場合、読み込む前にターゲット設定を更新/埋め込む
-* ***configSuffix - String*** - app-contentの「phonegap-exportTemplate」プロパティで指定されたパスに追加する文字列。 これは、異なる書き出しテンプレートを区別するために使用できます。 For example, this property can be set to **&quot;-dev&quot;** to indicate that *&quot;/../../../appconfig-dev&quot;* should be used (as opposed to *&quot;/../../../appconfig&quot;*).
+* ***autoFillBeforeImport — ブール値*** - trueの場合は、読み込む前にターゲット設定を更新/埋め込みます
+* ***configSuffix - String*** - app-contentの「phonegap-exportTemplate」プロパティで指定されたパスに追加する文字列。これは、異なる書き出しテンプレートを区別するために使用できます。 例えば、このプロパティを&#x200B;**&quot;-dev&quot;**&#x200B;に設定して、*&quot;/.././.././appconfig-dev&quot;*&#x200B;を使用する必要があることを示すことができます（*&quot;/../../appconfig&quot;*&#x200B;を除く）。
 
-**app-assets** ：アプリインスタンスに関連付けられているすべてのアセットを含めます。 このハンドラーには、指定されたパスに見つかったアセットと、アプリインスタンスのappAssetPathプロパティで参照されているアセットが含まれます。
+**app-** assetsアプリインスタンスに関連付けられているすべてのアセットを含めます。このハンドラーには、指定されたパスに見つかったアセットと、アプリインスタンスのappAssetPathプロパティで参照されているアセットが含まれます。
 
 * ***type - String*** - app-assets
 
-* ***path **-**String*** — アプリアセットが保存されるアプリインスタンスの下の場所のパス
+* ***path **-**String***  — アプリアセットが保存されるアプリインスタンスの下の場所のパス
 
-**mobileappoffers** 個人用設定の使用例に対して、ターゲットコンテンツをレンダリングする新しいコンテンツ同期ハンドラーが導入されました。 「mobileappofers」ハンドラーは、コンテンツ作成者が作成した関連するターゲットオファーをレンダリングする方法を知っています。 mobileappofersハンドラは抽象ページ更新ハンドラを拡張するので、多くのプロパティは似ています。 mobileappofersハンドラーの詳細には、次のプロパティがあります。
+**mobileappoffers** ターゲットコンテンツをレンダリングするための新しいコンテンツ同期ハンドラーが、パーソナライゼーションの使用例に導入されました。「mobileappofers」ハンドラーは、コンテンツ作成者が作成した関連するターゲットオファーをレンダリングする方法を知っています。 mobileappofersハンドラは抽象ページ更新ハンドラを拡張するので、多くのプロパティは似ています。 mobileappofersハンドラーの詳細には、次のプロパティがあります。
 
 mobileappsoffers ハンドラーは mobileappspages ハンドラーを拡張し、以下のプロパティが追加されます。
 
-* ***locationRoot - String*** — モバイルアプリケーションの場所を指定します。
-* ***includePageTypes — 文字列*** — デフォルトでcq/personalization/components/teaserpageおよびcq/personalization/components/offerproxyがサポートされます。
-* ***selector - String*** - tandtに設定する必要があります。
-* ***path - String***-キャンペーンのブランドへのパス
+* ***locationRoot - String***  — モバイルアプリケーションの場所を指定します。
+* ***includePageTypes — デフォルトで*** 、cq/personalization/components/teaserpageおよびcq/personalization/components/offerproxyをサポートします。
+* ***selector - String*** - standtに設定する必要があります。
+* ***path - String*** -キャンペーンのブランドへのパス
 
-**mobileappconfig** mobileappconfigコンテンツ同期ハンドラーは、JSONデータをMobileAppsConfig.jsonに挿入する方法を提供します。 プロバイダークラスを登録するには、開発者のMobileAppsInfoProviderクラスをプロバイダーのリストに追加します。 ハンドラーは、MobileAppsInfoProvidersのリストを反復し、プロバイダーが結果のjsonファイルにデータを挿入できるようにします。 このハンドラーがサポートするプロパティのリストは以下のとおりです。
+**mobileappconfig** mobileappconfigコンテンツ同期ハンドラーを使用すると、MobileAppsConfig.jsonにJSONデータを挿入できます。プロバイダークラスを登録するには、開発者のMobileAppsInfoProviderクラスをプロバイダーのリストに追加します。 ハンドラーは、MobileAppsInfoProvidersのリストを反復し、プロバイダーが結果のjsonファイルにデータを挿入できるようにします。 このハンドラーがサポートするプロパティのリストは以下のとおりです。
 
-* ***path **-**String*** - page-type=app-instanceを持つアプリインスタンスノードへのパス、または/libs/mobileapps/core/components/instanceを拡張するRT
-* ***providers - String***`[]` — 完全修飾されたMobileAppsInfoProvidersのリスト
-* ***targetRootDirectory - String*** - MobileAppsConfig.jsonファイルを書き込むディレクトリ。
-* **fileName - String** - JSONを書き込むファイルの名前（オプション）。デフォルトはMobileAppsConfig.jsonです。
+* ***path **-**String*** - page-type=app-instanceのアプリインスタンスノードへのパス、または/libs/mobileapps/core/components/instanceを拡張するRT
+* ***providers - String*** `[]`  — 完全修飾されたMobileAppsInfoProvidersのリスト
+* ***targetRootDirectory - String***  - MobileAppsConfig.jsonファイルを書き込むディレクトリ。
+* **fileName - String**  - JSONを書き込むファイルの名前（オプション）。デフォルトはMobileAppsConfig.jsonです。
 
 それぞれが異なる JSON ファイルに書き出す固有のプロバイダーセットを持つ、複数の mobileappconfig ハンドラーを設定することもできます。
 
 ### コンテンツ同期ハンドラーのテスト {#testing-content-sync-handlers}
 
-**整合性** ・クリア・キャッシュの確認手順
+**IntegrityClearキャッシュを確認する手順** です
 
 * キャッシュのクリア
 * ハンドラーを実行（キャッシュが更新されます）
@@ -203,7 +203,7 @@ mobileappsoffers ハンドラーは mobileappspages ハンドラーを拡張し�
 * 設定を書き出すか、デバイス上で確認
 * レンダリングに失敗した場合は、*styles/assets/libs* があるかどうか、または *styles/assets/libs* へのパスが正しいかを確認
 
-**Logging** Enable ContentSync Debug logging via OSGI logger configurations on package `com.day.cq.contentsync` これにより、実行されたハンドラと、それらがキャッシュを更新し、キャッシュの更新をレポートしたかどうかを追跡できます。
+**LoggingEnableパッケージのOSGIロガー設定を介したContentSyncデバッグログ** を有効にし `com.day.cq.contentsync` ます。これにより、実行されたハンドラと、それらがキャッシュを更新し、キャッシュの更新を報告したかを追跡できます。
 
 ## その他のリソース {#additional-resources}
 
