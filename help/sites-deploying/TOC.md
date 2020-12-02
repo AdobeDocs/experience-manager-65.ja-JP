@@ -15,7 +15,7 @@ ht-degree: 95%
 ---
 
 
-# AEM 6.5 Deploying User Guide {#deploying}
+# AEM 6.5ユーザーガイドの展開{#deploying}
 
 + [デプロイユーザーガイド](home.md)
 + AEM プラットフォームの概要 {#introduction}
