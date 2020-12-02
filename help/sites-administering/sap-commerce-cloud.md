@@ -1,6 +1,6 @@
 ---
 title: SAP Commerce Cloud
-seo-title: SAP Commerce Cloud
+seo-title: SAPCommerce Cloud
 description: AEM と SAP Commerce Cloud の使用方法について説明します。
 seo-description: AEM と SAP Commerce Cloud の使用方法について説明します。
 uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
@@ -19,7 +19,7 @@ ht-degree: 88%
 ---
 
 
-# SAP Commerce Cloud{#sap-commerce-cloud}
+# SAPCommerce Cloud{#sap-commerce-cloud}
 
 インストール後、次のようにしてインスタンスを設定します。
 
@@ -31,7 +31,7 @@ ht-degree: 88%
 1. [カタログインポーターを設定する](#configure-the-catalog-importer)
 1. [インポーターを使用して、カタログを AEM 内の特定の場所に読み込む](#catalog-import)
 
-## Geometrixx Outdoors 用のファセット検索の設定 {#configure-the-facetted-search-for-geometrixx-outdoors}
+## Geometrixx Outdoors 用のファセット検索の設定  {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -56,9 +56,9 @@ ht-degree: 88%
 
    >[!NOTE]
    >
-   >Use the context menu (usually right-button click) to select `Create Solr sort`.
+   >コンテキストメニュー（通常は右ボタンをクリック）を使用して`Create Solr sort`を選択します。
    >
-   >For Hybris 5.0.0 open the `Indexed Types` tab, double-click on `ClothesVariantProduct`, then the tab `SOLR Sort`.
+   >Hybris 5.0.0では、`Indexed Types`タブを開き、`ClothesVariantProduct`を重複クリックし、次に`SOLR Sort`タブをクリックします。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -102,16 +102,17 @@ ht-degree: 88%
 1. **変更内容を保存します。**
 1. 「**System**」、「**Facet search**」の順に選択すると、**Indexer operation ウィザード**&#x200B;が表示されます。cron ジョブを開始します。
 
-   * **Indexer操作**: `full`
-   * **Solr設定**: `Sample Solr Config for Clothes`
+   * **Indexer操作**:  `full`
+   * **Solr設定**:  `Sample Solr Config for Clothes`
 
 ## カタログバージョンの設定 {#configure-the-catalog-version}
 
 読み込まれた&#x200B;**カタログバージョン**（`hybris.catalog.version`）を OSGi サービス用に設定できます。
 
-**Day CQ Commerce Hybris Configuration**( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
+**Day CQ Commerce Hybris Configuration**
+( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**カタログバージョン** は、通常、 `Online` または `Staged` （デフォルト）に設定されます。
+**カタログ** バージョンは、通常、 `Online` または `Staged` （デフォルト）に設定されます。
 
 >[!NOTE]
 >
@@ -119,7 +120,7 @@ ht-degree: 88%
 
 ログ出力は、作成されたページとコンポーネントに関するフィードバックを提供し、潜在的なエラーを報告します。
 
-## 読み込み構造の設定 {#configure-the-import-structure}
+## 読み込み構造の設定  {#configure-the-import-structure}
 
 デフォルトで作成される（アセット、ページおよびコンポーネントの）サンプル構造を以下に示します。
 
@@ -164,18 +165,19 @@ ht-degree: 88%
 
 読み込み時に生成される構造を、以下に合わせて設定できます。
 
-``**Day CQ Commerce Hybris Default Import Handler**
+&quot;**Day CQコマースハイブリスの既定のインポートハンドラ**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
 
-## 読み込む商品属性の設定 {#configure-the-product-attributes-to-load}
+## 読み込む商品属性の設定  {#configure-the-product-attributes-to-load}
 
 商品（バリアント）用に読み込むプロパティと属性を定義するように、応答パーサーを設定できます。
 
 1. OSGi バンドルの設定：
 
-   **Day CQ Commerce Hybrisデフォルト応答パーサー**(`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
+   **Day CQ Commerce Hybrisデフォルト応答パーサー**
+(`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
    ここで、読み込みとマップに必要な、様々なオプションと属性を定義できます。
 
@@ -203,11 +205,11 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 >[!NOTE]
 >
->The hybris implementation (i.e. `geometrixx-outdoors/en_US`) only stores product IDs and other basic information under `/etc/commerce`.
+>おろかさの実装(`geometrixx-outdoors/en_US`)は、`/etc/commerce`の下に製品IDと他の基本情報のみを保存します。
 >
 >商品に関する情報を要求されるたびに、hybris サーバーが参照されます。
 
-### 完全読み込み {#full-import}
+### 完全読み込み  {#full-import}
 
 1. 必要に応じて、CRXDE Lite を使用して既存の商品データをすべて削除します。
 
@@ -319,7 +321,8 @@ hybris カタログは、hybris カタログ、カテゴリおよび商品用の
 
 インポーターが使用するパラメーターは、以下に合わせて設定できます。
 
-**Day CQコマースハイブリスカタログインポーター**( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
+**Day CQコマースハイブリスカタログインポーター**
+( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
 
@@ -376,8 +379,8 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    次に例を示します。
 
    * [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit) ページを開きます。
-   * カタログを選択 `Outdoors Staged`
-   * Search for `Cajamara`
+   * カタログを選択`Outdoors Staged`
+   * `Cajamara`を検索
    * この商品を選択し、承認ステータスを「`unapproved`」に変更します。
 
 1. もう一度増分更新を実行します（[カタログの読み込み](#catalog-import)を参照）。削除された商品がログに記録されます。
@@ -389,12 +392,12 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
       [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
-   * Rollout the `Hybris Base` catalog
+   * `Hybris Base`カタログを展開
    * 次のファイルを開きます。
 
       [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * The `Cajamara` product will have been removed from the `Bike` category
+   * `Cajamara`製品は`Bike`カテゴリから削除されます
 
 1. 製品を再インストールするには：
 
@@ -405,13 +408,13 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
       1. 該当するカタログを再度ロールアウトします。
       1. 該当するカテゴリページを更新します。
 
-## 注文履歴特性の ClientContext への追加 {#add-order-history-trait-to-the-client-context}
+## 注文履歴特性の ClientContext への追加  {#add-order-history-trait-to-the-client-context}
 
 注文履歴を [ClientContext](/help/sites-developing/client-context.md) に追加するには：
 
 1. 次のどちらかの方法で、[ClientContext のデザインページ](/help/sites-administering/client-context.md)を開きます。
 
-   * Open a page for editing, then open the client context using **Ctrl-Alt-c** (windows) or **control-option-c** (Mac). ClientContext の左上隅にある鉛筆アイコンを使用して、**ClientContext のデザインページを開きます**。
+   * 編集用にページを開き、**Ctrl-Alt-c**(windows)または&#x200B;**control-option-c**(Mac)を使用してクライアントコンテキストを開きます。 ClientContext の左上隅にある鉛筆アイコンを使用して、**ClientContext のデザインページを開きます**。
    * [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html) に直接移動します。
 
 1. [**注文履歴**&#x200B;コンポーネント](/help/sites-administering/client-context.md#adding-a-property-component)を ClientContext の&#x200B;**買い物かご**&#x200B;コンポーネントに追加します。
@@ -431,11 +434,11 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    >
    >このメッセージは、次の方法で実現されています。
    >
-   >* http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.htmlに移動し [ます。](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
+   >* [http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)に移動します。
    >
    >  キャンペーンは、1つのエクスペリエンスで構成されます。
    >
-   >* Click on the segment ([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
+   >* セグメント([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))をクリックします。
       >
       >
    * **注文履歴プロパティ**&#x200B;特性を使用してセグメントが作成されます。
