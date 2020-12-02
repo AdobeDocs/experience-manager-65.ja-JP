@@ -17,7 +17,7 @@ ht-degree: 84%
 ---
 
 
-# ドラフトと送信に使用するストレージサービスの設定 {#configuring-storage-services-for-drafts-and-submissions}
+# ドラフトと送信に使用するストレージサービスの設定  {#configuring-storage-services-for-drafts-and-submissions}
 
 ## 概要 {#overview}
 
@@ -39,13 +39,13 @@ AEM Forms ポータルのデータサービスおよびメタデータサービ�
 >
 >詳しくは、「[ドラフト&amp;送信コンポーネントとデータベースの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。
 
-## フォームポータルのドラフトサービスおよび送信サービスの設定 {#configuring-forms-portal-drafts-and-submissions-services}
+## フォームポータルのドラフトサービスおよび送信サービスの設定  {#configuring-forms-portal-drafts-and-submissions-services}
 
-In the AEM Web Console Configuration ( `https://[host]:'port'/system/console/configMgr`), click to open **Forms Portal Draft and Submission Configuration** in edit mode.
+AEM Webコンソールの設定(`https://[host]:'port'/system/console/configMgr`)で、「**Formsポータルのドラフトと送信の設定**」をクリックして編集モードで開きます。
 
 以下の説明に従い、要件に基づいてプロパティの値を指定します。
 
-### パブリッシュインスタンスにデータを格納する初期設定済みサービス {#out-of-the-box-services-to-store-data-on-publish-instance}
+### パブリッシュインスタンスにデータを格納する初期設定済みサービス  {#out-of-the-box-services-to-store-data-on-publish-instance}
 
 データは設定したオーサーインスタンスに逆複製されます。
 
@@ -74,7 +74,7 @@ In the AEM Web Console Configuration ( `https://[host]:'port'/system/console/con
  </tbody>
 </table>
 
-### リモート処理用インスタンスにデータを格納する初期設定済みボックスサービス {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
+### リモート処理用インスタンスにデータを格納する初期設定済みボックスサービス  {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
 
 データは設定したリモートインスタンスに直接プッシュされます。
 
@@ -105,9 +105,9 @@ In the AEM Web Console Configuration ( `https://[host]:'port'/system/console/con
 
 上記に示した設定のほか、設定したリモート処理用インスタンスの情報を入力します。
 
-In the AEM Web Console Configuration ( `https://[host]:'port'/system/console/configMgr`), click to open **AEM DS Settings Service** in edit mode. AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
+AEM Webコンソールの設定(`https://[host]:'port'/system/console/configMgr`)で、**AEM DS Settings Service**&#x200B;をクリックして編集モードで開きます。 AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
 
 >[!NOTE]
 >
->ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。To understand how to configure data and metadata services to store user data in an external database, see [Sample for integrating drafts &amp; submissions component with database](/help/forms/using/integrate-draft-submission-database.md).
+>ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。ユーザーデータを外部データベースに格納するデータサービスとメタデータサービスを設定する方法について詳しくは、[ドラフト&amp;送信コンポーネントとデータベース](/help/forms/using/integrate-draft-submission-database.md)の統合のサンプルを参照してください。
 
