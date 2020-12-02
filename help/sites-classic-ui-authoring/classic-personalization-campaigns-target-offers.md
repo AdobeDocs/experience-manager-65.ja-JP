@@ -28,7 +28,7 @@ ht-degree: 71%
    ![](do-not-localize/chlimage_1-11.png)
 
 1. 「**新規...**」をクリックします。
-1. You can specify the **Title**, **Name** and type of experience to be created; in this case, Test&amp;Target Offer.
+1. **タイトル**、**名前**&#x200B;および作成するエクスペリエンスのタイプを指定できます。この場合、Test&amp;ターゲットオファーが発生します。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -40,4 +40,4 @@ ht-degree: 71%
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-See [Integrate with Adobe](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md) for full details.
+詳しくは、[Adobeとの統合](/help/sites-administering/target.md) [ターゲット](/help/sites-administering/target.md)を参照してください。
