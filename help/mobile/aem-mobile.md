@@ -1,6 +1,6 @@
 ---
 title: AEM Mobile On-Demand
-seo-title: AEM Mobile On-Demand
+seo-title: AEM Mobileオンデマンド
 description: このページでは、AEM Mobile On-Demand Services アプリの管理の概要について説明します。On-Demand Services における AEM 管理者の役割と責任の概要について説明します。
 seo-description: このページでは、AEM Mobile On-Demand Services アプリの管理の概要について説明します。On-Demand Services における AEM 管理者の役割と責任の概要について説明します。
 uuid: fd99c032-287a-489b-9690-b18980c55c29
@@ -18,7 +18,7 @@ ht-degree: 66%
 ---
 
 
-# AEM Mobile On-Demand {#aem-mobile-on-demand}
+# AEM Mobileオンデマンド  {#aem-mobile-on-demand}
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->If you are not using AEM as your content management source, see [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
+>コンテンツ管理ソースとしてAEMを使用していない場合は、[AEM Mobile On-demand Servicesのヘルプ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html)を参照してください。
 
 ## AEM 管理者 {#aem-administrator}
 
@@ -36,11 +36,11 @@ ht-degree: 66%
 >
 >AEM Mobile On-Demand Services の環境を設定する前に、[AEM Mobile アプリケーションダッシュボードまたはコントロールセンター](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
-An ***AEM administrator*** is responsible for adding a new application to the AEM Mobile catalog, either by creating a new app using the creation wizard, or by importing an existing application. AEM administrators who create a new app using AEM Mobile&#39;s *creation wizard* typically select one of the desired app templates either from our out-of-the-box reference samples or (in most cases) a custom app template created by *AEM developers.*
+***AEM管理者***&#x200B;は、新しいアプリを作成ウィザードを使用して作成するか、既存のアプリを読み込むことで、新しいアプリをAEM Mobileカタログに追加します。 AEM MOBILEの&#x200B;*作成ウィザード*&#x200B;を使用して新しいアプリを作成するAEM管理者は、通常、標準搭載の参照サンプルから、または（ほとんどの場合は）*AEM開発者が作成したカスタムアプリテンプレートのいずれかを選択します。*
 
 >[!NOTE]
 >
->For more information on setting up AEM Groups and Permissions, click [Creating User Roles and Granting Access](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html) in Online Help.
+>AEMグループと権限の設定の詳細については、オンラインヘルプの「[ユーザーロールの作成とアクセスの許可](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
 
 AEM 管理者は、AEM Mobile On-Demand Services を使用してアプリを作成する際に以下のタスクを担当します。
 
