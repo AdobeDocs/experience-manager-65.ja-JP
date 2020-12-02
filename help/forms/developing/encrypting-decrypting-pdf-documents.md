@@ -18,7 +18,7 @@ ht-degree: 8%
 ---
 
 
-# PDFドキュメントの暗号化と復号化 {#encrypting-and-decrypting-pdf-documents}
+# PDFドキュメントの暗号化と復号化{#encrypting-and-decrypting-pdf-documents}
 
 **Encryptionサービスについて**
 
@@ -26,30 +26,30 @@ Encryptionサービスを使用すると、ドキュメントの暗号化およ�
 
 Encryptionサービスを使用して、次のタスクを実行できます。
 
-* PDFドキュメントをパスワードで暗号化します。 (「PDFドキュメントのパスワード [による暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)」を参照)。
-* PDFドキュメントを証明書で暗号化します。 (See [Encrypting PDF Documents with Certificates](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates).)
-* PDFドキュメントからパスワードベースの暗号化を削除します。 (Removing Password Encryption [を参照](encrypting-decrypting-pdf-documents.md#removing-password-encryption))。
-* PDFドキュメントから証明書ベースの暗号化を削除します。 (証明書ベースの暗号化の [削除を参照](encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption))。
-* 他のサービス操作を実行できるように、PDFドキュメントのロックを解除します。 例えば、パスワードで暗号化されたPDFドキュメントのロックが解除された後に、電子署名を適用できます。 (暗号化されたPDFドキュメントの [ロック解除を参照](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents))。
-* 保護されたPDFドキュメントの暗号化タイプを指定します。 (Determining Encryption Type [](encrypting-decrypting-pdf-documents.md#determining-encryption-type)（暗号化タイプの決定を参照）。
+* PDFドキュメントをパスワードで暗号化します。 (「[パスワードによるPDFドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)」を参照)。
+* PDFドキュメントを証明書で暗号化します。 (「[証明書によるPDFドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)」を参照)。
+* PDFドキュメントからパスワードベースの暗号化を削除します。 （「[パスワード暗号化の削除](encrypting-decrypting-pdf-documents.md#removing-password-encryption)」を参照）。
+* PDFドキュメントから証明書ベースの暗号化を削除します。 （「[証明書ベースの暗号化の削除](encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)」を参照）。
+* 他のサービス操作を実行できるように、PDFドキュメントのロックを解除します。 例えば、パスワードで暗号化されたPDFドキュメントのロックが解除された後に、電子署名を適用できます。 ([暗号化されたPDFドキュメントのロック解除](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)を参照)。
+* 保護されたPDFドキュメントの暗号化タイプを指定します。 （「[暗号化タイプの決定](encrypting-decrypting-pdf-documents.md#determining-encryption-type)」を参照）。
 
 >[!NOTE]
 >
->For more information about the Encryption service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Encryptionサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-## Encrypting PDF Documents with a Password {#encrypting-pdf-documents-with-a-password}
+## PDFドキュメントのパスワードによる暗号化{#encrypting-pdf-documents-with-a-password}
 
 PDF ドキュメントをパスワードで暗号化する場合、ユーザーは Adobe Reader または Acrobat で PDF ドキュメントを開くためのパスワードを指定する必要があります。また、PDFドキュメントのデジタル署名など、別のAEM Forms操作をドキュメントで実行する前に、パスワードで暗号化されたPDFドキュメントをロック解除する必要があります。
 
 >[!NOTE]
 >
->暗号化されたPDFドキュメントをAEM Formsリポジトリにアップロードする場合、PDFドキュメントを復号化してXDPコンテンツを抽出することはできません。 ドキュメントをAEM Formsリポジトリにアップロードする前に、暗号化を行わないことをお勧めします。 (リソースの [書き込みを参照](/help/forms/developing/aem-forms-repository.md#writing-resources))。
+>暗号化されたPDFドキュメントをAEM Formsリポジトリにアップロードする場合、PDFドキュメントを復号化してXDPコンテンツを抽出することはできません。 ドキュメントをAEM Formsリポジトリにアップロードする前に、暗号化を行わないことをお勧めします。 （[リソースの書き込み](/help/forms/developing/aem-forms-repository.md#writing-resources)を参照）。
 
 >[!NOTE]
 >
->For more information about the Encryption service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Encryptionサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary-of-steps}
+### 手順{#summary-of-steps}の概要
 
 PDFドキュメントをパスワードで暗号化するには、次の手順を実行します。
 
@@ -93,7 +93,7 @@ PDFドキュメントを暗号化する場合、保護されたドキュメン�
 
 >[!NOTE]
 >
->権限は、 `PasswordEncryptionPermission` 定義済みリストの値として指定します。
+>権限は`PasswordEncryptionPermission`定義済みリスト値として指定します。
 
 **追加パスワード**
 
@@ -117,7 +117,7 @@ PDFドキュメントを暗号化する場合、保護されたドキュメン�
 
 [PDFドキュメントの証明書による暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)
 
-### Java APIを使用したPDFドキュメントの暗号化 {#encrypt-a-pdf-document-using-the-java-api}
+### Java API {#encrypt-a-pdf-document-using-the-java-api}を使用してPDFドキュメントを暗号化する
 
 Encryption API(Java)を使用して、PDFドキュメントをパスワードで暗号化します。
 
@@ -128,36 +128,36 @@ Encryption API(Java)を使用して、PDFドキュメントをパスワードで
 1. 暗号化クライアントAPIの作成を参照してください。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `EncryptionServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`EncryptionServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 暗号化するPDFドキュメントを取得します。
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、暗号化するPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、暗号化するPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 暗号化の実行時オプションを設定します。
 
-   * Create a `PasswordEncryptionOptionSpec` object by invoking its constructor.
-   * オブジェクトのメソッドを呼び出し、暗号化するPDFドキュメントリソースを指定する `PasswordEncryptionOptionSpec``setEncryptOption``PasswordEncryptionOption` 定義済みリスト値を渡して、ドキュメントするPDFリソースを指定します。 例えば、メタデータと添付ファイルを含むPDFドキュメント全体を暗号化する場合は、を指定し `PasswordEncryptionOption.ALL`ます。
-   * コンストラクターを使用して、暗号化権限を格納する `java.util.List` オブジェクトを作成し `ArrayList` ます。
-   * オブジェクト「s」 `java.util.List``add` メソッドを呼び出し、設定する権限に対応する定義済みリスト値を渡して、権限を指定します。 例えば、PDFドキュメント内のデータをユーザーがコピーできる権限を設定するには、を指定し `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`ます。 （設定する権限ごとに、この手順を繰り返します）。
-   * オブジェクトの `PasswordEncryptionOptionSpec``setCompatability` メソッドを呼び出し、Acrobatの互換性レベルを指定する定義済みリスト値を渡して、Acrobatの互換性オプションを指定します。 例えば、を指定でき `PasswordEncryptionCompatability.ACRO_7`ます。
-   * 暗号化されたPDFドキュメントをユーザーが開くために、 `PasswordEncryptionOptionSpec` オブジェクトの `setDocumentOpenPassword` メソッドを呼び出し、開くパスワードを表すstring値を渡すパスワード値を指定します。
-   * マスターパスワード値を指定します。この値を指定すると、ユーザーは、 `PasswordEncryptionOptionSpec` オブジェクトの `setPermissionPassword` メソッドを呼び出し、マスターパスワードを表すstring値を渡すことで、PDFドキュメントから暗号化を削除できます。
+   * コンストラクターを呼び出して、`PasswordEncryptionOptionSpec`オブジェクトを作成します。
+   * `PasswordEncryptionOptionSpec`オブジェクトの`setEncryptOption`メソッドを呼び出し、暗号化するドキュメントリソースを指定する`PasswordEncryptionOption`定義済みリスト値を渡して、暗号化するPDFドキュメントリソースを指定します。 例えば、メタデータと添付ファイルを含むPDFドキュメント全体を暗号化するには、`PasswordEncryptionOption.ALL`を指定します。
+   * `ArrayList`コンストラクターを使用して、暗号化の権限を格納する`java.util.List`オブジェクトを作成します。
+   * `java.util.List`オブジェクト&#39;s `add`メソッドを呼び出し、設定する権限に対応する定義済みリスト値を渡して、権限を指定します。 例えば、PDFドキュメント内のデータをユーザーがコピーできる権限を設定するには、`PasswordEncryptionPermission.PASSWORD_EDIT_COPY`を指定します。 （設定する権限ごとに、この手順を繰り返します）。
+   * `PasswordEncryptionOptionSpec`オブジェクトの`setCompatability`メソッドを呼び出し、Acrobatの互換性レベルを指定する定義済みリスト値を渡して、Acrobatの互換性オプションを指定します。 例えば、`PasswordEncryptionCompatability.ACRO_7`を指定できます。
+   * ユーザーが暗号化されたPDFドキュメントを開くために、`PasswordEncryptionOptionSpec`オブジェクトの`setDocumentOpenPassword`メソッドを呼び出し、開くパスワードを表すstring値を渡すパスワード値を指定します。
+   * マスターパスワード値を指定します。この値を指定すると、ユーザーが`PasswordEncryptionOptionSpec`オブジェクトの`setPermissionPassword`メソッドを呼び出し、マスターパスワードを表す文字列値を渡すことで、PDFドキュメントから暗号化を削除できます。
 
 1. 追加パスワード。
 
-   オブジェクトの `EncryptionServiceClient` メソッドを呼び出し、次の値を渡して、PDFドキュメントを暗号化し `encryptPDFUsingPassword` ます。
+   `EncryptionServiceClient`オブジェクトの`encryptPDFUsingPassword`メソッドを呼び出し、次の値を渡して、PDFドキュメントを暗号化します。
 
-   * パスワードを使用して暗号化するPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
-   * 暗号化の実行時オプションを含む `PasswordEncryptionOptionSpec` オブジェクトです。
+   * パスワードを使用して暗号化するPDFドキュメントが含まれる`com.adobe.idp.Document`オブジェクトです。
+   * 暗号化の実行時オプションを含む`PasswordEncryptionOptionSpec`オブジェクトです。
 
-   パスワードで暗号化されたPDFドキュメントを含む `encryptPDFUsingPassword``com.adobe.idp.Document` オブジェクトを返します。
+   `encryptPDFUsingPassword`メソッドは、パスワードで暗号化されたPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを返します。
 
 1. 暗号化されたPDFドキュメントをPDFファイルとして保存します。
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method to copy the contents of the `com.adobe.idp.Document` object to the file. `com.adobe.idp.Document` メソッドから返された `encryptPDFUsingPassword` オブジェクトを必ず使用してください。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします。 `com.adobe.idp.Document` メソッドから返された `encryptPDFUsingPassword` オブジェクトを必ず使用してください。
 
 **関連トピック**
 
@@ -169,62 +169,62 @@ Encryption API(Java)を使用して、PDFドキュメントをパスワードで
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したPDFドキュメントの暗号化 {#encrypting-a-pdf-document-using-the-web-service-api}
+### WebサービスAPI {#encrypting-a-pdf-document-using-the-web-service-api}を使用したPDFドキュメントの暗号化
 
 Encryption API（Webサービス）を使用して、PDFドキュメントをパスワードで暗号化します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 暗号化クライアントAPIオブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`EncryptionServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`EncryptionServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 暗号化するPDFドキュメントを取得します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、パスワードで暗号化されたPDFドキュメントを保存するために使用されます。
-   * コンストラクターを呼び出し、暗号化するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * バイト配列の内容を `BLOB` オブジェクトの `BLOB``MTOM` データメンバーに割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、パスワードで暗号化されたPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、暗号化するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * バイト配列の内容を`BLOB`オブジェクトの`MTOM`データメンバーに割り当てて、`BLOB`オブジェクトを入力します。
 
 1. 暗号化の実行時オプションを設定します。
 
    * コンストラクタを使用して `PasswordEncryptionOptionSpec` オブジェクトを作成します。
-   * 暗号化するPDFドキュメントリソースを指定するには、 `PasswordEncryptionOption` オブジェクトの `PasswordEncryptionOptionSpec``encryptOption` データメンバーに定義済みリスト値を割り当てます。 メタデータと添付ファイルを含むPDF全体を暗号化するには、このデータメンバ `PasswordEncryptionOption.ALL` ーに割り当てます。
-   * Acrobat互換性オプションを指定するには、オ `PasswordEncryptionCompatability` ブジェクトの `PasswordEncryptionOptionSpec``compatability` データメンバに定義済みリスト値を割り当てます。 例えば、このデータメンバ `PasswordEncryptionCompatability.ACRO_7` ーに割り当てます。
-   * ユーザーが暗号化されたPDFドキュメントを開くためのpassword値を指定します。この値には、 `PasswordEncryptionOptionSpec` オブジェクトの `documentOpenPassword` データメンバーに開いているパスワードを表すstring値を割り当てます。
-   * ユーザーがPDFドキュメントから暗号化を削除できるように、マスターパスワードを表すstring値を `PasswordEncryptionOptionSpec` オブジェクトの `permissionPassword` データメンバーに割り当てるためのpassword値を指定します。
+   * 暗号化するPDFドキュメントリソースを指定するには、`PasswordEncryptionOption`定義済みリスト値を`PasswordEncryptionOptionSpec`オブジェクトの`encryptOption`データメンバに割り当てます。 PDF全体（メタデータと添付ファイルを含む）を暗号化するには、このデータメンバーに`PasswordEncryptionOption.ALL`を割り当てます。
+   * `PasswordEncryptionCompatability`定義済みリスト値を`PasswordEncryptionOptionSpec`オブジェクトの`compatability`データメンバに割り当てて、Acrobat互換性オプションを指定します。 例えば、`PasswordEncryptionCompatability.ACRO_7`をこのデータメンバーに割り当てます。
+   * 暗号化されたPDFドキュメントをユーザーが開くためのpassword値を指定します。この値は、開いたパスワードを表すstring値を`PasswordEncryptionOptionSpec`オブジェクトの`documentOpenPassword`データメンバーに割り当てることによって指定します。
+   * ユーザーがマスターパスワードを表す文字列値を`PasswordEncryptionOptionSpec`オブジェクトの`permissionPassword`データメンバーに割り当てることで、PDFドキュメントから暗号化を削除できるように、password値を指定します。
 
 1. 追加パスワード。
 
-   オブジェクトの `EncryptionServiceClient` メソッドを呼び出し、次の値を渡して、PDFドキュメントを暗号化し `encryptPDFUsingPassword` ます。
+   `EncryptionServiceClient`オブジェクトの`encryptPDFUsingPassword`メソッドを呼び出し、次の値を渡して、PDFドキュメントを暗号化します。
 
-   * パスワードを使用して暗号化するPDFドキュメントを含む `BLOB` オブジェクトです。
-   * 暗号化の実行時オプションを含む `PasswordEncryptionOptionSpec` オブジェクトです。
+   * パスワードを使用して暗号化するPDFドキュメントが含まれる`BLOB`オブジェクトです。
+   * 暗号化の実行時オプションを含む`PasswordEncryptionOptionSpec`オブジェクトです。
 
-   パスワードで暗号化されたPDFドキュメントを含む `encryptPDFUsingPassword``BLOB` オブジェクトを返します。
+   `encryptPDFUsingPassword`メソッドは、パスワードで暗号化されたPDFドキュメントを含む`BLOB`オブジェクトを返します。
 
 1. 暗号化されたPDFドキュメントをPDFファイルとして保存します。
 
-   * コンストラクターを呼び出し、保護されたPDF `System.IO.FileStream` ドキュメントーのファイルの場所を表すstring値を渡して、オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成し `encryptPDFUsingPassword` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、保護されたPDFドキュメントーのファイルの場所を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `encryptPDFUsingPassword`メソッドから返された`BLOB`オブジェクトのデータ内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -234,9 +234,9 @@ Encryption API（Webサービス）を使用して、PDFドキュメントをパ
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Encrypting PDF Documents with Certificates {#encrypting-pdf-documents-with-certificates}
+## PDFドキュメントの証明書による暗号化{#encrypting-pdf-documents-with-certificates}
 
-証明書ベースの暗号化を使用すると、公開鍵による暗号化を使用して、特定の受信者用のドキュメントを暗号化できます。 それぞれの受信者に、異なる権限を与えることができます。公開鍵によって、さまざまな暗号化を行うことができます。An algorithm is used to generate two large numbers, known as *keys*, that have the following properties:
+証明書ベースの暗号化を使用すると、公開鍵による暗号化を使用して、特定の受信者用のドキュメントを暗号化できます。 それぞれの受信者に、異なる権限を与えることができます。公開鍵によって、さまざまな暗号化を行うことができます。アルゴリズムは、*keys*&#x200B;と呼ばれる、次のプロパティを持つ2つの大きな数値を生成するために使用します。
 
 * 鍵のうち 1 つは、一連のデータを暗号化するために使用されます。その後、他のキーのみを使用してデータを復号化できます。
 * 1 つの鍵を、もう片方の鍵と区別することは不可能です。
@@ -247,17 +247,17 @@ Encryption API（Webサービス）を使用して、PDFドキュメントをパ
 
 >[!NOTE]
 >
->暗号化されたPDFドキュメントをAEM Formsリポジトリにアップロードする場合、PDFドキュメントを復号化してXDPコンテンツを抽出することはできません。 ドキュメントをAEM Formsリポジトリにアップロードする前に、暗号化を行わないことをお勧めします。 (リソースの [書き込みを参照](/help/forms/developing/aem-forms-repository.md#writing-resources))。
+>暗号化されたPDFドキュメントをAEM Formsリポジトリにアップロードする場合、PDFドキュメントを復号化してXDPコンテンツを抽出することはできません。 ドキュメントをAEM Formsリポジトリにアップロードする前に、暗号化を行わないことをお勧めします。 （[リソースの書き込み](/help/forms/developing/aem-forms-repository.md#writing-resources)を参照）。
 
 >[!NOTE]
 >
->PDFドキュメントを証明書で暗号化する前に、証明書をAEM Formsに追加しておく必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 (Trust Manager APIを使用した秘密鍵証明書の [読み込みを参照](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api))。
+>PDFドキュメントを証明書で暗号化する前に、証明書をAEM Formsに追加しておく必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 （「[Trust Manager APIを使用した秘密鍵証明書の読み込み](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)」を参照）。
 
 >[!NOTE]
 >
->For more information about the Encryption service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Encryptionサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-1}
+### 手順{#summary_of_steps-1}の概要
 
 PDFドキュメントを証明書で暗号化するには、次の手順を実行します。
 
@@ -283,7 +283,7 @@ PDFドキュメントを証明書で暗号化するには、次の手順を実�
 
 **暗号化クライアントAPIオブジェクトの作成**
 
-プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、 `EncrytionServiceClient` オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、 `EncryptionServiceService` オブジェクトを作成します。
+プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、`EncrytionServiceClient`オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、`EncryptionServiceService`オブジェクトを作成します。
 
 **暗号化するPDFドキュメントの取得**
 
@@ -321,7 +321,7 @@ PDFドキュメントを証明書で暗号化する場合は、保護された�
 
 [PDFドキュメントのパスワードによる暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-### Java APIを使用した証明書によるPDFドキュメントの暗号化 {#encrypt-a-pdf-document-with-a-certificate-using-the-java-api}
+### Java API {#encrypt-a-pdf-document-with-a-certificate-using-the-java-api}を使用して、PDFドキュメントを証明書で暗号化します。
 
 Encryption API(Java)を使用して、PDFドキュメントを証明書で暗号化します。
 
@@ -332,47 +332,47 @@ Encryption API(Java)を使用して、PDFドキュメントを証明書で暗号
 1. 暗号化クライアントAPIオブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `EncryptionServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`EncryptionServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 暗号化するPDFドキュメントを取得します。
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、暗号化するPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、暗号化するPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 証明書を参照します。
 
-   * コンストラクタを使用して、権限情報を格納する `java.util.List` オブジェクトを作成します。
-   * 暗号化されたドキュメントに関連付けられている権限を指定します。そのためには、 `java.util.List` オブジェクトの `add` メソッドを呼び出し、保護されたPDFドキュメントを開くユーザーに許可されている権限を表す `CertificateEncryptionPermissions` 定義済みリスト値を渡します。 例えば、すべての権限を指定するには、を渡し `CertificateEncryptionPermissions.PKI_ALL_PERM`ます。
+   * コンストラクタを使用して、権限情報を格納する`java.util.List`オブジェクトを作成します。
+   * `java.util.List`オブジェクトの`add`メソッドを呼び出し、保護されたPDFドキュメントを開くユーザーに許可する権限を表す`CertificateEncryptionPermissions`定義済みリスト値を渡して、暗号化されたドキュメントに関連付けられた権限を指定します。 例えば、すべての権限を指定するには、`CertificateEncryptionPermissions.PKI_ALL_PERM`を渡します。
    * コンストラクタを使用して `Recipient` オブジェクトを作成します。
-   * PDFドキュメントのコンストラクターを使用し、証明書の場所を指定するstring値を渡して、PDFの暗号化に使用される証明書を表す `java.io.FileInputStream` オブジェクトを作成します。
-   * コンストラクターを使用し、証明書を表すオブジェクトを渡して、 `com.adobe.idp.Document``java.io.FileInputStream` オブジェクトを作成します。
-   * オブジェクトの `Recipient` メソッドを呼び出し、証明書を含む `setX509Cert``com.adobe.idp.Document` オブジェクトを渡します。 (さらに、 `Recipient`オブジェクトには、証明書ソースとしてTruststore証明書エイリアスまたはLDAP URLを設定できます)。
-   * 権限と証明書の情報を格納する `CertificateEncryptionIdentity` オブジェクトを作成するには、コンストラクターを使用します。
-   * オブジェクトの `CertificateEncryptionIdentity` メソッドを呼び出し、権限情報を格納する `setPerms``java.util.List` オブジェクトを渡します。
-   * オブジェクトの `CertificateEncryptionIdentity` メソッドを呼び出し、証明書情報を格納する `setRecipient``Recipient` オブジェクトを渡します。
-   * コンストラクターを使用して、証明書情報を格納する `java.util.List` オブジェクトを作成します。
-   * Invoke the `java.util.List` object’s add method and pass the `CertificateEncryptionIdentity` object. (この `java.util.List` オブジェクトは、メソッドにパラメーターとして渡され `encryptPDFUsingCertificates` ます)。
+   * PDFドキュメントのコンストラクターを使用し、証明書の場所を指定する文字列値を渡して、PDFの暗号化に使用される証明書を表す`java.io.FileInputStream`オブジェクトを作成します。
+   * コンストラクターを使用し、証明書を表す`java.io.FileInputStream`オブジェクトを渡して、`com.adobe.idp.Document`オブジェクトを作成します。
+   * `Recipient`オブジェクトの`setX509Cert`メソッドを呼び出し、証明書を含む`com.adobe.idp.Document`オブジェクトを渡します。 （さらに、`Recipient`オブジェクトには、Truststore証明書エイリアスまたはLDAP URLを証明書ソースとして指定できます）。
+   * コンストラクターを使用して、権限と証明書情報を格納する`CertificateEncryptionIdentity`オブジェクトを作成します。
+   * `CertificateEncryptionIdentity`オブジェクトの`setPerms`メソッドを呼び出し、権限情報を格納する`java.util.List`オブジェクトを渡します。
+   * `CertificateEncryptionIdentity`オブジェクトの`setRecipient`メソッドを呼び出し、証明書情報を格納する`Recipient`オブジェクトを渡します。
+   * 証明書情報を格納する`java.util.List`オブジェクトを作成します。このオブジェクトは、コンストラクターを使用して作成します。
+   * `java.util.List`オブジェクトのaddメソッドを呼び出し、`CertificateEncryptionIdentity`オブジェクトを渡します。 （この`java.util.List`オブジェクトは、`encryptPDFUsingCertificates`メソッドにパラメーターとして渡されます）。
 
 1. 暗号化の実行時オプションを設定します。
 
-   * Create a `CertificateEncryptionOptionSpec` object by invoking its constructor.
-   * オブジェクトのメソッドを呼び出し、暗号化するPDFドキュメントリソースを指定する `CertificateEncryptionOptionSpec``setOption``CertificateEncryptionOption` 定義済みリスト値を渡して、ドキュメントするPDFリソースを指定します。 例えば、メタデータと添付ファイルを含むPDFドキュメント全体を暗号化する場合は、を指定し `CertificateEncryptionOption.ALL`ます。
-   * オブジェクトのメソッドを呼び出し、Acrobatの互換性レベルを指定する `CertificateEncryptionOptionSpec``setCompat``CertificateEncryptionCompatibility` 定義済みリスト値を渡して、Acrobatの互換性オプションを指定します。 例えば、を指定でき `CertificateEncryptionCompatibility.ACRO_7`ます。
+   * コンストラクターを呼び出して、`CertificateEncryptionOptionSpec`オブジェクトを作成します。
+   * `CertificateEncryptionOptionSpec`オブジェクトの`setOption`メソッドを呼び出し、暗号化するドキュメントリソースを指定する`CertificateEncryptionOption`定義済みリスト値を渡して、暗号化するPDFドキュメントリソースを指定します。 例えば、メタデータと添付ファイルを含むPDFドキュメント全体を暗号化するには、`CertificateEncryptionOption.ALL`を指定します。
+   * `CertificateEncryptionOptionSpec`オブジェクトの`setCompat`メソッドを呼び出し、Acrobatの互換性レベルを指定する`CertificateEncryptionCompatibility`定義済みリスト値を渡して、Acrobatの互換性オプションを指定します。 例えば、`CertificateEncryptionCompatibility.ACRO_7`を指定できます。
 
 1. 証明書で暗号化されたPDFドキュメントを作成します。
 
-   オブジェクトのメソッドを呼び出し、次の値を渡して、PDFドキュメントを証明書 `EncryptionServiceClient` で暗号化し `encryptPDFUsingCertificates` ます。
+   `EncryptionServiceClient`オブジェクトの`encryptPDFUsingCertificates`メソッドを呼び出し、次の値を渡して、PDFドキュメントを証明書で暗号化します。
 
-   * 暗号化するPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
-   * 証明書情報を格納する `java.util.List` オブジェクトです。
-   * 暗号化の実行時オプションを含む `CertificateEncryptionOptionSpec` オブジェクトです。
+   * 暗号化するPDFドキュメントが含まれる`com.adobe.idp.Document`オブジェクトです。
+   * 証明書情報を格納する`java.util.List`オブジェクトです。
+   * 暗号化の実行時オプションを含む`CertificateEncryptionOptionSpec`オブジェクトです。
 
-   証明書で暗号化されたPDFドキュメントを含む `encryptPDFUsingCertificates``com.adobe.idp.Document` オブジェクトを返します。
+   `encryptPDFUsingCertificates`メソッドは、証明書で暗号化されたPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを返します。
 
 1. 暗号化されたPDFドキュメントをPDFファイルとして保存します。
 
-   * Create a `java.io.File` object and ensure that the file name extension is .pdf.
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method to copy the contents of the `com.adobe.idp.Document` object to the file. `com.adobe.idp.Document` メソッドから返された `encryptPDFUsingCertificates` オブジェクトを必ず使用してください。
+   * `java.io.File`オブジェクトを作成し、ファイル名の拡張子が.pdfであることを確認します。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします。 `com.adobe.idp.Document` メソッドから返された `encryptPDFUsingCertificates` オブジェクトを必ず使用してください。
 
 **関連トピック**
 
@@ -384,74 +384,74 @@ Encryption API(Java)を使用して、PDFドキュメントを証明書で暗号
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用して、PDFドキュメントを証明書で暗号化する {#encrypt-a-pdf-document-with-a-certificate-using-the-web-service-api}
+### WebサービスAPI {#encrypt-a-pdf-document-with-a-certificate-using-the-web-service-api}を使用して、PDFドキュメントを証明書で暗号化します
 
 Encryption API（Webサービス）を使用して、PDFドキュメントを証明書で暗号化します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. 暗号化クライアントAPIオブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`EncryptionServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`EncryptionServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 暗号化するPDFドキュメントを取得します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、証明書で暗号化されたPDFドキュメントを保存するために使用されます。
-   * コンストラクターを呼び出し、暗号化するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、証明書で暗号化されたPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、暗号化するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに`MTOM`プロパティを割り当て、バイト配列の内容を指定します。
 
 1. 証明書を参照します。
 
    * コンストラクタを使用して `Recipient` オブジェクトを作成します。このオブジェクトは、証明書情報を格納します。
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトには、PDFドキュメントを暗号化する証明書が格納されます。
-   * コンストラクターを呼び出し、証明書のファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * バイト配列の内容を `BLOB` オブジェクトの `BLOB``MTOM` データメンバーに割り当てて、オブジェクトを設定します。
-   * 証明書を保存する `BLOB` オブジェクトを `Recipient` オブジェクトの `x509Cert` データメンバーに割り当てます。
-   * コンストラクターを使用して、証明書情報を格納する `CertificateEncryptionIdentity` オブジェクトを作成します。
-   * 証明書を保存する `Recipient` オブジェクトを、 `CertificateEncryptionIdentity`オブジェクトの受信者データメンバに割り当てます。
-   * 配列を作成し、 `Object` オブジェクトを配列の最初の要素に割り当て `CertificateEncryptionIdentity``Object` ます。 この `Object` 配列は、メソッドにパラメーターとして渡され `encryptPDFUsingCertificates` ます。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この`BLOB`オブジェクトには、PDFドキュメントを暗号化する証明書が格納されます。
+   * コンストラクターを呼び出し、証明書のファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * バイト配列の内容を`BLOB`オブジェクトの`MTOM`データメンバーに割り当てて、`BLOB`オブジェクトを入力します。
+   * 証明書を保存する`BLOB`オブジェクトを`Recipient`オブジェクトの`x509Cert`データメンバに割り当てます。
+   * 証明書情報を格納する`CertificateEncryptionIdentity`オブジェクトを作成します。このオブジェクトは、コンストラクターを使用して作成します。
+   * 証明書を保存する`Recipient`オブジェクトを`CertificateEncryptionIdentity`オブジェクトの受信者データメンバに割り当てます。
+   * `Object`配列を作成し、`CertificateEncryptionIdentity`オブジェクトを`Object`配列の最初の要素に割り当てます。 この`Object`配列は、`encryptPDFUsingCertificates`メソッドにパラメーターとして渡されます。
 
 1. 暗号化の実行時オプションを設定します。
 
    * コンストラクタを使用して `CertificateEncryptionOptionSpec` オブジェクトを作成します。
-   * 暗号化するPDFドキュメントリソースを指定するには、 `CertificateEncryptionOption` オブジェクトの `CertificateEncryptionOptionSpec``option` データメンバーに定義済みリスト値を割り当てます。 メタデータと添付ファイルを含むPDFドキュメント全体を暗号化するには、このデータメンバー `CertificateEncryptionOption.ALL` に割り当てます。
-   * Acrobat互換性オプションを指定するには、オ `CertificateEncryptionCompatibility` ブジェクトの `CertificateEncryptionOptionSpec``compat` データメンバに定義済みリスト値を割り当てます。 例えば、このデータメンバ `CertificateEncryptionCompatibility.ACRO_7` ーに割り当てます。
+   * 暗号化するPDFドキュメントリソースを指定するには、`CertificateEncryptionOption`定義済みリスト値を`CertificateEncryptionOptionSpec`オブジェクトの`option`データメンバに割り当てます。 PDFドキュメント全体（メタデータと添付ファイルを含む）を暗号化するには、`CertificateEncryptionOption.ALL`をこのデータメンバーに割り当てます。
+   * `CertificateEncryptionCompatibility`定義済みリスト値を`CertificateEncryptionOptionSpec`オブジェクトの`compat`データメンバに割り当てて、Acrobat互換性オプションを指定します。 例えば、`CertificateEncryptionCompatibility.ACRO_7`をこのデータメンバーに割り当てます。
 
 1. 証明書で暗号化されたPDFドキュメントを作成します。
 
-   オブジェクトのメソッドを呼び出し、次の値を渡して、PDFドキュメントを証明書 `EncryptionServiceService` で暗号化し `encryptPDFUsingCertificates` ます。
+   `EncryptionServiceService`オブジェクトの`encryptPDFUsingCertificates`メソッドを呼び出し、次の値を渡して、PDFドキュメントを証明書で暗号化します。
 
-   * 暗号化するPDFドキュメントを含む `BLOB` オブジェクトです。
-   * 証明書情報を格納する `Object` 配列。
-   * 暗号化の実行時オプションを含む `CertificateEncryptionOptionSpec` オブジェクトです。
+   * 暗号化するPDFドキュメントが含まれる`BLOB`オブジェクトです。
+   * 証明書情報を格納する`Object`配列。
+   * 暗号化の実行時オプションを含む`CertificateEncryptionOptionSpec`オブジェクトです。
 
-   証明書で暗号化されたPDFドキュメントを含む `encryptPDFUsingCertificates``BLOB` オブジェクトを返します。
+   `encryptPDFUsingCertificates`メソッドは、証明書で暗号化されたPDFドキュメントを含む`BLOB`オブジェクトを返します。
 
 1. 暗号化されたPDFドキュメントをPDFファイルとして保存します。
 
-   * コンストラクターを呼び出し、保護されたPDF `System.IO.FileStream` ドキュメントーのファイルの場所を表すstring値を渡して、オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成し `encryptPDFUsingCertificates` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `binaryData` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、保護されたPDFドキュメントーのファイルの場所を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `encryptPDFUsingCertificates`メソッドから返された`BLOB`オブジェクトのデータ内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`binaryData`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -461,15 +461,15 @@ Encryption API（Webサービス）を使用して、PDFドキュメントを証
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 証明書ベースの暗号化の削除 {#removing-certificate-based-encryption}
+## 証明書ベースの暗号化の削除{#removing-certificate-based-encryption}
 
-証明書で暗号化されたPDFドキュメントから暗号化を削除するには、公開鍵を参照する必要があります。 暗号化がPDFドキュメントから削除されると、その暗号化は保護されなくなります。
+証明書ベースの暗号化をPDFドキュメントから削除して、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができるようにすることができます。 証明書で暗号化されたPDFドキュメントから暗号化を削除するには、公開鍵を参照する必要があります。 暗号化がPDFドキュメントから削除されると、その暗号化は保護されなくなります。
 
 >[!NOTE]
 >
->For more information about the Encryption service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Encryptionサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-2}
+### 手順{#summary_of_steps-2}の概要
 
 PDFドキュメントから証明書ベースの暗号化を削除するには、次の手順を実行します。
 
@@ -493,7 +493,7 @@ PDFドキュメントから証明書ベースの暗号化を削除するには�
 
 **Encryptionサービスクライアントの作成**
 
-プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、 `EncrytionServiceClient` オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、 `EncryptionServiceService` オブジェクトを作成します。
+プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、`EncrytionServiceClient`オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、`EncryptionServiceService`オブジェクトを作成します。
 
 **暗号化されたPDFドキュメントの取得**
 
@@ -501,7 +501,7 @@ PDFドキュメントから証明書ベースの暗号化を削除するには�
 
 **暗号化の削除**
 
-暗号化されたPDFドキュメントから証明書ベースの暗号化を削除するには、暗号化されたPDFドキュメントと、PDFドキュメントの暗号化に使用されたキーに対応する秘密鍵の両方が必要です。 秘密鍵のエイリアス値は、暗号化されたPDFドキュメントから証明書ベースの暗号化を削除するときに指定します。 公開鍵について詳しくは、「証明書によるPDFドキュメントの [暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)」を参照してください。
+暗号化されたPDFドキュメントから証明書ベースの暗号化を削除するには、暗号化されたPDFドキュメントと、PDFドキュメントの暗号化に使用されたキーに対応する秘密鍵の両方が必要です。 秘密鍵のエイリアス値は、暗号化されたPDFドキュメントから証明書ベースの暗号化を削除するときに指定します。 公開鍵について詳しくは、[証明書でのPDFドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)を参照してください。
 
 >[!NOTE]
 >
@@ -523,7 +523,7 @@ PDFドキュメントから証明書ベースの暗号化を削除するには�
 
 [EncryptionサービスAPIのクイック開始](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-### Java APIを使用した証明書ベースの暗号化の削除 {#remove-certificate-based-encryption-using-the-java-api}
+### Java API {#remove-certificate-based-encryption-using-the-java-api}を使用した証明書ベースの暗号化の削除
 
 Encryption API(Java)を使用して、PDFドキュメントから証明書ベースの暗号化を削除します。
 
@@ -534,26 +534,26 @@ Encryption API(Java)を使用して、PDFドキュメントから証明書ベー
 1. Encryptionサービスクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `EncryptionServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`EncryptionServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
-   * コンストラクターを使用し、暗号化されたPDFドキュメントの場所を指定するstring値を渡して、暗号化されたPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、暗号化されたPDFドキュメントの場所を指定するstring値を渡して、暗号化されたPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 暗号化を削除します。
 
-   オブジェクトのメソッドを呼び出し、次の値を渡すことで、PDFドキュメントから証明書ベースの暗号化 `EncryptionServiceClient` を削除し `removePDFCertificateSecurity` ます。
+   `EncryptionServiceClient`オブジェクトの`removePDFCertificateSecurity`メソッドを呼び出し、次の値を渡すことで、証明書ベースの暗号化をPDFドキュメントから削除します。
 
-   * 暗号化されたPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
+   * 暗号化されたPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトです。
    * PDfドキュメントの暗号化に使用されるキーに対応する秘密鍵のエイリアス名を指定するstring値。
 
-   この `removePDFCertificateSecurity` メソッドは、保護されていないPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトを返します。
+   `removePDFCertificateSecurity`メソッドは、保護されていないPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを返します。
 
 1. PDFドキュメントを保存します。
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method to copy the contents of the `Document` object to the file. `com.adobe.idp.Document` メソッドから返された `removePDFCredentialSecurity` オブジェクトを必ず使用してください。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`Document`オブジェクトの内容をファイルにコピーします。 `com.adobe.idp.Document` メソッドから返された `removePDFCredentialSecurity` オブジェクトを必ず使用してください。
 
 **関連トピック**
 
@@ -565,54 +565,54 @@ Encryption API(Java)を使用して、PDFドキュメントから証明書ベー
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した証明書ベースの暗号化の削除 {#remove-certificate-based-encryption-using-the-web-service-api}
+### WebサービスAPI {#remove-certificate-based-encryption-using-the-web-service-api}を使用して証明書ベースの暗号化を削除する
 
 Encryption API（Webサービス）を使用して、証明書ベースの暗号化を削除します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Encryptionサービスクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`EncryptionServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`EncryptionServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、暗号化されたPDFドキュメントを保存するために使用されます。
-   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * バイト配列の内容を `BLOB` オブジェクトの `BLOB``MTOM` データメンバーに割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、暗号化されたPDFドキュメントの保存に使用されます。
+   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * バイト配列の内容を`BLOB`オブジェクトの`MTOM`データメンバーに割り当てて、`BLOB`オブジェクトを入力します。
 
 1. 暗号化を削除します。
 
-   オブジェクトの `EncryptionServiceClient``removePDFCertificateSecurity` メソッドを呼び出し、次の値を渡します。
+   `EncryptionServiceClient`オブジェクトの`removePDFCertificateSecurity`メソッドを呼び出し、次の値を渡します。
 
-   * 暗号化されたPDFドキュメントを表すファイルストリームデータを含む `BLOB` オブジェクトです。
+   * 暗号化されたPDFドキュメントを表すファイルストリームデータを含む`BLOB`オブジェクトです。
    * PDfドキュメントの暗号化に使用される秘密鍵に対応する公開鍵のエイリアス名を指定するstring値。
 
-   この `removePDFCredentialSecurity` メソッドは、保護されていないPDFドキュメントを含む `BLOB` オブジェクトを返します。
+   `removePDFCredentialSecurity`メソッドは、保護されていないPDFドキュメントを含む`BLOB`オブジェクトを返します。
 
 1. PDFドキュメントを保存します。
 
-   * コンストラクターを呼び出し、保護されていないPDFドキュメントのファイルの場所を表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `removePDFPasswordSecurity` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、保護されていないPDFドキュメントーのファイルの場所を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `removePDFPasswordSecurity`メソッドから返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -622,15 +622,15 @@ Encryption API（Webサービス）を使用して、証明書ベースの暗号
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## パスワード暗号化の削除 {#removing-password-encryption}
+## パスワード暗号化の削除{#removing-password-encryption}
 
 パスワードベースの暗号化をPDFドキュメントから削除して、パスワードを指定しなくても、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができるようにすることができます。 パスワードベースの暗号化をPDFドキュメントから削除すると、ドキュメントのセキュリティは保護されなくなります。
 
 >[!NOTE]
 >
->For more information about the Encryption service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Encryptionサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-3}
+### 手順{#summary_of_steps-3}の概要
 
 PDFドキュメントからパスワードベースの暗号化を削除するには、次の手順を実行します。
 
@@ -654,7 +654,7 @@ PDFドキュメントからパスワードベースの暗号化を削除する�
 
 **Encryptionサービスクライアントの作成**
 
-プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、 `EncrytionServiceClient` オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、 `EncryptionServiceService` オブジェクトを作成します。
+プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、`EncrytionServiceClient`オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、`EncryptionServiceService`オブジェクトを作成します。
 
 **暗号化されたPDFドキュメントの取得**
 
@@ -662,7 +662,7 @@ PDFドキュメントからパスワードベースの暗号化を削除する�
 
 **パスワードの削除**
 
-暗号化されたPDFドキュメントからパスワードベースの暗号化を削除するには、暗号化されたPDFドキュメントと、PDFドキュメントから暗号化を削除するために使用するマスターパスワードの両方を指定する必要があります。 パスワードで暗号化されたPDFドキュメントを開く際に使用するパスワードは、暗号化の削除には使用できません。 マスターパスワードは、PDFドキュメントがパスワードを使用して暗号化される場合に指定します。 (「PDFドキュメントのパスワード [による暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)」を参照)。
+暗号化されたPDFドキュメントからパスワードベースの暗号化を削除するには、暗号化されたPDFドキュメントと、PDFドキュメントから暗号化を削除するために使用するマスターパスワードの両方を指定する必要があります。 パスワードで暗号化されたPDFドキュメントを開く際に使用するパスワードは、暗号化の削除には使用できません。 マスターパスワードは、PDFドキュメントがパスワードを使用して暗号化される場合に指定します。 (「[パスワードによるPDFドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)」を参照)。
 
 **PDFドキュメントの保存**
 
@@ -678,7 +678,7 @@ EncryptionサービスでPDFドキュメントからパスワードベースの�
 
 [PDFドキュメントのパスワードによる暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-### Java APIを使用したパスワードベースの暗号化の削除 {#remove-password-based-encryption-using-the-java-api}
+### Java API {#remove-password-based-encryption-using-the-java-api}を使用したパスワードベースの暗号化の削除
 
 Encryption API(Java)を使用して、PDFドキュメントからパスワードベースの暗号化を削除します。
 
@@ -689,79 +689,79 @@ Encryption API(Java)を使用して、PDFドキュメントからパスワード
 1. Encryptionサービスクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `EncryptionServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`EncryptionServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、暗号化されたPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、暗号化されたPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. パスワードを削除します。
 
-   オブジェクトの `EncryptionServiceClient` メソッドを呼び出し、次の値を渡すことで、PDFドキュメントからパスワードベースの暗号化を削除し `removePDFPasswordSecurity` ます。
+   `EncryptionServiceClient`オブジェクトの`removePDFPasswordSecurity`メソッドを呼び出し、次の値を渡すことで、PDFドキュメントからパスワードベースの暗号化を削除します。
 
-   * 暗号化されたPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
+   * 暗号化されたPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトです。
    * PDFドキュメントから暗号化を削除するために使用されるマスターパスワード値を指定するstring値です。
 
-   この `removePDFPasswordSecurity` メソッドは、保護されていないPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトを返します。
+   `removePDFPasswordSecurity`メソッドは、保護されていないPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを返します。
 
 1. PDFドキュメントを保存します。
 
-   * Create a `java.io.File` object and ensure that the file name extension is .pdf.
-   * Invoke the `com.adobe.idp.Document` object’s `copyToFile` method to copy the contents of the `Document` object to the file. `Document` メソッドから返された `removePDFPasswordSecurity` オブジェクトを必ず使用してください。
+   * `java.io.File`オブジェクトを作成し、ファイル名の拡張子が.pdfであることを確認します。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`Document`オブジェクトの内容をファイルにコピーします。 `Document` メソッドから返された `removePDFPasswordSecurity` オブジェクトを必ず使用してください。
 
 **関連トピック**
 
 [クイック開始（SOAPモード）:Java APIを使用したパスワードベースの暗号化の削除](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
 
-### WebサービスAPIを使用したパスワードベースの暗号化の削除 {#remove-password-based-encryption-using-the-web-service-api}
+### WebサービスAPI {#remove-password-based-encryption-using-the-web-service-api}を使用してパスワードベースの暗号化を削除
 
 Encryption API（Webサービス）を使用して、パスワードベースの暗号化を削除します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Encryptionサービスクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`EncryptionServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`EncryptionServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、パスワードで暗号化されたPDFドキュメントを保存するために使用されます。
-   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * バイト配列の内容を `BLOB` オブジェクトの `BLOB``MTOM` データメンバーに割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、パスワードで暗号化されたPDFドキュメントを保存するために使用します。
+   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * バイト配列の内容を`BLOB`オブジェクトの`MTOM`データメンバーに割り当てて、`BLOB`オブジェクトを入力します。
 
 1. パスワードを削除します。
 
-   オブジェクトの `EncryptionServiceService``removePDFPasswordSecurity` メソッドを呼び出し、次の値を渡します。
+   `EncryptionServiceService`オブジェクトの`removePDFPasswordSecurity`メソッドを呼び出し、次の値を渡します。
 
-   * 暗号化されたPDFドキュメントを表すファイルストリームデータを含む `BLOB` オブジェクトです。
+   * 暗号化されたPDFドキュメントを表すファイルストリームデータを含む`BLOB`オブジェクトです。
    * PDFドキュメントから暗号化を削除するために使用されるパスワード値を指定するstring値です。 この値は、PDFドキュメントをパスワードで暗号化する場合に指定します。
 
-   この `removePDFPasswordSecurity` メソッドは、保護されていないPDFドキュメントを含む `BLOB` オブジェクトを返します。
+   `removePDFPasswordSecurity`メソッドは、保護されていないPDFドキュメントを含む`BLOB`オブジェクトを返します。
 
 1. PDFドキュメントを保存します。
 
-   * コンストラクターを呼び出し、保護されていないPDFドキュメントのファイルの場所を表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `removePDFPasswordSecurity` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、保護されていないPDFドキュメントーのファイルの場所を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `removePDFPasswordSecurity`メソッドから返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -769,15 +769,15 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 暗号化されたPDFドキュメントのロック解除 {#unlocking-encrypted-pdf-documents}
+## 暗号化されたPDFドキュメントのロックを解除{#unlocking-encrypted-pdf-documents}
 
 パスワードで暗号化または証明書で暗号化されたPDFドキュメントは、ロックを解除しないと、別のAEM Forms操作を実行できません。 暗号化されたPDFドキュメントに対して操作を実行しようとすると、例外が生成されます。 暗号化されたPDFドキュメントのロックを解除した後、暗号化されたPDF画像に対して1つ以上の操作を実行できます。 これらの操作は、Acrobat Reader DC拡張サービスなど、他のサービスに属することができます。
 
 >[!NOTE]
 >
->For more information about the Encryption service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Encryptionサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-4}
+### 手順{#summary_of_steps-4}の概要
 
 暗号化されたPDFドキュメントのロックを解除するには、次の手順を実行します。
 
@@ -801,7 +801,7 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
 **Encryptionサービスクライアントの作成**
 
-プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、 `EncrytionServiceClient` オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、 `EncryptionServiceService` オブジェクトを作成します。
+プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、`EncrytionServiceClient`オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、`EncryptionServiceService`オブジェクトを作成します。
 
 **暗号化されたPDFドキュメントの取得**
 
@@ -809,7 +809,7 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
 **ドキュメントのロック解除**
 
-パスワードで暗号化されたPDFドキュメントのロックを解除するには、暗号化されたPDFドキュメントと、パスワードで暗号化されたPDFドキュメントを開くために使用するパスワード値の両方が必要です。 この値は、PDFドキュメントをパスワードで暗号化する場合に指定します。 (「PDFドキュメントのパスワード [による暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)」を参照)。
+パスワードで暗号化されたPDFドキュメントのロックを解除するには、暗号化されたPDFドキュメントと、パスワードで暗号化されたPDFドキュメントを開くために使用するパスワード値の両方が必要です。 この値は、PDFドキュメントをパスワードで暗号化する場合に指定します。 (「[パスワードによるPDFドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)」を参照)。
 
 証明書で暗号化されたPDFドキュメントのロックを解除するには、暗号化されたPDFドキュメントと、PDFドキュメントの暗号化に使用された秘密鍵に対応する公開鍵のエイリアス値の両方が必要です。
 
@@ -829,7 +829,7 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
 [EncryptionサービスAPIのクイック開始](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-### Java APIを使用した暗号化されたPDFドキュメントのロック解除 {#unlock-an-encrypted-pdf-document-using-the-java-api}
+### Java API {#unlock-an-encrypted-pdf-document-using-the-java-api}を使用した暗号化されたPDFドキュメントのロック解除
 
 暗号化API(Java)を使用して暗号化されたPDFドキュメントのロックを解除します。
 
@@ -840,32 +840,32 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 1. Encryptionサービスクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `EncryptionServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`EncryptionServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
-   * コンストラクターを使用し、暗号化されたPDFドキュメントの場所を指定するstring値を渡して、暗号化されたPDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、暗号化されたPDFドキュメントの場所を指定するstring値を渡して、暗号化されたPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. ドキュメントのロックを解除します。
 
-   オブジェクトまたは `EncryptionServiceClient` メソッドを呼び出して、暗号化されたPDFドキュメントのロックを解除し `unlockPDFUsingPassword` ま `unlockPDFUsingCredential` す。
+   `EncryptionServiceClient`オブジェクトの`unlockPDFUsingPassword`メソッドまたは`unlockPDFUsingCredential`メソッドを呼び出して、暗号化されたPDFドキュメントのロックを解除します。
 
-   パスワードを使用して暗号化されたPDFドキュメントのロックを解除するには、 `unlockPDFUsingPassword` メソッドを呼び出し、次の値を渡します。
+   パスワードを使用して暗号化されたPDFドキュメントのロックを解除するには、`unlockPDFUsingPassword`メソッドを呼び出し、次の値を渡します。
 
-   * パスワードで暗号化されたPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
+   * パスワードで暗号化されたPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトです。
    * パスワードで暗号化されたPDFドキュメントを開くために使用されるパスワード値を指定するstring値です。 この値は、PDFドキュメントをパスワードで暗号化する場合に指定します。
 
-   証明書で暗号化されているPDFドキュメントのロックを解除するには、 `unlockPDFUsingCredential` メソッドを呼び出し、次の値を渡します。
+   証明書で暗号化されたPDFドキュメントのロックを解除するには、`unlockPDFUsingCredential`メソッドを呼び出し、次の値を渡します。
 
-   * A `com.adobe.idp.Document` object that contains the certificate-encrypted PDF document.
+   * 証明書で暗号化されたPDFドキュメントが含まれる`com.adobe.idp.Document`オブジェクトです。
    * PDFドキュメントの暗号化に使用される秘密鍵に対応する公開鍵のエイリアス名を指定するstring値。
 
-   メソッド `unlockPDFUsingPassword` と `unlockPDFUsingCredential` メソッドは共に、別のAEM FormsJavaメソッドに渡した `com.adobe.idp.Document` オブジェクトを返し、操作を実行します。
+   `unlockPDFUsingPassword`メソッドと`unlockPDFUsingCredential`メソッドは共に`com.adobe.idp.Document`オブジェクトを返します。このオブジェクトは、別のAEM FormsJavaメソッドに渡して操作を実行します。
 
 1. AEM Forms操作を実行します。
 
-   ロック解除されたPDFドキュメントに対して、ビジネス要件に合わせてAEM Forms操作を実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合は、またはのメソッドによって返された `com.adobe.idp.Document` オブジェクトをその `unlockPDFUsingPassword` オブジェクトの `unlockPDFUsingCredential``ReaderExtensionsServiceClient``applyUsageRights` メソッドに渡します。
+   ロック解除されたPDFドキュメントに対して、ビジネス要件に合わせてAEM Forms操作を実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合、`unlockPDFUsingPassword`メソッドまたは`unlockPDFUsingCredential`メソッドから返された`com.adobe.idp.Document`オブジェクトを`ReaderExtensionsServiceClient`オブジェクトの`applyUsageRights`メソッドに渡します。
 
 **関連トピック**
 
@@ -879,58 +879,58 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した暗号化されたPDFドキュメントのロック解除 {#unlock-an-encrypted-pdf-document-using-the-web-service-api}
+### WebサービスAPI {#unlock-an-encrypted-pdf-document-using-the-web-service-api}を使用して暗号化されたPDFドキュメントのロックを解除する
 
 Encryption API（Webサービス）を使用して暗号化されたPDFドキュメントのロックを解除します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Encryptionサービスクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`EncryptionServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`EncryptionServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。
-   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * バイト配列の内容を `BLOB` オブジェクトの `BLOB``MTOM` データメンバーに割り当てて、オブジェクトを設定します。
+   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * バイト配列の内容を`BLOB`オブジェクトの`MTOM`データメンバーに割り当てて、`BLOB`オブジェクトを入力します。
 
 1. ドキュメントのロックを解除します。
 
-   オブジェクトまたは `EncryptionServiceClient` メソッドを呼び出して、暗号化されたPDFドキュメントのロックを解除し `unlockPDFUsingPassword` ま `unlockPDFUsingCredential` す。
+   `EncryptionServiceClient`オブジェクトの`unlockPDFUsingPassword`メソッドまたは`unlockPDFUsingCredential`メソッドを呼び出して、暗号化されたPDFドキュメントのロックを解除します。
 
-   パスワードを使用して暗号化されたPDFドキュメントのロックを解除するには、 `unlockPDFUsingPassword` メソッドを呼び出し、次の値を渡します。
+   パスワードを使用して暗号化されたPDFドキュメントのロックを解除するには、`unlockPDFUsingPassword`メソッドを呼び出し、次の値を渡します。
 
-   * パスワードで暗号化されたPDFドキュメントを含む `BLOB` オブジェクトです。
+   * パスワードで暗号化されたPDFドキュメントを含む`BLOB`オブジェクトです。
    * パスワードで暗号化されたPDFドキュメントを開くために使用されるパスワード値を指定するstring値です。 この値は、PDFドキュメントをパスワードで暗号化する場合に指定します。
 
-   証明書で暗号化されているPDFドキュメントのロックを解除するには、 `unlockPDFUsingCredential` メソッドを呼び出し、次の値を渡します。
+   証明書で暗号化されたPDFドキュメントのロックを解除するには、`unlockPDFUsingCredential`メソッドを呼び出し、次の値を渡します。
 
-   * A `BLOB` object that contains the certificate-encrypted PDF document.
+   * 証明書で暗号化されたPDFドキュメントが含まれる`BLOB`オブジェクトです。
    * PDfドキュメントの暗号化に使用される秘密鍵に対応する公開鍵のエイリアス名を指定するstring値。
 
-   メソッド `unlockPDFUsingPassword` と `unlockPDFUsingCredential` メソッドは共に、別のAEM Formsメソッドに渡した `com.adobe.idp.Document` オブジェクトを返し、操作を実行します。
+   `unlockPDFUsingPassword`メソッドと`unlockPDFUsingCredential`メソッドは共に、別のAEM Formsメソッドに渡す`com.adobe.idp.Document`オブジェクトを返します。
 
 1. AEM Forms操作を実行します。
 
-   ロック解除されたPDFドキュメントに対して、ビジネス要件に合わせてAEM Forms操作を実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合は、またはのメソッドによって返された `BLOB` オブジェクトをその `unlockPDFUsingPassword` オブジェクトの `unlockPDFUsingCredential``ReaderExtensionsServiceClient``applyUsageRights` メソッドに渡します。
+   ロック解除されたPDFドキュメントに対して、ビジネス要件に合わせてAEM Forms操作を実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合、`unlockPDFUsingPassword`メソッドまたは`unlockPDFUsingCredential`メソッドから返された`BLOB`オブジェクトを`ReaderExtensionsServiceClient`オブジェクトの`applyUsageRights`メソッドに渡します。
 
 **関連トピック**
 
@@ -940,7 +940,7 @@ Encryption API（Webサービス）を使用して暗号化されたPDFドキュ
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 暗号化タイプの決定 {#determining-encryption-type}
+## 暗号化タイプの決定{#determining-encryption-type}
 
 Java Encryption Service APIまたはWebサービスのEncryption Service APIを使用して、PDFドキュメントを保護する暗号化の種類をプログラムで判断できます。 PDFドキュメントが暗号化されているかどうか、および暗号化されている場合は暗号化の種類を動的に判断する必要がある場合があります。 例えば、PDFドキュメントをパスワードベースの暗号化またはRights Managementポリシーで保護するかどうかを指定できます。
 
@@ -953,9 +953,9 @@ PDFドキュメントは、次の暗号化タイプで保護できます。
 
 >[!NOTE]
 >
->For more information about the Encryption service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Encryptionサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-5}
+### 手順{#summary_of_steps-5}の概要
 
 PDFドキュメントを保護する暗号化の種類を決定するには、次の手順を実行します。
 
@@ -978,7 +978,7 @@ PDFドキュメントを保護する暗号化の種類を決定するには、�
 
 **サービスクライアントの作成**
 
-プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、 `EncrytionServiceClient` オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、 `EncryptionServiceService` オブジェクトを作成します。
+プログラムによってEncryptionサービスの操作を実行するには、Encryptionサービスクライアントを作成する必要があります。 Java Encryption Service APIを使用している場合は、`EncrytionServiceClient`オブジェクトを作成します。 WebサービスのEncryption Service APIを使用している場合は、`EncryptionServiceService`オブジェクトを作成します。
 
 **暗号化されたPDFドキュメントの取得**
 
@@ -1002,7 +1002,7 @@ PDFドキュメントを保護する暗号化の種類を指定できます。 P
 
 [ポリシーによるドキュメントの保護](/help/forms/developing/protecting-documents-policies.md#protecting-documents-with-policies)
 
-### Java APIを使用した暗号化タイプの決定 {#determine-the-encryption-type-using-the-java-api}
+### Java API {#determine-the-encryption-type-using-the-java-api}を使用して暗号化タイプを決定する
 
 Encryption API(Java)を使用して、PDFドキュメントを保護する暗号化の種類を決定します。
 
@@ -1013,17 +1013,17 @@ Encryption API(Java)を使用して、PDFドキュメントを保護する暗号
 1. サービスクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `EncryptionServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`EncryptionServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、PDFドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定するstring値を渡して、PDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 暗号化タイプを決定します。
 
-   * オブジェクトの `EncryptionServiceClient` メソッドを呼び出し、PDFドキュメントを含むオブジェクトを渡すことで、暗号化タイプを決定し `getPDFEncryption``com.adobe.idp.Document` ます。 このメソッドは、 `EncryptionTypeResult` オブジェクトを返します。
-   * オブジェクトの `EncryptionTypeResult` メソッドを呼び出し `getEncryptionType` ます。 このメソッドは、暗号化の種類を指定する `EncryptionType` 列挙値を返します。 例えば、PDFドキュメントがパスワードベースの暗号化で保護されている場合、このメソッドはを返し `EncryptionType.PASSWORD`ます。
+   * `EncryptionServiceClient`オブジェクトの`getPDFEncryption`メソッドを呼び出し、PDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを渡して、暗号化の種類を決定します。 このメソッドは、`EncryptionTypeResult`オブジェクトを返します。
+   * `EncryptionTypeResult`オブジェクトの`getEncryptionType`メソッドを呼び出します。 このメソッドは、暗号化の種類を指定する`EncryptionType`列挙値を返します。 例えば、PDFドキュメントがパスワードベースの暗号化で保護されている場合、`EncryptionType.PASSWORD`を返します。
 
 **関連トピック**
 
@@ -1035,43 +1035,43 @@ Encryption API(Java)を使用して、PDFドキュメントを保護する暗号
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した暗号化の種類の決定 {#determine-the-encryption-type-using-the-web-service-api}
+### WebサービスAPI {#determine-the-encryption-type-using-the-web-service-api}を使用して暗号化の種類を決定する
 
 Encryption API（Webサービス）を使用して、PDFドキュメントを保護する暗号化の種類を決定します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. サービスクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
+   * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`EncryptionServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`EncryptionServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 暗号化されたPDFドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。
-   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * バイト配列の内容を `BLOB` オブジェクトの `BLOB``MTOM` データメンバーに割り当てて、オブジェクトを設定します。
+   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * バイト配列の内容を`BLOB`オブジェクトの`MTOM`データメンバーに割り当てて、`BLOB`オブジェクトを入力します。
 
 1. 暗号化タイプを決定します。
 
-   * オブジェクトの `EncryptionServiceClient` メソッドを呼び出し、PDFドキュメントを含む `getPDFEncryption``BLOB` オブジェクトを渡します。 このメソッドは、 `EncryptionTypeResult` オブジェクトを返します。
-   * オブジェクトの `EncryptionTypeResult` データメソッドの値を取得し `encryptionType` ます。 例えば、PDFドキュメントがパスワードベースの暗号化で保護されている場合、このデータメンバーの値はで `EncryptionType.PASSWORD`す。
+   * `EncryptionServiceClient`オブジェクトの`getPDFEncryption`メソッドを呼び出し、PDFドキュメントを含む`BLOB`オブジェクトを渡します。 このメソッドは、`EncryptionTypeResult`オブジェクトを返します。
+   * `EncryptionTypeResult`オブジェクトの`encryptionType`データメソッドの値を取得します。 例えば、PDFドキュメントがパスワードベースの暗号化で保護されている場合、このデータメンバーの値は`EncryptionType.PASSWORD`です。
 
 **関連トピック**
 
