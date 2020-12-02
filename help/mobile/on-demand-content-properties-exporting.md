@@ -24,19 +24,19 @@ ht-degree: 30%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-Apps are represented as *cq:Pages* in AEM.
+AEMでは、アプリは&#x200B;*cq:Pages*&#x200B;と表されます。
 
-They share the same common properties found in any *cq:Page* in addition to others shown below that represent integration supporting properties.
+*cq:Page*&#x200B;と同じ共通のプロパティを共有します。また、以下に示す統合サポートプロパティを表す共通のプロパティも共有します。
 
 ## アプリのプロパティ {#app-properties}
 
-The following table shows **App Properties and Nodes**.
+次の表に、**アプリのプロパティとノード**&#x200B;を示します。
 
 <table>
  <tbody>
   <tr>
    <td><strong>プロパティ名</strong></td>
-   <td><strong>型</strong></td>
+   <td><strong>種類</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
@@ -56,12 +56,12 @@ The following table shows **App Properties and Nodes**.
   </tr>
   <tr>
    <td>dps-projectTitle</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>アプリのタイトル。</td>
   </tr>
   <tr>
    <td>dps-resourceType</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>コンテンツタイプ.</td>
   </tr>
   <tr>
@@ -82,12 +82,12 @@ The following table shows **App Properties and Nodes**.
   <tr>
    <td>sling:resourceType</td>
    <td>文字列:パス</td>
-   <td><p>mobileapps/core/components/instanceを拡張または拡張するcq: <i>コンポーネントへのパス。</i></p> <p>これにより、アプリカタログでの配置とレンダリングが可能になります。</p> </td>
+   <td><p><i>mobileapps/core/components/instance.</i>を拡張または拡張するcq:Componentへのパス</p> <p>これにより、アプリカタログでの配置とレンダリングが可能になります。</p> </td>
   </tr>
  </tbody>
 </table>
 
-You can use ***Content Properties*** to create content. 記事および共有リソースの作成と書き出しについては、以下のリソースを参照してください。
+***コンテンツプロパティ***&#x200B;を使用して、コンテンツを作成できます。 記事および共有リソースの作成と書き出しについては、以下のリソースを参照してください。
 
 * [コンテンツのプロパティ](/help/mobile/content-properties.md)
 * [記事の書き出し設定の作成](/help/mobile/creating-article-export-configuration.md)
