@@ -40,7 +40,7 @@ UGC のモデレートは、肯定的な投稿を見分けるだけでなく、�
 
 * [一括モデレートコンソール](moderation.md)
 
-   The Moderation console is accessible by administrators and [community moderators](/help/communities/users.md) in the public environment as well as by administrators in the author environment. This is possible when community content is stored in a [common store](/help/communities/working-with-srp.md).
+   モデレートコンソールには、パブリック環境の管理者と[コミュニティモデレーター](/help/communities/users.md)、作成者環境の管理者がアクセスできます。 これは、コミュニティコンテンツが[共通ストア](/help/communities/working-with-srp.md)に保存されている場合に可能です。
 
 * [コンテキスト内モデレート](in-context.md)
 
@@ -52,11 +52,11 @@ UGC のモデレートは、肯定的な投稿を見分けるだけでなく、�
 
 * `Admin`
 
-   A user who is a member of [community-administrators](users.md) group.
+   [community-administrators](users.md)グループのメンバーであるユーザー。
 
 * `Moderator`
 
-   A member of a [community moderators](users.md#publishenvironmentusersandgroups) group (has [moderator permissions](in-context.md#moderatorpermissions)).
+   [コミュニティモデレーター](users.md#publishenvironmentusersandgroups)グループのメンバー（[モデレーター権限](in-context.md#moderatorpermissions)を持ちます）。
 
 * `Creator`
 
@@ -151,7 +151,7 @@ UGC のモデレートは、肯定的な投稿を見分けるだけでなく、�
 
 UGC を削除すると、リポジトリから消去され、復元できなくなります。
 
-### 切り取り {#cut}
+### 切り取り  {#cut}
 
 管理者またはコミュニティモデレーターは、1 つ以上のフォーラムトピックまたは Q&amp;A の質問を、ある場所から別の場所に移動できます。これには、1つのコミュニティサイトから別のコミュニティサイトへの訪問も含まれます。ただし、同じメンバーが両方のサイトでモデレート権限を持っている場合に限られます。
 
@@ -165,7 +165,7 @@ UGC を削除すると、リポジトリから消去され、復元できなく�
 
 ![pastugc](assets/pasteugc.png)
 
-![pasteugc1](assets/pasteugc1.png)
+![pastugc1](assets/pasteugc1.png)
 
 ### 拒否 {#deny}
 
@@ -189,7 +189,7 @@ UGC を削除すると、リポジトリから消去され、復元できなく�
 
 すべてのフラグと、フラグを付けた人、フラグの理由はシステムで追跡され、しきい値に達するとイベントが送信されます。コミュニティモデレーターがUGCを許可している場合、これらのフラグはアーカイブされます。 許可およびアーカイブの後にフラグが設定された場合は、以前のフラグ設定はなかったものとして、後のフラグがアーカイブされます。
 
-### 許可 {#allow}
+### 許可  {#allow}
 
 許可のアクションは、フラグが設定された UGC や、拒否された UGC、事前モデレートシステムで承認されなかった UGC に対するオプションです。許可アクションは、フラグ付きまたは拒否/スパムのステータスが存在する場合はすべて消去し、フラグ付きのデータをアーカイブします。
 
@@ -197,11 +197,13 @@ UGC を削除すると、リポジトリから消去され、復元できなく�
 
 ### 事前モデレート {#premoderation}
 
-UGC の事前モデレートがおこなわれる場合、投稿は、モデレートアクションで承認されるまでは公開サイトに表示されません。During creation of a [community site](/help/communities/sites-console.md), checking the box [Content is Premoderated](sites-console.md#moderation) will enable premoderation for the entire site. コンポーネントをページに配置すると、モデレートをサポートするコンポーネントを、編集ダイアログの設定を使用して、モデレート前の設定に設定できます。
+UGC の事前モデレートがおこなわれる場合、投稿は、モデレートアクションで承認されるまでは公開サイトに表示されません。[コミュニティサイト](/help/communities/sites-console.md)の作成中に、「[コンテンツを事前モデレート](sites-console.md#moderation)」チェックボックスをオンにすると、サイト全体のプリモデレートが有効になります。 コンポーネントをページに配置すると、モデレートをサポートするコンポーネントを、編集ダイアログの設定を使用して、モデレート前の設定に設定できます。
 
-* [コメント](comments.md) と [](reviews.md)**[!UICONTROL レビューは、]** ユーザーモデレート **[!UICONTROL /]**&#x200B;事前モデレートで行います。
+* [](comments.md) コメントと [](reviews.md)
+レビュー( **[!UICONTROL ユーザーモデレート]** / **[!UICONTROL 事前モデレート]**)。
 
-* [Forum](/help/communities/forum.md), ideation [,](/help/communities/ideation-feature.md)QnA [, and calendar](/help/communities/working-with-qna.md)in the Forum [,](/help/communities/calendar.md)QnA **[!UICONTROL , and calendar]** in the Settings/nModerated **** Moderated Moderated NotThent
+* [Forum](/help/communities/forum.md),  [Ideation](/help/communities/ideation-feature.md),  [QnA](/help/communities/working-with-qna.md), and calendarding Settings  [](/help/communities/calendar.md)
+in the forum  **[!UICONTROL nodated]**  ****&amp; Moderated
 
 ### スパム検出 {#spam-detection}
 
@@ -219,10 +221,10 @@ UGC の事前モデレートがおこなわれる場合、投稿は、モデレ�
 
 スパム検出エンジンを有効にするには、次の手順に従います。
 
-1. Open [Web Console](https://localhost:4502/system/console/configMgr), by going to `/system/console/configMgr`.
+1. [`/system/console/configMgr`に移動して、&lt;a0/>Webコンソール](https://localhost:4502/system/console/configMgr)を開きます。
 
 1. **AEM Communities Auto Moderation** 設定を見つけて編集します。
-1. Add the **[!UICONTROL SpamProcess]** entry.
+1. 追加&#x200B;**[!UICONTROL SpamProcess]**&#x200B;エントリ。
 
 ![間抜け](assets/spamprocess.png)
 
@@ -234,7 +236,7 @@ UGC の事前モデレートがおこなわれる場合、投稿は、モデレ�
 
 好感度は、投稿（UGC）内に存在する肯定的および否定的なキーワード（[ウォッチワード](#configuringwatchwords)）の数に基づいて計算されます。
 
-好感度分析では、あらかじめ設定した一連のルールが使用され、UGC の好感度が計算されます。デフォルトのルールは次の場所にあります。 `/libs/cq/workflow/components/workflow/social/sentiments/rules.`
+好感度分析では、あらかじめ設定した一連のルールが使用され、UGC の好感度が計算されます。デフォルトのルールは次の場所にあります。`/libs/cq/workflow/components/workflow/social/sentiments/rules.`
 
 ルールにより生成される値は、1（すべて否定的、肯定的な言葉なし）～ 10（すべて肯定的、否定的な言葉なし）です。値 5 は中立の好感度を表し、これがデフォルトになります。
 
@@ -251,9 +253,9 @@ UGC の事前モデレートがおこなわれる場合、投稿は、モデレ�
 
 [一括モデレートコンソール](/help/communities/moderation.md)では、肯定的、否定的または中立のいずれかの好感度で UGC をフィルタリングして表示できます。
 
-#### ウォッチワード {#watchwords}
+#### ウォッチワード  {#watchwords}
 
-AEM communities provides a *watchword analyzer* as a step in the process to evalute [sentiment](#sentiment). 監視ワードによって提供されるセンチメント値に対する貢献度は、投稿されたコンテンツで使用される否定的な監視ワードと肯定的な監視ワード、および禁止された単語が比較された結果です。
+AEM communitiesでは、*watchword analyzer*&#x200B;を[センチメント](#sentiment)を評価するプロセスのステップとして提供しています。 監視ワードによって提供されるセンチメント値に対する貢献度は、投稿されたコンテンツで使用される否定的な監視ワードと肯定的な監視ワード、および禁止された単語が比較された結果です。
 
 #### 好感度とウォッチワードの設定 {#configure-sentiment-and-watchwords}
 
@@ -261,13 +263,13 @@ AEM communities provides a *watchword analyzer* as a step in the process to eval
 
 ウォッチワードのデフォルトのリストは、リポジトリ内のノードのプロパティとして、デフォルトと同様に入力できます。また、単語のリストを使用して OSGi サービス `sentimentprocess.name` を設定することで、デフォルトを上書きしても入力できます。
 
-The **sentimentprocess.name** may also be modified to reference the location of a custom set of sentiment rules.
+**sentimentprocess.name**&#x200B;も、カスタムセンチメントルールのセットの場所を参照するように変更できます。
 
 好感度とウォッチワードを設定するには：
 
 *  オーサーインスタンスに管理者としてログインします。
-* Open [Web Console](https://localhost:4502/system/console/configMgr).
-* Locate `sentimentprocess.name`.
+* [Webコンソール](https://localhost:4502/system/console/configMgr)を開きます。
+* `sentimentprocess.name`を探します。
 * 編集モードで開く設定を選択します。
 
 ![感傷過程](assets/sentimentprocess.png)
@@ -282,19 +284,19 @@ The **sentimentprocess.name** may also be modified to reference the location of 
 
 * **監視ワードノードへの明示的なパス**
 
-   The repository location of a node containing default `positive` and `negative` properties specifying default watchwords. デフォルトは `/libs/settings/community/watchwords/default` です。
+   デフォルトの監視ワードを指定する、デフォルトの`positive`および`negative`プロパティを含むノードのリポジトリ内の場所です。 デフォルトは `/libs/settings/community/watchwords/default` です。
 
 * **センチメントルール**
 
-   肯定的および否定的ウォッチワードに基づいて好感度を計算するルールのリポジトリの場所です。Default is `/libs/cq/workflow/components/workflow/social/sentiments/rules` (however, there is no longer any workflow involved).
+   肯定的および否定的ウォッチワードに基づいて好感度を計算するルールのリポジトリの場所です。デフォルトは`/libs/cq/workflow/components/workflow/social/sentiments/rules`です（ただし、関係するワークフローはなくなりました）。
 
-Following is an example of a custom entry for the default watchwords, when `Explicit Path to Watchwords Node` is set to `/libs/settings/community/watchwords/default`.
+次に、`Explicit Path to Watchwords Node`を`/libs/settings/community/watchwords/default`に設定した場合のデフォルトの監視ワードのカスタムエントリ例を示します。
 
 ![crxde](assets/crxde.png)
 
 ### モデレーター権限 {#moderator-permissions}
 
-The following permissions, when assigned to the same resource, are collectively referred to as `moderator permissions`:
+次の権限は、同じリソースに割り当てられる場合、`moderator permissions`と総称されます。
 
 * `Read`
 * `Modify`
