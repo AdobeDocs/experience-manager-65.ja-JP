@@ -44,11 +44,11 @@ UGCにASRPを使用するようにAEM Communitiesサイトを設定するには�
 
 ### ASRP の選択 {#select-asrp}
 
-[ストレージ設定コンソール](/help/communities/srp-config.md) では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
+[ストレージ設定コンソール](/help/communities/srp-config.md)では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 **AEM作成者インスタンスで：**
 
-* グローバルナビゲーションから、 **[!UICONTROL ツール/コミュニティ/ストレージ設定]** に移動し、 **[!UICONTROL Adobeストレージリソースプロバイダ(ASRP)を選択し]**&#x200B;ます。
+* グローバルナビゲーションから、**[!UICONTROL ツール/コミュニティ/ストレージ設定]**&#x200B;に移動し、**[!UICONTROL Adobeストレージリソースプロバイダー(ASRP)]**&#x200B;を選択します。
 
 ![asrp-default](assets/asrp-default.png)
 
@@ -67,21 +67,21 @@ UGCにASRPを使用するようにAEM Communitiesサイトを設定するには�
 
 設定を送信したら、以下の手順で接続をテストします。
 
-* 「 **Test Config**」を選択します。
+* 「**テスト構成**」を選択します。
 
    作成者インスタンスと発行インスタンスごとに、ストレージ設定コンソールからデータセンターへの接続をテストします。
 
-* Ensure that the site URLs for profile data are routable from the Data Center by [externalizing links](#externalize-links).
+* プロファイルデータのサイトURLがデータセンターからルーティング可能であることを[外部化リンク](#externalize-links)によって確認します。
 
 ### 暗号鍵のレプリケーション {#replicate-the-crypto-key}
 
 消費者キーと秘密鍵は暗号化されます。キーを正しく暗号化/復号化するためには、すべてのAEMインスタンスでプライマリGranite Cryptoキーが同じである必要があります。
 
-Follow the instructions at [Replicate the Crypto Key](/help/communities/deploy-communities.md#replicate-the-crypto-key).
+[暗号キーを複製](/help/communities/deploy-communities.md#replicate-the-crypto-key)の手順に従ってください。
 
 ### リンクの外部向け変換 {#externalize-links}
 
-For correct profile and profile image links, be sure to properly [Configure the Link Externalizer](/help/sites-developing/externalizer.md).
+正しいプロファイルとプロファイルイメージのリンクを得るには、リンク外部化を正しく[設定](/help/sites-developing/externalizer.md)してください。
 
 ドメインは、データセンターURL（ASRPエンドポイント）からルーティング可能なURLに設定してください。
 
@@ -89,7 +89,7 @@ For correct profile and profile image links, be sure to properly [Configure the 
 
 ASRP エンドポイントでの認証を正常におこなうには、[ネットワークタイムプロトコル（NTP）](https://www.ntp.org/)などを使用して、AEM Communities を実行しているマシンの時刻を同期する必要があります。
 
-### 設定の公開 {#publishing-the-configuration}
+### 設定の公開  {#publishing-the-configuration}
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、ASRP が共通ストアとして指定されている必要があります。
 
@@ -97,23 +97,23 @@ ASRP エンドポイントでの認証を正常におこなうには、[ネッ�
 
 AEM作成者インスタンスで：
 
-* Navigate from main menu to **[!UICONTROL Tools > Operations > Replication]**.
-* Select **Activate Tree**
-* **開始パス**:参照 `/etc/socialconfig/srpc/`
-* 「変更 **済みのみ」の選択を解除**
-* Select **Activate**
+* メインメニューから&#x200B;**[!UICONTROL [ツール]>[操作]>[レプリケーション]]**&#x200B;に移動します。
+* 「**ツリーをアクティブにする**」を選択します。
+* **開始パス**:参照  `/etc/socialconfig/srpc/`
+* 「**変更済み**&#x200B;のみ」を選択解除します。
+* 「**アクティブ化**」を選択します。
 
 ## AEM 6.0 からのアップグレード {#upgrading-from-aem}
 
 >[!CAUTION]
 >
->If you enable ASRP on a published community site, any UGC already stored in [JCR](/help/communities/jsrp.md) is no longer visible, as there is no synchronization of data between on-premise storage and cloud storage.
+>公開済みのコミュニティサイトでASRPを有効にした場合、オンプレミスのストレージとクラウドのストレージ間でデータが同期されないので、[JCR](/help/communities/jsrp.md)に既に保存されているUGCは表示されなくなります。
 
-**`AEM Communities Extension`** は、AEM 6.0のソーシャルコミュニティでクラウドサービスとして以前に導入されています。 As of AEM 6.1 Communities, no cloud configuration is necessary, simply select ASRP from the [storage configuration console](/help/communities/srp-config.md).
+**`AEM Communities Extension`** は、AEM 6.0のソーシャルコミュニティでクラウドサービスとして以前に導入されています。AEM 6.1 Communitiesでは、クラウド設定は不要です。単に[ストレージ設定コンソール](/help/communities/srp-config.md)からASRPを選択します。
 
 新しいストレージ構造により、ソーシャルコミュニティからコミュニティにアップグレードするときは、[アップグレード](/help/communities/upgrade.md#adobe-cloud-storage)手順に従う必要があります。
 
-## ユーザーデータの管理 {#managing-user-data}
+## ユーザーデータの管理  {#managing-user-data}
 
 パブリッシュ環境で頻繁に入力されるユーザー、ユーザープロファイルおよびユーザーグループについては、以下を参照してください。******
 
@@ -124,17 +124,17 @@ AEM作成者インスタンスで：
 
 ### アップグレード後に UGC が表示されない {#ugc-disappears-after-upgrade}
 
-If upgrading from an existing AEM 6.0 social community site, be sure to follow the [upgrade instructions](/help/communities/upgrade.md#adobe-cloud-storage), else UGC appears to be lost.
+既存のAEM 6.0ソーシャルコミュニティサイトからアップグレードする場合は、[アップグレード手順](/help/communities/upgrade.md#adobe-cloud-storage)に従ってください。そうしないと、UGCが失われてしまいます。
 
 ### 認証エラー {#authentication-errors}
 
 データセンター URL に対する認証エラーを受け取り、また AEM error.log に古いタイムスタンプに関するメッセージが含まれている場合は、時刻の同期がおこなわれているかを確認してください。
 
-Use a tool such as the [Network Time Protocol (NTP)](https://www.ntp.org/) to time synchronize all AEM author and publish servers.
+[Network Time Protocol (NTP)](https://www.ntp.org/)などのツールを使用して、AEMの作成者やパブリッシュサーバーの時刻を同期します。
 
 ### 新しいコンテンツが検索結果に表示されない {#new-content-does-not-appear-in-searches}
 
-The Adobe cloud storage infrastructure uses *eventual consistency* to achieve its scaling and performance goals. このため、新しいコンテンツはすぐには利用できず、検索結果に表示されるまで数秒かかります。
+Adobeクラウドのストレージインフラストラクチャは、*最終的な整合性*&#x200B;を使用して、拡張とパフォーマンスの目標を達成します。 このため、新しいコンテンツはすぐには利用できず、検索結果に表示されるまで数秒かかります。
 
 最終的な一貫性に影響する間隔は監視されますが、新しいコンテンツが検索に表示されるまでに数秒以上かかる場合は、アカウント担当者にお問い合わせください。
 
@@ -144,8 +144,8 @@ The Adobe cloud storage infrastructure uses *eventual consistency* to achieve it
 
 すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
-In JCR, if [/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
+JCRで、[/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)の場合：
 
-* Does not contain an [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) node, it means that the storage provider is JSRP.
-* If the srpc node exists and contains node [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties define ASRP to be the default provider.
+* [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)ノードを含まない場合、ストレージプロバイダーがJSRPであることを意味します。
+* srpcノードが存在し、ノード[defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)が含まれる場合、デフォルト設定のプロパティでASRPがデフォルトプロバイダーとして定義されます。
 
