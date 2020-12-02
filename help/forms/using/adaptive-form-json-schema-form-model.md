@@ -26,9 +26,9 @@ ht-degree: 69%
 * [アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)
 * [JSON スキーマ](https://json-schema.org/)
 
-## フォームモデルとしての JSON スキーマの使用  {#using-a-json-schema-as-form-model}
+## フォームモデルとしての JSON スキーマの使用   {#using-a-json-schema-as-form-model}
 
-AEM Forms では、既存の JSON スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。JSON スキーマは、組織のバックエンドシステムによりデータの生成や消費が行われる構造を表しています。The JSON Schema you use should be compliant with [v4 specifications](https://json-schema.org/draft-04/schema).
+AEM Forms では、既存の JSON スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。JSON スキーマは、組織のバックエンドシステムによりデータの生成や消費が行われる構造を表しています。使用するJSONスキーマは、[v4仕様](https://json-schema.org/draft-04/schema)に準拠している必要があります。
 
 JSON スキーマの使用の主な特長は、次のとおりです。
 
@@ -103,7 +103,7 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
   </tr>
   <tr>
    <td>array プロパティ</td>
-   <td>minItems および maxItems にそれぞれ等しい min および max を持つ繰り返し可能なパネル。同種の配列のみがサポートされます。So the items constraint must be an object and not an array.<br /> </td>
+   <td>minItems および maxItems にそれぞれ等しい min および max を持つ繰り返し可能なパネル。同種の配列のみがサポートされます。したがって、項目制約は配列ではなくオブジェクトでなければなりません。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -306,7 +306,7 @@ JSON スキーマの例を示します。
 }
 ```
 
-### 再使用可能なスキーマ定義 {#reusable-schema-definitions}
+### 再使用可能なスキーマ定義  {#reusable-schema-definitions}
 
 定義キーを使用して再使用可能なスキーマを識別します。フラグメントの作成には、再利用可能なスキーマ定義が使用されます。 これは、XSD での複合型の識別と同じです。定義付きの JSON スキーマのサンプルは以下のとおりです。
 
@@ -337,9 +337,9 @@ JSON スキーマの例を示します。
 
 上記の例では、それぞれの顧客が出荷先と請求先のどちらの住所もある場合の顧客レコードを定義します。どちらの住所も構造（都道府県、市区町村、番地など）が同じ場合は、住所が重複しないようにすることをお勧めします。また、今後変更が行われたときに、簡単にフィールドを追加したり削除したりできます。
 
-## JSON スキーマ定義におけるフィールドの事前構成 {#pre-configuring-fields-in-json-schema-definition}
+## JSON スキーマ定義におけるフィールドの事前構成  {#pre-configuring-fields-in-json-schema-definition}
 
-You can use the **aem:afProperties** property to preconfigure JSON Schema field to map to a custom adaptive form component. 以下に例を示します。
+**aem:afProperties**&#x200B;プロパティを使用して、JSONスキーマフィールドを事前設定し、カスタムアダプティブフォームコンポーネントにマップすることができます。 以下に例を示します。
 
 ```json
 {
@@ -359,9 +359,9 @@ You can use the **aem:afProperties** property to preconfigure JSON Schema field 
 }
 ```
 
-## フォームオブジェクトのスクリプトまたは式の設定  {#configure-scripts-or-expressions-for-form-objects}
+## フォームオブジェクトのスクリプトまたは式の設定{#configure-scripts-or-expressions-for-form-objects}
 
-アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。フォームイベント上の式を [評価するために、フォームオブジェクトを事前設定できます](../../forms/using/adaptive-form-expressions.md) 。
+アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。フォームイベント上の式](../../forms/using/adaptive-form-expressions.md)を[評価するために、フォームオブジェクトを事前に設定できます。
 
 aem:afpropertiesプロパティを使用して、アダプティブフォームコンポーネントのアダプティブフォーム式またはスクリプトを事前設定します。 例えば、initializeイベントがトリガされると、次のコードは電話フィールドの値を設定し、ログに値を出力します。
 
@@ -381,7 +381,7 @@ aem:afpropertiesプロパティを使用して、アダプティブフォーム�
 }
 ```
 
-フォームオブジェクトのスクリプトまたは [式を設定するには、](/help/forms/using/forms-groups-privileges-tasks.md) forms-power-userグループのメンバーである必要があります。 次の表に、アダプティブフォームコンポーネントでサポートされるすべてのスクリプトイベントを示します。
+フォームオブジェクトのスクリプトまたは式を設定するには、[forms-power-userグループ](/help/forms/using/forms-groups-privileges-tasks.md)のメンバーである必要があります。 次の表に、アダプティブフォームコンポーネントでサポートされるすべてのスクリプトイベントを示します。
 
 <table>
  <tbody>
@@ -586,11 +586,11 @@ aem:afpropertiesプロパティを使用して、アダプティブフォーム�
  </tbody>
 </table>
 
-JSON内でのイベントの使用例としては、初期化イベント時にフィールドを非表示にし、値コミットイベント時に別のフィールドの値を設定する例があります。 スクリプトイベント用の式の作成に関する詳細は、「 [アダプティブフォーム式](../../forms/using/adaptive-form-expressions.md)」を参照してください。
+JSON内でのイベントの使用例としては、初期化イベント時にフィールドを非表示にし、値コミットイベント時に別のフィールドの値を設定する例があります。 スクリプトイベント用の式の作成について詳しくは、「[アダプティブフォーム式](../../forms/using/adaptive-form-expressions.md)」を参照してください。
 
 前述の例のサンプルJSONコードを以下に示します。
 
-### initializeイベントでのフィールドの非表示 {#hiding-a-field-on-initialize-event}
+### initializeイベント{#hiding-a-field-on-initialize-event}でフィールドを非表示にする
 
 ```json
 "name": {
@@ -603,7 +603,7 @@ JSON内でのイベントの使用例としては、初期化イベント時に�
 }
 ```
 
-#### 値コミットイベントで別のフィールドの値を設定 {#configure-value-of-another-field-on-value-commit-event}
+#### 値コミットイベント{#configure-value-of-another-field-on-value-commit-event}で別のフィールドの値を設定
 
 ```json
 "Income": {
@@ -652,7 +652,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>minimum</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>数値および日付の下限を指定します。デフォルトでは、最小値が含まれます。</p> </td>
    <td>
     <ul>
@@ -674,7 +674,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
-   <td><p>Boolean</p> </td>
+   <td><p>ブール値</p> </td>
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付よりも大きい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付以上の値である必要があります。</p> </td>
    <td>
     <ul>
@@ -685,7 +685,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>minLength</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>コンポーネントで許可される最小文字数を指定します。最小の長さは 0 以上である必要があります。</p> </td>
    <td>
     <ul>
@@ -694,7 +694,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><code>maxLength</code></td>
-   <td>String</td>
+   <td>文字列</td>
    <td>コンポーネントで許可される最大文字数を指定します。最大の長さは 0 以上である必要があります。</td>
    <td>
     <ul>
@@ -703,7 +703,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>pattern</code></p> </td>
-   <td><p>String</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td>
    <td>
     <ul>
@@ -712,13 +712,13 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td>maxItems</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>配列の項目の最大数を指定します。項目の最大数は 0 以上である必要があります。</td>
    <td> </td>
   </tr>
   <tr>
    <td>minItems</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>配列の項目の最小数を指定します。項目の最小数は 0 以上である必要があります。</td>
    <td> </td>
   </tr>
