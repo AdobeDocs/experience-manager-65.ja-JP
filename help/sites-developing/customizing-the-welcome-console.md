@@ -35,7 +35,7 @@ ht-degree: 79%
 * [メインコンソール](#links-in-main-console-left-pane) - メインコンソール（左パネル）のリンク
 * [リソース、ドキュメントとリファレンス、機能](#links-in-sidebar-right-pane) - サイドバー（右パネル）のリンク
 
-## メインコンソール（左パネル）のリンク {#links-in-main-console-left-pane}
+## メインコンソール（左パネル）のリンク  {#links-in-main-console-left-pane}
 
 AEM のメインコンソールが一覧表示されます。
 
@@ -63,13 +63,13 @@ AEM のメインコンソールが一覧表示されます。
 
 次に例を示します。
 
-* To restrict access to **Tools**, remove read access from
+* **ツール**&#x200B;へのアクセスを制限するには、
 
    `/libs/wcm/core/content/misc`
 
 目的の権限の設定方法について詳しくは、[セキュリティ](/help/sites-administering/security.md)の節を参照してください。
 
-### サイドバー（右パネル）のリンク {#links-in-sidebar-right-pane}
+### サイドバー（右パネル）のリンク  {#links-in-sidebar-right-pane}
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
@@ -178,21 +178,21 @@ AEM のメインコンソールが一覧表示されます。
 
 次に例を示します。
 
-* To remove the link to **Reports**, remove read access from
+* **レポート**&#x200B;へのリンクを削除するには、
 
    `/libs/cq/core/content/welcome/resources/reports`
 
-* To remove the link to **Packages**, remove read access from
+* **パッケージ**&#x200B;へのリンクを削除するには、
 
    `/libs/cq/core/content/welcome/features/packages`
 
 目的の権限の設定方法について詳しくは、[セキュリティ](/help/sites-administering/security.md)の節を参照してください。
 
-### リンク選択の仕組み {#link-selection-mechanism}
+### リンク選択の仕組み  {#link-selection-mechanism}
 
-In `/libs/cq/core/components/welcome/welcome.jsp` use is made of [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html), which executes a query on nodes that have the property:
+`/libs/cq/core/components/welcome/welcome.jsp`では、[ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)を使用します。これは、次のプロパティを持つノードのクエリを実行します。
 
-* `jcr:mixinTypes` に次の値を入力します。 `cq:Console`
+* `jcr:mixinTypes` に次の値を入力します。  `cq:Console`
 
 >[!NOTE]
 >
@@ -210,7 +210,7 @@ In `/libs/cq/core/components/welcome/welcome.jsp` use is made of [ConsoleUtil](h
 
 [リンク選択メカニズム](#link-selection-mechanism)を使用して、独自のカスタム項目をリンクのリストに追加できます。
 
-Add your custom item to the list by adding the `cq:Console` mixin to your widget or resource. 次のプロパティを定義することによって、追加をおこないます。
+リストやリソースに追加`cq:Console`ミックスインを追加して、カスタムアイテムをウィジェットに追加します。 次のプロパティを定義することによって、追加をおこないます。
 
-* `jcr:mixinTypes` に次の値を入力します。 `cq:Console`
+* `jcr:mixinTypes` に次の値を入力します。  `cq:Console`
 
