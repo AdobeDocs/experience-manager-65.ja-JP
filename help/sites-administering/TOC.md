@@ -15,7 +15,7 @@ ht-degree: 97%
 ---
 
 
-# AEM 6.5 管理ユーザーガイド {#administering}
+# AEM 6.5 管理ユーザーガイド  {#administering}
 
 + [管理ユーザガイドの概要](home.md)
 + Sites の機能 {#introduction}
@@ -98,7 +98,7 @@ ht-degree: 97%
    + [Content Disposition フィルター](content-disposition-filter.md)
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライズ機能](personalization.md)
+   + [パーソナライゼーション](personalization.md)
    + [ContextHub の設定](/help/sites-developing/ch-configuring.md)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
