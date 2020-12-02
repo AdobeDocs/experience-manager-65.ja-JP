@@ -18,7 +18,7 @@ ht-degree: 100%
 ---
 
 
-# サンドボックスコンテンツの開発  {#develop-sandbox-content}
+# サンドボックスコンテンツの開発   {#develop-sandbox-content}
 
 **[clientlib の追加](add-clientlibs.md)**
 
