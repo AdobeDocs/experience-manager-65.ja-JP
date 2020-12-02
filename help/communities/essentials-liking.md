@@ -19,11 +19,11 @@ ht-degree: 55%
 ---
 
 
-# 「いいね!」の設定の基本事項 {#liking-essentials}
+# 「いいね!」の設定の基本事項  {#liking-essentials}
 
 「いいね!」の設定コンポーネントは、[集計](tally.md)のサブクラスであり、メンバーがハートアイコンをオンにするだけで特定のコンテンツに対して賛成を表明できる便利なツールです。
 
-Placing multiple instances of a liking component on the same page is allowed; each instance must be configured with an unique `tally name` property.
+「いいね！」コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
 
 匿名での「いいね!」の設定の投稿はサポートされていません。サイト訪問者は、「いいね！」に参加するには登録してサインインする必要があります。 ログイン訪問者（メンバ）は、いつでも同様にオン/オフを切り替えることができます。
 
@@ -53,14 +53,14 @@ Placing multiple instances of a liking component on the same page is allowed; ea
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><p>「いいね！」 <a href="liking.md">の使用を参照</a></p> </td>
+   <td><p><a href="liking.md">「いいね！」の使用</a>を参照</p> </td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -68,7 +68,7 @@ Placing multiple instances of a liking component on the same page is allowed; ea
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された投票（UGC）へのアクセス {#accessing-posted-voting-ugc}
+### 投稿された投票（UGC）へのアクセス  {#accessing-posted-voting-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -79,7 +79,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
