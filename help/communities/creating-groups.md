@@ -23,19 +23,19 @@ ht-degree: 37%
 
 コミュニティグループ機能は、サブコミュニティを発行ユーザーと発言者環境から許可されたユーザー（コミュニティのメンバーと発言者）がコミュニティサイト内で動的に作成する機能です。
 
-This ability is present when the [groups function](/help/communities/functions.md#groups-function) is present in the [community site](/help/communities/sites-console.md) structure.
+この機能は、[groups関数](/help/communities/functions.md#groups-function)が[コミュニティサイト](/help/communities/sites-console.md)構造に存在する場合に存在します。
 
-A [community group template](/help/communities/tools-groups.md) provides the design of the community group page when a community group is dynamically created.
+[コミュニティグループテンプレート](/help/communities/tools-groups.md)は、コミュニティグループが動的に作成された場合に、コミュニティグループページのデザインを提供します。
 
 グループ機能をコミュニティサイトの構造またはコミュニティサイトテンプレートに追加すると、1 つ以上のテンプレートがグループ機能用に選択されます。このリストのグループテンプレートは、コミュニティサイト内から動的に新しいグループを作成するメンバーまたは作成者に表示されます。
 
 ## 新しいグループの作成 {#creating-a-new-group}
 
-The ability to create a new community group relies on the existence of a community site which includes the groups function, such as one created from the [Reference Site Template](/help/communities/sites.md).
+新しいコミュニティグループを作成する機能は、[リファレンスサイトテンプレート](/help/communities/sites.md)で作成したグループ機能など、グループ機能を含むコミュニティサイトの存在に依存します。
 
-The examples that follow use the community site created from the `Reference Site Template` as described in the [Getting Started with AEM Communities](/help/communities/getting-started.md) tutorial.
+次の例では、[AEM Communitiesの使い始めに/](/help/communities/getting-started.md)チュートリアルで説明されているように、`Reference Site Template`から作成したコミュニティサイトを使用します。
 
-This is the page that loads on publish when the **Groups** menu item is selected:
+これは、**グループ**&#x200B;メニュー項目が選択されている場合に、発行時に読み込まれるページです。
 
 ![new-group](assets/new-group.png)
 
@@ -63,14 +63,14 @@ This is the page that loads on publish when the **Groups** menu item is selected
 
 * **オープングループ**
 
-   を選択 `Open Group` すると、匿名サイト訪問者がコンテンツに表示する可能性があることを示し、選択が解除され `Member Only Group`ます。
+   `Open Group`を選択すると、匿名サイト訪問者がコンテンツに表示する可能性があることを示し、`Member Only Group`の選択を解除します。
 
 * **メンバーのみのグループ**
 
-   を選択す `Member Only Group` ると、グループのメンバーだけがコンテンツを表示できることを示し、選択が解除され `Open Group`ます。
+   `Member Only Group`を選択すると、グループのメンバーだけがコンテンツを表示できることを示し、`Open Group`の選択を解除します。
 
-Under the **Template** tab is the ability to
-select from the list of community group templates that were specified when the groups function was included in the community site&#39;s structure or in a community site template.
+「**テンプレート**」タブの下には、
+コミュニティサイトの構造またはコミュニティサイトのテンプレートにグループ機能が含まれていたときに指定したコミュニティグループテンプレートのリストから選択します。
 
 ![group-template](assets/group-template.png)
 
@@ -84,16 +84,16 @@ select from the list of community group templates that were specified when the g
 
 ![グループページ](assets/group-page.png)
 
-Selecting the `Focus Group` link will open the Focus Group page in the browser, which has an initial appearance based on the chosen template, and includes a submenu underneath the main community site&#39;s menu:
+`Focus Group`リンクを選択すると、ブラウザーでフォーカスグループページが開きます。このページは、選択したテンプレートに基づいて初期表示され、メインコミュニティサイトのメニューの下にサブメニューが含まれます。
 
 ![open-group-page](assets/open-group-page.png)
 
 ### コミュニティグループメンバーのリストコンポーネント {#community-group-member-list-component}
 
-この `Community Group Member List` コンポーネントは、グループテンプレートの開発者が使用することを目的としています。
+`Community Group Member List`コンポーネントは、グループテンプレートの開発者が使用することを目的としています。
 
 ### 追加情報 {#additional-information}
 
-More information may be found on the [Community Group Essentials](/help/communities/essentials-groups.md) page for developers.
+詳しくは、[Community Group Essentials](/help/communities/essentials-groups.md)ページを参照してください。
 
 コミュニティグループに関連するその他の情報は、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
