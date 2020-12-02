@@ -16,7 +16,7 @@ ht-degree: 73%
 ---
 
 
-# アダプティブフォームの再利用 {#reusing-adaptive-forms}
+# アダプティブフォームの再利用  {#reusing-adaptive-forms}
 
 ## 概要 {#introduction}
 
@@ -30,7 +30,7 @@ ht-degree: 73%
 
 次のいずれかの方法を使用して、アダプティブフォームをコピーします。
 
-1. クイックアクションから ![aem6forms_copy](assets/aem6forms_copy.png) アイコンをクリックします。
+1. クイックアクションから![aem6forms_copy](assets/aem6forms_copy.png)アイコンをコピーをクリックします。
 
    >[!NOTE]
    >
@@ -38,7 +38,7 @@ ht-degree: 73%
 
 1. アダプティブフォームを選択します。選択方法はビューによって異なります。
 
-   If you are in card view, go to selection mode by clicking the selection ![aem6forms_check-circle](assets/aem6forms_check-circle.png) icon and click all the adaptive forms that you want to copy.
+   カード表示の場合は、選択範囲![aem6forms_check-circle](assets/aem6forms_check-circle.png)アイコンをクリックして選択モードに移動し、コピーするすべてのアダプティブフォームをクリックします。
 
    リストビューの場合は、選択するすべてのアダプティブフォームのチェックボックスをオンにします。
 
@@ -46,15 +46,15 @@ ht-degree: 73%
    >
    >コピーと貼り付けの機能はアダプティブフォームのみをサポートしていますので、選択したアセットはすべてアダプティブフォームである必要があります。また、選択したすべてのアセットは同じフォルダー内のものである必要があります。
 
-   After selecting the assets, click the copy ![aem6forms_copy](assets/aem6forms_copy.png) icon present in the toolbar to copy the selected adaptive form.
+   アセットを選択したら、ツールバーにある![aem6forms_copy](assets/aem6forms_copy.png)のコピーアイコンをクリックして、選択したアダプティブフォームをコピーします。
 
 ### アダプティブフォームの貼り付け {#paste-an-adaptive-form}
 
-Clicking the copy action automatically exits the selection mode and makes the paste ![aem6forms_paste](assets/aem6forms_paste.png) icon visible. Now go to the desired folder path and click the paste ![aem6forms_paste](assets/aem6forms_paste.png) icon to paste the copied adaptive form.
+コピーアクションをクリックすると、選択モードが自動的に終了し、貼り付け![aem6forms_paste](assets/aem6forms_paste.png)アイコンが表示されます。 目的のフォルダーパスに移動し、![aem6forms_paste](assets/aem6forms_paste.png)アイコンをクリックして、コピーしたアダプティブフォームを貼り付けます。
 
 同じフォルダー内に貼り付ける場合、または貼り付け先のフォルダー内に同じノード名（CRX リポジトリへの保存に使用される名前）の別のファイルがある場合は、接尾辞に 1 が追加されます（例えば、myaf は myaf1 となり、同じ場所に myaf1 がある場合は myaf が myaf2 になります）。その他のプロパティはすべて元のアダプティブフォームと同じになります。
 
-貼り付けアイコン ![aem6forms_paste](assets/aem6forms_paste.png) （貼り付け）をクリックすると、再び非表示になります。 一度に行える貼り付け操作は一回だけです。同じアセットのコピーを再び作成するには、もう一度コピーします。
+貼り付け![aem6forms_paste](assets/aem6forms_paste.png)アイコンをクリックすると、再び非表示になります。 一度に行える貼り付け操作は一回だけです。同じアセットのコピーを再び作成するには、もう一度コピーします。
 
 ### 新しいアダプティブフォームのコンテンツの変更 {#change-contents-of-new-adaptive-form}
 
@@ -62,7 +62,7 @@ Clicking the copy action automatically exits the selection mode and makes the pa
 
 1. **メタデータプロパティの変更：**
 
-   タイトルや説明など、アダプティブフォームのメタデータプロパティを変更できます。For more details about metadata properties and how they can be changed, see [Managing Form Metadata](/help/forms/using/manage-form-metadata.md)
+   タイトルや説明など、アダプティブフォームのメタデータプロパティを変更できます。メタデータプロパティとその変更方法について詳しくは、「[フォームメタデータの管理](/help/forms/using/manage-form-metadata.md)」を参照してください。
 
 1. **XFA/XSDベースのアダプティブFormsのXFA/XSDの変更：**
 
