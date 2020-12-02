@@ -23,7 +23,7 @@ ht-degree: 75%
 
 AEM Forms では、フォームを簡単に作成、発行、および非公開できます。AEM Forms の詳細については、[フォーム管理の概要](../../forms/using/introduction-managing-forms.md)を参照してください。
 
-AEM Forms サーバーは 2 つのインスタンス（作成者と発行）を提供します。オーサーインスタンスは、フォームのアセットとリソースを作成し管理するためのものです。パブリッシュインスタンスは、エンドユーザーに対して使用可能なアセットや関連リソースを保持するためのものです。XDP フォームと PDF フォームはオーサーモードで読み込むことができます。For more information, see [Getting XDP and PDF documents in AEM Forms](../../forms/using/get-xdp-pdf-documents-aem.md).
+AEM Forms サーバーは 2 つのインスタンス（作成者と発行）を提供します。オーサーインスタンスは、フォームのアセットとリソースを作成し管理するためのものです。パブリッシュインスタンスは、エンドユーザーに対して使用可能なアセットや関連リソースを保持するためのものです。XDP フォームと PDF フォームはオーサーモードで読み込むことができます。詳しくは、「[AEM FormsでのXDPおよびPDFドキュメントの取得](../../forms/using/get-xdp-pdf-documents-aem.md)」を参照してください。
 
 ## サポートされているアセットタイプ{#supported-assets-nbsp}
 
@@ -70,20 +70,20 @@ AEM Formsは、次の種類のアセットをサポートしています。
 1. AEM Forms サーバーにログインします。
 1. 次のいずれかの手順を使って、アセットを選択し発行します。
 
-   1. ポインターをアセットの上に移動し、「 **[!UICONTROL Publish]** aem6forms_globe ![](assets/aem6forms_globe.pngasset.png)」をタップします。
+   1. ポインターをアセットの上に移動し、「**[!UICONTROL 発行]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png)」をタップします。
    1. 次のいずれかを行い、「公開」をタップします。
 
-      * If you are in the card view, tap **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png), and tap the asset. アセットが選択されます。
+      * カード表示にいる場合は、「**[!UICONTROL 選択範囲]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)を入力」をタップし、アセットをタップします。 アセットが選択されます。
       * リスト表示になっている場合は、アセットのチェックボックスを選択します。アセットが選択されます。
       * 詳細を表示するアセットを表示します。
-      * Display an asset&#39;s properties by tapping View Properties ![viewproperties](assets/viewproperties.png).
+      * 表示のプロパティ![viewproperties](assets/viewproperties.png)をタップして、アセットのプロパティを表示します。
 
       >[!NOTE]
       >
       >複数のアセットを選択しないでください。複数のアセットを一度に発行する機能はサポートされていません。
 
 
-1. 発行プロセスが始まるときに、確認ダイアログが表示され、関連するすべてのアセットとリソースが表示されます。In the dialog box that contains related assets, tap **[!UICONTROL Publish]**. アセットが発行され、アセット発行成功ダイアログが表示されます。
+1. 発行プロセスが始まるときに、確認ダイアログが表示され、関連するすべてのアセットとリソースが表示されます。関連アセットを含むダイアログボックスで、「**[!UICONTROL 発行]**」をタップします。 アセットが発行され、アセット発行成功ダイアログが表示されます。
 
    >[!NOTE]
    >
@@ -101,7 +101,7 @@ AEM Formsは、次の種類のアセットをサポートしています。
 
    アセットの発行後に、Forms Portal を使用して、すべてのアセットを Web ページに表示できます。詳細については、「[ポータル上のフォーム発行について](../../forms/using/introduction-publishing-forms.md)」を参照してください。
 
-## すべての Correspondence Management アセットを発行 {#publish-all-the-correspondence-management-assets}
+## すべての Correspondence Management アセットを発行  {#publish-all-the-correspondence-management-assets}
 
 AEM Forms では、サーバー上のすべての Correspondence Management アセットを 1 度で発行します。発行済みのアセットには、すべての Correspondence Management アセットと関連する依存性が含まれます。
 
@@ -109,8 +109,8 @@ AEM Forms では、サーバー上のすべての Correspondence Management ア�
 
 1. AEM Forms サーバーにログインします。
 1. グローバルナビゲーションバーで「**Adobe Experience Manager**」をタップします。
-1. Tap ![tools](assets/tools.png), and then tap **Forms**.
-1. Tap **Publish Correspondence Management Assets**.
+1. ![ツール](assets/tools.png)をタップし、**Forms**&#x200B;をタップします。
+1. 「**Correspondence Managementアセットを発行**」をタップします。
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
@@ -118,7 +118,7 @@ AEM Forms では、サーバー上のすべての Correspondence Management ア�
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
-1. Tap **Publish** and, in the confirm message, tap **OK**.
+1. 「**発行**」をタップし、確認メッセージで「**OK**」をタップします。
 
    バッチ処理が完了すると、前回の実行詳細を表示できます。これには管理者ログインや、バッチが正常に実行されたか、失敗したかなどの情報が含まれます。
 
@@ -128,31 +128,31 @@ AEM Forms では、サーバー上のすべての Correspondence Management ア�
 
 ## フォームとドキュメントの発行と非公開の自動化 {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 
-AEM Forms では、フォームとドキュメントでアセットの発行と非公開をスケジュールできます。スケジュールはメタデータエディターで指定できます。For more information about managing form metadata, see [Managing form metadata.](../../forms/using/manage-form-metadata.md)
+AEM Forms では、フォームとドキュメントでアセットの発行と非公開をスケジュールできます。スケジュールはメタデータエディターで指定できます。フォームメタデータの管理について詳しくは、「[フォームメタデータの管理」を参照してください。](../../forms/using/manage-form-metadata.md)
 
 以下の手順に従って、フォームとドキュメントアセットの発行と非公開の日時をスケジュールします。
 
-1. Select an asset and tap **[!UICONTROL View Properties]**. メタデータプロパティページが開きます。
-1. メタデータプロパティページで、「 **[!UICONTROL 詳細」をタップし]**、「 **[!UICONTROL Edit]** illustratorcc_penciltool_cur_edit_2_17 ![](assets/illustratorcc_penciltool_cur_edit_2_17.png)」をタップします。
+1. アセットを選択し、**[!UICONTROL 表示のプロパティ]**&#x200B;をタップします。 メタデータプロパティページが開きます。
+1. メタデータのプロパティページで、「**[!UICONTROL 詳細]**」をタップし、「**[!UICONTROL 編集]** ![illustratorcc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png)」をタップします。
 1. **[!UICONTROL 発行オン時間]**&#x200B;フィールドと&#x200B;**[!UICONTROL 発行オフ時間]**&#x200B;フィールドで、日時を選択します。\
-   「 **[!UICONTROL Done]**![aem6forms_check](assets/aem6forms_check.png)」をタップします。
+   「**[!UICONTROL 完了]** ![aem6forms_check](assets/aem6forms_check.png)」をタップします。
 
 ## アセットの非公開 {#unpublish-an-asset}
 
-1. Select an asset that is published and tap **[!UICONTROL Unpublish]** ![unpublish](assets/unpublish.png).
+1. 発行されるアセットを選択し、**[!UICONTROL 非公開]** ![非公開](assets/unpublish.png)をタップします。
 1. 次のいずれかの手順を使用して、アセットを選択し非公開にします。
 
-   1. Move the pointer over an asset and tap **[!UICONTROL Unpublish]** ![unpublish](assets/unpublish.png).
+   1. ポインターをアセットの上に置き、「**[!UICONTROL 非公開]** ![非公開](assets/unpublish.png)」をタップします。
    1. 次のいずれかを行い、「非公開」をタップします。
 
-      * If you are in the card view, tap **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png), and tap the asset. アセットが選択されます。
+      * カード表示にいる場合は、「**[!UICONTROL 選択範囲]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)を入力」をタップし、アセットをタップします。 アセットが選択されます。
 
-      * If you are in the list view, hover over an asset and tap ![selectassetcheckmark](assets/selectassetcheckmark.png) . アセットが選択されます。
+      * リスト表示にいる場合は、アセットの上にカーソルを置き、![selectassetcheckmark](assets/selectassetcheckmark.png)をタップします。 アセットが選択されます。
 
       * 詳細を表示するアセットを表示します。
-      * Display an asset&#39;s properties by tapping View Properties ![viewproperties](assets/viewproperties.png).
+      * 表示のプロパティ![viewproperties](assets/viewproperties.png)をタップして、アセットのプロパティを表示します。
 
-1. 非公開プロセスが始まるときに、確認ダイアログが表示されます。Tap **[!UICONTROL Unpublish]**.
+1. 非公開プロセスが始まるときに、確認ダイアログが表示されます。「**[!UICONTROL 非公開]**」をタップします。
 
    >[!NOTE]
    >
@@ -166,8 +166,8 @@ AEM Forms では、フォームとドキュメントでアセットの発行と�
 >
 >発行済みのレターで使用されている依存アセットがシステムから削除されている場合、そのレターを最後に発行した状態に戻さないでください。
 
-1. Select an asset and tap **[!UICONTROL Revert to Previously Published Version]** ![reverttopreviouslypublishedversion](assets/reverttopreviouslypublishedversion.png).
-1. アセットが戻される前に、確認ダイアログが表示されます。Tap **[!UICONTROL Revert]**.
+1. アセットを選択し、「**[!UICONTROL 以前公開したバージョンに戻す]** ![reverttopreviewpublishedversion](assets/reverttopreviouslypublishedversion.png)」をタップします。
+1. アセットが戻される前に、確認ダイアログが表示されます。**[!UICONTROL 「]**&#x200B;元に戻す」をタップします。
 
    アセットまたはレターが、以前に発行したバージョンにロールバックされます。
 
@@ -177,17 +177,17 @@ AEM Forms では、フォームとドキュメントでアセットの発行と�
 >
 >アセットを削除すると、パブリッシュインスタンスからアセットが削除されます。アセットを削除すると、そのアセットのバージョン履歴も、ベースバージョンを除いて削除されます。
 
-1. Select an asset and tap **[!UICONTROL Delete]** ![delete](assets/delete.png).
+1. アセットを選択し、「**[!UICONTROL 削除]** ![削除](assets/delete.png)」をタップします。
 
    >[!NOTE]
    >
-   >The Delete option is also available when you display asset details by tapping an asset or you display an asset&#39;s properties by tapping View Properties ![viewproperties](assets/viewproperties.png).
+   >「削除」オプションは、アセットをタップしてアセットの詳細を表示する場合や、表示のプロパティ![viewproperties](assets/viewproperties.png)をタップしてアセットのプロパティを表示する場合にも使用できます。
 
 1. アセットを削除する前に、確認ダイアログが表示されます。「**[!UICONTROL 削除]**」をタップします。
 
    >[!NOTE]
    >
-   >選択されているアセットだけが削除され、従属アセットは削除されません。To check references of an asset, tap ![references](assets/references.png) and then select an asset.
+   >選択されているアセットだけが削除され、従属アセットは削除されません。アセットの参照を確認するには、![参照](assets/references.png)をタップし、アセットを選択します。
    >
    >
    >削除しようとしているアセットが別のアセットの子アセットである場合、削除されません。そのようなアセットを削除するには、別のアセットからのそのアセットへの参照を削除してから再度実行します。
