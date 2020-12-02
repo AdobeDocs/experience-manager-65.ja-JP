@@ -24,10 +24,10 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 ## 前提条件 {#prerequisite}
 
-1. Log in at `/lc/crx/de` with Administrator permissions.
+1. `/lc/crx/de`に管理者権限でログインします。
 1. 次のアクションを実行します。
 
-   1. 階層構造を複製します。の `/libs/livecycle/core/content` 場所 `/apps/livecycle/core/content`。
+   1. 階層構造を複製します。の`/libs/livecycle/core/content`を`/apps/livecycle/core/content`に配置します。
 
       同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
 
@@ -37,30 +37,30 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
       を: `/apps/livecycle/core`.
 
-   1. Delete the contents of `/apps/livecycle/core` folder.
+   1. `/apps/livecycle/core`フォルダーの内容を削除します。
 
 1. 次の操作を実行します。
 
-   1. 階層構造を複製します。の `/libs/livecycle/core/components/login` 場所 `/apps/livecycle/core/components/login`。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
+   1. 階層構造を複製します。の`/libs/livecycle/core/components/login`を`/apps/livecycle/core/components/login`に配置します。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
 
-   1. Copy the components folder: from `/libs/livecycle/core` to `/apps/livecycle/core`.
+   1. componentsフォルダーをコピーします。を`/libs/livecycle/core`から`/apps/livecycle/core`に変更します。
 
-   1. Delete the contents of the folder: `/apps/livecycle/core/components/login`.
+   1. フォルダーの内容を削除します。`/apps/livecycle/core/components/login`.
 
 ### 新しいロケールの追加 {#adding-a-new-locale}
 
-1. フォルダーをコピーし `i18n` ます。
+1. `i18n`フォルダーをコピーします。
 
    * `/libs/livecycle/core/components/login` から
    * を `/apps/livecycle/core/components/login`
 
-1. Delete all the folders inside `i18n` except one, say `en`.
+1. `i18n`内のフォルダーを1つを除き（例：`en`）削除します。
 
 1. フォルダー `en` で、以下のアクションを実行します。
 
    1. フォルダーの名前をサポートするロケール名に変更します。例： `ar`
 
-   1. Change the property `jcr:language` value to `ar`(for the `ar` folder).
+   1. プロパティ`jcr:language`の値を`ar`（`ar`フォルダー用）に変更します。
    >[!NOTE]
    >
    >`ar-DZ` のようにロケールが言語と国コードの組み合わせである場合は、フォルダー名とプロパティ値を `ar-DZ` に変更します。
@@ -70,7 +70,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
    * `/libs/livecycle/core/components/login` から
    * を `/apps/livecycle/core/components/login`
 
-1. Modify the following snippet of code for `/apps/livecycle/core/components/login/login.jsp`:
+1. `/apps/livecycle/core/components/login/login.jsp`のコードの次のスニペットを変更します。
 
 ***ロケールが言語コードである場合***
 
@@ -154,7 +154,7 @@ String browserLocale = "en";
     }
 ```
 
-To
+宛先
 
 ```jsp
 String browserLocale = "en";
@@ -196,9 +196,9 @@ String browserLocale = "en";
    for(int i=0; i<locales.length; i++)
 ```
 
-### 新しいテキストの追加、または既存のテキストの変更 {#adding-new-text-or-modifying-existing-text}
+### 新しいテキストの追加、または既存のテキストの変更  {#adding-new-text-or-modifying-existing-text}
 
-1. コピー `i18n` フォルダ：
+1. `i18n`フォルダーをコピー：
 
    * `/libs/livecycle/core/components/login` から
    * を `/apps/livecycle/core/components/login`
@@ -213,7 +213,7 @@ String browserLocale = "en";
       * `/libs/livecycle/core/components/login` から
 
       * を `/apps/livecycle/core/components/login`
-   1. Modify `/apps/livecycle/core/components/login/login.jsp` to incorporate the newly added text.
+   1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したテキストを取り込みます。
 
    ![追加新しいキーと値のペア](assets/capture_new.png)
 
@@ -226,7 +226,7 @@ String browserLocale = "en";
                        <% if (loginFailed) {%>
    ```
 
-   To
+   宛先
 
    ```jsp
    div class="loginContent">
@@ -240,28 +240,28 @@ String browserLocale = "en";
 
 ### 新しいスタイルの追加、または既存のスタイルの変更 {#adding-new-style-or-modifying-existing-style}
 
-1. Copy `login` node:
+1. `login`ノードをコピー：
 
    * `/libs/livecycle/core/content` から
    * を `/apps/livecycle/core/content`
 
-1. ファイル `login.js` を削除 `jquery-1.8.0.min.js`し、ノードから `/apps/livecycle/core/content/login.`
+1. ノード`/apps/livecycle/core/content/login.`からファイル`login.js`と`jquery-1.8.0.min.js`を削除します
 1. CSS ファイルのスタイルを変更します。
 1. 新しいスタイルを追加するには：
 
-   1. 新追加しいスタイル `/apps/livecycle/core/content/login/login.css`
+   1. &lt;a0/追加>に対する新しいスタイル`/apps/livecycle/core/content/login/login.css`
    1. コピー `login.jsp`
 
       * `/libs/livecycle/core/components/login` から
 
       * を `/apps/livecycle/core/components/login`
-   1. Modify `/apps/livecycle/core/components/login/login.jsp` to incorporate the newly added styles.
+   1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したスタイルを取り込みます。
 
 
 
 次に例を示します。
 
-* Add the following to `/apps/livecycle/core/content/login/login.css`.
+* 追加`/apps/livecycle/core/content/login/login.css`に対して次の操作を行います。
 
 ```
 css.newLoginContentArea {
@@ -270,14 +270,14 @@ css.newLoginContentArea {
    }
 ```
 
-* で以下を変更し `/apps/livecycle/core/components/login.jsp`ます。
+* `/apps/livecycle/core/components/login.jsp`で以下を変更します。
 
 
    ```jsp
    <div class="loginContentArea">
    ```
 
-   To
+   宛先
 
    ```jsp
    <div class="newLoginContentArea">
@@ -285,20 +285,20 @@ css.newLoginContentArea {
 
 >[!NOTE]
 >
->If the existing images in `/apps/livecycle/core/content/login` (copied from `/libs/livecycle/core/content/login`) are removed, then remove the corresponding references in CSS.
+>`/apps/livecycle/core/content/login`（`/libs/livecycle/core/content/login`からコピーした）内の既存の画像が削除された場合は、CSSで対応する参照を削除します。
 
 ### 新しい画像の追加 {#add-new-images}
 
 1. 上記の「新しいスタイルの追加、または既存のスタイルの変更」の手順に従います。
-1. Add new images in `/apps/livecycle/core/content/login`. 画像を追加するには：
+1. &lt;a0/追加>の新しい画像。 `/apps/livecycle/core/content/login`画像を追加するには：
 
    1. WebDAV クライアントをインストールします。
-   1. Navigate to `/apps/livecycle/core/content/login` folder, using webDAV client. For more information, see: [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   1. webDAVクライアントを使用して`/apps/livecycle/core/content/login`フォルダーに移動します。 詳しくは、次を参照してください。[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
 
    1. 新しい画像を追加します。
 
-1. に追加追加された新しい画像に `/apps/livecycle/core/content/login/login.css,` 対応するの新しいスタイル `/apps/livecycle/core/content/login`。
-1. Use the new styles in `login.jsp` at `/apps/livecycle/core/components`.
+1. &lt;a1/追加>に追加された新しい画像に対応する`/apps/livecycle/core/content/login/login.css,`の新しいスタイル。`/apps/livecycle/core/content/login`
+1. `/apps/livecycle/core/components`の`login.jsp`で新しいスタイルを使用します。
 
 以下に例を示します。
 
@@ -320,7 +320,7 @@ css.newLoginContentArea {
 <div class="loginContainerBkg">
 ```
 
-To
+宛先
 
 ```jsp
 <div class="newLginContainerBkg">
