@@ -48,8 +48,8 @@ AEM リリースノートでは、AEM の最新リリースに関する重要な
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
 * [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
-## Copyright, licenses, and disclaimers {#copyright-licenses-and-disclaimers}
+## 著作権、ライセンス、免責事項{#copyright-licenses-and-disclaimers}
 
-詳しくは、https://www.adobe.com/legal/terms/enterprise-licensing.htmlを参照して [ください。](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html)
+詳しくは、[https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html)を参照してください
 
-Notice of third party licenses: [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
+サードパーティライセンスの通知：[https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
