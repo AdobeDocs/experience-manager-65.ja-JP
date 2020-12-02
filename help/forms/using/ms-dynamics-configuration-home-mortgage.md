@@ -24,7 +24,7 @@ We.Finance リファレンスサイトの住宅ローンワークフローでア
 
 Microsoft® Dynamics 365は、顧客アカウント、連絡先、リード、オポチュニティ、事例を作成および管理するエンタープライズソリューションを提供する顧客関係管理(CRM)およびエンタープライズリソース計画(ERP)ソフトウェアです。
 
-AEM Forms provides a cloud service to integrate Dynamics 365 with [Forms Data Integration](/help/forms/using/data-integration.md) module. Microsoft® Dynamicsシナリオでホーム住宅ローンアプリケーションのチュートリアルを使用する前に、We.Financeリファレンスサイトで使用するMicrosoft® Dynamics 365を構成する必要があります。
+AEM Formsは、Dynamics 365を[Formsデータ統合](/help/forms/using/data-integration.md)モジュールと統合するためのクラウドサービスを提供しています。 Microsoft® Dynamicsシナリオでホーム住宅ローンアプリケーションのチュートリアルを使用する前に、We.Financeリファレンスサイトで使用するMicrosoft® Dynamics 365を構成する必要があります。
 
 ## 前提条件 {#prerequisites}
 
@@ -65,7 +65,7 @@ Dynamics 365 のセットアップと設定に進む前に、以下を実行ま�
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
-   1. ソリューションパッケージを Microsoft® Dynamics インスタンスに読み込みます。In your Microsoft® Dynamics instance, go to **Settings** > **Solutions** and then tap **Import**.
+   1. ソリューションパッケージを Microsoft® Dynamics インスタンスに読み込みます。Microsoft® Dynamicsインスタンスで、**設定**/**ソリューション**&#x200B;に移動し、**読み込み**&#x200B;をタップします。
 
 1. refsite で使用する連絡先の詳細を設定するには、Sarah Rose Contact.CSV パッケージを Microsoft® Dynamics インスタンスにインポートします。
 
@@ -73,5 +73,5 @@ Dynamics 365 のセットアップと設定に進む前に、以下を実行ま�
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
-   1. パッケージを Microsoft® Dynamics インスタンスにインポートします。In your Microsoft® Dynamics instance, go to **Sales** > **Contacts** and then tap **Import Data**.
+   1. パッケージを Microsoft® Dynamics インスタンスにインポートします。Microsoft® Dynamicsインスタンスで、**販売** > **連絡先**&#x200B;に移動し、**データのインポート**&#x200B;をタップします。
 
