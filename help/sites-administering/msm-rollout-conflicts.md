@@ -24,7 +24,7 @@ ht-degree: 76%
 
 このような競合はロールアウト時に処理および解決する必要があります。
 
-## 競合の処理 {#conflict-handling}
+## 競合の処理  {#conflict-handling}
 
 競合するページが（ブループリントやライブコピーのブランチ内に）存在するとき、MSM ではそれらの処理方法（処理の有無を含む）を定義できます。
 
@@ -42,15 +42,15 @@ ht-degree: 76%
 
 以降の節では、（手動で作成された）ブループリントとライブコピーのブランチの両方で作成された新しいサンプルページ `b` を使用して、競合を解決する様々な方法について説明します。
 
-* blueprint: `/b`
+* blueprint:`/b`
 
    マスターページ；子ページが1の場合、bp-level-1。
 
-* live copy: `/b`
+* ライブコピー：`/b`
 
-   A page manually created in the live copy branch; with 1 child page, `lc-level-1`.
+   ライブコピーブランチに手動で作成されたページ。子ページ`lc-level-1`を1つ持つ
 
-   * Activated on publish as `/b`, together with the child page.
+   * 子ページと共に`/b`として公開時にアクティブ化。
 
 **ロールアウト前**
 
@@ -105,22 +105,22 @@ AEM には次の機能があります。
 
 デフォルトの競合ハンドラーの特徴は次のとおりです。
 
-* が `ResourceNameRolloutConflictHandler`
+* `ResourceNameRolloutConflictHandler`と呼ばれる
 
 * このハンドラーを使用すると、ブループリントページが優先されます。
-* The service ranking for this handler is set low ( ``i.e. below the default value for the `service.ranking` property) as the assumption is that customized handlers will need a higher ranking. ただし、必要に応じて柔軟に対応するために、ランキングを絶対最小値にはしません。
+* このハンドラーのサービスのランクは低く設定されています(が`service.ranking`プロパティのデフォルト値の下にある場合)の前提として、カスタマイズされたハンドラーにはより高いランクが必要となります。 ただし、必要に応じて柔軟に対応するために、ランキングを絶対最小値にはしません。
 
-この競合ハンドラーでは、ブループリントが優先されます。The live copy page `/b` is moved (within the live copy branch) to `/b_msm_moved`.
+この競合ハンドラーでは、ブループリントが優先されます。ライブコピーページ`/b`が（ライブコピーブランチ内で）`/b_msm_moved`に移動されます。
 
-* live copy: `/b`
+* ライブコピー：`/b`
 
-   （ライブコピー内の）がに移動され `/b_msm_moved`ます。 これはバックアップとして機能し、コンテンツが失われないようにします。
+   （ライブコピー内で）`/b_msm_moved`に移動されます。 これはバックアップとして機能し、コンテンツが失われないようにします。
 
    * `lc-level-1` は移動されません。
 
-* blueprint: `/b`
+* blueprint:`/b`
 
-   Is rolled out to the live copy page `/b`.
+   ライブコピーページ`/b`にロールアウトされます。
 
    * `bp-level-1` はライブコピーにロールアウトされます。
 
@@ -164,7 +164,7 @@ AEM には次の機能があります。
 
    * **サービスランキング**:
 
-      他の競合ハンドラ( `service.ranking`)に関連する順序を定義します。
+      他の競合ハンドラー(`service.ranking`)に関連する順序を定義します。
 
       デフォルト値は 0 です。
 
@@ -176,13 +176,13 @@ AEM には次の機能があります。
 >
 >この動作は明示的に設定する必要があり、AEM は競合を無視するときに何のサインも示しません。そのため、この動作は必須の動作と見なされます。
 
-この場合、実際にはライブコピーが優先されます。The blueprint page `/b` is not copied and the live copy page `/b` is left untouched.
+この場合、実際にはライブコピーが優先されます。Blueprintページ`/b`はコピーされず、ライブコピーページ`/b`は変更されません。
 
-* blueprint: `/b`
+* blueprint:`/b`
 
    は一切コピーされませんが、無視されます。
 
-* live copy: `/b`
+* ライブコピー：`/b`
 
    同じです。
 
