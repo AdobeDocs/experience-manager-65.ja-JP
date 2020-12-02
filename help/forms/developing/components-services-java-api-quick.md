@@ -43,15 +43,15 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、Unixなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、Unixなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 >[!NOTE]
 >
->カスタムコンポーネントがあり、SOAPまたはEJBプロトコルを使用して同じローカルサーバー上のDSCを呼び出している場合、アップグレード後にそれらの呼び出しが機能しなくなると、in-VM([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY))呼び出し方法が使用されます。 VM内DSC呼び出しメソッドは、デフォルトのServiceClientFactoryで使用します。SOAPプロトコルまたはEJBプロトコルを使用してServiceClientFactoryを構築しないでください。
+>カスタムコンポーネントがあり、SOAPまたはEJBプロトコルを使用して同じローカルサーバー上のDSCを呼び出している場合、アップグレード後にそれらの呼び出しが機能しなくなれば、in-VM ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY))呼び出し方法を使用します。 VM内DSC呼び出しメソッドは、デフォルトのServiceClientFactoryで使用します。SOAPプロトコルまたはEJBプロトコルを使用してServiceClientFactoryを構築しないでください。
 
-## クイック開始（SOAPモード）:Java APIを使用したコンポーネントのデプロイ {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したコンポーネントの導入{#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-次のJavaの例は、 *adobe-emailSample-dsc.jarという名前のJARファイルに基づくコンポーネントをデプロイします*。
+次のJavaの例は、*adobe-emailSample-dsc.jar*&#x200B;という名前のJARファイルに基づくコンポーネントをデプロイします。
 
 ```java
  /* 
@@ -151,9 +151,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したサービスの実行コンテキストの設定 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}を使用したサービスの実行コンテキストの設定
 
-以下のJavaコードの例では、Run-As Invokerの実行コンテキストをEncryptDocumentという名前のサービスの例に設定し *ています*。
+次のJavaコードの例は、Run-As Invokerの実行コンテキストを、*EncryptDocument*&#x200B;という名前のサンプルサービスに設定します。
 
 ```java
  /* 
@@ -243,7 +243,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したサービスセキュリティの無効化 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-disabling-service-security-using-the-java-api}を使用したサービスセキュリティの無効化
 
 次のJavaコードの例を使用すると、例のEncryptDocumentサービスと、このサービス内から呼び出されるサービス（Set ValueサービスおよびEncryptionサービス）のセキュリティが無効になります。
 
@@ -356,9 +356,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したサービスの開始 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したサービスの開始{#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-次のJavaコードの例では、SendEmailServiceという名前のサービスを開始し *ています*。
+次のJavaコードの例では、*SendEmailService*&#x200B;という名前のサービスを開始しています。
 
 ```java
  package com.adobe.sample.servicemanager; 
@@ -414,7 +414,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したサービス設定値の変更 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}を使用したサービス設定値の変更
 
 次のJavaの例では、SendEmail Serviceに属する設定値を変更しています。
 
@@ -526,7 +526,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したコンポーネントの削除 {#quick-start-soap-mode-removing-components-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-removing-components-using-the-java-api}を使用したコンポーネントの削除
 
 以下のJavaコードの例を使用すると、Java APIを使用してコンポーネントを削除できます。
 
