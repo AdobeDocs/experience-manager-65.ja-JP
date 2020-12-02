@@ -32,11 +32,11 @@ AEM Forms では、フォームの作成、設定、フォームセットの管�
 
 フォームセットは AEM Forms のアプリでもサポートされており、現場で働く従業員はフォームセットをオフラインにして、顧客を訪問、データを入力し、後で AEM Forms のサーバーとシンクロさせてデータを送信し、ビジネスを進めることができます。
 
-## フォームセットの作成と管理 {#creating-and-managing-form-set}
+## フォームセットの作成と管理  {#creating-and-managing-form-set}
 
 複数のXDPまたはDesignerを使用して作成したフォームテンプレートをフォームセットに関連付けることができます。 その後、フォームセットを使用して、最初のフォームとそのプロファイルでユーザーが入力した値に基づいて、XDPを選択的にレンダリングできます。
 
-Use [AEM Forms user interface](../../forms/using/introduction-managing-forms.md) to manage all your forms, form sets, and related assets.
+[AEM Formsユーザーインターフェイス](../../forms/using/introduction-managing-forms.md)を使用して、すべてのフォーム、フォームセット、および関連アセットを管理します。
 
 ### フォームセットの作成 {#create-a-form-set}
 
@@ -67,10 +67,10 @@ Use [AEM Forms user interface](../../forms/using/introduction-managing-forms.md)
 
    * Form Order：フォームをドラッグ＆ドロップして順番を並べ替えます。フォームの順序は、AEM FormsアプリとStand Alone Renditionでエンドユーザーに表示されるフォームの順序を定義します。
    * Form Identifier：適格性の式で使用するための一意の ID をフォームに設定します。
-   * Data root：フォームセットの各フォームに対して、作成者は送信済みの XML でも特定フォームのデータが配置される XPATH を設定できます。デフォルトでは、この値は / です。フォームセットにあるすべてのフォームがスキーマバインドされており、同じ XML スキーマを共有している場合、作成者はこの値を変更できます。フォーム内の各フィールドが XDP で指定された適切なデータバインディングを持っている場合にお勧めします。2 つの異なるフォームの 2 つのフィールドが共通のデータバインディングを共有している場合、2 番目のフォームのフィールドは、1 番目のフォームで取り込んだ値を事前入力した状態で表示されます。同じ内部コンテンツを持つ 2 つのサブフォームを同じ XML ノードに結合しないでください。For more information the XML structure of form set, see [Prefill XML for Form set](../../forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p).
+   * Data root：フォームセットの各フォームに対して、作成者は送信済みの XML でも特定フォームのデータが配置される XPATH を設定できます。デフォルトでは、この値は / です。フォームセットにあるすべてのフォームがスキーマバインドされており、同じ XML スキーマを共有している場合、作成者はこの値を変更できます。フォーム内の各フィールドが XDP で指定された適切なデータバインディングを持っている場合にお勧めします。2 つの異なるフォームの 2 つのフィールドが共通のデータバインディングを共有している場合、2 番目のフォームのフィールドは、1 番目のフォームで取り込んだ値を事前入力した状態で表示されます。同じ内部コンテンツを持つ 2 つのサブフォームを同じ XML ノードに結合しないでください。フォームセットのXML構造について詳しくは、「[フォームセットに対するXMLの事前入力](../../forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p)」を参照してください。
    * Eligibility expression：フォームセット内のフォームが入力用に適格であるか否かを示すブール値を評価する JavaScript 式を設定します。この結果が「false」の場合、ユーザーは入力を要求されない、もしくはフォームの表示すら行われません。通常、この式はこのフォームの前に取り込まれるフィールドの値に基づいています。これらの式にはフォームセット API fs.valueOf に対する呼び出しも含まれており、フォームセットにあるフォームのフィールドにユーザーが入力した値を抽出します。
 
-   *fs.valueOf(&lt;Form Identifier>, &lt;fieldSom式>) > &lt;value>*
+   *fs.valueOf(&lt;form Identifier=&quot;&quot;>,  &lt;fieldsom expression=&quot;&quot;>) >  &lt;value>*
 
    例えば、フォームセットに「仕事の経費」と「旅費」という 2 つのフォームがある場合、これらの両方のフォームの Eligibility expression フィールドに Javascript スニペットを追加して、フォームで出費のタイプにユーザーが入力した内容を確認できます。ユーザーが仕事の経費を選択した場合、仕事の経費フォームがエンドユーザーに表示されます。逆に、ユーザーが旅費を選択した場合、エンドユーザーには別のフォームが表示されます。詳しくは、「適格性の式」を参照してください。
 
@@ -82,7 +82,7 @@ Use [AEM Forms user interface](../../forms/using/introduction-managing-forms.md)
    >
    >フォームセットで使用するすべてのフォームは AEM Forms ユーザーインターフェイスで管理されます。
 
-### フォームセットの管理 {#managing-a-form-set}
+### フォームセットの管理  {#managing-a-form-set}
 
 フォームセットを作成すると、作成したフォームセットでは以下の操作を実行できます。
 
@@ -103,7 +103,7 @@ Use [AEM Forms user interface](../../forms/using/introduction-managing-forms.md)
 フォームセットを編集するには、次の手順を実行します。
 
 1. フォーム／フォームとドキュメントを選択します。
-1. 編集するフォームセットを見つけます。Hover over it and select Edit ( ![editicon](assets/editicon.png)).
+1. 編集するフォームセットを見つけます。その上にマウスポインターを置いて、「編集」（![エディティコン](assets/editicon.png)）を選択します。
 1. フォームを設定ページで、以下の内容を編集できます。 
 
    * フォームの順序
@@ -113,11 +113,11 @@ Use [AEM Forms user interface](../../forms/using/introduction-managing-forms.md)
 
    また「削除」アイコンを押すことで、そのフォームをフォームセットから削除することができます。
 
-## Process Management におけるフォームセット {#form-set-in-process-management}
+## Process Management におけるフォームセット  {#form-set-in-process-management}
 
 一度 AEM Forms Management ユーザーインターフェイスを使用してフォームセットを作成すると、Workbench を使用してそのフォームセットを「始点」または「タスクの割り当て」アクティビティで使用できます。
 
-### タスクまたは始点でのフォームセットの使用 {#using-form-set-in-task-or-start-point}
+### タスクまたは始点でのフォームセットの使用  {#using-form-set-in-task-or-start-point}
 
 1. 処理を設計する際、タスクの割り当て / 始点の Presentation &amp; Data セクションの下で、「**CRX アセットを使用**」を選択します。CRXアセットブラウザが表示されます。
 
@@ -246,7 +246,7 @@ field form3field
 >
 >重複するデータルートを持つ 2 つのフォームがある場合、または、あるフォームの要素の階層が別のフォームのデータルートの階層と重複する場合、重複した要素の値は事前入力 XML で結合されます。送信 XML は事前入力 XML と同様の構造を持っていますが、送信 XML にはより多くの wrapper タグとフォームセットのコンテキストデータタグが終了部分に追加されています。
 
-### 事前入力 XML の要素の説明 {#prefill-xml-elements-description}
+### 事前入力 XML の要素の説明  {#prefill-xml-elements-description}
 
 事前入力 XML ファイルを作成する際の構文ルール
 
@@ -256,7 +256,7 @@ field form3field
 * prefillXML：事前入力 XML で要素が必要とされる（R）か、またはオプション（O）であるかを示します。
 * 子：どの要素が要素の子になれるかを示します。
 
-### FORMSET {#formset}
+### FORMSET  {#formset}
 
 `parent elements:`
 
@@ -272,13 +272,13 @@ field form3field
 
 フォームセット XML のルート要素。フォームセット内のフォームの rootSubform の名前として使用しないようお勧めします。
 
-### FS_DATA {#fs-data}
+### FS_DATA  {#fs-data}
 
 `parent elements:`
 
 `formset`
 
-cardinality: [1]
+基数：[1]
 
 submitXML：P
 
@@ -346,7 +346,7 @@ prefillXML：O
 
 事前入力 XML にルート要素がある場合、その要素名は送信 XML でも引き継がれます。事前入力 XML がない場合、「/」に設定された dataRoot プロパティを持っているフォームセット内の最初のフォームのルートサブフォーム名が rootElement の名前になります。そのようなフォームがない場合は、予約されたキーワードである **fs_dummy_root** が rootElement 名になります。
 
-## AEM Forms アプリにおけるフォームセット {#formset-in-workspace-app}
+## AEM Forms アプリにおけるフォームセット  {#formset-in-workspace-app}
 
 AEM Forms アプリを使用すると、フィールドワーカーはモバイルデバイスを AEM Forms サーバーと同期し、タスクを実行できます。アプリケーションはデバイスのローカルにデータを保存することで、デバイスがオフラインの場合でも動作します。フィールドワーカーは、写真などの注釈機能を使用して、ビジネスプロセスに統合する正確な情報を提供します。
 
