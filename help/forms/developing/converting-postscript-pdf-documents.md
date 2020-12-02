@@ -18,29 +18,29 @@ ht-degree: 7%
 ---
 
 
-# PostscriptドキュメントからPDFへの変換 {#converting-postscript-to-pdf-documents}
+# PostscriptからPDFドキュメントへの変換{#converting-postscript-to-pdf-documents}
 
-## Distiller事務について {#about-the-distiller-service}
+## Distillerサービスについて{#about-the-distiller-service}
 
 Distiller®サービスは、PostScript®、Encapsulated PostScript(EPS)およびPRNファイルを、ネットワーク経由でコンパクトで信頼性の高い、より安全なPDFファイルに変換します。 Distiller サービスは、請求書や明細書など、容量の大きい印刷ドキュメントを電子ドキュメントに変換する際によく使用されます。ドキュメントを PDF に変換して、顧客にドキュメントの印刷バージョンと電子バージョンを送付できます。
 
 >[!NOTE]
 >
->For more information about the Distiller service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Distillerサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-## PostScriptからPDFドキュメントへの変換 {#converting-postscript-to-pdf-documents-inner}
+## PostScriptからPDFドキュメントへの変換{#converting-postscript-to-pdf-documents-inner}
 
 このトピックでは、DistillerサービスAPI（JavaおよびWebサービス）を使用して、PostScript(PS)、Encapsulated PostScript(EPS)およびPRNファイルをプログラムでPDFドキュメントに変換する方法について説明します。
 
 >[!NOTE]
 >
->For more information about the Distiller service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Distillerサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
 >[!NOTE]
 >
 >PostScriptファイルをPDFドキュメントに変換するには、AEM Formsをホストするサーバーに次のいずれかをインストールする必要があります。Acrobat 9またはMicrosoft Visual C++ 2005再配布可能パッケージ。
 
-### 手順の概要 {#summary-of-steps}
+### 手順{#summary-of-steps}の概要
 
 サポートされている任意の種類をPDFドキュメントに変換するには、次の手順を実行します。
 
@@ -56,7 +56,7 @@ Distiller®サービスは、PostScript®、Encapsulated PostScript(EPS)およ�
 
 **Distillerサービスクライアントの作成**
 
-プログラムでDistillerサービスを実行する前に、Distillerサービスクライアントを作成する必要があります。 Java APIを使用している場合は、 `DistillerServiceClient` オブジェクトを作成します。 WebサービスAPIを使用している場合は、 `DistillerServiceService` オブジェクトを作成します。
+プログラムでDistillerサービスを実行する前に、Distillerサービスクライアントを作成する必要があります。 Java APIを使用している場合は、`DistillerServiceClient`オブジェクトを作成します。 WebサービスAPIを使用している場合は、`DistillerServiceService`オブジェクトを作成します。
 
 **変換するファイルを取得します**
 
@@ -82,7 +82,7 @@ PDFドキュメントをPDFファイルとして保存できます。
 
 [OutputサービスAPIのクイック開始](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java APIを使用したPostScriptファイルのPDFへの変換 {#convert-a-postscript-file-to-pdf-using-the-java-api}
+### Java API {#convert-a-postscript-file-to-pdf-using-the-java-api}を使用したPostScriptファイルのPDFへの変換
 
 DistillerサービスAPI(Java)を使用してPostScriptファイルをPDFドキュメントに変換します。
 
@@ -93,37 +93,37 @@ DistillerサービスAPI(Java)を使用してPostScriptファイルをPDFドキ�
 1. Distillerサービスクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `DistillerServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`DistillerServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 変換するファイルを取得します。
 
-   * コンストラクターを使用し、ファイルの場所を指定する文字列値を渡して、変換するファイルを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、ファイルの場所を指定する文字列値を渡して、変換するファイルを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. PDF作成操作を呼び出します。
 
-   オブジェクトの `DistillerServiceClient``createPDF` メソッドを呼び出し、次の値を渡します。
+   `DistillerServiceClient`オブジェクトの`createPDF`メソッドを呼び出し、次の値を渡します。
 
-   * 変換するPS、EPS、またはPRNファイルを表す `com.adobe.idp.Document` オブジェクトです。
-   * 変換するファイルの名前を含む `java.lang.String` オブジェクトです。
-   * 使用するAdobe PDF設定の名前を含む `java.lang.String` オブジェクトです
-   * 使用するセキュリティ設定の名前を含む `java.lang.String` オブジェクトです
-   * PDFドキュメントの生成時に適用される設定を含むオプションの `com.adobe.idp.Document` オブジェクトです
-   * PDFドキュメントに適用されるメタデータ情報を含むオプションの `com.adobe.idp.Document` オブジェクトです
+   * 変換するPS、EPS、またはPRNファイルを表す`com.adobe.idp.Document`オブジェクト
+   * 変換するファイルの名前を含む`java.lang.String`オブジェクト
+   * 使用するAdobe PDF設定の名前を含む`java.lang.String`オブジェクト
+   * 使用するセキュリティ設定の名前が含まれる`java.lang.String`オブジェクト
+   * PDFドキュメントの生成中に適用される設定を含む、オプションの`com.adobe.idp.Document`オブジェクトです
+   * PDFドキュメントに適用するメタデータ情報を含む、オプションの`com.adobe.idp.Document`オブジェクトです
 
-   この `createPDF` メソッドは、新しいPDFドキュメントと、生成される可能性のあるログファイルを含む `CreatePDFResult` オブジェクトを返します。 通常、ログファイルには、変換要求によって生成されるエラーメッセージや警告メッセージが含まれます。
+   `createPDF`メソッドは、新しいPDFドキュメントと、生成される可能性のあるログファイルを含む`CreatePDFResult`オブジェクトを返します。 通常、ログファイルには、変換要求によって生成されるエラーメッセージや警告メッセージが含まれます。
 
 1. PDFドキュメントを保存します。
 
    新しく作成されたPDFドキュメントを取得するには、次の操作を実行します。
 
-   * オブジェクトの `CreatePDFResult` メソッドを呼び出し `getCreatedDocument` ます。 これは、 `com.adobe.idp.Document` オブジェクトを返します。
-   * オブジェクトの `com.adobe.idp.Document``copyToFile` メソッドを呼び出してPDFドキュメントを抽出します。
+   * `CreatePDFResult`オブジェクトの`getCreatedDocument`メソッドを呼び出します。 `com.adobe.idp.Document`オブジェクトを返します。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出してPDFドキュメントを抽出します。
 
    同様に、ログドキュメントを取得するには、次の操作を実行します。
 
-   * オブジェクトの `CreatePDFResult` メソッドを呼び出し `getLogDocument` ます。 これは、 `com.adobe.idp.Document` オブジェクトを返します。
-   * オブジェクトの `com.adobe.idp.Document``copyToFile` メソッドを呼び出してログドキュメントを抽出します。
+   * `CreatePDFResult`オブジェクトの`getLogDocument`メソッドを呼び出します。 `com.adobe.idp.Document`オブジェクトを返します。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、ログドキュメントを抽出します。
 
 
 **関連トピック**
@@ -136,58 +136,58 @@ DistillerサービスAPI(Java)を使用してPostScriptファイルをPDFドキ�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したPostScriptファイルのPDFへの変換 {#converting-a-postscript-file-to-pdf-using-the-web-service-api}
+### WebサービスAPI {#converting-a-postscript-file-to-pdf-using-the-web-service-api}を使用したPostScriptファイルのPDFへの変換
 
 DistillerサービスAPI（Webサービス）を使用してPostScriptファイルをPDFドキュメントに変換します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/DistillerService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/DistillerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Distillerサービスクライアントを作成します。
 
-   * Create a `DistillerServiceClient` object by using its default constructor.
-   * Create a `DistillerServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/DistillerService?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `DistillerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `DistillerServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`DistillerServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/DistillerService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
+   * `DistillerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `DistillerServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `DistillerServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`DistillerServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`DistillerServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 変換するファイルを取得します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDFドキュメントに変換するファイルの保存に使用されます。
-   * コンストラクターを呼び出し、ファイルを開く場所とモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この`BLOB`オブジェクトは、PDFドキュメントに変換するファイルを保存するために使用します。
+   * コンストラクターを呼び出し、ファイルを開く場所とモードを表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに`MTOM`プロパティを割り当て、バイト配列の内容を指定します。
 
 1. PDF作成操作を呼び出します。
 
-   オブジェクトの `DistillerServiceService``CreatePDF2` メソッドを呼び出し、次の必須値を渡します。
+   `DistillerServiceService`オブジェクトの`CreatePDF2`メソッドを呼び出し、次の必須値を渡します。
 
-   * 変換するPSファイルを表す `BLOB` オブジェクトです。
+   * 変換するPSファイルを表す`BLOB`オブジェクトです
    * 変換するファイルのパス名を含む文字列です
-   * 使用するAdobe PDF設定を含むstringオブジェクト(例： `Standard`)
-   * 使用するセキュリティ設定が格納されているstringオブジェクト( `No Securit`yなど)
-   * PDFドキュメントの生成時に適用される設定を含むオプションの `BLOB` オブジェクトです
-   * PDFドキュメントに適用されるメタデータ情報を含むオプションの `BLOB` オブジェクトです
-   * PDFドキュメントの保存に使用される `BLOB` 出力パラメーター
-   * ログの保存に使用される `BLOB` 出力パラメーター
+   * 使用するAdobe PDF設定を含むstringオブジェクト（例：`Standard`）
+   * 使用するセキュリティ設定を含む文字列オブジェクト（例：`No Securit`y）
+   * PDFドキュメントの生成中に適用される設定を含む、オプションの`BLOB`オブジェクトです
+   * PDFドキュメントに適用するメタデータ情報を含む、オプションの`BLOB`オブジェクトです
+   * PDFドキュメントの保存に使用される`BLOB`出力パラメーター
+   * ログの保存に使用する`BLOB`出力パラメーター
 
 1. PDFドキュメントを保存します。
 
-   * Create a `System.IO.FileStream` object by invoking its constructor. 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * メソッド（出力パラメーター）によって返された `BLOB` オブジェクトの内容を格納するバイト配列を作成し `CreatePDF2` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
+   * `CreatePDF2`メソッド（出力パラメーター）によって返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
