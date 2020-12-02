@@ -24,30 +24,31 @@ ht-degree: 51%
 
 アダプティブフォームのローカリゼーションは、次の 2 種類のロケールの辞書に基づいています。
 
-**フォーム固有の辞書** ：アダプティブフォームで使用される文字列を含みます。 例えば、ラベル、フィールド名、エラーメッセージ、ヘルプの説明文などです。It is managed as a set of XLIFF files for each locale and you can access it at `https://<host>:<port>/libs/cq/i18n/translator.html`.
+**フォーム固有の** 辞書アダプティブフォームで使用される文字列を含みます。例えば、ラベル、フィールド名、エラーメッセージ、ヘルプの説明文などです。各ロケールのXLIFFファイルのセットとして管理され、`https://<host>:<port>/libs/cq/i18n/translator.html`からアクセスできます。
 
-**グローバル辞書** 2つのグローバル辞書があり、AEMクライアントライブラリでJSONオブジェクトとして管理されます。 これらの辞書にはデフォルトのエラーメッセージ、12 か月の名前、通貨シンボル、日付と時間のパターンなどが含まれます。これらの辞書は CRXDe Lite の /libs/fd/xfaforms/clientlibs/I18N にあります。これらの場所では、各ロケールごと別々のフォルダーが用意されています。グローバルの辞書は頻繁に更新されることはありません。各ロケールごとに別の JavaScript ファイルを保持することで、ブラウザーによりそれらがキャッシュされるため、同一サーバー上で異なるアダプティブフォームにアクセスする際に、ネットワーク帯域幅の使用量を減らすことができます。
+**グローバル** 辞書2つのグローバル辞書があり、JSONオブジェクトとして管理され、AEMクライアントライブラリにあります。これらの辞書にはデフォルトのエラーメッセージ、12 か月の名前、通貨シンボル、日付と時間のパターンなどが含まれます。これらの辞書は CRXDe Lite の /libs/fd/xfaforms/clientlibs/I18N にあります。これらの場所では、各ロケールごと別々のフォルダーが用意されています。グローバルの辞書は頻繁に更新されることはありません。各ロケールごとに別の JavaScript ファイルを保持することで、ブラウザーによりそれらがキャッシュされるため、同一サーバー上で異なるアダプティブフォームにアクセスする際に、ネットワーク帯域幅の使用量を減らすことができます。
 
 ### アダプティブフォームのローカリゼーションの仕組み {#how-localization-of-adaptive-form-works}
 
 アダプティブフォームのロケールを識別する方法は2つあります。 アダプティブフォームがレンダリングされると、リクエストされたロケールが次のように識別されます。
 
-* アダプティブフォームURLの `[local]` セレクターを確認する。 The format of the URL is `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`. セレクターを使用すると、アダプティブフォームをキャッシュできます。 `[local]`
+* アダプティブフォームURLの`[local]`セレクターを確認してください。 URLの形式は`http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`です。 `[local]`セレクターを使用すると、アダプティブフォームをキャッシュできます。
 
 * 指定した順序で次のパラメーターを確認します。
 
-   * リクエストパラメーター `afAcceptLang`ユーザーのブラウザーロケールを上書きするには、 
-`afAcceptLang` リクエストパラメーターを使用して、ロケールを強制的に設定します。 例えば、次のURLは日本語ロケールでのフォームのレンダリングを強制します。
+   * リクエストパラメーター`afAcceptLang`
+ユーザーのブラウザーロケールを上書きするには、 
+`afAcceptLang` リクエストパラメーターを使用して、ロケールを強制的に設定します。例えば、次のURLは日本語ロケールでのフォームのレンダリングを強制します。
       `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-   * The browser locale set for the user, which is specified in the request using the `Accept-Language` header.
+   * ユーザーに設定されるブラウザーのロケールです。これは、`Accept-Language`ヘッダーを使用した要求で指定されます。
 
    * AEM のユーザー指定の言語設定です。
 
    * ブラウザーのロケールはデフォルトで有効です。 ブラウザーのロケール設定を変更するには
-      * Configuration Managerを開きます。 The URL is `http://[server]:[port]/system/console/configMgr`
-      * Locate and open the **[!UICONTROL Adaptive Form and Interactive Communication Web Channel]** configuration.
-      * 「ブラウザーロケールを **[!UICONTROL 使用]** 」オプションのステータスを変更し、設定を **[!UICONTROL 保存します]** 。
+      * Configuration Managerを開きます。 URLは`http://[server]:[port]/system/console/configMgr`です
+      * **[!UICONTROL アダプティブフォームとInteractive Communication Webチャネル]**&#x200B;の設定を探して開きます。
+      * 「**[!UICONTROL ブラウザーロケールを使用]**」オプションと「**[!UICONTROL 保存]**」設定のステータスを変更します。
 
 ロケールが識別されると、アダプティブフォームはフォームに固有の辞書を参照します。要求されたロケールに対応するフォーム固有の辞書が見つからない場合、アダプティブフォームが作成された言語用の辞書が使用されます。
 
@@ -69,7 +70,7 @@ AEM Formsでは、英語(en)、スペイン語(es)、フランス語(fr)、イ�
 1. [辞書のロケールサポートを追加する](../../forms/using/supporting-new-language-localization.md#p-add-locale-support-for-the-dictionary-br-p)
 1. [サーバーの再起動](../../forms/using/supporting-new-language-localization.md#p-restart-the-server-p)
 
-### Add a locale to the Guide Localization service {#add-a-locale-to-the-guide-localization-service-br}
+### ガイドローカライゼーションサ追加ービス{#add-a-locale-to-the-guide-localization-service-br}のロケール
 
 1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。
 1. **Guide Localization Service**&#x200B;をクリックしてコンポーネントを編集します。
@@ -79,9 +80,9 @@ AEM Formsでは、英語(en)、スペイン語(es)、フランス語(fr)、イ�
 
 ### XFA クライアントライブラリをロケール用に追加する {#add-xfa-client-library-for-a-locale-br}
 
-次のタイプのノードを「 `cq:ClientLibraryFolder``etc/<folderHierarchy>``xfaforms.I18N.<locale>`」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、」、「」、「」、「」の順に追加します。
+`etc/<folderHierarchy>`の下にカテゴリ`cq:ClientLibraryFolder`のノードを作成し、次のファイルをクライアントライブラリに追加します。`xfaforms.I18N.<locale>`
 
-* **で定義され** ているとおり、I18N.js `xfalib.locale.Strings` で `<locale>` の定義を参照してく `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`ださい。
+* **に定義され** ているとおり、I18N. `xfalib.locale.Strings` js定義 `<locale>` の `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`をに対して行います。
 
 * 以下を含む **js.txt** ファイル。
 
@@ -93,12 +94,12 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-の下にタイプのノードを作成し、にカテゴリを、に依存関係を、 `cq:ClientLibraryFolder` およびに依存関係 `etc/<folderHierarchy>`を付け `guides.I18N.<locale>``xfaforms.3rdparty``xfaforms.I18N.<locale>``guide.common`ます。&quot;
+`etc/<folderHierarchy>`の下に`cq:ClientLibraryFolder`型のノードを作成し、カテゴリを`guides.I18N.<locale>`、依存関係を`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`、`guide.common`型にします。 &quot;
 
 クライアントライブラリに次のファイルを追加します。
 
-* **i18n.jsを定義し、「calendarSymbols」,** ,, `guidelib.i18n`, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns``numberSymbols``currencySymbols``typefaces``<locale>`[](https://helpx.adobe.com/jp/content/dam/Adobe/specs/xfa_spec_3_3.pdf)per the per descriptions and the per descriptions in the Locale Set locale仕様， , You can also see how it is defined for other supported locales in `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
-* **とを定義するLogMessages.js** 。LogMessages.jsは、の定義に従っ `guidelib.i18n.strings` て、とを定義し `guidelib.i18n.LogMessages``<locale>``/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`ます。
+* **i18n.** js定義 `guidelib.i18n`, 「calendarSymbols」, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns`,  `numberSymbols`,  `currencySymbols`,  `typefaces`  `<locale>`  [](https://helpx.adobe.com/jp/content/dam/Adobe/specs/xfa_spec_3_3.pdf)per, pの仕様， pの仕様， pのdのxfa, fのdの仕様， fのdのspecificationLocaleのsetのパターンを持つ`/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`では、サポートされている他のロケールでの定義も確認できます。
+* **LogMessages.** jsdefining `guidelib.i18n.strings` との `guidelib.i18n.LogMessages` 定義（を参照） `<locale>` を参照して `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`ください。
 * 以下を含む **js.txt** ファイル。
 
 ```text
@@ -108,16 +109,16 @@ LogMessages.js
 
 ### 辞書のロケールサポートを追加する {#add-locale-support-for-the-dictionary-br}
 
-Perform this step only if the `<locale>` you are adding is not among `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
+追加する`<locale>`が`en`、`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr`の中にない場合にのみ、この手順を実行してください。
 
-1. Create an `nt:unstructured` node `languages` under `etc`, if not present already.
+1. `etc`の下に`nt:unstructured`ノード`languages`を作成します（存在しない場合）。
 
 1. すでに存在しない場合は、複数の値を持つ文字列プロパティ `languages` をノードに追加します。
-1. デ追加フォルトのロケール値(, `<locale>` , `de`, `es`,, `fr`, `it`, `pt-br``zh-cn``zh-tw``ja``ko-kr`, , if not present already)。
+1. `<locale>`追加デフォルトのロケール値`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr`が存在しない場合は、それらも存在しません。
 
-1. Add the `<locale>` to the values of the `languages` property of `/etc/languages`.
+1. 追加`<locale>`を`/etc/languages`の`languages`プロパティの値に置き換えます。
 
-が `<locale>` に表示され `https://'[server]:[port]'/libs/cq/i18n/translator.html`ます。
+`<locale>`は`https://'[server]:[port]'/libs/cq/i18n/translator.html`に表示されます。
 
 ### サーバーの再起動 {#restart-the-server}
 
