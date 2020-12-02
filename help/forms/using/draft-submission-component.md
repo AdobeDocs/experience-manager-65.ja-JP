@@ -22,18 +22,18 @@ ht-degree: 61%
 
 ドラフトと送信コンポーネントは、ドラフト状態のすべてのフォームと、既に送信済みのフォームを一覧表示します。コンポーネントには、ドラフトのフォームと送信済みのフォームで別々のセクション（タブ）があります。ユーザーに表示されるのは、ユーザーのドラフトフォームと送信済みのフォームのみです。
 
-## コンポーネントの設定 {#configuring-the-component}
+## コンポーネントの設定  {#configuring-the-component}
 
 ドラフトと送信コンポーネントには、「ドラフト」および「送信」の 2 つのタブがあります。
 
-To enable submission of an adaptive form to appear in the submissions tab, set the **Submit action** to **[Forms Portal Submit Action](../../forms/using/configuring-submit-actions.md). Alternatively,** enable the Forms Portal Submit option. ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
+アダプティブフォームの送信を有効にして「送信」タブに表示するには、**送信アクション**&#x200B;を&#x200B;**[Formsポータル送信アクション](../../forms/using/configuring-submit-actions.md)に設定します。 または、**「Formsポータル送信」オプションを有効にします。 ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
 
 ドラフト機能は初期設定で有効になっています。ユーザーがアダプティブフォームで「**保存**」をクリックすると、フォームが「ドラフト」タブに追加されます。
 
 次の手順に従って、ドラフトと送信コンポーネントを追加して設定します。
 
 1. コンポーネントブラウザー内の Document Services カテゴリー下にある&#x200B;**ドラフトと送信**&#x200B;コンポーネントをページにドラッグアンドドロップします。
-1. Tap the component and then tap ![settings_icon](assets/settings_icon.png) to open the Edit dialog for the component.
+1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップして、コンポーネントの編集ダイアログを開きます。
 
    ![ドラフトと送信コンポーネント](assets/drafts-submissions-edit.png)
 
@@ -49,17 +49,17 @@ To enable submission of an adaptive form to appear in the submissions tab, set t
   <tr>
    <td>一般</td>
    <td>合計結果数</td>
-   <td>表示する結果の最大数を指定します。結果数が合計結果数の制限を超えると、「<strong>さらに表示</strong>」というリンクがコンポーネントの下部に表示されます。Clicking <strong>More </strong>shows all the forms. </td>
+   <td>表示する結果の最大数を指定します。結果数が合計結果数の制限を超えると、「<strong>さらに表示</strong>」というリンクがコンポーネントの下部に表示されます。「<strong>詳細</strong>」をクリックすると、すべてのフォームが表示されます。 </td>
   </tr>
   <tr>
    <td> </td>
    <td>スタイルタイプ</td>
-   <td>コンポーネントのスタイルを指定します。You can specify <strong>No Style</strong>, <strong>Default Style</strong>, or <strong>Custom Style</strong> for listing the forms. 「カスタムスタイル」オプションの場合、「<strong>カスタムスタイルパス</strong>」フィールドでカスタム CSS ファイルのパスを指定できます<strong>。</strong></td>
+   <td>コンポーネントのスタイルを指定します。フォームのリスト表示には、「スタイルなし</strong>」、「<strong>デフォルトのスタイル</strong>」、または「<strong>カスタムスタイル</strong>」を指定できます。 <strong>「カスタムスタイル」オプションの場合、「<strong>カスタムスタイルパス</strong>」フィールドでカスタム CSS ファイルのパスを指定できます<strong>。</strong></strong></td>
   </tr>
   <tr>
    <td> </td>
    <td>カスタムスタイルパス</td>
-   <td>If you choose <strong>Custom Style</strong> option in the <strong>Style Type</strong> field, use the <strong>Custom Style Path</strong> field to specify the path of custom CSS file. </td>
+   <td>「<strong>スタイルタイプ</strong>」フィールドで「<strong>カスタムスタイル</strong>」オプションを選択した場合は、「<strong>カスタムスタイルパス</strong>」フィールドを使用して、カスタムCSSファイルのパスを指定します。 </td>
   </tr>
   <tr>
    <td> </td>
@@ -89,20 +89,20 @@ To enable submission of an adaptive form to appear in the submissions tab, set t
   <tr>
    <td> </td>
    <td>テンプレートのレイアウト</td>
-   <td>Specifies the layout to use for Submitted Forms<strong> </strong>list. </td>
+   <td>送信済みのForms<strong> </strong>リストに使用するレイアウトを指定します。 </td>
   </tr>
  </tbody>
 </table>
 
-## ストレージのカスタマイズ {#customizing-the-storage}
+## ストレージのカスタマイズ{#customizing-the-storage}
 
 「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。ドラフトと送信済みのフォームデータを保存するには、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージと統合する必要があります。
 
 Formsポータルでは、ローカルのAEMリポジトリ、リモートのAEMリポジトリ、またはデータベースにデータを保存できます。 AEM Formsでは、ドラフトと送信のユーザーデータの保存の実装をカスタマイズできます。 デフォルトのメソッドを上書きして、ドラフトと送信データを任意のストレージに保存する方法を指定できます。 例えば、組織に現在実装されているデータストアにデータを保存することができます。
 
-Formsポータルは、ローカルおよびリモートのAEM Forms発行インスタンスのcrx-repositoryにデータを保存するための、初期設定済みのサービス(API)を提供します。 「ドラフトと送信のストレージサービスの [設定](/help/forms/using/configuring-draft-submission-storage.md) 」の記事で説明されているデフォルトの実装を、デフォルトの機能を置き換えるカスタム実装に置き換えることができます。 保護された場所にコンテンツを保存するためにカスタム実装で必要な方法について詳しくは、「ドラフトと送信データサービスの [カスタマイズ](/help/forms/using/custom-draft-submission-data-services.md) 」および「ドラフトと送信コンポーネントの [カスタムストレージ」を参照してください。](/help/forms/using/adding-custom-storage-provider-forms.md)
+Formsポータルは、ローカルおよびリモートのAEM Forms発行インスタンスのcrx-repositoryにデータを保存するための、初期設定済みのサービス(API)を提供します。 「[ドラフトと送信](/help/forms/using/configuring-draft-submission-storage.md)に対するストレージサービスの設定」で説明されているデフォルトの実装を、デフォルトの機能を置き換えるカスタム実装に置き換えることができます。 保護された場所にコンテンツを保存するためにカスタム実装で必要な方法について詳しくは、「[ドラフトと送信データサービスのカスタマイズ](/help/forms/using/custom-draft-submission-data-services.md)」および「[ドラフトと送信コンポーネントのカスタムストレージ」を参照してください。](/help/forms/using/adding-custom-storage-provider-forms.md)
 
-AEM Formsのドキュメントには、ドラフトと送信コンポーネントとデータベースの統合の [サンプルが含まれています](integrate-draft-submission-database.md)。 サンプルの実装を使用して、独自のカスタム実装を開発できます。
+AEM Formsのドキュメントには、[ドラフトと送信コンポーネントとデータベース](integrate-draft-submission-database.md)の統合のサンプルが記載されています。 サンプルの実装を使用して、独自のカスタム実装を開発できます。
 
 ## 関連記事
 
