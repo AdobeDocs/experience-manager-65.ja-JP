@@ -45,7 +45,7 @@ ht-degree: 95%
 * 証明書は、pkcs#12またはJKS形式で含める必要があります。また、「CER」形式の証明書もGranite Truststoreに追加できます。
 * 自己署名証明書または認定された CA が署名した証明書を使用できます。
 
-### JKS 形式 {#jks-format}
+### JKS 形式  {#jks-format}
 
 JKS 形式の秘密鍵と証明書を生成します。秘密鍵はキーストアファイルに格納され、証明書は TrustStore ファイルに格納されます。これらを作成するには、[Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) を使用します。
 
@@ -67,7 +67,7 @@ Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情�
    keytool -genkeypair -keyalg RSA -validity 3650 -alias alias -keystore keystorename.keystore  -keypass key_password -storepass  store_password -dname "CN=Host Name, OU=Group Name, O=Company Name,L=City Name, S=State, C=Country_ Code"
    ```
 
-   | オプション | オーサー | パブリッシュ |
+   | オプション | オーサー | 公開 |
    |---|---|---|
    | -alias | 作成者 | publish |
    | -keystore | author.keystore | publish.keystore |
@@ -78,13 +78,13 @@ Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情�
    keytool -exportcert -alias alias -file cert_file -storetype jks -keystore keystore -storepass store_password
    ```
 
-   | オプション | オーサー | パブリッシュ |
+   | オプション | オーサー | 公開 |
    |---|---|---|
    | -alias | 作成者 | publish |
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
-### pkcs#12 形式 {#pkcs-format}
+### pkcs#12 形式  {#pkcs-format}
 
 pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、[openSSL](https://www.openssl.org/) を使用します。次の手順を使用して、秘密鍵と証明書要求を生成します。証明書を取得するには、秘密鍵を使用して要求に署名するか（自己署名証明書）、CA に要求を送信します。次に、秘密鍵と証明書を格納する pkcs#12 アーカイブを生成します。
 
@@ -94,7 +94,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl genrsa -out keyname.key 2048
    ```
 
-   | オプション | オーサー | パブリッシュ |
+   | オプション | オーサー | 公開 |
    |---|---|---|
    | -out | author.key | publish.key |
 
@@ -104,7 +104,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl req -new -key keyname.key -out key_request.csr
    ```
 
-   | オプション | オーサー | パブリッシュ |
+   | オプション | オーサー | 公開 |
    |---|---|---|
    | -key | author.key | publish.key |
    | -out | author_request.csr | publish_request.csr |
@@ -117,7 +117,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl x509 -req -days 3650 -in key_request.csr -signkey keyname.key -out certificate.cer
    ```
 
-   | オプション | オーサー | パブリッシュ |
+   | オプション | オーサー | 公開 |
    |---|---|---|
    | -signkey | author.key | publish.key |
    | -in | author_request.csr | publish_request.csr |
@@ -129,14 +129,14 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in certificate.cer -inkey keyname.key -out pkcs12_archive.pfx -name "alias"
    ```
 
-   | オプション | オーサー | パブリッシュ |
+   | オプション | オーサー | 公開 |
    |---|---|---|
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
    | -in | author.cer | publish.cer |
    | -name | 作成者 | publish |
 
-## 作成者への秘密鍵と TrustStore のインストール {#install-the-private-key-and-truststore-on-author}
+## 作成者への秘密鍵と TrustStore のインストール  {#install-the-private-key-and-truststore-on-author}
 
 オーサーインスタンスに次の項目をインストールします。
 
@@ -145,7 +145,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 
 次の手順を実行するには、オーサーインスタンスの管理者としてログインする必要があります。
 
-### オーサーの秘密鍵のインストール {#install-the-author-private-key}
+### オーサーの秘密鍵のインストール  {#install-the-author-private-key}
 
 1. オーサーインスタンスのユーザー管理ページを開きます（[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)）。
 1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックまたはタップします。
@@ -188,7 +188,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 
 次の手順を実行するには、パブリッシュインスタンスの管理者としてログインする必要があります。
 
-### パブリッシュの秘密鍵のインストール {#install-the-publish-private-key}
+### パブリッシュの秘密鍵のインストール  {#install-the-publish-private-key}
 
 1. パブリッシュインスタンスのユーザー管理ページを開きます（[http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html)）。
 1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックまたはタップします。
@@ -199,7 +199,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 1. キーストアのエイリアスとパスワードを入力します。秘密鍵のエイリアスとパスワードを入力して、「送信」をクリックします。
 1. キーストア管理ダイアログボックスを閉じます。
 
-### オーサーの証明書のインストール {#install-the-author-certificate}
+### オーサーの証明書のインストール  {#install-the-author-certificate}
 
 1. パブリッシュインスタンスのユーザー管理ページを開きます（[http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html)）。
 1. レプリケーションの要求を実行するために使用するユーザーアカウントを探して、そのユーザー名をクリックまたはタップします。
@@ -209,9 +209,9 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 1. 「証明書をユーザーにマップ」チェックボックスがオンになっていることを確認します。「証明書ファイルを選択」をクリックし、author.cer を選択して、「開く」をクリックします。
 1. 「送信」をクリックして、TrustStore 管理ダイアログボックスを閉じます。
 
-## パブリッシュでの HTTP サービスの設定 {#configure-the-http-service-on-publish}
+## パブリッシュでの HTTP サービスの設定  {#configure-the-http-service-on-publish}
 
-Configure the properties of the Apache Felix Jetty Based HTTP Service on the publish instance so that it uses HTTPS while accessing Granite Keystore. The PID of the service is `org.apache.felix.http`.
+Apache Felix Jetty Based HTTP Serviceのプロパティをパブリッシュインスタンスで設定し、Graniteキーストアにアクセスする際にHTTPSを使用するようにします。サービスのPIDは`org.apache.felix.http`です。
 
 次の表は、Web コンソールを使用する場合に設定する必要のある OSGi のプロパティを示しています。
 
@@ -222,7 +222,7 @@ Configure the properties of the Apache Felix Jetty Based HTTP Service on the pub
 | HTTPS Port | org.osgi.service.http.port.secure | 8443（またはその他の必要なポート） |
 | Client Certificate | org.apache.felix.https.clientcertificate | Client Certificate Wanted（クライアント証明書が必要） |
 
-## オーサーでのレプリケーションエージェントの設定 {#configure-the-replication-agent-on-author}
+## オーサーでのレプリケーションエージェントの設定  {#configure-the-replication-agent-on-author}
 
 パブリッシュインスタンスへの接続時に HTTPS プロトコルを使用するように、オーサーインスタンスでレプリケーションエージェントを設定します。レプリケーションエージェントの設定について詳しくは、[レプリケーションエージェントの設定](/help/sites-deploying/replication.md#configuring-your-replication-agents)を参照してください。
 
