@@ -23,7 +23,7 @@ ht-degree: 98%
 
 [コンテンツインサイト](/help/sites-authoring/content-insights.md)ページを開き、作成しているページのパフォーマンスを分析しますレポート期間を設定して分析を絞り込みます。
 
-## ページの「分析と推奨表示」を開く {#opening-analytics-and-recommendations-for-a-page}
+## ページの「分析と推奨表示」を開く  {#opening-analytics-and-recommendations-for-a-page}
 
 次の手順を使用して、ページの「分析と推奨表示」を表示します。
 
@@ -63,7 +63,7 @@ ht-degree: 98%
 
 1. レポート期間の終了日を変更するには、影になっている部分の右側に表示される円を目的の終了日にドラッグします。
 
-#### レポート期間の精度の変更 {#changing-the-granularity-of-the-reporting-period}
+#### レポート期間の精度の変更  {#changing-the-granularity-of-the-reporting-period}
 
 レポートの各データポイントの期間の時間数を変更します。例えば、精度に「週次」が選択されている場合、表示レポートの各データポイントは 1 週のビュー数を表します。
 
@@ -77,7 +77,7 @@ ht-degree: 98%
 
 1. 目的の精度をクリックまたはタップします。選択すると、レポートが自動的に更新され、精度が反映されます。
 
-### SEO の推奨のためのタスクの割り当て {#assigning-tasks-for-seo-recommendations}
+### SEO の推奨のためのタスクの割り当て  {#assigning-tasks-for-seo-recommendations}
 
 SEO の推奨レポートを使用して、検索エンジンでのページの視認性を向上させるタスクを作成します。チェックマークが付いていないレポートの各推奨について、必要な作業を実行するようにユーザーに割り当てるタスクを作成できます。
 
@@ -87,7 +87,7 @@ SEO の推奨のステータスは、まだ完了していないタスクがい�
 
 ![chlimage_1-130](assets/chlimage_1-130.png)
 
-作成されると、タスクがユーザーのタスクリストに表示されます。タスクについて詳しくは、タスクの [操作を参照してください](/help/sites-authoring/task-content.md)。
+作成されると、タスクがユーザーのタスクリストに表示されます。タスクについて詳しくは、[タスクの操作](/help/sites-authoring/task-content.md)を参照してください。
 
 次の手順を使用して、SEO の推奨のタスクを作成します。
 
