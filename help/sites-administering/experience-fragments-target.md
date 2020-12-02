@@ -27,8 +27,8 @@ ht-degree: 45%
 >
 >6.5.3.0
 >
->* **Externalizerドメイン** (Externalizer Domains)を選択できるようになりました。
-   >  **注意：** Externalizerドメインは、ターゲットに送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、表示オファーコンテンツなどのメタデータには関連しません。
+>* **Externalizer** Domainscanが選択されるようになりました。
+   >  **注意：** Externalizerドメインは、表示に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、ターゲットオファーコンテンツなどのメタデータには関連しません。
 >
 >
 6.5.2.0:
@@ -38,9 +38,9 @@ ht-degree: 45%
    >   
    * デフォルトのワークスペース。
    >   * クラウド設定で指定された、名前付きのワークスペース。
-   >   * **注意：** 特定のワークスペースに書き出すには、Adobe Targetプレミアムが必要です。
+   >   * **注意：特定のワークスペースに** 書き出すには、Adobe Targetプレミアムが必要です。
 >
->* AEMは、AdobeI/Oを使用してAdobe Targetと [統合する必要がある](/help/sites-administering/integration-ims-adobe-io.md)。
+>* AEMは、Adobe I/O](/help/sites-administering/integration-ims-adobe-io.md)を使用して、Adobe Targetと[統合する必要があります。
 
 >
 >
@@ -48,10 +48,10 @@ ht-degree: 45%
 AEM 6.5.0.0および6.5.1.0:
 >
 >* AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペースに書き出されます。
->* AEMは、「Adobe Targetとの [統合」の指示に従って、Adobe Targetと統合する必要があります](/help/sites-administering/target.md)。
+>* AEMは、[Adobe Target](/help/sites-administering/target.md)との統合の指示に従って、Adobe Targetと統合する必要があります。
 
 
-You can export [Experience Fragments](/help/sites-authoring/experience-fragments.md), created in Adobe Experience Manager (AEM), to Adobe Target (Target). 書き出したエクスペリエンスフラグメントは、Target アクティビティのオファーとして使用し、幅広くエクスペリエンスをテストおよびパーソナライズできます。
+Adobe Experience Manager(AEM)で作成した[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)をAdobe Target(ターゲット)に書き出すことができます。 書き出したエクスペリエンスフラグメントは、Target アクティビティのオファーとして使用し、幅広くエクスペリエンスをテストおよびパーソナライズできます。
 
 エクスペリエンスフラグメントをAdobe Target に書き出す際には、3 つのフォーマットオプションを利用できます。
 
@@ -59,11 +59,11 @@ You can export [Experience Fragments](/help/sites-authoring/experience-fragments
 * JSON:ヘッドレスコンテンツ配信のサポート
 * HTML と JSON
 
-AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペースに書き出すことも、Adobe Targetのユーザー定義のワークスペースに書き出すこともできます。 これは、AdobeI/Oを介して行われ、AEMI/Oを使用してAdobeをAdobe Targetと [統合する必要があり](/help/sites-administering/integration-ims-adobe-io.md)ます。
+AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペースに書き出すことも、Adobe Targetのユーザー定義のワークスペースに書き出すこともできます。 これはAdobe I/Oを介して行われ、そのためにAEMはAdobe I/O](/help/sites-administering/integration-ims-adobe-io.md)を使って[Adobe Targetと統合する必要がある。
 
 >[!NOTE]
 >
->Adobe TargetはAdobe Target自体には存在しない。 これらは、AdobeIMS(Identity Managementシステム)で定義および管理され、AdobeI/O統合を使用するソリューション間での使用に選択されます。
+>Adobe TargetはAdobe Target自体には存在しない。 これらの指標はAdobeIMS(Identity Managementシステム)で定義および管理され、Adobe I/O統合を使用するソリューション全体での使用に選択されます。
 
 >[!NOTE]
 >
@@ -88,14 +88,14 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
 
 様々なアクションが必要です。
 
-1. AdobeI/Oを使用してAEMをAdobe Targetと [統合する必要がある](/help/sites-administering/integration-ims-adobe-io.md)。
-2. エクスペリエンスフラグメントはAEM作成者インスタンスから書き出されるので、エクスペリエンスフラグメント内の参照がWeb配信用に外部化されるように、作成者インスタンスでAEM Link Externalizer [( Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) )を設定する必要があります。
+1. Adobe I/O](/help/sites-administering/integration-ims-adobe-io.md)を使ってAEMをAdobe Targetと[統合しなければなりません。
+2. エクスペリエンスフラグメントはAEM作成者インスタンスから書き出されるので、エクスペリエンスフラグメント内の参照がWeb配信用に外部化されるように、作成者インスタンスで[AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)を設定する必要があります。
 
    >[!NOTE]
    >
    >デフォルトでカバーされていないリンクの書き換えでは、[Experience Fragment Link Rewriter Provider](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html) が利用可能です。これにより、インスタンスに合わせてカスタマイズされたルールを開発できます。
 
-## 追加クラウドの設定 {#add-the-cloud-configuration}
+## 追加クラウド設定{#add-the-cloud-configuration}
 
 フラグメントを書き出す前に、**Adobe Target** 用の&#x200B;**クラウド設定**&#x200B;をフラグメント、またはフォルダーに追加する必要があります。また、次のことも可能です。
 
@@ -118,7 +118,7 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
 
 1. 「**クラウドサービス**」タブを選択します。
 
-1. Under **Cloud Service Configuration**, select **Adobe Target** from the drop-down list.
+1. 「**Cloud Service設定**」で、ドロップダウンリストから「**Adobe Target**」を選択します。
 
    >[!NOTE]
    >
@@ -128,7 +128,7 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
    >
    >[コアコンポーネント — エクスペリエンスフラグメント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
 
-   「 **Adobe Target** 」で次を選択します。
+   **Adobe Target**&#x200B;の下で次を選択します。
 
    * 適切な設定
    * 必要な形式オプション
@@ -139,7 +139,7 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
    >
    >外部化子ドメインはオプションです。
    >
-   > AEM externalizerは、書き出したコンテンツが特定の *公開* ドメインを指すようにする場合に設定します。 詳しくは、AEM Link Externalizerの [設定を参照してください](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
+   > AEM externalizerは、書き出したコンテンツが特定の&#x200B;*publish*&#x200B;ドメインを指すようにする場合に設定します。 詳しくは、[AEM Link Externalizerの設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)を参照してください。
    >
    > また、Externalizerドメインは、表示に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、ターゲットオファーコンテンツなどのメタデータには関連しません。
 
@@ -149,7 +149,7 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
 
 1. **保存して閉じます**。
 
-## Exporting an Experience Fragment to Adobe Target {#exporting-an-experience-fragment-to-adobe-target}
+## エクスペリエンスフラグメントのAdobe Targetへの書き出し{#exporting-an-experience-fragment-to-adobe-target}
 
 >[!CAUTION]
 >
@@ -178,7 +178,7 @@ AEM から Target にエクスペリエンスフラグメントを書き出す�
    >
    >**公開**&#x200B;を選択すると、エクスペリエンスフラグメントはすぐに公開され、Target に送信されます。
 
-1. Tap/click **OK** in the confirmation dialog.
+1. 確認ダイアログで「**OK**」をタップまたはクリックします。
 
    エクスペリエンスフラグメントは Target に送信されているはずです。
 
@@ -194,7 +194,7 @@ AEM から Target にエクスペリエンスフラグメントを書き出す�
 >
 >あるいは、[ページ情報](/help/sites-authoring/author-environment-tools.md#page-information)メニューの同等のコマンドを使用して、ページエディターから書き出しを実行することもできます。
 
-## Using your Experience Fragments in Adobe Target {#using-your-experience-fragments-in-adobe-target}
+## Adobe Targetでのエクスペリエンスフラグメントの使用{#using-your-experience-fragments-in-adobe-target}
 
 上記のタスクを実行した後、エクスペリエンスフラグメントはターゲットのオファーページに表示されます。 Target 側でできることを詳しく知るには、[Target に特化したドキュメント](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html)を参照してください。
 
@@ -202,7 +202,7 @@ AEM から Target にエクスペリエンスフラグメントを書き出す�
 >
 >Adobe Target でエクスペリエンスフラグメントを表示すると、表示される&#x200B;*最終変更日*&#x200B;は、フラグメントが最後に Adobe Target に書き出された日付ではなく、AEM でフラグメントが最後に変更された日付です。
 
-## Deleting an Experience Fragment already exported to Adobe Target {#deleting-an-experience-fragment-already-exported-to-adobe-target}
+## 既にAdobe Targetに書き出されたエクスペリエンスフラグメントの削除{#deleting-an-experience-fragment-already-exported-to-adobe-target}
 
 Target に書き出し済みのエクスペリエンスフラグメントを削除すると、そのフラグメントがすでに Target のオファーで使用されている場合に問題が発生する可能性があります。フラグメントのコンテンツが AEM によって配信されているため、フラグメントを削除するとオファーが使用できなくなります。
 
