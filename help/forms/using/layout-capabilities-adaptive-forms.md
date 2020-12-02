@@ -33,11 +33,11 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 アダプティブフォームは次のタイプのレイアウトを提供します。
 
-**パネルレイアウト** ：パネル内の項目やコンポーネントをデバイス上で表示する方法をコントロールします。
+**パネル** レイアウトパネル内の項目やコンポーネントをデバイスに表示する方法をコントロールします。
 
-**モバイルレイアウト** ：モバイルデバイス上のフォームのナビゲーションを制御します。 デバイスの幅が 768 ピクセル以上の場合、レイアウトはモバイルと判断され、モバイルデバイス向けに最適化されます。
+**モバイル** レイアウトモバイルデバイス上のフォームのナビゲーションを制御します。デバイスの幅が 768 ピクセル以上の場合、レイアウトはモバイルと判断され、モバイルデバイス向けに最適化されます。
 
-**ツールバーレイアウト** ：フォーム内のツールバーまたはパネルツールバーのアクションボタンの配置をコントロールします。
+**ツールバー** レイアウトフォーム内のツールバーまたはパネルツールバーのアクションボタンの配置をコントロールします。
 
 これらのすべてのパネルレイアウトは次の場所で定義されます。
 
@@ -53,7 +53,7 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 フォーム作成者は、ルートパネルを含めたアダプティブフォームの各パネルにレイアウトを関連付けることができます。
 
-The Panel layouts are available at `/libs/fd/af/layouts/panel` location.
+パネルレイアウトは`/libs/fd/af/layouts/panel`から利用できます。
 
 ![アダプティブフォームのルートパネルに使用できるパネルレイアウトのリスト](assets/layouts.png)
 
@@ -63,7 +63,7 @@ The Panel layouts are available at `/libs/fd/af/layouts/panel` location.
 
 このパネルレイアウトを使用すると、特別なナビゲーションなしでレイアウトをデバイスの画面サイズに合うように調整するレスポンシブレイアウトを作成できます。
 
-Using this layout, you can place multiple **[!UICONTROL Panel adaptive form]** components one after another inside the panel.
+このレイアウトを使用すると、複数の&#x200B;**[!UICONTROL パネルアダプティブフォーム]**&#x200B;コンポーネントをパネル内に次々に配置できます。
 
 ![レスポンシブレイアウトを使用したフォームの小画面での表示例](assets/responsive_layout_seen_on_small_screen.png)
 
@@ -77,7 +77,7 @@ Using this layout, you can place multiple **[!UICONTROL Panel adaptive form]** c
 
 フォーム上にガイド付きのナビゲーションを用意したい場合、このパネルレイアウトを使用してください。例えば、ユーザーを1ステップずつガイドしながらフォーム内の必須の情報を取得したい場合に、このレイアウトを使用します。
 
-Use the `Panel adaptive form` component to provide step-by-step navigation inside a panel. このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
+`Panel adaptive form`コンポーネントを使用して、パネル内での操作手順を示します。 このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
 
 ```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
@@ -91,9 +91,9 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ウィザードを使用したフォーム
 
-### アコーディオンデザインのレイアウト {#layout-for-accordion-design}
+### アコーディオンデザインのレイアウト  {#layout-for-accordion-design}
 
-Using this layout, you can place the `Panel adaptive form` component in a panel with accordion style navigation. また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小回数と最大回数を定義できます。 また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
+このレイアウトを使用すると、アコーディオンスタイルのナビゲーションを含むパネルに`Panel adaptive form`コンポーネントを配置できます。 また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小回数と最大回数を定義できます。 また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
 
 最小化したパネルのタイトルにエンドユーザーが提供した値を表示するために、サマリ式を使用することができます。
 
@@ -101,17 +101,17 @@ Using this layout, you can place the `Panel adaptive form` component in a panel 
 
 アコーディオンレイアウトを使用して作成された繰り返し可能なパネル
 
-### タブ付きレイアウト - タブを左側に表示 {#tabbed-layout-tabs-appear-on-the-left}
+### タブ付きレイアウト - タブを左側に表示  {#tabbed-layout-tabs-appear-on-the-left}
 
-Using this layout, you can place the `Panel adaptive form` component in a panel with tab navigation. タブはパネルコンテンツの左側に配置されます。
+このレイアウトを使用すると、タブ付きナビゲーションのパネルに`Panel adaptive form`コンポーネントを配置できます。 タブはパネルコンテンツの左側に配置されます。
 
 ![タブ付きレイアウトでタブ左側表示](assets/tabbed_layout_left.png)
 
 パネルの左側にタブ表示
 
-### タブ付きレイアウト - タブを上に表示 {#tabbed-layout-tabs-appear-on-the-top}
+### タブ付きレイアウト - タブを上に表示  {#tabbed-layout-tabs-appear-on-the-top}
 
-Using this layout, you can place the `Panel adaptive form` Component in a panel with tab navigation. タブはパネルコンテンツの上に配置されます。
+このレイアウトを使用すると、タブ付きナビゲーションのパネルに`Panel adaptive form`コンポーネントを配置できます。 タブはパネルコンテンツの上に配置されます。
 
 ![タブを上に表示したアダプティブフォームのタブ付きレイアウト](assets/tabbed_layout_top.png)
 
@@ -121,15 +121,15 @@ Using this layout, you can place the `Panel adaptive form` Component in a panel 
 
 モバイルレイアウトはモバイルデバイスの比較的小さい画面で、わかりやすいナビゲーションをできるようにします。モバイルレイアウトでは、フォームのナビゲーションにタブ付きスタイルまたはウィザードスタイルを使用します。モバイルレイアウトを適用するとフォーム全体を単一のレイアウトで表示します。
 
-このレイアウトでは、ナビゲーションバーとナビゲーションメニューを使用してナビゲーションをコントロールします。The navigation bar shows **&lt;** and **>** icon to indicate **next** and **previous** navigation steps in the form.
+このレイアウトでは、ナビゲーションバーとナビゲーションメニューを使用してナビゲーションをコントロールします。ナビゲーションバーには、フォーム内の&#x200B;**&lt;**&#x200B;と&#x200B;**>**&#x200B;のアイコンが表示され、**次**&#x200B;と&#x200B;**前の**&#x200B;のナビゲーション手順が示されます。
 
-The Mobile Layouts are available at `/libs/fd/af/layouts/mobile/` location. アダプティブフォームでは、デフォルトで次のモバイルレイアウトを使用できます。
+モバイルレイアウトは`/libs/fd/af/layouts/mobile/`から入手できます。 アダプティブフォームでは、デフォルトで次のモバイルレイアウトを使用できます。
 
 ![アダプティブフォームのモバイルレイアウトのリスト](assets/mobile-navigation.png)
 
 アダプティブフォームのモバイルレイアウトのリスト
 
-When using a mobile layout, the form menu, to access various form panels, is available by tapping ![aem6forms_form_menu](assets/aem6forms_form_menu.png) icon.
+モバイルレイアウトを使用する場合、様々なフォームパネルにアクセスするためのフォームメニューは、![aem6forms_form_menu](assets/aem6forms_form_menu.png)アイコンをタップすると使用できます。
 
 ### フォームのヘッダー部分にパネルタイトルを表示するレイアウト {#layout-with-panel-titles-in-the-form-header}
 
@@ -155,7 +155,7 @@ When using a mobile layout, the form menu, to access various form panels, is ava
 
 アダプティブフォームのツールバーレイアウトのリスト
 
-Toolbar layouts are available at `/libs/fd/af/layouts/toolbar` location. アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
+ツールバーレイアウトは`/libs/fd/af/layouts/toolbar`から入手できます。 アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
 
 ### ツールバーのデフォルトレイアウト {#default-layout-for-toolbar}
 
