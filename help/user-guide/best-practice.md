@@ -12,14 +12,14 @@ ht-degree: 45%
 ---
 
 
-# AEM 6.5のベストプラクティス {#aem-65-best-practices}
+# AEM 6.5ベストプラクティス{#aem-65-best-practices}
 
-## Where can I learn more about training or education for AEM? {#training}
+## AEM向けのトレーニングや教育に関する詳細はどこで入手できますか。{#training}
 
 アドビには、AEM から最高の結果を得るのに役立つ、多数の主要なリソースがあります。
 
 * [私たちの公式AEMトレーニングカタログはこちらです。](https://training.adobe.com/training/current-courses.html#solution=adobeExperienceManager&amp;p=1)
-* If you&#39;re looking to get certified on AEM, our [full guide to official AEM Certifications is available here.](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)
+* AEMでの認定を希望する場合は、[正式なAEM認定の完全なガイドをこちらで入手できます。](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)
 
 AEM コミュニティは、提案や共同作業からサンプルワークフロー、チュートリアル、コンテンツコード例を常に生み出しています。
 
@@ -27,7 +27,7 @@ AEM コミュニティは、提案や共同作業からサンプルワークフ�
 * [AEMコミュニティの全リストを紹介します。](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)
 * [AEMのナレッジベース記事の完全なリストをここに示します。](https://helpx.adobe.com/jp/experience-manager/kb/index/full_kb_list.html)
 
-## Best practices for AEM {#best-practices}
+## AEM {#best-practices}のベストプラクティス
 
 * [AEMを実装するためのプロジェクト管理のベストプラクティス](/help/managing/best-practices.md)
 * [AEM のオーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)
@@ -37,7 +37,7 @@ AEM コミュニティは、提案や共同作業からサンプルワークフ�
 * [AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)
 * [AEMおよびGDPR対応](/help/managing/data-protection-and-privacy.md)
 
-## Getting started guides for different AEM capabilities {#getting-started}
+## AEMの各機能の使用開始ガイド{#getting-started}
 
 AEM は、組織で様々用途で使用でき、会社全体に幅広く機能を提供できます。まずは、「はじめに」ガイドを参照してください。
 
@@ -47,16 +47,16 @@ AEM は、組織で様々用途で使用でき、会社全体に幅広く機能�
 * [AEM Communities はじめに](/help/communities/getting-started.md)
 * [AEM Livefyre はじめに](https://answers.livefyre.com/developers/getting-started/)
 
-また、新しい [WKNDチュートリアルもあります。これはAEMを使用した初めてのWebサイトの作成手順を示すガイドです。AEMは主要な構築要素です](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 。このチュートリアルでは、を使用したDigital Foundationソリューション [を展開するための](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)手順を説明します。
+また、新しい[WKNDチュートリアルもあります。これは、AEM](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)を使用した初めてのWebサイトの作成手順を示すガイドで、AEMが主要な構成要素である[Digital Foundationソリューションを展開するための手順を示すガイドです。](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)
 
-## Recommended deployments for AEM {#deployments}
+## AEM {#deployments}向けの推奨されるデプロイメント
 
 マイクロカーネルは永続性マネージャーとして機能します。AEM を適切に実装するためには、これを理解することが重要です。インスタンスの目的と検討しているデプロイメントタイプによって、ニーズに合うマイクロカーネルを選択します。[最も一般的なAEMの設定での推奨される用途について説明します。](/help/sites-deploying/recommended-deploys.md)
 
-## AEM security checklist {#security-checklist}
+## AEMセキュリティチェックリスト{#security-checklist}
 
 セキュリティは、AEM のインストールにおける重要な考慮事項です。[AEMのインストールをデプロイする際に安全に保つために必要な様々な手順と対策について説明します。](/help/sites-administering/security-checklist.md) このチェックリストは上から下に順に適用されます。
 
-## AEM Frequently Asked Questions {#faq}
+## AEMよくある質問{#faq}
 
-AEMに関するよくある質問に対する回答を得るには、 [AEM FAQs](/help/sites-administering/aem-faqs.md) ( FAQ)を参照してください。
+AEMに関するよくある質問の回答を得るには、[AEM FAQs](/help/sites-administering/aem-faqs.md)を調べてください。
