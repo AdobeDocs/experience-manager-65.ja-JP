@@ -22,7 +22,7 @@ ht-degree: 89%
 
 管理コンソールの実行時には、以下のことを考慮してください。
 
-* If you access administration console using the URL `https://[hostname]:'port'/adminui`, the specified host name cannot contain underscore characters. アンダースコア文字を含めると、管理コンソールの一部の領域へのリンクが正しく機能しない場合があります。
+* URL `https://[hostname]:'port'/adminui`を使用して管理コンソールにアクセスする場合、指定したホスト名にアンダースコア文字を含めることはできません。 アンダースコア文字を含めると、管理コンソールの一部の領域へのリンクが正しく機能しない場合があります。
 * 日本語の OS 上の Windows エクスプローラーで管理コンソールを実行すると、次の問題が発生することがあります。
 
    * リンクをクリックすると、予期するリンクではなく、ログインページに戻る。
