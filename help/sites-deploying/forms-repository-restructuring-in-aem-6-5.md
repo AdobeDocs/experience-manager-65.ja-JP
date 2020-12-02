@@ -19,7 +19,7 @@ ht-degree: 83%
 
 # AEM 6.5 における Forms リポジトリの再構築{#forms-repository-restructuring-in-aem}
 
-As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM Forms Solution. 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
+AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従い、AEM 6.5にアップグレードしたお客様は、このページを使用して、AEM Forms・ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
@@ -90,7 +90,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 | **再構築の手引き** | これらのクライアントライブラリを変更することは推奨されず、サポートもされていません。変更された場合は、AEM 提供のコードを使用するようにクライアントライブラリをロールバックしてください。 |
 | **備考** | 該当なし |
 
-## 今後のアップグレードの前 {#prior-to-upgrade}
+## 将来のアップグレードの前{#prior-to-upgrade}
 
 ### EchoSign クラウドサービス設定 {#echosign-cloud-service-configuration}
 
@@ -100,7 +100,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 | **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
 | **備考** | 該当なし |
 
-### reCAPTCHA クラウドサービス設定 {#recaptcha-cloud-service-configurations}
+### reCAPTCHA クラウドサービス設定  {#recaptcha-cloud-service-configurations}
 
 | **以前の場所** | `/etc/cloudservices/recaptcha` |
 |---|---|
@@ -108,7 +108,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 | **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
 | **備考** | 該当なし |
 
-### Typekit クラウドサービス設定 {#typekit-cloud-service-configurations}
+### Typekit クラウドサービス設定  {#typekit-cloud-service-configurations}
 
 | **以前の場所** | `/etc/cloudservices/typekit` |
 |---|---|
@@ -116,7 +116,7 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 | **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
 | **備考** | 該当なし |
 
-### その他 {#misc-1}
+### その他  {#misc-1}
 
 | **以前の場所** | `/etc/cloudservices/fdm` |
 |---|---|
@@ -127,6 +127,6 @@ As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-dep
 | **以前の場所** | `/etc/designs/fd/fp` |
 |---|---|
 | **新しい場所** | `/libs/fd/fp` |
-| **再構築の手引き** | Any references to the /etc templates should eventually be updated to point to their `/libs` counterparts. |
+| **再構築の手引き** | /etcテンプレートへの参照は、最終的に`/libs`に対応する&lt;a0/>を指すように更新される必要があります。 |
 | **備考** | 該当なし |
 
