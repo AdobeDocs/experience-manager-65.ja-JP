@@ -42,7 +42,7 @@ ht-degree: 78%
 
 詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側の式マネージャーは、JSP EL仕様の特定の変数と関数をサポートしません。具体的には、次のようになります。
 
-* Collection indexes and map keys (using the [] notation) are not supported in variable names for expressions evaluated on the client-side.
+* クライアント側で評価される式の変数名では、コレクションのインデックスとマップのキー（[]表記を使用）はサポートされません。
 * 式に使用する関数のパラメーターの型や戻り値の型を以下に示しています。
 
    * java.lang.String
@@ -102,7 +102,7 @@ ht-degree: 78%
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolean
+   * ブール値
    * java.lang.Integer
    * Int
    * java.lang.Short
@@ -112,7 +112,7 @@ ht-degree: 78%
    * java.lang.Double
    * 倍精度浮動小数点
    * java.lang.Long
-   * Long
+   * ロング
    * java.lang.Float
    * 浮動小数点数
    * java.util.Calendar
@@ -157,8 +157,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 使用するサンプルアーカイブを以下に示します。
 
-* **GoodFunctions.jar.zip** は、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。 GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
-* **GoodFunctions.zip** は、カスタムのリモート関数を定義し、そのためのバンドルを作成するためのソースコードのパッケージです。
+* **GoodFunctions.jar.** zipは、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
+* **GoodFunctions.** zipは、カスタムのリモート関数を定義し、そのためのバンドルを作成するためのソースコードのパッケージです。
 
 GoodFunctions.jar.zip
 
