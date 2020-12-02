@@ -17,5 +17,5 @@ ht-degree: 18%
 ---
 
 
-# (Redirect)キックスタートガイド{#redirect-kickstart-guide}
+# （リダイレクト）キックスタートガイド{#redirect-kickstart-guide}
 
