@@ -38,11 +38,11 @@ AEM Mobile では、モバイルアプリケーションを作成するための
 * アプリケーションの言語バリエーション。
 * 言語バリエーションのホームページ。
 
-### PhoneGap アプリのルート {#the-root-of-a-phonegap-app}
+### PhoneGap アプリのルート  {#the-root-of-a-phonegap-app}
 
 AEM で作成するモバイルアプリケーションのルートページは、アプリコンソールに表示されます。
 
-ルートページは、アプリケーションの作成時に指定された、アプリケーションの「宛先のパス」プロパティの下に格納されます（デフォルトのパスは /content/phonegap/apps です）。ページ名は、アプリケーションの「名前」プロパティです。For example, the default URL of the root page of the site named `myphonegapapp` is `http://localhost:4502/content/phonegap/apps/myphonegapapp.html`.
+ルートページは、アプリケーションの作成時に指定された、アプリケーションの「宛先のパス」プロパティの下に格納されます（デフォルトのパスは /content/phonegap/apps です）。ページ名は、アプリケーションの「名前」プロパティです。例えば、`myphonegapapp`という名前のサイトのルートページのデフォルトURLは`http://localhost:4502/content/phonegap/apps/myphonegapapp.html`です。
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -65,7 +65,7 @@ AEM で作成するモバイルアプリケーションのルートページは�
 
 ホームページ（アプリケーションの言語バリエーションの index.html ページ）は、アプリケーションを開いたときに表示されます。ホームページでは、ユーザーはアプリ内のさまざまなページへのリンクが配置されたメニューを利用できます。段落システムでは、コンテンツを作成するためのコンポーネントをページに追加できます。
 
-## モバイルアプリケーションの作成 {#creating-a-mobile-application}
+## モバイルアプリケーションの作成  {#creating-a-mobile-application}
 
 モバイルアプリケーションは、ページ構造およびプロパティを定義するブループリントに基づいています。次のアプリケーションプロパティを設定できます。
 
@@ -106,11 +106,11 @@ AEM で作成するモバイルアプリケーションのルートページは�
 1. （オプション）アプリケーションアイコンを指定するには、「参照」ボタンをクリックして、ファイルシステムから画像ファイルを選択し、「開く」をクリックします。
 1. 「作成」をクリックします。
 
-### モバイルアプリケーションのプロパティの変更 {#changing-the-properties-of-a-mobile-application}
+### モバイルアプリケーションのプロパティの変更  {#changing-the-properties-of-a-mobile-application}
 
 モバイルアプリケーションを作成したら、プロパティを変更できます。
 
-#### タイトル、説明およびアイコンを変更します。 {#change-the-title-description-and-icon}
+#### タイトル、説明およびアイコンを変更します。  {#change-the-title-description-and-icon}
 
 1. レールで、「アプリ」をクリックまたはタップします。
 1. 設定するアプリケーションを選択し、「ページのプロパティを表示」アイコンをクリックします。
@@ -125,7 +125,7 @@ AEM で作成するモバイルアプリケーションのルートページは�
 
    ![](do-not-localize/chlimage_1-10.png)
 
-#### アプリケーションの言語バリエーションを設定します。 {#configure-a-language-variation-of-the-application}
+#### アプリケーションの言語バリエーションを設定します。  {#configure-a-language-variation-of-the-application}
 
 1. レールで、「アプリ」をクリックまたはタップします。
 1. アプリ管理コンソール内で、クリックして編集対象のモバイルアプリケーションを表示します。設定するアプリケーションの言語バージョンを選択し、「アプリケーションのプロパティを表示」アイコンをクリックします。
@@ -140,7 +140,7 @@ AEM で作成するモバイルアプリケーションのルートページは�
 
    ![](do-not-localize/chlimage_1-13.png)
 
-### モバイルアプリケーションのコンテンツのオーサリング {#authoring-the-content-of-a-mobile-application}
+### モバイルアプリケーションのコンテンツのオーサリング  {#authoring-the-content-of-a-mobile-application}
 
 モバイルアプリケーションを作成したら、アプリケーション UI として使用するコンテンツを追加します。
 
@@ -148,7 +148,7 @@ AEM で作成するモバイルアプリケーションのルートページは�
 1. アプリケーションをクリックまたはタップし、「英語」をクリックまたはタップします。
 1. ホームページを編集するか、または必要に応じて子ページを追加します。
 
-### モバイルアプリケーションへのコンテンツの移動 {#moving-content-to-mobile-applications}
+### モバイルアプリケーションへのコンテンツの移動  {#moving-content-to-mobile-applications}
 
 AEM パブリッシュインスタンスのコンテンツ同期キャッシュは、モバイルアプリケーション向けのコンテンツのリポジトリとして使用されます。
 
@@ -217,7 +217,7 @@ Geometrixx Outdoors アプリは、デフォルトの PhoneGap アプリケー�
 
 アプリケーションを開くには、レールから「モバイルアプリケーション」をクリックし、「Geometrixx Outdoors アプリ」を選択します。
 
-### 共通のページ機能 - Geometrixx モバイルアプリ {#common-page-features-geometrixx-mobile-app}
+### 共通のページ機能 - Geometrixx モバイルアプリ  {#common-page-features-geometrixx-mobile-app}
 
 モバイルアプリの各ページには、次のような機能があります。
 
@@ -231,14 +231,14 @@ Geometrixx Outdoors アプリは、デフォルトの PhoneGap アプリケー�
 
 * コンポーネントを追加し、コンテンツを作成するための段落システム。
 
-### ホームページ - Geometrixx モバイルアプリ {#the-home-page-geometrixx-mobile-app}
+### ホームページ - Geometrixx モバイルアプリ  {#the-home-page-geometrixx-mobile-app}
 
 ホームページのコンテンツは、次のナビゲーションツールで構成されています。
 
 * 「ギア」、「レビュー」、「ニュース」、「会社概要」の各子ページへのリンクを備えたメニューリストコンポーネント。
 * 子ページを表示するスワイプカルーセルコンポーネント。
 
-### 「ギア」ページ - Geometrixx モバイルアプリ {#the-gear-page-geometrixx-mobile-app}
+### 「ギア」ページ - Geometrixx モバイルアプリ  {#the-gear-page-geometrixx-mobile-app}
 
 「ギア」ページでは、ユーザーは製品ページにアクセスできます。メニューリストコンポーネントでは、「ギア」ページの子ページにアクセスできます。子ページは、Web サイトに掲載している製品のカテゴリです。
 
@@ -249,37 +249,37 @@ Geometrixx Outdoors アプリは、デフォルトの PhoneGap アプリケー�
 
 各カテゴリページは、「ギア」ページと同じコンテンツ構造を使用します。カルーセルでは、製品のサブカテゴリである子ページにアクセスできます。サブカテゴリページには、製品ページへのリンクを掲載した製品リストが含まれています。
 
-### 「製品」ページ - Geometrixx モバイルアプリ {#the-products-page-geometrixx-mobile-app}
+### 「製品」ページ - Geometrixx モバイルアプリ  {#the-products-page-geometrixx-mobile-app}
 
 「製品」ページとその子ページの階層は、製品ページの分類体系を実装したものです。階層の各ブランチの最下位ページは、ng 製品コンポーネントが含まれている製品のページです。
 
 アプリケーションユーザーが「製品」ページを使用することはできません。「ギア」ページでは、各製品ページにアクセスできます。
 
-### 「レビュー」ページ - Geometrixx モバイルアプリ {#the-reviews-page-geometrixx-mobile-app}
+### 「レビュー」ページ - Geometrixx モバイルアプリ  {#the-reviews-page-geometrixx-mobile-app}
 
 「戻る」ボタンが含まれています。段落システムでは、コンポーネントを追加できます。
 
 アプリケーションを使用する場合、「レビュー」ページは英語ページのカルーセルから使用可能です。
 
-### 「ニュース」ページ - Geometrixx モバイルアプリ {#the-news-page-geometrixx-mobile-app}
+### 「ニュース」ページ - Geometrixx モバイルアプリ  {#the-news-page-geometrixx-mobile-app}
 
 「戻る」ボタンが含まれています。段落システムでは、コンポーネントを追加できます。
 
 アプリケーションを使用する場合、「ニュース」ページは英語ページのカルーセルから使用可能です。
 
-### 「会社概要」ページ - Geometrixx モバイルアプリ {#the-about-us-page-geometrixx-mobile-app}
+### 「会社概要」ページ - Geometrixx モバイルアプリ  {#the-about-us-page-geometrixx-mobile-app}
 
 「会社概要」ページには、2 列の行コンポーネントがいくつか含まれています。各列には、画像コンポーネントまたはテキストコンポーネントが含まれています。コンポーネントは編集可能で、段落システムではコンポーネントを追加できます。
 
 アプリケーションを使用する場合、「会社概要」ページは「英語」ページのカルーセルから使用可能です。
 
-### 「ロケーション」ページ - Geometrixx モバイルアプリ {#the-locations-page-geometrixx-mobile-app}
+### 「ロケーション」ページ - Geometrixx モバイルアプリ  {#the-locations-page-geometrixx-mobile-app}
 
 「ロケーション」ページには、ロケーションコンポーネントが含まれています。
 
 アプリケーションを使用する場合、「ロケーション」ページは「英語」ページのメニューリストから使用可能です。
 
-## サンプルのモバイルコンポーネント {#sample-mobile-components}
+## サンプルのモバイルコンポーネント  {#sample-mobile-components}
 
 モバイルアプリケーションのページを作成する場合は、複数のコンポーネントがサイドキックですぐに使用可能になります。これらのコンポーネントは、PhoneGap コンポーネントグループに属しています。
 
@@ -307,7 +307,7 @@ Geometrixx Outdoors アプリは、デフォルトの PhoneGap アプリケー�
 * 並べ替え順：ページリストの並べ替えに使用するページプロパティを選択します。例えば、ページをタイトルのアルファベット順に並べ替えるには、jcr:title を選択します。
 * 制限：含めるページの最大数。このプロパティは、検索ベースのページリストビルド方法に適しています。
 
-#### ページリストのビルド {#building-the-page-list}
+#### ページリストのビルド  {#building-the-page-list}
 
 スワイプカルーセルコンポーネントによって、「リストを選択」プロパティの次の値が提供されます。編集ダイアログは、選択する値に応じて異なります。
 
@@ -344,7 +344,7 @@ Geometrixx Outdoors アプリは、デフォルトの PhoneGap アプリケー�
 
 アプリケーションコンテンツにリッチテキストを追加します。
 
-### ストアの場所 {#store-locations}
+### ストアの場所  {#store-locations}
 
 ストアの場所コンポーネントでは、ユーザーはビジネスアウトレットを検索するためのツールを利用できます。
 
