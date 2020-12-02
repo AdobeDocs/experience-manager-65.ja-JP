@@ -49,17 +49,17 @@ ht-degree: 87%
 
 [アドビが提供する最新のセキュリティホットフィックス](https://helpx.adobe.com/jp/experience-manager/kb/aem63-available-hotfixes.html)がインストールされていることを確認してください。
 
-### AEM および OSGi コンソールの admin アカウントのデフォルトパスワードの変更 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### AEM および OSGi コンソールの admin アカウントのデフォルトパスワードの変更  {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
 インストール後に、（すべてのインスタンスに対する）権限のある [**AEM** `admin` アカウント](#changing-the-aem-admin-password)のパスワードを変更することを強くお勧めします。
 
 以下のアカウントが該当します。
 
-* AEM `admin` アカウント
+* AEM `admin`アカウント
 
    AEM管理者アカウントのパスワードを変更した後は、CRXにアクセスする際に新しいパスワードを使用する必要があります。
 
-* OSGi Webコンソールの `admin` パスワード
+* OSGi Webコンソールの`admin`パスワード
 
    この変更は、Webコンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセスする際に同じパスワードを使用する必要があります。
 
@@ -84,23 +84,23 @@ AEM `admin` アカウントとは別に、OSGi Web コンソールのデフォ�
 
 Web コンソールのパスワードの変更について詳しくは、以下の [OSGi Web コンソールの admin パスワードの変更](/help/sites-administering/security-checklist.md#changing-the-osgi-web-console-admin-password)を参照してください。
 
-#### OSGi Web コンソールの admin パスワードの変更 {#changing-the-osgi-web-console-admin-password}
+#### OSGi Web コンソールの admin パスワードの変更  {#changing-the-osgi-web-console-admin-password}
 
-You must also change the password used for accessing the Web console. This is done by configuring the following properties of the [Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md):
+また、Webコンソールへのアクセスに使用するパスワードも変更する必要があります。これは、[Apache Felix OSGi管理コンソール](/help/sites-deploying/osgi-configuration-settings.md)の次のプロパティを設定することで行います。
 
 **User Name** および **Password**：Apache Felix Web Management Console 自体にアクセスするための資格情報です。
 インスタンスのセキュリティを確実にするために、初期インストール後にパスワードを変更する必要があります。
 
 次の手順を実行します。
 
-1. Navigate to the web console at `<server>:<port>/system/console/configMgr`.
+1. `<server>:<port>/system/console/configMgr`にあるWebコンソールに移動します。
 1. **Apache Felix OSGi Management Console** に移動して、「**User Name**」と「**Password**」を変更します。
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
 1. 「**Save**」をクリックします。
 
-### カスタムエラーハンドラーの実装 {#implement-custom-error-handler}
+### カスタムエラーハンドラーの実装  {#implement-custom-error-handler}
 
 情報が開示されないようにするには、（404 および 500 HTTP 応答コード専用の）カスタムエラーハンドラーページを定義することをお勧めします。
 
@@ -116,7 +116,7 @@ AEM ディスパッチャーはインフラストラクチャの重要な部分�
 >
 >Dispatcher を使用して「.form」セレクターを無効にする必要があります。
 
-## 検証手順 {#verification-steps}
+## 検証手順  {#verification-steps}
 
 ### レプリケーションおよびトランスポートユーザーの設定 {#configure-replication-and-transport-users}
 
@@ -124,7 +124,7 @@ AEM の標準インストールでは、`admin` をデフォルトの[レプリ�
 
 セキュリティを考慮して、特定の使用事例に対応するように両方のユーザーを変更してください。その際の注意事項を次に示します。
 
-* The **transport user** should not be the admin user. Rather, set up a user on the publish system that has only access rights to the relevant portions of the publish system and use that user&#39;s credentials for the transport.
+* **トランスポートユーザー**&#x200B;は管理者ユーザーにしないでください。代わりに、パブリッシュシステムの関連する部分へのアクセス権限のみを持つユーザーをパブリッシュシステムに設定し、そのユーザーの秘密鍵証明書をトランスポートに使用します。
 
    バンドルされたレプリケーション受信者ユーザーから開始し、状況に合わせてそのユーザーのアクセス権限を設定できます。
 
@@ -144,7 +144,7 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 
 >[!NOTE]
 >
->このインスタンスが[実稼動準備モード](/help/sites-administering/production-ready.md)で実行されている場合、サンプルの We.Retail アプリケーションは削除されます。何らかの理由でこのようにならない場合は、Package Managerに移動し、Web.Retailのすべてのパッケージを検索してアンインストールすることで、サンプルコンテンツをアンインストールできます。 詳しくは、「パッケージの [操作](package-manager.md)」を参照してください。
+>このインスタンスが[実稼動準備モード](/help/sites-administering/production-ready.md)で実行されている場合、サンプルの We.Retail アプリケーションは削除されます。何らかの理由でこのようにならない場合は、Package Managerに移動し、Web.Retailのすべてのパッケージを検索してアンインストールすることで、サンプルコンテンツをアンインストールできます。 詳しくは、[パッケージの操作](package-manager.md)を参照してください。
 
 ### CRX 開発バンドルが存在するかどうかの確認 {#check-if-the-crx-development-bundles-are-present}
 
@@ -154,13 +154,13 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 * Adobe Granite CRX Explorer（com.adobe.granite.crx-explorer）
 * Adobe Granite CRXDE Lite（com.adobe.granite.crxde-lite）
 
-### Sling 開発バンドルが存在するかどうかの確認 {#check-if-the-sling-development-bundle-is-present}
+### Sling 開発バンドルが存在するかどうかの確認  {#check-if-the-sling-development-bundle-is-present}
 
 [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) は Apache Sling Tooling Support Install（org.apache.sling.tooling.support.install）をデプロイします。
 
 実稼動のオーサーシステムとパブリッシュシステムへのアクセスを可能にする前に、それらの両方のシステムで、この OSGi バンドルをアンインストールしておく必要があります。
 
-### クロスサイトリクエストフォージェリからの保護 {#protect-against-cross-site-request-forgery}
+### クロスサイトリクエストフォージェリからの保護  {#protect-against-cross-site-request-forgery}
 
 #### CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
@@ -180,11 +180,11 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 リファラーフィルターサービスを設定するには：
 
-1. 次の場所にあるApache Felixコンソール(**設定**)を開きます。
+1. 次の場所にあるApache Felixコンソール（**設定**）を開きます。
 
    `https://<server>:<port_number>/system/console/configMgr`
 
-1. ログイン名 `admin`。
+1. `admin`としてログインします。
 1. **Configurations** メニューで、次の項目を選択します。
 
    `Apache Sling Referrer Filter`
@@ -249,7 +249,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-## 追加情報 {#further-readings}
+## 追加情報  {#further-readings}
 
 ### サービス拒否（DoS）攻撃の軽減 {#mitigate-denial-of-service-dos-attacks}
 
@@ -262,7 +262,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 * 無制限の数の URL を含むコンテンツページを要求する。URL にはハンドル、複数のセレクター、拡張子およびサフィックスを含めることができます。それらのいずれかを変更できます。
 
-   例えば、 `.../en.html` 次のように要求することもできます。
+   例えば、`.../en.html`は次のように要求することもできます。
 
    * `.../en.ExtensionDosAttack`
    * `.../en.SelectorDosAttack.html`
@@ -304,9 +304,9 @@ DoS の悪用を防ぐ方法は次のとおりです。
 
       リポジトリ全体をJSON表現でダンプできました。 これにより、サーバーで重大な問題が発生します。そのため、Sling では結果の最大数に制限を設定します。JSONレンダリングの深さを制限するには、次の値を設定します。
 
-      **JSONの最大結果** ( `json.maximumresults`)
+      **JSONの最大結果** (  `json.maximumresults`)
 
-      ( [Apache SlingGETサーブレットの設定](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)) この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
+      [Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)の設定に含まれています。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
 
    * 予防策として、デフォルトの他のレンダラー（HTML、プレーンテキスト、XML）を無効にします。この場合も [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet) を設定します。
    >[!CAUTION]
@@ -323,11 +323,11 @@ DoS の悪用を防ぐ方法は次のとおりです。
 >
 >この軽減策は、Forms を使用していない AEM 環境でのみ実行するべきです。
 
-AEM は `FormChooserServlet` 用の標準インデックスを提供していないため、クエリでフォームセレクターを使用すると、高コストのリポジトリートラバーサルが発生し、大抵の場合 AEM インスタンスが停止します。フォームセレクターは、 **&amp;ast;.formの存在によって検出できます。&amp;ast;** 文字列をクエリで指定します。
+AEM は `FormChooserServlet` 用の標準インデックスを提供していないため、クエリでフォームセレクターを使用すると、高コストのリポジトリートラバーサルが発生し、大抵の場合 AEM インスタンスが停止します。フォームセレクターは、**&amp;ast;.formの存在によって検出できます。クエリ内の&amp;ast;**&#x200B;文字列。
 
 これを軽減するために、以下の手順に従ってください。
 
-1. Go to the Web Console by pointing your browser to *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
+1. Webコンソールに移動し、ブラウザで&#x200B;*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;を指定します。
 
 1. **Day CQ WCM Form Chooser Servlet** を検索します。
 1. エントリをクリックした後、次のウィンドウで「**Advanced Search Require**」を無効にします。
@@ -378,7 +378,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 既存のアプリケーションとの後方互換性を確保するために以前の実装が必要な場合、非推奨ではありますが、この機能を無効にすることもできます。これをおこなうには、次の手順を実行する必要があります。
 
-1. Go to the Web Console and remove the** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName** entry from property **requiredServicePids** in **Apache Jackrabbit Oak SecurityProvider**.
+1. Webコンソールに移動し、**Apache Jackrabbit Oak SecurityProvider**&#x200B;のプロパティ&#x200B;**requiredServicePids**&#x200B;から** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**エントリを削除します。
 
    また、OSGi 設定の **org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** PID を探すことで、Oak Security Provider を見つけることもできます。
 
@@ -394,7 +394,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 クリックジャッキングを防ぐには、`SAMEORIGIN` に設定した HTTP ヘッダー `X-FRAME-OPTIONS` を指定するように Web サーバーを設定することをお勧めします。
 
-For more [information on clickjacking please see the OWASP site](https://www.owasp.org/index.php/Clickjacking).
+クリックジャックに関する詳細[は、OWASPサイト](https://www.owasp.org/index.php/Clickjacking)を参照してください。
 
 ### 必要な場合は暗号鍵を適切にレプリケーションする {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
@@ -404,7 +404,7 @@ For more [information on clickjacking please see the OWASP site](https://www.owa
 
 詳しくは、以下を参照してください。
 
-#### AEM 6.3 での鍵のレプリケーション {#replicating-keys-for-aem}
+#### AEM 6.3 での鍵のレプリケーション  {#replicating-keys-for-aem}
 
 以前のバージョンではレプリケーション鍵はリポジトリに保存されましたが、AEM 6.3 からはファイルシステム上に保存されます。
 
@@ -440,12 +440,12 @@ For more [information on clickjacking please see the OWASP site](https://www.owa
 
 #### AEM 6.2 以前のバージョンでの鍵のレプリケーション {#replicating-keys-for-aem-and-older-versions}
 
-In AEM 6.2 and older versions, the keys are stored in the repository under the `/etc/key` node.
+AEM 6.2以前のバージョンでは、キーは`/etc/key`ノードの下のリポジトリに保存されます。
 
 インスタンス全体で鍵を安全にレプリケーションするために推奨される方法は、このノードのみをレプリケーションすることです。CRXDE Lite によって、ノードを選択してレプリケーションできます。
 
-1. Open CRXDE Lite by going to *https://&lt;serveraddress>:4502/crx/de/index.jsp*
-1. Select the `/etc/key` node.
+1. *https://&lt;serveraddress>:4502/crx/de/index.jsp*&#x200B;に移動してCRXDE Liteを開きます。
+1. `/etc/key`ノードを選択します。
 1. 「**レプリケーション**」タブに移動します。
 1. 「**レプリケーション**」ボタンを押します。
 
