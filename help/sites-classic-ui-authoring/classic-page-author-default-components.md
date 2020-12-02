@@ -35,11 +35,11 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [ページオーサリング用コンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   Components used for creating standard page content are primarily contained in the groups **General**, **Columns** and **Forms**.
+   標準ページコンテンツの作成に使用するコンポーネントは、主にグループ&#x200B;**一般**、**列**、**Forms**&#x200B;に含まれます。
 
 * [e コマース](/help/sites-administering/ecommerce.md)
 
-   The eCommerce functionality within AEM also includes a range of components, contained in the **Commerce** group. 実際の使用方法は、使用しているコマースエンジンによって異なります。
+   AEMのeコマース機能には、**コマース**&#x200B;グループに含まれる様々なコンポーネントも含まれます。 実際の使用方法は、使用しているコマースエンジンによって異なります。
 
 ## デザインモードでのコンポーネントの設定 {#using-design-mode-to-configure-components}
 
