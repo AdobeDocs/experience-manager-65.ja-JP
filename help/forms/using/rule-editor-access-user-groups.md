@@ -24,21 +24,21 @@ ht-degree: 58%
 
 アダプティブフォームで作業を行うユーザーのタイプやスキルは、それぞれ異なっています。正しい知識を使用してスクリプトや複雑なルールを操作できる上級ユーザーもいれば、アダプティブフォームのレイアウトや基本的なプロパティ以外の操作はできない初心者レベルのユーザーもいます。
 
-AEM Forms では、各ユーザーの役割や職務に応じて、ルールエディターへのアクセスを制限することができます。In the Adaptive Forms Configuration Service settings, you can specify the [user groups](/help/sites-administering/security.md) that can view and access rule editor.
+AEM Forms では、各ユーザーの役割や職務に応じて、ルールエディターへのアクセスを制限することができます。アダプティブForms構成サービスの設定で、ルールエディターの表示とアクセスを可能にする[ユーザーグループ](/help/sites-administering/security.md)を指定できます。
 
 ## ルールエディターにアクセスできるユーザーグループの指定 {#specify-user-groups-that-can-access-rule-editor}
 
 1. 管理者として AEM Forms にログインします。
-1. In the author instance, click ![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager > Tools ![hammer](assets/hammer.png) > Operations > Web Console. をクリックします。新しいウィンドウが Web コンソールに表示されます。
+1. オーサーインスタンスで、![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager/ツール![ハンマー](assets/hammer.png)/操作/Webコンソールをクリックします。 をクリックします。新しいウィンドウが Web コンソールに表示されます。
 
    ![1-2](assets/1-2.png)
 
-1. In Web Console Window, locate and click **Adaptive Form Configuration Service**. **Adaptive Form Configuration Service** ダイアログが表示されます。 値を変更せずに、「**保存**」をクリックします。
+1. Webコンソールウィンドウで、「**Adaptive Form Configuration Service**」を探してクリックします。 **Adaptive Form Configuration** Serviceダイアログが表示されます。値を変更せずに、「**保存**」をクリックします。
 
    これにより、CRX リポジトリに /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
 
 1. 管理者として CRXDE にログインします。編集のため、/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルを開きます。
-1. Use the following property to specify the name of a group that can access rule editor (For example, RuleEditorsUserGroup) and click **Save All**.
+1. 次のプロパティを使用して、ルールエディターにアクセスできるグループの名前を指定し（例：RuleEditorsUserGroup）、「**すべて保存**」をクリックします。
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
 
@@ -48,7 +48,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    ![ユーザーを作成](assets/create_user_new.png)
 
-   Now, when a user that is not a part of the a specified user group (here RuleEditorsUserGroup) taps a field, the Edit Rule icon ( ![edit-rules1](assets/edit-rules1.png)) is not available for her in the components toolbar:
+   現在は、指定したユーザーグループ（ここでは「RuleEditorsUserGroup」）に属していないユーザーがフィールドをタップした場合、コンポーネントツールバーでルールの編集アイコン(![edit-rules1](assets/edit-rules1.png))は使用できません。
 
    ![componentstoolbarwither](assets/componentstoolbarwithre.png)
 
@@ -58,5 +58,5 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    ルールエディターのアクセス権を持たないユーザーに表示されるコンポーネントツールバー
 
-   For instructions on adding users to groups, see [User Administration and Security](/help/sites-administering/security.md).
+   ユーザーをグループに追加する手順については、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
