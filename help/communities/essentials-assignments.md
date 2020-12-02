@@ -19,13 +19,13 @@ ht-degree: 49%
 ---
 
 
-# 割り当ての基本事項 {#assignments-essentials}
+# 割り当ての基本事項  {#assignments-essentials}
 
-イネーブルメントコミュニティ [](/help/communities/overview.md#enablement-community) サイトの割り当て機能を使用するための重要な情報について、以下に説明します。
+[イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)サイトの割り当て機能を使用する上で必要な情報について、以下をお読みください。
 
 割り当て機能を使用すると、イネーブルメントコミュニティのメンバーに実施可能リソースおよびイネーブルメント学習パスを割り当てることができます。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -51,7 +51,7 @@ ht-degree: 49%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="/help/communities/assignments.md">Assignments Feature</a></td>
+   <td><a href="/help/communities/assignments.md">割り当て機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
@@ -82,11 +82,11 @@ ht-degree: 49%
 | 完了 | パス |
 | 完了 | 失敗 |
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 ### 割り当て機能 {#assignments-function}
 
-A community site structure that includes the [Assignments function](/help/communities/functions.md#assignments-function), includes a configured ` [assignments](/help/communities/assignments.md)` component.
+[割り当て機能](/help/communities/functions.md#assignments-function)を含むコミュニティサイト構造には、設定済みの` [assignments](/help/communities/assignments.md)`コンポーネントが含まれます。
 
 ### リファレンス API {#reference-apis}
 
