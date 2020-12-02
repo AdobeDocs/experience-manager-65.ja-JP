@@ -50,14 +50,14 @@ ht-degree: 56%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td> See <a href="comments.md">Using Comments</a></td>
+   <td> <a href="comments.md">コメントの使用</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 [クライアント側のカスタマイズ](client-customize.md)
 
-### ページごとに 1 つのインスタンス {#one-instance-per-page}
+### ページごとに 1 つのインスタンス  {#one-instance-per-page}
 
 ページネーションをおこなう場合、およびキャッシュやリンクのために URL を使用する場合は、コメントシステムごとに一意の URL を使用する必要があります。したがって、1ページにつき1つのコメントシステムのインスタンスのみが許可されます。
 
@@ -70,7 +70,7 @@ ht-degree: 56%
 * [Q&amp;A](qna-essentials.md)
 * [レビュー](reviews-basics.md)
 
-### フラグ設定理由リスト {#flag-reason-list}
+### フラグ設定理由リスト  {#flag-reason-list}
 
 フラグ設定理由リストは、アプリケーションに flagreasonlist.hbs を追加して内容を上書きすることによってカスタマイズできます。
 
@@ -78,7 +78,7 @@ ht-degree: 56%
 
 これは、コメントシステムのすべての拡張コンポーネントに適用されます。
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [コメント API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
@@ -86,7 +86,7 @@ ht-degree: 56%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿されたコメント（UGC）へのアクセス {#accessing-posted-comments-ugc}
+### 投稿されたコメント（UGC）へのアクセス  {#accessing-posted-comments-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -96,8 +96,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
-* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
+* [SocialUtilsリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
 
