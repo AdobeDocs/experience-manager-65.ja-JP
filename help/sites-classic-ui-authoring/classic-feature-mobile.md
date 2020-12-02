@@ -26,9 +26,9 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
+>既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(「[異なるチャネル用のライブコピーの作成](/help/sites-administering/msm-livecopy.md)」を参照)。
 >
->AEM 開発者は、新しいデバイスグループを作成できます。(See [Creating Device Group Filters.](/help/sites-developing/groupfilters.md))
+>AEM 開発者は、新しいデバイスグループを作成できます。(「[デバイスグループフィルターの作成」を参照)。](/help/sites-developing/groupfilters.md)
 
 次の手順を使用して、モバイルページをオーサリングします。
 
