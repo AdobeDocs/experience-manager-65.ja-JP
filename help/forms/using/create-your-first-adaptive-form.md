@@ -16,7 +16,7 @@ ht-degree: 71%
 ---
 
 
-# Tutorial: Create your first adaptive form {#tutorial-create-your-first-adaptive-form}
+# チュートリアル：最初のアダプティブフォームの作成{#tutorial-create-your-first-adaptive-form}
 
 ![01-create-first-adaptive-form-hero-image](assets/01-create-first-adaptive-form-hero-image.png)
 
@@ -37,15 +37,15 @@ ht-degree: 71%
 
 さまざまな顧客に対応するため、幅広い製品を提供する Web サイトがあります。顧客はこの Web サイトのポータルを閲覧し、製品を選択して注文します。すべての顧客がアカウントを作成し、配送先の住所と請求先の住所を入力します。既存の顧客である Sara Rose は、Web サイトに配送先住所を追加しようとしています。Webサイトには、配送先住所の追加や更新を行うためのオンラインフォームが用意されています。
 
-The website runs on Adobe Experience Manager (AEM) and uses AEM [!DNL Forms] for data capture and processing. 住所の追加とフォームの更新は、アダプティブフォームを使用して行います。データベース内の顧客情報は Web サイト上に保存されます。利用可能なアドレスを取得して表示する際に、アドレスの追加と更新のフォームを使用します。 また、アダプティブフォームを使用して、更新後の住所と新しい住所を入力します。
+このWebサイトはAdobe Experience Manager(AEM)上で動作し、データの取得と処理にAEM [!DNL Forms]を使用します。 住所の追加とフォームの更新は、アダプティブフォームを使用して行います。データベース内の顧客情報は Web サイト上に保存されます。利用可能なアドレスを取得して表示する際に、アドレスの追加と更新のフォームを使用します。 また、アダプティブフォームを使用して、更新後の住所と新しい住所を入力します。
 
 ### 前提条件 {#prerequisite}
 
 * AEM オーサーインスタンスをセットアップします。
 * [AEM Forms アドオン](../../forms/using/installing-configuring-aem-forms-osgi.md)をオーサーインスタンスにインストールします。
-* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。Examples in the tutorial are based on [!DNL MySQL] database and use [!DNL Oracle's] [MySQL JDBC database driver](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルの例は、[!DNL MySQL]データベースに基づいており、[!DNL Oracle's] [MySQL JDBCデータベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
 
-* 以下に示すフィールドを使用して、顧客データを保存するデータベースをセットアップします。アダプティブフォームを作成する場合、データベースは必須ではありません。This tutorial uses a database to display form data model and persistence capabilities of AEM [!DNL Forms].
+* 以下に示すフィールドを使用して、顧客データを保存するデータベースをセットアップします。アダプティブフォームを作成する場合、データベースは必須ではありません。このチュートリアルでは、データベースを使用して、フォームデータモデルとAEM [!DNL Forms]の永続性機能を表示します。
 
 ![adaptiveformdata](assets/adaptiveformdata.png)
 
@@ -53,7 +53,7 @@ The website runs on Adobe Experience Manager (AEM) and uses AEM [!DNL Forms] for
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-アダプティブフォームは、レスポンシブで動的な特性を持つ、柔軟性の高い次世代型の高機能なフォームです。アダプティブフォームにより、エクスペリエンスをターゲット用にカスタマイズすることができます。AEM [!DNL Forms] provide a drag-and-drop WYSIWYG editor to create adaptive forms. アダプティブフォームについて詳しくは、「[アダプティブフォームのオーサリングの概要](../../forms/using/introduction-forms-authoring.md)」を参照してください。
+アダプティブフォームは、レスポンシブで動的な特性を持つ、柔軟性の高い次世代型の高機能なフォームです。アダプティブフォームにより、エクスペリエンスをターゲット用にカスタマイズすることができます。AEM [!DNL Forms]では、WYSIWYGエディターをドラッグ&amp;ドロップしてアダプティブフォームを作成できます。 アダプティブフォームについて詳しくは、「[アダプティブフォームのオーサリングの概要](../../forms/using/introduction-forms-authoring.md)」を参照してください。
 
 ゴール:
 
@@ -72,8 +72,8 @@ The website runs on Adobe Experience Manager (AEM) and uses AEM [!DNL Forms] for
 
 ゴール:
 
-* Configure the website&#39;s database instance ([!DNL MySQL] database) as a data sources
-* Create the form data model using [!DNL MySQL] database as a data source
+* Webサイトのデータベースインスタンス（[!DNL MySQL]データベース）をデータソースとして設定します
+* [!DNL MySQL]データベースをデータソースとして使用したフォームデータモデルの作成
 * データモデルオブジェクトをフォームデータモデルに追加する
 * フォームデータモデルの読み取りサービスと書き込みサービスを設定する
 * テストデータを使用して、フォームデータモデルと設定済みサービスをテストする
@@ -97,7 +97,7 @@ The website runs on Adobe Experience Manager (AEM) and uses AEM [!DNL Forms] for
 
 ![](/help/forms/using/assets/09-style-your-adaptive-form-small.png)
 
-Adaptive forms provide themes and an [editor](../../forms/using/themes.md) to create themes for the adaptive forms. テーマには、コンポーネントとパネルの詳細なスタイル設定が含まれています。様々なフォームでテーマを再利用することができます。スタイルには、背景色、状態を表す色、透明度、配置、サイズなどのプロパティが含まれています。テーマをフォームに適用すると、指定したスタイルがフォームの対応コンポーネントに反映されます。アダプティブフォームは、フォーム専用スタイルのインラインスタイル設定をサポートしています。
+アダプティブフォームには、テーマと、アダプティブフォーム用のテーマを作成する[エディター](../../forms/using/themes.md)が用意されています。 テーマには、コンポーネントとパネルの詳細なスタイル設定が含まれています。様々なフォームでテーマを再利用することができます。スタイルには、背景色、状態を表す色、透明度、配置、サイズなどのプロパティが含まれています。テーマをフォームに適用すると、指定したスタイルがフォームの対応コンポーネントに反映されます。アダプティブフォームは、フォーム専用スタイルのインラインスタイル設定をサポートしています。
 
 ゴール:
 
@@ -111,7 +111,7 @@ Adaptive forms provide themes and an [editor](../../forms/using/themes.md) to cr
 
 ![アダプティブフォームの11テスト](assets/11-test-your-adaptive-form.png)
 
-アダプティブフォームは、顧客とのやり取りを行う上で欠かすことができないものです。アダプティブフォームで行った変更をすべて反映させて、アダプティブフォームをテストすることが重要です。 しかし、フォームのすべてのフィールドをテストするのは面倒な作業です。AEM [!DNL Forms] provide an SDK (Calvin SDK) to automate testing of adaptive forms. Calvin を使用すると、Web ブラウザーでアダプティブフォームを自動的にテストすることができます。
+アダプティブフォームは、顧客とのやり取りを行う上で欠かすことができないものです。アダプティブフォームで行った変更をすべて反映させて、アダプティブフォームをテストすることが重要です。 しかし、フォームのすべてのフィールドをテストするのは面倒な作業です。AEM [!DNL Forms]は、アダプティブフォームのテストを自動化するSDK (Calvin SDK)を提供します。 Calvin を使用すると、Web ブラウザーでアダプティブフォームを自動的にテストすることができます。
 
 ゴール:
 
@@ -125,12 +125,12 @@ Adaptive forms provide themes and an [editor](../../forms/using/themes.md) to cr
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-You can publish adaptive forms as a stand-alone form (single page application), include in AEM [Sites page](/help/forms/using/embed-adaptive-form-aem-sites.md), or list on an AEM [!DNL Site] using [Forms Portal](../../forms/using/introduction-publishing-forms.md).
+アダプティブフォームは、スタンドアロンフォーム（シングルページアプリ）、AEM [サイトページ](/help/forms/using/embed-adaptive-form-aem-sites.md)に含める、または[Formsポータル](../../forms/using/introduction-publishing-forms.md)を使用してAEM [!DNL Site]上のリストとして発行できます。
 
 ゴール:
 
 * アダプティブフォームをAEMページとして発行する
-* アダプティブフォームをAEM [!DNL Sites] ページに埋め込む
+* アダプティブフォームをAEM [!DNL Sites]ページに埋め込む
 * アダプティブフォームを外部Webページ(AEMの外部でホストされているAEM以外のWebページ)に埋め込む
 
 [![詳しくは、](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
