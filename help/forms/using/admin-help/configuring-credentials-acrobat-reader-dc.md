@@ -37,7 +37,7 @@ Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれ�
 >
 >プログラムによって証明書を読み込んだり、削除したりすることもできます（「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」を参照してください。）
 
-## Acrobat Reader DC Extensions 証明書の読み込み {#import-a-acrobat-reader-dc-extensions-credential}
+## Acrobat Reader DC Extensions 証明書の読み込み  {#import-a-acrobat-reader-dc-extensions-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 「読み込み」をクリックし、「Trust Store の種類」で「Acrobat Reader DC Extensions 証明書」を選択します。
@@ -52,12 +52,12 @@ Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれ�
 
    「形式が正しくないか、パスワードが正しくないため、証明書を読み込めませんでした」というエラーメッセージが表示される場合は、パスワードが有効であることを確認してください。
 
-## Acrobat Reader DC Extensions 証明書の削除 {#remove-a-acrobat-reader-dc-extensions-credential}
+## Acrobat Reader DC Extensions 証明書の削除  {#remove-a-acrobat-reader-dc-extensions-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 証明書を選択し、「削除」をクリックします。
 
-## Acrobat Reader DC Extensions 証明書の置換 {#replace-a-acrobat-reader-dc-extensions-credential}
+## Acrobat Reader DC Extensions 証明書の置換  {#replace-a-acrobat-reader-dc-extensions-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 既存の証明書のエイリアスをメモしておきます。このエイリアスを選択して「削除」をクリックします。
