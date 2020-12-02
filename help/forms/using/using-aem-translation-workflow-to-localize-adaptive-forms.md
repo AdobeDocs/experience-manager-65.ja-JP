@@ -23,19 +23,19 @@ ht-degree: 83%
 
 この記事では、アダプティブフォームおよびレコードのドキュメントに対する AEM 翻訳ワークフローの使用手順を説明します。
 
-## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
+## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ  {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
 機械翻訳サービスを使用すると、アダプティブフォームおよびレコードのドキュメントを即座に翻訳することができます。AEM Forms では、機械翻訳に Microsoft Translator の体験版を使用することが事前に定義されています。アダプティブフォームおよびレコードのドキュメントの機械翻訳を有効にするには、次の手順を実行します。
 
 1. AEM Forms UI 上でフォームを選択し、「**辞書の追加**」オプションをタップします。
 1. **辞書を翻訳プロジェクトに追加**&#x200B;画面で、「**新しい翻訳プロジェクトを作成**」または「**既存の翻訳プロジェクトを追加**」オプションを選択します。
 1. 「**プロジェクトタイトル**」フィールドでタイトルを指定します。例：`Government Reference Site - German locale.`
-1. In the **Target Languages** field, specify a locale (For example, `German(de)`), and click **Done**. ロケールは複数指定できます。フォームが「**ターゲット言語**」フィールドで指定されたすべてのロケールに翻訳されます。
+1. 「**ターゲットの言語**」フィールドで、ロケール（例：`German(de)`）を指定し、「**完了**」をクリックします。 ロケールは複数指定できます。フォームが「**ターゲット言語**」フィールドで指定されたすべてのロケールに翻訳されます。
 1. 辞書が追加された際のダイアログボックスで、「**プロジェクトを開く**」をクリックします。プロジェクト画面で、新しく作成されたプロジェクトを開きます。
 1. **翻訳の概要**&#x200B;タイルの下部にある「**三点リーダー**」をクリックします。翻訳の概要画面が開きます。
-1. **翻訳の概要**&#x200B;画面の上部にある「**編集**」アイコンをクリックします。「**翻訳**」タブを開き、**翻訳方法**&#x200B;画面で機械翻訳を選択します。Select the appropriate **Translation Provider** and **Cloud Configuration**. 画面の上部にある「**完了**」アイコンをクリックします。
-1. On the **Translation Job** tile, click the ![aem62forms_downarrow](assets/aem62forms_downarrow.png) icon, and click **Start**. タイルのステータスがドラフトに変わります。翻訳を完了すると、ステータスは&#x200B;**レビューへの準備完了**&#x200B;に変わります。数分待ってからページを更新し、ステータスを確認してください。
-1. After the status changes to **Ready for review** on the **Translation Job** tile, open the form in a browser window. ローカライズバージョンのフォームが表示されます。
+1. **翻訳の概要**&#x200B;画面の上部にある「**編集**」アイコンをクリックします。「**翻訳**」タブを開き、**翻訳方法**&#x200B;画面で機械翻訳を選択します。適切な&#x200B;**翻訳プロバイダー**&#x200B;と&#x200B;**クラウド設定**&#x200B;を選択します。 画面の上部にある「**完了**」アイコンをクリックします。
+1. **翻訳ジョブ**&#x200B;タイルで、![aem62forms_downarrow](assets/aem62forms_downarrow.png)アイコンをクリックし、**開始**&#x200B;をクリックします。 タイルのステータスがドラフトに変わります。翻訳を完了すると、ステータスは&#x200B;**レビューへの準備完了**&#x200B;に変わります。数分待ってからページを更新し、ステータスを確認してください。
+1. **翻訳ジョブ**&#x200B;タイルのステータスが&#x200B;**レビュー準備完了**&#x200B;に変わったら、ブラウザーウィンドウでフォームを開きます。 ローカライズバージョンのフォームが表示されます。
 
    >[!NOTE]
    >
@@ -66,11 +66,11 @@ ht-degree: 83%
 
 1. 翻訳サービスとフレームワークの設定に[言語マスターのページを関連付け](/help/sites-administering/tc-tic.md)ます。
 
-1. [翻訳するコンテンツのタイプを特定します](/help/sites-administering/tc-rules.md) 。
+1. [翻訳する](/help/sites-administering/tc-rules.md) コンテンツのタイプを指定します。
 
 1. [翻訳するコンテンツを準備](/help/sites-administering/tc-prep.md)します。そのためには、言語マスターをオーサリングして、言語コピーのルートページを作成します。
 
-1. [翻訳プロジェクトを作成し](/help/sites-administering/tc-manage.md) 、翻訳対象のコンテンツを収集して翻訳プロセスを準備します。
+1. [翻訳](/help/sites-administering/tc-manage.md) プロジェクトを作成して、翻訳するコンテンツを収集し、翻訳プロセスを準備します。
 
 1. 翻訳プロジェクトを使用して、[コンテンツの翻訳プロセスを管理](/help/sites-administering/tc-manage.md)します。
 
