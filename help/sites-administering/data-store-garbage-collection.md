@@ -19,7 +19,7 @@ ht-degree: 82%
 ---
 
 
-# データストアのガベージコレクション {#data-store-garbage-collection}
+# データストアのガベージコレクション  {#data-store-garbage-collection}
 
 従来の WCM アセットを削除すると、データストアレコードの参照がノード階層から削除されますが、データストアレコード自体は削除されずに残ります。その結果、どこからも参照されることのないこのデータストアレコードは、不要な「ガベージ」として残ることになります。例えば、インスタンスにいくつかのガベージアセットが存在する場合、そのガベージアセットを削除すれば、領域を保護して、バックアップやファイルシステムのメンテナンスのパフォーマンスを最適化できます。
 
@@ -32,13 +32,13 @@ AEM では、以下に示す様々な内部アクティビティやハウスキ�
 * ワークフローのペイロード
 * DAM レンダリング時に一時的に作成されたアセット
 
-これらの一時オブジェクトがデータストア内の領域をある程度消費するほど大きく、しかもそのオブジェクトが最終的に使用されなかった場合は、そのデータストアレコード自体が「ガベージ」として残ります。標準的な WCM オーサー／パブリッシュアプリケーションの場合、このようなガベージが生まれる最大の原因は、一般的に、パブリッシュアクティベーションのプロセスにあります。When data is being replicated to Publish, it if first gathered in collections in an efficient data format called &quot;Durbo&quot; and stored in the repository under `/var/replication/data`. データバンドルは通常、データストアの上限サイズを超えるので、最終的にデータストアレコードとして保存されます。When the replication is complete, the node in `/var/replication/data` is deleted, but the data store record remains as &quot;garbage&quot;.
+これらの一時オブジェクトがデータストア内の領域をある程度消費するほど大きく、しかもそのオブジェクトが最終的に使用されなかった場合は、そのデータストアレコード自体が「ガベージ」として残ります。標準的な WCM オーサー／パブリッシュアプリケーションの場合、このようなガベージが生まれる最大の原因は、一般的に、パブリッシュアクティベーションのプロセスにあります。データを発行に複製する場合、最初に「Durbo」と呼ばれる効率的なデータ形式でコレクションに収集し、`/var/replication/data`の下のリポジトリに保存すると、データは発行されます。 データバンドルは通常、データストアの上限サイズを超えるので、最終的にデータストアレコードとして保存されます。レプリケーションが完了すると、`/var/replication/data`内のノードは削除されますが、データストアレコードは「ガベージ」のままです。
 
 回収可能なガベージが生まれるもう 1 つの原因はパッケージです。他のデータもそうですが、パッケージデータもリポジトリ内に保存され、4 KB を超えるパッケージはデータストア内に保存されます。開発プロジェクトの工程やその後のシステムのメンテナンスでは、パッケージのビルドとリビルドが何度もおこなわれ、ビルドがおこなわれるたびに新しいデータストアレコードができて、以前のビルドのレコードは孤立します。
 
-## データストアのガベージコレクションの機能 {#how-does-data-store-garbage-collection-work}
+## データストアのガベージコレクションの機能  {#how-does-data-store-garbage-collection-work}
 
-リポジトリが外部データストアに設定されている場合、週別メンテナンスウィンドウの一部として、[データストアのガベージコレクションは自動的に実行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection)されます。The system administrator can also [run data store garbage collection manually](#running-data-store-garbage-collection) on as as-needed basis. 一般的に、データストアのガベージコレクションは定期的に実行することが推奨されますが、データストアのガベージコレクションを計画するときは、次の事項を考慮する必要があります。
+リポジトリが外部データストアに設定されている場合、週別メンテナンスウィンドウの一部として、[データストアのガベージコレクションは自動的に実行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection)されます。システム管理者は、必要に応じて、[データストアのガベージコレクションを手動で](#running-data-store-garbage-collection)実行することもできます。 一般的に、データストアのガベージコレクションは定期的に実行することが推奨されますが、データストアのガベージコレクションを計画するときは、次の事項を考慮する必要があります。
 
 * データストアのガベージコレクションは時間がかかり、パフォーマンスに影響する可能性があるので、適切に計画する必要があります。
 * データストアのガベージレコードを削除しても通常のパフォーマンスに影響はないので、これはパフォーマンス最適化ではありません。
@@ -63,7 +63,7 @@ AEM では、以下に示す様々な内部アクティビティやハウスキ�
 
 データストアのガベージコレクションは、AEM が実行されているデータストアのセットアップに応じて、3 つの方法で実行できます。
 
-1. Via [Revision Cleanup](/help/sites-deploying/revision-cleanup.md) - a garbage collection mechanism usually used for node store cleanup.
+1. [リビジョンのクリーンアップ](/help/sites-deploying/revision-cleanup.md)経由 — 通常、ノードストアのクリーンアップに使用されるガベージコレクションメカニズム。
 
 1. [データストアのガベージコレクション](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard) - 外部データストア用のガベージコレクションメカニズムで、操作ダッシュボードで使用可能。
 1. [JMX コンソール](/help/sites-administering/jmx-console.md)。
@@ -125,7 +125,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->「データストアのガベージコレクション」タスクは、外部ファイルデータストアが設定されている場合にのみ表示されます。See [Configuring node stores and data stores in AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) for information on how to set up a file data store.
+>「データストアのガベージコレクション」タスクは、外部ファイルデータストアが設定されている場合にのみ表示されます。ファイルのデータストアを設定する方法については、[AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
 
 ### JMX コンソールによるデータストアのガベージコレクションの実行 {#running-data-store-garbage-collection-via-the-jmx-console}
 
@@ -138,9 +138,9 @@ TarMK がノードストアとデータストアの両方として使用され�
 ガベージコレクションを実行するには：
 
 1. Apache Felix OSGi Management Console で、「**メイン**」タブをアクティブにし、次のメニューから「**JMX**」を選択して、
-1. 次に、「 **Repository Manager** MBean」を検索してクリックします(またはに移動 `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`)。
+1. 次に、**リポジトリマネージャー** MBeanを探してクリックします（または`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`に移動します）。
 1. 「**startDataStoreGC(boolean markOnly)**」をクリックします。
-1. enter &quot;`true`&quot; for the `markOnly` parameter if required:
+1. 必要に応じて、`markOnly`パラメーターに&quot;`true`&quot;と入力します。
 
    | **オプション** | **説明** |
    |---|---|
@@ -154,7 +154,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->データストアのガベージコレクションタスクは、外部ファイルデータストアが設定されている場合にのみ開始されます。If an external file data store has not been configured, the task will return the message `Cannot perform operation: no service of type BlobGCMBean found` after invoking. See [Configuring node stores and data stores in AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) for information on how to set up a file data store.
+>データストアのガベージコレクションタスクは、外部ファイルデータストアが設定されている場合にのみ開始されます。外部ファイルのデータストアが構成されていない場合、タスクは呼び出し後に`Cannot perform operation: no service of type BlobGCMBean found`メッセージを返します。 ファイルのデータストアを設定する方法については、[AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
 
 ## データストアのガベージコレクションの自動化 {#automating-data-store-garbage-collection}
 
@@ -184,11 +184,11 @@ curl コマンドはすぐに制御を返します。
 
 データストアの整合性チェックは、欠落しているもののまだ参照されているデータストアのバイナリを報告します。整合性チェックを開始するには、次の手順を実行します。
 
-1. JMX コンソールに移動します。For information on how to use the JMX console, see [this article](/help/sites-administering/jmx-console.md#using-the-jmx-console).
-1. Search for the **BlobGarbageCollection** Mbean and click it.
-1. Click the `checkConsistency()` link.
+1. JMX コンソールに移動します。JMXコンソールの使用方法について詳しくは、[この記事](/help/sites-administering/jmx-console.md#using-the-jmx-console)を参照してください。
+1. **BlobGarbageCollection** Mbeanを探してクリックします。
+1. `checkConsistency()`リンクをクリックします。
 
-整合性チェックが完了すると、メッセージに欠落として報告されるバイナリの数が表示されます。If the number is greater than 0, check the `error.log` for more details on the missing binaries.
+整合性チェックが完了すると、メッセージに欠落として報告されるバイナリの数が表示されます。0より大きい数値の場合は、`error.log`を調べて、見つからないバイナリの詳細を調べてください。
 
 欠落しているバイナリがログにどのように表示されるかを次に示します。
 
