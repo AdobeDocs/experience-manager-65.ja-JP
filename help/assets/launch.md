@@ -129,7 +129,7 @@ Experience Cloud アカウントが Adobe Analytics for Audio and Video を使�
 
 詳しくは、[拡張機能のインストールとセットアップ](#installing-and-setup-of-extensions)を参照してください。
 
-現在、ビデオトラッキングのサポートは、[トラッキングの概要](https://docs.adobe.com/content/help/ja-JP/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
+現在、ビデオトラッキングのサポートは、[トラッキングの概要](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
 
 ## Dynamic Media ビューア拡張機能の使用 {#using-the-dynamic-media-viewers-extension}
 
@@ -450,7 +450,7 @@ Adobe Analytics を設定した後、統合のために次の設定がおこな�
 
    使用できるレポートスイートがない場合は、設定を続行する前に、ユーザーまたは Adobe Analytics 管理者がレポートスイートを作成する必要があります。
 
-   [レポートとレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)および[レポートスイートの作成](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-console/create-report-suite.html)を参照してください。
+   [レポートとレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)および[レポートスイートの作成](https://docs.adobe.com/content/help/en/analytics/admin/admin-console/create-report-suite.html)を参照してください。
 
    Adobe Analytics では、**[!UICONTROL 管理者／レポートスイート]**&#x200B;でレポートスイートを管理します。
 
@@ -517,7 +517,7 @@ Adobe Launch のプロパティは、すべての設定をまとめた名前付�
 1. Adobe Launch で、**[!UICONTROL 新しいプロパティ]**&#x200B;をクリックします。
 1. **[!UICONTROL プロパティを作成]**&#x200B;ダイアログボックスの「**[!UICONTROL 名前]**」フィールドに、Web サイトのタイトルなど、わかりやすい名前を入力します。例：`DynamicMediaViewersProp.`
 1. 「**[!UICONTROL ドメイン]**」フィールドに、Web サイトのドメインを入力します。
-1. In the **[!UICONTROL Advanced Options]** drop-down, enable **[!UICONTROL Configure for extension development (cannot be modified later)]** in case the extension you want to use--in this case, *Dynamic Media Viewers*--is not yet released.
+1. **[!UICONTROL 高度なオプション]**&#x200B;ドロップダウンで、使用する拡張機能の場合に備えて、**[!UICONTROL 拡張機能開発用に設定（後で変更できません）]**&#x200B;を有効にします。*ダイナミックメディアビューア*&#x200B;はまだリリースされていません。
 
    ![image2019-7-8_16-3-47](assets/image2019-7-8_16-3-47.png)
 
@@ -559,7 +559,7 @@ Adobe Launch で使用可能なすべての拡張機能は、**[!UICONTROL 拡�
 
 詳しくは、[Adobe Analytics 拡張機能](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)を参照してください。
 
-* (Optional; required only if video tracking is needed) *Adobe Media Analytics for Audio and Video* extension
+* (オプション、ビデオトラッキングが必要な場合にのみ必要)*AdobeMedia Analytics for Audioおよびビデオ*&#x200B;拡張子
 
 「トラッキングサーバー」フィールドに入力します。*Adobe Media Analytics for Audio and Video* 拡張機能のトラッキングサーバーは、Adobe Analytics で使用されるトラッキングサーバーとは異なります。これはテンプレート `<trackingNamespace>.hb.omtrdc.net` に従います。`<trackingNamespace>` は、プロビジョニング電子メールの情報です。
 
@@ -571,7 +571,7 @@ Adobe Launch で使用可能なすべての拡張機能は、**[!UICONTROL 拡�
 
 **[!UICONTROL ビデオ分析を有効にする]**&#x200B;を選択して、ビデオハートビートトラッキングを有効（オン）にします。
 
-Note that--at the time of this writing--the *Dynamic Media Viewers* extension is only available if the Adobe Launch Property is created for development.
+このドキュメントの記述時点では、*Dynamic Media Viewers*&#x200B;の拡張は、開発用にAdobeの起動プロパティが作成されている場合にのみ使用できます。
 
 詳しくは、[Adobe Launch でのプロパティの作成](#creating-a-property-in-adobe-launch)を参照してください。
 
@@ -591,7 +591,7 @@ Adobe Launch を使用したトラッキングの概要については、[統合
 
 ### ライブラリの公開 {#publishing-a-library}
 
-To make changes in the Adobe Launch configuration (including Property, Extensions, Rules, and Data Elements set up), you need to *publish* such changes*.*Adobeの起動での公開は、プロパティ設定の「公開」タブから実行します。
+Adobe起動の設定（プロパティ、拡張機能、ルール、データ要素の設定を含む）を変更するには、*publish* thuch changes*を実行する必要があります。*Adobeの起動での公開は、プロパティ設定の「公開」タブから実行します。
 
 Adobe Launch には、複数の開発環境、1 つのステージング環境、1 つの実稼動環境が存在する場合があります。デフォルトでは、AEM の Adobe Launch クラウド設定は、AEM オーサーノードを Adobe Launch のステージング環境に、AEM パブリッシュノードを Adobe Launch の実稼動環境にポイントします。この配置は、デフォルトの AEM 設定で、Adobe Launch ライブラリを AEM オーサーで使用するためにステージング環境に公開し、AEM パブリッシュで使用できるように実稼動環境に公開する必要があることを意味します。
 
@@ -686,7 +686,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
    ![2019-07-25_12-09-24](assets/2019-07-25_12-09-24.png)
 
-1. Click **[!UICONTROL Download Public Key]** to download a public key file (*.crt) to your local system.
+1. [**[!UICONTROL 公開鍵]**&#x200B;のダウンロード]をクリックして、公開鍵ファイル(*.crt)をローカルシステムにダウンロードします。
 
    >[!NOTE]
    >
@@ -711,7 +711,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
    * 「**[!UICONTROL 説明]**」フィールドに、統合の説明を入力します。
 
-   * In the **[!UICONTROL Public key certificates]** area, upload your public key file (*.crt) that you downloaded previously in these steps.
+   * 「**[!UICONTROL 公開鍵証明書]**」領域で、これらの手順で以前にダウンロードした公開鍵ファイル(*.crt)をアップロードします。
 
    * 「**[!UICONTROL Experience Platform Launch API 用の役割を選択]**」の見出しの下から「**[!UICONTROL 管理者]**」を選択します。
 
@@ -724,7 +724,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
    ![2019-07-25_14-16-33](assets/2019-07-25_14-16-33.png)
 
-1. An Integrations details page appears, **** similar to the following:
+1. 統合の詳細ページ&#x200B;****&#x200B;が表示され、次のようになります。
 
    >[!NOTE]
    >
@@ -762,7 +762,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
 1. **[!UICONTROL API キー]** - 統合の詳細ページに戻ります。「**[!UICONTROL 概要]**」タブをクリックし、「**[!UICONTROL API キー（クライアント ID）]**」フィールドの右にある「**[!UICONTROL コピー]**」をクリックします。
 
-   Return to the **[!UICONTROL Account]** page, then paste the key into the respective ****field.
+   **[!UICONTROL アカウント]**&#x200B;ページに戻り、キーを****フィールドに貼り付けます。
 
    ![2019-07-25_14-35-333](assets/2019-07-25_14-35-333.png)
 
