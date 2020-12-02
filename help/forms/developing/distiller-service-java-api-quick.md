@@ -27,11 +27,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}を使用したPostScriptファイルのPDFドキュメントへの変換
 
-次のコードの例では、 *Loan.psというPostScriptファイルを* Loan.pdfというPDFファイルに変換し *ます*。 (PostScriptドキュメントのPDFへの [変換を参照](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents))。
+次のコードの例では、*Loan.ps*&#x200B;というPostScriptファイルを&#x200B;*Loan.pdf*&#x200B;というPDFファイルに変換します。 ([PostScriptからPDFドキュメントへの変換](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)を参照)。
 
 ```java
  /*
