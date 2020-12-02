@@ -97,7 +97,7 @@ message=<html><body>\n\
 </html>\n\
 ```
 
-## 電子メール通知におけるシステム生成メタデータの使用 {#using-system-generated-metadata-in-an-email-notification}
+## 電子メール通知におけるシステム生成メタデータの使用  {#using-system-generated-metadata-in-an-email-notification}
 
 AEM Forms アプリケーションには、すぐに使えるメタデータ変数（キーと値のペア）がいくつか用意されています。これらの変数を電子メールテンプレートに使用することができます。変数の値は、関連する Forms アプリケーションに基づいています。次の表では、すぐに使える全メタデータ変数のリストを示します。
 
@@ -158,7 +158,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。この言語は、クライアント側のスクリプト作成とサーバーアプリケーションに使用されます。次の手順を実行して、ECMAScrip を使用して電子メールテンプレートにカスタムメタデータを追加します。
 
-1. 管理者アカウントを使用して CRX DE にログインします。The URL is https://&#39;[server]:[port]&#39;/crx/de/index.jsp
+1. 管理者アカウントを使用して CRX DE にログインします。URLはhttps://&#39;[server]:[port]&#39;/crx/de/index.jspです。
 
 1. /apps/fd/dashboard/scripts/metadataScripts に移動します。拡張子が .ecma のファイルを作成します。例えば、usermetadata.ecma です。
 
@@ -195,7 +195,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
       | 型 | String |
       | 値 | スクリプトのタイトルを指定します。例えば、ポリシーホルダーのカスタムメタデータとします。指定した値がタスクの割り当て手順に表示されます。 |
 
-### OSGi バンドルと Java インターフェースを使用したカスタムメタデータの追加 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
+### OSGi バンドルと Java インターフェースを使用したカスタムメタデータの追加  {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
 WorkitemUserMetadataService Java インターフェースを使用して電子メールテンプレートにカスタムメタデータを追加することができます。WorkitemUserMetadataService Java インターフェースを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイすることができます。これにより、タスクの割り当て手順でメタデータを選択できるようになります。
 
