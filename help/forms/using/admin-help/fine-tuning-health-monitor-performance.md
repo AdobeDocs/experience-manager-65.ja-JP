@@ -64,23 +64,23 @@ ht-degree: 88%
  </tbody>
 </table>
 
-## JBoss への Java オプションの追加 {#add-java-options-to-jboss}
+## JBoss への Java オプションの追加  {#add-java-options-to-jboss}
 
 1. JBoss アプリケーションサーバーを停止します。
-1. Open the *[appserver root]*/bin/run.bat (Windows) or run.sh (Linux or UNIX) in an editor and add any of the Java options as required.
+1. *[appserver root]*/bin/run.bat(Windows)またはrun.sh（LinuxまたはUNIX）をエディターで開き、必要に応じてJavaオプションを追加します。
 1. サーバーを再起動します。
 
-## WebLogic への Java オプションの追加 {#add-java-options-to-weblogic}
+## WebLogic への Java オプションの追加  {#add-java-options-to-weblogic}
 
-1. Start the WebLogic administration console by typing https://[host name]:&#39;port&#39;/console in the URL line of a web browser.
+1. WebブラウザーのURL行にhttps://[host name]:&#39;port&#39;/consoleと入力して、WebLogic管理コンソールを開始します。
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
-1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。For example, adding - `Dadobe.healthmonitor.enabled=false` disables Health Monitor.
+1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、- `Dadobe.healthmonitor.enabled=false`を追加すると、ヘルスモニターが無効になります。
 1. 「Save」をクリックし、「Activate Changes」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
-## WebSphere への Java オプションの追加 {#add-java-options-to-websphere}
+## WebSphere への Java オプションの追加  {#add-java-options-to-websphere}
 
 1. WebSphere Administrative Console のナビゲーションツリーで、アプリケーションサーバーに対して次の操作を実行します。
 
