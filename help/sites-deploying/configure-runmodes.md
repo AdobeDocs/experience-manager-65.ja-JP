@@ -45,9 +45,9 @@ ht-degree: 73%
 
 これらは相互に排他的な実行モードの 2 つのペアです。例えば、次のことが可能です。
 
-* define either `author` or `publish`, not both at the same time
+* `author`または`publish`のいずれかを定義し、両方を同時に定義するわけではありません
 
-* combine `author` with either `samplecontent` or `nosamplecontent` (but not both)
+* `author`を`samplecontent`または`nosamplecontent`と組み合わせる（両方ではない）
 
 >[!CAUTION]
 >
@@ -55,17 +55,17 @@ ht-degree: 73%
 >
 >これらの実行モードは、インストール後は変更できません&#x200B;**。
 
-## カスタマイズされた実行モード {#customized-run-modes}
+## カスタマイズされた実行モード  {#customized-run-modes}
 
 独自のカスタマイズされた実行モードも作成できます。これらを組み合わせて次のようなシナリオに対応できます。
 
 * `author` + `development`
 
-* `publish` + `test`
+* `publish` +  `test`
 
-* `publish` + `test` + `golive`
+* `publish` +  `test` +  `golive`
 
-* `publish` + `intranet`
+* `publish` +  `intranet`
 
 * 必要に応じて使用
 
@@ -81,7 +81,7 @@ ht-degree: 73%
 
 nosamplecontent 実行モードは、実稼働インストール用に設計されています。
 
-## 実行モードの設定プロパティの定義 {#defining-configuration-properties-for-a-run-mode}
+## 実行モードの設定プロパティの定義  {#defining-configuration-properties-for-a-run-mode}
 
 特定の実行モードに使用する設定プロパティの値をまとめてリポジトリに保存できます。
 
@@ -109,7 +109,7 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 >
 >[インストール実行モード](#installation-run-modes)（オーサーなど）に関しては、インストール後は実行モードを変更できません。ただし、個々の設定プロパティの変更は、再起動時に有効になります。
 
-## 特定の実行モード用にインストールする追加のバンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
+## 特定の実行モード用にインストールする追加のバンドルの定義  {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
 特定の実行モードに対してインストールする必要のある追加のバンドルも指定できます。 これらの定義では、バンドルの保持にインストールフォルダーが使用されます。 再び、実行モードは、プレフィックスで示されます。
 
@@ -144,7 +144,7 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 ### -r オプションの使用{#using-the-r-option}
 
-カスタム実行モードは、quickstartの起動時に `-r` オプションを使用してアクティブ化できます。 例えば、実行モードがdevに設定されたAEMインスタンスを起動するには、次のコマンドを使用します。&quot;
+クイックスタートの起動時に`-r`オプションを使用すると、カスタム実行モードをアクティブにできます。 例えば、実行モードがdevに設定されたAEMインスタンスを起動するには、次のコマンドを使用します。&quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
