@@ -17,7 +17,7 @@ ht-degree: 81%
 ---
 
 
-# セキュアな AEM Forms アプリケーション（iOS 用）の構築 {#building-a-secure-aem-forms-app-for-ios}
+# セキュアな AEM Forms アプリケーション（iOS 用）の構築  {#building-a-secure-aem-forms-app-for-ios}
 
 AEM Forms アプリケーション用 Xcode プロジェクトをアーカイブして、インストーラー（.ipa ファイル）とプロパティリストファイル（.plist ファイル）を構築する必要があります。プロパティリストファイルには、アプリケーションの名前やホストしているロケーションなど、ホストされているインハウスアプリケーションの設定情報が含まれます。 プロパティリストファイルについての詳細は、[About Information Property List Files](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)を参照してください。
 
@@ -35,10 +35,10 @@ AEM Forms アプリケーション用 Xcode プロジェクトをアーカイブ
 1. プロビジョニングプロファイルをダウンロードして Xcode および iPad に追加します。 
 1. Xcode、iOS SDK がインストールおよび設定済みの Mac マシンにログインします。
 1. Xcode で `AEM Forms.xcodeproj` プロジェクトを開きます。
-1. 「**[!UICONTROL TARGETS]**」の「**[!UICONTROL AEM Forms]**」をクリックし、**[!UICONTROL AEM Forms]**」を選択します。Select the **[!UICONTROL Build Settings]** tab, locate the **[!UICONTROL Code Signing Entitlement]** section and in the Entitlements dropdown, select the **[!UICONTROL LC Enterprise]** option.
-1. Xcode 内にある `LC Enterprise.entitlements` ファイルを探して、編集するために開きます。Under the **XCode entitlements**, add the same key-value pair as present in your provisioning profile.
+1. 「**[!UICONTROL TARGETS]**」の「**[!UICONTROL AEM Forms]**」をクリックし、**[!UICONTROL AEM Forms]**」を選択します。「**[!UICONTROL Build Settings]**」タブを選択し、「**[!UICONTROL Code Signing Entitlement]**」セクションを探し、「Entitlements」ドロップダウンで「**[!UICONTROL LC Enterprise]**」オプションを選択します。
+1. Xcode 内にある `LC Enterprise.entitlements` ファイルを探して、編集するために開きます。**XCode entitlements**&#x200B;の下で、プロビジョニングプロファイルに存在するのと同じキーと値のペアを追加します。
 1. 「**[!UICONTROL Build Settings]**」タブで、「**[!UICONTROL All]**」をクリックし、「**[!UICONTROL Combined]**」をクリックします。
 1. 「**[!UICONTROL Settings]**」リストで、「**[!UICONTROL Code Signing]**」を展開します。
 1. 「**[!UICONTROL Code Signing Identity]**」から、適切な署名を選択します。「**[!UICONTROL Debug]**」、「**[!UICONTROL Release]**」、「**[!UICONTROL Any iOS SDK]**」に同じ署名が選択されていることを確認します。
-1. Under **[!UICONTROL PROJECT]**, select **[!UICONTROL AEM Forms]** and ensure that the appropriate signature is selected for **[!UICONTROL Code Signing Identity]**, **[!UICONTROL Debug]**, **[!UICONTROL Release]** and **[!UICONTROL Any iOS SDK]**.
+1. 「**[!UICONTROL PROJECT]**」で「**[!UICONTROL AEM Forms]**」を選択し、「**[!UICONTROL コード署名ID]**」、「**[!UICONTROL デバッグ]**」、「**[!UICONTROL リリース]**」、「**[!UICONTROL 任意のiOS SDK」が選択されていることを確認します。11/>.]**
 1. AEM Forms アプリケーションを構築し、配布します。AEM Forms Workspace アプリケーションを構築・配信する詳細な手順については、[AEM Forms アプリケーション用のインストーラーの構築](setup-xcode-project-build-installer.md#build-the-installer-for-the-mobile-workspace-app)を参照してください。
