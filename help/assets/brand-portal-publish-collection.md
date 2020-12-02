@@ -27,7 +27,7 @@ AEM Assetsの元のコレクションにその後変更を加えた場合、そ�
 
 >[!NOTE]
 >
->コンテンツフラグメントは Brand Portal に公開できません。Therefore, if you select content fragment(s) on AEM Author, then **Publish to Brand Portal** action is not available.
+>コンテンツフラグメントは Brand Portal に公開できません。したがって、AEM作成者でコンテンツフラグメントを選択した場合、**ブランドポータルに発行**&#x200B;アクションは使用できません。
 >
 >コンテンツフラグメントを含むコレクションを AEM オーサーインスタンスから Brand Portal へ公開した場合は、そのフォルダー内のコンテンツフラグメントを除く全コンテンツが Brand Portal インターフェイスにレプリケートされます。
 
