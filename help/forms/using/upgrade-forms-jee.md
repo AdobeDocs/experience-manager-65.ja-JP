@@ -18,13 +18,13 @@ ht-degree: 71%
 ---
 
 
-# JEE上のAEM 6.5Formsへのアップグレード {#upgrade-to-aem-forms-jee}
+# JEE上のAEM 6.5Forms{#upgrade-to-aem-forms-jee}にアップグレード
 
 JEE 上の AEM 6.3 Forms または JEE 上の AEM 6.4 Forms を JEE 上の AEM 6.5 Forms にアップグレードするには、以下の手順を実行します。
 
 1. JEE 上の AEM 6.5 Forms のインストーラーを、[アドビライセンス Web サイト（LWS）](https://licensing.adobe.com/)からダウンロードします。インストーラーをダウンロードするには、有効なメンテナンス＆サポートの契約が必要です。
-1. See [Upgrade checklist and planning](https://www.adobe.com/go/learn_aemfroms_upgrade_checklist_65) to learn about the checks to perform to ensure a successful upgrade.
-1. See [Prepare to upgrade to AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65) to learn and perform the tasks that ensure the upgrade runs correctly with minimal server downtime.
+1. アップグレードが正常に完了したことを確認するために実行するチェックについては、[アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemfroms_upgrade_checklist_65)を参照してください。
+1. [AEM Formsへのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65)を参照して、サーバのダウンタイムを最小限に抑えながらアップグレードを正しく実行するタスクを確認し、実行してください。
 1. 現在の環境とアプリケーションサーバーに応じて、以下に示すいずれかのドキュメントに記載されている手順を実行します。
 
    * [AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms へのアップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
