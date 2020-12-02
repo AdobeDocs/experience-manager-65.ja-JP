@@ -41,7 +41,7 @@ Document Security サーバーでは、ポリシーの作成、ポリシーで�
 
 このサーバーには、AEM Forms Document Security アドオンの機能が含まれています。Document Security アドオンのご購入については、AEM Forms の[セールスチーム](https://www.adobe.com/products/request-consultation/marketing-cloud.html?s_osc=70114000002JNwKAAW&amp;s_iid=70114000002JHs3AAG)にお問い合わせください。
 
-### ドキュメントの保護 {#protect-documents}
+### ドキュメントの保護  {#protect-documents}
 
 AEM Forms Document Security には、セキュリティポリシーに適用できるさまざまなツールが用意されています。ニーズや仕様に応じて、ツールを選ぶことができます。
 
@@ -59,21 +59,21 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
 * **Document Security Extension for Microsoft Office**：Document Security Extension for Microsoft Office を使用して、Microsoft Office プログラム内から、事前に定義されたポリシーを Microsoft Office ファイルに適用できます。この拡張機能を使用することで、許可されたユーザーだけがポリシーで保護された Microsoft Word、Excel および PowerPoint ファイルを使用できるようになります。このプラグインをインストールした、権限を持つユーザーのみがポリシーで保護されたファイルを使用することができます。﻿
 
-   この Document Security の拡張機能は Microsoft Office プラグインととして使用できます。You can contact [AEM support team](https://helpx.adobe.com/ca/marketing-cloud/contact-support.html) to procure the extension. その後、[Document Security Extension for Microsoft Office](https://helpx.adobe.com/aem-forms/aem-document-security/download-installer.html)のヘルプを参照することで、インストール方法、設定方法、拡張機能の使用方法を確認できます。
+   この Document Security の拡張機能は Microsoft Office プラグインととして使用できます。[AEMサポートチーム](https://helpx.adobe.com/ca/marketing-cloud/contact-support.html)に連絡して、拡張機能を入手してください。 その後、[Document Security Extension for Microsoft Office](https://helpx.adobe.com/aem-forms/aem-document-security/download-installer.html)のヘルプを参照することで、インストール方法、設定方法、拡張機能の使用方法を確認できます。
 
 * **ポータブル保護ライブラリ：**&#x200B;ポータブル保護ライブラリ（PLL）は、ドキュメントを AEM Forms サーバーに送ることなく、ローカルにドキュメントを保護します。ネットワークに送信されるのは、セキュリティの証明書とポリシーの詳細のみです。また、PPLでは、ポリシーの取得アクセスをログインしたユーザーのみに制限することもできます。 AEM にログインしているユーザーについて、ポリシーを取得することができます。
 
    上記に加えて、ポータブル保護ライブラリには、ドキュメントセキュリティSDKのすべての機能が含まれています。 ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。ポータブル保護ライブラリ（PPL）で、AEM Forms Document Security クライアント SDK（CSDK）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
 
-   ポータブル保護ライブラリは、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。OSGi上のAEM FormsのOSGiバンドルとしても利用できます。 C++ PPLは、Microsoft Visual Studio 2013でコンパイルできます。 AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html) サポートチームに問い合わせて、ポータブル保護ライブラリを入手することができます。後から、ポータブル保護ライブラリヘルプ（ライブラリに付属）を参照することで、ポータブル保護ライブラリのセットアップ方法および使用方法を確認することができます。
+   ポータブル保護ライブラリは、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。OSGi上のAEM FormsのOSGiバンドルとしても利用できます。 C++ PPLは、Microsoft Visual Studio 2013でコンパイルできます。 AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://helpx.adobe.com/marketing-cloud/contact-support.html) サポートチームに問い合わせて、ポータブル保護ライブラリを入手することができます。後から、ポータブル保護ライブラリヘルプ（ライブラリに付属）を参照することで、ポータブル保護ライブラリのセットアップ方法および使用方法を確認することができます。
 
-### 保護されたドキュメントの表示および編集 {#view-or-edit-protected-documents}
+### 保護されたドキュメントの表示および編集  {#view-or-edit-protected-documents}
 
 * **PDF ドキュメント**&#x200B;の場合、Adobe Acrobat DC、Acrobat Reader、およびモバイル版 Acrobat Reader を使用して保護された PDF ドキュメントを表示することができます。ほとんどのユーザーはすでにデバイスに Acrobat Reader がインストールされているため、保護されたドキュメントを表示するために追加のソフトウェアを入手もしくは使用方法を学習する必要はありません。Acrobat Reader は、[Acrobat Reader ダウンロード Web サイト](https://get.adobe.com/reader/)からダウンロードすることもできます。
 
 * **Microsoft Office ドキュメント**&#x200B;の場合、Microsoft Office と AEM Forms Document Security extension for Microsoft Office が必要となります。この Document Security の拡張機能は Microsoft Office プラグインととして使用できます。この拡張機能は、アドビ システムズ社の Web サイトからダウンロードすることができます。
 
-### 保護済みドキュメントのインデックス作成 {#index-protected-documents}
+### 保護済みドキュメントのインデックス作成  {#index-protected-documents}
 
 Microsoft Windows の全文検索エンジン（SharePoint インデックスサーバー）や Adobe Experience Manager（AEM）は、プレーンテキストファイル、Microsoft Office ドキュメント、PDF ドキュメントなど、広く使用されているさまざまなドキュメント形式において、全文検索を実行することができます。ドキュメントセキュリティインデクサーを使用して全文検索エンジンを有効にし、保護された PDF ドキュメントを検索することができます。
 
