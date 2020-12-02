@@ -19,7 +19,7 @@ ht-degree: 36%
 ---
 
 
-# アイディエーション機能 {#ideation-feature}
+# アイディエーション機能  {#ideation-feature}
 
 ## 概要 {#introduction}
 
@@ -37,21 +37,21 @@ ht-degree: 36%
 
 ### ページへのアイディエーションの追加 {#adding-a-ideation-to-a-page}
 
-To add a `Ideation` component to a page in author mode, use the component browser to locate
+作成者モードで`Ideation`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Ideation`
 
 を探し、ページ上のアイデアを表示する位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](/help/communities/ideation.md#essentials-for-client-side) 、次のようにコンポー `Ideation` ネントが表示されます。
+[必要なクライアント側ライブラリ](/help/communities/ideation.md#essentials-for-client-side)が含まれる場合、`Ideation`コンポーネントは次のように表示されます。
 
 ![アイディエーション](assets/ideation.png)
 
 ### アイディエーションの設定 {#configuring-an-ideation}
 
-Select the placed `Ideation` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Ideation`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![configure-new](assets/configure-new.png)
 
@@ -93,7 +93,7 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **タグ付けを許可**
 
-   If checked, allow members to add tag labels to their post (see **[!UICONTROL Tag field]** tab). 初期設定はオフです。
+   オンにした場合、メンバーは自分の投稿にタグラベルを追加できます（「**[!UICONTROL タグフィールド]**」タブを参照）。 初期設定はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -101,11 +101,11 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **最大ファイルサイズ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **許可されるファイルタイプ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **添付する画像ファイルの最大サイズ**
 
@@ -125,11 +125,11 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **フォローを許可**
 
-   If checked, include the following feature for idea posts, which allows members to be [notified](/help/communities/notifications.md) of new posts. 初期設定はオフです。
+   オンにした場合、アイデア投稿に次の機能を含めます。これにより、メンバーに新しい投稿の[通知](/help/communities/notifications.md)を受け取ることができます。 初期設定はオフです。
 
 * **電子メール購読を許可**
 
-   If checked, allow members to be notified of new posts by email ([subscription](/help/communities/subscriptions.md)). Requires `Allow Following` to be checked and [email configured](/help/communities/email.md). 初期設定はオフです。
+   オンにした場合、メンバーに電子メールで新しい投稿の通知を許可します([購読](/help/communities/subscriptions.md))。 `Allow Following`を確認し、[電子メールを設定](/help/communities/email.md)する必要があります。 初期設定はオフです。
 
 * **投票を許可**
 
@@ -137,13 +137,13 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **バッジを表示**
 
-   If checked, display earned and assigned [badges](/help/communities/implementing-scoring.md) with a member&#39;s idea. 初期設定はオフです。
+   オンの場合、獲得したバッジと[バッジ](/help/communities/implementing-scoring.md)をメンバーのアイデアと共に表示します。 初期設定はオフです。
 
 * **リストページで返信を受け取らない**
 
 * **おすすめコンテンツを許可**
 
-   If checked, the idea is able to be identified as [featured content](/help/communities/featured.md). 初期設定はオフです。
+   チェックすると、アイデアは[特集コンテンツ](/help/communities/featured.md)として識別できます。 初期設定はオフです。
 
 * **メンションを有効化**
 * **最大メンション数**
@@ -151,7 +151,7 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
-Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and comments (user generated content) are managed. For more information, see [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたアイデアとコメント（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
 * **投稿を拒否**
 
@@ -187,19 +187,19 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and
 
 * **許可された名前空間**
 
-   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+   「**[!UICONTROL 設定]**」タブで`Allow Tagging`がチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **推奨の制限**
 
-   フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 A value of **-1** means no limit. 初期設定は 0 です。
+   フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 **-1**&#x200B;の値は、制限がないことを意味します。 初期設定は 0 です。
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments are sorted when displayed.
+「**[!UICONTROL 並べ替え設定]**」タブで、投稿されたコメントの表示順を指定します。
 
 * **並べ替え**
 
-   許可されている並べ替えの選択項目をすべて選択： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
+   許可されている並べ替えの選択項目をすべて選択：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **デフォルトとして設定**
 
@@ -207,7 +207,7 @@ Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments ar
 
 * **Analytics 並べ替えのタイムオプションを選択**
 
-   プルダウンしていずれかを選択し `All, Last 24 Hours, Last 7 Days, Last 30 Days`ます。 デフォルトは `All` です。
+   プルダウンして`All, Last 24 Hours, Last 7 Days, Last 30 Days`の1つを選択します。 デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -221,17 +221,17 @@ Communities のすべての機能と同様に、サインインしていない�
 
 アイデアを送信する前に、ドラフトとして保存できます。
 
-この `Save as Draft` ボタンを選択すると、ドラフトが保存されます。
+`Save as Draft`ボタンを選択すると、ドラフトが保存されます。
 
 ![節約案](assets/save-idea.png)
 
-保存したドラフトを `My Drafts` タブで表示する場合、編集モード `Read More` を再開する場合に選択します。
+保存したドラフトを「`My Drafts`」タブで表示する場合は、「`Read More`」を選択して編集モードに戻ります。
 
 ![編集アイデア](assets/edit-idea.png)
 
 #### フィードバックの提供 {#providing-feedback}
 
-Once the idea is published, other members can sign in, open the idea ( `Read More`) and like the idea, thus adding to the vote count, and make comments.
+アイデアが投稿されると、他のメンバーはサインインし、アイデア(`Read More`)を開き、アイデアと同様にして、投票数に追加し、コメントを行うことができます。
 
 ![feedback](assets/feedback-idea.png)
 
