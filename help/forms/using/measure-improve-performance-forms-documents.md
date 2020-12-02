@@ -34,7 +34,7 @@ ROI を最大化するには、顧客がサービスをどのように利用し�
 
 ## ソリューション {#the-solution}
 
-AEM Forms integrates with [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) solutions - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) and [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - that can help you monitor and analyze how your forms are performing and enable you to experiment and identify the experience that leads to better conversion rate.
+AEM Formsは[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)ソリューション[Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)と[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)に統合されており、フォームのパフォーマンスを監視し、コンバージョン率を高める体験をテストして特定できます。
 
 ## ワークフロー {#the-workflow}
 
@@ -45,7 +45,7 @@ AEM Forms integrates with [Adobe Marketing Cloud](https://www.adobe.com/marketin
 * マーケティング戦略と成功に向けて責任を負うビジネスユーザーおよびアナリスト
 * インフラストラクチャ、構成済みソリューション、メンテナンスを担当する IT 責任者
 
-### 関連する AEM Forms のコンポーネントおよび機能 {#aem-forms-components-and-features-involved}
+### 関連する AEM Forms のコンポーネントおよび機能  {#aem-forms-components-and-features-involved}
 
 * アダプティブフォーム
 * Adobe Analytics との統合（顧客がアダプティブフォームをどのように利用しているかについて、情報の収集、整理、レポートを行う）
@@ -70,11 +70,11 @@ AEM Forms integrates with [Adobe Marketing Cloud](https://www.adobe.com/marketin
 1. AEM で AEM Forms Analytics Configuration サービスを設定
 1. AEM でフォームの Analytics を有効化
 
-For detailed steps, see [Configuring analytics and reports for adaptive forms](../../forms/using/configure-analytics-forms-documents.md).
+詳細な手順については、「[アダプティブフォームの分析とレポートの設定](../../forms/using/configure-analytics-forms-documents.md)」を参照してください。
 
 **Target の設定**
 
-To create and run A/B tests for your adaptive forms, configure Target in AEM Forms as described in [Set up and integrate Target in AEM Forms](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p).
+アダプティブフォームでA/Bテストを作成および実行するには、「[AEM Forms](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)でのターゲットの設定と統合」の説明に従って、AEM Formsでターゲットを設定します。
 
 #### 手順 2：分析レポートの表示 {#step-view-analytics-report-br}
 
@@ -128,7 +128,7 @@ Analytics によってフォーム用に収集されてレポートされたデ�
 
 各種のデータポイントを分析して仮説を立てることができたら、フォーム内で必要な変更を行います。
 
-#### 手順 4：分析と修正の検証 {#step-validate-your-analysis-and-fixes}
+#### 手順 4：分析と修正の検証  {#step-validate-your-analysis-and-fixes}
 
 この手順では、フォーム内で行った変更内容を検証し、それらの変更がコンバージョン率に影響するかどうかを確認します。
 
