@@ -18,7 +18,7 @@ ht-degree: 84%
 ---
 
 
-# おすすめコンテンツの基本事項  {#featured-content-essentials}
+# おすすめコンテンツの基本事項   {#featured-content-essentials}
 
 このページでは、おすすめコンテンツを使用するための基本的な情報について説明します。
 
@@ -51,13 +51,13 @@ ht-degree: 84%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="featured.md">Featured Content</a></td>
+   <td><a href="featured.md">重点コンテンツ</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-### ファイルライブラリ機能 {#file-library-function}
+### ファイルライブラリ機能  {#file-library-function}
 
-A community site structure that includes the [Featured Content function](functions.md#featured-content-function), includes a configured `featured content` component.
+[特集コンテンツ機能](functions.md#featured-content-function)を含むコミュニティサイト構造には、設定済みの`featured content`コンポーネントが含まれます。
