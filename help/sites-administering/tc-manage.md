@@ -22,7 +22,7 @@ ht-degree: 88%
 
 翻訳するコンテンツの準備が完了したら、不足している言語コピーを作成して言語構造を完成し、翻訳プロジェクトを作成する必要があります。
 
-Translation projects enable you to manage the translation of AEM content. A translation project is a type of AEM [project](/help/sites-authoring/projects.md) that contains resources that are to be translated into other languages. These resources are the pages and assets of the [language copies](/help/sites-administering/tc-prep.md) that are created from the language master.
+翻訳プロジェクトを使用すると、AEMコンテンツの翻訳を管理できます。翻訳プロジェクトはAEM [プロジェクト](/help/sites-authoring/projects.md)の一種で、他の言語に翻訳するリソースが含まれています。これらのリソースは、言語マスターから作成された[言語コピー](/help/sites-administering/tc-prep.md)のページとアセットです。
 
 翻訳プロジェクトにリソースが追加されると、そのリソース用の翻訳ジョブが作成されます。リソースで実行される人間による翻訳と機械翻訳のワークフローの管理に使用するコマンドとステータス情報がジョブによって提供されます。
 
@@ -46,8 +46,8 @@ Translation projects enable you to manage the translation of AEM content. A tran
 
 AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作成されたものか、翻訳済みの言語コピーを更新するためのものかを検出します。ページ用の翻訳プロジェクトを作成して、翻訳対象の言語コピーを指定すると、AEM ではターゲットの言語コピーにソースページが既に存在するかどうかを検出します。
 
-* **言語コピーには、次のページは含まれません。** AEMは、この状況を最初の変換として扱います。 ページがすぐに言語コピーにコピーされ、プロジェクトに追加されます。翻訳されたページが AEM に読み込まれると、AEM はそのページを言語コピーに直接コピーします。
-* **言語コピーには、既に次のページが含まれています。** AEMは、この状況を更新された翻訳として扱います。開始が作成され、ページのコピーが開始に追加され、プロジェクトに含まれます。起動すると、言語コピーにコミットする前に、更新された翻訳を確認できます。
+* **言語コピーにはpage:** AEMは含まれません。この状況は、最初の翻訳として扱われます。ページがすぐに言語コピーにコピーされ、プロジェクトに追加されます。翻訳されたページが AEM に読み込まれると、AEM はそのページを言語コピーに直接コピーします。
+* **言語コピーには、既にページが含まれています。** AEMは、この状況を更新された翻訳として扱います。開始が作成され、ページのコピーが開始に追加され、プロジェクトに含まれます。起動すると、言語コピーにコミットする前に、更新された翻訳を確認できます。
 
    * 翻訳されたページが AEM に読み込まれると、ローンチ内のページがそのページによって上書きされます。
    * ローンチが昇格された場合にのみ、言語コピーが翻訳されたページによって上書きされます。
@@ -67,7 +67,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 選択したページの子ページも選択されるように指定できます。この場合、子ページのコピーも各プロジェクトに追加され、翻訳されます。子ページが異なる翻訳統合フレームワークの設定に関連付けられている場合、AEMは追加のプロジェクトを作成します。
 
-You can also [manually create translation projects](#creating-a-translation-project-using-the-projects-console).
+また、[手動で翻訳プロジェクト](#creating-a-translation-project-using-the-projects-console)を作成することもできます。
 
 **初期翻訳と翻訳の更新**
 
@@ -101,7 +101,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 1. 「作成」をクリックまたはタップします。
 
-### 既存の言語コピー用の翻訳プロジェクトの作成 {#create-translation-projects-for-an-existing-language-copy}
+### 既存の言語コピー用の翻訳プロジェクトの作成  {#create-translation-projects-for-an-existing-language-copy}
 
 1. サイトコンソールを使用して、翻訳プロジェクトに追加するページを選択します。
 
@@ -122,7 +122,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 1. 「開始」をクリックまたはタップします。
 
-## 翻訳プロジェクトへのページの追加 {#adding-pages-to-a-translation-project}
+## 翻訳プロジェクトへのページの追加  {#adding-pages-to-a-translation-project}
 
 翻訳プロジェクトを作成したら、リソースウィンドウを使用してプロジェクトにページを追加します。ページの追加は、別のブランチのページを同じプロジェクトに含める場合に役立ちます。
 
@@ -178,7 +178,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 翻訳ジョブにページやアセットが追加されます。
 
-## 翻訳ジョブへの I18N 辞書の追加 {#adding-i-n-dictionaries-to-a-translation-job}
+## 翻訳ジョブへの I18N 辞書の追加  {#adding-i-n-dictionaries-to-a-translation-job}
 
 翻訳プロジェクトの翻訳ジョブにページ、アセット、タグおよび I18N 辞書を追加できます。I18N 辞書を追加するには：
 
@@ -200,7 +200,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 >[!NOTE]
 >
->For more information about i18n dictionaries, read [Using Translator to Manage Dictionaries](/help/sites-developing/i18n-translator.md).
+>i18n辞書の詳細については、[Translatorを使用した辞書の管理](/help/sites-developing/i18n-translator.md)を参照してください。
 
 ## 翻訳ジョブへのタグの追加 {#adding-tags-to-a-translation-job}
 
@@ -262,7 +262,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 ジョブ内の各ファイルのステータスを確認するには、タイルの下部にある省略記号をクリックまたはタップします。
 
-## 翻訳ジョブの期限の設定 {#setting-the-due-date-of-translation-jobs}
+## 翻訳ジョブの期限の設定  {#setting-the-due-date-of-translation-jobs}
 
 翻訳ベンダーが翻訳済みのファイルを戻す必要のある期限を指定します。プロジェクトの期限または特定のジョブの期限を設定できます。
 
@@ -303,7 +303,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 >
 >スコーピングはオプションです。スコーピングをおこなわずに翻訳ジョブを開始できます。
 
-翻訳ジョブをスコープする場合、ジョブのステータスは `Scope Requested`です。翻訳ベンダーがスコープを返すと、ステータスがに変更され `Scope Completed`ます。 スコーピングが完了したら、「範囲を表示」コマンドを使用してスコーピング結果を確認できます。
+翻訳ジョブをスコープする場合、ジョブのステータスは`Scope Requested`です。翻訳ベンダーがスコープを返すと、ステータスは`Scope Completed`に変更されます。 スコーピングが完了したら、「範囲を表示」コマンドを使用してスコーピング結果を確認できます。
 
 スコーピングを正しく使用できるのは、使用する翻訳ベンダーがこの機能をサポートしている場合のみです。
 
@@ -314,7 +314,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 1. ジョブのステータスが「スコーピング完了」に変わったら、「翻訳ジョブ」タイルでコマンドメニューをクリックまたはタップして、「範囲を表示」をクリックまたはタップします。
 
-## 翻訳ジョブの開始 {#starting-a-translation-job}
+## 翻訳ジョブの開始  {#starting-a-translation-job}
 
 翻訳ジョブを開始して、ソースページをターゲット言語に翻訳します。翻訳は「翻訳の概要」タイルのプロパティ値に従って実行されます。
 
@@ -329,15 +329,15 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 1. 翻訳の開始を確定するアクションダイアログで、「閉じる」をクリックまたはタップします。
 
-## 翻訳ジョブのキャンセル {#canceling-a-translation-job}
+## 翻訳ジョブのキャンセル  {#canceling-a-translation-job}
 
-翻訳ジョブをキャンセルして、翻訳プロセスを中断し、翻訳ベンダーが以降の翻訳を実行しないようにします。ジョブのステータスが `Committed For Translation` またはの場合は、ジョブをキャンセルでき `Translation In Progress` ます。
+翻訳ジョブをキャンセルして、翻訳プロセスを中断し、翻訳ベンダーが以降の翻訳を実行しないようにします。ジョブのステータスが`Committed For Translation`または`Translation In Progress`の場合は、ジョブをキャンセルできます。
 
 1. プロジェクトコンソールで、翻訳プロジェクトを開きます。
 1. 「翻訳ジョブ」タイルで、コマンドメニューをクリックまたはタップして、「キャンセル」をクリックまたはタップします。
 1. 翻訳のキャンセルを確定するアクションダイアログで、「OK」をクリックまたはタップします。
 
-## ワークフローの承認／拒否 {#accept-reject-workflow}
+## ワークフローの承認／拒否  {#accept-reject-workflow}
 
 コンテンツが翻訳から戻り、レビューへの準備完了ステータスになったら、翻訳ジョブに移動してコンテンツを承認または拒否できます。
 
@@ -368,13 +368,13 @@ You can also [manually create translation projects](#creating-a-translation-proj
 1. コンテンツをレビューして必要な変更をおこなったら、「昇格」をクリックしてローンチコピーを昇格します。
 1. ローンチを昇格ページで、昇格するページを指定し、「昇格」をクリックまたはタップします。
 
-## 言語コピーの比較 {#comparing-language-copies}
+## 言語コピーの比較  {#comparing-language-copies}
 
 言語コピーを言語マスターと比較するには：
 
 1. **サイト**&#x200B;コンソールで、比較する言語コピーに移動します。
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開きます。
-1. Under the **Copies** heading select **Language Copies.**
+1. 「**コピー**」の見出しの下で、「**言語コピー」を選択します。**
 1. 特定の言語コピーを選択し、「**マスターと比較**」または「**前の言語と比較**」（該当する場合）をクリックします。
 
    ![chlimage_1-37](assets/chlimage_1-37.jpeg)
@@ -393,9 +393,9 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 翻訳ジョブが完了し、ジョブのステータスの詳細を確認する必要がなくなった場合は、ジョブをアーカイブします。ジョブをアーカイブすると、「翻訳ジョブ」タイルがプロジェクトから削除されます。
 
-## 言語コピーの構造の作成 {#creating-the-structure-of-a-language-copy}
+## 言語コピーの構造の作成  {#creating-the-structure-of-a-language-copy}
 
-言語コピーの構造を作成して、翻訳対象のマスター言語からのコンテンツが言語コピーに含まれるようにします。Before you populate your language copy, you must have [created the language root](/help/sites-administering/tc-prep.md#creating-a-language-root) of the language copy.
+言語コピーの構造を作成して、翻訳対象のマスター言語からのコンテンツが言語コピーに含まれるようにします。言語コピーを入力する前に、言語コピーの言語ルート](/help/sites-administering/tc-prep.md#creating-a-language-root)を[作成しておく必要があります。
 
 1. サイトコンソールを使用して、ソースとして使用するマスター言語の言語ルートを選択します。例えば、Geometrixx Demo Site の英語ページを翻訳するには、コンテンツ／Geometrixx Demo Site／English を選択します。
 1. ツールバーの「参照」をクリックまたはタップします。
@@ -415,7 +415,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 
 1. 「開始」をクリックまたはタップします。
 
-## プロジェクトコンソールを使用した翻訳プロジェクトの作成 {#creating-a-translation-project-using-the-projects-console}
+## プロジェクトコンソールを使用した翻訳プロジェクトの作成  {#creating-a-translation-project-using-the-projects-console}
 
 プロジェクトコンソールを使用する場合は、翻訳プロジェクトを手動で作成できます。
 
@@ -432,7 +432,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 1. 「詳細」をクリックまたはタップして、翻訳に関連するプロパティの値を指定します。
 1. 「作成」をクリックまたはタップします。確認のボックスで、「完了」をクリックまたはタップしてプロジェクトコンソールに戻ります。または「プロジェクトを開く」をクリックまたはタップしてプロジェクトを開き、管理を開始します。
 
-## 翻訳ジョブの書き出し {#exporting-a-translation-job}
+## 翻訳ジョブの書き出し  {#exporting-a-translation-job}
 
 翻訳ジョブのコンテンツをダウンロードできます。この機能は、AEM と統合されていない翻訳プロバイダーにコネクターを使用して送信する場合や、コンテンツをレビューする場合などに使用します。
 
@@ -440,7 +440,7 @@ You can also [manually create translation projects](#creating-a-translation-proj
 1. 書き出しダイアログボックスで、「書き出されたファイルをダウンロード」をクリックまたはタップします。必要に応じて、Web ブラウザーのダイアログボックスを使用してファイルを保存します。
 1. 書き出しダイアログボックスで、「閉じる」をクリックまたはタップします。
 
-## 翻訳ジョブの読み込み {#importing-a-translation-job}
+## 翻訳ジョブの読み込み  {#importing-a-translation-job}
 
 翻訳コンテンツを AEM に読み込むことができます。この機能は、AEM と統合されていない翻訳プロバイダーがコネクターを使用してコンテンツを送信する場合などに使用します。
 
