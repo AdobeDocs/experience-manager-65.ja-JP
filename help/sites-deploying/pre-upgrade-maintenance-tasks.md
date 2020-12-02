@@ -40,29 +40,29 @@ ht-degree: 78%
 
 * [ログファイルのローテーション](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#rotate-log-files)
 
-## 十分なディスク領域の確保 {#ensure-sufficient-disk-space}
+## 十分なディスク領域の確保  {#ensure-sufficient-disk-space}
 
 アップグレードを実行する場合は、コンテンツおよびコードのアップグレードアクティビティの他に、リポジトリの移行を実行する必要があります。この移行により、新しい Segment Tar 形式でリポジトリのコピーが作成されます。その結果、大容量になる可能性があるリポジトリの 2 つ目のバージョンを保持するのに十分なディスク領域が必要になります。
 
-## AEM の完全なバックアップ {#fully-back-up-aem}
+## AEM の完全なバックアップ  {#fully-back-up-aem}
 
 アップグレードを開始する前に、AEM を完全にバックアップする必要があります。リポジトリ、アプリケーションのインストール環境、データストアおよび Mongo インスタンスをバックアップします（該当する場合）。AEM インスタンスのバックアップおよび復元について詳しくは、[バックアップと復元](/help/sites-administering/backup-and-restore.md)を参照してください。
 
-## /etc に対する変更のバックアップ {#backup-changes-etc}
+## /etc に対する変更のバックアップ  {#backup-changes-etc}
 
-The upgrade process does a good job of maintaining and merging existing content and configurations from under the `/apps` and `/libs` paths in the repository. For changes made to the `/etc` path, including Context Hub configurations, it is often necessary to re-apply these changes after the upgrade. While the upgrade will make a backup copy of any changes that it cannot merge under `/var`, we recommend backing up these changes manually before beginning the upgrade.
+このアップグレードプロセスは、リポジトリの`/apps`パスと`/libs`パスの下から既存のコンテンツと設定を管理および結合するのに役立ちます。 `/etc`パスに対して行われた変更（Context Hub設定を含む）については、多くの場合、アップグレード後にこれらの変更を再適用する必要があります。 `/var`の下で結合できない変更のバックアップコピーはアップグレードで作成されますが、アップグレードを開始する前に、手動でこれらの変更をバックアップすることをお勧めします。
 
 ## quickstart.properties ファイルの生成 {#generate-quickstart-properties}
 
 jar ファイルから AEM を起動すると、`quickstart.properties` の下に `crx-quickstart/conf` ファイルが生成されます。これまで AEM を起動スクリプトのみで起動していた場合、このファイルは存在せず、アップグレードは失敗します。このファイルが存在するかどうかを確認し、存在しない場合は jar ファイルから AEM を起動してください。
 
-## ワークフローおよび監査ログのパージの設定 {#configure-wf-audit-purging}
+## ワークフローおよび監査ログのパージの設定  {#configure-wf-audit-purging}
 
 `WorkflowPurgeTask` タスクおよび `com.day.cq.audit.impl.AuditLogMaintenanceTask` タスクには個別の OSGi 設定が必要であり、この設定がない場合は機能しません。アップグレード前タスクの実行中にこれらのタスクが失敗した場合に最も考えられる原因は、設定がないことです。そのため、これらのタスク用の OSGi 設定を追加するか、これらのタスクを実行しない場合はアップグレード前の最適化タスクリストからこれらのタスクを削除する必要があります。ワークフローのパージタスクの設定については、[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)を参照し、監査ログのメンテナンスタスクの設定については、[AEM 6 での監査ログのメンテナンス](/help/sites-administering/operations-audit-log.md)を参照してください。
 
 CQ 5.6 でのワークフローおよび監査ログのパージと AEM 6.0 での監査ログのパージについては、[ワークフローおよび監査ノードのパージ](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)を参照してください。
 
-## アップグレード前のタスクのインストール、設定および実行 {#install-configure-run-pre-upgrade-tasks}
+## アップグレード前のタスクのインストール、設定および実行  {#install-configure-run-pre-upgrade-tasks}
 
 AEM で可能なカスタマイズのレベルにより、通常、アップグレードの実行方法は環境によって異なります。そのため、標準化されたアップグレード手順を作成することは簡単ではありません。
 
@@ -74,7 +74,7 @@ AEM で可能なカスタマイズのレベルにより、通常、アップグ�
 
 アップグレード前の最適化手順に含まれているすべてのタスクは、AEM 6.0 以降のすべてのバージョンと互換性があります。
 
-### 設定方法 {#how-to-set-it-up}
+### 設定方法  {#how-to-set-it-up}
 
 AEM 6.3 以降では、アップグレード前のメンテナンス最適化タスクは quickstart jar に含まれています。AEM 6 の古いバージョンからアップグレードする場合、この最適化タスクは、パッケージマネージャーからダウンロードできる個別のパッケージを介して利用できます。
 
@@ -90,7 +90,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 
 `PreUpgradeTasksMBean` OSGI コンポーネントは、アップグレード前のメンテナンスタスクのリストで事前設定されており、それらのすべてのタスクを一度に実行できます。以下の手順に従ってタスクを設定できます。
 
-1. Go to the Web Console by browsing to *https://serveraddress:serverport/system/console/configMgr*
+1. *https://serveraddress:serverport/system/console/configMgr*&#x200B;を参照して、Webコンソールにアクセスします。
 
 1. 「**preupgradetasks**」を検索し、最初に一致したコンポーネントをクリックします。コンポーネントのフルネームは、`com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl` です。
 
@@ -149,7 +149,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 >
 >`DataStoreGarbageCollectionTask` を使用した場合、マークアンドスイープフェーズを含むデータストアガベージコレクション操作が呼び出されます。共有データストアを使用するデプロイメントでは、別のインスタンスによって参照される項目が削除されないように、再設定するかインスタンスを適切に準備します。そのためには、このアップグレード前のタスクをトリガーする前に、すべてのインスタンスに対してマークフェーズを手動で実行する必要がある場合があります。
 
-### アップグレード前のヘルスチェックのデフォルトの設定 {#default-configuration-of-the-pre-upgrade-health-checks}
+### アップグレード前のヘルスチェックのデフォルトの設定  {#default-configuration-of-the-pre-upgrade-health-checks}
 
 `PreUpgradeTasksMBeanImpl` OSGI コンポーネントは、`runAllPreUpgradeHealthChecks` メソッドが呼び出されたときに実行されるアップグレード前のヘルスチェックタグのリストで事前設定されています。
 
@@ -165,7 +165,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 
 以下の手順で MBean にアクセスできます。
 
-1. Going to the JMX Console at *https://serveraddress:serverport/system/console/jmx*
+1. JMXコンソール(*https://serveraddress:serverport/system/console/jmx*)に移動します。
 1. 「**PreUpgradeTasks**」を検索し、結果をクリックします。
 
 1. 「**Operations**」セクションからメソッドを選択し、次のウィンドウで「**Invoke**」を選択します。
@@ -176,7 +176,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
  <tbody>
   <tr>
    <td><strong>メソッド名</strong></td>
-   <td><strong>型</strong></td>
+   <td><strong>種類</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
@@ -186,7 +186,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   </tr>
   <tr>
    <td><code>getAvailablePreUpgradeHealthChecksTagNames()</code></td>
-   <td>INFO</td>
+   <td>情報</td>
    <td>アップグレード前のヘルスチェックのタグ名のリストを表示します。</td>
   </tr>
   <tr>
@@ -202,7 +202,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   <tr>
    <td><code>isRunAllPreUpgradeTaskRunning()</code></td>
    <td>ACTION_INFO</td>
-   <td>Checks if the <code>runAllPreUpgradeTasksmaintenance</code> task is currently running.</td>
+   <td><code>runAllPreUpgradeTasksmaintenance</code>タスクが現在実行中かどうかを確認します。</td>
   </tr>
   <tr>
    <td><code>getAnyPreUpgradeTaskRunning()</code></td>
@@ -222,7 +222,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
    <td>アクション ：</td>
-   <td><p>Runs all the pre-upgrade health checks and saves their status in a file named <code>preUpgradeHCStatus.properties</code> that is located in the sling home path. If the <code>shutDownOnSuccess</code> parameter is set to <code>true</code>, the AEM instance will be shut down, but only if all the pre-upgrade health checks have an OK status.</p> <p>properties ファイルは今後のアップグレードの前提条件として使用され、<br />アップグレード前のヘルスチェックの実行に失敗した場合は、<br />アップグレードプロセスが停止されます。アップグレード前のヘルスチェックの結果を無視して<br />アップグレードを開始する場合は、このファイルを削除できます。</p> </td>
+   <td><p>アップグレード前のヘルスチェックをすべて実行し、そのステータスをSlingホームパス内の<code>preUpgradeHCStatus.properties</code>という名前のファイルに保存します。 <code>shutDownOnSuccess</code>パラメーターが<code>true</code>に設定されている場合、AEMインスタンスはシャットダウンされますが、アップグレード前のヘルスチェックのステータスがすべてOKである場合にのみシャットダウンされます。</p> <p>properties ファイルは今後のアップグレードの前提条件として使用され、<br />アップグレード前のヘルスチェックの実行に失敗した場合は、<br />アップグレードプロセスが停止されます。アップグレード前のヘルスチェックの結果を無視して<br />アップグレードを開始する場合は、このファイルを削除できます。</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
@@ -244,13 +244,13 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 
 
 
-## カスタムログインモジュールの無効化 {#disable-custom-login-modules}
+## カスタムログインモジュールの無効化  {#disable-custom-login-modules}
 
 >[!NOTE]
 >
 >この手順は、AEM 5 バージョンからアップグレードする場合にのみ必要です。以前の AEM 6 バージョンからのアップグレードの場合は、完全にスキップできます。
 
-The way custom `LoginModules` are configured for authentication at the repository level has fundamentally changed in Apache Oak.
+リポジトリレベルでの認証用にカスタム`LoginModules`を設定する方法は、Apache Oakで根本的に変更されました。
 
 CRX2 を使用していた旧バージョンの AEM では、`repository.xml` ファイルで設定をおこないましたが、AEM 6 以降では、Web コンソールを使用して、Apache Felix JAAS Configuration Factory サービスで設定をおこないます。
 
@@ -289,15 +289,15 @@ CRX2 を使用していた旧バージョンの AEM では、`repository.xml` �
 
 ローカルファイルシステムの `crx-quickstart/install` ディレクトリを介してデプロイされたサービスパック、機能パックまたはホットフィックスを削除します。これにより、更新が完了した後に、新しい AEM バージョンに古いホットフィックスおよびサービスパックが誤ってインストールされることが防止されます。
 
-## すべてのコールドスタンバイインスタンスの停止 {#stop-tarmk-coldstandby-instance}
+## すべてのコールドスタンバイインスタンスの停止  {#stop-tarmk-coldstandby-instance}
 
 TarMK コールドスタンバイを使用している場合は、すべてのコールドスタンバイインスタンスを停止します。これをおこなうことにより、アップグレードで問題が発生した場合に、オンラインに効率よく戻ることができます。アップグレードが正常に完了したら、アップグレードされたプライマリインスタンスからコールドスタンバイインスタンスを再構築する必要があります。
 
-## カスタムのスケジュール済みジョブの無効化 {#disable-custom-scheduled-jobs}
+## カスタムのスケジュール済みジョブの無効化  {#disable-custom-scheduled-jobs}
 
 アプリケーションコードに含まれている OSGi スケジュール済みジョブを無効にします。
 
-## オフラインでのリビジョンクリーンアップの実行 {#execute-offline-revision-cleanup}
+## オフラインでのリビジョンクリーンアップの実行  {#execute-offline-revision-cleanup}
 
 >[!NOTE]
 >
@@ -305,7 +305,7 @@ TarMK コールドスタンバイを使用している場合は、すべての�
 
 TarMK を使用している場合は、アップグレードの前にオフラインでのリビジョンクリーンアップを実行してください。これにより、リポジトリの移行ステップが作成され、後続のアップグレードタスクがより迅速に実行されます。また、アップグレード完了後に、オンラインでのリビジョンクリーンアップが正常に実行されるようになります。オフラインでのリビジョンクリーンアップの実行について詳しくは、[オフラインでのリビジョンクリーンアップの実行](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup)を参照してください。
 
-## データストアのガベージコレクションの実行 {#execute-datastore-garbage-collection}
+## データストアのガベージコレクションの実行  {#execute-datastore-garbage-collection}
 
 >[!NOTE]
 >
@@ -313,7 +313,7 @@ TarMK を使用している場合は、アップグレードの前にオフラ�
 
 CRX3 インスタンスでリビジョンクリーンアップを実行した後は、データストアのガベージコレクションを実行して、データストア内の参照されていない blob を削除する必要があります。手順については、[データストアのガベージコレクション](/help/sites-administering/data-store-garbage-collection.md)に関するドキュメントを参照してください。
 
-## 必要に応じてデータベーススキーマをアップグレードする {#upgrade-the-database-schema-if-needed}
+## 必要に応じてデータベーススキーマをアップグレード{#upgrade-the-database-schema-if-needed}
 
 通常、基盤となるApache OakスタックAEMで永続性を使用する場合は、必要に応じてデータベーススキーマのアップグレードが行われます。
 
@@ -324,11 +324,11 @@ CRX3 インスタンスでリビジョンクリーンアップを実行した後
 1. アップグレードが必要なAEMインスタンスをシャットダウンします。
 1. データベーススキーマをアップグレードします。 この処理を行うために使用する必要のあるツールを確認するには、使用するデータベースの種類に関するドキュメントを参照してください。
 
-   Oakでのスキーマのアップグレードの処理方法について詳しくは、ApacheのWebサイト [のこのページを参照してください](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)。
+   Oakでのスキーマのアップグレードの処理方法について詳しくは、ApacheのWebサイト](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)の[このページを参照してください。
 
 1. AEMのアップグレードを続行します。
 
-## アップグレードを妨げる可能性のあるユーザーの削除 {#delete-users-that-might-hinder-the-upgrade}
+## アップグレードの妨げになる可能性のあるユーザーの削除{#delete-users-that-might-hinder-the-upgrade}
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 この問題を回避するには、次の手順を実行します。
 
 1. インスタンスを実稼動トラフィックから切り離す
-1. 問題の原因となるユーザーのバックアップを作成します。 これは、Package Managerで行うことができます。 For more information, see [How to Work with Packages.](/help/sites-administering/package-manager.md)
+1. 問題の原因となるユーザーのバックアップを作成します。 これは、Package Managerで行うことができます。 詳しくは、[パッケージの使い方を参照してください。](/help/sites-administering/package-manager.md)
 1. 問題の原因となっているユーザーを削除します。 以下は、このカテゴリに該当する可能性のあるユーザーのリストです。
 
    1. `dynamic-media-replication`
