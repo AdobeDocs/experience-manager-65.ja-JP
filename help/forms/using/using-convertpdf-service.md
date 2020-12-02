@@ -28,9 +28,9 @@ Convert PDF サービスを使用すると、次のタスクを実行できま�
 * PDF ドキュメントを PostScript に変換します。PostScript に変換する際に、この変換操作を使用して、変換元のドキュメントと、PostScript レベル 2 と 3 のどちらに変換するかを指定できます。PostScript ファイルに変換する PDF ドキュメントは、非インタラクティブである必要があります。
 * PDF ドキュメントを JPEG、JPEG 2000、PNG および TIFF 画像形式に変換します。いずれかの画像形式に変換する場合は、変換操作を使用して、ソースドキュメントおよび画像オプションを指定できます。画像オプションには、画像変換形式、画像の解像度、色の変換などの様々な設定があります。
 
-## サービスのプロパティの設定 {#properties}
+## サービスのプロパティの設定  {#properties}
 
-AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。The default URL of AEM console is `https://[host]:'port'/system/console/configMgr`.
+AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEMコンソールのデフォルトURLは`https://[host]:'port'/system/console/configMgr`です。
 
 ## サービスの使用 {#using-the-service}
 
@@ -135,7 +135,8 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 ワークフローから Convert PDF サービスを実行することは、JSP またはサーブレットから実行することに似ています。
 
-唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、ドキュメントオブジェクトは、指定されたResourceResolverオブジェクトを使用してリポジトリからコンテンツを読み取ります。
+唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、ドキュメントオブジェクトが
+リポジトリからコンテンツを読み取るためのResourceResolverオブジェクトを指定しました。
 
 以下に示したサンプルワークフロープロセスは、入力ドキュメントを PostScript ドキュメントに変換します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
