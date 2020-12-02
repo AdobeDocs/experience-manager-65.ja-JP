@@ -30,7 +30,7 @@ ht-degree: 97%
 
 このオプションを使用すると、選択したユーザーに割り当てられている共有キューを管理できます。
 
-## 選択したユーザーキューへのアクセスの管理 {#managing-access-to-a-selected-user-queue}
+## 選択したユーザーキューへのアクセスの管理  {#managing-access-to-a-selected-user-queue}
 
 ユーザーへのアクセスを管理機能により、選択したユーザーキューへのアクセスを管理できます。選択したユーザーキューを組織内の他のユーザーに与えたり取り消したりできます。例えば、Kara Bowman は社内にいません。ユーザーへのアクセスを管理機能を使用すると、Kara Bowman のキューを Akira Tanama および John Jacobs と共有してジョブを完了できます。後で Kara Bowman が社内に戻ったときに、Kara Bowman のキューへのアクセスを Akira Tanaka および John Jacobs から取り消すことができます。
 
@@ -40,7 +40,7 @@ ht-degree: 97%
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
-### 選択したユーザーキューへのアクセスの設定 {#configuring-access-to-a-selected-user-queue}
+### 選択したユーザーキューへのアクセスの設定  {#configuring-access-to-a-selected-user-queue}
 
 1. 管理者アカウントを使用して管理コンソールにログインします。
 1. **サービス**／**forms ワークフロー**／**共有キュー**&#x200B;を選択します。
@@ -49,7 +49,7 @@ ht-degree: 97%
 1. 左下のウィンドウで、ユーザーを検索し選択します。「共有」をクリックします。
 1. 「保存」をクリックして完了します。
 
-### 選択したユーザーキューへのアクセスの取り消し {#revoking-access-to-a-selected-user-queue}
+### 選択したユーザーキューへのアクセスの取り消し  {#revoking-access-to-a-selected-user-queue}
 
 1. 管理者アカウントを使用して管理コンソールにログインします。
 1. **サービス**／**forms ワークフロー**／**共有キュー**&#x200B;を選択します。
@@ -58,7 +58,7 @@ ht-degree: 97%
 1. 右下のウィンドウには、選択したユーザーキューへのアクセスを持つユーザーのリストが表示されます。ユーザーを選択し、「失効」をクリックします。
 1. 「保存」をクリックして完了します。
 
-## ユーザーに割り当てたキューの管理 {#managing-queues-assigned-to-a-user}
+## ユーザーに割り当てたキューの管理  {#managing-queues-assigned-to-a-user}
 
 ユーザーによるアクセスを管理機能では、選択したユーザーに割り当てられているキューを管理できます。選択したユーザーに対して、ユーザーキューへのアクセスを個別に与えたり取り消したりできます。例えば、Akira Tanaka と John Jacobs のユーザーキューを Kara Bowman に割り当てることができます。ユーザーによるアクセスを管理機能を使用して、Kara Bowman を検索し、Akira Tanaka および John Jacobs に割り当てられているタスクへのアクセスを与えることができます。後で、Kara Bowman に与えられたこれらのユーザーキューへのアクセスを取り消すことができます。
 
@@ -68,7 +68,7 @@ ht-degree: 97%
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
-### 選択したユーザーキューへのアクセスの付与 {#granting-access-to-a-selected-user-queue}
+### 選択したユーザーキューへのアクセスの付与  {#granting-access-to-a-selected-user-queue}
 
 1. 管理者アカウントを使用して管理コンソールにログインします。
 1. **サービス**／**forms ワークフロー**／**共有キュー**&#x200B;を選択します。
@@ -77,7 +77,7 @@ ht-degree: 97%
 1. 左下ウィンドウで、選択したユーザーと共有するユーザーキューを検索し選択します。「共有」をクリックします。
 1. 「保存」をクリックして完了します。
 
-### 選択したユーザーキューへのアクセスの取り消し {#revoking_access_to_a_selected_user_queue-1}
+### 選択したユーザーキューへのアクセスの取り消し  {#revoking_access_to_a_selected_user_queue-1}
 
 1. 管理者アカウントを使用して管理コンソールにログインします。
 1. **サービス**／**forms ワークフロー**／**共有キュー**&#x200B;を選択します。
