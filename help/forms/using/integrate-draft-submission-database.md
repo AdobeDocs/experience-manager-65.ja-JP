@@ -42,13 +42,13 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    [ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. Go to AEM package manager at https://[*host*]:[*port*]/crx/packmgr/.
+1. https://[*host*]:[*port*]/crx/packmgr/のAEM package managerに移動します。
 1. 「**[!UICONTROL パッケージをアップロード]**」をクリックします。
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** を参照して選択し、「**[!UICONTROL OK]**」をクリックします。
 1. パッケージの隣にある「**[!UICONTROL インストール]**」をクリックし、パッケージをインストールします。
-1. Go to **[!UICONTROL AEM Web Console Configuration]**
-page at https://[*host*]:[*port*]/system/console/configMgr.
+1. **[!UICONTROL AEM Webコンソール設定]**に移動します
+https://[*host*]:[*port*]/system/console/configMgrのページ。
 1. **[!UICONTROL Forms Portal Draft and Submission Configuration]** をクリックし、編集モードで開きます。
 
 1. 次の表の説明に従って、プロパティの値を指定します。
@@ -317,7 +317,7 @@ page at https://[*host*]:[*port*]/system/console/configMgr.
 1. `https://'[server]:[port]'/system/console/bundles` に移動して「**[!UICONTROL Install/Update]**」をクリックします。
 1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
 1. 「**[!UICONTROL Install」または「Update]**」をクリックします。完了したら、サーバーを再起動します。
-1. (*Windows only*) Turn off the system firewall for your operating system.
+1. （*Windowsのみ*）お使いのオペレーティングシステムのシステムファイアウォールをオフにします。
 
 ## フォームポータルデータおよびメタデータサービスのサンプルコード {#sample-code-for-forms-portal-data-and-metadata-service}
 
@@ -343,9 +343,9 @@ page at https://[*host*]:[*port*]/system/console/configMgr.
     util.js
    ```
 
-   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。The `util` folder and `util.js` file are created in suceeeding steps.
+   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。`util`フォルダーと`util.js`ファイルは、上記の手順で作成されます。
 
-1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。Create a folder named `util`. 「**[!UICONTROL すべて保存]**」をクリックします。`util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。Create a file named `util.js`. 「**[!UICONTROL すべて保存]**」をクリックします。
+1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。`util`という名前のフォルダーを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。`util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。`util.js`という名前のファイルを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
 1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。ファイル名の検証長のコード。
 
@@ -414,9 +414,9 @@ page at https://[*host*]:[*port*]/system/console/configMgr.
 
    * **[!UICONTROL マルチオプション：]** Enabled
 
-1. Navigate to `/libs/fd/af/runtime/clientlibs/guideRuntime`and append the `fp.validation` value to the embed property.
+1. `/libs/fd/af/runtime/clientlibs/guideRuntime`に移動し、embedプロパティに`fp.validation`値を追加します。
 
-1. Navigate to /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA and append the `fp.validation` value to embed property.
+1. /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFAに移動し、embedプロパティに`fp.validation`値を追加します。
 
    >[!NOTE]
    >
