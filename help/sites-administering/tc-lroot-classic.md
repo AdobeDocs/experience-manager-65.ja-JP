@@ -27,7 +27,7 @@ ht-degree: 91%
 1. サイトの言語バージョンを表す新しい子ページを追加します。
 
    1. 新規／新しいページをクリックします。
-   1. ダイアログで、「タイトル」と「名前」を指定します。The Name needs to be in the format of `<language-code>` or `<language-code>_<country-code>`, for example en, en_US, en_us, en_GB, en_gb.
+   1. ダイアログで、「タイトル」と「名前」を指定します。名前は`<language-code>`または`<language-code>_<country-code>`の形式にする必要があります（en、en_US、en_us、en_GB、en_gbなど）。
 
       * サポートされている言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
       * サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。
