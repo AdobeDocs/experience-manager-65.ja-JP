@@ -17,7 +17,7 @@ ht-degree: 88%
 ---
 
 
-# アダプティブフォームおよび HTML5 フォームの外観フレームワーク {#appearance-framework-for-adaptive-and-html-forms}
+# アダプティブフォームおよび HTML5 フォームの外観フレームワーク  {#appearance-framework-for-adaptive-and-html-forms}
 
 フォーム（アダプティブフォームと HTML5 フォーム）は、[jQuery](https://jquery.com/)、[Backbone.js](https://backbonejs.org/)および[Underscore.js](https://underscorejs.org/)ライブラリを外観とスクリプト作成のために使用します。このフォームはまた、フォーム内のすべての対話操作要素（例えばフィールドやボタン）に対して [jQuery UI](https://jqueryui.com/) **Widgets**&#x200B;アーキテクチャを使用します。このアーキテクチャはフォーム開発者が、フォームで豊富な使用可能な jQuery ウィジェットとプラグインのセットを利用できるようにします。また、ユーザーから leadDigits/trailDigits の制限やパターン形式文字列の実装などのデータを取得しながら、フォーム固有のロジックを実装することもできます。フォーム開発者はカスタム外観を作成して使用し、データ取得の体験を改善し、よりユーザーフレンドリーにすることができます。
 
@@ -29,7 +29,7 @@ ht-degree: 88%
 * 外観はコントラクトの一部として、enter や exit などの一連の インベントのセットをトリガーします。
 * 一連の関数を実装するには、外観が必要となります。その関数には一般的なものから、フィールドタイプ固有のものも含まれています。
 
-## 一般的なオプション {#common-options}
+## 一般的なオプション  {#common-options}
 
 次にあるのはグローバルオプションのセットです。これらのオプションはすべてのフィールドで使用できます。
 
@@ -53,7 +53,7 @@ ht-degree: 88%
   </tr>
   <tr>
    <td>screenReaderText</td>
-   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。The form provides the value and you can override the value.<br /> </td>
+   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。フォームには値が提供され、値を上書きできます。<br /> </td>
   </tr>
   <tr>
    <td>tabIndex</td>
@@ -88,11 +88,11 @@ ht-degree: 88%
 
 これらのオプションとは別に、フィールドのタイプによって異なるいくつかの他のオプションがフレームワークによって提供されます。フィールド固有のオプションの詳細は、以下に記載されています。
 
-### フォームのフレームワークとのインタラクション {#interaction-with-forms-framework}
+### フォームのフレームワークとのインタラクション  {#interaction-with-forms-framework}
 
 Forms のフレームワークとやりとりするために、ウィジェットはいくつかのイベントをトリガーし、フォームスクリプトが機能するように有効化します。ウィジェットがこれらのイベントをスローしない場合、そのフィールドのためにフォーム内に書かれたスクリプトの一部が機能していません。
 
-#### ウィジェットによってトリガーされるイベント {#events-triggered-by-widget}
+#### ウィジェットによってトリガーされるイベント  {#events-triggered-by-widget}
 
 <table>
  <tbody>
@@ -138,7 +138,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <td>フォーカスをフィールドに移し、XFA_CLICK_イベントを呼び出します。</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>erorrMessage: string </em>representing the error<br /> <em>errorType: string (“warning”/”error”)</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:エラー<br /> <em>errorType：を表す文字列</em>文字列("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
    <td>エラーメッセージとエラータイプをウィジェットに送信します。ウィジェットはエラーを表示します。</td>
   </tr>
   <tr>
@@ -148,7 +148,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
  </tbody>
 </table>
 
-## フィールドのタイプに固有のオプション {#options-specific-to-type-of-field}
+## フィールドのタイプに固有のオプション  {#options-specific-to-type-of-field}
 
 すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットはその特定のフィールドのガイドラインに従う必要があります。
 
@@ -175,7 +175,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
  </tbody>
 </table>
 
-### ChoiceList: DropDownList, ListBox {#choicelist-dropdownlist-listbox}
+### ChoiceList: DropDownList, ListBox  {#choicelist-dropdownlist-listbox}
 
 <table>
  <tbody>
@@ -211,11 +211,11 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 <table>
  <tbody>
   <tr>
-   <th>Function</th>
+   <th>関数</th>
    <th>説明</th>
   </tr>
   <tr>
-   <td><p>addItem:<em> function(itemValues)<br /> itemValues: object containing the display and save value <br /> {sDisplayVal: &lt;displayValue&gt;, sSaveVal: &lt;save Value&gt;}</em></p> </td>
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues:displayとsaveの値を含むオブジェクト<br /> {sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;値を保存&gt;}</em></p> </td>
    <td>リストに項目を追加します。</td>
   </tr>
   <tr>
@@ -229,7 +229,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
  </tbody>
 </table>
 
-### NumericEdit: NumericField, DecimalField {#numericedit-numericfield-decimalfield}
+### NumericEdit: NumericField, DecimalField  {#numericedit-numericfield-decimalfield}
 
 | オプション | 説明 |
 |---|---|
@@ -239,7 +239,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 | zero | フィールドのロケールでのゼロの文字列表現。 |
 | decimal | フィールドのロケールでの小数点の文字列表現。 |
 
-### CheckButton: RadioButton, CheckBox {#checkbutton-radiobutton-checkbox}
+### CheckButton: RadioButton, CheckBox  {#checkbutton-radiobutton-checkbox}
 
 <table>
  <tbody>
