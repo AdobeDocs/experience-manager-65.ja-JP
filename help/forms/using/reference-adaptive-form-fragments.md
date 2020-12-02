@@ -34,7 +34,7 @@ ht-degree: 91%
 * 利用条件
 * 署名付き利用条件
 
-パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。For installing a package, see [How to Work With Packages](/help/sites-administering/package-manager.md).
+パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。
 
 ![すべてのフラグメントが表示されている](assets/ootb-frags.png)
 
