@@ -40,7 +40,7 @@ Correspondence Managementは、バックエンド、顧客、または受信者�
 
 ## 前提条件 {#prerequisite}
 
-Install the [Compatibility Package](compatibility-package.md) to view the **Data Dictionaries** option on the **Forms** page.
+**Forms**&#x200B;ページの&#x200B;**データディクショナリ**&#x200B;オプションを表示するには、[互換パッケージ](compatibility-package.md)をインストールします。
 
 ## データディクショナリの作成 {#createdatadictionary}
 
@@ -51,21 +51,21 @@ Install the [Compatibility Package](compatibility-package.md) to view the **Data
 >類似した要素を必要とするレターが複数存在する場合は、共通データディクショナリを作成することができます。ただし、多数の要素が含まれているサイズの大きなデータディクショナリを作成すると、そのデータディクショナリを使用する場合や、レターやドキュメントフラグメントなどの要素を読み込む場合に、パフォーマンスが低下する可能性があります。パフォーマンスに関する問題が発生した場合は、レターごとに個別のデータディクショナリを作成してください。
 
 1. **フォーム**／**データディクショナリ**&#x200B;を選択します。
-1. Tap **Create Data Dictionary**.
+1. 「**データディクショナリの作成**」をタップします。
 1. プロパティ画面で以下を追加します。
 
-   * **タイトル：** （オプション）データディクショナリのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。レターなどのドキュメントフラグメントは、タイトル（利用可能な場合）を用いて参照されます。タイトルは、サムネイルやアセットプロパティなどで使用されます。データディクショナリは、名前ではなく、タイトルで参照されます。
+   * **タイトル：** （オプション）データディクショナリのタイトルを入力します。タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。レターなどのドキュメントフラグメントは、タイトル（利用可能な場合）を用いて参照されます。タイトルは、サムネイルやアセットプロパティなどで使用されます。データディクショナリは、名前ではなく、タイトルで参照されます。
    * **名前**：データディクショナリの一意の名前。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力された特殊文字、スペース、および英数字以外の文字はハイフンに置き換えられます。「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
 
    * **説明**:（オプション）データディクショナリの説明。
-   * **タグ：** （オプション）カスタムタグを作成するには、テキストフィールドに値を入力し、Enterキーを押します。 タグのテキストフィールドの下にカスタムタグが表示されます。このテキストを保存すると、新しく追加したタグも作成されます。
-   * **拡張プロパティ**:（オプション）「 **追加フィールド** 」をタップして、データディクショナリのメタデータ属性を指定します。 「プロパティ名」列に、固有のプロパティ名を入力します。「値」列に、プロパティに関連付ける値を入力します。
+   * **タグ：** （オプション）カスタムタグを作成するには、テキストフィールドに値を入力し、Enterキーを押します。タグのテキストフィールドの下にカスタムタグが表示されます。このテキストを保存すると、新しく追加したタグも作成されます。
+   * **拡張プロパティ**:（オプション）「 **** 追加フィールド」をタップして、データディクショナリのメタデータ属性を指定します。「プロパティ名」列に、固有のプロパティ名を入力します。「値」列に、プロパティに関連付ける値を入力します。
 
    ![ドイツ語で定義されたデータディクショナリのプロパティ](do-not-localize/1_ddproperties.png)
 
-1. (Optional) To upload an XSD schema definition for your data dictionary, under the Data Dictionary Structure pane, tap **Upload XML Schema**. Browse to XSD file, select it, and tap **Open**. データディクショナリは、アップロードされた XML スキーマに基づいて作成されます。データディクショナリで要素の表示名や説明を調整する必要があります。これを行うには、要素の名前をタップして選択し、右側のペインのフィールドで説明、表示名、およびその他の詳細を編集します。
+1. （オプション）データディクショナリのXSDスキーマ定義をアップロードするには、データディクショナリの構造ウィンドウの「**XMLスキーマのアップロード**」をタップします。 XSDファイルを参照し、選択して、「**開く**」をタップします。 データディクショナリは、アップロードされた XML スキーマに基づいて作成されます。データディクショナリで要素の表示名や説明を調整する必要があります。これを行うには、要素の名前をタップして選択し、右側のペインのフィールドで説明、表示名、およびその他の詳細を編集します。
 
-   For more information on Computed DD Elements, see [Computed Data Dictionary Elements](#computedddelements).
+   計算済みDD要素の詳細については、[計算済みデータディクショナリ要素](#computedddelements)を参照してください。
 
    >[!NOTE]
    >
@@ -92,17 +92,17 @@ Install the [Compatibility Package](compatibility-package.md) to view the **Data
    * 親 DDE（複合）には、同じ名前の 2 つの子を指定できません。
    * 列挙型には、プリミティブな String 型のみが含まれます。
 
-   For more information on Composite, Collection, and Primitive elements and working with data dictionary elements, see [Mapping Data Dictionary Elements to XML Schema](#mappingddetoschema).
+   複合要素、コレクション要素、プリミティブ要素およびデータディクショナリ要素の操作について詳しくは、「[データディクショナリ要素のXMLスキーマへのマッピング](#mappingddetoschema)」を参照してください。
 
-   For information on validations in Data Dictionary, see [Data Dictionary Editor validations](#ddvalidations).
+   データディクショナリでの検証について詳しくは、「[データディクショナリエディターの検証](#ddvalidations)」を参照してください。
 
    ![2.addpropertiesbasic](assets/2_addddpropertiesbasic.png)
 
-1. （オプション）要素を選択後に、「詳細設定」タブでプロパティ（属性）を追加できます。You can also tap **Add Field** and extend the properties of a DD element.
+1. （オプション）要素を選択後に、「詳細設定」タブでプロパティ（属性）を追加できます。また、「**追加 Field**」をタップして、DD要素のプロパティを拡張することもできます。
 
    ![3_addpropertiesadvanced](assets/3_addddpropertiesadvanced.png)
 
-1. (Optional) You can remove any element by tapping the three dots on the right side of an element and selecting **Delete**.
+1. （オプション）要素の右側の3つのドットをタップし、「**削除**」を選択すると、要素を削除できます。
 
    ![4_deleteelement](assets/4_deleteelement.png)
 
@@ -152,9 +152,9 @@ Install the [Compatibility Package](compatibility-package.md) to view the **Data
 
 ## テストデータの操作 {#working-with-test-data}
 
-1. On the Data Dictionaries page, tap **Select**.
-1. Tap a data dictionary for which you want to download test data and then tap **Download Sample XML Data**.
-1. Tap **OK** in the alert message. XMLファイルがダウンロードされます。
+1. データディクショナリページで、「**選択**」をタップします。
+1. テストデータをダウンロードするデータディクショナリをタップし、**サンプルXMLデータのダウンロード**&#x200B;をタップします。
+1. 警告メッセージで「**OK**」をタップします。 XMLファイルがダウンロードされます。
 1. XML ファイルを Notepad その他の XML エディタで開きます。XML ファイルは、データディクショナリおよび要素内のプレースホルダー文字列と同じ構造を持っています。レターのテストに使うデータでプレースホルダー文字列を置き換えます。
 
    ```xml
@@ -200,13 +200,14 @@ Install the [Compatibility Package](compatibility-package.md) to view the **Data
 
 1. データエントリの作成後は、テストデータを含むレターをプレビューする際に、この XML ファイルを使用することができます。
 
-   このテストデータはDD（「DD」を選択し、「テストデータをアップロード」をタップして、このxmlファイルをアップロードします）で追加できます。その後、レターが通常（カスタムではない）プレビューされ、このXMLデータがレターで使用されます。 「カスタム」をタップして、この XML をアップロードすることもできます。
+   このテストデータはDDで追加できます（「DD」を選択し、「テストデータのアップロード」をタップして、このxmlファイルをアップロードします）。
+そのため、通常（カスタムではなく）レターをプレビューした後は、このXMLデータがレターで使用されます。 「カスタム」をタップして、この XML をアップロードすることもできます。
 
 ## サンプル {#samples}
 
 データディクショナリ実装の詳細コードサンプルを以下に示します。
 
-### データディクショナリにアップロード可能なサンプルスキーマ {#sample-schema-that-can-be-uploaded-to-the-data-dictionary}
+### データディクショナリにアップロード可能なサンプルスキーマ  {#sample-schema-that-can-be-uploaded-to-the-data-dictionary}
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -268,7 +269,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
  <tbody>
   <tr>
    <td><strong>属性</strong></td>
-   <td><strong>型</strong></td>
+   <td><strong>種類</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
@@ -278,27 +279,27 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr>
   <tr>
    <td>参照<br />名</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>必須。データディクショナリの階層や構造の変更に左右されない、DDE への参照を可能にする DDE の一意の参照名です。テキストモジュールは、この名前を使用してマップされます。</td>
   </tr>
   <tr>
    <td>displayname</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>ユーザーにわかりやすい DDE の名前（オプション）。</td>
   </tr>
   <tr>
    <td>description</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>DDE の説明。</td>
   </tr>
   <tr>
    <td>elementType</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>必須。DDEのタイプ：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION のいずれかです。</td>
   </tr>
   <tr>
    <td>elementSubType</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>DDE のサブタイプ: ENUM。elementType が STRING および NUMBER の場合のみ使用できます。</td>
   </tr>
   <tr>
@@ -308,12 +309,12 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr>
   <tr>
    <td>計算済み</td>
-   <td>Boolean</td>
+   <td>ブール値</td>
    <td>DDE が計算済みかどうかを示す Boolean フィールド。計算済み DDE の値は、他の DDE 値の関数です。デフォルトでは、JSP 式がサポートされます。</td>
   </tr>
   <tr>
    <td>式</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>「computed」DDEの式。デフォルトで提供される式評価サービスは、JSP EL 式をサポートしています。式サービスをカスタム実装に置き換えることができます。</td>
   </tr>
   <tr>
@@ -328,7 +329,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr>
   <tr>
    <td>必須</td>
-   <td>Boolean</td>
+   <td>ブール値</td>
    <td>このフラグは、データディクショナリに対応するインスタンスデータのソースに、この特定の DDE の値が含まれていなくてはならないことを示します。</td>
   </tr>
   <tr>
@@ -339,7 +340,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
  </tbody>
 </table>
 
-### 計算済みデータディクショナリ要素 {#computedddelements}
+### 計算済みデータディクショナリ要素  {#computedddelements}
 
 データディクショナリには、計算済み要素を含めることもできます。計算済みデータディクショナリ要素は、常に式と関連付けられます。実行時にこの式が評価され、データディクショナリ要素の値が取得されます。計算済み DDE 値は、他の DDE 値またはリテラルによる関数です。デフォルトでは、JSP 式言語（EL）の式がサポートされます。EL 式は ${ } の文字を使用します。有効な式にはリテラル、演算子、変数（データディクショナリ要素の参照）および関数呼び出しを含めることができます。式においてデータディクショナリ要素を参照する際は、DDE の参照名を使用します。あるデータディクショナリに含まれるすべてのデータディクショナリ要素は、それぞれ一意の参照名によって特定されます。
 
@@ -403,21 +404,21 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
   </tr>
   <tr>
    <td>列挙型と baseType の要素 - xs:string</td>
-   <td>以下の DDE<br /> type - STRING<br /> subtype - ENUM<br /> valueSet - ENUMに使用できる値<br /> </td>
+   <td>以下の DDE<br /> type - <br /> STRINGsubtype - <br /> ENUMvalueSet - ENUMに使用できる値<br /> </td>
    <td>java.lang.String</td>
   </tr>
  </tbody>
 </table>
 
-## データディクショナリからサンプルデータファイルの書き出しをダウンロードする {#download-a-sample-data-file-from-a-data-dictionary}
+## データディクショナリからサンプルデータファイルの書き出しをダウンロードする  {#download-a-sample-data-file-from-a-data-dictionary}
 
 データディクショナリの作成後は、XMLサンプルデータファイルをダウンロードして、テキストエントリを作成できます。
 
-1. In the Data Dictionaries page, tap **Select** and then tap a data dictionary to select it.
-1. Select **Download Sample XML Data**.
-1. Tap **OK** in the alert message.
+1. データディクショナリページで、「**選択**」をタップし、データディクショナリをタップして選択します。
+1. 「**サンプルXMLデータのダウンロード**」を選択します。
+1. 警告メッセージで「**OK**」をタップします。
 
-   Correspondence Management は、選択されたデータディクショナリの構造に基づいて XML ファイルを作成し、&lt;data-dictionary-name>-SampleData の名称でコンピューターにダウンロードします。Now you can edit this file in an XML or text editor to make data entries while [creating a letter](../../forms/using/create-letter.md).
+   Correspondence Management は、選択されたデータディクショナリの構造に基づいて XML ファイルを作成し、&lt;data-dictionary-name>-SampleData の名称でコンピューターにダウンロードします。これで、このファイルをXMLエディターまたはテキストエディターで編集して、[レター](../../forms/using/create-letter.md)の作成中にデータエントリを作成できます。
 
 ## メタデータの国際化対応 {#internationalization-of-meta-data}
 
@@ -425,9 +426,9 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 
 ### データディクショナリのローカライズ {#localize-data-dictionary}
 
-1. On the Data Dictionaries page, tap **Select** and then tap a data dictionary to select it.
-1. Tap **Download Localization Data**.
-1. Tap **OK** in the alert. Correspondence ManagementによってDataDictionary-&lt;DDname>.zipという名前のzipファイルがコンピューターにダウンロードされます。
+1. データディクショナリページで、「**選択**」をタップし、データディクショナリをタップして選択します。
+1. 「**ローカライゼーションデータのダウンロード**」をタップします。
+1. 警告メッセージで「**OK**」をタップします。 Correspondence ManagementによってDataDictionary-&lt;DDname>.zipという名前のzipファイルがコンピューターにダウンロードされます。
 1. Zip ファイルには、.properties ファイルが含まれています。このファイルでは、ダウンロードされたデータディクショナリを定義します。プロパティファイルのコンテンツは次のようになります。
 
    ```ini
@@ -456,10 +457,10 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 
 1. .properties ファイル（または複数のロケール用のファイル）を 1 つの .zip ファイルにアーカイブします。 
 
-1. In the Data Dictionaries page, select **More** > **Upload Localization Data** and select the zip file with localized properties files.
+1. データディクショナリページで、**詳細**/**ローカライゼーションデータのアップロード**&#x200B;を選択し、ローカライズされたプロパティファイルを含むzipファイルを選択します。
 1. ローカリゼーションの変更を表示するには、ブラウザーのロケールを変更します。
 
-## データディクショナリの検証 {#ddvalidations}
+## データディクショナリの検証  {#ddvalidations}
 
 データディクショナリの作成時または更新時に、データディクショナリエディターは強制的に以下の検証を行います。
 
@@ -531,7 +532,7 @@ Data Dictionary の実装の詳細を示すサンプルモデルおよびコー�
 | age | /age |
 | price | /price |
 
-### 複合要素のマッピング {#mapping-composite-elements}
+### 複合要素のマッピング  {#mapping-composite-elements}
 
 複合要素ではバインディングがサポートされていません。バインディングが提供されても無視されます。プリミティブ型の構成要素であるすべての子 DDE のバインディングは、絶対パスである必要があります。複合 DDE の子要素に対して絶対マッピングが使用できるので、XPath バインディングの観点で柔軟性が高くなります。複合 DDE を XML スキーマの複合タイプ要素にマッピングすると、その子要素のバインディングの範囲が制限されます。
 
@@ -579,7 +580,7 @@ Data Dictionary の実装の詳細を示すサンプルモデルおよびコー�
  </tbody>
 </table>
 
-### コレクション要素のマッピング {#mapping-collection-elements}
+### コレクション要素のマッピング  {#mapping-collection-elements}
 
 コレクション要素が別のコレクション要素にマッピングできるのは、別のコレクション要素のカーディナリティが 1 より大きい場合のみです。コレクション DDE の子 DDE には、その親の XML バインディングに対する相対（ローカル）XML バインディングが含まれます。コレクション要素の子 DDE は親と同じカーディナリティを持つ必要があるので、カーディナリティの制約を守るために相対バインディングを必須とし、子 DDE に繰り返さない XML スキーマ要素が指定されないようにします。以下の例では、「TokenID」のカーディナリティが、その親コレクション DDE. の「Tokens」と同じである必要があります。
 
