@@ -11,7 +11,7 @@ ht-degree: 72%
 ---
 
 
-# Create and configure Asset Editor pages {#creating-and-configuring-asset-editor-pages}
+# アセットエディタページの作成と設定{#creating-and-configuring-asset-editor-pages}
 
 このドキュメントは次の内容について説明します。
 
@@ -25,15 +25,15 @@ ht-degree: 72%
 >
 >アセット共有は、オープンソースの参照実装として使用できます。[Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) を参照してください。アセット共有は正式にはサポートされていません。
 
-## Why create and configure Asset Editor pages? {#why-create-and-configure-asset-editor-pages}
+## アセットエディタページを作成して設定する理由{#why-create-and-configure-asset-editor-pages}
 
-デジタルアセット管理は、ますます広く使用されるようになっています。When moving from a small-scale solution for a small user group of professionally trained users - for example photographers or taxonomists - to larger and more diverse user groups - for example business users, WCM authors, journalists, and so on - the powerful user interface of [!DNL Adobe Experience Manager Assets] for professional users can provide too much information and stakeholders start to request specific user interfaces or applications to access the digital assets that are of relevance to them.
+デジタルアセット管理は、ますます広く使用されるようになっています。専門的な知識を持つユーザー（写真家、分類学者など）の小規模なユーザーグループから、ビジネスユーザー、WCM作成者、ジャーナリストなど、より多様なユーザーグループに移行する場合、特定のユーザーインターフェイスや関係者開始を提供しすぎる。[!DNL Adobe Experience Manager Assets]
 
 アセット中心のアプリケーションは、社員が展示会の訪問や公共のWebサイトの報道機関から写真をアップロードできる、イントラネット内の単純なフォトギャラリーです。アセット中心のアプリケーションは、買い物かご、チェックアウト、検証プロセスなどの完全なソリューションにも拡張できます。
 
-アセット中心型アプリケーションの作成の大部分は、コーディングを必要としない設定プロセスとなります。ここでは、ユーザーグループとそのニーズ、使用されるメタデータに関する知識のみが必要となります。Asset-centric applications created with [!DNL Assets] are extensible: with moderate coding effort reusable components for searching, viewing, and modifying assets can be created.
+アセット中心型アプリケーションの作成の大部分は、コーディングを必要としない設定プロセスとなります。ここでは、ユーザーグループとそのニーズ、使用されるメタデータに関する知識のみが必要となります。[!DNL Assets]で作成されたアセット中心のアプリケーションは拡張可能です。を適度にコーディングすると、アセットの検索、表示、変更を行うための再利用可能なコンポーネントを作成できます。
 
-An asset-centric application in [!DNL Experience Manager] consists of an Asset Editor page, which can be used to get a detailed view of a specific asset. アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
+[!DNL Experience Manager]のアセット中心アプリケーションは、アセットエディタページで構成されます。このページは、特定のアセットの詳細な表示を取得するのに使用できます。 アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -189,15 +189,15 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
 -->
 
-## アセットエディタページの作成と設定 {#creating-and-configuring-an-asset-editor-page}
+## アセットエディタページの作成と設定{#creating-and-configuring-an-asset-editor-page}
 
 アセットエディターをカスタマイズして、ユーザーによるデジタルアセットの表示および編集方法を指定します。これをおこなうには、新規のアセットエディターページを作成してから、ユーザーがページに対して実行できる表示とアクションをカスタマイズします。
 
 >[!NOTE]
 >
->If you want to add custom fields to the DAM asset editor, add new `cq:Widget` nodes to `/apps/dam/content/asseteditors.`
+>DAMアセットエディターにカスタムフィールドを追加する場合は、新しい`cq:Widget`ノードを`/apps/dam/content/asseteditors.`に追加します
 
-### Create an Asset Editor page {#creating-the-asset-editor-page}
+### アセットエディタの作成ページ{#creating-the-asset-editor-page}
 
 アセットエディターページを作成する場合に、アセット共有ページのすぐ下にページを作成することをお勧めします。
 
@@ -212,11 +212,11 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![assetshare5](assets/assetshare5.png)
 
-To customize your Asset Editor page, use elements from the sidekick. The Asset Editor page that is accessed from the **Geometrixx Press Center** is a customized version of a page based on this template:
+アセットエディタページをカスタマイズするには、サイドキックの要素を使用します。**Geometrixxプレスセンター**&#x200B;からアクセスされるアセットエディタページは、次のテンプレートに基づくページのカスタマイズ版です。
 
 ![assetshare6](assets/assetshare6.png)
 
-#### アセットエディタを設定して、アセット共有ページから開く {#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### アセットエディタをアセット共有ページから開くように設定する{#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 カスタムのアセットエディターページを作成したら、アセット（作成したカスタムのアセット共有）をダブルクリックすると、カスタマイムのエディターページでアセットが開くことを確認する必要があります。
 
@@ -226,13 +226,13 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 ![screen_shot_2012-04-23at20123pm](assets/screen_shot_2012-04-23at20123pm.png)
 
-1. Click the **General** tab if it is not already selected.
+1. 「**一般**」タブが選択されていない場合はクリックします。
 
-1. In the **Path of Asset Editor** field, enter the path to the asset editor you want the Asset Share page to open assets in and click **OK**.
+1. 「**アセットエディターのパス**」フィールドに、アセットを開くアセットエディターのパスを入力し、「**OK**」をクリックします。
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### Add Asset Editor components {#adding-asset-editor-components}
+#### 追加アセットエディタコンポーネント{#adding-asset-editor-components}
 
 アセットエディターに含める機能を指定するには、ページにコンポーネントを追加します。
 
@@ -252,7 +252,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 | コンポーネント | 説明 |
 |---|---|
-| **[!UICONTROL メタデータフォーム] と [!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
+| **[!UICONTROL メタデータ] フォームと [!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
 | **[!UICONTROL サブアセット]** | サブアセットをカスタマイズできるようにします。 |
 | **タグ** | ユーザーがタグを選択してアセットに追加できるようにします。 |
 | **[!UICONTROL サムネール]** | アセットのサムネールとファイル名を表示し、代替テキストを追加できるようにします。ここでは、アセットエディターのアクションを追加することもできます。 |
@@ -264,27 +264,27 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 メタデータフォームは、開始アクションと終了アクションを含むフォームです。その間には、**テキスト**&#x200B;フィールドを入力します。フォームの操作について詳しくは、[フォーム](/help/sites-authoring/default-components-foundation.md#form-component)を参照してください。
 
-1. Create a start action by clicking **Edit** in the Start area of the form. 必要に応じて、「ボックスタイトル」にボックスタイトルを入力できます。デフォルトでは、ボックスタイトルは「**メタデータ**」です。生成された Java スクリプトクライアントコードを検証する場合は、「クライアントの検証」チェックボックスをオンにします。
+1. フォームの開始領域で「**編集**」をクリックして、開始アクションを作成します。 必要に応じて、「ボックスタイトル」にボックスタイトルを入力できます。デフォルトでは、ボックスタイトルは「**メタデータ**」です。生成された Java スクリプトクライアントコードを検証する場合は、「クライアントの検証」チェックボックスをオンにします。
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. Create an End action by clicking **Edit** in the End area of the form. 例えば、ユーザーがメタデータの変更内容を送信できる「**送信**」ボタンを作成できます。また、オプションとして、メタデータを元の状態にリセットする「**リセット**」ボタンを追加できます。
+1. フォームの「End」領域で「**Edit**」をクリックして、Endアクションを作成します。 例えば、ユーザーがメタデータの変更内容を送信できる「**送信**」ボタンを作成できます。また、オプションとして、メタデータを元の状態にリセットする「**リセット**」ボタンを追加できます。
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
-1. In between the **Form Start** and the **Form End**, drag Metadata Text Fields to the form. ユーザーはこれらのテキストフィールドにメタデータを入力し、このメタデータを送信するか、他のアクションを実行することができます。
+1. **フォーム開始**&#x200B;と&#x200B;**フォームの終わり**&#x200B;の間で、メタデータテキストフィールドをフォームにドラッグします。 ユーザーはこれらのテキストフィールドにメタデータを入力し、このメタデータを送信するか、他のアクションを実行することができます。
 
-1. Double-click the field name, for example, **Title** to open the metadata field and make changes. **コンポーネントを編集**&#x200B;ウィンドウの「**一般**」タブで、名前空間、フィールドラベル、型（`dc:title` など）を定義します。
+1. フィールド名（例：**タイトル**）を重複がクリックすると、メタデータフィールドが開き、変更が行われます。 **コンポーネントを編集**&#x200B;ウィンドウの「**一般**」タブで、名前空間、フィールドラベル、型（`dc:title` など）を定義します。
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-See [Customizing and Extending Assets](/help/assets/extending-assets.md) for information on modifying the namespaces available in the metadata form.
+メタデータフォームで使用可能な名前空間の変更については、「アセットのカスタマイズと拡張」[を参照してください。](/help/assets/extending-assets.md)
 
-1. Click the **Constraints** tab. ここで、フィールドを必須にするかどうかを選択し、必要に応じて制約を追加できます。
+1. 「**制約**」タブをクリックします。 ここで、フィールドを必須にするかどうかを選択し、必要に応じて制約を追加できます。
 
 ![screen_shot_2012-04-23at23435pm](assets/screen_shot_2012-04-23at23435pm.png)
 
-1. Click the **Display** tab. ここで、メタデータフィールドの列の新しい幅と列数を入力できます。「**フィールドは読み取り専用です**」チェックボックスをオフにすると、ユーザーがメタデータを編集できるようになります。
+1. 「**表示**」タブをクリックします。 ここで、メタデータフィールドの列の新しい幅と列数を入力できます。「**フィールドは読み取り専用です**」チェックボックスをオフにすると、ユーザーがメタデータを編集できるようになります。
 
 ![screen_shot_2012-04-23at23446pm](assets/screen_shot_2012-04-23at23446pm.png)
 
@@ -316,7 +316,7 @@ See [Customizing and Extending Assets](/help/assets/extending-assets.md) for inf
 
 ![screen_shot_2012-04-23at25031pm](assets/screen_shot_2012-04-23at25031pm.png)
 
-タグコンポーネントをダブルクリックしてタグダイアログを開きます。このダイアログで、必要に応じてタグのタイトルを変更し、割り当て済みの名前空間を選択することができます。To make this field editable, clear the **[!UICONTROL Hide Edit]** check box. デフォルトでは、タグは編集可能です。
+タグコンポーネントをダブルクリックしてタグダイアログを開きます。このダイアログで、必要に応じてタグのタイトルを変更し、割り当て済みの名前空間を選択することができます。このフィールドを編集可能にするには、[**[!UICONTROL 編集を非表示]**]チェックボックスをオフにします。 デフォルトでは、タグは編集可能です。
 
 ![screen_shot_2012-04-23at24731pm](assets/screen_shot_2012-04-23at24731pm.png)
 
@@ -328,7 +328,7 @@ See [Customizing and Extending Assets](/help/assets/extending-assets.md) for inf
 
 ![screen_shot_2012-04-23at25244pm](assets/screen_shot_2012-04-23at25244pm.png)
 
-#### サムネール {#thumbnail}
+#### サムネール  {#thumbnail}
 
 サムネールコンポーネントでは、選択したサムネールがアセットで表示されます（多くの形式でサムネールは自動的に抽出されます）。さらに、コンポーネントではファイル名と、[変更可能なアクション](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)が表示されます。
 
@@ -352,7 +352,7 @@ See [Customizing and Extending Assets](/help/assets/extending-assets.md) for inf
 
 タイトルが編集可能な場合、鉛筆アイコンをクリックして&#x200B;**アセットのプロパティ**&#x200B;ウィンドウを開いて、タイトルと説明を追加できます。さらに、日時を選択してアセットのオンとオフを切り替えることができます。
 
-Titleを編集する場合、ユーザーは「 [!UICONTROL Title]**」、「Description**」 **、「On」、「On」、「********** Off Times」の順に入力して、アセットをonおよびoffにすることができます。
+[!UICONTROL タイトル]を編集する場合、ユーザーは&#x200B;**タイトル**、**説明**&#x200B;を変更し、**オン**&#x200B;と&#x200B;**オフタイム**&#x200B;を入力して、アセットのオン/オフを切り替えることができます。
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -360,13 +360,13 @@ Titleを編集する場合、ユーザーは「 [!UICONTROL Title]**」、「Des
 
 ![chlimage_1-164](assets/chlimage_1-392.png)
 
-#### ア追加セットエディタのアクション {#adding-asset-editor-actions}
+#### ア追加セットエディタのアクション{#adding-asset-editor-actions}
 
 定義済みの一部のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
 アセットエディターページにアクションを追加するには：
 
-1. In the Asset Editor page that you want to customize, click **Asset Editor** in the sidekick.
+1. カスタマイズするアセットエディタページで、サイドキックの&#x200B;**アセットエディタ**&#x200B;をクリックします。
 
 ![screen_shot_2012-04-23at35515pm](assets/screen_shot_2012-04-23at35515pm.png)
 
@@ -381,13 +381,13 @@ Titleを編集する場合、ユーザーは「 [!UICONTROL Title]**」、「Des
 | [!UICONTROL 参照] | クリックすると、アセットで現在使用されているページが表示されます。 |
 | [!UICONTROL バージョン管理] | アセットのバージョンの作成と復元が可能です。 |
 
-1. Drag the appropriate action to the **Actions** area on the page. これによって、そのアクションを実行するボタンが作成されます。
+1. 適切なアクションをページの&#x200B;**アクション**&#x200B;領域にドラッグします。 これによって、そのアクションを実行するボタンが作成されます。
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
-## Multi-edit assets with the Asset Editor page {#multi-editing-assets-with-the-asset-editor-page}
+## アセットエディタページでのアセットのマルチ編集{#multi-editing-assets-with-the-asset-editor-page}
 
-With [!DNL Experience Manager Assets] you can make changes to several assets at once. アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
+[!DNL Experience Manager Assets]を使うと、複数のアセットを一度に変更できます。 アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
 
 * タグ
 * メタデータ
@@ -399,10 +399,10 @@ With [!DNL Experience Manager Assets] you can make changes to several assets at 
 
 1. アセットを選択します。
 
-   * Windowsの場合： `Ctrl + click` 各アセット。
-   * Macの場合： `Cmd + click` 各アセット。
+   * Windowsの場合：`Ctrl + click`個々のアセット。
+   * Macの場合：`Cmd + click`個々のアセット。
 
-   To select a range of assets: click the first asset then `Shift + click` the last asset.
+   アセットの範囲を選択するには：最初のアセットをクリックし、最後のアセットを`Shift + click`クリックします。
 
 1. 「**Actions**」フィールド（ページの左側）の「**Edit Metadata**」をクリックします。
 1. Geometrixx **Press Center Asset Editor** ページが新しいタブで開きます。アセットのメタデータが以下のように表示されます。
@@ -411,16 +411,16 @@ With [!DNL Experience Manager Assets] you can make changes to several assets at 
    * すべてのアセットに適用されるタグは、通常のフォントで表示されます。
    * タグ以外のメタデータ：フィールドの値は、選択されたすべてのアセットで同じ場合にのみ表示されます。
 
-1. Click **Download** to download a ZIP file containing the assets original renditions.
-1. 「 **タグ** 」フィールドの横にある「タグ」オプションをクリックします。
+1. 「**ダウンロード**」をクリックして、元のレンディションを含むZIPファイルをダウンロードします。
+1. 「**タグ**」フィールドの横にある「タグ」オプションをクリックします。
 
    * すべてのアセットではなく一部のアセットにのみ適用されるタグは、グレーの背景になります。
    * すべてのアセットに適用されるタグは白の背景になります。
 
    以下の操作を実行できます。
 
-   * Click `x` to remove the tag for all the assets.
-   * Click `+` to add the tag to all the assets.
+   * `x`をクリックして、すべてのアセットのタグを削除します。
+   * `+`をクリックして、タグをすべてのアセットに追加します。
    * **矢印**&#x200B;をクリックしてタグを選択し、すべてのアセットに新しいタグを追加します。
 
    「**OK**」をクリックして、変更内容をフォームに書き込みます。「**Tags**」フィールドの横にあるチェックボックスが自動的にオンになります。
