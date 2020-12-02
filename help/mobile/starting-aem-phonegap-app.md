@@ -18,7 +18,7 @@ ht-degree: 54%
 ---
 
 
-# AEM PhoneGap の起動 {#starting-aem-phonegap}
+# AEM PhoneGap の起動  {#starting-aem-phonegap}
 
 >[!NOTE]
 >
@@ -32,18 +32,18 @@ https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
 開発者は、このサンプルを基に、PhoneGap を使用した AEM Mobile アプリケーションを開発できます。スターターキットおよび参照アプリケーションを使用して学習することで、リッチなモバイルアプリケーションを作成するための基礎を確実に理解できます。
 
-* [AEM PhoneGapスターターキットを使用して](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) 、AEM Mobileカタログに適したアプリを作成します。
-* A [reference app](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) with full source has been created that demonstrates many of the new features in AEM Mobile, whether you are migrating an existing app into AEM Mobile or starting fresh.
-* All our samples can be found here on github: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) and include bootstrapping your project with Maven.
-* Most conference talks will leverage the [Kitchen Sink tutorial](https://github.com/blefebvre/aem-phonegap-kitchen-sink), which you can also find in Github and is focused on the usage of Apache Cordova native extensibility.
+* [AEM PhoneGapスターターキット](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)を使用して、AEM Mobileカタログに適したアプリを作成します。
+* 既存のアプリをAEM Mobileに移行する場合でも、新規に開始する場合でも、AEM Mobileの新機能の多くを示す、フルソースの[リファレンスアプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)が作成されました。
+* 当社のサンプルはすべて、GitHubで閲覧できます。[https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps)を開き、Mavenでプロジェクトをブートストラップします。
+* ほとんどの電話会議では、Githubでも見られる[Kitchen Sinkチュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)を活用します。このチュートリアルは、Apache Cordovaのネイティブ拡張機能の使用に重点を置いています。
 
 >[!NOTE]
 >
->Once you have had a chance to familiarize yourself with the starterkit, it is important to learn about Adobe Experience Manager *components and templates.*
+>スターキットの使い方に慣れたら、Adobe Experience Manager *のコンポーネントとテンプレートについて学ぶことが重要です。*
 
 ## テンプレートおよびコンポーネント {#templates-and-components}
 
-AEM *Templates* and *Components* enable line of business owners to create custom experiences. Both *Templates *and *Components* are available out-of-the-box or can be custom developed by you, the developer either by extending existing components or creating greenfield (advanced). *テンプレート* と *コンポーネント* )を使用すると、AEM作成者はドラッグ&amp;ドロップで魅力的で関連性のあるエクスペリエンスを作成できます。
+AEM *テンプレート*&#x200B;と&#x200B;*コンポーネント*&#x200B;を使用すると、ビジネスオーナーのラインがカスタムエクスペリエンスを作成できます。 *Templates *と&#x200B;*Components*&#x200B;はどちらもすぐに使えます。または、開発者は既存のコンポーネントを拡張するか、グリーンフィールド（詳細）を作成することで、独自に開発することもできます。 *テン* プレートとコンポ ** ーネントは、AEM Authorがドラッグ&amp;ドロップして、魅力的で関連性のあるエクスペリエンスを作り出すためのものです。
 
 1. [コンポーネントの作成](/help/sites-developing/components.md)
 1. [テンプレートの作成](/help/sites-developing/templates.md)
