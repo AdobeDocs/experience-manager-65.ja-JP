@@ -411,7 +411,7 @@ ht-degree: 85%
 * **公開とライブコピーのプロパティ名**
 Sites 専用の述語の、公開およびライブコピーのチェックボックスのラベル。
 
-* The &amp;ast; on the field labels in the **Settings** tab means the fields are required and if left blank an error message will appear
+* &amp;ast;「**設定**」タブのフィールドラベルには、フィールドが必須であることを意味し、空白のままにすると、エラーメッセージが表示されます
 
 ## 検索フォームの設定 {#configuring-your-search-forms}
 
@@ -468,7 +468,7 @@ Sites 専用の述語の、公開およびライブコピーのチェックボ�
 
 1. プレビューを&#x200B;**閉じて**&#x200B;戻り、設定を完了します。
 
-### 述語フィールドの削除 {#deleting-a-predicate-field}
+### 述語フィールドの削除  {#deleting-a-predicate-field}
 
 1. 更新する[カスタマイズ設定を開きます](#creating-opening-a-customized-configuration)。
 1. 述語フィールド（右側）を選択し、「**設定**」タブを開いて、**削除**&#x200B;アイコン（左下）を選択します。
@@ -495,7 +495,7 @@ Sites 専用の述語の、公開およびライブコピーのチェックボ�
 
 1. カスタマイズした設定が削除され、デフォルトが復帰します（このことは、コンソールに鍵アイコンが再度表示されることで確認できます）。
 
-### オプションの述語の追加 {#adding-options-predicates}
+### オプションの述語の追加  {#adding-options-predicates}
 
 オプションの述語（オプション、オプションプロパティ）を使用すると、検索対象の項目を設定できます。通常は、ページノード上のプロパティなど、ページの直下にあるものを検索するために使用します。
 
