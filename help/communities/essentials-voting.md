@@ -18,11 +18,11 @@ ht-degree: 58%
 ---
 
 
-# 投票の基本事項 {#voting-essentials}
+# 投票の基本事項  {#voting-essentials}
 
 [集計](tally.md)のサブクラスである投票コンポーネントは、各メンバーが上下の矢印を選択して意見を示すだけで特定のコンテンツを評価できる便利なツールです。
 
-Placing multiple instances of a voting component on the same page is allowed; each instance must be configured with an unique `tally name` property.
+投票コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
 
 匿名での投票投稿はサポートされていません。サイト訪問者が投票に参加するには、一度だけ登録してサインインする必要があります。サインインした訪問者（会員）は、いつでも投票を変更できます。
 
@@ -52,14 +52,14 @@ Placing multiple instances of a voting component on the same page is allowed; ea
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><p>See <a href="voting.md">Using Voting</a></p> </td>
+   <td><p><a href="voting.md">投票の使用</a>を参照</p> </td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -67,7 +67,7 @@ Placing multiple instances of a voting component on the same page is allowed; ea
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された投票（UGC）へのアクセス {#accessing-posted-voting-ugc}
+### 投稿された投票（UGC）へのアクセス  {#accessing-posted-voting-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -78,7 +78,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
