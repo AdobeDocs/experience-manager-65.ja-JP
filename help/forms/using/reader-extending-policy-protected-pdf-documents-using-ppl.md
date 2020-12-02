@@ -24,11 +24,11 @@ Document Security のポリシーによって保護された PDF ドキュメン
 
 Document Security を使用して、特定の PDF ドキュメントへのアクセスを認証済のユーザーのみに制限することができます。また、保護されたドキュメントを受信者がどのように使用できるかを指定することができます。例えば、Document Security のポリシーによって保護されたドキュメントで、受信者が印刷、コピー、またはテキスト編集を行えるかどうかを指定できます。Document Security の詳細については、「[Document Security について](/help/forms/using/admin-help/document-security.md)」を参照してください。
 
-Reader Extensions により Acrobat Reader を介して Adobe PDF ドキュメントでインタラクティブ機能を使用できます。通常これらのインタラクティブ機能は、Adobe Acrobat Professional と Standard でのみ可能になります。To learn about the interactive features that reader extension can enable, see [Adobe Experience Manager Forms DocAssurance service ](/help/forms/using/overview-aem-document-services.md)**.**
+Reader Extensions により Acrobat Reader を介して Adobe PDF ドキュメントでインタラクティブ機能を使用できます。通常これらのインタラクティブ機能は、Adobe Acrobat Professional と Standard でのみ可能になります。Reader Extensionで有効にできるインタラクティブ機能については、[Adobe Experience Manager FormsDocAssuranceサービス&#x200B;](/help/forms/using/overview-aem-document-services.md)**を参照してください。**
 
 Portable Protection Library を使用して、ネットワークにドキュメントを送信することなくドキュメントにポリシーを適用できます。ネットワークに送信されるのは、セキュリティ証明書と保護ポリシーの詳細のみです。 実際のドキュメントはクライアントの手元から離れることはなく、保護ポリシーはクライアント側のローカルに適用されます。
 
-## Document Security のポリシーで保護された PDF ドキュメントの Reader 用の拡張 {#reader-extending-document-security-policy-protected-pdf-documents}
+## Document Security のポリシーで保護された PDF ドキュメントの Reader 用の拡張  {#reader-extending-document-security-policy-protected-pdf-documents}
 
 ポリシーで保護されたドキュメントは暗号化されています。通常の Reader Extension API では、ポリシーで保護された PDF ドキュメントの使用権限を適用、削除、復元することはできません。Document Security のポリシーで保護された PDF ドキュメントの使用権限を適用、削除、復元できる API を提供しているのは、Portable Protection Library の Reader Extensions サービスのみです。
 
