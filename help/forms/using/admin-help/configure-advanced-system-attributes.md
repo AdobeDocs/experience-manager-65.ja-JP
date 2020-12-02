@@ -22,7 +22,7 @@ ht-degree: 94%
 
 システム属性の詳細設定ページを使用して、ファイルの書き出し、編集、読み込みを行うことなく、設定ファイルの特定の設定を変更します。（[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)を参照）。
 
-1. In administration console, click **[!UICONTROL Settings > User Management > Configuration > Configure Advanced System Attributes]**.
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/設定/詳細なシステム属性を設定]**&#x200B;をクリックします。
 1. （オプション）次のセッション属性を変更します。
 
    **セッションのタイムアウト制限（分）：**&#x200B;ユーザーが自動的にシステムからログアウトするまでの時間（分）。デフォルトでは、Workbench などの AEM Forms のコンポーネントは、動作状況に関係なく 2 時間後にタイムアウトになり、ユーザーは再度ログインする必要があります。有効な値は `1`～`1440` です。デフォルト値は `120`（2 時間）です。この設定では、設定ファイルの `SAML/Producer/assertionValidityInMinutes` エントリキーが更新されます。
@@ -43,7 +43,7 @@ ht-degree: 94%
 
    **クラスターのジョブロックのタイムアウト（分）：**&#x200B;クラスター環境で使用されます。1 つのノードで同期が失敗し、クラスターのロックが解放されない場合、他のノードが強制的にロックを取得するまでの待機時間（分）をこの値に指定します。デフォルト値は「`15`」分です。有効な値は `1`～`1440` 分です。
 
-1. (Optional) Change the following attributes and then click **[!UICONTROL OK]**:
+1. （オプション）次の属性を変更し、「**[!UICONTROL OK]**」をクリックします。
 
    **User Manager イベント監査：**&#x200B;ディレクトリ同期イベントと認証イベントの監査（成功、失敗、ロックアウトなど）を有効にするにはこのオプションを選択します。デフォルトでは、Rights Management などの監査を必要とするコンポーネントをインストールしない限り、このオプションは選択されません。この設定では、設定ファイルの `APSAuditService` エントリキーが更新されます。
 
