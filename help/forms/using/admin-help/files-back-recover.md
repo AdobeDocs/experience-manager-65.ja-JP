@@ -28,7 +28,7 @@ ht-degree: 89%
 * バックアップ用にクラスター環境でノードを停止する必要がある場合は、セカンダリノードがプライマリノードの前にシャットダウンされていることを確認してください。 そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、プライマリノードは、セカンダリノードの前にライブにする必要があります。
 * クラスターの復旧操作では、アプリケーションサーバーはクラスター内の各ノードごとに停止する必要があります。
 
-## グローバルドキュメントストレージディレクトリ {#global-document-storage-directory}
+## グローバルドキュメントストレージディレクトリ  {#global-document-storage-directory}
 
 GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。長期間有効なファイルの有効期間内には、AEM Forms システムが 1 回以上起動され、期間は数日間、数年間に渡る場合もあります。長期間有効なファイルには、PDF、ポリシー、フォームテンプレートなどがあります。長期間有効なファイルは、多くの AEM Forms デプロイメントの全体的な状態の中で重要な部分です。長期間有効なドキュメントが一部でも失われたり破損したりすると、forms サーバーが不安定な状態になるおそれがあります。
 
@@ -36,7 +36,7 @@ GDS は、プロセス内で使用される長期間有効なファイルの保�
 
 GDS の場所は、AEM forms のインストールプロセス中に決定するか、管理コンソールを使用して後から決定することもできます。GDS の高可用性を実現する場所を維持するほかに、ドキュメントのデータベース保存を有効にすることもできます。[ドキュメントの保存にデータベースを使用する場合のバックアップオプション](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)を参照してください。
 
-### GDS の場所 {#gds-location}
+### GDS の場所  {#gds-location}
 
 インストール時に場所を指定しないと、アプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。アプリケーションサーバーの次のディレクトリをバックアップする必要があります。
 
@@ -53,7 +53,7 @@ GDS の場所をデフォルト以外の場所に変更した場合は、新し�
 
 元の場所が使用できなくなった場合、回復中に GDS の場所を変更できます（[回復中の GDS の場所の変更](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照）。
 
-### ドキュメントの保存にデータベースを使用する場合のバックアップオプション {#backup-options-when-database-is-used-for-document-storage}
+### ドキュメントの保存にデータベースを使用する場合のバックアップオプション  {#backup-options-when-database-is-used-for-document-storage}
 
 管理コンソールを使用して AEM Forms のデータベースで AEM Forms ドキュメントの保存を有効にすることができます。このオプションを使用してすべての永続ドキュメントをデータベースに保存する場合でも、AEM Forms にはファイルシステムベースの GDS ディレクトリが必要です。その理由は、AEM Forms のセッションと呼び出しに関連する永続ファイル、一時ファイルおよびリソースの保存に GDS ディレクトリが使用されるためです。
 
@@ -69,7 +69,7 @@ Correspondence Management Solution は、安全でパーソナライズされた
 
 シンプルな Correspondence Managemant Solutions セットアップには、同じマシンまたは別々のマシンに、オーサーインスタンスとパブリッシュインスタンスが含まれます。
 
-### Forms Manager {#forms-manager}
+### Forms Manager  {#forms-manager}
 
 Forms Manager は、フォームの更新、管理、リタイアのプロセスを効率的に実行します。
 
@@ -83,7 +83,7 @@ AEM Forms Workspace は、Flex Workspace（JEE 上の AEM Forms では廃止さ�
 
 Flash Player と Adobe Reader を使用しなくてもクライアントでタスク管理が可能です。 PDF フォームと Flex フォームの他に、HTML フォームのレンダリングを容易にします。
 
-## AEM Forms データベース {#aem-forms-database}
+## AEM Forms データベース  {#aem-forms-database}
 
 AEM Forms データベースに格納される情報には、フォームの生成結果、サービスの設定、プロセスの状態、GDS 内にあるファイルへのデータベース参照、およびコンテンツ保存場所のルートディレクトリ内にあるファイルへのデータベース参照（Content Services の場合）などがあります。データベースのバックアップはサービスを中断することなくリアルタイムで実行でき、特定の時点または特定の変更に回復できます。ここでは、バックアップをリアルタイムで実行するためのデータベースの設定方法について説明します。
 
@@ -131,7 +131,7 @@ SQL Server には、次の 2 つのバックアップと回復ツールもあり
 * SQL Server Management Studio（GUI）
 * T-SQL（コマンドライン）
 
-詳しくは、「 [バックアップと復元](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)」を参照してください。
+詳しくは、[バックアップと復元](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)を参照してください。
 
 ### MySQL {#mysql}
 
@@ -139,9 +139,9 @@ MySQLAdmin を使用するか Windows で INI ファイルを変更して、MySQ
 
 >[!NOTE]
 >
->MySQL のデフォルトのバイナリログモードは「STATEMENT」です。このモードでは、Content Services（非推奨）で使用されるテーブルとの互換性がありません。このデフォルトのモードでバイナリログを使用すると、Content Services（非推奨）でエラーが発生します。システム内に Content Services（非推奨）が含まれている場合は、「MIXED」ログモードを使用します。「MIXED」ログを有効にするには、my.ini ファイルに次の引数を追加します。 `binlog_format=mixed log-bin=logname`
+>MySQL のデフォルトのバイナリログモードは「STATEMENT」です。このモードでは、Content Services（非推奨）で使用されるテーブルとの互換性がありません。このデフォルトのモードでバイナリログを使用すると、Content Services（非推奨）でエラーが発生します。システム内に Content Services（非推奨）が含まれている場合は、「MIXED」ログモードを使用します。「MIXED」ログを有効にするには、my.ini ファイルに次の引数を追加します。  `binlog_format=mixed log-bin=logname`
 
-mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。To do an incremental backup, ensure that you start the server with the - `log-bin` option as described in the previous section. MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。You can force a switch manually with the `FLUSH LOGS SQL` command. 最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
+mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。増分バックアップを実行するには、前のセクションで説明したように、- `log-bin`オプションを使用してサーバーを開始します。 MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。`FLUSH LOGS SQL`コマンドを使用して手動でスイッチを強制できます。 最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
 
 「[Backup Strategy Summary](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html)」を参照してください。
 
@@ -150,15 +150,15 @@ binlog_format=mixed
 log-bin=logname
 ```
 
-## コンテンツ保存場所のルートディレクトリ（Content Services のみ） {#content-storage-root-directory-content-services-only}
+## コンテンツ保存場所のルートディレクトリ（Content Services のみ）  {#content-storage-root-directory-content-services-only}
 
 コンテンツ保存場所のルートディレクトリには、すべてのドキュメント、アーティファクト、およびインデックスの格納された Content Services（非推奨）リポジトリが含まれています。コンテンツ保存場所のルートディレクトリツリーは、バックアップする必要があります。ここでは、スタンドアロン環境およびクラスター環境で、コンテンツ保存場所のルートディレクトリの位置を判別する方法について説明します。
 
-### コンテンツ保存場所のルートディレクトリ（スタンドアロン環境） {#content-storage-root-location-stand-alone-environment}
+### コンテンツ保存場所のルートディレクトリ（スタンドアロン環境）  {#content-storage-root-location-stand-alone-environment}
 
 Content Services（非推奨）のインストール時に、コンテンツ保存場所のルートディレクトリが作成されます。コンテンツ保存場所のルートディレクトリの場所は、AEM Forms のインストールプロセス中に決まります。
 
-The default location for the Content Storage Root directory is `[aem-forms root]/lccs_data`.
+コンテンツストレージのルートディレクトリのデフォルトの場所は`[aem-forms root]/lccs_data`です。
 
 コンテンツ保存場所のルートディレクトリにある次のディレクトリをバックアップします。
 
@@ -172,7 +172,7 @@ The default location for the Content Storage Root directory is `[aem-forms root]
 
 /backup-lucene-indexes ディレクトリが存在しない場合、/lucene-indexes ディレクトリをバックアップします（コンテンツ保存場所のルートディレクトリにあります）。/backup-lucene-indexes ディレクトリが存在する場合、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
 
-### コンテンツ保存場所のルートディレクトリ（クラスター環境） {#content-storage-root-location-clustered-environment}
+### コンテンツ保存場所のルートディレクトリ（クラスター環境）  {#content-storage-root-location-clustered-environment}
 
 クラスター環境に Content Services（非推奨）をインストールする場合、コンテンツ保存場所のルートディレクトリは次に示す 2 つの異なるディレクトリに分けられます。
 
@@ -180,7 +180,7 @@ The default location for the Content Storage Root directory is `[aem-forms root]
 
 **インデックスのルートディレクトリ：**&#x200B;クラスター内の各ノードに作成されるディレクトリであり、常に同じパスおよびディレクトリ名を保持します。
 
-The default location for the Content Storage Root directory is `[GDS root]/lccs_data`, where `[GDS root]` is the location described in [GDS location](files-back-recover.md#gds-location). コンテンツ保存場所のルートディレクトリにある次のディレクトリをバックアップします。
+コンテンツストレージのルートディレクトリのデフォルトの場所は`[GDS root]/lccs_data`です。`[GDS root]`は、[GDSの場所](files-back-recover.md#gds-location)で説明されている場所です。 コンテンツ保存場所のルートディレクトリにある次のディレクトリをバックアップします。
 
 /audit.contentstore
 
@@ -192,7 +192,7 @@ The default location for the Content Storage Root directory is `[GDS root]/lccs_
 
 /backup-lucene-indexes ディレクトリが存在しない場合、/lucene-indexes ディレクトリをバックアップします（コンテンツ保存場所のルートディレクトリにあります）。/backup-lucene-indexes ディレクトリが存在する場合、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
 
-The default location for the Index Root directory is `[aem-forms root]/lucene-indexes` on each node.
+インデックスルートディレクトリのデフォルトの場所は、各ノード上の`[aem-forms root]/lucene-indexes`です。
 
 ## ユーザーによるインストールフォント {#customer-installed-fonts}
 
@@ -200,6 +200,6 @@ AEM Forms 環境に追加のフォントをインストールした場合、そ�
 
 >[!NOTE]
 >
->By default, the Adobe fonts installed with AEM forms are located in the `[aem-forms root]/fonts` directory.
+>デフォルトでは、AEM formsと共にインストールされるAdobeフォントは`[aem-forms root]/fonts`ディレクトリにあります。
 
 ホストコンピューター上でオペレーティングシステムを再初期化し、以前のオペレーティングシステムのフォントを使用する場合、システムフォントディレクトリの内容もバックアップする必要があります（詳細な手順については、ご使用のオペレーティングシステムのマニュアルを参照してください）。
