@@ -48,7 +48,7 @@ ht-degree: 96%
 >    `experience-fragments-editors`
 問題が発生している場合は、システム管理者にお問い合わせください。
 
-## エクスペリエンスフラグメントを使用するタイミング   {#when-should-you-use-experience-fragments}
+## エクスペリエンスフラグメントを使用するタイミング    {#when-should-you-use-experience-fragments}
 
 エクスペリエンスフラグメントは次の場合に使用します。
 
@@ -162,7 +162,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
    ![xf-01](assets/xf-01.png)
 
-1. Navigate to the required folder and select **Create**.
+1. 必要なフォルダーに移動し、「**作成**」を選択します。
 
    ![xf-02](assets/xf-02.png)
 
@@ -238,11 +238,11 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
 1. 編集するページを開きます。
 
-   For example: [https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
+   次に例を示します。[https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
 
 1. コンポーネントブラウザーからページ段落システムにコンポーネントをドラッグして、エクスペリエンスフラグメントコンポーネントのインスタンスを作成します。
 
-   ![xf-08](assets/xf-08.png)
+   ![xf-06](assets/xf-08.png)
 
 1. 次のいずれかの方法で、実際のエクスペリエンスフラグメントをコンポーネントインスタンスに追加します。
 
@@ -276,7 +276,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
 1. **構築ブロック**&#x200B;がタブに表示され、段落システムで選択できます。
 
-   ![xf-14](assets/xf-12.png)
+   ![xf-12](assets/xf-12.png)
 
 #### 構築ブロックの管理 {#managing-a-building-block}
 
@@ -347,7 +347,7 @@ URL の `.plain.` セレクターを使用すると、ブラウザーからプ�
 >[!NOTE]
 ブラウザーから直接利用することもできますが、[主な目的は、他のアプリケーション（例えば、サードパーティ Web アプリ、カスタムモバイル実装など）が、URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。](/help/sites-developing/experience-fragments.md#the-plain-html-rendition)
 
-## エクスペリエンスフラグメントの書き出し {#exporting-experience-fragments}
+## エクスペリエンスフラグメントの書き出し  {#exporting-experience-fragments}
 
 デフォルトでは、エクスペリエンスフラグメントは HTML 形式で配信され、AEM とサードパーティチャネルのどちらでも同じように使用できます。
 
