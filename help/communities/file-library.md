@@ -28,25 +28,25 @@ ht-degree: 41%
 ドキュメントのこのセクションでは、以下の内容について説明します。：
 
 * AEMサイトへのファイルライブラリ機能の追加
-* Configuration settings for the `File Library` component.
+* `File Library`コンポーネントの構成設定です。
 
 ### ファイルライブラリをページに追加 {#adding-a-file-library-to-a-page}
 
-To add a `File Library` component to a page in author mode, locate the component:
+作成者モードで`File Library`コンポーネントをページに追加するには、コンポーネントを見つけます。
 
 * `Communities / File Library`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-file-library.md#essentials-for-client-side) 、次のようにコンポー `File Library` ネントが表示されます。
+[必要なクライアント側ライブラリ](/help/communities/essentials-file-library.md#essentials-for-client-side)が含まれる場合、`File Library`コンポーネントは次のように表示されます。
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
 ### ファイルライブラリの設定 {#configuring-file-library}
 
-Select the placed `File Library` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`File Library`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-431](assets/chlimage_1-431.png)
 
@@ -102,7 +102,7 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **フォローを許可**
 
-   If checked, include the following feature for blog articles, which allows members to be [notified](/help/communities/notifications.md) of new posts. 初期設定はオフです。
+   オンにした場合、ブログ記事に次の機能を含めます。これにより、メンバーに新しい投稿の[通知](/help/communities/notifications.md)を送信できます。 初期設定はオフです。
 
 * **メンションを有効化**
 
@@ -120,7 +120,7 @@ Select the placed `File Library` component to access and select the `Configure` 
 
    オンの場合、投稿されたコメントへの返信を許可します。 初期設定はオフです。
 
-#### 「ユーザーモデレート」タブ {#user-moderation-tab}
+#### 「ユーザーモデレート」タブ  {#user-moderation-tab}
 
 「**ユーザーモデレート**」タブでは、コメントが許可されている場合に、コメントのモデレートを設定します。
 
@@ -154,11 +154,11 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **モデレートのしきい値**
 
-   モデレーターに通知する前に、訪問者がコメントにフラグを付ける必要がある回数を入力します。 Default is one time (**1**).
+   モデレーターに通知する前に、訪問者がコメントにフラグを付ける必要がある回数を入力します。 初期設定は1回です(**1**)。
 
 * **フラグ付けの制限**
 
-   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 This number must be greater than or equal to the **Moderation Threshold**. 初期設定は 5 です。
+   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 この数値は、**モデレートしきい値**&#x200B;以上にする必要があります。 初期設定は 5 です。
 
 ### 「並べ替え設定」タブ{#sort-settings-tab}
 
@@ -168,7 +168,7 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 ### 追加情報 {#additional-information}
 
-More information may be found on the [File Library Essentials](/help/communities/essentials-file-library.md) page for developers.
+詳しくは、[File Library Essentials](/help/communities/essentials-file-library.md)ページを参照してください。
 
 投稿されたトピックとコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
