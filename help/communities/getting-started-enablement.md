@@ -28,7 +28,7 @@ AEM Communities では、デジタルチャネルと対面チャネルにまた�
 
 >[!NOTE]
 >
->This tutorial assumes installation of [Communities feature pack 1](deploy-communities.md#latestfeaturepack) or later.
+>このチュートリアルでは、[Communities機能パック1](deploy-communities.md#latestfeaturepack)以降がインストールされていることを前提としています。
 
 * [初期設定](enablement-setup.md)
 
