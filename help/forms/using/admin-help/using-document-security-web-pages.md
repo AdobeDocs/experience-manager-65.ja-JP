@@ -32,13 +32,13 @@ Document Security では、ユーザー情報を探す際に組織の既存の�
 
 管理者としてログインするには、管理者ロールが割り当てられている必要があります。インストールプロセス時に作成される、デフォルトの上級管理者アカウントを使用できます。
 
-## Web ページへのログイン {#log-in-to-the-web-pages}
+## Web ページへのログイン  {#log-in-to-the-web-pages}
 
 ブラウザーを使用して Web ページにログインするには、Document Security URL とアカウントが必要です。ユーザー用の URL と管理者用の URL は異なります。管理者はユーザーページにログインして、ポリシーを作成することもできます。
 
-Document Security の複数のインストール環境にアクセスする場合は、アクセスする Document Security のインスタンスに該当する URL が必要です。この情報を持っていない場合は、管理者に問い合わせてください。The default URL for the user pages is `https://[host]:[port]/edc`. 場合によっては、ポート番号が必要でないことがあります。詳しくは、システム管理者に確認してください。
+Document Security の複数のインストール環境にアクセスする場合は、アクセスする Document Security のインスタンスに該当する URL が必要です。この情報を持っていない場合は、管理者に問い合わせてください。ユーザーページのデフォルトURLは`https://[host]:[port]/edc`です。 場合によっては、ポート番号が必要でないことがあります。詳しくは、システム管理者に確認してください。
 
-The default URL for administrators is `https://[host]:[port]/adminui`.
+管理者のデフォルトURLは`https://[host]:[port]/adminui`です。
 
 管理者の場合、インストール時にデフォルトの上級管理者アカウントが作成されます。Document Security を最初にインストールするときは、このアカウントを使用してログインできます。
 
@@ -48,9 +48,9 @@ The default URL for administrators is `https://[host]:[port]/adminui`.
 
 1. ブラウザーに URL を入力します。
 
-   ドキュメントセキュリティURL: `https://[host]:[port]/edc`
+   ドキュメントセキュリティURL:`https://[host]:[port]/edc`
 
-   または管理コンソールのURL: `https://[host]:[port]/adminui`
+   または管理コンソールのURL:`https://[host]:[port]/adminui`
 
 1. ログインウィンドウで、ユーザー名とパスワードを入力して「OK」をクリックします。
 1. 管理コンソールで、サービス／Document Security をクリックします。
@@ -59,7 +59,7 @@ The default URL for administrators is `https://[host]:[port]/adminui`.
 >
 >Web ページで作業している場合は、「戻る」ボタン、「更新」ボタン、「戻る」矢印、「進む」矢印などのブラウザーボタンを使用しないでください。これらのボタンを使用すると、望ましくないデータ取得やデータ表示の問題が起きる可能性があります。
 
-## Web ページでの移動 {#navigating-the-web-pages}
+## Web ページでの移動  {#navigating-the-web-pages}
 
 ユーザー Web ページにログインすると、ポリシー、ドキュメント、およびイベントというユーザーページへのリンクが表示されます。
 
@@ -83,7 +83,7 @@ The default URL for administrators is `https://[host]:[port]/adminui`.
 >
 >Web ページで作業している場合は、「戻る」ボタン、「更新」ボタン、「戻る」矢印、「進む」矢印などのブラウザーボタンを使用しないでください。これらのボタンを使用すると、望ましくないデータ取得やデータ表示の問題が起きる可能性があります。
 
-## クライアントアプリケーションから Document Security へのアクセスの設定 {#setting-up-access-to-document-security-from-client-applications}
+## クライアントアプリケーションから Document Security へのアクセスの設定  {#setting-up-access-to-document-security-from-client-applications}
 
 ドキュメントを保護し、ポリシーで保護されたドキュメントを開き、Document Security Web ページに接続するには、クライアントアプリケーションを Document Security に接続するように設定する必要があります。クライアントアプリケーションにおける接続の設定について詳しくは、*Acrobat ヘルプ*&#x200B;または適切な *Rights Management Extension ヘルプ*&#x200B;を参照してください。
 
@@ -95,12 +95,12 @@ Document Security には、Secure Sockets Layer（SSL）経由でアクセスし
 
 **Internet Explorer でのサーバー証明書のインストール**
 
-1. Web ブラウザーを開いて、「アドレス」ボックスに Document Security のベース URL を入力します。For example, type `https://[host]:[port]`. セキュリティの警告ダイアログボックスが表示されます。
+1. Web ブラウザーを開いて、「アドレス」ボックスに Document Security のベース URL を入力します。例えば、`https://[host]:[port]`と入力します。 セキュリティの警告ダイアログボックスが表示されます。
 1. 「証明書の表示」、「証明書のインストール」の順にクリックして、インストールのデフォルト証明書を選択します。証明書は、「信頼されたルート証明機関」にインストールする必要があります。
 1. ブラウザーセッションを閉じます。
 1. 別のブラウザーウィンドウを開き、「アドレス」ボックスに同じ URL を入力します。セキュリティの警告ダイアログボックスが表示されます。このテストで、証明書が正しくインストールされていることを確認できます。
 
-## Web ページからのログアウト {#log-out-of-the-web-pages}
+## Web ページからのログアウト  {#log-out-of-the-web-pages}
 
 Web ページの使用が終了したら、別の目的で Web ブラウザーを安全に使用できるように、ログアウトします。Document Security の設定によっては、完全にログアウトするにはブラウザーを閉じる必要があります。
 
