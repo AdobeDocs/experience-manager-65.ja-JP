@@ -22,7 +22,7 @@ ht-degree: 85%
 
 PDF ファイルを Acrobat Reader DC Extensions Web アプリケーションにアップロードするときに、ここで表示される情報によって、Reader 用の拡張および使用権限の適用が行われているかどうかと、有効期限を確認できます。
 
-1. Log in to the Acrobat Reader DC extensions web application at `http://[localhost]:[port]/ReaderExtensions` (where *[port]* is your application server’s port number).
+1. `http://[localhost]:[port]/ReaderExtensions`（*[port]*&#x200B;はアプリケーションサーバーのポート番号）で、Acrobat Reader DC拡張機能Webアプリケーションにログインします。
 1. 「参照」をクリックして、PDF ファイルをアップロードし、「情報」をクリックします。ファイル名の下に情報が表示されます。
 
    ファイルの使用権限の変更について詳しくは、Acrobat Reader DC Extensions のヘルプを参照してください。
