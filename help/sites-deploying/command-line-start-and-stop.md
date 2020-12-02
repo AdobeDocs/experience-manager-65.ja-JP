@@ -22,7 +22,7 @@ ht-degree: 78%
 
 ## コマンドラインからの Adobe Experience Manager の起動 {#starting-adobe-experience-manager-from-the-command-line}
 
-この `start` スクリプトは&lt;cq-installation>/bin *ディレクトリ* にあります。 Unix版とWindows版の両方が提供されます。 スクリプトでは、 *&lt;cq-installation>ディレクトリにインストールされたインスタンスを開始し* ます。
+`start`スクリプトは、*&lt;cq-installation>/bin*&#x200B;ディレクトリの下にあります。 Unix版とWindows版の両方が提供されます。 スクリプトでは、*&lt;cq-installation>*&#x200B;ディレクトリにインストールされたインスタンスを開始します。
 
 これらの2つのバージョンは、AEMインスタンスの開始と調整に使用できる環境変数のリストをサポートしています。
 
@@ -102,7 +102,7 @@ AEM を停止するには、次のいずれかを実行します。
 
 ## コマンドラインからの Adobe Experience Manager の停止 {#stopping-adobe-experience-manager-from-the-command-line}
 
-この `stop` スクリプトは&lt;cq-installation>/bin *ディレクトリ* にあります。 Unix版とWindows版の両方が提供されます。 このスクリプトは、 *&lt;cq-installation>ディレクトリにインストールされた実行中のインスタンスを停止します* 。
+`stop`スクリプトは、*&lt;cq-installation>/bin*&#x200B;ディレクトリの下にあります。 Unix版とWindows版の両方が提供されます。 このスクリプトは、*&lt;cq-installation>*&#x200B;ディレクトリにインストールされた実行中のインスタンスを停止します。
 
 ### Unix プラットフォームの stop スクリプトの例 {#unix-platform-stop-script-example}
 
@@ -118,11 +118,11 @@ AEM を停止するには、次のいずれかを実行します。
 
 リポジトリを事前設定するだけ（場所の変更なし）の場合に必要なのは次の手順だけです。
 
-* extract `repository.xml` to the required location
+* 必要な場所に`repository.xml`を抽出
 
-* update `repository.xml` as required
+* 必要に応じて`repository.xml`を更新
 
-* 作成 `bootstrap.properties` し定義する `repository.config`
+* `bootstrap.properties`を作成して`repository.config`を定義
 
 これも、実際のインストールを開始する前におこないます。
 
