@@ -63,7 +63,7 @@ TarMK はパフォーマンスを考慮して設計されています。一方�
 
 サポートされる Microkernel については、「[OSGi の AEM Forms の技術要件](/help/sites-deploying/technical-requirements.md)」または「[JEE がサポートされるプラットフォームの組み合わせにおける AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md)」の記事の一覧を参照してください。
 
-## TarMK の代わりに Mongo または Relational Database Microkernel を選択する {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
+## TarMK の代わりに Mongo または Relational Database Microkernel を選択する  {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
 
 スケーラブルなクラスター化された AEM Forms 環境は、並列的に構成された 2 つ以上のアクティブなオーサーインスタンスの組み合わせです。そのため、すべての同時オーサリングのアクティビティをサポートしている 1 つのサーバーが維持できなくなるような場合に備え、2 つ以上のオーサーインスタンスを実行することができます。
 
