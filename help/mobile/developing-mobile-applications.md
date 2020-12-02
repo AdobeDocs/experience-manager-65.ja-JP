@@ -18,7 +18,7 @@ ht-degree: 76%
 ---
 
 
-# AEM でのモバイルアプリの開発 {#developing-mobile-applications-in-aem}
+# AEM でのモバイルアプリの開発  {#developing-mobile-applications-in-aem}
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ AEM は、Adobe **[PhoneGap Build サービス](https://build.phonegap.com/)と�
 
 ## アプリの作成 {#creating-apps}
 
-Developers can use the [AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit) along with additional resources found in [https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps) to bootstrap AEM apps with PhoneGap, including a reference native app running Cordova Webviews.
+開発者は、[AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)と、[https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps)にある追加のリソースを使用して、Cordova Webビューを実行する参照用ネイティブアプリを含む、AEMアプリをPhoneGapでブートストラップできます。
 
 Starter Kit Git リポジトリの readme には、スターターキットを使用するためのチュートリアルが含まれています。
 
@@ -53,14 +53,14 @@ Starter Kit Git リポジトリの readme には、スターターキットを�
 
 >[!NOTE]
 >
->Additional reference implementation source, including labs, can be found on GitHub [here](https://github.com/adobe-marketing-cloud-apps) and, the &quot;kitchen-sink&quot; source [here](https://github.com/blefebvre/aem-phonegap-kitchen-sink).
+>ラボを含む追加のリファレンス実装ソースは、GitHub [ここ](https://github.com/adobe-marketing-cloud-apps)と、「キッチンシンク」のソース[ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink)にあります。
 
 ## iOS 9 ホストおよび HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
 
-iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解決の問題に留意する必要があります。This issue prevents requests from being made to insecure hosts (such as *http://localhost:4502*). この問題は、（Cordova CLI で利用される）cordova-ios の今後のリリースで解決される予定ですが、それまでは次の方法で回避できます。
+iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解決の問題に留意する必要があります。この問題は、安全でないホスト(*http://localhost:4502*&#x200B;など)に対する要求が行われないようにします。 この問題は、（Cordova CLI で利用される）cordova-ios の今後のリリースで解決される予定ですが、それまでは次の方法で回避できます。
 
 1. すぐに解決できる方法として、問題なくiOS 8シミュレーターを使用できます。
-1. If you must use iOS 9, your apps -Info.plist (found after running `cordova platform add ios` in “&lt;app root>/platforms/ios/&lt;app name>/&lt;app name>-Info.plist”) file can be manually edited to include the following property:
+1. iOS 9を使用する必要がある場合、（&lt;app root>/platforms/ios/&lt;app name>/&lt;app name>-Info.plist&quot;の`cordova platform add ios`を実行した後に見つかる）アプリケーション —Info.plistを手動で編集し、次のプロパティを含めることができます。
 
 ```
 <key>NSAppTransportSecurity</key>
@@ -74,7 +74,7 @@ iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解�
 
 >[!NOTE]
 >
->For more detail on “App Transport Security”, see the following section of [Apple’s iOS9 prerelease docs](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) and this [Stack Overflow discussion](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/).
+>「App Transport Security」について詳しくは、[AppleのiOS9プレリリースドキュメント](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14)の次の節と、この[スタックオーバーフローの説明](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/)を参照してください。
 
 ## AEM でのモバイルアプリの開発 {#developing-mobile-applications-in-aem-1}
 
@@ -82,7 +82,7 @@ iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解�
 * [モバイルアプリケーションのビルド](/help/mobile/building-app-mobile-phonegap.md)
 * [アプリの構造](/help/mobile/phonegap-structure-an-app.md)
 * [アプリコンソールを使用したアプリの作成および編集](/help/mobile/phonegap-apps-console.md)
-* [シングルページアプリケーション](/help/mobile/phonegap-single-page-applications.md)
+* [単一ページアプリケーション](/help/mobile/phonegap-single-page-applications.md)
 * [PhoneGap CLI によるアプリの開発](/help/mobile/phonegap-apps-pg-cli.md)
 * [デバイスの機能へのアクセス](/help/mobile/phonegap-access-device-features.md)
 * [Adobe Mobile Analytics によるアプリパフォーマンスのトラッキング](/help/mobile/phonegap-intro-to-app-analytics.md)
