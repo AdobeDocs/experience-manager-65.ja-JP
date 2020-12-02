@@ -143,14 +143,14 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 
 * `name:*nmv*`
 * `name:AD*`
-文字の一致では ** 、大文字と小文字が区別されません。
+文字の一致では、大文字と小文字が区別され ** ません。
 
 * `name:ad?nm??is.*`
 クエリには、任意の数のワイルドカードを使用できます。
 
 >[!NOTE]
 >
->You can also use [SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) search.
+>[SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)検索も使用できます。
 
 ## 参照の表示 {#showing-references}
 
@@ -162,7 +162,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. Select **Show References...** AEM opens the References window and displays which pages refer to the selected page, including their paths.
+1. **参照を表示を選択…** AEMは、参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -175,7 +175,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 その他の[ページ間の関係は Web サイトコンソールから確認できます](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)。
 
-## 監査ログ {#audit-log}
+## 監査ログ  {#audit-log}
 
 **監査ログ**&#x200B;には、サイドキックの「**情報**」タブからアクセスできます。ここには、現在のページで実行された最近のアクションが一覧表示されます。次に例を示します。
 
@@ -183,7 +183,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 ## ページ情報 {#page-information}
 
-The Website console also [provides information about the current status of the page](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) such as publication, modification, locked, livecopy, etc.
+また、Webサイトコンソール[は、ページ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)の現在のステータスに関する情報（パブリケーション、変更、ロック、LiveCopyなど）も提供します。
 
 ## ページモード {#page-modes}
 
