@@ -15,9 +15,9 @@ ht-degree: 40%
 
 [!DNL Adobe Experience Manager Assets] を使用して、アセット（バイナリ、メタデータ、タグを含む）に対する翻訳ワークフローを自動化し、多言語プロジェクトで使用するために他の言語のアセットを生成できます。
 
-To automate translation workflows, you integrate translation service providers with [!DNL Experience Manager] and create projects for translating assets into multiple languages. [!DNL Experience Manager] では人間による翻訳と機械翻訳のワークフローがサポートされます。
+翻訳ワークフローを自動化するには、翻訳サービスプロバイダーを[!DNL Experience Manager]と統合し、アセットを複数の言語に翻訳するためのプロジェクトを作成します。 [!DNL Experience Manager] では人間による翻訳と機械翻訳のワークフローがサポートされます。
 
-Human translation: The translated assets are returned and imported into [!DNL Experience Manager]. When your translation provider is integrated with [!DNL Experience Manager], assets are automatically sent between [!DNL Experience Manager] and the translation provider.
+人による翻訳：翻訳済みのアセットが返され、[!DNL Experience Manager]に読み込まれます。 翻訳プロバイダーが[!DNL Experience Manager]と統合されている場合、アセットは[!DNL Experience Manager]と翻訳プロバイダーの間で自動的に送信されます。
 
 機械翻訳：機械翻訳サービスでは、アセットのメタデータとタグがすぐに翻訳されます。
 
@@ -29,6 +29,6 @@ Human translation: The translated assets are returned and imported into [!DNL Ex
 1. [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
 1. [翻訳プロジェクトの作成](translation-projects.md)
 
-If your translation service provider does not provide a connector to integrate with [!DNL Experience Manager], use an [alternative process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+翻訳サービスプロバイダーに[!DNL Experience Manager]と統合するコネクタがない場合は、[代替プロセス](/help/sites-administering/tc-manage.md#exporting-a-translation-job)を使用します。
 
-Also see, [Create translation projects for content fragments](creating-translation-projects-for-content-fragments.md).
+[コンテンツフラグメント用の翻訳プロジェクトを作成する](creating-translation-projects-for-content-fragments.md)も参照してください。
