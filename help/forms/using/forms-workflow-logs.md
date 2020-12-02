@@ -22,7 +22,7 @@ ht-degree: 5%
 
 Formsワークフロー手順では、ワークフローに関連する問題をデバッグするための詳細なログが便利に提供されます。 AEM Formsワークフローのデバッグログを有効にして、ログの表示を行います。
 
-By default, all logging information is available in the **error.log** file at the */crx-repository/logs/* directory.
+デフォルトでは、すべてのログ情報は、*/crx-repository/logs/*&#x200B;ディレクトリの&#x200B;**error.log**&#x200B;ファイルにあります。
 
 formsワークフローのデバッグログには、次が含まれます。
 
@@ -77,7 +77,7 @@ formsワークフローのデバッグログには、次が含まれます。
 
 例外が発生した場合は、完全なスタックトレースを表示して、エラーの原因を評価できます。
 
-## AEM Formsワークフローのデバッグログを有効にする {#enable-debug-logging-for-aem-forms-workflows}
+## AEM Formsワークフローのデバッグログを有効にする{#enable-debug-logging-for-aem-forms-workflows}
 
 次の手順を実行して、AEM Formsワークフローのデバッグログを有効にします。
 
@@ -85,13 +85,13 @@ formsワークフローのデバッグログには、次が含まれます。
 
    https://&#39;[server]:[port]&#39;/system/console/configMgr
 
-1. **[!UICONTROL Sling]** / **[!UICONTROL Log Supportを選択します]**。
-1. Tap **[!UICONTROL Add new Logger.]**
-1. 「 **[!UICONTROL Debug]** 」を「 **[!UICONTROL Log Level]**」として選択します。
-1. ログファイルの場所を指定します。 ログファイルのデフォルトの場所は次のとおりです。 *logs\error.log*
-1. パッケージの名前を **com.adobe.granite.workflow.core** ( **[!UICONTROL Logger]** 列)として指定します。
+1. **[!UICONTROL Sling]** > **[!UICONTROL Log Support]**&#x200B;を選択します。
+1. **[!UICONTROL 追加新しいロガーをタップします。]**
+1. 「**[!UICONTROL Debug]**」を&#x200B;**[!UICONTROL Log Level]**&#x200B;として選択します。
+1. ログファイルの場所を指定します。 ログファイルのデフォルトの場所は次のとおりです。*logs\error.log*
+1. パッケージの名前を&#x200B;**com.adobe.granite.workflow.core**（**[!UICONTROL Logger]**&#x200B;列）として指定します。
 
-   次の手順を実行すると、 **com.adobe.granite.workflow.core** パッケージのデバッグログを保存できます。 「 **[!UICONTROL +」をタップ]** し、次のパッケージ名をリストに追加します。
+   次の手順を実行すると、**com.adobe.granite.workflow.core**&#x200B;パッケージのデバッグログを保存できます。 **[!UICONTROL +]**&#x200B;をタップし、次のパッケージ名をリストに追加します。
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace
