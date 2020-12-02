@@ -22,7 +22,7 @@ ht-degree: 81%
 
 AEM インスタンスを標準インストールすると、各種のコンポーネントをコンポーネントブラウザーですぐに使用できます。
 
-In addition to these, various other components are also available. You can use Design mode to [enable/disable such components](#enable-disable-components). When enabled and located on your page you can then use Design mode to [configure aspects of the component design](#configuring-the-design-of-a-component) by editing the attribute parameters.
+これらに加えて、他にも様々なコンポーネントが用意されています。デザインモードを使用して[このようなコンポーネントを有効化/無効化する](#enable-disable-components)ことができます。有効にしてページ上に配置した場合は、属性パラメーターを編集して、デザインモードを使用して[コンポーネントデザインの要素](#configuring-the-design-of-a-component)を設定できます。
 
 >[!NOTE]
 >
@@ -34,9 +34,9 @@ In addition to these, various other components are also available. You can use D
 
 >[!NOTE]
 >
->Design mode is only available for design configurations stored as content under ( `/etc`).
+>デザインモードは、(`/etc`)の下にコンテンツとして保存されたデザイン設定でのみ使用できます。
 >
->Starting in AEM 6.4, it is recommended to store designs as configuration data under `/apps` to support continuous deployment scenarios. Designs stored under `/apps` are not editable at runtime and the Design mode will not be available to non-admin users for such templates.
+>AEM 6.4以降では、継続的なデプロイメントシナリオをサポートするために、`/apps`の下に設計を設定データとして保存することをお勧めします。 `/apps`に保存されたデザインは実行時に編集できず、そのようなテンプレートの管理者以外のユーザーはデザインモードを使用できません。
 
 これには、ページの段落システムで許可されたコンポーネントの追加または削除が関係しています。段落システム（`parsys`）は、他のすべての段落コンポーネントを含む複合コンポーネントです。段落システムを使用すると、他のすべての段落コンポーネントを含んでいるので、作成者は、様々なタイプのコンポーネントをページに追加できます。それぞれの段落タイプはコンポーネントとして表されます。
 
@@ -69,7 +69,7 @@ In addition to these, various other components are also available. You can use D
 
    ![screen_shot_2018-03-22at103204](assets/screen_shot_2018-03-22at103204.png)
 
-1. Click or tap the **Parent** icon.
+1. **親**&#x200B;アイコンをクリックまたはタップします。
 
    ![](do-not-localize/screen_shot_2018-03-22at103204.png)
 
@@ -92,7 +92,7 @@ In addition to these, various other components are also available. You can use D
 
    **許可されたコンポーネント**
 
-   On the **Allowed Components** tab, you define which components are available for the parsys.
+   「**許可されているコンポーネント**」タブで、parsysで使用できるコンポーネントを定義します。
 
    * コンポーネントは、コンポーネントグループ別にグループ化されています。それらのグループは、展開したり折りたたんだりできます。
    * グループ名にチェックマークを付けることでグループ全体を選択でき、またチェックマークを外すことですべて選択解除できます。
