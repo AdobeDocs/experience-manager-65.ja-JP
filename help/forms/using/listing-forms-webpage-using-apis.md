@@ -17,11 +17,11 @@ ht-degree: 84%
 ---
 
 
-# API を使用した Web ページ上のフォームの一覧表示 {#listing-forms-on-a-web-page-using-apis}
+# API を使用した Web ページ上のフォームの一覧表示  {#listing-forms-on-a-web-page-using-apis}
 
 AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリーを実行し、検索条件に合う一連のフォームを取得できます。API を使用することで、様々なフィルターに基づいてフォームを検索できます。応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
 
-To search forms using the REST API, send a GET request to the server at `https://'[server]:[port]'/libs/fd/fm/content/manage.json` with query parameters described below.
+REST APIを使用してフォームを検索するには、GETリクエストを`https://'[server]:[port]'/libs/fd/fm/content/manage.json`のサーバーに送信し、以下に説明するクエリパラメーターを指定します。
 
 ## クエリーパラメーター {#query-parameters}
 
@@ -116,7 +116,7 @@ To search forms using the REST API, send a GET request to the server at `https:/
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>バイナリコンテンツを取得するかどうかを指定します。The <code>includeXdp</code> attribute is applicable for assets of type <code>FORM</code>, <code>PDFFORM</code>, and <code>PRINTFORM</code>.</td>
+   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code>属性は、<code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code>のアセットに適用されます。</td>
   </tr>
   <tr>
    <td>assetType</td>
