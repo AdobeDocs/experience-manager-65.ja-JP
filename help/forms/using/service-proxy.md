@@ -44,7 +44,7 @@ HTML5 forms サービスプロキシのトポロジー
 
 HTML5 forms は AEM サーバーに接続して、サービス側スクリプト、Web サービス、および送信を実行します。HTML5 forms の XFA ランタイムは、AEM サーバーに接続するためのさまざまなパラメーターを付けて、「/bin/xfaforms/submitaction」エンドポイントで Ajax コールを使用します。HTML5 forms は AEM サーバーに接続して、次の操作を実行します。
 
-#### サーバー側スクリプトと Web サービスの実行 {#execute-server-sided-scripts-and-web-services}
+#### サーバー側スクリプトと Web サービスの実行  {#execute-server-sided-scripts-and-web-services}
 
 サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、サーバー側スクリプトおよびWebサービスで使用されるすべてのパラメーターのリストを示します。
 
@@ -89,7 +89,7 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
  </tbody>
 </table>
 
-#### データの送信 {#submit-data}
+#### データの送信  {#submit-data}
 
 送信ボタンをクリックすると、HTML5 forms はデータをサーバーに送信します。HTML5 forms がサーバーに送信するすべてのパラメーターを下表に示します。
 
@@ -126,13 +126,13 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
  </tbody>
 </table>
 
-#### 送信プロキシはどのように機能しますか？ {#how-nbsp-the-nbsp-submit-proxy-works}
+#### 送信プロキシはどのように機能しますか？  {#how-nbsp-the-nbsp-submit-proxy-works}
 
 送信サービスプロキシは、submiturl がリクエストパラメーター内には存在しないようにパスとして機能します。これはパススルーとして機能します。これはリクエストを /bin/xfaforms/submitaction エンドポイントに送信し、応答を XFA ランタイムに送信します。
 
 送信サービスプロキシは、submiturl がリクエストパラメーター内に存在する場合は、トポロジーを選択します。
 
 * AEM サーバーがデータを投稿する場合、プロキシサーバーはパススルーとして機能します。これはリクエストを /bin/xfaforms/submitaction エンドポイントに送信し、応答を XFA ランタイムに送信します。
-* If proxy posts the data, the proxy service passes all the parameters except submitUrl to the */bin/xfaforms/submitaction* end point and receives xml bytes in response stream. 次に、プロキシサービスはデータ xml バイトを submitUrl に投稿して処理します。
+* プロキシがデータを投稿する場合、プロキシサービスは、submitUrlを除くすべてのパラメーターを&#x200B;*/bin/xfaforms/submitaction*&#x200B;エンドポイントに渡し、応答ストリームでxmlバイトを受け取ります。 次に、プロキシサービスはデータ xml バイトを submitUrl に投稿して処理します。
 
-* データ（POST リクエスト）をサーバーに送信する前に、HTML5 forms はサーバーに接続していて使用できることを確認します。接続と可用性を確認するために、HTML forms は空のヘッドリクエストをサーバーに送信します。サーバーが使用できる場合は、HTML5 forms はデータ（POST リクエスト）をサーバーに送信します。If the server is not available, an error message, *Could’t connect to the server,* is displayed. この事前の検出により、ユーザーがフォームに再記入するなどの問題を回避できます。プロキシサーブレットはヘッドリクエストを処理し、例外をスローしません。
+* データ（POST リクエスト）をサーバーに送信する前に、HTML5 forms はサーバーに接続していて使用できることを確認します。接続と可用性を確認するために、HTML forms は空のヘッドリクエストをサーバーに送信します。サーバーが使用できる場合は、HTML5 forms はデータ（POST リクエスト）をサーバーに送信します。サーバーが使用できない場合は、*サーバーに接続できませんでした。*&#x200B;というエラーメッセージが表示されます。 この事前の検出により、ユーザーがフォームに再記入するなどの問題を回避できます。プロキシサーブレットはヘッドリクエストを処理し、例外をスローしません。
