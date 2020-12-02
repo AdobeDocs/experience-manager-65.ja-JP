@@ -28,19 +28,19 @@ ht-degree: 73%
 >
 >**前提条件**：
 >
->Prior to learn about creating and modifying shared resources, see [Content Sync](/help/mobile/mobile-ondemand-contentsync.md) to understand the basic concepts.
+>共有リソースの作成と変更について詳しくは、[コンテンツの同期](/help/mobile/mobile-ondemand-contentsync.md)を参照して、基本的な概念を理解してください。
 
 AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブコンテンツをモバイルアプリ用の静的コンテンツとして書き出します。AEM Mobile からコンテンツを Mobile On-demand Services にアップロードしたときに書き出しがおこなわれます。
 
-The property ***dps-exportTemplate*** mentioned in table above, defines the path to the app&#39;s export configs. 共有リソースを作成および変更するには、このプロパティを設定します。
+上の表で示した&#x200B;***dps-exportTemplate***&#x200B;プロパティは、アプリのエクスポート設定のパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
 
 以下のリソースでは、Adobe Experience Manager（AEM）からコンテンツを書き出して AEM Mobile にアップロードする方法について説明します。
 
 記事には、書き出してアップロードする必要があるコンテンツが含まれています。このコンテンツの一部を記事の間で共有できます。
 
-Use [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) to gather the content together and create a ***Shared Resources*** package.
+[ContentSync](/help/mobile/mobile-ondemand-contentsync.md)を使用して、コンテンツをまとめ、***共有リソース***&#x200B;パッケージを作成します。
 
-The ContentSync configuration found at **&lt;dps-exportTemplate>/dps-article>** should be configured to export all the content an article required for property static rendering on device.
+**&lt;dps-exportTemplate>/dps-article>**&#x200B;にあるContentSync設定は、デバイスでのプロパティの静的レンダリングに必要な記事とすべてのコンテンツを書き出すように設定する必要があります。
 
 >[!CAUTION]
 >
@@ -57,7 +57,7 @@ The ContentSync configuration found at **&lt;dps-exportTemplate>/dps-article>** 
 サンプルの共有リソースを表示するには、以下の手順に従います。
 
 1. AEM サーバーで、CRXDE Lite を開きます。
-1. Browse to this path [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article), to view the sample shared resources.
+1. このパス[/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)を参照して、サンプルの共有リソースを表示します。
 
    以下の図に示すように、共有リソースを作成するのに必要なすべてのプロパティを表示できます。
 
