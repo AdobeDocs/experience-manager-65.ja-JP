@@ -36,7 +36,7 @@ ht-degree: 88%
 
 あるパブリッシュインスタンスが使用できなくなると、そのインスタンスで認証されているすべてのユーザーのセッションが失われます。これは、認証の cookie の検証にはリポジトリへのアクセスが必要なためです。
 
-## カプセル化されたトークンを使用したステートレス認証 {#stateless-authentication-with-the-encapsulated-token}
+## カプセル化されたトークンを使用したステートレス認証  {#stateless-authentication-with-the-encapsulated-token}
 
 AEM の新しいカプセル化されたトークンサポートを使用したステートレス認証により、水平方向のスケーラビリティを確保できます。
 
@@ -53,7 +53,7 @@ MongoMK オーサーインスタンスと TarMK パブリッシュインスタ�
 >例えば、パブリッシュインスタンス 1 に新しく作成されたユーザーは、カプセル化されたトークンにより、パブリッシュインスタンス 2 でも正常に認証されます。ユーザーがパブリッシュインスタンス 2 に存在しない場合、リクエストは失敗します。
 
 
-## カプセル化されたトークンの設定 {#configuring-the-encapsulated-token}
+## カプセル化されたトークンの設定  {#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >ユーザーを同期し、トークン認証に依存するすべての認証ハンドラー（SAMLおよびOAuthなど）は、次の場合にのみ、カプセル化されたトークンで機能します。
@@ -61,7 +61,7 @@ MongoMK オーサーインスタンスと TarMK パブリッシュインスタ�
 >* スティッキーセッションが有効になっているか、
    >
    >
-* 同期開始時に、ユーザーがAEMで既に作成されている。 つまり、同期処理中にハンドラーが **ユーザーを** 作成する状況では、カプセル化されたトークンはサポートされません。
+* 同期開始時に、ユーザーがAEMで既に作成されている。 つまり、同期処理中にハンドラー&#x200B;**create**&#x200B;ユーザーが発生した場合、カプセル化されたトークンはサポートされません。
 
 
 カプセル化されたトークンを設定する際には、いくつかの点を考慮する必要があります。
@@ -69,9 +69,9 @@ MongoMK オーサーインスタンスと TarMK パブリッシュインスタ�
 1. 関与する暗号作成技術により、すべてのインスタンスに同じ HMAC 鍵が必要です。AEM 6.3 以降、鍵要素はリポジトリではなく、実際のファイルシステムに保存されます。したがって、鍵をレプリケーションするのに最適な方法は、ソースインスタンスのファイルシステムから、鍵のレプリケーション先となるターゲットインスタンスのファイルシステムに鍵要素をコピーすることです。詳しくは、次の「HMAC 鍵のレプリケーション」を参照してください。
 1. カプセル化されたトークンを有効にする必要があります。これは Web コンソールで実行できます。
 
-### HMAC 鍵のレプリケーション {#replicating-the-hmac-key}
+### HMAC 鍵のレプリケーション  {#replicating-the-hmac-key}
 
-The HMAC key is present as a binary property of `/etc/key` in the repository. その横にある **View** リンクをクリックすることで別個にダウンロードできます。
+HMACキーは、リポジトリ内に`/etc/key`のバイナリプロパティとして存在します。 その横にある **View** リンクをクリックすることで別個にダウンロードできます。
 
 ![chlimage_1-35](assets/chlimage_1-35a.png)
 
@@ -102,7 +102,7 @@ The HMAC key is present as a binary property of `/etc/key` in the repository. �
 
 HMAC 鍵がレプリケートされたら、Web コンソールを介してカプセル化されたトークンを有効化できます。
 
-1. ブラウザーで `https://serveraddress:port/system/console/configMgr`
+1. ブラウザーで`https://serveraddress:port/system/console/configMgr`を指定
 1. **Day CRX Token Authentication Handler** というエントリを探し、クリックします。
 1. 次の画面で「**Enable encapsulated token support**」ボックスにチェックマークを入れて「**Save**」を押します。
 
