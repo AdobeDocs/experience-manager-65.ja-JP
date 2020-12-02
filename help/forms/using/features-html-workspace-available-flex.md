@@ -18,27 +18,27 @@ ht-degree: 85%
 ---
 
 
-# Flex Workspace では利用できない AEM Forms Workspace の機能 {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
+# Flex Workspace では利用できない AEM Forms Workspace の機能  {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
 
 AEM Formsのワークスペースは、FlexベースのWorkspaceを凌ぐ革新的なワークスペースであり、オファー機能と、ビジネス統合とユーザー生産性の向上に役立つ機能を備えています。
 
 これらの機能の概要を以下に簡単に説明します。詳細については、この記事の最後にある関連項目を参照してください。
 
-## タスクの概要ペインのサポート {#support-for-a-summary-pane-for-tasks}
+## タスクの概要ペインのサポート  {#support-for-a-summary-pane-for-tasks}
 
 タスクを開くと、フォームが開く前に、タスクに関する情報を外部 URL を使用してペインに表示させることができます。タスクに対する「タスクの概要ペイン」の追加情報および関連情報を使用することで、AEM Forms Workspace のエンドユーザーに対してさらに価値が追加されます。実装の詳細については、「[サマリーページを表示](/help/forms/using/displaying-information-task-summary-pane.md)」を参照してください。
 
-## マネージャービューのサポート {#support-for-manager-view}
+## マネージャービューのサポート  {#support-for-manager-view}
 
 この機能を使用すると、マネージャーはレポートのタスクにアクセスしたり操作を実行したりできます。またマネージャは、組織の階層で直属の部下でない人のタスクについて詳細に調べることもできます。詳細については、「[マネージャービューを使用した組織階層でのタスクの管理](/help/forms/using/tasks-organizational-hierarchy-using-manager.md)」を参照してください。
 
-## ユーザーアバターのサポート {#support-for-user-avatars}
+## ユーザーアバターのサポート  {#support-for-user-avatars}
 
 ログインユーザーのための画像（アバター）が AEM Forms Workspace の右上隅に表示できるようになりました。また、マネージャービューでは、ユーザーアバターを表示して、マネージャーのアバターとそのレポートが表示できます。詳細については、「[ユーザーアバターの表示](/help/forms/using/displaying-user-avatar.md)」を参照してください。
 
-## サードパーティアプリケーションを統合するためのサポート {#support-for-integrating-third-party-applications}
+## サードパーティアプリケーションを統合するためのサポート  {#support-for-integrating-third-party-applications}
 
-サードパーティアプリケーションに統合できる機能を使用し、ワークフローを完全に AEM Forms Workspace で利用できます。例えば、Correspondence Managementのレターテンプレートを、AEM Formsのワークスペースウィンドウ自体のタスクとしてレンダリングできます。 このようにして、AEM Forms Workspace を終了することなく、タスクを完了することができます。See [Integrating Correspondence Management in AEM Forms workspace](/help/forms/using/integrating-correspondence-management-html-workspace.md) for detailed instructions.
+サードパーティアプリケーションに統合できる機能を使用し、ワークフローを完全に AEM Forms Workspace で利用できます。例えば、Correspondence Managementのレターテンプレートを、AEM Formsのワークスペースウィンドウ自体のタスクとしてレンダリングできます。 このようにして、AEM Forms Workspace を終了することなく、タスクを完了することができます。詳しい手順については、「[AEM FormsのワークスペースでのCorrespondence Managementの統合](/help/forms/using/integrating-correspondence-management-html-workspace.md)」を参照してください。
 
 ## エンドユーザーのデバイスに基づくカスタムタスクレンダリングのサポート {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
