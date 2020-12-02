@@ -22,7 +22,7 @@ ht-degree: 73%
 
 HTML5 フォームは HTML5 機能の使用によりレンダリングされ、レンダリングされるフォームのスタイル設定は CSS の使用によって実行されます。HTML5 フォームのデフォルトの外観は、その PDF レンダリングに似ています。開発者はカスタム CSS を使用して、HTML5 フォームのデフォルトの外観を変更できます。
 
-This article provides step-by-step information to change style of an HTML5 form and [Introduction to Styles](/help/forms/using/css-styles.md) article contains detailed information about various styling aspects of HTML5 forms. この記事に記載されている手順を実行する前に、「スタイルの概要」記事を必ずお読みください。
+この記事では、HTML5フォームのスタイルを変更するための詳細手順を説明します。[スタイルの概要](/help/forms/using/css-styles.md)記事には、HTML5フォームの様々なスタイル設定に関する詳細が記載されています。 この記事に記載されている手順を実行する前に、「スタイルの概要」記事を必ずお読みください。
 
 次の 2 つの画像はデフォルトのスタイルとカスタマイズされたスタイルの違いを示しています。
 
@@ -32,13 +32,13 @@ This article provides step-by-step information to change style of an HTML5 form 
 
 1. **カスタムスタイルを追加するプロファイルの選択**
 
-   Access the CRX DE interface at the URL: **https://&lt;server>:&lt;port>/crx/de** and create a profile or choose an existing profile. To know how to create a profile, see [Creating a new Profile](/help/forms/using/custom-profile.md)
+   URLでCRX DEインターフェイスにアクセスします。**https://&lt;server>:&lt;port>/crx/de**&#x200B;を作成し、プロファイルを作成するか、既存のプロファイルを選択します。 プロファイルの作成方法について詳しくは、[新しいプロファイルの作成](/help/forms/using/custom-profile.md)を参照してください
 
 1. **HTML5 フォームのスタイル設定用の CSS スタイルシートの作成**
 
    プロファイルレンダラーを作成したフォルダーに移動し、CSS スタイルシートファイルを作成します。次の手順に従います。
 
-   1. Right click the folder and select **create** > **create File** from the menu
+   1. フォルダーを右クリックし、メニューから&#x200B;**create**/**create File**&#x200B;を選択します
 
    1. 「ファイルを作成」ダイアログで、スタイルシートの名前を入力します。拡張子 .css を必ず使用してください (例： stylesheet.css)。
    1. ナビゲーションペインで、作成したCSSファイルを開きます。
