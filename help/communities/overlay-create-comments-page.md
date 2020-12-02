@@ -18,13 +18,13 @@ ht-degree: 61%
 ---
 
 
-# コメントページの作成 {#create-comments-page}
+# コメントページの作成  {#create-comments-page}
 
-**[⇐コメントをオーバーレイコンポーネントノードを](overlay-comments.md)[作成する>](overlay-create-nodes.md)**
+**[⇐コメントをオーバーレイコンポーネントノードを作成する>](overlay-comments.md) [](overlay-create-nodes.md)**
 
 ## コメントページ {#comments-page}
 
-The [Community Components guide](components-guide.md) provides the ability to easily experience overlaying the comments component.
+[コミュニティコンポーネントガイド](components-guide.md)は、コメントコンポーネントの重なり合いを簡単に体験する機能を提供します。
 
 オーサーインスタンスでページを表示します。
 
@@ -32,4 +32,4 @@ The [Community Components guide](components-guide.md) provides the ability to ea
 
 ![コメント](assets/comments.png)
 
-**[⇐コメントをオーバーレイコンポーネントノードを](overlay-comments.md)[作成する>](overlay-create-nodes.md)**
+**[⇐コメントをオーバーレイコンポーネントノードを作成する>](overlay-comments.md) [](overlay-create-nodes.md)**
