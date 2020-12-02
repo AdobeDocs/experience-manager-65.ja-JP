@@ -28,7 +28,7 @@ ht-degree: 59%
 
 このセクションにあるリンクを使用して、使用しているオペレーティングシステム、データベースおよびアプリケーションサーバーのベンダーに固有のセキュリティ情報を検索してください。
 
-### オペレーティングシステムのセキュリティ情報 {#operating-system-security-information}
+### オペレーティングシステムのセキュリティ情報  {#operating-system-security-information}
 
 オペレーティングシステムを保護する際は、オペレーティングシステムのベンダーが挙げている対策を実装することを慎重に検討してください。次の対策があります。
 
@@ -98,7 +98,7 @@ JEE 上の AEM Forms がサポートするアプリケーションサーバー�
  <tbody>
   <tr>
    <td><p>Oracle WebLogic®</p> </td>
-   <td><p>Search for Understanding WebLogic Security at <a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>.</p> </td>
+   <td><p><a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>で、「Understanding WebLogic Security」を探します。</p> </td>
   </tr>
   <tr>
    <td><p>IBM WebSphere®</p> </td>
@@ -212,34 +212,34 @@ JBoss Application Server は、デフォルトの HTTP ポートとして 8080 �
 
 1. 次のファイルを開いて編集します。
 
-   シングルサーバーのインストール： [JBossroot]/standalone/configuration/standalone.xml
+   シングルサーバーのインストール：[JBoss root]/standalone/configuration/standalone.xml
 
-   クラスターのインストール： [JBossroot]/domain/configuration/domain.xml
+   クラスターのインストール：[JBoss root]/domain/configuration/domain.xml
 
-1. **&lt;socket** -binding>タグの **port** 属性の値をカスタムポート番号に変更します。 例えば、次の例ではポート8090を使用しています。
+1. **&lt;socket-binding>**&#x200B;タグの&#x200B;**port**&#x200B;属性の値をカスタムポート番号に変更します。 例えば、次の例ではポート8090を使用しています。
 
-   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
+   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot; />
 
 1. ファイルを保存して閉じます。
 1. JBoss アプリケーションサーバーを再起動します。
 
-## JEE上のAEM Formsのセキュリティに関する考慮事項 {#aem-forms-on-jee-security-considerations}
+## JEE上のAEM Formsのセキュリティに関する考慮事項{#aem-forms-on-jee-security-considerations}
 
 ここでは、理解しておく必要のある JEE 上の AEM Forms 固有のセキュリティの問題について説明します。
 
-### データベース内の電子メールの資格情報は暗号化されない {#email-credentials-not-encrypted-in-database}
+### データベース内の電子メールの資格情報は暗号化されない  {#email-credentials-not-encrypted-in-database}
 
 アプリケーションに保存されている電子メールの資格情報は、JEE 上の AEM Forms データベースに保存される前に暗号化されません。サービスのエンドポイントで電子メールを使用するように設定した場合、エンドポイント設定の一部として使用したパスワード情報は、データベースに保存される前に暗号化されません。
 
-### データベース内の Rights Management に関する機密性情報 {#sensitive-content-for-rights-management-in-the-database}
+### データベース内の Rights Management に関する機密性情報  {#sensitive-content-for-rights-management-in-the-database}
 
 JEE上のAEM Formsは、JEE上のAEM Formsのデータベースを使用して、ポリシードキュメントに使用するドキュメントキーの機密情報やその他の暗号化マテリアルを保存します。 データベースへの侵入を防御することで、このような機密性の高い情報を保護することができます。
 
-### クリアテキストフォームのパスワード {#password-in-clear-text-format-in-adobe-ds-xml}
+### クリアテキスト形式{#password-in-clear-text-format-in-adobe-ds-xml}のパスワード
 
 JEE 上の AEM Forms を実行するアプリケーションサーバーでは、そのサーバー上に設定されたデータソースを介してデータベースにアクセスするように設定する必要があります。アプリケーションサーバーで、データベースのパスワードがクリアテキストでデータソース設定ファイルに公開されていないことを確認してください。
 
-lc_[database].xmlファイルには、クリアテキスト形式のパスワードを含めないでください。 アプリケーションサーバーのパスワードを暗号化する方法については、アプリケーションサーバーのベンダーにお問い合わせください。
+lc_[database].xmlファイルには、パスワードをクリアテキスト形式で含めることはできません。 アプリケーションサーバーのパスワードを暗号化する方法については、アプリケーションサーバーのベンダーにお問い合わせください。
 
 >[!NOTE]
 >
