@@ -26,7 +26,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 通知のタイプで分類される 2 つのインボックスにこれらの通知を受け取ります。
 
 * 購読の結果として受け取る通知が表示されるインボックスについては、次のセクションで説明します。
-* A specialized inbox for workflow items is described in the [Participating in Workflows](/help/sites-classic-ui-authoring/classic-workflows-participating.md) document.
+* ワークフローアイテム用の特殊なインボックスについては、「[ワークフローへの参加](/help/sites-classic-ui-authoring/classic-workflows-participating.md)」ドキュメントで説明しています。
 
 ## 通知の表示 {#viewing-your-notifications}
 
@@ -92,7 +92,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 1. 通知するページのパスを定義します。
 
    * 「**追加**」をクリックして、テーブルに新しい行を追加します。
-   * Click the **Path** table cell and enter the path, e.g. `/content/docs`.
+   * **パス**&#x200B;テーブルセルをクリックし、パスを入力します(例：`/content/docs`。
 
    * サブツリーに属しているすべてのページについて通知するには、「**厳密?**」を「**いいえ**」に設定します。パスで定義されているページに対するアクションのみについて通知するには、「**厳密?**」を「**はい**」に設定します。
 
@@ -102,7 +102,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 
 1. 「**OK**」をクリックして設定を保存します。
 
-## 通知の処理 {#processing-your-notifications}
+## 通知の処理  {#processing-your-notifications}
 
 AEM インボックスに通知を受信するように選択すると、インボックスに通知が入るようになります。[通知を参照](#viewing-your-notifications)し、必要な通知を選択して、次の操作を実行できます。
 
