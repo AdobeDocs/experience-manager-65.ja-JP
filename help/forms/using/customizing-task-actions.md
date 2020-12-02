@@ -17,13 +17,13 @@ ht-degree: 55%
 ---
 
 
-# タスクアクションのカスタマイズ {#customizing-task-actions}
+# タスクアクションのカスタマイズ  {#customizing-task-actions}
 
-AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。Before customizing the task actions, ensure that you follow the steps listed at [Generic steps for AEM Forms workspace customization](/help/forms/using/generic-steps-html-workspace-customization.md).
+AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。タスクアクションをカスタマイズする前に、[AEM Formsワークスペースのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に示されている手順に従っていることを確認してください。
 
 ## テキストスタイルのカスタマイズ {#customizing-text-style}
 
-To customize the text style, add the following code snippet in the `/apps/ws/css/newStyle.css` file:
+テキストスタイルをカスタマイズするには、次のコードスニペットを`/apps/ws/css/newStyle.css`ファイルに追加します。
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -111,7 +111,7 @@ To customize the text style, add the following code snippet in the `/apps/ws/css
 
 ## 画像のカスタマイズ {#customizing-images}
 
-To customize the images, add the following code snippet in the `/apps/ws/css/newStyle.css` file. 次のコードスニペットは *lock* アクションの画像をカスタマイズします。
+画像をカスタマイズするには、次のコードスニペットを`/apps/ws/css/newStyle.css`ファイルに追加します。 次のコードスニペットは *lock* アクションの画像をカスタマイズします。
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -132,15 +132,15 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
 }
 ```
 
-## アクションに画像のみを表示 {#showing-only-images-for-actions}
+## アクションに画像のみを表示  {#showing-only-images-for-actions}
 
-アクションに画像のみを表示するには、ルートアクションで使用されているイメージをカスタマイズします。For detailed information, see [Images for Route Actions](/help/forms/using/images-route-actions.md).
+アクションに画像のみを表示するには、ルートアクションで使用されているイメージをカスタマイズします。詳しくは、「[ルートアクションの画像](/help/forms/using/images-route-actions.md)」を参照してください。
 
 ### タスクリストのタスクアクション ポップアップメニュー {#task-list-task-action-nbsp-pop-up-menu}
 
-1. AEM Forms Workspace タスクリストのタスクアクションポップアップメニューのアイテムをカスタマイズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. AEM Forms Workspace タスクリストのタスクアクションポップアップメニューのアイテムをカスタマイズするには、開発パッケージが必要です。開発パッケージの作成について詳しくは、「[AEM Formsワークスペースコードの構築」を参照してください。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-1. Copy /libs/ws/js/runtime/templates/task.html to `/apps/ws/js/runtime/templates/task.html`replace the following code snippet:
+1. /libs/ws/js/runtime/templates/task.htmlを`/apps/ws/js/runtime/templates/task.html`にコピーし、次のコードスニペットを置き換えます。
 
    ```html
    // Orignal code
@@ -213,7 +213,7 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
        </div>
    ```
 
-1. Remove the fixed width assigned to an anchor tag from the `/apps/ws/css/newStyle.css` file:
+1. `/apps/ws/css/newStyle.css`ファイルからアンカータグに割り当てられた固定幅を削除します。
 
    ```css
    .task .taskActionsPopUp ul{
@@ -267,8 +267,8 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
 
 次の手順を実行して、詳細タスクのアクションポップアップメニューをカスタマイズします。
 
-* Copy the /libs/ws/js/runtime/templates/taskdetails.html file to the `/apps/ws/js/runtime/templates/` folder:
-* テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。For example, the *new code* listed below encapsulates the icon tag inside the anchor tag:
+* /libs/ws/js/runtime/templates/taskdetails.htmlファイルを`/apps/ws/js/runtime/templates/`フォルダーにコピーします。
+* テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。例えば、以下に示す&#x200B;*新しいコード*&#x200B;では、アンカータグの内部にアイコンタグがカプセル化されます。
 
 ```html
 // Original code
@@ -360,5 +360,5 @@ To customize the images, add the following code snippet in the `/apps/ws/css/new
 ```
 
 * /apps/ws/js/registry.js ファイルを開いて編集します。
-* 次のテキストを探します。 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
-* Replace the located text with the following text: `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
+* 次のテキストを探します。  `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
+* 検索したテキストを次のテキストに置き換えます。`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
