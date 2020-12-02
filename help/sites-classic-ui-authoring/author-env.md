@@ -22,11 +22,11 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->以下のドキュメントでは、クラシック UI に焦点を当てています。For information about authoring in the modern, touch-enabled UI, see the [standard Authoring documentation](/help/assets/assets.md).
+>以下のドキュメントでは、クラシック UI に焦点を当てています。タッチ操作対応最新UIでのオーサリングについて詳しくは、[標準のオーサリングドキュメント](/help/assets/assets.md)を参照してください。
 
 オーサー環境では、以下に関連するタスクを実行できます。
 
-* [オーサリング](/help/sites-authoring/author.md) ( [ページオーサリング](/help/sites-authoring/qg-page-authoring.md) 、アセット [の管理を含む](/help/assets/assets.md))
+* [オーサリング](/help/sites-authoring/author.md) ( [ページ](/help/sites-authoring/qg-page-authoring.md) 認証およびアセット [の管理を含む](/help/assets/assets.md))
 
 * Web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/administer-best-practices.md)タスク
 
@@ -47,7 +47,7 @@ ht-degree: 87%
    * これは AEM の最新の標準 UI です。
    * 灰色を基調としており、クリーンでフラットなインターフェイスになっています。
    * タッチデバイスとデスクトップデバイスの両方で使用できるようにデザインされています（タッチ操作向けに最適化されています）。ルックアンドフィールはすべてのデバイスで同じですが、[リソースの表示と選択](/help/sites-authoring/basic-handling.md)の操作がやや異なります（タップとクリックの違い）。
-   * See the [standard Authoring documentation](/help/sites-authoring/author.md) for further details on how to author using the touch-based UI. 以下のドキュメントでは、クラシック UI に焦点を当てています。
+   * タッチベースのUIを使用してオーサリングする方法の詳細については、[標準のオーサリングドキュメント](/help/sites-authoring/author.md)を参照してください。 以下のドキュメントでは、クラシック UI に焦点を当てています。
 
    * デスクトップ：
 
