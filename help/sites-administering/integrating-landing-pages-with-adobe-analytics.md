@@ -20,7 +20,7 @@ ht-degree: 48%
 
 # ランディングページと Adobe Analytics の統合{#integrating-landing-pages-with-adobe-analytics}
 
-AEM has integrated the landing pages solution with [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) by using the following call-to-action (CTA) components:
+AEMは、次のCTA（コールトゥアクション）コンポーネントを使用して、ランディングページソリューションを[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst)と統合しました。
 
 1. クリックスルーコンポーネント
 1. グラフィックリンクコンポーネント
@@ -29,11 +29,11 @@ AEM has integrated the landing pages solution with [Adobe Analytics](https://www
 
 ## 前提条件 {#prerequisites}
 
-Adobe recommends that you go through the [existing AEM-Adobe Analytics integration](/help/sites-administering/adobeanalytics.md) to understand how this integration works.
+Adobeでは、[既存のAEM-Adobe Analytics統合](/help/sites-administering/adobeanalytics.md)を調べて、この統合の仕組みを理解することを推奨しています。
 
 ## マッピングに使用できるコンポーネント {#components-available-for-mapping}
 
-In AEM, the **Call to Action** components - **ClickThroughLink** and **GraphicalLink** - displayed here in the sidekick, can be mapped to Adobe Analytics variables.
+AEMでは、サイドキックに表示される&#x200B;**アクションの呼び出し**&#x200B;コンポーネント — **ClickThroughLink**&#x200B;と&#x200B;**GraphicalLink**&#x200B;をAdobe Analytics変数にマッピングできます。
 
 ![chlimage_1-21](assets/chlimage_1-21a.jpeg)
 
@@ -90,7 +90,7 @@ In AEM, the **Call to Action** components - **ClickThroughLink** and **Graphical
 </table>
 
 1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。フレームワークを使用する準備が整いました。
-1. You can now create a new landing page or open an existing landing page with existing CTA components and click **Cloud Services** tab in **Page Properties** from the sidekick (in the touch-optimized UI, select **Open Properties** and click **Cloud Services**) and configure the framework to use with landing page. ドロップダウンリストからフレームワークを選択します。
+1. 新しいランディングページを作成したり、既存のCTAコンポーネントを使用して既存のランディングページを開いたりできます。サイドキックの&#x200B;**ページプロパティ**&#x200B;タブをクリックします(タッチ操作向けUIで「**プロパティを開く**」を選択し、「**Cloud Services**」をクリックします)。をランディングページと共に使用する場合。 ****&#x200B;ドロップダウンリストからフレームワークを選択します。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 
