@@ -23,13 +23,13 @@ ht-degree: 49%
 
 ## コミュニティサイトを作成 {#create-community-site}
 
-[コミュニティサイトの作成](/help/communities/sites-console.md) ：コミュニティサイトの作成手順を案内するウィザードを使用します。 It is possible to move forward to the `Next` step or `Back` to the previous step before committing the site in the final step.
+[コミュニティサイトの](/help/communities/sites-console.md) 作成では、コミュニティサイトの作成手順を案内するウィザードを使用します。最後の手順でサイトをコミットする前に、`Next`または`Back`を前の手順に進むことができます。
 
 新しいコミュニティサイトの作成を開始するには：
 
 [オーサーインスタンス](https://localhost:4502/)を使用します。
 
-* 管理者権限でログインし、 **[!UICONTROL コミュニティ]** / **[!UICONTROL サイトに移動します]**。
+* 管理者権限でログインし、**[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**&#x200B;に移動します。
 
 * 「**作成**」を選択します。
 
@@ -46,15 +46,15 @@ ht-degree: 49%
 * **コミュニティサイトルート**:(デフォルトのルートの場合は空白のまま `/content/sites`)
 
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンを使用して、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ *または* 複数のベース言語を選択します。追加された言語ごとに1つのコミュニティサイトが作成され、[多言語サイト用のコンテンツの翻訳](/help/sites-administering/translation.md)で説明されているベストプラクティスに従って、同じサイトフォルダー内に存在します。 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**: `enable`
 
    * コミュニティサイト名の下に最初のURLが表示されます
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
-      *例えば*、https://localhost:4502/content/sites/ `enable/en.html`
+      *例えば*、https://localhost:4502/content/sites/  `enable/en.html`
 
-* **リファレンスサイトテンプレート**:下に降りて～を選ぶ `Reference Structured Learning Site Template`
+* **リファレンスサイトテンプレート**:下に降りて～を選ぶ  `Reference Structured Learning Site Template`
 
 「**次へ**」を選択します。
 
@@ -76,17 +76,17 @@ ht-degree: 49%
 
 「**次へ**」を選択します。
 
-### 手順 3：設定 {#step-settings}
+### 手順 3：設定  {#step-settings}
 
-On the Settings step, before selecting `Next`, notice there are seven sections providing access to configurations involving user management, tagging, roles, moderation, analytics, translation, and enablement.
+`Next`を選択する前に、設定の手順で7つのセクションがあり、ユーザー管理、タグ付け、役割、モデレート、分析、翻訳、有効化に関連する設定にアクセスできます。
 
 #### ユーザー管理 {#user-management}
 
-It is recommended that [enablement communities](/help/communities/overview.md#enablement-community) be private.
+[有効化コミュニティ](/help/communities/overview.md#enablement-community)はプライベートにすることをお勧めします。
 
 コミュニティサイトを非公開にするとは、匿名のサイト訪問者に対してアクセスを拒否し、自己登録やソーシャルログインを使用禁止にすることです。
 
-Ensure most checkboxes are deselected for [User Management](/help/communities/sites-console.md#user-management) :
+[ユーザー管理](/help/communities/sites-console.md#user-management)のほとんどのチェックボックスが選択解除されていることを確認します。
 
 * サイト訪問者が自己登録することを許可しない。
 * 匿名サイト訪問者がサイトに表示することを許可しないでください。
@@ -98,9 +98,9 @@ Ensure most checkboxes are deselected for [User Management](/help/communities/si
 
 #### タグ付け {#tagging}
 
-The tags which may be applied to community content are controlled by selecting AEM namespaces previously defined through the [Tagging Console](/help/sites-administering/tags.md#tagging-console) (such as the [Tutorial namespace](/help/communities/enablement-setup.md#create-tutorial-tags)).
+コミュニティコンテンツに適用できるタグは、[タグ付けコンソール](/help/sites-administering/tags.md#tagging-console)で事前に定義したAEM名前空間([チュートリアル名前空間](/help/communities/enablement-setup.md#create-tutorial-tags)など)を選択することで制御します。
 
-また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとイネーブルメントリソースを定義するときに表示される選択肢が制限されます。See [Tagging Enablement Resources](/help/communities/tag-resources.md) for important information.
+また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとイネーブルメントリソースを定義するときに表示される選択肢が制限されます。重要な情報については、[タグ付け可能なリソース](/help/communities/tag-resources.md)を参照してください。
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
@@ -111,18 +111,18 @@ The tags which may be applied to community content are controlled by selecting A
 
 ### 役割 {#roles}
 
-[コミュニティメンバーの役割](/help/communities/users.md) は、[役割]セクションの設定を通じて割り当てられます。
+[コミュニティメンバ](/help/communities/users.md) ーロールは、[役割]セクションの設定を通じて割り当てられます。
 
 コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先頭入力検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
 例：
 
 * 型 `q`
-* Select [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* [クインハーパー](/help/communities/enablement-setup.md#publishcreateenablementmembers)を選択
 
 >[!NOTE]
 >
->[トンネルサービス](/help/communities/deploy-communities.md#tunnel-service-on-author) ：パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
+>[トンネル](/help/communities/deploy-communities.md#tunnel-service-on-author) サービスでは、パブリッシュ環境のみに存在するメンバーとグループを選択できます。
 
 ![有効化ロール](assets/site-admin.png)
 
@@ -140,11 +140,11 @@ The tags which may be applied to community content are controlled by selecting A
 
 ![chlimage_1-454](assets/chlimage_1-454.png)
 
-#### TRANSLATION {#translation}
+#### 翻訳{#translation}
 
 [翻訳設定](/help/communities/sites-console.md#translation)では、UGC の翻訳を許可するかどうかと、どの言語に翻訳するかを指定します。
 
-* Check **Allow Machine Translation**
+* **機械翻訳を許可**&#x200B;を確認
 * デフォルト設定を使用する
 
 ![chlimage_1-456](assets/chlimage_1-456.png)
@@ -153,13 +153,15 @@ The tags which may be applied to community content are controlled by selecting A
 
 1 つのイネーブルメントコミュニティに対し、1 人以上のコミュニティ実施可能マネージャーを指定する必要があります。
 
-* **有効化マネージャ**（必須） 
+* **有効化マネージャ**
+（必須） 
 `Community Enablement Managers` グループを選択して、このコミュニティサイトを管理できます。
 
    * 型 `s`
    *  `Sirius Nilson`
 
-* **Marketing Cloud組織ID**（オプション）Adobe AnalyticsアカウントのID。有効化レポートに [Video Heartbeat Analytics](/help/communities/analytics.md#video-heartbeat-analytics) を含める場合に必要です。
+* **Marketing Cloud組織ID**
+（オプション）有効化レポートに [ビデオハートビート](/help/communities/analytics.md#video-heartbeat-analytics) 分析を含める場合に必要な、Adobe AnalyticsアカウントのID。
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
@@ -167,7 +169,7 @@ The tags which may be applied to community content are controlled by selecting A
 
 ### 手順 4：コミュニティサイトの作成 {#step-create-community-site}
 
-Select **Create.**
+「**作成」を選択します。**
 
 ![chlimage_1-458](assets/chlimage_1-458.png)
 
@@ -225,28 +227,28 @@ Select **Create.**
 
 ### 新しいコミュニティユーザーグループの確認 {#notice-new-community-user-groups}
 
-新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。For details, visit [User Groups for Community Sites](/help/communities/users.md#usergroupsforcommunitysites).
+新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。詳しくは、[コミュニティサイトのユーザーグループ](/help/communities/users.md#usergroupsforcommunitysites)を参照してください。
 
-For this new community site, given the site name &quot;enable&quot; in Step 1, the new user groups that exist in the publish environment may be seen from the [Communities Members &amp; Groups console](/help/communities/members.md#groups-console):
+この新しいコミュニティサイトでは、手順1でサイト名を「enable」と指定すると、発行環境に存在する新しいユーザーグループが[Communities Members &amp; Groups console](/help/communities/members.md#groups-console)から表示される場合があります。
 
 ![community_usergroup](assets/community_usergroup.png)
 
 ### 「Community Enable Members」グループへのメンバー割り当て{#assign-members-to-community-enable-members-group}
 
-On author, with the tunnel service enabled, it is possible to assign the [users created during Initial Setup](/help/communities/enablement-setup.md#publishcreateenablementmembers) to the Community Members group for the newly created community site.
+作成者は、トンネルサービスを有効にして、初回セットアップ](/help/communities/enablement-setup.md#publishcreateenablementmembers)で作成した[ユーザーを、新しく作成したコミュニティサイトのコミュニティメンバーグループに割り当てることができます。
 
 コミュニティグループコンソールでは、メンバーを個別に追加したり、グループのメンバーシップを使用して追加したりできます。
 
-In this example, the group `Community Ski Class` is added as a member of the group `Community Enable Members` as well as member `Quinn Harper`.
+この例では、グループ`Community Ski Class`がグループ`Community Enable Members`のメンバーとして追加され、メンバー`Quinn Harper`も追加されます。
 
-* Navigate to **Communities, Groups** console
-* Select *Community Enable Members* group
-* Enter &#39;ski&#39; into the **Add Members To Group** search box
-* Select *Community Ski Class* (group of learners)
+* **コミュニティ、グループ**&#x200B;コンソールに移動します
+* *コミュニティを有効にするメンバー*&#x200B;グループを選択
+* 「ski」を「**グループ追加のメンバー**」検索ボックスに入力します
+* *コミュニティスキークラス*&#x200B;を選択（学習者のグループ）
 * 検索ボックスに「クイン」と入力します。
-* Select *Quinn Harper* (enablement resource contact)
+* *クインハーパー*&#x200B;を選択します（有効化リソースの連絡先）
 
-* Select **Save**
+* **保存**&#x200B;を選択
 
 ![chlimage_1-418](assets/chlimage_1-418.png)
 
@@ -258,9 +260,9 @@ In this example, the group `Community Ski Class` is added as a member of the gro
 
 ### 認証エラーの設定 {#configure-for-authentication-error}
 
-Once a site has been configured and pushed to publish, [configure login mapping](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
+サイトが設定され、発行にプッシュされたら、発行インスタンスで[ログインマッピング](/help/communities/sites-console.md#configure-for-authentication-error)(`Adobe Granite Login Selector Authentication Handler`)を設定します。 ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
 
-追加a `Login Page Mapping` は次のようになります。
+&lt;a0/追加>は次のようになります。`Login Page Mapping`
 
 * `/content/sites/enable/en/signin:/content/sites/enable/en`
 
@@ -274,20 +276,20 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 1. 公開時に、CRXDEにアクセスし、管理者権限でログインします
 
-   * 例えば、https://localhost:4503/crx/deを参照して [](https://localhost:4503/crx/de) から、 `admin/admin`
+   * 例えば、[https://localhost:4503/crx/de](https://localhost:4503/crx/de)を参照し、`admin/admin`でログインします。
 
-1. In the project browser, expand `/etc/map`
-1. Select the `http` node
+1. プロジェクトブラウザで`/etc/map`を展開します。
+1. `http`ノードを選択
 
-   * Select **Create Node**
+   * **ノードを作成**&#x200B;を選択
 
-      * **名前** localhost.4503
+      * **** Namelocalhost.4503
 
          (do *not* use &#39;:&#39;)
 
-      * **Type** sling [:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **** [タイプ：マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. With newly created `localhost.4503` node selected
+1. 新しく作成された`localhost.4503`ノードを選択
 
    * 追加特性
 
@@ -312,7 +314,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 >[!NOTE]
 >
->To disable, simply pre-pend the `sling:match` property value with an &#39;x&#39; - `xlocalhost.4503/$` - and **Save All**.
+>無効にするには、`sling:match`プロパティの値の前に「x」 — `xlocalhost.4503/$` — と&#x200B;**「すべて保存**」を付けます。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -324,7 +326,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-The &#39;**$**&#39; at the end of the regular expression `sling:match` string is crucial, so that only exactly `https://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
+正規式`sling:match`文字列の末尾の「**$**」が重要なので、正確に`https://localhost:4503/`のみがマッピングされます。そうでない場合、URLのserver:portの後に存在するパスの前にリダイレクト値が付加されます。 したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ## コミュニティサイトの変更 {#modifying-the-community-site}
 
@@ -346,7 +348,7 @@ The &#39;**$**&#39; at the end of the regular expression `sling:match` string is
 
 サイト構造にカタログ機能が既に含まれている場合、タイトルが変わることがあります。
 
-To modify the site&#39;s structure, navigate to **[!UICONTROL Communities]** > **[!UICONTROL Sites]** console, open the `enable` folder, and select the **Edit Site** icon to access the properties of `Enablement Tutorial`.
+サイトの構造を変更するには、**[!UICONTROL コミュニティ]**/**[!UICONTROL サイト]**&#x200B;コンソールに移動し、`enable`フォルダーを開き、**サイト**&#x200B;を編集アイコンを選択して`Enablement Tutorial`のプロパティにアクセスします。
 
 構造パネルを選択し、カタログを追加するか、既存のカタログを変更します。
 
