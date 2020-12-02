@@ -13,9 +13,9 @@ ht-degree: 17%
 
 # Assets ガイド
 
-このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべての [!DNL Experience Manager Assets] タスクについて説明します。
+このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべての[!DNL Experience Manager Assets]タスクについて説明します。
 
-## 主要 [!DNL Experience Manager] 記事
+## キー[!DNL Experience Manager]記事
 
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
@@ -40,9 +40,9 @@ ht-degree: 17%
 | [開発ユーザーガイド](/help/sites-developing/home.md) | Experience Managerの展開方法を説明します。 |
 | [ユーザガイドの管理](/help/managing/home.md) | このガイドでは、Experience Managerプロジェクトを正常に管理する方法について説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | このガイドでは、ユーザ生成コンテンツを共有する方法について説明 [!DNL Livefyre]します。 |
+| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | このガイドは、ユーザー生成コンテンツを[!DNL Livefyre]と共有する方法を示します。 |
 
-## 主な [!DNL Experience Manager] リソース
+## キー[!DNL Experience Manager]リソース
 
 * [Experience ManagerビデオTutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
