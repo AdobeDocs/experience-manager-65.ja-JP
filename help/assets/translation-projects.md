@@ -1,6 +1,6 @@
 ---
 title: 翻訳プロジェクトの作成
-description: Learn how to create translation projects in [!DNL Adobe Experience Manager].
+description: ' [!DNL Adobe Experience Manager]で翻訳プロジェクトを作成する方法を学びます。'
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
@@ -13,11 +13,11 @@ ht-degree: 68%
 
 # 翻訳プロジェクトの作成 {#creating-translation-projects}
 
-To create a language copy, trigger one of the following language copy workflows available under the References rail in the [!DNL Experience Manager] user interface.
+言語コピーを作成するには、[!DNL Experience Manager]ユーザーインターフェイスの参照レールで使用できる次のいずれかの言語コピーワークフローをトリガーします。
 
-* **作成と翻訳**:このワークフローでは、翻訳対象のアセットが、翻訳先の言語の言語ルートにコピーされます。 また、選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
+* **作成と翻訳**:このワークフローでは、翻訳対象のアセットが、翻訳先の言語の言語ルートにコピーされます。また、選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
 
-* **言語コピーの更新**:このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。 この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
+* **言語コピーの更新**:このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
 >[!NOTE]
 >
->If you launch a translation workflow for complex assets, such as PDF and [!DNL Adobe InDesign] files, their subassets or renditions (if any) are not submitted for translation.
+>PDFファイルや[!DNL Adobe InDesign]ファイルなどの複雑なアセットに対して翻訳ワークフローを起動した場合、そのサブアセットやレンディション（存在する場合）は翻訳用に送信されません。
 
 ## 作成と翻訳ワークフロー {#create-and-translate-workflow}
 
@@ -39,12 +39,12 @@ To create a language copy, trigger one of the following language copy workflows 
 
 「**[!UICONTROL 構造のみを作成]**」オプションを使用して、ソース言語ルート内のソースフォルダーの階層と一致するように、ターゲット言語ルート内にターゲットフォルダー階層を作成します。この場合、ソースアセットが宛先フォルダーにコピーされます。ただし、翻訳プロジェクトは生成されません。
 
-1. In the [!DNL Assets] interface, select the source folder for which you want to create a structure in the target language root.
-1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
+1. [!DNL Assets]インターフェイスで、ターゲット言語ルートで構造を作成するソースフォルダーを選択します。
+1. **[!UICONTROL 参照]**&#x200B;ウィンドウを開き、**[!UICONTROL コピー]**&#x200B;の下の&#x200B;**[!UICONTROL 言語コピー]**&#x200B;をクリックします。
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
-1. Click **[!UICONTROL Create &amp; Translate]** at the bottom.
+1. 下部にある&#x200B;**[!UICONTROL 作成と翻訳]**&#x200B;をクリックします。
 
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
@@ -56,7 +56,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
    ![言語コピー](assets/lang-copy2.png)
 
-1. Click the structure from the list, and then click **[!UICONTROL Reveal in Assets]** to navigate to the folder structure within the target language.
+1. リストーで構造をクリックし、「**[!UICONTROL アセットで表示]**」をクリックして、ターゲット言語内のフォルダー構造に移動します。
 
    ![資産の公開](assets/reveal-in-assets.png)
 
@@ -64,12 +64,12 @@ To create a language copy, trigger one of the following language copy workflows 
 
 このオプションを使用すると、翻訳されるアセットは、翻訳先言語の言語ルートにコピーされます。選択するオプションによって異なりますが、アセットに対応する翻訳プロジェクトがプロジェクトコンソールで作成されます。設定によっては、翻訳プロジェクトを手動で開始することも、翻訳プロジェクトの作成後すぐに自動的に実行することもできます。
 
-1. In the [!DNL Assets] user interface, select the source folder for which you want to create a Language copy.
-1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
+1. [!DNL Assets]ユーザーインターフェイスで、言語コピーを作成するソースフォルダーを選択します。
+1. **[!UICONTROL 参照]**&#x200B;ウィンドウを開き、**[!UICONTROL コピー]**&#x200B;の下の&#x200B;**[!UICONTROL 言語コピー]**&#x200B;をクリックします。
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
-1. Click **[!UICONTROL Create &amp; Translate]** at the bottom.
+1. 下部にある&#x200B;**[!UICONTROL 作成と翻訳]**&#x200B;をクリックします。
 
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
@@ -109,7 +109,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
    ジョブステータスの詳細については、[翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
 
-1. Navigate to the [!DNL Assets] UI, and open the Properties page for each of the translated assets to view the translated metadata.
+1. [!DNL Assets] UIに移動し、変換済みの各アセットのプロパティページを開いて、変換済みのメタデータを表示します。
 
    ![アセットのプロパティページで変換済みメタデータの表示](assets/translated-metadata-asset-properties.png)
 
@@ -123,10 +123,10 @@ To create a language copy, trigger one of the following language copy workflows 
 
 このオプションを使用すると、前の翻訳ワークフローの実行後にユーザーがソースフォルダーに追加したアセットに対して、翻訳ワークフローが実行されます。新しく追加されたアセットのみが、既に翻訳済みのアセットを含むターゲットフォルダーにコピーされます。この場合、新しい翻訳プロジェクトは作成されません。
 
-1. In the [!DNL Assets] UI, navigate to the source folder that contains untranslated assets.
+1. [!DNL Assets] UIで、未翻訳のアセットを含むソースフォルダーに移動します。
 1. 翻訳するアセットを選択して、**[!UICONTROL 参照パネル]**&#x200B;を開きます。「**[!UICONTROL 言語コピー]**」セクションに、現在使用可能な翻訳コピーの数が表示されます。
-1. Click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 使用可能な翻訳コピーのリストが表示されます。
-1. Click **[!UICONTROL Create &amp; Translate]** at the bottom.
+1. 「**[!UICONTROL コピー]**」の下の「言語コピー&#x200B;]**」をクリックします。**[!UICONTROL &#x200B;使用可能な翻訳コピーのリストが表示されます。
+1. 下部にある&#x200B;**[!UICONTROL 作成と翻訳]**&#x200B;をクリックします。
 
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
@@ -149,7 +149,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. Click the ellipsis at the bottom of the **Translation Job** tile to view the assets in the translation workflow. 翻訳ジョブリストには、アセットのメタデータとタグのエントリも表示されます。これらのエントリは、アセットのメタデータとタグも翻訳されることを意味します。
+1. **翻訳ジョブ**&#x200B;タイルの下部にある省略記号をクリックして、翻訳ワークフロー内のアセットを表示します。 翻訳ジョブリストには、アセットのメタデータとタグのエントリも表示されます。これらのエントリは、アセットのメタデータとタグも翻訳されることを意味します。
 
    >[!NOTE]
    >
@@ -173,9 +173,9 @@ To create a language copy, trigger one of the following language copy workflows 
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
-   For more details, see [Monitoring the Status of a Translation Job](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
+   詳しくは、[翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
 
-1. 翻訳が完了すると、ステータスが「レビューへの準備完了」に変更されます。Navigate to the [!DNL Assets] UI, and open the Properties page for each of the translated assets to view the translated metadata.
+1. 翻訳が完了すると、ステータスが「レビューへの準備完了」に変更されます。[!DNL Assets] UIに移動し、変換済みの各アセットのプロパティページを開いて、変換済みのメタデータを表示します。
 
 ## 言語コピーを更新 {#update-language-copies}
 
@@ -188,13 +188,13 @@ To create a language copy, trigger one of the following language copy workflows 
 
 このオプションを使用する場合、言語コピーを更新するアセットのセットに対して翻訳プロジェクトが作成されます。
 
-1. From the [!DNL Assets] UI, select the source folder where you added an asset.
-1. **[!UICONTROL 参照]** ペインを開き、「コピー」の **[!UICONTROL 下にある「]** 言語コピー **** 」をクリックして言語コピーのリストを表示します。
+1. [!DNL Assets] UIから、アセットを追加したソースフォルダーを選択します。
+1. **[!UICONTROL 参照]**&#x200B;ウィンドウを開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックして、言語コピーのリストを表示します。
 1. 「**[!UICONTROL 言語コピー]**」の前のチェックボックスを選択し、適切なロケールに対応するターゲットフォルダーを選択します。
 
    ![言語コピーを選択](assets/lang-copy1.png)
 
-1. Click **[!UICONTROL Update language copies]** at the bottom.
+1. 下部にある[**[!UICONTROL 言語コピーを更新]**]をクリックします。
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 新しい翻訳プロジェクトを作成]**」を選択します。
 
@@ -227,14 +227,14 @@ To create a language copy, trigger one of the following language copy workflows 
 
    ジョブステータスの詳細については、[翻訳ジョブのステータスの監視](../sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
 
-1. Navigate to the [!DNL Assets] user interdace, and open the Properties page for each of the translated assets to view the translated metadata.
+1. [!DNL Assets]ユーザーインターフェイスに移動し、変換済みの各アセットのプロパティページを開いて、変換済みのメタデータを表示します。
 
 ### 既存の翻訳プロジェクトに追加 {#add-to-existing-translation-project-1}
 
 このオプションを使用すると、アセットのセットが既存の翻訳プロジェクトに追加され、選択したロケールの言語コピーが更新されます。
 
-1. From the [!DNL Assets] UI, select the source folder where you added an asset folder.
-1. **[!UICONTROL 参照パネルを開き、「コピー」の]**&#x200B;下にある「 **[!UICONTROL 言語コピー]****** 」をクリックして言語コピーのリストを表示します。
+1. [!DNL Assets] UIから、アセットフォルダーを追加したソースフォルダーを選択します。
+1. **[!UICONTROL 参照パネル]**&#x200B;を開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックして、言語コピーのリストを表示します。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -242,7 +242,7 @@ To create a language copy, trigger one of the following language copy workflows 
 
    ![言語コピーを選択](assets/lang-copy1.png)
 
-1. Click **[!UICONTROL Update language copies]** at the bottom.
+1. 下部にある[**[!UICONTROL 言語コピーを更新]**]をクリックします。
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択します。
 
@@ -257,27 +257,27 @@ To create a language copy, trigger one of the following language copy workflows 
 
 翻訳ワークフローを実行して、元のアセットを編集したバージョンで言語コピーを更新するとき、翻訳済みアセットをユーザーが承認するまで、既存の言語コピーが維持されます。[!DNL Adobe Experience Manager Assets] は、新たに翻訳されたアセットを一時的な場所に格納しておき、ユーザーがアセットを明示的に承認した後で既存の言語コピーを更新します。ユーザーがアセットを承認しないと、言語コピーは変更されません。
 
-1. Click the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click **[!UICONTROL Reveal in Assets]** to open the folder in [!DNL Experience Manager Assets].
+1. 言語コピーを作成した「**[!UICONTROL 言語コピー]**」の下にあるソースルートフォルダーをクリックし、「**[!UICONTROL アセットで表示]**」をクリックして[!DNL Experience Manager Assets]内のフォルダーを開きます。
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. From the [!DNL Assets] interface, select an asset you already translated and click **[!UICONTROL Edit]** from the toolbar to open the asset in edit mode.
+1. [!DNL Assets]インターフェイスから、既に翻訳済みのアセットを選択し、ツールバーの「**[!UICONTROL 編集]**」をクリックして、アセットを編集モードで開きます。
 1. アセットを編集して、変更内容を保存します。
 1. [既存の翻訳プロジェクトに追加](#add-to-existing-translation-project)の手順 2～14 を実行して、言語コピーを更新します。
-1. Click the ellipsis at the bottom of the **[!UICONTROL Translation Job]** tile. **[!UICONTROL 翻訳ジョブ]**&#x200B;ページのアセットのリストで、翻訳済みバージョンのアセットが格納されている一時的な場所を確認できます。
+1. **[!UICONTROL 翻訳ジョブ]**&#x200B;タイルの下部にある省略記号をクリックします。 **[!UICONTROL 翻訳ジョブ]**&#x200B;ページのアセットのリストで、翻訳済みバージョンのアセットが格納されている一時的な場所を確認できます。
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにします。
-1. From the toolbar, click **[!UICONTROL Accept Translation]** ![accept translation](assets/do-not-localize/thumb-up.png) and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
+1. ツールバーで、「翻訳を承認&#x200B;**[!UICONTROL ![翻訳を承認](assets/do-not-localize/thumb-up.png)」をクリックし、ダイアログで「**[!UICONTROL &#x200B;承認&#x200B;]**」をクリックして、ターゲットフォルダー内の翻訳済みアセットを編集済みアセットの翻訳済みバージョンで上書きします。]**
 
    >[!NOTE]
    >
    >翻訳ワークフローが対象のアセットを更新できるようにするには、アセットとメタデータの両方を承認します。
 
-   Click **[!UICONTROL Reject Translation]** ![reject translation](assets/do-not-localize/thumb-down.png) to retain the originally translated version of the asset in the target locale root and reject the edited version.
+   「**[!UICONTROL 翻訳を拒否]** ![翻訳を拒否](assets/do-not-localize/thumb-down.png)」をクリックすると、元の翻訳バージョンのアセットがターゲットロケールルートに保持され、編集されたバージョンが拒否されます。
 
-1. 翻訳済みメタデータを表示するには、コン [!DNL Assets] ソールに移動し、翻訳済みの各アセットの [!UICONTROL プロパティ] ページを開きます。
+1. 翻訳済みメタデータを表示するには、[!DNL Assets]コンソールに移動し、翻訳済みアセットごとに[!UICONTROL プロパティ]ページを開きます。
 
 >[!MORELIKETHIS]
 >
