@@ -73,7 +73,7 @@ Search&amp;Promote サーバーでは、ファセットや各コンポーネン�
  </tbody>
 </table>
 
-## 検索結果ページの作成 {#creating-the-search-results-page}
+## 検索結果ページの作成  {#creating-the-search-results-page}
 
 WCM Web サイトコンソールを使用して、検索結果を表示するページを作成します。同じ Search&amp;Promote サービスを使用している場合、すべての検索コンポーネントからの検索結果をこのページに表示することができます。
 
@@ -92,11 +92,11 @@ WCM Web サイトコンソールを使用して、検索結果を表示するペ
 * 前へ／次へを非表示にする：ユーザーが現在のページを基準として結果ページを移動できるようにするかどうかを決定します。
 * すべてのビューを非表示にする：ユーザーがすべての検索結果を 1 ページに統合できるようにするかどうかを決定します。通常、ページ分割されたデータを提供するとサーバーのリソースをより効率的に使用できます。サイズの大きなデータセットを 1 つの応答メッセージで転送されないようにするには、このオプションを選択します。
 
-### ファセットによる結果のフィルタリングの有効化 {#enabling-the-filtering-of-results-by-facets}
+### ファセットによる結果のフィルタリングの有効化  {#enabling-the-filtering-of-results-by-facets}
 
-ユーザーが検索結果をファセットでフィルタリングできるように設定できます。The **Checkbox List Facet**, **Dropdown Facet**, and **Link List Facet** components enable users to select one or more facets for filtering. これらのコンポーネントを使用する際には、**パンくず**&#x200B;コンポーネントも指定することをお勧めします。パンくずは、現在使用されているフィルターを示します。
+ユーザーが検索結果をファセットでフィルタリングできるように設定できます。**チェックボックスリストファセット**、**ドロップダウンファセット**、**リンクリストファセット**&#x200B;の各コンポーネントを使用して、フィルタリングするファセットを1つ以上選択できます。 これらのコンポーネントを使用する際には、**パンくず**&#x200B;コンポーネントも指定することをお勧めします。パンくずは、現在使用されているフィルターを示します。
 
-The **Checkbox List Facet**, **Dropdown Facet**, and **Link List Facet** components each have the following properties that you configure in **Edit** mode:
+**チェックボックスリストファセット**、**ドロップダウンファセット**、**リンクリストファセット**&#x200B;の各コンポーネントには、**編集**&#x200B;モードで設定する次のプロパティがあります。
 
 * **ファセット名**：フィルターに使用されるファセットの名前。
 
@@ -129,7 +129,7 @@ The **Checkbox List Facet**, **Dropdown Facet**, and **Link List Facet** compone
 * 区切り：各パンくずの区切りとして機能する文字または文字列を定義します。「区切り」フィールドには任意の文字列を入力できます。デフォルトの設定は、&quot;>&quot;（引用符なし）です。
 * 末尾の区切り：パンくずの最後に表示する文字または文字列を定義します。「末尾の区切り」フィールドには任意の文字列を入力できます。デフォルトの設定は、*blank*（パンくず行の最後に何も表示しない）です。
 
-### 検索ボックスの追加 {#adding-search-boxes}
+### 検索ボックスの追加  {#adding-search-boxes}
 
 検索コンポーネントを使用すると、ユーザーがキーワード検索を実行できます。検索機能にアクセス権限を付与する各ページに検索コンポーネントを追加します。
 
@@ -150,4 +150,4 @@ Bannersコンポーネントは、顧客のSearch&amp;Promote検索に従って�
 
 この図は、下の完全に機能する Search&amp;Promote 結果ページを作成するためにページに追加されるコンポーネントを示します。
 
-![1328213789109](assets/1328213789109.png)![sandppageexample](assets/sandppageexample.png)
+![1328213789109](assets/1328213789109.png) ![sandppageexample](assets/sandppageexample.png)
