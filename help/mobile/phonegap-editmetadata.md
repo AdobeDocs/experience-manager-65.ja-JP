@@ -18,13 +18,13 @@ ht-degree: 72%
 ---
 
 
-# アプリのメタデータの編集 {#editing-app-metadata}
+# アプリのメタデータの編集  {#editing-app-metadata}
 
 >[!NOTE]
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-**アプリを管理**&#x200B;タイルとアプリを管理ページには、アプリケーションのメタデータを表示および編集するための手段が用意されています。アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。これには、一般的なメタデータ、iOSメタデータ、スクリーンショットが含まれる場合があります。 See the [Manage App Tile](/help/mobile/phonegap-app-details-tile.md) for further details on common and iOS metadata.
+**アプリを管理**&#x200B;タイルとアプリを管理ページには、アプリケーションのメタデータを表示および編集するための手段が用意されています。アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。これには、一般的なメタデータ、iOSメタデータ、スクリーンショットが含まれる場合があります。 共通およびiOSメタデータについて詳しくは、[アプリタイルを管理](/help/mobile/phonegap-app-details-tile.md)を参照してください。
 
 ## アプリのデータの編集 {#editing-the-app-data}
 
@@ -34,7 +34,7 @@ ht-degree: 72%
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. To view or edit details by clicking the &#39;...&#39; in the bottom right corner of the **Manage App** tile.
+1. 「。..」 **アプリ**&#x200B;を管理タイルの右下隅に表示されます。
 
 1. 次の図に示すように、使用可能な5つのタブに詳細を入力または表示します。
 
@@ -59,12 +59,12 @@ ht-degree: 72%
 
 アセットをスクリーンショットとして追加するには：
 
-1. While in edit mode of the **Manage App** page, click add (plus icon).
-1. Select the asset and click **Select** to add the asset.
+1. **アプリ**&#x200B;を管理ページの編集モードで、追加（プラスアイコン）をクリックします。
+1. アセットを選択し、**「**&#x200B;を選択」をクリックして、アセットを追加します。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
-1. Select the asset and click **Select** to add the asset.
+1. アセットを選択し、**「**&#x200B;を選択」をクリックして、アセットを追加します。
 
 >[!NOTE]
 >
