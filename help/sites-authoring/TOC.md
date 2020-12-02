@@ -15,10 +15,10 @@ ht-degree: 92%
 ---
 
 
-# AEM 6.5 オーサリングユーザーガイド {#authoring}
+# AEM 6.5 オーサリングユーザーガイド  {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEMオーサリングに不可欠なタスク、ツールおよび概念 {#essentials}
++ AEMオーサリングに不可欠なタスク、ツール、概念{#essentials}
    + [作成者が行う最初の手順](first-steps.md)
    + [ページオーサリング](page-authoring.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
@@ -75,13 +75,13 @@ ht-degree: 92%
    + [ページへのワークフローの適用](workflows-applying.md)
    + [ワークフローへの参加](workflows-participating.md)
    + [プロジェクトワークフローの操作](projects-with-workflows.md)
-+ ページのパフォーマンス {#page-performance}
++ ページパフォーマンス{#page-performance}
    + [コンテンツインサイト](content-insights.md)
    + [ページパフォーマンスの分析](ci-analyze.md)
    + [ページ分析データの表示](pa-using.md)
    + [ページへの Search&amp;Promote 機能の追加](search-and-promote.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライズ機能](personalization.md)
+   + [パーソナライゼーション](personalization.md)
    + [ContextHub データを使用したページのプレビュー ](ch-previewing.md)
    + [ターゲットモードを使用したターゲットコンテンツのオーサリング](content-targeting-touch.md)
    + [マルチサイトでのターゲットコンテンツの操作](multisite-support-targeted-content.md)
@@ -90,7 +90,7 @@ ht-degree: 92%
    + [オーディエンスの管理](managing-audiences.md)
    + [オファーの作成と管理](offerlib.md)
    + [セグメント化について](segmentation-overview.md)
-+ AEMとAdobe Campaign {#aem-adobe-campaign}
++ AEMとAdobe Campaign{#aem-adobe-campaign}
    + [Adobe Campaign の使用](adobe-campaign.md)
    + [Adobe Campaign Classic および Adobe Campaign Standard の使用](campaign.md)
    + [Adobe Campaign のターゲット設定](target-adobe-campaign.md)
