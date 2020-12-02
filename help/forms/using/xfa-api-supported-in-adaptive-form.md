@@ -141,7 +141,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームのshort descriptionプロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>caption<em> (all Field types)</em></p> </td>
+   <td><p>caption<em> （すべてのフィールドタイプ）</em></p> </td>
    <td><p>アダプティブフォームのTitleプロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
@@ -153,11 +153,11 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの value プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>items<em> (List Box, Check Box)</em></p> </td>
+   <td><p>items<em> (リストボックス、チェックボックス)</em></p> </td>
    <td><p>アダプティブフォームの options プロパティにマッピング済み。これは、オプション式を使用して上書きできます。</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em> (Text Field)</em></p> </td>
+   <td><p>maxChar<em> （テキストフィールド）</em></p> </td>
    <td><p>アダプティブフォームの Maximum characters allowed プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
@@ -173,7 +173,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの Lead digits プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em> (List Box)</em></p> </td>
+   <td><p>multiSelect<em> (リストボックス)</em></p> </td>
    <td><p>アダプティブフォームの Allows multiple selection プロパティにマッピング済み。</p> </td>
   </tr>
  </tbody>
@@ -228,7 +228,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
  </tbody>
 </table>
 
-### 検証 {#validations}
+### 検証  {#validations}
 
 次の表は、アダプティブフォームで XFA 検証が検証にどのようにマッピングするかを示したものです。
 
