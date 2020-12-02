@@ -23,7 +23,7 @@ ht-degree: 87%
 
 CSS と LESS フレームワークに関する知識が必要になります。
 
-## カスタマイズの対象 {#what-can-be-customized}
+## カスタマイズの対象  {#what-can-be-customized}
 
 この記事では、公開されているアダプティブフォームの CSS クラスについて説明します。これらのクラスを活用して、アダプティブフォームの様々なコンポーネントのスタイルを設定できます。 警告を表示するダイアログやステータスバーなど、オーサリングコンポーネントのスタイル設定については、ここでは説明しません。[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を使用してコンポーネントのスタイル設定ができない場合にのみ、これらのスタイル構造を使用してスタイル（CSS または Less）を作成してください。
 
@@ -36,7 +36,7 @@ LESS フレームワークにより、アダプティブフォームでのスタ
 * テーマを変更する
 * コンポーネントのスタイルを変更する
 
-## テーマを変更する {#changing-theme}
+## テーマを変更する  {#changing-theme}
 
 アダプティブフォームのテーマを変更して、アダプティブフォームが埋め込まれたWebページと外観が一致するようにすることができます。
 
@@ -54,7 +54,7 @@ Web ページのテーマは、ブートストラップに基づき、次の CSS
 
 現在、LESS 変数は、アダプティブフォームのさまざまな要素のこれらのプロパティに対してのみ定義されています。
 
-## コンポーネントスタイルの変更 {#changing-component-style}
+## コンポーネントスタイルの変更  {#changing-component-style}
 
 要素の外観、レイアウト、配置、可視性を変更することができます。このタスクを実現するには、この記事に示すスタイル設定構成を含めるカスタム.cssファイルを作成または更新します。
 
@@ -104,7 +104,7 @@ Web ページのテーマは、ブートストラップに基づき、次の CSS
 
 ## フィールドのスタイル設定 {#field-styling}
 
-アダプティブフォームには、さまざまなタイプのフィールドが含まれています。各フィールドにはユニークなクラス名があり、それがフィールドの名前となっています。The field also has a common class name `guideFieldNode`.
+アダプティブフォームには、さまざまなタイプのフィールドが含まれています。各フィールドにはユニークなクラス名があり、それがフィールドの名前となっています。フィールドにも共通のクラス名`guideFieldNode`があります。
 
 フィールドには、ラベル、ウィジェット、ヘルプの説明（詳細な説明および短い説明の両方）、フィールドヘルプアイコン（クエスチョンマーク）が含まれています。
 
@@ -140,7 +140,7 @@ Web ページのテーマは、ブートストラップに基づき、次の CSS
 
 ## ラベルのスタイル設定 {#label-styling}
 
-The HTML element **label** used for the field includes the classes **left** or **top** depending on whether the label is at the top or left.
+フィールドに使用されるHTML要素&#x200B;**label**&#x200B;には、ラベルが上にあるか左にあるかに応じて、**left**&#x200B;または&#x200B;**top**&#x200B;のクラスが含まれます。
 
 <table>
  <tbody>
@@ -180,7 +180,7 @@ The HTML element **label** used for the field includes the classes **left** or *
  </tbody>
 </table>
 
-The CSS rules for the label are applied using the **guideFieldLabel** label. カスタム変更を見えるようにするには、作成者がこのルールを上書きする必要があります。
+ラベルに対するCSSルールは、**guideFieldLabel**&#x200B;ラベルを使用して適用されます。 カスタム変更を見えるようにするには、作成者がこのルールを上書きする必要があります。
 
 ## ウィジェットのスタイル設定 {#widgets-styling}
 
@@ -284,13 +284,13 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
  </tbody>
 </table>
 
-### ウィジェットのスタイル設定における制限事項 {#limitations-in-widget-styling}
+### ウィジェットのスタイル設定における制限事項  {#limitations-in-widget-styling}
 
 変数を使用したフォーカス時、必須、無効フィールドのスタイル設定には制限があります。ただし、スタイルをオーバーライドすることにより変更することができます。変数の使用における制限は、主に変数の数を抑えるために設けられています。制限は、フィールドの外観が大幅に変化する場合に緩和できます。これは、フィールドが前述の状態のいずれかにあるためです。
 
 ## ヘルプの説明 {#help-description}
 
-作成者は、短い説明と詳細な説明のコンポーネントを使用することにより、ヘルプコンテンツを指定することができます。Both components have a common class `.guideHelpDescription` and another class `.long`/ `.short`, depending on the type of description. ヘルプコンテンツは、説明のスタイル設定をオーバーライドする段落要素で囲まれています。ヘルプの説明（詳細な説明と短い説明の両方）は、次の表で説明されるとおり、widgetshelp で始まる変数を使用して変更されます。
+作成者は、短い説明と詳細な説明のコンポーネントを使用することにより、ヘルプコンテンツを指定することができます。両方のコンポーネントは、説明の種類に応じて、共通のクラス`.guideHelpDescription`と別のクラス`.long`/ `.short`を持ちます。 ヘルプコンテンツは、説明のスタイル設定をオーバーライドする段落要素で囲まれています。ヘルプの説明（詳細な説明と短い説明の両方）は、次の表で説明されるとおり、widgetshelp で始まる変数を使用して変更されます。
 
 <table>
  <tbody>
@@ -329,7 +329,7 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
  </tbody>
 </table>
 
-## 利用条件 {#terms-and-conditions}
+## 利用条件  {#terms-and-conditions}
 
 利用条件 (TnC`` ``) ウィジェットでは、利用条件を指定することができます。このウィジェットは、次の表で説明する変数を使ってカスタマイズすることができます。
 
@@ -354,7 +354,7 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
 
 ボタンもウィジェットのひとつです。ただし、そのスタイル設定はウィジェットとは多少異なります。アダプティブフォームでは、次のいずれかを含んでいればボタンと見なされます。
 
-* [inputtype = text]
+* input[type = text]
 * button
 * .button のクラスを持つ要素
 
@@ -520,7 +520,7 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
   </tr>
   <tr>
    <td><p><code>table-header-bg-color</code></p> </td>
-   <td><p>ヘッダー行の背景色The default value is <code>#333</code>.<br /> </p> </td>
+   <td><p>ヘッダー行の背景色デフォルト値は <code>#333</code> です。<br /> </p> </td>
   </tr>
   <tr>
    <td><p><code>table-odd-row-bg-color</code></p> </td>
@@ -570,7 +570,7 @@ The CSS rules for the label are applied using the **guideFieldLabel** label. カ
  </tbody>
 </table>
 
-## ナビゲーターのスタイル {#navigator-styles}
+## ナビゲーターのスタイル  {#navigator-styles}
 
 ナビゲータータブには 4 種類あります。これらに’は、左側および上部のタブ、ウィザード、アコーディオンが含まれています。各ナビゲーターには、異なるクラスが割当られています。
 
@@ -982,7 +982,7 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
  </tbody>
 </table>
 
-## スクロールインジケーター {#scroll-indicator}
+## スクロールインジケーター  {#scroll-indicator}
 
 これらの変数は、スクロールインジケーターに影響します。スクロールインジケーターとは、モバイルデバイスまたは画面の小さいデバイスに表示されるオレンジの矢印のことです。スクロールインジケーターは、画面で表示されている部分以外にコンテンツがあることを示しています。下方向にスクロールすると表示されます。矢印は、コンテンツの一番下に到達すると消えます。
 
@@ -1020,7 +1020,7 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
  </tbody>
 </table>
 
-## モバイル固定ツールバーのレイアウト固有の変数 {#mobile-fixed-toolbar-layout-specific-variables}
+## モバイル固定ツールバーのレイアウト固有の変数  {#mobile-fixed-toolbar-layout-specific-variables}
 
 次の表に示すこれらの変数は、モバイル固定ツールバーのレイアウトに影響します。
 
@@ -1074,9 +1074,9 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
  </tbody>
 </table>
 
-## テーマ固有の変数 {#theme-specific-variable}
+## テーマ固有の変数  {#theme-specific-variable}
 
-The **Simple enrollment** theme at /etc/clientlibs/fd/af/guidetheme/simpleEnrollment and the category `guide.theme.simpleEnrollment` also introduce a few variables. シンプルな登録を強化するテーマを作成する場合は、次の「追加の変数」を使用できます。
+/etc/clientlibs/fd/af/guidetheme/simpleEnrollmentの&#x200B;**単純な登録**&#x200B;テーマと、カテゴリ`guide.theme.simpleEnrollment`でもいくつかの変数が導入されています。 シンプルな登録を強化するテーマを作成する場合は、次の「追加の変数」を使用できます。
 
 <table>
  <tbody>
