@@ -33,11 +33,11 @@ ht-degree: 95%
 
 デフォルトでは、ログエントリは `error.log` ファイルに書き込まれます。ログエントリを別のログファイルにリダイレクトすると、監視が容易になります。このリダイレクト方法について詳しくは、次の説明を参照してください。
 
-## 別のログファイルへの出力のリダイレクト {#redirecting-the-output-to-a-separate-log-file}
+## 別のログファイルへの出力のリダイレクト  {#redirecting-the-output-to-a-separate-log-file}
 
 別のログファイルにログ出力をリダイレクトするには、新しい **Apache Sling Logging Logger** 設定を作成する必要があります。次の例では、別のファイルの名前として、`useraudit.log` を使用します。
 
-1. Go to the Web Console by browsing to *https://serveraddress:serverport/system/console/configMgr*
+1. *https://serveraddress:serverport/system/console/configMgr*&#x200B;を参照して、Webコンソールにアクセスします。
 1. **Apache Sling Logging Logger Configuration** を検索します。次に、エントリの右側にある「+」を押して、新しいファクトリ設定を作成します。
 1. 次の設定を作成します。
 
@@ -82,7 +82,7 @@ ht-degree: 95%
 19.05.2017 15:44:10.405 *INFO* [0:0:0:0:0:0:0:1 [1495197850401] POST /home/users/3/35XVpVtLRx4a5J9gKrVG.rw.userprops.html HTTP/1.1] com.adobe.granite.security.user.internal.audit.AuditAuthorizableAction Password for User 'john' was changed
 ```
 
-## クラシック UI {#classic-ui}
+## クラシック UI  {#classic-ui}
 
 クラシック UI では、ユーザーの追加と削除に関連して監査ログに記録される CRUD 操作に関する情報は、影響を受けるユーザーの ID と、変更の発生日時のみになります。
 
