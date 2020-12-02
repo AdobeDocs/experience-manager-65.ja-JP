@@ -11,13 +11,13 @@ ht-degree: 78%
 ---
 
 
-# Use demo package for Asset Insights {#using-demo-package-for-asset-insights}
+# アセットインサイトにデモパッケージを使用{#using-demo-package-for-asset-insights}
 
 デモパッケージを使用して、アセットインサイトでサンプル Web ページからデータを取得し、サンプル Web ページのインサイトを生成できるようにします。
 
-## [!DNL Use Experience Manager Assets] サンプルWebページを使用したインサイト  {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] サンプルWebページを使用したインサイト   {#using-aem-assets-insights-with-sample-web-page}
 
-1. Configure Asset Insights using the instructions in [Configuring Asset Insights](configure-asset-insights.md).
+1. [アセットインサイトの設定](configure-asset-insights.md)の手順に従って、アセットインサイトを設定します。
 1. 次に示すサンプル Assets パッケージをダウンロードして、CRXDE パッケージマネージャーでインストールします。
 
    [ファイルを入手](assets/insightsdemo.zip)
@@ -34,4 +34,4 @@ ht-degree: 78%
 
    >[!NOTE]
    >
-   >The external web page can be in [!DNL Experience Manager] itself.
+   >外部Webページは[!DNL Experience Manager]自体に含めることができます。
