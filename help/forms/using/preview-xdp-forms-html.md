@@ -21,7 +21,7 @@ ht-degree: 76%
 
 AEM Forms Designer でフォームをデザインする間、フォームの PDF レンダリングをプレビューする他に、HTML5 レンダリングをプレビューすることもできます。「**HTML プレビュー**」タブを使用すると、フォームがブラウザでどのように表示されるかをプレビューすることができます。
 
-## Designer での XDP フォームの HTML プレビューの有効化 {#html-preview-of-forms-in-forms-designer}
+## Designer での XDP フォームの HTML プレビューの有効化  {#html-preview-of-forms-in-forms-designer}
 
 Designer での XDP フォームの HTML プレビューの生成を有効にするには、次の設定を行います。
 
@@ -31,7 +31,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. OSGiで実行中 `https://'[server]:[port]'/system/console/configMgr` のAEM Formsに移動または
+1. OSGi上で動作しているAEM Formsの`https://'[server]:[port]'/system/console/configMgr`に移動するか、
    `https://'[server]:[port]'/lc/system/console/configMgr` JEE上で動いているAEM Formsで
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
@@ -59,21 +59,21 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 1. 管理者として AEM Web コンソールにログインします。
 
-   * URL for AEM Forms on OSGi is `https://'[server]:[port]'/system/console/configMgr`
-   * JEE上のAEM FormsのURLは `https://'[server]:[port]'/lc/system/console/configMgr`
+   * OSGiのAEM FormsのURLは`https://'[server]:[port]'/system/console/configMgr`です
+   * JEE上のAEM FormsのURLは`https://'[server]:[port]'/lc/system/console/configMgr`です
 
 1. **[!UICONTROL Mobile Forms の設定]**&#x200B;を編集用に開きます。
 1. 「**[!UICONTROL 保護モード]**」オプションの選択を解除して「**[!UICONTROL 保存]**」をクリックします。
 
-### AEM Forms サーバーの詳細の指定 {#provide-details-of-aem-forms-server}
+### AEM Forms サーバーの詳細の指定  {#provide-details-of-aem-forms-server}
 
 1. Designer で、**ツール**／**オプション**&#x200B;に移動します。
-1. In the Options window, select **Server Options** page, provide the following details, and click **OK**.
+1. オプションウィンドウで、**サーバーオプション**&#x200B;ページを選択し、次の詳細を入力して、**OK**&#x200B;をクリックします。
 
    * **Server URL**：AEM Forms サーバーの URL です。
 
    * **HTTP port number**：AEM サーバーポート。デフォルト値は 4502 です。
-   * **HTMLプレビューコンテキスト：** XFAフォームのレンダリング用プロファイルのパス。 次のデフォルトプロファイルを使用して、Designerでフォームのプレビューを行います。 ただし、カスタムプロファイルへのパスを指定することもできます。
+   * **HTMLプレビューコンテキスト：XFAフォームのレンダリング用プロファイルの** パス。次のデフォルトプロファイルを使用して、Designerでフォームのプレビューを行います。 ただし、カスタムプロファイルへのパスを指定することもできます。
 
       * `/content/xfaforms/profiles/default.html` (OSGi 上の AEM Forms)
 
@@ -85,13 +85,13 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
    >[!NOTE]
    >
-   >AEM Formsサーバーが起動および実行されていることを確認します。 The HTML preview connects to the CRX server to *generate* a preview.
+   >AEM Formsサーバーが起動および実行されていることを確認します。 HTMLプレビューはCRXサーバーに接続し、プレビューを&#x200B;*生成*&#x200B;します。
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
 
    AEM Forms Designer のオプション
 
-1. To preview a form in HTML, click the **Preview HTML** tab.
+1. HTMLでフォームをプレビューするには、「**プレビューHTML**」タブをクリックします。
 
    >[!NOTE]
    >
