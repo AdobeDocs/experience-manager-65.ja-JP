@@ -19,11 +19,11 @@ ht-degree: 78%
 ---
 
 
-# アーキテクチャ of HTML5 forms{#architecture-of-html-forms}
+# アーキテクチャ （HTML5フォームの{#architecture-of-html-forms}）
 
 ## アーキテクチャ {#architecture}
 
-HTML5 forms functionality is deployed as a package within the embedded AEM instance and is exposesd as a REST end point over HTTP/S using RESTful [Apache Sling Architecture](https://sling.apache.org/).
+HTML5フォーム機能は埋め込みAEMインスタンス内のパッケージとしてデプロイされ、RESTful [Apache Slingアーキテクチャ](https://sling.apache.org/)を使用して、HTTP/S上でのRESTエンドポイントとして公開されます。
 
 ![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)
 
@@ -31,13 +31,13 @@ HTML5 forms functionality is deployed as a package within the embedded AEM insta
 
 [Apache Sling](https://sling.apache.org/) はリソースを中心としています。それは 要求 URL を使用してまずリソースを解決します。それぞれのリソースには **sling:resourceType**（または **sling:resourceSuperType**）プロパティがあります。このプロパティ、要求メソッド、および要求プロパティのプロパティに基づき、要求を処理するために Sling スクリプトが選択されます。この Sling スクリプトは JSP またはサーブレットにすることができます。HTML5 フォームの場合、**Profile** ノードは Sling リソースとして機能し、**プロファイルレンダラー**&#x200B;はモバイルフォームをレンダリングするために特定のプロファイルで要求を処理する Sling スクリプトとして機能します。**プロファイルレンダラー**&#x200B;は要求からパラメーターを読み取り、Forms OSGi サービスを呼び出す JSP です。
 
-For details on REST endpoint and supported request parameters, see [Rendering Form Template](/help/forms/using/rendering-form-template.md).
+RESTエンドポイントとサポートされている要求パラメーターについて詳しくは、「[フォームテンプレートのレンダリング](/help/forms/using/rendering-form-template.md)」を参照してください。
 
 ユーザーがiOSやAndroidブラウザーなどのクライアントデバイスから要求を行う場合、Slingはまず要求URLに基づいてプロファイルノードを解決します。 この Profile ノードから、それは **sling:resourceSuperType** と **sling:resourceType** を読み取り、このフォームレンダリング要求を処理できる使用可能なスクリプトをすべて特定します。次に、それは Sling 要求セレクターを要求メソッドとともに使用して、この要求の処理に最適なスクリプトを特定します。要求がプロファイルレンダラー JSP に達したら、JSP は Forms OSGi サービスを呼び出します。
 
 Sling スクリプトの解決について詳しくは、「[AEM Sling Cheat Sheet](https://docs.adobe.com/content/docs/en/cq/current/developing/sling_cheatsheet.html)」または「[Apache Sling Url decomposition](https://sling.apache.org/site/url-decomposition.html)」を参照してください。
 
-#### 一般的なフォーム処理呼び出しのフロー {#typical-form-processing-call-flow}
+#### 一般的なフォーム処理呼び出しのフロー  {#typical-form-processing-call-flow}
 
 HTML5 フォームは、最初のリクエスト時にフォームを処理（レンダリングまたは送信）するために必要なすべての中間オブジェクトをキャッシュします。データに依存するオブジェクトはキャッシュしません（このようなオブジェクトは変更されることが多いからです）。
 
@@ -52,23 +52,23 @@ HTML5 フォームは、フラグメントと画像の参照がないテンプ�
 Forms OSGi サービスは次の 2 つの手順でリクエストを処理します。
 
 * **レイアウトと初期フォーム状態の生成**：Forms OSGi レンダリングサービスは、フォームキャッシュコンポーネントを呼び出して、このフォームがすでにキャッシュされていて無効化されていないかを調べます。 フォームがキャッシュされ有効になっている場合は、キャッシュから生成 HTML を提供します。フォームが無効化されている場合、Forms OSGi レンダリングサービスは、初期フォームレイアウトとフォーム状態を XML 形式で生成します。この XML は Forms OSGi サービスによって HTML レイアウトと初期 JSON フォーム状態に変換されてから、後続の要求のためにキャッシュされます。
-* **事前入力されたForms**:レンダリング中に、ユーザーが事前入力されたデータを含むフォームを要求した場合、FormsOSGiレンダリングサービスはFormsサービスコンテナを呼び出し、マージされたデータを含む新しいフォーム状態を生成します。 ただし、上記の手順でレイアウトはすでに生成されているので、この呼び出しのほうが最初の呼び出しよりも高速です。この呼び出しはデータの結合とデータへのスクリプトの実行のみを実施します。
+* **事前入力されたForms**:レンダリング中に、ユーザーが事前入力されたデータを含むフォームを要求した場合、FormsOSGiレンダリングサービスはFormsサービスコンテナを呼び出し、マージされたデータを含む新しいフォーム状態を生成します。ただし、上記の手順でレイアウトはすでに生成されているので、この呼び出しのほうが最初の呼び出しよりも高速です。この呼び出しはデータの結合とデータへのスクリプトの実行のみを実施します。
 
 フォームまたはフォーム内で使用されるアセットに更新がある場合、フォームキャッシュコンポーネントはその更新を検出し、その特定のフォームのキャッシュは無効になります。 Forms OSGi サービスが処理を完了したら、プロファイルレンダラー JSP はこのフォームに JavaScript ライブラリの参照とスタイル設定を追加し、応答をクライアントに返します。[Apache](https://httpd.apache.org/) のような一般的な Web サーバーは HTML 圧縮オンでここで使用できます。Webサーバーは、応答サイズ、ネットワークトラフィック、およびサーバーとクライアントマシンの間でのデータのストリーミングに要する時間を削減します。
 
-When a user submits the form, the browser sends state of form in JSON format to the [submit service proxy](../../forms/using/service-proxy.md); then the submit service proxy generates a data XML using JSON data and submits that data XML to submit endpoint.
+ユーザーがフォームを送信すると、ブラウザーはJSON形式のフォームの状態を[送信サービスプロキシ](../../forms/using/service-proxy.md)に送信します。次に、送信サービスプロキシは、JSONデータを使用してデータXMLを生成し、そのデータXMLを送信エンドポイントに送信します。
 
 ## コンポーネント {#components}
 
 HTML5 フォームを有効にするには AEM Forms アドオンパッケージが必要です。アドオンパッケージのインストールについて詳しくは、「[AEM Forms のインストールと設定](../../forms/using/installing-configuring-aem-forms-osgi.md)」を参照してください。
 
-### OSGi コンポーネント（adobe-lc-forms-core.jar） {#osgi-components-adobe-lc-forms-core-jar}
+### OSGi コンポーネント（adobe-lc-forms-core.jar）  {#osgi-components-adobe-lc-forms-core-jar}
 
 **AdobeXFAFormsレンダラー(com.adobe.livecycle.adobe-lc-forms-core)** は、Felix管理コンソールのバンドル表示(https://[host]:[port]/system/console/bundles)から表示した場合のHTML5フォームOSGiバンドルの表示名です。
 
 このコンポーネントにはレンダリング、キャッシュの管理、および環境設定用の OSGi コンポーネントが含まれています。
 
-#### Forms OSGi サービス {#forms-osgi-service}
+#### Forms OSGi サービス  {#forms-osgi-service}
 
 この OSGi サービスには XDP を HTML としてレンダリングするロジックが含まれていて、データ XML を生成するためにフォームの送信を処理します。このサービスは Forms サービスコンテナを使用します。Forms サービスコンテナは処理を実行するネイティブコンポーネント `XMLFormService.exe` を内部的に呼び出します。
 
@@ -111,9 +111,9 @@ HTML5 フォームは LRU 方法を使用してメモリ内キャッシングを
 
 設定サービスは HTML5 フォームの設定パラメータとキャッシュ設定の調整を可能にします。
 
-To update these settings, go to the CQ Felix Admin Console (available at https://&lt;&#39;[server]:[port]&#39;/system/console/configMgr), search for and select Mobile Forms Configuration.
+これらの設定を更新するには、CQ FelixAdmin Console(https://&lt;&#39;[server]:[port]&#39;/system/console/configMgrで利用可能)に移動し、「Mobile Mobile Configuration」を検索して選択します。
 
-設定サービスを使用して、キャッシュサイズを設定したりキャッシュを無効化したりできます。また、デバッグオプションパラメーターの使用によるデバッグも有効化できます。More information about debugging forms can be found at [Debugging HTML5 forms](/help/forms/using/debug.md).
+設定サービスを使用して、キャッシュサイズを設定したりキャッシュを無効化したりできます。また、デバッグオプションパラメーターの使用によるデバッグも有効化できます。フォームのデバッグについて詳しくは、[HTML5フォームのデバッグ](/help/forms/using/debug.md)を参照してください。
 
 ### ランタイムコンポーネント（adobe-lc-forms-runtime-pkg.zip）{#runtime-components-adobe-lc-forms-runtime-pkg-zip}
 
@@ -121,7 +121,7 @@ HTML フォームのレンダリングに使用されるクライアント側ラ
 
 **ランタイムパッケージの一部として使用できる重要なコンポーネント：**
 
-#### スクリプティングエンジン {#scripting-engine}
+#### スクリプティングエンジン  {#scripting-engine}
 
 Adobe XFA の実装は、フォームにおけるユーザー定義のロジックの実行を有効化するために、JavaScript と FormCalc の 2 種類のスクリプティング言語をサポートしています。
 
@@ -129,7 +129,7 @@ HTML フォームのスクリプティングエンジンはこれらの両方の
 
 レンダリング時に、FormCalc スクリプトはユーザーやデザイナーに対して透過的なサーバー上で JavaScript に変換（およびキャッシュ）されます。
 
-このスクリプティングエンジンは Object.defineProperty のような、いくつかの ECMAScript5 の機能を使用します。エンジン／ライブラリはカテゴリ名 **xfaforms.profile** で CQ クライアントライブラリとして提供されます。It also provides **FormBridge API** to enable external portals or apps to interact with form. FormBridge を使用することで、外部アプリは特定の要素をプログラムで非表示にしたり、それらの値を取得または設定したり、それらの属性を変更したりできます。
+このスクリプティングエンジンは Object.defineProperty のような、いくつかの ECMAScript5 の機能を使用します。エンジン／ライブラリはカテゴリ名 **xfaforms.profile** で CQ クライアントライブラリとして提供されます。また、**FormBridge API**&#x200B;を提供し、外部ポータルまたはフォームとやり取りするアプリを有効にします。 FormBridge を使用することで、外部アプリは特定の要素をプログラムで非表示にしたり、それらの値を取得または設定したり、それらの属性を変更したりできます。
 
 詳しくは、「[Form Bridge](/help/forms/using/form-bridge-apis.md)」の記事を参照してください。
 
@@ -149,7 +149,7 @@ HTML要素に関連付けられたスタイルは、インラインまたは埋�
 
 デフォルトのスタイル設定とクラスについて詳しくは、「[スタイルの概要](/help/forms/using/css-styles.md)」を参照してください。
 
-#### サーバー側スクリプトと Web サービス {#server-side-script-and-web-services}
+#### サーバー側スクリプトと Web サービス  {#server-side-script-and-web-services}
 
 サーバーで実行されるようにマークされている、または Web サービスを呼び出すようにマークされているスクリプトは、必ずサーバーで実行されます。
 
@@ -160,7 +160,7 @@ HTML要素に関連付けられたスタイルは、インラインまたは埋�
 1. 新しい JSON 状態を生成します。
 1. 応答が返されるときにクライアントで新しい JSON 状態を結合します。
 
-#### ローカライズのリソースバンドル {#localization-resource-bundles}
+#### ローカライズのリソースバンドル  {#localization-resource-bundles}
 
 HTML5フォームは、イタリア語(it)、スペイン語(es)、ポルトガル語(pt_BR)、簡体字中国語(zh_CN)、繁体字中国語(limited support only)、韓国語(ko_KR)、英語(en_US)、フランス語(fr_FR)、ドイツ語(de_DE)をサポートしています、日本語(ja) 要求ヘッダーで受信されるロケールに基づいて、それに対応するリソースバンドルがクライアントに送信されます。このリソースバンドルはカテゴリ名が **xfaforms.I18N** の CQ クライアントライブラリとして、プロファイル JSP に追加されます。プロファイルでロケールパッケージを取得するロジックを上書きできます。
 
@@ -174,7 +174,7 @@ Sling パッケージにはプロファイルとプロファイルレンダラ�
 
 #### プロファイルレンダラー {#profile-renderers}
 
-Profile ノードに **xfaforms/profile** の値を持つ **sling:resourceSuperType** プロパティがあります。This property internally sends forward requests to the sling script for Profile nodes located in the **/libs/xfaforms/profile** folder. これらのスクリプトは、HTML フォームと必要な JS／CSS アーティファクトを組み合わせるためのコンテナである、JSP ページです。それらのページには、次への参照が含まれます。
+Profile ノードに **xfaforms/profile** の値を持つ **sling:resourceSuperType** プロパティがあります。このプロパティは、転送要求を内部的に&#x200B;**/libs/xfaforms/プロファイル**&#x200B;フォルダーにあるプロファイルノードのSlingスクリプトに送信します。 これらのスクリプトは、HTML フォームと必要な JS／CSS アーティファクトを組み合わせるためのコンテナである、JSP ページです。それらのページには、次への参照が含まれます。
 
 * **xfaforms.I18N.&lt;locale>**：このライブラリには、ローカライズされたデータが含まれています。
 * **xfaforms.profile**：このライブラリには XFA スクリプティングとレイアウトエンジンの実装が含まれています。
