@@ -22,7 +22,7 @@ ht-degree: 92%
 
 ページ分析データを使用すると、ページコンテンツの効果を測定できます。
 
-## コンソールに表示できる分析結果 {#analytics-visible-from-the-console}
+## コンソールに表示できる分析結果  {#analytics-visible-from-the-console}
 
 ![aa-10](assets/aa-10.png)
 
@@ -63,7 +63,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 >
 >ページのツリーに異なる Adobe Analytics のクラウド設定に関連付けられている子ページがある場合は、そのページで利用できるデータ列を設定できません。
 
-1. In List View, use the view selectors (right of toolbar), select **View Settings** and then **Add Custom Analytics Data**.
+1. リスト表示で、表示セレクター（ツールバーの右）を使用し、「**表示設定**」を選択し、「**カスタム解析データ追加**」を選択します。
 
    ![aa-15](assets/aa-15.png)
 
@@ -75,14 +75,14 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 ### サイトからコンテンツインサイトを開く {#opening-content-insights-from-sites}
 
-Open [Content Insight](/help/sites-authoring/content-insights.md) from the Sites console to further investigate page effectiveness.
+ページの効果をさらに調べるには、サイトコンソールから「[Content Insight](/help/sites-authoring/content-insights.md)」を開きます。
 
 1. サイトコンソールで、コンテンツインサイトを表示するページを選択します。
 1. ツールバーで、分析と推奨表示アイコンをクリックします。
 
    ![](do-not-localize/chlimage_1-16a.png)
 
-## ページエディターに表示できる分析結果（Activity Map） {#analytics-visible-from-the-page-editor-activity-map}
+## ページエディターに表示できる分析結果（Activity Map）  {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!NOTE]
 >
