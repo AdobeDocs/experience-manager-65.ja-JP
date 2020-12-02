@@ -28,7 +28,7 @@ ht-degree: 65%
 
 ユーザーは、すべてのコンテンツにアクセスしていますか。ユーザーはアプリの使用を中止していますか。中止している場合、その場所はどこですか。ユーザーがアプリに留まる頻度と戻ってくる頻度はどのくらいですか。どのような変更を導入でき、どのようにして定着率を測定しますか。クラッシュ率はどうなっていますか。ユーザーに対してクラッシュが発生していますか。
 
-[AdobeのMobile Servicesとの統合により、AEMアプリの](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) Mobile App Analytics [を活用できます](https://www.adobe.com/marketing-cloud/mobile-marketing.html)。
+[AdobeのMobile Services](https://www.adobe.com/marketing-cloud/mobile-marketing.html)との統合により、AEMアプリで[モバイルアプリ解析](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html)を活用できます。
 
 AEMアプリを実装して、モバイルアプリやコンテンツに対するユーザーの関与を追跡、レポート、理解し、起動回数、アプリ内時間、クラッシュ率などの主要なライフサイクル指標を測定します。
 
@@ -37,9 +37,9 @@ AEMアプリを実装して、モバイルアプリやコンテンツに対す�
 * モバイルアプリケーションへの Mobile Analytics の統合
 * Bloodhound による Analytics トラッキングのテスト
 
-## 前提条件 {#prerequisties}
+## 前提条件  {#prerequisties}
 
-AEM Mobile では、アプリでのトラッキングデータを収集してレポートするには Adobe Analytics アカウントが必要です。設定の一環として、AEM *Administrator* はまず次の操作を行う必要があります。
+AEM Mobile では、アプリでのトラッキングデータを収集してレポートするには Adobe Analytics アカウントが必要です。設定の一環として、AEM *管理者*&#x200B;はまず次のようにする必要があります。
 
 * Adobe Analytics アカウントを設定し、Mobile Services にアプリケーションのレポートスイートを作成します。
 * Adobe Experience Manager（AEM）に AMS クラウドサービスを設定します。
@@ -50,7 +50,7 @@ AEM Mobile では、アプリでのトラッキングデータを収集してレ
 
 Analytics アカウントを設定したら、コンテンツをモバイルアプリケーションに取り込むためにコンテンツ同期設定を作成する必要があります。
 
-詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 この設定は、コンテンツ同期に対して、ADBMobileConfig を /www ディレクトリに取り込むように指示する必要があります。For example in the Geometrixx Outdoors App the Content Sync configuration is located at: */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 開発向けの設定もありますが、Geometrixx Outdoors の場合には開発以外の設定と同じものです。
+詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 この設定は、コンテンツ同期に対して、ADBMobileConfig を /www ディレクトリに取り込むように指示する必要があります。例えば、Geometrixx Outdoorsアプリでは、コンテンツの同期設定は次の場所にあります。*/content/phonegap/geometrixx-outdoors/shell/jcr:content/page-app/app-config/ams-ADBMobileConfig*. 開発向けの設定もありますが、Geometrixx Outdoors の場合には開発以外の設定と同じものです。
 
 モバイルアプリケーションAEM AppsダッシュボードからADBMobileConfigをダウンロードする方法について詳しくは、Analytics - Mobile Services -AdobeMobile Services SDKの設定ファイルを参照してください。
 
@@ -66,9 +66,9 @@ Analytics アカウントを設定したら、コンテンツをモバイルア�
 
 プラットフォームごとに、固有の場所に ADBMobileConfig をコピーする必要があります。
 
-PhoneGap CLI を使用してビルドする場合は、Cordova ビルドフックスクリプトを使用します。This can be seen intheGeometrixx Outdoors App at:*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
+PhoneGap CLI を使用してビルドする場合は、Cordova ビルドフックスクリプトを使用します。これは、Geometrixx Outdoors App(*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js)で確認できます。*
 
-For iOS the file will need to be copied to the XCode project&#39;s **Resources** directory (eg. platforms/ios/Geometrixx/Resources/ADBMobileConfig.json）にコピーする必要があります。アプリが Android 向けの場合、コピー先のパスは「platforms/android/assets/ADBMobileConfig.json」です。For further details on using hooks during the PhoneGap CLI build refer to [Three hooks your Cordova/PhoneGap project needs](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/).
+iOSの場合、ファイルはXCodeプロジェクトの&#x200B;**Resources**&#x200B;ディレクトリ(例： platforms/ios/Geometrixx/Resources/ADBMobileConfig.json）にコピーする必要があります。アプリが Android 向けの場合、コピー先のパスは「platforms/android/assets/ADBMobileConfig.json」です。PhoneGap CLI構築中にフックを使用する方法の詳細については、[Cordova/PhoneGapプロジェクトに必要なフックを3つ参照してください。](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/)
 
 ```xml
 ///////////////////////////
@@ -99,13 +99,13 @@ For iOS the file will need to be copied to the XCode project&#39;s **Resources**
 </feature>
 ```
 
-The Geometrixx Outdoors App config.xml is located at */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-content/phonegap/www/config.xml*. 上記の例では、プラグイン URL の後に「#」とタグ値を追加することで、使用するプラグインの特定のバージョンを要求しています。これは、未テストのプラグインがビルド時に追加されても予期しない問題が発生しないようにする場合に効果的です。
+App config.xmlのGeometrixx Outdoorsは、*/content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-content/phonegap/www/config.xml*&#x200B;にあります。 上記の例では、プラグイン URL の後に「#」とタグ値を追加することで、使用するプラグインの特定のバージョンを要求しています。これは、未テストのプラグインがビルド時に追加されても予期しない問題が発生しないようにする場合に効果的です。
 
 これらの手順を実行すると、アプリでは Adobe Analytics で提供されるすべてのライフサイクル指標をレポートできるようになります。これには例えば、起動、クラッシュ、インストールなどのデータが含まれます。関心があるデータがこれだけの場合、操作は完了です。カスタムデータを収集する場合は、そのためのコードを実装する必要があります。
 
-### アプリを完全にトラッキングするためのコードの実装 {#instrument-your-code-for-full-app-tracking}
+### アプリを完全にトラッキングするためのコードの実装  {#instrument-your-code-for-full-app-tracking}
 
-There are several tracking APIs provided in the [AMS Phonegap Plugin API.](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
+[AMS Phonegap Plugin APIには、複数のトラッキングAPIが用意されています。](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
 これらを使用すると、ユーザーがアプリ内でどのページに移動しているか、どのコントロールが最も使用されているかなど、状態およびアクションをトラッキングできます。アプリを計測して追跡する最も簡単な方法は、AMSプラグインが提供するAnalytics APIを利用することです。
 
