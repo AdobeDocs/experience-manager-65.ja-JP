@@ -38,17 +38,17 @@ http://localhost:4502
 
 AEM ではリポジトリコンテンツが以下のように表示されます。
 
-* このタイプのノード `nt:folder` は、フォルダーとして表示されます。 ノードの下のノード `nt:folder` は、フォルダーのコンテンツとして表示されます。
+* タイプ`nt:folder`のノードは、フォルダーとして表示されます。 `nt:folder`ノードの下のノードは、フォルダーのコンテンツとして表示されます。
 
-* タイプのノード `nt:file` はファイルとして表示されます。 ノードの下のノードは表示されませんが、 `nt:file` ファイルのコンテンツが形成されます。
+* タイプ`nt:file`のノードはファイルとして表示されます。 `nt:file`ノードの下のノードは表示されませんが、ファイルの内容を形成します。
 
-WebDAVを使用してフォルダやファイルを作成および編集する場合、AEMは必要なノード `nt:folder``nt:file` とノードを作成および編集します。 WebDAVを使用してコンテンツの読み込みと書き出しを行う場合は、 `nt:file` および `nt:folder` ノードタイプをできる限り使用してください。
+WebDAVを使用してフォルダとファイルを作成および編集する場合、AEMは必要な`nt:folder`ノードと`nt:file`ノードを作成および編集します。 WebDAVを使用してコンテンツの読み込みと書き出しを行う場合は、できるだけ`nt:file`ノードタイプと`nt:folder`ノードタイプを使用してください。
 
 >[!NOTE]
 >
 >WebDAV を設定する前に、[技術要件](/help/sites-deploying/technical-requirements.md#webdav-clients)を確認してください。
 
-## WebDAV の URL {#webdav-urls}
+## WebDAV の URL  {#webdav-urls}
 
 WebDAV サーバーの URL の構造は以下のとおりです。
 
@@ -99,7 +99,7 @@ http://localhost:4502/crx/repository/staging
 
 ## WebDAV を介した接続 {#connecting-via-webdav}
 
-[上述のとおり](/help/sites-administering/webdav-access.md#general)、WebDAVプロトコルを使用してリポジトリに接続するには、WebDAVクライアントをリポジトリの場所に指定します。 ただし、クライアントを接続するための手順は OS によって異なり、場合によっては OS の設定が必要になることもあります。
+[上述のとおり](/help/sites-administering/webdav-access.md#general)、WebDAVプロトコルを使用してリポジトリに接続するには、WebDAVクライアントをリポジトリの場所に指定します。ただし、クライアントを接続するための手順は OS によって異なり、場合によっては OS の設定が必要になることもあります。
 
 ここでは、次のオペレーティングシステムを接続する方法について説明します。
 
@@ -113,7 +113,7 @@ SSL で保護されていない AEM インスタンスに Microsoft Windows 7（
 
 レジストリの更新後、AEM インスタンスをドライブとしてマッピングできます。
 
-#### Windows 7 以降の設定 {#windows-and-greater-configuration}
+#### Windows 7 以降の設定  {#windows-and-greater-configuration}
 
 保護されていないネットワーク上での基本認証を許可するようにレジストリを更新するには：
 
@@ -123,33 +123,33 @@ SSL で保護されていない AEM インスタンスに Microsoft Windows 7（
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
    ```
 
-1. Set the `BasicAuthLevel` registry entry subkey to a value of `2` or greater.
+1. `BasicAuthLevel`レジストリエントリサブキーを`2`以上の値に設定します。
 
    サブキーが存在しない場合は追加します。
 
 1. レジストリの変更を有効にするには、システムを再起動する必要があります。
 
-See [Microsoft Support KB 841215](https://support.microsoft.com/default.aspx/kb/841215) for more information on this registry change.
+このレジストリの変更の詳細については、[MicrosoftサポートKB 841215](https://support.microsoft.com/default.aspx/kb/841215)を参照してください。
 
-See [Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) for information about improving the responsivness of the WebDav Client under Windows.
+WindowsでのWebDavクライアントの応答性の向上については、[MicrosoftサポートKB 2445570](https://support.microsoft.com/kb/2445570)を参照してください。
 
 >[!NOTE]
 >
 >リポジトリユーザーと同じ資格情報を持つ Windows ユーザーを作成することをお勧めします。そうしないと、権限の競合が発生する可能性があります。
 
-#### Windows 8 の設定 {#windows-configuration}
+#### Windows 8 の設定  {#windows-configuration}
 
 Windows 8 でも、[Windows 7 以降の場合](/help/sites-administering/webdav-access.md#windows-and-greater-configuration)と同様に、レジストリエントリを変更する必要があります。ただし、事前にデスクトップエクスペリエンスを有効にして、レジストリエントリが表示されるようにする必要があります。
 
-To enable the Desktop Experience, open **Server Manager**, then **Features**, then **Add Features**, then **Desktop Experience**.
+デスクトップエクスペリエンスを有効にするには、**サーバーマネージャー**&#x200B;を開き、**機能**&#x200B;を開き、**追加機能**&#x200B;を開き、**デスクトップエクスペリエンス**&#x200B;を開きます。
 
 再起動すると、Windows 7 以降で説明したレジストリエントリが使用可能になります。変更方法は Windows 7 以降の場合と同じです。
 
-#### Windows での接続 {#connecting-in-windows}
+#### Windows での接続  {#connecting-in-windows}
 
 Windows 環境で WebDAV を介して AEM に接続するには：
 
-1. Open **Windows Explorer** or **File Explorer** and click on **Computer** or **This PC**.
+1. **Windowsエクスプローラー**&#x200B;または&#x200B;**ファイルエクスプローラー**&#x200B;を開き、**コンピューター**&#x200B;または&#x200B;**このPC**&#x200B;をクリックします。
 
    ![chlimage_1-112](assets/chlimage_1-112a.png)
 
@@ -168,7 +168,7 @@ Windows 環境で WebDAV を介して AEM に接続するには：
    >
    >AEMが別のポートに配置されている場合は、4502ではなく、そのポート番号を使用します。 また、コンテンツリポジトリをローカルマシンで実行していない場合は、`localhost` を該当するサーバー名または IP アドレスに置き換えてください。
 
-1. Enter username `admin` and password `admin`. あらかじめ設定されている admin アカウントを使用してテストすることをお勧めします。
+1. ユーザー名`admin`とパスワード`admin`を入力します。 あらかじめ設定されている admin アカウントを使用してテストすることをお勧めします。
 
    ![chlimage_1-114](assets/chlimage_1-114a.png)
 
@@ -198,23 +198,23 @@ macOS では、WebDAV を介して接続するために必要な設定手順は�
 
 Linux では、WebDAV を介して接続するために必要な設定は特にありませんが、デスクトップ環境によっては接続を確立するためにいくつかの手順が必要になる場合があります。
 
-#### GNOME {#gnome}
+#### GNOME  {#gnome}
 
 GNOME を使用して WebDAV を介して AEM に接続するには：
 
 1. Nautilus（ファイルエクスプローラー）で、「**Places**」を選択し、「**Connect to Server**」を選択します。
 1. **Connect to Server** ウィンドウの「Service Type」で「WebDAV (HTTP)」を選択します。
 
-1. 「 **Server**」に、 `http://localhost:4502/crx/repository/crx.default`
+1. **サーバー**&#x200B;に`http://localhost:4502/crx/repository/crx.default`と入力します
 
    >[!NOTE]
    >
    >AEMが別のポートに配置されている場合は、4502ではなく、そのポート番号を使用します。 また、コンテンツリポジトリをローカルマシンで実行していない場合は、`localhost` を該当するサーバー名または IP アドレスに置き換えてください。
 
-1. In **Folder**, enter `/dav`
-1. Enter the username `admin`. あらかじめ設定されている admin アカウントを使用してテストすることをお勧めします。
+1. **フォルダー**&#x200B;に`/dav`と入力します
+1. ユーザー名`admin`を入力します。 あらかじめ設定されている admin アカウントを使用してテストすることをお勧めします。
 1. ポートは空白のままにして、接続用の名前を入力します。
-1. Click **Connect**. AEM prompts you for your password.
+1. 「**接続**」をクリックします。パスワードの入力が求められます。
 1. パスワードとして「`admin`」と入力し、「**Connect**」をクリックします。
 
 GNOMEはAEMをボリュームとしてマウントし、他のボリュームと同様に使用できます。
@@ -224,14 +224,14 @@ GNOMEはAEMをボリュームとしてマウントし、他のボリュームと
 1. ネットワークフォルダーウィザードを開きます。
 1. 「**WebFolder**」（webdav）を選択して「Next」をクリックします。
 1. 「**Name**」に接続名を入力します。
-1. 「 **Adobe**」に、事前設定済みの管理者アカウントを使用することを推奨する `admin.` ユーザーと入力します。
-1. 「 **Server**」に、 `http://localhost:4502/crx/repository/crx.default`
+1. 「**ユーザー**」に、`admin.`と入力するAdobeは、事前設定された管理者アカウントを使用することを推奨します。
+1. **サーバー**&#x200B;に`http://localhost:4502/crx/repository/crx.default`と入力します
 
    >[!NOTE]
    >
    >AEMが別のポートに配置されている場合は、4502ではなく、そのポート番号を使用します。 また、コンテンツリポジトリをローカルマシンで実行していない場合は、`localhost` を該当するサーバー名または IP アドレスに置き換えてください。
 
-1. In **Folder**, enter `dav`
+1. **フォルダー**&#x200B;に`dav`と入力します
 
 1. 「**Save and Connect**」をクリックします。
 1. パスワードを要求する画面が表示されたら、パスワードとして「`admin`」と入力し、「**Connect**」をクリックします。
