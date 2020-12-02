@@ -40,11 +40,12 @@ ht-degree: 86%
 
 次の手順では、カスタムツールバーを作成する手順を示します。ここでは、3 つのアクションがツールバーに表示され、その他のアクションはツールバーのドロップダウンリストに表示されます。
 
-付属のコンテンツパッケージには、以下に示すコード全体が含まれています。After installing the content package, open `/content/forms/af/CustomLayoutDemo.html` to view the custom toolbar layout demo.
+付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールした後、`/content/forms/af/CustomLayoutDemo.html`を開いてカスタムツールバーレイアウトデモを表示します。
 
 CustomToolbarLayoutDemo.zip
 
-[Get File](assets/customtoolbarlayoutdemo.zip)Demoカスタムツールバーレイアウト
+[Get ](assets/customtoolbarlayoutdemo.zip)
+FileDemoカスタムツールバーレイアウト
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}
 
@@ -56,15 +57,15 @@ CustomToolbarLayoutDemo.zip
 
    `/libs/fd/af/layouts/toolbar`
 
-   For example, copy the `mobileFixedToolbarLayout` node from the `/libs/fd/af/layouts/toolbar` folder to the `/apps/customlayout/toolbar` folder.
+   例えば、`mobileFixedToolbarLayout`ノードを`/libs/fd/af/layouts/toolbar`フォルダーから`/apps/customlayout/toolbar`フォルダーにコピーします。
 
-   Also, copy the toolbarCommon.jsp to the `/apps/customlayout/toolbar` folder.
+   また、toolbarCommon.jspを`/apps/customlayout/toolbar`フォルダーにコピーします。
 
    >[!NOTE]
    >
-   >The folder that you create to maintain the custom layouts much be created with the `apps` folder.
+   >カスタムレイアウトを管理するために作成するフォルダーは、`apps`フォルダーで作成されるものが多くあります。
 
-1. Rename the copied node, `mobileFixedToolbarLayout`, to `customToolbarLayout.`
+1. コピーしたノード`mobileFixedToolbarLayout`の名前を`customToolbarLayout.`に変更します
 
    また、ノードのための適切な説明も与えます。例えば、ノードの jcr:description を&#x200B;**ツールバーのカスタムレイアウト** に変更します。
 
@@ -86,7 +87,7 @@ CustomToolbarLayoutDemo.zip
 
 1. このカスタムツールバーレイアウトを選択し、「OK」をクリックします。
 
-   Add clientlib (javascript and css) in the `/etc/customlayout` node and include the reference of the clientlib in the `customToolbarLayout.jsp`.
+   追加clientlib （javascriptとcss）を`/etc/customlayout`ノードに追加し、clientlibの参照を`customToolbarLayout.jsp`に含めます。
 
    ![customToolbarLayout.css ファイルのパス](assets/toolbar_3.png)
 
