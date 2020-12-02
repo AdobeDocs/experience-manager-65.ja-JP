@@ -18,19 +18,19 @@ ht-degree: 61%
 ---
 
 
-# サイトテンプレート {#site-templates}
+# サイトテンプレート  {#site-templates}
 
-The Site Templates console is very similar to the [Group Templates](tools-groups.md) console, which is focused on functions of interest to Community groups.
+サイトテンプレートコンソールは、コミュニティグループに対して関心のある機能に重点を置いた[グループテンプレート](tools-groups.md)コンソールに非常に似ています。
 
 >[!NOTE]
 >
->The consoles for the creation of [community sites](sites-console.md), [community site templates](sites.md), [community group templates](tools-groups.md) and [community functions](functions.md) are for use only in the author environment.
+>[コミュニティサイト](sites-console.md)、[コミュニティサイトテンプレート](sites.md)、[コミュニティグループテンプレート](tools-groups.md)、[コミュニティ機能](functions.md)の作成用コンソールは、作成者環境でのみ使用できます。
 
 ## Site Templates Console {#site-templates-console}
 
 作成者環境でコミュニティサイトコンソールにアクセスするには：
 
-* From global navigation: **[!UICONTROL Tools > Communities > Site Templates]**
+* グローバルナビゲーションから：**[!UICONTROL ツール/コミュニティ/サイトテンプレート]**
 
 このコンソールでは、[コミュニティサイト](sites-console.md)を作成できるテンプレートが表示されます。また、新しいサイトテンプレートを作成できます。
 
@@ -38,11 +38,11 @@ The Site Templates console is very similar to the [Group Templates](tools-groups
 
 ## Create Site Template {#create-site-template}
 
-To get started creating a new site template, select `Create`.
+新しいサイトテンプレートの作成を開始するには、`Create`を選択します。
 
 するとサイトエディターパネルに移動します。パネルには以下の 3 つのサブパネルがあります。
 
-### Basic info {#basic-info}
+### 基本情報{#basic-info}
 
 ![site-template-basicinfo](assets/site-template-basicinfo.png)
 
@@ -60,7 +60,7 @@ To get started creating a new site template, select `Create`.
 
    テンプレートが参照可能かどうかを制御するトグルスイッチ。
 
-### サムネール {#thumbnail}
+### サムネール  {#thumbnail}
 
 ![site-thumbnail](assets/site-thumbnail.png)
 
@@ -72,7 +72,7 @@ To get started creating a new site template, select `Create`.
 
 コミュニティ機能を追加するには、右側から左側にドラッグします。サイトメニューのリンクは追加した順番で表示されます。スタイルは、サイトの作成時にテンプレートに適用されます。
 
-例えば、ホームページが必要な場合は、ページ機能をライブラリからテンプレートビルダーにドラッグ＆ドロップします。これにより、ページ設定ダイアログが開きます。 See the [functions console](functions.md) for information about the configuration dialogs.
+例えば、ホームページが必要な場合は、ページ機能をライブラリからテンプレートビルダーにドラッグ＆ドロップします。これにより、ページ設定ダイアログが開きます。 設定ダイアログの詳細については、[関数コンソール](functions.md)を参照してください。
 
 このテンプレートをベースとするコミュニティサイトに必要な、他のコミュニティ機能を続けてドラッグ＆ドロップします。
 
@@ -80,7 +80,7 @@ To get started creating a new site template, select `Create`.
 
 >[!CAUTION]
 >
->The groups function must *not* be the *first nor the only* function in the site structure.
+>グループ関数は、**&#x200B;を&#x200B;*最初の関数ではなく、サイト構造内の唯一の*&#x200B;関数でなければなりません。
 >
 >他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
@@ -92,7 +92,7 @@ To get started creating a new site template, select `Create`.
 
 >[!CAUTION]
 >
->The Groups function must *not* be the *first nor the only* function in the site structure.
+>Groups関数は、**&#x200B;を&#x200B;*最初の関数ではなく、サイト構造内の唯一の*&#x200B;関数でなければなりません。
 
 ![サイト関数](assets/site-functions.png)
 
