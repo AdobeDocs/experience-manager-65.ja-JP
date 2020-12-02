@@ -32,7 +32,7 @@ LDAP サーバーからアカウントが削除されると、検証はおこな
 
 AEM 6 の LDAP のサポートには、以前のバージョンとは異なるタイプの設定が必要な新しい実装が付属します。
 
-All LDAP configurations are now available as OSGi configurations. They can be configured via the Web Management console at:
+すべてのLDAP設定をOSGi設定として使用できるようになりました。これらは、Web管理コンソールから次の場所で設定できます。
 `https://serveraddress:4502/system/console/configMgr`
 
 LDAP と AEM を連携させるには、次の 3 つの OSGi 設定を作成する必要があります。
@@ -148,7 +148,7 @@ LDAP Identity Provider では次の設定オプションを使用できます。
  </tbody>
 </table>
 
-## Sync Handler の設定 {#configuring-the-synchronization-handler}
+## Sync Handler の設定  {#configuring-the-synchronization-handler}
 
 Sync Handler は、Indentity Provider のユーザーとグループをリポジトリと同期する方法を定義します。
 
@@ -205,7 +205,7 @@ Sync Handler では次の設定オプションを使用できます。
  </tbody>
 </table>
 
-## External Login Module {#the-external-login-module}
+## External Login Module  {#the-external-login-module}
 
 External Login Module は、管理コンソールの **Apache Jackrabbit Oak External Login Module** の下にあります。
 
@@ -240,13 +240,13 @@ External Login Module は、管理コンソールの **Apache Jackrabbit Oak Ext
 
 1. LDAP サーバーへの接続をテストします。
 
-### SSL 証明書の作成 {#creating-ssl-certificates}
+### SSL 証明書の作成  {#creating-ssl-certificates}
 
 SSL 経由で LDAP を使用して認証をおこなうように AEM を設定する場合は、自己署名証明書を使用できます。AEM で使用する証明書の生成手順の例を次に示します。
 
 1. SSL ライブラリがインストールされ、機能していることを確認します。この手順では、例として OpenSSL を使用します。
 
-1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーしてカスタマイズすることで実行できます。 On UNIX systems, it is usually located at `/usr/lib/ssl/openssl.cnf`
+1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーしてカスタマイズすることで実行できます。 UNIXシステムでは、通常`/usr/lib/ssl/openssl.cnf`にあります。
 
 1. ターミナルで次のコマンドを実行して CA ルートキーを作成します。
 
@@ -271,7 +271,7 @@ SSL 経由で LDAP を使用して認証をおこなうように AEM を設定�
 
 1. 最後に、Java キーストアに証明書を追加します。
 
-## デバッグログの有効化 {#enabling-debug-logging}
+## デバッグログの有効化  {#enabling-debug-logging}
 
 LDAP Identity Provider と External Login Module の両方に対してデバッグログを有効にして、接続の問題のトラブルシューティングをおこなうことができます。
 
