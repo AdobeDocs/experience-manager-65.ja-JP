@@ -18,15 +18,15 @@ ht-degree: 71%
 ---
 
 
-# コンポーネントおよび機能の基本事項  {#component-function-and-feature-essentials}
+# コンポーネントおよび機能の基本事項   {#component-function-and-feature-essentials}
 
-サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。Thus, [community site templates](sites.md), from which a community site is [created](sites-console.md), are designed to include a login feature as well as user profiles, messaging, search, moderation, and translation.
+サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。したがって、[コミュニティサイトテンプレート](sites.md)（コミュニティサイトが[作成](sites-console.md)される）は、ログイン機能に加え、ユーザプロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
 
-A community site will support members creating community groups when the [community groups function](functions.md#groups-function) is included in the selected community site template.
+コミュニティサイトは、選択したコミュニティサイトテンプレートに[コミュニティグループ機能](functions.md#groups-function)が含まれる場合に、コミュニティグループの作成をサポートします。
 
 次のリンクをクリックすると、コミュニティのコンポーネントおよび機能に関する基本情報にアクセスできます。
 
-## 基本コンポーネント {#base-components}
+## 基本コンポーネント  {#base-components}
 
 * [コメント](essentials-comments.md)
 * [レビュー](reviews-basics.md)
@@ -68,9 +68,9 @@ A community site will support members creating community groups when the [commun
 
 * [タグ付け](tag.md)
 
-## Javadoc {#javadocs}
+## Javadoc  {#javadocs}
 
-[オンライン javadoc](../../help/sites-developing/reference-materials.md) には、AEM 6.3 リリースで使用できる API が反映されています。Communities APIs are in `com.adobe.cq.social.*` packages.
+[オンライン javadoc](../../help/sites-developing/reference-materials.md) には、AEM 6.3 リリースで使用できる API が反映されています。コミュニティAPIは`com.adobe.cq.social.*`パッケージに含まれています。
 
 各[機能パック](deploy-communities.md#latestfeaturepack)に対し、javadoc jar が提供されます。詳しくは、[Communities 用 Maven の使用](maven.md#javadocs)を参照してください。
 
