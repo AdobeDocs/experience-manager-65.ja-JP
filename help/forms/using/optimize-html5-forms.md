@@ -17,7 +17,7 @@ ht-degree: 89%
 ---
 
 
-# HTML5 フォームの最適化 {#optimizing-html-forms}
+# HTML5 フォームの最適化  {#optimizing-html-forms}
 
 HTML5 フォームは、フォームを HTML5 形式でレンダリングします。フォームサイズとフォーム内の画像のような要素によって、結果の出力が大きくなる場合があります。データ転送を最適化するために、推奨されるアプローチは要求を対処する Web  サーバーを使用して HTML 応答を圧縮することです。このアプローチは応答サイズ、ネットワークトラフィック、およびサーバーとクライアントマシンの間でのデータのストリーミングに要する時間を減少させます。
 
@@ -60,7 +60,7 @@ Apache は HTTP または AJP プロトコルを使用して JBoss と通信で�
    >
    >プロキシを使用する場合、次の設定変更が必要です。
    >
-   >* Access: *https://&lt;server>:&lt;port>/system/console/configMgr*
+   >* アクセス：*https://&lt;server>:&lt;port>/system/console/configMgr*
    * Apache Sling Referrer Filter 設定の編集
    * 「Allow Hosts」フィールドで、プロキシサーバーのエントリを追加します。
 
@@ -85,4 +85,4 @@ Apache は HTTP または AJP プロトコルを使用して JBoss と通信で�
    </Location>
    ```
 
-1. To access the AEM server, use https://[Apache_server]:80.
+1. AEMサーバーにアクセスするには、https://[Apache_server]:80を使用します。
