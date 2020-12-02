@@ -27,7 +27,7 @@ ht-degree: 78%
 * ログインページの画像のカスタマイズ
 * アプリケーションメニューのロゴのカスタマイズ
 
-## アイコンと起動画像のカスタマイズ {#customizing-icon-and-launch-images}
+## アイコンと起動画像のカスタマイズ  {#customizing-icon-and-launch-images}
 
 次の手順を実行して、AEM Forms アプリケーションのデフォルトのアプリケーションアイコンと起動画像をカスタマイズします。
 
@@ -35,7 +35,7 @@ ht-degree: 78%
 >
 >すべてのアイコンと起動画像で、ノンインターレースの PNG 形式を使用します。
 
-### アイコンと起動画像をカスタマイズするには {#to-customize-icon-and-launch-images}
+### アイコンと起動画像をカスタマイズするには  {#to-customize-icon-and-launch-images}
 
 #### iOS の場合 {#for-ios}
 
@@ -43,8 +43,8 @@ ht-degree: 78%
 1. （***アイコンのカスタマイズの場合***）キャプチャのナビゲータービューで、**[!UICONTROL キャプチャ／キャプチャ／サポートするファイル／Capture-info.plist]** に移動します。アイコンファイルの横のドロップダウンをクリックします。 アイコンファイル（.png）の名前を指定し、**[!UICONTROL キャプチャ／キャプチャ／リソース／アイコン]**&#x200B;でファイルをアップロードします。現在サポートされているディメンションは次のとおりです。29x29、50x50、58x58、72x72、100x100、144x144。
 1. （***起動画像のカスタマイズの場合***）画像のファイル名が次のいずれかであることを確認します。
 
-   * 縦向きの場合： `Default-Portrait~ipad.png` と `Default-Portrait@2x~ipad.png`
-   * 横置きの場合： `Default-Landscape~ipad.png` と `Default-Landscape@2x~ipad.png`
+   * 縦向きの場合：`Default-Portrait~ipad.png`と`Default-Portrait@2x~ipad.png`
+   * 横置きの場合：`Default-Landscape~ipad.png`と`Default-Landscape@2x~ipad.png`
 
    これらのファイルをキャプチャプロジェクトにアップロードして、プロジェクトの既存のファイルと置き換えます。
 
@@ -74,7 +74,7 @@ ht-degree: 78%
 
 1. AEM Forms アプリケーションを再構築します。
 
-### Windows の場合 {#for-windows}
+### Windows の場合  {#for-windows}
 
 1. 次のパスにあるアイコンを置き換えます。
 
@@ -95,13 +95,13 @@ ht-degree: 78%
 ### iOS の場合 {#for-ios-1}
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
-1. Captureのナビゲータ・表示で、 **[!UICONTROL Capture/Capture/Supporting Files/InfoPlist.stringsに移動します]**。
+1. Captureのナビゲーター表示で、**[!UICONTROL Capture/Capture/Supporting Files/InfoPlist.strings]**&#x200B;に移動します。
 
-   属性の値を、アプリに表示したい名前に更新 `CFBundleDisplayName` します。
+   `CFBundleDisplayName`属性の値を、アプリに表示する名前に更新します。
 
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
 
-   For details on building the app for iOS, see [Set up the Xcode project and build the iOS app](/help/forms/using/setup-xcode-project-build-installer.md).
+   iOS用アプリの作成について詳しくは、[Xcodeプロジェクトの設定とiOSアプリの構築](/help/forms/using/setup-xcode-project-build-installer.md)を参照してください。
 
 ### Android の場合 {#for-android-1}
 
@@ -109,23 +109,23 @@ ht-degree: 78%
 
    `[User_Home]/Projects/[your-project]/src/android/res/values/strings.xml and android/res/values-en/strings.xml`
 
-1. Update the value for the key `app_name`.
+1. キー`app_name`の値を更新します。
 1. AEM Forms アプリケーションを再構築します。
 
    Andriod のアプリケーション構築について詳しくは、「[Eclipse プロジェクトの設定と Android アプリケーションの構築](/help/forms/using/setup-eclipse-project-build-installer.md)」を参照してください。
 
-### Windows の場合 {#for-windows-1}
+### Windows の場合  {#for-windows-1}
 
 1. テキストエディターで次の Xml ファイルを開きます。
 
    `%HOMEPATH%\adobe-lc-mobileworkspace-src-<version>\src\windows\MWSWindows\config.xml`
 
-1. Update the value in the `<name>...</name>` tag.
+1. `<name>...</name>`タグの値を更新します。
 1. AEM Forms アプリケーションを再構築します。
 
    Windows 上でのアプリケーションの構築について詳しくは、「[Visual Studio プロジェクトの設定と Windows アプリケーションの構築](/help/forms/using/setup-visual-studio-project-build-installer.md)」を参照してください。
 
-## ログインページの画像のカスタマイズ {#customizing-images-on-the-login-page}
+## ログインページの画像のカスタマイズ  {#customizing-images-on-the-login-page}
 
 AEM Formsアプリのログインページには、ロゴと背景の画像が表示されます。 ロゴはログインダイアログボックスの上に配置されており、背景の画像はログインダイアログボックスの下に配置されています。次の手順を実行してログインページのデフォルトの画像をカスタマイズします。
 
@@ -159,28 +159,28 @@ AEM Formsアプリのログインページには、ロゴと背景の画像が�
 
 1. `www/wsmobile/images` フォルダーに移動し、
 1. ロゴを変更するには、デフォルトの `LC-logo.png` ファイルをカスタムの `LC-logo.png` ファイルに置き換えます。
-1. To change background, replace the default `Landing_bg.jpeg` file with the custom `Landing_bg.jpeg`file.
+1. 背景を変更するには、デフォルトの`Landing_bg.jpeg`ファイルをカスタムの`Landing_bg.jpeg`ファイルに置き換えます。
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
 
-### Eclipse を使用してログインページの画像をカスタマイズするには {#to-customize-images-on-the-login-pages-using-eclipse}
+### Eclipse を使用してログインページの画像をカスタマイズするには  {#to-customize-images-on-the-login-pages-using-eclipse}
 
 1. EclipseでAndroidプロジェクトを開きます。
 
 1. `assets/www/wsmobile/images` フォルダーに移動し、
 1. ロゴを変更するには、デフォルトの `LC-logo.png` ファイルをカスタムの `LC-logo.png` ファイルに置き換えます。
-1. To change background, replace the default `Landing_bg.jpeg` file with the custom `Landing_bg.jpeg`file.
+1. 背景を変更するには、デフォルトの`Landing_bg.jpeg`ファイルをカスタムの`Landing_bg.jpeg`ファイルに置き換えます。
 1. Android デバイス上で AEM Forms アプリケーションを構築して実行します。
 
-### Visual Studio を使用してログインページの画像をカスタマイズするには {#to-customize-images-on-the-login-pages-using-visual-studio}
+### Visual Studio を使用してログインページの画像をカスタマイズするには  {#to-customize-images-on-the-login-pages-using-visual-studio}
 
-1. Open the `MWSWindows.sln` project in Visual Studio.
+1. Visual Studioで`MWSWindows.sln`プロジェクトを開きます。
 
 1. `MWSWindows\www\wsmobile\images` フォルダーに移動し、
 1. ロゴを変更するには、デフォルトの `LC-logo.png` ファイルをカスタムの `LC-logo.png` ファイルに置き換えます。
-1. To change background, replace the default `Landing_bg.jpeg` file with the custom `Landing_bg.jpeg`file.
+1. 背景を変更するには、デフォルトの`Landing_bg.jpeg`ファイルをカスタムの`Landing_bg.jpeg`ファイルに置き換えます。
 1. Windows デバイス上で AEM Forms アプリケーションを構築して実行します。
 
-## アプリケーションメニューのロゴのカスタマイズ {#customizing_images_on_the_login_page-1}
+## アプリケーションメニューのロゴのカスタマイズ  {#customizing_images_on_the_login_page-1}
 
 AEM Forms アプリケーションにログインしてメニューボタンをタップすると、メニュー上にロゴが表示されます。次の手順を実行してデフォルトのロゴをカスタマイズします。
 
@@ -208,21 +208,21 @@ AEM Forms アプリケーションにログインしてメニューボタンを�
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
 
 1. `www/wsmobile/images` フォルダーに移動し、
-1. To change the logo, replace the default `aem_icon.png` file with the custom `aem_icon.png` file.
+1. ロゴを変更するには、デフォルトの`aem_icon.png`ファイルをカスタムの`aem_icon.png`ファイルに置き換えます。
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
 
-### Eclipse を使用してログインページの画像をカスタマイズするには {#to-customize-images-on-the-login-pages-using-eclipse-1}
+### Eclipse を使用してログインページの画像をカスタマイズするには  {#to-customize-images-on-the-login-pages-using-eclipse-1}
 
 1. EclipseでAndroidプロジェクトを開きます。
 
 1. `assets/www/wsmobile/images` フォルダーに移動し、
-1. To change the logo, replace the default `aem_icon.png` file with the custom `aem_icon.png` file.
+1. ロゴを変更するには、デフォルトの`aem_icon.png`ファイルをカスタムの`aem_icon.png`ファイルに置き換えます。
 1. Android デバイス上で AEM Forms アプリケーションを構築して実行します。
 
-### Visual Studio を使用してログインページの画像をカスタマイズするには {#to-customize-images-on-the-login-pages-using-visual-studio-1}
+### Visual Studio を使用してログインページの画像をカスタマイズするには  {#to-customize-images-on-the-login-pages-using-visual-studio-1}
 
-1. Open the `MWSWindows.sln` project in Visual Studio.
+1. Visual Studioで`MWSWindows.sln`プロジェクトを開きます。
 
 1. `MWSWindows\www\wsmobile\images` フォルダーに移動し、
-1. To change the logo, replace the default `aem_icon.png` file with the custom `aem_icon.png` file.
+1. ロゴを変更するには、デフォルトの`aem_icon.png`ファイルをカスタムの`aem_icon.png`ファイルに置き換えます。
 1. Windows デバイス上で AEM Forms アプリケーションを構築して実行します。
