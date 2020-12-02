@@ -15,9 +15,9 @@ ht-degree: 75%
 
 アセットインサイト機能を使用すると、サードパーティの Web サイト、マーケティングキャンペーン、アドビのクリエイティブソリューションで使用される画像のユーザーのレーティングと使用状況統計を追跡できます。画像のパフォーマンスと人気に関するインサイトを導き出せます。
 
-[!DNL Assets] インサイトは、アクティビティが評価された回数、クリックされた回数、インプレッション数（Webサイトに画像が読み込まれた回数）など、ユーザーの画像の詳細をキャプチャします。 これらの統計情報に基づいて画像にスコアを割り当てます。スコアとパフォーマンス統計を使用して、人気が高い画像を選び、カタログやマーケティングキャンペーンなどに含めることができます。このような統計に基づいて、アーカイブやライセンス更新のポリシーを策定することさえできます。
+[!DNL Assets] インサイトは、アクティビティが評価された回数、クリックされた回数、インプレッション数（Webサイトに画像が読み込まれた回数）など、ユーザーの画像の詳細をキャプチャします。これらの統計情報に基づいて画像にスコアを割り当てます。スコアとパフォーマンス統計を使用して、人気が高い画像を選び、カタログやマーケティングキャンペーンなどに含めることができます。このような統計に基づいて、アーカイブやライセンス更新のポリシーを策定することさえできます。
 
-For [!DNL Assets] Insights to capture usage statistics for images from a website, you must include the embed code for the image in the website code.
+[!DNL Assets]インサイトを使用してWebサイトから画像の使用状況の統計を取り込むには、Webサイトコードに画像の埋め込みコードを含める必要があります。
 
 アセットインサイトでアセットの使用状況統計を表示できるようにするには、最初に Adobe Analytics からのレポートデータをフェッチするようにこの機能を設定します。詳しくは、[アセットインサイトの設定](/help/assets/configure-asset-insights.md)を参照してください。
 
@@ -29,7 +29,7 @@ For [!DNL Assets] Insights to capture usage statistics for images from a website
 
 メタデータページでアセットインサイトのスコアを確認できます。
 
-1. From the [!DNL Assets] user interface (UI), select the image and then click **[!UICONTROL Properties]** from the toolbar.
+1. [!DNL Assets]ユーザーインターフェイス(UI)から画像を選択し、ツールバーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;をクリックします。
 1. プロパティページで、「**[!UICONTROL インサイト]**」タブをクリックします。
 1. 「**[!UICONTROL インサイト]**」タブで、アセットの使用状況の詳細を確認します。「**[!UICONTROL スコア]**」セクションには、アセットの全体的な使用状況とパフォーマンスのスコアが表示されます。
 
@@ -58,7 +58,7 @@ For [!DNL Assets] Insights to capture usage statistics for images from a website
    >
    >「ソリューション」セクションのデータとは異なり、「パフォーマンス統計」セクションには最新データが表示されます。
 
-1. To obtain the embed code for the asset that you include in websites to gets performance data, click **[!UICONTROL Get Embed Code]** below the asset thumbnail. For more information on how to include your Embed code in third-party web pages, see [Using Page Tracker and embed code in web pages](/help/assets/use-page-tracker.md).
+1. Webサイトに含めるアセットの埋め込みコードを取得してパフォーマンスデータを取得するには、アセットサムネールの下の&#x200B;**[!UICONTROL 埋め込みコードを取得]**&#x200B;をクリックします。 サードパーティWebページに埋め込みコードを含める方法について詳しくは、[ページトラッカーとWebページへの埋め込みコードの使用](/help/assets/use-page-tracker.md)を参照してください。
 
    ![chlimage_1-98](assets/chlimage_1-303.png)
 
@@ -66,15 +66,15 @@ For [!DNL Assets] Insights to capture usage statistics for images from a website
 
 **[!UICONTROL インサイト表示]**&#x200B;を使用すると、フォルダー内のすべてのアセットのスコアを同時に表示できます。
 
-1. In the [!DNL Assets] user interface, navigate to the folder containing the assets for which you want to view insights.
-1. Click Layout from the toolbar, and then choose **[!UICONTROL Insights View]**.
+1. [!DNL Assets]ユーザーインターフェイスで、インサイトを表示するアセットが含まれているフォルダーに移動します。
+1. ツールバーの「レイアウト」をクリックし、「**[!UICONTROL インサイト表示]**」を選択します。
 1. このページには、アセットの使用状況スコアが表示されます。様々なアセットのレーティングを比較して、洞察を導きます。
 
 ## バックグラウンドジョブのスケジュール設定 {#scheduling-background-job}
 
 アセットインサイトは、Adobe Analytics レポートスイートから定期的にアセットの使用状況データをフェッチします。デフォルトでは、アセットインサイトはデータをフェッチするためのバックグラウンドジョブを 24 時間おきに午前 2 時に実行します。この間隔と時刻は、「**[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]**」サービスを Web コンソールで設定して変更できます。
 
-1. Click the [!DNL Experience Manager] logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. [!DNL Experience Manager]ロゴをクリックし、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;に移動します。
 1. **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** サービス設定を開きます。
 
    ![chlimage_1-99](assets/chlimage_1-304.png)
