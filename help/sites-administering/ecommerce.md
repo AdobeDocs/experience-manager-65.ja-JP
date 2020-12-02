@@ -127,15 +127,15 @@ AEM e コマースフレームワークは、特定のブランド用に構築�
 
 >[!NOTE]
 >
->この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。For more information, see [Deploying eCommerce](/help/sites-deploying/ecommerce.md).
+>この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースの導入](/help/sites-deploying/ecommerce.md)を参照してください。
 >
->For information about extending eCommerce capabilities, see [Developing eCommerce](/help/sites-developing/ecommerce.md).
+>eコマース機能の拡張について詳しくは、[eコマースの開発](/help/sites-developing/ecommerce.md)を参照してください。
 
 ## 主な機能 {#main-features}
 
 AEM e コマースフレームワークは、以下の機能を提供します。
 
-* A number of **out-of-the-box AEM components** to illustrate what can be achieved for your project:
+* プロジェクトで達成できる成果を示すための、多数の&#x200B;**標準搭載のAEMコンポーネント**:
 
    * 商品の表示
    * 買い物かご
@@ -159,7 +159,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
    ![](assets/chlimage_1-131.png)
 
-* Uses the AEM ability to **present your content on multiple channels**, be that full browser window or mobile device. これにより、訪問者が必要とする形式でコンテンツが提供されます。
+* AEM機能を使用して、複数のチャネル&#x200B;**にコンテンツを**&#x200B;提示します。これは、完全なブラウザーウィンドウまたはモバイルデバイスです。 これにより、訪問者が必要とする形式でコンテンツが提供されます。
 
    ![](assets/chlimage_1-132.png)
 
@@ -186,18 +186,18 @@ AEM e コマースフレームワークは、以下の機能を提供します�
    * 詳細な注文履歴
    * カタログの高速更新
 
-## フレームワーク {#the-framework}
+## フレームワーク  {#the-framework}
 
 このフレームワークの詳細については「[概念](/help/sites-administering/concepts.md)」の節で説明しますが、ここで概要を簡単に説明しておきます。
 
-### 概要 {#what}
+### 概要  {#what}
 
 * この統合フレームワークには、API、機能を説明するための幅広いコンポーネント、接続方法の例を示すためのいくつかの拡張が用意されています。
 * このフレームワークは、プロジェクトの実装に必要な基本構造です。
 * このフレームワークは拡張可能です。
 * このフレームワークには、そのまま使用できるデフォルトのサイトはありません。フレームワークを実際の仕様に適合させるには、ある程度の開発作業が必要です。
 
-### Why? {#why}
+### なぜ？{#why}
 
 * カスタマイズされたeコマースサイトを迅速に実現するのに必要な基本メカニズムを提供する。
 * 実際の e コマースサイトの開発に必要な柔軟性をもたらします。
