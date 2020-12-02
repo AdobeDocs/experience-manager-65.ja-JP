@@ -24,7 +24,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->In the following tables, for the key combinations in the **Shortcut** column, both Ctrl and Command keys work on macOS.
+>次の表では、**ショートカット**&#x200B;列のキーの組み合わせについて、CtrlキーとCommandキーの両方がmacOSで機能します。
 
 >[!NOTE]
 >
@@ -157,7 +157,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 [コンソール](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)の使用時には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 
-## 開発用のキーボードショートカット {#keyboard-shortcuts-for-development}
+## 開発用のキーボードショートカット  {#keyboard-shortcuts-for-development}
 
 ページエディターの使用時には、デスクトップ開発者向けの追加のキーボードショートカットを利用できます。
 
@@ -170,7 +170,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   </tr>
   <tr>
    <td>編集モード</td>
-   <td>Set the following suffix in the URL:<br /> <code>?debugClientLibs=true</code><br /> Then use:<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>URLに次のサフィックスを設定します。<br /> <code>?debugClientLibs=true</code><br />次を使用します。<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>ページ読み込みのタイミングの統計を確認します。</td>
   </tr>
  </tbody>
