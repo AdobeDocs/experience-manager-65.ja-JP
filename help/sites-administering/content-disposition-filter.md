@@ -24,9 +24,9 @@ Content Disposition フィルターは、SVG ファイルへの XSS 攻撃に対
 
 インストールが完了すると、フィルターはすべてのアセットへのアクセスをブロックします。例えば、オンラインで pfd を表示することはできません。このセクションでは、必要に応じてフィルターを設定する方法について説明します。
 
-## Content Disposition フィルターの設定 {#configure-content-disposition-filter}
+## Content Disposition フィルターの設定  {#configure-content-disposition-filter}
 
-You can view the [Apache Sling Content Disposition Filter in GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
+GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java)の[Apache Sling Content Disposition Filterを表示できます。
 
 コンテンツ廃棄フィルターのオプションには、次の機能があります。
 
