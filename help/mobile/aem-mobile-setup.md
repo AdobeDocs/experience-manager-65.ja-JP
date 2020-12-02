@@ -32,13 +32,13 @@ AEM を使用して AEM Mobile アプリ用のコンテンツを作成するに�
 
 以下の手順に従って、AEM Mobile の設定をおこない、ユーザーが AEM 内でコンテンツを作成および管理できるようにします。
 
-## AEM Mobile のプロビジョニング {#aem-mobile-provisioning}
+## AEM Mobile のプロビジョニング  {#aem-mobile-provisioning}
 
 AEM Mobile のセットアップを始めるには、以下の作業が必要です。
 
-* **APIキーのリクエスト**:On-Demand Services APIにアクセスするには、APIキーをリクエストする必要があります。 API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/jp/digital-publishing-solution/help/integrating-dps.html)に記入します。Send the completed form to Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
+* **APIキーのリクエスト**:On-Demand Services APIにアクセスするには、APIキーをリクエストする必要があります。API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/jp/digital-publishing-solution/help/integrating-dps.html)に記入します。記入が完了したら、フォームをAdobe開発者サポートに送信します。[wwds@adobe.com](mailto:wwds@adobe.com)
 
-* **デバイスIDとデバイストークンの生成**:APIキーを受け取ったら、デバイスIDとデバイストークンを生成できます。 Go to [https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/) and do the following:
+* **デバイスIDとデバイストークンの生成**:APIキーを受け取ったら、デバイスIDとデバイストークンを生成できます。[https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/)に移動し、次の操作を行います。
 
    * API キーを提供します。
    * 以下の権限で AEM Mobile プロジェクトに追加した Adobe ID でログインします（プロジェクト作成手順については以下を参照してください）。
@@ -52,15 +52,15 @@ AEM Mobile のセットアップを始めるには、以下の作業が必要で
 >
 >Adobe ID には、AEM Mobile プロジェクトへのアクセス権が与えられている必要があります。オンラインヘルプの [AEM Mobile のアカウント管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html)を参照してください。
 
-## AEM Mobile のプロジェクトの作成 {#creating-projects-for-aem-mobile}
+## AEM Mobile のプロジェクトの作成  {#creating-projects-for-aem-mobile}
 
 プロジェクトを作成する場合、iOS、Android、Windows、デスクトップ Web Viewer など、ターゲットとするプラットフォームの設定を指定します。指定する多くのプロジェクト設定は、アプリの動作に影響します。
 
-プロジェクトを作成するには、マスター管理者の役割を持つ Adobe ID を使用して、On-demand Services ポータルにサインインする必要があります。Editing a project requires either a Master Admin role or a user role with a **Manage Projects and Users** permission.
+プロジェクトを作成するには、マスター管理者の役割を持つ Adobe ID を使用して、On-demand Services ポータルにサインインする必要があります。プロジェクトを編集するには、マスター管理者の役割、または&#x200B;**プロジェクトとユーザーを管理**&#x200B;権限を持つユーザーの役割が必要です。
 
 >[!NOTE]
 >
->To learn more about Creating Projects in AEM Mobile, click [here](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-projects.html).
+>AEM Mobileでプロジェクトを作成する方法の詳細については、[ここ](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-projects.html)をクリックしてください。
 
 ## AEM Mobile コネクタの設定 {#configuring-an-aem-mobile-connector}
 
@@ -72,22 +72,22 @@ AEM Mobile On-Demand コネクタは、AEM Mobile で管理するコンテンツ
 >
 >この手順は、AEM インスタンスのセットアップ時に 1 回のみおこないます。
 
-### AEM Mobile On-demand Services Client の設定 {#configuring-aem-mobile-on-demand-services-client}
+### AEM Mobile On-demand Services Client の設定  {#configuring-aem-mobile-on-demand-services-client}
 
 AEM Mobile 統合が正しく機能するには、設定手順を完了する必要があります。
 
 1. OSGI サービスの設定に移動します。
 
    1. AEM／ツール／運営／Web コンソールを選択します。
-   1. Scroll or search for ***Experience Manager Mobile On-demand Services Client (was Adobe Digital Publishing Solution Client)***
+   1. ***Experience ManagerMobile On-demand Servicesクライアント(旧AdobeDigital Publishing Solutionクライアント)***&#x200B;をスクロールまたは検索します
 
-1. Edit ***Experience Manager Mobile On-demand Services Client***
+1. ***Experience ManagerMobile On-demand Servicesクライアント***&#x200B;を編集
 
-   1. **（必須）** ：必須フィールドを入力します。
+   1. **（必須）必須フィールド** を入力します。
 
       1. クライアント ID
       1. クライアントの秘密鍵
-   1. **（オプション）** 、既存の値を編集します。
+   1. **（オプション）既存の値を** 編集します。
 
 
 1. 変更内容を保存します。
@@ -99,19 +99,19 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
 
 1. クラウドサービスに移動します。
 
-   1. AEM > Tools > Deployment> [CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html). Scroll or search for ***Adobe Experience Manager Mobile On-demand Services***
+   1. AEM/ツール/導入/[CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html) ***Adobe Experience Manager Mobileオンデマンドサービス***&#x200B;をスクロールまたは検索
 
-1. Select ***Configure now*** or ***Show Configurations*** and select the add new configuration icon
+1. 「***今すぐ設定***」または「***設定を表示***」を選択し、新しい設定を追加アイコンを選択します
 
 1. 新しい設定を作成します。
 
    1. タイトルと名前を入力
    1. デバイスIDを入力
    1. 「デバイストークン」を入力します。
-   1. Select ***Test Device Configuration*** to validate entered values
+   1. ***「Test Device Configuration」***&#x200B;を選択して、入力した値を検証します
    1. 「OK」を選択します。
 
-## AEM Mobile のユーザーの役割の追加と権限の割り当て {#adding-aem-mobile-user-roles-and-assigning-permissions}
+## AEM Mobile のユーザーの役割の追加と権限の割り当て  {#adding-aem-mobile-user-roles-and-assigning-permissions}
 
 プロジェクトを作成したら、役割を作成してユーザーにアクセス権を付与する必要があります。マスター管理者のみが、役割を作成および編集できます。役割を作成し、ユーザーに役割を割り当てると、その役割に含まれる機能（または権限）が有効になります。例えば、アプリの構築権限を含む役割を作成したり、コンテンツの作成と公開の権限を含む役割を作成したりできます。
 
@@ -121,15 +121,15 @@ AEM Mobile アプリの開発では、3 つの異なる役割が存在します�
 * デベロッパー
 * 作成者
 
-For more information on creating roles with different permissions such as for app building or for creating and publishing content, click [Creating User Roles and Granting Access](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html) in AEM Mobile Help.
+アプリの作成、コンテンツの作成および公開など、様々な権限を持つロールの作成について詳しくは、AEM Mobileヘルプの「[ユーザーロールの作成とアクセスの許可](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
 
 >[!NOTE]
 >
 >アプリコンテンツを管理するには、開発者、コンテンツ作成者および管理者が連携して作業する必要があります。作成者は、アプリ開発者が生成したテンプレートおよびコンポーネントに基づいて、ページを操作します。最後に、管理者が更新されたアプリコンテンツを戦略的に公開します。AEM のグループや権限を設定することで、アプリダッシュボードやコントロールセンターでのユーザーの役割が定義されます。
 >
->For more information on AEM Mobile Dashboard, click [here](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>AEM Mobileダッシュボードの詳細については、[ここ](/help/mobile/mobile-apps-ondemand-application-dashboard.md)をクリックしてください。
 
-Once you are done creating roles with different permissions such as for app building or for creating and publishing content, see [**Configure your User and User Groups**](/help/mobile/aem-mobile-configure-users.md) to configure your users and groups to support the authoring and mangement of your mobile apps.
+アプリの作成やコンテンツの作成および公開など、様々な権限でロールを作成したら、[**ユーザーおよびユーザーグループの設定**](/help/mobile/aem-mobile-configure-users.md)&#x200B;を参照して、モバイルアプリのオーサリングと管理をサポートするユーザーおよびグループを設定します。
 
 ### その他のリソース {#additional-resources}
 
