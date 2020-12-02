@@ -32,11 +32,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}を使用したMicrosoft WordドキュメントのPDFドキュメントへの変換
 
-次のコードの例では、 *Loan.doc* というWordファイルをLoan.pdfというPDFドキュメントに変換し *ます*。 (WordドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents))。
+次のコードの例では、*Loan.doc*&#x200B;というWordファイルを&#x200B;*Loan.pdf*&#x200B;というPDFドキュメントに変換します。 ([WordドキュメントのPDFドキュメントへの変換](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents)を参照)。
 
 ```java
  /*
@@ -148,9 +148,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}を使用したHTMLコンテンツのPDFドキュメントへの変換
 
-次のJavaコードの例を使用すると、https://www.adobe.comにあるHTMLコンテンツを、AdobeHTML.pdfというPDFドキュメントに変換でき *ます*。 (HTMLドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents))。
+次のJavaコードの例を使用すると、https://www.adobe.comにあるHTMLコンテンツを&#x200B;*AdobeHTML.pdf*&#x200B;というPDFドキュメントに変換できます。 ([HTMLドキュメントをPDFドキュメントに変換する](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)を参照)。
 
 ```java
  /*
@@ -254,9 +254,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
+## クイック開始（SOAPモード）:Java API(SOAPドキュメント){#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}を使用したPDFモードからRTFファイルへの変換
 
-次のコードの例では、 *Loan.pdfというPDFドキュメントを* Loan.rtfというRTFドキュメントに変換し **&#x200B;ます。 (PDFドキュメントの画像以外の形式への [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats))。
+次のコードの例では、*Loan.pdf*&#x200B;というPDFドキュメントを&#x200B;*Loan.rtf*&#x200B;というRTFドキュメントに変換します。 ([PDFドキュメントを非画像形式に変換する](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats)を参照)。
 
 ```java
  /*
