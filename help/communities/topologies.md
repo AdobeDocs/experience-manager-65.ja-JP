@@ -32,13 +32,13 @@ AEM プラットフォームではオーサー環境からパブリッシュ環�
 * [MSRP - MongoDB ストレージリソースプロバイダー](msrp.md)
 * [ASRP - Adobe ストレージリソースプロバイダー](asrp.md)
 
-One other SRP option, [JSRP - JCR Storage Resource Provider](jsrp.md), does not support a common UGC store for the author and publish environments to both access.
+もう1つのSRPオプション[JSRP - JCRストレージリソースプロバイダー](jsrp.md)は、両方のアクセスに対して、作成者と発行環境の共通のUGCストアをサポートしていません。
 
 共通ストアが必要な場合は、次のトポロジが推奨されます。
 
 >[!NOTE]
 >
->For AEM Communities, [UGC is never replicated](working-with-srp.md#ugc-never-replicated).
+>AEM Communitiesの場合、[UGCは](working-with-srp.md#ugc-never-replicated)複製されません。
 >
 >デプロイメントに[共通ストア](working-with-srp.md)がない場合、UGC は入力された AEM パブリッシュインスタンスまたはオーサーインスタンスのいずれかにのみ表示されます。
 
@@ -47,21 +47,21 @@ One other SRP option, [JSRP - JCR Storage Resource Provider](jsrp.md), does not 
 >
 >AEM プラットフォームについて詳しくは、[推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md)と[AEM プラットフォームの概要](../../help/sites-deploying/data-store-config.md)を参照してください。
 
-## 実稼動について {#for-production}
+## 実稼動について  {#for-production}
 
 UGCに共通のストアを確立することは不可欠です。したがって、基盤となるデプロイメントは、共通のストアをサポートする能力に左右されます。
 
 2 つの例を示します。
 
-1. If the expected volume of UGC is high and a local MongoDB instance is possible, then the choice would be [MSRP](msrp.md).
+1. 予想されるUGCの量が多く、ローカルのMongoDBインスタンスが可能な場合は、[MSRP](msrp.md)を選択します。
 
-1. For optimal performance for page content, the choice of a [publish farm](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) and [ASRP](asrp.md) would provide optimal scaling of UGC with relatively straightforward operations.
+1. ページコンテンツの最適なパフォーマンスを得るために、[パブリッシュファーム](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)と[ASRP](asrp.md)を選択すると、比較的単純な操作でUGCの最適な拡大・縮小が行われます。
 
 どちらの場合も、任意の OAK マイクロカーネルを基にデプロイできます。
 
-To choose the appropriate common store, carefully consider the unique [characteristics](working-with-srp.md#characteristics-of-srp-options) of each.
+適切な共通ストアを選択するには、それぞれの[特性](working-with-srp.md#characteristics-of-srp-options)を慎重に検討します。
 
-For more details on Oak microkernals, visit [Recommended Deployments](../../help/sites-deploying/recommended-deploys.md).
+Oakマイクロカーナルの詳細については、[推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md)を参照してください。
 
 ### TarMK パブリッシュファーム {#tarmk-publish-farm}
 
@@ -76,9 +76,9 @@ For more details on Oak microkernals, visit [Recommended Deployments](../../help
 |-------------|------------------------|----------------------------------|---------------------------|---------------|
 | 任意 | JCR | MySQL | DSRP | 可 |
 | 任意 | JCR | MongoDB | MSRP | 可 |
-| 任意 | JCR | Adobeのオンデマンドストレージ | ASRP | Yes |
+| 任意 | JCR | Adobeのオンデマンドストレージ | ASRP | はい |
 
-### JSRP {#jsrp}
+### JSRP  {#jsrp}
 
 
 | デプロイメント | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店 |
@@ -88,9 +88,9 @@ For more details on Oak microkernals, visit [Recommended Deployments](../../help
 
 ## 開発について {#for-development}
 
-For non-production environments, [JSRP](jsrp.md) provides simplicity in setting up a development environment with one author instance and one publish instance.
+実稼働以外の環境では、[JSRP](jsrp.md)を使用すると、1つの作成者インスタンスと1つの発行インスタンスを持つ開発環境を簡単に設定できます。
 
-If choosing [ASRP](asrp.md), [DSRP](dsrp.md) or [MSRP](msrp.md) for production, it is also possible to setup a similar development environment using Adobe on-demand storage or MongoDB. For an example, see [HowTo Setup MongoDB for Demo](demo-mongo.md).
+実稼働用に[ASRP](asrp.md)、[DSRP](dsrp.md)、[MSRP](msrp.md)を選択した場合、AdobeオンデマンドストレージまたはMongoDBを使用して、同様の開発環境を設定することもできます。 例については、[HowTo Setup MongoDB for Demo](demo-mongo.md)を参照してください。
 
 ## 参照 {#references}
 
@@ -102,7 +102,7 @@ If choosing [ASRP](asrp.md), [DSRP](dsrp.md) or [MSRP](msrp.md) for production, 
 
    作成者および公開環境におけるユーザーとユーザーグループの役割について説明します。
 
-* UGC [共通店舗](working-with-srp.md)
+* UGC [共通ストア](working-with-srp.md)
 
    コミュニティコンテンツのストレージを、サイトコンテンツとは別に説明します。
 
