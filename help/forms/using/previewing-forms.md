@@ -51,13 +51,13 @@ AEM Forms では、リポジトリ内にあるフォームやドキュメント�
  </tbody>
 </table>
 
-## フォームのプレビュー {#previewing-a-form-1}
+## フォームのプレビュー  {#previewing-a-form-1}
 
-1. Select an asset you want to preview, and click Preview ![aem6forms_preview](assets/aem6forms_preview.png) in the actions toolbar.
+1. プレビューするアセットを選択し、アクションツールバーのプレビュー![aem6forms_プレビュー](assets/aem6forms_preview.png)をクリックします。
 
    >[!NOTE]
    >
-   >アセットを選択するには、デフォルトのカードビューをリストビューに切り替えます。「 ![aem6forms_viewlist](assets/aem6forms_viewlist.png) 」または「 ![aem6forms_viewcard](assets/aem6forms_viewcard.png) 」をクリックして表示を切り替えます。
+   >アセットを選択するには、デフォルトのカードビューをリストビューに切り替えます。![aem6forms_viewlist](assets/aem6forms_viewlist.png)または![aem6forms_viewcard](assets/aem6forms_viewcard.png)をクリックして、表示を切り替えます。
 
 1. プレビューをクリックすると、選択されているアセットタイプで使用できるプレビューオプションが表示されます。必要なオプションをクリックすると、選択されているアセットが新しいタブにレンダリングされます。
 
@@ -71,6 +71,6 @@ AEM Forms では、リポジトリ内にあるフォームやドキュメント�
 
 「**データを使用してプレビュー**」を選択すると、実際のデータが入力された状態でフォームの様子を見ることができます。データを使用してプレビューオプションでは、サンプルユーザーデータを含めた XML をアップロードできます。サンプルユーザーデータを使用して、選択したフォーマットでプレビューフォームに自動入力します。
 
-1. Select an asset, click Preview ![aem6forms_preview](assets/aem6forms_preview.png), and select **Preview with Data**.
+1. アセットを選択し、プレビュー![aem6forms_プレビュー](assets/aem6forms_preview.png)をクリックし、「データを含むプレビュー&#x200B;**」を選択します。**
 1. フォームのプレビューダイアログで、FormData を XML ファイルとして指定します。プレビューをクリックして、XML からのマージされたデータでフォームをレンダリングします。
 
