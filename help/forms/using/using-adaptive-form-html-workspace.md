@@ -32,11 +32,11 @@ JEE上のAEM Formsは、HTML Workspaceでアダプティブフォームを使用
 * 「Assign Task」および「Start Point」の Workbench プロパティシートでは、アダプティブフォームのトップレベル / グローバルツールバーを非表示にすることができます。
 * 新しいアクションプロファイルを、アダプティブフォームでのレンダリングおよび送信アクションに使用することができます。
 
-### LiveCycle アプリケーションのエクスポートおよびインポート {#livecycle-application-export-and-import}
+### LiveCycle アプリケーションのエクスポートおよびインポート  {#livecycle-application-export-and-import}
 
 アダプティブフォームは AEM リポジトリにあるため、LiveCycle アプリケーションのエクスポートには、使用されているアダプティブフォームへのリファレンスのみが含まれています。したがって、LiveCycleアプリの書き出しと読み込みは、2つの手順で行います。 LiveCycle アプリケーションには、プロセスの定義などが含まれています。アダプティブフォームを含む別のパッケージが、AEM より ZIP ファイルにてエクスポートされます。インポート中、LiveCycle アプリケーションは Workbench を通してインポートされ、アダプティブフォームは AEM を通してインポートされます。
 
-## HTML Workspace におけるアダプティブフォームのユーザーエクスペリエンス {#user-experience-of-adaptive-form-in-html-workspace}
+## HTML Workspace におけるアダプティブフォームのユーザーエクスペリエンス  {#user-experience-of-adaptive-form-in-html-workspace}
 
 HTML Workspace は、モバイルフォームに使用できるコントロールのほかに、アダプティブフォーム特有のコントロールをいくつか提供しています。HTML Workspace で「Task」または「Start Point」を開くと、ユーザーは、アダプティブフォームをナビゲートし、保存、署名、送信、添付ファイルの追加を行うことができます。詳しい内容は次のとおりです。
 
@@ -48,16 +48,16 @@ HTML Workspace は、モバイルフォームに使用できるコントロー�
 
 1. **アダプティブフォームグローバルツールバーの表示**:プロセスデザイナーがグローバル/トップレベルのツールバーを非表示にした場合、ツールバー、ボタンはアダプティブフォームに表示されません。
 
-1. **アダプティブFormsのWorkspaceナビゲーションコントロール**:HTML Workspaceのアダプティブフォームでは、次へ/前へのボタンを、保存、送信、ルートアクションのボタンと共に使用できます。 HTML Workspace でアダプティブフォームのパネルをナビゲートするには、次へ / 前へのボタンをクリックします。次へ／前へのボタンは、アダプティブフォームのモバイル表示のナビゲーションコントロールに似た精密なナビゲーションを提供します。
+1. **アダプティブFormsのWorkspaceナビゲーションコントロール**:HTML Workspaceのアダプティブフォームでは、次へ/前へのボタンを、保存、送信、ルートアクションのボタンと共に使用できます。HTML Workspace でアダプティブフォームのパネルをナビゲートするには、次へ / 前へのボタンをクリックします。次へ／前へのボタンは、アダプティブフォームのモバイル表示のナビゲーションコントロールに似た精密なナビゲーションを提供します。
 
-1. **アダプティブフォームのeSignサービスとSummaryコンポーネント**:Summaryコンポーネントは、HTML Workspaceでは操作できません。 つまり、アダプティブフォームに Summary コンポーネントが含まれていても、ワークスペースでは表示されません。HTML Workspace では、ユーザーは、Esign コンポーネントの自動送信の代わりに、送信またはルートアクションをクリックします。ドキュメントが署名された後は、フラット（非インタラクティブ）な署名済みドキュメントとして表示されます。「**送信**」またはルートアクションをクリックして、タスクまたは Start Point を閉じます。\
+1. **アダプティブフォームのeSignサービスとSummaryコンポーネント**:Summaryコンポーネントは、HTML Workspaceでは操作できません。つまり、アダプティブフォームに Summary コンポーネントが含まれていても、ワークスペースでは表示されません。HTML Workspace では、ユーザーは、Esign コンポーネントの自動送信の代わりに、送信またはルートアクションをクリックします。ドキュメントが署名された後は、フラット（非インタラクティブ）な署名済みドキュメントとして表示されます。「**送信**」またはルートアクションをクリックして、タスクまたは Start Point を閉じます。\
    署名済みのドキュメントが eSign サービスサーバーから収集され、データ xml ファイルがプロセス内の次のステップへと転送されます。
 
 ## アダプティブフォームをプロセスデザインで使用するための手順 {#steps-to-use-adaptive-forms-in-process-design}
 
 1. Adobe Experience Manager Forms Workbench を開きます。
 
-1. Go to **File > New > Application** or use the existing application to create an application.
+1. **File/New/Application**&#x200B;に移動するか、既存のアプリケーションを使用してアプリケーションを作成します。
 
    ![新しいアプリケーションの作成](assets/create_new_appl.png)
 
@@ -76,7 +76,7 @@ HTML Workspace は、モバイルフォームに使用できるコントロー�
 
    CRX アセットを使用する
 
-1. Select the adaptive form created through Manage Assets UI, and click **[!UICONTROL OK]**.
+1. 「アセットを管理」UIで作成したアダプティブフォームを選択し、「**[!UICONTROL OK]**」をクリックします。
 
    ![アダプティブフォームの選択](assets/selecting_form.png)
 
@@ -87,5 +87,5 @@ HTML Workspace は、モバイルフォームに使用できるコントロー�
    >アダプティブフォームの作成について詳しくは、「[アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)」を参照してください。
    >
    >
-   >For details around creating a process, see [Creating and managing processes](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7ff7.2.html).
+   >プロセスの作成について詳しくは、[プロセスの作成と管理](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7ff7.2.html)を参照してください。
 
