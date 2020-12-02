@@ -33,7 +33,7 @@ ht-degree: 95%
 
 
 
-## 概要 {#getting-started}
+## はじめに {#getting-started}
 
 ### タッチ対応 UI {#a-touch-enabled-ui}
 
@@ -82,7 +82,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 次に、これらのパネルで使用できるオプションについて説明します。
 
-### ナビゲーションパネル {#navigation-panel}
+### ナビゲーションパネル  {#navigation-panel}
 
 ナビゲーションパネルからAEMコンソールにアクセスできます。
 
@@ -107,7 +107,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    <td>このコンソールを使用すると、<a href="/help/communities/overview.md#engagement-community">エンゲージメント</a>と<a href="/help/communities/overview.md#enablement-community">イネーブルメント</a>のために<a href="/help/communities/sites-console.md">コミュニティサイト</a>を作成および管理できます。</td>
   </tr>
   <tr>
-   <td>コマース</td>
+   <td>Commerce</td>
    <td><a href="/help/sites-administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td>
   </tr>
   <tr>
@@ -205,7 +205,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
    ![screen_shot_2018-03-23at104126](assets/screen_shot_2018-03-23at104126.png)
 
-   これは、リスト表示でのみ使用できます。See [list view](#list-view) for more information.
+   これは、リスト表示でのみ使用できます。詳しくは、[リスト表示](#list-view)を参照してください。
 
 * 「**作成**」ボタン
 
@@ -225,9 +225,9 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 * キーボードナビゲーション
 
-   キーボードだけを使用して Web サイト内を移動できます。This uses the standard browser functionality of the **TAB** key (or **OPT+TAB**) to move you between elements on the page that are *focusable*.
+   キーボードだけを使用して Web サイト内を移動できます。これは、**TAB**&#x200B;キー（または&#x200B;**OPT+TAB**）の標準的なブラウザー機能を使用して、*フォーカス可能な*&#x200B;ページ上の要素間を移動します。
 
-   **Sites** コンソールには、「**メインコンテンツにスキップ**」するためのオプションが追加されています。This becomes visible as you *tab* through the header options, and speeds your navigation by allowing you to skip the standard elements in the (product) toolbar and taking you directly to the main content.
+   **Sites** コンソールには、「**メインコンテンツにスキップ**」するためのオプションが追加されています。これは、ヘッダーオプションを&#x200B;*tab*&#x200B;によって表示され、（製品）ツールバーの標準要素をスキップしてメインコンテンツに直接移動できるので、ナビゲーションの速度が速くなります。
 
    ![bh-30](assets/bh-30.png)
 
@@ -292,7 +292,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 >
 >利用可能な個々のアイコンについては、それぞれのコンソール、機能、シナリオに関連するページで説明しています。
 
-## クイックアクション {#quick-actions}
+## クイックアクション  {#quick-actions}
 
 [カード表示](#cardviewquickactions)では、特定のアクションがクイックアクションアイコンとして使用できます。クイックアクションアイコンはツールバーにも表示されます。クイックアクションのアイコンは、一度に 1 つの項目に対してのみ利用できます。このアイコンを使用すると、事前に選択する必要がありません。
 
@@ -315,7 +315,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 >
 >デフォルトでは、AEM Assets は、UI のどの表示でもアセットの元のレンディションをサムネールとして表示しません。管理者の場合、オーバーレイを使用して AEM Assets で元のレンディションをサムネールとして表示するように設定できます。
 
-### リソースの選択 {#selecting-resources}
+### リソースの選択  {#selecting-resources}
 
 特定のリソースの選択方法は、表示とデバイスの組み合わせによって異なります。
 
@@ -343,13 +343,13 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    <td>カード表示<br /> </td>
    <td>
     <ul>
-     <li>Desktop:<br /> Mouseover, then use the checkmark quick action</li>
+     <li>デスクトップ：<br />マウスオーバーし、チェックマーククイックアクションを使用</li>
      <li>モバイルデバイス：<br />カードをタップ＆ホールドする</li>
     </ul> </td>
    <td>
     <ul>
-     <li>Desktop:<br /> Click the card</li>
-     <li>Mobile device:<br /> Tap the card</li>
+     <li>デスクトップ：<br />カードをクリック</li>
+     <li>モバイルデバイス：<br />カードをタップします</li>
     </ul> </td>
   </tr>
   <tr>
