@@ -28,7 +28,7 @@ ht-degree: 76%
 
 タグ名前空間と分類は、どちらで適用する場合も同じです。
 
-## Communities の機能 {#communities-features}
+## Communities の機能  {#communities-features}
 
 タグ付けを許可するように設定できるAEM Communitiesの機能は次のとおりです。
 
@@ -38,9 +38,9 @@ ht-degree: 76%
 * [フォーラム](forum.md#configuretheaddedforum)
 * [Q＆A](working-with-qna.md)
 
-## タグの管理 {#administering-tags}
+## タグの管理  {#administering-tags}
 
-See [Administering Tags](../../help/sites-administering/tags.md#tagging-console) for creating and managing tag namespaces and taxonomies.
+タグ名前空間とタクソノミの作成と管理については、[タグ](../../help/sites-administering/tags.md#tagging-console)の管理を参照してください。
 
 開発者向けの情報については、[タグの重要事項](tag.md)を参照してください。
 
@@ -54,7 +54,7 @@ See [Administering Tags](../../help/sites-administering/tags.md#tagging-console)
 
 [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)を参照してください。
 
-The following is how it appears in CRXDE when an administrator applies read permissions to `/etc/tag/discussions` for the group `Community Engage Members`.
+管理者がグループ`Community Engage Members`の`/etc/tag/discussions`に読み取り権限を適用した場合、CRXDEでは次のように表示されます。
 
 ![tag-permissions](assets/tag-permissions.png)
 
