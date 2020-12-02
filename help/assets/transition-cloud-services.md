@@ -21,8 +21,8 @@ ht-degree: 73%
 
 翻訳クラウドサービスをアセットフォルダーに直接適用すると、翻訳ワークフローの作成または変更時に翻訳サービスを設定する必要がなくなります。
 
-1. From the [!DNL Assets] user interface, select the folder to which you want to apply translation services.
-1. From the toolbar, click **[!UICONTROL Properties]** to display the **[!UICONTROL Folder Properties]** page.
+1. [!DNL Assets]ユーザーインターフェイスから、翻訳サービスを適用するフォルダーを選択します。
+1. ツールバーで、**[!UICONTROL プロパティ]**&#x200B;をクリックして&#x200B;**[!UICONTROL フォルダーのプロパティ]**&#x200B;ページを表示します。
 
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
@@ -35,23 +35,23 @@ ht-degree: 73%
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. From the toolbar, click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the dialog.The translation service is applied to the folder.
+1. ツールバーで[**[!UICONTROL 保存]**]をクリックし、[**[!UICONTROL OK]**]をクリックしてダイアログを閉じます。翻訳サービスがフォルダに適用されます。
 
 ## カスタム翻訳コネクタの適用  {#applying-custom-translation-connector}
 
 翻訳ワークフローで使用する翻訳サービスにカスタムコネクタを適用する場合、カスタムコネクタを適用するには、まずパッケージマネージャーからコネクタをインストールします。次に、Cloud Services コンソールからコネクタを設定します。コネクタを設定すると、[翻訳サービスの適用](transition-cloud-services.md#applying-the-translation-services)で説明されている「Cloud Services」タブのコネクタのリストに表示されるようになります。カスタムコネクタを適用し、翻訳ワークフローを実行すると、翻訳プロジェクトの「**[!UICONTROL 翻訳の概要]**」タイルの「**[!UICONTROL プロバイダー]**」と「**[!UICONTROL メソッド]**」という見出しの下にコネクタの詳細が表示されます。
 
 1. パッケージマネージャーからコネクタをインストールします。
-1. Click the [!DNL Experience Manager] logo, and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
+1. [!DNL Experience Manager]ロゴをクリックし、**[!UICONTROL ツール]**/**[!UICONTROL 導入]**/**[!UICONTROL Cloud Services]**&#x200B;に移動します。
 1. インストールしたコネクタを **[!UICONTROL Cloud Services]** ページの「**[!UICONTROL サードパーティのサービス]**」の下で探します。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. Click the **[!UICONTROL Configure now]** link to open the **[!UICONTROL Create Configuration]** dialog.
+1. 「**[!UICONTROL 今すぐ設定]**」リンクをクリックして、**[!UICONTROL 設定を作成]**&#x200B;ダイアログを開きます。
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. Specify a title and a name for the connector, and then click **[!UICONTROL Create]**. [翻訳サービスの適用](#applying-the-translation-services)のステップ 5 で説明されている「**[!UICONTROL Cloud Services]**」タブのコネクタリストにカスタムコネクタが表示されます。
+1. コネクタのタイトルと名前を指定し、**[!UICONTROL 作成]**&#x200B;をクリックします。 [翻訳サービスの適用](#applying-the-translation-services)のステップ 5 で説明されている「**[!UICONTROL Cloud Services]**」タブのコネクタリストにカスタムコネクタが表示されます。
 1. カスタムコネクタを適用したら、[翻訳プロジェクトの作成](translation-projects.md)で説明されている翻訳ワークフローを実行します。**[!UICONTROL プロジェクト]**&#x200B;コンソールで、翻訳プロジェクトの「**[!UICONTROL 翻訳の概要]**」タイルに表示されているコネクタの詳細を確認します。
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
