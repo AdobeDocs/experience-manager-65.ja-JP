@@ -22,39 +22,39 @@ ht-degree: 67%
 
 AEM 6.3 Forms と AEM 6.4 Forms の場合、AEM 6.5 Forms へ直接アップグレードすることができます。
 
-Direct upgrade path from **AEM 6.0 Forms, AEM 6.1 Forms**, and **AEM 6.2 Forms** to AEM 6.5 Forms is not available. Perform an intermediate [upgrade to AEM 6.2 Forms](https://helpx.adobe.com/jp/experience-manager/6-2/forms/using/upgrade.html), [upgrade to AEM 6.3 Forms](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/upgrade.html), or [upgrade to AEM 6.4 Forms](/help/forms/using/upgrade.md) and then upgrade from AEM 6.3 Forms, or AEM 6.4 Forms to AEM 6.5 Forms.
+**AEM 6.0Forms、AEM 6.1Forms**、**AEM 6.2Forms**&#x200B;からAEM 6.5Formsへの直接アップグレードパスは使用できません。 AEM 6.2Forms](https://helpx.adobe.com/jp/experience-manager/6-2/forms/using/upgrade.html)への中間的な[アップグレード、[AEM 6.3Forms](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/upgrade.html)へのアップグレード、または[AEM 6.4Forms](/help/forms/using/upgrade.md)へのアップグレードを実行し、AEM 6.3Formsまたは6.AEM4FormsからAEM6.5 Formsにアップグレードします。
 
 AEM 6.3FormsまたはAEM 6.4FormsからAEM 6.5Formsにアップグレードするには、次の手順を実行します。
 
 1. 既存の AEM インスタンスを AEM 6.5 にアップグレードします。手順は次のとおりです。
 
-   1. AEM 6.3 Forms または AEM 6.4 Forms の最新のサービスパックおよびパッチをインストールします。詳しくは、「 [AEM Sustenance Hub](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)」を参照してください。
+   1. AEM 6.3 Forms または AEM 6.4 Forms の最新のサービスパックおよびパッチをインストールします。詳しくは、[AEMメンテナンスハブ](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)を参照してください。
    1. アップグレードのソースインスタンスを準備します。詳しくは、「[AEM 6.5 へのアップグレード](/help/sites-deploying/upgrade.md)」を参照してください。
    1. [AEM 6.5 QuickStart](/help/sites-deploying/deploy.md#getting%20the%20software) をダウンロードします。
    1. **（Unix/Linux ベースのインストールのみ）** 基盤のオペレーティングシステムとして UNIX または Linux を使用している場合は、ターミナルウィンドウを開いて crx-quickstart が含まれているフォルダーに移動し、次のコマンドを実行します。
 
       `chmod -R 755 ../crx-quickstart`
 
-   1. Upgrade your AEM instance to AEM 6.3. For step by step instructions, see [Upgrading to AEM 6.5](/help/sites-deploying/upgrade.md).
+   1. AEMインスタンスをAEM 6.3にアップグレードします。詳しい手順については、[AEM 6.5](/help/sites-deploying/upgrade.md)へのアップグレードを参照してください。
 
       次の手順に進む前に、ServiceEvent REGISTERED および ServiceEvent UNREGISTERED メッセージが &lt;crx-repository>/error.log ファイルに出現しなくなるまで待ちます。
 
       >[!NOTE]
       >
-      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。The bundles are listed at https://&#39;[server]:[port]&#39;/system/console/.
+      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。バンドルは、https://&#39;[server]:[port]&#39;/system/console/に一覧表示されます。
 
 1. AEM Forms アドオンパッケージのインストール. 手順は次のとおりです。
 
-   1. Open [Software Distribution](https://experience.adobe.com/downloads). ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
-   1. Tap **[!UICONTROL Adobe Experience Manager]** available in the header menu.
+   1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。 ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
+   1. ヘッダーメニューにある&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;をタップします。
    1. 「**[!UICONTROL フィルター]**」セクションで、
       1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-      1. パッケージのバージョンとタイプを選択します。 You can also use the **[!UICONTROL Search Downloads]** option to filter the results.
-   1. Tap the package name applicable to your operating system, select **[!UICONTROL Accept EULA Terms]**, and tap **[!UICONTROL Download]**.
-   1. Open [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)  and click **[!UICONTROL Upload Package]** to upload the package.
-   1. Select the package and click **[!UICONTROL Install]**.
+      1. パッケージのバージョンとタイプを選択します。 また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して、結果をフィルターすることもできます。
+   1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「**[!UICONTROL EULA条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
+   1. [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックして、パッケージをアップロードします。
+   1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
 
-      You can also download the package using the direct link listed in [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) article.
+      [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクを使って、パッケージをダウンロードすることもできます。
 
       >[!NOTE]
       >
@@ -88,10 +88,10 @@ AEM 6.3FormsまたはAEM 6.4FormsからAEM 6.5Formsにアップグレードす�
 
    * **jQueryのサポート**
 
-      AEM 6.5Formsでは、jQueryのバージョンが3.2.1に更新され、jQuery UIのバージョンが1.12.1に更新されます。AEMフォームは **noConflict** モードでJQueryを使用します。 したがって、他のjQueryバージョンを使用している場合、アップグレードの実行中に問題は表示されません。 ただし、AEM 6.5Formsにアップグレードする場合は、次の手順を実行します。
+      AEM 6.5Formsでは、jQueryのバージョンが3.2.1に更新され、jQuery UIのバージョンが1.12.1に更新されます。AEMフォームは、**noConflict**&#x200B;モードでJQueryを使用します。 したがって、他のjQueryバージョンを使用している場合、アップグレードの実行中に問題は表示されません。 ただし、AEM 6.5Formsにアップグレードする場合は、次の手順を実行します。
 
       * カスタムコンポーネントが存在する場合は、そのコンポーネントが、サポートされているjQueryバージョンと互換性があることを確認します。
-      * カスタムコンポーネントからサポートされていないAPIを削除します。 削除されたAPIのリストについては、 [アップグレードガイド](https://jquery.com/upgrade-guide/3.0/) を参照してください。 例えば、load()、.unload()、および.error() APIのサポートは削除されました。 前述のAPIの代わりに.on()メソッドを使用します。 例えば、$(&quot;img&quot;).load(fn)を$(&quot;img&quot;).on(&quot;load&quot;, fn)に変更します。
+      * カスタムコンポーネントからサポートされていないAPIを削除します。 削除したAPIのリストについては、[アップグレードガイド](https://jquery.com/upgrade-guide/3.0/)を参照してください。 例えば、load()、.unload()、および.error() APIのサポートは削除されました。 前述のAPIの代わりに.on()メソッドを使用します。 例えば、$(&quot;img&quot;).load(fn)を$(&quot;img&quot;).on(&quot;load&quot;, fn)に変更します。
    * **分析機能とレポートの再設定（バージョン 6.2 以前の AEM Forms をアップグレードする場合のみ）** 
 
       AEM 6.4 Forms では、ソースのトラフィック変数とインプレッションの成功イベントは利用できません。そのため、バージョン 6.2 以前の AEM Forms をアップグレードすると、AEM Forms から Adobe Analytics サーバーにデータが送信されなくなり、アダプティブフォームの分析レポートが使用できなくなります。また、AEM 6.4 Forms には、フォームバージョン分析用のトラフィック変数と、フィールドの処理時間に関する成功イベントが導入されています。このため、AEM Forms 環境で分析とレポートを再設定してください。詳しい手順については、「[分析とレポートの設定](../../forms/using/configure-analytics-forms-documents.md)」を参照してください。
