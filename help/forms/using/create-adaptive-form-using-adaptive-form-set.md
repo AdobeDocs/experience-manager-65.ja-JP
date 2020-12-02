@@ -35,9 +35,9 @@ ht-degree: 82%
 >
 >子フォームや親フォームなど、XFA ベースのアダプティブフォームまたはフラグメントを使用することはできません。
 
-## 機能の仕組み {#behind-the-scenes}
+## 機能の仕組み  {#behind-the-scenes}
 
-親フォームに XSD ベースのアダプティブフォームを追加することができます。親フォームの構造は、[アダプティブフォーム](../../forms/using/prepopulate-adaptive-form-fields.md)と同じです。アダプティブフォームを子フォームとして追加すると、親フォームのパネルとして追加されます。 Data of a bound child form is stored under the `data`root of the `afBoundData` section of the parent form&#39;s XML schema.
+親フォームに XSD ベースのアダプティブフォームを追加することができます。親フォームの構造は、[アダプティブフォーム](../../forms/using/prepopulate-adaptive-form-fields.md)と同じです。アダプティブフォームを子フォームとして追加すると、親フォームのパネルとして追加されます。 連結された子フォームのデータは、親フォームのXMLスキーマの`afBoundData`セクションの`data`ルートに保存されます。
 
 例えば、顧客が申込フォームを記入したとします。フォームの最初の 2 つのフィールドは、名前と ID です。この XML は次のようになります。
 
@@ -55,7 +55,7 @@ ht-degree: 82%
 </afData>
 ```
 
-申込フォームに別のフォームを追加して、顧客に職場の住所の記入を要求します。子フォームのスキーマのルートは `officeAddress` です。を適用 `bindref` し `/application/officeAddress` ま `/officeAddress`す。 `bindref` がない場合、子フォームが `officeAddress` サブツリーとして追加されます。以下のフォームのXMLを参照してください。
+申込フォームに別のフォームを追加して、顧客に職場の住所の記入を要求します。子フォームのスキーマのルートは `officeAddress` です。`bindref` `/application/officeAddress`または`/officeAddress`を適用します。 `bindref` がない場合、子フォームが `officeAddress` サブツリーとして追加されます。以下のフォームのXMLを参照してください。
 
 ```xml
 <afData>
@@ -75,7 +75,7 @@ ht-degree: 82%
 </afData>
 ```
 
-顧客に住所の入力を求める別のフォームを挿入する場合は、次のようなXMLを適用 `bindref` し `/application/houseAddress or /houseAddress.`ます。
+別のフォームを挿入して、顧客に住所の入力を求める場合は、`bindref` `/application/houseAddress or /houseAddress.`XMLを次のように適用します。
 
 ```xml
 <afData>
@@ -101,7 +101,7 @@ ht-degree: 82%
 
 スキーマのルートと同じサブルート名にするには、（この例では`Address` ）、インデックス付きの bindref を使用します。
 
-For example, apply bindrefs `/application/address[1]` or `/address[1]` and `/application/address[2]` or `/address[2]`. フォームのXMLは次のとおりです。
+例えば、bindref `/application/address[1]`または`/address[1]`と`/application/address[2]`または`/address[2]`を適用します。 フォームのXMLは次のとおりです。
 
 ```xml
 <afData>
@@ -135,12 +135,12 @@ For example, apply bindrefs `/application/address[1]` or `/address[1]` and `/app
 >
 >異なるフォームまたはフラグメントが同じサブルートにマッピングされる場合、データは上書きされます。
 
-## アセットブラウザーを使用して、子フォームとしてアダプティブフォームを追加する {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
+## アセットブラウザーを使用して、子フォームとしてアダプティブフォームを追加する  {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
 
 アセットブラウザーを使用して、子フォームとしてアダプティブフォームを追加するステップを実行します。
 
 1. 親フォームを編集モードで開きます。
-1. In the sidebar, click **Assets** ![assets-browser](assets/assets-browser.png). アセットの下で、**Adaptive Form** をドロップダウンリストから選択します。
+1. サイドバーで、「**アセット** ![アセットブラウザー](assets/assets-browser.png)」をクリックします。 アセットの下で、**Adaptive Form** をドロップダウンリストから選択します。
    [ ![アセットの下でアダプティブフォームを選択する](assets/asset.png)](assets/asset-1.png)
 
 1. 子フォームとして追加するアダプティブフォームをドラッグ＆ドロップします。
