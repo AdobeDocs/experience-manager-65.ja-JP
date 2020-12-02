@@ -26,18 +26,18 @@ ht-degree: 90%
 
 この記事では、TODO リストの各タスクに情報を追加する手順について説明します。
 
-## 追加できる情報 {#what-can-be-added}
+## 追加できる情報  {#what-can-be-added}
 
 サーバーによって送信された `task.json` にある情報を追加することができます。情報は、平文テキストとして追加することも、スタイルを使用して情報をフォーマットすることもできます。
 
 JSON オブジェクトの説明についての詳細は、[この](/help/forms/using/html-workspace-json-object-description.md)記事を参照してください。
 
-## タスクでの情報の表示 {#displaying-information-on-a-task}
+## タスクでの情報の表示  {#displaying-information-on-a-task}
 
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)」に従います。
 1. タスクに追加の情報を表示するには、対応するキーと値のペアを `translation.json` のタスクブロック内に追加する必要があります。
 
-   例えば、英語 `/apps/ws/locales/en-US/translation.json` を次のように変更します。
+   例えば、英語の場合は`/apps/ws/locales/en-US/translation.json`を次のように変更します。
 
    ```json
    "task" : {
@@ -122,9 +122,9 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    }
    ```
 
-## 新規プロパティでの CSS の定義 {#defining-css-for-the-new-property}
+## 新規プロパティでの CSS の定義  {#defining-css-for-the-new-property}
 
-1. タスクに追加された情報（プロパティ）にスタイルを適用できます。To do this, you need to add style information for the new property added to `/apps/ws/css/newStyle.css`.
+1. タスクに追加された情報（プロパティ）にスタイルを適用できます。これを行うには、`/apps/ws/css/newStyle.css`に追加された新しいプロパティにスタイル情報を追加する必要があります。
 
    たとえば、以下を追加します。
 
@@ -136,7 +136,7 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    }
    ```
 
-## HTML テンプレートへのエントリの追加 {#adding-entry-in-the-html-template}
+## HTML テンプレートへのエントリの追加  {#adding-entry-in-the-html-template}
 
 最後に、タスクに追加する各プロパティの開発パッケージにエントリを含める必要があります。作成する方法については、「AEM Forms Workspace コードの構築」を参照してください。
 
@@ -145,9 +145,9 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    * 追加の: `/libs/ws/js/runtime/templates/`
    * を: `/apps/ws/js/runtime/templates/`
 
-1. に追加新しい情報を追加し `/apps/ws/js/runtime/templates/task.html`ます。
+1. 追加`/apps/ws/js/runtime/templates/task.html`に対する新しい情報。
 
-   例えば、次の下にを追加し `div class="taskProperties"`ます。
+   例えば、`div class="taskProperties"`の下に次を追加します。
 
    ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
