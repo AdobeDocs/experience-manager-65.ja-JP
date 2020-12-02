@@ -43,11 +43,11 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
 
 この例では、新しいカスタム JSSP ファイルを作成し、AEM 側から呼び出して、結果を取得します。例えば、この方法を利用して、Adobe Campaign からデータを取得したり、Adobe Campaign にデータを保存したりできます。
 
-1. In Adobe Campaign, to create a new JSSP file, click the **New** icon.
+1. Adobe Campaignで、新しいJSSPファイルを作成するには、**新規**&#x200B;アイコンをクリックします。
 
    ![](do-not-localize/chlimage_1-4a.png)
 
-1. この JSSP ファイルの名前を入力します。In this example, we use **cus:custom.jssp** (meaning it will be in the **cus** namespace).
+1. この JSSP ファイルの名前を入力します。この例では、**cus:custom.jssp**&#x200B;を使用します(つまり、**cus**&#x200B;名前空間ーにあります)。
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -66,7 +66,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
    * AEM と Adobe Campaign 間に有効な接続がある
    * Adobe Campaign クラウドサービスが **/content/geometrixx-outdoors** に設定されている
 
-   The most important object in this example is the **GenericCampaignConnector**, which allows you to call (get and post) jssp files on the Adobe Campaign side.
+   この例で最も重要なオブジェクトは&#x200B;**GenericCampaignConnector**&#x200B;です。これにより、Adobe Campaign側でjsspファイルを呼び出す（取得して投稿する）ことができます。
 
    コードの抜粋を以下に示します。
 
@@ -163,7 +163,7 @@ public class CustomServlet extends SlingSafeMethodsServlet {
 }
 ```
 
-## 例 2：Adobe Campaign から AEM {#example-adobe-campaign-to-aem}
+## 例 2：Adobe Campaign から AEM  {#example-adobe-campaign-to-aem}
 
 AEM には、サイト管理エクスプローラービューのどこでも使用できるオブジェクトを取得するための API がデフォルトで用意されています。
 
@@ -189,7 +189,7 @@ API を利用するには、デフォルトでは、AEM が基本認証を使用
 
 6.1.1（build 8624 以上）では、複数のロジックの中でこのロジックを実装する JS ライブラリ **amcIntegration.js** を使用できます。
 
-### AEM の API 呼び出し {#aem-api-call}
+### AEM の API 呼び出し  {#aem-api-call}
 
 ```java
 loadLibrary("nms:amcIntegration.js");
