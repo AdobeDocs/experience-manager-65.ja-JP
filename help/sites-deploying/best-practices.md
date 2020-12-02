@@ -37,7 +37,7 @@ ht-degree: 73%
 
 以降の表では、特定のドキュメントの説明とリンクを示します。
 
-## Oak {#oak}
+## Oak  {#oak}
 
 [Oak](/help/sites-deploying/platform.md) は、AEM の基礎となっている、拡張性の高い高性能の階層コンテンツリポジトリです。
 
@@ -71,11 +71,11 @@ ht-degree: 73%
  </tbody>
 </table>
 
-## Communities {#communities}
+## Communities  {#communities}
 
 AEM Communitiesはオンプレミスコミュニティの作成と管理を簡素化します。 AEM Communitiesのベストプラクティスは以下のとおりです。
 
-[コミュニティコンテンツストア](/help/communities/working-with-srp.md) — ユーザ生成コンテンツ(UGC)の新しい共有ストレージ機能と、基盤となる [トポロジを選択する際の考慮点について説明します](/help/communities/topologies.md)。
+[コミュニティコンテンツストア](/help/communities/working-with-srp.md)  — ユーザ生成コンテンツ(UGC)の新しい共有ストレージ機能と、基盤となる [トポロジを選択する際の考慮点について説明します](/help/communities/topologies.md)。
 
 [コミュニティの推奨デプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Communitiesの推奨デプロイメントについて説明します。 |
 
@@ -96,7 +96,7 @@ AEMには現在2つのUIがあります。従来のUIとタッチ操作向けUI�
   <tr>
    <td>品質保証のベストプラクティス</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">品質保証のベストプラクティス</a></td>
-   <td>A standardized overview of the issues involved with defining a Test Concept specifically for performance tests on your <em>publish</em> environment. 主に QA エンジニア、プロジェクトマネージャーおよびシステム管理者向けの内容となっています。</td>
+   <td><em>publish</em>環境でのパフォーマンステスト専用に、テスト概念の定義に関する問題の標準化された概要です。 主に QA エンジニア、プロジェクトマネージャーおよびシステム管理者向けの内容となっています。</td>
   </tr>
   <tr>
    <td>CDN での Dispatcher の使用</td>
