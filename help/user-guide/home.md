@@ -20,13 +20,13 @@ ht-degree: 31%
 |:-:|:-:|:-:|
 | AEM使用の手引きを行うためのDiscoverのチュートリアルと記事 | 6.5の新機能に関するビデオの選択 | AEM 6.5の新機能を確認する |
 
-## ユーザーガイドとリソース {#user-guides-and-resources}
+## ユーザーガイドとリソース{#user-guides-and-resources}
 
 * [AEM機能ユーザーガイド](capabilities.md)
 * [AEM導入ユーザーガイド](implementation.md)
 * [AEMリソース](resources.md)
 
-## トラブルシューティングとヘルプ {#troubleshooting-and-help}
+## トラブルシューティングとヘルプ{#troubleshooting-and-help}
 
 * [AEM を初めて使用する方](new.md)
 * [AEMの機能について](learn.md)
@@ -34,16 +34,16 @@ ht-degree: 31%
 * [AEM コミュニティ](community.md)
 * [AEM のトラブルシューティング](troubleshooting.md)
 
-## 連絡先オプション {#contact-options}
+## 連絡先オプション{#contact-options}
 
 サポートの代理人は、次の方法でサポートを支援できます。
 
 * Web:Experience Managerサポートポータル
-* 電話番号： [地域の電話番号を確認します。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
+* 電話番号：[地域の電話番号を探します。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
 
 >[!NOTE]
 >
->サ **ポート委任者かどうか不明です**。 この [ユーザータイプが適用されるかどうかを確認し](https://helpx.adobe.com/experience-cloud/supported-users.html) 、 [エンタープライズサポート条件について確認します](https://helpx.adobe.com/support/programs/enterprise-support-terms.html)。
+>**サポート委任**&#x200B;かどうか不明ですか？ この[ユーザータイプがあなた](https://helpx.adobe.com/experience-cloud/supported-users.html)に当てはまるかどうかを調べ、アドビの[エンタープライズサポート用語](https://helpx.adobe.com/support/programs/enterprise-support-terms.html)を知ります。
 
 ## コミュニティ {#community}
 
