@@ -25,10 +25,10 @@ ht-degree: 66%
 
 例えば、これらのマッピングを使用すると次のことが可能です。
 
-* Prefix all requests with `/content` so that the internal structure is hidden from the visitors to your website.
-* Define a redirect so that all requests to the `/content/en/gateway` page of your website are redirected to `https://gbiv.com/`.
+* 内部構造がWebサイトの訪問者ーに表示されないように、すべてのリクエストの先頭に`/content`を付けます。
+* Webサイトの`/content/en/gateway`ページへのすべてのリクエストが`https://gbiv.com/`にリダイレクトされるように、リダイレクトを定義します。
 
-One possible HTTP mapping prefixes all requests to `localhost:4503` with `/content`. このようなマッピングを使用すると、Web サイトの訪問者に対して内部構造を非表示にすることができます。例えば、次のページにアクセスできます。
+1つのHTTPマッピングでは、すべてのリクエストを`localhost:4503`の先頭に`/content`を付けます。 このようなマッピングを使用すると、Web サイトの訪問者に対して内部構造を非表示にすることができます。例えば、次のページにアクセスできます。
 
 `localhost:4503/content/we-retail/en/products.html`
 
@@ -36,7 +36,7 @@ One possible HTTP mapping prefixes all requests to `localhost:4503` with `/conte
 
 `localhost:4503/we-retail/en/products.html`
 
-as the mapping will automatically add the prefix `/content` to `/we-retail/en/products.html`.
+を使用すると、マッピングは自動的にプレフィックス`/content`を`/we-retail/en/products.html`に追加します。
 
 >[!CAUTION]
 >
@@ -50,7 +50,7 @@ as the mapping will automatically add the prefix `/content` to `/we-retail/en/pr
 
 マッピングでは 2 つのリストが作成されます。JCR Resource Resolver は、これらのリストを（トップダウン）評価して一致項目を探します。
 
-These lists can be viewed (together with configuration information) under the **JCR ResourceResolver** option of the Felix console; for example, `https://<*host*>:<*port*>/system/console/jcrresolver`:
+これらのリストは、Felixコンソールの&#x200B;**JCR ResourceResolver**&#x200B;オプションの下で（設定情報と共に）表示できます。例：`https://<*host*>:<*port*>/system/console/jcrresolver`:
 
 * Configuration
 （[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) 用に定義された）現在の設定を表示します。
@@ -78,7 +78,7 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 
 これにより、次の要求がリダイレクトされます。
 
-`https://localhost:4503/welcome` ``
+`https://localhost:4503/welcome` &quot;
 
 リダイレクト先は次のとおりです。
 
@@ -88,7 +88,7 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 
 >[!NOTE]
 >
->There are many resources available that help explain how to define regular expressions; for example [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
+>正規式の定義方法を説明するリソースが多数あります。例：[https://www.regular-expressions.info/](https://www.regular-expressions.info/)
 
 ### AEM でのマッピング定義の作成 {#creating-mapping-definitions-in-aem}
 
@@ -96,13 +96,13 @@ AEM の標準インストールには、次のフォルダーがあります。
 
 `/etc/map/http`
 
-これは、HTTP プロトコル用のマッピングを定義する場合に使用する構造です。Other folders ( `sling:Folder`) can be created under `/etc/map` for any other protocols that you want to map.
+これは、HTTP プロトコル用のマッピングを定義する場合に使用する構造です。`/etc/map`の下に、マッピングする他のプロトコル用の他のフォルダー(`sling:Folder`)を作成できます。
 
 #### /content への内部リダイレクトの設定{#configuring-an-internal-redirect-to-content}
 
-To create the mapping that prefixes any request to https://localhost:4503/ with `/content`:
+リクエストをhttps://localhost:4503/に接頭するマッピングを作成するには、次のように`/content`を付けます。
 
-1. Using CRXDE navigate to `/etc/map/http`.
+1. CRXDEを使用して`/etc/map/http`に移動します。
 
 1. 新しいノードを作成します。
 
@@ -128,11 +128,11 @@ To create the mapping that prefixes any request to https://localhost:4503/ with 
 
 1. 「**すべて保存**」をクリックします。
 
-This will handle a request such as:
+これは、次のようなリクエストを処理します。
 `localhost:4503/geometrixx/en/products.html`
-as if:
+次のように：
 `localhost:4503/content/geometrixx/en/products.html`
-had been requested.
+が要求された。
 
 >[!NOTE]
 >
@@ -140,5 +140,5 @@ had been requested.
 
 >[!NOTE]
 >
->を使用して、発行環境 `/etc/map.publish` の設定を保持できます。 次に、これらを複製し、パブリッシュ環境の `/etc/map.publish`Apache Sling Resource Resolver **の** Mapping Location [](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) ()に対して設定する必要があります。
+>`/etc/map.publish`を使用して、発行環境の設定を保持できます。 次に、これらを複製し、パブリッシュ環境の[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)の&#x200B;**Mapping Location**&#x200B;に対して設定した新しい場所(`/etc/map.publish`)を作成する必要があります。
 
