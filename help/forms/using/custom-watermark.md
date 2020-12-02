@@ -26,18 +26,18 @@ Create Correspondence UI を使用するエージェントユーザーは、電�
 
 PDF データの不正使用を防ぐため、プレビューの PDF に透かしを付けることができます。デフォルトのウォーターマークは「プレビュー」で、PDF 全体に表示されます。
 
-To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark]** During Preview option in **[!UICONTROL Correspondence Management Configurations]** at https://&#39;[server]:[port]&#39;/system/console/configMgr.
+プレビューPDFで透かしを有効にするには、https://&#39;[server]:[port]&#39;/system/console/configMgrの「**[!UICONTROL Correspondence Management Configurations]**&#x200B;の「プレビュー中に透かしを適用」オプションを選択します。****
 
 ![default-watermark](assets/default-watermark.png)
 
 透かしのテキストと外観をカスタマイズするには、次の手順を実行します。
 
-## Create Correspondence UI で PDF プレビュー内の透かしをカスタマイズする {#customizewatermark-}
+## Create Correspondence UI で PDF プレビュー内の透かしをカスタマイズする  {#customizewatermark-}
 
-1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
-1. In the apps folder, create a folder named **[!UICONTROL previewwatermark]** with path/structure similar to the previewwatermark folder in the libs folder:
+1. `https://'[server]:[port]'/[ContextPath]/crx/de`に移動し、管理者としてログインします。
+1. appsフォルダーに、libsフォルダー内のpreviewwatermarkフォルダーに類似したパス/構造で&#x200B;**[!UICONTROL previewwatermark]**&#x200B;という名前のフォルダーを作成します。
 
-   1. Right-click the **previewwatermark** folder at the following path and select **Overlay Node**:
+   1. 次のパスにある&#x200B;**previewwatermark**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
       `/libs/fd/cm/configFiles/previewwatermark`
 
@@ -47,7 +47,7 @@ To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** チェック済み
+      **ノードタイプを一致：** オン
 
       >[!NOTE]
       >
@@ -60,11 +60,11 @@ To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark
       >    * 機能パックのインストール
 
 
-   1. 「**OK**」をクリックし、「**すべて保存**」をクリックします。The **[!UICONTROL previewwatermark]** folder is created in the specified path.
+   1. 「**OK**」をクリックし、「**すべて保存**」をクリックします。指定したパスに&#x200B;**[!UICONTROL previewwatermark]**&#x200B;フォルダーが作成されます。
 
 
 
-1. Copy and paste the ddx file from &quot;/libs/fd/cm/configFiles/previewwatermark&quot; folder to &quot;/apps/fd/cm/configFiles/previewwatermark&quot; folder and click **[!UICONTROL Save All]**.
+1. 「/libs/fd/cm/configFiles/previewwatermark」フォルダーからddxファイルをコピーして「/apps/fd/cm/configFiles/previewwatermark」フォルダーに貼り付け、「**[!UICONTROL すべて保存]**」をクリックします。
 1. ddx ファイルは /apps/fd/cm/configFiles/previewwatermark/ から必要に応じて変更します。
 
    ```xml
@@ -82,7 +82,7 @@ To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark
    </DDX>
    ```
 
-   For information on customizing the watermark appearance, text, and alignment, see Adding and removing watermarks and backgrounds in the [Assembler Service and DDX Reference](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) document.
+   透かしの外観、テキスト、配置のカスタマイズについて詳しくは、『[アセンブラサービスとDDXリファレンス](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)』ドキュメントの透かしと背景の追加と削除を参照してください。
 
    >[!NOTE]
    >
