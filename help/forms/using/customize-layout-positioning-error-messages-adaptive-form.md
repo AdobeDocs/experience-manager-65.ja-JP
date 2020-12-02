@@ -27,16 +27,16 @@ ht-degree: 87%
 * 動的ヘルプインジケーターのコンテンツをカスタマイズ
 * 対応の CSS プロパティに変更を加えないでフィールドコンポーネント（キャプション、ウィジェット簡単な説明、詳細な説明、ヘルプインジケーターのコンポーネント）の位置をカスタマイズ
 
-## フィールドのレイアウトをカスタマイズ {#customize-layout-of-fields}
+## フィールドのレイアウトをカスタマイズ  {#customize-layout-of-fields}
 
 単位のフィールドまたはすべてのフィールドのレイアウトをカスタマイズして、キャプションやエラーメッセージの位置を変更できます。カスタムレイアウトをフィールドに適用するには、次の手順を実行します。
 
-### 単一フィールドのレイアウトをカスタマイズ {#customize-layout-of-a-single-field}
+### 単一フィールドのレイアウトをカスタマイズ  {#customize-layout-of-a-single-field}
 
 カスタムレイアウトを単一フィールドに適用するには、次の手順を実行します。
 
-1. **スタイル**&#x200B;モードでフォームを開きます。To open the form in style mode, in the page toolbar tap ![canvas-drop-down](assets/canvas-drop-down.png) > **Style**.
-1. In the sidebar, under **Form Objects**, select the field and tap the edit button ![edit-button](assets/edit-button.png).
+1. **スタイル**&#x200B;モードでフォームを開きます。スタイルモードでフォームを開くには、ページツールバーで![canvas-drop-down](assets/canvas-drop-down.png) > **Style**&#x200B;をタップします。
+1. サイドバーの「**フォームオブジェクト**」で、フィールドを選択し、編集ボタン![編集ボタン](assets/edit-button.png)をタップします。
 1. カスタマイズするフィールドの状態を選択し、その状態のスタイル設定を指定します。
 
    ![フィールドのインラインスタイル設定を指定する](assets/edit-error-state.png)
@@ -48,12 +48,12 @@ AEM Forms では、テーマを作成してフォームに適用できるよう�
 テーマエディターを使用してテーマを作成し、フォームにおけるすべてのフィールドのレイアウトをカスタマイズします。テーマを作成するには、次の手順を実行します。
 
 1. フォームを編集モードで開きます。
-1. In the edit mode, select a component, then tap ![field-level](assets/field-level.png) > **Adaptive Form Container**, and then tap ![cmppr](assets/cmppr.png).
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**アダプティブフォームコンテナ**&#x200B;をタップし、![cmppr](assets/cmppr.png)をタップします。
 1. アダプティブフォームテーマのサイドバーで、テーマエディタで作成したテーマを選択します。
 
-## カスタムフィールドレイアウトを作成 {#create-a-custom-field-layout}
+## カスタムフィールドレイアウトを作成  {#create-a-custom-field-layout}
 
-1. CRXDE Lite を開きます。The default URL is https://&#39;[server]:[port]&#39;/crx/de.
+1. CRXDE Lite を開きます。デフォルトのURLはhttps://&#39;[server]:[port]&#39;/crx/deです。
 1. /libs/fd/af/layouts/field node からフィールドレイアウト（例えば、defaultFieldLayout）を /apps node（例えば、/apps/af-field-layout）にコピーします。
 1. コピーしたノードの名前と defaultFieldLayout.jsp ファイルの名前を変更します。例えば、errorOnRight.jsp。 
 
