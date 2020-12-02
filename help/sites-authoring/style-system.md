@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: 0985ba24f7430381fccc40faf3a316d3abd85a30
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 96%
 
 このため、スタイルごとにカスタムコンポーネントを開発したり、スタイル機能を有効化するためにコンポーネントのダイアログをカスタマイズする必要がなくなりました。これにより、AEM のバックエンド開発をしなくてもそのまま再利用可能な、コンテンツ作成者のニーズにすばやく簡単に応えることができるコンポーネントの数が増加します。
 
-## 使用例 {#use-case}
+## 使用例  {#use-case}
 
 テンプレート作成者には、コンテンツ作成者がコンポーネントを操作するときの動作を設定する能力だけでなく、1 つのコンポーネントに複数の別の視覚的バリエーションを設定するための能力も必要です。
 
@@ -48,7 +48,7 @@ ht-degree: 96%
 
 1. HTML 開発者は視覚的バリエーションごとに対応する CSS コードを（オプションで JS コードも）実装し、それらは定義済みとなります。
 
-1. AEM 開発者は、提供された CSS を（オプションで JS も）[クライアントライブラリ](/help/sites-developing/clientlibs.md)に配置し、デプロイします。
+1. AEM デベロッパーは、提供された CSS を（オプションで JS も）[クライアントライブラリ](/help/sites-developing/clientlibs.md)に配置し、デプロイします。
 
 1. AEM 開発者またはテンプレート作成者は、ページテンプレートを設定し、スタイル設定された各コンポーネントのポリシーを編集します。また、定義済みの CSS クラスを追加し、スタイルごとにわかりやすい名前を付け、組み合わせが可能なスタイルを示します。
 
@@ -74,7 +74,7 @@ ht-degree: 96%
 1. [テンプレート作成者として](#as-a-template-author)の節の説明に従って、コンテンツ作成者が使用できるようにする CSS クラスを設定します。
 1. この後、コンテンツ作成者は[コンテンツ作成者として](#as-a-content-author)の節の説明に従ってスタイルを使用できます。
 
-### コンテンツ作成者として {#as-a-content-author}
+### コンテンツ作成者として  {#as-a-content-author}
 
 1. WKND プロジェクトをインストールした後、WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）に移動し、ページを編集します。
 1. ページの下方の&#x200B;**タイトル**&#x200B;コンポーネントを選択します。
@@ -89,7 +89,7 @@ ht-degree: 96%
    >
    >この例では、**カラー**&#x200B;スタイル（**黒**、**白**、**グレー**）は相互排他的ですが、**スタイル**&#x200B;オプション（**アンダーライン**、**右揃え**、**最小間隔**）は組み合わせることができます。これは、[テンプレート作成者としてテンプレートで設定可能](#as-a-template-author)です。
 
-### テンプレート作成者として {#as-a-template-author}
+### テンプレート作成者として  {#as-a-template-author}
 
 1. WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）の編集時に、**ページ情報／テンプレートの編集**&#x200B;でページのテンプレートを編集します。
 
@@ -112,7 +112,7 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->The CSS classes (as well as any necessary Javascript) configured as style properties of a component&#39;s policy must be deployed as [Client Libraries](/help/sites-developing/clientlibs.md) in order to work.
+>コンポーネントポリシーのスタイルプロパティとして設定されている CSS クラス（および必要な JavaScript）を動作可能にするには、[クライアントライブラリ](/help/sites-developing/clientlibs.md)としてデプロイする必要があります。
 
 ## セットアップ {#setup}
 
