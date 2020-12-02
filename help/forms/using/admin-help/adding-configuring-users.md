@@ -20,22 +20,22 @@ ht-degree: 74%
 
 ユーザーおよびグループの情報は、LDAP ディレクトリなどのサードパーティのストレージシステムで保持されます。User Management では、サードパーティのストレージシステムに対する書き込みは行われません。代わりに、ユーザーおよびグループの情報が User Management 独自のデータベースと同期されます。
 
-## ユーザーの作成 {#create-a-user}
+## ユーザーの作成  {#create-a-user}
 
 ユーザーの作成時に、ユーザーをグループに追加したりユーザーにロールをアサインしたりすることができます。
 
-1. In administration console, click **[!UICONTROL Settings > User Management > Users and Groups]**, and click **[!UICONTROL New User]**.
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/ユーザーとグループ]**&#x200B;をクリックし、**[!UICONTROL 新しいユーザー]**をクリックします。
 .
-1. Under **[!UICONTROL General Settings]**, provide information as required, and then click **[!UICONTROL Next]**. この設定について詳しくは、[ユーザー設定](adding-configuring-users.md#user-settings)を参照してください。
-1. (Optional) To add the user to a group, click **[!UICONTROL Find Groups]**, and do these tasks:
+1. 「**[!UICONTROL 一般設定]**」で、必要に応じて情報を入力し、「**[!UICONTROL 次へ]**」をクリックします。 この設定について詳しくは、[ユーザー設定](adding-configuring-users.md#user-settings)を参照してください。
+1. （オプション）ユーザーをグループに追加するには、「**[!UICONTROL グループを検索]**」をクリックし、次のタスクを実行します。
 
-   * In the **[!UICONTROL Find]** box, type all or part of the group name.
-   * Select the domain to search, select the number of items to display, and click **[!UICONTROL Find]**.
-   * (Optional) To view group details, select the group name, and then click **[!UICONTROL OK]** to return to the search results page.
-   * Select the check box for the group and click **[!UICONTROL OK]**.
+   * 「**[!UICONTROL 検索]**」ボックスに、グループ名のすべてまたは一部を入力します。
+   * 検索するドメインを選択し、表示する項目数を選択して、「**[!UICONTROL 検索]**」をクリックします。
+   * （オプション）表示グループの詳細を表示するには、グループ名を選択し、「**[!UICONTROL OK]**」をクリックして検索結果ページに戻ります。
+   * グループのチェックボックスを選択し、「**[!UICONTROL OK]**」をクリックします。
    * 「**[!UICONTROL 次へ]**」をクリックします。
 
-1. (Optional) To assign roles to the user, click **[!UICONTROL Find Roles]**, select the check box for the roles to assign, and then click **[!UICONTROL OK]**.
+1. （オプション）ユーザーにロールをアサインするには、「**[!UICONTROL ロールを検索]**」をクリックし、アサインするロールのチェックボックスを選択して、「**[!UICONTROL OK]**」をクリックします。
 1. 「**[!UICONTROL Finish]**」をクリックします。
 
    >[!NOTE]
@@ -84,7 +84,7 @@ ht-degree: 74%
 
 **ユーザー ID：**（必須）ユーザーがログインに使用するユーザー ID。ユーザー ID は、大文字と小文字が区別されません。また、ドメイン全体で一意である必要があります。
 
-エンタープライズドメインでは、ユーザーの DN はユーザーが組織内の別の部署に移動すると変更される場合があるので、ユーザー ID として DN 以外の属性を使用します。この設定は、ディレクトリサーバーによって異なります。The value is `objectGUID` for Active Directory 2003, `nsuniqueID` for Sun™ One, and `guid` for eDirectory.
+エンタープライズドメインでは、ユーザーの DN はユーザーが組織内の別の部署に移動すると変更される場合があるので、ユーザー ID として DN 以外の属性を使用します。この設定は、ディレクトリサーバーによって異なります。値は、Active Directory 2003の場合は`objectGUID`、Sun™ Oneの場合は`nsuniqueID`、eDirectoryの場合は`guid`です。
 
 ユーザー ID が一意であることを確認します。削除したユーザーに割り当てられていたユーザー ID は使用しないでください。
 
@@ -98,7 +98,7 @@ MySQL を使用する場合は、ユーザー ID に拡張文字が含まれる�
 
 **パスワードおよびパスワードの確認：**&#x200B;ユーザーがログインに使用するパスワード。パスワードは最低 8 文字必要です。ハイブリッドドメインの一部であるユーザーにはパスワードは必要ありません。
 
-## ユーザーに関する詳細の表示 {#view-details-about-a-user}
+## ユーザーに関する詳細の表示  {#view-details-about-a-user}
 
 1. 管理コンソールで、設定／User Management／ユーザーとグループをクリックします。
 1. 検索条件を絞り込む情報を指定し、「イン」リストで「ユーザー」を選択し、「検索」をクリックします。検索の結果がページの下部に表示されます。列見出しをクリックすると、リストを並べ替えることができます。
@@ -108,60 +108,60 @@ MySQL を使用する場合は、ユーザー ID に拡張文字が含まれる�
    * ユーザーにアサインされたロール
    * ユーザーが属しているグループ
 
-## ローカルユーザーのパスワードの変更 {#change-the-password-for-a-local-user}
+## ローカルユーザーのパスワードの変更  {#change-the-password-for-a-local-user}
 
-1. In administration console, click **[!UICONTROL Settings > User Management > Users and Groups]**.
-1. Specify information to narrow the search for a particular user and click **[!UICONTROL Find]**. 検索の結果がページの下部に表示されます。列見出しをクリックすると、リストを並べ替えることができます。
-1. Click the name of the user and then click **[!UICONTROL Change Password]**.
-1. Type and confirm the new password, and then click **[!UICONTROL OK]**. パスワードは最低 8 文字必要です。
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/ユーザーとグループ]**&#x200B;をクリックします。
+1. 特定のユーザーの検索範囲を絞り込む情報を指定し、「**[!UICONTROL 検索]**」をクリックします。 検索の結果がページの下部に表示されます。列見出しをクリックすると、リストを並べ替えることができます。
+1. ユーザーの名前をクリックし、「**[!UICONTROL パスワードの変更]**」をクリックします。
+1. 新しいパスワードを入力して確認し、[**[!UICONTROL OK]**]をクリックします。 パスワードは最低 8 文字必要です。
 
-## ユーザーのプロパティの編集 {#edit-a-user-s-properties}
+## ユーザーのプロパティの編集  {#edit-a-user-s-properties}
 
-1. In administration console, click **[!UICONTROL Settings > User Management > Users and Groups]**.
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/ユーザーとグループ]**&#x200B;をクリックします。
 1. 編集するユーザーを検索するには、次のタスクを実行します。
 
-   * In the **[!UICONTROL Find]** box, type your search criteria.
-   * In the **[!UICONTROL Using]** list, select **[!UICONTROL Name]**, **[!UICONTROL Email]**, or **[!UICONTROL User ID]**.
-   * In the **[!UICONTROL In list]**, select **[!UICONTROL Users]**.
-   * Select the domain, select the number of items to display, and then click **[!UICONTROL Find]**.
+   * 「**[!UICONTROL 検索]**」ボックスに検索条件を入力します。
+   * **[!UICONTROL 「]**&#x200B;ユーザーリスト」で、「**[!UICONTROL 名前]**」、「**[!UICONTROL 電子メール]**」、または「**[!UICONTROL ユーザーID]**」を選択します。
+   * 「**[!UICONTROL リスト]**」で、「**[!UICONTROL ユーザー]**」を選択します。
+   * ドメインを選択し、表示する項目数を選択して、「**[!UICONTROL 検索]**」をクリックします。
 
 1. 編集するユーザーをクリックします。
-1. For a user who is part of a local or hybrid domain, on the **[!UICONTROL Detail]** tab, edit the **[!UICONTROL General Settings]** and **[!UICONTROL Login Settings]**, and click **[!UICONTROL Save]**. この設定について詳しくは、[ユーザー設定](adding-configuring-users.md#user-settings)を参照してください。エンタープライズドメインに属するユーザーの一般設定およびログイン設定は、編集できません。
-1. To edit the group settings for the user, click the **[!UICONTROL Group Membership]** tab and do these tasks:
+1. ローカルドメインまたはハイブリッドドメインの一部であるユーザーの場合は、「**[!UICONTROL 詳細]**」タブで、**[!UICONTROL 一般設定]**&#x200B;と&#x200B;**[!UICONTROL ログイン設定]**&#x200B;を編集し、**[!UICONTROL 保存]**&#x200B;をクリックします。 この設定について詳しくは、[ユーザー設定](adding-configuring-users.md#user-settings)を参照してください。エンタープライズドメインに属するユーザーの一般設定およびログイン設定は、編集できません。
+1. ユーザーのグループ設定を編集するには、「**[!UICONTROL グループメンバーシップ]**」タブをクリックし、次のタスクを実行します。
 
-   * Click **[!UICONTROL Find Group]** and complete the search information.
-   * To add the user to a new group, select the check box for the group, click **[!UICONTROL OK]**, and then click **[!UICONTROL Save]**.
+   * 「**[!UICONTROL グループを検索]**」をクリックし、検索情報を入力します。
+   * ユーザーを新しいグループに追加するには、そのグループのチェックボックスを選択し、「**[!UICONTROL OK]**」をクリックしてから、「**[!UICONTROL 保存]**」をクリックします。
 
    >[!NOTE]
    >
    >ローカルユーザーをディレクトリグループに追加することはできません。ただし、ディレクトリユーザーをローカルグループに追加することはできます。
 
-   * To remove the user from a group, select the check box for the group, click **[!UICONTROL Delete]**, and then click **[!UICONTROL Save]**.
+   * ユーザーをグループから削除するには、そのグループのチェックボックスを選択し、「**[!UICONTROL 削除]**」をクリックしてから、「**[!UICONTROL 保存]**」をクリックします。
 
 
-1. To edit the user’s roles, click the **[!UICONTROL Role Assignments]** tab and do these tasks:
+1. ユーザーのロールを編集するには、「**[!UICONTROL ロールのアサイン]**」タブをクリックし、次のタスクを実行します。
 
-   * To display a list of roles, click **[!UICONTROL Find Roles]**.
-   * To add a role, select the check box for the role, click **[!UICONTROL OK]**, and then click **[!UICONTROL Save]**.
-   * To remove a role, select the check box for the role, click **[!UICONTROL Unassign]**, and then click **[!UICONTROL Save]**.
+   * ロールのリストを表示するには、「**[!UICONTROL ロールを検索]**」をクリックします。
+   * ロールを追加するには、そのロールのチェックボックスを選択して「**[!UICONTROL OK]**」をクリックし、「**[!UICONTROL 保存]**」をクリックします。
+   * ロールを削除するには、そのロールのチェックボックスを選択し、「**[!UICONTROL 割り当て解除]**」をクリックしてから、「**[!UICONTROL 保存]**」をクリックします。
 
 ## ユーザーの削除 {#delete-a-user}
 
-1. In administration console, click **[!UICONTROL Settings > User Management > Users and Groups]**.
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/ユーザーとグループ]**&#x200B;をクリックします。
 1. 削除するユーザーを検索するには、次のタスクを実行します。
 
-   * In the **[!UICONTROL Find]** box, type your search criteria.
-   * In the **[!UICONTROL Using]** list, select **[!UICONTROL Name]**, **[!UICONTROL Email]**, or **[!UICONTROL User ID]**.
-   * In the **[!UICONTROL In list]**, select **[!UICONTROL Users]**.
-   * Select the domain, select the number of items to display, and then click **[!UICONTROL Find]**.
+   * 「**[!UICONTROL 検索]**」ボックスに検索条件を入力します。
+   * **[!UICONTROL 「]**&#x200B;ユーザーリスト」で、「**[!UICONTROL 名前]**」、「**[!UICONTROL 電子メール]**」、または「**[!UICONTROL ユーザーID]**」を選択します。
+   * 「**[!UICONTROL リスト]**」で、「**[!UICONTROL ユーザー]**」を選択します。
+   * ドメインを選択し、表示する項目数を選択して、「**[!UICONTROL 検索]**」をクリックします。
 
-1. Select the check box for the user, click **[!UICONTROL Delete]**, and then click **[!UICONTROL OK]**.
+1. ユーザーのチェックボックスを選択し、「**[!UICONTROL 削除]**」をクリックしてから、「**[!UICONTROL OK]**」をクリックします。
 
 >[!NOTE]
 >
 >JEE 上の AEM Forms では、OSGi で実行されている AEM Forms アドオンのユーザーを AEM ユーザーとして認識できます。これは、JEE 上の AEM Forms と OSGi で実行されている AEM Forms アドオンの間でシングルサインオンが必要となるシナリオでは必須です（例えば、HTML Workspace など）。上述の削除操作では、JEE 上の AEM Forms からのみユーザーが削除されます。OSGi 環境で実行されている AEM Forms アドオンからユーザーは削除されません。しかし、ユーザーを削除した後で JEE サーバー上の AEM Forms アドオンまたは OSGi 環境の AEM Forms アドオンにログインしようとすると、拒否されます。
 
-## カスタムのログインエラーハンドラを作成する {#create-custom-login-error-handler}
+## カスタムのログインエラーハンドラを作成する  {#create-custom-login-error-handler}
 
 必要な AEM Forms および CQ の権限を持たないユーザーが次の CQ に埋め込まれた AEM Forms アプリケーションにログインしようとすると、ユーザーは次のエラートレースを含むデフォルトの CQ 404 ページにリダイレクトされます。
 
