@@ -23,7 +23,7 @@ AEM Formsドキュメントセキュリティでは、定義済みのセキュ�
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 
-Document Security は保護されたドキュメントに関するポリシーとデータを格納します。また、My Sql、Oracle、MS SQL Server、IBM DB2 などのデータベースに含まれるユーザーデータも格納します。また、ポリシーで許可されているユーザーに関するデータも Management に格納されます。For information about data stored in user management, see [Forms User Management: Handling user data](/help/forms/using/user-management-handling-user-data.md).
+Document Security は保護されたドキュメントに関するポリシーとデータを格納します。また、My Sql、Oracle、MS SQL Server、IBM DB2 などのデータベースに含まれるユーザーデータも格納します。また、ポリシーで許可されているユーザーに関するデータも Management に格納されます。ユーザー管理に保存されるデータについて詳しくは、[Formsユーザー管理：ユーザーデータ](/help/forms/using/user-management-handling-user-data.md)を処理しています。
 
 次の表は、Document Security がデータベーステーブルでデータをどのようにまとめているかを示しています。
 
@@ -63,14 +63,14 @@ Document Security は保護されたドキュメントに関するポリシー�
   </tr>
   <tr>
    <td><code>EdcPolicyXmlEntity</code></td>
-   <td>アクティブなポリシーの XML ファイルを格納します。A policy XML<sup> </sup>contains references to principal IDs of users associated with the policy. ポリシー XML は、Blob オブジェクトとして格納されます。</td>
+   <td>アクティブなポリシーの XML ファイルを格納します。ポリシーXML<sup> </sup>には、ポリシーに関連付けられたユーザーのプリンシパルIDへの参照が含まれます。 ポリシー XML は、Blob オブジェクトとして格納されます。</td>
   </tr>
   <tr>
    <td><code>EdcPolicyArchiveEntity</code></td>
    <td>アーカイブされたポリシーに関する情報を格納します。アーカイブポリシーには、Blobオブジェクトとして保存されたポリシーXMLが含まれます。</td>
   </tr>
   <tr>
-   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code> （OracleおよびMS SQLデータベース）</p> </td>
+   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code> (OracleおよびMS SQLデータベース)</p> </td>
    <td>ポリシーセットとユーザー間のマッピングを格納します。</td>
   </tr>
   <tr>
@@ -80,13 +80,13 @@ Document Security は保護されたドキュメントに関するポリシー�
  </tbody>
 </table>
 
-## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
+## ユーザーデータへのアクセスと削除  {#access-and-delete-user-data}
 
 データベースにあるユーザーの Document Security データにアクセスしてデータを書き出すことができます。また、必要に応じてデータを永続的に削除できます。
 
 データベースからユーザーデータを書き出すまたは削除するには、データベースクライアントを使用してデータベースに接続し、個人が特定できるユーザー情報に基づいてプリンシパル ID を検索します。例えば、ログイン ID を使用してユーザーのプリンシパル ID を取得するには、次の `select` コマンドをデータベースで実行します。
 
-In the `select` command, replace the `<user_login_id>` with the login ID of the user whose principal ID you want to retrieve from the `EdcPrincipalUserEntity` database table.
+`select`コマンドで、`<user_login_id>`を`EdcPrincipalUserEntity`データベーステーブルから取得するプリンシパルIDを持つユーザーのログインIDに置き換えます。
 
 ```sql
 select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_id>
@@ -94,13 +94,13 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 プリンシパル ID が分かったら、ユーザーデータを書き出したり、削除したりすることができます。
 
-### ユーザーデータの書き出し {#export-user-data}
+### ユーザーデータの書き出し  {#export-user-data}
 
-次のデータベースコマンドを実行して、プリンシパル ID のユーザーデータをデータベーステーブルから書き出します。In the `select` command, replace `<principal_id>` with the principal ID of the user whose data you want to export.
+次のデータベースコマンドを実行して、プリンシパル ID のユーザーデータをデータベーステーブルから書き出します。`select`コマンドで、`<principal_id>`を書き出すデータのユーザーのプリンシパルIDに置き換えます。
 
 >[!NOTE]
 >
->次のコマンドでは、My SQL および IBM DB2 データベースのデータベーステーブル名を使用しています。When running these commands on Oracle and MS SQL databases, replace `EdcPolicySetPrincipalEntity` with `EdcPolicySetPrincipalEnt` in the commands.
+>次のコマンドでは、My SQL および IBM DB2 データベースのデータベーステーブル名を使用しています。oracleおよびMS SQLデータベースでこれらのコマンドを実行する場合は、コマンドの`EdcPolicySetPrincipalEntity`を`EdcPolicySetPrincipalEnt`に置き換えます。
 
 ```sql
 Select * from EdcPrincipalKeyEntity where principalid = '<principal_id>';
@@ -126,16 +126,16 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 >[!NOTE]
 >
->To export data from the `EdcAuditEntity` table, use the [EventManager.exportEvents](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API that takes [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) as a parameter to export audit data based on `principalId`, `policyId`, or `licenseId`.
+>`EdcAuditEntity`テーブルからデータを書き出すには、`principalId`、`policyId`、または`licenseId`に基づいて監査データを書き出すパラメーターとして[EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html)を取る[EventManager.exportEvents](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) APIを使用します。
 
-システム内のユーザーに関する完全なデータを取得するには、User Management データベースのデータにアクセスしてデータを書き出す必要があります。For more information, see [Forms user management: Handling user data](/help/forms/using/user-management-handling-user-data.md).
+システム内のユーザーに関する完全なデータを取得するには、User Management データベースのデータにアクセスしてデータを書き出す必要があります。詳しくは、[Formsのユーザー管理を参照してください。ユーザーデータ](/help/forms/using/user-management-handling-user-data.md)を処理しています。
 
 ### ユーザーデータの削除 {#delete-user-data}
 
 特定のプリンシパル ID の Document Security データをデータベーステーブルから削除するには、次の手順を実行します。
 
 1. AEM Forms サーバーをシャットダウンします。
-1. 次のデータベースコマンドを実行して、目的のプリンシパル ID の データを Document Security のデータベーステーブルから削除します。In the `Delete` command, replace `<principal_id>` with the principal ID of the user whose data you want to delete.
+1. 次のデータベースコマンドを実行して、目的のプリンシパル ID の データを Document Security のデータベーステーブルから削除します。`Delete`コマンドで、`<principal_id>`を削除するデータのユーザーのプリンシパルIDに置き換えます。
 
    ```sql
    Delete from EdcPrincipalKeyEntity where principalid = '<principal_id>';
@@ -151,17 +151,17 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   >To delete data from the `EdcAuditEntity` table, use the [EventManager.deleteEvents](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API that takes [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) as a parameter to delete audit data based on `principalId`, `policyId`, or `licenseId`.
+   >`EdcAuditEntity`テーブルからデータを削除するには、`principalId`、`policyId`、または`licenseId`に基づいて監査データを削除するパラメーターとして[EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html)を取る[EventManager.deleteEvents](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) APIを使用します。
 
-1. Active and archived policy XML files are stored in the `EdcPolicyXmlEntity` and `EdcPolicyArchiveEntity` database tables, respectively. これらのテーブルからユーザーのデータを削除するには、次を実行します。
+1. アクティブなポリシーのXMLファイルとアーカイブされたポリシーのXMLファイルは、それぞれ`EdcPolicyXmlEntity`と`EdcPolicyArchiveEntity`のデータベーステーブルに保存されます。 これらのテーブルからユーザーのデータを削除するには、次を実行します。
 
-   1. Open the XML blob of each row in the `EdcPolicyXMLEntity` or `EdcPolicyArchiveEntity` table and extract the XML file. XMLファイルは、次に示すファイルに似ています。
+   1. `EdcPolicyXMLEntity`または`EdcPolicyArchiveEntity`テーブルの各行のXML BLOBを開き、XMLファイルを抽出します。 XMLファイルは、次に示すファイルに似ています。
    1. XML ファイルを編集して、目的のプリンシパル ID の Blob を削除します。
    1. その他のファイルで手順 1 と 2 を繰り返します。
 
    >[!NOTE]
    >
-   >You must remove the complete blob within the `Principal` tag for a principal ID or the policy XML may get corrupt or unusable.
+   >プリンシパルIDの`Principal`タグ内の完全なBLOBを削除する必要があります。削除しないと、ポリシーXMLが壊れたり、使用できなくなったりする場合があります。
 
    ```xml
    <ns2:Principal PrincipalNameType="USER">
@@ -194,22 +194,22 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    **管理コンソールの使用**
 
-   1. As an administrator, log into the Forms JEE administration console at https://[*server*]:[*port*]/adminui.
-   1. Navigate to **[!UICONTROL Services > Document Security > Policy Sets]**.
+   1. 管理者として、https://[*server*]:[*port*]/adminuiで、FormsJEE管理コンソールにログインします。
+   1. **[!UICONTROL サービス/ドキュメントセキュリティ/ポリシーセット]**&#x200B;に移動します。
    1. ポリシーセットを開き、ポリシーからユーザーを削除します。
 
    **Document Security の Web ページの使用**
 
    個人用ポリシーを作成できる権限を持つ Document Security ユーザーは、そのポリシーからユーザーデータを削除できます。この作業を行うには：
 
-   1. Users who have personal policies log into their document security web page at https://[*server*]:[*port*]/edc.
-   1. Navigate to **[!UICONTROL Services > Document Security > My Policies]**.
+   1. 個人用のポリシーを持つユーザーは、https://[*server*]:[*port*]/edcのドキュメントセキュリティWebページにログインします。
+   1. **[!UICONTROL サービス/ドキュメントセキュリティ/マイポリシー]**&#x200B;に移動します。
    1. ポリシーを開き、ポリシーからユーザーを削除します。
 
    >[!NOTE]
    >
-   >Administrators can search, access, and delete user data from personal policies of other users in **[!UICONTROL Services > Document Security > My Policies]** using administration console.
+   >管理者は、管理コンソールを使用して、**[!UICONTROL サービス/ドキュメントセキュリティ/マイポリシー]**&#x200B;で、他のユーザーの個人用ポリシーのユーザーデータを検索、アクセスおよび削除できます。
 
-1. プリンシパル ID のデータを User Management のデータベースから削除します。For detailed steps, see [Forms User Management | Handling user data](/help/forms/using/user-management-handling-user-data.md).
+1. プリンシパル ID のデータを User Management のデータベースから削除します。詳細な手順については、[Formsユーザー管理を参照してください |ユーザーデータ](/help/forms/using/user-management-handling-user-data.md)を処理しています。
 1. AEM Forms サーバーを開始します。
 
