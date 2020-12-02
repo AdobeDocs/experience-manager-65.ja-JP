@@ -28,18 +28,18 @@ ht-degree: 59%
 
 後処理をレターとインタラクティブ通信に関連付けるには、まず後処理を設定する必要があります。送信済みのレターに対しては、次の2種類のワークフローを実行できます。
 
-1. **Forms Workflow:** これらはJEE上のAEM Formsのプロセス管理ワークフローです。 [Forms Workflowの設定手順](#formsworkflow)。
+1. **Forms Workflow：こ** れらは、JEE上のAEM Formsのプロセス管理ワークフローです。[Forms Workflow](#formsworkflow)の設定手順。
 
-1. **AEMワークフロー：** AEMワークフローは、送信済みレターの後処理としても使用できます。 Instructions for setting up [AEM Workflow](../../forms/using/aem-forms-workflow.md).
+1. **AEMワークフロー：** AEMワークフローは、送信済みレターの後処理としても使用できます。[AEMワークフロー](../../forms/using/aem-forms-workflow.md)の設定手順。
 
 ## Forms のワークフロー {#formsworkflow}
 
-1. In AEM, open Adobe Experience Manager Web Console Configuration for your server using the following URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. AEMで、次のURLを使用して、ご使用のサーバのAdobe Experience ManagerWebコンソール設定を開きます。`https://<server>:<port>/<contextpath>/system/console/configMgr`
 
    ![Config Manager](assets/2configmanager-1.png)
 
 1. このページで AEM Forms Client SDK Configuration を探し、それをクリックして展開します。
-1. In Server URL, enter the name of your AEM Forms on JEE server, login details, and then click **Save**.
+1. 「Server URL」に、JEEサーバー上のAEM Formsの名前とログインの詳細を入力し、「**保存**」をクリックします。
 
    ![Livecycle サーバーの名前を入力します。](assets/1cofigmanager.png)
 
@@ -54,23 +54,23 @@ ht-degree: 59%
 
 1. 処理／サービスを認証するには、処理の名前をコピーし、Adobe Experience Manager Web Console Configurations ページ／AEM Forms Client SDK Configuration に戻ってこのプロセスを新しいサービスとして追加します。
 
-   For example, if the drop-down in Properties page of letter displays name of the process as Forms Workflow -> ValidCCPostProcess/SaveXML, add a Service Name as `ValidCCPostProcess/SaveXML`.
+   例えば、レターのプロパティページのドロップダウンに、プロセスの名前がForms Workflow-> ValidCCPostProcess/SaveXMLとして表示される場合、サービス名を`ValidCCPostProcess/SaveXML`として追加します。
 
 1. JEE 上の AEM Forms ワークフローを使用して後処理を行うには、必要なパラメーターと出力を設定します。パラメーターのデフォルト値を以下に示します。
 
-   Go to the Adobe Experience Manager Web Console Configurations page > **[!UICONTROL Correspondence Management Configurations]** and set up the following parameters:
+   「Adobe Experience ManagerWebコンソール設定」ページ>**[!UICONTROL 「Correspondence Management設定」]**&#x200B;に移動し、次のパラメーターを設定します。
 
-   1. **inPDFDoc (PDFドキュメントパラメータ):** 入力としてのPDFドキュメント。 この入力はレンダリングされたレターを入力として含みます。示されたパラメータ名は設定可能です。 これらは、設定からCorrespondence Management設定から設定できます。
-   1. **inXMLDoc （XMLデータパラメータ）:** 入力としてのXMLドキュメント。 この入力には、XMLの形式でユーザーが入力したデータが含まれます。
-   1. **inXDPDoc (XDPドキュメントパラメータ):** 入力としてのXMLドキュメント。 この入力は下敷きレイアウト(XDP)を含みます。
-   1. **inAttachmentDocs (添付ファイルドキュメントーパラメーター):** リスト入力パラメーター。 この入力は、すべての添付ファイルを入力として含みます。
-   1. **redirectURL（リダイレクトURLの出力）:** リダイレクト先のURLを示す出力タイプ。
+   1. **inPDFDoc (PDFドキュメントパラメーター):PDFドキュメント** を入力として。この入力はレンダリングされたレターを入力として含みます。示されたパラメータ名は設定可能です。 これらは、設定からCorrespondence Management設定から設定できます。
+   1. **inXMLDoc （XMLデータパラメーター）:XML** ドキュメントを入力として。この入力には、XMLの形式でユーザーが入力したデータが含まれます。
+   1. **inXDPDoc (XDPドキュメントパラメーター):XMLドキュメント** を入力として。この入力は下敷きレイアウト(XDP)を含みます。
+   1. **inAttachmentDocs(添付ファイルドキュメントーパラメーター):** リスト入力パラメーター。この入力は、すべての添付ファイルを入力として含みます。
+   1. **redirectURL（リダイレクトURLの出力）：リダイレ** クト先のURLを示す出力タイプ。
 
    フォームワークフローでは、「**[!UICONTROL Correspondence Management の設定]**」で指定した名前を使用して、PDF ドキュメントパラメーターまたは XML データパラメーターのいずれかを入力値として指定する必要があります。これは、後処理ドロップダウンにリスト表示する処理に対しては必須です。
 
 ## パブリッシュインスタンスでの設定 {#settings-on-the-publish-instance}
 
-1. ログイン先 `https://localhost:publishport/aem/forms`。
+1. `https://localhost:publishport/aem/forms`にログインします。
 1. 「**[!UICONTROL レター]**」に移動して、パブリッシュインスタンスで使用可能な発行済みレターを表示します。
 1. AEM DS の設定を行います。詳しくは、「[AEM DS の設定](../../forms/using/configuring-the-processing-server-url-.md)」を参照してください。
 
@@ -116,7 +116,7 @@ ht-degree: 59%
 
 CCR ユーザーインターフェイスで、次の手順を実行して後処理をレターに関連付けます。
 
-1. Hover over a letter and tap **View Properties**.
+1. レターの上にカーソルを置き、「**表示のプロパティ**」をタップします。
 1. 「**編集**」を選択します。
 1. 基本のプロパティで、後処理ドロップダウンを使用して、レターに関連付ける後処理を選択します。AEM および Forms 関連の両方の後処理がドロップダウンリストに表示されます。
 1. 「**保存**」をタップします。
