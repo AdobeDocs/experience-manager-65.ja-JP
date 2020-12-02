@@ -18,16 +18,16 @@ ht-degree: 25%
 ---
 
 
-# カタログ機能 {#catalog-feature}
+# カタログ機能  {#catalog-feature}
 
-The [`Enablement Assignments`](assignments.md) and `Enablement Catalog` components found in the Communities group in the components browser are components of an [enablement community](overview.md#enablement-community).
+コンポーネントブラウザーのCommunitiesグループにある[`Enablement Assignments`](assignments.md)および`Enablement Catalog`コンポーネントは、[有効化コミュニティ](overview.md#enablement-community)のコンポーネントです。
 
-The `Enablement Catalog` component allows community members to access a catalog of [enablement resources](resources.md). The use of AEM tags is an important part of managing the listing of enablement resources in a catalog (see [Tagging Enablement Resources](tag-resources.md)).
+`Enablement Catalog`コンポーネントは、コミュニティのメンバーが[イネーブルメントリソース](resources.md)のカタログにアクセスすることを可能にします。 AEMタグの使用は、カタログ内のイネーブルメントリソースのリストを管理する上で重要です（[タグ付け可能なリソース](tag-resources.md)を参照）。
 
-From the [Getting Started with AEM Communities for Enablement](getting-started-enablement.md) tutorial, see a member&#39;s view of assignments and catalogs in the [Experience the Published Site](enablement-published-site.md) section.
+[有効化のためのAEM Communitiesの使用の手引き](getting-started-enablement.md)チュートリアルで、[発行済みサイトの体験](enablement-published-site.md)のメンバーの割り当てとカタログの表示を参照してください。
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Catalog Essentials](catalog-developer-essentials.md) page for developers.
+詳しくは、[開発者向けの「Catalog Essentials](catalog-developer-essentials.md)」ページを参照してください。
 
-The [catalog function](functions.md#catalog-function) is available when creating a [community site](sites-console.md).
+[コミュニティサイト](sites-console.md)の作成時に、&lt;a0/>カタログ関数](functions.md#catalog-function)を使用できます。[
