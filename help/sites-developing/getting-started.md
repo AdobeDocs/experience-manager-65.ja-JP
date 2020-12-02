@@ -31,7 +31,7 @@ AEM の開発が初めての方や、ベストプラクティスの情報が必�
 
 ![WKND](assets/screen_shot_2018-11-23at152453.png)
 
-WKND 開発者向けチュートリアルは[こちら](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)で利用でき、最新のテクノロジーとベストプラクティスを使用して AEM プロジェクトを作成する手順を紹介しています。
+WKND 開発者向けチュートリアルは[こちら](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)で利用でき、最新のテクノロジーとベストプラクティスを使用して AEM プロジェクトを作成する手順を紹介しています。
 
 ## 中心概念 {#core-concepts}
 
@@ -47,4 +47,4 @@ WKND 開発者向けチュートリアルは[こちら](https://docs.adobe.com/c
 
 ## 次の手順 {#next-steps}
 
-Once you have completed the [tutorial](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html), consider reviewing the document [AEM Core Concepts](/help/sites-developing/the-basics.md) to get a better understanding of some of the underlying technologies and development paradigms of AEM.
+[チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)を完了したら、ドキュメント[AEMコアコンセプト](/help/sites-developing/the-basics.md)を見直して、AEMの基盤となるテクノロジーと開発パラダイムの一部を理解してください。
