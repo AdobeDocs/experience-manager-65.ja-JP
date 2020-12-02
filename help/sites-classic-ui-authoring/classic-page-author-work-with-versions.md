@@ -37,15 +37,15 @@ ht-degree: 93%
    ![screen_shot_2012-02-14at40259pm](assets/screen_shot_2012-02-14at40259pm.png)
 
 1. 「**コメント**」を入力します（オプション）。
-1. To set a label to the version (optional), click the **More >>** button and set the **Label** to name the version. If the label is not set, the version is an automatically incremented number.
-1. Click **Create Version**. グレーのメッセージが表示されます。以下に例を示します。
+1. ラベルをバージョンに設定するには（オプション）、**詳細>>**&#x200B;ボタンをクリックし、**ラベル**&#x200B;を設定してバージョンの名前を指定します。ラベルが設定されていない場合、バージョンは自動的に増分される番号になります。
+1. 「**バージョンを作成**」をクリックします。 グレーのメッセージが表示されます。以下に例を示します。
 Version 1.2 created for: Shirts.
 
 >[!NOTE]
 >
 >ページがアクティベートされると、バージョンが自動的に作成されます。
 
-## サイドキックからページのバージョンを復元する {#restoring-a-page-version-from-sidekick}
+## サイドキックからページのバージョンを復元する  {#restoring-a-page-version-from-sidekick}
 
 以前のバージョンにページを復元するには：
 
@@ -71,7 +71,7 @@ Version 1.2 created for: Shirts.
 
 1. 復元するバージョンを選択して、「**復元**」をクリックします。AEM によって、選択したバージョン（またはツリー）が復元されます。
 
-### コンソールからツリーを復元する {#restoring-a-tree-from-the-console}
+### コンソールからツリーを復元する  {#restoring-a-tree-from-the-console}
 
 この方法は、特定のページバージョンを復元するために使用できます。また、以前に削除されたページを復元するためにも使用できます。
 
@@ -88,7 +88,7 @@ Version 1.2 created for: Shirts.
 ページの現在のバージョンを以前のバージョンと比較するには：
 
 1. ブラウザーで、以前のバージョンと比較するページを開きます。
-1. In the Sidekick, select the **Versioning** tab, then the **Restore Versio** n sub tab.
+1. サイドキックで、「**バージョン管理**」タブを選択し、「**バージョンを復元** n」サブタブを選択します。
 
    ![screen_shot_2012-02-14at42949pm-1](assets/screen_shot_2012-02-14at42949pm-1.png)
 
@@ -103,7 +103,7 @@ Version 1.2 created for: Shirts.
 
 1. サイドキックで、「**バージョンを復元**」サブタブを選択し、「**&lt;&lt;戻る**」ボタンをクリックして現在のバージョンを表示します。
 
-## タイムワープ {#timewarp}
+## タイムワープ  {#timewarp}
 
 タイムワープは、過去の特定の時間にページが&#x200B;***公開された***&#x200B;状態をシミュレートするために設計された機能です。
 
@@ -120,7 +120,7 @@ Version 1.2 created for: Shirts.
 >
 >バージョンがリポジトリから削除された場合、Timewarp で正しい表示を行うことができません。また、Web サイトのレンダリングに使用する要素（コード、CSS、画像など）を変更した場合、これらのアイテムはリポジトリ内でバージョン化されないので、元の表示と異なる表示になります。
 
-### Timewarp カレンダーの使用 {#using-the-timewarp-calendar}
+### Timewarp カレンダーの使用  {#using-the-timewarp-calendar}
 
 Timewarp はサイドキックから使用できます。
 
