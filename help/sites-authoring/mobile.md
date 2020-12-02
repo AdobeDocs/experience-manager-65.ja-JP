@@ -26,16 +26,16 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
+>既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(「[異なるチャネル用のライブコピーの作成](/help/sites-administering/msm-livecopy.md)」を参照)。
 >
->AEM 開発者は、新しいデバイスグループを作成できます。(See [Creating Device Group Filters](/help/sites-developing/groupfilters.md).)
+>AEM 開発者は、新しいデバイスグループを作成できます。(「[デバイスグループフィルターの作成](/help/sites-developing/groupfilters.md)」を参照)。
 
 次の手順を使用して、モバイルページをオーサリングします。
 
 1. グローバルナビゲーションから&#x200B;**サイト**&#x200B;コンソールを開きます。
-1. Open the page **We.Retail** -> **United States** -> **English**.
+1. **We.Retail** -> **米国** -> **英語**&#x200B;のページを開きます。
 
-1. **プレビューモードに切り替えます** 。
+1. **プレビュー**&#x200B;モードに切り替えます。
 1. ページ上部のデバイスアイコンをクリックして、必要なエミュレーターに切り替えます。
 1. コンポーネントをコンポーネントブラウザーからページにドラッグ&amp;ドロップします。
 
