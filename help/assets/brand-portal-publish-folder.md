@@ -29,7 +29,7 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
 ## Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal-1}
 
-1. From the AEM Assets interface, hover over the desired folder and select **Publish** option from the quick actions.
+1. AEM Assetsのインターフェイスで、目的のフォルダーの上にマウスポインターを置き、クイックアクションから「**発行**」オプションを選択します。
 
    あるいは、目的のフォルダーを選択して後述の手順に従います。
 
@@ -39,10 +39,10 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
    選択したフォルダーを Brand Portal に公開するには、次のいずれかを実行します。
 
-   * ツールバーで「**クイック公開**」を選択します。Then from the menu, select **Publish to Brand Portal**.
+   * ツールバーで「**クイック公開**」を選択します。次に、メニューから「**ブランドポータルに公開**」を選択します。
 
    * ツールバーで「**公開を管理**」を選択します。
-   1. 「 **アクション** 」から「ブランドポータルに **発行」を選択し**、 **「スケジューリング********」から「now now now」を選択し、「次へ」をクリックします。**
+   1. **アクション**&#x200B;から「**ブランドポータルに公開**」を選択し、**スケジュール**&#x200B;から「**今すぐ**」を選択して、「**次へ」をクリックします。**
    1. 「**範囲**」の選択を確認し、「**Brand Portal に公開**」をクリックします。
 
    フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたフォルダーを確認します。
@@ -51,8 +51,8 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
    アセットフォルダーのBrand Portalへの投稿ワークフローを後の日時にスケジュールするには：
 
-   1. Once you have selected assets/ folders to publish, select **Manage Publication** from the tool bar at the top.
-   1. 「 **アクション** 」から「ブランドポータルに **公開**」を選択し、「スケジューリング **」から「******&#x200B;後で」を選択します。
+   1. 発行するアセット/フォルダを選択したら、上部のツールバーから「**パブリケーションを管理**」を選択します。
+   1. 「**アクション**」から「**ブランドポータルに公開**」を選択し、**スケジュール**&#x200B;から「**後で**」を選択します。
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
@@ -74,14 +74,14 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
 
    ![publish2bp-1](assets/publish2bp.png)
 
-1. From the toolbar, Click **Manage Publication**.
+1. ツールバーで、[**パブリケーションの管理**]をクリックします。
 
 1. **Brand Portal への公開を今すぐ取り消し**
 
    Brand Portal へのフォルダーの公開をすぐに取り消すには、次のようにします。
 
    1. ツールバーで「**公開を管理**」を選択します。
-   1. 「 **アクション** 」から「Brand Portalから **非公開」を選択し**、 **「Scheduling Scheduling」から「now now********now next」を選択します。**
+   1. **アクション**&#x200B;から「**ブランドポータルから非公開**」を選択し、**スケジュール**&#x200B;から「**今すぐ**」を選択して、「**次へ」をクリックします。**
    1. 「**範囲**」の選択を確認し、「**Brand Portal から非公開**」をクリックします。
 
    ![confirm-unpublish](assets/confirm-unpublish.png)
@@ -91,10 +91,10 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
    Brand Portal へのフォルダーの公開を停止するスケジュールを未来の日時で設定するには、次のようにします。
 
    1. ツールバーで「**公開を管理**」を選択します。
-   1. From **Action** select **Unpublish from Brand Portal**, and from **Scheduling** select **Later**.
+   1. **アクション**&#x200B;から「**ブランドポータルから非公開**」を選択し、**スケジュール**&#x200B;から「**後で**」を選択します。
    1. 「**アクティベート日**」を選択して時刻を指定します。「**次へ**」をクリックします。
    1. 「**範囲**」で選択内容を確認し、「**次へ**」をクリックします。
-   1. 「**ワークフロー**」で&#x200B;**ワークフロータイトル**&#x200B;を指定します。Click **Unpublish Later.**
+   1. 「**ワークフロー**」で&#x200B;**ワークフロータイトル**&#x200B;を指定します。「**後で非公開」をクリックします。**
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 
