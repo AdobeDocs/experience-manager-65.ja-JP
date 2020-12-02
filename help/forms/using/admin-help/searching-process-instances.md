@@ -24,7 +24,7 @@ ht-degree: 98%
 
 基本条件に基づく一般検索、特定の属性に基づく詳細検索、または基本条件と特定の属性の組み合わせによる複合検索を実行できます。
 
-## 一般検索の実行 {#perform-a-general-search}
+## 一般検索の実行  {#perform-a-general-search}
 
 プロセスの一般検索は、プロセスインスタンスのプロセス ID がわかっている場合、関連するプロセスインスタンスのグループを見つける場合または実行中のプロセスインスタンス数が少ない場合に、最も適しています。
 
@@ -40,7 +40,7 @@ ht-degree: 98%
 
 1. 「検索」をクリックします。プロセスインスタンスページが表示され、見つかったインスタンスが表示されます。
 
-## プロセスの詳細検索の実行 {#perform-a-detailed-search-for-a-process}
+## プロセスの詳細検索の実行  {#perform-a-detailed-search-for-a-process}
 
 特定の属性を入力して、詳細検索を実行できます。詳細検索は、実行中のプロセスインスタンス数が多く、特定の条件で候補を絞る必要がある場合に、最も適しています。
 
@@ -58,7 +58,7 @@ ht-degree: 98%
 
 [プロセスインスタンスのステータスについて](/help/forms/using/admin-help/processes.md#about-process-instance-statuses)
 
-## プロセスの複合検索の実行 {#perform-a-combined-search-for-a-process}
+## プロセスの複合検索の実行  {#perform-a-combined-search-for-a-process}
 
 暗黙の AND を使用して、一般検索と詳細検索の両方に基づく検索を作成するには、プロセスの検索ページの「一般検索」と「詳細検索」の両方に条件を入力します。
 
