@@ -22,7 +22,7 @@ ht-degree: 100%
 
 ドメインの管理ページから既存のドメインの設定を変更できます。また、既存のエンタープライズドメインをハイブリッドドメインに変換することもできます。
 
-## 既存のドメインの編集 {#edit-an-existing-domain}
+## 既存のドメインの編集  {#edit-an-existing-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 編集するドメインの名前をクリックします。
@@ -31,7 +31,7 @@ ht-degree: 100%
 1. エンタープライズドメインのディレクトリ情報を変更するには、ページの下部で目的のディレクトリ名をクリックします。ディレクトリを編集ページで、必要に応じて設定を変更します（[ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis)を参照）。
 1. 変更が完了したら、「OK」をクリックします。
 
-## エンタープライズドメインのハイブリッドドメインへの変換 {#convert-an-enterprise-domain-to-a-hybrid-domain}
+## エンタープライズドメインのハイブリッドドメインへの変換  {#convert-an-enterprise-domain-to-a-hybrid-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 変換するエンタープライズドメインの名前をクリックします。
@@ -43,7 +43,7 @@ ht-degree: 100%
 >
 >変換するエンタープライズドメインにディレクトリ設定が含まれていない場合、LDAP 認証の設定が失われます。
 
-## ハイブリッドドメインのエンタープライズドメインへの変換 {#convert-a-hybrid-domain-to-an-enterprise-domain}
+## ハイブリッドドメインのエンタープライズドメインへの変換  {#convert-a-hybrid-domain-to-an-enterprise-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 変換するハイブリッドドメインの名前をクリックします。
