@@ -18,45 +18,45 @@ ht-degree: 31%
 ---
 
 
-# 「いいね!」設定の使用 {#using-liking}
+# 「いいね!」設定の使用  {#using-liking}
 
-The `Liking` component is a useful tool that allows users to express an opinion about a particular piece of content, such as an comment within a forum. With the `Liking` component, members select the heart icon to indicate a positive opinion.
+`Liking`コンポーネントは、ユーザーがフォーラム内のコメントなど、特定のコンテンツに関する意見を表すのに役立つツールです。 `Liking`コンポーネントを使用して、メンバーは、ポジティブな意見を示すハートアイコンを選択します。
 
 ## ページへの「いいね!」設定の追加 {#adding-liking-to-a-page}
 
-To add a `Liking` component to a page in author mode, use the component browser to locate
+作成者モードで`Liking`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Liking`
 
 を探し、ページ上の適切な位置（ユーザーに「いいね!」してもらう機能の近くなど）にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側のライブラリが含まれる場合](essentials-liking.md#essentials-for-client-side) 、これがコンポー `Liking` ネントの表示方法です。
+[必要なクライアント側ライブラリ](essentials-liking.md#essentials-for-client-side)が含まれる場合、`Liking`コンポーネントは次のように表示されます。
 
 ![好み成分](assets/liking-component.png)
 
 ## 「いいね!」の設定{#configuring-liking}
 
-Select the placed `Liking` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Liking`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![configure-new](assets/configure-new.png)
 
-Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used to record likes.
+「**[!UICONTROL テキストとラベル]**」タブで、「いいね！」の記録に使用するプロパティを指定します。
 
 ![設定に「いいね！」を付ける](assets/configure-liking.png)
 
 * **[!UICONTROL 肯定的な返信ラベル]**
 
-   (*必須*)ポジティブな反応を表すプロパティ名です。
+   （*必須*）ポジティブな応答のプロパティ名です。
 
 * **[!UICONTROL 否定的な返信ラベル]**
 
-   (*必須*)否定応答のプロパティ名。
+   （*必須*）否定的な応答のプロパティ名です。
 
 * **[!UICONTROL 集計名]**
 
-   (*Required*) The internal, identifiable property name for this instance of a voting component.
+   （*必須*）投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -64,10 +64,10 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 メンバーは、いつでも「いいね!」を変更できます。
 
-### 匿名 {#anonymous}
+### 匿名  {#anonymous}
 
 匿名での「いいね!」はサポートされていません。サイト訪問者は、「いいね！」に参加するには、登録（会員になる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Liking Essentials](essentials-liking.md) page for developers.
+詳しくは、開発者向けの[Linking Essentials](essentials-liking.md)ページを参照してください。
