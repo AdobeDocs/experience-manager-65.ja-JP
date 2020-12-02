@@ -21,9 +21,9 @@ ht-degree: 42%
 
 # グループテンプレート {#group-templates}
 
-The Group Templates console is similar to the [Site Templates](/help/communities/sites.md) console. どちらも、コミュニティサイトを形成する、事前に配線されたページと機能のセットの設計図です。 異なる点は、サイトテンプレートはメインコミュニティ用、グループテンプレートはコミュニティグループ用、つまりメインコミュニティ内にネストされたサブコミュニティ用です。
+グループテンプレートコンソールは、[サイトテンプレート](/help/communities/sites.md)コンソールに似ています。 どちらも、コミュニティサイトを形成する、事前に配線されたページと機能のセットの設計図です。 異なる点は、サイトテンプレートはメインコミュニティ用、グループテンプレートはコミュニティグループ用、つまりメインコミュニティ内にネストされたサブコミュニティ用です。
 
-A community group is incorporated into a site template by including the [Groups function](/help/communities/functions.md#groups-function) (which may not be the first nor only function in the template).
+[Groups関数](/help/communities/functions.md#groups-function)を含めることで、コミュニティグループをサイトテンプレートに組み込む（これはテンプレート内の最初の機能でも唯一の機能でもない）。
 
 Communities [機能パック 1](/help/communities/deploy-communities.md#latestfeaturepack) 以降、グループテンプレート内にグループ機能を含めることにより、グループをネストできるようになりました。
 
@@ -31,21 +31,21 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 >[!NOTE]
 >
->The consoles for the creation of [community sites](/help/communities/sites-console.md), [community site templates](/help/communities/sites.md), [community group templates](/help/communities/tools-groups.md) and [community functions](/help/communities/functions.md) are for use only in the author environment.
+>[コミュニティサイト](/help/communities/sites-console.md)、[コミュニティサイトテンプレート](/help/communities/sites.md)、[コミュニティグループテンプレート](/help/communities/tools-groups.md)、[コミュニティ機能](/help/communities/functions.md)の作成用コンソールは、作成者環境でのみ使用できます。
 
 ## Group Templates Console {#group-templates-console}
 
 AEM Author環境のグループテンプレートコンソールにアクセスするには：
 
-* ツールの選択 **|コミュニティ |グローバルナビゲーションから** 、グループテンプレートを作成します。
+* **ツールを選択 |コミュニティ |グローバルナビゲーションからのグループテンプレート**。
 
-This console displays the templates from which a [community site](/help/communities/sites-console.md) can be created and allows new group templates to be created.
+このコンソールには、[コミュニティサイト](/help/communities/sites-console.md)を作成できるテンプレートが表示され、新しいグループテンプレートを作成できます。
 
 ![コミュニティグループテンプレート](assets/groups-template.png)
 
 ## Create Group Template {#create-group-template}
 
-To get started creating a new group template, select `Create`.
+新しいグループテンプレートの作成を開始するには、`Create`を選択します。
 
 するとサイトエディターパネルに移動します。パネルには以下の 3 つのサブパネルがあります。
 
@@ -67,7 +67,7 @@ To get started creating a new group template, select `Create`.
 
    テンプレートが参照可能かどうかを制御するトグルスイッチ。
 
-#### サムネール {#thumbnail}
+#### サムネール  {#thumbnail}
 
 ![site-thumbnail](assets/site-thumbnail.png)
 
@@ -87,13 +87,13 @@ To get started creating a new group template, select `Create`.
 
 コミュニティ機能を追加するには、右側から左側にドラッグします。サイトメニューのリンクは追加した順番で表示されます。スタイルは、サイトの作成時にテンプレートに適用されます。
 
-例えば、フォーラムが必要な場合は、フォーラム機能をライブラリからテンプレートビルダーにドラッグ＆ドロップします。これにより、フォーラム設定ダイアログが開きます。 See the [functions console](/help/communities/functions.md) for information about the configuration dialogs.
+例えば、フォーラムが必要な場合は、フォーラム機能をライブラリからテンプレートビルダーにドラッグ＆ドロップします。これにより、フォーラム設定ダイアログが開きます。 設定ダイアログの詳細については、[関数コンソール](/help/communities/functions.md)を参照してください。
 
 このテンプレートに基づいて、サブコミュニティサイト（グループ）に必要なその他のコミュニティ機能を引き続きドラッグ&amp;ドロップします。
 
 ![ドラッグ関数](assets/dragfunctions.png)
 
-Once all desired functions have been dropped into the template builder area and configured, select **Save** in the upper right corner.
+必要なすべての関数がテンプレートビルダー領域に配置され、設定されたら、右上隅の「**保存**」を選択します。
 
 ## グループテンプレートを編集 {#edit-group-template}
 
