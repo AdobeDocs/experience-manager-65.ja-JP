@@ -18,7 +18,7 @@ ht-degree: 81%
 ---
 
 
-# AEM Forms Workspace の概要 {#getting-started-with-aem-forms-workspace}
+# AEM Forms Workspace の概要  {#getting-started-with-aem-forms-workspace}
 
 AEM Forms Workspace では、以下のタスクを実行できます。
 
@@ -26,7 +26,7 @@ AEM Forms Workspace では、以下のタスクを実行できます。
 * 個人の TODO リストまたはアクセス可能な他の TODO リストに割り当てられているタスクの表示と操作
 * 開始または参加したプロセスに含まれるタスクの追跡
 
-## AEM Forms Workspace 内の移動 {#navigating-html-workspace}
+## AEM Forms Workspace 内の移動  {#navigating-html-workspace}
 
 AEM Formsワークスペースユーザーインターフェイスの項目は、操作するプロセスとタスクに応じて表示されます。 「要約」、「フォーム」、「詳細」、「履歴」、「添付ファイル」または「メモ」の各タブ、およびこのヘルプで説明するボタンはすべて、表示される場合とされない場合があります。
 
@@ -50,7 +50,7 @@ AEM Formsワークスペースでスクリーンリーダーを使用する場�
 * AEM Formsワークスペースのナビゲーションはすべてアンカータグを経由し、タブから簡単にアクセスできます。
 * フォームの読み込みには数秒かかる場合があります。スクリーンリーダーでは、フォームが読み込まれていること、および待機の必要があることは音声で通知されません。
 
-## キーボードを使用した AEM Forms Workspace 内の移動 {#navigating-html-workspace-using-a-keyboard}
+## キーボードを使用した AEM Forms Workspace 内の移動  {#navigating-html-workspace-using-a-keyboard}
 
 キーボードを使用してAEM Formsワークスペースを移動する場合、ナビゲーションはアクセシビリティ規則に準拠します。 特定の状況下では、タブ移動の順序は通常の順序とは異なります。インターフェイス内での移動時には、以下のヒントを参考にしてください。
 
@@ -70,7 +70,7 @@ AEM Formsワークスペースでスクリーンリーダーを使用する場�
 
 **UI 設定の管理：** AEM Forms Workspace とのやり取りの方法について環境設定を指定します。[ユーザーインターフェイスの環境設定の指定](#set-user-interface-preferences)を参照してください。
 
-### ユーザーインターフェイスの環境設定の指定 {#set-user-interface-preferences}
+### ユーザーインターフェイスの環境設定の指定  {#set-user-interface-preferences}
 
 「環境設定」 > 「UI 設定」タブにユーザーインターフェイスの環境設定を指定します。次の環境設定を使用できます。
 
