@@ -26,7 +26,7 @@ ht-degree: 81%
 
 次の手順を実行して、JEE 上の AEM Forms にデータを送信する AEM Forms サーバーを有効にします。
 
-1. Go to AEM web configuration console at https://[*host*]:[*port*]/system/console/configMgr.
+1. AEM Web Configuration Console(https://[*host*]:[*port*]/system/console/configMgr)に移動します。
 
 1. **Adobe LiveCycle Client SDK Configuration** コンポーネントを見つけてクリックします。
 1. クリックして、JEE 上の AEM Forms サーバーの URL、ユーザー名、およびパスワードを編集します。
@@ -41,9 +41,9 @@ AEM Forms の設定が完了したら、データ XML と添付ファイルを�
 1. AEM Web Console Configuration で、**Guide LiveCycle Process Locator and Invoker** 設定をクリックして編集します。
 1. 以下のパラメーターを指定します。
 
-   * **Name of the data xml parameter** （必須）:送信されたデータの処理に必要なJEE上のAEM FormsプロセスのXMLプロパティファイルを指定します。 デフォルト値は **dataxml** です。
+   * **Name of the data xml parameter** （必須）:送信されたデータの処理に必要なJEE上のAEM FormsプロセスのXMLプロパティファイルを指定します。デフォルト値は **dataxml** です。
 
-   * **Name of the file attachments parameter**（オプション）：JEE 上の AEM Forms プロセスで処理する必要のあるドキュメントオブジェクトのリストを指定します。The default value is **fileAttachmentsList**.
+   * **Name of the file attachments parameter**（オプション）：JEE 上の AEM Forms プロセスで処理する必要のあるドキュメントオブジェクトのリストを指定します。デフォルト値は&#x200B;**fileAttachmentsList**&#x200B;です。
 
 1. 設定を確認し、「**保存**」をクリックします。
 
