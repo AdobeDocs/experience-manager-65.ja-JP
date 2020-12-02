@@ -16,7 +16,7 @@ ht-degree: 77%
 ---
 
 
-# 繰り返し可能なセクションを使用したフォームの作成 {#creating-forms-with-repeatable-sections}
+# 繰り返し可能なセクションを使用したフォームの作成  {#creating-forms-with-repeatable-sections}
 
 繰り返し可能なセクションとは、フォームに動的に追加またはフォームから動的に削除できるパネルのことです。
 
@@ -24,9 +24,9 @@ ht-degree: 77%
 
 以下に挙げる方法のうちいずれかによって、繰り返し可能なパネルを作成できます。
 
-## スクリプトを通じたインスタンスマネージャーの使用 {#using-instance-manager-via-scripts-nbsp}
+## スクリプトを通じたインスタンスマネージャーの使用  {#using-instance-manager-via-scripts-nbsp}
 
-1. In the edit mode, select a panel, then tap ![cmppr](assets/cmppr.png). サイドバーのプロパティで「**パネルを繰り返し可能にする**」を有効にします。Specify values for the **[!UICONTROL Maximum]** and **[!UICONTROL Minimum]** fields.
+1. 編集モードで、パネルを選択し、![cmpr](assets/cmppr.png)をタップします。 サイドバーのプロパティで「**パネルを繰り返し可能にする**」を有効にします。「**[!UICONTROL 最大]**」フィールドと「**[!UICONTROL 最小]**」フィールドに値を指定します。
 
    最大数フィールドでは、パネルがそのページ上に登場してよい最大の回数を指定します。パネルの登場回数を制限しないように設定するには、最大数フイールドに「-1」を入力します。
 
@@ -38,27 +38,27 @@ ht-degree: 77%
 
 1. パネルの親要素に繰り返しを許可する場合は、繰り返し可能なパネルのインスタンスを管理するために追加ボタンおよび削除ボタンが親要素に含まれている必要があります。次の手順を実行して、親にボタンを挿入し、ボタンのスクリプトを有効にします。
 
-   1. サイドバーから、ボタンコンポーネントをパネルの親要素にドラッグ＆ドロップします。Select the component and tap ![edit-rules](assets/edit-rules.png). ルールエディターでボタンのルールが開きます。
+   1. サイドバーから、ボタンコンポーネントをパネルの親要素にドラッグ＆ドロップします。コンポーネントを選択し、![edit-rules](assets/edit-rules.png)をタップします。 ルールエディターでボタンのルールが開きます。
    1. ルールエディターウィンドウで、「**作成**」をクリックします。
 
-      Select **Visual Editor** in the Form Objects and Functions row.
+      「フォームオブジェクトと関数」の行で、「**ビジュアルエディター**」を選択します。
 
       1. ルール領域のWHENで、**がクリックされた状態を選択します。**
       1. THENで、次の操作を行います。
 
-         * To create an add panel button, select **Add Instance**, and drag-drop the panel using ![toggle-side-panel](assets/toggle-side-panel.png) or select it using **Drop object or select here.**
-         * To create a delete panel button, select **Remove Instance**, and drag-drop the panel using ![toggle-side-panel](assets/toggle-side-panel.png) or select it using **Drop object or select here.**
+         * パネルを追加ボタンを作成するには、「**インスタンス追加**」を選択し、![トグルサイドパネル](assets/toggle-side-panel.png)を使用してパネルをドラッグ&amp;ドロップするか、**オブジェクトをドロップまたは次から選択します。**
+         * パネルを削除ボタンを作成するには、「**インスタンスを削除**」を選択し、![トグルサイドパネル](assets/toggle-side-panel.png)を使用してパネルをドラッグ&amp;ドロップするか、**オブジェクトをドロップまたは次から選択します。**
 
       フォームオブジェクトと関数の行で、「**コードエディター**」を選択します。「**ルールを編集**」をクリックし、コード領域で次の操作を行います。
 
       * パネルを追加ボタンを作成するには、`this.panel.instanceManager.addInstance()`()を指定します。
-      * To create a delete panel button, specify `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
+      * パネルを削除ボタンを作成するには、`this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`を指定します
 
       「**完了**」をクリックします。
 
       >[!NOTE]
       >
-      >フィールドが繰り返し可能パネルに属する場合、スクリプトで名前を指定して直接アクセスすることはできません。To access the field, specify the repeatable instance to which the field belongs using the `instances` API in `InstanceManager`. The syntax to use the `instances` API in `InstanceManager` is:
+      >フィールドが繰り返し可能パネルに属する場合、スクリプトで名前を指定して直接アクセスすることはできません。フィールドにアクセスするには、`InstanceManager`の`instances` APIを使用して、フィールドが属する繰り返し可能なインスタンスを指定します。 `InstanceManager`で`instances` APIを使用する構文は次のとおりです。
       >
       >
       >`<panelName>.instanceManager.instances[<instanceNumber>].<fieldname>`
@@ -112,10 +112,10 @@ ht-degree: 77%
 
 1 つのパネルにはさまざまなレイアウトを選択することができます。アコーディオンデザインのレイアウトでは、繰り返し可能パネルをただちに使用することができます。アコーディオンデザインのレイアウトで繰り返し可能パネルを使用するには、以下の手順を実行します。
 
-1. On the parent of panel to be repeated, tap ![cmppr](assets/cmppr.png). サイドバーにプロパティが表示されます。**レイアウト**&#x200B;ドロップダウンで、「**アコーディオン**」を選択します。
-1. On a panel, which is to be repeated, tap ![cmppr](assets/cmppr.png). サイドバーにパネルのプロパティが表示されます。「**パネルを繰り返し可能にする**」タブを有効にし、**最大数**&#x200B;および&#x200B;**最小数**&#x200B;フィールドの値を指定します。
+1. 繰り返しを許可するパネルの親要素上で、![cmppr](assets/cmppr.png)をタップします。 サイドバーにプロパティが表示されます。**レイアウト**&#x200B;ドロップダウンで、「**アコーディオン**」を選択します。
+1. 繰り返しを許可するパネルで、![cmpr](assets/cmppr.png)をタップします。 サイドバーにパネルのプロパティが表示されます。「**パネルを繰り返し可能にする**」タブを有効にし、**最大数**&#x200B;および&#x200B;**最小数**&#x200B;フィールドの値を指定します。
 
-   Now, you can use the plus (+) and delete ( ![delete-panel](assets/delete-panel.png)) buttons to add and remove the panels.
+   これで、プラス(+)ボタンと削除（![削除 — パネル](assets/delete-panel.png)）ボタンを使用して、パネルの追加と削除を行うことができます。
 
 ## フォームテンプレート（XDP/XSD）からのサブフォームの繰り返しの使用{#using-repeating-subforms-from-form-template-xdp-xsd}
 
