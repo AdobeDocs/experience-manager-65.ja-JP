@@ -22,7 +22,7 @@ ht-degree: 40%
 
 ## 概要 {#overview}
 
-検索機能は AEM Communities の基本機能です。In addition to the [AEM platform search](../../help/sites-deploying/queries-and-indexing.md) capabilities, AEM Communities provides the [UGC search API](#ugc-search-api) for the purpose of searching user generated content (UGC). UGCには、他のAEMコンテンツやユーザーデータとは別に入力および保存されるので、固有のプロパティがあります。
+検索機能は AEM Communities の基本機能です。[AEM platform search](../../help/sites-deploying/queries-and-indexing.md)機能に加えて、AEM Communitiesはユーザ生成コンテンツ(UGC)を検索する目的で[UGC search API](#ugc-search-api)を提供しています。 UGCには、他のAEMコンテンツやユーザーデータとは別に入力および保存されるので、固有のプロパティがあります。
 
 Communitiesでは、一般に検索される2つの項目は次のとおりです。
 
@@ -36,65 +36,65 @@ Communitiesでは、一般に検索される2つの項目は次のとおりで�
 
 ドキュメントのこの節は、UGC を作成または管理するためのカスタムコンポーネントの作成を担当する開発者を対象としています。
 
-## セキュリティおよびシャドウノード {#security-and-shadow-nodes}
+## セキュリティおよびシャドウノード  {#security-and-shadow-nodes}
 
-For a custom component, it is necessary to use the [SocialResourceUtilities](socialutils.md#socialresourceutilities-package) methods. The utility methods that create and search for UGC will establish the required [shadow nodes](srp.md#about-shadow-nodes-in-jcr) and ensure the member has the correct permissions for the request.
+カスタムコンポーネントの場合は、[SocialResourceUtilities](socialutils.md#socialresourceutilities-package)メソッドを使用する必要があります。 UGCを作成および検索するユーティリティメソッドは、必要な[シャドウノード](srp.md#about-shadow-nodes-in-jcr)を確立し、メンバーに要求に対する正しい権限があることを確認します。
 
 モデレート関連のプロパティについては、SRP ユーティリティでは管理しません。
 
-See [SRP and UGC Essentials](srp-and-ugc.md) for information regarding utility methods used to access UGC and ACL shadow nodes.
+UGCおよびACLシャドウノードへのアクセスに使用するユーティリティメソッドの詳細については、[SRPとUGC Essentials](srp-and-ugc.md)を参照してください。
 
 ## UGC Search API {#ugc-search-api}
 
-[UGC 共通ストア](working-with-srp.md)は、それぞれ異なるネイティブクエリー言語を使用する様々なストレージリソースプロバイダー（SRP）の 1 社から提供されます。Therefore, regardless of the SRP chosen, custom code should use methods from the [UGC API package](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*) which will invoke the query language appropriate for the chosen SRP.
+[UGC 共通ストア](working-with-srp.md)は、それぞれ異なるネイティブクエリー言語を使用する様々なストレージリソースプロバイダー（SRP）の 1 社から提供されます。したがって、選択したSRPに関係なく、カスタムコードは[UGC APIパッケージ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html)(*com.adobe.cq.sosical.ugc.api*)からのメソッドを使用し、選択したSRPに適したクエリ言語を呼び出す必要があります。
 
 ### ASRP 検索 {#asrp-searches}
 
-For [ASRP](asrp.md), UGC is stored in the Adobe cloud. While UGC is not visible in CRX, [moderation](moderate-ugc.md) is available from both the author and publish environments. The use of the [UGC search API](#ugc-search-api) works for ASRP the same as for other SRPs.
+[ASRP](asrp.md)の場合、UGCはAdobeクラウドに保存されます。 UGCはCRXに表示されませんが、[モデレート](moderate-ugc.md)は作成者と発行の両方の環境から利用できます。 [UGC検索API](#ugc-search-api)の使用は、ASRPでは他のSRPと同じように機能します。
 
 ASRP 検索を管理するためのツールは現在存在しません。
 
-When creating custom properties that are searchable, it is necessary to adhere to the [naming requirements](#naming-of-custom-properties).
+検索可能なカスタムプロパティを作成する場合は、[命名規則](#naming-of-custom-properties)に従う必要があります。
 
 ### MSRP 検索 {#msrp-searches}
 
-For [MSRP](msrp.md), UGC is stored in MongoDB configured to use Solr for searching. UGC will not be visible in CRX, but [moderation](moderate-ugc.md) is available from both the author and publish environments.
+[MSRP](msrp.md)の場合、UGCはSolrを使用して検索するように設定されたMongoDBに保存されます。 UGCはCRXには表示されませんが、[モデレート](moderate-ugc.md)は作成者と発行の両方の環境から利用できます。
 
 MSRP および Solr については、次の点に留意してください。
 
 * AEMプラットフォーム用の埋め込みSolrは、MSRPには使用されません。
 * AEMプラットフォームにリモートSolrを使用する場合、MSRPと共有できますが、異なるコレクションを使用する必要があります。
 * Solrは、標準検索または多言語検索(MLS)用に設定できます。
-* For configuration details, see [Solr Configuration](msrp.md#solr-configuration) for MSRP.
+* 設定の詳細については、「MSRPの[Solr設定](msrp.md#solr-configuration)」を参照してください。
 
-Custom search features should use the [UGC search API](#ugc-search-api).
+カスタム検索機能では、[UGC検索API](#ugc-search-api)を使用する必要があります。
 
-When creating custom properties that are searchable, it is necessary to adhere to the [naming requirements](#naming-of-custom-properties).
+検索可能なカスタムプロパティを作成する場合は、[命名規則](#naming-of-custom-properties)に従う必要があります。
 
 ### JSRP 検索 {#jsrp-searches}
 
-For [JSRP](jsrp.md), UGC is stored in [Oak](../../help/sites-deploying/platform.md) and is visible only in the repository of the AEM author or publish instance on which it was entered.
+[JSRP](jsrp.md)の場合、UGCは[Oak](../../help/sites-deploying/platform.md)に保存され、入力されたAEM作成者インスタンスまたは発行インスタンスのリポジトリにのみ表示されます。
 
 UGC は一般にパブリッシュ環境で入力されるので、複数の公開者が存在する実稼動システムでは、パブリッシュファームではなく、[パブリッシュクラスター](topologies.md)の設定を通して、入力されたコンテンツがすべての公開者から表示できるようにする必要があります。
 
-JSRP の場合、パブリッシュ環境で入力された UGC はオーサー環境には表示されません。Thus all [moderation](moderate-ugc.md) tasks take place in the publish environment.
+JSRP の場合、パブリッシュ環境で入力された UGC はオーサー環境には表示されません。したがって、すべての[モデレート](moderate-ugc.md)タスクは発行環境で行われます。
 
-Custom search features should use the [UGC search API](#ugc-search-api).
+カスタム検索機能では、[UGC検索API](#ugc-search-api)を使用する必要があります。
 
 #### Oak インデックスの作成 {#oak-indexing}
 
 AEMプラットフォーム検索では、Oakインデックスは自動的には作成されませんが、AEM 6.2以降では、パフォーマンスを向上させ、UGC検索結果を表示する際のページネーションをサポートするため、AEM Communities向けに追加されています。
 
-カスタムプロパティが使用中で検索が遅い場合は、カスタムプロパティのパフォーマンスを高めるために、カスタムプロパティ用に追加のインデックスを作成する必要があります。 To maintain portability, adhere to the [naming requirements](#naming-of-custom-properties) when creating custom properties that are searchable.
+カスタムプロパティが使用中で検索が遅い場合は、カスタムプロパティのパフォーマンスを高めるために、カスタムプロパティ用に追加のインデックスを作成する必要があります。 携帯性を維持するために、検索可能なカスタムプロパティを作成する際は、[命名規則](#naming-of-custom-properties)に従ってください。
 
-To modify existing indexes or create custom indexes, refer to [Oak Queries and Indexing](../../help/sites-deploying/queries-and-indexing.md).
+既存のインデックスの変更やカスタムインデックスの作成については、[Oakクエリとインデックス作成](../../help/sites-deploying/queries-and-indexing.md)を参照してください。
 
-The [Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) is available from ACS AEM Commons. 次の機能が提供されます。
+[Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html)は、ACS AEM Commonsから入手できます。 次の機能が提供されます。
 
 * 既存のインデックスの表示。
 * 再インデックスを開始する機能。
 
-[CRXDE Lite内の既存のOakインデックスを表示するには](../../help/sites-developing/developing-with-crxde-lite.md)、次の場所に移動します。
+[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)内の既存のOakインデックスを表示するには、次の場所に移動します。
 
 * `/oak:index/socialLucene`
 
@@ -109,36 +109,36 @@ The [Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-comm
 | **プロパティ** | **データタイプ** |
 |---|---|
 | isFlagged | *Boolean* |
-| isSpam | *Boolean* |
-| read | *Boolean* |
-| influence | *Boolean* |
-| attachments | *Boolean* |
+| isSpam | *ブール値* |
+| 読み取り | *ブール値* |
+| influence | *ブール値* |
+| attachments | *ブール値* |
 | sentiment | 長整数&#x200B;** |
-| flagged | *Boolean* |
+| flagged | *ブール値* |
 | added | *日付* |
 | modifiedDate | *日付* |
 | state | *String* |
-| userIdentifier | *String* |
+| userIdentifier | *文字列* |
 | replies | 長整数&#x200B;** |
-| jcr:title | *String* |
-| jcr:description | *String* |
-| sling:resourceType | *String* |
-| allowThreadedReply | *Boolean* |
-| isDraft | *Boolean* |
+| jcr:title | *文字列* |
+| jcr:description | *文字列* |
+| sling:resourceType | *文字列* |
+| allowThreadedReply | *ブール値* |
+| isDraft | *ブール値* |
 | publishDate | *日付* |
-| publishJobId | *String* |
-| answered | *Boolean* |
-| chosenanswered | *Boolean* |
-| tag | *String* |
-| cq:Tag | *String* |
-| author_display_name | *String* |
-| location_t | *String* |
-| parentPath | *String* |
+| publishJobId | *文字列* |
+| answered | *ブール値* |
+| chosenanswered | *ブール値* |
+| tag | *文字列* |
+| cq:Tag | *文字列* |
+| author_display_name | *文字列* |
+| location_t | *文字列* |
+| parentPath | *文字列* |
 | parentTitle | 文字列&#x200B;** |
 
-### カスタムプロパティの命名 {#naming-of-custom-properties}
+### カスタムプロパティの命名  {#naming-of-custom-properties}
 
-When adding custom properties, in order for those properties to be visible to sorts and searches created with the [UGC search API](#ugc-search-api), it is *required* to add a suffix to the property name.
+カスタムプロパティを追加する場合、[UGC検索API](#ugc-search-api)で作成された並べ替えや検索でこれらのプロパティを表示するには、プロパティ名にサフィックスを追加する&#x200B;*必要な*&#x200B;があります。
 
 サフィックスは、スキーマを使用するクエリ言語用です。
 
@@ -149,16 +149,16 @@ Solr は、スキーマを使用するクエリー言語の一例です。
 
 | **サフィックス** | **データタイプ** |
 |---|---|
-| _b | *Boolean* |
+| _b | *ブール値* |
 | _dt | カレンダー&#x200B;** |
 | _d | 倍精度浮動小数点&#x200B;** |
 | _tl | 長整数&#x200B;** |
-| _s | *String* |
+| _s | *文字列* |
 | _t | *テキスト* |
 
 **備考:**
 
-* *Text* はトークン化された文字列です。 *String* はトークン化されません。 Use *Text* for fuzzy (more like this) searches.
+* ** テキストはトークン化された文字列で、 ** 文字列は含まれません。*テキスト*&#x200B;を使用して、あいまい検索を行います（このように）。
 
 * 複数の値を持つタイプの場合、次のようにサフィックスに「s」を追加します。
 
@@ -167,7 +167,7 @@ Solr は、スキーマを使用するクエリー言語の一例です。
 
 ## フィルター {#filters}
 
-Components which include the [comment system](essentials-comments.md) support the filter parameter addition to their endpoints.
+[コメントシステム](essentials-comments.md)を含むコンポーネントは、そのエンドポイントにフィルターパラメーターを追加できます。
 
 AND および OR ロジックのフィルター構文は次のようになります（URL エンコード処理前）。
 
@@ -179,7 +179,7 @@ AND および OR ロジックのフィルター構文は次のようになりま
 
    * `filter = name eq 'Jackson'&filter=message eq 'testing'`
 
-[コミュニティコンポーネントガイド](components-guide.md)で「検索結果」ページを開く際に使用される URL に見られるように、[検索コンポーネント](search.md)のデフォルト実装ではこの構文が使用されます。To experiment, browse to [http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html).
+[コミュニティコンポーネントガイド](components-guide.md)で「検索結果」ページを開く際に使用される URL に見られるように、[検索コンポーネント](search.md)のデフォルト実装ではこの構文が使用されます。テストするには、[http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html)を参照します。
 
 フィルター演算子は次のとおりです。
 
@@ -225,15 +225,15 @@ Solrクエリの問題のトラブルシューティングに役立つには、
 
 実際の Solr クエリが、デバッグログに URL エンコードされて表示されます。
 
-solrへのクエリ: `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
+solrへのクエリ:`sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
 
 `q` パラメーターの値がクエリです。URLエンコーディングがデコードされると、クエリをSolr管理者クエリツールに渡して、さらに詳細なデバッグを行うことができます。
 
 ## 関連リソース {#related-resources}
 
 * [コミュニティコンテンツストレージ](working-with-srp.md) - UGC共通ストアで使用できるSRPの選択肢について説明します。
-* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
 * [SRP](accessing-ugc-with-srp.md) - Codingガイドラインを使用したUGCへのアクセス
 * [SocialUtilsリファクタリング](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティメソッド。
-* [検索および検索結果コンポーネント](search.md) — テンプレートへのUGC検索機能の追加
+* [検索と検索結果のコンポーネント](search.md)  — テンプレートへのUGC検索機能の追加
 
