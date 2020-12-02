@@ -23,8 +23,8 @@ ht-degree: 84%
 
 タグを使用すると、Web サイト内のコンテンツをすばやく簡単に分類できます。タグはキーワードやラベルとしてページ、アセット、その他のコンテンツに添付し、コンテンツや関連コンテンツを検索できます。
 
-* See [Administering Tags](/help/sites-administering/tags.md) for information about creating and managing tags, as well as to which content tags have been applied.
-* See [Tagging for Developers](/help/sites-developing/tags.md) for information about the tagging framework as well as including and extending tags in custom applications.
+* タグの作成と管理、および適用されたコンテンツタグについては、[タグ](/help/sites-administering/tags.md)の管理を参照してください。
+* タグ付けフレームワーク、およびカスタムアプリケーションでのタグの追加と拡張について詳しくは、[開発者用のタグ付け](/help/sites-developing/tags.md)を参照してください。
 
 ## タグを使用する 10 の理由 {#ten-reasons-to-use-tagging}
 
@@ -41,11 +41,11 @@ ht-degree: 84%
 
 サイトのコンテンツ構造やアセットのメタデータスキーマを設計する際には、タグ付け機能が提供する軽量でアクセス可能なアプローチを検討してください。
 
-## タグの適用 {#applying-tags}
+## タグの適用  {#applying-tags}
 
 オーサー環境では、作成者はページのプロパティにアクセスし、「**タグ／キーワード**」フィールドに 1 つ以上のタグを入力することでタグを適用できます。
 
-To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the **Tags** field and the **Select Tags** window. 「**標準タグ**」タブがデフォルトの名前空間です。これは、分類にプレフィックスされている `namespace-string:` がないことを意味します。
+[事前定義タグ](/help/sites-administering/tags.md)を適用するには、**ページプロパティ**&#x200B;ウィンドウで、**タグ**&#x200B;フィールドと&#x200B;**タグを選択**&#x200B;ウィンドウを使用します。 「**標準タグ**」タブがデフォルトの名前空間です。これは、分類にプレフィックスされている `namespace-string:` がないことを意味します。
 
 ![タグの選択ウィンドウ；Xボタンを使用して、現在選択されているタグの選択を解除します。](assets/chlimage_1-41.png)
 
