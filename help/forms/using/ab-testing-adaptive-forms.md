@@ -28,21 +28,21 @@ AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target 
 
 AEM Forms により、リアルタイムでアダプティブフォーム上に A/B テストを設定し、実行することが可能です。また、事前設定されているカスタマイズ可能なレポート機能で、フォームのエクスペリエンスのリアルタイムなパフォーマンスを可視化し、ユーザーの利用状況とコンバージョンを最大限に高めるエクスペリエンスを特定します。
 
-## AEM Forms での Target の設定と統合 {#set-up-and-integrate-target-in-aem-forms}
+## AEM Forms での Target の設定と統合  {#set-up-and-integrate-target-in-aem-forms}
 
 アダプティブフォームで A/B テストを作成および分析する前に、Target サーバーを設定し、AEM Forms に統合する必要があります。
 
-### Target の設定 {#set-up-target}
+### Target の設定  {#set-up-target}
 
 AEM を Target と統合するには、有効な Adobe Target のアカウントを保有していることを確認してください。Adobe Target に登録すると、クライアントコードを受け取ります。クライアントコード、Target アカウントに関連付けられた電子メール、AEM と Target を接続するパスワードが必要です。
 
 クライアントコードは Adobe Target の顧客アカウントを識別するもので、Adobe Target サーバーの呼び出し時に URL 内のサブドメインとして使用されます。開始する前に、この資格情報で [/](https://testandtarget.omniture.com/)https://testandtarget.omniture.com/ にログインできるか確認してください。
 
-### AEM Forms に Target を統合 {#integrate-target-in-aem-forms}
+### AEM Forms に Target を統合  {#integrate-target-in-aem-forms}
 
 実行中の Target サーバーを AEM Forms と統合するには、次の手順を実行します。
 
-1. On AEM server, go to https://&lt;*hostname*>:&lt;*port*>/libs/cq/core/content/tools/cloudservices.html.
+1. AEMサーバーで、https://&lt;*hostname*:&lt;*port*/libs/cq/core/content/tools/cloudservices.htmlに移動します。
 
 1. **Adobe Target** セクションで、「**設定を表示**」をクリックし、「**+**」アイコンをクリックして新しい設定を追加します。初回にターゲットを設定する場合は、「**今すぐ設定**」をクリックします。
 
@@ -56,11 +56,11 @@ AEM を Target と統合するには、有効な Adobe Target のアカウント
 
 1. Target フレームワークの作成については、「[フレームワークの追加](/help/sites-administering/target.md)」の説明に従ってください。
 
-1. Go to https://&lt;*hostname*>:&lt;*port*>/system/console/configMgr.
+1. https://&lt;*hostname*>:&lt;*port*/system/console/configMgrに移動します。
 
 1. 「**AEM Forms Target の設定**」をクリックします。
 1. **Target フレームワーク**&#x200B;を選択します。
-1. 「**Target URL**」フィールドで、A/B テストを実行するすべての URL を指定します。For example, https://&lt;*hostname*>:&lt;*port*>/ for AEM Forms server on OSGi or https://&lt;*hostname*>:&lt;*port*>/lc/ for AEM Forms server on JEE.
+1. 「**Target URL**」フィールドで、A/B テストを実行するすべての URL を指定します。例えば、OSGiのAEM Formsサーバーの場合はhttps://&lt;*hostname*:&lt;*port*/、JEEのAEM Formsサーバーの場合はhttps://&lt;*hostname*:*port*/lc/です。
 パブリッシュインスタンスに Target URL を設定し、顧客がホスト名または IP アドレスを使用してアクセスできるようにする場合、ホスト名を使用した Target URL と IP アドレスの両方を設定する必要があります。URL のいずれか 1 つのみを設定する場合、その A/B テストは別の URL からの顧客には実行されません。「**+**」をクリックして複数の URL を指定します。 
 
 1. 「**保存**」をクリックします。
@@ -82,29 +82,29 @@ JBoss サーバーに加えて、アプリケーションサーバーのサー�
 >設定した Target URL をあとで更新する場合、実行中の A/B テストを必ず更新し、現在の URL が指定されるようにしてください。A/B テストの更新について詳しくは、[A/B テストを更新](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p)を参照してください。
 
 
-## AEM 内でのオーディエンスの作成 {#create-audiences-within-aem}
+## AEM 内でのオーディエンスの作成  {#create-audiences-within-aem}
 
 AEM では、オーディエンスを作成し、それを A/B テストで使用できます。AEM 内で作成したオーディエンスは AEM Forms 内で使用できます。次の手順を実行して、AEM 内でオーディエンスを作成します。
 
-1. In authoring instance, tap **Adobe Experience Manager** > **Personalization** > **Audiences**.
+1. オーサリングインスタンスで、**Adobe Experience Manager**/**パーソナライゼーション**/**オーディエンス**&#x200B;をタップします。
 
 1. オーディエンスページで、**オーディエンスを作成／ターゲットオーディエンスを作成**&#x200B;をタップします。
-1. In the Adobe Target Configuration dialog, select a Target configuration and click **Ok**.
+1. [Adobe Target設定]ダイアログで、ターゲット設定を選択し、[**OK**]をクリックします。
 1. 新しいオーディエンスを作成ページで、ルールを作成します。ルールを使用すると、オーディエンスを分類できます。例えば、オペレーティングシステムに基づいてオーディエンスを分類できます。オーディエンス A は Windows から、オーディエンス B は Linux から来ています。
 
-   1. To categorize audience based on Windows, in Rule #1, select **OS** attribute type. From the When drop-down, select **Windows.**
+   1. Windowsに基づいてオーディエンスを分類するには、ルール#1で、**OS**&#x200B;属性タイプを選択します。 「日時」ドロップダウンから、「**ウィンドウ」を選択します。**
 
-   1. To categorize audience based on Linux, in Rule #2, select **OS** attribute type. From the **When** drop-down, select **Linux**, and click **Next**.
+   1. Linuxに基づいてオーディエンスを分類するには、ルール#2で、**OS**&#x200B;属性タイプを選択します。 「**日時**」ドロップダウンから「**Linux**」を選択し、「**次へ**」をクリックします。
 
-1. Specify a name for the created audience, and click **Save**.
+1. 作成したオーディエンスの名前を指定し、「**保存**」をクリックします。
 
 以下に示すように、フォームに対して A/B テストを設定するときにオーディエンスを選択できます。
 
-## A/B テストの作成 {#create-a-b-test}
+## A/B テストの作成  {#create-a-b-test}
 
 次の手順を実行して、アダプティブフォームのA/Bテストを作成します。
 
-1. **Formsとドキュメント(https://&lt;** ホスト名&#x200B;*>:&lt;*&#x200B;ポート&#x200B;**>/aem/forms.html/content/dam/formsanddocuments)に移動します。
+1. https://&lt;*hostname*:&lt;*port*/aem/forms.html/content/dam/formsanddocumentsの&#x200B;**Forms&amp;ドキュメント**&#x200B;に移動します。
 
 1. アダプティブフォームを含むフォルダーに移動します。
 1. ツールバーの「**選択**」ツールをクリックして、アダプティブフォームを選択します。
@@ -133,7 +133,7 @@ AEM では、オーディエンスを作成し、それを A/B テストで使�
 
 A/B テストが実行され、指定された対象者に、設定された配分に基づいてランダムにエクスペリエンスが提供されます。
 
-## A/B テストの更新 {#update-a-b-test}
+## A/B テストの更新  {#update-a-b-test}
 
 実行中の A/B テストのオーディエンスとエクスペリエンスの配布を更新することができます。この作業を行うには：
 
