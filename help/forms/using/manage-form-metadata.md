@@ -28,11 +28,11 @@ AEM Forms では、デフォルトで各アセットタイプに対してメタ�
 
 開発者またはサイト所有者の場合、フォームポータル、AEM Forms のエンドユーザーインターフェイスをカスタマイズして、組織で使用しているメタデータを反映させることができます。フォームポータルについて詳しくは、[ポータルでのフォーム発行の概要](../../forms/using/introduction-publishing-forms.md)を参照してください。
 
-## Metadata in AEM Forms {#metadata-in-aem-forms}
+## AEM Forms{#metadata-in-aem-forms}のメタデータ
 
 AEM Forms では、アセットに関連付けられたメタデータのプロパティのリストはタイプによって異なります。また、任意のカスタムメタデータのプロパティを追加すると、カスタムメタデータが追加されたタイプのすべてのアセットに追加されます。
 
-### Asset types {#asset-types}
+### アセットタイプ{#asset-types}
 
 次のアセットタイプは AEM Forms でサポートされます。
 
@@ -43,7 +43,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 * リソース
 * XFS
 
-#### Extensive list of metadata {#extensive-list-of-metadata}
+#### メタデータの広範なリスト{#extensive-list-of-metadata}
 
 次のリストは、AEM Forms でサポートされるメタデータのプロパティの広範なリストです。
 
@@ -151,7 +151,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
   </tr> 
   <tr> 
    <td>参照</td> 
-   <td><p>アダプティブフォーム</p> <p>フォームテンプレート</p> <p>Resource</p> </td> 
+   <td><p>アダプティブフォーム</p> <p>フォームテンプレート</p> <p>リソース</p> </td> 
    <td><p>このフォームが関連付けられているアセット（その他のフォームまたはリソース）のリストです。これらのアセットは、次の 2 つに分類されます。</p> 
     <ul> 
      <li>参照先：現在のフォームが参照しているアセット。</li> 
@@ -174,7 +174,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
  </tbody> 
 </table>
 
-## View form metadata {#view-form-metadata}
+## 表示フォームメタデータ{#view-form-metadata}
 
 アセットには既存のプロパティの値が含まれ、これは読み取り専用モードで表示できます。このメタデータは、フォームのアプロード時またはフォーム作成時に生成されます。
 
@@ -182,21 +182,21 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
 1. 次のいずれかの方法を使用してプロパティページを開きます。
 
-   1. クイックアクションの表示プロパティ ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) アイコンをクリックします。
+   1. [クイックアクション]の[表示プロパティ] ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png)アイコンをクリックします。
 
       >[!NOTE]
       >
       >クイックアクションは、マウスのカーソルを合わせたときにサムネール上に表示されるアクション項目です。
 
-   1. Select the form and click the View Properties ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) icon that appears in the toolbar.
-   1. 選択モードではない場合にフォームのサムネールをクリックして、フォーム詳細ページに移動します。Now, click the ![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png) eye icon on the upper right, and then click Properties in the list beneath it.
+   1. フォームを選択し、表示に表示される「プロパティ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png)」アイコンをクリックします。
+   1. 選択モードではない場合にフォームのサムネールをクリックして、フォーム詳細ページに移動します。次に、右上の![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png)目のアイコンをクリックし、その下のリストの「プロパティ」をクリックします。
 
 1. プロパティページが開き、いくつかの値を保持するメタデータのプロパティのみを含むスキーマが表示されます。
 
    プロパティページには、2 つのアクションアイコンが表示されるツールバーがあります。
 
-   * 編集： ![aem6forms_edit](assets/aem6forms_edit.png) メタデータプロパティの値の編集
-   * View: ![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png) Navigate to the form details page, which opens the form in the preview mode.
+   * 編集：![aem6forms_edit](assets/aem6forms_edit.png)メタデータプロパティの値を編集
+   * 表示:![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png)フォームの詳細ページに移動し、プレビューモードでフォームを開きます。
 
    コンテンツ部分は 2 つのパートに分かれています。
 
@@ -204,7 +204,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
    * 右のパネルには、様々なタブに配布される、読み取り専用モードのメタデータプロパティが含まれます。
 
 
-## Add/update form metadata values {#add-update-form-metadata-values}
+## 追加/フォームメタデータ値を更新{#add-update-form-metadata-values}
 
 既存のメタデータプロパティの値を編集したり、新しい値を既存のメタデータプロパティのフィールドに追加する（例えば、メタデータフィールドが空白の場合など）ことができます。
 
@@ -212,7 +212,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
 1. 前のセクションで説明した手順に従って、選択したフォームの既存のメタデータを表示するプロパティページを開きます。
 
-1. From the toolbar, click the edit icon ![aem6forms_edit](assets/aem6forms_edit.png) to change the mode of the page from read-only to read/write.
+1. ツールバーで、編集アイコン![aem6forms_edit](assets/aem6forms_edit.png)をクリックし、ページのモードを読み取り専用から読み取り/書き込みに変更します。
 
 1. 編集可能な入力フィールドとスタティックテキストの組み合わせを含むスキーマを保持するプロパティページが開きます。 
 
@@ -222,12 +222,12 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
    このページのツールバーには、ビューモードのツールバーとは異なる 2 つのアイコンが表示されます。
 
-   * Cancel: ![aem6forms_close](assets/aem6forms_close.svg_w24.png) Cancel any changes made to metadata property values so far
-   * Done: ![aem6forms_check](assets/aem6forms_check.png) Save all the changes made to metadata property values so far
+   * キャンセル：![aem6forms_close](assets/aem6forms_close.svg_w24.png)メタデータプロパティ値に対する変更をこれまでキャンセル
+   * 完了：![aem6forms_check](assets/aem6forms_check.png)これまでにメタデータプロパティ値に対して行われた変更をすべて保存
 
    どちらのアクションでも、更新済みの値を含むプロパティページを読み取り専用モードに戻すようユーザーは指示されます。
 
-### Update the form thumbnail {#update-the-form-thumbnail}
+### フォームサムネール{#update-the-form-thumbnail}を更新
 
 プロパティページの左のパネルには、フォームのサムネイルが表示されます。デフォルトでは、表示されるサムネイルはフォーム（アダプティブフォーム）作成時またはフォームアップロード時に生成されたサムネイルです。
 
@@ -244,15 +244,15 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
 
 
-## Add custom metadata {#add-custom-metadata}
+## 追加カスタムメタデータ{#add-custom-metadata}
 
 初期設定の状態で提供されているメタデータとは別に、AEM Forms は新規のカスタムメタデータをサポートします。
 
-A tool (Metadata Schema Editor) is provided to define the schema for the metadata layout; that is, the layout of what appears in the **[!UICONTROL Properties]** page of a form. メタデータスキーマエディターを使用して、アセットのカスタムスキーマを追加または変更できます。
+メタデータレイアウトのスキーマを定義するツール(メタデータスキーマエディター)が提供されます。つまり、フォームの&#x200B;**[!UICONTROL プロパティ]**&#x200B;ページに表示される内容のレイアウトです。 メタデータスキーマエディターを使用して、アセットのカスタムスキーマを追加または変更できます。
 
 AEM Forms は、このツールでサポート対象のフォームタイプのメタデータスキーマを公開します。この方法で、これらのスキーマにアクセスし、メタデータスキーマエディターで提供される機能を使用してカスタムプロパティを追加できます。
 
-### Navigate the metadata schema editor {#navigate-the-metadata-schema-editor}
+### メタデータスキーマエディター{#navigate-the-metadata-schema-editor}に移動します。
 
 1. **[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;に移動します。
 
@@ -266,7 +266,7 @@ AEM Forms は、このツールでサポート対象のフォームタイプの�
 
 1. 任意のアセットタイプをクリックすると、`extendedmetadata` オプションを含むリストが開きます。このスキーマを編集します。
 
-1. Select the checkbox beside `extendedmetadata` and then click the edit ![aem6forms_edit](assets/aem6forms_edit.png) icon that appears in the toolbar.
+1. `extendedmetadata`の横にあるチェックボックスを選択し、ツールバーに表示される「![aem6forms_edit](assets/aem6forms_edit.png)を編集」アイコンをクリックします。
 
 1. 選択されたアセットタイプ（この場合はアダプティブフォーム）のメタデータスキーマエディターまたはフォームビルダーが、AEM Forms で開きます。
 
@@ -283,7 +283,7 @@ AEM Forms は、このツールでサポート対象のフォームタイプの�
    1. 「**[!UICONTROL フォームを作成]**」セクションからスキーマページにフィールドコンポーネントをドラッグして、必要なタイプのカスタムフィールドを追加できます。
    1. このフィールドの仕様は、フィールドをクリックした後に「**[!UICONTROL 設定]**」セクションの下に提供されます。 
 
-### Add custom metadata property in schema editor {#add-custom-metadata-property-in-schema-editor}
+### スキーマエディターの追加カスタムメタデータプロパティ{#add-custom-metadata-property-in-schema-editor}
 
 1. カスタムプロパティを追加する既存または新規のタブに移動します。 
 
@@ -305,7 +305,7 @@ AEM Forms は、このツールでサポート対象のフォームタイプの�
       >また、リポジトリの同じ場所に 2 つ以上のプロパティの値が書き込まれるのを防ぐため、プロパティ名は一意にする必要があります。そのため、&#39;default&#39; の値は変更することをお勧めします。
 
    1. 要件に基づいてその他の設定を入力します。例えば、フィールドを必須フィールドにする場合は、必須オプションを選択します。 
-   1. To delete a field you added, select the field and then click the delete ![delete-1](assets/delete-1.png) icon.
+   1. 追加したフィールドを削除するには、フィールドを選択し、削除![delete-1](assets/delete-1.png)アイコンをクリックします。
 
 1. 必要に応じて、手順 1 から 3 に従って、別のプロパティを追加します。
 1. すべての変更を行ったら、「**完了**」をクリックします。
