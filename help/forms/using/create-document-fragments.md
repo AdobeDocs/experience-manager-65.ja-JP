@@ -21,7 +21,7 @@ ht-degree: 57%
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-This tutorial is a step in the [Create your first Interactive Communication](/help/forms/using/create-your-first-interactive-communication.md) series. チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
+このチュートリアルは、[最初の対話型通信を作成する](/help/forms/using/create-your-first-interactive-communication.md)シリーズのステップです。 チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
 ドキュメントフラグメントとは再利用可能な通信のコンポーネントを指し、インタラクティブ通信の作成に使用されます。ドキュメントフラグメントは、次のいずれかの種類になります。
 
@@ -29,7 +29,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 * リスト-リストは、テキスト、リスト、条件、画像を含むドキュメントフラグメントのグループです。
 * 条件 — 条件を使用すると、フォームデータモデルから受信したデータに基づいて、インタラクティブ通信に含めるコンテンツを定義できます。
 
-This tutorial walks you through the steps to create multiple text document fragments based on the anatomy provided in [Plan the Interactive Communication](/help/forms/using/planning-interactive-communications.md) section. このチュートリアルを完了すると、次の操作を実行できるようになります。
+このチュートリアルでは、[「対話型ドキュメントの計画](/help/forms/using/planning-interactive-communications.md)」のセクションに記載されている解剖学に基づいて、複数のテキスト通信フラグメントを作成する手順を説明します。 このチュートリアルを完了すると、次の操作を実行できるようになります。
 
 * ドキュメントフラグメントの作成
 * 変数の作成
@@ -44,11 +44,11 @@ This tutorial walks you through the steps to create multiple text document fragm
 * [請求内容](../../forms/using/create-document-fragments.md#step-create-bill-summary-text-document-fragment)
 * [請求概要](../../forms/using/create-document-fragments.md#step-create-summary-of-charges-text-document-fragment)
 
-各ドキュメントフラグメントには、スタティックテキスト、フォームデータモデルから受信したデータ、エージェント UI を使用して入力したデータが含まれます。All these fields have been depicted in the [Plan the Interactive Communication](/help/forms/using/planning-interactive-communications.md) section.
+各ドキュメントフラグメントには、スタティックテキスト、フォームデータモデルから受信したデータ、エージェント UI を使用して入力したデータが含まれます。これらのフィールドはすべて、[対話型通信の計画](/help/forms/using/planning-interactive-communications.md)のセクションに記述されています。
 
 このチュートリアルでドキュメントフラグメントを作成する際、エージェント UI を使用してデータを受信するフィールドの変数が作成されます。
 
-Use **FDM_Create_First_IC**, as described in the [Create form data model](../../forms/using/create-form-data-model0.md) section, as the form data model to create document fragments in this tutorial.
+[フォームデータモデル](../../forms/using/create-form-data-model0.md)の作成の節で説明したように、**FDM_Create_First_IC**&#x200B;をフォームデータモデルとして使用し、このチュートリアルでドキュメントフラグメントを作成します。
 
 ## 手順 1：請求明細テキストドキュメントフラグメントの作成 {#step-create-bill-details-text-document-fragment}
 
@@ -65,7 +65,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 
-1. Select **Create** > **Text**.
+1. **作成**/**テキスト**&#x200B;を選択します。
 1. 次の情報を指定します。
 
    1. 「**タイトル**」フィールドに、**bill_details_first_ic** を名前としてと入力します。「**名前**」フィールドにタイトルが自動入力されます。
@@ -102,10 +102,10 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    ![静的テキスト](assets/variable_bill_details_static_text_new.png)
 
 1. 「**請求書番号**」フィールドの隣にカーソルを置き、左側のペインで、「**変数**」タブの&#x200B;**InvoiceNumber** 変数をダブルクリックします。
-1. Place the cursor next to the **Bill Period** field and double-click the **Billperiod** variable.
-1. Place the cursor next to the **Bill Date** field and double-click the **Bill Date** variable.
+1. **請求期間**&#x200B;フィールドの横にカーソルを置き、**請求期間**&#x200B;変数を重複クリックします。
+1. **請求日**&#x200B;フィールドの横にカーソルを置き、**請求日**&#x200B;変数を重複クリックします。
 1. 左側のペインで、「**データモデルオブジェクト**」タブを選択します。
-1. Place the cursor next to the **Your Plan** field and double-click the **customer** > **customerplan** property.
+1. **「プラン**」フィールドの横にカーソルを置き、**customer** > **customerplan**&#x200B;プロパティを重複クリックします。
 
    ![bill_details_customerplan_fdm](assets/bill_details_customerplan_fdm.png)
 
@@ -129,10 +129,10 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
-1. Select **Create** > **Text**.
+1. **作成**/**テキスト**&#x200B;を選択します。
 1. 次の情報を指定します。
 
-   1. Enter **customer_details_first_ic** as the name in the **Title** field. 「**名前**」フィールドにタイトルが自動入力されます。
+   1. **「**&#x200B;タイトル&#x200B;**」フィールドに、名前として&lt;a0/>customer_details_first_ic**&#x200B;と入力します。 「**名前**」フィールドにタイトルが自動入力されます。
 
    1. 「**データモデル**」セクションから、「**フォームデータモデル**」を選択します。
 
@@ -143,7 +143,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 1. 左側のペインで、「**変数**」タブを選択して「**作成**」をタップします。
 1. 「**変数の作成**」セクションで、次の手順を実行します。
 
-   1. Enter **Placesupply** as the name of the variable.
+   1. 変数の名前として「**Placesupply**」と入力します。
    1. **文字列**&#x200B;をタイプとして選択します。
    1. 「**作成**」をタップします。
 
@@ -153,8 +153,8 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    * Numberconnections：番号の種類
 
 
-1. Select the **Data Model Objects** tab, place the cursor in the right pane, and double-click the **customer** > **name** property.
-1. Press Enter to move the cursor to the next line and double-click the **customer** > **address** property.
+1. 「**データモデルオブジェクト**」タブを選択し、右側のウィンドウにカーソルを置き、**customer** > **name**&#x200B;プロパティを重複クリックします。
+1. Enterキーを押してカーソルを次の行に移動し、**customer** > **address**&#x200B;プロパティを重複クリックします。
 1. 右側のペインを使用して、次のフィールドのスタティックテキストを作成します。
 
    * 携帯電話番号
@@ -166,16 +166,16 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
    ![顧客の詳細静的テキスト](assets/customer_details_static_text_new.png)
 
-1. Place the cursor next to the **Mobile Number** field and double-click the **customer** > **mobilenum** property.
-1. Place the cursor next to the **Alternate Contact Number** field and double-click the** customer** > **alternatemobilenumber** property.
-1. Place the cursor next to the **Relationship Number** field and double-click the **customer** > **relationshipnumber** property.
-1. Select the **Variables** tab, place the cursor next to the **Place of Supply** field and double-click the **Placesupply** variable.
-1. Place the cursor next to the **State Code** field and double-click the **Statecode** variable.
-1. Place the cursor next to the **Number of Connections** field and double-click the **Numberconnections** variable.
+1. 「**モバイル番号**」フィールドの横にカーソルを置き、**customer**/**mobilenum**&#x200B;プロパティを重複クリックします。
+1. 「**代替連絡先番号**」フィールドの横にカーソルを置き、*customer** > **alternatemobilenumber**&#x200B;プロパティを重複クリックします。
+1. 「**Relationship Number**」フィールドの横にカーソルを置き、**customer**/**relationshipnumber**&#x200B;プロパティを重複クリックします。
+1. 「**変数**」タブを選択し、「**供給場所**」フィールドの横にカーソルを置き、**Placesupply**&#x200B;変数を重複クリックします。
+1. **状態コード**&#x200B;フィールドの横にカーソルを置き、**状態コード**&#x200B;変数を重複クリックします。
+1. 「**接続数**」フィールドの横にカーソルを置き、**接続数**&#x200B;変数を重複クリックします。
 
    ![顧客情報](assets/customer_details_df2_new.png)
 
-1. Click **Save** to create the Customer Details text document fragment.
+1. 「**保存**」をクリックして、顧客の詳細テキストドキュメントフラグメントを作成します。
 
 ## 手順 3：請求内容テキストドキュメントフラグメントの作成 {#step-create-bill-summary-text-document-fragment}
 
@@ -193,10 +193,10 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
-1. Select **Create** > **Text**.
+1. **作成**/**テキスト**&#x200B;を選択します。
 1. 次の情報を指定します。
 
-   1. Enter **bill_summary_first_ic** as the name in the **Title** field. 「**名前**」フィールドにタイトルが自動入力されます。
+   1. **bill_summary_first_ic**&#x200B;を&#x200B;**タイトル**&#x200B;フィールドに名前として入力します。 「**名前**」フィールドにタイトルが自動入力されます。
 
    1. 「**データモデル**」セクションから、「**フォームデータモデル**」を選択します。
 
@@ -207,8 +207,8 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 1. 左側のペインで、「**変数**」タブを選択して「**作成**」をタップします。
 1. 「**変数の作成**」セクションで、次の手順を実行します。
 
-   1. Enter **Previousbalance** as the name of the variable.
-   1. Select **Number** as type.
+   1. 変数の名前として「**Previousbalance**」と入力します。
+   1. 「**数値**」をタイプとして選択します。
    1. 「**作成**」をタップします。
 
    手順 4 と 5 を繰り返し、次の変数を作成します。
@@ -231,16 +231,16 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
    ![請求書要約静的テキスト](assets/bill_summary_static_new.png)
 
-1. Place the cursor next to the **Previous Balance** field and double-click the **Previousbalance** variable.
-1. Place the cursor next to the **Payments** field and double-click the **Payments** variable.
-1. Place the cursor next to the **Adjustments** field and double-click the **Adjustments** variable.
-1. Place the cursor next to the **Amount Due** field and double-click the **Amountdue** variable.
-1. Place the cursor next to the **Due Date** field and double-click the **Duedate** variable.
-1. Select the **Data Model Objects** tab, place the cursor next to the **Charges current bill period** field in the right pane, and double-click the **bills** > **usagecharges** property.
+1. 「**前のバランス**」フィールドの横にカーソルを置き、**前のバランス**&#x200B;変数を重複クリックします。
+1. **支払**&#x200B;フィールドの横にカーソルを置き、**支払**&#x200B;変数を重複クリックします。
+1. **調整**&#x200B;フィールドの横にカーソルを置き、**調整**&#x200B;変数を重複クリックします。
+1. **支払額**&#x200B;フィールドの横にカーソルを置き、**支払額**&#x200B;変数を重複クリックします。
+1. **期日**&#x200B;フィールドの横にカーソルを置き、**期日**&#x200B;変数を重複クリックします。
+1. 「**データモデルオブジェクト**」タブを選択し、右側のウィンドウの「**請求現在の請求期間**」フィールドの横にカーソルを置き、**bills**/**usagecarges**&#x200B;プロパティを重複クリックします。
 
    ![請求内容](assets/bill_summary_static_variables_new.png)
 
-1. Click **Save** to create the Customer Details text document fragment.
+1. 「**保存**」をクリックして、顧客の詳細テキストドキュメントフラグメントを作成します。
 
 ## 手順 4：請求概要テキストドキュメントフラグメントの作成 {#step-create-summary-of-charges-text-document-fragment}
 
@@ -261,10 +261,10 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 スタティックテキストを作成してドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
 1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
-1. Select **Create** > **Text**.
+1. **作成**/**テキスト**&#x200B;を選択します。
 1. 次の情報を指定します。
 
-   1. Enter **summary_charges_first_ic** as the name in the **Title** field. 「名前」フィールドにタイトルが自動入力されます。
+   1. **「**&#x200B;タイトル&#x200B;**」フィールドに、名前として&lt;a0/>summary_charges_first_ic**&#x200B;と入力します。 「名前」フィールドにタイトルが自動入力されます。
 
    1. 「**データモデル**」セクションから、「**フォームデータモデル**」を選択します。
 
@@ -287,19 +287,19 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
    ![料金の概要](assets/summary_charges_static_new.png)
 
 1. 「**データモデルオブジェクト**」タブを選択します。
-1. Place the cursor next to the **Call Charges** field and double-click the **bills** > **callcharges** property.
-1. Place the cursor next to the **Conference Call Charges** field and double-click the **bills** > **confcallcharges** property.
-1. Place the cursor next to the **SMS Charges** field and double-click the **bills** > **smscharges** property.
-1. Place the cursor next to the **Mobile Internet Charges** field and double-click the **bills** > **internetcharges** property.
-1. Place the cursor next to the **National Roaming Charges** field and double-click the **bills** > **roamingnational** property.
-1. Place the cursor next to the **International Roaming Charges** field and double-click the **bills** > **roamingintnl** property.
-1. Place the cursor next to the **Value Added Services Charges** field and double-click the **bills** > **vas** property.
-1. Place the cursor next to the **Total Charges** field and double-click the **bills** > **usagecharges** property.
-1. Place the cursor next to the **TOTAL PAYABLE** field and double-click the **bills** > **usagecharges** property.
+1. **請求料**&#x200B;フィールドの横にカーソルを置き、**請求書** > **請求書**&#x200B;プロパティを重複クリックします。
+1. **電話会議料金**&#x200B;フィールドの横にカーソルを置き、**bills** > **confcallcharges**&#x200B;プロパティを重複クリックします。
+1. **SMS Charges**&#x200B;フィールドの横にカーソルを置き、**bills**/**smscharges**&#x200B;プロパティを重複クリックします。
+1. **モバイルインターネット料金**&#x200B;フィールドの横にカーソルを置き、**請求書** > **インターネット料金**&#x200B;プロパティを重複クリックします。
+1. **全国ローミング料金**&#x200B;フィールドの横にカーソルを置き、**請求書** > **roamingnational**&#x200B;プロパティを重複クリックします。
+1. **国際ローミング料金**&#x200B;フィールドの横にカーソルを置き、**請求書** > **roamingintnl**&#x200B;プロパティを重複クリックします。
+1. **付加価値サービス料**&#x200B;フィールドの横にカーソルを置き、**bills** > **vas**&#x200B;プロパティを重複クリックします。
+1. 「**手数料合計**」フィールドの横にカーソルを置き、**請求書** > **usagecharges**&#x200B;プロパティを重複クリックします。
+1. **TOTAL PAYABLE**&#x200B;フィールドの横にカーソルを置き、**bills** > **usagecharges**&#x200B;プロパティを重複クリックします。
 
    ![請求概要](assets/summary_charges_static_fdm_new.png)
 
-1. Select the text in the **Value Added Services Charges** row and tap **Create Rule** to create a condition based on which the row is displayed in the Interactive Communication:
+1. **Value Added Services Charges**&#x200B;行のテキストを選択し、「**ルールを作成**」をタップして、インタラクティブ通信に表示する行に基づいた条件を作成します。
 1. **ルールの作成**&#x200B;ポップアップウィンドウで、次の手順を実行します。
 
    1. **データモデルと変数**&#x200B;を選択して、**bills**／**callcharges**&#x200B;を選択します。
@@ -311,4 +311,4 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](../../
 
    ![create_rules_caption](assets/create_rules_caption.gif)
 
-1. Click **Save** to create the Summary of charges text document fragment.
+1. [**保存**]をクリックして、請求金額の概要テキストドキュメントフラグメントを作成します。
