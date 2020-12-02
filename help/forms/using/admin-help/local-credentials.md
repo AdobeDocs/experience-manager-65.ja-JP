@@ -28,7 +28,7 @@ AEM Forms は、標準の PKCS12 形式（.pfx ファイルおよび .p12 ファ
 
 Acrobat Reader DC Extensions に関連する情報および手順については、[証明書を Acrobat Reader DC Extensions で使用するための設定](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)を参照してください。
 
-## 秘密鍵証明書の読み込み {#import-a-credential}
+## 秘密鍵証明書の読み込み  {#import-a-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 「読み込み」をクリックし、「Trust Store の種類」で次のいずれかのオプションを選択します。
@@ -49,7 +49,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
 
    「形式が正しくないか、パスワードが正しくないため、秘密鍵証明書を読み込めませんでした」というエラーメッセージが表示される場合は、パスワードが有効であることを確認してください。
 
-## 秘密鍵証明書の書き出し {#export-a-credential}
+## 秘密鍵証明書の書き出し  {#export-a-credential}
 
 秘密鍵証明書は、PKCS#12 形式で P12 ファイルとして書き出されます。
 
@@ -58,7 +58,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
 1. 「パスワード」ボックスにパスワードを入力します。このパスワードは新規で、書き出した秘密鍵証明書の暗号化に使用します。
 1. 「書き出し」をクリックし、指示に従って秘密鍵証明書を書き出して、「OK」をクリックします。
 
-## 秘密鍵証明書のエイリアスまたは Trust Store の種類の編集 {#edit-a-credential-s-alias-or-trust-store-type}
+## 秘密鍵証明書のエイリアスまたは Trust Store の種類の編集  {#edit-a-credential-s-alias-or-trust-store-type}
 
 秘密鍵証明書が読み込まれたら、エイリアス名および Trust Store の種類を編集できます。
 
@@ -67,7 +67,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
 1. 「秘密鍵証明書を更新」をクリックします。
 1. 必要に応じて、エイリアス名と Trust Store の種類を編集し、「OK」をクリックします。
 
-## 秘密鍵証明書の削除 {#delete-a-credential}
+## 秘密鍵証明書の削除  {#delete-a-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 削除する秘密鍵証明書のチェックボックスを選択します。
