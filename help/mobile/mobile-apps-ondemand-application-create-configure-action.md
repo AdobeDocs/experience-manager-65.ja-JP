@@ -34,12 +34,12 @@ ht-degree: 95%
 >
 >ダッシュボードは、アプリのコンテンツ、メタデータおよび AEM Mobile On-Demand の接続ステータスの概要を把握できる一連の便利なタイルです。
 >
->See [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) for details.
+>詳しくは、[AEM Mobileアプリケーションダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
 **On-Demand アプリを作成するには：**
 
 1. サイドレールから「**モバイル**」を選択します。
-1. Select **Apps** from the Navigation.
+1. ナビゲーションから「**アプリ**」を選択します。
 1. 「**作成**」をクリックし、ドロップダウンから「**アプリ**」を選択します。
 1. モバイルアプリのテンプレートを選択し、「**次へ**」をクリックします。
 1. 「**タイトル**」、「**名前**」、「**説明**」など、アプリのプロパティを入力します。
@@ -65,7 +65,7 @@ ht-degree: 95%
 
 アプリケーションダッシュボードから On-Demand アプリを作成したら、次のステップでは、アプリをクラウド設定に関連付けます。
 
-See [Associating your app to the Cloud Configuration](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) for more details.
+詳しくは、[Appをクラウド設定に関連付ける](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
 
 ### さらに先のステップ {#getting-ahead}
 
