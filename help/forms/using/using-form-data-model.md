@@ -37,7 +37,7 @@ JSON スキーマの拡張機能であるフォームデータモデルを使用
 * [送信されたアダプティブフォームのデータをデータソースに書き込む](#write-af)
 * [アダプティブフォームのルールを使用してサービスを呼び出す](#invoke-services)
 
-## アダプティブフォームとアダプティブフォームフラグメントを作成する {#create-af}
+## アダプティブフォームとアダプティブフォームフラグメントを作成する  {#create-af}
 
 フォームデータモデルに基づいて、[アダプティブフォーム](../../forms/using/creating-adaptive-form.md)と[アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)を作成することができます。フォームデータモデルを使用してアダプティブフォームまたはアダプティブフォームフラグメントを作成するには、以下の手順を実行します。
 
@@ -65,7 +65,7 @@ JSON スキーマの拡張機能であるフォームデータモデルを使用
 
 データモデルオブジェクトをアダプティブフォームまたはアダプティブフォームフラグメントにドラッグアンドドロップすると、フォームフィールドを追加することができます。追加されたフォームフィールドには、メタデータのプロパティが保存されます。また、データモデルオブジェクトプロパティとのバインドに関する情報も保存されます。このバインド情報により、フォームの送信時に、対応するデータソース内のフィールド値が更新され、フォームのレンダリング時に、対応するデータソース内のフィールドに値が取り込まれます。
 
-## インタラクティブ通信の作成 {#create-ic}
+## インタラクティブ通信の作成  {#create-ic}
 
 フォームデータモデルに基づいて、インタラクティブ通信を作成することができます。フォームデータモデルを使用して、設定済みデータソースのデータをインタラクティブ通信に事前に取り込むことができます。また、フォームデータモデルに基づいて、インタラクティブ通信の構築ブロック（テキスト、リストおよび条件のドキュメントフラグメントなど）を作成することができます。
 
@@ -85,21 +85,21 @@ JSON スキーマの拡張機能であるフォームデータモデルを使用
 
 [リストフラグメント](/help/forms/using/lists.md)
 
-## サンプルデータを使用したプレビュー表示 {#preview-ic}
+## サンプルデータを使用したプレビュー表示  {#preview-ic}
 
 フォームデータモデルエディターでは、フォームデータモデル内のデータモデルオブジェクト用のサンプルデータを生成して編集することができます。このサンプルデータを使用して、インタラクティブ通信とアダプティブフォームのプレビュー表示とテストを実行することができます。プレビュー表示を行う前に、「[フォームデータモデルの操作](../../forms/using/work-with-form-data-model.md#sample)」の説明に従い、サンプルデータを生成する必要があります。
 
 フォームデータモデルのサンプルデータを使用してインタラクティブ通信のプレビューを表示するには、以下の手順を実行します。
 
-1. On AEM author instance, navigate to **[!UICONTROL Forms > Forms &amp; Documents]**.
+1. AEMオーサーインスタンスで、**[!UICONTROL Forms>Forms&amp;ドキュメント]**&#x200B;に移動します。
 1. 任意のインタラクティブ通信を選択し、ツールバーで「**[!UICONTROL プレビュー]**」をタップして、「**[!UICONTROL Web チャネル]**」、「**[!UICONTROL 印刷チャネル]**」、または「**[!UICONTROL 両方のチャネル]**」を選択します。これにより、選択したインタラクティブ通信のプレビューが表示されます。
-1. In the Preview [*channel*] dialog, ensure that **[!UICONTROL Test Data of Form Data Model]** is selected and tap **[!UICONTROL Preview]**.
+1. 「プレビュー&#x200B;[*チャネル*]」ダイアログで、「**[!UICONTROL フォームデータモデル]**&#x200B;のテストデータ」が選択されていることを確認し、「**[!UICONTROL プレビュー]**」をタップします。
 
 サンプルデータが取り込まれた状態のインタラクティブ通信が表示されます。
 
 ![ウェブプレビュー](assets/web-preview.png)
 
-Similarly, to preview an adaptive form with sample data, open the adaptive adaptive form in author mode and tap **[!UICONTROL Preview]**.
+同様に、アダプティブフォームにサンプルデータをプレビューするには、アダプティブフォームを作成者モードで開き、**[!UICONTROL プレビュー]**&#x200B;をタップします。
 
 ## フォームデータモデルサービスを使用して事前にデータを取り込む {#prefill}
 
@@ -115,11 +115,11 @@ AEM Forms には、すぐに使用できるフォームデータモデル事前�
 
 インタラクティブ通信のプロパティ編集ダイアログ
 
-## 送信されたアダプティブフォームのデータをデータソースに書き込む {#write-af}
+## 送信されたアダプティブフォームのデータをデータソースに書き込む  {#write-af}
 
 フォームデータモデルに基づくフォームを送信した場合、そのフォームを設定して、特定のデータモデルオブジェクトに対して送信されたデータをそのデータモデルオブジェクトのデータソースに書き込むことができます。この設定を行うために、AEM Forms には、すぐに使用できる[フォームデータモデル送信アクション](../../forms/using/configuring-submit-actions.md)が用意されています。これは、フォームデータモデルをベースとするアダプティブフォーム専用のアクションです。このアクションを実行すると、特定のデータモデルオブジェクトに対して送信されたデータが、そのデータモデルオブジェクトのデータソースに書き込まれます。
 
-To configure the Form Data Model submit action, open Adaptive Form Container properties and select **[!UICONTROL Submit using Form Data Model]** from the Submit Action drop-down under the Submission accordion. 次に、「**[!UICONTROL 送信するデータモデルオブジェクトの名前]**」ドロップダウンで、目的のデータモデルオブジェクトを探して選択します。その後、各プロパティを保存します。
+Form Data Modelの送信アクションを設定するには、アダプティブフォームコンテナのプロパティを開き、送信アコーディオンの下の送信アクションドロップダウンから「**[!UICONTROL Submit using Form Data Model]**」を選択します。 次に、「**[!UICONTROL 送信するデータモデルオブジェクトの名前]**」ドロップダウンで、目的のデータモデルオブジェクトを探して選択します。その後、各プロパティを保存します。
 
 フォームを送信すると、設定されているデータモデルオブジェクトのデータが、各データソースに書き込まれます。
 
@@ -128,20 +128,20 @@ To configure the Form Data Model submit action, open Adaptive Form Container pro
 バイナリデータモデルオブジェクトのプロパティを使用して、フォームの添付ファイルをデータソースに送信することもできます。添付ファイルを JDBC データソースに送信するには、以下の手順を実行します。
 
 1. バイナリプロパティが含まれているデータモデルオブジェクトをフォームデータモデルに追加します。
-1. In the adaptive form, drag-drop the **[!UICONTROL File Attachment]** component from the Components browser onto the adaptive form.
-1. Tap to select the added component and tap ![settings_icon](assets/settings_icon.png) to open the Properties browser for the component.
-1. In the Bind Reference field, tap ![foldersearch_18](assets/foldersearch_18.png) and navigate to select the binary property you added in the form data model. 必要に応じて、他のプロパティを設定します。
+1. アダプティブフォームで、**[!UICONTROL 添付ファイル]**&#x200B;コンポーネントをコンポーネントブラウザーからアダプティブフォームにドラッグ&amp;ドロップします。
+1. をタップして追加したコンポーネントを選択し、![settings_icon](assets/settings_icon.png)をタップして、コンポーネントのプロパティブラウザーを開きます。
+1. 連結参照フィールドで、![foldersearch_18](assets/foldersearch_18.png)をタップし、フォームデータモデルに追加したバイナリプロパティを選択します。 必要に応じて、他のプロパティを設定します。
 
-   Tap ![check-button](assets/check-button.png) to save the properties. この操作により、添付ファイルフィールドが、フォームデータモデルのバイナリプロパティにバインドされます。
+   ![チェックボタン](assets/check-button.png)をタップして、プロパティを保存します。 この操作により、添付ファイルフィールドが、フォームデータモデルのバイナリプロパティにバインドされます。
 
 1. アダプティブフォームコンテナプロパティの「送信」セクションで、「**[!UICONTROL フォームの添付ファイルを送信]**」を有効にします。これにより、フォームの送信時に、バイナリプロパティフィールド内の添付ファイルがデータソースに送信されるようになります。
 
-## ルールを使用してアダプティブフォーム内のサービスを呼び出す {#invoke-services}
+## ルールを使用してアダプティブフォーム内のサービスを呼び出す  {#invoke-services}
 
-フォームデータモデルに基づくアダプティブフォームの場合、[ルールを作成](../../forms/using/rule-editor.md)して、フォームデータモデル内で設定されているサービスを呼び出すことができます。The **[!UICONTROL Invoke Services]** operation in a rule lists all available services in the form data model and allows you to select input and output fields for the service. 「**指定値**」というルールタイプを使用してフォームデータモデルサービスを呼び出し、そのサービスから返された出力に対するフィールドの値を設定することもできます。
+フォームデータモデルに基づくアダプティブフォームの場合、[ルールを作成](../../forms/using/rule-editor.md)して、フォームデータモデル内で設定されているサービスを呼び出すことができます。ルールリストの&#x200B;**[!UICONTROL Invoke Services]**&#x200B;操作は、フォームデータモデルで使用可能なすべてのサービスを呼び出し、サービスの入力フィールドと出力フィールドを選択できます。 「**指定値**」というルールタイプを使用してフォームデータモデルサービスを呼び出し、そのサービスから返された出力に対するフィールドの値を設定することもできます。
 
 例えば以下のルールの場合、従業員 ID を入力として使用する Get サービスが呼び出され、このサービスから返された値が、フォーム内の対応する扶養家族 ID フィールド、姓フィールド、名フィールド、性別フィールドに設定されます。
 
 ![invoke-service](assets/invoke-service.png)
 
-In addition, you can use the `guidelib.dataIntegrationUtils.executeOperation` API to write a JavaScript in the code editor for the rule editor. For API details, see [API to invoke form data model service](/help/forms/using/invoke-form-data-model-services.md).
+また、`guidelib.dataIntegrationUtils.executeOperation` APIを使用して、ルールエディターのコードエディターでJavaScriptを記述することもできます。 APIについて詳しくは、[API to invoke form data model service](/help/forms/using/invoke-form-data-model-services.md)を参照してください。
