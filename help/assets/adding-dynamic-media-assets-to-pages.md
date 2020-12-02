@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3092'
-ht-degree: 89%
+ht-degree: 90%
 
 ---
 
@@ -32,14 +32,14 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 3D メディア、Dynamic Media、インタラクティブメディア、パノラマメディア、スマート切り抜きビデオ、ビデオ 360 メディアのいずれかのコンポーネントを 1 つのページに追加することは、コンポーネントを任意のページに追加することと同じです。Dynamic Media コンポーネントについては、後の節で説明します。
 
 1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
-1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、 **[!UICONTROL コンポーネント]** アイコンをクリックします。
-1. 「 **[!UICONTROL コンポーネント]** 」見出しのドロップダウンリストで、「 **[!UICONTROL ダイナミックメディア」を選択します。]**
+1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、**[!UICONTROL コンポーネント]**&#x200B;アイコンをクリックします。
+1. 「**[!UICONTROL コンポーネント]**」見出しの下のドロップダウンリストで、「**[!UICONTROL ダイナミックメディア」を選択します。]**
 
    Dynamic Media コンポーネントのリストがない場合は、使用する Dynamic Media コンポーネントを有効にしなければならない可能性があります。詳しくは、[Dynamic Media コンポーネントの有効化](#enabling-dynamic-media-components)を参照してください。
 
    ![6_5_360video_wcmcomponent](/help/assets/assets/6_5_360video_wcmcomponent.png)
 
-1. Drag a **[!UICONTROL Dynamic Media]** component that you want to use and drop it in the desired location on the page.
+1. 使用する&#x200B;**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントをドラッグし、ページ上の目的の場所にドロップします。
 
 1. コンポーネントの上に直接マウスポインターを置きます。コンポーネントが青色のボックスで囲まれた時点で 1 回タップすると、コンポーネントのツールバーが表示されます。**[!UICONTROL 設定（レンチ）]** アイコンをタップします。
 
@@ -64,7 +64,7 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
-1. On the right side of the toolbar near the top of the page, from the drop-down list, tap **[!UICONTROL Structure.]**
+1. ツールバーの右側、ページの上部付近にあるドロップダウンリストで、「**[!UICONTROL 構造」をタップします。]**
 
    ![ポリシー](/help/assets/assets-dm/structure-mode.png)
 
@@ -73,7 +73,7 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 
    ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
-1. Scroll until you see **[!UICONTROL Dynamic Media.]**
+1. **[!UICONTROL ダイナミックメディアが表示されるまでスクロールします。]**
 1. **[!UICONTROL Dynamic Media]** の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
 
    ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
@@ -98,7 +98,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-Dynamic Media components are available when you tap the **[!UICONTROL Components]** icon, then filter on **[!UICONTROL Dynamic Media.]**
+ダイナミックメディアコンポーネントは、**[!UICONTROL コンポーネント]**&#x200B;アイコンをタップし、**[!UICONTROL ダイナミックメディアをフィルターすると使用できます。]**
 
 利用可能な Dynamic Media コンポーネントは次のとおりです。
 
@@ -135,19 +135,19 @@ Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL D
 * [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
 * 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
 
-#### 画像を操作する場合 {#when-working-with-images}
+#### 画像を操作する場合  {#when-working-with-images}
 
 Dynamic Media コンポーネントでは、画像セット、スピンセット、混在メディアセットなどの動的イメージを追加できます。ズームイン、ズームアウト、スピンセット内での画像の回転（該当する場合）または別のタイプのセットからの画像の選択をおこなうことができます。
 
 また、ビューアプリセット、画像プリセットまたは画像形式をコンポーネント内で直接設定することもできます。画像をレスポンシブにするために、ブレークポイントの設定かレスポンシブ画像プリセットの適用のいずれかを実行できます。
 
-You *must* edit the following Dynamic Media Settings by tapping the **[!UICONTROL Edit]** icon in the component and then **[!UICONTROL Dynamic Media Settings.]**
+コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、**[!UICONTROL ダイナミックメディア設定]**&#x200B;をタップして、次のダイナミックメディア設定を&#x200B;*編集する必要があります。&lt;a5/>*
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->By default, the Dynamic Media image component is adaptive. If you want to make it a fixed size, set it in the component in the **[!UICONTROL Advanced]** tab with the **[!UICONTROL Width]** and **[!UICONTROL Height.]**
+>デフォルトでは、ダイナミックメディアイメージコンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
 
 * **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
@@ -190,20 +190,20 @@ Dynamic Media コンポーネントを使用して、ダイナミックビデオ
 
 ![chlimage_1-173](assets/chlimage_1-540.png)
 
-You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edit]** in the component.
+コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックして、次のダイナミックメディア設定を編集する必要があります。
 
 >[!NOTE]
 >
 >デフォルトでは、Dynamic Media ビデオコンポーネントはアダプティブです。ビデオコンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
-* **[!UICONTROL ビューアプリセット]**— ドロップダウンメニューから既存のビデオビューアプリセットを選択します。 探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。
+* **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビデオビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。
 
-* **[!UICONTROL ビューア修飾子]**— ビューア修飾子は、name=valueの形式で、&amp;区切り文字を使用して組み合わされ、『Adobeビューアリファレンスガイド』で概要を説明しているようにビューアを変更できます。 `posterimage=img.jpg&caption=text.vtt,1` はビューア修飾子の一例です。
+* **[!UICONTROL ビューア修飾子]** - ビューア修飾子は、名前=値の組み合わせで &amp; を区切り文字とした形式です。ビューア修飾子を使用すると、アドビビューアリファレンスガイドに概略が記されているとおり、ビューアを変更することができます。`posterimage=img.jpg&caption=text.vtt,1` はビューア修飾子の一例です。
 
    ビューア修飾子を使用すると、例えば次のことが可能です。
 
-   * ビデオにキャプションファイルを関連付ける：[キャプション][https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.translate.html)
-   * ナビゲーションファイルとビデオの関連付け： [navigation][https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * ビデオにキャプションファイルを関連付ける：[キャプション][https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * ナビゲーションファイルとビデオの関連付け：[navigation][https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
    コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の詳細設定を編集できます。
 
@@ -221,11 +221,11 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 ![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
 
-You must edit the following Dynamic Media Setting by clicking **[!UICONTROL Edit]** in the component.
+コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックして、次のダイナミックメディア設定を編集する必要があります。
 
 >[!NOTE]
 >
->By default, the Dynamic Media image component is adaptive. If you want to make it a fixed size, set it in the component in the **[!UICONTROL Advanced]** tab with the **[!UICONTROL Width]** and **[!UICONTROL Height.]**
+>デフォルトでは、ダイナミックメディアイメージコンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
 
 * **[!UICONTROL 画像の修飾子]** - 追加の画像コマンドを指定すると、画像エフェクトを適用できます。これらは画像プリセットと画像をサーブするコマンドリファレンスに記述されています。
 
