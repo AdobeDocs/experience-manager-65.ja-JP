@@ -18,9 +18,9 @@ ht-degree: 6%
 ---
 
 
-# データのインポートとエクスポート {#importing-and-exporting-data}
+# データのインポートとエクスポート{#importing-and-exporting-data}
 
-## Form Data Integration Serviceについて {#about-the-form-data-integration-service}
+## Form Data Integration Serviceについて{#about-the-form-data-integration-service}
 
 Form Data Integrationサービスでは、データをPDFフォームに読み込んだり、PDFフォームからデータを書き出したりできます。 インポート操作とエクスポート操作では、次の2種類のPDF formsがサポートされています。
 
@@ -34,14 +34,14 @@ Form Data Integrationサービスでは、データをPDFフォームに読み�
 
 Form Data Integrationサービスを使用して、次のタスクを実行できます。
 
-* PDF formsにデータをインポートします。 詳しくは、「フォームデータの [読み込み](importing-exporting-data.md#importing-form-data)」を参照してください。
-* PDF formsからデータをエクスポートします。 詳しくは、「フォームデータの [書き出し](importing-exporting-data.md#exporting-form-data)」を参照してください。
+* PDF formsにデータをインポートします。 詳しくは、[フォームデータの読み込み](importing-exporting-data.md#importing-form-data)を参照してください。
+* PDF formsからデータをエクスポートします。 詳しくは、[フォームデータの書き出し](importing-exporting-data.md#exporting-form-data)を参照してください。
 
 >[!NOTE]
 >
->For more information about the Form Data Integration service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Form Data Integrationサービスの詳細については、『[AEM Forms向けサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-## フォームデータの読み込み {#importing-form-data}
+## フォームデータの読み込み{#importing-form-data}
 
 Form Data Integrationサービスを使用して、フォームデータをインタラクティブPDF formsに読み込むことができます。 インタラクティブPDFフォームは、ユーザーから情報を収集したり、カスタムドキュメントを表示したりするための1つ以上のフィールドを含むPDF情報です。 Form Data Integrationサービスは、フォームの演算、検証、スクリプティングをサポートしていません。
 
@@ -84,9 +84,9 @@ Designerで作成されたフォームにデータを読み込むには、有効
 
 >[!NOTE]
 >
->For more information about the Form Data Integration service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Form Data Integrationサービスの詳細については、『[AEM Forms向けサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary-of-steps}
+### 手順{#summary-of-steps}の概要
 
 フォームデータをPDFフォームに読み込むには、次の手順を実行します。
 
@@ -109,11 +109,11 @@ Designerで作成されたフォームにデータを読み込むには、有効
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
-For information about the location of these JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+これらのJARファイルの場所について詳しくは、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **Form Data Integrationサービスクライアントの作成**
 
-プログラムでデータをPDFフォームのクライアントAPIに読み込む前に、Data Integrationサービスクライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスの呼び出しに必要な接続設定を定義します。 詳しくは、「接続プロパティの [設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)」を参照してください。
+プログラムでデータをPDFフォームのクライアントAPIに読み込む前に、Data Integrationサービスクライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスの呼び出しに必要な接続設定を定義します。 詳しくは、[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 **PDFフォームの参照**
 
@@ -145,7 +145,7 @@ PDFフォームと有効なXMLデータソースを参照した後、データ�
 
 [フォームデータの書き出し](importing-exporting-data.md#exporting-form-data)
 
-### Java APIを使用したフォームデータの読み込み {#import-form-data-using-the-java-api}
+### Java API {#import-form-data-using-the-java-api}を使用したフォームデータの読み込み
 
 Form Data Integration API(Java)を使用してフォームデータを読み込みます。
 
@@ -161,26 +161,26 @@ Form Data Integration API(Java)を使用してフォームデータを読み込�
 1. PDFフォームの参照
 
    * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを作成します。PDFフォームの場所を指定するstring値を渡します。
-   * コンストラクターを使用して、PDFフォームを格納する `com.adobe.idp.Document` オブジェクトを作成し `com.adobe.idp.Document` ます。 PDFフォームを含む `java.io.FileInputStream` オブジェクトをコンストラクターに渡します。
+   * `com.adobe.idp.Document`コンストラクターを使用して、PDFフォームを保存する&lt;a0/>オブジェクトを作成します。 `com.adobe.idp.Document`PDFフォームを含む`java.io.FileInputStream`オブジェクトをコンストラクターに渡します。
 
 1. XMLデータソースを参照します。
 
-   * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを作成し、フォームに読み込むデータが含まれるXMLファイルの場所を指定するstring値を渡します。
-   * フォームデータを格納する `com.adobe.idp.Document` オブジェクトを作成するには、コンストラクターを使用 `com.adobe.idp.Document` します。 フォームデータを含む `java.io.FileInputStream` オブジェクトをコンストラクターに渡します。
+   * `java.io.FileInputStream`オブジェクトを作成し、そのコンストラクターを使用して、フォームに読み込むデータを含むXMLファイルの場所を指定する文字列値を渡します。
+   * `com.adobe.idp.Document`コンストラクターを使用して、フォームデータを格納する`com.adobe.idp.Document`オブジェクトを作成します。 フォームデータを含む`java.io.FileInputStream`オブジェクトをコンストラクターに渡します。
 
 1. PDFフォームにデータを読み込みます。
 
-   オブジェクトのメソッドを呼び出し、次の値を渡して、 `FormDataIntegrationClient``importData` データをPDFフォームに読み込みます。
+   `FormDataIntegrationClient`オブジェクトの`importData`メソッドを呼び出し、次の値を渡して、PDFフォームにデータを読み込みます。
 
-   * PDFフォームを保存する `com.adobe.idp.Document` オブジェクトです。
-   * フォームデータを格納する `com.adobe.idp.Document` オブジェクトです。
+   * PDFフォームを保存する`com.adobe.idp.Document`オブジェクトです。
+   * フォームデータを格納する`com.adobe.idp.Document`オブジェクト。
 
-   この `importData` メソッドは、XMLデータソース内のデータを含むPDFフォームを格納する `com.adobe.idp.Document` オブジェクトを返します。
+   `importData`メソッドは、XMLデータソース内のデータを含むPDFフォームを格納する`com.adobe.idp.Document`オブジェクトを返します。
 
 1. PDFフォームをPDFファイルとして保存します。
 
-   * Create a `java.io.File` object and ensure that the file extension is “.PDF”.
-   * オブジェクトのメ `Document` ソッドを呼び出して、 `copyToFile` オブジェクトの内容をファイルにコピーします(メソッドから返された `Document``Document``importData` オブジェクトを必ず使用してください)。
+   * `java.io.File`オブジェクトを作成し、ファイル拡張子が「.PDF」であることを確認します。
+   * `Document`オブジェクトの`copyToFile`メソッドを呼び出して、`Document`オブジェクトの内容をファイルにコピーします（`importData`メソッドから返された`Document`オブジェクトを必ず使用してください）。
 
 **関連トピック**
 
@@ -192,62 +192,62 @@ Form Data Integration API(Java)を使用してフォームデータを読み込�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したフォームデータの読み込み {#import-form-data-using-the-web-service-api}
+### WebサービスAPI {#import-form-data-using-the-web-service-api}を使用してフォームデータを読み込む
 
 Form Data Integration API（Webサービス）を使用してフォームデータを読み込みます。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Form Data Integrationサービスクライアントを作成します。
 
-   * Create a `FormDataIntegrationClient` object by using its default constructor.
-   * Create a `FormDataIntegrationClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `FormDataIntegrationClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `FormDataIntegrationClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`FormDataIntegrationClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
+   * `FormDataIntegrationClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `FormDataIntegrationClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `FormDataIntegrationClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`FormDataIntegrationClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`FormDataIntegrationClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. PDFフォームの参照
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDFフォームの保存に使用されます。
-   * Create a `System.IO.FileStream` object by invoking its constructor. PDFフォームの場所とファイルを開くモードを指定するstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この`BLOB`オブジェクトは、PDFフォームの保存に使用されます。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 PDFフォームの場所とファイルを開くモードを指定するstring値を渡します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * `BLOB`オブジェクトに、`MTOM`フィールドにバイト配列の内容を割り当てて入力します。
 
 1. XMLデータソースを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、フォームに読み込まれるデータを保存するために使用します。
-   * Create a `System.IO.FileStream` object by invoking its constructor. 読み込むデータが含まれるXMLファイルの場所と、ファイルを開くモードを指定するstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この`BLOB`オブジェクトは、フォームに読み込まれるデータを保存するために使用します。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 読み込むデータが含まれるXMLファイルの場所と、ファイルを開くモードを指定するstring値を渡します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * `BLOB`オブジェクトに、`MTOM`フィールドにバイト配列の内容を割り当てて入力します。
 
 1. PDFフォームにデータを読み込みます。
 
-   オブジェクトのメソッドを呼び出し、次の値を渡して、PDFフォームにデータ `FormDataIntegrationClient` を読み込み `importData` ます。
+   `FormDataIntegrationClient`オブジェクトの`importData`メソッドを呼び出し、次の値を渡して、PDFフォームにデータを読み込みます。
 
-   * PDFフォームを保存する `BLOB` オブジェクトです。
-   * フォームデータを格納する `BLOB` オブジェクトです。
+   * PDFフォームを保存する`BLOB`オブジェクトです。
+   * フォームデータを格納する`BLOB`オブジェクト。
 
-   この `importData` メソッドは、XMLデータソース内のデータを含むPDFフォームを格納する `BLOB` オブジェクトを返します。
+   `importData`メソッドは、XMLデータソース内のデータを含むPDFフォームを格納する`BLOB`オブジェクトを返します。
 
 1. PDFフォームをPDFファイルとして保存します。
 
-   * コンストラクターを呼び出し、PDFファイルのファイルの場所を表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成し `importData` ます。 オブジェクトのフィールドの値を取得して、 `BLOB` バイト配列を設定し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、PDFファイルのファイルの場所を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `importData`メソッドから返された`BLOB`オブジェクトのデータ内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`フィールドの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
@@ -255,15 +255,15 @@ Form Data Integration API（Webサービス）を使用してフォームデー�
 
 [MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## フォームデータの書き出し {#exporting-form-data}
+## フォームデータの書き出し{#exporting-form-data}
 
 Form Data Integrationサービスを使用して、インタラクティブPDFフォームからフォームデータを書き出すことができます。 書き出されるデータの形式は、フォームの種類によって異なります。 フォームの種類がAcrobatで作成されたAcrobatフォームの場合、書き出されるデータはXFDFです。 フォームの種類がDesignerで作成されたXMLフォームの場合、書き出されたデータはXDPになります。
 
 >[!NOTE]
 >
->For more information about the Form Data Integration service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Form Data Integrationサービスの詳細については、『[AEM Forms向けサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-1}
+### 手順{#summary_of_steps-1}の概要
 
 PDFフォームからフォームデータを書き出すには、次の手順を実行します。
 
@@ -287,7 +287,7 @@ PDFフォームからフォームデータを書き出すには、次の手順�
 
 **Form Data Integrationサービスクライアントの作成**
 
-プログラムでデータをPDF formClient APIに読み込む前に、Data Integrationサービスクライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスの呼び出しに必要な接続設定を定義します。 詳しくは、接続プロパティ [の設定を参照してください](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+プログラムでデータをPDF formClient APIに読み込む前に、Data Integrationサービスクライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスの呼び出しに必要な接続設定を定義します。 詳しくは、[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 **PDFフォームの参照**
 
@@ -315,7 +315,7 @@ PDFフォームからデータを書き出すには、DesignerまたはAcrobat�
 
 [フォームデータの読み込み](importing-exporting-data.md#importing-form-data)
 
-### Java APIを使用したフォームデータの書き出し {#export-form-data-using-the-java-api}
+### Java API {#export-form-data-using-the-java-api}を使用したフォームデータの書き出し
 
 Form Data Integration API(Java)を使用してフォームデータを書き出す：
 
@@ -330,17 +330,17 @@ Form Data Integration API(Java)を使用してフォームデータを書き出�
 
 1. PDFフォームの参照
 
-   * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを作成し、書き出すデータが含まれるPDFフォームの場所を指定するstring値を渡します。
-   * コンストラクターを使用して、PDFフォームを格納する `com.adobe.idp.Document` オブジェクトを作成し `com.adobe.idp.Document` ます。 PDFフォームを含む `java.io.FileInputStream` オブジェクトをコンストラクターに渡します。
+   * コンストラクターを使用して`java.io.FileInputStream`オブジェクトを作成し、書き出すデータを含むPDFフォームの場所を指定する文字列値を渡します。
+   * `com.adobe.idp.Document`コンストラクターを使用して、PDFフォームを保存する&lt;a0/>オブジェクトを作成します。 `com.adobe.idp.Document`PDFフォームを含む`java.io.FileInputStream`オブジェクトをコンストラクターに渡します。
 
 1. PDFフォームからデータを書き出します。
 
-   オブジェクトの `FormDataIntegrationClient` メソッドを呼び出してフォームデータを書き出し、PDFフォームを保存する `exportData``com.adobe.idp.Document` オブジェクトを渡します。 このメソッドは、フォームデータをXMLスキーマとして格納する `com.adobe.idp.Document` オブジェクトを返します。
+   `FormDataIntegrationClient`オブジェクトの`exportData`メソッドを呼び出してフォームデータを書き出し、PDFフォームを保存する`com.adobe.idp.Document`オブジェクトを渡します。 このメソッドは、フォームデータをXMLスキーマとして格納する`com.adobe.idp.Document`オブジェクトを返します。
 
 1. PDFフォームをPDFファイルとして保存します。
 
-   * Create a `java.io.File` object and ensure that the file extension is XML.
-   * オブジェクトのメ `Document` ソッドを呼び出して、 `copyToFile` オブジェクトの内容をファイルにコピーします(メソッドから返された `Document``Document``exportData` オブジェクトを必ず使用してください)。
+   * `java.io.File`オブジェクトを作成し、ファイル拡張子がXMLであることを確認します。
+   * `Document`オブジェクトの`copyToFile`メソッドを呼び出して、`Document`オブジェクトの内容をファイルにコピーします（`exportData`メソッドから返された`Document`オブジェクトを必ず使用してください）。
 
 **関連トピック**
 
@@ -352,47 +352,47 @@ Form Data Integration API(Java)を使用してフォームデータを書き出�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したフォームデータの書き出し {#export-form-data-using-the-web-service-api}
+### WebサービスAPI {#export-form-data-using-the-web-service-api}を使用したフォームデータのエクスポート
 
 Form Data Integration API（Webサービス）を使用してフォームデータを書き出すには：
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。 `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
 
-   * AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   * `localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Form Data Integrationサービスクライアントを作成します。
 
-   * Create a `FormDataIntegrationClient` object by using its default constructor.
-   * Create a `FormDataIntegrationClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `FormDataIntegrationClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `FormDataIntegrationClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`FormDataIntegrationClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
+   * `FormDataIntegrationClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `FormDataIntegrationClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `FormDataIntegrationClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`FormDataIntegrationClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`FormDataIntegrationClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. PDFフォームの参照
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、データの書き出し元のPDFフォームを保存するために使用します。
-   * Create a `System.IO.FileStream` object by invoking its constructor. PDFフォームの場所とファイルを開くモードを指定するstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この`BLOB`オブジェクトは、データの書き出し元のPDFフォームを保存するために使用します。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 PDFフォームの場所とファイルを開くモードを指定するstring値を渡します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`フィールドにバイト配列の内容を割り当てて入力します。
 
 1. PDFフォームからデータを書き出します。
 
-   オブジェクトの `FormDataIntegrationClient` メソッドを呼び出し、PDFフォームを格納している `exportData``BLOB` オブジェクトを渡して、PDFフォームにデータを読み込みます。 このメソッドは、フォームデータをXMLスキーマとして格納する `BLOB` オブジェクトを返します。
+   `FormDataIntegrationClient`オブジェクトの`exportData`メソッドを呼び出し、PDFフォームを保存する`BLOB`オブジェクトを渡して、PDFフォームにデータを読み込みます。 このメソッドは、フォームデータをXMLスキーマとして格納する`BLOB`オブジェクトを返します。
 
 1. PDFフォームをPDFファイルとして保存します。
 
-   * コンストラクターを呼び出し、XMLファイルの場所を表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成し `exportData` ます。 オブジェクトのフィールドの値を取得して、 `BLOB` バイト配列を設定し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をXMLファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、XMLファイルの場所を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `exportData`メソッドから返された`BLOB`オブジェクトのデータ内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`フィールドの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をXMLファイルに書き込みます。
 
 **関連トピック**
 
