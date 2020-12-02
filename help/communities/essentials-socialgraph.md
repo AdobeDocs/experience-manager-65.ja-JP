@@ -18,13 +18,13 @@ ht-degree: 23%
 ---
 
 
-# ソーシャルグラフの基本事項  {#social-graph-essentials}
+# ソーシャルグラフの基本事項   {#social-graph-essentials}
 
-The ability for a Community member to follow [activities](essentials-activities.md) as well as be followed is established through two components:
+コミュニティのメンバーが[アクティビティ](essentials-activities.md)に従う能力は、次の2つの要素を介して確立されます。
 
-The `following` component must be associated with another resource, and this association is already established for existing Communities members and features in a [community site](overview.md#communitiessites).
+`following`コンポーネントは別のリソースと関連付ける必要があります。この関連付けは、既に[コミュニティサイト](overview.md#communitiessites)の既存のコミュニティのメンバーと機能に対して確立されています。
 
-The `following` component lists the members that are either following the current member or are being followed by the current member. 会員間の関係のこのソーシャルグラフは、コミュニティサイト用に設定されたユーザプロファイルに含まれる。
+`following`コンポーネントは、現在のメンバーに続くメンバー、または現在のメンバーの後に続くメンバーをリストします。 会員間の関係のこのソーシャルグラフは、コミュニティサイト用に設定されたユーザプロファイルに含まれる。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -54,20 +54,20 @@ The `following` component lists the members that are either following the curren
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="socialgraph.md">Using Social Graph</a></td>
+   <td><a href="socialgraph.md">ソーシャルグラフの使用</a>を参照</td>
   </tr>
   <tr>
-   <td><strong> optional<br /> property</strong></td>
+   <td><strong> オプションの<br />プロパティ</strong></td>
    <td>
     <ul>
      <li>名前: <strong><code>outgoing</code></strong></li>
      <li>タイプ：Boolean</li>
      <li>値：<br />
       <ul>
-       <li><i>True </i>— コンポー <code>following</code> ネントは、現在サインインしているメンバをリストします。 <code>follows</code></li>
-       <li><i>False </i>— コンポー <code>following</code> ネントは、現在サインインしているメンバ <code>follow </code>をリストします</li>
+       <li><i>True  </i>- <code>following</code> コンポーネントは、現在サインインしているメンバをリストします <code>follows</code></li>
+       <li><i>False  </i>- <code>following</code> コンポーネントは、現在サインインしているメンバ <code>follow </code>をリストします。</li>
       </ul> </li>
-    </ul> <p>Defaults to <i>true</i> if the property is missing. 現在、作成者モードで編集ダイアログを使用してこのプロパティを設定することはできません。 The property must be added to an instance of the <code>following </code>node using <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
+    </ul> <p>プロパティが見つからない場合は、デフォルトで<i>true</i>に設定されます。 現在、作成者モードで編集ダイアログを使用してこのプロパティを設定することはできません。 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>を使用して、<code>following </code>ノードのインスタンスにプロパティを追加する必要があります。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -82,7 +82,7 @@ The `following` component lists the members that are either following the curren
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [ソーシャルグラフ API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
