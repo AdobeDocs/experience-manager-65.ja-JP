@@ -38,12 +38,12 @@ Silverpop Engage が設定されると、Silverpop Engage にニュースレタ�
 
 Silverpop 設定は、**クラウドサービス**、**ツール**&#x200B;または **API エンドポイント**&#x200B;で追加できます。すべての方法をここで説明します。
 
-### クラウドサービスを使用した Silverpop の設定 {#configuring-silverpop-via-cloudservices}
+### クラウドサービスを使用した Silverpop の設定  {#configuring-silverpop-via-cloudservices}
 
 Silverpop 設定をクラウドサービスで設定するには：
 
-1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。(Or directly access at `https://<hostname>:<port>/etc/cloudservices.html`.)
-1. Under third-party services, click **Silverop Engage** and then **Configure**. Silverpop 設定ウィンドウが開きます。
+1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。（または`https://<hostname>:<port>/etc/cloudservices.html`で直接アクセスする）。
+1. サードパーティのサービスで、「**Silverop Engage**」をクリックし、「**Configure**」をクリックします。 Silverpop 設定ウィンドウが開きます。
 
    >[!NOTE]
    >
@@ -51,7 +51,7 @@ Silverpop 設定をクラウドサービスで設定するには：
 
 1. タイトルを入力し、オプションで名前を入力して、「**作成**」をクリックします。[** Silverpop Settings**]設定ウィンドウが開きます。
 1. ユーザー名、パスワードを入力し、API エンドポイントをドロップダウンリストから選択します。
-1. 「**Silverpop に接続」をクリックします。**&#x200B;接続に成功したら、成功ダイアログが表示されます。「**OK**」をクリックしてウィンドウを閉じます。You can go to Silverpop by clicking **Go to Silverpop Engage**.
+1. 「**Silverpop に接続」をクリックします。**&#x200B;接続に成功したら、成功ダイアログが表示されます。「**OK**」をクリックしてウィンドウを閉じます。**Silverpopのソーシャル管理**&#x200B;に移動をクリックすると、Silverpopに移動できます。
 1. Silverpop が設定されました。「**編集**」をクリックして、この設定を編集できます。
 1. また、Silverpop Engage フレームワークは、タイトルおよび名前（オプション）を提供することで、パーソナライズされたアクション用に設定できます。「作成」をクリックすると、既に設定された Silverpop 接続のフレームワークを作成します。
 
@@ -61,7 +61,7 @@ Silverpop 設定をクラウドサービスで設定するには：
 
 Silverpop 設定をツールで設定するには：
 
-1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。または、に移動して直接移動し `https://<hostname>:<port>/misadmin#/etc`ます。
+1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。または`https://<hostname>:<port>/misadmin#/etc`に移動して直接移動します。
 1. **ツール**／**クラウドサービス設定**／**Silverpop Engage** を選択します。
 1. 「**新規**」をクリックして、**ページを作成**&#x200B;ウィンドウを開きます。
 
@@ -70,37 +70,37 @@ Silverpop 設定をツールで設定するには：
 1. **タイトル**&#x200B;を入力し、オプションで&#x200B;**名前**&#x200B;を入力して、「**作成**」をクリックします。
 1. 前述の手順 4 で示した設定情報を入力します。その手順に従って、Silverpop の設定を完了します。
 
-### 複数の設定の追加 {#adding-multiple-configurations}
+### 複数の設定の追加  {#adding-multiple-configurations}
 
 複数の設定を追加するには：
 
-1. ようこそページで、「**クラウドサービス**」をクリックし、「**Silverpop Engage**」をクリックします。Click on **Show Configurations** button which appears if one or more Silverpop configurations is available. 利用可能なすべての設定が一覧表示されます。
+1. ようこそページで、「**クラウドサービス**」をクリックし、「**Silverpop Engage**」をクリックします。**Show Configurations**&#x200B;ボタンをクリックします。このボタンは、1つ以上のSilverpop設定が使用可能な場合に表示されます。 利用可能なすべての設定が一覧表示されます。
 1. 「利用可能な設定」の横にある「**+**」記号をクリックします。**設定を作成**&#x200B;ウィンドウが開きます。前述の設定手順に従って新しい設定を作成します。
 
-### Silverpop に接続するための API エンドポイントの設定 {#configuring-api-end-points-for-connecting-to-silverpop}
+### Silverpop に接続するための API エンドポイントの設定  {#configuring-api-end-points-for-connecting-to-silverpop}
 
 現在、AEM には 6 つの保護されていないエンドポイント（Engage 1～6）があります。Silverpop は、2 つの新しいエンドポイントと、既存のものを変更した接続エンドポイントを提供します。
 
 API エンドポイントを設定するには：
 
-1. 先に進 `/libs/mcm/silverpop/components/silverpoppage/dialog/items/general/items/apiendpoint/options node` む `https://<hostname>:<port>/crxde.`
+1. `https://<hostname>:<port>/crxde.`の`/libs/mcm/silverpop/components/silverpoppage/dialog/items/general/items/apiendpoint/options node`に移動
 1. 右クリックして、**Create**／**Create Node**&#x200B;を選択します。
-1. Enter the **Name** as `sp-e0` and choose **Type** as `cq:Widget`.
+1. **名前**&#x200B;を`sp-e0`と入力し、**種類**&#x200B;を`cq:Widget`と選択します。
 1. 新しく追加したノードに 2 つのプロパティを追加します。
 
-   1. **名前**: `text`, **Type**: `String`、 **値**: `Engage 0`
-   1. **名前**: `value`, **Type**: `String`、 **値**: `https://api0.silverpop.com`
+   1. **名前**: `text`,  **Type**: `String`、 **値**:  `Engage 0`
+   1. **名前**: `value`,  **Type**: `String`、 **値**:  `https://api0.silverpop.com`
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
    「すべて保存」ボタンをクリックします。
 
-1. Create one more node with **Name** as `sp-e7` and **Type** as `cq:Widget`.
+1. 「**名前**」を`sp-e7`、「**タイプ**」を`cq:Widget`として、1つ以上のノードを作成します。
 
    新しく追加したノードに 2 つのプロパティを追加します。
 
-   1. **名前**: `text`, **Type**: `String`、 **値**: `Pilot`
-   1. **名前**: `value`, **Type**: `String`、 **値**: `https://apipilot.silverpop.com/XMLAPI`
+   1. **名前**: `text`,  **Type**: `String`、 **値**:  `Pilot`
+   1. **名前**: `value`,  **Type**: `String`、 **値**:  `https://apipilot.silverpop.com/XMLAPI`
 
 1. 既存の API エンドポイント（Engage 1～6）を変更するには、それぞれを 1 つずつクリックして、値を次のように置き換えます。
 
