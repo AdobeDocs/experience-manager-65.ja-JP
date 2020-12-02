@@ -37,17 +37,17 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->詳しくは、次の節を参照してください。
+>詳しくは、次のセクションを参照してください。
 >
->* Applying and participating in workflows: [Working with Workflows](/help/sites-authoring/workflows.md).
->* Creating workflow models and extending workflow functionality: [Developing and Extending Workflows](/help/sites-developing/workflows.md).
+>* ワークフローの適用と参加：[ワークフローの操作](/help/sites-authoring/workflows.md)
+>* ワークフローモデルの作成とワークフロー機能の拡張：[ワークフローの開発と拡張](/help/sites-developing/workflows.md)。
 >* 重要なサーバーリソースを使用するワークフローのパフォーマンスの向上：[ワークフローの同時処理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)
 
 >
 
 
 
-## ワークフローモデルとワークフローインスタンス {#workflow-models-and-instances}
+## ワークフローモデルとワークフローインスタンス  {#workflow-models-and-instances}
 
 AEM の[ワークフローモデル](/help/sites-developing/workflows.md#model)とは、次のようなビジネスプロセスの表現および実装のことです。
 
@@ -60,7 +60,7 @@ AEM の[ワークフローモデル](/help/sites-developing/workflows.md#model)�
 
 >[!CAUTION]
 >
->実行されるステップは、インスタンスが生成されるときに&#x200B;**&#x200B;ワークフローで定義されます。See [Developing Workflows](/help/sites-developing/workflows.md#model) for further details.
+>実行されるステップは、インスタンスが生成されるときに&#x200B;**&#x200B;ワークフローで定義されます。詳しくは、[ワークフローの開発](/help/sites-developing/workflows.md#model)を参照してください。
 
 ワークフローインスタンスのライフサイクルを次に示します。
 
@@ -90,7 +90,7 @@ AEM には参考になるモデルが多数用意されています。また、�
 >
 >エラーが発生した場合は、サービスやステップの実装でエラーシナリオの動作を管理してください。ワークフローエンジン自体はジョブを再試行し、エラーをログに記録してインスタンスを停止します。
 
-## ワークフローのステータスとアクション {#workflow-status-and-actions}
+## ワークフローのステータスとアクション  {#workflow-status-and-actions}
 
 ワークフローのステータスは以下のいずれかになります。
 
@@ -103,7 +103,7 @@ AEM には参考になるモデルが多数用意されています。また、�
 
 >[!NOTE]
 >
->When the execution of a Process Step results in errors, the step appears in the administrator&#39;s Inbox and the workflow status is **RUNNING**.
+>プロセスステップの実行でエラーが発生した場合は、そのステップが管理者のインボックスに表示され、ワークフローの状態は&#x200B;**RUNNING**&#x200B;です。
 
 現在のステータスによって、ワークフローインスタンスの通常の進行に介入する必要がある場合は、実行中のワークフローインスタンスに対してアクションを実行します。
 
