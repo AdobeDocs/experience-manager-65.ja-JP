@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
 workflow-type: tm+mt
 source-wordcount: '2523'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 93%
 
 Web サイトの構造は、コンテンツページを保持する「ツリー構造」と見なすことができます。これらのコンテンツページの名前は、URL の形成に使用されます。一方でタイトルは、ページコンテンツを表示したときに表示されます。
 
-The following shows an example from the We.Retail site, where a hiking shorts page ( `desert-sky-shorts`) is accessed:
+次の例は、Web.Retailサイトでハイキング短縮ページ(`desert-sky-shorts`)にアクセスする場合の例を示しています。
 
 * 作成者環境
    `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
@@ -43,7 +43,7 @@ The following shows an example from the We.Retail site, where a hiking shorts pa
 * 発行環境
    `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-Depending on the configuration of your instance, use of `/content` might be optional on the publish environment.
+インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションになる場合があります。
 
 ```xml
  /content
@@ -105,7 +105,7 @@ Depending on the configuration of your instance, use of `/content` might be opti
 >
 >また、一部のブラウザー（IE の旧バージョンなど）では、特定の長さまでの URL しか受け付けないので、ページ名を短くしておく技術的な理由もあります。
 
-When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and the JCR.
+[新しいページを作成するとき、AEM では AEM と JCR によって課された規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)
 
 使用できる最低限の文字は次のとおりです。
 
@@ -162,7 +162,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
 ### コンポーネント {#components}
 
-Components are the elements provided by AEM so that you can add specific types of content. AEM comes with a range of [out-of-the-box components](/help/sites-authoring/default-components-console.md) that provide comprehensive functionality. These include:
+コンポーネントは、特定の種類のコンテンツを追加できるように、AEMが提供する要素です。AEMには、包括的な機能を提供する[標準搭載のコンポーネント](/help/sites-authoring/default-components-console.md)が付属しています。以下が含まれます。
 
 * テキスト
 * 画像
@@ -182,7 +182,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
 コンテンツの作成を開始する前に、事前に各ページが作成されていない場合は、ページを作成する必要があります。
 
-1. Open the Sites console (for example, [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)).
+1. サイトコンソール(例：[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content))を開きます。
 1. 新しいページを作成する場所に移動します。
 1. ツールバーの「**作成**」を使用してドロップダウンセレクターを開き、リストから「**ページ**」を選択します。
 
@@ -258,7 +258,7 @@ Components are the elements provided by AEM so that you can add specific types o
 >
 >ページエディターから他のページへの移動は、編集モードではリンクがアクティブにならないので、プレビューモードでのみ実行できます。
 
-### ページのコピーと貼り付け {#copying-and-pasting-a-page}
+### ページのコピーと貼り付け  {#copying-and-pasting-a-page}
 
 ページとそのすべてのサブページを新しい場所にコピーできます。
 
@@ -297,7 +297,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
 >[!NOTE]
 >
->ページは、ページが基にしているテンプレートが許可される場所にのみ移動できます。See [Template Availability](/help/sites-developing/templates.md#template-availability) for more information.
+>ページは、ページが基にしているテンプレートが許可される場所にのみ移動できます。詳しくは、[使用可能なテンプレート](/help/sites-developing/templates.md#template-availability)を参照してください。
 
 ページの移動手順と名前の変更手順は基本的に同じで、同じウィザードで処理します。このウィザードでは、次の操作をおこなうことができます。
 
@@ -390,7 +390,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 
 >[!NOTE]
 >
->For further information about asynchronous job processing and how to configure the limit for page move/rename actions, please see the [Asynchronous Jobs](/help/sites-administering/asynchronous-jobs.md) document in the Administration user guide.
+>非同期ジョブ処理の詳細およびページ移動/名前変更アクションの制限の設定方法については、管理ユーザーガイドの[非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)ドキュメントを参照してください。
 
 >[!NOTE]
 >
