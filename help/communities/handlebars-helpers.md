@@ -18,7 +18,7 @@ ht-degree: 53%
 ---
 
 
-# SCF Handlebars ヘルパー {#scf-handlebars-helpers}
+# SCF Handlebars ヘルパー  {#scf-handlebars-helpers}
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
@@ -36,7 +36,7 @@ AEM Communities に付属のカスタム SCF ヘルパーは、次の[クライ�
 >
 >[最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)をインストールしてください。
 
-## Abbreviate {#abbreviate}
+## {#abbreviate}の省略形
 
 maxWords および maxLength プロパティに準拠した省略形文字列を返すヘルパーです。
 
@@ -158,7 +158,7 @@ Then content-loadmore would return
 // returns "03-18-2015"
 ```
 
-## Equals {#equals}
+## {#equals}と等しい
 
 等価条件に応じてコンテンツを返すヘルパーです。
 
@@ -182,9 +182,9 @@ Then content-loadmore would return
 {{/equals}}
 ```
 
-## If-wcm-mode {#if-wcm-mode}
+## if-wcm-mode {#if-wcm-mode}
 
-A block helper that tests the current value of [WCM mode](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) against a string separated list of modes.
+[WCM mode](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html)の現在値を、モードのリストを区切った文字列と比較してテストするブロックヘルパー。
 
 ### パラメーター {#parameters-4}
 
@@ -194,7 +194,7 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
 * **mode**:文字列
 
-   (Optional) A comma separated list of [WCM modes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) to test if set.
+   （オプション）設定されているかどうかをテストする[WCMモード](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html)のカンマ区切りリスト。
 
 ### 例 {#example-2}
 
@@ -239,7 +239,7 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
 このようにすると、JCR ノードとして追加したリソースよりも、プログラムによるカスタマイズがはるかに容易になります。[コミュニティコンポーネントの追加またはインクルード](scf.md#add-or-include-a-communities-component)を参照してください。
 
-コミュニティコンポーネントの中でも、インクルードできるのはごく一部です。For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md).
+コミュニティコンポーネントの中でも、インクルードできるのはごく一部です。AEM 6.1では、[コメント](essentials-comments.md)、[評価](rating-basics.md)、[レビュー](reviews-basics.md)、[投票](essentials-voting.md)が含まれます。
 
 このヘルパーは、サーバー側にのみ該当し、JSP スクリプト用の [cq:include](../../help/sites-developing/taglib.md) と同じ機能を備えています。
 
@@ -249,9 +249,9 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
    （相対パスを指定しない場合はオプション）
 
-   を使用 `this` して、現在のコンテキストを渡します。
+   `this`を使用して、現在のコンテキストを渡します。
 
-   要求 `this.id` されたresourceTypeのレンダリングに使用す `id` るリソースを取得するために使用します。
+   `this.id`を使用して、`id`のリソースを取得し、要求されたresourceTypeをレンダリングします。
 
 * **resourceType**:文字列
 
@@ -275,13 +275,13 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-This will include a new comments component at `this.id` + /comments.
+これにより、`this.id` + /commentsに新しいコメントコンポーネントが追加されます。
 
 ## IncludeClientLib {#includeclientlib}
 
 AEM html クライアントライブラリとして js、css、または theme の各ライブラリをインクルードするヘルパーです。jsやcssなど、異なるタイプの複数の挿入タグの場合、このタグをHandlebarsスクリプトで複数回使用する必要があります。
 
-This helper, appropriate only on the server-side, provides functionality similar to [ui:includeClientLib](../../help/sites-developing/taglib.md) for JSP scripts.
+このヘルパーは、サーバー側でのみ適用され、JSPスクリプトの場合は[ui:includeClientLib](../../help/sites-developing/taglib.md)と同様の機能を提供します。
 
 ### パラメーター {#parameters-7}
 
@@ -341,7 +341,7 @@ This helper, appropriate only on the server-side, provides functionality similar
     <link href="/etc/clientlibs/social/hbs/comments.css" rel="stylesheet" type="text/css">
 ```
 
-## Pretty-time {#pretty-time}
+## プリティタイム{#pretty-time}
 
 カットオフポイントに達するまでは経過時間を表示し、それ以降は通常の日付形式を表示するヘルパーです。
 
@@ -450,17 +450,17 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 ## Handlebars.js の基本的概要 {#handlebars-js-basic-overview}
 
-A quick overview of helper functions from [Handlebars.js documentation](https://handlebarsjs.com/expressions.html):
+[Handlebars.jsドキュメント](https://handlebarsjs.com/expressions.html)のヘルパー関数の概要を簡単に説明します。
 
 * Handlebars ヘルパーを呼び出すには、単純な識別子（ヘルパーの名前&#x200B;**）を使用し、それに続けて 0 個以上のパラメーターをスペースで区切って指定します。
 * パラメーターには、単純な文字列、数値、ブール値、または JSON オブジェクトを指定し、オプションで最後のパラメーターとして一連のキー／値ペア（ハッシュ引数）を指定します。
 * ハッシュ引数内のキーは単純な識別子にする必要があります。
 * ハッシュ引数内の値は Handlebars 式（単純な識別子、パス、または文字列）です。
-* The current context, `this`, is always available to Handlebars helpers.
+* 現在のコンテキスト`this`は、常にHandlebarsヘルパーで使用できます。
 * コンテキストは、文字列、数値、ブール値、またはJSONデータオブジェクトです。
 * `this.url` や `this.id` のように、現在のコンテキスト内にネストされているオブジェクトを context として渡すことができます（単純なヘルパーおよびブロックヘルパーを示す後述の例を参照）。
 
-* ブロックヘルパーとは、テンプレート内の任意の場所から呼び出すことができる関数です。テンプレートのブロックは、毎回異なるコンテキストで0回以上呼び出すことができます。 They contain a context between {{#*name*}} and {{/*name*}}.
+* ブロックヘルパーとは、テンプレート内の任意の場所から呼び出すことができる関数です。テンプレートのブロックは、毎回異なるコンテキストで0回以上呼び出すことができます。 {{#*name*}}と{{/*name*}}の間のコンテキストが含まれます。
 
 * Handlebars では、ヘルパーに対する最後のパラメーターとして「options」を使用します。特別なオブジェクト「options」には、
 
@@ -471,7 +471,7 @@ A quick overview of helper functions from [Handlebars.js documentation](https://
 
 * ヘルパーから返される HTML 文字列コンテンツは SafeString になるようにすることをお勧めします。
 
-### An example of a simple helper from Handlebars.js documentation: {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
+### Handlebars.jsドキュメントのシンプルなヘルパーの例を次に示します。{#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link_to', function(title, options) {
@@ -493,9 +493,11 @@ template(context);
 
 レンダリング対象：
 
-&lt;ul>&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>投稿！&lt;/a>&lt;/li>&lt;/ul>
+&lt;ul>
+&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>投稿！&lt;/a>&lt;/li>
+&lt;/ul>
 
-### An example of a block helper from Handlebars.js documentation: {#an-example-of-a-block-helper-from-handlebars-js-documentation}
+### Handlebars.jsドキュメントのブロックヘルパーの例を次に示します。{#an-example-of-a-block-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link', function(options) {
@@ -515,7 +517,11 @@ var template = Handlebars.compile(source);
 template(data);
 ```
 
-レンダリング対象：&lt;ul>&lt;li>&lt;a href=&quot;/people/1&quot;>アラン&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/people/2&quot;>イエウダ&lt;/a>&lt;/li>&lt;/ul>
+レンダリング対象：
+&lt;ul>
+&lt;li>&lt;a href=&quot;/people/1&quot;>アラン&lt;/a>&lt;/li>
+&lt;li>&lt;a href=&quot;/people/2&quot;>Yeuda&lt;/a>&lt;/li>
+&lt;/ul>
 
 ## カスタム SCF ヘルパー {#custom-scf-helpers}
 
@@ -523,7 +529,7 @@ template(data);
 
 ### サーバー側カスタムヘルパー {#server-side-custom-helpers}
 
-To implement and register a custom SCF helper on the server-side, simply implement the Java interface [TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), make it an [OSGi Service](../../help/sites-developing/the-basics.md#osgi) and install it as part of an OSGi bundle.
+カスタムSCFヘルパーをサーバー側に実装して登録するには、Javaインターフェイス[TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)を実装し、[OSGi Service](../../help/sites-developing/the-basics.md#osgi)にして、OSGiバンドルの一部としてインストールします。
 
 次に例を示します。
 
@@ -591,11 +597,11 @@ function(Handlebars, SCF, $CQ) {
 カスタムのクライアントサイドヘルパーは、カスタムのクライアントライブラリに追加する必要があります。
 clientlib の条件は次のとおりです。
 
-* Include a dependency on `cq.social.scf`.
+* `cq.social.scf`に依存関係を含めます。
 * ハンドルが読み込まれた後に読み込みます。
-* Be [included](clientlibs.md).
+* [インクルード](clientlibs.md)してください。
 
-Note: the SCF helpers are defined in `/etc/clientlibs/social/commons/scf/helpers.js`.
+注意：SCFヘルパーは`/etc/clientlibs/social/commons/scf/helpers.js`で定義されています。
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
