@@ -33,7 +33,7 @@ ht-degree: 84%
 
 Adobe Experience Manager をインストールするための最小要件：
 
-* Installed Java Platform, Standard Edition JDK, or other supported [Java Virtual Machines](#java-virtual-machines)
+* Java Platform, Standard Edition JDK（またはその他のサポート対象の[Java仮想マシン](#java-virtual-machines)）
 * Experience Manager Quickstart ファイル（スタンドアロン JAR または Web アプリケーションデプロイメント WAR）
 
 ### 最小サイズ要件 {#minimum-sizing-requirements}
@@ -134,10 +134,10 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
  </tbody>
 </table>
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9, Java 10, and Java 12 are non-LTS releases by Oracle (see [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12は、OracleがLTSに対応していないリリースです([OracleJava SEのサポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
-1. パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。See the [Oracle Java support for Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf) for more information.
+1. パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、[Adobe Experience ManagerQ&amp;AのOracleJavaサポート](assets/adobe-oracle-java-license-agreement.pdf)を参照してください。
 
 ### ストレージと永続性 {#storage-persistence}
 
@@ -153,8 +153,8 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 | MongoDB Enterprise 4.0 | リポジトリ | A：サポート対象 `[2, 3]` |
 | MongoDB Enterprise 3.6 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.4 | リポジトリ | Z：サポート対象外 |
-| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `[4]` |
-| Oracle Database 12c(12.1.x) | リポジトリおよび Forms データベース | R：制限サポート |
+| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート  `[4]` |
+| Oracleデータベース12c(12.1.x) | リポジトリおよび Forms データベース | R：制限サポート |
 | Microsoft SQL Server 2016 | Forms データベース | A：サポート対象 |
 | **Apache Lucene（クイックスタート組み込み）** | 検索サービス | A：サポート対象 |
 | Apache Solr | 検索サービス | A：サポート対象 |
@@ -172,7 +172,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 >
 >MongoDB はサードパーティソフトウェアであり、AEM ライセンスパッケージには含まれていません。詳しくは、[MongoDB のライセンスポリシー](https://www.mongodb.org/about/licensing/)ページを参照してください。
 >
->MongoDB を利用した AEM デプロイメントを最大限活用するために、アドビでは、プロフェッショナルサポートを受けられる MongoDB Enterprise バージョンのライセンスを取得することを推奨しています。See [Recommended Deployments](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) for more information.
+>MongoDB を利用した AEM デプロイメントを最大限活用するために、アドビでは、プロフェッショナルサポートを受けられる MongoDB Enterprise バージョンのライセンスを取得することを推奨しています。詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk)を参照してください。
 >
 >このライセンスには、標準レプリカセットが含まれます。このレプリカセットは、1 つのプライマリインスタンスと 2 つのセカンダリインスタンスで構成されており、これらのインスタンスは、オーサーとパブリッシュのいずれのデプロイメントにも使用できます。
 >
@@ -190,7 +190,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 >
 >**AEM 6.5 では現在、ほとんどのリレーショナルデータベースがレベル R の範囲でサポートされ、前述のレベル R の説明にあるサポートの基準とサポートプログラムが適用されます。**
 
-### サーブレットエンジン／アプリケーションサーバー {#servlet-engines-application-servers}
+### サーブレットエンジン／アプリケーションサーバー  {#servlet-engines-application-servers}
 
 Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR ファイル）として実行することも、サード-パーティのアプリケーションサーバー内の Web アプリケーション（WAR ファイル）として実行することもできます。
 
@@ -225,7 +225,7 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 | Oracle Solaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
 
-1. Linux Kernel 2.6、3.xおよび4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、およびAmazonLinuxを含む、Red Hatディストリビューションの派生物が含まれています。 AEM Formsのアドオン機能は、CentOS 7およびRed Hat Enterprise Linux 7でのみサポートされています。
+1. Linux Kernel 2.6、3.x、4.xには、Red Hat Enterprise Linux、CentOS、OracleLinux、AmazonLinuxなど、Red Hatディストリビューションの派生物が含まれています。 AEM Formsのアドオン機能は、CentOS 7およびRed Hat Enterprise Linux 7でのみサポートされています。
 1. AEM Forms は Ubuntu 16.04 LTS でのみサポートされています。
 1. Adobe Managed Services でサポートされている Linux ディストリビューション
 1. Microsoft Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
@@ -241,9 +241,9 @@ AEM を Azure や AWS にデプロイするその他あらゆる場合、また�
 
 Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合は、クラウドプロバイダーまたは使用するクラウド環境への AEM のデプロイメントをサポートするパートナーと直接共同作業することを強くお勧めします。選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
 
-### Dispatcher のプラットフォーム（Web サーバー） {#dispatcher-platforms-web-servers}
+### Dispatcher のプラットフォーム（Web サーバー）  {#dispatcher-platforms-web-servers}
 
-Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンのDispatcherをダウンロードします](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)。 Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
+Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンのDispatcherをダウンロードします](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
 
 Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバーがサポートされています。
 
@@ -260,7 +260,7 @@ Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバ
 
 1. Dispatcher は、Windows オペレーティングシステム版の Apache 2.4.x ではサポートされていません。
 
-## サポートされているクライアントプラットフォーム {#supported-client-platforms}
+## サポートされているクライアントプラットフォーム  {#supported-client-platforms}
 
 ### オーサリングユーザーインターフェイス向けにサポートされているブラウザー {#supported-browsers-for-authoring-user-interface}
 
@@ -332,11 +332,11 @@ AEM のユーザーインターフェイスは、大きめの画面（通常は�
 1. Firefox の延長サポート版（ESR）。[詳しくは、mozilla.org を参照してください。](https://www.mozilla.org/en-US/firefox/organizations/faq/)
 1. Apple iPad のサポート。
 
-### Web サイト向けにサポートされているブラウザー {#supported-browsers-for-websites}
+### Web サイト向けにサポートされているブラウザー  {#supported-browsers-for-websites}
 
 一般的に、AEM Sites でレンダリングされる Web サイトのブラウザーサポートは、AEM ページテンプレート、デザイン、コンポーネント出力の実装に依存するので、これらの部品を実装する団体によって管理されます。
 
-### WebDAV クライアント {#webdav-clients}
+### WebDAV クライアント  {#webdav-clients}
 
 **Microsoft Windows 7 以降**
 
@@ -350,11 +350,11 @@ Microsoft Windows 7 以降を使用して、SSL で保護されていない AEM 
 
 Windows で WebDav クライアントの応答性を改善する方法については、[Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) を参照してください。
 
-## プラットフォームに関するその他の注意点 {#additional-platform-notes}
+## プラットフォームに関するその他の注意点  {#additional-platform-notes}
 
 ここでは、Adobe Experience Manager およびそのアドオンの実行に関する注意点や詳細情報を説明します。
 
-### IPv4 と IPv6 {#ipv-and-ipv}
+### IPv4 と IPv6  {#ipv-and-ipv}
 
 Adobe Experience Manager のすべての要素（インスタンス、Dispatcher）は、IPv4 と IPv6 のいずれのネットワークにもインストールできます。
 
@@ -362,27 +362,27 @@ Adobe Experience Manager のすべての要素（インスタンス、Dispatcher
 
 つまり、IP アドレスを指定する必要がある場合には、次の形式から（必要に応じて）選択できます。
 
-* an IPv6 address
-for example `https://[ab12::34c5:6d7:8e90:1234]:4502`
+* IPv6アドレス
+例：`https://[ab12::34c5:6d7:8e90:1234]:4502`
 
-* an IPv4 address
-for example `https://123.1.1.4:4502`
+* IPv4アドレス
+例：`https://123.1.1.4:4502`
 
-* a server name
-for example, `https://www.yourserver.com:4502`
+* サーバー名
+例：`https://www.yourserver.com:4502`
 
 * デフォルトの `localhost` は、IPv4 と IPv6 の両方のネットワークインストール用に変換されます。
 例：`https://localhost:4502`
 
 ### AEM Dynamic Media アドオンの要件 {#requirements-for-aem-dynamic-media-add-on}
 
-AEM Dynamic Media はデフォルトで無効になっています。See here to [enable Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
+AEM Dynamic Media はデフォルトで無効になっています。[ダイナミックメディアを有効にする](/help/assets/config-dynamic.md#enabling-dynamic-media)を参照してください。
 
 Dynamic Media を有効にする場合は、以下の追加の技術要件が適用されます。
 
 >[!NOTE]
 >
->These system requirements **only** apply if you use Dynamic Media - Hybrid mode; Dynamic Media - Hybrid mode has an embedded image server, which is only certified on certain operating systems.
+>以下のシステム要件は、ダイナミックメディア — ハイブリッドモードを使用する場合に&#x200B;****&#x200B;のみ適用されます。ダイナミックメディア — ハイブリッドモードには、埋め込み画像サーバーがあり、特定のオペレーティングシステムでのみ認証されます。
 >
 >Dynamic Media - Scene7 モード（**dynamicmedia_scene7** 実行モード）で Dynamic Media を実行する場合は、追加のシステム要件はありません。AEM と同じシステム要件が適用されます。Dynamic Media - Scene7 モードのアーキテクチャではクラウドベースの画像サービスを使用しており、AEM に組み込まれたサービスを使用していません。
 
@@ -422,7 +422,7 @@ Linux でダイナミックメディアを使用する場合は、次の必要�
 
 >[!NOTE]
 >
->**サーバーのホスト名が解決される必要があります：**&#x200B;サーバーのホスト名が IP アドレスに解決可能であることを確認してください。If that is not possible, add the fully qualified host name and the IP address to **/etc/hosts**:
+>**サーバーのホスト名が解決される必要があります：**&#x200B;サーバーのホスト名が IP アドレスに解決可能であることを確認してください。これが不可能な場合は、完全修飾ホスト名とIPアドレスを&#x200B;**/etc/hosts**&#x200B;に追加します。
 >
 >`<ip address> <fully qualified hostname>`
 
@@ -435,22 +435,22 @@ Windows で Dynamic Media を使用するには、Microsoft Visual Studio 2010�
 
 Windows x64 の場合：
 
-* Get Microsoft Visual Studio 2010 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/ja-jp/download/details.aspx?id=13523)
-* Get Microsoft Visual Studio 2013 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/ja-jp/download/details.aspx?id=40784)
-* Get Microsoft Visual Studio 2015 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/ja-jp/download/details.aspx?id=48145)
+* [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/ja-jp/download/details.aspx?id=13523)でMicrosoft Visual Studio 2010再配布可能
+* [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/ja-jp/download/details.aspx?id=40784)でMicrosoft Visual Studio 2013再配布可能
+* [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/ja-jp/download/details.aspx?id=48145)でMicrosoft Visual Studio 2015再配布可能
 
 Windows x86 の場合：
 
-* Get Microsoft Visual Studio 2010 redistributable at [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/ja-jp/download/details.aspx?id=5555)
-* Get Microsoft Visual Studio 2013 redistributable at [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
-* Get Microsoft Visual Studio 2015 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/ja-jp/download/details.aspx?id=52685)
+* [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/ja-jp/download/details.aspx?id=5555)でMicrosoft Visual Studio 2010再配布可能
+* [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)でMicrosoft Visual Studio 2013再配布可能
+* [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/ja-jp/download/details.aspx?id=52685)でMicrosoft Visual Studio 2015再配布可能
 
 #### MacOS {#macos}
 
 * 10.9.x 以降
 * 試用およびデモの目的でのみサポート
 
-### AEM Forms PDF Generator の要件 {#requirements-for-aem-forms-pdf-generator}
+### AEM Forms PDF Generator の要件  {#requirements-for-aem-forms-pdf-generator}
 
 <table>
  <tbody>
@@ -459,7 +459,7 @@ Windows x86 の場合：
    <th><p><strong>PDF への変換でサポートされている形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2017 classic track</a> latest version</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2017 classic </a> tracklatestバージョン</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
   </tr>
   <tr>
@@ -495,12 +495,12 @@ Windows x86 の場合：
 >
 >さらに、次の点に注意してください。
 >
->* PDF Generator requires 32-bit version of [Acrobat 2017 classic track version 17.011.30078 or later](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) to perform the conversion.
+>* PDF Generatorで変換を実行するには、32ビット版の[Acrobat2017クラシックトラックバージョン17.011.30078以降](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)が必要です。
 >* PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* PDF Generator では Microsoft Office 365 をサポートしていません。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 >* 「OCR PDF」、「PDF を最適化」、「PDF を書き出し」の各機能は、Windows でのみサポートされています。
->* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。For more information, refer to AEM Forms product description as per your deployment ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) or [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
+>* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳細については、ご使用の導入環境に応じて、AEM Forms製品の説明([オンプレミス](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)または[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))を参照してください。&quot;
 
    >
    >
@@ -516,13 +516,13 @@ XMP の書き戻しは次のプラットフォームおよびファイル形式�
 
 * **オペレーティングシステム：**
 
-   * Linux（32 ビット、64 ビットシステムでは 32 ビットアプリケーションのサポートが必要）For steps to install 32-bit client libraries, see [How to enable XMP extraction and write-back on 64-bit RedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
+   * Linux（32 ビット、64 ビットシステムでは 32 ビットアプリケーションのサポートが必要）32ビットのクライアントライブラリをインストールする手順については、[How to enable XMP抽出 and write-back on 64ビットのRedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)を参照してください。
 
    * Windows Server
    * Mac OS X（64 ビット）
 
 * **ファイル形式**:JPEG、PNG、TIFF、PDF、INDD、AI、EPS。
 
-### AEM AssetsがLinux上でメタデータに重要なアセットを処理するための要件 {#assetsonlinux}
+### AEM AssetsがLinuxでメタデータ重量アセットを処理するための要件{#assetsonlinux}
 
-XMPFilesProcessorプロセスが動作するには、ライブラリGLIBC_2.14が必要です。 GLIBC_2.14を含むLinuxカーネルを使う。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンのGLIBCを使用すると、で始まるログでエラーが発生 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`します。
+XMPFilesProcessorプロセスが動作するには、ライブラリGLIBC_2.14が必要です。 GLIBC_2.14を含むLinuxカーネルを使う。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンのGLIBCを使うと、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`で始まるログにエラーが発生する。
