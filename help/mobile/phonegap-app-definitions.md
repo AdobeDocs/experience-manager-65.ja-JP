@@ -30,13 +30,13 @@ ht-degree: 91%
 >
 >アプリの定義はアプリに関連付けられるので、AEM Mobile アプリコンソールでアプリを作成する必要があります。
 
-## 新しいアプリの定義の作成 {#creating-a-new-app-definition}
+## 新しいアプリの定義の作成  {#creating-a-new-app-definition}
 
 1. AEM ナビゲーションコンソールで「**モバイル**」を選択します。
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. Choose **Apps** from **Mobile** and click **Create.**
+1. **モバイル**&#x200B;から&#x200B;**アプリ**&#x200B;を選択し、**作成をクリックします。**
 
    「**アプリ**」を選択し、詳細を入力して、新しいアプリを作成します。
 
