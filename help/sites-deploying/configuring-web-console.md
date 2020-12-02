@@ -35,7 +35,7 @@ Web コンソールには、OSGi バンドルを保守するための次のよ�
 
 おこなわれた変更は、実行中のシステムにすぐに適用されます。再起動は不要です。
 
-The console can be accessed from `../system/console`; for example:
+コンソールは`../system/console`からアクセスできます。例：
 
 `http://localhost:4502/system/console/components`
 
@@ -108,7 +108,7 @@ The console can be accessed from `../system/console`; for example:
 
 ## バンドル {#bundles}
 
-The **Bundles** tab is the mechanism for installing the OSGi bundles required for AEM. The tab can be accessed by either of the following methods:
+「**バンドル**」タブは、AEMに必要なOSGiバンドルをインストールするメカニズムです。このタブには、次のいずれかの方法でアクセスできます。
 
 * ドロップダウンメニュー：
 
@@ -126,7 +126,7 @@ The **Bundles** tab is the mechanism for installing the OSGi bundles required fo
 
 * **インストールまたは更新**
 
-   You can **Browse** to find the file containing your bundle and specify whether it should **Start** immediately and at which **Start Level**.
+   **参照**&#x200B;を使って、バンドルを含むファイルを探し、**開始**&#x200B;をすぐに&#x200B;**開始レベル**&#x200B;にするかどうかを指定できます。
 
 * **再読み込み**
 
@@ -160,7 +160,7 @@ The **Bundles** tab is the mechanism for installing the OSGi bundles required fo
 
 ## コンポーネント {#components}
 
-The **Components** tab allows you to Enable and/or Disable the various components. It can be accessed by either:
+「**コンポーネント**」タブでは、様々なコンポーネントを有効化/無効化できます。アクセスは、次のいずれかで行うことができます。
 
 * ドロップダウンメニュー：
 
