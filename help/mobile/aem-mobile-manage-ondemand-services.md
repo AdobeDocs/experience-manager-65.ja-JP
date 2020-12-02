@@ -34,7 +34,7 @@ Mobile On-Demand プリフライトアプリでは、アクセス権を持つす
 >
 >プリフライトアプリは、本質的に PhoneGap Enterprise ビューアと似ています。
 
-## プリフライトによるプレビュー {#previewing-with-preflight-1}
+## プリフライトによるプレビュー  {#previewing-with-preflight-1}
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
 1. **記事を管理**（またはバナー／コレクション）タイルから省略記号（...）をクリックします。
@@ -50,7 +50,7 @@ Mobile On-Demand プリフライトアプリでは、アクセス権を持つす
 >
 >AEM Preflight アプリは、[iTunes App Store](https://itunes.apple.com/jp/app/adobe-experience-manager-mobile/id1042687518?mt=8)、[Google Play ストア](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=ja)および [Windows ストア](https://www.microsoft.com/ja-jp/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq)から入手できます。
 
-### さらに先のステップ {#getting-ahead}
+### さらに先のステップ  {#getting-ahead}
 
 コンテンツのオーサリングについてさらに詳しい情報が必要な場合は、AEM Mobile アプリケーションにおけるコンテンツの作成と管理について以下のリソースを参照してください。
 
