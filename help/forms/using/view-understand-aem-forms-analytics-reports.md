@@ -18,11 +18,11 @@ ht-degree: 82%
 ---
 
 
-# AEM Forms の分析レポートの確認方法と詳細 {#view-and-understand-aem-forms-analytics-reports}
+# AEM Forms の分析レポートの確認方法と詳細  {#view-and-understand-aem-forms-analytics-reports}
 
 Adobe Experience Manager Forms は、Adobe Analytics と統合されているため、発行済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
 
-## 分析の設定 {#setting-up-analytics}
+## 分析の設定  {#setting-up-analytics}
 
 AEM Forms のアドオンパッケージの一部として、AEM Forms の分析の機能を使用できます。アドオンパッケージのインストールについて詳しくは、「[AEM Forms のインストールと設定](../../forms/using/installing-configuring-aem-forms-osgi.md)」を参照してください。
 
@@ -30,7 +30,7 @@ AEM Forms のアドオンパッケージの一部として、AEM Forms の分析
 
 AEM Forms のアドオンパッケージと Adobe Analytics のアカウントを入手したら、「[分析とレポートの設定](../../forms/using/configure-analytics-forms-documents.md)」の記事を参考に、Adobe Analytics のアカウントを AEM Forms に統合し、ご使用のフォームやドキュメントの追跡を有効にします。
 
-### ユーザーインタラクション情報の記録方法 {#how-user-interaction-information-is-recorded}
+### ユーザーインタラクション情報の記録方法  {#how-user-interaction-information-is-recorded}
 
 ユーザーがフォームと対話するとき、インタラクションが記録されて Analytics サーバーに送信されます。次のリストは、各種のユーザーアクティビティのためのサーバー呼び出しを示します。
 
@@ -52,7 +52,7 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 分析レポートを表示するには、次の手順を実行します。
 
-1. Log in to the AEM portal at `https://[hostname]:'port'`
+1. `https://[hostname]:'port'`でAEMポータルにログインします
 1. **フォーム／フォームとドキュメント**&#x200B;をクリックします。
 1. 分析レポートを表示するためのフォームを選択します。
 1. **詳細／分析レポート**&#x200B;を選択します。
@@ -65,7 +65,7 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 ![アダプティブフォームの概要レポート](assets/analyticsdashboard_callout.png)
 
-**A.** B.フォームレベルの概要 **C.パネルレベルの概要D.訪問者の** フィルタE. **訪問者のフィルタE.** Os訪問者のフィルタF.Formレベルの概要F.Formレベルの概要C.パネルレベルの概要D. ************ のフィルタ
+**A.** B. **Form-level summary** C. **Panel-level summary** D.訪問者の変換 — Filter  **Filter** E.Os訪問者の訪問者- F f Form Level summary  ****  **** D.の
 
 デフォルトで、直近 7 日間の分析レポートが表示されます。ここでは、直近の 15 日間や 1 か月間のレポートなどを表示したり、レポートの日付範囲を指定したりすることができます。
 
@@ -94,7 +94,7 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 * **ドラフト**：フォームがドラフトとして保存された回数
 * **送信**：フォームが送信された回数
 * **中止**：フォームの記入が開始されたが完了されずに中止された回数
-* **個別訪問者**:個別の訪問者によってフォームがレンダリングされた回数。 個別訪問者について詳しくは、「[個別訪問者、表示ページ、顧客の行動](https://helpx.adobe.com/jp/analytics/kb/unique-visitors-visitor-behavior.html)」を参照してください。
+* **個別訪問者**:個別の訪問者によってフォームがレンダリングされた回数。個別訪問者について詳しくは、「[個別訪問者、表示ページ、顧客の行動](https://helpx.adobe.com/jp/analytics/kb/unique-visitors-visitor-behavior.html)」を参照してください。
 
 ![フォームレベルの概要分析レポートの拡張](assets/analytics-report.png)
 
@@ -144,4 +144,4 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 A/B テストを有効にしてフォームに設定した場合、レポートページのドロップダウンを使用して A/B テストレポートを表示できます。A/Bテストレポートは、設定したとおりに、2つのバージョンのフォームの比較パフォーマンスを表示します。
 
-For more information on A/B testing, see [Create and manage A/B test for adaptive forms](../../forms/using/ab-testing-adaptive-forms.md).
+A/Bテストについて詳しくは、「[アダプティブフォームのA/Bテストの作成と管理](../../forms/using/ab-testing-adaptive-forms.md)」を参照してください。
