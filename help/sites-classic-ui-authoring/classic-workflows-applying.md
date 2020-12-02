@@ -34,11 +34,11 @@ ht-degree: 86%
 >
 >AEM 管理者は[他のいくつかの方法](/help/sites-administering/workflows-starting.md)を使用してワークフローを開始できます。
 
-## ワークフローの適用 {#applying-workflows}
+## ワークフローの適用  {#applying-workflows}
 
 ワークフローは、Web サイトコンソールから、またはページの編集中にはサイドキックから開始できます。
 
-**Webサイトコンソールの「** ステータス **** 」列には、ワークフローがページに適用されているかどうかが示されます。
+**Webサイト**&#x200B;コンソールの&#x200B;**ステータス**&#x200B;列は、ワークフローがページに適用されたかどうかを示します。
 
 ![workflowstatus](assets/workflowstatus.png)
 
@@ -49,12 +49,12 @@ ht-degree: 86%
 1. ページリストで、ページを選択して「ワークフロー」をクリックします。
 1. ワークフローを開始ダイアログで、適用するワークフローを選択します。必要に応じて、コメントとタイトルを入力します。その後、「開始」をクリックします。
 
-### サイドキックからのワークフローの開始 {#starting-a-workflow-using-sidekick}
+### サイドキックからのワークフローの開始  {#starting-a-workflow-using-sidekick}
 
 1. Web サイトコンソールを開きます。
 1. 必要なページを開きます。
 1. サイドキックの「ワークフロー」タブを選択します。
-1. Expand the **Workflow** dialog, allowing you to select the **Workflow** and optionally enter **Workflow Title** and **Comment**.
+1. **ワークフロー**&#x200B;ダイアログを展開し、「**ワークフロー**」を選択して、必要に応じて「**ワークフロータイトル**」と「**コメント**」を入力します。
 
    ![workflowstartsidekick](assets/workflowstartsidekick.png)
 
