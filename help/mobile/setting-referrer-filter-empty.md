@@ -28,6 +28,6 @@ AEM Mobile アプリケーションビューアで AEM オーサーインスタ�
 
 開発中およびステージング中のアプリケーションをアプリケーションビューアでレビューしない場合は、リファラーフィルターのデフォルト設定を変更する必要はありません。
 
-Within your running Author instance of AEM, navigate to: [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) and search for &#39;Apache Sling Referrer Filter&#39;. リファラーフィルターをクリックして編集し、「空の値を許可」チェックボックスをオンにします（下図を参照）。次に、「保存」ボタンをクリックして、ブラウザーページを閉じます。
+実行中のAEMの作成者インスタンス内で、次の場所に移動します。[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)を検索し、「Apache Sling転送者フィルター」を探します。 リファラーフィルターをクリックして編集し、「空の値を許可」チェックボックスをオンにします（下図を参照）。次に、「保存」ボタンをクリックして、ブラウザーページを閉じます。
 
 ![リファラーフィルターの設定](assets/chlimage_1-106.png)
