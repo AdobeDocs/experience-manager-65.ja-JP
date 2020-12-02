@@ -51,8 +51,8 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    >
    >    
    >    
-   >    1. Go to https://&#39;[server]:[port]&#39;/system/console/crypto.
-   >    1. In the **[!UICONTROL Plain Text]** field, specify the password or any string to encrypt and tap **[!UICONTROL Protect]**.
+   >    1. https://&#39;[server]:[port]&#39;/system/console/cryptoに移動します。
+   >    1. 「**[!UICONTROL プレーンテキスト]**」フィールドで、暗号化するパスワードまたは任意の文字列を指定し、**[!UICONTROL Protect]**&#x200B;をタップします。
 
    >    
    >    
@@ -65,14 +65,14 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    * SELECT 1 （MySQLおよびMS SQL）
    * SELECT 1 from dual（Oracle の場合）
 
-1. Tap **[!UICONTROL Save]** to save the configuration.
+1. 「**[!UICONTROL 保存]**」をタップして設定を保存します。
 
 ## AEM ユーザープロファイルの設定 {#configure-aem-user-profile}
 
 AEM Web コンソールでユーザープロファイルコネクター設定を使用して、AEM のユーザープロファイルを設定することができます。以下の操作を実行してください。
 
-1. Go to AEM web console at https://&#39;[server]:[port]&#39;system/console/configMgr.
-1. Look for **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** and tap to open the configuration in edit mode.
+1. AEM Webコンソール(https://&#39;[server]:[port]&#39;system/console/configMgr)に移動します。
+1. **[!UICONTROL 「AEM Formsデータ統合 — ユーザープロファイルコネクタ設定]**」を探し、をタップして設定を編集モードで開きます。
 1. ユーザープロファイルコネクター設定ダイアログで、ユーザープロファイルプロパティの追加、削除、更新を行うことができます。ここで指定したプロパティは、フォームデータモデルで使用することができます。次の形式を使用して、ユーザープロファイルのプロパティを指定します。
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
@@ -84,21 +84,21 @@ AEM Web コンソールでユーザープロファイルコネクター設定を
 
    >[!NOTE]
    >
-   >The ***** in the above example denotes all nodes under the `profile/empLocation/` node in AEM user profile in CRXDE structure. It means that the form data model can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. ただし、指定されたプロパティが存在するノードの構造が統一されている必要があります。
+   >上記の例の&#x200B;*****&#x200B;は、CRXDE構造のAEMユーザープロファイルの`profile/empLocation/`ノード下のすべてのノードを表します。 つまり、フォームデータモデルは、`profile/empLocation/`ノード下の任意のノードに存在するタイプ`string`の`city`プロパティにアクセスできます。 ただし、指定されたプロパティが存在するノードの構造が統一されている必要があります。
 
-1. Tap **[!UICONTROL Save]** to save the configuration.
+1. 「**[!UICONTROL 保存]**」をタップして設定を保存します。
 
 ## クラウドサービス設定用フォルダーの構成 {#cloud-folder}
 
 >[!NOTE]
 RESTful、SOAP、ODataサービス用のクラウドサービスを設定するには、クラウドサービスフォルダーの設定が必要です。
 
-All cloud service configurations in AEM are consolidated in the `/conf` folder in AEM repository. デフォルトの場合、`conf` フォルダーには `global` フォルダーが含まれています。このフォルダーで、クラウドサービスの設定を作成することができます。ただし、このフォルダーを手動でクラウド設定用に有効にする必要があります。追加のフォルダーを `conf` フォルダー内に作成して、クラウドサービスの作成と編集を行うこともできます。
+AEMのすべてのクラウドサービス設定は、AEMリポジトリの`/conf`フォルダーに統合されます。 デフォルトの場合、`conf` フォルダーには `global` フォルダーが含まれています。このフォルダーで、クラウドサービスの設定を作成することができます。ただし、このフォルダーを手動でクラウド設定用に有効にする必要があります。追加のフォルダーを `conf` フォルダー内に作成して、クラウドサービスの作成と編集を行うこともできます。
 
 クラウドサービス設定用のフォルダーを構成するには、以下の手順を実行します。
 
-1. Go to **[!UICONTROL Tools > General > Configuration Browser]**.
-   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
+1. **[!UICONTROL ツール/一般/設定ブラウザー]**&#x200B;に移動します。
+   * 詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
 1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
    1. **[!UICONTROL 設定ブラウザー]**&#x200B;で、「`global`」フォルダーを選択して「**[!UICONTROL プロパティ]**」をタップします。
@@ -109,19 +109,19 @@ All cloud service configurations in AEM are consolidated in the `/conf` folder i
 
 1. **[!UICONTROL 設定ブラウザー]**&#x200B;で「**[!UICONTROL 作成]**」をタップします。
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログでフォルダーのタイトルを指定し、「**[!UICONTROL クラウド設定]**」を有効にします。
-1. Tap **[!UICONTROL Create]** to create the folder enabled for cloud service configurations.
+1. 「**[!UICONTROL 作成]**」をタップして、クラウドサービス設定用に有効なフォルダーを作成します。
 
 ## RESTful Web サービスの設定 {#configure-restful-web-services}
 
-RESTful web service can be described using [Swagger specifications](https://swagger.io/specification/) in JSON or YAML format in a Swagger definition file. AEMクラウドサービスでRESTful Webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認してください。
+RESTful Webサービスは、Swagger定義ファイルのJSON形式またはYAML形式の[Swagger仕様](https://swagger.io/specification/)を使用して記述できます。 AEMクラウドサービスでRESTful Webサービスを設定するには、ファイルシステムにSwaggerファイルが存在するか、ファイルがホストされているURLが存在することを確認してください。
 
 RESTful サービスを設定するには、以下の手順を実行します。
 
 1. **[!UICONTROL ツール／クラウドサービス／データソース]**&#x200B;に移動します。クラウド設定を作成するフォルダーをタップして選択します。
 
-   See [Configure folder for cloud service configurations](../../forms/using/configure-data-sources.md#cloud-folder) for information about creating and configuring a folder for cloud service configurations.
+   クラウドサービス設定用のフォルダーの作成と設定について詳しくは、[クラウドサービス設定用のフォルダーの設定](../../forms/using/configure-data-sources.md#cloud-folder)を参照してください。
 
-1. Tap **[!UICONTROL Create]** to open the **[!UICONTROL Create Data Source Configuration wizard]**. 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL RESTful サービス]**」を選択します。必要な場合は、設定のサムネイル画像を選択して「**[!UICONTROL 次へ]**」をタップします。
+1. 「**[!UICONTROL 作成]**」をタップして、**[!UICONTROL データソース設定を作成ウィザード]**&#x200B;を開きます。 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL RESTful サービス]**」を選択します。必要な場合は、設定のサムネイル画像を選択して「**[!UICONTROL 次へ]**」をタップします。
 1. 以下に示す RESTful サービスの詳細情報を指定します。
 
    * 「Swagger Source」ドロップダウンから「URL」または「File」を選択し、Swagger URLをSwagger定義ファイルに指定するか、ローカルファイルシステムからSwaggerファイルをアップロードします。
@@ -133,9 +133,9 @@ RESTful サービスを設定するには、以下の手順を実行します。
          必要に応じて、これらのフィールドの事前入力された値を編集します。
    * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「APIキー」、「カスタム認証」、「相互認証」）を選択してRESTfulサービスにアクセスし、認証の詳細を入力します。
 
-   認証タイプとして **[!UICONTROL APIキー]** を選択する場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。 「 **[!UICONTROL 場所]** 」ドロップダウンリストから次のオプションの1つを選択し、それに応じて、ヘッダーの名前またはクエリパラメーターの名前を「 **[!UICONTROL パラメーター名]** 」フィールドに指定します。
+   認証タイプとして&#x200B;**[!UICONTROL APIキー]**&#x200B;を選択した場合は、APIキーの値を指定します。 APIキーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。 「**[!UICONTROL 場所]**」ドロップダウンリストから次のオプションの1つを選択し、それに応じて「**[!UICONTROL パラメーター名]**」フィールドにヘッダーまたはクエリパラメーターの名前を指定します。
 
-   認証タイプとして「 **[!UICONTROL 相互認証]** 」を選択した場合は、「RESTfulおよびSOAP Webサービス用の [証明書ベースの相互認証](#mutual-authentication)」を参照してください。
+   認証の種類として「**[!UICONTROL 相互認証]**」を選択した場合は、「[RESTfulおよびSOAP Webサービスの証明書ベースの相互認証](#mutual-authentication)」を参照してください。
 
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
 
@@ -145,19 +145,19 @@ SOAP ベースの Web サービスは、[Web Services Description Language（WSD
 
 1. **[!UICONTROL ツール／クラウドサービス／データソース]**&#x200B;に移動します。クラウド設定を作成するフォルダーをタップして選択します。
 
-   See [Configure folder for cloud service configurations](../../forms/using/configure-data-sources.md#cloud-folder) for information about creating and configuring a folder for cloud service configurations.
+   クラウドサービス設定用のフォルダーの作成と設定について詳しくは、[クラウドサービス設定用のフォルダーの設定](../../forms/using/configure-data-sources.md#cloud-folder)を参照してください。
 
-1. Tap **[!UICONTROL Create]** to open the **[!UICONTROL Create Data Source Configuration wizard]**. 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL SOAP Web サービス]**」を選択します。必要な場合は、設定のサムネイル画像を選択して「**[!UICONTROL 次へ]**」をタップします。
+1. 「**[!UICONTROL 作成]**」をタップして、**[!UICONTROL データソース設定を作成ウィザード]**&#x200B;を開きます。 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL SOAP Web サービス]**」を選択します。必要な場合は、設定のサムネイル画像を選択して「**[!UICONTROL 次へ]**」をタップします。
 1. 以下に示す SOAP Web サービスの詳細情報を指定します。
 
    * Web サービスの WSDL URL を指定します。
    * サービスエンドポイント. WSDLで指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
    * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」、「X509トークン」、「相互認証」）を選択してSOAPサービスにアクセスし、認証の詳細を入力します。
 
-      認証の種類として **[!UICONTROL X509トークン]** を選択した場合は、X509証明書を設定します。 詳しくは、証明書の [設定を参照してください](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
-「 **[!UICONTROL Key Alias]** 」フィールドに、X509証明書のKeyStoreエイリアスを指定します。 認証要求が有効なままになるまでの時間を秒単位でTime To Live **** Fieldに指定します。 オプションで、メッセージの本文ヘッダーとタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
+      認証の種類として&#x200B;**[!UICONTROL X509トークン]**&#x200B;を選択した場合は、X509証明書を設定します。 詳しくは、[証明書の設定](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)を参照してください。
+**[!UICONTROL Key Alias]**&#x200B;フィールドに、X509証明書のKeyStoreエイリアスを指定します。 認証要求が有効なまでの時間を秒単位で指定します。この時間を&#x200B;**[!UICONTROL Time To Live]**&#x200B;フィールドに入力します。 オプションで、メッセージの本文ヘッダーとタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
 
-      認証タイプとして「 **[!UICONTROL 相互認証]** 」を選択した場合は、「RESTfulおよびSOAP Webサービス用の [証明書ベースの相互認証](#mutual-authentication)」を参照してください。
+      認証の種類として「**[!UICONTROL 相互認証]**」を選択した場合は、「[RESTfulおよびSOAP Webサービスの証明書ベースの相互認証](#mutual-authentication)」を参照してください。
 
 1. 「**[!UICONTROL 作成]**」をタップして、SOAP Web サービス用のクラウド設定を作成します。
 
@@ -170,9 +170,9 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
 1. **[!UICONTROL ツール／クラウドサービス／データソース]**&#x200B;に移動します。クラウド設定を作成するフォルダーをタップして選択します。
 
-   See [Configure folder for cloud service configurations](../../forms/using/configure-data-sources.md#cloud-folder) for information about creating and configuring a folder for cloud service configurations.
+   クラウドサービス設定用のフォルダーの作成と設定について詳しくは、[クラウドサービス設定用のフォルダーの設定](../../forms/using/configure-data-sources.md#cloud-folder)を参照してください。
 
-1. Tap **[!UICONTROL Create]** to open the **[!UICONTROL Create Data Source Configuration wizard]**. 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL OData サービス]**」を選択します。必要な場合は、設定のサムネイル画像を選択して「**[!UICONTROL 次へ]**」をタップします。
+1. 「**[!UICONTROL 作成]**」をタップして、**[!UICONTROL データソース設定を作成ウィザード]**&#x200B;を開きます。 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL OData サービス]**」を選択します。必要な場合は、設定のサムネイル画像を選択して「**[!UICONTROL 次へ]**」をタップします。
 1. 以下に示す OData サービスの詳細情報を指定します。
 
    * 設定する OData サービスのルート URL を指定します。
@@ -181,21 +181,21 @@ OData サービスは、そのサービスのルート URL によって識別さ
    >[!NOTE]
    OData エンドポイントをサービスルートとして使用して Microsoft Dynamics サービスに接続する場合は、OAuth 2.0 認証を選択する必要があります。
 
-1. Tap **Create** to create the cloud configuration for the OData service.
+1. 「**作成**」をタップして、ODataサービスのクラウド設定を作成します。
 
-## RESTfulおよびSOAP Webサービス用の証明書ベースの相互認証 {#mutual-authentication}
+## RESTfulおよびSOAP Webサービス用の証明書ベースの相互認証{#mutual-authentication}
 
 フォームデータモデルの相互認証を有効にする場合、データを共有する前に、データソースとフォームデータモデルを実行するAEMサーバーの両方がお互いのIDを認証します。 RESTおよびSOAPベースの接続（データソース）に対して相互認証を使用できます。 AEM Forms環境でフォームデータモデルの相互認証を設定するには：
 
-1. 秘密鍵（証明書）を [!DNL AEM Forms] サーバーにアップロードします。 秘密鍵をアップロードするには：
-   1. 管理者として [!DNL AEM Forms] サーバーにログインします。
-   1. **[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / ****&#x200B;ユーザーに移動します。 ユーザーを選択し、 `fd-cloudservice` 「 **[!UICONTROL プロパティ]**」をタップします。
-   1. 「 **[!UICONTROL キーストア]** 」タブを開き、「KeyStoreファイル **[!UICONTROL 」オプションから「]** 秘密鍵」を展開し、「KeyStoreファイル」をアップロードし、エイリアス、パスワードを指定して、「 **[!UICONTROL 送信]**」をタップします。 証明書がアップロードされます。  秘密鍵のエイリアスは証明書で記述され、証明書の作成時に設定されます。
+1. 秘密鍵（証明書）を[!DNL AEM Forms]サーバーにアップロードします。 秘密鍵をアップロードするには：
+   1. [!DNL AEM Forms]サーバーに管理者としてログインします。
+   1. **[!UICONTROL ツール]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL ユーザー]**&#x200B;に移動します。 `fd-cloudservice`ユーザーを選択し、**[!UICONTROL プロパティ]**&#x200B;をタップします。
+   1. 「**[!UICONTROL キーストア]**」タブを開き、「**[!UICONTROL Private Key from KeyStore file]**」オプションを展開し、KeyStore Fileをアップロードし、エイリアスとパスワードを指定して、「**[!UICONTROL 送信]**」をタップします。 証明書がアップロードされます。  秘密鍵のエイリアスは証明書で記述され、証明書の作成時に設定されます。
 1. 信頼証明書をグローバルTrust Storeにアップロードします。 証明書をアップロードするには：
-   1. **[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL Trust Storeに移動します]**。
-   1. 「 **[!UICONTROL 追加 Certificate from CER file]** 」オプションを展開し、「Select Certificate File **[!UICONTROL 」をタップし、証明書をアップロードして、「]** Submit ****」をタップします。
-1. データソースとして [SOAP](#configure-soap-web-services) または [RESTful](#configure-restful-web-services) Webサービスを設定し、認証の種類として「 **[!UICONTROL 相互認証]** 」を選択します。 ユーザーに対して複数の自己署名証明書を設定する場合は、証明書のキーエイリアス名を指定し `fd-cloudservice` ます。
+   1. **[!UICONTROL ツール]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL Trust Store]**&#x200B;に移動します。
+   1. 「**[!UICONTROL 追加証明書をCERファイルから]**」オプションを展開し、「**[!UICONTROL 証明書ファイルを選択]**」をタップして、証明書をアップロードし、「**[!UICONTROL 送信]**」をタップします。
+1. [SOAP](#configure-soap-web-services)または[RESTful](#configure-restful-web-services)Webサービスをデータソースとして設定し、認証の種類として&#x200B;**[!UICONTROL 相互認証]**&#x200B;を選択します。 `fd-cloudservice`ユーザーに対して複数の自己署名証明書を設定する場合は、証明書のキーエイリアス名を指定します。
 
 ## 次の手順 {#next-steps}
 
-上記の手順により、データソースが設定されました。次に、フォームデータモデルを作成します。データソースが設定されていないフォームデータモデルが既に作成されている場合は、上記の手順で設定したデータソースにそのフォームデータモデルを関連付けます。See [Create form data model](/help/forms/using/create-form-data-models.md) for details.
+上記の手順により、データソースが設定されました。次に、フォームデータモデルを作成します。データソースが設定されていないフォームデータモデルが既に作成されている場合は、上記の手順で設定したデータソースにそのフォームデータモデルを関連付けます。詳しくは、[フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)を参照してください。
