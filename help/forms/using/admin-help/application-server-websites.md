@@ -24,6 +24,6 @@ ht-degree: 70%
 
 **JBoss:** https://www.jboss.com/products/platforms/application
 
-**Oracle WebLogic:** www.oracle.com/us/products/middleware/application-server/index.html
+**OracleWebLogic:** www.oracle.com/us/products/middleware/application-server/index.html
 
 **IBM WebSphere:** www-01.ibm.com/software/websphere/
