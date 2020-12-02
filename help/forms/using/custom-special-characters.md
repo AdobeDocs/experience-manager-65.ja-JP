@@ -32,8 +32,8 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
 レターでは、次の場所で特殊文字を挿入することができます。
 
-* In the [text editor](/help/forms/using/document-fragments.md#createtext)
-* In an [editable, inline module in a correspondence](../../forms/using/create-correspondence.md#managecontent)
+* [テキストエディタ](/help/forms/using/document-fragments.md#createtext)内
+* [編集可能な、通信](../../forms/using/create-correspondence.md#managecontent)内のインラインモジュール
 
 ![specialcharactersinlinemodule](assets/specialcharactersinlinemodule.png)
 
@@ -43,10 +43,10 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
 カスタム特殊文字の追加手順は次のとおりです。
 
-1. Go to `https://'[server]:[port]'/[ContextPath]/crx/de` and login as Administrator.
-1. In the apps folder, create a folder named **[!UICONTROL specialcharacters]** with path/structure similar to the specialcharacters folder (located in the textEditorConfig folder under libs):
+1. `https://'[server]:[port]'/[ContextPath]/crx/de`に移動し、管理者としてログインします。
+1. appsフォルダーに、**[!UICONTROL specialcharacters]**&#x200B;という名前のフォルダーを作成し、specialcharactersフォルダー（libsの下のtextEditorConfigフォルダーにあります）に類似したパス/構造を持たせます。
 
-   1. Right-click the **specialcharacters** folder at the following path and select **Overlay Node**:
+   1. 次のパスにある&#x200B;**specialcharacters**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
@@ -56,7 +56,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** チェック済み
+      **ノードタイプを一致：** オン
 
       >[!NOTE]
       >
@@ -80,9 +80,9 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    | 名前 | タイプ | 値 |
    |---|---|---|
    | cmConfigurationType | String | cmTextEditorConfiguration |
-   | cssPath | String | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
+   | cssPath | 文字列 | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. Right-click the **[!UICONTROL specialcharacters]** folder at the following path and select **Create > Child Node** and then click **Save All**:
+1. 次のパスにある&#x200B;**[!UICONTROL specialcharacters]**&#x200B;フォルダーを右クリックし、**作成/子ノード**&#x200B;を選択して、「**すべて保存**」をクリックします。
 
    /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
 
