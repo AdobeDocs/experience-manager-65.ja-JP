@@ -28,13 +28,13 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
    Webサイト（またはWebサイトのセクション）へのアクセスを特定の訪問者に制限する必要がある場合があります。
 
-* [パーソナライゼーション](/help/sites-administering/personalization.md) :訪問者がWebサイトにアクセスする方法の特定の側面を設定できます。
+* [](/help/sites-administering/personalization.md) パーソナライゼーション訪問者がWebサイトにアクセスする方法の特定の側面を設定できるようにします。
 
 ログイン（およびログアウト）機能は、[**プロファイル**](#profiles-and-user-accounts)&#x200B;付きのアカウントによって指定されます。プロファイルには、登録済みの訪問者（ユーザー）に関する追加情報が保持されます。実際の登録および承認のプロセスは状況によって異なります。
 
 * Webサイトからの自己登録
 
-   A [Community Site](/help/communities/sites-console.md) may be configured to allow visitors to self-register or sign-in with their Facebook or Twitter accounts.
+   [コミュニティサイト](/help/communities/sites-console.md)は、訪問者が自己登録を行ったり、FacebookアカウントやTwitterアカウントにサインインできるように設定できます。
 
 * Webサイトからの登録の要求
 
@@ -55,11 +55,11 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 >
 >プロファイルに指定した情報を使用し、[セグメント](/help/sites-administering/campaign-segmentation.md)と[キャンペーン](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)を通じて、ターゲットとなるコンテンツをユーザーに提供することもできます。
 
-## 登録フォーム {#registration-forms}
+## 登録フォーム  {#registration-forms}
 
 [フォーム](/help/sites-authoring/default-components.md#form-component)を使用すると、登録情報を収集して新しいアカウントとプロファイルを生成できます。
 
-For example, users can request a new profile, using the Geometrixx page
+例えば、Geometrixxページを使用して新しいプロファイルをリクエストできます
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
 ![registerform](assets/registerform.png)
@@ -86,7 +86,7 @@ For example, users can request a new profile, using the Geometrixx page
 
 ログインメカニズムと共にログアウトメカニズムも必要です。ログアウトの際は、Geometrixx の「**Sign Out**」オプションを使用します。
 
-## プロファイルの確認と更新 {#viewing-and-updating-a-profile}
+## プロファイルの確認と更新  {#viewing-and-updating-a-profile}
 
 登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは、同じような形で行うことができます。例えば、Geometrixx内：
 
@@ -94,7 +94,7 @@ For example, users can request a new profile, using the Geometrixx page
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-To see the details of your profile click on **My Profile** in the top right corner of any page; for example with the `admin` account:
+プロファイルの詳細を確認するには、任意のページの右上隅にある[**マイプロファイル**]をクリックします。例えば、`admin`アカウントの場合：
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
@@ -117,7 +117,7 @@ To see the details of your profile click on **My Profile** in the top right corn
 
 1. 「**プロファイルを編集**」または「**パスワードを変更**」を使用して詳細を更新できます。
 
-## プロファイル定義へのフィールドの追加 {#adding-fields-to-the-profile-definition}
+## プロファイル定義へのフィールドの追加  {#adding-fields-to-the-profile-definition}
 
 プロファイル定義にフィールドを追加できます。例えば、Geometrixx プロファイルに「Favorite Color」（好きな色）フィールドを追加します。
 
@@ -185,9 +185,9 @@ To see the details of your profile click on **My Profile** in the top right corn
 
 ## Profiles and User Accounts {#profiles-and-user-accounts}
 
-Profiles are stored in the Content Repository as part of the[user account](/help/sites-administering/user-group-ac-admin.md).
+プロファイルは、[ユーザーアカウント](/help/sites-administering/user-group-ac-admin.md)の一部としてContent Repositoryに保存されます。
 
-The profile can be found under `/home/users/geometrixx`:
+プロファイルは`/home/users/geometrixx`の下にあります。
 
 ![chlimage_1-138](assets/chlimage_1-138.png)
 
@@ -204,7 +204,7 @@ The profile can be found under `/home/users/geometrixx`:
 
 このようなアクセスがインストール環境に適していない場合は、デフォルト設定を変更できます。
 
-This can be done using the **[Access Control](/help/sites-administering/user-group-ac-admin.md#access-right-management)** tab:
+これは、**[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)**&#x200B;タブを使用して行うことができます。
 
 ![aclmanager](assets/aclmanager.png)
 
