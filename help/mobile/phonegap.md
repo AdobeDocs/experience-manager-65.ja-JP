@@ -31,9 +31,9 @@ Adobe Experience Manager（AEM）Mobile は、完全な AEM プラットフォ�
 * **開発者**
 * **作成者**
 
-## PhoneGap アプリケーションのオーサリング {#authoring-phonegap-applications}
+## PhoneGap アプリケーションのオーサリング  {#authoring-phonegap-applications}
 
-***AEM作成者* (または *Marketer***)は、標準搭載されたテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加を行えます。
+***AEM Author*（または&#x200B;*Marketer*）**は、標準搭載のテンプレートやコンポーネントを使用して、ページの追加や編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加を行うことができます。
 
 まずは以下のリソースを参照してください。
 
