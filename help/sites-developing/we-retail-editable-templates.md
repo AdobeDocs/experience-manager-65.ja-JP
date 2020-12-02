@@ -24,14 +24,14 @@ ht-degree: 86%
 
 We.Retail のページはすべて編集可能テンプレートに基づいており、開発者以外のユーザーがテンプレートを変更したり、カスタマイズしたりできます。
 
-## 試してみる {#trying-it-out}
+## 試してみる  {#trying-it-out}
 
 1. 言語マスターブランチの装備ページを編集します。
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
 1. モードセレクターにデザインモードがなくなったことを確認します。We.Retail のページはすべて編集可能テンプレートに基づいています。編集可能テンプレートのデザインを変更するには、テンプレートエディターで編集する必要があります。
-1. From the **Page information** menu select **Edit Template**.
+1. **ページ情報**&#x200B;メニューから、「**テンプレートを編集**」を選択します。
 1. 現在編集しているのはヒーローページテンプレートです。
 
    ページの構造モードにより、テンプレートの構造を変更できます。これには、例えば、レイアウトコンテナで使用可能なコンポーネントが含まれます。
@@ -72,9 +72,9 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
    テンプレートのレイアウトを定義するには、通常のページと同様に、**レイアウト**&#x200B;モードを使用できます。
 
-## 詳細情報 {#more-information}
+## 詳細情報  {#more-information}
 
-For further information please refer to the authoring document [Creating Page Templates](/help/sites-authoring/templates.md) or the developer document Page [Templates - Editable](/help/sites-developing/page-templates-editable.md) for complete technical details on editable templates.
+編集可能なテンプレートの技術的な詳細については、オーサリングドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者向けドキュメントページ[テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
 
-また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。See the authoring document [Core Components](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) for an overview of the capabilities of the core components and the developer document [Developing Core Components](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) for a technical overview.
+また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。技術的な概要については、オーサリングドキュメント[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)および開発者向けドキュメント[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
 
