@@ -35,13 +35,13 @@ Workspace の検索テンプレート定義とグローバル設定は、読み�
 >
 >グローバル設定ファイルのイベントプロパティを変更した場合は、サーバーを再起動する必要があります。
 
-## 検索テンプレート定義の読み込み {#import-a-search-template-definition}
+## 検索テンプレート定義の読み込み  {#import-a-search-template-definition}
 
 1. 管理コンソールで、サービス／Workspace／グローバル管理をクリックします。
 1. 「検索テンプレート定義を読み込む」ボックスで、「ファイルを選択」をクリックし、検索テンプレートを選択します。読み込むことができるのは、Workspace のインスタンスから書き出された検索テンプレート定義だけです。
 1. 「読み込み」をクリックします。
 
-## 検索テンプレート定義の書き出し {#export-a-search-template-definition}
+## 検索テンプレート定義の書き出し  {#export-a-search-template-definition}
 
 1. グローバル管理ページの「検索テンプレート定義を書き出し」で、「すべてを一覧表示」をクリックします。
 1. 検索テンプレートのリストで、書き出すテンプレートを選択します。
@@ -52,17 +52,17 @@ Workspace の検索テンプレート定義とグローバル設定は、読み�
 
 1. 「書き出し」をクリックし、ファイルを、使用しているコンピューターに保存します。
 
-## グローバル設定の読み込み {#import-global-settings}
+## グローバル設定の読み込み  {#import-global-settings}
 
 1. グローバル管理ページの「グローバル設定を読み込む」で、「ファイルを選択」をクリックし、グローバル設定ファイルを選択します。グローバル設定ファイルは、XML 形式である必要があります。
 1. 「読み込み」をクリックします。
 
-## グローバル設定の書き出し {#export-global-settings}
+## グローバル設定の書き出し  {#export-global-settings}
 
 1. グローバル管理ページの「グローバル設定を書き出し」で、「書き出し」をクリックします。
 1. ファイルを、使用しているコンピューターに保存します。
 
-## Workspace グローバル設定 {#workspace-global-settings}
+## Workspace グローバル設定  {#workspace-global-settings}
 
 グローバル設定ファイルは変更できます。ただし、編集が必要になる可能性があるのは JChannelConnectionProperties、formViewOnly、および specialRoutes の設定だけです。
 
@@ -72,28 +72,28 @@ Workspace の検索テンプレート定義とグローバル設定は、読み�
 
 Workspace グローバル設定ファイルには、次の設定が含まれます。
 
-### specialRoutes 設定 {#specialroutes-settings}
+### specialRoutes 設定  {#specialroutes-settings}
 
 *specialRoutes* 設定では、Workspace での特別なルート、承認および拒否のプロパティを指定します。場合によっては、Workspace のタスクカードにこれらのルートのボタンが表示され、ユーザーがフォームを開かずにルートを選択できます。グローバル設定ファイルで specialRoutes 設定を変更して、承認または拒否の対象となるカスタマイズされた名前を追加したり、追加ルートを作成したりすることができます。
 
-**client_specialRoutes_routes_approve_style:** Workspaceテーマで検索されるスタイルの名前です。このテーマは、承認ボタンアイコンを識別します。 スタイルには、有効になっているアイコンと無効になっているアイコンの値を含める必要があります。カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }`Workspace の CSS ファイルは workspace-theme.swf ファイルに埋め込まれます。このファイルは、adobe-workspace-client.ear の adobe-workspace-client.war ファイル内にあります。Workspace の外観を変更するには、workspace-theme.swf ファイルを再コンパイルする必要があります。
+**client_specialRoutes_routes_approve_style:** Workspaceテーマ内にあるスタイルの名前で、承認ボタンのアイコンを識別します。スタイルには、有効になっているアイコンと無効になっているアイコンの値を含める必要があります。カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }`Workspace の CSS ファイルは workspace-theme.swf ファイルに埋め込まれます。このファイルは、adobe-workspace-client.ear の adobe-workspace-client.war ファイル内にあります。Workspace の外観を変更するには、workspace-theme.swf ファイルを再コンパイルする必要があります。
 
-**client_specialRoutes_routes_deny_names:** 「拒否」と解釈されるためにWorkbenchユーザーが使用できる様々な文字列です。 これらの文字列では、大文字と小文字が区別されます。例えば、デフォルト値は「deny」です。Workbench ユーザーのプロセスで「Deny」という単語が使用された場合、この単語は認識されません。ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Deny」という単語をこの設定に追加する必要があります。
+**client_specialRoutes_routes_deny_names:** Workbenchユーザーが「拒否」として解釈するために使用できる様々な文字列です。これらの文字列では、大文字と小文字が区別されます。例えば、デフォルト値は「deny」です。Workbench ユーザーのプロセスで「Deny」という単語が使用された場合、この単語は認識されません。ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Deny」という単語をこの設定に追加する必要があります。
 
-**client_specialRoutes_routes_deny_style:** Workspaceテーマファイル内にあるスタイルの名前です。これにより、拒否ボタンアイコンを識別します。 スタイルには、有効になっているアイコンと無効になっているアイコンの値を含める必要があります。カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
-`  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }` **client_specialRoutes_routes_approve_names:** 「承認」として解釈されるためにWorkbenchユーザーが使用できる様々な文字列です。 これらの文字列では、大文字と小文字が区別されます。例えば、デフォルト値は、「approve」です。Workbench ユーザーのプロセスで「Approve」という単語が使用された場合、この単語は認識されません。ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Approve」という単語をこの設定に追加する必要があります。
+**client_specialRoutes_routes_deny_style:** Workspaceテーマファイル内にあるスタイルの名前で、拒否ボタンのアイコンを識別します。スタイルには、有効になっているアイコンと無効になっているアイコンの値を含める必要があります。カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。 
+`  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }` **client_specialRoutes_routes_approve_names:「承認」** として解釈されるためにWorkbenchユーザーが使用できる様々な文字列です。これらの文字列では、大文字と小文字が区別されます。例えば、デフォルト値は、「approve」です。Workbench ユーザーのプロセスで「Approve」という単語が使用された場合、この単語は認識されません。ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Approve」という単語をこの設定に追加する必要があります。
 
-**client_specialRoutes_names:** リソースファイルからカスタマイズされた文字列値を検索するために使用されるキーです。 この設定の各エントリには、名前およびスタイルの値を含める必要があります。
+**client_specialRoutes_names：リソースファイル** からカスタマイズされた文字列値を検索するために使用されるキー。この設定の各エントリには、名前およびスタイルの値を含める必要があります。
 
-### JGroup 設定 {#jgroup-settings}
+### JGroup 設定  {#jgroup-settings}
 
 これらの設定は、Adobe LiveCycle ES 2.5 またはそれより前のバージョンからアップグレードした場合のみ表示されます。
 
-**server_remoteevents_ClientTimeoutMilliseconds:** JGroupがイベントメッセージを待機する最大時間です。 この設定は変更しないでください。
+**server_remoteevents_ClientTimeoutMilliseconds:JGroupがイベントメッセージ** を待機する最大時間。この設定は変更しないでください。
 
-**server_remoteevents_ServerTimeoutMilliseconds:** サーバーでJGroupメッセージを受信するためのタイムアウトです。 このオプションで、サーバーからクライアントにメッセージを送信する際の遅延を設定します。
+**server_remoteevents_ServerTimeoutMilliseconds：サ** ーバーでJGroupメッセージを受信するためのタイムアウト。このオプションで、サーバーからクライアントにメッセージを送信する際の遅延を設定します。
 
-**server_remoteevents_JChannelConnectionProperties:** (サービスイベントがRemoteEventサービスによって処理される)サーバーとWorkspaceのすべてのインスタンスとの通信に使用されるJGroupの接続プロパティです。
+**server_remoteevents_JChannelConnectionProperties：サ** ービスイベントがRemoteEventサービスによって処理されるサーバーとWorkspaceのすべてのインスタンス間の通信に使用されるJGroupの接続プロパティ。
 
 マルチキャスト IP アドレス（mcast_addr）、マルチキャスト IP ポート（mcast_port）およびマルチキャストパケットの TTL（ip_ttl）について、UDP 値を変更する必要がある場合があります。デフォルトでは、マルチキャスト IP アドレスとポートの値は、任意の順序で生成され、通常、これらの値を変更する必要はありません。ただし、会社にマルチキャスト IP アドレスに対する特定のマルチキャストの範囲に関するネットワークポリシーがある場合は、これらの値の変更が必要になることがあります。
 
@@ -103,31 +103,31 @@ Workspace グローバル設定ファイルには、次の設定が含まれま�
 
 この設定の残りのプロパティは変更しないでください。
 
-**server_remoteevents_JGroupName:** リモートイベント通信に使用するJGroupの名前です。 この値は、ランダムに生成され、クラスター内の競合を回避します。この値は変更しないでください。
+**server_remoteevents_JGroupName：リモ** ートイベント通信に使用するJGroupの名前。この値は、ランダムに生成され、クラスター内の競合を回避します。この値は変更しないでください。
 
 JGroups および Workspace について詳しくは、「[JGroups と AEM Forms Workspace - 説明](https://blogs.adobe.com/livecycle/2011/03/jgroups-and-livecycle-workspace-explained.html)」を参照してください。
 
-### formView 設定 {#formview-settings}
+### formView 設定  {#formview-settings}
 
-**client_formView_openFormInFullScreen:** Workspaceですべてのフォームをフルスクリーンモードで表示するには、このオプションをtrueに設定します。 このオプションのデフォルトは false に設定されており、フォームはフルスクリーンモードで表示されません。User サービスには、タスクと関連付けられたドキュメントをフルスクリーンモードで開くオプションがあります。このオプションを使用すると、プロセスごとに表示を制御できます。
+**client_formView_openFormInFullScreen:Workspaceですべてのフォーム** をフルスクリーンモードで表示するには、このオプションをtrueに設定します。このオプションのデフォルトは false に設定されており、フォームはフルスクリーンモードで表示されません。User サービスには、タスクと関連付けられたドキュメントをフルスクリーンモードで開くオプションがあります。このオプションを使用すると、プロセスごとに表示を制御できます。
 
-**client_routes_formViewOnly:** Trueに設定すると、ルートはWorkspaceのカード表示またはリスト表示に表示されません。 デフォルト値は False で、ルートはカード表示およびリスト表示に表示されます。
+**client_routes_formViewOnly:** Trueに設定すると、ルートはWorkspaceのカード表示またはリスト表示に表示されません。デフォルト値は False で、ルートはカード表示およびリスト表示に表示されます。
 
 ### その他の設定 {#other-settings}
 
-**client_mimeTypes_openOutsideBrowser:** Workspaceブラウザーインスタンスの外部で開くドキュメントのMIMEタイプです。 組織のプロセスに追加の MIME タイプが必要な場合はここで指定します。デフォルト値は次のとおりです。
+**client_mimeTypes_openOutsideBrowser:Workspaceブラウザ** ーインスタンスの外部で開くドキュメントのMIMEタイプ。組織のプロセスに追加の MIME タイプが必要な場合はここで指定します。デフォルト値は次のとおりです。
 
 * `application/msword`
 * `application/msexcel`
 * `application/ms-powerpoint`
 
-**client_customUI_caching:** カスタムタスクユーザーインターフェイスをキャッシュします。
+**client_customUI_caching：カスタムタスクユーザーインターフェイスを** キャッシュします。
 
-**server_debugLevel:** この設定は変更しないでください。
+**server_debugLevel：こ** の設定は変更しないでください。
 
-**client_pollingInterval:** 新しいタスクおよび変更されたを検出するために、(JEE上のAEM formsでは廃止されています)Flexワークスペースで使用されるポーリング間隔（秒）を設定します。 デフォルト値は 3 秒です。これは AEM Forms Workspace では動作しません。
+**client_pollingInterval：新しいタスクおよび変更された** を検出するために、(JEE上のAEM formsでは廃止されています)Flexワークスペースで使用されるポーリング間隔（秒）を設定します。デフォルト値は 3 秒です。これは AEM Forms Workspace では動作しません。
 
-**client_systemContext_name:** AEM Formsワークスペースのタスクの添付ファイルに対して（「添付ファイル」タブの）「追加者」フィールドに表示するカスタム名（例：市民）を指定します。
+**client_systemContext_name:AEM Formsワークスペースのタスクの添付ファイルに対して「追加者」フィールド（「添付ファイル」タブ）に表示するカスタム名（市民など）を** 指定します。
 
 カスタム名を定義するには：
 
@@ -137,4 +137,4 @@ JGroups および Workspace について詳しくは、「[JGroups と AEM Forms
 >
 >Demo アプリケーションでは、デフォルトの表示名は&#x200B;**市民**&#x200B;です。作成するカスタムアプリケーションでは、デフォルトの表示名は「**システムコンテキストアカウント**」です。
 >
->**client_idleTimeout:** ユーザーが特定の時間非アクティブのままの場合、AEM Formsワークスペースセッションの有効期限が切れます。 この機能を有効にするには、グローバル設定&lt;client_idleTimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idleTimeout>にエントリを追加します。 値0を指定すると、アイドルタイムアウトが無効になります。 時間は秒単位で指定します。
+>**client_idleTimeout：ユーザーが一定時間非アクティブのままの** 場合、AEM Formsワークスペースセッションの有効期限が切れます。この機能を有効にするには、グローバル設定&lt;client_idleTimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idleTimeout>にエントリを追加します。 値0を指定すると、アイドルタイムアウトが無効になります。 時間は秒単位で指定します。
