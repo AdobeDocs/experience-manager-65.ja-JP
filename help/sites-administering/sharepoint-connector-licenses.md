@@ -23,7 +23,7 @@ ht-degree: 75%
 
 この節では、Day JCR Connector for MS SharePoint に関して明示的に記載する必要があるすべてのライセンス、著作権情報および免責事項について説明します。
 
-## Connector のサードパーティのライブラリの概要 {#overview-of-connector-rd-party-libraries}
+## Connector のサードパーティのライブラリの概要  {#overview-of-connector-rd-party-libraries}
 
 以下の表に、SharePoint Connector のコアライブラリ内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報または免責事項を示します。
 
@@ -99,7 +99,7 @@ ht-degree: 75%
   </tr>
   <tr>
    <td>concurrent-1.3.4.jar</td>
-   <td><a href="#concurrent">Concurrent</a></td>
+   <td><a href="#concurrent">同時</a></td>
   </tr>
   <tr>
    <td>derby-10.1.2.1.jar</td>
