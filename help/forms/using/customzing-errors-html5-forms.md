@@ -38,8 +38,8 @@ ht-degree: 78%
 
 エラーメッセージの位置をカスタマイズするには、各エラーおよび警告フィールドごとに &lt;div> タグを追加し、&lt;div> タグを左側または右側に配置して &lt;div> タグに CSS スタイルを適用します。詳しくは、次の手順を参照してください。
 
-1. Navigate to the `CustomErrorManager-1.0-SNAPSHOT`folder and open the `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` folder.
-1. Open the `customErrorManager.js` file for editing. The `markError` function in the file accepts the following parameters:
+1. `CustomErrorManager-1.0-SNAPSHOT`フォルダーに移動し、`etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`フォルダーを開きます。
+1. `customErrorManager.js`ファイルを開いて編集します。 ファイル内の`markError`関数は次のパラメーターを受け付けます。
 
    |  |  |
    |---|---|
