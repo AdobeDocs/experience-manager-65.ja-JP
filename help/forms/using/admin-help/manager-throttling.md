@@ -22,13 +22,13 @@ ht-degree: 96%
 
 AEM Forms（および以前のバージョン）では、非同期に操作を実行するために JMS キューを使用していました。AEM Forms では、JMS キューはワークマネージャーに置き換えられました。ここでは、ワークマネージャーに関する背景について、およびワークマネージャーのスロットリングオプションを設定する場合の手順について説明します。
 
-## 有効期間が長い（同期）操作について {#about-long-lived-asynchronous-operations}
+## 有効期間が長い（同期）操作について  {#about-long-lived-asynchronous-operations}
 
 AEM Forms では、サービスによって実行される操作には、有効期間が短い（同期）操作または有効期間が長い（非同期）操作があります。有効期間が短い操作は、呼び出された同じスレッドで同期して完了します。また、応答が完了してから続行します。
 
 有効期間が長い操作は、複数のシステムにまたがったり、さらには組織を越えて展開したりします。例えば、複数の自動タスクおよび手動タスクを統合する大規模なソリューションの一部として、顧客がローン申し込みフォームに入力して送信する場合などです。このような操作は応答を待つ間続きます。有効期間が長い操作は、基礎となる作業を非同期に実行し、本来であれば完了まで待つ必要があったリソースの実行を可能にします。有効期間が短い操作とは異なり、有効期間が長い操作が呼び出されると、ワークマネージャーはその完了を考慮しません。システムが同じサービス上の別の操作を要求したり、ユーザーがフォームを送信したりするなど、別の外部のトリガーによって操作の完了が発生します。
 
-## ワークマネージャーについて {#about-work-manager}
+## ワークマネージャーについて  {#about-work-manager}
 
 AEM Forms（および以前のバージョン）では、非同期に操作を実行するために JMS キューを使用していました。AEM Forms では、ワークマネージャーを使用して、非同期操作をスケジュールし、管理されたスレッドを介して操作を実行します。
 
@@ -40,7 +40,7 @@ AEM Forms（および以前のバージョン）では、非同期に操作を�
 
 AEM forms 管理者は、ヘルスモニターを使用してワークマネージャーの統計情報（キュー内の作業項目数やそのステータスなど）を調べることができます。また、ヘルスモニターは、作業項目の一時停止、再開、再試行または削除にも使用できます（[ワークマネージャーに関連する統計情報の表示](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager)を参照）。
 
-## ワークマネージャーのスロットリングオプションの設定 {#configuring-work-manager-throttling-options}
+## ワークマネージャーのスロットリングオプションの設定  {#configuring-work-manager-throttling-options}
 
 ワークマネージャーのスロットリングは、使用できるメモリリソースが十分にある場合にのみ作業項目をスケジュールするように設定できます。スロットリングを設定するには、アプリケーションサーバーで次の JVM オプションを設定します。
 
@@ -82,12 +82,12 @@ AEM forms 管理者は、ヘルスモニターを使用してワークマネー�
 **JBoss への Java オプションの追加**
 
 1. JBoss アプリケーションサーバーを停止します。
-1. Open the *[appserver root]*/bin/run.bat (Windows) or run.sh (Linux or UNIX) in an editor and add any of the Java options as required, in the format `-Dproperty=value`.
+1. *[appserver root]*/bin/run.bat(Windows)またはrun.sh（LinuxまたはUNIX）をエディターで開き、必要に応じて`-Dproperty=value`の形式でJavaオプションを追加します。
 1. サーバーを再起動します。
 
 **WebLogic への Java オプションの追加**
 
-1. Start the WebLogic Administration Console by typing `https://[host name]:[port]/console` in a web browser.
+1. Webブラウザーに`https://[host name]:[port]/console`と入力して、WebLogic管理コンソールを開始します。
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
