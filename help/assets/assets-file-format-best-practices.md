@@ -1,6 +1,6 @@
 ---
 title: サポートされるファイル形式を処理するためのベストプラクティス
-description: を使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティス [!DNL Experience Manager Assets]。
+description: ' [!DNL Experience Manager Assets]を使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティスです。'
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
@@ -13,21 +13,21 @@ ht-degree: 47%
 
 # Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
 
-[!DNL Adobe Experience Manager Assets] はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。The supported Adobe libraries include, [!DNL Adobe Camera Raw], Gibson, Adobe PDF Rasterizer, and [!DNL Adobe InDesign Server]. また、は、、などのサードパーティライブラリを [!DNL Experience Manager Assets] サポートし [!DNL ImageMagick]て [!DNL TwelveMonkeys]います。
+[!DNL Adobe Experience Manager Assets] はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。サポートされるAdobeライブラリは、[!DNL Adobe Camera Raw]、Gibson、Gibson、Gibserizer、[!DNL Adobe InDesign Server]です。 また、[!DNL Experience Manager Assets]は、[!DNL ImageMagick]、[!DNL TwelveMonkeys]などのサードパーティライブラリをサポートしています。
 
 サポートされるファイル形式については、[アセットでサポートされるファイル形式](/help/assets/assets-formats.md)を参照してください。
 
 >[!TIP]
 >
->If you are using [!DNL Experience Manager] on Adobe Managed Services (AMS), reach out to Adobe Customer Care if you plan to process lots of large PSD or PSB files. AMS導入のためのこれらのベストプラクティスを実装し、Adobe独自の形式に対して可能な限り最適なツールとモデルを選択するには、Adobeカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] は、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
+>Adobe Managed Services(AMS)で[!DNL Experience Manager]を使用している場合は、大量のPSDファイルまたはPSBファイルを処理する予定の場合は、Adobeカスタマーケアにお問い合わせください。 AMS導入のためのこれらのベストプラクティスを実装し、Adobe独自の形式に対して可能な限り最適なツールとモデルを選択するには、Adobeカスタマーケアの担当者にご相談ください。 [!DNL Experience Manager] は、30000 x 23000ピクセルを超える高解像度PSBファイルを処理できない場合があります。
 
-## [!DNL Adobe Camera Raw] ライブラリ {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw] ライブラリ  {#adobe-camera-raw-library}
 
-最適なパフォーマンスを得るために、Adobeでは、RAWファイルとDNGファイルに [!DNL Adobe Camera Raw] ライブラリを使用することをお勧めします。
+最適なパフォーマンスを得るために、AdobeではRAWファイルとDNGファイルに[!DNL Adobe Camera Raw]ライブラリを使用することをお勧めします。
 
-[!DNL Adobe Camera Raw] ライブラリは、入力としてCMYKカラープロファイルをサポートしています。 ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
+[!DNL Adobe Camera Raw] ライブラリは、入力としてCMYKカラープロファイルをサポートしています。ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
 
-詳しくは、「 [サポートCamera Raw」を参照してください](/help/assets/camera-raw.md)。
+詳しくは、[Camera Rawサポート](/help/assets/camera-raw.md)を参照してください。
 
 ## Adobe PDF Rasterizer ライブラリ {#adobe-pdf-rasterizer-library}
 
@@ -41,13 +41,13 @@ PDF Rasterizer を使用して生成されたサムネールやプレビュー�
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
-Adobe recommends that you use [!DNL Adobe InDesign Server] to extract [!DNL Adobe InDesign]-specific renditions, such as IDML and HTML. For more information, see [Adding Experience Manager assets as references in Adobe InDesign](/help/assets/managing-linked-subassets.md#refai).
+Adobeでは、[!DNL Adobe InDesign Server]を使用して、IDMLやHTMLなどの[!DNL Adobe InDesign]固有のレンディションを抽出することをお勧めします。 詳しくは、[Adobe InDesign](/help/assets/managing-linked-subassets.md#refai)のExperience Managerアセットを参照として追加するを参照してください。
 
 ## [!DNL Dynamic Media] {#dynamic-media}
 
-[!DNL Dynamic Media] は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。For details around enabling [!DNL Dynamic Media], see [Configuring Dynamic Media](/help/assets/config-dynamic.md).
+[!DNL Dynamic Media] は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。[!DNL Dynamic Media]の有効化について詳しくは、[ダイナミックメディアの設定](/help/assets/config-dynamic.md)を参照してください。
 
-Currently, [!DNL Dynamic Media] can support videos up to 15 GB of content per file.
+現在、[!DNL Dynamic Media]は1ファイルあたり最大15 GBのコンテンツのビデオをサポートできます。
 
 ## ImageMagick ライブラリ {#imagemagick-library}
 
@@ -58,9 +58,9 @@ Currently, [!DNL Dynamic Media] can support videos up to 15 GB of content per fi
 * 透明性を保持するとき.
 * PSD および PSB ファイルを処理するとき.
 
-To know how to set up the [!DNL ImageMagick] library in [!DNL Experience Manager], see [Using ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). 最適な使用方法については、[ImageMagick の設定のベストプラクティス](/help/assets/best-practices-for-imagemagick.md)を参照してください。
+[!DNL Experience Manager]で[!DNL ImageMagick]ライブラリを設定する方法について詳しくは、[ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)の使用を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](/help/assets/best-practices-for-imagemagick.md)を参照してください。
 
-## 画像トランスコーディングライブラリ {#image-transcoding-library}
+## 画像トランスコーディングライブラリ  {#image-transcoding-library}
 
 Imaging Transcoding Libraryは、画像のエンコーディング、トランスコード、再サンプリング、サイズ変更など、主要なAdobe処理機能を実行する画像処理ソリューションです。
 
@@ -74,4 +74,4 @@ Imaging Transcoding Libraryは、画像のエンコーディング、トラン�
 * ICO
 * ICN
 
-For details, see [Imaging Transcoding Library](/help/assets/imaging-transcoding-library.md).
+詳しくは、[イメージングトランスコードライブラリ](/help/assets/imaging-transcoding-library.md)を参照してください。
