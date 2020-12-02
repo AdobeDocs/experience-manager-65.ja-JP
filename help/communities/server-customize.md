@@ -18,7 +18,7 @@ ht-degree: 74%
 ---
 
 
-# サーバー側のカスタマイズ {#server-side-customization}
+# サーバー側のカスタマイズ  {#server-side-customization}
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[クライアント側のカスタマイズ ⇒](client-customize.md)** |
 |---|---|
@@ -30,13 +30,13 @@ ht-degree: 74%
 >
 >Communities API のパッケージの場所は、次のメジャーリリースにアップグレードされる際に変更されることがあります。
 
-### SocialComponent インターフェイス {#socialcomponent-interface}
+### SocialComponent インターフェイス  {#socialcomponent-interface}
 
 SocialComponent は、AEM Communities 機能のリソースを表す POJO です。各SocialComponentは、特定のresourceTypeを表し、GETterが公開されてリソースが正確に表示されるようにするのが理想的です。 必要に応じて、すべてのビジネスロジックと表示ロジックがSocialComponentにカプセル化されます。この中には、サイト訪問者のセッション情報も含まれます。
 
 このインターフェイスは、リソースを表すために必要な GETter の基本セットを定義します。重要なことは、インターフェイスは、Handlebars テンプレートをレンダリングしリソースの GET JSON エンドポイントを公開するために必要な、Map&lt;String, Object> getAsMap() および String toJSONString() メソッドを規定するということです。
 
-All SocialComponent classes must implement the interface `com.adobe.cq.social.scf.SocialComponent`
+すべてのSocialComponentクラスは、インターフェイス`com.adobe.cq.social.scf.SocialComponent`を実装する必要があります
 
 ### SocialCollectionComponent インターフェイス {#socialcollectioncomponent-interface}
 
@@ -78,9 +78,9 @@ HTTP API POST エンドポイントは、`SlingPostOperation` インターフェ
 
 #### SocialOperation クラス {#socialoperation-class}
 
-Each `SocialOperation` endpoint extends the AbstractSocialOperation class and overrides the method `performOperation()`. このメソッドは、操作の完了に必要なすべてのアクションを実行し、`SocialOperationResult` を返すか、または `OperationException` をスローします。後者の場合は、HTTP エラーステータスとメッセージ（使用可能な場合）が、通常の JSON 応答または成功 HTTP ステータスコードの代わりに返されます。
+各`SocialOperation`エンドポイントは、AbstractSocialOperationクラスを拡張し、メソッド`performOperation()`を上書きします。 このメソッドは、操作の完了に必要なすべてのアクションを実行し、`SocialOperationResult` を返すか、または `OperationException` をスローします。後者の場合は、HTTP エラーステータスとメッセージ（使用可能な場合）が、通常の JSON 応答または成功 HTTP ステータスコードの代わりに返されます。
 
-Extending `AbstractSocialOperation` makes possible the reuse of `SocialComponents` to send JSON responses.
+`AbstractSocialOperation`を拡張すると、JSON応答を送信するために`SocialComponents`を再利用できます。
 
 #### SocialOperationResult クラス {#socialoperationresult-class}
 
@@ -96,13 +96,13 @@ Extending `AbstractSocialOperation` makes possible the reuse of `SocialComponent
 * 更新操作の場合は 200
 * 削除操作の場合は 204
 
-#### OperationException クラス {#operationexception-class}
+#### OperationException クラス  {#operationexception-class}
 
 `OperationExcepton` は、操作の実行時に、要求が無効であるかその他のエラーが発生した場合に（内部エラー、不正なパラメーター値、不適切な権限など）スローされることがあります。`OperationException` は、HTTP ステータスコードおよびエラーメッセージで構成され、これらは `PostOperatoin` に対する応答としてクライアントに返されます。
 
 #### OperationService クラス {#operationservice-class}
 
-The social component framework recommends that the business logic responsible for performing the operation not be implemented within the `SocialOperation` class, but instead delegated to an OSGi service. ビジネスロジックの OSGi サービスを使用すると、`SocialComponent`（`SocialOperation` エンドポイントの影響を受ける）を他のコードと統合でき、異なるビジネスロジックを適用できます。
+Socialコンポーネントフレームワークでは、操作を実行するビジネスロジックを`SocialOperation`クラス内に実装せず、代わりにOSGiサービスに委任することをお勧めします。 ビジネスロジックの OSGi サービスを使用すると、`SocialComponent`（`SocialOperation` エンドポイントの影響を受ける）を他のコードと統合でき、異なるビジネスロジックを適用できます。
 
 すべての `OperationService` クラスは `AbstractOperationService` を拡張し、実行される操作に関連付けることができる追加拡張を可能にします。サービス内の各操作は `SocialOperation` クラスによって表されます。`OperationExtensions` クラスは、操作の実行中に以下のメソッドを呼び出すことによって呼び出すことができます。
 
@@ -117,15 +117,15 @@ The social component framework recommends that the business logic responsible fo
 
 `OperationExtension` クラスは、操作に挿入できるコードのカスタム部分であり、ビジネスニーズに合うように操作をカスタマイズできます。コンポーネントのユーザーは、動的および増分的にコンポーネントに機能を追加できます。拡張／フックパターンにより、開発者は拡張自体に集中でき、操作およびコンポーネント全体をコピーして上書きする必要はなくなります。
 
-## サンプルコード {#sample-code}
+## サンプルコード  {#sample-code}
 
-サンプルコードを [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで入手できます。Search for projects prefixed with either `aem-communities` or `aem-scf`.
+サンプルコードを [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで入手できます。プレフィックスが`aem-communities`または`aem-scf`のプロジェクトを検索します。
 
 ## ベストプラクティス {#best-practices}
 
 AEM Communities 開発者向けの様々なコーディングガイドラインおよびベストプラクティスについては、[コーディングのガイドライン](code-guide.md)の節を参照してください。
 
-See also [Storage Resource Provider (SRP) for UGC](srp.md) to learn about accessing user generated content.
+ユーザ生成コンテンツへのアクセスについては、[UGC](srp.md)のストレージリソースプロバイダー(SRP)も参照してください。
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[クライアント側のカスタマイズ ⇒](client-customize.md)** |
 |---|---|
