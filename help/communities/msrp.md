@@ -32,7 +32,7 @@ MSRPを共通ストアとして使用するようにAEM Communitiesが設定さ�
 
    * バージョン2.6以降
    * Mongoや共有を設定する必要がない
-   * Strongly recommend use of a [replica set](#mongoreplicaset)
+   * [レプリカセット](#mongoreplicaset)の使用を強くお勧めします
    * AEMと同じホスト上で実行するか、リモートで実行可能
 
 * [Apache Solr](https://lucene.apache.org/solr/)：
@@ -47,19 +47,19 @@ MSRPを共通ストアとして使用するようにAEM Communitiesが設定さ�
       * [標準の MLS のインストール](solr.md#installing-standard-mls)
       * [高度な MLS のインストール](solr.md#installing-advanced-mls)
 
-## MongoDB 設定 {#mongodb-configuration}
+## MongoDB 設定  {#mongodb-configuration}
 
 ### MSRP の選択 {#select-msrp}
 
-[ストレージ設定コンソール](srp-config.md) では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
+[ストレージ設定コンソール](srp-config.md)では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 オーサー環境でストレージ設定コンソールにアクセスするには:
 
-* From global navigation, select **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**.
+* グローバルナビゲーションから、**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL ストレージ設定]**&#x200B;を選択します。
 
 ![msrp](assets/msrp.png)
 
-* Select **[!UICONTROL MongoDB Storage Resource Provider (MSRP)]**
+* **[!UICONTROL MongoDBストレージリソースプロバイダー(MSRP)]**&#x200B;を選択します
 * **[!UICONTROL MongoDB 設定]**
 
    * **[!UICONTROL MongoDB URI]**
@@ -82,12 +82,12 @@ MSRPを共通ストアとして使用するようにAEM Communitiesが設定さ�
 
    * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper ホスト**
 
-      When running in [SolrCloud mode](solr.md#solrcloud-mode) with an external ZooKeeper, set this value to the `HOST:PORT` for the ZooKeeper, such as *my.server.com:2181*
+      [SolrCloudモード](solr.md#solrcloud-mode)で外部のZooKeeperと共に実行する場合、*my.server.com:2181*&#x200B;のように、この値をZooKeeperの`HOST:PORT`に設定します。
 
-      ZooKeeperアンサンブルの場合は、 `HOST:PORT` host1:2181,host2:2181など、コンマで区切った *値を入力します*
+      ZooKeeperアンサンブルの場合は、*host1:2181,host2:2181*&#x200B;のように、コンマ区切りの`HOST:PORT`値を入力します
 
       内部ZooKeeperを使用してスタンドアロンモードでSolrを実行する場合は、空白のままにします。
-      *デフォルト*: *&lt;空白>*
+      *デフォルト*:  *&lt;blank>*
 
       * **[!UICONTROL Solr URL]**スタンドアロンモードで Solr と通信するために使用する URL。SolrCloud モードで実行している場合は、空白のままにします。
 
@@ -97,11 +97,11 @@ MSRPを共通ストアとして使用するようにAEM Communitiesが設定さ�
 
          *デフォルト*:collection1
 
-* Select **[!UICONTROL Submit]**
+* **[!UICONTROL 送信]**&#x200B;を選択
 
 >[!NOTE]
 >
->mongoDB データベース（デフォルトの名前は `communities`）を、[ノードストアまたはデータ（バイナリ）ストア](../../help/sites-deploying/data-store-config.md)で使用されているデータベースの名前に設定することはできません。See also [Storage Elements in AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
+>mongoDB データベース（デフォルトの名前は `communities`）を、[ノードストアまたはデータ（バイナリ）ストア](../../help/sites-deploying/data-store-config.md)で使用されているデータベースの名前に設定することはできません。AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md)の[ストレージ要素も参照してください。
 
 ### MongoDB レプリカセット {#mongodb-replica-set}
 
@@ -111,7 +111,7 @@ MSRPを共通ストアとして使用するようにAEM Communitiesが設定さ�
 
 レプリカセットの操作と、アプリケーションと MongoDB のインスタンスとの間の接続を定義する方法については、MongoDB の[接続文字列の URI フォーマット](https://docs.mongodb.org/manual/reference/connection-string/)に関するドキュメントを参照してください。
 
-#### レプリカセットに接続するための URL の例  {#example-url-for-connecting-to-a-replica-set}
+#### レプリカセットに接続するための URL の例   {#example-url-for-connecting-to-a-replica-set}
 
 ```shell
 # Example url for:
@@ -127,20 +127,20 @@ mongodb://mongoserver1:<mongoport1>,mongoserver2:<mongoport2>,mongoserver3:<mong
 
 Oak と MSRP のコレクションがどちらも高頻度で使用される場合は、パフォーマンス上の理由から 2 つ目の Solr をインストールすることもできます。
 
-For production environments, [SolrCloud mode](solr.md#solrcloud-mode) provides improved performance over standalone mode (a single, local Solr setup).
+実稼働環境では、[SolrCloud mode](solr.md#solrcloud-mode)を使用すると、スタンドアロンモード（ローカルで1つのSolr設定）よりもパフォーマンスが向上します。
 
 設定について詳しくは、[SRP 用の Solr 設定](solr.md)を参照してください。
 
-### アップグレード {#upgrading}
+### アップグレード  {#upgrading}
 
 MSRPを使用して設定された以前のバージョンからアップグレードする場合は、次の操作が必要です。
 
-1. Perform the [upgrade to AEM Communities](upgrade.md)
+1. [AEM Communities](upgrade.md)へのアップグレードを実行
 1. 新しいSolr構成ファイルのインストール
-   * For [standard MLS](solr.md#installing-standard-mls)
-   * For [advanced MLS](solr.md#installing-advanced-mls)
-1. Reindex MSRP
-See section [MSRP Reindex Tool](#msrp-reindex-tool)
+   * [標準MLS](solr.md#installing-standard-mls)の場合
+   * [高度なMLS](solr.md#installing-advanced-mls)用
+1. MSRPの再インデックス
+[MSRP再インデックスツール](#msrp-reindex-tool)を参照
 
 ## 設定の公開 {#publishing-the-configuration}
 
@@ -148,11 +148,11 @@ See section [MSRP Reindex Tool](#msrp-reindex-tool)
 
 同じ設定を発行環境で使用できるようにするには、オーサーインスタンスにログインし、次の手順に従います。
 
-* Navigate from main menu to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**.
-* Select **[!UICONTROL Activate Tree]**
+* メインメニューから&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL レプリケーション]**&#x200B;に移動します。
+* 「**[!UICONTROL ツリーをアクティブにする]**」を選択します。
 * **[!UICONTROL 開始パス]**:
-   * 参照先 `/etc/socialconfig/srpc/`
-* Select **[!UICONTROL Activate]**
+   * `/etc/socialconfig/srpc/`を参照
+* 「**[!UICONTROL アクティブ化]**」を選択します。
 
 ## ユーザーデータの管理 {#managing-user-data}
 
@@ -161,7 +161,7 @@ See section [MSRP Reindex Tool](#msrp-reindex-tool)
 * [ユーザーの同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
 
-## MSRP インデックス再作成ツール {#msrp-reindex-tool}
+## MSRP インデックス再作成ツール  {#msrp-reindex-tool}
 
 新しい設定ファイルをインストールしたり、Solr のインデックスを修復したりするときは、MSRP 用の Solr のインデックス再作成用の HTTP エンドポイントを使用できます。
 
@@ -186,25 +186,25 @@ UGCツリー全体のインデックスを再作成するか、*path *dataパラ
 
 cURL -u *signin* -d *data* *reindex-url*
 
-*signin* = administrator-id:passwordExample:admin:admin
+*signin* = administrator-id:password例：admin:admin
 
 *data* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
-*size* = 1回の操作で再インデックスするUGCエントリの数
+*size* =操作ごとに再インデックスするUGCエントリの数 
 `/content/usergenerated/asi/mongo/`
 
 *path* =再インデックスするUGCツリーのルート位置
 
-* すべてのUGCのインデックスを再作成するには、 `asipath`
+* すべてのUGCのインデックスを再作成するには、`asipath`
    `/etc/socialconfig/srpc/defaultconfiguration`
-* インデックスを一部のUGCに限定するには、 `asipath`
+* インデックスを一部のUGCに限定するには、`asipath`のサブツリーを指定します
 
-*reindex-url* = SRPの再インデックスのエンドポイント
+*reindex-url* = SRPの再インデックスのエンドポイント 
 `http://localhost:4503/services/social/datastore/mongo/reindex`
 
 >[!NOTE]
 >
->If you are [reindexing DSRP Solr](dsrp.md), the URL is **/services/social/datastore/rdb/reindex**
+>[DSRP Solr](dsrp.md)の再インデックスを作成している場合、URLは&#x200B;**/services/social/datastore/rdb/reindex**&#x200B;です。
 
 ### MSRP インデックス再作成の例 {#msrp-reindex-example}
 
@@ -222,16 +222,16 @@ MSRP をデモ用に設定するには、[MongoDB をデモ用に設定する方
 
 ストレージオプションの設定を確認し、MSRP がデフォルトのプロバイダーに設定されているかを確認してください。デフォルトでは、ストレージリソースプロバイダーはJSRPです。
 
-On all author and publish AEM instances, revisit the [Storage Configuration console](srp-config.md) or check the AEM repository:
+すべての作成者および発行AEMインスタンスで、[ストレージ設定コンソール](srp-config.md)に再度アクセスするか、AEMリポジトリを確認します。
 
-* In JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
+* JCRで、[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-   * Does not contain an [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) node, it means the storage provider is JSRP.
-   * If the srpc node exists and contains node [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), the defaultconfiguration&#39;s properties should define MSRP to be the default provider.
+   * [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)ノードを含まない場合、ストレージプロバイダーがJSRPであることを意味します。
+   * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)が含まれる場合、デフォルトの構成のプロパティでMSRPをデフォルトプロバイダーとして定義する必要があります。
 
 ### アップグレード後に UGC が表示されない {#ugc-disappears-after-upgrade}
 
-If upgrading from an exisitng AEM Communities 6.0 site, any pre-existing UGC must be converted to conform to the structure required for the [SRP](srp.md) API after upgrading to AEM Communities 6.3.
+既存のAEM Communities6.0サイトからアップグレードした場合、既存のUGCは、AEM Communities6.3にアップグレードした後、[SRP](srp.md) APIに必要な構造に従うように変換する必要があります。
 
 GitHubには、この目的で使用できるオープンソースツールがあります。
 
@@ -243,7 +243,7 @@ GitHubには、この目的で使用できるオープンソースツールが�
 
 以下のエラーがログに表示された場合は、Solr スキーマファイルが適切に設定されていません。
 
-#### JsonMappingException: undefined field provider_id {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException: undefined field provider_id  {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id
@@ -253,7 +253,7 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 ... 124 common frames omitted
 ```
 
-To resolve the error, when following the instructions for [Installing Standard MLS](solr.md#installing-standard-mls), ensure:
+このエラーを解決するには、[標準MLSのインストール](solr.md#installing-standard-mls)の手順に従う場合は、次の点を確認します。
 
 * XML設定ファイルが正しいSolrの場所にコピーされました。
 * 新しい設定ファイルを既存のファイルと置き換えた後に Solr を再起動した.
@@ -262,7 +262,7 @@ To resolve the error, when following the instructions for [Installing Standard M
 
 MongoDB サーバーへのセキュア接続の試みが、クラス定義が見つからないという理由で失敗する場合は、MongoDB ドライバーバンドル `mongo-java-driver`（公開されている maven リポジトリで入手可能）を更新する必要があります。
 
-1. Download the driver from [https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) (version 2.13.2 or later).
+1. [https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) （バージョン2.13.2以降）からドライバをダウンロードします。
 1. バンドルをAEMインスタンスの「crx-quickstart/install」フォルダーにコピーします。
 1. AEM インスタンスを再起動します。
 
