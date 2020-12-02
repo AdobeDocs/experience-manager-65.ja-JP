@@ -23,7 +23,7 @@ ht-degree: 89%
 
 タッチデバイスでの使用が増加する HTML5 フォームの一般的な要件として、署名のサポートがあります。スタイラスまたは指を使った手書きは、モバイルデバイスでフォームに署名する方法として受け入れられつつあります。HTML5 フォームおよび Forms Designer では、フォームに手書き署名フィールドを挿入するオプションが可能になりました。フォームがブラウザーでレンダリングされるときに、スタイラス、マウス、または指を使用してこれらのフィールド上に署名することができます。
 
-## 手書き署名フィールドの使用によるフォームのデザイン {#how-to-design-a-form-using-scribble-signature-field}
+## 手書き署名フィールドの使用によるフォームのデザイン  {#how-to-design-a-form-using-scribble-signature-field}
 
 1. Forms Designer でフォームを開きます。
 1. ページ上に手書き署名フィールドをドラッグ＆ドロップします。
@@ -39,13 +39,13 @@ ht-degree: 89%
    iPad の署名プロセス中、手書き署名フィールドは、デフォルトで、位置情報を必須としてマークします（他のデバイスではオプションです）。このデフォルトの動作は `geoLocMandatoryOnIpad` プロパティの値を変更することでオーバーライドできます。このプロパティは手書き署名フィールドのエキストラとして公開されています。それを変更するための手順は：
 
    1. フォームで、手書き署名フィールドを選択します。
-   1. Select the **XML Source** tab.
+   1. 「**XML Source**」タブを選択します。
 
       >[!NOTE]
       >
-      >To open the XML Source tab, click **View** > **XML Source**.
+      >「XMLソース」タブを開くには、**表示**/**XMLソース**&#x200B;をクリックします。
 
-   1. Locate the `<ui>` tag in the `<field>` tag and modify the source code to look like the following:
+   1. `<field>`タグ内の`<ui>`タグを探し、ソースコードを次のように変更します。
 
       ```xml
       <extras name="x-scribble-add-on">
@@ -66,7 +66,7 @@ ht-degree: 89%
 
 ![geolocation](assets/geolocation.png)
 
-**A.** Brush **B.** Eraser **C.** Geolocation **D.** Geolocation情報
+**A.** Brush  **B.** Eraser  **C.** Geolocation  **D.** Geolocation情報
 
 ### ジオタグ付け {#geo-tagging}
 
@@ -82,11 +82,11 @@ iPad では、この設定はフィールドの初期化パラメーターで `g
 * 位置情報が必須の場合、減少した描画領域が提供されます。位置情報のテキストは、ユーザーが残る領域で「**OK**」をクリックすると追加されます。
 * その他の場合では、全体が描画可能な領域が提供されます。ユーザーが位置情報を埋め込むことを選択すると、この領域は位置情報のテキストに適合するようにサイズが変更されます。
 
-### 署名の消去 {#clearing-a-signature}
+### 署名の消去  {#clearing-a-signature}
 
-While using this feature, a user can click the **Eraser** icon to clear the field, and start over. 位置情報が追加された場合、それも消去されます。
+この機能の使用中に、ユーザーは&#x200B;**消しゴム**&#x200B;アイコンをクリックしてフィールドを消去し、開始を終了できます。 位置情報が追加された場合、それも消去されます。
 
-### 署名の保存 {#saving-a-signature}
+### 署名の保存  {#saving-a-signature}
 
 「**OK**」アイコンをクリックすると、手書きはフィールドの画像として保存されます。画像と値はさらに処理するためにサーバーに送信できます。ユーザーが「**OK**」クリックしたら、手書きフィールドはロックされます。手書きウィジェットを使用して署名を再び編集することはできません。
 
@@ -98,7 +98,7 @@ While using this feature, a user can click the **Eraser** icon to clear the fiel
 
 「**Brushes**」アイコンをクリックして、使用可能なペンサイズのリストを表示します。ペンサイズをクリックまたはタップして、その対応するペンを使用します。
 
-### フォームからの署名の削除 {#delete-signatures-from-the-form}
+### フォームからの署名の削除  {#delete-signatures-from-the-form}
 
 フォームから署名を削除するには、以下を実行します。
 
