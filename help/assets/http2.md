@@ -41,7 +41,7 @@ HTTP/2 によりブラウザーとサーバーの通信が改善され、必要�
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## HTTP/2 に切り替えるには {#am-i-eligible-to-switch-over-to-http}
+## HTTP/2 に切り替えるには  {#am-i-eligible-to-switch-over-to-http}
 
 HTTP/2 を使用するには、以下の要件を満たしている必要があります。
 
@@ -83,13 +83,13 @@ HTTP/2 に切り替えるためのリクエストを開始する必要があり�
 >
 >HTTP/2 への切り替えにはキャッシュのクリアが含まれるので、リードタイムが長くなる場合があります。そのため、一度に処理できる顧客の移行は数件のみとなります。
 
-## HTTP/2 への切り替えに伴うリスク {#what-are-the-risks-with-moving-to-http}
+## HTTP/2 への切り替えに伴うリスク  {#what-are-the-risks-with-moving-to-http}
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
 キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
 
-## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法 {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
+## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法  {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
 ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
 
