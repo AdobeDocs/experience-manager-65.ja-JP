@@ -43,7 +43,7 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
 >[!NOTE]
 >
 >* パフォーマンス最適化のための設定が完了したら、[Tough Day](/help/sites-developing/tough-day.md) の手順に従って、高負荷の環境をテストしてください。
->* [パフォーマンスチューニングのヒント](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)も参照してください。
+>* [パフォーマンスチューニングのヒント](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)も参照してください。
 
 >
 
@@ -73,7 +73,7 @@ CQ プロジェクトのパフォーマンスを最適化する方法は、5 つ
 
 時が経つにつれて、システム負荷は変化し、システムのパフォーマンスプロファイルは遷移していきます。6 ～ 12 ヶ月おきにパフォーマンスの「チューンアップ」または「ヘルスチェック」を続けていくようにしてください。
 
-### 実際の状況に近いシミュレーション {#simulate-reality}
+### 実際の状況に近いシミュレーション  {#simulate-reality}
 
 ![chlimage_1-4](assets/chlimage_1-4.jpeg)
 
@@ -89,13 +89,13 @@ Web サイトの運用を開始した後で、パフォーマンスの問題が�
 
 どうすれば適切で確実性の高いパフォーマンス目標を設定できるかというのは非常に難しい問題です。多くの場合、最も参考になるのは、類似性がある Web サイト（例えば、前身となったサイト）で採取した実際のログやベンチマーク結果の情報です。
 
-### 妥当性の維持 {#stay-relevant}
+### 妥当性の維持  {#stay-relevant}
 
 ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
 ボトルネックの最適化は 1 つずつ適用していくことが重要です。ある対策の影響を検証しないうちに別の作業も並行しておこなうと、どの最適化対策が実際に効果を発揮したのかわからなくなります。
 
-### アジャイルな反復サイクル {#agile-iteration-cycles}
+### アジャイルな反復サイクル  {#agile-iteration-cycles}
 
 ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
@@ -103,7 +103,7 @@ Web サイトの運用を開始した後で、パフォーマンスの問題が�
 
 これはつまり、最適化作業を実施する開発者には、最適化目標が達成された場合にその事実をすぐ把握できる手段が必要だということです。目標の達成は最適化作業の終了を意味するだけに、いつ達成されたかという情報には大きな価値があります。
 
-## 基本的なパフォーマンスのガイドライン {#basic-performance-guidelines}
+## 基本的なパフォーマンスのガイドライン  {#basic-performance-guidelines}
 
 大まかな目安として、キャッシュされていない HTML 要求の応答時間は 100 ms 未満に抑えます。より具体的には次のようなガイドラインに従うとよいでしょう。
 
@@ -132,11 +132,11 @@ JVM および OS レベルの調整は、通常、大幅なパフォーマンス
 
 通常のパフォーマンス最適化では、次の要素を使用します。
 
-* the `request.log`
+* `request.log`
 * コンポーネント別の時間計測
 * Java プロファイラー
 
-### デジタルアセットの読み込み時と編集時のパフォーマンス {#performance-when-loading-and-editing-digital-assets}
+### デジタルアセットの読み込み時と編集時のパフォーマンス  {#performance-when-loading-and-editing-digital-assets}
 
 デジタルアセットの読み込み時と編集時には大量のデータが関係してくるので、パフォーマンスが問題になります。
 
@@ -163,7 +163,7 @@ JVM および OS レベルの調整は、通常、大幅なパフォーマンス
 
 パフォーマンス（またはパフォーマンスの欠如）はユーザーが最初に認識する点の 1 つなので、ユーザーインターフェイスを使用するアプリケーションと同様に、パフォーマンスは非常に重要です。CQ インストールのパフォーマンスを最適化するには、インスタンスの様々な属性とインスタンスの動作を監視する必要があります。
 
-For information about how to perform performance monitoring, see [Monitoring Performance](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance).
+パフォーマンス監視の実行方法について詳しくは、[パフォーマンスの監視](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)を参照してください。
 
 多くの場合、パフォーマンスの問題を引き起こす原因を見つけ出すのは、その影響が明白であったとしても困難です。
 
@@ -175,9 +175,9 @@ For information about how to perform performance monitoring, see [Monitoring Per
 
 パフォーマンスは、ボリュームと処理能力のバランスでもあります。
 
-**ボリューム** ：システムで処理および配信される出力の量。
+**** ボリューム：処理および配信される出力の量。
 
-**容量** ：ボリュームを配信するシステムの機能。
+**** 容量：ボリュームを配信するシステムの機能。
 
 これを Web チェーン全体の様々な場所で示すことができます。
 
@@ -189,7 +189,7 @@ For information about how to perform performance monitoring, see [Monitoring Per
 * アプリケーション（プロジェクト）コード
 * 検索機能
 
-### パフォーマンスに関する基本ルール {#basic-rules-regarding-performance}
+### パフォーマンスに関する基本ルール  {#basic-rules-regarding-performance}
 
 パフォーマンスを最適化する場合は、次に示すルールを常に意識してください。
 
@@ -204,13 +204,13 @@ For information about how to perform performance monitoring, see [Monitoring Per
 >
 >多くの場合、パフォーマンスの測定に使用するメカニズム自体が、測定する内容に影響を及ぼすことを忘れないでください。この矛盾点を必ず考慮して、可能な限りその影響を排除する必要があります。具体的には、ブラウザーのプラグインを可能な限り無効にするなどの手段があります。
 
-## パフォーマンスの設定 {#configuring-for-performance}
+## パフォーマンスの設定  {#configuring-for-performance}
 
 パフォーマンスを最適化するために CQ（および基盤となる CRX）の特定の要素を設定できます。設定可能な要素と推奨事項を次に示します。変更を行う前に、記載されている機能を使用するかどうか、またはどのように使用するかを確認しておく必要があります。
 
 >[!NOTE]
 >
->詳しくは、[ナレッジベースの記事](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)を参照してください。
+>詳しくは、[ナレッジベースの記事](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)を参照してください。
 
 ### 検索インデックスの作成 {#search-indexing}
 
@@ -230,21 +230,21 @@ AEM 6.0 から、Adobe Experience Manager では Oak ベースのリポジトリ
 ワークフローエンジンは、作業項目の処理とスケジュールの設定にApache Slingジョブキューを使用します。次のジョブキューサービスは、デフォルトで、ワークフロージョブを処理するためのApache Sling Job Queue Configurationサービスファクトリから作成されました。
 
 * Graniteワークフローキュー：DAMアセットを処理するワークフローステップなど、ほとんどのワークフローステップは、Granite Workflow Queueサービスを使用します。
-* Granite Workflow External Process Job Queue: This service is used for special extermal workflow steps that are typically used for contacting an external system and polling for results. For example the InDesign Media Extraction Process step is implemented as an external process. The workflow engine uses the external queue for processing the polling. (See [com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
+* Granite Workflow External Process Job Queue:このサービスは、通常、外部システムに接続し、結果のポーリングに使用される特殊な外部ワークフロー手順に使用されます。例えば、InDesignメディア抽出のプロセスステップが外部プロセスとして実装されているとします。ワークフローエンジンは、外部キューを使用してポーリングを処理します。([com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)を参照)。
 
 これらのサービスを設定して、同時に実行するワークフロープロセスの最大数を制限します。
 
-**注意：** これらのジョブキューの設定は、特定のワークフローモデル用にジョブキューを作成していない限り、すべてのワークフローに影響します(以下の「特定のワークフローモデル用のキューの [設定](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) 」を参照)。
+**注意：これらのジョブキューの** 設定は、特定のワークフローモデル用にジョブキューを作成していない限り、すべてのワークフローに影響します(下記の「特定のワークフロー [モデル用のキューの](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) 設定」を参照)。
 
 **リポジトリでの設定**
 
-If you are configuring the services [using a sling:OsgiConfig node](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository), you need to find the PID of the existing services, for example: org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705. You can discover the PID using the Web Console.
+sling:OsgiConfigノード](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を使用してサービス[を設定する場合は、既存のサービスのPIDを見つける必要があります。例：org.apache.sling.イベント.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。Webコンソールを使用してPIDを検出できます。
 
 queue.maxparallelという名前のプロパティを設定する必要があります。
 
 **Web コンソールでの設定**
 
-To configure these services [using the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console), locate the existing configuration items below the Apache Sling Job Queue Configuration service factory.
+Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用してこれらのサービス[を設定するには、Apache Sling Job Queue Configurationサービスファクトリの下にある既存の設定項目を探します。
 
 Maximum Parallel Jobsという名前のプロパティを設定する必要があります。
 
@@ -257,15 +257,15 @@ Maximum Parallel Jobsという名前のプロパティを設定する必要が�
 * com/adobe/granite/workflow/job&amp;ast;
 * com/adobe/granite/workflow/external/job&amp;ast;
 
-ワークフローモデルが生成する実際のジョブトピックには、モデル固有のサフィックスが含まれます。For example, the [!UICONTROL DAM Update Asset] workflow model generates jobs with the following topic:
+ワークフローモデルが生成する実際のジョブトピックには、モデル固有のサフィックスが含まれます。例えば、[!UICONTROL DAM更新アセット]ワークフローモデルは、次のトピックを含むジョブを生成します。
 
 com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model
 
 そのため、ワークフローモデルのジョブトピックに一致するトピック用のジョブキューを作成できます。キューのパフォーマンス関連のプロパティの設定は、キュートピックに一致するジョブを生成するワークフローモデルにのみ影響を及ぼします。
 
-The following procedure creates a job queue for a workflow, using the [!UICONTROL DAM Update Asset] workflow as an example.
+次の手順では、例として[!UICONTROL DAM Update Asset]ワークフローを使用して、ワークフローのジョブキューを作成します。
 
-1. ジョブキューを作成する対象となるワークフローモデルを実行します。これにより、トピックの統計が生成されます。For example, add an image to Assets to execute the [!UICONTROL DAM Update Asset] workflow.
+1. ジョブキューを作成する対象となるワークフローモデルを実行します。これにより、トピックの統計が生成されます。例えば、[!UICONTROL DAM Update Asset]ワークフローを実行する画像をアセットに追加します。
 1. Sling Jobs コンソールを開きます（[http://localhost:4502/system/console/slingevent](http://localhost:4502/system/console/slingevent)）。
 1. コンソールでワークフロー関連トピックを検出します。DAM アセットの更新の場合は、次のトピックが見つかります。
 
@@ -275,7 +275,7 @@ The following procedure creates a job queue for a workflow, using the [!UICONTRO
 
 1. これらのトピックごとに 1 つのジョブキューを作成します。ジョブキューを作成するには、Apache Sling Job Queue ファクトリサービス用のファクトリ設定を作成します。
 
-   The factory configurations are similar to the Granite Workflow Queue described in [Concurrent Workflow Processing](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing), except the Topics property matches the topic of your workflow jobs.
+   ファクトリ構成は、[同時ワークフロー処理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)で説明されているGraniteワークフローキューに似ていますが、Topicsプロパティがワークフロージョブのトピックと一致する点が異なります。
 
 ### CQ5 DAM Asset Synchronization Service {#cq-dam-asset-synchronization-service}
 
@@ -295,7 +295,7 @@ The following procedure creates a job queue for a workflow, using the [!UICONTRO
 * オーサーの「処理中の作業」とパブリッシュの「最終版」を分離する
 * オーサーの内部ユーザーとパブリッシュの外部の訪問者／ユーザー（代理人、報道関係者、顧客、受講生など）を分離する
 
-## 品質保証のベストプラクティス {#best-practices-for-quality-assurance}
+## 品質保証のベストプラクティス  {#best-practices-for-quality-assurance}
 
 パブリッシュ環境にとって最も重要なのはパフォーマンスです。そのため、プロジェクトの実装時にパブリッシュ環境に対しておこなうパフォーマンステストについて注意深く計画および分析する必要があります。
 
@@ -311,20 +311,20 @@ The following procedure creates a job queue for a workflow, using the [!UICONTRO
 
 包括的な追加のプロセスとして「制御」があります。これは必要なプロセスですが、テストに限定されるものではありません。
 
-### 知識の検証 {#verification-of-knowledge}
+### 知識の検証  {#verification-of-knowledge}
 
 最初の手順は、テストの開始前に知っておく必要のある基本情報の文書化です。
 
 * テスト環境のアーキテクチャ
 * テストに必要な内部要素を詳細に示したアプリケーションマップ（単体で使用する場合と組み合わせて使用する場合の両方）
 
-#### テスト用のアーキテクチャ {#test-architecture}
+#### テスト用のアーキテクチャ  {#test-architecture}
 
 パフォーマンステストに使用するテスト環境のアーキテクチャを明確に文書化してください。
 
 計画した実稼働のパブリッシュ環境、Dispatcher およびロードバランサーを再現する必要があります。
 
-#### アプリケーションマップ {#application-map}
+#### アプリケーションマップ  {#application-map}
 
 概要を明確にするために、アプリケーション全体のマップを作成できます（オーサー環境におけるテストからこの情報を入手できる可能性があります）。
 
@@ -351,7 +351,7 @@ The following procedure creates a job queue for a workflow, using the [!UICONTRO
 * 自由な接続の数
 * システムリソース（CPU、I/O アクセスなど）
 
-### テスト方法 {#test-methodologies}
+### テスト方法  {#test-methodologies}
 
 この概念には、パフォーマンスの目標の定義およびテストに使用する 4 つのシナリオがあります。
 
@@ -382,7 +382,7 @@ The following procedure creates a job queue for a workflow, using the [!UICONTRO
 
 既存の Web サイトから収集したエクスペリエンス（統計）も将来の目標を決める際に役立ちます。例えば、本番の Web サイトからの上位のトラフィックなどです。
 
-#### 単一のコンポーネントのテスト {#single-component-tests}
+#### 単一のコンポーネントのテスト  {#single-component-tests}
 
 平均時とピーク時の両方の条件下で、不可欠なコンポーネントをテストする必要があります。
 
@@ -392,8 +392,8 @@ The following procedure creates a job queue for a workflow, using the [!UICONTRO
 |---|---|---|---|---|---|
 | ホームページ：1 ユーザー | 平均 | 1 | 1 |  |  |
 |  | ピーク時 | 1 | 3 |  |  |
-| ホームページ：100 ユーザー | 平均 | 100 | 3 |  |  |
-|  | ピーク時 | 100 | 3 |  |
+| ホームページ：100 ユーザー | 平均 | 100 | 1 |  |  |
+|  | ピーク時 | 100 | 1 |  |
 
 #### 組み合わされたコンポーネントのテスト {#combined-component-tests}
 
@@ -404,15 +404,15 @@ The following procedure creates a job queue for a workflow, using the [!UICONTRO
 | 混在：平均時 | ホームページ | 10 | 1 |  |  |
 |  | 検索 | 10 | 1 |  |  |
 |  | ニュース | 10 | 2 |  |  |
-|  | イベント | 10 | 1 |  |  |
-|  | アクティベート | 10 | 3 |  | オーサーの動作のシミュレーション |
+|  | イベント | 10 | 3 |  |  |
+|  | アクティベート | 10 | 1 |  | オーサーの動作のシミュレーション |
 | 混在：ピーク時 | ホームページ | 100 | 5 |  |  |
 |  | 検索 | 50 | 5 |  |  |
 |  | ニュース | 100 | 10 |  |  |
 |  | イベント | 100 | 10 |  |  |
 |  | アクティベート | 20 | 20 |  | オーサーの動作のシミュレーション |
 
-#### 運用開始のテスト {#going-live-tests}
+#### 運用開始のテスト  {#going-live-tests}
 
 Web サイトの運用開始後の最初の数日は、関心レベルの増加が予測されます。この値はおそらく、現在テストを進めているピーク時の値よりも大きくなります。運用開始のシナリオをテストして、システムがこの状況に対応できるかどうかを確認しておくことを強くお勧めします。
 
@@ -424,7 +424,7 @@ Web サイトの運用開始後の最初の数日は、関心レベルの増加�
 |  | イベント | 200 | 20 |  |  |
 |  | アクティベート | 20 | 20 |  | オーサーの動作のシミュレーション |
 
-#### エラーのシナリオのテスト {#error-scenario-tests}
+#### エラーのシナリオのテスト  {#error-scenario-tests}
 
 システムによる対応が正しく適切におこなわれるように、エラーのシナリオもテストする必要があります。エラー自体を処理する方法だけでなく、その方法がパフォーマンスに及ぼす可能性のある影響も確認します。次に例を示します。
 
@@ -440,7 +440,7 @@ Web サイトの運用開始後の最初の数日は、関心レベルの増加�
 |  | 空の文字列 | 10 | 1 |  | 空の文字列の検索。 |
 |  | 特殊文字 | 10 | 1 |  | 特殊文字の検索。 |
 
-#### 耐久テスト {#endurance-tests}
+#### 耐久テスト  {#endurance-tests}
 
 システムを継続的な期間（数時間または数日）実行した後にのみ発生する問題があります。耐久テストは、必要とされるある一定の期間にわたる、継続的な平均負荷を確認するために使用します。テストの後でパフォーマンスの低下を分析できます。
 
@@ -450,9 +450,9 @@ Web サイトの運用開始後の最初の数日は、関心レベルの増加�
 |  | 検索 | 10 | 1 |  |  |
 |  | ニュース | 20 | 2 |  |  |
 |  | イベント | 10 | 1 |  |  |
-|  | アクティベート | 1 | 3 |  | オーサーの動作のシミュレーション |
+|  | アクティベート | 1 | 1 |  | オーサーの動作のシミュレーション |
 
-### 最適化 {#optimization}
+### 最適化  {#optimization}
 
 実装の後半の段階では、アプリケーションを最適化して、パフォーマンスの目標を達成または最大化する必要があります。
 
@@ -472,7 +472,7 @@ Web サイトの運用開始後の最初の数日は、関心レベルの増加�
 
 最適化の後にもう一度テストを実施して、影響を確認する必要があります。
 
-### レポート {#reporting}
+### レポート  {#reporting}
 
 すべてのユーザーが常にステータスを把握できるようにするために、継続的にレポートを作成する必要があります。前述のとおり、色分けしたアーキテクチャマップをこの目的で使用できます。
 
@@ -483,7 +483,7 @@ Web サイトの運用開始後の最初の数日は、関心レベルの増加�
 * テスト中の想定事項
 * テストから得られた推奨事項
 
-## Dispatcher の使用時のパフォーマンスの最適化 {#optimizing-performance-when-using-the-dispatcher}
+## Dispatcher の使用時のパフォーマンスの最適化  {#optimizing-performance-when-using-the-dispatcher}
 
 [ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)はアドビのキャッシュ／ロードバランシングツールです。ディスパッチャーを使用する場合は、キャッシュパフォーマンスを確保するために Web サイトの最適化を検討する必要があります。
 
@@ -506,7 +506,7 @@ Dispatcher には、Web サイトで活用するとパフォーマンスが最�
 >
 通常、多くのキャッシュ戦略は適切な URL の選択を含んでおり、この追加データには依存しません。
 >
->With Dispatcher version 4.1.11 you can also cache response headers, see [Caching HTTP Response Headers](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache).
+>Dispatcherバージョン4.1.11では、応答ヘッダーもキャッシュできます。[HTTP応答ヘッダーのキャッシュ](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)を参照してください。
 
 
 ### Dispatcher のキャッシュ率の計算 {#calculating-the-dispatcher-cache-ratio}
@@ -515,11 +515,11 @@ Dispatcher には、Web サイトで活用するとパフォーマンスが最�
 
 * 要求の総数。この情報は、Apache の `access.log` で確認できます。詳しくは、[Apache の公式ドキュメント](https://httpd.apache.org/docs/2.4/logs.html#accesslog)を参照してください。
 
-* パブリッシュインスタンスが処理した要求の数。This information is available in the `request.log` of the instance. For further details, see [Interpreting the request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log) and [Finding the log Files](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files).
+* パブリッシュインスタンスが処理した要求の数。この情報は、インスタンスの`request.log`で入手できます。 詳しくは、[request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log)の解釈と[ログファイルの検索](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files)を参照してください。
 
 キャッシュ率の計算式は次のとおりです。
 
-* (The total number of requests **minus** the number of requests on Publish) **divided** by the total number of requests.
+* (要求の総数&#x200B;**から**&#x200B;を引いた値（発行中の要求数）**を要求の総数で割った値(a3/>)。**
 
 例えば、要求の総数が 129,491 であり、パブリッシュインスタンスによって処理された要求の数が 58,959 である場合、キャッシュ率は **(129,491 - 58,959)/129,491 = 54.5％**&#x200B;です。
 
@@ -529,7 +529,7 @@ Dispatcher には、Web サイトで活用するとパフォーマンスが最�
 >
 >最適なパフォーマンスを確保するには、90％から 95％のキャッシュ率をお勧めします。
 
-#### 一貫性のあるページエンコーディングの使用 {#using-consistent-page-encoding}
+#### 一貫性のあるページエンコーディングの使用  {#using-consistent-page-encoding}
 
 Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュできます。Dispatcher で応答ヘッダーをキャッシュしない場合、ページエンコーディング情報をヘッダーに格納すると、問題が生じる可能性があります。この場合、Dispatcher がキャッシュからページを提供すると、Web サーバーのデフォルトのエンコーディングがそのページに使用されます。この問題を回避する方法は 2 つあります。
 
@@ -558,7 +558,7 @@ www.myCompany.com/pictures/gallery.christmas.1.html
 >
 >この URL は、gallery.html と同じページおよび同じテンプレートを呼び出します。テンプレートの定義では、ページをレンダリングするスクリプトを指定できます。または、すべてのページに同じスクリプトを使用できます。
 
-#### URL ごとのカスタマイズ {#customize-by-url}
+#### URL ごとのカスタマイズ  {#customize-by-url}
 
 ユーザーによるフォントサイズの変更（またはその他の任意のレイアウトのカスタマイズ）を許可する場合は、それぞれのカスタマイズが URL に反映されるようにする必要があります。
 
@@ -580,7 +580,7 @@ www.myCompany.com/news/main.large.html
 >
 >テンプレートの定義のスクリプトグロブを使用すると、印刷ページをレンダリングする個別のスクリプトを指定できます。
 
-#### タイトルとして使用する画像ファイルの無効化 {#invalidating-image-files-used-as-titles}
+#### タイトルとして使用する画像ファイルの無効化  {#invalidating-image-files-used-as-titles}
 
 ページタイトルまたはその他のテキストを写真としてレンダリングする場合は、そのファイルを、ページ上のコンテンツの更新時に自動的に削除されるような方法で格納することをお勧めします。
 
@@ -597,7 +597,7 @@ www.myCompany.com/news/main.large.html
 >
 >画像ファイルは必ずしも AEM インスタンスに物理的に存在するわけではありません。画像ファイルを動的に作成するスクリプトを使用できます。そのファイルを Dispatcher が Web サーバーに格納します。
 
-#### ナビゲーションに使用する画像ファイルの無効化 {#invalidating-image-files-used-for-navigation}
+#### ナビゲーションに使用する画像ファイルの無効化  {#invalidating-image-files-used-for-navigation}
 
 ナビゲーションエントリ用の写真を使用する場合の方法は、タイトルを使用する場合と基本的に同じですが、若干複雑になります。すべてのナビゲーション画像をターゲットページと共に格納します。通常用とアクティブ用の 2 つの写真を使用する場合は、次のスクリプトを使用できます。
 
@@ -629,11 +629,11 @@ Dispatcher はパーソナライズされたデータをキャッシュできな
 
 
 
-#### スティッキー接続 {#sticky-connections}
+#### スティッキー接続  {#sticky-connections}
 
 [スティッキー接続](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing)を使用すると、1 人のユーザー用のドキュメントがすべて同じサーバーで作成されるようになります。ユーザーがそのフォルダーを離れて後から戻ってきた場合も、この接続は維持されます。これをおこなうには、Web サイトのスティッキー接続に必要なすべてのドキュメントを保持するためのフォルダーを 1 つ定義します。このフォルダーには他のドキュメントを格納しないようにします。そうすると、パーソナライズされたページとセッションデータを使用する場合に、ロードバランシングに影響が生じます。
 
-#### MIME タイプ {#mime-types}
+#### MIME タイプ  {#mime-types}
 
 ブラウザーがファイル形式を特定する方法は 2 つあります。
 
@@ -658,7 +658,7 @@ Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュ�
 
 ここでは、CQ バックアップのパフォーマンスおよびバックアップアクティビティがアプリケーションのパフォーマンスに及ぼす影響の評価に使用する一連のベンチマークを紹介します。CQ バックアップの実行中はシステムに大きな負荷がかかります。その負荷と負荷を調整するためのバックアップ遅延設定の影響を測定します。現実的な設定と量の実稼働データで予想されるバックアップのパフォーマンスに関する参照データを提供することと、計画したシステムのバックアップ時間の見積もり方法に関するガイダンスを示すことが目標です。
 
-### 参照用の環境 {#reference-environment}
+### 参照用の環境  {#reference-environment}
 
 #### 物理システム {#physical-system}
 
@@ -675,7 +675,7 @@ Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュ�
 
 CQ の設定では、すべてのオペレーティングシステムおよび CQ ソフトウェアと共に、リポジトリとデータストアを同じ論理ボリュームに配置します。バックアップのターゲットディレクトリもこの論理ファイルシステムに配置されます。
 
-#### データボリューム {#data-volumes}
+#### データボリューム  {#data-volumes}
 
 次の表は、バックアップのベンチマークで使用するデータボリュームのサイズを示しています。初期のベースラインコンテンツが最初にインストールされた後で、バックアップ対象のコンテンツのサイズを増やすために既知量のデータが追加されます。コンテンツの大幅な増加と 1 日に生成されるコンテンツを表すために、バックアップは特定のインクリメントで作成されます。コンテンツ（ページ、画像、タグ）の配布は、大まかには現実的な実稼働アセットの構成に基づいています。ページ、画像およびタグは最大 800 の子ページに制限されます。各ページには、タイトル、Flash、テキスト／画像、ビデオ、スライドショー、フォーム、テーブル、クラウドおよびカルーセルコンポーネントが含まれます。画像は、400 個の固有のファイル（サイズは 37 ～ 594 KB）のプールからアップロードされます。
 
@@ -714,13 +714,13 @@ CQ の設定では、すべてのオペレーティングシステムおよび C
 
 バックアップのベンチマークは、それぞれにコンテンツセットを追加して繰り返されます。
 
-#### ベンチマークのシナリオ {#benchmark-scenarios}
+#### ベンチマークのシナリオ  {#benchmark-scenarios}
 
 バックアップのベンチマークは 2 つの主要なシナリオに対応しています。1 つはシステムでアプリケーションによる負荷が大きい場合のバックアップで、もう 1 つはシステムがアイドル状態の場合のバックアップです。一般的には、できるだけ CQ システムがアイドル状態の場合にバックアップを実行することをお勧めしますが、システムに負荷がかかっているときにバックアップを実行しなければならない場合もあります。
 
-**アイドル状態のバックアップは** 、CQ上で他のアクティビティを行わずに実行されます。
+**アイドル状態の** 状態バックアップは、CQで他のアクティビティを行わずに実行されます。
 
-**「Load** Backups」では、オンラインプロセスからの負荷が80 %未満の場合に実行されます。 負荷に対する影響を確認するためにバックアップ遅延を変更しました。
+**LoadBackupsの下では、オンラインプロセスの** 負荷が80 %未満の状態で実行されます。負荷に対する影響を確認するためにバックアップ遅延を変更しました。
 
 バックアップ時間と生成されるバックアップのサイズは CQ サーバーのログから取得します。通常は、CQ がアイドル状態であるオフタイム（深夜など）にバックアップのスケジュールを設定することをお勧めします。このシナリオは、推奨されるアプローチを代表するものです。
 
@@ -728,9 +728,9 @@ CQ の設定では、すべてのオペレーティングシステムおよび C
 
 バックアップのパフォーマンスに負荷が及ぼす影響は、このアプリケーションによる負荷がある状態とない状態のパフォーマンスの差で見積もることができます。アプリケーションのスループットにバックアップが及ぼす影響は、同時バックアップを実行している状態と実行していない状態でのこのシナリオのトランザクションのスループット（1 時間あたり）と、異なる「バックアップ遅延」設定を使用してバックアップを実行している状態でのトランザクションのスループット（1 時間あたり）を比較して特定されます。
 
-**遅延設定** ：バックアップ遅延の設定を変更し、10 ms（デフォルト）、1 ms、0 msの値を使用して、バックアップのパフォーマンスにどのような影響を与えたかを調べました。
+**遅延の** 設定：バックアップ遅延の設定を変更し、10 ms（デフォルト）、1 ms、0 msの値を使用して、バックアップのパフォーマンスにどのような影響を与えたかを調べました。
 
-**バックアップの種類** ：すべてのバックアップは、zipを作成せずにバックアップディレクトリに対して行われたリポジトリの外部バックアップです。ただし、tarコマンドが直接使用された場合の比較は一度限り行われません。 増分バックアップをzipファイルに作成することはできないため、または以前の完全バックアップがzipファイルの場合は、バックアップディレクトリの方法が実稼働環境で最も頻繁に使用されます。
+**バックアップの** 種類すべてのバックアップは、 zipを作成せずにバックアップディレクトリに対して行われたリポジトリの外部バックアップです。ただし、 tarコマンドが直接使用された場合の比較は一度限りです。増分バックアップをzipファイルに作成することはできないため、または以前の完全バックアップがzipファイルの場合は、バックアップディレクトリの方法が実稼働環境で最も頻繁に使用されます。
 
 ### 結果のまとめ {#summary-of-results}
 
