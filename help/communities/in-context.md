@@ -22,11 +22,11 @@ ht-degree: 43%
 
 AEM Communities では、管理者と信頼されているコミュニティメンバーが、コミュニティコンテンツをそのコンテンツが投稿された公開済みのページ上で直接モデレートできます。
 
-When using a [moderation console](moderation.md), the information displayed for the content includes a link to the published page to allow access to additional moderation actions available when moderating in-context.
+[モデレートコンソール](moderation.md)を使用する場合、コンテンツに表示される情報には、コンテキスト内のモデレート時に使用できる追加のモデレートアクションにアクセスできる、公開済みページへのリンクが含まれます。
 
 ## モデレートアクション {#moderation-actions}
 
-Visit the moderation overview for a description of [moderation actions](moderate-ugc.md#moderation-actions).
+[モデレート操作](moderate-ugc.md#moderation-actions)の説明については、モデレートの概要を参照してください。
 
 ## モデレート UI {#moderation-ui}
 
@@ -87,7 +87,7 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
    * 返信の選択
    * ログアウトの選択
 
-### Anonymous Site Visitor (#5) {#anonymous-site-visitor}
+### 匿名サイト訪問者(#5) {#anonymous-site-visitor}
 
 以下は、サインインしていないサイト訪問者が閲覧したフォーラムの表示です(5)。
 
@@ -95,11 +95,11 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 
 ![地域フォーラム訪問者](assets/community-forum-visitor.png)
 
-### New Member (#4) {#new-member}
+### 新しいメンバ(#4) {#new-member}
 
-On author, log in as admin and add Boyd Larsen (boyd.larsen@dodgit.com) as a new member of community-engage-members group using the [Members console](members.md), then Log Out.
+作成者がログインしたら、管理者としてログインし、[メンバーコンソール](members.md)を使用してコミュニティの関与メンバーグループの新しいメンバーとしてBoyd Larsen(boyd.larsen@dodgit.com)を追加し、「ログアウト」をクリックします。
 
-On publish, log in as Boyd Larsen and access the thread by selecting `Forum`, and then `Read more` for the hummingbird post.
+公開時に、Boyd Larsenとしてログインし、`Forum`を選択し、次にHummingbird投稿の`Read more`を選択してスレッドにアクセスします。
 
 注意:
 
@@ -113,7 +113,7 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![コミュニティフォーラムの会員](assets/community-forum-member.png)
 
-### Administrator (#3) {#administrator}
+### 管理者(#3) {#administrator}
 
 管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿に関して「詳細を表示」を選択します。
 
@@ -134,7 +134,7 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### Community Moderator (#2) {#community-moderator}
+### コミュニティモデレータ(#2) {#community-moderator}
 
 コミュニティのモデレーターであるAaron McDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbird投稿の詳細情報を確認します。
 
@@ -157,7 +157,7 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![モデレーターアクセス](assets/moderator-access.png)
 
-### Content Author (#1) {#content-author}
+### コンテンツ作成者(#1) {#content-author}
 
 Rebekah Larsen(rebekah.larsen@mailinator.com)としてログインします。スレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbird投稿の詳細情報を参照してください。
 
