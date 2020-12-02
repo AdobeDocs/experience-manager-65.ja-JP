@@ -53,13 +53,14 @@ ht-degree: 77%
 
 ## アーキテクチャ {#architecture}
 
-通常の AEM 設定は、オーサー環境とパブリッシュ環境で構成されます。これらの環境は、基盤となるハードウェアのサイズおよびシステム設定に関して、それぞれ要件が異なります。Detailed considerations for both environments are described in the [author environment](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) and [publish environment](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) sections.
+通常の AEM 設定は、オーサー環境とパブリッシュ環境で構成されます。これらの環境は、基盤となるハードウェアのサイズおよびシステム設定に関して、それぞれ要件が異なります。両方の環境に関する詳細な考慮事項は、[作成者環境](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations)と[発行環境](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations)のセクションで説明されています。
 
 通常のプロジェクト設定では、次のようないくつかの環境でプロジェクトのフェーズを分類します。
 
 * **開発環境** 新しい機能の開発や重要な変更をおこなうために使用します。ベストプラクティスは、開発者ごとの開発環境（通常、個人用システムにローカルでインストール）を使用することです。
 
-* **テスト環境の作成**&#x200B;変更を検証します。 テスト環境の数は、プロジェクト要件に応じて異なる場合があります（例えば、QA、統合テスト、ユーザー受け入れテスト用に分けてください）。
+* **テスト**
+環境の作成変更を検証するにはテスト環境の数は、プロジェクト要件に応じて異なる場合があります（例えば、QA、統合テスト、ユーザー受け入れテスト用に分けてください）。
 
 * **パブリッシュテスト環境** 主にソーシャルコラボレーションのユースケースをテストしたり、オーサーインスタンスと複数のパブリッシュインスタンス間のインタラクションをテストしたりするために使用します。
 
@@ -69,7 +70,7 @@ ht-degree: 77%
 
 また、環境は、AEM とアプリケーションサーバーを実行する単一サーバーシステムから、複数のサーバー、複数の CPU で構成される拡張性の高いクラスターインスタンスに至るまで、多岐にわたります。実稼動システムごとに個別のコンピューターを使用し、これらのコンピューターではその他のアプリケーションを実行しないことをお勧めします。
 
-## ハードウェアサイジングに関する一般的なガイドライン {#generic-hardware-sizing-considerations}
+## ハードウェアサイジングに関する一般的なガイドライン  {#generic-hardware-sizing-considerations}
 
 この節では、様々な点を考慮しながら、ハードウェア要件を計算する方法について説明します。大規模なシステムの場合、基準設定で一連の単純な社内ベンチマークテストを実行することをお勧めします。
 
@@ -81,7 +82,7 @@ ht-degree: 77%
 * カスタマイズされたコード、カスタムワークフロー、またはサードパーティソフトウェアライブラリの広範な使用
 * サポートされない外部システムとの統合
 
-### ディスク容量／ハードドライブ {#disk-space-hard-drive}
+### ディスク容量／ハードドライブ  {#disk-space-hard-drive}
 
 必要なディスク容量は、主に Web アプリケーションのボリュームとタイプによって決まります。計算では次の項目を考慮する必要があります。
 
@@ -102,7 +103,7 @@ ht-degree: 77%
 
 AEM は仮想環境でも動作しますが、CPU や I/O などの要素については、物理ハードウェアと純粋に同等と見なすことはできません。ほとんどの場合、I/O 速度は非常に重要です。したがって、通常は、より高速な I/O を選択することをお勧めします。必要なリソースを正確に把握するには、環境のベンチマークテストをおこなう必要があります。
 
-#### AEM インスタンスの並列化 {#parallelization-of-aem-instances}
+#### AEM インスタンスの並列化  {#parallelization-of-aem-instances}
 
 **フェイルセーフ**
 
@@ -110,12 +111,12 @@ AEM は仮想環境でも動作しますが、CPU や I/O などの要素につ�
 
 **システムリソースのスケーラビリティ**
 
-すべてのシステムが実行されているときのコンピューターのパフォーマンスが向上しました。That additional performance is not necessarily linear with the number of cluster nodes as the relationship is highly dependent on the technical environment; please see the [Cluster documentation](/help/sites-deploying/recommended-deploys.md) for more information.
+すべてのシステムが実行されているときのコンピューターのパフォーマンスが向上しました。この関係は技術的な環境に大きく左右されるので、追加のパフォーマンスは必ずしもクラスタノードの数と一致するとは限りません。詳しくは、[クラスターのドキュメント](/help/sites-deploying/recommended-deploys.md)を参照してください。
 
 必要なクラスターノードの推定数は、特定の Web プロジェクトの基本要件および特定のユースケースによって決まります。
 
 * フェイルセーフの観点では、すべての環境において、障害の重大度を特定し、クラスターノードのリカバリー所要時間に基づいて障害補償時間を決定する必要があります。
-* スケーラビリティの面から考えると、基本的には書き込み操作数が最も重要です。オーサー環境の場合は[同時操作している作成者](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel)を、パブリッシュ環境の場合は[ソーシャルコラボレーション](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations)を参照してください。Load balancing can be established for operations that access the system solely to process read operations; see [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) for details.
+* スケーラビリティの面から考えると、基本的には書き込み操作数が最も重要です。オーサー環境の場合は[同時操作している作成者](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel)を、パブリッシュ環境の場合は[ソーシャルコラボレーション](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations)を参照してください。読み取り操作を処理する目的でのみシステムにアクセスする操作に対して、ロードバランシングを確立できます。詳しくは、[ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)を参照してください。
 
 ## オーサー環境用の計算 {#author-environment-specific-calculations}
 
@@ -149,7 +150,8 @@ AEM は仮想環境でも動作しますが、CPU や I/O などの要素につ�
 
    * **結果** 前述のような単純なページ作成作業を 1 個のトランザクションと見なした場合、最大スループット（1 時間あたりのトランザクション数）は 2016 となりました。スタンドアロンのオーサーインスタンスに対して同じベンチマークテストを実行した場合と比較して、約 16 ％増えています。
 
-* **ベンチマークテスト2b** 2オーサーインスタンスのアクティブ — アクティブ — アクティブ — 非共有クラスターを使用して、読み込みプロファイルに新規ページの作成(10%)、既存ページの変更(80%)、ページの作成と変更(10%)が混在している場合の最大スループットを計算します。 ページの複雑度はベンチマークテスト 1 のプロファイルの場合と同じです。ページの基本的な変更として、画像を追加し、テキストコンテンツを変更します。この場合も、ベンチマークテスト 1 に定義されたものと同じ複雑度を持つ 300 個のページを基本負荷として、作業をおこないました。
+* **ベンチマークテスト2**
+b2オーサーインスタンスのアクティブ — アクティブ — アクティブ — 非共有クラスターを使用して、読み込みプロファイルに新規ページの作成(10%)、既存ページの変更(80%)、ページの作成と変更(10%)が混在している場合の最大スループットを計算します。ページの複雑度はベンチマークテスト 1 のプロファイルの場合と同じです。ページの基本的な変更として、画像を追加し、テキストコンテンツを変更します。この場合も、ベンチマークテスト 1 に定義されたものと同じ複雑度を持つ 300 個のページを基本負荷として、作業をおこないました。
 
    * **結果** このような混合操作シナリオの最大スループット（1 時間あたりのトランザクション数）は 6288 となりました。スタンドアロンのオーサーインスタンスに対して同じベンチマークテストを実行した場合と比較して、約 93 ％増えています。
 
@@ -167,7 +169,7 @@ AEM は仮想環境でも動作しますが、CPU や I/O などの要素につ�
 
 この式は、作成者が AEM で基本的な操作を実行する場合の CPU スケーリングのガイドラインとして使用できます。システムおよびアプリケーションが最適化されていることが前提となります。ただし、この式は、MSM やアセットなどの高度な機能には当てはまりません（下記の節を参照）。
 
-Please also see the additional comments on [Parallelization](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) and [Performance Optimization](/help/sites-deploying/configuring-performance.md).
+[並列処理](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances)と[パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)に関する追加のコメントもご覧ください。
 
 ### ハードウェアに関する推奨事項 {#hardware-recommendations}
 
@@ -184,7 +186,7 @@ Adobeでのベンチマークテストは、Hewlett-Packard ProLiant DL380 G5ハ
 
 AEM インスタンス実行時の最小ヒープサイズおよび最大ヒープサイズはそれぞれ 256M および 1024M です。
 
-## パブリッシュ環境用の計算 {#publish-environment-specific-calculations}
+## パブリッシュ環境用の計算  {#publish-environment-specific-calculations}
 
 ### キャッシュ効率とトラフィック {#caching-efficiency-and-traffic}
 
@@ -205,11 +207,11 @@ AEM インスタンス実行時の最小ヒープサイズおよび最大ヒー�
 
 キャッシュ率とは、ディスパッチャーが AEM にアクセスしなくても返すことができるページの割合です。100 ％は、ディスパッチャーがすべての要求に応答することを表します。0 ％は、AEM がすべてのページの処理をおこなうことを示します。
 
-### テンプレートとアプリケーションの複雑度 {#complexity-of-templates-and-applications}
+### テンプレートとアプリケーションの複雑度  {#complexity-of-templates-and-applications}
 
 複雑なテンプレートを使用している場合、AEM でページのレンダリングにかかる時間が増加します。キャッシュから取得されたページでは、このような影響はありません。ただし、全体の応答時間を考慮した場合、ページサイズはパフォーマンスに関係します。複雑なページのレンダリングでは、単純なページのレンダリングと比較して 10 倍の時間がかかることもあります。
 
-### 数式 {#formula}
+### 数式  {#formula}
 
 次の式を使用して、AEMソリューションの全体的な複雑さの見積もりを計算できます。
 
@@ -255,25 +257,31 @@ AEM インスタンス実行時の最小ヒープサイズおよび最大ヒー�
 
 複雑な Web サイトの場合は、AEM が受け入れ可能な時間内で要求に応答できるように、より性能の高い Web サーバーが必要となります。
 
-* 4未満の複雑さ：・ 1024 MB JVM RAM*・低パフォーマンスから中パフォーマンスのCPU
+* 4未満の複雑さ：
+・ 1024 MB JVM RAM*
+・低パフォーマンスから中パフォーマンスのCPU
 
-* 4 ～ 8の複雑さ：・ 2048 MB JVM RAM*・中間から高パフォーマンスのCPU
+* 4 ～ 8の複雑さ：
+・ 2048 MB JVM RAM*
+・中～高パフォーマンスのCPU
 
-* 8以上の複雑さ：・ 4096 MB JVM RAM*・ハイエンドからハイエンドのパフォーマンスCPU
+* 8以上の複雑さ：
+・ 4096 MB JVM RAM*
+・ハイ・エンド・パフォーマンスのCPU
 
 >[!NOTE]
 >
 >* JVM に必要なメモリ量に加え、オペレーティングシステムを稼働させるために十分な RAM を確保してください。
 
-## その他のユースケース用の計算 {#additional-use-case-specific-calculations}
+## その他のユースケース用の計算  {#additional-use-case-specific-calculations}
 
 デフォルト Web アプリケーション用の計算に加え、次のユースケースに固有の要因を検討する必要がある場合があります。計算後の値は、デフォルトの計算結果に加算されます。
 
-### アセットに関する考慮事項 {#assets-specific-considerations}
+### アセットに関する考慮事項  {#assets-specific-considerations}
 
 デジタルアセットを大規模に処理するには、最適化されたハードウェアリソースが必要になります。最も関連する要因は、画像サイズと、処理された画像のピーク時のスループットです。
 
-Allocate at least 16GB of heap and configure the [!UICONTROL DAM Update Asset] workflow to use the [Camera Raw package](/help/assets/camera-raw.md) for the ingestion of raw images.
+16 GB以上のヒープを割り当て、[!UICONTROL DAM更新アセット]ワークフローを設定して、[Camera Rawパッケージ](/help/assets/camera-raw.md)を使用して生画像の取り込みを行います。
 
 >[!NOTE]
 画像のスループットが高くなった場合、システム I/O に遅れずに対応するための計算リソースが必要になります（その逆も言えます）。例えば、画像のインポートによってワークフローが開始された場合、多数の画像を WebDAV 経由でアップロードすると、ワークフローのバックログが発生する可能性があります。
@@ -295,7 +303,7 @@ TarPM、データストアおよび検索インデックスに対して別個の
 
 さらに考慮すべき点として、AEM MSM のユースケースで予定よりも多くのリソースが消費されると、同時に作業する作成者がパフォーマンスの低下に気付くことになります。
 
-### AEM Communities のサイジングの考慮事項 {#aem-communities-sizing-considerations}
+### AEM Communities のサイジングの考慮事項  {#aem-communities-sizing-considerations}
 
 AEM Communities の機能を含む AEM Sites （コミュニティサイト）には、パブリッシュ環境のサイト訪問者（メンバー）から高レベルのインタラクションがあります。
 
