@@ -29,7 +29,7 @@ ht-degree: 74%
 >
 >コンテンツサービスからチャネルで使用したい要素は、スペース下になければなりません。
 
-## スペースの作成 {#creating-a-space}
+## スペースの作成  {#creating-a-space}
 
 多くのコンテンツやアセットをモバイルアプリに一括で公開する場合は、AEM Mobile ダッシュボードを使用してスペースを作成します。
 
@@ -39,17 +39,17 @@ ht-degree: 74%
 >
 >**スペースの追加の前提条件**
 >
->Check the **Enable AEM Content Services** to work with Spaces and enable it in your AEM Mobile application dashboard.
+>Spacesを使用して動作するように&#x200B;**AEM Content Services**&#x200B;を有効にし、AEM Mobileのアプリケーションダッシュボードで有効にします。
 >
->See [Administering Content Services](/help/mobile/developing-content-services.md) for more details.
+>詳しくは、[Content Servicesの管理](/help/mobile/developing-content-services.md)を参照してください。
 
 ダッシュボードでスペースを設定したら、次の手順に従って、スペースを作成します。
 
-1. Choose **Spaces** from Content Services.
+1. Content Servicesから「**スペース**」を選択します。
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
-1. Choose **Create** to create a space. Enter **Title**, **Name**, and **Description** for the space.
+1. 「**作成**」を選択して、スペースを作成します。 スペースに&#x200B;**タイトル**、**名前**、**説明**&#x200B;を入力します。
 
    「**作成**」をクリックします。
 
@@ -66,13 +66,13 @@ ht-degree: 74%
 **スペースのプロパティの表示および編集**
 
 1. リストからスペースを選択します。
-1. Choose **Properties** from the toolbar
-1. Click **Close** when done
+1. ツールバーから&#x200B;**プロパティ**&#x200B;を選択します
+1. 終了したら「**閉じる**」をクリックします
 
-**スペースをパブリッシュする** ：スペースがパブリッシュされると、そのスペース内のすべてのフォルダとエンティティもパブリッシュされます。
+**ス** ペースのパブリッシュスペースがパブリッシュされると、そのスペース内のすべてのフォルダとエンティティもパブリッシュされます。
 
 1. スペースコンソールのリスト内のアイコンをクリックして、スペースを選択します。
-1. Choose **Publish Tree**
+1. **発行ツリー**&#x200B;を選択
 
 >[!NOTE]
 >
@@ -86,13 +86,13 @@ ht-degree: 74%
 
 スペース内にフォルダーを含めると、コンテンツやアセットを簡単に整理できます。ユーザーは、スペース下に自分独自のフォルダー階層を作成できます。
 
-### フォルダーの作成 {#creating-a-folder}
+### フォルダーの作成  {#creating-a-folder}
 
-1. Click on the space in the list in the space console and click **Create Folder**
+1. スペースコンソールのリストのスペースをクリックし、「**フォルダを作成**」をクリックします
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
-1. Enter the **Title**, **Name,** and **Description** for the folder
+1. フォルダーの&#x200B;**タイトル**、**名前、**、**説明**&#x200B;を入力します
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
@@ -104,17 +104,17 @@ ht-degree: 74%
 >
 >言語コピーは、このリリースでは十分にサポートされていません。このリリースでは構造の設定のみおこなえます。
 
-The **Language Copy** feature allows authors to copy their master Language Copy and then create a Project and Workflow to automatically translate the content. 言語コピーによって正しい構造が作成されます。 スペース内にフォルダーを追加すると、スペースに言語コピーを追加できます。
+**言語コピー**&#x200B;機能を使用すると、作成者はマスター言語コピーをコピーし、プロジェクトとワークフローを作成してコンテンツを自動的に翻訳できます。 言語コピーによって正しい構造が作成されます。 スペース内にフォルダーを追加すると、スペースに言語コピーを追加できます。
 
 >[!NOTE]
 >
 >翻訳する可能性があるすべてのコンテンツを、言語コピーノード下に配置することをお勧めします。
 
-### 言語コピーの追加 {#adding-language-copy}
+### 言語コピーの追加  {#adding-language-copy}
 
 1. スペースを作成したら、そのスペースをクリックして言語コピーを作成します。
 
-   Click **Create** and choose **Language Copy**.
+   「**作成**」をクリックし、「**言語コピー**」を選択します。
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
@@ -122,19 +122,19 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
    >
    >言語コピーノードは、スペースの直属の子要素としてのみ存在できます。
 
-1. Choose **Content Package Language&amp;ast;** and enter the **Title&amp;ast;** in **Create Language Copy** dialog.
+1. **コンテンツパッケージ言語&amp;ast;**&#x200B;を選択し、**言語コピーを作成**&#x200B;ダイアログに&#x200B;**Title&amp;ast;**&#x200B;を入力します。
 
    「**作成**」をクリックします。
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Once you create a Language Copy, it appears in your space in **Language Masters**.
+1. 作成した言語コピーは、スペースの&#x200B;**言語マスター**&#x200B;に表示されます。
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    >[!NOTE]
    >
-   >Select **Language Masters** to view the language copy folders.
+   >「**言語マスター**」を選択して、言語コピーフォルダーを表示します。
 
 ### スペースからのフォルダーの削除 {#removing-a-folder-from-the-space}
 
@@ -145,7 +145,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
    >
    >フォルダー内に移動してコンテンツを表示したり、サブフォルダーやエンティティを追加したりするには、スペースのコンテンツリスト内のフォルダーのタイトルをクリックします。
 
-## スペース内のエンティティの操作 {#working-with-entities-in-a-space}
+## スペース内のエンティティの操作  {#working-with-entities-in-a-space}
 
 エンティティとは、Web サービスエンドポイントを介して公開されるコンテンツのことです。エンティティはスペース内に保存されるので、簡単に見つけることができ、関連するコンテンツが保存される AEM リポジトリからの独立性を維持できます。
 
@@ -157,7 +157,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
 >
 >エンティティは、常にスペースに関連付けられています。したがって、スペースコンソールから、エンティティユーザーインターフェイスのほとんどの部分にアクセスできます。
 
-### エンティティの作成 {#creating-an-entity}
+### エンティティの作成  {#creating-an-entity}
 
 1. スペースコンソールを開き、スペースのタイトルをクリックします。
 
@@ -171,23 +171,23 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
 
    >[!NOTE]
    >
-   >You have the option to choose the **Assets Model**, **Pages Model**, or a model of entity type you created before.
+   >「**アセットモデル**」、「**ページモデル**」、または前に作成したエンティティタイプのモデルを選択できます。
    >
-   >See [Creating a Model](/help/mobile/administer-mobile-apps.md), to create your custom entity.
+   >カスタムエンティティを作成するには、[モデルの作成](/help/mobile/administer-mobile-apps.md)を参照してください。
 
-1. Enter a **Title**, **Name**, **Description**, and **Tags** for the entity. 「**作成**」をクリックします。
+1. エンティティの&#x200B;**タイトル**、**名前**、**説明**、**タグ**&#x200B;を入力します。 「**作成**」をクリックします。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
    完了すると、スペースの下位にエンティティが表示されます。
 
-### エンティティの編集 {#editing-an-entity}
+### エンティティの編集  {#editing-an-entity}
 
 1. エンティティを作成したら、フォルダーまたはスペースに移動し、編集するスペースコンソールからエンティティを選択します。
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. Select an entity for editing and click **Edit**.
+1. 編集するエンティティを選択し、「**編集**」をクリックします。
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
@@ -203,7 +203,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
-   ***エンティティを作成するためのテンプレートをページモデル***&#x200B;として選択した場合は、 **「編集」をクリックすると** 、次の図に示すようにアセットを追加できます。
+   ***エンティティを作成するためのテンプレートをページモデル***&#x200B;として選択した場合は、「 **** 編集」をクリックすると、次の図に示すようにアセットを追加できます。
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -213,7 +213,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
 
    >[!NOTE]
    >
-   >エンティティを追加したら、そのエンティティを保存して、プレビューリンクを使用できるようにする必要があります。プレビューを表示するには、「**保存**」をクリックします。Clicking on the **Preview** shows the json of the added asset, as shown in the figure below:
+   >エンティティを追加したら、そのエンティティを保存して、プレビューリンクを使用できるようにする必要があります。プレビューを表示するには、「**保存**」をクリックします。**プレビュー**&#x200B;をクリックすると、次の図に示すように、追加されたアセットのjsonが表示されます。
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
@@ -237,7 +237,7 @@ The **Language Copy** feature allows authors to copy their master Language Copy 
 
 1. ツールバーの「**削除**」をクリックして、スペースから特定のエンティティを削除します。
 
-### エンティティの公開 {#publishing-an-entity}
+### エンティティの公開  {#publishing-an-entity}
 
 エンティティの公開オプションとして、「**ツリーを公開**」および「**クイック公開**」があります。
 
