@@ -26,7 +26,7 @@ AEM Forms Workspace は SSO 対応です。ユーザーがFormsマネージャ�
 
 ユーザーに対するセッションタイムアウトは、 管理コンソールで設定できます。
 
-To set the timeout, login to `https://'[server]:[port]'/adminui`, navigate to **Settings > User Management > Configuration > Configure Advanced System Attributes**, and make the desired settings.
+タイムアウトを設定するには、`https://'[server]:[port]'/adminui`にログインし、**設定/User Management/設定/詳細なシステム属性を設定**&#x200B;に移動して、必要な設定を行います。
 
 AEM Formsワークスペースでのタイムアウトは次のように処理されます。
 
