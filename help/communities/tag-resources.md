@@ -26,15 +26,15 @@ ht-degree: 61%
 
 基本的には：
 
-* [各カタログのタグ名前空間](../../help/sites-administering/tags.md#creating-a-namespace) （タグ）の作成
+* [各カタログのタグ](../../help/sites-administering/tags.md#creating-a-namespace) 名空間を作成する
 
    * [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
    * コミュニティメンバーのみ（非公開コミュニティ）
 
-      * Allow read access for the [community site&#39;s member group](users.md#publish-group-roles)
+      * [コミュニティサイトのメンバーグループ](users.md#publish-group-roles)の読み取りアクセスを許可する
    * サイト訪問者に対して、ログイン済みか匿名か（オープンコミュニティ）を問わず、
 
-      * Allow read access for the `Everyone` group
+      * `Everyone`グループの読み取りアクセスを許可
    * [タグを公開する](../../help/sites-administering/tags.md#publishing-tags)
 
 
@@ -44,10 +44,10 @@ ht-degree: 61%
    * [サイトの構造に存在するカタログを設定する](functions.md#catalog-function)
 
       * カタログインスタンスにタグを追加して、UIフィルターに表示されるタグのリストを制御できます。
-      * Can add [pre-filters](catalog-developer-essentials.md#pre-filters), to restrict a catalog&#39;s included resources.
+      * [プリフィルター](catalog-developer-essentials.md#pre-filters)を追加して、カタログに含まれるリソースを制限できます。
 
 * [コミュニティサイトの公開](sites-console.md#publishing-the-site)
-* [タグを有効化リソースに適用して](resources.md#create-a-resource) 、カテゴリに基づいてフィルタリングされる可能性がある
+* [タグを有効化](resources.md#create-a-resource) リソースに適用して、カテゴリに基づいてフィルタリングされる可能性がある
 * [有効化リソースを発行する](resources.md#publish)
 
 ## コミュニティサイトタグ {#community-site-tags}
@@ -60,7 +60,7 @@ ht-degree: 61%
 
 コミュニティサイトでは、サイトを公開してタグを公開した後、コミュニティのメンバーに対する読み取りアクセスを有効にする必要があります。[タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)を参照してください。
 
-The following is how it appears in CRXDE when an administrator applies read permissions to `/etc/tags/ski-catalog` for the group `Community Enable Members`.
+管理者がグループ`Community Enable Members`の`/etc/tags/ski-catalog`に読み取り権限を適用した場合、CRXDEでは次のように表示されます。
 
 ![site-tags](assets/site-tags.png)
 
@@ -74,15 +74,15 @@ The following is how it appears in CRXDE when an administrator applies read perm
 
 ## イネーブルメントリソースへのタグの適用 {#applying-tags-to-enablement-resources}
 
-Enablement resources and learning paths will appear in all catalog when `Show in Catalog` is checked. リソースおよび学習パスにタグを追加すると、特定のカタログに事前フィルタリングしたり、カタログUIでフィルタリングしたりできます。
+`Show in Catalog`をチェックすると、有効化リソースと学習パスがすべてのカタログに表示されます。 リソースおよび学習パスにタグを追加すると、特定のカタログに事前フィルタリングしたり、カタログUIでフィルタリングしたりできます。
 
-Restricting enablement resources and learning paths to specific catalogs is accomplished by creating [pre-filters](catalog-developer-essentials.md#pre-filters).
+イネーブルメントリソースとラーニングパスを特定のカタログに制限するには、[プリフィルター](catalog-developer-essentials.md#pre-filters)を作成します。
 
 カタログ UI を使用すると、訪問者は、そのカタログに表示されているリソースや学習パスのリストにタグフィルターを適用できるようになります。
 
 イネーブルメントリソースにタグを適用する管理者は、より高度な分類を可能にするサブタグを選択するために、カタログに関連付けられているタグ名前空間に加えて、分類についても理解している必要があります。
 
-For example, if a `ski-catalog` namespace were created and set on a catalog named `Ski Catalog`, it might have two child tags: `lesson-1` and `lesson-2`.
+例えば、`ski-catalog`名前空間が作成され、`Ski Catalog`という名前のカタログに設定された場合、2つの子タグを持つことがあります。`lesson-1`と`lesson-2`。
 
 この場合は、以下のいずれかのタグが付けられたイネーブルメントリソースが、
 
