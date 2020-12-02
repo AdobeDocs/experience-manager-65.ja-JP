@@ -49,11 +49,11 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 * カスタムコンポーネントに必要な柔軟性および設定機能を備えること。
 * AEM 段落システム（parsys コンポーネントと iparsys コンポーネント）の能力と柔軟性を最大限に利用すること。
 
-### コンポーネントおよびその他の要素のカスタマイズ {#customizing-components-and-other-elements}
+### コンポーネントおよびその他の要素のカスタマイズ  {#customizing-components-and-other-elements}
 
 独自のコンポーネントを作成したり、既存のコンポーネントをカスタマイズしたりするとき、多くの場合は、既存の定義を再利用する方法が最も簡単（かつ安全）です。同じ原則が、エラーハンドラーなど、AEM 内の他の要素にも当てはまります。
 
-これは、既存の定義をコピーしてオーバーレイすることで実行できます。 つまり、からに定義をコピー `/libs` し `/apps/<your-project>`ます。 では、この新しい定義 `/apps`は、要件に応じて更新できます。
+これは、既存の定義をコピーしてオーバーレイすることで実行できます。 つまり、`/libs`から`/apps/<your-project>`に定義をコピーします。 `/apps`のこの新しい定義は、要件に従って更新できます。
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 
    これには、コンポーネント定義のオーバーレイが含まれます。
 
-   * Create a new component folder in `/apps/<website-name>/components/<MyComponent>` by copying an existing component:
+   * 既存のコンポーネントをコピーして、`/apps/<website-name>/components/<MyComponent>`に新しいコンポーネントフォルダーを作成します。
 
       * 例えば、テキストコンポーネントをカスタマイズするには、次のようにコピーします。
 
@@ -89,8 +89,8 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 >
 >設定およびその他の変更の手順は以下のとおりです。
 >
->1. copy the item in `/libs` to `/apps`
->1. make any changes within `/apps`
+>1. `/libs`の項目を`/apps`にコピー
+>1. `/apps`内で変更を加える
 
 
 ## JCR クエリを使用する場合と使用しない場合 {#when-to-use-jcr-queries-and-when-not-to-use-them}
@@ -119,7 +119,7 @@ JCR クエリは、純粋なレンダリング要求には決して使用しな�
 
 >[!NOTE]
 >
->It is also worthwhile to reference the [security checklist](/help/sites-administering/security-checklist.md).
+>また、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照することもお勧めします。
 
 ### JCR（リポジトリ）セッション {#jcr-repository-sessions}
 
@@ -129,13 +129,13 @@ JCR クエリは、純粋なレンダリング要求には決して使用しな�
 slingRequest.getResourceResolver().adaptTo(Session.class);
 ```
 
-### クロスサイトスクリプティング（XSS）に対する保護 {#protect-against-cross-site-scripting-xss}
+### クロスサイトスクリプティング（XSS）に対する保護  {#protect-against-cross-site-scripting-xss}
 
 クロスサイトスクリプティング（XSS）を利用することにより、攻撃者は他のユーザーが表示する Web ページにコードを埋め込むことができます。このセキュリティ脆弱性が悪意のある Web ユーザーに悪用され、アクセス制御が擦り抜けられる可能性があります。
 
 AEM では、ユーザーが提供するコンテンツをすべて出力時にフィルタリングする原則を適用しています。XSS を回避することは、開発時にもテスト時にも第一優先となります。
 
-Additionally, a web application firewall, such as [mod_security for Apache](https://modsecurity.org), can provide reliable, central control over the security of the deployment environment and protect against previously undetected cross-site scripting attacks.
+また、[mod_security for Apache](https://modsecurity.org)などのWebアプリケーションファイアウォールは、デプロイメント環境のセキュリティを信頼性の高い一元的な制御で提供し、以前は検出されなかったクロスサイトスクリプティング攻撃から保護できます。
 
 >[!CAUTION]
 >
@@ -156,7 +156,7 @@ XSSAPI チートシート
 
 これは、システムに対して機密の情報（設定や管理アクセスなど）とユーザーに対して機密の情報（個人情報の詳細など）の両方に該当します。
 
-## 個別の開発タスク {#distinct-development-tasks}
+## 個別の開発タスク  {#distinct-development-tasks}
 
 ### エラーページのカスタマイズ {#customizing-error-pages}
 
@@ -164,7 +164,7 @@ XSSAPI チートシート
 
 詳しくは、[エラーハンドラーによって表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md)を参照してください。
 
-### Java プロセス内の開いているファイル {#open-files-in-the-java-process}
+### Java プロセス内の開いているファイル  {#open-files-in-the-java-process}
 
 AEM は多数のファイルにアクセスできるので、[Java プロセス用に開いているファイル](/help/sites-deploying/configuring.md#open-files-in-the-java-process)の数を AEM 用に明示的に設定することをお勧めします。
 
