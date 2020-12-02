@@ -21,7 +21,7 @@ ht-degree: 57%
 >
 >以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
 
-## AEM Foundation GDPR support {#aem-foundation-gdpr-support}
+## AEM Foundation GDPRのサポート{#aem-foundation-gdpr-support}
 
 AEM Foundationレベルでは、保存される個人データはユーザープロファイルです。 したがって、この記事では主に、GDPR のアクセス要求と削除要求にそれぞれ対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
 
@@ -29,7 +29,7 @@ AEM Foundationレベルでは、保存される個人データはユーザープ
 
 ### 手動の手順 {#manual-steps}
 
-1. Open the User Administration console, by browsing to **[!UICONTROL Settings - Security - Users]** or by browsing directly to `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. **[!UICONTROL 設定→セキュリティ→ユーザー]**&#x200B;を開くか、`https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`を直接参照して、ユーザー管理コンソールを開きます。
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -93,17 +93,17 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### ユーザープロファイル情報の削除 {#delete-user-profile-information}
 
-1. Log in to CRXDE Lite, then search for the `[!UICONTROL userId]`:
+1. CRXDE Liteにログインし、`[!UICONTROL userId]`を検索します。
 
    ![image2018-2-6_1-57-11](assets/image2018-2-6_1-57-11.png)
 
-1. Open the user node which is located under `[!UICONTROL /home/users]` by default:
+1. デフォルトで`[!UICONTROL /home/users]`の下にあるユーザーノードを開きます。
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
 1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
 
-   1. The default private profile under `[!UICONTROL /profile]`
+   1. `[!UICONTROL /profile]`の下のデフォルトのプライベートプロファイル
    1. `[!UICONTROL /profiles]`AEM 6.5を使用して作成された新しいプロファイル用。
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
