@@ -19,13 +19,13 @@ ht-degree: 37%
 ---
 
 
-# AEM Communities のユーザーおよび UGC 管理サービス {#user-and-ugc-management-service-in-aem-communities}
+# AEM Communities のユーザーおよび UGC 管理サービス  {#user-and-ugc-management-service-in-aem-communities}
 
 >[!IMPORTANT]
 >
 >以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
 
-AEM CommunitiesはAPIを標準搭載で公開しており、ユーザープロファイルを管理し、ユーザー生成コンテンツ(UGC)を一括管理できます。 Once enabled, the **UserUgcManagement** service allows the privileged users (community administrators and moderators) to disable user profiles, and bulk delete or bulk export UGC for specific users. また、これらのAPIを使用すると、顧客データのコントローラとプロセッサが、欧州和集合のGDPR(General Data Protection Regulations)や、他のGDPRに基づくプライバシー要件に準拠できます。
+AEM CommunitiesはAPIを標準搭載で公開しており、ユーザープロファイルを管理し、ユーザー生成コンテンツ(UGC)を一括管理できます。 **UserUgcManagement**&#x200B;サービスを有効にすると、管理者ユーザー（コミュニティ管理者とモデレーター）はユーザープロファイルを無効にし、特定のユーザーに対してUGCを一括削除または一括エクスポートできます。 また、これらのAPIを使用すると、顧客データのコントローラとプロセッサが、欧州和集合のGDPR(General Data Protection Regulations)や、他のGDPRに基づくプライバシー要件に準拠できます。
 
 詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html)を参照してください。
 
@@ -33,13 +33,13 @@ AEM CommunitiesはAPIを標準搭載で公開しており、ユーザープロ�
 >
 >[AEM Communities 内の Adobe Analytics](/help/communities/analytics.md) サイトを設定している場合は、収集されたユーザーデータが Adobe Analytics サーバーに送信されます。Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除や、GDPR に準拠するための処理をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
 
-To put these APIs to use, you need to enable the `/services/social/ugcmanagement` endpoint by activating the UserUgcManagement service. To activate this service, install the [sample servlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) available on [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). 次に、次のようなhttpリクエストを使用して、適切なパラメーターを指定して、コミュニティサイトの発行インスタンスでエンドポイントに到達します。
+これらのAPIを使用するには、UserUgcManagementサービスをアクティブ化して`/services/social/ugcmanagement`エンドポイントを有効にする必要があります。 このサービスをアクティブ化するには、[GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)で利用可能な[サンプルサーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)をインストールします。 次に、次のようなhttpリクエストを使用して、適切なパラメーターを指定して、コミュニティサイトの発行インスタンスでエンドポイントに到達します。
 
 `https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`」を選択します。ただし、システム内のユーザープロファイルとユーザー生成コンテンツを管理するための UI（ユーザーインターフェイス）を構築することもできます。
 
 これらの API で実行できる機能を以下に示します。
 
-## ユーザーの UGC の取得 {#retrieve-the-ugc-of-a-user}
+## ユーザーの UGC の取得  {#retrieve-the-ugc-of-a-user}
 
 **getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)** は、ユーザーのすべてのUGCをシステムからエクスポートするのに役立ちます。
 
@@ -61,9 +61,9 @@ To put these APIs to use, you need to enable the `/services/social/ugcmanagement
 * ユーザーの = `weston.mccall@dodgit.com`
 * 操作 = `deleteUgc`
 
-### Adobe AnalyticsからUGCを削除 {#delete-ugc-from-adobe-analytics}
+### UGCをAdobe Analyticsから削除{#delete-ugc-from-adobe-analytics}
 
-ユーザーデータをAdobe Analyticsから削除するには、 [GDPR Analyticsのワークフローに従います](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)。を使用しない場合、APIはAdobe Analyticsからユーザーデータを削除しません。
+Adobe Analyticsからユーザーデータを削除するには、[GDPR Analyticsワークフロー](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)に従ってください。を使用しない場合、APIはAdobe Analyticsからユーザーデータを削除しません。
 
 AEM Communitiesが使用するAdobe Analytics変数マッピングについては、次の図を参照してください。
 
@@ -71,7 +71,7 @@ AEM Communitiesが使用するAdobe Analytics変数マッピングについて�
 
 ## ユーザーアカウントの無効化 {#disable-a-user-account}
 
-**deleteUserAccount(ResourceResolver resourceResolver, String user)** は、ユーザーアカウントを無効にするのに役立ちます。
+**deleteUserAccount(ResourceResolver resourceResolver, String user)は、ユーザーアカウントを無効にする** のに役立ちます。
 
 * **user**:ユーザーの承認可能なID。
 
@@ -79,11 +79,11 @@ AEM Communitiesが使用するAdobe Analytics変数マッピングについて�
 >
 >あるユーザーを無効化すると、そのユーザーがサーバー上で所有しているユーザー生成コンテンツがすべて削除されます。
 
-For example, to delete the profile of a user having authorizable ID `weston.mccall@dodgit.com` through http-POST request, use the following parameters:
+例えば、httpPOSTリクエストを使用して認証可能なID `weston.mccall@dodgit.com`を持つユーザーのプロファイルを削除するには、次のパラメーターを使用します。
 
 * ユーザーの = `weston.mccall@dodgit.com`
 * 操作 = `deleteUser`
 
 >[!NOTE]
 >
->deleteUserAccount() API では、ユーザープロファイルはシステム内で無効化され、その UGC が削除されるだけです。However, to delete a user profile from the system, navigate to **CRXDE Lite**: [https://&lt;server>/crx/de](https://localhost:4502/crx/de), locate the user node and delete it.
+>deleteUserAccount() API では、ユーザープロファイルはシステム内で無効化され、その UGC が削除されるだけです。ただし、ユーザープロファイルをシステムから削除するには、**CRXDE Lite**&#x200B;に移動します。[https://&lt;server>/crx/de](https://localhost:4502/crx/de)を開き、ユーザーノードを探して削除します。
