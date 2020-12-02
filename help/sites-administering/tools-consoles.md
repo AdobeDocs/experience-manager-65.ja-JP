@@ -26,7 +26,7 @@ ht-degree: 99%
 * [ツール - タッチ操作向け UI](#tools-touch-optimized-ui)
 * [ツール - クラシック UI](#tools-classic-ui)
 
-## ツール - タッチ操作向け UI {#tools-touch-optimized-ui}
+## ツール - タッチ操作向け UI  {#tools-touch-optimized-ui}
 
 >[!NOTE]
 >
@@ -351,7 +351,7 @@ ht-degree: 99%
    <td>コミュニティバッジ</td>
   </tr>
   <tr>
-   <td>コマース</td>
+   <td>Commerce</td>
    <td> </td>
   </tr>
   <tr>
