@@ -24,14 +24,14 @@ AEM Forms のデプロイメントは、システムレベルおよび内部レ�
 
 AEM Forms のデプロイメントの監視について詳しくは、「[AEM Forms デプロイメントの監視用テクニカルガイド](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf)」を参照してください。
 
-## MBean を使用した監視 {#monitoring-using-mbeans}
+## MBean を使用した監視  {#monitoring-using-mbeans}
 
 AEM Forms には、ナビゲーションおよび統計情報を提供する 2 つの MBean が登録されています。統合とインスペクションのためにサポートされている MBean はこれらのみです。
 
 * **ServiceStatistic：**&#x200B;この MBean はサービス名とそのバージョンに関する情報を提供します。
 * **OperationStatistic：**&#x200B;この MBean は Forms サーバーのすべてのサービスに関する統計情報を提供します。この MBean で管理者は呼び出し時間、エラー数など、特定のサービスに関する情報を取得できます。
 
-### ServiceStatisticMbean 公開インターフェイス {#servicestatisticmbean-public-interfaces}
+### ServiceStatisticMbean 公開インターフェイス  {#servicestatisticmbean-public-interfaces}
 
 次の ServiceStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
 
@@ -41,7 +41,7 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
  public int getMinorVersion();
 ```
 
-### OperationStatisticMbean 公開インターフェイス {#operationstatisticmbean-public-interfaces}
+### OperationStatisticMbean 公開インターフェイス  {#operationstatisticmbean-public-interfaces}
 
 次の OperationStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
 
@@ -69,43 +69,43 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
  public void setExceptionMessage(String errorMessage);
 ```
 
-### MBean ツリーおよび運用の統計情報 {#mbean-tree-operation-statistics}
+### MBean ツリーおよび運用の統計情報  {#mbean-tree-operation-statistics}
 
 JMX コンソール（JConsole）を使用すると、OperationStatistic MBean の統計情報を使用できます。この統計情報は MBean の属性です。次の階層ツリーで移動できます。
 
 **MBean ツリー**
 
-**Adobeドメイン名：** Application Serverによって異なります。 アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
+**Adobeドメイン名：アプリケーションサーバー** に依存します。アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
 
-**ServiceType:** AdobeServiceは、すべてのサービスのリストに使用される名前です。
+**ServiceType:** AdobeServiceは、すべてのサービスのリストに使用する名前です。
 
 **AdobeServiceName:** サービス名またはサービスID。
 
-**バージョン：** サービスのバージョン。
+**Version：サービスの** バージョン。
 
 **運用の統計情報**
 
-**Invocation Time:** メソッドの実行に要した時間。 要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
+**Invocation Time：メソッドの実行に要した** 時間。要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
 
-**呼び出し回数：** サービスが呼び出された回数。
+**呼び出し回数：サ** ービスが呼び出された回数。
 
-**平均呼び出し時間：** サーバーの起動後に実行したすべての呼び出しの平均時間です。
+**平均呼び出し時間：サーバーの起動後に実行したすべての呼び出しの** 平均時間です。
 
-**Max invocation time:** サーバーの起動後に実行した呼び出しのうち、最も長い呼び出し時間。
+**Max invocation time：サーバー** の起動後に実行した呼び出しのうち、最も長い呼び出し時間。
 
-**Min invocation time:** サーバーの起動後に実行した呼び出しのうち、最も短い呼び出し時間。
+**最小呼び出し時間：サーバー** の起動後に実行した呼び出しのうち、最も短い呼び出し時間。
 
-**Exception Count:** 失敗につながった呼び出しの数。
+**例外数：失敗を引き起こした呼び出しの** 数。
 
-**Exception Message:** 発生した最後の例外のエラーメッセージ。
+**例外メッセージ：発生** した最後の例外のエラーメッセージ。
 
 **Last Sampling Date Time:** 最後の呼び出しの日付。
 
-**時間単位：** 初期設定はミリ秒です。
+**時間単位：** デフォルトはミリ秒です。
 
 JMX 監視を有効にするには、一般的にアプリケーションサーバーに何らかの設定が必要です。詳しくは、アプリケーションサーバーのドキュメントを参照してください。
 
-### オープン JMX アクセスをセットアップする方法の例 {#examples-of-how-to-set-up-open-jmx-access}
+### オープン JMX アクセスをセットアップする方法の例  {#examples-of-how-to-set-up-open-jmx-access}
 
 **JBoss 4.0.3/4.2.0 - JVM スタートアップの設定**
 
@@ -120,7 +120,7 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
 
 **WebLogic 9.2 /10 - JVM スタートアップの設定**
 
-1. Edit the startWebLogic.bat file that is located under `[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin`.
+1. `[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin`の下にあるstartWebLogic.batファイルを編集します。
 1. JAVA_OPTS 行を見つけ、次の内容を追加します。
 
    ```shell
