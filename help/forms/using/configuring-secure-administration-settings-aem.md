@@ -17,7 +17,7 @@ ht-degree: 80%
 ---
 
 
-# Configuring Secure Administration Settings for AEM Forms on JEE {#configuring-secure-administration-settings-for-aem-forms-on-jee}
+# JEE上のAEM Formsのセキュア管理設定の設定{#configuring-secure-administration-settings-for-aem-forms-on-jee}
 
 JEE上のAEM Formsの実稼働環境では、プライベート開発環境では必要ないが、必要でないユーザーアカウントやサービスを管理する方法を説明します。
 
@@ -25,7 +25,7 @@ JEE上のAEM Formsの実稼働環境では、プライベート開発環境で�
 
 この記事では、JEE 上の AEM Forms の管理オプションを使用して、攻撃の対象となる脆弱性を全体的に減らす方法について説明します。
 
-## サービスへの不要なリモートアクセスの無効化 {#disabling-non-essential-remote-access-to-services}
+## サービスへの不要なリモートアクセスの無効化  {#disabling-non-essential-remote-access-to-services}
 
 JEE 上の AEM Forms のインストールと設定が完了したら、SOAP および Enterprise JavaBeans™（EJB）経由で、多くのサービスをリモートで起動できるようになります。「リモート」という用語は、この場合、アプリケーションサーバーの SOAP、EJB または Action Message Format（AMF）のポートにネットワークアクセス可能なすべての呼び出し元を意味します。
 
@@ -66,7 +66,7 @@ JEE 上の AEM Forms サービスには、少なくとも SOAP アクセスが�
 
 1. 「**次へ**」をクリックして、上記のリストにない SOAP エンドポイントに関して、前述の手順を繰り返します。エンドポイントを削除する前に、「プロバイダー」列に SOAP が表示されていることを確認してください。
 
-## サービスへの不要な匿名アクセスの無効化 {#disabling-non-essential-anonymous-access-to-services}
+## サービスへの不要な匿名アクセスの無効化  {#disabling-non-essential-anonymous-access-to-services}
 
 一部の forms サーバーサービスについては、未承認（匿名）ユーザーが呼び出して一部の操作を実行することが許可されます。つまり、サービスによって公開されている一部の操作は、認証された任意のユーザーだけでなく、認証されていない任意のユーザーによって呼び出される可能性があります。
 
@@ -78,7 +78,7 @@ JEE 上の AEM Forms サービスには、少なくとも SOAP アクセスが�
 
 1. **サービス／アプリケーションおよびサービス／サービスの管理**&#x200B;をクリックします。
 1. 無効にするサービスの名前（AuthenticationManagerService など）をクリックします。
-1. Click the **Security tab**, deselect **Anonymous Access Allowed**, and click **Save**.
+1. 「**セキュリティ」タブ**&#x200B;をクリックし、「**匿名アクセスを許可**」の選択を解除して、「**保存**」をクリックします。
 1. 以下のサービスに関して手順 3 と 4 を繰り返します。
 
    * AuthenticationManagerService
@@ -111,7 +111,7 @@ JEE 上の AEM Forms サービスには、少なくとも SOAP アクセスが�
 
 エンドユーザーは、Workbench、AEM FormsのWebアプリケーション、またはAEM Formsサーバーサービスを呼び出すカスタムアプリケーションを使用して、AEM Formsに対して認証を行うことができます。 グローバルタイムアウト設定を使用すると、再認証を要求されるまでにユーザーが（SAML ベースアサーションを使用して）AEM Forms とやり取りできる時間を指定することができます。デフォルト設定は 2 時間です。実稼働環境では、この時間を、設定可能な分単位の最小値に変更する必要があります。
 
-### 再認証時間制限の最小化 {#minimize-reauthentication-time-limit}
+### 再認証時間制限の最小化  {#minimize-reauthentication-time-limit}
 
 1. Web ブラウザーに次の URL を入力して管理コンソールにログインします。
 
