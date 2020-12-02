@@ -28,5 +28,5 @@ Dynamic Media の操作は、クラシック UI では使用できません。�
 
 >[!NOTE]
 >
->If you are using Dynamic Media, you cannot simultaneously use automatic uploads available if [integrate Dynamic Media Classic into AEM](/help/sites-administering/scene7.md). See [enabling Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media). Dynamic Media はデフォルトで無効になっています。
+>ダイナミックメディアを使用している場合、[Dynamic Media ClassicをAEM](/help/sites-administering/scene7.md)に統合すると、利用可能な自動アップロードを同時に使用することはできません。 [ダイナミックメディアの有効化](/help/assets/config-dynamic.md#enabling-dynamic-media)を参照してください。 Dynamic Media はデフォルトで無効になっています。
 
