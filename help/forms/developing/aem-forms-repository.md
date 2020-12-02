@@ -18,21 +18,21 @@ ht-degree: 2%
 ---
 
 
-# Working with AEM Forms Repository {#working-with-aem-forms-repository}
+# AEM Formsリポジトリの操作{#working-with-aem-forms-repository}
 
 **Repository Serviceについて**
 
-Repositoryサービスは、リソースのストレージおよび管理サービスをAEM Formsに提供します。 When developers create an *AEM Forms* application, they can deploy the assets in the repository instead of the file system. アセットには、XML 形式、PDF 形式（Acrobat 形式を含む）、フォームのフラグメント、画像、プロファイル、ポリシー、SWF ファイル、DDX ファイル、XML スキーマ、WSDL ファイルおよびテストデータなど、任意のタイプのコラテラルが含まれます。
+Repositoryサービスは、リソースのストレージおよび管理サービスをAEM Formsに提供します。 開発者は、*AEM Forms*&#x200B;アプリケーションを作成するときに、ファイルシステムではなく、リポジトリにアセットをデプロイできます。 アセットには、XML 形式、PDF 形式（Acrobat 形式を含む）、フォームのフラグメント、画像、プロファイル、ポリシー、SWF ファイル、DDX ファイル、XML スキーマ、WSDL ファイルおよびテストデータなど、任意のタイプのコラテラルが含まれます。
 
-例えば、次のFormsアプリケーションの *Applications/FormsApplication*:
+例えば、次のFormsアプリケーション&#x200B;*Applications/FormsApplication*&#x200B;を考えてみましょう。
 
 ![ww_ww_formrepository](assets/ww_ww_formrepository.png)
 
-FormsFolder内にLoan.xdpという名前のファイルがあることに注意してください。 このフォームデザインにアクセスするには、次の操作を行います（バージョンを含む）。 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+FormsFolder内にLoan.xdpという名前のファイルがあることに注意してください。 このフォームデザインにアクセスするには、次の操作を行います（バージョンを含む）。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
 
 >[!NOTE]
 >
->Workbenchを使用したFormsアプリケーションの作成に関する詳細は、『 [Workbenchヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)』を参照してください。
+>Workbenchを使用したFormsアプリケーションの作成について詳しくは、[Workbenchヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください。
 
 AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
 
@@ -46,7 +46,7 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
 
 >[!NOTE]
 >
->Webブラウザーを使用して、AEM Formsリポジトリを参照できます。 リポジトリを参照するには、Webブラウザーに次のURLを入力し `https://[server name]:[server port]/repository`ます。 「AEM Formsリポジトリでの作業」セクションに関連付けられているクイック開始の結果は、Webブラウザーを使用して確認できます。 例えば、コンテンツをAEM Formsリポジトリに追加すると、Webブラウザーでコンテンツを表示できます。 (See [Quick Start (SOAP mode): Writing a resource using the Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>Webブラウザーを使用して、AEM Formsリポジトリを参照できます。 リポジトリを参照するには、Webブラウザー`https://[server name]:[server port]/repository`に次のURLを入力します。 「AEM Formsリポジトリでの作業」セクションに関連付けられているクイック開始の結果は、Webブラウザーを使用して確認できます。 例えば、コンテンツをAEM Formsリポジトリに追加すると、Webブラウザーでコンテンツを表示できます。 ([クイック開始（SOAPモード）を参照):Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)を使用したリソースの書き込み)。
 
 リポジトリAPIは、リポジトリに情報を格納したり、リポジトリから情報を取得したりするために使用できる操作を多数提供します。 例えば、リソースのリストを取得したり、アプリケーションの処理の一部としてリソースが必要な場合にリポジトリに格納されている特定のリソースを取得したりできます。
 
@@ -56,15 +56,15 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
 
 RepositoryサービスAPIを使用して、次のタスクを実行できます。
 
-* フォルダーの作成. 「フォルダ [の作成](aem-forms-repository.md#creating-folders)」を参照してください。
-* リソースとそのプロパティを書き込みます。 「リソースの [書き込み](aem-forms-repository.md#writing-resources)」を参照してください。
-* 特定のコレクション内のリストリソース、または他のリソースに関連付けられているリソース。 「 [Listing Resources](aem-forms-repository.md#listing-resources)」を参照してください。
-* リソースとそのプロパティを読み取ります。 詳しくは、 [Reading Resources](aem-forms-repository.md#reading-resources)を参照してください。
-* リソースとそのプロパティを更新します。 「リソース [の更新](aem-forms-repository.md#updating-resources)」を参照してください。
-* 履歴、関連するリソース、プロパティなどのリソースを検索します。 「リソースの [検索](aem-forms-repository.md#searching-for-resources)」を参照してください。
-* リソース間の関係を指定します。 「リソースの関係の [作成](aem-forms-repository.md#creating-resource-relationships)」を参照してください。
-* リソースのロックとロック解除、アクセス制御リスト(ACL)の読み取りと書き込みなど、リソースアクセス制御を管理します。 Locking [Resources](aem-forms-repository.md#locking-resources)を参照してください。
-* リソースとそのプロパティを削除します。 「リソース [の削除](aem-forms-repository.md#deleting-resources)」を参照してください。
+* フォルダーの作成. 「[フォルダーの作成](aem-forms-repository.md#creating-folders)」を参照してください。
+* リソースとそのプロパティを書き込みます。 [リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
+* 特定のコレクション内のリストリソース、または他のリソースに関連付けられているリソース。 [リソースの一覧表示](aem-forms-repository.md#listing-resources)を参照してください。
+* リソースとそのプロパティを読み取ります。 [リソースの読み取り](aem-forms-repository.md#reading-resources)を参照してください。
+* リソースとそのプロパティを更新します。 「[リソースの更新](aem-forms-repository.md#updating-resources)」を参照してください。
+* 履歴、関連するリソース、プロパティなどのリソースを検索します。 [リソースの検索](aem-forms-repository.md#searching-for-resources)を参照してください。
+* リソース間の関係を指定します。 「[リソースの関係の作成](aem-forms-repository.md#creating-resource-relationships)」を参照してください。
+* リソースのロックとロック解除、アクセス制御リスト(ACL)の読み取りと書き込みなど、リソースアクセス制御を管理します。 [リソースのロック](aem-forms-repository.md#locking-resources)を参照してください。
+* リソースとそのプロパティを削除します。 「[リソースの削除](aem-forms-repository.md#deleting-resources)」を参照してください。
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ RepositoryサービスAPIを使用して、次のタスクを実行できます�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
 ## フォルダーの作成 {#creating-folders}
 
@@ -86,9 +86,9 @@ RepositoryサービスAPIを使用して、次のタスクを実行できます�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary-of-steps}
+### 手順{#summary-of-steps}の概要
 
 フォルダーを作成するには、次の手順に従います。
 
@@ -125,7 +125,7 @@ Repositoryサービスメソッドを呼び出して、リソースコレクシ�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用したフォルダーの作成 {#create-folders-using-the-java-api}
+### Java APIを使用したフォルダーの作成{#create-folders-using-the-java-api}
 
 RepositoryサービスAPI(Java)を使用してフォルダーを作成します。
 
@@ -135,30 +135,30 @@ RepositoryサービスAPI(Java)を使用してフォルダーを作成します�
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. フォルダーの作成
 
-   リソースコレクションを作成するには、まず `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` オブジェクトを作成する必要があります。
+   リソースコレクションを作成するには、まず`com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean`オブジェクトを作成する必要があります。
 
-   オブジェクトの `repositoryInfomodelFactoryBean``newResourceCollection` メソッドを呼び出し、次のパラメーターを渡します。
+   `repositoryInfomodelFactoryBean`オブジェクトの`newResourceCollection`メソッドを呼び出し、次のパラメーターを渡します。
 
-   * リソースに割り当てる `com.adobe.repository.infomodel.Id` UUID識別子。
-   * リソースに割り当てる `com.adobe.repository.infomodel.Lid` UUID識別子。
-   * リソースコレクションの名前 `java.lang.String` を含む。 例： `FormsFolder`
+   * リソースに割り当てる`com.adobe.repository.infomodel.Id` UUID識別子。
+   * リソースに割り当てる`com.adobe.repository.infomodel.Lid` UUID識別子。
+   * リソースコレクションの名前を含む`java.lang.String`。 例： `FormsFolder`
 
-   このメソッドは、新しいフォルダーを表す `com.adobe.repository.infomodel.bean.ResourceCollection` オブジェクトを返します。
+   このメソッドは、新しいフォルダーを表す`com.adobe.repository.infomodel.bean.ResourceCollection`オブジェクトを返します。
 
-   フォルダーの説明を設定するには、 `setDescription` メソッドを使用し、次のパラメーターを渡します。
+   `setDescription`メソッドを使用してフォルダーの説明を設定し、次のパラメーターを渡します。
 
-   * リソース収集 `String` を示す。 この例では、が使用され `"test Folder"` ています。 `.`
+   * リソース収集を記述する`String`。 この例では、`"test Folder"`が`.`として使用されています。
 
 
 1. フォルダーをリポジトリに書き込みます
 
-   オブジェクトの `ResourceRepositoryClient` メソッドを呼び出し、フォルダーと `writeResource``ResourceCollection` オブジェクトのURIを渡します。 例えば、フォルダーへのURIを次の値に設定でき `/Applications/FormsApplication/1.0/`ます。
+   `ResourceRepositoryClient`オブジェクトの`writeResource`メソッドを呼び出し、フォルダーと`ResourceCollection`オブジェクトのURIを渡します。 例えば、フォルダーへのURIは次の値`/Applications/FormsApplication/1.0/`にすることができます。
 
-   メソッドは、新しく作成された `com.adobe.repository.infomodel.bean.Resource` オブジェクトのインスタンスを返します。 例えば、オブジェクトのメソッドを呼び出して、新しいリソースの識別子の値を取得す `com.adobe.repository.infomodel.bean.Resource` ることがで `getId` きます。
+   メソッドは、新しく作成された`com.adobe.repository.infomodel.bean.Resource`オブジェクトのインスタンスを返します。 例えば、`com.adobe.repository.infomodel.bean.Resource`オブジェクトの`getId`メソッドを呼び出すことで、新しいリソースの識別子の値を取得できます。
 
 **関連トピック**
 
@@ -170,7 +170,7 @@ RepositoryサービスAPI(Java)を使用してフォルダーを作成します�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したフォルダーの作成 {#create-folders-using-the-web-service-api}
+### WebサービスAPI {#create-folders-using-the-web-service-api}を使用したフォルダーの作成
 
 RepositoryサービスAPI（Webサービス）を使用してフォルダーを作成します。
 
@@ -181,24 +181,24 @@ RepositoryサービスAPI（Webサービス）を使用してフォルダーを�
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、プロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
 1. フォルダーの作成
 
-   クラスのデフォルトのコンストラクターを使用してフォルダーを作成し、次のパラメーターを `ResourceCollection` 渡します。
+   `ResourceCollection`クラスのデフォルトのコンストラクターを使用してフォルダーを作成し、次のパラメーターを渡します。
 
-   * オブジェクト。クラスのデフォルトコンストラクターを呼び出して作成され、オ `Id` ブジェクトの `Id` フィールドに割り当てられるオブジェクト `Resource``id` です。
-   * オブジェクト。クラスのデフォルトコンストラクターを呼び出して作成され、オ `Lid` ブジェクトの `Lid` フィールドに割り当てられるオブジェクト `Resource``lid` です。
-   * リソースコレクションの名前を含む文字列。この名前は `Resource` オブジェクトの `name` フィールドに割り当てられます。 この例で使用される名前はで `"testfolder"`す。
-   * リソースコレクションの説明を含む文字列。これは `Resource` オブジェクトの `description` フィールドに割り当てられます。 この例で使用される説明は、で `"test folder"`す。
+   * `Id`オブジェクト。`Id`クラスのデフォルトのコンストラクターを呼び出して作成され、`Resource`オブジェクトの`id`フィールドに割り当てられます。
+   * `Lid`オブジェクト。`Lid`クラスのデフォルトのコンストラクターを呼び出して作成され、`Resource`オブジェクトの`lid`フィールドに割り当てられます。
+   * リソースコレクションの名前を含む文字列。この名前は`Resource`オブジェクトの`name`フィールドに割り当てられます。 この例で使用される名前は`"testfolder"`です。
+   * リソースコレクションの説明を含む文字列。これは`Resource`オブジェクトの`description`フィールドに割り当てられます。 この例で使用される説明は`"test folder"`です。
 
 1. フォルダーをリポジトリに書き込みます
 
-   オブジェクトの `RepositoryServiceService``writeResource` メソッドを呼び出し、次のパラメーターを渡します。
+   `RepositoryServiceService`オブジェクトの`writeResource`メソッドを呼び出し、次のパラメーターを渡します。
 
    * フォルダーを作成するパスです。
-   * フォルダーを表す `ResourceCollection` オブジェクトです。
-   * 他の2つ `null` のパラメーターに対してを渡します。
+   * フォルダーを表す`ResourceCollection`オブジェクトです。
+   * 他の2つのパラメーターに対して`null`を渡します。
 
 **関連トピック**
 
@@ -206,7 +206,7 @@ RepositoryサービスAPI（Webサービス）を使用してフォルダーを�
 
 [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## リソースの書き込み {#writing-resources}
+## リソースの書き込み{#writing-resources}
 
 リポジトリ内の特定の場所にリソースを作成できます。 自然なファイルサイズは、データベースの制限やセッションタイムアウトの影響を受けます。 デフォルトの設定では、ファイルのサイズは25 MBに制限されます。 最大ファイルサイズを増減するには、データベース設定を変更する必要があります。
 
@@ -218,9 +218,9 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-1}
+### 手順{#summary_of_steps-1}の概要
 
 リソースを書き込むには、次の手順に従います。
 
@@ -239,7 +239,7 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 **リソースのターゲットフォルダーのURIを指定します**
 
-読み取るリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*path*/*folder*&quot;
+読み取るリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*パス*/*フォルダー*&quot;
 
 **リソースの作成**
 
@@ -265,7 +265,7 @@ Repositoryサービスメソッドを呼び出して、リソースコンテン�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用したリソースの書き込み {#write-resources-using-the-java-api}
+### Java API {#write-resources-using-the-java-api}を使用したリソースの書き込み
 
 RepositoryサービスAPI(Java)を使用してリソースを書き込みます。
 
@@ -275,36 +275,36 @@ RepositoryサービスAPI(Java)を使用してリソースを書き込みます�
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. リソースのターゲットフォルダーのURIを指定します
 
-   リソースのターゲットフォルダーのURIを指定します。 この場合、という名前のリソース `testResource` はという名前のフォルダーに保存されるので `testFolder`、フォルダーのURIは `"/testFolder"`です。 URIは `java.lang.String` オブジェクトとして保存されます。
+   リソースのターゲットフォルダーのURIを指定します。 この場合、`testResource`という名前のリソースは`testFolder`という名前のフォルダーに保存されるので、フォルダーのURIは`"/testFolder"`です。 URIは`java.lang.String`オブジェクトとして保存されます。
 
 1. リソースの作成
 
-   リソースを作成するには、まず `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` オブジェクトを作成する必要があります。
+   リソースを作成するには、まず`com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean`オブジェクトを作成する必要があります。
 
-   オブジェクトを作成する `RepositoryInfomodelFactoryBean` オブジェクトの `newResource` メソッドを呼び出し `com.adobe.repository.infomodel.bean.Resource` ます。 この例では、次のパラメーターが提供されます。
+   `RepositoryInfomodelFactoryBean`オブジェクトの`newResource`メソッドを呼び出します。これにより`com.adobe.repository.infomodel.bean.Resource`オブジェクトが作成されます。 この例では、次のパラメーターが提供されます。
 
-   * クラスのデフォルトコンストラクターを呼び出して作成される `com.adobe.repository.infomodel.Id` オブジェクト `Id` 。
-   * クラスのデフォルトコンストラクターを呼び出して作成される `com.adobe.repository.infomodel.Lid` オブジェクト `Lid` 。
-   * リソースのファイル名 `java.lang.String` を含む。
+   * `com.adobe.repository.infomodel.Id`オブジェクト。`Id`クラスのデフォルトのコンストラクターを呼び出して作成します。
+   * `com.adobe.repository.infomodel.Lid`オブジェクト。`Lid`クラスのデフォルトのコンストラクターを呼び出して作成します。
+   * リソースのファイル名を含む`java.lang.String`。
 
-   リソースの説明を指定するには、 `Resource` オブジェクトの `setDescription` メソッドを呼び出し、説明を含む文字列を渡します。 この例では、説明はです `"test resource"`。
+   リソースの説明を指定するには、`Resource`オブジェクトの`setDescription`メソッドを呼び出し、説明を含む文字列を渡します。 この例では、説明は`"test resource"`です。
 
 1. リソースコンテンツの指定
 
-   リソースのコンテンツを作成するには、オブジ `RepositoryInfomodelFactoryBean` ェクトの `newResourceContent` メソッドを呼び出し、オブジ `com.adobe.repository.infomodel.bean.ResourceContent` ェクトを返します。 Add content to the `ResourceContent` object. この例では、次のタスクを行うことで実現します。
+   リソースのコンテンツを作成するには、`RepositoryInfomodelFactoryBean`オブジェクトの`newResourceContent`メソッドを呼び出します。このメソッドは、`com.adobe.repository.infomodel.bean.ResourceContent`オブジェクトを返します。 &lt;a0追加/>オブジェクトの内容。 `ResourceContent`この例では、次のタスクを行うことで実現します。
 
-   * オブジェクトの `ResourceContent` メソッドを呼び出して、オブジ `setDataDocument``com.adobe.idp.Document` ェクトを渡す
-   * オブジェクトの `ResourceContent` メソッドを呼び出して、オブジ `setSize``Document` ェクトのバイト単位でサイズを渡す
+   * `ResourceContent`オブジェクトの`setDataDocument`メソッドを呼び出して`com.adobe.idp.Document`オブジェクトを渡す
+   * `ResourceContent`オブジェクトの`setSize`メソッドを呼び出して、`Document`オブジェクトのバイト数でサイズを渡す
 
-   オ追加ブジェクトのメソッドを呼び出し、オブジェクトを渡すことで、リソースに対するコンテンツを指定し `Resource``setContent``ResourceContent` ます。 For more information, see [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   追加`Resource`オブジェクトの`setContent`メソッドを呼び出し、`ResourceContent`オブジェクトを渡すことで、リソースの内容を指定します。 詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
 
 1. リソースをターゲットフォルダーに書き込みます
 
-   オブジェクトの `ResourceRepositoryClient` メソッドを呼び出し、フォルダーのURIと `writeResource``Resource` オブジェクトを渡します。
+   `ResourceRepositoryClient`オブジェクトの`writeResource`メソッドを呼び出し、フォルダーのURIと`Resource`オブジェクトを渡します。
 
 **関連トピック**
 
@@ -316,7 +316,7 @@ RepositoryサービスAPI(Java)を使用してリソースを書き込みます�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したリソースの書き込み {#write-resources-using-the-web-service-api}
+### WebサービスAPI {#write-resources-using-the-web-service-api}を使用したリソースの書き込み
 
 RepositoryサービスAPI（Webサービス）を使用してリソースを書き込みます。
 
@@ -327,33 +327,33 @@ RepositoryサービスAPI（Webサービス）を使用してリソースを書�
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、このプロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
 1. リソースのターゲットフォルダーのURIを指定します
 
-   リソースのターゲットフォルダーのURIを指定します。 この場合、という名前のリソース `testResource` はという名前のフォルダーに保存されるので `testFolder`、フォルダーのURIは `"/testFolder"`です。 Microsoft .NET Frameworkに準拠した言語（C#など）を使用する場合は、URIを `System.String` オブジェクトに格納します。
+   リソースのターゲットフォルダーのURIを指定します。 この場合、`testResource`という名前のリソースは`testFolder`という名前のフォルダーに保存されるので、フォルダーのURIは`"/testFolder"`です。 Microsoft .NET Frameworkに準拠した言語（C#など）を使用する場合は、URIを`System.String`オブジェクトに格納します。
 
 1. リソースの作成
 
-   リソースを作成するには、クラスのデフォルトコンストラクターを呼び出し `Resource` ます。 この例では、次の情報が `Resource` オブジェクトに格納されます。
+   リソースを作成するには、`Resource`クラスのデフォルトのコンストラクタを呼び出します。 この例では、次の情報が`Resource`オブジェクトに格納されます。
 
-   * オブジェクト。クラスのデフォルトコンストラクターを呼び出して作成され、オ `com.adobe.repository.infomodel.Id` ブジェクトの `Id``Resource``id` フィールドに割り当てられます。
-   * オブジェクト。クラスのデフォルトコンストラクターを呼び出して作成され、オ `com.adobe.repository.infomodel.Lid` ブジェクトの `Lid``Resource``lid` フィールドに割り当てられます。
-   * リソースのファイル名を含む文字列。このファイル名は `Resource` オブジェクトの `name` フィールドに割り当てられます。 この例で使用される名前はで `"testResource"`す。
-   * リソースの説明を含む文字列。このリソースは `Resource` オブジェクトの `description` フィールドに割り当てられます。 この例で使用される説明は、で `"test resource"`す。
+   * `com.adobe.repository.infomodel.Id`オブジェクト。`Id`クラスのデフォルトのコンストラクターを呼び出して作成され、`Resource`オブジェクトの`id`フィールドに割り当てられます。
+   * `com.adobe.repository.infomodel.Lid`オブジェクト。`Lid`クラスのデフォルトのコンストラクターを呼び出して作成され、`Resource`オブジェクトの`lid`フィールドに割り当てられます。
+   * リソースのファイル名を含む文字列。このファイル名は`Resource`オブジェクトの`name`フィールドに割り当てられます。 この例で使用される名前は`"testResource"`です。
+   * リソースの説明を含む文字列です。このリソースは`Resource`オブジェクトの`description`フィールドに割り当てられます。 この例で使用される説明は`"test resource"`です。
 
 1. リソースコンテンツの指定
 
-   リソースのコンテンツを作成するには、クラスのデフォルトコンストラクターを呼び出し `ResourceContent` ます。 次に、 `ResourceContent` オブジェクトにコンテンツを追加します。 この例では、次のタスクを行うことで実現します。
+   リソースのコンテンツを作成するには、`ResourceContent`クラスのデフォルトコンストラクターを呼び出します。 次に、`ResourceContent`オブジェクトにコンテンツを追加します。 この例では、次のタスクを行うことで実現します。
 
-   * ドキュメントを含む `BLOB` オブジェクトをオブジェクトの `ResourceContent` フ `dataDocument` ィールドに割り当てます。
-   * オブジェクトのフィールドに `BLOB` オブジェクトのサイズをバイト単位で割り当て `ResourceContent` る `size` 。
+   * ドキュメントを含む`BLOB`オブジェクトを`ResourceContent`オブジェクトの`dataDocument`フィールドに割り当てます。
+   * `BLOB`オブジェクトの`ResourceContent`フィールドに`size`オブジェクトのサイズをバイト単位で割り当てます。
 
-   オ追加ブジェクトのフィールドにオブジェクトを割り当てることで、リソースに対するコンテンツを指定し `ResourceContent` ま `Resource``content` す。
+   追加`ResourceContent`オブジェクトを`Resource`オブジェクトの`content`フィールドに割り当てることで、リソースの内容を指定します。
 
 1. リソースをターゲットフォルダーに書き込みます
 
-   オブジェクトの `RepositoryServiceService` メソッドを呼び出し、フォルダーのURIと `writeResource``Resource` オブジェクトを渡します。 他の2つ `null` のパラメーターに対してを渡します。
+   `RepositoryServiceService`オブジェクトの`writeResource`メソッドを呼び出し、フォルダーのURIと`Resource`オブジェクトを渡します。 他の2つのパラメーターに対して`null`を渡します。
 
 **関連トピック**
 
@@ -361,7 +361,7 @@ RepositoryサービスAPI（Webサービス）を使用してリソースを書�
 
 [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## リソースの一覧表示 {#listing-resources}
+## リソースのリスト{#listing-resources}
 
 リソースを一覧表示することで、リソースを見つけることができます。 リポジトリに対してクエリが実行され、特定のリソース収集に関連するすべてのリソースが検索されます。
 
@@ -371,9 +371,9 @@ RepositoryサービスAPI（Webサービス）を使用してリソースを書�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-2}
+### 手順{#summary_of_steps-2}の概要
 
 リストリソースを作成するには、次の手順に従います。
 
@@ -392,7 +392,7 @@ RepositoryサービスAPI（Webサービス）を使用してリソースを書�
 
 **フォルダーパスの指定**
 
-リソースを含むフォルダーのパスを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*path*/*folder*&quot;
+リソースを含むフォルダーのパスを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*パス*/*フォルダー*&quot;
 
 **リソースのリストの取得**
 
@@ -410,7 +410,7 @@ RepositoryサービスAPI（Webサービス）を使用してリソースを書�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用したリストリソース {#list-resources-using-the-java-api}
+### Java APIを使用したリストリソース{#list-resources-using-the-java-api}
 
 RepositoryサービスAPI(Java)を使用したリストリソース：
 
@@ -420,17 +420,17 @@ RepositoryサービスAPI(Java)を使用したリストリソース：
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. フォルダーパスの指定
 
-   照会するリソースコレクションのURIを指定します。 この場合、URIはです `"/testFolder"`。 URIは `java.lang.String` オブジェクトとして保存されます。
+   照会するリソースコレクションのURIを指定します。 この場合、URIは`"/testFolder"`です。 URIは`java.lang.String`オブジェクトとして保存されます。
 
 1. リソースのリストの取得
 
-   オブジェクトの `ResourceRepositoryClient``listMembers` メソッドを呼び出し、フォルダーのURIを渡します。
+   `ResourceRepositoryClient`オブジェクトの`listMembers`メソッドを呼び出し、フォルダーのURIを渡します。
 
-   このメソッドは、ある種類のリソースであり、リソース収集URIをターゲットとして持つ `java.util.List` 一 `com.adobe.repository.infomodel.bean.Resource` 連の `com.adobe.repository.infomodel.bean.Relation``Relation.TYPE_MEMBER_OF` オブジェクトを返します。 この処理を繰り返し実行して、各リソース `List` を取得できます。 この例では、各リソースの名前と説明が表示されます。
+   このメソッドは、`Relation.TYPE_MEMBER_OF`型の`com.adobe.repository.infomodel.bean.Relation`のソースであり、ターゲットとしてリソース収集URIを持つ`com.adobe.repository.infomodel.bean.Resource`オブジェクトの`java.util.List`を返します。 この`List`を繰り返し実行して、各リソースを取得できます。 この例では、各リソースの名前と説明が表示されます。
 
 **関連トピック**
 
@@ -442,7 +442,7 @@ RepositoryサービスAPI(Java)を使用したリストリソース：
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用するリストリソース {#list-resources-using-the-web-service-api}
+### WebサービスAPI {#list-resources-using-the-web-service-api}を使用したリストリソース
 
 RepositoryサービスAPI（Webサービス）を使用したリストリソース：
 
@@ -453,17 +453,17 @@ RepositoryサービスAPI（Webサービス）を使用したリストリソー�
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、このプロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
 1. フォルダーパスの指定
 
-   照会するフォルダーのURIを含む文字列を指定します。 この場合、URIはです `"/testFolder"`。 Microsoft .NET Frameworkに準拠している言語（C#など）を使用する場合は、URIを `System.String` オブジェクトに格納します。
+   照会するフォルダーのURIを含む文字列を指定します。 この場合、URIは`"/testFolder"`です。 Microsoft .NET Frameworkに準拠している言語（C#など）を使用する場合は、URIを`System.String`オブジェクトに格納します。
 
 1. リソースのリストの取得
 
-   オブ `RepositoryServiceService` ジェクトの `listMembers` メソッドを呼び出し、フォルダーのURIを最初のパラメーターとして渡します。 他の2つ `null` のパラメーターに対してを渡します。
+   `RepositoryServiceService`オブジェクトの`listMembers`メソッドを呼び出し、フォルダーのURIを最初のパラメーターとして渡します。 他の2つのパラメーターに対して`null`を渡します。
 
-   このメソッドは、オブジェクトにキャストできるオブジェクトの配列を返し `Resource` ます。 オブジェクト配列を繰り返し処理して、関連する各リソースを取得できます。 この例では、各リソースの名前と説明が表示されます。
+   このメソッドは、`Resource`オブジェクトにキャストできるオブジェクトの配列を返します。 オブジェクト配列を繰り返し処理して、関連する各リソースを取得できます。 この例では、各リソースの名前と説明が表示されます。
 
 **関連トピック**
 
@@ -471,7 +471,7 @@ RepositoryサービスAPI（Webサービス）を使用したリストリソー�
 
 [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## リソースの読み取り {#reading-resources}
+## リソースを読み取り中{#reading-resources}
 
 リソースのコンテンツとメタデータを読み取るために、リポジトリ内の特定の場所からリソースを取得できます。 ワークフローは、初期化フォームによってフロントエンドされます。 プロセスには、フォームを読み取るために必要なすべての権限があります。 データ・フォームが取得され、リポジトリからコンテンツが読み取られます。 リポジトリは、コンテンツとメタデータ（リソースが存在することを知る機能）へのアクセスを許可します。
 
@@ -488,9 +488,9 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-3}
+### 手順{#summary_of_steps-3}の概要
 
 リソースを読み取るには、次の手順に従います。
 
@@ -509,7 +509,7 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 **読み取るリソースのURIを指定します**
 
-読み取るリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*path*/*resource*&quot;
+読み取るリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*パス*/*リソース*&quot;
 
 **リソースの読み取り**
 
@@ -527,7 +527,7 @@ URIを指定してリソースを読み取るには、Repositoryサービスメ�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用したリソースの読み取り {#read-resources-using-the-java-api}
+### Java API {#read-resources-using-the-java-api}を使用してリソースを読み取ります
 
 RepositoryサービスAPI(Java)を使用してリソースを読み取ります。
 
@@ -537,15 +537,15 @@ RepositoryサービスAPI(Java)を使用してリソースを読み取ります�
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. 読み取るリソースのURIを指定します
 
-   取得するリソースのURIを表すstring値を指定します。 例えば、リソースの名前がtestFolderという名前のフォルダーにある *testResource* という名前の場合は、 *testFolder*&#x200B;と指定し `/testFolder/testResource`ます。
+   取得するリソースのURIを表すstring値を指定します。 例えば、リソースの名前が&#x200B;*testResource*&#x200B;で、*testFolder*&#x200B;という名前のフォルダーにあると仮定し、`/testFolder/testResource`を指定します。
 
 1. リソースの読み取り
 
-   オブジェクトの `ResourceRepositoryClient``readResource` メソッドを呼び出し、リソースのURIをパラメーターとして渡します。 このメソッドは、リソースを表す `Resource` インスタンスを返します。
+   `ResourceRepositoryClient`オブジェクトの`readResource`メソッドを呼び出し、リソースのURIをパラメーターとして渡します。 このメソッドは、リソースを表す`Resource`インスタンスを返します。
 
 **関連トピック**
 
@@ -557,26 +557,26 @@ RepositoryサービスAPI(Java)を使用してリソースを読み取ります�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したリソースの読み取り {#reading-resources-using-the-web-service-api}
+### WebサービスAPI {#reading-resources-using-the-web-service-api}を使用してリソースを読み取ります
 
 RepositoryサービスAPI（Webサービス）を使用してリソースを読み取ります。
 
 1. プロジェクトファイルを含める
 
-   * リポジトリWSDLを使用するMicrosoft .NETクライアントアセンブリを作成します。 (Base64エンコーディングを使用した.NETクライアントアセンブリの [作成を参照](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding))。
-   * Microsoft .NETクライアントアセンブリを参照します。 (Base64エンコーディングを使用した.NETクライアントアセンブリの [作成を参照](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding))。
+   * リポジトリWSDLを使用するMicrosoft .NETクライアントアセンブリを作成します。 （「[Base64エンコード](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)を使用する.NETクライアントアセンブリの作成」を参照）。
+   * Microsoft .NETクライアントアセンブリを参照します。 （「[Base64エンコード](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)を使用する.NETクライアントアセンブリの作成」を参照）。
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、このプロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
 1. 読み取るリソースのURIを指定します
 
-   取得するリソースのURIを含む文字列を指定します。 この場合、という名前のリソース `testResource` はという名前のフォルダーにあるので `testFolder`、そのURIは `"/testFolder/testResource"`です。 Microsoft .NET Frameworkに準拠した言語（C#など）を使用する場合は、URIを `System.String` オブジェクトに格納します。
+   取得するリソースのURIを含む文字列を指定します。 この場合、`testResource`という名前のリソースは`testFolder`という名前のフォルダーにあるので、そのURIは`"/testFolder/testResource"`です。 Microsoft .NET Frameworkに準拠した言語（C#など）を使用する場合は、URIを`System.String`オブジェクトに格納します。
 
 1. リソースの読み取り
 
-   オブジェクトの `RepositoryServiceService``readResource` メソッドを呼び出し、リソースのURIを最初のパラメーターとして渡します。 他の2つ `null` のパラメーターに対してを渡します。
+   `RepositoryServiceService`オブジェクトの`readResource`メソッドを呼び出し、リソースのURIを最初のパラメーターとして渡します。 他の2つのパラメーターに対して`null`を渡します。
 
 **関連トピック**
 
@@ -584,7 +584,7 @@ RepositoryサービスAPI（Webサービス）を使用してリソースを読�
 
 [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## リソースの更新 {#updating-resources}
+## リソースの更新{#updating-resources}
 
 リポジトリ内のリソースのコンテンツを取得して更新できます。 リソースを更新しても、それらのリソースのアクセス制御は、バージョン間で変更されません。 更新を実行する場合、メジャーバージョンを増分するオプションがあります。 メジャーバージョンを増分しない場合は、マイナーバージョンが自動的に更新されます。
 
@@ -598,9 +598,9 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-4}
+### 手順{#summary_of_steps-4}の概要
 
 リソースを更新するには、次の手順に従います。
 
@@ -619,7 +619,7 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 **更新するリソースを取得します**
 
-リソースを読み取ります。 詳しくは、「リソース [の読み取り](aem-forms-repository.md#reading-resources)」を参照してください。
+リソースを読み取ります。 詳しくは、[リソースの読み取り](aem-forms-repository.md#reading-resources)を参照してください。
 
 **リソースの更新**
 
@@ -637,7 +637,7 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用したリソースの更新 {#update-resources-using-the-java-api}
+### Java API {#update-resources-using-the-java-api}を使用したリソースの更新
 
 RepositoryサービスAPI(Java)を使用してリソースを更新します。
 
@@ -647,21 +647,21 @@ RepositoryサービスAPI(Java)を使用してリソースを更新します。
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. 更新するリソースを取得します
 
-   リソースを取得して読み取るリソースのURIを指定します。 この例では、リソースのURIはです `"/testFolder/testResource"`。
+   リソースを取得して読み取るリソースのURIを指定します。 この例では、リソースのURIは`"/testFolder/testResource"`です。
 
 1. リソースの更新
 
-   オブジェクトの `Resource` 情報を更新します。 この例では、説明を更新するには、 `Resource` オブジェクトの `setDescription` メソッドを呼び出し、新しい説明文字列をパラメーターとして渡します。
+   `Resource`オブジェクトの情報を更新します。 この例では、説明を更新するには、`Resource`オブジェクトの`setDescription`メソッドを呼び出し、新しい説明文字列をパラメーターとして渡します。
 
-   次に、 `ServiceClientFactory` オブジェクトの `updateResource` メソッドを呼び出し、次のパラメーターを渡します。
+   次に、`ServiceClientFactory`オブジェクトの`updateResource`メソッドを呼び出し、次のパラメーターを渡します。
 
-   * リソースのURIを含む `java.lang.String` オブジェクト。
-   * 更新されたリソース情報を含む `Resource` オブジェクトです。
-   * メジャーバージョンを更新するか、マイナーバージョンを更新するかを示す `boolean` 値。 この例では、メジャーバージョンの値を増分す `true` ることを示す値が渡されます。
+   * リソースのURIを含む`java.lang.String`オブジェクト。
+   * 更新されたリソース情報を含む`Resource`オブジェクトです。
+   * メジャーバージョンとマイナーバージョンのどちらを更新するかを示す`boolean`値。 この例では、メジャーバージョンの値が増分されることを示す値`true`が渡されます。
 
 **関連トピック**
 
@@ -673,7 +673,7 @@ RepositoryサービスAPI(Java)を使用してリソースを更新します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したリソースの更新 {#update-resources-using-the-web-service-api}
+### WebサービスAPI {#update-resources-using-the-web-service-api}を使用してリソースを更新する
 
 Repository API（Webサービス）を使用してリソースを更新します。
 
@@ -684,22 +684,22 @@ Repository API（Webサービス）を使用してリソースを更新します
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、このプロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
 1. 更新するリソースを取得します
 
-   取得するリソースのURIを指定し、リソースを読み取ります。 この例では、リソースのURIはです `"/testFolder/testResource"`。 詳しくは、「リソース [の読み取り](aem-forms-repository.md#reading-resources)」を参照してください。
+   取得するリソースのURIを指定し、リソースを読み取ります。 この例では、リソースのURIは`"/testFolder/testResource"`です。 詳しくは、[リソースの読み取り](aem-forms-repository.md#reading-resources)を参照してください。
 
 1. リソースの更新
 
-   オブジェクトの `Resource` 情報を更新します。 この例では、説明を更新するには、新しい値を `Resource` オブジェクトの `description` フィールドに割り当てます。
+   `Resource`オブジェクトの情報を更新します。 この例では、説明を更新するには、`Resource`オブジェクトの`description`フィールドに新しい値を割り当てます。
 
-1. オブジェクトの `RepositoryServiceService``updateResource` メソッドを呼び出し、次のパラメーターを渡します。
+1. `RepositoryServiceService`オブジェクトの`updateResource`メソッドを呼び出し、次のパラメーターを渡します。
 
-   * リソースのURIを含む `System.String` オブジェクト。
-   * 更新されたリソース情報を含む `Resource` オブジェクトです。
-   * メジャーバージョンを更新するか、マイナーバージョンを更新するかを示す `boolean` 値。 この例では、メジャーバージョンの値を増分す `true` ることを示す値が渡されます。
-   * 残り `null` の2つのパラメーターに対してを渡します。
+   * リソースのURIを含む`System.String`オブジェクト。
+   * 更新されたリソース情報を含む`Resource`オブジェクトです。
+   * メジャーバージョンとマイナーバージョンのどちらを更新するかを示す`boolean`値。 この例では、メジャーバージョンの値が増分されることを示す値`true`が渡されます。
+   * 残りの2つのパラメーターに`null`を渡します。
 
 **関連トピック**
 
@@ -707,7 +707,7 @@ Repository API（Webサービス）を使用してリソースを更新します
 
 [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## リソースの検索 {#searching-for-resources}
+## リソースの検索{#searching-for-resources}
 
 リポジトリ内のリソース（履歴、関連リソース、プロパティなど）を検索するために使用するクエリを作成できます。
 
@@ -715,21 +715,21 @@ Repository API（Webサービス）を使用してリソースを更新します
 
 **クエリ文**
 
-*クエリには* 、条件を使用して論理的に結合された1つ以上の文が含まれます。 ス *テートメント* は、左辺オペランド、演算子、右辺オペランドで構成されます。 また、検索結果に使用する並べ替え順を指定できます。 *並べ替え順* には、SQL `ORDER BY` 句と同等の情報が含まれ、検索の基準となる属性を含む要素と、昇順または降順のどちらを使用するかを示す値で構成されます。
+*クエリ*&#x200B;には、条件を論理的に結合した1つ以上のステートメントが含まれます。 *ステートメント*&#x200B;は、左辺の演算値、演算子、右辺の演算値で構成されます。 また、検索結果に使用する並べ替え順を指定できます。 *並べ替え順*&#x200B;は、SQL `ORDER BY`句と同等の情報を含み、検索の基となる属性を含む要素と、昇順または降順を使用するかどうかを示す値で構成されます。
 
 RepositoryサービスJava APIを使用して、プログラムによってリソースを検索できます。 現時点では、WebサービスAPIを使用してリソースを検索することはできません。
 
 **並べ替え動作**
 
-オブジェクトのメソッドを呼び出して、並べ替え順を指定する場合、並べ替え順は考慮されません `ResourceRepositoryClient``searchProperties` 。 例えば、属性名が `name`、、およびの3つのカスタムプロパティを持つリソースを作成するとしま `secondName``asecondName`す。 次に、属性名に並べ替え順要素を作成し、 `ascending` 値をに設定し `true`ます。
+`ResourceRepositoryClient`オブジェクトの`searchProperties`メソッドを呼び出して、並べ替え順を指定する場合、並べ替え順は考慮されません。 例えば、属性名が`name`、`secondName`、`asecondName`の3つのカスタムプロパティを持つリソースを作成するとします。 次に、属性名にソート順要素を作成し、`ascending`値を`true`に設定します。
 
-次に、 `ResourceRepositoryClient` オブジェクトの `searchProperties` メソッドを呼び出し、並べ替え順で渡します。 3つのプロパティを持つ正しいリソースが検索結果に返されます。 ただし、プロパティは属性名で並べ替えられません。 これらは、追加された順に返されます。 `name`、 `secondName`および `asecondName`。
+次に、`ResourceRepositoryClient`オブジェクトの`searchProperties`メソッドを呼び出し、並べ替え順で渡します。 3つのプロパティを持つ正しいリソースが検索結果に返されます。 ただし、プロパティは属性名で並べ替えられません。 これらは、追加された順に返されます。`name`、`secondName`、`asecondName`。
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-5}
+### 手順{#summary_of_steps-5}の概要
 
 リソースを検索するには、次の手順に従います。
 
@@ -752,7 +752,7 @@ RepositoryサービスJava APIを使用して、プログラムによってリ�
 
 **検索用のターゲットフォルダーを指定する**
 
-検索の実行元となる基本パスを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*path*/*folder*&quot;
+検索の実行元となる基本パスを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*パス*/*フォルダー*&quot;
 
 **検索で使用する属性を指定する**
 
@@ -784,7 +784,7 @@ RepositoryサービスJava APIを使用して、プログラムによってリ�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用したリソースの検索 {#search-for-resources-using-the-java-api}
+### Java API {#search-for-resources-using-the-java-api}を使用したリソースの検索
 
 RepositoryサービスAPI(Java)を使用してリソースを検索します。
 
@@ -794,54 +794,54 @@ RepositoryサービスAPI(Java)を使用してリソースを検索します。
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. 検索用のターゲットフォルダーを指定する
 
-   検索の実行元となるベースパスのURIを指定します。 この例では、リソースのURIはです `/testFolder`。
+   検索の実行元となるベースパスのURIを指定します。 この例では、リソースのURIは`/testFolder`です。
 
 1. 検索で使用する属性を指定する
 
-   検索を実行する属性の値を指定します。 属性は `com.adobe.repository.infomodel.bean.Resource` オブジェクト内に存在します。 この例では、name属性に対して検索が実行されます。したがって、 `java.lang.String` オブジェクトの名前を `Resource` 含む名前が使用されます(この場合 `testResource` )。
+   検索を実行する属性の値を指定します。 属性は`com.adobe.repository.infomodel.bean.Resource`オブジェクト内に存在します。 この例では、name属性に対して検索が実行されます。したがって、`Resource`オブジェクトの名前を含む`java.lang.String`が使用されます。この場合は`testResource`です。
 
 1. 検索で使用するクエリの作成
 
-   クエリを作成するには、クラスのデフォルトコンストラクタを呼び出して `com.adobe.repository.query.Query` オブジェクトを作成し、 `Query` クエリにステートメントを追加します。
+   クエリを作成するには、`Query`クラスのデフォルトのコンストラクターを呼び出して`com.adobe.repository.query.Query`オブジェクトを作成し、クエリにステートメントを追加します。
 
-   ステートメントを作成するには、クラスのコンストラクターを呼び出し、次のパラメーターを `com.adobe.repository.query.Query.Statement` 渡します。
+   ステートメントを作成するには、`com.adobe.repository.query.Query.Statement`クラスのコンストラクターを呼び出し、次のパラメーターを渡します。
 
-   * リソース属性定数を含む左辺オペランド。 この例では、リソース名が検索の基礎として使用されるので、静的な値 `Resource.ATTRIBUTE_NAME` が使用されます。
-   * 属性の検索で使用される条件を含む演算子。 演算子は、クラス内の静的定数の1つである必要があり `Query.Statement` ます。 この例では、静的な値 `Query.Statement.OPERATOR_BEGINS_WITH` が使用されます。
-   * 検索を実行する属性値を含む右辺オペランド。 この例では、値を `String` 含むname属性が使用さ `"testResource"`れます。
+   * リソース属性定数を含む左辺オペランド。 この例では、リソース名が検索の基礎として使用されるので、静的な値`Resource.ATTRIBUTE_NAME`が使用されます。
+   * 属性の検索で使用される条件を含む演算子。 演算子は、`Query.Statement`クラスの静的定数の1つである必要があります。 この例では、静的な値`Query.Statement.OPERATOR_BEGINS_WITH`が使用されます。
+   * 検索を実行する属性値を含む右辺オペランド。 この例では、name属性（`"testResource"`という値を含む`String`）が使用されます。
 
-   オブジェクトの `Query.Statement` メソッドを呼び出し、クラスに含まれる静的な値の1つを渡すことで、左辺オペランドの名前空間を指定し `setNamespace``com.adobe.repository.infomodel.bean.ResourceProperty` ます。 この例では、が使用され `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY` ています。
+   `Query.Statement`オブジェクトの`setNamespace`メソッドを呼び出し、`com.adobe.repository.infomodel.bean.ResourceProperty`クラスに含まれる静的な値の1つを渡して、左辺の演算値の名前空間を指定します。 この例では、`ResourceProperty.RESERVED_NAMESPACE_REPOSITORY`が使用されます。
 
-   オ追加ブジェクトのメソッドを呼び出し、オブジェクトを渡すことで、各ステートメントをクエリに送信し `Query``addStatement``Query.Statement` ます。
+   &lt;a0追加/>オブジェクトの`Query`メソッドを呼び出し、`addStatement`オブジェクトを渡すことで、各ステートメントをクエリに送信します。`Query.Statement`
 
 1. 検索結果の並べ替え順を作成する
 
-   検索結果で使用する並べ替え順を指定するには、クラスのデフォルトのコンストラクタを呼び出して `com.adobe.repository.query.sort.SortOrder` オブジェクトを作成し、 `SortOrder` 要素を並べ替え順に追加します。
+   検索結果で使用する並べ替え順を指定するには、`SortOrder`クラスのデフォルトのコンストラクタを呼び出して`com.adobe.repository.query.sort.SortOrder`オブジェクトを作成し、要素を並べ替え順に追加します。
 
-   並べ替え順の要素を作成するには、クラスのコンストラクタの1つを呼び出し `com.adobe.repository.query.sort.SortOrder.Element` ます。 この例では、リソースの名前が検索の基礎として使用されるので、静的な値 `Resource.ATTRIBUTE_NAME` が最初のパラメーターとして使用され、昇順(値の `boolean` 値 `true`)が2番目のパラメーターとして指定されます。
+   並べ替え順の要素を作成するには、`com.adobe.repository.query.sort.SortOrder.Element`クラスのコンストラクタの1つを呼び出します。 この例では、リソースの名前が検索の基礎として使用されるので、静的な値`Resource.ATTRIBUTE_NAME`が最初のパラメーターとして使用され、昇順の順序（`boolean`値`true`）が2番目のパラメーターとして指定されます。
 
-   各要素追加の並べ替え順を変更するには、 `SortOrder` オブジェクトの `addSortElement` メソッドを呼び出して、オブジェクトを渡し `SortOrder.Element` ます。
+   &lt;a0/追加>オブジェクトの`SortOrder`メソッドを呼び出し、`addSortElement`オブジェクトを渡すことで、各要素を並べ替え順に指定します。`SortOrder.Element`
 
 1. リソースの検索
 
-   属性プロパティに `resources` 基づいて検索するには、 `ResourceRepositoryClient` オブジェクトの `searchProperties` メソッドを呼び出し、次のパラメーターを渡します。
+   属性プロパティに基づいて`resources`を検索するには、`ResourceRepositoryClient`オブジェクトの`searchProperties`メソッドを呼び出し、次のパラメーターを渡します。
 
-   * 検索を実行する基本パスを `String` 含む。 この場合、が使用 `"/testFolder"` されます。
+   * 検索を実行する基本パスを含む`String`。 この場合は`"/testFolder"`が使用されます。
    * 検索で使用されるクエリ。
-   * 検索の深さ。 この場合、 `com.adobe.repository.infomodel.bean.ResourceCollection.DEPTH_INFINITE` は、ベースパスとそのすべてのフォルダーが使用されることを示すために使用されます。
-   * ページ解除された結果セットを選択する最初の行を示す `int` 値。 この例では、を指定 `0` します。
-   * 返される結果の最大数を示す `int` 値。 この例では、を指定 `10` します。
+   * 検索の深さ。 この場合、`com.adobe.repository.infomodel.bean.ResourceCollection.DEPTH_INFINITE`は、ベースパスとそのすべてのフォルダーが使用されることを示します。
+   * ページ解除された結果セットを選択する最初の行を示す`int`値。 この例では、`0`が指定されています。
+   * 返される結果の最大数を示す`int`値。 この例では、`10`が指定されています。
    * 検索で使用される並べ替え順。
 
-   このメソッドは、指定された並べ替え順 `java.util.List` で一連の `Resource` オブジェクトを返します。
+   このメソッドは、指定された並べ替え順で`Resource`オブジェクトの`java.util.List`を返します。
 
 1. 検索結果からリソースを取得
 
-   検索結果に含まれるリソースを取得するには、を繰り返し実行し、各オブジェクトをにキャストし `List` て情報 `Resource` を抽出します。 この例では、各リソースの名前が表示されます。
+   検索結果に含まれるリソースを取得するには、`List`を繰り返し処理し、各オブジェクトを`Resource`にキャストして情報を抽出します。 この例では、各リソースの名前が表示されます。
 
 **関連トピック**
 
@@ -853,13 +853,13 @@ RepositoryサービスAPI(Java)を使用してリソースを検索します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## リソースの関係の作成 {#creating-resource-relationships}
+## リソースの関係の作成{#creating-resource-relationships}
 
 リポジトリ内のリソース間の関係を指定できます。 関係には次の3種類があります。
 
 * **依存**:リソースが他のリソースに依存する関係。つまり、関連するすべてのリソースがリポジトリ内で必要になります。
 * **メンバーシップ（ファイルシステム）**:特定のフォルダー内にあるリソースの関係。
-* **カスタム**:リソース間で指定する関係。 例えば、あるリソースが非推奨で、別のリソースがリポジトリに導入された場合、独自の置き換え関係を指定できます。
+* **カスタム**:リソース間で指定する関係。例えば、あるリソースが非推奨で、別のリソースがリポジトリに導入された場合、独自の置き換え関係を指定できます。
 
 独自のカスタムリレーションシップを作成できます。 例えば、HTMLファイルをリポジトリに格納し、そのファイルで画像を使用する場合、カスタムの関係を指定してHTMLファイルと画像を関連付けることができます（通常はXMLファイルのみがリポジトリ定義の依存関係を使用して画像に関連付けられます）。 別の例として、ツリー構造ではなく循環グラフ構造を使用して、リポジトリの別の表示を構築する場合が考えられます。 ビューアと共に円グラフを定義して、これらの関係を横断できます。 最後に、2つのリソースが完全に異なる場合でも、1つのリソースが別のリソースを置き換えることを示すことができます。 その場合は、予約範囲外の関係タイプを定義して、これらの2つのリソース間に関係を作成できます。 アプリケーションは、関係を検出して処理できる唯一のクライアントであり、その関係を検索する際に使用できます。
 
@@ -867,9 +867,9 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-6}
+### 手順{#summary_of_steps-6}の概要
 
 2つのリソース間の関係を指定するには、次の手順に従います。
 
@@ -886,9 +886,9 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、プ�
 
 プログラムでリソースを読み取る前に、接続を確立し、秘密鍵証明書を提供する必要があります。 これは、サービスクライアントを作成することで実行されます。
 
-**関連付けるリソースのURIの指定**
+**関連付けるリソースのURIを指定します**
 
-関連付けるリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*path*/*resource*&quot;
+関連付けるリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*パス*/*リソース*&quot;
 
 **関係の作成**
 
@@ -906,7 +906,7 @@ Repositoryサービスメソッドを呼び出して、関係のタイプを作�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用した関係リソースの作成 {#create-relationship-resources-using-the-java-api}
+### Java API {#create-relationship-resources-using-the-java-api}を使用したリレーションシップリソースの作成
 
 RepositoryサービスのJava APIを使用して関係リソースを作成し、次のタスクを実行します。
 
@@ -916,28 +916,28 @@ RepositoryサービスのJava APIを使用して関係リソースを作成し�
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
-1. 関連付けるリソースのURIの指定
+1. 関連付けるリソースのURIを指定します
 
-   関連付けるリソースのURIを指定します。 この場合、リソースには名前が付けられ `testResource1` 、という名前のフォルダー `testResource2` に格納されているので、URI `testFolder`はとになり `"/testFolder/testResource1"` ま `"/testFolder/testResource2"`す。 URIはオブジェクトとして保存され `java.lang.String` ます。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの作成の詳細については、「リソースの [作成](aem-forms-repository.md#writing-resources)」を参照してください。
+   関連付けるリソースのURIを指定します。 この場合、リソースの名前は`testResource1`と`testResource2`で、`testFolder`という名前のフォルダーにあるので、リソースのURIは`"/testFolder/testResource1"`と`"/testFolder/testResource2"`です。 URIは`java.lang.String`オブジェクトとして保存されます。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
 
 1. 関係の作成
 
-   オブジェクトの `ResourceRepositoryClient``createRelationship` メソッドを呼び出し、次のパラメーターを渡します。
+   `ResourceRepositoryClient`オブジェクトの`createRelationship`メソッドを呼び出し、次のパラメーターを渡します。
 
    * ソースリソースのURIです。
    * ターゲットリソースのURIです。
-   * 関係のタイプ。クラス内の静的定数の1つ `com.adobe.repository.infomodel.bean.Relation` です。 この例では、値を指定して依存関係を確立し `Relation.TYPE_DEPENDANT_OF`ます。
-   * 新しい先頭リソースの識別子に対して、ターゲットリソースを自動的に更新する `boolean``com.adobe.repository.infomodel.Id`かどうかを示す値。 この例では、依存関係があるので、値が指定さ `true` れています。
+   * 関係のタイプ。`com.adobe.repository.infomodel.bean.Relation`クラスの静的定数の1つです。 この例では、`Relation.TYPE_DEPENDANT_OF`値を指定して依存関係を確立します。
+   * ターゲットリソースが新しいヘッドリソースの`com.adobe.repository.infomodel.Id`ベースの識別子に自動的に更新されるかどうかを示す`boolean`値。 この例では、依存関係があるので、`true`の値が指定されています。
 
-   また、オブジェクトのメソッドを呼び出し、次のパラメーターを渡すことで、特定のリソースに関連するリソースのリスト `ResourceRepositoryClient` を取得するこ `getRelated` ともできます。
+   また、`ResourceRepositoryClient`オブジェクトの`getRelated`メソッドを呼び出し、次のパラメーターを渡すことで、特定のリソースに関連するリソースのリストを取得できます。
 
-   * 関連するリソースを取得するリソースのURIです。 この例では、ソースリソース( `"/testFolder/testResource1"`)が指定されています。
-   * 指定したリソースが関係のソースリソースであるかどうかを示す `boolean` 値。 この例では、値が指定されています。こ `true` れは、この場合のみです。
-   * 関係タイプ。クラス内の静的定数の1つ `Relation` です。 この例では、依存関係は、前に使用したのと同じ値を使用して指定します。 `Relation.TYPE_DEPENDANT_OF`.
+   * 関連するリソースを取得するリソースのURIです。 この例では、ソースリソース(`"/testFolder/testResource1"`)が指定されています。
+   * 指定したリソースが関係のソースリソースであるかどうかを示す`boolean`値。 この例では、`true`という値が指定されています。これは、この場合です。
+   * 関係タイプ。`Relation`クラスの静的定数の1つです。 この例では、依存関係は、前に使用したのと同じ値を使用して指定します。`Relation.TYPE_DEPENDANT_OF`.
 
-   この `getRelated` メソッドは、繰り返し処理を行って各関連リソースを取得し、に含まれるオブジェクトをキャストするこ `java.util.List` とで、そのようにオブジェクト `Resource` を返 `List``Resource` します。 この例では、は返されるリソース `testResource2` のリストにあると想定されます。
+   `getRelated`メソッドは、`Resource`オブジェクトの`java.util.List`を返します。このメソッドを使用して、`List`に含まれるオブジェクトを`Resource`にキャストし、関連する各リソースを取得できます。 この例では、返されるリソースのリストに`testResource2`が必要です。
 
 **関連トピック**
 
@@ -949,7 +949,7 @@ RepositoryサービスのJava APIを使用して関係リソースを作成し�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した関係リソースの作成 {#create-relationship-resources-using-the-web-service-api}
+### WebサービスAPI {#create-relationship-resources-using-the-web-service-api}を使用してリレーションシップリソースを作成する
 
 Repository API（Webサービス）を使用して、次の関係リソースを作成します。
 
@@ -960,33 +960,33 @@ Repository API（Webサービス）を使用して、次の関係リソースを
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、このプロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
-1. 関連付けるリソースのURIの指定
+1. 関連付けるリソースのURIを指定します
 
-   関連付けるリソースのURIを指定します。 この場合、リソースには名前が付けられ `testResource1` 、という名前のフォルダー `testResource2` に格納されているので、URI `testFolder`はとになり `"/testFolder/testResource1"` ま `"/testFolder/testResource2"`す。 Microsoft .NET Framework（C#など）に準拠した言語を使用する場合、URIは `System.String` オブジェクトとして保存されます。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの作成の詳細については、「リソースの [作成](aem-forms-repository.md#writing-resources)」を参照してください。
+   関連付けるリソースのURIを指定します。 この場合、リソースの名前は`testResource1`と`testResource2`で、`testFolder`という名前のフォルダーにあるので、リソースのURIは`"/testFolder/testResource1"`と`"/testFolder/testResource2"`です。 Microsoft .NET Frameworkに準拠する言語（C#など）を使用する場合、URIは`System.String`オブジェクトとして保存されます。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
 
 1. 関係の作成
 
-   オブジェクトの `RepositoryServiceService``createRelationship` メソッドを呼び出し、次のパラメーターを渡します。
+   `RepositoryServiceService`オブジェクトの`createRelationship`メソッドを呼び出し、次のパラメーターを渡します。
 
    * ソースリソースのURIです。
    * ターゲットリソースのURIです。
-   * 関係のタイプ。 この例では、値を指定して依存関係を確立し `3`ます。
-   * 関係タイプが指定されたかどうかを示す `boolean` 値。 この例では、値が指定さ `true` れています。
-   * 新しい先頭リソースの識別子に対して、ターゲットリソースを自動的に更新する `boolean``Id`かどうかを示す値。 この例では、依存関係があるので、値が指定さ `true` れています。
-   * ターゲットヘッドが指定されたかどうかを示す `boolean` 値。 この例では、値が指定さ `true` れています。
-   * 最後 `null` のパラメーターに対してを渡します。
+   * 関係のタイプ。 この例では、`3`値を指定して依存関係を確立します。
+   * 関係タイプが指定されたかどうかを示す`boolean`値。 この例では、値`true`が指定されています。
+   * ターゲットリソースが新しいヘッドリソースの`Id`ベースの識別子に自動的に更新されるかどうかを示す`boolean`値。 この例では、依存関係があるので、`true`の値が指定されています。
+   * ターゲットヘッドが指定されたかどうかを示す`boolean`値。 この例では、値`true`が指定されています。
+   * 最後のパラメーターに`null`を渡します。
 
-   また、オブジェクトのメソッドを呼び出し、次のパラメーターを渡すことで、特定のリソースに関連するリソースのリスト `RepositoryServiceService` を取得するこ `getRelated` ともできます。
+   また、`RepositoryServiceService`オブジェクトの`getRelated`メソッドを呼び出し、次のパラメーターを渡すことで、特定のリソースに関連するリソースのリストを取得できます。
 
-   * 関連するリソースを取得するリソースのURIです。 この例では、ソースリソース( `"/testFolder/testResource1"`)が指定されています。
-   * 指定したリソースが関係のソースリソースであるかどうかを示す `boolean` 値。 この例では、値が指定されています。こ `true` れは、この場合のみです。
-   * ソースリソースが指定されたかどうかを示す `boolean` 値。 この例では、値が指定さ `true` れています。
-   * 関係タイプを含む整数の配列。 この例では、以前に使用したのと同じ値を配列に使用して、依存関係を指定します。 `3`.
-   * 残り `null` の2つのパラメーターに対してを渡します。
+   * 関連するリソースを取得するリソースのURIです。 この例では、ソースリソース(`"/testFolder/testResource1"`)が指定されています。
+   * 指定したリソースが関係のソースリソースであるかどうかを示す`boolean`値。 この例では、`true`という値が指定されています。これは、この場合です。
+   * ソースリソースが指定されたかどうかを示す`boolean`値。 この例では、値`true`が指定されています。
+   * 関係タイプを含む整数の配列。 この例では、以前に使用したのと同じ値を配列に使用して、依存関係を指定します。`3`.
+   * 残りの2つのパラメーターに`null`を渡します。
 
-   この `getRelated``Resource` メソッドは、オブジェクトにキャストできるオブジェクトの配列を返します。この配列を使用して、関連する各リソースを取得できます。 この例では、は返されるリソース `testResource2` のリストにあると想定されます。
+   `getRelated`メソッドは、`Resource`オブジェクトにキャストできるオブジェクトの配列を返します。この配列を介して、関連する各リソースを取得するために反復できます。 この例では、返されるリソースのリストに`testResource2`が必要です。
 
 **関連トピック**
 
@@ -994,7 +994,7 @@ Repository API（Webサービス）を使用して、次の関係リソースを
 
 [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## リソースのロック {#locking-resources}
+## リソースのロック{#locking-resources}
 
 特定のユーザーが排他的に使用するため、または複数のユーザー間で共有を使用するために、リソースまたはリソースのセットをロックできます。 共有ロックは、リソースに何かが起こることを示しますが、他の誰もがそのリソースに対して行動を起こすのを妨げることはありません。 共有ロックは、シグナリングメカニズムと見なす必要があります。 排他的ロックとは、リソースをロックしたユーザーがリソースを変更することを意味し、ロックは、ユーザーがリソースにアクセスする必要がなくなり、ロックを解除するまで、他のユーザーがリソースを変更できないようにします。 リポジトリ管理者がリソースをロック解除すると、そのリソース上の排他的ロックと共有ロックがすべて自動的に削除されます。 この種のアクションは、ユーザーが使用できなくなり、リソースのロックが解除されなくなった場合に使用します。
 
@@ -1006,9 +1006,9 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、リ�
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-7}
+### 手順{#summary_of_steps-7}の概要
 
 リソースをロックおよびロック解除するには、次の手順に従います。
 
@@ -1029,7 +1029,7 @@ RepositoryサービスJava APIまたはWebサービスAPIを使用して、リ�
 
 **ロックするリソースのURIを指定します**
 
-ロックするリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*path*/*resource*&quot;
+ロックするリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*パス*/*リソース*&quot;
 
 **リソースのロック**
 
@@ -1055,7 +1055,7 @@ URIを指定してリソースのロックを解除するには、Repositoryサ�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java APIを使用したリソースのロック {#lock-resources-using-the-java-api}
+### Java APIを使用したリソースのロック{#lock-resources-using-the-java-api}
 
 RepositoryサービスAPI(Java)を使用してリソースをロックする：
 
@@ -1065,31 +1065,31 @@ RepositoryサービスAPI(Java)を使用してリソースをロックする：
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. ロックするリソースのURIを指定します
 
-   ロックするリソースのURIを指定します。 この場合、という名前のリソース `testResource` はという名前のフォルダーにあるので `testFolder`、そのURIは `"/testFolder/testResource"`です。 URIは `java.lang.String` オブジェクトとして保存されます。
+   ロックするリソースのURIを指定します。 この場合、`testResource`という名前のリソースは`testFolder`という名前のフォルダーにあるので、そのURIは`"/testFolder/testResource"`です。 URIは`java.lang.String`オブジェクトとして保存されます。
 
 1. リソースのロック
 
-   オブジェクトの `ResourceRepositoryClient``lockResource` メソッドを呼び出し、次のパラメーターを渡します。
+   `ResourceRepositoryClient`オブジェクトの`lockResource`メソッドを呼び出し、次のパラメーターを渡します。
 
    * リソースのURI。
-   * ロックの範囲。 この例では、リソースは排他的に使用するためにロックされるので、ロック範囲はに指定し `com.adobe.repository.infomodel.bean.Lock.SCOPE_EXCLUSIVE`ます。
-   * ロックの深さ。 この例では、ロックは特定のリソースにのみ適用され、メンバーや子は適用されないので、ロックの深さはに指定し `Lock.DEPTH_ZERO`ます。
+   * ロックの範囲。 この例では、リソースは排他的に使用するためにロックされるので、ロック範囲は`com.adobe.repository.infomodel.bean.Lock.SCOPE_EXCLUSIVE`に指定されます。
+   * ロックの深さ。 この例では、ロックは特定のリソースにのみ適用され、メンバーや子は適用されないので、ロックの深さは`Lock.DEPTH_ZERO`に指定されます。
 
    >[!NOTE]
    >
-   >4つのパラメーターを必要とするオーバーロードされたバージョンの `lockResource` メソッドでは、例外がスローされます。 このチュートリアルに示すように、3つのパラメータを必要とする `lockResource` メソッドを使用してください。
+   >4つのパラメーターが必要な`lockResource`メソッドのオーバーロードされたバージョンでは、例外がスローされます。 このチュートリアルに示すように、3つのパラメーターを必要とする`lockResource`メソッドを使用してください。
 
 1. リソースのロックを取得する
 
-   オブジェクトの `ResourceRepositoryClient``getLocks` メソッドを呼び出し、リソースのURIをパラメーターとして渡します。 繰り返し処理が可能なLockオブジェクトのリストを返します。 この例では、各Lockオブジェクトのメソッド、メソッド、およびメソッドをそれぞれ呼び出して、各オブジェクトのロック所有者、深さ、スコープ `getOwnerUserId`を印刷し `getDepth``getType` ます。
+   `ResourceRepositoryClient`オブジェクトの`getLocks`メソッドを呼び出し、リソースのURIをパラメーターとして渡します。 繰り返し処理が可能なLockオブジェクトのリストを返します。 この例では、各Lockオブジェクトの`getOwnerUserId`、`getDepth`、`getType`メソッドをそれぞれ呼び出して、各オブジェクトのロック所有者、深さ、範囲を印刷します。
 
 1. リソースのロック解除
 
-   オブジェクトの `ResourceRepositoryClient``unlockResource` メソッドを呼び出し、リソースのURIをパラメーターとして渡します。 詳しくは、 [AEM FormsAPIリファレンスを参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   `ResourceRepositoryClient`オブジェクトの`unlockResource`メソッドを呼び出し、リソースのURIをパラメーターとして渡します。 詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
 
 **関連トピック**
 
@@ -1101,7 +1101,7 @@ RepositoryサービスAPI(Java)を使用してリソースをロックする：
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したリソースのロック {#lock-resources-using-the-web-service-api}
+### WebサービスAPI {#lock-resources-using-the-web-service-api}を使用してリソースをロックする
 
 RepositoryサービスAPI（Webサービス）を使用してリソースをロックするには：
 
@@ -1112,29 +1112,29 @@ RepositoryサービスAPI（Webサービス）を使用してリソースをロ�
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、このプロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
 1. ロックするリソースのURIを指定します
 
-   ロックするリソースのURIを含む文字列を指定します。 この場合、という名前のリソース `testResource` はフォルダー内にあるので、そのURI `testFolder`は `"/testFolder/testResource"`です。 Microsoft .NET Frameworkに準拠した言語（C#など）を使用する場合は、URIを `System.String` オブジェクトに格納します。
+   ロックするリソースのURIを含む文字列を指定します。 この場合、`testResource`という名前のリソースはフォルダー`testFolder`内にあるので、そのURIは`"/testFolder/testResource"`です。 Microsoft .NET Frameworkに準拠した言語（C#など）を使用する場合は、URIを`System.String`オブジェクトに格納します。
 
 1. リソースのロック
 
-   オブジェクトの `RepositoryServiceService``lockResource` メソッドを呼び出し、次のパラメーターを渡します。
+   `RepositoryServiceService`オブジェクトの`lockResource`メソッドを呼び出し、次のパラメーターを渡します。
 
    * リソースのURI。
-   * ロックの範囲。 この例では、リソースは排他的に使用するためにロックされるので、ロック範囲はに指定し `11`ます。
-   * ロックの深さ。 この例では、ロックは特定のリソースにのみ適用され、メンバーや子は適用されないので、ロックの深さはに指定し `2`ます。
-   * ロックが期限切れになるまでの秒数を示す `int` 値。 この例では、の値が使用さ `1000` れます。
-   * 最後 `null` のパラメーターに対してを渡します。
+   * ロックの範囲。 この例では、リソースは排他的に使用するためにロックされるので、ロック範囲は`11`に指定されます。
+   * ロックの深さ。 この例では、ロックは特定のリソースにのみ適用され、メンバーや子は適用されないので、ロックの深さは`2`に指定されます。
+   * ロックが切れるまでの秒数を示す`int`値。 この例では、`1000`の値が使用されます。
+   * 最後のパラメーターに`null`を渡します。
 
 1. リソースのロックを取得する
 
-   オブジェクトの `RepositoryServiceService` メソッドを呼び出し、リソースのURIを最初のパラメーターとして渡し、2番目のパラメーター `getLocks``null` として渡します。 このメソッドは、反復可能な `object``Lock` オブジェクトを含む配列を返します。 この例では、各オブジェクトのロック所有者、深さ、範囲は、各 `Lock` オブジェクトの `ownerUserId``depth``type` フィールド、深さ、スコープにそれぞれアクセスすることで印刷されます。
+   `RepositoryServiceService`オブジェクトの`getLocks`メソッドを呼び出し、リソースのURIを最初のパラメーターとして渡し、2番目のパラメーターとして`null`を渡します。 このメソッドは、`Lock`オブジェクトを含む`object`配列を返します。この配列を使用して反復を行うことができます。 この例では、各`Lock`オブジェクトの`ownerUserId`、`depth`、`type`フィールドにそれぞれアクセスすることで、各オブジェクトに対してロックの所有者、深さ、範囲が印刷されます。
 
 1. リソースのロック解除
 
-   オブジェクトの `RepositoryServiceService` メソッドを呼び出し、リソースのURIを最初のパラメーターとして渡し、2番目のパラメーター `unlockResource``null` として渡します。
+   `RepositoryServiceService`オブジェクトの`unlockResource`メソッドを呼び出し、リソースのURIを最初のパラメーターとして渡し、2番目のパラメーターとして`null`を渡します。
 
 **関連トピック**
 
@@ -1142,11 +1142,11 @@ RepositoryサービスAPI（Webサービス）を使用してリソースをロ�
 
 [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## リソースの削除 {#deleting-resources}
+## リソースの削除{#deleting-resources}
 
 RepositoryサービスJava API(SOAP)を使用すると、リポジトリ内の特定の場所からリソースをプログラムで削除できます。
 
-リソースを削除する場合、削除は通常は永続的ですが、ECMリポジトリは履歴メカニズムに従ってリソースのバージョンを保存する場合があります。 したがって、リソースを削除する場合は、そのリソースが再び必要にならないことを確認することが重要です。 リソースを削除する一般的な理由としては、データベースの使用可能な領域を増やす必要があることが挙げられます。 リソースのバージョンは削除できますが、削除する場合は、そのリソースの論理識別子(LID)やパスではなく、リソースの識別子を指定する必要があります。 フォルダーを削除すると、サブフォルダーやリソースを含む、そのフォルダー内のすべての要素が自動的に削除されます。
+リソースを削除する場合、削除は通常は永続的ですが、ECMリポジトリは履歴メカニズムに従ってリソースのバージョンを保存する場合があります。 したがって、リソースを削除する場合は、そのリソースが再び必要にならないことを確認することが重要です。 リソースを削除する一般的な理由としては、データベースの使用可能な領域を増やす必要がある場合があります。 リソースのバージョンは削除できますが、削除する場合は、そのリソースの論理識別子(LID)やパスではなく、リソースの識別子を指定する必要があります。 フォルダーを削除すると、サブフォルダーやリソースを含む、そのフォルダー内のすべての要素が自動的に削除されます。
 
 関連するリソースは削除されません。 例えば、logo.gifファイルを使用するフォームがあり、logo.gifを削除すると、保留中の関係テーブルに関係が保存されます。 別の方法として、バージョンの非推奨の場合は、最新バージョンのオブジェクトステータスを非推奨に設定します。
 
@@ -1154,13 +1154,13 @@ ECMシステムでは、削除操作はトランザクションに対して安�
 
 >[!NOTE]
 >
->ECMリポジトリ（EMC Documentum Content ServerおよびIBM FileNet P8 Content Manager）で `com.adobe.repository.bindings.dsc.client.ResourceRepositoryClient.deleteResources()` メソッドを使用する場合、指定されたリソースの1つに対して削除が失敗した場合、トランザクションはロールバックされません。つまり、削除されたファイルは削除を取り消すことができません。
+>ECMリポジトリ（EMC Documentum Content ServerおよびIBM FileNet P8 Content Manager）で`com.adobe.repository.bindings.dsc.client.ResourceRepositoryClient.deleteResources()`メソッドを使用する場合、指定されたリソースの1つに対して削除が失敗した場合、削除されたファイルの削除を取り消すことはできません。
 
 >[!NOTE]
 >
->For more information about the Repository service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Repositoryサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要 {#summary_of_steps-8}
+### 手順{#summary_of_steps-8}の概要
 
 リソースを削除するには、次の手順に従います。
 
@@ -1179,7 +1179,7 @@ ECMシステムでは、削除操作はトランザクションに対して安�
 
 **削除するリソースのURIを指定します**
 
-削除するリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*path*/*resource*&quot; 削除するリソースがフォルダーの場合、削除は再帰的に行われます。
+削除するリソースのURIを含む文字列を作成します。 構文には、次の例のようにスラッシュが含まれます。&quot;/*パス*/*リソース*&quot; 削除するリソースがフォルダーの場合、削除は再帰的に行われます。
 
 **リソースの削除**
 
@@ -1197,7 +1197,7 @@ URIを指定してリソースを削除するには、Repositoryサービスメ�
 
 [Repository Service APIクイック開始](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### Java API(SOAP)を使用したリソースの削除 {#delete-resources-using-the-java-api-soap}
+### Java API(SOAP) {#delete-resources-using-the-java-api-soap}を使用したリソースの削除
 
 リポジトリAPI(Java)を使用してリソースを削除します。
 
@@ -1207,15 +1207,15 @@ URIを指定してリソースを削除するには、Repositoryサービスメ�
 
 1. サービスクライアントの作成
 
-   コンストラクタを使用し、接続プロパティを含むオブジェクトを渡して、 `ResourceRepositoryClient``ServiceClientFactory` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`ResourceRepositoryClient`オブジェクトを作成します。
 
 1. 削除するリソースのURIを指定します
 
-   取得するリソースのURIを指定します。 この場合、testResourceToBeDeletedという名前のリソースはtestFolderという名前のフォルダーにあるので、そのURIはで `/testFolder/testResourceToBeDeleted`す。 URIは `java.lang.String` オブジェクトとして保存されます。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの作成の詳細については、「リソースの [作成](aem-forms-repository.md#writing-resources)」を参照してください。
+   取得するリソースのURIを指定します。 この場合、testResourceToBeDeletedという名前のリソースはtestFolderという名前のフォルダーにあるので、そのURIは`/testFolder/testResourceToBeDeleted`です。 URIは`java.lang.String`オブジェクトとして保存されます。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
 
 1. リソースの削除
 
-   オブジェクトの `ResourceRepositoryClient``deleteResource` メソッドを呼び出し、リソースのURIをパラメーターとして渡します。
+   `ResourceRepositoryClient`オブジェクトの`deleteResource`メソッドを呼び出し、リソースのURIをパラメーターとして渡します。
 
 **関連トピック**
 
@@ -1227,7 +1227,7 @@ URIを指定してリソースを削除するには、Repositoryサービスメ�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したリソースの削除 {#delete-resources-using-the-web-service-api}
+### WebサービスAPI {#delete-resources-using-the-web-service-api}を使用したリソースの削除
 
 Repository API（Webサービス）を使用してリソースを削除します。
 
@@ -1238,15 +1238,15 @@ Repository API（Webサービス）を使用してリソースを削除します
 
 1. サービスクライアントの作成
 
-   Microsoft .NETクライアントアセンブリを使用して、デフォルトのコンストラクタを呼び出して `RepositoryServiceService` オブジェクトを作成します。 ユーザー名とパスワードを含む `Credentials``System.Net.NetworkCredential` オブジェクトを使用して、このプロパティを設定します。
+   Microsoft .NETクライアントアセンブリを使用して、`RepositoryServiceService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。 ユーザー名とパスワードを含む`System.Net.NetworkCredential`オブジェクトを使用して、`Credentials`プロパティを設定します。
 
 1. 削除するリソースのURIを指定します
 
-   取得するリソースのURIを指定します。 この場合、という名前のリソース `testResourceToBeDeleted` はという名前のフォルダーにあるので `testFolder`、そのURIは `"/testFolder/testResourceToBeDeleted"`です。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの作成の詳細については、「リソースの [作成](aem-forms-repository.md#writing-resources)」を参照してください。
+   取得するリソースのURIを指定します。 この場合、`testResourceToBeDeleted`という名前のリソースは`testFolder`という名前のフォルダーにあるので、そのURIは`"/testFolder/testResourceToBeDeleted"`です。 この例では、リソースは最初にリポジトリに書き込まれ、そのURIが取得されます。 リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
 
 1. リソースの削除
 
-   オブジェクトの `RepositoryServiceService` メソッドを呼び出し、リソースのURIを含む `deleteResources``System.String` 配列を最初のパラメーターとして渡します。 2番目 `null` のパラメーターに対してを渡します。
+   `RepositoryServiceService`オブジェクトの`deleteResources`メソッドを呼び出し、リソースのURIを最初のパラメーターとして含む`System.String`配列を渡します。 2番目のパラメーターに`null`を渡します。
 
 **関連トピック**
 
