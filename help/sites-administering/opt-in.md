@@ -28,7 +28,7 @@ AEM には、Adobe Analytics および Adobe Target との統合に役立つオ�
 
 * タスクによる統合の設定。
 
-   これは、即座に、または後でおこなうことができ、何らかのアクションがおこなわれるまで、タスクはインボックスに残ります。In either case the configuration can be done directly in the UI, or with the use of a pre-defined `.properties` file.
+   これは、即座に、または後でおこなうことができ、何らかのアクションがおこなわれるまで、タスクはインボックスに残ります。どちらの場合も、設定はUIで直接行うことも、事前定義された`.properties`ファイルを使用して行うこともできます。
 
 * 統合のオプトアウト。
 
@@ -36,7 +36,7 @@ AEM には、Adobe Analytics および Adobe Target との統合に役立つオ�
 
 * スクリプトを使用してセットアップとプロビジョニングを設定します。
 
-## 統合の設定 {#configuring-the-integration}
+## 統合の設定  {#configuring-the-integration}
 
 次との統合をオプトインします。
 
@@ -117,7 +117,7 @@ Analytics および Target との統合用のアカウントプロパティを�
 
 プロパティと値は等号（=）で区切ります。 プロパティの先頭には `analytics`analytics が付き、 プロパティの先頭には `target`target が付きます。サービスを設定するには、そのサービスのすべてのプロパティの値を設定します。サービスを設定しない場合は、そのサービスの値を設定しないでください。
 
-The following example `.properties` file includes the property values for creating a cloud configuration for Analytics:
+次の例の`.properties`ファイルには、Analyticsのクラウド設定を作成するためのプロパティ値が含まれています。
 
 ```xml
 analytics.server=https://test.omniture.com/login/
@@ -144,9 +144,9 @@ target.password=
 
 1. Analytics または Target のアカウントに従って、プロパティ値を追加します。
 1. サーバーを起動または再起動し、管理者アカウントを使用してログインします。
-1. [統合の設定](/help/sites-administering/opt-in.md#configuring-the-integration)で説明されているように、Analytics &amp; Targeting を設定タスクを開きます。Instead of requesting your account information, the wizard uses the values from the `.properties` file.
+1. [統合の設定](/help/sites-administering/opt-in.md#configuring-the-integration)で説明されているように、Analytics &amp; Targeting を設定タスクを開きます。アカウント情報を要求する代わりに、ウィザードは`.properties`ファイルの値を使用します。
 
-   Select **Add** for the appropriate service, then continue with the wizard.
+   適切なサービスに対して&#x200B;**追加**&#x200B;を選択し、ウィザードに進みます。
 
    ![optin-02](assets/optin-02.png)
 
@@ -154,7 +154,7 @@ target.password=
 
 Analytics および Target との統合を設定すると、必要なクラウド設定とフレームワークを AEM が自動的に作成します。例えば、Analytics のクラウド設定は Provisioned Analytics Account という名前です。
 
-このクラウド設定を変更する必要はありません。ただし、必要に応じてフレームワークを設定できます(See [Mapping Component Data with Adobe Analytics Properties](/help/sites-administering/adobeanalytics-mapping.md) and [Add a Target Framework](/help/sites-administering/target.md).)
+このクラウド設定を変更する必要はありません。ただし、必要に応じてフレームワークを設定できます(「[コンポーネントデータとAdobe Analyticsプロパティのマッピング](/help/sites-administering/adobeanalytics-mapping.md)」および「[追加ターゲットフレームワーク](/help/sites-administering/target.md)」を参照)。
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Analytics および Target との統合を設定すると、必要なクラウ�
 * 必要な資格情報がすべて入力された **marketingcloud.properties** ファイルを使用する場合は、次のパラメーターを送信する必要があります。
 
    * `automaticProvisioning`= `true`
-   * `servicename`= `analytics|target`
+   * `servicename`=  `analytics|target`
    * `path`=作成したクラウドサービス設定を接続する AEM ページへのパス
 
    例えば、Analytics と Target の両方の設定を作成し、それらを we.retail ページに添付する curl 要求は次のとおりです。
@@ -192,19 +192,19 @@ Analytics および Target との統合を設定すると、必要なクラウ�
    curl -v -u admin:admin -X POST -d"automaticProvisioning=true&servicename=target&servicename=analytics&path=/content/we-retail" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
    ```
 
-* If you do not want to use the **marketingcloud.properties** file then you will have to send the credentials as well as parameters; for example:
+* **marketingcloud.properties**&#x200B;ファイルを使用したくない場合は、資格情報とパラメーターを送信する必要があります。例：
 
    * automaticProvisioning= `true`
    * servicename= `analytics|target`
    * path=作成したクラウドサービス設定を接続する AEM ページへのパス（複数のパスを定義可能）
    * analytics.server= `https://servername`
-   * analytics.company= `Name of company`
+   * analytics.会社= `Name of company`
    * analytics.username= `me`
    * analytics.secret= `secret`
    * analytics.reportsuite= `we-retail`
-   * target.clientcode= `mycompany`
-   * target.email= `me@adobe.com`
-   * target.password= `password`
+   * ターゲット.clientcode= `mycompany`
+   * ターゲット.email= `me@adobe.com`
+   * ターゲット.パスワード= `password`
 
    この場合、Analytics と Target の両方の設定を作成し、それらを we-retail ページに添付する curl 要求は次のようになります。
 
