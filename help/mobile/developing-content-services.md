@@ -43,7 +43,7 @@ AEM MobileContent Servicesは、AEMで管理されるコンテンツをリクエ
 >
 >コンテンツサービスの使用を始める前に、コンテンツサービスのフラグを有効にしてください。アプリ内でモデルの作成および管理を有効にするには、設定ブラウザーでデータモデルを有効にする必要があります。
 >
->詳細は、『 **[Content Services](/help/mobile/developing-content-services.md)** の [管理](/help/sites-administering/configurations.md) 』および『設定ブラウザのドキュメント』を参照してください。
+>詳しくは、**[Content Servicesの管理](/help/mobile/developing-content-services.md)**&#x200B;および[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
