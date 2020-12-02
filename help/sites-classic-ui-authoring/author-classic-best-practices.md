@@ -69,10 +69,10 @@ ht-degree: 65%
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
-オーサリング： [作成者の環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
+オーサリング：[作成者の環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
 
 ## フォーム {#forms}
 
-アダプティブフォーム： [アダプティブフォームの使用に関するベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズのベストプラクティスを説明します。
+アダプティブフォーム：[アダプティブフォームの使用に関するベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズのベストプラクティスを説明します。
 
-HTML5フォーム： [HTML5フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作する上でのベストプラクティスを説明します。
+HTML5フォーム：[HTML5フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作する上でのベストプラクティスを説明します。
