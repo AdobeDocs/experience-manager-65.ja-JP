@@ -22,15 +22,15 @@ ht-degree: 52%
 
 Trust Store の管理ページから、Forms サービスが SOAP レベルのセキュリティで要求を受け取る際に使用するユーザー名とパスワードの秘密鍵証明書を追加および削除できます。
 
-## ユーザー名とパスワードの秘密鍵証明書の追加 {#add-a-user-name-and-password-credential}
+## ユーザー名とパスワードの秘密鍵証明書の追加  {#add-a-user-name-and-password-credential}
 
-1. In administration console, click **[!UICONTROL Settings >Trust Store Management > User and Password Credentials]** and then click **[!UICONTROL Add]**.
-1. In the **[!UICONTROL Profile Name]** box, type a name for the credential.
-1. In the **[!UICONTROL User Name]** box, type a unique user name.
-1. In the **[!UICONTROL Password]** box, type a password for the user and then click **[!UICONTROL OK]**.
+1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/ユーザーとパスワードの秘密鍵証明書]**&#x200B;をクリックし、追加&#x200B;****&#x200B;をクリックします。
+1. 「**[!UICONTROL プロファイル名]**」ボックスに、秘密鍵証明書の名前を入力します。
+1. 「**[!UICONTROL ユーザー名]**」ボックスに、一意のユーザー名を入力します。
+1. 「**[!UICONTROL パスワード]**」ボックスにユーザーのパスワードを入力し、「**[!UICONTROL OK]**」をクリックします。
 
 ## ユーザー名とパスワードの秘密鍵証明書の削除 {#delete-a-user-name-and-password-credential}
 
-1. In administration console, click **[!UICONTROL Settings > Trust Store Management > User and Password Credentials]**.
-1. Select the check boxes for the credentials you want to delete, click **[!UICONTROL Delete]**, and then click **[!UICONTROL OK]**.
+1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/ユーザーとパスワードの秘密鍵証明書]**&#x200B;をクリックします。
+1. 削除する秘密鍵証明書のチェックボックスを選択し、「**[!UICONTROL 削除]**」をクリックして、「**[!UICONTROL OK]**」をクリックします。
 
