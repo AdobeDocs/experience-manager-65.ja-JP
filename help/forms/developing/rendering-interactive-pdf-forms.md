@@ -19,13 +19,13 @@ ht-degree: 0%
 ---
 
 
-# インタラクティブPDF formsのレンダリング {#rendering-interactive-pdf-forms}
+# インタラクティブPDF formsのレンダリング{#rendering-interactive-pdf-forms}
 
 Formsサービスは、ユーザーから情報を収集するために、クライアントデバイス（通常はWebブラウザー）に対してインタラクティブなPDF formsをレンダリングします。 インタラクティブフォームがレンダリングされた後、ユーザーはフォームフィールドにデータを入力し、フォーム上の送信ボタンをクリックして、情報をFormsサービスに送り返すことができます。 インタラクティブPDFフォームを表示するには、クライアントのWebブラウザーをホストするコンピューターにAdobe ReaderまたはAcrobatをインストールする必要があります。
 
 >[!NOTE]
 >
->Formsサービスを使用してフォームをレンダリングする前に、フォームデザインを作成します。 通常、フォームデザインはDesignerで作成され、XDPファイルとして保存されます。 フォームデザインの作成について詳しくは、 [Formsデザイナーを参照してください](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>Formsサービスを使用してフォームをレンダリングする前に、フォームデザインを作成します。 通常、フォームデザインはDesignerで作成され、XDPファイルとして保存されます。 フォームデザインの作成について詳しくは、「[Formsデザイナー](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照してください。
 
 **ローンの申し込み例**
 
@@ -45,40 +45,40 @@ Formsサービスがユーザーから情報を収集する際にインタラク
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>JavaサーブレットがHTMLページから呼び出され <code>GetLoanForm</code> ます。 </p></td>
+   <td><p><code>GetLoanForm</code> JavaサーブレットがHTMLページから呼び出されます。 </p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Javaサーブレットは、FormsサービスのクライアントAPIを使用して、ローンフォームをクライアントWebブラウザーにレンダリングします。 <code>GetLoanForm</code> (Java APIを使用したインタラクティブPDFフォームの <a href="#render-an-interactive-pdf-form-using-the-java-api">レンダリングを参照</a>)。</p></td>
+   <td><p><code>GetLoanForm</code> Javaサーブレットは、FormsサービスクライアントAPIを使用して、ローンフォームをクライアントWebブラウザーにレンダリングします。 （<a href="#render-an-interactive-pdf-form-using-the-java-api">Java APIを使用したインタラクティブPDFフォームのレンダリング</a>を参照）。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>ユーザーがローンフォームに入力し、「送信」ボタンをクリックすると、データが <code>HandleData</code> Javaサーブレットに送信されます。 (「ロ <i>ーンフォーム」を参照</i>)。</p></td>
+   <td><p>ユーザーがローンフォームに入力し、「送信」ボタンをクリックすると、データが<code>HandleData</code> Javaサーブレットに送信されます。 （<i>"ローンフォーム"</i>を参照）。</p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p>Javaサーブレットは、 <code>HandleData</code> FormsサービスクライアントAPIを使用して、フォーム送信を処理し、フォームデータを取得します。 次に、データをエンタープライズデータベースに格納します。 (提出したFormsの <a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">処理を参照</a>)。</p></td>
+   <td><p><code>HandleData</code> Javaサーブレットは、FormsサービスクライアントAPIを使用してフォーム送信を処理し、フォームデータを取得します。 次に、データをエンタープライズデータベースに格納します。 (<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">送信されたFormsの処理</a>を参照)。</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>確認フォームがWebブラウザーにレンダリングされて戻されます。 ユーザーの姓や名などのデータは、レンダリング前にフォームにマージされます。 (編集可能なレイアウト <a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">をFormsに自動埋め込むを参照</a>)。</p></td>
+   <td><p>確認フォームがWebブラウザーにレンダリングされて戻されます。 ユーザーの姓や名などのデータは、レンダリング前にフォームにマージされます。 (「<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">編集可能なレイアウトでFormsを自動埋め込む</a>」を参照)。</p></td>
   </tr>
  </tbody>
 </table>
 
 **ローンフォーム**
 
-このインタラクティブローンフォームは、サンプルローンアプリケーションの `GetLoanForm` Javaサーブレットによってレンダリングされます。
+このインタラクティブローンフォームは、サンプルローンアプリケーションの`GetLoanForm` Javaサーブレットによってレンダリングされます。
 
 ![ri_ri_loanform](assets/ri_ri_loanform.png)
 
 **確認フォーム**
 
-このフォームは、サンプルローンアプリケーションの `HandleData` Javaサーブレットによってレンダリングされます。
+このフォームは、サンプルローンアプリケーションの`HandleData` Javaサーブレットによってレンダリングされます。
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-Javaサーブレットは、 `HandleData` このフォームにユーザーの姓と名と金額を事前入力します。 フォームに事前入力された後、フォームがクライアントのWebブラウザーに送信されます。 (編集可能なレイアウト [をFormsに自動埋め込むを参照](/help/forms/developing/prepopulating-forms-flowable-layouts.md))。
+`HandleData` Javaサーブレットは、このフォームにユーザーの姓と名と金額を事前入力します。 フォームに事前入力された後、フォームがクライアントのWebブラウザーに送信されます。 (「[編集可能なレイアウトでFormsを自動埋め込む](/help/forms/developing/prepopulating-forms-flowable-layouts.md)」を参照)。
 
 **Javaサーブレット**
 
@@ -98,11 +98,11 @@ Javaサーブレットは、 `HandleData` このフォームにユーザーの�
              }
 ```
 
-通常、FormsサービスのクライアントAPIコードは、Javaサーブレット `doGet` または `doPost` メソッド内に配置しません。 このコードを別のクラスに配置し、メソッド（またはメソッド）内からクラスをインスタンス化して、適切なメソッドを呼び出す方が、プログラミング `doPost` の `doGet` 方法が適切です。 ただし、コードを簡潔にするために、この節のコード例は最小限に抑え、コード例はこの `doPost` メソッドに配置します。
+通常、FormsサービスのクライアントAPIコードは、Javaサーブレットの`doGet`メソッドまたは`doPost`メソッド内に配置しません。 このコードを別のクラスに配置し、`doPost`メソッド（または`doGet`メソッド）内からクラスをインスタンス化して、適切なメソッドを呼び出す方が、プログラミングのベストプラクティスです。 ただし、コードを簡潔にするために、この節のコード例は最小限に抑え、コード例は`doPost`メソッドに配置します。
 
 >[!NOTE]
 >
->For more information about the Forms service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Formsサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
 **手順の概要**
 
@@ -121,19 +121,19 @@ Javaサーブレットは、 `HandleData` このフォームにユーザーの�
 
 **FormsクライアントAPIオブジェクトの作成**
 
-プログラムでFormsサービスのクライアントAPI操作を実行する前に、FormsクライアントAPIオブジェクトを作成する必要があります。 Java APIを使用している場合は、 `FormsServiceClient` オブジェクトを作成します。 FormsWebサービスAPIを使用している場合は、 `FormsService` オブジェクトを作成します。
+プログラムでFormsサービスのクライアントAPI操作を実行する前に、FormsクライアントAPIオブジェクトを作成する必要があります。 Java APIを使用している場合は、`FormsServiceClient`オブジェクトを作成します。 FormsのWebサービスAPIを使用している場合は、`FormsService`オブジェクトを作成します。
 
 **URI値の指定**
 
-フォームをレンダリングするためにFormsサービスで必要なURI値を指定できます。 Formsアプリケーションの一部として保存されたフォームデザインは、コンテンツルートURI値を使用して参照でき `repository:///`ます。 例えば、FormsApplicationという名前のFormsアプリケーション内にある *Loan.xdp* という名前の次のフォームデザインを考えてみましょう **。
+フォームをレンダリングするためにFormsサービスで必要なURI値を指定できます。 Formsアプリケーションの一部として保存されたフォームデザインは、コンテンツルートURI値`repository:///`を使用して参照できます。 例えば、*FormsApplication*&#x200B;という名前のFormsアプリケーション内にある&#x200B;*Loan.xdp*&#x200B;という名前の次のフォームデザインを考えてみましょう。
 
 ![ri_ri_formrepository](assets/ri_ri_formrepository.png)
 
-このフォームデザインにアクセスするには、フォーム名( `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` メソッドに渡される最初のパラメーター)とコンテンツルートURI `renderPDFForm``repository:///` の値を指定します。
+このフォームデザインにアクセスするには、フォーム名（`renderPDFForm`メソッドに渡される最初のパラメーター）に`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`を指定し、コンテンツルートURI値に`repository:///`を指定します。
 
 >[!NOTE]
 >
->Workbenchを使用したFormsアプリケーションの作成に関する詳細は、『 [Workbenchヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)』を参照してください。
+>Workbenchを使用したFormsアプリケーションの作成について詳しくは、[Workbenchヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください。
 
 Formsアプリケーション内のリソースへのパスは次のとおりです。
 
@@ -152,11 +152,11 @@ Formsアプリケーション内のリソースへのパスは次のとおりで
 
 ターゲットURLがフォームデザイン内で定義されている場合は、FormsサービスのクライアントAPIを使用して上書きしないでください。 つまり、FormsAPIを使用してターゲットURLを設定すると、フォームデザインで指定されたURLが、APIを使用して指定されたURLにリセットされます。 PDFフォームをフォームデザインで指定されたターゲットURLに送信する場合は、プログラムでターゲットURLを空の文字列に設定します。
 
-送信ボタンと計算ボタン（サーバーで実行される対応するスクリプトを含む）を含むフォームがある場合、スクリプトを実行するためにフォームを送信する先のURLをプログラムで定義できます。 フォームデザインの送信ボタンを使用して、フォームデータが投稿されるURLを指定します。 (フォームデータの [計算を参照](/help/forms/developing/calculating-form-data.md))。
+送信ボタンと計算ボタン（サーバーで実行される対応するスクリプトを含む）を含むフォームがある場合、スクリプトを実行するためにフォームを送信する先のURLをプログラムで定義できます。 フォームデザインの送信ボタンを使用して、フォームデータが投稿されるURLを指定します。 （「[フォームデータの計算](/help/forms/developing/calculating-form-data.md)」を参照）。
 
 >[!NOTE]
 >
->XDPファイルを参照するURL値を指定する代わりに、インスタンスをFormsサービスに渡すこともでき `com.adobe.idp.Document` ます。 この `com.adobe.idp.Document` インスタンスにはフォームデザインが含まれています。 (「Formsサービスに [ドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)」を参照)。
+>XDPファイルを参照するURL値を指定する代わりに、`com.adobe.idp.Document`インスタンスをFormsサービスに渡すこともできます。 `com.adobe.idp.Document`インスタンスにはフォームデザインが含まれています。 (「[Formsサービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)」を参照)。
 
 **フォームへのファイルの添付**
 
@@ -168,17 +168,17 @@ Formsアプリケーション内のリソースへのパスは次のとおりで
 
 **インタラクティブPDFフォームのレンダリング**
 
-フォームをレンダリングするには、Designerで作成され、XDPまたはPDFファイルとして保存されたフォームデザインを使用します。 また、Acrobatを使用して作成し、PDFファイルとして保存したフォームをレンダリングすることもできます。 インタラクティブPDFフォームをレンダリングするには、 `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドまたは `renderPDFForm2` メソッドを呼び出します。
+フォームをレンダリングするには、Designerで作成され、XDPまたはPDFファイルとして保存されたフォームデザインを使用します。 また、Acrobatを使用して作成し、PDFファイルとして保存したフォームをレンダリングすることもできます。 インタラクティブPDFフォームをレンダリングするには、`FormsServiceClient`オブジェクトの`renderPDFForm`メソッドまたは`renderPDFForm2`メソッドを呼び出します。
 
-はオブジェクト `renderPDFForm` を使用 `URLSpec` します。 XDPファイルに対するコンテンツルートは、 `URLSpec` オブジェクトの `setContentRootURI` メソッドを使用してFormsサービスに渡されます。 フォームデザイン名( `formQuery`)は、別のパラメーター値として渡されます。 2つの値が連結され、フォームデザインの絶対参照が取得されます。
+`renderPDFForm`は`URLSpec`オブジェクトを使用します。 XDPファイルに対するコンテンツルートは、`URLSpec`オブジェクトの`setContentRootURI`メソッドを使用してFormsサービスに渡されます。 フォームデザイン名(`formQuery`)は、別のパラメーター値として渡されます。 2つの値が連結され、フォームデザインの絶対参照が取得されます。
 
-この `renderPDFForm2` メソッドは、レンダリングするXDPまたはPDFドキュメントを含む `com.adobe.idp.Document` インスタンスを受け取ります。
+`renderPDFForm2`メソッドは、レンダリングするXDPまたはPDFドキュメントを含む`com.adobe.idp.Document`インスタンスを受け取ります。
 
 >[!NOTE]
 >
 >入力ドキュメントがPDFドキュメントの場合、タグ付きPDFランタイムオプションは設定できません。 入力ファイルがXDPファイルの場合は、タグ付きPDFオプションを設定できます。
 
-## Java APIを使用してインタラクティブPDFフォームをレンダリングする {#render-an-interactive-pdf-form-using-the-java-api}
+## Java API {#render-an-interactive-pdf-form-using-the-java-api}を使用してインタラクティブPDFフォームをレンダリングする
 
 FormsAPI(Java)を使用してインタラクティブPDFフォームをレンダリングします。
 
@@ -189,50 +189,50 @@ FormsAPI(Java)を使用してインタラクティブPDFフォームをレンダ
 1. FormsクライアントAPIオブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `FormsServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`FormsServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. URI値の指定
 
-   * コンストラクターを使用して、URI値を格納する `URLSpec` オブジェクトを作成します。
-   * オブジェクトの `URLSpec``setApplicationWebRoot` メソッドを呼び出し、アプリケーションのWebルートを表すstring値を渡します。
-   * オブ `URLSpec` ジェクトの `setContentRootURI` メソッドを呼び出し、コンテンツルートURI値を指定するstring値を渡します。 フォームデザインがコンテンツルートURI内にあることを確認します。 そうでない場合、Formsサービスは例外をスローします。 リポジトリを参照するには、を指定し `repository:///`ます。
-   * オブジェクトの `URLSpec``setTargetURL` メソッドを呼び出し、フォームデータのポスト先のターゲットURL値を指定するstring値を渡します。 フォームデザインでターゲットURLを定義する場合は、空の文字列を渡すことができます。 演算を実行するために、フォームの送信先URLを指定することもできます。
+   * コンストラクターを使用して、URI値を格納する`URLSpec`オブジェクトを作成します。
+   * `URLSpec`オブジェクトの`setApplicationWebRoot`メソッドを呼び出し、アプリケーションのWebルートを表す文字列値を渡します。
+   * `URLSpec`オブジェクトの`setContentRootURI`メソッドを呼び出し、コンテンツルートURI値を指定する文字列値を渡します。 フォームデザインがコンテンツルートURI内にあることを確認します。 そうでない場合、Formsサービスは例外をスローします。 リポジトリを参照するには、`repository:///`を指定します。
+   * `URLSpec`オブジェクトの`setTargetURL`メソッドを呼び出し、フォームデータのポスト先のターゲットURL値を指定する文字列値を渡します。 フォームデザインでターゲットURLを定義する場合は、空の文字列を渡すことができます。 演算を実行するために、フォームの送信先URLを指定することもできます。
 
 1. フォームへのファイルの添付
 
-   * コンストラクターを使用して、添付ファイルを格納する `java.util.HashMap` オブジェクトを作成します。
-   * レンダリングされたフォームにアタッチする各ファイルに対して `java.util.HashMap` オブジェクトの `put` メソッドを呼び出します。 このメソッドに次の値を渡します。
+   * コンストラクターを使用して、添付ファイルを格納する`java.util.HashMap`オブジェクトを作成します。
+   * レンダリングされたフォームに添付する各ファイルに対して`java.util.HashMap`オブジェクトの`put`メソッドを呼び出します。 このメソッドに次の値を渡します。
 
       * 添付ファイルの名前（ファイル名拡張子を含む）を指定するstring値。
-   * 添付ファイルを含む `com.adobe.idp.Document` オブジェクトです。
+   * 添付ファイルを含む`com.adobe.idp.Document`オブジェクト。
 
    >[!NOTE]
    >
-   >フォームに添付するファイルごとに、この手順を繰り返します。 この手順はオプションです。添付ファイルを送信したくない `null` 場合は、この手順を渡すことができます。
+   >フォームに添付するファイルごとに、この手順を繰り返します。 この手順はオプションです。添付ファイルを送信したくない場合は、`null`を渡すことができます。
 
 1. インタラクティブPDFフォームのレンダリング
 
-   オブジェクトの `FormsServiceClient``renderPDFForm` メソッドを呼び出し、次の値を渡します。
+   `FormsServiceClient`オブジェクトの`renderPDFForm`メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパスを必ず指定してください（例：） `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * フォームとマージするデータを含む `com.adobe.idp.Document` オブジェクト。 データをマージしない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
-   * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。 これはオプションのパラメーターで、実行時のオプションを指定しない `null` かどうかを指定できます。
-   * Formsサービスに必要なURI値を含む `URLSpec` オブジェクトです。
-   * 添付ファイルを格納する `java.util.HashMap` オブジェクトです。 これはオプションのパラメーターで、フォームにファイルを添付しない `null` かどうかを指定できます。
+   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`など、完全なパスを必ず指定してください。
+   * フォームとマージするデータを含む`com.adobe.idp.Document`オブジェクト。 データをマージしない場合は、空の`com.adobe.idp.Document`オブジェクトを渡します。
+   * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。 これはオプションのパラメーターです。実行時のオプションを指定しない場合は、`null`を指定できます。
+   * Formsサービスに必要なURI値を含む`URLSpec`オブジェクト。
+   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターです。フォームにファイルを添付しない場合は、`null`を指定できます。
 
-   この `renderPDFForm``FormsResult` メソッドは、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを含むオブジェクトを返します。
+   `renderPDFForm`メソッドは、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを含む`FormsResult`オブジェクトを返します。
 
 1. フォームデータストリームをクライアントのWebブラウザーに書き込みます
 
-   * オブジェクトの `com.adobe.idp.Document` メソッドを呼び出して、 `FormsResult` オブジェクトを作成し `getOutputContent` ます。
-   * メソッドを呼び出して、 `com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得し `getContentType` ます。
-   * メソッドを呼び出し、オブジェクトの `javax.servlet.http.HttpServletResponse` コンテンツタイプを渡すことで、 `setContentType``com.adobe.idp.Document` オブジェクトのコンテンツタイプを設定します。
-   * オブジェクトの `javax.servlet.ServletOutputStream` メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに書き込むために使用する `javax.servlet.http.HttpServletResponse``getOutputStream` オブジェクトを作成します。
-   * オブジェクトの `java.io.InputStream` メソッドを呼び出して、 `com.adobe.idp.Document` オブジェクトを作成 `getInputStream` します。
-   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを呼び出して、バイト配列を引数として渡すことで、フォームデータストリームを設定します。
-   * オブジェクトの `javax.servlet.ServletOutputStream``write` メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
+   * `FormsResult`オブジェクト&#39;s `getOutputContent`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトを作成します。
+   * `getContentType`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを取得します。
+   * `javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定するには、`setContentType`メソッドを呼び出し、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに書き込むために使用する`javax.servlet.ServletOutputStream`オブジェクトを作成します。
+   * `com.adobe.idp.Document`オブジェクトの`getInputStream`メソッドを呼び出して、`java.io.InputStream`オブジェクトを作成します。
+   * バイト配列を作成し、`InputStream`オブジェクトの`read`メソッドを呼び出して、バイト配列を引数として渡すことで、フォームデータストリームを設定します。
+   * `javax.servlet.ServletOutputStream`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに送信します。 バイト配列を`write`メソッドに渡します。
 
-## WebサービスAPIを使用してインタラクティブPDFフォームをレンダリングする {#render-an-interactive-pdf-form-using-the-web-service-api}
+## WebサービスAPI {#render-an-interactive-pdf-form-using-the-web-service-api}を使用してインタラクティブPDFフォームをレンダリングする
 
 FormsAPI（Webサービス）を使用してインタラクティブPDFフォームをレンダリングします。
 
@@ -243,22 +243,22 @@ FormsAPI（Webサービス）を使用してインタラクティブPDFフォー
 
 1. FormsクライアントAPIオブジェクトの作成
 
-   オブジェクトを作成し、認証値を設定し `FormsService` ます。
+   `FormsService`オブジェクトを作成し、認証値を設定します。
 
 1. URI値の指定
 
-   * コンストラクターを使用して、URI値を格納する `URLSpec` オブジェクトを作成します。
-   * オブジェクトの `URLSpec``setApplicationWebRoot` メソッドを呼び出し、アプリケーションのWebルートを表すstring値を渡します。
-   * オブ `URLSpec` ジェクトの `setContentRootURI` メソッドを呼び出し、コンテンツルートURI値を指定するstring値を渡します。 フォームデザインがコンテンツルートURI内にあることを確認します。 そうでない場合、Formsサービスは例外をスローします。 リポジトリを参照するには、を指定し `repository:///`ます。
-   * オブジェクトの `URLSpec``setTargetURL` メソッドを呼び出し、フォームデータのポスト先のターゲットURL値を指定するstring値を渡します。 フォームデザインでターゲットURLを定義する場合は、空の文字列を渡すことができます。 演算を実行するために、フォームの送信先URLを指定することもできます。
+   * コンストラクターを使用して、URI値を格納する`URLSpec`オブジェクトを作成します。
+   * `URLSpec`オブジェクトの`setApplicationWebRoot`メソッドを呼び出し、アプリケーションのWebルートを表す文字列値を渡します。
+   * `URLSpec`オブジェクトの`setContentRootURI`メソッドを呼び出し、コンテンツルートURI値を指定する文字列値を渡します。 フォームデザインがコンテンツルートURI内にあることを確認します。 そうでない場合、Formsサービスは例外をスローします。 リポジトリを参照するには、`repository:///`を指定します。
+   * `URLSpec`オブジェクトの`setTargetURL`メソッドを呼び出し、フォームデータのポスト先のターゲットURL値を指定する文字列値を渡します。 フォームデザインでターゲットURLを定義する場合は、空の文字列を渡すことができます。 演算を実行するために、フォームの送信先URLを指定することもできます。
 
 1. フォームへのファイルの添付
 
-   * コンストラクターを使用して、添付ファイルを格納する `java.util.HashMap` オブジェクトを作成します。
-   * レンダリングされたフォームにアタッチする各ファイルに対して `java.util.HashMap` オブジェクトの `put` メソッドを呼び出します。 このメソッドに次の値を渡します。
+   * コンストラクターを使用して、添付ファイルを格納する`java.util.HashMap`オブジェクトを作成します。
+   * レンダリングされたフォームに添付する各ファイルに対して`java.util.HashMap`オブジェクトの`put`メソッドを呼び出します。 このメソッドに次の値を渡します。
 
       * 添付ファイルの名前（ファイル名拡張子を含む）を指定するstring値
-   * 添付ファイルを含む `BLOB` オブジェクト
+   * 添付ファイルを含む`BLOB`オブジェクト
 
    >[!NOTE]
    >
@@ -266,29 +266,29 @@ FormsAPI（Webサービス）を使用してインタラクティブPDFフォー
 
 1. インタラクティブPDFフォームのレンダリング
 
-   オブジェクトの `FormsService``renderPDFForm` メソッドを呼び出し、次の値を渡します。
+   `FormsService`オブジェクトの`renderPDFForm`メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、完全なパスを必ず指定してください（例：） `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * フォームとマージするデータを含む `BLOB` オブジェクト。 データを結合したくない場合は、を渡し `null`ます。
-   * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。 これはオプションのパラメーターで、実行時のオプションを指定しない `null` かどうかを指定できます。
-   * Formsサービスに必要なURI値を含む `URLSpec` オブジェクトです。
-   * 添付ファイルを格納する `java.util.HashMap` オブジェクトです。 これはオプションのパラメーターで、フォームにファイルを添付しない `null` かどうかを指定できます。
-   * メソッドによって入力される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクトです。 これは、レンダリングされたPDFフォームを保存するために使用します。
-   * メソッドによって入力される空の `javax.xml.rpc.holders.LongHolder` オブジェクトです。 （この引数は、フォームのページ数を格納します。）
-   * メソッドによって入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクトです。 （この引数はロケールの値を格納します）。
-   * この操作の結果を含む空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトです。
+   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`など、完全なパスを必ず指定してください。
+   * フォームとマージするデータを含む`BLOB`オブジェクト。 データを結合したくない場合は、`null`を渡します。
+   * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。 これはオプションのパラメーターです。実行時のオプションを指定しない場合は、`null`を指定できます。
+   * Formsサービスに必要なURI値を含む`URLSpec`オブジェクト。
+   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターです。フォームにファイルを添付しない場合は、`null`を指定できます。
+   * メソッドによって入力される空の`com.adobe.idp.services.holders.BLOBHolder`オブジェクト。 これは、レンダリングされたPDFフォームを保存するために使用します。
+   * メソッドによって入力される空の`javax.xml.rpc.holders.LongHolder`オブジェクト。 （この引数は、フォームのページ数を格納します。）
+   * メソッドによって入力される空の`javax.xml.rpc.holders.StringHolder`オブジェクト。 （この引数はロケールの値を格納します）。
+   * この操作の結果を含む空の`com.adobe.idp.services.holders.FormsResultHolder`オブジェクトです。
 
-   この `renderPDFForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアントWebブラウザーに書き込む必要があるフォームデータストリームを入力します。
+   `renderPDFForm`メソッドは、最後の引数値として渡される`com.adobe.idp.services.holders.FormsResultHolder`オブジェクトに、クライアントWebブラウザーに書き込む必要のあるフォームデータストリームを入力します。
 
 1. フォームデータストリームをクライアントのWebブラウザーに書き込みます
 
-   * オブジェクトの `FormResult` データメンバーの値を取得して `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトを作成し `value` ます。
-   * オブジェクトの `BLOB` メソッドを呼び出して、フォームデータを含む `FormsResult` オブジェクトを作成し `getOutputContent` ます。
-   * メソッドを呼び出して、 `BLOB` オブジェクトのコンテンツタイプを取得し `getContentType` ます。
-   * メソッドを呼び出し、オブジェクトの `javax.servlet.http.HttpServletResponse` コンテンツタイプを渡すことで、 `setContentType``BLOB` オブジェクトのコンテンツタイプを設定します。
-   * オブジェクトの `javax.servlet.ServletOutputStream` メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに書き込むために使用する `javax.servlet.http.HttpServletResponse``getOutputStream` オブジェクトを作成します。
-   * バイト配列を作成し、 `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して値を設定します。 このタスクは、 `FormsResult` オブジェクトの内容をバイト配列に割り当てます。
-   * オブジェクトの `javax.servlet.http.HttpServletResponse``write` メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
+   * `com.adobe.idp.services.holders.FormsResultHolder`オブジェクトの`value`データメンバの値を取得して、`FormResult`オブジェクトを作成します。
+   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、フォームデータを含む`BLOB`オブジェクトを作成します。
+   * `getContentType`メソッドを呼び出して、`BLOB`オブジェクトのコンテンツタイプを取得します。
+   * `javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定するには、`setContentType`メソッドを呼び出し、`BLOB`オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに書き込むために使用する`javax.servlet.ServletOutputStream`オブジェクトを作成します。
+   * バイト配列を作成し、`BLOB`オブジェクトの`getBinaryData`メソッドを呼び出して値を設定します。 このタスクは、`FormsResult`オブジェクトの内容をバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントのWebブラウザーに送信します。 バイト配列を`write`メソッドに渡します。
 
 **フォームデータストリームをクライアントのWebブラウザーに書き込みます**
 
