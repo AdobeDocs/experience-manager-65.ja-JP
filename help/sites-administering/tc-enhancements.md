@@ -49,7 +49,7 @@ ht-degree: 67%
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. 「**詳細**」タブに切り替えます。You can add multiple languages under **Target Language**.
+1. 「**詳細**」タブに切り替えます。**ターゲット言語**&#x200B;に複数の言語を追加できます。
 
    ![screen_shot_2018-04-22at212601](assets/screen_shot_2018-04-22at212601.jpg)
 
@@ -65,11 +65,11 @@ ht-degree: 67%
 
 翻訳済みコンテンツの手動の編集をTranslation Management System(TMS)に再度同期して、翻訳メモリをトレーニングできます。
 
-1. From the Sites console, after updating text content in a translated page, select **Update Translation Memory**.
+1. サイトコンソールから、翻訳済みページのテキストコンテンツを更新した後、「**翻訳メモリを更新**」を選択します。
 
    ![screen_shot_2018-04-22at234430](assets/screen_shot_2018-04-22at234430.jpg)
 
-1. リストビューでは、編集されたすべてのテキストコンポーネントについて、ソースと翻訳が横に並んで比較表示されます。Select which translation updates should be synchronized to Translation Memory, and select **Update Memory**.
+1. リストビューでは、編集されたすべてのテキストコンポーネントについて、ソースと翻訳が横に並んで比較表示されます。翻訳メモリに同期する変換の更新を選択し、**更新メモリ**&#x200B;を選択します。
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
