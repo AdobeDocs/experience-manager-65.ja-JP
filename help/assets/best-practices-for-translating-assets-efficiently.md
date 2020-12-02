@@ -11,9 +11,9 @@ ht-degree: 81%
 ---
 
 
-# アセットの翻訳のベストプラクティス {#best-practices-for-translating-assets-efficiently}
+# アセットの変換に関するベストプラクティス{#best-practices-for-translating-assets-efficiently}
 
-[!DNL Adobe Experience Manager Assets] は、デジタルアセットのバイナリ、メタデータ、タグを複数のロケールに翻訳し、翻訳済みアセットを管理するための多言語ワークフローをサポートしています。 詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
+[!DNL Adobe Experience Manager Assets] は、デジタルアセットのバイナリ、メタデータ、タグを複数のロケールに翻訳し、翻訳済みアセットを管理するための多言語ワークフローをサポートしています。詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
 
 アセットの管理を効率化して、翻訳された各バージョンが確実に同期されるようにするには、翻訳ワークフローを実行する前にアセットの[言語コピー](preparing-assets-for-translation.md)を作成します。
 
@@ -44,7 +44,7 @@ ht-degree: 81%
 
 1. 「最終変更日を設定」ワークフローを有効化します。
 
-   アセットの最終変更日は、「DAM メタデータの書き戻し」ワークフローが設定します。Because you disable this workflow in step 2, [!DNL Assets] is no longer able to keep the last modified date of assets up-to-date. このため、「最終変更日を設定」**&#x200B;ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
+   アセットの最終変更日は、「DAM メタデータの書き戻し」ワークフローが設定します。手順2でこのワークフローを無効にしたので、[!DNL Assets]は、アセットの最終変更日を最新の状態に保つことができません。 このため、「最終変更日を設定」**&#x200B;ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
 
-1. アセットのバイナリを翻訳しないように、[翻訳統合フレームワークを設定](/help/sites-administering/tc-tic.md)します。Unselect the **[!UICONTROL Translate Assets]** option under the [!UICONTROL Assets] tab to stop the translation of Asset binaries.
-1. Translate asset metadata/tags using [Multilingual asset workflows](multilingual-assets.md).
+1. アセットのバイナリを翻訳しないように、[翻訳統合フレームワークを設定](/help/sites-administering/tc-tic.md)します。アセットバイナリの翻訳を停止するには、「[!UICONTROL アセット]」タブの「**[!UICONTROL アセットを翻訳]**」オプションを選択解除します。
+1. [多言語アセットワークフロー](multilingual-assets.md)を使用して、アセットのメタデータ/タグを翻訳します。
