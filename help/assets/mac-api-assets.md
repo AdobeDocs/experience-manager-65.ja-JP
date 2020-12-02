@@ -15,12 +15,12 @@ ht-degree: 79%
 
 ## 概要 {#overview}
 
-The [!DNL Assets] HTTP API allows for create-read-update-delete (CRUD) operations on digital assets, including on metadata, on renditions, and on comments, together with structured content using [!DNL Experience Manager] Content Fragments. この API は `/api/assets` で公開されており、REST API として実装されています。[コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
+[!DNL Assets] HTTP APIを使用すると、メタデータ、レンディション、コメントなどのデジタルアセットに対して、[!DNL Experience Manager]コンテンツフラグメントを使用して構造化されたコンテンツと共に、create-read-update-delete(CRUD)操作を実行できます。 この API は `/api/assets` で公開されており、REST API として実装されています。[コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
 
 この API にアクセスするには、次の手順を実行します。
 
 1. API サービスドキュメント（`https://[hostname]:[port]/api.json`）を開きます。
-1. Follow the [!DNL Assets] service link leading to `https://[hostname]:[server]/api/assets.json`.
+1. `https://[hostname]:[server]/api/assets.json`に続く[!DNL Assets]サービスのリンクに従います。
 
 API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションをおこなう場合は、応答コードを利用します。
 
@@ -28,7 +28,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 >[!CAUTION]
 >
->[HTTP APIは、](#update-asset-metadata)`jcr` 名前空間内のメタデータプロパティを更新します。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間内のメタデータプロパティを更新します。
+>[HTTP APIは、](#update-asset-metadata) 名前空間内のメタデータ `jcr` プロパティを更新します。ただし、Experience Managerユーザーインターフェイスは、`dc`名前空間のメタデータプロパティを更新します。
 
 ## コンテンツフラグメント {#content-fragments}
 
@@ -38,7 +38,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 ## データモデル {#data-model}
 
-The [!DNL Assets] HTTP API exposes two major elements, folders and assets (for standard assets).
+[!DNL Assets] HTTP APIは、（標準アセット用の）フォルダーとアセットの2つの主要な要素を公開します。
 
 さらに、コンテンツフラグメント内の構造化コンテンツを記述するカスタムデータモデルに対する詳細な要素が公開されます。詳しくは、[コンテンツフラグメントのデータモデル](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
 
@@ -68,7 +68,7 @@ The [!DNL Assets] HTTP API exposes two major elements, folders and assets (for s
 Experience Managerでは、アセットに次の要素が含まれます。
 
 * アセットのプロパティとメタデータ
-* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。Additional renditions may be images of different sizes, different video encodings, or extracted pages from PDF or [!DNL Adobe InDesign] files.
+* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加のレンディションには、様々なサイズの画像、ビデオエンコーディングの画像、PDFまたは[!DNL Adobe InDesign]ファイルから抽出したページなどがあります。
 * コメント（オプション）
 
 コンテンツフラグメントの要素については、[AEM Assets HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
@@ -79,7 +79,7 @@ Experience Managerでは、アセットに次の要素が含まれます。
 * プロパティ
 * リンク
 
-The [!DNL Assets] HTTP API includes the following features:
+[!DNL Assets] HTTP APIには次の機能が含まれています。
 
 * [フォルダーのリストの取得](#retrieve-a-folder-listing).
 * [フォルダーを作成](#create-a-folder)します。
@@ -100,8 +100,8 @@ The [!DNL Assets] HTTP API includes the following features:
 **前提条件**
 
 * `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
-* Navigate to **[!UICONTROL Adobe Granite CSRF Filter]**.
-* プロパティ **[!UICONTROL Filterメソッドに]** 、次の項目が含まれていることを確認します。 `POST`、 `PUT`、 `DELETE`.
+* **[!UICONTROL AdobeGranite CSRF Filter]**&#x200B;に移動します。
+* **[!UICONTROL フィルターメソッド]**&#x200B;のプロパティに次の内容が含まれていることを確認します。`POST`、`PUT`、`DELETE`。
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
@@ -139,9 +139,9 @@ The [!DNL Assets] HTTP API includes the following features:
 
 ## アセットの作成 {#create-an-asset}
 
-指定されたファイルを指定されたパスに配置し、DAMリポジトリ内にアセットを作成します。 If a `*` is provided instead of a node name, the servlet uses the parameter name or the file name as node name.
+指定されたファイルを指定されたパスに配置し、DAMリポジトリ内にアセットを作成します。 ノード名の代わりに`*`を指定した場合、サーブレットはパラメータ名またはファイル名をノード名として使用します。
 
-**パラメータ**:パラメーターは、アセット名 `name` とファイル参照 `file` 用のものです。
+**パラメータ**:パラメーターは、アセ `name` ット名とファイル参照 `file` 用のものです。
 
 **リクエスト**
 
@@ -170,7 +170,7 @@ The [!DNL Assets] HTTP API includes the following features:
 
 ## アセットメタデータの更新 {#update-asset-metadata}
 
-アセットのメタデータプロパティを更新します。 `dc:` 名前空間内のプロパティを更新すると、APIは `jcr` 名前空間内の同じプロパティを更新します。API は 2 つの名前空間内のプロパティを同期させません。
+アセットのメタデータプロパティを更新します。 `dc:` 名前空間内のプロパティを更新すると、API は `jcr` 名前空間内の同じプロパティをアップデートします。API は 2 つの名前空間内のプロパティを同期させません。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
 
@@ -181,9 +181,9 @@ The [!DNL Assets] HTTP API includes the following features:
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
-### 名前空間間でのメタデータの更新 `dc``jcr` の同期 {#sync-metadata-between-namespaces}
+### `dc`と`jcr`名前空間{#sync-metadata-between-namespaces}の間でメタデータを同期
 
-APIメソッドは、 `jcr` 名前空間内のメタデータプロパティを更新します。 ユーザーインターフェイスを使用して行った更新によって、 `dc` 名前空間のメタデータプロパティが変更されます。 メタデータ値をとの間で同期するに `dc``jcr` は、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、との間でタイトル文字列 `dc:title` を同期し `jcr:title`ます。
+APIメソッドは、`jcr`名前空間のメタデータプロパティを更新します。 ユーザーインターフェイスを使用して行った更新により、`dc`名前空間のメタデータプロパティが変更されます。 メタデータ値を`dc`と`jcr`名前空間の間で同期するには、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、`dc:title`と`jcr:title`の間でタイトル文字列を同期します。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
@@ -279,7 +279,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 **リクエスト**：`MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
-URLには使用 `/content/dam` しないでください。 アセットを移動し、既存のアセットを上書きするサンプルコマンドは、次のとおりです。
+URLに`/content/dam`を使用しないでください。 アセットを移動し、既存のアセットを上書きするサンプルコマンドは、次のとおりです。
 
 ```shell
 curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
@@ -310,6 +310,6 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 ## ヒントと制限事項 {#tips-best-practices-limitations}
 
-* [HTTP APIは、](#update-asset-metadata)`jcr` 名前空間内のメタデータプロパティを更新します。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間内のメタデータプロパティを更新します。
+* [HTTP APIは、](#update-asset-metadata) 名前空間内のメタデータ `jcr` プロパティを更新します。ただし、Experience Managerユーザーインターフェイスは、`dc`名前空間のメタデータプロパティを更新します。
 
-* アセットAPIは、完全なメタデータを返しません。 APIでは、名前空間はハードコードされ、それらのみが返されます。 メタデータ全体が必要な場合は、アセットのパスを確認し `/jcr_content/metadata.json`ます。
+* アセットAPIは、完全なメタデータを返しません。 APIでは、名前空間はハードコードされ、それらのみが返されます。 メタデータ全体が必要な場合は、アセットのパス`/jcr_content/metadata.json`を確認します。
