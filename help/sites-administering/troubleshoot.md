@@ -31,7 +31,7 @@ ht-degree: 83%
 >
 >問題が発生した場合は、そのインスタンス（リリースおよびサービスパック）の[既知の問題](/help/release-notes/known-issues.md)の一覧を確認すると役に立ちます。
 
-## 管理者が実行するトラブルシューティングのシナリオ {#troubleshooting-scenarios-for-administrators}
+## 管理者が実行するトラブルシューティングのシナリオ  {#troubleshooting-scenarios-for-administrators}
 
 次の表は、管理者がトラブルシューティングをおこなう必要のある問題の概要を示しています。
 
@@ -64,7 +64,7 @@ ht-degree: 83%
  </tbody>
 </table>
 
-## インストールの問題 {#installation-issues}
+## インストールの問題  {#installation-issues}
 
 以下のトラブルシューティングのシナリオについては、[一般的なインストールの問題](/help/sites-deploying/troubleshooting.md#common-installation-issues)を参照してください。
 
@@ -72,24 +72,24 @@ ht-degree: 83%
 * CRX で動作しているアプリケーションでメモリ不足のエラーが発生する。
 * AEM Quickstart をダブルクリックした後に、ブラウザーで AEM ようこそ画面が表示されない。
 
-## トラブルシューティング分析の方法 {#methods-for-troubleshooting-analysis}
+## トラブルシューティング分析の方法  {#methods-for-troubleshooting-analysis}
 
 ### スレッドダンプの作成 {#making-a-thread-dump}
 
 スレッドダンプは、現在アクティブなすべての Java スレッドのリストです。AEM が適切に応答しない場合は、デッドロックまたはその他の問題をスレッドダンプで特定できます。
 
-### Sling Thread Dumper の使用 {#using-sling-thread-dumper}
+### Sling Thread Dumper の使用  {#using-sling-thread-dumper}
 
-1. Open the **AEM Web Console**; for example at `https://localhost:4502/system/console/`.
-1. Select the **Threads** under **Status** tab.
+1. **AEM Webコンソール**&#x200B;を開きます。（例：`https://localhost:4502/system/console/`）。
+1. 「**ステータス**」タブで、「**スレッド**」を選択します。
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
-### Using jstack (command line) {#using-jstack-command-line}
+### jstack （コマンドライン） {#using-jstack-command-line}を使用
 
 1. AEM Java インスタンスの PID（プロセス ID）を確認します。
 
-   For example, you can use `ps -ef` or `jps`.
+   例えば、`ps -ef`または`jps`を使用できます。
 
 1. 実行:
 
@@ -99,7 +99,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->You can append the thread dumps to a log file by using the `>>` output redirection:
+>`>>`出力リダイレクトを使用して、スレッドダンプをログファイルに追加できます。
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
@@ -115,12 +115,12 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 
 閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html)を参照してください。
 
-### Adobe Experience Manager Web コンソールの使用 {#using-the-adobe-experience-manager-web-console}
+### Adobe Experience Manager Web コンソールの使用  {#using-the-adobe-experience-manager-web-console}
 
 発生する可能性のある問題の初期の兆候を OSGi バンドルのステータスで確認することもできます。
 
-1. Open the **AEM Web Console**; for example at `https://localhost:4502/system/console/`.
-1. Select **Bundles** under **OSGI** tab.
+1. **AEM Webコンソール**&#x200B;を開きます。（例：`https://localhost:4502/system/console/`）。
+1. 「**OSGI**」タブの「**バンドル**」を選択します。
 1. 次の項目を確認します。
 
    * バンドルのステータス。「Inactive」または「Unsatisfied」と表示されているバンドルがある場合は、そのバンドルを停止してから再起動してください。問題が解決しない場合は、他の方法を使用した詳細な調査が必要になる可能性があります。
