@@ -17,7 +17,7 @@ ht-degree: 92%
 ---
 
 
-# AEM Forms アプリの配布 {#distribute-aem-forms-app}
+# AEM Forms アプリの配布  {#distribute-aem-forms-app}
 
 Mobile Device Management（MDM）により、モバイルデバイスでアプリケーションの大規模なデプロイメントを実行できます。
 
@@ -25,7 +25,7 @@ Mobile Device Management（MDM）により、モバイルデバイスでアプ�
 >
 >今回の公開は、iOS および Android デバイスのみ該当します。
 
-## MDM ソリューションによって一般的に提供される主な機能： {#main-features-generally-provided-by-mdm-solutions}
+## MDM ソリューションによって一般的に提供される主な機能：  {#main-features-generally-provided-by-mdm-solutions}
 
 * エンタープライズ環境でのデバイス登録の有効化
 * デバイス設定の設定と更新の許可
