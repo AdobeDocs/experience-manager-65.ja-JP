@@ -23,7 +23,7 @@ ht-degree: 91%
 
 Scripting Object Model（SOM）を使用し、特定の Document Object Model（DOM）内の値、プロパティ、メソッドを参照できます。DOM はメモリのオブジェクトとプロパティをツリー階層で編成します。SOM 式はフィールド／描画の要素とパネルを参照します。
 
-次の画像は、コンポーネントをフォームに追加する際にアダプティブフォームが変換するノード構造を示しています。 例えば、パネルをルートパネルに追加し、実行時に DOM に変換されるパネルにラジオボタンを追加できます。The SOM Expression for the radio-button field in adaptive form is specified as `guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`.
+次の画像は、コンポーネントをフォームに追加する際にアダプティブフォームが変換するノード構造を示しています。 例えば、パネルをルートパネルに追加し、実行時に DOM に変換されるパネルにラジオボタンを追加できます。アダプティブフォームのラジオボタンフィールドのSOM式は`guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`として指定されています。
 
 ![DOM ツリー](assets/hierarchy.png)
 
