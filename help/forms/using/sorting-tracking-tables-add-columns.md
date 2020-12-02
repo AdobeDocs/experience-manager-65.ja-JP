@@ -25,8 +25,8 @@ AEM Formsのワークスペースの「追跡」タブは、ログインした�
 * 名前 ( `stepName`)
 * 説明 ( `instructions`)
 * 選択されたアクション ( `selectedRoute`)
-* 作成時刻( `createTime`)
-* 完了時間( `completeTime`)
+* 作成時刻(`createTime`)
+* 完了時間(`completeTime`)
 * 所有者 ( `currentAssignment.queueOwner`)
 
 タスクテーブルに表示できるタスクモデルの残りの属性を以下に示します。
@@ -116,7 +116,7 @@ AEM Formsのワークスペースの「追跡」タブは、ログインした�
  </tbody>
 </table>
 
-以下のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。See [Introduction to Customizing AEM Forms workspace](/help/forms/using/introduction-customizing-html-workspace.md) fo how you can make semantic changes using workspace SDK and build a minified package from the changed source.
+以下のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。Workspace SDKを使用してセマンティックの変更を行い、変更されたソースから縮小パッケージを構築する方法については、「AEM Formsワークスペースのカスタマイズの概要[」を参照してください。](/help/forms/using/introduction-customizing-html-workspace.md)
 
 ## テーブル列と順序の変更 {#changing-table-columns-and-their-order}
 
@@ -154,11 +154,11 @@ AEM Formsのワークスペースの「追跡」タブは、ログインした�
    </table>
    ```
 
-## 追跡テーブルの並べ替え {#sorting-a-tracking-table}
+## 追跡テーブルの並べ替え  {#sorting-a-tracking-table}
 
 列の見出しをクリックするときにタスクリストテーブルを並べ替えるには：
 
-1. Register a click handler for `.fixedTaskTableHeader th` in the file `js/runtime/views/processinstancehistory.js`.
+1. ファイル`js/runtime/views/processinstancehistory.js`内の`.fixedTaskTableHeader th`に対するクリックハンドラーを登録します。
 
    ```javascript
    events: {
@@ -168,7 +168,7 @@ AEM Formsのワークスペースの「追跡」タブは、ログインした�
    }
    ```
 
-   In the handler, invoke the `onTaskTableHeaderClick` function of `js/runtime/util/history.js`.
+   ハンドラーで、`js/runtime/util/history.js`の`onTaskTableHeaderClick`関数を呼び出します。
 
    ```javascript
    onTaskTableHeaderClick: function (event) {
@@ -176,7 +176,7 @@ AEM Formsのワークスペースの「追跡」タブは、ログインした�
    }
    ```
 
-1. で `TaskTableHeaderClick` メソッドを公開し `js/runtime/util/history.js`ます。
+1. `TaskTableHeaderClick`メソッドを`js/runtime/util/history.js`に公開します。
 
    メソッドはクリックイベントからタスク属性を検索し、その属性のタスクリストを並べ替えて、並べ替えられたタスクリストでタスクテーブルをレンダリングします。
 
