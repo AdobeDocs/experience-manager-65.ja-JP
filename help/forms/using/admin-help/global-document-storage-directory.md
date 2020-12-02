@@ -45,7 +45,7 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   <tr>
    <td><p>デプロイされたサービスコンテナ</p></td>
    <td><p>はい</p></td>
-   <td><p>No</p></td>
+   <td><p>いいえ</p></td>
   </tr>
   <tr>
    <td><p>Document Manager </p></td>
@@ -55,7 +55,7 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   <tr>
    <td><p>Forms リポジトリ</p></td>
    <td><p>はい</p></td>
-   <td><p>No</p></td>
+   <td><p>いいえ</p></td>
   </tr>
   <tr>
    <td><p>システム設定</p></td>
@@ -65,12 +65,12 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   <tr>
    <td><p>監視フォルダー</p></td>
    <td><p>不可</p></td>
-   <td><p>Yes</p></td>
+   <td><p>はい</p></td>
   </tr>
  </tbody>
 </table>
 
-## GDS ディレクトリの設定 {#configuring-the-gds-directory}
+## GDS ディレクトリの設定  {#configuring-the-gds-directory}
 
 GDS ディレクトリの場所は、AEM Forms のインストール時に手動で設定できます。インストール時に場所を指定しないと、次に示すアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
 
@@ -92,14 +92,14 @@ AEM Forms のインストールが完了した後、管理コンソールで GDS
 1. 内部のディレクトリ構造はそのままにして、すべてのファイルを古い GDS ディレクトリから新しい場所に移動します。
 1. アプリケーションサーバーを再起動します。
 
-## デプロイメントファイルについて {#about-deployment-files}
+## デプロイメントファイルについて  {#about-deployment-files}
 
 AEM Forms は、サービスコンテナおよび Java 2 Platform Enterprise Edition（J2EE）EAR ファイルという 2 種類のデプロイメントファイルで構成されています。EAR ファイルは標準の J2EE アプリケーションバンドルで構成されています。これらのアプリケーションバンドルには AEM Forms のコア機能が含まれています。アプリケーションサーバー固有の EAR ファイルを次に示します。
 
 * adobe-core-*[appserver]*.ear
 * adobe-core-*[appserver]*-*[OS]*.ear
 
-AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。To deploy these files, copy them to the *[appserver home]*\server\all\deploy directory.
+AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。これらのファイルをデプロイするには、*[appserver home]*\server\all\deploy directoryにファイルをコピーします。
 
 また、モジュールおよび AEM Forms アーカイブファイルは、JAR ファイルにパッケージングされています。これらのファイルの種類は J2EE ではないので、アプリケーションサーバーにはデプロイされず、GDS ディレクトリにコピーされ、それらの場所への参照が AEM Forms データベースに格納されます。このため、GDS ディレクトリをクラスターのすべてのノードで共有する必要があります。すべてのノードが DSC の中央ストレージディレクトリにアクセスできることが必要です。
 
