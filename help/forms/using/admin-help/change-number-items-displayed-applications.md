@@ -22,6 +22,6 @@ ht-degree: 73%
 
 環境設定ページでは、アプリケーションおよびサービス Web ページに表示されるサービス、エンドポイント、カテゴリおよびアーカイブの数を制御できます。
 
-1. In administration console, **[!UICONTROL click Services > Applications and Services > Preferences]**.
-1. On the Preferences page, type the number of services, endpoints, categories, and archives that can be displayed on each page, and then click **[!UICONTROL Save]**.
+1. 管理コンソールで、**[!UICONTROL サービス/アプリケーションおよびサービス/環境設定]**&#x200B;をクリックします。
+1. 環境設定ページで、各ページに表示できるサービス、エンドポイント、カテゴリおよびアーカイブの数を入力し、「**[!UICONTROL 保存]**」をクリックします。
 
