@@ -52,7 +52,7 @@ AEM でリポジトリコンテンツをバックアップおよび復元する�
 
 通常、スナップショットのバックアップは数秒しかかからないので、全体的な停止時間は数分未満になります。
 
-## オンラインバックアップ {#online-backup}
+## オンラインバックアップ  {#online-backup}
 
 このバックアップ方式では、AEM など、リポジトリ下にデプロイされているアプリケーションも含めて、リポジトリ全体のバックアップを作成します。バックアップには、コンテンツ、バージョン履歴、設定、ソフトウェア、ホットフィックス、カスタムアプリケーション、ログファイル、検索用インデックスなどが含まれます。クラスター化を使用していて、（物理的に、またはソフトリンクを使用して）`crx-quickstart` のサブディレクトリが共有フォルダーとして指定されている場合は、共有ディレクトリもバックアップされます。
 
@@ -69,23 +69,23 @@ AEM でリポジトリコンテンツをバックアップおよび復元する�
 
 >[!NOTE]
 >
->If AEM Online Backup feature is used on an AEM instance which has a custom blobstore configuration, it is recommended to configure the path of datastore to be outside the &quot; `crx-quickstart`&quot; directory and backup the datastore separately.
+>カスタムのBLOBSTORE構成を持つAEMインスタンスでAEM Online Backup機能を使用する場合、データストアのパスを「`crx-quickstart`」ディレクトリ外に設定し、データストアを別々にバックアップすることをお勧めします。
 
 >[!CAUTION]
 >
 >オンラインバックアップのバックアップ対象はファイルシステムのみです。リポジトリコンテンツやリポジトリファイルをデータベースに保存している場合は、そのデータベースを個別にバックアップする必要があります。AEM を MongoDB で使用している場合、[MongoDB のネイティブバックアップツール](https://docs.mongodb.org/manual/tutorial/backup-with-mongodump/)の使用方法のドキュメントを参照してください。
 
-### AEM オンラインバックアップ {#aem-online-backup}
+### AEM オンラインバックアップ  {#aem-online-backup}
 
 リポジトリのオンラインバックアップでは、バックアップファイルを作成、ダウンロードおよび削除できます。これは「ホット」（つまり「オンライン」）バックアップ機能なので、リポジトリが通常どおり読み取り／書き込みモードで使用されているときに実行できます。
 
 >[!CAUTION]
 >
->Do not run AEM Online Backup concurrently with [Datastore Garbage Collection](/help/sites-administering/data-store-garbage-collection.md) or [Revision Cleanup](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup). これらを同時に実行すると、システムのパフォーマンスが低下します。
+>AEMオンラインバックアップは、[データストアガベージコレクション](/help/sites-administering/data-store-garbage-collection.md)または[リビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup)と同時に実行しないでください。 これらを同時に実行すると、システムのパフォーマンスが低下します。
 
 バックアップの開始時に、「**ターゲットパス**」か「**遅延**」（またはその両方）を指定できます。
 
-**ターゲットパス** ：バックアップファイルは、通常、quickstart jarファイル(.jar)を含むフォルダーの親フォルダーに保存されます。 例えば、AEM jarファイルが/InstallationKits/AEMの下にある場合、バックアップは/InstallationKitsの下に生成されます。 ターゲットの場所を自由に指定することもできます。
+**ターゲット** パスバックアップファイルは、通常、quickstart jarファイル(.jar)を含むフォルダーの親フォルダーに保存されます。例えば、AEM jarファイルが/InstallationKits/AEMの下にある場合、バックアップは/InstallationKitsの下に生成されます。 ターゲットの場所を自由に指定することもできます。
 
 **ターゲットパス**&#x200B;がディレクトリの場合、リポジトリのイメージはこのディレクトリに作成されます。同じディレクトリが複数回（または常に）バックアップの保存用に使用される場合は、次のようになります。
 
@@ -108,7 +108,7 @@ AEM でリポジトリコンテンツをバックアップおよび復元する�
 >
 バックアップ形式としてZIPを作成する必要がある場合は、ディレクトリにバックアップし、圧縮プログラムを使用してzipファイルを作成する必要があります。
 
-**遅延** ：リポジトリのパフォーマンスに影響を与えないように遅延時間（ミリ秒）を示します。 デフォルトでは、リポジトリのバックアップはフルスピードで実行されます。他のタスクの速度を低下させないように、オンラインバックアップの作成速度を下げることができます。
+**** Delay：リポジトリのパフォーマンスに影響を与えないように遅延時間（ミリ秒）を示します。デフォルトでは、リポジトリのバックアップはフルスピードで実行されます。他のタスクの速度を低下させないように、オンラインバックアップの作成速度を下げることができます。
 
 遅延時間を非常に大きく取る場合は、オンラインバックアップに 24 時間以上かけないでください。24 時間を超えた場合はバックアップを破棄してください。バックアップに一部のバイナリしか含まれない可能性があります。一般的には、1 ミリ秒遅延させると CPU 使用率は 10％になり、10 ミリ秒遅延させると 3％未満になります。遅延時間の合計（秒）は、「リポジトリサイズ（MB） x 遅延（ミリ秒）÷ 2」（zip オプションを使用する場合）、または「リポジトリサイズ（MB） x 遅延（ミリ秒）÷ 4」（ディレクトリにバックアップする場合）という式を使って予測できます。つまり、1 ミリ秒の遅延を指定して 200 MB のリポジトリをディレクトリにバックアップする場合、バックアップ時間は約 50 秒増加します。
 
@@ -120,7 +120,7 @@ AEM でリポジトリコンテンツをバックアップおよび復元する�
 
 1. 管理者として AEM にログインします。
 
-1. Go to **Tools - Operations - Backup.**
+1. **ツール→操作→バックアップに移動します。**
 1. 「**作成**」をクリックします。バックアップコンソールが開きます。
 
    ![chlimage_1-1](assets/chlimage_1-1a.png)
@@ -154,13 +154,13 @@ AEM でリポジトリコンテンツをバックアップおよび復元する�
    >
    >ディレクトリにバックアップした場合：バックアッププロセスの完了後、AEM によってターゲットディレクトリに書き込まれることはありません。
 
-### AEM オンラインバックアップの自動化 {#automating-aem-online-backup}
+### AEM オンラインバックアップの自動化  {#automating-aem-online-backup}
 
 オンラインバックアップは可能な限り、システムの負荷がほとんどない時間帯（早朝など）に実行すべきです。
 
-Backups can be automated using the `wget` or `curl` HTTP clients. 以下に、curl を使用したバックアップの自動化の例を示します。
+バックアップは、`wget`または`curl` HTTPクライアントを使用して自動化できます。 以下に、curl を使用したバックアップの自動化の例を示します。
 
-#### デフォルトのターゲットディレクトリへのバックアップ {#backing-up-to-the-default-target-directory}
+#### デフォルトのターゲットディレクトリへのバックアップ  {#backing-up-to-the-default-target-directory}
 
 >[!CAUTION]
 >
@@ -170,20 +170,20 @@ Backups can be automated using the `wget` or `curl` HTTP clients. 以下に、cu
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=backup.zip
 ```
 
-バックアップファイルまたはディレクトリは、`crx-quickstart` フォルダーを含むフォルダーの親フォルダー内に作成されます（ブラウザーを使用してバックアップを作成する場合と同様です）。For example, if you have installed AEM in the directory `/InstallationKits/crx-quickstart/`, then the backup is created in the `/InstallationKits` directory.
+バックアップファイルまたはディレクトリは、`crx-quickstart` フォルダーを含むフォルダーの親フォルダー内に作成されます（ブラウザーを使用してバックアップを作成する場合と同様です）。例えば、ディレクトリ`/InstallationKits/crx-quickstart/`にAEMをインストールした場合、バックアップは`/InstallationKits`ディレクトリに作成されます。
 
 curl コマンドはすぐに終了するので、このディレクトリを監視して、zip ファイルが作成されているかを必ず確認してください。バックアップの作成中、一時ディレクトリ（ディレクトリ名は、最終の zip ファイルの名前に基づいて付けられる）が出現し、最終的にこのディレクトリが zip で圧縮されます。次に例を示します。
 
 * 作成される zip ファイルの名前：`backup.zip`
-* name of temporary directory: `backup.f4d5.temp`
+* 一時ディレクトリ名：`backup.f4d5.temp`
 
 #### デフォルトのターゲットディレクトリ以外へのバックアップ {#backing-up-to-a-non-default-target-directory}
 
 通常、バックアップファイルまたはディレクトリは、`crx-quickstart` フォルダーを含むフォルダーの親フォルダー内に作成されます。
 
-If you want to save your backup (of either sort) to a different location you can set an absolute path ``to the `target` parameter in the `curl` command.
+バックアップを（どちらの方法でも）別の場所に保存する場合は、`curl`コマンドの`target`パラメーターへの絶対パス「」を設定できます。
 
-For example, to generate `backupJune.zip` in the directory `/Backups/2012`:
+例えば、`/Backups/2012`ディレクトリに`backupJune.zip`を生成するには：
 
 ```shell
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=/Backups/2012/backupJune.zip"
@@ -197,7 +197,7 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 >
 >バックアップは、[AEM に付属する MBean を使用](/help/sites-administering/jmx-console.md)して開始することもできます。
 
-### ファイルシステムのスナップショットのバックアップ {#filesystem-snapshot-backup}
+### ファイルシステムのスナップショットのバックアップ  {#filesystem-snapshot-backup}
 
 ここで説明する手順は、サイズの大きいリポジトリに特に適しています。
 
@@ -218,12 +218,12 @@ AEM オンラインバックアップは、バックアップ対象のデータ�
 
 1. zip ファイル作成時の最初の手順は、ターゲットディレクトリを作成または指定することです。
 
-   * zip ファイルにバックアップする場合、一時ディレクトリが作成されます。The directory name starts with `backup.` and ends with `.temp`; for example `backup.f4d3.temp`.
+   * zip ファイルにバックアップする場合、一時ディレクトリが作成されます。`backup.`で終わり`.temp`で終わるディレクトリ名開始ー；例：`backup.f4d3.temp`
    * ディレクトリにバックアップする場合は、ターゲットーパスで指定された名前が使用されます。既存のディレクトリを使用できます。使用しない場合は、新しいディレクトリが作成されます。
 
       バックアップの開始時に、ターゲットディレクトリ内に `backupInProgress.txt` という空のファイルが作成されます。このファイルは、バックアップの完了時に削除されます。
 
-1. すべてのファイルが、ソースディレクトリからターゲットディレクトリ（zip ファイルを作成する場合は一時ディレクトリ）にコピーされます。リポジトリの破損を防ぐため、セグメントストアはデータストアの前にコピーされます。 バックアップの作成時、インデックスとキャッシュデータは省略されます。As a result, data from `crx-quickstart/repository/cache` and `crx-quickstart/repository/index` is not included in the backup. プロセスの進行状況バーのインジケーターは、zipファイルを作成する場合は0 ～ 70%になり、zipファイルを作成しない場合は0 ～ 100%になります。
+1. すべてのファイルが、ソースディレクトリからターゲットディレクトリ（zip ファイルを作成する場合は一時ディレクトリ）にコピーされます。リポジトリの破損を防ぐため、セグメントストアはデータストアの前にコピーされます。 バックアップの作成時、インデックスとキャッシュデータは省略されます。その結果、`crx-quickstart/repository/cache`と`crx-quickstart/repository/index`のデータはバックアップに含まれません。 プロセスの進行状況バーのインジケーターは、zipファイルを作成する場合は0 ～ 70%になり、zipファイルを作成しない場合は0 ～ 100%になります。
 
 1. バックアップが既存のディレクトリに作成される場合は、ターゲットディレクトリ内にある「古い」ファイルが削除されます。古いファイルとは、ソースディレクトリ内に存在しないファイルのことです。
 
