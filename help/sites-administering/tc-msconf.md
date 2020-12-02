@@ -29,7 +29,7 @@ Microsoft Translation アカウントを使用して AEM ページのコンテ�
 | ワークスペース ID | （オプション）使用するカスタマイズ済みの Microsoft Translator エンジンの ID です。 |
 | サブスクリプションキー | Microsoft Translator 用の Microsoft サブスクリプションキー。 |
 
-After you create the configuration, you need to [activate it](/help/sites-administering/tc-msconf.md#activating-the-translator-service-configurations).
+設定を作成したら、[アクティブ化](/help/sites-administering/tc-msconf.md#activating-the-translator-service-configurations)する必要があります。
 
 次の手順では、タッチ操作向け UI を使用して Microsoft Translator の設定を作成します。
 
@@ -43,7 +43,7 @@ After you create the configuration, you need to [activate it](/help/sites-admini
 1. 「作成」をクリックします。
 1. 表示されるダイアログボックスで、プロパティの値を入力して「OK」をクリックします。
 
-## Microsoft Translator クラウドサービスのサンプル設定 {#sample-microsoft-translator-cloud-service-configurations}
+## Microsoft Translator クラウドサービスのサンプル設定  {#sample-microsoft-translator-cloud-service-configurations}
 
 Geometrixxサンプルと共に、次のMicrosoft Translator Cloudサービス設定がインストールされます。一部のサンプル設定では、Microsoftの体験版の翻訳アカウントを使用し、1か月に最大2,000,000の無料翻訳文字を使用できます。
 
@@ -57,7 +57,7 @@ Microsoft Translator 試用版ライセンス - Geometrixx-outdoors 設定は、
 
 この Microsoft Translator 設定は、Geometrixx Outdoors サンプルサイトのコンテンツのタイプで使用するために最適化されます。
 
-### Microsoft Translator 試用版ライセンス設定のアップグレード {#upgrading-the-microsoft-translator-trial-license-configuration}
+### Microsoft Translator 試用版ライセンス設定のアップグレード  {#upgrading-the-microsoft-translator-trial-license-configuration}
 
 Microsoft Translation の設定ページには、実稼動システムに適したアカウントのサブスクリプションを取得する場合に役立つ、Microsoft Web サイトへのリンクが表示されます。
 
@@ -78,9 +78,9 @@ Microsoft Translation の設定ページには、Microsoft Translator エンジ�
 1. 「Microsoft Translator」領域で、「設定を表示」をクリックまたはタップして、カスタマイズする設定をクリックまたはタップします。
 1. 設定ページで、「トランスレーターをカスタマイズ」をクリックします。表示された Microsoft の Web ページを使用して、サービスをカスタマイズします。
 
-## 翻訳サービス設定のアクティベート {#activating-the-translator-service-configurations}
+## 翻訳サービス設定のアクティベート  {#activating-the-translator-service-configurations}
 
-パブリッシュインスタンスでレプリケーションされる翻訳コンテンツをサポートするには、クラウドサービス設定をアクティベートする必要があります。Use the method of [activating a complete section (tree)](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree) to activate the repository nodes that store the Microsoft Translator or third-party cloud service configurations. このノードは以下に示す親ノードの下にあります。
+パブリッシュインスタンスでレプリケーションされる翻訳コンテンツをサポートするには、クラウドサービス設定をアクティベートする必要があります。[セクション全体（ツリー）](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree)をアクティブ化する方法を使用して、Microsoft Translatorまたはサードパーティのクラウドサービス設定を保存するリポジトリノードをアクティブ化します。 このノードは以下に示す親ノードの下にあります。
 
 * Microsoft Translation Service:/libs/settings/cloudconfigs/translation/msft-translation
 * サードパーティの翻訳：/etc/cloudservices/machine-translation
