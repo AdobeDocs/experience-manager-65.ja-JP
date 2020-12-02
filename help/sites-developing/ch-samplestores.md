@@ -11,7 +11,7 @@ translation-type: tm+mt
 source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '490'
-ht-degree: 84%
+ht-degree: 95%
 
 ---
 
@@ -26,11 +26,11 @@ ContextHub には、ソリューションで利用できるサンプルストア
 
 >[!WARNING]
 >
->サンプルストアの候補は、プロジェクト専用の設定を構築する際に役立つリファレンス設定として提供されているので、直接使用しないでください。
+>サンプルストア候補は、プロジェクト専用の設定を構築する際に役立つリファレンス設定として提供されているので、直接使用しないでください。
 
 ## aem.segmentation サンプルストア候補 {#aem-segmentation-sample-store-candidate}
 
-解決済みおよび未解決の ContextHub セグメント用のストア。ContextHub SegmentManager からセグメントを自動的に取得します。
+解決済みおよび未解決の ContextHub セグメント用のストア。ContextHub SegmentManager からセグメントを自動的に取得します.
 
 ### ソースの場所 {#source-location-segmentation}
 
@@ -64,7 +64,7 @@ contexthub.geolocation サンプルストア候補は、Google マップを使�
 
 ### ベースとなる実装 {#base-implementation-geolocation}
 
-The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+contexthub.geolocationストアの候補は[`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)を拡張しています。
 
 ### 設定 {#configuration-geolocation}
 
@@ -110,7 +110,7 @@ The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedJ
 
 >[!NOTE]
 >
->Chrome 50.xで導入されたセキュリティポリシーでは、位置情報関連の呼び出しは、セキュリティで保護された接続を介して行われる必要があります。 そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
+>Chrome 50.x で導入されたセキュリティポリシーでは、すべてのジオロケーション関連呼び出しは、安全な接続を使用しておこなう必要があります。そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
 
 ## contexthub.surferinfo サンプルストア候補 {#contexthub-surferinfo-sample-store-candidate}
 
@@ -122,11 +122,11 @@ The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedJ
 
 ### ベースとなる実装 {#base-implementation-surferinfo}
 
-The contexthub.datetime store candidate extends [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
+contexthub.datetimeストアの候補は[`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)を拡張します。
 
 ### 設定 {#configuration-surferinfo}
 
-The default configuration is inherited from `ContextHub.Store.PersistedStore`.
+デフォルトの設定は、`ContextHub.Store.PersistedStore` から継承されます。
 
 ### データ項目 {#data-items-surferinfo}
 
@@ -189,7 +189,7 @@ granite.emulators サンプルストア候補は、クライアントデバイ�
 
 ### ベースとなる実装 {#base-implementation-emulators}
 
-The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
+contexthub.geolocationストアの候補は[`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)を拡張しています。
 
 ### 設定 {#configuration-emulators}
 
@@ -312,7 +312,7 @@ The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedS
 }
 ```
 
-## granite.profile サンプルストア候補 {#granite-profile-sample-store-candidate}
+## granite.profile サンプルストア候補  {#granite-profile-sample-store-candidate}
 
 現在のユーザーに関する情報を格納します。
 
@@ -322,7 +322,7 @@ The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedS
 
 ### ベースとなる実装 {#base-implementation-profile}
 
-The contexthub.datetime store candidate extends [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+contexthub.datetimeストアの候補は[`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)を拡張します。
 
 ### 設定 {#configuration-profile}
 
