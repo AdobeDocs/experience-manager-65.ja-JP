@@ -24,13 +24,13 @@ ht-degree: 86%
 >
 >Adobeは、AEM SMTPサービスから送信される開封済み/バウンス済み電子メールの追跡をさらに強化する予定はありません。
 >
->Adobe CampaignとAEM統合の [活用を推奨](/help/sites-administering/campaign.md)。
+>[Adobe CampaignとAEM統合](/help/sites-administering/campaign.md)の活用を推奨します。
 
 多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効な電子メールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。デフォルトでは、バウンス率は 3 ですが、設定可能です。
 
 AEM でバウンス電子メールを追跡するには、バウンス電子メールが受信される既存のメールボックス（通常は、ニュースレターの送信元を示す「送信元」の電子メールアドレス）をポーリングするように AEM をセットアップする必要があります。AEM はこのインボックスをポーリングし、ポーリング設定で指定されたパスの下のすべての電子メールを読み込みます。次に、ワークフローがトリガーされ、バウンスした電子メールアドレスがユーザー内で検索され、それに応じてユーザーのbounceCounterプロパティ値が更新されます。 設定された最大バウンス数を超えると、そのユーザーはニュースレターのリストから削除されます。
 
-## Feed Importer の設定 {#configuring-the-feed-importer}
+## Feed Importer の設定  {#configuring-the-feed-importer}
 
 フィードインポーターを使用すると、外部ソースからリポジトリにコンテンツを繰り返し読み込むことができます。Feed Importer のこの設定を使用して、AEM は送信者のメールボックスをチェックしてバウンス電子メールを探します。
 
@@ -54,7 +54,7 @@ AEM でバウンス電子メールを追跡するには、バウンス電子メ�
 
    **POP3 設定のプロパティ：**
 
-   `pop3.leave.on.server`:メッセージをサーバーに残すかどうかを定義します。 サーバーにメッセージを残す場合は true を、そうでない場合は false を設定します。デフォルトは true です。
+   `pop3.leave.on.server`:メッセージをサーバーに残すかどうかを定義します。サーバーにメッセージを残す場合は true を、そうでない場合は false を設定します。デフォルトは true です。
 
    **POP3 の例：**
 
@@ -68,7 +68,7 @@ AEM でバウンス電子メールを追跡するには、バウンス電子メ�
 
    `imap.flag.SEEN`：新しい/未表示のメッセージの場合はfalseに設定し、既読のメッセージの場合はtrueに設定します
 
-   See [https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) for the full list of flags.
+   フラグの完全なリストについては、[https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html)を参照してください。
 
    **IMAP の例：**
 
@@ -79,13 +79,13 @@ AEM でバウンス電子メールを追跡するには、バウンス電子メ�
 
 1. 設定を保存します。
 
-## ニュースレターサービスコンポーネントの設定 {#configuring-the-newsletter-service-component}
+## ニュースレターサービスコンポーネントの設定  {#configuring-the-newsletter-service-component}
 
 フィードインポーターを設定したら、「送信元」アドレスとバウンスカウンターを設定する必要があります。
 
 ニュースレターサービスを設定するには：
 
-1. In the OSGi console at `<host>:<port>/system/console/configMgr` and navigate to **MCM Newsletter**.
+1. `<host>:<port>/system/console/configMgr`にあるOSGiコンソールで、**MCMニュースレター**&#x200B;に移動します。
 
 1. サービスを設定して、終了したら変更を保存します。
 
