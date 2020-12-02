@@ -46,7 +46,7 @@ ht-degree: 53%
 
 * **コミュニティマネージャー**
 
-   For enablement communities, only members of the `Community Enablement Managers` user group may be assigned the role of `Community Site Enablement Manager`, whose permissions may include content creation, assignments, and member management in the publish environment.
+   有効化コミュニティの場合、`Community Enablement Managers`ユーザーグループのメンバーのみが`Community Site Enablement Manager`の役割を割り当てられます。この権限には、発行環境でのコンテンツの作成、割り当て、メンバー管理が含まれます。
 
 オプションで以下を設定します。
 
@@ -66,14 +66,14 @@ ht-degree: 53%
 
 1. **[MySQL用のJDBCドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   Webコンソールを使用（バンドル）: *http://localhost:4502/system/console/bundles*
+   Webコンソールを使用（バンドル）:*http://localhost:4502/system/console/bundles*
 
-   SCORMパッケージ *をインストールする前に* 、インストールします
+   SCORMパッケージをインストールする前に&#x200B;**&#x200B;をインストール
 
 1. **[SCORMパッケージのインストール](deploy-communities.md#scorm-package)**
 
 
-   Package Managerを使用する： *http://localhost:4502/crx/packmgr/*
+   Package Managerを使用する：*http://localhost:4502/crx/packmgr/*
 
 **任意のサーバーで、次の手順を実行します。**
 
@@ -81,7 +81,7 @@ ht-degree: 53%
 
 1. **[MySQLデータベースのインストール](mysql.md#database-setup)**
 
-   作成者インスタンスからダウンロードしたSQLスクリプトを実行します
+   作成者インスタンスからダウンロードしたSQLスクリプトを実行
 
    MySQL Workbenchの使用
 
@@ -93,21 +93,21 @@ ht-degree: 53%
 
 1. **[JDBC接続プールの設定](mysql.md#configure-jdbc-connections)**
 
-   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
+   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
 
 1. **[SCORMエンジンサービスの構成](mysql.md#aem-communities-scormengine-service)**
 
-   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
+   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
 
 1. **[CSRFフィルターの設定](mysql.md#adobe-granite-csrf-filter)**
 
-   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
+   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
 
 **オーサーインスタンスで、次の手順を実行します。**
 
-1. (*オプション*)Analyticsサービスの **[設定](analytics.md)**
+1. （*オプション*） **[Analyticsサービスの設定](analytics.md)**
 
-   ツール、デプロイメント、Cloud Servicesコンソールを使用します。 *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   ツール、デプロイメント、Cloud Servicesコンソールを使用します。*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[FFmpegの設定](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
@@ -115,11 +115,11 @@ ht-degree: 53%
 
 1. **[トンネルサービスの有効化](deploy-communities.md#tunnel-service-on-author)**
 
-   Webコンソールを使用(configMgr): *http://localhost:4502/system/console/configMgr*
+   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
 
 1. **[コミュニティ管理者の作成](users.md#creating-community-members)**
 
-   作成者環境に対しては、クラシックUIセキュリティコンソールを使用します。 *http://localhost:4502/useradmin*
+   作成者環境に対しては、クラシックUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*
 
    パス= /home/users/communityでユーザーを作成
 
@@ -130,4 +130,4 @@ ht-degree: 53%
 
 ## Dispatcher {#dispatcher}
 
-When the deployment includes [AEM&#39;s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html), in order for the enablement features to work properly, the `clientheader` and `filter` sections need modification. [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
+展開に[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)が含まれている場合、有効化機能を正しく動作させるために、`clientheader`セクションと`filter`セクションを変更する必要があります。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
