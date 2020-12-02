@@ -23,23 +23,23 @@ ht-degree: 11%
 
 AEM Communitiesのメッセージ機能は、フォーラムやコメントで公開されたインタラクションに加え、コミュニティメンバー同士がもう一度個人的に交流できるようにします。
 
-This feature can be included when a [community site](/help/communities/overview.md#communitiessites) is created.
+この機能は、[コミュニティサイト](/help/communities/overview.md#communitiessites)が作成されたときに含めることができます。
 
 メッセージ機能を使用すると、次のことができます。
 
-**A** - 1人または複数のコミュニティメンバーにメッセージを送信します。
+**A** -1人以上のコミュニティメンバーにメッセージを送信します。
 
-**B** — ダイレクトメッセージを [一括してコミュニティのメンバーグループに送信する](/help/communities/messaging.md#group-messaging)
+**B**  — ダイレクトメッセージを [一括してコミュニティのメンバーグループに送信](/help/communities/messaging.md#group-messaging)
 
-**C** — 添付ファイル付きのメッセージを送信する
+**C**  — メッセージに添付ファイルを送信
 
-**D** — メッセージを転送します。
+**D**  — メッセージを転送します。
 
-**E** — メッセージに返信
+**E**  — メッセージに返信
 
-**F** — メッセージを削除する
+**F**  — メッセージを削除
 
-**G** — 削除したメッセージを復元します
+**G**  — 削除したメッセージを復元します
 
 ![messaging-section](assets/messaging-section.png)
 
@@ -47,28 +47,28 @@ This feature can be included when a [community site](/help/communities/overview.
 
 メッセージ機能を有効にして変更するには、次を参照してください。
 
-* [管理者へのメッセージの設定](/help/communities/messaging.md)
-* [Messaging Essentials](/help/communities/essentials-messaging.md) for developers
+* [管理者向けの](/help/communities/messaging.md) メッセージの設定
+* [開発者へのメッセージ](/help/communities/essentials-messaging.md) の基本
 
 >[!NOTE]
 >
->作成者編集モードでのページへの `Compose Message, Message, or Message List` コンポー `Communities`ネントの追加（コンポーネントグループに含まれる）はサポートされていません。
+>`Compose Message, Message, or Message List`コンポーネント（`Communities`コンポーネントグループにあります）をページに追加する場合は、作成者編集モードではサポートされません。
 
-## メッセージングコンポーネントの設定 {#configure-messaging-components}
+## メッセージングコンポーネントの設定{#configure-messaging-components}
 
 コミュニティサイトでメッセージングを有効にすると、それ以上の設定は不要に設定されます。 この情報は、デフォルトの設定を変更する必要がある場合に表示されます。
 
-### メッセージリストの設定（メッセージボックス） {#configure-message-list-message-box}
+### メッセージリストの構成（メッセージボックス） {#configure-message-list-message-box}
 
-To modify the configuration of the list of messages for **Inbox**, **Sent Items**, and **Trash** pages of the messaging feature, open the site in [author edit mode](/help/communities/sites-console.md#authoring-site-content).
+メッセージング機能の&#x200B;**インボックス**、**送信済みアイテム**、**ごみ箱**&#x200B;ページのメッセージリストの設定を変更するには、[作成者編集モード](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
 
-1. In `Preview` mode, select the **Messages** link to open the main messaging page. Then select either **Inbox**, **Sent Items** or **Trash** to configure the component for that message list.
+1. `Preview`モードで、**メッセージ**&#x200B;リンクを選択して、メインメッセージングページを開きます。 次に、「インボックス&#x200B;**」、「**&#x200B;送信済みアイテム&#x200B;**」、「**&#x200B;ごみ箱&#x200B;**」のいずれかを選択し、そのメッセージリストのコンポーネントを設定します。**
 
-1. In `Edit` mode, select the component on the page.
-1. 設定ダイアログにアクセスするには、アイコンを選択して継承をキャンセルし `link` ます。
+1. `Edit`モードで、ページ上のコンポーネントを選択します。
+1. 設定ダイアログにアクセスするには、`link`アイコンを選択して継承をキャンセルします。
 継承がキャンセルされると、設定アイコンを選択して設定ダイアログを開くことができます。
 
-1. Once the configuration is complete, it is necessary to restore inheritance by selecting the `broken link` icon.
+1. 設定が完了したら、`broken link`アイコンを選択して継承を復元する必要があります。
 
 ![configure-message-リスト](assets/configure-message-list.png)
 
@@ -78,11 +78,11 @@ To modify the configuration of the list of messages for **Inbox**, **Sent Items*
 
 * **サービスセレクター**
 
-   (*Required*) Set this to the value of the property **`serviceSelector.name`** from the [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service).
+   （*必須*）[AEM Communitiesメッセージング操作サービス](/help/communities/messaging.md#messaging-operations-service)のプロパティ&#x200B;**`serviceSelector.name`**&#x200B;の値に設定します。
 
 * **構成ページ**
 
-   (*必須*)メンバーが **`Reply`** ボタンをクリックしたときに開くページ。 ターゲットページには、**メッセージを作成**&#x200B;フォームを含める必要があります。
+   （*必須*）メンバーが「**`Reply`**」ボタンをクリックしたときに開くページ。 ターゲットページには、**メッセージを作成**&#x200B;フォームを含める必要があります。
 
 * **リソースとしての返信/表示**
 
@@ -98,7 +98,7 @@ To modify the configuration of the list of messages for **Inbox**, **Sent Items*
 
 * **Folder Paths**
 
-   (*Required*) Referencing the values set for **inbox.path.name** and **sentitems.path.name** in the [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service). When configuring for an `Inbox`, add one entry using the value of **inbox.path.name**. When configuring for an `Outbox`, add one entry using the value of **sentitems.path.name**. When configuring for `Trash`, add two entries with both values.
+   （*必須*）[AEM Communitiesメッセージング操作サービス](/help/communities/messaging.md#messaging-operations-service)の&#x200B;**inbox.path.name**&#x200B;および&#x200B;**sentitems.path.name**&#x200B;に設定された値を参照します。 `Inbox`の設定時に、**inbox.path.name**&#x200B;の値を使用してエントリを1つ追加します。 `Outbox`の設定時に、**sentitems.path.name**&#x200B;の値を使用してエントリを1つ追加します。 `Trash`の設定時に、両方の値を持つ2つのエントリを追加します。
 
 #### 「表示」タブ{#display-tab}
 
@@ -106,19 +106,19 @@ To modify the configuration of the list of messages for **Inbox**, **Sent Items*
 
 * **既読をマークボタン**
 
-   If checked, displays a `Read`button allowing a message to be marked as read.
+   オンにすると、`Read`ボタンが表示され、メッセージを既読としてマークできます。
 
 * **未読にするボタン**
 
-   If checked, displays a `Mark Unread` button allowing a message to be marked as read.
+   オンにすると、`Mark Unread`ボタンが表示され、メッセージを既読としてマークできます。
 
 * **削除ボタン**
 
-   If checked, displays a `Delete` button allowing a message to be marked as read. Will duplicate the delete functionality if **`Message Options`** is also checked.
+   オンにすると、`Delete`ボタンが表示され、メッセージを既読としてマークできます。 **`Message Options`**&#x200B;もチェックされている場合は、削除機能を重複します。
 
 * **メッセージオプション**
 
-   オンの場合、メッセージ **`Reply`**&#x200B;を再送信または削除できるようにするボタン、 **`Reply All`**&#x200B;ボタン **`Forward`****`Delete`** 、およびボタンを表示します。 Will duplicate the delete functionality if **`Delete Button`** is also checked.
+   オンにすると、**`Reply`**、**`Reply All`**、**`Forward`**、**`Delete`**&#x200B;の各ボタンが表示され、メッセージを再送または削除できます。 **`Delete Button`**&#x200B;もチェックされている場合は、削除機能を重複します。
 
 * **1 ページのメッセージ数**
 
@@ -130,19 +130,19 @@ To modify the configuration of the list of messages for **Inbox**, **Sent Items*
 
 * **ユーザーを表示**
 
-   [送信者]と[受信者]のどちらを表示するか **`Sender`** を選択す **`Recipients`** るかを選択します。
+   **`Sender`**&#x200B;または&#x200B;**`Recipients`**&#x200B;を選択して、送信者と受信者のどちらを表示するかを決定します。
 
-### 構成メッセージの設定 {#configure-compose-message}
+### 構成メッセージの構成{#configure-compose-message}
 
-To modify the configuration of the compose message page, open the site in [author edit mode](/help/communities/sites-console.md#authoring-site-content).
+構成メッセージページの設定を変更するには、[作成者編集モード](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
 
-* In `Preview` mode, select the **Messages** link to open the main messaging page. Then select the New Message button to open the `Compose Message` page.
+* `Preview`モードで、**メッセージ**&#x200B;リンクを選択して、メインメッセージングページを開きます。 次に、「新しいメッセージ」ボタンを選択して`Compose Message`ページを開きます。
 
-* In `Edit` mode, select the main component on the page containing the Message body.
-* 設定ダイアログにアクセスするには、アイコンを選択して継承をキャンセルし `link` ます。
+* `Edit`モードで、メッセージの本文を含むページのメインコンポーネントを選択します。
+* 設定ダイアログにアクセスするには、`link`アイコンを選択して継承をキャンセルします。
 継承がキャンセルされると、設定アイコンを選択して設定ダイアログを開くことができます。
 
-* Once the configuration is complete, it is necessary to restore inheritance by selecting the `broken link` icon.
+* 設定が完了したら、`broken link`アイコンを選択して継承を復元する必要があります。
 
 ![config-compose-message](assets/config-compose-message.png)
 
@@ -168,7 +168,7 @@ To modify the configuration of the compose message page, open the site in [autho
 
 * **サービスセレクター**
 
-   (*Required*) Set this to the value of the property **`serviceSelector.name`** from the [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service).
+   （*必須*）[AEM Communitiesメッセージング操作サービス](/help/communities/messaging.md#messaging-operations-service)のプロパティ&#x200B;**`serviceSelector.name`**&#x200B;の値に設定します。
 
 #### 「表示」タブ{#display-tab-1}
 
@@ -176,27 +176,27 @@ To modify the configuration of the compose message page, open the site in [autho
 
 * **件名フィールドを表示**
 
-   オンの場合、フィールドを表示し、メッセージに件名を追加で `Subject` きます。 デフォルトはチェックされていません。
+   オンにした場合、`Subject`フィールドを表示し、メッセージに件名を追加できるようにします。 デフォルトはチェックされていません。
 
 * **件名ラベル**
 
-   フィールドの横に表示するテキストを入力し `Subject` ます。 デフォルトは `Subject` です。
+   `Subject`フィールドの横に表示するテキストを入力します。 デフォルトは `Subject` です。
 
 * **ファイルの添付フィールドを表示**
 
-   このチェックボックスをオンにすると、フィールドが表示され、メッセージに添付ファイルを追加できるようになります。 `Attachment` デフォルトはチェックされていません。
+   オンにした場合、`Attachment`フィールドを表示し、添付ファイルをメッセージに追加できるようにします。 デフォルトはチェックされていません。
 
 * **添付ファイルのラベル**
 
-   フィールドの横に表示するテキストを入力し `Attachment` ます。 デフォルトは **`Attach File`** です。
+   `Attachment`フィールドの横に表示するテキストを入力します。 デフォルトは **`Attach File`** です。
 
 * **コンテンツフィールドを表示**
 
-   オンの場合、フィールドを表示し、メッセージ本文の追加を有効にし `Content` ます。 デフォルトはチェックされていません。
+   オンの場合、`Content`フィールドを表示し、メッセージ本文の追加を有効にします。 デフォルトはチェックされていません。
 
 * **コンテンツラベル**
 
-   フィールドの横に表示するテキストを入力し `Content` ます。 デフォルトは **`Body`** です。
+   `Content`フィールドの横に表示するテキストを入力します。 デフォルトは **`Body`** です。
 
 * **リッチテキストエディターを使用**
 
