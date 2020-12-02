@@ -12,7 +12,7 @@ ht-degree: 38%
 ---
 
 
-# AEM 6.5機能ユーザーガイド {#aem-65-capabilities-user-guides}
+# AEM 6.5機能ユーザーガイド{#aem-65-capabilities-user-guides}
 
 ## AEM の基盤 {#aem-foundation}
 
