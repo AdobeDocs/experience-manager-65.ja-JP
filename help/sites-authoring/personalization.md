@@ -48,7 +48,7 @@ AEM には、ターゲットとなるコンテンツをオーサリングして�
 
 1 つのアクティビティに複数のエクスペリエンスを定義できます。[アクティビティコンソール](/help/sites-authoring/activitylib.md#adding-editing-an-activity-using-the-activities-console)または[ターゲットモード](/help/sites-authoring/content-targeting-touch.md#adding-and-removing-experiences-using-targeting-mode)を使用して、アクティビティにエクスペリエンスを追加できます。
 
-## オファー {#offers}
+## オファー  {#offers}
 
 オファーは、それぞれのエクスペリエンスでページ上に表示されるコンテンツです。オーディエンス向けコンテンツの効果を最大限に高めるには、異なるエクスペリエンスに異なるオファーを使用します。
 
@@ -56,7 +56,7 @@ AEM には、ターゲットとなるコンテンツをオーサリングして�
 
 複数のエクスペリエンスで使用できるオファーを作成するには、[オファーコンソール](/help/sites-authoring/offerlib.md)を使用します。[ターゲットコンテンツをオーサリング](/help/sites-authoring/content-targeting-touch.md)するときは、単一エクスペリエンス用のオファーを作成するか、オファーライブラリからオファーを追加します。
 
-## ターゲティングエンジン {#targeting-engine}
+## ターゲティングエンジン  {#targeting-engine}
 
 ターゲティングエンジンは、ターゲットコンテンツ用のロジックを動かすメカニズムです。使用可能なターゲティングエンジンには AEM と Adobe Target の 2 種類があり、どちらを使用するかは[アクティビティ](/help/sites-authoring/activitylib.md)で設定します。
 
@@ -71,4 +71,4 @@ Adobe Target ターゲティングエンジンを使用すると、ページの�
 * このターゲティングエンジンを使用する場合、エクスペリエンスのオーディエンス定義には Adobe Target から読み込んだセグメントを使用します。
 * Adobe Target エンジンを使用するアクティビティは、[Target と同期](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)します。
 
-You can use this engine when you have [integrated with Adobe Target](/help/sites-administering/opt-in.md).
+[をAdobe Target](/help/sites-administering/opt-in.md)と統合している場合は、このエンジンを使用できます。
