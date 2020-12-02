@@ -22,7 +22,7 @@ ht-degree: 74%
 
 Adobe Campaign のニュースレターのターゲット設定をおこなうには、まずセグメント化を設定する必要があります（セグメント化の設定は、クラシック UI でのみ使用可能です）（ClientContext）。その後、Adobe Campaign 用のターゲット設定されたエクスペリエンスを作成できます。ここでは、この両方について説明します。
 
-## AEM でのセグメント化の設定 {#setting-up-segmentation-in-aem}
+## AEM でのセグメント化の設定  {#setting-up-segmentation-in-aem}
 
 セグメント化を設定するには、クラシック UI を使用してセグメントを設定する必要があります。残りの手順は、標準 UI で実行できます。
 
@@ -36,19 +36,19 @@ Adobe Campaign のニュースレターのターゲット設定をおこなう�
 
 セグメントを作成するには：
 
-1. Open the [segmentation console](http://localhost:4502/miscadmin#/etc/segmentation) at **&lt;host>:&lt;port>/miscadmin#/etc/segmentation**.
-1. Create a new page and enter a title - for example, **AC Segments**- and select the **Segment (Adobe Campaign)** template.
+1. **&lt;host>:&lt;port>/miscadmin#/etc/segmentation**&#x200B;の[セグメント化コンソール](http://localhost:4502/miscadmin#/etc/segmentation)を開きます。
+1. 新しいページを作成し、タイトル（例：**ACセグメント**）を入力して、**セグメント(Adobe Campaign)**&#x200B;テンプレートを選択します。
 1. 左側のツリー表示で、作成したページを選択します。
 1. セグメントを作成し（例えば、男性ユーザーをターゲットにするセグメントを作成するには、「Male」というセグメントの下に新しいページを作成します）、**セグメント（Adobe Campaign）**&#x200B;テンプレートを選択します。
 1. 作成したセグメントページを開き、サイドキックからそのページに&#x200B;**セグメント ID** をドラッグ＆ドロップします。
-1. Double-click the trait, enter the ID representing in this case, the male segment defined in Adobe Campaign - for example, **MALE** - and click **OK**. The following message should appear: *`targetData.segmentCode == "MALE"`*
+1. 特性を重複クリックし、この例で表すID、Adobe Campaignで定義された男性セグメント（例：**MALE**）を入力して、「**OK**」をクリックします。 次のメッセージが表示されます。*`targetData.segmentCode == "MALE"`*
 1. 同じステップを繰り返して、別のセグメント（例えば女性ユーザーをターゲットにするセグメント）を作成します。
 
-### ブランドの作成 {#creating-a-brand}
+### ブランドの作成  {#creating-a-brand}
 
 ブランドを作成するには：
 
-1. In **Sites**, navigate to the **Campaigns** folder (for example in We.Retail).
+1. **サイト**&#x200B;で、**キャンペーン**&#x200B;フォルダー（We.Retailなど）に移動します。
 1. 「**ページを作成**」をクリックし、ページのタイトル（「We.Retail Brand」など）を入力して、**ブランド**&#x200B;テンプレートを選択します。
 
 ### キャンペーンの作成 {#creating-a-campaign}
@@ -62,14 +62,14 @@ Adobe Campaign のニュースレターのターゲット設定をおこなう�
 
 セグメント用のエクスペリエンスを作成するには：
 
-1. Open the **Campaign** page you just created.
-1. Create experiences for your segments by clicking **Create Page** and entering a title for your page, for example, Male as you are creating an experience for the Male segment, and select the **Experience** template.
+1. 先ほど作成した&#x200B;**キャンペーン**&#x200B;ページを開きます。
+1. 「**ページを作成**」をクリックし、ページのタイトルを入力します。例えば、男性セグメントのエクスペリエンスを作成しているときは男性と入力し、**エクスペリエンス**&#x200B;テンプレートを選択します。
 1. 作成したエクスペリエンスページを開きます。
 1. 「**編集**」をクリックして、「セグメント」の下の「**項目を追加**」をクリックします。
-1. Enter the path to the male segment, for example **/etc/segmentation/ac-segments/male** and click **OK**. The following message should appear: *Experience is targeted at: Male*
+1. 男性セグメントのパスを入力します（例：**/etc/segmentation/ac-segments/male**）。「**OK**」をクリックします。 次のメッセージが表示されます。*エクスペリエンスの対象：男性*
 1. ここまでのステップを繰り返して、すべてのセグメント（女性をターゲットにするセグメントなど）用のエクスペリエンスを作成します。
 
-## ターゲットコンテンツを使用したニュースレターの作成 {#creating-a-newsletter-with-targeted-content}
+## ターゲットコンテンツを使用したニュースレターの作成  {#creating-a-newsletter-with-targeted-content}
 
 セグメント、ブランド、キャンペーンおよびエクスペリエンスを作成したら、ターゲットコンテンツを使用してニュースレターを作成できます。作成したエクスペリエンスを、セグメントにリンクします。
 
@@ -79,13 +79,13 @@ Adobe Campaign のニュースレターのターゲット設定をおこなう�
 
 ターゲットコンテンツを使用してニュースレターを作成するには：
 
-1. Create a newsletter with targeted content: Below Email Campaigns in Geometrixx Outdoors, click or tap **Create** > **Page**, and select one of the Adobe Campaign Mail templates.
+1. ターゲットコンテンツを含むニュースレターを作成します。「Geometrixx Outdoorsの電子メールキャンペーン」の下の「**作成**/**ページ**」をクリックまたはタップし、Adobe Campaignメールテンプレートの1つを選択します。
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
 1. ニュースレター内で、テキストおよびパーソナライゼーションコンポーネントを追加します。
 1. テキストおよびパーソナライゼーションコンポーネントに「これはデフォルトです」などのテキストを追加します。
-1. Click the arrow next to **Edit** and select **Targeting**.
+1. 「**編集**」の横の矢印をクリックし、「**ターゲット**」を選択します。
 1. ブランドのドロップダウンメニューからブランドを選択し、キャンペーンを選択します（前に作成したブランドとキャンペーンです）。
 1. 「**ターゲティングを開始**」をクリックします。セグメントが「オーディエンス」領域に表示されます。定義済みのセグメントが一致しない場合は、デフォルトのエクスペリエンスが使用されます。
 
@@ -99,7 +99,7 @@ Adobe Campaign のニュースレターのターゲット設定をおこなう�
 
 1. 別のセグメント（Male）に移動し、「**オファーを追加**」をクリックして、プラス（+）アイコンをクリックします。次に、オファーを編集します。
 1. 別のセグメント（Feale）に移動し、「**オファーを追加**」をクリックして、プラス（+）アイコンをクリックします。次に、このオファーを編集します。
-1. Click **Next** to see Mapping, then click **Next** to see Settings, which does not apply to Adobe Campaign, and click **Save**.
+1. 「**次へ**」をクリックしてマッピングを表示し、「**次へ**」をクリックして設定を表示します。設定はAdobe Campaignには適用されません。次に「**保存**」をクリックします。
 
    Adobe Campaign 内でこのコンテンツが配信に使用されると、Adobe Campaign 用の正しいターゲット設定コードが自動的に生成されます。
 
