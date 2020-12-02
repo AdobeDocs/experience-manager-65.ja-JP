@@ -14,7 +14,7 @@ ht-degree: 97%
 ---
 
 
-# AEM 6.5 Mobile ユーザーガイド {#mobile}
+# AEM 6.5 Mobile ユーザーガイド  {#mobile}
 
 + [モバイルユーザーガイドの概要](home.md)
 + AEM Mobile の概要 {#introduction}
@@ -35,7 +35,7 @@ ht-degree: 97%
    + [クラウド設定](mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
    + [バナーの管理](mobile-on-demand-managing-banners.md)
 + On-Demand Services アプリの開発 {#developing}
-   + [AEM Mobile On-Demand](aem-mobile-on-demand.md)
+   + [AEM Mobileオンデマンド](aem-mobile-on-demand.md)
    + [アプリのテンプレートとコンポーネント](app-templates-and-components1.md)
    + [コンテンツのプロパティとノード](content-properties.md)
    + [共有リソースの書き出し設定の作成](creating-shared-resources-export-configuration.md)
@@ -49,7 +49,7 @@ ht-degree: 97%
    + [コンテンツサービス](developing-content-services.md)
    + [コンテンツ配信](develop-content-as-a-service.md)
 + On-Demand Services アプリの管理 {#administering}
-   + [AEM Mobile On-Demand](aem-mobile.md)
+   + [AEM Mobileオンデマンド](aem-mobile.md)
    + [AEM Mobile のセットアップ](aem-mobile-setup.md)
    + [ユーザーとユーザーグループの設定](aem-mobile-configure-users.md)
    + [プリフライトによるプレビュー](aem-mobile-manage-ondemand-services.md)
@@ -81,7 +81,7 @@ ht-degree: 97%
    + [モバイルアプリケーションへの Adobe Analytics の追加](phonegap-add-analytics-to-apps.md)
    + [モバイルアプリのページテンプレート](phonegap-apps-arch-page-templates.md)
    + [Adobe Target クラウドサービスの設定](aem-mobile-configuring-cloud-service.md)
-   + [シングルページアプリケーション](phonegap-single-page-applications.md)
+   + [単一ページアプリケーション](phonegap-single-page-applications.md)
    + [リポジトリ内のモデル](administer-mobile-apps.md)
    + [AEM PhoneGap の起動](starting-aem-phonegap-app.md)
    + [モバイルアプリのテスト](develop-mobile-apps-testing.md)
