@@ -24,7 +24,7 @@ ht-degree: 91%
 
 1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. 現在の設定をファイルに書き出すには、「書き出し」をクリックして設定ファイルを別の場所に保存します。
-1. In the file, locate the `Domains` > *[Your domain name]* > `DirectoryConfigs` > `LDAPGroupConfig` node. 以下に例を示します。
+1. ファイル内で、`Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig`ノードを探します。 以下に例を示します。
 
    ```xml
     <node name="LDAPGroupConfig">
@@ -39,7 +39,7 @@ ht-degree: 91%
 
    `bindpassword` の値部分に値を入力して変更を保存します。
 
-1. In the file, locate the `Domains` > *[Your domain name]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` node. 以下に例を示します。
+1. ファイル内で、`Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig`のノードを探します。 以下に例を示します。
 
    ```xml
     <node name="LDAPUserConfig">
