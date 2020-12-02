@@ -31,7 +31,7 @@ ht-degree: 99%
 >
 >問題が発生した場合は、システム管理者にお問い合わせください。
 
-## サイドキック {#sidekick}
+## サイドキック  {#sidekick}
 
 サイドキックはページのオーサリングをおこなう際の重要なツールです。ページのオーサリング中はフローティングされるので、常に表示されます。
 
@@ -88,7 +88,7 @@ ht-degree: 99%
 
 1. ページに必要なコンポーネントを挿入します。次に、段落をダブルクリックすると、段落を設定しコンテンツを追加するためのウィンドウが開きます。
 
-### コンテンツファインダーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-content-finder}
+### コンテンツファインダーを使用したコンポーネントの挿入  {#inserting-a-component-using-the-content-finder}
 
 [コンテンツファインダー](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、アセットが格納される適切なタイプの新しいコンポーネントが自動的に作成されます。
 
@@ -115,7 +115,7 @@ ht-degree: 99%
 
 1. 必要に応じて、コンポーネントを[編集](#editmovecopypastedelete)します。
 
-## コンポーネント（コンテンツとプロパティ）の編集 {#editing-a-component-content-and-properties}
+## コンポーネント（コンテンツとプロパティ）の編集  {#editing-a-component-content-and-properties}
 
 既存の段落を編集するには、次のいずれかの操作を実行します。
 
@@ -206,7 +206,7 @@ ht-degree: 99%
 
 [注釈](/help/sites-classic-ui-authoring/classic-page-author-annotations.md)を使用すると、他の作成者がコンテンツに関するフィードバックを提供できます。注釈は、レビューや検証の目的でよく使用されます。
 
-## ページのプレビュー {#previewing-pages}
+## ページのプレビュー  {#previewing-pages}
 
 ページのプレビューに重要な 2 つのアイコンがサイドキックの下部にあります。
 
