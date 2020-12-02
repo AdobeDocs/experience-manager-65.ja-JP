@@ -25,16 +25,16 @@ ht-degree: 46%
 新しいコミュニティサイトにイネーブルメントリソースを追加するには：
 
 * 作成者インスタンスでシステム管理者としてログインします。
-   * For example, [http://localhost:4502/](http://localhost:4503/)
-* From global navigation, select **[!UICONTROL Communities]** > **[!UICONTROL Resources]**
+   * 例：[http://localhost:4502/](http://localhost:4503/)
+* グローバルナビゲーションから、**[!UICONTROL コミュニティ]**/**[!UICONTROL リソース]**&#x200B;を選択します。
 
    ![resources](assets/resources.png)
 
    ![enablement-resource](assets/enablement-resource.png)
 * イネーブルメントリソースを追加するコミュニティサイトを選択します。
-   * Select **[!UICONTROL Enablement Tutorial]**.
-* From the menu, select **[!UICONTROL Create]**.
-* Select **[!UICONTROL Resource]**.
+   * 「**[!UICONTROL 有効化チュートリアル]**」を選択します。
+* メニューから「**[!UICONTROL 作成]**」を選択します。
+* 「**[!UICONTROL リソース]**」を選択します。
 
 ![create-resource](assets/create-enablement-resource.png)
 
@@ -46,7 +46,7 @@ ht-degree: 46%
 
    選択したコミュニティサイトの名前に設定します。有効化のチュートリアル
 
-* **[!UICONTROL Resource Name&amp;ast;]**
+* **[!UICONTROL リソース名(&amp;A);]**
 
    スキーレッスン1
 
@@ -56,7 +56,7 @@ ht-degree: 46%
 
 * **[!UICONTROL カタログに表示]**
 
-   「オン」に設定し **ます**。
+   **On**&#x200B;に設定します。
 
 * **[!UICONTROL 説明]**
 
@@ -74,7 +74,7 @@ ht-degree: 46%
 
 複数のリソースを選択できるように見えますが、選択できるのは 1 つだけです。
 
-Select the `'+' icon`, in the upper right corner, to begin the process of choosing the Resource by identifying the source.
+右上隅の`'+' icon`を選択して、ソースを識別してリソースを選択するプロセスを開始します。
 
 ![add-content](assets/add-content.png)
 
@@ -100,15 +100,15 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
    *（オプション）* 空白のままにします。
 
-* **[!UICONTROL Resource Contact&amp;ast;]**
+* **[!UICONTROL リソース連絡先(&amp;A);]**
 
-   *（必須）* プルダウンメニューを使用して、メンバを選択し `Quinn Harper`ます。
+   *（必須）プルダウンメニューを* 使用して、メンバを選択 `Quinn Harper`します。
 
 * **[!UICONTROL リソースエキスパート]**
 
    *（オプション）* 空白のままにします。
 
-   **注意**:ユーザーまたはグループが表示されない場合は、ユーザーまたはグループがグループに追加され、発行インスタンス `Community Enable Members` で「 *保存* 」されたことを確認します。
+   **注意**:ユーザーまたはグループが表示されない場合は、ユーザーまたはグループがグループに追加され、 `Community Enable Members` 発行インスタンスで「 ** 保存」されたことを確認します。
 
    ![enablement-settings](assets/enablement-settings.png)
 
@@ -130,11 +130,11 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 新しいバージョンのイネーブルメントリソースをアップロードする際は、新しいリソースを作成したうえで、古いバージョンのリソースからメンバーを登録解除して新しいバージョンのリソースに登録することを推奨します。
 
-### リソースの公開 {#publish-the-resource}
+### リソースの公開  {#publish-the-resource}
 
 登録者が割り当てられたリソースを確認できるようにするには、その前に次の手順でリソースを公開する必要があります。
 
-* ワールド `Publish` アイコンを選択
+* ワールド`Publish`アイコンを選択
 
 アクティベーションが成功したことを示す以下のメッセージが表示されます。
 
@@ -146,7 +146,7 @@ Select the `'+' icon`, in the upper right corner, to begin the process of choosi
 
 ![追加リソース](assets/add-resource.png)
 
-**2番目のリソースを発行します** 。
+**2番目のリソースを** 発行します。
 
 Enablement Tutorial のリソースのリストに戻ります。
 
@@ -158,8 +158,8 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 学習パスは、複数のイネーブルメントリソースを論理的にグループ化して 1 つのコースとしたものです。
 
-* From the Resources console, select `+ Create`
-* Select **[!UICONTROL Learning Path]**
+* リソースコンソールから`+ Create`を選択します
+* **[!UICONTROL 学習パス]**&#x200B;を選択
 
 ![add-learning-path](assets/add-learning-path.png)
 
@@ -191,9 +191,9 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 リソース追加パネルで、次の操作を行います。
 
-* 2つ `+ Add Resources` のスキーレッションリソースを選択して学習パスに追加します。
+* `+ Add Resources`を選択して、学習パスに追加する2つのスキーリソースを選択します。
 
-   注意：選択できるのは **発行されたリソースのみです** 。
+   注意：**発行済み**&#x200B;のリソースのみが選択可能です。
 
 >[!NOTE]
 >
@@ -211,11 +211,11 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 * **[!UICONTROL 割り当て先を追加]**
 
-   プルダウンメニューを使用して、 `Community Ski Class` グループを選択します。グループには、メンバー `Riley Taylor` と `Sidney Croft.`
+   プルダウンメニューを使用して`Community Ski Class`グループを選択します。グループには`Riley Taylor`と`Sidney Croft.`が含まれます。
 
-* **[!UICONTROL Learning Path Contact&amp;ast;]**
+* **[!UICONTROL 学習パス（連絡先）;]**
 
-   *（必須）* プルダウンメニューを使用して、メンバを選択し `Quinn Harper`ます。
+   *（必須）プルダウンメニューを* 使用して、メンバを選択 `Quinn Harper`します。
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
