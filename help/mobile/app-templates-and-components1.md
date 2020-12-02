@@ -33,7 +33,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->To learn how to develop your AEM application using CRXDE Lite, see [Developing with CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>CRXDE Liteを使用したAEMアプリケーションの開発方法については、[CRXDE Liteを使用した開発](/help/sites-developing/developing-with-crxde-lite.md)を参照してください。
 
 テンプレートはページの基礎です。
 
@@ -41,7 +41,7 @@ ht-degree: 90%
 
 このコピー処理により、ページには、初期コンテンツ（通常はトップレベルコンテンツのみ）と sling:resourceType プロパティ、ページのレンダリングに使用するページコンポーネントのパス（子ノード jcr:content に含まれるすべてのもの）ができます。
 
-## テンプレートの構造 {#structure-of-a-template}
+## テンプレートの構造  {#structure-of-a-template}
 
 以下の 2 つの側面について考慮する必要があります。
 
