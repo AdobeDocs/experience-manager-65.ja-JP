@@ -18,7 +18,7 @@ ht-degree: 98%
 ---
 
 
-# アセットの命名規則 testing{#naming-conventions-for-assets-testing}
+# アセットの命名規則 テスト{#naming-conventions-for-assets-testing}
 
 リポジトリのノードは、[Java コンテンツリポジトリ](/help/sites-developing/the-basics.md#java-content-repository)の命名規則の対象です。ただし、Adobe Experience Manager によってアセットノード名に追加の規則が課せられます。
 
