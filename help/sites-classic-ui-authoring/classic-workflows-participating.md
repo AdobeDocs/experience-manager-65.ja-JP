@@ -44,7 +44,7 @@ ht-degree: 98%
 
    あるステップまたは一連のステップを繰り返す必要がある場合は、以前のステップに戻すことができます。これによって、ワークフロー内の以前に発生したステップを、再処理のために選択できます。ワークフローが指定したステップに戻り、そこから続行されます。
 
-## ワークフローへの参加 {#participating-in-a-workflow}
+## ワークフローへの参加  {#participating-in-a-workflow}
 
 ### 割り当てられたワークフローアクションの通知 {#notifications-of-assigned-workflow-actions}
 
