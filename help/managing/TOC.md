@@ -14,7 +14,7 @@ ht-degree: 93%
 ---
 
 
-# AEM 6.5 管理ユーザーガイド {#managing}
+# AEM 6.5 管理ユーザーガイド  {#managing}
 
 + [ユーザガイドの管理](home.md)
 + 管理 - ベストプラクティスチェックリスト {#managing-best-practices-checklist}
@@ -29,5 +29,5 @@ ht-degree: 93%
 + アクセシビリティ {#accessibility}
    + [AEM と Web アクセシビリティのガイドライン](web-accessibility.md)
    + [WCAG 2.1 クイックガイド](qg-wcag.md)
-+ データ保護 {#data-protection}
++ データ保護{#data-protection}
    + [データ保護およびデータプライバシーに関する規制に対する AEM の対応](data-protection-and-privacy.md)
