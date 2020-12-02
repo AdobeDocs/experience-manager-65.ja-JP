@@ -23,13 +23,13 @@ AEM Forms はフォームポータル経由で送信されたフォームデー�
 
 >[!NOTE]
 >
->Users who will invoke the APIs must be added to the reviewers group as described in [Associating submission reviewers to a form](/help/forms/using/adding-reviewers-form.md).
+>[送信レビュー担当者のフォームへの関連付け](/help/forms/using/adding-reviewers-form.md)の説明に従って、APIを呼び出すユーザーをレビュー担当者グループに追加する必要があります。
 
 ## GET /content/forms/portal/submission.review.json?func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
 すべての有効なフォームのリストを返します。
 
-### URL パラメーター {#url-parameters}
+### URL パラメーター  {#url-parameters}
 
 この API はその他のパラメーターを必要としません。
 
@@ -59,11 +59,11 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 [{"formPath":"/content/dam/formsanddocuments/forms-review/form2","formName":"form2"},{"formPath":"/content/dam/formsanddocuments/forms-review/form1","formName":"form1"}]
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
+## GET /content/forms/portal/submission.review.json?func=getAllSubmissions  {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
 
 すべての送信済みフォームの詳細を返します。ただし、URL パラメーターを使用して結果を制限できます。
 
-### URL パラメーター {#url-parameters-1}
+### URL パラメーター  {#url-parameters-1}
 
 要求 URL で次のパラメーターを指定します。
 
@@ -95,7 +95,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (オプション)</td>
-   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは次のとおりです。<br /><code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは、<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>です。 <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (オプション)</td>
@@ -133,7 +133,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 指定した送信インスタンスにコメントを追加します。
 
-### URL パラメーター {#url-parameters-2}
+### URL パラメーター  {#url-parameters-2}
 
 要求 URL で次のパラメーターを指定します。
 
@@ -160,11 +160,11 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET /content/forms/portal/submission.review.json?func=getComments    {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
 指定した送信インスタンスに投稿したすべてのコメントを返します。
 
-### URL パラメーター {#url-parameters-3}
+### URL パラメーター  {#url-parameters-3}
 
 要求 URL で次のパラメーターを指定します。
 
@@ -202,7 +202,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 指定した送信済みフォームインスタンスの指定したプロパティの値を更新します。
 
-### URL パラメーター {#url-parameters-4}
+### URL パラメーター  {#url-parameters-4}
 
 要求 URL で次のパラメーターを指定します。
 
