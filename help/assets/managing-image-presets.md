@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
 workflow-type: tm+mt
 source-wordcount: '3867'
-ht-degree: 87%
+ht-degree: 88%
 
 ---
 
 
-# Managing Dynamic Media image presets{#managing-image-presets}
+# ダイナミックメディア画像プリセットの管理{#managing-image-presets}
 
 画像プリセットを使用すると、AEM Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像表示用のサイズやフォーマットに関するコマンドの事前定義済みコレクションを表します。画像プリセットの作成時には、画像配信用のサイズを選択します。またフォーマットコマンドも選択し、表示対象画像の配信時に画像の見た目が最適化されるようにします。
 
@@ -32,7 +32,7 @@ ht-degree: 87%
 >
 >スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、[スマートイメージング](/help/assets/imaging-faq.md)を参照してください。
 
-## Understanding Dynamic Media image presets {#understanding-image-presets}
+## ダイナミックメディア画像プリセットについて{#understanding-image-presets}
 
 各画像プリセットはマクロと同様に、サイズおよびフォーマットのコマンドに関する事前定義済みのコレクションが、特定の名前で保存されたものです。画像プリセットの仕組みを理解するために、Web サイトで各商品画像を、デスクトップ配信用とモバイル配信用に異なるサイズ、異なる形式および圧縮率で表示する必要があるとします。
 
@@ -46,9 +46,9 @@ ht-degree: 87%
 
 管理者が画像プリセットを作成できます。画像プリセットを作成する際に、最初から作業を始めることも、既存のプリセットから始めて新しい名前で保存することもできます。
 
-## Managing Dynamic Media image presets {#managing-image-presets-1}
+## ダイナミックメディア画像プリセットの管理{#managing-image-presets-1}
 
-You manage your image presets in AEM by tapping or clicking the AEM logo to access the global navigation console and then tapping or clicking the Tools icon and navigating to **[!UICONTROL Assets > Image Presets.]**
+AEMで画像プリセットを管理するには、AEMロゴをタップまたはクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップまたはクリックして&#x200B;**[!UICONTROL アセット/画像プリセットに移動します。]**
 
 ![6_5_tools-assets-imagepresets](assets/6_5_tools-assets-imagepresets.png)
 
@@ -66,7 +66,7 @@ You manage your image presets in AEM by tapping or clicking the AEM logo to acce
 >
 >アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択すると、様々なレンディションがシステムによって表示されます。表示される画像プリセットの数を増減させることができます。[表示される画像プリセット数の引き上げ](#increasing-or-decreasing-the-number-of-image-presets-that-display)を参照してください。
 
-### Smart crops, Adobe Illustrator (AI), Postscript (EPS), and PDF file formats {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+### スマート切り抜き、Adobe Illustrator(AI)、Postscript(EPS)、PDFファイル形式{#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 * Adobe Illustrator のドキュメントは複数のレイヤーを持つ単一のページで構成されます。各レイヤーはメインの Illustrator アセットの下に PNG サブアセットとして抽出されます。
 * PDF のドキュメントは 1 つ以上のページで構成されます。各ページはメインの複数ページの PDF ドキュメントの下に単一ページの PDF サブアセットとして抽出されます。
 
-サブアセットは、`DAM Update Asset` ワークフロー全体で `Create Sub Asset process` コンポーネントによって作成されます。To see this process component within the workflow, tap **[!UICONTROL Tools > Workflow > Models > DAM Update Asset > Edit.]**
+サブアセットは、`DAM Update Asset` ワークフロー全体で `Create Sub Asset process` コンポーネントによって作成されます。ワークフロー内でこのプロセスコンポーネントを表示するには、**[!UICONTROL ツール/ワークフロー/モデル/DAM更新アセット/編集をタップします。]**
 
 [複数ページファイルのページの表示](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)も参照してください。
 
@@ -93,9 +93,9 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 
 >[!NOTE]
 >
->In the [!UICONTROL DAM Update Asset] workflow, the **[!UICONTROL EPS thumbnails]** step generates thumbnails for EPS files.
+>[!UICONTROL DAM更新アセット]ワークフローで、**[!UICONTROL EPSサムネール]**&#x200B;ステップによってEPSファイルのサムネールが生成されます。
 
-#### PDF/AI/EPS アセットのメタデータプロパティ {#pdf-ai-eps-asset-metadata-properties}
+#### PDF/AI/EPS アセットのメタデータプロパティ  {#pdf-ai-eps-asset-metadata-properties}
 
 | **メタデータプロパティ** | **説明** |
 |---|---|
@@ -148,7 +148,7 @@ PDF または AI ワークフローのラスタライズの引数
 
 `Rasterize PDF/AI Image Preview Rendition` プロセスコンポーネントには、メモリに過度に大きな画像が作成されないように、最大値が定義されています。このようなサイズの大きな画像は、JVM（Java Virtual Machine）で提供されているメモリをオーバーフローさせることがあります。それぞれ設定された最大サイズで画像を作成可能なワークフローを、設定した数だけ並行して管理するのに十分なメモリを JVM に提供する必要があります。
 
-### InDesign（INDD）ファイル形式 {#indesign-indd-file-format}
+### InDesign（INDD）ファイル形式  {#indesign-indd-file-format}
 
 INDD 形式の取り込みをサポートし、これらのファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。
 
@@ -156,11 +156,11 @@ InDesign ファイルでは、Adobe InDesign サーバーが AEM に統合され
 
 [AEM Assets と InDesign Server の統合](/help/assets/indesign.md)を参照してください。
 
-The Media Extraction process component in the `DAM Update Asset` workflow runs several preconfigured Extend Scripts to process InDesign files.
+`DAM Update Asset`ワークフローのメディア抽出プロセスコンポーネントは、InDesignファイルを処理するために、事前に設定された拡張スクリプトをいくつか実行します。
 
 ![メディア抽出プロセスの引数で使用される ExtendScript のパス](assets/6_5_mediaextractionprocess.png)
 
-[!UICONTROL DAM Update Asset] WorkflowのMedia抽出プロセスコンポーネントの引数内のExtendScriptパス。
+[!UICONTROL DAM Update Asset]ワークフローのメディア抽出プロセスコンポーネントの引数内のExtendScriptパス。
 
 Dynamic Media 統合では、以下のスクリプトが使用されます。
 
@@ -202,7 +202,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 >* EPS ファイルのサムネールサイズは 「サムネール」の下の「**[!UICONTROL 引数]**」タブにある **[!UICONTROL EPS サムネール]**&#x200B;のステップで設定します。
    >
    >
-* Thumbnail size for videos are configured in the **[!UICONTROL FFmpeg thumbnails]** step, in the **[!UICONTROL Process]** tab under **[!UICONTROL Arguments.]**
+* ビデオのサムネールサイズは、**[!UICONTROL FFmpegサムネール]**&#x200B;の&#x200B;**[!UICONTROL 引数の下の**[!UICONTROL &#x200B;プロセス&#x200B;]**タブで設定します。]**
 
 >
 
@@ -211,11 +211,11 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 **画像サムネールのサイズを設定するには**:
 
 1. **[!UICONTROL ツール/ワークフロー/モデル/DAM更新アセット/編集をタップします。]**
-1. **[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップまたはクリックします。Change the thumbnail size, as needed, then tap **[!UICONTROL OK.]**
+1. **[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップまたはクリックします。必要に応じてサムネールサイズを変更し、「**[!UICONTROL OK」をタップします。]**
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. **[!UICONTROL サムネールを処理]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップします。Change the thumbnail size, as needed, then tap **[!UICONTROL OK.]**
+1. **[!UICONTROL サムネールを処理]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップします。必要に応じてサムネールサイズを変更し、「**[!UICONTROL OK」をタップします。]**
 
    >[!NOTE]
    >
@@ -223,7 +223,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 1. 「**[!UICONTROL 保存]**」をタップしてワークフローに対する変更を保存します。
 
-### Increasing or decreasing the number of Dynamic Media image presets that display {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+### {#increasing-or-decreasing-the-number-of-image-presets-that-display}を表示するダイナミックメディア画像プリセットの数の増減
 
 作成した画像プリセットは、アセットをプレビューする際の動的レンディションとして使用できます。AEM で、**[!UICONTROL 詳細表示／レンディションからアセットを表示すると、様々な動的レンディションが表示されます。]**&#x200B;表示されるレンディション数の制限を増減させることができます。
 
@@ -240,9 +240,9 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
-1. Tap **[!UICONTROL Save All.]**
+1. 「**[!UICONTROL すべて保存」をタップします。]**
 
-## ダイナミックメディア画像プリセットの作成 {#creating-image-presets}
+## ダイナミックメディア画像プリセットの作成{#creating-image-presets}
 
 ダイナミックメディア画像プリセットを作成すると、プレビュー時や公開時に、これらの設定を任意の画像に適用できます。
 
@@ -260,7 +260,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 **ダイナミックメディア画像プリセットを作成するには**:
 
-1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Assets > Image Presets.]**
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/アセット/画像プリセットをタップします。]**
 1. 「**[!UICONTROL 作成」をクリックします。]****[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
@@ -275,7 +275,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
-## Creating a responsive image preset {#creating-a-responsive-image-preset}
+## レスポンシブ画像プリセットの作成{#creating-a-responsive-image-preset}
 
 レスポンシブな画像プリセットを作成するには、[画像プリセットの作成](#creating-image-presets)の手順を実行します。**[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウで高さと幅を入力する際に、これらの値を消去して空のままにします。
 
@@ -297,7 +297,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 画像プリセットを作成または編集するときに、ここで説明するオプションを使用できます。またアドビは、最初に使用すべきオプションとして、以下の「ベストプラクティス」のオプションをお勧めします。
 
-* **[!UICONTROL 「形式]** (**[!UICONTROL 「基本]** 」タブ)」 - **[!UICONTROL JPEG]** 、または要件に合う別の形式を選択します。すべてのWebブラウザーがJPEG画像形式をサポートしています。小さいファイルサイズと画質のバランスがとれています。ただし、JPEG形式の画像は非可逆圧縮方式を使用しているので、圧縮設定が低すぎると、不要な画像アーティファクトが発生する可能性があります。 このため、アドビは圧縮品質を 75 に設定することをお勧めします。この設定は、画質と小さなファイルサイズのバランスが取れた設定です。
+* **[!UICONTROL 形式]**（「**[!UICONTROL 基本]**」タブ） - 「**[!UICONTROL JPEG]**」または要件を満たす他の形式を選択します。JPEG 画像形式はすべての Web ブラウザーでサポートされ、小さなファイルサイズと画質のバランスが良い形式です。ただし、JPEG 形式の画像では非可逆圧縮方式が使用されるので、圧縮設定が低すぎる場合は望ましくない画像アーティファクトが発生する可能性があります。このため、アドビは圧縮品質を 75 に設定することをお勧めします。この設定は、画質と小さなファイルサイズのバランスが取れた設定です。
 
 * **[!UICONTROL シンプルシャープを有効にする]** - 「**[!UICONTROL シンプルシャープを有効にする]**」は選択しません（このシャープフィルターでは、アンシャープマスク設定よりも細かく制御できません）。
 
@@ -418,7 +418,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>画像の修飾子</strong></td>
-   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.translate.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
+   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
     <ul>
      <li>基本的なテンプレートコマンドおよびテキストレンダリングコマンド：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> および <code>textPs=</code></li>
      <li>ローカライゼーションコマンド：<code>locale=</code> および <code>req=xlate</code></li>
@@ -433,7 +433,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
  </tbody>
 </table>
 
-## Defining image preset options with Image Modifiers {#defining-image-preset-options-with-image-modifiers}
+## 画像修飾子を使用した画像プリセットオプションの定義{#defining-image-preset-options-with-image-modifiers}
 
 「基本」タブと「詳細」タブで使用できるオプションに加えて、画像の修飾子を定義して、画像プリセットの定義でより多くのオプションを指定することができます。画像のレンダリングには Scene7 画像レンダリング API が利用されており、詳しくは [HTTP プロトコルリファレンス](https://microsite.omniture.com/t2/help/ja_JP/s7/is_ir_api/is_api/http_ref/c_http_protocol_reference.html)で定義されています。
 
@@ -485,14 +485,14 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 ## 画像プリセットの編集 {#modifying-image-presets}
 
-1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Assets > Image Presets.]**
+1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/アセット/画像プリセットをタップします。]**
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
-1. Select a preset and then click **[!UICONTROL Edit.]** The **[!UICONTROL Edit Image Preset]** window opens.
+1. プリセットを選択し、「**[!UICONTROL 編集」をクリックします。]**&#x200B;画像プリセットを編集ウィンドウが開きます。**[!UICONTROL 画像プリセットを編集ウィンドウ]**&#x200B;が開きます。
 1. 変更を加え、「**[!UICONTROL 保存]**」をクリックして変更を保存するか、「**[!UICONTROL キャンセル]**」をクリックして変更をキャンセルします。
 
-## Publishing Dynamic Media image presets {#publishing-image-presets}
+## ダイナミックメディア画像プリセットの公開{#publishing-image-presets}
 
 Dynamic Media - ハイブリッドモードを実行している場合、画像プリセットを手動で公開する必要があります。
 
@@ -500,15 +500,15 @@ Dynamic Media - ハイブリッドモードを実行している場合、画像�
 
 **ダイナミックメディア — ハイブリッドモードで画像プリセットを公開するには**:
 
-1. In AEM, tap or click the AEM logo to access the global navigation console and tap or click the Tools icon and navigate to **[!UICONTROL Assets > Image Presets.]**
-1. Select the image preset or multiple image presets from the list of image presets and click or tap **[!UICONTROL Publish.]**
+1. AEMで、AEMロゴをタップまたはクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップまたはクリックして&#x200B;**[!UICONTROL アセット/画像プリセットに移動します。]**
+1. 画像プリセットのリストから画像プリセットまたは複数の画像プリセットを選択し、「**[!UICONTROL 公開」をクリックまたはタップします。]**
 1. 画像プリセットが公開されると、ステータスが非公開から公開済みに変更されます。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
-## Deleting Dynamic Media image presets {#deleting-image-presets}
+## ダイナミックメディア画像プリセットの削除{#deleting-image-presets}
 
 1. AEMで、AEMロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
-1. ツール **[!UICONTROL アイコンをタップし、]****[!UICONTROL アセット/画像プリセットに移動します。]**
+1. **[!UICONTROL ツール]**&#x200B;アイコンをタップし、**[!UICONTROL アセット/画像プリセットに移動します。]**
 1. プリセットを選択し、「**[!UICONTROL 削除]**」をクリックします。プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップして削除するか、「**[!UICONTROL キャンセル]**」をタップして中止します。
 
