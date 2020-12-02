@@ -18,11 +18,11 @@ ht-degree: 48%
 ---
 
 
-# 評価の基本事項 {#rating-essentials}
+# 評価の基本事項  {#rating-essentials}
 
-The rating component, a [tally](tally.md) subclass, allows signed in community members to rate a feature on the website.
+[tally](tally.md)サブクラスの評価コンポーネントを使用すると、コミュニティメンバーがWebサイト上の機能の評価を行うことができます。
 
-Placing multiple instances of a voting component on the same page is allowed; each instance must be configured with an unique `tally name` property.
+投票コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
 
 匿名での評価投稿はサポートされていません。サイト訪問者は、1回のみ評価に参加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも評価を変更できます。
 
@@ -52,14 +52,14 @@ Placing multiple instances of a voting component on the same page is allowed; ea
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><p>See <a href="rating.md">Using Rating</a></p> </td>
+   <td><p><a href="rating.md">定格の使用</a>を参照</p> </td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -67,7 +67,7 @@ Placing multiple instances of a voting component on the same page is allowed; ea
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された評価（UGC）へのアクセス {#accessing-posted-ratings-ugc}
+### 投稿された評価（UGC）へのアクセス  {#accessing-posted-ratings-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -78,7 +78,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン。
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
