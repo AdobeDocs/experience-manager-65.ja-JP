@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Assets] ホームページ体験'
-description: Personalize the [!DNL Experience Manager Assets] Home page for a rich welcome screen experience, including a snapshot of recent activities around assets.
+description: アセットに関する最近のアクティビティのスナップショットなど、豊富なスタートアップスクリーンエクスペリエンスに適した [!DNL Experience Manager Assets] ホームページをパーソナライズします。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
@@ -11,42 +11,42 @@ ht-degree: 32%
 ---
 
 
-# [!DNL Adobe Experience Manager Assets] ホームページ体験 {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] ホームページ体験  {#aem-assets-home-page-experience}
 
-Personalize the [!DNL Adobe Experience Manager Assets] home page for a rich welcome screen experience, including a snapshot of recent activities around assets.
+アセットに関する最近のアクティビティのスナップショットを含む、豊富なスタートアップスクリーンエクスペリエンスのために[!DNL Adobe Experience Manager Assets]ホームページをパーソナライズします。
 
 [!DNL Assets] ホームページは、最近表示またはアップロードされたアセットなど、最近のアクティビティのスナップショットを含む、カスタマイズされた豊富なスタートアップスクリーンエクスペリエンスを提供します。
 
-The [!DNL Assets] home page is disabled by default. ホームページを有効にするには、次の手順を実行します。
+[!DNL Assets]ホームページはデフォルトで無効になっています。 ホームページを有効にするには、次の手順を実行します。
 
-1. Open [!DNL Experience Manager] Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`.
-1. Open the **[!UICONTROL Day CQ DAM Event Recorder]** service.
-1. Select the **[!UICONTROL Enable this service]** to enable activity recording.
+1. [!DNL Experience Manager] Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`を開きます。
+1. **[!UICONTROL Day CQ DAMイベントレコーダー]**&#x200B;サービスを開きます。
+1. 「**[!UICONTROL このサービスを有効にする]**」を選択して、アクティビティの記録を有効にします。
 
    ![chlimage_1-250](assets/chlimage_1-250.png)
 
-1. From the **[!UICONTROL Event Types]** list, select the events to be recorded and save the changes.
+1. **[!UICONTROL イベントタイプ]**&#x200B;リストから、記録するイベントを選択し、変更を保存します。
 
    >[!CAUTION]
    >
    >「Asset viewed」、「Projects viewed」、「Collections viewed」の各オプションを有効にすると、記録対象のイベント数が大幅に増加します。
 
-1. Open the **[!UICONTROL DAM Asset Home Page Feature Flag]** service from Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`.
-1. Select the `isEnabled.name` option to enable the [!DNL Assets] Home page feature. 変更内容を保存します。
+1. Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`から&#x200B;**[!UICONTROL DAMアセットホームページ機能フラグ]**&#x200B;サービスを開きます。
+1. `isEnabled.name`オプションを選択して[!DNL Assets]ホームページ機能を有効にします。 変更内容を保存します。
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. **[!UICONTROL ユーザ環境設定ダイアログを開き]** 、「アセットホームページを **[!UICONTROL 有効にする」を選択し]**&#x200B;ます。 変更内容を保存します。
+1. **[!UICONTROL ユーザー環境設定]**&#x200B;ダイアログを開き、**[!UICONTROL アセットホームページを有効にする]**&#x200B;を選択します。 変更内容を保存します。
 
    ![ユーザ環境設定ダイアログでアセットホームページを有効にする](assets/Annotation-color.png)
 
-After enabling the [!DNL Assets] Home page, navigate to the [!DNL Assets] user interface either from the Navigation page or access it directly from the URL `https://[aem_server]:[port]/aem/assetshome.html/content/dam`.
+[!DNL Assets]ホームページを有効にした後、ナビゲーションページから[!DNL Assets]ユーザーインターフェイスに移動するか、URL `https://[aem_server]:[port]/aem/assetshome.html/content/dam`から直接アクセスします。
 
 ![アセットユーザーインターフェイスのエクスペリエンスリンクの設定](assets/config-experience-link.png)
 
-Click the **[!UICONTROL Click here to configure your experience link]** to add your username, background image, and profile image.
+「**[!UICONTROL ここをクリックしてエクスペリエンスのリンク]**&#x200B;を設定」をクリックして、ユーザー名、背景画像、プロファイル画像を追加します。
 
-The [!DNL Assets] Home page includes the following sections:
+[!DNL Assets]ホームページには、次の節が含まれます。
 
 * 「ようこそ」セクション
 * 「ウィジェット」セクション
@@ -65,24 +65,24 @@ The [!DNL Assets] Home page includes the following sections:
 * 最近の表示
 * 最新情報
 
-**アクティビティ**:このセクションの下では、 **[!UICONTROL マイアクティビティ]** Widgetには、アセットのアップロード、ダウンロード、アセットの作成、編集、コメント、注釈、共有など、アセット（レンディションのないアセットを含む）と共にログインしたユーザーが実行した最新のアクティビティが表示されます。
+**アクティビティ**:このセクションの下で、 **[!UICONTROL マイ]** アクティビティウィジェットには、アセットのアップロード、ダウンロード、アセットの作成、編集、コメント、注釈、共有など、アセット（レンディションのないアセットを含む）と共にログインしたユーザーが実行した最新のアクティビティが表示されます。
 
-**最新**:このセクションの **[!UICONTROL 最近表示した]** Widgetには、フォルダー、コレクション、プロジェクトなど、ログインユーザーが最近アクセスしたエンティティが表示されます。
+**最新**:このセクションの **[!UICONTROL 最近表示された]** ウィジェットには、フォルダー、コレクション、プロジェクトなど、ログインユーザーが最近アクセスしたエンティティが表示されます。
 
-**Discover**:このセクションの **[!UICONTROL 新しい]** Widgetには、デプロイメントに最近アップロードされたアセットとレンディションが表示され [!DNL Assets] ます。
+**Discover**:このセクションの **** 新しいウィジェットには、 [!DNL Assets] デプロイメントに最近アップロードされたアセットとレンディションが表示されます。
 
-To enable purging of user activity data, enable the **[!UICONTROL DAM Event Purge Service]** from Configuration Manager. このサービスを有効にすると、ログインユーザーのアクティビティのうち指定した数を超えたものがシステムによって削除されます。
+ユーザーアクティビティデータの削除を有効にするには、Configuration Managerから&#x200B;**[!UICONTROL DAMイベント削除サービス]**&#x200B;を有効にします。 このサービスを有効にすると、ログインユーザーのアクティビティのうち指定した数を超えたものがシステムによって削除されます。
 
 ようこそ画面には、フォルダー、コレクション、カタログにアクセスするためのツールバー上のアイコンなど、簡単に操作するための機能が含まれています。
 
 >[!NOTE]
 >
->[!UICONTROL Day CQ DAMイベントレコーダー] および [!UICONTROL DAMイベント削除サービスを有効にすると、JCRおよび検索インデックスへの書き込み操作が増え、][!DNL Experience Manager] サーバーの負荷が大幅に増加します。 The additional load on the [!DNL Experience Manager] server can impact its performance.
+>[!UICONTROL Day CQ DAMイベントレコーダー]および[!UICONTROL DAMイベントパージ]サービスを有効にすると、JCRおよび検索インデックスへの書き込み操作が増え、[!DNL Experience Manager]サーバーの負荷が大幅に増加します。 [!DNL Experience Manager]サーバに追加の負荷がかかると、サーバのパフォーマンスに影響を与える可能性があります。
 
 >[!CAUTION]
 >
->Capturing, filtering, and purging user activities required for [!DNL Assets] home page impose an overhead on performance. そのため、管理者はターゲットユーザーのためにホームページを効果的に設定する必要があります。
+>[!DNL Assets]ホームページに必要なユーザーアクティビティのキャプチャ、フィルタリング、および削除は、パフォーマンスにオーバーヘッドを与えます。 そのため、管理者はターゲットユーザーのためにホームページを効果的に設定する必要があります。
 >
->一括操作を実行する管理者およびユーザーは、ユーザーアクティビティが増えるのを避けるため、Asset のホームページ機能を使用しないことをお勧めします。In addition, administrators can exclude recording activities for specific users by configuring [!UICONTROL Day CQ DAM Event Recorder] from [!UICONTROL Configuration Manager].
+>一括操作を実行する管理者およびユーザーは、ユーザーアクティビティが増えるのを避けるため、Asset のホームページ機能を使用しないことをお勧めします。また、管理者は、[!UICONTROL Configuration Manager]から[!UICONTROL Day CQ DAMイベントレコーダー]を設定することで、特定のユーザーの記録アクティビティを除外できます。
 >
 >この機能を使用する場合は、サーバー負荷を考慮してパージの頻度を計画することをお勧めします。
