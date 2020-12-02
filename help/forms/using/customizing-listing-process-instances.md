@@ -17,7 +17,7 @@ ht-degree: 81%
 ---
 
 
-# プロセスインスタンスのリストのカスタマイズ {#customizing-the-listing-of-process-instances}
+# プロセスインスタンスのリストのカスタマイズ  {#customizing-the-listing-of-process-instances}
 
 プロセスインスタンスリストは、AEM Forms Workspace のトラッキングタブに表示されます。
 
@@ -70,7 +70,7 @@ ht-degree: 81%
 
 **例:**
 
-To display the `description` property of the process instance in the process instance card, perform the following steps.
+プロセスインスタンスカード内のプロセスインスタンスの`description`プロパティを表示するには、次の手順を実行します。
 
 1. [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従います。
 1. 以下の操作を実行してください。
@@ -85,7 +85,7 @@ To display the `description` property of the process instance in the process ins
 1. 以下の操作を実行してください。
 
    1. /apps/ws/js/registry.js を開いて編集します。
-   1. 検索して、 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`apps `text!/lc/`****/ws/js/runtime/templates/processinstance.htmlで置き換えます。
+   1. `text!/lc/libs/ws/js/runtime/templates/processinstance.html`を&#x200B;`text!/lc/`**apps**/ws/js/runtime/templates/processinstance.htmlに置き換えます。
 
 1. 上記の変更には、次のようにしてスタイルシート /apps/ws/css/newStyle.css にエントリを追加することによって、CSS ファイルを更新する必要があります。
 
