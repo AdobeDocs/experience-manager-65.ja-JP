@@ -30,7 +30,7 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
    `/apps/<your-project>/`
 
-1. Under `/apps/<your-project>/` create a new node:
+1. `/apps/<your-project>/`の下に新しいノードを作成します。
 
    * **名前**：`fonts`
    * **型**：`sling:Folder`
@@ -41,11 +41,11 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
    >[!NOTE]
    >
-   >Font files in the repository must have the suffix `*.ttf` or `*.TTF`.
+   >リポジトリ内のフォントファイルにはサフィックス`*.ttf`または`*.TTF`が必要です。
 
-1. [Day Commons GFX Font Helperの](/help/sites-deploying/configuring-osgi.md) OSGi設定 [を更新します](/help/sites-deploying/osgi-configuration-settings.md)。フォ追加ントフォルダーのパス例えば `/apps/<your-project>/fonts`.
+1. [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md)の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を更新します。フォ追加ントフォルダーのパス例えば`/apps/<your-project>/fonts`。
 
-1. CRXDE Lite に戻ります。You should now see a `.fontlist` node in your folder containing the name of the imported fonts.
+1. CRXDE Lite に戻ります。これで、読み込んだフォントの名前を含む`.fontlist`ノードがフォルダーに表示されます。
 
    これらのフォントは、今後 Java API で使用できます。
 
