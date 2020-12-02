@@ -36,7 +36,7 @@ ht-degree: 91%
 
 **Dynamic Media 画像プリセットを適用するには**
 
-1. Open the asset and in the left rail, tap the drop-down menu, then tap **[!UICONTROL Renditions.]**
+1. アセットを開き、左のナビゲーションバーのドロップダウンメニューをタップし、「**[!UICONTROL レンディション」をタップします。]**
 
    >[!NOTE]
    >
