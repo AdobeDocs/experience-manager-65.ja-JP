@@ -127,7 +127,7 @@ aem-screens-player-android-3.3.0.apk.zip
   </tr>
   <tr>
    <td><strong>AEM 6.4</strong></td> 
-   <td><p><strong>3.3.0</strong> - <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> <p>Apple Store で公開予定</p> </td> 
+   <td><p><strong>3.3.0</strong> -  <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> <p>Apple Store で公開予定</p> </td> 
    <td><p><strong>1.0.48 -</strong><br /> </p> <p><a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> </td> 
    <td><p><strong>1.0.42 - </strong></p> <p>Chrome ウェブストアで公開予定</p> </td> 
    <td><strong>3.3.0</strong> - <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></td> 
