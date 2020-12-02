@@ -33,7 +33,7 @@ ht-degree: 90%
 
    ` [https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui](https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui)`
 
-1. Create an overlay using the **Overlay Node** option; for example:
+1. **ノードをオーバーレイ**&#x200B;オプションを使用してオーバーレイを作成します。例：
 
    * **パス**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
    * **オーバーレイの場所**: `/apps/`
