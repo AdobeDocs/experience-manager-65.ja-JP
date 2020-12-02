@@ -22,20 +22,20 @@ ht-degree: 0%
 
 QueryBuilderのRESTインターフェイスを使用するか、QueryBuilder APIを使用してOSGiサービスを作成し、カスタムレポートを作成できます。
 
-## カスタムレポートを作成する一般的な手順 {#generic-steps-to-build-a-custom-report}
+## カスタムレポートを作成する一般的な手順{#generic-steps-to-build-a-custom-report}
 
 カスタムレポートを追加する前に、次のテンプレート手順を実行します。
 
-1. カスタムレポートで使用するデータは、プロセスレポートで使用できる必要があります。 データを確実に使用できるようにするには、cronジョブをスケジュールするか、プロセスレポートUIの **[同期](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** オプションを使用します。
-1. URLリクエスト(目的のクエリをカプセル化)は、適切なクエリ結果オブジェクトを返す必要があります。 クエリを作成するには、QueryBuilderのRESTインターフェイスを使用してQueryBuilder APIを使用して [OSGiサービスを作成します](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) 。 動的なクエリまたは静的な画像を作成できます。
+1. カスタムレポートで使用するデータは、プロセスレポートで使用できる必要があります。 データを確実に使用できるようにするには、cronジョブをスケジュールするか、プロセスレポートUIの&#x200B;**[同期](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**&#x200B;オプションを使用します。
+1. URLリクエスト(目的のクエリをカプセル化)は、適切なクエリ結果オブジェクトを返す必要があります。 クエリを作成するには、[QueryBuilder](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)のRESTインターフェイスを使用して、QueryBuilder APIを使用してOSGiサービスを作成します。 動的なクエリまたは静的な画像を作成できます。
 
 1. 結果を表示するカスタムユーザーインターフェイスを作成します。 スタンドアロンのユーザーインターフェイスを作成するか、既存のプロセスレポートUIに結果を統合することができます。
 
-## QueryBuilderのRESTインターフェイスの使用 {#using-the-rest-interface-of-the-querybuilder}
+## QueryBuilder {#using-the-rest-interface-of-the-querybuilder}のRESTインターフェイスの使用
 
-CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じてアセット共有クエリビルダーの機能を公開します。 次の手順を実行する前に、 [CRX QueryBuilder RESTインターフェイスを使用する方法を学習します](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)。
+CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じてアセット共有クエリビルダーの機能を公開します。 次の手順を実行する前に、[CRX QueryBuilder RESTインターフェイス](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)を使用する方法を学びます。
 
-1. URLの参照 `https://'[server]:[port]'/lc/bin/querybuilder.json`
+1. URLを参照`https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. プロセスレポートストレージのノード構造とノードプロパティに基づいてクエリを作成します。
 
    オプションのパラメーターを指定して、オフセット、制限、ヒットおよびプロパティを指定できます。 静的レポートの引数をハードコードして、動的レポートのUIからパラメーターを取得できます。
@@ -50,7 +50,7 @@ CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じ�
 
 ## クエリビルダーAPIを使用したサービスの作成  {#creating-a-service-using-query-builder-api-nbsp}
 
-クエリビルダーAPIを使用してサービスを作成する前提条件は、CQ OSGIバンドルの [作成とデプロイ](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) 、およびクエリビルダーAPI [の使用](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)です。
+クエリビルダーAPIを使用してサービスを作成する前提条件は、[CQ OSGIバンドル](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html)の作成およびデプロイ、および[クエリビルダーAPI](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)の使用です。
 
 1. 適切な注釈を持つOSGiサービスを作成します。 QueryBuilderにアクセスするには、次を使用します。
 
@@ -66,7 +66,7 @@ CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じ�
     predicateGroup.setAllRequired(true);
    ```
 
-1. 新しく追加作成されたpredicateGroupに述語を割り当てます。 役に立つ述語構成のいくつかは、 [JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)、JcrPropertyPredicateEvaluator [、JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)、RangePredicatePredicateEvaluator、RangeRangeRangeRevaluator、ReTypredater。
+1. 新しく追加作成されたpredicateGroupに述語を割り当てます。 いくつかの有効な述語構成は、[JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)、[JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)、[RangePropertyEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)、[DateRangePredicatePredicateEvatorです7/>、および[TypePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)です。](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)
 
    静的レポートでは述部をハードコードしますが、動的レポートでは、リクエストから述部を取得します。
 
@@ -137,13 +137,13 @@ CRX QueryBuilder RESTインターフェイスは、Java APIとREST APIを通じ�
                        out.write(row.toString().getBytes());
    ```
 
-1. を使用し `org.apache.felix maven-bundle-plugin` て、サーブレット用のOSGiバンドルを作成します。
+1. `org.apache.felix maven-bundle-plugin`を使用して、サーブレット用のOSGiバンドルを作成します。
 
 1. バンドルをCRXサーバーにデプロイします。
 
-### サービスの例 {#service-example}
+### サービスの例{#service-example}
 
-次のサービスの例では、 **RUNNING** and **COMPLETE** （実行中）状態のプロセスのインスタンスを、毎月、四半期、年の終わりにカウントします。
+次のサービスの例では、毎月、四半期、年の終わりに、**RUNNING**&#x200B;および&#x200B;**COMPLETE**&#x200B;状態のプロセスのインスタンスをカウントします。
 
 ```java
 package custom.reporting.service;
@@ -341,7 +341,7 @@ public class PeriodicProcessVolume {
 }
 ```
 
-サービスの上に作成するサンプル `pom.xml`ファイルは次のとおりです。
+サービスの上に構築するサンプル`pom.xml`ファイルは次のとおりです。
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -425,10 +425,10 @@ public class PeriodicProcessVolume {
 
 ## 個別のUIの作成  {#creating-a-separate-ui-nbsp}
 
-結果を表示するための個別のUIを作成するための前提条件は、 [Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html)、CRXノードの [作成](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) 、適切な [アクセス権限の提供です](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
+結果を表示するための別のUIを作成するための前提条件は、[Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html)、[CRXノードの作成](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)、適切な[アクセス権限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)です。
 
-1. ノードでCRXノードを作成し、適切なアクセス権限を `/apps` 付与します。 (PERM_PROCESS_USER_USER)
-1. ノードでレンダラーを定義し `/content` ます。
+1. `/apps`ノードでCRXノードを作成し、適切なアクセス権限を付与します。 (PERM_PROCESS_USER_USER)
+1. `/content`ノードでレンダラーを定義します。
 1. 手順1で作成したノード追加に対するJSPまたはHTMLファイル。 CSSファイルを追加することもできます。
 
    ![JSPファイルとCSSファイルを含むサンプルノード](assets/nodewith_jsp_css_new.png)
@@ -633,18 +633,18 @@ response.setCharacterEncoding("utf-8");
 
 ## 既存のプロセスレポートUIへのレポートUIの統合  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-結果を表示するための個別のUIを作成するための前提条件は、 [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、CRXノードの [作成](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) 、適切な [アクセス権限の提供です](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
+結果を表示するための別のUIを作成するための前提条件は、[Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、[CRXノードの作成](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)、適切な[アクセス権限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)です。
 
 1. 個別のUIを作成します。
-1. 各プラッガブル・レポート用に子 `nt:unstructured` ノードをノードに作成 `/content/process-reporting-runtime/custom-reports` します。
+1. すべてのプラグ可能なレポートに対して、`/content/process-reporting-runtime/custom-reports`ノードに子`nt:unstructured`ノードを作成します。
 
-   * **id**— レポートの一意のID番号を指定します。
-   * **name**— レポート名を指定します。 名前がUIに表示されます。
-   * **link**— 個別のUIのレンダラーへの相対リンクを指定します。 手順1のリンクが作成されます。
-   * **説明**— レポートの1行の説明を指定します。 説明フィールドは空にしておくことができます。
-   * **icon**— レポートを画像で表す画像を指定します。 アイコンフィールドは空のままにしておくことができます。
+   * **id** — レポートの一意のID番号を指定します。
+   * **name** — レポート名を指定します。名前がUIに表示されます。
+   * **link** — 個別のUIのレンダラーへの相対リンクを指定します。手順1のリンクが作成されます。
+   * **説明** — レポートの1行の説明を指定します。説明フィールドは空にしておくことができます。
+   * **icon** — レポートを画像で表す画像を指定します。アイコンフィールドは空のままにしておくことができます。
 
-   ![ノードのプロパティ ](assets/node_properties_new.png)
+   ![ノードのプロパティ  ](assets/node_properties_new.png)
 
    ノードのプロパティ
 
@@ -658,8 +658,8 @@ response.setCharacterEncoding("utf-8");
 
    カスタムレポートの結果画面
 
-## Sample Package {#sample-package}
+## サンプルパッケージ{#sample-package}
 
-記事で説明されているカスタムレポートとUIをProcess Management UIに統合するには、 `sample-report-pkg-1.zip` パッケージを読み込みます。
+`sample-report-pkg-1.zip`パッケージを読み込んで、この記事で説明されているカスタムレポートとUIをProcess Management UIに統合します。
 
 [ファイルを入手](assets/sample-report-pkg-1.zip)
