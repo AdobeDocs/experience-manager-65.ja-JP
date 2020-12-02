@@ -26,18 +26,18 @@ ht-degree: 67%
 
 ここからは、アダプティブフォームの非同期送信について詳しく説明します。
 
-## 非同期送信の設定 {#configure}
+## 非同期送信の設定  {#configure}
 
 アダプティブフォームの非同期送信を設定するには、以下の手順を実行します。
 
-1. In adaptive form authoring mode, select the Form Container object and tap ![cmppr1](assets/cmppr1.png) to open its properties.
-1. In the **[!UICONTROL Submission]** properties section, enable **[!UICONTROL Use asynchronous submission]**.
+1. アダプティブフォーム作成モードで、フォームコンテナオブジェクトを選択し、![cmppr1](assets/cmppr1.png)をタップしてプロパティを開きます。
+1. **[!UICONTROL 送信]**&#x200B;プロパティセクションで、**[!UICONTROL 非同期送信]**&#x200B;を使用を有効にします。
 1. 「**[!UICONTROL 送信時]**」セクションで、フォームが正常に送信された場合に実行するオプションを以下のどちらかから選択します。
 
-   * **[!UICONTROL URL にリダイレクト]**：フォームの送信時に、指定の URL またはページにリダイレクトされます。You can specify a URL or browse to choose the path to a page in the **[!UICONTROL Redirect URL/Path]** field.
+   * **[!UICONTROL URL にリダイレクト]**：フォームの送信時に、指定の URL またはページにリダイレクトされます。URLを指定するか、参照して&#x200B;**[!UICONTROL リダイレクトURL/パス]**&#x200B;フィールドでページへのパスを選択できます。
    * **[!UICONTROL メッセージを表示]**：フォームの送信時にメッセージが表示されます。「メッセージを表示」オプションの下のテキストフィールドにメッセージを書き込むことができます。 このテキストフィールドには、リッチテキスト形式でメッセージを入力することができます。
 
-1. Tap ![check-button1](assets/check-button1.png) to save the properties.
+1. ![check-button1](assets/check-button1.png)をタップして、プロパティを保存します。
 
 ## 非同期送信の仕組み {#how-asynchronous-submission-works}
 
@@ -69,7 +69,7 @@ AEM Forms には、フォーム送信が成功した場合と失敗した場合�
 
 成功ハンドラーは、サーバーからの応答を読み取り、その内容に従って、指定されたページの URL へのリダイレクトやメッセージの表示を実行します。
 
-### 送信エラーイベントに対するサーバー応答 {#server-response-for-submission-error-event}
+### 送信エラーイベントに対するサーバー応答  {#server-response-for-submission-error-event}
 
 送信エラーイベントに対するサーバー応答は、以下のような構造になっています。
 
@@ -93,13 +93,13 @@ AEM Forms には、フォーム送信が成功した場合と失敗した場合�
 
 エラーハンドラーは、サーバーからの応答を読み取り、その内容に従って、エラーメッセージをフォーム上に表示します。
 
-## ルールを使用してデフォルトのハンドラーを上書きする {#custom}
+## ルールを使用してデフォルトのハンドラーを上書きする  {#custom}
 
-フォームの開発者と作成者は、コードエディターを使用してフォームレベルでルールを記述することにより、デフォルトのハンドラーを上書きすることができます。The server response for success and error events is exposed at form level, which developers can access using `$event.data` in rules.
+フォームの開発者と作成者は、コードエディターを使用してフォームレベルでルールを記述することにより、デフォルトのハンドラーを上書きすることができます。成功およびエラーイベントに対するサーバーの応答はフォームレベルで公開され、開発者はルールで`$event.data`を使用してアクセスできます。
 
 成功イベントとエラーイベントを処理するためのルールをコードエディターで記述するには、以下の手順を実行します。
 
-1. Open the adaptive form in authoring mode, select any form object, and tap ![edit-rules1](assets/edit-rules1.png) to open the rule editor.
+1. アダプティブフォームをオーサリングモードで開き、任意のフォームオブジェクトを選択し、![edit-rules1](assets/edit-rules1.png)をタップして、ルールエディターを開きます。
 1. フォームオブジェクトツリーで「**[!UICONTROL フォーム]**」選択し、「**[!UICONTROL 作成]**」をタップします。
 1. モード選択ドロップダウンで「**[!UICONTROL コードエディター]**」を選択します。
 1. コードエディターで「**[!UICONTROL コードを編集]**」をタップします。確認ダイアログで「**[!UICONTROL 編集]**」をタップします。
