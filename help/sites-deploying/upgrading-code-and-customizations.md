@@ -31,20 +31,20 @@ ht-degree: 75%
 
 ## 概要 {#overview}
 
-1. **パターンディテクター** — アップグレード計画の説明に従ってパターンディテクターを実行し、 [](/help/sites-deploying/pattern-detector.md) このページで詳しく説明します。パターンディテクターレポートは、AEMのターゲット版では使用できないAPI/バンドルに加え、対処する必要がある領域の詳細を含みます。 パターン検出レポートは、コードに互換性のない問題を示します。デプロイメントが既に6.5と互換性がない場合は、6.5の機能を利用する新しい開発を選択できますが、互換性の維持のためだけに開発を行う必要はありません。 互換性のない問題が報告された場合は、a)互換モードで実行し、新しい6.5機能や互換性の開発を延期する、b)アップグレード後に開発を行う、ステップ2に進む、のいずれかを選択できます。 Please see please see [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) for more details.
+1. **パターンディテクター**  — アップグレード計画の説明に従ってパターンディテクターを実行し、 [この](/help/sites-deploying/pattern-detector.md) ページで詳しく説明しているパターンディテクターレポートを取得して、AEMのターゲット版で使用できないAPI/バンドルに加え、対処する必要のある領域の詳細を含めます。パターン検出レポートは、コードに互換性のない問題を示します。デプロイメントが既に6.5と互換性がない場合は、6.5の機能を利用する新しい開発を選択できますが、互換性の維持のためだけに開発を行う必要はありません。 互換性のない問題が報告された場合は、a)互換モードで実行し、新しい6.5機能や互換性の開発を延期する、b)アップグレード後に開発を行う、ステップ2に進む、のいずれかを選択できます。 詳しくは、[AEM 6.5](/help/sites-deploying/backward-compatibility.md)の下位互換性を参照してください。
 
 1. **6.5のコードベースの開発**-ターゲットバージョンのコードベース用の専用のブランチまたはリポジトリを作成します。 アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
 1. ** 6.5 Uber jarでコンパイル** — コードベースのPOMを6.5 uber jarを指すように更新し、これに対してコードをコンパイルします。
-1. **AEMカスタマイズの更新*** - *AEMのカスタマイズや拡張が6.5で動作するように更新または検証し、6.5コードベースに追加する必要があります。 UI 検索フォーム、カスタマイズされているアセット、/mnt/overlay を使用するすべてのものを含めます。
+1. **AEMカスタマイズの更新*** - *AEMのカスタマイズや拡張が6.5で動作するように更新または検証し、6.5コードベースに追加する必要があります。UI 検索フォーム、カスタマイズされているアセット、/mnt/overlay を使用するすべてのものを含めます。
 
-1. **6.5環境へのデプロイ** -AEM 6.5（作成者+発行）のクリーンインスタンスは、開発/QA環境で立ち上がる必要があります。 更新されたコードベースおよび（現在の実稼動環境の）コンテンツの代表的なサンプルをデプロイする必要があります。
-1. **QA検証とバグ修正** - QAでは、6.5の作成者インスタンスと発行インスタンスの両方でアプリケーションを検証する必要があります。見つかったバグは修正し、6.5コードベースにコミットする必要があります。 すべてのバグが修正されるまで、必要に応じて開発サイクルを繰り返します。
+1. **6.5環境へのデプロイ** -AEM 6.5（作成者+発行）のクリーンインスタンスは、開発/QA環境で立ち上がる必要があります。更新されたコードベースおよび（現在の実稼動環境の）コンテンツの代表的なサンプルをデプロイする必要があります。
+1. **QA検証とバグ修正** - QAでは、6.5の作成者インスタンスと発行インスタンスの両方でアプリケーションを検証する必要があります。見つかったバグは修正し、6.5コードベースにコミットする必要があります。すべてのバグが修正されるまで、必要に応じて開発サイクルを繰り返します。
 
 アップグレードに進む前に、アプリケーションコードベースを AEM のターゲットバージョンに対して十分テストし、安定したものにしておく必要があります。テストで得られた見解に基づいて、様々な方法でカスタムコードを最適化できます。リポジトリの走査を回避するためのコードのリファクタリング、検索を最適化するカスタムインデックス作成、JCR での順序なしノードの使用などが含まれます。
 
 コードベースのアップグレードや、新しい AEM バージョンに合わせたカスタマイズをおこなうオプションに加えて、6.5 では[このページ](/help/sites-deploying/backward-compatibility.md)で説明する後方互換性機能を使用して、より効率的にカスタマイズの管理をおこなえます。
 
-上記の説明および下の図に示したように、最初の手順で[パターン検出](/help/sites-deploying/pattern-detector.md)を実行することで、アップグレードの全体的な複雑性を評価し、互換モードで実行するか、すべての新しい AEM 6.5 の機能を使用するようにカスタマイズを更新するかを決定できます。Please see the [Backward Compatibility in AEM 6.5](/help/sites-deploying/backward-compatibility.md) page for more details.
+上記の説明および下の図に示したように、最初の手順で[パターン検出](/help/sites-deploying/pattern-detector.md)を実行することで、アップグレードの全体的な複雑性を評価し、互換モードで実行するか、すべての新しい AEM 6.5 の機能を使用するようにカスタマイズを更新するかを決定できます。詳しくは、AEM 6.5の[下位互換性](/help/sites-deploying/backward-compatibility.md)のページを参照してください。
 [ ![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
 
 ## コードベースのアップグレード {#upgrade-code-base}
@@ -67,11 +67,11 @@ AEM Uber jar によって、すべての AEM API が単一の依存関係とし�
 </dependency>
 ```
 
-### 管理リソースリゾルバの使用の段階的廃止 {#phase-out-use-of-administrative-resource-resolver}
+### 管理リソースリゾルバの使用の段階的廃止  {#phase-out-use-of-administrative-resource-resolver}
 
-The use of an administrative session through `SlingRepository.loginAdministrative()` and `ResourceResolverFactory.getAdministrativeResourceResolver()` was quite prevalent in code bases prior to AEM 6.0. These methods have been deprecated for security reasons as they give too broad of a level of access. [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザー、および[管理セッションを段階的に廃止する方法について詳しくは、こちらを参照してください](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)。
+AEM 6.0より前のコードベースでは、`SlingRepository.loginAdministrative()`と`ResourceResolverFactory.getAdministrativeResourceResolver()`を通じた管理セッションの使用が非常に多く見られていました。これらのメソッドは、アクセスレベルが広すぎるので、セキュリティ上の理由から廃止されました。 [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザー、および[管理セッションを段階的に廃止する方法について詳しくは、こちらを参照してください](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)。
 
-### クエリと Oak インデックス {#queries-and-oak-indexes}
+### クエリと Oak インデックス  {#queries-and-oak-indexes}
 
 コードベースでクエリを使用する場合は、コードベースのアップグレードの一環として詳細にテストする必要があります。Jackrabbit 2（6.0 より古い AEM のバージョン）からアップグレードするユーザーの場合、Oak では、コンテンツのインデックスが自動的に作成されず、カスタムインデックスを作成する必要があるので、このことは特に重要になります。AEM 6.x バージョンからアップグレードすると、デフォルトの Oak インデックス定義が変更され、既存のクエリに影響を与える可能性があります。
 
@@ -83,15 +83,15 @@ The use of an administrative session through `SlingRepository.loginAdministrativ
 
 * [Oak ユーティリティ](https://oakutils.appspot.com/)。これは、アドビによって管理されないオープンソースツールです。
 
-### クラシック UI オーサリング {#classic-ui-authoring}
+### クラシック UI オーサリング  {#classic-ui-authoring}
 
-AEM 6.5 でも引き続きクラシック UI オーサリングを利用できますが、この機能は廃止される予定です。詳しくは、[こちら](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release)を参照してください。アプリケーションが現在クラシック UI オーサー環境で実行されている場合は、AEM 6.5 にアップグレードして、クラシック UI を引き続き使用することをお勧めします。タッチ UI への移行は、複数の開発サイクルをおこなう個別プロジェクトとして計画できます。AEM 6.5 でクラシック UI を使用するには、複数の OSGi 設定をコードベースにコミットする必要があります。More details on how to configure this can be found [here](/help/sites-administering/enable-classic-ui.md).
+AEM 6.5 でも引き続きクラシック UI オーサリングを利用できますが、この機能は廃止される予定です。詳しくは、[こちら](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release)を参照してください。アプリケーションが現在クラシック UI オーサー環境で実行されている場合は、AEM 6.5 にアップグレードして、クラシック UI を引き続き使用することをお勧めします。タッチ UI への移行は、複数の開発サイクルをおこなう個別プロジェクトとして計画できます。AEM 6.5 でクラシック UI を使用するには、複数の OSGi 設定をコードベースにコミットする必要があります。この設定方法の詳細は、[](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
 ## 6.5 のリポジトリ構造への準拠 {#align-repository-structure}
 
 アップグレードを容易にし、アップグレード中に設定が上書きされないようにするため、6.4でリポジトリが再構成され、コンテンツが設定と切り離されます。
 
-Therefore, a number of settings must be moved to no longer reside under `/etc` as had been the case in the past. To review the full set of repository restructuring concerns that must be reviewed and accomodated in the updated to AEM 6.4, see [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring.md).
+従って、以前と同じように、`/etc`の下に存在しなくなるように、多数の設定を移動する必要があります。 AEM 6.4へのアップデートで確認および対応が必要なリポジトリ再構築の全懸念事項を確認するには、「[AEM 6.4](/help/sites-deploying/repository-restructuring.md)でのリポジトリ再構築」を参照してください。
 
 ## AEM のカスタマイズ  {#aem-customizations}
 
@@ -101,7 +101,7 @@ Therefore, a number of settings must be moved to no longer reside under `/etc` a
 
 AEM の標準の機能を拡張する場合は、/libs の下のノードやファイルを /apps の下の追加ノードでオーバーレイすることが一般的です。これらのオーバーレイは、バージョン管理で追跡し、AEM のターゲットバージョンに対してテストする必要があります。ファイル（JS、JSP、HTL）をオーバーレイする場合は、AEM のターゲットバージョンでより簡単に回帰テストを実行できるように、拡張した機能に関するコメントを残しておくことをお勧めします。一般的なオーバーレイについて詳しくは、[こちら](/help/sites-developing/overlays.md)を参照してください。特定の AEM のオーバーレイの説明については、以下を参照してください。
 
-### カスタム検索フォームのアップグレード {#upgrading-custom-search-forms}
+### カスタム検索フォームのアップグレード  {#upgrading-custom-search-forms}
 
 カスタム検索フォームを正しく機能させるには、アップグレード後に手動での変更が必要です。詳しくは、[カスタム検索フォームのアップグレード](/help/sites-deploying/upgrading-custom-search-forms.md)を参照してください。
 
@@ -115,7 +115,7 @@ AEM の標準の機能を拡張する場合は、/libs の下のノードやフ�
 
 次の操作を行って、アセットUIのカスタマイズを準備できます。
 
-1. On the instance that needs to be upgraded, open CRXDE Lite by going to *https://server:port/crx/de/index.jsp*
+1. アップグレードが必要なインスタンスで、*https://server:port/crx/de/index.jsp*&#x200B;に移動してCRXDE Liteを開きます。
 
 1. 次のノードに移動します。
 
@@ -123,17 +123,17 @@ AEM の標準の機能を拡張する場合は、/libs の下のノードやフ�
 
 1. content ノードの名前を **content_backup** に変更します。ウィンドウ左側のエクスプローラーパネルを右クリックし、「**名前を変更**」を選択することによって、変更できます。
 
-1. Once the node has been renamed, create a new node named content under `/apps/dam` named **content** and set its node type to **sling:Folder**.
+1. ノードの名前を変更したら、`/apps/dam`content **という名前の**&#x200B;にcontentという名前の新しいノードを作成し、そのノードの種類を&#x200B;**sling:Folder**&#x200B;に設定します。
 
 1. **content_backup** のすべての子ノードを、新しく作成された content ノードに移動します。そのためには、エクスプローラーパネルで個々の子ノードを右クリックし、「**移動**」を選択します。
 
 1. **content_backup** ノードを削除します。
 
-1. The updated nodes beneath `/apps/dam` with the correct node type of `sling:Folder` should ideally be saved into version control and deployed with the code base or at a minimum backed up as content package.
+1. `/apps/dam`の下の正しいノードタイプ`sling:Folder`の更新されたノードは、バージョン管理に保存し、コードベースまたは少なくともコンテンツパッケージとしてバックアップして展開するのが理想的です。
 
 ### 既存アセットのアセット ID の生成 {#generating-asset-ids-for-existing-assets}
 
-既存のアセットのアセット ID を生成するには、AEM 6.5 を実行するように AEM インスタンスをアップグレードする際にアセットをアップグレードします。これは、[アセットインサイト機能](/help/assets/asset-insights.md)を有効にするために必要な手順です。For more details, see [Add embed code](/help/assets/use-page-tracker.md#add-embed-code).
+既存のアセットのアセット ID を生成するには、AEM 6.5 を実行するように AEM インスタンスをアップグレードする際にアセットをアップグレードします。これは、[アセットインサイト機能](/help/assets/asset-insights.md)を有効にするために必要な手順です。詳しくは、[埋め込みコード追加](/help/assets/use-page-tracker.md#add-embed-code)を参照してください。
 
 アセットをアップグレードするには、JMX コンソールで Associate Asset IDs パッケージを設定します。リポジトリ内のアセットの数によっては、`migrateAllAssets` に長い時間がかかることがあります。TarMK に 125,000 のアセットがある場合は、内部テストに約 1 時間かかります。
 
@@ -141,19 +141,19 @@ AEM の標準の機能を拡張する場合は、/libs の下のノードやフ�
 
 アセット全体のサブセットに対してアセット ID が必要な場合は、`migrateAssetsAtPath` API を使用します。
 
-For all other purposes, use the `migrateAllAssets()` API.
+その他の目的には、`migrateAllAssets()` APIを使用します。
 
 ### InDesign スクリプトのカスタマイズ {#indesign-script-customizations}
 
-Adobe recommends putting custom scripts at `/apps/settings/dam/indesign/scripts` location. InDesign スクリプトのカスタマイズについて詳しくは、[こちら](/help/assets/indesign.md#configuring-the-aem-assets-workflow)を参照してください。
+Adobeでは、カスタムスクリプトを`/apps/settings/dam/indesign/scripts`の場所に置くことを推奨しています。 InDesign スクリプトのカスタマイズについて詳しくは、[こちら](/help/assets/indesign.md#configuring-the-aem-assets-workflow)を参照してください。
 
-### ContextHub 設定の復元 {#recovering-contexthub-configurations}
+### ContextHub 設定の復元  {#recovering-contexthub-configurations}
 
-ContextHub設定はアップグレードの影響を受けます。 Instructions on how to recover existing ContextHub configurations can be found [here](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading).
+ContextHub設定はアップグレードの影響を受けます。 既存のContextHub設定を回復する方法については、[ここ](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading)を参照してください。
 
 ### ワークフローのカスタマイズ {#workflow-customizations}
 
-必要な機能を追加したり、必要のない機能を削除したりするには、標準のワークフローを更新または変更することが一般的な方法です。A common workflow that is customized is the [!UICONTROL DAM Update Asset] workflow. カスタム実装に必要なすべてのワークフローは、アップグレード中に上書きされる可能性があるので、バックアップしてバージョン管理に保存する必要があります。
+必要な機能を追加したり、必要のない機能を削除したりするには、標準のワークフローを更新または変更することが一般的な方法です。カスタマイズされる一般的なワークフローは、[!UICONTROL DAM Update Asset]ワークフローです。 カスタム実装に必要なすべてのワークフローは、アップグレード中に上書きされる可能性があるので、バックアップしてバージョン管理に保存する必要があります。
 
 ### 編集可能なテンプレート {#editable-templates}
 
@@ -163,19 +163,19 @@ ContextHub設定はアップグレードの影響を受けます。 Instructions
 
 AEM 6.2 と 6.3 では、編集可能なテンプレートの構造が異なります。6.2 以前からアップグレードする場合で、編集可能なテンプレートを使用してサイトコンテンツを作成している場合は、[レスポンシブノードのクリーンアップツール](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)を使用する必要があります。このツールは、アップグレード&#x200B;**後**&#x200B;に実行して、コンテンツをクリーンアップすることを目的としています。このツールは、オーサー層とパブリッシュ層の両方に対して実行する必要があります。
 
-### CUG 実装の変更 {#cug-implementation-changes}
+### CUG 実装の変更  {#cug-implementation-changes}
 
-AEM の以前のバージョンのパフォーマンスおよびスケーラビリティの制限に対処するために、閉じられたユーザーグループの実装が大幅に変更されました。CUG の以前のバージョンは 6.3 で廃止され、新しい実装はタッチ UI でのみサポートされます。If you are upgrading from 6.2 or ealier then Instructions to migrate to the new CUG implementation can be found [here](/help/sites-administering/closed-user-groups.md#upgradetoaem63).
+AEM の以前のバージョンのパフォーマンスおよびスケーラビリティの制限に対処するために、閉じられたユーザーグループの実装が大幅に変更されました。CUG の以前のバージョンは 6.3 で廃止され、新しい実装はタッチ UI でのみサポートされます。6.2以降からアップグレードする場合は、新しいCUG実装に移行する手順を[こちら](/help/sites-administering/closed-user-groups.md#upgradetoaem63)を参照してください。
 
 ## 手順のテスト {#testing-procedure}
 
 アップグレードをテストするための包括的なテスト計画を準備する必要があります。アップグレードされたコードベースおよびアプリケーションのテストは、最初に下位レベルの環境で実行する必要があります。コードベースが安定するまで、検出されたすべてのバグを繰り返し修正します。より上位レベルの環境は、その後にアップグレードする必要があります。
 
-### アップグレード手順のテスト {#testing-the-upgrade-procedure}
+### アップグレード手順のテスト  {#testing-the-upgrade-procedure}
 
 ここで説明されているアップグレード手順は、カスタマイズしたランブックに記載されているとおりに開発環境および QA 環境でテストする必要があります（[アップグレードの計画](/help/sites-deploying/upgrade-planning.md)を参照してください）。アップグレード手順は、すべてのステップがアップグレードランブックに記載され、アップグレードプロセスが問題なく実行されるようになるまで繰り返す必要があります。
 
-### テスト領域の実装  {#implementation-test-areas-}
+### テスト領域の実装   {#implementation-test-areas-}
 
 環境がアップグレードされ、アップグレードされたコードベースがデプロイされた後のテスト計画でカバーする必要がある AEM 実装の重要な領域を次に示します。
 
@@ -224,6 +224,6 @@ AEM の以前のバージョンのパフォーマンスおよびスケーラビ�
  </tbody>
 </table>
 
-### テスト計画の作成および結果 {#document-test-plan-and-results}
+### テスト計画の作成および結果  {#document-test-plan-and-results}
 
 前述の実装テスト領域をカバーするテスト計画を作成する必要があります。多くの場合、テスト計画をオーサーのタスクリストとパブリッシュのタスクリストに分けることをお勧めします。このテスト計画は、実稼動環境をアップグレードする前に、開発環境、QA 環境およびステージング環境で実行する必要があります。ステージング環境および実稼動環境をアップグレードするときに比較できるように、下位レベルの環境でテスト結果およびパフォーマンス指標を取得する必要があります。
