@@ -27,11 +27,11 @@ ht-degree: 94%
 
    **フル HTML：**&#x200B;すべての HTML タグを含む形（完全な HTML ページ）でフォームをレンダリングします。これがデフォルト値です。
 
-   **フォーム本文：** (完全なHTMLページではな `<BODY>` く)タグ内のフォームをレンダリングする場合。
+   **Form body:(完全** なHTMLページではなく) `<BODY>` タグ内のフォームをレンダリングします。
 
 1. 「保存」をクリックします。
 
-## PDF コンテンツのレンダリング位置の指定 {#specify-the-location-where-pdf-content-is-rendered}
+## PDF コンテンツのレンダリング位置の指定  {#specify-the-location-where-pdf-content-is-rendered}
 
 1. 「Form 出力」の「レンダリング位置」リストで次のいずれかのオプションを選択します。
 
@@ -43,7 +43,7 @@ ht-degree: 94%
 
 1. 「保存」をクリックします。
 
-## フォーム送信前のカスタムスクリプトの呼び出しの設定 {#configuring-invocation-of-custom-scripts-before-form-submit}
+## フォーム送信前のカスタムスクリプトの呼び出しの設定  {#configuring-invocation-of-custom-scripts-before-form-submit}
 
 この機能を有効にするには、次の手順を実行します。
 
