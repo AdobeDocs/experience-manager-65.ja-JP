@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Repository Service APIクイック開始 {#repository-service-api-quick-starts}
+# Repository Service APIクイック開始{#repository-service-api-quick-starts}
 
 AEM Formsリポジトリサービスでは、次のクイック開始を使用できます。
 
@@ -46,9 +46,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 **Applications/FormsApplication**
 
-ほとんどのAEM Formsリポジトリサービスのクイック開始は、次の図に示すように、という名前のアプリケーション `Applications/FormsApplication,` を操作します。
+ほとんどのAEM Formsリポジトリサービスのクイック開始は、次の図に示すように、`Applications/FormsApplication,`という名前のアプリケーションとやり取りします。
 
-FormsFolderフォルダーは、AEM Formsリポジトリ内の場所です。 プログラムでこのフォルダーをに追加するなどの方法があり `Applications/FormsApplication`ます。 ( [クイック開始（SOAPモード）を参照)。Java APIを使用したフォルダーの作成を参照](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api))。
+FormsFolderフォルダーは、AEM Formsリポジトリ内の場所です。 プログラムでこのフォルダーを`Applications/FormsApplication`に追加するなどの方法があります。 ([クイック開始（SOAPモード）を参照):Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)を使用したフォルダーの作成を参照)。
 
 AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
 
@@ -56,15 +56,15 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
 
 >[!NOTE]
 >
->Webブラウザーを使用して、AEM Formsリポジトリを参照できます。 リポジトリを参照するには、Webブラウザーに次のURLを入力し `https://[server name]:[server port]/repository`ます。 Webブラウザーを使用して、開始の結果を簡単に確認できます。 例えば、コンテンツをAEM Formsリポジトリに追加すると、Webブラウザーでコンテンツを表示できます。
+>Webブラウザーを使用して、AEM Formsリポジトリを参照できます。 リポジトリを参照するには、Webブラウザー`https://[server name]:[server port]/repository`に次のURLを入力します。 Webブラウザーを使用して、開始の結果を簡単に確認できます。 例えば、コンテンツをAEM Formsリポジトリに追加すると、Webブラウザーでコンテンツを表示できます。
 
 >[!NOTE]
 >
->デフォルトでは、Applications/FormsApplicationは存在しません。 クイック開始に従うには、Workbenchを使用してこのアプリを作成します。 Workbenchを使用したアプリケーションの作成について詳しくは、「プロセスデザインの [概要](https://help.adobe.com/en_US/livecycle/11.0/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7fc4.html)」を参照してください。
+>デフォルトでは、Applications/FormsApplicationは存在しません。 クイック開始に従うには、Workbenchを使用してこのアプリを作成します。 Workbenchを使用したアプリケーションの作成について詳しくは、[プロセスデザインの概要](https://help.adobe.com/en_US/livecycle/11.0/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7fc4.html)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したフォルダーの作成 {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-creating-a-folder-using-the-java-api}を使用したフォルダーの作成
 
-次のJavaコードの例を使用すると、次の場所に *FormsFolder* という名前のフォルダーが作成され `/Applications/FormsApplication/1.0/`ます。 (フォルダの [作成を参照](/help/forms/developing/aem-forms-repository.md#creating-folders))。
+次のJavaコードの例では、*FormsFolder*&#x200B;という名前のフォルダーを次の場所`/Applications/FormsApplication/1.0/`に作成します。 （[フォルダーの作成](/help/forms/developing/aem-forms-repository.md#creating-folders)を参照）。
 
 ```java
  /*
@@ -168,9 +168,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  }
 ```
 
-## Quick Start (SOAP mode): Writing a resource using the Java API {#quick-start-soap-mode-writing-a-resource-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-writing-a-resource-using-the-java-api}を使用したリソースの書き込み
 
-次のJavaコードの例は、 *loan.xdp* という名前のリソースをリポジトリに書き込みます。 リソースが `/Applications/FormsApplication/1.0/FormsFolder` 場所に追加されます。 (リソースの [書き込みを参照](/help/forms/developing/aem-forms-repository.md#writing-resources))。
+次のJavaコードの例は、*loan.xdp*&#x200B;という名前のリソースをリポジトリに書き込みます。 リソースが`/Applications/FormsApplication/1.0/FormsFolder`の場所に追加されます。 （[リソースの書き込み](/help/forms/developing/aem-forms-repository.md#writing-resources)を参照）。
 
 ```java
  /*
@@ -296,9 +296,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したリソースの一覧表示 {#quick-start-soap-mode-listing-resources-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したリソースの一覧表示{#quick-start-soap-mode-listing-resources-using-the-java-api}
 
-次のJavaコードの例は、にあるリストリソースを示し `Applications/FormsApplication/1.0/FormsFolder`ます。 (「リソースの [一覧表示](/help/forms/developing/aem-forms-repository.md#listing-resources)」を参照)。
+次のJavaコードの例は、`Applications/FormsApplication/1.0/FormsFolder`にあるリストリソースを示しています。 （[リソースの一覧表示](/help/forms/developing/aem-forms-repository.md#listing-resources)を参照）。
 
 ```java
  /*
@@ -395,9 +395,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  }
 ```
 
-## Quick Start (SOAP mode): Reading a resource using the Java API {#quick-start-soap-mode-reading-a-resource-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-reading-a-resource-using-the-java-api}を使用したリソースの読み取り
 
-次のJavaコードの例は、リポジトリから *Loan.xdp* という名前のリソースを読み取ります。 XDPファイルはにあり `/Applications/FormsApplication/1.0/FormsFolder/`ます。 ( [Reading Resources](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照)。
+次のJavaコードの例は、*Loan.xdp*&#x200B;という名前のリソースをリポジトリから読み取ります。 XDPファイルは`/Applications/FormsApplication/1.0/FormsFolder/`にあります。 （「[リソースを読み取り中](/help/forms/developing/aem-forms-repository.md#reading-resources)」を参照）。
 
 ```java
  /*
@@ -496,9 +496,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  
 ```
 
-## Quick Start (SOAP mode): Updating a resource using the Java API {#quick-start-soap-mode-updating-a-resource-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-updating-a-resource-using-the-java-api}を使用したリソースの更新
 
-以下のJavaコードの例では、説明を変更す `/Applications/FormsApplication/1.0/FormsFolder` ることで更新しています。 (「リソースの [更新](/help/forms/developing/aem-forms-repository.md#updating-resources)」を参照)。
+以下のJavaコードの例では、`/Applications/FormsApplication/1.0/FormsFolder`の説明を変更することで更新します。 （[リソースの更新](/help/forms/developing/aem-forms-repository.md#updating-resources)を参照）。
 
 ```java
  /*
@@ -608,9 +608,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したリソースの検索 {#quick-start-soap-mode-searching-for-resources-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-searching-for-resources-using-the-java-api}を使用したリソースの検索
 
-次のJavaコードの例は、でLoan.xdpを検索し `Applications/FormsApplication/1.0/FormsFolder`ます。 (「リソースの [検索](/help/forms/developing/aem-forms-repository.md#searching-for-resources)」を参照)。
+以下のJavaコードの例では、`Applications/FormsApplication/1.0/FormsFolder`内のLoan.xdpを検索します。 （「[リソースの検索](/help/forms/developing/aem-forms-repository.md#searching-for-resources)」を参照）。
 
 ```java
  /*
@@ -732,9 +732,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したリソース間の関係の作成 {#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api}を使用したリソース間の関係の作成
 
-以下のJavaコードの例は、AEM Formsリポジトリ内の2つのリソース間に関係を作成します。 (「リソースの関係の [作成](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships)」を参照)。
+以下のJavaコードの例は、AEM Formsリポジトリ内の2つのリソース間に関係を作成します。 （「[リソースの関係の作成](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships)」を参照）。
 
 ```java
  /*
@@ -873,9 +873,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  }
 ```
 
-## Quick Start (SOAP mode): Locking a resource using the Java API {#quick-start-soap-mode-locking-a-resource-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-locking-a-resource-using-the-java-api}を使用したリソースのロック
 
-次のJavaコードの例は、/Applications/FormsApplication/1.0/FormsFolder/Loan.xdpをロックします。 (Locking [Resources](/help/forms/developing/aem-forms-repository.md#locking-resources)を参照)。
+次のJavaコードの例は、/Applications/FormsApplication/1.0/FormsFolder/Loan.xdpをロックします。 （[リソースのロック](/help/forms/developing/aem-forms-repository.md#locking-resources)を参照）。
 
 ```java
  /*
@@ -984,7 +984,7 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したアクセス制御リストの管理 {#quick-start-soap-mode-managing-access-control-lists-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-managing-access-control-lists-using-the-java-api}を使用したアクセス制御リストの管理
 
 次のJavaコードの例は、リポジトリでアクセス制御リスト(ACL)を読み取って作成します。
 
@@ -1099,9 +1099,9 @@ AEM Formsリポジトリ内のリソースへのパスは次のとおりです�
  }
 ```
 
-## Quick Start (SOAP mode): Deleting a resource using the Java API {#quick-start-soap-mode-deleting-a-resource-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-deleting-a-resource-using-the-java-api}を使用したリソースの削除
 
-次のJavaコードの例は、からLoan.xdpを削除し `Applications/FormsApplication/1.0/FormsFolder`ます。 このXDPファイルがこのフォルダーにない場合は、例外が発生します。 (「リソースの [削除](/help/forms/developing/aem-forms-repository.md#deleting-resources)」を参照)。
+次のJavaコードの例は、`Applications/FormsApplication/1.0/FormsFolder`からLoan.xdpを削除します。 このXDPファイルがこのフォルダーにない場合は、例外が発生します。 （[リソースの削除](/help/forms/developing/aem-forms-repository.md#deleting-resources)を参照）。
 
 ```java
  /*
