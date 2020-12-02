@@ -12,17 +12,17 @@ ht-degree: 25%
 ---
 
 
-# AEM のトラブルシューティング {#troubleshooting-aem}
+# AEM のトラブルシューティング  {#troubleshooting-aem}
 
 ## オーサーインスタンスのパフォーマンスのトラブルシューティング {#performance}
 
 [AEMオーサーインスタンスのトラブルシューティングに関するヒントとこのガイドを参照してください。](/help/sites-authoring/troubleshooting.md)
 
-## 管理上の問題のトラブルシューティング {#administering}
+## 管理上の問題のトラブルシューティング{#administering}
 
 [AEMでの管理上の問題のトラブルシューティングに関するヒントとこのガイドを参照してください。](/help/sites-administering/troubleshoot.md)
 
-## AEMログのトラブルシューティング {#logs}
+## AEMログのトラブルシューティング{#logs}
 
 [AEMログのトラブルシューティングに関するヒントとこのガイドを参照してください。](/help/sites-administering/troubleshooting.md)
 
