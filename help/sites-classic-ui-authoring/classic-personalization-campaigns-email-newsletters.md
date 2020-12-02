@@ -24,7 +24,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->電子メールを作成して公開できるようにするには、サービスプロバイダーを設定する必要があります。See [Configuring ExactTarget](/help/sites-administering/exacttarget.md) and [Configuring Silverpop Engage](/help/sites-administering/silverpop.md) for more information.
+>電子メールを作成して公開できるようにするには、サービスプロバイダーを設定する必要があります。詳しくは、[ExactTargetの設定](/help/sites-administering/exacttarget.md)および[Silverpopのエンゲージメントの設定](/help/sites-administering/silverpop.md)を参照してください。
 
 電子メールサービスプロバイダーに電子メールを公開するには、次の手順を実行する必要があります。
 
@@ -36,19 +36,19 @@ ht-degree: 71%
 >
 >電子メールプロバイダーを変更した場合は、ニュースレターが先にパブリッシュインスタンスに公開されていないか、パブリッシュインスタンスが使用できない状態で、フライトテストを実行するか、ニュースレターを送信すると、これらの操作が失敗します。ニュースレターが確実に公開されていることと、パブリッシュインスタンスが稼動していることを確認してください。
 
-## 電子メールの作成 {#creating-an-email}
+## 電子メールの作成  {#creating-an-email}
 
-An email or newsletter that you want to publish to an e-mail service can be created under a campaign using the **Geometrixx Newsletter** template. You can also use the **Geometrixx Outdoors E-Mail** template. Sample email/newsletter-based on the **Geometrixx Outdoors E-Mail** template are available at `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
+電子メールサービスに発行する電子メールまたはニュースレターは、**Geometrixxニュースレター**&#x200B;テンプレートを使用したキャンペーンの下に作成できます。 また、**Geometrixx Outdoors電子メール**&#x200B;テンプレートを使用することもできます。 **Geometrixx OutdoorsE-Mail**&#x200B;テンプレートに基づく電子メール/ニュースレターのサンプルは、`https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`で入手できます。
 
 設定済みの電子メールサービスに発行される新しい電子メールを作成するには：
 
-1. Go to **Websites** and then **Campaigns**. キャンペーンを選択します。
+1. **Webサイト**&#x200B;に移動し、**キャンペーン**&#x200B;に移動します。 キャンペーンを選択します。
 1. 「**新規**」をクリックして、**ページを作成**&#x200B;ウィンドウを開きます。
 1. タイトルと名前を入力し、利用可能なテンプレートから「**Geometrixx ニュースレター**」テンプレートを選択します。
 1. 「**作成**」をクリックします。
 1. 作成した電子メールを開きます。
 1. デザインモードに切り替えて、サイドキックに表示するコンポーネントを選択します。
-1. Switch to edit mode and start adding content (text, images, [email tools](#adding-exacttarget-email-tools-to-your-email), [personalization variables](#adding-text-and-personalization-tool-to-your-e-mail), and so on) to your email.
+1. コンテンツ（テキスト、画像、[電子メールツール](#adding-exacttarget-email-tools-to-your-email)、[パーソナライズ変数](#adding-text-and-personalization-tool-to-your-e-mail)など）を電子メールに追加する編集モードと開始に切り替えます。
 
 ### ExactTarget 電子メールツールを電子メールに追加 {#adding-exacttarget-email-tools-to-your-email}
 
@@ -56,7 +56,7 @@ An email or newsletter that you want to publish to an e-mail service can be crea
 >
 >このセクションは、ExactTarget サービスに固有です。
 
-The **Email Tools** component for ExactTarget can add more email functionality to your email/newsletter.
+ExactTargetの&#x200B;**電子メールツール**&#x200B;コンポーネントを使用すると、電子メール/ニュースレターにより多くの電子メール機能を追加できます。
 
 1. ExactTarget に公開する電子メールを開きます。
 1. サイドキックを使用して、「**ET - 電子メールツール**」コンポーネントをページに追加します。コンポーネントを編集モードで開きます。
@@ -100,7 +100,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 
 >[!NOTE]
 >
->**オプション**&#x200B;ドロップダウンメニューは、ExactTarget 設定が電子メールに適用されている場合のみ表示されます。See [Applying Email Service Configuration to Email Settings](#applying-e-mail-service-configuration-to-e-mail-settings) for more information.
+>**オプション**&#x200B;ドロップダウンメニューは、ExactTarget 設定が電子メールに適用されている場合のみ表示されます。詳しくは、[電子メール設定への電子メールサービス設定の適用](#applying-e-mail-service-configuration-to-e-mail-settings)を参照してください。
 
 1. ExactTarget に電子メールを公開します。
 
@@ -108,7 +108,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 
 >[!NOTE]
 >
->* The URLs within the email tools are replaced (in the received email) by their actual values only when an email is sent using **Simple Send** or **Guided Send** but not **Test Send**.
+>* 電子メールツール内のURLは、**単純送信**&#x200B;または&#x200B;**ガイド付き送信**&#x200B;を使用して電子メールを送信した場合にのみ、実際の値に置き換えられます。**テスト送信**&#x200B;は使用できません。
    >
    >
 * 電子メールツールのうち、「**住所 (必須)**」と「**プロファイルセンター (必須)**」の 2 つは必須です。電子メールが ExactTarget に公開されると、これら 2 つの電子メールツールがデフォルトですべての電子メールの下部に追加されます。
@@ -117,13 +117,13 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 
 
 
-### テキストおよびパーソナライゼーションツールを電子メールに追加 {#adding-text-and-personalization-tool-to-your-e-mail}
+### テキストおよびパーソナライゼーションツールを電子メールに追加  {#adding-text-and-personalization-tool-to-your-e-mail}
 
 **テキストおよびパーソナライゼーション**&#x200B;コンポーネントをページに追加して、パーソナライズされたフィールドを電子メールに追加できます。
 
 1. 電子メールサービスに公開する電子メールを開きます。
-1. 電子メールサービスのパーソナライゼーションフィールドを有効にするには、電子メールサービスの設定時にフレームワーク設定を追加します。See [configuring Silverpop Engage](/help/sites-administering/silverpop.md) and [configuring Exact Target](/help/sites-administering/exacttarget.md) for more information.
-1. Add the component **Text &amp; Personalization** from the sidekick. このコンポーネントはニュースレターグループの一部です。このコンポーネントを編集モードで開きます。
+1. 電子メールサービスのパーソナライゼーションフィールドを有効にするには、電子メールサービスの設定時にフレームワーク設定を追加します。詳しくは、[Silverpop Engageの設定](/help/sites-administering/silverpop.md)および[正確なターゲットの設定](/help/sites-administering/exacttarget.md)を参照してください。
+1. サイドキック追加のコンポーネント&#x200B;**テキストとパーソナライゼーション**。 このコンポーネントはニュースレターグループの一部です。このコンポーネントを編集モードで開きます。
 
    ![chlimage_1-110](assets/chlimage_1-110a.png)
 
@@ -136,7 +136,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 
 1. 電子メールサービス設定を作成します。
 1. 電子メールまたはニュースレターを開きます。
-1. Open the email/newsletter settings by either clicking **Settings** or by clicking **Page Properties in** the sidekick.
+1. サイドキックの&#x200B;**設定**&#x200B;をクリックするか、**の**&#x200B;ページプロパティをクリックして、電子メール/ニュースレターの設定を開きます。
 1. 「**クラウドサービス**」タブの「**サービスを追加**」をクリックします。サービスのリストが表示されます。ドロップダウンリストの一覧から必要な設定（「**ExactTarget**」または「**Silverpop**」）を選択します。
 
    ![chlimage_1-5](assets/chlimage_1-5a.jpeg)
@@ -149,7 +149,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 
 1. 電子メールを開きます。
 1. 電子メールを公開する前に、正しい設定が電子メールに適用されていることを確認してください。
-1. 「**公開**」をクリックします。This opens the **Publish Newsletter To E-mail Service Provider** window.
+1. 「**公開**」をクリックします。これにより、**ニュースレターを電子メールに発行サービスプロバイダー**&#x200B;ウィンドウが開きます。
 1. 「**ニュースレター名**」フィールドに入力します。電子メール／ニュースレターは、この名前で電子メールサービスプロバイダーに公開されます。電子メール名が指定されていない場合は、AEMのニュースレターのページ名を使用して電子メールが公開されます。
 1. 「**発行**」をクリックします。
 
@@ -157,7 +157,7 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 
    処理が正常に終了したら、ExactTarget または Silverpop Engage で電子メールを参照できることの確認を AEM によって求められます。
 
-   In the case of ExactTarget the published email can ve viewed by clicking **View Published Email**. This takes you directly to the published newsletter in the ExactTarget ([https://members.exacttarget.com/](https://members.exacttarget.com/).).
+   ExactTargetの場合、公開済みの電子メールは、**[表示] [公開済みの電子メール**]をクリックすると表示できます。 これにより、ExactTarget([https://members.exacttarget.com/](https://members.exacttarget.com/))で公開されたニュースレターに直接アクセスできます。
 
 >[!NOTE]
 >
@@ -168,14 +168,14 @@ The **Email Tools** component for ExactTarget can add more email functionality t
 
 ### 公開された電子メールの更新 {#updating-a-published-e-mail}
 
-The **Update** button on the Publish dialog box lets you update a newsletter already published to an E-mail Service Provider. ニュースレターがまだ公開されていない状態で「**更新**」ボタンをクリックすると、「**ニュースレターは公開されません**」メッセージが表示されます。
+[公開]ダイアログボックスの[**更新**]ボタンを使用すると、電子メールサービスプロバイダーに既に公開されているニュースレターを更新できます。 ニュースレターがまだ公開されていない状態で「**更新**」ボタンをクリックすると、「**ニュースレターは公開されません**」メッセージが表示されます。
 
 公開済みの電子メールを更新するには：
 
 1. 電子メールサービスプロバイダーに公開されている電子メールまたはニュースレターの中から、変更して再公開したいものを開きます。
-1. 「**公開**」をクリックします。The **Publish Newsletter to Email Service Provider** window displays. 「**更新**」をクリックします。
+1. 「**公開**」をクリックします。**ニュースレターを電子メールサービスプロバイダーに発行**&#x200B;ウィンドウが表示されます。 「**更新**」をクリックします。
 
-   To check if the email/newsletter has been updated on ExactTarget, click **View Published Email**. クリックすると、ExactTarget で公開された電子メールに移動します。
+   ExactTargetで電子メール/ニュースレターが更新されたかどうかを確認するには、**表示発行済み電子メール**&#x200B;をクリックします。 クリックすると、ExactTarget で公開された電子メールに移動します。
 
    電子メールまたはニュースレターが Silverpop 電子メールサービスで更新されたかどうかを確認するには、Silverpop Engage のサイトにアクセスします。
 
