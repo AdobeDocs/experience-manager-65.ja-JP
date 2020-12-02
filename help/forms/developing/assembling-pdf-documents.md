@@ -29,5 +29,5 @@ LiveCycleES 8.0以降以降では、AssemblerサービスでPDFパッケージ�
 
 >[!NOTE]
 >
->For more information about the Assembler service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Assemblerサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
