@@ -35,7 +35,7 @@ AEM で電子メールコンテンツを作成して、Adobe Campaign の電子�
 >
 >この機能を使用するには、AEM を [Adobe Campaign](/help/sites-administering/campaignonpremise.md) または [Adobe Campaign Standard](/help/sites-administering/campaignstandard.md) と連携するように設定する必要があります。
 
-## Adobe Campaign を使用した電子メールコンテンツの送信 {#sending-email-content-via-adobe-campaign}
+## Adobe Campaign を使用した電子メールコンテンツの送信  {#sending-email-content-via-adobe-campaign}
 
 AEM と Adobe Campaign を設定すると、電子メール配信コンテンツを AEM 内で直接作成した後に、それを Adobe Campaign 内で処理できます。
 
@@ -48,15 +48,15 @@ AEMでAdobe Campaignコンテンツを作成する場合、Adobe Campaignサー�
 
 詳細な手順についてはこのドキュメントで説明します。
 
-### 新しい電子メールコンテンツの作成 {#creating-new-email-content}
+### 新しい電子メールコンテンツの作成  {#creating-new-email-content}
 
 >[!NOTE]
 >
->When adding email templates, be sure to add them under **/content/campaigns** to make them available.
+>電子メールテンプレートを追加する場合は、**/content/templates**&#x200B;に電子メールテンプレートを追加して使用可能にしてください。
 
 #### 新しい電子メールコンテンツの作成 {#creating-new-email-content-1}
 
-1. In AEM select **Sites** then **Campaigns**, then browse to where your email campaigns are managed. In the following example, the path is **Sites** > **Campaigns** > **Geometrixx Outdoors** > **Email Campaigns**.
+1. AEMで、「**サイト**」を選択し、「**キャンペーン**」を選択して、電子メールキャンペーンの管理先を参照します。 次の例では、パスは&#x200B;**サイト** > **キャンペーン** > **Geometrixx Outdoors** > **電子メールキャンペーン**&#x200B;です。
 
    >[!NOTE]
    >
@@ -70,7 +70,7 @@ AEMでAdobe Campaignコンテンツを作成する場合、Adobe Campaignサー�
    * **Adobe Campaign Classic電子メール**:配信用にAdobe Campaign Classicにコンテンツを送信する前に、事前定義済みのテンプレート（2列）にコンテンツを追加できます。
    * **Adobe Campaign Standard電子メール**:配信用にAdobe Campaign Standardにコンテンツを送信する前に、事前定義済みのテンプレート（2列）にコンテンツを追加できます。
 
-1. Fill in the **Title** and optionally the **Description** and click **Create**. 電子メールの編集中に上書きしない限り、タイトルはニュースレターまたは電子メールの件名として使用されます。
+1. 「**タイトル**」に入力し、必要に応じて「**説明**」を入力して、「**作成**」をクリックします。 電子メールの編集中に上書きしない限り、タイトルはニュースレターまたは電子メールの件名として使用されます。
 
 ### Adobe Campaign クラウドサービスおよびテンプレートの選択 {#selecting-the-adobe-campaign-cloud-service-and-template}
 
@@ -88,14 +88,14 @@ Adobe Campaign と統合するには、Adobe Campaign クラウドサービス�
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
-1. Select **Edit** and then the **Cloud services** tab and scroll down to the bottom and click the + sign to add a configuration and then select **Adobe Campaign**.
+1. 「**編集**」を選択し、「**クラウドサービス**」タブを選択して下にスクロールし、「+」記号をクリックして設定を追加し、「**Adobe Campaign**」を選択します。
 
    ![chlimage_1-17](assets/chlimage_1-17a.png)
 
 1. 使用している Adobe Campaign インスタンスに一致する設定をドロップダウンリストから選択し、「**保存**」をクリックして確認します。
 1. 「**Adobe Campaign**」タブをクリックすると、電子メールに適用されるテンプレートを表示できます。別のテンプレートを選択したい場合は、編集時に電子メール内からテンプレートにアクセスできます。
 
-   If you would like to apply a specific email delivery template (from Adobe Campaign), other than the default mail template, in **Properties**, select the **Adobe Campaign** tab. 関連する Adobe Campaign インスタンス内での電子メール配信テンプレートの内部名を入力します。
+   (Adobe Campaignから)デフォルトのメール配信テンプレート以外の特定の電子メールテンプレートを適用する場合は、**プロパティ**&#x200B;で、**Adobe Campaign**&#x200B;タブを選択します。 関連する Adobe Campaign インスタンス内での電子メール配信テンプレートの内部名を入力します。
 
    どのテンプレートを選択するかによって、どのパーソナライゼーションフィールドを Adobe Campaign から利用できるかが決まります。
 
@@ -107,7 +107,7 @@ Adobe Campaign と統合するには、Adobe Campaign クラウドサービス�
 
    ![chlimage_1-19](assets/chlimage_1-19a.png)
 
-1. Select **Cloud services** and click **+** to add a configuration. 表示される任意の設定を選択します（どれでもかまいません）。「**+**」記号をクリックまたはタップして、別の設定を追加してから、「**Adobe Campaign**」を選択します。
+1. 「**クラウドサービス**」を選択し、**+**&#x200B;をクリックして設定を追加します。 表示される任意の設定を選択します（どれでもかまいません）。「**+**」記号をクリックまたはタップして、別の設定を追加してから、「**Adobe Campaign**」を選択します。
 
    >[!NOTE]
    >
@@ -124,7 +124,7 @@ Adobe Campaign と統合するには、Adobe Campaign クラウドサービス�
 
    ![chlimage_1-20](assets/chlimage_1-20a.png)
 
-1. If you would like to change the subject of the email or add plain text for those users who will not view the email in HTML, select **Email** and add a subject and text. ページアイコンを選択すると、プレーンテキストのバージョンが HTML から自動生成されます。終了したらチェックマークをクリックします。
+1. 電子メールの件名を変更する場合、またはHTMLで電子メールを表示しないユーザーに対してプレーンテキストを追加する場合は、**電子メール**&#x200B;を選択し、件名とテキストを追加します。 ページアイコンを選択すると、プレーンテキストのバージョンが HTML から自動生成されます。終了したらチェックマークをクリックします。
 
    Adobe Campaign のパーソナライゼーションフィールドを使用して、ニュースレターをパーソナライズできます。パーソナライゼーションフィールドを追加するには、Adobe Campaign のロゴが表示されているボタンをクリックして、パーソナライゼーションフィールドピッカーを開きます。このニュースレターで使用可能なフィールドがすべて表示され、その中から選択することができます。
 
@@ -134,7 +134,7 @@ Adobe Campaign と統合するには、Adobe Campaign クラウドサービス�
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
-1. Open the components panel on left side of screen and select **Adobe Campaign Newsletter** from the drop-down menu to find those components.
+1. 画面の左側のコンポーネントパネルを開き、ドロップダウンメニューから「**Adobe Campaignニュースレター**」を選択して、これらのコンポーネントを探します。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
@@ -142,7 +142,7 @@ Adobe Campaign と統合するには、Adobe Campaign クラウドサービス�
 
    ![chlimage_1-23](assets/chlimage_1-23a.png)
 
-   See [Adobe Campaign Components](/help/sites-authoring/adobe-campaign-components.md) for a detailed description of each component.
+   各コンポーネントの詳細な説明は、[Adobe Campaignコンポーネント](/help/sites-authoring/adobe-campaign-components.md)を参照してください。
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
@@ -158,12 +158,12 @@ Adobe Campaign コンテンツの詳細については、[Adobe Campaign コン�
 >[!NOTE]
 >
 >* Adobe Campaign の「**プロファイル**」ターゲティングディメンションのフィールドのみが考慮されます。
->* When viewing Properties from **Sites**, you do not have access to the Adobe Campaign context fields. これらのフィールドには編集時に電子メール内から直接アクセスできます。
+>* **サイト**&#x200B;からプロパティを表示する場合、Adobe Campaignコンテキストフィールドにアクセスできません。 これらのフィールドには編集時に電子メール内から直接アクセスできます。
 
 
 パーソナライゼーションを挿入する方法
 
-1. Insert a new **Newsletter** > **Text &amp; Personalization (Campaign)** component by dragging it onto the page.
+1. 新しい&#x200B;**ニュースレター** > **テキストとパーソナライゼーション(キャンペーン)**&#x200B;コンポーネントをページにドラッグして挿入します。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 
@@ -176,15 +176,15 @@ Adobe Campaign コンテンツの詳細については、[Adobe Campaign コン�
    >**Adobe Campaign Standard の場合：**
    >
    >* 使用可能なコンテキストフィールドは、Adobe Campaign の「**プロファイル**」ターゲティングディメンションに対応しています。
-   >* See [Linking an AEM page to an Adobe Campaign email](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard).
+   >* 「[AEMページのAdobe Campaign電子メールへのリンク](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)」を参照してください。
 
    >
    >**Adobe Campaign Classic の場合：**
    >
-   >* Available context fields are dynamically recovered from the Adobe Campaign **nms:seedMember** schema. ターゲット拡張データは、コンテンツと同期される配信を含むワークフローから動的に復元されます(See the [Synchronizing content created in AEM with a delivery from Adobe Campaign](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic) section).
+   >* 使用可能なコンテキストフィールドは、Adobe Campaign **nms:seedMember**&#x200B;スキーマから動的に回復されます。 ターゲット拡張データは、コンテンツと同期される配信を含むワークフローから動的に復元されます(「AEMで作成したコンテンツとAdobe Campaign](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)の配信との同期」の節を参照)。[
       >
       >
-   * To add or hide personalization elements, see [Managing personalization fields and blocks](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks).
+   * パーソナライゼーション要素を追加または非表示にするには、[パーソナライゼーションフィールドとブロックの管理](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks)を参照してください。
    >* **重要**：シードテーブルのフィールドはすべて、受信者テーブル（または対応する連絡先テーブル）にも存在する必要があります。
 
 
@@ -192,7 +192,7 @@ Adobe Campaign コンテンツの詳細については、[Adobe Campaign コン�
 
    ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-   コンテキストフィールドまたはパーソナライゼーションブロックを挿入したら、ニュースレターをプレビューして、フィールドをテストできます。See [Previewing a Newsletter](#previewing-a-newsletter).
+   コンテキストフィールドまたはパーソナライゼーションブロックを挿入したら、ニュースレターをプレビューして、フィールドをテストできます。[ニュースレターのプレビュー](#previewing-a-newsletter)を参照してください。
 
 ### ニュースレターのプレビュー {#previewing-a-newsletter}
 
@@ -216,13 +216,13 @@ Adobe Campaign コンテンツの詳細については、[Adobe Campaign コン�
 
 ### AEM でのコンテンツの承認 {#approving-content-in-aem}
 
-コンテンツの作成が完了したら、承認プロセスを開始できます。Go to the **Workflow** tab of the toolbox and select the **Approve for Adobe Campaign** workflow.
+コンテンツの作成が完了したら、承認プロセスを開始できます。ツールボックスの「**ワークフロー**」タブに移動し、「**Adobe Campaignを承認**」ワークフローを選択します。
 
 この既製のワークフローには、改訂して承認または改訂して拒否という 2 つのステップがあります。このワークフローを拡張して、より複雑なプロセスに適合させることができます。
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-To approve content for Adobe Campaign, apply the workflow by selecting **Workflow** and selecting **Approve for Adobe Campaign** and click **Start Workflow**. 手順に従って、コンテンツを承認します。 ワークフローの最後のステップで、「**承認**」の代わりに「**拒否**」を選択して、コンテンツを拒否することもできます。
+コンテンツをAdobe Campaign用に承認するには、「ワークフロー&#x200B;**」を選択し、「** Adobe Campaignに対して承認&#x200B;**」を選択して、「**&#x200B;開始ワークフロー&#x200B;**」をクリックして、ワークフローを適用します。**&#x200B;手順に従って、コンテンツを承認します。 ワークフローの最後のステップで、「**承認**」の代わりに「**拒否**」を選択して、コンテンツを拒否することもできます。
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
@@ -239,7 +239,7 @@ Adobe Campaign Classic の場合：
 >[!NOTE]
 未承認のコンテンツは、Adobe Campaign の配信と同期できますが、配信を実行することはできません。Adobe Campaign の配信を使用して送信できるのは、承認済みのコンテンツだけです。
 
-## AEM と Adobe Campaign Standard および Adobe Campaign Classic のリンク {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
+## AEM と Adobe Campaign Standard および Adobe Campaign Classic のリンク  {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
 
 AEM と Adobe Campaign をどのようにリンクまたは同期させるかは、使用しているのがサブスクリプションベースの Adobe Campaign Standard か、オンプレミスベースの Adobe Campaign Classic かによって異なります。
 
@@ -264,7 +264,7 @@ Adobe Campaign Standard では、次のものを使用して、AEM で作成さ�
 
 AEM で作成されたページと Adobe Campaign の電子メールをリンクするには：
 
-1. AEM 固有の電子メールテンプレートをベースとして新しい電子メールを作成します。Refer to [Creating emails in Adobe Campaign Standard](https://helpx.adobe.com/jp/campaign/standard/channels/using/creating-an-email.html) for more information.
+1. AEM 固有の電子メールテンプレートをベースとして新しい電子メールを作成します。詳しくは、[Adobe Campaign Standard](https://helpx.adobe.com/jp/campaign/standard/channels/using/creating-an-email.html)での電子メールの作成を参照してください。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -272,10 +272,10 @@ AEM で作成されたページと Adobe Campaign の電子メールをリンク
 
    ![chlimage_1-37](assets/chlimage_1-37a.png)
 
-1. Select **Link with an Adobe Experience Manager content** in the toolbar to access the list of contents available in AEM.
+1. ツールバーで「**Adobe Experience Managerのコンテンツとリンク**」を選択して、AEMで使用可能なコンテンツのリストにアクセスします。
 
    >[!NOTE]
-   If the **Link with an Adobe Experience Manager** option does not appear in the action bar, check that the **Content editing mode** is correctly configured set to **Adobe Experience Manager** in the email properties.
+   アクションバーに「**Adobe Experience Manager**&#x200B;とのリンク」オプションが表示されない場合は、電子メールのプロパティで「**コンテンツ編集モード**」が&#x200B;**Adobe Experience Manager**&#x200B;に正しく設定されていることを確認してください。
 
    ![chlimage_1-38](assets/chlimage_1-38a.png)
 
@@ -301,7 +301,7 @@ AEM で作成されたページと Adobe Campaign の電子メールをリンク
    コンテンツアクションバーの「**Adobe Experience Manager コンテンツとのリンクを削除**」を使用して、電子メールと AEM コンテンツのリンクをキャンセルできます。このボタンは、コンテンツが既に配信とリンクされている場合にのみ表示されます。別のコンテンツを配信とリンクするには、現在のコンテンツリンクを削除してからでなければ新しいリンクを確立できません。
    リンクを削除すると、ローカルコンテンツが保持され、Adobe Campaign で編集できるようになります。コンテンツを変更後に再度リンクする場合は、すべての変更が失われます。
 
-### AEM で作成されたコンテンツと Adobe Campaign Classic の配信の同期 {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
+### AEM で作成されたコンテンツと Adobe Campaign Classic の配信の同期  {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
 
 Adobe Campaign では、次のものを使用して、AEM で作成されたコンテンツを復元し、同期できます。
 
@@ -323,14 +323,14 @@ AEM では、ニュースレターが単一の配信にリンクされている�
 
 AEM で作成されたコンテンツと Adobe Campaign の配信を同期するには：
 
-1. Create a delivery or add a delivery activity to a campaign workflow by selecting the **Email delivery with AEM content (mailAEMContent)** delivery template.
+1. 配信を作成するか、「AEM content (mailAEMContent)**を含む電子メール配信」配信テンプレートを選択して、キャンペーンワークフローに配信アクティビティを追加します。**
 
    ![chlimage_1-40](assets/chlimage_1-40a.png)
 
-1. Select **Synchronize** in the toolbar to access the list of contents available in AEM.
+1. ツールバーの「**同期**」を選択して、AEMで使用可能なコンテンツのリストにアクセスします。
 
    >[!NOTE]
-   If the **Synchronize** option does not appear in the delivery&#39;s toolbar, check that the **Content editing mode** field is correctly configured in **AEM** by selecting **Properties** > **Advanced**.
+   **「**&#x200B;同期&lt;a1/>」オプションが配信のツールバーに表示されない場合は、**AEM**&#x200B;で&#x200B;**プロパティ**/**詳細**&#x200B;を選択して、**コンテンツ編集モード**&#x200B;フィールドが正しく設定されていることを確認します。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 
@@ -354,8 +354,8 @@ AEM で作成されたコンテンツと Adobe Campaign の配信を同期する
 
    >[!NOTE]
    * 配信とコンテンツが同期されると、Adobe Campaign の配信コンテンツは読み取り専用になります。コンテンツだけでなく、電子メールの件名も変更できなくなります。
-   * Adobe Campaign の配信にリンクされている間に AEM でコンテンツが更新された場合は、配信の分析時に配信内のコンテンツが自動的に更新されます。The synchronization can also be executed manually using the **Refresh content now** button.
-   * You can cancel synchronization between a delivery and AEM content using the **Desynchronize** button. このボタンは、コンテンツが既に配信と同期されている場合にのみ表示されます。別のコンテンツを配信と同期するには、現在のコンテンツ同期をキャンセルしてからでなければ新しいリンクを確立できません。
+   * Adobe Campaign の配信にリンクされている間に AEM でコンテンツが更新された場合は、配信の分析時に配信内のコンテンツが自動的に更新されます。同期は、「**コンテンツを今すぐ更新**」ボタンを使用して手動で実行することもできます。
+   * 「**非同期**」ボタンを使用して、配信とAEMコンテンツ間の同期をキャンセルできます。 このボタンは、コンテンツが既に配信と同期されている場合にのみ表示されます。別のコンテンツを配信と同期するには、現在のコンテンツ同期をキャンセルしてからでなければ新しいリンクを確立できません。
    * 同期解除された場合は、ローカルコンテンツが保持され、Adobe Campaign で編集できるようになります。コンテンツを変更後に再同期する場合は、すべての変更が失われます。
    * 定期的配信と連続配信の場合は、配信が実行されるたびに AEM コンテンツとの同期が停止されます。
 
