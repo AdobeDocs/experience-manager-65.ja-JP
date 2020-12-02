@@ -30,7 +30,7 @@ ht-degree: 67%
 >
 >レコードのドキュメントの自動生成は、XFAベースのアダプティブフォームではサポートされていません。 ただし、アダプティブフォーム作成用の XDP をレコードのドキュメントとして使用することができます。
 
-## アダプティブフォームの種類とレコードのドキュメント {#adaptive-form-types-and-their-documents-of-record}
+## アダプティブフォームの種類とレコードのドキュメント  {#adaptive-form-types-and-their-documents-of-record}
 
 アダプティブフォームの作成時に、フォームのモデルを指定できます。次のオプションがあります。
 
@@ -43,7 +43,7 @@ ht-degree: 67%
 
 * なし フォームのモデルを指定せずに、アダプティブフォームを作成できます。レコードのドキュメントは、アダプティブフォーム用に自動的に生成されます。
 
-フォームモデルを選択する場合は、「レコードドキュメント設定のドキュメント」で使用できるオプションを使用して、レコードのテンプレートを設定します。 See [Document of Record Template Configuration](#document-of-record-template-configuration).
+フォームモデルを選択する場合は、「レコードドキュメント設定のドキュメント」で使用できるオプションを使用して、レコードのテンプレートを設定します。 「[レコードテンプレートの設定のドキュメント](#document-of-record-template-configuration)」を参照してください。
 
 ## 自動的に生成されたレコードのドキュメント {#automatically-generated-document-of-record}
 
@@ -57,25 +57,25 @@ ht-degree: 67%
 * 異なるベーステンプレートを使用しながら様々なスタイリングと外観を試すことで、レコードのドキュメントにとって最良のスタイルと外観を選択できます。スタイリングの表示はオプションです。スタイルを指定しない場合は、システムスタイルがデフォルトとして設定されます。
 * フォーム内のすべての変更が、確実かつ即座にレコードのドキュメントに反映されます。
 
-## レコードのドキュメントを自動生成するためのコンポーネント {#components-to-automatically-generate-a-document-of-record}
+## レコードのドキュメントを自動生成するためのコンポーネント  {#components-to-automatically-generate-a-document-of-record}
 
 アダプティブフォームのレコードのドキュメントを生成するには、次のコンポーネントが必要です。
 
-**レコードのドキュメントを生成するアダプティブフォーム** 、アダプティブフォーム。
+**レコードのドキュメントを生成するアダプティブ** フォーム。
 
-**AEM Designerで作成された基本テンプレート（推奨）** XFAテンプレート（XDPファイル）。 基本テンプレートは、レコードテンプレートのドキュメント用にスタイルとブランディングの情報を指定するために使用します。
+**AEM Designerで作成された基本テンプレート（推奨）** XFAテンプレート（XDPファイル）。基本テンプレートは、レコードテンプレートのドキュメント用にスタイルとブランディングの情報を指定するために使用します。
 
-See [Base template of a document of record](#base-template-of-a-document-of-record)
+[レコードのドキュメントの基本テンプレート](#base-template-of-a-document-of-record)を参照
 
 >[!NOTE]
 >
 >レコードのドキュメントの基本テンプレートは、レコードのドキュメントのメタテンプレートとも呼ばれます。
 
-**アダプティブフォームから生成されたレコードテンプレート** XFAテンプレート（XDPファイル）のドキュメント。
+**アダプティブフォームから生成されるレコ** ードのドキュメントtemplateXFAテンプレート（XDPファイル）。
 
-See [Document of Record Template Configuration](#document-of-record-template-configuration).
+「[レコードテンプレートの設定のドキュメント](#document-of-record-template-configuration)」を参照してください。
 
-**フォームデータ** ：アダプティブフォームでユーザーが入力した情報。 レコードのドキュメントを生成するために、レコードのドキュメントと結合します。
+**アダプティブフォームでユーザーが入力したForm** dataInformation。レコードのドキュメントを生成するために、レコードのドキュメントと結合します。
 
 ## アダプティブフォームエレメントのマッピング {#mapping-of-adaptive-form-elements}
 
@@ -189,7 +189,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
  </tbody>
 </table>
 
-### スタティックコンポーネント {#static-components}
+### スタティックコンポーネント  {#static-components}
 
 | アダプティブフォームコンポーネント | 対応する XFA スキンコンポーネント | 備考 |
 |---|---|---|
@@ -210,15 +210,15 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 基本テンプレートを設計する際は、「[基本テンプレートの規則](#base-template-conventions)」に従ってください。
 
-## 基本テンプレートの規則 {#base-template-conventions}
+## 基本テンプレートの規則  {#base-template-conventions}
 
 基本テンプレートは、レコードのドキュメントのヘッダー、フッター、スタイル、および外観を定義するために使用されます。ヘッダーとフッターには、会社のロゴや著作権テキストなどの情報を含めることができます。基本ドキュメント内の最初のマスターページがコピーされ、レコードのドキュメント用のマスターページとして使用されます。このマスターページには、ヘッダー、フッター、ページ番号、またはレコードテンプレート内のすべてのページに表示されるその他の情報が含まれます。 基本テンプレートの規則に準拠しない基本テンプレートを使用している場合、基本テンプレートの最初のマスターページは、レコードテンプレートのドキュメントで引き続き使用されます。 基本テンプレートを規則通りに設計し、レコードのドキュメント自動生成のためにそれを使用することを強くお勧めします。
 
 **マスターページの規則**
 
-* In the base template, you should name the root subform as `AF_METATEMPLATE` and the master page as `AF_MASTERPAGE`.
+* 基本テンプレートでは、ルートサブフォームに`AF_METATEMPLATE`、マスターページに`AF_MASTERPAGE`という名前を付ける必要があります。
 
-* The master page with the name `AF_MASTERPAGE` located under the `AF_METATEMPLATE` root subform is given preference for extracting header, footer, and styling information.
+* `AF_METATEMPLATE`ルートサブフォームの下に配置された`AF_MASTERPAGE`という名前のマスターページは、ヘッダー、フッター、スタイル情報を抽出する際の優先順位が与えられます。
 
 * `AF_MASTERPAGE` が存在しない場合は、基本テンプレート中に存在する最初のマスターページが使用されます。
 
@@ -226,7 +226,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 * レコードのドキュメント内のフィールドにスタイルを適用するため、基本テンプレートは `AF_FIELDSSUBFORM` ルートサブフォーム内の `AF_METATEMPLATE` サブフォームにフィールドを作成します。
 
-* これらのフィールドのプロパティは、レコードのドキュメント内のフィールドに適用されます。これらのフィールドは、命名規則に従う必要があり `AF_<name of field in all caps>_XFO` ます。 For example, the field name for check box should be `AF_CHECKBOX_XFO`.
+* これらのフィールドのプロパティは、レコードのドキュメント内のフィールドに適用されます。これらのフィールドは、`AF_<name of field in all caps>_XFO`命名規則に従う必要があります。 例えば、チェックボックスのフィールド名は`AF_CHECKBOX_XFO`にする必要があります。
 
 基本テンプレートを作成するには、AEM Designer で次の手順を実行します。
 
@@ -257,9 +257,9 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 次の手順を実行して、アダプティブフォームのレコードのドキュメントを設定します。
 
-1. In AEM author instance, click **Forms > Forms and Documents.**
+1. AEMオーサーインスタンスで、**Forms/Formsとドキュメントをクリックします。**
 1. フォームを選択し、**「プロパティの表示」**&#x200B;をクリックします。
-1. In the Properties window, tap **Form Model**.
+1. プロパティウィンドウで、**フォームモデル**をタップします。
 また、フォームの作成時にフォームモデルを選択することもできます。
 
    >[!NOTE]
@@ -268,13 +268,13 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 1. 「フォームモデル」タブの「レコードのドキュメントのテンプレート設定」セクションで、次のいずれかのオプションを選択します。
 
-   **なし** ：フォームのレコードのドキュメントを設定しない場合は、このオプションを選択します。
+   **** なしフォームのレコードのドキュメントを設定しない場合は、このオプションを選択します。
 
-   **フォームテンプレートをレコードのドキュメントとして関連付ける** ：レコードのドキュメントのテンプレートとして使用するXDPファイルがある場合は、このオプションを選択します。 このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。必要なファイルを選択します。
+   **フォームテンプレートをレコードのドキュメントとして関連付け** るレコードのドキュメントのテンプレートとして使用するXDPファイルがある場合は、このオプションを選択します。このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。必要なファイルを選択します。
 
    選択された XDP ファイルは、アダプティブフォームに関連付けられます。
 
-   **レコードのドキュメントを生成** ：レコードのドキュメントのスタイルと外観を定義する基本テンプレートとしてXDPファイルを使用する場合は、このオプションを選択します。 このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。必要なファイルを選択します。
+   **レコードのドキュメントの生成** レコードのドキュメントのスタイルと外観を定義する基本テンプレートとしてXDPファイルを使用する場合は、このオプションを選択します。このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。必要なファイルを選択します。
 
    >[!NOTE]
    >
@@ -283,10 +283,10 @@ See [Document of Record Template Configuration](#document-of-record-template-con
    >
    >
    >    * アダプティブフォームがスキーマベースの場合
-   >    * You are using **Associate Form Template as the Document of Record Template** option for document of record
+   >    * レコードのドキュメントに「**レコードテンプレート**&#x200B;のドキュメントとしてフォームテンプレートを関連付ける」を使用しています
 
 
-1. Click **Done.**
+1. 「**完了」をクリックします。**
 
 ## レコードのドキュメントにあるブランディング情報のカスタマイズ {#customize-the-branding-information-in-document-of-record}
 
@@ -294,8 +294,8 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 「レコードのドキュメント」タブに入力するブランディング情報をローカライズするには、ブラウザーのロケールを正しく設定する必要があります。レコードのドキュメントのブランディング情報をカスタマイズするには、次の手順を実行します。
 
-1. Select a panel (root panel) in the document of record and then tap ![configure](assets/configure.png).
-1. 「 ![dortab](assets/dortab.png)」をタップします。 「レコードのドキュメント」タブが表示されます。
+1. レコードのドキュメントでパネル（ルートパネル）を選択し、![configure](assets/configure.png)をタップします。
+1. ![dortab](assets/dortab.png)をタップします。 「レコードのドキュメント」タブが表示されます。
 1. レコードのドキュメントをレンダリングする、デフォルトのテンプレートまたはカスタムのテンプレートのいずれかを選択します。デフォルトのテンプレートを選択すると、レコードのドキュメントのサムネイルが「テンプレート」ドロップダウンの下に表示されます。
 
    ![brandingtemplate](assets/brandingtemplate.png)
@@ -336,7 +336,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 1. ブランディングの変更内容を保存するには、「完了」をタップします。
 
-## レコードのドキュメントのパネルに表示されるテーブルと列のレイアウト {#table-and-column-layouts-for-panels-in-document-of-record}
+## レコードのドキュメントのパネルに表示されるテーブルと列のレイアウト  {#table-and-column-layouts-for-panels-in-document-of-record}
 
 アダプティブフォームは、複数のフォームフィールドを持つ長い場合があります。 その場合、レコードのドキュメントをアダプティブフォームの正確なコピーとして保存することはお勧めしません。テーブルまたは列のレイアウトを 1 つ選択し、このレイアウトを適用して、1 つ以上のアダプティブフォームパネルをレコードのドキュメント PDF に保存できます。
 
@@ -354,13 +354,13 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 レコードのドキュメントの設定では、レコードのドキュメントに含めるオプションを選択できます。 例えば、銀行では、名前、年齢、マイナンバー番号、電話番号などをフォームから受け取ります。銀行口座番号や支店の詳細は、フォーム上に生成されます。レコードのドキュメントでは、名前、マイナンバー番号、銀行口座、および支店の詳細のみが表示されるように選択できます。
 
-コンポーネントのレコード設定のドキュメントは、そのプロパティの下で使用できます。 To access the properties a component, select the component and click ![cmppr](assets/cmppr.png) in the overlay. プロパティはサイドバーに一覧表示され、その中で次の設定を見つけることができます。
+コンポーネントのレコード設定のドキュメントは、そのプロパティの下で使用できます。 コンポーネントのプロパティにアクセスするには、コンポーネントを選択し、オーバーレイの![cmppr](assets/cmppr.png)をクリックします。 プロパティはサイドバーに一覧表示され、その中で次の設定を見つけることができます。
 
 **フィールドレベルの設定**
 
 * **レコードのドキュメントから除外**：プロパティを「true」に設定すると、そのフィールドがレコードのドキュメントから除外されます。これは `excludeFromDoR` という名前のスクリプト可能プロパティです。その動作は、**非表示の場合はレコードのドキュメントからフィールドを除外**&#x200B;フォームレベルプロパティに依存します。
 
-* **パネルをテーブルとして表示：** パネルに含まれるフィールドの数が6個未満の場合、このプロパティを設定すると、パネルがレコードドキュメントのテーブルとして表示されます。 この設定は、パネルにのみ適用されます。
+* **パネルをテーブルとして表示：パネルに含まれるフィールドの数が6個未満の場合、このプロパティを** 設定すると、パネルがレコードドキュメントのテーブルとして表示されます。この設定は、パネルにのみ適用されます。
 * **レコードのドキュメントからタイトルを除外：**&#x200B;このプロパティを設定すると、レコードのドキュメントからパネルやテーブルのタイトルが除外されます。パネルおよびテーブルに対してのみ適用できます。
 * **レコードのドキュメントから説明を除外：**&#x200B;このプロパティを設定すると、レコードのドキュメントからパネルやテーブルの説明が除外されます。パネルおよびテーブルに対してのみ適用できます。
 
