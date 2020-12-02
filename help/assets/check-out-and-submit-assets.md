@@ -11,19 +11,19 @@ ht-degree: 49%
 ---
 
 
-# Check-in and check-out files in [!DNL Experience Manager] DAM {#check-in-and-check-out-files-in-assets}
+# [!DNL Experience Manager] DAM {#check-in-and-check-out-files-in-assets}のチェックインおよびチェックアウトファイル
 
-[!DNL Adobe Experience Manager Assets] では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。アセットをチェックアウトした後は、その人だけがアセットを編集、注釈、公開、移動、削除できるようになります。アセットのチェックアウトでアセットにロックがかかることになります。Other users cannot perform any of these operations on the asset until you check the asset back in to [!DNL Assets]. ただし、ロックされたアセットのメタデータは変更することができます。
+[!DNL Adobe Experience Manager Assets] では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。アセットをチェックアウトした後は、その人だけがアセットを編集、注釈、公開、移動、削除できるようになります。アセットのチェックアウトでアセットにロックがかかることになります。[!DNL Assets]に再度チェックインするまで、他のユーザーはアセットに対してこれらの操作を実行できません。 ただし、ロックされたアセットのメタデータは変更することができます。
 
 アセットをチェックイン／チェックアウトするには、アセットへの書き込み権限が必要です。
 
 この機能は、複数のユーザーが複数のチームにわたるワークフローの編集で共同作業をする際、ある作成者が変更した内容を他のユーザーが書き換えてしまう事態を防ぐのに役立ちます。
 
-## アセットのチェックアウト {#checking-out-assets}
+## アセットをチェックアウト{#checking-out-assets}
 
-1. From the [!DNL Assets] user interface, select the asset you want to check out. チェックアウトしたいアセットは複数選択することもできます。
-1. ツールバーで、「 **[!UICONTROL Checkout]**」をクリックします。
-「 **[!UICONTROL チェックアウト]** 」( **[!UICONTROL Checkout]**)オプションは「チェックイン」(Checkin)に切り替わります。
+1. [!DNL Assets]ユーザーインターフェイスから、チェックアウトするアセットを選択します。 チェックアウトしたいアセットは複数選択することもできます。
+1. ツールバーで、**[!UICONTROL チェックアウト]**をクリックします。
+**[!UICONTROL Checkout]**&#x200B;オプションは、**[!UICONTROL Checkin]**に切り替わります。
 チェックアウトしたアセットを他のユーザーが編集できるかを確認するには、別のユーザーとしてログインします。チェックアウトしたアセットのサムネールにロック記号が表示されます。
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
@@ -32,9 +32,9 @@ ht-degree: 49%
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   You can click **[!UICONTROL View Properties]** to edit the metadata for the locked asset.
+   「**[!UICONTROL 表示のプロパティ]**」をクリックして、ロックされたアセットのメタデータを編集できます。
 
-1. 「 **[!UICONTROL 編集]** 」をクリックして、アセットを編集モードで開きます。
+1. 「**[!UICONTROL 編集]**」をクリックして、アセットを編集モードで開きます。
 
    ![chlimage_1-473](assets/chlimage_1-473.png)
 
@@ -44,22 +44,22 @@ ht-degree: 49%
 
    アセットに注釈を付けたり公開したりすることもできます。
 
-1. インター [!DNL Assets] フェイスから編集済みのアセットを選択し、ツールバーの「 **[!UICONTROL チェックイン]** 」をクリックします。 The modified asset is checked in to [!DNL Assets] and is available to other users for editing.
+1. [!DNL Assets]インターフェイスから編集済みのアセットを選択し、ツールバーの&#x200B;**[!UICONTROL チェックイン]**&#x200B;をクリックします。 変更されたアセットは[!DNL Assets]にチェックインされ、他のユーザーが編集できます。
 
-## Forced check in {#forced-check-in}
+## 強制チェックイン{#forced-check-in}
 
 管理者は他のユーザーがチェックアウトしたアセットをチェックインできます。
 
-1. Log in to [!DNL Assets] as an administrator.
-1. From the [!DNL Assets] user interface select one or more assets that have been checked out by other users.
+1. [!DNL Assets]に管理者としてログインします。
+1. [!DNL Assets]ユーザーインターフェイスから、他のユーザーがチェックアウトした1つ以上のアセットを選択します。
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. ツールバーで、「ロックを **[!UICONTROL 解除]**」をクリックします。 アセットはチェックインされ、他のユーザーが編集できるようになります。
+1. ツールバーで、**[!UICONTROL 「ロックを解除]**」をクリックします。 アセットはチェックインされ、他のユーザーが編集できるようになります。
 
 ## ベストプラクティスと制限事項 {#tips-limitations}
 
-* チェックアウトされたアセットファイルが含まれる *フォルダ* を削除できます。 フォルダーを削除する前に、デジタルアセットがユーザーによってチェックアウトされていないことを確認します。
+* チェックアウトされたアセットファイルを含む&#x200B;*フォルダ*&#x200B;を削除できます。 フォルダーを削除する前に、デジタルアセットがユーザーによってチェックアウトされていないことを確認します。
 
 >[!MORELIKETHIS]
 >
