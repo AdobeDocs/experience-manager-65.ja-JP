@@ -27,7 +27,7 @@ AEM form workspaceは、プレゼンテーションセマンティックとイ�
 
 カスタマイズされた Workspace の例
 
-## カスタマイズの種類 {#types-of-customizations}
+## カスタマイズの種類  {#types-of-customizations}
 
 AEM Forms Workspace では、幅広く様々なカスタマイズをサポートしてユーザーインターフェイスのレイアウト、その表示方法、機能などを更新します。カスタマイズでは以下のうちの 1 つ以上を更新します。
 
@@ -39,9 +39,9 @@ AEM Forms Workspace では、幅広く様々なカスタマイズをサポート
 
 AEM Forms Workspace の表示方法、レイアウト、およびその他のプレゼンテーションセマンティックを変更できます。CSS、HTML テンプレートおよび JavaScript™ ファイルをカスタマイズすることによって、Workspace を変更します。すべてのデフォルトファイルはデフォルトのインストレーションで提供されます。
 
-The most commonly applicable steps are covered in [Generic steps for AEM Forms workspace customization](../../forms/using/generic-steps-html-workspace-customization.md). 詳細な手順を含む、カスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+最も一般的な手順は、[AEM Formsワークスペースのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)で説明しています。 詳細な手順を含む、カスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
-#### スタイルシートの理解 {#understanding-the-style-sheet}
+#### スタイルシートの理解  {#understanding-the-style-sheet}
 
 Workspace をカスタマイズする前に、/libs/ws/css/style.css にある AEM Forms 付属のデフォルトスタイルシートを理解しておいてください。
 
@@ -128,9 +128,9 @@ CSS カスタマイズのためのトップレベルの手順を以下に示し�
 
 * CSS ファイルを作成します。
 * この CSS にスタイルアイテムを追加します。詳細については、「CSS スタイルについて」を参照してください。
-* Update its references in `html.jsp`.
+* `html.jsp`の参照を更新します。
 
-For the exact steps to do these customizations, see [Generic steps for AEM Forms workspace customization](../../forms/using/generic-steps-html-workspace-customization.md). AEM Formsワークスペースに付属のCSSファイルは、/libs/ws/css/にあります。 CSS 関連のカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+これらのカスタマイズを行う正確な手順については、[AEM Formsワークスペースのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)を参照してください。 AEM Formsワークスペースに付属のCSSファイルは、/libs/ws/css/にあります。 CSS 関連のカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
 #### 画像 {#image}
 
@@ -143,7 +143,7 @@ AEM Formsのワークスペースをカスタマイズして、ユーザーの�
 * 追加した画像に対応する新しいスタイルを追加します。
 * `html.jsp` ファイル内の新しい CSS ファイルにリンクします。
 
-To get started with customizing the images in AEM Forms workspace, follow the [Generic steps for AEM Forms workspace customization](../../forms/using/generic-steps-html-workspace-customization.md). 画像に関係するカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+AEM Formsワークスペースの画像のカスタマイズを開始するには、[AEM Formsワークスペースのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従います。 画像に関係するカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
 #### HTML テンプレート {#html-template}
 
@@ -157,7 +157,7 @@ HTML テンプレートをカスタマイズするためのトップレベルの
 
 このようなカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。カスタマイズするテンプレートに応じて、[Ship パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)または [Dev パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)のいずれかを選択します。
 
-### セマンティックの変更 {#semantic-changes}
+### セマンティックの変更  {#semantic-changes}
 
 AEM Formsワークスペースの機能を変更するには、JavaScriptソースコードを変更します。 コア機能の変更は、セマンティックの変更としてラベル付けされます。AEM Forms Workspace のソースコードの一部として、モデル、ビュー、およびテンプレートを変更します。
 
@@ -170,24 +170,24 @@ AEM Formsワークスペースの機能を変更するには、JavaScriptソー�
 
 ソースコードの一部であるコンポーネントに関する概念的詳細については、「[再利用可能なコンポーネントの詳細](/help/forms/using/description-reusable-components.md)」を参照してください。これらのカスタマイズの場合は、Dev パッケージを使用します。
 
-### 再利用可能なコンポーネント {#reusable-components}
+### 再利用可能なコンポーネント  {#reusable-components}
 
 AEM Formsワークスペースはコンポーネントベースのソフトウェアなので、簡単にカスタマイズして再利用できます。 Workspace コンポーネントを Web アプリケーションで容易に統合できます。
 
-For more conceptual information, see the [Description of reusable components](/help/forms/using/description-reusable-components.md) and for instruction about using the components, see [Integrating AEM Forms workspace components in web applications](/help/forms/using/description-reusable-components.md).
+概念的な情報については、「[再利用可能なコンポーネントの説明](/help/forms/using/description-reusable-components.md)」を参照してください。コンポーネントの使用方法については、「[WebアプリケーションでのAEM Formsワークスペースコンポーネントの統合](/help/forms/using/description-reusable-components.md)」を参照してください。
 
 ## AEM Forms Workspace コードの構築 {#building-html-workspace-code}
 
 ### SDK パッケージ {#sdk-package}
 
-パッケージには AEM Forms Workspace のソースコードが含まれます。パッケージは、で入手でき `[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`ます。
+パッケージには AEM Forms Workspace のソースコードが含まれます。パッケージは`[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`で入手できます。
 
 これは主としてカスタマイズ向けで、
 
 * Ship、Debug、および Dev プロファイルの CRX パッケージ（下記の [CRX パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)に記載しています）
 * カスタマイズされたコードの縮小バージョン（セマンティックの変更用）
 
-#### WS コンテンツ {#ws-content}
+#### WS コンテンツ  {#ws-content}
 
 * client-pkg:
 
@@ -233,9 +233,9 @@ For more conceptual information, see the [Description of reusable components](/h
 
 
 
-### CRX パッケージ {#crx-package}
+### CRX パッケージ  {#crx-package}
 
-CRX パッケージは CRX™ リポジトリにデプロイすることができます。It is available at `[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`.
+CRX パッケージは CRX™ リポジトリにデプロイすることができます。`[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`で入手できます。
 
 このパッケージは、以下の 3 つのプロフィルを使用して構築することができます。
 
@@ -245,7 +245,7 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 | Debug プロファイル | このプロファイルは、適度に効率的な CRX パッケージを作成します。このパッケージのサイズは、Ship プロファイルを使用して作成したパッケージよりも若干大きくなります。このパッケージにはほとんどの JavaScript ファイルが単一の JS ファイルに結合されています。 | このプロファイルはデバッグに使用します。 |
 | Dev プロファイル | このプロファイルは、最も大きなサイズの CRX パッケージを作成します。すべての JavaScript ファイルは SDK パッケージ内にあるため、別々に入手することができます。 | セマンティックの変更を組み込む場合はこのプロファイルを使用します。 |
 
-#### Ship プロファイル {#ship-profile}
+#### Ship プロファイル  {#ship-profile}
 
 #### Command {#command}
 
@@ -292,7 +292,7 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 
 #### Debug プロファイル {#debug-profile}
 
-#### Command {#command-1}
+#### コマンド{#command-1}
 
 * client-pkg への mvn clean -P Debug install
 * Debug プロファイルコマンド実行は 64 ビット JVM でのみ機能します。
@@ -337,11 +337,11 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 
 #### Dev プロファイル {#dev-profile}
 
-#### Command {#command-2}
+#### コマンド{#command-2}
 
 client-pkg への mvn clean -P Dev install
 
-#### WS コンテンツ {#ws-content-3}
+#### WS コンテンツ  {#ws-content-3}
 
 * css - style.css、ie.css および jqueri-ui.css を含みます。
 * images - すべての画像を含みます。
