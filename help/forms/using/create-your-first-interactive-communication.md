@@ -50,9 +50,9 @@ ht-degree: 88%
 ## 前提条件 {#prerequisites}
 
 * AEM オーサーインスタンスを設定します。
-* Install [AEM Forms add-on](/help/forms/using/installing-configuring-aem-forms-osgi.md) on author instance
+* 作成者インスタンスに[AEM Formsアドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md)をインストール
 * MySQL データベースを設定します。
-* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。Examples in the tutorial are based on MySQL database and use Oracle&#39;s [MySQL JDBC database driver](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。チュートリアルの例はMySQLデータベースに基づいており、Oracleの[MySQL JDBCデータベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
 
 ## 手順 1：インタラクティブ通信の計画 {#step-plan-the-interactive-communication}
 
@@ -76,7 +76,7 @@ ht-degree: 88%
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-フォームデータモデルにより、インタラクティブ通信を複数の異なるデータソースに接続することができます。例えば、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、関連データベースなどに接続することができます。フォームデータモデルは、接続されたデータソースで使用可能なビジネスエンティティとサービスの統一されたデータ表現スキーマです。フォームデータモデルをインタラクティブ通信とともに使用すると、接続されたデータソースからデータを取得することができます。For more information about form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+フォームデータモデルにより、インタラクティブ通信を複数の異なるデータソースに接続することができます。例えば、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、関連データベースなどに接続することができます。フォームデータモデルは、接続されたデータソースで使用可能なビジネスエンティティとサービスの統一されたデータ表現スキーマです。フォームデータモデルをインタラクティブ通信とともに使用すると、接続されたデータソースからデータを取得することができます。フォームデータモデルについて詳しくは、「[AEM Formsデータ統合](/help/forms/using/data-integration.md)」を参照してください。
 
 **ゴール:**
 
