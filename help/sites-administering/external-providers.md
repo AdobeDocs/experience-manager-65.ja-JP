@@ -57,9 +57,9 @@ _gaq.push(['_trackPageview']);
 
 >[!CAUTION]
 >
->The Geometrixx-Outdoors demo site is configured so that the attributes provided in the Page Properties are appended to the html source code (just above the `</html>` endtag) in the corresponding `js` script.
+>Geometrixx — アウトドアデモサイトは、ページプロパティで指定された属性が、対応する`js`スクリプトのhtmlソースコード（`</html>`endtagのすぐ上）に追加されるように設定されています。
 >
->If your own `/apps` do not inherit from the default page component ( `/libs/foundation/components/page`) you (or your developers) have to make sure that the corresponding `js` scripts are included, for example by either including `cq/cloudserviceconfigs/components/servicescomponents`, or using a similar mechanism.
+>独自の`/apps`がデフォルトのページコンポーネント(`/libs/foundation/components/page`)を継承しない場合は、`cq/cloudserviceconfigs/components/servicescomponents`を含めるか、類似のメカニズムを使用して、（または開発者が）対応する`js`スクリプトが含まれていることを確認する必要があります。
 >
 >これをしないと、どのサービス（汎用、Analytics、Target など）も機能しません。
 
@@ -94,7 +94,7 @@ _gaq.push(['_trackPageview']);
    ![](assets/analytics_selectservice.png)
 
 1. 「**OK**」をクリックして保存します。
-1. 「**クラウドサービス**」タブに戻されます。The **Generic Analytics Snippet** is now listed with the message `Configuration reference missing`. ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
+1. 「**クラウドサービス**」タブに戻されます。**一般的なAnalyticsスニペット**&#x200B;がメッセージ`Configuration reference missing`と共に一覧表示されます。 ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
 
    ![](assets/analytics_selectspecificservice.png)
 
