@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 workflow-type: tm+mt
 source-wordcount: '969'
-ht-degree: 80%
+ht-degree: 81%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 80%
 
 ページ情報を取得するには、JSON 形式のページメタデータを取得するための要求を PageInfo サーブレットに送信します。
 
-PageInfoサーブレットは、リポジトリ内のリソースに関する情報を返します。 The servlet is bound to the URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` and uses the `path` parameter to identify the resource. The following example URL returns information about the `/content/we-retail/us/en` node:
+PageInfoサーブレットは、リポジトリ内のリソースに関する情報を返します。 サーブレットはURL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json`にバインドされ、`path`パラメーターを使用してリソースを識別します。 次の例のURLは、`/content/we-retail/us/en`ノードに関する情報を返します。
 
 ```shell
 http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retail/us/en
@@ -34,7 +34,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >
 >* 単一ページアプリケーション
 >* ネイティブモバイルアプリケーション
->* AEM外部のその他のチャネルおよびタッチポイント
+>* AEM の外部の他のチャネルおよびタッチポイント
 
 >
 >
@@ -55,9 +55,9 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >
 >JSON 形式の情報のリストを更新するには、PageInfoProvider と同様に ListInfoProvider を使用してください。（[Web サイト管理コンソールのカスタマイズ](/help/sites-developing/customizing-siteadmin.md)を参照。）
 
-## デフォルトのページ情報プロバイダー {#default-page-information-providers}
+## デフォルトのページ情報プロバイダー  {#default-page-information-providers}
 
-The `/libs/foundation/components/page` component is associated with the following PageInfoProvider services:
+`/libs/foundation/components/page`コンポーネントは、次のPageInfoProviderサービスに関連付けられています。
 
 * **デフォルトのページステータスプロバイダー：**&#x200B;ページステータスに関する情報。例えば、ページのロックの有無、ページがアクティブワークフローのペイロードであるかどうか、ページで使用できるワークフローなど。
 * **ライブ関係情報プロバイダー：**&#x200B;マルチサイト管理（MSM）に関する情報。例えば、ページがブループリントの一部であるかどうか、ページがライブコピーであるかどうかなど。
@@ -67,7 +67,7 @@ The `/libs/foundation/components/page` component is associated with the followin
 * **エミュレーター情報プロバイダー：**&#x200B;このリソースで使用可能なモバイルデバイスエミュレーターに関する情報。ページコンポーネントがモバイルページをレンダリングしない場合、エミュレーターは使用できません。
 * **注釈情報プロバイダー：**&#x200B;ページ上の注釈に関する情報。
 
-For example, the PageInfo servlet returns the following JSON response for the `/content/we-retail/us/en` node:
+例えば、PageInfoサーブレットは`/content/we-retail/us/en`ノードに対して次のJSON応答を返します。
 
 ```
 {
@@ -481,7 +481,7 @@ Day CQ WCMワークフローパッケージ情報プロバイダーサービス�
 >サイドキックの「ワークフロー」タブでは、PageInfo サーブレットを使用して、ワークフローパッケージのリストが取得されます。このリストから、現在のページを追加するパッケージを選択できます。このリストは、ユーザーが作成したフィルターの影響を受けます。
 
 
-The ID of the service is `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. フィルターを作成するには、`workflowpackageinfoprovider.filter` プロパティの値を指定します。
+サービスのIDは`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`です。 フィルターを作成するには、`workflowpackageinfoprovider.filter` プロパティの値を指定します。
 
 プロパティの値の前には、+ または - の文字があり、その後にパッケージのパスが続きます。
 
@@ -520,7 +520,7 @@ The ID of the service is `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvid
 
 1. プロジェクトソースで AEM アプリケーションの config フォルダーを探すか、作成します。
 
-   For example, if you used the multimodule archetype of the Content Package Maven Plugin to create your project, the folder path is `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`.
+   例えば、コンテンツパッケージMavenプラグインのマルチモジュールアーキタイプを使用してプロジェクトを作成した場合、フォルダーパスは`<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`になります。
 1. config フォルダー内に com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml という名前のテキストファイルを作成します。
 1. このファイルに次のテキストをコピーします。
 
@@ -532,21 +532,21 @@ The ID of the service is `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvid
     workflowpackageinfoprovider.filter="[]"/>
    ```
 
-1. Inside the brackets (`[]`) that surround the `workflowpackageinfoprovider.filter` property, type a comma-separated list of filter values similar to the following example:
+1. `workflowpackageinfoprovider.filter`プロパティを囲む角括弧(`[]`)内に、次の例のようなフィルター値のカンマ区切りリストを入力します。
 
    `workflowpackageinfoprovider.filter="[-/etc/workflow/packages(/.*)?,+/etc/workflow/packages/Editions(/.*)?]"/>`
 
 1. ファイルを保存します。
 
-## ページ情報プロバイダーの作成 {#creating-a-page-information-provider}
+## ページ情報プロバイダーの作成  {#creating-a-page-information-provider}
 
 アプリケーションが簡単に取得可能なページメタデータを追加するためにカスタムページ情報プロバイダーサービスを作成します。
 
 1. `com.day.cq.wcm.api.PageInfoProvider` インターフェイスを実装します。
 1. クラスをバンドルし、OSGi サービスとしてデプロイします。
-1. アプリケーションのページコンポーネントを作成します。プロパティ `foundation/components/page` の値として使用し `sling:resourceSuperType` ます。
+1. アプリケーションのページコンポーネントを作成します。`foundation/components/page`を`sling:resourceSuperType`プロパティの値として使用します。
 
-1. Add a node below the component node named `cq:infoProviders`.
+1. &lt;a0追加/>という名前のコンポーネントノードの下のノード。`cq:infoProviders`
 1. `cq:infoProviders` ノードの下に、PageInfoProvider サービスのノードを追加します。ノードには、任意の名前を指定できます。
 1. PageInfoProvider ノードに次のプロパティを追加します。
 
@@ -609,7 +609,7 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
-The PageUrlInfoProvider service returns the following data for the `/content/we-retail/us/en` node:
+PageUrlInfoProviderサービスは、`/content/we-retail/us/en`ノードに対して次のデータを返します。
 
 ```xml
 "URLs": {
