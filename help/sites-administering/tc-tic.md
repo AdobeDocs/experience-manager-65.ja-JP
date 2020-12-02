@@ -26,7 +26,7 @@ ht-degree: 80%
 * 翻訳統合フレームワーク設定を作成します。
 * クラウド設定をページに関連付けます。
 
-For an overview of the content translation features in AEM, see [Translating Content for Multilingual Sites](/help/sites-administering/translation.md).
+AEMのコンテンツ翻訳機能の概要については、[多言語サイト用のコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
 ## 翻訳サービスプロバイダーへの接続 {#connecting-to-a-translation-service-provider}
 
@@ -63,7 +63,7 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 
 接続の設定が完了したら、その接続を使用する翻訳統合フレームワーク設定を作成できます。
 
-## 翻訳統合フレームワーク設定の作成 {#creating-a-translation-integration-configuration}
+## 翻訳統合フレームワーク設定の作成  {#creating-a-translation-integration-configuration}
 
 翻訳統合フレームワーク設定を作成して、コンテンツの翻訳方法を指定します。この設定には以下の情報が含まれます。
 
@@ -75,7 +75,7 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 
 Web サイトのセクションごとに翻訳要件が異なる場合は、それに応じて複数のフレームワーク設定を作成します。例えば、多言語の Web サイトに英語、スペイン語、日本語の言語コピーが含まれているとします。サイトの所有者は、スペイン語と日本語の翻訳のために 2 つの異なる翻訳サービスプロバイダーを使用します。そのため、フレームワークの設定が 2 つ指定されます。使用する翻訳サービスプロバイダーは設定ごとに異なります。
 
-After you configure a translation integration framework, you can [associate it with the pages](/help/sites-administering/tc-prep.md) that use it.
+翻訳統合フレームワークを設定したら、それを使用するページ](/help/sites-administering/tc-prep.md)に[関連付けることができます。
 
 **注意：** AEM のコンテンツ翻訳機能の概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
@@ -128,7 +128,7 @@ After you configure a translation integration framework, you can [associate it w
  </tbody>
 </table>
 
-### 「コミュニティ」の設定プロパティ {#communities-configuration-properties}
+### 「コミュニティ」の設定プロパティ  {#communities-configuration-properties}
 
 「コミュニティ」のプロパティは、ユーザー生成コンテンツの翻訳を実行する方法を制御します。ユーザー生成コンテンツの翻訳では常に機械翻訳を使用します。詳しくは、[ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
 
@@ -136,11 +136,11 @@ After you configure a translation integration framework, you can [associate it w
 |---|---|
 | 翻訳プロバイダー | 翻訳を実行する翻訳プロバイダーを選択します。クラウド設定の作成対象となるプロバイダーがリストに表示されます。 |
 | コンテンツのカテゴリ | 変換するコンテンツを説明するカテゴリ。カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。 |
-| グローバル共有ストアとして使用するロケールを選択 | (Optional) By selecting a locale for storing UGC, posts from all language copies will appear in one global conversation. By convention, choose the locale for the [base language](/help/communities/sites-console.md#translation) for the website. Choosing No Common Store will disable global translation. By default, global translation is disabled. |
+| グローバル共有ストアとして使用するロケールを選択 | （オプション）UGCを保存するロケールを選択すると、すべての言語コピーの投稿が1つのグローバル会話で表示されます。規則に従って、Webサイトの[基本言語](/help/communities/sites-console.md#translation)のロケールを選択します。「共通ストアなし」を選択すると、グローバル翻訳が無効になります。デフォルトでは、グローバル翻訳は無効になっています。 |
 
 ### 「アセット」の設定プロパティ{#assets-configuration-properties}
 
-Assets properties control how to configure assets. For more information about translating assets, see [Creating Language Copies for Assets](/help/assets/translation-projects.md).
+アセットプロパティは、アセットの設定方法を制御します。アセットの変換について詳しくは、[アセットの言語コピーの作成](/help/assets/translation-projects.md)を参照してください。
 
 <table>
  <tbody>
@@ -193,7 +193,7 @@ Assets properties control how to configure assets. For more information about tr
 1. 設定の名前を入力して、「作成」をクリックまたはタップします。
 1. 「サイト」、「コミュニティ」および「アセット」の各タブのプロパティを設定して、「OK」をクリックまたはタップします。
 
-## 翻訳するページの設定 {#configuring-pages-for-translation}
+## 翻訳するページの設定  {#configuring-pages-for-translation}
 
 ソースページを他の言語に翻訳するように設定するには、そのページを次のクラウド設定に関連付けます。
 
@@ -206,7 +206,7 @@ Assets properties control how to configure assets. For more information about tr
 
 必要に応じて、子ページの関連付けを上書きできます。例えば、Web サイトのコンテンツがほとんど衣料品に関するものだとします。しかし、ページの 1 つのブランチには企業の説明が記述されています。サイトのルートページは、「衣料品」カテゴリを使用して、機械翻訳を指定する翻訳統合フレームワークに関連付けられます。企業の説明が記述されているブランチでは、「一般」カテゴリを使用して、機械翻訳を実行するフレームワークを使用します。
 
-Further, for any communities [SCF components](/help/communities/scf.md) on the pages, the user generated content (UGC) will include the ability for users to translate content. For more information, see [Translation of User Generated Content](/help/communities/translate-ugc.md).
+また、ページ上のコミュニティ[SCFコンポーネント](/help/communities/scf.md)では、ユーザ生成コンテンツ(UGC)にコンテンツの翻訳機能が含まれます。詳しくは、[ユーザー生成コンテンツの変換](/help/communities/translate-ugc.md)を参照してください。
 
 ### 翻訳プロバイダーへのページの関連付け {#associating-a-page-with-a-translation-provider}
 
@@ -217,7 +217,7 @@ Further, for any communities [SCF components](/help/communities/scf.md) on the p
 1. 設定を追加／翻訳統合をクリックまたはタップします。
 1. 使用する翻訳プロバイダーを選択して、「完了」をクリックまたはタップします。
 
-### 翻訳統合フレームワークへのページの関連付け {#associating-pages-with-a-translation-integration-framework}
+### 翻訳統合フレームワークへのページの関連付け  {#associating-pages-with-a-translation-integration-framework}
 
 ページおよび子ページの翻訳を実行する方法を定義する翻訳統合フレームワークにページを関連付けます。
 
