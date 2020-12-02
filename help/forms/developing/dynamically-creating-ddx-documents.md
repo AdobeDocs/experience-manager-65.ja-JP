@@ -19,11 +19,11 @@ ht-degree: 4%
 ---
 
 
-# DDXドキュメントの動的な作成 {#dynamically-creating-ddx-documents}
+# DDXドキュメントの動的な作成{#dynamically-creating-ddx-documents}
 
-Assembler操作の実行に使用できるDDXドキュメントを動的に作成できます。 DDXドキュメントを動的に作成すると、実行時に取得したDDXドキュメントの値を使用できます。 DDXドキュメントを動的に作成するには、使用しているプログラミング言語に属するクラスを使用します。 例えば、Javaを使用してクライアントアプリケーションを開発する場合は、 `org.w3c.dom.*`パッケージに属するクラスを使用します。 同様に、Microsoft .NETを使用している場合は、 `System.Xml` 名前空間に属するクラスを使用します。
+Assembler操作の実行に使用できるDDXドキュメントを動的に作成できます。 DDXドキュメントを動的に作成すると、実行時に取得したDDXドキュメントの値を使用できます。 DDXドキュメントを動的に作成するには、使用しているプログラミング言語に属するクラスを使用します。 例えば、Javaを使用してクライアントアプリケーションを開発する場合は、`org.w3c.dom.*`パッケージに属するクラスを使用します。 同様に、Microsoft .NETを使用している場合は、`System.Xml`名前空間に属するクラスを使用します。
 
-DDXドキュメントをAssemblerサービスに渡す前に、XMLをインスタンスからイ `org.w3c.dom.Document` ンスタンスに変換し `com.adobe.idp.Document` ます。 Webサービスを使用している場合は、XMLの作成に使用したデータ型(例えば、 `XmlDocument`)のXMLを `BLOB` インスタンスに変換します。
+DDXドキュメントをAssemblerサービスに渡す前に、XMLを`org.w3c.dom.Document`インスタンスから`com.adobe.idp.Document`インスタンスに変換します。 Webサービスを使用している場合は、XMLの作成に使用したデータ型（例えば、`XmlDocument`）のXMLを`BLOB`インスタンスに変換します。
 
 この説明では、次のDDXドキュメントが動的に作成されると仮定します。
 
@@ -40,13 +40,13 @@ DDXドキュメントをAssemblerサービスに渡す前に、XMLをインス�
 
 >[!NOTE]
 >
->For more information about the Assembler service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Assemblerサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
 >[!NOTE]
 >
->DDXドキュメントについて詳しくは、『 [Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)』を参照してください。
+>DDXドキュメントについて詳しくは、「[Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)」を参照してください。
 
-## 手順の概要 {#summary-of-steps}
+## 手順{#summary-of-steps}の概要
 
 動的に作成されたDDXドキュメントを使用してPDFドキュメントをディスアセンブリするには、次のタスクを実行します。
 
@@ -76,11 +76,11 @@ DDXドキュメントをAssemblerサービスに渡す前に、XMLをインス�
 
 **DDXドキュメントの作成**
 
-使用しているプログラミング言語を使用して、DDXドキュメントを作成します。 PDF要素をディスアセンブリするDDXドキュメントを作成するには、ドキュメントに `PDFsFromBookmarks` 要素が含まれていることを確認します。 Java APIを使用している場合、DDXドキュメントの作成に使用するデータタイプを `com.adobe.idp.Document` インスタンスに変換します。 Webサービスを使用している場合は、データ型を `BLOB` インスタンスに変換します。
+使用しているプログラミング言語を使用して、DDXドキュメントを作成します。 PDFドキュメントをディスアセンブリするDDXドキュメントを作成するには、`PDFsFromBookmarks`要素が含まれていることを確認します。 Java APIを使用している場合、DDXドキュメントの作成に使用するデータタイプを`com.adobe.idp.Document`インスタンスに変換します。 Webサービスを使用している場合は、データ型を`BLOB`インスタンスに変換します。
 
 **DDXドキュメントの変換**
 
-クラスを使用して作成されたDDXドキュメントは、 `org.w3c.dom` オブジェクトに変換する必要があり `com.adobe.idp.Document` ます。 Java APIを使用する場合にこのタスクを実行するには、Java XML変換クラスを使用します。 Webサービスを使用している場合は、DDXドキュメントを `BLOB` オブジェクトに変換します。
+`org.w3c.dom`クラスを使用して作成されたDDXドキュメントは、`com.adobe.idp.Document`オブジェクトに変換する必要があります。 Java APIを使用する場合にこのタスクを実行するには、Java XML変換クラスを使用します。 Webサービスを使用している場合は、DDXドキュメントを`BLOB`オブジェクトに変換します。
 
 **PDFドキュメントの参照によるディスアセンブリ**
 
@@ -88,11 +88,11 @@ PDFドキュメントをディスアセンブリするには、ディスアセ�
 
 **実行時オプションの設定**
 
-ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 実行時オプションを設定するには、 `AssemblerOptionSpec` オブジェクトを使用します。
+ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 実行時オプションを設定するには、`AssemblerOptionSpec`オブジェクトを使用します。
 
 **PDFドキュメントのディスアセンブリ**
 
-操作を呼び出して、PDFドキュメントをディスアセンブリ `invokeDDX` します。 動的に作成されたDDXドキュメントを渡します。 Assemblerサービスは、コレクションオブジェクト内で分解されたPDFドキュメントを返します。
+`invokeDDX`操作を呼び出して、PDFドキュメントをディスアセンブリします。 動的に作成されたDDXドキュメントを渡します。 Assemblerサービスは、コレクションオブジェクト内で分解されたPDFドキュメントを返します。
 
 **アセンブル解除されたPDFドキュメントの保存**
 
@@ -110,7 +110,7 @@ PDFドキュメントをディスアセンブリするには、ディスアセ�
 
 [プログラムによるPDFドキュメントのディスアセンブリ](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
 
-## Java APIを使用したDDXドキュメントの動的な作成 {#dynamically-create-a-ddx-document-using-the-java-api}
+## Java API {#dynamically-create-a-ddx-document-using-the-java-api}を使用したDDXドキュメントの動的な作成
 
 DDXドキュメントを動的に作成し、Assembler Service API(Java)を使用してPDFドキュメントをディスアセンブリします。
 
@@ -121,68 +121,68 @@ DDXドキュメントを動的に作成し、Assembler Service API(Java)を使�
 1. PDFアセンブラクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `AssemblerServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`AssemblerServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. DDXドキュメントを作成します
 
-   * クラスのメソッドを呼び出して、Java `DocumentBuilderFactory` オブジェクトを作成し `DocumentBuilderFactory` ま `newInstance` す。
-   * オブジェクトの `DocumentBuilder` メソッドを呼び出して、Java `DocumentBuilderFactory``newDocumentBuilder` オブジェクトを作成します。
-   * オブジェクトの `DocumentBuilder` メソッドを呼び出して、オブジ `newDocument``org.w3c.dom.Document` ェクトをインスタンス化します。
-   * オブジェクトのメソッドを呼び出して、DDXドキュメントのル `org.w3c.dom.Document` ートエレメントを作成し `createElement` ます。 このメソッドは、ルート要素を表す `Element` オブジェクトを作成します。 要素の名前を表すstring値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。次に、子要素の `setAttribute` メソッドを呼び出して、子要素の値を設定します。 最後に、ヘッダー要素の `appendChild` メソッドを呼び出して要素をヘッダー要素に追加し、子要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `DocumentBuilderFactory`クラス’ `newInstance`メソッドを呼び出して、Java `DocumentBuilderFactory`オブジェクトを作成します。
+   * `DocumentBuilderFactory`オブジェクトの`newDocumentBuilder`メソッドを呼び出して、Java `DocumentBuilder`オブジェクトを作成します。
+   * `DocumentBuilder`オブジェクトの`newDocument`メソッドを呼び出して、`org.w3c.dom.Document`オブジェクトをインスタンス化します。
+   * `org.w3c.dom.Document`オブジェクトの`createElement`メソッドを呼び出して、DDXドキュメントのルートエレメントを作成します。 このメソッドは、ルート要素を表す`Element`オブジェクトを作成します。 要素名を表す文字列値を`createElement`メソッドに渡します。 戻り値を `Element` にキャストします。次に、子要素の`setAttribute`メソッドを呼び出して、値を設定します。 最後に、ヘッダー要素の`appendChild`メソッドを呼び出して要素をヘッダー要素に追加し、子要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
       ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
-   * オブジェクトの `PDFsFromBookmarks` メソッドを呼び出して、 `Document` 要素を作成し `createElement` ます。 要素の名前を表すstring値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。要素の `PDFsFromBookmarks``setAttribute` メソッドを呼び出して、要素の値を設定します。 DDX要素の `PDFsFromBookmarks` メソッドを呼び出して、 `DDX``appendChild` 要素に要素を追加します。 要素オブジェクトを引数として渡し `PDFsFromBookmarks` ます。 次のコード行に、このアプリケーションロジックを示します。
+   * `Document`オブジェクトの`createElement`メソッドを呼び出して、`PDFsFromBookmarks`要素を作成します。 要素名を表す文字列値を`createElement`メソッドに渡します。 戻り値を `Element` にキャストします。`PDFsFromBookmarks`要素の値を設定するには、`setAttribute`メソッドを呼び出します。 DDX要素の`appendChild`メソッドを呼び出して、`PDFsFromBookmarks`要素を`DDX`要素に追加します。 `PDFsFromBookmarks`要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
 
       ` Element PDFsFromBookmarks = (Element)document.createElement("PDFsFromBookmarks");  PDFsFromBookmarks.setAttribute("prefix","stmt");  root.appendChild(PDFsFromBookmarks);`
 
-   * オブジェクトの `PDF` メソッドを呼び出して、 `Document` 要素を作成し `createElement` ます。 要素名を表すstring値を渡します。 戻り値を `Element` にキャストします。要素の `PDF``setAttribute` メソッドを呼び出して、要素の値を設定します。 要素の `PDF` メソッドを呼び出して、要素 `PDFsFromBookmarks` を `PDFsFromBookmarks``appendChild` 要素に追加します。 要素オブジェクトを引数として渡し `PDF` ます。 次のコード行に、このアプリケーションロジックを示します。
+   * `Document`オブジェクトの`createElement`メソッドを呼び出して、`PDF`要素を作成します。 要素名を表すstring値を渡します。 戻り値を `Element` にキャストします。`PDF`要素の値を設定するには、`setAttribute`メソッドを呼び出します。 `PDFsFromBookmarks`要素の`appendChild`メソッドを呼び出して、`PDF`要素を`PDFsFromBookmarks`要素に追加します。 `PDF`要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
 
       ` Element PDF = (Element)document.createElement("PDF");  PDF.setAttribute("source","AssemblerResultPDF.pdf");  PDFsFromBookmarks.appendChild(PDF);`
 
 1. DDXドキュメントを変換します。
 
-   * オブジェクトのスタティック `javax.xml.transform.Transformer` メソッドを呼び出して、 `javax.xml.transform.Transformer``newInstance` オブジェクトを作成します。
-   * オブジェクトの `Transformer` メソッドを呼び出して、 `TransformerFactory` オブジェクトを作成 `newTransformer` します。
+   * `javax.xml.transform.Transformer`オブジェクトの静的`newInstance`メソッドを呼び出して、`javax.xml.transform.Transformer`オブジェクトを作成します。
+   * `TransformerFactory`オブジェクトの`newTransformer`メソッドを呼び出して、`Transformer`オブジェクトを作成します。
    * コンストラクタを使用して `ByteArrayOutputStream` オブジェクトを作成します。
-   * コンストラクタを使用して `javax.xml.transform.dom.DOMSource` オブジェクトを作成します。DDXドキュメントを表す `org.w3c.dom.Document` オブジェクトを渡します。
+   * コンストラクタを使用して `javax.xml.transform.dom.DOMSource` オブジェクトを作成します。DDXドキュメントを表す`org.w3c.dom.Document`オブジェクトを渡します。
    * コンストラクタを使用して `javax.xml.transform.dom.DOMSource` オブジェクトを渡すことによって、`ByteArrayOutputStream` オブジェクトを作成します。
-   * オブジェクトの `ByteArrayOutputStream` メソッドを呼び出して、Java `javax.xml.transform.Transformer``transform` オブジェクトを入力します。 お `javax.xml.transform.dom.DOMSource` よびオブジェクトを渡 `javax.xml.transform.stream.StreamResult` します。
-   * バイト配列を作成し、 `ByteArrayOutputStream` オブジェクトのサイズをバイト配列に割り当てます。
-   * オブジェクトのメソッドを呼び出して、 `ByteArrayOutputStream` バイト配列を設定し `toByteArray` ます。
-   * Create a `com.adobe.idp.Document` object by using its constructor and passing the byte array.
+   * `javax.xml.transform.Transformer`オブジェクトの`transform`メソッドを呼び出して、Java `ByteArrayOutputStream`オブジェクトを入力します。 `javax.xml.transform.dom.DOMSource`および`javax.xml.transform.stream.StreamResult`オブジェクトを渡します。
+   * バイト配列を作成し、`ByteArrayOutputStream`オブジェクトのサイズをバイト配列に割り当てます。
+   * `ByteArrayOutputStream`オブジェクトの`toByteArray`メソッドを呼び出して、バイト配列を入力します。
+   * コンストラクタを使用し、バイト配列を渡して`com.adobe.idp.Document`オブジェクトを作成します。
 
 1. ディスアセンブリするPDFドキュメントの参照
 
-   * コンストラクターを使用して、入力PDFドキュメントの格納に使用する `java.util.Map` オブジェクトを作成し `HashMap` ます。
-   * コンストラクターを使用し、ディスアセンブリするPDFドキュメントの場所を渡して、 `java.io.FileInputStream` オブジェクトを作成します。
-   * Create a `com.adobe.idp.Document` object. ディスアセンブリするPDFドキュメントを含む `java.io.FileInputStream` オブジェクトを渡します。
-   * メソッド追加を呼び出し、次の引数を渡すことによって、オブジェクトに対するエントリを作成します。 `java.util.Map``put`
+   * `HashMap`コンストラクターを使用して、入力PDFドキュメントの格納に使用する`java.util.Map`オブジェクトを作成します。
+   * コンストラクターを使用し、ディスアセンブリするPDFドキュメントの場所を渡して、`java.io.FileInputStream`オブジェクトを作成します。
+   * `com.adobe.idp.Document`オブジェクトを作成します。 ディスアセンブリするPDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡します。
+   * &lt;a0追加/>オブジェクトへのエントリ。その`java.util.Map`メソッドを呼び出し、次の引数を渡すことによって作成します。`put`
 
-      * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたPDFソース要素の値と一致する必要があります。 (動的に作成されるDDXドキュメントでは、値はです `AssemblerResultPDF.pdf`)。
-      * ディスアセンブリするPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
+      * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたPDFソース要素の値と一致する必要があります。 (動的に作成されるDDXドキュメントでは、値は`AssemblerResultPDF.pdf`です)。
+      * ディスアセンブリするPDFドキュメントが含まれる`com.adobe.idp.Document`オブジェクトです。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して渡し `false`ます。
+   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
+   * `AssemblerOptionSpec`オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、`AssemblerOptionSpec`オブジェクトの`setFailOnError`メソッドを呼び出し、`false`を渡します。
 
 1. PDFドキュメントのディスアセンブリ
 
-   オブジェクトの `AssemblerServiceClient``invokeDDX` メソッドを呼び出し、次の値を渡します。
+   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
 
-   * 動的に作成されるDDXドキュメントを表す `com.adobe.idp.Document` オブジェクトです
-   * ディスアセンブリするPDFドキュメントを含む `java.util.Map` オブジェクト
-   * デフォルトフォントやジョブログレベルなど、実行時のオプションを指定する `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` オブジェクト。
+   * 動的に作成されるDDXドキュメントを表す`com.adobe.idp.Document`オブジェクト
+   * ディスアセンブリするPDFドキュメントが含まれる`java.util.Map`オブジェクト
+   * デフォルトフォントとジョブログレベルを含む、実行時のオプションを指定する`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`オブジェクト
 
-   この `invokeDDX` メソッドは、分解されたPDFドキュメントと発生した例外が含まれる `com.adobe.livecycle.assembler.client.AssemblerResult` オブジェクトを返します。
+   `invokeDDX`メソッドは、分解されたPDFドキュメントと発生した例外を含む`com.adobe.livecycle.assembler.client.AssemblerResult`オブジェクトを返します。
 
 1. アセンブル解除されたPDFドキュメントを保存します。
 
    ディスアセンブリされたPDFドキュメントを取得するには、次の操作を実行します。
 
-   * オブジェクトの `AssemblerResult` メソッドを呼び出し `getDocuments` ます。 このメソッドは、 `java.util.Map` オブジェクトを返します。
-   * オブジェクトを繰り返し処理して、結果のオブジ `java.util.Map``com.adobe.idp.Document` ェクトを見つけます。
-   * オブジェクトの `com.adobe.idp.Document``copyToFile` メソッドを呼び出してPDFドキュメントを抽出します。
+   * `AssemblerResult`オブジェクトの`getDocuments`メソッドを呼び出します。 このメソッドは、`java.util.Map`オブジェクトを返します。
+   * `java.util.Map`オブジェクトを繰り返し処理して、結果の`com.adobe.idp.Document`オブジェクトを見つけます。
+   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出してPDFドキュメントを抽出します。
 
 **関連トピック**
 
@@ -192,86 +192,86 @@ DDXドキュメントを動的に作成し、Assembler Service API(Java)を使�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPIを使用したDDXドキュメントの動的な作成 {#dynamically-create-a-ddx-document-using-the-web-service-api}
+## WebサービスAPI {#dynamically-create-a-ddx-document-using-the-web-service-api}を使用したDDXドキュメントの動的な作成
 
 DDXドキュメントを動的に作成し、Assembler Service API（Webサービス）を使用してPDFドキュメントをディスアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 サービス参照を設定する際は、次のWSDL定義を使用してください。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 サービス参照を設定する際は、次のWSDL定義を使用してください。`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. PDFアセンブラクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `AssemblerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `AssemblerServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`AssemblerServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。
+   * `AssemblerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`AssemblerServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`AssemblerServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. DDXドキュメントを作成します
 
    * コンストラクタを使用して `System.Xml.XmlElement` オブジェクトを作成します。
-   * オブジェクトのメソッドを呼び出して、DDXドキュメントのル `XmlElement` ートエレメントを作成し `CreateElement` ます。 このメソッドは、ルート要素を表す `Element` オブジェクトを作成します。 要素の名前を表すstring値を `CreateElement` メソッドに渡します。 DDX要素の `SetAttribute` メソッドを呼び出して、その値を設定します。 最後に、 `XmlElement` オブジェクトのメソッドを呼び出して、DDXドキュメントに要素を追加し `AppendChild` ます。 DDXオブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `XmlElement`オブジェクトの`CreateElement`メソッドを呼び出して、DDXドキュメントのルートエレメントを作成します。 このメソッドは、ルート要素を表す`Element`オブジェクトを作成します。 要素名を表す文字列値を`CreateElement`メソッドに渡します。 `SetAttribute`メソッドを呼び出して、DDX要素の値を設定します。 最後に、`XmlElement`オブジェクトの`AppendChild`メソッドを呼び出して、DDXドキュメントに要素を追加します。 DDXオブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
 
       ` System.Xml.XmlElement root = ddx.CreateElement("DDX");  root.SetAttribute("xmlns", "https://ns.adobe.com/DDX/1.0/");  ddx.AppendChild(root);`
 
-   * オブジェクトの `PDFsFromBookmarks` メソッドを呼び出して、DDXドキュメントの `XmlElement``CreateElement` 要素を作成します。 要素の名前を表すstring値を `CreateElement` メソッドに渡します。 次に、その `SetAttribute` メソッドを呼び出して、要素の値を設定します。 要素の `PDFsFromBookmarks` メソッドを呼び出して、ルート要素に `DDX` 要素を追加し `AppendChild` ます。 要素オブジェクトを引数として渡し `PDFsFromBookmarks` ます。 次のコード行に、このアプリケーションロジックを示します。
+   * `XmlElement`オブジェクトの`CreateElement`メソッドを呼び出して、DDXドキュメントの`PDFsFromBookmarks`要素を作成します。 要素名を表す文字列値を`CreateElement`メソッドに渡します。 次に、`SetAttribute`メソッドを呼び出して、要素の値を設定します。 `DDX`要素の`AppendChild`メソッドを呼び出して、`PDFsFromBookmarks`要素をルート要素に追加します。 `PDFsFromBookmarks`要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
 
       ` XmlElement PDFsFromBookmarks = ddx.CreateElement("PDFsFromBookmarks");  PDFsFromBookmarks.SetAttribute("prefix", "stmt");  root.AppendChild(PDFsFromBookmarks);`
 
-   * オブジェクトの `PDF` メソッドを呼び出して、DDXドキュメントの `XmlElement``CreateElement` 要素を作成します。 要素の名前を表すstring値を `CreateElement` メソッドに渡します。 次に、子要素の `SetAttribute` メソッドを呼び出して、子要素の値を設定します。 要素の `PDF` メソッドを呼び出して、要素 `PDFsFromBookmarks` を `PDFsFromBookmarks``AppendChild` 要素に追加します。 要素オブジェクトを引数として渡し `PDF` ます。 次のコード行に、このアプリケーションロジックを示します。
+   * `XmlElement`オブジェクトの`CreateElement`メソッドを呼び出して、DDXドキュメントの`PDF`要素を作成します。 要素名を表す文字列値を`CreateElement`メソッドに渡します。 次に、子要素の`SetAttribute`メソッドを呼び出して、値を設定します。 `PDFsFromBookmarks`要素の`AppendChild`メソッドを呼び出して、`PDF`要素を`PDFsFromBookmarks`要素に追加します。 `PDF`要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
 
       ` XmlElement PDF = ddx.CreateElement("PDF");  PDF.SetAttribute("source", "AssemblerResultPDF.pdf");  PDFsFromBookmarks.AppendChild(PDF);`
 
 1. DDXドキュメントを変換します。
 
    * コンストラクタを使用して `System.IO.MemoryStream` オブジェクトを作成します。
-   * DDXドキュメントを表す `MemoryStream` オブジェクトを使用して、DDXドキュメントで `XmlElement` オブジェクトを設定します Invoke the `XmlElement` object’s `Save` method and pass the `MemoryStream` object.
-   * バイト配列を作成し、 `MemoryStream` オブジェクト内のデータを入力します。 次のコードは、このアプリケーションロジックを示しています。
+   * DDXドキュメントを表す`XmlElement`オブジェクトを使用して、`MemoryStream`オブジェクトにDDXドキュメントを入力します。 `XmlElement`オブジェクトの`Save`メソッドを呼び出し、`MemoryStream`オブジェクトを渡します。
+   * バイト配列を作成し、`MemoryStream`オブジェクト内のデータを入力します。 次のコードは、このアプリケーションロジックを示しています。
 
       ` int bufLen = Convert.ToInt32(stream.Length);  byte[] byteArray = new byte[bufLen];  stream.Position = 0;  int count = stream.Read(byteArray, 0, bufLen);`
 
-   * Create a `BLOB` object. バイト配列を `BLOB` オブジェクトの `MTOM` フィールドに割り当てます。
+   * `BLOB`オブジェクトを作成します。 バイト配列を`BLOB`オブジェクトの`MTOM`フィールドに割り当てます。
 
 1. ディスアセンブリするPDFドキュメントの参照
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、入力PDFドキュメントの保存に使用されます。 この `BLOB` オブジェクトは、引数としてに渡 `invokeOneDocument` されます。
-   * Create a `System.IO.FileStream` object by invoking its constructor. 入力PDFドキュメントーのファイルの場所と、ファイルを開くモードを表すstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、入力PDFドキュメントの保存に使用されます。 この`BLOB`オブジェクトは、`invokeOneDocument`に引数として渡されます。
+   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 入力PDFドキュメントーのファイルの場所と、ファイルを開くモードを表すstring値を渡します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`プロパティにバイト配列の内容を割り当てて入力します。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * オブジェクトに属するデータメンバに値を割り当てることで、ビジネス要件に合った実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `false` オブジェクトの `AssemblerOptionSpec``failOnError` データメンバーに割り当てます。
+   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
+   * `AssemblerOptionSpec`オブジェクトに属するデータメンバに値を割り当てて、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、`false`を`AssemblerOptionSpec`オブジェクトの`failOnError`データメンバーに割り当てます。
 
 1. PDFドキュメントのディスアセンブリ
 
-   オブジェクトの `AssemblerServiceClient``invokeDDX` メソッドを呼び出し、次の値を渡します。
+   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
 
-   * 動的に作成されるDDXドキュメントを表す `BLOB` オブジェクトです
-   * 入力PDFドキュメントを含む `mapItem` 配列
-   * 実行時オプションを指定する `AssemblerOptionSpec` オブジェクトです。
+   * 動的に作成されるDDXドキュメントを表す`BLOB`オブジェクト
+   * 入力PDFドキュメントが含まれる`mapItem`配列
+   * 実行時オプションを指定する`AssemblerOptionSpec`オブジェクト
 
-   この `invokeDDX` メソッドは、ジョブの結果と発生した例外を含む `AssemblerResult` オブジェクトを返します。
+   `invokeDDX`メソッドは、ジョブの結果と発生した例外を含む`AssemblerResult`オブジェクトを返します。
 
 1. アセンブル解除されたPDFドキュメントを保存します。
 
    新しく作成されたPDFドキュメントを取得するには、次の操作を実行します。
 
-   * オブジェクトの `AssemblerResult` フィールドにアクセスします。この `documents` フィールドは、分解されたPDFドキュメントを含む `Map` オブジェクトです。
-   * オブジェクトを繰り返し処理して、 `Map` 各結果ドキュメントを取得します。 次に、その配列メンバーをにキャスト `value` し `BLOB`ます。
-   * PDFドキュメントを表すバイナリデータを抽出するには、その `BLOB` オブジェクトの `MTOM` プロパティにアクセスします。 PDFファイルに書き出すことができるバイトの配列を返します。
+   * `AssemblerResult`オブジェクトの`documents`フィールドにアクセスします。これは、分解されたPDFドキュメントが格納されている`Map`オブジェクトです。
+   * `Map`オブジェクトを繰り返し処理して、各結果ドキュメントを取得します。 次に、その配列メンバーの`value`を`BLOB`にキャストします。
+   * `BLOB`オブジェクトの`MTOM`プロパティにアクセスして、PDFドキュメントを表すバイナリデータを抽出します。 PDFファイルに書き出すことができるバイトの配列を返します。
 
 **関連トピック**
 
