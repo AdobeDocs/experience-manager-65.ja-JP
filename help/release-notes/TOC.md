@@ -14,7 +14,7 @@ ht-degree: 45%
 ---
 
 
-# Adobe Experience Manager 6.5 Release Notes {#release-notes}
+# Adobe Experience Manager6.5リリースノート{#release-notes}
 
 + [AEM 6.5の概要](home.md)
 + [一般的なリリースノート](release-notes.md)
