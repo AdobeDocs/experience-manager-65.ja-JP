@@ -22,7 +22,7 @@ ht-degree: 79%
 
 この記事では、AEM Forms デプロイメントのボトルネックを減少しパフォーマンスを最適化するための戦略とベストプラクティスを検討します。
 
-## キャッシュ設定 {#cache-settings}
+## キャッシュ設定  {#cache-settings}
 
 AEM Web 設定コンソールの **Mobile Forms の設定**&#x200B;コンポーネントを使用して、AEM Forms のキャッシュ方法の設定と制御を行うことができます。AEM Web 設定コンソールの URL は次のとおりです。
 
@@ -49,7 +49,7 @@ AEM Forms のデフォルトキャッシュ設定は、最適なパフォーマ�
 
 ## JVM パラメーター {#jvm-parameters}
 
-For optimal performance, it is recomended to use the following JVM `init` arguments to configure the `Java heap` and `PermGen`.
+最適なパフォーマンスを得るには、次のJVM `init`引数を使用して`Java heap`と`PermGen`を設定することをお勧めします。
 
 ```shell
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
@@ -60,7 +60,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->推奨設定は、Windows 2008 R2 8コアおよびOracle HotSpot 1.7 （64ビット） JDK用で、システム設定に従って拡大または縮小する必要があります。
+>推奨設定は、Windows 2008 R2 8 CoreおよびOracleHotSpot 1.7（64ビット）JDK用で、ご使用のシステム設定に従って拡大または縮小する必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
@@ -82,7 +82,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 Apache は HTTP プロトコルを使用して CRX と情報をやり取りできます。HTTP を使用した場合に最適化される設定になっています。
 
-1. Uncomment the following module configurations in `APACHE_HOME/conf/httpd.conf` file.
+1. `APACHE_HOME/conf/httpd.conf`ファイル内の次のモジュール設定のコメントを解除します。
 
    ```shell
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -92,16 +92,16 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
    >[!NOTE]
    >
-   >For Linux, the default `APACHE_HOME` is `/etc/httpd/`.
+   >Linuxの場合、デフォルトの`APACHE_HOME`は`/etc/httpd/`です。
 
-1. crx のポート 4502 のプロキシを設定します。Add following configuration in `APACHE_HOME/conf/httpd.conf` configuration file.
+1. crx のポート 4502 のプロキシを設定します。&lt;a0/追加>構成ファイルの構成を次に示します。`APACHE_HOME/conf/httpd.conf`
 
    ```shell
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
 
-1. 圧縮を有効化します。Add following configuration in `APACHE_HOME/conf/httpd.conf` configuration file.
+1. 圧縮を有効化します。&lt;a0/追加>構成ファイルの構成を次に示します。`APACHE_HOME/conf/httpd.conf`
 
    **HTML5 フォームの場合**
 
@@ -153,24 +153,24 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 * アプリケーションサーバーの一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * (Jboss) [AEM installation directory]\jboss\standalone\tmp
+   * (Jboss)[AEM installation directory]\jboss\standalone\tmp
    * Weblogic - \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
    * Websphere - \Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
 * **（JEE 上の AEM Forms のみ）** Global Document Storage（GDS）ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * (JBoss) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
-   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
-   * (WebSphere) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
+   * (JBoss)[appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
+   * (WebLogic)[appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
+   * (WebSphere)[appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
 * **（JEE 上の AEM Forms のみ）** AEM Forms サーバーのログファイルと一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * Server logs - [AEM Forms installation directory]\Adobe\AEM forms\[app-server]\server\all\logs
-   * Temp directory - [AEM Forms installation directory]\temp
+   * サーバーログ — [AEM Formsのインストールディレクトリ]\Adobe\AEM forms\[app-server]\server\all\logs
+   * 一時ディレクトリ — [AEM Formsのインストールディレクトリ]\temp
 
 >[!NOTE]
 >
->* If you are using a different location for GDS and temporary directory, open AdminUI at `https://'[server]:[port]'/adminui`, navigate to **Home > Settings > Core System Settings > Core Configurations** to confirm the location in use.
+>* GDSと一時ディレクトリに別の場所を使用している場合は、`https://'[server]:[port]'/adminui`でAdminUIを開き、**ホーム/設定/コアシステム設定/コア設定**&#x200B;に移動して、使用している場所を確認します。
 
 * 推奨ディレクトリを除外した後でもAEM Formsサーバーの動作が遅い場合は、Java実行ファイル(java.exe)も除外します。
 
