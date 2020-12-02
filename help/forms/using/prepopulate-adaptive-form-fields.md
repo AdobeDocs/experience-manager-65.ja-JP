@@ -23,9 +23,9 @@ ht-degree: 72%
 
 既存データを使用して、アダプティブフォームのフィールドを事前入力することができます。ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。アダプティブフォームにデータを事前入力するには、アダプティブフォームの事前入力データ構造に合った形式を使用して、事前入力 XML または JSON としてユーザーデータを作成します。
 
-## Structure of prefill data {#the-prefill-structure}
+## 事前入力データの構造{#the-prefill-structure}
 
-アダプティブフォームには、連結されたフィールドと連結されていないフィールドが混在している場合があります。Bound fields are fields which are dragged from the Content Finder tab and contain non-empty `bindRef` property value in the field edit dialog. Unbound fields are dragged directly from the component browser of Sidekick and have an empty `bindRef` value.
+アダプティブフォームには、連結されたフィールドと連結されていないフィールドが混在している場合があります。連結されたフィールドは、コンテンツファインダータブからドラッグされ、フィールド編集ダイアログに空でない`bindRef`プロパティ値が含まれるフィールドです。 連結されていないフィールドは、サイドキックのコンポーネントブラウザーから直接ドラッグされ、空の`bindRef`値を持ちます。
 
 アダプティブフォームの連結されたフィールドと連結されていないフィールドの両方を事前入力できます。事前入力データには afBoundData セクションと afUnBoundData セクションが含まれており、アダプティブフォームの連結されたフィールドと連結されていないフィールドの両方を事前入力できます。`afBoundData` セクションには連結されたフィールドとパネルの事前入力データが含まれています。このデータは関連するフォームモデルスキーマに準拠している必要があります。
 
@@ -75,26 +75,27 @@ ht-degree: 72%
 }
 ```
 
-同じ bindref を持つ連結されているフィールド、または同じ名前を持つ連結されていないフィールドの場合、XML タグまたは JSON オブジェクトで指定したデータがすべてのフィールドに入力されます。For example, two fields in a form are mapped to the name `textbox` in the prefill data. ランタイム時、最初のテキストボックスに「A」が含まれる場合、この「A」が 2 番目のテキストボックスに自動的に挿入されます。このリンクは、アダプティブフォームフィールドのライブリンクと呼ばれます。
+同じ bindref を持つ連結されているフィールド、または同じ名前を持つ連結されていないフィールドの場合、XML タグまたは JSON オブジェクトで指定したデータがすべてのフィールドに入力されます。例えば、フォーム内の2つのフィールドは、事前入力データの`textbox`という名前にマップされます。 ランタイム時、最初のテキストボックスに「A」が含まれる場合、この「A」が 2 番目のテキストボックスに自動的に挿入されます。このリンクは、アダプティブフォームフィールドのライブリンクと呼ばれます。
 
 ### XFAフォームテンプレートを使用したアダプティブフォーム {#xfa-based-af}
 
 XFAベースのアダプティブフォームにおける事前入力XMLと送信済みXMLの構造は、次のとおりです。
 
-* **事前入力 XML 構造**：XFA ベースのアダプティブフォームのための事前入力 XML は、XFA フォームテンプレートのデータスキーマに準拠していなければなりません。To prefill unbound fields, wrap the prefill XML structure into `/afData/afBoundData` tag.
+* **事前入力 XML 構造**：XFA ベースのアダプティブフォームのための事前入力 XML は、XFA フォームテンプレートのデータスキーマに準拠していなければなりません。連結されていないフィールドを事前入力するには、事前入力XML構造を`/afData/afBoundData`タグに含めます。
 
 * **送信済み XML 構造**：事前入力 XML が使用されていない場合、送信済み XML の `afData` wrapper タグには、連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。事前入力 XML が使用された場合、送信済み XML は、事前入力 XML と同じ構造をしています。事前入力 XML が `afData` のルートタグで開始する場合、出力 XML もまた同じフォーマットとなります。事前入力 XML に `afData/afBoundData` のラッパーが無く、直接 `employeeData` のようなスキーマルートタグから開始する場合は、送信済み XML もまた `employeeData` タグから開始します。
 
 Prefill-Submit-Data-ContentPackage.zip
 
-[事前入力データと送信データを含むファイル](assets/prefill-submit-data-contentpackage.zip)サンプルの取得
+[事前入力データと送信データを含む](assets/prefill-submit-data-contentpackage.zip)
+FileSampleの取得
 
 ### XMLスキーマベースのアダプティブフォーム{#xml-schema-af}
 
 XML スキーマをベースとするアダプティブフォームの事前入力 XML と送信済み XML の構造は次のとおりです。
 
 * **事前入力 XML 構造**：事前入力 XML は、関連する XML スキーマに準拠していなければなりません。連結されていないフィールドを事前入力するには、事前入力 XML 構造を /afData/afBoundData タグにラップします。
-* **送信済みXML構造**:事前入力XMLが使用されない場合、送信されたXMLには、 `afData` wrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力 XML が使用された場合、送信済み XML は、事前入力 XML と同じ構造をしています。事前入力 XML が `afData` のルートタグで開始する場合、出力 XML もまた同じフォーマットとなります。事前入力 XML に `afData/afBoundData` のラッパーが無く、直接 `employeeData` のようなスキーマルートタグから開始する場合は、送信済み XML もまた `employeeData` タグから開始します。
+* **送信済みXML構造**:事前入力XMLが使用されない場合、送信されたXMLには、 `afData` wrapperタグ内の連結されたフィールドと連結されていないフィールドの両方に対するデータが含まれます。事前入力 XML が使用された場合、送信済み XML は、事前入力 XML と同じ構造をしています。事前入力 XML が `afData` のルートタグで開始する場合、出力 XML もまた同じフォーマットとなります。事前入力 XML に `afData/afBoundData` のラッパーが無く、直接 `employeeData` のようなスキーマルートタグから開始する場合は、送信済み XML もまた `employeeData` タグから開始します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -133,7 +134,7 @@ XML スキーマをモデルとするフィールドの場合、以下の XML �
 >
 >連結されているパネル（サイドキックまたは「データソース」タブからコンポーネントをドラッグして作成された、空ではない `bindRef` が含まれているパネル）では、連結されていないフィールドを使用しないことをお勧めします。これらの連結していないフィールドのデーターの損失を招くことがあります。また、フィールド名は、特に連結していないフィールドについては、フォーム間で一意のフィールド名を設定することをお勧めします。
 
-#### afData および afBoundData ラッパーがない場合の例 {#an-example-without-afdata-and-afbounddata-wrapper}
+#### afData および afBoundData ラッパーがない場合の例  {#an-example-without-afdata-and-afbounddata-wrapper}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><config>
@@ -147,7 +148,7 @@ XML スキーマをモデルとするフィールドの場合、以下の XML �
 JSON スキーマをベースとするアダプティブフォームの場合、事前入力 JSON と送信済み JSON の構造は次のようになります。詳しくは、「[JSON スキーマを使ったアダプティブフォームの作成](../../forms/using/adaptive-form-json-schema-form-model.md)」を参照してください。
 
 * **事前入力 JSON スキーマ**：事前入力 JSON は、関連する JSON スキーマに準拠していなければなりません。また、連結されていないフィールドを事前入力する場合は、オプションで、/afData/afBoundDataオブジェクトにまとめることができます。
-* **送信されたJSON構造**:事前入力JSONが使用されない場合、送信されたJSONには、afDataのwrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力JSONを使用する場合、送信されたJSONは事前入力JSONと同じ構造を持ちます。 afDataルートオブジェクトを使用して事前入力JSON開始を設定した場合、出力JSONも同じ形式になります。 事前入力JSONにafData/afBoundDataのラッパーがなく、代わりにuserなどのスキーマルートオブジェクトから直接開始が含まれていない場合、送信されたJSONもユーザーオブジェクトと開始します。
+* **送信されたJSON構造**:事前入力JSONが使用されない場合、送信されたJSONには、afDataのwrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。事前入力JSONを使用する場合、送信されたJSONは事前入力JSONと同じ構造を持ちます。 afDataルートオブジェクトを使用して事前入力JSON開始を設定した場合、出力JSONも同じ形式になります。 事前入力JSONにafData/afBoundDataのラッパーがなく、代わりにuserなどのスキーマルートオブジェクトから直接開始が含まれていない場合、送信されたJSONもユーザーオブジェクトと開始します。
 
 ```json
 {
@@ -166,7 +167,7 @@ JSON スキーマをベースとするアダプティブフォームの場合、
 }}}}}
 ```
 
-JSON スキーマモデルを使用するフィールドの場合、以下の JSON のサンプルに示すように、afBoundedData オブジェクトのデータは事前入力されます。これは、1 つ以上の連結されていないテキストフィールドでアダプティブフォームを事前入力する場合に使用できます。Below is an example of data with `afData/afBoundData` wrapper:
+JSON スキーマモデルを使用するフィールドの場合、以下の JSON のサンプルに示すように、afBoundedData オブジェクトのデータは事前入力されます。これは、1 つ以上の連結されていないテキストフィールドでアダプティブフォームを事前入力する場合に使用できます。`afData/afBoundData`ラッパーを持つデータの例を以下に示します。
 
 ```json
 {
@@ -183,7 +184,7 @@ JSON スキーマモデルを使用するフィールドの場合、以下の JS
 }}}}}}}
 ```
 
-Below is an example without `afData/afBoundData` wrapper:
+以下は`afData/afBoundData`ラッパのない例です。
 
 ```json
 {
@@ -198,9 +199,9 @@ Below is an example without `afData/afBoundData` wrapper:
 >
 >連結されているパネル（サイドキックまたは「データソース」タブからコンポーネントをドラッグして作成された、空ではない bindRef が含まれているパネル）では、連結されていないフィールドを使用することは&#x200B;**お勧めしません**。連結されていないフィールドで、データ損失が発生する可能性があるためです。特に連結していないフィールドについては、フォーム間で一意のフィールド名を設定することをお勧めします。
 
-### フォームモデルのないアダプティブフォーム {#adaptive-form-with-no-form-model}
+### フォームモデルのないアダプティブフォーム  {#adaptive-form-with-no-form-model}
 
-For adaptive forms with no form model, the data for all the fields is under the `<data>` tag of `<afUnboundData> tag`.
+フォームモデルのないアダプティブフォームの場合、すべてのフィールドのデータは`<afUnboundData> tag`の`<data>`タグの下にあります。
 
 また、次のことを控えておいてください：
 
@@ -225,7 +226,7 @@ For adaptive forms with no form model, the data for all the fields is under the 
 </afData>
 ```
 
-## Configuration Manager を使用した事前入力サービスの設定 {#configuring-prefill-service-using-configuration-manager}
+## Configuration Manager を使用した事前入力サービスの設定  {#configuring-prefill-service-using-configuration-manager}
 
 事前入力サービスを有効にするには、AEM Webコンソールの設定で「デフォルトの事前入力サービスの設定」を指定します。 次の手順を使用して、事前入力サービスを設定します。
 
@@ -233,9 +234,9 @@ For adaptive forms with no form model, the data for all the fields is under the 
 >
 >事前サービスの設定は、アダプティブフォーム、HTML5 フォーム、HTML5 フォームセットに適用することができます。
 
-1. Open **[!UICONTROL Adobe Experience Manager Web Console Configuration]** by using the URL:\
+1. URLを使用して&#x200B;**[!UICONTROL Adobe Experience ManagerWebコンソール設定]**&#x200B;を開きます。\
    https://&lt;サーバー>:&lt;ポート>/system/console/configMgr
-1. Search and open **[!UICONTROL Default Prefill Service Configuration]**.
+1. **[!UICONTROL デフォルトの事前入力サービス設定]**&#x200B;を検索して開きます。
 
    ![事前入力の設定](assets/prefill_config_new.png)
 
@@ -254,7 +255,7 @@ For adaptive forms with no form model, the data for all the fields is under the 
    >
    >crx プロトコルは、事前入力済みデータのセキュリティを管理するので、デフォルトで許可されています。汎用的な正規表現を使用して他のプロトコル経由で事前入力すると、脆弱性が発生する可能性があります。データを保護するため、設定では安全性の高い URL を指定してください。
 
-## 繰り返し可能なパネルの例外的なケース {#the-curious-case-of-repeatable-panels}
+## 繰り返し可能なパネルの例外的なケース  {#the-curious-case-of-repeatable-panels}
 
 連結された（フォームスキーマ）フィールドや連結されていないフィールドは通常、同じアダプティブフォームに作成されます。ただし、連結が繰り返し可能な場合は、次のような例外があります。
 
@@ -265,11 +266,11 @@ For adaptive forms with no form model, the data for all the fields is under the 
 >
 >連結されていないフィールドにエンドユーザーが入力したデータ上で、連結されているフィールドと連結されていないフィールドが重複する場合は、これらのフィールドを混在させないようにします。可能な場合は、スキーマまたは XFA フォームテンプレートを変更し、連結されていないフィールドのエントリを追加します。これにより、フィールドが連結されて、そのデータを送信済みデータの他のフィールドのデータと同様に使用できます。
 
-## ユーザーデータの事前入力でサポートされるプロトコル {#supported-protocols-for-prefilling-user-data}
+## ユーザーデータの事前入力でサポートされるプロトコル  {#supported-protocols-for-prefilling-user-data}
 
 以下のプロトコルを使用し、有効な正規表現で設定した場合、事前入力データフォーマットのユーザーデータをアダプティブフォームに事前入力できます。
 
-### crx:// プロトコル {#the-crx-protocol}
+### crx:// プロトコル  {#the-crx-protocol}
 
 ```http
 https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=crx:///tmp/fd/af/myassets/sample.xml
@@ -285,7 +286,7 @@ https://localhost:4502/content/forms/af/someAF.html?wcmmode=disabled&dataRef=fil
 
 参照元ファイルは、同じサーバー上になければなりません。
 
-### The https:// protocol {#the-http-protocol}
+### https://プロトコル{#the-http-protocol}
 
 ```http
 https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=https://localhost:8000/somesamplexmlfile.xml
@@ -304,9 +305,9 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 >
 >認証パラメータの引き渡しはサポートされていません。
 
-### slingRequestでのデータ属性の設定 {#setting-data-attribute-in-slingrequest}
+### slingRequestでのデータ属性の設定  {#setting-data-attribute-in-slingrequest}
 
-You can also set the `data` attribute in `slingRequest`, where the `data` attribute is a string containing XML or JSON, as shown in the sample code below (Example is for XML):
+`data`属性を`slingRequest`に設定することもできます。`data`属性は、次のサンプルコードに示すように、XMLまたはJSONを含む文字列です（XMLの場合）。
 
 ```javascript
 <%
@@ -326,13 +327,14 @@ You can also set the `data` attribute in `slingRequest`, where the `data` attrib
 
 すべてのデータが含まれている単純な XML または JSON 文字列を記述して、slingRequest に設定できます。これは、slingRequest data属性を設定するページに含むすべてのコンポーネントのレンダラ― JSP で、簡単にできます。
 
-例えば、特定のタイプのヘッダーを使用して、特定のデザインのページを作成するとします。To achieve this, you can write your own `header.jsp`, which you can include in your page component and set the `data` attribute.
+例えば、特定のタイプのヘッダーを使用して、特定のデザインのページを作成するとします。これを実現するには、独自の`header.jsp`を書き込み、それをページコンポーネントに含めて`data`属性を設定します。
 
 例えば、Facebook、Twitter、LinkedIn などのソーシャルアカウントを使用して、ログイン時にデータを事前入力するとします。この場合、`header.jsp`ユーザーアカウントからデータを取得し、データパラメーターを設定するに単純なJSPを含めることができます。
 
 prefill-page component.zip
 
-[ページコンポーネント内のFile](assets/prefill-page-component.zip)Sample prefill.jspの取得
+[ページコンポ](assets/prefill-page-component.zip)
+ーネントでのFileSample prefill.jspの取得
 
 ## AEM Forms カスタム事前入力サービス {#aem-forms-custom-prefill-service}
 
@@ -356,14 +358,14 @@ prefill-page component.zip
 1. src\main\java\com\adobe\test\Prefill.java ファイルを開いて編集します。
 1. コードで、以下の値を設定します。
 
-   * `nodePath:` crx-repositoryの場所を指すnode path変数には、データ（事前入力）ファイルのパスが含まれます。 例：/content/prefilldata.xml
-   * `label:` labelパラメーターはサービスの表示名を指定します。 例：Default Prefill Service
+   * `nodePath:` crx-repositoryの場所を指すnode path変数には、データ（事前入力）ファイルのパスが含まれます。例：/content/prefilldata.xml
+   * `label:` labelパラメーターはサービスの表示名を指定します。例：Default Prefill Service
 
-1. Save and close the `Prefill.java` file.
-1. Add the `AEM Forms Client SDK` package to the build path of the boilerplate project.
+1. `Prefill.java`ファイルを保存して閉じます。
+1. ボイラープレートプロジェクト追加のビルドパスへの`AEM Forms Client SDK`パッケージです。
 1. プロジェクトをコンパイルし、バンドルの .jar を作成します。
 
-#### 事前入力サービスを起動し、使用します {#start-and-use-the-prefill-service}
+#### 事前入力サービスを起動し、使用します  {#start-and-use-the-prefill-service}
 
 事前入力サービスを起動するには、JAR ファイルを AEM Forms Web Console にアップロードし、サービスをアクティブ化します。サービスはアダプティブフォームエディターに表示されるようになります。事前入力サービスをアダプティブフォームに関連付けるには：
 
@@ -371,7 +373,7 @@ prefill-page component.zip
 1. プロパティコンソールで、AEM Form コンテナ／基本／事前入力サービスに移動します。
 1. Default Prefill Service を選択し、「**[!UICONTROL 保存]**」をクリックします。サービスはフォームに関連付けられます。
 
-## クライアントでのデータの事前入力 {#prefill-at-client}
+## クライアント{#prefill-at-client}でデータを事前入力
 
 アダプティブフォームに事前入力すると、AEM Formsサーバーはデータをアダプティブフォームにマージし、入力済みのフォームをユーザーに配信します。 デフォルトでは、データの結合アクションはサーバーで実行されます。
 
@@ -387,4 +389,4 @@ AEM Formsサーバーを設定して、サーバーではなくクライアン�
 
    * 無効にするには、次のcURLコマンドを実行します。
       `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
-   クライアントでのデータの事前入力オプションを最大限に活用するには、FileAttachmentMap [とCustomContextを返すように事前入力サービスを更新し](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)[ます](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
+   クライアントでのデータの事前入力オプションを最大限に活用するには、事前入力サービスを更新して、[FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)と[CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)を返します。
