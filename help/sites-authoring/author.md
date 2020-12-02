@@ -21,12 +21,12 @@ ht-degree: 82%
 
 # オーサリング{#authoring}
 
-## Concept of Authoring (and Publishing) {#concept-of-authoring-and-publishing}
+## オーサリング（および公開）の概念{#concept-of-authoring-and-publishing}
 
 AEM には次の 2 種類の環境があります。
 
 * オーサー
-* パブリッシュ
+* 公開
 
 これらの環境が相互に影響することで、コンテンツが Web サイト上に公開され、訪問者が閲覧できるようになります。
 
@@ -69,7 +69,7 @@ AEM には次の 2 種類の環境があります。
 
 #### パブリッシュ環境 {#publish-environment}
 
-When ready, the AEM site&#39;s content is published to the **publish environment**. これで、対象となるオーディエンスは、設計したインターフェイスのルックアンドフィールどおりに Web サイトのページを利用できます。
+準備が整ったら、AEMサイトのコンテンツが&#x200B;**発行環境**&#x200B;に発行されます。 これで、対象となるオーディエンスは、設計したインターフェイスのルックアンドフィールどおりに Web サイトのページを利用できます。
 
 通常、パブリッシュ環境は保護解除された領域（DMZ）内に配置されます。つまり、インターネットで使用できますが、内部ネットワークの完全保護下にはありません。
 
