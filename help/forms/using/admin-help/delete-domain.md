@@ -24,6 +24,6 @@ ht-degree: 79%
 
 削除されたドメインと同じ名前でドメインを作成すると、削除されたドメインがその情報と共に復元されます。DefaultDom ドメインは削除できません。
 
-1. In administration console, click **[!UICONTROL Settings > User Management > Domain Management]**.
-1. Select the check box for the domain to delete, click **[!UICONTROL Delete]**, and then click **[!UICONTROL OK]**.
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/ドメインの管理]**&#x200B;をクリックします。
+1. 削除するドメインのチェックボックスを選択し、「**[!UICONTROL 削除]**」をクリックして、「**[!UICONTROL OK]**」をクリックします。
 
