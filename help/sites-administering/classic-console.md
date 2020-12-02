@@ -29,8 +29,8 @@ ht-degree: 64%
 
 * オーサー環境で
 * 管理者権限でサインインします。
-* browse to the console
-for example, [https://localhost:4502/tagging](https://localhost:4502/tagging)
+* コンソールを参照
+例：[https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 ![](assets/managing_tags_usingthetagasministrationconsole.png)
 
@@ -50,7 +50,7 @@ for example, [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
    * **タイトル**
 (
-*必須*)タグの表示タイトル。 どのような文字でも入力できますが、次の特殊文字は使用しないことが推奨されます。
+*必須*)タグの表示タイトル。どのような文字でも入力できますが、次の特殊文字は使用しないことが推奨されます。
 
       * `colon (:)` -名前空間区切り
       * `forward slash (/)`  — サブタグ区切り文字
@@ -68,14 +68,14 @@ for example, [https://localhost:4502/tagging](https://localhost:4502/tagging)
    * 「**作成**」を選択します
 
 
-## タグの編集 {#editing-tags}
+## タグの編集  {#editing-tags}
 
 1. 右側のウィンドウで、編集するタグを選択します。
 1. 「**編集**」をクリックします。
 1. 「**タイトル**」および「**説明**」を変更できます。
 1. 「**保存**」をクリックしてダイアログを閉じます。
 
-## タグの削除 {#deleting-tags}
+## タグの削除  {#deleting-tags}
 
 1. 右側のウィンドウで、削除するタグを選択します。
 1. 「**削除**」をクリックします。
@@ -88,13 +88,13 @@ for example, [https://localhost:4502/tagging](https://localhost:4502/tagging)
 1. 右側のウィンドウで、アクティベート（公開）またはアクティベート解除（非公開に）する名前空間またはタグを選択します。
 1. 必要に応じて、「**アクティベート**」または「**アクティベートの解除**」をクリックします。
 
-## リスト - タグが参照されている場所の表示 {#list-showing-where-tags-are-referenced}
+## リスト - タグが参照されている場所の表示  {#list-showing-where-tags-are-referenced}
 
 「**リスト**」を選択すると、新しいウィンドウが開き、ハイライト表示されたタグを使用しているすべてのページのパスが表示されます。
 
 ![](assets/list_showing_wheretagsarereferenced.png)
 
-## タグの移動 {#moving-tags}
+## タグの移動  {#moving-tags}
 
 タグの管理者および開発者が分類の整理やタグ ID の名前の変更ができるように、タグを新しい場所に移動することができます。
 
@@ -113,7 +113,7 @@ for example, [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 >[!NOTE]
 >
->Authors should not move tags or rename a tag ID. When necessary, Authors should only [change the tag titles](#editing-tags).
+>タグの移動やタグIDの名前の変更はできません。必要に応じて、作成者は[タグタイトルの変更](#editing-tags)のみを行う必要があります。
 
 ## タグの統合 {#merging-tags}
 
@@ -129,7 +129,7 @@ for example, [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 1. 「**Merge**」をクリックします。
 
-The **Merge Tag** dialog looks as follows:
+**タグ**&#x200B;の結合ダイアログは次のようになります。
 
 ![](assets/mergetag.png)
 
@@ -140,16 +140,16 @@ The **Merge Tag** dialog looks as follows:
 1. **Tagging** コンソールを開きます。
 1. 最上部のツールバーで「**数の使用法**」をクリックします。「数」列に結果が表示されます。
 
-## 他の言語でのタグの管理 {#managing-tags-in-different-languages}
+## 他の言語でのタグの管理  {#managing-tags-in-different-languages}
 
-The optional `title`property of a tag may be translated into multiple languages. Tag `titles` can then be displayed according to the user language or to the page language.
+タグのオプションの`title`プロパティは、複数の言語に変換できます。 次に、タグ`titles`をユーザー言語またはページ言語に従って表示できます。
 
 ### 複数言語でのタグタイトルの定義 {#defining-tag-titles-in-multiple-languages}
 
-The following procedure shows how to translate the `title`of the tag **Animals** into English, German and French:
+次の手順は、タグ&#x200B;**Animals**&#x200B;の`title`を英語、ドイツ語、フランス語に翻訳する方法を示しています。
 
-1. Go to the **Tagging** console.
-1. Edit the tag **Animals** below **Tags** > **Stock Photography**.
+1. **タグ付け**&#x200B;コンソールに移動します。
+1. **タグ**>**写真のストック**&#x200B;の下の&#x200B;**動物**&#x200B;タグを編集します。
 1. 次の言語での翻訳を追加します。
 
    * **英語**：Animals
@@ -168,21 +168,21 @@ Tagging コンソールではユーザーの言語設定が使用されます。
 
 ### 指定した言語でページのプロパティにタグタイトルを表示 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
 
-By default the tag `titles`in the page properties are displayed in the page language. The tag dialog in the page properties has a language field that enables the display of tag `titles`in a different language. The following procedure describes how to display the tag `titles`in French:
+デフォルトでは、ページプロパティのタグ`titles`はページ言語で表示されます。 ページプロパティのタグダイアログには、異なる言語でタグ`titles`を表示できる言語フィールドがあります。 次の手順では、タグ`titles`をフランス語で表示する方法を説明します。
 
-1. Refer to the previous section to add the French translation to the **Animals** below **Tags** > **Stock Photography**.
+1. 前の節を参照して、**タグ**>**ストックフォトグラフィ**&#x200B;の下の&#x200B;**動物**&#x200B;にフランス語の翻訳を追加してください。
 1. **Geometrixx** サイトの英語ブランチで、**Products** ページのページプロパティを開きます。
-1. Open the **Tags/Keywords** dialog (by selecting the pull-down menu to the right of the Tags/Keywords display area) and select the **French** language from the pull-down menu in the bottom right corner.
-1. Scroll using the left-right arrows until able to select the **Stock Photography** tab
+1. **タグ/キーワード**&#x200B;ダイアログを開き（タグ/キーワード表示領域の右側にあるプルダウンメニューを選択）、右下のプルダウンメニューから&#x200B;**フランス語**&#x200B;言語を選択します。
+1. 左右の矢印を使用してスクロールし、「**写真のストック**」タブを選択できるようにします。
 
-   Select the **Animals** (**Animaux**) tag and select outside the dialog to close it and add the tag to the page properties.
+   **動物** （**アニモー**）タグを選択し、ダイアログの外側を選択して閉じ、ページのプロパティにタグを追加します。
 
    ![](assets/french_tag.png)
 
-By default, the Page Properties dialog displays the tag `titles`according to the page language.
+デフォルトでは、ページプロパティダイアログにページの言語に従って`titles`タグが表示されます。
 
 一般に、ページ言語が使用可能な場合は、タグの言語はページ言語から取得されます。 [`tag` ウィジェットが他のケース（フォームやダイアログなど）で使用されている場合、タグの言語はコンテキストによって変わります。](/help/sites-developing/building.md#tagging-on-the-client-side)
 
 >[!NOTE]
 >
->The tag cloud and the meta keywords in the standard page component use the localized tag `titles`based on the page language, if available.
+>タグクラウドと標準ページコンポーネントのメタキーワードは、ページ言語に基づくローカライズされたタグ`titles`を使用します（使用可能な場合）。
