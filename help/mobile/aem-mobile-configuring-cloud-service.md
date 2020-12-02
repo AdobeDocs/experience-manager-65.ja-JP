@@ -18,7 +18,7 @@ ht-degree: 45%
 ---
 
 
-# Adobe Target クラウドサービスの設定 {#configuring-adobe-target-cloud-service}
+# Adobe Target クラウドサービスの設定  {#configuring-adobe-target-cloud-service}
 
 >[!NOTE]
 >
@@ -26,15 +26,15 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->This document is part of the [Getting Started with AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, a recommended starting point for AEM Mobile reference.
+>このドキュメントは、『[AEM Mobile](/help/mobile/getting-started-aem-mobile.md)はじめに』ガイドの一部です。これは、AEM Mobileリファレンスの推奨起点です。
 
 コンテンツ作成者がモバイルアプリ用のターゲットコンテンツを生成する際に開始を行うには、まとめておく必要がある手順がいくつかあります。ユーザーとグループに適した権限のセットを取得し、クラウドサービスを作成し、アクティビティのアプリケーションを設定して、最終的にコンテンツを生成することができます。
 
-The assumption going forward is that the [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) has been successfully deployed and accessible via the AEM Mobile Dashboard.
+今後は、[AEM Mobileハイブリッドリファレンスアプリケーション](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)が正常に展開され、AEM Mobileダッシュボードを介してアクセスできることを前提としています。
 
 ## 権限 {#permissions}
 
-Users that need access to the personalization console need to be part of the `target-activity-authors` group. ユーザーおよびグループのセットアップの一環として、target-activity-authors グループを apps-admins グループに追加することをお勧めします。ターゲットアクティビティ作成者グループを追加すると、[個人設定]ナビゲーションメニューエントリを表示できます。
+パーソナライゼーションコンソールへのアクセスを必要とするユーザーは、`target-activity-authors`グループに属している必要があります。 ユーザーおよびグループのセットアップの一環として、target-activity-authors グループを apps-admins グループに追加することをお勧めします。ターゲットアクティビティ作成者グループを追加すると、[個人設定]ナビゲーションメニューエントリを表示できます。
 
 パーソナライゼーション管理コンソールへのアクセス権を付与するユーザーまたはグループを target-activity-authors グループに追加し忘れると、パーソナライゼーションコンソールがユーザーに表示されません。
 
@@ -66,13 +66,13 @@ Adobe Mobile Services（AMS）アカウントもアプリケーションにリ�
 
 ### クライアントコード {#client-code}
 
-To login to the AMS services visit [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/), select the mobile application and click the settings. 「SDKターゲットオプション」フィールドを見つけ、クライアントコードをフィールドに配置して、「保存」をクリックします。
+AMSサービスにログインするには、[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)にアクセスし、モバイルアプリケーションを選択して設定をクリックします。 「SDKターゲットオプション」フィールドを見つけ、クライアントコードをフィールドに配置して、「保存」をクリックします。
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
 クライアントコードをモバイルアプリケーションと関連付けると、Adobe Mobile ダッシュボードで AMS クラウドサービスを設定する際に、サービスの設定が ADBMobileConfig.json ファイルから提供されます。
 
-### Adobe Mobile Services クラウドサービス {#adobe-mobile-service-could-service}
+### Adobe Mobile Services クラウドサービス  {#adobe-mobile-service-could-service}
 
 AMS を設定したら、次は Adobe Mobile ダッシュボードでモバイルアプリケーションを関連付けます。AEM Mobile ダッシュボードで、「クラウドサービスを管理」を探し、+ ボタンをクリックします。
 
@@ -90,9 +90,9 @@ Mobile ダッシュボードに戻ると、クラウドサービスを管理タ�
 
 ## Target のコンテンツ同期ハンドラー {#target-content-sync-handlers}
 
-ユーザーのデバイスにコンテンツを配信するには、AEM コンテンツ作成者が作成したオファーをレンダリングすることにより、コンテンツを生成します。ターゲットオファーのレンダリングを処理するために、オファーを処理する新しいコンテンツ同期ハンドラーが追加されました。 Using the Hybrid Reference Application as our sample, the en (english) content package contains the ContentSyncConfig with a [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) handler. オファーをデバイスにレンダリングするには、次の手順が非常に重要です。mobileappofersハンドラーには、アプリケーションに使用するパーソナライゼーションアクティビティへのパスを識別するpathプロパティがあります。
+ユーザーのデバイスにコンテンツを配信するには、AEM コンテンツ作成者が作成したオファーをレンダリングすることにより、コンテンツを生成します。ターゲットオファーのレンダリングを処理するために、オファーを処理する新しいコンテンツ同期ハンドラーが追加されました。 ハイブリッド参照アプリケーションをサンプルとして使用する場合、en（英語）コンテンツパッケージには、[mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml)ハンドラーを含むContentSyncConfigが含まれています。 オファーをデバイスにレンダリングするには、次の手順が非常に重要です。mobileappofersハンドラーには、アプリケーションに使用するパーソナライゼーションアクティビティへのパスを識別するpathプロパティがあります。
 
-For example if there is an activity that is located at */content/campaigns/hybridref* copy this path and paste it as the value to the *path* property of the mobileappoffers handler.
+例えば、*/content/キャンペーン/hybridref*&#x200B;にあるアクティビティーがこのパスをコピーし、値としてmobileappofersハンドラーの&#x200B;*path*&#x200B;プロパティに貼り付けます。
 
 Hybrid Reference App の場合、2 つの mobileappoffers ハンドラーがあり、1 つは開発用、もう 1 つは実稼動用です。
 
@@ -100,7 +100,7 @@ mobileappoffers ハンドラーの path プロパティでアクティビティ�
 
 ### レンダリングモード {#render-mode}
 
-パブリッシュセットアップと開発セットアップでは、mobileappoffers ハンドラーの設定が異なります。For publish setups there is a property called *renderMode* with a value of *publish* set on the cq:ContentSyncConfig node. mobileappofersハンドラーはrenderModeを参照し、publishに設定した場合は、作成されるmbox IDを変更します。 デフォルトでは、AEMで作成されるmboxには —author値が追加され、mbox IDにも追加されます。 これは、アクティビティが公開されていないことを示し、オファーの解像度に未公開のキャンペーンを使用する必要があることを示します。
+パブリッシュセットアップと開発セットアップでは、mobileappoffers ハンドラーの設定が異なります。パブリッシュ設定には、cq:ContentSyncConfigノードに&#x200B;*publish*&#x200B;という値が設定された&#x200B;*renderMode*&#x200B;というプロパティがあります。 mobileappofersハンドラーはrenderModeを参照し、publishに設定した場合は、作成されるmbox IDを変更します。 デフォルトでは、AEMで作成されるmboxには —author値が追加され、mbox IDにも追加されます。 これは、アクティビティが公開されていないことを示し、オファーの解像度に未公開のキャンペーンを使用する必要があることを示します。
 
 Adobe Mobile ダッシュボードでコンテンツがステージングされると、ステージングされたコンテンツは、実稼動の準備ができたコンテンツとみなされ、開発用でないコンテンツ同期設定を使用してレンダリングされます。この方法でレンダリングすると、—authorがすべてのmbox IDから削除され、公開済みアクティビティがターゲットサーバーで使用可能になることが予期されます。 ステージコンテンツをテストする前に、アクティビティが公開されていることを確認してください。
 
