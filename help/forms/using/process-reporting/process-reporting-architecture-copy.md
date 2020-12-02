@@ -17,7 +17,7 @@ ht-degree: 1%
 ---
 
 
-# プロセスレポートの仕組み {#how-process-reporting-works}
+# プロセスレポートの仕組み{#how-process-reporting-works}
 
 プロセスレポートは、JEE上のAEM Formsのレポートモジュールです。
 
@@ -33,46 +33,46 @@ ht-degree: 1%
 * [クエリデータサーブレット](/help/forms/using/process-reporting/process-reporting-architecture.md#p-querydataservlet-service-br-p)
 * [プロセスレポートユーザーインターフェイス](/help/forms/using/process-reporting/process-reporting-architecture.md#p-process-reporting-user-interface-br-p)
 
-## プロセスレポートアーキテクチャ {#process-reporting-architecture-br}
+## プロセスレポートアーキテクチャ{#process-reporting-architecture-br}
 
 ![processreportingarchitecture](assets/processreportingarchitecture.png)
 
-## プロセスレポートモジュール {#process-reporting-modules}
+## プロセスレポートモジュール{#process-reporting-modules}
 
-### ProcessDataPublisherサービス {#processdatapublisher-service-br}
+### ProcessDataPublisherサービス{#processdatapublisher-service-br}
 
 ProcessDataPublisherサーバーは定期的にAEM Formsデータベース上で実行され、サービスの最後の実行以降に変更されたデータを抽出します。 次に、データをProcess Dataストレージサービスに発行します。
 
-サービスの設定について詳しくは、「ProcessDataPublisherサービスの [設定](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)」を参照してください。
+サービスの設定について詳しくは、「[ProcessDataPublisherサービスの設定](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)」を参照してください。
 
-### ProcessDataStorageProviderサービス {#processdatastorageprovider-service-br}
+### ProcessDataStorageProviderサービス{#processdatastorageprovider-service-br}
 
 ProcessDataStorageProviderサービスは、ProcessDataPublisherサービスからプロセスデータを受け取り、データをプロセスレポートリポジトリに保存します。
 
-サービスの設定について詳しくは、「ProcessDataStorageProviderサービスの [設定](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p)」を参照してください。
+サービスの設定について詳しくは、[ProcessDataStorageProviderサービスの設定](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p)を参照してください。
 
 ### OSGi サービス {#osgi-service-br}
 
 QueryDataServletは、このサービスを使用して、プロセスレポートリポジトリからレポートデータを取得します。
 
-### QueryDataServletサービス {#querydataservlet-service-br}
+### QueryDataServletサービス{#querydataservlet-service-br}
 
 QueryDataServletサービスは、プロセスレポートユーザーインターフェイスからクエリを受け入れます。
 
 次に、サービスはOSGiサービスを使用して関連するレポートデータを取得し、データを処理し、データをユーザーインターフェイスに返します。
 
-### プロセスレポートユーザーインターフェイス {#process-reporting-user-interface-br}
+### プロセスレポートユーザーインターフェイス{#process-reporting-user-interface-br}
 
 プロセスレポートのユーザーインターフェイスは、Webブラウザーベースのインターフェイスです。 このインターフェースを使用して、AEM Formsデータベースから公開された表示処理とタスク情報を行います。
 
-### QueryDataServletサービス {#querydataservlet-service-br-1}
+### QueryDataServletサービス{#querydataservlet-service-br-1}
 
 QueryDataServletサービスは、プロセスレポートユーザーインターフェイスからクエリを受け入れます。
 
 次に、サービスはOSGiサービスを使用して関連するレポートデータを取得し、データを処理し、データをユーザーインターフェイスに返します。
 
-### カスタムレポート {#custom-reports-br}
+### カスタムレポート{#custom-reports-br}
 
 独自のカスタムレポートを作成して、プロセスレポートユーザーインターフェイスの「カスタムレポート」タブに表示できます。
 
-カスタムレポートを作成する手順については、プロセスレポートのカスタムレポートの記事でカスタムレポートを作成するにはを参照して [ください](/help/forms/using/process-reporting/process-reporting-custom-reports.md)。
+カスタムレポートを作成する手順については、「カスタムレポートを作成するには」を参照してください。[プロセスレポートのカスタムレポート](/help/forms/using/process-reporting/process-reporting-custom-reports.md)
