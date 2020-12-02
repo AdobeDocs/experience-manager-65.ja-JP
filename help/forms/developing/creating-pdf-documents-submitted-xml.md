@@ -19,9 +19,9 @@ ht-degree: 5%
 ---
 
 
-# 送信されたXMLデータを使用したPDFドキュメントの作成 {#creating-pdf-documents-with-submittedxml-data}
+# 送信されたXMLデータを使用したPDFドキュメントの作成{#creating-pdf-documents-with-submittedxml-data}
 
-## 送信されたXMLデータを使用したPDFドキュメントの作成 {#creating-pdf-documents-with-submitted-xml-data}
+## 送信されたXMLデータを使用したPDFドキュメントの作成{#creating-pdf-documents-with-submitted-xml-data}
 
 ユーザーがインタラクティブフォームに入力できるWebベースのアプリケーションでは、データをサーバーに送信し直す必要があります。 Formsサービスを使用すると、ユーザーがインタラクティブフォームに入力したフォームデータを取得できます。 次に、フォームデータを別のAEM Formsサービス操作に渡し、そのデータを使用してPDFドキュメントを作成できます。
 
@@ -44,7 +44,7 @@ ht-degree: 5%
 
 ![cd_cd_cs_gui](assets/cd_cd_cs_gui.png)
 
-### 手順の概要 {#summary-of-steps}
+### 手順{#summary-of-steps}の概要
 
 送信されたXMLデータを含む非インタラクティブPDFドキュメントを作成し、Content Services（非推奨）のPDFドキュメントに保存するには、次のタスクを実行します。
 
@@ -82,7 +82,7 @@ Content Services（非推奨）にPDFドキュメントを格納するには、�
 
 [FormsサービスAPIクイック開始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-### Java APIを使用して、送信されたXMLデータを使用してPDFドキュメントを作成する {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}
+### Java API {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}を使用して、送信されたXMLデータを使用してPDFドキュメントを作成します。
 
 Forms、出力、ドキュメント管理API(Java)を使用して、送信されたXMLデータを使用してPDFドキュメントを作成します。
 
@@ -94,57 +94,57 @@ Forms、出力、ドキュメント管理API(Java)を使用して、送信され
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
    * コンストラクタを使用して `FormsServiceClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
-   * Create an `OutputClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`OutputClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
    * コンストラクタを使用して `DocumentManagementServiceClientImpl` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
 1. Formsサービスを使用したフォームデータの取得
 
-   * オブジェクトの `FormsServiceClient``processFormSubmission` メソッドを呼び出し、次の値を渡します。
+   * `FormsServiceClient`オブジェクトの`processFormSubmission`メソッドを呼び出し、次の値を渡します。
 
-      * フォームデータを含む `com.adobe.idp.Document` オブジェクトです。
-      * 関連するすべてのHTTPヘッダーを含む環境変数を指定するstring値。 環境変数に1つ以上の値を指定して、処理するコンテンツタイプを指定し `CONTENT_TYPE` ます。 例えば、XMLデータを処理するには、このパラメーターに次の文字列値を指定します。 `CONTENT_TYPE=text/xml`.
-      * ヘッダー値を指定するstring値（例：） `HTTP_USER_AGENT``Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
+      * フォームデータを含む`com.adobe.idp.Document`オブジェクト。
+      * 関連するすべてのHTTPヘッダーを含む環境変数を指定するstring値。 環境変数`CONTENT_TYPE`に1つ以上の値を指定して、処理するコンテンツタイプを指定します。 例えば、XMLデータを処理するには、このパラメーターに次の文字列値を指定します。`CONTENT_TYPE=text/xml`.
+      * `HTTP_USER_AGENT`ヘッダー値を指定するstring値（`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`など）。
+      * 実行時オプションを格納する`RenderOptionsSpec`オブジェクト。
 
-      この `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
+      `processFormSubmission`メソッドは、フォーム送信の結果を含む`FormsResult`オブジェクトを返します。
 
-   * オブジェクトのメソッドを呼び出して、Formsサービスがフォームデータの処理を完了したかどうか `FormsResult` を確認し `getAction` ます。 このメソッドが値を返す場合 `0`、データは処理可能な状態になります。
-   * オブジェクトの `com.adobe.idp.Document` メソッドを呼び出して、オブジェクトを作成し、フォームデ `FormsResult` ータを取得し `getOutputContent` ます。 （このオブジェクトには、Outputサービスに送信できるフォームデータが含まれます）。
-   * コンストラクターを呼び出し、オ `java.io.InputStream` ブジェクトを渡して、 `java.io.DataInputStream` オブジェクトを作成し `com.adobe.idp.Document` ます。
-   * スタティック `org.w3c.dom.DocumentBuilderFactory` オブジェクトのメソッドを呼び出して、 `org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成し `newInstance` ます。
-   * オブジェクトの `org.w3c.dom.DocumentBuilder` メソッドを呼び出して、 `org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成 `newDocumentBuilder` します。
-   * Create an `org.w3c.dom.Document` object by invoking the `org.w3c.dom.DocumentBuilder` object’s `parse` method and passing the `java.io.InputStream` object.
-   * XMLドキュメント内の各ノードの値を取得します。 このタスクを実行する1つの方法は、2つのパラメーターを受け取るカスタムメソッドを作成することです。値を取得する `org.w3c.dom.Document` オブジェクトとノードの名前。 このメソッドは、ノードの値を表すstring値を返します。 このプロセスの後のコード例では、このカスタムメソッドを呼び出し `getNodeText`ます。 このメソッドの本文が表示されます。
+   * `FormsResult`オブジェクトの`getAction`メソッドを呼び出して、Formsサービスがフォームデータの処理を完了したかどうかを判断します。 このメソッドが値`0`を返す場合、データは処理の準備ができています。
+   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して`com.adobe.idp.Document`オブジェクトを作成し、フォームデータを取得します。 （このオブジェクトには、Outputサービスに送信できるフォームデータが含まれます）。
+   * `java.io.DataInputStream`コンストラクターを呼び出し、`com.adobe.idp.Document`オブジェクトを渡して、`java.io.InputStream`オブジェクトを作成します。
+   * 静的`org.w3c.dom.DocumentBuilderFactory`オブジェクトの`newInstance`メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory`オブジェクトを作成します。
+   * `org.w3c.dom.DocumentBuilderFactory`オブジェクトの`newDocumentBuilder`メソッドを呼び出して、`org.w3c.dom.DocumentBuilder`オブジェクトを作成します。
+   * `org.w3c.dom.DocumentBuilder`オブジェクトの`parse`メソッドを呼び出し、`java.io.InputStream`オブジェクトを渡して、`org.w3c.dom.Document`オブジェクトを作成します。
+   * XMLドキュメント内の各ノードの値を取得します。 このタスクを実行する1つの方法は、2つのパラメーターを受け取るカスタムメソッドを作成することです。`org.w3c.dom.Document`オブジェクトと、値を取得するノードの名前。 このメソッドは、ノードの値を表すstring値を返します。 このプロセスの後のコード例では、このカスタムメソッドは`getNodeText`と呼ばれます。 このメソッドの本文が表示されます。
 
 
 1. Outputサービスを使用して、非インタラクティブPDFドキュメントを作成します。
 
-   Create a PDF document by invoking the `OutputClient` object’s `generatePDFOutput` method and passing the following values:
+   `OutputClient`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡してPDFドキュメントを作成します。
 
-   * 列挙 `TransformationFormat` 値。 PDFドキュメントを生成するには、を指定し `TransformationFormat.PDF`ます。
+   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
    * フォームデザイン名を指定する string 値。フォームデザインが、Formsサービスから取得したフォームデータと互換性があることを確認します。
    * フォームデザインが配置されているコンテンツルートを指定するstring値。
-   * PDF実行時オプションを含む `PDFOutputOptionsSpec` オブジェクトです。
-   * レンダリングの実行時オプションを含む `RenderOptionsSpec` オブジェクトです。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む `com.adobe.idp.Document` オブジェクトです。 このオブジェクトがオブジェクトのメソッドによって返されているこ `FormsResult` とを確認してく `getOutputContent` ださい。
-   * The `generatePDFOutput` method returns an `OutputResult` object that contains the results of the operation.
-   * オブジェクトのメソッドを呼び出して、非インタラクティブPDFドキュメント `OutputResult` を取得し `getGeneratedDoc` ます。 このメソッドは、非インタラクティブPDFドキュメントを表す `com.adobe.idp.Document` インスタンスを返します。
+   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
+   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
+   * フォームデザインとマージするデータを含むXMLデータソースが含まれる`com.adobe.idp.Document`オブジェクトです。 このオブジェクトが`FormsResult`オブジェクトの`getOutputContent`メソッドによって返されたことを確認します。
+   * `generatePDFOutput`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
+   * `OutputResult`オブジェクトの`getGeneratedDoc`メソッドを呼び出して、非インタラクティブPDFドキュメントを取得します。 このメソッドは、非インタラクティブPDFドキュメントを表す`com.adobe.idp.Document`インスタンスを返します。
 
 1. ドキュメント管理サービスを使用したContent Services（非推奨）へのPDFフォームの保存
 
-   オ追加ブジェクトのメソッドを呼び出し、次の値を渡すことで、コンテンツを取得します。 `DocumentManagementServiceClientImpl``storeContent`
+   `DocumentManagementServiceClientImpl`追加オブジェクトの`storeContent`メソッドを呼び出し、次の値を渡すことで、内容を指定します。
 
-   * コンテンツが追加されるストアを指定するstring値です。 The default store is `SpacesStore`. この値は必須のパラメータです。
-   * コンテンツが追加されるスペースの完全修飾パスを指定するstring値(例： `/Company Home/Test Directory`)。 この値は必須のパラメータです。
-   * 新しいコンテンツを表すノード名(例： `MortgageForm.pdf`)。 この値は必須のパラメータです。
-   * ノードタイプを指定するstring値。 PDFファイルなどの新しいコンテンツを追加するには、を指定し `{https://www.alfresco.org/model/content/1.0}content`ます。 この値は必須のパラメータです。
-   * コンテンツを表す `com.adobe.idp.Document` オブジェクトです。 この値は必須のパラメータです。
-   * エンコーディング値(例： `UTF-8`)を指定するstring値。 この値は必須のパラメータです。
-   * バージョン情報の処理方法を指定する `UpdateVersionType` 定義済みリスト値(例えば、コンテンツのバージョン `UpdateVersionType.INCREMENT_MAJOR_VERSION` を増やす場合)。 )この値は必須パラメータです。
-   * コンテンツに関連する要素を指定する `java.util.List` インスタンス。 この値はオプションのパラメーターで、指定でき `null`ます。
-   * コンテンツ属性を格納する `java.util.Map` オブジェクト。
+   * コンテンツが追加されるストアを指定するstring値です。 デフォルトのストアは`SpacesStore`です。 この値は必須のパラメータです。
+   * コンテンツが追加されるスペースの完全修飾パスを指定するstring値（例：`/Company Home/Test Directory`）。 この値は必須のパラメータです。
+   * 新しいコンテンツを表すノード名（例：`MortgageForm.pdf`）。 この値は必須のパラメータです。
+   * ノードタイプを指定するstring値。 PDFファイルなど、新しいコンテンツを追加するには、`{https://www.alfresco.org/model/content/1.0}content`を指定します。 この値は必須のパラメータです。
+   * コンテンツを表す`com.adobe.idp.Document`オブジェクト。 この値は必須のパラメータです。
+   * エンコード値を指定するstring値（例：`UTF-8`）。 この値は必須のパラメータです。
+   * バージョン情報の処理方法を指定する`UpdateVersionType`定義済みリスト値（例えば、`UpdateVersionType.INCREMENT_MAJOR_VERSION`でコンテンツバージョンを増やします）。 )この値は必須パラメータです。
+   * コンテンツに関連する要素を指定する`java.util.List`インスタンス。 この値はオプションのパラメーターで、`null`を指定できます。
+   * コンテンツ属性を格納する`java.util.Map`オブジェクト。
 
-   この `storeContent` メソッドは、コンテンツを表す `CRCResult` オブジェクトを返します。 オブジェクトを使用して、例えば、コンテンツの固有な識別子の値を取得でき `CRCResult` ます。 このタスクを実行するには、 `CRCResult` オブジェクトの `getNodeUuid` メソッドを呼び出します。
+   `storeContent`メソッドは、内容を記述する`CRCResult`オブジェクトを返します。 `CRCResult`オブジェクトを使用して、例えば、コンテンツの固有な識別子の値を取得できます。 このタスクを実行するには、`CRCResult`オブジェクトの`getNodeUuid`メソッドを呼び出します。
 
 **関連トピック**
 
