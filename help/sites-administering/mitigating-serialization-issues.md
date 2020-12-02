@@ -44,10 +44,10 @@ ht-degree: 87%
 
 1. **com.adobe.cq.cq-serialization-tester** バンドルをインストールします。
 
-1. Go to the Bundle Web Console at `https://server:port/system/console/bundles`
+1. `https://server:port/system/console/bundles`のバンドルWebコンソールに移動します。
 1. シリアル化のバンドルを探して開始します。これにより、NotSoSerial エージェントが動的にオートロードされます。
 
-## アプリケーションサーバーへのエージェントのインストール {#installing-the-agent-on-application-servers}
+## アプリケーションサーバーへのエージェントのインストール  {#installing-the-agent-on-application-servers}
 
 NotSoSerialエージェントは、アプリケーションサーバーのAEMの標準配布物には含まれません。 ただし、それを AEM JAR 配布版から抽出して、アプリケーションサーバーの設定に使用できます。
 
@@ -57,9 +57,9 @@ NotSoSerialエージェントは、アプリケーションサーバーのAEMの
    java -jar aem-quickstart-6.2.0.jar -unpack
    ```
 
-1. Go to the location of the newly unzipped AEM quickstart, and copy the `crx-quickstart/opt/notsoserial/` folder to the `crx-quickstart` folder of the AEM application server installation.
+1. 新しく解凍されたAEM quickstartの場所に移動し、`crx-quickstart/opt/notsoserial/`フォルダーをAEMアプリケーションサーバーのインストール先の`crx-quickstart`フォルダーにコピーします。
 
-1. Change the ownership of `/opt` to the user running the server:
+1. `/opt`の所有権を、サーバーを実行しているユーザーに変更します。
 
    ```shell
    chown -R opt <user running the server>
@@ -67,13 +67,13 @@ NotSoSerialエージェントは、アプリケーションサーバーのAEMの
 
 1. この記事の続きの節に示すようにエージェントを設定し、エージェントが正しくアクティベートされていることを確認してください。
 
-## エージェントの設定 {#configuring-the-agent}
+## エージェントの設定  {#configuring-the-agent}
 
 ほとんどのインストールにおいて、デフォルトの設定で十分機能します。これには、既知のリモート実行脆弱クラスのブロックリストと、信頼できるデータの逆シリアル化が比較的安全であるパッケージの許可リストが含まれます。
 
    ファイアウォールの設定は動的であり、次の手順でいつでも変更できます。
 
-1. Going to the Web Console at `https://server:port/system/console/configMgr`
+1. `https://server:port/system/console/configMgr`のWebコンソールに移動
 1. 「**Deserialization Firewall Configuration**」を探してクリックします
 
    >[!NOTE]
@@ -133,12 +133,12 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
 
    >[!NOTE]
    >
-   >The Adobe distribution of the NotSoSerial agent jar can be found in the `crx-quickstart/opt/notsoserial/` folder of your AEM installation.
+   >NotSoSerialエージェントjarのAdobe配布は、AEMのインストール先の`crx-quickstart/opt/notsoserial/`フォルダーにあります。
 
 1. JVM を停止して再開します。
 
 1. 前述の[エージェントのアクティベートの検証](/help/sites-administering/mitigating-serialization-issues.md#verifying-the-agent-s-activation)のステップに従って、エージェントのアクティベートをもう一度検証します。
 
-## その他の考慮事項 {#other-considerations}
+## その他の考慮事項  {#other-considerations}
 
 IBM JVM 上で実行している場合は、[こちら](https://www.ibm.com/support/knowledgecenter/SSSTCZ_2.0.0/com.ibm.rt.doc.20/user/attachapi.html)の Java Attach API のサポートに関するドキュメントを参照してください。
