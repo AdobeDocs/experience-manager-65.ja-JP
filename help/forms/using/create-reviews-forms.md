@@ -27,7 +27,7 @@ ht-degree: 88%
 ## レビューの設定 {#setting-up-a-review}
 
 1. 「フォーム」タブに移動し、フォームを選択します。
-1. If the asset does not have a review in progress, a Start Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icon appears in the Action bar. 開始レビューの ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンをクリックします。
+1. アセットに進行中のレビューがない場合は、開始レビュー![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンがアクションバーに表示されます。 開始レビュー![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンをクリックします。
 1. 以下の情報を入力します。
 
    * レビュー名：必須。使用可能な文字は、英数字、ハイフンまたはアンダースコアです。
@@ -37,7 +37,7 @@ ht-degree: 88%
 
 1. 残りの詳細情報を入力し、「開始」をクリックします。
 
-### レビューが設定されると発生するアクション {#actions-that-occur-when-a-review-is-set-up}
+### レビューが設定されると発生するアクション  {#actions-that-occur-when-a-review-is-set-up}
 
 本セクションでは、レビューが作成・設定された場合に起こるアクションを説明します。
 
@@ -58,9 +58,9 @@ ht-degree: 88%
 
 1. 「フォーム」タブに移動し、フォームを選択します。
 
-1. If an asset has a review in progress and you are the initiator of the review, a Manage Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icons appears in the Action bar. レビューの開始者のみがレビューを管理（更新 / 終了）することができます。
+1. アセットに進行中のレビューがあり、自分がレビューの開始者である場合は、レビューの管理![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンがアクションバーに表示されます。 レビューの開始者のみがレビューを管理（更新 / 終了）することができます。
 
-   「レビューの管理」 ![をクリックします。 aem6forms_review_chat_](assets/aem6forms_review_chat_comment.png)commenticon.
+   レビューの管理![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンをクリックします。
 
    開始者以外のユーザーに対しては、「レビューの管理」アイコンは表示されません。
 
@@ -82,7 +82,7 @@ ht-degree: 88%
 
 1. レビューを終了するには、「終了」をクリックします。
 
-### レビューが修正されると発生するアクション {#actions-that-occur-when-a-review-is-modified}
+### レビューが修正されると発生するアクション  {#actions-that-occur-when-a-review-is-modified}
 
 本セクションでは、レビューが終了・修正された場合に起こるアクションを説明します。
 
