@@ -23,7 +23,7 @@ ht-degree: 78%
 
 AEM では、[グループを作成](/help/sites-administering/user-group-ac-admin.md#group-administration)してそのグループにポリシーと[ユーザー](/help/sites-administering/user-group-ac-admin.md#user-administration)を割り当てることができます。これらのポリシーは、グループに含まれるユーザーの権限を制御します。
 
-[AEM Formsアドオンパッケージをインストールすると](../../forms/using/installing-configuring-aem-forms-osgi.md)、この記事に記載されているグループ（フォームユーザー、フォームパワーユーザーなど）が自動的に割り当て可能になります。 次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
+[AEM Formsアドオンパッケージ](../../forms/using/installing-configuring-aem-forms-osgi.md)をインストールすると、この記事に記載されているフォームユーザーやフォームパワーユーザーなどのグループが自動的に割り当て可能になります。 次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
 
 <table>
  <tbody>
@@ -94,7 +94,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>AEM inbox applications<br /><strong>Note: </strong>AEM受信トレイのInteractive Communications Agent UIにアクセスするには、cm-agent-usersとworkflow-usersグループの割り当てが必要です。</li> 
+     <li>AEM inbox applications<br /> <strong>を使用します。注意：</strong>AEM受信トレイのInteractive Communications Agent UIにアクセスするには、cm-agent-usersとworkflow-usersグループの割り当てが必要です。</li> 
      <li>ワークフローインスタンスを管理する</li> 
     </ul> </td> 
   </tr>
