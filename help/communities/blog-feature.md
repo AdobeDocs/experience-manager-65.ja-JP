@@ -45,7 +45,7 @@ AEM Communities のブログ機能は、オーサリングアクティビティ�
 
 >[!NOTE]
 >
->コンポーネント `Journal` と `Journal Sidebar` には「および」というタイトル `Blog` が付き `Blog Sidebar`ます。
+>コンポーネント`Journal`と`Journal Sidebar`の名前は`Blog`と`Blog Sidebar`です。
 >
 >AEM 6.0 以前のリリースのブログ機能は、現在は削除されています。テンプレートに基づいており、作成者だけが作成者環境でコンテンツを作成できます。
 
@@ -58,15 +58,15 @@ AEM Communities のブログ機能は、オーサリングアクティビティ�
 
 ページ上のブログを表示したい位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](/help/communities/blog-developer-basics.md#essentials-for-client-side) 、次のようにコンポー `Blog` ネントが表示されます。
+[必要なクライアント側ライブラリ](/help/communities/blog-developer-basics.md#essentials-for-client-side)が含まれる場合、`Blog`コンポーネントは次のように表示されます。
 
 ![add-blog-component](assets/add-blog-component.png)
 
 ### ブログの設定 {#configuring-blog}
 
-Select the placed `Blog` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Blog`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![設定](assets/configure-new.png)
 
@@ -136,7 +136,7 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **タグ付けを許可**
 
-   If checked, allow members to add tag labels to their post (see **Tag field** tab). 初期設定はオフです。
+   オンにした場合、メンバーは自分の投稿にタグラベルを追加できます（「**タグフィールド**」タブを参照）。 初期設定はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -144,11 +144,11 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **最大ファイルサイズ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **許可されるファイルタイプ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **添付する画像ファイルの最大サイズ**
 
@@ -168,21 +168,21 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **フォローを許可**
 
-   If checked, include the following feature for blog articles, which allows members to be [notified](/help/communities/notifications.md) of new posts. 初期設定はオフです。
+   オンにした場合、ブログ記事に次の機能を含めます。これにより、メンバーに新しい投稿の[通知](/help/communities/notifications.md)を送信できます。 初期設定はオフです。
 
 * **電子メール購読を許可**
 
-   If checked, allow members to be notified of new posts by email ([subscription](/help/communities/subscriptions.md)). Requires `Allow Following` to be checked and [email configured](/help/communities/email.md). 初期設定はオフです。
+   オンにした場合、メンバーに電子メールで新しい投稿の通知を許可します([購読](/help/communities/subscriptions.md))。 `Allow Following`を確認し、[電子メールを設定](/help/communities/email.md)する必要があります。 初期設定はオフです。
 
 * **バッジを表示**
 
-   If checked, display earned and assigned [badges](/help/communities/implementing-scoring.md) with a member&#39;s blog entry. 初期設定はオフです。
+   オンの場合、獲得したバッジを表示し、会員のブログエントリに[バッジ](/help/communities/implementing-scoring.md)を割り当てます。 初期設定はオフです。
 
 * **リストページで返信を取得しない**
 
 * **おすすめコンテンツを許可**
 
-   If checked, the idea is able to be identified as [featured content](/help/communities/featured.md). 初期設定はオフです。
+   チェックすると、アイデアは[特集コンテンツ](/help/communities/featured.md)として識別できます。 初期設定はオフです。
 
 * **メンションを有効化**
 
@@ -234,15 +234,15 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **許可された名前空間**
 
-   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+   「**設定**」タブで`Allow Tagging`がチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **推奨の制限**
 
    フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 -1 は無制限を意味します。初期設定は 0 です。
 
-### ブログのサイドバーの設定 {#configuring-blog-sidebar}
+### ブログのサイドバーの設定  {#configuring-blog-sidebar}
 
-When you double-click the `Blog Sidebar` component, an edit dialog opens up.
+`Blog Sidebar`コンポーネントを重複クリックすると、編集ダイアログが開きます。
 
 「**ジャーナルサイドバー設定**」タブでは、アーカイブの日付の形式と、サイドバーに表示するエントリのタイプを指定します。
 
@@ -270,7 +270,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 * **BLOPGコンポーネントのパス**
 
-   *（オプション）* ブログ記事のリスト元となるブログリソースの場所。 If left blank, will use the component of resourceType `social/journal/components/hbs/journal` that appears on the same page.
+   *（オプション）* ブログ記事のリスト元となるブログリソースの場所。空白の場合、同じページに表示されるresourceType `social/journal/components/hbs/journal`のコンポーネントが使用されます。
 
    * 例：`/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
@@ -288,7 +288,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 その他の機能は、サイト訪問者がモデレーターか、管理者か、コミュニティメンバーか、権限を持つメンバーか、匿名かによって異なります。
 
-### 記事の操作 {#working-with-articles}
+### 記事の操作  {#working-with-articles}
 
 新しいブログ記事を作成する場合、次の選択肢があります。
 
@@ -298,7 +298,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 ブログ記事は、それぞれ適切なタブ（公開済み、ドラフト、スケジュール済み）で、パブリッシュ環境でオーサリングできるメンバー向けに表示されます。
 
-#### モデレーターおよび管理者 {#moderators-and-administrators}
+#### モデレーターおよび管理者  {#moderators-and-administrators}
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合、そのユーザーは、すべてのブログ記事およびブログに投稿されたコメントに対して[モデレートタスク](/help/communities/moderate-ugc.md)を実行できます（実行可能な操作はコンポーネントの設定に従います）。
 
@@ -306,7 +306,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 #### メンバー {#members}
 
-When the signed in user is a community member or [privileged member](/help/communities/users.md#privileged-members-group) (depending on configuration), they are able to select `New Article` to create and post a new blog article.
+サインインしたユーザーがコミュニティのメンバーまたは[特権メンバー](/help/communities/users.md#privileged-members-group)（設定によって異なります）の場合、`New Article`を選択して新しいブログ記事を作成し、投稿することができます。
 
 具体的には、次のことが可能です。
 
