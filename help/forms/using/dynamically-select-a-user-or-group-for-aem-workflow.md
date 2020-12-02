@@ -22,21 +22,21 @@ ht-degree: 91%
 
 大規模な組織では、プロセスのユーザーを動的に選択する必要があります。例えば、お客様に対応するフィールドエージェントを、お客様とエージェントの近さを基準として選択します。このようなシナリオで、エージェントは動的に選択されます。
 
-Assign task and Adobe Sign steps of [Forms-centric workflows on OSGi](/help/forms/using/aem-forms-workflow.md) provide options to dynamically select a user. ECMAScriptまたはOSGiバンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、署名のドキュメント手順の署名者を選択したりできます。
+OSGi](/help/forms/using/aem-forms-workflow.md)上の[Forms中心のワークフローのタスクとAdobe Signのステップを割り当て、ユーザーを動的に選択するオプションを提供します。 ECMAScriptまたはOSGiバンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、署名のドキュメント手順の署名者を選択したりできます。
 
 ## ECMAScript を使用して、ユーザーまたはグループを動的に選択 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
 ECMAScript はスクリプト言語です。この言語は、クライアント側のスクリプト作成とサーバーアプリケーションに使用されます。ECMAScript を使用して、ユーザーまたはグループを動的に選択するには、以下の手順を実行します。
 
-1. CRXDE Lite を開きます。The URL is `https://'[server]:[port]'/crx/de/index.jsp`
+1. CRXDE Lite を開きます。URLは`https://'[server]:[port]'/crx/de/index.jsp`です
 1. 次のパスに、拡張子が .ecma のファイルを作成します。パス（ノード構造）が存在しない場合は作成します。
 
-   * (Path for Assign Task step) `/apps/fd/dashboard/scripts/participantChooser`
+   * (タスクの割り当て手順のパス) `/apps/fd/dashboard/scripts/participantChooser`
    * （署名手順のパス） `/apps/fd/workflow/scripts/adobesign`
 
 1. 動的にユーザーを選択するロジックを含む ECMAScript を .ecma ファイルに追加します。「**[!UICONTROL すべて保存]**」をクリックします。
 
-   For sample scripts, see [Sample ECMAScripts for dynamically selecting a user or a group](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group).
+   サンプルスクリプトについては、[ユーザーまたはグループを動的に選択するためのサンプルECMAScript](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group)を参照してください。
 
 1. スクリプトの表示名を追加します。この名前は、ワークフローステップで表示されます。名前を指定するには：
 
@@ -117,7 +117,7 @@ function getAdobeSignRecipients() {
 
 ## ユーザーまたはグループを動的に選択するための Java インターフェースの使用 {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-[RecipientInfoSpecifier](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェースを使用して、Adobe Sign やタスクの割り当て手順にユーザーまたはグループを動的に選択することができます。[RecipientInfoSpecifier](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェースを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイすることができます。これにより、AEM ワークフローのタスクの割り当ておよび Adobe Sign コンポーネントで、オプションを選択できるようになります。
+[RecipientInfoSpecifier](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェースを使用して、Adobe Sign やタスクの割り当て手順にユーザーまたはグループを動的に選択することができます。[RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェースを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイすることができます。これにより、AEM ワークフローのタスクの割り当ておよび Adobe Sign コンポーネントで、オプションを選択できるようになります。
 
 次のコードサンプルをコンパイルするには、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar および [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルが必要です。これらの jar ファイルを、外部依存として OSGi バンドルプロジェクトに追加します。OSGi バンドルの作成には、任意の Java IDE を使用できます。以下の手順では、Eclipse を使用して OSGi バンドルを作成します。
 
@@ -226,7 +226,7 @@ function getAdobeSignRecipients() {
    </project>
    ```
 
-1. [RecipientInfoSpecifier](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェースを使用するソースコードを追加して、タスクの割り当て手順にユーザーまたはグループを動的に選択することができます。サンプルコードについて詳しくは、「[Java インターフェイスを使用してユーザーまたはグループを動的に選択するためのサンプル](#-sample-scripts-for)」を参照してください。
+1. [RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェースを使用するソースコードを追加して、タスクの割り当て手順にユーザーまたはグループを動的に選択することができます。サンプルコードについて詳しくは、「[Java インターフェイスを使用してユーザーまたはグループを動的に選択するためのサンプル](#-sample-scripts-for)」を参照してください。
 1. コマンドプロンプトを開き、OSGi バンドルプロジェクトを含むディレクトリに移動します。次のコマンドを使用して OSGi バンドルを作成します。
 
    `mvn clean install`
