@@ -45,11 +45,11 @@ ht-degree: 70%
 * **閉じる**
 * **保存**
 
-## フルスクリーン編集 {#full-screen-editing}
+## フルスクリーン編集  {#full-screen-editing}
 
-For text-based components, tapping the full-screen mode from the toolbar ![](do-not-localize/screen_shot_2018-03-21at163236.png) opens the rich text editor and hides the rest of the page content.
+テキストベースのコンポーネントの場合、ツールバー![](do-not-localize/screen_shot_2018-03-21at163236.png)からフルスクリーンモードをタップすると、リッチテキストエディターが開き、ページコンテンツの残りの部分が非表示になります。
 
-フルスクリーンモードでは、オーサリングに使用できる設定済みのすべてのオプションが表示されます。 The availability is options [depends on the configuration](/help/sites-administering/rich-text-editor.md).
+フルスクリーンモードでは、オーサリングに使用できる設定済みのすべてのオプションが表示されます。 使用できるオプションは[構成](/help/sites-administering/rich-text-editor.md)によって異なります。
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
