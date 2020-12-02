@@ -23,7 +23,7 @@ ht-degree: 40%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-AEM content can easily be rendered via [Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) to render [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) and other formats.
+AEMコンテンツは、[Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)を介して簡単にレンダリングでき、[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering)や他の形式でレンダリングできます。
 
 これらの既製のレンダラーは一般に、リポジトリを調べて、コンテンツをそのまま返します。
 
@@ -37,21 +37,21 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
 
 ## JSON のリクエスト {#requesting-json}
 
-「 **&lt;RESOURCE.cas[.」を使用します。&lt;EXPORT-CONFIG][.&lt;EXPORT-CONFIG].json** to request JSON.
+**&lt;RESOURCE.cas[を使用します。&lt;EXPORT-CONFIG][.&lt;export-config>.** jsonリクエストJSON]
 
 <table>
  <tbody>
   <tr>
    <td>リソース</td>
-   <td>/content/entitiesの下のエンティティリソース<br /> 、または/contentの下 <br /> のコンテンツリソース</td>
+   <td>/content/entities<br />または<br />の下のエンティティリソース/contentの下のコンテンツリソース</td>
   </tr>
   <tr>
    <td>EXPORT-CONFIG</td>
-   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/cas/exportConfigs/EXPORT-CONFIG<br /><br /> （省略した場合、デフォルトのエクスポート設定が適用されます）にあるエクスポート設定 </p> </td>
+   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/cas/exportConfigs/EXPORT-CONFIG<br /> <br />にあるエクスポート設定が見つかりました。省略すると、デフォルトのエクスポート設定が適用されます </p> </td>
   </tr>
   <tr>
    <td>DEPTH-INT</td>
-   <td><strong>Slingレンダリングで使用される子のレンダリングに対するオプションの</strong><br /><br /> DEPTH再帰</td>
+   <td><strong>Slingレンダリングで使用される子のレンダリング用の</strong><br /> <br /> OPTIONALdepth再帰</td>
   </tr>
  </tbody>
 </table>
@@ -60,7 +60,7 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
 
 書き出し設定を作成して、JSON レンダリングをカスタマイズできます。
 
-You can create a configuration node under */apps/mobileapps/caas/exportConfigs.*
+設定ノードは、*/apps/mobileapps/cas/exportConfigs.*&#x200B;の下に作成できます。
 
 | ノード名 | 設定の名前（レンダリングセレクター用） |
 |---|---|
@@ -72,7 +72,7 @@ You can create a configuration node under */apps/mobileapps/caas/exportConfigs.*
  <tbody>
   <tr>
    <td><strong>名前</strong></td>
-   <td><strong>タイプ</strong></td>
+   <td><strong>種類</strong></td>
    <td><strong>デフォルト（設定されていない場合）</strong></td>
    <td><strong>値</strong></td>
    <td><strong>説明</strong></td>
@@ -110,7 +110,7 @@ You can create a configuration node under */apps/mobileapps/caas/exportConfigs.*
    <td>String[]</td>
    <td>すべてを含む</td>
    <td>プロパティ名</td>
-   <td><p>excludePropertyPrefixesが設定されている場合<br /> 、除外されるプレフィックスと一致するにもかかわらず、指定されたプロパティが含まれます。</p> <p>else（excludeプロパティは無視され、これらのプロパティのみを含めます）</p> </td>
+   <td><p>excludePropertyPrefixesが<br />設定されている場合、除外されるプレフィックスと一致するにもかかわらず、指定されたプロパティが含まれます。</p> <p>else（excludeプロパティは無視され、これらのプロパティのみを含めます）</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
@@ -138,7 +138,7 @@ You can create a configuration node under */apps/mobileapps/caas/exportConfigs.*
 
 ### リソースタイプの書き出しの上書き {#resource-type-export-overrides}
 
-Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
+*/apps/mobileapps/cas/exportConfigs.*&#x200B;の下に設定ノードを作成します。
 
 | name | resourceTypeOverrides |
 |---|---|
@@ -150,17 +150,17 @@ Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
  <tbody>
   <tr>
    <td><strong>名前</strong></td>
-   <td><strong>タイプ</strong></td>
+   <td><strong>種類</strong></td>
    <td><strong>デフォルト（設定されていない場合）</strong></td>
    <td><strong>値</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
-   <td>&lt;SELECTOR_TO_INC&gt;</td>
+   <td>&lt;selector_to_inc&gt;</td>
    <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>次のSlingリソースタイプでは、デフォルトのCaaS jsonエクスポートを返さないでください。<br /> リソースを次の形式でレンダリングして、顧客のJSONエクスポートを返します。<br /> &lt;リソース&gt;.&lt;SELECTOR_TO_INC&gt;.json </td>
+   <td>次のSlingリソースタイプでは、デフォルトのCaaS jsonエクスポートを返さないでください。<br /> リソースを；としてレンダリングして、顧客のJSONエクスポートを返します<br /> &lt;resource&gt;。&lt;selector_to_inc&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -172,11 +172,11 @@ Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
 * デフォルト（設定が指定されていません）
 * ページ（サイトのページをレンダリングする）
 
-#### デフォルト書き出し設定 {#default-export-configuration}
+#### デフォルト書き出し設定  {#default-export-configuration}
 
 リクエストされた URI に設定が指定されている場合は、コンテンツサービスのデフォルト書き出し設定が適用されます。
 
-&lt;RESOURCE>.caas[.&lt;DEPTH-INT>].json
+&lt;RESOURCE>.caas[.&lt;depth-int>].json
 
 <table>
  <tbody>
@@ -194,7 +194,7 @@ Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags,tags<br /> cq:lastModified,lastModified</td>
+   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags<br /> cq:lastModified,lastModified</td>
   </tr>
   <tr>
    <td>includeComponents</td>
@@ -223,7 +223,7 @@ Create a configuration node under */apps/mobileapps/caas/exportConfigs.*
 
 この設定は、デフォルトを拡張して、子要素ノードの下にグループ化された子要素を含めます。
 
-&lt;SITE_PAGE>.caas.page[.&lt;DEPTH-INT>].json
+&lt;SITE_PAGE>.caas.page[.&lt;depth-int>].json
 
 ### その他のリソース {#additional-resources}
 
