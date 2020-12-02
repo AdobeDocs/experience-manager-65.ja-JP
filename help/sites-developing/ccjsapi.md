@@ -26,7 +26,7 @@ CQ_Analytics.ClientContextMgrオブジェクトは、自己登録済みのセッ
 
 CQ_Analytics.PersistedSessionStore を拡張します。
 
-### メソッド {#methods}
+### メソッド  {#methods}
 
 #### getRegisteredStore(name) {#getregisteredstore-name}
 
@@ -52,9 +52,9 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 戻り値はありません。
 
-## CQ_Analytics.ClientContextUtils {#cq-analytics-clientcontextutils}
+## CQ_Analytics.ClientContextUtils  {#cq-analytics-clientcontextutils}
 
-セッションストアのアクティベートと登録をリッスンするためのメソッドを提供します。See also [Checking That a Session Store is Defined and Initialized](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized).
+セッションストアのアクティベートと登録をリッスンするためのメソッドを提供します。[セッションストアが定義されていて初期化されているかの確認](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized)も参照してください。
 
 ### メソッド {#methods-1}
 
@@ -72,21 +72,21 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 * ストアにはデフォルト値（初期化プロパティ）が事前設定されていますが、要求は失敗します（タイムアウト）。デフォルト値を使用した初期化は一度だけおこなわれます。
 * ストアは事前設定されています。
 
-When the delay is set to `true` or a number of milliseconds, the method waits before calling the callback method. delay で設定した遅延時間が経過する前に別の初期化イベントが発生した場合は、初期化イベントを発生させないまま、遅延時間が経過するまで待機します。これにより、2 番目の初期化イベントが発生するまで待機して、最適な状況でコールバック関数を呼び出すことができます。
+遅延が`true`またはミリ秒数に設定されている場合、メソッドはコールバックメソッドを呼び出す前に待機します。 delay で設定した遅延時間が経過する前に別の初期化イベントが発生した場合は、初期化イベントを発生させないまま、遅延時間が経過するまで待機します。これにより、2 番目の初期化イベントが発生するまで待機して、最適な状況でコールバック関数を呼び出すことができます。
 
 **パラメーター**
 
 * storeName：String。リスナーに追加するセッションストアの名前。
 * callback：Function。ストアの初期化時に呼び出す関数。
-* delay：Boolean または Number。コールバック関数の呼び出しを遅延させる時間（ミリ秒単位）。A boolean value of `true` uses the default delay of `200 ms`. A boolean value of `false` or a negative number causes no delay to be used.
+* delay：Boolean または Number。コールバック関数の呼び出しを遅延させる時間（ミリ秒単位）。`true`のboolean値は、デフォルトの遅延`200 ms`を使用します。 `false`または負の数のboolean値は、遅延を使用しません。
 
 **戻り値**
 
 戻り値はありません。
 
-#### onStoreRegistered(storeName, callback) {#onstoreregistered-storename-callback}
+#### onStoreRegistered(storeName, callback)  {#onstoreregistered-storename-callback}
 
-セッションストアが登録されたときに呼び出されるコールバック関数を登録します。The register event occurs when a store is registered to [CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr).
+セッションストアが登録されたときに呼び出されるコールバック関数を登録します。登録イベントは、ストアが[CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr)に登録されたときに発生します。
 
 **パラメーター**
 
@@ -97,9 +97,9 @@ When the delay is set to `true` or a number of milliseconds, the method waits be
 
 戻り値はありません。
 
-## CQ_Analytics.JSONPStore {#cq-analytics-jsonpstore}
+## CQ_Analytics.JSONPStore  {#cq-analytics-jsonpstore}
 
-JSON データを格納する非永続セッションストア。データは外部 JSONP サービスから取得されます。Use the `getInstance` or `getRegisteredInstance` method to create an instance of this class.
+JSON データを格納する非永続セッションストア。データは外部 JSONP サービスから取得されます。`getInstance`または`getRegisteredInstance`メソッドを使用して、このクラスのインスタンスを作成します。
 
 CQ_Analytics.JSONStore を拡張します。
 
@@ -107,11 +107,11 @@ CQ_Analytics.JSONStore を拡張します。
 
 継承されるプロパティについては、CQ_Analytics.JSONStore および CQ_Analytics.SessonStore を参照してください。
 
-### メソッド {#methods-2}
+### メソッド  {#methods-2}
 
 継承されるメソッドについては、CQ_Analytics.JSONStore および CQ_Analytics.SessonStore も参照してください。
 
-#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback) {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback}
+#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback)  {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback}
 
 CQ_Analytics.JSONPStore オブジェクトを作成します。
 
@@ -139,7 +139,7 @@ CQ_Analytics.JSONPStore オブジェクトを作成します。
 
 サービス URL を表す String、またはサービス URL が設定されていない場合は null。
 
-#### load(serviceURL, dynamicData, callback) {#load-serviceurl-dynamicdata-callback}
+#### load(serviceURL, dynamicData, callback)  {#load-serviceurl-dynamicdata-callback}
 
 JSONP サービスを呼び出します。JSONP の URL は、指定されたコールバック関数名が後ろに付いたサービス URL です。
 
@@ -153,7 +153,7 @@ JSONP サービスを呼び出します。JSONP の URL は、指定されたコ
 
 戻り値はありません。
 
-#### registerNewInstance(storeName, serviceURL, dynamicData, callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback}
+#### registerNewInstance(storeName, serviceURL, dynamicData, callback)  {#registernewinstance-storename-serviceurl-dynamicdata-callback}
 
 CQ_Analytics.JSONPStoreオブジェクトを作成し、ストアをClient Contextに登録します。
 
@@ -168,7 +168,7 @@ CQ_Analytics.JSONPStoreオブジェクトを作成し、ストアをClient Conte
 
 登録された CQ_Analytics.JSONPStore オブジェクト。
 
-#### setServiceURL(serviceURL) {#setserviceurl-serviceurl}
+#### setServiceURL(serviceURL)  {#setserviceurl-serviceurl}
 
 JSON データの取得に使用する JSONP サービスの URL を設定します。
 
@@ -180,7 +180,7 @@ JSON データの取得に使用する JSONP サービスの URL を設定しま
 
 戻り値はありません。
 
-## CQ_Analytics.JSONStore {#cq-analytics-jsonstore}
+## CQ_Analytics.JSONStore  {#cq-analytics-jsonstore}
 
 JSON オブジェクトのコンテナ。このクラスのインスタンスを作成して、JSONデータを含む非永続的なセッションストアを作成します。
 
@@ -204,7 +204,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 継承されるメソッドについては、CQ_Analytics.SessionStore も参照してください。
 
-#### clear() {#clear}
+#### clear()  {#clear}
 
 セッションストアのデータを削除し、すべての初期化プロパティを削除します。
 
@@ -216,7 +216,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 戻り値はありません。
 
-#### getInstance(storeName, jsonData) {#getinstance-storename-jsondata}
+#### getInstance(storeName, jsonData)  {#getinstance-storename-jsondata}
 
 指定された名前で、指定された JSON データを使用して初期化される（initJSON メソッドを呼び出す）CQ_Analytics.JSONStore オブジェクトを作成します。
 
@@ -229,7 +229,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 CQ_Analytics.JSONStore オブジェクト。
 
-#### getJSON() {#getjson}
+#### getJSON()  {#getjson}
 
 セッションストアのデータを JSON 形式で取得します。
 
@@ -241,9 +241,9 @@ CQ_Analytics.JSONStore オブジェクト。
 
 JSON 形式のストアデータを表すオブジェクト。
 
-#### init() {#init}
+#### init()  {#init}
 
-セッションストアをクリアし、初期化プロパティを使用して初期化します。Sets the initialization flag to `true` and then fires the `initialize` and `update` events.
+セッションストアをクリアし、初期化プロパティを使用して初期化します。初期化フラグを`true`に設定し、`initialize`と`update`のイベントを実行します。
 
 **パラメーター**
 
@@ -253,7 +253,7 @@ JSON 形式のストアデータを表すオブジェクト。
 
 戻り値はありません。
 
-#### initJSON(jsonData, doNotClear) {#initjson-jsondata-donotclear}
+#### initJSON(jsonData, doNotClear)  {#initjson-jsondata-donotclear}
 
 JSON オブジェクト内のデータから初期化プロパティを作成します。オプションで、既存の初期化プロパティをすべて削除できます。
 
@@ -284,7 +284,7 @@ B/B1: "valueBB1"
 
 戻り値はありません。
 
-#### registerNewInstance(storeName, jsonData) {#registernewinstance-storename-jsondata}
+#### registerNewInstance(storeName, jsonData)  {#registernewinstance-storename-jsondata}
 
 指定された名前で、指定された JSON データを使用して初期化される（initJSON メソッドを呼び出す）CQ_Analytics.JSONStore オブジェクトを作成します。新しいオブジェクトは、Clickstream Cloud Manager に自動的に登録されます。
 
@@ -297,11 +297,11 @@ B/B1: "valueBB1"
 
 CQ_Analytics.JSONStore オブジェクト。
 
-## CQ_Analytics.Observable {#cq-analytics-observable}
+## CQ_Analytics.Observable  {#cq-analytics-observable}
 
 イベントを発生させ、他のオブジェクトがこれらのイベントをリッスンして対処できるようにします。このクラスを拡張したクラスは、リスナーを呼び出すイベントを発生させることができます。
 
-### メソッド {#methods-4}
+### メソッド  {#methods-4}
 
 #### addListener(event, fct, scope) {#addlistener-event-fct-scope}
 
@@ -317,7 +317,7 @@ CQ_Analytics.JSONStore オブジェクト。
 
 戻り値はありません。
 
-#### removeListener(event, fct) {#removelistener-event-fct}
+#### removeListener(event, fct)  {#removelistener-event-fct}
 
 イベントに対して指定されたイベントハンドラーを削除します。
 
@@ -330,17 +330,17 @@ CQ_Analytics.JSONStore オブジェクト。
 
 戻り値はありません。
 
-## CQ_Analyics.PersistedJSONPStore {#cq-analyics-persistedjsonpstore}
+## CQ_Analyics.PersistedJSONPStore  {#cq-analyics-persistedjsonpstore}
 
 リモート JSONP サービスから取得される JSON オブジェクトの永続コンテナ。
 
 CQ_Analytics.PersistedJSONStore を拡張します。
 
-### メソッド {#methods-5}
+### メソッド  {#methods-5}
 
 継承されるメソッドについては、CQ_Analytics.PersistedJSONStore も参照してください。
 
-#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback) {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback-1}
+#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback)  {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback-1}
 
 CQ_Analytics.PersistedJSONPStore オブジェクトを作成します。
 
@@ -368,7 +368,7 @@ CQ_Analytics.PersistedJSONPStore オブジェクトを作成します。
 
 サービス URL を表す String、またはサービス URL が設定されていない場合は null。
 
-#### load(serviceURL, dynamicData, callback) {#load-serviceurl-dynamicdata-callback-1}
+#### load(serviceURL, dynamicData, callback)  {#load-serviceurl-dynamicdata-callback-1}
 
 JSONP サービスを呼び出します。JSONP の URL は、指定されたコールバック関数名が後ろに付いたサービス URL です。
 
@@ -382,7 +382,7 @@ JSONP サービスを呼び出します。JSONP の URL は、指定されたコ
 
 戻り値はありません。
 
-#### registerNewInstance(storeName, serviceURL, dynamicData, callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
+#### registerNewInstance(storeName, serviceURL, dynamicData, callback)  {#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
 
 CQ_Analytics.PersistedJSONPStoreオブジェクトを作成し、ストアをクライアントコンテキストに登録します。
 
@@ -397,7 +397,7 @@ CQ_Analytics.PersistedJSONPStoreオブジェクトを作成し、ストアをク
 
 登録された CQ_Analytics.PersistedJSONPStore オブジェクト。
 
-#### setServiceURL(serviceURL) {#setserviceurl-serviceurl-1}
+#### setServiceURL(serviceURL)  {#setserviceurl-serviceurl-1}
 
 JSON データの取得に使用する JSONP サービスの URL を設定します。
 
@@ -409,11 +409,11 @@ JSON データの取得に使用する JSONP サービスの URL を設定しま
 
 戻り値はありません。
 
-## CQ_Analytics.PersistedJSONStore {#cq-analytics-persistedjsonstore}
+## CQ_Analytics.PersistedJSONStore  {#cq-analytics-persistedjsonstore}
 
 JSON オブジェクトの永続コンテナ。
 
-Extends `CQ_Analytics.PersistedSessionStore`.
+`CQ_Analytics.PersistedSessionStore`を拡張します。
 
 ### プロパティ {#properties-2}
 
@@ -429,7 +429,7 @@ Extends `CQ_Analytics.PersistedSessionStore`.
 
 継承されるメソッドについては、CQ_Analytics.PersistedSessionStore も参照してください。
 
-#### getInstance(storeName, jsonData) {#getinstance-storename-jsondata-1}
+#### getInstance(storeName, jsonData)  {#getinstance-storename-jsondata-1}
 
 指定された名前で、指定された JSON データを使用して初期化される（initJSON メソッドを呼び出す）CQ_Analytics.PersistedJSONStore オブジェクトを作成します。
 
@@ -442,7 +442,7 @@ Extends `CQ_Analytics.PersistedSessionStore`.
 
 CQ_Analytics.PersistedJSONStore オブジェクト。
 
-#### getJSON() {#getjson-1}
+#### getJSON()  {#getjson-1}
 
 セッションストアのデータを JSON 形式で取得します。
 
@@ -454,7 +454,7 @@ CQ_Analytics.PersistedJSONStore オブジェクト。
 
 JSON 形式のストアデータを表すオブジェクト。
 
-#### initJSON(jsonData, doNotClear) {#initjson-jsondata-donotclear-1}
+#### initJSON(jsonData, doNotClear)  {#initjson-jsondata-donotclear-1}
 
 JSON オブジェクト内のデータから初期化プロパティを作成します。オプションで、既存の初期化プロパティをすべて削除できます。
 
@@ -485,7 +485,7 @@ B/B1: "valueBB1"
 
 戻り値はありません。
 
-#### registerNewInstance(storeName, jsonData) {#registernewinstance-storename-jsondata-1}
+#### registerNewInstance(storeName, jsonData)  {#registernewinstance-storename-jsondata-1}
 
 指定された名前で、指定された JSON データを使用して初期化される（initJSON メソッドを呼び出す）CQ_Analytics.PersistedJSONStore オブジェクトを作成します。新しいオブジェクトは、ClientContext Manager に自動的に登録されます。
 
@@ -498,7 +498,7 @@ B/B1: "valueBB1"
 
 CQ_Analytics.PersistedJSONStore オブジェクト。
 
-## CQ_Analytics.PersistedSessionStore {#cq-analytics-persistedsessionstore}
+## CQ_Analytics.PersistedSessionStore  {#cq-analytics-persistedsessionstore}
 
 プロパティと値のコンテナ。データは CQ_Analytics.SessionPersistence を使用して保持されます。このクラスのインスタンスを作成して、永続化されたセッションストアを作成します。
 
@@ -516,11 +516,11 @@ CQ_Analytics.SessionStore を拡張します。
 
 継承されるメソッドについては、CQ_Analytics.SessionStore を参照してください。
 
-When the inherited methods `clear`, `setProperty`, `setProperties`, `removeProperty` are used to change the store data, the changes are automatically persisted, unless the changed properties are flagged as notPersisted.
+継承されたメソッド`clear`、`setProperty`、`setProperties`、`removeProperty`を使用してストアデータを変更する場合、変更されたプロパティにnotPersistedというフラグが付けられていない限り、変更は自動的に保持されます。
 
 #### getStoreKey() {#getstorekey}
 
-Retrieves the `STOREKEY` property.
+`STOREKEY`プロパティを取得します。
 
 **パラメーター**
 
@@ -528,7 +528,7 @@ Retrieves the `STOREKEY` property.
 
 **戻り値**
 
-プ `STOREKEY` ロパティの値。
+`STOREKEY`プロパティの値。
 
 #### isPersisted(name) {#ispersisted-name}
 
@@ -544,7 +544,7 @@ Retrieves the `STOREKEY` property.
 
 #### persist() {#persist}
 
-セッションストアを保持します。The default persistence mode uses browser `localStorage` using `ClientSidePersistence` as the name ( `window.localStorage.set("ClientSidePersistance", store);`)
+セッションストアを保持します。デフォルトの永続性モードでは、ブラウザー`localStorage`が使用され、`ClientSidePersistence`が名前として使用されます(`window.localStorage.set("ClientSidePersistance", store);`)
 
 localStorage が使用できないまたは書き込めない場合、ストアはウィンドウのプロパティとして保持されます。
 
@@ -558,7 +558,7 @@ localStorage が使用できないまたは書き込めない場合、ストア�
 
 戻り値はありません。
 
-#### reset(deferEvent) {#reset-deferevent}
+#### reset(deferEvent)  {#reset-deferevent}
 
 すべてのデータプロパティをストアから削除して、ストアを保持します。オプションで、完了時に `udpate` イベントを発生させません。
 
@@ -570,7 +570,7 @@ localStorage が使用できないまたは書き込めない場合、ストア�
 
 戻り値はありません。
 
-#### setNonPersisted(name) {#setnonpersisted-name}
+#### setNonPersisted(name)  {#setnonpersisted-name}
 
 データプロパティに「非永続」というフラグを設定します。
 
@@ -582,7 +582,7 @@ localStorage が使用できないまたは書き込めない場合、ストア�
 
 戻り値はありません。
 
-## CQ_Analytics.SessionStore {#cq-analytics-sessionstore}
+## CQ_Analytics.SessionStore  {#cq-analytics-sessionstore}
 
 CQ_Analytics.SessionStore はセッションストアを表します。セッションストアを作成するには、このクラスのインスタンスを次のように作成します。
 
@@ -596,7 +596,7 @@ CQ_Analytics.Observableを拡張します。
 
 セッションストアの名前。このプロパティの値を取得するには、getName を使用します。
 
-### メソッド {#methods-8}
+### メソッド  {#methods-8}
 
 #### addInitProperty(name, value) {#addinitproperty-name-value}
 
@@ -613,7 +613,7 @@ CQ_Analytics.Observableを拡張します。
 
 戻り値はありません。
 
-#### clear() {#clear-1}
+#### clear()  {#clear-1}
 
 ストアからすべてのデータプロパティを削除します。
 
@@ -625,7 +625,7 @@ CQ_Analytics.Observableを拡張します。
 
 戻り値はありません。
 
-#### getData(excluded) {#getdata-excluded}
+#### getData(excluded)  {#getdata-excluded}
 
 ストアデータを返します。オプションで、名前プロパティをデータから除外します。ストアのデータプロパティが存在しない場合は、`init` メソッドを呼び出します。
 
@@ -637,7 +637,7 @@ excluded：（オプション）返されるデータから除外するプロパ
 
 プロパティとその値からなるオブジェクト。
 
-#### getInitProperty(name) {#getinitproperty-name}
+#### getInitProperty(name)  {#getinitproperty-name}
 
 データプロパティの値を取得します。
 
@@ -661,7 +661,7 @@ excluded：（オプション）返されるデータから除外するプロパ
 
 ストア名を表す String 値。
 
-#### getProperty(name, raw) {#getproperty-name-raw}
+#### getProperty(name, raw)  {#getproperty-name-raw}
 
 プロパティの値を返します。値は未加工のプロパティまたは XSS フィルタリングされた値として返されます。ストアのデータプロパティが存在しない場合は、`init` メソッドを呼び出します。
 
@@ -674,7 +674,7 @@ excluded：（オプション）返されるデータから除外するプロパ
 
 データプロパティの値。
 
-#### getPropertyNames(excluded) {#getpropertynames-excluded}
+#### getPropertyNames(excluded)  {#getpropertynames-excluded}
 
 セッションストアに格納されているプロパティの名前を返します。ストアのデータプロパティが存在しない場合は、`init` メソッドを呼び出します。
 
@@ -686,7 +686,7 @@ excluded：（オプション）結果から除外するプロパティ名の配
 
 セッションプロパティ名を表す String 値の配列。
 
-#### getSessionStore() {#getsessionstore}
+#### getSessionStore()  {#getsessionstore}
 
 現在のオブジェクトに結び付けられているセッションストアを返します。
 
@@ -698,7 +698,7 @@ excluded：（オプション）結果から除外するプロパティ名の配
 
 this
 
-#### init() {#init-1}
+#### init()  {#init-1}
 
 ストアを「初期化済み」としてマークし、`initialize` イベントを発生させます。
 
@@ -710,7 +710,7 @@ this
 
 戻り値はありません。
 
-#### isInitialized() {#isinitialized}
+#### isInitialized()  {#isinitialized}
 
 セッションストアが初期化されていることを示します。
 
@@ -735,7 +735,7 @@ this
 
 戻り値はありません。
 
-#### removeProperty(name) {#removeproperty-name}
+#### removeProperty(name)  {#removeproperty-name}
 
 セッションストアからプロパティを削除します。完了時に `update` イベントを発生させます。ストアのデータプロパティが存在しない場合は、`init` メソッドを呼び出します。
 
@@ -759,7 +759,7 @@ this
 
 戻り値はありません。
 
-#### setProperties(properties) {#setproperties-properties}
+#### setProperties(properties)  {#setproperties-properties}
 
 複数のプロパティの値を設定します。完了時に `update` イベントを発生させます。ストアのデータプロパティが存在しない場合は、`init` メソッドを呼び出します。
 
@@ -771,7 +771,7 @@ this
 
 戻り値はありません。
 
-#### setProperty(name, value) {#setproperty-name-value}
+#### setProperty(name, value)  {#setproperty-name-value}
 
 プロパティの値を設定します。完了時に `update` イベントを発生させます。ストアのデータプロパティが存在しない場合は、`init` メソッドを呼び出します。
 
