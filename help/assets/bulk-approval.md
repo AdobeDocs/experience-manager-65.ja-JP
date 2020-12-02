@@ -23,10 +23,10 @@ ht-degree: 57%
 
 レビュー担当者がレビューを終了（アセットを承認または拒否）すると、ユーザーはレビューが完了したという通知を受け取ります。
 
-## Create a review task for folders {#creating-a-review-task-for-folders}
+## フォルダーのレビュータスクの作成{#creating-a-review-task-for-folders}
 
-1. From the [!DNL Assets] user interface, select the folder for which you want to create a review task.
-1. ツールバーで、「レビューを **[!UICONTROL 作成」タスク]** 「レビューを ![作成」タスクをクリックし](assets/do-not-localize/create-review-task.png) 、「 **[!UICONTROL レビュータスク]** 」ページを開きます。 If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
+1. [!DNL Assets]ユーザーインターフェイスから、レビュータスクを作成するフォルダーを選択します。
+1. ツールバーで、**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png)をクリックし、**[!UICONTROL レビュータスク]**&#x200B;ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
 
 1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
@@ -48,18 +48,18 @@ ht-degree: 57%
 
    ![review_name](assets/review_name.png)
 
-1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新しいタスクに関する通知が承認者に送信されます。
-1. Log in to [!DNL Assets] as an Approver and navigate to the [!DNL Assets] UI. To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
+1. 「**[!UICONTROL 送信]**」をクリックし、「**[!UICONTROL 完了]**」をクリックして確認メッセージを閉じます。 新しいタスクに関する通知が承認者に送信されます。
+1. 承認者として[!DNL Assets]にログインし、[!DNL Assets] UIに移動します。 アセットを承認するには、「**[!UICONTROL 通知]**」をクリックし、リストからレビュータスクを選択します。
 
    ![アセットの通知](assets/aemAssetsNotification.png)
 
-1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then click **[!UICONTROL Review]**.
-1. In the **[!UICONTROL Review Task]** page, select assets, and click **[!UICONTROL Approve/Reject]** to approve or reject, as appropriate.
+1. **[!UICONTROL レビュータスク]**&#x200B;ページで、レビュータスクの詳細を調べ、**[!UICONTROL レビュー]**&#x200B;をクリックします。
+1. **[!UICONTROL レビュータスク]**&#x200B;ページで、アセットを選択し、必要に応じて、「**[!UICONTROL 承認/拒否]**」をクリックして、承認または拒否します。
 
    ![review_task](assets/review_task.png)
 
-1. Click **[!UICONTROL Complete]** from the toolbar. In the dialog, enter a comment and click  **[!UICONTROL Complete]** to confirm.
-1. Navigate to the [!DNL Assets] user interface and open the folder. アセットの承認ステータスアイコンは、カードの表示とリストの表示に表示されます。
+1. ツールバーの&#x200B;**[!UICONTROL 完了]**&#x200B;をクリックします。 ダイアログで、コメントを入力し、「**[!UICONTROL 完了]**」をクリックして確認します。
+1. [!DNL Assets]ユーザーインターフェイスに移動し、フォルダーを開きます。 アセットの承認ステータスアイコンは、カードの表示とリストの表示に表示されます。
 
    **カード表示**
 
@@ -69,10 +69,10 @@ ht-degree: 57%
 
    ![リスト表示に表示されるステータスの確認](assets/review_status_listview.png)
 
-## Create a review task for collections {#creating-a-review-task-for-collections}
+## コレクションのレビュータスクの作成{#creating-a-review-task-for-collections}
 
 1. コレクションページで、レビュータスクを作成するコレクションを選択します。
-1. ツールバーで、「レビューを **[!UICONTROL 作成」タスク]** 「レビューを ![作成」タスクをクリックし](assets/do-not-localize/create-review-task.png) 、「 **[!UICONTROL レビュータスク]** 」ページを開きます。 If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
+1. ツールバーで、**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png)をクリックし、**[!UICONTROL レビュータスク]**&#x200B;ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
 
 1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
@@ -90,14 +90,14 @@ ht-degree: 57%
 
    ![task_details-collection](assets/task_details-collection.png)
 
-1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新しいタスクに関する通知が承認者に送信されます。
-1. Log in to [!DNL Assets] as an Approver and navigate to the [!DNL Assets] console. To approve assets, click **[!UICONTROL Notifications]** and then select the review task from the list.
-1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then click **[!UICONTROL Review]**.
-1. コレクションのすべてのアセットがレビューページに表示されます。Select the assets and click **[!UICONTROL Approve/Reject]** to approve or reject assets, as appropriate.
+1. 「**[!UICONTROL 送信]**」をクリックし、「**[!UICONTROL 完了]**」をクリックして確認メッセージを閉じます。 新しいタスクに関する通知が承認者に送信されます。
+1. 承認者として[!DNL Assets]にログインし、[!DNL Assets]コンソールに移動します。 アセットを承認するには、「**[!UICONTROL 通知]**」をクリックし、リストからレビュータスクを選択します。
+1. **[!UICONTROL レビュータスク]**&#x200B;ページで、レビュータスクの詳細を調べ、**[!UICONTROL レビュー]**&#x200B;をクリックします。
+1. コレクションのすべてのアセットがレビューページに表示されます。アセットを選択し、必要に応じて、「**[!UICONTROL 承認/拒否]**」をクリックして、アセットを承認または拒否します。
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. Click **[!UICONTROL Complete]** from the toolbar. In the dialog, enter a comment and click **[!UICONTROL Complete]** to confirm.
+1. ツールバーの&#x200B;**[!UICONTROL 完了]**&#x200B;をクリックします。 ダイアログで、コメントを入力し、「**[!UICONTROL 完了]**」をクリックして確認します。
 1. コレクションコンソールに移動して、コレクションを開きます。アセットの承認ステータスアイコンは、カード表示とリスト表示の両方に表示されます。
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
