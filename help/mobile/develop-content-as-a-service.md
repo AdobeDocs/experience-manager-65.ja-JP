@@ -29,7 +29,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->**空中コンテンツ** (Over-the-Air Content)は、ContentSyncハンドラーを使用して上記のいずれかからも作成できます。 無線コンテンツを使用すると、パッケージと配信を Zip して一括で処理したり、アップデートやパッケージを保守したりできます。
+>**Over-the-Air** Contentは、ContentSyncハンドラーを使用して上記のいずれかのコンテンツから取得できます。無線コンテンツを使用すると、パッケージと配信を Zip して一括で処理したり、アップデートやパッケージを保守したりできます。
 
 コンテンツサービスは、主に 3 種類の要素を配信します。
 
@@ -65,7 +65,7 @@ ht-degree: 61%
    1. アセットまたはアセットコレクションを選択
    1. JSON レンダリングをカスタマイズ
 
-The following diagram shows the **Assets Reference Workflow**:
+次の図に、**アセット参照ワークフロー**&#x200B;を示します。
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
@@ -73,7 +73,7 @@ The following diagram shows the **Assets Reference Workflow**:
 
 コンテンツサービスは、他の AEM コンテンツを介して参照できない、AEM の管理対象アセットへのアクセスを提供します。
 
-#### 既存の管理対象アセット {#existing-managed-assets}
+#### 既存の管理対象アセット  {#existing-managed-assets}
 
 既存の AEM Sites および Assets ユーザーは、AEM Assets を使用して、すべてのチャネルのすべてのデジタル要素を管理しています。ネイティブのモバイルアプリを開発中で、AEM Assetsが管理する複数のアセットを使用する必要があります。 例えば、ロゴ、背景画像、ボタンアイコンなど。
 
@@ -85,7 +85,7 @@ The following diagram shows the **Assets Reference Workflow**:
 * /content/dam/geometrixx-outdoors/brand/icons/app/cart.png
 * /content/dam/geometrixx-outdoors/brand/icons/app/home.png
 
-#### CS アセットエンティティへのアクセス {#accessing-cs-asset-entities}
+#### CS アセットエンティティへのアクセス  {#accessing-cs-asset-entities}
 
 ここでは、ページは既に使用可能になっているものとします。API を利用してページを使用可能にする手順については触れません（この手順については、AEM UI に関する説明で触れます）。アセットエンティティが作成され、「appImages」スペースに追加されました。 組織のために、スペースの下に追加のフォルダーが作成されました。 アセットエンティティはAEM JCRに次のように保存されます。
 
@@ -95,7 +95,7 @@ The following diagram shows the **Assets Reference Workflow**:
 * /content/entities/appImages/icons/cart
 * /content/entities/appImages/icons/home
 
-#### 使用可能なアセットエンティティのリストの取得 {#getting-a-list-of-available-asset-entities}
+#### 使用可能なアセットエンティティのリストの取得  {#getting-a-list-of-available-asset-entities}
 
 アプリ開発者は、アセットエンティティを取得することで、使用可能なアセットのリストを取得できます。Content Servicesスペースエンドポイントは、WebサービスAPI SDKを介してこの情報を提供できます。
 
@@ -117,8 +117,8 @@ AEM コンテンツサービスは、API を介してモバイルアプリに HT
 
 次のオプションを検討します。
 
-* **Zipファイル：** デバイス上に適切に表示するために、ページのすべての参照資料（css、JavaScript、アセットなど）が  — は、応答と共に単一の圧縮ファイルに含まれます。 HTMLページ内の参照は、これらのファイルへの相対パスを使用するように調整されます。
-* **ストリーミング：** 必要なファイルのマニフェストをAEMから取得します。 次に、これ以降のリクエストでは、このマニフェストを使用してすべてのファイル（HTML、CSS、JS など）をリクエストします。
+* **Zipファイル：デバイス** に適切に表示されるように、ページのすべての参照資料（css、JavaScript、アセットなど）を最適に表示します。 — は、応答と共に単一の圧縮ファイルに含まれます。 HTMLページ内の参照は、これらのファイルへの相対パスを使用するように調整されます。
+* **ストリーミング：AEMから必要なファイルのマニフェストを** 取得します。次に、これ以降のリクエストでは、このマニフェストを使用してすべてのファイル（HTML、CSS、JS など）をリクエストします。
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
