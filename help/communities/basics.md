@@ -24,7 +24,7 @@ ht-degree: 68%
 
 このドキュメントのオーサリングセクションでは、オーサリング編集モードでの  AEM sites へのコミュニティ機能の付加や、コンポーネント設定の記述について説明します。
 
-Components may be explored using an AEM instance and the interactive [Community Components guide](components-guide.md).
+コンポーネントは、AEMインスタンスとインタラクティブな[コミュニティコンポーネントガイド](components-guide.md)を使用して確認できます。
 
 ## コミュニティコンポーネントへのアクセス {#accessing-communities-components}
 
@@ -34,15 +34,15 @@ Components may be explored using an AEM instance and the interactive [Community 
 
 >[!NOTE]
 >
->For general authoring information, view the [quick guide to authoring pages](../../help/sites-authoring/qg-page-authoring.md).
+>一般的なオーサリング情報については、[オーサリングページのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を表示してください。
 >
 >AEM に精通していない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントを参照してください。
 
-### デザインモードの開始 {#entering-design-mode}
+### デザインモードの開始  {#entering-design-mode}
 
-If a **Communities** component is not found in the components browser (sidekick), it will be necessary to enter `Design Mode` to add other Communities components. [必要なクライアント側ライブラリ](#required-clientlibs) (clientlibs)も追加する必要がある場合があります。
+**Communities**&#x200B;コンポーネントがコンポーネントブラウザー（サイドキック）に見つからない場合は、`Design Mode`と入力して、他のCommunitiesコンポーネントを追加する必要があります。 [必要なクライアント側ライブラリ](#required-clientlibs) (clientlibs)も追加する必要がある場合があります。
 
-For details, see [Configuring Components in Design Mode](../../help/sites-authoring/default-components-designmode.md).
+詳しくは、「[デザインモードでのコンポーネントの設定](../../help/sites-authoring/default-components-designmode.md)」を参照してください。
 
 次の図に、いくつかのコミュニティコンポーネントを選択して、コンポーネントブラウザーに表示する操作を示します。
 
@@ -56,13 +56,13 @@ For details, see [Configuring Components in Design Mode](../../help/sites-author
 
 コンポーネントを正しく機能させ（JavaScript）、スタイル設定する（CSS）には、[クライアント側ライブラリ](../../help/sites-developing/clientlibs.md)（clientlibs）が必要です。
 
-コミュニティコンポーネントをページに追加して、結果がエラーまたは予期せぬ表示になった場合は、まずコミュニティコンポーネントに必須の clientlibs の追加を試みてください。For details, see [Clientlibs for Communities Components](clientlibs.md).
+コミュニティコンポーネントをページに追加して、結果がエラーまたは予期せぬ表示になった場合は、まずコミュニティコンポーネントに必須の clientlibs の追加を試みてください。詳しくは、[CommunitiesのClientlibs ](clientlibs.md)を参照してください。
 
-### Example: Initially placed reviews without client libraries... {#example-initially-placed-reviews-without-client-libraries}
+### 例：最初に配置されたレビューにクライアントライブラリはありません… {#example-initially-placed-reviews-without-client-libraries}
 
 ![clientlibs1](assets/clientlibs1.png)
 
-### ... And with client libraries {#and-with-client-libraries}
+### ...クライアントライブラリ{#and-with-client-libraries}
 
 ![clientlibs2](assets/clientlibs2.png)
 
@@ -70,11 +70,11 @@ For details, see [Configuring Components in Design Mode](../../help/sites-author
 
 パブリッシュ環境に入力（投稿）されたコンテンツへのタグ付けを許可するために、多くのコミュニティ機能を設定できます。
 
-タグ付けが許可されている場合は、パブリッシュ環境でメンバーに表示する名前空間を制限するようにコミュニティサイトを設定できます。See the [Community Sites console](sites-console.md#tagging).
+タグ付けが許可されている場合は、パブリッシュ環境でメンバーに表示する名前空間を制限するようにコミュニティサイトを設定できます。[コミュニティサイトコンソール](sites-console.md#tagging)を参照してください。
 
-Features which allow tagging: [blog](blog-feature.md), [calendar](calendar.md), [file library](file-library.md), [forum](forum.md)
+タグ付けが可能な機能：[ブログ](blog-feature.md)、[カレンダー](calendar.md)、[ファイルライブラリ](file-library.md)、[フォーラム](forum.md)
 
-Features which use tags: [catalog](catalog.md), [search](search.md), [social tag cloud](tagcloud.md)
+タグを使用する機能：[カタログ](catalog.md)、[検索](search.md)、[ソーシャルタグcloud](tagcloud.md)
 
 オーサリングに関する情報：
 
@@ -82,8 +82,8 @@ Features which use tags: [catalog](catalog.md), [search](search.md), [social tag
 
 管理に関する情報：
 
-* Creating tag namespaces (taxonomy): [Administering Tags](../../help/sites-administering/tags.md)
-* Community Site configuration: see [TAGGING](sites-console.md#tagging)
+* タグ名前空間（分類）の作成：[タグの管理](../../help/sites-administering/tags.md)
+* コミュニティサイトの設定：[タグ付け](sites-console.md#tagging)を参照
 * [ユーザー生成コンテンツのタグ付け](../../help/sites-authoring/tags.md)
 * [イネーブルメントリソースのタグ付け](tag-resources.md)
 
