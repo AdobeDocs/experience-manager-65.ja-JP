@@ -21,22 +21,22 @@ ht-degree: 73%
 
 # AEM Forms Workspace のフォームセットの使用{#working-with-formsets-in-aem-forms-workspace}
 
-フォームセットは HTML5 フォームの集まりであり、エンドユーザーには 1 つのフォームのセットとして提供されます。エンドユーザーがフォームセットへの入力を始めると、フォームセットはその内容を別のフォームにもシームレスに移行します。フォームセットは 1 回クリックすれば送信できます。For more info on formsets and how to set them up, see [Formset in AEM Forms](../../forms/using/formset-in-aem-forms.md).
+フォームセットは HTML5 フォームの集まりであり、エンドユーザーには 1 つのフォームのセットとして提供されます。エンドユーザーがフォームセットへの入力を始めると、フォームセットはその内容を別のフォームにもシームレスに移行します。フォームセットは 1 回クリックすれば送信できます。フォームセットとその設定方法について詳しくは、[AEM Formsのフォームセット](../../forms/using/formset-in-aem-forms.md)を参照してください。
 
 AEM Forms Workspace はフォームセットをサポートします。フォームセットでは、サービスやプロセスに関連する複数のフォームをグループ化し、ビジネス上のプロセスを自動化するとともにエンドユーザーに表示します。このようなシナリオでは、ユーザーはセット全体を 1 つとして記入し、個々のフォームやプロセスをファイル、送信、追跡する必要はありません。
 
 ## AEM Forms Workspace アプリケーションにおけるフォームセットのスタートポイントへの割り当て {#attaching-a-formset-to-startpoint-in-an-aem-forms-workspace-app-br}
 
-1. Workbench でビジネスプロセスのワークフローを作成します。For more information, see [Workbench help](https://www.adobe.com/go/learn_aemforms_workbench_63).
-1. From the process properties of the startpoint, select **Use A CRX Asset** in Presentation &amp; Data.
+1. Workbench でビジネスプロセスのワークフローを作成します。詳しくは、[Workbenchヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください。
+1. スタートポイントのプロセスプロパティから、「Presentation &amp; Data」で「**Use A CRX Asset**」を選択します。
 
    ![1-3](assets/1-3.png)
 
-1. Click ![browse](assets/browse.png) (Browse) next to the CRX asset path. フォームアセットを選択ダイアログが表示されます。
+1. CRXアセットパスの横にある![browse](assets/browse.png)(Browse)をクリックします。 フォームアセットを選択ダイアログが表示されます。
 
    ![2-1](assets/2-1.png)
 
-1. Click the **Formset** tab, select the relevant formset from the list, and then click **OK**.
+1. 「**フォームセット**」タブをクリックし、リストから関連するフォームセットを選択して、「**OK**」をクリックします。
 
 1. 関連する他のプロセスプロパティを更新した後、アプリケーションをデプロイします。
 
