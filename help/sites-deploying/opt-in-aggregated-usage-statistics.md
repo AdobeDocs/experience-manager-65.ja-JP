@@ -31,11 +31,11 @@ AEM とのやり取りの状況に関する統計情報をアドビに送信す�
 >
 >データ保護とプライバシーに関する様々な規制があり、たとえば、GDPRやCCPAを含む。 AEM Sitesは、お客様のデータ保護とプライバシーコンプライアンスの義務を支援する準備が整っています。 このページでは、集計した使用状況の統計の収集をオプトイン（またはオプトアウト）する手順を説明します。
 >
->詳しくは、 [Adobeのプライバシーセンターも参照してください](https://www.adobe.com/privacy.html)。
+>詳しくは、[Adobeのプライバシーセンター](https://www.adobe.com/privacy.html)も参照してください。
 
 >[!NOTE]
 >
->You can also opt-out at anytime by either using the [Web Console](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) or by not selecting the opt-in option on the AEM opt-in screen.
+>[Webコンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)を使用するか、AEMオプトイン画面でオプトインオプションを選択しないと、いつでもオプトアウトできます。
 
 ## タッチ UI を使用したオプトイン {#opt-in-by-using-the-touch-ui}
 
@@ -55,15 +55,15 @@ AEM を初めて起動したときに、タッチ UI を次のように使用し
 
 1. 「**完了**」をクリックします。
 
-## Web コンソールを使用したオプトイン {#opt-in-by-using-the-web-console}
+## Web コンソールを使用したオプトイン  {#opt-in-by-using-the-web-console}
 
 Web コンソールを次のように使用してオプトイン（またはオプトアウト）することができます。
 
-1. On the AEM Navigation screen, click **Tools** and then **Operations**.
+1. AEMのナビゲーション画面で、「**ツール**」をクリックし、「**操作**」をクリックします。
 
    ![usage_statisticshopsdashboard](assets/usage_statisticsopsdashboard.png)
 
-1. On the Operations window, click **Web Console**.
+1. 「Operations」ウィンドウで、「**Web Console**」をクリックします。
 
    ![usage_statisticswebconsole](assets/usage_statisticswebconsole.png)
 
@@ -72,7 +72,7 @@ Web コンソールを次のように使用してオプトイン（またはオ�
 
    ![usage_statisticscollectionedit](assets/usage_statisticscollectionedit.png)
 
-1. Select the **Enabled** checkbox. また、使用状況の統計情報の収集をオプトアウトする場合は、このチェックボックスの選択を解除することもできます。
+1. 「**有効**」チェックボックスを選択します。 また、使用状況の統計情報の収集をオプトアウトする場合は、このチェックボックスの選択を解除することもできます。
 
    ![usage_statisticsselect](assets/usage_statisticsselect.png)
 
