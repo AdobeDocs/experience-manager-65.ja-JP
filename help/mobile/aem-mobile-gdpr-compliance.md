@@ -27,7 +27,7 @@ AEM Mobile は、GDPR コンプライアンスの義務に関してお客様を�
 
 [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html)
 
-## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
+## Adobe Digital Publishing Suite  {#adobe-digital-publishing-suite}
 
 アドビのデジタルパブリッシング製品（AEM Mobile の先行製品）では、アドビによる GDPR 対応の取り組みをサポートしています。[https://www.adobe.com/jp/privacy/general-data-protection-regulation.html](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html) を参照してください。以下では、アドビと協力して GDPR 要求を開始する方法など、Digital Publishing Suite 製品における GDPR 関連機能のサポートの詳細について説明します。
 
@@ -51,7 +51,7 @@ Digital Publishing Suite の GDPR 要求を開始する場合は、アドビカ�
 * Windows アプリユーザーの場合は、エンドユーザーの App Store ID：*dpsc-windowsAppStoreId*
 * エンドユーザーが DPS App とのやり取りに使用する電子メールアドレス：*email*
 
-### Frequently Asked Questions (FAQ) {#frequently-asked-questions-faq}
+### よくある質問(FAQ) {#frequently-asked-questions-faq}
 
 **Adobeは、DELETEリクエストを開始する際に、App Storeでの購入を削除しますか？**
 
@@ -73,7 +73,7 @@ Digital Publishing Suite の GDPR 要求を開始する場合は、アドビカ�
 
 なし. 追跡されるデータはありますが、それは（個人データではなく）アプリレベルのデータです。例えば、起動、クラッシュ、終了、アクティビティ、購入、Folio オーバーレイなどのイベントが含まれます。地理的位置、氏名、デバイス ID、IP アドレスなどは追跡されません。
 
-**エンドユーザーが自分自身の情報を指定しても、データが見つかりませんでした。Why not?**
+**エンドユーザーが自分自身の情報を指定しても、データが見つかりませんでした。なぜ？**
 
 Digital Publishing Suite 製品が進化するにつれて、サービスの実装が変更され、難読化されるデータが増えてきました。ユーザーが提供した情報を使用してもデータが見つからない場合は、その情報からそのユーザーにさかのぼれないことを意味します。
 
@@ -83,7 +83,7 @@ GDPR 要求を開始する場合は、アドビカスタマーケアにお問い
 
 Digital Publishing Suite GDPRリクエストの入力と出力の例を次に示します。
 
-#### Inputs: {#inputs}
+#### 入力：{#inputs}
 
 ```
 dpsc-contractId = “12345-1234-12416234” 
