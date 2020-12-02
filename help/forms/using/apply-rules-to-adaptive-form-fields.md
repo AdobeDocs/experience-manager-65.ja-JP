@@ -22,7 +22,7 @@ ht-degree: 64%
 
 これは、[最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md)シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
-## このチュートリアルについて {#about-the-tutorial}
+## このチュートリアルについて  {#about-the-tutorial}
 
 ルールを作成して、インタラクティブ機能、ビジネスロジック、スマート検証機能をアダプティブフォームに追加することができます。アダプティブフォームには、ルールエディターが組み込まれています。ルールエディターには、ガイドツアー機能に類似したドラッグアンドドロップ機能が用意されています。このドラッグアンドドロップ機能は、ルールを作成するための最も効率的で簡単な方法です。ルールエディターには、自分のコーディング技術を試してみたいユーザーや、より複雑なコードを作成したいと考えているユーザーのために、コードウィンドウが用意されています。
 
@@ -49,23 +49,23 @@ ht-degree: 64%
 1. 「**[!UICONTROL 顧客 ID]**」フィールドをタップし、「**[!UICONTROL ルールを編集]**」アイコンをタップします。ルールエディターウィンドウが表示されます。
 1. 「**[!UICONTROL + 作成]**」アイコンをタップしてルールを追加します。ビジュアルエディターが表示されます。
 
-   In the Visual Editor, the **[!UICONTROL WHEN]** statement is selected by default. Also, the form object (in this case, **[!UICONTROL Customer ID]**) from where you launched the rule editor is specified in the **[!UICONTROL WHEN]** statement.
+   ビジュアルエディターでは、デフォルトで&#x200B;**[!UICONTROL WHEN]**&#x200B;ステートメントが選択されています。 また、ルールエディターを起動したフォームオブジェクト（この場合は&#x200B;**[!UICONTROL 顧客ID]**）は、**[!UICONTROL WHEN]**&#x200B;ステートメントで指定されています。
 
-1. Tap the **[!UICONTROL Select State]** drop-down and select **[!UICONTROL is changed]**.
+1. 「**[!UICONTROL 状態を選択]**」ドロップダウンをタップし、「**[!UICONTROL 変更済み]**」を選択します。
 
    ![customeridischanged](assets/whencustomeridischanged.png)
 
 1. 「**[!UICONTROL THEN]**」ステートメントの「**[!UICONTROL アクションの選択]**」ドロップダウンで「**[!UICONTROL サービスの呼び出し]**」を選択します。
 1. 「**[!UICONTROL 選択]**」ドロップダウンで「**[!UICONTROL 発送先住所を取得]**」サービスを選択します。
-1. Drag-and-drop the **[!UICONTROL Customer ID]** field from the Form Objects tab to the **[!UICONTROL Drop object or select here]** field in the **[!UICONTROL INPUT]** box.
+1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客ID]**」フィールドを&#x200B;**[!UICONTROL 「オブジェクトをドロップするか、**[!UICONTROL  INPUT ]**」ボックスの「ここに]**&#x200B;を選択します。
 
    ![dropobjectstoinputfield-retrievedata](assets/dropobjectstoinputfield-retrievedata.png)
 
-1. Drag-and-drop the **[!UICONTROL Customer ID, Name, Shipping Address, State, and Zip Code]** field from the Form Objects tab to the **[!UICONTROL Drop object or select here]** field in the **[!UICONTROL OUTPUT]** box.
+1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客ID、名前、配送先住所、都道府県、郵便番号]**」フィールドを、**[!UICONTROL OUTPUT]**&#x200B;ボックスの「**[!UICONTROL オブジェクトをドロップするか、ここを選択]**」フィールドにドラッグ&amp;ドロップします。
 
    ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
-   「**[!UICONTROL 完了]**」をタップして、ルールを保存します。On the rule editor window, tap **[!UICONTROL Close]**.
+   「**[!UICONTROL 完了]**」をタップして、ルールを保存します。ルールエディターウィンドウで、**[!UICONTROL 「]**&#x200B;を閉じる」をタップします。
 
 1. アダプティブフォームのプレビューを表示します。「**[!UICONTROL 顧客 ID]**」フィールドに ID を入力します。これで、データベース内の顧客情報をフォームに取り込むことができます。
 
@@ -76,11 +76,11 @@ ht-degree: 64%
 データタベースから顧客情報を取得したら、出荷先住所、都道府県、郵便番号を変更します。ここでは、フォームデータモデルサービスを呼び出し、顧客情報を変更してデータベースに保存する手順について説明します。
 
 1. 「**[!UICONTROL 送信]**」フィールドを選択して「**[!UICONTROL ルールを編集]**」アイコンをタップします。ルールエディターウィンドウが表示されます。
-1. Select the **[!UICONTROL Submit - Click]** rule and tap the **[!UICONTROL Edit]** icon. 送信ルールを編集するためのオプションが表示されます。
+1. **[!UICONTROL 送信 —]**&#x200B;ルールをクリックし、**[!UICONTROL 編集]**&#x200B;アイコンをタップします。 送信ルールを編集するためのオプションが表示されます。
 
    ![送信規則](assets/submit-rule.png)
 
-   In the WHEN option, the **[!UICONTROL Submit]** and **[!UICONTROL is clicked]** options are already selected.
+   「WHEN」オプションでは、「**[!UICONTROL 送信]**」および「**[!UICONTROL はクリック]**」オプションが既に選択されています。
 
    ![submit-is-clicked](assets/submit-is-clicked.png)
 
@@ -91,30 +91,30 @@ ht-degree: 64%
 
    ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-1. 「 **[!UICONTROL フォームオブジェクト]** 」タブから、「 [!UICONTROL 配送先住所、州、郵便番号] 」フィールドを、Dropオブジェクトの対応するtablenameプロパティ（例えば、customerdetails.shippingAddress）にドラッグ&amp;ドロップするか、「INPUT」ボックスの「 **[!UICONTROL ここ」フィールドを選択し]****** ます。 tablenameが先頭に付くすべてのフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
+1. 「[!UICONTROL フォームオブジェクト]」タブの「**[!UICONTROL 配送先住所、州、郵便番号]**」フィールドを&#x200B;**[!UICONTROL INPUT&lt;a7の「**[!UICONTROL  Drop object(customerdetails.shippingAddress)」オブジェクトの対応するテーブル名。プロパティ（例えば、「]**」フィールド）にドラッグ&amp;ドロップします。/>ボックス。]** tablenameが先頭に付くすべてのフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
 
    >[!NOTE]
    >
-   >Do not drag-and-drop the **[!UICONTROL Name]** and **[!UICONTROL Customer ID]** fields to the corresponding tablename.property (for example, customerdetails.name). 間違って顧客の名前やIDを更新するのを防ぐのに役立ちます。
+   >「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL 顧客ID]**」フィールドを、対応するtablename.property（例えば、customerdetails.name）にドラッグ&amp;ドロップしないでください。 間違って顧客の名前やIDを更新するのを防ぐのに役立ちます。
 
-1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「id」フィールドにドロップします。先頭にtablenameが付いていないフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの検索パラメーターとして機能します。 The **[!UICONTROL id]** field in this use case uniquely identifies a record in the  **customerdetails**  table.
-1. 「**[!UICONTROL 完了]**」をタップして、ルールを保存します。On the rule editor window, tap **[!UICONTROL Close]**.
+1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「id」フィールドにドロップします。先頭にtablenameが付いていないフィールド（この使用例ではcustomerdetailsなど）は、アップデートサービスの検索パラメーターとして機能します。 この使用例の&#x200B;**[!UICONTROL id]**&#x200B;フィールドは、**customerdetails**&#x200B;テーブルのレコードを一意に識別します。
+1. 「**[!UICONTROL 完了]**」をタップして、ルールを保存します。ルールエディターウィンドウで、**[!UICONTROL 「]**&#x200B;を閉じる」をタップします。
 1. アダプティブフォームのプレビューを表示します。顧客の詳細情報を取得し、発送先住所を変更してフォームを送信します。同じ顧客の詳細情報をもう一度取得すると、更新された発送先住所が表示されます。
 
-## 手順 3：（オプション）コードエディターを使用して検証処理を実行し、エラーメッセージを表示する {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
+## 手順 3：（オプション）コードエディターを使用して検証処理を実行し、エラーメッセージを表示する  {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
 
 フォームにデータが正しく入力されているかどうかを確認するには、そのフォーム上で検証処理を実行する必要があります。データが正しく入力されていない場合は、エラーメッセージが表示されます。例えば、存在しない顧客 ID がフォームに入力されている場合は、エラーメッセージが表示されます。
 
 アダプティブフォームには、検証機能が組み込まれたコンポーネントがいくつか用意されています（共通のユースケースで使用できる電子メールや数値フィールドなど）。高度なユースケース（データベースからレコードが 1 件も返されなかった場合にエラーメッセージを表示するなど）の場合は、ルールエディターを使用します。
 
-次の手順は、フォームに入力された顧客IDがデータベースに存在しない場合にエラーメッセージを表示するルールを作成する方法を示しています。 The rule also brings the focus to and resets the **[!UICONTROL Customer ID]** field. The rule uses [the dataIntegrationUtils API of the form data model service](/help/forms/using/invoke-form-data-model-services.md) to check if the Customer ID exists in the database.
+次の手順は、フォームに入力された顧客IDがデータベースに存在しない場合にエラーメッセージを表示するルールを作成する方法を示しています。 また、このルールは、フォーカスを移し、**[!UICONTROL 顧客ID]**&#x200B;フィールドをリセットします。 このルールは、フォームデータモデルサービス](/help/forms/using/invoke-form-data-model-services.md)のdataIntegrationUtils APIを使用して、顧客IDがデータベースに存在するかどうかを確認します。[
 
-1. Tap the **[!UICONTROL Customer ID]** field and tap the `Edit Rules` icon. The [!UICONTROL Rule Editor] window opens.
+1. **[!UICONTROL 「Customer ID]**」フィールドをタップし、`Edit Rules`アイコンをタップします。 「[!UICONTROL ルールエディター]」ウィンドウが開きます。
 1. 「**[!UICONTROL + 作成]**」アイコンをタップしてルールを追加します。ビジュアルエディターが表示されます。
 
-   In the Visual Editor, the **[!UICONTROL WHEN]** statement is selected by default. Also, the form object (in this case, **[!UICONTROL Customer ID]**) from where you launched the rule editor is specified in the **[!UICONTROL WHEN]** statement.
+   ビジュアルエディターでは、デフォルトで&#x200B;**[!UICONTROL WHEN]**&#x200B;ステートメントが選択されています。 また、ルールエディターを起動したフォームオブジェクト（この場合は&#x200B;**[!UICONTROL 顧客ID]**）は、**[!UICONTROL WHEN]**&#x200B;ステートメントで指定されています。
 
-1. Tap the **[!UICONTROL Select State]** drop-down and select **[!UICONTROL is changed]**.
+1. 「**[!UICONTROL 状態を選択]**」ドロップダウンをタップし、「**[!UICONTROL 変更済み]**」を選択します。
 
    ![customeridischanged](assets/whencustomeridischanged.png)
 
@@ -132,7 +132,7 @@ ht-degree: 64%
    };
    ```
 
-1. Replace the `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)` section with the following code:
+1. `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)`セクションを次のコードに置き換えます。
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
