@@ -26,19 +26,19 @@ ht-degree: 72%
 
 コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。アプリケーション内のコンテンツに対して以下のアクションを実行します。
 
-## コンテンツ概要 {#content-overview}
+## コンテンツ概要  {#content-overview}
 
 オンライン雑誌を検討する場合、主要なコンテンツは記事、広告およびカバーです。AEM内では、3つの主なタイプのMobile On-Demandコンテンツを作成できます。
 
 * **記事**:情報を伝えるための芸術と共に基づくテキスト
-* **バナー：** 通常はグラフィカルなプロモーションリンク
-* **コレクション：** 表紙のテーマに合う記事やバナーなどのコンテンツが詰まった、明確な *バケツ* 、を表す
+* **バナー：** 通常、グラフィカルなプロモーションリンク
+* **コレクション：カバーのテーマに合った記事やバナーなどのコンテンツが埋められた、適切に定義された** グループを ** 表します。
 
-* **共有リソース：** 記事間で共通の部分を再利用または共有できる
+* **共有リソース：記事間で共通の部分を再利用または共有** できます
 
 >[!NOTE]
 >
->To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) in Online Help.
+>AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの「[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)」を参照してください。
 
 ## コンテンツの作成と管理 {#creating-and-managing-content}
 
@@ -52,7 +52,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->通常、コンテンツを公開する前に、プリフライトをおこなう必要があります。See [Previewing with Preflight](/help/mobile/aem-mobile-manage-ondemand-services.md) for more details.
+>通常、コンテンツを公開する前に、プリフライトをおこなう必要があります。詳しくは、[プリフライトでのプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。
 
 ### その他のリソース {#additional-resources}
 
