@@ -22,7 +22,7 @@ ht-degree: 76%
 
 ダイアログエディターは、ダイアログボックスおよび基礎モードを簡単に作成および編集できるグラフィカルインターフェイスを提供します。
 
-To see how it works, go to CRXDE Lite, open the explorer tree to `/libs/foundation/components/chart` and double click on the node `dialog`:
+動作を確認するには、CRXDE Liteに移動し、`/libs/foundation/components/chart`のエクスプローラツリーを開き、重複`dialog`をクリックします。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
 
@@ -36,10 +36,10 @@ dialog ノードが&#x200B;**ダイアログエディター**&#x200B;で開か�
 
 * 左上の&#x200B;**パレット**。このウィンドウには、タブパネル、テキストフィールド、選択リスト、ボタンなど、ダイアログボックスの作成に使用できるウィジェットが表示されます。パレット内の様々なカテゴリを展開するには、該当する分割バーをクリックします。
 * 左下の&#x200B;**構造**&#x200B;ウィンドウ。このウィンドウには、ダイアログの定義を構成するノードの構造が表示されます。CRXDE Lite または CRX Content Explorer で dialog ノードを展開した場合も、同じ構造が表示されます。
-* The **render** pane, in the center of the window. This pane shows how the dialog definition defined in the structure pane will be rendered as an actual dialog box.
+* ウィンドウの中央にある&#x200B;**render**&#x200B;ペイン。このペインでは、構造ウィンドウで定義されたダイアログ定義が実際のダイアログボックスとしてレンダリングされる方法を示します。
 * **プロパティ**&#x200B;ウィンドウ。このウィンドウには、構造ウィンドウで現在選択されているノードのプロパティが表示されます。
 
-### ダイアログエディターの使用 {#using-the-dialog-editor}
+### ダイアログエディターの使用  {#using-the-dialog-editor}
 
 ダイアログボックスを作成するには、パレットから構造ウィンドウへ要素をドラッグ＆ドロップして、ダイアログ定義階層内に配置します。
 
@@ -49,7 +49,7 @@ dialog ノードが&#x200B;**ダイアログエディター**&#x200B;で開か�
 >
 >ダイアログエディターは、比較的単純なダイアログの作成を目的としているので、複雑なダイアログ定義は編集できない場合があります。ダイアログエディターで編集できないダイアログ構造がある場合は、CRXDE Lite や CRX Content Explorer などを使用してノード構造を直接編集することにより、ダイアログ定義を手動で作成／編集する必要があります。
 
-### 新しいダイアログの作成 {#creating-a-new-dialog}
+### 新しいダイアログの作成  {#creating-a-new-dialog}
 
 新しいダイアログボックスを作成するには、必要なコンポーネントを選択して、「**作成**」をクリックし、「**ダイアログを作成**」をクリックします。
 
