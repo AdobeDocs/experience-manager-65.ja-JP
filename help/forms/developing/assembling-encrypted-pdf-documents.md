@@ -19,7 +19,7 @@ ht-degree: 6%
 ---
 
 
-# 暗号化されたPDFドキュメントのアセンブリ {#assembling-encrypted-pdf-documents}
+# 暗号化されたPDFドキュメントのアセンブリ{#assembling-encrypted-pdf-documents}
 
 Assemblerサービスを使用して、PDFドキュメントをパスワードで暗号化できます。 PDF ドキュメントがパスワードを使用して暗号化されている場合、Adobe Reader または Acrobat で PDF ドキュメントを表示するには、パスワードを指定する必要があります。パスワードを使用して PDF ドキュメントを暗号化するには、PDF ドキュメントの暗号化に必要な暗号化要素の値を DDX ドキュメントに含める必要があります。
 
@@ -37,21 +37,21 @@ Assemblerサービスを使用して、PDFドキュメントをパスワード�
  </DDX>
 ```
 
-このDDXドキュメント内で、source属性に値が割り当てられてい `inDoc`ます。 1つの入力PDFドキュメントのみがAssemblerサービスに渡され、1つのPDFドキュメントが返される場合に、 `invokeOneDocument` 操作を呼び出すには、値をPDFソース属性 `inDoc` に割り当てます。 この `invokeOneDocument` 操作を呼び出すとき、 `inDoc` 値は、DDXドキュメントで指定する必要がある事前定義済みのキーになります。
+このDDXドキュメント内で、source属性に`inDoc`という値が割り当てられています。 1つの入力PDFドキュメントのみがAssemblerサービスに渡され、1つのPDFドキュメントが返される場合に、`invokeOneDocument`操作を呼び出すには、値`inDoc`をPDFソース属性に割り当てます。 `invokeOneDocument`操作を呼び出すとき、`inDoc`値は、DDXドキュメントで指定する必要がある事前定義済みのキーです。
 
-一方、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合は、この `invokeDDX` 操作を呼び出すことができます。 この場合、入力PDFドキュメントのファイル名を `source` 属性に割り当てます。
+これに対し、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合は、`invokeDDX`操作を呼び出すことができます。 この場合、入力PDFドキュメントのファイル名を`source`属性に割り当てます。
 
-PDFドキュメントをパスワードを使用して暗号化する場合、AEM formsのインストール環境にEncryptionサービスを含める必要はありません。 PDFドキュメントの [暗号化と復号化を参照してください](/help/forms/developing/encrypting-decrypting-pdf-documents.md)。
-
->[!NOTE]
->
->For more information about the Assembler service, see [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+PDFドキュメントをパスワードを使用して暗号化する場合、AEM formsのインストール環境にEncryptionサービスを含める必要はありません。 [PDFドキュメントの暗号化と復号化](/help/forms/developing/encrypting-decrypting-pdf-documents.md)を参照してください。
 
 >[!NOTE]
 >
->DDXドキュメントについて詳しくは、『 [Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)』を参照してください。
+>Assemblerサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-## 手順の概要 {#summary-of-steps}
+>[!NOTE]
+>
+>DDXドキュメントについて詳しくは、「[Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)」を参照してください。
+
+## 手順{#summary-of-steps}の概要
 
 暗号化されたPDFドキュメントをアセンブリするには、次の手順を実行します。
 
@@ -75,7 +75,7 @@ PDFドキュメントをパスワードを使用して暗号化する場合、AE
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 For information about the location of all AEM Forms JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 すべてのAEM FormsJARファイルの場所については、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **Assemblerクライアントの作成**
 
@@ -83,7 +83,7 @@ aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 **既存のDDXドキュメントの参照**
 
-PDFドキュメントをアセンブリするには、DDXドキュメントを参照する必要があります。 例えば、この節で紹介したDDXドキュメントについて考えてみましょう。 PDFドキュメントを暗号化するには、DDXドキュメントにその `PasswordEncryptionProfile` 要素が含まれている必要があります。
+PDFドキュメントをアセンブリするには、DDXドキュメントを参照する必要があります。 例えば、この節で紹介したDDXドキュメントについて考えてみましょう。 PDFドキュメントを暗号化するには、DDXドキュメントに`PasswordEncryptionProfile`要素を含める必要があります。
 
 **保護されていないPDFドキュメントの参照**
 
@@ -91,15 +91,15 @@ PDFドキュメントをアセンブリするには、DDXドキュメントを�
 
 **実行時オプションの設定**
 
-ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、 `AssemblerOptionSpec` AEM FormsAPIリファレンスの [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の`AssemblerOptionSpec`クラス参照を参照してください。
 
 **ドキュメントを暗号化する**
 
-Assemblerサービスクライアントを作成したら、暗号化ドキュメントを含むDDXドキュメントを参照し、保護されていないPDF情報を参照し、実行時のオプションを設定した後で、この `invokeOneDocument` 操作を呼び出すことができます。 Assemblerサービスに渡される入力PDFドキュメントは1つだけなので(1つのドキュメントが返される)、この `invokeOneDocument` 操作の代わりにこの `invokeDDX` 操作を使用できます。
+Assemblerサービスクライアントの作成後、暗号化ドキュメントを含むDDXドキュメントを参照し、保護されていないPDF情報を参照し、実行時オプションを設定した後、`invokeOneDocument`操作を呼び出すことができます。 1つの入力PDFドキュメントのみがAssemblerサービスに渡されるので(1つのドキュメントが返される)、`invokeDDX`操作の代わりに`invokeOneDocument`操作を使用できます。
 
 **暗号化されたPDFドキュメントの保存**
 
-Assemblerサービスに渡されるPDFドキュメントが1つだけの場合、Assemblerサービスは、コレクションオブジェクトではなく1つのドキュメントを返します。 つまり、 `invokeOneDocument` 操作を呼び出すと、1つのドキュメントが返されます。 この節で参照するDDXドキュメントには暗号化情報が含まれているので、Assemblerサービスはパスワードで暗号化されたPDFドキュメントを返します。
+Assemblerサービスに渡されるPDFドキュメントが1つだけの場合、Assemblerサービスは、コレクションオブジェクトではなく1つのドキュメントを返します。 つまり、`invokeOneDocument`操作を呼び出すと、1つのドキュメントが返されます。 この節で参照するDDXドキュメントには暗号化情報が含まれているので、Assemblerサービスはパスワードで暗号化されたPDFドキュメントを返します。
 
 **関連トピック**
 
@@ -109,7 +109,7 @@ Assemblerサービスに渡されるPDFドキュメントが1つだけの場合�
 
 [プログラムによるPDFドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## Java APIを使用した暗号化PDFドキュメントのアセンブリ {#assemble-an-encrypted-pdf-document-using-the-java-api}
+## Java API {#assemble-an-encrypted-pdf-document-using-the-java-api}を使用して暗号化PDFドキュメントをアセンブリする
 
 1. プロジェクトファイルを含めます。
 
@@ -118,102 +118,102 @@ Assemblerサービスに渡されるPDFドキュメントが1つだけの場合�
 1. Assemblerクライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * Create an `AssemblerServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
+   * コンストラクターを使用し、`AssemblerServiceClient`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. 既存のDDXドキュメントの参照。
 
-   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 保護されていないPDFドキュメントを参照します。
 
-   * コンストラクターを使用し、保護されていないPDFドキュメントの場所を渡して、 `java.io.FileInputStream` オブジェクトを作成します。
-   * オブジェクトを作成し、PDF `com.adobe.idp.Document` ドキュメントを含む `java.io.FileInputStream` オブジェクトを渡します。 この `com.adobe.idp.Document` オブジェクトはメソッドに渡され `invokeOneDocument` ます。
+   * コンストラクターを使用し、保護されていないPDFドキュメントの場所を渡して、`java.io.FileInputStream`オブジェクトを作成します。
+   * `com.adobe.idp.Document`オブジェクトを作成し、PDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡します。 この`com.adobe.idp.Document`オブジェクトは`invokeOneDocument`メソッドに渡されます。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して渡し `false`ます。
+   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
+   * `AssemblerOptionSpec`オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、`AssemblerOptionSpec`オブジェクトの`setFailOnError`メソッドを呼び出し、`false`を渡します。
 
 1. ドキュメントを暗号化します。
 
-   オブジェクトの `AssemblerServiceClient``invokeOneDocument` メソッドを呼び出し、次の値を渡します。
+   `AssemblerServiceClient`オブジェクトの`invokeOneDocument`メソッドを呼び出し、次の値を渡します。
 
-   * DDXドキュメントを表す `com.adobe.idp.Document` オブジェクトです。 このDDXドキュメントにPDFソース要素の値が含まれてい `inDoc` ることを確認してください。
-   * 保護されていないPDFドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
-   * デフォルトのフォントやジョブログレベルなど、実行時のオプションを指定する `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` オブジェクト。
+   * DDXドキュメントを表す`com.adobe.idp.Document`オブジェクトです。 このDDXドキュメントにPDFソース要素の値`inDoc`が含まれていることを確認してください。
+   * 保護されていないPDFドキュメントが含まれる`com.adobe.idp.Document`オブジェクトです。
+   * デフォルトのフォントとジョブログレベルを含む、実行時のオプションを指定する`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`オブジェクト。
 
-   パスワードで暗号化されたPDFドキュメントを含む `invokeOneDocument``com.adobe.idp.Document` オブジェクトを返します。
+   `invokeOneDocument`メソッドは、パスワードで暗号化されたPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを返します。
 
 1. 暗号化されたPDFドキュメントを保存します。
 
-   * Create a `java.io.File` object and ensure that the file name extension is .pdf.
-   * Invoke the `Document` object’s `copyToFile` method to copy the contents of the `Document` object to the file. メソッドが返した `Document` オブジェクトを使用していることを確認し `invokeOneDocument` ます。
+   * `java.io.File`オブジェクトを作成し、ファイル名の拡張子が.pdfであることを確認します。
+   * `Document`オブジェクトの`copyToFile`メソッドを呼び出して、`Document`オブジェクトの内容をファイルにコピーします。 `invokeOneDocument`メソッドが返した`Document`オブジェクトを使用していることを確認してください。
 
 **関連トピック**
 
 [クイック開始（SOAPモード）:Java APIを使用した暗号化PDFドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
-## WebサービスAPIを使用した暗号化PDFドキュメントのアセンブリ {#assemble-an-encrypted-pdf-document-using-the-web-service-api}
+## WebサービスAPI {#assemble-an-encrypted-pdf-document-using-the-web-service-api}を使用して暗号化されたPDFドキュメントをアセンブリする
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 サービス参照を設定する際は、次のWSDL定義を使用してください。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 サービス参照を設定する際は、次のWSDL定義を使用してください。`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
+   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
 
 1. Assemblerクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
-   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `AssemblerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * `AssemblerServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`AssemblerServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。
+   * `AssemblerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
-      * 対応するパスワード値をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.Password`ます。
-      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
-      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
+      * AEM formsユーザー名をフィールド`AssemblerServiceClient.ClientCredentials.UserName.UserName`に割り当てます。
+      * 対応するパスワード値をフィールド`AssemblerServiceClient.ClientCredentials.UserName.Password`に割り当てます。
+      * 定数値`HttpClientCredentialType.Basic`をフィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に割り当てます。
+      * 定数値`BasicHttpSecurityMode.TransportCredentialOnly`をフィールド`BasicHttpBindingSecurity.Security.Mode`に割り当てます。
 
 1. 既存のDDXドキュメントの参照。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDXドキュメントの格納に使用されます。
-   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、DDXドキュメントの保存に使用されます。
+   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所と、ファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`フィールドにバイト配列の内容を割り当てて入力します。
 
 1. 保護されていないPDFドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、入力PDFドキュメントの保存に使用されます。 この `BLOB` オブジェクトは、引数としてに渡 `invokeOneDocument` されます。
-   * コンストラクターを呼び出し、入力PDFドキュメントーのファイルの場所と、ファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
-   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、入力PDFドキュメントの保存に使用されます。 この`BLOB`オブジェクトは、`invokeOneDocument`に引数として渡されます。
+   * コンストラクターを呼び出し、入力PDFドキュメントーのファイルの場所と、ファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `BLOB`オブジェクトに、`MTOM`フィールドにバイト配列の内容を割り当てて入力します。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * オブジェクトに属するデータメンバに値を割り当てることで、ビジネス要件に合った実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `false` オブジェクトの `AssemblerOptionSpec``failOnError` データメンバーに割り当てます。
+   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
+   * `AssemblerOptionSpec`オブジェクトに属するデータメンバに値を割り当てて、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、`false`を`AssemblerOptionSpec`オブジェクトの`failOnError`データメンバーに割り当てます。
 
 1. ドキュメントを暗号化します。
 
-   オブジェクトの `AssemblerServiceClient``invokeOneDocument` メソッドを呼び出し、次の値を渡します。
+   `AssemblerServiceClient`オブジェクトの`invokeOneDocument`メソッドを呼び出し、次の値を渡します。
 
-   * DDXドキュメントを表す `BLOB` オブジェクトです
-   * 保護されていないPDFドキュメントを表す `BLOB` オブジェクトです
-   * 実行時オプションを指定する `AssemblerOptionSpec` オブジェクトです。
+   * DDXドキュメントを表す`BLOB`オブジェクト
+   * 保護されていないPDFドキュメントを表す`BLOB`オブジェクト
+   * 実行時オプションを指定する`AssemblerOptionSpec`オブジェクト
 
-   暗号化されたPDFドキュメントを含む `invokeOneDocument``BLOB` オブジェクトを返します。
+   `invokeOneDocument`メソッドは、暗号化されたPDFドキュメントを含む`BLOB`オブジェクトを返します。
 
 1. 暗号化されたPDFドキュメントを保存します。
 
-   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所と、ファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
-   * メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成し `invokeOneDocument` ます。 オブジェクトのデータメンバーの値を取得して、 `BLOB` バイト配列を入力し `MTOM` ます。
-   * Create a `System.IO.BinaryWriter` object by invoking its constructor and passing the `System.IO.FileStream` object.
-   * オブジェクトのメソッドを呼び出し、バイト配列を渡して、バイト配列の内容をPDFファイルに書き込み `System.IO.BinaryWriter` ま `Write` す。
+   * コンストラクターを呼び出し、暗号化されたPDFドキュメントーのファイルの場所と、ファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
+   * `invokeOneDocument`メソッドが返した`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
+   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
 **関連トピック**
 
