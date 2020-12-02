@@ -25,14 +25,14 @@ ht-degree: 96%
 
 以下の手順で、Dynamic Media が適切に設定されていることを確認します。
 
-* Start up command contains the `-r dynamicmedia_scene7` runmode argument.
+* 開始アップコマンドには`-r dynamicmedia_scene7` runmode引数が含まれます。
 * 使用可能な Dynamic Media 機能パックよりも先に、AEM 6.4 累積修正パック（CFP）がインストールされていることを確認します。**
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
    このオプションの機能パックは、FTP サポートが必要な場合や、Dynamic Media Classic（Scene7）から Dynamic Media にアセットを移行する場合に使用します。
 
-* Navigate to the Cloud Services user interface and confirm that the provisioned account appears under **[!UICONTROL Available Configurations.]**
-* レプリケーションエージェントが有効になっているこ `Dynamic Media Asset Activation (scene7)` とを確認します。
+* Cloud Servicesのユーザーインターフェイスに移動し、プロビジョニングされたアカウントが「**[!UICONTROL 利用可能な設定」に表示されることを確認します。]**
+* `Dynamic Media Asset Activation (scene7)`レプリケーションエージェントが有効になっていることを確認します。
 
    このレプリケーションエージェントは、「作成者のエージェント」にあります。
 
@@ -40,7 +40,7 @@ ht-degree: 96%
 
 次に全般的なヒントやテクニックを示します。
 
-### アセット同期ステータスプロパティ {#asset-synchronization-status-properties}
+### アセット同期ステータスプロパティ  {#asset-synchronization-status-properties}
 
 CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dynamic Media へのアセットの同期に成功したことが確認できます。
 
@@ -51,7 +51,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Dynamic Media のリモートアセットへの URL を生成するには、これを入力する必要があります。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **success** または **failed:`<error text>`** | セット（スピンセット、画像セットなど）、画像プリセット、ビューアプリセット、アセットの画像マップの更新、編集された画像などの同期ステータス。 |
 
-### 同期のログ {#synchronization-logging}
+### 同期のログ  {#synchronization-logging}
 
 同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Sling コンソール（[https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)）を通じて `com.adobe.cq.dam.ips` パッケージのログレベルをデバッグに引き上げると、さらに詳しい情報を集めることができます。
 
@@ -71,7 +71,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 * Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。配信で新しいバージョンが既存のアセットを置換します。
 
-## 画像とセット {#images-and-sets}
+## 画像とセット  {#images-and-sets}
 
 画像とセットで問題が発生している場合、次のトラブルシューティングガイドに従ってください。
 
@@ -168,7 +168,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
    <td>ビデオがエンコードされていない</td>
    <td>
     <ul>
-     <li>Check that the runmode is <code>dynamicmedia_scene7</code>.</li>
+     <li>実行モードが<code>dynamicmedia_scene7</code>であることを確認します。</li>
      <li>Dynamic Media クラウドサービスが設定されていることを確認します。</li>
      <li>ビデオプロファイルがアップロードフォルダーに関連付けられていることを確認します。</li>
     </ul> </td>
