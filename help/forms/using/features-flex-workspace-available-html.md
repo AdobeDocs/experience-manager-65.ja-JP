@@ -18,7 +18,7 @@ ht-degree: 96%
 ---
 
 
-# AEM Forms Workspace では利用できない Flex Workspace の機能 {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
+# AEM Forms Workspace では利用できない Flex Workspace の機能  {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
 
 AEM Formsワークスペースは新しいワークスペースです。 AEM Forms Workspace では利用できない Flex ベース Workspace のいくつかの機能を以下に示します。
 
