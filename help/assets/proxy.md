@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Assets] 代理開発'
-description: 'プロキシは、プロキシ、サポートされている操作、プロキシコンポーネント、およびカスタムプロキシワーカーの開発方法です。 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] '
+description: プロキシは、 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネント、およびカスタムプロキシワーカーの開発方法です。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
@@ -11,23 +11,23 @@ ht-degree: 59%
 ---
 
 
-# [!DNL Assets] 代理開発 {#assets-proxy-development}
+# [!DNL Assets] 代理開発  {#assets-proxy-development}
 
 [!DNL Adobe Experience Manager Assets] では、特定のタスクの処理を配信するためにプロキシが使用されます。
 
-プロキシは、ジョブの処理と結果の作成を担当するプロセッサーとしてプロキシワーカーを使用する、特定の（場合によっては別々の）Experience Managerインスタンスです。 プロキシワーカーは、幅広いタスクに使用できます。In the case of an [!DNL Assets] proxy this can be used for loading assets for rendering within Assets. 例えば、[IDS プロキシワーカー](indesign.md)は、 Server を使用して、 Assets 内で使用できるようにファイルを処理します。[!DNL Adobe InDesign]
+プロキシは、ジョブの処理と結果の作成を担当するプロセッサーとしてプロキシワーカーを使用する、特定の（場合によっては別々の）Experience Managerインスタンスです。 プロキシワーカーは、幅広いタスクに使用できます。[!DNL Assets]プロキシの場合は、アセット内のレンダリング用にアセットを読み込むのに使用できます。 例えば、[IDS プロキシワーカー](indesign.md)は、 Server を使用して、 Assets 内で使用できるようにファイルを処理します。[!DNL Adobe InDesign]
 
-When the proxy is a separate [!DNL Experience Manager] instance this helps reduce the load on the Experience Manager authoring instance(s). By default, [!DNL Assets] executes the asset processing tasks in the same JVM (externalized via Proxy) to reduce the load on the Experience Manager authoring instance.
+プロキシが別の[!DNL Experience Manager]インスタンスの場合は、Experience Managerオーサリングインスタンスの負荷を軽減するのに役立ちます。 デフォルトでは、[!DNL Assets]は、同じJVM（Proxyを介して外部化）でアセット処理タスクを実行し、Experience Managerオーサリングインスタンスの負荷を軽減します。
 
-## Proxy (HTTP Access) {#proxy-http-access}
+## プロキシ（HTTPアクセス） {#proxy-http-access}
 
-A proxy is available via the HTTP Servlet when it is configured to accept processing jobs at: `/libs/dam/cloud/proxy`. このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
+プロキシは、次の場所で処理ジョブを受け入れるように設定されている場合、HTTPサーブレットを介して使用できます。`/libs/dam/cloud/proxy`. このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
 
 ### サポートされている操作 {#supported-operations}
 
 * `job`
 
-   **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。This is used to create an `Event` for a job processor.
+   **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。これは、ジョブプロセッサ用の`Event`を作成するために使用されます。
 
    **結果**：新しいジョブが追加されます。成功した場合、一意のジョブ ID が返されます。
 
@@ -38,7 +38,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **要件**:パラメーター `jobid` を設定する必要があります。
+   **要件**:パラメーターを設定 `jobid` する必要があります。
 
    **結果**：ジョブプロセッサーによって作成されたノードの JSON 表現が返されます。
 
@@ -77,7 +77,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 >
 >ワーカーがプロキシワーカーとして認識されるには、[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) を実装する必要があります。
 
-### クライアント API {#client-api}
+### クライアント API  {#client-api}
 
 [`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) は、ジョブを作成および削除し、ジョブの結果を取得するためのメソッドを提供する OSGi サービスとして使用できます。このサービスのデフォルトの実装（`JobServiceImpl`）は、HTTP クライアントを使用して、リモートプロキシサーブレットと通信します。
 
@@ -109,11 +109,11 @@ API の使用例を以下に示します。
 >
 >プロキシ API の参考ドキュメントは、[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html) にあります。
 
-Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the [!DNL Assets] **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の構成の詳細(例えば、 `/etc/cloudservices/proxy` ) `/etc/cloudservices/proxy/workername`の下にノードを追加する必要があります。
+プロキシとプロキシの両方のワーカー設定は、クラウドサービスの設定を介して、[!DNL Assets] **ツール**&#x200B;コンソールまたは`/etc/cloudservices/proxy`からアクセスできるように設定できます。 各プロキシワーカーは、`/etc/cloudservices/proxy`の下にノードを追加して、ワーカー固有の構成の詳細（例：`/etc/cloudservices/proxy/workername`）を確認する必要があります。
 
 >[!NOTE]
 >
->See [InDesign Server Proxy Worker configuration](indesign.md#configuring-the-proxy-worker-for-indesign-server) and [Cloud Services configuration](../sites-developing/extending-cloud-config.md) for more information.
+>詳細については、[InDesign Serverプロキシワーカーの構成](indesign.md#configuring-the-proxy-worker-for-indesign-server)と[Cloud Servicesの構成](../sites-developing/extending-cloud-config.md)を参照してください。
 
 API の使用例を以下に示します。
 
@@ -132,9 +132,9 @@ API の使用例を以下に示します。
 
 ### カスタマイズしたプロキシワーカーの開発 {#developing-a-customized-proxy-worker}
 
-[IDSプロキシワーカーは、既にあらかじめ用意されているプ](indesign.md)[!DNL Assets] ロキシワーカーの例です。InDesignアセットの処理をアウトソースします。
+[IDSプロキシワーカー](indesign.md)は、既にあらかじめ用意されている[!DNL Assets]プロキシワーカーの例です。この例では、InDesignアセットの処理をアウトソースします。
 
-You can also develop and configure your own [!DNL Assets] proxy worker to create a specialized worker to dispatch and outsource your [!DNL Assets] processing tasks.
+独自の[!DNL Assets]プロキシワーカーを開発および設定して、[!DNL Assets]処理タスクをディスパッチし、アウトソースする専門的なワーカーを作成することもできます。
 
 独自のカスタムプロキシワーカーを設定するには、以下を実行する必要があります。
 
@@ -176,9 +176,9 @@ You can also develop and configure your own [!DNL Assets] proxy worker to create
 
 >[!NOTE]
 >
->What the [!DNL Assets] proxy framework does not provide out-of-the-box is the pool mechanism.
+>[!DNL Assets]プロキシフレームワークがすぐに使えるのはプールのメカニズムです。
 >
->The [!DNL InDesign] integration allows the access of a pool of [!DNL InDesign] servers (IDSPool). This pooling is specific to [!DNL InDesign] integration and not part of the [!DNL Assets] proxy framework.
+>[!DNL InDesign]統合により、[!DNL InDesign]サーバーのプール(IDSPool)にアクセスできます。 このプーリングは[!DNL InDesign]統合に固有のものであり、[!DNL Assets]プロキシフレームワークの一部ではありません。
 
 >[!NOTE]
 >
