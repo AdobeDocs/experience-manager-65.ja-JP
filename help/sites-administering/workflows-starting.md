@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 workflow-type: tm+mt
 source-wordcount: '804'
-ht-degree: 58%
+ht-degree: 59%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 58%
 
 ワークフローランチャーはコンテンツリポジトリ内の変更を監視し、変更されたノードの場所とリソースの種類に応じて、ワークフローを起動します。
 
-Using the **Launcher** you can:
+**ランチャー**&#x200B;を使用すると、次のことができます。
 
 * 特定のノードに対して既に起動されているワークフローを確認する。
 * 特定のノードまたはノードの種類が変更されたときに起動するワークフローを選択する。
@@ -61,7 +61,7 @@ Using the **Launcher** you can:
 ランチャーは任意のノードに対して作成できます。ただし、特定のノードに変更した場合、ワークフローは起動されません。次のパス以下のノードに変更した場合、ワークフローは起動されません。
 
 * `/var/workflow/instances`
-* Any workflow-inbox node located anywhere in the `/home/users` branch
+* `/home/users`ブランチの任意の場所にあるワークフローインボックスノード
 * `/tmp`
 * `/var/audit`
 * `/var/classes`
@@ -70,7 +70,7 @@ Using the **Launcher** you can:
 * `/var/mobile`
 * `/var/statistics`
 
-   * Exception: Changes to nodes below `/var/statistics/tracking` *do* cause workflows to launch.
+   * 例外：`/var/statistics/tracking` *do*&#x200B;以下のノードに変更を加えると、ワークフローが起動します。
 
 標準インストールには、様々な定義が含まれています。それらの定義は、デジタル資産管理およびソーシャルコラボレーションのタスクに対して使用されます。
 
@@ -90,16 +90,16 @@ Using the **Launcher** you can:
 
 ## モデルコンソールからのワークフローの開始 {#starting-a-workflow-from-the-models-console}
 
-1. Navigate to the **Models** console using **Tools**, **Workflow**, then **Models**.
+1. **ツール**、**ワークフロー**、**モデル**&#x200B;を使用して、**モデル**&#x200B;コンソールに移動します。
 1. （コンソールの表示に従って）ワークフローを選択します。必要に応じて、検索機能（左上）を使用することもできます。
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >The **[Transient](/help/sites-developing/workflows.md#transient-workflows)** indicator shows workflows for which the workflow history will not be persisted.
+   >**[一時的な](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;インジケーターは、ワークフロー履歴が保持されないワークフローを示します。
 
-1. Select **Start Workflow** from the toolbar.
+1. ツールバーから「**開始ワークフロー**」を選択します。
 1. ワークフローを実行ダイアログが開き、次の内容を指定できます。
 
    * **ペイロード**
@@ -117,8 +117,8 @@ Using the **Launcher** you can:
 
 ## ランチャー設定の作成 {#creating-a-launcher-configuration}
 
-1. Navigate to the **Workflow Launchers** console using **Tools**, **Workflow**, then **Launchers**.
-1. Select **Create**, then **Add Launcher** to open the dialog:
+1. **ツール**、**ワークフロー**、**開始者**&#x200B;を使用して、**ワークフロー開始者**&#x200B;コンソールに移動します。
+1. 「**作成**」を選択し、「**追加ランチャー**」を選択して、ダイアログを開きます。
 
    ![wf-105](assets/wf-105.png)
 
@@ -139,7 +139,7 @@ Using the **Launcher** you can:
 
    * **実行モード**
 
-      ワークフローランチャーを適用するサーバーの種類です。 Select **Author**, **Publish**, or **Author &amp; Publish**.
+      ワークフローランチャーを適用するサーバーの種類です。 「**作成者**」、「**発行**」、または「**作成者と発行**」を選択します。
 
    * **条件**
 
@@ -176,7 +176,7 @@ Using the **Launcher** you can:
       このランチャープロパティは、項目をカンマで区切ったリストです。&quot;
 
       * `property-name` 指定したプロパティ名でトリガーされた `jcr` イベントを無視します。&quot;
-      * `event-user-data:<*someValue*>` は、 `*<someValue*`API `user-data`[ (https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)で `ObservationManager`]設定された>を含むイベントを無視します。
+      * `event-user-data:<*someValue*>` は、 `*<someValue*`API `user-data` (https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)で [ `ObservationManager` ]設定された>を含むイベントは無視します。
 
       次に例を示します。
 
@@ -190,10 +190,10 @@ Using the **Launcher** you can:
 
 
 
-1. Select **Create**, to create the launcher and return to the console.
+1. 「**作成**」を選択してランチャーを作成し、コンソールに戻ります。
 
    該当するイベントが発生すると、ランチャーが実行されてワークフローが開始します。
 
-## ランチャー設定の管理 {#managing-a-launcher-configuration}
+## ランチャー設定の管理  {#managing-a-launcher-configuration}
 
-After you have created your launcher configuration you can use the same console to select the instance, then **View Properties** (and edit them) or **Delete**.
+ランチャーの設定を作成した後、同じコンソールを使用してインスタンスを選択し、**表示のプロパティ**（そして編集）または&#x200B;**削除**&#x200B;を使用できます。
