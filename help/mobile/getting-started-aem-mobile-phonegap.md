@@ -1,6 +1,6 @@
 ---
 title: AEM Adobe PhoneGap
-seo-title: AEM Adobe PhoneGap
+seo-title: AEMAdobe PhoneGap
 description: AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。このページでは、Adobe PhoneGap Enterprise の概要について説明します。
 seo-description: AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。このページでは、Adobe PhoneGap Enterprise の概要について説明します。
 uuid: bdd90cda-2489-4763-a90a-9c409d6e68ae
@@ -18,7 +18,7 @@ ht-degree: 52%
 ---
 
 
-# AEM Adobe PhoneGap{#aem-adobe-phonegap}
+# AEMAdobe PhoneGap{#aem-adobe-phonegap}
 
 >[!NOTE]
 >
@@ -26,11 +26,11 @@ ht-degree: 52%
 
 AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。コンテンツ同期を使用すると、アプリにバンドルするページのバージョン管理されたアーカイブを作成できます。
 
-Typically, an ***AEM Administrator*** is responsible for adding a new application to the AEM Mobile catalog, either by creating a new app using the creation wizard, or by importing an existing application.
+通常、***AEM管理者***&#x200B;は、新しいアプリをAEM Mobileカタログに追加する責任を負います。新しいアプリを追加するには、作成ウィザードを使用して作成するか、既存のアプリを読み込みます。
 
-From here an ***AEM Author*** (or *Marketer*) is now able to use the out-of-the-box templates and components to add and edit pages, drag and drop components and add media of all types from the DAM including images, videos and text fragments (content fragments).
+ここから、***AEM Author***（または&#x200B;*Marketer*）は、標準搭載されたテンプレートやコンポーネントを使用して、ページの追加や編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加が可能になります。
 
-The real power of AEM Mobile is that a *savvy* ***AEM Developer*** can extend and create custom web templates and components to enable the *AEM Author* to create beautful and engaging mobile experiences. これらのテンプレートとコンポーネントは、モバイルアプリの世界向けに最適化されているだけではありません。ただし、デバイスとAEMサーバ（任意のリモートサーバ）の両方に対して、オムニチャネルサービスエンドポイントと通信します。
+*熟練した* ***AEM開発者***&#x200B;は、カスタムのWebテンプレートやコンポーネントを拡張して作成し、*AEM Author*&#x200B;で美しく魅力的なモバイルエクスペリエンスを作り出せるのが、AEM Mobileの本当の力です。 これらのテンプレートとコンポーネントは、モバイルアプリの世界向けに最適化されているだけではありません。ただし、デバイスとAEMサーバ（任意のリモートサーバ）の両方に対して、オムニチャネルサービスエンドポイントと通信します。
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ AEM Mobile を操作して、この使用の手引きに記載された手順を
 
 ## 作成者向けクイックリンク {#quicklinks-for-authors}
 
-See [Authoring for Adobe PhoneGap Enterprise in AEM](/help/mobile/phonegap.md) to learn about an author&#39;s roles and responsibilities.
+作成者の役割と責任について詳しくは、AEM](/help/mobile/phonegap.md)での[Adobe PhoneGap企業向けのオーサリングを参照してください。
 
 ## 開発者向けクイックリンク {#quicklinks-for-developers}
 
@@ -56,10 +56,10 @@ AEM Mobile と統合でき、開発者がカスタマイズできるサンプル
 
 以降の章では、アプリケーションのホワイトラベリング、ローカリゼーション、国際化対応、コンテンツ同期、ターゲット設定、解析などの高度な概念について説明します。
 
-## 管理者向けクイックリンク {#quicklinks-for-administrators}
+## 管理者向けクイックリンク  {#quicklinks-for-administrators}
 
-See [Administering Content for Adobe PhoneGap Enterprise with AEM](/help/mobile/administer-phonegap.md) to set up and manage your mobile application.
+モバイルアプリケーションの設定と管理については、『AEM](/help/mobile/administer-phonegap.md)を使用したAdobe PhoneGapエンタープライズ向けコンテンツの管理』を参照してください。[
 
 >[!NOTE]
 >
->Using hybrid mobile technologies, you can create rich mobile applications that *run offline and online* with AEM Mobile in fact, many customers choose to create apps that check for when they&#39;re online or offline and behave accordingly.
+>ハイブリッドモバイルテクノロジーを使用すると、AEM Mobileと&#x200B;*オフラインおよびオンライン*&#x200B;を実行するリッチモバイルアプリを作成できます。多くのお客様は、オンラインまたはオフラインの時に確認し、適切に動作するアプリを作成します。
