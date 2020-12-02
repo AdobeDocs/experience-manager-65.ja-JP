@@ -32,7 +32,7 @@ ht-degree: 87%
 >
 >ただし、この機能は Felix コンソールには対応しておらず、このコンソールのパスワードについては手動で変更する必要があります。詳しくは、関連する[セキュリティチェックリストの節](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts)を参照してください。
 
-## 使用方法 {#how-do-i-use-it}
+## 使用方法  {#how-do-i-use-it}
 
 この機能は、ファイルシステムエクスプローラーで JAR をダブルクリックする代わりに、コマンドラインから AEM をインストールする場合に自動的にトリガーされます。
 
@@ -50,9 +50,9 @@ java -jar aem6.3.jar
 >
 >admin パスワードの変更を求めるメッセージは、新しい AEM インスタンスのインストール時にのみ表示されます。
 
-## -nointeractive フラグの使用 {#using-the-nointeractive-flag}
+## -nointeractive フラグの使用  {#using-the-nointeractive-flag}
 
-プロパティファイルでパスワードを指定することもできます。これは、 `-nointeractive` systemプロパティと組み合わせたフラグを使用して行います`-Dadmin.password.file` 。
+プロパティファイルでパスワードを指定することもできます。これは、`-Dadmin.password.file`システムプロパティと組み合わされた`-nointeractive`フラグを使用して行います。
 
 次に例を示します。
 
@@ -68,5 +68,5 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->If you simply use the `-nointeractive` parameter without the `-Dadmin.password.file` system property, AEM will use the default admin password without asking you to change it, essentially replicating behaviour from earlier versions. インストールスクリプトのコマンドラインでこの非インタラクティブモードを使用して、インストールを自動化できます。
+>`-Dadmin.password.file`システムプロパティを指定せずに`-nointeractive`パラメーターを使用すると、AEMは、変更を求めることなくデフォルトの管理者パスワードを使用し、基本的に以前のバージョンの動作を複製します。 インストールスクリプトのコマンドラインでこの非インタラクティブモードを使用して、インストールを自動化できます。
 
