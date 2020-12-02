@@ -14,7 +14,7 @@ ht-degree: 82%
 
 ページまたはブループリント設定からライブコピーを作成し、継承と同期を管理できます。
 
-## ブループリント設定の管理 {#managing-blueprint-configurations}
+## ブループリント設定の管理  {#managing-blueprint-configurations}
 
 ブループリント設定では、1 つ以上のライブコピーページのソースとして使用する既存の Web サイトを指定します。
 
@@ -40,7 +40,7 @@ ht-degree: 82%
 
 ブループリント設定が使用されると、それをソースやブループリントのライブコピーの同期方法を指定するロールアウト設定に関連付けることができます。[使用するロールアウト設定の指定](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)を参照してください。
 
-### ブループリント設定の作成 {#creating-a-blueprint-configuration}
+### ブループリント設定の作成  {#creating-a-blueprint-configuration}
 
 ブループリント設定を作成するには：
 
@@ -59,7 +59,7 @@ ht-degree: 82%
 
 1. 「**作成**」を選択すると、指定した内容に基づいてブループリント設定が作成されます。
 
-### ブループリント設定の編集または削除 {#editing-or-deleting-a-blueprint-configuration}
+### ブループリント設定の編集または削除  {#editing-or-deleting-a-blueprint-configuration}
 
 既存のブループリント設定を編集または削除できます。
 
@@ -86,7 +86,7 @@ ht-degree: 82%
 
 以下のような任意のページのライブコピーを作成できます。
 
-* Pages that are referenced by a [blueprint configuration](#creating-a-blueprint-configuration).
+* [ブループリント構成](#creating-a-blueprint-configuration)で参照されるページ。
 * ブループリント設定に接続されていないページ。
 * AEM では、ライブコピーを別のライブコピーのページ内に作成することもできます。
 
@@ -128,11 +128,11 @@ ht-degree: 82%
 1. （オプション）ライブコピーに使用する 1 つ以上のロールアウト設定を指定するには、「**ロールアウトの設定**」ドロップダウンリストで選択します。選択した設定がドロップダウンセレクターの下に表示されます。
 1. 「**作成**」をクリックまたはタップします。確認メッセージが表示されます。ここで「**開く**」または「**完了**」のいずれかを選択します。
 
-### ブループリント設定からのサイトのライブコピーの作成 {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
+### ブループリント設定からのサイトのライブコピーの作成  {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
-ブループリント設定を使用してライブコピーを作成し、ブループリント（ソース）コンテンツに基づくサイトを作成します。ブループリント設定からライブコピーを作成する場合は、コピーするブループリントのソースの言語ブランチを 1 つ以上選択し、その言語ブランチからコピーするチャプターを選択します。See [Creating a Blueprint Configuration](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration).
+ブループリント設定を使用してライブコピーを作成し、ブループリント（ソース）コンテンツに基づくサイトを作成します。ブループリント設定からライブコピーを作成する場合は、コピーするブループリントのソースの言語ブランチを 1 つ以上選択し、その言語ブランチからコピーするチャプターを選択します。[Blueprint設定の作成](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)を参照してください。
 
-If you omit some language branches or chapters from the live copy, you can add them later; see [Creating a Live Copy Inside a Live Copy (Blueprint Configuration)](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration).
+ライブコピーから一部の言語の分岐またはチャプターを省略した場合は、後で追加できます。[ライブコピー内でのライブコピーの作成（Blueprint設定）](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration)を参照してください。
 
 >[!CAUTION]
 >
@@ -144,10 +144,10 @@ If you omit some language branches or chapters from the live copy, you can add t
 * **初期の章**：ライブコピーに含めるブループリントの言語ブランチの子ページ。
 * **宛先のパス**：ライブコピーサイトのルートページの場所。
 * **タイトル**：ライブコピーサイトのルートページのタイトル。
-* **名前**:（オプション）ライブコピーのルートページを格納するJCRノードの名前。 デフォルト値はタイトルに基づいています。
+* **名前**:（オプション）ライブコピーのルートページを格納するJCRノードの名前。デフォルト値はタイトルに基づいています。
 * **サイトの所有者**：（オプション）
 * **ライブコピー**：ソースサイトとのライブの関係を確立する場合にこのオプションを選択します。このオプションを選択しない場合、ブループリントのコピーは作成されますが、後でソースと同期されることはありません。
-* **ロールアウトの設定**：（オプション）ライブコピーの同期に使用するロールアウト設定を 1 つ以上選択します。By default, the rollout configurations are inherited from the blueprint; see [Specifying the Rollout Configurations to Use](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) for more details.
+* **ロールアウトの設定**：（オプション）ライブコピーの同期に使用するロールアウト設定を 1 つ以上選択します。既定では、ロールアウト設定は設計図から継承されます。詳しくは、[使用するロールアウト設定の指定](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)を参照してください。
 
 ブループリント設定からサイトのライブコピーを作成するには：
 
@@ -167,7 +167,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 1. 「**初期の章**」ドロップダウンを使用して、ライブコピーに含めるブループリントのセクションを選択します。ここでも、デフォルトでは使用可能なすべてのチャプターが含まれますが、削除できます。
 1. 残りのプロパティの値を指定して「**作成**」を選択します。確認のダイアログボックスで、「**完了**」を選択して&#x200B;**サイト**&#x200B;コンソールに戻るか、「**サイトを開く**」を選択してサイトのルートページを開きます。
 
-### ライブコピー内でのライブコピーの作成（ブループリント設定） {#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
+### ライブコピー内でのライブコピーの作成（ブループリント設定）  {#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
 
 ライブコピーを（ブループリント設定を使用して作成した）既存のライブコピー内に作成する場合は、ライブコピーが最初に作成されたときには含まれていなかった任意の言語コピーまたはチャプターを挿入できます。
 
@@ -187,7 +187,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 プロパティを表示するには：
 
-1. In the **Sites** console, select the live copy page and open the properties.
+1. **サイト**&#x200B;コンソールで、ライブコピーページを選択し、プロパティを開きます。
 1. 「**ライブコピー**」タブを選択します。
 
    次に例を示します。
@@ -198,7 +198,7 @@ If you omit some language branches or chapters from the live copy, you can add t
    >
    >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
 
-### ブループリントページのライブコピーの確認 {#seeing-the-live-copies-of-a-blueprint-page}
+### ブループリントページのライブコピーの確認  {#seeing-the-live-copies-of-a-blueprint-page}
 
 （ブループリント設定で参照される）ブループリントのページには、現在の（ブループリント）ページをソースとして使用するライブコピーページのリストが表示されます。このリストを使用してライブコピーを追跡します。このリストは[ページプロパティ](/help/sites-authoring/editing-page-properties.md)の「**ブループリント**」タブに表示されます。
 
@@ -217,9 +217,9 @@ If you omit some language branches or chapters from the live copy, you can add t
 >このような[競合はロールアウト時に処理および解決](/help/sites-administering/msm-rollout-conflicts.md)する必要があります。
 
 
-#### ページプロパティからのブループリントのロールアウト {#rolling-out-a-blueprint-from-page-properties}
+#### ページプロパティからのブループリントのロールアウト  {#rolling-out-a-blueprint-from-page-properties}
 
-1. In the **Sites** console, select the page in the blueprint and open the properties.
+1. **サイト**&#x200B;コンソールで、ブループリントのページを選択し、プロパティを開きます。
 1. 「**ブループリント**」タブを開きます。
 1. 「**ロールアウト**」を選択します。
 
@@ -229,11 +229,11 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
 
-1. ロールアウトジョブをすぐに実行するか(**今すぐ**)、別の日時に実行するか(**後で**)を指定します。
+1. ロールアウトジョブを直ちに実行するか（**今すぐ**）、別の日時に実行するか（**後で**）を指定します。
 
    ![Blueprintの展開](assets/rollout-blueprint.png)
 
-Rollouts are processed as asynchronous jobs and can be checked in the [**Async Jobs Status** dashboard](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) at **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**
+ロールアウトは非同期ジョブとして処理され、**グローバルナビゲーション** -> **ツール** -> **操作** -> **ジョブ**&#x200B;の&#x200B;[**非同期ジョブステータス](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)でチェックできます。**
 
 >[!NOTE]
 >
@@ -241,7 +241,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
 #### 参照レールからのブループリントのロールアウト {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. **サイト** コンソールで、Blueprintのページを選択し、(ツールバーから **[)](/help/sites-authoring/basic-handling.md#references)** 参照パネルを開きます。
+1. **サイト**&#x200B;コンソールで、Blueprintのページを選択し、**[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開きます（ツールバーから）。
 1. リストから「**ブループリント**」オプションを選択し、このページに関連付けられているブループリントを表示します。
 1. リストから必要なブループリントを選択します。
 1. 「**ロールアウト**」をクリックまたはタップします。
@@ -253,17 +253,17 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
    * **スケジュール**：
 
-      ロールアウトジョブを直ちに実行するか(**今すぐ**)、または後で実行するか(**後で**)を指定します。
+      ロールアウトジョブをすぐに実行するか（**今すぐ**）、または後日実行するか（**後で**）を指定します。
 
       ![chlimage_1-222](assets/rollout-live-copy.png)
 
 1. これらの詳細を確認したら、「**ロールアウト**」を選択してアクションを実行します。
 
-Rollouts are processed as asynchronous jobs and can be checked in the [**Async Jobs Status** dashboard](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) at **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**
+ロールアウトは非同期ジョブとして処理され、**グローバルナビゲーション** -> **ツール** -> **操作** -> **ジョブ**&#x200B;の&#x200B;[**非同期ジョブステータス](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)でチェックできます。**
 
 >[!NOTE]
 >
->非同期ロールアウト処理にはAEM 6.5.3.0以降が必要です。 以前のバージョンでは、[ **背景]ロールアウトオプションがオンになっていない限り、ページは直ちに同期的に処理されていました** 。
+>非同期ロールアウト処理にはAEM 6.5.3.0以降が必要です。 以前のバージョンでは、**[背景]ロールアウト**&#x200B;オプションがオンになっていない限り、ページは直ちに同期的に処理されていました。
 
 #### ライブコピーの概要からのブループリントのロールアウト {#roll-out-a-blueprint-from-the-live-copy-overview}
 
@@ -275,11 +275,11 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
    ![chlimage_1-223](assets/chlimage_1-223.png)
 
-1. ロールアウトジョブをすぐに実行するか(**今すぐ**)、別の日時に実行するか(**後で**)を指定します。
+1. ロールアウトジョブを直ちに実行するか（**今すぐ**）、別の日時に実行するか（**後で**）を指定します。
 
    ![Blueprintの展開](assets/rollout-blueprint.png)
 
-Rollouts are processed as asynchronous jobs and can be checked in the [**Async Jobs Status** dashboard](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) at **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**
+ロールアウトは非同期ジョブとして処理され、**グローバルナビゲーション** -> **ツール** -> **操作** -> **ジョブ**&#x200B;の&#x200B;[**非同期ジョブステータス](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)でチェックできます。**
 
 >[!NOTE]
 >
@@ -297,7 +297,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 >
 >同期では、「[ロールアウト時](/help/sites-administering/msm-sync.md#rollout-triggers)」のトリガーを使用するロールアウト設定が実行されます。
 
-1. In the **Sites** console, select the live copy page and open the properties.
+1. **サイト**&#x200B;コンソールで、ライブコピーページを選択し、プロパティを開きます。
 1. 「**ライブコピー**」タブを開きます。
 1. 「**同期**」をクリックまたはタップします。
 
@@ -305,13 +305,13 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
    確認が求められます。「**同期**」を使用して先に進みます。
 
-#### ライブコピーの概要からのライブコピーの同期 {#synchronize-a-live-copy-from-the-live-copy-overview}
+#### ライブコピーの概要からのライブコピーの同期  {#synchronize-a-live-copy-from-the-live-copy-overview}
 
 ライブコピーの概要では、ライブコピーページを選択して、[同期アクションを実行することもできます](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 
 1. [ライブコピーの概要](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)を開き、ライブコピーページを選択します。
 1. ツールバーの「**同期**」を選択します。
-1. Confirm the **Rollout** action in the dialog after specifying whether you want to include:
+1. 含めるかどうかを指定した後、ダイアログで&#x200B;**ロールアウト**&#x200B;操作を確認します。
 
    * **ページとサブページ**
    * **ページのみ**
@@ -338,7 +338,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 >このような[競合はロールアウト時に処理および解決](/help/sites-administering/msm-rollout-conflicts.md)する必要があります。
 
 
-### ライブコピーページへのコンポーネントの追加 {#adding-components-to-a-live-copy-page}
+### ライブコピーページへのコンポーネントの追加  {#adding-components-to-a-live-copy-page}
 
 ライブコピーページにはいつでもコンポーネントを追加できます。ライブコピーとその段落システムの継承ステータスは、コンポーネントの追加機能を制御しません。
 
@@ -358,7 +358,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 >
 >ブループリントから[ライブコピーを分離](#detaching-a-live-copy)してすべての関係を削除することもできます。分離アクションは永続的で元に戻すことはできません。
 
-#### ページプロパティからの継承の休止 {#suspending-inheritance-from-page-properties}
+#### ページプロパティからの継承の休止  {#suspending-inheritance-from-page-properties}
 
 ページの継承を休止するには：
 
@@ -384,7 +384,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
-1. Confirm the **Suspend** action in the **Suspend Live Copy** dialog:
+1. **ライブコピーを中断**&#x200B;ダイアログで、**中断**&#x200B;操作を確認します。
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
@@ -404,7 +404,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 >
 >継承を再度有効にしても、ページはソースと自動的には同期されません。必要に応じて、再開時または後の段階で同期を手動で要求できます。
 
-#### ページプロパティからの継承の再開 {#resuming-inheritance-from-page-properties}
+#### ページプロパティからの継承の再開  {#resuming-inheritance-from-page-properties}
 
 [休止](#suspending-inheritance-from-page-properties)すると、ページプロパティのツールバーで&#x200B;**再開**&#x200B;アクションが使用可能になります。
 
@@ -418,9 +418,9 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
 1. [ライブコピーの概要](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)を開き、休止中のライブコピーページを選択します。こうすると、「**継承がキャンセルされました**」と表示されます。
 1. ツールバーの「**再開**」を選択します。
-1. Indicate whether you want to synchronize the page after reverting inheritance, then confirm the **Resume** action in the **Resume Live Copy** dialog.
+1. 継承を元に戻した後にページを同期するかどうかを指定し、**ライブコピーの再開**&#x200B;ダイアログで「**再開**」操作を確認します。
 
-### Changing Inheritance Depth (Shallow/Deep) {#changing-inheritance-depth-shallow-deep}
+### 継承深度の変更（浅い/深い） {#changing-inheritance-depth-shallow-deep}
 
 既存のライブコピーで、ページの深度（例：子ページが含まれるかどうか）を変更できます。
 
@@ -439,7 +439,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
 * シャローライブコピーに切り替えた後、ディープライブコピーに戻した場合：
 
-   * All children of the (formerly) shallow live copy are treated as if they had been created manually and are therefore moved away using `[oldname]_msm_moved name`.
+   * （以前の）浅いライブコピーの子はすべて、手動で作成されたかのように扱われ、`[oldname]_msm_moved name`を使って移動されます。
 
 深度を指定または変更するには：
 
@@ -458,7 +458,7 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
 1. 「**保存**」をクリックまたはタップして更新内容を保持します。
 
-### コンポーネントの継承のキャンセル {#cancelling-inheritance-for-a-component}
+### コンポーネントの継承のキャンセル  {#cancelling-inheritance-for-a-component}
 
 コンポーネントについてライブコピーの継承をキャンセルして、コンポーネントがソースコンポーネントと同期されないようにします。必要な場合は後で継承を有効にすることができます。
 
@@ -480,9 +480,9 @@ Rollouts are processed as asynchronous jobs and can be checked in the [**Async J
 
    コンポーネントツールバーが更新されて、すべての（該当する）編集コマンドが表示されます。
 
-### コンポーネントの継承の再有効化 {#re-enabling-inheritance-for-a-component}
+### コンポーネントの継承の再有効化  {#re-enabling-inheritance-for-a-component}
 
-To enable inheritance for a component, click or tap the **Re-enable Inheritance** icon on the component toolbar.
+コンポーネントの継承を有効にするには、コンポーネントツールバーの&#x200B;**継承を再有効化**&#x200B;アイコンをクリックまたはタップします。
 
 ![画像](do-not-localize/chlimage_1-9.png)
 
@@ -504,7 +504,7 @@ To enable inheritance for a component, click or tap the **Re-enable Inheritance*
 1. 既存のコンポーネントをページの別の場所にドラッグします。
 1. **継承をキャンセル**&#x200B;ダイアログボックスで、「**はい**」を使用してアクションを確定します。
 
-### ライブコピーページのプロパティの上書き {#overriding-properties-of-a-live-copy-page}
+### ライブコピーページのプロパティの上書き  {#overriding-properties-of-a-live-copy-page}
 
 デフォルトでは、ライブコピーページのページプロパティはソースページから継承されます（編集不可）。
 
@@ -522,16 +522,16 @@ To enable inheritance for a component, click or tap the **Re-enable Inheritance*
 >
 >継承を再度有効にしても、ライブコピーページのプロパティはソースのプロパティとは自動的には同期されません。必要な場合は、手動で同期をリクエストできます。
 
-1. Open the properties of the live copy page using either the **View Properties** option of the **Sites** console or **Page Information** icon on the page toolbar.
+1. ライブコピーページのプロパティを開くには、ページツールバーの&#x200B;**サイト**&#x200B;コンソールの&#x200B;**表示プロパティ**&#x200B;オプションまたは&#x200B;**ページ情報**&#x200B;アイコンを使用します。
 1. プロパティの継承をキャンセルするには、プロパティの右側に表示されるリンクアイコンをクリックまたはタップします。
 
    ![画像](do-not-localize/chlimage_1-10.png)
 
 1. **継承をキャンセル**&#x200B;確認ダイアログで、「**はい**」をクリックまたはタップします。
 
-### ライブコピーページのプロパティの復帰 {#revert-properties-of-a-live-copy-page}
+### ライブコピーページのプロパティの復帰  {#revert-properties-of-a-live-copy-page}
 
-To enable inheritance for a property, click or tap the **Revert Inheritance** icon that appears next to the property.
+プロパティの継承を有効にするには、プロパティの横に表示される「**継承を元に戻す**」アイコンをクリックまたはタップします。
 
 ![画像](do-not-localize/chlimage_1-11.png)
 
@@ -544,7 +544,7 @@ To enable inheritance for a property, click or tap the **Revert Inheritance** ic
 
 リセットは、ページプロパティ、段落システムおよびコンポーネントに対しておこなった変更に適用されます。
 
-#### ページプロパティからのライブコピーページのリセット {#reset-a-live-copy-page-from-the-page-properties}
+#### ページプロパティからのライブコピーページのリセット  {#reset-a-live-copy-page-from-the-page-properties}
 
 1. **サイト**&#x200B;コンソールで、ライブコピーページを選択して「**プロパティを表示**」を選択します。
 1. 「**ライブコピー**」タブを開きます。
@@ -554,30 +554,30 @@ To enable inheritance for a property, click or tap the **Revert Inheritance** ic
 
 1. **ライブコピーをリセット**&#x200B;ダイアログボックスで、「**リセット**」を選択して確定します。
 
-#### ライブコピーの概要からのライブコピーページのリセット {#reset-a-live-copy-page-from-the-live-copy-overview}
+#### ライブコピーの概要からのライブコピーページのリセット  {#reset-a-live-copy-page-from-the-live-copy-overview}
 
 ライブコピーの概要では、ライブコピーページを選択して、[リセットアクションを実行することもできます](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 
 1. [ライブコピーの概要](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)を開き、ライブコピーページを選択します。
 1. ツールバーの「**リセット**」を選択します。
-1. Confirm the **Reset** action in the **Reset Live Copy** dialog:
+1. **ライブコピーをリセット**&#x200B;ダイアログで、**リセット**&#x200B;操作を確認します。
 
    ![chlimage_1-234](assets/chlimage_1-234.png)
 
 ## ライブコピーページとブループリントページの比較 {#comparing-a-live-copy-page-with-a-blueprint-page}
 
-To track the changes you have made, you can view the blueprint page in **References** and compare it with its live copy page:
+加えた変更を追跡するには、**参照**&#x200B;のBlueprintページを表示し、ライブコピーページと比較します。
 
 1. **サイト**&#x200B;コンソールで、[ブループリントページまたはライブコピーページに移動し、ページを選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開き、次のいずれかを選択します。
 
    * **Blueprint** （ライブコピーページが選択された場合）
-   * **ライブコピー** （BluePrintページが選択された場合）
+   * **ライブコピー** （設計図ページが選択された場合）
 
 1. 特定のライブコピーを選択してから、次のいずれかを選択します。
 
    * **ブループリントと比較**（ライブコピーページを選択した場合）
-   * **ライブコピーと比較** （BluePrintページが選択された場合）
+   * **ライブコピーと比較** （設計図ページが選択された場合）
 
    次に例を示します。
 
@@ -635,12 +635,12 @@ To track the changes you have made, you can view the blueprint page in **Referen
 
 1. 確認ダイアログが表示されたら、「**分離**」を選択してアクションを完了します。
 
-### ライブコピーの概要からのライブコピーページの分離 {#detach-a-live-copy-page-from-the-live-copy-overview}
+### ライブコピーの概要からのライブコピーページの分離  {#detach-a-live-copy-page-from-the-live-copy-overview}
 
 ライブコピーの概要では、ライブコピーページを選択して、[分離アクションを実行することもできます](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 
 1. [ライブコピーの概要](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)を開き、ライブコピーページを選択します。
 1. ツールバーの「**分離**」を選択します。
-1. Confirm the **Detach** action in the **Detach Live Copy** dialog:
+1. **ライブコピーをデタッチ**&#x200B;ダイアログで、**デタッチ**&#x200B;操作を確認します。
 
    ![chlimage_1-237](assets/chlimage_1-237.png)
