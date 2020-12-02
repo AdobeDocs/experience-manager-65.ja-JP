@@ -1,6 +1,6 @@
 ---
 title: AEM Developer Tools for Eclipse
-seo-title: AEM Developer Tools for Eclipse
+seo-title: AEM Eclipse開発者ツール
 description: 'null'
 seo-description: 'null'
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
@@ -41,15 +41,15 @@ AEM Developer Toolsを使用する前に、次の操作を行う必要があり�
 * [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Toolsは、現在EclipseKepler以降をサポートしています
 
 * AEMバージョン5.6.1以降で使用可能
-* Configure your eclipse installation to ensure that you have at least 1 gigabyte of heap memory by editing your `eclipse.ini` configuration file as described in the [Eclipse FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
+* [Eclipse FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)の説明に従って`eclipse.ini`設定ファイルを編集し、少なくとも1 GBのヒープメモリがあることを確認するようにEclipseを設定します。
 
 >[!NOTE]
 >
->On macOS, you need to right-click on **Eclipse.app** and then select **Show Package Contents** in order to find your `eclipse.ini`**.**
+>macOSでは、**Eclipse.app**&#x200B;を右クリックし、「**パッケージの内容を表示**」を選択して&#x200B;`eclipse.ini`**を探す必要があります。**
 
 ## AEM Developer Tools for Eclipse のインストール方法 {#how-to-install-the-aem-developer-tools-for-eclipse}
 
-Once you have fulfilled the [requirements](#requirements) above, you can install the plugin as follows:
+上記の[要件](#requirements)を満たしたら、次のようにプラグインをインストールできます。
 
 1. [**AEM** Developer Tools Web サイト](https://eclipse.adobe.com/aem/dev-tools/)にアクセスします。
 
@@ -73,7 +73,7 @@ Once you have fulfilled the [requirements](#requirements) above, you can install
 
 >[!NOTE]
 >
->See [How to work with a bundle in Eclipse when it was downloaded from AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
+>[AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)からダウンロードしたバンドルのEclipseでの使い方を参照してください。
 
 ## AEM パースペクティブ {#the-aem-perspective}
 
