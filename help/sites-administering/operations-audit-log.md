@@ -40,9 +40,9 @@ ht-degree: 81%
 
 監査ログのパージを設定するには、次の手順に従います。
 
-1. Go to the Web Console Admin by pointing your browser to `http://localhost:4502/system/console/configMgr/`
+1. ブラウザに`http://localhost:4502/system/console/configMgr/`を指定して、Webコンソール管理者に移動します。
 
-1. Search for an item called **Pages audit Log Purge rule** and click it.
+1. **Pages audit Log Purge rule**&#x200B;という名前の項目を検索し、クリックします。
 
    ![chlimage_1-365](assets/chlimage_1-365.png)
 
@@ -55,14 +55,14 @@ ht-degree: 81%
 
    >[!NOTE]
    >
-   >The content path only applies to children of the `/var/audit/com.day.cq.wcm.core.page` node in the repository.
+   >コンテンツパスは、リポジトリ内の`/var/audit/com.day.cq.wcm.core.page`ノードの子にのみ適用されます。
 
 1. ルールを保存します。
 1. 作成したルールを実行するためには、操作ダッシュボードに公開する必要があります。そのためには、AEM のようこそ画面から&#x200B;**ツール／操作／メンテナンス**&#x200B;に移動します。
 
 1. **週別メンテナンスウィンドウ**&#x200B;カードをクリックします。
 
-1. You will find the maintenance task already present under the **AuditLog Maintenance Task** card.
+1. メンテナンスタスクは、**AuditLog Maintenanceタスク**&#x200B;カードに既に存在します。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
@@ -70,15 +70,15 @@ ht-degree: 81%
 
 AEM 6.3では、監査ログの削除タスクが完了する前にスケジュールされたメンテナンスウィンドウが閉じると、タスクが自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
 
-**AEM 6.5では**、「停止 **** 」アイコンをクリックして、実行中の監査ログの削除タスクを手動で停止できます。 次回の実行時に、タスクは安全に再開されます。
+**AEM 6.5では**、「停止」アイコンをクリックして、実行中の監査ログの削除タスクを手動で停止でき **** ます。次回の実行時に、タスクは安全に再開されます。
 
 >[!NOTE]
 >
 >メンテナンスタスクを停止すると、タスクの実行は休止されますが、既に進行しているジョブの監視が途切れることはありません。
 
-## DAM 監査ログのパージの設定 {#configure-dam-audit-log-purging}
+## DAM 監査ログのパージの設定  {#configure-dam-audit-log-purging}
 
-1. Navigate to the System Console at *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
+1. *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;のシステムコンソールに移動します。
 1. **DAM 監査ログのパージ** ルールを探して結果をクリックします。
 1. それに従って、次のウィンドウでルールを設定します。オプションは以下のとおりです。
 
@@ -89,9 +89,9 @@ AEM 6.3では、監査ログの削除タスクが完了する前にスケジュ�
 
 1. 「**保存**」をクリックして設定を保存します。
 
-## レプリケーション監査ログのパージの設定  {#configure-replication-audit-log-purging}
+## レプリケーション監査ログのパージの設定   {#configure-replication-audit-log-purging}
 
-1. Navigate to the System Console at *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
+1. *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;のシステムコンソールに移動します。
 1. **レプリケーション監査ログのパージスケジューラー** を探して結果をクリックします。
 1. それに従って、次のウィンドウでルールを設定します。オプションは以下のとおりです。
 
