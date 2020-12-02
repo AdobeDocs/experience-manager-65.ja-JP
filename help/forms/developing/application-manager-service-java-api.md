@@ -33,11 +33,11 @@ AEM Forms操作は、AEM Formsで厳密に型指定されたAPIを使用して�
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるJava API(SOAP)クイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるJava API(SOAP)クイック開始は、Unixなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したアプリケーションのデプロイ {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+## クイック開始（SOAPモード）:Java APIを使用したアプリケーションの導入{#quick-start-soap-mode-deploying-applications-using-the-java-api}
 
-以下のJavaコードの例では、EncryptDocument.lcaという名前の既存のLCAファイルに基づいてアプリケーションを読み込み *ます*。
+次のJavaコードの例では、*EncryptDocument.lca*&#x200B;という名前の既存のLCAファイルに基づいてアプリケーションを読み込みます。
 
 ```java
  /*
@@ -137,9 +137,9 @@ AEM Forms操作は、AEM Formsで厳密に型指定されたAPIを使用して�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したアプリケーションの削除 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-removing-an-application-using-the-java-api}を使用したアプリケーションの削除
 
-次のJavaコードの例を使用すると、EncryptDocumentという名前のアプリケーションを削除でき *ます*。
+次のJavaコードの例を使用すると、*EncryptDocument*&#x200B;という名前のアプリケーションが削除されます。
 
 ```java
  /*
