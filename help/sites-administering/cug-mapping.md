@@ -19,7 +19,7 @@ ht-degree: 74%
 ---
 
 
-# AEM 6.5 のカスタムユーザグループマッピング {#custom-user-group-mapping-in-aem}
+# AEM 6.5 のカスタムユーザグループマッピング  {#custom-user-group-mapping-in-aem}
 
 ## CUG に関連する JCR コンテンツの比較 {#comparison-of-jcr-content-related-to-cug}
 
@@ -53,7 +53,7 @@ ht-degree: 74%
  </tbody>
 </table>
 
-## OSGi サービスの比較 {#comparison-of-osgi-services}
+## OSGi サービスの比較  {#comparison-of-osgi-services}
 
 **古い AEM バージョン**
 
@@ -88,7 +88,7 @@ ht-degree: 74%
 
    >[!NOTE]
    > 
-   >が設定され `CugExcludeImpl` ていない場合は、がデフォルト `CugConfiguration` に戻ります。
+   >`CugExcludeImpl`が設定されていない場合、`CugConfiguration`はデフォルトに戻ります。
 
    特別なニーズがある場合は、カスタム CugExclude 実装をプラグインすることが可能です。
 
