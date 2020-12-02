@@ -29,7 +29,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 * [割り当てレポート](#assignments-report)
 
-   For an [enablement community](/help/communities/overview.md#enablement-community), provides an overview of learners&#39; progress on their assignments, including an associated score if implementing the SCORM standard.
+   [イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)に対して、SCORM標準を実装する場合の関連スコアを含む、学習者の割り当てに対する進行状況の概要を提供します。
 
 * [表示レポート](#views-report)
 
@@ -39,15 +39,15 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
    コミュニティメンバー別の様々なタイプの投稿を、任意のコミュニティサイトにグラフで表示します。
 
-[Adobe Analyticsを有効にすると](/help/communities/sites-console.md#analytics)、各有効化リソースの表示数、再生数、コメント数、評価数が時間の経過と共にレポートに表示されます。
+[Adobe Analyticsが有効](/help/communities/sites-console.md#analytics)の場合、レポートには、有効化された各リソースの表示数、再生数、コメント数、評価数が時間の経過と共に含まれます。
 
 表形式のレポートは .csv 形式でエクスポートして別の処理に使用できます。
 
-## レポートコンソール {#reporting-consoles}
+## レポートコンソール  {#reporting-consoles}
 
 ### コミュニティサイトのレポート {#reports-for-community-sites}
 
-* From global navigation: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** >  **[!UICONTROL Reports]**
+* グローバルナビゲーションから：**[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL レポート]**
 
 * 次の中から選択します。
 
@@ -67,13 +67,13 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 ### イネーブルメントリソースと学習パスのレポート {#reports-for-enablement-resources-and-learning-paths}
 
-* From global navigation: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** >  **[!UICONTROL Resources]**
+* グローバルナビゲーションから：**[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL リソース]**
 
 * 既存の有効化コミュニティサイトを選択してください：
 
-   * Select **Report** icon to generate reports which cover all enablement resources.
+   * **レポート**&#x200B;アイコンを選択して、すべての有効化リソースを対象としたレポートを生成します。
    * 有効化の学習パスを選択します。
-   * Select **Report** icon to generate reports for:
+   * **レポート**&#x200B;アイコンを選択して、次のレポートを生成します。
 
       * 付属の有効化リソース。
       * 学習パスに割り当てられた学習者。
@@ -90,7 +90,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 詳しくは、リソースコンソールの[レポートセクション](/help/communities/resources.md#report)を参照してください。
 
-## 割り当てレポート {#assignments-report}
+## 割り当てレポート  {#assignments-report}
 
 割り当てコンソールでは、イネーブルメントコミュニティサイト、ユーザー、グループおよび割り当てによってレポートをフィルタリングできます。
 
@@ -143,7 +143,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
    * 過去 90 日間
    * 昨年
 
-Select **[!UICONTROL Generate]** to create the report.
+「**[!UICONTROL 生成]**」を選択して、レポートを作成します。
 
 ![generate-表示](assets/generate-views.png)
 
@@ -172,7 +172,7 @@ Select **[!UICONTROL Generate]** to create the report.
    * 過去 90 日間
    * 昨年
 
-Select **[!UICONTROL Generate]** to create the report.
+「**[!UICONTROL 生成]**」を選択して、レポートを作成します。
 
 ![生成レポート](assets/generate-posts-report.png)
 
@@ -182,8 +182,8 @@ Select **[!UICONTROL Generate]** to create the report.
 
 コミュニティサイトが 1 つも表示されない場合は、Adobe Analytics がサイトに対して有効になっているかを確認してください。割り当てに関するレポートを選択する場合は、割り当て機能がコミュニティサイトの構造にあることを確認します。
 
-### AEM作成者インスタンスにレポートが表示されない {#reports-do-not-show-in-aem-author-instance}
+### AEM作成者インスタンス{#reports-do-not-show-in-aem-author-instance}にレポートが表示されない
 
-レポートがAEM作成者インスタンスに表示されない場合は、発行インスタンスでのURLのマッピングなど、カスタマイズ内容を確認します。 URLのマッピングがコミュニティサイトのAEM Publishインスタンスでのみ行われる場合は、 **サイトトレンドレポートのソーシャルコンポーネントファクトリ** の設定で、AEM Authorインスタンスで同じ設定が行われていることを確認します。
+レポートがAEM作成者インスタンスに表示されない場合は、発行インスタンスでのURLのマッピングなど、カスタマイズ内容を確認します。 URLのマッピングがコミュニティサイトのAEM Publishインスタンスでのみ行われる場合は、**サイトトレンドレポートのソーシャルコンポーネントファクトリ**&#x200B;の設定のAEM Authorインスタンスでも同じ設定が行われていることを確認します。
 
 ![AEM作成者でのURLマッピング](assets/sitetrend.png)
