@@ -26,14 +26,14 @@ ht-degree: 77%
 >
 >この概念について参照すると、スタートポイント、スタートプロセス、フォームという用語が区別なく使用される場合があります。
 
-To initiate a process from the AEM Forms app, you need to have a startpoint of type **Workspace** in your process. また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
+AEM Formsアプリからプロセスを開始するには、プロセス内にタイプ&#x200B;**Workspace**&#x200B;のスタートポイントが必要です。 また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Workbench で定義されたプロセスを開始するには**
 
 1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](../../forms/using/home-screen.md)に移動してください。
-1. On the **[!UICONTROL Home]** screen, by default, the **[!UICONTROL All Forms]** list is displayed.
+1. **[!UICONTROL ホーム]**&#x200B;画面には、デフォルトで&#x200B;**[!UICONTROL すべてのForms]**&#x200B;リストが表示されます。
 
    スタートポイントはフォームに関連付けられています。リスト内でスタートポイントに関連付けられたフォームをタップして開きます。
 
@@ -43,7 +43,7 @@ To initiate a process from the AEM Forms app, you need to have a startpoint of t
 
    「[添付ファイル](../../forms/using/add-attachments.md)」ボタンを使用して、このタスクに注釈を追加できます。
 
-1. After you fill the form, tap the **[!UICONTROL Submit]** button.
+1. フォームに入力したら、「**[!UICONTROL 送信]**」ボタンをタップします。
 
 アプリケーションがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
 
