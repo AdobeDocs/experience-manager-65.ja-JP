@@ -18,13 +18,13 @@ ht-degree: 38%
 ---
 
 
-# コーディングのガイドライン {#coding-guidelines}
+# コーディングのガイドライン  {#coding-guidelines}
 
 ## ガイドライン、ヒント、テクニック {#guidelines-tips-and-tricks}
 
 AEM Communities の操作は、以前は Java Server Pages に大きく依存していましたが、ビジネスロジック、スタイルおよびページコンテンツが相互に異なる場合にテンプレートスクリプト言語を柔軟に選択できるように進化しています。
 
-Further flexibility in working with user generated content (UGC) is through the SocialResourceProvider API, which eliminates the need for awareness of which [SRP](srp.md) option was chosen for the deployment.
+ユーザー生成コンテンツ(UGC)を柔軟に操作できるのは、SocialResourceProvider APIを使用することで、[SRP](srp.md)オプションが展開用に選択されたことを認識する必要がなくなります。
 
 AEM Communities 開発者向けのさまざまなコーディングのガイドラインとベストプラクティスを次に示します。
 
@@ -32,12 +32,12 @@ AEM Communities 開発者向けのさまざまなコーディングのガイド�
 
 * [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) - UGCがJCR(JSRP)に格納されている場合にのみ機能するアプリケーションの記述を回避する方法。
 * [SocialUtilsリファクタリング](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティメソッド。
-* [命名規則](naming-conventions.md) — カスタムJavaクラスの命名規則。
+* [命名規則](naming-conventions.md)  — カスタムJavaクラスの命名規則。
 
 ### スクリプト {#scripts}
 
-* [Communitiesコンポーネントのサイドロード](sideloading.md) — ページの読み込み後にコンポーネントを動的に追加する方法。
-* [リッチテキストエディター](rte.md) — コンテンツを投稿するためにメンバーに提供されるリッチテキストUIをカスタマイズする方法。
+* [Communitiesコンポーネントのサイドロード](sideloading.md)  — ページの読み込み後にコンポーネントを動的に追加する方法。
+* [リッチテキストエディター](rte.md)  — コンテンツを投稿するためにメンバーに提供されるリッチテキストUIをカスタマイズする方法。
 
 ### IDE {#ide}
 
