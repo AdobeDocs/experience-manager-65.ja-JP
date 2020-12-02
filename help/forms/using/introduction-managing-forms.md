@@ -18,20 +18,20 @@ ht-degree: 66%
 ---
 
 
-# フォームの管理の概要 {#introduction-to-managing-forms}
+# フォームの管理の概要  {#introduction-to-managing-forms}
 
-AEM [!DNL Forms] provides simplified yet powerful user interface to create and manage forms, documents, themes, letters, document fragments, data dictionaries, and related assets. 開発者のデスクトップから、ポータルサーバーでのエンドユーザーへの提供まで、フォーム、ドキュメントおよび関連アセットのライフサイクル全体を管理するために役立ちます。You can use the AEM [!DNL Forms] user interface to:
+AEM [!DNL Forms]は、フォーム、ドキュメント、テーマ、レター、ドキュメントフラグメント、データディクショナリ、および関連アセットを作成および管理するための、シンプルかつパワフルなユーザーインターフェイスを提供します。 開発者のデスクトップから、ポータルサーバーでのエンドユーザーへの提供まで、フォーム、ドキュメントおよび関連アセットのライフサイクル全体を管理するために役立ちます。AEM [!DNL Forms]ユーザーインターフェイスを使用して、次のことができます。
 
-* Access AEM [!DNL Forms] components
-* AEM [!DNL Forms] 設定へのアクセス
+* AEM [!DNL Forms]コンポーネントへのアクセス
+* AEM [!DNL Forms]構成へのアクセス
 
 >[!NOTE]
 >
->その他のAEMツールおよびオプションについて詳しくは、「 [オーサリング](/help/sites-authoring/author.md)」を参照してください。
+>その他のAEMツールとオプションについて詳しくは、「[オーサリング](/help/sites-authoring/author.md)」を参照してください。
 
 ## AEM Forms コンポーネントへのアクセス {#access-aem-forms-components}
 
-AEM には、フォーム、ドキュメントおよび関連アセットを作成するためのオプションに加えて、サイトの作成、アセットの作成、AEM インスタンスの管理などのオプションが用意されています。You can click the ![adobeexperiencemanager](assets/adobeexperiencemanager.png) Experience Manager logo to navigate to all the available tools. Along with links to the consoles of other components, it also contains links for AEM [!DNL Forms]. To navigate to AEM [!DNL Forms], click the Experience Manager logo ![adobeexperiencemanager](assets/adobeexperiencemanager.png) > navigation ![compass](assets/compass.png) > **[!UICONTROL Forms]**. 以下のコンソールのリンクが表示されます。
+AEM には、フォーム、ドキュメントおよび関連アセットを作成するためのオプションに加えて、サイトの作成、アセットの作成、AEM インスタンスの管理などのオプションが用意されています。![adobeexperiencemanager](assets/adobeexperiencemanager.png)Experience Managerのロゴをクリックすると、使用可能なすべてのツールに移動できます。 他のコンポーネントのコンソールへのリンクと共に、AEM [!DNL Forms]のリンクも含まれます。 AEM [!DNL Forms]に移動するには、Experience Managerのロゴ![adobeexperiencemanager](assets/adobeexperiencemanager.png)/navigation ![compass](assets/compass.png)/**[!UICONTROL Forms]**&#x200B;をクリックします。 以下のコンソールのリンクが表示されます。
 
 * フォームとドキュメント
 * テーマ
@@ -43,11 +43,11 @@ AEM には、フォーム、ドキュメントおよび関連アセットを作�
 
 ### フォームとドキュメント  {#forms-documents}
 
-フォームとドキュメントには、インタラクティブ通信、アダプティブフォーム、アダプティブフォームフラグメント、フォームセットを作成するためのオプションが用意されています。Only for AEM [!DNL Forms] on JEE, Forms &amp; Documents provides an option to import files from local storage and sync AEM [!DNL Forms] assets with Workbench.
+フォームとドキュメントには、インタラクティブ通信、アダプティブフォーム、アダプティブフォームフラグメント、フォームセットを作成するためのオプションが用意されています。JEE上のAEM [!DNL Forms]のみで、Formsおよびドキュメントは、ローカルストレージからファイルを読み込み、AEM [!DNL Forms]アセットをWorkbenchと同期するオプションを提供します。
 
-The create button is the starting point of the process of creating or uploading AEM [!DNL Forms] asset. 次のオプションを使用して、作成できます。
+「作成」ボタンは、AEM [!DNL Forms]アセットを作成またはアップロードするプロセスの開始点です。 次のオプションを使用して、作成できます。
 
-* **対話型通信**:インタラクティブコミュニケーションは、HTMLベースのデジタル通信、ステートメント、ドキュメントに対応した、パーソナライズされたインタラクティブなデバイス向けの通信です。 インタラクティブ通信はレスポンシブな特性を持っているため、使用するデバイスや設定に応じて、レイアウトとデザインが自動的に変わります。For detailed information, see [Interactive Communications Overview](/help/forms/using/interactive-communications-overview.md)
+* **対話型通信**:インタラクティブコミュニケーションは、HTMLベースのデジタル通信、ステートメント、ドキュメントに対応した、パーソナライズされたインタラクティブなデバイス向けの通信です。インタラクティブ通信はレスポンシブな特性を持っているため、使用するデバイスや設定に応じて、レイアウトとデザインが自動的に変わります。詳しくは、[対話型通信の概要](/help/forms/using/interactive-communications-overview.md)を参照してください
 
 * **アダプティブフォーム：**&#x200B;アダプティブフォームは、魅力的でレスポンシブなフォームです。アダプティブフォームを作成し、ユーザーの応答、デバイス、または作業環境に基づいてフォームのセクションを追加または削除することで、ユーザーの入力に動的に対応することができます。 アダプティブフォームについて詳しくは、「[アダプティブフォームの作成について](../../forms/using/introduction-forms-authoring.md)」を参照してください。
 
@@ -62,22 +62,22 @@ The create button is the starting point of the process of creating or uploading 
 
    ![フォルダ](assets/folders.png)
 
-   **A.** General folder **B.** Forms Workflowフォルダ
+   **A.** Generalフォルダ **B.** Forms Workflowフォルダ
 
 フォームとドキュメントパネルには、以下のオプションも用意されています。
 
 * **ローカルストレージからのファイルの読み込み：** PDF フォームとドキュメント、フォームテンプレート（XFA フォーム）およびその他のリソース（画像や XSD の XML スキーマ）を読み込むことができます。詳しい手順については、「[AEM Forms におけるアセットの読み込みと書き出し](../../forms/using/import-export-forms-templates.md)」を参照してください。
-* **AEM Forms アセットの Workbench との同期：**「Workbench のファイル」オプションを使用して、AEM Forms ユーザーインターフェイスと Workbench の間でアセットを同期することができます。It ensures all the assets are available in AEM [!DNL Forms] user interface and Workbench&#39;s crx-repository assets selection.
+* **AEM Forms アセットの Workbench との同期：**「Workbench のファイル」オプションを使用して、AEM Forms ユーザーインターフェイスと Workbench の間でアセットを同期することができます。これにより、AEM [!DNL Forms]ユーザーインターフェイスとWorkbenchのcrx-repositoryアセット選択で、すべてのアセットが使用可能になります。
 
 ### テーマ  {#themes}
 
-テーマには、コンポーネントやパネルのスタイル設定の詳細が含まれています。テーマには個別の ID があります。このため、1 つのテーマを複数のアダプティブフォームで再利用できます。コンポーネントに対してスタイルを指定したり、複数のフォームで使用されている様々なコンポーネントの CSS プロパティを変更したりできます。スタイルには、背景色、状態色、透明度、およびサイズなどのプロパティが含まれます。テーマのカスタマイズを保存し、プリセットとしてフォームのコンポーネントにそれらを移植することができます。テーマをフォームに追加すると、指定されたスタイルがフォームの対応コンポーネントに反映されます。With AEM 6.2 [!DNL Forms], you can create themes and apply them to your forms.
+テーマには、コンポーネントやパネルのスタイル設定の詳細が含まれています。テーマには個別の ID があります。このため、1 つのテーマを複数のアダプティブフォームで再利用できます。コンポーネントに対してスタイルを指定したり、複数のフォームで使用されている様々なコンポーネントの CSS プロパティを変更したりできます。スタイルには、背景色、状態色、透明度、およびサイズなどのプロパティが含まれます。テーマのカスタマイズを保存し、プリセットとしてフォームのコンポーネントにそれらを移植することができます。テーマをフォームに追加すると、指定されたスタイルがフォームの対応コンポーネントに反映されます。AEM 6.2 [!DNL Forms]では、テーマを作成してフォームに適用できます。
 
 テーマの作成と使用について詳しくは、「[AEM Forms のテーマ](../../forms/using/themes.md)」を参照してください。
 
-### レター  {#letters}
+### レター   {#letters}
 
-An AEM [!DNL Forms] letter is a secure, personalized, and interactive correspondence. You can use AEM [!DNL Forms] to quickly assemble letters (also known as correspondences) from both pre-approved and custom-authored content in a streamlined process.
+AEM [!DNL Forms]レターは、安全でパーソナライズされたインタラクティブな通信です。 合理化されたプロセスで、AEM [!DNL Forms]を使用すると、承認済みコンテンツとカスタム作成コンテンツの両方から、レター（通信とも呼ばれます）を簡単にまとめることができます。
 
 レターの作成と使用について詳しくは、「[レターの作成](../../forms/using/create-letter.md)」を参照してください。
 
@@ -87,33 +87,33 @@ An AEM [!DNL Forms] letter is a secure, personalized, and interactive correspond
 
 ### データディクショナリ {#data-dictionaries}
 
-一般のビジネスユーザーにとって、XSD（xml スキーマ）や Java クラスといった、メタデータ表現に関する知識は必要ありません。しかし、通常はソリューションを構築するために、これらのデータ構造や属性の利用が必要となります。AEM [!DNL Forms] uses data dictionary that enables business users to use information from back-end data sources without knowing technical details about their underlying data models.
+一般のビジネスユーザーにとって、XSD（xml スキーマ）や Java クラスといった、メタデータ表現に関する知識は必要ありません。しかし、通常はソリューションを構築するために、これらのデータ構造や属性の利用が必要となります。AEM [!DNL Forms]はデータディクショナリを使用します。これにより、ビジネスユーザーは、基礎となるデータモデルの技術的な詳細を把握することなく、バックエンドデータソースの情報を使用できます。
 
 データディクショナリの作成と使用について詳しくは、[データディクショナリに関する記事](../../forms/using/data-dictionary.md)を参照してください。
 
-## Accessing AEM [!DNL Forms] Configurations {#accessing-aem-forms-configurations}
+## AEM [!DNL Forms]設定{#accessing-aem-forms-configurations}へのアクセス
 
-AEM ツールパネルには、様々なコンポーネント用のツールが含まれています。To navigate to AEM Forms-specific tools, click the Experience Manager logo ![adobeexperiencemanager](assets/adobeexperiencemanager.png) > tools ![hammer](assets/hammer.png) > **[!UICONTROL Forms]**. 以下の機能を実行するためのツールが表示されます。
+AEM ツールパネルには、様々なコンポーネント用のツールが含まれています。AEM Forms固有のツールに移動するには、Experience Managerのロゴ![adobeexperiencemanager](assets/adobeexperiencemanager.png)/ツール![ハンマー](assets/hammer.png)/**[!UICONTROL Forms]**&#x200B;をクリックします。 以下の機能を実行するためのツールが表示されます。
 
 * **監視フォルダーを設定：**&#x200B;管理者は、監視フォルダーと呼ばれるネットワークフォルダーを設定できます。ユーザーがファイル（PDF ファイルなど）を監視フォルダーに配置すると、設定済みの操作が開始され、ファイルが操作されます。詳しくは、「[監視フォルダーの作成と設定](/help/forms/using/creating-configure-watched-folder.md)」を参照してください。
-* **Formsアプリのオフラインサービスの設定：** AEM [!DNL Forms] App Offlineサービスは、フォームで使用されるリソースのパスまたはURLをキャッシュに保存します。 フォームで使用されるリソースのパスや URL をキャッシュに保存することで、サーバー側のパフォーマンスが向上します。To configure the server-side offline component of AEM Forms app, see [Working in the offline mode](/help/forms/using/work-offline-mode.md).
+* **Formsアプリのオフラインサービスの設定：AEM**  [!DNL Forms] アプリのオフラインサービスは、フォームで使用されるリソースのパスまたはURLをキャッシュに保存します。フォームで使用されるリソースのパスや URL をキャッシュに保存することで、サーバー側のパフォーマンスが向上します。AEM Formsアプリのサーバー側のオフラインコンポーネントを設定するには、[オフラインモードでの作業](/help/forms/using/work-offline-mode.md)を参照してください。
 
    ![AEM Formsツール](assets/aem_forms_tools_new.png)
 
 * **PDF Generator を設定：**[!DNL Forms]管理者は、AEM PDF Generator の設定、ユーザーアカウントの追加、PDF Generator 設定の読み込みまたは書き出しを行うことができます。
-* **Correspondence Management アセットを発行：**[!DNL Forms]AEM では、作成者インスタンスからすべてのレター、ドキュメントフラグメント、データディクショナリおよび関連する依存関係を同時に発行できます。発行済みのアセットには、すべての Correspondence Management アセットと関連する依存性が含まれます。For detailed information, see [Publishing and unpublishing forms &amp; documents](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
+* **Correspondence Management アセットを発行：**[!DNL Forms]AEM では、作成者インスタンスからすべてのレター、ドキュメントフラグメント、データディクショナリおよび関連する依存関係を同時に発行できます。発行済みのアセットには、すべての Correspondence Management アセットと関連する依存性が含まれます。詳しくは、[フォームとドキュメントの発行と非公開](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets)を参照してください。
 * **Correspondence Management アセットを書き出し：**[!DNL Forms]すべての Correspondence Management アセットおよび関連する依存関係を、AEM インスタンスからパッケージとしてダウンロードできます。手順について詳しくは、「[AEM Forms におけるアセットの読み込みと書き出し](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)」を参照してください。
 
 ## 共通のユーザーインターフェイス要素 {#commonelements}
 
-* **左側のレール：** 左側のレールアイコンの ![railleftpngをクリックすると](assets/railleftpng.png) 、AEMのタイムライン機能とリファレンス機能が表示され [!DNL Forms]ます。
+* **左側のレール：** 左側のレールアイコンの ![](assets/railleftpng.png) レールの左側をクリックすると、AEMのタイムラインと参照機能が表示され [!DNL Forms]ます。
 
    * **タイムライン：**&#x200B;アセットに対するコメントをタイムラインに追加して表示し、レビューとして使用できます。手順について詳しくは、「[フォームのアセットのレビューの作成と管理](../../forms/using/create-reviews-forms.md)」を参照してください。
    * **参照：**[!DNL Forms]1 つの AEM アセットを複数の AEM アセットで使用できます。[!DNL Forms]例えば、1 つのドキュメントフラグメントを複数のレターで使用できます。参照とは、選択したアセットが使用されるアセット（その他のフォームまたはリソース）のリストです。また、選択したアセットが使用している他のアセットのリストも指します。
 
 * **パンくず：**&#x200B;パンくずは、現在のコンソールまたはフォルダーのタイトルを表します。「パンくず」オプションをクリックすると、フォルダー階層の上位のフォルダーに移動することができます。
-* **表示切り替え：** 表示切り替えアイコン ![viewlist](assets/viewlist.png) 、またはviewcard ![](assets/viewcard.png) (viewcard)をクリックすると、リストとカードの表示をすばやく切り替えることができます。 一般的なユーザーインターフェイスコンポーネントについて詳しくは、「 [オーサリング](/help/sites-authoring/author.md)」を参照してください。
-* **検索：** 検索オプション ![検索](assets/search.png) は、必要なコンテンツやツールをすばやく見つけて移動する機能を提供します。 Type the name of content or product capability and select from the suggestions, for example, type &quot;Documents&quot; to quickly find and navigate to **[!UICONTROL Forms &amp; Documents]** or Document Fragments console. 検索について詳しくは、AEM 6.2 の[検索](/help/sites-authoring/search.md)に関する記事を参照してください。
+* **表示切り替え：表示切り替えアイコン** viewlistor  ![](assets/viewlist.png)  ![](assets/viewcard.png) viewcardをクリックすると、リストとカードの表示をすばやく切り替えることができます。一般的なユーザーインターフェイスコンポーネントについて詳しくは、「[オーサリング](/help/sites-authoring/author.md)」を参照してください。
+* **検索：検索オプション** の ![](assets/search.png) 検索には、必要なコンテンツやツールをすばやく見つけて移動する機能が用意されています。コンテンツまたは製品機能の名前を入力し、候補から選択します。例えば、「ドキュメント」と入力すると、すばやく&#x200B;**[!UICONTROL Forms&amp;ドキュメント]**&#x200B;またはドキュメントフラグメントコンソールに移動できます。 検索について詳しくは、AEM 6.2 の[検索](/help/sites-authoring/search.md)に関する記事を参照してください。
 
 * **アクションツールバー**：アセットを選択すると、アセット一覧の上にアクションツールバーが表示されます。このツールバーには、選択したアセットに対応するすべての管理ツールが表示されます。ツールアイコンの上にマウスを移動すると、その機能を説明するツールヒントが表示されます。
 
