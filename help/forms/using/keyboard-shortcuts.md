@@ -82,15 +82,15 @@ ht-degree: 79%
 | フォームオブジェクトツリーで次の項目を選択する | 下向き矢印 | 下向き矢印 |
 | フォームオブジェクトツリーで前の項目を選択する | 上向き矢印 | 上向き矢印 |
 
-[1] Windowsの場合はCtrl +右向き矢印、Mac OSの場合はCommand +右向き矢印に置き換わります。\
-[2] Windowsの場合はCtrl +左向き矢印、Mac OSの場合はCommand +左向き矢印に置き換わります。
+[1] は、Windowsの場合はCtrl +右向き矢印、Mac OSの場合はCommand +右向き矢印に置き換わります。\
+[2] は、Windowsの場合はCtrl +左向き矢印、Mac OSの場合はCommand +左向き矢印に置き換わります。
 
 ## Correspondence Management {#correspondence-management}
 
 このセクションでは、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。これらのショートカットキーを使用して、以下の操作を行うことができます。
 
-* [テキスト](texts-interactive-communications.md) アセットの作成と編集
-* Editing a text module after tapping the relevant Edit icon ( ![edittextmodule](assets/edittextmodule.png)) when [creating a correspondence](/help/forms/using/create-correspondence.md).
+* [テキスト](texts-interactive-communications.md)アセットの作成または編集
+* [通信](/help/forms/using/create-correspondence.md)の作成時に、関連する編集アイコン(![edittextmodule](assets/edittextmodule.png))をタップした後でテキストモジュールを編集する。
 
 ### テキストの選択とカーソルの移動 {#text-selection-and-moving-the-cursor-around}
 
@@ -215,7 +215,7 @@ ht-degree: 79%
 <table> 
  <tbody>
   <tr>
-   <th><p><strong>Operation</strong></p> </th> 
+   <th><p><strong>操作</strong></p> </th> 
    <th><p><strong>Windows のショートカットキー<br /> </strong></p> </th> 
    <th><strong>Mac OS のショートカットキー</strong></th> 
   </tr>
@@ -242,12 +242,12 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### 取り消し／やり直しの操作 {#undo-and-redo-actions}
+### 取り消し／やり直しの操作  {#undo-and-redo-actions}
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>Operation</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows のショートカットキー </strong></th> 
    <th><strong>Mac OS のショートカットキー</strong><br /> </th> 
   </tr>
@@ -264,12 +264,12 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### フォントサイズの変更 {#changing-font-size}
+### フォントサイズの変更  {#changing-font-size}
 
 <table> 
  <tbody>
   <tr>
-   <th><p><strong>Operation</strong></p> </th> 
+   <th><p><strong>操作</strong></p> </th> 
    <th><p><strong>Windows のショートカットキー</strong></p> </th> 
    <th><strong>Mac OS のショートカットキー</strong></th> 
   </tr>
@@ -286,12 +286,12 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### 単語の削除 {#deleting-a-word}
+### 単語の削除  {#deleting-a-word}
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>Operation</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows のショートカットキー</strong></th> 
    <th><strong>Mac OS のショートカットキー</strong></th> 
   </tr>
@@ -308,12 +308,12 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### コピー &amp; ぺースト {#copy-and-paste}
+### コピー &amp; ぺースト  {#copy-and-paste}
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>Operation</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows のショートカットキー<br /> </strong></th> 
    <th><strong>Mac OS のショートカットキー</strong></th> 
   </tr>
@@ -340,7 +340,7 @@ ht-degree: 79%
 <table> 
  <tbody>
   <tr>
-   <th><strong>Operation</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows のショートカットキー</strong></th> 
    <th><strong>Mac OS のショートカットキー</strong></th> 
   </tr>
