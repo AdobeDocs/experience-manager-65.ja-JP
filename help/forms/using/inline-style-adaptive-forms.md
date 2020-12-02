@@ -25,8 +25,8 @@ ht-degree: 90%
 
 コンポーネントにインラインスタイルを追加するには：
 
-1. フォームエディターからフォームを開き、モードをスタイルモードに変更します。To change the mode to styling mode, in the page toolbar, tap ![canvas-drop-down](assets/canvas-drop-down.png) > **Style**.
-1. Select a component in the page, and tap the edit button ![edit-button](assets/edit-button.png). サイドバーにスタイルのプロパティが開きます。
+1. フォームエディターからフォームを開き、モードをスタイルモードに変更します。モードをスタイルモードに変更するには、ページツールバーで![canvas-drop-down](assets/canvas-drop-down.png) > **Style**&#x200B;をタップします。
+1. ページ内のコンポーネントを選択し、編集ボタン![編集ボタン](assets/edit-button.png)をタップします。 サイドバーにスタイルのプロパティが開きます。
 
    サイドバーのフォーム階層ツリーからコンポーネントを選択することもできます。フォーム階層ツリーは、サイドバーのフォームオブジェクトとして使用できます。
 
@@ -44,9 +44,9 @@ ht-degree: 90%
    * アドバンス（コンポーネントのカスタム CSS を作成できます）
 
 1. 同様に、コンポーネントの他の部分（ウィジェット、キャプション、ヘルプなど）のスタイルを適用できます。
-1. Tap **Done** to confirm the changes or **Cancel** to discard the changes.
+1. 「**完了**」をタップして変更を確定するか、「**キャンセル**」をタップして変更を破棄します。
 
-## 例：フィールドコンポーネントのインラインスタイル {#example-inline-styles-for-a-field-component}
+## 例：フィールドコンポーネント{#example-inline-styles-for-a-field-component}のインラインスタイル
 
 以下の図は、インラインスタイルが適用される前後のテキストフ&#x200B;&#x200B;ィールドを示しています。
 
