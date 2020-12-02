@@ -43,7 +43,7 @@ AEM でのビデオコンポーネントの使用について詳しくは、以�
 
 >[!NOTE]
 >
->If Scene7 assets do not display properly, please make sure that Dynamic media is [disabled](/help/assets/config-dynamic.md#disabling-dynamic-media) and then refresh the page.
+>Scene7のアセットが正しく表示されない場合は、ダイナミックメディアが[無効](/help/assets/config-dynamic.md#disabling-dynamic-media)であることを確認してから、ページを更新してください。
 
 ## Assets から手動で Scene7 に公開する {#manually-publishing-to-scene-from-assets}
 
@@ -58,9 +58,9 @@ AEM でのビデオコンポーネントの使用について詳しくは、以�
 
 アセットが Scene7 のターゲットフォルダー内にある場合に、アセットコンソールから Scene7 への公開をおこなうには：
 
-1. In the AEM classic UI, click **Digital Assets** to access the digital asset manager.
+1. AEMクラシックUIで、「**デジタルアセット**」をクリックしてデジタルアセットマネージャーにアクセスします。
 
-1. Scene7 に公開するターゲットフォルダー内からアセットまたはフォルダーを選択して右クリックし、「**Scene7 に公開**」を選択します。Alternatively, you can select **Publish to Scene7** from the **Tools menu**.
+1. Scene7 に公開するターゲットフォルダー内からアセットまたはフォルダーを選択して右クリックし、「**Scene7 に公開**」を選択します。または、**ツールメニュー**&#x200B;から「**Scene7**&#x200B;に公開」を選択します。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -70,7 +70,7 @@ AEM でのビデオコンポーネントの使用について詳しくは、以�
    >
    >同期された Scene7 フォルダーにアセットがない場合、どちらのメニューにも「**Scene7 に公開**」が表示されますが、無効になっています。
 
-### アセットからの公開 {#publishing-from-an-asset}
+### アセットからの公開  {#publishing-from-an-asset}
 
 同期された Scene7 フォルダー内にアセットがある場合は、そのアセットを手動で公開できます。
 
@@ -96,9 +96,9 @@ AEM でのビデオコンポーネントの使用について詳しくは、以�
 
 ### CQ のターゲットフォルダー以外からのアセットの公開 {#publishing-assets-from-outside-the-cq-target-folder}
 
-Adobe recommends that you publish assets to Scene7 only from assets within the Scene7 target folder. However, if you need to upload assets from a folder outside of the target folder, you can still do that by uploading them to an **ad-hoc** folder on Scene7.
+Adobeでは、Scene7ターゲットフォルダ内のアセットからのみ、アセットをScene7に発行することをお勧めします。ただし、ターゲットフォルダー外のフォルダーからアセットをアップロードする必要がある場合は、Scene7の&#x200B;**アドホック**&#x200B;フォルダーにアップロードしてアップロードできます。
 
-そのためには、アセットが表示されるページ用のクラウド設定を最初に指定します。次に、Scene7 コンポーネントをページに追加して、そのコンポーネント上にアセットをドラッグ＆ドロップします。After the page properties are set for that page, a **Publish to Scene7** link appears that when selected triggers uploading to Scene7.
+そのためには、アセットが表示されるページ用のクラウド設定を最初に指定します。次に、Scene7 コンポーネントをページに追加して、そのコンポーネント上にアセットをドラッグ＆ドロップします。そのページのページプロパティが設定されると、**「Scene7に公開」**&#x200B;リンクが表示され、選択するとScene7へのアップロードがトリガーされます。
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ CQ のターゲットフォルダー以外にあるアセットを公開する�
 
    >[!NOTE]
    >
-   >If the digital asset is in the CQ target folder, then no link to **Check Scene7 Publication Status** appears. The assets is simply placed in the component.
+   >デジタルアセットがCQターゲットフォルダーにある場合、**Scene7パブリケーションのステータスを確認**&#x200B;へのリンクは表示されません。アセットは、コンポーネント内に配置されるだけです。
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -130,7 +130,7 @@ CQ のターゲットフォルダー以外にあるアセットを公開する�
    >
    >同期された Scene7 フォルダーにアセットがなく、Scene7 クラウド設定が現在のページに関連付けられていない場合は、アップロードが失敗します。
 
-## Scene7 コンポーネント {#scene-components}
+## Scene7 コンポーネント  {#scene-components}
 
 AEM では、次の Scene7 コンポーネントを使用できます。
 
@@ -148,7 +148,7 @@ AEM では、次の Scene7 コンポーネントを使用できます。
 
 >[!NOTE]
 >
->If you are creating and developing custom S7 viewers and using the Content Finder, you need to explicity add the **allowfullscreen** parameter.
+>カスタムS7ビューアを作成して開発し、コンテンツファインダーを使用する場合は、**allowfullscreen**&#x200B;パラメーターを明示的に追加する必要があります。
 
 ### Flash ビューアのサポート終了に関する通知 {#flash-viewers-end-of-life-notice}
 
@@ -156,7 +156,7 @@ Adobe Scene7 は、Flash ビューアプラットフォームのサポートを 
 
 この重要な変更について詳しくは、[Flash ビューアのサポート終了に関する FAQ](https://docs.adobe.com/content/docs/jp/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html) を参照してください。
 
-### ページへの Scene7 コンポーネントの追加 {#adding-a-scene-component-to-a-page}
+### ページへの Scene7 コンポーネントの追加  {#adding-a-scene-component-to-a-page}
 
 ページに Scene7 コンポーネントを追加する手順は、他のページにコンポーネントを追加する手順と同じです。以降の節で、Scene7 コンポーネントについて詳しく説明します。
 
@@ -166,7 +166,7 @@ Adobe Scene7 は、Flash ビューアプラットフォームのサポートを 
 
 1. 使用できる Scene7 コンポーネントがない場合は、サイドキックの定規アイコンをクリックして&#x200B;**デザイン**&#x200B;モードに切り替え、parsys の「**編集**」をクリックし、**Scene7** コンポーネントをすべて選択して使用可能にします。
 
-1. Return to **Edit** mode by clicking the pencil in the sidekick.
+1. サイドキックの鉛筆をクリックして、**編集**&#x200B;モードに戻ります。
 
 1. サイドキックの **Scene7** グループから目的の場所のページへ、コンポーネントをドラッグします。
 
@@ -174,7 +174,7 @@ Adobe Scene7 は、Flash ビューアプラットフォームのサポートを 
 
 1. コンポーネントの編集を必要に応じておこない、「**OK**」をクリックして変更内容を保存します。
 
-### レスポンシブ Web サイトへのインタラクティブな表示エクスペリエンスの追加 {#adding-interactive-viewing-experiences-to-a-responsive-website}
+### レスポンシブ Web サイトへのインタラクティブな表示エクスペリエンスの追加  {#adding-interactive-viewing-experiences-to-a-responsive-website}
 
 アセットのレスポンシブデザインとは、アセットが表示される場所に適応することを意味します。レスポンシブデザインを使用すると、同じアセットを複数のデバイスで効果的に表示できます。
 
@@ -193,7 +193,7 @@ Adobe Scene7 は、Flash ビューアプラットフォームのサポートを 
 
 1. ビューアがレスポンシブにサイズ変更され、すべてのインタラクションがデスクトップ、タブレットおよびモバイル用に最適化されていることを確認します。
 
-### Scene7 のすべてのコンポーネントに共通の設定 {#settings-common-to-all-scene-components}
+### Scene7 のすべてのコンポーネントに共通の設定  {#settings-common-to-all-scene-components}
 
 設定オプションはコンポーネントによって異なりますが、次のオプションはすべての Scene7 コンポーネントに共通です。
 
@@ -209,13 +209,13 @@ Adobe Scene7 は、Flash ビューアプラットフォームのサポートを 
 
 HTML5 ズームコンポーネントでは、+ ボタンをクリックすると画像のサイズが拡大されます。
 
-アセットの下部にはズームツールが用意されています。拡大するには「**+** 」、縮小するには「**-**」をクリックします。Clicking the **x** or the reset zoom arrow brings the image back to the original size it was imported as. 全画面表示にするには、斜め矢印をクリックします。コンポーネントを設定するには、「**編集**」をクリックします。With this component, you can configure [settings common to all Scene7 components](#settings-common-to-all-scene-components).
+アセットの下部にはズームツールが用意されています。拡大するには「**+** 」、縮小するには「**-**」をクリックします。**x**&#x200B;またはズームリセット矢印をクリックすると、画像が読み込み元のサイズに戻ります。 全画面表示にするには、斜め矢印をクリックします。コンポーネントを設定するには、「**編集**」をクリックします。このコンポーネントを使用すると、すべてのScene7コンポーネント](#settings-common-to-all-scene-components)に共通の[設定を構成できます。
 
 ![](do-not-localize/chlimage_1-3.png)
 
 ### Flyout {#flyout}
 
-HTML5 フライアウトコンポーネントでは、アセットが分割画面として表示されます。左側には、アセットが指定されたサイズで表示され、右側には、ズーム部分が表示されます。コンポーネントを設定するには、「**編集**」をクリックします。With this component, you can configure [settings common to all Scene7 components](/help/sites-administering/scene7.md#settingscommontoallscene7components).
+HTML5 フライアウトコンポーネントでは、アセットが分割画面として表示されます。左側には、アセットが指定されたサイズで表示され、右側には、ズーム部分が表示されます。コンポーネントを設定するには、「**編集**」をクリックします。このコンポーネントを使用すると、すべてのScene7コンポーネント](/help/sites-administering/scene7.md#settingscommontoallscene7components)に共通の[設定を構成できます。
 
 >[!NOTE]
 >
@@ -231,47 +231,47 @@ Scene7 画像コンポーネントを使用すると、Scene7 の機能（Scene7
 
 ![](do-not-localize/chlimage_1-4.png)
 
-**タイトル、代替テキスト** :「詳細」タブで、画像にタイトルを追加し、グラフィックをオフにしているユーザーの代替テキストを追加します。
+**タイトル、代替** テキスト「詳細」タブで、画像にタイトルを追加し、グラフィックをオフにしているユーザーの代替テキストを追加します。
 
-**URL、開く場所** ：アセットの開く場所を設定し、リンクを開くことができます。 「URL」と「次のウィンドウで開く」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
+**URL、開くアセ** ットを設定して、リンクを開くことができます。「URL」と「次のウィンドウで開く」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
-**ビューアプリセット** ：ドロップダウンメニューから既存のビューアプリセットを選択します。 探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+**ビューア** プリセットドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-**Scene7設定** ：アクティブな画像プリセットをScene7 Publishing Systemから取得する際に使用するScene7設定を選択します。
+**Scene7** 設定Scene7 Publishing Systemからアクティブな画像プリセットを取得する際に使用するScene7設定を選択します。
 
-**画像プリセット** ：ドロップダウンメニューから既存の画像プリセットを選択します。 探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。「画像プリセットの管理」を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+**画像** プリセットドロップダウンメニューから既存の画像プリセットを選択します。探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。「画像プリセットの管理」を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-**出力形式** ：画像の出力形式（jpegなど）を選択します。 選択する出力形式によっては、追加の設定オプションが表示される場合があります。画像プリセットのベストプラクティスを参照してください。
+**出力** 形式画像の出力形式を選択します（jpegなど）。選択する出力形式によっては、追加の設定オプションが表示される場合があります。画像プリセットのベストプラクティスを参照してください。
 
-**シャープ** ：画像にシャープを適用する方法を選択します。 シャープニングについて詳しくは、画像プリセットのベストプラクティスおよびシャープニングのベストプラクティスを参照してください。
+**シ** ャープ画像にシャープを適用する方法を選択します。シャープニングについて詳しくは、画像プリセットのベストプラクティスおよびシャープニングのベストプラクティスを参照してください。
 
-**URL修飾子** :S7の追加の画像コマンドを入力して、画像効果を変更できます。 詳しくは、画像プリセットおよび「コマンドリファレンス」を参照してください。
+**URL** 修飾子画像効果を変更するには、S7の追加の画像コマンドを指定します。詳しくは、画像プリセットおよび「コマンドリファレンス」を参照してください。
 
-**ブレークポイント** Webサイトがレスポンシブである場合は、ブレークポイントを調整する必要があります。 ブレークポイントはコンマ（,）で区切って指定してください。
+**ブレ** ークポイントWebサイトがレスポンシブな場合は、ブレークポイントを調整する必要があります。ブレークポイントはコンマ（,）で区切って指定してください。
 
 ### 画像テンプレート {#image-template}
 
 [Scene7 画像テンプレート](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html)は、Scene7 に読み込まれた Photoshop コンテンツに重ねて適用されます。Scene7 では、可変性を考慮してコンテンツとプロパティがパラメーター化されています。**画像テンプレート**&#x200B;コンポーネントを使用すると、画像を読み込んで、テキストを AEM で動的に変更できます。また、ClientContext の値を使用するように&#x200B;**画像テンプレート**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
 
-Click **Edit** to configure the component. You can configure [settings common to all Scene7 components](/help/sites-administering/scene7.md#settingscommontoallscene7components) as well as other settings described in this section.
+「**編集**」をクリックして、コンポーネントを設定します。[すべてのScene7コンポーネント](/help/sites-administering/scene7.md#settingscommontoallscene7components)に共通の設定と、この節で説明する他の設定を構成できます。
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-**ファイル参照、幅、高さ** すべてのScene7コンポーネントに共通の設定を参照してください。
+**ファイル参照、幅、** 高さすべてのScene7コンポーネントに共通の設定を参照してください。
 
 >[!NOTE]
 >
 >Scene7 の URL コマンドおよびパラメーターを「ファイル参照」の URL に直接追加することはできません。これらは、**パラメーター**&#x200B;パネルのコンポーネントの UI でのみ定義できます。
 
-**タイトル、代替テキスト** :「Scene7画像テンプレート」タブで、画像にタイトルを追加し、グラフィックをオフにしているユーザ用の代替テキストを追加します。
+**タイトル、代替** テキスト「Scene7画像テンプレート」タブで、画像にタイトルを追加し、グラフィックをオフにしているユーザ用の代替テキストを追加します。
 
-**URL、開く場所** ：アセットの開く場所を設定し、リンクを開くことができます。 「URL」と「次のウィンドウで開く」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
+**URL、開くアセ** ットを設定して、リンクを開くことができます。「URL」と「次のウィンドウで開く」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-**パラメータパネル** ：画像を読み込むときに、パラメータに画像の情報が事前に入力されます。 動的に変更できるコンテンツがない場合、このウィンドウは空になります。
+**パラメータ** パネル画像を読み込むと、パラメータに画像の情報が事前に入力されます。動的に変更できるコンテンツがない場合、このウィンドウは空になります。
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
@@ -287,7 +287,7 @@ Click **Edit** to configure the component. You can configure [settings common to
 
 #### ClientContext の値を反映したテキストの変更 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-To link a field to a client context value, click **Select** to open the client-context menu, select the client context, and click **OK**. In this example, the name changes based on linking the Name with the formatted name in the profile.
+フィールドをクライアントコンテキスト値にリンクするには、「**選択**」をクリックしてクライアントコンテキストメニューを開き、クライアントコンテキストを選択して「**OK**」をクリックします。この例では、名前が、プロファイル内の形式設定された名前と名前をリンクすることに基づいて変更されます。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -308,7 +308,7 @@ Scene7 画像テンプレートコンポーネントをクリック可能なリ�
 
 ### ビデオコンポーネント {#video-component}
 
-The Scene7 **Video** component (available from the Scene7 section of the sidekick) uses device and bandwidth detection to serve the right video to each screen. This component is an HTML5 video player; it is a single viewer that can be used cross channel.
+Scene7 **ビデオ**&#x200B;コンポーネント(サイドキックのScene7セクションから入手可能)は、デバイスと帯域幅検出を使用して、各画面に適切なビデオを提供します。このコンポーネントは、HTML5ビデオプレーヤーです。複数のチャネルで使用できる単一のビューアです。
 
 このコンポーネントはアダプティブビデオセット（単一の MP4 ビデオまたは単一の F4V ビデオ）で使用できます。
 
@@ -327,7 +327,7 @@ Scene7 ビデオコンポーネントと共にアダプティブビデオセッ�
 
 ## Scene7 コンテンツブラウザー {#scene-content-browser}
 
-The Scene7 content browser lets you view content from Scene7 directly in AEM. To access the content browser, in the Content Finder, select **Scene7** in the touch-optimized user interface or the **S7** icon in the classic user interface. Functionality is identical between both user interfaces.
+Scene7のコンテンツブラウザーを使用すると、Scene7のコンテンツをAEMで直接表示できます。コンテンツブラウザーにアクセスするには、コンテンツファインダーで、タッチ操作向けユーザーインターフェイスの&#x200B;**Scene7**&#x200B;またはクラシックユーザーインターフェイスの&#x200B;**S7**&#x200B;アイコンを選択します。機能は、両方のユーザーインターフェイスで同じです。
 
 設定が複数ある場合、AEM では既定で[デフォルト設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)が表示されます。Scene7 コンテンツブラウザーのドロップダウンメニューで、別の設定を直接選択できます。
 
@@ -335,14 +335,14 @@ The Scene7 content browser lets you view content from Scene7 directly in AEM. To
 >
 >* アドホックフォルダー内のアセットは、Scene7 コンテンツブラウザーには表示されません。
 >* [セキュアプレビューが有効](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)なときは、Scene7 の公開、非公開の両方のアセットが、Scene7 コンテンツブラウザーに表示されます。
->* If you do not see **Scene7** or the **S7** icon as an option in the content browser, you need to [configure Scene7 to work with AEM](/help/sites-administering/scene7.md).
+>* コンテンツブラウザーに&#x200B;**Scene7**&#x200B;または&#x200B;**S7**&#x200B;アイコンが表示されない場合は、AEM](/help/sites-administering/scene7.md)で動作するように[Scene7を設定する必要があります。
 >* Scene7 コンテンツブラウザーでは、次のビデオがサポートされます。
    >   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
    >   * 単一の MP4 ビデオ
    >   * 単一の F4V ビデオ
 
 
-### コンテンツの参照 {#browsing-content-in-the-classic-ui}
+### コンテンツの参照{#browsing-content-in-the-classic-ui}
 
 Scene7 でコンテンツを参照するには、「**S7**」タブをクリックします。
 
@@ -374,11 +374,11 @@ Scene7 アセットの検索は AEM アセットの検索と同様ですが、�
 
 どちらの UI で検索する場合でも、次の基準でフィルターを適用できます（ここでは、タッチ操作向け UI を示しています）。
 
-**キーワードの入力** 名前でアセットを検索できます。 検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。アセットを検索するには、語句を入力した後に Enter キーを押してください。
+**キー** ワードを入力アセットを名前で検索できます。検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。アセットを検索するには、語句を入力した後に Enter キーを押してください。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-**Folder/path** ：表示されるフォルダーの名前は、選択した設定に基づいています。 下位にドリルダウンするには、フォルダーアイコンをクリックしてサブフォルダーを選択し、チェックマークをクリックして選択します。
+**Folder/** path表示されるフォルダーの名前は、選択した設定に基づきます。下位にドリルダウンするには、フォルダーアイコンをクリックしてサブフォルダーを選択し、チェックマークをクリックして選択します。
 
 キーワードを入力してフォルダーを選択すると、AEM ではそのフォルダーがとすべてのサブフォルダーが検索されます。ただし、検索時にキーワードを入力しない場合は、フォルダーを選択してもそのフォルダー内のアセットしか表示されず、サブフォルダーは含まれません。
 
@@ -386,15 +386,15 @@ Scene7 アセットの検索は AEM アセットの検索と同様ですが、�
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
-**アセットのタイプ** :Scene7のコンテンツを参照するには、「Scene7」を選択します。 このオプションは、Scene7 が設定されている場合にのみ使用できます。
+**AssetSelectのタイプ** Scene7のコンテンツを参照するには、Scene7を選択します。このオプションは、Scene7 が設定されている場合にのみ使用できます。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-**設定** :Cloud Servicesで複数のScene7設定が定義されている場合は、ここで選択できます。 そのため、選択した設定に基づいてフォルダーが変わります。
+**** 設定Cloud Servicesで複数のScene7設定が定義されている場合は、ここで選択できます。そのため、選択した設定に基づいてフォルダーが変わります。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**アセットタイプ** :Scene7ブラウザ内で、結果をフィルタリングして次のいずれかを含めることができます。画像、テンプレート、ビデオおよびアダプティブビデオセットを参照してください。 アセットタイプを選択しない場合、AEM ではデフォルトですべてのアセットタイプが検索されます。
+**アセット** タイプScene7ブラウザ内で、結果をフィルタして次のいずれかを含めることができます。画像、テンプレート、ビデオおよびアダプティブビデオセットを参照してください。アセットタイプを選択しない場合、AEM ではデフォルトですべてのアセットタイプが検索されます。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -408,6 +408,6 @@ Scene7 アセットの検索は AEM アセットの検索と同様ですが、�
 
 
 
-**公開ステータス** ：公開ステータスに基づいてアセットをフィルタリングできます。非公開または公開済み。 公開ステータスを選択しない場合、AEM ではデフォルトですべての公開ステータスが検索されます。
+**発行** ステータス発行ステータスに基づいて、アセットをフィルタリングできます。非公開または公開済み。公開ステータスを選択しない場合、AEM ではデフォルトですべての公開ステータスが検索されます。
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
