@@ -17,7 +17,7 @@ ht-degree: 81%
 ---
 
 
-# フォームを分類するための新しいフォルダーの作成 {#create-new-folders-to-categorize-forms}
+# フォームを分類するための新しいフォルダーの作成  {#create-new-folders-to-categorize-forms}
 
 フォルダーを使用することでアセットをより良く整理できます。AEM Forms はさまざまなタイプのアセット（フォームテンプレート、PDF、ドキュメント、リソース、およびアダプティブフォームと、さまざまなメタデータ）をサポートしているので、フォルダーを使用して必要な条件に基づきフォームを分類できます。
 
@@ -31,13 +31,13 @@ AEM Forms では、フォルダーのタイトルを変更できます。タイ�
 
 * 新しい空白フォルダーを作成する
 
-1. Log in to the AEM Forms user interface at `https://<server>:<port>/aem/forms.html`.
+1. `https://<server>:<port>/aem/forms.html`のAEM Formsユーザーインターフェイスにログインします。
 1. フォルダーを作成する場所に移動します。
-1. Click the ![aem6forms_add](assets/aem6forms_add.png) icon in the toolbar and then select **[!UICONTROL Create Folder]**.
+1. ツールバーの![aem6forms_add](assets/aem6forms_add.png)アイコンをクリックし、「**[!UICONTROL フォルダーを作成]**」を選択します。
 
 1. 次の詳細を入力します。
 
-   * **タイトル：** フォルダの表示名
+   * **タイトル：フォルダーの** 表示名
    * **名前：***（必須）*&#x200B;リポジトリ内のフォルダーを保存するノード名
 
    >[!NOTE]
@@ -48,12 +48,12 @@ AEM Forms では、フォルダーのタイトルを変更できます。タイ�
 
    定義したタイトルを持つ新しいフォルダーは、アセットリスト内の現在の場所に表示されます。
 
-   指定した名前を持つフォルダーがすでに存在する場合は、送信はエラーになり失敗します。You can view the error message by hovering over the error ![aem6forms_error_alert](assets/aem6forms_error_alert.png) icon that appears beside the name field.
+   指定した名前を持つフォルダーがすでに存在する場合は、送信はエラーになり失敗します。名前フィールドの横に表示されるエラー![aem6forms_error_alert](assets/aem6forms_error_alert.png)アイコンの上にマウスポインターを置くと、エラーメッセージを表示できます。
 
 ### フォルダータイトルの編集 {#edit-the-folder-title-br}
 
 1. タイトルを編集するフォルダーを選択します。
-1. ツールバーの ![aem6forms_edit](assets/aem6forms_edit.png) アイコンをクリックします。
+1. ツールバーの![aem6forms_edit](assets/aem6forms_edit.png)の編集アイコンをクリックします。
 1. 新しいタイトルを入力します。テキストフィールドは、フォルダータイトルの現在の値で自動入力されます。それを新しい値に変更できます。
 1. 「**[!UICONTROL 送信]」をクリックします。**
 
