@@ -26,21 +26,21 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 * 表示ルート数
 * 背景諧調色
 
-## 手順 {#steps}
+## 手順  {#steps}
 
 1. プロジェクトを開きます。
 
-   * For iOS, open `Capture.xcodeproj` in Xcode
+   * iOSの場合は、Xcodeで`Capture.xcodeproj`を開きます。
    * Android の場合、Eclipse で Android プロジェクトを開きます。
-   * For Windows, open `MWSWindows.sln` in Visual Studio.
+   * Windowsの場合は、Visual Studioで`MWSWindows.sln`を開きます。
 
 1. テンプレートフォルダーに移動します。
 
-   * In Xcode, navigate to the **Capture > www > wsmobile > js > runtime > templates** folder.
-   * In Eclipse, navigate to the **assets > www > wsmobile > js > runtime > templates** folder.
-   * In Visual Studio, navigate to the **MWSWindows > www > wsmobile > js > runtime > templates** folder.
+   * Xcodeで、**Capture > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
+   * Eclipseで、**assets > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
+   * Visual Studioで、**MWSWindows > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
 
-1. Open the `template.html` file for editing.
+1. `template.html`ファイルを開いて編集します。
 1. 次の文字列を探します。
 
    ```jsp
@@ -51,7 +51,7 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
                  <%} else
    ```
 
-   Replace it with `<%`.
+   `<%`に置き換えます。
 
 1. `template.html` ファイル内の次のコードを探します。
 
@@ -75,13 +75,13 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. css フォルダーに移動します。
 
-   * In Xcode, navigate to **Capture > www > wsmobile > css**.
-   * In Eclipse, navigate to **assets > www > wsmobile > css**.
-   * In Visual Studio, navigate to **MWSWindows > www > wsmobile > css**.
+   * Xcodeで、**Capture > www > wsmobile > css**&#x200B;に移動します。
+   * Eclipseで、**assets > www > wsmobile > css**&#x200B;に移動します。
+   * Visual Studioで、**MWSWindows > www > wsmobile > css**&#x200B;に移動します。
 
-1. Open the `_style.css` file for editing.
-1. For Background image, change `#323232` to `#fff`.
-1. Save the changes and close `_style.css` file.
+1. `_style.css`ファイルを開いて編集します。
+1. 背景画像の場合は、`#323232`を`#fff`に変更します。
+1. 変更を保存し、`_style.css`ファイルを閉じます。
 1. AEM Forms アプリケーションを開きます。
 
    AEM Forms アプリケーションには、説明の代わりに手順が表示されるようになっています。
