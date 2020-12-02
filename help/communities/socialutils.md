@@ -22,9 +22,9 @@ ht-degree: 90%
 
 ## SocialUtils パッケージの廃止 {#socialutils-package-deprecated}
 
-The package `com.adobe.cq.social.ugcbase.SocialUtils` was deprecated in AEM 6.1.
+パッケージ`com.adobe.cq.social.ugcbase.SocialUtils`はAEM 6.1で非推奨となりました。
 
-The following tables list the methods to use in place of `SocialUtils` methods.
+次の表に、`SocialUtils`メソッドの代わりに使用するメソッドを示します。
 
 ## SocialResourceUtilities パッケージ  {#socialresourceutilities-package}
 
@@ -44,13 +44,13 @@ The following tables list the methods to use in place of `SocialUtils` methods.
 | String UGCToResourcePath(String ugcPath) | メソッドの署名を変更 |
 | String UGCToResourcePath(String ugcPath, ResourceResolver resolver) | 新規 |
 
-| utilities. `com.adobe.cq.social.`resource.api.SocialResourceUtilitiesのメソッド |
+| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilitiesのメソッド |
 |---|
 | SocialResourceProvider getSocialResourceProvider(Resource resource) | replacesSocialResourceProvider getConfiguredProvider(Resource resource) |
 
 ## SCFUtilities パッケージ {#scfutilities-package}
 
-| utilities.scf.api.SCFUtilites内の `com.adobe.cq.social.`メソッド |
+| `com.adobe.cq.social.`utilities.scf.api.SCFUtilitesのメソッド |
 |---|
 | String getAvatar(UserProperties userProperties) |
 | String getAvatar(UserProperties userProperties, int size) |
@@ -60,7 +60,7 @@ The following tables list the methods to use in place of `SocialUtils` methods.
 | String getSocialProfileURL(String username, ResourceResolver resolver, Page page) |
 | UserProperties getUserProperties(ResourceResolver resolver, String userId) |
 
-## 内部でのみ使用 {#for-internal-use-only}
+## 内部でのみ使用  {#for-internal-use-only}
 
 | boolean canAddNode(Session session, String path) |
 |---|
@@ -79,7 +79,7 @@ The following tables list the methods to use in place of `SocialUtils` methods.
 | boolean mayPost(ResourceResolver resolver, Resource resource) |
 | String prepareUserGeneratedContent(ResourceResolver resolver, String path) |
 
-## 使用できなくなったメソッド {#methods-no-longer-available}
+## 使用できなくなったメソッド  {#methods-no-longer-available}
 
 | Node createNode(ResourceResolver resolver, String path, String nodeType) |
 |---|
