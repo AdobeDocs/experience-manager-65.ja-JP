@@ -30,9 +30,9 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 
 >[!CAUTION]
 >
->Only edit dictionaries that are created for your project and reside under `/apps`.
+>プロジェクト用に作成され、`/apps`に存在する辞書のみを編集します。
 >
->AEM システム辞書もこのツールで使用できます。AEM システム辞書を変更すると AEM UI に問題が発生する可能性があるので、システム辞書は変更しないでください。また、アップグレードすると変更は失われます。AEM system dictionaries are located under `/libs`.
+>AEM システム辞書もこのツールで使用できます。AEM システム辞書を変更すると AEM UI に問題が発生する可能性があるので、システム辞書は変更しないでください。また、アップグレードすると変更は失われます。AEMシステムディクショナリは`/libs`の下にあります。
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
    >
    >翻訳プロジェクトについて詳しくは、[翻訳プロジェクトの管理](/help/sites-administering/tc-manage.md)を参照してください。
 
-## 辞書の作成 {#creating-a-dictionary}
+## 辞書の作成  {#creating-a-dictionary}
 
 ローカライズされた UI 文字列の管理用の辞書を作成します。辞書を作成したら、トランスレーターツールを使用して管理できます。
 
@@ -86,11 +86,11 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
    >
    >これは [Sling i18n モジュール](https://sling.apache.org/site/internationalization-support.html)の構造です。
 
-1. Reload the translator and the dictionary path (e.g. `/apps/myProject/i18n`) will be available in the drop-down selector in the toolbar. このパスを選択して、文字列とその翻訳の追加を開始します。
+1. トランスレータとディクショナリのパス(例：`/apps/myProject/i18n`)は、ツールバーのドロップダウンセレクターで使用できます。 このパスを選択して、文字列とその翻訳の追加を開始します。
 
    >[!NOTE]
    >
-   >The translator will only save translations for languages that are actually present underneath the path (e.g. `/apps/myProject/i18n`).
+   >翻訳者は、実際にパスの下に存在する言語(例：`/apps/myProject/i18n`)。
    >
    >これらがグリッドに表示される言語に対応していることを確認してください。
 
@@ -100,9 +100,9 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 
 >[!CAUTION]
 >
->Only edit dictionaries that are created for your project and reside under `/apps`.
+>プロジェクト用に作成され、`/apps`に存在する辞書のみを編集します。
 >
->AEM システム辞書を変更すると AEM UI に問題が発生する可能性があるので、システム辞書は変更しないでください。また、アップグレードすると変更は失われます。AEM system dictionaries are located under `/libs`.
+>AEM システム辞書を変更すると AEM UI に問題が発生する可能性があるので、システム辞書は変更しないでください。また、アップグレードすると変更は失われます。AEMシステムディクショナリは`/libs`の下にあります。
 
 ### 文字列の追加、変更、削除 {#adding-changing-and-removing-strings}
 
@@ -177,8 +177,8 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 
 トランスレーターの下部にある検索バーには、文字列選択のオプションがあります。
 
-* **テキストでフィルタ：** 英語の文字列、コメント、翻訳と一致するパターンです。 パターンの全体または一部に一致する項目のみがテーブルに表示されます。
-* **変更：任意、変更済み、新規、削除済み：** 変更され、保存されていない項目を表示します。
+* **テキストでフィルター：** 英語の文字列、コメント、翻訳と一致するパターンです。パターンの全体または一部に一致する項目のみがテーブルに表示されます。
+* **変更：任意、変更済み、新規、削除済み：変更された項目で、保存されていない項目を** 表示します。
 
    * いすれか：変更、追加または削除された項目を表示します。
    * 変更済み：変更された項目を表示します。
@@ -196,7 +196,7 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 1. オプションを使用してフィルター処理するには、「Filter（フィルター）」をクリックします。
 1. フィルターを削除して辞書内のすべての項目を表示するには、「Clear（クリア）」をクリックします。
 
-### 翻訳された文字列の編集 {#editing-translated-strings}
+### 翻訳された文字列の編集  {#editing-translated-strings}
 
 英語の文字列を辞書に追加した後、その文字列の翻訳を追加できます。サードパーティによる翻訳をおこなうために[辞書を書き出す](/help/sites-developing/i18n-translator.md#exporting-a-dictionary)こともできます。
 
@@ -206,9 +206,9 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 
    >[!CAUTION]
    >
-   >Only edit dictionaries that are created for your project and reside under `/apps`.
+   >プロジェクト用に作成され、`/apps`に存在する辞書のみを編集します。
    >
-   >AEM システム辞書もこのツールで使用できます。AEM システム辞書を変更すると AEM UI に問題が発生する可能性があるので、システム辞書は変更しないでください。また、アップグレードすると変更は失われます。AEM system dictionaries are located under `/libs`.
+   >AEM システム辞書もこのツールで使用できます。AEM システム辞書を変更すると AEM UI に問題が発生する可能性があるので、システム辞書は変更しないでください。また、アップグレードすると変更は失われます。AEMシステムディクショナリは`/libs`の下にあります。
 
 1. いずれかの文字列の翻訳されたテキストを編集するには、次のどちらかの手順を使用します。
 
@@ -230,7 +230,7 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 
 サードパーティの翻訳サービスの使用をサポートするために、トランスレーターツールで辞書を書き出したり、読み込んだりできます。
 
-### 辞書の書き出し {#exporting-a-dictionary}
+### 辞書の書き出し  {#exporting-a-dictionary}
 
 サードパーティのサービスが辞書の文字列を翻訳できるように、辞書を XLIFF ファイルに書き出します。
 
@@ -241,7 +241,7 @@ XLIFF ファイルを書き出してある言語を含める場合、リポジ�
 
 次の手順を使用して、特定の言語の XLIFF ファイルを書き出します。
 
-1. Open the Translation tool `http://<host>:<port>/libs/cq/i18n/translator.html`
+1. 翻訳ツール`http://<host>:<port>/libs/cq/i18n/translator.html`を開く
 1. Dictionaries（辞書）ドロップダウンメニューを使用して、書き出す辞書を選択します。
 1. 「Export（書き出し）」／「Export Full XX Xliff（すべての *XX* Xliff を書き出し）」オプションをクリックします。*XX* は DE や FR などの 2 文字の言語コードです。
 
@@ -257,19 +257,19 @@ XLIFF ファイルを書き出してある言語を含める場合、リポジ�
 1. Export（書き出し）／Export Selection As Xliff (Strings Only)（選択対象を Xliff として書き出し（文字列のみ））をクリックします。
 1. 表示されたダイアログボックスで、テキストをコピーしてテキストファイルに貼り付けます。
 
-### 辞書の読み込み {#importing-a-dictionary}
+### 辞書の読み込み  {#importing-a-dictionary}
 
 XLIFF ファイルを辞書に読み込んで情報を入力します。辞書にある英語の文字列の翻訳が含まれていて、XLIFF ファイルに同じ文字列の異なる翻訳が含まれている場合、辞書の翻訳が置き換えられます。
 
-1. Open the Translation tool `http://<host>:<port>/libs/cq/i18n/translator.html`
+1. 翻訳ツール`http://<host>:<port>/libs/cq/i18n/translator.html`を開く
 1. Import （読み込み）／XLIFF Translations（XLIFF 翻訳）をクリックします。
 1. 読み込むファイルを選択して、「OK」をクリックします。
 
-## サポートされる言語の管理 {#managing-supported-lanuages}
+## サポートされる言語の管理  {#managing-supported-lanuages}
 
 トランスレーターツールがサポートし、Web ページのユーザーに提供される言語を追加または削除します。
 
-### 辞書テーブルにリストされている言語の変更 {#changing-languages-listed-in-the-dictionary-table}
+### 辞書テーブルにリストされている言語の変更  {#changing-languages-listed-in-the-dictionary-table}
 
 トランスレーターツールの辞書テーブルには、次の言語が含まれています。
 
@@ -306,13 +306,13 @@ XLIFF ファイルを辞書に読み込んで情報を入力します。辞書�
 
    >[!NOTE]
    >
-   >The translator will only save translations for languages that are actually [present in the dictionary](#creating-a-dictionary) (i.e. underneath the dictionary path such as `/apps/myProject/i18n`).
+   >トランスレータは、実際には辞書](#creating-a-dictionary)に存在する[言語(例えば、辞書パスの下（`/apps/myProject/i18n`など）の翻訳のみを保存します。
    >
    >これらがグリッドに表示される言語に対応していることを確認してください。
 
 ### 作成者が言語を使用できるようにする {#making-languages-available-to-authors}
 
-After defing a dictionary for a language new to your AEM instance you need to make this available for selection by the authors (for example, for use in **Preferences**):
+AEMインスタンスで新しい言語用の辞書を定義した後、作成者がこの辞書を選択できるようにする必要があります（例えば、**環境設定**&#x200B;で使用する場合）。
 
 1. **セキュリティ**&#x200B;コンソールの&#x200B;**環境設定**&#x200B;で使用可能な言語のリストを変更するには、次の手順を実行します。
 
@@ -335,15 +335,15 @@ After defing a dictionary for a language new to your AEM instance you need to ma
 
 1. すべての項目を保存して、適切なコンソールを再読み込みします。
 
-### 言語名とデフォルトの国の変更 {#changing-language-names-and-default-countries}
+### 言語名とデフォルトの国の変更  {#changing-language-names-and-default-countries}
 
-同じ言語が様々な国で使用されています。例えば、米国、英国、オーストラリアではすべて英語を使用しています。This is indicated by a code indicating both language and country such as `en_US`, `en_GB` and `en_AU`.
+同じ言語が様々な国で使用されています。例えば、米国、英国、オーストラリアではすべて英語を使用しています。これは、`en_US`、`en_GB`、`en_AU`など、言語と国の両方を示すコードで示されます。
 
 デフォルトの国はフラグを表示する際に（言語コピーダイアログなどで）使用され、言語コードの国を解決します。
 
 >[!NOTE]
 >
->前述のトランスレーターで管理されるローカリゼーションでは、正確な言語のみ使用できます。If the language preference drop down uses `en_uk`, there must be a `en_uk` dictionary in the repository.
+>前述のトランスレーターで管理されるローカリゼーションでは、正確な言語のみ使用できます。言語設定のドロップダウンで`en_uk`を使用する場合は、リポジトリに`en_uk`ディクショナリが存在する必要があります。
 
 デフォルトの定義を変更するには：
 
@@ -355,7 +355,7 @@ After defing a dictionary for a language new to your AEM instance you need to ma
 
    `/apps/wcm/core/resources/languages`
 
-   次に、ここにあるリストを変更または拡張します。The property `defaultCountry` on a language node (e.g. `ja`) must contain the full code, such as `ja_jp`, which would define `jp` as the default country for the language `ja`.
+   次に、ここにあるリストを変更または拡張します。言語ノードのプロパティ`defaultCountry` (例：`ja`)には、`ja_jp`のように完全なコードを含める必要があります。例えば、`ja`という言語のデフォルトの国は、`jp`と定義されます。
 
 1. **CQ WCM 言語マネージャー**&#x200B;を更新します。
 
