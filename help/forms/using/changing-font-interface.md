@@ -23,7 +23,7 @@ ht-degree: 79%
 
 AEM Forms Workspace に表示されているフォントを変更することができます。ユーザーインターフェイスの特定のセクションで使用されているフォントは、スタイルシートの対応するセクションに定義されています。フォントは選択的にユーザーインタフェイス上で変更することができます。
 
-Follow the [Generic steps for AEM Forms workspace customization](../../forms/using/generic-steps-html-workspace-customization.md) and depending on your requirements, follow the steps for customizing CSS, HTML, or both.
+[AEM Formsワークスペースのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従い、要件に応じて、CSS、HTMLまたはその両方をカスタマイズする手順に従います。
 
 1. 既存のスタイルのフォントファミリを変更または追加します。
 1. HTML 要素でフォントファミリインラインを変更または追加します。
@@ -31,7 +31,7 @@ Follow the [Generic steps for AEM Forms workspace customization](../../forms/usi
 
 例えば、トップナビゲーションバーのアンカーテキストのフォントを「Courier New」に変更するには、次の手順に従います。
 
-1. にアクセスしてCRXDE Liteにログインし `https://'[server]:[port]'/lc/crx/de/index.jsp`ます。
+1. `https://'[server]:[port]'/lc/crx/de/index.jsp`にアクセスしてCRXDE Liteにログインします。
 1. 次のいずれかの操作をおこないます。
 
    1. 既存のスタイルでフォントファミリーを変更するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
@@ -42,7 +42,7 @@ Follow the [Generic steps for AEM Forms workspace customization](../../forms/usi
       }
       ```
 
-   1. To add the font-family inline for the HTML element, copy the `/libs/ws/js/runtime/templates/appnavigation.html` file to `/apps/ws/js/runtime/templates/appnavigation.html`.
+   1. フォントファミリインラインをHTML要素に追加するには、`/libs/ws/js/runtime/templates/appnavigation.html`ファイルを`/apps/ws/js/runtime/templates/appnavigation.html`にコピーします。
 
       /apps/ws/js/runtime/templates/appnavigation.html ファイルを次のようにして更新します。
 
@@ -53,7 +53,7 @@ Follow the [Generic steps for AEM Forms workspace customization](../../forms/usi
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      Open the /apps/ws/js/registry.js file for editing and replace `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` with `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
+      /apps/ws/js/registry.jsファイルを開いて編集し、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`を`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`に置き換えます。
 
    1. フォントファミリを定義するスタイルを追加するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
