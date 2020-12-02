@@ -13,7 +13,7 @@ ht-degree: 47%
 
 # 関連アセット {#related-assets}
 
-[!DNL Adobe Experience Manager Assets] 関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。 例えば、ライセンスファイルを、類似のトピックのアセットまたは画像／ビデオに関連付けることができます。特定の共通属性を共有するアセットを関連付けることができます。この機能を使用して、アセット間にソース／派生関係を作成することもできます。例えば、INDD ファイルから生成した PDF ファイルがある場合、その PDF ファイルをソースの INDD ファイルに関連付けることができます。
+[!DNL Adobe Experience Manager Assets] 関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。例えば、ライセンスファイルを、類似のトピックのアセットまたは画像／ビデオに関連付けることができます。特定の共通属性を共有するアセットを関連付けることができます。この機能を使用して、アセット間にソース／派生関係を作成することもできます。例えば、INDD ファイルから生成した PDF ファイルがある場合、その PDF ファイルをソースの INDD ファイルに関連付けることができます。
 
 この機能を使用すると、ベンダーや代理店と低解像度のPDFファイルまたはJPGファイルを共有し、高解像度のINDDファイルを要求された場合にのみ利用できるように柔軟に指定できます。
 
@@ -23,11 +23,11 @@ ht-degree: 47%
 
 ## アセットの関連付け {#relating-assets}
 
-1. From the [!DNL Experience Manager] interface, open the **[!UICONTROL Properties]** page for an asset that you want to relate.
+1. [!DNL Experience Manager]インターフェイスから、関連付けるアセットの&#x200B;**[!UICONTROL プロパティ]**&#x200B;ページを開きます。
 
    ![アセットのプロパティページを開き、アセットを関連付けます](assets/asset-properties-relate-assets.png)
 
-   *図： [!DNL Assets] [!UICONTROL アセットを関連付けるプロパティ] ページ。*
+   *図： [!DNL Assets] [!UICONTROL アセットを関連付ける] プロパティページ。*
 
    または、リスト表示からアセットを選択します。
 
@@ -37,7 +37,7 @@ ht-degree: 47%
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. To relate another asset with the asset you selected, click **[!UICONTROL Relate]** ![relate assets](assets/do-not-localize/link-relate.png) from the toolbar.
+1. 別のアセットを選択したアセットと関連付けるには、ツールバーの&#x200B;**[!UICONTROL 関連付け]**![関連付け](assets/do-not-localize/link-relate.png)をクリックします。
 1. 次のいずれかの操作をおこないます。
 
    * アセットのソースファイルを関連付けるには、リストから「**[!UICONTROL ソース]**」を選択します。
@@ -48,26 +48,26 @@ ht-degree: 47%
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. 「 **[!UICONTROL 確認]**」をクリックします。
-1. Click **[!UICONTROL OK]** to close the dialog. 手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
+1. 「**[!UICONTROL 確認]**」をクリックします。
+1. 「**[!UICONTROL OK]**」をクリックして、ダイアログを閉じます。 手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. アセットの関連付けを解除するには、ツールバーの「アセットの関連付け **[!UICONTROL を解除]** 」をクリックし ![](assets/do-not-localize/link-unrelate-icon.png) ます。
+1. アセットの関連付けを解除するには、ツールバーの&#x200B;**[!UICONTROL 関連付け解除]** ![関連付け解除アセット](assets/do-not-localize/link-unrelate-icon.png)をクリックします。
 
-1. Select the asset(s) you want to un-relate from the **[!UICONTROL Remove Relations]** dialog, and the click **[!UICONTROL Unrelate]**.
+1. **[!UICONTROL リレーションを削除]**&#x200B;ダイアログから、関連付けを解除するアセットを選択し、**[!UICONTROL リレーションを解除]**&#x200B;をクリックします。
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
-1. Click **[!UICONTROL OK]** to close the dialog. 関係を削除したアセットは、「**[!UICONTROL 関連]**」セクションの関連付けられたアセットのリストから削除されます。
+1. 「**[!UICONTROL OK]**」をクリックして、ダイアログを閉じます。 関係を削除したアセットは、「**[!UICONTROL 関連]**」セクションの関連付けられたアセットのリストから削除されます。
 
 ## 関連アセットの翻訳 {#translating-related-assets}
 
-関連アセット機能を使用して、アセット間のソース/派生関係を作成すると、翻訳ワークフローにも役立ちます。 When you run a translation workflow on a derived asset, [!DNL Experience Manager Assets] automatically fetches any asset that the source file references and includes it for translation. このようにして、ソースアセットに参照されているアセットが、ソースおよび派生アセットとともに翻訳されます。例えば、以下のように英語のコピーに派生アセットおよびそのソースファイルが含まれている場合を考えてみます。
+関連アセット機能を使用して、アセット間のソース/派生関係を作成すると、翻訳ワークフローにも役立ちます。 派生アセットに対して翻訳ワークフローを実行すると、[!DNL Experience Manager Assets]は、ソースファイルが参照するアセットを自動的に取得し、変換に含めます。 このようにして、ソースアセットに参照されているアセットが、ソースおよび派生アセットとともに翻訳されます。例えば、以下のように英語のコピーに派生アセットおよびそのソースファイルが含まれている場合を考えてみます。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-If the source file is related to another asset, [!DNL Experience Manager Assets] fetches the referenced asset and includes it for translation.
+ソースファイルが別のアセットに関連付けられている場合、[!DNL Experience Manager Assets]は参照されているアセットを取得し、変換に含めます。
 
 ![アセットのプロパティページには、変換に含める関連アセットのソースファイルが表示されます](assets/asset-properties-source-asset.png)
 
@@ -75,7 +75,7 @@ If the source file is related to another asset, [!DNL Experience Manager Assets]
 
 1. [新しい翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project)の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。例えば、この場合はアセットをフランス語に翻訳します。
 
-1. From the [!UICONTROL Projects] page, open the translation folder.
+1. [!UICONTROL プロジェクト]ページから、翻訳フォルダーを開きます。
 
 1. プロジェクトタイルをクリックして詳細ページを開きます。
 
@@ -85,10 +85,10 @@ If the source file is related to another asset, [!DNL Experience Manager Assets]
 
    ![chlimage_1-285](assets/chlimage_1-285.png)
 
-1. Select the asset and then click **[!UICONTROL Reveal in Assets]** from the toolbar to view the translation status for the asset.
+1. アセットを選択し、ツールバーの「アセット&#x200B;**[!UICONTROL 表示]**」をクリックして、アセットの翻訳ステータスを表示します。
 
    ![chlimage_1-286](assets/chlimage_1-286.png)
 
 1. ソースに関連するアセットが翻訳済みかどうかを確認するには、ソースアセットをクリックします。
 
-1. Select the asset that is related to the source, and then click **[!UICONTROL Reveal in Assets]**. 翻訳された関連アセットが表示されます。
+1. ソースに関連付けられているアセットを選択し、「**[!UICONTROL アセット内の表示]**」をクリックします。 翻訳された関連アセットが表示されます。
