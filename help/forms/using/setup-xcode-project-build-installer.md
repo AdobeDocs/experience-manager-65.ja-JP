@@ -20,27 +20,27 @@ ht-degree: 61%
 
 # Xcode プロジェクトの設定と iOS アプリケーションの構築{#set-up-the-xcode-project-and-build-the-ios-app}
 
-AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムの AEM Forms アプリケーションを構築するためのすべてのコンポーネントが含まれています。The source code archive, `adobe-lc-mobileworkspace-src-<version>.zip` is a part of the `adobe-aemfd-forms-app-src-pkg-<version>.zip` package on Software Distribution.
+AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムの AEM Forms アプリケーションを構築するためのすべてのコンポーネントが含まれています。ソースコードアーカイブ`adobe-lc-mobileworkspace-src-<version>.zip`は、ソフトウェア配布の`adobe-aemfd-forms-app-src-pkg-<version>.zip`パッケージの一部です。
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads). ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
-1. Tap **[!UICONTROL Adobe Experience Manager]** available in the header menu.
+1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。 ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
+1. ヘッダーメニューにある&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;をタップします。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-   2. パッケージのバージョンとタイプを選択します。 You can also use the **[!UICONTROL Search Downloads]** option to filter the results.
-1. Tap the package name applicable to your operating system, select **[!UICONTROL Accept EULA Terms]**, and tap **[!UICONTROL Download]**.
-1. Open [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)  and click **[!UICONTROL Upload Package]** to upload the package.
-1. Select the package and click **[!UICONTROL Install]**.
+   2. パッケージのバージョンとタイプを選択します。 また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して、結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「**[!UICONTROL EULA条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
+1. [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックして、パッケージをアップロードします。
+1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
 
-1. ソースコードアーカイブをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開きます。
+1. ソースコードアーカイブをダウンロードするには、ブラウザで`https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip`を開きます。
 ソースパッケージがデバイスにダウンロードされます。
 
-The following image displays the extracted contents of the `adobe-lc-mobileworkspace-src-<version>.zip`.
+次の画像は、`adobe-lc-mobileworkspace-src-<version>.zip`の抽出された内容を示しています。
 
 ![mws-content](assets/mws-content.png)
 
-The following table details contents of the `adobe-lc-mobileworkspace-src-[version]/ios` folder.
+次の表に、`adobe-lc-mobileworkspace-src-[version]/ios`フォルダーの内容を示します。
 
 <table>
  <tbody>
@@ -75,20 +75,20 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 
    XcodeとiOS SDKがインストールおよび設定されているMacマシンにログインします。
 
-1. Copy the `adobe-lc-mobileworkspace-src-<version>.zip` archive from the downloads folder to `[User_Home]/Projects/`.
-1. Extract the archive in the `[User_Home]/Projects/[your-project]`directory.
-1. プロジェクト ` [User_Home]/Projects/ `[ディレクトリに移動し]`/adobe-lc-mobileworkspace-src-[version]/ios` ます。
+1. `adobe-lc-mobileworkspace-src-<version>.zip`アーカイブをダウンロードフォルダーから`[User_Home]/Projects/`にコピーします。
+1. アーカイブを`[User_Home]/Projects/[your-project]`ディレクトリに展開します。
+1. ` [User_Home]/Projects/ `[your-project]`/adobe-lc-mobileworkspace-src-[version]/ios`ディレクトリに移動します。
 1. Xcode で `AEM Forms.xcodeproj` プロジェクトを開きます。
-1. 「**TARGETS**」の「**AEM Forms**」をクリックし、**AEM Forms**」を選択します。Select the **Build Settings** tab, locate the **Code Signing Entitlement** section, and in Debug and Release fields do one of the following:
+1. 「**TARGETS**」の「**AEM Forms**」をクリックし、**AEM Forms**」を選択します。「**ビルド設定**」タブを選択し、「**コード署名のエンタイトルメント**」セクションを探します。デバッグフィールドとリリースフィールドでは、次のいずれかを実行します。
 
    * 標準 Mobile Workspace アプリケーションを作成するための各フィールドを未指定のままにする。
-   * Specify the fields to as explained in [Building a Secure AEM Forms app for iOS](/help/forms/using/building-secure-mobile-workspace-app.md) to build a secure AEM Forms app.
+   * [セキュアAEM Formsアプリを作成するためのセキュアAEM Formsアプリの作成](/help/forms/using/building-secure-mobile-workspace-app.md)の説明に従い、に対するフィールドを指定します。
 
 1. 「**Build Settings**」タブで、「**All**」をクリックし、「**Combined**」をクリックします。
 1. 「**Settings**」リストで、「**Code Signing**」を展開します。
-1. 「**Code Signing Identity**」から、適切な署名を選択します。For detailed information about, creating new signatures, see [Creating and Downloading Development Provisioning Profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/CreatingYourTeamProvisioningProfile/CreatingYourTeamProvisioningProfile.html).
+1. 「**Code Signing Identity**」から、適切な署名を選択します。新しい署名の作成について詳しくは、「[開発版プロビジョニングプロファイルの作成とダウンロード](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/CreatingYourTeamProvisioningProfile/CreatingYourTeamProvisioningProfile.html)」を参照してください。
 1. 「**Debug**」、「**Release**」、「**Any iOS SDK**」に同じ署名が選択されていることを確認します。
-1. Replace the following code in the `AEM Forms-info.plist` file:
+1. `AEM Forms-info.plist`ファイル内の次のコードを置き換えます。
 
    ```xml
    <key>NSAppTransportSecurity</key>
@@ -128,9 +128,9 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
    >
    >この手順は、AEM Formsアプリがアプリ転送セキュリティの要件に従っていないサーバーに接続する必要がある場合にのみ必要です。
 
-1. Under **PROJECT**, select **AEM Forms** and ensure that the appropriate signature is selected for **Code Signing Identity**, **Debug**, **Release** and **Any iOS SDK**.
+1. 「**PROJECT**」で「**AEM Forms**」を選択し、「**コード署名ID**」、「**デバッグ**」、「**リリース**」、「**任意のiOS SDK」が選択されていることを確認します。11/>.**
 1. プロビジョニング済み iPad を Mac マシンに接続します。
-1. **AEM Forms** プロジェクト用のプロビジョニング済みデバイスを選択します。
+1. **AEM Forms**&#x200B;プロジェクト用にプロビジョニングされたデバイスを選択します。
 
    ![ipad](assets/ipad.png)
 
@@ -143,8 +143,8 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 
  Xcode プロジェクトをアーカイブして、インストーラー（.ipa ファイル）とプロパティリストファイル（.plist ファイル）を構築する必要があります。プロパティリストファイルには、アプリケーションの名前やホストしているロケーションなど、ホストされているインハウスアプリケーションの設定情報が含まれます。 プロパティリストファイルについての詳細は、「[情報プロパティリストファイルについて](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)」を参照してください。
 
-1. プロビジョニングされた iPad の Mac マシンへの接続For detailed information about provisioning an iPad, see [Creating and Downloading Development Provisioning Profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/CreatingYourTeamProvisioningProfile/CreatingYourTeamProvisioningProfile.html)
-1. **AEM Forms** プロジェクト用のプロビジョニング済みデバイスを選択します。
+1. プロビジョニングされた iPad の Mac マシンへの接続iPadのプロビジョニングについて詳しくは、[開発版プロビジョニングプロファイルの作成とダウンロード](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/CreatingYourTeamProvisioningProfile/CreatingYourTeamProvisioningProfile.html)を参照してください。
+1. **AEM Forms**&#x200B;プロジェクト用にプロビジョニングされたデバイスを選択します。
 
    ![ipad-1](assets/ipad-1.png)
 
@@ -157,12 +157,12 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 1. 「**Save for Enterprise or Ad-Hoc Deployment**」を配布手段として選択し、「**Next**」をクリックします。
 1. 適切な「**Code Signing Identity**」を選択し、「**Next**」をクリックします。「**Allow**」をクリックして署名を適用します。
 1. アプリケーションに名前をつけて、「**Save for Enterprise Distribution**」を選択します。
-1. アプリケーションに&#x200B;**アプリケーション URL** を指定します。 For example, to host the app on a CRX server, provide URL `https://[LC_host]:'port'/lc/content/distribution/mobileworkspace/APP_NAME.ipa`.
+1. アプリケーションに&#x200B;**アプリケーション URL** を指定します。 例えば、CRXサーバー上でアプリをホストするには、URL `https://[LC_host]:'port'/lc/content/distribution/mobileworkspace/APP_NAME.ipa`を指定します。
 1. 「**タイトル**」フィールドで、AEM Forms を指定します。
 1. 「**保存**」をクリックして Xcode を閉じます。
 
    インストーラーファイル `AEM Forms.ipa`、プロパティリストファイル `AEM Forms-info.plist` が指定された場所に作成されます。
 
-1. Open the `AEM Forms-info.plist` file in an editor.
+1. `AEM Forms-info.plist`ファイルをエディターで開きます。
 1. .ipa ファイルの URL のスペースをすべて %20 に置き換えます。
-1. Save and close the `AEM Forms-info.plist` file.
+1. `AEM Forms-info.plist`ファイルを保存して閉じます。
