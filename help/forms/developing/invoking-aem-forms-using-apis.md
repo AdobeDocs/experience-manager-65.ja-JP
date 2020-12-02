@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# APIを使用したAEM Formsの呼び出し {#invoking-aem-forms-using-apis}
+# APIを使用してAEM Formsを呼び出す{#invoking-aem-forms-using-apis}
 
 Adobe Experience Manager Formsは、共有インフラストラクチャ内で動作するサービスで構成されるJ2EEベースのエンタープライズソフトウェアです。 サービス操作は、通常、ドキュメントを消費または生産します。 AEM Formsを使用すると、フォームワークフローと電子フォーム、ドキュメントセキュリティ、ドキュメント生成を組み合わせて、統合されたまとまったサービスのセットを作成できます。 これらのサービスは、ファイアウォールの内外からアクセスできます。
 
