@@ -22,8 +22,8 @@ ht-degree: 76%
 
 タグを使用すると、Web サイト内のコンテンツをすばやく簡単に分類できます。タグはキーワードやラベルとしてページ、アセット、その他のコンテンツに添付し、コンテンツや関連コンテンツを検索できます。
 
-* See [Administering Tags](/help/sites-administering/tags.md) for information about creating and managing tags, as well as to which content tags have been applied.
-* See [Tagging for Developers](/help/sites-developing/tags.md) for information about the tagging framework as well as including and extending tags in custom applications.
+* タグの作成と管理、および適用されたコンテンツタグについては、[タグ](/help/sites-administering/tags.md)の管理を参照してください。
+* タグ付けフレームワーク、およびカスタムアプリケーションでのタグの追加と拡張について詳しくは、[開発者用のタグ付け](/help/sites-developing/tags.md)を参照してください。
 
 ## タグを使用する 10 の理由 {#ten-reasons-to-use-tagging}
 
@@ -40,11 +40,11 @@ ht-degree: 76%
 
 サイトのコンテンツ構造やアセットのメタデータスキーマを設計する際には、タグ付け機能が提供する軽量でアクセス可能なアプローチを検討してください。
 
-## タグの適用 {#applying-tags}
+## タグの適用  {#applying-tags}
 
 オーサー環境では、作成者はページのプロパティにアクセスし、「**タグ／キーワード**」フィールドに 1 つ以上のタグを入力することでタグを適用できます。
 
-To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the `Tags/Keywords` field pull-down to select from the list of tags permitted for the page. Tthe **Standard Tags** tab is the default namespace, which means there is no `namespace-string:` prefixed to the taxonomy.
+[事前定義タグ](/help/sites-administering/tags.md)を適用するには、**ページプロパティ**&#x200B;ウィンドウで`Tags/Keywords`フィールドのプルダウンを使用し、ページに許可するタグのリストから選択します。 「**標準タグ**」タブはデフォルトの名前空間で、分類にプレフィックス`namespace-string:`が付いていません。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -72,13 +72,13 @@ To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Pr
 
 [タグクラウド](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud)コンポーネント（一般コンポーネントグループ）を使用して、ページにタグクラウドを追加します。
 
-## タグの検索 {#searching-on-tags}
+## タグの検索  {#searching-on-tags}
 
 オーサー環境とパブリッシュ環境の両方で、タグを検索できます。
 
-### 検索コンポーネントの使用 {#using-search-component}
+### 検索コンポーネントの使用  {#using-search-component}
 
-Adding a [Search component](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) to a page provides a search capability which includes tags and can be used in both the author and publish environments.
+[検索コンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search)をページに追加すると、タグを含む検索機能が提供され、作成者と発行の両方の環境で使用できます。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
