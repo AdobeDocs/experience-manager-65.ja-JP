@@ -11,15 +11,15 @@ ht-degree: 89%
 ---
 
 
-# Extend Asset Editor {#extending-asset-editor}
+# アセットエディタの拡張{#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-In addition to using pre-existing editor components, [!DNL Adobe Experience Manager] developers can also create their own components.
+既存のエディタコンポーネントを使用するだけでなく、[!DNL Adobe Experience Manager]開発者は独自のコンポーネントを作成することもできます。
 
-## Create an Asset Editor template {#creating-an-asset-editor-template}
+## アセットエディタテンプレートの作成{#creating-an-asset-editor-template}
 
 Geometrixxには、次のサンプルページが含まれています。
 
@@ -27,7 +27,7 @@ Geometrixxには、次のサンプルページが含まれています。
 * サンプルテンプレート：`/apps/geometrixx/templates/asseteditor`
 * サンプルページコンポーネント：`/apps/geometrixx/components/asseteditor`
 
-### Clientlibの設定 {#configuring-clientlib}
+### Clientlibの構成{#configuring-clientlib}
 
 [!DNL Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
 
@@ -39,25 +39,25 @@ Geometrixxには、次のサンプルページが含まれています。
 
 通常は、既存のサンプル `init.jsp`（`/apps/geometrixx/components/asseteditor/init.jsp`）をコピーすればこの要件を満たします。
 
-### JSアクションの設定 {#configuring-js-actions}
+### JSアクションの設定{#configuring-js-actions}
 
-Some of the [!DNL Assets] components require JS functions defined in `component.js`. このファイルをコンポーネントディレクトリにコピーしてリンクします。
+一部の[!DNL Assets]コンポーネントには、`component.js`で定義されたJS関数が必要です。 このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-The sample loads this JavaScript source in `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
+サンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込みます。
 
-### Additional style sheets {#additional-style-sheets}
+### 追加のスタイルシート{#additional-style-sheets}
 
-Some of the [!DNL Assets] components use the widgets library. コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+一部の[!DNL Assets]コンポーネントはウィジェットライブラリを使用します。 コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
-### Geometrixx スタイルシート {#geometrixx-style-sheet}
+### Geometrixx スタイルシート  {#geometrixx-style-sheet}
 
 サンプルページコンポーネントでは、すべてのセレクターが `static.css`（`/etc/designs/geometrixx/static.css`）の `.asseteditor` で始まっている必要があります。ベストプラクティス：すべての `.asseteditor` セレクターをスタイルシートにコピーし、ルールを必要に応じて調整します。
 
@@ -120,7 +120,7 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 <title><%= title %></title>
 ```
 
-## Create a simple form field component {#creating-a-simple-form-field-component}
+## 単純なフォームフィールドコンポーネントの作成{#creating-a-simple-form-field-component}
 
 この例では、読み込んだアセットのメタデータを表示するコンポーネントを作成する方法を説明します。
 
@@ -201,7 +201,7 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 
 1. **編集**&#x200B;モードで、新しいコンポーネント（**Sample Metadata** など）がサイドキック（**アセットエディター**&#x200B;グループ内）で使用できます。コンポーネントを挿入します。メタデータを保存するには、メタデータフォームに追加する必要があります。
 
-## メタデータの変更オプション {#modifying-metadata-options}
+## メタデータオプションの変更{#modifying-metadata-options}
 
 [メタデータフォーム](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component)で利用可能な名前空間を変更できます。
 
