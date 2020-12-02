@@ -28,7 +28,7 @@ ht-degree: 93%
 
 * [その他のアクション](#further-actions):オーサリング時に使用できる他の多数のアクションについて説明します。
 
-## 概要 {#getting-started}
+## はじめに {#getting-started}
 
 最初のページを作成して公開するために必要になる基本的な一連のイベントについて、詳しく説明します。
 
@@ -40,11 +40,11 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 編集前に、[新しいページを作成](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page)する必要があります。
 
-### ページを開く {#opening-a-page}
+### ページを開く  {#opening-a-page}
 
 編集などの多くのアクションで、[ページを開く](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#opening-a-page-for-editing)必要があります。
 
-### ページの編集 {#editing-a-page}
+### ページの編集  {#editing-a-page}
 
 インスタンスに既存のページがあるか、新しいページを自分で作成した直後の場合は、次の方法で[ページを編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)できます。
 
@@ -58,11 +58,11 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 * [ページのロック](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)
 * [ページのロック解除](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#unlocking-a-page)
 
-### ページの公開 {#publishing-a-page}
+### ページの公開  {#publishing-a-page}
 
 ページの編集が完了したら、Web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)します。
 
-## その他のアクション {#further-actions}
+## その他のアクション  {#further-actions}
 
 オーサリング時は基本の手順だけでなく、その他多くのアクションも使用できます。
 
@@ -74,7 +74,7 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 [ページの移動と名前変更](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page)は、基本的に同じアクションにより実行されます。
 
-### ページの非公開 {#unpublishing-a-page}
+### ページの非公開  {#unpublishing-a-page}
 
 以前公開（またはアクティベート）したコンテンツを公開 Web サイトで使用できないようにするには、[ページを非公開（またはアクティベート解除）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page)にします。
 
@@ -82,14 +82,14 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 ページが不要になった場合は、[ページを削除](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#deleting-a-page)できます。
 
-### ページプロパティの設定 {#setting-the-page-properties}
+### ページプロパティの設定  {#setting-the-page-properties}
 
 すべての[ページにプロパティがあり](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)、これらのプロパティを定義することで、ページ操作の様々な側面を指定できます。
 
-### ページのバージョンの作成 {#creating-a-version-of-a-page}
+### ページのバージョンの作成  {#creating-a-version-of-a-page}
 
 [ページのバージョンを作成](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version)した後で、必要に応じて[元のバージョンに戻す](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick)ことができます。
 
-## 詳細情報 {#more-information}
+## 詳細情報  {#more-information}
 
 オーサリングに関する詳細情報については、[ページのオーサリング](/help/sites-classic-ui-authoring/classic-page-author.md)および[オーサー環境の操作](/help/sites-classic-ui-authoring/author-env.md)で説明しています。
