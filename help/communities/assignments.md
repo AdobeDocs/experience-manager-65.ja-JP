@@ -19,16 +19,16 @@ ht-degree: 43%
 ---
 
 
-# 割り当て機能 {#assignments-feature}
+# 割り当て機能  {#assignments-feature}
 
 コンポーネントブラウザーのコミュニティグループにあるイネーブルメント割り当てコンポーネントと[イネーブルメントカタログ](/help/communities/catalog.md)コンポーネントは、[イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)のコンポーネントです。
 
-The Enablement Assignments component allows the currently signed-in community member (learner) to access their assigned [enablement resources](/help/communities/resources.md).
+有効化の割り当てコンポーネントを使用すると、現在ログインしているコミュニティのメンバー（学習者）は、割り当てられた[有効化リソース](/help/communities/resources.md)にアクセスできます。
 
-From the [Getting Started with AEM Communities for Enablement](/help/communities/getting-started-enablement.md) tutorial, see a member&#39;s view of assignments and catalogs in the [Experience the Published Site](/help/communities/enablement-published-site.md) section.
+[有効化のためのAEM Communitiesの使用の手引き](/help/communities/getting-started-enablement.md)チュートリアルで、[発行済みサイトの体験](/help/communities/enablement-published-site.md)のメンバーの割り当てとカタログの表示を参照してください。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの「 [割り当ての基本](/help/communities/essentials-assignments.md) 」ページを参照してください。
+詳しくは、開発者向けの[Assignments Essentials](/help/communities/essentials-assignments.md)ページを参照してください。
 
-[割り当て機能](/help/communities/functions.md#assignments-function) は、 [コミュニティサイトの作成時に利用できます](/help/communities/sites-console.md)。
+[割り当て関数](/help/communities/functions.md#assignments-function)は、[コミュニティサイト](/help/communities/sites-console.md)の作成中に利用できます。
