@@ -41,7 +41,7 @@ AEM Mobile On-demand Servicesアプリの作成は、Cordova（またはPhoneGap
 
 * プラグイン機能を使用するテンプレートは、プラグインのブリッジなしでもブラウザーでオーサリング可能なように記述する必要があります。
 
-   * For example, make sure to wait for the *deviceready* function before attempting to access a plugin&#39;s API.
+   * 例えば、プラグインのAPIにアクセスする前に、*deviceready*&#x200B;関数を待つようにします。
 
 ## AEM 開発者向けガイドライン {#guidelines-for-aem-developers}
 
@@ -51,8 +51,8 @@ AEM Mobile On-demand Servicesアプリの作成は、Cordova（またはPhoneGap
 
 * 1つのモノリシックファイルよりも複数のコンポーネントスクリプトファイルを優先
 
-   * A number of empty extension points are provided, such as *customheaderlibs.html* and *customfooterlibs.html*, which allow the developer to change the page template while duplicating as little core code as possible
-   * Templates can then be extended and customized via Sling&#39;s *sling:resourceSuperType* mechanism
+   * *customheaderlibs.html*&#x200B;や&#x200B;*customfooterlibs.html*&#x200B;など、多数の空の拡張ポイントが用意されています。これにより、開発者はできるだけ小さなコアコードを複製しながらページテンプレートを変更できます
+   * 次に、Slingの&#x200B;*sling:resourceSuperType*&#x200B;メカニズムを使用して、テンプレートを拡張し、カスタマイズできます。
 
 * 使用するテンプレート言語は、JSP よりも Sightly/HTL の方が望ましい
 
