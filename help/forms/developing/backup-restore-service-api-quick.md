@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# バックアップと復元サービスAPIのクイック開始 {#backup-and-restore-service-apiquick-starts}
+# バックアップと復元サービスAPIクイック開始{#backup-and-restore-service-apiquick-starts}
 
 Java API Quick開始(SOAP)は、バックアップと復元サービスAPIで使用できます。
 
@@ -29,11 +29,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsとのプログラミング」にあるクイック開始は、Formsのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したバックアップモードの開始 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}を使用したバックアップモードの開始
 
-次のJavaコードの例は、2時間間一意のラベルを持つバックアップモードに入ります。 バックアップ時間が経過した後、またはバックアップモードが明示的に終了した場合は、formsサーバーはグローバルドキュメントストレージからファイルを削除するために戻ります。 (formsサーバーでのバックアップモードの [開始を参照](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server))。
+次のJavaコードの例は、2時間間一意のラベルを持つバックアップモードに入ります。 バックアップ時間が経過した後、またはバックアップモードが明示的に終了した場合は、formsサーバーはグローバルドキュメントストレージからファイルを削除するために戻ります。 （「[formsサーバーでのバックアップモードの開始](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server)」を参照）。
 
 ```java
  /*
@@ -146,9 +146,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したバックアップモードの終了 {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}を使用したバックアップモードの終了
 
-次のJavaコードの例では、明示的にFormsサーバーがバックアップモードを終了し、グローバルドキュメントストレージからファイルを削除する処理に戻ります。 (formsサーバーでのバックアップモードの [終了を参照](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server))。
+次のJavaコードの例では、明示的にFormsサーバーがバックアップモードを終了し、グローバルドキュメントストレージからファイルを削除する処理に戻ります。 （「[Formsサーバーでのバックアップモードの終了](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server)」を参照）。
 
 ```java
  /*
