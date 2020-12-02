@@ -21,45 +21,45 @@ ht-degree: 44%
 
 # コミュニティ機能{#community-functions}
 
-コミュニティに必要とされる機能の種類はだいたい決まっています。コミュニティ機能はコミュニティ機能として利用できます。 基本的に、これらは、コミュニティ機能を実装するために事前に配線された1つ以上のページです。コミュニティ機能を実装するには、作成者モードでページにコンポーネントを追加する以外にも必要です。 They are the building blocks used to define the structure of a [community site template](/help/communities/sites.md) from which community sites are [created](/help/communities/sites-console.md).
+コミュニティに必要とされる機能の種類はだいたい決まっています。コミュニティ機能はコミュニティ機能として利用できます。 基本的に、これらは、コミュニティ機能を実装するために事前に配線された1つ以上のページです。コミュニティ機能を実装するには、作成者モードでページにコンポーネントを追加する以外にも必要です。 これらは、[作成](/help/communities/sites-console.md)されたコミュニティサイトの[コミュニティサイトテンプレート](/help/communities/sites.md)の構造を定義するために使用される構成要素です。
 
-Once a community site is created, content may be added to the resulting pages using the standard [AEM authoring mode](/help/sites-authoring/editing-content.md). コミュニティ機能コンソールには、様々なコミュニティ機能が表示されます。
+コミュニティサイトが作成されると、標準の[AEMオーサリングモード](/help/sites-authoring/editing-content.md)を使用して、結果のページにコンテンツを追加できます。 コミュニティ機能コンソールには、様々なコミュニティ機能が表示されます。
 
 >[!NOTE]
 >
->The consoles for the creation of [community sites](/help/communities/sites-console.md), [community site templates](/help/communities/sites.md), [community group templates](/help/communities/tools-groups.md), and [community functions](/help/communities/functions.md) are for use only in the author environment.
+>[コミュニティサイト](/help/communities/sites-console.md)、[コミュニティサイトテンプレート](/help/communities/sites.md)、[コミュニティグループテンプレート](/help/communities/tools-groups.md)、[コミュニティ機能](/help/communities/functions.md)の作成用コンソールは、作成者環境でのみ使用できます。
 
 ## Community Functions Console {#community-functions-console}
 
 作成者環境のコミュニティ機能コンソールにアクセスするには：
 
-* **[!UICONTROL ツール]** / **[!UICONTROL コミュニティ]** / **[!UICONTROL コミュニティ機能]**&#x200B;に移動します。
+* **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL コミュニティ機能]**&#x200B;に移動します。
 
 ![chlimage_1-379](assets/chlimage_1-379.png)
 
 ## 標準で提供される機能 {#pre-built-functions}
 
-AEM Communities で提供される機能を以下で簡単に説明します。Each function includes one or more AEM pages containing Communities components wired together into a feature that is easily incorporated into a [community site template](/help/communities/sites.md).
+AEM Communities で提供される機能を以下で簡単に説明します。各機能は、[コミュニティサイトテンプレート](/help/communities/sites.md)に容易に組み込むことができる機能に結合されたCommunitiesコンポーネントを含む1つ以上のAEMページを含む。
 
 コミュニティサイトテンプレートは、ログイン、ユーザープロファイル、通知、メッセージング、サイトメニュー、検索、テーマ、ブランディング機能など、コミュニティサイトの構造を定義します。
 
-### タイトルと URL の設定 {#title-and-url-settings}
+### タイトルと URL の設定  {#title-and-url-settings}
 
 **タイトル**&#x200B;と **URL** は、すべてのコミュニティ機能に共通するプロパティです。
 
 コミュニティ機能をコミュニティサイトテンプレートに追加するか、コミュニティサイトの構造を[変更](/help/communities/sites-console.md#modifying-site-properties)すると、その機能のダイアログが開き、タイトルと URL を設定できます。
 
-#### 設定機能の詳細 {#configuration-function-details}
+#### 設定機能の詳細  {#configuration-function-details}
 
 ![chlimage_1-380](assets/chlimage_1-380.png)
 
 * **タイトル**
 
-   (*Required*) The text which appears in the menu of features for the site
+   （*必須*）サイトの機能のメニューに表示されるテキスト
 
 * **URL**
 
-   (*Required*) The name used to generate the URI. The name must conform to the [naming conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.
+   （*必須*）URIの生成に使用する名前。 この名前は、AEMおよびJCRが定める[命名規則](/help/sites-developing/naming-conventions.md)に従う必要があります。
 
 例えば、[使用の手引き](/help/communities/getting-started.md)のチュートリアルに従って作成したサイトを使用し、
 
@@ -74,7 +74,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。E
 
 ### アクティビティストリーム機能 {#activity-stream-function}
 
-アクティビティストリーム機能は、選択されたすべてのビュー（すべてのアクティビティ、ユーザーアクティビティおよびフォロー）を備えた[アクティビティストリームコンポーネント](/help/communities/activities.md)を含むページです。See also [Activity Stream Essentials](/help/communities/essentials-activities.md) for developers.
+アクティビティストリーム機能は、選択されたすべてのビュー（すべてのアクティビティ、ユーザーアクティビティおよびフォロー）を備えた[アクティビティストリームコンポーネント](/help/communities/activities.md)を含むページです。開発者向けの[アクティビティストリームの初期設定](/help/communities/essentials-activities.md)も参照してください。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
@@ -98,25 +98,25 @@ AEM Communities で提供される機能を以下で簡単に説明します。E
 
 ### 割り当て機能 {#assignments-function}
 
-The assignments function is the basic feature which defines a [community site for enablement](/help/communities/overview.md#enablement-community). コミュニティのメンバーに有効化リソースを割り当てることができます。 See also [Assignments Essentials](/help/communities/essentials-assignments.md) for developers.
+割り当て関数は、有効化](/help/communities/overview.md#enablement-community)の[コミュニティサイトを定義する基本機能です。 コミュニティのメンバーに有効化リソースを割り当てることができます。 [開発者向けのAssignments Essentials](/help/communities/essentials-assignments.md)も参照してください。
 
-This function is available as a feature of the [enablement add-on](/help/communities/enablement.md). 有効化アドオンは、実稼働環境で使用するために追加のライセンスが必要です。
+この関数は、[有効化アドオン](/help/communities/enablement.md)の機能として利用できます。 有効化アドオンは、実稼働環境で使用するために追加のライセンスが必要です。
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### ブログ機能 {#blog-function}
+### ブログ機能  {#blog-function}
 
-ブログ機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した[ブログコンポーネント](/help/communities/blog-feature.md)を含むページです。See also [Blog Essentials](/help/communities/blog-developer-basics.md) for developers.
+ブログ機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した[ブログコンポーネント](/help/communities/blog-feature.md)を含むページです。[開発者向けのブログEssentials](/help/communities/blog-developer-basics.md)も参照してください。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
 ![chlimage_1-383](assets/chlimage_1-383.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **権限を持つメンバーを許可**
 
-   選択した場合、ブログでは、権限を持つメンバーの選択を許可することで、権限を持つメンバーのみが記事を作成でき [ます](/help/communities/users.md#privileged-members-group)。 選択しない場合、すべてのコミュニティメンバーが作成できます。 デフォルト値はオフです。
+   選択した場合、ブログは、特権を持つメンバーの[特権を持つメンバーグループ](/help/communities/users.md#privileged-members-group)の選択を許可して、記事の作成のみを許可します。 選択しない場合、すべてのコミュニティメンバーが作成できます。 デフォルト値はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -128,17 +128,17 @@ This function is available as a feature of the [enablement add-on](/help/communi
 
 * **おすすめコンテンツを許可**
 
-   選択すると、ブログは [特集コンテンツとして識別されます](/help/communities/featured.md)。 デフォルトで選択されています。
+   選択すると、ブログは[特集コンテンツ](/help/communities/featured.md)として識別されます。 デフォルトで選択されています。
 
 ### カレンダー機能 {#calendar-function}
 
-カレンダー機能は、タグ付けに対応した[カレンダーコンポーネント](/help/communities/calendar.md)を含むページです。See also [Calendar Essentials](/help/communities/calendar-basics-for-developers.md) for developers.
+カレンダー機能は、タグ付けに対応した[カレンダーコンポーネント](/help/communities/calendar.md)を含むページです。開発者向けの[Calendar Essentials](/help/communities/calendar-basics-for-developers.md)も参照してください。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
 ![chlimage_1-384](assets/chlimage_1-384.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **ピン留めを許可**
 
@@ -146,7 +146,7 @@ This function is available as a feature of the [enablement add-on](/help/communi
 
 * **権限を持つメンバーを許可**
 
-   選択した場合、ブログでは、権限を持つメンバーの選択を許可することで、権限を持つメンバーのみが記事を作成でき [ます](/help/communities/users.md#privileged-members-group)。 選択しない場合、すべてのコミュニティメンバーが作成できます。 デフォルト値はオフです。
+   選択した場合、ブログは、特権を持つメンバーの[特権を持つメンバーグループ](/help/communities/users.md#privileged-members-group)の選択を許可して、記事の作成のみを許可します。 選択しない場合、すべてのコミュニティメンバーが作成できます。 デフォルト値はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -158,19 +158,19 @@ This function is available as a feature of the [enablement add-on](/help/communi
 
 * **おすすめコンテンツを許可**
 
-   選択すると、そのコンテンツは [特集コンテンツとして識別されます](/help/communities/featured.md)。 デフォルトで選択されています。
+   選択すると、そのコンテンツは[特集コンテンツ](/help/communities/featured.md)として識別されます。 デフォルトで選択されています。
 
 ### カタログ機能 {#catalog-function}
 
-The catalog function provides the ability for [enablement community](/help/communities/overview.md#enablement-community) members to browse enablement resources which are not assigned to them. See [Tagging Enablement Resources](/help/communities/tag-resources.md) and [Catalog Essentials](/help/communities/catalog-developer-essentials.md) for developers.
+カタログ機能は、[イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)のメンバーが、割り当てられていないイネーブルメントリソースを参照できるようにします。 開発者向けの[タグ付け可能なリソース](/help/communities/tag-resources.md)と[カタログの初期設定](/help/communities/catalog-developer-essentials.md)を参照してください。
 
-All enablement resources and learning paths for the community site shows in all catalogs if their property, ` [Show in Catalog](/help/communities/resources.md)`, is set to true. To explicitly include resources and learning paths, it is necessary to apply a [pre-filter](/help/communities/catalog-developer-essentials.md#pre-filters) to the catalog.
+コミュニティサイトの有効化リソースと学習パスは、そのプロパティ` [Show in Catalog](/help/communities/resources.md)`がtrueに設定されている場合、すべてのカタログに表示されます。 リソースと学習パスを明示的に含めるには、[プリフィルター](/help/communities/catalog-developer-essentials.md#pre-filters)をカタログに適用する必要があります。
 
 テンプレートに追加した場合、この設定により、サイト訪問者に表示されるタグフィルターの設定に使用されるタグ名前空間を指定できます。
 
 ![カタログ関数](assets/catalog-function.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **すべての名前空間を選択**
 
@@ -187,13 +187,13 @@ All enablement resources and learning paths for the community site shows in all 
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### ファイルライブラリ機能 {#file-library-function}
+### ファイルライブラリ機能  {#file-library-function}
 
 ファイルライブラリ機能は、コメントの追加と削除に対応した[ファイルライブラリコンポーネント](/help/communities/file-library.md)を含むページです。
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### フォーラム機能 {#forum-function}
+### フォーラム機能  {#forum-function}
 
 フォーラム機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した[フォーラムコンポーネント](/help/communities/forum.md)を含むページです。
 
@@ -203,7 +203,7 @@ All enablement resources and learning paths for the community site shows in all 
 
 ![chlimage_1-384](assets/chlimage_1-384.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **ピン留めを許可**
 
@@ -211,7 +211,7 @@ All enablement resources and learning paths for the community site shows in all 
 
 * **権限を持つメンバーを許可**
 
-   選択した場合、フォーラムでは、権限を持つメンバーの選択を許可することで、権限を持つメンバーの [投稿のみが許可され](/help/communities/users.md#privileged-members-group)ます。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
+   選択した場合、フォーラムは、[特権メンバーグループ](/help/communities/users.md#privileged-members-group)の選択を許可して、特権メンバーの投稿のみを許可します。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -223,21 +223,21 @@ All enablement resources and learning paths for the community site shows in all 
 
 * **おすすめコンテンツを許可**
 
-   選択すると、コンポーネントのコンテンツが [特集コンテンツとして識別されます](/help/communities/featured.md)。 デフォルトで選択されています。
+   選択した場合、コンポーネントのコンテンツは[特集コンテンツ](/help/communities/featured.md)として識別されます。 デフォルトで選択されています。
 
 ### グループ機能 {#groups-function}
 
 >[!CAUTION]
 >
->The groups function must *not* be the *first nor the only* function in a site&#39;s structure or in a community site template.
+>グループ関数は、サイトの構造またはコミュニティサイトテンプレート内の&#x200B;*最初の*&#x200B;関数ではなく、*唯一の*&#x200B;関数である必要があります。
 >
 >他の機能（[ページ機能](#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
 グループ機能を使用すると、パブリッシュ環境でコミュニティメンバーがコミュニティサイト内にサブコミュニティを作成できます。
 
-グループ機能を[コミュニティサイトテンプレート](/help/communities/sites.md)に含めるときの[設定](/help/communities/sites-console.md#groupmanagement)によって、グループを公開または非公開にしたり、1 つ以上のコミュニティグループテンプレートを設定しておいて、コミュニティグループを（パブリッシュ環境から）実際に作成するときにテンプレートを選択できるようにすることも可能です。A [community group template](/help/communities/tools-groups.md) specifies which Communities features are created for the group pages, such as forums and calendars.
+グループ機能を[コミュニティサイトテンプレート](/help/communities/sites.md)に含めるときの[設定](/help/communities/sites-console.md#groupmanagement)によって、グループを公開または非公開にしたり、1 つ以上のコミュニティグループテンプレートを設定しておいて、コミュニティグループを（パブリッシュ環境から）実際に作成するときにテンプレートを選択できるようにすることも可能です。[コミュニティグループテンプレート](/help/communities/tools-groups.md)は、フォーラムやカレンダーなど、グループページ用に作成するコミュニティ機能を指定します。
 
-コミュニティグループを作成すると、この新しいグループに対してメンバーグループが動的に作成され、メンバーの割り当てや追加ができるようになります。For more information, see [Managing Users and User Groups](/help/communities/users.md).
+コミュニティグループを作成すると、この新しいグループに対してメンバーグループが動的に作成され、メンバーの割り当てや追加ができるようになります。詳細については、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
 
 Communities [機能パック 1](/help/communities/deploy-communities.md#latestfeaturepack) 以降では、コミュニティグループはオーサー環境で[コミュニティサイトのグループコンソール](/help/communities/groups.md)を使用して作成します。また、有効な場合はパブリッシュ環境でも作成できます。
 
@@ -245,7 +245,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 ![chlimage_1-386](assets/chlimage_1-386.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **グループテンプレートを選択**
 
@@ -253,7 +253,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 * **権限を持つメンバーを許可**
 
-   選択した場合、フォーラムは、権限を持つメンバーのセキュリティ・グループの選択を許可することで、 [権限を持つメンバーの投稿のみを許可し](/help/communities/users.md#privileged-members-group)ます。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
+   選択した場合、フォーラムは、[特権メンバーのセキュリティグループ](/help/communities/users.md#privileged-members-group)の選択を許可して、権限のあるメンバーの投稿のみを許可します。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
 
 * **公開作成を許可**
 
@@ -268,11 +268,11 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 ![chlimage_1-387](assets/chlimage_1-387.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **権限を持つメンバーを許可**
 
-   選択した場合、フォーラムは、権限を持つメンバーのセキュリティ・グループの選択を許可することで、 [権限を持つメンバーの投稿のみを許可し](/help/communities/users.md#privileged-members-group)ます。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
+   選択した場合、フォーラムは、[特権メンバーのセキュリティグループ](/help/communities/users.md#privileged-members-group)の選択を許可して、権限のあるメンバーの投稿のみを許可します。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -284,19 +284,19 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 * **おすすめコンテンツを許可**
 
-   選択すると、そのコンテンツは [特集コンテンツとして識別されます](/help/communities/featured.md)。 デフォルトで選択されています。
+   選択すると、そのコンテンツは[特集コンテンツ](/help/communities/featured.md)として識別されます。 デフォルトで選択されています。
 
 ### リーダーボード機能 {#leaderboard-function}
 
 リーダーボード機能とは、[リーダーボーコンポーネント](/help/communities/enabling-leaderboard.md)を 1 つ含むページです。
 
-**注**:リーダーボードコンポーネントは、リーダーボード機能を含むコミュニティテンプレートからコミュニティサイトを作成 *した後* 、さらに設定する必要があります。 リーダーボードコンポーネントの [ルールを指定します](/help/communities/enabling-leaderboard.md#rules-tab)。これは、コミュニティサイトの [スコアリングとバッジの設定に依存します](/help/communities/implementing-scoring.md) 。
+**注**:リーダーボードコンポーネントは、リーダーボード機能を含むコミュニティテンプレートからコミュニティサイトを作成した ** 後に、さらに設定する必要があります。リーダーボードコンポーネントの[ルール](/help/communities/enabling-leaderboard.md#rules-tab)を指定します。これは、コミュニティサイトの[スコアおよびバッジ](/help/communities/implementing-scoring.md)の設定に依存します。
 
 テンプレートに追加すると、次のダイアログが開きます。ここで、タイトルおよび URL 名のデフォルトと、テンプレートのデフォルト表示設定を指定します。
 
 ![chlimage_1-388](assets/chlimage_1-388.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **バッジを表示**
 
@@ -315,11 +315,11 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 ### ページ機能 {#page-function}
 
-ページ機能を使用すると、ログイン、メニュー、通知、メッセージング、テーマ、ブランディングといったコミュニティサイトの機能が組み込まれた空白のページがコミュニティサイトに追加されます。Content is added to the page using the [standard AEM authoring mode](/help/sites-authoring/editing-content.md).
+ページ機能を使用すると、ログイン、メニュー、通知、メッセージング、テーマ、ブランディングといったコミュニティサイトの機能が組み込まれた空白のページがコミュニティサイトに追加されます。[標準のAEMオーサリングモード](/help/sites-authoring/editing-content.md)を使用して、コンテンツをページに追加します。
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### Q&amp;A 機能 {#qna-function}
+### Q&amp;A 機能  {#qna-function}
 
 Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した [Q&amp;A コンポーネント](/help/communities/working-with-qna.md)を含むページです。
 
@@ -327,7 +327,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 ![chlimage_1-384](assets/chlimage_1-384.png)
 
-* [Title and URL Settings](#title-and-url-settings)
+* [タイトルとURLの設定](#title-and-url-settings)
 
 * **ピン留めを許可**
 
@@ -335,7 +335,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 * **権限を持つメンバーを許可**
 
-   選択した場合、QnAフォーラムは、 [特権メンバーグループの選択を許可することで、特権メンバーに対しての質問の投稿のみを許可し](/help/communities/users.md#privileged-members-group)ます。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
+   選択した場合、QnAフォーラムは、[特権メンバーグループ](/help/communities/users.md#privileged-members-group)の選択を許可することで、特権メンバーに対しての質問の投稿のみを許可します。 選択しない場合、すべてのコミュニティメンバーが投稿を許可されます。 デフォルト値はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -347,11 +347,11 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 * **おすすめコンテンツを許可**
 
-   選択すると、そのコンテンツは [特集コンテンツとして識別されます](/help/communities/featured.md)。 デフォルトで選択されています。
+   選択すると、そのコンテンツは[特集コンテンツ](/help/communities/featured.md)として識別されます。 デフォルトで選択されています。
 
 ## Create Community Function {#create-community-function}
 
-The ability to create a community function is reached by selecting the `Create Community Function` icon located at the top of the Community Functions console. 同じAEM Blueprintに基づく複数の機能を作成し、作成者編集モードで開いて独自にカスタマイズできます。
+コミュニティ機能を作成するには、コミュニティ機能コンソールの上部にある`Create Community Function`アイコンを選択します。 同じAEM Blueprintに基づく複数の機能を作成し、作成者編集モードで開いて独自にカスタマイズできます。
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
@@ -377,25 +377,25 @@ The ability to create a community function is reached by selecting the `Create C
 
 ![chlimage_1-392](assets/chlimage_1-392.png)
 
-On the `AEM Blueprint` panel, it is possible to select the blueprint which is the underlying implementation of the community function.
+`AEM Blueprint`パネルでは、コミュニティ機能の基本的な実装であるBluePrintを選択できます。
 
-コミュニティ機能は、ログイン、ユーザープロファイル、通知、メッセージング、サイトメニュー、検索、テーマ設定、ブランディング機能など、コミュニティサイトに組み込むための1つ以上のページがあらかじめ用意されているミニサイトです。 Once the function is created, it is possible to [open the function](#open-community-function) in author edit mode and customize the page or component settings.
+コミュニティ機能は、ログイン、ユーザープロファイル、通知、メッセージング、サイトメニュー、検索、テーマ設定、ブランディング機能など、コミュニティサイトに組み込むための1つ以上のページがあらかじめ用意されているミニサイトです。 関数が作成されたら、[関数](#open-community-function)を作成者編集モードで開き、ページやコンポーネントの設定をカスタマイズできます。
 
-Since the community function is implemented as a [live copy](/help/sites-administering/msm.md#live-copies) of a [blueprint](/help/sites-administering/msm-livecopy.md#creatingablueprint), it is possible to rollout changes made to a function which affects all community site pages created from the [community site template](/help/communities/sites.md) or [community group template](/help/communities/tools-groups.md) that included the function. また、親の青写真からページの関連付けを解除して、ページレベルの変更を行うこともできます。
+コミュニティ機能は[blueprint](/help/sites-administering/msm-livecopy.md#creatingablueprint)の[ライブコピー](/help/sites-administering/msm.md#live-copies)として実装されているので、その機能を含む[コミュニティサイトテンプレート](/help/communities/sites.md)または[コミュニティグループテンプレート](/help/communities/tools-groups.md)から作成された全てのコミュニティサイトページに対して行われた変更を展開できる。 また、親の青写真からページの関連付けを解除して、ページレベルの変更を行うこともできます。
 
 [マルチサイトマネージャー](/help/sites-administering/msm.md)も参照してください。
 
-### サムネール {#thumbnail}
+### サムネール  {#thumbnail}
 
 ![chlimage_1-393](assets/chlimage_1-393.png)
 
 サムネールパネルでは、[コミュニティ機能コンソール](#community-functions-console)に表示する画像をアップロードできます。
 
-## コミュニティ機能を開く {#open-community-function}
+## コミュニティ機能を開く  {#open-community-function}
 
 ![chlimage_1-394](assets/chlimage_1-394.png)
 
-Select the `Open Community Function` icon to enter author edit mode for authoring the page content and modifying the configuration of the feature component(s).
+`Open Community Function`アイコンを選択して、ページコンテンツのオーサリングと機能コンポーネントの設定の変更を行うための作成者編集モードに入ります。
 
 ### コンポーネントの設定 {#configuring-components}
 
@@ -403,12 +403,12 @@ Select the `Open Community Function` icon to enter author edit mode for authorin
 
 ページコンテンツのオーサリングだけでなく、コンポーネントの設定をすることもできます。
 
-If configuring a component on a page of a created community site, it may be necessary to cancel [inheritance](/help/sites-administering/msm-livecopy.md#changing-live-copy-content) to configure the component. 構成が完了したら、継承を再確立する必要があります。
+作成したコミュニティサイトのページでコンポーネントを設定する場合は、[継承](/help/sites-administering/msm-livecopy.md#changing-live-copy-content)を取り消してコンポーネントを構成する必要がある場合があります。 構成が完了したら、継承を再確立する必要があります。
 
 設定について詳しくは、作成者向けの[コミュニティコンポーネント](/help/communities/author-communities.md)を参照してください。
 
-## コミュニティ機能を編集 {#edit-community-function}
+## コミュニティ機能を編集  {#edit-community-function}
 
 ![chlimage_1-395](assets/chlimage_1-395.png)
 
-Select the `Edit Community Function` icon to edit the function&#39;s properties using the same panels as [creating a community function](#create-community-function), including enabling or disabling the function.
+`Edit Community Function`アイコンを選択し、[コミュニティ関数](#create-community-function)の作成と同じパネルを使用して、関数のプロパティを編集します。このパネルには、関数の有効/無効を含めます。
