@@ -17,21 +17,21 @@ ht-degree: 72%
 ---
 
 
-# Designer での Page Zero コンテンツの変更 {#changing-page-zero-content-in-designer}
+# Designer での Page Zero コンテンツの変更  {#changing-page-zero-content-in-designer}
 
-Page Zero content is displayed by default when a non-Adobe PDF viewer, such as the default PDF viewer in [!DNL Chrome] or [!DNL Firefox], cannot read the content of the PDF/XFA form. デフォルトの Page Zero メッセージは、次のとおりです。
+[!DNL Chrome]や[!DNL Firefox]のデフォルトPDFビューアなど、Adobe PDF以外のビューアでPDF/XFAフォームのコンテンツを読み取れない場合、Page Zeroコンテンツがデフォルトで表示されます。 デフォルトの Page Zero メッセージは、次のとおりです。
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
-[!DNL AEM Forms] バージョンのDesignerでは、Page Zeroに表示されるメッセージを変更できます。 Page Zero メッセージを変更するには、次の手順を実行します。
+[!DNL AEM Forms] バージョンのDesignerでは、Page Zeroに表示されるメッセージを変更できます。Page Zero メッセージを変更するには、次の手順を実行します。
 
-1. Ensure that you have the [!DNL AEM Forms] version of Designer installed. Designer の「バージョン情報」画面で、バージョンを確認することができます。
+1. [!DNL AEM Forms]バージョンのDesignerがインストールされていることを確認します。 Designer の「バージョン情報」画面で、バージョンを確認することができます。
 
 1. Page Zero コンテンツを変更するフォームを開きます。
 
-1. Click **[!UICONTROL File]** > **[!UICONTROL Form Properties]**.
+1. **[!UICONTROL ファイル]**/**[!UICONTROL フォームのプロパティ]**&#x200B;をクリックします。
 
-1. In the [!UICONTROL Form Properties] dialog, click ![plus](assets/plus.png) (Plus icon) to add a custom property.
+1. [!UICONTROL フォームのプロパティ]ダイアログで、![プラス](assets/plus.png)（プラスアイコン）をクリックして、カスタムプロパティを追加します。
 
 1. プロパティの名前として **_pagezerocontent** を指定します。
 1. 新しい Page Zero メッセージを、リッチテキスト形式で値として追加します。次に例を示します。
