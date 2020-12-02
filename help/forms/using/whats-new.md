@@ -19,7 +19,7 @@ ht-degree: 11%
 
 # 新機能の概要 | AEM 6.5 Forms{#new-features-summary-aem-forms}
 
-## トランザクションレポート {#transaction-reports}
+## トランザクションレポート{#transaction-reports}
 
 トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を取得し、追跡できます。 これらのトランザクションをトラッキングする目的は、製品の使用とハードウェアおよびソフトウェアに対する投資のリバランスに関する十分な情報に基づく判断を行うことです。 トランザクションの例を次に示します。
 
@@ -27,7 +27,7 @@ ht-degree: 11%
 * インタラクティブな通信の印刷またはWeb版のレンディション
 * あるファイル形式から別のファイル形式へのドキュメントの変換
 
-トランザクションレポートの設定と使用に関する詳細は、「 [トランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)」を参照してください。
+トランザクションレポートの設定と使用について詳しくは、[トランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)を参照してください。
 
 ![サンプルトランザクションレポート](assets/surface_transaction_reporting.png)
 
@@ -35,23 +35,23 @@ ht-degree: 11%
 
 **データ表示パターンの定義**
 
-インタラクティブコミュニケーションの作成者は、フィールド、変数 [](create-interactive-communication.md#datadisplaypatterns) 、フォームデータモデル要素のデータ表示パターンを定義できるようになりました。 例えば、日付、通貨、電話の形式などです。
+対話型通信の作成者は、フィールド、変数、フォームデータモデル要素に対して[データ表示パターン](create-interactive-communication.md#datadisplaypatterns)を定義できるようになりました。 例えば、日付、通貨、電話の形式などです。
 
 **新しいタイプのグラフの使用**
 
-複数のシリーズを含む [象限グラフとグラフをInteractive Communicationsに追加できるようになりました](../../forms/using/chart-component-interactive-communications.md) 。
+複数のシリーズ](../../forms/using/chart-component-interactive-communications.md)を含む[クアドラントグラフとグラフをInteractive Communicationsに追加できるようになりました。
 
 **テーブルの列の並べ替え**
 
-対話型通信でテーブルの列を [並べ替えできる](../../forms/using/create-interactive-communication.md#sortcolumns) 。 スタティックテキストオブジェクトやデータモデルオブジェクトを使用して、テーブルの列を連結したり、並べ替えたりできます。
+対話型通信で、テーブル](../../forms/using/create-interactive-communication.md#sortcolumns)の列を[並べ替えることができるようになりました。 スタティックテキストオブジェクトやデータモデルオブジェクトを使用して、テーブルの列を連結したり、並べ替えたりできます。
 
 **Webチャネルーでの新しいコンポーネントの使用**
 
-Webチャネルーにボタンコンポーネントとセパレーターコンポーネントを追加できるようになりました。 詳しくは、Webチャネルーの [Webチャネルー](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) および [セパレーターコンポーネントへのボタンコンポーネントを参照してください](../../forms/using/create-interactive-communication.md#separatorcomponent)。
+Webチャネルーにボタンコンポーネントとセパレーターコンポーネントを追加できるようになりました。 詳しくは、Webチャネル](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel)の[追加ボタンコンポーネントおよびWebチャネル](../../forms/using/create-interactive-communication.md#separatorcomponent)の[セパレータコンポーネントを参照してください。
 
 **コンポーネントのサイズを変更するレイアウトモード**
 
-WYSIWYGインターフェイスを使用して、 [Webチャネルー内のコンポーネントのサイズを変更するための](../../forms/using/resize-using-layout-mode.md) レイアウトモードに切り替えることができるようになりました。
+WYSIWYGインターフェイスを使用して、Webチャネルーのコンポーネントのサイズを変更する場合に、[レイアウトモード](../../forms/using/resize-using-layout-mode.md)に切り替えることができるようになりました。
 
 **操作性の向上**
 
@@ -73,64 +73,64 @@ WYSIWYGインターフェイスを使用して、 [Webチャネルー内のコ�
 
 ## アダプティブフォーム {#adaptive-forms}
 
-### アダプティブFormsでAdobe Signのクラウドベースのデジタル署名を使用する {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
+### アダプティブFormsでAdobe Signのクラウドベースのデジタル署名を使用{#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
 
-[クラウドベースのデジタル署名](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) （リモート署名）は、デスクトップ、モバイル、Web上で機能する新しい世代のデジタル署名で、署名者の認証に関する最高レベルのコンプライアンスと保証を満たします。 Cloudベースの電子署名を使用してアダプティブフォーム [に](../../forms/using/working-with-adobe-sign.md) 署名できるようになりました。
+[クラウドベースのデジタル](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 署名またはリモート署名は、デスクトップ、モバイル、Web上で機能する新しい世代のデジタル署名で、署名者の認証に関する最高レベルのコンプライアンスと保証を満たします。Cloudベースの電子署名を使用して、アダプティブフォーム](../../forms/using/working-with-adobe-sign.md)に[署名できるようになりました。
 
-#### Embed an Adaptive Form or Interactive Communication in AEM Sites Single Page Applications {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
+#### AEM Sitesのシングルページアプリにアダプティブフォームやインタラクティブなコミュニケーションを埋め込む{#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 
-AEM Formsでは、AEM Sitesのシングルページアプリ(SPA)にアダプティブフォーム [(Adaptive Form](../../forms/using/embed-adaptive-form-aem-sites-spa.md) )やインタラクティブコミュニケーションをシームレスに埋め込むことができます。 埋め込まれたアダプティブフォームとインタラクティブ通信は完全に機能し、ユーザーはページを離れることなくフォームに入力して送信できます。 Webページ上の他の要素のコンテキストを維持し、アダプティブフォームやインタラクティブコミュニケーションと同時にやり取りするのに役立ちます。
+AEM Formsでは、AEM Sitesのシングルページアプリ(SPA)に[アダプティブフォーム](../../forms/using/embed-adaptive-form-aem-sites-spa.md)やインタラクティブコミュニケーションをシームレスに埋め込むことができます。 埋め込まれたアダプティブフォームとインタラクティブ通信は完全に機能し、ユーザーはページを離れることなくフォームに入力して送信できます。 Webページ上の他の要素のコンテキストを維持し、アダプティブフォームやインタラクティブコミュニケーションと同時にやり取りするのに役立ちます。
 
-#### アダプティブフォームテーブルの列の並べ替え {#sort-columns-of-adaptive-form-tables}
+#### アダプティブフォームテーブルの列の並べ替え{#sort-columns-of-adaptive-form-tables}
 
-アダプティブフォームの表の任意の列を昇順または降順に [並べ替えることができます](../../forms/using/adaptive-forms-tables.md#sortcolumnstable) 。 静的テキストを含むテーブル列、データモデルオブジェクトプロパティ、または静的テキストとデータモデルオブジェクトプロパティの組み合わせに対して、並べ替えを適用できます。
+[アダプティブフォームのテーブル](../../forms/using/adaptive-forms-tables.md#sortcolumnstable)の列は、昇順または降順で並べ替えることができます。 静的テキストを含むテーブル列、データモデルオブジェクトプロパティ、または静的テキストとデータモデルオブジェクトプロパティの組み合わせに対して、並べ替えを適用できます。
 
-#### アダプティブFormsテンプレートの可用性を特定のパスに制限する {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
+#### アダプティブFormsテンプレートの可用性を特定のパス{#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}に制限
 
-アダプティブフォームでは、cq:allowedPathsプロパティのサポートが追加されました。 このプロパティは、アダプティブFormsテンプレートの使用を特定のパスに [制限します](creating-adaptive-form.md#adaptive-form-templates)。
+アダプティブフォームでは、cq:allowedPathsプロパティのサポートが追加されました。 [プロパティは、アダプティブFormsテンプレートの使用を特定のパス](creating-adaptive-form.md#adaptive-form-templates)に制限します。
 
-#### アダプティブフ追加ォームのダイナミックなチェックボックス {#add-check-boxes-to-the-adaptive-form-dynamically}
+#### アダプティブフォーム追加のチェックボックスがダイナミックに{#add-check-boxes-to-the-adaptive-form-dynamically}
 
-カスタム関数、フォームオブジェクト、またはオブジェクトプロパティに基づいて動的にアダプティブフォームにチェックボックスを [追加するルールを定義できるようになりました](../../forms/using/rule-editor.md#setpropertyrule) 。
+カスタム関数、フォームオブジェクト、またはオブジェクトプロパティに基づいて、[アダプティブフォームにチェックボックスを動的に](../../forms/using/rule-editor.md#setpropertyrule)追加するためのルールを定義できるようになりました。
 
 ## AEM ワークフロー {#aem-workflows}
 
-### AEMワークフローでの変数の使用 {#use-variables-in-aem-workflows}
+### AEMワークフローで変数を使用{#use-variables-in-aem-workflows}
 
 変数を使用すると、ワークフローステップで、実行時にワークフローステップ間でメタデータを保持および渡すことができます。 様々なタイプの変数を作成して、様々なタイプのデータを保存できます。例えば、整数、文字列、ドキュメント、フォームデータモデルのインスタンスなどです。 一般に、変数または変数のコレクションを使用するのは、変数が保持する値に基づいて決定する必要がある場合、またはプロセスで後で必要になる情報を保存する場合です。
 
-変数は、前のバージョンで使用可能なMetaDataMap [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。 メタデータ値の取得と更新に使用するカスタムECMAScriptコードの開発に費やす時間を節約できます。 MetaDataMapインターフェイスとECMAScriptコードを使用して、メタデータを操作し続けます。 MetaDataMapおよびECMAScriptで変数を使用するメリットは次のとおりです。
+変数は、以前のバージョンで使用可能な[MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)インターフェイスの拡張です。 メタデータ値の取得と更新に使用するカスタムECMAScriptコードの開発に費やす時間を節約できます。 MetaDataMapインターフェイスとECMAScriptコードを使用して、メタデータを操作し続けます。 MetaDataMapおよびECMAScriptで変数を使用するメリットは次のとおりです。
 
 * カスタムコードに依存せずに、ワークフロー全体で変数に格納された値を動的に保存、更新、使用
 * 送信されたフォームのフォームデータモデルとデータファイル(XML/JSON)に直接値を取得して更新する
 * ドキュメント処理を実行するために、完全なドキュメントを変数に格納する
 
-「移動先」、「分割」の各ステップと、すべてのAEM Formsワークフローステップで、変数がサポートされています。 MetaDataMapインターフェイスを使用して、変数をネイティブでサポートしていないワークフロー手順の変数にアクセスできます。 詳しくは、AEMワークフローでの [変数を参照してください](../../forms/using/variable-in-aem-workflows.md)。
+「移動先」、「分割」の各ステップと、すべてのAEM Formsワークフローステップで、変数がサポートされています。 MetaDataMapインターフェイスを使用して、変数をネイティブでサポートしていないワークフロー手順の変数にアクセスできます。 詳しくは、[AEMワークフローの変数](../../forms/using/variable-in-aem-workflows.md)を参照してください。
 
 ![ワークフロー内での変数の設定](assets/variable.png)
 
-#### 別のアダプティブFormsでのワークフローの使用  {#use-a-workflow-with-different-adaptive-forms}
+#### 別のアダプティブFormsでワークフローを使用する{#use-a-workflow-with-different-adaptive-forms}
 
-アダプティブフォームを [指定して、ランタイム上でフォーム中心のワークフローのレコードの割り当てタスク](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) 、およびドキュメントのステップを実行することができます。 これにより、異なるアダプティブFormsでワークフローを機能させることができます。 ワークフローのデザイン中に、アダプティブフォームを選択する方法を決定できます。 アダプティブフォームは、絶対パスに配置したり、ワークフローへのペイロードとして送信したり、変数を使用して計算されたパスに配置したりできます。
+割り当てタスク](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step)に対するアダプティブフォームを[指定し、ランタイム上でフォーム中心のワークフローのレコードステップのドキュメントを指定できます。 これにより、異なるアダプティブFormsでワークフローを機能させることができます。 ワークフローのデザイン中に、アダプティブフォームを選択する方法を決定できます。 アダプティブフォームは、絶対パスに配置したり、ワークフローへのペイロードとして送信したり、変数を使用して計算されたパスに配置したりできます。
 
-#### フォーム中心のワークフロー手順で強化されたログ機能を使用する {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
+#### フォーム中心のワークフロー手順{#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}の強化されたログ機能を使用する
 
 フォーム中心のワークフローステップのログ機能は標準化されています。 現在は、フォーム中心のすべてのワークフローステップで、同様に標準化されたログが生成されます。 これはデバッグ速度の向上に役立ちます。
 
 ## データ統合 {#data-integration}
 
-次の操作が可能になりました。
+次の操作が可能になっています。
 
-* [制約のリストに基づいて入力データを検証します](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) 。 有効なデータのみがデータソースに送信されることを確認するのに役立ちます。
-* [WSDL(Web Services Description Language)ファイルで定義されたデフォルトのエンドポイント](../../forms/using/configure-data-sources.md#configure-soap-web-services) (Default Endpoint)を上書きします。
+* [制約のリストに基づいて入力](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) データベースを検証します。有効なデータのみがデータソースに送信されることを確認するのに役立ちます。
+* [WSDL(Web Services Description Language)ファイルで定義されたデフォルトの](../../forms/using/configure-data-sources.md#configure-soap-web-services) エンドポイントを上書きします。
 
-* [Swagger定義ファイルで定義されたデフォルトの](../../forms/using/configure-data-sources.md#configure-restful-web-services) スキーム、ホストおよびベースパス [](../../forms/using/configure-data-sources.md#configure-restful-web-services) を上書きします。
+* [Swagger定義ファイルで定義されている](../../forms/using/configure-data-sources.md#configure-restful-web-services) [defaultscheme、host、およびbase](../../forms/using/configure-data-sources.md#configure-restful-web-services) パスを上書きします。
 
-## プラットフォームとセキュリティの更新 {#platform-and-security-updates}
+## プラットフォームとセキュリティの更新{#platform-and-security-updates}
 
-### 主なプラットフォームの更新 {#major-platform-updates}
+### 主なプラットフォームの更新{#major-platform-updates}
 
-サポート対象のオペレーティングシステム、アプリケーションサーバー、データベース、データベースドライバー、JDK サーバー、LDAP サーバー、電子メールサーバーを自由に組み合わせて、AEM Forms をセットアップすることができます。The following are the major changes in [supported platforms](../../forms/using/aem-forms-jee-supported-platforms.md):
+サポート対象のオペレーティングシステム、アプリケーションサーバー、データベース、データベースドライバー、JDK サーバー、LDAP サーバー、電子メールサーバーを自由に組み合わせて、AEM Forms をセットアップすることができます。[サポートされるプラットフォーム](../../forms/using/aem-forms-jee-supported-platforms.md)の主な変更点は次のとおりです。
 
 <table>
  <tbody>
@@ -160,7 +160,7 @@ AEM Formsでは、AEM Sitesのシングルページアプリ(SPA)にアダプテ
    <td>
     <ul>
      <li>IBM DB2 <br /> </li>
-     <li>Oracle RAC</li>
+     <li>Oracle大統領</li>
     </ul> </td>
   </tr>
   <tr>
@@ -210,11 +210,11 @@ AEM Formsでは、AEM Sitesのシングルページアプリ(SPA)にアダプテ
 
 AdobeFlash Playerに関する計画的なEOLとFlashベースのコンテンツをオープンスタンダードに移行する全体的な方向に沿って、AEM 6.5Formsは、JEE Administration Console上のHealth Monitor、Process Management、Reader拡張、カテゴリ管理UIのFlashベースのUIをHTML5ベースのUIに置き換えました。
 
-#### セキュリティの強化 {#security-improvements}
+#### セキュリティの強化{#security-improvements}
 
 * JEE上のAEM 6.5Forms管理コンソールUIがApache Struts 2.5に基づくようになりました。
-* AEM 6.5Formsでは、jQueryを3.2.1、jQuery UI 1.12.1に使用するようになりました。変更の影響については、 [アップグレードドキュメント](/help/forms/home.md) を参照してください。
+* AEM 6.5Formsでは、jQueryを3.2.1、jQuery UI 1.12.1に使用するようになりました。変更の影響については、[アップグレードドキュメント](/help/forms/home.md)を参照してください。
 
-#### アクセシビリティの強化 {#accessibility-improvements}
+#### アクセシビリティの向上{#accessibility-improvements}
 
 AEM 6.5Formsでは、AEM Formsワークスペースのアクセシビリティが向上しました。
