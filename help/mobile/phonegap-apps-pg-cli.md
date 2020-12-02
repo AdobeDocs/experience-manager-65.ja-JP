@@ -28,21 +28,21 @@ ht-degree: 91%
 
 次のサンプルを実行するには、Xcode 搭載の OSx を実行しているシステム（Mac）か、Android SDK がインストールされた Mac／Win／Linux システムが必要です。
 
-## 開発環境のブートストラップ {#bootstrap-your-development-environment}
+## 開発環境のブートストラップ  {#bootstrap-your-development-environment}
 
 [PhoneGap CLI の設定](https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
 iOS の場合：iPhone および iPad 向けに開発するには、Apple の Xcode IDE が必要です。
 
-* Download it for free [here](https://developer.apple.com/xcode/downloads/).
+* 無料で[ここ](https://developer.apple.com/xcode/downloads/)にダウンロードしてください。
 * [PhoneGap iOSプラットフォームガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
 Android の場合：Android 向けに開発するには、Google の Android Studio IDE が必要です。
 
-* Download it for free [here](https://developer.android.com/sdk/index.html).
+* 無料で[ここ](https://developer.android.com/sdk/index.html)にダウンロードしてください。
 * [PhoneGap Android プラットフォームのガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
-## ソースのダウンロード {#download-the-source}
+## ソースのダウンロード  {#download-the-source}
 
 開発環境を正常にブートストラップしたら、AEM アプリのビルドタイルからソースをダウンロードします。
 
@@ -64,7 +64,7 @@ Android の場合：Android 向けに開発するには、Google の Android Stu
 * 「ダウンロード」をクリックし、コンピューターに ZIP を保存します。
 * ダウンロードした zip ファイルをワークスペースに抽出します。
 
-## （ソースからの）アプリのビルドおよび読み込み {#build-and-load-the-app-from-source}
+## （ソースからの）アプリのビルドおよび読み込み  {#build-and-load-the-app-from-source}
 
 PhoneGap CLI では、プラットフォームプロジェクトの作成、ソースのコンパイルおよびアプリのデプロイを単一のコマンドで実行できます。
 
@@ -99,11 +99,11 @@ phonegap run ios
 >
 この場合、PhoneGap CLI 開発環境は正しく稼動していることになります。
 
-## Safari および iOS デバッグでの JavaScript のデバッグ {#debug-javascripts-with-safari-and-ios-debug}
+## Safari および iOS デバッグでの JavaScript のデバッグ  {#debug-javascripts-with-safari-and-ios-debug}
 
 Web アプリケーションの場合と同じように、Safari の開発者向けツールを使用してアプリの JavaScript をデバッグできます。
 
-## Safari 開発者向けツールの使用可能化 {#enable-safari-developer-tools}
+## Safari 開発者向けツールの使用可能化  {#enable-safari-developer-tools}
 
 開発者向けツールを使用可能にするには：
 
@@ -119,7 +119,7 @@ Web アプリケーションの場合と同じように、Safari の開発者向
 * 「メニューバーに開発メニューを表示」をオンにします。
 * 環境設定ウィンドウを閉じます。
 
-## iOS への Safari の接続 {#connect-safari-to-ios}
+## iOS への Safari の接続  {#connect-safari-to-ios}
 
 iOS デバイスまたはエミュレーターに Safari を接続できます。
 
