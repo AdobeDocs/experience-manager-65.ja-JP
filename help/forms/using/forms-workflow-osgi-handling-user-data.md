@@ -22,14 +22,14 @@ Forms 中心の AEM ワークフローにより、Forms 中心のビジネスプ
 フォーム中心のワークフローは、次のいずれかの方法でトリガーまたは起動できます。
 
 * AEM インボックスからのアプリケーションの送信
-* Submitting an application from AEM [!DNL Forms] App
+* AEM [!DNL Forms]アプリからのアプリの送信
 * アダプティブフォームの送信
 * 監視フォルダーの使用
 * インタラクティブ通信またはレターの送信
 
 Forms 中心の AEM ワークフローおよび機能について詳しくは、「[OSGi 上の Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)」を参照してください。
 
-## ユーザーデータとデータストア {#user-data-and-data-stores}
+## ユーザーデータとデータストア  {#user-data-and-data-stores}
 
 ワークフローがトリガーされると、ワークフローインスタンスに対してペイロードが自動生成されます。各ワークフローインスタンスは、一意のインスタンス ID および関連するペイロード ID が割り当てられます。ペイロードには、ワークフローインスタンスに関連付けられたユーザーおよびフォームデータのリポジトリの場所が含まれます。さらに、ワークフローインスタンスのドラフトおよび履歴データも AEM リポジトリに格納されます。
 
@@ -69,7 +69,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
  </tbody>
 </table>
 
-## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
+## ユーザーデータへのアクセスと削除  {#access-and-delete-user-data}
 
 リポジトリ内のワークフローインスタンスからユーザーデータにアクセスして削除することができます。これを実行するには、ユーザーに関連付けられているワークフローインスタンスのインスタンス ID が分かっている必要があります。ワークフローインスタンスのインスタンス ID は、ワークフローインスタンスを開始したユーザーのユーザー名、またはワークフローインスタンスの現在の担当者を使用して検索することができます。
 
@@ -78,11 +78,11 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 * **監視フォルダーを介してトリガーされたワークフロー**：ワークフローが監視フォルダーによりトリガーされた場合、そのワークフローの開始者を使用してワークフローインスタンスを特定することはできません。この場合、ユーザー情報は格納済みデータでエンコードされます。
 * **AEM の発行インスタンスから開始されたワークフロー**：すべてのワークフローインスタンスは、アダプティブフォーム、インタラクティブ通信またはレターが AEM の発行インスタンスから送信されたときに、サービスユーザーを使用して作成されます。このような場合、ログインしているユーザーのユーザー名はワークフローインスタンスデータには取り込まれません。
 
-### ユーザーデータへのアクセス {#access}
+### ユーザーデータへのアクセス  {#access}
 
 ワークフローインスタンスに格納されているユーザーデータを特定してアクセスするには、次の手順を実行します。
 
-1. On AEM author instance, go to `https://'[server]:[port]'/crx/de` and navigate to **[!UICONTROL Tools > Query]**.
+1. AEMオーサーインスタンスで、`https://'[server]:[port]'/crx/de`に移動し、**[!UICONTROL ツール/クエリ]**&#x200B;に移動します。
 
    「**[!UICONTROL SQL2]**」を「**[!UICONTROL タイプ]**」ドロップダウンから選択します。
 
@@ -98,7 +98,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
    クエリを実行すると、指定されたワークフロー開始者また現在のワークフロー担当者のすべてのワークフローインスタンスの場所が返されます。
 
-   For example, the following query returns two workflow instances path from the `/var/workflow/instances` node whose workflow initiator is `srose`.
+   例えば、次のクエリは、ワークフロー開始者が`srose`である`/var/workflow/instances`ノードから2つのワークフローインスタンスパスを返します。
 
    ![workflow-instance](assets/workflow-instance.png)
 
@@ -106,7 +106,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
    ![status](assets/status.png)
 
-1. In the workflow instance node, navigate to `data/payload/`. `path` プロパティには、ワークフローインスタンスのペイロードへのパスが格納されます。ペイロードに保存されたデータにアクセスするためのパスに移動できます。
+1. ワークフローインスタンスノードで、`data/payload/`に移動します。 `path` プロパティには、ワークフローインスタンスのペイロードへのパスが格納されます。ペイロードに保存されたデータにアクセスするためのパスに移動できます。
 
    ![payload-path](assets/payload-path.png)
 
@@ -122,7 +122,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
    >[!NOTE]
    >
-   >AEM [!DNL Forms] app also stores data in offline mode. It is possible that data for a workflow instance is locally stored on individual devices and gets submitted to the [!DNL Forms] server when the app synchronizes with the server.
+   >AEM [!DNL Forms]アプリでも、データはオフラインモードで保存されます。 ワークフローインスタンスのデータは、個々のデバイスにローカルに保存され、アプリケーションがサーバーと同期する際に[!DNL Forms]サーバーに送信される可能性があります。
 
 ### ユーザーデータの削除 {#delete-user-data}
 
@@ -135,25 +135,25 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
    * ワークフローインスタンスのペイロードへのパス
    * ワークフローインスタンスのドラフトおよび履歴へのパス
 
-1. Perform this step for workflow instances in **RUNNING**, **SUSPENDED**, or **STALE** status:
+1. **RUNNING**、**SUSPENDED**、または&#x200B;**STALE**&#x200B;ステータスのワークフローインスタンスに対して、次の手順を実行します。
 
-   1. Go to `https://'[server]:[port]'/aem/start.html` and log in with administrator credentials.
+   1. `https://'[server]:[port]'/aem/start.html`に移動し、管理者の資格情報でログインします。
    1. **[!UICONTROL ツール／ワークフロー／インスタンス]**&#x200B;の順に移動します。
    1. ユーザーの関連ワークフローインスタンスを選択し、「**[!UICONTROL 終了]**」をタップして実行中のインスタンスを終了します。
 
-      For more information about working with workflow instances, see [Administering Workflow Instances](/help/sites-administering/workflows-administering.md).
+      ワークフローインスタンスの使用に関する詳細は、「[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)」を参照してください。
 
-1. Go to [!DNL CRXDE Lite] console, navigate to the payload path for a workflow instance, and delete the `payload` node.
+1. [!DNL CRXDE Lite]コンソールに移動し、ワークフローインスタンスのペイロードパスに移動して、`payload`ノードを削除します。
 1. ワークフローインスタンスのドラフトパスに移動して、`draft` ノードを削除します。
-1. Navigate to the history path for a workflow instance, and delete the `history` node.
-1. Navigate to the workflow instance path for a workflow instance, and delete the `[workflow-instance-ID]` node for the workflow.
+1. ワークフローインスタンスの履歴パスに移動し、`history`ノードを削除します。
+1. ワークフローインスタンスのワークフローインスタンスのパスに移動し、ワークフローの`[workflow-instance-ID]`ノードを削除します。
 
    >[!NOTE]
    >
    >ワークフローインスタンスノードを削除すると、すべてのワークフロー参加者のワークフローインスタンスが削除されます。
 
 1. ユーザーに対して特定されたすべてのワークフローインスタンスで手順 2 から 6 を繰り返します。
-1. Identify and delete offline draft and submission data from AEM [!DNL Forms] app outbox of workflow participants to avoid any submission to the server.
+1. ワークフロー参加者のAEM [!DNL Forms]アプリアウトボックスからオフラインのドラフトと送信データを特定および削除して、サーバーへの送信を回避します。
 
 また、API を使用してノードおよびプロパティにアクセスしてこれらを削除することができます。詳しくは、次の文書を参照してください。
 
