@@ -24,11 +24,11 @@ ht-degree: 46%
 
 コミュニティサイトにカタログ機能が用意されている場合、コミュニティメンバーは、その機能を使用して、カタログに一覧表示された実施可能リソースを参照および選択できます。
 
-The [ `enablement catalog` component](catalog.md) allows community members to access a catalog of [enablement resources](resources.md). AEMタグの使用は、カタログ内のイネーブルメントリソースの外観を管理する上で重要な部分です。
+[ `enablement catalog`コンポーネント](catalog.md)は、コミュニティメンバーが[イネーブルメントリソース](resources.md)のカタログにアクセスすることを許可します。 AEMタグの使用は、カタログ内のイネーブルメントリソースの外観を管理する上で重要な部分です。
 
 [実施可能リソースのタグ付け](tag-resources.md)を参照してください。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -54,7 +54,7 @@ The [ `enablement catalog` component](catalog.md) allows community members to ac
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>See <a href="catalog.md">Catalog Feature</a></td>
+   <td><a href="catalog.md">カタログ機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
@@ -63,18 +63,18 @@ The [ `enablement catalog` component](catalog.md) allows community members to ac
 
 ### カタログ機能 {#catalog-function}
 
-A community site structure that includes the [Catalog function](functions.md#catalog-function), includes a configured `enablement catalog` component.
+[カタログ関数](functions.md#catalog-function)を含むコミュニティサイト構造には、設定済みの`enablement catalog`コンポーネントが含まれます。
 
 ### 事前フィルター {#pre-filters}
 
 コミュニティサイトにカタログ機能が追加されている場合、事前フィルターを指定することで、カタログに表示されるイネーブルメントリソースと学習パスを制限できます。これは、サイトのカタログリソースのインスタンスにプロパティを設定することで行います。
 
-Using the example of the [Enablement Tutorial](getting-started-enablement.md):
+[有効化チュートリアル](getting-started-enablement.md)の例を使用する：
 
 * 作成者
-* Using [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)
+* [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)を使用
 
-   * Such as [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
+   * 例：[https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 
 * カタログページでカタログリソースに移動します。
 
@@ -82,25 +82,25 @@ Using the example of the [Enablement Tutorial](getting-started-enablement.md):
 
 * 追加子フィルターノード
 
-   * Select the `catalog`node
-   * Select **[!UICONTROL Create Node]**
+   * `catalog`ノードを選択
+   * **[!UICONTROL ノードを作成]**&#x200B;を選択
 
       * 名前：`filters`
       * 型：`nt:unstructured`
       * 「**[!UICONTROL すべて保存]**」を選択します。
 
-* 追加 `se_resource-tags``filters` ノードのプロパティ
+* 追加`filters`ノードの`se_resource-tags`プロパティ
 
-   * Select the `filters` node
+   * `filters`ノードを選択
    * マルチ追加プロパティ
 
       * 名前：`se_resource-tags`
       * タイプ：String
       * 値：&lt;*TagID[ を入力](#pre-filter-tagids)>*
-         * Select **[!UICONTROL Multi]**
-         * Select **[!UICONTROL Add]**
+         * **[!UICONTROL マルチ]**&#x200B;を選択
+         * **[!UICONTROL 追加]**&#x200B;を選択
 
-            * In popup dialog, select `+` to add additional pre-filter TagIDs
+            * ポップアップダイアログで、`+`を選択して、プリフィルターTagIDを追加します
 
 * コミュニティサイトの再公開
 
@@ -108,7 +108,7 @@ Using the example of the [Enablement Tutorial](getting-started-enablement.md):
 
 #### 事前フィルター TagID {#pre-filter-tagids}
 
-The pre-filter [TagIDs](../../help/sites-developing/framework.md#tagid) must exactly match the tags applied to the enablement resources. これらは、サイトの `resources` フォルダーでプロパティ `se_resource-tags` の値として確認できます。
+プリフィルター[TagIDs](../../help/sites-developing/framework.md#tagid)は、有効化リソースに適用されるタグと完全に一致する必要があります。 これらは、サイトの `resources` フォルダーでプロパティ `se_resource-tags` の値として確認できます。
 
 ![configure-フィルター](assets/configure-catalog1.png)
 
