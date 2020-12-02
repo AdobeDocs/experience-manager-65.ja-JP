@@ -28,25 +28,25 @@ AEM Forms Workspace は AEM Forms の一部です。Workspace は PDF フォー�
 
 詳しくは、「[AEM Forms Workspace の概要](/help/forms/using/introduction-html-workspace.md)」を参照してください。
 
-## はじめに {#getting-familiar}
+## はじめに  {#getting-familiar}
 
 Forms アプリケーションを作成してビジネスプロセスを自動化する全プロセスを理解するには、チュートリアルに従います。チュートリアルに従うと、Workbench、Designer、AEM Forms Workspace を使用して、アプリケーションを作成、管理、テストすることができます。実装について詳しくは、「[最初の AEM Forms アプリケーションの作成](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html)」を参照してください。
 
-## 機能の概要 {#functional-overview}
+## 機能の概要  {#functional-overview}
 
 AEM Forms Workspace では、以下のタスクを実行できます。
 
-**開始プロセス：** AEM Formsワークスペースは、組織が設計および設定したとおりにプロセスをカテゴリします。 頻繁に使用するカテゴリをお気に入りに追加して、これらのカテゴリにすばやくアクセスできます。プロセスの開始時は通常、Forms ワークフローによってコントロールされるビジネスプロセスを開始するためのフォームに入力する必要があります。詳しくは、「[プロセスの開始](/help/forms/using/starting-processes.md)」を参照してください。
+**ビジネスプロセスの開始:** AEM Formsワークスペースは、組織が設計および設定したとおりにプロセスをカテゴリします。頻繁に使用するカテゴリをお気に入りに追加して、これらのカテゴリにすばやくアクセスできます。プロセスの開始時は通常、Forms ワークフローによってコントロールされるビジネスプロセスを開始するためのフォームに入力する必要があります。詳しくは、「[プロセスの開始](/help/forms/using/starting-processes.md)」を参照してください。
 
-**表示とタスクに基づく行動：** TODOリストを表示すると、割り当てられているビジネスプロセスのタスク、または自分が所属するグループ、あるいは他のユーザーの共有タスクが表示されます。 必要に応じてタスクを開き、操作して完了することができます。タスクを完了するには通常、情報を入力し、フォームを承認するか拒否します。詳しくは、「[TODO リストの操作](/help/forms/using/todo-lists.md)」を参照してください。
+**表示とタスクに基づく行動：TODOリストを表示す** ると、割り当てられているビジネスプロセスのタスク、または所属するグループ、あるいは他のユーザーの共有タスクが表示されます。必要に応じてタスクを開き、操作して完了することができます。タスクを完了するには通常、情報を入力し、フォームを承認するか拒否します。詳しくは、「[TODO リストの操作](/help/forms/using/todo-lists.md)」を参照してください。
 
 **タスクの追跡**：タスクを追跡するには、AEM Forms Workspace の「追跡」タブを使用します。開始または参加したアクティブなプロセスおよび完了したプロセスを検索できます。プロセスに含まれていたタスク、割り当ておよびフォームを表示できます。また、既に開始したプロセスのフォームデータを使用して、新しいプロセスを開始することもできます。詳しくは、「[プロセスの追跡](/help/forms/using/tracking-processes.md)」を参照してください。
 
-## AEM Forms Workspace の新しいサービス {#new-offering-of-aem-forms-workspace}
+## AEM Forms Workspace の新しいサービス  {#new-offering-of-aem-forms-workspace}
 
 **タスクの一括承認サポート**
 
-同じタイプのタスクを複数承認できます。承認用のタスクを1つ選択すると、同じプロセスを持ち、タスク名とルートオプションが同じタスクのみが有効になります。 See [Working with To-Do lists](/help/forms/using/todo-lists.md) for implementation details.
+同じタイプのタスクを複数承認できます。承認用のタスクを1つ選択すると、同じプロセスを持ち、タスク名とルートオプションが同じタスクのみが有効になります。 導入の詳細については、[TODOリストの操作](/help/forms/using/todo-lists.md)を参照してください。
 
 ## Flex Workspace から AEM Forms Workspace への移行 {#migrating-from-flex-workspace-to-aem-forms-workspace}
 
@@ -109,7 +109,7 @@ AEM Forms Workspace では、デフォルトのアクションプロファイル
 
 AEM Forms Workspace では利用できない Flex Workspace の機能には、メッセージと通知、ようこそページ、Approval Container、列見出しを管理するオプションなどがあります。完全なリストについては、「[AEM Forms Workspace では利用できない Flex Workspace の機能](/help/forms/using/features-flex-workspace-available-html.md)」を参照してください。
 
-## AEM Forms Workspace を使用した開発 {#developing-with-aem-forms-workspace}
+## AEM Forms Workspace を使用した開発  {#developing-with-aem-forms-workspace}
 
 ### アーキテクチャ {#architecture}
 
@@ -125,7 +125,7 @@ AEM Forms Workspace では、幅広く様々なカスタマイズをサポート
 
 「[カスタマイズ](introduction-customizing-html-workspace.md#types-of-customizations)」の記事では、このようなカスタマイズのタイプについて説明しています。
 
-### 開発者環境の設定 {#set-up-the-developer-environment}
+### 開発者環境の設定  {#set-up-the-developer-environment}
 
 AEM Forms Workspace の成果物には、CRX にデプロイされる CRX パッケージ、完全なソースコードが含まれている SDK アーカイブ、サードパーティの JavaScript ライブラリ、AEM Forms Workspace のビルドスクリプトが含まれます。これらを使用して、上述したカスタマイズを実行するための開発者環境を設定します。詳しくは、「[AEM Forms Workspace コードの構築](introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照してください。
 
@@ -135,8 +135,8 @@ AEM Forms Workspace の成果物には、CRX にデプロイされる CRX パッ
 
 新しいプロセスではデフォルトで、デスクトップ上では PDF 形式、タブレット上では HTML 形式で XDP フォームがレンダリングされます。XDP フォームはいつでも HTML 形式でレンダリングできます。詳しくは、「[新しいレンダリングと送信サービス](/help/forms/using/new-render-submit-service.md)」を参照してください。
 
-[モバイルForms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) 機能は、 [](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)プロファイルと連携して、XDPフォームのHTMLレンダリングを有効にします。 「新規 HTML フォームのレンダリング」はデフォルトで `default.html` プロファイルを使用しますが、これは変更することができます。XDP フォームを HTML 形式でレンダリングする前に実行されたカスタム変更を追加することもできます。
+[Mobile ](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) Forms機能は、 [プロファイルと連携して、XDPフォームのHTMLレンダリングを有効にします](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)。「新規 HTML フォームのレンダリング」はデフォルトで `default.html` プロファイルを使用しますが、これは変更することができます。XDP フォームを HTML 形式でレンダリングする前に実行されたカスタム変更を追加することもできます。
 
-## AEM Forms Workspace アプリケーション {#aem-forms-workspace-app}
+## AEM Forms Workspace アプリケーション  {#aem-forms-workspace-app}
 
 モバイルデバイスでビジネスプロセスを操作するには、AEM Forms の AEM Forms Workspace アプリケーションサービスを使用します。詳しくは、「[AEM Forms Workspace アプリ：概要](https://helpx.adobe.com/livecycle/help/mobile-workspace/mobile-workspace-overview.html)」を参照してください。
