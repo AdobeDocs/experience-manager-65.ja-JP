@@ -37,7 +37,7 @@ ht-degree: 82%
 
 AEM 検索やサードパーティ検索（Search&amp;Promote など）、またはこれらを組み合わせた検索をおこなうための、統合フックが提供されています。
 
-## e コマースエンジンの選択 {#ecommerce-engine-selection}
+## e コマースエンジンの選択  {#ecommerce-engine-selection}
 
 e コマースフレームワークは任意の e コマースソリューションと組み合わせて使用できますが、使用するエンジは AEM によって識別される必要があります（AEM の汎用エンジンを使用する場合でも同様です）。
 
@@ -45,13 +45,13 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEM `Resource.adaptTo()` での `CommerceService` および `Product`
+* AEMでは、`CommerceService`と`Product`の`Resource.adaptTo()`をサポートしています
 
-   * The `adaptTo` implementation looks for a `cq:commerceProvider` property in the resource&#39;s hierarchy:
+   * `adaptTo`実装は、リソースの階層で`cq:commerceProvider`プロパティを探します。
 
       * 見つかった場合は、その値を使用してコマースサービスの検索をフィルタリングします。
       * 見つからなかった場合は、最上位のコマースサービスが使用されます。
-   * A `cq:Commerce` mixin is used so the `cq:commerceProvider` can be added to strongly-typed resources.
+   * `cq:Commerce`ミックスインを使用して、`cq:commerceProvider`を厳密に型指定されたリソースに追加できます。
 
 
 * 適切なコマースファクトリ定義を参照するために、`cq:commerceProvider` プロパティも使用されます。
@@ -94,18 +94,18 @@ e コマースフレームワークは任意の e コマースソリューショ
 
 **CommerceSession** は、
 
-* 買い **物かごを所有**
+* **買い物かご**&#x200B;を所有
 
    * 追加や削除などを実行します。
    * は、買い物かごにさまざまな計算を行います。
 
       `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
-* Owns persistance of the **order** data:
+* **注文**&#x200B;データの永続性を所有：
 
    `CommerceSession.getUserContext()`
 
-* Can retrieve/update delivery details by using `updateOrder(Map<String, Object> delta)`
+* `updateOrder(Map<String, Object> delta)`を使用して、配信の詳細を取得/更新できます。
 * **支払**&#x200B;処理の接続も管理します。
 * **フルフィルメント**&#x200B;の接続も管理します。
 
@@ -119,11 +119,11 @@ e コマースフレームワークは任意の e コマースソリューショ
 
 各製品やバリアントはリソースによって表現されるので、リポジトリノードに 1 対 1 でマップされます。必然的に、特定の製品やバリアントはそのパスによって一意に識別できます。
 
-Any product resource can be represented by a `Product API`. Most calls in the product API are variation specific (although variations might inherit shared values from an ancestor), but there are also calls which list the set of variations ( `getVariantAxes()`, `getVariants()`, etc.).
+任意の製品リソースは`Product API`で表すことができます。 製品APIの呼び出しの多くはバリエーション固有です（バリエーションは親から共有値を継承する場合があります）が、バリエーションのセット（`getVariantAxes()`、`getVariants()`など）を呼び出すリストもあります。
 
 >[!NOTE]
 >
->In effect a variant axes is determined by whatever `Product.getVariantAxes()` returns:
+>実際には`Product.getVariantAxes()`が返す値によってバリアント軸が決まります。
 >
 >* 汎用実装の場合、AEM が製品データのプロパティ（`cq:productVariantAxes`）からバリアント軸を読み取ります。
 >
@@ -135,15 +135,15 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 
 >
 >   
-This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
+この追加のバリアントは、Geometrixx Outdoors参照の`variationAxis`プロパティを介して選択されます（製品の場合は通常`color`）。
 
 #### 製品リファレンスと PIM データ {#product-references-and-pim-data}
 
 一般的な手順は次のとおりです。
 
-* PIM data is located under `/etc`
+* PIMデータは`/etc`の下にあります
 
-* Product references under `/content`.
+* `/content`の下の製品参照。
 
 製品バリエーションと製品データノードの間には 1 対 1 のマッピングが必要です。
 
@@ -250,12 +250,12 @@ public class AxisFilter implements VariantFilter {
 
       * リファレンス。製品データは他の場所に保存されています。
 
-         * Product references contain a `productData` property, which points to the product data (typically under `/etc/commerce/products`).
+         * 製品参照には`productData`プロパティが含まれ、これは製品データを指します（通常は`/etc/commerce/products`の下）。
          * 製品データは階層化されています。製品属性は、製品データノードの祖先から継承されます。
          * 製品リファレンスには、ローカルプロパティも含めることができます。このようなプロパティは、製品データ内で指定されるプロパティをオーバーライドします。
       * 製品自体
 
-         * Without a `productData` property.
+         * `productData`プロパティがない。
          * すべてのプロパティをローカルに保持している（そして productData プロパティを含まない）製品ノードは、製品属性を自身の祖先から直接継承します。
 
 
@@ -337,12 +337,12 @@ public class AxisFilter implements VariantFilter {
 
    * AEM 汎用ケースでは、買い物かごは [ClientContext](/help/sites-administering/client-context.md) に保存されます。
 
-**パーソナライズ機能**
+**パーソナライゼーション**
 
 * パーソナライズは、常に [ClientContext](/help/sites-administering/client-context.md) から取得する必要があります。
-* A ClientContext `/version/` of the cart is created in all cases:
+* 買い物かごのClientContext`/version/`は、すべての場合に作成されます。
 
-   * Products should be added by using the `CommerceSession.addCartEntry()` method.
+   * 製品は、`CommerceSession.addCartEntry()`メソッドを使用して追加する必要があります。
 
 * 次の図は、ClientContext に格納される買い物かご情報の例を示しています。
 
@@ -393,8 +393,8 @@ public class AxisFilter implements VariantFilter {
 * 価格は、品目と注文の詳細（重さや配送先住所など）に基づきます。
 * `CommerceSession` はすべての依存関係にアクセスするので、製品価格と同じ方法で扱うことができます。
 
-   * The `CommerceSession` owns shipping pricing.
-   * Use `updateOrder(Map<String, Object> delta)` to retrieve/update delivery details.
+   * `CommerceSession`は送料を所有しています。
+   * `updateOrder(Map<String, Object> delta)`を使用して、配信の詳細を取得/更新します。
 
 ### 検索の定義 {#search-definition}
 
@@ -422,7 +422,7 @@ e コマースプロジェクトには、デフォルトの検索コンポーネ
 
 1. `CommerceQuery`
 
-    検索クエリの記述に使用します（クエリテキスト、現在のページ、ページサイズ、並べ替え、選択されているファセットについての情報を含みます）。検索 API を実装するすべての e コマースサービスは、検索を実行するために、このクラスのインスタンスを受け取ります。A `CommerceQuery` can be instantiated from a request object ( `HttpServletRequest`).
+    検索クエリの記述に使用します（クエリテキスト、現在のページ、ページサイズ、並べ替え、選択されているファセットについての情報を含みます）。検索 API を実装するすべての e コマースサービスは、検索を実行するために、このクラスのインスタンスを受け取ります。`CommerceQuery`は、リクエストオブジェクト(`HttpServletRequest`)からインスタンス化できます。
 
 1. `FacetParamHelper`
 
@@ -447,8 +447,8 @@ e コマースプロジェクトには、デフォルトの検索コンポーネ
    * 外部のコマースエンジンも割引券を提供できます。少なくとも以下が必要です。
 
       * 割引券コード
-      * メソッド `isValid()`
-   * The **Voucher** component ( `/libs/commerce/components/voucher`) provides:
+      * `isValid()`メソッド
+   * **伝票**&#x200B;コンポーネント(`/libs/commerce/components/voucher`)は、次のものを提供します。
 
       * 割引券管理用のレンダラー。買い物かごに現在入っている割引券があれば表示します。
       * 割引券を管理（追加／削除）するための編集ダイアログ（フォーム）。
@@ -469,7 +469,7 @@ e コマースプロジェクトには、デフォルトの検索コンポーネ
    * プロモーションをキャンペーンに関連付けて、有効／無効日付／回数を定義できます。
    * プロモーションをエクスペリエンスに関連付けて、セグメントを定義できます。
    * エクスペリエンスに関連付けられていないプロモーションは、単独では呼び出されませんが、割引券によって呼び出せます。
-   * The Promotion component ( `/libs/commerce/components/promotion`) contains:
+   * プロモーションコンポーネント(`/libs/commerce/components/promotion`)には、次が含まれます。
 
       * プロモーション管理用のレンダラーとダイアログ
       * プロモーションハンドラーに固有の設定パラメーターをレンダリングおよび編集するためのサブコンポーネント
@@ -477,7 +477,7 @@ e コマースプロジェクトには、デフォルトの検索コンポーネ
 
       * `DiscountPromotionHandler`。買い物かご全体に絶対価格による割引またはパーセンテージ割引を適用します。
       * `PerfectPartnerPromotionHandler`。パートナー製品も買い物かごに入っている場合に、製品の絶対価格による割引またはパーセンテージ割引を適用します。
-   * The ClientContext `SegmentMgr` resolves segments and the ClientContext `CartMgr` resolves promotions. 少なくとも 1 つの解決されたセグメントを対象とする各プロモーションがトリガーされます。
+   * ClientContext`SegmentMgr`はセグメントを解決し、ClientContext`CartMgr`はプロモーションを解決します。 少なくとも 1 つの解決されたセグメントを対象とする各プロモーションがトリガーされます。
 
       * トリガーされたプロモーションは、買い物かごを再計算する AJAX 呼び出しによって、サーバーに返送されます。
       * トリガーされたプロモーション（および追加された割引券）は、ClientContext パネルにも表示されます。
@@ -520,13 +520,13 @@ public List<Voucher> getVouchers() throws CommerceException;
 * 簡単な説明
 * 割引タイプおよび値を示す関連プロモーションの参照
 
-提供される `AbstractJcrCommerceSession` によって割引券を適用できます。The vouchers returned by the class `getVouchers()` are instances of `cq:Page` containing a jcr:content node with the following properties (amongst others):
+提供される `AbstractJcrCommerceSession` によって割引券を適用できます。クラス`getVouchers()`から返されるバウチャーは、`cq:Page`のインスタンスで、以下のプロパティを持つjcr:contentノードが含まれています（その他）。
 
-* `sling:resourceType` （文字列） — これは、 `commerce/components/voucher`
+* `sling:resourceType` （文字列） — これは、  `commerce/components/voucher`
 
 * `jcr:title` （文字列） — 伝票の説明
 * `code`（String） - この割引券を適用するためにユーザーが入力する必要があるコード。
-* `promotion` （文字列） — 適用されるプロモーション。例えば `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` （文字列） — 適用されるプロモーション。例えば  `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 プロモーションハンドラーは、買い物かごを変更する OSGi サービスです。買い物かごは、`PromotionHandler` インターフェイスで定義される、複数のフックをサポートします。
 
