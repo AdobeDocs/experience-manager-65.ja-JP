@@ -32,11 +32,11 @@ AEM Forms では、テキストモジュール内でインライン条件を使�
 * [Correspondence Management の概要](/help/forms/using/cm-overview.md)
 * [インタラクティブ通信内のテキスト](../../forms/using/texts-interactive-communications.md)
 
-### 例：ルールを使用してインタラクティブ通信内のインラインテキストに条件を設定する {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
+### 例：ルールを使用してインタラクティブ通信内のインラインテキストに条件を設定する  {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
 
 インタラクティブ通信内の文、段落、文字列に条件を設定するには、適切なテキストドキュメントフラグメントでルールを作成します。以下のリンクに記載されている例では、ルールを使用して、インタラクティブ通信を米国で受信するユーザーだけにフリーダイヤルの番号を表示しています。
 
-For more information, see Create rule in text in [Texts in Interactive Communications](../../forms/using/texts-interactive-communications.md).
+詳しくは、「[対話型通信のテキスト](../../forms/using/texts-interactive-communications.md)のテキストにルールを作成」を参照してください。
 
 Interactive Communicationにテキストフラグメントを含め、Agent UIを使用してInteractive Communicationを準備すると、受信者の（フォームデータモデル）データが評価され、テキストは米国の受信者にのみ表示されます。
 
@@ -48,7 +48,7 @@ Interactive Communicationにテキストフラグメントを含め、Agent UI�
 >
 >既存のアセットに古い（6.2 SP1 CFP 4 より前の）条件式や繰り返し式が含まれている場合は、アセットに古い構文の条件や繰り返しが表示されます。ただし、古い条件や繰り返しも正常に機能します。新しい条件/繰り返し式と古い条件/繰り返し式は互いに互換性があり、古い条件/繰り返し条件と新しい条件/繰り返しがネストされて混在します。
 
-1. In the relevant text module, select the part of text that you want to conditionalize and tap **Condition**.
+1. 関連するテキストモジュールで、条件付けするテキストの部分を選択し、「**条件**」をタップします。
 
    ![1_selecttext](assets/1_selecttext.png)
 
@@ -58,7 +58,7 @@ Interactive Communicationにテキストフラグメントを含め、Agent UI�
 
    >[!NOTE]
    >
-   >空の条件式や無効な条件式は保存できません。There has to be a valid conditional expression inside `${}` to save the expression.
+   >空の条件式や無効な条件式は保存できません。式を保存するには、`${}`内に有効な条件式が必要です。
 
 1. 次の手順を実行して、選択および条件付けしたテキストがレターに表示されるかどうかを評価するための条件を作成し、チェックマークをタップして式を保存します。
 
@@ -72,7 +72,7 @@ Interactive Communicationにテキストフラグメントを含め、Agent UI�
 
    条件を挿入すると、条件の左側にあるハンドルの上にマウスを移動したときに条件が表示されます。ハンドルをタップすると、条件のポップアップメニューが表示され、条件を編集または削除できます。
 
-   ![3_hoverhandle](assets/3_hoverhandle.png)![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
+   ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
 
 1. テキスト「`Ma'am`」を選択して、同様の条件を挿入します。
 
@@ -182,7 +182,7 @@ Interactive Communicationにテキストフラグメントを含め、Agent UI�
    ${DD_creditcard_TransactionAmount > 0.5}
    ```
 
-   Otherwise, if you do not need to render the information (here transactions) selectively, keep the condition empty by deleting the following in the dialog: `${}`. 繰り返し式が保存されるのは、繰り返し式ウィンドウが空になっている（繰り返し式が不要で ${} がない）場合、または繰り返し式ウィンドウに有効な繰り返し条件が含まれている場合です。
+   それ以外の場合は、情報（ここでのトランザクション）を選択的にレンダリングする必要がない場合は、ダイアログで以下を削除して、条件を空のままにします。`${}`. 繰り返し式が保存されるのは、繰り返し式ウィンドウが空になっている（繰り返し式が不要で ${} がない）場合、または繰り返し式ウィンドウに有効な繰り返し条件が含まれている場合です。
 
 1. 動的テキストを書式設定するための区切り文字を選択し、チェックマークをタップして保存します。
 
@@ -212,7 +212,7 @@ Interactive Communicationにテキストフラグメントを含め、Agent UI�
    >
    >条件や繰り返しを挿入できるのは、関連するテキストモジュールを作成または編集している間だけです。レターのプレビュー中は、テキストモジュールを編集できますが、条件や繰り返しを挿入することはできません。
 
-## インライン条件と繰り返しの使用 - 使用事例  {#using-inline-condition-and-repeat-some-use-cases}
+## インライン条件と繰り返しの使用 - 使用事例   {#using-inline-condition-and-repeat-some-use-cases}
 
 ### 条件内部の繰り返し {#repeat-within-condition}
 
@@ -230,7 +230,7 @@ Interactive Communicationにテキストフラグメントを含め、Agent UI�
 * 繰り返しの内部に 1 つ以上の条件を作成する
 * 条件または繰り返しの内部に条件と繰り返しの組み合わせを作成する
 
-### 空のインライン条件 {#empty-inline-condition}
+### 空のインライン条件  {#empty-inline-condition}
 
 場合によっては、空のインライン条件を挿入し、後でテキストと DD 要素を埋め込む必要があります。Correspondence Management では、この操作が可能です。
 
