@@ -34,8 +34,8 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 >
 >カスタムプロキシ設定で Search&amp;Promote を使用している場合、AEM には 3.x API を使用する機能と 4.x API を使用する機能があるので、両方の HTTP クライアントプロキシを設定する必要があります。
 >
->* 3.x is configured with [https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
->* 4.x is configured with [https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>* 3.xは[https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)で設定します。
+>* 4.xは[https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)で設定します。
 
 >
 
@@ -43,7 +43,7 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 
 ## Search&amp;Promote サービス URL の変更 {#changing-the-search-promote-service-url}
 
-The default URL that is configured for the Search&amp;Promote service is `https://searchandpromote.omniture.com/px/`. 別のサービスを使用するには、OSGi コンソールを使用して別の URL を指定します。
+Search&amp;Promoteサービスに設定されるデフォルトのURLは`https://searchandpromote.omniture.com/px/`です。 別のサービスを使用するには、OSGi コンソールを使用して別の URL を指定します。
 
 1. OSGi コンソールを開いて「Configuration」タブをクリックします([https://localhost:4502/system/console/configMgr.](https://localhost:4502/system/console/configMgr))
 1. Day CQ Search&amp;Promote 設定項目をクリックします。
@@ -53,7 +53,7 @@ The default URL that is configured for the Search&amp;Promote service is `https:
 
 Search&amp;Promote への 1 つ以上の接続を設定して、Web ページがサービスとやり取りできるようにします。接続するには、Search&amp;Promote アカウントのメンバー ID とアカウント番号が必要です。
 
-1. **ツール** アイコン **/**&#x200B;導入 **から、** Cloud Servicesを選択します。
+1. **ツール**&#x200B;アイコン/**デプロイメント**&#x200B;から、**Cloud Services**&#x200B;を選択します。
 
    これにより、クラウドサービスダッシュボードが表示されます。ローカルマシンの場合、ダッシュボードの URI は、次のようになります。
 
@@ -61,9 +61,9 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
 1. クラウドサービスページで、Adobe Search&amp;Promote リンクまたは Search&amp;Promote アイコンをクリックします。
 
-1. If this is the first time you are configuring Adobe Search&amp;Promote, click **Configure Now** to open the Create Configuration panel.
+1. 初めてAdobeSearch&amp;Promoteを設定する場合は、「**今すぐ設定**」をクリックして設定を作成パネルを開きます。
 
-   If you would like to learn more about Search&amp;Promote click **Learn More** instead.
+   Search&amp;Promoteの詳細を表示するには、[**詳細情報**]をクリックしてください。
 
    ![](assets/chlimage_1-59.png)
 
@@ -82,7 +82,7 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
    >[!NOTE]
    >
-   >In order to get this information **yourself,** first you need to log into
+   >**自分でこの情報を得るには、**&#x200B;まずログインする必要があります
    >
    >[https://searchandpromote.omniture.com/center/](https://searchandpromote.omniture.com/center/)
    >
@@ -95,8 +95,8 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
    >
    >**この場合：**
    >
-   >    * **XXXXXXXXXX** は、お使いの**メンバid**に対応します
-   >    * **spYYYYYYYYYY** は、使用する **アカウント番号に対応します**
+   >    * **XXXXXXXXXXXX** は、お使いの**メンバid**に対応します
+   >    * **spYYYYYYYYは、使用する**  **アカウント番号に対応します**
 
 
 1. 「**Search&amp;Promote に接続**」をクリックします。
@@ -113,23 +113,23 @@ Search&amp;Promote アカウントがアジアまたはヨーロッパのもの�
 
 データセンター：
 
-1. Navigate to the Web console at `https://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`
+1. `https://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`のWebコンソールに移動します。
 
    ![](assets/chlimage_1-61.png)
 
 1. サーバーの場所に応じて、URI を次のいずれかに変更します。
 
-   * North America: [https://center.atomz.com/px/](https://center.atomz.com/px/)
-   * EMEA: [https://center.lon5.atomz.com/px/](https://center.lon5.atomz.com/px/)
-   * APAC: [https://center.sin2.atomz.com/px/](https://center.sin2.atomz.com/px/)
+   * 北米：[https://center.atomz.com/px/](https://center.atomz.com/px/)
+   * EMEA:[https://center.lon5.atomz.com/px/](https://center.lon5.atomz.com/px/)
+   * APAC:[https://center.sin2.atomz.com/px/](https://center.sin2.atomz.com/px/)
 
 1. 「**Save**」をクリックします。
 
-## Search&amp;Promote コンポーネントのサイドキックへの追加 {#adding-search-promote-components-to-sidekick}
+## Search&amp;Promote コンポーネントのサイドキックへの追加  {#adding-search-promote-components-to-sidekick}
 
 デザインモードで、コンポーネント&#x200B;**ごとに**&#x200B;編集して、サイドキックの Search&amp;Promote コンポーネントを許可します（詳しくは、[コンポーネント](/help/sites-developing/components.md#addinganewcomponenttotheparagraphsystemdesignmode)のドキュメントを参照）。
 
-For information about using the components, see See [Adding Search&amp;Promote Features to a Web Page](/help/sites-authoring/search-and-promote.md).)
+コンポーネントの使用について詳しくは、「[WebページへのSearch&amp;Promote機能の追加](/help/sites-authoring/search-and-promote.md)」を参照してください。
 
 ## ページで使用する Search&amp;Promote サービスの指定 {#specifying-the-search-promote-service-that-your-pages-use}
 
@@ -141,7 +141,7 @@ For information about using the components, see See [Adding Search&amp;Promote F
 >
 >サービス接続は、既に設定されている必要があります（[Search&amp;Promote への接続の設定](#connection)を参照）。
 
-1. **ページプロパティ**&#x200B;ダイアログボックスを開きます。For example, on the** Websites** page, right-click the page and click **Properties**.
+1. **ページプロパティ**&#x200B;ダイアログボックスを開きます。例えば、** Webサイト**ページで、ページを右クリックし、**プロパティ**&#x200B;をクリックします。
 1. 「**クラウドサービス**」タブをクリックします。
 1. 親ページからのクラウドサービス設定の継承を無効にするには、継承パスの横にある南京錠アイコンをクリックします。
 
