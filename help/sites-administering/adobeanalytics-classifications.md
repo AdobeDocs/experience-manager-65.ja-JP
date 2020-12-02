@@ -1,6 +1,6 @@
 ---
 title: Adobe Classifications
-seo-title: Adobe Classifications
+seo-title: Adobe分類
 description: Adobe Classifications について説明します。
 seo-description: Adobe Classifications について説明します。
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
@@ -20,25 +20,25 @@ ht-degree: 68%
 
 # Adobe 分類{#adobe-classifications}
 
-Adobe Classifications exports classifications data to [Adobe Analytics](/help/sites-administering/adobeanalytics.md) in a scheduled manner. SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
+Adobe分類は、分類データを[Adobe Analytics](/help/sites-administering/adobeanalytics.md)にスケジュール設定した方法でエクスポートします。 SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
 
 これを設定するには：
 
 1. **ナビゲーション**&#x200B;を使用して、**ツール**、**クラウドサービス**&#x200B;を選択し、**従来のクラウドサービス**&#x200B;を選択します。
-1. 「 **Adobe Analytics** 」までスクロールし、「設定を **表示**」を選択します。
-1. Click the **[+]** link next to your Adobe Analytics configuration.
+1. **Adobe Analytics**&#x200B;までスクロールし、**設定を表示**&#x200B;を選択します。
+1. Adobe Analytics設定の横にある&#x200B;**[+]**&#x200B;リンクをクリックします。
 
 1. **フレームワークを作成**&#x200B;ダイアログで、次の操作を実行します。
 
    * 「**タイトル**」を指定します。
    * オプションで、リポジトリにフレームワークの詳細を保存するノードの&#x200B;**名前**&#x200B;を指定できます。
-   * **Adobe Analytics分類の選択**
+   * **Adobe Analytics分類**&#x200B;を選択
 
    「**作成**」をクリックします。
 
    ![フレームワークを作成ダイアログ](assets/aa-25.png)
 
-1. 編集用の **分類設定** ダイアログが開きます。
+1. **分類設定**&#x200B;ダイアログが開き、編集できます。
 
    ![分類設定ダイアログ](assets/aa-classifications-settings.png)
 
@@ -59,7 +59,7 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 1. 「**OK**」をクリックして設定を保存します。
 
-## ページサイズの変更 {#modifying-page-size}
+## ページサイズの変更  {#modifying-page-size}
 
 レコードは、ページで処理されます。デフォルトでは、「Adobeの分類」はページサイズが1000のページを作成します。
 
@@ -67,25 +67,25 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 ページサイズを変更するには：
 
-1. Navigate to the OSGI console at **https://&lt;host>:&lt;port>/system/console/configMgr** and select **Adobe AEM Classifications Exporter**.
+1. **https://&lt;host>:&lt;port>/system/console/configMgr**&#x200B;にあるOSGIコンソールに移動し、**AdobeAEM分類エクスポーター**&#x200B;を選択します。
 
    ![aa-26](assets/aa-26.png)
 
 1. 「**書き出しページサイズ**」を必要に応じて更新し、**保存**&#x200B;をクリックします。
 
-## SAINTDefaultTransformer {#saintdefaulttransformer}
+## SAINTDefaultTransformer  {#saintdefaulttransformer}
 
 >[!NOTE]
 >
 >Adobe Classifications は、以前は SAINT Exporter と呼ばれていました。
 
-SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。For Adobe Classifications, a subinterface `SAINTTransformer<String[]>` implementing the Transformer interface has been provided. This interface is used to restrict the data type to `String[]` which is used by the SAINT API and to have a marker interface to find such services for selection.
+SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。Adobe分類の場合、Transformerインターフェイスを実装するサブインターフェイス`SAINTTransformer<String[]>`が提供されています。 このインターフェイスは、SAINTAPIで使用される`String[]`にデータ型を制限し、そのようなサービスを検索して選択するためのマーカーインターフェイスを持つために使用されます。
 
-デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキーとし、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。Namespaced properties (containing `:`) are disregarded.
+デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキーとし、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。名前空間のプロパティ（`:`を含む）は無視されます。
 
 *ノード構造：*
 
-* id分類 `nt:unstructured`
+* id-classification `nt:unstructured`
 
    * 1 `nt:unstructured`
 
@@ -127,7 +127,7 @@ SAINT Exporter は、変換サービスを使用して、書き出しデータ�
   </tr>
   <tr>
    <td>description</td>
-   <td>Job description. <br /> </td>
+   <td>ジョブの説明。<br /> </td>
   </tr>
   <tr>
    <td>overwrite</td>
@@ -144,6 +144,6 @@ SAINT Exporter は、変換サービスを使用して、書き出しデータ�
  </tbody>
 </table>
 
-## Adobe Classifications による書き出しの自動化 {#automating-adobe-classifications-export}
+## Adobe Classifications による書き出しの自動化  {#automating-adobe-classifications-export}
 
 独自のワークフローを作成することで、新しい読み込みのたびにそのワークフローが開始され、構造の正しい適切なデータが **/var/export/** に作成されて Adobe Classifications に書き出すことができるようになります。
