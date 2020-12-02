@@ -29,7 +29,7 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 >
 >AEM オーサーが過剰なリソースを占有しないように、できればピーク時を避け、時間をずらして公開することをお勧めします。
 
-1. From the Assets console, select the assets/folder that you want to publish and click **[!UICONTROL Quick Publish]** option from the toolbar.
+1. アセットコンソールから、公開するアセットまたはフォルダーを選択し、ツールバーの「**[!UICONTROL クイック公開]**」オプションをクリックします。
 
    または、Brand Portal に公開するアセットを選択します。
 
@@ -43,13 +43,13 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 選択したアセットを Brand Portal に公開するには、次のいずれかを実行します。
 
-* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。Then from the menu, select **[!UICONTROL Publish to Brand Portal]**.
+* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューから「**[!UICONTROL ブランドポータルに公開]**」を選択します。
 
 * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
 
-   1. Then from the **[!UICONTROL Action]** select **[!UICONTROL Publish to Brand Portal]**, and from **[!UICONTROL Scheduling]** select **[!UICONTROL Now]**. 「**[!UICONTROL 次へ]**」をクリックします。
+   1. 次に、**[!UICONTROL アクション]**&#x200B;で「**[!UICONTROL ブランドポータルに公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;で「**[!UICONTROL 今すぐ]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
 
-   2. Within **[!UICONTROL Scope]**, confirm your selection and click **[!UICONTROL Publish to Brand Portal]**.
+   2. **[!UICONTROL スコープ]**&#x200B;内で、選択を確認し、「**[!UICONTROL ブランドポータルに発行]**」をクリックします。
 
 アセットが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたアセットを確認します。
 
@@ -57,9 +57,9 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 アセットを Brand Portal に公開するスケジュールを後の日時に設定するには、次の手順を実行します。
 
-1. Once you have selected assets/ folders to publish, select **[!UICONTROL Manage Publication]** from the tool bar at the top.
+1. 発行するアセット/フォルダを選択したら、上部のツールバーから「**[!UICONTROL パブリケーションを管理]**」を選択します。
 
-1. On **[!UICONTROL Manage Publication]** page, select **[!UICONTROL Publish to Brand Portal]** from **[!UICONTROL Action]** and select **[!UICONTROL Later]** from **[!UICONTROL Scheduling]**.
+1. **[!UICONTROL パブリケーションの管理]**&#x200B;ページで、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL ブランドポータルに公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 後で]**」を選択します。
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 
