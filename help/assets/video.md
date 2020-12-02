@@ -17,11 +17,11 @@ ht-degree: 89%
 ---
 
 
-# ダイナミックメディアでのビデオ {#video}
+# ダイナミックメディア内のビデオ{#video}
 
 ここでは、Dynamic Media でのビデオの操作方法について説明します。
 
-## クイックスタート：ビデオ {#quick-start-videos}
+## クイックスタート：ビデオ  {#quick-start-videos}
 
 次のワークフローの手順説明は、Dynamic Media 内のアダプティブビデオセットをすぐに使い始めることを目的としたものです。各手順に続いて、詳しい説明のあるトピックの見出しへのリンクが記載されています。
 
@@ -87,10 +87,10 @@ ht-degree: 89%
       * [メタデータスキーマ](metadata-schemas.md)
    * ビデオをレビューおよび承認し、注釈を付け、完全なバージョン管理を維持します。
 
-      * [ビデオの注釈の作成](managing-video-assets.md#annotate-video-assets) 、アセットの [注釈の作成](manage-assets.md#annotating)
+      * [ビデオの注釈付け](managing-video-assets.md#annotate-video-assets) とアセットの [注釈の作成](manage-assets.md#annotating)
 
       * [バージョンの作成](manage-assets.md#asset-versioning)
-      * [アセットへのワークフローの適用](assets-workflow.md) 、またはアセットでのワークフローの [開始を参照してください。](manage-assets.md#starting-a-workflow-on-an-asset)
+      * [ワークフローをアセットに適用する、](assets-workflow.md) またはアセットでのワークフローの [開始を参照してください。](manage-assets.md#starting-a-workflow-on-an-asset)
 
       * [フォルダーのアセットのレビュー](bulk-approval.md)
       * [プロジェクト](../sites-authoring/projects.md)
@@ -117,7 +117,7 @@ ht-degree: 89%
 
 
 
-## Dynamic Media でのビデオの操作 {#working-with-video-in-dynamic-media}
+## Dynamic Media でのビデオの操作  {#working-with-video-in-dynamic-media}
 
 Dynamic Media のビデオは、高品質のアダプティブビデオを簡単に公開して、デスクトップ、iOS、Android、Blackberry、Windows などのモバイルデバイスを含む複数の画面にストリーミングするためのエンドツーエンドのソリューションです。アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。デスクトップコンピューターまたはモバイルデバイスによって、利用可能な帯域幅が検出されます。
 
@@ -162,7 +162,7 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 詳しくは、[動的なビデオ再生](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)の例を参照してください。
 
-See also [Viewers for AEM Assets and Dynamic Media Classic](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.translate.html) and [Viewers for AEM assets only](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.translate.html) in the Adobe Scene7 Viewers Reference Guide.
+『Adobe Scene7ビューアリファレンスガイド』の「AEM Assetsおよびダイナミックメディアクラシックのビューア](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.translate.html)」および「AEMアセット専用のビューア](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.translate.html)のみ」も参照してください。[[
 
 ## ベストプラクティス：HTML5 ビデオビューアの使用 {#best-practice-using-the-html-video-viewer}
 
@@ -174,9 +174,9 @@ Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデ�
 
 HTML5 と CSS を使用して再生コンポーネントをデザインできる機能、埋め込み再生の機能、ブラウザーの機能に応じてアダプティブストリーミングまたはプログレッシブストリーミングを使用できる機能を 1 つのプレーヤーにまとめることで、リッチメディアコンテンツを配信する範囲をデスクトップユーザーとモバイルユーザーの両方に拡大して、ビデオエクスペリエンスを効率化することができます。
 
-『Adobe Scene7 ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.translate.html)も参照してください。
+『Adobe Scene7 ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)も参照してください。
 
-### HTML5 ビデオビューアを使用した、デスクトップコンピューターおよびモバイルデバイス上でのビデオ再生 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
+### HTML5 ビデオビューアを使用した、デスクトップコンピューターおよびモバイルデバイス上でのビデオ再生  {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
 デスクトップおよびモバイルへのアダプティブビデオストリーミングの場合、ビットレートの切り替えに使用されるビデオは、アダプティブビデオセット内のすべての MP4 ビデオに基づいています。
 
@@ -263,7 +263,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
  </tbody>
 </table>
 
-## Dynamic Media ビデオソリューションのアーキテクチャ {#architecture-of-dynamic-media-video-solution}
+## Dynamic Media ビデオソリューションのアーキテクチャ  {#architecture-of-dynamic-media-video-solution}
 
 次の図に、アップロード後、（Dynamic Media Hybrid モードの）DMGateway によってエンコードされ、公開されるビデオのオーサリングワークフローの全体像を示します。
 
@@ -323,7 +323,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
 
 例えば、幅 1,440、高さ 1,080 のビデオの縦横比は 1,440/1,080、つまり 1.33 になります。このビデオファイルをエンコードするには、縦横比 4:3 のビデオエンコーディングプリセットを選択します。
 
-### ビットレート {#bitrate}
+### ビットレート  {#bitrate}
 
 ビットレートとは、1 秒間のビデオ再生を作成するためにエンコードされるデータの量です。ビットレートは、1 秒あたりのキロビット数（Kbps）の単位で測定します。
 
@@ -399,7 +399,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 | ビデオタイプ | 幅 x 高さ | 幅の比率 | 高さの比率 |
 |--- |--- |--- |--- |
-| ソース | 1,920 x 1,080 | 1 | 1 |
+| ソース | 1,920 x 1,080 | 1 | 3 |
 | エンコード | 960 x 540 | 2 | 2 |
 | エンコード | 640 x 360 | 3 | 3 |
 | エンコード | 480 x 270 | 4 | 4 |
@@ -408,7 +408,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセットの使用を推奨しています。MP4 ファイルでは H.264 ビデオコーデックが使用されるので、高品質のビデオを圧縮されたファイルサイズで作成することができます。
 
-## YouTube へのビデオの公開 {#publishing-videos-to-youtube}
+## YouTube へのビデオの公開  {#publishing-videos-to-youtube}
 
 以前作成した YouTube チャンネルに、オンプレミス AEM ビデオアセットを直接公開できます。
 
@@ -452,12 +452,12 @@ Google Cloud を設定するには：
    既に Google アカウントを持っている場合は、次のステップに進んでください。
 
 1. [https://cloud.google.com/](https://cloud.google.com/) にアクセスします。
-1. On the Google Cloud page, near the upper-right corner, click **[!UICONTROL Console.]**
+1. Google Cloudページの右上隅近くにある「Console（コンソール）」をクリックします。]****[!UICONTROL 
 
    必要に応じて、Google アカウントの資格情報を使用して&#x200B;**[!UICONTROL ログイン]**&#x200B;し、「]**コンソール**[!UICONTROL 」オプションの確認が必要になる場合があります。
 
 1. ダッシュボードページで、**[!UICONTROL Google Cloud Platform]** の右側にある「プロジェクト」ドロップダウンリストをクリックして、プロジェクトの選択ダイアログボックスを開きます。
-1. In the Select a project dialog box, tap **[!UICONTROL New Project.]**
+1. プロジェクトを選択ダイアログボックスで、「**[!UICONTROL 新しいプロジェクト」をタップします。]**
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
@@ -465,22 +465,22 @@ Google Cloud を設定するには：
 
    プロジェクト ID は、プロジェクト名に基づいて付けられます。そのため、プロジェクト名は慎重に選んでください。プロジェクト名を後で変更することはできません。また、後で AEM で YouTube をセットアップする場合は、同じプロジェクト ID を再度入力する必要があるので、ID を書き留めておくとよいでしょう。
 
-1. Click **[!UICONTROL Create.]**
+1. 「**[!UICONTROL 作成」をクリックします。]**
 
 1. 次のいずれかの操作をおこないます。
 
-   * On your project’s Dashboard, in the Getting Started card, tap **[!UICONTROL Explore and enable APIs.]**
-   * On your project&#39;s Dashboard, in the APIs card, tap **[!UICONTROL Go to APIs overview.]**
+   * プロジェクトのダッシュボードの「はじめに」カードで、**[!UICONTROL 「APIを探して有効にする」をタップします。]**
+   * プロジェクトのダッシュボードのAPIカードで、**[!UICONTROL APIの概要へ移動をタップします。]**
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. Near the top of the APIs &amp; Services page, tap **[!UICONTROL Enable APIs and Services.]**
+1. APIとサービスページの上部近くにある&#x200B;**[!UICONTROL APIとサービスを有効にするをタップします。]**
 1. API ライブラリページの左側の「**[!UICONTROL カテゴリ]**」で、「**[!UICONTROL YouTube」をタップします。]** ページの右側で、「YouTube Data API」 **[!UICONTROL をタップします。]**
-1. On the YouTube Data API v3 page, tap **[!UICONTROL Enable.]**
+1. YouTube Data API v3ページで、「**[!UICONTROL 有効にする]**」をタップします。
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
-1. この API を使用するために資格情報が必要となる場合があります。If necessary, click **[!UICONTROL Create Credentials.]**
+1. この API を使用するために資格情報が必要となる場合があります。必要に応じて、「**[!UICONTROL 資格情報を作成」をクリックします。]**
 
    ![6_5_googleaccount-apis-createcredentials](assets/6_5_googleaccount-apis-createcredentials.png)
 
@@ -514,7 +514,7 @@ Google Cloud を設定するには：
 
    **注意**：上記のパスは入力例です。
 
-1. Click **[!UICONTROL Create OAuth client ID.]**
+1. 「**[!UICONTROL OAuthクライアントIDを作成します。]**」をクリックします。
 1. **[!UICONTROL プロジェクトへの認証情報の追加]**&#x200B;ページの手順 3 で、「**[!UICONTROL OAuth 2.0 同意画面を設定する]**」の下で、現在使用している Gmail 電子メールアドレスを選択します。
 
    ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
@@ -523,8 +523,8 @@ Google Cloud を設定するには：
 
    同意画面は、AEM 管理者が YouTube の認証をおこなう際に表示され、AEM は YouTube に権限を要求します。
 
-1. Click **[!UICONTROL Continue.]**
-1. On the Add credentials to your project page, step 4, under the **[!UICONTROL Download credentials]** heading, tap **[!UICONTROL Download.]**
+1. 「**[!UICONTROL 続行]**」をクリックします。
+1. プロジェクトの追加資格情報ページに表示される手順4の「**[!UICONTROL 資格情報をダウンロード]**」見出しの下で、「**[!UICONTROL ダウンロード]**」をタップします。
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -533,11 +533,11 @@ Google Cloud を設定するには：
    このダウンロードした JSON ファイルは、後で Adobe Experience Manager で YouTube をセットアップするときに必要になります。
 
 
-1. Click **[!UICONTROL Done.]**
+1. 「**[!UICONTROL 完了」をクリックします。]**
 
    Google アカウントからログアウトします。次に、YouTube チャンネルを作成します。
 
-### YouTube チャンネルの作成 {#creating-a-youtube-channel}
+### YouTube チャンネルの作成  {#creating-a-youtube-channel}
 
 YouTube にビデオを公開するには、1 つ以上のチャネルが必要です。既に YouTube チャンネルを作成している場合は、このタスクをスキップして、次の「[公開用タグの追加](/help/assets/video.md#adding-tags-for-publishing)」タスクに進んでください。
 
@@ -549,9 +549,9 @@ YouTube チャンネルを作成するには：
 
 1. [https://www.youtube.com](https://www.youtube.com/) にアクセスし、Google アカウントの資格情報を使用してログインします。
 1. YouTube ページの右上隅にあるプロフィール写真（内側に文字が表示された、べた塗りの円が表示されている場合はその円）をクリックし、「**[!UICONTROL 設定]**」（丸い歯車アイコン）をクリックします。
-1. On the Overview page, under the Additional Features heading, click **[!UICONTROL See all my channels or create a new channel.]**
-1. On the Channels page, click **[!UICONTROL Create a new channel.]**
-1. On the Brand Account page, in the Brand Account Name field, enter a business name or any other channel name you choose where you want to publish your video assets, then click **[!UICONTROL Create.]**
+1. 概要ページの「追加機能」の見出しで、「**[!UICONTROL すべてのチャネルを表示するか、新しいチャネルを作成します。]**
+1. チャネルページで、[**[!UICONTROL 新しいチャネルを作成]をクリックします。]**
+1. ブランドアカウントページの「ブランドアカウント名」フィールドに、ビデオアセットの公開先として選択するビジネス名またはその他のチャネル名を入力し、「**[!UICONTROL 作成]**」をクリックします。
 
    この名前は、AEM で YouTube をセットアップするときに入力する必要があるので、覚えておいてください。
 
@@ -569,9 +569,9 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
 YouTube への公開のレプリケーションエージェントを有効化した後、Google Cloud アカウントへの接続をテストする場合は、「**[!UICONTROL 接続をテスト」をタップします。]**&#x200B;ブラウザーのタブに接続結果が表示されます。YouTube チャンネルを追加した場合は、それらのリストがテストの一部として表示されます。
 
-1. In the upper-left corner of AEM, click the AEM logo, then in the left rail, click **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author.]**
-1. On the Agents of Author page, click **[!UICONTROL YouTube Publish (youtube).]**
-1. On the toolbar, to the right of Settings, click **[!UICONTROL Edit.]**
+1. AEMの左上隅にあるAEMロゴをクリックし、左側のレールで&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL デプロイメント]**/**[!UICONTROL レプリケーション]**/**[!UICONTROL 作成者のエージェントをクリックします。]**
+1. 作成者のエージェントページで、「**[!UICONTROL YouTube投稿(youtube)」をクリックします。]**
+1. ツールバーの[設定]の右にある[**[!UICONTROL 編集]をクリックします。]**
 1. 「**[!UICONTROL 有効]**」チェックボックスをオンにして、レプリケーションエージェントをオンにします。
 1. 「**[!UICONTROL OK]**」をクリックします。
 
@@ -584,13 +584,13 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 * 6.4 以前の AEM で YouTube を設定するには、[6.4 以前の AEM での YouTube](/help/assets/video.md#setting-up-youtube-in-aem-before) の設定を参照してください。
 * AEM 6.4 以降で YouTube を設定するには、](#setting-up-youtube-in-aem-and-later)AEM 6.4 以降での YouTube の設定[を参照してください。
 
-#### AEM 6.4 以降での YouTube の設定 {#setting-up-youtube-in-aem-and-later}
+#### AEM 6.4 以降での YouTube の設定  {#setting-up-youtube-in-aem-and-later}
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]**(hammer icon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration.]**
+1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーアイコン）/**[!UICONTROL Cloud Services]**/**[!UICONTROL YouTube Publishing Configurationをタップします。]**
 1. 「**[!UICONTROL グローバル]**」をタップします（選択しないでください）。
 
-1. Near the upper-right corner of the global page, tap **[!UICONTROL Create.]**
+1. グローバルページの右上隅近くにある「**[!UICONTROL 作成」をタップします。]**
 1. YouTube 設定を作成ページの「Google Cloud Platform 設定」で、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
    このプロジェクト ID は、先ほど Google Cloud 設定をおこなったときに指定したものです。YouTube 設定を作成ページを開いたままにしておきます。このページには後で戻ります。
@@ -600,23 +600,23 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 1. 任意のテキストエディターを使用して、「[Google Cloud 設定](/help/assets/video.md#configuring-google-cloud-settings)」のタスクでダウンロードして保存しておいた JSON ファイルを開きます。
 1. この JSON テキスト全体を選択してコピーします。
 1. YouTube アカウント設定ダイアログボックスに戻ります。「**[!UICONTROL JSON 設定]**」フィールドに JSON テキストを貼り付けます。
-1. Near the upper-right corner of the page, tap **[!UICONTROL Save.]**
+1. ページの右上隅近くにある「**[!UICONTROL 保存」をタップします。]**
 
    次は、AEM で YouTube チャンネルをセットアップします。
 
-1. Tap **[!UICONTROL Add Channel.]**
+1. **[!UICONTROL 追加チャネルをタップします。]**
 1. 「チャネル名」フィールドに、前に「**[!UICONTROL YouTube への 1 つ以上のチャネルの追加]**」タスクで作成したチャネルの名前を入力します。
 
    オプションで、必要に応じて説明を追加できます。
 
-1. Tap **[!UICONTROL Add.]**
+1. **[!UICONTROL 追加.]**&#x200B;をタップします
 1. YouTube／Google 認証が表示されます。Google Cloud アカウントにまだログインしていない場合は、この手順をスキップしてください。
 
    * 前述の Google プロジェクト ID と JSON テキストに関連付けられた Google ユーザー名とパスワードを入力します。
    * アカウントに存在するチャネルの数によっては、2 つ以上の項目が表示されます。チャネルを選択してください。電子メールアドレスはチャネルではないので、選択しないでください。
    * 次のページで、「**[!UICONTROL 確定]**」をタップして、このチャネルへのアクセスを許可します。
 
-1. Tap **[!UICONTROL Allow.]**
+1. 「**[!UICONTROL 許可」をタップします。]**
 
    次は、公開用タグを設定します。
 
@@ -624,7 +624,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、AEM で利用可能なタグのリストを表示します。
 1. 1 つ以上のタグをタップして追加します。
 
-   To delete a tag you have added, select the tag, and tap **[!UICONTROL X.]**
+   追加したタグを削除するには、タグを選択し、**[!UICONTROL X.]**&#x200B;をタップします。
 
 1. 使用するタグの追加が終了したら、「**[!UICONTROL 保存]**
 
@@ -634,10 +634,10 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services.]**
-1. Under the Third Party Services heading, under YouTube, tap **[!UICONTROL Configure now.]**
+1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL デプロイメント]**/**[!UICONTROL Cloud Servicesをタップします。]**
+1. 「Third Party Services」という見出しの「YouTube」の下にある「**[!UICONTROL 今すぐ設定」をタップします。]**
 1. 設定を作成ダイアログボックスで、タイトル（必須）と名前（オプション）をそれぞれのフィールドに入力します。
-1. Tap **[!UICONTROL Create.]**
+1. 「**[!UICONTROL 作成」をタップします。]**
 1. YouTube アカウント設定ダイアログボックスで、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
    このプロジェクト ID は、先ほど [Google Cloud 設定をおこなった](/help/assets/video.md#configuring-google-cloud-settings)ときに指定したものです。YouTube アカウント設定ダイアログボックスを開いたままにしておきます。このダイアログボックスには後で戻ります。
@@ -645,7 +645,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 1. 任意のテキストエディターを使用して、「Google Cloud 設定」のタスクでダウンロードして保存しておいた JSON ファイルを開きます。
 1. この JSON テキスト全体を選択してコピーします。
 1. YouTube アカウント設定ダイアログボックスに戻ります。「**[!UICONTROL JSON 設定]**」フィールドに JSON テキストを貼り付けます。
-1. Tap **[!UICONTROL OK.]**
+1. 「**[!UICONTROL OK]**」をタップします。
 
    次は、AEM で YouTube チャンネルをセットアップします。
 
@@ -654,14 +654,14 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 
    オプションで、必要に応じて説明を追加できます。
 
-1. Tap **[!UICONTROL OK.]**
+1. 「**[!UICONTROL OK]**」をタップします。
 1. YouTube／Google 認証が表示されます。Google Cloud アカウントにまだログインしていない場合は、この手順をスキップしてください。
 
    * 前述の Google プロジェクト ID と JSON テキストに関連付けられた Google ユーザー名とパスワードを入力します。
    * アカウントに存在するチャネルの数によっては、2 つ以上の項目が表示されます。チャネルを選択してください。電子メールアドレスはチャネルではないので、選択しないでください。
    * 次のページで、「**[!UICONTROL 確定]**」をタップして、このチャネルへのアクセスを許可します。
 
-1. Tap **[!UICONTROL Allow.]**
+1. 「**[!UICONTROL 許可」をタップします。]**
 
    次は、公開用タグを設定します。
 
@@ -683,29 +683,29 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 
 アップロードしたビデオのデフォルト YouTube プロパティの設定を自動化するには：
 
-1. In the upper-left corner of AEM, click the AEM logo, then in the left rail, click **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas.]**
+1. AEMの左上隅にあるAEMロゴをクリックし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]**/**[!UICONTROL メタデータスキーマをクリックします。]**
 1. 「**[!UICONTROL デフォルト値」をクリックします]** （「デフォルト」の左にある選択ボックスにチェックマークを追加しないでください）。
-1. **[!UICONTROL デフォルトのページで]** 、 **[!UICONTROL ビデオの左側にあるチェックボックスをオンにし]**、「 **[!UICONTROL 編集」をクリックします。]**
+1. **[!UICONTROL デフォルト]**&#x200B;ページで、**[!UICONTROL ビデオ]**&#x200B;の左側のボックスを選択し、「**[!UICONTROL 編集]**」をクリックします。
 1. メタデータスキーマエディターページで、「**[!UICONTROL 詳細]**」タブをクリックします。
-1. Under the YouTube Publishing heading, click **[!UICONTROL YouTube Category.]**
+1. 「YouTubeパブリッシング」の見出しで、「**[!UICONTROL YouTubeカテゴリ」をクリックします。]**
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
 
    * 「**[!UICONTROL 選択肢]**」の下で、使用するデフォルト値（「人とブログ」または「科学と技術」など）を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
 
-1. Under the YouTube Publishing heading, click **[!UICONTROL YouTube Privacy.]**
+1. 「YouTube Publishing」という見出しの下にある「**[!UICONTROL YouTubeのプライバシー」をクリックします。]**
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
 
    * 「**[!UICONTROL 選択肢]**」の下で、使用するデフォルト値を選択してコピーします。選択肢は 2 つが 1 組になっています。1 組の下のフィールドは、コピーするデフォルト値（公開、非公開またはプライベート）です。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
 
-1. Near the upper-right corner of the Metadata Schema Editor page, click **[!UICONTROL Cancel.]**
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, click **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles.]**
+1. メタデータスキーマエディタページの右上隅近くにある「**[!UICONTROL キャンセル」をクリックします。]**
+1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]**/**[!UICONTROL メタデータプロファイルをクリックします。]**
 
-1. On the Metadata Profiles page, near the upper-right corner of the page, click **[!UICONTROL Create.]**
-1. In the Add Metadata Profile dialog box, in the **[!UICONTROL Profile title]** text field, enter the name `YouTube Video` then click **[!UICONTROL Create.]**
+1. メタデータプロファイルページの右上隅近くにある「作成」をクリックします。****
+1. [メタデータプロファイル追加]ダイアログボックスの[**[!UICONTROL プロファイルタイトル]**]テキストフィールドに`YouTube Video`と入力し、[**[!UICONTROL 作成]をクリックします。]**
 1. メタデータプロファイルエディターページで、「**[!UICONTROL 詳細]**」タブをクリックします。
 1. 次の手順を実行して、コピーした「YouTube への公開」の値を、プロファイルに追加します。
 
@@ -729,18 +729,18 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
    * 「**[!UICONTROL フィールドラベル]**」をクリックして、コンポーネントを選択します。
    * ページの右側にある「設定」タブで、先ほどコピーした「YouTube への公開」の値（フィールドラベル値と、プロパティにマッピング値）をフォームのそれぞれのフィールドに貼り付けます。選択肢値を「デフォルト値」フィールドに貼り付けます。
 
-1. Near the upper-right corner of the page, click **[!UICONTROL Save.]**
+1. ページの右上隅近くにある「**[!UICONTROL 保存]**」をクリックします。
 1. YouTube への公開メタデータプロファイルを、ビデオのアップロード先フォルダーに適用します。メタデータプロファイルとビデオプロファイルを設定する必要があります。
 
    詳しくは、[メタデータプロファイル](/help/assets/metadata-config.md#metadata-profiles)と[ビデオプロファイル](/help/assets/video-profiles.md)を参照してください。
 
-### YouTube チャンネルへのビデオの公開 {#publishing-videos-to-your-youtube-channel}
+### YouTube チャンネルへのビデオの公開  {#publishing-videos-to-your-youtube-channel}
 
 次は、前の手順で追加したタグを、ビデオアセットに関連付けます。このプロセスによって、AEM は、YouTube チャンネルに公開するアセットを把握します。
 
 >[!NOTE]
 >
->Dynamic Media - Scene7 モードで実行する場合は、即時公開しても YouTube に自動的には公開されないことに注意してください。When Dynamic Media - Scene7 mode is set up, there are two publish options to choose from: **[!UICONTROL Immediately]** or **[!UICONTROL Upon Activation.]**
+>Dynamic Media - Scene7 モードで実行する場合は、即時公開しても YouTube に自動的には公開されないことに注意してください。ダイナミックメディア —Scene7モードが設定されている場合、次の2つの公開オプションから選択できます。**[!UICONTROL すぐに]**&#x200B;または&#x200B;**[!UICONTROL アクティベーション時。]**
 >
 >**[!UICONTROL 即時公開する]**&#x200B;の場合、アップロードされたアセットは、IPS と同期された後、配信システムに自動的に公開されます。これは Dynamic Media には当てはまりますが、YouTube には当てはまりません。YouTube に公開するには、AEM オーサーを介して公開する必要があります。
 
@@ -756,15 +756,15 @@ YouTube チャンネルにビデオを公開するには：
 
 1. AEM で、YouTube チャンネルに公開するビデオアセットの場所に移動します。
 1. ビデオアセット（アダプティブビデオセット）を選択します。
-1. On the toolbar, click **[!UICONTROL Properties.]**
+1. ツールバーで、**[!UICONTROL 「プロパティ」をクリックします。]**
 1. 「基本」タブの「メタデータ」で、「タグ」フィールドの右側にある「**[!UICONTROL 選択ダイアログを開く]**」をクリックします。
 1. タグを選択ページで、使用するタグに移動し、1 つ以上のタグを選択します。
 
    タグは YouTube チャンネルに関連付ける必要があります。
 
-1. In the upper-right corner of the page, click **[!UICONTROL Select.]**
-1. In the upper-right corner of the video&#39;s properties page, click **[!UICONTROL Save and Close.]**
-1. On the toolbar, click **[!UICONTROL Quick Publish.]**
+1. ページの右上隅にある「**[!UICONTROL 選択」をクリックします。]**
+1. ビデオのプロパティページの右上隅にある「**[!UICONTROL 保存して閉じる]**」をクリックします。
+1. ツールバーで、[**[!UICONTROL クイック公開]をクリックします。]**
 
    [AEM Sites での公開管理の使用](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)も参照してください。
 
@@ -794,11 +794,11 @@ Web アプリケーションに YouTube URL をリンクするには：
 
    YouTube URL をコピーするには、*その前に*&#x200B;ビデオアセットを YouTube に&#x200B;*公開しておく*&#x200B;必要があります。
 
-1. On the toolbar, click **[!UICONTROL Properties.]**
+1. ツールバーで、**[!UICONTROL 「プロパティ」をクリックします。]**
 1. 「**[!UICONTROL 詳細]**」タブをクリックします。
 1. 「YouTube への公開」の「YouTube URL リスト」で、URL テキストを選択し、Web ブラウザーにコピーしてアセットをプレビューするか、Web コンテンツページに追加します。
 
-### ビデオを非公開にして YouTube から削除 {#unpublishing-videos-to-remove-them-from-youtube}
+### ビデオを非公開にして YouTube から削除  {#unpublishing-videos-to-remove-them-from-youtube}
 
 AEM でビデオアセットを非公開にすると、そのビデオは YouTube から削除されます。
 
@@ -816,10 +816,10 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 1. YouTube チャンネルで非公開にするビデオアセットの場所に移動します。
 1. アセット選択モードで、1 つ以上の公開済みビデオアセットを選択します。
-1. ツールバーで「**[!UICONTROL 公開を管理」をクリックします。]**&#x200B;場合によっては、ツールバーの 3 つのドット（...）アイコンon the toolbar to see **[!UICONTROL Manage Publication.]**
-1. On the Manage Publication page, tap **[!UICONTROL Unpublish.]**
-1. In the upper-right corner of the page, tap **[!UICONTROL Next.]**
-1. In the upper-right corner of the page, tap **[!UICONTROL Unpublish.]**
+1. ツールバーで「**[!UICONTROL 公開を管理」をクリックします。]**&#x200B;場合によっては、ツールバーの 3 つのドット（...）アイコンツールバーに&#x200B;**[!UICONTROL パブリケーションの管理]**&#x200B;が表示されます。
+1. [パブリケーションの管理]ページで、[**[!UICONTROL 非公開]をタップします。]**
+1. ページの右上隅にある「**[!UICONTROL 次へ」をタップします。]**
+1. ページの右上隅にある「**[!UICONTROL 非公開」をタップします。]**
 
 ## ビデオエンコーディングと YouTube への公開の進行状況の監視 {#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -839,7 +839,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
-   この列は、デフォルトでは表示されません。To enable the column, select **[!UICONTROL View Settings]** from the views drop-down menu, and add the **[!UICONTROL Processing Status]** column and tap or click **[!UICONTROL Update.]**
+   この列は、デフォルトでは表示されません。列を有効にするには、「表示」ドロップダウンメニューから「**[!UICONTROL 表示設定]**」を選択し、「**[!UICONTROL 処理ステータス]**」列を追加して、「**[!UICONTROL 更新]**」をタップまたはクリックします。
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
@@ -860,7 +860,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
-1. For workflows in progress, see Workflow Instances available from **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Instances.]**
+1. 進行中のワークフローについては、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL インスタンスから使用できるワークフローインスタンスを参照してください。]**
 
    >[!NOTE]
    >
@@ -868,7 +868,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   Select the instance and tap or click **[!UICONTROL Open History.]**
+   インスタンスを選択し、「**[!UICONTROL 履歴を開く」をタップまたはクリックします。]**
 
    ![chlimage_1-434](assets/chlimage_1-434.png)
 
@@ -888,9 +888,9 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
    >
    >
    >
-   >    * Apache Sling Job Queue Configuration
-   >    * Adobe Granite Workflow External Process Job Handler
-   >    * Granite Workflow Timeout Queue
+   >    * Apache Slingジョブキューの設定
+   >    * AdobeGraniteワークフロー外部プロセスジョブハンドラ
+   >    * Graniteワークフロータイムアウトキュー
 
    >
    >
@@ -906,7 +906,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 1. 中止またはエラーが発生したワークフロージョブに関する電子メール通知を受け取ることができます。これらの電子メール通知は、管理者が設定できます。詳しくは、[電子メール通知の設定](#configuring-e-mail-notifications)を参照してください。
 
-#### 電子メール通知の設定 {#configuring-e-mail-notifications}
+#### 電子メール通知の設定  {#configuring-e-mail-notifications}
 
 >[!NOTE]
 >
@@ -914,18 +914,18 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 通知の設定方法は、エンコーディングジョブに関する通知と、YouTube への公開ジョブに関する通知のどちらを希望しているかによって異なります。
 
-* For encoding jobs, you can access the configuration page for all AEM workflow email notifications at **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** and by searching for **[!UICONTROL Day CQ Workflow Email Notification Service.]** 「AEMでの電子メール通知の [設定](/help/sites-administering/notification.md)」を参照してください。 You can select or clear the check boxes for **[!UICONTROL Notify on Abort]** or **[!UICONTROL Notify on Complete]** accordingly.
+* エンコーディングジョブの場合は、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;で、**[!UICONTROL Day CQ Workflow Email Notification Serviceを検索して、AEMのすべての電子メール通知の設定ページにアクセスできます。]** 「AEMでの電子メール通知の [設定](/help/sites-administering/notification.md)」を参照してください。「中止時に通知&#x200B;****」または「**[!UICONTROL 完了時に通知]**」のチェックボックスをオンまたはオフにできます。
 
 * YouTube への公開ジョブの場合、次の手順に従います。
 
-1. In AEM, tap **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models.]**
+1. AEMで、**[!UICONTROL ツール]**/**[!UICONTROL ワークフロー]**/**[!UICONTROL モデルをタップします。]**
 1. ワークフローモデルページで、「]**YouTube に公開**[!UICONTROL 」を選択して、ツールバーの「]**編集**[!UICONTROL 」をタップします。
-1. Near the upper-right corner of the Publish to YouTube workflow page, tap **[!UICONTROL Edit.]**
+1. YouTubeに投稿ワークフローページの右上隅近くにある「**[!UICONTROL 編集」をタップします。]**
 1. 「YouTube のアップロード」コンポーネントにマウスポインターを置き、1 回タップしてインラインツールバーを表示します。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
-1. インラインツールバーで、設定アイコン（レンチ）をタップします。Click the **[!UICONTROL Arguments]** tab.
+1. インラインツールバーで、設定アイコン（レンチ）をタップします。「**[!UICONTROL 引数]**」タブをクリックします。
 
    ![6_5_publishtoyoutubeworkflow-configurationicon](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
@@ -946,7 +946,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
    >これらの電子メールは YouTube に固有で、かつ一般的なワークフロー電子メール通知です。結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つの電子メール通知セットを受け取ることができます。
 
 1. 作業が終了したら、ダイアログボックスの右上隅にある&#x200B;]**完了**[!UICONTROL &#x200B;アイコン（チェックマーク）をタップします。
-1. On the Publish to YouTube workflow page, near the upper-right corner, tap **[!UICONTROL Sync.]**
+1. YouTubeに投稿ワークフローページの右上隅近くにある「**[!UICONTROL 同期」をタップします。]**
 
 ## ビデオレポートの表示 {#viewing-video-reports}
 
@@ -976,23 +976,24 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 デフォルトでは、ビデオレポートを最初に開いたときに、今月初めから今月の今日の日付までのビデオデータが表示されます。ただし、このデフォルトの日付範囲を上書きして、独自の日付範囲を指定することができます。次回ビデオレポートを開くと、指定した日付範囲が使用されます。
 
-ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。If the Publish server is not set up, you can still publish to see the video report, however, you will need to return to the Dynamic Media Cloud Configuration and tap **[!UICONTROL OK.]**
+ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。公開サーバーが設定されていない場合でも、公開してビデオレポートを表示することはできますが、ダイナミックメディアクラウド設定に戻り、「**[!UICONTROL OK」をタップする必要があります。]**
 
 ビデオレポートを表示するには：
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports.]**
+1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]**/**[!UICONTROL ビデオレポート]**&#x200B;をタップします。
 1. ビデオレポートページで、次のいずれかの操作をおこないます。
 
-   * 右上隅近くにある「**ビデオレポートの更新**」アイコンをタップします。レポートの終了日が現在の日付の場合にのみ、[更新]を使用する必要があります。これにより、前回レポートを実行した後に発生したビデオ追跡を確実に確認できます。
+   * 右上隅近くにある「**ビデオレポートの更新**」アイコンをタップします。
+レポートの終了日が現在の日付の場合にのみ、[更新]を使用する必要があります。これにより、前回レポートを実行した後に発生したビデオ追跡を確実に確認できます。
 
-   * Near the upper-right corner, tap the **Date Picker **icon.
-Specify the beginning and end date range for which you want video data, and then tap **[!UICONTROL Run Report.]**
+   * 右上隅近くにある「**日付選択**」アイコンをタップします。
+ビデオデータの開始日と終了日の範囲を指定し、「**[!UICONTROL レポートを実行」をタップします。]**
 
    「トップの指標」グループボックスに、サイト全体にわたるすべての公開済みビデオに関する様々な集計値が表示されます。
 
 1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
 
-### Scene7 HTML5 ビューア SDK を使用して作成したビデオビューアに基づくビデオレポートの表示 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### Scene7 HTML5 ビューア SDK を使用して作成したビデオビューアに基づくビデオレポートの表示  {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
 Dynamic Media で標準提供されているビデオビューアを使用している場合、または標準提供のビデオビューアからカスタムのビューアプリセットを作成した場合は、ビデオレポートを表示するための追加手順は必要ありません。これに対して、Scene7 HTML5 ビューア SDK から独自のビデオビューアを作成した場合は、次の手順を実行して、ビデオビューアが Dynamic Media のビデオレポートにトラッキングイベントを送信するように設定する必要があります。
 
@@ -1007,7 +1008,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
 Scene7 HTML5 ビューア SDK を使用して作成したビデオビューアに基づいてビデオレポートを表示するには：
 
 1. 公開済みビデオアセットの場所に移動します。
-1. Near the upper-left corner of the asset&#39;s page, from the drop-down list, select **[!UICONTROL Viewers.]**
+1. アセットのページの左上隅近くにあるドロップダウンリストで、「**[!UICONTROL ビューア」を選択します。]**
 1. 任意のビデオビューアプリセットを選択し、埋め込みコードをコピーします。
 1. 埋め込みコード内の次の行を探します。
 
@@ -1015,7 +1016,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
 
    `config2` パラメーターは、HTML5 ビューアでの追跡を有効にします。また、ビデオレポートの設定情報や、お客様固有の Adobe Analytics 設定を含む、会社固有のプリセットでもあります。
 
-   config2パラメータの正しい値は、「**Embed Code **」と「**URL **」コピー関数の両方にあります。**URL **commandのコピー元のURLの中で、検索するパラメータは `&config2=<value>` です。 この値はほぼ常に `companypreset` ですが、一部のケースでは `companypreset-1`、`companypreset-2` などとなっていることもあります。
+   config2パラメータの正しい値は、「**Embed Code **」と「**URL **」コピー関数の両方にあります。**URL **commandのコピーからのURL内で、検索するパラメータは`&config2=<value>`です。 この値はほぼ常に `companypreset` ですが、一部のケースでは `companypreset-1`、`companypreset-2` などとなっていることもあります。
 
 1. カスタムのビデオビューアコードで、次の操作をおこなって、ビューアページに AppMeasurementBridge.jsp を追加します。
 
@@ -1079,7 +1080,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Scene7 画�
 
    良い結果を得るためには、このツールを Explorer 9 以上、Google Chrome、または Safari で使用してください。
 
-   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. [アセットの URL の取得](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)を参照して、ビデオファイルそのものの URL を取得し、それを「**[!UICONTROL ビデオファイルの URL を入力」フィールドに貼り付けてください。]**&#x200B;その後、Internet Explorer、Chrome、または Safari で、ビデオを再生できます。
+   ツールの「**[!UICONTROL ビデオファイルの URL を入力]**」フィールドにビデオファイルの URL をコピーして貼り付け、「**[!UICONTROL 読み込み]**」をクリックします。[アセットの URL の取得](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)を参照して、ビデオファイルそのものの URL を取得し、それを「**[!UICONTROL ビデオファイルの URL を入力」フィールドに貼り付けてください。]**&#x200B;その後、Internet Explorer、Chrome、または Safari で、ビデオを再生できます。
 
    ここで、サイトの画面に表示される指示に従って、WebVTT ファイルを作成して保存します。終了したら、キャプションファイルの内容をコピーし、空のテキストエディターに貼り付けて、ファイル拡張子 .vtt を付けて保存します。
 
@@ -1118,7 +1119,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Scene7 画�
 >
 >ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーを必ずしもサポートしているとは限りません。
 
-必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自の HTML5 ビューアの作成方法について詳しくは、『Adobe Scene Viewer SDK for HTML5』の「Customizing Behavior Using Modifiers」で `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber`7 クラスの説明を参照してください。Adobe Scene7 Viewer SDK は、[Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードして入手できます。
+必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自の HTML5 ビューアの作成方法について詳しくは、『Adobe Scene7 Viewer SDK for HTML5』の「Customizing Behavior Using Modifiers」で `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber`7 クラスの説明を参照してください。Adobe Scene7 Viewer SDK は、[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードして入手できます。
 
  ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、この WebVTT ファイルは、WebVTT キャプションファイルと分けておく必要があります（キャプションファイルを使用する場合）。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
@@ -1188,7 +1189,7 @@ Cost-efficient access to rapidly evolving technology.
      </tbody>
    </table>
 
-## About video thumbnails in Dynamic Media - Scene7 mode {#about-video-thumbnails-in-dynamic-media-scene-mode}
+## ダイナミックメディア —Scene7モード{#about-video-thumbnails-in-dynamic-media-scene-mode}のビデオサムネールについて
 
 ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオをクリックする気になるようなものにする必要があります。
 
@@ -1202,7 +1203,7 @@ AEM 内のすべてのビデオには、サムネールを関連付ける必要�
 
 また、[Dynamic Media - ハイブリッドモードのビデオサムネールについて](#about-video-thumbnails-in-dynamic-media-hybrid-mode)も参照してください。
 
-### カスタムビデオサムネールの追加 {#adding-a-custom-video-thumbnail}
+### カスタムビデオサムネールの追加  {#adding-a-custom-video-thumbnail}
 
 これらの手順は、「Dynamicmedia_Scene7」モードで動作している Dynamic Media にのみ適用されます。
 
@@ -1218,23 +1219,23 @@ AEM 内のすべてのビデオには、サムネールを関連付ける必要�
 1. サムネール画像を変更するアップロード済みビデオアセットに移動します。
 1. **[!UICONTROL リスト表示]**&#x200B;または&#x200B;**[!UICONTROL カード表示]**&#x200B;のアセット選択モードで、ビデオアセットをタップします。
 1. ツールバーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;アイコン（丸で囲まれた「i」）をタップします。
-1. On the video&#39;s Properties page, tap **[!UICONTROL Change Thumbnail.]**
+1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更」をタップします。]**
 1. サムネールを変更ページで、次のいずれかの操作をおこないます。
 
    * ビデオのフレームを新しいサムネールとして使用するには：
 
-      * On the toolbar, tap **[!UICONTROL Select Frame from video.]**
+      * ツールバーで、**[!UICONTROL 「ビデオからフレームを選択」をタップします。]**
       * 「再生」ボタンをタップし、ビデオの新しいサムネールとしてキャプチャするフレームの「一時停止」ボタンをタップします。
    * 画像アセットを新しいサムネールとして使用するには：
 
-      * On the toolbar, tap **[!UICONTROL Select Thumbnail from Assets.]**
-      * Tap **[!UICONTROL Select Thumbnail.]**
+      * ツールバーで、**[!UICONTROL 「アセットからサムネールを選択」をタップします。]**
+      * 「**[!UICONTROL サムネールを選択」をタップします。]**
       * 既にアップロードして公開した画像アセットのうち、使用するものを選択します。アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
-      * Select the image asset, then tap **[!UICONTROL Select.]**
+      * 画像アセットを選択し、「**[!UICONTROL 選択」をタップします。]**
 
 
-1. On the Change Thumbnail page, tap **[!UICONTROL Save Change.]**
-1. On the video&#39;s Properties page, in the upper-right corner, tap **[!UICONTROL Save &amp; Close.]**
+1. サムネールを変更ページで、「変更を保存」をタップします。****
+1. ビデオのプロパティページの右上隅にある「**[!UICONTROL 保存して閉じる」をタップします。]**
 
 ## Dynamic Media - ハイブリッドモードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
@@ -1248,7 +1249,7 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 
 また、[Dynamic Media - Scene7 モードのビデオサムネールについて](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)も参照してください。
 
-### ビデオサムネールの追加 {#adding-a-video-thumbnail}
+### ビデオサムネールの追加  {#adding-a-video-thumbnail}
 
 これらの手順は、ハイブリッドモードで動作している Dynamic Media にのみ適用されます。
 
@@ -1257,13 +1258,13 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 1. ビデオサムネールを追加する、アップロードしたビデオアセットに移動します。
 1. リスト表示またはカード表示のアセット選択モードで、ビデオアセットをタップします。
 1. ツールバーの&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコン（丸で囲まれた「i」）をタップします。
-1. On the video&#39;s Properties page, tap **[!UICONTROL Change Thumbnail.]**
-1. On the Change Thumbnail page, on the toolbar, tap **[!UICONTROL Select Frame.]**
+1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更」をタップします。]**
+1. サムネールを変更ページのツールバーで、**[!UICONTROL 「フレームを選択」をタップします。]**
 
    デフォルトの時間間隔またはカスタマイズした時間間隔に基づき、Dynamic Media によって一連のサムネール画像がビデオから生成されます。
 
 1. 生成されたサムネール画像をプレビューした後、ビデオに追加する画像を選択します。
-1. Tap **[!UICONTROL Save Change.]**
+1. 「**[!UICONTROL 変更を保存」をタップします。]**
 
    ビデオのサムネール画像が更新され、選択したサムネールが使用されます。後で、サムネール画像を変更する場合は、**[!UICONTROL サムネールを変更]**&#x200B;ページに戻って、新しい画像を選択できます。
 
@@ -1271,7 +1272,7 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 
    詳しくは、[ビデオサムネールが生成されるデフォルトの時間間隔の設定](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)を参照してください。
 
-#### ビデオサムネールが生成されるデフォルトの時間間隔の設定 {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
+#### ビデオサムネールが生成されるデフォルトの時間間隔の設定  {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
 
 新しいデフォルトの時間間隔を設定して保存すると、この変更は、今後アップロードするビデオに対してのみ自動的に反映されます。以前にアップロードしたビデオには、新しいデフォルトは自動的に適用されません。既存のビデオについては、サムネールを再生成する必要があります。
 
@@ -1279,9 +1280,9 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 
 **ビデオサムネールが生成されるデフォルトの時間間隔を設定するには：**
 
-1. In AEM, tap **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite.]**
+1. AEMで、**[!UICONTROL ツール]**/**[!UICONTROL 一般]**/**[!UICONTROL CRXDE Liteをタップします。]**
 
-1. In the CRXDE Lite page, in the directory panel on the left, navigate t `o etc/dam/imageserver/configuration/jcr:content/settings.`
+1. CRXDE Liteページの左側のディレクトリパネルで、`o etc/dam/imageserver/configuration/jcr:content/settings.`に移動します。
 
    このディレクトリパネルが表示されない場合は、「ホーム」タブの左側にある >> アイコンをタップします。
 
@@ -1306,10 +1307,10 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 1. カスタムビデオサムネールを追加する、アップロードしたビデオアセットに移動します。
 1. リスト表示またはカード表示のアセット選択モードで、ビデオアセットをタップします。
 1. ツールバーの&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコン（丸で囲まれた「i」）をタップします。
-1. On the video&#39;s Properties page, tap **[!UICONTROL Change Thumbnail.]**
-1. On the Change Thumbnail page, on the toolbar, tap **[!UICONTROL Upload New Thumbnail.]**
+1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更」をタップします。]**
+1. サムネールを変更ページのツールバーで、**[!UICONTROL 新しいサムネールをアップロード]**&#x200B;をタップします。
 1. 使用するサムネール画像に移動して、その画像を選択します。次に、「**[!UICONTROL 開く]**」をタップして、AEM への画像のアップロードを開始します。。アップロード後に、必ず画像を公開してください。
-1. After you have successfully uploaded and published the image, in the Change Thumbnail page, tap **[!UICONTROL Save Changes.]**
+1. 画像のアップロードと公開が完了したら、サムネールを変更ページで、「変更を保存」をタップします。****
 
    カスタムサムネールがビデオに追加されます。
 
