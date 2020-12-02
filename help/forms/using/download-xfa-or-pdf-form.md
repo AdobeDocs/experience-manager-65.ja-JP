@@ -17,7 +17,7 @@ ht-degree: 85%
 ---
 
 
-# XFA または PDF フォームテンプレートのダウンロード {#download-an-xfa-or-a-pdf-form-template}
+# XFA または PDF フォームテンプレートのダウンロード  {#download-an-xfa-or-a-pdf-form-template}
 
 ダウンロード操作では、その名のとおり、リポジトリからローカルシステムへとフォームをエクスポートすることができます。アップロード操作と組み合わせることにより、リポジトリから別のリポジトリへとフォームを移行することができます。
 
@@ -29,15 +29,15 @@ AEM Forms では、ダウンロード操作は次のアセットタイプに対�
 
 AEM Forms では、これらのフォームタイプを個別にダウンロードするか、サポートされているフォームを 1 つまたは複数含むフォルダでダウンロードすることができます。
 
-Aside from these assets, you can download the `Resource` type of asset if it is present in a folder. この機能は、XFA フォームによって参照されているリソースを、フォームとともにダウンロードできるようにするためのものです。
+これらのアセットの他に、フォルダー内に存在する場合は`Resource`タイプのアセットをダウンロードできます。 この機能は、XFA フォームによって参照されているリソースを、フォームとともにダウンロードできるようにするためのものです。
 
 ## 1 つまたは複数のフォームのダウンロード {#download-one-or-more-forms}
 
-1. Log in to the AEM Forms user interface at `https://<server>:<port>/aem/forms.html`.
+1. `https://<server>:<port>/aem/forms.html`のAEM Formsユーザーインターフェイスにログインします。
 
 1. ダウンロードしたいアセットの場所に移動します。
 
-1. アセットを選択します。ツールバーの **[!UICONTROL 「]** aem6forms_download ![](assets/aem6forms_download.png) 」アイコンをクリックします。
+1. アセットを選択します。ツールバーの&#x200B;**[!UICONTROL ダウンロード]** ![aem6forms_download](assets/aem6forms_download.png)アイコンをクリックします。
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ Aside from these assets, you can download the `Resource` type of asset if it is 
 
    フォルダーをダウンロードする場合、フォルダー内のサポートされているアセットが、既存の階層にダウンロードされます。
 
-   The ZIP file is saved to the `Downloads` folder on your system.
+   ZIPファイルは、システム上の`Downloads`フォルダーに保存されます。
 
 ## アップロード操作に関する考慮事項 {#related-considerations-for-the-upload-operation}
 
