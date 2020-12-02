@@ -41,7 +41,7 @@ ht-degree: 77%
 
 通常、テンプレートは AEM Forms Designer を使用して作成します。これらのテンプレートは、出力サービスの `generatePDFOutput` と `generatePrintedOutput` の各 API により、PDF、ポストスクリプト、ZPL や PCL などの様々な形式に直接変換することができます。
 
-The `generatePDFOutput` operation generates PDFs, while the `generatePrintedOutput` operation generates PostScript, ZPL, and PCL formats. 各演算の最初のパラメータは、テンプレートファイルの名前（例えば、`ExpenseClaim.xdp`）、またはテンプレートが含まれているドキュメントオブジェクトのいずれかを受け取ります。テンプレートファイルの名前を指定した場合は、テンプレートを含むフォルダへのパスとしてのコンテンツルートも指定します。You can specify content root using either the `PDFOutputOptions` or the `PrintedOutputOptions` parameter. これらのパラメータを使用して指定できる他のオプションの詳細については、Javadoc を参照してください。
+`generatePDFOutput`操作はPDFを生成し、`generatePrintedOutput`操作はPostScript、ZPL、およびPCL形式を生成します。 各演算の最初のパラメータは、テンプレートファイルの名前（例えば、`ExpenseClaim.xdp`）、またはテンプレートが含まれているドキュメントオブジェクトのいずれかを受け取ります。テンプレートファイルの名前を指定した場合は、テンプレートを含むフォルダへのパスとしてのコンテンツルートも指定します。コンテンツルートは、`PDFOutputOptions`または`PrintedOutputOptions`パラメーターを使用して指定できます。 これらのパラメータを使用して指定できる他のオプションの詳細については、Javadoc を参照してください。
 
 2番目のパラメータは、出力ドキュメントを生成しながら、テンプレートに結合された XML 文書を受け取ります。
 
@@ -59,10 +59,10 @@ The `generatePDFOutput` operation generates PDFs, while the `generatePrintedOutp
 
 2番目のパラメータは別のマップです。この値は、XML データを含むドキュメントオブジェクトです。この鍵は、最初のパラメータに指定したものと同じものです。
 
-The third parameter for `generatePDFOutputBatch` or `generatePrintedOutputBatch` is of type `PDFOutputOptions` or `PrintedOutputOptions` respectively.
+`generatePDFOutputBatch`または`generatePrintedOutputBatch`の3番目のパラメーターは、それぞれ`PDFOutputOptions`型または`PrintedOutputOptions`型です。
 
-The parameter types are the same as types of the parameters for the `generatePDFOutput` and `generatePrintedOutput` operations and have the same effect.
+パラメーターの型は、`generatePDFOutput`操作と`generatePrintedOutput`操作のパラメーターの型と同じで、同じ効果を持ちます。
 
-The fourth parameter is of type `BatchOptions`, which you use to specify whether a separate file can be generated for each record. このパラメータのデフォルト値は false です。
+4番目のパラメータは`BatchOptions`型で、レコードごとに別のファイルを生成できるかどうかを指定するために使用します。 このパラメータのデフォルト値は false です。
 
-Both `generatePrintedOutputBatch` and `generatePDFOutputBatch` return a value of type `BatchResult`. 値には、生成されたドキュメントのリストが含まれています。また、XML形式のメタデータドキュメントも含まれており、この中には、生成された各ドキュメントに関連する情報が収められています。
+`generatePrintedOutputBatch`と`generatePDFOutputBatch`の両方が、`BatchResult`型の値を返します。 値には、生成されたドキュメントのリストが含まれています。また、XML形式のメタデータドキュメントも含まれており、この中には、生成された各ドキュメントに関連する情報が収められています。
