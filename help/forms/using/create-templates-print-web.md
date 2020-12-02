@@ -21,7 +21,7 @@ ht-degree: 66%
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-This tutorial is a step in the [Create your first Interactive Communication](/help/forms/using/create-your-first-interactive-communication.md) series. チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
+このチュートリアルは、[最初の対話型通信を作成する](/help/forms/using/create-your-first-interactive-communication.md)シリーズのステップです。 チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
 インタラクティブ通信を作成するには、AEM サーバーに用意されている印刷チャネルと Web チャネル用のテンプレートを入手する必要があります。
 
@@ -35,7 +35,7 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 * XDP テンプレートを AEM Forms サーバーにアップロードする
 * Web チャネル用のテンプレートを作成し有効化する
 
-## 印刷チャネル用のテンプレートの作成 {#create-template-for-print-channel}
+## 印刷チャネル用のテンプレートの作成  {#create-template-for-print-channel}
 
 次のタスクを使用して、インタラクティブ通信の印刷チャネル用のテンプレートの作成と管理を行います。
 
@@ -43,9 +43,9 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 * [AEM Forms サーバーに XDP テンプレートをアップロードする](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)
 * [レイアウトフラグメント用に XDP テンプレートを作成する](../../forms/using/create-templates-print-web.md#create-xdp-template-for-layout-fragments)
 
-### Forms Designer を使用して XDP テンプレートを作成する {#create-xdp-template-using-forms-designer}
+### Forms Designer を使用して XDP テンプレートを作成する  {#create-xdp-template-using-forms-designer}
 
-Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following subforms in the XDP template:
+[使用例](/help/forms/using/create-your-first-interactive-communication.md)と[解剖学](/help/forms/using/planning-interactive-communications.md)に基づいて、XDPテンプレートに次のサブフォームを作成します。
 
 * 請求明細：ドキュメントフラグメントが含まれます
 * 顧客の詳細：ドキュメントフラグメントを含む
@@ -61,24 +61,24 @@ XDP ファイルを Forms サーバーにアップロード後、これらのサ
 
 印刷チャネル用に XDP テンプレートを作成するには、次の手順を実行します。
 
-1. Open the Forms Designer, select **File** > **New** > **Use a blank form,** tap **Next**, and then tap **Finish** to open the form for template creation.
+1. Formsデザイナーを開き、**ファイル**/**新規**/**空のフォームを使用し、**「**次へ**」をタップしてから、**「**&#x200B;完了」をタップしてテンプレート作成用にフォームを開きます。
 
    「**オブジェクトライブラリ**」および「**オブジェクト**」オプションが **Window** メニューから選択されていることを確認します。
 
 1. **サブフォーム**&#x200B;コンポーネントを&#x200B;**オブジェクトライブラリ**&#x200B;からフォームにドラッグアンドドロップします。
 1. 右側のペインの「**オブジェクト**」ウィンドウのサブフォームを表示するには、「サブフォーム」を選択します。
-1. Select the **Subform** tab and select **Flowed** from the **Content** drop-down list. 長さを調整するには、サブフォームの左のエンドポイントをドラッグします。
+1. 「**サブフォーム**」タブを選択し、**コンテンツ**&#x200B;ドロップダウンリストから「**フローレイアウト**」を選択します。 長さを調整するには、サブフォームの左のエンドポイントをドラッグします。
 1. 「**連結**」タブで、次の手順を実行します。
 
-   1. Specify **BillDetails** in the **Name** field.
+   1. 「**名前**」フィールドに&#x200B;**BillDetails**&#x200B;を指定します。
 
    1. 「**データ連結**」ドロップダウンリストから「**データ連結なし**」を選択します。
 
    ![Designerサブフォーム](assets/forms_designer_subform_new.png)
 
-1. Similarly, select the root subform, select the **Subform** tab, and select **Flowed** from the **Content** drop-down list. 「**連結**」タブで、次の手順を実行します。
+1. 同様に、ルートサブフォームを選択し、「**サブフォーム**」タブを選択し、**コンテンツ**&#x200B;ドロップダウンリストから「**フローレイアウト**」を選択します。 「**連結**」タブで、次の手順を実行します。
 
-   1. Specify **TelecaBill** in the **Name** field.
+   1. 「**名前**」フィールドに「**TelecaBill**」と指定します。
 
    1. 「**データ連結**」ドロップダウンリストから「**データ連結なし**」を選択します。
 
@@ -89,7 +89,7 @@ XDP ファイルを Forms サーバーにアップロード後、これらのサ
    * BillDetails
    * CustomerDetails
    * BillSummary
-   * Summary - Select the **Subform** tab and select **Positioned** from the **Content** drop-down list for this subform. 次のサブフォームを&#x200B;**概要**&#x200B;サブフォームに挿入します。
+   * 概要 — 「**サブフォーム**」タブを選択し、このサブフォームの&#x200B;**コンテンツ**&#x200B;ドロップダウンリストから「**位置固定**」を選択します。 次のサブフォームを&#x200B;**概要**&#x200B;サブフォームに挿入します。
 
       * 料金
       * グラフ
@@ -99,10 +99,10 @@ XDP ファイルを Forms サーバーにアップロード後、これらのサ
 
    時間を節約するには、既存のサブフォームをコピー＆ペーストして新しいサブフォームを作成することもできます。
 
-   To shift the **Charts** subform to the right of the Charges subform, select the **Charts** subform from the left pane, select the **Layout** tab, and specify a value for **AnchorX** field. 指定する値は、**料金**&#x200B;サブフォームの「**幅**」フィールドの値よりも大きい値である必要があります。Select the **Charges** subform and select the **Layout** tab to view the value of the **Width** field.
+   **Charges**&#x200B;サブフォームをChargesサブフォームの右に移動するには、左ペインから「**Charts**」サブフォームを選択し、「**Layout**」タブを選択して、**AnchorX**&#x200B;フィールドの値を指定します。 指定する値は、**料金**&#x200B;サブフォームの「**幅**」フィールドの値よりも大きい値である必要があります。「**課金**」サブフォームを選択し、「**レイアウト**」タブを選択して、**幅**&#x200B;フィールドの値を表示します。
 
 1. **テキスト**&#x200B;オブジェクトを、**オブジェクトライブラリ**&#x200B;からフォームにドラッグアンドドロップし、ボックスに **Dial XXXX to subscribe** とテキストを入力します。
-1. Right-click the text object in the left pane, select **Rename Object**, and enter the name of the text object as **Subscribe**.
+1. 左側のペインでテキストオブジェクトを右クリックし、「**オブジェクト名を変更**」を選択して、テキストオブジェクトの名前を&#x200B;**購読**&#x200B;に入力します。
 
    ![XDPテンプレート](assets/print_xdp_template_subform_new.png)
 
@@ -113,24 +113,24 @@ XDP ファイルを Forms サーバーにアップロード後、これらのサ
 
    1. 「**保存**」をタップします。
 
-### AEM Forms サーバーに XDP テンプレートをアップロードする {#upload-xdp-template-to-the-aem-forms-server}
+### AEM Forms サーバーに XDP テンプレートをアップロードする  {#upload-xdp-template-to-the-aem-forms-server}
 
 Forms Designer を使用して XDP テンプレートの作成が終わったら、AEM Forms サーバーにアップロードする必要があります。これにより、作成されたテンプレートは、インタラクティブ通信を作成する際に使用できるようになります。
 
 1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;を選択します。
 1. **作成**／**ファイルのアップロード**&#x200B;の順にタップします。
 
-   Navigate and select the **create_first_ic_print_template** template (XDP) and tap **Open** to import the XDP template to the AEM Forms server.
+   **create_first_ic_print_template**&#x200B;テンプレート(XDP)に移動して選択し、**「開く**」をタップして、XDPテンプレートをAEM Formsサーバーに読み込みます。
 
 ### レイアウトフラグメント用に XDP テンプレートを作成する {#create-xdp-template-for-layout-fragments}
 
 インタラクティブ通信の印刷チャネル用のレイアウトフラグメントを作成するには、Forms Designer を使用して XDP を作成し、AEM Forms サーバーにアップロードします。
 
-1. Open the Forms Designer, select **File** > **New** > **Use a blank form,** tap **Next**, and then tap **Finish** to open the form for template creation.
+1. Formsデザイナーを開き、**ファイル**/**新規**/**空のフォームを使用し、**「**次へ**」をタップしてから、**「**&#x200B;完了」をタップしてテンプレート作成用にフォームを開きます。
 
    「**オブジェクトライブラリ**」および「**オブジェクト**」オプションが **Window** メニューから選択されていることを確認します。
 
-1. Drag-and-drop the **Table** component from the **Object Library** to the form.
+1. **テーブル**&#x200B;コンポーネントを&#x200B;**オブジェクトライブラリ**&#x200B;からフォームにドラッグ&amp;ドロップします。
 1. テーブルの挿入ダイアログで、次の手順を実行します。
 
    1. 列数を **5** と指定します。
@@ -142,7 +142,7 @@ Forms Designer を使用して XDP テンプレートの作成が終わったら
 
    同様に、**Cell2**、**Cell3**、**Cell4**&#x200B;および&#x200B;**Cell5** の名前をそれぞれ&#x200B;**時刻**、**番号**、**時間**&#x200B;および&#x200B;**料金**&#x200B;に変更します。
 
-1. **Designer表示の「Header」テキストフィールドをクリックし、** Time **、Number** Duration、Duration、Charges Charges **Charges********** Headerという名前に変更します。
+1. **Designer表示**&#x200B;内のヘッダーテキストフィールドをクリックし、**時間**、**数値**、**期間**&#x200B;および&#x200B;**課金**&#x200B;に名前を変更します。
 
    ![レイアウトフラグメント](assets/layout_fragment_print_new.png)
 
@@ -150,7 +150,7 @@ Forms Designer を使用して XDP テンプレートの作成が終わったら
 
    ![レイアウトフラグメントに対してプロパティを繰り返す](assets/layout_fragment_print_repeat_new.png)
 
-1. Drag-and-drop the **Text Field** component from the **Object Library** to the **Designer View**.
+1. **テキストフィールド**&#x200B;コンポーネントを&#x200B;**オブジェクトライブラリ**&#x200B;から&#x200B;**Designer表示**&#x200B;にドラッグ&amp;ドロップします。
 
    ![レイアウトフラグメントのテキストフィールド](assets/layout_fragment_print_text_field_new.png)
 
@@ -158,13 +158,13 @@ Forms Designer を使用して XDP テンプレートの作成が終わったら
 
 1. ローカルのファイルシステムにファイルを保存するには、「**ファイル**／**名前を付けて保存**」を選択して、次の手順を実行します。
 
-   1. Navigate to the location to save the file and specify the name as **table_lf**.
+   1. ファイルを保存する場所に移動し、**table_lf**&#x200B;の名前を指定します。
    1. 「**ファイルの種類**」ドロップダウンリストから&#x200B;**.xdp** を選択します。
 
    1. 「**保存**」をタップします。
    Forms Designer を使用してレイアウトフラグメント用 XDP テンプレートの作成が終わったら、AEM Forms サーバーに[アップロード](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)する必要があります。これにより、作成されたテンプレートは、レイアウトフラグメントを作成する際に使用できるようになります。
 
-## Web チャネル用テンプレートの作成 {#create-template-for-web-channel}
+## Web チャネル用テンプレートの作成  {#create-template-for-web-channel}
 
 次のタスクを使用して、インタラクティブ通信の Web チャネル用のテンプレートの作成と管理を行います。
 
@@ -179,26 +179,26 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
 
 編集可能なテンプレート用のフォルダーを作成するには、次の手順を実行します。
 
-1. Tap **Tools** ![hammer-icon](assets/hammer-icon.svg) > **Configuration Browser**.
-   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
-1. In the Configuration Browser page, tap **Create**.
-1. In the **Create Configuration** dialog, specify **Create_First_IC_templates** as the title for the folder, check **Editable Templates**, and tap **Create**.
+1. **ツール** ![ハンマーアイコン](assets/hammer-icon.svg) > **設定ブラウザー**&#x200B;をタップします。
+   * 詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
+1. 設定ブラウザーページで、「**作成**」をタップします。
+1. **設定を作成**&#x200B;ダイアログで、フォルダーのタイトルとして&#x200B;**Create_First_IC_templates**&#x200B;を指定し、「**編集可能なテンプレート**」をオンにして、「**作成**」をタップします。
 
    ![Webテンプレートの設定](assets/create_first_ic_web_template_new.png)
 
-   The **Create_First_IC_templates** folder is created and listed on the **Configuration Browser** page.
+   **Create_First_IC_templates**&#x200B;フォルダーが作成され、**設定ブラウザー**&#x200B;ページに一覧表示されます。
 
 ### テンプレートの作成 {#create-the-template}
 
-Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following panels in the Web template:
+[使用例](/help/forms/using/create-your-first-interactive-communication.md)と[解剖学](/help/forms/using/planning-interactive-communications.md)に基づいて、Webテンプレートで次のパネルを作成します。
 
 * 請求明細：ドキュメントフラグメントが含まれます
 * 顧客の詳細：ドキュメントフラグメントを含む
 * 請求書要約：ドキュメントフラグメントを含む
 * 料金の概要：ドキュメントフラグメントとグラフを含みます（2列レイアウト）
 * 呼び出しの項目別：テーブルを含む
-* Pay Now: Includes a **Pay Now** button and an image
-* Value Added Services: Includes an image and a **Subscribe** button.
+* 今すぐ支払う：**今すぐ支払う**&#x200B;ボタンと画像が含まれます
+* 付加価値サービス：画像と&#x200B;**購読**&#x200B;ボタンが含まれます。
 
 ![create_web_template](assets/create_web_template.gif)
 
@@ -206,32 +206,32 @@ Based on the [use case](/help/forms/using/create-your-first-interactive-communic
 
 **Create_First_IC_templates** フォルダーでWeb チャネル用のテンプレートを作成するには、次の手順を実行します。
 
-1. Navigate to the appropriate template folder by selecting **Tools** > **Templates** > **Create_First_IC_templates** folder.
+1. **ツール**/**テンプレート**/**作成_最初の_IC_templates**&#x200B;フォルダーを選択して、適切なテンプレートフォルダーに移動します。
 1. 「**作成**」をタップします。
-1. On the **Pick a Template Type** configuration wizard, select **Interactive Communication - Web Channel** and tap **Next**.
-1. On the **Template Details** configuration wizard, specify **Create_First_IC_Web_Template** as the template title. オプション内容を指定し、「**作成**」をタップします。
+1. **テンプレートタイプ**&#x200B;の構成を選択ウィザードで、**対話型チャネル- Web通信**&#x200B;を選択し、**次へ**&#x200B;をタップします。
+1. **テンプレートの詳細**&#x200B;構成ウィザードで、**Create_First_IC_Web_Template**&#x200B;をテンプレートのタイトルとして指定します。 オプション内容を指定し、「**作成**」をタップします。
 
-   A confirmation message that the **Create_First_IC_Web_Template** is displayed.
+   **Create_First_IC_Web_Template**&#x200B;が表示されることを示す確認メッセージが表示されます。
 
 1. 「**開く**」をタップして、テンプレートエディターでテンプレートを開きます。
 1. 「**プレビュー**」オプションの隣にあるドロップダウンリストから「**初期コンテンツ**」を選択します。
 
    ![テンプレートエディター](assets/template_editor_initial_content_new.png)
 
-1. Tap **Root Panel** and then tap **+** to view the list of components that you can add to the template.
+1. 「**ルートパネル**」をタップし、**+**&#x200B;をタップして、テンプレートに追加できるコンポーネントのリストを表示します。
 1. コンポーネントの一覧から、**ルートパネル**&#x200B;の上に追加する「**パネル**」を選択します。
 1. 左側のペインで「**コンテンツ**」タブを選択します。手順 8 で追加された新しいパネルは、コンテンツツリーの&#x200B;**ルートパネル**&#x200B;の下に表示されます。
 
    ![コンテンツツリー](assets/content_tree_root_panel_new.png)
 
-1. パネルを選択し、 ![configure_icon](assets/configure_icon.png) （設定）をタップします。
+1. パネルを選択し、![configure_icon](assets/configure_icon.png)（設定）をタップします。
 1. プロパティペインで、次の手順を実行します。
 
    1. 「名前」フィールドに&#x200B;**billdetails** と入力します。
    1. 「タイトル」フィールドに、**請求明細**&#x200B;と入力します。
    1. 「**列数**」ドロップダウンリストから、**1** を選択します。
 
-   1. Tap ![](/help/forms/using/assets/done_icon.png) to save the properties.
+   1. ![](/help/forms/using/assets/done_icon.png)をタップしてプロパティを保存します。
 
    コンテンツツリーの&#x200B;**請求明細**&#x200B;に更新パネル名が更新されます。
 
@@ -242,9 +242,9 @@ Based on the [use case](/help/forms/using/create-your-first-interactive-communic
    | customerdetails | 顧客情報 | 1 |
    | billsummary | 請求内容 | 1 |
    | summarycharges | 請求概要 | 2 |
-   | itemisedcalls | 通話明細 | 1 |
+   | itemisedcalls | 通話明細 | 3 |
    | paynow | Pay Now | 2 |
-   | vas | 付加価値サービス | 1 |
+   | vas | 付加価値サービス | 3 |
 
    次の画像は、すべてのパネルがテンプレートに追加された後のコンテンツツリーを示しています。
 
@@ -256,17 +256,17 @@ Web テンプレートの作成が終わったら、インタラクティブ通�
 
 Web テンプレートを有効にするには、次の手順を実行します。
 
-1. Tap **Tools** ![hammer-icon](assets/hammer-icon.svg) > **Templates**.
-1. Navigate to the **Create_First_IC_Web_Template** template, select it, and tap **Enable**.
+1. **ツール** ![ハンマーアイコン](assets/hammer-icon.svg) > **テンプレート**&#x200B;をタップします。
+1. **Create_First_IC_Web_Template**&#x200B;テンプレートに移動し、テンプレートを選択して、**「有効にする**」をタップします。
 1. 再度「**有効**」をタップして確認します。
 
    これでテンプレートが有効になり、テンプレートのステータスとして「有効」が表示されます。このテンプレートは、Web チャネル用のインタラクティブ通信を作成する際に使用できます。
 
-### インタラクティブ通信でボタンの有効化 {#enabling-buttons-in-interactive-communications}
+### インタラクティブ通信でボタンの有効化  {#enabling-buttons-in-interactive-communications}
 
 ユースケースに基づき、「**Pay Now**」および「**登録**」ボタン（アダプティブフォームコンポーネント）をインタラクティブ通信に含める必要があります。インタラクティブ通信でこれらのボタンの仕様を有効にするには、次の手順を実行します。
 
-1. Select **Structure** from the drop-down list next to the **Preview** option.
+1. 「**プレビュー**」リストの横のドロップダウンオプションから「**構造**」を選択します。
 1. コンテンツツリーを使用して、**ドキュメントコンテナ**&#x200B;ルートパネルを選択し、「**ポリシー**」をタップして、インタラクティブ通信で使用が許可されているコンポーネントを選択します。
 
    ![ポリシーの設定](assets/structure_configure_policy_new.png)
@@ -275,4 +275,4 @@ Web テンプレートを有効にするには、次の手順を実行します�
 
    ![許可されたコンポーネント](assets/allowed_components_af_new.png)
 
-1. Tap ![done_icon](assets/done_icon.png) to save the properties.
+1. ![done_icon](assets/done_icon.png)をタップして、プロパティを保存します。
