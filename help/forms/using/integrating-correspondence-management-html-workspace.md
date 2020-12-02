@@ -27,13 +27,13 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-AEM FormsのワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 For more details, see [Create a letter template](../../forms/using/create-letter.md).
+AEM FormsのワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 詳しくは、「[レターテンプレートの作成](../../forms/using/create-letter.md)」を参照してください。
 
-Correspondence ManagementテンプレートにそのURLでアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
+Correspondence ManagementテンプレートにそのURLでアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは`https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`と類似したパターンを持っています
 
 ここで、`encodedLetterId` は URL エンコードされたレター ID です。Workbench で Workspace タスクにレンダリングプロセスを定義する場合は、同じレター ID を指定します。
 
-## AEM Workspace でレターをレンダリングして送信するタスクを作成する {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## AEM Workspace でレターをレンダリングして送信するタスクを作成する  {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 これらの手順を実行する前に、次のグループのメンバーであることを確認してください。
 
@@ -46,7 +46,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
 1. Workbench を起動します。ローカルホストに管理者としてログインします。
 1. 「ファイル／新規／アプリケーション」をクリックします。アプリケーション名フィールドで、`CMDemoSample` を入力して「終了」をクリックします。
-1. を選択 `CMDemoSample/1.0` して右クリックし `NewProcess`ます。 名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
+1. `CMDemoSample/1.0`を選択し、`NewProcess`を右クリックします。 名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
 1. 開始ポイントアクティビティピッカーをドラッグして設定します。
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
@@ -57,7 +57,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
       ![「Letter」タブ](assets/letter_tab_new.png)
 
-   1. Select the appropriate letter and click **OK**.
+   1. 適切な文字を選択し、「**OK**」をクリックします。
 
 1. 「アクションプロファイルの管理」をクリックします。アクションプロファイルの管理ダイアログが表示されます。レンダリングプロセスと送信プロセスが正しく選択されていることを確認します。
 1. データ XML ファイルを使用してレターを開くために、データの準備プロセスで適切なデータファイルを参照して選択します。
@@ -102,12 +102,13 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [Get File](assets/dscsample.zip)Download DSC:サンプルDSCは、上記に添付したDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Get ](assets/dscsample.zip)
+FileDownload DSC:サンプルDSCは、上記に添付したDSCSample.zipファイルで入手できます。DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSCサービスの設定](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
 1. アプリケーションをデプロイします。指示があったら、アセットをチェックインして保存します。
-1. Log in to the AEM forms workspace at https://&#39;[server]:[port]&#39;/lc/content/ws.
+1. https://&#39;[server]:[port]&#39;/lc/content/wsでAEM formsワークスペースにログインします。
 1. 追加したタスク CMRenderer を開きます。Correspondence Management レターが表示されます。
 
    ![cminworkspace](assets/cminworkspace.png)
