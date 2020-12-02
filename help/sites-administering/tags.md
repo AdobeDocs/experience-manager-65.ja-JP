@@ -42,18 +42,18 @@ AEM 内のタグには以下のような機能があります。
 * 新規に作成するタグの主な制限は、特定の名前空間内で一意でなければならないことです。
 * タグのタイトルには、タグパスの区切り文字を含めないでください（含めても表示されません）。
 
-   * colon `:` - delimits the namespace tag
-   * forward slash `/` - delimits sub-tags
+   * colon `:` -名前空間タグを区切る
+   * スラッシュ`/` — サブタグを区切ります。
 
 * タグは、作成者およびサイト訪問者が適用できます。すべてのフォームのタグは、作成者に関係なく、ページへの割り当て時および検索時に選択できるようになっています。
-* Tags can be created and their taxonomy modified by members of the &quot;tag-administrators&quot; group and members who have modification rights to `/content/cq:tags`.
+* タグを作成し、その分類を「tag-administrators」グループのメンバーと`/content/cq:tags`に対する変更権限を持つメンバーによって変更できます。
 
    * 子タグが含まれるタグはコンテナタグと呼ばれます
    * コンテナタグ以外のタグはリーフタグと呼ばれます
    * タグの名前空間はリーフタグかコンテナタグのいずれかです
 
 * タグを[検索コンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/quick-search.html)で使用すると、コンテンツを簡単に検索できます。
-* タグは [Teaser コンポーネント](https://helpx.adobe.com/jp/experience-manager/core-components/using/teaser.html)で使用され、ユーザーのタグクラウドを監視してターゲットのコンテンツを提供できます。
+* タグは [Teaser コンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/teaser.html)で使用され、ユーザーのタグクラウドを監視してターゲットのコンテンツを提供できます。
 * タグ付けがコンテンツの重要な側面である場合は、次のことに注意します。
 
    * タグとタグを使用するページを必ずパッケージ化すること
@@ -71,17 +71,17 @@ AEM 内のタグには以下のような機能があります。
 * 管理者権限でサインインします
 * グローバルナビゲーションから、次の操作をおこないます
 
-   * select **`Tools`**
-   * select **`General`**
-   * select **`Tagging`**
+   * **`Tools`**&#x200B;を選択
+   * **`General`**&#x200B;を選択
+   * **`Tagging`**&#x200B;を選択
 
 ![managing_tags_usingthetagasadministrationconsole](assets/managing_tags_usingthetagasministrationconsolea.png)
 
 ### 名前空間の作成 {#creating-a-namespace}
 
-To create a new namespace, select the **`Create Namespace`** icon.
+新しい名前空間を作成するには、**`Create Namespace`**&#x200B;アイコンを選択します。
 
-名前空間はそれ自体がタグです。サブタグが含まれている必要はありません。However, to continue creating a taxonomy, [create sub-tags](#creating-tags), which in turn may be either leaf tags or container tags.
+名前空間はそれ自体がタグです。サブタグが含まれている必要はありません。ただし、分類の作成を続けるには、[サブタグ](#creating-tags)を作成します。これはリーフタグまたはコンテナタグのどちらでも構いません。
 
 ![chlimage_1-183](assets/chlimage_1-183a.png) ![creating_tags_andnamespaces](assets/creating_tags_andnamespacesa.png)
 
@@ -90,7 +90,7 @@ To create a new namespace, select the **`Create Namespace`** icon.
    *（必須）* 名前空間の表示タイトル。
 
 * **名前**
-   *（オプション）* 名前空間の名前。 指定しない場合、有効なノード名が「タイトル」から作成されます。See [TagID](/help/sites-developing/framework.md#tagid).
+   *（オプション）* 名前空間の名前。指定しない場合、有効なノード名が「タイトル」から作成されます。[TagID](/help/sites-developing/framework.md#tagid)を参照してください。
 
 * **説明**
 
@@ -100,7 +100,7 @@ To create a new namespace, select the **`Create Namespace`** icon.
 
 * 「**作成**」を選択します
 
-### タグの操作 {#operations-on-tags}
+### タグの操作  {#operations-on-tags}
 
 名前空間または他のタグを選択すると、次の操作をおこなえるようになります。
 
@@ -116,7 +116,7 @@ To create a new namespace, select the **`Create Namespace`** icon.
 
 ![chlimage_1-184](assets/chlimage_1-184.png)
 
-When the browser window is not wide enough to display all icons, then the right-most icons are grouped together under a **`... More`** icon, which will display a drop-down list of the hidden operation icons when selected.
+ブラウザーウィンドウの幅が狭くてすべてのアイコンが表示されない場合は、一番右のアイコンが&#x200B;**`... More`**&#x200B;アイコンの下にグループ化され、選択すると非表示の操作アイコンのドロップダウンリストが表示されます。
 
 ![chlimage_1-185](assets/chlimage_1-185.png)
 
@@ -132,7 +132,7 @@ When the browser window is not wide enough to display all icons, then the right-
 
 ![chlimage_1-188](assets/chlimage_1-188.png)
 
-When a namespace or other tag is selected, selecting the **`View Properties`** icon results in the display of information as to the `name`, time of last edit, and number of references. 公開済みの場合は、前回公開された日時と発行者のIDが表示されます。 この情報は、タグ列の左側の列に表示されます。
+名前空間または他のタグを選択した場合、**`View Properties`**&#x200B;アイコンを選択すると、`name`、最終編集日時、および参照数に関する情報が表示されます。 公開済みの場合は、前回公開された日時と発行者のIDが表示されます。 この情報は、タグ列の左側の列に表示されます。
 
 ![chlimage_1-189](assets/chlimage_1-189.png)
 
@@ -156,29 +156,32 @@ When a namespace or other tag is selected, selecting the **`View Properties`** i
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
-When a namespace or other tag is selected (by selecting the icon next to the title), a child tag may be created for the current tag by selecting the **`Create Tag`** icon.
+名前空間または他のタグを選択する（タイトルの横のアイコンを選択する）と、**`Create Tag`**&#x200B;アイコンを選択して、現在のタグに対して子タグが作成される場合があります。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
-* **Title***（必須） *タグの表示タイトル。
+* **Title**
+*（必須） *タグの表示タイトル。
 
-* **Name***（オプション） *タグの名前。 指定しない場合、有効なノード名が「タイトル」から作成されます。See [TagID](/help/sites-developing/framework.md#tagid).
+* **Name**
+*（オプション） *タグの名前。指定しない場合、有効なノード名が「タイトル」から作成されます。[TagID](/help/sites-developing/framework.md#tagid)を参照してください。
 
-* **説明***（オプション） *タグの説明。
+* **説明**
+*（オプション） *タグの説明。
 
 必要な情報を入力したら
 
 * 「**作成**」を選択します
 
-### タグの編集 {#editing-tags}
+### タグの編集  {#editing-tags}
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
-When a namespace or other tag is selected, it is possible to alter the Title, Description, and provide localizations of the Title by selecting the **`Edit`**icon.
+名前空間または他のタグを選択した場合は、「タイトル」、「説明」を変更し、「**`Edit`**」アイコンを選択してタイトルのローカライゼーションを指定できます。
 
 編集が完了したら、「**保存**」を選択します。
 
-For details about adding language translations, see the section on [Managing Tags in Different Languages](#managing-tags-in-different-languages).
+言語変換の追加について詳しくは、[異なる言語でのタグの管理](#managing-tags-in-different-languages)の節を参照してください。
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
@@ -186,11 +189,11 @@ For details about adding language translations, see the section on [Managing Tag
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-When a namespace or other tag is selected, selecting the **`Move`** icon will allow Tags Administrators and Developers to clean up the taxonomy by moving the tag to a new location or renaming it. 選択したタグがコンテナタグの場合、タグを移動すると、すべての子タグも移動します。
+名前空間または他のタグを選択した場合、**`Move`**&#x200B;アイコンを選択すると、タグの管理者および開発者は、タグを新しい場所に移動したり名前を変更したりして、分類をクリーンアップできます。 選択したタグがコンテナタグの場合、タグを移動すると、すべての子タグも移動します。
 
 >[!NOTE]
 >
->It is recommended that Authors only be allowed to [edit](#editing-tags) the tag&#39;s `title`, not to move or rename tags.
+>作成者は、タグの[編集](#editing-tags)のみを許可し、タグの移動や名前の変更は許可しないことをお勧めします。`title`
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -200,18 +203,19 @@ When a namespace or other tag is selected, selecting the **`Move`** icon will al
 
 * **移動先** タグの移動先の新しいパスを参照します。
 
-* **「名前を**&#x200B;最初に変更」には、現在の 
-`name`」と表示されます。 A new `name`may be entered.
+* **「名前**
+を変更」は、現在の 
+`name`」と表示されます。新しい`name`を入力できます。
 
 * 「**保存**」を選択します
 
-### タグの統合 {#merging-tags}
+### タグの統合  {#merging-tags}
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
 タグの統合は、分類が重複する場合に使用できます。タグ A がタグ B に統合されると、タグ A が付けられたすべてのページにタグ B が付けられ、作成者はタグ A を使用できなくなります。
 
-When a namespace or other tag is selected, selecting the **Merge** icon will open a panel where the path to merge into may be selected.
+名前空間または他のタグを選択した場合、**結合**&#x200B;アイコンを選択すると、結合先のパスを選択できるパネルが開きます。
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
@@ -231,25 +235,25 @@ When a namespace or other tag is selected, selecting the **Merge** icon will ope
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
 
-When a namespace or other tag is selected, selecting the **Publish** icon to activate the tag in the publish environment. ページのコンテンツと同様、コンテナタグであるかどうかに関係なく、選択したタグのみが発行されます。
+名前空間または他のタグを選択した場合は、**発行**&#x200B;アイコンを選択して、発行環境でタグをアクティブにします。 ページのコンテンツと同様、コンテナタグであるかどうかに関係なく、選択したタグのみが発行されます。
 
-分類（名前空間とサブタグ）を公開するベストプラクティスとして、名前空間の[パッケージ](/help/sites-administering/package-manager.md)を作成します（[分類のルートノード](/help/sites-developing/framework.md#taxonomy-root-node)を参照）。Be sure to [apply permissions](#setting-tag-permissions) to the namespace before creating the package.
+分類（名前空間とサブタグ）を公開するベストプラクティスとして、名前空間の[パッケージ](/help/sites-administering/package-manager.md)を作成します（[分類のルートノード](/help/sites-developing/framework.md#taxonomy-root-node)を参照）。パッケージを作成する前に、必ず[名前空間に権限](#setting-tag-permissions)を適用してください。
 
 ### タグを非公開にする {#unpublishing-tags}
 
 ![chlimage_1-202](assets/chlimage_1-202.png)
 
-When a namespace or other tag is selected, selecting the **Unpublish** icon will deactivate the tag in the author environment and remove it from the publish environment. Similar to the `Delete`operation, if the selected tag is a container tag, all of its child tags will be deactivated in the author environment and removed from the publish environment.
+名前空間または他のタグを選択した場合、**非公開**&#x200B;アイコンを選択すると、作成者環境のタグが非アクティブ化され、発行環境から削除されます。 `Delete`操作と同様、選択したタグがコンテナタグの場合、その子タグはすべて作成者環境で非アクティブ化され、発行環境から削除されます。
 
 ### タグの削除 {#deleting-tags}
 
 ![chlimage_1-203](assets/chlimage_1-203.png)
 
-When a namespace or other tag is selected, selecting the **Delete** icon will permanently remove the tag from the author environment. タグが発行された場合は、発行環境からも削除されます。 選択したタグがコンテナタグの場合、その子タグもすべて削除されます。
+名前空間または他のタグを選択した場合、**削除**&#x200B;アイコンを選択すると、作成者環境からタグが完全に削除されます。 タグが発行された場合は、発行環境からも削除されます。 選択したタグがコンテナタグの場合、その子タグもすべて削除されます。
 
 ## タグの権限の設定 {#setting-tag-permissions}
 
-Tag permissions are [&#39;secure (by default)&#39;](/help/sites-administering/production-ready.md); a best practice for the publish environment that requires read permission to be explicitly allowed for tags. 基本的に、これは、作成者に対して権限が設定された後にタグ名前空間のパッケージを作成し、すべての発行インスタンスにそのパッケージをインストールすることで行います。
+タグ権限は[&#39;secure（デフォルト）&#39;](/help/sites-administering/production-ready.md);タグに対して読み取り権限を明示的に許可する必要がある発行環境のベストプラクティスです。 基本的に、これは、作成者に対して権限が設定された後にタグ名前空間のパッケージを作成し、すべての発行インスタンスにそのパッケージをインストールすることで行います。
 
 * オーサーインスタンスで
 
@@ -260,8 +264,8 @@ Tag permissions are [&#39;secure (by default)&#39;](/help/sites-administering/pr
    * 左側のウィンドウで、[読み取り権限](/help/sites-administering/security.md#permissions)を付与するグループ（またはユーザー）を選択します
    * 右側のウィンドウで、タグ名前空間の**Path **toを探します。
 
-      * for example, `/content/cq:tags/mycommunity`
-   * select the `checkbox`in the **Read** column
+      * 例：`/content/cq:tags/mycommunity`
+   * **読み取り**&#x200B;列の`checkbox`を選択します
    * 「**Save**」を選択します。
 
 
@@ -272,21 +276,21 @@ Tag permissions are [&#39;secure (by default)&#39;](/help/sites-administering/pr
 
    * 1 つのアプローチは、オーサー環境で名前空間の[パッケージを作成](/help/sites-administering/package-manager.md#package-manager)することです
 
-      * 「 `Advanced` 」タブで、「選択」 `AC Handling` に対して `Overwrite`
+      * 「`Advanced`」タブで、`AC Handling`に「`Overwrite`」を選択します。
    * パッケージをレプリケートします
 
-      * choose `Replicate` from package manager
+      * パッケージマネージャから&lt;a0/を選択`Replicate`
 
 
 ## Managing Tags in Different Languages {#managing-tags-in-different-languages}
 
-The `title`property of a tag may be translated into multiple languages. Once translated, the appropriate tag `title`may be displayed according to the user language or to the page language.
+タグの`title`プロパティは複数の言語に翻訳できます。 翻訳が完了すると、ユーザー言語またはページ言語に応じて適切なタグ`title`が表示されます。
 
 ### 複数言語でのタグタイトルの定義 {#defining-tag-titles-in-multiple-languages}
 
-The following describes how to translate the `title`of the tag **Animals** from English into German and French.
+次に、**動物**&#x200B;というタグの`title`を英語からドイツ語とフランス語に翻訳する方法を説明します。
 
-Start by selecting the tag under the **Stock Photography** namespace and selecting the **`Edit`**icon (see [Editing Tags](#editing-tags) section).
+**フォトグラフィ**&#x200B;名前空間の下のタグを選択し、**`Edit`**アイコンを選択して開始します（[タグの編集](#editing-tags)を参照）。
 
 タグを編集パネルで、タグのタイトルを翻訳する言語を選択できます。
 
@@ -300,11 +304,11 @@ Start by selecting the tag under the **Stock Photography** namespace and selecti
 
 タグ付けコンソールでは、ページの言語設定の代わりに、ユーザーの言語設定が使用されます。タグ付けコンソールで、「動物」タグに対して、ユーザのプロパティで言語をフランス語に設定しているユーザに対して「Animau」が表示されます。
 
-To add a new language to the dialog, see [Adding a New Language to the Edit Tag Dialog](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog).
+ダイアログに新しい言語を追加する方法については、「[タグを編集ダイアログに新しい言語を追加する](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog)」を参照してください。
 
 >[!NOTE]
 >
->The tag cloud and the meta keywords in the standard page component use the localized tag `titles`based on the page language, if available.
+>タグクラウドと標準ページコンポーネントのメタキーワードは、ページ言語に基づくローカライズされたタグ`titles`を使用します（使用可能な場合）。
 
 ## リソース {#resources}
 
