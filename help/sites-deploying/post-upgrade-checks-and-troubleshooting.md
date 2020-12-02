@@ -73,9 +73,9 @@ ht-degree: 92%
 
 error.log は、ターゲットバージョンの jar を使用した AEM の起動時および起動後に注意深く確認する必要があります。すべての警告やエラーを確認する必要があります。一般に、ログの先頭で問題を探すことをお勧めします。ログの後半で発生したエラーは、実際はファイルの前の方で発生した根本原因の副次的な影響である場合があります。エラーや警告が繰り返し発生する場合は、以下の[アップグレードによる問題の分析](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade)を参照してください。
 
-### OSGi バンドルの確認 {#verify-osgi-bundles}
+### OSGi バンドルの確認  {#verify-osgi-bundles}
 
-Navigate to the OSGi console `/system/console/bundles` and look to see if any bundles are not started. If any bundles are in an installed state consult the `error.log` to determine root issue.
+OSGiコンソール`/system/console/bundles`に移動し、バンドルが起動していないかどうかを確認します。 バンドルがインストール状態にある場合は、`error.log`に問い合わせてルートの問題を確認してください。
 
 ### Oak バージョンの確認 {#verify-oak-version}
 
@@ -83,15 +83,15 @@ Navigate to the OSGi console `/system/console/bundles` and look to see if any bu
 
 ### PreUpgradeBackup フォルダーの検査 {#inspect-preupgradebackup-folder}
 
-During the upgrade AEM will attempt to backup customizations and store them beneath `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`. このフォルダーを CRXDE Lite で表示するには、[CRXDE Lite を一時的に有効にする](/help/sites-administering/enabling-crxde-lite.md)ことが必要となります。
+アップグレード中に、AEMはカスタマイズのバックアップを試みて`/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`の下に格納します。 このフォルダーを CRXDE Lite で表示するには、[CRXDE Lite を一時的に有効にする](/help/sites-administering/enabling-crxde-lite.md)ことが必要となります。
 
 タイムスタンプがあるフォルダーには、`mergeStatus` という名前のプロパティがあり、`COMPLETED` という値である必要があります。**to-process** フォルダーは空であり、**overwritten** ノードはアップグレード中に上書きされたノードを示している必要があります。**leftovers** ノードの下のコンテンツは、アップグレード中に安全に統合できなかったコンテンツを示します。実装が（アップグレードされたコードパッケージによってまだインストールされていない）いずれかの子ノードに依存している場合は、それらの子ノードを手動で統合する必要があります。
 
 ステージング環境または実稼動環境の場合は、この作業の後に CRXDE Lite を無効にします。
 
-### ページの初期検証 {#initial-validation-of-pages}
+### ページの初期検証  {#initial-validation-of-pages}
 
-AEM の複数のページに対して初期検証を実行します。If upgrading an Author environment open the Start page and Welcome page ( `/aem/start.html`, `/libs/cq/core/content/welcome.html`). オーサー環境とパブリッシュ環境の両方で、アプリケーションページをいくつか開き、正しくレンダリングされるかどうかスモークテストをおこないます。問題が発生した場合は、`error.log` を調べてトラブルシューティングをおこないます。
+AEM の複数のページに対して初期検証を実行します。作成者環境をアップグレードする場合は、開始ページとようこそページ(`/aem/start.html`、`/libs/cq/core/content/welcome.html`)を開きます。 オーサー環境とパブリッシュ環境の両方で、アプリケーションページをいくつか開き、正しくレンダリングされるかどうかスモークテストをおこないます。問題が発生した場合は、`error.log` を調べてトラブルシューティングをおこないます。
 
 ### AEM サービスパックの適用 {#apply-aem-service-packs}
 
@@ -105,21 +105,21 @@ AEM のいくつかの機能では、アップグレード後に追加の手順�
 
 #### データストアのガベージコレクションの有効化 {#enable-data-store-garbage-collection}
 
-ファイルデータストアを使用している場合は、データストアのガベージコレクションタスクが有効になっていて、週別メンテナンスリストに追加されていることを確認します。Instructions are outlined [here](/help/sites-administering/data-store-garbage-collection.md).
+ファイルデータストアを使用している場合は、データストアのガベージコレクションタスクが有効になっていて、週別メンテナンスリストに追加されていることを確認します。説明は[ここ](/help/sites-administering/data-store-garbage-collection.md)で説明します。
 
 >[!NOTE]
 >
 >S3 カスタムデータストアのインストール環境の場合、または共有データストアを使用している場合、この手順はお勧めしません。
 
-#### オンラインでのリビジョンクリーンアップの有効化 {#enable-online-revision-cleanup}
+#### オンラインでのリビジョンクリーンアップの有効化  {#enable-online-revision-cleanup}
 
 MongoMK または新しい TarMK セグメント形式を使用している場合は、リビジョンクリーンアップタスクが有効になっていて、日別メンテナンスリストに追加されていることを確認します。手順は[こちら](/help/sites-deploying/revision-cleanup.md)を参照してください。
 
-### テスト計画の実行 {#execute-test-plan}
+### テスト計画の実行  {#execute-test-plan}
 
 [コードのアップグレードとカスタマイズ](/help/sites-deploying/upgrading-code-and-customizations.md)の&#x200B;**手順のテスト**&#x200B;の節で定義されているとおりに詳細なテスト計画を実行します。
 
-### レプリケーションエージェントの有効化 {#enable-replication-agents}
+### レプリケーションエージェントの有効化  {#enable-replication-agents}
 
 パブリッシュ環境を完全にアップグレードして検証したら、オーサー環境でレプリケーションエージェントを有効にします。エージェントがそれぞれのパブリッシュインスタンスに接続できることを確認します。イベントの順序について詳しくは、[アップグレード手順](/help/sites-deploying/upgrade-procedure.md)を参照してください。
 
@@ -127,13 +127,13 @@ MongoMK または新しい TarMK セグメント形式を使用している場�
 
 コードベースの一部としてのスケジュール済みジョブをこの時点で有効にすることができます。
 
-## アップグレードによる問題の分析 {#analyzing-issues-with-upgrade}
+## アップグレードによる問題の分析  {#analyzing-issues-with-upgrade}
 
 ここでは、AEM 6.3 へのアップグレード手順で発生する可能性のある問題のシナリオを説明します。
 
 これらのシナリオは、アップグレードに関連する問題の根本原因を追跡するのに役立ちます。また、プロジェクトや製品に固有の問題を識別するためにも役立ちます。
 
-### リポジトリ移行の失敗  {#repository-migration-failing-}
+### リポジトリ移行の失敗   {#repository-migration-failing-}
 
 CRX2 から Oak へのデータ移行は、CQ 5.4 ベースのソースインスタンスから開始されるすべてのシナリオで実現可能です。`repository.xml` の準備を含むこのドキュメントのアップグレード手順に正確に従っていること、JAAS 経由でカスタム認証を起動していないこと、および移行を始める前にインスタンスに不整合がないかをチェックしていることを確認してください。
 
@@ -143,11 +143,11 @@ CRX2 から Oak へのデータ移行は、CQ 5.4 ベースのソースインス
 
 準備手順を開始する前に、まず java -jar aem-quickstart.jar コマンドを使用して、**ソース**&#x200B;インスタンスを実行します。これは、quickstart.properties ファイルを正しく生成するために必要な手順です。このファイルがないと、アップグレードはうまくいきません。あるいは、ソースインスタンスのインストールフォルダーの `crx-quickstart/conf` の下を探して、このファイルが存在するかどうかを確認します。また、アップグレードを開始するために AEM を起動する際、java -jar aem-quickstart.jar コマンドを使用して実行する必要があります。起動スクリプトから起動した場合、AEM はアップグレードモードで起動しません。
 
-### パッケージとバンドルを更新できない  {#packages-and-bundles-fail-to-update-}
+### パッケージとバンドルを更新できない   {#packages-and-bundles-fail-to-update-}
 
 アップグレード中にパッケージがインストールされなかった場合は、パッケージに含まれるバンドルも更新されません。このような問題は、通常はデータストアの設定の誤りが原因です。また、この問題は、error.log に **ERROR**&#x200B;および **WARN** メッセージとして表示されます。通常、この問題が起きているときはデフォルトのログインが動作しないので、直接 CRXDE を使用して設定の問題を調査、解明することになります。
 
-### 一部の AEM バンドルがアクティブな状態に切り替わらない {#some-aem-bundles-are-not-switching-to-the-active-state}
+### 一部の AEM バンドルがアクティブな状態に切り替わらない  {#some-aem-bundles-are-not-switching-to-the-active-state}
 
 バンドルが起動しない場合は、未解決の依存関係がないかを確認してください。
 
@@ -163,7 +163,7 @@ CRX2 から Oak へのデータ移行は、CQ 5.4 ベースのソースインス
 
 また、問題の原因となった変更点が本当に必要であるかを確認し、不要なものであればその変更を元に戻すことをお勧めします。パッケージのエクスポートのバージョンが必要以上に増えていないかを確認し、厳密な意味のあるバージョン定義をおこなってください。
 
-### プラットフォーム UI の異常 {#malfunctioning-platform-ui}
+### プラットフォーム UI の異常  {#malfunctioning-platform-ui}
 
 アップグレード後に特定の UI 機能が正しく動作していない場合は、まずインターフェイスのカスタムオーバーレイを確認します。一部の構造が変更され、オーバーレイを更新する必要があるか、オーバーレイが古くなっている可能性があります。
 
@@ -171,15 +171,15 @@ CRX2 から Oak へのデータ移行は、CQ 5.4 ベースのソースインス
 
 最後に、JavaScript では対処できない設定の誤りがないかを確認します。これは通常、不適切にアクティベート解除された拡張により発生する問題です。
 
-### カスタムコンポーネント、テンプレートまたは UI 拡張の異常 {#malfunctioning-custom-components-templates-or-ui-extensions}
+### カスタムコンポーネント、テンプレートまたは UI 拡張の異常  {#malfunctioning-custom-components-templates-or-ui-extensions}
 
 ほとんどの場合、これらの問題の根本原因は、起動されていないバンドルやインストールされていないパッケージによる問題と同じですが、異なる点は、問題が最初にコンポーネントを使用した時点で発生することです。
 
-問題のあるカスタムコードへの対処方法としては、まず原因を特定するためのスモークテストを実行します。Once you find it, look at the recommendations in this [link] section of the article for ways of fixing them.
+問題のあるカスタムコードへの対処方法としては、まず原因を特定するためのスモークテストを実行します。見つかったら、記事の[リンク]のセクションにある推奨事項を調べて、修正方法を確認してください。
 
 ### /etc の下にカスタマイズが存在しない{#missing-customizations-under-etc}
 
-`/apps` とは、アップグレード `/libs` によって適切に処理されますが、での変更 `/etc` は、アップグレード後に手動で復元する必要がある場合があ `/var/upgrade/PreUpgradeBackup` ります。 手動で統合する必要があるコンテンツについては、この場所を確認してください。
+`/apps` とは、アップグレード `/libs` によって適切に処理されますが、での変更 `/etc` は、アップグレード `/var/upgrade/PreUpgradeBackup` 後に手動で復元する必要がある場合があります。手動で統合する必要があるコンテンツについては、この場所を確認してください。
 
 ### error.log と upgrade.log の分析 {#analyzing-the-error.log-and-upgrade.log}
 
@@ -201,6 +201,6 @@ grep -v UnrelatedErrorString
 
 警告メッセージにエラーが見つかることもあります。有効なケースがこの状態になってしまうこともあり、実際にエラーであるかどうかをアプリケーションが常に判断できるとは限りません。これらの警告メッセージについても確認してください。
 
-### アドビサポートのご案内 {#contacting-adobe-support}
+### アドビサポートのご案内  {#contacting-adobe-support}
 
 このページのアドバイスを実行しても問題が解決されない場合は、アドビサポートにご連絡ください。顧客の問題に対応するサポートエンジニアができるだけ多くの情報を得られるように、アップグレードの upgrade.log ファイルを含めてください。
