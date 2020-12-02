@@ -19,7 +19,7 @@ ht-degree: 77%
 
 # AEM 6.5 における e コマースリポジトリの再構築{#e-commerce-repository-restructuring-in-aem}
 
-As described on the parent [Repository Restructuring in AEM 6.5](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.5 should use this page to assess the work effort associated with repository changes impacting the AEM E-Commerce Solution. 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
+AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従って、AEM 6.5にアップグレードしたお客様は、このページを使用して、AEM E-Commerce Solutionに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
 
