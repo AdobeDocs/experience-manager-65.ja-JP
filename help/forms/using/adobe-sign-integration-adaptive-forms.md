@@ -35,27 +35,27 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 * [Adobe Sign API アプリケーション](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 * Adobe Sign API アプリケーションの資格情報（クライアントの ID と秘密鍵）
 * 再設定時に、作成者インスタンスと発行インスタンスの両方から既存のAdobe Sign設定を削除します。
-* オーサーインスタンスとパブリッシュインスタンスに [同じ暗号化キー](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed) を使用します。
+* 作成者インスタンスとパブリッシュインスタンスには、[同一の暗号キー](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed)を使用します。
 
 ## AEM Forms を使用して Adobe Sign を設定する {#configure-adobe-sign-with-aem-forms}
 
 上記の前提条件の準備が完了したら、以下の手順により、オーサーインスタンス上の AEM Forms を使用して Adobe Sign を設定します。
 
-1. On AEM Forms author instance, navigate to **Tools** ![hammer](assets/hammer.png) > **General** > **Configuration Browser**.
-1. On the **[!UICONTROL Configuration Browser]** page, tap **[!UICONTROL Create]**.
-   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
-1. In the **[!UICONTROL Create Configuration]** dialog, specify a **[!UICONTROL Title]** for the configuration, enable **[!UICONTROL Cloud Configurations]**, and tap **[!UICONTROL Create]**. これにより、クラウドサービス用の設定コンテナが作成されます。
-1. Navigate to **Tools** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign** and select the configuration container you created in the above step.
+1. AEM Forms作成者インスタンスで、**ツール** ![ハンマー](assets/hammer.png) > **一般** > **設定ブラウザー**&#x200B;に移動します。
+1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで、**[!UICONTROL 作成]**&#x200B;をタップします。
+   * 詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
+1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、設定に&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、**[!UICONTROL クラウド設定]**&#x200B;を有効にして、**[!UICONTROL 作成]**&#x200B;をタップします。 これにより、クラウドサービス用の設定コンテナが作成されます。
+1. **ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Adobe Sign**&#x200B;に移動し、上記の手順で作成した設定コンテナを選択します。
 
    >[!NOTE]
    >
-   >手順1 ～ 4を実行して新しい設定コンテナを作成し、コンテナでAdobe Sign設定を作成するか、 `global` ツールハンマー **>Cloud Services>Adobe Sign>** neworkで既存のフォルダを使用し ![ま](assets/hammer.png)********&#x200B;す。 新しい設定コンテナで設定を作成する場合、アダプティブフォームを作成する際に、「 **[!UICONTROL 設定コンテナ]** 」フィールドにコンテナ名を必ず指定してください。
+   >手順1 ～ 4を実行して新しい設定コンテナを作成し、コンテナでAdobe Sign設定を作成するか、**ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Adobe Sign**&#x200B;の既存の`global`フォルダーを使用します。 新しい設定コンテナで設定を作成する場合は、アダプティブフォームを作成する際に、**[!UICONTROL 設定コンテナ]**&#x200B;フィールドにコンテナ名を必ず指定してください。
 
    >[!NOTE]
    クラウドサービス設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM Forms サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
 
-1. On the configuration page, tap **[!UICONTROL Create]** to create Adobe Sign configuration in AEM Forms.
-1. In the **[!UICONTROL General]** tab of the **[!UICONTROL Create Adobe Sign Configuration]** page, specify a **Name** for the configuration and tap **Next**. 必要に応じてタイトルを指定し、設定のサムネイルを参照して選択することもできます。
+1. 設定ページで、「**[!UICONTROL 作成]**」をタップして、AEM FormsでAdobe Sign設定を作成します。
+1. **[!UICONTROL Adobe Sign構成を作成]**&#x200B;ページの「**[!UICONTROL 一般]**」タブで、設定の&#x200B;**名前**&#x200B;を指定し、「**次へ**」をタップします。 必要に応じてタイトルを指定し、設定のサムネイルを参照して選択することもできます。
 
 1. 現在のブラウザーウィンドウのURLをメモ帳にコピーします。 この URL は、AEM Forms で Adobe Sign アプリケーションを設定する際に必要になります。
 
@@ -85,19 +85,19 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    データベースシャードの値を更新することができます。サーバーを再起動すると、データベースシャードの新しい値を使用することができます。
 
-1. Specify the **Client ID** (also referred to as Application ID) and **Client Secret**. 「**添付ファイルにも Adobe Sign を有効にする**」オプションを選択すると、アダプティブフォームに添付されているファイルが、署名用に送信された対応する Adobe Sign ドキュメントに添付されます。
+1. **クライアントID**(アプリケーション IDとも呼ばれます)と&#x200B;**クライアントシークレット**&#x200B;を指定します。 「**添付ファイルにも Adobe Sign を有効にする**」オプションを選択すると、アダプティブフォームに添付されているファイルが、署名用に送信された対応する Adobe Sign ドキュメントに添付されます。
 
-   Tap **[!UICONTROL Connect to Adobe Sign]**. 資格情報の入力画面が表示されたら、Adobe Sign アプリケーションの作成時に使用したユーザー名とパスワードを入力します。
+   「**[!UICONTROL Adobe Signに接続]**」をタップします。 資格情報の入力画面が表示されたら、Adobe Sign アプリケーションの作成時に使用したユーザー名とパスワードを入力します。
 
    「**[!UICONTROL 作成]**」をタップして、Adobe Sign 設定を作成します。
 
-1. AEM Web コンソールを開きます。The URL is `https://'[server]:[port]'/system/console/configMgr`
+1. AEM Web コンソールを開きます。URLは`https://'[server]:[port]'/system/console/configMgr`です
 1. **Forms 共通設定サービス**&#x200B;を開きます。
-1. In the **Allow** field, **select** All users - All the users, anonymous or logged in, can preview attachments, verify and sign forms, and click **Save.**&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
+1. 「**許可**」フィールドで、「**すべてのユーザーを選択 — 匿名ユーザーまたはログインユーザーは、添付ファイルをプレビューでき、フォームを検証および署名でき、「**&#x200B;保存」をクリックします。****&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
 1. 設定を公開します。
-1. 対応する発行インスタンスに同じ設定を作成するには [、レプリケーションを使用します](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) 。
+1. [複製](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html)を使用して、対応する発行インスタンスに同じ設定を作成します。
 
-これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。To [use Adobe Sign service in an adaptive form](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form), specify the configuration container created above in adaptive form properties.
+これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。[アダプティブフォーム](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)でAdobe Signサービスを使用するには、上記で作成した設定コンテナをアダプティブフォームのプロパティで指定します。
 
 
 
@@ -110,7 +110,7 @@ Adobe Sign が有効になっているアダプティブフォームは、すべ
    次のURLをブラウザーウィンドウで開くこともできます。
    `https://[localhost]:'port'/system/console/configMgr`
 
-1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前0時にConfiguration Serviceを実行するには、「 `0 0 0 1/1 * ? *` ステータス更新スケジューラー式 **** 」フィールドでを指定します。
+1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前0時にConfiguration Serviceを実行するには、**Status Updateスケジューラー式**&#x200B;フィールドで`0 0 0 1/1 * ? *`を指定します。
 
 これで、Adobe Sign のステータスを同期するデフォルトの間隔が変更されました。
 
