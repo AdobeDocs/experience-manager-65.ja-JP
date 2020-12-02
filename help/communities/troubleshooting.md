@@ -34,7 +34,8 @@ ht-degree: 81%
 
 CQ 5.4 でフォーラムが作成され、トピックが投稿された後、サイトが AEM 5.6.1 以降にアップグレードされた場合、既存の投稿を表示しようとすると、ページに次のエラーが表示されることがあります。
 
-無効なパターン文字&#39;a&#39;Cannot serve request to `/content/demoforums/forum-test.html` on this server and the logs contain:
+不正なパターン文字&#39;a&#39;
+このサーバーの`/content/demoforums/forum-test.html`に要求を提供できません。ログに次の内容が含まれています：
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -54,15 +55,15 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 詳しくは、[com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
 
-## 一般的な問題 {#common-concerns}
+## 一般的な問題  {#common-concerns}
 
 ### ログ内の警告：Handlebars の廃止 {#warning-in-logs-handlebars-deprecated}
 
 起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
 
-* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、  `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-This warning can be safely ignored as `jknack.handlebars.Handlebars`, used by [SCF](scf.md#handlebarsjavascripttemplatinglanguage), comes with its own i18n helper utility. 起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
+この警告は`jknack.handlebars.Handlebars`として無視して構いません。[SCF](scf.md#handlebarsjavascripttemplatinglanguage)で使用されます。この警告は、独自のi18nヘルパーユーティリティに付属しています。 起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
 
 ### ログ内の警告：OakResourceListener の processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
