@@ -30,15 +30,15 @@ Web サイト用に、また AEM で、デザインの作成が必要になり�
 >
 >Web アクセシビリティについて詳しくは、[AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)を参照してください。
 
-## デザイナーの使用 {#using-the-designer}
+## デザイナーの使用  {#using-the-designer}
 
-Your design can be defined in the **designs** section of the **Tools** tab:
+デザインは、「**ツール**」タブの&#x200B;**デザイン**&#x200B;セクションで定義できます。
 
 ![screen_shot_2012-02-01at30237pm](assets/screen_shot_2012-02-01at30237pm.png)
 
 ここで、デザインの格納に必要な構造を作成し、必要なカスケーディングスタイルシート（CSS）および画像をアップロードできます。
 
-デザインは、に保存され `/etc/designs`ます。 Webサイトに使用するデザインのパスは、ノードの `cq:designPath` プロパティを使用して指定し `jcr:content` ます。
+デザインは`/etc/designs`の下に保存されます。 Webサイトに使用するデザインのパスは、`jcr:content`ノードの`cq:designPath`プロパティを使用して指定します。
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
@@ -46,16 +46,15 @@ Your design can be defined in the **designs** section of the **Tools** tab:
 >
 >デザインモードのページ上でおこなわれたすべての変更は、サイトのデザインノードの下に保持され、同じデザインを持つすべてのページに自動的に適用されます。
 
-## 必要なもの {#what-you-will-need}
+## 必要なもの  {#what-you-will-need}
 
 デザインを実現するには、以下が必要です。
 
-**CSS** — カスケードスタイルシートは、ページ上の特定領域の形式を定義します。
-**画像** — 背景、ボタンなどの機能に使用する画像。
+**CSS**  — カスケードスタイルシートは、ページ上の特定領域の形式を定義します。**画像**  — 背景やボタンなどの機能に使用する画像。
 
 ### Web サイトをデザインする際の考慮事項 {#considerations-when-designing-your-website}
 
-When developing a website, it is highly recommended to store images and CSS files under `/etc/design/<project>` so you can reference your resources based on the current design like described by the following snippet.
+Webサイトを開発する際は、`/etc/design/<project>`の下に画像とCSSファイルを保存して、次のスニペットに示すように、現在のデザインに基づいてリソースを参照できるようにすることをお勧めします。
 
 ```xml
 <%= currentDesign.getPath() + "/static/img/icon.gif %>
@@ -64,7 +63,7 @@ When developing a website, it is highly recommended to store images and CSS file
 前述の例では、いくつかのオファーの利点があります。
 
 * 別々のデザインパスを使用しているサイトごとに、コンポーネントのルックアンドフィールを変化させることができます。
-* Re-design of the website can be simply done by pointing the design path to a different node at the root of the site from `design/v1` to `design/v2.`
+* Webサイトの再設計は、サイトのルートにある別のノードのデザインパスを`design/v1`から`design/v2.`に指定するだけで行えます
 
-* `/etc/designs` とは、ツリ `/content``/apps` ーの下に何があるかを知りたがる外部ユーザを、ブラウザが保護しているのを見た唯一の外部URLです。 上記のURLの利点は、アセットの公開をいくつかの異なる場所に制限するので、システム管理者がより高いセキュリティを設定するのに役立ちます。
+* `/etc/designs` とは、ツリ `/content` ーの下に何があるかを知りたがる外部ユーザを、ブラウザが保護しているのを目にする唯一の外部URL `/apps` です。上記のURLの利点は、アセットの公開をいくつかの異なる場所に制限するので、システム管理者がより高いセキュリティを設定するのに役立ちます。
 
