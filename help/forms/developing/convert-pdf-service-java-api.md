@@ -29,11 +29,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのPostScriptへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}を使用したPDFドキュメントのPostScriptへの変換
 
-次のコードの例では、 *Loan.pdfというPDFドキュメントを* Loan.psというPostScriptドキュメントに変換します **。 (PDFドキュメントのPostScriptへの [変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript))。
+次のコードの例では、*Loan.pdf*&#x200B;というPDFドキュメントを&#x200B;*Loan.ps*&#x200B;というPostScriptドキュメントに変換します。 (「[PDFドキュメントをPostScriptに変換する](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript)」を参照)。
 
 ```java
  /*
@@ -146,9 +146,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのJPEGファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
+## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}を使用したPDFドキュメントのJPEGファイルへの変換
 
-以下のJavaコードの例を使用すると、 *Loan.pdfというPDFドキュメントを一連のJPEGファイルに変換し* 、C:\Adobe directoryフォルダーに保存することができます。 各ファイルには名前が付け `tempFile[index].jpg`られます。最初の画像ファイルの名前は *tempFile0.jpgです*。 (PDFドキュメントの画像形式への [変換を参照](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats))。
+次のJavaコードの例を使用すると、*Loan.pdf*&#x200B;というPDFドキュメントを一連のJPEGファイルに変換し、C:\Adobe directoryフォルダーに保存することができます。 各ファイルの名前は`tempFile[index].jpg`です。最初の画像ファイルの名前は&#x200B;*tempFile0.jpg*&#x200B;です。 ([PDFドキュメントの画像形式への変換](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats)を参照)。
 
 ```java
  /*
