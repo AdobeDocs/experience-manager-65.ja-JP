@@ -22,7 +22,7 @@ ht-degree: 65%
 
 このページでは、カレンダー機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -56,7 +56,7 @@ ht-degree: 65%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [カレンダー API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
@@ -64,11 +64,11 @@ ht-degree: 65%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### カレンダー機能 {#calendar-function}
+### カレンダー機能  {#calendar-function}
 
-A community site structure that includes the [Calendar function](functions.md#calendar-function) will have a configured `calendar` component. The Calendar function supports identifying a [privileged member user group](users.md#privileged-members-group).
+[カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar`コンポーネントが構成されます。 カレンダー関数は、[特権メンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
 
-### Accessing Calendar Posts (UGC) {#accessing-calendar-posts-ugc}
+### カレンダー投稿(UGC)へのアクセス{#accessing-calendar-posts-ugc}
 
 AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)を使用する際に、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムによって UGC にアクセスする必要があります。
 
@@ -77,7 +77,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
 
