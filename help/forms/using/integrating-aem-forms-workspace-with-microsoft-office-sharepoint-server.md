@@ -22,7 +22,8 @@ ht-degree: 84%
 
 **- 要件**
 
-**必要な知識** AEM FormsワークスペースをSharePoint Serverに追加する前に、適切な権限を持つSharePoint Serverにアクセスでき、WorkspaceにアクセスするためのURLを知っている必要があります。 以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
+**必要な**
+知識SharePoint ServerにAEM Formsワークスペースを追加する前に、適切な権限を持つSharePoint Serverにアクセスでき、WorkspaceにアクセスするURLを知っている必要があります。以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
 
 **ユーザレベル**&#x200B;初心者
 
@@ -36,14 +37,14 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
 
 次の手順を実行して、AEM Forms Workspace を Web パーツに統合します。
 
-1. In a web browser, navigate to the SharePoint site such as, `https://[myMOSSserver]:44299/default.aspx` where `[myMOSSserver]` is the name or the IP address of the Sharepoint server.
+1. Webブラウザで、`https://[myMOSSserver]:44299/default.aspx`などのSharePointサイトに移動します。`[myMOSSserver]`はSharePointサーバーの名前またはIPアドレスです。
 
    >[!NOTE]
    >
    >SharePoint サーバーにおけるデフォルトのポート番号は 44299 です。ポート番号は、SharePoint Server のインストール構成によって異なります。
 
 1. Web ページの右上で「**サイトの操作**」をクリックし、「**ページの編集**」を選択します。
-1. Click the **Add a Web Part** button.
+1. **Webパーツ追加**&#x200B;ボタンをクリックします。
 1. 「その他」の下に表示される「Web パーツの追加：Web ページダイアログ」のダイアログボックスで、「**ページビューアの Web パーツ**」を選択し、「**追加**」をクリックします。
 1. 「ページビューアの Web パーツ」ボックスで「**編集**」をクリックし、「**共有 Web パーツの変更**」を選択します。
 
@@ -57,7 +58,7 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
 
 1. 「ページビューア」ページで、次のタスクを実行します。
 
-   1. In the Link box, type the URL of AEM Forms Workspace, such as `https://[AEM_forms_Server]:8080/lc/ws` where `[AEM_forms_Server]` represents the IP or Name of AEM forms server.
+   1. 「リンク」ボックスに、AEM FormsワークスペースのURLを入力します(例：`https://[AEM_forms_Server]:8080/lc/ws`。`[AEM_forms_Server]`はAEM formsサーバーのIPアドレスまたは名前を表します)。
    1. 「**表示方法**」をクリックします。高さ、幅、およびタイトルを変更し、ワークスペースのユーザーインターフェイス全体が表示されるようにします。たとえば、高さと幅をそれぞれ 6 インチと 11 インチに設定することができます。
    1. 「**リンクのテスト**」をクリックします。新しい Web ブラウザのウィンドウが起動し、Workspace が表示されます。
    1. （オプション）「**Layout**」をクリックして、Web パーツ内のワークスペースレイアウトを変更します。
