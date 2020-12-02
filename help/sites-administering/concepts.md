@@ -138,7 +138,7 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 >* API の使用方法を説明するための、スタンドアロンの AEM ネイティブな e コマースのサンプルです。これにより、商品データ、ショッピングカート、チェックアウトと共に、既存のデータ表示とマーケティングキャンペーンを制御することができます。この場合、商品データは AEM にネイティブなリポジトリ（アドビの [JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html) 実装）に保存されます。
 >
 >  
-The standard AEM installation contains the basics of the [generic eCommerce implemention](/help/sites-administering/generic.md).
+標準のAEMインストールには、[汎用のeコマース実装](/help/sites-administering/generic.md)の基本が含まれています。
 
 ### コマースプロバイダー {#commerce-providers}
 
@@ -160,7 +160,7 @@ The standard AEM installation contains the basics of the [generic eCommerce impl
 >
 >geometrixx インポーターは、CSV ファイルを使用します。実装の上のコメントに、受け入れられているスキーマ（と許可されているカスタムプロパティ）の説明があります。
 
-[ProductServicesManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) は、（[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings) を通じて）[ProductImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) インターフェイスと [CatalogBlueprintImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) インターフェイスの実装のリストを保守します。These are listed in the **Importer/Commerce Provider** dropdown field of the importer wizard (using the `commerceProvider` property as a name).
+[ProductServicesManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) は、（[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings) を通じて）[ProductImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) インターフェイスと [CatalogBlueprintImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) インターフェイスの実装のリストを保守します。これらは、インポーターウィザードの&#x200B;**インポーター/コマースプロバイダー**&#x200B;ドロップダウンフィールドに一覧表示されます（`commerceProvider`プロパティを名前として使用）。
 
 ドロップダウンの特定のインポーター／コマースプロバイダーを利用できる場合は、必要な追加データがあれば（インポータータイプに応じて）次のどちらかに定義する必要があります。
 
@@ -204,7 +204,7 @@ The standard AEM installation contains the basics of the [generic eCommerce impl
 
 ## 製品 {#products}
 
-### 製品 Data versus Marketing Data {#product-data-versus-marketing-data}
+### 製品 データとマーケティングデータ{#product-data-versus-marketing-data}
 
 #### 構造的カテゴリとマーケティングカテゴリ {#structural-versus-marketing-categories}
 
@@ -212,13 +212,13 @@ The standard AEM installation contains the basics of the [generic eCommerce impl
 
 * *構造*カテゴリ
 
-   商品 *とは何かを定義するカテゴリツリー*;例：
+   *何を製品*&#x200B;とするかを定義するカテゴリツリー。例：
 
    `/products/mens/shoes/sneakers`
 
-* *マーケティング* カテゴリ
+* ** Marketingcategories
 
-   ある *製品が属する他のすべてのカテゴリ*;例：
+   *productが属する他のカテゴリはすべて*;例：
 
    `/special-offers/christmas/shoes`)
 
@@ -231,7 +231,7 @@ The standard AEM installation contains the basics of the [generic eCommerce impl
 * AEM（汎用）に直接保持できます。
 * e コマースエンジンに保持して、AEM で利用できます。
 
-   Depending on the data type it is [synchronized](#catalog-maintenance-data-synchronization) as necessary, or accessed directly; for example, highly volatile and critial data such as product prices are retrieved from the ecommerce engine on every page request to ensure they are always up-to-date.
+   データタイプに応じて、必要に応じて[同期](#catalog-maintenance-data-synchronization)されるか、直接アクセスされます。例えば、製品価格などの非常に揮発性で重要なデータは、製品が常に最新であることを確認するために、eコマースエンジンから各ページリクエスト上で取得されます。
 
 どちらの場合でも、商品データが AEM に入力されるか読み込まれると、**製品**&#x200B;コンソールで表示できます。商品のカードビューとリストビューには、次のような情報が表示されます。
 
@@ -301,15 +301,15 @@ The standard AEM installation contains the basics of the [generic eCommerce impl
 
 カタログは、管理および買い物客に対する表示を容易にするために、商品データをグループ化したものです。多くの場合、カタログは言語、地理的領域、ブランド、季節、趣味、スポーツなど多くの属性に従って構造化されています。
 
-### カタログの構造 {#catalog-structure}
+### カタログの構造  {#catalog-structure}
 
 #### 複数言語のカタログ {#catalogs-in-multiple-languages}
 
-AEM は、商品コンテンツを複数言語でサポートします。When requesting data, the integration framework retrieves the language from the current tree (for example, `en_US` for pages under `/content/geometrixx-outdoors/en_US`).
+AEM は、商品コンテンツを複数言語でサポートします。データをリクエストする際、統合フレームワークは現在のツリーから言語を取得します（例えば、`/content/geometrixx-outdoors/en_US`の下のページの`en_US`）。
 
 多言語ストアの場合、各言語ツリー用のカタログを個別に読み込む（または [MSM](/help/sites-administering/msm.md) を使用してコピーする）ことができます。
 
-#### 複数ブランドのカタログ {#catalogs-for-multiple-brands}
+#### 複数ブランドのカタログ  {#catalogs-for-multiple-brands}
 
 言語と同様に、大規模な多国籍企業は、複数のブランドを提供しなければならないことがあります。
 
@@ -317,14 +317,14 @@ AEM は、商品コンテンツを複数言語でサポートします。When re
 
 複数の商品をカタログにまとめるために、タグも使用できます。タグは、季節的なオファーなど、より動的なカタログに使用できます。
 
-### Catalog Setup (Initial Import) {#catalog-setup-initial-import}
+### カタログ設定（初期読み込み） {#catalog-setup-initial-import}
 
 実装に応じて、基本カタログに必要な商品データを次のものから AEM に読み込むことができます。
 
 * CSV ファイル（汎用実装用）
 * e コマースエンジン
 
-### カタログのメンテナンス（データ同期） {#catalog-maintenance-data-synchronization}
+### カタログのメンテナンス（データ同期）  {#catalog-maintenance-data-synchronization}
 
 商品データの変更は必ず発生します。
 
@@ -345,7 +345,7 @@ e コマースエンジンを使用している場合、商品データはその
 
 * 価格情報などの非常に変動しやすいデータは、ページ要求のたびにコマースエンジンから取得して、常に最新であることを保証します。
 
-### カタログ - パフォーマンスと拡張 {#catalogs-performance-and-scaling}
+### カタログ - パフォーマンスと拡張  {#catalogs-performance-and-scaling}
 
 商品数が多い（通常は 100,000 以上）大規模なカタログを e コマースエンジン（PIM）から読み込むと、多数のノードによってシステムに影響を与えることがあります。商品にアセット（商品画像など）が関連付けられている場合は、オーサリングインスタンスが低速化する可能性もあります。これは、このようなアセットの後処理に CPU とメモリが集中することによるものです。
 
@@ -358,13 +358,13 @@ e コマースエンジンを使用している場合、商品データはその
 * [パフォーマンステスト](#performance-testing)
 * [パフォーマンス - その他](#performance-miscellaneous)
 
-#### バケッティング {#bucketing}
+#### バケッティング  {#bucketing}
 
 JCR ノードの直下に多数の子ノード（1000 以上）がある場合は、パフォーマンスが影響を受けないようにするために、バケット（疑似フォルダー）が必要です。バケットは、読み込み時にアルゴリズムに従って生成されます。
 
 これらのバケットは、カタログ構造に取り込まれた疑似フォルダーの形を取りますが、公開 URL に表示されないように設定できます。
 
-#### アセットの後処理を専用インスタンスにオフロードする {#offload-asset-post-processing-to-a-dedicated-instance}
+#### アセットの後処理を専用インスタンスにオフロードする  {#offload-asset-post-processing-to-a-dedicated-instance}
 
 このシナリオでは、次の 2 つのオーサーインスタンスを設定します。
 
@@ -425,7 +425,7 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
 
 * メンテナンス要件（バックアップ、Tar PM の最適化、データストアのガベージコレクションなど）
 
-#### パフォーマンス - その他 {#performance-miscellaneous}
+#### パフォーマンス - その他  {#performance-miscellaneous}
 
 すべての実装で、以下の点に留意してください。
 
@@ -457,7 +457,7 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
    例えば、属性管理は商品の読み込みによって更新されるデータに関係するので、しばしばキャッシュに適した候補となります。
 * [プロキシページ](/help/sites-administering/concepts.md#proxy-pages)の使用を検討します。
 
-### カタログセクションページ {#catalog-section-pages}
+### カタログセクションページ  {#catalog-section-pages}
 
 カタログセクションには、次のものが表示されます。
 
@@ -486,7 +486,7 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
 * カラーとサイズのバリアント
 * 数量
 
-#### 商品のランディングページ {#product-landing-pages}
+#### 商品のランディングページ  {#product-landing-pages}
 
 基盤となる商品ページへのリンクを含む紹介や概要など、主に静的な情報を表示する AEM ページです。
 
@@ -496,13 +496,13 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
 
 **製品**&#x200B;コンポーネントは、個々の要件に応じてカスタマイズすることもできます。
 
-### プロキシページ {#proxy-pages}
+### プロキシページ  {#proxy-pages}
 
 プロキシページを使用してリポジトリの構造を単純化し、大規模カタログのストレージを最適化できます。
 
 カタログの作成では、商品あたり 10 ノードを使用します。AEM 内で更新およびカスタマイズできる商品ごとに、個別のコンポーネントを提供するからです。このようにノード数が多いと、カタログに何百、何千もの商品が含まれる場合、問題が生じる場合があります。問題を回避するために、プロキシページを使用してカタログを作成できます。
 
-Proxy pages use a two-node structure ( `cq:Page` and `jcr:content`) that does not contain any of the actual product content. リクエスト時に、製品データとテンプレートページを参照することで、コンテンツが生成されます。
+プロキシページは、実際の製品のコンテンツを含まない2つのノード構造（`cq:Page`と`jcr:content`）を使用します。 リクエスト時に、製品データとテンプレートページを参照することで、コンテンツが生成されます。
 
 ただし、デメリットもあります。AEM 内の商品情報をカスタマイズすることはできません。（サイト用に定義された）標準テンプレートが使用されます。
 
@@ -553,7 +553,7 @@ AEM では、
 
 プロモーションは、通常は商品情報マネージャーではなくマーケティングマネージャーが保守します。
 
-* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。``
+* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。&quot;
 * プロモーションは、次のものを提供します。
 
    * 優先度
@@ -580,7 +580,7 @@ AEM では、プロモーションは[キャンペーン管理](/help/sites-auth
 
    `/content/campaigns/geometrixx-outdoors/big-spender/ordervalueover100/free-shipping`
 
-   がエクスペリエンス内にある場合、セグメント( `ordervalueover100`)が解決されるたびに自動的に実行されます。
+   がエクスペリエンス内にあるため、セグメント(`ordervalueover100`)が解決されるたびに自動的に実行されます。
 
 * エクスペリエンス内に存在しない（キャンペーン内にのみ存在する）プロモーションの場合は、自動的にはオーディエンスに適用されません。ただし、買い物かごに伝票を入力し、その伝票がプロモーションを参照している場合は、これをクリックできます。
 
@@ -645,11 +645,11 @@ e コマースエンジンを使用している場合、AEM はアカウント I
 
 シングルサインオン（SSO）の機能が導入されているので、作成者は AEM と e コマースシステムの両方で 2 回ログインせずに済みます。
 
-### マイアカウント {#myaccount}
+### マイアカウント  {#myaccount}
 
 e コマースエンジンからのトランザクションデータは、買い物客に関する個人情報と結合されます。AEM は、このデータの一部をプロファイルデータとして使用します。AEM のフォームのアクションによって、情報が e コマースエンジンに書き戻されます。
 
-アカウント情報を簡単に管理できるページがあります。 You can access it by clicking **My Account** at the top of a geometrixx page, or by navigating to `/content/geometrixx-outdoors/en/user/account.html`.
+アカウント情報を簡単に管理できるページがあります。 このページにアクセスするには、geometrixxページの上部にある「**マイアカウント**」をクリックするか、`/content/geometrixx-outdoors/en/user/account.html`に移動します。
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -665,7 +665,7 @@ e コマースエンジンからのトランザクションデータは、買い
 
 デフォルトとするアドレスを選択できます。
 
-The address book component is reachable from the **My Account** page by clicking **Address Book** or by navigating to `/content/geometrixx-outdoors/en/user/account/address-book.html`.
+**マイアカウント**&#x200B;ページで[**アドレス帳**]をクリックするか、`/content/geometrixx-outdoors/en/user/account/address-book.html`に移動して、アドレス帳コンポーネントに到達できます。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
@@ -679,16 +679,16 @@ The address book component is reachable from the **My Account** page by clicking
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
-Addresses are persisted below `user_home/profile/addresses`.
+アドレスは`user_home/profile/addresses`の下に保持されます。
 例えば、Alison Parkerの場合、この名前は/home/users/geometrixx/aparker@geometrixx.info/プロファイル/addressesの下にあります。
 
-デフォルトとするアドレスを選択できます。この情報は、アドレスと一緒にではなく、買い物客のプロファイルに保持されます。The profile property `address.default` is set with the path of the selected address for value.
+デフォルトとするアドレスを選択できます。この情報は、アドレスと一緒にではなく、買い物客のプロファイルに保持されます。プロファイルプロパティ`address.default`は、値に対して選択されたアドレスのパスで設定されます。
 
 ### 顧客固有の価格 {#customer-specific-pricing}
 
 e コマースエンジンは、コンテキスト（基本的には買い物客の情報）を使用して保持している価格を判断してから、正しい情報を AEM に返します。
 
-## 買い物かごと注文 {#shopping-cart-and-orders}
+## 買い物かごと注文  {#shopping-cart-and-orders}
 
 買い物をするとき、買い物客は商品ページを参照して、アイテムを選択し、買い物かごに入れます。チェックアウトに進むと、注文できます。
 
@@ -704,7 +704,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 >
 >インスタンスの設定によっては、チェックアウト前にアドレス情報すなわち顧客の登録が必要な場合があります。
 
-### 登録済みの買い物客 {#registered-shoppers}
+### 登録済みの買い物客  {#registered-shoppers}
 
 登録済みの顧客は、次のことが可能です。
 
@@ -714,7 +714,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 * チェックアウトを実行して注文する
 * 以前の注文を表示および追跡する
 
-### 買い物かごの中身の概要 {#shopping-cart-content-overview}
+### 買い物かごの中身の概要  {#shopping-cart-content-overview}
 
 買い物かごには次のものがあります。
 
@@ -735,11 +735,11 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 どちらの場合も、アイテムはログイン／ログアウトをまたがって（ただし同じコンピューター／ブラウザー上でのみ）買い物かごに残ります（そして復元できます）。次に例を示します。
 
 * `anonymous` として閲覧し、商品を買い物かごに追加する
-* sign in as `Allison Parker` - her cart is empty
+* `Allison Parker`としてサインイン — カートが空です
 * 商品を買い物かごに追加する
 * ログアウト - 買い物かごには `anonymous` の商品が表示される
 
-* sign in again as `Allison Parker` - her products are restored
+* 再び`Allison Parker`としてサインインする — 製品が復元される
 
 >[!NOTE]
 >
@@ -755,7 +755,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 価格の変更が発生すると、チェックアウト前に（両方のシステムに）反映されます。
 
-### 注文情報 {#order-information}
+### 注文情報  {#order-information}
 
 使用する実装に応じて、注文に関する情報は e コマースエンジンまたは AEM のどちらかに保持されます。この情報は、AEM によってレンダリングされます。
 
@@ -859,7 +859,7 @@ e コマースエンジンは、コンテキスト（基本的には買い物客
 
 その後、e コマースエンジンが AEM フォームからの入力を使用して、チェックアウトプロセスを管理します。
 
-### 支払いのセキュリティ {#payment-security}
+### 支払いのセキュリティ  {#payment-security}
 
 クレジットカード情報を含む支払いの詳細は、多くの場合、e コマースエンジンが管理します。AEM は、そのようなトランザクション情報をエンジンに転送します（情報はエンジンから支払い処理サービスに転送されます）。
 
