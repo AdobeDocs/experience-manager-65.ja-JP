@@ -22,7 +22,7 @@ ht-degree: 100%
 
 HTML としてレンダリングされるフォームの場合、発生したフォーム検証エラーがユーザーに対して表示されます。検証メッセージの表示方法をカスタマイズできます。検証メッセージを表示する場所に応じて、フォーム内のメッセージの位置とフレーム境界線のサイズも制御できます。
 
-## 検証メッセージの表示方法の指定 {#specify-how-validation-messages-are-displayed}
+## 検証メッセージの表示方法の指定  {#specify-how-validation-messages-are-displayed}
 
 1. 管理コンソールで、サービス／Forms をクリックします。
 1. 「検証結果」の「レポート」リストで次のいずれかのオプションを選択します。
@@ -41,7 +41,7 @@ HTML としてレンダリングされるフォームの場合、発生したフ
 
 1. 「保存」をクリックします。
 
-## Web ブラウザーに返すフォームを基準にした検証メッセージの位置の指定 {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
+## Web ブラウザーに返すフォームを基準にした検証メッセージの位置の指定  {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
 
 「レポート」を「フレーム」または「フレームなし」に設定するとき、検証メッセージの位置を指定できます。
 
@@ -57,7 +57,7 @@ HTML としてレンダリングされるフォームの場合、発生したフ
 
 1. 「保存」をクリックします。
 
-## フレーム境界線のサイズの指定 {#specify-the-frame-border-size}
+## フレーム境界線のサイズの指定  {#specify-the-frame-border-size}
 
 「レポート」を「フレーム」に設定するとき、フレーム境界線のサイズを指定できます。
 
