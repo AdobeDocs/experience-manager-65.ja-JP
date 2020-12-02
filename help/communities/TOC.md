@@ -14,7 +14,7 @@ ht-degree: 97%
 ---
 
 
-# Adobe Experience Manager 6.5 Communities Guide {#communities}
+# Adobe Experience Manager6.5コミュニティガイド{#communities}
 
 + [Communities ガイド](home.md)
 + AEM Communities の概要 {#introduction}
