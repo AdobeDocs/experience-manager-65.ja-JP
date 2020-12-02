@@ -22,7 +22,7 @@ ht-degree: 74%
 
 シングルサインオン（SSO）は、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すれば、その後は複数のシステムにアクセスできるようにするものです。個別のシステム（信頼された認証として知られる）が認証を実行し、Adobe Experience Manager に対してユーザーの資格情報を提供します。Adobe Experience Manager がそのユーザーのアクセス権を確認し、適用します（つまり、ユーザーがアクセスを許可されているリソースを決定します）。
 
-SSO認証ハンドラーサービス( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)は、信頼された認証子が提供する認証結果を処理します。 SSO認証ハンドラは、次の順序で、特別な属性の値としてssid（SSO識別子）を検索します。
+SSO認証ハンドラーサービス(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)は、信頼された認証子が提供する認証結果を処理します。 SSO認証ハンドラは、次の順序で、特別な属性の値としてssid（SSO識別子）を検索します。
 
 1. 要求ヘッダー
 1. cookie
@@ -35,7 +35,7 @@ SSO認証ハンドラーサービス( `com.adobe.granite.auth.sso.impl.SsoAuthen
 * ログインモジュール
 * SSO 認証サービス
 
-両方のサービスに同じ属性名を指定する必要があります。 属性は、に指定され `SimpleCredentials` たに含まれ `Repository.login`ます。 属性の値は無関係で無視され、単に存在するだけが重要で、検証されます。
+両方のサービスに同じ属性名を指定する必要があります。 属性は、`Repository.login`に提供される`SimpleCredentials`に含まれます。 属性の値は無関係で無視され、単に存在するだけが重要で、検証されます。
 
 ## SSO の設定 {#configuring-sso}
 
@@ -45,20 +45,20 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
    例えば、NTLM の場合は以下のように設定します。
 
-   * **パス：** 必要に応じて例えば、 `/`
-   * **ヘッダー名**: `LOGON_USER`
-   * **IDの形式**: `^<DOMAIN>\\(.+)$`
+   * **パス：** 必要に応じて；例えば、  `/`
+   * **ヘッダー名**:  `LOGON_USER`
+   * **IDの形式**:  `^<DOMAIN>\\(.+)$`
 
-      Where `<*DOMAIN*>` is replaced by your own domain name.
+      `<*DOMAIN*>`は、独自のドメイン名に置き換えます。
    CoSign の場合：
 
-   * **パス：** 必要に応じて例えば、 `/`
+   * **パス：** 必要に応じて；例えば、  `/`
    * **ヘッダー名**：remote_user
-   * **IDの形式：** 現状
+   * **ID形式：** 現状
 
    SiteMinder の場合：
 
-   * **パス：** 必要に応じて例えば、 `/`
+   * **パス：** 必要に応じて；例えば、  `/`
    * **ヘッダー名**：SM_USER
    * **ID 形式**：AsIs
 
@@ -90,8 +90,8 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
 >
 >
-セット `disp_iis.ini` 内：
->(see [installing the Dispatcher with the Microsoft Internet Information Server](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server) for full details)
+`disp_iis.ini`セット：
+>（詳しくは、[Microsoft Internet Information Serverと共にディスパッチャーをインストールする](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server)を参照）
 >
 >* `servervariables=1`（IIS サーバー変数を要求ヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを、その「Basic」と同等のものに置き換えます）
@@ -113,13 +113,13 @@ Felix コンソールの「**Authenticator**」オプションを使用すると
 
 `http://localhost:4502/system/console/slingauth`
 
-パスに最適なハンドラーが最初に照会されます。For example, if you configure handler-A for the path `/` and handler-B for the path `/content`, then a request to `/content/mypage.html` will query handler-B first.
+パスに最適なハンドラーが最初に照会されます。例えば、パス`/`にhandler-Aを設定し、パス`/content`にhandler-Bを設定した場合、`/content/mypage.html`に対する要求が最初にクエリhandler-Bに送られます。
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
 ### 例 {#example}
 
-For a cookie request (using the URL `http://localhost:4502/libs/wcm/content/siteadmin.html`):
+Cookieリクエストの場合（URL `http://localhost:4502/libs/wcm/content/siteadmin.html`を使用）:
 
 ```xml
 GET /libs/cq/core/content/welcome.html HTTP/1.1
@@ -131,13 +131,13 @@ Cookie: TestCookie=admin
 
 * **パス**: `/`
 
-* **ヘッダー名**: `TestHeader`
+* **ヘッダー名**:  `TestHeader`
 
 * **Cookie Names**: `TestCookie`
 
-* **パラメータ名**: `TestParameter`
+* **パラメータ名**:  `TestParameter`
 
-* **IDの形式**: `AsIs`
+* **IDの形式**:  `AsIs`
 
 応答は次のようになります。
 
@@ -160,27 +160,27 @@ Transfer-Encoding: chunked
 これは、次の条件を満たす場合にも機能します。
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-または、次のcurlコマンドを使用して、 `TestHeader` ヘッダーを `admin:`
+または、次のcurlコマンドを使用して`TestHeader`ヘッダーを`admin:`に送信できます
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
 >ブラウザーで要求パラメーターを使用したときは、HTML の一部だけが（CSS なしで）表示されます。これは、HTML からの要求はすべて要求パラメーターなしでおこなわれるからです。
 
-## AEM サインアウトリンクの削除 {#removing-aem-sign-out-links}
+## AEM サインアウトリンクの削除  {#removing-aem-sign-out-links}
 
 SSO を使用する場合、サインインとサインアウトは外部で処理されるので、AEM 独自のサインアウトリンクは不要であり、削除する必要があります。
 
 ようこそ画面のサインアウトリンクは以下の手順で削除できます。
 
-1. オーバーレイ `/libs/cq/core/components/welcome/welcome.jsp` 先 `/apps/cq/core/components/welcome/welcome.jsp`
+1. `/libs/cq/core/components/welcome/welcome.jsp`を`/apps/cq/core/components/welcome/welcome.jsp`にオーバーレイ
 1. jsp の以下の部分を削除します。
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
 右上隅にあるユーザーの個人メニューのサインアウトリンクを削除するには、以下の手順を実行します。
 
-1. オーバーレイ `/libs/cq/ui/widgets/source/widgets/UserInfo.js` 先 `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
+1. `/libs/cq/ui/widgets/source/widgets/UserInfo.js`を`/apps/cq/ui/widgets/source/widgets/UserInfo.js`にオーバーレイ
 
 1. このファイルの以下の部分を削除します。
 
