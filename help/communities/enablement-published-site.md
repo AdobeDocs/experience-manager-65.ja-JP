@@ -30,8 +30,8 @@ ht-degree: 46%
 
 まず、サイト作成時に表示された URL を参照します。ただし、このとき参照するのはパブリッシュサーバー上の URL です。次に例を示します。
 
-* Author URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
-* Publish URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
+* 作成者URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
+* 発行URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
 
 [デフォルトホームページを設定](enablement-create-site.md#changethedefaulthomepage)した場合は、[http://localhost:4503/](http://localhost:4503/) を参照するだけでサイトが開きます。
 
@@ -45,17 +45,17 @@ ht-degree: 46%
 
 匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。自己登録やFacebookやTwitterへのログインは選択できません。
 
-Notice this  home page  shows four menu items: `Assignments, Ski Catalog, What's New` and `Discussions`, but none may be reached without signing in.
+このホームページには、次の4つのメニュー項目が表示されています。`Assignments, Ski Catalog, What's New`と`Discussions`ですが、サインインしない限り、到達できない場合があります。
 
 >[!NOTE]
 >
 >サイト訪問者に自己登録を許可することなく、イネーブルメントサイトへの匿名アクセスを許可することができます。
 >
->If an enablement resource is set to `show in catalog` and `allow anonymous access`, it will be possible for anonymous site visitors to view resources in the catalog.
+>有効化リソースが`show in catalog`と`allow anonymous access`に設定されている場合、匿名サイト訪問者はカタログ内の表示リソースを使用できます。
 
-### JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
+### JCR {#prevent-anonymous-access-on-jcr}での匿名アクセスの禁止
 
-既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **[!UICONTROL を許可]** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを介してコミュニティサイトのコンテンツが匿名訪問者に公開されますが、**[!UICONTROL allow anonymous access]**&#x200B;はサイトのコンテンツに対して無効になっています。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
 
 jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
@@ -65,12 +65,12 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
    >
    >ローカライズされたサイトには移動しないでください。
 
-1. 「 **[!UICONTROL ページプロパティ]**」に移動。
+1. **[!UICONTROL ページプロパティ]**&#x200B;に移動します。
 
    ![page-properties](assets/page-properties.png)
 
 1. 「**[!UICONTROL 詳細]**」タブに移動します。
-1. Enable **[!UICONTROL Authentication Requirement]**.
+1. **[!UICONTROL 認証要件]**&#x200B;を有効にします。
 
    ![サイト認証](assets/site-authentication.png)
 
@@ -79,7 +79,7 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 
 ## 登録済みメンバー {#enrolled-member}
 
-This experience relies on users `Riley Taylor` and `Sidney Croft` being [created](enablement-setup.md#publishcreateenablementmembers) and [assigned](resource.md#settings) to the *Ski Lessons* learning path through their membership in the *Community Ski Class* group.
+このエクスペリエンスは、`Riley Taylor`と`Sidney Croft`が[作成](enablement-setup.md#publishcreateenablementmembers)で[割り当て](resource.md#settings)を&#x200B;*Ski Lessons*&#x200B;の学習パスに、*Community Ski Class*&#x200B;グループのメンバーシップに依存しています。
 
 ログイン
 
@@ -114,7 +114,7 @@ This experience relies on users `Riley Taylor` and `Sidney Croft` being [created
 
 「Ski Lesson 1」を選択すると、イネーブルメントリソースの詳細ページが表示されます。**
 
-From the details page, the member is able to learn, [rate](rating.md) the lesson and add [comments](comments.md). メンバーのアクティビティはすべて、サイトの新機能セクションに反映されます。
+詳細ページから、メンバーは学習し、[rate](rating.md)レッスンを学び、[comments](comments.md)を追加することができます。 メンバーのアクティビティはすべて、サイトの新機能セクションに反映されます。
 
 イネーブルメントリソースとのインタラクションは、オーサー環境からアクセスできるレポートセクションに表示されます。
 
@@ -122,7 +122,7 @@ From the details page, the member is able to learn, [rate](rating.md) the lesson
 
 ### Ski Catalog {#ski-catalog}
 
-Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられたイネーブルメントリソースのカタログです。The two *Ski Lesson* resources are tagged with the `Skiing` tag, such that if any tags other than `All` or `Tutorial: Sports / Skiing` is selected, nothing is displayed.
+Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられたイネーブルメントリソースのカタログです。2つの&#x200B;*Ski Lesson*&#x200B;リソースには`Skiing`タグが付けられます。例えば、`All`または`Tutorial: Sports / Skiing`以外のタグが選択されている場合は、何も表示されません。
 
 メンバーにイネーブルメントリソースが（直接または学習パスを通じて）割り当てられていないときも、カタログ内にあるイネーブルメントリソースを使用したり、コメントや評価を付けてフィードバックを与えることができます。
 
@@ -130,7 +130,7 @@ Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられた
 
 ### Discussions {#discussions}
 
-In addition to rating and commenting on enablement resources ([when enabled](enablement-create-site.md#step33asettings)), the community site template from which `Enablement Tutorial` was created includes the [forum function](functions.md#forum-function) (title is `Discussions)`.
+有効化リソースの評価とコメント化（[有効な場合](enablement-create-site.md#step33asettings)）に加えて、`Enablement Tutorial`の作成元のコミュニティサイトテンプレートには[フォーラム関数](functions.md#forum-function)(タイトルは`Discussions)`です。
 
 「`Discussions`」のリンクを選択し、トピックを投稿します。
 
@@ -142,22 +142,22 @@ Sidney Croft（sidney／password）としてログインおよびログインし
 
 ### 新機能 {#what-s-new}
 
-The `What's New` menu item is the title given the [activity stream function](functions.md#activity-stream-function) in this community site&#39;s structure.
+`What's New`メニュー項目は、このコミュニティサイトの構造の[アクティビティストリーム関数](functions.md#activity-stream-function)に与えられたタイトルです。
 
-Still signed in as Sidney, select the `What's New` link to show the activity.
+シドニーとしてサインインしたまま、`What's New`リンクを選択してアクティビティを表示します。
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
 ## 信頼されているコミュニティメンバー {#trusted-community-member}
 
-This experience assumes ` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)` was assigned the roles of [moderator](enablement-create-site.md#moderation) and [resource contact](resource.md#settings).
+このエクスペリエンスでは、` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)`に[モデレーター](enablement-create-site.md#moderation)と[リソース連絡先](resource.md#settings)の役割が割り当てられたと想定しています。
 
 ログイン
 
 * `Username: quinn`
 * `Password: password`
 
-Once signed in, notice there is a new menu item, `Administration`, which appears because the member was given the role of moderator.
+サインインすると、新しいメニュー項目`Administration`が表示されます。これは、メンバーにモデレーターの役割が与えられたためです。
 
 ![chlimage_1-441](assets/chlimage_1-441.png)
 
@@ -165,7 +165,7 @@ Once signed in, notice there is a new menu item, `Administration`, which appears
 
 ### Administration {#administration}
 
-What there is, is activity by the two learners, `Riley Taylor` and `Sidney Croft`. By selecting the `Administration` link to access the Moderation Console, Quinn is able to use the [bulk moderation console](moderation.md) to moderate their posts.
+何があるかというと、2人の学習者`Riley Taylor`と`Sidney Croft`のアクティビティです。 `Administration`リンクを選択してモデレートコンソールにアクセスすると、Quinは[一括モデレートコンソール](moderation.md)を使用して投稿をモデレートできます。
 
 サイドパネルのアイコンを選択すると、コミュニティコンテンツの検索に使用するフィルターの展開／折りたたみが切り替わります。
 
@@ -177,12 +177,12 @@ What there is, is activity by the two learners, `Riley Taylor` and `Sidney Croft
 
 学習者とイネーブルメントリソースに関するレポートにアクセスには、2 つの方法があります。
 
-On author, navigate to the **Communities, [Resources console](resources.md)**, where the enablement resources are managed, and after selecting a community site, it is possible to generate reports for
+作成者が&#x200B;**コミュニティ[リソースコンソール](resources.md)**&#x200B;に移動し、有効化リソースが管理されている場所に移動します。コミュニティサイトを選択すると、次のレポートを生成できます。
 
 * すべての有効化リソースと学習パス
 * 有効化に関する1つのリソースまたは学習パス
 
-Navigate to the **Communities, [Reports console](reports.md)**, and generate reports according to:
+**コミュニティ、[レポートコンソール](reports.md)**&#x200B;に移動し、次に従ってレポートを生成します。
 
 * 有効化リソースと学習パスの割り当て
 * 特定の期間におけるコミュニティサイトへの投稿
@@ -204,10 +204,10 @@ Navigate to the **Communities, [Reports console](reports.md)**, and generate rep
 パブリッシュ環境でリソースに対しておこなわれるアクティビティやインタラクションが少ない場合は、オーサー環境でレポートを表示すると有益です。
 
 * 作成者は、管理者権限でサインインします。
-* Navigate from the main menu to **[!UICONTROL Communities]** > **[!UICONTROL Resources]**.
-* サイトを選択し `Enablement Tutorial` ます。
-* Select the `Report` icon for a summary of all Resources.
-* Select a Resource and then the `Report` icon for a report on that Resource.
+* メインメニューから&#x200B;**[!UICONTROL コミュニティ]** > **[!UICONTROL リソース]**&#x200B;に移動します。
+* `Enablement Tutorial`サイトを選択します。
+* すべてのリソースの概要を表示するには、`Report`アイコンを選択します。
+* リソースを選択し、そのリソースのレポートの`Report`アイコンを選択します。
 
 Adobe Analytics のデータを表示するには時期尚早のようです。データが表示されるには 1 時間から 12 時間かかります。ただし、基本的なSCORMレポートは既に使用可能です。
 
@@ -217,10 +217,10 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 #### Ski Lessons のユーザーレポート {#ski-lessons-user-report}
 
-* Select **[!UICONTROL Communities > Resources]**
+* **[!UICONTROL コミュニティ/リソース]**&#x200B;を選択します
 
-* Open card `Enablement Tutorial`
-* Open card `Ski Lessons`
+* カード`Enablement Tutorial`を開く
+* カード`Ski Lessons`を開く
 *  `Report > User Report`
 
 ![chlimage_1-444](assets/chlimage_1-444.png)
@@ -236,28 +236,28 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 割り当てのレポートの場合：
 
 * 作成者は、管理者権限でサインインします。
-* Navigate to **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**.
-* Select a **[!UICONTROL Site]** from the pull-down menu (select `Enablement Tutorial`).
+* **[!UICONTROL コミュニティ]** > **[!UICONTROL レポート]** > **[!UICONTROL 割り当てレポート]**&#x200B;に移動します。
+* プルダウンメニューから&#x200B;**[!UICONTROL サイト]**&#x200B;を選択します（`Enablement Tutorial`を選択します）。
 
-* Select **[!UICONTROL Group]** (select `Community Ski Class`)
+* **[!UICONTROL グループ]**&#x200B;を選択（`Community Ski Class`を選択）
 
-* Select an **[!UICONTROL Assignment]** (select `Ski Lessons`)
+* **[!UICONTROL 割り当て]**&#x200B;を選択（`Ski Lessons`を選択）
 
-* Select **[!UICONTROL Generate]**
+* 「**[!UICONTROL 生成]**」を選択します
 
 ![chlimage_1-445](assets/chlimage_1-445.png)
 
 表示のレポートの場合：
 
 * 作成者は、管理者権限でサインインします。
-* **[!UICONTROL コミュニティ]** / **[!UICONTROL レポート]** / **[!UICONTROL 表示レポートに移動します]**。
-* Select a **Site** from the pull-down menu (select `Enablement Tutorial`).
+* **[!UICONTROL コミュニティ]** > **[!UICONTROL レポート]** > **[!UICONTROL 表示レポート]**&#x200B;に移動します。
+* プルダウンメニューから&#x200B;**サイト**&#x200B;を選択します（`Enablement Tutorial`を選択します）。
 
-* Select **[!UICONTROL Content Type]** (select `all`).
+* 「**[!UICONTROL コンテンツタイプ]**」を選択します（「`all`」を選択します）。
 
-* **[!UICONTROL 日付範囲を選択します]** (選択 `Last 7 days`)。
+* **[!UICONTROL 日付範囲]**&#x200B;を選択します（`Last 7 days`を選択）。
 
-* Select **[!UICONTROL Generate]**.
+* 「**[!UICONTROL 生成]**」を選択します。
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
