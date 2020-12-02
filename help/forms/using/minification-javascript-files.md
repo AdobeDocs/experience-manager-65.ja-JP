@@ -18,19 +18,19 @@ ht-degree: 85%
 ---
 
 
-# JavaScript ファイルの縮小 {#minification-of-the-javascript-files}
+# JavaScript ファイルの縮小  {#minification-of-the-javascript-files}
 
 縮小では、ソースコードから余白、復帰改行、コメントなどの冗長文字を削除します。これにより、コードのサイズが削減されてパフォーマンスが向上します。縮小は機能に影響しませんが、コードの可読性を削減します。
 
 セマンティックの変更のための縮小コードを生成するには、次の手順に従います。
 
-1. Copy `client-html/src/main/webapp/js` from src-package on filesystem.
+1. src-packageの`client-html/src/main/webapp/js`をfilesystemにコピーします。
 
    >[!NOTE]
    >
    >パッケージに関する詳細については、「[AEM Forms Workspace のカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md)」を参照してください。
 
-1. Update paths in `main.js` located under client-html/src/main/webapp/js, for added/updated models/views.
+1. モデル/表示の追加/更新の場合は、client-html/src/main/webapp/jsの下にある`main.js`のパスを更新します。
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 
@@ -44,7 +44,7 @@ ht-degree: 85%
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. でエイリアス `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` の変更/追加がある場合に更新 `main.js`します。
+1. `main.js`にエイリアスの変更/追加がある場合に備えて、`registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,`を更新します。
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 
@@ -55,7 +55,7 @@ ht-degree: 85%
                service="service"/>
    ```
 
-   To
+   宛先
 
    ```xml
    <sharequeue
