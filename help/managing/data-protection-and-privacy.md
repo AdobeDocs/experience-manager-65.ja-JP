@@ -19,7 +19,7 @@ ht-degree: 23%
 ---
 
 
-# Adobe Experience Manager保護対応およびデータプライバシー規制 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
+# データ保護とデータのプライバシーに関するAdobe Experience Managerの対応に関する規制{#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -29,7 +29,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->プライバシーに関する問題に対するAdobeの対応、およびAdobeのお客様にとっての意味について詳しくは、 [Adobeのプライバシーセンター](https://www.adobe.com/privacy.html)を参照してください。
+>プライバシーに関する問題に対するAdobeの対応、およびAdobeのお客様にとっての意味について詳しくは、[Adobeのプライバシーセンター](https://www.adobe.com/privacy.html)を参照してください。
 
 Adobeは、お客様のプライバシー管理者またはAEM管理者がデータ保護とデータプライバシーの要請を処理し、お客様がこれらの規制に準拠できるように、ドキュメントと手順を（APIを使用して）提供しています。 ドキュメントに記載された手順により、顧客は手動で、または、可能な場合は外部のポータルやサービスからAPIに呼び出すことで、規制要求を実行できます。
 
@@ -39,7 +39,7 @@ Adobeは、お客様のプライバシー管理者またはAEM管理者がデー
 >
 >別のAdobeのオンデマンドサービスのデータは、関連するプライバシー要求と共に、そのサービスでの処置が必要になります。
 >
->詳しくは、 [Adobeのプライバシーセンターを参照してください](https://www.adobe.com/privacy.html)。
+>詳しくは、[Adobeのプライバシーセンター](https://www.adobe.com/privacy.html)を参照してください。
 
 ## 概要 {#introduction}
 
@@ -87,13 +87,13 @@ Adobeは、Adobe Experience Managerのアクセス、削除、およびオプト
 
 ![データ保護とプライバシー](assets/data-protection-and-privacy-01.png)
 
-## Adobe Experience Managerと規制への対応 {#aem-and-regulatory-readiness}
+## Adobe Experience Managerと規制への対応{#aem-and-regulatory-readiness}
 
 AEMの製品領域に関する規制に関するドキュメントについては、以下の節を参照してください。
 
 ## AEM の基盤 {#aem-foundation}
 
-AEM Foundationのデータ保護およびプライバシー要求の [処理を参照してください](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)。
+「[AEM Foundationのデータ保護とプライバシー要求の処理](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)」を参照してください。
 
 ## 集計した使用状況の統計の収集を AEM でオプトインする方法 {#aem-opting-into-aggregate-usage-statistics-collection}
 
@@ -101,15 +101,15 @@ AEM Foundationのデータ保護およびプライバシー要求の [処理を�
 
 ## AEM Sites {#aem-sites}
 
-「 [AEM Sites- Data Protection and Privacy Readiness」を参照してください。](/help/sites-administering/gdpr-compliance-sites.md)
+[AEM Sites- Data Protection and Privacy Readinessを参照してください。](/help/sites-administering/gdpr-compliance-sites.md)
 
 ## AEM Commerce {#aem-commerce}
 
-「 [AEM Commerce - Data Protection and Privacy Readiness](/help/sites-administering/gdpr-compliance-commerce.md)」を参照してください。
+[AEMコマース — Data Protection and Privacy Readiness](/help/sites-administering/gdpr-compliance-commerce.md)を参照してください。
 
 ## AEM Mobile {#aem-mobile}
 
-「 [AEM Mobile- Data Protection and Privacy Readiness](/help/mobile/aem-mobile-gdpr-compliance.md)」を参照してください。
+[AEM Mobile- Data Protection and Privacy Readiness](/help/mobile/aem-mobile-gdpr-compliance.md)を参照してください。
 
 ## Adobe Target および Adobe Analytics との AEM 統合 {#aem-integration-with-adobe-target-adobe-analytics}
 
