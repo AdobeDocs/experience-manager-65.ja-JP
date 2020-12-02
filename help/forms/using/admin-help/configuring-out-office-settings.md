@@ -24,7 +24,7 @@ ht-degree: 96%
 
 Workbench ユーザーは、プロセスの作成時に、不在設定が設定されている場合にタスクをリダイレクトするかどうかを指定できます。
 
-## ユーザーの不在情報の表示 {#view-a-user-s-out-of-office-information}
+## ユーザーの不在情報の表示  {#view-a-user-s-out-of-office-information}
 
 1. 管理コンソールで、サービス／forms ワークフロー／不在をクリックします。
 1. 不在ページの上部付近にあるボックスで、次のいずれかを実行できます。
@@ -39,14 +39,14 @@ Workbench ユーザーは、プロセスの作成時に、不在設定が設定�
 
 1. ユーザー名をクリックすると、そのユーザーの不在情報がユーザーリストの下に表示されます。
 
-## ユーザーの不在ステータスの変更 {#change-a-user-s-out-of-office-status}
+## ユーザーの不在ステータスの変更  {#change-a-user-s-out-of-office-status}
 
 1. 「[ユーザーの不在情報の表示](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)」の説明に従って、ユーザーを検索します。
 1. 変更するユーザーの名前をクリックします。
 1. 「*ユーザー名*」の「現在の状態」リストから、「在席中」または「不在」のいずれかを選択します。
 1. 「保存」をクリックします。
 
-## ユーザー不在の日付範囲の追加 {#add-an-out-of-office-date-range-for-a-user}
+## ユーザー不在の日付範囲の追加  {#add-an-out-of-office-date-range-for-a-user}
 
 1. 「[ユーザーの不在情報の表示](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)」の説明に従って、ユーザーを検索します。
 1. 変更するユーザーの名前をクリックします。
@@ -54,7 +54,7 @@ Workbench ユーザーは、プロセスの作成時に、不在設定が設定�
 1. 「開始時刻」と「終了時刻」に入力します。カレンダーアイコンをクリックすると、日付を選択することができます。終了時刻を指定しない場合、ユーザーは無期限に不在であると設定されます。
 1. 「保存」をクリックします。
 
-## ユーザーへの不在タスクの割り当て {#assign-a-user-for-out-of-office-tasks}
+## ユーザーへの不在タスクの割り当て  {#assign-a-user-for-out-of-office-tasks}
 
 ユーザーが不在の間に、不在のユーザーに代わって新規タスクを実行する 1 人以上のユーザーを割り当てることができます。以下の設定を行うことができます。
 
