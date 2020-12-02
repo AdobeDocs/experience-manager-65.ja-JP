@@ -17,7 +17,7 @@ ht-degree: 71%
 ---
 
 
-# HTML5 フォーム向けのスクリーンリーダー {#screen-readers-for-html-forms}
+# HTML5 フォーム向けのスクリーンリーダー  {#screen-readers-for-html-forms}
 
 HTML5 フォームコンポーネントは XFA フォームテンプレートを HTML5 形式にレンダリングします。すべての標準の HTML5 をサポートするブラウザーはこれらのフォームをレンダリングできます。PDF と HTML5 フォーム同士で似たようなデータ取得の経験をサポートするために、PDF フォームのレイアウトは HTML5 フォームで保持されます。
 
@@ -27,22 +27,22 @@ HTML5 フォームは標準の HTML 構成を使用して、これらのフォ�
 
 HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](https://www.adobe.com/mena_en/accessibility/compliance/livecycle-mobile-forms-es4-section-508-vpat.html) を参照してください。
 
-## HTML5 フォーム向けに認定されたスクリーンリーダー {#certified-screen-readers-for-html-forms}
+## HTML5 フォーム向けに認定されたスクリーンリーダー  {#certified-screen-readers-for-html-forms}
 
 * Microsoft Windows の JAWS 14.0
 * Mac OS X と iPad の VoiceOver
 
-### JAWS {#jaws}
+### JAWS  {#jaws}
 
-すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。For more information on using JAWS, visit [https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp).
+すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。JAWSの使用について詳しくは、[https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp)を参照してください。
 
 ### VoiceOver {#voiceover}
 
-HTML5 フォームは VoiceOver のすべてのデフォルトのキーストロークとジェスチャーをサポートします。For more information on setting up and using VoiceOver, see [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
+HTML5 フォームは VoiceOver のすべてのデフォルトのキーストロークとジェスチャーをサポートします。VoiceOverの設定と使用について詳しくは、[https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/)を参照してください。
 
 ## 既知の問題 {#known-issues}
 
-* **（Internal Explorer 9のみ）** HTML5フォームでは、ページはオンデマンドで（動的に）読み込まれます。 オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーがタブを押すと、フォーカスを次のページの最初のフィールドに設定する代わりに、フォームの最初のページの最初のフィールドに戻ります。
+* **（Internal Explorer 9のみ）HTML5フォーム** では、ページはオンデマンドで（動的に）読み込まれます。オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーがタブを押すと、フォーカスを次のページの最初のフィールドに設定する代わりに、フォームの最初のページの最初のフィールドに戻ります。
 * **（Internal Explorer 9 のみ）** HTML5 フォームの日付選択のコントロールはキーボードで完全にアクセスできません。日付選択のコントロールで、上向き／下向き矢印キーを複数回押した場合、日付選択のコントロールが閉じて、フォーカスが次／最後のフィールドに移動します。 
 
 * VoiceOver は、iPad safari では日付ウィジェットで矢印キーを検出できません。
