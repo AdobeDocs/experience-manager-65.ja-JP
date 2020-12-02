@@ -26,7 +26,7 @@ Correspondence Managementでは、レター内にエージェント署名を描�
 
 agentSignatureImage DDE は算出された DDE として、エージェントの署名画像を表します。算出された DDE の式では、Expression Manager 構築ブロックにより公開された新しいカスタム関数を使用します。このカスタム関数は、agentID と agentFolder を入力パラメーターとして取得し、これらのパラメーターに基づき画像コンテンツを取得します。SystemContextシステムデータディクショナリは、Correspondence Managementのレターに、現在のシステムコンテキストの情報へのアクセスを与えます。 システムコンテキストには、現在ログイン中のユーザーとアクティブな設定パラメーターに関する情報が含まれます。
 
-画像は、cmuserroot フォルダの下に追加することができます。In [Correspondence Management Configuration Properties](/help/forms/using/cm-configuration-properties.md), using the CM User Root property you can change the folder from where agent signature image is picked up.
+画像は、cmuserroot フォルダの下に追加することができます。[Correspondence Management設定プロパティ](/help/forms/using/cm-configuration-properties.md)で、CMユーザルートプロパティを使用して、エージェント署名画像の取得元のフォルダーを変更できます。
 
 agentFolder DDEの値は、Correspondence Management設定プロパティのCMUserRoot設定パラメーターから取得されます。 デフォルトでは、この設定パラメーターはCRXリポジトリの/content/cmUserRootを指します。 CMUserRoot構成の値は、「Configuration Properties」で変更できます。
 また、デフォルトのカスタム関数を上書きして、ユーザー署名画像を取得するための独自のロジックを定義することもできます。
@@ -46,7 +46,7 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
       >[!NOTE]
       >
-      >デフォルトでは、AEM がエージェント署名画像を参照する際に cmUserRoot を開きます。You can, however, change it by editing the CM User Root property in the [Correspondence Management configuration properties](/help/forms/using/cm-configuration-properties.md).
+      >デフォルトでは、AEM がエージェント署名画像を参照する際に cmUserRoot を開きます。ただし、[Correspondence Management設定プロパティ](/help/forms/using/cm-configuration-properties.md)のCMユーザルートプロパティを編集することで変更できます。
 
 1. Content Explorer で cmUserRoot フォルダに移動し、その中にエージェント署名画像を追加します。
 
@@ -62,17 +62,17 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
       **タイプ：** nt:file
 
-      Under the `cmUserRoot` folder, a new folder called `JohnDoe` (or the name you have given in the previous step) is created.
+      `cmUserRoot`フォルダーの下に、`JohnDoe`という名前の新しいフォルダー（または前の手順で指定した名前）が作成されます。
 
    1. 新しく作成したフォルダをクリックします（ここでは「`JohnDoe`」）。Content Explorerでは、フォルダの内容が暗く表示されます。
 
-   1. Double-click the **jcr:content** property, set its type as **nt:resource**, and then click the green check mark to save the entry.
+   1. **jcr:content**&#x200B;プロパティを重複クリックし、タイプを&#x200B;**nt:resource**&#x200B;に設定してから、緑のチェックマークをクリックしてエントリを保存します。
 
       プロパティが表示されていない場合は、まず、名前が「jcr:content」のプロパティを作成します。
 
       ![jcr:content property](assets/3_jcrcontentntresource.png)
 
-      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルを選択」ボタンがエントリに表示されます。 Click **Choose File** and select the image file you want to use as a logo. 画像ファイルには拡張子を付ける必要はありません。
+      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルを選択」ボタンがエントリに表示されます。 「**ファイル**&#x200B;を選択」をクリックし、ロゴとして使用する画像ファイルを選択します。 画像ファイルには拡張子を付ける必要はありません。
 
       ![JCR データ](assets/5_jcrdata.png)
    「**すべて保存**」をクリックします。
