@@ -19,7 +19,7 @@ ht-degree: 34%
 ---
 
 
-# コミュニティコンポーネントのオーバーレイ {#overlay-communities-components}
+# コミュニティコンポーネントをオーバーレイ{#overlay-communities-components}
 
 デフォルトのコンポーネントを[オーバーレイ](/help/communities/client-customize.md#overlays)する目的は、コンポーネントのすべての相対参照について、コンポーネントの外観や動作をグローバルに変更することです。これには、/libs フォルダー内で検索する前に、/apps フォルダーに解決するという sling の特性が利用されます。つまり、コンポーネントへのパスは、/apps フォルダーにあり、/libs フォルダーにはない場合を除き、デフォルトのコンポーネントへのパスと同じです。
 
@@ -37,9 +37,9 @@ ht-degree: 34%
 
 **オーバーレイ通知電子メール**
 
-電子メール通知のメッセージをカスタマイズする場合は、 [/libs/settings/community/templates/email/htmlにあるテンプレートを](/help/communities/client-customize.md#overlays) オーバーレイすることで ****、それを行うことができます。
+電子メール通知のメッセージをカスタマイズする場合は、**/libs/settings/community/templates/email/html**&#x200B;にあるテンプレートを[オーバーレイ](/help/communities/client-customize.md#overlays)することでそれを行うことができます。
 
-例えば、（ugcが作成される特定のコミュニティコンポーネントの）メンション電子メール通知を変更するには、 **@mentions** サポートを有効にしたコンポーネントのテンプレートに、動詞 **メンション****** if条件を追加します。
+例えば、（ugcが作成される特定のコミュニティコンポーネントの）メンション電子メール通知を変更するには、**@mentions**&#x200B;サポートを有効にしたコンポーネントのテンプレートに、動詞&#x200B;**mention**&#x200B;の&#x200B;**if**&#x200B;条件を追加します。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -47,4 +47,4 @@ ht-degree: 34%
 {{/equals}}\
 ```
 
-ブログコメント内の@mentionの電子メール通知テンプレートを変更するには、次の場所にテンプレートを置いてください。 `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+ブログコメント内の@mentionの電子メール通知テンプレートを変更するには、次の場所にテンプレートを置いてください。`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
