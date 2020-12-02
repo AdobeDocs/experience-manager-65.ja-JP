@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media Classicを使用したCDNキャッシュの無効化
+title: Dynamic Media Classic を使用した CDN キャッシュの無効化
 description: CDN(コンテンツ配信ネットワーク)のキャッシュされたコンテンツを無効にすると、キャッシュの期限が切れるのを待たずに、Dynamic Media Classicによって配信されるアセットをすばやく更新できます。
 uuid: 0fd88e31-9745-4c98-a245-9f5d0766cad4
 contentOwner: Rick Brough
@@ -11,12 +11,12 @@ translation-type: tm+mt
 source-git-commit: 54645149dc4968c1c4f85eedb5ce4d71f80c3b64
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 79%
+ht-degree: 85%
 
 ---
 
 
-# Dynamic Media Classicを使用したCDNキャッシュの無効化 {#invalidating-your-cdn-cached-content}
+# Dynamic Media Classic を使用した CDN キャッシュの無効化 {#invalidating-your-cdn-cached-content}
 
 CDN を使用して Dynamic Media アセットをキャッシュすることで、高速配信が可能になります。ただし、あるアセットを更新する場合に、変更をすぐに適用したいことがあります。コンテンツ配信ネットワーク（CDN）にキャッシュされたコンテンツを無効にすることで、Dynamic Media で配信されるアセットをすばやく更新できます。キャッシュが期限切れになるのを待つ必要はありません。
 
@@ -30,15 +30,15 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
 
 1. 次のいずれかの操作をおこないます。
 
-   * Webブラウザーで、Dynamic Media Classicアカウントにログオンします。
+   * Web ブラウザーで、Dynamic Media Classic アカウントにログオンします。
 
       [https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)
 
       資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
-   * Dynamic Media Classicアプリケーションを開き、アカウントにサインインします。
+   * Dynamic Media Classic アプリケーションを開き、アカウントにサインインします。
 
-1. ページの右上隅近くにある設定/アプリケーション設定/ **[!UICONTROL 全般設定をタップします。]**
+1. ページの右上隅近くにある&#x200B;**[!UICONTROL セットアップ/アプリケーション設定/全般設定をタップします。]**
 1. アプリケーションの一般設定ページで、「サーバー」グループ見出しの下にある「**[!UICONTROL CDN 無効化テンプレート]**」テキストボックスを見つけます。
 
 1. CDN（コンテンツ配信ネットワーク）のキャッシュの無効化に使用するテンプレートを指定します。
@@ -49,7 +49,7 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
 
    テンプレートに `<ID>` だけが含まれている場合は、Dynamic Media が `https://<server>/is/image` 部分を埋めます。ここで、`<server>` は、「一般設定」で定義されているパブリッシュサーバー名であり、&lt;ID> は、無効化の対象として選択されたアセット（またはアセット群）です。
 
-1. In the lower-right corner of the page, click **[!UICONTROL Close.]**
+1. ページ右下隅の「**[!UICONTROL 閉じる」をクリックします。]**
 1. Dynamic Media Classic（Scene7）の UI で、1 つ以上のアセットを選択し、**[!UICONTROL ファイル／CDN を無効にするをクリックします。]**&#x200B;作成したテンプレートから生成された 1 つ以上の URL と、選択したアセット（またはアセット群）からなるリストが表示されます。このリストに使用されているのは、アプリケーションの一般設定の「公開先サーバー名」にリストされているサーバー URL です。
 
    例えば、前の手順で設定した CDN 無効化テンプレートを使用して、`Backpack_B` という名前の画像アセットを 1 つだけ選択したとします。**[!UICONTROL ファイル／CDN を無効にする]**&#x200B;をクリックすると、CDN 無効化のユーザーインターフェイスには、次のように生成された URL が表示されます。
