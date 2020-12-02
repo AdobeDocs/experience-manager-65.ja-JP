@@ -35,25 +35,25 @@ ht-degree: 33%
 ドキュメントのこの節では、以下について説明します。
 
 * AEMサイトへのフォーラム機能の追加
-* Configuration settings for the `Forum` component.
+* `Forum`コンポーネントの構成設定です。
 
 ### フォーラムをページに追加 {#adding-a-forum-to-a-page}
 
-To add a `Forum` component to a page in author mode, use the component browser to locate
+作成者モードで`Forum`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Forum`
 
 コンポーネントを探し、ページ上のフォーラムを表示する位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](/help/communities/basics.md).
+必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](/help/communities/essentials-forum.md#essentials-for-client-side) 、次のようにコンポー `Forum` ネントが表示されます。
+[必要なクライアント側ライブラリ](/help/communities/essentials-forum.md#essentials-for-client-side)が含まれる場合、`Forum`コンポーネントは次のように表示されます。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
 ### フォーラムの設定 {#configuring-a-forum}
 
-Select the placed `Forum` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Forum`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -94,7 +94,7 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **タグ付けを許可**
 
-   If checked, allow members to add tag labels to their post (see **Tag field** tab). 初期設定はオフです。
+   オンにした場合、メンバーは自分の投稿にタグラベルを追加できます（「**タグフィールド**」タブを参照）。 初期設定はオフです。
 
 * **ファイルのアップロードを許可**
 
@@ -102,7 +102,7 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **フォローを許可**
 
-   If checked, include the following feature for forum posts, which allows members to be [notified](/help/communities/notifications.md) of new posts. 初期設定はオフです。
+   オンにした場合、フォーラム投稿に次の機能を含めます。この機能を使用すると、メンバーに新しい投稿の[通知](/help/communities/notifications.md)を送信できます。 初期設定はオフです。
 
 * **ピン留めを許可**
 
@@ -110,21 +110,22 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **おすすめコンテンツを許可**
 
-   If checked, the idea is able to be identified as [featured content](/help/communities/featured.md). 初期設定はオフです。
+   チェックすると、アイデアは[特集コンテンツ](/help/communities/featured.md)として識別できます。 初期設定はオフです。
 
 * **電子メール購読を許可**
 
-   If checked, allow members to be notified of new posts by email ([subscription](/help/communities/subscriptions.md)). Requires `Allow Following` to be checked and [email configured](/help/communities/email.md). 初期設定はオフです。
+   オンにした場合、メンバーに電子メールで新しい投稿の通知を許可します([購読](/help/communities/subscriptions.md))。 `Allow Following`を確認し、[電子メールを設定](/help/communities/email.md)する必要があります。 初期設定はオフです。
 
 * **最大ファイルサイズ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **許可されるファイルタイプ**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
-* **「ファイルのアップロードを許可」が選択されている場合のみ、「添付画像ファイルの最大サイズ**」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+* **「ファイルのアップロードを許可」がオンの場合のみ、最大添付画像ファイル**
+サイズ関連。アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **スレッド化された返信を許可**
 
@@ -144,7 +145,7 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **バッジを表示**
 
-   If checked, display earned and assigned [badges](/help/communities/implementing-scoring.md) with a member&#39;s blog entry. 初期設定はオフです。
+   オンの場合、獲得したバッジを表示し、会員のブログエントリに[バッジ](/help/communities/implementing-scoring.md)を割り当てます。 初期設定はオフです。
 
 * **権限を持つメンバーを許可**
 
@@ -172,11 +173,11 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 >[!NOTE]
 >
->トピックに対するコメントを有効にする場合は、お `AllowThreaded Replies` よび両方 `Allow users to Delete Comments and Topics` を確認する必要があります。
+>トピックに対するコメントを有効にするには、`AllowThreaded Replies`と`Allow users to Delete Comments and Topics`の両方を確認する必要がある場合があります。
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
-Under the **User Moderation** tab, specify how the posted topics and replies (user generated content) are managed. For more information, see [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+「**ユーザーモデレート**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
 * **投稿を拒否**
 
@@ -216,7 +217,7 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 * **許可された名前空間**
 
-   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+   「**設定**」タブで`Allow Tagging`がチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **推奨の制限**
 
@@ -232,11 +233,11 @@ Under the **User Moderation** tab, specify how the posted topics and replies (us
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **Sort Settings** tab, specify how the posted comments are sorted when displayed.
+「**並べ替え設定**」タブで、投稿されたコメントの表示順を指定します。
 
 * **並べ替え**
 
-   許可されている並べ替えの選択項目をすべてオンにします。 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
+   許可されている並べ替えの選択項目をすべてオンにします。`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **デフォルトとして設定**
 
@@ -244,7 +245,7 @@ Under the **Sort Settings** tab, specify how the posted comments are sorted when
 
 * **Analytics 並べ替えのタイムオプションを選択**
 
-   プルダウンして、次のオプションのいずれかを選択します。 `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
+   プルダウンして、次のオプションのいずれかを選択します。`All, Last 24 Hours, Last 7 Days, Last 30 Days`.
 
    デフォルトは `All` です。
 
