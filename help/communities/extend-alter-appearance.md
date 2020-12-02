@@ -33,7 +33,7 @@ ht-degree: 58%
 
 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* Open [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)を開きます。
 
    * コメント投稿のアバターを含むタグをコメントアウトします（～行21）。
 
@@ -43,7 +43,7 @@ ht-degree: 58%
          -->
       ```
 
-* Open [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)を開きます。
 
    * 次のコメントエントリ用のアバターを含むタグをコメントアウトします（～行44）。
 
@@ -63,11 +63,11 @@ ht-degree: 58%
 
 * メインメニューから
 
-   * Select **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**.
-   * Select **[!UICONTROL Activate Tree]**.
-   * に設定 `Start Path` し `/apps/custom`ます。
-   * 「変更 **[!UICONTROL 済みのみ]**」の選択を解除します。
-   * Select **[!UICONTROL Activate]** button.
+   * **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL レプリケーション]**&#x200B;を選択します。
+   * 「**[!UICONTROL ツリーをアクティブ化]**」を選択します。
+   * `Start Path`を`/apps/custom`に設定します。
+   * 「**[!UICONTROL 変更済み]**&#x200B;のみ」を選択解除します。
+   * **[!UICONTROL 「]**&#x200B;アクティブ化」ボタンを選択します。
 
 ### 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 
