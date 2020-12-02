@@ -30,7 +30,7 @@ ht-degree: 44%
 * [AEM Communities 使用の手引き](getting-started.md)
 * [イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)
 
-## 管理と設定に関するトピック {#administration-and-configuration-topics}
+## 管理と設定に関するトピック  {#administration-and-configuration-topics}
 
 ### コミュニティサイトの作成と管理 {#communities-site-creation-and-management}
 
@@ -45,7 +45,7 @@ ht-degree: 44%
    * [レポート](reports.md)
 
 
-* Communities [*tools*](tools.md):
+* コミュニティ&#x200B;[*ツール*](tools.md):
 
    * [サイトテンプレート](sites.md)
    * [グループテンプレート](tools-groups.md)
@@ -96,12 +96,12 @@ AEM プラットフォームに最新の Communities リリースをインスト
 
 * [最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)
 
-See the deployment page for other Communities specific information, such as for [Upgrading](upgrade.md), [Dispatcher](dispatcher.md) and [Replication](deploy-communities.md#replication-agents-on-author).
+[アップグレード](upgrade.md)、[ディスパッチャー](dispatcher.md)、[レプリケーション](deploy-communities.md#replication-agents-on-author)など、Communities固有のその他の情報については、デプロイメントページを参照してください。
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* Visit [Deploying Communities](deploy-communities.md) to learn about recommended deployments.
+* 推奨される展開については、[Communitiesの展開](deploy-communities.md)を参照してください。
 
-* Visit [Developing Communities](communities.md) to learn about the social component framework (SCF) and customizing Communities components and features.
+* Social Component Framework(SCF)とCommunitiesのコンポーネントと機能のカスタマイズについては、[Developing Communities](communities.md)を参照してください。
 
-* Visit [Authoring Communities Components](author-communities.md) to learn how to author with and configure Communities components.
+* Communitiesコンポーネントの作成方法と設定方法については、[Authoring Communities Components](author-communities.md)を参照してください。
