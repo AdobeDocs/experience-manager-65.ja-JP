@@ -36,7 +36,7 @@ ht-degree: 60%
 
    ![AEM Webコンソールの設定](assets/web_configuration_console_new.png)
 
-1. In the **[!UICONTROL Adobe Experience Manager Web Console Configuration]** window, locate and click the **[!UICONTROL AEM DS Settings]** option.
+1. **[!UICONTROL Adobe Experience ManagerWebコンソール設定]**&#x200B;ウィンドウで、**[!UICONTROL AEM DS設定]**&#x200B;オプションを探してクリックします。
 
    ![DS設定](assets/ds_settings_new.png)
 
@@ -46,7 +46,7 @@ ht-degree: 60%
 
 1. 次の情報をそれぞれのフィールドに追加します。
 
-   **[!UICONTROL 処理サーバーURL]**:処理サーバーは、FormsまたはAEMワークフローをトリガーする必要があるサーバーです。 これは、AEM作成者インスタンスのURLまたは他のサーバーURL(https://localhost:port/)と同じです。
+   **[!UICONTROL 処理サーバーURL]**:処理サーバーは、FormsまたはAEMワークフローをトリガーする必要があるサーバーです。これは、AEM作成者インスタンスのURLまたは他のサーバーURL(https://localhost:port/)と同じです。
 
    **[!UICONTROL 処理サーバーのユーザー名]**:使用中のサーバーURLに [基づくワークフローユーザーのユーザー名]
 
