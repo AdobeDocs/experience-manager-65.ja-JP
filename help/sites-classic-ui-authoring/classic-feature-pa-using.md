@@ -33,4 +33,4 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->サイトの分析データを直接コンソールに表示できるのは、タッチ操作向け UI の場合のみです。See [Seeing Page Analytics Data](/help/sites-authoring/page-analytics-using.md) in the standard authoring documentation for details.
+>サイトの分析データを直接コンソールに表示できるのは、タッチ操作向け UI の場合のみです。詳しくは、標準のオーサリングドキュメントの「[ページ分析データの表示](/help/sites-authoring/page-analytics-using.md)」を参照してください。
