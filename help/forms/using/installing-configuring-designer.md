@@ -23,9 +23,9 @@ ht-degree: 83%
 
 ## 前提条件 {#pre-requisites}
 
-AEM Forms Designer installer requires the 32-bit version of [Visual C++ redistributable runtime package 2012](https://support.microsoft.com/ja-jp/help/2977003/the-latest-supported-visual-c-downloads) and [Visual C++ redistributable runtime package 2013](https://support.microsoft.com/ja-jp/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). インストールを開始する前に、これらの再頒布可能ランタイムパッケージがインストールされていることを確認してください。
+AEM Formsデザイナーのインストーラーには、[Visual C++再配布可能ランタイムパッケージ2012](https://support.microsoft.com/ja-jp/help/2977003/the-latest-supported-visual-c-downloads)および[Visual C++再配布可能ランタイムパッケージ2013](https://support.microsoft.com/ja-jp/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package)の32ビット版が必要です。 インストールを開始する前に、これらの再頒布可能ランタイムパッケージがインストールされていることを確認してください。
 
-## Designerのインストール {#install-designer}
+## Designer {#install-designer}のインストール
 
 WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designerのスタンドアロンインストーラーを使用する場合は、次の手順を実行します。
 
