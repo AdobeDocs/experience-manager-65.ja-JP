@@ -22,15 +22,15 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->AEM Forms に、動的なテンプレートが導入されました。AEM サイトのテンプレートエディターを使用して、[動的なテンプレートの作成や編集](../../forms/using/template-editor.md)を行うことができます。この記事で説明するテンプレートは、静的なテンプレートです。デフォルトのインストール環境で静的なテンプレートを使用することはできません。[互換性パッケージ](../../forms/using/compatibility-package.md) をインストールして、お使いの環境にこれらのテンプレートを取得します。
+>AEM Forms に、動的なテンプレートが導入されました。AEM サイトのテンプレートエディターを使用して、[動的なテンプレートの作成や編集](../../forms/using/template-editor.md)を行うことができます。この記事で説明するテンプレートは、静的なテンプレートです。デフォルトのインストール環境で静的なテンプレートを使用することはできません。[互換性](../../forms/using/compatibility-package.md) パッケージをインストールして、お使いの環境にこれらのテンプレートを取得します。
 
 ## 前提条件 {#prerequisites}
 
-* Understanding of AEM [Page Template](/help/sites-authoring/templates.md) and [Adaptive Form Authoring](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
+* AEM [ページテンプレート](/help/sites-authoring/templates.md)および[アダプティブフォームのオーサリング](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)に関する知識
 
 * AEM [クライアント側ライブラリ](/help/sites-developing/clientlibs.md)に関する知識
 
-## アダプティブフォームテンプレート {#adaptive-form-template}
+## アダプティブフォームテンプレート  {#adaptive-form-template}
 
 アダプティブフォームテンプレートは、アダプティブフォームの作成に使用される特定のプロパティとコンテンツ構造を持つ特殊な AEM ページテンプレートです。このテンプレートのレイアウト、スタイル、基本的な初期コンテンツ構造は事前に設定されています。
 
@@ -75,7 +75,7 @@ AEM QuickStart では、次のアダプティブフォームテンプレート�
  </tbody>
 </table>
 
-## テンプレートエディターを使用したアダプティブフォームテンプレートの作成 {#creating-an-adaptive-form-template-using-template-editor}
+## テンプレートエディターを使用したアダプティブフォームテンプレートの作成  {#creating-an-adaptive-form-template-using-template-editor}
 
 テンプレートエディターを使用して、アダプティブフォームの構造と初期コンテンツを指定できます。 例えば、すべての作成者が、登録フォーム内でテキストボックスを少なくし、ナビゲーションボタンと送信ボタンを設置するようにできます。作成者が他の登録フォームと統一のとれたフォームを作成できるようにするためのテンプレートを作成できます。AEM テンプレートエディターでは次のことが行えます。
 
@@ -84,7 +84,7 @@ AEM QuickStart では、次のアダプティブフォームテンプレート�
 * テーマを指定できます。
 * 送信、リセット、移動などの操作を指定できます。
 
-For more informtion, see [Template Editor](../../forms/using/template-editor.md).
+詳しくは、[テンプレートエディター](../../forms/using/template-editor.md)を参照してください。
 
 ## CRXDE からのアダプティブフォームテンプレートの作成 {#creating-an-adaptive-form-template-from-crxde}
 
@@ -99,15 +99,15 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 1. /apps ディレクトリの下に、自分のアプリケーションのフォルダー構造を作成します。例えば、アプリケーションの名前が mycompany の場合、その名前のフォルダーを作成します。通常、アプリケーションフォルダーには components、configuration、templates、src、installation のディレクトリが含まれます。この例では、components、configuration、templates の各フォルダーを作成します。
 
 1. /libs/fd/af/templates フォルダーに移動します。
-1. Copy the `simpleEnrollmentTemplate` node.
+1. `simpleEnrollmentTemplate`ノードをコピーします。
 1. /apps/mycompany/templates フォルダーに移動します。右クリックして「**[!UICONTROL 貼り付け]**」を選択します。
 1. 必要に応じて、コピーしたテンプレートノードの名前を変更します。例えば、enrollment-template などに変更します。
 
 1. /apps/mycompany/templates/enrollment-template に移動します。
 
-1. Modify the `jcr:title` and `jcr:description` properties for the `jcr:content` node to distinguish the template from the template you copied.
+1. `jcr:content`ノードの`jcr:title`プロパティと`jcr:description`プロパティを変更して、コピーしたテンプレートと区別できるようにします。
 
-1. The `jcr:content` node of the modified template contains the `guideContainer` and `guideformtitle` components. `guideContainer` はアダプティブフォームを格納するコンテナです。`guideformtitle` コンポーネントは、アプリケーション名や説明などを表示します。
+1. 変更したテンプレートの`jcr:content`ノードには、`guideContainer`と`guideformtitle`のコンポーネントが含まれています。 `guideContainer` はアダプティブフォームを格納するコンテナです。`guideformtitle` コンポーネントは、アプリケーション名や説明などを表示します。
 
    `guideformtitle` の代わりに、カスタムコンポーネントまたは `parsys` コンポーネントを含めることができます。例えば、`guideformtitle` を削除して、カスタムコンポーネントまたは `parsys` コンポーネントのノードを含めることができます。コンポーネントの `sling:resourceType` プロパティの参照先が、そのコンポーネントになっていることを確認してください。ページ `component.jsp` ファイルでも同様に定義されます。
 
@@ -121,24 +121,24 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 
 テンプレートの参照先は /libs/fd/af/components/page/base のページコンポーネントに設定されているため、カスタムテンプレートはデフォルトのテンプレートと同じスタイルを持ちます。コンポーネントの参照は、/apps/mycompany/templates/enrollment-template/jcr:content ノードで定義された `sling:resourceType` プロパティで検索できます。baseはコア製品コンポーネントなので、このコンポーネントを変更しないでください。
 
-1. Navigate to the node /apps/mycompany/templates/enrollment-template/jcr:content and modify the value of the property `sling:resourceType` to /apps/mycompany/components/page/enrollmentpage
+1. /apps/mycompany/templates/enrollment-template/jcr:contentノードに移動し、プロパティ`sling:resourceType`の値を/apps/mycompany/components/page/enrollmentpageに変更します。
 1. /libs/fd/af/components/page/base のノードを /apps/mycompany/components/page フォルダーにコピーします。
 
 1. コピーしたコンポーネントの名前を `enrollmentpage` に変更します。
 
-1. **（コンテンツページを既に持っている場合のみ）** Webサイトに既存の `contentpage`コンポーネントがある場合は、次の手順(a ～ d)を実行します。 自分の Web サイトに `contentpage` コンポーネントが存在しない場合は、`resourceSuperType` プロパティを OOTB の基本ページにポイントしたままにすることができます。
+1. **（コンテンツページを既に持っている場合のみ）Webサイトの既存の** コンポーネントがある場合は、次の手順(a ～ d)を `contentpage`実行します。自分の Web サイトに `contentpage` コンポーネントが存在しない場合は、`resourceSuperType` プロパティを OOTB の基本ページにポイントしたままにすることができます。
 
-   1. For the `enrollmentpage` node, set value of the property `sling:resourceSuperType` to mycompany/components/page/contentpage. `contentpage` コンポーネントは、自分のサイトの基本ページコンポーネントです。他のページコンポーネントで拡張することができます。Remove script files under `enrollmentpage`, except `head.jsp`, `content.jsp`, and `library.jsp`. The `sling:resourceSuperType` component, which is `contentpage` in this case, includes all such scripts. ナビゲーションバーやフッターなどを含むヘッダー類は、`contentpage` コンポーネントから継承されます。
+   1. `enrollmentpage`ノードの場合、プロパティ`sling:resourceSuperType`の値をmycompany/components/page/contentpageに設定します。 `contentpage` コンポーネントは、自分のサイトの基本ページコンポーネントです。他のページコンポーネントで拡張することができます。`enrollmentpage`の下にある`head.jsp`、`content.jsp`、`library.jsp`を除くスクリプトファイルを削除します。 `sling:resourceSuperType`コンポーネント（この場合は`contentpage`）には、このようなスクリプトがすべて含まれます。 ナビゲーションバーやフッターなどを含むヘッダー類は、`contentpage` コンポーネントから継承されます。
 
-   1. Open the file `head.jsp`.
+   1. `head.jsp` ファイルを開きます。
 
-      The JSP file contains the line `<cq.include script="library.jsp"/>`.
+      JSPファイルには`<cq.include script="library.jsp"/>`行が含まれます。
 
       `library.jsp` ファイルには、`guide.theme.simpleEnrollment` のクライアントライブラリが含まれ、その中にアダプティブフォームのスタイル設定が含まれています。
 
-      The page component `enrollmentpage` has an exclusive `head.jsp` file that overrides the `head.jsp` file of the `contentpage` component.
+      ページコンポーネント`enrollmentpage`には排他的な`head.jsp`ファイルがあり、このファイルは`contentpage`コンポーネントの`head.jsp`ファイルを上書きします。
 
-   1. Include all scripts in the `head.jsp` file for the `contentpage` component to the `head.jsp` file for the `enrollmentpage` component.
+   1. `contentpage`コンポーネントの`head.jsp`ファイル内のすべてのスクリプトを`enrollmentpage`コンポーネントの`head.jsp`ファイルに含めます。
    1. `content.jsp` スクリプトの中に、追加のページコンテンツまたはページがレンダリングされる際に含まれる他のコンポーネントへの参照を追加することができます。例えば、`applicationformheader` カスタムコンポーネントを追加する場合、JSP ファイルのコンポーネントに次の参照を追加します。
 
       `<cq:include path="applicationformheader" resourceType="mycompany/components/applicationformheader"/>`
@@ -147,7 +147,7 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 
 ## アダプティブフォームのクライアントライブラリの作成 {#creating-an-adaptive-form-client-library}
 
-The `head.jsp` file of the `enrollmentpage` component for the new template includes a client library `guide.theme.simpleEnrollment`. デフォルトのテンプレートは、このクライアントライブラリも使用します。これらの方法のいずれかを使用して、新しいテンプレートのスタイルを変更します。
+新しいテンプレートの`enrollmentpage`コンポーネントの`head.jsp`ファイルには、クライアントライブラリ`guide.theme.simpleEnrollment`が含まれています。 デフォルトのテンプレートは、このクライアントライブラリも使用します。これらの方法のいずれかを使用して、新しいテンプレートのスタイルを変更します。
 
 * カスタムテーマを定義し、デフォルトのテーマ `guide.theme.simpleEnrollment` をカスタムテーマで置き換えます。
 * /etc/designs/mycompany の下に新しいクライアントライブラリを定義します。JSP ページで、デフォルトのテーマのエントリの後にクライアントライブラリを含めます。このクライアントライブラリに、上書きされたすべてのスタイルと追加のJava Scriptファイルを含めます。
