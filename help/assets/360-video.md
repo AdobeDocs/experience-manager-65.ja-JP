@@ -29,7 +29,7 @@ Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネ�
 
 [ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)も参照してください。
 
-## 360 ビデオの視聴 {#video-in-action}
+## 360 ビデオの視聴  {#video-in-action}
 
 「[Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)」をタップして、ブラウザーウィンドウを開き、360 度ビデオを視聴します。ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
 
@@ -72,7 +72,7 @@ AEM にアップロードされた 360 ビデオアセットには、通常の�
 
 1. [フォルダーにビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
-## 360 ビデオのデフォルト縦横比のオーバーライド  {#overriding-the-default-aspect-ratio-of-videos}
+## 360 ビデオのデフォルト縦横比のオーバーライド   {#overriding-the-default-aspect-ratio-of-videos}
 
 アップロードしたアセットを、360 ビデオビューアで使用する 360 ビデオにするには、アセットの縦横比が 2 である必要があります。
 
@@ -107,7 +107,7 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
    360 ビデオアセットをタップしてビデオをプレビューします。
 
-1. On the preview page, near the upper-left corner of the page, tap the drop-down list, then select **[!UICONTROL Viewers.]**
+1. プレビューページの左上隅近くにあるドロップダウンリストをタップし、「**[!UICONTROL ビューア」を選択します。]**
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
@@ -118,13 +118,13 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
    ![6_5_360video-preview-video360-social ](assets/6_5_360video-preview-video360-social.png)*360 ビデオのスクリーンショット*
 
-   * From the Viewers list, tap **[!UICONTROL Video360VR.]**
+   * ビューアリストから、**[!UICONTROL Video360VR.]**&#x200B;をタップします。
 
       バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットを通じてアクセスする、没入感のあるビデオコンテンツです。通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 
-1. Near the upper-right of the preview page, tap **[!UICONTROL Close.]**
+1. プレビューページの右上近くにある&#x200B;**[!UICONTROL 閉じるをタップします。]**
 
 ## 360 ビデオの公開 {#publishing-video}
 
