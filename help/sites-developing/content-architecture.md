@@ -26,19 +26,19 @@ David&#39;s Model は何年も前に David Nuescheler によって作成され�
 
 * データが最初に来て、後で構造化します。 たぶん。
 * コンテンツ階層は手動で設計し、成り行き任せにしない。
-* ワークスペースは、、 `clone()`、 `merge()`および `update()`です。
+* ワークスペースは`clone()`、`merge()`、`update()`用です。
 * 同じ名前の兄弟に注意する。
 * 参照は害が多いと考えられる。
 * ファイルはあくまでもファイル。
 * 身分証明書は悪い。
 
-David’s Model can be found on the Jackrabbit wiki at [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+Davidのモデルは、Jackrabbit wikiの[https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)にあります。
 
 ### すべてがコンテンツである {#everything-is-content}
 
 あらゆるデータの格納には、データベースなど別個のサードパーティデータソースを利用するのではなく、リポジトリを使用する必要があります。このことは、作成済みコンテンツ、バイナリデータ（画像など）、コード、設定などに当てはまります。このようにすると、1 つの API セットを使用してすべてのコンテンツを管理でき、レプリケーションによってこのコンテンツのプロモーションを管理できます。また、バックアップやログの単一ソースを得ることができます。
 
-### 「コンテンツモデルが第一」というデザインの原則の使用 {#use-the-content-model-first-design-principle}
+### 「コンテンツモデルが第一」というデザインの原則の使用  {#use-the-content-model-first-design-principle}
 
 新機能をビルドするときには、常に JCR コンテンツ構造の設計から始め、次にデフォルトの Sling サーブレットを使用したコンテンツの読み込みおよび書き込みに進みます。これにより、お使いの実装が既製のアクセス制御メカニズムと適切に動作することを確認でき、不要なCRUDスタイルのサーブレットを生成しないようにできます。
 
