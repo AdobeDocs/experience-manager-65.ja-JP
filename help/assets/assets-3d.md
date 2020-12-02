@@ -105,7 +105,7 @@ Dynamic Media を使用すると、3D アセットを、没入感のあるエク
 
 ## アセットの詳細ページからの 3D アセットの表示とインタラクション {#viewing-three-d-assets-from-asset-details-page}
 
-See also [Previewing assets using the software interface](/help/assets/previewing-assets.md).
+[ソフトウェアインターフェイスを使用したアセットのプレビュー](/help/assets/previewing-assets.md)も参照してください。
 
 **アセットの詳細ページから 3D アセットの表示とインタラクションをおこなうには**
 
@@ -113,8 +113,8 @@ See also [Previewing assets using the software interface](/help/assets/previewin
 
    詳しくは、[Dynamic Media で使用する 3D アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
-1. From AEM, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets > Files.]**
-1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL Card View.]**
+1. AEMの&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、**[!UICONTROL アセット/ファイルをタップします。]**
+1. ページの右上隅近くにある「**[!UICONTROL 表示]**」ドロップダウンリストで、「**[!UICONTROL カード表示」をタップします。]**
 1. 表示する 3D アセットに移動します。
 1. 3D アセットのカードをタップして、アセットの詳細ページで開きます。
 1. 3D アセットの詳細表示ページで、次のいずれかの操作をおこないます。
@@ -185,7 +185,7 @@ Dynamic Media には、Dynamic Media 3D メディアコンポーネントが含�
 
 ## ページテンプレートへの 3D メディアコンポーネントの追加{#adding-three-d-media-component-to-page-template}
 
-1. Navigate to **[!UICONTROL Tools > General > Templates.]**
+1. **[!UICONTROL ツール/一般/テンプレートに移動します。]**
 1. 3D コンポーネントを有効にするページテンプレートに移動し、テンプレートを選択します。
 1. 「**[!UICONTROL 編集]**」をタップしてテンプレートを開きます。
 1. ページの右上付近にあるドロップダウンメニューで、「**[!UICONTROL 構造]**」モードを選択します（まだアクティブでない場合）。
@@ -193,9 +193,9 @@ Dynamic Media には、Dynamic Media 3D メディアコンポーネントが含�
    ![3d-media-component-structure](/help/assets/assets-dm/3d-media-component-structure.png)
 
 1. 「**[!UICONTROL レイアウトコンテナ]**」領域の空の領域をタップして選択し、関連するツールバーを開きます。
-1. On the toolbar, tap the **[!UICONTROL Policy]** icon to open the **[!UICONTROL Policy Editor.]**
-1. In the **[!UICONTROL Properties]** section, under the **[!UICONTROL Allowed Components]** tab, scroll to **[!UICONTROL Dynamic Media]**, then expand the list and check **[!UICONTROL 3D Media.]**
-1. Tap **[!UICONTROL Done]** to save the changes and close the **[!UICONTROL Policy Editor.]**
+1. ツールバーで、**[!UICONTROL ポリシー]**&#x200B;アイコンをタップし、**[!UICONTROL ポリシーエディターを開きます。]**
+1. 「**[!UICONTROL プロパティ]**」セクションの「**[!UICONTROL 許可されているコンポーネント]**」タブで、**[!UICONTROL ダイナミックメディア]**&#x200B;までスクロールし、リストを展開して「**[!UICONTROL 3Dメディア。]**」を確認します。
+1. 「**[!UICONTROL 完了]**」をタップして変更を保存し、**[!UICONTROL ポリシーエディターを閉じます。]**
 
    これで、この Dynamic Media を使用するすべてのページに 3D メディアコンポーネントを配置できます。
 
@@ -269,12 +269,12 @@ WCM として AEM を使用している場合は、この公開方法を使用�
 **静的 Dynamic Media 3D アセットを公開するには**
 
 1. 3D アセット（GLB、OBJ、または STL ファイル形式）を開き、アセットの詳細ページに表示します。
-1. On the toolbar, tap **[!UICONTROL Quick Publish.]**
+1. ツールバーの「**[!UICONTROL クイック公開」をタップします。]**
 
    ![3d-asset-quick-publish](/help/assets/assets-dm/3d-asset-quick-publish.png)
 
 1. 「**[!UICONTROL 閉じる]**」をタップしてダイアログボックスを終了し、アセットの詳細ページに戻ります。
-1. From the drop-down list to the left of the 3D asset&#39;s file name, tap **[!UICONTROL Renditions.]**
+1. 3Dアセットのファイル名の左にあるドロップダウンリストから、「**[!UICONTROL レンディション」をタップします。]**
 
    ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
 
