@@ -23,19 +23,19 @@ ht-degree: 16%
 
 Communitiesツールコンソールにアクセスするには、作成者インスタンスをログインします。
 
-* From global navigation: **[!UICONTROL Tools]** > **[!UICONTROL Communities]**.
+* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]**。
 
    ![コミュニティ](assets/communities-home.png)
 
-* [サイトテンプレート](sites.md) — コンソール。サイトテンプレートの作成と管理を行います。
+* [サイトテンプレート](sites.md)  — コンソール。サイトテンプレートの作成と管理を行います。
 
-* [グループテンプレート](tools-groups.md) — コンソール。グループテンプレートの作成と管理を行います。
+* [グループテンプレート](tools-groups.md)  — コンソール：グループテンプレートの作成と管理を行います。
 
-* [コミュニティ機能](functions.md) — コンソール。コミュニティ機能の作成と管理を行います。
+* [コミュニティ機能](functions.md)  — コミュニティ機能の作成と管理を行うコンソール。
 
-* [ストレージの設定](srp-config.md) — コンソールを参照して [ください](working-with-srp.md)。
+* [ストレージの設定](srp-config.md)  — コンソールを使用して、 [デフォルトのSRPの設定と選択を行います](working-with-srp.md)。
 
-* [コンポーネントガイド](components-guide.md) — インタラクティブサイトを開き、SCFコンポーネントの動作や設定方法、カスタマイズ方法を実験できるようにします。
+* [コンポーネントガイド](components-guide.md) - SCFコンポーネントの動作や設定方法、カスタマイズ方法を実験できるインタラクティブサイトを開きます。
 
-* [バッジ](badges.md) — コンソールで、ス [コアリングルールおよびバッジルールに使用するカスタムバッジを追加できます。](implementing-scoring.md)
+* [バッジ](badges.md)  — コンソールで、ス [コアリングルールおよびバッジルールに使用するカスタムバッジを追加できます。](implementing-scoring.md)
 
