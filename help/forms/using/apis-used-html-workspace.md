@@ -17,7 +17,7 @@ ht-degree: 100%
 ---
 
 
-# AEM Forms ワークスペースで使用する 各種 API {#apis-used-in-aem-forms-workspace}
+# AEM Forms ワークスペースで使用する 各種 API  {#apis-used-in-aem-forms-workspace}
 
 AEM Forms ワークスペースでは次の API が使用されています。
 
@@ -164,7 +164,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>lock</td>
    <td>ProcessManagementTaskService</td>
-   <td>lock</td>
+   <td>ロック</td>
    <td>タスクをロックします。これにより、共有されている場合は別のユーザーが要求できなくなります。</td>
   </tr>
   <tr>
@@ -176,7 +176,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>abandon</td>
    <td>ProcessManagementTaskService</td>
-   <td>abandon</td>
+   <td>abondan</td>
    <td>タスクを削除します。</td>
   </tr>
   <tr>
@@ -260,7 +260,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>getParticipatedProcesses</td>
    <td>ProcessManagementProcessService</td>
-   <td>getParticipatedProcesses</td>
+   <td>getRendedProcesses</td>
    <td>ログインユーザーが参加したすべてのプロセス名のリストを返します。</td>
   </tr>
   <tr>
