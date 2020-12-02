@@ -29,7 +29,7 @@ ht-degree: 99%
 1. [「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)にアクセスして使用可能なアクションを表示します。
 1. 「**このページに移動**」を選択して編集するページを開きます。
 
-### ライブコピーへのローンチページサブジェクトを編集 {#editing-launch-pages-subject-to-a-live-copy}
+### ライブコピーへのローンチページサブジェクトを編集  {#editing-launch-pages-subject-to-a-live-copy}
 
 ローンチが[ライブコピー](/help/sites-administering/msm.md)に基づく場合は、次のようになります。
 
@@ -80,7 +80,7 @@ ht-degree: 99%
    >
    >ローンチにページを追加するには、ページが共通の言語ルートの下（単一のサイト内）にある必要があります。
 
-## ローンチの設定の編集 {#editing-a-launch-configuration}
+## ローンチの設定の編集  {#editing-a-launch-configuration}
 
 ローンチのプロパティは、任意のタイミングで編集できます。
 
@@ -99,7 +99,7 @@ ht-degree: 99%
 
    「**ローンチ日**」フィールドと「**実稼動準備完了**」フィールドの目的とインタラクションについて詳しくは、[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください。
 
-## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
+## ページのローンチステータスの確認  {#discovering-the-launch-status-of-a-page}
 
 「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
 
