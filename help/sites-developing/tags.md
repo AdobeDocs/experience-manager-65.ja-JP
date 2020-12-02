@@ -22,11 +22,11 @@ ht-degree: 40%
 
 タグ付けにより、コンテンツを分類および整理できますタグの分類には、名前空間と分類を使用できます。
 
-* See [Administering Tags](/help/sites-administering/tags.md) for information about creating and managing tags, as well as to which content tags have been applied.
-* See [Using Tags](/help/sites-authoring/tags.md) for information about tagging content.
+* タグの作成と管理、および適用されたコンテンツタグについては、[タグ](/help/sites-administering/tags.md)の管理を参照してください。
+* コンテンツのタグ付けについて詳しくは、[タグ](/help/sites-authoring/tags.md)の使用を参照してください。
 
 開発者向けの情報については、以下を参照してください。
 
-* [AEM Tagging Framework](/help/sites-developing/framework.md) — タグ付けに使用されるノードとプロパティの説明
+* [AEMタグ付けフレームワーク](/help/sites-developing/framework.md)  — タグ付けに使用するノードとプロパティの説明
 
-* [AEMアプリケーションへのタグ付けの構築](/help/sites-developing/building.md) — クライアント側およびサーバー側コードのタグ付けフレームワークで機能するAPIの説明
+* [AEMアプリケーションへのタグ付けの構築](/help/sites-developing/building.md)  — クライアント側およびサーバー側コードのタグ付けフレームワークで機能するAPIの説明
