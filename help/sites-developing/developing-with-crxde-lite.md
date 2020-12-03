@@ -38,13 +38,13 @@ CRXDE Lite は、AEM サーバーに直接アクセスできない場合、す�
 >
 >プロジェクトの開発時には [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) および [AEM HTL Brackets Extension](/help/sites-developing/aem-brackets.md) を使用することをお勧めします。
 
-## CRXDE Lite の使用 {#getting-started-with-crxde-lite}
+## CRXDE Lite の使用  {#getting-started-with-crxde-lite}
 
 CRXDE Lite の使用を開始するには、次の手順に従ってください。
 
 1. AEM をインストールします。
-1. ブラウザーに、と入力し `https://<host>:<port>/crx/de`ます。デフォルトでは有効で `https://localhost:4502/crx/de`す。
-1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。By default it is `admin` and `admin`.
+1. ブラウザに`https://<host>:<port>/crx/de`と入力します。デフォルトは`https://localhost:4502/crx/de`です。
+1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。デフォルトでは、`admin`と`admin`です。
 
 1. 「**OK**」をクリックします。
 
@@ -54,7 +54,7 @@ CRXDE Lite の使用を開始するには、次の手順に従ってください
 
 これで、CRXDE Lite を使用してアプリケーションを開発できます。
 
-## ユーザーインターフェイスの概要 {#overview-of-the-user-interface}
+## ユーザーインターフェイスの概要  {#overview-of-the-user-interface}
 
 CRXDE Lite には以下の機能があります。
 
@@ -106,7 +106,7 @@ CRXDE Lite には以下の機能があります。
   </tr>
   <tr>
    <td>作成 ...<br /> </td>
-   <td><p>選択したノードの下に次の項目を作成するためのドロップダウンメニューです。<br /> </p> <p>- <strong>ノード</strong>：任意のノードタイプを持つノード<br /> </p> <p>- <strong>File</strong>: nt:file node and its nt:resource subnode</p> <p>- <strong>フォルダー</strong>：nt:folder ノード</p> <p>- <strong>テンプレート</strong>：AEM テンプレート</p> <p>- <strong>コンポーネント</strong>：AEM コンポーネント</p> <p>- <strong>ダイアログ</strong>：AEM ダイアログ</p> </td>
+   <td><p>選択したノードの下に次の項目を作成するためのドロップダウンメニューです。<br /> </p> <p>- <strong>ノード</strong>：任意のノードタイプを持つノード<br /> </p> <p>- <strong>ファイル</strong>:nt:fileノードとそのnt:resourceサブノード</p> <p>- <strong>フォルダー</strong>：nt:folder ノード</p> <p>- <strong>テンプレート</strong>：AEM テンプレート</p> <p>- <strong>コンポーネント</strong>：AEM コンポーネント</p> <p>- <strong>ダイアログ</strong>：AEM ダイアログ</p> </td>
   </tr>
   <tr>
    <td>削除<br /> </td>
@@ -118,7 +118,7 @@ CRXDE Lite には以下の機能があります。
   </tr>
   <tr>
    <td>貼り付け<br /> </td>
-   <td>Pastes the copied node under the selected node.<br /> </td>
+   <td>コピーしたノードを選択したノードの下に貼り付けます。<br /> </td>
   </tr>
   <tr>
    <td>移動 ...<br /> </td>
@@ -148,13 +148,13 @@ CRXDE Lite には以下の機能があります。
 CRXDE Lite でフォルダーを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. In the Navigation pane, right-click the folder under which you want to create the new folder, select **Create ...**, then **Create Folder ...**.
+1. ナビゲーションウィンドウで、新しいフォルダを作成するフォルダを右クリックし、[**作成…]を選択します。**、**フォルダーを作成…**。
 
 1. フォルダーの&#x200B;**名前**&#x200B;を入力して、「**OK**」をクリックします。
 
 1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
 
-## テンプレートの作成 {#creating-a-template}
+## テンプレートの作成  {#creating-a-template}
 
 CRXDE Lite でテンプレートを作成するには：
 
@@ -165,21 +165,21 @@ CRXDE Lite でテンプレートを作成するには：
 
 1. （オプション）「**許可されているパス**」を設定します。「**次へ**」をクリックします。
 
-1. This step is optional: set the **Allowed Parents**. Click **Next**.
+1. この手順はオプションです。**許可されている親**&#x200B;を設定します。「**次へ**」をクリックします。
 
-1. This step is optional: set the **Allowed Children**. Click **OK**.
+1. この手順はオプションです。**許可される子**&#x200B;を設定します。「**OK**」をクリックします。
 
 1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
 
 次の項目が作成されます。
 
-* A node of type `cq:Template` with Template properties
+* テンプレートプロパティを持つタイプ`cq:Template`のノード
 
 * ページコンテンツのプロパティを含む `cq:PageContent` タイプの子ノード
 
 テンプレートにプロパティを追加できます。[プロパティの作成](#creating-a-property)の節を参照してください。
 
-## コンポーネントの作成 {#creating-a-component}
+## コンポーネントの作成  {#creating-a-component}
 
 ここで説明する機能を使用できるのは、CQ5 がインストールされている（つまり、ノードタイプ `cq:Component` をリポジトリで使用できる）場合のみです。
 
@@ -200,16 +200,16 @@ CRXDE Lite でコンポーネントを作成するには：
 
 次の項目が作成されます。
 
-* A node of type `cq:Component`
+* タイプ`cq:Component`のノード
 * コンポーネントのプロパティ
 * コンポーネントの .jsp スクリプト
 
-## ダイアログの作成 {#creating-a-dialog}
+## ダイアログの作成  {#creating-a-dialog}
 
 CRXDE Lite でダイアログを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. In the Navigation pane, right-click the component where you want to create the dialog, select **Create ...**, then **Create Dialog ...**.
+1. ナビゲーションペインで、ダイアログを作成するコンポーネントを右クリックし、**作成…を選択します。**、**作成ダイアログ…**。
 
 1. **ラベル**&#x200B;と&#x200B;**タイトル**&#x200B;を入力します。「**OK**」をクリックします。
 
@@ -223,7 +223,7 @@ CRXDE Lite でダイアログを作成するには：
 
 ダイアログエディターを使用してダイアログを編集することもできます。CRXDE Lite でダイアログノードをダブルクリックすると、エディターが表示されます。ダイアログエディターについて詳しくは、[こちら](/help/sites-developing/dialog-editor.md)を参照してください。
 
-## ノードの作成 {#creating-a-node}
+## ノードの作成  {#creating-a-node}
 
 CRXDE Lite でノードを作成するには：
 
@@ -250,7 +250,7 @@ CRXDE Lite でプロパティを作成するには：
 
 1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
 
-## スクリプトの作成 {#creating-a-script}
+## スクリプトの作成  {#creating-a-script}
 
 新しいスクリプトを作成するには：
 
@@ -265,7 +265,7 @@ CRXDE Lite でプロパティを作成するには：
 
 ## ノードタイプの書き出しと読み込み {#exporting-and-importing-node-types}
 
-With CRXDE Lite you can import and/or export node type definitions in [CND (Compact Namespace and Node Type Definition) notation](https://jackrabbit.apache.org/jcr/node-type-notation.html).
+CRXDE Liteを使用すると、[CND(コンパクト名前空間とノード型の定義)表記](https://jackrabbit.apache.org/jcr/node-type-notation.html)でノード型の定義を読み込んだり書き出したりできます。
 
 ノードタイプ定義を書き出すには：
 
@@ -286,7 +286,7 @@ With CRXDE Lite you can import and/or export node type definitions in [CND (Comp
 
 ## ログ {#logging}
 
-With CRXDE Lite you can display the file `error.log` that is located on the file system at `<crx-install-dir>/crx-quickstart/server/logs` and filter it with the appropriate log level. 以下の手順を実行します。
+CRXDE Liteを使用すると、`<crx-install-dir>/crx-quickstart/server/logs`にあるファイルシステム上のファイル`error.log`を表示し、適切なログレベルでフィルタリングできます。 以下の手順を実行します。
 
 1. ブラウザーで CRXDE Lite を開きます。
 1. ウィンドウの下部にある「**コンソール**」タブの右側のドロップダウンメニューで、「**サーバーログ**」を選択します。
@@ -295,7 +295,7 @@ With CRXDE Lite you can display the file `error.log` that is located on the file
 
 以下の操作を実行できます。
 
-* Adjust the log parameters in the Felix Console by clicking the **Logging Configurations** icon.
+* Felixコンソールで&#x200B;**ログの設定**&#x200B;アイコンをクリックして、ログのパラメータを調整します。
 * **ブラシ**&#x200B;アイコンをクリックしてメッセージを消去します。
 * **ピン**&#x200B;アイコンをクリックして、現在選択されている場所にメッセージを固定します。
 * 「**停止**」アイコンをクリックしてメッセージの表示を有効または無効にします。
