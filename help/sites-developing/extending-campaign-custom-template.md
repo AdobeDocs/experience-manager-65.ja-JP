@@ -20,7 +20,7 @@ ht-degree: 61%
 
 # Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-This page explains how to build a custom page template that uses [Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md) components by examining how the Geometrixx-outdoors template ( `/apps/geometrixx-outdoors/components/page_campaign_profile`) is implemented, and points you to important information you may need when creating your own custom template.
+このページでは、[Adobe Campaignフォーム](/help/sites-authoring/adobe-campaign-components.md)コンポーネントを使用するカスタムページテンプレートを作成する方法を説明し、Geometrixxアウトドアテンプレート(`/apps/geometrixx-outdoors/components/page_campaign_profile`)の実装方法を調べ、独自のカスタムテンプレートを作成する際に必要な重要な情報を示します。
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **適切な resourceSuperType**
 
-   Make sure the page-component inherits from `mcm/campaign/components/profile`.
+   ページコンポーネントが`mcm/campaign/components/profile`から継承していることを確認します。
 
    情報を取得して保存するには、サーブレットに対してこれが必要です
 
@@ -41,9 +41,9 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **ClientContext 設定**
 
-   When you look at the clientcontext settings ( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`) you see the following settings:
+   clientcontext設定(`/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`)を見ると、次の設定が表示されます。
 
-   * ClientContext points to `/etc/clientcontext/campaign`
+   * ClientContextが`/etc/clientcontext/campaign`を指しています
    * 追加の *config* ノードもあります。
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
@@ -60,7 +60,7 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **body.jsp（/apps/geometrixx-outdoors/components/page_campaign_profile/body.jsp）**
 
-   **body.jsp内**、クラウドサービスはページの下部に読み込まれます。
+   **body.jsp**&#x200B;には、ページの下部にクラウドサービスが読み込まれます。
 
    ```
    <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
@@ -76,7 +76,7 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **テンプレートの設定**
 
-   In the template ( `/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`) you see the following default values:
+   テンプレート(`/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`)には、次のデフォルト値が表示されます。
 
    | **acMapping** | mapRecipient（Adobe Campaign 6.1 の場合）、profile（Adobe Campaign Standard の場合） |
    |---|---|
