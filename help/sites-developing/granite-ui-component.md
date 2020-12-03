@@ -47,7 +47,7 @@ Granite コンポーネントを開発または拡張するには、Granite UI �
 
    * ハイパーメディア駆動型 UI を使用して一般的なインタラクションパターンを実現するための語彙（HTML 言語の拡張）を提供するクライアントライブラリのコレクション
 
-The generic Granite UI component `field` is composed of two files of interest:
+汎用Granite UIコンポーネント`field`は、2つの関心のあるファイルで構成されています。
 
 * `init.jsp`：ラベル付けや説明などの一般的な処理を扱い、フィールドをレンダリングする際に必要になるフォーム値を提供します。
 * `render.jsp`：フィールドの実際のレンダリングを実行します。カスタムフィールドに対してはオーバーライドされます。`init.jsp` にインクルードされます。
@@ -90,20 +90,20 @@ The generic Granite UI component `field` is composed of two files of interest:
    vm.get("value, String.class");
    ```
 
-   For more details, please refer to the implementation of out-ot-the-box Granite UI fields; for example, `/libs/granite/ui/components/foundation/form/textfield`.
+   詳細については、Graniteの標準UIフィールドの実装を参照してください。例：`/libs/granite/ui/components/foundation/form/textfield`
 
    >[!NOTE]
    >
    >現時点では、HTL ではコンポーネント間の情報の受け渡し（フォーム／フィールドのコンテキストでは非常に頻繁におこなわれます）を簡単には実現できないので、スクリプティングメソッドとして JSP が推奨されます。
 
-## コンポーネント用のクライアントライブラリの作成 {#creating-the-client-library-for-the-component}
+## コンポーネント用のクライアントライブラリの作成  {#creating-the-client-library-for-the-component}
 
 特定のクライアント側動作をコンポーネントに追加するには：
 
 1. カテゴリ `cq.authoring.dialog` のクライアントライブラリを作成します。
-1. Create a clientlib of category `cq.authoring.dialog` and define your `JS`/ `CSS` inside it.
+1. カテゴリ`cq.authoring.dialog`のclientlibを作成し、その中に`JS`/ `CSS`を定義します。
 
-   Define your `JS`/ `CSS` inside the clientlib.
+   clientlib内に`JS`/ `CSS`を定義します。
 
    >[!NOTE]
    >
