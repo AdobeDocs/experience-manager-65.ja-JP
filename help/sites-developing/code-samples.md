@@ -20,9 +20,9 @@ ht-degree: 75%
 
 # コードサンプル{#code-samples}
 
-アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました。これらのサンプルは、適切なコメントを含むコードの断片であり、AEM 開発者が AEM の主要な構築ブロックを理解するのに役立ちます。The samples are available here: [https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/).
+アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました。これらのサンプルは、適切なコメントを含むコードの断片であり、AEM 開発者が AEM の主要な構築ブロックを理解するのに役立ちます。サンプルは以下から入手できます。[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/).
 
-A multi-part tutorial designed for developers new to AEM covering fundamental topics like project setup, Core Components, Editable Templates, Client Libraries and component development: [Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+プロジェクトの設定、コアコンポーネント、編集可能なテンプレート、クライアントライブラリ、コンポーネントの開発などの基本的なトピックについて、AEMを初めて使用する開発者向けに設計されたマルチパートのチュートリアルです。[AEM Sitesの使い始めに — WKNDチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
 Adobe AEM コミュニティチームが、開発者向けのハウツー記事を作成しています。記事については、[こちら](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)を参照してください。
 
