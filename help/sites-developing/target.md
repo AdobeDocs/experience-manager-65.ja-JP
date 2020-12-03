@@ -30,7 +30,7 @@ ht-degree: 74%
 >
 >AEM オーサーインスタンスでコンポーネントをターゲット設定すると、そのコンポーネントが、キャンペーンの登録、オファーの設定、Adobe Target セグメントの取得（設定されている場合）をおこなうために、Adobe Target に対して一連のサーバー側呼び出しを実行します。AEM パブリッシュインスタンスから Adobe Target へのサーバー側呼び出しはおこなわれません。
 
-## ページ上での Adobe Target によるターゲット設定の有効化 {#enabling-targeting-with-adobe-target-on-your-pages}
+## ページ上での Adobe Target によるターゲット設定の有効化  {#enabling-targeting-with-adobe-target-on-your-pages}
 
 Adobe Targetとやり取りするページでターゲットコンポーネントを使用するには、&lt;head>要素に特定のクライアントサイドコードを含めます。
 
@@ -47,7 +47,7 @@ Adobe Targetとやり取りするページでターゲットコンポーネン�
 <cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
 ```
 
-このコードによって、必要な分析用 Javascript オブジェクトが追加され、Web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。For Target service, the libraries are loaded via `/libs/cq/analytics/components/testandtarget/headlibs.jsp`
+このコードによって、必要な分析用 Javascript オブジェクトが追加され、Web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。ターゲットサービスの場合、ライブラリは`/libs/cq/analytics/components/testandtarget/headlibs.jsp`を介して読み込まれます
 
 読み込まれるライブラリのセットは、Target の設定で使用されているターゲットクライアントライブラリのタイプ（mbox.js または at.js）によって異なります。
 
@@ -81,7 +81,7 @@ Adobe Targetとやり取りするページでターゲットコンポーネン�
 
 >[!NOTE]
 >
->製品に付属の `at.js` 出荷済みバージョンのみがサポートされます。 製品と共に `at.js` 出荷されたのバージョンは、次の `at.js` ファイルを参照して取得できます。
+>製品に付属の`at.js`のバージョンのみがサポートされます。 製品に同梱されている`at.js`のバージョンは、次の場所にある`at.js`ファイルを見ると入手できます。
 >
 >**/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js**.
 
@@ -93,7 +93,7 @@ Adobe Targetとやり取りするページでターゲットコンポーネン�
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/atjs-integration.js"></script>
 ```
 
-The Target functionality on the client side is managed by the `CQ_Analytics.TestTarget` object. そのため、ページには次の例のような init コードが含まれます。
+クライアント側のターゲット機能は`CQ_Analytics.TestTarget`オブジェクトで管理されます。 そのため、ページには次の例のような init コードが含まれます。
 
 ```
 <script type="text/javascript">
@@ -144,7 +144,7 @@ The Target functionality on the client side is managed by the `CQ_Analytics.Test
 <script type="text/javascript" src="/etc/clientlibs/foundation/testandtarget/init.js"></script>
 ```
 
-#### body セクション（開始） {#the-body-section-start}
+#### body セクション（開始）  {#the-body-section-start}
 
 ClientContext 機能をページに追加するには、&lt;body> タグの直後に次のコードを追加します。
 
@@ -152,7 +152,7 @@ ClientContext 機能をページに追加するには、&lt;body> タグの直�
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
 ```
 
-#### body セクション（終了） {#the-body-section-end}
+#### body セクション（終了）  {#the-body-section-end}
 
 &lt;/body> 終了タグの直前に次のコードを追加します。
 
@@ -200,13 +200,13 @@ ClientContext 機能をページに追加するには、&lt;body> タグの直�
 
 mboxの作成に使用されるデフォルトのmbox.jsファイルは、/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.jsにあります。 カスタムの mbox.js ファイルを使用するには、このファイルを Target クラウド設定に追加します。mbox.js ファイルを追加するには、そのファイルがファイルシステム上で使用可能になっている必要があります。
 
-For example, if you want to use the [Marketing Cloud ID service](https://docs.adobe.com/content/help/en/id-service/using/home.html) you need to download mbox.js so that it contains the correct value for the `imsOrgID` variable, which is based on your tenant. この変数は、Marketing Cloud ID サービスとの統合に必須です。For information, see [Adobe Analytics as the Reporting Source for Adobe Target](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/a4t.html) and [Before You Implement](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/before-implement.html).
+例えば、[Marketing CloudIDサービス](https://docs.adobe.com/content/help/en/id-service/using/home.html)を使用する場合は、テナントに基づく`imsOrgID`変数の正しい値が含まれるように、mbox.jsをダウンロードする必要があります。 この変数は、Marketing Cloud ID サービスとの統合に必須です。詳しくは、[Adobe Target](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/a4t.html)のレポート源としてのAdobe Analytics[と](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/before-implement.html)導入前のを参照してください。
 
 >[!NOTE]
 >
 >Target 設定でカスタム mbox が定義されている場合は、すべてのユーザーにパブリッシュサーバー上の **/etc/cloudservices** への読み取りアクセス権限が必要です。このアクセス権限がないと、発行 Web サイト上の mbox.js ファイルの読み込みが 404 エラーになります。
 
-1. Go to the CQ **Tools** page and select **Cloud Services**. ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. CQ **ツール**&#x200B;ページに移動し、**Cloud Services**&#x200B;を選択します。 ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 1. ツリーで「Adobe Target」を選択し、設定リストの中から目的の Target 設定をダブルクリックします。
 1. 設定ページで「編集」をクリックします。
 1. カスタム mbox.js プロパティの場合は、「参照」をクリックし、ファイルを選択します。
@@ -253,7 +253,7 @@ Web サイトのパフォーマンスを追跡するには、注文確認ペー�
 </script>
 ```
 
-各パラメーターの値は注文ごとに異なります。そのため、購入のプロパティに基づいてコードを生成するコンポーネントが必要です。The CQ [eCommerce Integration Framework](/help/sites-administering/ecommerce.md) enables you to integrate with your product catalogue and implement a shopping cart and checkout page.
+各パラメーターの値は注文ごとに異なります。そのため、購入のプロパティに基づいてコードを生成するコンポーネントが必要です。CQ [eCommerce Integration Framework](/help/sites-administering/ecommerce.md)を使用すると、製品カタログとの統合と、買い物かごとチェックアウトページの実装が可能になります。
 
 Geometrixx Outdoors のサンプルでは、訪問者が商品を購入すると、以下の確認ページが表示されます。
 
@@ -318,7 +318,7 @@ String orderID = session.getOrderId();
 </script>
 ```
 
-## Target コンポーネントについて {#understanding-the-target-component}
+## Target コンポーネントについて  {#understanding-the-target-component}
 
 Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。ターゲットコンポーネントは、/libs/cq/personalization/components/ターゲットにあります。
 
@@ -337,7 +337,7 @@ target.jsp スクリプトは、ページのプロパティにアクセスして
 
 Adobe Target がコンテンツターゲティングをおこなうときには、engine_tnt.jsp スクリプトが、ターゲット設定されたエクスペリエンスのコンテンツを格納する mbox を作成します。
 
-* Adds a `div` element with the class of `mboxDefault`, as required by the Adobe Target API.
+* Adobe TargetAPIの要求に従って、`div`要素を`mboxDefault`のクラスと共に追加します。
 
 * `div` 要素の内側に mbox コンテンツ（ターゲット設定されたエクスペリエンスのコンテンツ）を追加します。
 
