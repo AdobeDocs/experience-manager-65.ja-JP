@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7に関するリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
+source-git-commit: c92efd64662e831c8771a8f35701f4e9ed788645
 workflow-type: tm+mt
-source-wordcount: '3789'
+source-wordcount: '4201'
 ht-degree: 5%
 
 ---
@@ -38,6 +38,16 @@ ht-degree: 5%
 * カードと列の表示ーでデジタルアセットを並べ替えることができます。
 
 * [!DNL Assets] アクセシビリティを [!DNL Dynamic Media] 強化しました。強化された機能は、キーボードナビゲーション、スクリーンリーダーの使用、類似の支援テクノロジー(AT)の使用に関連しています。 [[!DNL Assets] enhancements](#assets-6570)および[[!DNL Dynamic Media] enhancements](#dynamic-media-6570)を参照してください。
+
+* フォームデータモデルのHTTPクライアント設定を使用して、パフォーマンスを最適化します。
+
+* レイアウトモードで各コンポーネントのリセットオプションを使用できる
+
+* [!DNL Experience Manager] 6.5 Service Pack 7Formsは、次の点でパフォーマンスが向上しました。
+
+   * アダプティブフォームを送信する際に、サーバー上のフィールド値を検証する。
+
+   * [!DNL Automated Forms Conversion service]を使用してPDFフォームをアダプティブフォームに変換する。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.22.5 に更新しました。
 
@@ -299,6 +309,48 @@ ht-degree: 5%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] 予定されている [!DNL Experience Manager] Service Packのリリース日の1週間後に、アドオンパッケージをリリースします。
+
+**アダプティブフォーム**
+
+* [!DNL Experience Manager] Service Pack 6(NPR-35126)を適用した後、Classic UIを使用してアダプティブフォームを編集できない。
+
+* PDFをアダプティブフォームに変換する場合、タブ付きレイアウトのフォームデータモデルを使用してネストされたパネルに値を設定することはできません。 さらに、コードエディター(NPR-35062)を使用して静的な配列でラジオボタングループの値を動的に設定する場合に問題が発生します。
+
+* アダプティブフォームのテキストフィールドコンポーネントに日本語の文字を入力する場合、最大35文字(NPR-35039)を超える文字を指定できます。
+
+* アダプティブフォームは、フォームの送信後に表示される&#x200B;**[!UICONTROL 「ありがとうございます」]**&#x200B;ページ(NPR-34989)に、`owner`や`status`などの不要なパラメーターを表示します。
+
+* [!UICONTROL 添付ファイル]コンポーネントの[!UICONTROL File Selection]ダイアログには、選択に対してもサポートされていないファイルタイプも表示され、アダプティブフォームの送信中にエラーが発生します(NPR-34970)。
+
+* フォームの前にテキストを含む[!DNL Experience Manager Sites]ページにアダプティブフォームを挿入すると、カーソルのフォーカスは、フォームの前のテキストではなく、直接フォームに移動します(NPR-34947)。
+
+* [!UICONTROL 「] Data」オプションを使用して、 [!DNL Experience Manager] 6.2データのXMLファイルを使用してアダプティブフォームに事前入力するプレビューが適切に機能しない(NPR-35087)。
+
+* アダプティブフォームのデータディクショナリを更新すると、アダプティブフォームがキャッシュされた値を返すので、フォームは変換されません(NPR-34845)。
+
+* キャッシュの無効化(NPR-34567)が原因で、フラグメントのアダプティブフォームへの読み込みに時間がかかります。
+
+* アダプティブフォームのスクリーンリーダーでタブナビゲーションが適切に機能しない(NPR-34544)。
+
+**Correspondence Management**
+
+* フロートタイプを含む数値データを含むXMLタグの値をドラフト(NPR-35050)として保存できません。
+
+* ES3からアセットを移行する場合、アセットには編集不可の2つのデフォルト条件(NPR-34972)が含まれます。
+
+* レター内のデータディクショナリを編集すると、「[!UICONTROL 貸したコンテンツ]」セクションには、有用な情報ではなく、回転する長方形が表示されます(NPR-34853)。
+
+**インタラクティブコミュニケーション**
+
+* [!DNL Forms]アドオンパッケージのインストール後に使用できるInteractive Communicationのロールアウト設定名。標準のロールアウト設定名(NPR-34976)を重複します。
+
+**Document Security**
+
+* 新しいドキュメントセキュリティポリシーを保存すると、Experience ManagerFormsは`Relative validity period is required`エラーメッセージを表示します(NPR-34679)。
+
+* 新しいドキュメントセキュリティポリシーを保存すると、Experience ManagerFormsは`Invalid filed value.Numeric value is required`エラーメッセージを表示します(NPR-34678)。
+
+* ドキュメントセキュリティでPDF 2.0ドキュメントを保護できません(CQ-4305851)。
 
 セキュリティ更新について詳しくは、[Experience Managerのセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
 
