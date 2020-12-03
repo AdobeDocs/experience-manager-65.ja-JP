@@ -39,7 +39,7 @@ ht-degree: 75%
    * 名前：`cq:showOnCreate`
    * 型：`Boolean`
 
-* Page property to be available in the edit view (e.g. **View**/**Edit**) **Properties** option):
+* 編集表示で使用できるページプロパティ(例：**表示**/**編集**) **プロパティ**&#x200B;オプション):
 
    * 名前：`cq:hideOnEdit`
    * 型：`Boolean`
@@ -52,7 +52,7 @@ ht-degree: 75%
 
 >[!TIP]
 >
->ページプロパティのカスタマイズについては、「ページプロパティの [拡張](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) 」チュートリアルを参照してください。
+>ページプロパティのカスタマイズのガイドについては、[ページプロパティの拡張チュートリアル](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html)を参照してください。
 
 ## ページプロパティの設定 {#configuring-your-page-properties}
 
@@ -60,8 +60,8 @@ ht-degree: 75%
 
 例えば、デフォルトでは、[**ページを作成**&#x200B;ウィザード](/help/sites-authoring/managing-pages.md#creating-a-new-page)には「**その他のタイトルと説明**」の下にグループ化されたフィールドが表示されます。これらのフィールドを非表示にするには、次のように設定します。
 
-1. Create your page component under `/apps`.
-1. Create an override (using *dialog diff* provided by the [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md)) for the `basic` section of your page component; for example:
+1. `/apps`の下にページコンポーネントを作成します。
+1. ページコンポーネントの`basic`セクションに対して、[Sling Resource Marger](/help/sites-developing/sling-resource-merger.md)が提供する&#x200B;*ダイアログdiff*&#x200B;を使用して上書きを作成します。例：
 
    ```xml
    <your-page-component>/cq:dialog/content/items/tabs/items/basic
@@ -72,20 +72,20 @@ ht-degree: 75%
    >リファレンスとして、以下を参照してください。
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
-   However, you ***must*** not change anything in the `/libs` path.
+   ただし、******&#x200B;は`/libs`パス内の何も変更しないでください。
    `/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
    設定およびその他の変更に推奨される方法は次のとおりです。
-   1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
+   1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
    1. `/apps` 内で変更作業をおこないます。
 
 
-1. 「 `path` 」 `basic` プロパティを「」に設定し、「基本」タブの上書きを参照します（次の手順も参照）。 次に例を示します。
+1. `basic`の`path`プロパティを設定して、基本タブの上書きを指定します（次の手順も参照してください）。 次に例を示します。
 
    ```xml
    /apps/demos/components/page/tabs/basic
    ```
 
-1. 対応するパスに `basic` - `moretitles` セクションの上書きを作成します。例：
+1. 対応するパスに`basic` - `moretitles`セクションの上書きを作成します。例：
 
    ```xml
    /apps/demos/components/page/tabs/basic/items/column/items/moretitles
@@ -102,9 +102,9 @@ ht-degree: 75%
 >[!NOTE]
 ライブコピーと一緒に使用するページプロパティを設定する場合、詳しくは、[ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui)を参照してください。
 
-## ページプロパティの設定サンプル {#sample-configuration-of-page-properties}
+## ページプロパティの設定サンプル  {#sample-configuration-of-page-properties}
 
-このサンプルは、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) のダイアログ差分比較の手法を示しており、[`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties) が使用されています。It also illustrates use of both `cq:showOnCreate` and `cq:hideOnEdit`.
+このサンプルは、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) のダイアログ差分比較の手法を示しており、[`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties) が使用されています。また、`cq:showOnCreate`と`cq:hideOnEdit`の両方の使い方を説明します。
 
 GitHub のコード
 
