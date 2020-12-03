@@ -41,7 +41,7 @@ ht-degree: 84%
 * `/conf/global/settings/dam/cfm/templates`
 実行時に変更する必要がある、インスタンス全体の顧客固有のテンプレートの場所。
 
-The order of precedence is (in descending order) `/conf`, `/apps`, `/libs`.
+優先順位は（降順）`/conf`、`/apps`、`/libs`です。
 
 >[!CAUTION]
 >
@@ -51,7 +51,7 @@ The order of precedence is (in descending order) `/conf`, `/apps`, `/libs`.
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
+>1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
    >
    >
 1. `/apps` 内で変更作業をおこないます。
@@ -158,7 +158,7 @@ conf
     <tr>
      <td><code>elements</code> </td>
      <td><p><code>nt:unstructured</code></p> <p>必須</p> </td>
-     <td><p>コンテンツフラグメントの要素の定義を格納するノードです。It is mandatory and needs to contain at least one child node for the <strong>Main</strong> element, but can contain [1..n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td>
+     <td><p>コンテンツフラグメントの要素の定義を格納するノードです。必須であり、<strong>Main</strong>要素の子ノードを少なくとも1つ含める必要がありますが、[1...n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td>
     </tr>
    </tbody>
   </table>
@@ -185,12 +185,12 @@ conf
     <tr>
      <td><code>defaultContent</code></td>
      <td><p><code>String</code></p> <p>オプション</p> <p>デフォルト：""</p> </td>
-     <td>Initial content of the element; only used if <code>precreateElements</code><i> = </i><code>true</code></td>
+     <td>要素の初期内容<code>precreateElements</code><i> = </i><code>true</code></td>
     </tr>
     <tr>
      <td><code>initialContentType</code></td>
      <td><p><code>String</code></p> <p>オプション</p> <p>default: <code>text/html</code></p> </td>
-     <td><p>Initial content type of the element; only used if <code>precreateElements</code><i> = </i><code>true</code>; currently supported:</p>
+     <td><p>要素の初期コンテンツタイプ<code>precreateElements</code><i> = </i><code>true</code>；の場合にのみ使用現在のサポート：</p>
       <ul>
        <li><code>text/html</code></li>
        <li><code>text/plain</code></li>
