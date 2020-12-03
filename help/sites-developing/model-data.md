@@ -26,7 +26,7 @@ ht-degree: 80%
 
 同氏は、アドビが 2010 年に買収した、グローバルなコンテンツ管理およびコンテンツインフラストラクチャソフトウェアの大手プロバイダーである Day Software AG 社の共同創立者兼 CTO です。現在は、アドビのフェローであり、Enterprise Technology のバイスプレジデントです。また、コンテンツ管理の技術標準である Java コンテンツリポジトリ（JCR）アプリケーションプログラミングインターフェイス（API）、JSR-170 開発の第一人者でもあります。
 
-Further updates can also be seen on [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+[https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)で更新情報を見ることもできます。
 
 ## David からのあいさつ {#introduction-from-david}
 
@@ -42,7 +42,7 @@ Further updates can also be seen on [https://wiki.apache.org/jackrabbit/DavidsMo
 
 ## 簡単な 7 つのルール {#seven-simple-rules}
 
-### Rule #1: Data first, structure later. Maybe. {#rule-data-first-structure-later-maybe}
+### ルール#1:最初にデータを、後で構造化します。たぶん。{#rule-data-first-structure-later-maybe}
 
 #### 説明 {#explanation-1}
 
@@ -60,9 +60,9 @@ ERD の意味では、宣言されているデータ構造について気にし�
 
 #### 例 {#example-1}
 
-上記の例で、「ブログ投稿」ノードなどで `lastModified` 日付プロパティを使用する場合は、特別なノードタイプが必要であるとは限りません。 最初は、ブログ投稿ノード `nt:unstructured` に必ず使用します。 ブログアプリでは、lastModified日付を表示するだけなので（「順番」を付けても）、日付になってもほとんど気にしません。 私はブログ書きの申込書を暗黙的に信頼して&quot;date&quot;をそこに置くので、nodetypeの形式の `lastModified` 日付の存在を宣言する必要はありません。
+上記の例で、「ブログ投稿」ノードなどで`lastModified` Dateプロパティを使用する場合は、特別なノードタイプが必要であるとは限りません。 最初は`nt:unstructured`をブログ投稿ノードに必ず使います。 ブログアプリでは、lastModified日付を表示するだけなので（「順番」を付けても）、日付になってもほとんど気にしません。 私はブログ書き出しのアプリケーションに&quot;date&quot;を付けるのを暗黙的に信じているので、nodetypeの形式で`lastModified`日付の存在を宣言する必要はありません。
 
-### Rule #2: Drive the content hierarchy, don&#39;t let it happen. {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
+### ルール#2:コンテンツ階層を推進し、それを実現させない。{#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
 #### 説明 {#explanation-2}
 
@@ -78,7 +78,7 @@ ERD の意味では、宣言されているデータ構造について気にし�
 >
 >コンテンツリポジトリの構造化の方法はパフォーマンスにも影響を及ぼす可能性があります。最適なパフォーマンスを確保するために、コンテンツリポジトリ内の個々のノードに接続される子ノードの数は、通常 1,000 個以下にする必要があります。
 >
->CRXで処理でき [るデータ量を参照してください。](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) を参照してください。
+>[CRXで処理できるデータ量は？を参照してください。](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) を参照してください。
 
 #### 例 {#example-2}
 
@@ -100,11 +100,11 @@ ERD の意味では、宣言されているデータ構造について気にし�
 
 上記のコンテンツモデルを使用すると、「匿名の」ユーザーにコメントの「作成」を簡単に許可する一方で、匿名のユーザーを残りのワークスペースで読み取り専用ベースに保つことができます。
 
-### ルール 3：ワークスペースは clone()、merge() および update() 用。 {#rule-workspaces-are-for-clone-merge-and-update}
+### ルール 3：ワークスペースは clone()、merge() および update() 用。  {#rule-workspaces-are-for-clone-merge-and-update}
 
 #### 説明 {#explanation-3}
 
-If you don&#39;t use `clone()`, `merge()` or `update()` methods in your application a single workspace is probably the way to go.
+アプリケーションで`clone()`、`merge()`、または`update()`メソッドを使用しない場合は、1つのワークスペースがおそらく使用できます。
 
 「対応するノード」は、JCR 仕様で定義されている概念です。結局のところは、本質的に、それぞれ異なるいわゆるワークスペース内の、同じコンテンツを表すノードのことです。
 
@@ -131,7 +131,7 @@ JCR ではワークスペースの概念が非常に抽象的に紹介されて�
 * 公開、非公開、ローカルなど、様々なターゲットオーディエンスの明確なコンテンツ
 * 様々なユーザーのメールインボックス
 
-### ルール 4：同じ名前の兄弟に注意。 {#rule-beware-of-same-name-siblings}
+### ルール 4：同じ名前の兄弟に注意。  {#rule-beware-of-same-name-siblings}
 
 #### 説明 {#explanation-4}
 
@@ -157,7 +157,7 @@ XML の読み込みや既存の XML とのインタラクションのために S
 /content/blog[1]/post[2]
 ```
 
-### ルール 5：参照は有害と見なされる。 {#rule-references-considered-harmful}
+### ルール 5：参照は有害と見なされる。  {#rule-references-considered-harmful}
 
 #### 説明 {#explanation-5}
 
@@ -173,17 +173,17 @@ XML の読み込みや既存の XML とのインタラクションのために S
 
 参照が定まっていないとシステムが機能しない場合があると思いますが、私の実体験からは、十分に「現実的」で、かつシンプルな例は、思いつきません。
 
-### Rule #6: Files are files. {#rule-files-are-files}
+### ルール#6:ファイルはファイルです。{#rule-files-are-files}
 
 #### 説明 {#explanation-6}
 
-If a content model exposes something that even remotely *smells* like a file or a folder I try to use (or extend from) `nt:file`, `nt:folder` and `nt:resource`.
+コンテンツモデルが、ファイルやフォルダーのように&#x200B;*に*&#x200B;においても、`nt:file`、`nt:folder`、`nt:resource`を使用（または拡張）しようとするような、リモートで公開する場合。
 
 私の経験では、多くの汎用アプリケーションで、nt:folder および nt:files とのインタラクションが暗黙的に許可されており、メタ情報が追加された場合にイベントを処理して表示する方法が認識されています。例えば、JCR をベースとしている CIFS や WebDAV のようなファイルサーバー実装との直接のインタラクションは暗黙となります。
 
-大ざっぱに言えば、次のようなものが使えると思う。ファイル名とMIME型を格納する必要がある場合、/は `nt:file`非常に適 `nt:resource` しています。 複数の「ファイル」を保存できる場合は、nt:folderを保存するのが適切です。
+大ざっぱに言えば、次のようなものが使えると思う。ファイル名とMIMEタイプを保存する必要がある場合は、`nt:file`/ `nt:resource`は非常に良いマッチです。 複数の「ファイル」を保存できる場合は、nt:folderを保存するのが適切です。
 
-リソースにメタ情報を追加する必要がある場合は、「author」プロパティや「description」プロパティなど、「author」プロパティや「description」プロパティを追加する必要はありま `nt:resource` せん `nt:file`。 nt:fileを拡張することはほとんどありませんが、頻繁に拡張し `nt:resource`ます。
+リソースにメタ情報を追加する必要がある場合は、「author」プロパティや「description」プロパティなど、`nt:file`ではなく`nt:resource`を拡張します。 nt:fileを拡張することはほとんどなく、頻繁に`nt:resource`を拡張します。
 
 #### 例 {#example-6}
 
@@ -203,7 +203,7 @@ If a content model exposes something that even remotely *smells* like a file or 
 /content/myblog/posts/iphone_shipping/attachments/front.jpg/jcr:content [nt:resource]
 ```
 
-### ルール 7：ID は悪である。 {#rule-ids-are-evil}
+### ルール 7：ID は悪である。  {#rule-ids-are-evil}
 
 #### 説明 {#explanation-7}
 
@@ -215,7 +215,7 @@ If a content model exposes something that even remotely *smells* like a file or 
 
 項目はパスによっても識別できることも心に留めておいてください。UNIX ファイルシステムで「シンボリックリンク」が多くのユーザーにとってハードリンクよりはるかに大きな意味を持つのと同様に、ターゲットノードを参照する場合は、ほとんどのアプリケーションでパスが意味を持ちます。
 
-More importantly, it is **mix**:referenceable which means that it can be applied to a node at the point in time when you actually need to reference it.
+さらに重要なのは、**mix**:referenceableです。これは、実際に参照する必要がある時点で、ノードに適用できることを意味します。
 
 よって、タイプが「ドキュメント」であるノードを参照可能にしたいからといって、「ドキュメント」ノードタイプを静的な方法で mix:referenceable から拡張しなければならないということにはなりません。「ドキュメント」の任意のインスタンスに動的に追加できるからです。
 
