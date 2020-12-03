@@ -3,10 +3,10 @@ title: アセットの使用と共有に関するレポート
 description: デジタルアセットの使用状況、アクティビティ、共有を理解するのに役立つ、 [!DNL Adobe Experience Manager Assets]  でのアセットに関するレポートです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 6016cefa9456d8f142347ff197b61b1614d55ab9
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 94%
+source-wordcount: '1131'
+ht-degree: 87%
 
 ---
 
@@ -152,3 +152,11 @@ ht-degree: 94%
 1. 「**[!UICONTROL DAM Report Purge Service]**」設定を開きます。
 1. `scheduler.expression.name` フィールドでパージサービスの頻度（時間間隔）を指定します。レポートの経過日数および数量のしきい値を設定することもできます。
 1. 変更内容を保存します。
+
+## トラブルシューティング情報、ヒント、制限事項{#best-practices-and-limitations}
+
+* レポート内の一部のレポートまたは数値が利用できない場合や期待どおりに表示されない場合は、[!UICONTROL Day CQ DAMイベントレコーダー]サービスが有効になっていることを確認してください。
+
+* 不要になったレポートを削除します。 DAM Report Purgeサービスの設定オプションを使用して、レポートを削除する条件を設定します。
+
+* ディスク使用量レポートが生成されず、[!DNL Dynamic Media]を使用している場合は、すべてのアセットが正しく処理されることを確認します。 解決するには、アセットを再処理し、レポートを再生成します。
