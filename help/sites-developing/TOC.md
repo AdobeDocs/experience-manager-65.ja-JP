@@ -10,21 +10,21 @@ translation-type: tm+mt
 source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
 workflow-type: tm+mt
 source-wordcount: '835'
-ht-degree: 80%
+ht-degree: 87%
 
 ---
 
 
-# AEM 6.5 開発ユーザーガイド {#developing}
+# AEM 6.5 開発ユーザーガイド  {#developing}
 
 + [開発ユーザガイドの概要](home.md)
-+ 開発者向けの概要{#introduction}
++ 開発者向けの紹介{#introduction}
    + [AEM Sites の開発の手引き - WKND チュートリアル](getting-started.md)
    + [AEM の中心概念](the-basics.md)
    + [AEM タッチ操作対応 UI の構造](touch-ui-structure.md)
    + [AEM タッチ操作対応 UI の概念](touch-ui-concepts.md)
    + [AEM の開発 - ガイドラインとベストプラクティス](dev-guidelines-bestpractices.md)
-   + [クライアント側ライブラリの使用](clientlibs.md)
+   + [クライアントサイドライブラリの使用](clientlibs.md)
    + [開発とページの差分](pagediff.md)
    + [エディターの制限事項](editor-limitations.md)
    + [CSRF 対策フレームワーク](csrf-protection.md)
@@ -82,7 +82,7 @@ ht-degree: 80%
    + [コンテンツサービス用の JSON エクスポーター](json-exporter.md)
    + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
    + [画像エディター](image-editor.md)
-   + [装飾タグ](decoration-tag.md)
+   + [装飾タグ   ](decoration-tag.md)
    + [非表示条件の使用](hide-conditions.md)
    + [複数のインプレースエディターの設定](multiple-inplace-editors.md)
    + [開発者モード](developer-mode.md)
@@ -100,24 +100,24 @@ ht-degree: 80%
       + [xtype の使用（クラシック UI）](xtypes.md)
       + [フォームの開発（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
-   + [ヘッドレスおよびAEMとのハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [ヘッドレスおよび AEM とのハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
    + 単一ページアプリケーション{#spas}
-      + [SPAの概要とチュートリアル](spa-walkthrough.md)
-      + [SPA WKNDチュートリアル](spa-wknd.md)
+      + [SPA の概要およびガイド](spa-walkthrough.md)
+      + [SPA WKND チュートリアル](spa-wknd.md)
       + [AEMのSPAを使い始める — React](spa-getting-started-react.md)
       + [AEMのSPA使用の手引き — Angular](spa-getting-started-angular.md)
       + [SPA用のReactコンポーネントの実装](spa-implementing-react-component.md)
-      + [SPAディープディブ](spa-deep-dives.md)
+      + [SPA の詳細](spa-deep-dives.md)
       + [SPA エディターの概要](spa-overview.md)
-      + [AEM向けSPAの開発](spa-architecture.md)
+      + [AEM 向け SPA の開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
-      + [SPAページコンポーネント](spa-page-component.md)
-      + [SPAの動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
-      + [SPAモデルルーティング](spa-routing.md)
-      + [SPAとAdobe Experience Platform Launchの統合](spa-launch.md)
-      + [SPAおよびサーバー側のレンダリング](spa-ssr.md)
-      + [SPAリファレンス資料](spa-reference-materials.md)
+      + [SPA ページコンポーネント](spa-page-component.md)
+      + [SPA の動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
+      + [SPA モデルルーティング](spa-routing.md)
+      + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
+      + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
+      + [SPA 参照資料](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
    + [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)
    + [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)
@@ -168,7 +168,7 @@ ht-degree: 80%
       + [ワークフロープロセスのリファレンス](workflows-process-ref.md)
       + [AEMワークフローの変数](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [Multi Site Manager の拡張](extending-msm.md)
-   + 追跡と分析{#extending-analytics}
+   + 追跡と解析{#extending-analytics}
       + [イベント追跡の拡張](extending-analytics.md)
       + [コンポーネントへのAdobe Analyticsトラッキングの追加](extending-analytics-components.md)
       + [Adobe Analyticsフレームワークのカスタマイズ](extending-analytics-framework.md)
