@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7に関するリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c92efd64662e831c8771a8f35701f4e9ed788645
+source-git-commit: 69dbfeab855f70167eead24f3d411df4c82a0050
 workflow-type: tm+mt
-source-wordcount: '4201'
+source-wordcount: '4243'
 ht-degree: 5%
 
 ---
@@ -309,6 +309,10 @@ ht-degree: 5%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] 予定されている [!DNL Experience Manager] Service Packのリリース日の1週間後に、アドオンパッケージをリリースします。
+
+>[!NOTE]
+>
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Forms]。これらは、別の[!DNL Forms]アドオンパッケージを使用して配信されます。 さらに、JEE上の[!DNL Experience Manager Forms]の修正を含む累積インストーラーがリリースされました。 詳しくは、「[AEM Formsアドオンのインストール](#install-aem-forms-add-on-package)」および「[JEE上のAEM Formsのインストール](#install-aem-forms-jee-installer)」を参照してください。
 
 **アダプティブフォーム**
 
