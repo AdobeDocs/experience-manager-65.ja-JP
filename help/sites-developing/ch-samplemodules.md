@@ -11,7 +11,7 @@ translation-type: tm+mt
 source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '1194'
-ht-degree: 78%
+ht-degree: 91%
 
 ---
 
@@ -26,7 +26,7 @@ ContextHub には、ソリューションで利用できる UI モジュール�
 
 UI モジュールの ContextHub への追加については、[UI モジュールの追加](ch-configuring.md#adding-a-ui-module)を参照してください。UI モジュールの作成については、[ContextHub UI モジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)を参照してください。
 
-## contexthub.base UI モジュールタイプ {#contexthub-base-ui-module-type}
+## contexthub.base UI モジュールタイプ  {#contexthub-base-ui-module-type}
 
 contexthub.base UI モジュールタイプは、その他すべての UI モジュールタイプのベースタイプです。したがって、ストアデータをレンダリングするための汎用的な機能を提供します。
 
@@ -44,16 +44,16 @@ contexthub.base UI モジュールタイプは、その他すべての UI モジ
 
 contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェクトを使用して設定します。UI モジュールの機能を設定するには、次のいずれかのプロパティを含めます。
 
-* **image:** アイコンとして表示する画像のURL。
-* **icon:** Coral UIアイコン [クラスの名前](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 。 icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
+* **image：**&#x200B;アイコンとして表示する画像への URL。
+* **icon：**[Coral UI アイコン](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)クラスの名前。icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
 
-* **title:** UIモジュールのタイトル。 タイトルは、ポインターを UI モジュールアイコンに合わせると表示されます。
-* **fullscreen:** UIモジュールがフルスクリーンモードをサポートするかどうかを示すboolean値です。 Use `true` to support fullscreen and `false` to prevent fullscreen mode.
+* **title：** UI モジュールのタイトル。タイトルは、ポインターを UI モジュールアイコンに合わせると表示されます。
+* **fullscreen：** UI モジュールが全画面モードをサポートするかどうかを示すブール値。全画面をサポートする場合は `true`、全画面モードを許可しない場合は `false` を使用します。
 
-* **template：** ContextHub のツールバーにレンダリングするコンテンツを指定する [Handlebars](https://handlebarsjs.com/) テンプレート。Use at most two `<p>` tags.
+* **template：** ContextHub のツールバーにレンダリングするコンテンツを指定する [Handlebars](https://handlebarsjs.com/) テンプレート。最大 2 つの `<p>` タグを使用します。
 
-* **storeMapping：**&#x200B;キーとストアのマッピング。関連するContextHubストアデータにアクセスするには、ハンドルテンプレートのキーを使用します。
-* **リスト:** UIモジュールがクリックされたときにプロバーでリストとして表示する項目の配列です。 この項目を含める場合は、popoverTemplate を含めないでください。値は、次のキーを持つオブジェクトの配列です。
+* **storeMapping：**&#x200B;キーとストアのマッピング。Handlebar テンプレートでキーを使用して、関連付けられている ContextHub ストアデータにアクセスします。
+* **list：** UI モジュールをクリックしたときに、ポップオーバーにリストとして表示する項目の配列。この項目を含める場合は、popoverTemplate を含めないでください。値は、次のキーを持つオブジェクトの配列です。
 
    * title：この項目に対して表示するテキスト
    * image：（オプション）左側に表示する画像への URL
@@ -66,7 +66,7 @@ contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェ�
    * チェックボックス
    * radio
 
-* **poverTemplate:** UIモジュールがクリックされたときにプローバーでレンダリングするコンテンツを指定するハンドルテンプレートです。 この項目を含める場合は、`list` 項目を含めないでください。
+* **popoverTemplate：** UI モジュールをクリックしたときにポップオーバーにレンダリングするコンテンツを指定する Handlebars テンプレート。この項目を含める場合は、`list` 項目を含めないでください。
 
 ### 例 {#example}
 
@@ -106,7 +106,7 @@ contexthub.browserinfo UI モジュールのインスタンスには、詳細設
 }
 ```
 
-## contexthub.datetime UI モジュールタイプ {#contexthub-datetime-ui-module-type}
+## contexthub.datetime UI モジュールタイプ  {#contexthub-datetime-ui-module-type}
 
 contexthub.datetime UI モジュールは、[contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) ストア候補をベースとする、datetime という名前のストアに格納されている日時を表示します。
 
@@ -174,7 +174,7 @@ contexthub.location UI モジュールのインスタンスには、詳細設定
 }
 ```
 
-## contexthub.screen-orientation UI モジュールタイプ {#contexthub-screen-orientation-ui-module-type}
+## contexthub.screen-orientation UI モジュールタイプ  {#contexthub-screen-orientation-ui-module-type}
 
 contexthub.screen-orientation UI モジュールは、クライアントの現在の画面の向きを表示します。デフォルトでは無効になっていますが、このモジュールは向きを選択できるポップオーバーを提供します。このモジュールは、[granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) ストア候補をベースとする、emulators という名前の ContextHub ストアから情報を取得します。
 
@@ -184,7 +184,7 @@ UIモジュールのソースは、/libs/granite/contexthub/components/modules/s
 
 ### 設定 {#configuration-5}
 
-contexthub.screen-orientation UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。Note that the `clickable` property is `false` by default. If you override the default configuration to set `clickable` to `true`, clicking the module reveals a popup where you can select the orientation.
+contexthub.screen-orientation UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。`clickable` プロパティは、デフォルトでは `false` です。デフォルトの設定を上書きして `clickable` を `true` に設定した場合、このモジュールをクリックするとポップアップが表示され、向きを選択できます。
 
 ```xml
 {
@@ -222,7 +222,7 @@ contexthub.tagcloud UI モジュールのインスタンスには、詳細設定
 }
 ```
 
-## granite.profile UI モジュールタイプ {#granite-profile-ui-module-type}
+## granite.profile UI モジュールタイプ  {#granite-profile-ui-module-type}
 
 granite.profile ContextHub UI モジュールは、現在のユーザーの表示名を表示します。ポップアップにはユーザーのログイン名が表示され、表示名の値を変更できます。この UI モジュールは、[granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) ストア候補をベースとする、profile という名前の ContextHub ストアから情報を取得します。
 
