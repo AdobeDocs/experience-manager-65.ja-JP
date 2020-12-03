@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '3218'
-ht-degree: 71%
+ht-degree: 90%
 
 ---
 
@@ -41,17 +41,17 @@ ht-degree: 71%
 
 * 編集可能テンプレートの作成の概要
 
-   * For details see [Creating Page Templates](/help/sites-authoring/templates.md)
+   * 詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md)を参照してください
 
 * 編集可能テンプレートの作成に必要な管理者／開発者のタスク
 * 編集可能テンプレートの技術基盤
 
-このドキュメントでは、テンプレートの作成と編集について既に理解していることを前提としています。See the authoring document [Creating Page Templates](/help/sites-authoring/templates.md), which details the capabilities of editable templates as exposed to the template author.
+このドキュメントでは、テンプレートの作成と編集について既に理解していることを前提としています。オーサリングに関するドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)を参照してください。ここでは、テンプレート作成者に公開されている編集可能テンプレートの機能について詳しく説明されています。
 
 >[!NOTE]
 >
 >次のチュートリアルは、新しいプロジェクトで編集可能なページテンプレートを設定する場合にも役立ちます。
->[Getting Started with AEM Sites Part 2 - Creating a Base Page and Template](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
+>[「AEM Sitesの使い始めに」パート2 — ベースページとテンプレートの作成](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
 
 ## 新しいテンプレートの作成 {#creating-a-new-template}
 
@@ -62,7 +62,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 新しい編集可能テンプレートを作成する場合は、次の手順を実行します。
 
 1. [テンプレート用のフォルダー](#template-folders)を作成します。これは必須ではありませんが、推奨されるベストプラクティスです。
-1. Select a [template type](#template-type). This is copied to create the [template definition](#template-definitions).
+1. [テンプレートタイプ](#template-type)を選択します。[テンプレート定義](#template-definitions)を作成するために、このタイプがコピーされます。
 
    >[!NOTE]
    >
@@ -73,7 +73,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    **構造**
 
    * 構造では、テンプレートのコンポーネントとコンテンツを定義できます。
-   * テンプレート構造で定義されたコンポーネントは、作成されるページで移動することも、作成されるすべてのページから削除することもできません。
+   * テンプレート構造で定義されたコンポーネントは、結果ページに移動することも、結果ページから削除することもできません。
 
       * We.Retail サンプルコンテンツ外のカスタムフォルダーにテンプレートを作成する場合は、基盤コンポーネントを選択するか、[コアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を使用することができます。
    * ページ作成者がコンポーネントを追加または削除するには、テンプレートに段落システムを追加する必要があります。
@@ -81,7 +81,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    テンプレート作成者が構造を定義する方法について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
 
-   For technical deatils of the structure, see [Structure](/help/sites-developing/page-templates-editable.md#structure) in this document.
+   構造の技術的な詳細については、このドキュメントの[構造](/help/sites-developing/page-templates-editable.md#structure)を参照してください。
 
    **ポリシー**
 
@@ -126,17 +126,17 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    * テンプレートを新しいページを作成するために使用するときは、静的テンプレートと編集可能なテンプレートの間に視覚的な違いはありません。
    * ページの作成者にとって、この処理は透過的です。
 
-   For details on how a page author uses templates to create a page, see [Creating and Organizing Pages](/help/sites-authoring/managing-pages.md#templates).
+   ページ作成者がテンプレートを使用してページを作成する方法について詳しくは、[ページの作成と整理](/help/sites-authoring/managing-pages.md#templates)を参照してください。
 
    編集可能テンプレートを使用したページ作成の技術的な詳細については、このドキュメントの[作成されるコンテンツページ](/help/sites-developing/page-templates-editable.md#resultant-content-pages)を参照してください。
 
 >[!NOTE]
 >
->The editor client library assumes the presence of the `cq.shared` namespace in content pages, and if it is absent the JavaScript error `Uncaught TypeError: Cannot read property 'shared' of undefined` will result.
+>エディタークライアントライブラリは、コンテンツページに `cq.shared` 名前空間が存在することを前提としています。名前空間が存在しない場合は、JavaScript エラー「`Uncaught TypeError: Cannot read property 'shared' of undefined`」が発生します。
 >
 >すべてのサンプルコンテンツページには `cq.shared` が含まれているので、それらをベースとするコンテンツには自動的に `cq.shared` が含められます。ただし、サンプルコンテンツをベースとせず、ゼロから独自のコンテンツページを作成する場合は、`cq.shared` 名前空間を含める必要があります。
 >
->詳しくは、[クライアント側ライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
+>詳しくは、[クライアントサイドライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
 
 >[!CAUTION]
 >
@@ -161,26 +161,26 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 >[!CAUTION]
 >
->Folders must be created by a user with `admin` rights.
+>フォルダーは、`admin` 権限を持つユーザーが作成する必要があります。
 
 テンプレートのタイプやポリシーは、次の優先順位に従ってすべてのフォルダーに継承されます。
 
 1. 現在のフォルダー。
-1. 現在のフォルダーの親。
+1. 現在のフォルダーの親.
 1. `/conf/global`
 1. `/apps`
 1. `/libs`
 
-許可されたすべてのエントリのリストが表示されます。If any configurations overlap ( `path`/ `label`), only the instance closest to the current folder is presented to the user.
+許可されたすべてのエントリのリストが表示されます。オーバーラップする設定がある場合（`path`／`label`）、現在のフォルダーに最も近いインスタンスがユーザーに表示されます。
 
 新しいフォルダーを作成するには、次のいずれかの方法を使用できます。
 
 * プログラムで自動的に、または CRXDE Lite を使用して作成する
 * 設定ブラウザーの使用
 
-## CRXDE Lite の使用 {#using-crxde-lite}
+## CRXDE Lite の使用  {#using-crxde-lite}
 
-1. インスタンスに対して（/confの下に）新しいフォルダーをプログラムで作成するか、CRXDE Liteを使用して作成できます。
+1. インスタンスの新しいフォルダー（/conf の下）は、プログラムで自動的にまたは CRXDE Lite を使用して作成できます。
 
    次の構造を使用する必要があります。
 
@@ -207,7 +207,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    割り当てる必要があるデフォルトのグループは、`template-authors` グループです。詳しくは、次の節[ACL とグループ](/help/sites-developing/page-templates-editable.md#acls-and-groups)を参照してください。
 
-   See [Access Right Management](/help/sites-administering/user-group-ac-admin.md#access-right-management) for full details on managing and assigning access rights.
+   アクセス権の管理と割り当ての詳細については、[アクセス権の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)を参照してください。
 
 ### 設定ブラウザーの使用 {#using-the-configuration-browser}
 
@@ -216,7 +216,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    **グローバル**&#x200B;フォルダーなどの既存のフォルダーは左側に一覧表示されます。
 
 1. 「**作成**」をクリックします。
-1. In the **Create Configuration** dialog the following fields need to be configured:
+1. **設定を作成**&#x200B;ダイアログで、以下のフィールドを設定する必要があります。
 
    * **タイトル**：設定フォルダーのタイトルを指定します。
    * **編集可能なテンプレート**：このフォルダー内で編集可能テンプレートを許可する場合にチェックします。
@@ -227,7 +227,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 >
 >グローバルフォルダーにテンプレートを作成する場合は、設定ブラウザーでグローバルフォルダーを編集し、「**編集可能なテンプレート**」オプションをオンにします。ただし、これは推奨されるベストプラクティスではありません。
 >
->See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
+>詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
 
 ### ACL とグループ {#acls-and-groups}
 
@@ -241,9 +241,9 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 >[!CAUTION]
 >
->`template-authors` グループは、新しいテンプレートを作成する必要があるユーザー専用&#x200B;**&#x200B;です。
+>`template-authors` グループは、新しいテンプレートを作成する必要があるユーザー専用です。**
 >
->テンプレートの編集は非常に強力で、正しく行われないと既存のテンプレートが壊れる場合があります。 そのため、この役割には注意深く、ふさわしいユーザーだけを含めてください。
+>テンプレートの編集は非常に強力なので、正しくおこなわないと既存のテンプレートが壊れる場合があります。そのため、この役割には注意深く、ふさわしいユーザーだけを含めてください。
 
 次の表に、テンプレートの編集に必要な権限の詳細を示します。
 
@@ -259,53 +259,53 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/templates</code></td>
    <td>テンプレート作成者<br /> </td>
    <td>読み取り、書き込み、複製</td>
-   <td>サイト固有のス <code>/conf</code> ペースでテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者</td>
+   <td>サイト固有の <code>/conf</code> スペースでテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者</td>
   </tr>
   <tr>
-   <td>匿名Webユーザー</td>
-   <td>read</td>
-   <td>匿名Webユーザーは、ページのレンダリング中にテンプレートを読む必要があります</td>
+   <td>匿名 Web ユーザー</td>
+   <td>読み取り</td>
+   <td>匿名 Web ユーザーは、ページのレンダリング中にテンプレートを読む必要があります</td>
   </tr>
   <tr>
    <td>コンテンツ作成者</td>
-   <td>複製する</td>
-   <td>replicateContent作成者は、ページをアクティブ化する際に、ページのテンプレートをアクティブ化する必要があります</td>
+   <td>複製</td>
+   <td>replicateContent 作成者は、ページをアクティブ化する際に、ページのテンプレートをアクティブ化する必要があります</td>
   </tr>
   <tr>
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/policies</code></td>
    <td><code>Template Author</code></td>
    <td>読み取り、書き込み、複製</td>
-   <td>サイト固有のス <code>/conf</code> ペースでテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者</td>
+   <td>サイト固有の <code>/conf</code> スペースでテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者</td>
   </tr>
   <tr>
-   <td>匿名Webユーザー</td>
-   <td>read</td>
-   <td>匿名Webユーザーは、ページのレンダリング中にポリシーを読む必要があります</td>
+   <td>匿名 Web ユーザー</td>
+   <td>読み取り</td>
+   <td>匿名 Web ユーザーは、ページのレンダリング中にポリシーを読む必要があります</td>
   </tr>
   <tr>
    <td>コンテンツ作成者</td>
-   <td>複製する</td>
+   <td>複製</td>
    <td>コンテンツ作成者は、ページをアクティブ化する際に、ページのテンプレートのポリシーをアクティブ化する必要があります</td>
   </tr>
   <tr>
    <td rowspan="2"><code>/conf/&lt;site&gt;/settings/template-types</code></td>
    <td>テンプレート作成者</td>
-   <td>read</td>
-   <td>テンプレート作成者は、定義済みのテンプレートタイプの1つに基づいて新しいテンプレートを作成します。</td>
+   <td>読み取り</td>
+   <td>テンプレート作成者は、定義済みのテンプレートタイプの 1 つに基づいて新しいテンプレートを作成します。</td>
   </tr>
   <tr>
-   <td>匿名Webユーザー</td>
+   <td>匿名 Web ユーザー</td>
    <td>なし</td>
-   <td>匿名Webユーザーはテンプレートの種類にアクセスできません</td>
+   <td>匿名 Web ユーザーはテンプレートの種類にアクセスできません</td>
   </tr>
  </tbody>
 </table>
 
-This default `template-authors` group only covers the project setups, where all `template-authors` members are allowed to access and author all templates. より複雑な設定では、テンプレートに個別にアクセスするためにテンプレート作成者グループが複数必要になるので、さらに多くのカスタムテンプレート作成者グループを作成する必要があります。ただし、テンプレート作成者グループの権限は変わりません。
+デフォルトの `template-authors` グループは、プロジェクト設定のみに対応しています。この場合、`template-authors` のすべてのメンバーは、すべてのテンプレートへのアクセスとそれらの作成が許可されています。より複雑な設定では、テンプレートに個別にアクセスするためにテンプレート作成者グループが複数必要になるので、さらに多くのカスタムテンプレート作成者グループを作成する必要があります。ただし、テンプレート作成者グループの権限は変わりません。
 
-#### /conf/global の下の従来のテンプレート {#legacy-templates-under-conf-global}
+#### /conf/global の下の従来のテンプレート  {#legacy-templates-under-conf-global}
 
-Templates should no longer be stored in `/conf/global`, however for some legacy installations there may still be templates in this location. ONLY in such legacy situations should the following `/conf/global` paths be explicitly configured.
+テンプレートは`/conf/global`に保存されなくなりますが、一部のレガシーインストールでは、この場所にテンプレートが引き続き存在する可能性があります。 このような従来の状況でのみ、次の`/conf/global`パスを明示的に設定する必要があります。
 
 <table>
  <tbody>
@@ -322,13 +322,13 @@ Templates should no longer be stored in `/conf/global`, however for some legacy 
    <td>テンプレート作成者。 <code>/conf/global</code></td>
   </tr>
   <tr>
-   <td>匿名Webユーザー</td>
-   <td>read</td>
-   <td>匿名Webユーザーは、ページのレンダリング中にテンプレートを読む必要があります</td>
+   <td>匿名 Web ユーザー</td>
+   <td>読み取り</td>
+   <td>匿名 Web ユーザーは、ページのレンダリング中にテンプレートを読む必要があります</td>
   </tr>
   <tr>
    <td>コンテンツ作成者</td>
-   <td>複製する</td>
+   <td>複製</td>
    <td>コンテンツ作成者は、ページをアクティブ化する際に、ページのテンプレートをアクティブ化する必要があります。</td>
   </tr>
   <tr>
@@ -338,25 +338,25 @@ Templates should no longer be stored in `/conf/global`, however for some legacy 
    <td>テンプレート作成者。 <code>/conf/global</code></td>
   </tr>
   <tr>
-   <td>匿名Webユーザー</td>
-   <td>read</td>
-   <td>匿名Webユーザーは、ページのレンダリング中にポリシーを読む必要があります</td>
+   <td>匿名 Web ユーザー</td>
+   <td>読み取り</td>
+   <td>匿名 Web ユーザーは、ページのレンダリング中にポリシーを読む必要があります</td>
   </tr>
   <tr>
    <td>コンテンツ作成者</td>
-   <td>複製する</td>
+   <td>複製</td>
    <td>コンテンツ作成者は、ページをアクティブ化する際に、ページのテンプレートのポリシーをアクティブ化する必要があります</td>
   </tr>
   <tr>
    <td rowspan="2"><code>/conf/global/settings/wcm/template-types</code></td>
    <td>テンプレート作成者</td>
-   <td>read</td>
+   <td>読み取り</td>
    <td>テンプレート作成者は、定義済みのテンプレートタイプの1つに基づいて新しいテンプレートを作成します</td>
   </tr>
   <tr>
-   <td>匿名Webユーザー</td>
+   <td>匿名 Web ユーザー</td>
    <td>なし</td>
-   <td>匿名Webユーザーはテンプレートの種類にアクセスできません</td>
+   <td>匿名 Web ユーザーはテンプレートの種類にアクセスできません</td>
   </tr>
  </tbody>
 </table>
@@ -388,13 +388,13 @@ Templates should no longer be stored in `/conf/global`, however for some legacy 
 
 >[!CAUTION]
 >
->`/libs` パス内の設定は一切変更しないでください。This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
+>`/libs` パス内の設定は一切変更しないでください。これは、次回インスタンスをアップグレードする際に`/libs`の内容が上書きされるためです（修正プログラムまたは機能パックを適用すると、上書きされる場合があります）。
 
 サイト固有のテンプレートタイプは、以下に相当する場所に保存してください。
 
 * `/apps/settings/wcm/template-types`
 
-Definitions for your customized templates types should be stored in user-defined folders (recommended) or alternatively in `global`. 次に例を示します。
+カスタマイズしたテンプレートタイプの定義は、ユーザー定義フォルダー（推奨）または `global` フォルダーに保存してください。次に例を示します。
 
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/template-types`
 * `/conf/<my-folder>/settings/wcm/template-types`
@@ -402,7 +402,7 @@ Definitions for your customized templates types should be stored in user-defined
 
 >[!CAUTION]
 >
->The template types have to respect the correct folder structure (i.e. `/settings/wcm/...`), otherwise the template types will not be found.
+>テンプレートタイプの保存は、正しいフォルダー構造（`/settings/wcm/...`）に従う必要があります。そうしないと、テンプレートタイプが見つからなくなります。
 
 ### テンプレートタイプとモバイルデバイスグループ {#template-type-and-mobile-device-groups-br}
 
@@ -415,7 +415,7 @@ Definitions for your customized templates types should be stored in user-defined
 
 >[!CAUTION]
 >
->The value of `cq:deviceGroups` must be set as a relative path such as `mobile/groups/responsive` and not as an absolute path such as `/etc/mobile/groups/responsive`.
+>`cq:deviceGroups`の値は、`/etc/mobile/groups/responsive`のような絶対パスではなく、`mobile/groups/responsive`のような相対パスとして設定する必要があります。
 
 >[!NOTE]
 >
@@ -427,10 +427,10 @@ Definitions for your customized templates types should be stored in user-defined
 
 他のテンプレートの基盤となるテンプレートを作成した場合、このテンプレートをテンプレートタイプとしてコピーできます。
 
-1. Create a template as you would any editable template [as documented here](/help/sites-authoring/templates.md#creating-a-new-template-template-author), which will serve as the basis of your template type.
+1. ここで説明する](/help/sites-authoring/templates.md#creating-a-new-template-template-author)に従って、編集可能なテンプレート[と同様にテンプレートを作成します。これは、テンプレートタイプの基盤となります。
 1. CRXDE Lite を使用している場合は、新しく作成したテンプレートを `templates` ノードから`template-types`テンプレートフォルダー[の下の ](/help/sites-developing/page-templates-editable.md#template-folders) ノードにコピーします。
-1. Delete the template from the `templates` node under the [template folder](/help/sites-developing/page-templates-editable.md#template-folders).
-1. In the copy of the template that is under the `template-types` node, delete all `cq:template` and `cq:templateType` `jcr:content` properties.
+1. このテンプレートを[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md#template-folders)の下の `templates` ノードから削除します。
+1. `template-types` ノードの下にあるテンプレートのコピーで、`cq:template` および `cq:templateType` `jcr:content` プロパティをすべて削除します。
 
 また、GitHub で入手できる、編集可能テンプレートのサンプルを基盤として使用し、独自のテンプレートタイプを作成することもできます。
 
@@ -438,12 +438,12 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-sites-example-custom-template-typeプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-sites-example-custom-template-type)
+* [GitHub の aem-sites-example-custom-template-type プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-sites-example-custom-template-type)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-sites-example-custom-template-type/archive/master.zip)としてダウンロードします
 
 ## テンプレート定義 {#template-definitions}
 
-Definitions for editable templates are stored [user-defined folders](/help/sites-developing/page-templates-editable.md#template-folders) (recommended) or alternatively in `global`. 次に例を示します。
+編集可能テンプレートの定義は、[ユーザー定義フォルダー](/help/sites-developing/page-templates-editable.md#template-folders)（推奨）または `global` フォルダーに格納されます。次に例を示します。
 
 * `/conf/<my-folder>/settings/wcm/templates`
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/templates`
@@ -499,61 +499,61 @@ Definitions for editable templates are stored [user-defined folders](/help/sites
 
 * **名前**：`status`
 
-   * ``**型**: `String`
+   * ``**型**：`String`
 
-   * **値**: `draft`、 `enabled` または `disabled`
+   * **値**：`draft`、`enabled` または `disabled`
 
 ### 構造 {#structure}
 
 作成されるページの構造を定義します。
 
-* Is merged with the initial content ( `/initial`) when creating a new page.
+* 新しいページの作成時に初期コンテンツ（`/initial`）と統合されます。
 * 構造に加えた変更は、そのテンプレートを使用して作成されたすべてのページに反映されます。
-* The `root` ( `structure/jcr:content/root`) node defines the list of components that will be available in the resulting page.
+* `structure/jcr:content/root`（`root`）ノードは、作成されたページで使用できるコンポーネントのリストを定義します。
 
    * テンプレート構造で定義されたコンポーネントは、作成されたページで移動することも、作成されたページから削除することもできません。
    * コンポーネントをロック解除すると、`editable` プロパティが `true` に設定されます。
 
    * 既にコンテンツを含むコンポーネントをロック解除すると、このコンテンツは `initial` ブランチに移動されます.
 
-* The `cq:responsive` node holds definitions for the responsive layout.
+* `cq:responsive` ノードは、レスポンシブレイアウトの定義を保持します。
 
 ### 初期コンテンツ {#initial-content}
 
 作成時に新しいページに表示される初期コンテンツを定義します。
 
 * すべての新しいページにコピーされる `jcr:content` ノードが含まれます。
-* Is merged with the structure ( `/structure`) when creating a new page.
+* 新しいページの作成時に構造（`/structure`）と統合されます。
 * 作成後に初期コンテンツが変更されても、既存のページはすべて更新されません。
 * `root` ノードは、作成されたページで使用できるコンポーネントを定義する、コンポーネントのリストを保持します。
 * コンテンツが構造モードでコンポーネントに追加され、その後、そのコンポーネントがロック解除された場合（またはコンポーネントのロック解除後にコンテンツが追加された場合）、このコンテンツは初期コンテンツとして使用されます。
 
 ### レイアウト {#layout}
 
-When [editing a template you can define the layout](/help/sites-authoring/templates.md), this uses [standard responsive layout](/help/sites-authoring/responsive-layout.md) that can also be [configured](/help/sites-administering/configuring-responsive-layout.md).
+[テンプレートの編集時にレイアウト](/help/sites-authoring/templates.md)を定義するとき、[標準のレスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)を使用します。これは[設定](/help/sites-administering/configuring-responsive-layout.md)にもなります。
 
 ### コンテンツポリシー {#content-policies}
 
 コンテンツ（またはデザイン）ポリシーでは、コンポーネントのデザインプロパティを定義します。例えば、使用できるコンポーネントや最小／最大サイズを定義できます。これらのポリシーは、テンプレートと、そのテンプレートを使用して作成されるページに適用されます。テンプレートエディターでコンテンツポリシーを作成して選択できます。
 
-* The property `cq:policy`, on the `root` node
+* `root` ノード上の `cq:policy` プロパティ
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
 ページの段落システムのコンテンツポリシーに対する相対参照を提供します。
 
-* The property `cq:policy`, on the component-explicit nodes under `root`, provide links to the policies for the individual components.
+* `root` の下のコンポーネントを明示的に示すノードの `cq:policy` プロパティは、個々のコンポーネントのポリシーへのリンクを提供します。
 
 * 実際のポリシー定義は、次の場所に保存されます。
    `/conf/<your-folder>/settings/wcm/policies/wcm/foundation/components`
 
 >[!NOTE]
 >
->The paths of policy definitions depend on the path of the component. `cq:policy` holds a relative reference to the configuration itself.
+>ポリシー定義のパスは、コンポーネントのパスによって異なります。`cq:policy` は、設定自体への相対参照を保持します。
 
 >[!NOTE]
 >
 >編集可能テンプレートから作成されたページの場合は、ページエディターでデザインモードが提供されません。
 >
->The `policies` tree of an editable template has the same hierarchy as the design mode configuration of a static template under:
+>編集可能なテンプレートの`policies`ツリーは、次の下にある静的テンプレートのデザインモード設定と同じ階層を持ちます。
 >
 >`/etc/designs/<my-site>/jcr:content/<component-name>`
 >
@@ -563,7 +563,7 @@ When [editing a template you can define the layout](/help/sites-authoring/templa
 
 ページポリシーを使用して、テンプレートまたは作成されるページで、ページ（メインの parsys）の[コンテンツポリシー](#content-policies)を定義できます。
 
-### 使用するテンプレートの有効化と許可 {#enabling-and-allowing-a-template-for-use}
+### 使用するテンプレートの有効化と許可  {#enabling-and-allowing-a-template-for-use}
 
 1. **テンプレートの有効化**
 
@@ -571,9 +571,9 @@ When [editing a template you can define the layout](/help/sites-authoring/templa
 
    * **テンプレート**&#x200B;コンソールから[テンプレートを有効化](/help/sites-authoring/templates.md#enablingatemplateauthor)する。
 
-   * Setting the status property on the `jcr:content` node.
+   * `jcr:content` ノードの status プロパティを設定する。
 
-      * 例えば、次の場合：
+      * 例：
          `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
       * プロパティの定義
@@ -585,10 +585,10 @@ When [editing a template you can define the layout](/help/sites-authoring/templa
 1. **許可されたテンプレート**
 
    * 適切なページまたはサブブランチのルートページの[**ページプロパティ**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;に対して許可されたテンプレートのパスを定義します。
-   * プロパティの設定：
-      `cq:allowedTemplates`
-Folio Builder 
-`jcr:content` ノードを追加します。
+   * プロパティを設定します。
+      `cq:allowedTemplates` 
+を 
+必要なブランチの `jcr:content` ノードに設定します。
    例えば、次の値を使用します。
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
@@ -599,7 +599,7 @@ Folio Builder
 
 * テンプレートの `structure` と `initial` を統合したサブツリーを使用して作成されます。
 
-* テンプレートおよびテンプレートタイプに保持されている情報への参照を持ちます。 これは、次のプロパティを持つ `jcr:content` ノードを使用して行います。
+* テンプレートおよびテンプレートタイプに保持されている情報への参照を保持します。これは、次のプロパティを持つ `jcr:content` ノードを使用しておこないます。
 
    * `cq:template`実際のテンプレートへの動的参照を提供します。テンプレートへの変更を実際のページに反映させることができます。
 
@@ -610,30 +610,30 @@ Folio Builder
 
 上の図は、テンプレート、コンテンツおよびコンポーネントの相関関係を示したものです。
 
-* Controller - `/content/<my-site>/<my-page>`
-The resultant page that references the template. コンテンツがプロセス全体を制御します。定義に従って、適切なテンプレートとコンポーネントにアクセスします。
+* コントローラ — `/content/<my-site>/<my-page>`
+テンプレートを参照する結果ページです。 コンテンツがプロセス全体を制御します。定義に従って、適切なテンプレートとコンポーネントにアクセスします。
 
-* Configuration - `/conf/<my-folder>/settings/wcm/templates/<my-template>`
-The [template and related content policies](#template-definitions) define the page configuration.
+* 構成 — `/conf/<my-folder>/settings/wcm/templates/<my-template>`
+[テンプレートと関連するコンテンツポリシー](#template-definitions)は、ページ設定を定義します。
 
 * モデル - OSGi バンドル[OSGi バンドル](/help/sites-deploying/osgi-configuration-settings.md)が機能を実装します。
 
-* View - `/apps/<my-site>/components`
-On both the author and publish environments the content is rendered by [components](/help/sites-developing/components.md).
+* 表示- `/apps/<my-site>/components`
+作成者とパブリッシュの両方の環境で、コンテンツは[コンポーネント](/help/sites-developing/components.md)によってレンダリングされます。
 
 ページのレンダリング時
 
 * **テンプレート**:
 
-   * The `cq:template` property of its `jcr:content` node will be referenced to access the template that corresponds to that page.
+   * `cq:template` ノードの `jcr:content` プロパティが、そのページに対応するテンプレートにアクセスするために参照されます。
 
 * **コンポーネント**:
 
-   * The page component will merge the `structure/jcr:content` tree of the template with the `jcr:content` tree of the page.
+   * ページコンポーネントは、テンプレートの `structure/jcr:content` ツリーとページの `jcr:content` ツリーを統合します。
 
    * 作成者は、ページコンポーネントを使用して、「編集可能」のフラグが設定されているテンプレート構造のノード（およびいずれかの子）を編集できるだけです。
    * ページ上にコンポーネントをレンダリングする際、そのコンポーネントの相対パスが `jcr:content` ノードから取得されます。その後、テンプレートの `policies/jcr:content` ノードの下の同じパスが検索されます。
 
-      * The `cq:policy` property of this node points to the actual content policy (i.e. it holds the design configuration for that component).
+      * このノードの `cq:policy` プロパティは、実際のコンテンツポリシーを指します（すなわち、このプロパティは、そのコンポーネントのデザイン設定を保持しています）。
 
       * このため、同じコンテンツポリシー設定を再利用する複数のテンプレートを持つことができます。
