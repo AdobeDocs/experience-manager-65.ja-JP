@@ -22,7 +22,7 @@ ht-degree: 53%
 
 このページでは、Adobe Experience Manager（AEM）で利用できるすべての xtype について説明します。
 
-ExtJS 言語では、xtype はクラスに付与されるシンボル名です。You can read the &quot;Component XTypes&quot; paragraph of the [Overview of ExtJS 2](https://www.sencha.com/learn/overview-of-extjs-2) for a detailed explanation about what an xtype is and how it can be used.
+ExtJS 言語では、xtype はクラスに付与されるシンボル名です。xtypeが何で、どのように使えるかについての詳細は、[ExtJS 2](https://www.sencha.com/learn/overview-of-extjs-2)の概要の「Component XTypes」段落を読むことができます。
 
 AEM で利用できるすべてのウィジェットの完全な情報については、[ウィジェット API のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)を参照してください。
 
@@ -34,7 +34,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 >
 >このページでは、クラシック UI での ExtJS xtype の使用方法について説明します。
 >
->Adobe recommends that you leverage the standard, modern, [touch-enabled UI](/help/sites-developing/touch-ui-concepts.md) based on [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) and [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
+>Adobeでは、[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)と[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)に基づいて、[タッチ対応の標準的なUI](/help/sites-developing/touch-ui-concepts.md)を活用することを推奨しています。
 
 ## xtype {#xtypes}
 
@@ -96,7 +96,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.form.BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField)
 
-   **廃止：代わりに [CQ.form.PathFieldを使用](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField)**
+   **廃止：代わりに、 [CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldを使用します。**
 
 * bulkeditor
 
@@ -504,7 +504,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.MediaBrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.MediaBrowseDialog)
 
-   **廃止：代わりに、 [コンテンツファインダーを使用して](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) 、メディアを参照します。**
+   **廃止：代わりに、 [コンテンツフ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) ァインダーを使用してメディアを参照します。**
 
    MediaBrowseDialog は、メディアライブラリを参照するためのダイアログです。
 
@@ -620,7 +620,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.form.PathCompletion](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathCompletion)
 
-   **廃止：代わりに [CQ.form.PathFieldを使用](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField)**
+   **廃止：代わりに、 [CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldを使用します。**
 
 * pathfield
 
@@ -822,7 +822,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.form.TableEdit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit)
 
-   **廃止：代わりに、 [CQ.form.TableEdit2を使用し](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) ます。**
+   **廃止：代わりに、 [CQ.form.TableEdit2を使用](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) します。**
 
 * tableedit2
 
@@ -834,7 +834,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel)
 
-   基本のタブコンテナ。TabPanels can be used exactly like a standard [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel) for layout purposes, but also have special support for containing child Components ([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container)).
+   基本のタブコンテナ。TabPanelsは、標準の[CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)とまったく同じようにレイアウト用に使用できますが、子コンポーネントを含める特別なサポートもあります([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container))。
 
 * タグ
 
@@ -950,4 +950,4 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    XML データから簡単に [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) を作成できるようにする小規模なヘルパークラスです。XmlStore には自動的に [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader) が設定されます。
 
-   **cqinclude** Pseudoxtype。リポジトリ内の別のパスからのウィジェット定義を含めます。 ページダイアログで最もよく使用されます。実際には、この xtype の JavaScript ウィジェットクラスは存在しません。CQ.Util クラスの formatData() 関数によって処理されます。詳しくは、このナレッジベースの記事を参照してください。
+   **リポジトリ内の別のパスのウィジェット定義を含む** cqincludePseudo xtype。ページダイアログで最もよく使用されます。実際には、この xtype の JavaScript ウィジェットクラスは存在しません。CQ.Util クラスの formatData() 関数によって処理されます。詳しくは、このナレッジベースの記事を参照してください。
