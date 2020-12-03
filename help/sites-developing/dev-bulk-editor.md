@@ -22,7 +22,7 @@ ht-degree: 57%
 
 ここでは、Bulk Editor ツールを開発する方法と、Bulk Editor に基づく製品リストコンポーネントを拡張する方法について説明します。
 
-## Bulk Editor のクエリパラメーター {#bulk-editor-query-parameters}
+## Bulk Editor のクエリパラメーター  {#bulk-editor-query-parameters}
 
 Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び出すために URL に追加できるクエリパラメーターがいくつかあります。製品リストコンポーネントなどで、Bulk Editor を常に特定の設定で使用するには、  （/libs/wcm/core/components/bulkeditor にある）bulkeditor.jsp を変更するか、特定の設定でコンポーネントを作成する必要があります。クエリパラメーターを使用した変更は、永続的ではありません。
 
@@ -36,7 +36,7 @@ Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び�
 
 >[!NOTE]
 >
->各パラメーターには、長い名前と短い名前を付けることができます。 例えば、検索ルートパスの長い名前は `rootPath`、短い名前は `rp`です。 長い名前が定義されていない場合は、短い名前が要求から読み取られます。
+>各パラメーターには、長い名前と短い名前を付けることができます。 例えば、検索ルートパスの長い名前は`rootPath`、短い名前は`rp`です。 長い名前が定義されていない場合は、短い名前が要求から読み取られます。
 
 <table>
  <tbody>
@@ -57,13 +57,13 @@ Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び�
   </tr>
   <tr>
    <td> queryParams / qp<br /> </td>
-   <td> String</td>
+   <td> 文字列</td>
    <td> 検索クエリ</td>
   </tr>
   <tr>
    <td> contentMode / cm<br /> </td>
    <td> Boolean</td>
-   <td> when true, the content mode is enabled<br /> </td>
+   <td> trueの場合、コンテンツモードは有効<br />です。 </td>
   </tr>
   <tr>
    <td> colsValue / cv<br /> </td>
@@ -77,8 +77,8 @@ Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び�
   </tr>
   <tr>
    <td> initialSearch / is<br /> </td>
-   <td> Boolean</td>
-   <td> when true, the query is performed on page load<br /> </td>
+   <td> ブール値</td>
+   <td> trueの場合、クエリはページの読み込み時に<br />実行されます。 </td>
   </tr>
   <tr>
    <td> colsSelection / cs<br /> </td>
@@ -87,77 +87,77 @@ Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び�
   </tr>
   <tr>
    <td> showGridOnly / sgo<br /> </td>
-   <td> Boolean</td>
-   <td> when true, shows only the grid and not the search panel <br /> </td>
+   <td> ブール値</td>
+   <td> trueの場合、グリッドのみを表示し、検索パネル<br />は表示しません </td>
   </tr>
   <tr>
    <td> searchPanelCollapsed / spc</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、読み込み時に検索パネルが折りたたまれます。</td>
   </tr>
   <tr>
    <td> hideRootPath / hrp</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、ルートパスフィールドを非表示にします。</td>
   </tr>
   <tr>
    <td> hideQueryParams / hqp</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、クエリフィールドを非表示にします。</td>
   </tr>
   <tr>
    <td> hideContentMode / hcm</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、コンテンツモードフィールドを非表示にします。</td>
   </tr>
   <tr>
    <td> hideColsSelection / hcs</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、列選択フィールドを非表示にします。</td>
   </tr>
   <tr>
    <td> hideExtraCols / hec</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、余分な列フィールドを非表示にします。</td>
   </tr>
   <tr>
    <td> hideSearchButton</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、検索ボタンを非表示にします</td>
   </tr>
   <tr>
    <td> hideSaveButton / hsavep</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、「保存」ボタンを非表示にします。</td>
   </tr>
   <tr>
    <td> hideExportButton / hexpb</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、書き出しボタンを非表示にします</td>
   </tr>
   <tr>
    <td> hideImportButton / hib</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、「読み込み」ボタンを非表示にします。</td>
   </tr>
   <tr>
    <td> hideResultNumber / hrn</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、グリッド検索結果番号のテキストを非表示にします。</td>
   </tr>
   <tr>
    <td> hideInsertButton / hinsertb</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、グリッド挿入ボタンを非表示にします。</td>
   </tr>
   <tr>
    <td> hideDeleteButton / hdelb</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、グリッドの削除ボタンを非表示にします</td>
   </tr>
   <tr>
    <td> hidePathCol / hpc</td>
-   <td> Boolean</td>
+   <td> ブール値</td>
    <td> trueの場合、グリッド「パス」列を非表示にします</td>
   </tr>
  </tbody>
@@ -167,7 +167,7 @@ Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び�
 
 ここでは、Bulk Editor の使用方法の概要について説明します。また、Bulk Editor に基づく既存の Geometrixx コンポーネントである製品リストコンポーネントについても説明します。
 
-製品リストコンポーネントを使用すると、ユーザーがデータのテーブルを表示および編集できます。例えば、製品リストコンポーネントを使用して、カタログの商品を表現できます。情報は標準のHTMLテーブルに表示され、BulkEditorウィジェットを含む **編集** ダイアログで編集が実行されます。 （この Bulk Editor は、  /etc/importers/bulkeditor.html またはツールメニューからアクセスできるものとまったく同じです）。製品リストコンポーネントは、特定の制限された Bulk Editor 機能を使用するように設定されています。バルクエディタのすべての部分（またはバルクエディタから派生するコンポーネント）を設定できます。
+製品リストコンポーネントを使用すると、ユーザーがデータのテーブルを表示および編集できます。例えば、製品リストコンポーネントを使用して、カタログの商品を表現できます。情報は標準のHTMLテーブルに表示され、BulkEditorウィジェットを含む&#x200B;**編集**&#x200B;ダイアログで編集が実行されます。 （この Bulk Editor は、  /etc/importers/bulkeditor.html またはツールメニューからアクセスできるものとまったく同じです）。製品リストコンポーネントは、特定の制限された Bulk Editor 機能を使用するように設定されています。バルクエディタのすべての部分（またはバルクエディタから派生するコンポーネント）を設定できます。
 
 Bulk Editor を使用すると、行の追加、変更、削除、フィルターおよび書き出し、変更内容の保存および複数行の読み込みをおこなうことができます。各行は、製品リストコンポーネントインスタンス以下の 1 つのノードとして格納されます。すべてのセルは各ノードのプロパティです。 これはデザインの選択として簡単に変更できます。例えば、リポジトリの他の場所にノードを格納することもできます。クエリサーブレットの役割は、表示するノードリストを返すことです。検索パスは製品リストインスタンスとして定義されます。
 
@@ -267,7 +267,7 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
         </editor>
 ```
 
-### Bulk Editor の設定プロパティ {#bulk-editor-configuration-properties}
+### Bulk Editor の設定プロパティ  {#bulk-editor-configuration-properties}
 
 バルクエディタのすべての部分を設定できます。 次の表に、バルクエディタのすべての設定プロパティをリストします。
 
@@ -447,7 +447,7 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
  </tbody>
 </table>
 
-### 列メタデータ設定 {#columns-metadata-configuration}
+### 列メタデータ設定  {#columns-metadata-configuration}
 
 列ごとに以下を設定できます。
 
@@ -513,7 +513,7 @@ Bulk Editor には以下の 3 つの列の設定があります。
 
 **チェックボックス**
 
-checkbox 設定プロパティを true に設定すると、その列のすべてのセルがチェックボックスとしてレンダリングされます。ボックスがオンの場合は **true** がサーバーの Save サーブレットに送信され、オフの場合は **false** が送信されます。ヘッダーメニューで、「すべて **選択」または「なし** 」を **選択することもできます**。 これらのオプションは、選択したヘッダーがチェックボックス列のヘッダーの場合に有効になります。
+checkbox 設定プロパティを true に設定すると、その列のすべてのセルがチェックボックスとしてレンダリングされます。ボックスがオンの場合は **true** がサーバーの Save サーブレットに送信され、オフの場合は **false** が送信されます。ヘッダーメニューでは、**すべて**&#x200B;を選択するか、**なし**&#x200B;を選択することもできます。 これらのオプションは、選択したヘッダーがチェックボックス列のヘッダーの場合に有効になります。
 
 前の例で、selection 列には、checkbox=&quot;true&quot; のチェックボックスのみが含まれます。
 
@@ -523,9 +523,9 @@ checkbox 設定プロパティを true に設定すると、その列のすべ�
 
 前の例で、selection 列は forcedPosition=&quot;0&quot; の最初の列です。
 
-### クエリサーブレット {#query-servlet}
+### クエリサーブレット  {#query-servlet}
 
-デフォルトでは、クエリサーブレットはにあり `/libs/wcm/core/components/bulkeditor/json.java`ます。 別のパスを設定して、データを取得できます。
+デフォルトでは、クエリサーブレットは`/libs/wcm/core/components/bulkeditor/json.java`にあります。 別のパスを設定して、データを取得できます。
 
 Query サーブレットには、GQL クエリおよび返す列を受信し、結果を計算し、結果を JSON ストリームとして Bulk Editor に送信するという機能があります。
 
