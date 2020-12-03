@@ -63,7 +63,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
+>1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
    >
    >
 1. `/apps` 内で変更作業をおこないます。
