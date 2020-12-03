@@ -37,7 +37,7 @@ ht-degree: 73%
    * 明確な仕様は、開発、テスト、引継ぎのあらゆる段階で役立ちます。詳細は時間と共に変化する可能性がありますが、仕様は更新可能です（ただし、変更箇所を記録しておく必要があります）。
 * コンポーネントを一から作成する必要があるか、基本部分を既存のコンポーネントから継承できるか
    * 一から作成する必要があるとは限りません。
-   * There are several mechanisms provided by AEM to allow you to inherit and extend details from another component definition including override, overlay, and the [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md).
+   * AEMには、上書き、オーバーレイ、[Sling Resource Marge](/help/sites-developing/sling-resource-merger.md)など、別のコンポーネント定義の詳細を継承および拡張するメカニズムがいくつか用意されています。
 * コンポーネントのコンテンツを選択または操作するためのロジックが必要か
    * ロジックは、ユーザーインターフェイス層から分離しておく必要があります。HTL はこれに対応した設計になっています。
 * コンポーネントを CSS で書式設定する必要があるか
@@ -50,8 +50,9 @@ ht-degree: 73%
 コンポーネントの開発について本格的な検討を始める前に、作成者がどちらの UI を使用するかを知っておく必要があります。
 
 * **タッチ操作対応 UI**
-   [標準のユーザーインターフェイス](/help/sites-developing/touch-ui-concepts.md) は、 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) / [](/help/sites-developing/touch-ui-concepts.md#granite-ui)Granite UIの基盤テクノロジーを使用した、Adobe Marketing Cloudの統合ユーザーエクスペリエンスに基づいています。
-* **AEM 6.4で廃止されたExtJSテクノロジに基づくクラシックUI**&#x200B;ユーザーインターフェイス。
+   [標準的なユーザー](/help/sites-developing/touch-ui-concepts.md) インターフェイスは、 [Coral ](/help/sites-developing/touch-ui-concepts.md#coral-ui) UIと [Granite UIの基盤となるテクノロジーを使用した、Adobe Marketing Cloudの統合ユーザーエクスペリエンスに基づいています](/help/sites-developing/touch-ui-concepts.md#granite-ui)。
+* **AEM 6.4で廃止されたExtJSテクノロジーに基づくClassic**
+UIUserインターフェイス。
 
 詳しくは、[UI インターフェイスに関するお客様向け推奨事項](/help/sites-deploying/ui-recommendations.md)を参照してください。
 
@@ -61,7 +62,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobeでは、最新のテクノロジーを活用するために、タッチ対応UIの活用を推奨します。 [AEM最新化ツール](modernization-tools.md) ：移行を容易にします。
+>Adobeでは、最新のテクノロジーを活用するために、タッチ対応UIの活用を推奨します。 [AEM Modernization ](modernization-tools.md) Toolscanを使用すると、移行が容易になります。
 
 ### コンテンツのロジックとマークアップのレンダリング  {#content-logic-and-rendering-markup}
 
@@ -73,7 +74,7 @@ ht-degree: 73%
 
 HTLは、AEM 6.0で導入されたHTMLテンプレート言語です。
 
-独自コンポーネントの開発時に [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html) と JSP（Java Server Pages）のどちらを使用すべきかという質問への回答は明快です。現在では、HTL が AEM の推奨スクリプティング言語とされています。
+独自コンポーネントの開発時に [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) と JSP（Java Server Pages）のどちらを使用すべきかという質問への回答は明快です。現在では、HTL が AEM の推奨スクリプティング言語とされています。
 
 HTL と JSP はどちらも、クラシック UI とタッチ操作対応 UI の両方のコンポーネントの開発に使用できます。HTL はタッチ操作対応 UI 専用で JSP はクラシック UI 用だと想定する傾向があるかもしれませんが、これは時期に起因する誤解です。タッチ操作対応 UI と HTL は、ほぼ同時期に AEM に組み込まれました。HTL は現在推奨される言語なので、新しいコンポーネントに使用されており、このため、タッチ操作対応 UI に使用される傾向があります。
 
@@ -98,7 +99,7 @@ UI の種類に応じた独自コンポーネントを作成するには、（�
 
 コンポーネントをパブリッシュインスタンスに移動するには、次のツールを使用します。
 
-* [Package Manager](/help/sites-administering/package-manager.md) を使用してコンポーネントをパッケージに追加し、別のAEMインスタンスに移動します。
+* [Package ](/help/sites-administering/package-manager.md) Managerを使用してコンポーネントをパッケージに追加し、別のAEMインスタンスに移動します。
 * コンポーネントをレプリケートするには、[「ツリーをアクティベート」レプリケーションツールを使用](/help/sites-authoring/publishing-pages.md#manage-publication)します。
 
 >[!NOTE]
@@ -109,7 +110,7 @@ UI の種類に応じた独自コンポーネントを作成するには、（�
 
 * ページ:
 
-   * AEM has the *page* component ( `cq:Page`).
+   * AEMには&#x200B;*ページ*&#x200B;コンポーネント(`cq:Page`)があります。
    * このコンポーネントは、コンテンツ管理にとって重要なリソースです。
       * ページコンポーネントは、Web サイトのコンテンツを保持する Web ページに対応しています。
 
@@ -118,7 +119,7 @@ UI の種類に応じた独自コンポーネントを作成するには、（�
    * 段落システムは、Web サイトの重要な構成要素であり、段落のリストを管理します。実際のコンテンツを格納する個々のコンポーネントを保持し、構造化するために使用されます。
    * 段落システム内で、段落を作成、移動、コピーおよび削除できます。
    * 特定の段落システム内で使用可能にするコンポーネントを選択することもできます。
-   * There are various paragraph systems available within a standard instance (for example `parsys`, ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`).
+   * 標準インスタンス内で使用できる様々な段落システムがあります（例：`parsys`, ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`）。
 
 ## 構造 {#structure}
 
@@ -161,7 +162,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
    * jcrプロパティ：
 
-      A list of jcr properties; these are variable and some may be optional though the basic structure of a component node, its properties and subnodes are defined by the `cq:Component` definition
+      jcrプロパティのリストこれらは変数であり、一部はオプションですが、コンポーネントノードの基本構造、そのプロパティとサブノードは`cq:Component`定義によって定義されます
 
    * リソース:
 
@@ -197,43 +198,43 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
    * `cq:childEditConfig (cq:EditConfig)`  — 独自のコンポーネントを定義しない子コンポーネントの作成者UI要素を制御し `cq:editConfig`ます。
    * タッチ操作対応 UI：
 
-      * `cq:dialog` ( `nt:unstructured`) — このコンポーネントのダイアログ。 ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
-      * `cq:design_dialog` ( `nt:unstructured`) — このコンポーネントのデザイン編集
+      * `cq:dialog` (  `nt:unstructured`) — このコンポーネントのダイアログ。ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
+      * `cq:design_dialog` (  `nt:unstructured`) — このコンポーネントのデザイン編集
    * クラシック UI：
 
-      * `dialog` ( `cq:Dialog`) — このコンポーネントのダイアログ。 ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
-      * `design_dialog` ( `cq:Dialog`) — このコンポーネントのデザイン編集。
+      * `dialog` (  `cq:Dialog`) — このコンポーネントのダイアログ。ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
+      * `design_dialog` (  `cq:Dialog`) — このコンポーネントのデザイン編集。
 
 
 #### タッチ UI のコンポーネントアイコン {#component-icon-in-touch-ui}
 
 コンポーネントのアイコンまたは省略形は、開発者がコンポーネントを作成する際に、コンポーネントのJCRプロパティを介して定義されます。 これらのプロパティは、次の順番で評価され、最初に見つかった有効なプロパティが使用されます。
 
-1. `cq:icon`  — コンポーネントブラウザに表示する [Coral UIライブラリ内の標準アイコンを示す文字列プロパティ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 。
+1. `cq:icon`  — コンポーネントブラウザに表示する [Coral UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) ライブラリ内の標準アイコンを示す文字列プロパティ。
    * Coral アイコンの HTML 属性の値を使用します。
 1. `abbreviation`  — コンポーネントブラウザのコンポーネント名の省略形をカスタマイズする文字列プロパティ
    * 省略形は 最大2 文字までにする必要があります。
-   * Providing an empty string will build the abbreviation from first two characters of the `jcr:title` property.
+   * 空の文字列を指定すると、`jcr:title`プロパティの最初の2文字から省略形が作成されます。
       * 例えば、「Image」の場合は「Im」になります。
       * ローカライズされたタイトルが省略形の作成に使用されます。
    * 省略形は、コンポーネントに `abbreviation_commentI18n` プロパティがある場合にのみ翻訳されます。これは、翻訳ヒントとして使用されます。
-1. `cq:icon.png` または `cq:icon.svg` — コンポーネントのアイコン（コンポーネントブラウザに表示）
+1. `cq:icon.png` または `cq:icon.svg`  — コンポーネントのアイコン（コンポーネントブラウザに表示）
    * 20 x 20 pixel は、標準的なコンポーネントのアイコンのサイズです。
       * 大きいアイコンはクライアント側で縮小されます。
    * レコメンデーションカラーはrgb(112, 112, 112) > #707070です。
    * 標準的なコンポーネントアイコンの背景は、透明です。
-   * Only `.png` and `.svg` files are supported.
-   * If importing from the file system via Eclipse plugin, filenames need to be esacaped as `_cq_icon.png` or `_cq_icon.svg` for example.
-   * `.png` 両者が存在する `.svg` 場合に先例となる
+   * `.png`ファイルと`.svg`ファイルのみがサポートされています。
+   * Eclipseプラグインを介してファイルシステムからインポートする場合、ファイル名は`_cq_icon.png`や`_cq_icon.svg`のようにエスケープする必要があります。
+   * `.png` 両者が存在す `.svg` る場合に先例となる
 
-If none of the above properties ( `cq:icon`, `abbreviation`, `cq:icon.png` or `cq:icon.svg`) are found on the component:
+上記のプロパティ(`cq:icon`、`abbreviation`、`cq:icon.png`、`cq:icon.svg`)がコンポーネントに見つからない場合：
 
 * システムは、`sling:resourceSuperType` プロパティに続くスーパーコンポーネント上の同じプロパティを検索します。
-* If nothing or an empty abbreviation is found at the super component level, the system will build the abbreviation from the first letters of the `jcr:title` property of the current component.
+* スーパーコンポーネントレベルで省略形が見つからない場合や空の省略形が見つかった場合は、現在のコンポーネントの`jcr:title`プロパティの最初の文字から省略形が作成されます。
 
 スーパーコンポーネントからアイコンの継承をキャンセルするために、コンポーネントで空の `abbreviation` プロパティを設定すると、デフォルトの動作に戻ります。
 
-The [Component Console](/help/sites-authoring/default-components-console.md#component-details) displays how the icon for a particular component is defined.
+[コンポーネントコンソール](/help/sites-authoring/default-components-console.md#component-details)には、特定のコンポーネントのアイコンの定義方法が表示されます。
 
 #### SVG アイコンの例 {#svg-icon-example}
 
@@ -259,13 +260,13 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
  <tbody>
   <tr>
    <td><strong>名前 <br /> </strong></td>
-   <td><strong>型 <br /> </strong></td>
+   <td><strong>種類 <br /> </strong></td>
    <td><strong>説明 <br /> </strong></td>
   </tr>
   <tr>
    <td>.<br /> </td>
    <td><code>cq:Component</code></td>
-   <td>現在のコンポーネント。A component is of node type <code>cq:Component</code>.<br /> </td>
+   <td>現在のコンポーネント。コンポーネントはノードタイプ<code>cq:Component</code>.<br />です </td>
   </tr>
   <tr>
    <td><code>componentGroup</code></td>
@@ -408,14 +409,14 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
 
 特に重要な子ノードを次に示します。
 
-* `cq:editConfig` ( `cq:EditConfig`) — 視覚的な外観を制御します。例えば、バーやウィジェットの外観を定義したり、カスタマイズしたコントロールを追加したりできます
-* `cq:childEditConfig` ( `cq:EditConfig`) — 独自の定義を持たない子コンポーネントの視覚的な外観を制御します。
+* `cq:editConfig` (  `cq:EditConfig`) — 視覚的な外観を制御します。例えば、バーやウィジェットの外観を定義したり、カスタマイズしたコントロールを追加したりできます
+* `cq:childEditConfig` (  `cq:EditConfig`) — 独自の定義を持たない子コンポーネントの視覚的な外観を制御します。
 * タッチ操作対応 UI：
-   * `cq:dialog` ( `nt:unstructured`) — このコンポーネントのコンテンツを編集するためのダイアログを定義します。
-   * `cq:design_dialog` ( `nt:unstructured`) — このコンポーネントのデザイン編集オプションを指定します。
+   * `cq:dialog` (  `nt:unstructured`) — このコンポーネントのコンテンツを編集するためのダイアログを定義します。
+   * `cq:design_dialog` (  `nt:unstructured`) — このコンポーネントのデザイン編集オプションを指定します。
 * クラシック UI：
-   * `dialog` ( `cq:Dialog`) — このコンポーネントのコンテンツを編集するためのダイアログを定義します（クラシックUIに固有）。
-   * `design_dialog` ( `cq:Dialog`) — このコンポーネントのデザイン編集オプションを指定します。
+   * `dialog` (  `cq:Dialog`) — このコンポーネントのコンテンツを編集するためのダイアログを定義します（クラシックUIに固有）。
+   * `design_dialog` (  `cq:Dialog`) — このコンポーネントのデザイン編集オプションを指定します。
    * `icon.png` - サイドキック内のコンポーネントのアイコンとして使用されるグラフィックファイル
    * `thumbnail.png` - サイドキックからコンポーネントをドラッグしている間、そのサムネールとして使用されるグラフィックファイル
 
@@ -441,7 +442,7 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
       * このコンポーネントのコンテンツ編集に使用するダイアログを定義します。
       * タッチ操作対応 UI 専用です。
       * Granite UI コンポーネントを使用して定義されます。
-      * have a property `sling:resourceType`, as standard Sling content structure
+      * 標準のSlingコンテンツ構造として`sling:resourceType`プロパティを持つ
       * `helpPath` プロパティを指定できます。このプロパティでは、ヘルプアイコン（「?」アイコン)が選択されている。
          * 既成のコンポーネントでは多くの場合、ドキュメントのページが参照されます。
          * `helpPath` が指定されていない場合、デフォルトのURL（ドキュメントの概要ページ）が表示されます。
@@ -471,7 +472,7 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
    クラシックダイアログボックス内では、次の操作を行います。
 
    * ダイアログを `cq:Dialog` として作成できます。これはテキストコンポーネント内のダイアログと同様に、タブを 1 つだけ含みます。複数のタブが必要な場合は、textimage コンポーネントと同様に、ダイアログを `cq:TabPanel`   として定義できます。
-   * a `cq:WidgetCollection` ( `items`) is used to provide a base for either input fields ( `cq:Widget`) or further tabs ( `cq:Widget`). この階層は、拡張することが可能です。
+   * `cq:WidgetCollection` ( `items`)は、入力フィールド( `cq:Widget`)またはその他のタブ( `cq:Widget`)のベースを提供するために使用します。 この階層は、拡張することが可能です。
 
 
 ### デザインダイアログ {#design-dialogs}
@@ -499,7 +500,7 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
 
 ### コンポーネントおよびコンポーネントによって作成されるコンテンツ {#components-and-the-content-they-create}
 
-If we create and configure an instance of the **Title** component on the page: `<content-path>/Prototype.html`
+ページ上の&#x200B;**タイトル**&#x200B;コンポーネントのインスタンスを作成し、設定する場合：`<content-path>/Prototype.html`
 
 * タッチ操作対応 UI
 
@@ -524,13 +525,13 @@ If we create and configure an instance of the **Title** component on the page: `
 
 定義されるプロパティは、個々の定義によって異なります。上記と比べて複雑なプロパティの場合もありますが、なお同じ基本原則に従っています。
 
-## コンポーネントの階層および継承 {#component-hierarchy-and-inheritance}
+## コンポーネントの階層および継承  {#component-hierarchy-and-inheritance}
 
 AEM 内のコンポーネントは、次の 3 種類の階層で表現されます。
 
 * **リソースタイプの階層**
 
-   This is used to extend components using the property `sling:resourceSuperType`. これにより、コンポーネントの継承ができるようになります。例えば、テキストコンポーネントは標準コンポーネントから様々な属性を継承します。
+   これは、`sling:resourceSuperType`プロパティを使用してコンポーネントを拡張するために使用されます。 これにより、コンポーネントの継承ができるようになります。例えば、テキストコンポーネントは標準コンポーネントから様々な属性を継承します。
 
    * スクリプト（Sling によって解決）
    * ダイアログ
@@ -542,7 +543,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
    例えば、編集バーのボタン、コントロールセットのレイアウト（編集バー、ロールオーバー）、ダイアログのレイアウト（インライン、浮動）の設定を親コンポーネントで定義して、子コンポーネントに適用できます。
 
-   Configuration settings (related to edit functionality) in `cq:editConfig` and `cq:childEditConfig` are propagated.
+   `cq:editConfig`と`cq:childEditConfig`の設定（編集機能に関連）が反映されます。
 
 * **階層を含む**
 
@@ -560,13 +561,13 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
 * [ `cq:editConfig` ノードのプロパティ](#configuring-with-cq-editconfig-properties):
 
-   * `cq:actions` ( `String array`):コンポーネントに対して実行できるアクションを定義します。
-   * `cq:layout` ( `String`)::クラシックUIでのコンポーネントの編集方法を定義します。
-   * `cq:dialogMode` ( `String`):クラシックUIでコンポーネントダイアログを開く方法を定義します
+   * `cq:actions` (  `String array`):コンポーネントに対して実行できるアクションを定義します。
+   * `cq:layout` (  `String`)::クラシックUIでのコンポーネントの編集方法を定義します。
+   * `cq:dialogMode` (  `String`):クラシックUIでコンポーネントダイアログを開く方法を定義します
 
       * タッチ操作対応 UI のダイアログは、デスクトップモードでは常に浮動し、モバイルでは自動的に全画面表示として開きます。
-   * `cq:emptyText` ( `String`):視覚的なコンテンツがない場合に表示するテキストを定義します。
-   * `cq:inherit` ( `Boolean`):見つからない値が継承元のコンポーネントから継承されるかどうかを定義します。
+   * `cq:emptyText` (  `String`):視覚的なコンテンツがない場合に表示するテキストを定義します。
+   * `cq:inherit` (  `Boolean`):見つからない値が継承元のコンポーネントから継承されるかどうかを定義します。
    * `dialogLayout`（String）：ダイアログの開き方を定義します。
 
 
@@ -604,7 +605,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
    `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* To look for a child node of `cq:editConfig`, e.g. you can search for `cq:dropTargets`, which is of type `cq:DropTargetConfig`; you can use the Query tool in** CRXDE Lite** and search with the following XPath query string:
+* `cq:editConfig`の子ノードを探す場合、例えば`cq:DropTargetConfig`型の`cq:dropTargets`を探すことができます。クエリツール(**CRXDE Lite**内)を使用して、次のXPathクエリ文字列で検索できます。
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
 
@@ -612,7 +613,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
 ### cq:actions {#cq-actions}
 
-The `cq:actions` property ( `String array`) defines one or several actions that can be performed on the component. 設定に使用できる値を以下に示します。
+`cq:actions`プロパティ(`String array`)は、コンポーネントに対して実行できる1つまたは複数のアクションを定義します。 設定に使用できる値を以下に示します。
 
 <table>
  <tbody>
@@ -634,7 +635,7 @@ The `cq:actions` property ( `String array`) defines one or several actions that 
   </tr>
       <tr>
     <td><code>editannotate</code></td>
-    <td>コンポーネントを編集するボタンと <a href="/help/sites-authoring/annotations.md">注釈を許可するボタンを追加します</a>。</td>
+    <td>コンポーネントを編集するボタンを追加し、<a href="/help/sites-authoring/annotations.md">注釈</a>を許可します。</td>
    </tr>
   <tr>
    <td><code>delete</code></td>
@@ -669,9 +670,9 @@ The `cq:actions` property ( `String array`) defines one or several actions that 
     jcr:primaryType="cq:EditConfig"/>
 ```
 
-### cq:layout (Classic UI Only) {#cq-layout-classic-ui-only}
+### cq:layout（クラシックUIのみ） {#cq-layout-classic-ui-only}
 
-The `cq:layout` property ( `String`) defines how the component can be edited in the classic UI. 使用可能な値を次に示します。
+`cq:layout`プロパティ(`String`)は、クラシックUIでのコンポーネントの編集方法を定義します。 使用可能な値を次に示します。
 
 <table>
  <tbody>
@@ -708,9 +709,9 @@ The `cq:layout` property ( `String`) defines how the component can be edited in 
 </jcr:root>
 ```
 
-### cq:dialogMode (Classic UI Only) {#cq-dialogmode-classic-ui-only}
+### cq:dialogMode（クラシックUIのみ） {#cq-dialogmode-classic-ui-only}
 
-コンポーネントを編集ダイアログにリンクできます。The `cq:dialogMode` property ( `String`) defines how the component dialog will be opened in the classic UI. 使用可能な値を次に示します。
+コンポーネントを編集ダイアログにリンクできます。`cq:dialogMode`プロパティ(`String`)は、クラシックUIでコンポーネントダイアログを開く方法を定義します。 使用可能な値を次に示します。
 
 <table>
  <tbody>
@@ -750,17 +751,17 @@ The `cq:layout` property ( `String`) defines how the component can be edited in 
 
 ### cq:emptyText {#cq-emptytext}
 
-The `cq:emptyText` property ( `String`) defines text that is displayed when no visual content is present. It defaults to: `Drag components or assets here`.
+`cq:emptyText`プロパティ(`String`)は、視覚的なコンテンツがない場合に表示されるテキストを定義します。 デフォルトは次のとおりです。`Drag components or assets here`.
 
 ### cq:inherit {#cq-inherit}
 
-The `cq:inherit` property ( `boolean`) defines whether missing values are inherited from the component that it inherits from. It defaults to `false`.
+`cq:inherit`プロパティ(`boolean`)は、見つからない値が継承元のコンポーネントから継承されるかどうかを定義します。 デフォルトは`false`です。
 
 ### dialogLayout {#dialoglayout}
 
 `dialogLayout` プロパティは、デフォルトのダイアログの開き方を定義します。
 
-* A value of `fullscreen` opens the dialog in full screen.
+* `fullscreen`という値を指定すると、ダイアログがフルスクリーンで開きます。
 * 値が空かプロパティがない場合、デフォルトでは通常どおりにダイアログが開きます。
 * ユーザーは、ダイアログ内で全画面モードを常に切り替えることができます。
 * クラシック UI には適用されません。
@@ -769,7 +770,7 @@ The `cq:inherit` property ( `boolean`) defines whether missing values are inheri
 
 ### cq:dropTargets {#cq-droptargets}
 
-The `cq:dropTargets` node (node type `nt:unstructured`) defines a list of drop targets that can accept a drop from an asset dragged from the content finder. これは、タイプ `cq:DropTargetConfig` のノードのコレクションとして機能します。
+`cq:dropTargets`ノード（ノードタイプ`nt:unstructured`）は、コンテンツファインダーからドラッグされたアセットからのドロップを受け入れるドロップターゲットのリストを定義します。 これは、タイプ `cq:DropTargetConfig` のノードのコレクションとして機能します。
 
 >[!NOTE]
 >
@@ -777,19 +778,19 @@ The `cq:dropTargets` node (node type `nt:unstructured`) defines a list of drop t
 >
 >タッチ操作対応 UI では、最初のターゲットのみが使用されます。
 
-Each child node of type `cq:DropTargetConfig` defines a drop target in the component. ノード名は重要です。ノード名は、JSP で次のように使用して、有効なドロップターゲットである DOM 要素に割り当てられる CSS クラス名を生成する必要があるからです。
+タイプ`cq:DropTargetConfig`の各子ノードは、コンポーネント内でドロップターゲットを定義します。 ノード名は重要です。ノード名は、JSP で次のように使用して、有効なドロップターゲットである DOM 要素に割り当てられる CSS クラス名を生成する必要があるからです。
 
 ```
 <drop target css class> = <drag and drop prefix> +
  <node name of the drop target in the edit configuration>
 ```
 
-は、Javaプロパティ `<drag and drop prefix>` で定義します。
+`<drag and drop prefix>`はJavaプロパティで定義されます。
 
 `com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`.
 
-For example, the class name is defined as follows in the JSP of the Download component
-( `/libs/foundation/components/download/download.jsp`), where `file` is the node name of the drop target in the edit configuration of the Download component:
+例えば、ダウンロードコンポーネントのJSPでは、クラス名は次のように定義されます
+( `/libs/foundation/components/download/download.jsp`)。ここで`file`は、ダウンロードコンポーネントの編集設定でのドロップターゲットのノード名です。
 
 `String ddClassName = DropTarget.CSS_CLASS_PREFIX + "file";`
 
@@ -828,9 +829,9 @@ For example, the class name is defined as follows in the JSP of the Download com
     </cq:dropTargets>
 ```
 
-### cq:actionConfigs (Classic UI Only) {#cq-actionconfigs-classic-ui-only}
+### cq:actionConfigs（クラシックUIのみ） {#cq-actionconfigs-classic-ui-only}
 
-The `cq:actionConfigs` node (node type `nt:unstructured`) defines a list of new actions that are appended to the list defined by the `cq:actions` property. `cq:actionConfigs` のそれぞれの子ノードでは、ウィジェットを定義することにより新しいアクションを定義します。
+`cq:actionConfigs`ノード（ノードタイプ`nt:unstructured`）は、`cq:actions`プロパティで定義されたリストに追加される新しいアクションのリストを定義します。 `cq:actionConfigs` のそれぞれの子ノードでは、ウィジェットを定義することにより新しいアクションを定義します。
 
 次の設定例では、（クラシック UI 用の区切り文字を持つ）新しいボタンを定義しています。
 
@@ -839,7 +840,7 @@ The `cq:actionConfigs` node (node type `nt:unstructured`) defines a list of new 
    * クラシック UI でのみ使用されます。
    * タッチ操作対応 UI では xtype が無視されるので、この定義は無視されます（また、タッチ操作対応 UI ではアクションツールバーの構造が異なるので、区切り文字は不要です）。
 
-* a button named **Manage comments** that runs the handler function `CQ_collab_forum_openCollabAdmin()`.
+* **コメントの管理**&#x200B;という名前のボタン。このボタンは、ハンドラー関数`CQ_collab_forum_openCollabAdmin()`を実行します。
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"
@@ -863,7 +864,7 @@ The `cq:actionConfigs` node (node type `nt:unstructured`) defines a list of new 
 
 ### cq:formParameters {#cq-formparameters}
 
-The `cq:formParameters` node (node type `nt:unstructured`) defines additional parameters that are added to the dialog form. 各プロパティは、form パラメーターにマップされます。
+`cq:formParameters`ノード（ノードタイプ`nt:unstructured`）は、ダイアログフォームに追加される追加のパラメーターを定義します。 各プロパティは、form パラメーターにマップされます。
 
 次の設定では、値 `name` が設定された `photos/primary` という名前のパラメーターがダイアログフォームに追加されます。
 
@@ -875,7 +876,7 @@ The `cq:formParameters` node (node type `nt:unstructured`) defines additional pa
 
 ### cq:inplaceEditing {#cq-inplaceediting}
 
-The `cq:inplaceEditing` node (node type `cq:InplaceEditingConfig`) defines an inplace editing configuration for the component. このノードは、次のプロパティを持つことができます。
+`cq:inplaceEditing`ノード（ノードタイプ`cq:InplaceEditingConfig`）は、コンポーネントのインプレイス編集設定を定義します。 このノードは、次のプロパティを持つことができます。
 
 <table>
  <tbody>
@@ -885,7 +886,7 @@ The `cq:inplaceEditing` node (node type `cq:InplaceEditingConfig`) defines an in
   </tr>
   <tr>
    <td><code>active</code></td>
-   <td>(<code>boolean</code>) True to enable the inplace editing of the component.</td>
+   <td>(<code>boolean</code>) Trueを指定すると、コンポーネントのインプレイス編集が有効になります。</td>
   </tr>
   <tr>
    <td><code>configPath</code></td>
@@ -893,7 +894,7 @@ The `cq:inplaceEditing` node (node type `cq:InplaceEditingConfig`) defines an in
   </tr>
   <tr>
    <td><code>editorType</code></td>
-   <td><p>(<code>String</code>)エディタのタイプ。 指定できるタイプを次に示します。</p>
+   <td><p>(<code>String</code>)エディタタイプ。 指定できるタイプを次に示します。</p>
     <ul>
      <li>plaintext：コンテンツが HTML 以外の場合に使用します。<br /> </li>
      <li>title：編集を開始する前にグラフィカルなタイトルをプレーンテキストに変換する拡張プレーンテキストエディター。Geometrixx タイトルコンポーネントで使用されます。<br /> </li>
@@ -914,7 +915,7 @@ The `cq:inplaceEditing` node (node type `cq:InplaceEditingConfig`) defines an in
 
 ### cq:listeners {#cq-listeners}
 
-The `cq:listeners` node (node type `cq:EditListenersConfig`) defines what happens before or after an action on the component. 次の表では、使用する可能性のあるプロパティ値の定義を示します。
+`cq:listeners`ノード（ノードタイプ`cq:EditListenersConfig`）は、コンポーネントに対するアクションの前後に何が起こるかを定義します。 次の表では、使用する可能性のあるプロパティ値の定義を示します。
 
 <table>
  <tbody>
@@ -988,7 +989,7 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) defines what happen
 
 >[!NOTE]
 >
->The `REFRESH_INSERTED` and `REFRESH_SELFMOVED` handlers are only available in the classic UI.
+>`REFRESH_INSERTED`および`REFRESH_SELFMOVED`ハンドラーは、クラシックUIでのみ使用できます。
 
 >[!NOTE]
 >
@@ -998,7 +999,7 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) defines what happen
 >
 >コンポーネントがネストされている場合は、`cq:listeners` ノードでプロパティとして定義されるアクションに一定の制限があります。
 >
->* For nested components, the values of the following properties *must* be `REFRESH_PAGE`: >
+>* ネストされたコンポーネントの場合、次のプロパティ&#x200B;*の値は*`REFRESH_PAGE`でなければなりません。>
 >  * `aftermove`
 >  * `aftercopy`
 
@@ -1007,13 +1008,13 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) defines what happen
 
 `afteredit = "project.customerAction"`
 
-The following example is equivalent to the `REFRESH_INSERTED` configuration:
+次の例は`REFRESH_INSERTED`設定と同じです。
 
 `afterinsert="function(path, definition) { this.refreshCreated(path, definition); }"`
 
 >[!NOTE]
 >
->For the classic UI, to see which parameters can be used in the handlers, refer to the `before<action>` and `after<action>` events section of the [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) and [ `CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widget documentation.
+>クラシックUIでは、ハンドラーで使用できるイベントーを確認するには、ウィジェットドキュメント[ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar)および[ `CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover)の`before<action>`パラメーターと`after<action>`の節を参照してください。
 
 次の設定では、コンポーネントを削除、編集、挿入または移動した後にページが更新されます。
 
