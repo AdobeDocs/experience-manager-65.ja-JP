@@ -32,14 +32,14 @@ ht-degree: 73%
 * 設定（プロパティや段落など）は、親から継承される。
 * パスによって、分析ノードから参照される。
 * 簡単に拡張できる。
-* [Adobe Analyticsなど、より複雑な設定に柔軟に対応できます](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
-* 依存関係のサポート(例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) ・プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定が必要)
+* [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)のように、より複雑な設定に対して柔軟に対応できます。
+* 依存関係のサポート([Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)プラグインには[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)の設定が必要です)。
 
 ## 構造 {#structure}
 
 設定のベースパスは次のとおりです。
 
-`/etc/cloudservices`.
+`/etc/cloudservices`
 
 設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 
@@ -111,7 +111,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### コンテンツモデル {#content-model}
 
-The content model is stored as `cq:Page` under:
+コンテンツモデルは`cq:Page`として次の下に保存されます。
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -122,7 +122,7 @@ The content model is stored as `cq:Page` under:
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-The configurations are stored under the subnode `jcr:content`.
+構成はサブノード`jcr:content`の下に保存されます。
 
 * ダイアログで定義される固定プロパティは、`jcr:node` に直接保存する必要があります。
 * （`parsys` または `iparsys` を使用する）動的要素は、サブノードを使用してコンポーネントデータを保存します。
@@ -142,7 +142,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 ### AEM の統合 {#aem-integration}
 
-Available services are listed in the **Cloud Services** tab of the **Page Properties** dialog (of any page that inherits from `foundation/components/page` or `wcm/mobile/components/page`).
+使用可能なサービスは、**ページのプロパティ**&#x200B;ダイアログの&#x200B;**Cloud Services**&#x200B;タブ（`foundation/components/page`または`wcm/mobile/components/page`から継承するページの）に一覧表示されます。
 
 このタブでは以下についても表示されます。
 
@@ -153,7 +153,7 @@ Available services are listed in the **Cloud Services** tab of the **Page Proper
 
 サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
 
-非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。This field should have the annotation `@Encrypted` in the property name; i.e. for the `password` field the name would be written as:
+非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドのプロパティ名には`@Encrypted`という注釈が必要です。例えば、`password`フィールドに対しては、名前は次のように書かれます。
 
 `password@Encrypted`
 
@@ -165,7 +165,7 @@ Available services are listed in the **Cloud Services** tab of the **Page Proper
 
 >[!NOTE]
 >
->By default the `EcryptionPostProcessor` only encrypts `POST` requests made to `/etc/cloudservices`.
+>デフォルトでは、`EcryptionPostProcessor`は`/etc/cloudservices`に対する`POST`リクエストのみを暗号化します。
 
 #### サービスページの jcr:content ノード用の追加プロパティ {#additional-properties-for-service-page-jcr-content-nodes}
 
@@ -177,7 +177,7 @@ Available services are listed in the **Cloud Services** tab of the **Page Proper
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、ページ上のコンポーネントが含まれ<br /> ます <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> (通常は <code>body</code> タグの前)。<br /> Analyticsとターゲットの場合は、これを使用して、訪問者の動作を追跡するJavaScript呼び出しなどの追加機能を含めます。</td>
+   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、ページ上のコンポーネントが含ま<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> れます(通常は <code>body</code> タグの前)。<br /> Analyticsとターゲットの場合は、これを使用して、訪問者の動作を追跡するJavaScript呼び出しなどの追加機能を含めます。</td>
   </tr>
   <tr>
    <td>description</td>
