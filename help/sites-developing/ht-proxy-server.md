@@ -75,7 +75,7 @@ ht-degree: 88%
 
 **`-i <numIndentions>`**（インデントを追加）
 
-アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです。この機能は、で導入されました `proxy.jar version 1.16`。
+アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです。この機能は`proxy.jar version 1.16`で導入されました。
 
 ### ログ形式 {#log-format}
 
@@ -115,7 +115,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 `/content/test.jpg`
 
-The content of `test.html` is:
+`test.html`の内容は次のとおりです。
 
 ```xml
 <html>
@@ -129,11 +129,11 @@ The content of `test.html` is:
 </html>
 ```
 
-Assuming the AEM instance is running on `localhost:4502` we start the proxy like this:
+AEMインスタンスが`localhost:4502`上で実行されていると仮定して、次のようにプロキシを開始します。
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-The CQ/CRX instance can now be accessed though the proxy at `localhost:4444` and all communication via this port is logged to `test.log`.
+これで、`localhost:4444`のプロキシ経由でCQ/CRXインスタンスにアクセスでき、このポートを介するすべての通信が`test.log`に記録されます。
 
 プロキシの出力を監視する場合は、ブラウザーと AEM インスタンス間のやり取りを確認します。
 
@@ -148,7 +148,7 @@ using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 
 `http://localhost:4444/content/test.html`
 
-and we see the browser make a `GET` request for the page:
+ブラウザが`GET`リクエストをページに対して行うのがわかります。
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
