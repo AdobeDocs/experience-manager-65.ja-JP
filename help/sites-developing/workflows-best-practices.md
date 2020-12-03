@@ -30,7 +30,7 @@ ht-degree: 88%
 
 （カスタマイズされたものか標準提供されたものかに関わらず）ワークフロープロセスを設定する際は、いくつかの点に注意してください。
 
-### 一時的ワークフロー {#transient-workflows}
+### 一時的ワークフロー  {#transient-workflows}
 
 高い取り込み負荷を最適化するには、[ワークフローを一時的](/help/sites-developing/workflows.md#transient-workflows)として定義することができます。
 
@@ -51,7 +51,7 @@ ht-degree: 88%
 
 DAM ワークフローのパフォーマンスチューニングガイドラインについては、[AEM Assets パフォーマンスチューニングガイド](/help/assets/performance-tuning-guidelines.md)を参照してください。
 
-### 同時実行ワークフローの最大数の設定 {#configure-the-maximum-number-of-concurrent-workflows}
+### 同時実行ワークフローの最大数の設定  {#configure-the-maximum-number-of-concurrent-workflows}
 
 AEM では、複数のワークフロースレッドを同時に実行できます。デフォルトでは、スレッド数はシステム上のプロセッサーコア数の半分になるように設定されています。
 
@@ -59,17 +59,17 @@ AEM では、複数のワークフロースレッドを同時に実行できま�
 
 この問題に対処するには、**Maximum Parallel Jobs** の数値をシステム上のプロセッサーコア数の半分から 4 分の 3 に相当する数に設定することをお勧めします。これにより、システムがこれらのワークフローを処理する際に、応答性を維持できる十分な容量が得られます。
 
-To configure **Maximum Parallel Jobs**, you can either:
+**並列ジョブの最大数**&#x200B;を構成するには、次のいずれかを実行します。
 
-* Configure the **[OSGi Configuration](/help/sites-deploying/configuring-osgi.md)** from the AEM Web console; for **Queue: Granite Workflow Queue** (an **Apache Sling Job Queue Configuration**).
+* AEM Webコンソールから&#x200B;**[OSGi設定](/help/sites-deploying/configuring-osgi.md)**&#x200B;を設定します。**キュー：Granite Workflow Queue**(**Apache Sling Job Queue Configuration**)
 
-* Configure the queue can from the **Sling Jobs** option of the AEM Web console; for **Job Queue Configuration: Granite Workflow Queue**, at `http://localhost:4502/system/console/slingevent`.
+* AEM Webコンソールの&#x200B;**Sling Jobs**&#x200B;オプションからキューを設定します。**Job Queue Configuration:Granite Workflow Queue**、`http://localhost:4502/system/console/slingevent`。
 
-Additionally, there is a separate configuration for the **Granite Workflow External Process Job Queue**. これは、**InDesign Server** や **Image Magick** などの外部バイナリを起動するワークフロープロセスに使用されます。
+さらに、**Granite Workflow External Process Job Queue**&#x200B;には別の設定があります。 これは、**InDesign Server** や **Image Magick** などの外部バイナリを起動するワークフロープロセスに使用されます。
 
-### 個々のジョブキューの設定 {#configure-individual-job-queues}
+### 個々のジョブキューの設定  {#configure-individual-job-queues}
 
-場合によっては、同時スレッドまたは他のキューオプションを個々のジョブに応じて制御するように個々のジョブキューを設定すると便利なことがあります。Web コンソールから個々のキューを追加および設定するには、**Apache Sling Job Queue Configuration** ファクトリを使用します。To find the appropriate topic to list, execute your workflow’s model and look for it in the **Sling Jobs** console; for example, at `http://localhost:4502/system/console/slingevent`.
+場合によっては、同時スレッドまたは他のキューオプションを個々のジョブに応じて制御するように個々のジョブキューを設定すると便利なことがあります。Web コンソールから個々のキューを追加および設定するには、**Apache Sling Job Queue Configuration** ファクトリを使用します。リストに適したトピックを見つけるには、ワークフローのモデルを実行し、**Sling Jobs**&#x200B;コンソールでそれを探します。例えば、`http://localhost:4502/system/console/slingevent`に配置します。
 
 また、個々のジョブキューを一時的ワークフローに追加することもできます。
 
@@ -83,7 +83,7 @@ Additionally, there is a separate configuration for the **Granite Workflow Exter
 
 AEM のメンテナンスタスクについて詳しくは、[操作ダッシュボード](/help/sites-administering/operations-dashboard.md)を参照してください。
 
-## カスタマイズ {#customization}
+## カスタマイズ  {#customization}
 
 カスタムワークフロープロセスを記述する際は、留意する必要がある点がいくつかあります。
 
@@ -108,7 +108,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >禁止事項：
    >
    >* カスタムのワークフローモデルをこのフォルダーに配置すること
-   >* edit anything in `/libs`
+   >* `/libs`で編集
 
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
@@ -131,7 +131,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >
    >これらの設計が *AEM UI を使用*&#x200B;して編集された場合は、詳細情報が新しい場所にコピーされます。
 
-#### 場所 - ワークフローランチャー {#locations-workflow-launchers}
+#### 場所 - ワークフローランチャー  {#locations-workflow-launchers}
 
 ワークフローランチャーの定義も、タイプに応じて次のリポジトリに保管されます。
 
@@ -144,7 +144,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >禁止事項：
    >
    >* カスタムのワークフローランチャーをこのフォルダーに配置すること
-   >* edit anything in `/libs`
+   >* `/libs`で編集
 
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
@@ -163,7 +163,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >
    >これらの定義が *AEM UI を使用*&#x200B;して編集された場合は、詳細情報が新しい場所にコピーされます。
 
-#### 場所 - ワークフロースクリプト {#locations-workflow-scripts}
+#### 場所 - ワークフロースクリプト  {#locations-workflow-scripts}
 
 ワークフロースクリプトも、タイプに応じて次のリポジトリに保管されます。
 
@@ -176,7 +176,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >禁止事項：
    >
    >* カスタムのワークフロースクリプトをこのフォルダーに配置すること
-   >* edit anything in `/libs`
+   >* `/libs`で編集
 
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
@@ -204,7 +204,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >禁止事項：
    >
    >* カスタムのワークフロー通知の定義をこのフォルダーに配置すること
-   >* edit anything in `/libs`
+   >* `/libs`で編集
 
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
@@ -250,10 +250,10 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 セッションの保存：
 
-* Inside a workflow process, if the `WorkflowSession` is being used to modify the repository then do not explicitly save the session - the workflow will save the session when it completes.
+* ワークフロープロセス内で、`WorkflowSession`を使用してリポジトリを変更する場合、セッションを明示的に保存しないでください。ワークフローは、セッションが完了した時点でセッションを保存します。
 * `Session.Save` は、ワークフローステップ内から呼び出されないでください。
 
-   * it is recommended to adapt the workflow jcr session; then `save` is not necessary as the workflow engine saves the session automatically once the workflow has finished executing.
+   * ワークフローjcrセッションを適応させることをお勧めします。この場合、ワークフローエンジンの実行が終了するとセッションが自動的に保存されるので、`save`は不要です。
    * プロセスの各ステップでは、独自の JCR セッションを作成しないことをお勧めします。
 
 * 不要な保存操作をなくすことでオーバーヘッドを減らし、ワークフローの効率を高めることができます。
@@ -277,7 +277,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 ### ランチャーの設定の強化 {#configuration-enhancements-for-launchers}
 
-The custom [launcher configuration](/help/sites-administering/workflows-starting.md#workflows-launchers) has been enhanced to support the following:
+カスタムの[ランチャー設定](/help/sites-administering/workflows-starting.md#workflows-launchers)が、次の機能をサポートするように拡張されました。
 
 * 複数の条件を「AND」で組み合わせる。
 * 1 つの条件内に複数の OR 条件を含める。
@@ -325,7 +325,7 @@ The custom [launcher configuration](/help/sites-administering/workflows-starting
 
 ## システムツール {#system-tools}
 
-ワークフローの監視、メンテナンスおよびトラブルシューティングに役立つ多くのシステムツールがあります。All example URLs below use `localhost:4502`, but should be available on any author instance ( `<hostname>:<port>`).
+ワークフローの監視、メンテナンスおよびトラブルシューティングに役立つ多くのシステムツールがあります。以下の例のURLはすべて`localhost:4502`を使用していますが、どの作成者インスタンス(`<hostname>:<port>`)でも使用できます。
 
 ### Sling ジョブ処理コンソール {#sling-job-handling-console}
 
