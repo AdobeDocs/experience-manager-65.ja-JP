@@ -1,6 +1,6 @@
 ---
 title: Query Builder API
-seo-title: Query Builder API
+seo-title: クエリビルダAPI
 description: アセット共有の Query Builder の機能は、Java API と REST API を通して公開されます。
 seo-description: アセット共有の Query Builder の機能は、Java API と REST API を通して公開されます。
 uuid: 6928c3e9-96a1-44ad-9785-350d95f1869a
@@ -20,13 +20,13 @@ ht-degree: 69%
 ---
 
 
-# Query Builder API{#query-builder-api}
+# クエリビルダAPI{#query-builder-api}
 
 [アセット共有の Query Builder](/help/assets/assets-finder-editor.md)の機能は、Java API と REST API を通して公開されます。ここでは、これらの API について説明します。
 
 サーバー側 Query Builder（[`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)）はクエリの記述を受け入れ、XPath クエリを作成して実行します。オプションで結果セットのフィルタリング、必要に応じてファセットの抽出もおこないます。
 
-クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。例としては、XPathの `jcr:contains()` 関数に対応するフルテキスト述語があります。
+クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。例としては、XPathの`jcr:contains()`関数に対応するフルテキスト述語が含まれます。
 
 各述語タイプに、1 つのエバリュエーターコンポーネント（[`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)）があります。これらのコンポーネントは、XPath、フィルタリングおよびファセットの抽出に対してその特定の述語を処理する方法を理解しています。OSGi コンポーネントのランタイムによってプラグインされる、カスタムのエバリュエーターを作成するのは簡単です。
 
@@ -36,13 +36,13 @@ REST API を使用すると、JSON で送信される応答を使用した HTTP 
 >
 >QueryBuilder API は JCR API を使用して構築されています。また、OSGi バンドル内から JCR API を使用して、Adobe Experience Manager JCR をクエリすることもできます。詳しくは、[JCR API を使用した Adobe Experience Manager データのクエリ](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html)を参照してください。
 
-## Gem セッション {#gem-session}
+## Gem セッション  {#gem-session}
 
 [AEM Gems](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-index.html) は、アドビの専門家が提供する、Adobe Experience Manager を技術的に深く掘り下げた一連のセッションです。Query Builder 専用のこのセッションは、ツールを大まかに把握したり使用したりするのに非常に便利です。
 
 >[!NOTE]
 >
->See the AEM Gem session [Search forms made easy with the AEM querybuilder](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html) for a detailed overview of the query builder.
+>クエリビルダーの詳細な概要については、AEM Gemセッション[AEM querybuilder](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html)で簡単に実行できる検索フォームを参照してください。
 
 ## サンプルクエリ {#sample-queries}
 
@@ -138,13 +138,13 @@ AEM 6.0 SP2 の時点では、数値を使用してカスタムの最大結果�
 
 例えば、この UI は以下の手法に適応できます。
 
-* Get and display the accurate count of the number of total hits ([SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) or total in the querybuilder.json response) are less than or equal to 100;
+* 合計ヒット数([SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches)またはquerybuilder.json応答の合計)が100以下の正確な数を取得して表示します。
 * `guessTotal` を 100 に設定して、Query Builder への呼び出しを作成します。
 
 * 応答は、以下のような結果になる可能性があります。
 
-   * `total=43`, `more=false` — ヒットの総数が43であることを示します。 UI には先頭ページの一部として 10 件の結果が表示され、続く 3 ページのページネーションが提供されます。この実装を使用して、「**43 件の結果が見つかりました**」のような説明テキストを表示することもできます。
-   * `total=100`, `more=true` — ヒットの総数が100を超え、正確な数が不明であることを示します。 UI には先頭ページの一部として 10 件の結果が表示され、続く 10 ページのページネーションが提供されます。この実装を使用して、「**100 件を超える結果が見つかりました**」のようなテキストを表示することもできます。ユーザーが次のページに移動すると、Query Builder への呼び出しによって `guessTotal` の制限と、`offset` パラメーターおよび `limit` パラメーターの制限が増やされます。
+   * `total=43`,  `more=false`  — ヒットの総数が43であることを示します。UI には先頭ページの一部として 10 件の結果が表示され、続く 3 ページのページネーションが提供されます。この実装を使用して、「**43 件の結果が見つかりました**」のような説明テキストを表示することもできます。
+   * `total=100`,  `more=true`  — ヒットの総数が100を超え、正確な数が不明であることを示します。UI には先頭ページの一部として 10 件の結果が表示され、続く 10 ページのページネーションが提供されます。この実装を使用して、「**100 件を超える結果が見つかりました**」のようなテキストを表示することもできます。ユーザーが次のページに移動すると、Query Builder への呼び出しによって `guessTotal` の制限と、`offset` パラメーターおよび `limit` パラメーターの制限が増やされます。
 
 UI が無限スクロールを使用する必要がある場合は、Query Builder によって正確なヒット数が決定されないように、`guessTotal` も使用する必要があります。
 
@@ -198,13 +198,13 @@ tagid=marketing:interest/product
 tagid.property=jcr:content/cq:tags
 ```
 
-Use the `tagid` predicate as in the example if you know the explicit tag ID.
+明示的なタグIDがわかっている場合は、例のように`tagid`述語を使用します。
 
 タグタイトルのパス（スペースなし）には、`tag` 述語を使用します。
 
-Because, in the previous example, you are searching for pages ( `cq:Page` nodes), you need to use the relative path from that node for the `tagid.property` predicate, which is `jcr:content/cq:tags`. By default, the `tagid.property` would simply be `cq:tags`.
+前の例ではページ（`cq:Page`ノード）を検索しているので、`jcr:content/cq:tags`という`tagid.property`述語には、そのノードからの相対パスを使用する必要があります。 デフォルトでは、`tagid.property`は`cq:tags`になります。
 
-### Search under multiple paths (using groups) {#search-under-multiple-paths-using-groups}
+### 複数のパス（グループを使用）で検索{#search-under-multiple-paths-using-groups}
 
 `http://localhost:4502/bin/querybuilder.json?fulltext=Management&group.1_path=/content/geometrixx/en/company/management&group.2_path=/content/geometrixx/en/company/bod&group.p.or=true`
 
@@ -219,11 +219,11 @@ group.2_path=/content/geometrixx/en/company/bod
 
 `"Management" and ("/content/geometrixx/en/company/management" or "/content/geometrixx/en/company/bod")`
 
-例にあるグループの内部では、`path` 述語が複数回使用されています。To differentiate and order the two instances of the predicate (ordering is required for some predicates), you must prefix the predicates with *N* `_ where`*N* is the ordering index. In the previous example, the resulting predicates are `1_path` and `2_path`.
+例にあるグループの内部では、`path` 述語が複数回使用されています。述語の2つのインスタンスを区別して並べ替えるには（述語の順序が必要）、述語の先頭に&#x200B;*N* `_ where`*N*&#x200B;を並べ替えインデックスにする必要があります。 前の例では、結果の述部は`1_path`と`2_path`です。
 
-The `p` in `p.or` is a special delimiter indicating that what follows (in this case an `or`) is a *parameter* of the group, as opposed to a subpredicate of the group, such as `1_path`.
+`p.or`の`p`は、`1_path`のようなグループのサブ述語に対して、次の内容（この場合`or`）がグループの&#x200B;*パラメータ*&#x200B;であることを示す特殊な区切り文字です。
 
-If no `p.or` is given then all predicates are ANDed together, that is, each result must satisfy all predicates.
+`p.or`を指定しない場合、すべての述部がAND結合され、つまり、各結果がすべての述部を満たす必要があります。
 
 >[!NOTE]
 >
@@ -267,7 +267,7 @@ type=cq:Page
 
 ### プロパティの複数の値の検索 {#search-for-multiple-property-values}
 
-To avoid big groups when you want to search for multiple values of a property ( `"A" or "B" or "C"`), you can provide multiple values to the `property` predicate:
+プロパティの複数の値(`"A" or "B" or "C"`)を検索する場合に大きなグループを避けるには、`property`述語に複数の値を指定します。
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3atitle&property.1_value=Products&property.2_value=Square&property.3_value=Events`
 
@@ -278,7 +278,7 @@ property.2_value=Square
 property.3_value=Events
 ```
 
-For multi-value properties, you can also require that multiple values match ( `"A" and "B" and "C"`):
+複数の値を持つプロパティの場合は、複数の値が一致する(`"A" and "B" and "C"`)ことを必須にすることもできます。
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3atitle&property.and=true&property.1_value=test&property.2_value=foo&property.3_value=bar`
 
@@ -341,7 +341,7 @@ p.properties=sling:resourceType jcr:primaryType
 p.nodedepth=n
 ```
 
-ここ `n` で、クエリが返すレベルの数を指定します。 子ノードを返すには、そのノードをpropertiesセレクターで指定する必要があります
+`n`は、クエリが返すレベルの数です。 子ノードを返すには、そのノードをpropertiesセレクターで指定する必要があります
 
 ```
 p.hits=full
@@ -362,13 +362,13 @@ p.nodedepth=5
 
 述語の詳細については、[Query Builder の述語リファレンスのページ](/help/sites-developing/querybuilder-predicate-reference.md)を参照してください。
 
-You can also check the [Javadoc for the `PredicateEvaluator` classes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). これらのクラスの Javadoc ドキュメントには、使用できるプロパティのリストが含まれています。
+[Javadocの`PredicateEvaluator`クラス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)を調べることもできます。 これらのクラスの Javadoc ドキュメントには、使用できるプロパティのリストが含まれています。
 
-The prefix of the class name (for example, &quot; `similar`&quot; in [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) is the *principal property* of the class. このプロパティは、クエリ内で使用する述語の名前（小文字で使用）でもあります。
+クラス名のプレフィックス（例えば、[`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)の「`similar`」）は、クラスの&#x200B;*principalプロパティ*&#x200B;です。 このプロパティは、クエリ内で使用する述語の名前（小文字で使用）でもあります。
 
-For such principal properties, you can shorten the query and use &quot; `similar=/content/en`&quot; instead of the fully qualified variant &quot; `similar.similar=/content/en`&quot;. 完全修飾形式は、クラスのプリンシパルプロパティではないすべてのプロパティに対して使用する必要があります。
+このようなプリンシパルプロパティでは、クエリを短縮し、完全修飾バリアント&quot; `similar.similar=/content/en`&quot;の代わりに&quot; `similar=/content/en`&quot;を使用できます。 完全修飾形式は、クラスのプリンシパルプロパティではないすべてのプロパティに対して使用する必要があります。
 
-## Query Builder API の使用例 {#example-query-builder-api-usage}
+## Query Builder API の使用例  {#example-query-builder-api-usage}
 
 ```java
    String fulltextSearchTerm = "Geometrixx";
@@ -434,13 +434,13 @@ For such principal properties, you can shorten the query and use &quot; `similar
 
 ## クエリの保存と読み込み {#storing-and-loading-queries}
 
-クエリはリポジトリに保存して後で使用することができます。The `QueryBuilder` provides the `` `storeQuery` method with the following signature:
+クエリはリポジトリに保存して後で使用することができます。`QueryBuilder`は、次のシグネチャを持つ「`storeQuery`」メソッドを提供します。
 
 ```java
 void storeQuery(Query query, String path, boolean createFile, Session session) throws RepositoryException, IOException;
 ```
 
-[`QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) メソッドを使用すると、指定した `Query` が、`createFile` 引数の値に応じてファイルまたはプロパティとしてリポジトリに保存されます。The following example shows how to save a `Query` to the path `/mypath/getfiles` as a file:
+[`QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) メソッドを使用すると、指定した `Query` が、`createFile` 引数の値に応じてファイルまたはプロパティとしてリポジトリに保存されます。次の例は、`Query`をパス`/mypath/getfiles`にファイルとして保存する方法を示しています。
 
 ```java
 builder.storeQuery(query, "/mypath/getfiles", true, session);
@@ -452,7 +452,7 @@ builder.storeQuery(query, "/mypath/getfiles", true, session);
 Query loadQuery(String path, Session session) throws RepositoryException, IOException
 ```
 
-For example, a `Query` stored to the path `/mypath/getfiles` can be loaded by the following snippet:
+例えば、パス`/mypath/getfiles`に保存された`Query`は、次のスニペットで読み込むことができます。
 
 ```java
 Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
@@ -468,7 +468,7 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 
 `http://localhost:4502/bin/querybuilder.json?path=/tmp`
 
-( `path=/tmp` is only an example).
+（`path=/tmp`は一例にすぎません）。
 
 ### デバッグに関する一般的な推奨事項 {#general-debugging-recommendations}
 
@@ -478,14 +478,14 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 
 * QueryBuilder の DEBUG ログを有効にして、基になる説明可能な XPath クエリを取得します。
 
-   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglogに移動します。 Create a new logger for `com.day.cq.search.impl.builder.QueryImpl` at **DEBUG**.
+   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglogに移動します。 `com.day.cq.search.impl.builder.QueryImpl`の新しいロガーを&#x200B;**DEBUG**&#x200B;に作成します。
 
 * 上述のクラスで DEBUG を有効にすると、Query Builder で生成された XPath がログに表示されます。
 * 関連する QueryBuilder クエリのログエントリから XPath クエリをコピーします。以下に例を示します。
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* Paste the XPath query into [Explain Query](/help/sites-administering/operations-dashboard.md#explain-query) as XPath to obtrain the query plan
+* XPathクエリを[Explainクエリ](/help/sites-administering/operations-dashboard.md#explain-query)にXPathとして貼り付けて、クエリ計画を完了します
 
 ### Query Builder Debugger を使用して説明可能な XPath を取得する {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
@@ -497,14 +497,14 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 
 * QueryBuilder の DEBUG ログを有効にして、基になる説明可能な XPath クエリを取得します。
 
-   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglogに移動します。 Create a new logger for `com.day.cq.search.impl.builder.QueryImpl` at **DEBUG**.
+   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglogに移動します。 `com.day.cq.search.impl.builder.QueryImpl`の新しいロガーを&#x200B;**DEBUG**&#x200B;に作成します。
 
 * 上述のクラスで DEBUG を有効にすると、Query Builder で生成された XPath がログに表示されます。
 * 関連する QueryBuilder クエリのログエントリから XPath クエリをコピーします。以下に例を示します。
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* Paste the XPath query into [Explain Query](/help/sites-administering/operations-dashboard.md#explain-query) as XPath to obtain the query plan
+* XPathクエリを[Explainクエリ](/help/sites-administering/operations-dashboard.md#explain-query)にXPathとして貼り付けて、クエリ計画を取得します
 
 **Query Builder Debugger を使用して説明可能な XPath を取得する**
 
@@ -527,11 +527,11 @@ QueryBuilder でクエリをデバッグする方法の概要については、�
 >
 >[https://www.youtube.com/watch?v=BnyXjhRKYKc](https://www.youtube.com/watch?v=BnyXjhRKYKc)
 
-## ログ出力付きのクエリのデバッグ {#debugging-queries-with-logging}
+## ログ出力付きのクエリのデバッグ  {#debugging-queries-with-logging}
 
 >[!NOTE]
 >
->The configuration of the loggers is described in the section [Creating Your Own Loggers and Writers](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers).
+>ロガーの設定は、[独自のロガーとライターの作成](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers)で説明します。
 
 テストおよびデバッグの際に、記述されたクエリを実行したときの Query Builder 実装のログ出力（情報レベル）：
 
@@ -565,7 +565,7 @@ com.day.cq.search.impl.builder.QueryImpl filtering predicates: {nodename=nodenam
 com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 ```
 
-## Javadoc リンク {#javadoc-links}
+## Javadoc リンク  {#javadoc-links}
 
 | **Javadoc** | **説明** |
 |---|---|
