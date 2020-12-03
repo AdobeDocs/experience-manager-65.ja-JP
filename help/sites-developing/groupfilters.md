@@ -32,11 +32,11 @@ ht-degree: 83%
 
 作成したフィルターは[グループ設定](/help/sites-developing/mobile.md#creating-a-device-group)で使用できます。
 
-## フィルターの Java クラス {#the-filter-java-class}
+## フィルターの Java クラス  {#the-filter-java-class}
 
 デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。Therefore, the example Java class uses the `@Component`and `@Service` annotations. このクラスの構造は次のとおりです。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、この例のJavaクラスでは`@Component`および`@Service`注釈が使用されています。 このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -70,7 +70,7 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 
 次のメソッドのコードを指定する必要があります。
 
-* `getDescription`:フィルターの説明を返します。 この説明はデバイスグループ設定ダイアログに表示されます。
+* `getDescription`:フィルターの説明を返します。この説明はデバイスグループ設定ダイアログに表示されます。
 * `getTitle`：フィルターの名前を返します。この名前は、デバイスグループ用のフィルターを選択した場合に表示されます。
 * `matches`：デバイスに必要な機能が搭載されているかどうかを判断します。
 
@@ -90,7 +90,7 @@ public String getTitle() {
 
 1 言語のオーサリング環境の場合、名前と説明のテキストをハードコードするだけで十分です。複数言語を使用する場合や、ソースコードを再コンパイルせずに文字列の変更を有効にする場合は、文字列をエクスターナライズすることを検討してください。
 
-### フィルター条件に対する評価 {#evaluating-against-filter-criteria}
+### フィルター条件に対する評価  {#evaluating-against-filter-criteria}
 
 デバイスの機能がすべてのフィルター条件を満たす場合、`matches` 関数は `true` を返します。デバイスがグループに属しているかどうかを判断するには、メソッドの引数に指定された情報を評価します。次の値が引数として指定されます。
 
@@ -107,7 +107,7 @@ boolean cssSupport = true;
 cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML_SUPPORT_LEVEL)) > 1;
 ```
 
-The `org.apache.commons.lang.math` package provides the `NumberUtils` class.
+`org.apache.commons.lang.math`パッケージは`NumberUtils`クラスを提供します。
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ The `org.apache.commons.lang.math` package provides the `NumberUtils` class.
 
 以下に示すサンプルの DeviceGroupFilter 実装では、デバイスの物理サイズが最小要件を満たしているかどうかを判断します。このフィルターは、タッチデバイスグループに精度を追加します。アプリケーション UI のボタンのサイズは、画面の物理サイズに関係なく同じにしてください。他の項目（テキストなど）のサイズは変更できます。フィルターを使用すると、UI 要素のサイズを制御する特定の CSS を動的に選択できます。
 
-This filter applies size criteria to the `physical_screen_height` and `physical_screen_width` WURFL™ property names.
+このフィルタは、`physical_screen_height`と`physical_screen_width` WURFL™のプロパティ名にサイズ条件を適用します。
 
 ```java
 package com.adobe.example.myapp;
@@ -192,7 +192,7 @@ getTitle メソッドと getDescription メソッドが返す値 String は、�
 
 DeviceGroupインターフェイスとDeviceGroupFilterインターフェイスは、Day Communique 5 WCM Mobile APIバンドルに含まれています。Felix注釈は、Apache Felix Declarative Servicesバンドルに含まれます。このJARファイルは、パブリックAdobeリポジトリから取得できます。
 
-この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。Use Adobe Web Console ([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)) to ensure this is the bundle version that is deployed in your environment.
+この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。AdobeのWebコンソール([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))を使用して、これが環境ーに展開されたバンドルバージョンであることを確認します。
 
 **POM：**（ユーザーの POM では別の groupId と version が使用されます。）
 
