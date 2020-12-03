@@ -24,10 +24,10 @@ ht-degree: 94%
 
 Sling Binding はほとんどの場合、サービスにアクセスする方法として適切ではありません。代わりに、*@Reference* または *@Inject* 注釈を使用してください。
 
-## Avoid Thread.interrupt in Java code {#avoid-thread-interrupt-in-java-code}
+## Javaコード{#avoid-thread-interrupt-in-java-code}でのThread.interruptの回避
 
 *Thread.interrupt* を不適切なタイミングで呼び出すと、Lucene ファイルや永続キャッシュファイルを含め、ファイルが閉じられることがあるので、危険です。
 
-## Java 同期を ReadWriteLock とともに使用しない {#avoid-mixing-java-synchronization-with-readwritelocks}
+## Java 同期を ReadWriteLock とともに使用しない  {#avoid-mixing-java-synchronization-with-readwritelocks}
 
 競合状態が発生し、最終的にコードがデッドロックに陥ることがあります。
