@@ -53,7 +53,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 >
 >リンクは、常に、パブリッシュインスタンスを参照します。リンクは、サードパーティによって使用されることを意図しているので、オーサーインスタンスではなく、常にパブリッシュインスタンスから呼び出されます。
 
-![xf-14](assets/xf-14.png)
+![xf-12](assets/xf-14.png)
 
 プレーンレンディションセレクターでは、追加スクリプトとは異なり、トランスフォーマーを使用します。[Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) がトランスフォーマーとして使用されます。これは次の場所で設定されています。
 
@@ -88,7 +88,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 >
 >エクスペリエンスフラグメントでサポートされているのは、編集可能なテンプレート&#x200B;***だけ***[です。](/help/sites-developing/page-templates-editable.md)
 
-When developing a new template for Experience Fragments you can follow follow the standard practices for an [editable template](/help/sites-developing/page-templates-editable.md).
+エクスペリエンスフラグメント用の新しいテンプレートを開発する場合は、[編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)の標準的な慣行に従います。
 
 **エクスペリエンスフラグメントを作成**&#x200B;ウィザードで検出されるエクスペリエンスフラグメントテンプレートを作成するには、次のいずれかのルールセットに従う必要があります。
 
@@ -100,7 +100,7 @@ When developing a new template for Experience Fragments you can follow follow th
    1. テンプレートの名前は次の文字列で始まる必要があります。
       `experience-fragments`
 これにより、ユーザーは、エクスペリエンスフラグメントを/content/experience-fragments内に 
-`cq:allowedTemplates` このフォルダーのプロパティには、で始まる名前を持つすべてのテンプレートが含まれ `experience-fragment`ます。 ユーザーは、このプロパティを更新して、独自の命名方式やテンプレート場所を取り入れることができます。
+`cq:allowedTemplates` このフォルダーのプロパティには、で始まる名前を持つすべてのテンプレートが含まれ `experience-fragment`ます。ユーザーは、このプロパティを更新して、独自の命名方式やテンプレート場所を取り入れることができます。
 
 1. [使用可能なテンプレート](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder)はエクスペリエンスフラグメントコンソールで設定できます。
 
@@ -117,7 +117,7 @@ When developing a new template for Experience Fragments you can follow follow th
 
 [エクスペリエンスフラグメントで使用するコンポーネントの開発は、標準的な方法に従っておこないます。](/help/sites-developing/components.md)
 
-The only additional configuration is to ensure that the components are [allowed on the template, this is achieved with the Content Policy](/help/sites-developing/page-templates-editable.md#content-policies).
+追加の設定は、テンプレートでコンポーネントが[許可されていることを確認することだけです。これは、コンテンツポリシー](/help/sites-developing/page-templates-editable.md#content-policies)で達成できます。
 
 ## Experience Fragment Link Rewriter Provider - HTML {#the-experience-fragment-link-rewriter-provider-html}
 
@@ -130,13 +130,13 @@ AEM では、エクスペリエンスフラグメントを作成できます。�
 
 ### デフォルトのリンク書き換え {#default-link-rewriting}
 
-Using the [Export to Target](/help/sites-administering/experience-fragments-target.md) feature, you can:
+[ターゲット](/help/sites-administering/experience-fragments-target.md)に書き出し機能を使用すると、次のことができます。
 
 * エクスペリエンスフラグメントを作成する
 * エクスペリエンスフラグメントにコンポーネントを追加する
 * エクスペリエンスフラグメントを HTML 形式または JSON 形式で Adobe Target オファーとして書き出す
 
-This feature can be [enabled on an author instance of AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites). 有効な Adobe Target 設定と、Link Externalizer の設定が必要です。
+この機能は、AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites)の作成者インスタンスで[有効にできます。 有効な Adobe Target 設定と、Link Externalizer の設定が必要です。
 
 Link Externalizer は、Target オファーの HTML バージョンを作成する際に必要な正しい URL を決定するために使用されます。オファーは、その後 Adobe Target に送信されます。これが必要なのは、Adobe Target では Target HTML オファー内のすべてのリンクに公にアクセスできる必要があるからです。つまり、リンクが参照するあらゆるリソースとエクスペリエンスフラグメントそのものを使用するには、まずそれらを公開する必要があります。
 
@@ -174,7 +174,7 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
 
 >[!NOTE]
 >
->このインターフェイスは、 [AEM 6.5 SP1(6.5.1.0)で導入されました](/help/release-notes/sp-release-notes.md)。
+>このインターフェイスは、[AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/sp-release-notes.md)で導入されました。
 
 （[デフォルトのリンク書き換え](#default-link-rewriting)では対応していない）より複雑な場合のために、AEM では Link Rewriter Provider インターフェイスを提供しています。これは、バンドルにサービスとして実装できる `ConsumerType` インターフェイスです。このインターフェイスは、エクスペリエンスフラグメントからレンダリングされる HTML オファーの内部リンクに対して AEM で実行される変更をバイパスします。このインターフェイスを使用すると、内部 HTML リンクの書き換えプロセスをビジネスニーズに合わせてカスタマイズできます。
 
@@ -285,7 +285,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 * `link`
  
-`String` 現在処理中のリンクの表現。 これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
+`String` 現在処理中のリンクの表現。これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
 
 * `tag`：
 現在処理中の HTML 要素の名前です。
@@ -311,7 +311,7 @@ rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", a
 
 >[!NOTE]
 >
->For more information on how to get a resource resolver through a service user see [Service Users in AEM](/help/sites-administering/security-service-users.md).
+>サービスユーザーを介してリソースリゾルバーを取得する方法の詳細については、AEM](/help/sites-administering/security-service-users.md)の「[サービスユーザー」を参照してください。
 
 ```java
 private ResourceResolver resolver;
