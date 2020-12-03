@@ -11,13 +11,13 @@ ht-degree: 26%
 ---
 
 
-# 複数のインプレースエディターの設定 {#configure-multiple-in-place-editors}
+# 複数のインプレースエディターの設定{#configure-multiple-in-place-editors}
 
 Adobe Experience Managerでリッチテキストエディタを設定して、複数のインプレースエディタを使用できます。 このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。
 
 ![特定のインプレイスエディタ](assets/rte-inplace-editor.png)
 
-## 複数のエディターの設定 {#configure-multiple-editors}
+## 複数のエディターを設定{#configure-multiple-editors}
 
 複数のインプレースエディターを有効にするには、`cq:InplaceEditingConfig` ノードタイプの構造を `cq:ChildEditorConfig` ノードタイプの定義で強化します。
 
@@ -56,7 +56,7 @@ Adobe Experience Managerでリッチテキストエディタを設定して、�
 
 複数のエディターを設定するには、次の手順に従います。
 
-1. ノード `cq:inplaceEditing` (タイプ `cq:InplaceEditingConfig`)で次のプロパティを定義します。
+1. ノード`cq:inplaceEditing` （タイプ`cq:InplaceEditingConfig`の）で、次のプロパティを定義します。
 
    * 名前：`editorType`
    * 型：`String`
@@ -67,26 +67,26 @@ Adobe Experience Managerでリッチテキストエディタを設定して、�
    * 名前：`cq:ChildEditors`
    * 型：`nt:unstructured`
 
-1. Under `cq:childEditors` node, create a node for each in-place editor:
+1. `cq:childEditors`ノードの下に、各インプレースエディタのノードを作成します。
 
    * 名前：各ノードの名前は、それが表すプロパティの名前で、ドロップターゲットと同様に、 例えば、`image` と `text` です。
    * 型：`cq:ChildEditorConfig`
 
    >[!NOTE]
    >
-   >定義されたドロップターゲットと子エディターの間には相関関係があります。The name of the `cq:ChildEditorConfig` node is considered as the drop target ID, for use as a parameter to the selected child editor. 編集可能サブ領域にドロップターゲットがない場合（例えば、テキストコンポーネント内など）、子エディターの名前は、対応する編集可能領域を識別するIDと見なされます。
+   >定義されたドロップターゲットと子エディターの間には相関関係があります。`cq:ChildEditorConfig`ノードの名前はドロップターゲットIDと見なされ、選択した子エディターのパラメーターとして使用されます。 編集可能サブ領域にドロップターゲットがない場合（例えば、テキストコンポーネント内など）、子エディターの名前は、対応する編集可能領域を識別するIDと見なされます。
 
-1. On each of these nodes (`cq:ChildEditorConfig`) define the properties:
+1. これらの各ノード(`cq:ChildEditorConfig`)で、次のプロパティを定義します。
 
    * 名前: `type`.
-   * Value: The name of the registered in-place editor; for example, `image` and `text`.
+   * 値：登録インプレースエディタの名前（例：`image`、`text`）。
 
    * 名前: `title`.
    * 値：使用可能なエディターのコンポーネント選択リストに表示されるタイトル。 例えば、`Image` と `Text` です。
 
-### Additional configuration for Rich Text Editors {#additional-configuration-for-rich-text-editors}
+### リッチテキストエディタの追加設定{#additional-configuration-for-rich-text-editors}
 
-複数のリッチテキストエディター（RTE）の設定は、個々の RTE インスタンスをそれぞれ別個に設定できるので、やや異なります。詳しくは、「リッチテキストエディターの [設定](/help/sites-administering/rich-text-editor.md)」を参照してください。 複数のRTEに各インプレースRTEの設定を作成させる場合。 Adobeでは、個々のRTEごとに異なる設定を持つこ `cq:InplaceEditingConfig` とができるので、に新しい設定ノードを作成することをお勧めします。 新しいノードで、個々のRTE設定を作成します。
+複数のリッチテキストエディター（RTE）の設定は、個々の RTE インスタンスをそれぞれ別個に設定できるので、やや異なります。詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。 複数のRTEに各インプレースRTEの設定を作成させる場合。 Adobeでは、`cq:InplaceEditingConfig`の下に新しい設定ノードを作成することを推奨します。各RTEは異なる設定を持つことができます。 新しいノードで、個々のRTE設定を作成します。
 
 ```xml
     texttext
@@ -103,19 +103,19 @@ Adobe Experience Managerでリッチテキストエディタを設定して、�
 
 >[!NOTE]
 >
->ただし、RTE の場合、`configPath` プロパティがサポートされるのは、コンポーネント内のテキストエディター（編集可能なサブエリア）のインスタンスが 1 つだけのときです。This use of `configPath` is provided to support backwards compatibility with older user interface dialogs of the component.
+>ただし、RTE の場合、`configPath` プロパティがサポートされるのは、コンポーネント内のテキストエディター（編集可能なサブエリア）のインスタンスが 1 つだけのときです。この`configPath`の使用は、コンポーネントの古いユーザインターフェイスダイアログとの後方互換性をサポートするために提供されます。
 
 >[!CAUTION]
 >
->RTE 設定ノードの名前を `config` にしないでください。Otherwise, the RTE configurations are available for only the administrators and not for the users in the group `content-author`.
+>RTE 設定ノードの名前を `config` にしないでください。それ以外の場合は、RTE設定は管理者のみが使用でき、グループ`content-author`内のユーザーは使用できません。
 
-## Code samples {#code-samples}
+## コードサンプル{#code-samples}
 
-You can find the code of this page on [aem-authoring-hybrideditors project on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors). 完全なプロジェクトはZIPアーカイブとしてダウンロ [ードできます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)。
+このページのコードは、GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)の[aem-authoring-hybridededitorsプロジェクトにあります。 完全なプロジェクトは、[ZIPアーカイブ](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)としてダウンロードできます。
 
-## インプレ追加ースエディター {#add-an-in-place-editor}
+## インプレ追加ースエディタ{#add-an-in-place-editor}
 
-For general information about adding an in-place editor see the document [customize page authoring](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
+インプレースエディタの追加に関する一般的な情報については、[ページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor)のドキュメントを参照してください。
 
 >[!MORELIKETHIS]
 >
