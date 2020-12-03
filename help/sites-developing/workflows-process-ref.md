@@ -22,18 +22,18 @@ ht-degree: 59%
 
 AEM には、ワークフローモデルの作成に使用できるプロセスステップがいくつか用意されています。組み込みステップに含まれていないタスクについては、カスタムのプロセスステップを追加することができます（[ワークフローモデルの作成](/help/sites-developing/workflows-models.md)を参照）。
 
-## プロセスの特徴 {#process-characteristics}
+## プロセスの特徴  {#process-characteristics}
 
 プロセスステップごとに特徴を説明します。
 
-### Java クラスか ECMA パスか {#java-class-or-ecma-path}
+### Java クラスか ECMA パスか  {#java-class-or-ecma-path}
 
 プロセスステップは、Java クラスまたは ECMAScript によって定義されます。
 
 * Java クラスのプロセスの場合は、完全修飾クラス名を指定します。
 * ECMAScript プロセスの場合は、スクリプトへのパスを指定します。
 
-### ペイロード {#payload}
+### ペイロード  {#payload}
 
 ペイロードは、ワークフローインスタンスの処理対象となるエンティティです。ペイロードは、ワークフローインスタンスが開始されるコンテキストによって暗黙的に選択されます。
 
@@ -60,7 +60,7 @@ AEM には、ワークフローモデルの作成に使用できるプロセス�
 
 ### 権限 {#permissions}
 
-The session passed to the `WorkflowProcess` is backed by the service user for the workflow process service, which has the following permissions at the root of the repository:
+`WorkflowProcess`に渡されたセッションは、ワークフロープロセスサービスのサービスユーザーによって支援されます。このユーザーは、リポジトリのルートに次の権限を持ちます。
 
 * `jcr:read`
 * `rep:write`
@@ -68,7 +68,7 @@ The session passed to the `WorkflowProcess` is backed by the service user for th
 * `jcr:lockManagement`
 * `crx:replicate`
 
-If that set of permissions is not sufficient for your `WorkflowProcess` implementation, then it must use a session with the required permissions.
+`WorkflowProcess`の実装にその権限セットが十分でない場合は、必要な権限を持つセッションを使用する必要があります。
 
 これをおこなうには、必要な（ただし最小限の）権限のサブセットを持つよう作成されたサービスユーザーを使用する方法が推奨されます。
 
@@ -82,7 +82,7 @@ If that set of permissions is not sufficient for your `WorkflowProcess` implemen
 >
 >コードの変更を実行できない場合は、短期的な解決方法も後方互換性の目的で利用できます。
 >
->* Using the Web Console ( `/system/console/configMgr` locate the **Adobe Granite Workflow Configuration Service**
+>* Webコンソール(`/system/console/configMgr`)を使用して、**AdobeGranite Workflow Configuration Service**&#x200B;を探します
    >
    >
 * **Workflow Process Legacy Mode** を有効にします。
@@ -94,7 +94,7 @@ If that set of permissions is not sufficient for your `WorkflowProcess` implemen
 
 次のプロセスは、コンテンツに対して何も実行しません。 ワークフロー自体の動作を制御する役割を果たします。
 
-### AbsoluteTimeAutoAdvancer (Absolute Time Auto Advancer) {#absolutetimeautoadvancer-absolute-time-auto-advancer}
+### AbsoluteTimeAutoAdvancer (Absolute Time AutoAdvancer) {#absolutetimeautoadvancer-absolute-time-auto-advancer}
 
 `AbsoluteTimeAutoAdvancer`（絶対時刻自動アドバンサー）プロセスは、**AutoAdvancer** とまったく同じように動作します。例外は、指定された長さの時間が経過した後ではなく、指定された日時にタイムアウトする点です。
 
@@ -113,7 +113,7 @@ If that set of permissions is not sufficient for your `WorkflowProcess` implemen
 * **引数**：なし
 * **タイムアウト**：設定された時間が経過すると、プロセスはタイムアウトします。
 
-### ProcessAssembler (Process Assembler) {#processassembler-process-assembler}
+### ProcessAssembler （プロセスアセンブラ） {#processassembler-process-assembler}
 
 `ProcessAssembler` プロセスは、単一のワークフローステップ内で複数のサブプロセスを順番に実行します。`ProcessAssembler` を使用するには、ワークフロー内にこのタイプのステップを 1 つ作成し、実行するサブプロセスの名前と引数を示す引数を設定します。
 
@@ -157,13 +157,13 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 >
 >`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
+>これは、次回インスタンスをアップグレードする際に`/libs`の内容が上書きされるためです（修正プログラムまたは機能パックを適用すると、上書きされる場合があります）。
 
 ### を削除します。{#delete} 
 
 指定されたパスにある項目が削除されます。
 
-* **ECMAScriptパス**: `/libs/workflow/scripts/delete.ecma`
+* **ECMAScriptパス**:  `/libs/workflow/scripts/delete.ecma`
 
 * **ペイロード**:JCRパス
 * **引数**:なし
@@ -173,7 +173,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 これはヌルプロセスです。処理は実行しませんが、デバッグメッセージをログに記録します。
 
-* **ECMAScriptパス**: `/libs/workflow/scripts/noop.ecma`
+* **ECMAScriptパス**:  `/libs/workflow/scripts/noop.ecma`
 
 * **ペイロード**:なし
 * **引数**:なし
@@ -181,9 +181,9 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ### rule-false {#rule-false}
 
-This is a null process that returns `false` on the `check()` method.
+これは、`check()`メソッドで`false`を返すnullプロセスです。
 
-* **ECMAScriptパス**: `/libs/workflow/scripts/rule-false.ecma`
+* **ECMAScriptパス**:  `/libs/workflow/scripts/rule-false.ecma`
 
 * **ペイロード**:なし
 * **引数**:なし
@@ -193,7 +193,7 @@ This is a null process that returns `false` on the `check()` method.
 
 これは、ECMAScript プロセスのサンプルです。
 
-* **ECMAScriptパス**: `/libs/workflow/scripts/sample.ecma`
+* **ECMAScriptパス**:  `/libs/workflow/scripts/sample.ecma`
 
 * **ペイロード**:なし
 * **引数**:なし
@@ -203,7 +203,7 @@ This is a null process that returns `false` on the `check()` method.
 
 これは、指定されたURLを呼び出す簡単なワークフロープロセスです。 通常、URLは、単純なタスクを実行するJSP（または他のサーブレットに相当する）への参照です。 このプロセスは開発およびデモンストレーションのときにのみ使用し、実稼動環境では使用しないようにする必要があります。引数は、URL、ログイン、パスワードを指定します。
 
-* **ECMAScriptパス**: `/libs/workflow/scripts/urlcaller.ecma`
+* **ECMAScriptパス**:  `/libs/workflow/scripts/urlcaller.ecma`
 
 * **ペイロード**:なし
 * **引数**：
@@ -253,7 +253,7 @@ This is a null process that returns `false` on the `check()` method.
 
 以下のプロセスは、バージョン関連のタスクを実行します。
 
-### CreateVersionProcess {#createversionprocess}
+### CreateVersionProcess  {#createversionprocess}
 
 ワークフローペイロード（AEM ページまたは DAM アセット）の新しいバージョンを作成します。
 
