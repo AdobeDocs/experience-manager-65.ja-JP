@@ -15,12 +15,12 @@ translation-type: tm+mt
 source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 78%
+ht-degree: 87%
 
 ---
 
 
-# API ガイド {#api-guides}
+# API ガイド  {#api-guides}
 
 Adobe Experience Manager（AEM）では、アプリケーション開発および AEM 拡張用の API をいくつか提供しています。以下は、AEM でサポートされている API のドキュメントの一覧です。
 
@@ -37,7 +37,7 @@ AEM シングルページアプリケーション（SPA）エディター SDK �
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 * [React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [編集可能なAngularコンポーネント](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+* [編集可能な Angular コンポーネント](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 AEM 配信およびコンテンツ管理 API
 
