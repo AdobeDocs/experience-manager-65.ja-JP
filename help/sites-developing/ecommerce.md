@@ -33,15 +33,15 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->Since the eCommerce framework can be used with any eCommerce solution, see [Developing (generic)](/help/sites-developing/generic.md) for more information about developing possibilities.
+>eコマースフレームワークはeコマースソリューションと共に使用できるので、開発方法の詳細については、[開発（汎用）](/help/sites-developing/generic.md)を参照してください。
 
 >[!NOTE]
 >
->この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。For more information, see [Deploying eCommerce](/help/sites-deploying/ecommerce.md).
+>この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースの導入](/help/sites-deploying/ecommerce.md)を参照してください。
 >
 >e コマースの実装の概念および管理について詳しくは、[e コマースの管理](/help/sites-administering/ecommerce.md)を参照してください。
 
-## API に関するドキュメント {#api-documentation}
+## API に関するドキュメント  {#api-documentation}
 
 e コマース API は、次のパッケージで提供されます。
 
@@ -51,4 +51,4 @@ e コマース API は、次のパッケージで提供されます。
 
 >[!NOTE]
 >
->For a complete article detailing all the steps to build an eCommerce provider see [Creating custom Adobe Experience Manager 6.2 eCommerce providers](https://helpx.adobe.com/jp/experience-manager/using/ecommerce62.html).
+>eコマースプロバイダを構築するすべての手順について詳しくは、[カスタムAdobe Experience Manager6.2 eコマースプロバイダの作成](https://helpx.adobe.com/jp/experience-manager/using/ecommerce62.html)を参照してください。
