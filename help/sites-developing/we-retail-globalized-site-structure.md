@@ -22,7 +22,7 @@ ht-degree: 91%
 
 We.Retail は、国固有の Web サイトにライブコピーできる言語マスターを提供するグローバル化されたサイト構造を使用して構築されています。この構造と組み込みの翻訳機能を試すことができるように、すべてが最初から設定されています。
 
-## 試してみる {#trying-it-out}
+## 試してみる  {#trying-it-out}
 
 1. **グローバルナビゲーション／サイト**&#x200B;からサイトコンソールを開きます。
 1. 列表示（まだアクティブでない場合）に切り替え、We.Retail を選択します。スイス、米国、フランスなどの国構造の例を、言語マスターと共に示します。
@@ -73,4 +73,4 @@ We.Retail は、国固有の Web サイトにライブコピーできる言語�
 
 ## その他の情報 {#further-information}
 
-For further information, refer to the authoring document [Translating Content for Multilingual Sites](/help/sites-administering/translation.md) for complete technical details.
+詳細については、オーサリングドキュメント[Translating Content for Multilingual Sites](/help/sites-administering/translation.md)を参照して、技術的な詳細を確認してください。
