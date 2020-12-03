@@ -18,9 +18,9 @@ AEM 6.5は、オンプレミスとAMSの両方の実装の最新のAEM Project A
 >
 >詳しくは、次を参照してください。
 >
->* AEMの [AEM Project Structure](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.translate.html) （プロジェクト構造）記事は、最新のAEMプロジェクトの構造を作成する方法に関するCloud Serviceドキュメントとして提供されています。
->* アーキタイプを使用して新しいAEMプロジェクトを開始する方法については、 [AEMプロジェクトのアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html) ・ドキュメントを参照してください。
->* AEMの「 [AdobeコンテンツパッケージMavenプラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) 」の記事は、AEMアプリケーションの展開方法に関するCloud Serviceドキュメントとして提供されています。
+>* AEMの[AEM Project Structure](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.translate.html)記事は、最新のAEMプロジェクトの構造化方法に関するCloud Serviceドキュメントとして提供されています。
+>* アーキタイプを使用して新しいAEMプロジェクトを開始する方法については、[AEMプロジェクトのアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)のドキュメントを参照してください。
+>* AEMの[AdobeコンテンツパッケージMavenプラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools)の記事は、AEMアプリケーションの展開方法に関するCloud Serviceドキュメントとして提供されています。
 
 >
 >
