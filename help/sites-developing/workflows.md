@@ -39,11 +39,11 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 >
 >参考情報：
 >
->* Participating in workflows, see [Using Workflows](/help/sites-authoring/workflows.md).
+>* ワークフローへの参加については、[ワークフローの使用](/help/sites-authoring/workflows.md)を参照してください。
 >* ワークフローとワークフローインスタンスの管理については、[ワークフローの管理](/help/sites-administering/workflows.md)を参照してください。
->* For an end-to-end Community Article see [Modifying Digital Assets using Adobe Experience Manager Workflows.](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
->* See the [Ask the AEM Experts Webinar on Workflows](https://bit.ly/ATACE218).
->* For an end-to-end Community Article see [Creating a custom Adobe Experience Manager 6.3 Dynamic Participant step](https://helpx.adobe.com/experience-manager/using/dynamic-steps-aem63.html).
+>* エンドツーエンドのコミュニティの記事については、[Adobe Experience Managerワークフローを使用したデジタルアセットの変更を参照してください。](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
+>* ワークフロー](https://bit.ly/ATACE218)の[AEMの専門家に質問するウェビナーを参照してください。
+>* エンドツーエンドのコミュニティの記事については、[カスタムのAdobe Experience Manager6.3動的参加者の作成手順](https://helpx.adobe.com/experience-manager/using/dynamic-steps-aem63.html)を参照してください。
 >* 情報の場所の変更点については、[AEM 6.5 のリポジトリの再構成](/help/sites-deploying/repository-restructuring.md)と[ワークフローに関するベストプラクティス - 場所](/help/sites-developing/workflows-best-practices.md#locations)を参照してください。
 
 >
@@ -52,7 +52,7 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 
 ## モデル {#model}
 
-`WorkflowModel` は、ワークフローの定義（モデル）を表します。ANDででき `WorkflowNodes` てい `WorkflowTransitions`ます。 The transitions connect the nodes and define the *flow*. モデルには常に開始ノードと終了ノードがあります。
+`WorkflowModel` は、ワークフローの定義（モデル）を表します。`WorkflowNodes`と`WorkflowTransitions`で作られます。 トランジションはノードを接続し、*フロー*&#x200B;を定義します。 モデルには常に開始ノードと終了ノードがあります。
 
 ### ランタイムモデル {#runtime-model}
 
@@ -60,7 +60,7 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 
 ランタイムモデルは、[ワークフローモデルのエディターで&#x200B;**同期**&#x200B;が実行されたときに作成されます](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)。
 
-Edits to the workflow model that occur, and/or runtime models that are generated, *after* the specific instance was started will not be applied to that instance.
+発生するワークフローモデル、または生成されたランタイムモデルに対する編集（**&#x200B;の後）は、そのインスタンスに適用されません。
 
 >[!CAUTION]
 >
@@ -68,7 +68,7 @@ Edits to the workflow model that occur, and/or runtime models that are generated
 >
 >その時点より後にワークフローモデルが変更されても（**同期**&#x200B;を実行しない限り）、ランタイムインスタンスにその変更が反映されることはありません。変更後に作成されたランタイムモデルのみに、その変更が反映されます。例外は、基になる ECMA スクリプトです。このスクリプトは一度だけ実行されるので、スクリプトに対する変更が取り込まれます。
 
-### ステップ {#step}
+### ステップ  {#step}
 
 各ステップは個別のタスクを実行します。ワークフローステップには、様々な種類があります。
 
@@ -78,21 +78,21 @@ Edits to the workflow model that occur, and/or runtime models that are generated
 * OR 分割／結合：ロジックを使用して、ワークフローで次に実行するステップを決定します。
 * AND 分割／結合：複数のステップを同時に実行できます。
 
-All the steps share the following common properties: `Autoadvance` and `Timeout` alerts (scriptable).
+すべての手順で、次の共通のプロパティを共有します。`Autoadvance`と`Timeout`の警告（スクリプト可能）。
 
 ### トランジション {#transition}
 
-A `WorkflowTransition` represents a transition between two `WorkflowNodes` of a `WorkflowModel`.
+`WorkflowTransition`は、`WorkflowModel`の2つの`WorkflowNodes`の間のトランジションを表します。
 
 * 2 つの連続したステップ間のリンクを定義します。
 * 規則を適用することができます。
 
-### WorkItem {#workitem}
+### WorkItem  {#workitem}
 
-A `WorkItem` is the unit that is passed through an `Workflow` instance of a `WorkflowModel`. It contains the `WorkflowData` that the instance acts on and a reference to the `WorkflowNode` that describes the underlying workflow step.
+`WorkItem`は、`WorkflowModel`の`Workflow`インスタンスを通して渡される単位です。 インスタンスの動作対象となる`WorkflowData`と、基になるワークフロー手順を説明する`WorkflowNode`への参照が含まれます。
 
 * タスクを識別するために使用され、それぞれのインボックスに入れられます。
-* A workflow instance can have one or many `WorkItems` at the same time (depending on the workflow model).
+* ワークフローインスタンスは、（ワークフローモデルに応じて）1つまたは複数の`WorkItems`を同時に持つことができます。
 * `WorkItem` はワークフローインスタンスを参照します。
 * リポジトリ内では、`WorkItem` はワークフローインスタンスの下に保存されます。
 
@@ -102,7 +102,7 @@ A `WorkItem` is the unit that is passed through an `Workflow` instance of a `Wor
 
 ペイロードの実装は、リポジトリ内のリソースを（パス、UUID、URL またはシリアル化された Java オブジェクトによって）参照します。リポジトリ内のリソースの参照は、柔軟性に富み、Sling を併用すると生産性が向上します。例えば、参照されたノードをフォームとしてレンダリングできます。
 
-### Lifecycle {#lifecycle}
+### Lifecycle  {#lifecycle}
 
 （対応するワークフローモデルを選択し、ペイロードを定義して）新しいワークフローを起動したときに作成され、終了ノードが処理されたときに終了します。
 
@@ -115,11 +115,11 @@ A `WorkItem` is the unit that is passed through an `Workflow` instance of a `Wor
 
 完了または強制終了したインスタンスはアーカイブされます。
 
-### インボックス {#inbox}
+### インボックス  {#inbox}
 
-Each user account has its own workflow inbox in which the assigned `WorkItems` are accessible.
+各ユーザーアカウントには、割り当てられた`WorkItems`にアクセスできる独自のワークフローインボックスがあります。
 
-The `WorkItems` are assigned to either the user account directly or to the group to which they belongs.
+`WorkItems`は、ユーザーアカウントに直接割り当てられるか、またはユーザーが属するグループに割り当てられます。
 
 ### ワークフローのタイプ {#workflow-types}
 
@@ -170,7 +170,7 @@ The `WorkItems` are assigned to either the user account directly or to the group
 >
 >一時的ワークフロー内では、**ステップに移動**&#x200B;を使用しないでください。
 >
->This is as the **Goto Step** creates a sling job to continue the workflow at the `goto` point. これにより、ワークフローを一時的にする目的が損なわれ、ログファイルにエラーが生成されます。
+>これは、**Goto Step**&#x200B;がSlingジョブを作成して`goto`ポイントでワークフローを続行するためのものです。 これにより、ワークフローを一時的にする目的が損なわれ、ログファイルにエラーが生成されます。
 >
 >一時的ワークフローで判断をおこなうには、**OR 分割**&#x200B;を使用できます。
 
@@ -178,9 +178,9 @@ The `WorkItems` are assigned to either the user account directly or to the group
 >
 >一時的ワークフローがアセットのパフォーマンスに与える影響について詳しくは、[アセットのベストプラクティス](/help/assets/performance-tuning-guidelines.md#transient-workflows)を参照してください。
 
-### マルチリソースのサポート {#multi-resource-support}
+### マルチリソースのサポート  {#multi-resource-support}
 
-Activating **Multi Resource Support** for your workflow model means that a single workflow instance will be started even when you select multiple resources; these will be attached as a package.
+ワークフローモデルに対して&#x200B;**Multi Resource Support**&#x200B;をアクティブにすると、複数のリソースを選択した場合でも、単一のワークフローインスタンスが開始されます。これらはパッケージとして添付されます。
 
 ワークフローモデルの&#x200B;**マルチリソースのサポート**&#x200B;をアクティベートせずに複数のリソースを選択した場合、各リソースに対して個別のワークフローインスタンスが起動します。
 
@@ -210,14 +210,14 @@ Activating **Multi Resource Support** for your workflow model means that a singl
    | ステップ 5 | 完了 |
    | ステップ 6 | 完了 |
 
-1. ワークフローが実行されると、ユーザーは進行状況を（ステップ名ではなく）ステージ名に照らして確認できます。The workflow progress will be displayed in the [WORKFLOW INFO tab of the task details window of the workitem](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions) listed in the [Inbox](/help/sites-authoring/inbox.md).
+1. ワークフローが実行されると、ユーザーは進行状況を（ステップ名ではなく）ステージ名に照らして確認できます。ワークフローの進行状況は、[インボックス](/help/sites-authoring/inbox.md)に一覧表示されている作業項目](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)のタスクの詳細ウィンドウの「[WORKFLOW INFO」タブに表示されます。
 
 ### ワークフローおよびフォーム {#workflows-and-forms}
 
-一般的には、ワークフローは AEM でのフォーム送信の処理に使用されます。This can be with the [core components form components](https://helpx.adobe.com/experience-manager/core-components/using/form-container.html) available in a standard AEM instance, or with the [AEM Forms solution](/help/forms/using/aem-forms-workflow.md).
+一般的には、ワークフローは AEM でのフォーム送信の処理に使用されます。これは、標準のAEMインスタンスで使用できる[コアコンポーネントフォームコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/form-container.html)、または[AEM Formsソリューション](/help/forms/using/aem-forms-workflow.md)で使用できます。
 
 新しいフォームの作成時に、フォームの送信を簡単にワークフローモデルに関連付けることができます。これにより、例えばコンテンツをリポジトリの特定の場所に格納したり、ユーザーにフォームの送信とその内容について通知したりすることができます。
 
-### ワークフローおよび翻訳 {#workflows-and-translation}
+### ワークフローおよび翻訳  {#workflows-and-translation}
 
 ワークフローは、[翻訳](/help/sites-administering/translation.md)プロセスの重要な要素でもあります。
