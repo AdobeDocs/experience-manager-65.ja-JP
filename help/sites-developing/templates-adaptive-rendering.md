@@ -45,7 +45,7 @@ ht-degree: 83%
 
 この例では、We.Retail 内に&#x200B;**エクスペリエンスページ**&#x200B;テンプレートの一部としてアダプティブレンダリングセレクターが含まれるように、既存のデバイスグループである&#x200B;**スマートフォン**&#x200B;を設定します。
 
-1. Edit the device group that requires an adaptive selector in `http://localhost:4502/miscadmin#/etc/mobile/groups`
+1. `http://localhost:4502/miscadmin#/etc/mobile/groups`内のアダプティブセレクターを必要とするデバイスグループを編集
 
    「**エミュレーターを無効にする**」オプションを設定して保存します。
 
@@ -65,7 +65,7 @@ ht-degree: 83%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. Using CRX DE Lite, allow the device group to be used on your site by adding it to the multi-value string property `cq:deviceGroups` on the structure of your site.
+1. CRX DE Liteを使用して、デバイスグループをサイトの構造上の複数値の文字列プロパティ`cq:deviceGroups`に追加することで、そのデバイスグループをサイトで使用できるようにします。
 
    `/content/<your-site>/jcr:content`
 
@@ -77,7 +77,7 @@ ht-degree: 83%
 
 これで、ページエディターで[エミュレーター](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)を使用する際（[レイアウトを変更する](/help/sites-authoring/responsive-layout.md)場合など）、設定済みのデバイスグループのデバイスを選択すると、URL の一部としてセレクターを持つページがレンダリングされるようになります。
 
-In our example, when editing a page based on the **Experience Page** template, and choosing iPhone 4 in the emulator, the page is rendered including the selector as `arctic-surfing-in-lofoten.smart.html` instead of `arctic-surfing-in-lofoten.html`
+この例では、**エクスペリエンスページ**&#x200B;テンプレートに基づいてページを編集し、エミュレーターでiPhone 4を選択すると、セレクターを含むページが`arctic-surfing-in-lofoten.html`ではなく`arctic-surfing-in-lofoten.smart.html`としてレンダリングされます
 
 このセレクターを使用してページを直接呼び出すこともできます。
 
