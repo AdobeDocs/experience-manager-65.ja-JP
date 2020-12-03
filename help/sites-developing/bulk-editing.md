@@ -18,7 +18,7 @@ ht-degree: 82%
 ---
 
 
-# ページプロパティの一括編集のためのページの設定 {#configuring-your-page-for-bulk-editing-of-page-properties}
+# ページプロパティの一括編集のためのページの設定  {#configuring-your-page-for-bulk-editing-of-page-properties}
 
 [ページプロパティの一括編集](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages)を使用すると、複数のページのプロパティを一度に編集できます。
 
@@ -43,7 +43,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Bulk editing is also available for Assets. It is very similar, but differs in a few points. See [Editing Properties of Multiple Assets](/help/assets/metadata.md) for full information. You can customize the fields in the Bulk Metadata editor for Assets using the [Schema editor](/help/assets/metadata-schemas.md).
+>バルク編集は、アセットに対しても使用できます。非常に似ていますが、いくつかの点で異なります。詳しくは、[複数のアセットのプロパティの編集](/help/assets/metadata.md)を参照してください。アセット用のバルクメタデータエディタで、[スキーマエディタ](/help/assets/metadata-schemas.md)を使用してフィールドをカスタマイズできます。
 
 ## フィールドの有効化 {#enabling-a-field}
 
@@ -72,7 +72,7 @@ ht-degree: 82%
    >
    >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を参照してください。
 
-1. Navigate to the required field within the `cq:dialog` definition.
+1. `cq:dialog`定義内の必須フィールドに移動します。
 1. フィールドノードで次のプロパティを定義します。
 
    * **名前**：`allowBulkEdit`
@@ -95,7 +95,7 @@ ht-degree: 82%
    >
    >設定およびその他の変更に推奨される方法は次のとおりです。
    >
-   >    1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
+   >    1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
    >    1. `/apps` 内で変更作業をおこないます。
 
 
