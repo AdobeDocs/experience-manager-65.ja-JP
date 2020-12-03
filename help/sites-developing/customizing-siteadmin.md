@@ -120,7 +120,7 @@ public class StarredListInfoProvider implements ListInfoProvider {
 
 ### 新しいサービスのテスト {#testing-the-new-service}
 
-Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための ajax 呼び出しを発行します。For example, when you browse to the `/content/geometrixx` folder, the following request is sent to the AEM server to build the console:
+Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための ajax 呼び出しを発行します。例えば、`/content/geometrixx`フォルダーを参照すると、AEMサーバーに次の要求が送信され、コンソールが構築されます。
 
 [https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
@@ -135,30 +135,30 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
 
 ### 新しい列の表示 {#displaying-the-new-column}
 
-The last step consists in adapting the nodes structure of the Websites Administration console to display the new property for all the Geometrixx pages by overlaying `/libs/wcm/core/content/siteadmin`. 以下の手順を実行します。
+最後の手順では、Webサイト管理コンソールのノード構造を適合させ、`/libs/wcm/core/content/siteadmin`をオーバーレイしてすべてのGeometrixxページの新しいプロパティを表示します。 以下の手順を実行します。
 
-1. In CRXDE Lite, create the nodes structure `/apps/wcm/core/content` with nodes of type `sling:Folder` to reflect the structure `/libs/wcm/core/content`.
+1. CRXDE Liteで、ノード構造`/apps/wcm/core/content`をタイプ`sling:Folder`のノードで作成し、構造`/libs/wcm/core/content`を反映します。
 
-1. ノードをコピー `/libs/wcm/core/content/siteadmin` し、下に貼り付け `/apps/wcm/core/content`ます。
+1. ノード`/libs/wcm/core/content/siteadmin`をコピーして`/apps/wcm/core/content`の下に貼り付けます。
 
-1. ノードをにコピー `/apps/wcm/core/content/siteadmin/grid/assets` し、そのプロパティ `/apps/wcm/core/content/siteadmin/grid/geometrixx` を変更します。
+1. ノード`/apps/wcm/core/content/siteadmin/grid/assets`を`/apps/wcm/core/content/siteadmin/grid/geometrixx`にコピーし、そのプロパティを変更します。
 
    * **pageText** を削除
 
-   * Set **pathRegex** to `/content/geometrixx(/.*)?`
-This will make the grid configuration active for all geometrixx websites.
+   * **pathRegex**&#x200B;を`/content/geometrixx(/.*)?`に設定
+これにより、すべてのgeometrixx Webサイトでグリッド設定がアクティブになります。
 
-   * Set **storeProxySuffix** to `.pages.json`
+   * **storeProxySuffix**&#x200B;を`.pages.json`に設定
 
    * 複数値プロパティ **storeReaderFields** を編集し、`starred` 値を追加します。
 
-   * To activate MSM functionality add the following MSM parameters to the multi-String property **storeReaderFields**:
+   * MSM機能をアクティブ化するには、次のMSMパラメーターをmulti-Stringプロパティ&#x200B;**storeReaderFields**&#x200B;に追加します。
 
       * **msm:isSource**
       * **msm:isInBlueprint**
       * **msm:isLiveCopy**
 
-1. Add a `starred` node (of type **nt:unstructured**) below `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` with the following properties:
+1. 追加`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`の下の`starred`ノード（タイプ&#x200B;**nt:unstructured**）で、次のプロパティが含まれます。
 
    * **dataIndex**: `starred` 文字列型
 
@@ -166,10 +166,9 @@ This will make the grid configuration active for all geometrixx websites.
 
    * **xtype**: `gridcolumn` 文字列型
 
-1. (optional) Drop the columns you do not want to display at `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
+1. （オプション）`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`に表示したくない列をドロップします。
 
-1. `/siteadmin` は、デフォルトでは、を指すバニティパスで `/libs/wcm/core/content/siteadmin`す。
-To redirect this to your version of siteadmin on `/apps/wcm/core/content/siteadmin` define the property `sling:vanityOrder` to have a value higher than that defined on `/libs/wcm/core/content/siteadmin`. デフォルト値は 300 なので、それより大きい値が適しています。
+1. `/siteadmin` は、デフォルトでは、を指すバニティパスで `/libs/wcm/core/content/siteadmin`す。これを`/apps/wcm/core/content/siteadmin`上のご使用のバージョンのsiteadminにリダイレクトするには、`/libs/wcm/core/content/siteadmin`上で定義された値より大きい値を持つプロパティ`sling:vanityOrder`を定義します。 デフォルト値は 300 なので、それより大きい値が適しています。
 
 1. Webサイト管理コンソールに移動し、Geometrixxサイトに移動します。
    [https://localhost:4502/siteadmin#/content/geometrixx](https://localhost:4502/siteadmin#/content/geometrixx).
@@ -182,6 +181,6 @@ To redirect this to your version of siteadmin on `/apps/wcm/core/content/siteadm
 >
 >**pathRegex** プロパティによって定義されるリクエストパスに複数のグリッド設定が一致する場合は、最も詳しい設定ではなく、最初の設定が使用されます。つまり、設定の順序が重要です。
 
-### サンプルパッケージ {#sample-package}
+### サンプルパッケージ  {#sample-package}
 
-The outcome of this tutorial is available in the [Customizing the Websites Administration Console](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) package on Package Share.
+このチュートリアルの結果は、パッケージ共有の[Webサイト管理コンソール](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin)パッケージのカスタマイズで確認できます。
