@@ -32,11 +32,11 @@ ht-degree: 63%
 
 ### 依存関係 {#dependencies}
 
-依存関係に依存するコンポーネントはすべて、CSRF保護フレームワークのメリットを自動的に受けます。 `granite.jquery` どのコンポーネントでもこのような状況にならない場合は、フレームワークを使用する前に、に依存関係を宣言する必要 `granite.csrf.standalone` があります。
+`granite.jquery`依存関係に依存するコンポーネントは、CSRF保護フレームワークから自動的にメリットを得られます。 どのコンポーネントにも該当しない場合は、フレームワークを使用する前に`granite.csrf.standalone`への依存関係を宣言する必要があります。
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
-In order to make use of the tokens, you need to replicate the `/etc/keys/hmac` binary to all of the instances in your deployment. HMAC 鍵をすべてのインスタンスにコピーするには、鍵を格納するパッケージを作成し、パッケージマネージャーを使用してすべてのインスタンスにインストールする方法が便利です。
+トークンを使用するには、展開内のすべてのインスタンスに`/etc/keys/hmac`バイナリを複製する必要があります。 HMAC 鍵をすべてのインスタンスにコピーするには、鍵を格納するパッケージを作成し、パッケージマネージャーを使用してすべてのインスタンスにインストールする方法が便利です。
 
 >[!NOTE]
 >
@@ -44,6 +44,6 @@ In order to make use of the tokens, you need to replicate the `/etc/keys/hmac` b
 
 >[!NOTE]
 >
->If you use the manifest cache with your web application, make sure you add &quot;**&amp;ast;**&quot; to the manifest in order to make sure the token does not take the CSRF token generation call offline. 詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
+>Webアプリケーションでマニフェストキャッシュを使用する場合、トークンがCSRFトークン生成呼び出しをオフラインにしないように、マニフェストに&quot;**&amp;ast;**&quot;を追加してください。 詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
 >
 >CSRF 攻撃とその軽減方法について詳しくは、[OWASP のクロスサイトリクエストフォージェリに関するページ](https://owasp.org/www-community/attacks/csrf)を参照してください。
