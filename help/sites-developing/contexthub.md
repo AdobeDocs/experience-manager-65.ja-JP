@@ -1,8 +1,8 @@
 ---
 title: ContextHub
 seo-title: ContextHub
-description: ContextHubは、コンテキストデータの保存、操作、表示のためのフレームワークです
-seo-description: ContextHubは、コンテキストデータの保存、操作、表示のためのフレームワークです
+description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。
+seo-description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。
 uuid: 14e6ff4f-ffbe-454a-b2ec-a35333526e27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,14 +13,14 @@ translation-type: tm+mt
 source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 67%
+ht-degree: 86%
 
 ---
 
 
 # ContextHub{#contexthub}
 
-ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。クライアント側のJavaScript APIを使用すると、コンテンツのパーソナライズ用にデータにアクセスできます。
+ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
 
 >[!NOTE]
 >
@@ -28,22 +28,22 @@ ContextHub は、コンテキストデータを保存、操作および表示す
 
 >[!CAUTION]
 >
->The path containing the sample ContextHub configuration that is used by the [We.Retail reference implementation](/help/sites-developing/we-retail.md) ( `/libs/settings/cloudsettings/legacy`) should only be used as a reference for creating your own configuration.
+>[We.Retail参照実装](/help/sites-developing/we-retail.md) (`/libs/settings/cloudsettings/legacy`)で使用されるサンプルのContextHub構成を含むパスは、独自の構成を作成するための参照としてのみ使用する必要があります。
 >
 >プロジェクトでは、独自のContextHub設定として使用しないでください。
 
 ## 永続性 {#persistence}
 
-ContextHub ストアは、コンテキストデータをクライアント上に保持します。ContextHub Javascript APIを使用すると、ストアにアクセスし、必要に応じてデータを作成、更新、削除できます。 したがって、ContextHub はページ上のデータレイヤーに相当します。
+ContextHub ストアは、コンテキストデータをクライアント上に保持します。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。
 
 個々の ContextHub ストアは、事前定義されたストアタイプのインスタンスです。
 
 * ContextHub には、いくつかの[ストアタイプのサンプル](/help/sites-developing/ch-samplestores.md)が用意されています。
 * AEM コンソールを使用して[ストアを作成](ch-configuring.md#creating-a-contexthub-store)します。
-* Developers can [create custom store types](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).
+* デベロッパーは、[カスタムストアタイプを作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)できます。
 * 開発者は、JavaScript を使用して[ストアデータにアクセス](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores)できます。
 
-## セグメント化 {#segmentation}
+## セグメント化  {#segmentation}
 
 ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments)できます。
 
