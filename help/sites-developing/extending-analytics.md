@@ -22,13 +22,13 @@ ht-degree: 49%
 
 AEM Analytics では、Web サイトでのユーザーインタラクションを追跡できます。開発者は次の作業が必要になる場合があります。
 
-* 訪問者がコンポーネントとどのようなやり取りをおこなっているかの追跡。This can be done with [Custom events.](#custom-events)
+* 訪問者がコンポーネントとどのようなやり取りをおこなっているかの追跡。これは[カスタムイベントで行うことができます。](#custom-events)
 * [ContextHubの値にアクセスします](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)。
 * [レコードのコールバックの追加](#adding-record-callbacks)。
 
 >[!NOTE]
 >
->This information is basically generic, but it uses [Adobe Analytics](/help/sites-administering/adobeanalytics.md) for specific examples.
+>この情報は基本的に汎用的ですが、特定の例には[Adobe Analytics](/help/sites-administering/adobeanalytics.md)が使われています。
 >
 >コンポーネントとダイアログボックスの開発に関する一般的な情報については、[コンポーネントの開発](/help/sites-developing/components.md)を参照してください。
 
@@ -36,11 +36,11 @@ AEM Analytics では、Web サイトでのユーザーインタラクション�
 
 カスタムイベントはページ内の特定のコンポーネントの可用性に依存する要素を追跡します。これにはテンプレート特有のイベントも含まれます。ページコンポーネントは別のコンポーネントとして扱われています。
 
-### ページの読み込み時のカスタムイベントの追跡 {#tracking-custom-events-on-page-load}
+### ページの読み込み時のカスタムイベントの追跡  {#tracking-custom-events-on-page-load}
 
-This can be done using the pseudo-attribute `data-tracking` (the older record attribute is still supported for backwards compatibility). これは任意の HTML タグに追加できます。
+これは、擬似属性`data-tracking`を使って行うことができます（古いレコード属性は、後方互換性を維持するためにサポートされています）。 これは任意の HTML タグに追加できます。
 
-The syntax for `data-tracking` is
+`data-tracking`の構文は次のとおりです。
 
 * `data-tracking="{'event': ['eventName'], 'values': {'key': 'value', 'nextKey': 'nextValue'}, componentPath: 'myapp/component/mycomponent'}"`
 
@@ -61,7 +61,7 @@ The syntax for `data-tracking` is
 </span>
 ```
 
-At page load, all `data-tracking` attributes will be collected and added to the event store of the ContextHub, where they can be mapped to Adobe Analytics events. マッピングされていないイベントは、Adobe Analyticsでは追跡されません。 See [Connecting to Adobe Analytics](/help/sites-administering/adobeanalytics.md) for more details about mapping events.
+ページの読み込み時に、すべての`data-tracking`属性が収集され、ContextHubのイベントストアに追加されます。ここで、これらの属性をAdobe Analyticsイベントにマッピングできます。 マッピングされていないイベントは、Adobe Analyticsでは追跡されません。 イベントのマッピングの詳細については、[Adobe Analyticsへの接続](/help/sites-administering/adobeanalytics.md)を参照してください。
 
 ### ページの読み込み後のカスタムイベントの追跡 {#tracking-custom-events-after-page-load}
 
@@ -77,7 +77,7 @@ At page load, all `data-tracking` attributes will be collected and added to the 
 * `collect`：オプションで、イベントおよびデータオブジェクトを格納する配列を返します。
 * `options` はオプションで、HTML要素やなどのリンクトラッキングオプション `obj` が含まれ ` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)`ます。
 
-* `componentPath` が必要な属性であり、 `<%=resource.getResourceType()%>`
+* `componentPath` が必要な属性であり、  `<%=resource.getResourceType()%>`
 
 例えば、次のように定義した場合、「**Jump to top**」リンクをクリックすると `jumptop` と `headlineclick` の 2 つのイベントが実行されます。
 
@@ -87,13 +87,13 @@ At page load, all `data-tracking` attributes will be collected and added to the 
 </h1>
 ```
 
-## ContextHubでの値へのアクセス {#accessing-values-in-the-contexthub}
+## ContextHubの値へのアクセス{#accessing-values-in-the-contexthub}
 
-ContextHub JavaScript APIには、指定されたストア（存在する場合）を返す `getStore(name)` 関数があります。 ストアには、指定したキーがある場合にその値を返す `getItem(key)` 関数があります。 関数を使用すると、特定のストアに対して定義されたキーの配列を取得できます。 `getKeys()`
+ContextHub JavaScript APIには、指定されたストア（存在する場合）を返す`getStore(name)`関数があります。 ストアには、指定したキーの値（ある場合）を返す`getItem(key)`関数があります。 `getKeys()`関数を使うと、特定のストアに対して定義されたキーの配列を取得できます。
 
-関数を使用して関数を連結すると、ストアで値の変化を通知でき `ContextHub.getStore(name).eventing.on(ContextHub.Constants.EVENT_STORE_UPDATED, handler, selector, triggerForPastEvents)` ます。
+`ContextHub.getStore(name).eventing.on(ContextHub.Constants.EVENT_STORE_UPDATED, handler, selector, triggerForPastEvents)`関数を使用して関数をバインドすると、ストアで値の変更を通知できます。
 
-The best way to be notified of initial availability of the ContextHub is to use the `ContextHub.eventing.on(ContextHub.Constants.EVENT_ALL_STORES_READY, handler, selector, triggerForPastEvents);` function.
+ContextHubの初期利用可能性を通知する最善の方法は、`ContextHub.eventing.on(ContextHub.Constants.EVENT_ALL_STORES_READY, handler, selector, triggerForPastEvents);`関数を使用することです。
 
 **ContextHubの追加イベント:**
 
@@ -107,11 +107,11 @@ The best way to be notified of initial availability of the ContextHub is to use 
 
 >[!NOTE]
 >
->完全なContextHub APIリファレンスも参照して [ください](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub-api.html#ContextHubJavascriptAPIReference)
+>[ContextHub APIリファレンス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub-api.html#ContextHubJavascriptAPIReference)も参照してください。
 
 ## レコードコールバックの追加 {#adding-record-callbacks}
 
-Before and after callbacks are registered using the functions `CQ_Analytics.registerBeforeCallback(callback,rank)` and `CQ_Analytics.registerAfterCallback(callback,rank)`.
+コールバックを登録する前と後に、関数`CQ_Analytics.registerBeforeCallback(callback,rank)`と`CQ_Analytics.registerAfterCallback(callback,rank)`を使用します。
 
 どちらの関数も、先頭の引数では関数を、2 番目の引数ではランクを受け取ります。このランクによって、コールバックの実行順序が決定されます。
 
