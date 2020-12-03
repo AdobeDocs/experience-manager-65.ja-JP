@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 730a690bcbf5935ca00ed69c27ce108cb2664c22
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 86%
+source-wordcount: '398'
+ht-degree: 80%
 
 ---
 
@@ -53,13 +53,13 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 1. **Apache Sling Simple WebDAV Access To Repositories**（`org.apache.sling.jcr.webdav`）バンドルはオーサーインスタンスでのみ使用できます。****
 
 1. 新しく作成されたユーザーは、初回ログイン時にパスワードを変更する必要があります。これは admin ユーザーには適用されません。
-1. **Apache Java Script Handler** では、「**Generate Debug Info**」が無効になります。
+1. **「デバッグ** 情報の生成」は **Apache Sling Java Scriptハンドラーでは無効です**。
 
 1. **Apache Sling JSP Script Handler** では、「**Mapped Content**」と「**Generate Debug Info**」が無効になります。
 
 1. **Day CQ WCM Filter** は、`edit`オーサー&#x200B;**インスタンスでは**   に設定され、`disabled`パブリッシュ&#x200B;**インスタンスでは** に設定されます。
 
-1. **Adobe Granite HTML ライブラリマネージャー**&#x200B;は次のように設定されます。
+1. **AdobeGranite HTML Library Manager**&#x200B;は、次の設定で構成されます。
 
    1. **縮小：** `enabled`
    1. **デバッグ:** `disabled`
