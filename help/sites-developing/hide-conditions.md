@@ -1,6 +1,6 @@
 ---
-title: 非表示の条件の使用
-seo-title: 非表示の条件の使用
+title: 非表示条件の使用
+seo-title: 非表示条件の使用
 description: 非表示の条件を使用して、コンポーネントリソースをレンダリングするかどうかを決定できます。
 seo-description: 非表示の条件を使用して、コンポーネントリソースをレンダリングするかどうかを決定できます。
 uuid: 93b4f450-1d94-4222-9199-27b5f295f8e6
@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 workflow-type: tm+mt
 source-wordcount: '648'
-ht-degree: 76%
+ht-degree: 93%
 
 ---
 
 
-# 非表示の条件の使用{#using-hide-conditions}
+# 非表示条件の使用{#using-hide-conditions}
 
 非表示の条件を使用して、コンポーネントリソースをレンダリングするかどうかを決定できます。その一例として、テンプレート作成者が[テンプレートエディター](/help/sites-authoring/templates.md)でコアコンポーネントの[リストコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)を設定し、子ページに基づいてリストを作成するオプションを無効にすることを決定する場合があります。デザインダイアログでこのオプションを無効にすると、リストコンポーネントのレンダリング時に非表示の条件が評価され、子ページを表示するオプションが表示されないようにプロパティが設定されます。
 
@@ -32,13 +32,13 @@ ht-degree: 76%
 >
 >式に基づいたリソースの非表示は、ACL アクセス権限の代わりにはなりません。コンテンツは編集可能なまま、表示されなくなるだけです。
 
-## 実装と使用の詳細 {#implementation-and-usage-details}
+## 実装と使用の詳細  {#implementation-and-usage-details}
 
-`com.adobe.granite.ui.components.FilteringResourceWrapper` は、フィルタ対象のフィールド上にあるプロパティの存在と値に基づいてリソースをフィルタリングします。 `granite:hide` の実装には、 `/libs/cq/gui/components/authoring/dialog/dialog.jsp` `FilteringResourceWrapper.`
+`com.adobe.granite.ui.components.FilteringResourceWrapper` は、フィルタリング対象のフィールドの `granite:hide` プロパティの有無と値に基づいてリソースをフィルタリングします。`/libs/cq/gui/components/authoring/dialog/dialog.jsp` の実装には、`FilteringResourceWrapper.` のインスタンスが含まれます。
 
-The implementation makes use of the Granite [ELResolver API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html) and adds a `cqDesign` custom variable via the ExpressionCustomizer.
+この実装では、Granite [ELResolver API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html) を利用し、ExpressionCustomizer を介して `cqDesign` カスタム変数を追加します。
 
-以下に、`etc/design` の下かコンテンツポリシーとして配置されているデザインノードの非表示の条件の例をいくつか示します。
+以下に、`etc/design` 内かコンテンツポリシーとして配置されているデザインノードの非表示の条件の例をいくつか示します。
 
 ```
 ${cqDesign.myProperty}
@@ -60,7 +60,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)）で確認できます。例えば、[リストコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)について検討してみましょう。
 
-[テンプレート作成者は、テンプレートエディターを使用して](/help/sites-authoring/templates.md)、デザインダイアログで、ページ作成者が使用できるリストコンポーネントのオプションを定義できます。 リストを静的リスト、子ページのリスト、タグ付けされたページのリストなどにできるようにするかどうかといったオプションを有効または無効にできます。
+[テンプレートエディターを使用](/help/sites-authoring/templates.md)した場合、テンプレート作成者は、ページ作成者が利用できるリストコンポーネントのオプションをデザインダイアログで定義できます。リストを静的リスト、子ページのリスト、タグ付けされたページのリストなどにできるようにするかどうかといったオプションを有効または無効にできます。
 
 テンプレート作成者が子ページオプションを無効にすると、デザインプロパティが設定され、非表示の条件がそのプロパティに対して評価されます。その結果、このオプションはページ作成者には表示されません。
 
@@ -72,12 +72,12 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. ポリシーノードが `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`tの下に作成され、プロパティがに `disableChildren` 設定され `true`ます。
-1. The hide condition is defined as the value of a `granite:hid`e property on the dialog property node `/conf/we-retail/settings/wcm/policies/weretail/components/content/list`
+1. `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`tの下にポリシーノードが作成され、`disableChildren`プロパティが`true`に設定されます。
+1. 非表示条件は、ダイアログプロパティノード`/conf/we-retail/settings/wcm/policies/weretail/components/content/list`上の`granite:hid`eプロパティの値として定義されます
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
 
-1. The value of `disableChildren` is pulled from the design configuration and the expression `${cdDesign.disableChildren}` evaluates to `false`, meaning the option will not be rendered as part of the component.
+1. `disableChildren` の値がデザイン設定から取得され、式 `${cdDesign.disableChildren}` が `false` と評価されます。つまり、そのオプションはコンポーネントの一部としてレンダリングされません。
 
    `granite:hide` プロパティの値として非表示式を使用している例は、[GitHub のこちらのページ](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)で確認できます。
 
