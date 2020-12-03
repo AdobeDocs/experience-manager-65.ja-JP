@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
+source-git-commit: 55ef8af25887a59d9d13275645c1ec20f0c49380
 workflow-type: tm+mt
-source-wordcount: '2704'
+source-wordcount: '2807'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,23 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] アドオンパッケージは、予定されている [!DNL Experience Manager] Service Packのリリースの1週間後に公開されます。[!DNL Experience Manager] 6.5 Service Pack 7(6.5.7.0)は、2020年11月27日にリリースされる予定です。
+>[!DNL Experience Manager Forms] アドオンパッケージは、予定されている [!DNL Experience Manager] Service Packのリリースの1週間後に公開されます。
+
+### パフォーマンスの向上{#performance-improvements-forms}
+
+[!DNL Experience Manager] 6.5 Service Pack 7Formsは、次の点でパフォーマンスが向上しました。
+
+* アダプティブフォームを送信する際に、サーバー上のフィールド値を検証する。
+
+* [!DNL Automated Forms Conversion service]を使用してPDFフォームをアダプティブフォームに変換する。
+
+### フォームデータモデルHTTPクライアント構成によるパフォーマンスの最適化{#fdm-http-client-config}
+
+[!DNL Experience Manager Forms] フォームデータモデルを使用して、データソースとしてRESTful Webサービスとの統合時に、パフォーマンスを最適化するためのHTTPクライアント設定が含まれるようになりました。
+
+### レイアウトモード{#reset-option-layout-mode}で各コンポーネントのリセットオプションを使用できる
+
+アダプティブフォームのレイアウトモードで各コンポーネントに対してリセットオプションを使用できるようになりました。 パネルに複数列レイアウトを定義する場合、この機能を使用してパネル内の個々のコンポーネントをリセットできます。
 
 ## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
 
