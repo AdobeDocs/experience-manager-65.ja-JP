@@ -1,8 +1,8 @@
 ---
-title: コンポーネント 概要
+title: コンポーネントの概要
 seo-title: コンポーネント
 description: コンポーネントは、特定の機能を実現し、Web サイトにコンテンツを提供するためのモジュールユニットです。
-seo-description: コンポーネント特定の機能を実現し、Web サイトにコンテンツを提供するためのモジュールユニットです。
+seo-description: コンポーネントは、特定の機能を実現し、Web サイトにコンテンツを提供するためのモジュールユニットです。
 uuid: fb39aeb8-8f43-4091-8083-ebfab89e6e63
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
 workflow-type: tm+mt
 source-wordcount: '614'
-ht-degree: 67%
+ht-degree: 82%
 
 ---
 
@@ -24,59 +24,59 @@ ht-degree: 67%
 
 ## コンポーネントとは{#what-exactly-is-a-component}
 
-* Webサイトにコンテンツを表示するための特定の機能を実現するモジュラー型ユニット。
-* 再利用可能。
-* リポジトリの1つのフォルダー内に自己完結型のユニットとして開発。
+* 特定の機能を実現し、Web サイトにコンテンツを提供するためのモジュールユニットです。
+* 再利用可能です。
+* リポジトリーの 1 つのフォルダー内の自己完結型ユニットとして開発されます。
 * 非表示の設定ファイルを持ちません。
 * 他のコンポーネントを組み込むことができます。
 * AEM システム内であれば、どの場所でも実行できます。特定のコンポーネントにおいてのみ実行できるようにすることもできます。
 * 標準化されたユーザーインターフェイスがあります。
-* 設定可能な編集動作がある。
+* 設定可能な編集動作があります。
 * Granite UIコンポーネントに基づくサブ要素を使用して構築されたダイアログボックスを使用する
-* Are developed using [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html) (recommended) or JSP.
+* [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)（推奨）またはJSPを使用して開発されます。
 * デフォルトの機能を拡張するカスタマイズされたコンポーネントを作成するために開発できます。
 
 コンポーネントはモジュールなので、次のことができます。
 
 * ローカルインスタンスで新しいコンポーネントを開発する。
-* テスト環境に展開します。
-* ライブオーサリング環境にデプロイする。そこで、作成者や管理者のコンテンツの追加および設定を許可します。
-* ライブパブリッシュ環境にデプロイします。この画像を使用して、Webサイトの訪問者向けにコンテンツをレンダリングします。 また、特定のコンポーネント（コミュニティ用など）がユーザーからの入力を受け入れます。
+* テスト環境にデプロイします。
+* ライブオーサリング環境にデプロイし、そこで、作成者や管理者のコンテンツの追加および設定を許可します。
+* ライブパブリッシュ環境にデプロイします。Web サイトへの訪問者用にコンテンツをレンダリングするために使用します。また、特定のコンポーネント（コミュニティ用など）がユーザーからの入力を受け入れます。
 
 各 AEM コンポーネント：
 
 * リソースタイプです。
-* 特定の機能を完全に実現するスクリプトの集まりです。
-* Can function in *isolation*, meaning either within AEM or a portal.
+* 特定の機能を完全に実現するスクリプトのコレクションです。
+* *隔離*&#x200B;で機能します。つまり、AEMまたはポータル内で機能します。
 
 ## AEM 内の既成のコンポーネント {#out-of-the-box-components-within-aem}
 
 AEM には、次のような包括的な機能を提供する、](/help/sites-authoring/default-components.md)すぐに使用できる様々なコンポーネント[が付属しています。
 
 * 段落システム ( `parsys`)
-* Page ( `responsivegrid` - touch-enabled UI only)
+* ページ（`responsivegrid` — タッチ対応UIのみ）
 * テキスト
 * 画像（説明テキスト付き）
 * ツールバー
 
 提供される[サンプル We.Retail Web サイト](/help/sites-developing/we-retail.md)内で提供されるコンポーネントおよびそれらの使用方法は、コンポーネントの実装および使用方法の例です。コンポーネントは、すべてのソースコードと共に提供されており、そのまま使用することも、コンポーネントを変更または拡張する出発点として使用することもできます。
 
-### コアコンポーネントおよび基盤コンポーネント {#core-components-and-foundation-components}
+### コアコンポーネントおよび基盤コンポーネント  {#core-components-and-foundation-components}
 
 アドビが提供する AEM コンポーネントには 2 つのセットがあります。
 
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)
 
-**コアコンポーネント** はAEM 6.3で導入され、オファーの柔軟で豊富な機能を備えたオーサリング機能を備えています。 The [We.Retail reference site](/help/sites-developing/we-retail.md) illustrates how the core components can be used and represent the current best-practices of component development.
+**コア** コンポーネントはAEM 6.3で導入され、オファーの柔軟で豊富な機能を備えたオーサリング機能を備えています。[We.Retailリファレンスサイト](/help/sites-developing/we-retail.md)は、コアコンポーネントの使用方法と、コンポーネント開発の現在のベストプラクティスを示します。
 
 **基盤コンポーネント**&#x200B;は、多くのバージョンの AEM で使用でき、標準 AEM インストールでそのまま使用できます。現在もサポートされていますが、ほとんどの機能は非推奨となり、拡張されなくなり、既存のテクノロジーに基づいています。
 
 >[!NOTE]
 >
->[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
+>[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
 >
->[AEM最新化ツール](modernization-tools.md) （英語）は、コアコンポーネントへの移行に役立ちます。
+>[AEM Modernization ](modernization-tools.md) Toolscanは、コアコンポーネントへの移行に役立ちます。
 
 ### 利用可能なコンポーネントの表示 {#viewing-available-components}
 
@@ -84,15 +84,15 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 
 または、CRXDE Lite を使用して、リポジトリで利用可能なすべてのコンポーネントのリストを取得することもできます。
 
-1. In **[!UICONTROL CRXDE Lite]**, select **[!UICONTROL Tools]** from the toolbar, then **[!UICONTROL Query]**, which opens the **[!UICONTROL Query]** tab.
+1. **[!UICONTROL CRXDE Lite]** で、ツールバーから「**[!UICONTROL ツール]**」を選択し、「**[!UICONTROL クエリ]**」を選択して、「**[!UICONTROL クエリ]**」タブを開きます。
 
-1. 「**[!UICONTROL クエリー]**」タブで、「`XPath`タイプ&#x200B;**[!UICONTROL 」として「]**」を選択します。
+1. 「**[!UICONTROL クエリ]**」タブで、「**[!UICONTROL タイプ]**」として「`XPath`」を選択します。
 
-1. **[!UICONTROL クエリ]**&#x200B;入力フィールドに次の文字列を入力します。
+1. 「**[!UICONTROL クエリ]**」入力フィールドに次の文字列を入力します。
 
    `//element(*, cq:Component)`
 
-1. Click **[!UICONTROL Execute]** and the components are listed.
+1. 「**[!UICONTROL 実行]**」をクリックするとコンポーネントがリストされます。
 
 ## その他のリソース {#further-reading}
 
@@ -107,7 +107,7 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 * [コンテンツフラグメント用コンポーネント](/help/sites-developing/components-content-fragments.md)
 * [JSON 形式のページ情報の取得](/help/sites-developing/pageinfo.md)
 * [コンポーネントの国際化](/help/sites-developing/i18n.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [非表示条件の使用](/help/sites-developing/hide-conditions.md)
 * クラシック UI
 
