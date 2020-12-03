@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 89%
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
-レイアウトはレスポンシブデザインスタイルに従い、使用するデバイスやウィンドウのサイズに合わせて調整されます。
+レイアウトはレスポンシブデザインスタイルに従っており、使用するデバイスやウィンドウのサイズに収まるように自動で調整されます。
 
 例えば、解像度が 1024 px 未満（モバイルデバイスなど）になると、それに応じて表示が調整されます。
 
@@ -53,7 +53,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ### ツールバー {#toolbar}
 
-現在の場所に応じて変わり、下のページのビューやアセットの制御に関連したツールが表示されます。ツールバーは製品専用ですが、要素は若干共通しています。
+現在の場所に応じて変わり、下のページのビューやアセットの制御に関連したツールが表示されます。ツールバーは製品固有ですが、要素はある程度共通しています。
 
 どの場所でも、ツールバーには現在実行可能なアクションが表示されます。
 
@@ -149,7 +149,7 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 >
 >レイヤーは強力な概念であり、ページコンテンツのユーザーのビューや、ページコンテンツとのインタラクションに影響します。独自のレイヤーを開発するときは、終了時にレイヤーがクリーンアップされることを確認する必要があります。
 
-### レイヤースイッチャー {#layer-switcher}
+### レイヤースイッチャー  {#layer-switcher}
 
 レイヤースイッチャーを使用すると、使用するレイヤーを選択できます。閉じると、現在使用中のレイヤーが示されます。
 
@@ -167,7 +167,7 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 
 ## その他の情報 {#further-information}
 
-タッチ対応UIに関する概念について詳しくは、AEMタッチ対応UIの [概念に関する記事](/help/sites-developing/touch-ui-concepts.md)を参照してください。
+タッチ操作対応UIに関する概念について詳しくは、「[AEMタッチ対応UIの概念](/help/sites-developing/touch-ui-concepts.md)」の記事を参照してください。
 
-技術情報について詳しくは、タッチ対応ページエディターの [JSドキュメントセット](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) （英語のみ）を参照してください。
+技術情報について詳しくは、タッチ対応ページエディターの[JSドキュメントセット](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
 
