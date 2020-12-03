@@ -20,7 +20,7 @@ ht-degree: 74%
 
 # We.Retail のレスポンシブレイアウトの使用{#trying-out-responsive-layout-in-we-retail}
 
-すべてのWeb.Retailページで、レスポンシブデザインの実装にレイアウトコンテナコンポーネントが使用されます。 レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。The component is used in conjunction with the **Layout** mode in the page editor, which allows you to create and edit your responsive layout dependent on device.
+すべてのWeb.Retailページで、レスポンシブデザインの実装にレイアウトコンテナコンポーネントが使用されます。 レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントは、ページエディターの&#x200B;**レイアウト**&#x200B;モードと組み合わせて使用されます。これにより、デバイスに依存したレスポンシブレイアウトを作成および編集できます。
 
 ## 試してみる {#trying-it-out}
 
@@ -48,4 +48,4 @@ ht-degree: 74%
 
 ## その他の情報 {#further-information}
 
-For further information, refer to the authoring document [Responsive Layout](/help/sites-authoring/responsive-layout.md) or the administrator document [Configuring Layout Container and Layout Mode](/help/sites-administering/configuring-responsive-layout.md) for complete technical details.
+詳しくは、オーサリングドキュメント[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)または管理者ドキュメント[レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。
