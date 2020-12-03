@@ -29,21 +29,21 @@ ht-degree: 77%
 
 ユーザーがワークフローを開始すると、インスタンスが開始されます。これは対応するランタイムモデルです。変更内容を[同期](#sync-your-workflow-generate-a-runtime-model)すると作成されます。
 
-## 新しいワークフローの作成 {#creating-a-new-workflow}
+## 新しいワークフローの作成  {#creating-a-new-workflow}
 
 初めて作成する新しいワークフローモデルには、次のものが含まれています。
 
-* The steps, **Flow Start** and **Flow End**.
+* ステップ&#x200B;**フロー開始**&#x200B;と&#x200B;**フロー終了**。
 これらのステップは、ワークフローの始まりと終わりを表します。これらの手順は必須で、編集/削除はできません。
-* An example **Participant** step named **Step 1**.
+* **参加者**&#x200B;ステップ&#x200B;**ステップ1**の例です。
 このステップは、作業項目をワークフロー開始者に割り当てるように設定されています。このステップを編集または削除し、必要に応じてステップを追加します。
 
 エディターを使用して新しいワークフローを作成するには：
 
-1. Open the **Workflow Models** console; via **Tools**, **Workflow**, **Models** or, for example: [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
+1. **ワークフローモデル**&#x200B;コンソールを開きます。**ツール**、**ワークフロー**、**モデル**、例：[https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
 1. 「**作成**」を選択してから、「**モデルを作成**」を選択します。
 1. **ワークフローモデルを追加**&#x200B;ダイアログが表示されます。「**タイトル**」と「**名前**」（オプション）を入力してから、「**完了**」を選択します。
-1. The new model is listed in the **Workflow Models** console.
+1. 新しいモデルが&#x200B;**ワークフローモデル**&#x200B;コンソールに表示されます。
 1. 新しいワークフローを選択し、[**「編集**」をクリックすると、ワークフローが設定のために開かれます](#editinganexistingworkflow)。
    ![wf-01](assets/wf-01.png)
 
@@ -57,7 +57,7 @@ ht-degree: 77%
 >
 >このフォルダーは、[そのフォルダー内のモデルへのアクセス権を管理](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)するために利用できます。
 
-## ワークフローの編集 {#editing-a-workflow}
+## ワークフローの編集  {#editing-a-workflow}
 
 既存のワークフローモデルを編集して、次のことができます。
 
@@ -68,7 +68,7 @@ ht-degree: 77%
 
 ワークフローの変更を完了するには、「**同期**」を使用して、**ランタイムモデルを生成**&#x200B;する必要があります。詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### ワークフローの同期 - ランタイムモデルの生成 {#sync-your-workflow-generate-a-runtime-model}
+### ワークフローの同期 - ランタイムモデルの生成  {#sync-your-workflow-generate-a-runtime-model}
 
 「**同期**」（エディターのツールバーの右側）をクリックすると、[ランタイムモデル](/help/sites-developing/workflows.md#runtime-model)が生成されます。ランタイムモデルは、ユーザーがワークフローを開始したときに実際に使用されるモデルです。変更内容を&#x200B;**同期**&#x200B;しない場合は、その変更内容は実行時には反映されません。
 
@@ -87,11 +87,11 @@ ht-degree: 77%
 * ステップブラウザーを利用できません（左側）。
 * ツールバーで「**編集**」操作を利用できます（右側）。
 * 次の理由から、最初はモデルとそのプロパティが読み取り専用モードで開かれます。
-   * Default workflows are located in `/libs`
-   * Legacy workflows are located in `/etc`
-Selecting 
-**編集する** :
-* take a copy of the workflow into `/conf`
+   * デフォルトのワークフローは`/libs`にあります
+   * 従来のワークフローは`/etc`にあります
+選択 
+**** 編集：
+* ワークフローのコピーを`/conf`に取り込む
 * ステップブラウザーを利用できるようになります。
 * 変更を加えられるようになります。
 
@@ -115,12 +115,12 @@ Selecting
 
 ワークフローモデルへのステップの追加手順
 
-1. 編集する既存のワークフローモデルを開きます。From the **Workflows Model** console, select the required model, then **Edit**.
+1. 編集する既存のワークフローモデルを開きます。**ワークフローモデル**&#x200B;コンソールから、必要なモデルを選択し、**編集**&#x200B;を行います。
 1. **サイドパネルを切り替え**（上部ツールバーの左端）を使用してステップブラウザーを開きます。ここでは、以下のことができます。
 
    * **フィルター**&#x200B;を使用して特定のステップのみを表示する。
    * ドロップダウンセレクターを使用して、選択対象を特定のステップのグループに限定する。
-   * Select the Show Description icon ![wf-stepinfo-icon](assets/wf-stepinfo-icon.png) to show more details about the appropriate step.
+   * 説明を表示アイコン![wf-stepinfo-icon](assets/wf-stepinfo-icon.png)を選択し、該当する手順の詳細を表示します。
 
    ![wf-02](assets/wf-02.png)
 
@@ -138,26 +138,26 @@ Selecting
 
    [ページエディター](/help/sites-authoring/editing-content.md)と同様に、ステップのコピー、切り取り、貼り付け、グループ分け、削除をおこなうこともできます。
 
-   Split steps can also be collapsed/expanded using the toolbar option: ![wf-collapseexpand-toolbar-icon](assets/wf-collapseexpand-toolbar-icon.png)
+   分割ステップは、ツールバーオプションを使用して、折りたたんだり展開したりすることもできます。![wf-collapseexpand-toolbar-icon](assets/wf-collapseexpand-toolbar-icon.png)
 
 1. 「**同期**」（エディターツールバー）をクリックして変更内容を確定し、ランタイムモデルを生成します。
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### ワークフローステップの設定 {#configuring-a-workflow-step}
+### ワークフローステップの設定  {#configuring-a-workflow-step}
 
 **ステップのプロパティ**&#x200B;ダイアログを使用して、ワークフローステップの動作を&#x200B;**設定**&#x200B;およびカスタマイズできます。
 
 1. ステップに対応する&#x200B;**ステップのプロパティ**&#x200B;ダイアログを開くには、次のどちらかを実行します。
 
-   * Click/tap the* *step in the workflow model and select **Configure** from the component toolbar.
+   * ワークフローモデルの* *stepをクリック/タップし、コンポーネントツールバーから&#x200B;**設定**&#x200B;を選択します。
 
    * ステップをダブルクリックします。
    >[!NOTE]
    >
    >AEM と共にインストールされる主なステップコンポーネントについては、[ワークフローステップのリファレンス](/help/sites-developing/workflows-step-ref.md)を参照してください。
 
-1. 必要に応じて&#x200B;**ステップのプロパティ**&#x200B;を設定します。利用できるプロパティはステップのタイプによって異なります。複数のタブが表示されることもあります。For example, the default **Participant Step**, present in a new workflow as `Step 1`:
+1. 必要に応じて&#x200B;**ステップのプロパティ**&#x200B;を設定します。利用できるプロパティはステップのタイプによって異なります。複数のタブが表示されることもあります。例えば、デフォルトの&#x200B;**参加者ステップ**&#x200B;は、新しいワークフローに`Step 1`として存在します。
 
    ![wf-11](assets/wf-11.png)
 
@@ -172,7 +172,7 @@ Selecting
 
 1. [編集](#editinganexistingworkflow)するワークフローモデルを開きます。
 1. ツールバーから「**ワークフローモデルのプロパティ**」を選択します。
-1. In the dialog activate **Transient Workflow** (or deactivate if required):
+1. ダイアログで、**一時的なワークフロー**&#x200B;をアクティブにします（または必要に応じて非アクティブにします）。
 
    ![wf-07](assets/wf-07.png)
 
@@ -186,25 +186,25 @@ Selecting
 
 ## タッチ UI でワークフローモデルを使用可能にする {#classic2touchui}
 
-If a workflow model is present in Classic UI, but missing in the selection popup menu in the **[!UICONTROL Timeline]** rail of Touch UI, then follow the configuration to make it available. 次の手順は、アクティベーションの **[!UICONTROL 要求と呼ばれるワークフローモデルの使用を説明しています]**。
+ワークフローモデルがクラシックUIに存在し、タッチUIの&#x200B;**[!UICONTROL タイムライン]**&#x200B;レールの選択ポップアップメニューに表示されない場合は、設定に従ってモデルを使用可能にします。 次の手順は、**[!UICONTROL アクティベーションの要求]**&#x200B;と呼ばれるワークフローモデルの使用を示しています。
 
-1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。Access an asset using `/assets.html/content/dam` path. アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「 **[!UICONTROL 開始ワークフロー]** 」をクリックし、「アクティベーション **[!UICONTROL 要求]** 」モデルがポップアップリストに存在しないことを確認します。
+1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。`/assets.html/content/dam`パスを使用してアセットにアクセスします。 アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「**[!UICONTROL 開始ワークフロー]**」をクリックし、**[!UICONTROL アクティベーションの要求]**&#x200B;モデルがポップアップリストに存在しないことを確認します。
 
-1. **[!UICONTROL ツール/一般/タグ付けに移動します]**。 「**[!UICONTROL ワークフロー]**」を選択します。
+1. **[!UICONTROL ツール/一般/タグ]**&#x200B;の順に移動します。 「**[!UICONTROL ワークフロー]**」を選択します。
 
-1. Select **[!UICONTROL Create > Create Tag]**. Set **[!UICONTROL Title]** as `DAM` and **[!UICONTROL Name]** as `dam`. 「**[!UICONTROL 送信]**」を選択します。
+1. **[!UICONTROL 作成/タグを作成]**&#x200B;を選択します。 **[!UICONTROL タイトル]**&#x200B;を`DAM`に、**[!UICONTROL 名前]**&#x200B;を`dam`に設定します。 「**[!UICONTROL 送信]**」を選択します。
    ![ワークフローモデルでタグを作成する](assets/workflow_create_tag.png)
 
-1. Navigate to **[!UICONTROL Tools > Workflow > Models]**. 「 **[!UICONTROL アクティベーションの]**&#x200B;要求 **[!UICONTROL 」を選択し、「]**&#x200B;編集」を選択します。
+1. **[!UICONTROL ツール/ワークフロー/モデル]**&#x200B;に移動します。 「**[!UICONTROL アクティベーションのリクエスト]**」を選択し、「**[!UICONTROL 編集]**」を選択します。
 
-1. 「 **[!UICONTROL 編集]**」を選択し、 **[!UICONTROL ページ情報]** メニューを開き、「 **[!UICONTROL 開くプロパティ]** 」を選択して「 **** 基本」タブに移動します（まだ開いていない場合）。
+1. 「**[!UICONTROL 編集]**」を選択し、「**[!UICONTROL ページ情報]**」メニューを開き、「**[!UICONTROL プロパティを開く]**」を選択して「**[!UICONTROL 基本]**」タブに移動します（まだ開いていない場合）。
 
-1. 「タグ `Workflow : DAM` 」フィ追加ールドに追加します **** 。 選択を確認し、チェックマークを付けます。
+1. 追加`Workflow : DAM` ～ **[!UICONTROL タグ]**&#x200B;フィールド 選択を確認し、チェックマークを付けます。
 
-1. 「 **[!UICONTROL 保存して閉じる]**」でタグの追加を確認します。
+1. **[!UICONTROL 保存して閉じる]**でタグの追加を確認します。
    ![モデルのページプロパティの編集](assets/workflow_model_edit_activation1.png)
 
-1. 「 **[!UICONTROL 同期]**」を使用してプロセスを完了します。 タッチ対応UIでワークフローが利用できるようになりました。
+1. **[!UICONTROL 同期]**&#x200B;を使用してプロセスを完了します。 タッチ対応UIでワークフローが利用できるようになりました。
 
 ### マルチリソースのサポートのためのワークフローの設定 {#configuring-a-workflow-for-multi-resource-support}
 
@@ -213,7 +213,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 1. [編集](#editinganexistingworkflow)するワークフローモデルを開きます。
 1. ツールバーから「**ワークフローモデルのプロパティ**」を選択します。
 
-1. In the dialog activate **Multi Resource Support** (or deactivate if required):
+1. ダイアログで、**Multi Resource Support**&#x200B;をアクティブにします（または必要に応じて非アクティブにします）。
 
    ![wf-08](assets/wf-08.png)
 
@@ -221,7 +221,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### Configuring Workflow Stages (that show Workflow Progress) {#configuring-workflow-stages-that-show-workflow-progress}
+### ワークフローステージの設定（ワークフローの進行状況を表示） {#configuring-workflow-stages-that-show-workflow-progress}
 
 [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)は、タスクを処理するときにワークフローの進行状況を確認するのに役立ちます。
 
@@ -261,7 +261,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-## パッケージのワークフローモデルのエクスポート {#exporting-a-workflow-model-in-a-package}
+## パッケージのワークフローモデルのエクスポート  {#exporting-a-workflow-model-in-a-package}
 
 パッケージのワークフローモデルをエクスポートする方法は次のとおりです。
 
@@ -303,7 +303,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 1. 新しいページを作成して、編集用に開きます。
 1. **フォーム**&#x200B;コンポーネントをページに追加します。
 1. ページに表示された&#x200B;**フォーム開始**&#x200B;コンポーネントを&#x200B;**設定**&#x200B;します。
-1. Use **Start Workflow** to select the desired workflow from those available:
+1. **開始ワークフロー**&#x200B;を使用して、使用可能なワークフローから目的のワークフローを選択します。
 
    ![wf-12](assets/wf-12.png)
 
@@ -315,19 +315,19 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
 例えば、新しいワークフローを次のようにテストします。
 
-1. [コンソールからワークフローモデル](/help/sites-administering/workflows-starting.md) を開始します。
+1. [コンソールからワークフロー](/help/sites-administering/workflows-starting.md) モデルを開始します。
 1. **ペイロード**&#x200B;を定義して確定します。
 
 1. ワークフローが進行するように、必要なアクションを実行します。
 1. ワークフローの動作中にログファイルを監視します。
 
-ログファイルに&#x200B;**デバッグ**&#x200B;メッセージを記録するように AEM を設定することもできます。See [Logging](/help/sites-deploying/configure-logging.md) for further information and when the development is finished, set the **Log Level** back to **Info**.
+ログファイルに&#x200B;**デバッグ**&#x200B;メッセージを記録するように AEM を設定することもできます。詳細については[ログ](/help/sites-deploying/configure-logging.md)を参照してください。開発が終了したら、**ログレベル**&#x200B;を&#x200B;**情報**&#x200B;に戻します。
 
 ## 例 {#examples}
 
 ### 例：公開のリクエストを承認／拒否する（単純な）ワークフローの作成 {#example-creating-a-simple-workflow-to-accept-or-reject-a-request-for-publication}
 
-To illustrate some of the possibilities for creating a workflow, the following example creates a variation of the `Publish Example` workflow.
+次の例では、ワークフローを作成する可能性を示すために、`Publish Example`ワークフローのバリエーションを作成します。
 
 1. [新しいワークフローモデルを作成](#creating-a-new-workflow)します。
 
@@ -339,19 +339,19 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
 1. `Step 1` を削除します（この例には不適切なステップタイプです）。
 
-   * Click on the step and select **Delete** from the component toolbar. アクションを確定します。
+   * 手順をクリックし、コンポーネントツールバーから「**削除**」を選択します。 アクションを確定します。
 
-1. From the **Workflow** selection of the steps browser, drag a **Participant Step** onto the workflow and position it between **Flow Start** and **Flow End**.
+1. ステップブラウザーの&#x200B;**ワークフロー**&#x200B;選択から、**参加者ステップ**&#x200B;をワークフローにドラッグし、**フロー開始**&#x200B;と&#x200B;**フロー終了**&#x200B;の間に配置します。
 1. 次のいずれかの方法でプロパティダイアログを開きます。
 
-   * Click on the participant step and select **Configure** from the component toolbar.
+   * 参加者の手順をクリックし、コンポーネントツールバーから「**設定**」を選択します。
    * 参加者ステップをダブルクリックします。
 
 1. 「**共通**」タブで、「`Validate Content`タイトル&#x200B;**」と「**&#x200B;説明&#x200B;**」の両方に** と入力します。
 1. 「**ユーザー / グループ**」タブを開きます。
 
    * 「**電子メールでユーザーに通知します**」を有効にします。
-   * Select `Administrator` ( `admin`) for the **User/Group** field.
+   * **ユーザー/グループ**&#x200B;フィールドに`Administrator` (`admin`)を選択します。
 
    >[!NOTE]
    >
@@ -359,11 +359,11 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
 1. チェックマークをクリックして、変更内容を確認します。
 
-   You will be returned to the overview of the workflow model, here the participant step will have been renamed to `Validate Content`.
+   ワークフローモデルの概要に戻ります。ここで、参加者の手順は`Validate Content`に変更されます。
 
-1. Drag an **Or Split** onto the workflow and position it between `Validate Content` and **Flow End**.
+1. **または分割**&#x200B;をワークフローにドラッグし、`Validate Content`と&#x200B;**フロー終了**&#x200B;の間に配置します。
 1. **OR 分割**&#x200B;を設定用に開きます。
-1. 設定:
+1. 設定：
 
    * **共通**：分割名を指定します。
    * **ブランチ 1**：「**デフォルトのルート**」を選択します。
@@ -383,7 +383,7 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
    * **タイトル**: `Publish Page as Requested`
 
-   * **プロセス**:を選択 `Activate Page`します。 このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
+   * **プロセス**:を選択 `Activate Page`します。このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
 
 1. 「**同期**」（エディターのツールバー）をクリックし、ランタイムモデルを生成します。
 
@@ -409,14 +409,14 @@ OR ルールを定義するには、次の手順に従います。
 
    >[!NOTE]
    >
-   >The scripts must have a [function `check()`](#function-check) that returns a boolean.
+   >スクリプトには、ブール値を返す[関数`check()`](#function-check)が必要です。
 
 1. ワークフローを編集し、**OR 分割**&#x200B;をモデルに追加します。
 1. **OR 分割**&#x200B;の&#x200B;**ブランチ 1** のプロパティを編集します。
 
-   * Define this as the **Default Route** by setting the **Value** to `true`.
+   * **Value**&#x200B;を`true`に設定して、これを&#x200B;**Default Route**&#x200B;として定義します。
 
-   * As **Rule**, set the path to the script. 次に例を示します。
+   * **Rule**のように、パスをスクリプトに設定します。 次に例を示します。
       `/apps/myapp/workflow/scripts/myscript1.ecma`
    >[!NOTE]
    >
@@ -424,21 +424,21 @@ OR ルールを定義するには、次の手順に従います。
 
 1. **OR 分割**&#x200B;の&#x200B;**ブランチ 2** のプロパティを編集します。
 
-   * As **Rule**, set the path to the other script. 次に例を示します。
+   * **Rule**のように、パスを他のスクリプトに設定します。 次に例を示します。
       `/apps/myapp/workflow/scripts/myscript2.ecma`
 
-1. 各ブランチ内の個々のステップのプロパティを設定します。Make sure the **User/Group** is set.
+1. 各ブランチ内の個々のステップのプロパティを設定します。**User/Group**&#x200B;が設定されていることを確認します。
 1. 「**同期**」（エディターのツールバー）をクリックして、ランタイムモデルに対する変更を保持します。
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-#### 関数 Check() {#function-check}
+#### 関数 Check()  {#function-check}
 
 >[!NOTE]
 >
 >[ECMAScript の使用](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)を参照してください。
 
-The following sample script returns `true` if the node is a `JCR_PATH` located under `/content/we-retail/us/en`:
+次のサンプルスクリプトは、ノードが`/content/we-retail/us/en`の下にある`JCR_PATH`の場合、`true`を返します。
 
 ```
 function check() {
@@ -461,4 +461,4 @@ function check() {
 
 標準提供のワークフローは、いずれもカスタマイズすることができます。動作をカスタマイズするには、適切なワークフローの詳細をオーバーレイします。
 
-例えば、**アクティベーションをリクエスト**&#x200B;をカスタマイズするとします。このワークフローは、**サイト**&#x200B;内でページを公開するために使用され、コンテンツ作成者が適切なレプリケーション権限を持っていない場合に自動的に実行されます。See [Customizing Page Authoring - Customizing the Request for Activation Workflow](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow) for further details.
+例えば、**アクティベーションをリクエスト**&#x200B;をカスタマイズするとします。このワークフローは、**サイト**&#x200B;内でページを公開するために使用され、コンテンツ作成者が適切なレプリケーション権限を持っていない場合に自動的に実行されます。詳しくは、[ページオーサリングのカスタマイズ —アクティベーション要求のカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow)を参照してください。
