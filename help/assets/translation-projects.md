@@ -269,7 +269,7 @@ ht-degree: 68%
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにします。
-1. ツールバーで、「翻訳を承認&#x200B;**[!UICONTROL ![翻訳を承認](assets/do-not-localize/thumb-up.png)」をクリックし、ダイアログで「**[!UICONTROL &#x200B;承認&#x200B;]**」をクリックして、ターゲットフォルダー内の翻訳済みアセットを編集済みアセットの翻訳済みバージョンで上書きします。]**
+1. From the toolbar, click **[!UICONTROL Accept Translation]** ![accept translation](assets/do-not-localize/thumb-up.png) and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
 
    >[!NOTE]
    >
