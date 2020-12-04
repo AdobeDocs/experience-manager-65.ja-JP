@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 11f3e2f7cb742340388bc9421a3ea8f25deabec5
+source-git-commit: 4abfda568fc15f225510c79635387142aefddc72
 workflow-type: tm+mt
 source-wordcount: '3949'
 ht-degree: 56%
@@ -215,7 +215,8 @@ Adobe Sign フィールドをアダプティブフォームに追加したら、
 <!-- Remove when forms portal goes live
 >[!NOTE]
 >
->Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. -->
+>Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. 
+-->
 
 これで、フォームに署名するための準備が整いました。フォームのプレビューを表示して、署名の方法を確認することができます。署名者が電子メールで署名用のフォームを受信すると、発行済みフォーム上に Adobe Sign ブロックのフィールドが表示されます。この動作を、フォーム外署名機能といいます。最初の署名者に対して、フォーム内署名機能を設定することもできます。詳しい手順については、「[フォーム内署名機能の設定](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)」を参照してください。
 
