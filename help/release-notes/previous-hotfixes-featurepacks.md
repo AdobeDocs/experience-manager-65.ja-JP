@@ -667,7 +667,7 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 
 >[!NOTE]
 >
->Experience Managerサービスパックには[!DNL Forms]の修正が含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
+>Experience Managerサービスパックには、の修正が含まれていません [!DNL Forms]。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
 
 * Correspondence Management:レターを送信した後、ターゲット領域内のアセットの順序が変化する(NPR-33359、NPR-33153)。
 * アダプティブForms:ユーザーがアダプティブフォームを編集すると、[!UICONTROL ページ開始]メニューで利用できる「情報ワークフロー]」オプションは機能しません(NPR-33004)。[!UICONTROL 
@@ -885,7 +885,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 >[!NOTE]
 >
->Experience Managerサービスパックには、Experience ManagerFormsの修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
+>Experience Managerサービスパックには、Experience ManagerFormsの修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
 
 * Correspondence Management:後処理ワークフロー(NPR-32626)に送信した後、レターに追加の文字が表示されます。
 
@@ -1144,7 +1144,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上の[!DNL Experience Manager Forms]の修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
 
 #### Forms アドオンパッケージ {#forms-add-on-package-6530}
 
@@ -1330,7 +1330,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。これらは、別の[!DNL Forms]アドオンパッケージを使用して配信されます。 さらに、JEE上の[!DNL Experience Manager Forms]の修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。これらは、別の[!DNL Forms]アドオンパッケージを使用して配信されます。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
 
 [!DNL Experience Manager] 6.5.2.0フォームの主な特徴は次のとおりです。
 
