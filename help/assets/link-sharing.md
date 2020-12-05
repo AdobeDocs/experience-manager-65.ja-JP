@@ -3,10 +3,10 @@ title: リンクを使用したアセットの共有
 description: アセット、フォルダーおよびコレクションをURLとして共有します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f6da1c69ea3b3c3f07e8ac10fd8e1e9c7208158
+source-git-commit: e36d08c9ea89e840aecde79ffdd911372c0c54ee
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 33%
+source-wordcount: '1056'
+ht-degree: 34%
 
 ---
 
@@ -57,9 +57,9 @@ ht-degree: 33%
    >
    >組織のメンバーでないユーザーの電子メールIDを入力すると、[!UICONTROL External User]という語の前に、ユーザーの電子メールIDが付加されます。
 
-1. 「**[!UICONTROL 件名]**」フィールドに件名を入力します。
+1. 「**[!UICONTROL 件名]**」ボックスに、共有するアセットの件名を入力します。
 
-1. 「**[!UICONTROL メッセージ]**」フィールドに、オプションのメッセージを入力します。
+1. 「**[!UICONTROL メッセージ]**」ボックスに、オプションでメッセージを入力します。
 
 1. 「**[!UICONTROL 有効期限]**」フィールドに、リンクの動作を停止する有効期限の日時を指定します。 デフォルトでは、有効期限日はリンクを共有した日から 1 週間後に設定されます。
 
@@ -69,9 +69,9 @@ ht-degree: 33%
 
 1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールでユーザーと共有されていることを確認するメッセージが表示されます。
 
-1. 共有アセットを表示するには、ユーザーに送信する電子メール内のリンクをクリックします。 共有アセットが **[!UICONTROL Adobe Marketing Cloud]** ページに表示されます。
+1. 共有アセットを表示するには、ユーザーに送信する電子メール内のリンクをクリックします。 共有アセットが [!UICONTROL Adobe Marketing Cloud] ページに表示されます。
 
-   ![chlimage_1-260](assets/chlimage_1-545.png)
+   ![共有アセットはAdobe Marketing Cloudで利用可能](assets/chlimage_1-545.png)
 
 1. アセットのプレビューを生成するには、共有アセットをクリックします。 プレビューを閉じてMarketing Cloud ]**ページに戻るには、ツールバーの**[!UICONTROL &#x200B;戻る&#x200B;]**をクリックします。**[!UICONTROL &#x200B;フォルダーを共有している場合は、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
 
@@ -83,7 +83,7 @@ ht-degree: 33%
 
 1. 共有アセットをダウンロードするには、ツールバーの「**[!UICONTROL 選択]**」をクリックし、アセットをクリックしてから、ツールバーの「**[!UICONTROL ダウンロード]**」をクリックします。
 
-   ![chlimage_1-262](assets/chlimage_1-547.png)
+   ![共有アセットをダウンロードするツールバーオプション](assets/chlimage_1-547.png)
 
 1. リンクとして共有したアセットを表示するには、[!DNL Assets]ユーザーインターフェイスに移動し、[!DNL Experience Manager]ロゴをクリックします。 **[!UICONTROL ナビゲーション]**&#x200B;を選択します。 ナビゲーションペインで、「**[!UICONTROL 共有リンク]**」を選択して、共有アセットのリストを表示します。
 
