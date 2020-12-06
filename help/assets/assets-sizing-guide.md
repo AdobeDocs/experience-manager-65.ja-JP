@@ -3,9 +3,9 @@ title: '[!DNL Assets] サイジングガイド'
 description: ' [!DNL Adobe Experience Manager Assets]の導入に必要なインフラストラクチャとリソースを見積もるための効率的な指標を決定するためのベストプラクティス。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1615'
 ht-degree: 60%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 60%
 1. システムに読み込まれるアセットのサイズと数を決定します。
 1. [!DNL Experience Manager]にアップロードするアセットの代表的なサンプルを取得します。 例えば、システムに PSD、JPG、AI および PDF ファイルを読み込む場合、各ファイル形式の複数のサンプル画像が必要です。また、これらのサンプルは異なるファイルサイズや画像が混在する中で代表的なものである必要があります。
 1. 使用するレンディションを定義します。
-1. [!DNL ImageMagick]または[!DNL Adobe Creative Cloud]アプリケーションを使用して、[!DNL Experience Manager]内にレンディションを作成します。 ユーザーが指定したレンディションに加えて、既製のレンディションを作成します。Scene7を実装するユーザーは、ICバイナリを使用してPTIFFレンディションを生成し、Experience Managerに保存することができます。
+1. [!DNL ImageMagick]または[!DNL Adobe Creative Cloud]アプリケーションを使用して、[!DNL Experience Manager]内にレンディションを作成します。 ユーザーが指定したレンディションに加えて、既製のレンディションを作成します。ダイナミックメディアを実装するユーザーは、ICバイナリを使用してPTIFFレンディションを生成し、Experience Managerに保存することができます。
 1. サブアセットを使用する場合は、適切なファイルタイプに合わせて生成します。
 1. 出力された画像、レンディションおよびサブアセットのサイズを元の画像と比較します。これにより、システムが読み込まれたときに、期待される成長率を生成できます。 例えば、1 GB のアセットを処理した後に合計サイズが 3 GB のレンディションとサブアセットを生成した場合、レンディションの拡張係数は 3 です。
 1. アセットのバージョンがシステムで管理される最大時間を決定します。
