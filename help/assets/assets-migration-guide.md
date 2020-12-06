@@ -3,9 +3,9 @@ title: アセットの一括移行
 description: アセットを [!DNL Adobe Experience Manager]に取り込み、メタデータを適用し、レンディションを生成し、それらをアクティブ化してインスタンスを公開する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1799'
 ht-degree: 67%
 
 ---
@@ -79,7 +79,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 ### レンディションの処理{#processing-renditions}
 
-アセットをシステムに読み込んだ後、[!UICONTROL DAM Update Asset]ワークフローを使用してアセットを処理し、メタデータを抽出してレンディションを生成する必要があります。 この手順を実行する前に、重複を実行し、必要に応じて[!UICONTROL DAM Update Asset]ワークフローを変更する必要があります。 標準搭載のワークフローには、Scene7PTIFFの生成や[!DNL InDesign Server]統合など、ユーザーにとって必要でない多くの手順が含まれています。
+アセットをシステムに読み込んだ後、[!UICONTROL DAM Update Asset]ワークフローを使用してアセットを処理し、メタデータを抽出してレンディションを生成する必要があります。 この手順を実行する前に、重複を実行し、必要に応じて[!UICONTROL DAM Update Asset]ワークフローを変更する必要があります。 標準搭載のワークフローには、ダイナミックメディアPTIFFの生成や[!DNL InDesign Server]統合など、ユーザーにとって必要でない多くの手順が含まれています。
 
 ニーズに合わせてワークフローを設定したら、次の 2 つの方法のいずれかで実行できます。
 
