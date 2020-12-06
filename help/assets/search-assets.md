@@ -4,9 +4,9 @@ description: フィルターパネルを使用して [!DNL Adobe Experience Mana
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f5aa1d31f3b31e29073937e044c8fbac27138c4d
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '5769'
+source-wordcount: '5767'
 ht-degree: 54%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 54%
 | [制限事項](#limitations)と[ヒント](#tips) |  |  |
 | [例を使った説明](#samples) |  |  |
 
-[!DNL Experience Manager] Webインターフェイスの上部にあるOmnisearchフィールドを使用してアセットを検索します。 [!DNL Experience Manager]の&#x200B;**[!UICONTROL アセット]**/**[!UICONTROL ファイル]**&#x200B;に移動し、上部のバーの![search_icon](assets/do-not-localize/search_icon.png)をクリックし、検索キーワードを入力して、Returnキーを押します。 または、キーワードショートカット `/`（スラッシュ）を使用して、オムニサーチフィールドを開きます。`Location:Assets` が事前に選択されており、DAM アセットの検索に制限されています。[!DNL Experience Manager] 開始が検索キーワードを入力する際に、サーチクエリを表示します。
+[!DNL Experience Manager] Webインターフェイスの上部にあるOmnisearchフィールドを使用してアセットを検索します。 [!DNL Experience Manager]の&#x200B;**[!UICONTROL アセット]**/**[!UICONTROL ファイル]**&#x200B;に移動し、上部のバーの![search_icon](assets/do-not-localize/search_icon.png)をクリックし、検索キーワードを入力して、`Return`を選択します。 または、キーワードショートカット `/`（スラッシュ）を使用して、オムニサーチフィールドを開きます。`Location:Assets` が事前に選択されており、DAM アセットの検索に制限されています。[!DNL Experience Manager] 開始が検索キーワードを入力する際に、サーチクエリを表示します。
 
 アセット、フォルダー、タグおよびメタデータを検索するには、**[!UICONTROL フィルター]**&#x200B;パネルを使用します。ファイルタイプ、ファイルサイズ、最終変更日、アセットのステータス、インサイトデータ、Adobe Stock ライセンスなどの、様々なオプション（述部）に基づいて検索結果をフィルタリングできます。フィルターパネルをカスタマイズし、[検索ファセット](/help/assets/search-facets.md)を使用して、検索述語を追加または削除できます。 [!UICONTROL フィルター]パネルの[!UICONTROL ファイルタイプ]フィルターには、混在状態のチェックボックスがあります。 したがって、すべてのネストされた述語（またはフォーマット）を選択しない限り、第1レベルのチェックボックスは部分的にチェックされます。
 
@@ -259,7 +259,7 @@ ht-degree: 54%
 * 検索クエリの先頭にスペースを入れないでください。スペースを入れると、検索が機能しません。
 * [!DNL Experience Manager] は、検索結果からアセットのプロパティを選択し、検索をキャンセルした後も、検索語を引き続き表示する場合があります。  <!-- (CQ-4273540) -->
 * フォルダーまたはファイルとフォルダーを検索する場合、どのパラメーターでも検索結果を並べ替えることはできません。
-* Omnisearchバーに入力せずにReturnキーを押すと、[!DNL Experience Manager]はファイルのみのリストを返し、フォルダーは返しません。 キーワードを使用せずに特にフォルダを検索した場合、[!DNL Experience Manager]は結果を返しません。
+* Omnisearchバーに入力せずに`Return`を選択すると、[!DNL Experience Manager]はファイルのみを含むリストを返し、フォルダは含まれません。 キーワードを使用せずに特にフォルダを検索した場合、[!DNL Experience Manager]は結果を返しません。
 
 ビジュアル検索または類似検索には、次の制限事項があります。
 
