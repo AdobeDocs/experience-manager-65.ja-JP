@@ -7,10 +7,10 @@ user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
-source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 59%
+source-wordcount: '590'
+ht-degree: 58%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 59%
    + [Dynamic Media イメージプロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
-   + [ページへのScene7機能の追加](scene7.md)
+   + [ページへのダイナミックメディア機能の追加](scene7.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
    + [Dynamic Media でのホットリンク保護の有効化](hotlink-protection.md)
@@ -127,7 +127,7 @@ ht-degree: 59%
    + [アセットテンプレート](asset-templates.md)
    + [フォルダーを共有する際のベストプラクティス [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
-   + [ [!DNL Brand Portal] での  [!DNL Assets]  の設定](configure-aem-assets-with-brand-portal.md)
+   + [ [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md) での  [!DNL Assets]  の設定
    + [ [!DNL Brand Portal]](brand-portal-publish-assets.md) へのアセットの公開
    + [フォルダの発行先 [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [コレクションの公開先 [!DNL Brand Portal]](brand-portal-publish-collection.md)
