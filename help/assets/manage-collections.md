@@ -4,10 +4,10 @@ description: 作成、表示、削除、編集、コレクションのダウン�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2178'
-ht-degree: 63%
+source-wordcount: '2176'
+ht-degree: 62%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 63%
 
 1. [!DNL Assets]ユーザーインターフェイスに移動し、「検索」をクリックします。
 
-1. 「Omnisearch」ボックスに検索キーワードを入力し、`Enter`キーを押します。 フィルターパネルを開き、検索フィルターを適用します。
+1. 「Omnisearch」ボックスに検索キーワードを入力し、`Enter`を選択します。 フィルターパネルを開き、検索フィルターを適用します。
 
 1. 「**[!UICONTROL ファイルとフォルダー]**」リストから「**[!UICONTROL ファイル]**」を選択します。
 
@@ -119,7 +119,7 @@ ht-degree: 63%
 スマートコレクションは検索を保存することによって構築されるので、内容を変更するには、[保存済みの検索](#saved-searches)の検索パラメーターを変更します。
 
 1. [!DNL Assets]ユーザーインターフェイスで、ツールバーの検索オプション![検索オプション](assets/do-not-localize/search_icon.png)をクリックします。
-1. オムニサーチボックスにカーソルを置き、Enter キーを押します。
+1. 「Omnisearch」ボックスにカーソルを置き、`Return`キーを選択します。
 1. [!DNL Experience Manager]インターフェイスで、フィルターパネルを開きます。
 1. 「**[!UICONTROL 保存済みの検索結果]**」リストから、変更するスマートコレクションを選択します。検索パネルに、該当する保存済みの検索用に設定されているフィルターが表示されます。
 
@@ -248,7 +248,7 @@ ht-degree: 63%
 保存済みの検索結果を削除するには、次の手順に従います。
 
 1. [!DNL Assets]ユーザーインターフェイスで、「検索![検索オプション](assets/do-not-localize/search_icon.png)」をクリックします。
-1. Omnisearchフィールドにカーソルを置き、Returnキーを押します。
+1. Omnisearchフィールドにカーソルを置き、`Return`キーを選択します。
 1. [!DNL Experience Manager]インターフェイスで、フィルターパネルを開きます。
 1. **[!UICONTROL 保存済みの検索結果]**&#x200B;リストで、削除するスマートコレクションの横にある&#x200B;**[!UICONTROL 削除]**&#x200B;をクリックします。
 
