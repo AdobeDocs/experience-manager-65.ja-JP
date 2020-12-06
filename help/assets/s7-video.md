@@ -8,9 +8,9 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1586'
 ht-degree: 51%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 51%
 
 # ビデオ {#video}
 
-アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをDynamic Media Classic(Scene7)に自動エンコードするためにアセットに直接アップロードし、アセットから直接Dynamic Media Classicビデオにアクセスしてページを作成できます。
+アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをアセットに直接アップロードし、Dynamic Media Classicに自動エンコードしたり、アセットから直接Dynamic Media Classicビデオにアクセスしてページをオーサリングできます。
 
 Dynamic Media Classicビデオの統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
 * **[!UICONTROL Scene7ビデオ]**&#x200B;コンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生します。
-* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。詳しくは、[Scene7のアダプティブビデオセットに関するドキュメントを参照してください。](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html)
+* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。
 
 ## FFMPEGとDynamic Media Classic {#about-ffmpeg-and-scene}について
 
@@ -60,11 +60,11 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 1. AEM の WCM（コンテンツファインダーの「**[!UICONTROL ムービー]**」タブ）で、ビデオアセットにアクセスします。
 1. **[!UICONTROL Scene7ビデオ]**&#x200B;または&#x200B;**[!UICONTROL Foundationビデオ]**&#x200B;コンポーネントを持つ作成者。
 
-### ビデオを Scene7 にアップロードする場合 {#if-you-are-uploading-your-video-to-scene}
+### ビデオをダイナミックメディアクラシック{#if-you-are-uploading-your-video-to-scene}にアップロードする場合
 
 アセットのワークフローまたはバージョン管理が必要でない場合は、Scene7 にアセットをアップロードする必要があります。推奨されるワークフローは次のとおりです。
 
-1. Dynamic Media Classicでは、[Scene7（システム自動化）](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)に対してFTPのスケジュールアップロードとエンコードを設定します。
+1. Dynamic Media Classicでは、[Scene7（システム自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)に対してFTPのスケジュールアップロードとエンコードを設定します。
 1. AEM の WCM（コンテンツファインダーの「**[!UICONTROL Scene7]**」タブ）で、ビデオアセットにアクセスします。
 1. **[!UICONTROL Scene7ビデオ]**&#x200B;コンポーネントを持つ作成者。
 
@@ -85,7 +85,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
    >[!NOTE]
    >
-   >ビデオプリセットの意味について詳しくは、[ダイナミックメディアクラシックドキュメント](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html)を参照してください。
+   >ビデオプリセットの意味について詳しくは、[ダイナミックメディアクラシックドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)を参照してください。
    >
    >ユニバーサルプリセットを設定する際に両方のアダプティブビデオセットを選択するか、「**[!UICONTROL アダプティブビデオエンコーディング]**」オプションを選択することをお勧めします。
 
