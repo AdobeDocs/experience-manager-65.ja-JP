@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 構成、ハードウェア、ソフト
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc61b8473fb919a963eb73c015efbc2f06197ee8
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2744'
 ht-degree: 52%
 
 ---
@@ -164,7 +164,7 @@ accessKey=<snip>
 
 ### DAM アセットの更新設定 {#dam-update-asset-configuration}
 
-[!UICONTROL DAM Update Asset]ワークフローには、Scene7PTIFFの生成や[!DNL Adobe InDesign Server]統合など、タスク用に構成されたすべての手順が含まれています。 ただし、大多数のユーザーにとってこれらの手順のうちのいくつかは不要です。Adobeでは、[!UICONTROL DAM Update Asset]ワークフローモデルのカスタムコピーを作成し、不要な手順を削除することをお勧めします。 この場合、[!UICONTROL DAM Update Asset]のランチャーを更新して、新しいモデルを指定します。
+[!UICONTROL DAM Update Asset]ワークフローには、ダイナミックメディアPTIFFの生成や[!DNL Adobe InDesign Server]統合など、タスク用に設定されたすべての手順が含まれています。 ただし、大多数のユーザーにとってこれらの手順のうちのいくつかは不要です。Adobeでは、[!UICONTROL DAM Update Asset]ワークフローモデルのカスタムコピーを作成し、不要な手順を削除することをお勧めします。 この場合、[!UICONTROL DAM Update Asset]のランチャーを更新して、新しいモデルを指定します。
 
 [!UICONTROL DAM Update Asset]ワークフローを大幅に実行すると、ファイルデータストアのサイズを大幅に拡大できます。 アドビが実施した実験の結果によると、8 時間以内に約 5,500 のワークフローを実行した場合、データストアのサイズが約 400 GB 増加する可能性があります。
 
@@ -180,7 +180,7 @@ accessKey=<snip>
 
 多くの Sites のお客様はリクエストされた時点で画像のサイズを変更および切り抜く画像サーブレットを実装しています。これにより、パブリッシュインスタンスにさらに負荷がかけられます。ただし、これらの画像をキャッシュできる限り、問題を減らすことができます。
 
-もう 1 つの方法では、Scene7 テクノロジーを使用して画像の操作をすべて引き渡します。さらに、[!DNL Experience Manager]インフラストラクチャのレンディション生成の責任を引き継ぐだけでなく、公開層全体を引き継ぐBrand Portalを展開できます。
+別のアプローチは、ダイナミックメディアテクノロジを使用して画像操作全体をハンドオフする方法です。 さらに、[!DNL Experience Manager]インフラストラクチャのレンディション生成の責任を引き継ぐだけでなく、公開層全体を引き継ぐBrand Portalを展開できます。
 
 #### ImageMagick {#imagemagick}
 
