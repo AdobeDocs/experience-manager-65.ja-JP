@@ -3,10 +3,10 @@ title: 検索結果をフィルターする検索ファセット
 description: ' [!DNL Adobe Experience Manager]で検索ファセットを作成、変更、および使用する方法。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2438'
-ht-degree: 77%
+source-wordcount: '2424'
+ht-degree: 76%
 
 ---
 
@@ -38,15 +38,15 @@ ht-degree: 77%
    >
    >1. CRXDEの`/conf/global/settings/dam/search/facets/assets/jcr:content/items`に移動します。
    >1. **type**&#x200B;ノードを削除します。
-   >1. パス */libs/settings/dam/search/facets/assets/jcr:content/items* から、ノード&#x200B;**アセット、ディレクトリ、typeor、excludepaths**、および **searchtype** を、手順 1 のパスにコピーします。
+   >1. パス`/libs/settings/dam/search/facets/assets/jcr:content/items`から、ノード`asset`、`directory`、`typeor`、`excludepaths`、`searchtype`を手順1で示したパスにコピーします。
    >1. 変更内容を保存します。
 
 
 1. [!UICONTROL 検索フォームを編集]ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに述語をドラッグします。例えば、「**[!UICONTROL プロパティの述語]**」をドラッグします。
 
-   ![述語を押して移動し、検索フィルターをカスタマイズ](assets/drag_predicate.png)
+   ![検索フィルターをカスタマイズする述語を選択し、移動します](assets/drag_predicate.png)
 
-   *図：述語を押して移動し、検索フィルターをカスタマイズ。*
+   *図：述語を選択して移動し、検索フィルターをカスタマイズします。*
 
 1. 「[!UICONTROL 設定]」タブで、その述語のラベル、プレースホルダーテキストおよび説明を入力します。述語に関連付けるメタデータプロパティの有効な名前を指定します。「[!UICONTROL 設定]」タブのヘッダーラベルは、選択した述語のタイプを示します。
 
