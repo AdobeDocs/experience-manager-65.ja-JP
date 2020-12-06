@@ -3,9 +3,9 @@ title: メタデータの概念について
 description: アセットの分類と整理を容易にするメタデータの必要性と種類について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2731'
 ht-degree: 89%
 
 ---
@@ -178,7 +178,7 @@ DCMESに加えて、Dublin Core Initiativeによって作成されたその他�
 | description | アセットの詳細。 |
 | format | アセットのファイル形式、物理的な媒体またはサイズ。[!DNL Experience Manager] では、`dc:format` を使用してアセットの MIME タイプを示します。 |
 | identifier | アセットの一意の参照。 |
-| language | アセットの言語（英語の場合は en、など）。 |
+| language | アセットの言語（例えば、英語の場合は`en`）。 |
 | publisher | アセットを使用可能にする責任を負う人または会社。 |
 | relation | 関連アセット。 |
 | rights | このアセットに対して権限を持つ者に関する情報。 |
