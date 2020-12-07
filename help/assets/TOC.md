@@ -127,7 +127,7 @@ ht-degree: 58%
    + [アセットテンプレート](asset-templates.md)
    + [フォルダーを共有する際のベストプラクティス [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
-   + [ [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md) での  [!DNL Assets]  の設定
+   + [ [!DNL Brand Portal] での  [!DNL Assets]  の設定](configure-aem-assets-with-brand-portal.md)
    + [ [!DNL Brand Portal]](brand-portal-publish-assets.md) へのアセットの公開
    + [フォルダの発行先 [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [コレクションの公開先 [!DNL Brand Portal]](brand-portal-publish-collection.md)
