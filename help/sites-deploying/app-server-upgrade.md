@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1876d8d6-bffa-4a1c-99c0-f6001acea825
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+source-git-commit: f696b1081f14ba379cde51a3542a5b1b5f9668e2
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 95%
+source-wordcount: '473'
+ht-degree: 67%
 
 ---
 
@@ -23,37 +23,27 @@ ht-degree: 95%
 
 ここでは、アプリケーションサーバーインストール用の AEM を更新するために必要になる手順を説明します。
 
-この手順では、どの例でも JBoss をアプリケーションサーバーとして使用し、有効な AEM のバージョンが既にデプロイされているものとします。ここでは、**AEM バージョン 5.6 から 6.3** へのアップグレードについて説明します。
+この手順の例では、アプリケーションサーバーとしてTomcatを使用し、AEMの稼働バージョンが既にデプロイされていることを示しています。 ここでは、**AEM バージョン 6.4 から 6.5** へのアップグレードについて説明します。
 
-1. 最初に、JBoss を起動します。ほとんどの状況で、`standalone.sh` 起動スクリプトを実行することで起動できます。そのためには、ターミナルから次のコマンドを実行します。
-
-   ```shell
-   jboss-install-folder/bin/standalone.sh
-   ```
-
-1. AEM 5.6 が既にデプロイされている場合は、次のコマンドを実行してバンドルが正常に動作していることを確認します。
+1. まず、開始のトムキャット。 ほとんどの場合、`./catalina.sh`開始の起動スクリプトを実行し、ターミナルから次のコマンドを実行することで、これを行うことができます。
 
    ```shell
-   wget https://<serveraddress:port>/cq/system/console/bundles
+   $CATALINA_HOME/bin/catalina.sh start
    ```
 
-1. 次に、AEM 5.6 のデプロイを解除します。
+1. AEM 6.4が既にデプロイされている場合は、次のリンクにアクセスして、バンドルが正しく機能していることを確認してください。
 
    ```shell
-   rm jboss-install-folder/standalone/deployments/cq.war
+   https://<serveraddress:port>/cq/system/console/bundles
    ```
 
-1. JBoss を停止します。
+1. 次に、AEM 6.4のデプロイを解除します。これはTomCat App Manager (`http://serveraddress:serverport/manager/html`)から実行できます。
 
-1. 次に、crx2oak 移行ツールを使用してリポジトリを移行します。
+1. 次に、crx2oak移行ツールを使用してリポジトリを移行します。 これを行うには、[この](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak)からcrx2oakの最新バージョンをダウンロードしてください。
 
    ```shell
-   java -jar crx2oak.jar crx-quickstart/repository/ crx-quickstart/oak-repository
+   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
    ```
-
-   >[!NOTE]
-   >
-   >この例では、oak-repository は、新しく変換されたリポジトリが配置される一時ディレクトリです。この手順を実行する前に、crx2oak.jar が最新バージョンであることを確認してください。
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
 
@@ -84,59 +74,41 @@ ht-degree: 95%
 
    * **BootstrapCommandFile_timestamp.txtファイル**:`rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
-1. 新しく移行された segmentstore を適切な場所にコピーします。
+   * **sling.options.file**&#x200B;を次を実行して削除します。`find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
 
-   ```shell
-   mv crx-quickstart/oak-repository/segmentstore crx-quickstart/repository/segmentstore
-   ```
-
-1. datastore もコピーします。
-
-   ```shell
-   mv crx-quickstart/repository/repository/datastore crx-quickstart/repository/datastore
-   ```
-
-1. 次に、アップグレード後の新しいインスタンスで使用する OSGi 設定を格納するためのフォルダーを作成する必要があります。具体的には、install というフォルダーを **crx-quickstart** の下に作成する必要があります。
-
-1. 次に、AEM 6.3 で使用されるノードストアとデータストアを作成します。そのためには、次の名前を持つ 2 つのファイルを **crx-quickstart\install** の下に作成します。
+1. 次に、AEM 6.5 で使用されるノードストアとデータストアを作成します。そのためには、次の名前を持つ 2 つのファイルを `crx-quickstart\install` の下に作成します。
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
-
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
 
    この 2 つのファイルにより、AEM が TarMK ノードストアとファイルデータストアを使用するように設定されます。
 
 1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
 
-   * &lt;a0/追加>org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config **への次の行：**\
-      `customBlobStore=true`
+   * 追加`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`に次の行を追加します。
 
-   * 次に、**org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**&#x200B;に次の行を追加します。
+      ```customBlobStore=true```
+
+   * 次に、`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`に次の行を追加します。
 
       ```
       path=./crx-quickstart/repository/datastore
-       minRecordLength=4096
+      minRecordLength=4096
       ```
 
-1. 次のコマンドを実行して crx2 実行モードを削除します。
+1. 今度は、AEM 6.5 war ファイル内の実行モードを変更する必要があります。変更するには、まず AEM 6.5 war を格納する一時フォルダーを作成します。次の例のフォルダー名は、`temp` です。war ファイルをコピーしたら、temp フォルダー内で次のコマンドを実行して、内容を抽出します。
 
-   ```shell
-   find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf {} \
+   ```
+   jar xvf aem-quickstart-6.5.0.war
    ```
 
-1. 今度は、AEM 6.3 war ファイル内の実行モードを変更する必要があります。変更するには、まず AEM 6.3 war を格納する一時フォルダーを作成します。次の例のフォルダー名は、**temp** です。war ファイルをコピーしたら、temp フォルダー内で次のコマンドを実行して、内容を抽出します。
+1. 内容を抽出したら、**WEB-INF** フォルダーに移動して web.xml ファイルを編集し、実行モードを変更します。XML での実行モードの設定場所を探すには、`sling.run.modes` 文字列を検索します。見つかったら、コードの次の行で実行モードを変更します。デフォルトでは、author に設定されています。
 
-   ```shell
-   jar xvf aem-quickstart-6.3.0.war
-   ```
-
-1. 内容を抽出したら、**WEB-INF** フォルダーに移動して `web.xml` ファイルを編集し、実行モードを変更します。XML での実行モードの設定場所を探すには、`sling.run.modes` 文字列を検索します。見つかったら、コードの次の行で実行モードを変更します。デフォルトでは、author に設定されています。
-
-   ```shell
+   ```bash
    <param-value >author</param-value>
    ```
 
-1. 上述の author という値を変更し、実行モードを author,crx3,crx3tar に設定します。最終的なコードブロックは次のようになります。
+1. 上記の作成者値を変更し、実行モードを次のように設定します。`author,crx3,crx3tar`.コードの最後のブロックは次のようになります。
 
    ```
    <init-param>
@@ -149,13 +121,8 @@ ht-degree: 95%
 
 1. 編集後の内容で jar を再作成します。
 
-   ```shell
-   jar cvf aem62.war
+   ```bash
+   jar cvf aem65.war
    ```
 
-1. 最後に、新しい war ファイルをデプロイします。
-
-   ```shell
-   cp temp/aem62.war jboss-install-folder/standalone/deployments/aem61.war
-   ```
-
+1. 最後に、新しいwarファイルをTomCatに展開します。
