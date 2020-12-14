@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+source-git-commit: 97c93a95cd7fe63b306d80fe127388a209b727c7
 workflow-type: tm+mt
-source-wordcount: '4989'
+source-wordcount: '4974'
 ht-degree: 48%
 
 ---
@@ -803,10 +803,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 引数：
 
-* p1:表示するメッセージを表す`String`値。 次の図に、p1値`this is a log message`で`log`を呼び出した結果を示します。
-
-![launcheruilog](assets/launcheruilog.png)
-
+* p1:表示するメッセージを表す`String`値。
 * 戻り値：なし
 
 **startupFinished**
@@ -821,14 +818,10 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 サーバー起動プロセスの完了値を設定します。クイックスタートウィンドウの進行状況バーが、完了値を表します。
 
 * 引数：
-
    * p1：起動プロセスがどの程度完了したかを割合で表す浮動小数値。値の範囲はゼロから 1 です。例えば、0.3 は 30% 完了を示します。
-
 * 戻り値：なし。
 
-![launchprogress](assets/launcherprogress.png)
-
-## サードパーティのサービス {#third-party-services}
+## サードパーティのサービス  {#third-party-services}
 
 いくつかのサードパーティのサーバーリソースでは、MBean がインストールされ、これによって属性および操作が JMX コンソールに提供されます。次の表では、サードパーティのリソースをリストし、詳細のリンクを提供します。
 
