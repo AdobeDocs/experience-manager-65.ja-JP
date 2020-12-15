@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '409'
-ht-degree: 49%
+ht-degree: 48%
 
 ---
 
@@ -44,15 +44,15 @@ ht-degree: 49%
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
-![chlimage_1-8](assets/chlimage_1-8.png)
+![先頭板](assets/leaderboard.png)
 
 ### リーダーボードの設定 {#configuring-leaderboard}
 
 アクセスする配置済みの`Leaderboard`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
-![chlimage_1-9](assets/chlimage_1-9.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-10](assets/chlimage_1-10.png)
+![configure-leaderboard](assets/configure-leaderboard.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -120,7 +120,7 @@ ht-degree: 49%
    * バッジルール = `/libs/settings/community/badging/rules//reference-badging`
    * 最大表示数 = `10`
 
-![chlimage_1-11](assets/chlimage_1-11.png)
+![参加者のリーダーボード](assets/participants-leaderboard.png)
 
 ### 例：エキスパートのリーダーボード {#example-experts-leaderboard}
 
@@ -143,7 +143,7 @@ ht-degree: 49%
    * バッジルール = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 最大表示数 = `10`
 
-![chlimage_1-12](assets/chlimage_1-12.png)
+![専門家委員会](assets/experts-leaderboard.png)
 
 ### 追加情報 {#additional-information}
 
