@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
+source-git-commit: 0e1ac02879ff09ab0e78d043450ef7114c868417
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 36%
@@ -222,7 +222,7 @@ AEM Communitiesでは、共通のストアはユーザー生成コンテンツ(U
 
 したがって、すべてのセカンダリパブリッシュインスタンスの設定を編集して、「」チェックボックスをオフにする必要があります。******`Primary Publisher`**
 
-![chlimage_1-411](assets/chlimage_1-411.png)
+![主版出版社](assets/primary-publisher.png)
 
 パブリッシュファーム内の他のすべての（セカンダリ）パブリッシュインスタンスについて、以下をおこないます。
 
@@ -266,11 +266,11 @@ AEM Communitiesでは、共通のストアはユーザー生成コンテンツ(U
 
 #### デフォルトエージェント（発行） {#default-agent-publish}
 
-![chlimage_1-412](assets/chlimage_1-412.png)
+![default-agent-publish](assets/default-agent-publish.png)
 
 #### リバースレプリケーションエージェント（publish reverse）{#reverse-replication-agent-publish-reverse}
 
-![chlimage_1-413](assets/chlimage_1-413.png)
+![逆複製エージェント](assets/reverse-replication-agent.png)
 
 ### オーサー環境のトンネルサービス {#tunnel-service-on-author}
 
@@ -293,7 +293,7 @@ AEM Communitiesでは、共通のストアはユーザー生成コンテンツ(U
 * **enable**&#x200B;ボックスをチェック
 * **保存**&#x200B;を選択
 
-   ![chlimage_1-414](assets/chlimage_1-414.png)
+   ![トンネルサービス](assets/tunnel-service.png)
 
 ### 暗号鍵のレプリケーション {#replicate-the-crypto-key}
 
@@ -353,7 +353,7 @@ AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存�
 
 * [Granite Cryptoバンドルの更新](#refresh-the-granite-crypto-bundle)
 
-   ![chlimage_1-415](assets/chlimage_1-415.png)
+   ![replicare-repository](assets/replicare-repository.png)
 
 #### Granite 暗号バンドルの更新 {#refresh-the-granite-crypto-bundle}
 
@@ -364,7 +364,7 @@ AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存�
 * `Adobe Granite Crypto Support`バンドルを検索(com.adobe.granite.crypto)
 * **更新**&#x200B;を選択
 
-   ![chlimage_1-416](assets/chlimage_1-416.png)
+   ![花崗岩暗号の](assets/granite-crypto.png)
 
 * しばらくすると、**成功**ダイアログが表示されます。
    `Operation completed successfully.`
