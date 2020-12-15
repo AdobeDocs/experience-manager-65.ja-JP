@@ -2,9 +2,9 @@
 title: ライブコピーの作成と同期
 description: ライブコピーを作成および同期する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
+source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
 workflow-type: tm+mt
-source-wordcount: '4115'
+source-wordcount: '4114'
 ht-degree: 82%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 82%
 1. **ツール**&#x200B;メニューに[移動](/help/sites-authoring/basic-handling.md#global-navigation)し、**サイト**&#x200B;メニューを選択します。
 1. 「**ブループリント**」を選択して、**ブループリント設定**&#x200B;コンソールを開きます。
 
-   ![chlimage_1-209](assets/chlimage_1-209.png)
+   ![chlimage_1-209](assets/blueprint-configurations.png)
 
 1. 「**作成**」を選択します。
 1. ブループリントテンプレートを選択し、「**次へ**」を選択して先に進みます。
@@ -66,14 +66,12 @@ ht-degree: 82%
 1. **ツール**&#x200B;メニューに[移動](/help/sites-authoring/basic-handling.md#global-navigation)し、**サイト**&#x200B;メニューを選択します。
 1. 「**ブループリント**」を選択して、**ブループリント設定**&#x200B;コンソールを開きます。
 
-   ![chlimage_1-210](assets/chlimage_1-210.png)
+   ![chlimage_1-210](assets/blueprint-configurations.png)
 
 1. 必要なブループリント設定を選択します。ツールバー上の該当するアクションが使用可能になります。
 
    * **プロパティ**：設定のプロパティを表示して編集するために使用します。
    * **削除**
-
-   ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## ライブコピーの作成 {#creating-a-live-copy}
 
@@ -154,7 +152,7 @@ ht-degree: 82%
 1. **サイト**&#x200B;コンソールで「**作成**」を選択し、ドロップダウンセレクターから「**ライブコピー**」を選択します。
 1. ライブコピーのソースとして使用するブループリント設定を選択し、「**次へ**」で先に進みます。
 
-   ![chlimage_1-216](assets/chlimage_1-216.png)
+   ![chlimage_1-216](assets/blueprint-configuration-select.png)
 
 1. **初期言語**&#x200B;セレクターを使用して、ライブコピーに使用するブループリントサイトの言語を選択します。
 
