@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 47%
@@ -217,7 +217,7 @@ MySQLがAEMとは異なるサーバーで実行される場合、ScormEngineサ�
 * `AEM Communities ScormEngine Service`
 * 編集アイコンを選択します
 
-   ![chlimage_1-337](assets/chlimage_1-337.png)
+   ![scromエンジン](assets/scrom-engine.png)
 
 * 次のパラメーター値が[JDBC Connection](#configurejdbcconnectionspool)設定と一致していることを確認します。
    * **[!UICONTROL JDBC接続URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDBは、SQLスクリプ* トのデフォルトのデータベース名です
