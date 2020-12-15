@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '349'
-ht-degree: 49%
+ht-degree: 48%
 
 ---
 
@@ -51,15 +51,15 @@ ht-degree: 49%
 
 [必要なクライアント側ライブラリ](essentials-featured.md#essentials-for-client-side)が含まれる場合、`Featured Content`コンポーネントは次のように表示されます。
 
-![chlimage_1-13](assets/chlimage_1-13.png)
+![featuredcontent](assets/featuredcontent.png)
 
 ## おすすめコンテンツの設定 {#configuring-featured-content}
 
 アクセスする配置済みの`Featured Content`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
-![chlimage_1-14](assets/chlimage_1-14.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-15](assets/chlimage_1-15.png)
+![featuredcontent1](assets/featuredcontent1.png)
 
 ### 「設定」タブ{#settings-tab}
 
@@ -83,13 +83,13 @@ ht-degree: 49%
 
 モデレーター表示がコンテンツを投稿すると、新しい`Feature`フラグを含むコンテキスト内モデレートフラグにアクセスできます。
 
-![chlimage_1-16](assets/chlimage_1-16.png)
+![サイト訪問者体験](assets/site-visitor-experience.png)
 
 機能としてフラグ付けされると、モデレーションフラグは`Unfeature`になります。
 
 `Featured Content`コンポーネントを含むページに、この投稿が含まれるようになります。
 
-![chlimage_1-17](assets/chlimage_1-17.png)
+![site-訪問者-experience1](assets/site-visitor-experience1.png)
 
 `Read More` は、実際の投稿へのリンクです。
 
