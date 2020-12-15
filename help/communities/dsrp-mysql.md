@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 49%
+source-wordcount: '746'
+ht-degree: 47%
 
 ---
 
@@ -80,7 +80,7 @@ MySQL Workbenchは、ターゲットOSの指示に従ってダウンロードし
 
 MySQL Workbench を初めて起動したときは（他の目的で既に使用されていない場合）、接続はまだ表示されません。
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![mysqlconnection](assets/mysqlconnection.png)
 
 ### 新しい接続の設定 {#new-connection-settings}
 
@@ -105,13 +105,13 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 
 #### 新しい Communities 接続 {#new-communities-connection}
 
-![chlimage_1-105](assets/chlimage_1-105.png)
+![地域とのつながり](assets/community-connection.png)
 
 ## データベースのセットアップ {#database-setup}
 
 データベースをインストールするには、Communities 接続を開きます。
 
-![chlimage_1-106](assets/chlimage_1-106.png)
+![install-database](assets/install-database.png)
 
 ### SQL スクリプトの取得 {#obtain-the-sql-script}
 
@@ -124,9 +124,9 @@ SQL スクリプトは、AEM リポジトリから取得されます。
 1. /libs/social/config/datastore/dsrp/スキーマフォルダーを選択します
 1. ダウンロード `init-schema.sql`
 
-   ![chlimage_1-107](assets/chlimage_1-107.png)
+   ![database-スキーマ-crxde](assets/database-schema-crxde.png)
 
-スキーマをダウンロードする方法の1つは、次の操作です。
+スキーマをダウンロードする方法の1つは、次のことです。
 
 * SQLファイルの`jcr:content`ノードを選択
 * `jcr:data`プロパティの値は表示リンクです
@@ -143,10 +143,10 @@ SQL スクリプトは、AEM リポジトリから取得されます。
 
 MySQL Workbench で、以下の設定をおこないます。
 
-* [ファイル]プルダウンメニューから
-* ダウンロードした`init_schema.sql`を選択
+* [ファイル]プルダウンメニューから[**[!UICONTROL SQLスクリプトを開く]**]オプションを選択します
+* ダウンロードした`init_schema.sql`スクリプトを選択
 
-![chlimage_1-108](assets/chlimage_1-108.png)
+![select-sql-script](assets/select-sql-script.png)
 
 #### 手順 2：SQL スクリプトの実行 {#step-execute-sql-script}
 
@@ -154,13 +154,13 @@ MySQL Workbench で、以下の設定をおこないます。
 
 以下の画像では、`init_schema.sql` ファイルは実行可能です。
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![execute-sql-script](assets/execute-sql-script.png)
 
 #### 更新 {#refresh}
 
 スクリプトを実行したら、新しいデータベースを表示するために、`Navigator`の`SCHEMAS`セクションを更新する必要があります。 以下のように、「SCHEMAS」の右側にある更新アイコンを使用します。
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![リフレッシュスキーマ](assets/refresh-schema.png)
 
 ## JDBC 接続の設定 {#configure-jdbc-connection}
 
@@ -179,7 +179,7 @@ MySQLがAEMとは異なるサーバーで実行される場合、JDBCコネク�
 * `Day Commons JDBC Connections Pool`
 * `+`アイコンを選択して、新しい接続設定を作成します。
 
-   ![chlimage_1-111](assets/chlimage_1-111.png)
+   ![configure-jdbc-connection](assets/configure-jdbc-connection.png)
 
 * 次の値を入力します。
 
