@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0e1ac02879ff09ab0e78d043450ef7114c868417
+source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 36%
@@ -137,7 +137,7 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 
 #### 例：インストール済みの MySQL コネクタバンドル {#example-installed-mysql-connector-bundle}
 
-![小包](assets/chlimage-bundles.png)
+![connector-bundle](assets/connector-bundle.png)
 
 ### SCORM パッケージ {#scorm-package}
 
