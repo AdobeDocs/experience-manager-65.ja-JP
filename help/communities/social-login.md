@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 6d0ff6ae47688ba7f0e071bad40808fb3466246f
 workflow-type: tm+mt
 source-wordcount: '2803'
 ht-degree: 36%
@@ -391,13 +391,13 @@ AEM Communitiesの構成は、[AdobeGranite OAuth Application and Provider](#ado
 * 設定を編集用に開く場合に選択します。
 * 「**[!UICONTROL 保存]**」を選択します。
 
-![chlimage_1-489](assets/chlimage_1-489.png)
+![graniteauth](assets/graniteoauth.png)
 
 >[!CAUTION]
 >
 >認証ハンドラーと、*AdobeGranite OAuth Application and Provider*&#x200B;のFacebookまたはTwitterのインスタンスとを混同しないように注意してください。
 
-![chlimage_1-490](assets/chlimage_1-490.png)
+![graniteoauth1](assets/graniteoauth1.png)
 
 ### Adobe Granite OAuth Application and Provider {#adobe-granite-oauth-application-and-provider}
 
@@ -414,7 +414,7 @@ Facebook または Twitter アプリ用に作成されたインスタンスを�
 
    * **[!UICONTROL クライアントID]**&#x200B;が&#x200B;**[!UICONTROL アプリID]**&#x200B;と一致するインスタンスを探します。
 
-      ![chlimage_1-491](assets/chlimage_1-491.png)
+      ![graniteauth2](assets/graniteoauth2.png)
 
       次のプロパティを除き、configの他のプロパティは変更しないでください。
 
@@ -493,7 +493,7 @@ OAuth認証ハンドラーの設定ごとに、このインスタンスに2つ�
 
 * **name** `oauthid-123`の場合、*123*&#x200B;をFacebook ***App ID***&#x200B;またはTwitter ***Consumer (API) Key***&#x200B;に置き換えます。これは&#x200B;**ClientID&lt;a10>は、[AdobeGranite OAuth Application and Provider](social-login.md#adobe-granite-oauth-application-and-provider)構成内にあります。**
 
-   ![chlimage_1-492](assets/chlimage_1-492.png)
+   ![graniteauth-crxde](assets/graniteoauth-crxde.png)
 
 追加の情報とツールについては、[Oakクエリとインデックス作成](../../help/sites-deploying/queries-and-indexing.md)を参照してください。
 
