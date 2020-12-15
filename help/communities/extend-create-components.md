@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 418e7fad2d990f1a7cb3b69ab4c290ca1b7075ba
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 57%
+ht-degree: 56%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 57%
 1. **[!UICONTROL 削除]**&#x200B;を選択
 1. 「**[!UICONTROL すべて保存]**」を選択します。
 
-![chlimage_1-70](assets/chlimage_1-70.png)
+![create-component](assets/create-component.png)
 
 ### 子コメントコンポーネントの作成 {#create-the-child-comment-component}
 
@@ -83,7 +83,7 @@ ht-degree: 57%
 1. `/apps/custom/components/comments`ノードに移動します
 1. ノードを右クリック
 
-   * **[!UICONTROL 作成]/**[!UICONTROL コンポーネントを選択…]**
+   * **[!UICONTROL 作成]**/**[!UICONTROL コンポーネントを選択…]**
 
       * **ラベル**：comment **
       * **タイトル**：Alt Comment **
@@ -102,9 +102,9 @@ ht-degree: 57%
 1. **[!UICONTROL 削除]**&#x200B;を選択
 1. 「**[!UICONTROL すべて保存]**」を選択します。
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![create-child-component](assets/create-child-component.png)
 
-![chlimage_1-72](assets/chlimage_1-72.png)
+![create-component-crxde](assets/create-component-crxde.png)
 
 ### デフォルトの HBS スクリプトのコピーと変更 {#copy-and-modify-the-default-hbs-scripts}
 
@@ -168,7 +168,7 @@ ht-degree: 57%
 * 「customcommentsystem.js」を`js.txt`の内容として入力
 * 「**[!UICONTROL すべて保存]**」を選択します。
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![comments-clientlibs](assets/comments-clientlibs.png)
 
 ## SCF モデルおよびビューの登録 {#register-the-scf-model-view}
 
@@ -200,9 +200,9 @@ SCFコンポーネントを拡張（オーバーライド）する場合、resou
 
 拡張されたコンポーネントをパブリッシュ環境で確認するには、カスタムコンポーネントをレプリケートする必要があります。
 
-その一つの方法は
+その方法の1つは、次のとおりです。
 
-* グローバルナビゲーションから
+* グローバルナビゲーションから、
 
    * **[!UICONTROL ツール]**/**[!UICONTROL 展開]**/**[!UICONTROL レプリケーション]**&#x200B;を選択します
    * 「**[!UICONTROL ツリーをアクティブにする]**」を選択します。
