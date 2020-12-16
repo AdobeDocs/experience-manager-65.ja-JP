@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 932601c849b3a1ddd196e6570a9cf05710cd3e6a
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 97%
+source-wordcount: '753'
+ht-degree: 95%
 
 ---
 
@@ -37,8 +37,12 @@ ht-degree: 97%
 
 [新しいコンテンツフラグメントモデルを作成する](#creating-a-content-fragment-model)には、最初に設定マネージャーを使用してコンテンツフラグメントモデルを有効にする&#x200B;**必要があります**。
 
+>[!CAUTION]
+>
+>サブ設定（設定内にネストされた設定）は、コンテンツフラグメントでの使用をサポートしていません。
+
 1. **ツール**／**一般**&#x200B;に移動し、**設定ブラウザー**&#x200B;を開きます。
-1. Web サイトに適した場所を選択します。
+
 1. 「**作成**」を使用してダイアログを開き、次の操作をおこないます。
 
    1. 「**タイトル**」を指定します。
@@ -47,6 +51,8 @@ ht-degree: 97%
    ![cfm-6420-09](assets/cfm-6420-09.png)
 
 1. 「**作成**」を選択して、定義を保存します。
+
+<!-- 1. Select the location appropriate to your website. -->
 
 ### アセットフォルダーへの設定の適用 {#apply-the-configuration-to-your-assets-folder}
 
