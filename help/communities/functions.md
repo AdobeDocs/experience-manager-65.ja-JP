@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3133f712be1380ae98e18e63c9598d760d2e7595
+source-git-commit: cbce81a028195d97dba5f9bd154685393d8be180
 workflow-type: tm+mt
 source-wordcount: '2458'
-ht-degree: 44%
+ht-degree: 43%
 
 ---
 
@@ -51,7 +51,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 #### 設定機能の詳細  {#configuration-function-details}
 
-![chlimage_1-380](assets/chlimage_1-380.png)
+![title-url-details](assets/title-url-details.png)
 
 * **タイトル**
 
@@ -70,7 +70,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 また、このページのメニューリンクは以下のように表示されます。
 
-![chlimage_1-381](assets/chlimage_1-381.png)
+![関与ページ](assets/engage-page.png)
 
 ### アクティビティストリーム機能 {#activity-stream-function}
 
@@ -80,7 +80,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 #### 設定機能の詳細 {#configuration-function-details-1}
 
-![chlimage_1-382](assets/chlimage_1-382.png)
+![function-details](assets/function-details.png)
 
 * [Title and URL Settings](#title-and-url-settings)
 
@@ -110,7 +110,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 テンプレートに追加すると、次のダイアログが開きます。
 
-![chlimage_1-383](assets/chlimage_1-383.png)
+![blog-component](assets/blog-component.png)
 
 * [タイトルとURLの設定](#title-and-url-settings)
 
@@ -136,7 +136,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 テンプレートに追加すると、次のダイアログが開きます。
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![カレンダーの詳細](assets/calendar-details.png)
 
 * [タイトルとURLの設定](#title-and-url-settings)
 
@@ -201,7 +201,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 #### 設定機能の詳細 {#configuration-function-details-2}
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![forum-component1](assets/forum-component1.png)
 
 * [タイトルとURLの設定](#title-and-url-settings)
 
@@ -243,7 +243,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 テンプレートに追加すると、次のダイアログが開きます。
 
-![chlimage_1-386](assets/chlimage_1-386.png)
+![group-template-config](assets/group-template-config.png)
 
 * [タイトルとURLの設定](#title-and-url-settings)
 
@@ -266,7 +266,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 テンプレートに追加すると、次のダイアログが開きます。ここで、タイトルおよび URL 名のデフォルトと、テンプレートのデフォルト表示設定を指定します。
 
-![chlimage_1-387](assets/chlimage_1-387.png)
+![理想関数](assets/ideation-function.png)
 
 * [タイトルとURLの設定](#title-and-url-settings)
 
