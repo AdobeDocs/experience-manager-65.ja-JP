@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 98180b630c991bc65ddfa275e0f8a97be3be6f7e
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 97%
+source-wordcount: '629'
+ht-degree: 96%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 97%
    + [ビデオコンポーネントの設定](config-video.md)
    + [Bulk Editor](bulk-editor.md)
    + [電子メール通知の設定](notification.md)
-   + [外部リンクチェック](external-link-checker.md)
+   + [リンクチェッカー](external-link-checker.md)
    + [AEM のトラブルシューティング](troubleshoot.md)
    + [ワークフローへのアクセスの管理](workflows-managing.md)
    + [ワークフローの開始](workflows-starting.md)
