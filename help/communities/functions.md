@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cbce81a028195d97dba5f9bd154685393d8be180
+source-git-commit: 94a5a8d99d052d7bcf01f237dc2b73157a2f11c2
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 43%
@@ -294,7 +294,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 テンプレートに追加すると、次のダイアログが開きます。ここで、タイトルおよび URL 名のデフォルトと、テンプレートのデフォルト表示設定を指定します。
 
-![chlimage_1-388](assets/chlimage_1-388.png)
+![リーダーボード対話](assets/leaderboard-dialog.png)
 
 * [タイトルとURLの設定](#title-and-url-settings)
 
@@ -325,7 +325,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 テンプレートへの追加時に、権限を持つメンバーだけが投稿できるような設定をすることができます。
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![qna-dialog](assets/qna-dialog.png)
 
 * [タイトルとURLの設定](#title-and-url-settings)
 
@@ -353,11 +353,11 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 コミュニティ機能を作成するには、コミュニティ機能コンソールの上部にある`Create Community Function`アイコンを選択します。 同じAEM Blueprintに基づく複数の機能を作成し、作成者編集モードで開いて独自にカスタマイズできます。
 
-![chlimage_1-390](assets/chlimage_1-390.png)
+![create-community-function](assets/create-community-function.png)
 
 ### コミュニティ機能名 {#community-function-name}
 
-![chlimage_1-391](assets/chlimage_1-391.png)
+![function-name](assets/function-name.png)
 
 コミュニティ機能名パネルでは、機能の名前および説明と、機能を有効にするか無効にするかを設定します。
 
@@ -375,7 +375,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 ### AEM ブループリント {#aem-blueprint}
 
-![chlimage_1-392](assets/chlimage_1-392.png)
+![aem-blueprint](assets/aem-blueprint.png)
 
 `AEM Blueprint`パネルでは、コミュニティ機能の基本的な実装であるBluePrintを選択できます。
 
@@ -387,13 +387,13 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 ### サムネール  {#thumbnail}
 
-![chlimage_1-393](assets/chlimage_1-393.png)
+![機能サムネール](assets/funtion-thumbnail.png)
 
 サムネールパネルでは、[コミュニティ機能コンソール](#community-functions-console)に表示する画像をアップロードできます。
 
 ## コミュニティ機能を開く  {#open-community-function}
 
-![chlimage_1-394](assets/chlimage_1-394.png)
+![開機能](assets/open-function.png)
 
 `Open Community Function`アイコンを選択して、ページコンテンツのオーサリングと機能コンポーネントの設定の変更を行うための作成者編集モードに入ります。
 
@@ -409,6 +409,6 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 ## コミュニティ機能を編集  {#edit-community-function}
 
-![chlimage_1-395](assets/chlimage_1-395.png)
+![編集機能](assets/edit-function.png)
 
 `Edit Community Function`アイコンを選択し、[コミュニティ関数](#create-community-function)の作成と同じパネルを使用して、関数のプロパティを編集します。このパネルには、関数の有効/無効を含めます。
