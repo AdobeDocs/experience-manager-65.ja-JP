@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: d621a612556f0bea032444c2e07be101868b1905
+source-git-commit: 28fdb57f51a5bd97ce78b626db86f4a59de6f0be
 workflow-type: tm+mt
-source-wordcount: '3371'
+source-wordcount: '3386'
 ht-degree: 66%
 
 ---
@@ -162,10 +162,11 @@ Sling では JCR ノード以外のものをリソースとすることもでき
 * メソッド（GET、POST）が必要なときは、HTTP の仕様に従って大文字で指定します（例：jobs.POST.esp。以下を参照）。
 * 以下のような様々なスクリプトエンジンがサポートされています。
 
-   * `.esp, .ecma`:ECMAScript (JavaScript)ページ（サーバー側の実行）
-   * `.jsp`:Javaサーバーページ（サーバー側の実行）
-   * `.java`:Javaサーブレットコンパイラ（サーバ側の実行）
-   * `.jst`:JavaScriptテンプレート（クライアント側の実行）
+   * HTL(HTMLテンプレート言語 —Adobe Experience Managerが推奨および推奨するHTML用サーバー側テンプレートシステム):`.html`
+   * ECMAScript (JavaScript)ページ（サーバー側の実行）:`.esp, .ecma`
+   * Java Server Pages（サーバー側の実行）:`.jsp`
+   * Javaサーブレットコンパイラ（サーバ側の実行）:`.java`
+   * JavaScriptテンプレート（クライアント側の実行）:`.jst`
 
 AEMの特定のインスタンスでサポートされるスクリプトエンジンのリストが、Felix Management Console(`http://<host>:<port>/system/console/slingscripting`)に一覧表示されます。
 
@@ -400,7 +401,7 @@ currentPageを現在のページオブジェクトにします。ページオブ
 
 Page myPage = pageManager.getContainingPage(myResource);
 
-pageManagerをページマネージャーオブジェクトに、myResourceをリソースオブジェクトにします。ページマネージャーが提供するメソッドについて詳しくは、[Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)を参照してください。
+pageManagerをページマネージャーオブジェクトに、myResourceをリソースオブジェクトにします。ページマネージャーが提供するメソッドについて詳しくは、[Javadocs](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)を参照してください。
 
 ## リポジトリ内の構造 {#structure-within-the-repository}
 
