@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 98%
+source-wordcount: '1449'
+ht-degree: 95%
 
 ---
 
@@ -46,7 +46,7 @@ AEM には、画像をチューニングおよび最適化して結果をレン�
 
 画像のシャープニングは、Web サイト上の画像を管理するうえで最も難しい操作であり、多くの誤りが発生するところです。次の補助的なリソースを参照して、AEM でのシャープニングおよびアンシャープニングマスクの仕組みについて詳しく確認してください。
 
-ベストプラクティスに関するホワイトペーパー『[Adobe Scene7 Publishing System および Image Server での画像のシャープニング](/help/assets/assets/s7_sharpening_images.pdf)』の内容は AEM にも適用されます。
+ベストプラクティスに関するホワイトペーパー[AdobeDynamic Mediaクラシック](/help/assets/assets/sharpening_images.pdf)のシャープの適用もAEMに適用されます。
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
@@ -72,7 +72,7 @@ AEM を使用すれば、取り込み時、配信時またはその両方で画�
 
       画像のシャープニングに関する AEM ヘルプトピック。
 
-      ベストプラクティスに関するホワイトペーパー『[Adobe Scene7 Publishing System および Image Server での画像のシャープニング](/help/assets/assets/s7_sharpening_images.pdf)』。
+      ベストプラクティスに関するホワイトペーパー[AdobeDynamic Mediaクラシック](/help/assets/assets/sharpening_images.pdf)の画像へのシャープの適用
 
    * AEM では第 4 パラメーターの monochrome（0,1）も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
@@ -124,7 +124,7 @@ jpegSize は、メモリ容量が限られているデバイスに配信され�
 
 実験をおこなう際には、ワークフローを最適化するための次の一般的な推奨事項も役に立つでしょう。
 
-* 異なるパラメーターをリアルタイムでテストします。その際には、URL 上で直接使用するか、調整操作のリアルタイムプレビューが可能な Scene7 Publishing System の画像調整機能を使用します。
+* 様々なパラメーターをリアルタイムで、直接URLでテストします。
 * ベストプラクティスとしては、Dynamic Media 画像サービングコマンドを画像プリセット内にまとめることができます。画像プリセットは基本的に、`$thumb_low$` や `&product_high$` といったカスタムプリセット名が付けられた URL コマンドマクロです。URL パス内でカスタムプリセット名を指定すると、これらのプリセットがコールされます。この機能によって、Web サイトでの様々な画像使用パターンに応じたコマンドと画質設定を管理でき、URL の全体的な長さを短縮することができます。
 * AEM では、取り込み時に画像のシャープニングを適用するなど、高度な画質調整機能を提供しています。レンダリング結果をさらに調整して最適化するためにこの機能を利用できるような高度な使用例については、[Adobe Professional Services](https://www.adobe.com/jp/experience-cloud/consulting-services.html) がお客様向けにカスタマイズした見識やベストプラクティスを提供して支援いたします。
 
