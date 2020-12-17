@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c863e438df45fd54c29c1b99114eea07aaeb6162
+source-git-commit: 303841896717448947aa48ece7ae86519a5450d5
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 85%
+source-wordcount: '502'
+ht-degree: 79%
 
 ---
 
@@ -63,7 +63,7 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 
 ## 設定方法 {#how-to-set-up}
 
-AEM 6.3互換パッケージは、この[リンク](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)のPackage Managerを使用して、パッケージとしてインストールできます。
+AEM 6.3互換パッケージは、Package Managerを使用してパッケージとしてインストールできます。 [AEM 6.3 Compatibility Packageは、Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)サイトからダウンロードできます。
 
 互換パッケージがインストールされると、次に示すように、OSGI 設定のスイッチを使用して、ルーティングを有効または無効にできます。
 
