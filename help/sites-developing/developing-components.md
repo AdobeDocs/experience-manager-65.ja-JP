@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
 workflow-type: tm+mt
-source-wordcount: '3452'
-ht-degree: 86%
+source-wordcount: '3533'
+ht-degree: 84%
 
 ---
 
@@ -285,6 +285,14 @@ newComponent (cq:Component)
 ExtJS を使用するクラシック UI では、コンテンツ構造内に指定のウィジェットのリスナーを用意することが普通でした。タッチ操作対応 UI では、同じことを別の方法で実現します。JS のリスナーコード（またはあらゆるコード）はコンテンツ内で定義されないからです。
 
 コンテンツ構造は意味構造を記述するものであり、基となるウィジェットの性質を示すものであってはなりません。コンテンツ構造に JS コードを含めないことで、コンテンツ構造を変更せずに実装の詳細を変更することが可能になります。言い換えると、コンテンツ構造に触れることなく、ウィジェットライブラリを変更できます。
+
+#### ダイアログの可用性の検出{#dialog-ready}
+
+ダイアログが使用可能で準備が整ったときにのみ実行する必要があるカスタムJavaScriptがある場合は、`dialog-ready`イベントをリッスンする必要があります。
+
+このイベントは、ダイアログが読み込まれ（または再読み込み）、使用の準備ができたときにトリガーされます。つまり、ダイアログのDOMに変更（作成/更新）がある場合に必ずトリガーされます。
+
+`dialog-ready` は、ダイアログ内のフィールドや類似のタスクをカスタマイズするJavaScriptカスタムコードをフックするために使用できます。
 
 ### フィールドの検証 {#field-validation}
 
