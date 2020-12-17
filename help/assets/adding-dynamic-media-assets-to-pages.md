@@ -1,6 +1,6 @@
 ---
 title: ページへの Dynamic Media アセットの追加
-description: AEM 内のページに Dynamic Media コンポーネントを追加する方法
+description: Adobe Experience ManagerのページにDynamic Mediaコンポーネントを追加する方法
 uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '3092'
-ht-degree: 90%
+source-wordcount: '3100'
+ht-degree: 88%
 
 ---
 
@@ -21,25 +21,25 @@ ht-degree: 90%
 
 Web サイトで使用するアセットに Dynamic Media 機能を追加するには、**Dynamic Media**、**インタラクティブメディア**、**パノラマメディア**、**ビデオ 360 メディア**&#x200B;のいずれかのコンポーネントをページに直接追加します。これをおこなうには、レイアウトモードに入り、Dynamic Media コンポーネントを有効にします。次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Media コンポーネントはスマートです。追加しようとしているアセットが画像、ビデオのどちらなのかが検出され、それに応じて利用可能なオプションが変わります。
 
-AEM を WCM として使用している場合は、Dynamic Media アセットを直接ページに追加します。サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)をおこないます。サードパーティのレスポンシブ Web サイトについては、[レスポンシブサイトへの最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
+WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaアセットを直接ページに追加します。 サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)をおこないます。サードパーティのレスポンシブ Web サイトの場合は、[レスポンシブサイトへの最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
 
 >[!NOTE]
 >
->AEM のページに追加する前にアセットを公開する必要があります。[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+>アセットは、Experience Manager内のページに追加する前に公開する必要があります。 [Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
 3D メディア、Dynamic Media、インタラクティブメディア、パノラマメディア、スマート切り抜きビデオ、ビデオ 360 メディアのいずれかのコンポーネントを 1 つのページに追加することは、コンポーネントを任意のページに追加することと同じです。Dynamic Media コンポーネントについては、後の節で説明します。
 
-1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
+1. 「Experience Manager」で、Dynamic Mediaコンポーネントを追加するページを開きます。
 1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、**[!UICONTROL コンポーネント]**&#x200B;アイコンをクリックします。
-1. 「**[!UICONTROL コンポーネント]**」見出しの下のドロップダウンリストで、「**[!UICONTROL ダイナミックメディア」を選択します。]**
+1. 「**[!UICONTROL コンポーネント]**」見出しの下のドロップダウンリストで、「**[!UICONTROL Dynamic Media」を選択します。]**
 
    Dynamic Media コンポーネントのリストがない場合は、使用する Dynamic Media コンポーネントを有効にしなければならない可能性があります。詳しくは、[Dynamic Media コンポーネントの有効化](#enabling-dynamic-media-components)を参照してください。
 
    ![6_5_360video_wcmcomponent](/help/assets/assets/6_5_360video_wcmcomponent.png)
 
-1. 使用する&#x200B;**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントをドラッグし、ページ上の目的の場所にドロップします。
+1. 使用する&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;コンポーネントをドラッグし、ページ上の目的の場所にドロップします。
 
 1. コンポーネントの上に直接マウスポインターを置きます。コンポーネントが青色のボックスで囲まれた時点で 1 回タップすると、コンポーネントのツールバーが表示されます。**[!UICONTROL 設定（レンチ）]** アイコンをタップします。
 
@@ -59,7 +59,7 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 
 ページに追加できる Dynamic Media コンポーネントがない場合は、使用するコンポーネントをまず有効にしなければならない可能性があります。
 
-1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
+1. 「Experience Manager」で、Dynamic Mediaコンポーネントを追加するページを開きます。
 1. ページ上部付近のツールバーの左側にあるページ情報アイコンをタップした後、ドロップダウンリストから「**[!UICONTROL テンプレートを編集]**」をタップします。
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
@@ -73,7 +73,7 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 
    ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
-1. **[!UICONTROL ダイナミックメディアが表示されるまでスクロールします。]**
+1. **[!UICONTROL Dynamic Media]**&#x200B;が表示されるまでスクロールします。
 1. **[!UICONTROL Dynamic Media]** の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
 
    ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
@@ -98,7 +98,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-ダイナミックメディアコンポーネントは、**[!UICONTROL コンポーネント]**&#x200B;アイコンをタップし、**[!UICONTROL ダイナミックメディアをフィルターすると使用できます。]**
+**[!UICONTROL コンポーネント]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Mediaでフィルターを適用すると、Dynamic Mediaのコンポーネントを使用できます。]**
 
 利用可能な Dynamic Media コンポーネントは次のとおりです。
 
@@ -109,7 +109,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 >[!NOTE]
 >
->これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディタ](/help/sites-authoring/templates.md#editing-templates-template-authors)ーでコンポーネントが使用可能になったら、他のAEMコンポーネントと同様に、コンポーネントをページに追加できます。
+>これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディタ](/help/sites-authoring/templates.md#editing-templates-template-authors)ーで使用可能になったら、他のExperience Managerコンポーネントと同様に、コンポーネントをページに追加できます。
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
@@ -141,13 +141,13 @@ Dynamic Media コンポーネントでは、画像セット、スピンセット
 
 また、ビューアプリセット、画像プリセットまたは画像形式をコンポーネント内で直接設定することもできます。画像をレスポンシブにするために、ブレークポイントの設定かレスポンシブ画像プリセットの適用のいずれかを実行できます。
 
-コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、**[!UICONTROL ダイナミックメディア設定]**&#x200B;をタップして、次のダイナミックメディア設定を&#x200B;*編集する必要があります。&lt;a5/>*
+*次のDynamic Media設定を*&#x200B;編集する必要があります。コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Media設定をタップします。]**
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->デフォルトでは、ダイナミックメディアイメージコンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
+>デフォルトでは、Dynamic Mediaの画像コンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
 
 * **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
@@ -190,7 +190,7 @@ Dynamic Media コンポーネントを使用して、ダイナミックビデオ
 
 ![chlimage_1-173](assets/chlimage_1-540.png)
 
-コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックして、次のダイナミックメディア設定を編集する必要があります。
+コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックして、次のDynamic Media設定を編集する必要があります。
 
 >[!NOTE]
 >
@@ -221,11 +221,11 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 ![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
 
-コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックして、次のダイナミックメディア設定を編集する必要があります。
+コンポーネント内の&#x200B;**[!UICONTROL 「編集]**」をクリックして、次のDynamic Media設定を編集する必要があります。
 
 >[!NOTE]
 >
->デフォルトでは、ダイナミックメディアイメージコンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
+>デフォルトでは、Dynamic Mediaの画像コンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
 
 * **[!UICONTROL 画像の修飾子]** - 追加の画像コマンドを指定すると、画像エフェクトを適用できます。これらは画像プリセットと画像をサーブするコマンドリファレンスに記述されています。
 
