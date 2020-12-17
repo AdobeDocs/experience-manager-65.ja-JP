@@ -1,6 +1,6 @@
 ---
-title: ダイナミックメディア画像プリセットの管理
-description: ダイナミックメディア画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
+title: Dynamic Media画像プリセットの管理
+description: Dynamic Mediaの画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,15 +10,15 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
+source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
 workflow-type: tm+mt
-source-wordcount: '3867'
+source-wordcount: '3866'
 ht-degree: 88%
 
 ---
 
 
-# ダイナミックメディア画像プリセットの管理{#managing-image-presets}
+# Dynamic Media画像プリセットの管理{#managing-image-presets}
 
 画像プリセットを使用すると、AEM Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像表示用のサイズやフォーマットに関するコマンドの事前定義済みコレクションを表します。画像プリセットの作成時には、画像配信用のサイズを選択します。またフォーマットコマンドも選択し、表示対象画像の配信時に画像の見た目が最適化されるようにします。
 
@@ -32,13 +32,13 @@ ht-degree: 88%
 >
 >スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、[スマートイメージング](/help/assets/imaging-faq.md)を参照してください。
 
-## ダイナミックメディア画像プリセットについて{#understanding-image-presets}
+## Dynamic Mediaの画像プリセットについて{#understanding-image-presets}
 
 各画像プリセットはマクロと同様に、サイズおよびフォーマットのコマンドに関する事前定義済みのコレクションが、特定の名前で保存されたものです。画像プリセットの仕組みを理解するために、Web サイトで各商品画像を、デスクトップ配信用とモバイル配信用に異なるサイズ、異なる形式および圧縮率で表示する必要があるとします。
 
 >[!NOTE]
 >
->ダイナミックメディア —Scene7モードでは、画像プリセットは画像アセットに対してのみサポートされています。
+>Dynamic Media-Scene7モードでは、画像プリセットは画像アセットに対してのみサポートされています。
 
 デスクトップバージョン（500 x 500 ピクセル）とモバイルバージョン（150 x 150 ピクセル）の 2 つの画像プリセットを作成できます。2 つの画像プリセットを作成します。つまり、500 x 500 ピクセルで画像を表示するための `Enlarge` プリセットとで、150 x 150 ピクセルで画像を表示するための `Thumbnail` プリセットです。`Enlarge` および `Thumbnail` サイズの画像を配信するために、AEM では「拡大画像プリセット」と「サムネール画像プリセット」の定義を検索します。その後、AEM は各画像プリセットのサイズと形式の仕様に従って画像を動的に生成します。
 
@@ -46,7 +46,7 @@ ht-degree: 88%
 
 管理者が画像プリセットを作成できます。画像プリセットを作成する際に、最初から作業を始めることも、既存のプリセットから始めて新しい名前で保存することもできます。
 
-## ダイナミックメディア画像プリセットの管理{#managing-image-presets-1}
+## Dynamic Media画像プリセットの管理{#managing-image-presets-1}
 
 AEMで画像プリセットを管理するには、AEMロゴをタップまたはクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップまたはクリックして&#x200B;**[!UICONTROL アセット/画像プリセットに移動します。]**
 
@@ -70,7 +70,7 @@ AEMで画像プリセットを管理するには、AEMロゴをタップまた�
 
 >[!NOTE]
 >
->このトピックは、ダイナミックメディア — ハイブリッドモードにのみ適用できます。
+>このトピックは、Dynamic Media — ハイブリッドモードにのみ該当します。
 
 AI、EPS および PDF 形式の取り込みをサポートし、これらのファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。
 
@@ -223,18 +223,18 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 1. 「**[!UICONTROL 保存]**」をタップしてワークフローに対する変更を保存します。
 
-### {#increasing-or-decreasing-the-number-of-image-presets-that-display}を表示するダイナミックメディア画像プリセットの数の増減
+### {#increasing-or-decreasing-the-number-of-image-presets-that-display}を表示するDynamic Media画像プリセットの数の増減
 
 作成した画像プリセットは、アセットをプレビューする際の動的レンディションとして使用できます。AEM で、**[!UICONTROL 詳細表示／レンディションからアセットを表示すると、様々な動的レンディションが表示されます。]**&#x200B;表示されるレンディション数の制限を増減させることができます。
 
-**表示されるダイナミックメディア画像プリセットの数を増減するには**:
+**表示されるDynamic Media画像プリセットの数を増減するには**:
 
 1. CRXDE Lite（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）に移動します。
 1. 画像プリセットリストノード（`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`）に移動します。
 
    ![increase_decreasethenumberofimagepresetsthatdisplay](assets/increase_decreasethenumberofimagepresetsthatdisplay.png)
 
-1. 「**[!UICONTROL limit]**」プロパティで、「**[!UICONTROL Value]**」（デフォルトで 15 に設定されています）を目的の数に変更します。
+1. 「**[!UICONTROL limit]**」プロパティで、「**[!UICONTROL 値]**」（デフォルトで 15 に設定されています）を目的の数に変更します。
 1. 画像プリセットデータソース（`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist/datasource`）に移動します。
 
    ![chlimage_1-495](assets/chlimage_1-495.png)
@@ -242,9 +242,9 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
 1. 「**[!UICONTROL すべて保存」をタップします。]**
 
-## ダイナミックメディア画像プリセットの作成{#creating-image-presets}
+## Dynamic Media画像プリセットの作成{#creating-image-presets}
 
-ダイナミックメディア画像プリセットを作成すると、プレビュー時や公開時に、これらの設定を任意の画像に適用できます。
+Dynamic Mediaの画像プリセットを作成すると、プレビュー時や公開時に、これらの設定を任意の画像に適用できます。
 
 >[!NOTE]
 >
@@ -256,9 +256,9 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 >[!NOTE]
 >
->ダイナミックメディア画像プリセットを作成するには、AEM管理者またはAdmin Console管理者としての管理者権限が必要です。
+>Dynamic Media画像プリセットを作成するには、管理者権限がAEM管理者またはAdmin Console管理者である必要があります。
 
-**ダイナミックメディア画像プリセットを作成するには**:
+**Dynamic Media画像プリセットを作成するには**:
 
 1. AEMで、AEMロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/アセット/画像プリセットをタップします。]**
 1. 「**[!UICONTROL 作成」をクリックします。]****[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
@@ -398,7 +398,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
      <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li>
     </ul>
     <div>
-      シャープニングについては、<a href="https://docs.adobe.com/content/help/ja-JP/dynamic-media-classic/using/assets/s7_sharpening_images.pdf">画像のシャープニング</a>を参照してください。
+      シャープニングについては、<a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/sharpening_images.pdf">画像のシャープニング</a>を参照してください。
     </div> </td>
   </tr>
   <tr>
@@ -492,13 +492,13 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 1. プリセットを選択し、「**[!UICONTROL 編集」をクリックします。]**&#x200B;画像プリセットを編集ウィンドウが開きます。**[!UICONTROL 画像プリセットを編集ウィンドウ]**&#x200B;が開きます。
 1. 変更を加え、「**[!UICONTROL 保存]**」をクリックして変更を保存するか、「**[!UICONTROL キャンセル]**」をクリックして変更をキャンセルします。
 
-## ダイナミックメディア画像プリセットの公開{#publishing-image-presets}
+## Dynamic Media画像プリセットの公開{#publishing-image-presets}
 
 Dynamic Media - ハイブリッドモードを実行している場合、画像プリセットを手動で公開する必要があります。
 
 （Dynamic Media - Scene7 モードを実行している場合、画像プリセットは自動的に公開されるので、以下の手順を実行する必要はありません）。
 
-**ダイナミックメディア — ハイブリッドモードで画像プリセットを公開するには**:
+**画像プリセットをDynamic Media — ハイブリッドモードで公開するには**:
 
 1. AEMで、AEMロゴをタップまたはクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップまたはクリックして&#x200B;**[!UICONTROL アセット/画像プリセットに移動します。]**
 1. 画像プリセットのリストから画像プリセットまたは複数の画像プリセットを選択し、「**[!UICONTROL 公開」をクリックまたはタップします。]**
@@ -506,7 +506,7 @@ Dynamic Media - ハイブリッドモードを実行している場合、画像�
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
-## ダイナミックメディア画像プリセットの削除{#deleting-image-presets}
+## Dynamic Media画像プリセットの削除{#deleting-image-presets}
 
 1. AEMで、AEMロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
 1. **[!UICONTROL ツール]**&#x200B;アイコンをタップし、**[!UICONTROL アセット/画像プリセットに移動します。]**
