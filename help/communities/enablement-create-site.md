@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: e9d5a7acad04d841cbc7d62050163f3de998fab6
 workflow-type: tm+mt
 source-wordcount: '1728'
-ht-degree: 49%
+ht-degree: 48%
 
 ---
 
@@ -70,9 +70,9 @@ ht-degree: 49%
 
 （オプション）サイトページ全体に表示するバナー画像をアップロードします。 バナーはブラウザーの左端およびコミュニティサイトヘッダーとメニュー（ナビゲーションリンク）の間に固定されます。バナーの高さは 120 ピクセルに切り詰められます。バナーがブラウザーの幅や 120 ピクセルの高さに合わせてリサイズされることはありません。
 
-![chlimage_1-449](assets/chlimage_1-449.png)
+![site-branding1](assets/site-branding1.png)
 
-![chlimage_1](assets/chlimage_1.jpeg)
+![site-branding2](assets/site-branding2.png)
 
 「**次へ**」を選択します。
 
@@ -130,7 +130,7 @@ ht-degree: 49%
 
 ユーザー生成コンテンツ（UGC）を[モデレート](/help/communities/sites-console.md#moderation)する場合は、デフォルトのグローバル設定を受け入れます。
 
-![chlimage_1-452](assets/chlimage_1-452.png)
+![moderation1](assets/moderation1.png)
 
 #### Analytics {#analytics}
 
@@ -138,7 +138,7 @@ ht-degree: 49%
 
 スクリーンショットに表示されている選択肢「`Communities`」は、[設定ドキュメント](/help/communities/analytics.md#aem-analytics-framework-configuration)のフレームワークの例です。
 
-![chlimage_1-454](assets/chlimage_1-454.png)
+![分析](assets/analytics.png)
 
 #### 翻訳{#translation}
 
@@ -147,7 +147,7 @@ ht-degree: 49%
 * **機械翻訳を許可**&#x200B;を確認
 * デフォルト設定を使用する
 
-![chlimage_1-456](assets/chlimage_1-456.png)
+![翻訳](assets/translation.png)
 
 #### イネーブルメント {#enablement}
 
@@ -163,7 +163,7 @@ ht-degree: 49%
 * **Marketing Cloud組織ID**
 （オプション）有効化レポートに [ビデオハートビート](/help/communities/analytics.md#video-heartbeat-analytics) 分析を含める場合に必要な、Adobe AnalyticsアカウントのID。
 
-![chlimage_1-457](assets/chlimage_1-457.png)
+![有効化](assets/enablement.png)
 
 「**次へ**」を選択します。
 
@@ -171,7 +171,7 @@ ht-degree: 49%
 
 「**作成」を選択します。**
 
-![chlimage_1-458](assets/chlimage_1-458.png)
+![プレビュー](assets/preview.png)
 
 処理が完了すると、新しいサイトのフォルダーがコミュニティ/サイトコンソールに表示されます。
 
@@ -217,11 +217,11 @@ ht-degree: 49%
 
 地球のアイコンを選択して、コミュニティサイトを公開します。
 
-![chlimage_1-465](assets/chlimage_1-465.png)
+![publish-site](assets/publish-site.png)
 
 サイトが公開されると、次のようなメッセージが表示されます。
 
-![chlimage_1-466](assets/chlimage_1-466.png)
+![サイトが公開した](assets/site-published.png)
 
 ## コミュニティのユーザーとユーザーグループ {#community-users-user-groups}
 
@@ -250,7 +250,7 @@ ht-degree: 49%
 
 * **保存**&#x200B;を選択
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![edit-group-settings](assets/edit-group-settings.png)
 
 ## パブリッシュ側の設定 {#configurations-on-publish}
 
@@ -316,13 +316,13 @@ ht-degree: 49%
 >
 >無効にするには、`sling:match`プロパティの値の前に「x」 — `xlocalhost.4503/$` — と&#x200B;**「すべて保存**」を付けます。
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![change-default-homepage](assets/change-default-homepage.png)
 
 #### トラブルシューティング：マップ保存エラー {#troubleshooting-error-saving-map}
 
 変更を保存できない場合は、ノード名が `localhost.4503`（区切り文字が「ドット」）となっているかを確認してください。`localhost:4503` は有効な名前空間のプレフィックスではないので、`localhost`（区切り文字が「コロン」）という表記は正しくありません。
 
-![chlimage_1-365](assets/chlimage_1-365.png)
+![error-map](assets/error-map.png)
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
@@ -360,11 +360,11 @@ ht-degree: 49%
 
 * 「**保存**」を選択します。
 
-![chlimage_1-299](assets/chlimage_1-299.png)
+![modify-site-structure](assets/modify-site-structure.png)
 
 位置アイコンを使用し、カタログ機能を Assignments の後の 2 番目の位置に移動します。
 
-![chlimage_1-300](assets/chlimage_1-300.png)
+![move-catalog-func](assets/move-catalog-func.png)
 
 右上隅の「**保存**」を選択してコミュニティサイトに対する変更を保存します。
 
