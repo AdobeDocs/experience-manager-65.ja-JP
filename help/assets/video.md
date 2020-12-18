@@ -1,5 +1,5 @@
 ---
-title: ビデオ ダイナミックメディア
+title: Dynamic Mediaのビデオ
 description: Dynamic Media でビデオを使用する方法について説明します。
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
@@ -9,15 +9,15 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f63e13486792f9975c84202b2cd3ddcf618ce0fc
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '11812'
+source-wordcount: '11277'
 ht-degree: 89%
 
 ---
 
 
-# ダイナミックメディア内のビデオ{#video}
+# Dynamic Mediaのビデオ{#video}
 
 ここでは、Dynamic Media でのビデオの操作方法について説明します。
 
@@ -27,7 +27,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->ダイナミックメディアでビデオを操作する前に、AEM管理者がダイナミックメディア —Scene7モードまたはダイナミックメディア — ハイブリッドモードでダイナミックメディアCloud Servicesを有効にし、設定済みであることを確認してください。
+>Dynamic Mediaでビデオを操作する前に、AEM管理者がDynamic MediaCloud ServicesをDynamic Media-Scene7モードまたはDynamic Media — ハイブリッドモードで有効にし、設定済みであることを確認してください。
 >
 >* 「Dynamic Media - Scene7 モードの設定」の[ Dynamic Media クラウドサービスの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)、および[ Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
    >
@@ -146,7 +146,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 * 効率的なビデオアセット管理のための、メタデータが完全にサポートされたビデオの整理、参照および検索。
 * Web やデスクトップおよびモバイルデバイス（iPhone、iPad、Android、Blackberry および Windows Phone を含む）へのアダプティブビデオセットの配信。
 
-アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。詳しくは、[Dynamic Media Viewersリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)を参照してください。
+アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。『[Dynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)』を参照してください。
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする Blackberry デバイスについては、[Blackberry でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
@@ -162,7 +162,7 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 詳しくは、[動的なビデオ再生](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)の例を参照してください。
 
-[AEM Assetsおよびダイナミックメディアクラシックのビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)および[AEMアセット専用のビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)も参照してください。
+[AEM AssetsおよびDynamic Mediaクラシックのビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)および[AEMアセット専用のビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)も参照してください。
 
 ## ベストプラクティス：HTML5 ビデオビューアの使用 {#best-practice-using-the-html-video-viewer}
 
@@ -191,7 +191,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
 
 プログレッシブビデオは、ユーザーのデスクトップシステムやモバイルデバイスにダウンロードしてローカルに保存することで配信されます。
 
-次の表に、ダイナミックメディアビデオビューアを使用するデスクトップコンピューターおよび携帯端末上のビデオのデバイス、ブラウザー、再生方法を示します。
+次の表に、Dynamic Mediaビデオビューアを使用するデスクトップコンピューターおよび携帯端末でのビデオのデバイス、ブラウザー、再生方法を示します。
 
 <table>
  <tbody>
@@ -401,7 +401,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 |--- |--- |--- |--- |
 | ソース | 1,920 x 1,080 | 1 | 1 |
 | エンコード | 960 x 540 | 2 | 2 |
-| エンコード | 640 x 360 | 3 | 1 |
+| エンコード | 640 x 360 | 3 | 3 |
 | エンコード | 480 x 270 | 4 | 4 |
 
 ### エンコードされたビデオのファイル形式 {#encoded-video-file-format}
@@ -543,7 +543,7 @@ YouTube にビデオを公開するには、1 つ以上のチャネルが必要�
 
 >[!CAUTION]
 >
->** AEM の「YouTube 設定」にチャネルを追加する前に、YouTube のチャネルを既に 1 つ以上セットアップ済みであることを確認してください（以下の [AEM での YouTube の設定](#setting-up-youtube-in-aem)を参照してください）。この確認をおこなわなくても、既存のチャネルが存在しないことを知らせる警告は表示されません。ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
+>*AEM* の「YouTube 設定」にチャネルを追加する前に、YouTube のチャネルを既に 1 つ以上セットアップ済みであることを確認してください（以下の [AEM での YouTube の設定](#setting-up-youtube-in-aem)を参照してください）。この確認をおこなわなくても、既存のチャネルが存在しないことを知らせる警告は表示されません。ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
 
 YouTube チャンネルを作成するには：
 
@@ -740,7 +740,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 
 >[!NOTE]
 >
->Dynamic Media - Scene7 モードで実行する場合は、即時公開しても YouTube に自動的には公開されないことに注意してください。ダイナミックメディア —Scene7モードが設定されている場合、次の2つの公開オプションから選択できます。**[!UICONTROL すぐに]**&#x200B;または&#x200B;**[!UICONTROL アクティベーション時。]**
+>Dynamic Media - Scene7 モードで実行する場合は、即時公開しても YouTube に自動的には公開されないことに注意してください。Dynamic Media-Scene7モードが設定されている場合、次の2つの公開オプションから選択できます。**[!UICONTROL すぐに]**&#x200B;または&#x200B;**[!UICONTROL アクティベーション時。]**
 >
 >**[!UICONTROL 即時公開する]**&#x200B;の場合、アップロードされたアセットは、IPS と同期された後、配信システムに自動的に公開されます。これは Dynamic Media には当てはまりますが、YouTube には当てはまりません。YouTube に公開するには、AEM オーサーを介して公開する必要があります。
 
@@ -976,7 +976,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 デフォルトでは、ビデオレポートを最初に開いたときに、今月初めから今月の今日の日付までのビデオデータが表示されます。ただし、このデフォルトの日付範囲を上書きして、独自の日付範囲を指定することができます。次回ビデオレポートを開くと、指定した日付範囲が使用されます。
 
-ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。公開サーバーが設定されていない場合でも、公開してビデオレポートを表示することはできますが、ダイナミックメディアクラウド設定に戻り、「**[!UICONTROL OK」をタップする必要があります。]**
+ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。公開サーバーが設定されていない場合でも、公開してビデオレポートを表示することはできますが、Dynamic Mediaクラウド設定に戻り、「**[!UICONTROL OK.]**」をタップする必要があります。
 
 ビデオレポートを表示するには：
 
@@ -992,64 +992,67 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
 
-### Scene7 HTML5 ビューア SDK を使用して作成したビデオビューアに基づくビデオレポートの表示  {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+<!-- OBSOLETE CONTENT ### Viewing video reports based on a video viewer that you created using the Scene7 HMTL5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-Dynamic Media で標準提供されているビデオビューアを使用している場合、または標準提供のビデオビューアからカスタムのビューアプリセットを作成した場合は、ビデオレポートを表示するための追加手順は必要ありません。これに対して、Scene7 HTML5 ビューア SDK から独自のビデオビューアを作成した場合は、次の手順を実行して、ビデオビューアが Dynamic Media のビデオレポートにトラッキングイベントを送信するように設定する必要があります。
+If you are using an out-of-box video viewer provided by Dynamic Media, or if you created a custom viewer preset based off of an out-of-box video viewer, then no additional steps are required to view video reports. However, if you have created your own video viewer based off the Scene7 HTML5 Viewer SDK, then use the following steps to ensure the your video viewer is sending tracking events to Dynamic Media Video Reports.
 
-独自のビデオビューアを作成するには、『ダイナミックメディアビューアリファレンス』と『Scene7HTML5ビューアSDK』を使用します。
+Use the Dynamic Media Viewers Reference and the Scene7 HTML5 Viewers SDK to create your own video viewers.
 
-詳しくは、[Dynamic Media Viewersリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)を参照してください。
+See [Dynamic Media Viewers Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). -->
 
-<!-- Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
+<!-- OBSOLETE CONTENT Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
 See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-Scene7 HTML5 ビューア SDK を使用して作成したビデオビューアに基づいてビデオレポートを表示するには：
+<!-- OBSOLETE CONTENT To view Video Reports based on a video viewer that you created using the Scene7 HTML5 Viewer SDK:
 
-1. 公開済みビデオアセットの場所に移動します。
-1. アセットのページの左上隅近くにあるドロップダウンリストで、「**[!UICONTROL ビューア」を選択します。]**
-1. 任意のビデオビューアプリセットを選択し、埋め込みコードをコピーします。
-1. 埋め込みコード内の次の行を探します。
+1. Navigate to any published video asset.
+1. Near the upper-left corner of the asset's page, from the drop-down list, select **[!UICONTROL Viewers.]**
+1. Select any video viewer preset and copy the embed code.
+1. In the embed code, find the line with the following:
 
    `videoViewer.setParam("config2", "<value>");`
 
-   `config2` パラメーターは、HTML5 ビューアでの追跡を有効にします。また、ビデオレポートの設定情報や、お客様固有の Adobe Analytics 設定を含む、会社固有のプリセットでもあります。
+   The `config2` parameter enables tracking in HTML5 Viewers. It is also a company-specific preset that contains the configuration information for Video Reporting, and for customer-specific Adobe Analytics configurations.
 
-   config2パラメータの正しい値は、「**Embed Code **」と「**URL **」コピー関数の両方にあります。**URL **commandのコピーからのURL内で、検索するパラメータは`&config2=<value>`です。 この値はほぼ常に `companypreset` ですが、一部のケースでは `companypreset-1`、`companypreset-2` などとなっていることもあります。
+   The correct value for the config2 parameter is found in both the **Embed Code **and in the copy **URL **function. In the URL from the copy **URL **command, the parameter to look for is `&config2=<value>` . The value is almost always `companypreset`, but in some instances it can also be `companypreset-1`, `companypreset-2`, and so forth.
 
-1. カスタムのビデオビューアコードで、次の操作をおこなって、ビューアページに AppMeasurementBridge.jsp を追加します。
+1. In your custom video viewer code, add AppMeasurementBridge .jsp to the viewer page by doing the following:
 
-   * 最初に、`&preset` パラメーターが必要かどうかを判断します。
-`config2` パラメーターが `companypreset` の場合、`&preset=parameter` は不要です。
-`config2` がその他の場合は、プリセットパラメーターを `config2` パラメーターと同じに設定します。例えば、`config2=companypreset-2` の場合、`&param2=companypreset-2` を AppMeasurmentBridge.jsp の URL に追加します。
+    * First, determine if you need the `&preset` parameter.
+      If the `config2` parameter is `companypreset`, you do *not *need `&preset=parameter`.
+      If `config2` is anything else, set the preset parameter the same as the `config2` parameter. For example, if `config2=companypreset-2`, add `&param2=companypreset-2` to the AppMeasurmentBridge.jsp URL.
 
-   * 次に、AppMeasurementBridge.jsp にスクリプトを追加します。
+    * Then, add the AppMeasurementBridge.jsp script:
       `<script language="javascript" type="text/javascript" src="https://s7d1.scene7.com/s7viewers/AppMeasurementBridge.jsp?company=robindallas&preset=companypreset-2"></script>`
 
-1. 次の操作をおこなって、TrackingManager コンポーネントを作成します。
+1. Create the TrackingManager component by doing the following:
 
-   * `s7sdk.Utils.init();` をコールした後に、次の行を追加して、TrackingManager インスタンスを作成し、イベントを追跡します。
+    * After calling `s7sdk.Utils.init();` create a TrackingManager instance to track events by adding the following:
       `var trackingManager = new s7sdk.TrackingManager();`
 
-   * 次の操作をおこなって、コンポーネントを TrackingManager に接続します。
-`s7sdk.Event.SDK_READY` イベントハンドラーで、追跡するコンポーネントを TrackingManager に関連付けます。例えば、コンポーネントが `videoPlayer` の場合、
-      `trackingManager.attach(videoPlayer);` を追加して、コンポーネントを trackingManager にアタッチします。ページ上の複数のビューアを追跡するには、複数のトラッキングマネージャーコンポーネントを使用します。
+    * Connect components to TrackingManager by doing the following:
+      In the `s7sdk.Event.SDK_READY` event handler, attach the component you want to track to the TrackingManager.
+      For example, if the component is `videoPlayer`, add
+      `trackingManager.attach(videoPlayer);`
+      to attach the component to the trackingManager. To track multiple viewers on a page, use multiple tracking mangaer components.
 
-   * 次のコードを追加して、AppMeasurementBridge オブジェクトを作成します。
+    * Create the AppMeasurementBridge object by adding the following:
 
       ```
       var appMeasurementBridge = new AppMeasurementBridge(); appMeasurementBridge.setVideoPlayer(videoPlayer);
       ```
 
-   * 次のコードを追加して、トラッキング関数を追加します。
+    * Add the tracking function by adding the following:
 
       ```
       trackingManager.setCallback(appMeasurementBridge.track,
        appMeasurementBridge);
       ```
-   appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
-   詳しくは、『*Scene7 HTML5 Viewer SDK User Guide*』の「*Using the TrackingManager Component*」を参照してください。このガイドは、[Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードできます。
+   The appMeasurementBridge object has a built-in track function. However, you can provide your own to support multiple tracking systems or other functionality.
+
+   For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ## ビデオへのキャプションの追加 {#adding-captions-to-video}
 
@@ -1063,7 +1066,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
 
 Dynamic Media には、キャプションファイルを JSON（JavaScript Object Notation）形式に変換する機能があります。このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
 
-URL で JSON 機能を使用する方法について詳しくは、*Scene7 画像サービング API ヘルプ*&#x200B;の[静的コンテンツ（画像以外）の提供（英語）](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.translate.html)を参照してください。
+URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サービングとレンダリングAPIのヘルプ*&#x200B;の[静的な（画像以外の）コンテンツの提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api)を参照してください。
 
 ビデオにキャプションまたはサブタイトルを追加するには:
 
@@ -1118,7 +1121,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Scene7 画�
 >
 >ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーを必ずしもサポートしているとは限りません。
 
-必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自の HTML5 ビューアの作成方法について詳しくは、『Adobe Scene7 Viewer SDK for HTML5』の「Customizing Behavior Using Modifiers」で `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber`7 クラスの説明を参照してください。Adobe Scene7 Viewer SDK は、[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードして入手できます。
+<!-- OBSOLETE CONTENT If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
  ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、この WebVTT ファイルは、WebVTT キャプションファイルと分けておく必要があります（キャプションファイルを使用する場合）。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
@@ -1188,7 +1191,7 @@ Cost-efficient access to rapidly evolving technology.
      </tbody>
    </table>
 
-## ダイナミックメディア —Scene7モード{#about-video-thumbnails-in-dynamic-media-scene-mode}のビデオサムネールについて
+## Dynamic Mediaモードのビデオサムネールについて —Scene7モード{#about-video-thumbnails-in-dynamic-media-scene-mode}
 
 ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオをクリックする気になるようなものにする必要があります。
 
