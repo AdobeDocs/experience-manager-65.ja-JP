@@ -1,14 +1,14 @@
 ---
-title: ダイナミックメディアでのアクセシビリティ
-description: ダイナミックメディアビューアおよびダイナミックメディアビューアのアクセシビリティについて説明します。
+title: Dynamic Mediaでのアクセシビリティ
+description: Dynamic MediaおよびDynamic MediaのViewerでのアクセシビリティのサポートについて説明します
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 2%
+source-wordcount: '578'
+ht-degree: 0%
 
 ---
 
@@ -52,12 +52,12 @@ ht-degree: 2%
 
 標準搭載のすべての[!DNL Dynamic Media]ビューアコンポーネントは、お客様向けのキーボードアクセシビリティをサポートしています。
 
-『Dynamic Media Viewersリファレンスガイド』の「[キーボードのアクセシビリティとナビゲーション](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)」を参照してください。
+『Dynamic Mediaビューアリファレンスガイド』の「[キーボードのアクセシビリティとナビゲーション](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)」を参照してください。
 
 ## [!DNL Dynamic Media]ビューア{#assistive-technology-support-for-dm-viewers}での支援テクノロジーのサポート
 
 すべての[!DNL Dynamic Media]ビューアコンポーネントは、ARIA(Accessible Rich Internet Applications)の役割と属性をサポートしており、スクリーンリーダーなどの支援テクノロジーとの統合を強化します。
-Dynamic Media Viewersリファレンスガイドのビューアのカスタマイズに関するトピックで、**支援テクノロジーのサポート**&#x200B;のヘルプトピックを参照してください。 例えば、ビデオビューアの場合は[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)を、インタラクティブ画像ビューアの場合は[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)を参照してください。
+『Dynamic Mediaビューアリファレンスガイド』の「ビューアのカスタマイズ」トピックで、**支援テクノロジサポート**&#x200B;ヘルプトピックを参照してください。 例えば、ビデオビューアの場合は[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)を、インタラクティブ画像ビューアの場合は[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)を参照してください。
 
 >[!MORELIKETHIS]
 >
