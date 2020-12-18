@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager Assets] 6.5のリリースノート。'
 description: 新しい機能と拡張機能が [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]に追加されました。
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 43%
+source-wordcount: '897'
+ht-degree: 42%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 43%
 
 [!DNL Dynamic Media] リッチメディアのオーサリング機能と配信機能が強化され、 [!DNL Experience Manager Assets] 没入型でパーソナライズされた最新のエクスペリエンスを実現します。1つの高品質マスターアセットをアップロードし、アドビの高度なクラウドレンダリングとビューアを使用して、任意のレンディションをその場で配信し、組織のメディア戦略をサポートします。
 
-新しい[!DNL Dynamic Media]機能について詳しくは、[ダイナミックメディアリリースノート](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html)を参照してください。
+新しい[!DNL Dynamic Media]機能の詳細については、[Dynamic Mediaリリースノート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html)を参照してください。
 
 ### 360ビデオサポート{#video-support}
 
@@ -80,7 +80,7 @@ DAM に保存されているビデオそのものまたは他のコンテンツ�
 
 ### アクセシビリティの強化 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどの強化されたアクセシビリティ機能がサポートされるようになりました。詳細については、[Dynamic Media ビューアのリリースノート](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/home.html)を参照してください。
+[!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどの強化されたアクセシビリティ機能がサポートされるようになりました。詳細については、[Dynamic Media ビューアのリリースノート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)を参照してください。
 
 ## 検索エクスペリエンスの強化  {#experience-enhancement-for-searching}
 
