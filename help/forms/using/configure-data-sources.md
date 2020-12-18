@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 19ee2722bc73f67b77cc08dd2a634328ba5269ec
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 45%
+source-wordcount: '2020'
+ht-degree: 42%
 
 ---
 
@@ -138,6 +138,27 @@ RESTful サービスを設定するには、以下の手順を実行します。
    認証の種類として「**[!UICONTROL 相互認証]**」を選択した場合は、「[RESTfulおよびSOAP Webサービスの証明書ベースの相互認証](#mutual-authentication)」を参照してください。
 
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
+
+### フォームデータモデルHTTPクライアント構成によるパフォーマンスの最適化{#fdm-http-client-configuration}
+
+[!DNL Experience Manager Forms] フォームデータモデルを使用します。次の手順を実行して、フォームデータモデルのHTTPクライアントを設定します。
+
+1. [!DNL Experience Manager Forms]作成者インスタンスに管理者としてログインし、[!DNL Experience Manager] Webコンソールバンドルに移動します。 デフォルトのURLは[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)です。
+
+1. 「**[!UICONTROL Form Data Model Http Client Configuration for REST data source]**」をタップします。
+
+1. [!UICONTROL Form Data Model Http Client Configuration for REST data source]ダイアログで、次の操作を行います。
+
+   * **[!UICONTROL 「Connection limit in total]**」フィールドに、フォームデータモデルとRESTful Webサービスとの間で許可される最大接続数を指定します。 デフォルト値は20接続です。
+
+   * 「**[!UICONTROL Connection limit on per route basis]**」フィールドに、各ルートに対して許可される最大接続数を指定します。 デフォルト値は2接続です。
+
+   * 「**[!UICONTROL キープアライブ]**」フィールドに、永続的なHTTP接続が有効な状態で維持される期間を指定します。 デフォルト値は 15 秒です。
+
+   * [!DNL Experience Manager Forms]サーバーが接続の確立を待機する時間を&#x200B;**[!UICONTROL 「接続タイムアウト]**」フィールドに指定します。 デフォルト値は 10 秒です。
+
+   * **[!UICONTROL Socket timeout]**&#x200B;フィールドで、2つのデータパケット間で無操作状態が発生する最大時間を指定します。 デフォルト値は 30 秒です。
+
 
 ## SOAP Web サービスの設定 {#configure-soap-web-services}
 
