@@ -1,6 +1,6 @@
 ---
 title: ビデオ
-description: 自動エンコード用のビデオをDynamic Media Classicにアップロードし、AEM Assetsから直接Dynamic Media Classicビデオにアクセスできる、中央のビデオアセット管理AEM Assetsについて説明します。 ダイナミックMedia Classicビデオ統合により、最適化されたビデオの提供先がすべての画面に拡張されます。
+description: 自動エンコード用のビデオをDynamic Mediaクラシックにアップロードし、Dynamic MediaクラシックビデオにAEM Assetsから直接アクセスできる、中央のビデオアセット管理AEM Assetsについて説明します。 Dynamic Mediaクラシックビデオ統合は、最適化されたビデオの提供先をすべての画面に拡張します。
 uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,9 +8,9 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1582'
 ht-degree: 51%
 
 ---
@@ -18,21 +18,21 @@ ht-degree: 51%
 
 # ビデオ {#video}
 
-アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをアセットに直接アップロードし、Dynamic Media Classicに自動エンコードしたり、アセットから直接Dynamic Media Classicビデオにアクセスしてページをオーサリングできます。
+アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをAssetsに直接アップロードし、Assetsから直接Dynamic Mediaクラシックビデオにアクセスして、ページをオーサリングできます。
 
-Dynamic Media Classicビデオの統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
+Dynamic Mediaクラシックビデオ統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
 * **[!UICONTROL Scene7ビデオ]**&#x200B;コンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生します。
 * アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。
 
-## FFMPEGとDynamic Media Classic {#about-ffmpeg-and-scene}について
+## FFMPEGとDynamic Mediaクラシックについて{#about-ffmpeg-and-scene}
 
 デフォルトのビデオエンコーディングプロセスは、ビデオプロファイルとの FFMPEG ベースの統合の使用に基づいています。そのため、組み込みの DAM 収集ワークフローには、ffmpeg ベースの次の 2 つのワークフローのステップが含まれています。
 
 * FFMPEG のサムネール
 * FFMPEG エンコーディング
 
-Dynamic Media Classic統合の有効化と設定を行っても、これら2つのワークフロー手順は、設定済みのDAMインジェストワークフローから自動的に削除または非アクティブ化されません。 FFMPEG ベースのビデオエンコーディングを既に AEM で使用している場合は、オーサリング環境に FFMPEG がインストールされている可能性があります。この場合、DAMを使用して取り込む新しいビデオは2回エンコードされます。をFFMPEGエンコーダーから、またはDynamic Media Classic統合から1回呼び出します。
+Dynamic MediaClassic統合の有効化と設定を行っても、これら2つのワークフロー手順は、設定済みのDAMインジェストワークフローから自動的に削除または非アクティブ化されません。 FFMPEG ベースのビデオエンコーディングを既に AEM で使用している場合は、オーサリング環境に FFMPEG がインストールされている可能性があります。この場合、DAMを使用して取り込む新しいビデオは2回エンコードされます。をFFMPEGエンコーダーから、またはDynamic Mediaクラシック統合から1回呼び出します。
 
 AEM で FFMPEG ベースのビデオエンコーディングが設定済みで、FFMPEG がインストールされている場合は、2 つの FFMPEG ワークフローを DAM 収集ワークフローから削除することをお勧めします。
 
@@ -50,21 +50,21 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 * ビデオアセットのワークフローが必要かどうか
 * ビデオアセットのバージョン管理が必要かどうか
 
-これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオをAdobeDAMに直接アップロードします。 両方の質問に対する答えが「いいえ」の場合は、ビデオを直接Dynamic Media Classicにアップロードします。 各シナリオのワークフローについて、次の節で説明します。
+これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオをAdobeDAMに直接アップロードします。 両方の質問に対する回答が「いいえ」の場合は、ビデオを直接Dynamic Mediaクラシックにアップロードします。 各シナリオのワークフローについて、次の節で説明します。
 
 ### ビデオを直接 Adobe DAM にアップロードする場合 {#if-you-are-uploading-your-video-directly-to-adobe-dam}
 
 アセットのワークフローまたはバージョン管理が必要な場合は、まず Adobe DAM にアップロードする必要があります。推奨されるワークフローは次のとおりです。
 
-1. ビデオアセットをAdobeDAMにアップロードし、自動的にエンコードしてDynamic Media Classicに公開します。
+1. ビデオアセットをAdobeDAMにアップロードし、自動的にエンコードしてDynamic Mediaクラシックに公開します。
 1. AEM の WCM（コンテンツファインダーの「**[!UICONTROL ムービー]**」タブ）で、ビデオアセットにアクセスします。
 1. **[!UICONTROL Scene7ビデオ]**&#x200B;または&#x200B;**[!UICONTROL Foundationビデオ]**&#x200B;コンポーネントを持つ作成者。
 
-### ビデオをダイナミックメディアクラシック{#if-you-are-uploading-your-video-to-scene}にアップロードする場合
+### ビデオをDynamic Mediaクラシック{#if-you-are-uploading-your-video-to-scene}にアップロードする場合
 
 アセットのワークフローまたはバージョン管理が必要でない場合は、Scene7 にアセットをアップロードする必要があります。推奨されるワークフローは次のとおりです。
 
-1. Dynamic Media Classicでは、[Scene7（システム自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)に対してFTPのスケジュールアップロードとエンコードを設定します。
+1. Dynamic Mediaクラシックでは、[Scene7に対するFTPのアップロードとエンコードのスケジュール設定を行います（システム自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)。
 1. AEM の WCM（コンテンツファインダーの「**[!UICONTROL Scene7]**」タブ）で、ビデオアセットにアクセスします。
 1. **[!UICONTROL Scene7ビデオ]**&#x200B;コンポーネントを持つ作成者。
 
@@ -85,7 +85,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
    >[!NOTE]
    >
-   >ビデオプリセットの意味について詳しくは、[ダイナミックメディアクラシックドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)を参照してください。
+   >ビデオプリセットの意味について詳しくは、[Dynamic Mediaクラシックドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)を参照してください。
    >
    >ユニバーサルプリセットを設定する際に両方のアダプティブビデオセットを選択するか、「**[!UICONTROL アダプティブビデオエンコーディング]**」オプションを選択することをお勧めします。
 
@@ -134,9 +134,9 @@ Scene7 のビデオを表示するには Scene7 のビデオコンポーネン�
 |---|---|---|
 | アプローチ | HTML5 における最優先のアプローチです。Flash は HTML5 以外のフォールバックでのみ使用されます。 | ほとんどのデスクトップでは Flash です。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
-| 追跡 | はい | はい |
-| 拡張性 | 可 | 対応（Scene7 ビューア SDK を使用） |
-| モバイルビデオ | はい | はい |
+| 追跡 | 可 | 可 |
+| 拡張性 | 可 | 不可 |
+| モバイルビデオ | 可 | はい |
 
 ### 設定  {#setting-up}
 
