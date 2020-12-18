@@ -10,17 +10,17 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 55%
+source-wordcount: '1718'
+ht-degree: 54%
 
 ---
 
 
 # ページへの Dynamic Media アセットの追加{#adding-dynamic-media-assets-to-pages}
 
-Webサイトで使用するアセットにダイナミックメディア機能を追加するには、**[!UICONTROL ダイナミックメディア]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントを直接ページに追加します。 これを行うには、[!UICONTROL デザイン]モードに入り、ダイナミックメディアコンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。ダイナミックメディアコンポーネントおよびインタラクティブメディアコンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかを自動的に把握します。それに従って、使用可能なオプションが変わります。
+Webサイトで使用するアセットにDynamic Media機能を追加するには、**[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントを直接ページに追加します。 これを行うには、[!UICONTROL デザイン]モードに入り、ダイナミックメディアコンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。ダイナミックメディアコンポーネントおよびインタラクティブメディアコンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかを自動的に把握します。それに従って、使用可能なオプションが変わります。
 
 AEMをWCMとして使用している場合は、ダイナミックメディアアセットを直接ページに追加します。
 
@@ -30,25 +30,25 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
-[!UICONTROL ダイナミックメディア]または[!UICONTROL インタラクティブメディア]コンポーネントをページに追加するのは、コンポーネントをページに追加するのと同じです。 [!UICONTROL ダイナミックメディア]および[!UICONTROL インタラクティブメディア]のコンポーネントについては、以下の節で詳しく説明します。
+[!UICONTROL Dynamic Media]または[!UICONTROL インタラクティブメディア]コンポーネントをページに追加するのと、ページにコンポーネントを追加するのと同じです。 [!UICONTROL Dynamic Media]と[!UICONTROL インタラクティブメディア]のコンポーネントについては、以下の節で詳しく説明します。
 
 ページにダイナミックメディアコンポーネント／ビューアを追加するには：
 
 1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
-1. 使用可能なダイナミックメディアコンポーネントがない場合は、[!UICONTROL サイドキック]のルーラーをクリックして&#x200B;**[!UICONTROL デザイン]**&#x200B;モードに入り、**[!UICONTROL 編集]**&#x200B;パーシスをクリックして&#x200B;**[!UICONTROL ダイナミックメディアコンポーネントを使用可能にします。]**
+1. Dynamic Mediaコンポーネントが使用できない場合は、[!UICONTROL サイドキック]のルーラーをクリックして&#x200B;**[!UICONTROL デザイン]**&#x200B;モードに入り、**[!UICONTROL パーシスを編集]**&#x200B;をクリックし、**[!UICONTROL Dynamic Media]**&#x200B;を選択してDynamic Mediaコンポーネントを使用可能にします。
 
    >[!NOTE]
    >
    >詳しくは、[デザインモードでのコンポーネントの設定](/help/sites-authoring/default-components-designmode.md)を参照してください。
 
 1. **[!UICONTROL サイドキック]の鉛筆アイコンをクリックして、&lt;a0/>編集]**&#x200B;モードに戻ります。[!UICONTROL 
-1. サイドキックの&#x200B;**[!UICONTROL その他]**&#x200B;グループから目的の場所のページに、ダイナミックメディア&#x200B;]**または**[!UICONTROL &#x200B;インタラクティブメディア&#x200B;]**コンポーネントをドラッグします。**[!UICONTROL 
+1. サイドキックの&#x200B;**[!UICONTROL その他]**&#x200B;グループから目的の場所のページに、**[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントをドラッグします。
 1. 「**[!UICONTROL 編集]**」をクリックしてコンポーネントを開きます。
 1. [](#dynamic-media-component)コンポーネントの編集を必要に応じておこない、「**[!UICONTROL OK]**」をクリックして変更内容を保存します。
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-[!UICONTROL Dynamic ] Mediaおよび [!UICONTROL Interactive ] Mediaは、  Dynamic Mediaの **[!UICONTROL Sidekickで利用できます。]****[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントを使用します。
+[!UICONTROL Dynamic ] Mediaおよび [!UICONTROL Interactive ] Mediaは、  Dynamic Mediaの **[!UICONTROL Sidekickで入手できます。]****[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントを使用します。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -58,11 +58,11 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 ### Dynamic Media コンポーネント {#dynamic-media-component}
 
-ダイナミックメディアコンポーネントはスマートです。画像を追加するかビデオを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアはHTML5ベースのビューアです。
+Dynamic Mediaコンポーネントはスマートです。画像を追加するかビデオを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアはHTML5ベースのビューアです。
 
 >[!NOTE]
 >
->[!UICONTROL ダイナミックメディア]コンポーネントを追加し、**[!UICONTROL ダイナミックメディア設定]**&#x200B;が空白の場合、またはアセットを正しく追加できない場合は、次を確認します。
+>[!UICONTROL Dynamic Media]コンポーネントを追加し、**[!UICONTROL Dynamic Media設定]**&#x200B;が空白の場合、またはアセットを正しく追加できない場合は、次を確認してください。
 >
 >* [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
 >* 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
@@ -73,13 +73,13 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 #### 画像を操作する場合  {#when-working-with-images}
 
-[!UICONTROL ダイナミックメディア]コンポーネントを使用すると、画像セット、スピンセット、混在メディアセットなどの動的画像を追加できます。ズームイン、ズームアウトが可能です。必要に応じて、スピンセット内の画像を回転させたり、別の種類の画像セットから画像を選択したりできます。
+[!UICONTROL Dynamic Media]コンポーネントを使用すると、画像セット、スピンセット、混在メディアセットなどの動的な画像を追加できます。ズームイン、ズームアウトが可能です。必要に応じて、スピンセット内の画像を回転させたり、別の種類の画像セットから画像を選択したりできます。
 
 また、ビューアプリセット、画像プリセットまたは画像形式をコンポーネント内で直接設定することもできます。画像をレスポンシブにするために、ブレークポイントの設定かレスポンシブ画像プリセットの適用のいずれかを実行できます。
 
 ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-コンポーネントで「**[!UICONTROL 編集]**」をクリックし、「**[!UICONTROL ダイナミックメディア設定]**」タブをクリックして、次のダイナミックメディア設定を編集できます。
+次のDynamic Media設定を編集するには、コンポーネントで「**[!UICONTROL 編集]**」をクリックし、「**[!UICONTROL Dynamic Media設定]**」タブをクリックします。
 
 ![chlimage_1-73](assets/chlimage_1-73a.png)
 
@@ -95,7 +95,7 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
-**[!UICONTROL 画像修飾子]**  — 画像効果を変更するには、追加の画像コマンドを指定します。これらについては、[画像プリセットの管理](/help/assets/managing-viewer-presets.md)および[コマンドリファレンス](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)で説明します。
+**[!UICONTROL 画像修飾子]**  — 画像効果を変更するには、追加の画像コマンドを指定します。これらについては、[画像プリセットの管理](/help/assets/managing-viewer-presets.md)および[コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)で説明します。
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
@@ -119,11 +119,11 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 #### ビデオの操作時{#when-working-with-video}
 
-[!UICONTROL ダイナミックメディア]コンポーネントを使用して、ダイナミックビデオをWebページに追加します。コンポーネントを編集する際に、定義済みのビデオビューアプリセットをページ上でのビデオ再生に使用するよう選択できます。
+[!UICONTROL Dynamic Media]コンポーネントを使用して、動的なビデオをWebページに追加します。コンポーネントを編集する際に、定義済みのビデオビューアプリセットをページ上でのビデオ再生に使用するよう選択できます。
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-コンポーネントの&#x200B;**[!UICONTROL 「]**&#x200B;編集」をクリックして、次の[!UICONTROL ダイナミックメディア設定]を編集できます。
+コンポーネント内の&#x200B;**[!UICONTROL 「]**&#x200B;編集」をクリックして、次の[!UICONTROL Dynamic Media設定]を編集できます。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 AEM 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを制御できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆の場合も同様です。Web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。ほとんどの場合、このデフォルトの動作で問題ないため、特に設定を変更する必要はありません。ただし、ビデオをセキュアに配信するために、`VideoPlayer.ssl=on` を URL パスの最後に付加するか、または埋め込みコードスニペットにある他のビューアの設定パラメーターのリストに付加して、このデフォルトの動作をオーバーライドすることができます。
 
-ビデオのセキュア配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)」を参照してください。ビデオビューアの他に、セキュアビデオ配信は混在メディアビューアとインタラクティブビデオビューアで使用できます。
+ビデオのセキュア配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)」を参照してください。ビデオビューアの他に、セキュアビデオ配信は混在メディアビューアとインタラクティブビデオビューアで使用できます。
 
 ### インタラクティブメディアコンポーネント {#interactive-media-component}
 
