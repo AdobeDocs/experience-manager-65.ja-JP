@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7に関するリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 69dbfeab855f70167eead24f3d411df4c82a0050
+source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
 workflow-type: tm+mt
 source-wordcount: '4243'
 ht-degree: 5%
@@ -39,9 +39,9 @@ ht-degree: 5%
 
 * [!DNL Assets] アクセシビリティを [!DNL Dynamic Media] 強化しました。強化された機能は、キーボードナビゲーション、スクリーンリーダーの使用、類似の支援テクノロジー(AT)の使用に関連しています。 [[!DNL Assets] enhancements](#assets-6570)および[[!DNL Dynamic Media] enhancements](#dynamic-media-6570)を参照してください。
 
-* フォームデータモデルのHTTPクライアント設定を使用して、パフォーマンスを最適化します。
+* [パフォーマンスを最適化するためのフォームデータモデルHTTPクライアント](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration) 設定。
 
-* レイアウトモードで各コンポーネントのリセットオプションを使用できる
+* [レイアウトモードで各](../../help/forms/using/resize-using-layout-mode.md#resize-components) コンポーネントのリセットオプションを使用できる
 
 * [!DNL Experience Manager] 6.5 Service Pack 7Formsは、次の点でパフォーマンスが向上しました。
 
@@ -226,7 +226,7 @@ ht-degree: 5%
 
 * SmartCropが適用されている画像をダウンロードできません。(CQ-4304558)
 
-* ダイナミックメディアに選択的にフォルダーを発行することはできません(CQ-4304526)。
+* フォルダーを選択してDynamic Mediaに発行することはできません(CQ-4304526)。
 
 * [!DNL Experience Manager]からビデオファイルを非公開にしても、設定済みのScene7導入環境からアダプティブビデオセットの公開は取り消されません(CQ-4304405)。
 
@@ -507,7 +507,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJarの使用方法
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * SUM、MAX、MINなどの集計機能が使用されると、アダプティブフォームのサーバー側検証に失敗します。 CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
-   * ダイナミックメディアのインタラクティブ画像のホットスポットは、買い物かご可能なバナービューアでアセットをプレビューすると表示されません。
+   * 買い物かご可能なバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されません。
 
 ## OSGiバンドルとコンテンツパッケージ（{#osgi-bundles-and-content-packages-included}に含まれています）
 
