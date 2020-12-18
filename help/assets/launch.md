@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 71e827dc17fd1c36230cb8d26b68d7f41c584e60
 workflow-type: tm+mt
 source-wordcount: '6605'
-ht-degree: 94%
+ht-degree: 93%
 
 ---
 
@@ -34,7 +34,7 @@ Dynamic Media ビューア 5.13 の最近のリリースと共に、Adobe Launch
 * Dynamic Media ビューアの Adobe Launch 統合は、AEM オーサーノードでは機能しません。公開されるまで、WCM ページからのトラッキングを表示することはできません。
 * Dynamic Media ビューアの Adobe Launch 統合は、「ポップアップ」操作モードではサポートされません。このモードでは、ビューアの URL は、アセットの詳細ページの「URL」ボタンを使用して取得されます。
 * Adobe Launch 統合は、（`config2=` パラメーターを介して）従来のビューア Analytics 統合とは同時に使用することはできません。
-* ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events)で説明されているように、コア再生トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
+* ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events)で説明されているように、「コア再生」のトラッキングのみに制限されます。 具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
 * データ要素のストレージデュレーション設定は、*Dynamic Media ビューア*&#x200B;拡張機能を使用したデータ要素ではサポートされません。ストレージデュレーションは **[!UICONTROL None]** に設定する必要があります。
 
 ### 統合の事例 {#use-cases-for-the-integration}
@@ -141,7 +141,7 @@ AEM Sites で Dynamic Media ビューアを追跡するには、[すべての統
 
 適切な設定に従って、Dynamic Media でサポートされる WCM コンポーネントを使用してサイトページに追加した Dynamic Media ビューアは、Adobe Analytics、Adobe Analytics for Video、またはその両方に対するデータを自動的に追跡します。
 
-<!-- To be reviewed and updated:
+<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
 -->
 
@@ -155,7 +155,7 @@ AEM Sites を使用していない、または AEM Sites 以外の Web ページ
 
 Adobe Launch ライブラリの埋め込みコードの使用方法について詳しくは、[Adobe Launch の埋め込みコードの追加](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch)を参照してください。
 
-<!-- To be reviewed and updated:
+<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
 See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
 -->
 
@@ -221,8 +221,7 @@ Dynamic Media ビューアは Web ページ上で一意の識別子を持ちま�
    * Dynamic Media ビューアの **[!UICONTROL PAN]** イベントをトリガーとして使用。
    * **[!UICONTROL ZoomScale]** データ要素の値を Adobe Analytics に送信。
 
-* 
-   * **[!UICONTROL TrackKey]** ルールには、次の情報が含まれます。
+* **[!UICONTROL TrackKey]** ルールには、次の情報が含まれます。
 
    * Adobe Launch のコア拡張機能のキー押下イベントをトリガーとして使用。
    * **[!UICONTROL ZoomScale]** データ要素の値を Adobe Analytics に送信。
