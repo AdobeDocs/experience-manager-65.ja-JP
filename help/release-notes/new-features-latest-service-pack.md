@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1c633e87d773f864c65320d3ce658f61271d086d
+source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2818'
 ht-degree: 5%
 
 ---
@@ -52,11 +52,11 @@ ht-degree: 5%
 
 ### フォームデータモデルHTTPクライアント構成によるパフォーマンスの最適化{#fdm-http-client-config}
 
-[!DNL Experience Manager Forms] フォームデータモデルを使用して、データソースとしてRESTful Webサービスとの統合時に、パフォーマンスを最適化するためのHTTPクライアント設定が含まれるようになりました。
+[!DNL Experience Manager Forms] フォームデータモデルを使用して、データソースとしてRESTful Webサービスとの統合時に、パフォーマンスを最適化するためのHTTPクライアント設定が含まれるようになりました。[データソースの設定](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration)を参照してください。
 
 ### レイアウトモード{#reset-option-layout-mode}で各コンポーネントのリセットオプションを使用できる
 
-アダプティブフォームのレイアウトモードで各コンポーネントに対してリセットオプションを使用できるようになりました。 パネルに複数列レイアウトを定義する場合、この機能を使用してパネル内の個々のコンポーネントをリセットできます。
+アダプティブフォームのレイアウトモードで各コンポーネントに対してリセットオプションを使用できるようになりました。 パネルに複数列レイアウトを定義する場合、この機能を使用してパネル内の個々のコンポーネントをリセットできます。 詳しくは、[レイアウトモードを使用したコンポーネントのサイズ変更](../../help/forms/using/resize-using-layout-mode.md#resize-components)を参照してください。
 
 ## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
 
@@ -211,11 +211,11 @@ ht-degree: 5%
 
 [!UICONTROL クイック発行]ウィザードまたは[!UICONTROL パブリケーションの管理]ウィザードを使用して、[!DNL Experience Manager]または[!DNL Dynamic Media]に対するアセットの発行と非公開を選択できるようになりました。 `Publish`モードまたは`Unpublish`モードをフォルダーレベルで設定することもできます。
 
-#### ダイナミックメディア向けスマートイメージング{#smart-imaging}
+#### Dynamic Media向けスマートイメージング{#smart-imaging}
 
 スマートイメージングでは、各ユーザー固有の視聴特性を使用して、エクスペリエンスに最適化された適切な画像を自動的に提供し、パフォーマンスとエンゲージメントを向上させます。 スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。[スマートイメージング](../assets/imaging-faq.md)を参照してください。
 
-#### ダイナミックメディア用ビデオプロファイル(6.5.3.0)のスマート切り抜き{#smart-crop-video}
+#### Dynamic Media向けビデオプロファイル(6.5.3.0) {#smart-crop-video}のスマート切り抜き
 
 ビデオのスマート切り抜き（ビデオプロファイルで使用できるオプション機能）は、Adobe Sensei の人工知能機能を使用して、サイズに関係なく、アップロードしたアダプティブビデオやプログレッシブビデオの重要な部分を自動的に検出して切り抜くツールです。詳しくは、[ビデオプロファイルでのスマート切り抜きの使用について](../assets/video-profiles.md)を参照してください。
 
