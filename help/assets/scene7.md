@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '2862'
+source-wordcount: '2860'
 ht-degree: 31%
 
 ---
@@ -180,7 +180,7 @@ Dynamic Mediaクラシック&#x200B;**[!UICONTROL 画像]**&#x200B;コンポー�
 
 **[!UICONTROL シャープ]**  — 画像にシャープを適用する方法を選択します。シャープニングについて詳しくは、[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)および[シャープニングのベストプラクティス](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
-**[!UICONTROL URL修飾子]**  — 追加のDynamic Mediaクラシック画像コマンドを指定して、画像効果を変更できます。詳しくは、[画像プリセット](/help/assets/managing-image-presets.md)および「[コマンドリファレンス](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)」を参照してください。
+**[!UICONTROL URL修飾子]**  — 追加のDynamic Mediaクラシック画像コマンドを指定して、画像効果を変更できます。詳しくは、[画像プリセット](/help/assets/managing-image-presets.md)および「[コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)」を参照してください。
 
 **[!UICONTROL ブレークポイント]** - Webサイトがレスポンシブである場合は、ブレークポイントを調整します。ブレークポイントはコンマ（,）で区切って指定してください。
 
