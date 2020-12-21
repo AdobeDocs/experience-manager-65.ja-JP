@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノ�
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Packのリリースノートです。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
+source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
 workflow-type: tm+mt
-source-wordcount: '14804'
+source-wordcount: '14953'
 ht-degree: 19%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Manager6.5.6.0で導入された主な機能および機能強�
 
 * [!DNL Dynamic Media]コネクタの状態を反映する新しい会社設定が提供されます。
 
-* `test`と`aiprocess`のデフォルトのオプションは、以前のDynamic Mediaの`Rasterize`から`Thumbnail`に更新され、サムネールのみを作成し、ページの抽出とキーワードの抽出をスキップする必要がありました。
+* `test`と`aiprocess`のデフォルトのオプションは、以前Dynamic Mediaで行った`Rasterize`から`Thumbnail`に更新され、サムネールのみを作成し、ページの抽出とキーワードの抽出をスキップする必要がありました。
 
 * [クライアントでアダプティブフォームに事前入力します](../../help/forms/using/prepopulate-adaptive-form-fields.md#prefill-at-client)。
 
@@ -95,6 +95,15 @@ Experience Manager6.5.6.0で導入された機能と拡張機能の完全なリ�
 * 参照モードでは、NVDAは[タイプ/サイズ]メニューオプションから選択した値をナレートしません。 選択した要素に視覚的なフォーカスがありません。 スクリーンリーダーに依存するユーザーは、参照モードを使用できません。(CQ-4294993)
 * Webページの作成時に、ユーザーは「[!UICONTROL コンテンツページ]」テンプレートを選択できます。 「[!UICONTROL ソーシャルメディア]」タブで、[!UICONTROL 優先XFバリエーション]を選択します。 NVDAブラウズモードでエクスペリエンスフラグメントを選択する場合、キーボードキーを使用できません(CQ-4292669)。
 * ハンドルバーライブラリが更新され、より安全なv4.7.3(NPR-34484)になりました。
+* [!DNL Experience Manager Sites]コンポーネントの複数のクロスサイトスクリプティングインスタンス(NPR-33925)。
+* 新しいフォルダーを作成する場合、フォルダー名フィールドは、格納されたクロスサイトスクリプティング(GRANITE-30094)に対して脆弱です。
+* [!UICONTROL ウェルカム]ページの検索結果とパス完了テンプレートは、クロスサイトスクリプティング(NPR-33719、NPR-33718)に対して脆弱です。
+* 非構造化ノードでバイナリプロパティを作成すると、バイナリプロパティダイアログ(NPR-33717)でクロスサイトスクリプティングが行われます。
+* CRX DEインターフェイスで[!UICONTROL アクセス制御テスト]オプションを使用する場合(NPR-33716)、クロスサイトスクリプティングを行います。
+* ユーザ入力は、情報をクライアントに送信する際に、様々なコンポーネントに対して適切にエンコードされません(NPR-33695)。
+* Experience Managerの受信トレイのカレンダー表示でのクロスサイトスクリプティング(NPR-33545)。
+* `childrenlist.html`で終わるURLは、404応答ではなくHTMLページを表示します。 このようなURLは、クロスサイトスクリプティング(NPR-33441)に対して脆弱です。
+
 
 ### [!DNL Assets] {#assets-6560}
 
@@ -201,7 +210,7 @@ Experience Manager6.5.6.0で導入された機能と拡張機能の完全なリ�
 * [!DNL Experience Manager] 6.5 Service Pack 5または以前のバージョンを[!DNL Experience Manager] 6.5(NPR-34532)にインストールすると、カスタムワークフローモデル（`/var/workflow/models/dam`で作成）の実行時のコピーが削除されます。 ランタイムコピーを取得するには、ワークフローモデルのデザイン時コピーをHTTP APIを使用してランタイムコピーと同期します。
    `<designModelPath>/jcr:content.generate.json`
 
-**ダイナミックメディアで修正された問題**
+**Dynamic Mediaで修正された問題**
 
 * ビデオプロファイルの作成後に編集時にエンコーディング設定を定義した場合、スマート切り抜き設定がビデオプロファイルから削除されます。(CQ-4299177)
 
@@ -219,7 +228,7 @@ Experience Manager6.5.6.0で導入された機能と拡張機能の完全なリ�
 
 * 画像プロファイルが複数（例えば11）の縦横比を持つフォルダー(NPR-34082)に追加されると、スマート切り抜き機能がエラーで失敗します。
 
-* ダイナミックメディアScene7(CQ-4299727)で構成された[!UICONTROL ツール]内の[!UICONTROL 「ワークフロー]」タブ上の[!UICONTROL ワークフローアーカイブ]ページをスクロールダウンしたときに、DAM更新アセットワークフローがトリガーされます。[!DNL Adobe Experience Manager]
+* DAMアセット更新ワークフローは、Dynamic MediaScene7(CQ-4299727)で構成された[!UICONTROL ツール]内の[!UICONTROL 「ワークフロー]」タブ上の[!UICONTROL ワークフローアーカイブ]ページをスクロールダウンしたときにトリガーされます。[!DNL Adobe Experience Manager]
 
 * [!UICONTROL ビューアプリセットエディター]の「[!UICONTROL 動作]」タブのシンボルがローカライズされません(CQ-4299026)。
 
@@ -281,6 +290,8 @@ Experience Manager6.5.6.0で導入された機能と拡張機能の完全なリ�
 
 * 管理コンソールを介して追加されたコミュニティグループの既存のユーザは、コミュニティグループコンソール(NPR-34315)で変更が行われると、ユーザリストから削除される。
 
+* `TagFilterServlet`は機密データを漏らす可能性がある(NPR-33868)。
+
 <!--
 * Tag filters are vulnerable to sensitive information disclosure (NPR-33868).
 -->
@@ -328,6 +339,8 @@ Experience Manager6.5.6.0で導入された機能と拡張機能の完全なリ�
 * フィールド設定を初めて開くと、プロパティアイコンは表示されません(CQ-4296284)。
 
 * ユーザーは、アダプティブフォームの送信時に、`afPath`、`afSubmissionTime`、`signers`などの送信メタデータを編集できます。 この問題を解決するには、クライアント側のフォーム送信データからメタデータ値を削除します。 ユーザーは`FormSubmitInfo`オブジェクトを使用して、サーバー(NPR-33654)からこれらの値を取得できます。
+
+* ユーザー入力は、クライアントに情報を送信する際に、[!DNL Forms]コンポーネントに対して適切にエンコードされません(NPR-33611)。
 
 **ワークフロー**
 
@@ -391,7 +404,7 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 
 * [!DNL Adobe Experience Manager Assets]ユーザーインターフェイスフローでの例外処理を改善しました。
 
-* ダイナミックメディアScene7の公開URLを取得するために、新しいメソッド`getRemoteAssetPublishURL`が`com.day.cq.dam.api.s7dam.scene7.ImageUrlApi`インターフェイスに追加されました。
+* Dynamic MediaScene7の公開URLを取得するために、新しいメソッド`getRemoteAssetPublishURL`が`com.day.cq.dam.api.s7dam.scene7.ImageUrlApi`インターフェイスに追加されました。
 
 * [アクセシビリティ](#assets-6550) の強化は、Webコンテンツ [!DNL Adobe Experience Manager Assets] アクセシビリティガイドライン(WCAG)に準拠して行われます。
 
@@ -557,7 +570,7 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 
 * 10,000を超えるアセットを含むスマートコレクションを開くと、ログ内でトラバーサルの警告が観察されます(NPR-32980)。
 
-* ダイナミックメディアScene7実行モード(NPR-32995)で動作する[!DNL Adobe Experience Manager]内でアセットを別のフォルダーに移動すると、アセット名が小文字に変更されます。
+* Dynamic MediaScene7ランモード(NPR-32995)で動作する[!DNL Adobe Experience Manager]で、アセットを別のフォルダに移動すると、アセット名が小文字に変更されます。
 
 * 検索されたアセットは、検索結果からそのプロパティに移動した後で検索結果に戻って削除した後は削除できません(NPR-32998)。
 
@@ -571,11 +584,11 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 
 * スマート切り抜きプロファイルを含むフォルダーの下のPDFのレンディションパネルを開くログ(CQ-4294201)で例外が発生する。
 
-* ダイナミックメディアScene7実行モード(CQ-4294200)とのExperience Managerで、[!UICONTROL ダイナミックメディア同期モード]が初期設定で無効になっている場合、画像プリセットは公開されません。
+* Dynamic MediaScene7実行モード(CQ-4294200)とのExperience Managerで、[!UICONTROL Dynamic Media同期モード]がデフォルトで無効になっている場合、画像プリセットは公開されません。
 
 * バルクアップロード中のアセット処理が停止し、ワークフローインスタンスにDAM更新アセットのスタックインスタンスが表示される(CQ-4293916)。
 
-* Experience Managerでのダイナミックメディア設定の作成は機能しますが、ユーザーインターフェイスで「保存」を選択しても何も起こりません。(CQ-4292442)
+* Experience Manager上でのDynamic Media設定の作成は機能しますが、ユーザーインターフェイス上で「保存」を選択しても何も起きません。(CQ-4292442)
 
 * Safari/Macでのプログレッシブ再生でF4Vビデオアセットのプレビューが機能しない(CQ-4289844)。
 
@@ -587,11 +600,11 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 
 * 6.5.5.0で修正されたパフォーマンスの問題は次のとおりです(CQ-4279206)。
 
-   * 大きなバイナリをダイナミックメディア画像処理サーバーにアップロードするには、時間がかかり過ぎます。
+   * 大きなバイナリをDynamic Mediaイメージ処理サーバにアップロードするには、時間がかかりすぎます。
 
-   * ダイナミックメディアScene7アーキテクチャが原因で、Experience Manager時のサムネールの生成時間が長くなりました。
+   * Dynamic MediaScene7建築のため、Experience Managerでのサムネイル生成時間が長くなりました。
 
-* 大量のアセットを持つお客様の場合、Dynamic MediaのScene7移行の問題が失敗する(CQ-4279206)。
+* 大量の資産を持つお客様のDynamic MediaScene7への移行に失敗する問題(CQ-4279206)。
 
 * `setVideo`を使用すると、ビデオ360ビューワのレイアウトが壊れ、`video= modifier`を使用するとビデオが下に移動します(CQ-4263201)。
 
@@ -667,7 +680,7 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 
 >[!NOTE]
 >
->Experience Managerサービスパックには、の修正が含まれていません [!DNL Forms]。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
+>Experience Managerサービスパックには[!DNL Forms]の修正が含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
 
 * Correspondence Management:レターを送信した後、ターゲット領域内のアセットの順序が変化する(NPR-33359、NPR-33153)。
 * アダプティブForms:ユーザーがアダプティブフォームを編集すると、[!UICONTROL ページ開始]メニューで利用できる「情報ワークフロー]」オプションは機能しません(NPR-33004)。[!UICONTROL 
@@ -703,7 +716,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.10.8 に更新しました。
 
-* コンテンツのサブツリーを選択して、`content/dam`で利用可能なすべてではなく、*ダイナミックメディア —Scene7モード*&#x200B;に同期できるようになりました。
+* コンテンツのサブツリーを選択して、`content/dam`で利用可能なすべてではなく、*Dynamic Media-Scene7モード*&#x200B;に同期できるようになりました。
 
 * SOAP Webサービスとのフォームデータモデルの統合で、要素の選択グループまたは属性がサポートされるようになりました。
 
@@ -759,7 +772,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * アセット収集ページでワークフローをトリガーするボタンが無効になっています(NPR-32471)。
 
-* ダイナミックメディアScene7設定(NPR-32440)とExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7パブリッシングシステム)に作成されます。
+* Dynamic MediaScene7設定(NPR-32440)とExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7Publishing System)に作成されます。
 
 * すべてのアセットを（「すべて選択」を使用して）公開済みアセットを含むフォルダーに移動する操作は、エラーが発生して失敗します(NPR-32366)。
 
@@ -791,11 +804,11 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * タッチUI検索（Omnisearchを通じて行われる）の結果ページは自動的に上にスクロールし、ユーザーのスクロール位置が失われます(NPR-31307)。
 
-* PDFアセットのアセットの詳細ページに、ダイナミックメディアScene7実行モード(CQ-4286705)で実行されているExperience Managerーで、「コレクション」ボタンと「レンディション」ボタン以外のアクションボタンが表示されません。
+* PDFアセットのアセットの詳細ページに、Dynamic MediaScene7の実行モードで実行されているExperience Managerーで、「コレクションへ」および「追加レンディションへ」ボタン以外のアクションボタンが表示されません。(CQ-4286705)
 
 * Scene7のバッチアップロード処理には、アセットの処理に時間がかかりすぎます(CQ-4286445)。
 
-* ユーザーがダイナミックメディアクライアントのセットエディター(CQ-4285690)で変更を行っていない場合、「保存」ボタンでリモートセットが読み込まれません。
+* 「保存」ボタンを押してもリモートセットは読み込まれません。ただし、Dynamic Mediaクライアントのセットエディタで変更を行っていない場合は、このボタンが表示されません。(CQ-4285690)
 
 * 3Dアセットのサムネールは情報ではありません。サポートされている3DモデルがExperience Managerに取り込まれる場合(CQ-4283701)に役立ちます。
 
@@ -803,7 +816,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * 3Dビューアでプレビューした、アップロードされた3Dモデルのコンテナの高さが正しくないと、アセットの詳細ページに表示されます(CQ-4283309)。
 
-* カルーセルエディターがIE 11のExperience Managerダイナミックメディアハイブリッドモード(CQ-4255590)で開きません。
+* Experience ManagerDynamic Mediaハイブリッドモード(CQ-4255590)で、IE 11でカルーセルエディタが開かない。
 
 * ChromeおよびSafariブラウザー(NPR-32067)のダウンロードダイアログの電子メールドロップダウンで、キーボードのフォーカスが動かなくなる。
 
@@ -885,7 +898,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 >[!NOTE]
 >
->Experience Managerサービスパックには、Experience ManagerFormsの修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
+>Experience Managerサービスパックには、Experience ManagerFormsの修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAdobe Experience Manager Formsの修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
 
 * Correspondence Management:後処理ワークフロー(NPR-32626)に送信した後、レターに追加の文字が表示されます。
 
@@ -1144,7 +1157,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。 別の Forms アドオンパッケージを使用して配布されます。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上の[!DNL Experience Manager Forms]の修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
 
 #### Forms アドオンパッケージ {#forms-add-on-package-6530}
 
@@ -1330,7 +1343,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。これらは、別の[!DNL Forms]アドオンパッケージを使用して配信されます。 詳しくは、「Experience ManagerFormsアドオンの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) 」および「Experience ManagerFormsのJEEへの [インストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。
+>[!DNL Experience Manager] Service Packにはの修正が含まれていません [!DNL Experience Manager Forms]。これらは、別の[!DNL Forms]アドオンパッケージを使用して配信されます。 さらに、JEE上の[!DNL Experience Manager Forms]の修正を含む累積インストーラーがリリースされました。 詳しくは、「Experience ManagerFormsアドオンのインストール[」および「[Experience ManagerFormsのJEEへのインストール](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)」を参照してください。](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)
 
 [!DNL Experience Manager] 6.5.2.0フォームの主な特徴は次のとおりです。
 
@@ -1403,7 +1416,7 @@ Remove one mention of this fix.
 
 * 追跡イベントに dynamic-UI-state をカスタム属性として含めることが可能になりました。
 * [!DNL Dynamic Media]-Scene7モードでの360度のビデオアセットの配信のサポートが含まれました。
-* リッチテキストエディターのスタイルプラグインを使用して、*日本語の折り返し*&#x200B;機能を有効にしました。 詳しくは、[日本語の単語の折り返しを設定](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)を参照してください
+* リッチテキストエディターのスタイルプラグインを使用して、*日本語のワードラップ*&#x200B;機能を有効にしました。 詳しくは、[日本語の単語の折り返しを設定](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)を参照してください
 
 ### アセット
 
