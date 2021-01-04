@@ -1,8 +1,8 @@
 ---
 title: デジタル署名と認証ドキュメント
 seo-title: デジタル署名と認証ドキュメント
-description: 'null'
-seo-description: 'null'
+description: Signatureサービスを使用して、PDFドキュメントへの電子署名フィールドの追加と削除、PDFドキュメント内の署名フィールドの名前の取得、署名フィールドの変更、PDFドキュメントの電子署名の認証、PDFドキュメント内の電子署名の検証、PDFドキュメント内のすべての電子署名の検証、署名フィールドからの電子署名の削除を行います。
+seo-description: Signatureサービスを使用して、PDFドキュメントへの電子署名フィールドの追加と削除、PDFドキュメント内の署名フィールドの名前の取得、署名フィールドの変更、PDFドキュメントの電子署名の認証、PDFドキュメント内の電子署名の検証、PDFドキュメント内のすべての電子署名の検証、署名フィールドからの電子署名の削除を行います。
 uuid: 6331de8a-2a9c-45bf-89d2-29f1ad5cc856
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '16977'
+source-wordcount: '17099'
 ht-degree: 8%
 
 ---
