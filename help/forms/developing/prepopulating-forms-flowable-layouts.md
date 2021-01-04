@@ -1,8 +1,8 @@
 ---
 title: 編集可能なレイアウトをFormsに自動埋め込み
 seo-title: 編集可能なレイアウトをFormsに自動埋め込み
-description: 'null'
-seo-description: 'null'
+description: Java APIとWeb Service APIを使用してレンダリングされたフォーム内のユーザーにデータを表示するための、編集可能なレイアウトでフォームを事前入力します。
+seo-description: Java APIとWeb Service APIを使用してレンダリングされたフォーム内のユーザーにデータを表示するための、編集可能なレイアウトでフォームを事前入力します。
 uuid: 93ccb496-e1c2-4b79-8e89-7a2abfce1537
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '3489'
+source-wordcount: '3533'
 ht-degree: 4%
 
 ---
