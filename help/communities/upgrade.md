@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 Communities へのアップグレード
 seo-title: AEM 6.5 Communities へのアップグレード
-description: 以前のバージョンから AEM 6.4 Communities へアップグレードする方法
-seo-description: 以前のバージョンから AEM 6.4 Communities へアップグレードする方法
+description: 以前のバージョンから AEM 6.5 Communities へアップグレードする方法
+seo-description: 以前のバージョンから AEM 6.5 Communities へアップグレードする方法
 uuid: 929c3892-1b3b-46a7-8e70-fa6864125911
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 58%
