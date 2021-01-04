@@ -10,7 +10,7 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a69e0354b5599ab555df650858f8f3200e21d2b8
+source-git-commit: f3b5b22c1d5573492867aef60457413ad5cf419f
 workflow-type: tm+mt
 source-wordcount: '3145'
 ht-degree: 73%
@@ -152,11 +152,11 @@ ht-degree: 73%
    <td>ファイル添付のコンポーネントを使用してアップロードされたすべての添付を一覧表示するフィールドを追加します。</td>
   </tr>
   <tr>
-   <td>フッター<br /> </td>
+   <td>ヘッダー<br /> </td>
    <td>通常、企業のロゴ、フォームのタイトル、概要を含むページヘッダーを追加します。<br /> </td>
   </tr>
   <tr>
-   <td>ヘッダー</td>
+   <td>フッター</td>
    <td>通常、著作権情報と他のページへのリンクを含むページフッターを追加します。 </td>
   </tr>
   <tr>
