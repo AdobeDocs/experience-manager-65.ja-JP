@@ -1,8 +1,8 @@
 ---
 title: OutputサービスJava APIクイック開始(SOAP)
 seo-title: OutputサービスJava APIクイック開始(SOAP)
-description: 'null'
-seo-description: 'null'
+description: OutputサービスJava API Quick開始(SOAP)を使用して、PDFドキュメントの作成、アプリケーションXDPファイルに基づくPDFドキュメントの作成、PDF/Aドキュメントの作成、Outputサービスへのドキュメントの渡し、AEM Formsリポジトリ内のドキュメントのOutputサービスへの渡し、フラグメントに基づくPDFドキュメントの作成、ファイルへの印刷、ネットワークプリンターに接続するには、複数のPDFファイルの作成、検索ルールの作成、PDFドキュメントの変換を行います。
+seo-description: OutputサービスJava API Quick開始(SOAP)を使用して、PDFドキュメントの作成、アプリケーションXDPファイルに基づくPDFドキュメントの作成、PDF/Aドキュメントの作成、Outputサービスへのドキュメントの渡し、AEM Formsリポジトリ内のドキュメントのOutputサービスへの渡し、フラグメントに基づくPDFドキュメントの作成、ファイルへの印刷、ネットワークプリンターに接続するには、複数のPDFファイルの作成、検索ルールの作成、PDFドキュメントの変換を行います。
 uuid: 34cb1fc7-50a9-4db8-aed1-dbd3480d1323
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
