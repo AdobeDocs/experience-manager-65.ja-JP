@@ -1,8 +1,8 @@
 ---
 title: バーコードフォームの操作
 seo-title: バーコードフォームの操作
-description: 'null'
-seo-description: 'null'
+description: Java APIとWeb Service APIを使用して、PDFフォームまたはバーコードを含む画像からデータをデコードします。
+seo-description: Java APIとWeb Service APIを使用して、PDFフォームまたはバーコードを含む画像からデータをデコードします。
 uuid: e56c3c94-384d-401f-b418-dd34cdc57eda
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1931'
 ht-degree: 2%
 
 ---
