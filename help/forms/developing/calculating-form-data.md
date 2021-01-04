@@ -1,8 +1,8 @@
 ---
 title: フォームデータの計算
 seo-title: フォームデータの計算
-description: 'null'
-seo-description: 'null'
+description: ユーザーがフォームに入力し、結果を表示する値を計算するには、Formsサービスを使用します。 Formsサービスは、Java APIとWeb Service APIを使用して値を計算します。
+seo-description: ユーザーがフォームに入力し、結果を表示する値を計算するには、Formsサービスを使用します。 Formsサービスは、Java APIとWeb Service APIを使用して値を計算します。
 uuid: ccd85bc7-8ccc-44d9-9424-dfc1f603e688
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '1902'
 ht-degree: 2%
 
 ---
