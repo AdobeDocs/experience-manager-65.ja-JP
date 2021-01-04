@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 36%
@@ -299,7 +299,7 @@ AEM Communitiesでは、共通のストアはユーザー生成コンテンツ(U
 
 AEM Communities には、すべての AEM サーバーインスタンスで同じ暗号鍵を使用する必要がある機能が 2 つあります。これらは[Analytics](/help/communities/analytics.md)と[ASRP](/help/communities/asrp.md)です。
 
-AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されません。
+AEM 6.3以降では、主要な資料はファイルシステムに保存され、リポジトリには格納されなくなりました。
 
 オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
 
