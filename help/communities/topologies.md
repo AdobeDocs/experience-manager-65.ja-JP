@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 43%
+source-wordcount: '560'
+ht-degree: 42%
 
 ---
 
@@ -110,6 +110,6 @@ Oakマイクロカーナルの詳細については、[推奨されるデプロ�
 
    基本的に、サイトのコンテンツはノードストアに保存されます。 アセットの場合、データストアはバイナリデータを格納するように設定できます。 Communitiesの場合、SRPを選択するように共通ストアを設定する必要があります。
 
-* [AEM 6.3 のストレージ要素](../../help/sites-deploying/storage-elements-in-aem-6.md)
+* [ストレージ要素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
    2つのノードストレージの実装について説明します。TarおよびMongoDB。
