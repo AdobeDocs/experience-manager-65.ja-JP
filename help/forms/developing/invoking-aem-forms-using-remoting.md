@@ -1,8 +1,8 @@
 ---
 title: Remotingを使用したAEM Formsの呼び出し
 seo-title: Remotingを使用したAEM Formsの呼び出し
-description: 'null'
-seo-description: 'null'
+description: Remotingを使用して、Workbenchで作成されたプロセスを呼び出すには、AEM Formsプロセスを呼び出します。 Flexで構築されたクライアントアプリケーションからAEM Formsプロセスを呼び出すことができます。
+seo-description: Remotingを使用して、Workbenchで作成されたプロセスを呼び出すには、AEM Formsプロセスを呼び出します。 Flexで構築されたクライアントアプリケーションからAEM Formsプロセスを呼び出すことができます。
 uuid: 592d1519-c38b-4b33-8cf3-61e2bff81501
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '4593'
+source-wordcount: '4647'
 ht-degree: 1%
 
 ---
