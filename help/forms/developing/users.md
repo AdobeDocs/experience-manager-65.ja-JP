@@ -1,8 +1,8 @@
 ---
 title: ユーザーの管理
 seo-title: ユーザーの管理
-description: 'null'
-seo-description: 'null'
+description: User Management APIを使用して、ロール、権限、プリンシパル（ユーザーまたはグループ）を管理でき、ユーザーの認証を行えるクライアントアプリケーションを作成します。
+seo-description: User Management APIを使用して、ロール、権限、プリンシパル（ユーザーまたはグループ）を管理でき、ユーザーの認証を行えるクライアントアプリケーションを作成します。
 uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '6191'
+source-wordcount: '6243'
 ht-degree: 4%
 
 ---
@@ -752,7 +752,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
    <td><p>ユーザー資格情報はAuthentication Managerサービスで認証されます。 ユーザーの資格情報が有効な場合、ワークフローは手順3に進みます。 それ以外の場合は、許可されたユーザーではないことを示すメッセージがユーザーに送信されます。</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>ユーザ情報とフォームデザインは、保護された企業データベースから検索される。 </p></td>
   </tr>
   <tr>
