@@ -1,8 +1,8 @@
 ---
 title: 呼び出しAPIクイック開始
 seo-title: 呼び出しAPIクイック開始
-description: 'null'
-seo-description: 'null'
+description: クイック開始を使用して、AEM Formsサービスをプログラムで呼び出します。
+seo-description: クイック開始を使用して、AEM Formsサービスをプログラムで呼び出します。
 uuid: acf67177-98a4-4c99-95a5-3086907d7c2c
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1249'
 ht-degree: 6%
 
 ---
@@ -1024,7 +1024,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始:Javaプロジェクト{#quick-start-invoking-a-service-using-swaref-in-a-java-project}でSwaRefを使用してサービスを呼び出す
 
-以下のJavaコードの例は、Javaプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 このJavaプロジェクトでは、JAX-WSとSwaRefをエンコーディングタイプとして使用して作成したプロキシクラスを使用します。 ([SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
+次のJavaコードの例は、Javaプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 このJavaプロジェクトでは、JAX-WSとSwaRefをエンコーディングタイプとして使用して作成したプロキシクラスを使用します。 ([SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
 
 *Loan.pdf*&#x200B;というPDFファイルに基づく、保護されていないPDFドキュメントが、SwaRefを使用してAEM Formsプロセスに渡されます。 暗号化されたPDFドキュメントは、*EncryptedDocument.pdf*&#x200B;というPDFファイルとして保存されます。
 
