@@ -1,8 +1,8 @@
 ---
 title: PreferencesNodesのプログラム管理
 seo-title: PreferencesNodesのプログラム管理
-description: 'null'
-seo-description: 'null'
+description: Preferences Manager Service API(Java)を使用して、環境設定ノードをプログラムで管理します。
+seo-description: Preferences Manager Service API(Java)を使用して、環境設定ノードをプログラムで管理します。
 uuid: f0cb117a-a6cc-4ca5-8511-b3bc9f6738e9
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9d4dba7f-49d8-4112-bc8a-04dafc99a936
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
