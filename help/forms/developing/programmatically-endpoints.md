@@ -1,8 +1,8 @@
 ---
 title: エンドポイントのプログラム管理
 seo-title: エンドポイントのプログラム管理
-description: 'null'
-seo-description: 'null'
+description: Endpoint Registryサービスを使用して、EJBエンドポイントの追加、SOAPエンドポイントの追加、監視フォルダーエンドポイントの追加、電子メールエンドポイントの追加、リモートエンドポイントの追加、タスクマネージャーエンドポイントの変更、エンドポイントの削除およびエンドポイントコネクタ情報の取得を行います。
+seo-description: Endpoint Registryサービスを使用して、EJBエンドポイントの追加、SOAPエンドポイントの追加、監視フォルダーエンドポイントの追加、電子メールエンドポイントの追加、リモートエンドポイントの追加、タスクマネージャーエンドポイントの変更、エンドポイントの削除およびエンドポイントコネクタ情報の取得を行います。
 uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '10781'
+source-wordcount: '10849'
 ht-degree: 6%
 
 ---
