@@ -11,10 +11,10 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 77%
+source-wordcount: '800'
+ht-degree: 74%
 
 ---
 
@@ -160,7 +160,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 ### ウィザードで使用する秘密鍵／証明書ペアの生成 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-以下は、SSL ウィザードで使用できる DER 形式の自己署名証明書を作成する例です。
+以下は、SSL ウィザードで使用できる DER 形式の自己署名証明書を作成する例です。オペレーティングシステムに基づいてOpenSSLをインストールし、OpenSSLコマンドプロンプトを開き、秘密鍵/証明書を生成するフォルダーにディレクトリを変更します。
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 1. 次に、秘密鍵を使用して証明書署名要求(CSR)を生成します。
 
    ```shell
-   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj '/CN=localhost'
+   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
 1. SSL 証明書を生成し、秘密鍵を使用してそれに署名します。この例では、1 年後に期限切れになります。
