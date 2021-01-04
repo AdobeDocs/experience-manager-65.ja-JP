@@ -1,8 +1,8 @@
 ---
 title: WebサービスAPIを使用したDDXドキュメントの検証
 seo-title: WebサービスAPIを使用したDDXドキュメントの検証
-description: 'null'
-seo-description: 'null'
+description: Assembler Service APIを使用してDDXドキュメントを検証します。
+seo-description: Assembler Service APIを使用してDDXドキュメントを検証します。
 uuid: f6125746-6138-4e46-a1c4-fb24fd7399c5
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/validating_ddx_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a6fe91ab-3aa0-4b3d-87c0-6cf69a2c4cc4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '644'
 ht-degree: 2%
 
 ---
