@@ -1,8 +1,8 @@
 ---
 title: 複数のXDPフラグメントのアセンブリ
 seo-title: 複数のXDPフラグメントのアセンブリ
-description: 'null'
-seo-description: 'null'
+description: Java APIとWeb Service APIを使用して、複数のXDPフラグメントを単一のXDPドキュメントにアセンブリします。
+seo-description: Java APIとWeb Service APIを使用して、複数のXDPフラグメントを単一のXDPドキュメントにアセンブリします。
 uuid: 0e35ff85-ff40-4878-ae31-aa8da75bd3ec
 contentOwner: admin
 content-type: reference
@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: c4706632-02e5-4510-ad9c-4f732d5fbdad
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1876'
+source-wordcount: '1908'
 ht-degree: 2%
 
 ---
