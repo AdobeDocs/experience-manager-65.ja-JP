@@ -1,8 +1,8 @@
 ---
 title: Repository Service APIクイック開始
 seo-title: Repository Service APIクイック開始
-description: 'null'
-seo-description: 'null'
+description: AEM Formsリポジトリサービスを使用して、フォルダーの作成、リソースの書き込み、リストリソースの読み取り、リソースの更新、リソースの検索、リソース間の関係の作成、リソースのロック、アクセス制御リストの管理およびリソースの削除を行います。
+seo-description: AEM Formsリポジトリサービスを使用して、フォルダーの作成、リソースの書き込み、リストリソースの読み取り、リソースの更新、リソースの検索、リソース間の関係の作成、リソースのロック、アクセス制御リストの管理およびリソースの削除を行います。
 uuid: 9c307e6e-d9a4-4021-8493-9f28a745dedb
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
