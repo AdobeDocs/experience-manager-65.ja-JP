@@ -1,8 +1,8 @@
 ---
 title: Java API を使用した AEM Forms の呼び出し
 seo-title: Java API を使用した AEM Forms の呼び出し
-description: 'null'
-seo-description: 'null'
+description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM FormsJava APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAPを使用します。ユーザー名やパスワードなどの異なる認証、同期および非同期呼び出し要求を使用します。
+seo-description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM FormsJava APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAPを使用します。ユーザー名やパスワードなどの異なる認証、同期および非同期呼び出し要求を使用します。
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '5410'
-ht-degree: 88%
+source-wordcount: '5480'
+ht-degree: 87%
 
 ---
 
