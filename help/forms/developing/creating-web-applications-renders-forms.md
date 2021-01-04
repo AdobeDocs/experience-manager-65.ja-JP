@@ -1,8 +1,8 @@
 ---
 title: FormsをレンダリングするWeb アプリケーションの作成
 seo-title: FormsをレンダリングするWeb アプリケーションの作成
-description: 'null'
-seo-description: 'null'
+description: Javaサーブレットを使用してFormsサービスを呼び出し、フォームをレンダリングするWebベースのアプリケーションを作成します。 Javaサーブレットは、フォームを返すFormsサービスとクライアントWebブラウザーの間のリンクとして機能します。
+seo-description: Javaサーブレットを使用してFormsサービスを呼び出し、フォームをレンダリングするWebベースのアプリケーションを作成します。 Javaサーブレットは、フォームを返すFormsサービスとクライアントWebブラウザーの間のリンクとして機能します。
 uuid: 00de10c5-79bd-4d8a-ae18-32f1fd2623bf
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1901'
 ht-degree: 1%
 
 ---
