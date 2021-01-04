@@ -1,8 +1,8 @@
 ---
 title: XMPユーティリティの操作
 seo-title: XMPユーティリティの操作
-description: 'null'
-seo-description: 'null'
+description: XMP UtilitiesのJavaおよびWeb Service APIを使用して、プログラムによってXMPメタデータをPDFドキュメントに読み込み、XMPメタデータをPDFドキュメントから取得して保存します。
+seo-description: XMP UtilitiesのJavaおよびWeb Service APIを使用して、プログラムによってXMPメタデータをPDFドキュメントに読み込み、XMPメタデータをPDFドキュメントから取得して保存します。
 uuid: 90ce6cef-efe1-456a-8e0c-5ba90249dda0
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 01d5677f-5c87-4a6e-987b-8eda9acc0b27
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1423'
 ht-degree: 3%
 
 ---
@@ -156,7 +156,7 @@ XMP Utilities API(Java)を使用してXMPメタデータを読み込みます。
 
    >[!NOTE]
    >
-   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラム的に呼び出すことを可能にするクラスが含まれています。
+   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラムで呼び出すことを可能にするクラスが含まれています。
 
 1. XMPUtilityServiceクライアントの作成
 
@@ -251,7 +251,7 @@ PDFドキュメントからXMPメタデータを書き出すには、次の手�
 
 **XMPメタデータ書き出し操作の呼び出し**
 
-サービスクライアントを作成したら、XMPメタデータの書き出し操作の1つを呼び出します。この操作は、XMPメタデータを調査したり、ディスクに保存したりするのに使用できます。
+サービスクライアントを作成したら、XMPメタデータの書き出し操作の1つを呼び出します。この操作は、XMPメタデータを検査したり、ディスクに保存したりするのに使用できます。
 
 **関連トピック**
 
