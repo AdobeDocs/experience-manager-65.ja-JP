@@ -1,8 +1,8 @@
 ---
 title: Web サービスを使用した AEM Forms の呼び出し
 seo-title: Web サービスを使用した AEM Forms の呼び出し
-description: 'null'
-seo-description: 'null'
+description: WSDLの生成を完全にサポートするWebサービスを使用して、AEM Formsプロセスを呼び出します。
+seo-description: WSDLの生成を完全にサポートするWebサービスを使用して、AEM Formsプロセスを呼び出します。
 uuid: 66bcd010-c476-4b66-831d-a48307d8d67a
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '9966'
+source-wordcount: '9990'
 ht-degree: 6%
 
 ---
@@ -458,7 +458,7 @@ JAX-WSを使用して、FormsサービスのWSDLをJavaプロキシクラスに�
 
    >[!NOTE]
    >
-   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスのクイック開始には、SwaRefを使用します。 ([SwaRef](#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
+   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスクイック開始では、SwaRefを使用します。 ([SwaRef](#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
 
 **関連トピック**
 
