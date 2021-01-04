@@ -1,8 +1,8 @@
 ---
 title: HTTPトークンを使用したSSO認証を実行するFlash Builderアプリケーションの作成
 seo-title: HTTPトークンを使用したSSO認証を実行するFlash Builderアプリケーションの作成
-description: 'null'
-seo-description: 'null'
+description: HTTPトークンを使用してシングルサインオン(SSO)認証を実行するFlash Builderを使用して、クライアントアプリケーションを作成します。 操作のユーザーを1回認証し、その認証を使用して複数のAEM Forms操作を実行します。
+seo-description: HTTPトークンを使用してシングルサインオン(SSO)認証を実行するFlash Builderを使用して、クライアントアプリケーションを作成します。 操作のユーザーを1回認証し、その認証を使用して複数のAEM Forms操作を実行します。
 uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 1%
+source-wordcount: '1825'
+ht-degree: 0%
 
 ---
 
