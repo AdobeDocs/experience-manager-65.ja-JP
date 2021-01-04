@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ef57d53fc780bd222abbe994fc71e133ce8a77fc
+source-git-commit: 3202866bd38779a9784e44ab470152df61c585f5
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '833'
 ht-degree: 33%
 
 ---
@@ -97,9 +97,9 @@ ASRP エンドポイントでの認証を正常におこなうには、[ネッ�
 
 AEM作成者インスタンスで：
 
-* メインメニューから&#x200B;**[!UICONTROL [ツール]>[操作]>[レプリケーション]]**&#x200B;に移動します。
+* メインメニューから&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL レプリケーション]**&#x200B;に移動します。
 * 「**ツリーをアクティブにする**」を選択します。
-* **開始パス**:参照  `/etc/socialconfig/srpc/`
+* **開始パス**:参照  `/conf/global/settings/communities/srpc/`
 * 「**変更済み**&#x200B;のみ」を選択解除します。
 * 「**アクティブ化**」を選択します。
 
@@ -144,8 +144,8 @@ Adobeクラウドのストレージインフラストラクチャは、*最終�
 
 すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
-JCRで、[/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)の場合：
+JCRで、[/conf/global/settings/communities](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)の場合：
 
-* [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)ノードを含まない場合、ストレージプロバイダーがJSRPであることを意味します。
-* srpcノードが存在し、ノード[defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)が含まれる場合、デフォルト設定のプロパティでASRPがデフォルトプロバイダーとして定義されます。
+* [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp)ノードを含まない場合、ストレージプロバイダーがJSRPであることを意味します。
+* srpcノードが存在し、[defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration)ノードが含まれる場合、デフォルト設定のプロパティでASRPがデフォルトプロバイダーとして定義されます。
 
