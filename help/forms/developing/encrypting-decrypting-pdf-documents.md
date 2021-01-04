@@ -1,8 +1,8 @@
 ---
 title: PDFドキュメントの暗号化と復号化
 seo-title: PDFドキュメントの暗号化と復号化
-description: 'null'
-seo-description: 'null'
+description: ドキュメントの暗号化と復号化を行うには、Encryptionサービスを使用します。 Encryptionサービスタスクは、PDFドキュメントのパスワードによる暗号化、PDFドキュメントの証明書による暗号化、PDFドキュメントからのパスワードによる暗号化の解除、PDFドキュメントからの証明書による暗号化の解除、PDFドキュメントのロック解除、他のサービス操作が可能なように、保護されたPDFドキュメントの暗号化の種類の決定を含む。
+seo-description: ドキュメントの暗号化と復号化を行うには、Encryptionサービスを使用します。 Encryptionサービスタスクは、PDFドキュメントのパスワードによる暗号化、PDFドキュメントの証明書による暗号化、PDFドキュメントからのパスワードによる暗号化の解除、PDFドキュメントからの証明書による暗号化の解除、PDFドキュメントのロック解除、他のサービス操作が可能なように、保護されたPDFドキュメントの暗号化の種類の決定を含む。
 uuid: 4e4e2716-c21f-4bfe-ae7a-7e91442414ef
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '8118'
+source-wordcount: '8244'
 ht-degree: 8%
 
 ---
