@@ -1,8 +1,8 @@
 ---
 title: 人間中心の長期間有効なプロセスの呼び出し
 seo-title: 人間中心の長期間有効なプロセスの呼び出し
-description: 'null'
-seo-description: 'null'
+description: 呼び出しAPIを使用するJava Webベースのクライアントアプリケーション、Webサービスを使用するASP.NETアプリケーション、およびRemotingを使用して構築されたFlexで作成されたクライアントアプリケーションを使用して、Workbenchで作成された人間中心の長期間有効なプロセスをプログラムから呼び出します。
+seo-description: 呼び出しAPIを使用するJava Webベースのクライアントアプリケーション、Webサービスを使用するASP.NETアプリケーション、およびRemotingを使用して構築されたFlexで作成されたクライアントアプリケーションを使用して、Workbenchで作成された人間中心の長期間有効なプロセスをプログラムから呼び出します。
 uuid: 42269d41-a90f-4ea1-aeb9-d61337bcfa54
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3739'
 ht-degree: 4%
 
 ---
@@ -186,7 +186,7 @@ Javaサーブレット内から`FirstAppSolution/PreLoanProcess`プロセスを�
 
    >[!NOTE]
    >
-   >*短時間のみ有効なプロセスは、createInvocationRequestメソッドの4番目のパラメーターとして値trueを渡すことで呼び出すことができます。値trueを渡すと、同期要求が作成されます。*
+   >*短時間のみ有効なプロセスは、createInvocationRequestメソッドの4番目のパラメーターとして値trueを渡すことで呼び出すことができます。値trueを渡すと同期要求が作成されます。*
 
 1. `ServiceClient`オブジェクトの`invoke`メソッドを呼び出し、`InvocationRequest`オブジェクトを渡して、呼び出し要求をAEM Formsに送信します。 `invoke`メソッドは`InvocationReponse`オブジェクトを返します。
 1. 長期間有効なプロセスは、呼び出し識別値を表すstring値を返します。 `InvocationReponse`オブジェクトの`getInvocationId`メソッドを呼び出して、この値を取得します。
