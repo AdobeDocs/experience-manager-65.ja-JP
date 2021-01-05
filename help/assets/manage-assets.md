@@ -161,7 +161,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 >[!NOTE]
 >
->ダイナミックメディア —Scene7モードでFTP経由でアセットをアップロードするには、機能パック18912を[!DNL Experience Manager]作成者インスタンスにインストールします。 [Adobeカスタマーケア](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)に連絡して、FP-18912にアクセスし、FTPアカウントのセットアップを完了します。 詳しくは、[一括アセット移行の機能パック18912のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。
+>Dynamic Media-Scene7モードでFTP経由でアセットをアップロードするには、[!DNL Experience Manager]作成者インスタンスに機能パック18912をインストールします。 [Adobeカスタマーケア](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)に連絡して、FP-18912にアクセスし、FTPアカウントのセットアップを完了します。 詳しくは、[一括アセット移行の機能パック18912のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。
 >
 >アセットのアップロードにFTPを使用する場合、[!DNL Experience Manager]で指定されたアップロード設定は無視されます。 代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
@@ -178,12 +178,12 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
    >[!NOTE]
    >
-   >FTP経由でアセットをアップロードする場合、ダイナミックメディアクラシック(S7)で設定したアップロードジョブオプションは、[!DNL Experience Manager]で設定したアセット処理パラメータよりも優先されます。
+   >FTP経由でアセットをアップロードする場合、Dynamic Mediaクラシック(S7)で設定したアップロードジョブオプションは、[!DNL Experience Manager]で設定したアセット処理パラメータよりも優先されます。
 
 1. アップロードオプションを設定ダイアログボックスの右下隅にある「**[!UICONTROL 保存]**」をクリックします。
 1. アップロードページの右下隅で「**[!UICONTROL アップロードを送信]**」をクリックします。
 
-   アップロードの進行状況を確認するには、グローバルナビゲーションバーの「**[!UICONTROL ジョブ]**」をクリックします。ジョブページに、アップロードの進行状況が表示されます。[!DNL Experience Manager]で作業を続行し、Dynamic Media Classicのジョブページに戻って、進行中のジョブをいつでも確認できます。
+   アップロードの進行状況を確認するには、グローバルナビゲーションバーの「**[!UICONTROL ジョブ]**」をクリックします。ジョブページに、アップロードの進行状況が表示されます。[!DNL Experience Manager]で作業を続行し、いつでもDynamic Mediaクラシックのジョブページに戻って進行中のジョブを確認できます。
 進行中のアップロードジョブをキャンセルするには、期間の横にある「**[!UICONTROL キャンセル]**」をクリックします。
 
 #### アップロードオプションを設定 {#upload-job-options}
@@ -369,7 +369,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 >[!MORELIKETHIS]
 >
->* [プレビューダイナミックメディアアセット](/help/assets/previewing-assets.md)。
+>* [プレビューDynamic Media資産](/help/assets/previewing-assets.md)。
 >* [サブアセットの表示](managing-linked-subassets.md#viewing-subassets).
 
 
@@ -604,7 +604,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. パブリッシュ環境から削除する（非公開にする）アセットまたはアセットフォルダーの場所に移動します。
 
-1. 非公開にするアセットまたはフォルダを選択し、ツールバーの「パブリケーションの **[!UICONTROL 管理]** 」オプション ![「パブリケーションの](assets/do-not-localize/globe-publication.png) 管理」オプションをクリックします。
+1. 非公開にするアセット/フォルダーを選択し、ツールバーの「パブリケーションの管理&#x200B;**[!UICONTROL ![パブリケーションの管理](assets/do-not-localize/globe-publication.png)」オプションをクリックします。]**
 
 1. リストから「**[!UICONTROL 非公開]**」アクションを選択します。
 
