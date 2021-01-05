@@ -51,7 +51,7 @@ ht-degree: 86%
 
 ## スマートイメージングにはライセンス費用がかかりますか？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-いいえ。スマートイメージングは、Dynamic Media ClassicまたはAdobe Experience Manager- Dynamic Media(On Prem、AMS、およびAEM)の既存のライセンスに含まれています。
+いいえ。スマートイメージングは、Dynamic MediaクラシックまたはAdobe Experience Manager-Dynamic Media(On Prem、AMS、およびAEM)の既存のライセンスに含まれています。
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ## スマートイメージングが想定どおりに機能しているかどうかを確認するには、どうすればいいですか？ {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
-1. スマートイメージングを使用してアカウントを設定したら、ブラウザーにDynamic Media ClassicまたはAdobe Experience Manager — ダイナミックメディアイメージURLを読み込みます。
+1. スマートイメージングを使用してアカウントを設定したら、ブラウザーにDynamic MediaクラシックまたはAdobe Experience Manager-Dynamic MediaイメージURLを読み込みます。
 1. Chrome ブラウザーで&#x200B;**[!UICONTROL 表示／デベロッパー／デベロッパーツール]**&#x200B;をクリックしてデベロッパーパネルを開きます。または、別のブラウザーのデベロッパーツールを使用します。
 
 1. デベロッパーツールを開いたときにキャッシュが無効化されるようにします。
