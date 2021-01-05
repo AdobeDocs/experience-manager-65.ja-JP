@@ -71,7 +71,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->セットの作成で問題が発生した場合は、[ダイナミックメディアのトラブルシューティング —Scene7モード](/help/assets/troubleshoot-dms7.md)を参照してください。
+>セットの作成で問題が発生した場合は、[Dynamic Mediaのトラブルシューティング —Scene7モード](/help/assets/troubleshoot-dms7.md)を参照してください。
 
 ## アセットのアップロード {#uploading-assets}
 
