@@ -38,11 +38,11 @@ ht-degree: 59%
 
 パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
-## Dynamic Media Classicの設定{#configuring-dynamic-media-classic-scene}
+## Dynamic Mediaクラシックの設定{#configuring-dynamic-media-classic-scene}
 
-パノラマ画像ビューアをAEM内で正しく動作させるには、パノラマ画像ビューアプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、JCRでビューアプリセットを更新する必要があります。 これを行うには、次の方法でDynamic Media Classicを設定します。
+パノラマ画像ビューアをAEM内で正しく動作させるには、パノラマ画像ビューアプリセットをDynamic MediaクラシックおよびDynamic Mediaクラシック固有のメタデータと同期して、JCRでビューアプリセットを更新する必要があります。 これを行うには、次の方法でDynamic Mediaクラシックを設定します。
 
-1. [各会社アカウントのDynamic Media ](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) Classicのインスタンスにログインします。
+1. [各会社アカウントのDynamic Media](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) クラスのインスタンスにログインします。
 
 1. ページの右上隅近くにある、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
 1. Image Server公開ページの上部近くにある&#x200B;**[!UICONTROL 公開コンテキスト]**&#x200B;ドロップダウンメニューで、「**[!UICONTROL 画像サービング]**」を選択します。
@@ -50,7 +50,7 @@ ht-degree: 59%
 1. 同じImage Server公開ページで、「**[!UICONTROL Request Attributes.]**」という見出しを探します。
 1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限」を探します。]** 次に、関連する「幅」と「高さ」フィールドで、パノラマ画像に使用できる最大画像サイズを大きくします。
 
-   Dynamic Media Classicの制限は25,000,000ピクセルです。 縦横比が2:1の画像で許可される最大サイズは7000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
+   Dynamic Mediaクラシックの制限は25,000,000ピクセルです。 縦横比が2:1の画像で許可される最大サイズは7000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
 
    >[!NOTE]
    >
@@ -71,11 +71,11 @@ ht-degree: 59%
 
 WCM でパノラマメディアコンポーネントに画像をドロップしたときに、コンポーネントプレースホルダーが壊れた場合、以下のトラブルシューティングをおこなってください。
 
-* 403 Forbidden エラーが発生する場合は、要求された画像のサイズが大きすぎることが原因となっている可能性があります。[Dynamic Media Classicの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)の「**[!UICONTROL 返信画像のサイズ制限]**」設定を確認します。
+* 403 Forbidden エラーが発生する場合は、要求された画像のサイズが大きすぎることが原因となっている可能性があります。[Dynamic Mediaクラシックの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)の「**[!UICONTROL 返信画像のサイズ制限]**」の設定を確認します。
 
 * アセットの「無効なロック」やページに表示される「解析エラー」については、「要求難読化モード」と「要求ロックモード」が無効になっていることを確認します。
 * キャンバスが汚染されているというエラーについては、ルールセット定義ファイルのパスを設定し、画像アセットについて以前の要求の CDN を無効にします。
-* サポートされている制限を超えるサイズの画像を要求した後に画質が大幅に低下した場合は、**[!UICONTROL JPEG エンコード属性／画質]**&#x200B;の設定が空でないことを確認します。**[!UICONTROL クォリティ]**&#x200B;フィールドの一般的な設定は`95`です。 この設定は、Image Server 公開ページにあります。ページにアクセスするには、[ダイナミックメディアクラシックの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)を参照してください。
+* サポートされている制限を超えるサイズの画像を要求した後に画質が大幅に低下した場合は、**[!UICONTROL JPEG エンコード属性／画質]**&#x200B;の設定が空でないことを確認します。**[!UICONTROL クォリティ]**&#x200B;フィールドの一般的な設定は`95`です。 この設定は、Image Server 公開ページにあります。このページにアクセスするには、[Dynamic Mediaクラシックの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)を参照してください。
 
 ## パノラマ画像のプレビュー {#previewing-panoramic-images}
 
