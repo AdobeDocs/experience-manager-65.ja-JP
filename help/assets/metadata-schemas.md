@@ -39,7 +39,7 @@ ht-degree: 60%
 |---|---|---|
 | [!UICONTROL default] |  | アセットのベースメタデータスキーマフォーム。 |
 |  | 次の子フォームは、[!UICONTROL デフォルト]フォームのプロパティを継承します。 |  |
-|  | <ul><li>[!UICONTROL dm_video]</li></ul> | ダイナミックメディアビデオのスキーマフォーム。 |
+|  | <ul><li>[!UICONTROL dm_video]</li></ul> | Dynamic Mediaビデオのスキーマフォーム。 |
 |  | <ul><li>[!UICONTROL 画像]</li></ul> | `image/jpeg`や`image/png`など、MIMEタイプが指定された画像のスキーマフォーム。 <br> この  画像フォームには、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]:サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]:サブタイプがTIFFのアセットのスキーマフォーム。</li></ul> |
 |  | <ul><li>[!UICONTROL アプリケーション]</li></ul> | `application/pdf`や`application/zip`など、MIMEタイプを持つアセットのスキーマフォーム。 <br>[!UICONTROL pdf]:サブタイプがPDFのアセットのスキーマフォームです。 |
 |  | <ul><li>[!UICONTROL ビデオ]</li></ul> | `video/avi`や`video/mp4`などのMIMEタイプを持つビデオアセットのスキーマフォーム。 |
