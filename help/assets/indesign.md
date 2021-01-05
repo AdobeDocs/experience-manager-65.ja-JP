@@ -180,7 +180,7 @@ IDS の並列ジョブ処理を有効にすることができます。[!DNL InDe
 
 IDS 並列ジョブ数を設定するには：
 
-1. Felix Console の「**[!UICONTROL Configurations]**」タブを開きます。次に URL の例を挙げます。`https://[aem_server]:[port]/system/console/configMgr`
+1. Felix Console の「**[!UICONTROL Configurations]**」タブを開きます。次に URL の例を挙げます。`https://[aem_server]:[port]/system/console/configMgr` です。
 
 1. `Apache Sling Job Queue Configuration`の下でIDS処理キューを選択します。
 
