@@ -198,8 +198,8 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 実行しているモードに応じて、サポートされるビデオ形式のコーデックは次のようになります。
 
-* ダイナミックメディア —Scene7モード：H.264 (.mp4)
-* ダイナミックメディアハイブリッドモード：H.264 (.mp4)、WebM
+* Dynamic MediaScene7モード：H.264 (.mp4)
+* Dynamic Mediaハイブリッドモード：H.264 (.mp4)、WebM
 
 [アダプティブストリーミング用のビデオエンコーディングプロファイルの作成](#creating-a-video-encoding-profile-for-adaptive-streaming)も参照してください。
 
