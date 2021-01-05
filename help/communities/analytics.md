@@ -204,7 +204,7 @@ Communities専用の変数に関する懸念は、アカウント担当者にお
 
 ![analytics-settings](assets/analytics-settings.png)
 
-* **会社**
+* **会社情報**
 
    Adobe Analyticsアカウントに関連付けられている会社です。
 
