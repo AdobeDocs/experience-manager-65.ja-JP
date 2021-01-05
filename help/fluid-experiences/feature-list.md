@@ -13,9 +13,9 @@ ht-degree: 16%
 
 # AEM Fluid Experiences機能リスト{#aem-fluid-experiences-feature-list}
 
-Adobe Experience Manager流体エクスペリエンスは、AEM Sites、AEMダイナミックメディア、AEM Assetsの強力な機能セットを活用して、ヘッドレスコンテンツ配信に対する堅牢なソリューションを提供します。
+Adobe Experience Manager流体エクスペリエンスは、AEM Sites、AEMDynamic Media、AEM Assetsの強力な機能セットから、ヘッドレスのコンテンツ配信を実現する堅牢なソリューションを提供します。
 
-AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処されるという点で、従来のAEMとの違いを示します。 高性能のコンテンツオーサリング、配信、およびハイブリッド使用例のAEM強力なサポートは、[フルAEM Sites、アセット、ダイナミックメディアの各ソリューションで利用できます。](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiencesは、ヘッドレス配信の使用例のみが対処されるという点で、従来のAEMとの違いを示します。 高性能のコンテンツオーサリング、配信、およびハイブリッド使用例のAEM強力なサポートは、[完全なAEM Sites、アセット、Dynamic Mediaの各ソリューションで利用できます。](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/user-guide/home.html)
 
 次の表に、AEM Fluid Experiencesの機能と、関連するサポートドキュメントへのリンクを示します。
 
