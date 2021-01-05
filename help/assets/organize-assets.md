@@ -71,5 +71,5 @@ Add back links to blog posts by marketing?
 >* [メタデータ、画像およびビデオを処理するプロファイル](processing-profiles.md)。
 >* [メタデータプロファイル](/help/assets/metadata-config.md#metadata-profiles).
 >* [ビデオプロファイル](video-profiles.md).
->* [ダイナミックメディアイメージプロファイル](image-profiles.md)。
+>* [Dynamic Media画像プロファイル](image-profiles.md)。
 
