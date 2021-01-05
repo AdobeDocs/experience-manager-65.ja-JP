@@ -376,13 +376,13 @@ Adobe Experience Manager のすべての要素（インスタンス、Dispatcher
 
 ### AEM Dynamic Media アドオンの要件 {#requirements-for-aem-dynamic-media-add-on}
 
-AEM Dynamic Media はデフォルトで無効になっています。[ダイナミックメディアを有効にする](/help/assets/config-dynamic.md#enabling-dynamic-media)を参照してください。
+AEM Dynamic Media はデフォルトで無効になっています。[Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media)を有効にするには、こちらを参照してください。
 
 Dynamic Media を有効にする場合は、以下の追加の技術要件が適用されます。
 
 >[!NOTE]
 >
->以下のシステム要件は、ダイナミックメディア — ハイブリッドモードを使用する場合に&#x200B;****&#x200B;のみ適用されます。ダイナミックメディア — ハイブリッドモードには、埋め込み画像サーバーがあり、特定のオペレーティングシステムでのみ認証されます。
+>以下のシステム要件は、**** Dynamic Media — ハイブリッドモードを使用する場合にのみ適用されます。Dynamic Media — ハイブリッドモードには埋め込みイメージサーバがあり、このサーバは特定のオペレーティングシステムでのみ認証されています。
 >
 >Dynamic Media - Scene7 モード（**dynamicmedia_scene7** 実行モード）で Dynamic Media を実行する場合は、追加のシステム要件はありません。AEM と同じシステム要件が適用されます。Dynamic Media - Scene7 モードのアーキテクチャではクラウドベースの画像サービスを使用しており、AEM に組み込まれたサービスを使用していません。
 
