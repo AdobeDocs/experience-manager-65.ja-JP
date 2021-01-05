@@ -1416,7 +1416,7 @@ Remove one mention of this fix.
 
 * 追跡イベントに dynamic-UI-state をカスタム属性として含めることが可能になりました。
 * [!DNL Dynamic Media]-Scene7モードでの360度のビデオアセットの配信のサポートが含まれました。
-* リッチテキストエディターのスタイルプラグインを使用して、*日本語のワードラップ*&#x200B;機能を有効にしました。 詳しくは、[日本語の単語の折り返しを設定](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)を参照してください
+* リッチテキストエディターのスタイルプラグインを使用して、*日本語の折り返し*&#x200B;機能を有効にしました。 詳しくは、[日本語の単語の折り返しを設定](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)を参照してください
 
 ### アセット
 
