@@ -49,7 +49,7 @@ Dynamic Media 限定の機能は次のとおりです。
 
 >[!NOTE]
 >
->ダイナミックメディアの使用とAEMとの統合の違いについて詳しくは、[ダイナミックメディアクラシックとの統合とダイナミックメディア](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)を参照してください。
+>Dynamic Mediaを使用する場合と、Dynamic MediaクラシックとAEMを統合する場合の違いについては、「[Dynamic Mediaクラシックの統合とDynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)」を参照してください。
 
 ## Dynamic Media が有効な場合と無効な場合の比較 {#dynamic-media-on-versus-dynamic-media-off}
 
@@ -59,7 +59,7 @@ Dynamic Media が有効（オン）になっているかどうかは、次の特
 * 画像セット、スピンセット、混在メディアセットを使用できる。
 * PTIFF レンディションが作成されている。
 
-画像アセットをクリックした場合、アセットの表示は、ダイナミックメディア[enabled](config-dynamic.md#enabling-dynamic-media)の場合とは異なります。 Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
+画像アセットをクリックした場合、アセットの表示はDynamic Media[enabled](config-dynamic.md#enabling-dynamic-media)とは異なります。 Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
 
 ### 動的レンディション {#dynamic-renditions}
 
