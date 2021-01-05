@@ -43,8 +43,8 @@ ht-degree: 58%
    + [Dynamic Media - Scene7 モードの設定](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
-   + [ダイナミックメディアでのアクセシビリティ](accessibility-dm.md)
-   + [ダイナミックメディア — ハイブリッドモードからダイナミックメディア — S7モードへの移行](migrate-from-hybrid-to-dms7.md)
+   + [Dynamic Mediaでのアクセシビリティ](accessibility-dm.md)
+   + [Dynamic Media — ハイブリッドモードからDynamic Media- S7モードへの移行](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media アセットの管理](managing-assets.md)
    + [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Dynamic Media ビューアプリセットの管理](managing-viewer-presets.md)
@@ -55,7 +55,7 @@ ht-degree: 58%
    + [Dynamic Media イメージプロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
-   + [ページへのダイナミックメディア機能の追加](scene7.md)
+   + [ページへのDynamic Media機能の追加](scene7.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
    + [Dynamic Media でのホットリンク保護の有効化](hotlink-protection.md)
@@ -64,7 +64,7 @@ ht-degree: 58%
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)
    + [スピンセット](spin-sets.md)
-   + [ダイナミックメディアでのビデオ](video.md)
+   + [Dynamic Mediaのビデオ](video.md)
    + [カルーセルバナー](carousel-banners.md)
    + [インタラクティブ画像](interactive-images.md)
    + [インタラクティブビデオ](interactive-videos.md)
@@ -127,7 +127,7 @@ ht-degree: 58%
    + [アセットテンプレート](asset-templates.md)
    + [フォルダーを共有する際のベストプラクティス [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
-   + [ [!DNL Brand Portal] での  [!DNL Assets]  の設定](configure-aem-assets-with-brand-portal.md)
+   + [ [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md) での  [!DNL Assets]  の設定
    + [ [!DNL Brand Portal]](brand-portal-publish-assets.md) へのアセットの公開
    + [フォルダの発行先 [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [コレクションの公開先 [!DNL Brand Portal]](brand-portal-publish-collection.md)
