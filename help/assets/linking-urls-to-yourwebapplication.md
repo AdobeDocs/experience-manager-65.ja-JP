@@ -123,7 +123,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 ## 公開されたビデオレンディションのビデオ URL の取得 {#obtaining-a-video-url-for-a-published-video-rendition}
 
 1. AEMで、**[!UICONTROL ツール/デプロイメント/Cloud/Cloud Servicesに移動します。]**
-1. **[!UICONTROL Cloud Services]**&#x200B;ページで、「**[!UICONTROL ダイナミックメディアCloud Services]**」という見出しまで下にスクロールし、「**[!UICONTROL 設定を表示]**」をタップします。
+1. **[!UICONTROL Cloud Services]**&#x200B;ページで、**[!UICONTROL Dynamic MediaCloud Services]**&#x200B;の見出しまで下にスクロールし、**[!UICONTROL 設定を表示をタップします。]**
 1. 「**[!UICONTROL 利用可能な設定]**」の下で、必要な設定をタップします。
 
 1. **[!UICONTROL Dynamic Media クラウドの設定]**&#x200B;ページの「**[!UICONTROL ビデオサービスの URL]**」の下で、URL パス全体をコピーします。コピーした URL パスは後の手順で必要になります。
@@ -160,7 +160,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 ## アダプティブストリーミング（HLS）用のビデオ URL の取得  {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. AEMで、**[!UICONTROL ツール/デプロイメント/Cloud/Cloud Servicesに移動します。]**
-1. **[!UICONTROL Cloud Services]**&#x200B;ページで、「**[!UICONTROL ダイナミックメディアCloud Services]**」という見出しまで下にスクロールし、「**[!UICONTROL 設定を表示]**」をタップします。
+1. **[!UICONTROL Cloud Services]**&#x200B;ページで、**[!UICONTROL Dynamic MediaCloud Services]**&#x200B;の見出しまで下にスクロールし、**[!UICONTROL 設定を表示をタップします。]**
 1. 「**[!UICONTROL 利用可能な設定]**」の下で、必要な設定をタップします。
 1. **[!UICONTROL Dynamic Media Cloud Services を設定]**&#x200B;ページで、以下の作業をおこないます。
 
