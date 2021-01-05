@@ -52,7 +52,7 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
    ![step_properties](assets/step_properties.png)
 
 1. 変更内容を保存します。
-1. 新しい属性を使用して[!DNL Dynamic Media]画像のピラミッドTIFFレンディションを再生成するには、**[!UICONTROL Dynamic Media Process Image Assets]**&#x200B;手順を[!UICONTROL DAM Metadata Writeback]ワークフローに追加します。
+1. 新しい属性を持つ[!DNL Dynamic Media]画像のピラミッドTIFFレンディションを再生成するには、**[!UICONTROL Dynamic Mediaプロセス画像アセット]**&#x200B;手順を[!UICONTROL DAMメタデータの書き戻し]ワークフローに追加します。
 
    PTIFF レンディションは、Dynamic Media Hybrid 実装でのみ、ローカルで作成および格納されます。
 
