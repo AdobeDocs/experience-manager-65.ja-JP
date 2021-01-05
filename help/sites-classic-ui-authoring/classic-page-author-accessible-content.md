@@ -547,7 +547,7 @@ Web ページに適切な構造が指定されていることを確認するに�
 
 [ガイドライン 1.4 判別可能：コンテンツを、利用者にとって見やすく、聞きやすいものにします。これには、前景と背景を区別することも含む。](https://www.w3.org/TR/WCAG20/#visual-audio-contrast)
 
-### 色の使用（1.4.1）            {#use-of-color}
+### 色の使用（1.4.1）              {#use-of-color}
 
 * 達成基準 1.4.1
 * レベル A
@@ -856,7 +856,7 @@ AEM では、ページのデフォルト言語は、ページを作成する際�
 * [達成基準 3.1.1 の達成方法](https://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-doc-lang-id)
 * コードは ISO 639-1 に基づいています。各言語の詳細なコードリストについては、[W3 Schools サイト](https://www.w3schools.com/tags/ref_language_codes.asp)を参照してください。
 
-### 一部分の言語（3.1.2）            {#language-of-parts}
+### 一部分の言語（3.1.2）              {#language-of-parts}
 
 * 達成基準 3.1.2
 * レベル AA
