@@ -24,7 +24,7 @@ Dynamic Media を使用すると、3D アセットを、没入感のあるエク
 * Adobe Dimension を使用した、高品質でインタラクティブなディメンショナルビューアプリセットで、3D アセットの表示のサポートを最適化。
 * 3D メディア WCM コンポーネントによって、AEM Sites ページに 3D アセットを簡単に追加可能。
 
-ダイナミックメディアで3Dアセットを使用する場合、追加の設定は必要ありません。
+Dynamic Mediaで3Dアセットを使用する場合は、追加の設定は必要ありません。
 
 ![3D の靴](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
@@ -32,7 +32,7 @@ Dynamic Media を使用すると、3D アセットを、没入感のあるエク
 
 ## Dynamic Media でサポートされる 3D 形式 {#supported-three-d-file-formats-in-dm}
 
-ダイナミックメディアは、次の3D形式をサポートしています。
+Dynamic Mediaは、次の3D形式をサポートしています。
 
 [サポートされる 3D 形式](/help/assets/assets-formats.md)も参照.
 
@@ -45,13 +45,13 @@ Dynamic Media を使用すると、3D アセットを、没入感のあるエク
 
 ## クイックスタート：Dynamic Media 内の 3D アセット {#quick-start-three-d}
 
-次の順を追ったワークフローに従って、ダイナミックメディア —Scene7モードで3Dアセットをすばやく習得できます。
+次の順を追ったワークフローに従って、Dynamic Media-Scene7モードの3Dアセットをすばやく習得できます。
 
 >[!NOTE]
 >
->3Dアセットは、ダイナミックメディア — ハイブリッドモードではサポートされていません。
+>3Dアセットは、Dynamic Media — ハイブリッドモードではサポートされません。
 
-ダイナミックメディアで3Dアセットを操作する前に、AEM管理者がダイナミックメディア —Scene7モードでダイナミックメディアCloud Servicesを有効にし、設定済みであることを確認してください。
+Dynamic Mediaで3Dアセットを操作する前に、AEM管理者がDynamic Media-Scene7モードでDynamic MediaCloud Servicesを有効にし、設定済みであることを確認してください。
 
 「Dynamic Media - Scene7 モードの設定」の[ Dynamic Media クラウドサービスの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)、および[ Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
 
@@ -194,7 +194,7 @@ Dynamic Media には、Dynamic Media 3D メディアコンポーネントが含�
 
 1. 「**[!UICONTROL レイアウトコンテナ]**」領域の空の領域をタップして選択し、関連するツールバーを開きます。
 1. ツールバーで、**[!UICONTROL ポリシー]**&#x200B;アイコンをタップし、**[!UICONTROL ポリシーエディターを開きます。]**
-1. 「**[!UICONTROL プロパティ]**」セクションの「**[!UICONTROL 許可されているコンポーネント]**」タブで、**[!UICONTROL ダイナミックメディア]**&#x200B;までスクロールし、リストを展開して「**[!UICONTROL 3Dメディア。]**」を確認します。
+1. 「**[!UICONTROL プロパティ]**」セクションの「**[!UICONTROL 許可されているコンポーネント]**」タブで、**[!UICONTROL Dynamic Media]**&#x200B;までスクロールし、リストを展開して「**[!UICONTROL 3D Media.]**」を確認します。
 1. 「**[!UICONTROL 完了]**」をタップして変更を保存し、**[!UICONTROL ポリシーエディターを閉じます。]**
 
    これで、この Dynamic Media を使用するすべてのページに 3D メディアコンポーネントを配置できます。
