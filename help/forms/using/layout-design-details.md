@@ -56,7 +56,7 @@ XDP は Adobe Forms Designer でデザインできます。この記事では、
 
 >[!NOTE]
 >
->XDPテンプレートのサブフォームコンポーネントに追加コンテンツを追加する代わりに、Interactive Communicationの印刷チャネルにコンテンツを追加する方法。 [ターゲットフラグメント、グラフ、画像](create-interactive-communication.md#step2)、レイアウトフラグメントを追加使用して、印刷チャネルのドキュメント領域にコンテンツを送信します。
+>XDPテンプレートのサブフォームコンポーネントにコンテンツを追加する代わりに、Interactive Communicationの印刷チャネルに追加コンテンツを追加する。 [ターゲットフラグメント、グラフ、画像](create-interactive-communication.md#step2)、レイアウトフラグメントを追加使用して、印刷チャネルのドキュメント領域にコンテンツを送信します。
 
 XDPテンプレートでサブフォームを使用するには、次の手順を実行します。
 
