@@ -42,7 +42,7 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 * [Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)
 * [レスポンシブサイト用に最適化された画像の配信](/help/assets/responsive-site.md)
 * [コンテンツの HTTP/2 配信](/help/assets/http2.md)
-* [Dynamic Media Classicを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)
+* [Dynamic Mediaクラシックを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [ルールセットを使用した URL の変換](/help/assets/using-rulesets-to-transform-urls.md)
 
 
