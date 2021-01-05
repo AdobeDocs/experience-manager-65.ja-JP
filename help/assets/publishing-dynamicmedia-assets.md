@@ -18,9 +18,9 @@ ht-degree: 88%
 
 # Dynamic Media アセットの公開  {#publishing-dynamic-media-assets}
 
-Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開」をタップします。]** ダイナミックメディアアセットが公開されたら、URL経由でWebページに含めたり、ページにコードを埋め込んだりすることができます。
+Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開」をタップします。]** Dynamic Mediaアセットが公開されたら、URL経由でWebページに含めたり、ページにコードを埋め込んだりすることができます。
 
-また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。[ダイナミックメディアの設定 —Scene7モードを参照してください。](config-dms7.md) または、フォルダーレベルで「**[!UICONTROL 選択的公開]**」を使用して、相互に排他的なアセットを Dynamic Media または AEM に選択的に公開することもできます。詳しくは、[Dynamic Media での選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
+また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。[Dynamic Mediaの設定 —Scene7モードを参照してください。](config-dms7.md) または、フォルダーレベルで「**[!UICONTROL 選択的公開]**」を使用して、相互に排他的なアセットを Dynamic Media または AEM に選択的に公開することもできます。詳しくは、[Dynamic Media での選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
 
 **[!UICONTROL カード表示]**&#x200B;で、アセット名のすぐ下、アセットが発行されたことを示す日時の左側に、小さな地球アイコンが表示されます。**[!UICONTROL リスト表示]**&#x200B;では、公開されたアセットと公開されていないアセットが「**[!UICONTROL 公開]**」列でわかります。
 
@@ -32,7 +32,7 @@ Dynamic Media アセットを公開するには、既にアップロード済み
 
 [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)も参照してください。
 
-[Webページへのダイナミックメディアビデオまたは画像ビューアの埋め込み](embed-code.md)も参照してください。
+[WebページへのDynamic Mediaビデオまたは画像ビューアの埋め込み](embed-code.md)も参照してください。
 
 >[!NOTE]
 >
