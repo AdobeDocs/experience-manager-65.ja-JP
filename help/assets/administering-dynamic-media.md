@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media のセットアップ
-description: ダイナミックメディアを設定するには、ダイナミックメディアを設定し、画像とビューアのプリセットを管理する必要があります。
+description: Dynamic Mediaを設定するには、Dynamic Mediaを設定し、画像とビューアプリセットを管理する必要があります。
 uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -20,14 +20,14 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたダイナミックメディアクラシックを使用している場合は、[ダイナミックメディアクラシック統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
+>このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたDynamic Mediaクラシックを使用している場合は、[Dynamic Mediaクラシック統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
 >
->ダイナミックメディアと統合されたAEMを使用したい場合は、[デュアル使用シナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
+>Dynamic Mediaと共にDynamic Mediaクラシックと統合されたAEMを使用したい場合は、[デュアル使用シナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
 
 Dynamic Media の管理者には、次のトピックが参考になります。
 
-* [ダイナミックメディア —Scene7モードの設定](config-dms7.md)  — この設定は、ダイナミックメディアを初めてお使いの場合に使用します。
-* [ダイナミックメディアハイブリッドモードの設定](config-dynamic.md)  — 既存のダイナミックメディアユーザーアップグレードAEMの場合は、この設定を使用します。
+* [Dynamic Media-Scene7モードの設定](config-dms7.md) -Dynamic Mediaの新規顧客の場合は、この設定を使用します。
+* [Dynamic Mediaハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic Mediaのお客様向けアップグレードAEMの場合は、この設定を使用します。
 * [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
 * [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
