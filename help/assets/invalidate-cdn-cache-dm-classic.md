@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media Classic を使用した CDN キャッシュの無効化
-description: CDN(コンテンツ配信ネットワーク)のキャッシュされたコンテンツを無効にすると、キャッシュの期限が切れるのを待たずに、Dynamic Media Classicによって配信されるアセットをすばやく更新できます。
+description: CDN(コンテンツ配信ネットワーク)のキャッシュコンテンツを無効にすると、キャッシュの期限が切れるのを待つ代わりに、Dynamic Media Classicによって配信されるアセットをすばやく更新できます。
 uuid: 0fd88e31-9745-4c98-a245-9f5d0766cad4
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
@@ -22,11 +22,11 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
 
 >[!IMPORTANT]
 >
->次の手順は、AEM 6.5、Service Pack 5(AEM 6.5.5)以前のダイナミックメディアにのみ適用されます。<br>AEM 6.5、Service Pack 6(AEM 6.5.6)以降でダイナミックメディアを使用する場合は、「ダイナミックメディアを使用したCDNキャッシュの [無効化」に記載されている手順に従ってください。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>次の手順は、AEM 6.5、Service Pack 5(AEM 6.5.5)以前のDynamic Mediaにのみ適用されます。<br>AEM 6.5、Service Pack 6(AEM 6.5.6)以降でDynamic Mediaを使用する場合は、「Dynamic Media経由でCDNキャッシュを [無効にする」に記載されている手順に従ってください。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 
 [Dynamic Media Classic（Scene7）のキャッシュの概要](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)も参照してください。
 
-**Dynamic Media Classicを使用してCDNキャッシュを無効にするには：**
+**Dynamic Mediaクラシックを使用してCDNキャッシュを無効にするには：**
 
 1. 次のいずれかの操作をおこないます。
 
@@ -50,7 +50,7 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
    テンプレートに `<ID>` だけが含まれている場合は、Dynamic Media が `https://<server>/is/image` 部分を埋めます。ここで、`<server>` は、「一般設定」で定義されているパブリッシュサーバー名であり、&lt;ID> は、無効化の対象として選択されたアセット（またはアセット群）です。
 
 1. ページ右下隅の「**[!UICONTROL 閉じる」をクリックします。]**
-1. Dynamic Media Classicユーザーインターフェイスで、1つまたは複数のアセットを選択し、**[!UICONTROL ファイル/CDNを無効にするをクリックします。]**&#x200B;作成したテンプレートから生成された 1 つ以上の URL と、選択したアセット（またはアセット群）からなるリストが表示されます。このリストに使用されているのは、アプリケーションの一般設定の「公開先サーバー名」にリストされているサーバー URL です。
+1. Dynamic Mediaクラシックユーザーインターフェイスで、1つまたは複数のアセットを選択し、**[!UICONTROL ファイル/CDNを無効にするをクリックします。]**&#x200B;作成したテンプレートから生成された 1 つ以上の URL と、選択したアセット（またはアセット群）からなるリストが表示されます。このリストに使用されているのは、アプリケーションの一般設定の「公開先サーバー名」にリストされているサーバー URL です。
 
    例えば、前の手順で設定した CDN 無効化テンプレートを使用して、`Backpack_B` という名前の画像アセットを 1 つだけ選択したとします。**[!UICONTROL ファイル／CDN を無効にする]**&#x200B;をクリックすると、CDN 無効化のユーザーインターフェイスには、次のように生成された URL が表示されます。
 
