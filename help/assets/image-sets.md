@@ -54,7 +54,7 @@ ht-degree: 87%
    [バッチセットプリセット](/help/assets/config-dms7.md)を使用して画像セットを自動的に作成することもできます。
    >[!IMPORTANT]
    >
-   >バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、ダイナミックメディア —Scene7モードでのみ使用できます。
+   >バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、Dynamic Media-Scene7モードでのみ使用できます。
 
    詳しくは、[アップロード用の画像セットアセットの準備およびファイルのアップロード](#uploading-assets-in-image-sets)を参照してください。
 
@@ -176,7 +176,7 @@ ht-degree: 87%
 
 >[!IMPORTANT]
 >
->バッチセットは、IPS [Image Production System]によってアセット取り込みの一部として作成され、ダイナミックメディア —Scene7モードでのみ使用できます。
+>バッチセットは、IPS [Image Production System]でアセット取り込みの一部として作成され、Dynamic Media-Scene7モードでのみ使用できます)。
 
 ただし、バッチセットプリセットを使用して作成したセットは、ユーザーインターフェイスに表示&#x200B;*されません*。これらのセットは 3 つの異なる方法で表示できます（これらの方法は、画像セットをユーザーインターフェイスで作成した場合も使用できます）。
 
@@ -188,7 +188,7 @@ ht-degree: 87%
 
    ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* 検索から、「**[!UICONTROL フィルター]**」を選択し、「**[!UICONTROL ダイナミックメディア]**」を展開して、「**[!UICONTROL セット」を選択します。]**
+* 検索から、「**[!UICONTROL フィルター]**」を選択し、**[!UICONTROL Dynamic Media]**&#x200B;を展開して、**[!UICONTROL セットを選択します。]**
 
    検索結果として、UI で手動で作成した一致するセットか、バッチセットプリセットを使用して自動的に作成した一致するセットが返されます。自動セットの場合、検索クエリは、AEM での検索とは異なる「次の値で始まる」検索条件を使用して実行されます。AEM での検索は、「次を含む」検索条件に基づいて実行されます。フィルターを「**[!UICONTROL セット]**」に設定するのが、自動セットを検索する唯一の方法です。
 
