@@ -45,7 +45,7 @@ Adobeでは、[!DNL Adobe InDesign Server]を使用して、IDMLやHTMLなどの
 
 ## [!DNL Dynamic Media] {#dynamic-media}
 
-[!DNL Dynamic Media] は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。[!DNL Dynamic Media]の有効化について詳しくは、[ダイナミックメディアの設定](/help/assets/config-dynamic.md)を参照してください。
+[!DNL Dynamic Media] は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。[!DNL Dynamic Media]を有効にする方法について詳しくは、[Dynamic Mediaの設定](/help/assets/config-dynamic.md)を参照してください。
 
 現在、[!DNL Dynamic Media]は1ファイルあたり最大15 GBのコンテンツのビデオをサポートできます。
 
