@@ -17,9 +17,9 @@ ht-degree: 62%
 ---
 
 
-# AEM 6.5でのダイナミックメディアリポジトリの再構築{#dynamic-media-repository-restructuring-in-aem}
+# AEM 6.5でのDynamic Mediaリポジトリの再構築{#dynamic-media-repository-restructuring-in-aem}
 
-AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従って、AEM 6.5にアップグレードしたお客様は、このページを使用して、Dynamic Media Solutionに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
+AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従い、AEM 6.5にアップグレードしたお客様は、このページを使用して、Dynamic Media・ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
 
 **今後のアップグレードの前**
 
@@ -54,7 +54,7 @@ AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
  </tbody>
 </table>
 
-### ダイナミックメディア(DMS7)クラウド設定{#dynamic-media-dms-cloud-configuration}
+### Dynamic Media(DMS7)クラウド設定{#dynamic-media-dms-cloud-configuration}
 
 <table>
  <tbody>
@@ -81,7 +81,7 @@ AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
  </tbody>
 </table>
 
-### ダイナミックメディア（DMハイブリッド）Cloud Serviceの設定{#cloudserviceconfiguration}
+### Dynamic Media（DMハイブリッド）Cloud Service構成{#cloudserviceconfiguration}
 
 <table>
  <tbody>
@@ -104,7 +104,7 @@ AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
  </tbody>
 </table>
 
-### ダイナミックメディア — YouTubeCloud Service設定{#youtubecloudserviceconfiguration}
+### Dynamic Media- YouTubeCloud Serviceの設定{#youtubecloudserviceconfiguration}
 
 <table>
  <tbody>
