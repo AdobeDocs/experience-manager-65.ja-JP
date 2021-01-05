@@ -1,6 +1,6 @@
 ---
 title: 一括アセット移行のための機能パック18912のインストール
-description: 機能パック18912では、FTPを使用してアセットを一括取り込むか、アセットをAEM上のダイナミックメディアに移行できます。 このオプションの機能パックは、アドビサポートから入手できます。
+description: 機能パック18912では、FTPを使用してアセットを一括インジェストするか、AEMのDynamic MediaクラシックからDynamic Mediaにアセットを移行できます。 このオプションの機能パックは、アドビサポートから入手できます。
 uuid: 45c2f5f8-4368-4d7b-a43e-fe96cfb272fd
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -21,17 +21,17 @@ ht-degree: 22%
 
 機能パック18912のインストールは&#x200B;*オプション*&#x200B;です。
 
-機能パック18912では、FTP経由でアセットを直接ダイナミックメディア —Scene7モードにバルクインジェストするか、AEMでアセットをダイナミックメディア —Scene7モードに移行できます。 この機能パックは[Adobe Professional Services](https://www.adobe.com/jp/experience-cloud/consulting-services.html)から入手できます。
+機能パック18912では、FTP経由でアセットを直接Dynamic Media-Scene7モードにバルクインジェストするか、アセットをAEM上でDynamic MediaクラシックからDynamic Media-Scene7モードに移行できます。 この機能パックは[Adobe Professional Services](https://www.adobe.com/jp/experience-cloud/consulting-services.html)から入手できます。
 
 >[!NOTE]
 >
->機能パックを使用して、AEMのDynamic Media ClassicからDynamic Media - Scene7モードにアセットを一括移行したり、Dynamic Media ClassicのFTP機能を使用してアセットを一括移行したりできますが、Adobeは複雑さのため、この方法を推奨しません。**
+>機能パックを使用して、AEMのDynamic MediaクラシックからDynamic Media- Scene7モードにアセットを一括移行したり、Dynamic MediaクラシックのFTP機能を使用してアセットを一括移行することは可能ですが、Adobeは複雑さのため、この方法を推奨しません。**
 >
 >したがって、このような移行機能パックは、[Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html)経由で行われた場合、移行プロジェクトの一部として&#x200B;**&#x200B;のみサポートされます。
 
 機能パックをインストールする前に、サービスユーザーを作成し、その情報をAdobeサポートに提供する必要があります。
 
-[ダイナミックメディアの設定 —Scene7モード](/help/assets/config-dms7.md)も参照してください。
+[Dynamic Mediaの設定 —Scene7モード](/help/assets/config-dms7.md)も参照してください。
 
 **一括アセット移行用の機能パック18912をインストールするには**
 
