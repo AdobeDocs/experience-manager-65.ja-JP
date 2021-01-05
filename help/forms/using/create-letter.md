@@ -377,51 +377,51 @@ Correspondence Management でレターテンプレートを作成したら、エ
   </tr> 
   <tr> 
    <td><strong>date</strong></td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>不可</td> 
    <td>可</td> 
    <td>可</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>時刻</strong></td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>不可</td> 
    <td>可</td> 
    <td>可</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>datetime</strong></td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>不可</td> 
    <td>可</td> 
    <td>可</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>integer</strong></td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>不可</td> 
    <td>可</td> 
    <td>可</td> 
-   <td>はい<br /> </td> 
+   <td>可<br /> </td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>float</strong></td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>不可</td> 
    <td>可</td> 
    <td>可</td> 
-   <td>はい<br /> </td> 
+   <td>可<br /> </td> 
    <td>該当なし</td> 
    <td>該当なし<br /> </td> 
   </tr> 
@@ -429,9 +429,9 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td><strong>richtext</strong></td> 
    <td>可</td> 
    <td>テキストのみ</td> 
-   <td>はい</td> 
    <td>可</td> 
-   <td>はい</td> 
+   <td>可</td> 
+   <td>可</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
@@ -439,9 +439,9 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td><strong>平</strong> <strong>文</strong></td> 
    <td>可</td> 
    <td>テキストのみ</td> 
-   <td>はい</td> 
    <td>可</td> 
-   <td>はい</td> 
+   <td>可</td> 
+   <td>可</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
@@ -460,7 +460,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td>不可</td> 
    <td>不可</td> 
    <td>不可<br /> </td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>不可</td> 
    <td>該当なし</td> 
    <td>該当なし<br /> </td> 
