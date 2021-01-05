@@ -53,7 +53,7 @@ ht-degree: 53%
 | Discover - DAMフォルダーを参照 | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
 | Discover - DAMコレクションにアクセス | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
 | Discover - DAMからのアセットの検索 | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
-| 使用 - アセットを開く | はい | はい | 「[Web インターフェイスから開く](manage-assets.md#previewing-assets)」またはファインダーから開く |
+| 使用 - アセットを開く | 可 | 可 | 「[Web インターフェイスから開く](manage-assets.md#previewing-assets)」またはファインダーから開く |
 | 使用 — DAMからドキュメントにアセットを配置 | 対応 - 埋め込み | 対応 - リンクまたは埋め込み | [!DNL Experience Manager] デスクトップアプリケーションでは、ローカルファイルシステム上のファイルとしてアセットにアクセスできます。ネイティブアプリでは、これらのリンクはローカルパスで表されます。 |
 | 編集 - 編集用に開く | 対応 - チェックアウトアクション | 対応 - 「開く」アクション（ネットワーク共有内） | 「[AAL でチェックアウト](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)」の場合は、デフォルトでは、アセットをユーザーの Creative Cloud ストレージアカウント（Creative Cloud アプリで同期）に保存します。 |
 | 編集 — DAM外で作業を進めています | 対応 - デスクトップに同期しているユーザーの Creative Cloud ストレージアカウントでアセットが入手可能です。 | 対応 |  |
