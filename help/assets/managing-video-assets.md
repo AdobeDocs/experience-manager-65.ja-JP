@@ -59,11 +59,11 @@ ht-degree: 58%
 1. [!DNL Adobe Experience Manager] [!UICONTROL Web Console Bundles]ページの表の「Name」列の下で、**[!UICONTROL 「AdobeGranite Workflow External Process Job Handler]**」を探してクリックします。
 1. [!UICONTROL AdobeGranite Workflow External Process Job Handler]ページで、**[!UICONTROL Default Timeout]**&#x200B;と&#x200B;**[!UICONTROL Max Timeout]**&#x200B;の両方のフィールドの秒を`18000` （5時間）に設定します。 「**[!UICONTROL 保存]**」をクリックします。
 1. [!DNL Experience Manager]で、**[!UICONTROL ツール]**/**[!UICONTROL ワークフロー]**/**[!UICONTROL モデル]**&#x200B;をクリックします。
-1. ワークフローモデルページで、「**[!UICONTROL ダイナミックメディアエンコードビデオ]**」を選択し、「**[!UICONTROL 編集]**」をクリックします。
-1. ワークフローページで、**[!UICONTROL ダイナミックメディアビデオサービスプロセス]**&#x200B;コンポーネントを重複クリックします。
+1. ワークフローモデルページで、「**[!UICONTROL ビデオをDynamic Mediaエンコード]**」を選択し、「**[!UICONTROL 編集]**」をクリックします。
+1. ワークフローページで、**[!UICONTROL Dynamic Mediaビデオサービスプロセス]**&#x200B;コンポーネントを重複クリックします。
 1. [!UICONTROL ステップのプロパティ]ダイアログボックスの「**[!UICONTROL 共通]**」タブにある「**詳細設定**」を展開します。
-1. 「**[!UICONTROL タイムアウト]**」フィールドで値`18000`を指定し、「**[!UICONTROL OK]**」をクリックして&#x200B;**[!UICONTROL ダイナミックメディアエンコードビデオ]**&#x200B;ワークフローページに戻ります。
-1. ページの上部近く、[!UICONTROL Dynamic Media Encode Video]ページタイトルの下にある「**[!UICONTROL 保存]**」をクリックします。
+1. 「**[!UICONTROL タイムアウト]**」フィールドで値`18000`を指定し、「**[!UICONTROL OK]**」をクリックして&#x200B;**[!UICONTROL Dynamic Mediaエンコードビデオ]**&#x200B;ワークフローページに戻ります。
+1. ページの上部近く、「[!UICONTROL Dynamic Mediaエンコードビデオ]」ページタイトルの下にある「**[!UICONTROL 保存]**」をクリックします。
 
 ## ビデオアセットを公開する {#publish-video-assets}
 
