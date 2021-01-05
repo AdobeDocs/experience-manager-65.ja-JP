@@ -22,7 +22,7 @@ ht-degree: 92%
 
 [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md)では、ページの編集中にアセットを検索して使用するためのコンテンツファインダーの使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
 
-* [ダイナミックMedia Classic機能のページへの追加](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
+* [ページへのDynamic Mediaクラシック機能の追加](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
 * [Dynamic Media の操作](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
 * [アセットの命名規則](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
 
