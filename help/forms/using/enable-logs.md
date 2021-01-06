@@ -94,7 +94,7 @@ ht-degree: 70%
    <td>OFF<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>3</td>
+   <td>1</td>
    <td>FATAL<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ ht-degree: 70%
    <td>ERROR<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>3</td>
+   <td>1</td>
    <td>WARN<br type="_moz" /> </td>
   </tr>
   <tr>
