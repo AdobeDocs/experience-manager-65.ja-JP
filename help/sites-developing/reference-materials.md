@@ -30,7 +30,7 @@ Adobe Experience Manager（AEM）では、アプリケーション開発およ�
 * [Coral UI ガイド](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 * [ウィジェット API（クラシック UI）ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
 * [UI テストフレームワーク JavaScript API リファレンス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)
-* [エディターコアJavaScript APIリファレンス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
+* [エディターコアJavaScript APIリファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
 AEM シングルページアプリケーション（SPA）エディター SDK フレームワーク JavaScript API リファレンス：
 
