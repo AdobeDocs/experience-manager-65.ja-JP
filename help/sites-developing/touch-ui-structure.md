@@ -169,5 +169,5 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 
 タッチ操作対応UIに関する概念について詳しくは、「[AEMタッチ対応UIの概念](/help/sites-developing/touch-ui-concepts.md)」の記事を参照してください。
 
-技術情報について詳しくは、タッチ対応ページエディターの[JSドキュメントセット](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
+技術情報について詳しくは、タッチ対応ページエディターの[JSドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
 
