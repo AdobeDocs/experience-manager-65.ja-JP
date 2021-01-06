@@ -39,7 +39,7 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 
 >[!NOTE]
 >
->詳しくは、[JS ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
+>詳しくは、[JS ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
 
 これらをさまざまな方法で使用して、AEM インスタンスのページオーサリング機能を拡張できます。一部については、以降で（大まかに）説明します。
 
