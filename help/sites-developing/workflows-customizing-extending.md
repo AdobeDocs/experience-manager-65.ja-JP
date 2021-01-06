@@ -841,7 +841,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `cq:icon`
 
-      手順の[サンゴのアイコン](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)を指定するために使用します。
+      手順の[サンゴのアイコン](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)を指定するために使用します。
 
    * `componentGroup`
 
