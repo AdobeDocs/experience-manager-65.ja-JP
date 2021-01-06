@@ -106,7 +106,7 @@ AEM インスタンスが Dynamic Tag Management で認証され、Web プロパ
    <td>Dynamic Tag Management ユーザーアカウントの API トークンプロパティの値。AEM は、Dynamic Tag Management での認証にこのプロパティを使用します。</td>
   </tr>
   <tr>
-   <td>会社</td>
+   <td>会社情報</td>
    <td>ログイン ID が関連付けられている会社。</td>
   </tr>
   <tr>
