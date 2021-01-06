@@ -1,7 +1,7 @@
 ---
 title: Tough Day
 seo-title: 厳しい日
-description: Tough Day テストでは、約 1,000 人の作成者がいる環境で、すべての操作が同時進行しているという最悪の状況を想定して、1 日の負荷をシミュレートします。.
+description: Tough Day テストでは、約 1,000 人の作成者がいる環境で、すべての操作が同時進行しているという最悪の状況を想定して、1 日の負荷をシミュレートします。。
 seo-description: 強靱な日のテストは、すべての操作が同時に実行される、最悪の場合に1,000人前後の作成者の日々の負荷をシミュレートします。
 uuid: 1b672182-40f5-4580-b038-2e3c8fbfb8b7
 contentOwner: Guillaume Carlino
