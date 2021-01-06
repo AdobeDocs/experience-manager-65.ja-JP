@@ -210,7 +210,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
 コンポーネントのアイコンまたは省略形は、開発者がコンポーネントを作成する際に、コンポーネントのJCRプロパティを介して定義されます。 これらのプロパティは、次の順番で評価され、最初に見つかった有効なプロパティが使用されます。
 
-1. `cq:icon`  — コンポーネントブラウザに表示する [Coral UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) ライブラリ内の標準アイコンを示す文字列プロパティ。
+1. `cq:icon`  — コンポーネントブラウザに表示する [Coral UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) ライブラリ内の標準アイコンを示す文字列プロパティ。
    * Coral アイコンの HTML 属性の値を使用します。
 1. `abbreviation`  — コンポーネントブラウザのコンポーネント名の省略形をカスタマイズする文字列プロパティ
    * 省略形は 最大2 文字までにする必要があります。
