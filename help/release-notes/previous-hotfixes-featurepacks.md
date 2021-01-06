@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノ�
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Packのリリースノートです。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
+source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
 workflow-type: tm+mt
 source-wordcount: '14953'
 ht-degree: 19%
@@ -66,7 +66,7 @@ Experience Manager6.5.6.0で導入された機能と拡張機能の完全なリ�
    ![クラシックUIにメニューが見つからない問題を説明するスクリーンショット](assets/33949_missing_menu.png)
 
 * [!DNL Content Fragment]は、`ContentFragmentUsePojo`で失敗するので、`TemplatedResource`として使用できません(NPR-33911)。
-* 同期および非同期移動操作は、同時転送によるエラーを引き起こす可能性があります。 ページ移動操作は、同期移動のみに制限されます。 ページの同時移動を防ぎます(NPR-33875)。
+* 同期および非同期移動操作は、同時転送によるエラーを引き起こす可能性があります。 ページ移動操作は、非同期移動のみに制限されます。 ページの同時移動を防ぎます(NPR-33875)。
 * [!UICONTROL 「Manage ] Publication」操作で、作成者のコンテンツを発行インスタンスに複製するには失敗し、JavaScriptエラーが発生します(NPR-33872)。
 * 複数のページまたはアセットを選択してバージョンを作成する場合、新しいバージョンは、最後に選択されたページまたはアセットに対してのみ作成されます(NPR-33866)。
 * ライブコピーのあるブループリントページを別のフォルダーに移動します。 元のフォルダーに移動すると、移動操作はエラーなしで失敗します(NPR-33864)。
