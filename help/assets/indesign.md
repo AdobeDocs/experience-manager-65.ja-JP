@@ -3,9 +3,9 @@ title: ' [!DNL Assets] と [!DNL InDesign Server]を統合'
 description: ' [!DNL Adobe Experience Manager Assets] を [!DNL Adobe InDesign Server]と統合する方法を学びます。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: a31fa2712e541dfdc7a5b08ee9b33782f190f00b
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1578'
 ht-degree: 31%
 
 ---
@@ -163,15 +163,15 @@ Pool SOAPエンドポイントは、との通信に使用され [!DNL InDesign S
 
 ### Day CQ Link Externalizerの設定{#configuring-day-cq-link-externalizer}
 
-[!DNL InDesign Server]と[!DNL Experience Manager]が異なるホスト上で実行される場合、またはこれらの両方のアプリケーションがデフォルトポートで実行されない場合は、[!UICONTROL Day CQ Link Externalizer]を設定して[!DNL InDesign Server]のホスト名、ポート、コンテンツパスを設定します。
+[!DNL InDesign Server]と[!DNL Experience Manager]が異なるホスト上にあるか、これらのアプリケーションの一方または両方がデフォルトポートで動作しない場合は、[!UICONTROL Day CQ Link Externalizer]を設定して[!DNL InDesign Server]のホスト名、ポート、コンテンツパスを設定します。
 
 1. `https://[aem_server]:[port]/system/console/configMgr`のWebコンソールにアクセスします。
-1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探し、**[!UICONTROL Edit]**&#x200B;をクリックして開きます。
-1. [!DNL Adobe InDesign Server]のホスト名とコンテキストパスを指定し、「**保存**」をクリックします。
+1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探します。 「**[!UICONTROL 編集]**」をクリックして開きます。
+1. Link Externalizerの設定は、[!DNL Experience Manager]展開と[!DNL InDesign Server]の絶対的なURLを作成するのに役立ちます。 **[!UICONTROL ドメイン]**&#x200B;フィールドを使用して、[!DNL Adobe InDesign Server]のホスト名とコンテキストパスを指定します。 「**保存**」をクリックします。
 
-   ![chlimage_1-97](assets/chlimage_1-290.png)
+   ![Link externalizer設定](assets/link-externalizer-config.png)
 
-### [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server-s}の並列ジョブ処理を有効にする
+### [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server}の並列ジョブ処理を有効にする
 
 IDS の並列ジョブ処理を有効にすることができます。[!DNL InDesign Server]が処理できる並列ジョブ(`x`)の最大数を決定します。
 
